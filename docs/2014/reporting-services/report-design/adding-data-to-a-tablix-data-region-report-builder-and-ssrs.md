@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0becc3627ee54158b8beed7c888698c9052ab1b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106499"
 ---
 # <a name="adding-data-to-a-tablix-data-region-report-builder-and-ssrs"></a>向 Tablix 数据区域添加数据（报表生成器和 SSRS）
@@ -50,7 +50,7 @@ ms.locfileid: "66106499"
 ## <a name="adding-an-existing-tablix-data-region-from-another-report"></a>添加其他报表的现有 Tablix 数据区域  
  可以复制其他报表中的数据区域，并将其粘贴到新报表或现有报表中。 粘贴相应数据区域之后，必须确保定义该数据区域使用的数据集，并确保相应数据集字段的名称和数据类型与其在原始报表中时相同。 您无法将数据集从一个报表复制到另一个报表，但是，如果您的报表使用共享数据源，则可以快速复制另一个报表中的数据集。 此外，您还可以导入用于检索数据集中数据的查询的查询文本，这样可以很容易地复制报表中的查询。 有关详细信息，请参阅 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [表达式（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)   
  [报表参数（报表生成器和报表设计器）](report-parameters-report-builder-and-report-designer.md)   
  [交互式排序、文档结构图和链接（报表生成器和 SSRS）](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   

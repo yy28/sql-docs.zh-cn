@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 635cd541e0341caadb8e3ad166bc14f78aa9cccc
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73790498"
 ---
 # <a name="uses-of-odbc-table-valued-parameters"></a>ODBC 表值参数的用法
@@ -49,21 +49,21 @@ ms.locfileid: "73790498"
   
  有时，应用程序将表值参数用于动态 SQL，此时必须提供该表值参数的类型名称。 如果是这种情况，并且未在连接的当前默认架构中定义表值参数，则必须使用 SQLSetDescField 设置 SQL_CA_SS_TYPE_CATALOG_NAME 和 SQL_CA_SS_TYPE_SCHEMA_NAME。 由于表类型定义和表值参数必须位于同一数据库中，在应用程序使用表值参数时不能设置 SQL_CA_SS_TYPE_CATALOG_NAME。 否则，SQLSetDescField 将报告错误。  
   
- 此方案的示例代码在[使用表值&#40;参数 ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)中 `demo_fixed_TVP_binding`。  
+ 此方案的示例代码位于在`demo_fixed_TVP_binding` [ODBC&#41;&#40;使用表值参数](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)的过程中。  
   
 ## <a name="table-valued-parameter-with-row-streaming-send-data-as-a-tvp-using-data-at-execution"></a>行流式处理情况下的表值参数（使用执行时数据将数据作为 TVP 发送）  
  在此情况下，应用程序在驱动程序请求行时向其提供行，并且这些行流向服务器。 这样就无需将所有行缓存在内存中。 这是大容量插入/更新时的典型情况。 表值参数提供了介于参数数组和大容量复制之间的某个性能点。 也就是说：表值参数可以像参数数组那样易于编程，但它们在服务器端提供更高的灵活性。  
   
  表值参数及其列按上一节“完全绑定多行缓冲区情况下的表值参数”所述进行绑定，但是表值参数本身的长度指示器设置为 SQL_DATA_AT_EXEC。 驱动程序以通常的方式对 SQLExecute 或 SQLExecuteDirect 进行响应，这是执行时数据参数的方式，即通过返回 SQL_NEED_DATA。 当驱动程序准备好接收表值参数的数据时，SQLParamData 将返回 SQLBindParameter 中*ParameterValuePtr*的值。  
   
- 应用程序将 SQLPutData 用于表值参数，以指示表值参数构成列的数据可用性。 为表值参数调用 SQLPutData 时， *DataPtr*必须始终为 null，并且*StrLen_or_Ind*必须是0或小于或等于为表值参数缓冲区指定的数组大小（ *ColumnSize*SQLBindParameter 的参数）。 0 表示表值参数没有更多的行，驱动程序将继续处理下一个实际过程参数。 当*StrLen_or_Ind*不为0时，驱动程序将以与非表值参数绑定参数相同的方式处理表值参数构成列：每个表值参数列可以指定其实际数据长度，SQL_NULL_DATA，或者，它可以在执行时通过其长度/指示器缓冲区来指定数据。 如果要将字符或二进制值传递到块中，可以通过重复调用 SQLPutData 来传递表值参数列值。  
+ 应用程序将 SQLPutData 用于表值参数，以指示表值参数构成列的数据可用性。 为表值参数调用 SQLPutData 时， *DataPtr*必须始终为 null，并且*StrLen_or_Ind*必须是0或小于或等于为表值参数缓冲区指定的数组大小（SQLBindParameter 的*ColumnSize*参数）。 0 表示表值参数没有更多的行，驱动程序将继续处理下一个实际过程参数。 当*StrLen_or_Ind*不为0时，驱动程序将以与非表值参数绑定参数相同的方式处理表值参数构成列：每个表值参数列可以指定其实际数据长度（SQL_NULL_DATA），也可以在执行时通过其长度/指示器缓冲区指定数据。 如果要将字符或二进制值传递到块中，可以通过重复调用 SQLPutData 来传递表值参数列值。  
   
  处理完所有表值参数列后，驱动程序将返回到表值参数以处理更多的表值参数数据行。 因此，对于执行时数据表值参数，驱动程序不遵循通常的顺序扫描绑定参数的方式。 在*StrLen_Or_IndPtr*等于0的情况下调用 SQLPutData 之前，将轮询绑定表值参数，此时驱动程序将跳过表值参数列并移至下一个实际的存储过程参数。  当 SQLPutData 传递的指示器值大于或等于1时，驱动程序将按顺序处理表值参数列和行，直到它具有所有绑定行和列的值。 然后驱动程序返回到表值参数。 在从 SQLParamData 接收表值参数的标记和对表值参数调用 SQLPutData （hstmt，NULL，n）之间，应用程序必须为表值参数设置表值参数构成列数据和指示器缓冲区内容要传递给服务器的下一行或多行。  
   
- 此方案的示例代码在 "[使用表值&#40;参数 ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)" 中 `demo_variable_TVP_binding`。  
+ 此方案的示例代码在`demo_variable_TVP_binding`将[表值参数用于 ODBC&#41;&#40;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)中。  
   
 ## <a name="retrieving-table-valued-parameter-metadata-from-the-system-catalog"></a>从系统目录中检索表值参数元数据  
- 当应用程序为具有表值参数参数的过程调用 SQLProcedureColumns 时，DATA_TYPE 作为 SQL_SS_TABLE 返回，TYPE_NAME 是表值参数的表类型的名称。 将两个附加列添加到 SQLProcedureColumns 返回的结果集中： SS_TYPE_CATALOG_NAME 返回定义表值参数的表类型的目录的名称，SS_TYPE_SCHEMA_NAME 返回架构的名称。其中定义了表值参数的表类型。 与 ODBC 规范一致，SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME 出现在在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以前的版本中添加的所有驱动程序特定列之前以及 ODBC 本身所强制的所有列之后。  
+ 当应用程序为具有表值参数参数的过程调用 SQLProcedureColumns 时，DATA_TYPE 作为 SQL_SS_TABLE 返回，TYPE_NAME 是表值参数的表类型的名称。 将两个附加列添加到 SQLProcedureColumns 返回的结果集中： SS_TYPE_CATALOG_NAME 返回定义表值参数的表类型的目录的名称，SS_TYPE_SCHEMA_NAME 返回架构的名称。其中定义了表值参数的表类型。 与 ODBC 规范一致，SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME 出现在以前版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中添加的所有驱动程序特定列之前以及 odbc 本身所强制的所有列之后。  
   
  不仅将为表值参数填充这些新列，还将为 CLR 用户定义类型参数填充这些新列。 仍将填充 UDT 参数的现有架构和目录列，但是为数据类型提供所需的常见架构和目录列将简化未来的应用程序开发。 （请注意，XML 架构集合稍有不同，未包括在此更改中。）  
   
@@ -71,7 +71,7 @@ ms.locfileid: "73790498"
   
  应用程序使用 SQLColumns 来确定表类型的列，其方式与持久表的列相同，但必须首先将 SQL_SOPT_SS_NAME_SCOPE 设置为指示它使用的是表类型而不是实际表。 SQLPrimaryKeys 也可与表类型一起使用，SQL_SOPT_SS_NAME_SCOPE。  
   
- 此方案的示例代码在 "[使用表值&#40;参数 ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)" 中 `demo_metadata_from_catalog_APIs`。  
+ 此方案的示例代码在`demo_metadata_from_catalog_APIs`将[表值参数用于 ODBC&#41;&#40;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)中。  
   
 ## <a name="retrieving-table-valued-parameter-metadata-for-a-prepared-statement"></a>检索准备的语句的表值参数元数据  
  在此方案中，应用程序使用 SQLNumParameters 和 SQLDescribeParam 检索表值参数的元数据。  
@@ -84,9 +84,9 @@ ms.locfileid: "73790498"
   
  在此方案中，应用程序使用 SQLColumns 检索表值参数的列元数据，因为 SQLDescribeParam 不返回表值参数列的元数据。  
   
- 此用例的示例代码位于 "[使用表值&#40;参数 ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)" 中的 `demo_metadata_from_prepared_statement`。  
+ 此用例的示例代码位于`demo_metadata_from_prepared_statement` [&#40;ODBC&#41;中使用表值参数](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)的例程中。  
   
 ## <a name="see-also"></a>另请参阅  
- [表值参数&#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+ [ODBC&#41;&#40;表值参数](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

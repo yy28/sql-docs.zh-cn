@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6981b756bacd720284fcd38fd29c9ba371db8a87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107930"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>导出到 CSV 文件（报表生成器和 SSRS）
@@ -55,7 +55,7 @@ ms.locfileid: "66107930"
   
 -   行  
   
--   Image  
+-   映像  
   
 -   Rectangle  
   
@@ -65,17 +65,17 @@ ms.locfileid: "66107930"
   
  下表说明了呈现报表项时这些报表项的外观：  
   
-|项|呈现行为|  
+|Item|呈现行为|  
 |----------|------------------------|  
 |文本框|呈现文本框的内容。 在默认模式下，会根据项的格式设置属性对其进行格式化。 在兼容模式下，可以根据设备信息设置对格式进行更改。 有关 CSV 呈现模式的详细信息，请参阅下文。|  
 |表|呈现方式为扩展该表，在只保留最起码的格式的情况下为每一行和每一列都分别创建行和列。 小计行和小计列没有列标题或行标题。 不支持钻取报表。|  
 |矩阵|呈现方式为扩展该矩阵，在只保留最起码的格式的情况下为每一行和每一列都分别创建行和列。 小计行和小计列没有列标题或行标题。|  
-|列表|为列表中每一明细行或实例呈现一个记录。|  
+|列出|为列表中每一明细行或实例呈现一个记录。|  
 |子报表|对于内容的每个实例，都会重复它的父项。|  
 |图表|通过创建每个图表值的行和成员标签来呈现。 来自系列和类别的标签采用平展的层次结构，并包含在图表值的行中。|  
 |数据条|像图表一样呈现。 通常，数据条并不包括层次结构或标签。|  
 |迷你图|像图表一样呈现。 通常，迷你图并不包括层次结构或标签。|  
-|测量|作为单个记录呈现，具有线性刻度的最小值和最大值、范围的起始和终止值，以及指针的值。|  
+|仪表|作为单个记录呈现，具有线性刻度的最小值和最大值、范围的起始和终止值，以及指针的值。|  
 |指示器|作为单个记录呈现，具有活动状态名称、可用状态以及数据值。|  
 |映射|对于地图层的每个地图成员，呈现包含标签和值的行。<br /><br /> 如果地图具有多个层，则行中的值将会变化，具体取决于地图层是使用相同还是不同的地图数据区域。 如果多个地图层使用相同数据区域，该行将包含所有层的数据。|  
   
@@ -144,7 +144,7 @@ ms.locfileid: "66107930"
   
   
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Reporting Services 中的分页（报表生成器和 SSRS）](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [呈现行为（报表生成器和 SSRS）](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）](interactive-functionality-different-report-rendering-extensions.md)   

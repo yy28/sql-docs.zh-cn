@@ -11,13 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 01f9e53c4ae42f981b1b579294954a965ef8c376
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63140668"
 ---
-# <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>更改 SQL Server 代理主作业计划的详细信息
+# <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>Change the Scheduling Details for a SQL Server Agent Master Job
   本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中更改作业定义计划的详细信息。  
   
  **本主题内容**  
@@ -37,11 +37,12 @@ ms.locfileid: "63140668"
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Restrictions"></a> 限制和局限  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理主作业不能同时把本地服务器和远程服务器作为目标。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理主作业不能同时把本地服务器和远程服务器作为目标。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  除非您是 **sysadmin** 固定服务器角色的成员，否则您只能修改自己拥有的作业。 有关详细信息，请参阅[实现 SQL Server 代理安全性](implement-sql-server-agent-security.md)。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -50,13 +51,13 @@ ms.locfileid: "63140668"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开包含要编辑其计划的作业的服务器。  
   
-2.  单击加号以展开 **“SQL Server 代理”** 。  
+2.  单击加号以展开 **“SQL Server 代理”**。  
   
 3.  单击加号以便展开 **“作业”** 文件夹。  
   
-4.  右键单击要编辑其计划的作业，然后选择“属性”  。  
+4.  右键单击要编辑其计划的作业，然后选择“属性”****。  
   
-5.  在中**作业属性-** _job_name_对话框中的**选择页**，选择**计划**。 有关此页上的可用选项的详细信息，请参阅[作业属性：新的作业&#40;计划页&#41;](job-properties-new-job-schedules-page.md)。  
+5.  在 "**作业属性-**_job_name_ " 对话框中的 "**选择页**" 下，选择 "**计划**"。 有关此页上可用选项的详细信息，请参阅[作业属性：新建作业 &#40;计划页&#41;](job-properties-new-job-schedules-page.md)。  
   
 6.  完成后，单击 **“确定”** 。  
   
@@ -83,6 +84,6 @@ ms.locfileid: "63140668"
     GO  
     ```  
   
- 有关详细信息，请参阅[sp_update_schedule &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-schedule-transact-sql)。  
+ 有关详细信息，请参阅[&#40;transact-sql&#41;sp_update_schedule ](/sql/relational-databases/system-stored-procedures/sp-update-schedule-transact-sql)。  
   
   

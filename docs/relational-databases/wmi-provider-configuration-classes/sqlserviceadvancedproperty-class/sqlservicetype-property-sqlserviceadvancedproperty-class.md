@@ -18,10 +18,10 @@ ms.assetid: 20f1663a-9a14-4f14-8c1b-8aa133e272c3
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 59c42bdb98d5ed19ea2d415a85e9d2ccb4aeb8b2
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73658960"
 ---
 # <a name="sqlservicetype-property-sqlserviceadvancedproperty-class"></a>SqlServiceType 方法（SqlServiceAdvancedProperty 类）
@@ -36,13 +36,13 @@ object.SetBoolValue(NumValue)
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
+ *对象*  
  一个表示高级属性的 [SqlServiceAdvancedProperty 类](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务类型的 uint32 值。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
  返回值可以是下列值之一：  
   
 |类型|定义|  
@@ -54,11 +54,11 @@ object.SetBoolValue(NumValue)
 |*5*|MSSQLServerOLAPService 为 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 服务。|  
 |*6*|ReportServer 为 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服务。|  
 |*7*|SQLBrowser 为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Browser 服务。|  
-|*8*|Nsservice.exe 是 [!INCLUDE[ssNoVersion](../../../includes/ssns-md.md)] 通知服务。|  
-|*900*|MSSQLFDLauncher 是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 全文筛选器后台程序启动器服务。|  
-|*10*|SQLPBENGINE 是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Polybase 引擎服务。|  
-|*11*|SQLPBDMS 是 Polybase 数据移动服务 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。|  
-|*12*|MSSQLLaunchpad 是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 启动板服务。|  
+|*8*|Nsservice.exe 是[!INCLUDE[ssNoVersion](../../../includes/ssns-md.md)]通知服务。|  
+|*900*|MSSQLFDLauncher 是[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]全文筛选器后台程序启动器服务。|  
+|*万*|SQLPBENGINE 是[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Polybase 引擎服务。|  
+|*11*|SQLPBDMS 是[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Polybase 数据移动服务。|  
+|*12*|MSSQLLaunchpad 是启动[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]板服务。|  
   
 ## <a name="see-also"></a>另请参阅  
  [启动和停止服务](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

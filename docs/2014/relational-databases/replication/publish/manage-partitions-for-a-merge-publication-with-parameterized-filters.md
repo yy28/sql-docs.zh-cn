@@ -15,43 +15,43 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a71ac4d6bcc887257ea5bfbc1523e327fc03b16
-ms.sourcegitcommit: ea6603e20c723553c89827a6b8731a9e7b560b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74479308"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>通过参数化筛选器为合并发布管理分区
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中通过参数化筛选器为合并发布管理分区。 参数化行筛选器可用于生成不重叠的分区。 可以限制这些分区，以便只有一个订阅接收到给定分区。 在这类情况下，大量订阅服务器将导致大量的分区，从而需要同等数量的分区快照。 有关详细信息，请参阅 [参数化行筛选器](../merge/parameterized-filters-parameterized-row-filters.md)。  
   
- **本主题中的**  
+ **本主题内容**  
   
 -   **开始之前：**  
   
      [建议](#Recommendations)  
   
--   **使用参数化筛选器为合并发布管理分区，使用：**  
+-   **通过参数化筛选器为合并发布管理分区，使用：**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-     [Transact-sql](#TsqlProcedure)  
+     [Transact-SQL](#TsqlProcedure)  
   
-     [复制管理对象（RMO）](#RMOProcedure)  
+     [复制管理对象 (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a>开始之前  
+##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Recommendations"></a>针对  
+###  <a name="Recommendations"></a> 建议  
   
 -   如果对复制拓扑编写脚本（建议这样做），则发布脚本包含用于创建数据分区的存储过程调用。 该脚本提供了对所创建的分区的引用和一种在必要时重建分区的途径。 有关详细信息，请参阅 [Scripting Replication](../scripting-replication.md)。  
   
 -   如果发布具有的参数化筛选器可生成带有非重叠分区的订阅，并且如果特定订阅丢失并需要重新创建，则您必须执行以下操作：删除曾订阅的分区，重新创建订阅，然后重新创建该分区。 有关详细信息，请参阅 [参数化行筛选器](../merge/parameterized-filters-parameterized-row-filters.md)。 生成发布创建脚本时，复制会为现有订阅服务器分区生成创建脚本。 有关详细信息，请参阅 [Scripting Replication](../scripting-replication.md)。  
   
-##  <a name="SSMSProcedure"></a>使用 SQL Server Management Studio  
- 可在“发布属性 - **发布>”对话框的“数据分区”页上管理分区。****\<** 有关访问此对话框的详细信息，请参阅 [查看和修改发布属性](view-and-modify-publication-properties.md)。 在此页上，可以执行下列操作：创建和删除分区、允许订阅服务器启动快照的生成和传递、生成一个或多个分区的快照和清除快照。  
+##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+ 可在“发布属性 - **发布>”对话框的“数据分区”页上管理分区。** **\<** 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](view-and-modify-publication-properties.md)。 在此页上，可以执行下列操作：创建和删除分区、允许订阅服务器启动快照的生成和传递、生成一个或多个分区的快照和清除快照。  
   
 #### <a name="to-create-a-partition"></a>创建分区  
   
-1.  在“发布属性 - **发布>”对话框的“数据分区”页上，单击“添加”。****\<******  
+1.  在“发布属性 - **发布>”对话框的“数据分区”页上，单击“添加”。** **\<**   
   
 2.  在 **“添加数据分区”** 对话框中，输入与要创建的分区相关联的 **HOST_NAME()** 和/或 **SUSER_SNAME()** 的值。  
   
@@ -67,11 +67,11 @@ ms.locfileid: "74479308"
   
 1.  在 **“数据分区”** 页上，在网格中选择分区。  
   
-2.  单击“删除”****。  
+2.  单击 **“删除”** 。  
   
 #### <a name="to-allow-subscribers-to-initiate-snapshot-generation-and-delivery"></a>允许订阅服务器启动快照的生成和传递  
   
-1.  在 **“数据分区”** 页上，选择 **“在新订阅服务器尝试同步时，根据需要自动定义分区并生成快照”**。  
+1.  在 **“数据分区”** 页上，选择 **“在新订阅服务器尝试同步时，根据需要自动定义分区并生成快照”** 。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -85,9 +85,9 @@ ms.locfileid: "74479308"
   
 1.  在 **“数据分区”** 页上，在网格中选择分区。  
   
-2.  单击 **“清除现有快照”**。  
+2.  单击 **“清除现有快照”** 。  
   
-##  <a name="TsqlProcedure"></a>使用 Transact-sql  
+##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  为了更好地管理带有参数化筛选器的发布，可使用复制存储过程以编程方式枚举现有的分区。 还可以创建和删除现有的分区。 可以获取以下有关现有分区的信息：  
   
 -   如何筛选分区（使用 [SUSER_SNAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/suser-sname-transact-sql) 或 [HOST_NAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/host-name-transact-sql)）。  
@@ -122,7 +122,7 @@ ms.locfileid: "74479308"
   
      此操作还将删除快照作业以及该分区的任何快照文件。  
   
-##  <a name="RMOProcedure"></a>使用复制管理对象（RMO）  
+##  <a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
  若要更好地管理具有参数化筛选器的发布，可以通过使用复制管理对象 (RMO) 以编程方式创建新的订阅服务器分区，枚举现有的订阅服务器分区以及删除订阅服务器分区。 有关如何创建订阅服务器分区的信息，请参阅 [为包含参数化筛选器的合并发布创建快照](../create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。 可以获得有关现有分区的以下信息：  
   
 -   分区所基于的值和筛选函数。  
@@ -133,7 +133,7 @@ ms.locfileid: "74479308"
   
 #### <a name="to-view-information-on-existing-partitions"></a>查看有关现有分区的信息  
   
-1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类建立与发布服务器的连接。  
+1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与发布服务器的连接。  
   
 2.  创建的 <xref:Microsoft.SqlServer.Replication.MergePublication> 类的实例。 设置发布的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。  
   
@@ -145,7 +145,7 @@ ms.locfileid: "74479308"
   
 #### <a name="to-delete-existing-partitions"></a>删除现有分区  
   
-1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类建立与发布服务器的连接。  
+1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与发布服务器的连接。  
   
 2.  创建的 <xref:Microsoft.SqlServer.Replication.MergePublication> 类的实例。 设置发布的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。  
   
@@ -160,7 +160,7 @@ ms.locfileid: "74479308"
 7.  对已删除的每个分区重复步骤 6。  
   
 ## <a name="see-also"></a>另请参阅  
- [参数化行筛选器](../merge/parameterized-filters-parameterized-row-filters.md)   
- [具有参数化筛选器的合并发布的快照](../snapshots-for-merge-publications-with-parameterized-filters.md)  
+ [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)   
+ [Snapshots for Merge Publications with Parameterized Filters](../snapshots-for-merge-publications-with-parameterized-filters.md)  
   
   

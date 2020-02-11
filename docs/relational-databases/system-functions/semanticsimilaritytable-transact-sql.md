@@ -1,5 +1,5 @@
 ---
-title: semanticsimilaritytable (TRANSACT-SQL) |Microsoft Docs
+title: semanticsimilaritytable （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,10 +18,10 @@ ms.assetid: b49d40ab-7552-438b-ad67-6237dcccb75b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 24193b3474b1088a87acb5bdd15a5c5c4459f44d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68140548"
 ---
 # <a name="semanticsimilaritytable-transact-sql"></a>semanticsimilaritytable (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68140548"
   
  可以在 SELECT 语句的 FROM 子句中像引用常规表名那样引用此行集函数。  
 
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,15 +45,15 @@ SEMANTICSIMILARITYTABLE
 ```  
   
 ##  <a name="Arguments"></a> 参数  
- **table**  
+ **数据表**  
  启用全文和语义索引的表的名称。  
   
  此名称可由 1 到 4 个部分组成，但不允许使用远程服务器名称。  
   
- **column**  
+ **该列**  
  应为其返回结果的索引列的名称。 列必须启用语义索引。  
   
- **column_list**  
+ column_list   
  指示由逗号分隔并括在括号中的多个列。 所有列都必须启用语义索引。  
   
  **\***  
@@ -62,25 +62,25 @@ SEMANTICSIMILARITYTABLE
  **source_key**  
  请求特定行的结果的行的唯一键。  
   
- 键隐式转换为尽可能与源表中的全文唯一键的类型。 可以将此键指定为一个常量或变量，但不能是表达式或标量子查询的结果。  
+ 只要可能，该键就会隐式转换为源表中的全文唯一键的类型。 可以将此键指定为一个常量或变量，但不能是表达式或标量子查询的结果。  
   
 ## <a name="table-returned"></a>返回的表  
  下表介绍此行集函数返回的相似或相关文档的信息。  
   
  如果从多个列请求结果，则基于每个列返回匹配的文档。  
   
-|Column_name|type|描述|  
+|Column_name|类型|说明|  
 |------------------|----------|-----------------|  
 |**source_column_id**|**int**|源文档中用于查找相似文档的列的 ID。<br /><br /> 有关如何在列名称和 column_id 之间相互检索对方的详细信息，请参阅 COL_NAME 和 COLUMNPROPERTY 函数。|  
 |**matched_column_id**|**int**|从中找到相似文档的列的 ID。<br /><br /> 有关如何在列名称和 column_id 之间相互检索对方的详细信息，请参阅 COL_NAME 和 COLUMNPROPERTY 函数。|  
 |**matched_document_key**|**\***<br /><br /> 此键与源表中的唯一键的类型相匹配。|与查询中的指定文档相似的文档或行的全文和语义提取唯一键值。|  
-|**score**|**REAL**|一个相对值，用来表示此文档与所有其他相似文档的相似程度。<br /><br /> 该值是范围 [0.0, 1.0] 中的小数值，较高的得分表示非常匹配，1.0 是最理想的得分。|  
+|**分值**|**real**|一个相对值，用来表示此文档与所有其他相似文档的相似程度。<br /><br /> 该值是范围 [0.0, 1.0] 中的小数值，较高的得分表示非常匹配，1.0 是最理想的得分。|  
   
 ## <a name="general-remarks"></a>一般备注  
- 有关详细信息，请参阅[查找相似和相关文档使用语义搜索](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)。  
+ 有关详细信息，请参阅[通过语义搜索查找相似和相关文档](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)。  
   
 ## <a name="limitations-and-restrictions"></a>限制和局限  
- 不能跨列查询相似的文档。 **SEMANTICSIMILARITYTABLE**函数只从与源列，这由相同的列检索相似文档**source_key**参数。  
+ 不能跨列查询相似的文档。 **SEMANTICSIMILARITYTABLE**函数只从与源列相同的列中检索类似的文档，由**source_key**参数标识。  
   
 ## <a name="metadata"></a>元数据  
  有关语义相似性的提取和填充的信息和状态，请查询以下动态管理视图：  

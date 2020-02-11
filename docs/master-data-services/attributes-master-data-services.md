@@ -18,10 +18,10 @@ ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 19cbf51a9ac022674e9dfec7b287a38d16af00cf
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728750"
 ---
 # <a name="attributes-master-data-services"></a>属性 (Master Data Services)
@@ -58,7 +58,7 @@ ms.locfileid: "73728750"
   
 -   在使用小数时，使用浮点数的算术或比较运算不一定产生相同结果，因为浮点数可能无法精确表示小数。  
   
--   如果包含浮点数，值可能无法“往返转换”。 如果某一运算将原始浮点数转换为其他形式，而相反运算将已转换形式转换回浮点数，并且最终生成的浮点数与原始浮点数相等，则值被认为是往返转换。 因为在转换过程中一个或多个最小有效位缺失或更改，所以该往返转换可能失败。  
+-   如果包含浮点数，值可能无法“往返转换”。** 如果某一运算将原始浮点数转换为其他形式，而相反运算将已转换形式转换回浮点数，并且最终生成的浮点数与原始浮点数相等，则值被认为是往返转换。 因为在转换过程中一个或多个最小有效位缺失或更改，所以该往返转换可能失败。  
   
 ## <a name="attribute-examples"></a>属性示例  
  在下面的示例中，实体具有 Name、Code、Subcategory、StandardCost、ListPrice 和 FilePhoto 属性。 这些属性描述成员。 每个成员由一行属性值表示。  
@@ -75,30 +75,30 @@ ms.locfileid: "73728750"
   
  Subcategory 是用作 Product 的基于域的属性的实体。 Category 是用作 Subcategory 的基于域的属性的实体。 与 Product 实体一样，Category 和 Subcategory 实体各自包含默认 Name 和 Code 属性。  
   
- ![Product 实体树结构](../master-data-services/media/mds-conc-entity-ui.gif "Product 实体树结构")  
+ ![产品实体树结构](../master-data-services/media/mds-conc-entity-ui.gif "产品实体树结构")  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|创建新的自由格式的文本属性。|[创建文本属性 (Master Data Services)](../master-data-services/create-a-text-attribute-master-data-services.md)|  
-|创建新的自由格式的数字属性。|[创建数字属性 (Master Data Services)](../master-data-services/create-a-numeric-attribute-master-data-services.md)|  
-|创建新的自由格式的链接属性。|[创建链接属性 (Master Data Services)](../master-data-services/create-a-link-attribute-master-data-services.md)|  
-|创建新的文件属性。|[创建文件属性 (Master Data Services)](../master-data-services/create-a-file-attribute-master-data-services.md)|  
-|创建新的基于域的属性。|[创建基于域的属性 (Master Data Services)](../master-data-services/create-a-domain-based-attribute-master-data-services.md)|  
-|更改现有属性的名称。|[更改属性名称和数据类型 (Master Data Services)](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)|  
-|向更改跟踪组添加现有属性。|[向更改跟踪组添加属性 (Master Data Services)](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
-|删除现有属性。|[删除属性 (Master Data Services)](../master-data-services/delete-an-attribute-master-data-services.md)|  
+|创建新的自由格式的文本属性。|[Master Data Services 创建文本属性 &#40;&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)|  
+|创建新的自由格式的数字属性。|[创建数字属性 &#40;Master Data Services&#41;](../master-data-services/create-a-numeric-attribute-master-data-services.md)|  
+|创建新的自由格式的链接属性。|[创建链接属性 &#40;Master Data Services&#41;](../master-data-services/create-a-link-attribute-master-data-services.md)|  
+|创建新的文件属性。|[创建文件属性 &#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)|  
+|创建新的基于域的属性。|[创建基于域的属性 &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)|  
+|更改现有属性的名称。|[更改属性名称和数据类型 &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)|  
+|向更改跟踪组添加现有属性。|[将属性添加到更改跟踪组 &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
+|删除现有属性。|[删除属性 &#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-master-data-services.md)|  
 |更改属性的顺序。|[更改属性的顺序](../master-data-services/change-the-order-of-attributes.md)|  
-|创建日期属性|[创建日期属性 (Master Data Services)](../master-data-services/create-a-date-attribute-master-data-services.md)|  
+|创建日期属性|[创建日期属性 &#40;Master Data Services&#41;](../master-data-services/create-a-date-attribute-master-data-services.md)|  
   
 ## <a name="related-content"></a>相关内容  
   
--   [基于域的属性 (Master Data Services)](../master-data-services/domain-based-attributes-master-data-services.md)  
+-   [基于域的属性 &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
   
--   [属性组 (Master Data Services)](../master-data-services/attribute-groups-master-data-services.md)  
+-   [属性组 &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)  
   
--   [成员 (Master Data Services)](../master-data-services/members-master-data-services.md)  
+-   [成员 &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)  
   
--   [叶权限 (Master Data Services)](../master-data-services/leaf-permissions-master-data-services.md)
+-   [叶权限 &#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md)
   

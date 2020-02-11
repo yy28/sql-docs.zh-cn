@@ -1,5 +1,5 @@
 ---
-title: sys.database_event_session_actions （Azure SQL 数据库） |Microsoft Docs
+title: sys. database_event_session_actions （Azure SQL Database） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -12,27 +12,27 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 16aa77224f45a07540f7c5e688f9e3b6bc9bb6ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915151"
 ---
-# <a name="sysdatabaseeventsessionactions-azure-sql-database"></a>sys.database_event_session_actions（Azure SQL 数据库）
+# <a name="sysdatabase_event_session_actions-azure-sql-database"></a>sys.database_event_session_actions（Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  对事件会话中每个事件的每个操作都返回一行。  
+  返回针对事件会话的每个事件执行的每个操作所对应的行。  
   
 ||  
 |-|  
-|**适用对象**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 和任何更高版本。|  
+|**适用**于： [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 和任何更高版本。|  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|事件会话的 ID。 不可为 null。|  
 |event_id|**int**|事件的 ID。 此 ID 在事件会话对象中是唯一的。 不可为 null。|  
 |name|**sysname**|操作的名称。 可以为 Null。|  
-|包|**sysname**|包含事件的事件包的名称。 可以为 Null。|  
+|程序包|**sysname**|包含事件的事件包的名称。 可以为 Null。|  
 |module|**sysname**|包含事件的模块的名称。 可以为 Null。|  
   
 ## <a name="permissions"></a>权限  
@@ -43,8 +43,8 @@ ms.locfileid: "67915151"
   
 ||||  
 |-|-|-|  
-|From|若要|关系|  
-|sys.database_event_session_actions.event_session_id|sys.sys.database_event_sessions.event_session_id|多对一|  
-|sys.database_event_session_actions.event_id<br /><br /> sys.database_event_session_actions.event_session_id|sys.database_event_session_events.event_session_id<br /><br /> sys.database_event_session_events.event_id|多对一|  
+|从|目标|关系|  
+|sys. database_event_session_actions event_session_id|sys. database_event_sessions. event_session_id|多对一|  
+|sys. database_event_session_actions event_id<br /><br /> sys. database_event_session_actions event_session_id|sys. database_event_session_events event_session_id<br /><br /> sys. database_event_session_events event_id|多对一|  
   
   

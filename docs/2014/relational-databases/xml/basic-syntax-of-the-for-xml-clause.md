@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0bb04374ede05406fdf6d273a76a246bb35f5dac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637862"
 ---
 # <a name="basic-syntax-of-the-for-xml-clause"></a>FOR XML 子句的基本语法
@@ -29,7 +29,7 @@ ms.locfileid: "62637862"
 > [!IMPORTANT]  
 >  不推荐使用 FOR XML 选项的 XMLDATA 指令。 如果是 RAW 和 AUTO 模式，请使用 XSD 生成。 在 EXPLICT 模式下，没有可以代替 XMLDATA 指令的项。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- 下面是 [FOR 子句 (Transact-SQL)](/sql/t-sql/queries/select-for-clause-transact-sql)中所述的基本语法：  
+ 下面是[FOR 子句（transact-sql）](/sql/t-sql/queries/select-for-clause-transact-sql)中所述的基本语法：  
   
 ```  
 [ FOR { BROWSE | <XML> } ]  
@@ -85,13 +85,13 @@ XML
  BINARY BASE64  
  如果指定 BINARY Base64 选项，则查询所返回的任何二进制数据都用 base64 编码格式表示。 若要使用 RAW 和 EXPLICIT 模式检索二进制数据，必须指定此选项。 在 AUTO 模式中，默认情况下将二进制数据作为引用返回。 有关工作示例，请参阅 [将 RAW 模式与 FOR XML 一起使用](use-raw-mode-with-for-xml.md)。  
   
- TYPE  
+ 类型  
  指定查询以 **xml** 类型返回结果。 有关详细信息，请参阅 [TYPE Directive in FOR XML Queries](type-directive-in-for-xml-queries.md)。  
   
- ROOT [('*RootName*')]  
+ 根 [（'*RootName*'）]  
  指定向产生的 XML 中添加单个顶级元素。 可以选择指定要生成的根元素名称。 默认值为“root”。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [将 RAW 模式与 FOR XML 一起使用](use-raw-mode-with-for-xml.md)   
  [将 AUTO 模式与 FOR XML 一起使用](use-auto-mode-with-for-xml.md)   
  [将 EXPLICIT 模式与 FOR XML 一起使用](use-explicit-mode-with-for-xml.md)   

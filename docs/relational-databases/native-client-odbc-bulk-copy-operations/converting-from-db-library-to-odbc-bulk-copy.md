@@ -18,16 +18,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b7e14018ea62edb5dd262b87ddbea467d1872132
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73785187"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>从 DB-Library 转换到 ODBC 大容量复制
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  将 DB-LIBRARY 大容量复制程序转换为 ODBC 非常简单，因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序支持的大容量复制函数类似于 DB-LIBRARY 大容量复制函数，但以下情况除外：  
+  将 DB-LIBRARY 大容量复制程序转换为 ODBC 非常简单，因为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序支持的大容量复制函数类似于 db-library 大容量复制函数，但以下情况除外：  
   
 -   DB-Library 应用程序将 DBPROCESS 结构的指针作为大容量复制函数的第一个参数进行传递。 在 ODBC 应用程序中，DBPROCESS 指针由 ODBC 连接句柄取代。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "73785187"
         (void *)SQL_BCP_ON, SQL_IS_INTEGER);  
     ```  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序不支持 DB-LIBRARY 消息和错误处理程序;必须调用**SQLGetDiagRec**来获取 ODBC 大容量复制函数引发的错误和消息。 大容量复制函数的 ODBC 版本返回标准的大容量复制返回代码 SUCCEED 或 FAILED，而不是 ODBC 样式的返回代码，比如 SQL_SUCCESS 或 SQL_ERROR。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序不支持 db-library 消息和错误处理程序;必须调用**SQLGetDiagRec**来获取 ODBC 大容量复制函数引发的错误和消息。 大容量复制函数的 ODBC 版本返回标准的大容量复制返回代码 SUCCEED 或 FAILED，而不是 ODBC 样式的返回代码，比如 SQL_SUCCESS 或 SQL_ERROR。  
   
 -   为 DB-LIBRARY [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)*varlen*参数指定的值以不同于 ODBC **bcp_bind**_cbData_参数的方式进行解释。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "73785187"
     |-------------------------|--------------------------------|-------------------------|  
     |提供 Null 值|0|-1 (SQL_NULL_DATA)|  
     |提供变量数据|-1|-10 (SQL_VARLEN_DATA)|  
-    |零长度字符或二进制字符串|不适用|0|  
+    |零长度字符或二进制字符串|NA|0|  
   
      在 DB-LIBRARY 中， *varlen*值为-1 表示提供可变长度数据，ODBC *cbData*中的数据将被解释为仅提供 NULL 值。 将-1 的任何 DB-LIBRARY *varlen*规范更改为 SQL_VARLEN_DATA，并将所有*varlen*规范（0）更改为 SQL_NULL_DATA。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "73785187"
   
     -   DB 库**dbconvert**函数支持的任何格式的**datetime**和**smalldatetime**字符字符串。  
   
-    -   当在 "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端网络" 实用工具的 "DB-LIBRARY**选项**" 选项卡上选中 "**使用国际设置**" 框时，db-library 大容量复制函数还接受为区域设置定义的区域日期格式的日期客户端计算机注册表。  
+    -   当在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端网络实用工具的 "db-library**选项**" 选项卡上选中 "**使用国际设置**" 框时，db-library 大容量复制函数也会接受为客户端计算机注册表的区域设置定义的区域日期格式的日期。  
   
      DB-LIBRARY 大容量复制函数不接受 ODBC **datetime**和**smalldatetime**格式。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "73785187"
 -   当以字符格式输出**money**值时，ODBC 大容量复制函数提供四位数的精度，没有逗号分隔符;DB-LIBRARY 版本仅提供两位数的精度，并包含逗号分隔符。  
   
 ## <a name="see-also"></a>另请参阅  
- [执行大容量复制&#40;操作&#41; ODBC](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)   
+ [&#40;ODBC&#41;执行大容量复制操作](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)   
  [大容量复制函数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

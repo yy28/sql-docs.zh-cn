@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 70227f556ae268144549616dab0895e70ff39de8
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228744"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>使用可用性组向导 (SQL Server Management Studio)
@@ -34,14 +34,14 @@ ms.locfileid: "75228744"
   
      [先决条件、限制和建议](#PrerequisitesRestrictions)  
   
-     [安全](#Security)  
+     [安全性](#Security)  
   
 -   **若要创建和配置可用性组，请使用：**  [新建可用性组向导（SQL Server Management Studio）](#RunAGwiz)  
   
 > [!NOTE]  
 >  除了使用新建可用性组向导之外，您还可以使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell cmdlet。 有关详细信息，请参阅 [创建可用性组 (Transact-SQL)](create-an-availability-group-transact-sql.md) 或 [创建可用性组 (SQL Server PowerShell)](../../../powershell/sql-server-powershell.md)中创建和配置 AlwaysOn 可用性组。  
   
-##  <a name="BeforeYouBegin"></a>开始之前  
+##  <a name="BeforeYouBegin"></a> 开始之前  
  我们强烈建议您首先阅读此部分，再尝试创建您的第一个可用性组。  
   
 ###  <a name="PrerequisitesRestrictions"></a>先决条件、限制和建议  
@@ -53,9 +53,9 @@ ms.locfileid: "75228744"
   
      `To use certificates for a database mirroring endpoint:`  
   
-     [CREATE ENDPOINT &#40;Transact-sql&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)  
+     [CREATE ENDPOINT (Transact-SQL)](/sql/t-sql/statements/create-endpoint-transact-sql)  
   
-     [将证书用于数据库镜像端点 &#40;Transact-sql&#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
+     [使用数据库镜像终结点证书 (Transact-SQL)](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
 -   SQL Server 故障转移群集实例 (FCI) 不支持通过可用性组来自动进行故障转移，因此，只能为手动故障转移配置任何由 FCI 承载的可用性副本。  
   
@@ -86,9 +86,9 @@ ms.locfileid: "75228744"
   
      如果您无法使用该向导执行完全初始数据同步，则需要手动准备您的辅助数据库。 您可以在运行该向导之前或之后进行准备。 有关详细信息，请参阅 [为可用性组手动准备辅助数据库 (SQL Server)](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)。  
   
-###  <a name="Security"></a>安全  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>访问  
+####  <a name="Permissions"></a> 权限  
  需要 **sysadmin** 固定服务器角色的成员资格，以及 CREATE AVAILABILITY GROUP 服务器权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  
   
  如果要允许可用性组向导管理数据库镜像端点，还需要 CONTROL ON ENDPOINT 权限。  
@@ -116,13 +116,13 @@ ms.locfileid: "75228744"
     |Tab|简要说明|  
     |---------|-----------------------|  
     |**副本**|使用此选项卡可以指定将承载辅助副本的每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 请注意，您当前连接的服务器实例必须承载主副本。|  
-    |**终结点**|使用此选项卡可以验证任何现有数据库镜像端点，此外，如果在其服务帐户使用 Windows 身份验证的服务器实例上缺少该端点，则会自动创建该端点。 **注意：** 如果任何服务器实例在非域用户帐户下运行，则需要先对服务器实例进行手动更改，然后才能在向导中继续操作。 有关详细信息，请参阅本主题前面的 [先决条件](#PrerequisitesRestrictions)。|  
+    |**端点**|使用此选项卡可以验证任何现有数据库镜像端点，此外，如果在其服务帐户使用 Windows 身份验证的服务器实例上缺少该端点，则会自动创建该端点。 **注意：** 如果任何服务器实例在非域用户帐户下运行，则需要先对服务器实例进行手动更改，然后才能在向导中继续操作。 有关详细信息，请参阅本主题前面的 [先决条件](#PrerequisitesRestrictions)。|  
     |**备份首选项**|使用此选项卡可以整体为可用性组指定您的备份首选项，并为各个可用性副本指定备份优先级。|  
     |**监听**|使用此选项卡可以创建可用性组侦听器。 默认情况下，该向导不创建侦听器。|  
   
 8.  在 **“选择初始数据同步”** 页上，选择如何创建新的辅助数据库并将其联接到可用性组。 选择以下选项之一：  
   
-    -   **达到**  
+    -   **完全**  
   
          如果你的环境满足自动启动初始数据同步的要求，则选择此选项（有关详细信息，请参阅本主题前面的 [先决条件、限制和建议](#PrerequisitesRestrictions)）。  
   
@@ -154,20 +154,20 @@ ms.locfileid: "75228744"
   
      完成向导后，单击 **“关闭”** 以退出安装向导。  
   
-##  <a name="RelatedTasks"></a>相关任务  
+##  <a name="RelatedTasks"></a> 相关任务  
  **完成可用性组配置**  
   
--   [将辅助副本联接到可用性组 &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
+-   [将辅助副本联接到可用性组 (SQL Server)](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
--   [为可用性组手动准备辅助数据库 &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
+-   [为可用性组手动准备辅助数据库 (SQL Server)](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
--   [将辅助数据库联接到可用性组 &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)  
+-   [将辅助数据库联接到可用性组 (SQL Server)](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
--   [创建或配置可用性组侦听器 &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [创建或配置可用性组侦听程序 (SQL Server)](create-or-configure-an-availability-group-listener-sql-server.md)  
   
  **创建可用性组的替代方法**  
   
--   [使用 "新建可用性组" 对话框 &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
+-   [使用“新建可用性组”对话框 (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
 -   [&#40;Transact-sql 创建可用性组&#41;](create-an-availability-group-transact-sql.md)  
   
@@ -175,15 +175,15 @@ ms.locfileid: "75228744"
   
  **启用 AlwaysOn 可用性组**  
   
--   [启用和禁用 AlwaysOn 可用性组 &#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)  
+-   [启用和禁用 AlwaysOn 可用性组 (SQL Server)](enable-and-disable-always-on-availability-groups-sql-server.md)  
   
  **配置数据库镜像端点**  
   
 -   [为 AlwaysOn 可用性组 &#40;SQL Server PowerShell 创建数据库镜像端点&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
--   [为 Windows 身份验证创建数据库镜像端点 &#40;Transact-sql&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
+-   [为 Windows 身份验证创建数据库镜像终结点 (Transact-SQL)](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
--   [将证书用于数据库镜像端点 &#40;Transact-sql&#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
+-   [使用数据库镜像终结点证书 (Transact-SQL)](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
 -   [在添加或修改可用性副本时指定终结点 URL &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
@@ -193,7 +193,7 @@ ms.locfileid: "75228744"
   
 -   [排除失败的添加文件操作 &#40;AlwaysOn 可用性组&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a>相关内容  
+##  <a name="RelatedContent"></a> 相关内容  
   
 -   **博客**  
   
@@ -218,7 +218,7 @@ ms.locfileid: "75228744"
      [SQL Server 客户咨询团队白皮书](http://sqlcat.com/)  
   
 ## <a name="see-also"></a>另请参阅  
- [数据库镜像端点 &#40;SQL Server&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
+ [数据库镜像终结点 (SQL Server)](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性组 &#40;SQL Server 的先决条件、限制和建议&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
   

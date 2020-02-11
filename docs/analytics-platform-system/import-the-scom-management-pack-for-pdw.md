@@ -10,17 +10,17 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: bcb0e667424767fd53a5fc7e027e84d512022203
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401085"
 ---
 # <a name="import-the-scom-management-pack---analytics-platform-system"></a>导入 SCOM 管理包分析平台系统
 按照以下步骤导入用于分析平台系统（AP）的 System Center Operations Manager （SCOM）管理包。 从 SCOM 监视并行数据仓库需要管理包。 
   
 ## <a name="BeforeBegin"></a>开始之前  
-**必备条件**  
+**先决条件**  
   
 必须安装并运行 System Center Operations Manager 2007 R2。  
   
@@ -72,11 +72,11 @@ ms.locfileid: "74401085"
   
     ![单击“安装”](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW3.png "SCOM_PDW3")  
   
-5.  单击 **“关闭”**。  
+5.  单击“关闭”  。  
   
     ![单击 "关闭"](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW4.png "SCOM_PDW4")  
   
-## <a name="next-step"></a>后续步骤  
+## <a name="next-step"></a>下一步  
 导入管理包后，请继续执行下一步：[配置 SCOM 以监视分析平台系统 &#40;分析平台系统&#41;](configure-scom-to-monitor-analytics-platform-system.md)。  
   
 <!-- MISSING LINKS ## See Also  

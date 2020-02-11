@@ -1,5 +1,5 @@
 ---
-title: sp_revoke_login_from_proxy (TRANSACT-SQL) |Microsoft Docs
+title: sp_revoke_login_from_proxy （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: e4546c13-9fba-4bab-8b42-d6f18b33ec25
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0aad616275d635ac32d6e81dbc5321db0db58b34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019937"
 ---
-# <a name="sprevokeloginfromproxy-transact-sql"></a>sp_revoke_login_from_proxy (Transact-SQL)
+# <a name="sp_revoke_login_from_proxy-transact-sql"></a>sp_revoke_login_from_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   删除对安全主体服务器的代理的访问权。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,14 +42,14 @@ sp_revoke_login_from_proxy
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @name = ] 'name'` 名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名、 服务器角色或**msdb**要删除的访问权限的数据库角色。 *名称*是**nvarchar(256)** ，无默认值。  
+`[ @name = ] 'name'`要删除其访问[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]权限的登录名、服务器角色或**msdb**数据库角色的名称。 *名称*为**nvarchar （256）** ，无默认值。  
   
-`[ @proxy_id = ] id` 要删除的访问权限的代理 id。 任一*id*或*proxy_name*必须指定，但不能同时指定两者。 *Id*是**int**，默认值为 NULL。  
+`[ @proxy_id = ] id`要删除其访问权限的代理的 id。 必须指定*id*或*proxy_name* ，但不能同时指定两者。 *Id*为**int**，默认值为 NULL。  
   
-`[ @proxy_name = ] 'proxy_name'` 要删除的访问权限的代理的名称。 任一*id*或*proxy_name*必须指定，但不能同时指定两者。 *Proxy_name*是**sysname**，默认值为 NULL。  
+`[ @proxy_name = ] 'proxy_name'`要删除其访问权限的代理的名称。 必须指定*id*或*proxy_name* ，但不能同时指定两者。 *Proxy_name*的值为**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** （成功）或**1** （失败）  
   
 ## <a name="remarks"></a>备注  
  引用此代理的登录名所拥有的作业将无法运行。  
@@ -70,9 +70,9 @@ EXEC dbo.sp_revoke_login_from_proxy
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [SQL Server 代理存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_grant_login_to_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
- [sp_help_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md)  
+## <a name="see-also"></a>另请参阅  
+ [SQL Server 代理存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [sp_grant_login_to_proxy &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
+ [sp_help_proxy &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md)  
   
   

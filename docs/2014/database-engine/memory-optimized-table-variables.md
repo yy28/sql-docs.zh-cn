@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 485f481819a9712f822f969c04d8e7050ad43bae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774405"
 ---
 # <a name="memory-optimized-table-variables"></a>内存优化表变量
@@ -36,9 +36,9 @@ ms.locfileid: "62774405"
   
 -   表变量可以用于模拟本机编译的存储过程中的游标，从而可帮助您解决本机编译的存储过程中的外围应用限制。  
   
- 与内存优化表相似， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 为每个内存优化表类型都生成一个 DLL。 （创建内存优化表类型时，以及用于创建内存优化表变量时不编译即被调用。）此 DLL 包括用于访问索引的函数以及用于从表变量检索数据的函数。 当基于表类型声明一个内存优化表变量时，将在用户会话中创建与该表类型相对应的表和索引结构的实例。 然后，可采用与使用基于磁盘的表变量相同的方式使用该表变量。 您可以在表变量中插入、更新和删除行，并且可以在 [!INCLUDE[tsql](../includes/tsql-md.md)] 查询中使用变量。 还可以像表值参数 (TVP) 一样，将变量传递到本机编译的存储过程和解释型存储过程中。  
+ 与内存优化表相似， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 为每个内存优化表类型都生成一个 DLL。 （编译是在创建内存优化表类型时调用的，而不是在用于创建内存优化表变量时调用。）此 DLL 包括用于访问索引和从表变量检索数据的函数。 当基于表类型声明一个内存优化表变量时，将在用户会话中创建与该表类型相对应的表和索引结构的实例。 然后，可采用与使用基于磁盘的表变量相同的方式使用该表变量。 您可以在表变量中插入、更新和删除行，并且可以在 [!INCLUDE[tsql](../includes/tsql-md.md)] 查询中使用变量。 还可以像表值参数 (TVP) 一样，将变量传递到本机编译的存储过程和解释型存储过程中。  
   
- 下面的示例显示了基于 AdventureWorks 的内存中 OLTP 示例中的内存优化表类型 ([SQL Server 2014 内存中 OLTP 示例](https://msftdbprodsamples.codeplex.com/releases/view/114491))。  
+ 下面的示例演示基于 AdventureWorks 的内存中 OLTP 示例中的内存优化表类型（[SQL Server 2014 内存中 Oltp 示例](https://msftdbprodsamples.codeplex.com/releases/view/114491)）。  
   
 ```sql
 CREATE TYPE Sales.SalesOrderDetailType_inmem
@@ -60,11 +60,12 @@ WITH ( MEMORY_OPTIMIZED = ON );
   
  该示例表明，内存优化的表类型的语法与基于磁盘的表类型相似，但具有以下不同：  
   
--   `MEMORY_OPTIMIZED=ON` 指示表类型是内存优化表。  
+-   
+  `MEMORY_OPTIMIZED=ON` 指示表类型是内存优化表。  
   
 -   该类型必须有至少一个索引。 与内存优化表一样，可以使用哈希索引和非聚集索引。  
   
-     对于哈希索引，Bucket 计数应该是预期唯一索引键数目的一倍到两倍。 有关详细信息，请参阅 [哈希索引确定正确的存储桶计数](../relational-databases/indexes/indexes.md)。  
+     对于哈希索引，Bucket 计数应该是预期唯一索引键数目的一倍到两倍。 有关详细信息，请参阅 [Determining the Correct Bucket Count for Hash Indexes](../relational-databases/indexes/indexes.md)。  
   
 -   针对内存优化表的数据类型和约束限制也适用于内存优化表类型。 例如，在 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中支持默认约束，但不支持 CHECK 约束。  
   
@@ -186,7 +187,7 @@ GO
   
  内存将作为数据库的单一 PGPOOL 内存消耗者的一部分加以考虑。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [对内存中 OLTP 的 Transact-SQL 支持](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
   
   

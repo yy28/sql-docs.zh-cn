@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 639eb4e9e5c531e154b9eb7f91165af365bc519f
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400364"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>将遥测反馈发送给 Microsoft for Analytics 平台系统
@@ -111,7 +111,7 @@ ms.locfileid: "74400364"
 多次运行此`Disable-RemoteMonitoring`命令不会有任何损害。  
   
 ## <a name="next-steps"></a>后续步骤
-有关更多信息，请参阅：
+有关详细信息，请参阅：
 - [使用管理控制台 &#40;分析平台系统来监视设备&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
 - [使用系统视图 &#40;分析平台系统来监视设备&#41;](monitor-the-appliance-by-using-system-views.md)  
 - [使用 System Center Operations Manager &#40;Analytics 平台系统来监视设备&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  

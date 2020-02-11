@@ -1,5 +1,5 @@
 ---
-title: 则 istestcase (DMX) |Microsoft Docs
+title: 则 istestcase （DMX） |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 050ceeaa8eb5700f108b7135616817e09c0031cb
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68889041"
 ---
 # <a name="istestcase-dmx"></a>IsTestCase (DMX)
@@ -28,17 +28,17 @@ IsTestCase()
 ```  
   
 ## <a name="result-type"></a>结果类型  
- 如果事例是测试数据集的一部分, 则返回**true** ;否则**为 false**。  
+ 如果事例是测试数据集的一部分，则返回**true** ;否则**为 false**。  
   
 ## <a name="remarks"></a>备注  
- 如果使用数据挖掘向导创建挖掘结构和相关的挖掘模型，则默认情况下将留出 30% 的事例用作测试数据集。 其余事例用于定型数据挖掘模型。 同一测试数据集可用于所有基于该结构的模型。 但是，如果使用 DMX 创建挖掘模型，则默认情况下所有数据都将用于定型模型，而不创建任何测试集。 若要允许创建测试数据集, 必须使用 WITH 维持子句设置参数。  
+ 如果使用数据挖掘向导创建挖掘结构和相关的挖掘模型，则默认情况下将留出 30% 的事例用作测试数据集。 其余事例用于定型数据挖掘模型。 同一测试数据集可用于所有基于该结构的模型。 但是，如果使用 DMX 创建挖掘模型，则默认情况下所有数据都将用于定型模型，而不创建任何测试集。 若要允许创建测试数据集，必须使用 WITH 维持子句设置参数。  
   
  通过查看 <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxCases%2A> 和 <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxPercent%2A> 属性的值，可以确定是否已对特定的挖掘结构创建测试集。  
   
 > [!NOTE]  
->  如果要使用则 istrainingcase 或则 istestcase 函数返回有关特定模型中事例的详细信息, 则必须对该模型启用钻取功能。 有关详细信息，请参阅 [对挖掘模型启用钻取](https://docs.microsoft.com/analysis-services/data-mining/enable-drillthrough-for-a-mining-model)。  
+>  如果要使用则 istrainingcase 或则 istestcase 函数返回有关特定模型中事例的详细信息，则必须对该模型启用钻取功能。 有关详细信息，请参阅 [对挖掘模型启用钻取](https://docs.microsoft.com/analysis-services/data-mining/enable-drillthrough-for-a-mining-model)。  
   
- 若要返回定型数据集中的事例, 请使用函数[则 istrainingcase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md)。  
+ 若要返回定型数据集中的事例，请使用函数[则 istrainingcase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md)。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用在`Targeted Mailing` [数据挖掘基础教程](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)中创建的挖掘结构。 查询将返回该结构中所有用于测试的事例。  
@@ -49,10 +49,10 @@ FROM [Targeted Mailing].CASES
 WHERE IsTestCase()  
 ```  
   
- 有关如何查询数据挖掘中使用的事例的详细信息, 请参阅[SELECT &#60;FROM&#62;model。事例&#40;, 并从结构中选择。&#41; ](../dmx/select-from-model-cases-dmx.md) [ &#60;&#62;事例](../dmx/select-from-structure-cases.md)。  
+ 有关如何查询数据挖掘中使用的事例的详细信息，请参阅[SELECT FROM &#60;model&#62;。&#40;DMX&#41;的事例](../dmx/select-from-model-cases-dmx.md)，并[从 &#60;结构&#62; 中进行选择。事例](../dmx/select-from-structure-cases.md)。  
   
-## <a name="see-also"></a>请参阅  
- [函数&#40;DMX&#41;](../dmx/functions-dmx.md)   
+## <a name="see-also"></a>另请参阅  
+ [函数 &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [数据挖掘查询](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries)   
  [定型数据集和测试数据集](https://docs.microsoft.com/analysis-services/data-mining/training-and-testing-data-sets)  
   

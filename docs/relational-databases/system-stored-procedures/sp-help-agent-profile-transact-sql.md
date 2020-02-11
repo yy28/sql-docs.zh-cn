@@ -1,5 +1,5 @@
 ---
-title: sp_help_agent_profile (Transact-sql) |Microsoft Docs
+title: sp_help_agent_profile （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6f7b63875d7c4c4c5ab5f3880c133448fe6da240
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771459"
 ---
-# <a name="sphelpagentprofile-transact-sql"></a>sp_help_agent_profile (Transact-SQL)
+# <a name="sp_help_agent_profile-transact-sql"></a>sp_help_agent_profile (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   显示指定代理的配置文件。 此存储过程在分发服务器上的任何数据库中执行。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,42 +38,42 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @agent_type = ] agent_type`代理的类型。 *agent_type*的数据值为**int**, 默认值为**0**, 可以是下列值之一。  
+`[ @agent_type = ] agent_type`代理的类型。 *agent_type*的数据值为**int**，默认值为**0**，可以是下列值之一。  
   
-|值|Description|  
+|值|说明|  
 |-----------|-----------------|  
 |**1**|快照代理|  
 |**2**|日志读取器代理|  
 |**3**|分发代理|  
 |**4**|合并代理|  
-|**9**|队列读取器代理|  
+|**900**|队列读取器代理|  
   
-`[ @profile_id = ] profile_id`要显示的配置文件的 ID。 *profile_id*的值为**int**, 默认值为 **-1**, 这将返回**MSagent_profiles**表中的所有配置文件。  
+`[ @profile_id = ] profile_id`要显示的配置文件的 ID。 *profile_id*的值为**int**，默认值为 **-1**，则返回**MSagent_profiles**表中的所有配置文件。  
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**profile_id**|**int**|配置文件的 ID。|  
 |**profile_name**|**sysname**|对代理类型唯一。|  
 |**agent_type**|**int**|**1** = 快照代理<br /><br /> **2** = 日志读取器代理<br /><br /> **3** = 分发代理<br /><br /> **4** = 合并代理<br /><br /> **9** = 队列读取器代理|  
-|**类型**|**int**|**0** = 系统<br /><br /> **1** = 自定义|  
-|**description**|**varchar(3000)**|配置文件的说明。|  
+|类型 |**int**|**0** = 系统<br /><br /> **1** = 自定义|  
+|**2008**|**varchar （3000）**|配置文件的说明。|  
 |**def_profile**|**bit**|指定该配置文件是否是该代理类型的默认值。|  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** (成功) 或**1** (失败)  
+ **0** （成功）或**1** （失败）  
   
 ## <a name="remarks"></a>备注  
- **sp_help_agent_profile**用于所有类型的复制。  
+ **sp_help_agent_profile**在所有类型的复制中使用。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员或**replmonitor**固定数据库角色的成员才能执行**sp_help_agent_profile**。  
+ 只有**sysadmin**固定服务器角色的成员或**replmonitor**固定数据库角色的成员才能**sp_help_agent_profile**执行。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用复制代理配置文件](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
- [sp_add_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
- [sp_drop_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
- [sp_help_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)  
+ [sp_add_agent_profile &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
+ [sp_drop_agent_profile &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
+ [sp_help_agent_parameter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)  
   
   

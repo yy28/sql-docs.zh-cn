@@ -17,14 +17,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 558173381d88eac95fc2b6993e11a1104844abf7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022205"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 Subscribers
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持通过 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host Integration Server 附带的 OLE DB 访问接口对 IBM DB2/AS 400、DB2/MVS 和 DB2/通用数据库进行的推送订阅。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]通过[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host Integration Server 附带的 OLE DB 提供程序支持对 IBM DB2/AS 400、DB2/MVS 和 Db2/通用数据库的推送订阅。  
   
 ## <a name="configuring-an-ibm-db2-subscriber"></a>配置 IBM DB2 订阅服务器  
  若要配置 IBM DB2 订阅服务器，请按下列步骤进行操作：  
@@ -39,11 +39,11 @@ ms.locfileid: "63022205"
   
 2.  为订阅服务器创建连接字符串。 可以在任何文本编辑器中创建连接字符串，但是建议您使用数据访问工具来创建。 在数据访问工具中创建字符串：  
   
-    1.  依次单击 **“开始”** 、 **“程序”** 、 **“Microsoft OLE DB Provider for DB2”** 、 **“数据访问工具”** 。  
+    1.  依次单击 **“开始”**、 **“程序”**、 **“Microsoft OLE DB Provider for DB2”**、 **“数据访问工具”**。  
   
     2.  在 **“数据访问工具”** 中，按照步骤提供 DB2 服务器的相关信息。 当使用此工具完成操作后，就创建了一个包含相关连接字符串的通用数据链接 (UDL)（复制实际使用的不是 UDL，而是连接字符串）。  
   
-    3.  访问连接字符串：右键单击数据访问工具中的 UDL 并选择 **“显示连接字符串”** 。  
+    3.  访问连接字符串：右键单击数据访问工具中的 UDL 并选择 **“显示连接字符串”**。  
   
      连接字符串类似于（使用换行符是为了方便阅读）：  
   
@@ -89,7 +89,7 @@ ms.locfileid: "63022205"
   
 -   如果要在订阅服务器上预创建表，而不是让复制创建这些表，请使用“仅支持复制”选项。 有关详细信息，请参阅 [初始化事务订阅（不使用快照）](../initialize-a-transactional-subscription-without-a-snapshot.md)中手动初始化订阅。  
   
--   与 DB2 相比，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 允许使用更长的表名称和列名称：  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]允许比 DB2 更长的表名和列名：  
   
     -   如果发布数据库中有表的名称长度超过订阅服务器上 DB2 版本所支持的长度，请为 destination_table 项目属性指定一个备用名称。 有关创建发布时设置属性的详细信息，请参阅[创建发布](../publish/create-a-publication.md)和[定义项目](../publish/define-an-article.md)。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "63022205"
 |`char(1-254)`|CHAR(1-254)|  
 |`char(255-8000)`|VARCHAR(255-8000)|  
 |`date`|DATE|  
-|`datetime`|timestamp|  
+|`datetime`|TIMESTAMP|  
 |`datetime2(0-7)`|VARCHAR(27)|  
 |`datetimeoffset(0-7)`|VARCHAR(34)|  
 |`decimal(1-31, 0-31)`|DECIMAL(1-31, 0-31)|  
@@ -117,42 +117,42 @@ ms.locfileid: "63022205"
 |`geography`|IMAGE|  
 |`geometry`|IMAGE|  
 |`hierarchyid`|IMAGE|  
-|`image`|FOR BIT DATA VARCHAR(0)<sup>1</sup>|  
+|`image`|位数据<sup>1</sup>的 VARCHAR （0）|  
 |`into`|INT|  
 |`money`|DECIMAL(19,4)|  
 |`nchar(1-4000)`|VARCHAR(1-4000)|  
-|`ntext`|VARCHAR(0)<sup>1</sup>|  
+|`ntext`|VARCHAR （0）<sup>1</sup>|  
 |`numeric(1-31, 0-31)`|DECIMAL(1-31,0-31)|  
 |`numeric(32-38, 0-38)`|VARCHAR(41)|  
 |`nvarchar(1-4000)`|VARCHAR(1-4000)|  
-|`nvarchar(max)`|VARCHAR(0)<sup>1</sup>|  
+|`nvarchar(max)`|VARCHAR （0）<sup>1</sup>|  
 |`real`|real|  
-|`smalldatetime`|timestamp|  
+|`smalldatetime`|TIMESTAMP|  
 |`smallint`|SMALLINT|  
 |`smallmoney`|DECIMAL(10,4)|  
-|`sql_variant`|不可用|  
+|`sql_variant`|空值|  
 |`sysname`|VARCHAR(128)|  
-|`text`|VARCHAR(0)<sup>1</sup>|  
+|`text`|VARCHAR （0）<sup>1</sup>|  
 |`time(0-7)`|VARCHAR(16)|  
 |`timestamp`|CHAR(8) FOR BIT DATA|  
 |`tinyint`|SMALLINT|  
 |`uniqueidentifier`|CHAR(38)|  
 |`varbinary(1-8000)`|VARCHAR(1-8000) FOR BIT DATA|  
 |`varchar(1-8000)`|VARCHAR(1-8000)|  
-|`varbinary(max)`|FOR BIT DATA VARCHAR(0)<sup>1</sup>|  
-|`varchar(max)`|VARCHAR(0)<sup>1</sup>|  
-|`xml`|VARCHAR(0)<sup>1</sup>|  
+|`varbinary(max)`|位数据<sup>1</sup>的 VARCHAR （0）|  
+|`varchar(max)`|VARCHAR （0）<sup>1</sup>|  
+|`xml`|VARCHAR （0）<sup>1</sup>|  
   
- <sup>1</sup>请参阅下节，了解有关映射到 VARCHAR(0) 的详细信息。  
+ <sup>1</sup>有关映射到 VARCHAR （0）的详细信息，请参阅下一节。  
   
 ### <a name="data-type-mapping-considerations"></a>数据类型映射注意事项  
  复制到 DB2 订阅服务器时，请考虑下列数据类型映射问题：  
   
--   映射时[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char`， `varchar`，`binary`和`varbinary`分别为 DB2 的 CHAR、 VARCHAR、 CHAR FOR BIT DATA 和 VARCHAR FOR BIT DATA，复制设置为相同将DB2数据类型的长度[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]类型。  
+-   将、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char` `varchar`、 `binary`和`varbinary`分别映射到 db2 CHAR、varchar、CHAR for bit data 和 varchar for bit data 时，复制会将 DB2 数据类型的长度设置为与[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]类型的长度相同。  
   
      这样，只要 DB2 页大小约束足够大，能容纳最大行大小，就可以在订阅服务器上成功创建已生成的表。 请确保用于访问 DB2 数据库的登录帐户具有访问表空间的权限，这些表空间具有足够大小可以存放向 DB2 复制的表。  
   
--   DB2 可以支持 32 KB 大的 VARCHAR 列，因此可以将某些 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大型对象列适当映射到 DB2 VARCHAR 列。 但是，复制用于 DB2 的 OLE DB 访问接口不支持将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大型对象映射到 DB2 大型对象。 出于此原因， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `text`， `varchar(max)`， `ntext`，和`nvarchar(max)`列映射到 VARCHAR(0) 中生成的创建脚本。 在将脚本应用于订阅服务器之前，必须将长度值 0 更改为一个适当的值。 如果不更改数据类型长度，则当试图在 DB2 订阅服务器上创建表时，DB2 会产生错误 604（错误 604 表示数据类型的精度或长度属性无效）。  
+-   DB2 可以支持 32 KB 大的 VARCHAR 列，因此可以将某些 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大型对象列适当映射到 DB2 VARCHAR 列。 但是，复制用于 DB2 的 OLE DB 访问接口不支持将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大型对象映射到 DB2 大型对象。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `text`因此，在生成的`varchar(max)`创建`ntext`脚本中`nvarchar(max)` ，、、和列映射到 VARCHAR （0）。 在将脚本应用于订阅服务器之前，必须将长度值 0 更改为一个适当的值。 如果不更改数据类型长度，则当试图在 DB2 订阅服务器上创建表时，DB2 会产生错误 604（错误 604 表示数据类型的精度或长度属性无效）。  
   
      请根据您对要复制的源表的了解来确定是否适于将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大型对象映射到可变长度的 DB2 项，并在自定义创建脚本中指定适当的最大长度。 有关指定自定义创建脚本的信息，请参阅本主题中“配置 IBM DB2 订阅服务器”部分的步骤 5。  
   
@@ -161,11 +161,11 @@ ms.locfileid: "63022205"
   
      如果对于某个大型对象列没有适当的映射，请考虑对项目使用列筛选，以避免复制该列。 有关详细信息，请参阅[筛选已发布数据](../publish/filter-published-data.md)。  
   
--   复制时[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]`nchar`并`nvarchar`为 DB2 的 CHAR 和 VARCHAR 时，复制将使用相同的长度说明符与为 DB2 类型[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]类型。 但是，数据类型长度对于生成的 DB2 表而言可能太小。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nchar`复制和`nvarchar`到 db2 CHAR 和 VARCHAR 时，复制为 db2 类型使用的长度说明符与[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]类型相同。 但是，数据类型长度对于生成的 DB2 表而言可能太小。  
   
-     在某些 DB2 环境中， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char`数据项并不限于单字节字符，CHAR 或 VARCHAR 项的长度必须考虑到这一点。 如果需要，还必须考虑到“移入”  字符和“移出”  字符。 如果要复制的表`nchar`和`nvarchar`列，您可能需要在自定义创建脚本中指定的数据类型的更大的最大长度。 有关指定自定义创建脚本的信息，请参阅本主题中“配置 IBM DB2 订阅服务器”部分的步骤 5。  
+     在某些 DB2 环境中， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char`数据项并不限于单字节字符;CHAR 或 VARCHAR 项的长度必须考虑到这一点。 如果需要，还必须考虑到“移入” ** 字符和“移出” ** 字符。 如果要使用`nchar`和`nvarchar`列复制表，则可能需要在自定义创建脚本中为数据类型指定更大的最大长度。 有关指定自定义创建脚本的信息，请参阅本主题中“配置 IBM DB2 订阅服务器”部分的步骤 5。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Non-SQL Server Subscribers](non-sql-server-subscribers.md)   
  [订阅发布](../subscribe-to-publications.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_clr_appdomains (TRANSACT-SQL) |Microsoft Docs
+title: sys. dm_clr_appdomains （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,72 +19,72 @@ ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3ebcda61d95cc5131048ab32701d9d68228646ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138413"
 ---
-# <a name="sysdmclrappdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
+# <a name="sysdm_clr_appdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  为服务器中的每个应用程序域返回一行。 应用程序域 (**AppDomain**) 是在构造[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]公共语言运行时 (CLR) 是应用程序的隔离单元。 此视图可用于了解和解决问题中正在执行的 CLR 集成对象[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+  为服务器中的每个应用程序域返回一行。 应用程序域（**AppDomain**）是[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]公共语言运行时（CLR）中的一个构造，它是应用程序的隔离单元。 您可以使用此视图来了解和排查在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]执行的 CLR 集成对象的问题。  
   
- 有多种类型的 CLR 集成托管数据库对象。 有关这些对象的常规信息，请参阅[使用公共语言运行时 (CLR) 集成生成数据库对象](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)。 执行这些对象，每当[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]创建**AppDomain**在其下程序可以加载并执行所需的代码。 隔离级别**AppDomain**是一个**AppDomain**每个数据库的每位所有者。 也就是说，用户拥有的所有 CLR 对象始终都执行在同一个**AppDomain**每个数据库 （如果用户在不同数据库中，CLR 数据库对象将运行在不同的应用程序域中注册 CLR 数据库对象）。 **AppDomain**在代码完成执行后才会被销毁。 而是缓存在内存中以备将来执行， 这可以提高性能。  
+ 有多种类型的 CLR 集成托管数据库对象。 有关这些对象的常规信息，请参阅[通过公共语言运行时（CLR）集成生成数据库对象](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)。 每次执行这些对象时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，将创建一个**AppDomain** ，以便它能够加载和执行所需的代码。 **Appdomain**的隔离级别为每个所有者每个数据库一个**appdomain** 。 也就是说，用户拥有的所有 CLR 对象始终在每个数据库的同一**AppDomain**中执行（如果用户将 clr 数据库对象注册到不同的数据库中，则 clr 数据库对象将在不同的应用程序域中运行）。 代码完成执行后， **AppDomain**不会销毁。 而是缓存在内存中以备将来执行， 从而可以提高性能。  
   
  有关详细信息，请参阅[应用程序域](https://go.microsoft.com/fwlink/p/?LinkId=299658)。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**appdomain_address**|**varbinary(8)**|地址**AppDomain**。 所有托管的数据库的用户拥有的对象始终加载在同一个**AppDomain**。 可以使用此列以查找在此当前加载的所有程序集**AppDomain**中**sys.dm_clr_loaded_assemblies**。|  
-|**appdomain_id**|**int**|ID **AppDomain**。 每个**AppDomain**都有唯一的 id。|  
-|**appdomain_name**|**varchar(386)**|名称**AppDomain**由分配[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
-|**creation_time**|**datetime**|时间**AppDomain**已创建。 因为**Appdomain**缓存并重复使用以更好性能**creation_time**不一定执行代码时的时间。|  
-|**db_id**|**int**|此数据库的 ID **AppDomain**已创建。 在两个不同数据库中存储的代码无法共享同一个**AppDomain**。|  
-|**user_id**|**int**|在此可以执行其对象的用户 ID **AppDomain**。|  
-|**State**|**nvarchar(128)**|当前状态的描述符**AppDomain**。 AppDomain 可以处于从创建到删除的不同状态中。 有关详细信息，请参阅本主题的“备注”部分。|  
-|**strong_refcount**|**int**|此强引用的数目**AppDomain**。 这反映了当前正在执行的使用此批处理的数目**AppDomain**。 请注意，将创建此视图执行**强引用计数**; 即使当前正在执行，没有代码**strong_refcount**将具有值为 1。|  
-|**weak_refcount**|**int**|此弱引用的数目**AppDomain**。 这表示对象数目**AppDomain**缓存。 当执行托管的数据库对象，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将其缓存在**AppDomain**供将来重复使用。 这可以提高性能。|  
-|**cost**|**int**|成本**AppDomain**。 开销越大，更有可能这**AppDomain**内存压力下卸载。 成本通常取决于重新创建此所需的内存量**AppDomain**。|  
-|**value**|**int**|值**AppDomain**。 值越低，更有可能这**AppDomain**内存压力下卸载。 值通常依赖于连接或批次数量使用此**AppDomain**。|  
-|**total_processor_time_ms**|**bigint**|自进程启动后在当前应用程序域中执行的过程中所有线程所用的处理器总时间（毫秒）。 这相当于**System.AppDomain.MonitoringTotalProcessorTime**。|  
-|**total_allocated_memory_kb**|**bigint**|应用程序域自创建以来进行的所有内存分配的总大小 (KB)（不减去已收集的内存大小）。 这相当于**System.AppDomain.MonitoringTotalAllocatedMemorySize**。|  
-|**survived_memory_kb**|**bigint**|在已知当前应用程序域所引用的最近一次全面的阻塞收集之后仍剩余的字节数 (KB)。 这相当于**System.AppDomain.MonitoringSurvivedMemorySize**。|  
+|**appdomain_address**|**varbinary(8)**|**AppDomain**的地址。 用户拥有的所有托管数据库对象始终加载到相同的**AppDomain**中。 此列可用于查找当前在**sys. dm_clr_loaded_assemblies****中加载**的所有程序集。|  
+|**appdomain_id**|**int**|**AppDomain**的 ID。 每个**AppDomain**都具有唯一的 ID。|  
+|**appdomain_name**|**varchar （386）**|由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]分配的**AppDomain**的名称。|  
+|**creation_time**|**datetime**|创建**AppDomain**的时间。 由于**appdomain**已缓存并可重复使用以提高性能，因此**creation_time**不一定是代码的执行时间。|  
+|**db_id**|**int**|在其中创建此**AppDomain**的数据库的 ID。 存储在两个不同数据库中的代码不能共享一个**AppDomain**。|  
+|**user_id**|**int**|其对象可以在此**AppDomain**中执行的用户的 ID。|  
+|**状态**|**nvarchar(128)**|**AppDomain**的当前状态的描述符。 AppDomain 可以处于从创建到删除的不同状态中。 有关详细信息，请参阅本主题的“备注”部分。|  
+|**strong_refcount**|**int**|对此**AppDomain**的强引用数。 这反映了使用此**AppDomain**的当前正在执行的批处理的数目。 请注意，此视图的执行将创建一个**强引用计数**;即使当前没有正在执行的代码， **strong_refcount**的值也为1。|  
+|**weak_refcount**|**int**|对此**AppDomain**的弱引用的数目。 这表示将缓存**AppDomain**中的对象数。 当你执行托管数据库对象时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]会将其缓存在**AppDomain**内以备将来重复使用。 从而可以提高性能。|  
+|**低廉**|**int**|**AppDomain**的成本。 成本越高，在内存压力下卸载该**AppDomain**的可能性就越大。 开销通常取决于重新创建此**AppDomain**所需的内存量。|  
+|**负值**|**int**|**AppDomain**的值。 值越低，则在内存压力下卸载该**AppDomain**的可能性就越大。 值通常取决于使用此**AppDomain**的连接数或批处理数。|  
+|**total_processor_time_ms**|**bigint**|自进程启动后在当前应用程序域中执行的过程中所有线程所用的处理器总时间（毫秒）。 这等效于**MonitoringTotalProcessorTime**。|  
+|**total_allocated_memory_kb**|**bigint**|应用程序域自创建以来进行的所有内存分配的总大小 (KB)（不减去已收集的内存大小）。 这等效于**MonitoringTotalAllocatedMemorySize**。|  
+|**survived_memory_kb**|**bigint**|在已知当前应用程序域所引用的最近一次全面的阻塞收集之后仍剩余的字节数 (KB)。 这等效于**MonitoringSurvivedMemorySize**。|  
   
 ## <a name="remarks"></a>备注  
- 没有之间的一个对多关系**dm_clr_appdomains.appdomain_address**并**dm_clr_loaded_assemblies.appdomain_address**。  
+ **Dm_clr_appdomains appdomain_address**和**appdomain_address dm_clr_loaded_assemblies**之间存在一对多的关系。  
   
- 下表列出了可能**状态**值，它们的说明，当它们发生在**AppDomain**生命周期。 可以使用此信息要遵循的生命周期**AppDomain**及监视可疑或重复性**AppDomain**实例卸载，而无需分析 Windows 事件日志。  
+ 下表列出了可能的**状态值**、它们的说明以及它们在**AppDomain**生命周期中发生的时间。 您可以使用此信息来跟踪**appdomain**的生命周期，并监视是否有可疑或重复的**AppDomain**实例卸载，而不必分析 Windows 事件日志。  
   
 ## <a name="appdomain-initialization"></a>AppDomain 初始化  
   
-|状态|描述|  
+|状态|说明|  
 |-----------|-----------------|  
-|E_APPDOMAIN_CREATING|**AppDomain**正在创建。|  
+|E_APPDOMAIN_CREATING|正在创建**AppDomain** 。|  
   
 ## <a name="appdomain-usage"></a>AppDomain 使用情况  
   
-|状态|描述|  
+|状态|说明|  
 |-----------|-----------------|  
-|E_APPDOMAIN_SHARED|在运行时**AppDomain**随时可供多个用户使用。|  
-|E_APPDOMAIN_SINGLEUSER|**AppDomain**供 DDL 操作中使用。 此行为不同于 E_APPDOMAIN_SHARED，在后者中，共享的 AppDomain 用于 CLR 集成执行，而非 DDL 操作。 此类 AppDomain 独立于其他并发操作。|  
-|E_APPDOMAIN_DOOMED|**AppDomain**计划无法卸载，但当前线程正在其中。|  
+|E_APPDOMAIN_SHARED|运行时**AppDomain**已准备就绪，可供多个用户使用。|  
+|E_APPDOMAIN_SINGLEUSER|**AppDomain**可以在 DDL 操作中使用。 此行为不同于 E_APPDOMAIN_SHARED，在后者中，共享的 AppDomain 用于 CLR 集成执行，而非 DDL 操作。 此类 AppDomain 独立于其他并发操作。|  
+|E_APPDOMAIN_DOOMED|已计划卸载**AppDomain** ，但当前正在其中执行线程。|  
   
 ## <a name="appdomain-cleanup"></a>AppDomain 的清除  
   
-|状态|描述|  
+|状态|说明|  
 |-----------|-----------------|  
-|E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已请求 CLR 卸载**AppDomain**，通常是因为包含托管的数据库对象的程序集已更改或删除。|  
-|E_APPDOMAIN_UNLOADED|CLR 已卸载**AppDomain**。 这通常是由于升级过程的结果**ThreadAbort**， **OutOfMemory**，或在用户代码中未经处理的异常。|  
-|E_APPDOMAIN_ENQUEUE_DESTROY|**AppDomain**已在 CLR 中卸载并设置被破坏[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
-|E_APPDOMAIN_DESTROY|**AppDomain**通过处于销毁过程中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
-|E_APPDOMAIN_ZOMBIE|**AppDomain**已由销毁[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; 但是，并非所有对引用**AppDomain**已清除。|  
+|E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已请求 CLR 卸载**AppDomain**，通常是因为包含托管数据库对象的程序集已更改或删除。|  
+|E_APPDOMAIN_UNLOADED|CLR 已卸载**AppDomain**。 这通常是由于**ThreadAbort**、 **OutOfMemory**或用户代码中未经处理的异常导致的升级过程的结果。|  
+|E_APPDOMAIN_ENQUEUE_DESTROY|已在 CLR 中卸载了**AppDomain** ，并将其设置为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]被销毁。|  
+|E_APPDOMAIN_DESTROY|**AppDomain**正在被销毁[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
+|E_APPDOMAIN_ZOMBIE|**AppDomain**已被销毁[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)];但是，并非所有对**AppDomain**的引用都已清除。|  
   
 ## <a name="permissions"></a>权限  
  需要对数据库具有 VIEW SERVER STATE 权限。  
   
 ## <a name="examples"></a>示例  
- 下面的示例演示如何查看的详细信息**AppDomain**给定程序集：  
+ 下面的示例演示如何查看给定程序集的**AppDomain**的详细信息：  
   
 ```  
 select appdomain_id, creation_time, db_id, user_id, state  
@@ -95,7 +95,7 @@ where appdomain_address =
    where assembly_id = 500);  
 ```  
   
- 下面的示例演示如何查看中的所有程序集给定**AppDomain**:  
+ 下面的示例演示如何查看给定**AppDomain**中的所有程序集：  
   
 ```  
 select a.name, a.assembly_id, a.permission_set_desc, a.is_visible, a.create_date, l.load_time   
@@ -108,8 +108,8 @@ from sys.dm_clr_appdomains
 where appdomain_id = 15);  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [sys.dm_clr_loaded_assemblies &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)   
- [公共语言运行时与相关的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>另请参阅  
+ [sys. dm_clr_loaded_assemblies &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)   
+ [与公共语言运行时相关的动态管理视图 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
   
   

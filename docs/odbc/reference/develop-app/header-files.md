@@ -13,20 +13,20 @@ ms.assetid: b4a03273-5e30-4d7b-826e-02f8f28ba078
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2d20f2535038b13eac0b8d5ca20dfa77bfc12588
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139030"
 ---
-# <a name="header-files"></a>头文件
-Sql.h 标头文件包含的函数和核心 ODBC 接口一致性级别中的功能的原型。 Sqlext.h 标头文件包含的函数和级别 1 和级别 2 API 一致性级别中的功能的原型。 Sqltypes.h 头文件包含类型定义和 SQL 数据类型的指示符。  
+# <a name="header-files"></a>标头文件
+Sql .h 头文件包含核心 ODBC 接口一致性级别中的函数和功能的原型。 Sqltypes.h 头文件包含第1级和第2级 API 一致性级别中的函数和功能的原型。 Sqltypes 头文件包含 SQL 数据类型的类型定义和指示器。  
   
- 所有包含的标头文件 **#define**，ODBCVER，应用程序或驱动程序可设置为针对不同版本的 ODBC 进行编译。  
+ 标头文件都包含一个 **#define**ODBCVER，该应用程序或驱动程序可以设置为针对不同版本的 ODBC 进行编译。  
   
- 若要使用 ISO CLI 和打开组 CLI 对齐，标头文件包含对的调用中使用的信息类型的别名**SQLGetInfo**。 下表中的列"ODBC name"指示 ODBC 中的信息类型的名称[ODBC API 参考](../../../odbc/reference/syntax/odbc-api-reference.md)。 "标头文件中的别名"列指示在 ISO CLI 和打开组 CLI 中使用的名称。 这些清单名称的实际数值是 ODBC 和标准 Cli 中相同的。 这些别名启用符合标准的应用程序或驱动程序使用 ODBC 进行编译*3.x*标头文件。  
+ 为了与 ISO CLI 和开放式组 CLI 保持一致，头文件包含对**SQLGetInfo**的调用中使用的信息类型的别名。 在下表中，列 "ODBC name" 指示[ODBC API 参考](../../../odbc/reference/syntax/odbc-api-reference.md)中的信息类型的 odbc 名称。 列 "标头文件中的别名" 指示在 ISO CLI 和开放组 CLI 中使用的名称。 这些清单名称的实际数值在 ODBC 和标准 Cli 中是相同的。 这些别名使符合标准的应用程序或驱动程序可以*使用 ODBC 1.x*标头文件进行编译。  
   
- 这些别名 ODBC 名称中包含的缩写的扩展，以便更易于理解的名称是。 "最大"扩展为"最大值"，"LEN"为"长度"，"MULT"到"多"，"OJ"到"OUTER_JOIN"和"事务"到"事务"。  
+ 这些别名包括 ODBC 名称中的缩写，使名称更易于理解。 "最大值" 扩展到 "最大值"、"LEN" 到 "LENGTH"、"MULT" 到 "多"、"OJ" 到 "OUTER_JOIN" 和 "TXN" 到 "TRANSACTION"。  
   
 |ODBC 名称|标头文件中的别名|  
 |---------------|--------------------------|  

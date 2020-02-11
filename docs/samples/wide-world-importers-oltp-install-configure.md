@@ -10,17 +10,17 @@ author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: e1683adfa20851d279e8b8e18a3c767db9e5810d
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056276"
 ---
 # <a name="installation-and-configuration"></a>安装和配置
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Wide World 导入 OLTP 数据库安装和配置说明。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必备条件
 
 - [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) （或更高版本）或[Azure SQL 数据库](https://azure.microsoft.com/services/sql-database/)。 有关该示例的完整版本，请使用 SQL Server Evaluation/开发人员/企业版。
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。 为获得最佳结果，请使用2016年6月版或更高版本。
@@ -29,15 +29,15 @@ Wide World 导入 OLTP 数据库安装和配置说明。
 
 该示例的最新版本：
 
-[wide-world-importers-release](https://go.microsoft.com/fwlink/?LinkID=800630)
+[宽世界-导入程序-版本](https://go.microsoft.com/fwlink/?LinkID=800630)
 
 下载与 SQL Server 或 Azure SQL 数据库的版本对应的示例 WideWorldImporters 数据库备份/bacpac。
 
 可从以下位置获取用于重新创建示例数据库的源代码。 请注意，重新创建示例将导致数据略有不同，因为数据生成中存在随机因素：
 
-[wide-world-importers](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-database-scripts)
+[宽世界-导入程序](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-database-scripts)
 
-## <a name="install"></a>Install
+## <a name="install"></a>安装
 
 
 ### <a name="sql-server"></a>SQL Server
@@ -47,11 +47,11 @@ Wide World 导入 OLTP 数据库安装和配置说明。
 1. 打开 SQL Server Management Studio，然后连接到目标 SQL Server 实例。
 2. 右键单击 "**数据库**" 节点，然后选择 "**还原数据库**"。
 3. 选择 "**设备**"，并单击按钮 **...**
-4. 在对话框中**选择 "备份设备**"，单击 "**添加**"，导航到服务器文件系统中的数据库备份，并选择备份。 单击“确定”。
+4. 在对话框中**选择 "备份设备**"，单击 "**添加**"，导航到服务器文件系统中的数据库备份，并选择备份。 单击“确定”。 
 5. 如果需要，在 "**文件**" 窗格中更改数据文件和日志文件的目标位置。 请注意，最佳做法是将数据和日志文件放在不同的驱动器上。
-6. 单击“确定”。 这将启动数据库还原。 完成后，会在 SQL Server 实例上安装数据库 WideWorldImporters。
+6. 单击“确定”。  这将启动数据库还原。 完成后，会在 SQL Server 实例上安装数据库 WideWorldImporters。
 
-### <a name="azure-sql-database"></a>Azure SQL Database
+### <a name="azure-sql-database"></a>Azure SQL 数据库
 
 若要将 bacpac 导入新的 SQL 数据库，可以使用 Management Studio。
 
@@ -70,12 +70,12 @@ Wide World 导入 OLTP 数据库安装和配置说明。
 示例数据库可以使用全文索引。 但是，默认情况下不会随 SQL Server 安装该功能-需要在安装 SQL Server 的过程中选择此功能（在 Azure SQL DB 中默认启用）。 因此，安装后步骤是必需的。
 
 1. 在 SQL Server Management Studio 中，连接到 WideWorldImporters 数据库并打开一个新的查询窗口。
-2. 运行以下 T-sql 命令，以便在数据库中使用全文索引： `EXECUTE Application.Configuration_ApplyFullTextIndexing`
+2. 运行以下 T-sql 命令，以便在数据库中使用全文索引：`EXECUTE Application.Configuration_ApplyFullTextIndexing`
 
 
 ### <a name="sql-server-audit"></a>SQL Server 审核
 
-适用于： SQL Server
+适用范围：SQL Server
 
 在 SQL Server 中启用审核需要服务器配置。 若要为 WideWorldImporters 示例启用 SQL Server 审核，请在数据库中运行以下语句：
 

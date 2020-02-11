@@ -13,10 +13,10 @@ ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4b07af028cd0f2385c447c99192ccc50b65c4925
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74096123"
 ---
 # <a name="hadoop-connection-manager"></a>Hadoop 连接管理器
@@ -62,7 +62,7 @@ ms.locfileid: "74096123"
   
 5.  选择“测试连接”  。 （仅测试你启用的连接）。  
   
-6.  选择“确定”关闭对话框  。  
+6.  选择“确定”以关闭该对话框。   
 
 ## <a name="connect-with-kerberos-authentication"></a>连接 Kerberos 身份验证
 有两个选项可用来设置本地环境，以便可以配合使用 Kerberos 身份验证和 Hadoop 连接管理器。 可选择更符合你情况的选项。
@@ -90,7 +90,7 @@ ms.locfileid: "74096123"
 
     运行上述命令后，重启计算机。
 
-2.  使用 Ksetup 命令验证配置  。 输出应该如下例所示：
+2.  使用 Ksetup 命令验证配置  。 输出应如以下示例所示：
 
     ```
     C:> Ksetup

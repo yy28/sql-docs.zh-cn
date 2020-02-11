@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7da89810a92c14f5b59ebcd546c4fb4cfa256f02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637757"
 ---
 # <a name="create-xml-indexes"></a>创建 XML 索引
@@ -44,7 +44,7 @@ ms.locfileid: "62637757"
   
 -   主 XML 索引名称与视图名称有相同的限制。  
   
- 无法创建 XML 索引`xml`列在视图中，键入上**表**值的变量`xml`类型的列，或`xml`类型变量。  
+ 不能对视图中的`xml`类型列、具有`xml`类型列的`xml` **表**值变量或类型变量创建 XML 索引。  
   
 -   若要使用 ALTER TABLE ALTER COLUMN 选项将 `xml` 类型列从非类型化的 XML 更改为类型化的 XML，或者从类型化的 XML 更改为非类型化的 XML，则列不应存在 XML 索引。 如果确实存在，则在尝试更改列类型之前必须删除该索引。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62637757"
   
  如果 XML 数据类型列包含类型为 XML 架构类型 **xs:date** 或 **xs:dateTime** （或这些类型的任何子类型）的值且这些值中的年份小于 1，则在对这样的 XML 数据类型列创建或重新创建主 XML 索引时，索引创建操作在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本中将失败。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 允许使用这些值，因此在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中生成的数据库中创建索引时可能会出现这种问题。 有关详细信息，请参阅 [类型化的 XML 与非类型化的 XML 的比较](../xml/compare-typed-xml-to-untyped-xml.md)。  
   
-### <a name="example-creating-a-primary-xml-index"></a>例如：创建主 XML 索引  
+### <a name="example-creating-a-primary-xml-index"></a>示例：创建主 XML 索引  
  在大多数示例中，使用的是包含非类型化的 XML 列的表 T (pk INT PRIMARY KEY, xCol XML)。 可以采用简单的方式将它们扩展为类型化的 XML。 为简化起见，针对 XML 数据实例说明了查询，如下所示：  
   
 ```  
@@ -99,7 +99,7 @@ FROM    sys.xml_indexes;
   
  **secondary_type_desc** 列中返回的值可以是 NULL、PATH、VALUE 或 PROPERTY。 对于主 XML 索引而言，返回的值为 NULL。  
   
-### <a name="example-creating-secondary-xml-indexes"></a>例如：创建辅助 XML 索引  
+### <a name="example-creating-secondary-xml-indexes"></a>示例：创建辅助 XML 索引  
  下面的示例说明了如何创建辅助 XML 索引。 此示例还显示了有关您创建的 XML 索引的信息。  
   
 ```  
@@ -199,7 +199,7 @@ DROP TABLE T;
 Go  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [XML 索引 (SQL Server)](xml-indexes-sql-server.md)   
  [XML 数据 (SQL Server)](xml-data-sql-server.md)  
   

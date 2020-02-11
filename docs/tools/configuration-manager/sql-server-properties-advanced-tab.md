@@ -1,6 +1,6 @@
 ---
-title: SQL Server 属性（“高级”选项卡）| Microsoft Docs
-ms.custom: ''
+title: SQL Server 属性（“高级”选项卡）
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: 2ffd10fd-bac1-478f-9cff-96ed6c8b787f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b64a1c1b9d40061d5319d1e629d0f2215df72e72
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: a21d6eb31b0edb5ab0cfa56f388b2cf3e3065627
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023975"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306838"
 ---
 # <a name="sql-server-properties-advanced-tab"></a>SQL Server 属性（“高级”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "68023975"
  **单品**  
  显示产品的单品 (SKU) 编号。  
   
- **版本(Version)**  
+ **版本**  
  显示此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的版本号。  
   
  **虚拟服务器名称**  

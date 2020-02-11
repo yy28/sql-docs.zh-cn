@@ -18,10 +18,10 @@ ms.assetid: f8527121-fbcd-4d30-9b4a-1461149cb5a8
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: beb51ea7270fdbeb96dc858c2ef4e65c386726ff
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660244"
 ---
 # <a name="protocolname-property-clientnetworkprotocol-class"></a>ProtocolName 属性（ClientNetworkProtocol 类）
@@ -36,13 +36,13 @@ object.ProtocolName [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
- 表示 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 客户端使用的网络协议的[ClientNetworkProtocol 类](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md)对象。  
+ *对象*  
+ 一个表示[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]客户端使用的网络协议的[ClientNetworkProtocol 类](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md)对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个字符串值，该值指定[SetOrderValue 方法（ClientNetworkProtocol 类）](https://technet.microsoft.com/library/ms179295.aspx)引用的当前客户端网络协议的名称。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>另请参阅  
  [配置客户端网络协议和网络库](https://technet.microsoft.com/library/ms181035.aspx)  

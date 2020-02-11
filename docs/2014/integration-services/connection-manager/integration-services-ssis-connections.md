@@ -21,14 +21,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 78c3ba452d3ba681823e5c9f473d7a86f55809a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833772"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) 连接
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包使用连接来执行不同的任务以及实现 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 功能：  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]包使用连接来执行不同的任务以及实现[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]功能： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
   
 -   连接到源和目标数据存储区（如文本、XML、Excel 工作簿和关系数据库），以提取和加载数据。  
   
@@ -46,16 +46,16 @@ ms.locfileid: "62833772"
   
 -   指定现有的文件和文件夹，或创建新的文件和文件夹，以便用于 Foreach 循环枚举器和任务。  
   
--   连接到消息队列、Windows Management Instrumentation (WMI)、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象 (SMO)、Web 和邮件服务器。  
+-   连接到消息队列、Windows Management Instrumentation (WMI)、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象 (SMO)、Web 和邮件服务器。  
   
  为了创建这些连接， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用了连接管理器，如下一部分所述。  
   
 ## <a name="connection-managers"></a>连接管理器  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用连接管理器作为连接的逻辑表示形式。 在设计时，可设置连接管理器的属性，以描述当包运行时 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 创建的物理连接。 例如，连接管理器包含在设计时设置的 `ConnectionString` 属性；在运行时，使用该连接字符串属性中的值创建物理连接。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]使用连接管理器作为连接的逻辑表示形式。 在设计时，可设置连接管理器的属性，以描述当包运行时 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 创建的物理连接。 例如，连接管理器包含在设计时设置的 `ConnectionString` 属性；在运行时，使用该连接字符串属性中的值创建物理连接。  
   
  包可以使用一种连接管理器类型的多个实例，您可以在每个实例上设置这些属性。 在运行时，一种连接管理器类型的每个实例创建具有不同属性的连接。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供了不同类型的连接管理器，从而使得包可以连接到多种数据源和服务器：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]提供了不同类型的连接管理器，这些连接管理器使包能够连接到多种数据源和服务器：  
   
 -   提供了内置连接管理器，在您安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]时安装程序将安装这些连接管理器。  
   
@@ -64,9 +64,9 @@ ms.locfileid: "62833772"
 -   如果现有的连接管理器没有满足您的需求，可以创建自己的自定义连接管理器。  
   
 ### <a name="built-in-connection-managers"></a>内置连接管理器  
- 下表列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的连接管理器类型。  
+ 下表列出[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]了提供的连接管理器类型。  
   
-|类型|Description|主题|  
+|类型|说明|主题|  
 |----------|-----------------|-----------|  
 |ADO|连接到 ActiveX 数据对象 (ADO) 对象。|[ADO 连接管理器](ado-connection-manager.md)|  
 |ADO.NET|使用 .NET 提供程序连接到数据源。|[ADO.NET 连接管理器](ado-net-connection-manager.md)|  
@@ -78,7 +78,7 @@ ms.locfileid: "62833772"
 |FTP|连接到 FTP 服务器。|[FTP 连接管理器](ftp-connection-manager.md)|  
 |HTTP|连接到 Web 服务器。|[HTTP 连接管理器](http-connection-manager.md)|  
 |MSMQ|连接到消息队列。|[MSMQ 连接管理器](msmq-connection-manager.md)|  
-|MSOLAP100|连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目。|[Analysis Services 连接管理器](analysis-services-connection-manager.md)|  
+|MSOLAP100|连接到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]或[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目。|[Analysis Services 连接管理器](analysis-services-connection-manager.md)|  
 |MULTIFILE|连接到多个文件和文件夹。|[多文件连接管理器](multiple-files-connection-manager.md)|  
 |MULTIFLATFILE|连接到多个数据文件和文件夹。|[多平面文件连接管理器](multiple-flat-files-connection-manager.md)|  
 |OLEDB|使用 OLE DB 访问接口连接到数据源。|[OLE DB 连接管理器](ole-db-connection-manager.md)|  
@@ -94,19 +94,22 @@ ms.locfileid: "62833772"
 > [!IMPORTANT]  
 >  下表中列出的连接管理器只能用于 [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] 和 [!INCLUDE[ssDeveloperEd11](../../includes/ssdevelopered11-md.md)]。  
   
-|类型|Description|主题|  
+|类型|说明|主题|  
 |----------|-----------------|-----------|  
-|ORACLE|连接到 Oracle\<版本信息 > 服务器。|Oracle 连接管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 的连接管理器组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 还包括源和目标。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526)。|  
-|SAPBI|连接到 SAP NetWeaver BI 7 版系统。|SAP BI 连接管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 的连接管理器组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 还包括源和目标。 有关详细信息，请访问下载页 [Microsoft SQL Server 2008 功能包](https://go.microsoft.com/fwlink/?LinkId=262016)。|  
-|TERADATA|连接到 Teradata\<版本信息 > 服务器。|Teradata 连接管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 的连接管理器组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 还包括源和目标。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526)。|  
+|ORACLE|> server 连接到\<Oracle 版本信息。|Oracle 连接管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 的连接管理器组件。 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 还包括源和目标。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526)。|  
+|SAPBI|连接到 SAP NetWeaver BI 7 版系统。|SAP BI 连接管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 的连接管理器组件。 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 还包括源和目标。 有关详细信息，请访问下载页 [Microsoft SQL Server 2008 功能包](https://go.microsoft.com/fwlink/?LinkId=262016)。|  
+|TERADATA|> server 连接到\<Teradata 版本信息。|Teradata 连接管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 的连接管理器组件。 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 还包括源和目标。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526)。|  
   
 ### <a name="custom-connection-managers"></a>自定义连接管理器  
  您还可以编写自定义连接管理器。 有关详细信息，请参阅 [Developing a Custom Connection Manager](../extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md)。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- 有关如何在包中添加或删除连接管理器的详细信息，请参阅[在包中添加、删除或共享连接管理器](../add-delete-or-share-a-connection-manager-in-a-package.md)。  
+ 有关如何在包中添加或删除连接管理器的详细信息，请参阅 [在包中添加、删除或共享连接管理器](../add-delete-or-share-a-connection-manager-in-a-package.md)。  
   
- 有关如何在包中设置连接管理器属性的详细信息，请参阅[设置连接管理器的属性](../set-the-properties-of-a-connection-manager.md)。  
+ 有关如何在包中设置连接管理器属性的详细信息，请参阅 [设置连接管理器的属性](../set-the-properties-of-a-connection-manager.md)。  
   
 ## <a name="related-content"></a>相关内容  
   

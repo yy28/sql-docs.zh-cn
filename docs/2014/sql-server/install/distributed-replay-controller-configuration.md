@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d55d2d759857e07bd655add1b00bccbd2eb4ce2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66095522"
 ---
 # <a name="distributed-replay-controller-configuration"></a>Distributed Replay 控制器配置
@@ -26,7 +26,7 @@ ms.locfileid: "66095522"
  **添加当前用户**  
  单击此按钮可以添加要向其授予针对 Distributed Replay 控制器服务的访问权限的用户。  
   
- **“添加”**  
+ **添加**  
  单击此按钮可以添加针对 Distributed Replay 控制器服务的访问权限。  
   
  **删除**  

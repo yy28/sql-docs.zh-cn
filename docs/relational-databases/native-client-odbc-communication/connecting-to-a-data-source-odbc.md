@@ -25,10 +25,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eb1f2133aa335f266da75e00638dbb484dae1431
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73784715"
 ---
 # <a name="connecting-to-a-data-source-odbc"></a>连接数据源 (ODBC)
@@ -58,7 +58,7 @@ ms.locfileid: "73784715"
   
 -   不使用 ODBC 数据源进行连接。  
   
- **SQLDriverConnect**连接字符串包含一系列关键字/值对，这些关键字值对指定 ODBC 驱动程序支持的所有连接信息。 每个驱动程序都支持标准 ODBC 关键字（DSN、FILEDSN、DRIVER、UID、PWD 和 SAVEFILE），以及用于驱动程序支持的所有连接信息的特定于驱动程序的关键字。 **SQLDriverConnect**可用于在不使用数据源的情况下进行连接。 例如，旨在与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例建立 "无 DSN" 连接的应用程序可以使用连接字符串调用**SQLDriverConnect** ，该连接字符串定义登录 ID、密码、网络库、要连接到的服务器名称和默认值要使用的数据库。  
+ **SQLDriverConnect**连接字符串包含一系列关键字/值对，这些关键字值对指定 ODBC 驱动程序支持的所有连接信息。 每个驱动程序都支持标准 ODBC 关键字（DSN、FILEDSN、DRIVER、UID、PWD 和 SAVEFILE），以及用于驱动程序支持的所有连接信息的特定于驱动程序的关键字。 **SQLDriverConnect**可用于在不使用数据源的情况下进行连接。 例如，设计为与实例建立 "无 DSN" 连接的应用程序[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以使用连接字符串调用**SQLDriverConnect** ，该连接字符串定义登录 ID、密码、网络库、要连接到的服务器名称以及要使用的默认数据库。  
   
  当使用**SQLDriverConnect**时，有两个选项可提示用户输入所需的任何连接信息：  
   
@@ -81,7 +81,7 @@ ms.locfileid: "73784715"
   
  当**SQLBrowseConnect**完成成功连接时，它将返回一个连接字符串，该字符串可用于对**SQLDriverConnect**的后续调用。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序始终在成功的**SQLConnect**、 **SQLDriverConnect**或**SQLBrowseConnect**上返回 SQL_SUCCESS_WITH_INFO。 如果 ODBC 应用程序在获取 SQL_SUCCESS_WITH_INFO 后调用**SQLGetDiagRec** ，则它可能会收到以下消息：  
+ Native Client ODBC 驱动程序始终在成功的**SQLConnect**、 **SQLDriverConnect**或 SQLBrowseConnect 上返回 SQL_SUCCESS_WITH_INFO。 **** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果 ODBC 应用程序在获取 SQL_SUCCESS_WITH_INFO 后调用**SQLGetDiagRec** ，则它可能会收到以下消息：  
   
  5701  
  指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将用户的上下文置于在数据源中定义的默认数据库中，或者置于为在连接中使用的登录 ID 定义的默认数据库中（如果数据源没有默认数据库）。  
@@ -100,7 +100,7 @@ szErrorMsg="[Microsoft][SQL Server Native Client][SQL Server]
        Changed language setting to 'us_english'."  
 ```  
   
- 您可以忽略消息 5701 和 5703；它们仅供参考。 但是，不应忽视 SQL_SUCCESS_WITH_INFO 返回代码，因为可能返回并非 5701 或 5703 的其他消息。 例如，如果驱动程序连接到运行具有过时目录存储过程的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的服务器，则 SQL_SUCCESS_WITH_INFO 后通过**SQLGetDiagRec**返回的错误之一：  
+ 您可以忽略消息 5701 和 5703；它们仅供参考。 但是，不应忽视 SQL_SUCCESS_WITH_INFO 返回代码，因为可能返回并非 5701 或 5703 的其他消息。 例如，如果驱动程序连接到运行实例的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服务器，并且该服务器具有过时的目录存储过程，则 SQL_SUCCESS_WITH_INFO 之后通过**SQLGetDiagRec**返回的错误之一如下：  
   
 ```  
 SqlState:   01000  
@@ -112,9 +112,9 @@ szErrorMsg: "[Microsoft][SQL Server Native Client]The ODBC
             Please contact your system administrator."  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接的应用程序的错误处理函数应调用**SQLGetDiagRec** ，直到它返回 SQL_NO_DATA。 然后，它应作用于*pfNative*代码不是5701或5703的任何消息。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]连接应用程序的错误处理函数应调用**SQLGetDiagRec** ，直到它返回 SQL_NO_DATA。 然后，它应作用于*pfNative*代码不是5701或5703的任何消息。  
   
 ## <a name="see-also"></a>另请参阅  
- [与 SQL Server &#40;ODBC 通信&#41;](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
+ [与 SQL Server &#40;ODBC&#41;通信](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
   
   

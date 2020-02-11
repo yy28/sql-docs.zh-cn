@@ -1,5 +1,5 @@
 ---
-title: Microsoft Connector 1.1 for SAP BW |Microsoft Docs
+title: 用于 SAP BW 的 Microsoft Connector 1.1 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cd4cf8f8fe90afcda343b2b494e0b0b050c8c951
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62890589"
 ---
 # <a name="microsoft-connector-11-for-sap-bw"></a>Microsoft Connector 1.1 for SAP BW
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW 由一组三个组件，以便您到 SAP Netweaver BW 版本 7 系统提取数据或将数据加载。  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)]连接器 1.1 for SAP BW 包含一组三个组件，可让你从 SAP Netweaver BW 版本7系统中提取数据或将数据加载到 SAP BW 版本7系统。  
   
 > [!IMPORTANT]  
 >  针对 Microsoft Connector 1.1 for SAP BW 的文档假定您熟悉 SAP Netweaver BW 环境。 有关 SAP NetWeaver BW 的详细信息，或者有关如何配置 SAP Netweaver BW 对象和过程的信息，请参阅您的 SAP 文档。  
@@ -27,7 +27,7 @@ ms.locfileid: "62890589"
 >  从 SAP Netweaver BW 提取数据要求额外的 SAP 许可。 请向 SAP 核实以便确认这些要求。  
   
 ## <a name="components"></a>组件  
- [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW 具有以下组件：  
+ SAP BW [!INCLUDE[msCoName](../includes/msconame-md.md)]的连接器1.1 具有以下组件：  
   
 -   **SAP BW 源** - SAP BW 源是一个数据流源组件，用于从 SAP Netweaver BW 版本 7 系统中提取数据。  
   
@@ -38,15 +38,15 @@ ms.locfileid: "62890589"
  有关演示如何配置和使用 SAP BW 连接管理器、源和目标的演练，请参阅白皮书 [将 SQL Server Integration Services 与 SAP BI 7.0 一起使用](https://go.microsoft.com/fwlink/?LinkId=301897)。 此白皮书还说明如何在 SAP BW 中配置所需的对象。  
   
 ## <a name="documentation"></a>文档  
- 此帮助文件[!INCLUDE[msCoName](../includes/msconame-md.md)]Connector 1.1 for SAP BW 包含以下主题和部分：  
+ 适用于 SAP BW [!INCLUDE[msCoName](../includes/msconame-md.md)]连接器1.1 的此帮助文件包含以下主题和部分：  
   
  [安装 Microsoft Connector for 1.1 SAP BW](installing-the-microsoft-connector-for-sap-bw.md)  
- 描述的安装要求[!INCLUDE[msCoName](../includes/msconame-md.md)]Connector 1.1 for SAP BW。  
+ 介绍 SAP BW [!INCLUDE[msCoName](../includes/msconame-md.md)]连接器1.1 的安装要求。  
   
  [Microsoft Connector 1.1 for SAP BW 组件](microsoft-connector-for-sap-bw-components.md)  
- 介绍每个组件[!INCLUDE[msCoName](../includes/msconame-md.md)]Connector 1.1 for SAP BW。  
+ 介绍 SAP BW 的[!INCLUDE[msCoName](../includes/msconame-md.md)]连接器1.1 的每个组件。  
   
- [Microsoft Connector 1.1 for SAP BW 的 F1 帮助](microsoft-connector-for-sap-bw-f1-help.md)  
- 描述的每个组件的用户界面[!INCLUDE[msCoName](../includes/msconame-md.md)]Connector 1.1 for SAP BW。  
+ [Microsoft Connector 1.1 for SAP BW F1 帮助](microsoft-connector-for-sap-bw-f1-help.md)  
+ 介绍 SAP BW 的[!INCLUDE[msCoName](../includes/msconame-md.md)]连接器1.1 的每个组件的用户界面。  
   
   

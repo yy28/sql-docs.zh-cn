@@ -11,10 +11,10 @@ ms.assetid: c2687e39-dc20-494f-a707-2aa29f4c329e
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 47ae80a58f32aab4debb7cd4dde60a1ccf2cdb4a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728504"
 ---
 # <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>使用 MDSModelDeploy 创建模型部署包
@@ -29,7 +29,7 @@ ms.locfileid: "73728504"
   
  如果需要部署仅包含模型对象的包，可改为在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序中使用模型部署向导。 有关详细信息，请参阅 [使用向导创建模型部署包](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  
   
 1.  运行 MDSModelDeploy 工具所需的基本权限如下所示：  
@@ -58,7 +58,7 @@ ms.locfileid: "73728504"
   
  模型对于您要创建的包必须存在。 有关详细信息，请参阅[创建模型 (Master Data Services)](../master-data-services/create-a-model-master-data-services.md)。  
   
- 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+ 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>使用 MDSModelDeploy 创建模型部署包  
   
@@ -74,7 +74,7 @@ ms.locfileid: "73728504"
   
     -   若要显示所有可用选项，请键入 `MDSModelDeploy` ，然后按 Enter 键。  
   
-    -   若要显示某个选项的帮助，请键入以下命令，其中 OptionName 是该选项的名称：`MDSModelDeploy help OptionName`。  
+    -   若要显示某个选项的帮助，请键入以下命令，其中 OptionName** 是该选项的名称：`MDSModelDeploy help OptionName`。  
   
 4.  可选。 如果您有多个 Web 应用程序，通过键入下面的命令并按 Enter 键，确定您要部署到的服务的名称：  
   
@@ -92,14 +92,14 @@ ms.locfileid: "73728504"
   
      如果您不希望包含数据，请不要使用 `-version` 和 `-includedata` 开关。  
   
-6.  按 Enter 键。 成功创建包后，将显示一条消息“MDSModelDeploy 操作已成功完成”。  
+6.  按 Enter。 成功创建包后，将显示一条消息“MDSModelDeploy 操作已成功完成”。  
   
 ## <a name="next-steps"></a>后续步骤  
   
 -   [使用 MDSModelDeploy 部署模型部署包](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [模型部署选项 (Master Data Services)](../master-data-services/model-deployment-options-master-data-services.md)   
- [部署模型 (Master Data Services)](../master-data-services/deploying-models-master-data-services.md)  
+ [模型部署选项 &#40;Master Data Services&#41;](../master-data-services/model-deployment-options-master-data-services.md)   
+ [&#40;Master Data Services 部署模型&#41;](../master-data-services/deploying-models-master-data-services.md)  
   
   

@@ -14,32 +14,32 @@ ms.assetid: 8de11ef7-034c-4613-91df-2244171f0b9a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c96f28070fd06b48b4aeac40c3db6b8e7179830a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67928547"
 ---
 # <a name="adox-methods"></a>ADOX 方法
 
 |||  
 |-|-|  
-|[追加 （列）](../../../ado/reference/adox-api/append-method-adox-columns.md)|添加一个新**列**对象传递给**列**集合。|  
-|[追加 （组）](../../../ado/reference/adox-api/append-method-adox-groups.md)|添加一个新**组**对象传递给**组**集合。|  
-|[追加 （索引）](../../../ado/reference/adox-api/append-method-adox-indexes.md)|添加一个新**索引**对象传递给**索引**集合。|  
-|[追加 （键）](../../../ado/reference/adox-api/append-method-adox-keys.md)|添加一个新**键**对象传递给**密钥**集合。|  
-|[追加 （过程）](../../../ado/reference/adox-api/append-method-adox-procedures.md)|添加一个新**过程**对象传递给**过程**集合。|  
-|[追加 （表）](../../../ado/reference/adox-api/append-method-adox-tables.md)|添加一个新**表**对象传递给**表**集合。|  
-|[追加 （用户）](../../../ado/reference/adox-api/append-method-adox-users.md)|添加一个新**用户**对象传递给**用户**集合。|  
-|[追加 （视图）](../../../ado/reference/adox-api/append-method-adox-views.md)|添加一个新**视图**对象传递给**视图**集合。|  
+|[追加（列）](../../../ado/reference/adox-api/append-method-adox-columns.md)|向**Columns**集合添加一个新的**列**对象。|  
+|[追加（组）](../../../ado/reference/adox-api/append-method-adox-groups.md)|向**Groups**集合添加一个新的**组**对象。|  
+|[追加（索引）](../../../ado/reference/adox-api/append-method-adox-indexes.md)|将新**索引**对象添加到**索引**集合。|  
+|[追加（键）](../../../ado/reference/adox-api/append-method-adox-keys.md)|向**Keys**集合添加新的**Key**对象。|  
+|[追加（过程）](../../../ado/reference/adox-api/append-method-adox-procedures.md)|将新**过程**对象添加到**过程**集合。|  
+|[追加（表）](../../../ado/reference/adox-api/append-method-adox-tables.md)|向**Tables**集合添加一个新的**Table**对象。|  
+|[追加（用户）](../../../ado/reference/adox-api/append-method-adox-users.md)|向**用户**集合添加新的**用户**对象。|  
+|[追加（视图）](../../../ado/reference/adox-api/append-method-adox-views.md)|向**Views**集合添加一个新的**视图**对象。|  
 |[ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)|更改用户帐户的密码。|  
-|[创建](../../../ado/reference/adox-api/create-method-adox.md)|创建一个新目录。|  
-|[删除](../../../ado/reference/adox-api/delete-method-adox-collections.md)|从集合中删除的对象。|  
-|[GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)|返回在目录中对象的所有者。|  
-|[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)|返回上一个对象组或用户的权限。|  
-|[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)|在目录中指定的对象的所有者。|  
-|[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)|指定对某个对象的组或用户的权限。|  
+|[创建](../../../ado/reference/adox-api/create-method-adox.md)|创建新的目录。|  
+|[删除](../../../ado/reference/adox-api/delete-method-adox-collections.md)|从集合中删除对象。|  
+|[GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)|返回目录中对象的所有者。|  
+|[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)|返回组或用户对对象的权限。|  
+|[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)|指定目录中对象的所有者。|  
+|[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)|指定组或用户对对象的权限。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ADOX API 参考](../../../ado/reference/adox-api/adox-api-reference.md)   
  [数据定义语言和安全性的 ADO 扩展 (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

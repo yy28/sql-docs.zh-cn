@@ -1,6 +1,6 @@
 ---
 title: 配置清理和匹配的阈值
-description: 了解如何在 SQL Server Data Quality Services （DQS）中配置在计算机辅助清理和匹配活动期间使用的阈值。
+description: 了解如何在 SQL Server Data Quality Services （DQS）中配置在计算机辅助的清理和匹配活动期间使用的阈值。
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2305409-7115-45a4-8f60-1213c0a47368
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 4fcbc8e4e6d6a9c1df07d8e1b1aa68c08c162817
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.openlocfilehash: a0bcf7bc1cdf28aae4fc281f14f8edeec9f6c47d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75557888"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76916311"
 ---
 # <a name="configure-threshold-values-for-cleansing-and-matching---data-quality-services-dqs"></a>配置清理和匹配的阈值-Data Quality Services （DQS）
 
@@ -30,11 +30,11 @@ ms.locfileid: "75557888"
 
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中配置在计算机辅助清理和匹配活动中使用的阈值。  
   
-##  <a name="BeforeYouBegin"></a>开始之前  
+##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a>安全  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>访问  
+####  <a name="Permissions"></a> 权限  
  您必须对 DQS_MAIN 数据库具有 dqs_administrator 角色才能配置这些阈值。  
   
 ##  <a name="Configure"></a>配置阈值  
@@ -53,6 +53,6 @@ ms.locfileid: "75557888"
   
 5.  若要为匹配活动指定阈值，请在 **“匹配”** 区域下的 **“最低记录分数”** 框中指定一个值。 此值表示一条记录要被视为另一条记录的匹配项的最低分数。 默认值为 80%。  
   
-6.  单击 **“关闭”**。  
+6.  单击“关闭”  。  
   
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0611b37de9af37e5ae8442514ac0720e5eb89e01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62772238"
 ---
 # <a name="add-copy-of-existing-package"></a>添加现有包的副本
@@ -43,11 +43,11 @@ ms.locfileid: "62772238"
  **包路径**  
  键入包的路径，或单击浏览按钮 (…) 并查找要复制的包  。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [保存包的副本](../../2014/integration-services/save-copy-of-package.md)   
- [“导入包”对话框 UI 参考](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
- [“导出包”对话框 UI 参考](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
+ ["导入包" 对话框 UI 参考](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
+ ["导出包" 对话框 UI 参考](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
  [保存包](save-packages.md)   
- [导入和导出包（SSIS 服务）](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
+ [&#40;SSIS 服务导入和导出包&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
   
   

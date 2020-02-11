@@ -1,5 +1,5 @@
 ---
-title: 全文本索引属性 （计划页） |Microsoft Docs
+title: 全文索引属性（"计划" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,18 +13,18 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 067c77839a852965c7684359acf50fb328d21a6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779027"
 ---
 # <a name="full-text-index-properties-schedules-page"></a>全文索引属性（“计划”页）
   使用此页可以查看和创建运行 SQL Server 代理作业的计划，该作业用于启动对全文索引基表的更新的增量填充。 如果基表或视图不包含 `timestamp` 数据类型的列，则执行完全填充。  
   
- **若要查看或更改全文索引的属性**  
+ **查看或更改全文索引的属性**  
   
--   [管理全文检索](../relational-databases/indexes/indexes.md)  
+-   [管理全文索引](../relational-databases/indexes/indexes.md)  
   
 ## <a name="uielement-list"></a>UIElement 列表  
  **计划**  
@@ -45,7 +45,7 @@ ms.locfileid: "62779027"
  **新建**  
  单击此选项可以为填充全文索引创建新计划。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用全文索引向导](../relational-databases/search/use-the-full-text-indexing-wizard.md)   
  [填充全文索引](../relational-databases/search/populate-full-text-indexes.md)  
   

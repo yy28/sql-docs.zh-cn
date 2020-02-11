@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: beafe79839842f530d4864339da53a7781123447
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73776409"
 ---
 # <a name="odbc-sql-type-for-table-valued-parameters"></a>表值参数的 ODBC SQL 类型
@@ -25,10 +25,10 @@ ms.locfileid: "73776409"
 
   对表值参数的支持是通过新的 ODBC SQL 类型 SQL_SS_TABLE 提供的。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
  不能将 SQL_SS_TABLE 转换为任何其他 ODBC 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型。  
   
- 如果 SQL_SS_TABLE 在 SQLBindParameter 的*ValueType*参数中用作 C 数据类型，或者尝试将应用程序参数描述符（APD）记录中的 SQL_DESC_TYPE 设置为 SQL_SS_TABLE，则返回 SQL_ERROR，并且诊断记录为生成的 SQLSTATE = HY003，"应用程序缓冲区类型无效"。  
+ 如果 SQL_SS_TABLE 在 SQLBindParameter 的*ValueType*参数中用作 C 数据类型，或者尝试将应用程序参数描述符（APD）记录中的 SQL_DESC_TYPE 设置为 SQL_SS_TABLE，则返回 SQL_ERROR 并使用 SQLSTATE = HY003、"应用程序缓冲区类型无效" 生成诊断记录。  
   
  如果在 IPD 记录中将 SQL_DESC_TYPE 设置为 SQL_SS_TABLE，并且对应的应用程序参数描述符记录不为 SQL_C_DEFAULT，则会返回 SQL_ERROR，并生成带有 SQLSTATE=HY003 的诊断记录“应用程序缓冲区类型无效”。 SQLSetDescField、SQLSetDescRec 或 SQLBindParameter 的*ParameterType*可能会发生这种情况。  
   
@@ -43,6 +43,6 @@ ms.locfileid: "73776409"
  表值参数列无法在*StrLen_or_IndPtr*中使用 SQL_DEFAULT_PARAM，因为表值参数不支持每行的默认值。 应用程序可以改为将 SQL_CA_SS_COL_HAS_DEFAULT_VALUE 列属性设置为 1。 这表示该列的所有行均具有默认值。 如果*StrLen_or_IndPtr*设置为 SQL_DEFAULT_PARAM，则 SQLExecute 或 SQLExecDirect 将返回 SQL_ERROR，并且将使用 SQLSTATE = HY090 和消息 "字符串或缓冲区长度无效" 将诊断记录添加到语句中。  
   
 ## <a name="see-also"></a>另请参阅  
- [表值参数&#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+ [ODBC&#41;&#40;表值参数](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

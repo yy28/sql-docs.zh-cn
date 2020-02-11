@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eec8bda347b52835e84f4c9a505d9ad82cdf1a40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211559"
 ---
 # <a name="canonical-forms-and-pattern-restrictions"></a>规范格式和模式限制
@@ -31,7 +31,7 @@ ms.locfileid: "68211559"
   
  浮点值的不精确序列化有类似的问题。 由于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用的浮点序列化算法，相似值可能共享相同的规范格式。 当序列化浮点值然后重新插入浮点值时，它的值可能发生轻微变化。 在极个别的情况下，重新插入时这可能导致一个违反其类型的以下任何方面的值： **enumeration**、 **minInclusive**、 **minExclusive**、 **maxInclusive**或 **maxExclusive**。 为了避免这种情况， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拒绝任何从 `xs:float` 或 `xs:double` 派生的类型的值，这些值无法序列化和重新插入。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在服务器上使用 XML 架构集合的要求和限制](requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

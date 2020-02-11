@@ -11,18 +11,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 66cbc5b8b54ec2507bb4fbe96443afa25386de96
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68670500"
 ---
 # <a name="backup-restore-and-move-the-ssis-catalog"></a>备份、还原和移动 SSIS 目录
-  [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 包含 SSISDB 数据库。 查询 SSISDB 数据库中的视图可以检查 **SSISDB** 目录中存储的对象、设置和操作数据。 本主题说明如何备份和还原该数据库。  
+  [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)]包括 SSISDB 数据库。 查询 SSISDB 数据库中的视图可以检查 **SSISDB** 目录中存储的对象、设置和操作数据。 本主题说明如何备份和还原该数据库。  
   
- SSISDB 目录存储部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器的包  。 有关该目录的详细信息，请参阅 [SSIS 目录](catalog/ssis-catalog.md)。  
+ SSISDB 目录存储部署到 ** 服务器的包**[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。 有关该目录的详细信息，请参阅 [SSIS 目录](catalog/ssis-catalog.md)。  
   
-##  <a name="backup"></a> 备份 SSIS 数据库  
+##  <a name="backup"></a>备份 SSIS 数据库  
   
 1.  打开 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 并连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例。  
   
@@ -38,19 +38,19 @@ ms.locfileid: "68670500"
   
     ```  
   
-3.  在 **中使用** “备份数据库” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]对话框备份 SSISDB 数据库。 有关详细信息，请参阅[操作说明：备份数据库 (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812)。  
+3.  在 **中使用** “备份数据库” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]对话框备份 SSISDB 数据库。 有关详细信息，请参阅 [如何备份数据库 (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812)。  
   
 4.  通过执行以下操作，生成 ##MS_SSISServerCleanupJobLogin## 的 CREATE LOGIN 脚本。 有关详细信息，请参阅 [CREATE LOGIN (Transact-SQL)](/sql/t-sql/statements/create-login-transact-sql)。  
   
     1.  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]的对象资源管理器中，展开 **“安全性”** 节点，然后展开 **“登录名”** 节点。  
   
-    2.  右键单击 **##MS_SSISServerCleanupJobLogin##** ，然后依次单击“编写登录脚本为” > “CREATE 到” > “新查询编辑器窗口”。     
+    2.  右键单击 **##MS_SSISServerCleanupJobLogin##**，然后依次单击“编写登录脚本为”**“CREATE 到”**“新查询编辑器窗口”。 > **** > ****  
   
 5.  如果要将 SSISDB 数据库还原到从未创建 SSISDB 目录的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例，请执行以下操作生成 sp_ssis_startup 的 CREATE PROCEDURE 脚本。 有关详细信息，请参阅 [CREATE PROCEDURE (Transact-SQL)](/sql/t-sql/statements/create-procedure-transact-sql)。  
   
-    1.  在对象资源管理器中, 展开 "**数据库**" 节点, 然后展开 "**系统数据库** > " "**主** > **可编程性** > " "**存储过程**" 节点。  
+    1.  在对象资源管理器中，展开 "**数据库**" 节点，然后展开 "**系统数据库** > " "**主** > **可编程性** > " "**存储过程**" 节点。  
   
-    2.  右键单击 **dbo.sp_ssis_startup**，然后依次单击“编写存储过程脚本为” > “CREATE 到” > “新查询编辑器窗口”。     
+    2.  右键单击 **dbo.sp_ssis_startup**，然后依次单击“编写存储过程脚本为”**“CREATE 到”**“新查询编辑器窗口”。 > **** > ****  
   
 6.  确认 SQL Server 代理已启动  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68670500"
   
     1.  在对象资源管理器中，展开 **“SQL Server 代理”** 节点，然后展开 **“作业”** 节点。  
   
-    2.  右键单击“SSIS 服务器维护作业”，然后依次单击“编写作业脚本为” > “CREATE 到” > “新查询编辑器窗口”。     
+    2.  右键单击 "SSIS 服务器维护作业"，然后单击 "**创建到** > **新查询编辑器窗口**的**脚本作业** > "。  
   
 ### <a name="to-restore-the-ssis-database"></a>还原 SSIS 数据库  
   
@@ -79,7 +79,7 @@ ms.locfileid: "68670500"
   
     ```  
   
-     [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] CLR 存储过程要求将 UNSAFE 权限授予该登录名，因为该登录名需要对受限制资源（如 Microsoft Win32 API）的更高访问权限。 有关 UNSAFE 代码权限的详细信息，请参阅 [Creating an Assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md)。  
+     [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]CLR 存储过程要求将 UNSAFE 权限授予该登录名，因为该登录名需要对受限制资源（如 Microsoft Win32 API）的其他访问权限。 有关 UNSAFE 代码权限的详细信息，请参阅 [Creating an Assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md)。  
   
     ```  
     Create Login MS_SQLEnableSystemAssemblyLoadingUser  
@@ -93,11 +93,11 @@ ms.locfileid: "68670500"
   
     -   [还原数据库（“常规”页）](general-page-of-integration-services-designers-options.md)  
   
-    -   [还原数据库（“文件”页）](../relational-databases/backup-restore/restore-database-files-page.md)  
+    -   ["还原数据库 &#40;文件" 页&#41;](../relational-databases/backup-restore/restore-database-files-page.md)  
   
     -   [还原数据库（“选项”页）](../relational-databases/backup-restore/restore-database-options-page.md)  
   
-4.  执行你在 [备份 SSIS 数据库](#backup) 中为 ##MS_SSISServerCleanupJobLogin##、sp_ssis_startup 和 SSIS 服务器维护作业创建的脚本。 确认 SQL Server 代理已启动。  
+4.  执行你在[备份 SSIS 数据库](#backup)中为 ##MS_SSISServerCleanupJobLogin##、sp_ssis_startup 和 SSIS 服务器维护作业创建的脚本。 确认 SQL Server 代理已启动。  
   
 5.  运行以下语句以将 sp_ssis_startup 过程设置为自动执行。 有关详细信息，请参阅 [sp_procoption (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-procoption-transact-sql)。  
   
@@ -105,11 +105,11 @@ ms.locfileid: "68670500"
     EXEC sp_procoption N'sp_ssis_startup','startup','on'  
     ```  
   
-6.  通过在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中使用“登录属性”对话框，将 SSISDB 用户 ##MS_SSISServerCleanupJobUser##（SSISDB 数据库）映射到 ##MS_SSISServerCleanupJobLogin##。   
+6.  通过在 ** 中使用“登录属性”对话框，将 SSISDB 用户 ##MS_SSISServerCleanupJobUser##（SSISDB 数据库）映射到 ##MS_SSISServerCleanupJobLogin##。**[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]  
   
 7.  使用下列方法之一还原主密钥。 有关加密的详细信息，请参阅 [Encryption Hierarchy](../relational-databases/security/encryption/encryption-hierarchy.md)。  
   
-    -   **方法 1**  
+    -   **方法1**  
   
          如果已备份数据库主密钥且具有用于加密主密钥的密码，则使用此方法。  
   
@@ -127,11 +127,11 @@ ms.locfileid: "68670500"
         > [!NOTE]  
         >  如果服务主密钥尚未加密数据库主密钥，将看到 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中显示的以下警告消息。 忽略警告消息。  
         >   
-        >  **无法解密当前主密钥。此错误已被忽略，因为指定了 FORCE 选项。**  
+        >  **当前主密钥无法解密。已忽略此错误，因为指定了 FORCE 选项。**  
         >   
         >  FORCE 参数指定即使当前数据库主密钥未打开，也应继续执行还原过程。 对于 SSISDB 目录，由于在您正在其中还原数据库的实例上未打开数据库主密钥，您将看到此消息。  
   
-    -   **方法 2**  
+    -   **方法2**  
   
          如果您具有用于创建 SSISDB 的原始密码，则使用此方法。  
   

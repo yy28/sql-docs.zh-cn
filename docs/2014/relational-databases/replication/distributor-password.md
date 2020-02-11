@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a6d3c7971f6d5e117ae923ee8697a4ec51e1a34e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721467"
 ---
 # <a name="distributor-password"></a>分发服务器密码
@@ -29,7 +29,7 @@ ms.locfileid: "62721467"
  **确认密码**  
  重新输入密码以确认密码输入正确。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [“配置分发”](configure-distribution.md)   
  [配置发布和分发](configure-publishing-and-distribution.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 参数值显示隐藏的数据集，为多维数据 （报表生成器和 SSRS） |Microsoft Docs
+title: 为多维数据的参数值显示隐藏的数据集（报表生成器和 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 92db49f8f6a112f8466fc81527b214bad7252f82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107059"
 ---
 # <a name="show-hidden-datasets-for-parameter-values-for-multidimensional-data-report-builder-and-ssrs"></a>为多维数据的参数值显示隐藏的数据集（报表生成器和 SSRS）
@@ -35,10 +35,10 @@ ms.locfileid: "66107059"
   
 -   在“报表数据”窗格中，右键单击“数据集”文件夹，然后单击“显示隐藏数据集”  。  
   
-## <a name="see-also"></a>请参阅  
- [查询设计器（报表生成器）](../query-designers-report-builder.md)   
+## <a name="see-also"></a>另请参阅  
+ [查询设计器 &#40;报表生成器&#41;](../query-designers-report-builder.md)   
  [Reporting Services 查询设计器](../reporting-services-query-designers.md)   
  [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [向报表添加数据&#40;报表生成器和 SSRS&#41;](report-datasets-ssrs.md)  
+ [将数据添加到报表 &#40;报表生成器和 SSRS&#41;](report-datasets-ssrs.md)  
   
   

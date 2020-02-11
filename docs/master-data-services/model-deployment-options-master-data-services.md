@@ -11,10 +11,10 @@ ms.assetid: cf1b17b4-47d5-4eba-83f9-fb0555806867
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 692b207767dfc3d1ae4a032722e4cca6b2972ea0
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73727965"
 ---
 # <a name="model-deployment-options-master-data-services"></a>模型部署选项 (Master Data Services)
@@ -30,20 +30,20 @@ ms.locfileid: "73727965"
   
 -   创建模型的包，然后将其作为新模型部署到相同的环境。 在此情况下，您必须为该模型提供一个新名称。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  在 MDS 数据库中，每个模型对象都具有唯一的标识符 (ID)。 这些 ID 包含在模型部署包中。 在部署包时，您必须选择如何处理这些 ID。  
   
  下表可帮助您确定在使用系统管理模型部署向导或 MDSModelDeploy 工具时作出何种选择。  
   
-|选项|描述|说明|  
+|选项|说明|说明|  
 |------------|-----------------|-----------|  
-|“新建”|使用唯一名称创建一个新模型。 为所有模型对象创建新的标识符。|如果您使用新的标识符创建一个新模型，则在以后无法使用模型部署工具将更新应用于该模型。 在 Web 应用程序中使用向导部署一个模型包时，只有在具有相同名称或 ID 的模型已存在时，您才能选择创建一个新模型。|  
+|新建|使用唯一名称创建一个新模型。 为所有模型对象创建新的标识符。|如果您使用新的标识符创建一个新模型，则在以后无法使用模型部署工具将更新应用于该模型。 在 Web 应用程序中使用向导部署一个模型包时，只有在具有相同名称或 ID 的模型已存在时，您才能选择创建一个新模型。|  
 |克隆|创建一个新模型，该模型是包中模型的精确克隆。 这仅适用于该模型在目标环境中不存在的情况（按名称或标识符）。 如果想要在多个环境中拥有相同的模型并在经过一段时间后更新克隆的模型，请使用“克隆”。|这是 Web 应用程序中向导的默认行为。 如果已经存在具有相同名称或 ID 的模型，则系统将会提示您改为创建新的模型。|  
 |更新|使用包中的模型更新现有模型。 标识符在这两个模型中必须相同。 这用来更新您以前克隆的模型。|您只能更新以前克隆的模型。 （名称和 ID 必须匹配。）|  
   
 ## <a name="see-also"></a>另请参阅  
  [使用 MDSModelDeploy 部署模型部署包](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)   
  [使用向导部署模型部署包](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)   
- [部署模型 (Master Data Services)](../master-data-services/deploying-models-master-data-services.md)  
+ [&#40;Master Data Services 部署模型&#41;](../master-data-services/deploying-models-master-data-services.md)  
   
   

@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fb9e2ae87a82bf272e84a8d940606879aa3c1e9d
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67792804"
 ---
 # <a name="accessing-custom-assemblies-through-expressions"></a>通过表达式访问自定义程序集
@@ -43,7 +43,7 @@ ms.locfileid: "67792804"
 ## <a name="calling-instance-members-from-a-report-definition-file"></a>从报表定义文件调用实例成员  
  如果您的自定义程序集包含您在报表定义中需要访问的实例成员，则必须将类的实例名称添加到报表中。 可以使用“报表属性”对话框中的“代码”选项卡添加类的实例名称   。 有关向报表添加类的实例的详细信息，请参阅[报表设计器的表达式中的自定义代码和程序集引用 (SSRS)](../report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)。  
   
- 若要调用某个静态成员，您需要为表达式，采用的形式引用 = 代码 *。InstanceName.Method*。  
+ 若要调用静态成员，需要将其引用为采用 = Code 形式的表达式 *。InstanceName. 方法*。  
   
 #### <a name="to-call-instance-members"></a>调用实例成员  
   
@@ -53,7 +53,7 @@ ms.locfileid: "67792804"
     =Code.m_myDollarCoversion.ToEUR(Fields!StandardCost.Value)  
     ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [将自定义程序集用于报表](using-custom-assemblies-with-reports.md)  
   
   

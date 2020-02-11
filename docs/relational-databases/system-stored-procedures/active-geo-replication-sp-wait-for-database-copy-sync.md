@@ -18,10 +18,10 @@ ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-dt-2019
 ms.openlocfilehash: eb274d4f022a182ac056c190a8626fa48e36511d
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73844395"
 ---
 # <a name="active-geo-replication---sp_wait_for_database_copy_sync"></a>活动异地复制-sp_wait_for_database_copy_sync
@@ -31,7 +31,7 @@ ms.locfileid: "73844395"
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+|**适用**于： [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,7 +41,7 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @target_server = ] 'server_name'  
+ [ @target_server = ]"server_name"  
  承载活动辅助数据库的 SQL Database 服务器的名称。 server_name 为 sysname，无默认值。  
   
  [ @target_database = ] 'database_name'  
@@ -58,10 +58,10 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
   
 -   失去互连连接。 **sp_wait_for_database_copy_sync**将在连接超时后返回。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  主数据库中的任何用户均可调用此系统存储过程。 登录名必须是主数据库和活动辅助数据库中的用户。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  在**sp_wait_for_database_copy_sync**调用之前提交的所有事务都将发送到活动辅助数据库。  
   
 ## <a name="examples"></a>示例  
@@ -75,7 +75,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [dm_continuous_copy_status &#40;Azure SQL 数据库&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)   
- [异地复制动态管理视图和函数&#40;Azure SQL 数据库&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)  
+ [dm_continuous_copy_status &#40;Azure SQL 数据库&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)   
+ [异地复制动态管理视图和函数 &#40;Azure SQL 数据库&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)  
   
   

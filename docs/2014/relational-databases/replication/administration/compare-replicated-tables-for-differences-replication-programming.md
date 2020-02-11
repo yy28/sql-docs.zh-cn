@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 94d3faab4c831fe64e54a582a5f70b2ae6b664e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68210783"
 ---
 # <a name="compare-replicated-tables-for-differences-replication-programming"></a>比较所复制表的差异（复制编程）
@@ -72,7 +72,7 @@ ms.locfileid: "68210783"
   
     -   （可选）使用 **-strict** 以强制在源表和目标表之间执行严格的架构比较。  
   
-## <a name="see-also"></a>请参阅  
- [验证订阅服务器上的数据](../validate-data-at-the-subscriber.md)  
+## <a name="see-also"></a>另请参阅  
+ [在订阅服务器上验证数据](../validate-data-at-the-subscriber.md)  
   
   

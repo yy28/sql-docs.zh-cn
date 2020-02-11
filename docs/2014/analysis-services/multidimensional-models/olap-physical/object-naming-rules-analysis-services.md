@@ -1,5 +1,5 @@
 ---
-title: 对象命名规则 (Analysis Services) |Microsoft Docs
+title: 对象命名规则（Analysis Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f45ccaa0caab2e1dcc7e96e80e217d82d4f1f805
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69530890"
 ---
 # <a name="object-naming-rules-analysis-services"></a>对象命名规则 (Analysis Services)
@@ -27,11 +27,13 @@ ms.locfileid: "69530890"
   
  虽然可以手动指定 `ID`，但它通常会在创建对象时自动生成。 在开始构建模型之后，您绝不应更改 `ID`。 模型中的所有对象引用都基于 `ID`， 因此，更改 `ID` 容易导致模型损坏。  
   
- `DataSource` 和 `DataSourceView` 对象是命名约定的两个值得注意的例外。 `DataSource` ID 可以设置为不具唯一性的一个点 (.)，这表示对当前数据库的引用。 另一个例外是 `DataSourceView`，它遵循的是针对 .NET Framework 中的 `DataSet` 对象定义的命名约定（其中的 `Name` 用作标识符）。  
+ 
+  `DataSource` 和 `DataSourceView` 对象是命名约定的两个值得注意的例外。 
+  `DataSource` ID 可以设置为不具唯一性的一个点 (.)，这表示对当前数据库的引用。 另一个例外是 `DataSourceView`，它遵循的是针对 .NET Framework 中的 `DataSet` 对象定义的命名约定（其中的 `Name` 用作标识符）。  
   
  以下规则适用于 `Name` 和 `ID` 属性。  
   
--   名称不区分大小写。 在同一数据库中, 不能有一个名为 "sales" 的多维数据集和名为 "Sales" 的另一个。  
+-   名称不区分大小写。 在同一数据库中，不能有一个名为 "sales" 的多维数据集和名为 "Sales" 的另一个。  
   
 -   对象名称中不允许使用前导空格或尾随空格，但可以在名称中嵌入空格。 前导空格和尾随空格将会被隐式删除。 这适用于对象的 `Name` 和 `ID`。  
   
@@ -68,13 +70,13 @@ ms.locfileid: "69530890"
   
 |Object|无效字符|  
 |------------|------------------------|  
-|`Server`|在对服务器对象进行命名时，请遵循 Windows 服务器命名约定。 有关详细信息, 请参阅[命名约定 (Windows)](/windows/desktop/DNS/naming-conventions) 。|  
+|`Server`|在对服务器对象进行命名时，请遵循 Windows 服务器命名约定。 有关详细信息，请参阅[命名约定（Windows）](/windows/desktop/DNS/naming-conventions) 。|  
 |`DataSource`| `: / \ * \| ? " () [] {} <>` |  
-|`Level` 或 `Attribute`|````. , ; ' ` : / \ * & \| ? " & % $ ! + = [] {} < >````|  
-|`Dimension` 或 `Hierarchy`|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} <,>````|  
+|`Level`或`Attribute`|````. , ; ' ` : / \ * & \| ? " & % $ ! + = [] {} < >````|  
+|`Dimension`或`Hierarchy`|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} <,>````|  
 |所有其他对象|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} < >````|  
   
- **不同允许保留字符的时间**  
+ **例外：允许保留字符的情况**  
   
  如前所述，特定模式和兼容级别的数据库可以具有包含保留字符的对象名称。 对于允许使用扩展字符的表格数据库（1103 或更高），维度属性、层次结构、级别、度量值和 KPI 对象名称可以包含保留字符：  
   
@@ -87,9 +89,9 @@ ms.locfileid: "69530890"
   
  数据库可以拥有默认的 ModelType。 默认值等效于多维的，因此不支持在列名称中使用保留字符。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [MDX 保留字](/sql/mdx/mdx-reserved-words)   
- [翻译&#40;Analysis Services&#41;](/analysis-services/translation-support-in-analysis-services)   
- [XML for Analysis 符合&#40;性 XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
+ [翻译 &#40;Analysis Services&#41;](/analysis-services/translation-support-in-analysis-services)   
+ [XML for Analysis 符合性 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
   
   

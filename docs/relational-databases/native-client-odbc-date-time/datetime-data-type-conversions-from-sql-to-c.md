@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9795126f2cd7c39ebd23ed34fde73664388b235f
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73783843"
 ---
 # <a name="datetime-data-type-conversions-from-sql-to-c"></a>由 SQL 到 C 的 datetime 数据类型转换
@@ -32,16 +32,16 @@ ms.locfileid: "73783843"
 ||SQL_C_DATE|SQL_C_TIME|SQL_C_TIMESTAMP|SQL_C_SS_TIME2|SQL_C_SS_TIMESTAMPOFFSET|SQL_C_BINARY|SQL_C_CHAR|SQL_C_WCHAR|  
 |SQL_CHAR|2、3、4、5|2、3、6、7、8|2、3、9、10、11|2、3、6、7|2、3、9、10、11|1|1|1|  
 |SQL_WCHAR|2、3、4、5|2、3、6、7、8|2、3、9、10、11|2、3、6、7|2、3、9、10、11|1|1|1|  
-|SQL_TYPE_DATE|“确定”|12|13|12|13、23|14|16|16|  
-|SQL_SS_TIME2|12|8|15|“确定”|10，23|17|16|16|  
-|SQL_TYPE_TIMESTAMP|18|7、8|“确定”|7|23|19|16|16|  
-|SQL_SS_TIMESTAMPOFFSET|18、22|7、8、20|20|7、20|“确定”|21|16|16|  
+|SQL_TYPE_DATE|OK|12|13|12|13、23|14|16|16|  
+|SQL_SS_TIME2|12|8|15|OK|10，23|17|16|16|  
+|SQL_TYPE_TIMESTAMP|18|7、8|OK|7|23|19|16|16|  
+|SQL_SS_TIMESTAMPOFFSET|18、22|7、8、20|20|7、20|OK|21|16|16|  
   
 ## <a name="key-to-symbols"></a>符号含义  
   
 |符号|含义|  
 |------------|-------------|  
-|“确定”|无转换问题。|  
+|OK|无转换问题。|  
 |1|应用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的规则。|  
 |2|忽略前导空格和尾随空格。|  
 |3|字符串解析为日期、时间、时区或时区偏移量，且秒的小数部分允许多达 9 位。 如果解析时区偏移量，则时间将转换为客户端时区。 如果在此转换过程中出现错误，将生成包含 SQLSTATE 22018 和消息 "日期时间字段溢出" 的诊断记录。|  
@@ -68,6 +68,6 @@ ms.locfileid: "73783843"
  本主题中的表格列出了返回客户端的类型与绑定中的类型之间的转换。 对于输出参数，如果 SQLBindParameter 中指定的服务器类型与服务器上的实际类型不匹配，则服务器将执行隐式转换，并且返回给客户端的类型将与通过 SQLBindParameter 指定的类型匹配。 当服务器的转换规则与上表中列出的规则不同时，这可能会导致意外的转换结果。 例如，在必须提供默认日期时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 1900-1-1，而不是当前日期。  
   
 ## <a name="see-also"></a>另请参阅  
- [日期和时间改进&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [ODBC&#41;&#40;的日期和时间改进](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

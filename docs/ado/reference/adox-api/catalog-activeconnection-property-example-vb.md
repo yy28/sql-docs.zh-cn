@@ -1,5 +1,5 @@
 ---
-title: 目录 ActiveConnection 属性示例 (VB) |Microsoft Docs
+title: 目录 ActiveConnection 属性示例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: bb3274b1-764d-43a7-a49f-ef55680ecd26
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4c6d30aeeb650525873669ccd175155c7e69cd0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67967114"
 ---
 # <a name="catalog-activeconnection-property-example-vb"></a>目录 ActiveConnection 属性示例 (VB)
-设置[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)属性有效，请打开连接到"打开"目录。 从打开的目录中，可以访问该目录中包含的架构对象。  
+将[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)属性设置为有效的开放式连接 "打开" 该目录。 从打开的目录中，可以访问该目录中包含的架构对象。  
   
 ```  
 ' BeginOpenConnectionVB  
@@ -59,15 +59,15 @@ End Sub
 ' EndOpenConnectionVB  
 ```  
   
- 设置**ActiveConnection**属性设置为有效的连接字符串还"会打开"目录。  
+ 将**ActiveConnection**属性设置为有效的连接字符串也会 "打开" 目录。  
   
 ```  
 Attribute VB_Name = "Catalog"  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [ActiveConnection 属性 (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [目录对象 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [表对象 (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
- [表集合 (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
+## <a name="see-also"></a>另请参阅  
+ [ActiveConnection 属性（ADOX）](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
+ [目录对象（ADOX）](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Table 对象（ADOX）](../../../ado/reference/adox-api/table-object-adox.md)   
+ [表集合（ADOX）](../../../ado/reference/adox-api/tables-collection-adox.md)   
  [Type 属性（表）(ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)

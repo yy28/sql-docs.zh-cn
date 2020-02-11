@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 068b7aa3c068b10b787b99bba26c12a2b680bcd3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727407"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R Services 的性能：结果和资源
@@ -41,7 +41,7 @@ ms.locfileid: "73727407"
 3. 对表的副本应用了各种修改以测试 SQL Server 功能，如页压缩、行压缩、索引、纵栏式数据存储等。
 4. 在应用每个优化之前和之后测量性能。
 
-| 表名| 描述|
+| 表名称| 说明|
 |------|------|
 | *airline* | 使用 `rxDataStep` 从原始 xdf 文件转换的数据|                          |
 | *airlineWithIntCol*   | *DayOfWeek* 已转换为整数而不是字符串。 另外，添加了 *rowNum* 列。|
@@ -92,7 +92,7 @@ metric time pct
 
 第一个测试在减小数据大小方面，对使用压缩和纵栏式表进行了比较。
 
-| 表名            | “行”     | 保留   | data       | index_size | 未使用  | 节省率（保留） |
+| 表名称            | “行”     | 保留   | 数据       | index_size | 未使用  | 节省率（保留） |
 |-----------------------|----------|------------|------------|------------|---------|---------------------|
 | *airlineWithIndex*    | 10000000 | 2978816 KB | 2972160 KB | 6128 KB    | 528 KB  | 0                   |
 | *airlineWithPageComp* | 10000000 | 625784 KB  | 623744 KB  | 1352 KB    | 688 KB  | 79%                 |
@@ -107,7 +107,7 @@ metric time pct
 
 此测试比较了行压缩、页压缩和无压缩的优点。 通过对来自三个不同数据表的数据使用 `rxLinMod` 定型了模型。 对所有表使用了相同的公式和查询。
 
-| 表名            | 测试名称       | numTasks | 平均时间 |
+| 表名称            | 测试名称       | numTasks | 平均时间 |
 |-----------------------|-----------------|----------|--------------|
 | *airlineWithIndex*    | NoCompression   | 1        | 5.6775       |
 |                       | NoCompression - 并行| 4        | 5.1775       |
@@ -180,7 +180,7 @@ metric time pct
 
 + 在这两种情况下，都使用了同一个公式：`ArrDelay ~ CRSDepTime + DayOfWeek`。
 
-| 表名          | 测试名称   | 平均时间 |
+| 表名称          | 测试名称   | 平均时间 |
 |---------------------|-------------|--------------|
 | *Airline*           | *FactorCol* | 10.72        |
 | *airlineWithIntCol* | *IntCol*    | 3.4475       |
@@ -214,7 +214,7 @@ metric time pct
 + 在第一次运行中，数据表使用标准行存储。
 + 在第二次运行中，使用纵栏式存储。
 
-| 表名         | 测试名称 | 平均时间 |
+| 表名称         | 测试名称 | 平均时间 |
 |--------------------|-----------|--------------|
 | *airlineWithIndex* | RowStore  | 4.67         |
 | *airlineColumnar*  | ColStore  | 4.555        |
@@ -266,10 +266,10 @@ ArrDelay ~ Origin:DayOfWeek + Month + DayofMonth + CRSDepTime
 
 测试结果显示了保存模型的时间，以及加载模型和进行预测所花费的时间。
 
-| 表名 | 测试名称 | 平均时间（训练模型） | 保存/加载模型花费的时间|
+| 表名称 | 测试名称 | 平均时间（训练模型） | 保存/加载模型花费的时间|
 |------------|------------|------------|------------|
-| airline    | SaveModel| 21.59| 2.08|
-| airline    | LoadModelAndPredict | | 2.09（包括预测花费的时间） |
+| 航空公司    | SaveModel| 21.59| 2.08|
+| 航空公司    | LoadModelAndPredict | | 2.09（包括预测花费的时间） |
 
 **结论**
 
@@ -343,7 +343,7 @@ RevoScaleR 和 MicrosoftML 包都用于在涉及大型数据集的复杂 R 解�
 
 + [使用 R 以每秒一百万次事务的速率检测欺诈](https://blog.revolutionanalytics.com/2016/09/fraud-detection.html/)
 
-## <a name="resources"></a>Resources
+## <a name="resources"></a>资源
 
 以下是指向在开发这些测试的过程中使用到的信息、工具和脚本的链接。
 
@@ -371,7 +371,7 @@ RevoScaleR 和 MicrosoftML 包都用于在涉及大型数据集的复杂 R 解�
 
 + [演示：内存中 OLTP 的性能改进](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp)
 
-+ [数据压缩](../../relational-databases/data-compression/data-compression.md)
++ [Data compression](../../relational-databases/data-compression/data-compression.md)（数据压缩）
 
 + [对表或索引启用压缩](../../relational-databases/data-compression/enable-compression-on-a-table-or-index.md)
 

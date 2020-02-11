@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1b2f4b080287dd4481a121def388f327112f21ae
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70154609"
 ---
 # <a name="database-engine-tutorials"></a>数据库引擎教程
@@ -38,7 +38,7 @@ ms.locfileid: "70154609"
  [教程：使用证书为存储过程签名](tutorial-signing-stored-procedures-with-a-certificate.md)  
  本教程说明了如何使用由 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]生成的证书对存储过程进行签名。  
   
- [Tutorial: Ownership Chains and Context Switching](tutorial-ownership-chains-and-context-switching.md)  
+ [教程：所有权链和上下文切换](tutorial-ownership-chains-and-context-switching.md)  
  本教程使用一个应用场景说明 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安全性概念，其中包括所有权链和用户上下文切换。  
   
  [教程：使用基于策略的管理来管理服务器](policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
@@ -47,14 +47,14 @@ ms.locfileid: "70154609"
  [教程：使用基于策略的管理来评估最佳实践](../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)  
  本教程教授如何创建可用于针对已知问题分析[!INCLUDE[ssDE](../includes/ssde-md.md)]的实例的策略。  
   
- [教程： SQL Server 备份和还原到 Azure Blob 存储服务](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+ [教程：将 SQL Server 备份和还原到 Azure Blob 存储服务](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
  本教程说明如何将 SQL Server 备份和还原到 Azure Blob 存储服务。  
   
- [教程：在 Azure 存储服务中 SQL Server 数据文件](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+ [教程：Azure 存储服务中的 SQL Server 数据文件](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
  本教程有助于了解如何将 SQL Server 数据文件直接存储在 Azure Blob 存储服务中。  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server 2014  教程](../tutorials/tutorials-for-sql-server-2014.md)  
+ [2014 SQL Server 教程](../tutorials/tutorials-for-sql-server-2014.md)   
  [TechNet WIKI：SQL Server 2012 示例](https://go.microsoft.com/fwlink/?linkID=220734)  
   
   

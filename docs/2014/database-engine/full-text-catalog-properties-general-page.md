@@ -1,5 +1,5 @@
 ---
-title: 全文目录属性 （常规页） |Microsoft Docs
+title: 全文目录属性（"常规" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be73ed98700ef261ccee026469dddd22017998e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779660"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>全文目录属性（“常规”页）
@@ -32,27 +32,27 @@ ms.locfileid: "62779660"
  显示目录是否为数据库的默认目录。  
   
  **填充状态**  
- 指示目录的状态。 可能的值有：  
+ 指示目录的状态。 可能的值为：  
   
--   **Idle**  
+-   **空闲**  
   
 -   **正在进行爬网**  
   
 -   **已暂停**  
   
--   **限制**  
+-   **已中止**  
   
--   **恢复**  
+-   **从中**  
   
--   **关闭**  
+-   **立即**  
   
 -   **正在进行增量填充**  
   
 -   **正在生成索引**  
   
--   **磁盘已满暂停**  
+-   **磁盘已满-已暂停**  
   
--   **Change tracking**  
+-   **更改跟踪**  
   
  **项计数**  
  显示目录中的全文项数。  
@@ -64,18 +64,18 @@ ms.locfileid: "62779660"
  全文目录的名称。  
   
  **区分重音**  
- 查看或修改目录是否区分标注字符，例如波形符 ( **~** )、锐音符 (**´**) 或元音 (**¨**)。 有效值为  
+ 查看或修改目录是否对变音标记敏感，如波形符（**~**）、锐音符号（**")**）或元音变音符（e **）。** 有效值是：  
   
 -   **是**  
   
 -   **是**  
   
--   有关标注字符的信息，请参阅[音调符号](https://www.merriam-webster.com/dictionary/diacritic)Merriam Webster 字典中。  
+-   有关发音符号的信息，请参阅 Merriam-Webster 字典中的[音调符号](https://www.merriam-webster.com/dictionary/diacritic)。  
   
  **上次填充日期**  
  显示上次填充目录的日期。  
   
- **“所有者”**  
+ **所有者**  
  全文目录的所有者。  
   
  **唯一键计数**  
@@ -85,12 +85,12 @@ ms.locfileid: "62779660"
   
 |||  
 |-|-|  
-|**无**|不执行 **“优化目录”** 、 **“重新生成目录”** 或 **“重新填充目录”** 操作。|  
-|**优化目录**|优化目录的空间利用率，从而提高查询性能。 它还可提高搜索结果相关排名的准确性。<br /><br /> 该操作执行 ALTER FULLTEXT CATALOG *catalog_name* REORGANIZE。|  
-|**重新生成目录**|删除并重新生成全文目录。 如果更改了基本目录属性（如区分重音），则必须执行此操作。<br /><br /> 全文目录所在的文件组必须为联机或可读写状态，重新生成才可成功。 重新生成后，全文索引将重新填充。<br /><br /> 该操作执行 ALTER FULLTEXT CATALOG *catalog_name* REBUILD。|  
-|**重新填充目录**|使用数据的最新更改来更新目录。 使用此选项并不要求停用目录。|  
+|**无**|不执行 **“优化目录”**、 **“重新生成目录”** 或 **“重新填充目录”** 操作。|  
+|**“优化目录”**|优化目录的空间利用率，从而提高查询性能。 它还可提高搜索结果相关排名的准确性。<br /><br /> 该操作执行 ALTER FULLTEXT CATALOG *catalog_name* REORGANIZE。|  
+|**“重新生成目录”**|删除并重新生成全文目录。 如果更改了基本目录属性（如区分重音），则必须执行此操作。<br /><br /> 全文目录所在的文件组必须为联机或可读写状态，重新生成才可成功。 重新生成后，全文索引将重新填充。<br /><br /> 该操作执行 ALTER FULLTEXT CATALOG *catalog_name* REBUILD。|  
+|**“重新填充目录”**|使用数据的最新更改来更新目录。 使用此选项并不要求停用目录。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [填充全文索引](../relational-databases/indexes/indexes.md)  
   
   

@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 619cd537b5ecb45afe2dce3467caa64fc1e9a499
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092751"
 ---
 # <a name="replication-upgrade-issues"></a>复制升级问题
@@ -29,7 +29,7 @@ ms.locfileid: "66092751"
   
 -   [其他复制升级问题](../../../2014/sql-server/install/other-replication-upgrade-issues.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用升级顾问](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
  [解决升级问题](../../../2014/sql-server/install/resolving-upgrade-issues.md)  
   

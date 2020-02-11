@@ -11,16 +11,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8303c387ff38ab5448d15e478534df165e05bddf
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637658"
 ---
 # <a name="hello-world-ready-sample"></a>Hello World Ready 示例
   Hello World Ready 示例说明了创建、部署和测试基于公共语言运行时 (CLR) 集成的简单且全球通用存储过程所涉及的基本操作。 不用更改全球通用组件的源代码就可以将它轻松地本地化为全世界各个市场的各种语言。 此示例还说明了如何通过输出参数和记录返回由存储过程动态构建并返回到客户端的数据。此示例与 Hello World 示例基本相同，只不过在对此应用程序进行本地化时，此示例更容易且更安全。 更改已本地化的文本需要执行下列操作：  
   
-1.  更改 XML 文件（`resx` 文件）中的特定区域性  
+1.  更改 XML 文件（。`resx` 文件）中的特定区域性  
   
 2.  使用 `resgen` 生成该语言的资源文件  
   
@@ -28,16 +28,19 @@ ms.locfileid: "73637658"
   
 4.  在 SQL Server 中删除和添加该程序集  
   
- CLR 存储过程本身的源代码和程序集并不更改。 提供了 `build.cmd` 脚本，用来说明如何编译和链接资源程序集。尽管应用程序的源代码基于当前执行的程序集创建了资源管理器，但是您不必在包含存储过程的 DLL 中嵌入独立于区域性的资源。 `System.Resources.NeutralResourcesLanguage attribute` 允许附属 DLL 中存在独立于区域性的资源。 因此，最好使用单独的 DLL，以便在需要添加或更改本地化文本时，不必更改包含 CLR 存储过程的主 DLL。 这对于可能含有列和其他相关性，造成类型难以删除和重新添加的 CLR 用户定义类型而言，尤为有用。通常，附属 DLL 版本必须与主程序集版本相同。 但是，使用 `SatelliteContractVersion` 属性可以允许仅更新主程序集，而不更新附属程序集。 有关详细信息，请参阅 Microsoft .NET 文档中的 `ResourceManager` 类。  
+ CLR 存储过程本身的源代码和程序集并不更改。 提供了 `build.cmd` 脚本，用来说明如何编译和链接资源程序集。尽管应用程序的源代码基于当前执行的程序集创建了资源管理器，但是您不必在包含存储过程的 DLL 中嵌入独立于区域性的资源。 
+  `System.Resources.NeutralResourcesLanguage attribute` 允许附属 DLL 中存在独立于区域性的资源。 因此，最好使用单独的 DLL，以便在需要添加或更改本地化文本时，不必更改包含 CLR 存储过程的主 DLL。 这对于可能含有列和其他相关性，造成类型难以删除和重新添加的 CLR 用户定义类型而言，尤为有用。通常，附属 DLL 版本必须与主程序集版本相同。 但是，使用 `SatelliteContractVersion` 属性可以允许仅更新主程序集，而不更新附属程序集。 有关详细信息，请参阅 Microsoft .NET 文档中的 `ResourceManager` 类。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  此示例仅适用于 SQL Server 2005 和更高版本。  
   
  若要创建和运行此项目，必须安装下列软件：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]网站[免费获取 ](https://www.microsoft.com/sql-server/sql-server-editions-express) Express  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]网站[免费获取 ](https://www.microsoft.com/sql-server/sql-server-editions-express) Express  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开发人员[网站](https://go.microsoft.com/fwlink/?linkid=62796)提供的 AdventureWorks 数据库  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开发人员[网站](https://go.microsoft.com/fwlink/?linkid=62796)提供的 AdventureWorks 数据库  
   
 -   .NET Framework SDK 2.0 或更高版本，或 Microsoft Visual Studio 2005 或更高版本。 您可以免费获取 .NET Framework SDK。  
   
@@ -76,53 +79,53 @@ ms.locfileid: "73637658"
   
 3.  在 c:\MySample 中，创建 `HelloWorld.vb`（用于 Visual Basic 示例）或 `HelloWorld.cs`（用于 C# 示例），并将相应的 Visual Basic 或 C# 示例代码（如下所示）复制到该文件中。  
   
-4.  在 c:\MySample 中 `messages.resx` 创建文件，然后将示例代码复制到该文件中。  
+4.  在 c:\MySample 中，创建文件`messages.resx`并将示例代码复制到该文件中。  
   
-5.  在 c:\MySample 中，通过将文件保存 `messages.resx` `messages.de.resx` 来创建文件，并在更改行之后 `messages.de.resx`  
+5.  在 c:\MySample 中，通过将`messages.de.resx`文件`messages.resx`保存为更改行`messages.de.resx`后的方式来创建文件  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
-    -   更改为  
+    -   更改为   
   
     -   `<value xml:space="preserve">Hallo Welt!</value>`  
   
-6.  在 c:\MySample 中，通过将文件保存 `messages.resx` `messages.es.resx` 来创建文件，并在更改行之后 `messages.es.resx`  
+6.  在 c:\MySample 中，通过将`messages.es.resx`文件`messages.resx`保存为更改行`messages.es.resx`后的方式来创建文件  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
-    -   更改为  
+    -   更改为   
   
     -   `<value xml:space="preserve">Hola a todos</value>`  
   
-7.  在 c:\MySample 中，通过将文件保存 `messages.resx` `messages.fr.resx` 来创建文件，并在更改行之后 `messages.fr.resx`  
+7.  在 c:\MySample 中，通过将`messages.fr.resx`文件`messages.resx`保存为更改行`messages.fr.resx`后的方式来创建文件  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
-    -   更改为  
+    -   更改为   
   
     -   `<value xml:space="preserve">BonjourÂ !</value>`  
   
-8.  在 c:\MySample 中，通过将文件保存 `messages.resx` `messages.fr-FR.resx` 来创建文件，并在更改行之后 `messages.fr-FR.resx`  
+8.  在 c:\MySample 中，通过将`messages.fr-FR.resx`文件`messages.resx`保存为更改行`messages.fr-FR.resx`后的方式来创建文件  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
-    -   更改为  
+    -   更改为   
   
     -   `<value xml:space="preserve">Bonjour de France!</value>`  
   
-9. 在 c:\MySample 中，通过将文件保存 `messages.resx` `messages.it.resx` 来创建文件，并在更改行之后 `messages.it.resx`  
+9. 在 c:\MySample 中，通过将`messages.it.resx`文件`messages.resx`保存为更改行`messages.it.resx`后的方式来创建文件  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
-    -   更改为  
+    -   更改为   
   
     -   `<value xml:space="preserve">Buongiorno</value>`  
   
-10. 在 c:\MySample 中，通过将文件保存 `messages.resx` `messages.ja.resx` 来创建文件，并在更改行之后 `messages.ja.resx`  
+10. 在 c:\MySample 中，通过将`messages.ja.resx`文件`messages.resx`保存为更改行`messages.ja.resx`后的方式来创建文件  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
-    -   更改为  
+    -   更改为   
   
     -   `<value xml:space="preserve">` `ã"ã‚"ã«ã¡ã¯</value>`  
   
@@ -142,7 +145,7 @@ ms.locfileid: "73637658"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-16. 将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 测试命令脚本复制到一个文件中，并将其作为 `test.sql` 保存在示例目录中。  
+16. 将[!INCLUDE[tsql](../../includes/tsql-md.md)]测试命令脚本复制到文件中，并将`test.sql`其另存为示例目录中的。  
   
 17. 使用以下命令执行测试脚本：  
   
@@ -154,7 +157,7 @@ ms.locfileid: "73637658"
   
     -   `sqlcmd -E -I -i cleanup.sql`  
   
-## <a name="sample-code"></a>示例代码  
+## <a name="sample-code"></a>代码示例  
  下面是此示例的代码列表。  
   
  C#  
@@ -451,6 +454,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [公共语言运行时 (CLR) 集成的使用方案和示例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+ [公共语言运行时 &#40;CLR&#41; 集成的使用方案和示例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

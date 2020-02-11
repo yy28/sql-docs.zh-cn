@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: e0846442abce6dd598c6318e4ba7cf9e74685066
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727470"
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>使用 sqlrutils 创建存储过程
@@ -35,7 +35,7 @@ ms.locfileid: "73727470"
 
 数据帧内的对象以及函数的其他输入参数必须是以下 R 数据类型之一：
 - POSIXct
-- NUMERIC
+- numeric
 - character
 - integer
 - 逻辑
@@ -43,7 +43,7 @@ ms.locfileid: "73727470"
 
 如果输入类型不是上述类型之一，则需进行序列化并作为 *raw*传入函数。 在这种情况下，该函数还必须包括要反序列化输入的代码。
 
-### <a name="outputs"></a>输出
+### <a name="outputs"></a>Outputs
 
 该函数可输出以下项之一：
 
@@ -66,7 +66,7 @@ sqlrutils 提供定义输入和输出数据架构和类型的函数  。 它还�
 
 在执行每个函数调用时，系统将创建一个 R 对象，稍后你将该对象作为参数传递到 `StoredProcedure` 以创建完整的存储过程。
 
-### <a name="outputs"></a>输出
+### <a name="outputs"></a>Outputs
 
 sqlrutils 提供多种函数，用于将 R 对象（如列表）转换为 SQL Server 所需的数据帧  。
 如果函数直接输出数据帧，并未先将其包装到列表中，则可跳过此步骤。
@@ -83,7 +83,7 @@ sqlrutils 提供多种函数，用于将 R 对象（如列表）转换为 SQL Se
 
 当所有输入和输出参数都已准备就绪时，调用 `StoredProcedure` 构造函数。
 
-**Usage**
+**使用情况**
 
 `StoredProcedure (func, spName, ..., filePath = NULL ,dbName = NULL, connectionString = NULL, batchSeparator = "GO")`
 

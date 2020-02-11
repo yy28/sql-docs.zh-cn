@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6934d3ae816df23d68843eb49d5eca8c95d83d57
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727455"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>如何使用 olapR 在 R 中创建 MDX 查询
@@ -159,7 +159,7 @@ explore(ocs)
 | 结果  |
 | ----|
 | Analysis Services 教程 |
-|Internet 销售额 |
+|_Internet Sales_|
 |分销商销售额 |
 |销售汇总 |
 |[1] TRUE |
@@ -176,9 +176,9 @@ explore(ocs, "Sales")
 
 | 结果  |
 | ----|
-| 客户 |
-|日期 |
-|地区 |
+| _客户_|
+|_Date_|
+|_区域_|
 
 
 #### <a name="to-return-all-members-of-the-specified-dimension-and-hierarchy"></a>返回指定维度和层次结构的所有成员
@@ -193,9 +193,9 @@ explore(ocs, "Analysis Services Tutorial", "Product", "Product Categories", "Cat
 
 | 结果  |
 | ----|
-| 附件 |
-|自行车 |
-|服装 |
+| _Accessories_|
+|_Bikes_|
+|_Clothing_|
 |_组件_|
 |-> 程序集组件|
 |-> 程序集组件|

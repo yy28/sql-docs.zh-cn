@@ -16,16 +16,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c6126a352377e988c08a11211d12bb8bc77e93f7
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70153974"
 ---
 # <a name="ado-net-destination"></a>ADO NET 目标
   ADO NET 目标可将数据加载到各种使用数据库表或视图的兼容 [!INCLUDE[vstecado](../../includes/vstecado-md.md)]的数据库中。 你可以选择将这些数据加载到现有表或视图中，或者先创建一个新表，然后将这些数据加载到新表中。  
   
- 可使用 ADO NET 目标连接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 不支持使用 OLE DB 连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。 有关的详细信息[!INCLUDE[ssSDS](../../includes/sssds-md.md)], 请参阅[通用指导原则和限制 (Azure SQL Database)](https://go.microsoft.com/fwlink/?LinkId=248228)。  
+ 您可以使用 ADO NET 目标连接到[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 不支持使用 OLE DB 连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。 有关 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的详细信息，请参阅[通用指导原则和限制（Azure SQL 数据库）](https://go.microsoft.com/fwlink/?LinkId=248228)。  
   
 ## <a name="troubleshooting-the-ado-net-destination"></a>ADO NET 目标故障排除  
  可以记录 ADO NET 目标对外部数据访问接口所做的调用。 利用此日志记录功能，可以排除 ADO NET 目标执行将数据保存到外部数据源的操作过程中发生的故障。 若要记录 ADO NET 目标对外部数据访问接口所做的调用，请在包级别启用包日志记录并选择 **“诊断”** 事件。 有关详细信息，请参阅 [包执行的疑难解答工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)。  
@@ -36,10 +36,11 @@ ms.locfileid: "70153974"
  ADO NET 目标包括输入列和目标数据源中的列之间的映射。 不必将输入列映射到所有目标列。 但是，某些目标列的属性可能需要输入列的映射。 否则，可能会发生错误。 例如，如果目标列不允许出现空值，则必须将输入列映射到该目标列。 另外，映射的列的数据类型必须是兼容的。 例如，如果 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 访问接口不支持将数据类型为字符串的输入列映射到数据类型为数值的目标列，则不能进行此映射。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持将文本插入到数据类型设置为图像的列中。 有关值数据类型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的详细信息，请参阅 [数据类型 (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql)。  
+>  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持将文本插入到数据类型设置为图像的列中。 有关[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型的详细信息，请参阅[数据类型 &#40;transact-sql&#41;](/sql/t-sql/data-types/data-types-transact-sql)。  
   
 > [!NOTE]  
->  ADO NET 目标不支持将数据类型设置为 DT_DBTIME 的输入列映射到数据类型设置为 datetime 的数据库列。 有关 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型的详细信息，请参阅 [Integration Services 数据类型](integration-services-data-types.md)。  
+>  ADO NET 目标不支持将数据类型设置为 DT_DBTIME 的输入列映射到数据类型设置为 datetime 的数据库列。 有关[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]数据类型的详细信息，请参阅[Integration Services 数据类型](integration-services-data-types.md)。  
   
  ADO NET 目标具有一个常规输入和一个错误输出。  
   
@@ -47,11 +48,11 @@ ms.locfileid: "70153974"
   
  有关可在 **“ADO NET 目标编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
   
--   [ADO NET 目标编辑器（“连接管理器”页）](../ado-net-destination-editor-connection-manager-page.md)  
+-   [ADO NET 目标编辑器 &#40;连接管理器页&#41;](../ado-net-destination-editor-connection-manager-page.md)  
   
--   [ADO NET 目标编辑器（“映射”页）](../ado-net-destination-editor-mappings-page.md)  
+-   [ADO NET 目标编辑器 &#40;映射 "页面&#41;](../ado-net-destination-editor-mappings-page.md)  
   
--   [ADO NET 目标编辑器（“错误输出”页）](../ado-net-destination-editor-error-output-page.md)  
+-   [ADO NET 目标编辑器 &#40;错误输出页&#41;](../ado-net-destination-editor-error-output-page.md)  
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 1a0d50e485f0e8f48de11b2e5a3c27c9f9be047e
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401235"
 ---
 # <a name="create-an-aps-domain-administrator"></a>创建 AP 域管理员
@@ -26,7 +26,7 @@ ms.locfileid: "74401235"
   
 1.  使用现有的设备域管理员帐户登录到活动 AD 节点 **（_设备\_域_-AD01**或**_设备\_域_-AD02**）。  
   
-2.  在 “开始” 菜单上，单击 **“运行”**。 在 "**打开**" 框中，键入**dsa.msc**。 单击“确定”****。  
+2.  在 “开始” 菜单上，单击 **“运行”** 。 在 "**打开**" 框中，键入**dsa.msc**。 单击“确定”。   
   
 3.  在**Active Directory 用户和计算机**"程序中，右键单击 **" 用户**"，指向"**新建**"，然后单击"**用户**"。  
   
@@ -43,9 +43,9 @@ ms.locfileid: "74401235"
   
 6.  在 **“隶属于”** 选项卡上，单击 **“添加”**。  
   
-    键入**Domain Admins;PdwControlNodeAccess** ，然后单击 "**检查名称**"。 单击“确定”****。  
+    键入**Domain Admins;PdwControlNodeAccess** ，然后单击 "**检查名称**"。 单击“确定”。   
   
-    这会将新用户添加到**Domain Admins**组和**PdwControlNodeAccess**组。 单击“确定”****。  
+    这会将新用户添加到**Domain Admins**组和**PdwControlNodeAccess**组。 单击“确定”。   
   
 ## <a name="see-also"></a>另请参阅  
 [启动 Configuration Manager &#40;Analytics 平台系统&#41;](launch-the-configuration-manager.md)  

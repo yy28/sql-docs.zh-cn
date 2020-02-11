@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 206ba778a5c131ac4f9260ed37de63b29de86820
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63025684"
 ---
 # <a name="save-trace-results-to-a-file-sql-server-profiler"></a>将跟踪结果保存到文件 (SQL Server Profiler)
@@ -54,7 +54,7 @@ ms.locfileid: "63025684"
         > [!NOTE]  
         >  清除“服务器处理跟踪数据”  后，如果记录事件会显著降低性能，则服务器不会记录事件。  
   
-## <a name="see-also"></a>请参阅  
- [SQL Server 事件探查器](sql-server-profiler.md)  
+## <a name="see-also"></a>另请参阅  
+ [SQL Server Profiler](sql-server-profiler.md)  
   
   

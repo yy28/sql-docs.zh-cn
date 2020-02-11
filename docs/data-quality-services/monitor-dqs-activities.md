@@ -15,10 +15,10 @@ ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: d9926eb251d109eb8ed9529a4ae739e8a1915b07
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245457"
 ---
 # <a name="monitor-dqs-activities"></a>监视 DQS 活动
@@ -27,14 +27,14 @@ ms.locfileid: "75245457"
 
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中集中监视以下活动：知识发现、域管理、匹配策略、数据清理、数据匹配和 SSIS 清理。  
   
-##  <a name="BeforeYouBegin"></a>开始之前  
+##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="LimitationsRestrictions"></a>限制和限制  
+###  <a name="LimitationsRestrictions"></a> 限制和局限  
  只有对 DQS_Main 数据库具有 dqs_administrator 角色的用户才能终止某一活动或者停止活动中的某一进程。  
   
-###  <a name="Security"></a>安全  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>访问  
+####  <a name="Permissions"></a> 权限  
   
 -   您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_kb_operator 角色才能查看 DQS 活动。  
   
@@ -149,7 +149,7 @@ ms.locfileid: "75245457"
   
 2.  单击 **“终止所选活动”** 图标。 或者，在活动网格中右键单击该活动，然后在快捷菜单中单击 **“终止活动”** 。  
   
-3.  将显示一条用于确认您的操作的消息。 单击“是”****。  
+3.  将显示一条用于确认您的操作的消息。 单击 **“是”** 。  
   
 ##  <a name="Stop"></a>停止 DQS 活动中的进程  
  DQS 管理员（dqs_administrator 角色）可以停止并非 **“SSIS 清理”** 类型的活动中正在运行（处于活动状态）的进程。 在活动监视屏幕中停止某一进程等效于在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]的功能区域中停止相应的活动中的进程。 例如，停止清理活动内的计算机辅助清理进程，或停止匹配活动内的匹配进程。 无法从活动监视屏幕重新启动已停止的进程。 您必须从 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]中的相应功能区域重新启动该进程。 在这种情况下，将向 "**活动步骤**" 选项卡中的 "进程" 网格添加一个额外的行。停止的进程状态将继续显示 "**已停止**"。 停止进程：  
@@ -158,6 +158,6 @@ ms.locfileid: "75245457"
   
 2.  单击 **“停止所选进程”** 图标。 或者，在活动详细信息网格中右键单击该进程，然后在快捷菜单中单击 **“停止进程”** 。  
   
-3.  将显示一条用于确认您的操作的消息。 单击“是”****。  
+3.  将显示一条用于确认您的操作的消息。 单击 **“是”** 。  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 示例：使用.NET Framework 使用 WMI 事件提供程序 |Microsoft Docs
+title: 示例：将 WMI 事件提供程序用于 .NET Framework |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 4e336eb9c89c05656d75cc13cec4d46ddde68d28
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211597"
 ---
 # <a name="sample-using-the-wmi-event-provider-with-the-net-framework"></a>示例：与 .NET Framework 结合使用 WMI 事件提供程序
@@ -75,7 +75,7 @@ class SQLWEPExample
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [WMI Provider for Server Events 的概念](wmi-provider-for-server-events-concepts.md)  
   
   

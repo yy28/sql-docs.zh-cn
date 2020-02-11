@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_sql_text (Transact-SQL) | Microsoft Docs
+title: sys. dm_exec_sql_text （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4ff8d99bd31e2638aa63393fb5ba052f442bf75f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67936894"
 ---
-# <a name="sysdmexecsqltext-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
+# <a name="sysdm_exec_sql_text-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回文本的 SQL 批处理的标识由指定*sql_handle*。 此表值函数将替换系统函数**fn_get_sql**。  
+  返回由指定*sql_handle*标识的 SQL 批处理的文本。 该表值函数将替换系统函数 **fn_get_sql**。  
   
  
 ## <a name="syntax"></a>语法  
@@ -41,9 +41,9 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
   
 ## <a name="arguments"></a>参数  
 *sql_handle*  
-是唯一标识已执行或当前正在执行的批处理的令牌。 *sql_handle*是**varbinary(64)** 。 
+是一个标记，用于唯一标识已执行或当前正在执行的批处理。 *sql_handle*为**varbinary （64）**。 
 
-*Sql_handle*可以从以下动态管理对象中获得：  
+可以从以下动态管理对象中获取*sql_handle* ：  
   
 -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
   
@@ -58,49 +58,49 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 -   [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)  
   
 *plan_handle*  
-是一个标记，用于唯一标识已执行的批次查询执行计划，其计划驻留在计划缓存中，或当前正在执行。 *plan_handle*是**varbinary(64)** 。   
+是一个标记，用于唯一标识已执行并且其计划驻留在计划缓存中或当前正在执行的批处理的查询执行计划。 *plan_handle*为**varbinary （64）**。   
 
-*Plan_handle*可以从以下动态管理对象中获得：    
+可以从以下动态管理对象中获取*plan_handle* ：    
   
--   [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
+-   [sys.dm_exec_cached_plans (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
 -   [sys.dm_exec_query_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
   
--   [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+-   [sys. dm_exec_requests &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
 
--   [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+-   [sys. dm_exec_procedure_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
 
--   [sys.dm_exec_trigger_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)   
+-   [sys. dm_exec_trigger_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)   
   
 ## <a name="table-returned"></a>返回的表  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**dbid**|**smallint**|数据库的 ID。<br /><br /> 对于临时和预定义 SQL 语句，指编译这些语句时所在的数据库的 ID。|  
 |**objectid**|**int**|对象的 ID。<br /><br /> 对于临时和预定义 SQL 语句为 NULL。|  
-|**number**|**smallint**|对于带编号的存储过程，此列返回存储过程的编号。 有关详细信息，请参阅[sys.numbered_procedures &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md)。<br /><br /> 对于临时和预定义 SQL 语句为 NULL。|  
-|**加密**|**bit**|1 = SQL 文本已加密。<br /><br /> 0 = SQL 文本未加密。|  
-|**text**|**nvarchar(max** **)**|SQL 查询的文本。<br /><br /> 对于已加密对象为 NULL。|  
+|**数字**|**smallint**|对于带编号的存储过程，此列返回存储过程的编号。 有关详细信息，请参阅[sys.databases&#41;numbered_procedures &#40;](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md)。<br /><br /> 对于临时和预定义 SQL 语句为 NULL。|  
+|**过**|**bit**|1 = SQL 文本已加密。<br /><br /> 0 = SQL 文本未加密。|  
+|**text**|**nvarchar （max** **）**|SQL 查询的文本。<br /><br /> 对于已加密对象为 NULL。|  
   
 ## <a name="permissions"></a>权限  
  要求具有对服务器的 `VIEW SERVER STATE` 权限。  
   
 ## <a name="remarks"></a>备注  
-对于即席查询，SQL 句柄是基于提交到服务器的 SQL 文本的哈希值，并可以来自任何数据库。 
+对于即席查询，SQL 句柄是基于提交给服务器的 SQL 文本的哈希值，并且可以来自任何数据库。 
 
 对于诸如存储过程、触发器或函数之类的数据库对象，SQL 句柄派生自数据库 ID、对象 ID 和对象编号。 
 
-计划句柄是派生自整个批处理的已编译计划的哈希值。 
+计划句柄是派生自整个批处理的已编译计划的一个哈希值。 
 
 > [!NOTE]
-> **dbid**不能通过确定*sql_handle*即席查询。 若要确定**dbid**对于即席查询，使用*plan_handle*相反。
+> 无法根据即席查询*sql_handle*确定**dbid** 。 若要确定适用于即席查询的**dbid** ，请改用*plan_handle* 。
   
 ## <a name="examples"></a>示例 
 
-### <a name="a-conceptual-example"></a>A. 概念的示例
-以下是一个基本示例来说明传递**sql_handle**直接或通过**CROSS APPLY**。
+### <a name="a-conceptual-example"></a>A. 概念示例
+下面是一个基本示例，演示如何直接或通过**交叉应用**传递**sql_handle** 。
   1.  创建活动。  
-在新查询窗口中执行以下 T-SQL [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。   
+在的新查询窗口中执行以下 T-sql [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。   
       ```sql
       -- Identify current spid (session_id)
       SELECT @@SPID;
@@ -110,8 +110,8 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
         WAITFOR DELAY '00:02:00';
       ```
       
-    2.  使用**CROSS APPLY**。  
-    从 sql_handle **sys.dm_exec_requests**将传递给**sys.dm_exec_sql_text**使用**CROSS APPLY**。 打开新查询窗口并传递步骤 1 中确定的 spid。 在此示例中的 spid 恰好是`59`。
+    2.  使用**交叉应用**。  
+    将使用**跨应用**将**dm_exec_requests**中的 sql_handle 传递给**dm_exec_sql_text sys.databases** 。 打开一个新的查询窗口，并传递步骤1中标识的 spid。 在此示例中，spid 的行为`59`是。
 
         ```sql
         SELECT t.*
@@ -120,8 +120,8 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
         WHERE session_id = 59 -- modify this value with your actual spid
          ```      
  
-    2.  传递**sql_handle**直接。  
-获取**sql_handle**从**sys.dm_exec_requests**。 然后，将传递**sql_handle**直接**sys.dm_exec_sql_text**。 打开新查询窗口并将传递到步骤 1 中确定的 spid **sys.dm_exec_requests**。 在此示例中的 spid 恰好是`59`。 然后返回值传递**sql_handle**的参数作为**sys.dm_exec_sql_text**。
+    2.  直接传递**sql_handle** 。  
+从**dm_exec_requests sys.databases**获取**sql_handle** 。 然后，将**sql_handle**直接传递到**sys.databases。 dm_exec_sql_text**。 打开一个新的查询窗口，并将步骤1中标识的 spid 传递到**sys.databases. dm_exec_requests**。 在此示例中，spid 的行为`59`是。 然后将返回的**sql_handle**作为参数传递给**sys.databases。 dm_exec_sql_text**。
 
         ```sql
         -- acquire sql_handle
@@ -132,7 +132,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
          ```      
     
   
-### <a name="b-obtain-information-about-the-top-five-queries-by-average-cpu-time"></a>B. 获取前五个查询有关按平均 CPU 时间的信息  
+### <a name="b-obtain-information-about-the-top-five-queries-by-average-cpu-time"></a>B. 按平均 CPU 时间获取有关前五个查询的信息  
  以下示例返回前五个查询的 SQL 语句文本和平均 CPU 时间。  
   
 ```sql  
@@ -178,13 +178,13 @@ WHERE s2.objectid is null
 ORDER BY s1.sql_handle, s1.statement_start_offset, s1.statement_end_offset;  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [动态管理视图和函数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [与执行相关的动态管理视图和函数&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
- [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
- [sys.dm_exec_cursors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)   
- [sys.dm_exec_xml_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)   
- [sys.dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
- [使用 APPLY](../../t-sql/queries/from-transact-sql.md#using-apply)   [sys.dm_exec_text_query_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)  
+ [与执行相关的动态管理视图和函数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [sys. dm_exec_query_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
+ [sys. dm_exec_requests &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+ [sys. dm_exec_cursors &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)   
+ [sys. dm_exec_xml_handles &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)   
+ [sys. dm_exec_query_memory_grants &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
+ [使用 APPLY](../../t-sql/queries/from-transact-sql.md#using-apply)   [dm_exec_text_query_plan &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)  
 

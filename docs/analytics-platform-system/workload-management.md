@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: d14714cb23a9f6b0d6cc63ddca5049cb6741017c
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399447"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>分析平台系统中的工作负荷管理
@@ -131,7 +131,7 @@ ALTER SERVER ROLE largerc ADD MEMBER Anna;
   
 -   UPDATE  
   
--   删除  
+-   DELETE  
   
 -   还原到具有更多计算节点的设备时还原数据库。  
   
@@ -140,7 +140,7 @@ ALTER SERVER ROLE largerc ADD MEMBER Anna;
 ## <a name="Limits"></a>限制和限制  
 资源类控制内存和并发分配。  它们不管理输入/输出操作。  
   
-## <a name="Metadata"></a>新元  
+## <a name="Metadata"></a>元数据  
 Dmv，其中包含有关资源类和资源类成员的信息。  
   
 -   [sys.server_role_members](../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)  
@@ -149,9 +149,9 @@ Dmv，其中包含有关资源类和资源类成员的信息。
   
 Dmv，其中包含请求的状态及其所需资源的信息：  
   
--   [sys. dm_pdw_lock_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-lock-waits-transact-sql.md)  
+-   [sys.dm_pdw_lock_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-lock-waits-transact-sql.md)  
   
--   [sys. dm_pdw_resource_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md)  
+-   [sys.dm_pdw_resource_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md)  
   
 从计算节点上 SQL Server Dmv 公开的相关系统视图。 请参阅 MSDN 上的[SQL Server 动态管理视图](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)以获取这些 dmv 的链接。  
   
@@ -177,7 +177,7 @@ Dmv，其中包含请求的状态及其所需资源的信息：
   
 -   sys.dm_pdw_nodes_exec_cached_plans  
   
-## <a name="RelatedTasks"></a>Related Tasks  
+## <a name="RelatedTasks"></a>相关任务  
 [工作负荷管理任务](workload-management-tasks.md)  
   
 <!-- MISSING LINKS

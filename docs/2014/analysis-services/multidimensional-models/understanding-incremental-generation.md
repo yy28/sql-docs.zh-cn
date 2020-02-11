@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ace9bbbbbc023d14dbce91a176f7d05ad19d699b
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811057"
 ---
 # <a name="understanding-incremental-generation"></a>了解增量生成
@@ -62,7 +62,7 @@ ms.locfileid: "68811057"
  添加新对象，如维度、多维数据集或属性。  
  架构生成向导会添加新对象映射到的基础对象。  
   
- 如果架构生成向导因主题区域数据库中存在用户对象而无法进行所需的更改（因为数据库引擎返回错误），则架构生成向导会失败并显示由数据库引擎返回的错误。 例如, 如果您在向导生成表后对表创建 primary key 约束或非聚集索引, 则架构生成向导不会删除该表, 因为它未创建约束或索引。  
+ 如果架构生成向导因主题区域数据库中存在用户对象而无法进行所需的更改（因为数据库引擎返回错误），则架构生成向导会失败并显示由数据库引擎返回的错误。 例如，如果您在向导生成表后对表创建 primary key 约束或非聚集索引，则架构生成向导不会删除该表，因为它未创建约束或索引。  
   
 ## <a name="supporting-schema-changes"></a>支持架构更改  
  当您更改主题区域数据库或相关数据源视图中表或列的属性时，架构生成向导将按照下表所述处理更改。  
@@ -83,8 +83,8 @@ ms.locfileid: "68811057"
   
  另一方面，如果您将数据源连接字符串更改为先前生成的其他数据库，则不会生成任何错误。 将会使用新的数据库，并且不会对先前数据库进行任何更改。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [管理对数据源视图和数据源所做的更改](manage-changes-to-data-source-views-and-data-sources.md)   
- [架构生成向导 (Analysis Services)](schema-generation-wizard-analysis-services.md)  
+ [架构生成向导 &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
   
   

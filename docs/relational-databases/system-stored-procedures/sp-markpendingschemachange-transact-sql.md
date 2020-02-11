@@ -16,10 +16,10 @@ ms.assetid: 01100309-7bef-4154-85bf-f18489577e37
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 56ed176d8b4b29e1ed4caafabd0893b7a33b1293
-ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73962395"
 ---
 # <a name="sp_markpendingschemachange-transact-sql"></a>sp_markpendingschemachange (Transact-SQL)
@@ -40,24 +40,24 @@ sp_markpendingschemachange [@publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publication = ] 'publication'` 为发布的名称。 *发布*为**sysname**，无默认值。  
+`[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，无默认值。  
   
-`[ @schemaversion = ] schemaversion` 标识挂起的架构更改。 *schemaversion*为**int**，默认值为**0**。 使用[sp_enumeratependingschemachanges &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md)列出发布的挂起的架构更改。  
+`[ @schemaversion = ] schemaversion`标识挂起的架构更改。 *schemaversion*为**int**，默认值为**0**。 使用[sp_enumeratependingschemachanges &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md)列出发布的挂起的架构更改。  
   
-`[ @status = ] 'status'` 是否将跳过挂起的架构更改。 *状态*为**nvarchar （10）** ，默认值为 "**活动**"。 如果**跳过***状态*值，则不会复制所选的架构更改。  
+`[ @status = ] 'status'`是否将跳过挂起的架构更改。 *状态*为**nvarchar （10）** ，默认值为 "**活动**"。 如果**跳过***状态*值，则不会复制所选的架构更改。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **sp_markpendingschemachange**用于合并复制。  
   
  **sp_markpendingschemachange**是一种用于合并复制的可支持性的存储过程，只应在其他纠正措施（如重新初始化）无法纠正这种情况或在性能方面过于昂贵时使用。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_markpendingschemachange**。  
   
 ## <a name="see-also"></a>另请参阅  
- [sysmergeschemachange &#40;transact-sql&#41;](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  
+ [sysmergeschemachange &#40;Transact-sql&#41;](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  
   
   

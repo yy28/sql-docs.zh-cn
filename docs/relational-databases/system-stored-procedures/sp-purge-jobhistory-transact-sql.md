@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ad5e7a1d03dde408da52ca2b5ebe6b40f10c06c9
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72313757"
 ---
 # <a name="sp_purge_jobhistory-transact-sql"></a>sp_purge_jobhistory (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "72313757"
 
   删除作业的历史记录。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,25 +43,25 @@ sp_purge_jobhistory
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @job_name = ] 'job_name'` 要删除其历史记录的作业的名称。 *job_name*的默认值为**sysname**，默认值为 NULL。 必须指定*job_id*或*job_name* ，但不能同时指定两者。  
+`[ @job_name = ] 'job_name'`要删除其历史记录的作业的名称。 *job_name*的默认值为**sysname**，默认值为 NULL。 必须指定*job_id*或*job_name* ，但不能同时指定两者。  
   
 > [!NOTE]  
 >  **Sysadmin**固定服务器角色的成员或**SQLAgentOperatorRole**固定数据库角色的成员可以执行**sp_purge_jobhistory** ，而无需指定*job_name*或*job_id*。 如果**sysadmin**用户未指定这些参数，则所有本地作业和多服务器作业的作业历史记录在*oldest_date*指定的时间内被删除。 当**SQLAgentOperatorRole**用户未指定这些参数时，所有本地作业的作业历史记录将在*oldest_date*指定的时间内删除。  
   
-`[ @job_id = ] job_id` 要删除的记录的作业标识号。 *job_id*的值为**uniqueidentifier**，默认值为 NULL。 必须指定*job_id*或*job_name* ，但不能同时指定两者。 请参阅 **\@job_name**说明中的说明，了解有关**sysadmin**或**SQLAgentOperatorRole**用户如何使用此参数的信息。  
+`[ @job_id = ] job_id`要删除的记录的作业标识号。 *job_id*的值为**uniqueidentifier**，默认值为 NULL。 必须指定*job_id*或*job_name* ，但不能同时指定两者。 请参阅** \@job_name**说明中的说明，了解**sysadmin**或**SQLAgentOperatorRole**用户可以使用此参数的相关信息。  
   
-`[ @oldest_date = ] oldest_date` 要在历史记录中保留的最早记录。 *oldest_date*为**datetime**，默认值为 NULL。 指定*oldest_date*时， **sp_purge_jobhistory**只删除早于指定值的记录。  
+`[ @oldest_date = ] oldest_date`要保留在历史记录中的最早记录。 *oldest_date*为**datetime**，默认值为 NULL。 指定*oldest_date*时， **sp_purge_jobhistory**只删除早于指定值的记录。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- InclusionThresholdSetting  
+ 无  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果**sp_purge_jobhistory**成功完成，则返回一条消息。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  默认情况下，只有**sysadmin**固定服务器角色的成员或**SQLAgentOperatorRole**固定数据库角色的成员才可以执行此存储过程。 **Sysadmin**的成员可以清除所有本地和多服务器作业的作业历史记录。 **SQLAgentOperatorRole**的成员只能清除所有本地作业的作业历史记录。  
   
  其他用户（包括**SQLAgentUserRole**和**SQLAgentReaderRole**的成员）必须显式授予对**sp_purge_jobhistory**的 EXECUTE 权限。 当被授予对此存储过程的 EXECUTE 权限之后，这些成员只可以清除其所拥有作业的历史记录。  
@@ -98,8 +98,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_help_jobhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql.md)   
+ [sp_help_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_help_jobhistory &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [GRANT 对象权限 (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
   

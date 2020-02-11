@@ -30,10 +30,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 02872a037e60fa3af58a70d3599b03c61d0cfb5e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257342"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>使用 sql:relationship 指定关系 (SQLXML 4.0)
@@ -52,10 +52,10 @@ ms.locfileid: "75257342"
   
  为了提供表名和必需的联接信息，以下属性在**sql： relationship**批注上指定。 这些属性仅适用于** \<sql： relationship>** 元素：  
   
- **路径名**  
+ **名称**  
  指定关系的唯一名称。  
   
- **上层**  
+ **Parent**  
  指定父关系（表）。 这是一个可选属性；如果未指定此属性，将从文档的子层次结构中的信息获得父表名称。 如果架构指定两个父子层次结构，它们使用相同** \<的 sql： relationship>** 但不同的父元素，则不在** \<sql： relationship>** 中指定父属性。 此信息将从架构的层次结构中获得。  
   
  **parent-key**  

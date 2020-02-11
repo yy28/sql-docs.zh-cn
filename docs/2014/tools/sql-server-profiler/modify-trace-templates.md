@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ebe8924f46de15a3a34c0f49304c87a904919bdb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035034"
 ---
 # <a name="modify-trace-templates"></a>修改跟踪模板
@@ -40,15 +40,15 @@ ms.locfileid: "63035034"
   
  [使用 SQL Server Profiler](../../database-engine/modify-a-trace-template-sql-server-profiler.md)  
   
- [使用 Transact-SQL](../../relational-databases/sql-trace/modify-an-existing-trace-transact-sql.md)  
+ [使用 Transact-sql](../../relational-databases/sql-trace/modify-an-existing-trace-transact-sql.md)  
   
  **在跟踪模板或跟踪文件中添加或删除事件**  
   
  [使用 SQL Server Profiler](specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
   
- [使用 Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
+ [使用 Transact-sql](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [启动跟踪](start-a-trace.md)  
   
   

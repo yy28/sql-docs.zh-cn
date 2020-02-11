@@ -1,5 +1,5 @@
 ---
-title: SQLSetStmtAttr | Microsoft Docs
+title: SQLSetStmtAttr |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +15,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fc7744d57ce2bdbad4f0000252999582a8dc37c2
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73785525"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序不支持混合（键集/动态）游标模型。 如果将该值设置为非 0 值，尝试使用 SQL_ATTR_KEYSET_SIZE 设置键集大小将失败。  
   
  应用程序对所有语句设置 SQL_ATTR_ROW_ARRAY_SIZE，以声明**SQLFetch**或[SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)函数调用返回的行数。 在指示服务器游标的语句中，驱动程序使用 SQL_ATTR_ROW_ARRAY_SIZE 确定服务器为满足游标的提取请求而生成的行块的大小。 在动态游标的块大小内，如果事务隔离级别足以确保对已提交事务的可重复读取，行的成员身份和顺序则是固定的。 游标在该值指示的块之外完全处于动态状态。 服务器游标块大小完全处于动态状态，并且可以在提取过程中的任一点更改。  
@@ -39,20 +40,21 @@ ms.locfileid: "73785525"
   
  有关详细信息，请参阅[预定义语句的表值参数元数据](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameter-metadata-for-prepared-statements.md)。  
   
- 有关表值参数的详细信息，请参阅[表值参数&#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
+ 有关表值参数的详细信息，请参阅[ODBC&#41;&#40;表值参数](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
   
 ## <a name="sqlsetstmtattr-support-for-sparse-columns"></a>SQLSetStmtAttr 对稀疏列的支持  
- SQLSetStmtAttr 可用于设置 SQL_SOPT_SS_NAME_SCOPE。 有关详细信息，请参阅本主题后面的 SQL_SOPT_SS_NAME_SCOPE 部分。有关稀疏列的详细信息，请参阅[稀疏列&#40;支持&#41;ODBC](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)。  
+ SQLSetStmtAttr 可用于设置 SQL_SOPT_SS_NAME_SCOPE。 有关详细信息，请参阅本主题后面的 SQL_SOPT_SS_NAME_SCOPE 部分。有关稀疏列的详细信息，请参阅[稀疏列支持 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)。  
   
 ## <a name="statement-attributes"></a>语句属性  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序还支持以下特定于驱动程序的语句属性。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序还支持以下特定于驱动程序的语句属性。  
   
 ### <a name="sql_sopt_ss_cursor_options"></a>SQL_SOPT_SS_CURSOR_OPTIONS  
  SQL_SOPT_SS_CURSOR 属性指定驱动程序是否将在游标上使用特定于驱动程序的性能选项。 设置这些选项时，不允许[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) 。 默认设置为 SQL_CO_OFF。 *将 valueptr*值的类型为 SQLLEN。  
   
-|*将 valueptr*值|描述|  
+|*将 valueptr*值|说明|  
 |----------------------|-----------------|  
-|SQL_CO_OFF|默认。 禁用快速只进、只读游标和自动提取，启用只进只读游标上的**SQLGetData** 。 将 SQL_SOPT_SS_CURSOR_OPTIONS 设置为 SQL_CO_OFF 时，游标类型将不会发生更改。 也就是说，快速只进游标将保持为快速只进游标。 若要更改游标类型，应用程序现在必须使用**SQLSetStmtAttr**/SQL_ATTR_CURSOR_TYPE 设置不同的游标类型。|  
+|SQL_CO_OFF|默认值。 禁用快速只进、只读游标和自动提取，启用只进只读游标上的**SQLGetData** 。 将 SQL_SOPT_SS_CURSOR_OPTIONS 设置为 SQL_CO_OFF 时，游标类型将不会发生更改。 也就是说，快速只进游标将保持为快速只进游标。 若要更改游标类型，应用程序现在必须使用**SQLSetStmtAttr**/SQL_ATTR_CURSOR_TYPE 设置不同的游标类型。|  
 |SQL_CO_FFO|启用快速只进只读游标，禁用只进、只读游标上的**SQLGetData** 。|  
 |SQL_CO_AF|针对任意游标类型启用自动提取选项。 如果为语句句柄设置了此选项，则**SQLExecute**或**SQLExecDirect**将生成隐式**SQLFetchScroll** （SQL_FIRST）。 此时将打开游标，并在与服务器的单个往返中返回第一批行。|  
 |SQL_CO_FFO_AF|使用自动提取选项启用快速只进游标。 它与同时指定 SQL_CO_AF 和 SQL_CO_FFO 的效果相同。|  
@@ -64,9 +66,9 @@ ms.locfileid: "73785525"
 ### <a name="sql_sopt_ss_defer_prepare"></a>SQL_SOPT_SS_DEFER_PREPARE  
  SQL_SOPT_SS_DEFER_PREPARE 特性确定是立即准备还是推迟语句，直到执行**SQLExecute**、 [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md)或[SQLDescribeParam](../../relational-databases/native-client-odbc-api/sqldescribeparam.md) 。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 和早期版本中，将忽略此属性（没有延迟的准备）。 *将 valueptr*值的类型为 SQLLEN。  
   
-|*将 valueptr*值|描述|  
+|*将 valueptr*值|说明|  
 |----------------------|-----------------|  
-|SQL_DP_ON|默认。 调用[SQLPrepare 函数](https://go.microsoft.com/fwlink/?LinkId=59360)后，将延迟语句准备，直到**调用 SQLExecute**或执行元属性操作（**SQLDescribeCol**或**SQLDescribeParam**）。|  
+|SQL_DP_ON|默认值。 调用[SQLPrepare 函数](https://go.microsoft.com/fwlink/?LinkId=59360)后，将延迟语句准备，直到**调用 SQLExecute**或执行元属性操作（**SQLDescribeCol**或**SQLDescribeParam**）。|  
 |SQL_DP_OFF|语句在执行**SQLPrepare**后立即准备就绪。|  
   
 ### <a name="sql_sopt_ss_regionalize"></a>SQL_SOPT_SS_REGIONALIZE  
@@ -74,9 +76,9 @@ ms.locfileid: "73785525"
   
  *将 valueptr*值的类型为 SQLLEN。  
   
-|*将 valueptr*值|描述|  
+|*将 valueptr*值|说明|  
 |----------------------|-----------------|  
-|SQL_RE_OFF|默认。 驱动程序不能将日期、时间和货币数据转换为使用客户端区域设置的字符串。|  
+|SQL_RE_OFF|默认值。 驱动程序不能将日期、时间和货币数据转换为使用客户端区域设置的字符串。|  
 |SQL_RE_ON|驱动程序在将日期、时间和货币数据转换为字符串数据时使用客户端区域设置。|  
   
  区域转换设置应用于货币、数字、日期和时间数据类型。 转换设置仅适用于将货币、数字、日期或时间值转换为字符串的输出转换。  
@@ -89,17 +91,17 @@ ms.locfileid: "73785525"
 ### <a name="sql_sopt_ss_textptr_logging"></a>SQL_SOPT_SS_TEXTPTR_LOGGING  
  SQL_SOPT_SS_TEXTPTR_LOGGING 属性用于切换对包含**文本**或**图像**数据的列进行的操作的日志记录。 *将 valueptr*值的类型为 SQLLEN。  
   
-|*将 valueptr*值|描述|  
+|*将 valueptr*值|说明|  
 |----------------------|-----------------|  
 |SQL_TL_OFF|禁用对**文本**和**图像**数据执行的操作的日志记录。|  
-|SQL_TL_ON|默认。 启用对**文本**和**图像**数据执行的操作的日志记录。|  
+|SQL_TL_ON|默认值。 启用对**文本**和**图像**数据执行的操作的日志记录。|  
   
 ### <a name="sql_sopt_ss_hidden_columns"></a>SQL_SOPT_SS_HIDDEN_COLUMNS  
  SQL_SOPT_SS_HIDDEN_COLUMNS 属性在结果集中公开隐含在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT FOR BROWSE 语句中的列。 默认情况下，驱动程序不公开这些列。 *将 valueptr*值的类型为 SQLLEN。  
   
-|*将 valueptr*值|描述|  
+|*将 valueptr*值|说明|  
 |----------------------|-----------------|  
-|SQL_HC_OFF|默认。 结果集中不显示 FOR BROWSE 列。|  
+|SQL_HC_OFF|默认值。 结果集中不显示 FOR BROWSE 列。|  
 |SQL_HC_ON|公开 FOR BROWSE 列。|  
   
 ### <a name="sql_sopt_ss_querynotification_msgtext"></a>SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT  
@@ -131,9 +133,9 @@ ms.locfileid: "73785525"
   
  SQL_SOPT_SS_NAME_SCOPE 的类型为 SQLULEN。  
   
-|*将 valueptr*值|描述|  
+|*将 valueptr*值|说明|  
 |----------------------|-----------------|  
-|SQL_SS_NAME_SCOPE_TABLE|默认。<br /><br /> 当使用表值参数时，指示应返回实际表的元数据。<br /><br /> 当使用稀疏列功能时，SQLColumns 将仅返回不是稀疏**column_set**的成员的列。|  
+|SQL_SS_NAME_SCOPE_TABLE|默认值。<br /><br /> 当使用表值参数时，指示应返回实际表的元数据。<br /><br /> 当使用稀疏列功能时，SQLColumns 将仅返回不是稀疏**column_set**的成员的列。|  
 |SQL_SS_NAME_SCOPE_TABLE_TYPE|指示应用程序需要表类型的元数据，而不是实际表（目录函数应返回表类型的元数据）。 然后，应用程序将表值参数的 TYPE_NAME 作为*TableName*参数传递。|  
 |SQL_SS_NAME_SCOPE_EXTENDED|当使用稀疏列功能时，SQLColumns 将返回所有列，而不管**column_set**成员身份如何。|  
 |SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET|当使用稀疏列功能时，SQLColumns 仅返回作为稀疏**column_set**的成员的列。|  

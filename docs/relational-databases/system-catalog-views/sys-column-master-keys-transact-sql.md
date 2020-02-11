@@ -26,10 +26,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b7c219b2eb56fc299857a5a189ddd9db041f2f47
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73594525"
 ---
 # <a name="syscolumn_master_keys-transact-sql"></a>sys.column_master_keys (Transact-SQL)
@@ -37,30 +37,30 @@ ms.locfileid: "73594525"
 
   为使用[CREATE MASTER key](../../t-sql/statements/create-column-master-key-transact-sql.md)语句添加的每个数据库主密钥返回一行。 每一行代表一个列主密钥（CMK）。  
     
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**名称**|**sysname**|CMK 的名称。|  
+|**路径名**|**sysname**|CMK 的名称。|  
 |**column_master_key_id**|**int**|列主密钥的 ID。|  
 |**create_date**|**datetime**|列主密钥的创建日期。|  
 |**modify_date**|**datetime**|列主密钥的上次修改日期。|  
-|key_store_provider_name|**sysname**|包含 CMK 的列主密钥存储的提供程序的名称。 允许的值为：<br /><br /> MSSQL_CERTIFICATE_STORE-如果列主密钥存储是证书存储区，则为。<br /><br /> 用户定义的值（如果列主密钥存储为自定义类型）。|  
-|**key_path**|**nvarchar(4000)**|密钥的列主密钥存储特定路径。 路径的格式取决于列主密钥存储类型。 例如：<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> 对于自定义列主密钥存储，开发人员负责为自定义列主密钥存储定义密钥路径。|  
+|**key_store_provider_name**|**sysname**|包含 CMK 的列主密钥存储的提供程序的名称。 允许值包括：<br /><br /> MSSQL_CERTIFICATE_STORE-如果列主密钥存储是证书存储区，则为。<br /><br /> 用户定义的值（如果列主密钥存储为自定义类型）。|  
+|**key_path**|**nvarchar(4000)**|密钥的列主密钥存储特定路径。 路径的格式取决于列主密钥存储类型。 示例：<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> 对于自定义列主密钥存储，开发人员负责为自定义列主密钥存储定义密钥路径。|  
 |**allow_enclave_computations**|**bit**|指示列主密钥是否已启用 enclave （如果使用此主密钥加密的列加密密钥可用于服务器端安全 enclaves 内的计算）。 有关详细信息，请参阅[具有安全 enclave 的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。|  
-|signature|**varbinary(max)**|**Key_path**和**allow_enclave_computations**（使用由**key_path**引用的列主密钥生成）的数字签名。|
+|**信号**|**varbinary(max)**|**Key_path**和**allow_enclave_computations**（使用由**key_path**引用的列主密钥生成）的数字签名。|
 
 
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要**VIEW ANY COLUMN MASTER KEY**权限。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [CREATE COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md)   
- [安全性目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;创建列主密钥](../../t-sql/statements/create-column-master-key-transact-sql.md)   
+ [Transact-sql&#41;&#40;安全目录视图](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [sys.column_encryption_key_values (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)  
  [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
- [Always Encrypted 密钥管理概述](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
+ [Always Encrypted 的密钥管理概述](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
  [管理具有安全 enclave 的 Always Encrypted 的密钥](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
  
   

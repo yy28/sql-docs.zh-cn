@@ -21,13 +21,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 304cd31b4d89d56bee5dbc903c784ee4bf7af5fe
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637529"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Microsoft 决策树算法技术参考
+  
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法是一种混合算法，它综合了多种不同的创建树的方法，并支持多种分析任务，包括回归、分类以及关联。 Microsoft 决策树算法支持对离散属性和连续属性进行建模。  
   
  本主题说明此算法的实现，介绍如何针对不同的任务自定义算法行为，并提供指向有关决策树模型查询的其他信息的链接。  
@@ -35,14 +36,14 @@ ms.locfileid: "73637529"
 ## <a name="implementation-of-the-decision-trees-algorithm"></a>决策树算法的实现  
  Microsoft 决策树算法通过获取模型的近似后验分布，将 Bayesian 方法应用于学习因果交互模型。 有关此方法的详细说明，请参阅 Microsoft Research 站点上的文章 [结构和参数学习](https://go.microsoft.com/fwlink/?LinkId=237640&clcid=0x409)。  
   
- 用于评估学习所需的“先验知识” 的信息值的方法基于“可能性均等”假定。 该假定认为数据对区分以不同方式表示同一条件独立断言的网络结构没有帮助。 先假定每个事例都有一个 Bayesian 先验网络和一个网络置信度的度量值。  
+ 用于评估学习所需的“先验知识” ** 的信息值的方法基于“可能性均等” ** 假定。 该假定认为数据对区分以不同方式表示同一条件独立断言的网络结构没有帮助。 先假定每个事例都有一个 Bayesian 先验网络和一个网络置信度的度量值。  
   
- 然后，算法会利用给定的当前定型数据，使用这些先验网络计算网络结构的相对“后验概率” ，并标识出具有最高后验概率的网络结构。  
+ 然后，算法会利用给定的当前定型数据，使用这些先验网络计算网络结构的相对“后验概率” ** ，并标识出具有最高后验概率的网络结构。  
   
  Microsoft 决策树算法使用不同的方法来计算最佳的树。 所使用的方法具体取决于任务，任务可为线性回归、分类或关联分析。 一个模型可包含多个针对不同可预测属性的树。 而且，每个树可包含多个分支，具体取决于数据中包含的属性和值的数量。 特定模型中生成的树的形状和深度取决于所使用的计分方法以及其他参数。 参数更改还会影响节点的拆分位置。  
   
 ### <a name="building-the-tree"></a>生成树  
- 创建可能的输入值集时，Microsoft 决策树算法会执行 *feature selection* 来标识提供大部分信息的属性和值，而不会考虑非常少见的值。 该算法还会通过将值分组到“收集箱”来创建值分组，这样的值分组可作为一个单元进行处理，从而使性能得到优化。  
+ 创建可能的输入值集时，Microsoft 决策树算法会执行 *feature selection* 来标识提供大部分信息的属性和值，而不会考虑非常少见的值。 该算法还会通过将值分组到“收集箱” ** 来创建值分组，这样的值分组可作为一个单元进行处理，从而使性能得到优化。  
   
  树是通过确定输入和目标结果之间的相关性而生成的。 关联完所有属性后，算法会标识出最能完全分隔结果的属性。 最佳分隔点是通过使用计算信息获取分数的公式确定的。 信息获取分数最高的属性将用于将事例分为各个子集；然后，还会利用同一过程，以递归方式分析各子集，直至树无法拆分为止。  
   
@@ -64,7 +65,7 @@ ms.locfileid: "73637529"
   
  所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据挖掘算法都会自动使用功能选择来改善分析效果和减轻处理工作量。 用于功能选择的方法取决于生成模型所用的算法。 控制决策树模型的功能选择的算法参数为 MAXIMUM_INPUT_ATTRIBUTES 和 MAXIMUM_OUTPUT。  
   
-|Algorithm|分析方法|注释|  
+|算法|分析方法|注释|  
 |---------------|------------------------|--------------|  
 |决策树|兴趣性分数<br /><br /> Shannon 平均信息量<br /><br /> Bayesian with K2 Prior<br /><br /> 使用统一先验的 Bayesian Dirichlet（默认）|如果任何列包含非二进制连续值，则兴趣性分数将用于所有列，以确保一致性。 否则，将使用默认方法或指定的方法。|  
 |线性回归|兴趣性分数|线形回归仅使用兴趣性分数，原因是它仅支持连续列。|  
@@ -96,10 +97,11 @@ ms.locfileid: "73637529"
     >  您可以使用  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 中提供的数据浏览工具，在进行数据挖掘之前，先对数据中的值的分布进行可视化处理，并对这些值进行适当地分组。 有关详细信息，请参阅 [数据事件探查任务和查看器](../../integration-services/control-flow/data-profiling-task-and-viewer.md)。 你还可以使用 [Excel 2007 数据挖掘外接程序](https://www.microsoft.com/download/details.aspx?id=8569)，在 Microsoft Excel 中浏览、分组和重新标记数据。  
   
 ## <a name="customizing-the-decision-trees-algorithm"></a>自定义决策树算法  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法支持多个参数，这些参数可影响所生成的挖掘模型的性能和准确性。 您还可以对挖掘模型列或挖掘结构列设置建模标志来控制数据的处理方式。  
+ 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法支持多个参数，这些参数可影响所生成的挖掘模型的性能和准确性。 您还可以对挖掘模型列或挖掘结构列设置建模标志来控制数据的处理方式。  
   
 > [!NOTE]  
->  在所有版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中均提供 Microsoft 决策树算法；但是，用于自定义 Microsoft 决策树算法行为的某些高级参数仅在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的特定版本中提供。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2012 各个版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473)。  
+>  在所有版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中均提供 Microsoft 决策树算法；但是，用于自定义 Microsoft 决策树算法行为的某些高级参数仅在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的特定版本中提供。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2012 各个版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473) 。  
   
 ### <a name="setting-algorithm-parameters"></a>设置算法参数  
  下表介绍了可用于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法的参数。  
@@ -147,9 +149,9 @@ ms.locfileid: "73637529"
  如果数据集非常大，则可能需要增大此值，以避免过度定型。  
   
  *SCORE_METHOD*  
- 确定用于计算拆分分数的方法。 你可使用以下选项：  
+ 确定用于计算拆分分数的方法。 提供了以下选项：  
   
-|ID|NAME|  
+|ID|名称|  
 |--------|----------|  
 |1|Entropy|  
 |3|Bayesian with K2 Prior|  
@@ -160,20 +162,21 @@ ms.locfileid: "73637529"
  有关这些计分方法的说明，请参阅 [Feature Selection](../../sql-server/install/feature-selection.md)。  
   
  *SPLIT_METHOD*  
- 确定用于拆分节点的方法。 你可使用以下选项：  
+ 确定用于拆分节点的方法。 提供了以下选项：  
   
-|ID|NAME|  
+|ID|名称|  
 |--------|----------|  
-|1|**Binary:** 指示无论属性值的实际数量是多少，树都拆分为两个分支。|  
-|2|**Complete:** 指示树可以创建与属性值数目相同的分叉。|  
-|3|**Both:** 指定 Analysis Services 可确定应使用 binary 还是 complete，以获得最佳结果。|  
+|1|**二进制：** 指示无论属性的值的实际数量如何，树都应拆分为两个分支。|  
+|2|**完成：** 指示树可以创建与属性值一样多的拆分。|  
+|3|**两者：** 指定 Analysis Services 可以确定是否应使用二进制或完整拆分来产生最佳结果。|  
   
  默认值为 3。  
   
 ### <a name="modeling-flags"></a>建模标志  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法支持下列建模标志。 创建挖掘结构或挖掘模型时，定义建模标志以指定分析期间如何处理每列中的值。 有关详细信息，请参阅[建模标志（数据挖掘）](modeling-flags-data-mining.md)。  
+ 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法支持下列建模标志。 创建挖掘结构或挖掘模型时，定义建模标志以指定分析期间如何处理每列中的值。 有关详细信息，请参阅[建模标志（数据挖掘）](modeling-flags-data-mining.md)。  
   
-|建模标志|描述|  
+|建模标志|说明|  
 |-------------------|-----------------|  
 |MODEL_EXISTENCE_ONLY|表示列将被视为具有两个可能状态：`Missing` 和 `Existing`。 Null 表示缺失值。<br /><br /> 适用于挖掘模型列。|  
 |NOT NULL|指示该列不能包含 Null。 如果 Analysis Services 在模型定型过程中遇到 Null 值，将会导致错误。<br /><br /> 适用于挖掘结构列。|  
@@ -191,9 +194,10 @@ ms.locfileid: "73637529"
  一个决策树模型必须包含一个键列、若干输入列和至少一个可预测列。  
   
 ### <a name="input-and-predictable-columns"></a>输入列和可预测列  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法支持下表中列出的特定输入列和可预测列。 有关内容类型在用于挖掘模型中时的含义的详细信息，请参阅[内容类型（数据挖掘）](content-types-data-mining.md)。  
+ 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法支持下表中列出的特定输入列和可预测列。 有关内容类型在用于挖掘模型中时的含义的详细信息，请参阅[内容类型（数据挖掘）](content-types-data-mining.md)。  
   
-|Column|内容类型|  
+|列|内容类型|  
 |------------|-------------------|  
 |输入属性|Continuous、Cyclical、Discrete、Discretized、Key、Ordered 和 Table|  
 |可预测属性|Continuous、Cyclical、Discrete、Discretized、Ordered 和 Table|  
@@ -204,6 +208,6 @@ ms.locfileid: "73637529"
 ## <a name="see-also"></a>另请参阅  
  [Microsoft 决策树算法](microsoft-decision-trees-algorithm.md)   
  [决策树模型查询示例](decision-trees-model-query-examples.md)   
- [决策树模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [&#40;Analysis Services 数据挖掘的决策树模型的挖掘模型内容&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

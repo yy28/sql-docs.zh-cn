@@ -15,20 +15,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 026c588f2fc35a6cb256a63046ad91e5d1b5641a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830244"
 ---
 # <a name="select-a-package"></a>选择包
   可以使用 **“选择包”** 对话框，指定消息队列任务可从中接收消息的包。  
   
 ## <a name="static-options"></a>静态选项  
- **Location**  
+ **位置**  
  指定包的位置。 此属性具有下表所列的选项。  
   
-|ReplTest1|Description|  
+|值|说明|  
 |-----------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|将位置设置为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。 选择此值将显示以下动态选项： **Server**、 **Use Windows Authentication**、 **Use SQL Server Authentication**、 **User name**和 **Password**。|  
 |DTSX 文件|将位置设置为 DTSX 文件。 选择此值将显示动态选项 **File name**。|  
@@ -51,14 +51,14 @@ ms.locfileid: "62830244"
  **用户名**  
  如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，则在登录服务器时应提供要使用的用户名。  
   
- **Password**  
+ **密码**  
  如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，请提供密码。  
   
 ### <a name="location--dtsx-file"></a>位置 = DTSX 文件  
  **文件名**  
- 提供包的路径，或单击浏览按钮“(…)”并查找包。  
+ 提供包的路径，或单击浏览按钮“(…)”并查找包  。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [消息队列任务](message-queue-task.md)  
   
   

@@ -16,29 +16,29 @@ ms.assetid: 2c470e54-0600-4b2b-b1f3-9885cb28a01a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 185e68ed8d083e3ccfbab99369f6a778766a4c09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138913"
 ---
 # <a name="interface-conformance-levels"></a>接口一致性级别
-调配的目的是通知应用程序提供的功能的内容从驱动程序。 基于函数的均衡方案无法充分实现此目标。 在 ODBC 3。*x*，驱动程序的分类基于它们所拥有的功能。 支持该功能可包括支持函数;它还包括由返回的信息类型的支持的描述符字段、 语句属性、"Y"值**SQLGetInfo**，依次类推。  
+进行调配的目的是通知应用程序可通过驱动程序使用哪些功能。 基于函数的分级方案无法充分实现此目标。 ODBC 3 中的。*x*，驱动程序根据其拥有的功能进行分类。 支持该功能可能包括支持函数;它还可以支持描述符字段、语句特性、 **SQLGetInfo**返回的信息类型的 "Y" 值，等等。  
   
- 若要简化的接口一致性规范，ODBC 定义三个一致性级别。 若要满足特定的一致性级别，驱动程序必须满足的所有要求的一致性级别。 符合给定级别意味着完成符合所有较低级别。  
+ 为了简化接口一致性规范，ODBC 定义了三个一致性级别。 为了满足特定的一致性级别，驱动程序必须满足该一致性级别的所有要求。 具有给定级别的一致性意味着完全符合所有较低级别。  
   
- 一致性级别执行不始终划分为整齐地支持特定的 ODBC 函数列表，但指定支持的功能，如以下各节中列出。 若要为一项功能提供支持，驱动程序必须支持某些 ODBC 函数的调用的某些或所有窗体 (有关详细信息，请参阅[函数一致性](../../../odbc/reference/develop-app/function-conformance.md))，设置特定的属性 (请参阅[属性一致性](../../../odbc/reference/develop-app/attribute-conformance.md))，和特定的描述符字段 (请参阅[描述符字段一致性](../../../odbc/reference/develop-app/descriptor-field-conformance.md))。  
+ 一致性级别并不总是完全划分为支持特定的 ODBC 函数列表，而是指定支持的功能，如以下部分所列。 若要为某一功能提供支持，驱动程序必须支持对某些 ODBC 函数的部分或全部形式的调用（有关详细信息，请参阅[函数一致性](../../../odbc/reference/develop-app/function-conformance.md)），设置某些属性（请参阅[属性一致性](../../../odbc/reference/develop-app/attribute-conformance.md)）和某些描述符字段（请参阅[描述符字段一致性](../../../odbc/reference/develop-app/descriptor-field-conformance.md)）。  
   
- 应用程序通过连接到数据源并调用发现驱动程序的接口一致性级别**SQLGetInfo** SQL_ODBC_INTERFACE_CONFORMANCE 选项。  
+ 应用程序通过连接到数据源并使用 SQL_ODBC_INTERFACE_CONFORMANCE 选项调用**SQLGetInfo**来发现驱动程序的接口一致性级别。  
   
- 驱动程序可以随意实施超过声称到完整的一致性级别的功能。 应用程序发现任何此类附加功能，通过调用**SQLGetFunctions** （用于确定哪些 ODBC 函数都存在） 和**SQLGetInfo** （用于查询各种其他 ODBC 功能）。  
+ 驱动程序可以自由地在其宣称完成一致性的级别之外实现功能。 应用程序通过调用**SQLGetFunctions** （以确定存在的 odbc 函数）和**SQLGetInfo** （查询各种其他 odbc 功能）来发现任何此类其他功能。  
   
- 有三个 ODBC 接口一致性级别：核心、 级别 1 和级别 2。  
+ 有三个 ODBC 接口一致性级别：核心、级别1和级别2。  
   
 > [!NOTE]
->  这些一致性级别有不同的要求比 ODBC 2 中的相同名称的 ODBC API 一致性级别 *.x*。 具体而言，所有功能权限都隐含的 ODBC 2 *.x* API 一致性级别 1 现在是核心接口一致性级别的一部分。 因此，很多 ODBC 驱动程序可能会报告核心级别接口一致性。  
+>  这些一致性级别的要求不同于 ODBC 2.x 中具有相同名称的 ODBC API 一致性*级别。* 特别是，ODBC*2.X API 一致性*级别1隐含的所有功能现在都属于核心接口一致性级别。 因此，许多 ODBC 驱动程序可能会报告核心级接口一致性。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [核心接口一致性](../../../odbc/reference/develop-app/core-interface-conformance.md)  
   

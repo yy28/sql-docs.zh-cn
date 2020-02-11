@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 31ba88f3bc49d78dc8c68ac77ba6bda90e63aad0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63028374"
 ---
 # <a name="objecttype-trace-event-column"></a>ObjectType 跟踪事件列
@@ -29,7 +29,7 @@ ms.locfileid: "63028374"
   
 ## <a name="object-type-column-values"></a>ObjectType 列值  
   
-|ReplTest1|定义|  
+|值|定义|  
 |-----------|----------------|  
 |8259|检查约束|  
 |8260|默认值（约束或独立）|  
@@ -39,10 +39,10 @@ ms.locfileid: "63028374"
 |8275|系统表|  
 |8276|服务器上的触发器|  
 |8277|（用户定义的）表|  
-|8278|视图|  
+|8278|查看|  
 |8280|扩展存储过程|  
 |16724|CLR 触发器|  
-|16964|“数据库”|  
+|16964|数据库|  
 |16975|Object|  
 |17222|全文目录|  
 |17232|CLR 存储过程|  
@@ -61,7 +61,7 @@ ms.locfileid: "63028374"
 |18263|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 组|  
 |19265|非对称密钥|  
 |19277|主密钥|  
-|19280|主键|  
+|19280|主密钥|  
 |19283|ObfusKey|  
 |19521|非对称密钥登录名|  
 |19523|证书登录|  
@@ -82,13 +82,13 @@ ms.locfileid: "63028374"
 |20821|唯一约束|  
 |21057|应用程序角色|  
 |21059|证书|  
-|21075|“服务器”|  
+|21075|服务器|  
 |21076|Transact-SQL 触发器|  
 |21313|Assembly|  
 |21318|CLR 标量函数|  
 |21321|内联标量 SQL 函数|  
 |21328|分区方案|  
-|21333|“用户”|  
+|21333|用户|  
 |21571|Service Broker 服务约定|  
 |21572|数据库上的触发器|  
 |21574|CLR 表值函数|  
@@ -96,14 +96,14 @@ ms.locfileid: "63028374"
 |21581|Service Broker 消息类型|  
 |21586|Service Broker 路由|  
 |21587|统计信息|  
-|21825<br /><br /> 21827<br /><br /> 21831<br /><br /> 21843<br /><br /> 21847|“用户”|  
+|21825<br /><br /> 21827<br /><br /> 21831<br /><br /> 21843<br /><br /> 21847|用户|  
 |22099|Service Broker 服务|  
 |22601|索引|  
 |22604|证书登录|  
 |22611|XMLSchema|  
 |22868|类型|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [sp_trace_setevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

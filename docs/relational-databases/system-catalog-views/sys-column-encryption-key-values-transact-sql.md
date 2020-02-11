@@ -21,41 +21,41 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8c5dc4f2dc42452560162d214844e2264cd0e5e9
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73593808"
 ---
 # <a name="syscolumn_encryption_key_values-transact-sql"></a>sys. column_encryption_key_values （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回有关创建的列加密密钥（cek）的加密值的信息，该加密密钥是用[CREATE column encryption key](../../t-sql/statements/create-column-encryption-key-transact-sql.md)或[ALTER column &#40;encryption&#41; key transact-sql](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)语句创建的。 每行都表示使用列主密钥（CMK）加密的 CEK 值。  
+  返回有关列加密密钥（Cek）的加密值的信息，创建的列加密密钥（）是通过[创建列加密密钥](../../t-sql/statements/create-column-encryption-key-transact-sql.md)或[ALTER column Encryption key &#40;transact-sql&#41;](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)语句创建的。 每行都表示使用列主密钥（CMK）加密的 CEK 值。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**column_encryption_key_id**|**int**|数据库中 CEK 的 ID。|  
 |**column_master_key_id**|**int**|用于对 CEK 值进行加密的列主密钥的 ID。|  
-|**encrypted_value**|**varbinary(8000)**|CEK 值用 column_master_key_id 中指定的 CMK 进行了加密。|  
+|**encrypted_value**|**varbinary （8000）**|CEK 值用 column_master_key_id 中指定的 CMK 进行了加密。|  
 |**encryption_algorithm_name**|**sysname**|用于对 CEK 值进行加密的算法的名称。<br /><br /> 用于对值进行加密的加密算法的名称。 系统提供程序的算法必须**RSA_OAEP**。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要**VIEW ANY COLUMN ENCRYPTION KEY**权限。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
- [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
- [DROP COLUMN ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
- [CREATE COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md)   
- [安全性目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [sys.column_encryption_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   
- [sys.column_master_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)   
- [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
+ [&#40;Transact-sql 中创建列加密密钥&#41;](../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
+ [&#40;Transact-sql&#41;更改列加密密钥](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
+ [&#40;Transact-sql&#41;删除列加密密钥](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
+ [&#40;Transact-sql&#41;创建列主密钥](../../t-sql/statements/create-column-master-key-transact-sql.md)   
+ [Transact-sql&#41;&#40;安全目录视图](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [sys. column_encryption_keys &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   
+ [sys. column_master_keys &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)   
+ [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
- [具有安全 enclave 的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
- [Always Encrypted 密钥管理概述](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
+ [Always Encrypted 安全 enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
+ [Always Encrypted 的密钥管理概述](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
  [管理具有安全 enclave 的 Always Encrypted 的密钥](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
 
   

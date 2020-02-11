@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b1baf29a88ff25eb278271719680d1979940c590
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211498"
 ---
 # <a name="planning-a-sql-server-installation"></a>计划 SQL Server 安装
@@ -39,8 +39,8 @@ ms.locfileid: "68211498"
  [SQL Server 安装中的新增功能](../../../2014/sql-server/install/what-s-new-in-sql-server-installation.md)  
  本主题介绍有关这一版本的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中新增或改进的安装功能的详细信息。  
   
- [安装 SQL Server 2014 的硬件和软件要求](hardware-and-software-requirements-for-installing-sql-server.md)  
- 本主题列出了安装和运行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]安装的最低硬件和软件要求。  
+ [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
+ 本主题列出了安装和运行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装的最低硬件和软件要求。  
   
  [安装 SQL Server 的安全注意事项](../../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)  
  本主题介绍安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 前和安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之后应考虑采用的一些最佳安全做法。  
@@ -62,7 +62,8 @@ ms.locfileid: "68211498"
  本节概要介绍用于安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的不同安装选项。  
   
  [安装 SQL Server 2014 BI 功能](install-sql-server-business-intelligence-features.md)  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装文档中的本节说明如何安装属于 Microsoft BI 平台一部分的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装文档中的本节说明如何安装属于 Microsoft BI 平台一部分的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。  
   
  [升级到 SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)  
  本节概要说明如何将以前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的实例升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
@@ -71,13 +72,14 @@ ms.locfileid: "68211498"
  参照本节可以完全卸载 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的现有实例，并且对系统进行准备以便您可以重新安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
  [SQL Server 故障转移群集安装](../failover-clusters/install/sql-server-failover-cluster-installation.md)  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装文档中的本节介绍了如何安装和配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装文档中的本节介绍了如何安装和配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集。  
   
-## <a name="see-also"></a>请参阅  
- [SQL server 2014 安装快速入门](../../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)   
+## <a name="see-also"></a>另请参阅  
+ [快速开始安装 SQL Server 2014](../../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)   
  [从命令提示符安装 SQL Server 2014](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
  [高可用性解决方案 (SQL Server)](../failover-clusters/high-availability-solutions-sql-server.md)   
- [安装故障转移群集前的准备工作](../failover-clusters/install/before-installing-failover-clustering.md)   
- [升级到 SQL Server 2014 使用安装向导&#40;安装程序&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
+ [安装故障转移群集之前](../failover-clusters/install/before-installing-failover-clustering.md)   
+ [使用安装向导 &#40;安装程序升级到 SQL Server 2014&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
   

@@ -11,22 +11,22 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: ed0cd8bad3a99c7f1f59b5121aafb06ccdee63b2
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952243"
 ---
 # <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>部署核对清单：PowerPivot for SharePoint 2010 的多服务器安装
-  此核对清单将指导你完成将 SharePoint [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 添加到从头开始生成的三层 SharePoint 2010 场的步骤。 一个三层场包括数据库层、应用程序层和 Web 层。 若要将 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 添加到此拓扑中，需要运行 SQL Server 安装程序以在应用程序层上安装 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]。 PowerPivot 程序文件将添加到 web 层中，但仅在部署 web 应用程序解决方案时作为安装后任务。 尽管这些是部署步骤，但对于 Web 层或数据层而言，并没有需要执行的单独的安装步骤。 你需要执行的唯一安装步骤是在应用程序服务器上安装 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]。  
+  此核对清单将指导你完成将 for [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] SharePoint 添加到从头开始生成的三层 sharepoint 2010 场的步骤。 一个三层场包括数据库层、应用程序层和 Web 层。 若[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]要添加到此拓扑中，需要运行 SQL Server 安装[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]程序以在应用程序层上安装。 PowerPivot 程序文件将添加到 web 层中，但仅在部署 web 应用程序解决方案时作为安装后任务。 尽管这些是部署步骤，但对于 Web 层或数据层而言，并没有需要执行的单独的安装步骤。 你需要执行的唯一安装步骤是在应用程序[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]服务器上安装。  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2010|  
   
   
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必备条件  
  您必须是本地管理员才能安装 SQL Server 和 SharePoint 2010。  
   
  还必须由安装 SharePoint 的人员来配置场。 若要配置场，您必须具有数据库服务器的 SQL Server 登录名。 必须将此登录名分配给以下角色：`dbcreator`、`securityadmin` 和 `public`。  
@@ -68,7 +68,7 @@ ms.locfileid: "71952243"
   
  如果您刚开始接触拓扑，请从安装 SQL Server 数据库引擎着手。 按照这些说明操作将生成一个可由场中的 SharePoint 服务器访问的数据库服务器。  
   
-1.  在要用于数据库服务器的计算机上，运行 SQL Server 安装程序以安装 SQL Server 数据库引擎（请参阅安装[向导&#40;安装程序&#41;中的安装 SQL Server 2014](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)）。  
+1.  在要用于数据库服务器的计算机上，运行 SQL Server 安装程序以安装 SQL Server 数据库引擎（请参阅安装[向导 &#40;安装程序&#41;安装 SQL Server 2014 ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)）。  
   
      在选择要安装的功能时，请选择以下选项：  
   
@@ -84,33 +84,33 @@ ms.locfileid: "71952243"
   
     2.  打开“SQL Server 网络配置”。  
   
-    3.  选择“MSSQLSERVER 的协议”。  
+    3.  选择“MSSQLSERVER 的协议” ****。  
   
-    4.  右键单击 " **tcp/ip** "，然后选择 "**启用**"。  
+    4.  右键单击“TCP/IP”****，并选择“启用”****。  
   
     5.  单击 " **SQL Server 服务**"。  
   
-    6.  右键单击**SQL Server （MSSQLSERVER）** ，然后单击 "**重新启动**"。  
+    6.  右键单击**SQL Server （MSSQLSERVER）**，然后单击 "**重新启动**"。  
   
 3.  启用通过 Windows 防火墙对数据库服务器进行入站访问。 这使场中的 SharePoint 服务器可以连接到 SharePoint 数据库。 有关详细信息，请参阅 [配置 Windows 防火墙以允许 SQL Server 访问](../../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
   
     1.  在 Windows "控制面板" 的 "管理工具" 中，单击 "**高级安全 Windows 防火墙**"。  
   
-    2.  单击 "**入站规则**"。  
+    2.  单击 **“入站规则”**。  
   
     3.  单击 "**新建规则**"。  
   
     4.  在 "规则类型" 中，单击 "**自定义**"。  
   
-    5.  系统提示您启用数据连接时单击 **“下一步”** 。  
+    5.  单击“下一步”。   
   
     6.  在程序的 "服务" 部分中，单击 "**自定义**"。  
   
     7.  单击 "**应用到此服务**"。  
   
-    8.  如果已将 SQL Server 作为默认实例安装，请选择 " **SQL Server （MSSQLSERVER）** "，然后单击 **"确定"** 。  
+    8.  如果已将 SQL Server 作为默认实例安装，请选择 " **SQL Server （MSSQLSERVER）** "，然后单击 **"确定"**。  
   
-    9. 系统提示您启用数据连接时单击 **“下一步”** 。  
+    9. 单击“下一步”。   
   
     10. 在 "协议和端口" 中，接受默认设置，然后单击 "**下一步**"。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "71952243"
   
     14. 在 "名称" 中，为入站规则键入说明性名称（例如**SQL Server**）。  
   
-    15. 单击 **“完成”** 。  
+    15. 单击“完成”  。  
   
 ##  <a name="installsp"></a>安装和配置三层 SharePoint 2010 场  
  在用作 SharePoint 服务器的每台计算机上，运行 SharePoint Prerequisite Installer 程序，然后运行 SharePoint Server 安装程序。  
@@ -164,7 +164,7 @@ ms.locfileid: "71952243"
 ##  <a name="configsrvr"></a>配置服务器  
  使用 PowerPivot 配置工具来配置 PowerPivot for SharePoint。 该工具将扫描场的现有配置，并提供安装或激活 PowerPivot for SharePoint 所需的 SharePoint 功能的选项。 在此步骤中，将启动 Claims to Windows Token Service。 此外，如果其他必需的 SharePoint 功能尚未启用，配置工具会将这些功能添加到列表中，并提供用于启用这些功能的操作。  
   
- 有关详细信息，请参阅[配置或修复 PowerPivot for SharePoint &#40;2010 PowerPivot 配置&#41;工具](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md)。  
+ 有关详细信息，请参阅[PowerPivot for SharePoint 2010 &#40;PowerPivot 配置工具&#41;中配置或修复](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md)。  
   
 ##  <a name="AAM"></a>为 Web 前端服务器配置备用访问映射  
  为了确保每台 Web 前端服务器都可处理 PowerPivot 数据访问或数据刷新请求，必须将每台服务器的不同 URL 映射到同一个 Web 应用程序。  
@@ -189,17 +189,17 @@ ms.locfileid: "71952243"
   
  若要验证 PowerPivot 与 SharePoint 网站的集成，请执行以下操作：  
   
-1.  在浏览器中，打开您创建的 Web 应用程序。 如果使用了默认值，则可以在 URL 地址中指定 http://\<计算机名 >。  
+1.  在浏览器中，打开您创建的 Web 应用程序。 如果使用了默认值，则可以在 URL\<地址中指定 http://计算机名>。  
   
 2.  验证 PowerPivot 数据访问和处理功能在应用程序中可用。 您可以通过验证 PowerPivot 提供的库模板是否存在来验证此可用性：  
   
-    1.  在 "网站操作" 上，单击 "**更多选项 ...** "  
+    1.  在 "网站操作" 上，单击 "**更多选项 ...**"  
   
     2.  在 "库" 中，应会看到 "**数据馈送库**" 和 " **PowerPivot 库**"。 这些库模板由 PowerPivot 功能提供，并且在正确集成了该功能的情况下在“库”列表中将可见。  
   
  若要验证服务器上的 PowerPivot 数据访问，请执行以下操作：  
   
-1.  [下载](https://go.microsoft.com/fwlink/?LinkID=219108) Reporting Services 教程附带的“野餐”数据示例。 您将使用此下载中的示例工作簿来验证 PowerPivot 数据访问。 提取文件。  
+1.  [下载](https://go.microsoft.com/fwlink/?LinkID=219108)Reporting Services 教程附带的野炊数据示例。 您将使用此下载中的示例工作簿来验证 PowerPivot 数据访问。 解压缩文件。  
   
 2.  将 PowerPivot 工作簿上载到 PowerPivot 库或任何 SharePoint 库。  
   
@@ -209,11 +209,11 @@ ms.locfileid: "71952243"
   
 5.  从“开始”菜单中的 Microsoft SQL Server 2008 R2 程序组启动 SQL Server Management Studio。 如果未在您的服务器上安装此工具，则可以跳到最后一步以便确认缓存文件是否存在。  
   
-6.  在“服务器类型”中，选择 **“Analysis Services”** 。  
+6.  在“服务器类型”中，选择 **“Analysis Services”**。  
   
-7.  在 "服务器名称" 中，输入 **\<server-name > \powerpivot**，其中 **\<Server name >** 是具有 PowerPivot for SharePoint 安装的计算机的名称。  
+7.  在 "服务器名称" 中，输入** \<服务器名称> \powerpivot**，其中** \<，服务器名称>** 是安装了 PowerPivot for SharePoint 的计算机的名称。  
   
-8.  单击 **“连接”** 。  
+8.  单击“连接”  。  
   
 9. 在对象资源管理器中，单击 "**数据库**" 查看加载的 PowerPivot 数据文件的列表。  
   
@@ -223,17 +223,17 @@ ms.locfileid: "71952243"
  在验证了安装后，通过创建 PowerPivot 库或优化单独的配置设置完成服务配置。 为了充分利用您刚安装的服务器组件，可以下载 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] 以便创建然后发布您的第一个 PowerPivot 工作簿。  
   
 ####  <a name="bkmk_disk"></a>设置磁盘空间使用情况的上限  
- 您可以为用于缓存到磁盘的 PowerPivot 数据文件的磁盘空间量设置一个上限。 默认设置是使用所有可用磁盘空间量。 有关如何限制磁盘空间使用情况的说明，请参阅[配置磁盘空间&#40;使用&#41;情况 PowerPivot for SharePoint](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint)。  
+ 您可以为用于缓存到磁盘的 PowerPivot 数据文件的磁盘空间量设置一个上限。 默认设置是使用所有可用磁盘空间量。 有关如何限制磁盘空间使用情况的说明，请参阅[&#40;PowerPivot for SharePoint 配置磁盘空间使用情况&#41;](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint)。  
   
 ####  <a name="Upload"></a>增加 SharePoint Web 应用程序的最大文件上载大小  
- 因为 PowerPivot 工作簿可能很大，所以，您可能要增加最大文件上载大小。 有两个要配置的文件大小设置：针对 Web 应用程序的“最大上载大小”和 Excel Services 中的“最大工作簿大小”。 在这两个应用程序中，最大文件大小应该设置为相同值。 有关说明，请参阅[配置最大文件&#40;上&#41;传大小 PowerPivot for SharePoint](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint)。  
+ 因为 PowerPivot 工作簿可能很大，所以，您可能要增加最大文件上载大小。 有两个要配置的文件大小设置：针对 Web 应用程序的“最大上载大小”和 Excel Services 中的“最大工作簿大小”。 在这两个应用程序中，最大文件大小应该设置为相同值。 有关说明，请参阅[&#40;PowerPivot for SharePoint&#41;配置最大文件上传大小](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint)。  
   
 #### <a name="grant-sharepoint-permissions-to-workbook-users"></a>向工作簿用户授予 SharePoint 权限  
  用户将首先需要 SharePoint 权限，然后才能发布或查看工作簿。 请确保向需要查看已发布工作簿的用户授予 "**查看**" 权限，**并向**发布或管理工作簿的用户提供权限。 您必须是网站集管理员才能授予权限。  
   
-1.  在网站中，单击 **“网站操作”** 。  
+1.  在网站中，单击 **“网站操作”**。  
   
-2.  单击 **“网站权限”** 。  
+2.  单击 **“网站权限”**。  
   
 3.  选中 "网站集**成员**" 组的复选框。  
   
@@ -241,7 +241,7 @@ ms.locfileid: "71952243"
   
 5.  输入应有权添加或删除文档的 Windows 域用户或组帐户。  
   
-6.  单击“确定”。  
+6.  单击“确定”。   
   
 7.  选中 "网站集**访问者**" 组的复选框。  
   
@@ -249,7 +249,7 @@ ms.locfileid: "71952243"
   
 9. 输入应有权查看文档的 Windows 域用户或组帐户。 与前面一样，如果将应用程序配置为采用经典身份验证，则不要使用电子邮件地址或分发组。  
   
-10. 单击“确定”。  
+10. 单击“确定”。   
   
 #### <a name="install-adonet-data-services-35-sp1"></a>安装 ADO.NET Data Services 3.5 SP1  
  ADO.NET Data Services 是 SharePoint 列表的数据馈送导出所必需的。 SharePoint 2010 在 PrerequisiteInstaller 程序中不包括此组件，因此您必须手动安装它。 有关如何安装 ADO.NET 数据服务的详细信息，请参阅[安装 ADO.NET Data services 以支持 SharePoint 列表的数据馈送导出](../../../2014/sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md)。  
@@ -264,7 +264,7 @@ ms.locfileid: "71952243"
  PowerPivot 服务应用程序使用默认属性和值创建。 您可以修改单独服务应用程序的配置设置，以便更改分配请求所采用的方法、设置服务器超时、更改查询响应报告事件的阈值或者指定保留多长时间的使用情况数据。 有关管理中心中的配置或者在 SharePoint Web 应用程序中使用 PowerPivot 功能的详细信息，请参阅[在管理中心中管理和配置 Powerpivot 服务器](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)。  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server 2012  的版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473)  
+ [SQL Server 2012 的各个版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473)   
  [安装 PowerPivot for SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)   
  [部署清单：通过将 PowerPivot 服务器添加到 SharePoint 2010 场进行扩展](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)  
   

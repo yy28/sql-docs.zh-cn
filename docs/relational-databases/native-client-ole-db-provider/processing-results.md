@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 57e1187e7497cbb294689ba9abac775c90be3dce
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73761729"
 ---
 # <a name="processing-results"></a>处理结果
@@ -28,9 +28,9 @@ ms.locfileid: "73761729"
 
   如果行集对象是由执行命令或直接从访问接口生成的，则使用者需要检索和访问行集中的数据。  
   
- 行集是使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口能够以表格格式提供数据的核心对象。 从概念上说，行集是指其中的每行都拥有列数据的行的集合。 行集对象可提供如下接口：IRowset（包含按顺序从行集提取行的方法）、IAccessor（允许定义一组列绑定来说明将表格格式数据绑定到使用者程序变量的方式）、IColumnsInfo（提供有关行集中列的信息）以及 IRowsetInfo（提供有关行集的信息）。  
+ 行集是使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口能够以表格格式提供数据的核心对象。 从概念上说，行集是指其中的每行都拥有列数据的行的集合。 行集对象可提供如下接口：IRowset（包含按顺序从行集提取行的方法）、IAccessor（允许定义一组列绑定来说明将表格格式数据绑定到使用者程序变量的方式）、IColumnsInfo（提供有关行集中列的信息）以及 IRowsetInfo（提供有关行集的信息）****************。  
   
- 使用者可以调用 IRowset::GetData 方法将行集中的一行数据检索到缓冲区中。 在调用 GetData 之前，使用者使用一组 DBBINDING 结构来描述缓冲区。 每个绑定都说明了行集中的列在使用者缓冲区中的存储方式并包含以下内容：  
+ 使用者可以调用 IRowset::GetData 方法将行集中的一行数据检索到缓冲区中****。 在调用 GetData 之前，使用者使用一组 DBBINDING 结构来描述缓冲区****。 每个绑定都说明了行集中的列在使用者缓冲区中的存储方式并包含以下内容：  
   
 -   应用绑定的列（或参数）的序号。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "73761729"
   
  获取数据时，访问接口将使用每个绑定中的信息来确定从使用者缓冲区的何处以及如何检索数据。 设置使用者缓冲区中的数据时，访问接口将使用每个绑定中的信息来确定在使用者缓冲区的何处以及如何返回数据。  
   
- 指定 DBBINDING 结构后，将创建取值函数 (IAccessor::CreateAccessor)。 取值函数是一个绑定集合，可用于获取或设置使用者缓冲区中的数据。  
+ 指定 DBBINDING 结构后，将创建取值函数 (IAccessor::CreateAccessor)****。 取值函数是一个绑定集合，可用于获取或设置使用者缓冲区中的数据。  
   
 ## <a name="see-also"></a>另请参阅  
  [创建 SQL Server Native Client OLE DB 提供程序应用程序](../../relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md)   

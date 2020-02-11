@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d26f288c857cf44a932a91b250074c36453e2482
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782973"
 ---
 # <a name="bcp_columns"></a>bcp_columns
@@ -44,12 +44,12 @@ RETCODE bcp_columns (
  是启用大容量复制的 ODBC 连接句柄。  
   
  *nColumns*  
- 用户文件中的列的总数。 即使您准备将数据从用户文件大容量复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表并且不打算复制用户文件中的所有列，也必须将*nColumns*设置为用户文件列总数。  
+ 用户文件中的列的总数。 即使您准备将数据从用户文件大容量复制到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表，并且不想复制用户文件中的所有列，仍必须将*nColumns*设置为用户文件列总数。  
   
 ## <a name="returns"></a>返回  
  SUCCEED 或 FAIL。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
  仅当使用有效的文件名调用[bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)之后，才能调用此函数。  
   
  仅当您要使用不同于默认设置的用户文件格式时，才应当调用该函数。 有关默认用户文件格式的说明的详细信息，请参阅**bcp_init**。  

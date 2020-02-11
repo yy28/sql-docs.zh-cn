@@ -1,5 +1,5 @@
 ---
-title: Microsoft OLE DB 简单的提供程序 |Microsoft Docs
+title: Microsoft OLE DB 简单提供程序 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,44 +15,44 @@ ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d3acdfc7e03115b415e7641047e7621d5ab463e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926609"
 ---
-# <a name="microsoft-ole-db-simple-provider-overview"></a>Microsoft OLE DB 简单的提供程序概述
-Microsoft OLE DB 简单提供程序 (OSP) 允许访问已为其提供程序已编写使用任何数据的 ADO [OLE DB 简单提供程序 (OSP) 工具包](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6)。 简单的提供程序用于访问需要唯一重要的 OLE DB 支持，如内存中数组或 XML 文档的数据源。
+# <a name="microsoft-ole-db-simple-provider-overview"></a>Microsoft OLE DB 简单提供程序概述
+Microsoft OLE DB 简单提供程序（OSP）允许 ADO 访问使用[OLE DB 简单提供程序（osp）工具包](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6)为其编写提供程序的任何数据。 简单提供程序用于访问只需要基本 OLE DB 支持的数据源，例如内存中数组或 XML 文档。
 
 ## <a name="connection-string-parameters"></a>连接字符串参数
- 若要连接到 OLE DB 简单提供程序 DLL，请设置*提供程序*自变量[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)属性设置为：
+ 若要连接到 OLE DB 简单提供程序 DLL，请将*提供程序*参数设置为[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)属性，以：
 
 ```vb
 MSDAOSP
 ```
 
- 此值还可以设置或读取使用[提供程序](../../../ado/reference/ado-api/provider-property-ado.md)属性。
+ 还可以使用[Provider](../../../ado/reference/ado-api/provider-property-ado.md)属性设置或读取此值。
 
- 你可以连接到已注册为完整的 OLE DB 访问接口使用已注册的提供程序名称，由提供程序编写器的简单提供程序。
+ 您可以使用已注册的提供程序名称（由提供程序编写器确定），连接到已注册为完全 OLE DB 提供程序的简单提供程序。
 
-## <a name="typical-connection-string"></a>典型的连接字符串
- 此提供程序的典型的连接字符串是：
+## <a name="typical-connection-string"></a>典型连接字符串
+ 此提供程序的典型连接字符串是：
 
 ```vb
 "Provider=MSDAOSP;Data Source=serverName"
 ```
 
- 该字符串包含这些关键字：
+ 字符串包含以下关键字：
 
-|关键字|描述|
+|关键字|说明|
 |-------------|-----------------|
-|**提供程序**|指定 SQL Server 的 OLE DB 访问接口。|
-|**数据源**|指定的服务器的名称。|
+|**提供程序**|指定 SQL Server 的 OLE DB 提供程序。|
+|**数据源**|指定服务器的名称。|
 
 ## <a name="xml-document-example"></a>XML 文档示例
- OLE DB 简单提供程序 (OSP) MDAC 2.7 或更高版本和 Windows 数据访问组件 (Windows DAC) 已经过增强，支持打开分层 ADO**记录集**通过任意 XML 文件。 这些 XML 文件可能包含的 ADO 持久化 xml，但不需要。 这实现了通过连接到 OSP **MSXML2.DLL**; 因此**MSXML2.DLL**或更高版本。
+ MDAC 2.7 或更高版本中的 OLE DB 简单提供程序（OSP）以及 Windows 数据访问组件（Windows DAC）已得到增强，以支持通过任意 XML 文件打开分层 ADO**记录集**。 这些 XML 文件可能包含 ADO XML 持久性架构，但不是必需的。 这已通过将 OSP 连接到**msxml2.dll**来实现;因此需要**msxml2.dll**或更高版本。
 
- **Portfolio.xml**在下面的示例中使用文件包含以下树：
+ 下面的示例中使用的**项目组合 .xml**文件包含以下树：
 
 ```console
 Portfolio
@@ -65,9 +65,9 @@ Portfolio
          WebSite
 ```
 
- XML DSO 使用内置的试探法来将 XML 树中的节点转换为分层结构中的各章**记录集**。
+ XML DSO 使用内置试探法将 XML 树中的节点转换为分层**记录集中**的章节。
 
- 使用这些内置的试探法，XML 树转换为两个级别分层**记录集**形式如下：
+ 使用这些内置试探法，XML 树将转换为以下形式的两级分层**记录集**：
 
 ```console
 Parent Recordset
@@ -76,28 +76,28 @@ Shares, Symbol, Price, $Text
       Company Name, WebSite, $Text
 ```
 
- 请注意项目组合和信息标记不会出现在层次结构**记录集**。 有关 XML DSO 如何将 XML 树转换为层次结构的说明**记录集**，请参阅下面的规则。 下一节中讨论 $Text 列。
+ 请注意，"项目组合" 和 "信息" 标记不在分层**记录集中**表示。 有关 XML DSO 如何将 XML 树转换为分层**记录集**的说明，请参阅以下规则。 下一节将讨论 $Text 列。
 
-## <a name="rules-for-assigning-xml-elements-and-attributes-to-columns-and-rows"></a>分配 XML 元素和属性到列和行的规则
- XML DSO 遵循用于分配元素的过程和属性到列和数据绑定的应用程序中的行。 XML 建模为具有一个标记，包含整个层次结构的树。 例如，一书的 XML 说明可能包含一章标记、 图标记和部分标记。 最高级别将通讯簿标记，它包含的子元素的一章，图中和部分。 当 XML DSO 将 XML 元素映射到行和列时，将转换的子元素不是顶级元素。
+## <a name="rules-for-assigning-xml-elements-and-attributes-to-columns-and-rows"></a>将 XML 元素和属性分配给列和行的规则
+ XML DSO 遵循在数据绑定应用程序中将元素和属性分配给列和行的过程。 XML 作为树建模，其中一个标记包含整个层次结构。 例如，书籍的 XML 说明可以包含章节标记、图标记和节标记。 最高级别为书籍标记，其中包含子元素章节、图和节。 当 XML DSO 将 XML 元素映射到行和列时，将转换子元素，而不是顶级元素。
 
- XML DSO 用于转换的子元素使用此过程：
+ XML DSO 使用此过程来转换子元素：
 
--   每个子元素和属性的某些列对应**记录集**层次结构中。
+-   每个子元素和属性都对应于层次结构中某些**记录集中**的列。
 
--   列的名称是与同名的子元素或属性，除非父元素具有属性和子元素具有相同的名称，在这种情况下"！"预置到子元素的列名称。
+-   列的名称与子元素或属性的名称相同，除非父元素具有具有相同名称的属性和子元素，在这种情况下，子元素的列名前面会出现 "！"。
 
--   每个列是*简单*列包含标量值 （通常为字符串） 或**记录集**包含子列**记录集**。
+-   每个列要么是包含标量值的*简单*列（通常是字符串），要么是包含子**记录集**的**记录集**列。
 
--   与属性相对应的列始终是简单的。
+-   与属性相对应的列总是简单的。
 
--   与子元素相对应的列均**记录集**列，如果子元素具有其自己的子元素或属性 （或两者），或子元素的父代具有子元素作为子级的多个实例。 否则，该列是简单的。
+-   如果子元素具有其自己的子元素或属性（或两者），或子元素的父元素具有作为子级的多个子元素，则与子元素对应的列是**记录集**列。 否则列很简单。
 
--   当有多个实例的子元素 （位于不同的父项） 时，其列并**记录集**列如果*任何*的实例表示**记录集**列; 它列是简单才*所有*实例表示简单列。
+-   如果子元素有多个实例（在不同的父项下），则如果有*任何*实例表示**记录集**列，则其列是**记录集**列;仅当*所有实例都*指简单列时，其列才简单。
 
--   所有**记录集**具有名为 $Text 的其他列。
+-   所有**记录集**都有一个名为 $Text 的附加列。
 
- 构造所需的代码**记录集**如下所示：
+ 构造**记录集**所需的代码如下所示：
 
 ```vb
 Dim adoConn as ADODB.Connection
@@ -111,7 +111,7 @@ adoRS.Open "https://WebServer/VRoot/portfolio.xml, adoConn
 ```
 
 > [!NOTE]
->  可以通过使用四个不同的命名约定指定数据文件的路径。
+>  可以使用四个不同的命名约定来指定数据文件的路径。
 
 ```vb
 'HTTP://
@@ -124,24 +124,24 @@ adoRS.Open "\\ComputerName\ShareName\portfolio.xml", adoConn
 adoRS.Open "C:\Directory\portfolio.xml", adoConn
 ```
 
- 只要**记录集**已打开，常用的 ADO**记录集**，可以使用导航命令。
+ 一旦打开该**记录集**，就可以使用常用的 ADO**记录集**导航命令。
 
- **记录集**生成 OSP 的具有一些限制：
+ OSP 生成的**记录集**有一些限制：
 
--   客户端游标 (**adUseClient**) 不受支持。
+-   不支持客户端游标（**adUseClient**）。
 
--   分层**记录集**创建通过任意 XML 无法被持久化，使用**Recordset.Save**。
+-   无法使用 Recordset 保存通过任意 XML 创建的分层**记录集** **。保存**。
 
--   **记录集**使用 OSP 创建是只读的。
+-   用 OSP 创建的**记录集**是只读的。
 
--   XMLDSO 将其他列的数据 ($Text) 添加到每**记录集**层次结构中。
+-   XMLDSO 向层次结构中的每个**记录集**添加一个额外的数据列（$Text）。
 
- 有关 OLE DB 简单的提供程序的详细信息，请参阅[构建一个简单的提供程序](https://msdn.microsoft.com/b31a6cba-58ae-4ee8-9039-700973d354d6)。
+ 有关 OLE DB 简单提供程序的详细信息，请参阅[构建简单的提供程序](https://msdn.microsoft.com/b31a6cba-58ae-4ee8-9039-700973d354d6)。
 
 ## <a name="code-example"></a>代码示例
- 下面的 Visual Basic 代码演示了如何打开任意 XML 文件中，构造分层**记录集**，并以递归方式编写的每个每条记录**记录集**到调试窗口。
+ 下面的 Visual Basic 代码演示如何打开任意 XML 文件、构造分层**记录集**，以及以递归方式将每个**记录集**的每个记录写入 "调试" 窗口。
 
- 下面是包含股市报价的简单 XML 文件。 下面的代码使用此文件来构造两个级别分层**记录集**。
+ 下面是包含股票行情的简单 XML 文件。 下面的代码使用此文件来构造两级分层**记录集**。
 
 ```xml
 <portfolio>
@@ -184,7 +184,7 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
 </portfolio>
 ```
 
- 以下是两个 Visual Basic sub 过程。 创建第一个**记录集**并将其传递给*WalkHier* sub 的过程中，哪些以递归方式将沿层次结构，编写每个指导**字段**每个记录中每个**记录集**到调试窗口。
+ 下面是两个 Visual Basic sub 过程。 第一个创建该**记录集**并将其传递给*WalkHier* sub 过程，该过程将以递归方式遍历层次结构，将每个记录**集中**每个记录的每个**字段**写入调试窗口。
 
 ```vb
 Private Sub BrowseHierRecordset()

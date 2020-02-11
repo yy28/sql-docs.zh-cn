@@ -1,5 +1,5 @@
 ---
-title: sp_autostats (Transact-sql) |Microsoft Docs
+title: sp_autostats （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e3fdb095ed869ba2e8f060bdba7a3dc9db81a405
-ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70026251"
 ---
 # <a name="sp_autostats-transact-sql"></a>sp_autostats (Transact-SQL)
@@ -30,9 +30,9 @@ ms.locfileid: "70026251"
 
   显示或更改索引、统计信息对象、表或索引视图的自动统计信息更新选项 AUTO_UPDATE_STATISTICS。  
   
- 有关 AUTO_UPDATE_STATISTICS 选项的详细信息, 请参阅[ALTER DATABASE SET 选项&#40;&#41; transact-sql](../../t-sql/statements/alter-database-transact-sql-set-options.md)和[STATISTICS](../../relational-databases/statistics/statistics.md)。  
+ 有关 AUTO_UPDATE_STATISTICS 选项的详细信息，请参阅[transact-sql&#41;和 STATISTICS &#40;ALTER DATABASE SET 选项](../../t-sql/statements/alter-database-transact-sql-set-options.md)。 [](../../relational-databases/statistics/statistics.md)  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,35 +44,35 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @tblname = ] 'table_or_indexed_view_name'`要对其显示 AUTO_UPDATE_STATISTICS 选项的表或索引视图的名称。 *table_or_indexed_view_name*的值为**nvarchar (776)** , 无默认值。  
+`[ @tblname = ] 'table_or_indexed_view_name'`要在其上显示 AUTO_UPDATE_STATISTICS 选项的表或索引视图的名称。 *table_or_indexed_view_name*为**nvarchar （776）**，无默认值。  
   
-`[ @flagc = ] 'stats_flag'`将 AUTO_UPDATE_STATISTICS 选项更新为以下值之一:  
+`[ @flagc = ] 'stats_flag'`将 AUTO_UPDATE_STATISTICS 选项更新为以下值之一：  
   
  **开启**= 打开  
   
  **关**= 关闭  
   
- 如果未指定*stats_flag* , 则显示当前的 AUTO_UPDATE_STATISTICS 设置。 *stats_flag*的值为**varchar (10)** , 默认值为 NULL。  
+ 如果未指定*stats_flag* ，则显示当前 AUTO_UPDATE_STATISTICS 设置。 *stats_flag*的值为**varchar （10）**，默认值为 NULL。  
   
-`[ @indname = ] 'statistics_name'`要在其上显示或更新 AUTO_UPDATE_STATISTICS 选项的统计信息的名称。 若要显示索引的统计信息，您可以使用索引的名称；索引及其相应统计信息对象具有相同的名称。  
+`[ @indname = ] 'statistics_name'`显示或更新 AUTO_UPDATE_STATISTICS 选项的统计信息的名称。 若要显示索引的统计信息，您可以使用索引的名称；索引及其相应统计信息对象具有相同的名称。  
   
- *statistics_name*的值为**sysname**, 默认值为 NULL。  
+ *statistics_name*的默认值为**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
- 如果指定了*stats_flag* , 则**sp_autostats**将报告已执行但未返回结果集的操作。  
+ 如果指定了*stats_flag* ， **sp_autostats**会报告已执行但未返回结果集的操作。  
   
- 如果未指定*stats_flag* , 则**sp_autostats**将返回以下结果集。  
+ 如果未指定*stats_flag* ， **sp_autostats**将返回以下结果集。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**Index Name**|**varchar(60)**|索引或统计信息的名称。|  
-|**AUTOSTATS**|**varchar(3)**|AUTO_UPDATE_STATISTICS 选项的当前值。|  
+|**索引名称**|**varchar(60)**|索引或统计信息的名称。|  
+|**AUTOSTATS**|**varchar （3）**|AUTO_UPDATE_STATISTICS 选项的当前值。|  
 |**上次更新时间**|**datetime**|最近更新统计信息的日期。|  
   
- 表或索引视图的结果集包括为索引创建的统计信息、使用 AUTO_CREATE_STATISTICS 选项生成的单列统计信息, 以及使用[CREATE statistics](../../t-sql/statements/create-statistics-transact-sql.md)语句创建的统计信息。  
+ 表或索引视图的结果集包括为索引创建的统计信息、使用 AUTO_CREATE_STATISTICS 选项生成的单列统计信息以及使用[CREATE statistics](../../t-sql/statements/create-statistics-transact-sql.md)语句创建的统计信息。  
   
 ## <a name="remarks"></a>备注  
  如果禁用了指定的索引，或者指定的表具有被禁用的聚集索引，将显示错误消息。  
@@ -80,7 +80,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
  对于内存优化表，AUTO_UPDATE_STATISTICS 始终为 OFF。  
   
 ## <a name="permissions"></a>权限  
- 若要更改 AUTO_UPDATE_STATISTICS 选项, 需要具有**db_owner**固定数据库角色的成员身份或对*table_name*的 ALTER 权限。若要显示 AUTO_UPDATE_STATISTICS 选项, 需要具有**public**角色的成员身份。  
+ 若要更改 AUTO_UPDATE_STATISTICS 选项，需要**db_owner**固定数据库角色的成员身份，或者对*table_name*具有 ALTER 权限。若要显示 AUTO_UPDATE_STATISTICS 选项，要求具有**public**角色的成员身份。  
   
 ## <a name="examples"></a>示例  
   
@@ -114,14 +114,14 @@ EXEC sp_autostats 'Production.Product', 'OFF', AK_Product_Name;
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [统计信息](../../relational-databases/statistics/statistics.md)   
  [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [数据库引擎存储过程&#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)   
+ [数据库引擎存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;创建统计信息](../../t-sql/statements/create-statistics-transact-sql.md)   
  [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
  [DROP STATISTICS (Transact-SQL)](../../t-sql/statements/drop-statistics-transact-sql.md)   
- [sp_createstats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)   
+ [sp_createstats &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)   
  [UPDATE STATISTICS (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

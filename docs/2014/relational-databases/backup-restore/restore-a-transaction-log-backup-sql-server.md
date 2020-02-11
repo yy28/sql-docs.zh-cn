@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a0cfc68f78ae9ca4022abfb59a33d756e82a6f2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875674"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>还原事务日志备份 (SQL Server)
@@ -47,7 +47,7 @@ ms.locfileid: "62875674"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a> 先决条件  
+###  <a name="Prerequisites"></a>先决条件  
   
 -   备份必须按照其创建顺序进行还原。 在还原特定的事务日志备份之前，必须先还原下列以前备份，而不回滚未提交的事务，即 WITH NORECOVERY：  
   
@@ -57,9 +57,9 @@ ms.locfileid: "62875674"
   
          有关事务日志备份的详细信息，请参阅[事务日志备份 (SQL Server)](transaction-log-backups-sql-server.md) 和[应用事务日志备份 (SQL Server)](apply-transaction-log-backups-sql-server.md)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  RESTORE 权限被授予那些成员身份信息始终可由服务器使用的角色。 因为只有在固定数据库可以访问且没有损坏时（在执行 RESTORE 时并不会总是这样）才能检查固定数据库角色成员身份，所以 **db_owner** 固定数据库角色成员没有 RESTORE 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -69,7 +69,7 @@ ms.locfileid: "62875674"
   
 #### <a name="to-restore-a-transaction-log-backup"></a>还原事务日志备份  
   
-1.  连接到相应的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例之后，在对象资源管理器中，单击服务器名称以展开服务器树。  
+1.  连接到相应的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例之后，在“对象资源管理器”中，单击服务器名称以展开服务器树。  
   
 2.  展开 **“数据库”** ，然后根据数据库的不同，选择用户数据库，或展开 **“系统数据库”** ，再选择系统数据库。  
   
@@ -96,25 +96,25 @@ ms.locfileid: "62875674"
   
      下表列出了网格的列标题并对列值进行了说明。  
   
-    |Header|ReplTest1|  
+    |标头|值|  
     |------------|-----------|  
     |**还原**|如果复选框处于选中状态，则指示要还原相应的备份集。|  
     |**名称**|备份集的名称。|  
-    |**组件**|备份组件：**数据库**，**文件**，或\<空白 > （对于事务日志）。|  
-    |**“数据库”**|备份操作中涉及的数据库的名称。|  
+    |组件 |备份组件：“数据库”、“文件”或 \<空白>（对于事务日志）   。|  
+    |**Database**|备份操作中涉及的数据库的名称。|  
     |**开始日期**|备份操作开始的日期和时间（按客户端的区域设置显示）。|  
     |**完成日期**|备份操作完成的日期和时间（按客户端的区域设置显示）。|  
-    |**“第一个 LSN”**|备份集中第一个事务的日志序列号。 对于文件备份为空。|  
-    |**“最后一个 LSN”**|备份集中最后一个事务的日志序列号。 对于文件备份为空。|  
+    |**第一个 LSN**|备份集中第一个事务的日志序列号。 对于文件备份为空。|  
+    |**最后一个 LSN**|备份集中最后一个事务的日志序列号。 对于文件备份为空。|  
     |**检查点 LSN**|创建备份时最后一个检查点的日志序号。|  
     |**完整 LSN**|最近的数据库完整备份的日志序列号。|  
     |**Server**|执行备份操作的数据库引擎实例的名称。|  
     |**用户名**|执行备份操作的用户的名称。|  
-    |**Size**|备份集的大小（字节）。|  
+    |**大小**|备份集的大小（字节）。|  
     |**位置**|备份集在卷中的位置。|  
     |**过期日期**|备份集过期的日期和时间。|  
   
-7.  选择下列选项之一：  
+7.  选择以下方案之一：  
   
     -   **时间点**  
   
@@ -128,14 +128,14 @@ ms.locfileid: "62875674"
   
          下表列出了网格的列标题并对列值进行了说明。  
   
-        |Header|ReplTest1|  
+        |标头|值|  
         |------------|-----------|  
         |\<blank>|显示一个用于选择标记的复选框。|  
         |**事务标记**|提交事务时，用户为标记的事务指定的名称。|  
         |**Date**|事务的提交日期及时间。 事务日期和时间显示为 **msdbgmarkhistory** 表中所记录的日期和时间，而非客户端计算机的日期和时间。|  
         |**说明**|提交事务时，用户为标记的事务指定的说明（如果有的话）。|  
         |**LSN**|所标记事务的日志序列号。|  
-        |**“数据库”**|提交标记的事务时所在数据库的名称。|  
+        |**Database**|提交标记的事务时所在数据库的名称。|  
         |**用户名**|提交标记事务的数据库用户的名称。|  
   
 8.  若要查看或选择高级选项，请在 **“选择页”** 窗格中单击 **“选项”** 。  
@@ -146,9 +146,9 @@ ms.locfileid: "62875674"
   
          将已发布的数据库还原到创建该数据库的服务器之外的服务器时，保留复制设置。  
   
-         此选项，同时仅提供**使数据库处于可以使用通过回滚未提交的事务...** 选项 （稍后介绍的），这是等效于使用还原备份`RECOVERY`选项。  
+         此选项仅在以下情况下可用 **： "回滚未提交的事务，使数据库保持**可用状态 ..." 选项（稍后将对此进行介绍），这等效于使用`RECOVERY`选项还原备份。  
   
-         选中此选项相当于使用`KEEP_REPLICATION`选项[!INCLUDE[tsql](../../includes/tsql-md.md)]`RESTORE`语句。  
+         选中此选项等效于在`KEEP_REPLICATION` [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE`语句中使用选项。  
   
     -   **还原每个备份之前进行提示**  
   
@@ -162,19 +162,19 @@ ms.locfileid: "62875674"
   
          使还原的数据库仅供 **db_owner**、 **dbcreator**或 **sysadmin**的成员使用。  
   
-         选择此选项等效于使用`RESTRICTED_USER`选项[!INCLUDE[tsql](../../includes/tsql-md.md)]`RESTORE`语句。  
+         选中此选项是在`RESTRICTED_USER` [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE`语句中使用选项的同义词。  
   
 10. 对于 **“恢复状态”** 选项，请指定还原操作之后的数据库状态。  
   
     -   **回退未提交的事务，使数据库处于可以使用的状态。无法还原其他事务日志。(RESTORE WITH RECOVERY)**  
   
-         恢复数据库。 此选项等效于`RECOVERY`选项[!INCLUDE[tsql](../../includes/tsql-md.md)]`RESTORE`语句。  
+         恢复数据库。 此选项等效于`RECOVERY` [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE`语句中的选项。  
   
          请仅在没有要还原的日志文件时选择此选项。  
   
     -   **不对数据库执行任何操作，不回退未提交的事务。可以还原其他事务日志。(RESTORE WITH NORECOVERY)**  
   
-         使数据库处于未恢复的 `RESTORING` 状态。 此选项相当于使用`NORECOVERY`选项[!INCLUDE[tsql](../../includes/tsql-md.md)]`RESTORE`语句。  
+         使数据库处于未恢复的 `RESTORING` 状态。 此选项等效于在`NORECOVERY` [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE`语句中使用选项。  
   
          如果选择此选项， **“保留复制设置”** 选项将不可用。  
   
@@ -183,7 +183,7 @@ ms.locfileid: "62875674"
   
     -   **使数据库处于只读模式。撤消未提交的事务，但将撤消操作保存在文件中，以便可使恢复效果逆转。(RESTORE WITH STANDBY)**  
   
-         使数据库处于备用状态。 此选项相当于使用`STANDBY`选项[!INCLUDE[tsql](../../includes/tsql-md.md)]`RESTORE`语句。  
+         使数据库处于备用状态。 此选项等效于在`STANDBY` [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE`语句中使用选项。  
   
          选择此选项需要您指定一个备用文件。  
   
@@ -291,7 +291,7 @@ GO
   
 -   [备份事务日志 (SQL Server)](back-up-a-transaction-log-sql-server.md)  
   
--   [还原数据库备份&#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
+-   [还原数据库备份 &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
 -   [在完整恢复模式下将数据库还原到故障点 (Transact-SQL)](restore-database-to-point-of-failure-full-recovery.md)  
   
@@ -299,7 +299,7 @@ GO
   
 -   [将数据库还原到标记的事务 (SQL Server Management Studio)](restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [应用事务日志备份 (SQL Server)](apply-transaction-log-backups-sql-server.md)  
   

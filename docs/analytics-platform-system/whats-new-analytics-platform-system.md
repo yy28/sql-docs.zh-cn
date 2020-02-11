@@ -11,10 +11,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3845470668e4cffeda7a48ed01c144eb53f671b9
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399423"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>分析平台系统中的新增功能-横向扩展 MPP 数据仓库
@@ -220,7 +220,7 @@ HPE 或 DELL 提供的新设备包括所有最新的更新以及：
 - 更新到 DDR4 Dimm
 - 提高了 DIMM 吞吐量
 
-**集成度**
+**集成**
 
 - 完全限定的域名（FQDN）支持使你可以为设备设置域信任。 
 - 若要使用 FQDN，需要在升级过程中执行完整升级和选择加入。 

@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4d26efd0d7ebd395dd4453e773bc5bb089ae3792
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73783203"
 ---
 # <a name="bcp_collen"></a>bcp_collen
@@ -53,8 +53,8 @@ RETCODE bcp_collen (
 ## <a name="returns"></a>返回  
  SUCCEED 或 FAIL。  
   
-## <a name="remarks"></a>注释  
- 使用**bcp_collen**函数，可以在将数据复制到[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，更改特定列的程序变量中的数据长度。  
+## <a name="remarks"></a>备注  
+ 使用**bcp_collen**函数，可以在将数据复制到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]具有[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)时，更改特定列的程序变量中的数据长度。  
   
  最初，数据长度是在调用[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)时确定的。 如果数据长度在对**bcp_sendrow**的调用之间发生更改，并且没有使用长度前缀或终止符，则可以调用**bcp_collen**来重置长度。 对**bcp_sendrow**的下一次调用使用由对**bcp_collen**的调用设置的长度。  
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eb59abed8be5649d9258bce0f279222e4498b547
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035670"
 ---
 # <a name="qndynamics-event-class"></a>QN:Dynamics 事件类
@@ -26,7 +26,7 @@ ms.locfileid: "63035670"
   
 ## <a name="qndynamics-event-class-data-columns"></a>QN:Dynamics 事件类的数据列  
   
-|数据列|类型|Description|列号|可筛选|  
+|数据列|类型|说明|列号|可筛选|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |ApplicationName|`nvarchar`|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |ClientProcessID|`int`|由主机分配给正在运行客户端应用程序的进程的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|9|是|  
@@ -34,7 +34,7 @@ ms.locfileid: "63035670"
 |DatabaseName|`nvarchar`|正在运行用户语句的数据库的名称。|35|是|  
 |EventClass|`int`|事件类型 = 202。|27|否|  
 |EventSequence|`int`|此事件的序列号。|51|否|  
-|EventSubClass|`nvarchar`|事件子类的类型，提供有关每个事件类的进一步信息。 此列可能包含下列值：<br /><br /> 时钟运行已启动：表示将在后台线程[!INCLUDE[ssDE](../../includes/ssde-md.md)]计划过期参数表，清理已启动。<br /><br /> 时钟运行已完成：表示将在后台线程[!INCLUDE[ssDE](../../includes/ssde-md.md)]计划过期参数表，清理已完成。<br /><br /> 主清除任务已开始：指示清除 （垃圾收集） 删除过期的查询通知订阅数据的开始。<br /><br /> 主清除任务已完成：指示清除 （垃圾收集） 删除过期的查询通知订阅数据的完成时间。<br /><br /> 主清除任务已跳过：指示[!INCLUDE[ssDE](../../includes/ssde-md.md)]未执行清除 （垃圾收集） 删除过期的查询通知订阅数据。|21|是|  
+|EventSubClass|`nvarchar`|事件子类的类型，提供有关每个事件类的进一步信息。 此列可能包含下列值：<br /><br /> 时钟运行已启动：指示中[!INCLUDE[ssDE](../../includes/ssde-md.md)]计划清除过期参数表的后台线程已启动。<br /><br /> 时钟运行已完成：指示中[!INCLUDE[ssDE](../../includes/ssde-md.md)]计划清除过期参数表的后台线程已完成。<br /><br /> 主清除任务已启动：指示用于删除过期查询通知订阅数据的清除（垃圾收集）的开始时间。<br /><br /> 主清除任务已完成：指示用于删除过期查询通知订阅数据的清除（垃圾收集）的完成时间。<br /><br /> 主清除任务已跳过：指示[!INCLUDE[ssDE](../../includes/ssde-md.md)]未执行清除（垃圾收集）以删除过期的查询通知订阅数据。|21|是|  
 |GroupID|`int`|在其中激发 SQL 跟踪事件的工作负荷组的 ID。|66|是|  
 |HostName|`nvarchar`|正在运行客户端程序的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|是|  
 |IsSystem|`int`|指示事件是发生在系统进程中还是发生在用户进程中。<br /><br /> 0 = 用户<br /><br /> 1 = 系统|60|否|  

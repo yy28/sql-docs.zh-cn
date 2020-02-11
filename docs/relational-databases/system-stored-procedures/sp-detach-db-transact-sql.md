@@ -19,10 +19,10 @@ ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ec7758ad2f9443ad29f0da799e3f286612f95cab
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72278182"
 ---
 # <a name="sp_detach_db-transact-sql"></a>sp_detach_db (Transact-SQL)
@@ -31,9 +31,9 @@ ms.locfileid: "72278182"
   从服务器实例中分离当前未使用的数据库，并且可以选择在分离之前为所有表运行 UPDATE STATISTICS。  
   
 > [!IMPORTANT]  
->  要分离复制的数据库，该数据库必须是未发布的数据库。 有关详细信息，请参阅本主题后面的 "备注" 部分。  
+>  要分离复制的数据库，该数据库必须是未发布的数据库。 有关详细信息，请参阅本主题后面的“备注”部分。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,28 +45,28 @@ sp_detach_db [ @dbname= ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @dbname = ] 'database_name'` 是要分离的数据库的名称。 *database_name*是**sysname**值，默认值为 NULL。  
+`[ @dbname = ] 'database_name'`要分离的数据库的名称。 *database_name*是**sysname**值，默认值为 NULL。  
   
-`[ @skipchecks = ] 'skipchecks'` 指定是否要跳过或运行更新统计信息。 *skipchecks*的值为**nvarchar （10）** ，默认值为 NULL。 若要跳过更新统计信息，请指定**true**。 若要显式运行 UPDATE STATISTICS，请指定**false**。  
+`[ @skipchecks = ] 'skipchecks'`指定是否要跳过或运行更新统计信息。 *skipchecks*的值为**nvarchar （10）** ，默认值为 NULL。 若要跳过更新统计信息，请指定**true**。 若要显式运行 UPDATE STATISTICS，请指定**false**。  
   
  默认情况下，执行 UPDATE STATISTICS 可更新有关表和索引中的数据的信息。 对于要移动到只读介质的数据库，执行 UPDATE STATISTICS 非常有用。  
   
-`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` 指定在数据库分离操作过程中不会删除与所分离的数据库关联的全文索引文件。 *KeepFulltextIndexFile*的值为**nvarchar （10）** ，默认值为**true**。 如果*KeepFulltextIndexFile*为**false**，则将删除与数据库关联的所有全文索引文件和全文索引的元数据，除非该数据库是只读的。 如果为 NULL 或**true**，则保留与全文相关的元数据。  
+`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'`指定在数据库分离操作过程中不会删除与所分离的数据库关联的全文索引文件。 *KeepFulltextIndexFile*的值为**nvarchar （10）** ，默认值为**true**。 如果*KeepFulltextIndexFile*为**false**，则将删除与数据库关联的所有全文索引文件和全文索引的元数据，除非该数据库是只读的。 如果为 NULL 或**true**，则保留与全文相关的元数据。  
   
 > [!IMPORTANT]
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未来版本中将删除 **\@keepfulltextindexfile**参数。 请不要在新的开发工作中使用此参数，并尽快修改当前仍在使用此参数的应用程序。  
+>  未来版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中将删除** \@keepfulltextindexfile**参数。 请不要在新的开发工作中使用此参数，并尽快修改当前仍在使用此参数的应用程序。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
- InclusionThresholdSetting  
+ 无  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  分离数据库时，会删除其所有元数据。 如果数据库是任何登录帐户的默认数据库，则**master**会成为其默认数据库。  
   
 > [!NOTE]  
->  有关如何查看所有登录帐户的默认数据库的信息，请参阅[sp_helplogins &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)。 如果你具有所需的权限，则可以使用[ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md)为登录名分配新的默认数据库。  
+>  有关如何查看所有登录帐户的默认数据库的信息，请参阅[&#40;transact-sql&#41;sp_helplogins ](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)。 如果你具有所需的权限，则可以使用[ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md)为登录名分配新的默认数据库。  
   
 ## <a name="restrictions"></a>限制  
  如果符合下列任一条件，则无法分离数据库：  
@@ -82,7 +82,7 @@ sp_detach_db [ @dbname= ] 'database_name'
   
 -   数据库中存在数据库快照。  
   
-     必须首先删除所有数据库快照，然后才能分离数据库。 有关详细信息，请参阅[删除数据库快照 (Transact SQL)](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)。  
+     必须首先删除所有数据库快照，然后才能分离数据库。 有关详细信息，请参阅 [Drop a Database Snapshot &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md).  
   
     > [!NOTE]  
     >  不能分离或附加数据库快照。  
@@ -102,7 +102,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 
  在将数据库设置为 SINGLE_USER 之前，应验证 AUTO_UPDATE_STATISTICS_ASYNC 选项是否设置为 OFF。 在此选项设置为 ON 时，用于更新统计信息的后台线程将与数据库建立连接，您将无法以单用户模式访问数据库。 有关详细信息，请参阅[将数据库设置为单用户模式](../databases/set-a-database-to-single-user-mode.md)。
 
- 例如，下面的 `ALTER DATABASE` 语句获取所有当前用户从数据库断开连接后对 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的独占访问权限。  
+ 例如，下面`ALTER DATABASE`的语句在所有当前用户从数据库[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]断开连接后，获得对数据库的独占访问权限。  
   
 ```  
 USE master;  
@@ -117,11 +117,11 @@ GO
 ## <a name="reattaching-a-database"></a>重新附加数据库  
  可以使用 CREATE DATABASE（带有 FOR ATTACH 或 FOR ATTACH_REBUILD_LOG 选项）保留并重新附加分离文件。 这些文件可以移动并附加到其他服务器上。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有**sysadmin**固定服务器角色的成员身份或数据库**db_owner**角色的成员身份。  
   
 ## <a name="examples"></a>示例  
- 下面的示例将 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库与设置为 true 的*skipchecks*分离。  
+ 下面的示例将[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] *skipchecks*设置为 true 的数据库进行分离。  
   
 ```  
 EXEC sp_detach_db 'AdventureWorks2012', 'true';  
@@ -135,8 +135,8 @@ exec sp_detach_db @dbname='AdventureWorks2012'
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
- [数据库分离和附加 (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
+ [ALTER DATABASE &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [数据库分离和附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [分离数据库](../../relational-databases/databases/detach-a-database.md)  
   

@@ -11,16 +11,16 @@ ms.assetid: e93027ab-9e60-47b7-ba96-8289dae32a22
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d51d92ae02084ea46c2a8bd2d73a27f0154e1a95
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083146"
 ---
 # <a name="connecting-to-a-data-source-or-driver"></a>连接数据源或驱动程序
-应用程序可以连接到任意数量的驱动程序和数据源。 这些可以是各种驱动程序和数据源中，相同的驱动程序和各种数据源，或者甚至多个连接到相同的驱动程序和数据源。  
+应用程序可以连接到任意数量的驱动程序和数据源。 这些驱动程序和数据源可以是各种驱动程序和数据源、同一驱动程序和各种数据源，甚至是与同一驱动程序和数据源的多个连接。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [分配环境句柄](../../../odbc/reference/develop-app/allocating-the-environment-handle.md)  
   
@@ -38,4 +38,4 @@ ms.locfileid: "68083146"
   
 -   [从数据源或驱动程序断开连接](../../../odbc/reference/develop-app/disconnecting-from-a-data-source-or-driver.md)  
   
--   [在连接过程中的驱动程序管理器角色](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)
+-   [连接过程中的驱动程序管理器的角色](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)

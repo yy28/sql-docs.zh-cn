@@ -16,13 +16,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fa08a7f84cd413f1212cc73d4242b5da70fd33eb
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73882281"
 ---
-# <a name="delete-a-publication"></a>Delete a Publication
+# <a name="delete-a-publication"></a>删除发布
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中删除发布。  
   
  **本主题内容**  
@@ -54,14 +54,14 @@ ms.locfileid: "73882281"
   
 #### <a name="to-delete-a-snapshot-or-transactional-publication"></a>删除快照发布或事务发布  
   
-1.  执行以下操作之一：  
+1.  执行下列操作之一：  
   
     -   若要删除单个发布，请在发布服务器上，对发布数据库执行 [sp_droppublication](/sql/relational-databases/system-stored-procedures/sp-droppublication-transact-sql) 。  
   
-    -   若要删除发布数据库中的所有发布并删除其中的所有复制对象，请在发布服务器上执行 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) 。 为 **\@类型**指定 `tran` 的值。 （可选）如果无法访问分发服务器，或者数据库的状态为可疑或脱机，则将 **force 的值指定为 1** **\@** 。 （可选）如果未对发布数据库执行 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql)，请为 \@dbname 指定数据库的名称。  
+    -   若要删除发布数据库中的所有发布并删除其中的所有复制对象，请在发布服务器上执行 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) 。 将类型的值`tran`指定** \@** 为。 （可选）如果无法访问分发服务器，或者数据库的状态为可疑或脱机，则将 \@force 的值指定为 1   。 （可选）如果未对发布数据库执行 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql)，请为 \@dbname 指定数据库的名称  。  
   
         > [!NOTE]  
-        >  将 **force 的值指定为 1 可能会使与复制相关的发布对象保留在数据库中** **\@** 。  
+        >  将 \@force 的值指定为 1 可能会使与复制相关的发布对象保留在数据库中   。  
   
 2.  如果此数据库中没有任何其他发布，则执行 [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql) 以禁止当前数据库使用快照复制或事务复制进行发布。  
   
@@ -69,14 +69,14 @@ ms.locfileid: "73882281"
   
 #### <a name="to-delete-a-merge-publication"></a>删除合并发布  
   
-1.  执行以下操作之一：  
+1.  执行下列操作之一：  
   
     -   若要删除单个发布，请在发布服务器上对发布数据库执行 [sp_dropmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql)。  
   
-    -   若要删除发布数据库中的所有发布并删除其中的所有复制对象，请在发布服务器上执行 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) 。 为 **\@类型**指定 `merge` 的值。 （可选）如果无法访问分发服务器，或者数据库的状态为可疑或脱机，则将 **force 的值指定为 1** **\@** 。 （可选）如果未对发布数据库执行 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql)，请为 \@dbname 指定数据库的名称。  
+    -   若要删除发布数据库中的所有发布并删除其中的所有复制对象，请在发布服务器上执行 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) 。 将类型的值`merge`指定** \@** 为。 （可选）如果无法访问分发服务器，或者数据库的状态为可疑或脱机，则将 \@force 的值指定为 1   。 （可选）如果未对发布数据库执行 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql)，请为 \@dbname 指定数据库的名称  。  
   
         > [!NOTE]  
-        >  将 **force 的值指定为 1 可能会使与复制相关的发布对象保留在数据库中** **\@** 。  
+        >  将 \@force 的值指定为 1 可能会使与复制相关的发布对象保留在数据库中   。  
   
 2.  如果此数据库中没有任何其他发布，则执行 [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql) 以禁止当前数据库使用合并复制进行发布。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "73882281"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与发布服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.TransPublication> 类的实例。  
+2.  创建的 <xref:Microsoft.SqlServer.Replication.TransPublication> 类的实例。  
   
 3.  设置发布的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的连接。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "73882281"
   
 6.  （可选）如果此数据库中不存在其他事务发布，则可按照下面的步骤为事务发布禁用此数据库：  
   
-    1.  创建 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> 类的实例。 将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 实例。  
+    1.  创建的 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> 类的实例。 将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 实例。  
   
     2.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果该方法返回 `false`，请确认数据库是否存在。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "73882281"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与发布服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.MergePublication> 类的实例。  
+2.  创建的 <xref:Microsoft.SqlServer.Replication.MergePublication> 类的实例。  
   
 3.  设置发布的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的连接。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "73882281"
   
 6.  （可选）如果此数据库中不存在其他合并发布，则可按照下面的步骤为合并发布禁用此数据库：  
   
-    1.  创建 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> 类的实例。 将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 实例。  
+    1.  创建的 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> 类的实例。 将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 实例。  
   
     2.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果该方法返回 `false`，请验证数据库是否存在。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "73882281"
  [!code-vb[HowTo#rmo_vb_DropMergePub](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_dropmergepub)]  
   
 ## <a name="see-also"></a>另请参阅  
- [复制系统存储过程概念](../concepts/replication-system-stored-procedures-concepts.md)   
+ [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
  [发布数据和数据库对象](publish-data-and-database-objects.md)  
   
   

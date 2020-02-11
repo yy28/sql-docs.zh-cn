@@ -1,5 +1,5 @@
 ---
-title: DeleteRule 属性示例 (VB) |Microsoft Docs
+title: DeleteRule 属性示例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 9ba00118-a80d-4a6d-a7d6-4f5492fb7ded
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 95f27c6ad6e4ae7cdfd0938f6c82a9932751fbc4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966401"
 ---
 # <a name="deleterule-property-example-vb"></a>DeleteRule 属性示例 (VB)
-此示例演示[DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md)的属性[密钥](../../../ado/reference/adox-api/key-object-adox.md)对象。 该代码将追加一个新[表](../../../ado/reference/adox-api/table-object-adox.md)，然后定义新的主要密钥，设置**DeleteRule**到**adRICascade**。  
+此示例演示[密钥](../../../ado/reference/adox-api/key-object-adox.md)对象的[DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md)属性。 该代码追加一个新[表](../../../ado/reference/adox-api/table-object-adox.md)，然后定义新的主键，并将**DeleteRule**设置为**adRICascade**。  
   
 ```  
 ' BeginDeleteRuleVB  
@@ -84,6 +84,6 @@ End Sub
 ' EndDeleteRuleVB  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [DeleteRule 属性 (ADOX)](../../../ado/reference/adox-api/deleterule-property-adox.md)   
+## <a name="see-also"></a>另请参阅  
+ [DeleteRule 属性（ADOX）](../../../ado/reference/adox-api/deleterule-property-adox.md)   
  [项对象 (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)

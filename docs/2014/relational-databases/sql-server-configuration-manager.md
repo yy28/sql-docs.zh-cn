@@ -22,14 +22,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 123f0fcececee98826bf70b929a9857bbaff32dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63044452"
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server 配置管理器
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器是一种工具，用于管理与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]相关联的服务、配置 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用的网络协议以及从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 客户端计算机管理网络连接配置。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器是一种可以通过“开始”菜单访问的 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理控制台管理单元，也可以将其添加到任何其他 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理控制台的显示界面中。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理控制台 (mmc.exe) 使用 Windows System32 文件夹中的 SQLServerManager10.msc 文件打开[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]配置管理器。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器是一种工具，用于管理与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]相关联的服务、配置 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用的网络协议以及从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 客户端计算机管理网络连接配置。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器是一种可以通过“开始”菜单访问的 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理控制台管理单元，也可以将其添加到任何其他 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理控制台的显示界面中。 [!INCLUDE[msCoName](../includes/msconame-md.md)]管理控制台（mmc.exe）使用 Windows System32 文件夹中的 Sqlservermanager10.msc 文件来打开[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager。  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器和 SQL Server Management Studio 使用 Window Management Instrumentation (WMI) 来查看和更改某些服务器设置。 WMI 提供了一种统一的方式，用于与管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 工具所请求注册表操作的 API 调用进行连接，并可对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器管理单元组件选定的 SQL 服务提供增强的控制和操作。 有关配置与 WMI 相关的权限的信息，请参阅 [在 SQL Server 工具中将 WMI 配置为显示服务器状态](../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md)。  
   
@@ -37,9 +37,9 @@ ms.locfileid: "63044452"
 >  因为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器是 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理控制台程序的一个管理单元而不是单独的程序，所以 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器在新版本的 Windows 中不显示为一个应用程序。  
 > 
 >  -   **Windows 10**：  
->          若要打开[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]配置管理器，然后在**起始页**，键入 SQLServerManager12.msc (对于[!INCLUDE[ssSQL14](../includes/sssql14-md.md)])。 对于早期版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，请将 12 替换为较小的数字。 单击 SQLServerManager12.msc 会打开配置管理器。 若要固定到起始页或任务栏配置管理器，右键单击 SQLServerManager12.msc，然后依次**打开文件位置**。 在 Windows 文件资源管理器中，右键单击 SQLServerManager12.msc，，然后单击**固定到开始屏幕**或**锁定到任务栏**。  
+>          若要[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]打开 Configuration Manager，请在 "**开始" 页**上键入 sqlservermanager12.msc （ [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]对于）。 对于早期版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，请将 12 替换为较小的数字。 单击 SQLServerManager12.msc 可打开“配置管理器”。 若要将 Configuration Manager 固定到 "起始页" 或 "任务栏"，请右键单击 "Sqlservermanager12.msc"，然后单击 "**打开文件位置**"。 在 Windows 文件资源管理器中，右键单击 "Sqlservermanager12.msc"，然后单击 "**固定到****任务栏**"。  
 > -   **Windows 8**：  
->          若要打开[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]配置管理器，请在**搜索**超级按钮**应用**，类型**SQLServerManager\<版本 >.msc**如`SQLServerManager12.msc`，然后按**Enter**。  
+>          若要[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]打开 Configuration Manager，请在 "**搜索**" 超级按钮中的 "**应用**" 下，键入`SQLServerManager12.msc` **Sqlservermanager version>.msc\<version>** （如），然后按**enter**。  
   
  若要使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器在另一台计算机上启动、停止、暂停、恢复或配置服务，请参阅[连接到另一台计算机（SQL Server 配置管理器）](../database-engine/configure-windows/scm-services-connect-to-another-computer.md)。  
   
@@ -61,7 +61,8 @@ ms.locfileid: "63044452"
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用配置管理器可以管理服务器和客户端网络协议，其中包括强制协议加密、查看别名属性或启用/禁用协议等功能。  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器可以创建或删除别名、更改使用协议的顺序或查看服务器别名的属性，其中包括：  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器可以创建或删除别名、更改使用协议的顺序或查看服务器别名的属性，其中包括：  
   
 -   服务器别名 — 客户端所连接到的计算机的服务器别名。  
   
@@ -72,7 +73,8 @@ ms.locfileid: "63044452"
  虽然某些操作（例如启动和停止服务）应使用群集管理器，但使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器也可以查看有关故障转移群集实例的信息。  
   
 ### <a name="available-network-protocols"></a>可用的网络协议  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持共享内存、TCP/IP 和命名管道协议。 有关选择网络协议的信息，请参阅 [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md)。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支持 VIA、Banyan VINES 顺序包协议 (SPP)、多协议、AppleTalk 或 NWLink IPX/SPX 网络协议。 以前使用这些协议连接的客户端必须选择其他协议才能连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 不能使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器来配置 WinSock 代理。 若要配置 WinSock 代理，请参阅 ISA Server 文档。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持共享内存、TCP/IP 和命名管道协议。 有关选择网络协议的信息，请参阅 [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md)。 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支持 VIA、Banyan VINES 顺序包协议 (SPP)、多协议、AppleTalk 或 NWLink IPX/SPX 网络协议。 以前使用这些协议连接的客户端必须选择其他协议才能连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 不能使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器来配置 WinSock 代理。 若要配置 WinSock 代理，请参阅 ISA Server 文档。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [管理服务操作指南主题（SQL Server 配置管理器）](../database-engine/managing-services-how-to-topics-sql-server-configuration-manager.md)  
