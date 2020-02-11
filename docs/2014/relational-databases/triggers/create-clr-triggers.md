@@ -15,14 +15,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b68531b962b10785927c6212b2483f2d9c1d7d3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62698832"
 ---
 # <a name="create-clr-triggers"></a>创建 CLR 触发器
-  可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建数据库对象，该对象是在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行时 (CLR) 中创建的程序集中使用编程方法创建的。 可以利用由 CLR 提供的大量编程模型的数据库对象包括 DML 触发器、DDL 触发器、存储过程、函数、聚合函数和类型。  
+  您可以在中创建一个在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]公共语言运行时（CLR）中创建的程序集中进行编程的数据库对象。 可以利用由 CLR 提供的大量编程模型的数据库对象包括 DML 触发器、DDL 触发器、存储过程、函数、聚合函数和类型。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建 CLR 触发器（DML 或 DDL）包括以下步骤：  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62698832"
   
 -   [CREATE ASSEMBLY (Transact-SQL)](/sql/t-sql/statements/create-assembly-transact-sql)  
   
--   [ALTER ASSEMBLY (Transact-SQL)](/sql/t-sql/statements/alter-assembly-transact-sql)  
+-   [ALTER ASSEMBLY &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-assembly-transact-sql)  
   
 -   [DROP ASSEMBLY (Transact-SQL)](/sql/t-sql/statements/drop-assembly-transact-sql)  
   
@@ -50,9 +50,9 @@ ms.locfileid: "62698832"
   
 -   [CREATE TRIGGER (Transact-SQL)](/sql/t-sql/statements/create-trigger-transact-sql)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [DML 触发器](dml-triggers.md)   
- [公共语言运行时 (CLR) 集成编程概念](../clr-integration/common-language-runtime-clr-integration-programming-concepts.md)   
+ [公共语言运行时 &#40;CLR&#41; 集成编程概念](../clr-integration/common-language-runtime-clr-integration-programming-concepts.md)   
  [从 CLR 数据库对象进行数据访问](../clr-integration/data-access/data-access-from-clr-database-objects.md)  
   
   

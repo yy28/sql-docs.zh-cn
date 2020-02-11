@@ -17,17 +17,17 @@ ms.assetid: c2ca442c-03a8-4e0f-9e67-b300bb15962f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d602368475c6f1326cc615453116e898b1c1892f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107445"
 ---
 # <a name="sqldescribecol-and-sqlcolattribute"></a>SQLDescribeCol 和 SQLColAttribute
-**SQLDescribeCol**并**SQLColAttribute**用于检索结果集元数据。 这两个函数之间的差异在于**SQLDescribeCol**始终返回相同的五项信息 （列的名称、 数据类型、 精度、 小数位数和为 null 性），同时**SQLColAttribute**返回单个应用程序请求的信息片段。 但是， **SQLColAttribute**可以返回元数据，包括列的区分大小写一个丰富得多选择、 显示大小、 可更新性，以及可搜索性。  
+**SQLDescribeCol**和**SQLColAttribute**用于检索结果集元数据。 这两个函数之间的区别在于， **SQLDescribeCol**始终返回相同的五部分信息（列的名称、数据类型、精度、小数位数和可为 null 性），而**SQLColAttribute**则返回应用程序请求的一条信息。 但是， **SQLColAttribute**可能会返回更丰富的元数据，包括列的区分大小写、显示大小、可更新性和可搜索性。  
   
- 许多应用程序，尤其是那些仅显示数据，需要返回的元数据仅**SQLDescribeCol**。 对于这些应用程序，它是更快地使用**SQLDescribeCol**比**SQLColAttribute**因为单个调用中返回的信息。 其他应用程序，尤其是更新数据，需要返回的其他元数据**SQLColAttribute** ，因此使用这两个函数。 此外， **SQLColAttribute**支持驱动程序特定的元数据; 有关详细信息，请参阅[驱动程序特定数据类型、 描述符类型、 信息类型、 诊断类型和属性](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)。  
+ 许多应用程序（尤其是只显示数据的应用程序）只需要**SQLDescribeCol**返回的元数据。 对于这些应用程序，使用**SQLDescribeCol**比**SQLColAttribute**的速度更快，因为在单个调用中返回信息。 其他应用程序（尤其是更新数据的应用程序）需要**SQLColAttribute**返回的其他元数据，因此可使用这两种函数。 此外， **SQLColAttribute**还支持驱动程序特定的元数据;有关详细信息，请参阅[驱动程序特定的数据类型、描述符类型、信息类型、诊断类型和属性](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)。  
   
- 应用程序可以在任何时间，并已准备或执行一个语句游标位于结果集已关闭后检索结果集元数据。 应用程序很少需要准备的语句后，在执行之前，结果集元数据。 如果可能，应等待应用程序来检索元数据之前，执行语句，因为某些数据源不能返回预定义语句的元数据和模拟驱动程序中此功能通常是一个缓慢的过程后。 例如，驱动程序可能会产生的零行结果集通过替换**其中**子句**选择**with 子句的语句**WHERE 1 = 2**和执行生成的语句。  
+ 应用程序可以在准备或执行语句之后以及在关闭结果集上的游标之前，随时检索结果集元数据。 很少有应用程序在语句准备好后和执行之前需要结果集元数据。 如果可能，应用程序应等待检索元数据，直到执行语句为止，因为某些数据源不能返回预定义语句的元数据并在驱动程序中模拟此功能通常是一个较慢的进程。 例如，驱动程序可能会通过将**SELECT**语句的**WHERE**子句替换为**1 = 2**并执行生成的语句，来生成零行结果集。  
   
- 元数据通常是相当昂贵从数据源检索的。 因此，驱动程序应缓存任何元数据，它们从服务器检索和保存的只要光标位于结果集处于打开状态。 此外，应用程序应请求仅在绝对需要的元数据。
+ 从数据源中检索元数据通常成本高昂。 因此，只要打开结果集上的游标，驱动程序就应缓存从服务器检索的任何元数据，并将其保存。 此外，应用程序应该只请求其绝对需要的元数据。

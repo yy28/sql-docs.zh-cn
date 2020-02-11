@@ -1,5 +1,5 @@
 ---
-title: 合并分区在 Analysis Services (SSAS-多维) |Microsoft Docs
+title: 在 Analysis Services 中合并分区（SSAS-多维） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,20 +14,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 365f89286a59057efa39b503eedaedebb875c039
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073652"
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>在 Analysis Services 中合并分区（SSAS - 多维）
   您可以将现有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中的分区进行合并，以整合来自相同度量值组的多个分区的事实数据。  
   
- [常见情况](#bkmk_Scenario)  
+ [常见方案](#bkmk_Scenario)  
   
  [要求](#bkmk_prereq)  
   
- [在合并分区后更新分区源](#bkmk_Where)  
+ [合并分区后更新分区源](#bkmk_Where)  
   
  [按事实数据表或命名查询分段的分区的特殊注意事项](#bkmk_fact)  
   
@@ -35,14 +35,14 @@ ms.locfileid: "66073652"
   
  [如何使用 XMLA 合并分区](#bkmk_partitionsXMLA)  
   
-##  <a name="bkmk_Scenario"></a> 常见情况  
+##  <a name="bkmk_Scenario"></a>常见方案  
  分区应用的唯一最常见配置涉及到跨时间维度分离数据。 与每个分区关联的时间的粒度因特定于项目的业务需求而有所不同。 例如，可能用年数进行分段，而最近一年用月数除，并为活动月单独加上一个分区。 活动月分区定期取用新数据。  
   
  活动月份完成后，该分区被重新合并到截至到当前日期的分区中的月，该过程继续进行。 到年末时，就会形成一个完整的新的年分区。  
   
  正如这种情况所示，合并分区可能成为定期执行的一项例行任务，这可以为整合与组织历史数据提供一种渐进的方法。  
   
-##  <a name="bkmk_prereq"></a> 要求  
+##  <a name="bkmk_prereq"></a>要求  
  只有符合下列所有条件的分区才能合并：  
   
 -   分区具有相同的度量值组。  
@@ -66,7 +66,7 @@ ms.locfileid: "66073652"
   
  若要创建一个准备在将来进行合并的分区，在分区向导中创建该分区时，您可以选择从另一个多维数据集分区复制聚合设计。 这将确保这些分区具有相同的聚合设计。 当这些分区进行合并时，源分区的聚合和目标分区的聚合将组合到一起。  
   
-##  <a name="bkmk_Where"></a> 在合并分区后更新分区源  
+##  <a name="bkmk_Where"></a>合并分区后更新分区源  
  分区通过查询（如用于处理数据的 SQL 查询 WHERE 子句）或通过表或为分区提供数据的命名查询进行分段。 分区的 `Source` 属性指示分区是绑定到查询还是表。  
   
  当您合并分区时，将整合分区的内容，但是不会更新 `Source` 属性以反映分区的范围变大。 这就意味着，如果您以后重新处理一个保留初始 `Source` 的分区，则您将从该分区获得不正确的数据。 该分区将错误地在父项级别聚合数据。 下面的示例对这种行为进行了演示。  
@@ -85,7 +85,7 @@ ms.locfileid: "66073652"
   
  合并分区后，请始终检查 `Source` 以验证筛选器适合于合并后的数据。 如果您从一个包含第一、二、三季度的历史数据的分区开始，现在要合并第四季度的数据，则必须调整筛选器，以包含第四季度数据。 否则，以后处理该分区时将导致错误的结果。 这对第四季度将是不正确的。  
   
-##  <a name="bkmk_fact"></a> 按事实数据表或命名查询分段的分区的特殊注意事项  
+##  <a name="bkmk_fact"></a>按事实数据表或命名查询分段的分区的特殊注意事项  
  除了查询之外，分区也可以按表或命名查询分段。 如果源分区和目标分区使用同一数据源或数据源视图中的同一事实数据表，则在合并分区后 `Source` 属性有效。 它指定适合于所得分区的事实数据表数据。 因为所得分区所需的事实数据就在事实数据表中，所以无需对 `Source` 属性进行任何修改。  
   
  对于使用来自多个事实数据表或命名查询的数据的分区，需要执行其他工作。 您必须手动将来自源分区的事实数据表的事实数据合并到目标分区的事实数据表中。  
@@ -110,34 +110,34 @@ ms.locfileid: "66073652"
   
  事实数据表的合并可在分区合并之前或之后进行。 但是，在这两项操作都完成之前，聚合不能准确地表示基础事实数据。 如果要对访问不同事实数据表的 HOLAP 或 ROLAP 分区进行合并，建议您在用户未连接到包含这些分区的多维数据集时进行。  
   
-##  <a name="bkmk_partitionSSMS"></a> 如何使用 SSMS 合并分区  
+##  <a name="bkmk_partitionSSMS"></a>如何使用 SSMS 合并分区  
   
 > [!IMPORTANT]  
 >  合并分区之前，首先复制数据筛选信息（通常是基于 SQL 查询进行筛选的 WHERE 子句）。 以后，合并完成后，您应该更新包含累积事实数据的分区的“分区源”属性。  
   
-1.  在对象资源管理器中，展开包含要合并分区的多维数据集的“度量值组”  节点，展开“分区”  ，右键单击要被合并或要合并到的分区。 例如，如果您要将每个季度的事实数据移到存储年度事实数据的分区，请选择包含年度事实数据的分区。  
+1.  在对象资源管理器中，展开包含要合并分区的多维数据集的“度量值组”**** 节点，展开“分区”****，右键单击要被合并或要合并到的分区。 例如，如果您要将每个季度的事实数据移到存储年度事实数据的分区，请选择包含年度事实数据的分区。  
   
-2.  单击**合并分区**以打开**合并分区\<分区名称 >** 对话框。  
+2.  单击 "**合并分区**" 打开 "**合并\<分区分区名称>** " 对话框。  
   
-3.  在 **“源分区”** 下，选中要与目标分区合并的每个源分区旁边的复选框，然后单击 **“确定”** 。  
+3.  在 **“源分区”** 下，选中要与目标分区合并的每个源分区旁边的复选框，然后单击 **“确定”**。  
   
     > [!NOTE]  
     >  源分区合并到目标分区后，将立即删除源分区。 合并完成后，刷新“分区”文件夹以更新其内容。  
   
-4.  右键单击包含累积数据的分区，然后选择“属性”  。  
+4.  右键单击包含累积数据的分区，然后选择“属性”****。  
   
-5.  打开`Source`属性并修改 WHERE 子句，使之包括您刚合并的分区数据。 请记住，`Source`属性不会自动更新。 如果您重新处理而未首先更新`Source`，可能无法获得所有所需的数据。  
+5.  打开`Source`属性，并修改 WHERE 子句，使之包括您刚合并的分区数据。 请记住， `Source`属性不会自动更新。 如果在不首先更新的`Source`情况下重新处理，则可能不会获得所有预期的数据。  
   
-##  <a name="bkmk_partitionsXMLA"></a> 如何使用 XMLA 合并分区  
+##  <a name="bkmk_partitionsXMLA"></a>如何使用 XMLA 合并分区  
  有关信息，请参阅此主题[合并分区 (XMLA)](../multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [处理 Analysis Services 对象](processing-analysis-services-objects.md)   
- [分区（Analysis Services - 多维数据）](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [创建和管理本地分区 (Analysis Services)](create-and-manage-a-local-partition-analysis-services.md)   
- [创建和管理远程分区 (Analysis Services)](create-and-manage-a-remote-partition-analysis-services.md)   
+ [Analysis Services 多维数据 &#40;分区&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [创建和管理本地分区 &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
+ [创建和管理远程分区 &#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md)   
  [设置分区写回](set-partition-writeback.md)   
- [可写入的分区](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
+ [启用写入的分区](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
  [配置维度和分区的字符串存储](configure-string-storage-for-dimensions-and-partitions.md)  
   
   
