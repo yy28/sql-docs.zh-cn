@@ -1,5 +1,5 @@
 ---
-title: sysmail_help_profile_sp (TRANSACT-SQL) |Microsoft Docs
+title: sysmail_help_profile_sp （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: d7169a8e-92b1-49eb-9124-3b2f69755ddb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2d8f2af3894377cc0922274ca26c231c003f3bd6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68044500"
 ---
-# <a name="sysmailhelpprofilesp-transact-sql"></a>sysmail_help_profile_sp (Transact-SQL)
+# <a name="sysmail_help_profile_sp-transact-sql"></a>sysmail_help_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   列出有关一个或多个邮件配置文件的信息。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,9 +39,9 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @profile_id = ] profile_id` 要返回的信息的配置文件 id。 *profile_id*是**int**，默认值为 NULL。  
+`[ @profile_id = ] profile_id`要为其返回信息的配置文件 id。 *profile_id*的值为**int**，默认值为 NULL。  
   
-`[ @profile_name = ] 'profile_name'` 要返回的信息的配置文件名称。 *profile_name*是**sysname**，默认值为 NULL。  
+`[ @profile_name = ] 'profile_name'`要为其返回信息的配置文件名称。 *profile_name*的默认值为**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -51,21 +51,21 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
   
 ||||  
 |-|-|-|  
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |**profile_id**|**int**|配置文件 ID。|  
-|**name**|**sysname**|配置文件名。|  
-|**description**|**nvarchar(256)**|配置文件的说明。|  
+|**路径名**|**sysname**|配置文件名。|  
+|**2008**|**nvarchar(256)**|配置文件的说明。|  
   
 ## <a name="remarks"></a>备注  
- 当指定的配置文件名称或配置文件 id 时， **sysmail_help_profile_sp**返回有关该配置文件的信息。 否则为**sysmail_help_profile_sp**返回有关每个配置文件中的信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。  
+ 指定配置文件名称或配置文件 id 时， **sysmail_help_profile_sp**返回有关该配置文件的信息。 否则， **sysmail_help_profile_sp**返回有关实例中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]每个配置文件的信息。  
   
- 存储的过程**sysmail_help_profile_sp**处于**msdb**数据库中，归**dbo**架构。 必须使用由三部分名称执行该过程，如果当前数据库不是**msdb**。  
+ 存储过程**sysmail_help_profile_sp**在**msdb**数据库中，由**dbo**架构拥有。 如果当前数据库不是**msdb**，则必须使用由三部分组成的名称来执行该过程。  
   
 ## <a name="permissions"></a>权限  
- 执行此过程默认情况下的成员的权限**sysadmin**固定的服务器角色。  
+ 此过程的执行权限默认授予**sysadmin**固定服务器角色的成员。  
   
 ## <a name="examples"></a>示例  
- **A.列出所有配置文件**  
+ **A. 列出所有配置文件**  
   
  以下示例显示如何列出实例中的所有配置文件。  
   
@@ -82,7 +82,7 @@ profile_id  name                          description
 57          AdventureWorks Operator       Operator mail profile.          
 ```  
   
- **B.列出特定配置文件**  
+ **B. 列出特定配置文件**  
   
  以下示例显示如何列出配置文件 `AdventureWorks Administrator` 的信息。  
   
@@ -99,8 +99,8 @@ profile_id  name                          description
 56          AdventureWorks Administrator  Administrative mail profile.    
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库邮件](../../relational-databases/database-mail/database-mail.md)   
- [数据库邮件存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [数据库邮件存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

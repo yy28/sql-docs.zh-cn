@@ -16,20 +16,20 @@ ms.assetid: b5ee3636-4591-427a-a65a-a2d5926fcc1a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 47181fca07aff7b2a0d418b8852cfce47cf9e501
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68063523"
 ---
 # <a name="setting-options-programmatically-for-the-excel-driver"></a>以编程方式为 Excel 驱动程序设置选项
 
-|选项|描述|方法|  
+|选项|说明|方法|  
 |------------|-----------------|------------|  
-|数据源名称|用于标识数据源，例如工资单或人员的名称。|若要动态设置此选项，请使用**DSN**调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)。|  
-|“数据库”|Microsoft Access 数据源可以设置而无需选择或创建数据库。 如果在安装程序时未不提供任何数据库，将提示用户连接到数据源时选择的数据库文件。|若要动态设置此选项，请使用**DBQ**调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)。|  
-|描述|数据源; 中的数据的可选描述例如，"雇佣日期、 发薪记录和当前查看的所有员工。"|若要动态设置此选项，请使用**描述**调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)。|  
-|目录|显示当前所选的目录。<br /><br /> 对于 Microsoft Excel 3.0/4.0 的文件，路径显示标记为"Directory"，为 Microsoft Excel 5.0 7.0 版，或 97 文件路径显示为标记为"工作簿"。|若要动态设置此选项，请使用**DEFAULTDIR**调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)。|  
-|只读|指定数据库为只读的。|若要动态设置此选项，请使用**READONLY**调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)。|  
-|扫描的行数|要扫描以确定每个列的数据类型的行数。 数据类型确定给定类型的发现数据的最大数目。 如果遇到猜测的列的数据类型不匹配的数据，将作为 NULL 值返回的数据类型。<br /><br /> Microsoft Excel 驱动程序，您可以输入介于 1 到 16 个要扫描的行。 默认值为 8;如果设置为 0，将扫描所有行。 （限制以外的数字将返回错误。）|若要动态设置此选项，请使用**MAXSCANROWS**调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)。|  
-|选择目录|显示一个对话框，您可以在其中选择包含想要访问的文件的目录。<br /><br /> 在定义数据源目录 （适用于 Microsoft 访问权限以外的所有驱动程序） 时，指定您最常使用的文件所在的目录。 ODBC 驱动程序使用此目录作为默认目录。 如果经常使用，请将其他文件复制到此目录。 或者，可以限定 SELECT 语句中使用的目录名称的文件名称：<br /><br /> 选择\*从 C:\MYDIR\EMP<br /><br /> 或者，你可以通过使用指定新的默认目录**SQLSetConnectOption** SQL_CURRENT_QUALIFIER 选项的函数。<br /><br /> 对于 Microsoft Excel 3.0 或 4.0 文件，路径显示标记为"Directory"和路径选择按钮标记为"选择目录"。 Microsoft Excel 5.0、 7.0、 或 97 文件的路径显示标记为"工作簿"和路径选择按钮标记为"选择工作簿"。 在定义数据源目录时，指定您最常使用的 Microsoft Excel 文件的 Microsoft Excel 3.0/4.0，所在的目录或 Microsoft excel 5.0、 7.0、 或 97 所在的工作簿文件的目录。 **使用当前目录**禁用 Microsoft excel 5.0、 7.0 和 97。|若要动态设置此选项，请使用**DEFAULTDIR**调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)。|
+|数据源名称|标识数据源的名称，如工资单或人员。|若要动态设置此选项，请在调用[SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)时使用**DSN**关键字。|  
+|数据库|无需选择或创建数据库即可设置 Microsoft Access 数据源。 如果在安装过程中未提供任何数据库，则在连接到数据源时，系统将提示用户选择数据库文件。|若要动态设置此选项，请在对[SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)的调用中使用**DBQ**关键字。|  
+|说明|数据源中数据的可选说明;例如，"雇用日期、薪金历史记录和所有员工的当前评论"。|若要动态设置此选项，请在对[SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)的调用中使用**DESCRIPTION**关键字。|  
+|Directory|显示当前所选目录。<br /><br /> 对于 Microsoft Excel 3.0/4.0 文件，路径显示标志为 "Directory"，而对于 Microsoft Excel 5.0、7.0 或97文件，路径显示标为 "工作簿"。|若要动态设置此选项，请在对[SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)的调用中使用**DEFAULTDIR**关键字。|  
+|只读|将数据库指定为只读。|若要动态设置此选项，请在调用[SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)时使用**READONLY**关键字。|  
+|要扫描的行|要扫描以确定每个列的数据类型的行数。 数据类型是根据找到的数据类型的最大数目确定的。 如果遇到的数据与对列推测的数据类型不匹配，则数据类型将返回为 NULL 值。<br /><br /> 对于 Microsoft Excel 驱动程序，可以为要扫描的行输入一个介于1和16之间的数字。 该值默认为 8;如果设置为0，则扫描所有行。 （超出限制的数字将返回错误。）|若要动态设置此选项，请在对[SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)的调用中使用**MAXSCANROWS**关键字。|  
+|选择目录|显示一个对话框，您可以在其中选择包含要访问的文件的目录。<br /><br /> 定义数据源目录（对于除 Microsoft Access 之外的所有驱动程序），请指定最常用的文件所在的目录。 ODBC 驱动程序使用此目录作为默认目录。 如果经常使用其他文件，请将这些文件复制到此目录中。 或者，您可以使用目录名称在 SELECT 语句中限定文件名：<br /><br /> 从\* C:\MYDIR\EMP 中选择<br /><br /> 或者，您可以通过将**SQLSetConnectOption**函数与 SQL_CURRENT_QUALIFIER 选项一起使用来指定新的默认目录。<br /><br /> 对于 Microsoft Excel 3.0 或4.0 文件，路径显示标记为 "Directory"，路径选择按钮标记为 "选择目录"。 对于 Microsoft Excel 5.0、7.0 或97文件，路径显示标为 "工作簿"，路径选择按钮标记为 "选择工作簿"。 定义数据源目录时，请指定最常用的 Microsoft Excel 文件所在的目录，该目录中的 microsoft excel 3.0/4.0 或工作簿文件所在的目录用于 Microsoft Excel 5.0、7.0 或97。 Microsoft Excel 5.0、7.0 和97禁用了 "**使用当前目录**"。|若要动态设置此选项，请在对[SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)的调用中使用**DEFAULTDIR**关键字。|

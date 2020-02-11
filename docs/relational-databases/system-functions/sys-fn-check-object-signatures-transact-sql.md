@@ -1,5 +1,5 @@
 ---
-title: sys.fn_check_object_signatures (TRANSACT-SQL) |Microsoft Docs
+title: sys. fn_check_object_signatures （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,19 +21,19 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1b9054cae2d8b67a96be964ca8dd0f1effe2113a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046307"
 ---
-# <a name="sysfncheckobjectsignatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
+# <a name="sysfn_check_object_signatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   返回所有可签名对象的列表，并指示对象是否由指定证书或非对称密钥签名。 如果对象是由指定证书或非对称密钥签名，则还会返回该对象的签名是否有效。  
   
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,30 +45,30 @@ fn_ check_object_signatures (
 ```  
   
 ## <a name="arguments"></a>参数  
- {'\@*类*}  
+ {"\@*class*"}  
  标识提供的指纹类型：  
   
 -   “证书”  
   
 -   “非对称密钥”  
   
- \@*类*是**sysname**。  
+ \@*类*为**sysname**。  
   
- { \@*指纹*}  
- 用来对密钥进行加密的证书的 SHA-1 哈希，或用来对密钥进行加密的非对称密钥的 GUID。 \@*指纹*是**varbinary(20)** 。  
+ { \@ *thumbprint* }  
+ 用来对密钥进行加密的证书的 SHA-1 哈希，或用来对密钥进行加密的非对称密钥的 GUID。 \@*指纹*为**varbinary （20）**。  
   
 ## <a name="tables-returned"></a>返回的表  
- 下表列出的列的**fn_check_object_signatures**返回。  
+ 下表列出了**fn_check_object_signatures**返回的列。  
   
-|“列”|type|描述|  
+|列|类型|说明|  
 |------------|----------|-----------------|  
-|type|**nvarchar(120)**|返回类型说明或程序集。|  
+|type|**nvarchar （120）**|返回类型说明或程序集。|  
 |entity_id|**int**|返回要计算的对象的对象 ID。|  
 |is_signed|**int**|当对象不是由提供的指纹签名时返回 0。 当对象由提供的指纹签名时返回 1。|  
 |is_signature_valid|**int**|当 is_signed 值为 1 且签名无效时，返回 0。 签名有效则返回 1。<br /><br /> 当 is_signed 值为 0 时，始终返回 0。|  
   
 ## <a name="remarks"></a>备注  
- 使用**fn_check_object_signatures**确认，恶意用户未篡改对象。  
+ 使用**fn_check_object_signatures**确认恶意用户未篡改对象。  
   
 ## <a name="permissions"></a>权限  
  要求对证书或非对称密钥拥有 VIEW DEFINITION 权限。  
@@ -91,7 +91,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>请参阅  
- [IS_OBJECTSIGNED &#40;Transact SQL&#41;](../../t-sql/functions/is-objectsigned-transact-sql.md)  
+## <a name="see-also"></a>另请参阅  
+ [IS_OBJECTSIGNED &#40;Transact-sql&#41;](../../t-sql/functions/is-objectsigned-transact-sql.md)  
   
   

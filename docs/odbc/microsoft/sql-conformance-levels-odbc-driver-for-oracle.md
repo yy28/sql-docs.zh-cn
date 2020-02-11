@@ -1,5 +1,5 @@
 ---
-title: SQL 一致性级别 （Oracle ODBC 驱动程序） |Microsoft Docs
+title: SQL 一致性级别（Oracle ODBC 驱动程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,31 +15,31 @@ ms.assetid: 077a6c6a-2c57-42c9-a4fd-4cf0e65cf7e2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 241f4f3da12f63c15d917a0e47cb13ad0e96e6e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68063347"
 ---
 # <a name="sql-conformance-levels-odbc-driver-for-oracle"></a>SQL 一致性级别（Oracle ODBC 驱动程序）
 > [!IMPORTANT]  
->  此功能将 Windows 的未来版本中删除。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 相反，使用提供的 Oracle 的 ODBC 驱动程序。  
+>  此功能将在 Windows 的将来版本中删除。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 请改用 Oracle 提供的 ODBC 驱动程序。  
   
- Oracle 的 ODBC 驱动程序支持的最小 SQL 语法和核心 SQL 语法，还支持以下 ODBC 扩展到 SQL:  
+ 适用于 Oracle 的 ODBC 驱动程序支持最低 SQL 语法和核心 SQL 语法，还支持以下 SQL ODBC 扩展：  
   
--   日期、 时间和时间戳数据  
+-   日期、时间和时间戳数据  
   
--   左和右外部联接  
+-   左外部联接和右外部联接  
   
 -   数值函数：  
   
     |||||  
     |-|-|-|-|  
     |Abs|日志|round|tan|  
-    |上限|log10|second|truncate|  
-    |Cos|Mod|登录||  
+    |Ceiling|Log10|second|truncate|  
+    |Cos|Mod|签名||  
     |Exp|Pi|sin||  
-    |floor|Power|sqrt||  
+    |层|幂|sqrt||  
   
 -   日期函数：  
   
@@ -47,17 +47,17 @@ ms.locfileid: "68063347"
     |-|-|-|-|  
     |Curdate|Dayofweek|monthname|second|  
     |Curtime|Dayofyear|minute|week|  
-    |Dayname|Hour|现在|year|  
-    |Dayofmonth|Month|每个季度||  
+    |Dayname|Hour|now|year|  
+    |Dayofmonth|月份|quarter||  
   
 -   字符串函数：  
   
     |||||  
     |-|-|-|-|  
-    |Ascii|Left|右侧|Ucase|  
+    |Ascii|Left|然后|ucase|  
     |Char|长度|rtrim||  
-    |Concat|Ltrim|Soundex||  
-    |Lcase|替换|substring||  
+    |Concat|Ltrim|soundex||  
+    |Lcase|将|substring||  
   
 -   类型转换函数：  
   
@@ -70,4 +70,4 @@ ms.locfileid: "68063347"
     ||  
     |-|  
     |Ifnull|  
-    |“用户”|
+    |用户|

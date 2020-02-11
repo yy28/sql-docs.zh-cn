@@ -1,5 +1,5 @@
 ---
-title: trace_xe_event_map (TRANSACT-SQL) |Microsoft Docs
+title: trace_xe_event_map （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,22 +19,22 @@ ms.assetid: 537aa292-3540-47e8-be28-56dc01abc343
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 07810bcd1f43bd3fd2428361e5f429edb9c7c3d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68056238"
 ---
-# <a name="extended-events-tables---tracexeeventmap"></a>扩展事件表 - trace_xe_event_map
+# <a name="extended-events-tables---trace_xe_event_map"></a>扩展事件表 - trace_xe_event_map
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  映射到 SQL 跟踪事件类的每个扩展事件各占一行。 此表存储在 master 数据库的 sys 架构中。  
+  映射到 SQL 跟踪事件类的每个扩展事件各占一行。 此表存储在 sys 架构中的 master 数据库中。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |trace_event_id|**smallint**|正在映射的 SQL 跟踪事件类的 ID。|  
-|package_name|**nvarchar(60)**|映射事件所在的扩展事件包的名称。|  
-|xe_event_name|**nvarchar(60)**|映射到 SQL 跟踪事件类的“扩展事件”事件的名称。|  
+|package_name|**nvarchar （60）**|映射事件所在的扩展事件包的名称。|  
+|xe_event_name|**nvarchar （60）**|映射到 SQL 跟踪事件类的“扩展事件”事件的名称。|  
   
 ## <a name="remarks"></a>备注  
  您可以使用以下查询确定与 SQL 跟踪事件类等效的“扩展事件”事件：  
@@ -57,9 +57,10 @@ LEFT JOIN sys.trace_xe_event_map AS xe
 WHERE xe.trace_event_id IS NULL  
 ```  
   
- 在前面的查询中，返回的大多数事件类都与审核相关。 建议您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 进行审核。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 使用扩展事件来帮助创建审核。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
+ 在前面的查询中，返回的大多数事件类都与审核相关。 建议您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 进行审核。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 使用扩展事件来帮助创建审核。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [trace_xe_action_map (Transact-SQL)](../../relational-databases/system-tables/extended-events-tables-trace-xe-action-map.md)  
   
   

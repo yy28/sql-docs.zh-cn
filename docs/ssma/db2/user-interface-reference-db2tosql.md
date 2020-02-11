@@ -1,5 +1,5 @@
 ---
-title: 用户界面参考 (DB2ToSQL) |Microsoft Docs
+title: 用户界面参考（DB2ToSQL） |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,43 +10,43 @@ ms.assetid: 98ecc4ff-9416-48a2-af0f-86852cf69dab
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c0332efca72c216ac6ecbb2f5f397fbf57e8b7cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68059962"
 ---
-# <a name="user-interface-reference-db2tosql"></a>用户界面参考 (DB2ToSQL)
-本部分包括帮助主题[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) for DB2。  
+# <a name="user-interface-reference-db2tosql"></a>用户界面参考（DB2ToSQL）
+本部分包括有关[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DB2 的迁移助手（SSMA）的帮助主题。  
   
 ## <a name="in-this-section"></a>本节内容  
-下表列出了 SSMA 对话框：  
+下表列出了 "SSMA" 对话框：  
   
 |||  
 |-|-|  
-|主题|描述|  
-|[高级对象选择&#40;DB2ToSQL&#41;](../../ssma/db2/advanced-object-selection-db2tosql.md)|使用**高级对象选择**对话框可以通过使用筛选器条件来查找数据库对象，然后选择或清除这些对象。|  
-|[评估报告&#40;DB2ToSQL&#41;](../../ssma/db2/assessment-report-db2tosql.md)|评估报告用于查看到 DB2 对象转换的结果[!INCLUDE[tsql](../../includes/tsql-md.md)]语法，并估计的时间和为迁移的复杂度[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
-|[连接到 DB2 数据库&#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)|使用**连接到 DB2**对话框以连接到你想要迁移的 DB2 数据库。|  
-|[连接到 SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/connect-to-sql-server-db2tosql.md)|使用**连接到 SQL Server**对话框以连接到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到想要迁移。|  
-|[数据迁移报表&#40;DB2ToSQL&#41;](../../ssma/db2/data-migration-report-db2tosql.md)|显示的结果将数据从 DB2 到迁移[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
-|[数据迁移设置](https://msdn.microsoft.com/573e673e-a194-4cb2-9aba-aaac6e1a225c)|使用**扩展数据迁移设置**选项卡可编写自定义查询的数据迁移。|  
-|[编辑类型映射&#40;DB2ToSQL&#41;](../../ssma/db2/edit-type-mapping-db2tosql.md)|使用**新的类型映射**或**编辑类型映射**对话框可以创建或修改的源和目标数据库和数据库对象之间的数据类型映射。|  
-|[全局设置&#40;编辑器&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/global-settings-editor-db2tosql.md)|使用的编辑器页面**全局设置**对话框可配置代码编辑器选项。|  
-|[全局设置&#40;对话框&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/global-settings-dialogs-db2tosql.md)|使用的对话框页面**全局设置**对话框可以配置默认对话框和警告设置。|  
-|[全局设置&#40;日志记录&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/global-settings-logging-db2tosql.md)|使用的日志记录页**全局设置**对话框配置日志记录。|  
-|[全局设置&#40;输出窗口&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/global-settings-output-window-db2tosql.md)|使用**全局设置**对话框设置 SSMA for DB2 用户界面的首选项。|  
-|[新项目&#40;DB2ToSQL&#41;](../../ssma/db2/new-project-db2tosql.md)|使用**新的项目**对话框创建新的 SSMA for DB2 项目。|  
-|[项目设置&#40;转换&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-conversion-db2tosql.md)|使用的转换页**项目设置**对话框可以指定适用于 DB2 的 SSMA 将函数和全局变量的转换。|  
-|[项目设置&#40;GUI&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-gui-db2tosql.md)|使用的 GUI 页**项目设置**对话框可以指定在显示的数据量**数据**选项卡。|  
-|[项目设置&#40;迁移&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-migration-db2tosql.md)|使用的迁移页**项目设置**对话框中，若要自定义适用于 DB2 的 SSMA 如何迁移数据从 DB2 到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
-|[项目设置&#40;同步&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md)|使用的同步页**项目设置**对话框中，若要自定义适用于 DB2 的 SSMA 如何创建或更改中迁移的数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
-|[项目设置&#40;加载系统对象&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-loading-system-objects-db2tosql.md)|使用的加载系统对象页**项目设置**对话框可以指定哪个 DB2 系统对象的 SSMA 将转换并将加载到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
-|[项目设置&#40;类型映射&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md)|使用的类型映射页**项目设置**对话框可以指定 SSMA for DB2 项目中的所有数据库和数据库对象的默认类型映射。|  
-|[从数据库刷新&#40;DB2ToSQL&#41;](../../ssma/db2/refresh-from-database-db2tosql.md)|使用**从数据库刷新**对话框可以选择要从 DB2 数据库刷新的对象。|  
-|[保存元数据&#40;DB2ToSQL&#41;](../../ssma/db2/save-metadata-db2tosql.md)|**保存元数据**保存缺少元数据的项目会显示的对话框。|  
+|主题|说明|  
+|[&#40;DB2ToSQL&#41;的高级对象选择](../../ssma/db2/advanced-object-selection-db2tosql.md)|使用 "**高级对象选择**" 对话框可以通过使用筛选条件查找数据库对象，然后选择或清除这些对象。|  
+|[评估报表 &#40;DB2ToSQL&#41;](../../ssma/db2/assessment-report-db2tosql.md)|使用 "评估" 报告查看将 DB2 对象转换为[!INCLUDE[tsql](../../includes/tsql-md.md)]语法的结果，并估计迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的时间和复杂性。|  
+|[连接到 DB2 数据库 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)|使用 "**连接到 db2** " 对话框连接到要迁移的 DB2 数据库。|  
+|[连接到 SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/connect-to-sql-server-db2tosql.md)|使用 "**连接到 SQL Server** " 对话框连接到要迁移[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到的实例。|  
+|[数据迁移报表 &#40;DB2ToSQL&#41;](../../ssma/db2/data-migration-report-db2tosql.md)|显示将数据从 DB2 迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的结果。|  
+|[数据迁移设置](https://msdn.microsoft.com/573e673e-a194-4cb2-9aba-aaac6e1a225c)|使用 "**扩展数据迁移设置**" 选项卡可编写用于数据迁移的自定义查询。|  
+|[编辑类型映射 &#40;DB2ToSQL&#41;](../../ssma/db2/edit-type-mapping-db2tosql.md)|使用 "**新建类型映射**" 或 "**编辑类型映射**" 对话框可以创建或修改源数据库和目标数据库与数据库对象之间的数据类型映射。|  
+|[全局设置 &#40;编辑器&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/global-settings-editor-db2tosql.md)|使用 "**全局设置**" 对话框的 "编辑器" 页可以配置代码编辑器选项。|  
+|[全局设置 &#40;对话框&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/global-settings-dialogs-db2tosql.md)|使用 "**全局设置**" 对话框的 "对话框" 页可以配置默认对话框和警告设置。|  
+|[全局设置 &#40;日志记录&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/global-settings-logging-db2tosql.md)|使用 "**全局设置**" 对话框的 "日志记录" 页可以配置日志记录。|  
+|[全局设置 &#40;输出窗口&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/global-settings-output-window-db2tosql.md)|使用 "**全局设置**" 对话框为 DB2 用户界面的 SSMA 设置首选项。|  
+|[新项目 &#40;DB2ToSQL&#41;](../../ssma/db2/new-project-db2tosql.md)|使用 "**新建项目**" 对话框可为 DB2 项目创建新的 SSMA。|  
+|[&#40;转换的项目设置&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-conversion-db2tosql.md)|使用 "**项目设置**" 对话框的 "转换" 页可以指定 DB2 转换函数和全局变量的 SSMA 的方式。|  
+|[&#40;GUI 的项目设置&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-gui-db2tosql.md)|使用 "**项目设置**" 对话框的 "GUI" 页可以指定 "**数据**" 选项卡上显示的数据量。|  
+|[&#40;迁移的项目设置&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-migration-db2tosql.md)|使用 "**项目设置**" 对话框的 "迁移" 页可自定义 SSMA for db2 将数据从 db2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]迁移到的方式。|  
+|[&#40;同步的项目设置&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md)|使用 "**项目设置**" 对话框的 "同步" 页可自定义 SSMA for DB2 在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]创建或更改已迁移数据库对象的方式。|  
+|[&#40;&#41; &#40;DB2ToSQL 加载系统对象的项目设置&#41;](../../ssma/db2/project-settings-loading-system-objects-db2tosql.md)|使用 "**项目设置**" 对话框的 "加载系统对象" 页可以指定 SSMA 转换和加载到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]哪些 DB2 系统对象。|  
+|[项目设置 &#40;类型映射&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md)|使用 "**项目设置**" 对话框的 "类型映射" 页可以为 SSMA for DB2 项目中的所有数据库和数据库对象指定默认的类型映射。|  
+|[从数据库刷新 &#40;DB2ToSQL&#41;](../../ssma/db2/refresh-from-database-db2tosql.md)|使用 "**从数据库刷新**" 对话框可以从 DB2 数据库中选择要刷新的对象。|  
+|[&#40;DB2ToSQL&#41;保存元数据](../../ssma/db2/save-metadata-db2tosql.md)|保存缺少元数据的项目时，将显示 "**保存元数据**" 对话框。|  
   
-## <a name="see-also"></a>请参阅  
-[开始使用 SSMA for DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/getting-started-with-ssma-for-db2-db2tosql.md)  
-[迁移的 DB2 数据库移到 SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
+## <a name="see-also"></a>另请参阅  
+[SSMA for DB2 &#40;DB2ToSQL&#41;的入门](../../ssma/db2/getting-started-with-ssma-for-db2-db2tosql.md)  
+[将 DB2 数据库迁移到 SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   
