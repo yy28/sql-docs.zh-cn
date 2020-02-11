@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5c0c6449082f1c5ca016cfdb0a0f18430cf74731
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63156811"
 ---
 # <a name="create-indexes-with-included-columns"></a>创建带有包含列的索引
@@ -81,9 +81,9 @@ ms.locfileid: "63156811"
   
     -   增加 `varchar`、`nvarchar` 或 `varbinary` 列的长度。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求对表或视图具有 ALTER 权限。 用户必须是 **sysadmin** 固定服务器角色的成员，或者是 **db_ddladmin** 和 **db_owner** 固定数据库角色的成员。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -102,15 +102,15 @@ ms.locfileid: "63156811"
   
 6.  在“索引键列”选项卡下，单击“添加…”   。  
   
-7.  在“从 _table_name_ 中选择列”  对话框中，选中要添加到索引的一个或多个表列的复选框。  
+7.  在 "**从**_Table_name_中选择列" 对话框中，选中要添加到索引的一个或多个表列的复选框。  
   
-8.  单击“确定”  。  
+8.  单击“确定”。   
   
 9. 在“包含性列”选项卡下，单击“添加…”   。  
   
-10. 在“从 _table_name_ 中选择列”  对话框中，选中要作为非键列添加到索引的一个或多个表列的复选框。  
+10. 在 "**从**_Table_name_中选择列" 对话框中，选中要作为非键列添加到索引的一个或多个表列的复选框。  
   
-11. 单击“确定”  。  
+11. 单击“确定”。   
   
 12. 在 **“新建索引”** 对话框中，单击 **“确定”** 。  
   

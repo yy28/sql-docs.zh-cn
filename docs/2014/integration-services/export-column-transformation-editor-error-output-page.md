@@ -1,5 +1,5 @@
 ---
-title: 导出列转换编辑器 （错误输出页） |Microsoft Docs
+title: 导出列转换编辑器（"错误输出" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 43eeb6984a0e7ef15b52fd349bccdf3c1bf78f15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058936"
 ---
 # <a name="export-column-transformation-editor-error-output-page"></a>导出列转换编辑器（“错误输出”页）
@@ -31,7 +31,7 @@ ms.locfileid: "66058936"
  查看输出的名称。 单击名称可以展开视图以包括列。  
   
  **列**  
- 查看在“导出列转换编辑器”对话框的“列”页中选择的输出列。  
+ 查看在“导出列转换编辑器”对话框的“列”页中选择的输出列。********  
   
  **错误**  
  指定发生错误时要执行的操作：忽略失败、重定向行或使组件失败。  
@@ -45,11 +45,11 @@ ms.locfileid: "66058936"
  **将此值设置到选定的单元格**  
  指定发生错误或截断时应对所有选定单元格执行的操作：忽略失败、重定向行或使组件失败。  
   
- **Apply**  
+ **应用**  
  将错误处理选项应用到选定的单元格。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [导出列转换编辑器（“列”页）](../../2014/integration-services/export-column-transformation-editor-columns-page.md)  
+ [导出列转换编辑器 &#40;列 "页&#41;](../../2014/integration-services/export-column-transformation-editor-columns-page.md)  
   
   

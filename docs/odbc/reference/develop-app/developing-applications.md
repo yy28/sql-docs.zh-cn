@@ -15,16 +15,16 @@ ms.assetid: 0dd1a3b6-69dc-462f-9290-12ebee2b4a2a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a9cdf20fa57da4b6085fc0e2fab61a23f3fed83e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039911"
 ---
 # <a name="developing-applications"></a>开发应用程序
-本部分包含有关开发使用 ODBC 接口和驱动程序实现它的应用程序的信息。  
+本部分包含有关开发使用 ODBC 接口的应用程序和实现它的驱动程序的信息。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [ODBC 基础知识](../../../odbc/reference/develop-app/odbc-fundamentals.md)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "68039911"
   
 -   [互操作性](../../../odbc/reference/develop-app/interoperability.md)  
   
--   [编程注意事项](../../../odbc/reference/develop-app/programming-considerations.md)  
+-   [编程时的注意事项](../../../odbc/reference/develop-app/programming-considerations.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ODBC 程序员参考](../../../odbc/reference/odbc-programmer-s-reference.md)

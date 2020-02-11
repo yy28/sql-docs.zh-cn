@@ -1,5 +1,5 @@
 ---
-title: 全文搜索和语义搜索函数 (Transact SQL) |Microsoft Docs
+title: 全文搜索和语义搜索函数（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ ms.assetid: a61a3694-7604-4583-962e-fc30f771c6fa
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 58bf5650a5ab06783ad0c889bc3286184a7d73ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68042753"
 ---
 # <a name="full-text-search-and-semantic-search-functions-transact-sql"></a>全文搜索和语义搜索函数 (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68042753"
  返回由包含以下各项的列组成的零行、一行或多行表：单个词或短语的完全匹配项或模糊匹配项、词在一定差别范围内的相近或加权匹配项。  
   
  [FREETEXTTABLE (Transact-SQL)](../../relational-databases/system-functions/freetexttable-transact-sql.md)  
- 返回的零个、 一个或多个行包含以下与匹配的含义，但不只是确切的措辞中指定的文本的值的列的表*freetext_string*。  
+ 返回一个表，其中包含与指定的*freetext_string*中的文本匹配的值（而不只是精确的文字）的行、一行或多行。  
   
 ## <a name="semantic-search-functions"></a>语义搜索函数  
  [semantickeyphrasetable (Transact-SQL)](../../relational-databases/system-functions/semantickeyphrasetable-transact-sql.md)  
