@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c819fc7fb3b1cc73b67362a0eabd82ad33946fbc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62676867"
 ---
 # <a name="view-the-properties-of-a-policy-based-management-facet"></a>查看基于策略的管理方面的属性
@@ -34,9 +34,9 @@ ms.locfileid: "62676867"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求具有 msdb 数据库中 PolicyAdministratorRole 角色的成员身份。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -51,7 +51,7 @@ ms.locfileid: "62676867"
   
 4.  单击加号以便展开 **“方面”** 文件夹。  
   
-5.  右键单击要查看其属性的方面，然后选择  “属性”。 有关“Facet 属性 -facet_name”对话框中可用选项的详细信息，请参阅[“Facet 属性”对话框、“常规”页](../../integration-services/general-page-of-integration-services-designers-options.md)[“Facet 属性”对话框、“依赖策略”页](facet-properties-dialog-box-dependent-policies-page.md)和[“Facet 属性”对话框、“依赖条件”页](facet-properties-dialog-box-dependent-conditions-page.md)   。  
+5.  右键单击要查看其属性的方面，然后选择****“属性”。 有关 "**方面属性-**_facet_name_ " 对话框中的可用选项的详细信息，请参阅 " [facet 属性" 对话框，"常规" 页](../../integration-services/general-page-of-integration-services-designers-options.md)，"[方面属性" 对话框，"依赖策略" 页](facet-properties-dialog-box-dependent-policies-page.md)和["Facet 属性" 对话框，"依赖条件" 页](facet-properties-dialog-box-dependent-conditions-page.md)。  
   
 6.   完成后，单击“关闭”。  
   
