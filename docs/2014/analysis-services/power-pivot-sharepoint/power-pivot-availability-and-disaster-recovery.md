@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 731550d385d073c7b2f2e2758d4fcaf2353db746
-ms.sourcegitcommit: 9b8b11961b33e66fc9f433d094fc5c0f9b473772
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74908986"
 ---
 # <a name="powerpivot-availability-and-disaster-recovery-sql-server-2014"></a>PowerPivot 可用性和灾难恢复 (SQL Server 2014)
@@ -82,7 +82,7 @@ ms.locfileid: "74908986"
 ##  <a name="bkmk_sql_server_technologies"></a>PowerPivot 服务应用程序数据库和 SQL Server 可用性和恢复技术  
  包括 SharePoint 高可用性规划中的 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 服务应用程序数据库。 此数据库的默认名称是 `DefaultPowerPivotServiceApplicationDB-<GUID>`。 下面总结了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可用性技术以及与 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 数据库结合使用时的一些建议。 有关详细信息，请参阅 [SharePoint 数据库支持的高可用性和灾难恢复选项 (SharePoint 2013)](https://technet.microsoft.com/library/jj841106.aspx)。  
   
-||说明|  
+||注释|  
 |-|--------------|  
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]并[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]在场中同步镜像以实现可用性。|支持，但不建议这样做。 建议使用同步提交模式下的 AlwaysOn。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)]在同步提交模式下|支持，建议这样做。|  

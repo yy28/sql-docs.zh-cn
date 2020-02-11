@@ -1,5 +1,5 @@
 ---
-title: GetString 方法示例 （VC + +） |Microsoft Docs
+title: GetString 方法示例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,16 +15,16 @@ ms.assetid: 4daa93aa-9727-4d1c-886a-e9d22017a1ea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 501b58a0d4e69ba7ea843441d866f8580858ea5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932450"
 ---
 # <a name="getstring-method-example-vc"></a>GetString 方法示例 (VC++)
-此示例演示[GetString](../../../ado/reference/ado-api/getstring-method-ado.md)方法。  
+此示例演示了[GetString](../../../ado/reference/ado-api/getstring-method-ado.md)方法。  
   
- 假设您正在调试数据访问问题并且需要打印一个较小的当前内容的快速、 简单地[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
+ 假设您正在调试数据访问问题，并想要一种快速、简单的方式来打印小型[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的当前内容。  
   
 ## <a name="example"></a>示例  
   
@@ -183,6 +183,6 @@ Name            Address            City
 Sylvia   Panteley   1956 Arlington Pl.   Rockville  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [GetString 方法 (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)   
+## <a name="see-also"></a>另请参阅  
+ [GetString 方法（ADO）](../../../ado/reference/ado-api/getstring-method-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

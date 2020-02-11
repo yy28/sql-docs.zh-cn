@@ -1,5 +1,5 @@
 ---
-title: 和 (DMX) |Microsoft Docs
+title: 和（DMX） |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e0c727e6a6f981dd2862575bfb4943b104196080
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67913738"
 ---
 # <a name="and-dmx"></a>AND (DMX)
@@ -27,11 +27,11 @@ ms.locfileid: "67913738"
 Expression1 AND Expression2  
 ```  
   
-#### <a name="parameters"></a>Parameters  
- *Expression1*  
+#### <a name="parameters"></a>parameters  
+ Expression1   
  一个返回数值的有效数据挖掘扩展 (DMX) 表达式。  
   
- *Expression2*  
+ Expression2   
  一个返回数值的有效 DMX 表达式。  
   
 ## <a name="return-value"></a>返回值  
@@ -47,9 +47,9 @@ Expression1 AND Expression2
 |FALSE|TRUE|FALSE|  
 |FALSE|FALSE|FALSE|  
   
-## <a name="see-also"></a>请参阅  
- [数据挖掘扩展插件&#40;DMX&#41;运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [逻辑运算符&#40;DMX&#41;](../dmx/operators-logical.md)   
- [运算符&#40;DMX&#41;](../dmx/operators-dmx.md)  
+## <a name="see-also"></a>另请参阅  
+ [数据挖掘扩展插件 &#40;DMX&#41; 运算符引用](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [逻辑运算符 &#40;DMX&#41;](../dmx/operators-logical.md)   
+ [运算符 &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

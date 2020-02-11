@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2617a25d2e038db365f369fe498d2196c0900142
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73781913"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>从程序变量大容量复制数据 (ODBC)
@@ -65,11 +65,11 @@ ms.locfileid: "73781913"
   
  此示例连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 若要连接到命名实例，请更改 ODBC 数据源的定义以使用以下格式指定实例：server\namedinstance。 默认情况下，[!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] 将安装在命名实例中。  
   
- 执行第一个（[!INCLUDE[tsql](../../../includes/tsql-md.md)]）代码列表，以创建此示例将使用的表。  
+ 执行第一个（ [!INCLUDE[tsql](../../../includes/tsql-md.md)]）代码列表，以创建此示例将使用的表。  
   
  使用 odbc32.lib 和 odbcbcp.lib 编译第二个 (C++) 代码列表。 如果用 MSBuild.exe 生成示例，请先将 Bcpfmt.fmt 和 Bcpodbc.bcp 从项目目录复制到 .exe 文件所在的目录，然后调用 .exe。  
   
- 执行第三个（[!INCLUDE[tsql](../../../includes/tsql-md.md)]）代码列表，以删除该示例使用的表。  
+ 执行第三个[!INCLUDE[tsql](../../../includes/tsql-md.md)]（）代码列表，以删除该示例使用的表。  
   
 ```  
 // compile with: odbc32.lib odbcbcp.lib  
@@ -304,7 +304,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [大容量复制 SQL Server odbc 驱动程序操作指南主题&#40;odbc&#41; ](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
+ [SQL Server ODBC 驱动程序的大容量复制操作指南主题 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [从程序变量执行大容量复制](../../../relational-databases/native-client-odbc-bulk-copy-operations/bulk-copying-from-program-variables.md)  
   
   
