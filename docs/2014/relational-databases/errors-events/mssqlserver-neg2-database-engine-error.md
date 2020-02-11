@@ -15,13 +15,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5a451792e9732bf00e7bf68ce93b42c99b06fa2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62912413"
 ---
-# <a name="mssqlserver-2"></a>MSSQLSERVER_-2
+# <a name="mssqlserver_-2"></a>MSSQLSERVER_-2
     
 ## <a name="details"></a>详细信息  
   
@@ -34,14 +34,14 @@ ms.locfileid: "62912413"
 |符号名称||  
 |消息正文|超时时间已到。  超时时间在操作完成或服务器没有响应之前已过。 （Microsoft SQL Server，错误: -2）|   
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端无法连接到服务器。 发生此错误的原因可能是服务器上的防火墙拒绝此连接。 
   
 ## <a name="user-action"></a>用户操作  
  确保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务器实例上的防火墙已配置为接受连接。  
   
-## <a name="see-also"></a>请参阅  
- [配置 Windows 防火墙以允许 SQL Server 访问](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)   
+## <a name="see-also"></a>另请参阅  
+ [将 Windows 防火墙配置为允许 SQL Server 访问](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)   
  [为数据库引擎访问配置 Windows 防火墙](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)   
  [配置客户端协议](../../database-engine/configure-windows/configure-client-protocols.md)   
  [网络协议和网络库](../../sql-server/install/network-protocols-and-network-libraries.md)   

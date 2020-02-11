@@ -1,5 +1,5 @@
 ---
-title: 教程：准备用于复制的服务器 |Microsoft Docs
+title: 教程：准备用于复制的服务器 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c9b8ed6778a087c2200012c6df1409b187b39329
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63199066"
 ---
 # <a name="tutorial-preparing-the-server-for-replication"></a>教程：准备用于复制的服务器
   在配置复制拓扑之前，制定安全计划是非常重要的。 本教程向您介绍如何更好地保护复制拓扑以及如何配置分发，这是复制数据的第一步。 开始其他教程之前，必须先完成本教程。  
   
 > [!NOTE]  
->  若要在服务器之间安全地复制数据，你应该实施 [复制安全最佳实践](security/replication-security-best-practices.md)中提出的所有建议。  
+>  若要在服务器之间安全地复制数据，应实现[复制安全最佳做法](security/replication-security-best-practices.md)中的所有建议。  
   
 ## <a name="what-you-will-learn"></a>学习内容  
  在本教程中，您将了解如何准备服务器以便用最少的特权安全地运行复制。 第一课介绍如何创建用于运行复制代理的 Windows 服务帐户。 第二课介绍如何配置用于生成和存储发布快照的文件夹。 第三课介绍如何配置分发以及如何设置权限。  
@@ -33,21 +33,21 @@ ms.locfileid: "63199066"
   
  若要使用本教程，系统中必须安装下列组件：  
   
--   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 数据库的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 。 为了增强安全性，默认情况下不会安装示例数据库。  
+-   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]带有[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]数据库的。 为了增强安全性，默认情况下不会安装示例数据库。  
   
- **学完本教程的估计时间：30 分钟。**  
+ **本教程的估计完成时间：30分钟。**  
   
 ## <a name="lessons-in-this-tutorial"></a>本教程中的课程  
   
 -   [第 1 课：为复制创建 Windows 帐户](lesson-1-creating-windows-accounts-for-replication.md)  
   
--   [第 2 课：准备快照文件夹](lesson-2-preparing-the-snapshot-folder.md)  
+-   [第2课：准备快照文件夹](lesson-2-preparing-the-snapshot-folder.md)  
   
--   [第 3 课：配置分发](lesson-3-configuring-distribution.md)  
+-   [第3课：配置分发](lesson-3-configuring-distribution.md)  
   
- [开始教程](lesson-1-creating-windows-accounts-for-replication.md)  
+ [启动教程](lesson-1-creating-windows-accounts-for-replication.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [“配置分发”](configure-distribution.md)   
  [SQL Server 复制安全性](security/view-and-modify-replication-security-settings.md)  
   

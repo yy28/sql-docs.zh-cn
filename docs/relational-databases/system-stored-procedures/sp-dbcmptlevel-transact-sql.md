@@ -1,5 +1,5 @@
 ---
-title: sp_dbcmptlevel (TRANSACT-SQL) |Microsoft Docs
+title: sp_dbcmptlevel （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,21 +18,21 @@ ms.assetid: 508c686d-2bd4-41ba-8602-48ebca266659
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0f6ffcb7a43fbfc2a840cbbbeb95de4bbb875cbe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108210"
 ---
-# <a name="spdbcmptlevel-transact-sql"></a>sp_dbcmptlevel (Transact-SQL)
+# <a name="sp_dbcmptlevel-transact-sql"></a>sp_dbcmptlevel (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   将某些数据库行为设置为与指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本兼容。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 使用[ALTER DATABASE 兼容级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)相反。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]请改用[ALTER Database 兼容性级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,9 +43,9 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @dbname = ] name` 是为其更改兼容级别的名称。 数据库名称必须符合标识符的规则。 *名称*是**sysname**，默认值为 NULL。  
+`[ @dbname = ] name`要更改其兼容级别的数据库的名称。 数据库名称必须符合标识符的规则。 *名称*为**sysname**，默认值为 NULL。  
   
-`[ @new_cmptlevel = ] version` 是的版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]与数据库进行兼容。 *版本*是**tinyint**，默认值为 NULL。 该值必须为下列值之一：  
+`[ @new_cmptlevel = ] version`要使数据库兼容[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的的版本。 *版本*为**tinyint**，默认值为 NULL。 该值必须为下列值之一：  
   
  **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
   
@@ -61,20 +61,20 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
- 如果未不指定任何参数，或如果*名称*未指定参数， **sp_dbcmptlevel**返回错误。  
+ 如果未指定参数，或未指定*name*参数， **sp_dbcmptlevel**将返回错误。  
   
- 如果*名称*指定不带*版本*，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]返回一条消息，显示指定的数据库的当前兼容性级别。  
+ 如果未指定*名称*，*则*将[!INCLUDE[ssDE](../../includes/ssde-md.md)]返回一条消息，显示指定数据库的当前兼容级别。  
   
 ## <a name="remarks"></a>备注  
- 有关兼容级别的说明，请参阅[ALTER DATABASE 兼容性级别&#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
+ 有关兼容性级别的说明，请参阅[ALTER DATABASE 兼容级别 &#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
   
 ## <a name="permissions"></a>权限  
- 数据库所有者、 的成员**sysadmin**固定服务器角色，并**db_owner**固定的数据库角色 （如果要更改当前数据库） 可以执行此过程。  
+ 只有数据库所有者、 **sysadmin**固定服务器角色的成员以及**db_owner**固定数据库角色的成员（如果要更改当前数据库）才能执行此过程。  
   
-## <a name="see-also"></a>请参阅  
- [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
- [保留关键字 (Transact-SQL)](../../t-sql/language-elements/reserved-keywords-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [数据库引擎存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [ALTER DATABASE &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [Transact-sql&#41;&#40;保留关键字](../../t-sql/language-elements/reserved-keywords-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

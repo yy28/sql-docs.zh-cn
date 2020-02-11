@@ -1,5 +1,5 @@
 ---
-title: CREATE KPI 语句 (MDX) |Microsoft Docs
+title: CREATE KPI 语句（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e2380f72fe8a5faf9dc5504e56941f724b1bd159
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68098402"
 ---
 # <a name="mdx-data-definition---create-kpi"></a>MDX 数据定义 - CREATE KPI
@@ -50,7 +50,7 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
 |属性标识符|含义|  
 |-------------------------|-------------|  
 |GOAL|返回数值的有效 MDX 表达式。|  
-|STATUS|返回数值的有效 MDX 表达式。|  
+|状态|返回数值的有效 MDX 表达式。|  
 |STATUS_GRAPHIC|用于定义一组图形图像的字符串，这些图形图像将由客户端应用程序使用。|  
 |TREND|返回数值的有效 MDX 表达式。|  
 |TREND_GRAPHIC|用于定义一组图形图像的字符串，这些图形图像将由客户端应用程序使用。|  
@@ -58,44 +58,44 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
 |CURRENT_TIME_MEMBER|返回时间维度成员的有效 MDX 表达式。 CURRENT_TIME_MEMBER 设置所有相对时间函数的参考点|  
 |PARENT_KPI|指定父级 KPI 名称的字符串。|  
 |CAPTION|客户端应用程序用作 KPI 标题的字符串。|  
-|DISPLAY_FOLDER|指定显示文件夹的路径的字符串，客户端应用程序将在此处显示 KPI。 文件夹级别的分隔符由客户端应用程序定义。 有关工具和客户端提供的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，反斜杠 (\\) 作为级别分隔符。 若要为已定义的成员提供多个显示文件夹，则使用分号 (;) 来分隔文件夹。|  
+|DISPLAY_FOLDER|指定显示文件夹的路径的字符串，客户端应用程序将在此处显示 KPI。 文件夹级别的分隔符由客户端应用程序定义。 对于提供的工具和客户端[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，反斜杠（\\）是级别分隔符。 若要为已定义的成员提供多个显示文件夹，则使用分号 (;) 来分隔文件夹。|  
 |ASSOCIATED_MEASURE_GROUP|指定所有 MDX 计算应指向的度量值组名称的字符串。|  
   
- GOAL、STATUS 和 TREND 属性的值是 MDX 表达式，并且这些表达式的计算结果应该在 -1 和 1 之间。 但是，定义这些属性值的实际范围的是客户端应用程序。 当你使用的工具和客户端提供的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]浏览 Kpi 时，小于-1 的值将被视为-1，而大于 1 的值将被视为 1。  
+ GOAL、STATUS 和 TREND 属性的值是 MDX 表达式，并且这些表达式的计算结果应该在 -1 和 1 之间。 但是，定义这些属性值的实际范围的是客户端应用程序。 使用提供的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]工具和客户端浏览 kpi 时，小于-1 的值将被视为-1，大于1的值将被视为1。  
   
  STATUS_GRAPHIC 和 TREND_GRAPHIC 都是字符串值，客户端应用程序使用它们来标识要显示的正确图像集。 这些字符串还定义显示函数的行为。 此行为包括要显示的状态数（通常是奇数），以及每种状态所使用的图像。  
   
 ### <a name="kpi-graphics-in-sql-server-data-tools"></a>SQL Server Data Tools 中的 KPI 图形  
- 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，KPI 图形可以有三种或五种状态。 下表定义的每种状态的值。  
+ 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，KPI 图形可以有三种或五种状态。 下表定义了每种状态的值。  
   
 |KPI 图形状态数|这些状态的值|  
 |--------------------------------------|---------------------------|  
-|3|差 = -1 到 -0.5<br /><br /> 正常 = 为 0.4999-0.4999<br /><br /> 好 = 0.50 到 1|  
+|3|差 = -1 到 -0.5<br /><br /> 正常 =-0.4999 到0.4999<br /><br /> 好 = 0.50 到 1|  
 |5|差 = -1 到 -0.75<br /><br /> 有风险 = -0.7499 到 -0.25<br /><br /> 一般 = -0.2499 到 0.2499<br /><br /> 良好 = 0.25 到 0.7499<br /><br /> 好 = 0.75 到 1|  
   
 > [!NOTE]  
 >  对于某些图形来说，如反向测量或反向状态箭头，则范围相反。 即，-1 是好，1 是差。  
   
- 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，KPI 图形的名称可确定该图形有三种状态还是五种状态。 下表列出了使用情况、 名称和状态数，[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]与其 KPI 图形相关联。  
+ 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，KPI 图形的名称可确定该图形有三种状态还是五种状态。 下表列出了与 KPI 图形[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]关联的状态、名称和状态数。  
   
 |图形用途|KPI 图形的名称|状态数|  
 |--------------------|-------------------------|----------------------|  
-|“登录属性”|形状|3|  
-|“登录属性”|交通灯|3|  
-|“登录属性”|路标|3|  
-|“登录属性”|测量|3|  
-|“登录属性”|反向测量|5|  
-|“登录属性”|温度计|3|  
-|“登录属性”|柱状|3|  
-|“登录属性”|面|3|  
-|“登录属性”|方差箭头|3|  
-|走向|标准箭头|3|  
-|走向|状态箭头|3|  
-|走向|反向状态箭头|5|  
-|走向|面|3|  
+|状态|形状|3|  
+|状态|交通灯|3|  
+|状态|路标|3|  
+|状态|仪表|3|  
+|状态|反向测量|5|  
+|状态|温度计|3|  
+|状态|柱状|3|  
+|状态|人脸|3|  
+|状态|方差箭头|3|  
+|趋势|标准箭头|3|  
+|趋势|状态箭头|3|  
+|趋势|反向状态箭头|5|  
+|趋势|人脸|3|  
   
-## <a name="see-also"></a>请参阅  
- [DROP KPI 语句&#40;MDX&#41;](../mdx/mdx-data-definition-drop-kpi.md)   
- [MDX 数据定义语句&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [DROP KPI 语句 &#40;MDX&#41;](../mdx/mdx-data-definition-drop-kpi.md)   
+ [Mdx 数据定义语句 &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

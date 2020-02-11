@@ -13,16 +13,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b87d71f8299c55e033adc21e25e29e8fb3d5e9d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62899951"
 ---
 # <a name="use-a-recordset-destination"></a>使用记录集目标
-  记录集目标不会将数据保存到外部数据源中， 而是将数据保存在內存中的一个记录集中，该记录集存储在数据类型为 `Object` 的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包变量中。 在记录集目标保存数据之后，通常使用具有 Foreach ADO 枚举器的 Foreach 循环容器来每次处理记录集的一行。 Foreach ADO 枚举器将当前行中每列的值保存到单独的包变量中。 然后，您在 Foreach 循环容器中配置的任务会从变量中读取这些值，并对它们执行某些操作。  
+  记录集目标不会将数据保存到外部数据源中， 而是将数据保存在內存中的一个记录集中，该记录集存储在数据类型为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的 `Object` 包变量中。 在记录集目标保存数据之后，通常使用具有 Foreach ADO 枚举器的 Foreach 循环容器来每次处理记录集的一行。 Foreach ADO 枚举器将当前行中每列的值保存到单独的包变量中。 然后，您在 Foreach 循环容器中配置的任务会从变量中读取这些值，并对它们执行某些操作。  
   
- 可以在很多不同情况下使用记录集目标。 下面是一些可能的恶意活动：  
+ 可以在很多不同情况下使用记录集目标。 下面是一些示例：  
   
 -   可以使用发送邮件任务和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 表达式语言来为记录集中的每一行发送一封自定义电子邮件。  
   
@@ -70,19 +70,23 @@ ms.locfileid: "62899951"
   
     1.  创建名为 `BonusRecordset` 的变量，然后将其类型设置为 `Object`。  
   
-         `BonusRecordset` 变量保存记录集。  
+         
+  `BonusRecordset` 变量保存记录集。  
   
     2.  创建名为 `EmailAddress` 的变量，然后将其类型设置为 `String`。  
   
-         `EmailAddress` 变量保存销售人员的电子邮件地址。  
+         
+  `EmailAddress` 变量保存销售人员的电子邮件地址。  
   
     3.  创建名为 `FirstName` 的变量，然后将其类型设置为 `String`。  
   
-         `FirstName` 变量保存销售人员的名字。  
+         
+  `FirstName` 变量保存销售人员的名字。  
   
     4.  创建名为 `Bonus` 的变量，然后将其类型设置为 `Double`。  
   
-         `Bonus` 变量保存销售人员的奖金额。  
+         
+  `Bonus` 变量保存销售人员的奖金额。  
   
 #### <a name="to-configure-the-connection-managers"></a>配置连接管理器  
   
@@ -121,7 +125,7 @@ ms.locfileid: "62899951"
   
 5.  打开 **“记录集目标编辑器”** ，并使用以下设置来配置目标：  
   
-    1.  上**组件属性**选项卡上，对于`VariableName`属性中，选择`User::BonusRecordset`。  
+    1.  在 "**组件属性**" 选项卡`VariableName`上，为`User::BonusRecordset`"属性" 选择。  
   
     2.  在 **“输入列”** 选项卡上，选择所有三个可用列。  
   
@@ -131,9 +135,9 @@ ms.locfileid: "62899951"
   
 2.  打开 **“Foreach 循环编辑器”** ，并使用以下设置来配置容器：  
   
-    1.  上**集合**页上，对于**枚举器**，选择**Foreach ADO 枚举器**，并为**ADO 对象源变量**，选择`User::BonusRecordset`.  
+    1.  在 "**集合**" 页上，为 "**枚举器**" 选择 " **Foreach ADO 枚举器**"，对于`User::BonusRecordset`" **ADO 对象源变量**"，选择。  
   
-    2.  上**变量映射**页上，映射`User::EmailAddress`索引 0，`User::FirstName`索引 1，和`User::Bonus`到索引 2。  
+    2.  在 "**变量映射**" 页上`User::EmailAddress` ，将索引 0 `User::FirstName`映射到索引1， `User::Bonus`并映射到索引2。  
   
 3.  在 **“控制流”** 选项卡的 Foreach 循环容器中，添加发送邮件任务。  
   

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_xtp_transaction_stats (TRANSACT-SQL) |Microsoft Docs
+title: sys. dm_xtp_transaction_stats （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,20 +19,20 @@ ms.assetid: 9389f48d-0de5-47bd-9821-4db8f04504e4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 755b5f836b833512a122ad92e5cedbd7e938a4e8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68090074"
 ---
-# <a name="sysdmxtptransactionstats-transact-sql"></a>sys.dm_xtp_transaction_stats (Transact-SQL)
+# <a name="sysdm_xtp_transaction_stats-transact-sql"></a>sys.dm_xtp_transaction_stats (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   报告自服务器启动以来有关运行的事务的统计信息。  
   
  有关详细信息，请参阅[内存中 OLTP&#40;内存中优化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |total_count|**bigint**|内存中 OLTP 数据库引擎中已运行的事务总数。|  
 |read_only_count|**bigint**|只读事务数。|  
@@ -68,7 +68,7 @@ ms.locfileid: "68090074"
 ## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
-## <a name="see-also"></a>请参阅  
- [内存优化表动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;Transact-sql&#41;的内存优化表动态管理视图](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

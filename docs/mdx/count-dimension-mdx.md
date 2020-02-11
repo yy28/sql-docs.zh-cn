@@ -1,5 +1,5 @@
 ---
-title: Count （维度） (MDX) |Microsoft Docs
+title: Count （维度）（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b84c5a1902e80f8abe3828f4be1b5d570ec026ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68104815"
 ---
 # <a name="count-dimension-mdx"></a>Count（维度）(MDX)
@@ -40,10 +40,10 @@ SELECT Measures.X ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [计数&#40;元组&#41; &#40;MDX&#41;](../mdx/count-tuple-mdx.md)   
- [计数&#40;层次结构级别&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)   
- [Count（集）(MDX)](../mdx/count-set-mdx.md)   
- [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#41; &#40;MDX &#40;元组计数&#41;](../mdx/count-tuple-mdx.md)   
+ [&#41; &#40;MDX&#41;&#40;层次结构级别](../mdx/count-hierarchy-levels-mdx.md)   
+ [&#41; &#40;MDX&#41;&#40;集计数](../mdx/count-set-mdx.md)   
+ [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

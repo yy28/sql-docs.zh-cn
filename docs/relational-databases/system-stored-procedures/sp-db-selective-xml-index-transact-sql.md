@@ -1,5 +1,5 @@
 ---
-title: sp_db_selective_xml_index (TRANSACT-SQL) |Microsoft Docs
+title: sp_db_selective_xml_index （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,21 +18,21 @@ ms.assetid: 017301a2-4a23-4e68-82af-134f3d4892b3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1648cca415f37f9c54f13857d25af90a65372c04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108234"
 ---
-# <a name="spdbselectivexmlindex-transact-sql"></a>sp_db_selective_xml_index (Transact-SQL)
+# <a name="sp_db_selective_xml_index-transact-sql"></a>sp_db_selective_xml_index (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库上启用和禁用选择性 XML 索引功能。 如果不带任何参数调用，则当在特定数据库上启用选择性 XML 索引时，存储过程返回 1。  
   
 > [!NOTE]  
->  若要禁用选择性 XML 索引使用此存储的过程，必须将数据库置于简单恢复模式下使用[ALTER DATABASE SET 选项&#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md)命令。  
+>  若要使用此存储过程禁用选择性 XML 索引，必须使用[ALTER DATABASE SET Options &#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)命令将数据库置于简单恢复模式。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,9 +43,9 @@ ms.locfileid: "68108234"
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @ db_name = ] 'db_name'` 若要启用或禁用选择性 XML 索引上的数据库的名称。 如果*db_name*为 NULL，则假定为当前数据库。  
+`[ @ db_name = ] 'db_name'`要对其启用或禁用选择性 XML 索引的数据库的名称。 如果*db_name*为空，则假定为当前数据库。  
   
-`[ @action = ] 'action'` 确定是否启用或禁用索引。 如果 on 传递 true，off 或 false 之外的其他值，将引发错误。  
+`[ @action = ] 'action'`确定是启用还是禁用索引。 如果传递了除 "on"、"true"、"off" 或 "false" 之外的其他值，则会引发错误。  
   
 ```  
   
@@ -53,7 +53,7 @@ Allowed values: 'on', 'off', 'true', 'false'
 ```  
   
 ## <a name="return-code-values"></a>返回代码值  
- **1**如果特定数据库上启用选择性 XML 索引。  
+ 如果在特定数据库上启用选择性 XML 索引，则为**1** 。  
   
 ## <a name="examples"></a>示例  
   
@@ -103,7 +103,7 @@ EXECUTE sys.sp_db_selective_xml_index;
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [选择性 XML 索引 (SXI)](../../relational-databases/xml/selective-xml-indexes-sxi.md)  
   
   

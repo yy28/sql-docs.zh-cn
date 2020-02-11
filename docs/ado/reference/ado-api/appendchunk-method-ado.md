@@ -1,5 +1,5 @@
 ---
-title: AppendChunk 方法 (ADO) |Microsoft Docs
+title: AppendChunk 方法（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: c648b5a8-d4f1-4d16-836e-3957feb03617
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f9d575460daf0f801f6d6dd2e80b0c67f4886dc7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920564"
 ---
 # <a name="appendchunk-method-ado"></a>AppendChunk 方法 (ADO)
-将数据追加到大文本或二进制数据[字段](../../../ado/reference/ado-api/field-object.md)，或设置为[参数](../../../ado/reference/ado-api/parameter-object.md)对象。  
+将数据追加到大文本或二进制数据[字段](../../../ado/reference/ado-api/field-object.md)，或追加到[参数](../../../ado/reference/ado-api/parameter-object.md)对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,39 +33,39 @@ ms.locfileid: "67920564"
 object.AppendChunk Data  
 ```  
   
-#### <a name="parameters"></a>Parameters  
- *object*  
+#### <a name="parameters"></a>parameters  
+ *对象*  
  一个**字段**或**参数**对象。  
   
- *Data*  
- 一个**变体**，其中包含要追加到对象的数据。  
+ *数据*  
+ 一个包含要追加到对象的数据的**变量**。  
   
 ## <a name="remarks"></a>备注  
- 使用**AppendChunk**方法**字段**或**参数**要用长二进制或字符数据填充对象。 在系统内存有限的情况下，你可以使用**AppendChunk**方法来操作部分而不是很长的值。  
+ 对**字段**或**参数**对象使用**AppendChunk**方法，以使用较长的二进制或字符数据填充它。 在系统内存有限的情况下，可以使用**AppendChunk**方法在部分中而不是完整地操作长值。  
   
 ## <a name="field"></a>字段  
- 如果**adFldLong**位[特性](../../../ado/reference/ado-api/attributes-property-ado.md)属性**字段**对象设置为**true**，可以使用**AppendChunk**为该字段的方法。  
+ 如果**字段**对象的[Attributes](../../../ado/reference/ado-api/attributes-property-ado.md)属性中的**adFldLong**位设置为**true**，则可以对该字段使用**AppendChunk**方法。  
   
- 第一个**AppendChunk**上调用**字段**对象将数据写入到字段中，覆盖任何现有数据。 后续**AppendChunk**调用添加到现有数据。 如果将数据追加到的一个字段，然后设置或读取的当前记录中的另一个字段的值，ADO 将假定您已完成了将数据追加到第一个字段。 如果您调用**AppendChunk**同样，第一个字段 ADO 方法将解释为一个新的调用**AppendChunk**操作，并覆盖现有数据。 访问其他字段[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)不是第一个克隆的对象**记录集**对象不会破坏**AppendChunk**操作。  
+ **Field**对象上的第一个**AppendChunk**调用将数据写入字段，并覆盖任何现有数据。 后续**AppendChunk**调用将添加到现有数据。 如果要将数据追加到一个字段，然后设置或读取当前记录中另一个字段的值，则 ADO 会假定您已完成将数据追加到第一个字段。 如果再次对第一个字段调用**AppendChunk**方法，则 ADO 会将调用解释为新的**AppendChunk**操作，并覆盖现有数据。 访问不是第一个**记录集**对象的克隆的其他[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象中的字段将不会中断**AppendChunk**操作。  
   
- 如果没有当前记录调用时**AppendChunk**上**字段**对象时，出现错误。  
+ 如果对**字段**对象调用**AppendChunk**时没有当前记录，则会发生错误。  
   
 > [!NOTE]
->  **AppendChunk**方法不对上进行操作**字段**的对象[记录对象 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)对象。 它不会执行任何操作，并将产生运行时错误。  
+>  **AppendChunk**方法不对[记录对象（ADO）](../../../ado/reference/ado-api/record-object-ado.md)对象的**字段**对象进行操作。 它不执行任何操作，并将生成运行时错误。  
   
 ## <a name="parameter"></a>参数  
- 如果**adParamLong**位**特性**属性**参数**对象设置为**true**，可以使用**AppendChunk**为该参数的方法。  
+ 如果**参数**对象的**Attributes**属性中的**adParamLong**位设置为**true**，则可以对该参数使用**AppendChunk**方法。  
   
- 第一个**AppendChunk**上调用**参数**对象将数据写入到参数，覆盖任何现有数据。 后续**AppendChunk**上调用**参数**对象添加到现有的参数数据。 **AppendChunk**调用传递 null 值的放弃所有参数数据。  
+ **参数**对象上的第一个**AppendChunk**调用将数据写入参数，并覆盖任何现有数据。 后续**AppendChunk**对**参数**对象的调用将添加到现有参数数据。 传递 null 值的**AppendChunk**调用会丢弃所有参数数据。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
   
 |||  
 |-|-|  
-|[字段对象](../../../ado/reference/ado-api/field-object.md)|[参数对象](../../../ado/reference/ado-api/parameter-object.md)|  
+|[字段对象](../../../ado/reference/ado-api/field-object.md)|[Parameter 对象](../../../ado/reference/ado-api/parameter-object.md)|  
   
-## <a name="see-also"></a>请参阅  
- [AppendChunk 和 GetChunk 方法示例 (VB)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vb.md)   
- [AppendChunk 和 GetChunk 方法示例 （VC + +）](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vc.md)   
- [Attributes 属性 (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)   
+## <a name="see-also"></a>另请参阅  
+ [AppendChunk 和 GetChunk 方法示例（VB）](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vb.md)   
+ [AppendChunk 和 GetChunk 方法示例（VC + +）](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vc.md)   
+ [Attributes 属性（ADO）](../../../ado/reference/ado-api/attributes-property-ado.md)   
  [GetChunk 方法 (ADO)](../../../ado/reference/ado-api/getchunk-method-ado.md)

@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 56f075ff4a26af4913d792c20a8d7c1d6a58fcb0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011672"
 ---
 # <a name="application-roles"></a>应用程序角色
@@ -61,7 +61,7 @@ ms.locfileid: "63011672"
 |删除应用程序角色。|[DROP APPLICATION ROLE (Transact-SQL)](/sql/t-sql/statements/drop-application-role-transact-sql)|  
 |使用应用程序角色。|[sp_setapprole (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-setapprole-transact-sql)|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [保护 SQL Server](../securing-sql-server.md)  
   
   

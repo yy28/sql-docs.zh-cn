@@ -14,16 +14,16 @@ ms.assetid: c4407694-c8e1-4b0b-a39d-b007e6c3b54d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a634a553672b83931091056dd489f7559c4269b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106207"
 ---
 # <a name="binding-columns"></a>绑定列
-从数据源提取数据返回到应用程序已为此目的分配的变量中的应用程序。 这可以完成之前，必须将关联应用程序，或*绑定*，这些变量和结果的列设置; 从概念上讲，此过程是相同应用程序变量绑定到语句参数。 当应用程序将变量绑定到结果集列时，它描述了驱动程序到该变量的地址、 数据类型等的。 该驱动程序结构，它维护适用于该语句，并使用的信息提取该行时返回值的列中存储此信息。  
+从数据源提取的数据将返回到应用程序已为此目的分配的变量中。 在完成此操作之前，应用程序必须将这些变量关联或*绑定*到结果集的列;从概念上讲，此过程与将应用程序变量绑定到语句参数相同。 当应用程序将变量绑定到结果集列时，它将描述该驱动程序的变量地址、数据类型等。 驱动程序将此信息存储在它为该语句维护的结构中，并在提取该行时使用该信息从列返回值。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [绑定结果集列](../../../odbc/reference/develop-app/binding-result-set-columns.md)  
   

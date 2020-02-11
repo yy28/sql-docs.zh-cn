@@ -14,25 +14,25 @@ ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bce9917f144e8c63160f571a986263d8d7e97b21
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925567"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>检测和解决冲突
-如果您处理的记录集，在直接模式下，则要少得多的并发问题发生的机会。 另一方面，如果你的应用程序使用批处理模式更新，可能有一个好机会的另一个用户编辑同一条记录所做的更改在保存前一个用户将更改记录。 在这种情况下，您将希望应用程序来适当地处理冲突。 它可能是您所希望的最后一个人将更新发送到服务器"wins"。 或者，可能想要让最新的用户，可以决定哪种更新应优先通过为他提供两个冲突值之间进行选择。  
+如果在即时模式下处理记录集，则可能会有很少的并发问题发生。 另一方面，如果应用程序使用批处理模式更新，则可能会有很好的机会，让一个用户在另一个用户编辑相同记录所做的更改保存之前更改记录。 在这种情况下，你将希望应用程序妥善处理冲突。 你可能希望最后一位用户将更新发送到服务器 "wins"。 或者，您可能想让最近的用户通过在两个冲突值之间进行选择来决定哪个更新的优先级。  
   
- 在任何情况下，ADO 提供要处理这些类型的冲突的字段对象的 UnderlyingValue 和 OriginalValue 属性。 使用重新同步方法和记录集的筛选器属性结合使用这些属性。  
+ 无论何种情况，ADO 都提供 Field 对象的 UnderlyingValue 和 OriginalValue 属性来处理这些类型的冲突。 将这些属性与记录集的 Resync 方法和 Filter 属性结合使用。  
   
 ## <a name="remarks"></a>备注  
- 当 ADO 批处理更新的过程中遇到冲突时，则将到错误集合添加一条警告。 因此，您应始终检查错误调用 batchupdate 之后，并找到它们，如果开始遇到冲突对假设进行测试后，立即。 第一步是在记录集等于 adFilterConflictingRecords 上设置筛选器属性。 这会限制上发生冲突的记录到记录集的视图。 如果 RecordCount 属性等于零，在此步骤后，您知道错误产生的冲突以外的内容。  
+ 当 ADO 在批更新过程中遇到冲突时，将在错误集合中添加一条警告。 因此，在调用 BatchUpdate 之后，应始终立即检查是否存在错误，如果找到这些错误，则开始测试假设您遇到了冲突。 第一步是将记录集的 "筛选器" 属性设置为等于 "adFilterConflictingRecords"。 这会将记录集上的视图限制为仅存在发生冲突的记录。 如果在执行此步骤后，RecordCount 属性等于零，则表明该错误是由冲突以外的内容引发的。  
   
- 当调用 batchupdate 之后时，ADO 和提供程序正在生成 SQL 语句，以在数据源上执行更新。 请记住，某些数据源的类型的列可以使用 WHERE 子句中的限制。  
+ 调用 BatchUpdate 时，ADO 和提供程序正在生成 SQL 语句，以便对数据源执行更新。 请记住，某些数据源对于 WHERE 子句中可以使用哪些类型的列有限制。  
   
- 接下来，重新同步方法记录集上调用具有设置为等于 adAffectGroup 和 ResyncValues 参数设置为等于 adResyncUnderlyingValues AffectRecords 参数。 重新同步方法更新基础数据库中的当前记录集对象中的数据。 通过使用 adAffectGroup，确保仅显示与当前筛选器设置，即，仅冲突的记录，记录将与数据库同步。 如果您处理的大型记录集，这可能使显著的性能差异。 通过调用重新同步时，ResyncValues 参数设置为 adResyncUnderlyingValues，可以确保 UnderlyingValue 属性将包含从数据库 （冲突） 的值、 Value 属性将维护由用户输入的值和OriginalValue 属性将包含字段 （值之前执行最后一个成功 UpdateBatch 调用） 的原始值。 然后可以使用这些值以解决该冲突以编程方式或要求用户选择将使用的值。  
+ 接下来，在 AffectRecords 参数设置为 adAffectGroup 且 ResyncValues 参数设置等于 adResyncUnderlyingValues 的记录集中调用 Resync 方法。 Resync 方法从基础数据库更新当前记录集对象中的数据。 通过使用 adAffectGroup，你可以确保只有与当前筛选器设置一起显示的记录才会与数据库重新同步。 如果正在处理大型记录集，这可能会显著提高性能。 通过将 ResyncValues 参数设置为 adResyncUnderlyingValues （调用重新同步时），可以确保 UnderlyingValue 属性将包含数据库中的（冲突）值，该值属性将保留用户输入的值，并且OriginalValue 属性将保留该字段的原始值（进行上次成功的 UpdateBatch 调用之前的值）。 然后，你可以使用这些值以编程方式解决冲突，或者要求用户选择将使用的值。  
   
- 这种方法是在下面的代码示例所示。 该示例人为地使用单独的记录集之前调用 UpdateBatch 更改基础表中的值创建冲突。  
+ 下面的代码示例演示了此方法。 示例人为在调用 UpdateBatch 之前，通过使用单独的记录集更改基础表中的值来创建冲突。  
   
 ```  
 'BeginConflicts  
@@ -111,9 +111,9 @@ ms.locfileid: "67925567"
 'EndConflicts  
 ```  
   
- Status 属性的当前记录或的特定字段可用于确定已发生哪种冲突。  
+ 您可以使用当前记录或特定字段的 Status 属性来确定发生了哪种冲突。  
   
- 有关错误处理的详细信息，请参阅[的错误处理](../../../ado/guide/data/error-handling.md)。  
+ 有关错误处理的详细信息，请参阅[错误处理](../../../ado/guide/data/error-handling.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [批处理模式](../../../ado/guide/data/batch-mode.md)

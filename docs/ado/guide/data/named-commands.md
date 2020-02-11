@@ -1,5 +1,5 @@
 ---
-title: 名为命令 |Microsoft Docs
+title: 命名命令 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,14 +14,14 @@ ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 928ac3b1d3cd753ded0bcf4337f10a654c9a3dc0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924827"
 ---
 # <a name="named-commands"></a>命名命令
-[创建和执行简单的命令](../../../ado/guide/data/creating-and-executing-a-simple-command.md)演示一种方法来执行命令。 还有一种方法： 可以将它命名的命令，，然后调用此命令是直接在命名**连接**对象 (分配给**ActiveConnection**属性**命令**对象)。 分配将名称传递给命名命令意味着**名称**的属性**命令**对象。 例如，  
+[创建和执行一个简单的命令](../../../ado/guide/data/creating-and-executing-a-simple-command.md)将显示执行命令的一种方法。 还有另一种方法：可以将其设置为命名命令，然后在**连接**对象上直接调用此命名的命令（分配给**Command**对象的**ActiveConnection**属性）。 命名命令意味着将名称分配给**命令**对象的**name**属性。 例如，  
   
 ```  
 objCmd.Name = "GetCustomers"  
@@ -29,9 +29,9 @@ objCmd.ActiveConnection = objConn
 objConn.GetCustomers objRs  
 ```  
   
- 已命名的命令看起来就像它是"自定义方法"一样上**连接**对象。 作为此"自定义方法"的输出参数返回命令的结果。  
+ 命名的命令的行为就像它是**连接**对象上的 "自定义方法"。 此命令的结果将作为此 "自定义方法" 的 out 参数返回。  
   
- 下面的示例阐释了此功能。  
+ 下面的示例演示了此功能。  
   
 ```  
 'BeginNamedCmd  
@@ -89,5 +89,5 @@ ErrHandler:
 'EndNamedCmd  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

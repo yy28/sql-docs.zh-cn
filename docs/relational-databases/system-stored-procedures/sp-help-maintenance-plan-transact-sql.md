@@ -1,5 +1,5 @@
 ---
-title: sp_help_maintenance_plan (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_maintenance_plan （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,23 +18,23 @@ ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 42a98fe7af16c4e8aab22d6ace02f359dfe02c54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68096204"
 ---
-# <a name="sphelpmaintenanceplan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
+# <a name="sp_help_maintenance_plan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   返回有关指定的维护计划的信息。 如果没有指定计划，那么该存储过程将返回有关所有维护计划的信息。  
   
-> **注意**：数据库维护计划使用这些存储过程。 但此功能已由不使用此存储过程的维护计划取代。 可使用此过程对从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本升级的安装维护数据库维护计划。  
+> **注意：** 此存储过程用于数据库维护计划。 但此功能已由不使用此存储过程的维护计划取代。 可使用此过程对从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本升级的安装维护数据库维护计划。  
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,17 +44,17 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @plan_id = ] 'plan\_id'` 指定维护计划的计划 ID。 *plan_id*是**UNIQUEIDENTIFIER**。 默认值为 NULL。  
+`[ @plan_id = ] 'plan\_id'`指定维护计划的计划 ID。 *plan_id*是**UNIQUEIDENTIFIER**。 默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  无  
   
 ## <a name="result-sets"></a>结果集  
- 如果*plan_id*指定，则**sp_help_maintenance_plan**将返回三个表：计划、 数据库和作业。  
+ 如果指定了*plan_id* ， **sp_help_maintenance_plan**将返回三个表： Plan、Database 和 Job。  
   
 ### <a name="plan-table"></a>Plan 表  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**plan_id**|**uniqueidentifier**|维护计划 ID。|  
 |**plan_name**|**sysname**|维护计划名称。|  
@@ -64,27 +64,27 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 |**remote_history_server**|**int**|可以写入历史报表的远程服务器的名称。|  
 |**max_remote_history_rows**|**int**|可以写入历史报表的远程服务器上系统表所分配的最大行数。|  
 |**user_defined_1**|**int**|默认值为 NULL。|  
-|**user_defined_2**|**nvarchar(100)**|默认值为 NULL。|  
+|**user_defined_2**|**nvarchar （100）**|默认值为 NULL。|  
 |**user_defined_3**|**datetime**|默认值为 NULL。|  
 |**user_defined_4**|**uniqueidentifier**|默认值为 NULL。|  
   
 ### <a name="database-table"></a>Database 表  
   
-|列名|描述|  
+|列名称|说明|  
 |-----------------|-----------------|  
 |**database_name**|所有与维护计划相关的数据库的名称。 database_name 的数据类型为 sysname   。|  
   
 ### <a name="job-table"></a>Job 表  
   
-|列名|描述|  
+|列名称|说明|  
 |-----------------|-----------------|  
 |**job_id**|所有与维护计划相关的作业的 ID。 *job_id*是**uniqueidentifier**。|  
   
 ## <a name="remarks"></a>备注  
- **sp_help_maintenance_plan**处于**msdb**数据库。  
+ **sp_help_maintenance_plan**在**msdb**数据库中。  
   
 ## <a name="permissions"></a>权限  
- 只有的成员**sysadmin**固定的服务器角色可以执行**sp_help_maintenance_plan**。  
+ 只有**sysadmin**固定服务器角色的成员才能**sp_help_maintenance_plan**执行。  
   
 ## <a name="examples"></a>示例  
  此示例提供有关维护计划 FAD6F2AB-3571-11D3-9D4A-00C04FB925FC 的说明性信息。  
@@ -94,8 +94,8 @@ EXECUTE   sp_help_maintenance_plan
    N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC';  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [维护计划](../../relational-databases/maintenance-plans/maintenance-plans.md)   
- [数据库维护计划存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
+ [数据库维护计划存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   
   

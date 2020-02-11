@@ -13,16 +13,16 @@ ms.assetid: 2c8cde03-4bb8-4b35-881b-1ba23da15fbc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f1f3892929e06cbca39b9d96936860cd9f100f06
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68086047"
 ---
 # <a name="transactions-in-odbc-odbc"></a>ODBC 中的事务
-ODBC 中的事务按连接级别; 完成也就是说，在应用程序完成事务，它都将提交或回滚通过该连接上的所有语句句柄做的所有工作。  
+ODBC 中的事务在连接级别完成;也就是说，当应用程序完成事务时，它将提交或回滚通过该连接上的所有语句句柄完成的所有工作。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [事务支持](../../../odbc/reference/develop-app/transaction-support.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: syspolicy_conditions (TRANSACT-SQL) |Microsoft Docs
+title: syspolicy_conditions （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,19 @@ ms.assetid: af97d26c-4bd5-4b08-be51-8419e3b2832c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ee0f269fcfda93733d36a0b7396fd72d16bc01d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68121173"
 ---
-# <a name="syspolicyconditions-transact-sql"></a>syspolicy_conditions (Transact-SQL)
+# <a name="syspolicy_conditions-transact-sql"></a>syspolicy_conditions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中每个基于策略的管理条件在表中各占一行。 syspolicy_conditions 属于 msdb 数据库中的 dbo 架构。 下表介绍了 syspolicy_conditions 视图中的列。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |condition_id|**int**|此条件的标识符。 每个条件表示由一个或多个条件表达式组成的集合。|  
 |name|**sysname**|条件名称。|  
@@ -49,8 +50,8 @@ ms.locfileid: "68121173"
 ## <a name="permissions"></a>权限  
  要求具有 msdb 数据库中 PolicyAdministratorRole 角色的成员身份。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用基于策略的管理来管理服务器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
- [基于策略的管理视图 (Transact-SQL)](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
+ [基于策略的管理视图 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   

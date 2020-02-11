@@ -1,5 +1,5 @@
 ---
-title: sys.fn_hadr_backup_is_preferred_replica (TRANSACT-SQL) |Microsoft Docs
+title: sys. fn_hadr_backup_is_preferred_replica （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,18 +22,18 @@ ms.assetid: 61b9be77-e2f6-4da1-b2ae-a62cbe226145
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4e343e7e9657b69ebd06a147cb99fa19e3c36aab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68120245"
 ---
-# <a name="sysfnhadrbackupispreferredreplica--transact-sql"></a>sys.fn_hadr_backup_is_preferred_replica  (Transact-SQL)
+# <a name="sysfn_hadr_backup_is_preferred_replica--transact-sql"></a>sys. fn_hadr_backup_is_preferred_replica （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   用于确定当前副本是否为首选备份副本。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,14 +43,14 @@ sys.fn_hadr_backup_is_preferred_replica ( 'dbname' )
 ```  
   
 ## <a name="arguments"></a>参数  
- '*dbname*  
+ "*dbname*"  
  要备份的数据库的名称。 *dbname*的类型为 sysname。  
   
 ## <a name="returns"></a>返回  
  如果当前实例上的数据库位于首选副本上，则返回 1。 否则，返回 0。  
   
 ## <a name="remarks"></a>备注  
- 在备份脚本中使用此函数来确定当前数据库是否位于用于备份的首选副本上。 您可以在每个可用性副本上运行脚本。 每个这些作业看起来相同的数据来确定哪些作业应该运行，因此只有一个计划作业实际上将继续到备份阶段。 示例代码可与以下代码相似。  
+ 在备份脚本中使用此函数来确定当前数据库是否位于用于备份的首选副本上。 您可以在每个可用性副本上运行脚本。 其中的每个作业都将查看相同的数据来确定应运行的作业，因此，只有一个计划的作业实际上会继续到备份阶段。 示例代码可与以下代码相似。  
   
 ```  
 If sys.fn_hadr_backup_is_preferred_replica( @dbname ) <> 1   
@@ -63,7 +63,7 @@ END
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-using-sysfnhadrbackupispreferredreplica"></a>A. 使用 sys.fn_hadr_backup_is_preferred_replica  
+### <a name="a-using-sysfn_hadr_backup_is_preferred_replica"></a>A. 使用 sys.fn_hadr_backup_is_preferred_replica  
  如果当前数据库是首选备份副本，则下面的示例将返回 1。  
   
 ```  
@@ -75,11 +75,11 @@ GO
   
 -   [配置可用性副本备份 (SQL Server)](../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)  
   
-## <a name="see-also"></a>请参阅  
- [Always On 可用性组函数&#40;Transact SQL&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
- [AlwaysOn 可用性组 (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>另请参阅  
+ [Always On 可用性组函数 &#40;Transact-sql&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
+ [Always On 可用性组 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [CREATE AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/create-availability-group-transact-sql.md)   
- [ALTER AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/alter-availability-group-transact-sql.md)   
- [活动次要副本：在辅助副本上备份&#40;Always On 可用性组&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)[Always On 可用性组目录视图&#40;Transact SQL    &#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)  
+ [更改可用性组 &#40;Transact-sql&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
+ [活动辅助副本：辅助副本上的备份 &#40;Always On 可用性组&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) [Always On 可用性组目录视图 &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)      
   
   

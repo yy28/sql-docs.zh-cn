@@ -1,5 +1,5 @@
 ---
-title: KPITrend (MDX) |Microsoft Docs
+title: KPITrend （MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 26e33a84ff50fca00151dc124403bac9daa2d89d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905862"
 ---
 # <a name="kpitrend-mdx"></a>KPITrend (MDX)
@@ -29,7 +29,7 @@ KPITrend(KPI_Name)
   
 ## <a name="arguments"></a>参数  
  *KPI_Name*  
- 指定 KPI 的名称的有效字符串表达式。  
+ 指定 KPI 名称的有效字符串表达式。  
   
 ## <a name="remarks"></a>备注  
  走向值通常为介于 -1 到 1 之间的规范化值。  
@@ -53,7 +53,7 @@ Descendants
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

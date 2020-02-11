@@ -1,5 +1,5 @@
 ---
-title: MSagent_parameters (Transact SQL) |Microsoft Docs
+title: MSagent_parameters （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -18,25 +18,25 @@ ms.assetid: be30abc9-c00d-446f-b1b4-1269772f37e6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 38c6bb0ae74ffe54e9637610139374e458e3649d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68095706"
 ---
-# <a name="msagentparameters-transact-sql"></a>MSagent_parameters (Transact-SQL)
+# <a name="msagent_parameters-transact-sql"></a>MSagent_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSagent_parameters**表包含与代理配置文件关联的参数。 参数名与代理所支持的名称相同。 此表存储中**msdb**数据库。  
+  **MSagent_parameters**表包含与代理配置文件关联的参数。 参数名与代理所支持的名称相同。 该表存储在**msdb**数据库中。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**profile_id**|**int**|从配置文件 ID **MSagent_profiles**表。|  
-|**parameter_name**|**sysname**|参数名。|  
-|**value**|**nvarchar(255)**|参数的值。|  
+|**profile_id**|**int**|**MSagent_profiles**表中的配置文件 ID。|  
+|**parameter_name**|**sysname**|参数的名称。|  
+|**负值**|**nvarchar(255)**|参数值。|  
   
-## <a name="see-also"></a>请参阅  
- [复制表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0ffd514fcdf5479f91e31d3bb5f261bba7ab4cd2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999640"
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>使用对象资源管理器管理对象
@@ -42,7 +42,7 @@ ms.locfileid: "62999640"
  在对象资源管理器中，一次只能选择一个对象。 若要选择多个项，请按 **F7** 以打开“对象资源管理器详细信息”  页。 “对象资源管理器详细信息”  页支持多项选择。  
   
 ## <a name="register-a-server-from-object-explorer"></a>从对象资源管理器中注册服务器  
- 连接到服务器后，即可轻松注册服务器，以供将来使用。 在对象资源管理器中，右键单击服务器名称，然后单击“注册”  。 在“注册服务器”  对话框中，指定要在服务器组树中放置服务器的位置。 在“服务器名称”  方框中，可以使用更有意义的服务器名称替换此服务器名称。 例如，可以使用更有意义的名称（如 **Accounts Payable**）来注册服务器 **APSQL02**。  
+ 连接到服务器后，即可轻松注册服务器，以供将来使用。 在对象资源管理器中，右键单击服务器名称，然后单击“注册”  。 在“注册服务器”  对话框中，指定要在服务器组树中放置服务器的位置。 在“服务器名称”  方框中，可以使用更有意义的服务器名称替换此服务器名称。 例如，可以使用更有意义的名称（如 **Accounts Payable** ）来注册服务器**APSQL02**。  
   
 ## <a name="performing-actions-on-object-explorer-nodes"></a>在对象资源管理器节点上执行操作  
  通过右键单击表示该对象的对象资源管理器节点，可以在对象上执行操作。 每种对象类型支持一组唯一的右键单击操作。 通过使用右键单击菜单，可以执行的操作类型包括：  
@@ -53,7 +53,7 @@ ms.locfileid: "62999640"
 ### <a name="start-powershell"></a>启动 PowerShell  
  可通过右键单击对象资源管理器树中的大多数文件夹和对象并选择“启动 PowerShell”  来启动 PowerShell 会话。 这将启动已启用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 支持的 PowerShell 会话，并将路径设置为在对象资源管理器中右键单击的对象。 然后，您可以在交互式 PowerShell 环境中输入 PowerShell 命令。 有关详细信息，请参阅 [SQL Server PowerShell](../../powershell/sql-server-powershell.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [对象资源管理器](object-explorer.md)   
  [打开并配置对象资源管理器](open-and-configure-object-explorer.md)   
  [从对象资源管理器连接到实例](connect-to-an-instance-from-object-explorer.md)   

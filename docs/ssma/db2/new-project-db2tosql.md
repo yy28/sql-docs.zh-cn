@@ -1,5 +1,5 @@
 ---
-title: 新项目 (DB2ToSQL) |Microsoft Docs
+title: 新建项目（DB2ToSQL） |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,28 +10,28 @@ ms.assetid: 66437b45-4686-4fc7-a91b-ebde45e0f1b0
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 8e9edc319a539d438cdb7eb126694812d9084d24
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68084624"
 ---
-# <a name="new-project-db2tosql"></a>新项目 (DB2ToSQL)
-使用**新的项目**对话框创建新的 SSMA 项目。 访问**新的项目**对话框中，在**文件**菜单中，单击**新项目**。  
+# <a name="new-project-db2tosql"></a>新建项目（DB2ToSQL）
+使用 "**新建项目**" 对话框创建新的 SSMA 项目。 若要访问 "**新建项目**" 对话框，请在 "**文件**" 菜单上单击 "**新建项目**"。  
   
 ## <a name="options"></a>选项  
 **名称**  
-输入项目的名称。 SSMA 会追加文件扩展名。  
+输入项目的名称。 SSMA 将追加文件扩展名。  
   
-**Location**  
-输入或浏览到文件夹或网络位置来保存该项目。  
+**位置**  
+输入或浏览到要保存项目的文件夹或网络位置。  
   
 **迁移到**  
-选择目标数据库版本从以下列表之一：  
+从下面的列表中选择一个目标数据库版本：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   

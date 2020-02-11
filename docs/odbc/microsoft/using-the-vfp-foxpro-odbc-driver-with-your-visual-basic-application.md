@@ -1,5 +1,5 @@
 ---
-title: 使用 Visual Basic 应用程序使用 VFP FoxPro ODBC 驱动程序 |Microsoft Docs
+title: 将 VFP FoxPro ODBC 驱动程序用于 Visual Basic 应用程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,53 +16,53 @@ ms.assetid: 5223ca23-5df6-4ebc-aa3b-70682ff27a8c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 017e8e7897b2b792d7a864dc336537d76dcad8b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68087980"
 ---
 # <a name="using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application"></a>配合使用 VFP FoxPro ODBC 驱动程序和 Visual Basic 应用程序
-你的 Microsoft® Visual Basic® 应用程序可以与 Visual FoxPro 数据通信通过创建连接到 Visual FoxPro 数据源的数据控件。  
+Microsoft® Visual Basic®应用程序可以通过创建连接到 Visual FoxPro 数据源的数据控件与 Visual FoxPro 数据通信。  
   
-#### <a name="to-connect-to-visual-foxpro-data-using-the-data-control-in-visual-basic"></a>若要连接到 Visual Basic 中使用的数据控件的 Visual FoxPro 数据  
+#### <a name="to-connect-to-visual-foxpro-data-using-the-data-control-in-visual-basic"></a>使用 Visual Basic 中的数据控件连接到 Visual FoxPro 数据  
   
-1.  创建名为"test"的数据源连接到包含在 Visual FoxPro TasTrade 示例数据库。 默认 Visual FoxPro 安装位置中位置 TasTrade 示例数据库：  
+1.  创建一个名为 "test" 的数据源，该数据源连接到 Visual FoxPro 中包含的 TasTrade 示例数据库。 默认的 Visual FoxPro 安装将 TasTrade 示例数据库放置在该位置：  
   
     ```  
     c:\vfp\samples\mainsamp\data\tastrade.dbc  
     ```  
   
-2.  在 Visual Basic 中创建新的窗体并放置一个文本框和上的某个数据控件。  
+2.  在 Visual Basic 中，创建一个新窗体，然后在其上放置一个文本框和一个数据控件。  
   
-3.  更改数据控件的连接属性，如下所示：  
+3.  按如下所示更改数据控件的连接属性：  
   
     ```  
     ODBC;DATABASE=tastrade;DSN=test  
     ```  
   
-4.  更改记录集类型属性设置为以下内容：  
+4.  将 "项内容属性" 属性更改为以下内容：  
   
     ```  
     2 - Snapshot  
     ```  
   
-5.  更改记录源属性设置为以下内容：  
+5.  将 RecordSource 属性更改为以下内容：  
   
     ```  
     customer  
     ```  
   
-6.  将文本框中的数据源属性更改到以下的数据控件的默认名称为：  
+6.  将文本框的 "DataSource" 属性更改为 "数据控件" 的默认名称，如下所示：  
   
     ```  
     data1  
     ```  
   
-7.  将文本框的 DataField 属性更改为以下：  
+7.  将文本框的 DataField 属性更改为以下内容：  
   
     ```  
     customer_id  
     ```  
   
-8.  运行该窗体，并使用数据控件从 Visual FoxPro TasTrade 示例数据库的客户 id 字段通过跳过。
+8.  运行窗体，并使用数据控件从 Visual FoxPro TasTrade 示例数据库中跳过客户 id 字段。

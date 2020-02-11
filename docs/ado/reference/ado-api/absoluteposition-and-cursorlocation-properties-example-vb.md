@@ -1,5 +1,5 @@
 ---
-title: AbsolutePosition 和 CursorLocation 属性示例 (VB) |Microsoft Docs
+title: AbsolutePosition 和 CursorLocation 属性示例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: c4755799-c60a-4b5e-a01f-b85dd0e0a7f9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 29307c3764a81f60ad02108ba498daab85bc0b3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921716"
 ---
-# <a name="absoluteposition-and-cursorlocation-properties-example-vb"></a>AbsolutePosition 和 CursorLocation 属性示例 (VB)
-此示例演示如何[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)属性可以跟踪枚举中的所有记录的循环的进度[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。 它使用[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性来启用**AbsolutePosition**通过将光标设置为客户端游标的属性。  
+# <a name="absoluteposition-and-cursorlocation-properties-example-vb"></a>AbsolutePosition 和 CursorLocation 属性示例（VB）
+此示例演示[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)属性如何跟踪枚举[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的所有记录的循环的进度。 它通过将光标设置为客户端光标来使用[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性来启用**AbsolutePosition**属性。  
   
 ```  
 'BeginAbsolutePositionVB  
@@ -91,7 +91,7 @@ End Sub
 'EndAbsolutePositionVB  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [AbsolutePosition 属性 (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
- [CursorLocation 属性 (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md)   
+## <a name="see-also"></a>另请参阅  
+ [AbsolutePosition 属性（ADO）](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
+ [CursorLocation 属性（ADO）](../../../ado/reference/ado-api/cursorlocation-property-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -1,5 +1,5 @@
 ---
-title: 排序属性示例 （VC + +） |Microsoft Docs
+title: Sort 属性示例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 58199284-747b-4312-b97f-797ee7bd4435
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a2092b830501ca22b28e867090623a4343f27eca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930961"
 ---
 # <a name="sort-property-example-vc"></a>Sort 属性示例 (VC++)
-此示例使用[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象的[排序](../../../ado/reference/ado-api/sort-property.md)属性来重新排列的行**记录集**派生自***作者***的表**Pubs**数据库。 辅助实用工具例程打印每个行。  
+此示例使用[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)对象的[Sort](../../../ado/reference/ado-api/sort-property.md)属性对从**Pubs**数据库的***Authors***表中派生的**记录集**的行重新排序。 辅助实用程序例程打印每行。  
   
 ```  
 // SortPropertyExample.cpp  
@@ -132,6 +132,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+## <a name="see-also"></a>另请参阅  
+ [Recordset 对象（ADO）](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Sort 属性](../../../ado/reference/ado-api/sort-property.md)

@@ -1,5 +1,5 @@
 ---
-title: 对常规连接和上下文连接的限制 |Microsoft Docs
+title: 常规连接和上下文连接的限制 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3b721409f0915cb1e13861f6481909e02af37cb2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919171"
 ---
 # <a name="restrictions-on-regular-and-context-connections"></a>对常规连接和上下文连接的限制
-  本主题讨论中执行的代码相关的限制[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]进程通过上下文和常规连接。  
+  本主题讨论通过上下文和常规连接在[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]进程中执行的代码的限制。  
   
 ## <a name="restrictions-on-context-connections"></a>对上下文连接的限制  
  开发应用程序时，请考虑应用于上下文连接的以下限制：  
@@ -30,13 +30,16 @@ ms.locfileid: "62919171"
   
 -   上下文连接中不支持多个活动结果集 (MARS)。  
   
--   `SqlBulkCopy` 类不能在上下文连接中工作。  
+-   
+  `SqlBulkCopy` 类不能在上下文连接中工作。  
   
 -   不支持上下文连接中的更新批处理  
   
--   `SqlNotificationRequest` 不能用于对上下文连接执行的命令。  
+-   
+  `SqlNotificationRequest` 不能用于对上下文连接执行的命令。  
   
--   不支持取消正在对上下文连接运行的命令。 `SqlCommand.Cancel` 方法会自行忽略请求。  
+-   不支持取消正在对上下文连接运行的命令。 
+  `SqlCommand.Cancel` 方法会自行忽略请求。  
   
 -   使用“context connection=true”时，不能使用任何其他连接字符串关键字。  
   
@@ -47,11 +50,11 @@ ms.locfileid: "62919171"
 ## <a name="restrictions-on-regular-connections"></a>对常规连接的限制  
  开发应用程序时，请考虑应用于常规连接的以下限制：  
   
--   不支持对内部服务器异步执行命令。 如果在命令的连接字符串中包括“async=true”，然后执行命令，将导致引发 `System.NotSupportedException`。 将显示此消息："内运行时不支持异步处理[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]进程。"  
+-   不支持对内部服务器异步执行命令。 如果在命令的连接字符串中包括“async=true”，然后执行命令，将导致引发 `System.NotSupportedException`。 将出现此消息：“在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 进程内运行时，不支持异步处理。”  
   
 -   不支持 `SqlDependency` 对象。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [上下文连接](context-connection.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.tcp_endpoints (TRANSACT-SQL) |Microsoft Docs
+title: sys. tcp_endpoints （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,27 +20,27 @@ ms.assetid: 43cc3afa-cced-4463-8e97-fbfdaf2e4fa8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7e4b711a7d36e7677f6f32b87ff4c696db231730
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68116733"
 ---
-# <a name="systcpendpoints-transact-sql"></a>sys.tcp_endpoints (Transact-SQL)
+# <a name="systcp_endpoints-transact-sql"></a>sys.tcp_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  系统中的每个 TCP 端点都对应一行。 由描述的终结点**sys.tcp_endpoints**提供对象以授予和撤消连接特权。 显示的有关端口和 IP 地址的信息不用于配置协议，并可能与实际的协议配置不匹配。 若要查看和配置协议，请使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。  
+  系统中的每个 TCP 端点都对应一行。 由 sys.databases 描述的终结点 **。 tcp_endpoints**提供一个对象来授予和撤消连接特权。 显示的有关端口和 IP 地址的信息不用于配置协议，并可能与实际的协议配置不匹配。 若要查看和配置协议，请使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。  
   
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**< 继承的列 >**||继承中的列[sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)。|  
-|**port**|INT|端点正在侦听的端口号。 不可为 null。|  
+|**< 继承列>**||继承[sys.databases](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)中的列。|  
+|**口**|int|端点正在侦听的端口号。 不可为 null。|  
 |**is_dynamic_port**|bit|1 = 动态分配端口号。<br /><br /> 不可为 null。|  
-|**ip_address**|**nvarchar(45)**|LISTENER_IP 子句指定的侦听器 IP 地址。 可以为 Null。|  
+|**ip_address**|**nvarchar （45）**|LISTENER_IP 子句指定的侦听器 IP 地址。 可以为 Null。|  
   
 ## <a name="remarks"></a>备注  
- 执行以下查询来收集有关端点和连接的信息。 没有当前连接或 TCP 连接的端点将显示为 NULL 值。 添加**其中**子句`WHERE des.session_id = @@SPID`返回有关当前连接的信息。  
+ 执行以下查询来收集有关端点和连接的信息。 没有当前连接或 TCP 连接的端点将显示为 NULL 值。 添加**WHERE**子句`WHERE des.session_id = @@SPID`以返回有关当前连接的信息。  
   
 ```  
 SELECT des.login_name, des.host_name, program_name,  dec.net_transport, des.login_time,   
@@ -58,8 +58,8 @@ LEFT JOIN sys.dm_exec_connections AS dec
 ## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [终结点目录视图&#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)  
+ [终结点目录视图 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)  
   
   

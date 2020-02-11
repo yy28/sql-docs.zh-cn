@@ -1,5 +1,5 @@
 ---
-title: 将存储分配 |Microsoft Docs
+title: 分配存储 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,16 +22,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0aefbfdeb984aa6b384c5c123ed69ec4fdaa41ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200038"
 ---
 # <a name="assigning-storage"></a>分配存储区
   应用程序可以在执行 SQL 语句之前或之后为结果分配存储区。 如果应用程序首先准备或执行 SQL 语句，则它可以在为结果分配存储区之前询问有关结果集的情况。 例如，如果结果集是未知的，则应用程序在为它们分配存储区之前必须先检索列数。  
   
- 要将关联的数据列的存储，应用程序调用[SQLBindCol](../native-client-odbc-api/sqlbindcol.md)并将其传递：  
+ 若要关联数据列的存储，应用程序将调用[SQLBindCol](../native-client-odbc-api/sqlbindcol.md)并将其传递：  
   
 -   数据将要转换成的数据类型。  
   
@@ -45,19 +45,19 @@ ms.locfileid: "63200038"
   
 -   用于返回可用数据字节数的存储缓冲区的地址。  
   
- 应用程序还可以将结果集列绑定到程序变量的数组，以支持分块提取结果集行。 有两种不同类型的数组绑定：  
+ 应用程序还可以将结果集列绑定到程序变量的数组，以支持分块提取结果集行。 数组绑定有两种不同的类型：  
   
 -   当每个列绑定到自身的变量数组时，将完成按列绑定。  
   
-     指定按列绑定通过调用[SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)与*特性*设置为 SQL_ATTR_ROW_BIND_TYPE 和*ValuePtr*设置为 SQL_BIND_BY_COLUMN。 所有数组的元素个数必须相同。  
+     通过调用 SQL_ATTR_ROW_BIND_TYPE [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) *，并将**将 valueptr*设置为 SQL_BIND_BY_COLUMN 来指定按列绑定。 所有数组的元素个数必须相同。  
   
 -   当 SQL 语句中的所有参数作为一个单元绑定到包含这些参数中各个变量的结构数组时，将完成按行绑定。  
   
-     指定按行绑定通过调用**SQLSetStmtAttr**与*特性*设置为 SQL_ATTR_ROW_BIND_TYPE 和*ValuePtr*设置为结构持有锁的大小变量将接收结果集列。  
+     通过调用**SQLSetStmtAttr**并将*属性*设置为 SQL_ATTR_ROW_BIND_TYPE，并将*将 valueptr*设置为包含将接收结果集列的变量的结构的大小，可以指定按行绑定。  
   
  应用程序还将 SQL_ATTR_ROW_ARRAY_SIZE 设置为列或行数组中的元素个数，并设置 SQL_ATTR_ROW_STATUS_PTR 和 SQL_ATTR_ROWS_FETCHED_PTR。  
   
-## <a name="see-also"></a>请参阅  
- [处理结果&#40;ODBC&#41;](processing-results-odbc.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;ODBC&#41;处理结果](processing-results-odbc.md)  
   
   

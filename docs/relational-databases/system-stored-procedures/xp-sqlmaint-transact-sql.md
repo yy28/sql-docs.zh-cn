@@ -1,5 +1,5 @@
 ---
-title: xp_sqlmaint (TRANSACT-SQL) |Microsoft Docs
+title: xp_sqlmaint （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,21 +18,21 @@ ms.assetid: bda66e1b-6bbd-49be-b86e-37efc920e912
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9948767ca0eca5721207079f978987142653e9c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68091912"
 ---
-# <a name="xpsqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
+# <a name="xp_sqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  调用**sqlmaint**实用程序使用一个字符串，包含**sqlmaint**开关。 **Sqlmaint**实用程序执行一系列一个或多个数据库上的维护操作。  
+  使用包含**sqlmaint**开关的字符串调用**sqlmaint**实用程序。 **Sqlmaint**实用工具对一个或多个数据库执行一组维护操作。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,16 +42,16 @@ xp_sqlmaint 'switch_string'
 ```  
   
 ## <a name="arguments"></a>参数  
- **'** *switch_string* **'**  
- 一个字符串，包含**sqlmaint**实用工具开关。 开关及其值之间必须以空格分隔。  
+ **"** *switch_string* **"**  
+ 一个字符串，其中包含**sqlmaint**实用工具开关。 开关及其值之间必须以空格分隔。  
   
- **-？** 开关不能用于**xp_sqlmaint**。  
+ **-？** 开关对于**xp_sqlmaint**无效。  
   
 ## <a name="return-code-values"></a>返回代码值  
- 无。 如果返回错误**sqlmaint**实用程序将失败。  
+ 无。 如果**sqlmaint**实用程序失败，将返回错误。  
   
 ## <a name="remarks"></a>备注  
- 如果在使用 SQL Server 身份验证，登录用户调用此过程 **-U"***login_id***"** 并 **-P"***密码***"** 开关追加到前面*switch_string*之前执行。 如果使用 Windows 身份验证登录用户*switch_string*原样传递到**sqlmaint**。  
+ 如果使用 SQL Server 身份验证登录的用户调用此过程，则在执行之前，将使用 **-U "***login_id***"** 和 **-P "***password***"** 开关进行*switch_string* 。 如果用户已登录 Windows 身份验证，则*switch_string*传递，而不会更改为**sqlmaint**。  
   
 ## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  
@@ -70,8 +70,8 @@ EXEC xp_sqlmaint '-D AdventureWorks2012 -PlanID 02A52657-D546-11D1-9D8A-00A0C905
 The command(s) executed successfully.  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [sqlmaint 实用工具](../../tools/sqlmaint-utility.md)   
+## <a name="see-also"></a>另请参阅  
+ [sqlmaint 实用程序](../../tools/sqlmaint-utility.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

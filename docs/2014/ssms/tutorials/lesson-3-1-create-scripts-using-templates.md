@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8387cdaf85d6fd7750229fda86c8cb3122b61d90
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913547"
 ---
 # <a name="create-scripts-using-templates"></a>使用模板创建脚本
@@ -24,15 +24,15 @@ ms.locfileid: "62913547"
   
 #### <a name="to-create-a-script-using-a-template"></a>若要使用模板创建脚本，请执行以下操作：  
   
-1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的“视图”  菜单上，单击“模板资源管理器”  。  
+1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的“视图” **** 菜单上，单击“模板资源管理器” ****。  
   
-2.  模板资源管理器中的模板是分组列出的。 展开“数据库”  ，再双击“创建数据库”  。  
+2.  模板资源管理器中的模板是分组列出的。 展开“数据库”****，再双击“创建数据库”****。  
   
-3.  在“连接到数据库引擎”  对话框中，填写连接信息，然后单击“连接”  。 此时将打开一个新查询编辑器窗口，其中包含“创建数据库”  模板的内容。  
+3.  在“连接到数据库引擎”**** 对话框中，填写连接信息，然后单击“连接”****。 此时将打开一个新查询编辑器窗口，其中包含“创建数据库”**** 模板的内容。  
   
 4.  在 **“查询”** 菜单上，单击 **“指定模板参数的值”** 。  
   
-5.  在“指定模板参数的值”  对话框中，“值”  列包含一个 **Database_Name** 参数的建议值。 在“数据库名称”  参数框中，键入 **Marketing**，然后单击“确定”  。 请注意“Marketing”插入脚本中的几个位置。  
+5.  在“指定模板参数的值”**** 对话框中，“值”**** 列包含一个 **Database_Name** 参数的建议值。 在“数据库名称”**** 参数框中，键入 **Marketing**，然后单击“确定”****。 请注意“Marketing”插入脚本中的几个位置。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [创建自定义模板](lesson-3-2-create-custom-templates.md)  

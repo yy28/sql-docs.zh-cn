@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a0c946e0e195937dd2e722ac3f092a57e40427b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63228358"
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>“XML 索引”对话框 (Visual Database Tools)
@@ -26,7 +26,7 @@ ms.locfileid: "63228358"
  **选定的 XML 索引**  
  列出现有的 XML 索引。 选择一个索引即可在右侧网格中显示其属性。 如果该列表为空，则表示尚未为该表定义任何 XML 索引。  
   
- **“添加”**  
+ **添加**  
  创建新的 XML 索引。  
   
  **删除**  
@@ -47,14 +47,14 @@ ms.locfileid: "63228358"
  **次要类型**  
  显示二级索引的类型。 只有在此索引为二级索引时才可用。  
   
- **类型**  
+ 类型   
  显示此索引为 XML 索引。  
   
  **标识类别**  
  展开此项可显示“名称”  和“说明”  属性字段。  
   
  **名称**  
- 显示 XML 索引的名称。 在创建一个新索引时，将基于表设计器的活动窗口中的表为其指定默认名称。 您可以随时更改该名称。  
+ 显示 XML 索引的名称。 在创建一个新索引时，将基于表设计器的活动窗口中的表为其指定默认名称。 可随时更改名称。  
   
  **说明**  
  描述该索引。 若要编写更详细的说明，请单击“说明”，再单击属性字段右侧显示的省略号按钮 (…)   。 这可以提供一个更大的文本编写区域。  
@@ -87,7 +87,7 @@ ms.locfileid: "63228358"
  **允许行锁定**  
  指定对此索引是否允许行级锁定。 允许或禁用行级锁定会影响数据库性能。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建 XML 索引](../../relational-databases/xml/create-xml-indexes.md)  
   
   

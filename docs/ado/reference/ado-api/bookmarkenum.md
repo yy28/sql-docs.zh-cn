@@ -16,31 +16,31 @@ ms.assetid: 55d273c4-ccee-48ef-ba90-8893d04313c8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 69bce043f7c5ce72de37e6e085e57baccd8c4864
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920354"
 ---
 # <a name="bookmarkenum"></a>BookmarkEnum
-指定，该值指示此操作应开始的书签。  
+指定指示操作开始位置的书签。  
   
-|常量|值|描述|  
+|一直|值|说明|  
 |--------------|-----------|-----------------|  
-|**adBookmarkCurrent**|0|从当前记录处开始。|  
-|**adBookmarkFirst**|1|从第一个记录开始。|  
-|**adBookmarkLast**|2|起步价的最后一个记录。|  
+|**adBookmarkCurrent**|0|从当前记录开始。|  
+|**adBookmarkFirst**|1|从第一条记录开始。|  
+|**adBookmarkLast**|2|从最后一条记录开始。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
- 包： **com.ms.wfc.data**  
+ Package： **.com. 数据**  
   
-|常量|  
+|一直|  
 |--------------|  
-|AdoEnums.Bookmark.CURRENT|  
-|AdoEnums.Bookmark.FIRST|  
-|AdoEnums.Bookmark.LAST|  
+|AdoEnums|  
+|AdoEnums|  
+|AdoEnums. LAST|  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
   
 |||  
 |-|-|  

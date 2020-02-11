@@ -15,20 +15,20 @@ ms.assetid: 3b4742d5-74fb-4aff-aa21-d83a0064d73d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ca9b70ee6a96759e496b831f7c12dc3ee78419b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68087873"
 ---
 # <a name="unicode-drivers"></a>Unicode 驱动程序
-驱动程序是否应为 Unicode 或 ANSI 驱动程序完全取决于数据源的特性。 如果数据源支持 Unicode 数据，该驱动程序应为 Unicode 驱动程序。 如果数据源仅支持 ANSI 数据，该驱动程序应保持 ANSI 驱动程序。  
+驱动程序是 Unicode 驱动程序还是 ANSI 驱动程序完全取决于数据源的性质。 如果数据源支持 Unicode 数据，则驱动程序应为 Unicode 驱动程序。 如果数据源仅支持 ANSI 数据，则驱动程序应仍为 ANSI 驱动程序。  
   
- Unicode 驱动程序必须导出**SQLConnectW**识别为 Unicode 驱动程序由驱动程序管理器。  
+ Unicode 驱动程序必须将**SQLConnectW**导出为由驱动程序管理器识别为 Unicode 驱动程序。  
   
- Unicode 驱动程序必须接受 Unicode 函数 (带有后缀*W*) 和存储 Unicode 数据。 它还可以接受 ANSI 函数，但不需要。 (驱动程序管理器将使用的 ANSI 函数调用不传递*A*后缀驱动程序，但将它为 ANSI 函数调用中的，而后缀，然后将它放到驱动程序。)  
+ Unicode 驱动程序必须接受 Unicode 函数（后缀为*W*）并存储 unicode 数据。 它还可以接受 ANSI 函数，但并不是必需的。 （驱动程序管理器不会向驱动程序传递带有后缀*的*ansi 函数调用，但会将其转换为不带后缀的 ansi 函数调用，然后将其传递给驱动程序。）  
   
- Unicode 驱动程序必须能够返回 Unicode 或 ANSI，在结果集，具体取决于应用程序的绑定。 如果应用程序绑定到 SQL_C_CHAR，Unicode 驱动程序必须将 SQL_WCHAR 数据转换为 SQL_CHAR。 驱动程序管理器将映射 SQL_C_WCHAR SQL_C_CHAR 到 ANSI 的驱动程序但没有 Unicode 驱动程序的映射。  
+ Unicode 驱动程序必须能够返回 Unicode 或 ANSI 中的结果集，具体取决于应用程序的绑定。 如果应用程序绑定到 SQL_C_CHAR，则 Unicode 驱动程序必须将 SQL_WCHAR 数据转换为 SQL_CHAR。 驱动程序管理器会将 ANSI 驱动程序的 SQL_C_WCHAR 映射到 SQL_C_CHAR，但不会映射 Unicode 驱动程序。  
   
 > [!NOTE]  
->  在确定驱动程序类型，驱动程序管理器将调用**SQLSetConnectAttr**并将 SQL_ATTR_ANSI_APP 属性设置在连接时。 如果应用程序使用的 ANSI Api，SQL_ATTR_ANSI_APP 将设置为 SQL_AA_TRUE，和如果它使用 Unicode，它将设置为 SQL_AA_FALSE 的值。 使用此属性，以便该驱动程序可能会表现出不同的行为根据应用程序类型。 该属性不能直接，由应用程序设置和不受**SQLGetConnectAttr**。 如果驱动程序的行为的 ANSI 和 Unicode 应用程序，它应为此属性返回 SQL_ERROR。 如果该驱动程序返回 SQL_SUCCESS，驱动程序管理器将使用连接池时分离 ANSI 和 Unicode 的连接。
+>  确定驱动程序类型时，驱动程序管理器将调用**SQLSetConnectAttr**并在连接时设置 SQL_ATTR_ANSI_APP 特性。 如果应用程序使用的是 ANSI Api，SQL_ATTR_ANSI_APP 将设置为 SQL_AA_TRUE，如果使用的是 Unicode，则会将其设置为 SQL_AA_FALSE 值。 使用此属性，以便驱动程序可以根据应用程序类型展示不同的行为。 此属性不能由应用程序直接设置，并且**SQLGetConnectAttr**不支持该属性。 如果驱动程序的 ANSI 和 Unicode 应用程序的行为相同，则它应返回此属性 SQL_ERROR。 如果驱动程序返回 SQL_SUCCESS，则在使用连接池时，驱动程序管理器会将 ANSI 和 Unicode 连接隔开。

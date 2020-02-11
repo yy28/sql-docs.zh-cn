@@ -14,25 +14,25 @@ ms.assetid: 50b733dc-679a-4b10-bc5d-98bb474dead2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 217058bf328677bf375d346ae7201c6eb81efa4e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68087942"
 ---
 # <a name="visual-foxpro-field-data-types"></a>Visual FoxPro 字段数据类型
-下表列出了值*FieldType* ALTER TABLE 和 CREATE TABLE 中的参数，并指示是否*nFieldWidth*并*nPrecision*参数必填。  
+下表列出了 ALTER TABLE 和 CREATE TABLE 中的*FieldType*参数的值，并指示是否需要*nFieldWidth*和*nPrecision*参数。  
   
-|*FieldType*|*NFieldWidth*|*nPrecision*|描述|  
+|*FieldType*|*NFieldWidth*|*nPrecision*|说明|  
 |-----------------|-------------------|------------------|-----------------|  
 |B|-|d|Double|  
-|C|N|-|字符宽度的字段*n*|  
+|C|N|-|宽度为*n*的字符字段|  
 |D|-|-|Date|  
-|F|N|d|浮点数值字段的宽度*n*与*d*小数位数|  
+|F|N|d|宽度为*n*且带有*d*个小数点的浮动数值字段|  
 |G|-|-|常规|  
 |I|-|-|Integer|  
-|L|-|-|逻辑函数|  
+|L|-|-|逻辑|  
 |M|-|-|备忘录|  
-|N|N|d|数值字段的宽度*n*与*d*小数位数|  
+|N|N|d|宽度为*n*且带有*d*小数位的数值字段|  
 |T|-|-|DateTime|  
-|Y|-|-|Currency|
+|Y|-|-|货币|

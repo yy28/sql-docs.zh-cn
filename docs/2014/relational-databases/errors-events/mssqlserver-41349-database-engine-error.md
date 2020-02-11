@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c5bd805a6c737862adbfe9fdef507e61d4035eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914013"
 ---
-# <a name="mssqlserver41349"></a>MSSQLSERVER_41349
+# <a name="mssqlserver_41349"></a>MSSQLSERVER_41349
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62914013"
 |符号名称|HK_ENCRYPTION_ON|  
 |消息正文|警告：为包含具有持续性 SCHEMA_AND_DATA 的一个或多个内存优化表的数据库启用了加密。 不会对这些内存优化表中的数据加密。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [内存中 OLTP（内存中优化）](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

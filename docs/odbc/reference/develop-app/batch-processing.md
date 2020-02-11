@@ -14,11 +14,11 @@ ms.assetid: 3fa4eca8-691c-467d-bfa7-39c59cdb9c8d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: da416fd8953dce575f5a4aa09f22f113d135b9a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68103898"
 ---
 # <a name="batch-processing"></a>批处理
-对 SQL 语句的批处理支持不是被广泛使用，因此可互操作应用程序有条件地或根本不应使用它们。 有关详细信息，请参阅[执行批处理](../../../odbc/reference/develop-app/executing-batches.md)。
+对批处理 SQL 语句的支持不是很大范围，因此可互操作的应用程序应有条件地使用它们。 有关详细信息，请参阅[执行批处理](../../../odbc/reference/develop-app/executing-batches.md)。

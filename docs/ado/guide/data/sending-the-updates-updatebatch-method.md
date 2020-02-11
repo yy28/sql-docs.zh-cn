@@ -1,5 +1,5 @@
 ---
-title: 发送更新：UpdateBatch 方法 |Microsoft Docs
+title: 发送更新： UpdateBatch 方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,14 +11,14 @@ ms.assetid: 87123797-831f-48e0-94b5-f669f9ca194a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 182e444587ce9bb3ca73166fb05dfac2506a39aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924259"
 ---
 # <a name="sending-the-updates-updatebatch-method"></a>发送更新：UpdateBatch 方法
-下面的代码通过 LockType 属性设置为 adLockBatchOptimistic 和到 adUseClient CursorLocation 在批处理模式下打开的记录集。 它将添加两个新记录和保存的原始值的现有记录中的字段的值更改，然后调用 UpdateBatch 将所做的更改回数据源。  
+下面的代码通过将 LockType 属性设置为 adLockBatchOptimistic，将 CursorLocation 设置为 adUseClient，以批处理模式打开记录集。 它添加两个新记录，并更改现有记录中字段的值，保存原始值，然后调用 UpdateBatch 将更改发送回数据源。  
   
 ## <a name="remarks"></a>备注  
   
@@ -52,7 +52,7 @@ ms.locfileid: "67924259"
 'EndBatchUpdate  
 ```  
   
- 如果正在编辑当前记录或添加新记录时调用 UpdateBatch 方法时，ADO 将自动调用 Update 方法将再传输到提供程序的批处理的更改保存到当前记录的任何挂起的更改。  
+ 如果在调用 UpdateBatch 方法时编辑当前记录或添加新记录，ADO 将自动调用 Update 方法，以便在将批处理更改传输到提供程序之前保存当前记录的所有挂起的更改。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [批处理模式](../../../ado/guide/data/batch-mode.md)

@@ -16,26 +16,26 @@ ms.assetid: 3c0edeee-d43a-4466-a177-bf2d2435707a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ec94f3e02b720617e8f7369b12a916c2bbbe7b16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68093798"
 ---
 # <a name="translator-specification-subkeys"></a>转换器规范子项
-ODBC 转换器子项中列出每个翻译人员都有其自己的子项。 此子项有同名 ODBC 转换器子项下的相应值。 此子项下的值列出转换器和转换器安装程序 Dll 和使用情况计数的完整的路径。 值的格式为下表中所示。  
+ODBC 转换器子项中列出的每个转换器都具有自己的子项。 此子项与 ODBC 转换器子项下的相应值具有相同的名称。 此子项下的值列出了转换器和转换器安装程序 Dll 的完整路径以及使用计数。 值的格式如下表中所示。  
   
-|名称|数据类型|Data|  
+|名称|数据类型|data|  
 |----------|---------------|----------|  
-|转换器|REG_SZ|*translator-DLL-path*|  
-|安装|REG_SZ|*setup-DLL-path*|  
+|Translator|REG_SZ|*转换器-DLL-路径*|  
+|安装|REG_SZ|*设置-DLL-路径*|  
 |UsageCount|REG_DWORD|*计数*|  
   
- 有关使用情况计数信息，请参阅[使用情况计数](../../../odbc/reference/install/usage-counting.md)本部分前面。  
+ 有关使用计数的详细信息，请参阅本部分前面的[使用计数](../../../odbc/reference/install/usage-counting.md)。  
   
- 应用程序不应设置的使用计数。 ODBC 将保持此计数。  
+ 应用程序不应设置使用计数。 ODBC 将维护此计数。  
   
- 例如，假设 Microsoft 代码页 Translator 具有名为 Mscpxl32.dll，转换器安装程序函数处于同一个 DLL，DLL 的转换和翻译人员已安装程序三次。 Microsoft 的代码页 Translator 子项下的值可能按如下所示：  
+ 例如，假设 Microsoft 代码页转换器包含一个名为 Mscpxl32 的翻译 DLL，转换器设置函数在同一 DLL 中，并且已安装了三次转换器。 Microsoft 代码页转换器子项下的值如下所示：  
   
 ```  
 Translator : REG_SZ : C:\WINDOWS\SYSTEM32\MSCPXL32.DLL  

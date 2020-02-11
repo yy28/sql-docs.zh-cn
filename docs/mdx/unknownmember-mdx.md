@@ -1,5 +1,5 @@
 ---
-title: UnknownMember (MDX) |Microsoft Docs
+title: UnknownMember （MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a0332b200a74044dcd4e7d8d308923cc4b759738
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097286"
 ---
 # <a name="unknownmember-mdx"></a>UnknownMember (MDX)
@@ -39,19 +39,19 @@ Hierarchy_Expression.UnknownMember
  返回层次结构的有效多维表达式 (MDX)。  
   
 ## <a name="remarks"></a>备注  
- Analysis Services 将创建一个未知的成员，若要将事实数据表数据与层次结构相关联的层次结构未知时。 未知成员可位于下列级别之一：  
+ Analysis Services 创建一个未知成员，以便在层次结构未知时将事实数据表数据与层次结构相关联。 未知成员可位于下列级别之一：  
   
 -   位于未聚合的属性层次结构的顶级。  
   
--   在下面的第一级**所有**自然层次结构级别。  
+-   在自然层次结构的 "**所有**" 级别下的第一个级别。  
   
 -   位于非自然层次结构的任何一级。  
   
- 如果指定成员表达式，则**UnknownMember**函数返回指定成员的未知的成员子级。 如果指定的成员不存在，该函数将返回空。  
+ 如果指定了成员表达式，则**UnknownMember**函数返回指定成员的未知成员子级。 如果指定的成员不存在，该函数将返回空。  
   
- 如果指定的层次结构表达式，则**UnknownMember**函数返回在顶级的未知的成员，如果存在。  
+ 如果指定了层次结构表达式，则**UnknownMember**函数将在顶级返回未知成员（如果存在）。  
   
- 如果级别或成员，不存在未知的成员**UnknownMember**函数创建一个空成员。  
+ 如果级别或成员中不存在未知成员，则**UnknownMember**函数将创建 null 成员。  
   
 > [!NOTE]  
 >  如果层次结构或成员中不存在未知成员，将生成一个错误。  
@@ -79,7 +79,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>请参阅  
- [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

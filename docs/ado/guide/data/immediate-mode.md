@@ -15,23 +15,23 @@ ms.assetid: 31fc53d0-97de-4315-a87b-3bf5cdd1f432
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3952ef502bf79d6704cbaea80b9a825a3c70981b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925017"
 ---
 # <a name="immediate-mode"></a>即时模式
-即时模式，则当**LockType**属性设置为**adLockOptimistic**或**adLockPessimistic**。 在直接模式下，对记录的更改传播到数据源通过调用声明的行的操作完成时，就立即**更新**方法。  
+当**LockType**属性设置为**adLockOptimistic**或**adLockPessimistic**时，即时模式有效。 在 "即时" 模式下，只要通过调用**Update**方法在行上声明工作完成，就会将对记录的更改传播到数据源。  
   
 ## <a name="calling-update"></a>调用更新  
- 如果将从该记录移正在添加或编辑，然后再调**更新**方法，将自动调用 ADO**更新**以保存所做的更改。 必须调用**CancelUpdate**之前如果想要取消对当前记录所做的任何更改或放弃新添加的记录的导航方法。  
+ 如果在调用**update**方法之前从要添加或编辑的记录中移动，ADO 将自动调用**update**以保存更改。 如果要取消对当前记录所做的任何更改或放弃新添加的记录，则必须在导航前调用**CancelUpdate**方法。  
   
- 当前记录保持最新调用后**更新**方法。  
+ 在调用**Update**方法之后，当前记录保持为最新。  
   
 ## <a name="cancelupdate"></a>CancelUpdate  
- 使用**CancelUpdate**方法取消对当前行所做的任何更改或丢弃新添加的行。 调用后，无法取消对当前行或新行的更改**更新**方法，除非所做的更改，可以使用回滚的事务的一部分，否则**RollbackTrans**方法或部分在批处理更新。 在批处理更新的情况下，你可以取消**更新**与**CancelUpdate**或**CancelBatch**方法。  
+ 使用**CancelUpdate**方法可以取消对当前行所做的任何更改，或者放弃新添加的行。 在调用**Update**方法之后，不能取消对当前行或新行所做的更改，除非这些更改是可使用**RollbackTrans**方法或批更新的一部分回滚的事务的一部分。 对于批更新，可以使用**CancelUpdate**或**CancelBatch**方法取消**更新**。  
   
- 如果在调用时，你要添加新行**CancelUpdate**方法，将成为当前行的行之前的当前**AddNew**调用。  
+ 如果在调用**CancelUpdate**方法时添加新行，则当前行将成为在**AddNew**调用之前的当前行。  
   
- 如果未更改的当前行或添加新行，则调用**CancelUpdate**方法将生成错误。
+ 如果尚未更改当前行或添加了新行，则调用**CancelUpdate**方法将生成错误。

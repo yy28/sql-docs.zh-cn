@@ -1,5 +1,5 @@
 ---
-title: sp_dbmmonitorchangealert (TRANSACT-SQL) |Microsoft Docs
+title: sp_dbmmonitorchangealert （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,20 +19,20 @@ ms.assetid: 1b29f82b-9cf8-4539-8d5c-9a1024db8a50
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2749e964b33179d5bf87ee6d464d251c14ee82d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108139"
 ---
-# <a name="spdbmmonitorchangealert-transact-sql"></a>sp_dbmmonitorchangealert (Transact-SQL)
+# <a name="sp_dbmmonitorchangealert-transact-sql"></a>sp_dbmmonitorchangealert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   添加或更改指定镜像性能指标的警告阈值。  
 
   
  
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -59,7 +59,7 @@ sp_dbmmonitorchangealert database_name
 |4|镜像提交开销|指定在主体服务器上生成警告之前，每个事务可允许的平均延迟的毫秒数。 此延迟是主体服务器实例等待镜像服务器实例将事务日志记录写入重做队列时，所发生的开销量。 该值只适用于高安全模式。|  
 |5|保留期|用于控制数据库镜像状态表中的行保留多长时间的元数据。|  
   
- 有关与这些警告对应的事件 Id 的信息，请参阅[使用警告阈值和镜像性能指标的警报&#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)。  
+ 有关与警告相对应的事件 Id 的详细信息，请参阅[对镜像性能指标使用警告阈值和警报 &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)。  
   
  *alert_threshold*  
  警告的阈值。 如果在更新镜像状态时返回大于此阈值的值，则会在 Windows 事件日志中输入项。 此值表示 KB、分钟或毫秒，具体取决于性能指标。  
@@ -67,7 +67,7 @@ sp_dbmmonitorchangealert database_name
 > [!NOTE]  
 >  若要查看当前值，请运行[sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)存储过程。  
   
- *enabled*  
+ *能够*  
  警告是否已启用？  
   
  0 = 已禁用警告。  
@@ -92,8 +92,8 @@ sp_dbmmonitorchangealert database_name
 |*alert_id*|性能指标|警告阈值|警告是否已启用？|  
 |-----------------|------------------------|-----------------------|-----------------------------|  
 |1|最早的未发送事务|30 分钟|是|  
-|2|未发送日志|10,000 KB|是|  
-|3|未还原日志|10,000 KB|是|  
+|2|未发送日志|10000 KB|是|  
+|3|未还原日志|10000 KB|是|  
 |4|镜像提交开销|1,000 毫秒|否|  
 |5|保留期|8 小时|是|  
   
@@ -105,9 +105,9 @@ EXEC sp_dbmmonitorchangealert AdventureWorks2012, 4, 1000, 0 ;
 EXEC sp_dbmmonitorchangealert AdventureWorks2012, 5, 8, 1 ;  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [监视数据库镜像 (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [sp_dbmmonitorhelpalert &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [监视数据库镜像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
+ [sp_dbmmonitorhelpalert &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql.md)   
  [sp_dbmmonitordropalert (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)  
   
   

@@ -13,19 +13,19 @@ ms.assetid: 986170b3-fba8-4323-9224-60b381c7effb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1f3749cf860463c79b5f489243544529498222a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68073822"
 ---
 # <a name="sqlgetstmtoption-cursor-library"></a>SQLGetStmtOption（游标库）
 > [!IMPORTANT]  
->  此功能将 Windows 的未来版本中删除。 避免在新的开发工作中使用此功能并计划修改当前使用此功能的应用程序。 Microsoft 建议使用驱动程序的游标功能。  
+>  此功能将在 Windows 的将来版本中删除。 避免在新的开发工作中使用此功能，并计划修改当前使用此功能的应用程序。 Microsoft 建议使用驱动程序的游标功能。  
   
- 本主题介绍如何使用**SQLGetStmtOption**游标库中的函数。 有关常规信息**SQLGetStmtOption**，请参阅[SQLGetStmtOption 函数](../../../odbc/reference/syntax/sqlgetstmtoption-function.md)。  
+ 本主题讨论如何在游标库中使用**SQLGetStmtOption**函数。 有关**SQLGetStmtOption**的常规信息，请参阅[SQLGetStmtOption 函数](../../../odbc/reference/syntax/sqlgetstmtoption-function.md)。  
   
- 游标库支持使用以下语句选项**SQLGetStmtOption**:  
+ 游标库支持**SQLGetStmtOption**的以下语句选项：  
   
 |||  
 |-|-|  

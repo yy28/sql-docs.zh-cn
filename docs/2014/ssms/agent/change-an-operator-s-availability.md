@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 11e5b26a9e2a953aff319b41749d2c12be1a880e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63017097"
 ---
 # <a name="change-an-operator39s-availability"></a>更改操作员的可用性
@@ -46,9 +46,9 @@ ms.locfileid: "63017097"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  只有 **sysadmin** 固定服务器角色的成员才能编辑操作员。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -57,15 +57,15 @@ ms.locfileid: "63017097"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开包含要启用或禁用的操作员的服务器。  
   
-2.  单击加号以展开 **“SQL Server 代理”** 。  
+2.  单击加号以展开 **“SQL Server 代理”**。  
   
 3.  单击加号以展开 **“操作员”** 文件夹。  
   
-4.  右键单击要启用或禁用的操作员，选择“属性”  ，然后单击“常规”  选项卡。  
+4.  右键单击要启用或禁用的操作员，选择“属性”****，然后单击“常规”**** 选项卡。  
   
-5.  在“operator_name 属性”   对话框中，选中或清除“启用”  复选框。  
+5.  在 " _operator_name_**属性**" 对话框中，选中或清除 "**已启用**" 复选框。  
   
-6.  单击“确定”  。  
+6.  单击“确定”。   
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -88,6 +88,6 @@ ms.locfileid: "63017097"
     GO  
     ```  
   
- 有关详细信息，请参阅[sp_update_operator &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-operator-transact-sql)。  
+ 有关详细信息，请参阅[&#40;transact-sql&#41;sp_update_operator ](/sql/relational-databases/system-stored-procedures/sp-update-operator-transact-sql)。  
   
   

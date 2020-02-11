@@ -1,5 +1,5 @@
 ---
-title: sys.time_zone_info (TRANSACT-SQL) |Microsoft Docs
+title: sys. time_zone_info （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2018
 ms.prod: sql
@@ -19,26 +19,26 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 69bfcbb7e1eeaf6b456a2e10d1f3bfcc581c3d76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106706"
 ---
-# <a name="systimezoneinfo-transact-sql"></a>sys.time_zone_info (Transact-SQL)
+# <a name="systime_zone_info-transact-sql"></a>sys. time_zone_info （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-  返回有关受支持的时区信息。 在计算机上安装的所有时间区域都存储在以下注册表配置单元：  
-`KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones`。  
+  返回有关支持的时区的信息。 计算机上安装的所有时区都存储在以下注册表配置单元中：  
+`KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones`.  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|Windows 标准格式中的时区的名称。 例如， **cen。澳大利亚标准时间**或**中欧标准时间**。|  
-|**current_utc_offset**|**nvarchar(12)**|当前为 UTC 的偏移量。 例如， **+ 01:00**或 **-07:00**。|  
-|**is_currently_dst**|**bit**|如果当前观察夏时制，则为 true。|  
+|**路径名**|**sysname**|采用 Windows 标准格式的时区的名称。 例如，**中部澳大利亚标准时间**或**中欧标准时间**。|  
+|**current_utc_offset**|**nvarchar （12）**|当前与 UTC 的偏移量。 例如， **+ 01:00**或 **-07:00**。|  
+|**is_currently_dst**|**bit**|如果当前观察到夏令时，则为 True。|  
   
-## <a name="see-also"></a>请参阅  
- [GETUTCDATE &#40;Transact-SQL&#41;](../../t-sql/functions/getutcdate-transact-sql.md)   
- [AT TIME ZONE (Transact-SQL)](../../t-sql/queries/at-time-zone-transact-sql.md)   
- [日期和时间数据类型及函数 (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)   
- [服务器范围的配置目录视图&#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)  
+## <a name="see-also"></a>另请参阅  
+ [GETUTCDATE &#40;Transact-sql&#41;](../../t-sql/functions/getutcdate-transact-sql.md)   
+ [在时区 &#40;Transact-sql&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)   
+ [SQL&#41;日期和时间数据类型和函数 &#40;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)   
+ [服务器范围内的配置目录视图 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)  

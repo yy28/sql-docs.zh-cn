@@ -18,43 +18,43 @@ ms.assetid: a0e31e6b-d02b-4ee2-9b37-5baf6a11c0a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1753e0d50655205bc6f459548f2ef2b77d5cc885
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68096453"
 ---
 # <a name="dbase-data-types"></a>dBASE 数据类型
-下表显示了如何将 dBASE 数据类型映射到 ODBC SQL 数据类型。 请注意，并非所有 ODBC SQL 数据类型都支持。  
+下表显示了如何将 dBASE 数据类型映射到 ODBC SQL 数据类型。 请注意，并非所有 ODBC SQL 数据类型都受支持。  
   
 |dBASE 数据类型|ODBC 数据类型|  
 |---------------------|--------------------|  
 |CHAR|SQL_VARCHAR|  
 |DATE|SQL_DATE|  
-|FLOAT[1]|SQL_DOUBLE|  
-|逻辑|SQL_BIT|  
-|备注|SQL_LONGVARCHAR|  
-|数字 (BCD)|SQL_DOUBLE|  
+|FLOAT [1]|SQL_DOUBLE|  
+|LOGICAL|SQL_BIT|  
+|"|SQL_LONGVARCHAR|  
+|数值（BCD）|SQL_DOUBLE|  
 |OLEOBJECT [1]|SQL_LONGBINARY|  
   
- 仅为 dBASE 版本 5 的的 [1] 有效。*x*  
+ [1] 仅对 dBASE 版本5有效。*x*  
   
- 精度 dBASE III 允许数字向上两位数指数，在 dBASE IV 数字与最多三个数字指数的后面。 数字以文本形式存储，因为它们会转换为数字。 如果要转换的数字不适合在字段中，可能会发生无法解释的结果。  
+ DBASE III 中的精度允许最多具有两位数字指数的数字和包含最多三位数指数的 dBASE IV 数字。 由于数字是以文本形式存储的，因此将其转换为数字。 如果要转换的数字不能容纳在字段中，则可能会出现无法解释的结果。  
   
- 尽管 dBASE 允许精度和小数位数指定数值数据类型，它不是支持 ODBC dBASE 驱动程序。 ODBC dBASE 驱动程序始终返回 15 的精度和小数位数为 0 的数值数据类型。  
+ 当 dBASE 允许使用数值数据类型指定精度和小数位数时，ODBC dBASE 驱动程序不支持该数据类型。 ODBC dBASE 驱动程序始终为数值数据类型返回15的精度，小数位数为0。  
   
- 创建与使用 ODBC dBASE 驱动程序映射到 ODBC SQL_DOUBLE 数据类型的数值数据类型的列。 因此，此列中的数据是四舍五入的值。 此行为不是相同的数值数据类型中 dBASE （类型为 N），这是二进制编码的十进制 (BCD)。  
+ 使用数据类型（ODBC dBASE 驱动程序）创建的列映射到 SQL_DOUBLE ODBC 数据类型。 因此，此列中的数据可能会进行舍入。 此行为不同于 dBASE （类型 N）（二进制编码的十进制（BCD））中数值数据类型的行为。  
   
 > [!NOTE]  
->  **SQLGetTypeInfo**返回 ODBC SQL 数据类型。 所有转换中的附录 D *ODBC 程序员参考*支持本主题中前面列出的 ODBC SQL 数据类型。  
+>  **SQLGetTypeInfo**返回 ODBC SQL 数据类型。 对于本主题中前面列出的 ODBC SQL 数据类型，支持*Odbc 程序员参考*的附录 D 中的所有转换。  
   
- 下表显示限制上 dBASE 数据类型。  
+ 下表显示了对 dBASE 数据类型的限制。  
   
-|数据类型|描述|  
+|数据类型|说明|  
 |---------------|-----------------|  
-|CHAR|创建零对 CHAR 列或未指定的长度实际上返回一个 254 字节的列。|  
+|CHAR|创建零或未指定长度的 CHAR 列实际上将返回254字节的列。|  
 |加密数据|DBASE 驱动程序不支持加密的 dBASE 表。|  
-|逻辑|DBASE 驱动程序不能逻辑列创建索引。|  
-|备注|备注列的最大长度为 65,500 个字节。|  
+|LOGICAL|DBASE 驱动程序无法对逻辑列创建索引。|  
+|"|备注列的最大长度为65500字节。|  
   
- 了解更多限制，对数据类型可在[数据类型限制](../../odbc/microsoft/data-type-limitations.md)。
+ [数据类型限制](../../odbc/microsoft/data-type-limitations.md)中可以找到更多有关数据类型的限制。

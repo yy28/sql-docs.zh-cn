@@ -17,14 +17,14 @@ ms.assetid: d81ab76f-1aa8-4ccf-92ec-b65254dc3ea1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c3626f91018714fa4d67304c92ce464d82fb5c8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917224"
 ---
 # <a name="requery-method"></a>Requery 方法
-更新中的数据[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)通过重新执行的查询该对象所基于的对象。  
+通过重新执行对象所基于的查询来更新[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象中的数据。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,23 +33,23 @@ ms.locfileid: "67917224"
 recordset.Requery Options  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *选项*  
- 可选。 包含一个位掩码[ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md)并[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)值会影响此操作。  
+ 可选。 一个位掩码，其中包含影响此操作的[ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md)和[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)值。  
   
 > [!NOTE]
->  如果*选项*设置为**adAsyncExecute**，将以异步方式执行此操作和一个[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)它结束时，将发出事件。 **ExecuteOpenEnum**的值**adExecuteNoRecords**或**adExecuteStream**不能与**再次查询**。  
+>  如果*选项*设置为**adAsyncExecute**，此操作将以异步方式执行，并且在结束时将发出[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)事件。 **AdExecuteNoRecords**或**adExecuteStream**的**ExecuteOpenEnum**值不应与**Requery**一起使用。  
   
 ## <a name="remarks"></a>备注  
- 使用**Requery**方法来刷新的全部内容**记录集**重新颁发原始命令和检索数据的第二次通过数据源的对象。 调用此方法相当于调用[关闭](../../../ado/reference/ado-api/close-method-ado.md)并[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)连续的方法。 如果正在编辑当前记录或添加新记录时，出现错误。  
+ 使用**Requery**方法，通过重新发出原始命令并再次检索数据来刷新数据源的**记录集**对象的全部内容。 调用此方法等效于连续调用[Close](../../../ado/reference/ado-api/close-method-ado.md)和[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法。 如果正在编辑当前记录或添加新记录，则会发生错误。  
   
- 虽然**记录集**对象已打开，定义游标的特性的属性 ([CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)， [LockType](../../../ado/reference/ado-api/locktype-property-ado.md)， [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)依次类推) 是只读的。 因此，**再次查询**方法仅刷新当前光标。 若要更改任何游标属性并查看结果，必须使用[关闭](../../../ado/reference/ado-api/close-method-ado.md)方法，以便属性再次变为读/写。 然后可以更改该属性设置并调用[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法以重新打开游标。  
+ 当**Recordset**对象处于打开状态时，定义游标性质的属性（[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)、 [LockType](../../../ado/reference/ado-api/locktype-property-ado.md)、 [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)等）是只读的。 因此， **Requery**方法只能刷新当前游标。 若要更改任何游标属性并查看结果，必须使用[Close](../../../ado/reference/ado-api/close-method-ado.md)方法，使属性再次变为读/写。 然后，可以更改属性设置并调用[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法以重新打开光标。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>请参阅  
- [执行、 再次查询和清除方法示例 (VB)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vb.md)   
- [执行、 再次查询和清除方法示例 (VBScript)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vbscript.md)   
- [执行、 再次查询和清除方法示例 （VC + +）](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vc.md)   
+## <a name="see-also"></a>另请参阅  
+ [执行、再次查询和清除方法示例（VB）](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vb.md)   
+ [执行、再次查询和清除方法示例（VBScript）](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vbscript.md)   
+ [执行、再次查询和清除方法示例（VC + +）](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vc.md)   
  [CommandText 属性 (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)

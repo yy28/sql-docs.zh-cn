@@ -15,47 +15,47 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ebbb5ac25ea71dc5b9929fb529414b059c0589fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919307"
 ---
 # <a name="getting-information-about-assemblies"></a>获取有关程序集的信息
   可以查询下列目录视图和函数来获取有关程序集的元数据。  
   
- **若要获取有关各个程序集信息**  
+ **获取有关各个程序集的信息**  
   
--   [ASSEMBLYPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/assemblyproperty-transact-sql)  
+-   [ASSEMBLYPROPERTY &#40;Transact-sql&#41;](/sql/t-sql/functions/assemblyproperty-transact-sql)  
   
- **若要获取数据库中的所有程序集的信息**  
+ **获取有关数据库中所有程序集的信息**  
   
--   [sys.assemblies &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assemblies-transact-sql)  
+-   [sys.databases &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-assemblies-transact-sql)  
   
- **若要获取有关程序集文件，包括程序集二进制文件的信息源文件，并调试文件**  
+ **获取有关程序集文件（包括程序集二进制文件、源文件和调试文件）的信息**  
   
--   [sys.assembly_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-files-transact-sql)  
+-   [sys. assembly_files &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-files-transact-sql)  
   
- **若要获取有关跨程序集引用的信息**  
+ **获取有关跨程序集引用的信息**  
   
--   [sys.assembly_references &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-references-transact-sql)  
+-   [sys. assembly_references &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-references-transact-sql)  
   
- **若要获取有关用户定义类型的程序集信息**  
+ **获取有关用户定义类型的程序集信息**  
   
--   [sys.assembly_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-types-transact-sql)  
+-   [sys. assembly_types &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-types-transact-sql)  
   
 -   [sys.types (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-types-transact-sql)  
   
- **若要获取程序集信息有关公共语言运行时 (CLR) 存储过程、 触发器和函数**  
+ **获取有关公共语言运行时 (CLR) 存储过程、触发器和函数的程序集信息**  
   
 -   [sys.assembly_modules (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-assembly-modules-transact-sql)  
   
- **若要获取有关非 CLR 对象的信息**  
+ **获取有关非 CLR 对象的信息**  
   
 -   [sys.sql_modules (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql)  
   
-## <a name="see-also"></a>请参阅  
- [程序集&#40;数据库引擎&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+## <a name="see-also"></a>另请参阅  
+ [程序集 &#40;数据库引擎&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [设计程序集](../../relational-databases/clr-integration/assemblies-designing.md)   
  [实现程序集](assemblies-implementing.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Resync Command 属性-动态 (ADO) |Microsoft Docs
+title: 重新同步命令属性-动态（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,26 +14,26 @@ ms.assetid: 4e2bb601-0fe8-4d61-b00e-38341d85a6bb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e81fa9ffb28ba31f50d77cacf372bc24d09787ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917138"
 ---
 # <a name="resync-command-property-dynamic-ado"></a>Resync Command 属性 - 动态 (ADO)
-指定用户提供的命令字符串[重新同步](../../../ado/reference/ado-api/resync-method.md)要刷新中命名的表中的数据的方法问题[唯一表](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)动态属性。  
+指定一个用户提供的命令字符串，重新[同步](../../../ado/reference/ado-api/resync-method.md)方法发出此命令以刷新 "[唯一表](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)动态" 属性中命名的表中的数据。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
- 设置或返回**字符串**值，该值是一个命令字符串。  
+ 设置或返回一个**字符串**值，该值为命令字符串。  
   
 ## <a name="remarks"></a>备注  
- [记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象是在多个基表上执行联接操作的结果。 取决于受影响的行*AffectRecords*的参数[重新同步](../../../ado/reference/ado-api/resync-method.md)方法。 标准**重新同步**如果执行方法[唯一表](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)并**Resync Command**未设置的属性。  
+ [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)对象是对多个基表执行的联接操作的结果。 受影响的行依赖于[Resync](../../../ado/reference/ado-api/resync-method.md)方法的*AffectRecords*参数。 如果未设置[Unique Table](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)和**Resync 命令**属性，则执行标准的重新**同步**方法。  
   
- 命令字符串**Resync Command**属性是参数化的命令或存储的过程，用于唯一地标识要刷新的行，并返回单个行，其中包含与行是同一数和列的顺序刷新一次。 命令字符串中包含的参数中每个主键列**唯一表**; 否则为将返回一个运行时错误。 参数会自动填充要刷新的行中的主键值。  
+ **Resync command**属性的命令字符串是一个参数化命令或存储过程，用于唯一标识要刷新的行，并返回包含与要刷新的行相同的列数和顺序的单个行。 命令字符串为**唯一表**中的每个主键列包含一个参数;否则，将返回运行时错误。 将自动用要刷新的行中的主键值填充参数。  
   
  下面是基于 SQL 的两个示例：  
   
- 1\) **记录集**定义某一命令：  
+ 1\)通过命令定义**记录集**：  
   
 ```  
 SELECT * FROM Customers JOIN Orders ON   
@@ -42,7 +42,7 @@ SELECT * FROM Customers JOIN Orders ON
    ORDER BY CustomerID  
 ```  
   
- **Resync Command**属性设置为：  
+ 重新**同步命令**属性设置为：  
   
 ```  
 "SELECT * FROM   
@@ -52,7 +52,7 @@ SELECT * FROM Customers JOIN Orders ON
 WHERE Orders.OrderID = ?"  
 ```  
   
- **唯一表**是*订单*及其主要密钥*OrderID*，参数化。 嵌套的 select 提供以编程方式确保通过原始命令返回的相同数量和顺序的列的简单方法。  
+ **唯一表**为*Orders* *，其*主键是参数化的。 子选择提供了一种简单的方法，可通过编程方式确保按原始命令返回相同的列数和列顺序。  
   
  2\) **记录集**由存储过程定义：  
   
@@ -63,7 +63,7 @@ Customers.CustomerID = Orders.CustomerID
 WHERE Customers.CustomerID = @CustomerID  
 ```  
   
- **重新同步**方法应执行以下存储的过程：  
+ **Resync**方法应执行以下存储过程：  
   
 ```  
 CREATE PROC CustordersResync @ordid int AS   
@@ -72,15 +72,15 @@ Customers.CustomerID = Orders.CustomerID
 WHERE Orders.ordid  = @ordid  
 ```  
   
- **Resync Command**属性设置为：  
+ 重新**同步命令**属性设置为：  
   
 ```  
 "{call CustordersResync (?)}"  
 ```  
   
- 再一次**唯一表**是*订单*及其主要密钥*OrderID*，参数化。  
+ 同样，**唯一表**是*订单*，其主键 "订单*id*" 已参数化。  
   
- **重新同步命令**动态属性追加到**记录集**对象[属性](../../../ado/reference/ado-api/properties-collection-ado.md)集合时[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性设置为**adUseClient**。  
+ 当[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性设置为**AdUseClient**时， **Resync 命令**是追加到**Recordset**对象[Properties](../../../ado/reference/ado-api/properties-collection-ado.md) collection 的动态属性。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

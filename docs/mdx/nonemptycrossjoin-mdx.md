@@ -1,5 +1,5 @@
 ---
-title: NonEmptyCrossjoin (MDX) |Microsoft Docs
+title: NonEmptyCrossjoin （MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2d152b51e0c1c996e0bb3309e554a70683937493
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68088354"
 ---
 # <a name="nonemptycrossjoin-mdx"></a>NonEmptyCrossjoin (MDX)
@@ -38,14 +38,14 @@ NonEmptyCrossjoin(Set_Expression1 [ ,Set_Expression2,...] [,Count ] )
  指定返回集的数量的有效数值表达式。  
   
 ## <a name="remarks"></a>备注  
- **NonEmptyCrossjoin**函数返回两个或多个集的叉积为一组，而无需提供基础事实数据表的数据中排除空元组或元组。 由于如何**NonEmptyCrossjoin**函数的工作，所有计算成员将自动排除。  
+ **NonEmptyCrossjoin**函数以集的形式返回两个或更多集的叉积，不包括空元组或不包含由基础事实数据表提供的数据的元组。 由于**NonEmptyCrossjoin**函数的工作方式，将自动排除所有计算成员。  
   
- 如果*计数*未指定，则该函数将交叉联接所有指定的集，并在结果集中排除空成员。 如果指定了集的数量，该函数将从第一个指定的集开始，交叉联接指定数量的集。 **NonEmptyCrossjoin**函数使用后续的指定集合中指定，但尚未交叉联接以确定哪些成员被视为非空交叉联接集生成任何剩余的集。 **NonEmptyCrossjoin**函数不影响**NON_EMPTY_BEHAVIOR**设置的计算度量值。  
+ 如果未指定*Count* ，则函数将交叉联接所有指定的集，并从结果集中排除空成员。 如果指定了集的数量，该函数将从第一个指定的集开始，交叉联接指定数量的集。 **NonEmptyCrossjoin**函数使用在后续指定集内指定的任何剩余集，但未进行交叉联接来确定生成的交叉联接集中哪些成员被视为非空成员。 **NonEmptyCrossjoin**函数遵循计算度量值的**NON_EMPTY_BEHAVIOR**设置。  
   
 > [!IMPORTANT]  
->  不推荐使用此函数并且不应使用它，保留此函数仅是为了维护向后兼容性。 相反，应使用[Exists (MDX)](../mdx/exists-mdx.md)具有度量值组名称参数函数或[NonEmpty (MDX)](../mdx/nonempty-mdx.md)函数。  
+>  不推荐使用此函数并且不应使用它，保留此函数仅是为了维护向后兼容性。 相反，应将[Exists （mdx）](../mdx/exists-mdx.md)函数与度量值组名称参数或非[空（mdx）](../mdx/nonempty-mdx.md)函数一起使用。  
   
-## <a name="see-also"></a>请参阅  
- [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

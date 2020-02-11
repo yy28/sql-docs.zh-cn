@@ -1,5 +1,5 @@
 ---
-title: SQLGetStmtOption Mapping | Microsoft Docs
+title: SQLGetStmtOption 映射 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,43 +14,43 @@ ms.assetid: fa599517-3f3e-4dad-a65a-b8596ae3f330
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2973455ff4ee7e8dc51b2cd07a6423c9b1c36346
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68073814"
 ---
 # <a name="sqlgetstmtoption-mapping"></a>SQLGetStmtOption 映射
-当应用程序调用**SQLGetStmtOption**向 ODBC *3.x*驱动程序不支持该对的调用  
+当应用程序对不支持*的 ODBC 1.x*驱动程序调用**SQLGetStmtOption**时，调用  
   
 ```  
 SQLGetStmtOption(hstmt, fOption, pvParam)  
 ```  
   
- 将生成按如下所示：  
+ 将如下所示：  
   
--   如果*fOption*指示返回的字符串，该驱动程序管理器调用一个 ODBC 定义的语句选项  
+-   如果*fOption*指示一个返回字符串的 ODBC 定义的语句选项，则驱动程序管理器将调用  
   
     ```  
     SQLGetStmtAttr(StatementHandle, Attribute, ValuePtr, BufferLength, NULL)  
     ```  
   
--   如果*fOption*指示返回 32 位整数值，驱动程序管理器调用一个 ODBC 定义的语句选项  
+-   如果*fOption*指示一个返回32位整数值的 ODBC 定义的语句选项，则驱动程序管理器将调用  
   
     ```  
     SQLGetStmtAttr(StatementHandle, Attribute, ValuePtr, 0, NULL)  
     ```  
   
--   如果*fOption*指示驱动程序定义的语句选项，驱动程序管理器调用  
+-   如果*fOption*指示驱动程序定义的语句选项，驱动程序管理器将调用  
   
     ```  
     SQLGetStmtAttr(StatementHandle, Attribute, ValuePtr, BufferLength, NULL)  
     ```  
   
- 在前面的三种情况下， *StatementHandle*参数设置为中的值*hstmt*，则*特性*参数设置中的值为*fOption*，并*ValuePtr*参数设置为相同的值*pvParam*。  
+ 在上述三种情况下， *StatementHandle*参数设置为*hstmt*中的值，*特性*参数设置为*fOption*中的值，*将 valueptr*参数设置为与*pvParam*相同的值。  
   
- 有关 ODBC 定义的字符串连接选项，驱动程序管理器设置*BufferLength*调用中的参数**SQLGetConnectAttr**为预定义的最大长度 (SQL_MAX_OPTION_STRING_LENGTH);对于非字符串连接选项，请*BufferLength*设置为 0。  
+ 对于 ODBC 定义的字符串连接选项，驱动程序管理器会将对**SQLGetConnectAttr**的调用中的*BufferLength*参数设置为预定义的最大长度（SQL_MAX_OPTION_STRING_LENGTH）;对于非字符串连接选项， *BufferLength*设置为0。  
   
- 在 ODBC 中已弃用 SQL_GET_BOOKMARK 语句选项*3.x*。 用于 ODBC *3.x*驱动程序以使用 ODBC *2.x*的应用程序使用 SQL_GET_BOOKMARK，则它必须支持 SQL_GET_BOOKMARK。 用于 ODBC *3.x*驱动程序以使用 ODBC *2.x*应用程序，它必须支持将 SQL_USE_BOOKMARKS 设置为 SQL_UB_ON 和应公开固定长度的书签。 如果 ODBC *3.x*驱动程序支持仅长度可变的书签，不固定长度的书签，则它必须返回 SQLSTATE HYC00 （未实现的可选功能） 如果 ODBC *2.x*尝试将应用程序设置为 SQL_UB_ON SQL_USE_BOOKMARKS。  
+ *ODBC 2.x*中已弃用 SQL_GET_BOOKMARK 语句选项。 要使 ODBC *2.x 驱动程序*与使用 SQL_GET_BOOKMARK*的 odbc 2.x*应用程序一起工作，必须支持 SQL_GET_BOOKMARK。 若要使用*odbc 2.x 驱动程序*，必须支持将** SQL_USE_BOOKMARKS 设置为 SQL_UB_ON，并应公开固定长度书签。 如果*odbc 1.x 驱动程序*仅支持可变长度书签，而不支持固定长度书签，则当 odbc *2.x 应用程序*尝试将 SQL_USE_BOOKMARKS 设置为 SQL_UB_ON 时，它必须返回 SQLSTATE HYC00 （未实现可选功能）。  
   
- 用于 ODBC *3.x*驱动程序，驱动程序管理器不再检查以查看是否*选项*介于 SQL_STMT_OPT_MIN 和 SQL_STMT_OPT_MAX，或者大于 SQL_CONNECT_OPT_DRVR_START。 该驱动程序必须选中此项。
+ 对于 ODBC 1.x 驱动程序，*驱动程序管理*器不再检查 SQL_STMT_OPT_MIN 和 SQL_STMT_OPT_MAX 之间的*选项*，或该选项是否大于 SQL_CONNECT_OPT_DRVR_START。 驱动程序必须选中此选项。

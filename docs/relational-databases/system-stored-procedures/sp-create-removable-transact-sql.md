@@ -1,5 +1,5 @@
 ---
-title: sp_create_removable (TRANSACT-SQL) |Microsoft Docs
+title: sp_create_removable （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,21 +18,21 @@ ms.assetid: 06e36ae5-f70d-4a26-9a7f-ee4b9360b355
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d6f842b96a9b179548688a4c655a566087ba1ebf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108624"
 ---
-# <a name="spcreateremovable-transact-sql"></a>sp_create_removable (Transact-SQL)
+# <a name="sp_create_removable-transact-sql"></a>sp_create_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   创建可移动介质数据库。 创建三个或更多文件（一为系统目录表，一为事务日志，其余文件为数据表）并将数据库置于这些文件之中。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 我们建议你使用[CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md)相反。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]建议改用[CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) 。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -55,27 +55,27 @@ sp_create_removable
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @dbname = ] 'dbname'` 是要使用可移动介质上而创建的名称。 *dbname*是**sysname**。  
+`[ @dbname = ] 'dbname'`要创建以便在可移动介质上使用的数据库的名称。 *dbname*为**sysname**。  
   
-`[ @syslogical = ] 'syslogical'` 是包含系统目录表的逻辑名称。 *syslogical*是**sysname**。  
+`[ @syslogical = ] 'syslogical'`包含系统目录表的文件的逻辑名称。 *syslogical*为**sysname**。  
   
-`[ @sysphysical = ] 'sysphysical'` 是的物理名称。 其中包含存放系统目录表的文件的完全限定路径。 *sysphysical*是**nvarchar(260)** 。  
+`[ @sysphysical = ] 'sysphysical'`物理名称。 其中包含存放系统目录表的文件的完全限定路径。 *sysphysical*是**nvarchar （260）**。  
   
-`[ @syssize = ] syssize` 是的大小，以兆字节为单位，存放系统目录表。 *syssize*是**int**。所需的最低*syssize*为 1。  
+`[ @syssize = ] syssize`包含系统目录表的文件的大小（以 mb 为单位）。 *syssize*为**int**。最小*syssize*为1。  
   
-`[ @loglogical = ] 'loglogical'` 是包含事务日志的逻辑名称。 *loglogical*是**sysname**。  
+`[ @loglogical = ] 'loglogical'`包含事务日志的文件的逻辑名称。 *loglogical*为**sysname**。  
   
-`[ @logphysical = ] 'logphysical'` 是的物理名称。 其中包含存放事务日志的文件的完全限定路径。 *logphysical*是**nvarchar(260)** 。  
+`[ @logphysical = ] 'logphysical'`物理名称。 其中包含存放事务日志的文件的完全限定路径。 *logphysical*是**nvarchar （260）**。  
   
-`[ @logsize = ] logsize` 是的大小，以兆字节为单位，包含事务日志。 *logsize*是**int**。所需的最低*logsize*为 1。  
+`[ @logsize = ] logsize`包含事务日志的文件的大小（以 mb 为单位）。 *logsize*为**int**。最小*logsize*为1。  
   
-`[ @datalogical1 = ] 'datalogical'` 是包含数据表的逻辑名称。 *datalogical*是**sysname**。  
+`[ @datalogical1 = ] 'datalogical'`包含数据表的文件的逻辑名称。 *datalogical*为**sysname**。  
   
  必须有 1 到 16 个数据文件。 通常，如果预计数据库很大，必须分布在多个磁盘上，则创建多个数据文件。  
   
-`[ @dataphysical1 = ] 'dataphysical'` 是的物理名称。 其中包括包含数据表的文件的完全限定路径。 *dataphysical*是**nvarchar(260)** 。  
+`[ @dataphysical1 = ] 'dataphysical'`物理名称。 其中包括包含数据表的文件的完全限定路径。 *dataphysical*是**nvarchar （260）**。  
   
-`[ @datasize1 = ] 'datasize'` 是的大小，以兆字节为单位，包含数据表。 *datasize*是**int**。所需的最低*datasize*为 1。  
+`[ @datasize1 = ] 'datasize'`包含数据表的文件的大小（以 mb 为单位）。 *datasize*为**int**。最小*datasize*为1。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -96,7 +96,7 @@ sp_create_removable
   
 |针对数据库的操作|针对文件的权限集|  
 |---------------------------|------------------------------|  
-|修改以添加新文件|创建时间|  
+|修改以添加新文件|创建|  
 |备份|附加|  
 |还原|分离|  
   
@@ -118,14 +118,14 @@ EXEC sp_create_removable 'inventory',
 10;  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [数据库分离和附加 (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [sp_certify_removable &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-certify-removable-transact-sql.md)   
- [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
- [sp_dbremove &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
- [sp_detach_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
- [sp_helpfile (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
- [sp_helpfilegroup (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [数据库分离和附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
+ [sp_certify_removable &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-certify-removable-transact-sql.md)   
+ [ALTER DATABASE &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [sp_dbremove &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
+ [sp_detach_db &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
+ [sp_helpfile &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
+ [sp_helpfilegroup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

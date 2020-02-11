@@ -13,18 +13,18 @@ ms.assetid: 0782a1c3-c5d1-499b-a8ba-134162db9990
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e5d8087e7672dd331d0b078cea4930be7582a026
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68092998"
 ---
 # <a name="sqlsetconnectinfo-function"></a>SQLSetConnectInfo 函数
-**符合性**  
- 版本引入了：ODBC 3.81 标准符合性：ODBC  
+**度**  
+ 引入的版本： ODBC 3.81 标准符合性： ODBC  
   
- **摘要**  
- **SQLSetConnectInfo**用于为应用程序的连接信息令牌设置数据源、 用户 ID 和密码[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)调用。  
+ **总结**  
+ **SQLSetConnectInfo**用于将数据源、用户 ID 和密码设置为应用程序的[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)调用的连接信息令牌。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,42 +42,42 @@ SQLRETURN  SQLSetConnectInfo(
   
 ## <a name="arguments"></a>参数  
  *TokenHandle*  
- [输入]标记句柄。  
+ 送标记句柄。  
   
  *ServerName*  
- [输入]数据源名称。 数据可能不位于该程序，在同一台计算机上，也可以在网络上的某个位置的另一台计算机上。 有关应用程序如何选择数据源的信息，请参阅[选择数据源或驱动程序](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)。  
+ 送数据源名称。 数据可以与程序位于同一台计算机上，也可以位于网络中某个位置的另一台计算机上。 有关应用程序如何选择数据源的信息，请参阅[选择数据源或驱动程序](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)。  
   
  *NameLength1*  
- [输入]长度 **ServerName*以字符为单位。  
+ 送**ServerName*的长度（字符）。  
   
- *UserName*  
- [输入]用户标识符。  
+ *用户名*  
+ 送用户标识符。  
   
  *NameLength2*  
- [输入]长度 **用户名*以字符为单位。  
+ 送长度 **用户名*（字符）。  
   
  *身份验证*  
- [输入]身份验证的字符串 （通常是密码）。  
+ 送身份验证字符串（通常为密码）。  
   
  *NameLength3*  
- [输入]长度 **身份验证*以字符为单位。  
+ 送**身份验证*的长度（字符）。  
   
 ## <a name="returns"></a>返回  
- SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_ERROR 或 SQL_INVALID_HANDLE。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR 或 SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>诊断  
- 与相同[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)的输入验证错误，只不过驱动程序管理器将使用**HandleType** SQL_HANDLE_DBC_INFO_TOKEN 的和一个**处理**的*hDbcInfoToken*。  
+ 与[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)输入验证错误相同，不同之处在于，驱动程序管理器将使用的**HandleType** SQL_HANDLE_DBC_INFO_TOKEN 和*hDbcInfoToken*的**句柄**。  
   
 ## <a name="remarks"></a>备注  
- 每当驱动程序将返回 SQL_ERROR 或 SQL_INVALID_HANDLE，驱动程序管理器将错误返回到应用程序 (在[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)或[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md))。  
+ 每当驱动程序返回 SQL_ERROR 或 SQL_INVALID_HANDLE 时，驱动程序管理器会将错误返回到应用程序（ [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)或[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)）。  
   
- 每当一个驱动程序返回 SQL_SUCCESS_WITH_INFO，驱动程序管理器将获取的诊断信息*hDbcInfoToken*，并返回 SQL_SUCCESS_WITH_INFO 到中的应用程序[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)并[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)。  
+ 每当驱动程序返回 SQL_SUCCESS_WITH_INFO 时，驱动程序管理器都将从*hDbcInfoToken*获取诊断信息，并将 SQL_SUCCESS_WITH_INFO 返回到[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)和[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)中的应用程序。  
   
- 应用程序不应直接调用此函数。 支持识别驱动程序的连接池的 ODBC 驱动程序必须实现此函数。  
+ 应用程序不应直接调用此函数。 支持驱动程序感知连接池的 ODBC 驱动程序必须实现此功能。  
   
- 包括 sqlspi.h 的 ODBC 驱动程序开发。  
+ 包括用于 ODBC 驱动程序开发的 sqlspi。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [开发 ODBC 驱动程序](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [识别驱动程序的连接池](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [在 ODBC 驱动程序中开发连接池感知](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

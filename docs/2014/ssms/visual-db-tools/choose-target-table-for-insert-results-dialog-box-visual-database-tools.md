@@ -1,5 +1,5 @@
 ---
-title: 选择目标表的插入结果对话框 (Visual Database Tools) |Microsoft Docs
+title: "\"选择插入结果的目标表\" 对话框（Visual Database Tools） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8d69745b3316222f9ebabbad29fbc12e023351d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067523"
 ---
 # <a name="choose-target-table-for-insert-results-dialog-box-visual-database-tools"></a>“选择插入结果的目标表”对话框 (Visual Database Tools)
@@ -30,7 +30,7 @@ ms.locfileid: "63067523"
 > [!NOTE]  
 >  可以在“属性”  窗口中更改要在其中插入行的表。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建“插入结果”查询 (Visual Database Tools)](visual-database-tools.md)  
   
   

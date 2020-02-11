@@ -11,19 +11,19 @@ ms.assetid: c609d0fb-787a-4b39-9673-332d411b3d63
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 877dda7f387c8574c8ea2e91281b10b7563037b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68100662"
 ---
 # <a name="odbc-functions-and-the-cursor-library"></a>ODBC 函数和游标库
 > [!IMPORTANT]  
->  此功能将 Windows 的未来版本中删除。 避免在新的开发工作中使用此功能并计划修改当前使用此功能的应用程序。 Microsoft 建议使用驱动程序的游标功能。  
+>  此功能将在 Windows 的将来版本中删除。 避免在新的开发工作中使用此功能，并计划修改当前使用此功能的应用程序。 Microsoft 建议使用驱动程序的游标功能。  
   
- 为连接启用 ODBC 游标库时，驱动程序管理器游标库，而不是在驱动程序中调用函数。 游标库执行的函数，或在指定的驱动程序中调用它。  
+ 为连接启用 ODBC 游标库时，驱动程序管理器将调用游标库中的函数，而不是在驱动程序中。 游标库执行该函数或在指定的驱动程序中调用它。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [由游标库执行的 ODBC 函数](../../../odbc/reference/appendixes/odbc-functions-executed-by-the-cursor-library.md)  
   

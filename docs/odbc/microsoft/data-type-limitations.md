@@ -1,5 +1,5 @@
 ---
-title: 数据类型的限制 |Microsoft Docs
+title: 数据类型限制 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,23 +15,23 @@ ms.assetid: 81c4eab7-1f6b-47a0-b940-89d6c6a14dae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 64d16a9181c475427677371d1e6e180570225b7a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68096463"
 ---
 # <a name="data-type-limitations"></a>数据类型限制
-Microsoft ODBC 桌面数据库驱动程序来实施对数据类型的以下限制：  
+Microsoft ODBC 桌面数据库驱动程序对数据类型有以下限制：  
   
-|数据类型|描述|  
+|数据类型|说明|  
 |---------------|-----------------|  
-|所有数据类型|类型转换失败可能会导致受影响的列设置为 NULL。|  
-|BINARY|创建一个长度为零的二进制列实际返回 255 个字节的二进制列。|  
-|DATE|DATE 数据类型不能由转换函数转换为另一种数据类型 （或本身）。|  
-|小数 （精确数字）|不提供支持。|  
-|浮点数据类型|在 Windows 控制面板的国际部分中设置的数字格式可能受限于的浮点数中的小数位数。|  
-|NUMERIC|支持最大精度和小数位数为 28。|  
-|timestamp|时间戳数据类型不能由转换函数转换为本身。|  
-|TINYINT|TINYINT 值始终是无符号的。|  
-|长度为零的字符串|当使用 dBASE、 Microsoft Excel、 Paradox 或 Textdriver 时，将插入列的长度为零的字符串实际上将插入 NULL 改为。|
+|所有数据类型|如果类型转换失败，则可能导致受影响的列被设置为 NULL。|  
+|BINARY|创建长度为零的二进制列实际上返回255字节的二进制列。|  
+|DATE|DATE 数据类型不能通过 CONVERT 函数转换为另一种数据类型。|  
+|DECIMAL （精确数值）|不支持。|  
+|浮点数据类型|浮点数中的小数位数可能受 Windows "控制面板" 的 "国际" 部分中设置的数字格式的限制。|  
+|NUMERIC|支持最大精度和28的小数位数。|  
+|TIMESTAMP|TIMESTAMP 数据类型不能通过 CONVERT 函数转换为自身。|  
+|TINYINT|TINYINT 值始终是无符号值。|  
+|长度为零的字符串|使用 dBASE、Microsoft Excel、Paradox 或 Textdriver 时，将长度为零的字符串插入列实际上是插入 NULL。|

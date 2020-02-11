@@ -24,14 +24,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 5e06e33048548baad245bee78b9989e9c4cc700b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011334"
 ---
 # <a name="choose-an-authentication-mode"></a>选择身份验证模式
-  在安装过程中，必须为 [!INCLUDE[ssDE](../../includes/ssde-md.md)]选择身份验证模式。 有两个可能的模式：Windows 身份验证模式和混合的模式。 Windows 身份验证模式会启用 Windows 身份验证并禁用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 混合模式会同时启用 Windows 身份验证和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 Windows 身份验证始终可用，并且无法禁用。  
+  在安装过程中，必须为 [!INCLUDE[ssDE](../../includes/ssde-md.md)]选择身份验证模式。 可供选择的模式有两种：Windows 身份验证模式和混合模式。 Windows 身份验证模式会启用 Windows 身份验证并禁用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 混合模式会同时启用 Windows 身份验证和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 Windows 身份验证始终可用，并且无法禁用。  
   
 ## <a name="configuring-the-authentication-mode"></a>配置身份验证模式  
  如果在安装过程中选择混合模式身份验证，则必须为名为 sa 的内置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统管理员帐户提供一个强密码并确认该密码。 sa 帐户通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证进行连接。  
@@ -65,11 +65,11 @@ ms.locfileid: "63011334"
   
 #### <a name="to-determine-the-password-policies-of-the-local-computer"></a>确定本地计算机的密码策略  
   
-1.  在 **“开始”** 菜单上，单击 **“运行”**。  
+1.  在 **“开始”** 菜单上，单击 **“运行”** 。  
   
-2.  在中**运行**对话框中，键入`secpol.msc`，然后单击**确定**。  
+2.  在 "**运行**" 对话框中， `secpol.msc`键入，然后单击 **"确定"**。  
   
-3.  在 **“本地安全设置”** 应用程序中，依次展开 **“安全设置”**、 **“帐户策略”**，然后单击 **“密码策略”**。  
+3.  在 **“本地安全设置”** 应用程序中，依次展开 **“安全设置”** 、 **“帐户策略”** ，然后单击 **“密码策略”** 。  
   
      密码策略将如结果窗格中所示。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "63011334"
   
 -   允许 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持具有混合操作系统的环境，在这种环境中并不是所有用户均由 Windows 域进行验证。  
   
--   允许用户从未知的或不可信的域进行连接。 例如，既定客户使用指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名进行连接以接收其订单状态的应用程序。  
+-   可让用户从未知或不受信任的域进行连接。 例如，既定客户使用指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名进行连接以接收其订单状态的应用程序。  
   
 -   允许 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持基于 Web 的应用程序，在这些应用程序中用户可创建自己的标识。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "63011334"
     > [!NOTE]  
     >  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证不会限制安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机上的本地管理员权限。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [安装 SQL Server 的安全注意事项](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   
   

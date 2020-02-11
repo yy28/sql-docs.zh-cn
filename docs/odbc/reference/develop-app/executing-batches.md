@@ -14,16 +14,16 @@ ms.assetid: f082c717-4f82-4820-a2fa-ba607d8fd872
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 84d3cf65284d767d437987c8ff2b21793466106e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67901260"
 ---
 # <a name="executing-batches"></a>执行批处理
-应用程序执行一批语句之前，应首先检查是否支持它们。 为此，应用程序调用**SQLGetInfo** SQL_BATCH_SUPPORT、 SQL_PARAM_ARRAY_ROW_COUNTS 和 SQL_PARAM_ARRAY_SELECTS 选项。 第一个选项返回是否行计数生成和结果集生成语句中显式批处理和过程，行计数和结果的返回信息可用性设置中的后一种两个选项时支持参数化执行。  
+在应用程序执行批处理语句之前，首先应检查它们是否受支持。 为此，应用程序将调用带有 SQL_BATCH_SUPPORT、SQL_PARAM_ARRAY_ROW_COUNTS 和 SQL_PARAM_ARRAY_SELECTS 选项的**SQLGetInfo** 。 第一种方法返回显式批处理和过程中是否支持行计数生成和结果集生成语句，而后两个选项返回有关参数化中的行计数和结果集的可用性的信息操作.  
   
- 通过执行语句的批处理**SQLExecute**或**SQLExecDirect**。 例如，以下调用执行语句，以打开新的销售订单的显式批次。  
+ 批处理语句通过**SQLExecute**或**SQLExecDirect**执行。 例如，以下调用执行一批显式语句，以打开新的销售订单。  
   
 ```  
 SQLCHAR *BatchStmt =  
@@ -37,9 +37,9 @@ SQLCHAR *BatchStmt =
 SQLExecDirect(hstmt, BatchStmt, SQL_NTS);  
 ```  
   
- 结果生成的批处理时执行语句，它将返回一个或多个行计数或结果设置。 有关如何检索这些属性的信息，请参阅[多个结果](../../../odbc/reference/develop-app/multiple-results.md)。  
+ 执行一批结果生成语句时，将返回一个或多个行计数或结果集。 有关如何检索这些结果的信息，请参阅[多个结果](../../../odbc/reference/develop-app/multiple-results.md)。  
   
- 如果一批语句包括参数标记，这些编号递增参数顺序，因为它们位于任何其他语句。 例如，以下批处理语句具有参数编号从 1 到 21;第一个中的那些**插入**语句是编号 1 到 5 和最后一个中的那些**插入**语句是通过 21 编号的 18。  
+ 如果一批语句包含参数标记，则这些语句将按其在任何其他语句中的递增参数顺序进行编号。 例如，下面的一批语句的参数编号为1到 21;第一个 Insert 语句中的第一个**insert**语句的编号为1到5，而最后一个**insert**语句中的编号为18到21。  
   
 ```  
 INSERT INTO Orders (OrderID, CustID, OpenDate, SalesPerson, Status)  
@@ -50,4 +50,4 @@ INSERT INTO Lines (OrderID, Line, PartID, Quantity) VALUES (?, ?, ?, ?);
 INSERT INTO Lines (OrderID, Line, PartID, Quantity) VALUES (?, ?, ?, ?);  
 ```  
   
- 有关参数的详细信息，请参阅[语句参数](../../../odbc/reference/develop-app/statement-parameters.md)，在本部分中更高版本。
+ 有关参数的详细信息，请参阅本部分后面的[语句参数](../../../odbc/reference/develop-app/statement-parameters.md)。

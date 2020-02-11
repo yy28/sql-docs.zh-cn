@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6338c7a306f163f786f2c1e7d44ae4dbc66504ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62902430"
 ---
 # <a name="flat-file-source"></a>平面文件源
@@ -44,7 +44,7 @@ ms.locfileid: "62902430"
   
  平面文件源输出中的输出列包含 FastParse 属性。 FastParse 指示该列是使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的速度较快但不区分区域设置的较快分析例程，还是使用区分区域设置的标准分析例程。 有关详细信息，请参阅 [Fast Parse](../fast-parse.md) 和 [Standard Parse](../standard-parse.md)。  
   
- 输出列还包含 UseBinaryFormat 属性。 使用该属性可在文件中实现对二进制数据（如带有组合型十进制格式的数据）的支持。 默认情况下 UseBinaryFormat 设置为`false`。 如果你想要使用二进制格式，请将 UseBinaryFormat 设置为`true`的数据类型的输出列和`DT_BYTES`。 执行上述操作时，平面文件源将跳过数据转换并将数据原样传递到输出列。 然后，可以使用“派生列”或“数据转换”等转换将 `DT_BYTES` 数据转换为不同的数据类型，或者在脚本转换中编写自定义脚本来解释数据。 也可以编写自定义数据流组件来解释数据。 有关可以转换为哪些数据类型的详细信息`DT_BYTES`以，请参阅[转换&#40;SSIS 表达式&#41;](../expressions/cast-ssis-expression.md)。  
+ 输出列还包含 UseBinaryFormat 属性。 使用该属性可在文件中实现对二进制数据（如带有组合型十进制格式的数据）的支持。 默认情况下，UseBinaryFormat 设置`false`为。 如果要使用二进制格式，请将 UseBinaryFormat 设置为`true` ，并将输出列上的数据类型设置`DT_BYTES`为。 执行上述操作时，平面文件源将跳过数据转换并将数据原样传递到输出列。 然后，可以使用“派生列”或“数据转换”等转换将 `DT_BYTES` 数据转换为不同的数据类型，或者在脚本转换中编写自定义脚本来解释数据。 也可以编写自定义数据流组件来解释数据。 有关可强制转换`DT_BYTES`为的数据类型的详细信息，请参阅[Cast &#40;SSIS 表达式&#41;](../expressions/cast-ssis-expression.md)。  
   
  此源使用平面文件连接管理器访问文本文件。 通过设置平面文件连接管理器的属性，可以提供关于文件和文件中每列的信息，并可以指定平面文件源应如何处理文本文件中的数据。 例如，可以指定文件中分隔列和行的字符，以及每列的数据类型和长度。 有关详细信息，请参阅 [Flat File Connection Manager](../connection-manager/file-connection-manager.md)。  
   
@@ -55,11 +55,11 @@ ms.locfileid: "62902430"
   
  有关可在 **“平面文件源编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
   
--   [平面文件源编辑器（“连接管理器”页）](../flat-file-source-editor-connection-manager-page.md)  
+-   ["平面文件源编辑器" &#40;连接管理器页&#41;](../flat-file-source-editor-connection-manager-page.md)  
   
--   [平面文件源编辑器（“列”页）](../flat-file-source-editor-columns-page.md)  
+-   ["平面文件源编辑器 &#40;列" 页&#41;](../flat-file-source-editor-columns-page.md)  
   
--   [平面文件源编辑器（“错误输出”页）](../flat-file-source-editor-error-output-page.md)  
+-   ["平面文件源编辑器" &#40;"错误输出" 页&#41;](../flat-file-source-editor-error-output-page.md)  
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
@@ -70,7 +70,7 @@ ms.locfileid: "62902430"
 ## <a name="related-tasks"></a>Related Tasks  
  有关如何设置数据流组件属性的详细信息，请参阅 [设置数据流组件属性](set-the-properties-of-a-data-flow-component.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [平面文件目标](flat-file-destination.md)   
  [数据流](data-flow.md)  
   

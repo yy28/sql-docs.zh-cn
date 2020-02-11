@@ -20,20 +20,20 @@ ms.assetid: f8d6e342-c010-434e-b1cd-f5371fb50a14
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e7706d3a7dd05273b4608d49211a6eaab8927f2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68118609"
 ---
 # <a name="sqlconfigdatasource-function"></a>SQLConfigDataSource Function
-**符合性**  
- 版本引入了：ODBC 1.0  
+**度**  
+ 引入的版本： ODBC 1。0  
   
- **摘要**  
- **SQLConfigDataSource**添加、 修改或删除数据源。  
+ **总结**  
+ **SQLConfigDataSource**添加、修改或删除数据源。  
   
- 功能**SQLConfigDataSource**还可以访问与[ODBCCONF。EXE](../../../odbc/odbcconf-exe.md)。  
+ 还可以通过 ODBCCONF 访问**SQLConfigDataSource**功能[。EXE](../../../odbc/odbcconf-exe.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,54 +48,54 @@ BOOL SQLConfigDataSource(
   
 ## <a name="arguments"></a>参数  
  *hwndParent*  
- [输入]父窗口句柄。 如果句柄为空，该函数将不显示任何对话框。  
+ 送父窗口句柄。 如果句柄为 null，则该函数将不会显示任何对话框。  
   
  *fRequest*  
- [输入]请求的类型。 *FRequest*参数必须包含以下值之一：  
+ 送请求的类型。 *FRequest*参数必须包含以下值之一：  
   
- ODBC_ADD_DSN:添加新的用户数据源。  
+ ODBC_ADD_DSN：添加新用户数据源。  
   
- ODBC_CONFIG_DSN:配置 （修改） 的现有用户数据源。  
+ ODBC_CONFIG_DSN：配置（修改）现有用户数据源。  
   
- ODBC_REMOVE_DSN:删除现有用户数据源。  
+ ODBC_REMOVE_DSN：删除现有用户数据源。  
   
- ODBC_ADD_SYS_DSN:添加新的系统数据源。  
+ ODBC_ADD_SYS_DSN：添加新的系统数据源。  
   
- ODBC_CONFIG_SYS_DSN:修改现有的系统数据源。  
+ ODBC_CONFIG_SYS_DSN：修改现有的系统数据源。  
   
- ODBC_REMOVE_SYS_DSN:删除现有的系统数据源。  
+ ODBC_REMOVE_SYS_DSN：删除现有的系统数据源。  
   
- ODBC_REMOVE_DEFAULT_DSN:从系统信息删除默认数据源规范部分。 （它还会删除默认驱动程序规范部分中的系统信息的 Odbcinst.ini 条目。 这*fRequest*执行相同的功能已弃用**SQLRemoveDefaultDataSource**函数。)当指定此选项时，所有其他参数在调用**SQLConfigDataSource**应为 null 值; 如果它们不为空，将忽略它们。  
+ ODBC_REMOVE_DEFAULT_DSN：从系统信息中删除默认数据源规范部分。 （它还会从系统信息中的 Odbcinst.ini 项中删除默认的驱动程序规范部分。 此*fRequest*执行与不推荐使用的**SQLRemoveDefaultDataSource**函数相同的功能。）如果指定此选项，则对**SQLConfigDataSource**的调用中的所有其他参数都应为 null。如果这些值不为 NULL，则将被忽略。  
   
  *lpszDriver*  
- [输入]驱动程序说明 （通常关联 DBMS 的名称） 提供给用户而不是物理驱动器的名称。  
+ 送显示给用户的驱动程序描述（通常为关联 DBMS 的名称），而不是物理驱动程序名称。  
   
  *lpszAttributes*  
- [输入]双向以 null 结尾的关键字 / 值对的窗体中的属性列表。 有关详细信息，请参阅[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)。  
+ 送以关键字-值对形式的双向、以 null 结尾的属性列表。 有关详细信息，请参阅[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)。  
   
 ## <a name="returns"></a>返回  
- 如果成功，则返回 FALSE 出现故障时，该函数返回 TRUE。 如果没有条目中的系统信息调用此函数时，该函数将返回 FALSE。  
+ 如果此函数成功，则返回 TRUE，否则返回 FALSE。 如果调用此函数时，系统信息中不存在任何条目，则该函数将返回 FALSE。  
   
 ## <a name="diagnostics"></a>诊断  
- 当**SQLConfigDataSource**返回 FALSE，关联 *\*pfErrorCode*可以通过调用获取的值**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以返回的值**SQLInstallerError** ，并解释了此函数的每个上下文中。  
+ 当**SQLConfigDataSource**返回 FALSE 时，可以* \** 通过调用**SQLInstallerError**获取关联的 pfErrorCode 值。 下表列出了可由**SQLInstallerError**返回的* \*pfErrorCode*值，并说明了此函数的上下文中的每个值。  
   
-|*\*pfErrorCode*|Error|描述|  
+|*\*pfErrorCode*|错误|说明|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|常规安装程序错误|出错的其中没有特定的安装程序错误。|  
-|ODBC_ERROR_INVALID_HWND|窗口句柄无效|*HwndParent*参数为无效或为 NULL。|  
-|ODBC_ERROR_INVALID_REQUEST_TYPE|请求的类型无效|*FRequest*参数不是以下之一：<br /><br /> ODBC_ADD_DSN ODBC_CONFIG_DSN ODBC_REMOVE_DSN ODBC_ADD_SYS_DSN ODBC_CONFIG_SYS_DSN ODBC_REMOVE_SYS_DSN ODBC_REMOVE_DEFAULT_DSN|  
-|ODBC_ERROR_INVALID_NAME|无效的驱动程序或转换器名称|*LpszDriver*参数无效。 它找不到注册表中。|  
-|ODBC_ERROR_INVALID_KEYWORD_VALUE|无效的关键字值对|*LpszAttributes*参数包含语法错误。|  
-|ODBC_ERROR_REQUEST_FAILED|*请求*失败|安装程序无法执行请求的操作*fRequest*参数。 在调用**ConfigDSN**失败。|  
-|ODBC_ERROR_LOAD_LIBRARY_FAILED|无法加载驱动程序或转换器安装程序库|无法加载驱动程序安装程序库。|  
-|ODBC_ERROR_OUT_OF_MEM|内存不足|由于内存不足，安装程序无法执行该函数。|  
+|ODBC_ERROR_GENERAL_ERR|常规安装程序错误|出现错误，但没有特定的安装程序错误。|  
+|ODBC_ERROR_INVALID_HWND|无效的窗口句柄|*HwndParent*参数无效或为 NULL。|  
+|ODBC_ERROR_INVALID_REQUEST_TYPE|请求的类型无效|*FRequest*参数不是以下项之一：<br /><br /> ODBC_ADD_DSN ODBC_CONFIG_DSN ODBC_REMOVE_DSN ODBC_ADD_SYS_DSN ODBC_CONFIG_SYS_DSN ODBC_REMOVE_SYS_DSN ODBC_REMOVE_DEFAULT_DSN|  
+|ODBC_ERROR_INVALID_NAME|无效的驱动程序或转换器名称|*LpszDriver*参数无效。 在注册表中找不到它。|  
+|ODBC_ERROR_INVALID_KEYWORD_VALUE|关键字-值对无效|*LpszAttributes*参数包含语法错误。|  
+|ODBC_ERROR_REQUEST_FAILED|*请求*失败|安装程序无法执行*fRequest*参数请求的操作。 对**ConfigDSN**的调用失败。|  
+|ODBC_ERROR_LOAD_LIBRARY_FAILED|无法加载驱动程序或转换器安装程序库|无法加载驱动程序安装库。|  
+|ODBC_ERROR_OUT_OF_MEM|内存不足|由于内存不足，安装程序无法执行此功能。|  
   
 ## <a name="comments"></a>注释  
- **SQLConfigDataSource**使用的值*lpszDriver*要读取的系统信息中的驱动程序安装程序 DLL 的完整路径。 它加载 DLL 并调用**ConfigDSN**使用的传递给它的参数。  
+ **SQLConfigDataSource**使用*lpszDriver*的值从系统信息读取驱动程序的安装程序 DLL 的完整路径。 它将加载 DLL 并调用**ConfigDSN** ，并将其与传递给它的参数相同。  
   
- **SQLConfigDataSource**是否找不到或加载安装程序 DLL，或者如果用户取消了对话框中，则返回 FALSE。 否则，它将返回其从收到的状态**ConfigDSN**。  
+ 如果**SQLConfigDataSource**找不到或无法加载安装程序 DLL，或如果用户取消了对话框，则返回 FALSE。 否则，它将返回从**ConfigDSN**接收的状态。  
   
- **SQLConfigDataSource**映射系统 DSN *fRequest*向用户 DSN *fRequest*s (为 ODBC_ADD_DSN ODBC_ADD_SYS_DSN、 ODBC_CONFIG_DSN，和 ODBC_REMOVE_SYS_ ODBC_CONFIG_SYS_DSN到 ODBC_REMOVE_DSN DSN)。 为了区分用户和系统 Dsn **SQLConfigDataSource**设置根据下表配置模式的安装程序。 在返回前, **SQLConfigDataSource**将配置模式下重置为 BOTHDSN。 **ConfigDSN** （由驱动程序） 应调用**SQLWriteDSNToIni**并**SQLWritePrivateProfileString**来支持系统 DSN。 有关详细信息，请参阅[ConfigDSN 函数](../../../odbc/reference/syntax/configdsn-function.md)。  
+ **SQLConfigDataSource**将系统 dsn *FRequest*映射到用户 dsn *fRequest*s （ODBC_ADD_SYS_DSN 到 ODBC_ADD_DSN，ODBC_CONFIG_SYS_DSN ODBC_CONFIG_DSN，并 ODBC_REMOVE_SYS_DSN ODBC_REMOVE_DSN）。 为了区分用户和系统 Dsn， **SQLConfigDataSource**根据下表设置安装程序配置模式。 在返回之前， **SQLConfigDataSource**会将配置模式重置为 BOTHDSN。 **ConfigDSN** （由驱动程序实现）应调用**SQLWriteDSNToIni**和**SQLWritePrivateProfileString**以支持系统 DSN。 有关详细信息，请参阅[ConfigDSN 函数](../../../odbc/reference/syntax/configdsn-function.md)。  
   
 |*fRequest*|配置模式|  
 |----------------|------------------------|  
@@ -108,8 +108,8 @@ BOOL SQLConfigDataSource(
   
 ## <a name="related-functions"></a>相关函数  
   
-|有关信息|请参阅|  
+|有关以下方面的信息|请参阅|  
 |---------------------------|---------|  
-|添加、 修改或删除数据源|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md) （在安装程序 DLL）|  
+|添加、修改或删除数据源|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md) （在安装程序 DLL 中）|  
 |从系统信息中删除数据源名称|[SQLRemoveDSNFromIni](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|  
-|将数据源名称添加到系统信息|[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|
+|向系统信息中添加数据源名称|[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|

@@ -14,17 +14,17 @@ ms.assetid: db245c80-981a-4638-bd03-69d04bc67af0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9d27f168640b25652ed0fd40154ebfb677ef9300
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68068637"
 ---
 # <a name="file-data-sources"></a>文件数据源
-*文件数据源*存储在文件中并可用于单个用户重复使用或在多个用户之间共享的连接信息。 当使用文件数据源时，驱动程序管理器可以与使用.dsn 文件中的信息的数据源的连接。 可以像任何其他文件一样处理此文件。 文件数据源没有数据源名称，如计算机数据源，不会和未注册到任何一个用户或计算机。  
+*文件数据源*存储在文件中，并允许单个用户重复使用连接信息或在多个用户之间共享连接信息。 使用文件数据源时，驱动程序管理器使用 .dsn 文件中的信息与数据源建立连接。 此文件可以像任何其他文件一样操作。 文件数据源没有数据源名称（与计算机数据源相同），并且未注册到任何一个用户或计算机。  
   
- 文件数据源简化了连接过程中，因为.dsn 文件包含将不得不对的调用生成的连接字符串**SQLDriverConnect**函数。 .Dsn 文件的另一个优点是使多台计算机可以使用相同的数据源，只要它们具有相应的驱动程序，它可以被复制到任何计算机。 应用程序还可以共享文件数据源。 可以放置在网络上并同时使用多个应用程序可共享的文件数据源。  
+ 文件数据源可简化连接过程，因为 .dsn 文件包含连接字符串，否则必须为**SQLDriverConnect**函数的调用生成该字符串。 .Dsn 文件的另一个优点是可以将其复制到任何计算机上，因此，许多计算机可以使用相同的数据源，只要它们安装了适当的驱动程序即可。 文件数据源还可以由应用程序共享。 可共享的文件数据源可以放置在网络上并可由多个应用程序同时使用。  
   
- .Dsn 文件也可以是共享。 非共享.dsn 文件驻留在一台计算机上，指向计算机数据源。 非共享的文件数据源存在主要是为了允许计算机数据源轻松转换为文件数据源，以便应用程序可以设计为仅使用文件数据源。 驱动程序管理器中的非共享的文件数据源发送的信息，它会连接根据需要为.dsn 文件所指向的计算机数据源。  
+ .Dsn 文件也可以是 unshareable。 Unshareable 文件位于单台计算机上，指向计算机数据源。 Unshareable 文件数据源的存在主要是为了使计算机数据源轻松地转换为文件数据源，以便可以将应用程序设计为仅使用文件数据源。 当驱动程序管理器发送 unshareable 文件数据源中的信息时，它会根据需要连接到该 .dsn 文件所指向的计算机数据源。  
   
- 有关文件的数据源的详细信息，请参阅[连接使用的文件数据源](../../odbc/reference/develop-app/connecting-using-file-data-sources.md)，或[SQLDriverConnect](../../odbc/reference/syntax/sqldriverconnect-function.md)函数说明。
+ 有关文件数据源的详细信息，请参阅[使用文件数据源进行连接或使用](../../odbc/reference/develop-app/connecting-using-file-data-sources.md) [SQLDriverConnect](../../odbc/reference/syntax/sqldriverconnect-function.md)函数说明。

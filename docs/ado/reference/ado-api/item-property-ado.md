@@ -1,5 +1,5 @@
 ---
-title: 项属性 (ADO) |Microsoft Docs
+title: Item 属性（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -46,14 +46,14 @@ ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6fe7e807fc38d6f1cf6f72e5b19539bb839e9c08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918365"
 ---
 # <a name="item-property-ado"></a>Item 属性 (ADO)
-指示集合中的特定成员按名称或序号。  
+按名称或序号指示集合中的特定成员。  
   
 ## <a name="syntax"></a>语法  
   
@@ -62,23 +62,23 @@ Set object = collection.Item ( Index )
 ```  
   
 ## <a name="return-value"></a>返回值  
- 返回的对象引用。  
+ 返回对象引用。  
   
-## <a name="parameters"></a>Parameters  
- *Index*  
- 一个**变体**表达式的计算结果为名称或集合中的对象的初始数字。  
+## <a name="parameters"></a>parameters  
+ *编入*  
+ **变量**表达式，计算结果为集合中对象的名称或序号。  
   
 ## <a name="remarks"></a>备注  
- 使用**项**属性以返回特定对象在集合中。 如果**项**对应的集合中找不到对象*索引*参数，就会出错。 另外，某些集合不支持命名的对象;对于这些集合，必须使用序号引用。  
+ 使用**Item**属性返回集合中的特定对象。 如果**项**在与*Index*参数对应的集合中找不到对象，则会发生错误。 此外，某些集合不支持命名对象;对于这些集合，必须使用序号引用。  
   
- **项**属性是所有集合的默认属性; 因此，以下语法形式是可互换的：  
+ **Item**属性是所有集合的默认属性;因此，以下语法形式可互换：  
   
 ```  
 collection.Item (Index)  
 collection (Index)  
 ```  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
   
 ||||  
 |-|-|-|  
@@ -90,6 +90,6 @@ collection (Index)
 |[属性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)|[表集合 (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|[用户集合 (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|  
 |[视图集合 (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
-## <a name="see-also"></a>请参阅  
- [Item 属性示例 (VB)](../../../ado/reference/ado-api/item-property-example-vb.md)   
+## <a name="see-also"></a>另请参阅  
+ [Item 属性示例（VB）](../../../ado/reference/ado-api/item-property-example-vb.md)   
  [Item 属性示例 (VC++)](../../../ado/reference/ado-api/item-property-example-vc.md)   

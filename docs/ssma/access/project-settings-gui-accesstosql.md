@@ -1,5 +1,5 @@
 ---
-title: 项目设置 (GUI) (AccessToSQL) |Microsoft Docs
+title: 项目设置（GUI）（AccessToSQL） |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,34 +10,34 @@ ms.assetid: e0f611ac-7b67-4245-8d1c-804c1c44c935
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: e460a5b571988de65f1d3921f73f011520e6ca15
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67929444"
 ---
-# <a name="project-settings-gui-accesstosql"></a>项目设置 (GUI) (AccessToSQL)
-GUI 项目设置允许你配置数据上的显示方式**数据**选项卡上，如果要包括的评估报表的数据报表。  
+# <a name="project-settings-gui-accesstosql"></a>项目设置（GUI）（AccessToSQL）
+GUI 项目设置允许您配置数据在 "**数据**" 选项卡上的显示方式，以及是否包括具有评估报告的数据报告。  
   
-GUI 窗格现已推出**项目设置**并**默认项目设置**对话框。  
+"**项目设置**" 和 "**默认项目设置**" 对话框中提供了 GUI 窗格。  
   
--   使用**项目设置**对话框可设置为当前项目的用户界面选项。 若要访问的 GUI 设置，在**工具**菜单中，选择**项目设置**，然后单击**GUI**在左窗格的底部。  
+-   使用 "**项目设置**" 对话框可以设置当前项目的用户界面选项。 若要访问 GUI 设置，请在 "**工具**" 菜单上选择 "**项目设置**"，然后单击左窗格底部的 " **GUI** "。  
   
--   使用**默认项目设置**对话框设置的所有项目的用户界面选项。 若要访问的 GUI 设置，在**工具**菜单中，选择**默认项目设置**，然后单击**GUI**在左窗格的底部。  
+-   使用 "**默认项目设置**" 对话框可以为所有项目设置用户界面选项。 若要访问 GUI 设置，请在 "**工具**" 菜单上，选择 "**默认项目设置**"，然后单击左窗格底部的 " **GUI** "。  
   
 ## <a name="options"></a>选项  
-**源的最大行数**  
-将配置上显示数据的行数**数据**的所选的源表选项卡。  
+**源的最大行号**  
+配置在选定源表的 "**数据**" 选项卡上显示的数据的行数。  
   
-**Default**：100  
+**默认值**：100  
   
-**目标的最大行数**  
-将配置上显示数据的行数**数据**的所选的目标表选项卡。  
+**目标的最大行号**  
+配置所选目标表的 "**数据**" 选项卡上显示的数据的行数。  
   
-**Default**：100  
+**默认值**：100  
   
-**显示转换后的报表**  
-若要显示报表转换架构后，选择 True。 生成的转换报告包含相同的布局和与评估报告的信息。  
+**转换后显示报告**  
+若要在转换架构后显示报表，请选择 "True"。 生成的转换报表包含与评估报表相同的布局和信息。  
   
-**Default**：False  
+**默认值**： False  
   

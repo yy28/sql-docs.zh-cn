@@ -13,17 +13,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ce41c287105f97ce4a9cc0ce92facf9919f7ad33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035733"
 ---
 # <a name="reduce-noise-in-cpu-utilization-policies-sql-server-utility"></a>减少 CPU 使用策略中的干扰（SQL Server 实用工具）
   使用以下策略可以减少 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具资源使用策略中报告的干扰和意外的策略违反情况。  
   
 ## <a name="how-frequently-should-processor-utilization-be-in-violation-before-it-is-reported-as-overutilized"></a>违反处理器使用率策略的频度有多高后才应报告为使用过度？  
- 评估时间段和违反百分比公差均可使用实用工具资源管理器的 **“实用工具管理”** 节点中的 **“策略”** 选项卡设置进行配置。 若要更改策略，请使用策略说明右侧的滑块控件，然后单击 **“应用”**。 您还可以使用显示底部的按钮还原默认值或放弃更改。  
+ 评估时间段和违反百分比公差均可使用实用工具资源管理器的 **“实用工具管理”** 节点中的 **“策略”** 选项卡设置进行配置。 若要更改策略，请使用策略说明右侧的滑块控件，然后单击 **“应用”** 。 您还可以使用显示底部的按钮还原默认值或放弃更改。  
   
 -   数据收集间隔为 15 分钟。 此值是不可配置的。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "63035733"
 -   增加 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 托管实例和数据层应用程序的处理器使用率的策略阈值。 有关如何为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的托管实例或数据层应用程序更改全局 CPU 使用策略的详细信息，请参阅 [实用工具管理（SQL Server 实用工具）](../../database-engine/utility-administration-sql-server-utility.md)。 有关如何为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的单独实例更改 CPU 使用策略的详细信息，请参阅[托管实例详细信息（SQL Server 实用工具）](../../database-engine/managed-instance-details-sql-server-utility.md)。 有关如何为单独的数据层应用程序更改 CPU 使用策略的详细信息，请参阅[已部署的数据层应用程序详细信息（SQL Server 实用工具）](../../database-engine/deployed-data-tier-application-details-sql-server-utility.md)。  
   
 ## <a name="how-frequently-should-processor-utilization-be-in-violation-before-it-is-reported-as-underutilized"></a>违反处理器使用率策略的频度有多高后才应报告为使用不足？  
- 评估时间段和违反百分比公差均可使用实用工具资源管理器的 **“实用工具管理”** 节点中的 **“策略”** 选项卡设置进行配置。 若要更改策略，请使用策略说明右侧的滑块控件，然后单击 **“应用”**。 您还可以使用显示底部的按钮还原默认值或放弃更改。  
+ 评估时间段和违反百分比公差均可使用实用工具资源管理器的 **“实用工具管理”** 节点中的 **“策略”** 选项卡设置进行配置。 若要更改策略，请使用策略说明右侧的滑块控件，然后单击 **“应用”** 。 您还可以使用显示底部的按钮还原默认值或放弃更改。  
   
 -   数据收集间隔为 15 分钟。 此值是不可配置的。  
   
@@ -54,12 +54,12 @@ ms.locfileid: "63035733"
   
 -   在达到该值之后会将 CPU 报告为使用不足的违反策略的数据点的默认百分比是 90%。 选项范围是从 0% 到 100%。  
   
- 基于默认值，每周收集 672 个数据点，但策略阈值是 0%。 因此，默认情况下，该策略不会生成处理器使用不足违反策略情况。 有关如何为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的托管实例或数据层应用程序更改全局 CPU 使用策略的详细信息，请参阅[实用工具管理（SQL Server 实用工具）](../../database-engine/utility-administration-sql-server-utility.md)。 有关如何为 SQL Server 的单独实例更改 CPU 使用策略的详细信息，请参阅[托管实例详细信息（SQL Server 实用工具）](../../database-engine/managed-instance-details-sql-server-utility.md)。 有关如何为单独的数据层应用程序更改 CPU 使用策略的详细信息，请参阅[已部署的数据层应用程序详细信息（SQL Server 实用工具）](../../database-engine/deployed-data-tier-application-details-sql-server-utility.md)。  
+ 基于默认值，每周收集 672 个数据点，但策略阈值是 0%。 因此，默认情况下，该策略不会生成处理器使用不足违反策略情况。 有关如何为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的托管实例或数据层应用程序更改全局 CPU 使用策略的详细信息，请参阅 [实用工具管理（SQL Server 实用工具）](../../database-engine/utility-administration-sql-server-utility.md)。 有关如何为 SQL Server 的单独实例更改 CPU 使用策略的详细信息，请参阅[托管实例详细信息（SQL Server 实用工具）](../../database-engine/managed-instance-details-sql-server-utility.md)。 有关如何为单独的数据层应用程序更改 CPU 使用策略的详细信息，请参阅[已部署的数据层应用程序详细信息（SQL Server 实用工具）](../../database-engine/deployed-data-tier-application-details-sql-server-utility.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [实用工具管理（SQL Server 实用工具）](../../database-engine/utility-administration-sql-server-utility.md)   
  [在 SQL Server 实用工具中监视 SQL Server 的实例](monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
  [修改资源运行状况策略定义（SQL Server 实用工具）](modify-a-resource-health-policy-definition-sql-server-utility.md)   
- [SQL Server 实用工具的功能和任务](sql-server-utility-features-and-tasks.md)  
+ [SQL Server 实用工具功能和任务](sql-server-utility-features-and-tasks.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 配置 Reporting Services 以使用使用者可选名称 |Microsoft Docs
+title: 将 Reporting Services 配置为使用使用者可选名称 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 39cb8593351e97c47fff38ae2d1b6f2b326f49b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109743"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>配置 Reporting Services 使用使用者备用名称
@@ -22,13 +22,14 @@ ms.locfileid: "66109743"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 本机模式|  
+|**[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]本机模式|  
   
  该说明适用于 Reporting Service URL 以及 Web 服务 URL。  
   
  要使用 SAN，SSL 证书必须在服务器上注册，签名并且获得私钥。 你无法使用自签名证书。  
   
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中的 URL 可配置为使用 SSL 证书。 一个证书通常只有一个使用者名称，此名称针对一个 SSL（安全套接字层）会话只允许一个 URL。 SAN 是证书中的附加字段，允许 SSL 服务进行侦听，对许多 URL 有效，并与其他应用程序共享 SSL 端口。 SAN 的形式如下： www.s2.com 。  
+ 
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中的 URL 可配置为使用 SSL 证书。 一个证书通常只有一个使用者名称，此名称针对一个 SSL（安全套接字层）会话只允许一个 URL。 SAN 是证书中的附加字段，允许 SSL 服务进行侦听，对许多 URL 有效，并与其他应用程序共享 SSL 端口。 SAN 的形式如下：www.s2.com。  
   
  有关 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]SSL 设置的详细信息，请参阅 [配置本机模式报表服务器上的 SSL 连接](security/configure-ssl-connections-on-a-native-mode-report-server.md)。  
   
@@ -40,7 +41,7 @@ ms.locfileid: "66109743"
   
 2.  在“Web 服务 URL”  页面上，选择一个 SSL 端口和 SSL 证书。  
   
-     ![Reporting Services 配置管理器](media/reportingservices-configurationmanager.png "Reporting Services Configuration Manager")  
+     ![Reporting Services 配置管理器](media/reportingservices-configurationmanager.png "Reporting Services 配置管理器")  
   
      配置管理器注册端口的 SSL 证书。  
   
@@ -123,10 +124,10 @@ ms.locfileid: "66109743"
   
 10. 在 Reporting Services 配置管理器的“报表服务器状态”  页面上单击“停止”  ，然后单击“启动”  以重启报表服务器。  
   
-## <a name="see-also"></a>请参阅  
- [RSReportServer 配置文件](report-server/rsreportserver-config-configuration-file.md)   
+## <a name="see-also"></a>另请参阅  
+ [Rsreportserver.config 配置文件](report-server/rsreportserver-config-configuration-file.md)   
  [Reporting Services Configuration Manager（本机模式）](../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [修改 Reporting Services 配置文件 (RSreportserver.config)](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [&#40;Rsreportserver.config 修改 Reporting Services 配置文件&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [配置报表服务器 URL（SSRS 配置管理器）](install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

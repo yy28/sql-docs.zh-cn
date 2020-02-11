@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bed2868b74087cd0e4c119ada7e29f0c5db73ce5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63240532"
 ---
 # <a name="permissions-required-to-run-sql-server-profiler"></a>运行 SQL Server Profiler 所需的权限
@@ -32,7 +32,7 @@ ms.locfileid: "63240532"
 ## <a name="permissions-used-to-replay-traces"></a>用于重播跟踪的权限  
  重播跟踪也要求重播跟踪的用户拥有 ALTER TRACE 权限。  
   
- 但是，如果重播期间在重播的跟踪中遇到 Audit Login 事件， [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 将使用 EXECUTE AS 命令。 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 使用 EXECUTE AS 命令模拟与登录事件关联的用户。  
+ 但是，如果重播期间在重播的跟踪中遇到 Audit Login 事件， [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 将使用 EXECUTE AS 命令。 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]使用 EXECUTE AS 命令模拟与登录事件关联的用户。  
   
  如果 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 在重播的跟踪中遇到登录事件，将执行下列权限检查：  
   
@@ -40,9 +40,9 @@ ms.locfileid: "63240532"
   
 2.  在重播的跟踪中遇到用户 2 的登录事件。  
   
-3.  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 使用 EXECUTE AS 命令模拟用户 2。  
+3.  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]使用 EXECUTE AS 命令模拟2到2。  
   
-4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 尝试验证用户 2 的身份，根据结果的不同会出现下列情况之一：  
+4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]尝试验证用户2的身份，根据结果，会发生以下情况之一：  
   
     1.  如果用户 2 无法通过身份验证， [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 将返回一个错误，并以用户 1 的身份继续重播跟踪。  
   
@@ -64,11 +64,11 @@ ms.locfileid: "63240532"
   
  ![SQL Server Profiler 重播跟踪权限](../../database-engine/media/replaytracedecisiontree.gif "SQL Server Profiler 重播跟踪权限")  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server Profiler 存储过程 (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql)   
  [重播跟踪](replay-traces.md)   
  [创建跟踪 (SQL Server Profiler)](create-a-trace-sql-server-profiler.md)   
- [重播跟踪表 (SQL Server Profiler)](replay-a-trace-table-sql-server-profiler.md)   
- [重播跟踪文件 (SQL Server Profiler)](replay-a-trace-file-sql-server-profiler.md)  
+ [重播跟踪表 &#40;SQL Server Profiler&#41;](replay-a-trace-table-sql-server-profiler.md)   
+ [重播跟踪文件 &#40;SQL Server Profiler&#41;](replay-a-trace-file-sql-server-profiler.md)  
   
   

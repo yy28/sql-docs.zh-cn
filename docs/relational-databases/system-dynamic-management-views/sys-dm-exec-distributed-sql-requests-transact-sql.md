@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_distributed_sql_requests (TRANSACT-SQL) |Microsoft Docs
+title: sys. dm_exec_distributed_sql_requests （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -23,35 +23,35 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a63d8a331163283598dd50a418f0dd32f9ac5edd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097791"
 ---
-# <a name="sysdmexecdistributedsqlrequests-transact-sql"></a>sys.dm_exec_distributed_sql_requests (Transact-SQL)
+# <a name="sysdm_exec_distributed_sql_requests-transact-sql"></a>sys.dm_exec_distributed_sql_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  在查询中包含有关所有 SQL 查询分布作为 SQL 步骤的一部分的信息。  此视图显示的最后 1000 条请求; 的数据活动请求始终具有此视图中的数据。  
+  将有关所有 SQL 查询分发的信息保存为查询中的 SQL 步骤的一部分。  此视图显示最后一个1000请求的数据;活动请求始终具有此视图中的数据。  
   
-|列名|数据类型|描述|范围|  
+|列名|数据类型|说明|范围|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|**nvarchar(32)**|execution_id 和 step_index 构成此视图的键。 与请求关联的唯一数字 id。|请参阅中的 ID [sys.dm_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
-|step_index|**int**|此分布是一部分的查询步骤的索引。|请参阅中的 step_index [sys.dm_exec_distributed_request_steps &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)。|  
-|compute_node_id|**int**|表示通过此步骤的操作的类型。|请参阅中的 compute_node_id [sys.dm_exec_compute_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)。|  
-|distribution_id|**int**|执行步骤的位置。|将设置为-1 表示运行在节点范围内不分发范围的请求。|  
-|status|**nvarchar(32)**|此步骤的状态|活动、 已取消、 已完成、 失败、 已排队|  
-|error_id|**nvarchar(36)**|如果有与此步骤中，关联的错误的唯一 id|请参阅 id [sys.dm_exec_compute_node_errors &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)，则未发生错误的情况下为 NULL。|  
-|start_time|**datetime**|在步骤开始执行时间|小于或等于当前时间和更大或等于 end_compile_time 属于此步骤中的查询。|  
-|end_time|**datetime**|此步骤完成执行、 已取消，或失败的时间。|小于或等于当前时间和更大或等于 start_time，当前中执行的步骤设置为 NULL 或排入队列。|  
-|total_elapsed_time|**int**|具有已执行的查询步骤，以毫秒为单位的时间的总金额|介于 0 和 end_time 和 start_time 之间的差异。 有关已排队的步骤为 0。|  
-|row_count|**bigint**|更改或此请求返回的总行数|有关步骤的未更改或返回的数据，否则影响的行数为 0。 将设置为-1 表示 DMS 步骤。|  
-|spid|**int**|在执行查询分发的 SQL Server 实例上的会话 id||  
-|command|nvarchar(4000)|保留此步骤的命令的完整文本。|步骤的任何有效的请求字符串。 如果长度超过 4000 个字符被截断。|  
+|execution_id|**nvarchar （32）**|execution_id 和 step_index 构成此视图的键。 与请求关联的唯一数字 id。|请参阅 sys.databases 中的 ID [dm_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
+|step_index|**int**|此分发所属的查询步骤的索引。|请参阅 dm_exec_distributed_request_steps sys.databases 中的 step_index [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)。|  
+|compute_node_id|**int**|此步骤表示的操作的类型。|请参阅 dm_exec_compute_nodes sys.databases 中的 compute_node_id [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)。|  
+|distribution_id|**int**|步骤的执行位置。|对于在节点范围内运行的请求，将设置为-1，而不是分布范围。|  
+|status|**nvarchar （32）**|此步骤的状态|活动、已取消、已完成、失败、排队|  
+|error_id|**nvarchar （36）**|与此步骤关联的错误的唯一 id （如果有）|请参阅[dm_exec_compute_node_errors &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)的 id，如果未发生错误，则为 NULL。|  
+|start_time|**datetime**|步骤开始执行的时间|小于或等于当前时间，大于或等于此步骤所属的查询 end_compile_time。|  
+|end_time|**datetime**|此步骤完成执行、已取消或失败的时间。|小于或等于当前时间，大于或等于 start_time，则将设置为 NULL 以查看当前正在执行或已排队的步骤。|  
+|total_elapsed_time|**int**|执行查询步骤的总时间（毫秒）|介于0与 end_time 与 start_time 之间的差异。 对于排队步骤，为0。|  
+|row_count|**bigint**|此请求更改或返回的总行数|0表示未更改或返回数据的步骤，否则为受影响的行数。 对于 DMS 步骤，将设置为-1。|  
+|spid|**int**|执行查询分发的 SQL Server 实例上的会话 id||  
+|command|nvarchar(4000)|保存此步骤的命令的完整文本。|步骤的任何有效请求字符串。 如果长度超过4000个字符，则截断。|  
   
-## <a name="see-also"></a>请参阅  
- [PolyBase 使用动态管理视图进行故障排除](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+## <a name="see-also"></a>另请参阅  
+ [通过动态管理视图进行 PolyBase 故障排除](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [与数据库相关的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [与数据库相关的动态管理视图 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1c1fedfc0c21d78e73f38b5bfdf084eb37e5311d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63209749"
 ---
 # <a name="move-a-workload-group"></a>移动工作负荷组
@@ -35,7 +35,7 @@ ms.locfileid: "63209749"
 ###  <a name="LimitationsRestrictions"></a> 限制和局限  
  如果存在挂起的资源调控器配置操作，则无法移动工作负荷组。 你可以通过查询 [sys.dm_resource_governor_configuration (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql) 动态管理视图来获取 is_configuration_pending 的当前状态以确定是否存在配置挂起。  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 权限  
  移动工作负荷组需要 CONTROL SERVER 权限。  
   
 ##  <a name="MoveWGSSMS"></a> 使用 SQL Server Management Studio 移动工作负荷组  
@@ -73,7 +73,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [资源调控器](resource-governor.md)   
  [启用资源调控器](enable-resource-governor.md)   
  [创建资源池](create-a-resource-pool.md)   

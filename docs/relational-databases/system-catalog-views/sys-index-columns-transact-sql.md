@@ -1,5 +1,5 @@
 ---
-title: sys.index_columns (TRANSACT-SQL) |Microsoft Docs
+title: sys. index_columns （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2019
 ms.prod: sql
@@ -21,28 +21,28 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e20bd7ecc783e0449a1deaa21c9f3db6e07abbc7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68122671"
 ---
-# <a name="sysindexcolumns-transact-sql"></a>sys.index_columns (Transact-SQL)
+# <a name="sysindex_columns-transact-sql"></a>sys.index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  每一部分的列中对应一行**sys.indexes**索引或未排序的表 （堆）。  
+  对于作为**sys.databases**索引或未排序的表（堆）的一部分的每个列，包含一行。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|在定义索引的对象 ID。|  
+|**object_id**|**int**|定义索引所依据的对象的 ID。|  
 |**index_id**|**int**|定义了列的索引的 ID。|  
-|**index_column_id**|**int**|索引列的 ID。 **index_column_id**仅中是唯一**index_id**。|  
-|**column_id**|**int**|中列的 ID **object_id**。<br /><br /> 0 = 非聚集索引中的行标识符 (RID)。<br /><br /> **column_id**仅中是唯一**object_id**。|  
-|**key_ordinal**|**tinyint**|键列集内的序数（从 1 开始）。<br /><br /> 0 = 不是键列，或者是 XML 索引、列存储索引或空间索引。<br /><br /> 注意:XML 索引或空间索引不能为键的基础列不是可比较，因为这意味着它们的值不能进行排序。|  
+|**index_column_id**|**int**|索引列的 ID。 **index_column_id**仅在**index_id**中是唯一的。|  
+|column_id |**int**|**Object_id**中的列的 ID。<br /><br /> 0 = 非聚集索引中的行标识符 (RID)。<br /><br /> **column_id**仅在**object_id**中是唯一的。|  
+|**key_ordinal**|**tinyint**|键列集内的序数（从 1 开始）。<br /><br /> 0 = 不是键列，或者是 XML 索引、列存储索引或空间索引。<br /><br /> 注意： XML 索引或空间索引不能是键，因为基础列不是可比较的，这意味着不能对其值进行排序。|  
 |**partition_ordinal**|**tinyint**|分区列集内的序数（从 1 开始）。 聚集列存储索引可以具有最多 1 个分区列。<br /><br /> 0 = 非分区列。|  
 |**is_descending_key**|**bit**|1 = 索引键列采用降序排序。<br /><br /> 0 = 索引键列的排序方向为升序，或者列是列存储或哈希索引的一部分。|  
-|**is_included_column**|**bit**|1 = 列是使用 CREATE INDEX INCLUDE 子句添加到索引的非键列，或者列是列存储索引的一部分。<br /><br /> 0 = 列不是包含列。<br /><br /> 隐式添加，因为它们是聚集键的一部分的列不列在**sys.index_columns**。<br /><br /> 由于是分区列而隐式添加的列作为 0 返回。| 
-|**column_store_order_ordinal**</br> 适用范围：Azure SQL 数据仓库 （预览版）|**tinyint**|序号 （从 1 开始） 中设置的有序的聚集列存储索引中列的顺序。|
+|**is_included_column**|**bit**|1 = 列是使用 CREATE INDEX INCLUDE 子句添加到索引的非键列，或者列是列存储索引的一部分。<br /><br /> 0 = 列不是包含列。<br /><br /> 因为列是聚集键的一部分而隐式添加的列未列在**index_columns**中。<br /><br /> 由于是分区列而隐式添加的列作为 0 返回。| 
+|**column_store_order_ordinal**</br> 适用于： Azure SQL 数据仓库（预览版）|**tinyint**|排序的聚集列存储索引中顺序列集中的序号（从1开始）。|
   
 ## <a name="permissions"></a>权限
 
@@ -83,13 +83,13 @@ IX_BillOfMaterials_UnitMeasureCode                         UnitMeasureCode    1 
   
 ```  
   
-## <a name="see-also"></a>请参阅  
- [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [&#40;Transact-sql&#41;的对象目录视图](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
- [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)   
- [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [查询 SQL Server 系统目录常见问题解答](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
+ [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
+ [查询 SQL Server 系统目录常见问题](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 410dd8785ce58f87b35c6c18b5c5dc00ffcd9faa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63240782"
 ---
 # <a name="reference-the-built-in-xml-schema-collection-sys"></a>引用内置 XML 架构集合 (sys)
@@ -147,9 +147,9 @@ data(/ns:root[1]) instance of sqltypes:varchar?')
 GO  
 ```  
   
- 由于 <`root`> 元素值的类型是根据与 `@var` 变量关联的架构从 **varchar** 中派生，因此，`instance of sqltypes:varchar?` 表达式返回 TRUE。  
+ 由于 <`instance of sqltypes:varchar?`> 元素值的类型是根据与 `root` 变量关联的架构从 **varchar** 中派生，因此，`@var` 表达式返回 TRUE。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [XML 架构集合 (SQL Server)](xml-schema-collections-sql-server.md)  
   
   

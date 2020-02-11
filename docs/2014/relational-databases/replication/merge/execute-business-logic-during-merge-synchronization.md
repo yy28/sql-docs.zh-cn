@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 440419f1fb4670ff5bdfc2e49cd9cfe6fa5df65e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999567"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>在合并同步期间执行业务逻辑
@@ -29,7 +29,7 @@ ms.locfileid: "62999567"
   
 -   应用程序编程接口 (API) 引用： <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  
   
--   有关如何实现业务逻辑处理程序的说明：[为合并项目实现业务逻辑处理程序](../implement-a-business-logic-handler-for-a-merge-article.md)  
+-   有关如何实现业务逻辑处理程序的说明：[实现合并项目的业务逻辑处理程序](../implement-a-business-logic-handler-for-a-merge-article.md)  
   
 ## <a name="uses-for-business-logic-handlers"></a>业务逻辑处理程序用途  
  合并同步进程可以调用业务逻辑处理程序来执行：  
@@ -59,7 +59,7 @@ ms.locfileid: "62999567"
      如果应用程序需要覆盖特定数据值或操作，这比较有用。 例如，应用程序可能将行删除操作转换为一个特殊的更新操作，将行中 **status** 列的值设置为“已删除”，然后跟踪执行删除操作的客户端的标识。 这对于审核或工作流可能比较有用。  
   
 ### <a name="custom-conflict-resolution"></a>自定义冲突解决  
- 合并复制提供了冲突检测和冲突解决选项，从而允许针对冲突接受默认的解决策略或选择自定义解决。 有关详细信息，请参阅 [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md)中指定合并项目冲突解决程序。 在处理冲突数据更改期间可以调用业务逻辑处理程序，它可以执行下列两种操作之一：  
+ 合并复制提供了冲突检测和冲突解决选项，从而允许针对冲突接受默认的解决策略或选择自定义解决。 有关详细信息，请参阅[高级合并复制冲突的检测和解决方法](advanced-merge-replication-conflict-detection-and-resolution.md)。 在处理冲突数据更改期间可以调用业务逻辑处理程序，它可以执行下列两种操作之一：  
   
 -   接受默认解决  
   
@@ -89,10 +89,10 @@ ms.locfileid: "62999567"
   
 -   Internet 信息服务 (IIS) 服务器（如果使用 Web 同步）。 使用通过 Web 同步来同步的请求订阅，在 IIS 服务器上执行业务逻辑处理程序。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [合并复制](merge-replication.md)   
  [Subscribe to Publications](../subscribe-to-publications.md)   
  [同步数据](../synchronize-data.md)   
- [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md)  
+ [合并复制的 Web 同步](../web-synchronization-for-merge-replication.md)  
   
   

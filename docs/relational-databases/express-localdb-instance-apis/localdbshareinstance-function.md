@@ -16,17 +16,17 @@ ms.assetid: 21eb3b9a-7d32-455b-89bb-f624198cd202
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: f19226e4945d2f163247b7d94f029a6c5b6ee4af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68091261"
 ---
 # <a name="localdbshareinstance-function"></a>LocalDBShareInstance 函数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   使用指定的共享名称与其他计算机用户共享指定的 SQL Server Express LocalDB 实例。  
   
- **标头文件：** sqlncli.h  
+ **头文件：** sqlncli.msi  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,7 +39,7 @@ HRESULT LocalDBShareInstance(
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>parameters  
  *pOwnerSID*  
  [输入] 实例所有者的 SID。  
   
@@ -81,9 +81,9 @@ HRESULT LocalDBShareInstance(
  发生了意外错误。 有关详细信息，请参阅事件日志。  
   
 ## <a name="remarks"></a>备注  
- 有关使用 LocalDB API 的代码示例，请参阅[SQL Server Express LocalDB 参考](../../relational-databases/sql-server-express-localdb-reference.md)。  
+ 有关使用 LocalDB API 的代码示例，请参阅[SQL Server Express LocalDB 引用](../../relational-databases/sql-server-express-localdb-reference.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server Express LocalDB 标头信息和版本信息](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
   
   

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0a5fded413944c304dfe02675b3577b699adfc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63231237"
 ---
 # <a name="shape-xml-with-nested-for-xml-queries"></a>使用嵌套的 FOR XML 查询形成 XML
@@ -61,7 +61,7 @@ for XML AUTO, TYPE, XMLSCHEMA
   
  请注意上述查询的以下方面：  
   
--   外部 SELECT 语句构造具有 **ProductID** 属性和两个 <`Price`> 子元素的 <`Product`> 元素。  
+-   外部 SELECT 语句构造具有 `Product`ProductID **属性和两个 <** > 子元素的 <`Price`> 元素。  
   
 -   两个内部 SELECT 语句构造两个 <`Price`> 元素，每一个都具有一个 **PriceType** 属性和可以返回产品价格的 XML。  
   
@@ -88,7 +88,7 @@ FOR XML AUTO, TYPE
   
  先前的示例使用 `query()` 数据类型的 `xml` 方法查询由内部 FOR XML 查询返回的 XML，并构造预期的结果。  
   
- 下面是结果：  
+ 结果如下：  
   
 ```  
 <Production.Product ProductID="520">  
@@ -97,7 +97,7 @@ FOR XML AUTO, TYPE
 </Production.Product>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用嵌套 FOR XML 查询](use-nested-for-xml-queries.md)  
   
   

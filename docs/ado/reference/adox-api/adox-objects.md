@@ -14,32 +14,32 @@ ms.assetid: 3f5287e9-f62c-40c4-bb59-985102be956e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 16ff3c926b1c0457f0f0dda382881aad45fb4efd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67928504"
 ---
 # <a name="adox-objects"></a>ADOX 对象
 ## <a name="adox-object-summary"></a>ADOX 对象摘要  
   
-|Object|描述|  
+|Object|说明|  
 |------------|-----------------|  
-|[目录](../../../ado/reference/adox-api/catalog-object-adox.md)|包含描述的架构目录中的数据源的集合。|  
-|[列](../../../ado/reference/adox-api/column-object-adox.md)|表示从表、 索引或键的列。|  
-|[分组](../../../ado/reference/adox-api/group-object-adox.md)|表示具有受保护的数据库中的访问权限的组帐户。|  
-|[Index](../../../ado/reference/adox-api/index-object-adox.md)|表示数据库表中的索引。|  
-|[Key](../../../ado/reference/adox-api/key-object-adox.md)|表示从数据库表的主键、 外，或唯一键字段。|  
-|[过程](../../../ado/reference/adox-api/procedure-object-adox.md)|表示存储的过程。|  
-|[表](../../../ado/reference/adox-api/table-object-adox.md)|表示数据库表，其中包括列、 索引和键。|  
-|[用户](../../../ado/reference/adox-api/user-object-adox.md)|表示具有受保护的数据库中的访问权限的用户帐户。|  
-|[视图](../../../ado/reference/adox-api/view-object-adox.md)|表示一组筛选的记录或一个虚拟表。|  
+|[目录](../../../ado/reference/adox-api/catalog-object-adox.md)|包含描述数据源的架构目录的集合。|  
+|[列](../../../ado/reference/adox-api/column-object-adox.md)|表示表、索引或键中的列。|  
+|[组](../../../ado/reference/adox-api/group-object-adox.md)|表示在受保护的数据库中具有访问权限的组帐户。|  
+|[编入](../../../ado/reference/adox-api/index-object-adox.md)|表示数据库表中的索引。|  
+|[Key](../../../ado/reference/adox-api/key-object-adox.md)|表示数据库表中的主键或唯一键字段。|  
+|[方法](../../../ado/reference/adox-api/procedure-object-adox.md)|表示存储过程。|  
+|[表](../../../ado/reference/adox-api/table-object-adox.md)|表示数据库表，其中包括列、索引和键。|  
+|[用户](../../../ado/reference/adox-api/user-object-adox.md)|表示在受保护的数据库中具有访问权限的用户帐户。|  
+|[视图](../../../ado/reference/adox-api/view-object-adox.md)|表示一组筛选的记录或虚拟表。|  
   
- 这些对象之间的关系中所示[ADOX 对象模型](../../../ado/reference/adox-api/adox-object-model.md)。  
+ [ADOX 对象模型](../../../ado/reference/adox-api/adox-object-model.md)中阐释了这些对象之间的关系。  
   
- 每个对象可以包含在其相应的集合。 例如，**表**对象可以包含在[表](../../../ado/reference/adox-api/tables-collection-adox.md)集合。 有关详细信息，请参阅[ADOX 集合](../../../ado/reference/adox-api/adox-collections.md)或特定集合的主题。  
+ 每个对象都可以包含在其对应的集合中。 例如，**表**对象可以包含在[表](../../../ado/reference/adox-api/tables-collection-adox.md)集合中。 有关详细信息，请参阅[ADOX 集合](../../../ado/reference/adox-api/adox-collections.md)或特定集合主题。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ADOX API 参考](../../../ado/reference/adox-api/adox-api-reference.md)   
  [ADOX 集合](../../../ado/reference/adox-api/adox-collections.md)   
  [ADOX 对象模型](../../../ado/reference/adox-api/adox-object-model.md)   

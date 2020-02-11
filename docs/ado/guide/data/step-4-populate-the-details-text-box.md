@@ -1,5 +1,5 @@
 ---
-title: 步骤 4：详细信息文本框中填充 |Microsoft Docs
+title: 步骤4：填充 "详细信息" 文本框 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,14 +11,14 @@ ms.assetid: cb4273e2-c907-4a86-a621-3bf110088228
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 90748ca7f725ddbf947d9686b846695da0c6626c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924069"
 ---
 # <a name="step-4-populate-the-details-text-box"></a>步骤 4：填充详细信息文本框
-若要填充详细信息文本框中，创建名为一个新的子例程**recFields**并插入以下代码：  
+若要填充 "详细信息" 文本框，请创建名为**recFields**的新子程序，并插入以下代码：  
   
 ```  
 Sub recFields(r As Record, l As ListBox, t As TextBox)  
@@ -44,8 +44,8 @@ Sub recFields(r As Record, l As ListBox, t As TextBox)
 End Sub  
 ```  
   
- 这段代码填入`lstDetails`使用的字段和值的简单记录传递给`recFields`。 如果资源是一个文本文件，文本 Stream 打开从该资源记录。 该代码确定的字符集是 ASCII 并将复制到 Stream 内容`txtDetails`。  
+ 此代码将`lstDetails`填充传递到`recFields`的简单记录的字段和值。 如果资源是文本文件，则从资源记录中打开一个文本流。 此代码确定字符集是否为 ASCII，并将流内容复制到中`txtDetails`。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Internet 发布方案](../../../ado/guide/data/internet-publishing-scenario.md)   
  [步骤 3：填充字段列表框](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)

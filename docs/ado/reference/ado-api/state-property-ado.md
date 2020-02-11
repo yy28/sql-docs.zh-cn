@@ -1,5 +1,5 @@
 ---
-title: State 属性 (ADO) |Microsoft Docs
+title: State 属性（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,32 +16,32 @@ ms.assetid: 0b993bac-2653-40b1-bcbb-5b57b6aae2bf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c45b9331ddd538cdf23a57eaf39b6efb71bccc4a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930855"
 ---
 # <a name="state-property-ado"></a>State 属性 (ADO)
-指示所有适用的对象，对象的状态是打开还是已关闭。 如果该对象正在执行的异步方法，指示该对象的当前状态是连接、 执行或检索。  
+指示对象的状态是打开还是关闭的所有适用对象。 如果对象正在执行异步方法，则指示对象的当前状态是 "正在连接"、"正在执行" 还是 "正在检索"。  
   
 ## <a name="return-value"></a>返回值  
- 返回**长**值，该值可[ObjectStateEnum](../../../ado/reference/ado-api/objectstateenum.md)值。 默认值是**adStateClosed**。  
+ 返回一个可以为[ObjectStateEnum](../../../ado/reference/ado-api/objectstateenum.md)值的**Long**值。 默认值为**adStateClosed**。  
   
 ## <a name="remarks"></a>备注  
- 可以使用**状态**属性，以在任何时候确定给定对象的当前状态。  
+ 你可以随时使用**State**属性来确定给定对象的当前状态。  
   
- 对象的**状态**属性可以具有的值的组合。 例如，如果执行语句时，此属性将具有的合并的值**adStateOpen**并**adStateExecuting**。  
+ 对象的**State**属性可以包含值的组合。 例如，如果正在执行某个语句，则此属性将具有**adStateOpen**和**adStateExecuting**的组合值。  
   
  **状态**属性是只读的。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
   
 ||||  
 |-|-|-|  
 |[命令对象 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[记录对象 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|  
 |[记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[流对象 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)||  
   
-## <a name="see-also"></a>请参阅  
- [ConnectionString、 ConnectionTimeout 和 State 属性示例 (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
- [ConnectionString、 ConnectionTimeout 和 State 属性示例 （VC + +）](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
+## <a name="see-also"></a>另请参阅  
+ [ConnectionString、ConnectionTimeout 和 State 属性示例（VB）](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
+ [ConnectionString、ConnectionTimeout 和 State 属性示例（VC + +）](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   

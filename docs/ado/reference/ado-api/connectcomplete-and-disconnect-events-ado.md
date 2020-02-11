@@ -1,5 +1,5 @@
 ---
-title: ConnectComplete 和 Disconnect 事件 (ADO) |Microsoft Docs
+title: ConnectComplete 和断开连接事件（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -20,14 +20,14 @@ ms.assetid: 568f5252-d069-4d99-a01b-2ada87ad1304
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 448270ddf0e8cd7efb5ec39a93d4ff993360730e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919560"
 ---
 # <a name="connectcomplete-and-disconnect-events-ado"></a>ConnectComplete 和 Disconnect 事件 (ADO)
-**ConnectComplete**连接启动后，将调用事件。 **断开连接**连接结束后，将调用事件。  
+连接启动后，调用**ConnectComplete**事件。 连接结束后，将调用 "**断开**连接" 事件。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,20 +37,20 @@ ConnectComplete pError, adStatus, pConnection
 Disconnect adStatus, pConnection  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *pError*  
- [错误](../../../ado/reference/ado-api/error-object.md)对象。 它描述了如果发生的错误的值*adStatus*是**adStatusErrorsOccurred**; 不会设置。  
+ 一个[错误](../../../ado/reference/ado-api/error-object.md)对象。 它描述了*adStatus*的值为**adStatusErrorsOccurred**时所发生的错误;否则，不会设置。  
   
  *adStatus*  
- [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)值，它始终返回**adStatusOK**。  
+ 始终返回**adStatusOK**的[EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)值。  
   
- 当**ConnectComplete**是调用，此参数设置为**adStatusCancel**如果**WillConnect**事件已请求取消挂起的连接。  
+ 调用**ConnectComplete**时，如果**WillConnect**事件已请求取消挂起的连接，此参数将设置为**adStatusCancel** 。  
   
- 这两个事件返回之前，此参数设置为**adStatusUnwantedEvent**以防止后续的通知。 但是，关闭并重新打开[连接](../../../ado/reference/ado-api/connection-object-ado.md)导致这些事件再次发生。  
+ 在任一事件返回之前，将此参数设置为**adStatusUnwantedEvent**以防止后续通知。 但是，关闭并重新打开[连接](../../../ado/reference/ado-api/connection-object-ado.md)会导致这些事件再次出现。  
   
  *pConnection*  
- **连接**对象应用此事件。  
+ 应用此事件的**连接**对象。  
   
-## <a name="see-also"></a>请参阅  
- [ADO 事件模型示例 （VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+## <a name="see-also"></a>另请参阅  
+ [ADO 事件模型示例（VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO 事件处理程序摘要](../../../ado/guide/data/ado-event-handler-summary.md)

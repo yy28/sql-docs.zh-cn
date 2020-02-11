@@ -14,40 +14,40 @@ ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b0e6c5f2eb5ad792141e77122ff9e132d97f62ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926469"
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>使用 Java 适用的 Microsoft SDK
 
 > [!IMPORTANT]
-> Microsoft 不再支持的 Visual J + + 中使用在 2004 年 1 月。
+> Microsoft 在2004年1月支持 Visual j + +。
 
-Microsoft SDK for Java 是适用于 Microsoft Internet Explorer 环境的开发人员工具包。 提供工具、 信息和示例来帮助您开发 Java 程序和基于 JDK 1.1 和 Microsoft Win32 虚拟机 (Microsoft VM) 上的小程序。 Microsoft SDK for Java 不被绑定到 Microsoft Visual J + +。 若要下载此 SDK，请单击此处。  
+Microsoft SDK for Java 是适用于 Microsoft Internet Explorer 环境的开发人员工具包。 提供工具、信息和示例是为了帮助你根据 JDK 1.1 和 Microsoft Win32 虚拟机（Microsoft VM）来开发 Java 程序和 applet。 Microsoft SDK for Java 未绑定到 Microsoft Visual j + +。 若要下载此 SDK，请单击此处。  
   
- Jactivex.exe 实用程序从类型库生成类，但只能在命令行上调用。 此功能不与 Visual J + + 开发环境集成。 与不同的是由 Java 类型库向导生成的类，可以单步执行由 SDK 所创建的类包装。 这是用于调试你的代码如何使用 ADO 的包装类。  
+ Jactivex 实用工具将从类型库生成类，但只能在命令行上调用。 此功能未与 Visual j + + 开发环境集成。 与 Java 类型库向导生成的类不同，可以单步执行由 SDK 创建的类包装。 这适用于调试代码使用 ADO 包装类的方式。  
   
- 此机制读取 ADO 类型库并生成可以在应用程序中实例化的类。 在以下位置生成这些类： \\< windows 目录\>\Java\trustlib\msado15。  
+ 此机制读取 ADO 类型库，并生成可在应用程序中实例化的类。 它在以下位置生成这些类： \\<windows 目录 \Java\trustlib\msado15.\>  
   
- 在 Java 中使用 Microsoft SDK for Java 创建 ADO 应用程序是从根本上说完全相同，从源代码的角度来看使用 Java 类型库向导。 有关示例代码，请参阅[ADO Java 类包装器](../../../ado/guide/appendixes/ado-java-class-wrappers.md)。 唯一的真正差别是如何生成包装类首先，如以下步骤中所示。  
+ 使用 Microsoft SDK for Java 在 Java 中创建 ADO 应用程序与使用 Java 类型库向导在本质上完全相同。 有关示例代码，请参阅[ADO Java 类包装](../../../ado/guide/appendixes/ado-java-class-wrappers.md)。 唯一的区别在于首先如何生成包装类，如以下步骤中所示。  
   
-### <a name="to-create-an-ado-project-with-the-microsoft-sdk-for-java"></a>若要使用 Microsoft SDK for Java 创建一个 ADO 项目  
+### <a name="to-create-an-ado-project-with-the-microsoft-sdk-for-java"></a>使用 Microsoft SDK for Java 创建 ADO 项目  
   
-1.  在命令提示符处运行以下命令。 必须设置要包括 Microsoft SDK for Java 的 Bin 目录的路径，或从该位置运行该命令。 通常，Microsoft SDK for Java 安装在与 Visual Studio 相同的位置。 这是单个命令语句。  
+1.  在命令提示符处运行以下命令。 必须将路径设置为包括 Microsoft SDK for Java Bin 目录，或从该位置运行该命令。 通常，适用于 Java 的 Microsoft SDK 安装在与 Visual Studio 相同的位置。 这是一个命令语句。  
   
     ```java
     \<path to DevStudio>\<path to Java SDK>\bin\JactiveX.exe /javatlb "C:\program files\common files\system\ado\msado15.dll"  
     ```  
   
-2.  运行以下命令以编译生成的类。 /G: t 开关启用生成的调试符号，以便可以跟踪到。Java 符号。 用于发布版本中删除它。  
+2.  运行以下命令以编译生成的类。 /G： t 开关会启用调试符号的生成，以便可以跟踪到。Java 符号。 对于发布版本，请将其删除。  
   
     ```java
     jvc /g:t c:\<windows>\Java\trustlib\msado15\*.Java  
     ```  
   
-3.  若要使用这些文件，打开你的项目中 Visual J + +。 从**项目**菜单中，选择**添加到项目**。 选择**文件**，然后添加的所有。JAVA trustlib\msado15 目录到你的项目中生成文件。  
+3.  若要使用这些文件，请在 Visual j + + 中打开项目。 从 "**项目**" 菜单中，选择 "**添加到项目**"。 选择 "**文件**"，并添加所有。在项目的 trustlib\msado15 目录中生成的 JAVA 文件。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ADO Java 类包装器](../../../ado/guide/appendixes/ado-java-class-wrappers.md)   

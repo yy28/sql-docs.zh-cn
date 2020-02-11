@@ -1,5 +1,5 @@
 ---
-title: 添加数据源 (ODBC) |Microsoft Docs
+title: 添加数据源（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,34 +13,34 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c050efd2f309ccec76b80fd24b519e7d2389e4ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63126071"
 ---
 # <a name="add-a-data-source-odbc"></a>添加数据源 (ODBC)
-  可以通过使用 ODBC 管理器，以编程方式添加数据源 (通过使用[SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md))，或通过创建的文件。  
+  您可以使用 ODBC 管理器（通过使用[SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)）或创建文件来添加数据源。  
   
 ### <a name="to-add-a-data-source-by-using-odbc-administrator"></a>使用 ODBC 管理器添加数据源  
   
-1.  从**Control Panel**，访问**管理工具**，然后**数据源 (ODBC)** 。 或者，可以调用 odbcad32.exe。  
+1.  从 "**控制面板**" 中，访问 "**管理工具**"，然后访问 "**数据源（ODBC）**"。 或者，可以调用 odbcad32.exe。  
   
-2.  单击**用户 DSN**，**系统 DSN**，或**文件 DSN**选项卡，然后依次**添加**。  
+2.  单击 "**用户 dsn**"、"**系统 dsn**" 或 "**文件 dsn** " 选项卡，然后单击 "**添加**"。  
   
-3.  单击**SQL Server**，然后单击**完成**。  
+3.  单击 " **SQL Server**"，然后单击 "**完成**"。  
   
 4.  完成创建到 SQL Server 的新数据源向导中的步骤。  
   
 ### <a name="to-add-a-data-source-programmatically"></a>以编程方式添加数据源  
   
-1.  调用[SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)第二个参数设置为 ODBC_ADD_DSN 或 ODBC_ADD_SYS_DSN。  
+1.  调用[SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md) ，并将第二个参数设置为 ODBC_ADD_DSN 或 ODBC_ADD_SYS_DSN。  
   
 ### <a name="to-add-a-file-data-source"></a>添加文件数据源  
   
-1.  调用[SQLDriverConnect](../native-client-odbc-api/sqldriverconnect.md)的 savefile = file_name 参数中的连接字符串。 如果连接成功，则 ODBC 驱动程序将使用 SAVEFILE 参数指向的位置中的连接参数创建一个文件数据源。  
+1.  使用连接字符串中的 SAVEFILE = file_name 参数调用[SQLDriverConnect](../native-client-odbc-api/sqldriverconnect.md) 。 如果连接成功，则 ODBC 驱动程序将使用 SAVEFILE 参数指向的位置中的连接参数创建一个文件数据源。  
   
-## <a name="see-also"></a>请参阅  
- [配置 SQL Server ODBC 驱动程序操作说明主题](../../database-engine/dev-guide/configuring-the-sql-server-odbc-driver-how-to-topics.md)  
+## <a name="see-also"></a>另请参阅  
+ [配置 SQL Server ODBC 驱动程序操作指南主题](../../database-engine/dev-guide/configuring-the-sql-server-odbc-driver-how-to-topics.md)  
   
   

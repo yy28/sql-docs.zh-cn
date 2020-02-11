@@ -1,5 +1,5 @@
 ---
-title: 处理 SSMA 项目 (DB2ToSQL) |Microsoft Docs
+title: 使用 SSMA 项目（DB2ToSQL） |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,115 +10,115 @@ ms.assetid: 07abef8a-28e8-4a66-927c-c9a5b8c938ef
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d2c585764e5bb7fffa55624054aecc7a4c589bbe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68086182"
 ---
-# <a name="working-with-ssma-projects-db2tosql"></a>处理 SSMA 项目 (DB2ToSQL)
-将 DB2 数据库迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，首先创建 SSMA 项目。 项目是一个文件包含以下信息：  
+# <a name="working-with-ssma-projects-db2tosql"></a>使用 SSMA 项目（DB2ToSQL）
+若要将 DB2 数据库[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]迁移到，请先创建一个 SSMA 项目。 项目是包含以下信息的文件：  
   
--   有关你想要迁移到 DB2 数据库的元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+-   有关要迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 DB2 数据库的元数据。  
   
--   有关的目标实例的元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将接收迁移的对象和数据。  
+-   将接收已迁移对象和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据的的目标实例的元数据。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接信息。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]连接信息。  
   
 -   项目设置。  
   
-当您打开一个项目时，它从 DB2 断开连接和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 允许您在脱机工作。 了解如何重新连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[连接到 SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)。  
+当你打开项目时，它会与 DB2 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]断开连接。 这使你可以脱机工作。 有关重新连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的信息，请参阅[连接到 SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)。  
   
 ## <a name="reviewing-default-project-settings"></a>查看默认项目设置  
-SSMA 进行转换和加载数据库对象、 迁移数据，和与 DB2 同步 SSMA 包含多个设置和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 默认设置是适用于多个用户。 但是，创建一个新的 SSMA 项目之前，应查看的设置。 如果愿意，可以更改将用于所有新项目的默认设置。  
+SSMA 包含多个用于转换和加载数据库对象、迁移数据以及将 SSMA 与 DB2 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]同步的设置。 默认设置适用于许多用户。 但是，在创建新的 SSMA 项目之前，应该检查设置。 如果需要，你可以更改将用于所有新项目的默认设置。  
   
-**若要查看默认项目设置**  
+**查看默认项目设置**  
   
-1.  上**工具**菜单上，单击**默认项目设置**。  
+1.  在 "**工具**" 菜单上，单击 "**默认项目设置**"。  
   
-2.  选择项目类型中的**迁移目标版本**下拉列表中的哪些是需要设置要查看或更改，然后单击**常规**选项卡。  
+2.  在 "**迁移目标版本**" 下拉顺序中选择需要查看或更改其设置的项目类型，然后单击 "**常规**" 选项卡。  
   
-3.  在左窗格中，单击**转换**。  
+3.  在左窗格中，单击 "**转换**"。  
   
-4.  在右窗格中，查看并根据需要更改的设置。 有关这些设置的详细信息，请参阅[项目设置&#40;转换&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-conversion-db2tosql.md)。  
+4.  在右侧窗格中，根据需要查看和更改设置。 有关这些设置的详细信息，请参阅[DB2ToSQL&#41;&#40;转换&#41; &#40;项目设置](../../ssma/db2/project-settings-conversion-db2tosql.md)。  
   
-5.  重复步骤 1-3 的迁移、 同步、 加载系统对象、 GUI，和类型映射页。  
+5.  对于迁移、同步、加载系统对象、GUI 和类型映射页，重复步骤1-3。  
   
-    -   有关迁移设置的信息，请参阅[项目设置&#40;迁移&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-migration-db2tosql.md)。  
+    -   有关迁移设置的信息，请参阅[项目设置 &#40;迁移&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-migration-db2tosql.md)。  
   
-    -   有关系统对象设置的信息，请参阅[项目设置&#40;加载系统对象&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-loading-system-objects-db2tosql.md)。  
+    -   有关系统对象设置的信息，请参阅[&#40;&#41; &#40;DB2ToSQL&#41;加载系统对象的项目设置](../../ssma/db2/project-settings-loading-system-objects-db2tosql.md)。  
   
-    -   有关设置同步到信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[项目设置&#40;同步&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md)。  
+    -   有关同步的设置的信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[项目设置&#40;同步&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md)。  
   
-    -   有关 GUI 设置的信息，请参阅[项目设置&#40;GUI&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-gui-db2tosql.md)。  
+    -   有关 GUI 设置的信息，请参阅[项目设置 &#40;GUI&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-gui-db2tosql.md)。  
   
-    -   有关数据类型映射设置的信息，请参阅[项目设置&#40;类型映射&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md)。  
+    -   有关数据类型映射设置的信息，请参阅[项目设置 &#40;类型映射&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md)。  
   
 ## <a name="creating-new-projects"></a>创建新项目  
-若要将数据从 DB2 数据库到迁移[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，首先必须创建一个项目。  
+若要将数据从 DB2 数据库[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]迁移到，你必须先创建一个项目。  
   
-**若要创建项目**  
+**创建项目**  
   
-1.  上**文件**菜单上，单击**新项目**。  
+1.  在 "**文件**" 菜单上，单击 "**新建项目**"。  
   
-    此时将显示“新建项目”  对话框。  
+    将显示“新建项目”对话框  。  
   
-2.  在中**名称**框中，输入你的项目的名称。  
+2.  在 "**名称**" 框中，输入项目的名称。  
   
-3.  在中**位置**框中，输入或选择的项目文件夹，然后单击**确定**。  
+3.  在 "**位置**" 框中，输入或选择项目的文件夹，然后单击 **"确定"**。  
   
-4.  在中**迁移到**下拉列表中，选择的目标版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用于迁移。 可用选项包括：  
+4.  在 "**迁移到**" 下拉菜单中，选择用于迁移的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]目标版本。 可用选项包括：  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
     -   Azure SQL DB  
   
 ## <a name="customizing-project-settings"></a>自定义项目设置  
-除了定义应用于所有新的 SSMA 项目的默认项目设置，可以自定义每个项目的设置。 有关详细信息，请参阅[设置项目选项&#40;OracleToSQL&#41; ](../../ssma/oracle/setting-project-options-oracletosql.md)和相关的部分。  
+除了定义适用于所有新 SSMA 项目的默认项目设置，你还可以自定义每个项目的设置。 有关详细信息，请参阅[设置项目选项 &#40;OracleToSQL&#41;](../../ssma/oracle/setting-project-options-oracletosql.md)和相关部分。  
   
-自定义源和目标数据库之间的数据类型映射时，可以定义项目、 数据库或对象级别上的映射。 有关详细信息，请参阅[映射 DB2 和 SQL Server 数据类型&#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)。  
+在源数据库和目标数据库之间自定义数据类型映射时，可以在项目、数据库或对象级别定义映射。 有关详细信息，请参阅[映射 DB2 和 SQL Server 数据类型 &#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)。  
   
-## <a name="saving-projects"></a>正在保存项目  
-当保存项目时，SSMA 将保留项目设置，和 （可选） 数据库元数据，对项目文件。  
+## <a name="saving-projects"></a>保存项目  
+保存项目时，SSMA 会将项目设置和数据库元数据保留到项目文件中。  
   
-**若要保存项目**  
+**保存项目的步骤**  
   
--   上**文件**菜单上，单击**保存项目**。  
+-   在 "**文件**" 菜单上，单击 "**保存项目**"。  
   
-    如果项目中的架构已更改，或者尚未转换，SSMA 将提示您加载和保存元数据。 加载和保存元数据将允许您脱机工作。 它还允许您将完整的项目文件发送给其他人，例如技术支持人员。 如果系统提示保存元数据，请执行以下操作：  
+    如果项目中的架构已更改或尚未转换，SSMA 会提示你加载并保存元数据。 加载和保存元数据将允许脱机工作。 它还允许你向其他人（如技术支持人员）发送完整的项目文件。 如果系统提示你保存元数据，请执行以下操作：  
   
-    1.  有关显示的状态为每个架构**元数据缺少**，选择数据库名称旁边的复选框。  
+    1.  对于显示 "**缺少元数据**" 状态的每个架构，请选中数据库名称旁边的复选框。  
   
-        正在保存元数据可能需要几分钟的时间。 如果您不希望保存元数据，不选中任何复选框。  
+        保存元数据可能需要几分钟时间。 如果你不想保存元数据，请不要选中任何复选框。  
   
-    2.  单击“保存”  按钮。  
+    2.  单击“保存”**** 按钮。  
   
-        SSMA 会分析 DB2 架构并将元数据保存到项目文件。  
+        SSMA 将分析 DB2 架构，并将元数据保存到项目文件。  
   
 ## <a name="opening-projects"></a>打开项目  
-从 DB2 和断开时打开的项目， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 允许您在脱机工作。 若要更新的元数据，数据库将对象加载到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 若要将数据迁移，必须重新连接到 DB2 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+打开某个项目时，该项目将从 DB2 和中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]断开连接。 这使你可以脱机工作。 若要更新元数据，请将[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库对象加载到中。 若要迁移数据，必须重新连接到 DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和。  
   
-**若要打开的项目**  
+**打开项目的步骤**  
   
 1.  可使用下列过程之一：  
   
-    -   上**文件**菜单，依次指向**最近使用的项目**，然后单击你想要打开的项目。  
+    -   在 "**文件**" 菜单上，指向 "**最近使用的项目**"，然后单击要打开的项目。  
   
-    -   上**文件**菜单中，选择**打开项目**，找到.o2ssproj 项目文件中，选择的文件，然后单击**打开**。  
+    -   在 "**文件**" 菜单上，选择 "**打开项目**"，找到 "o2ssproj" 项目文件，选择该文件，然后单击 "**打开**"。  
   
-2.  若要重新连接到 DB2，在**文件**菜单上，单击**重新连接到 DB2**。  
+2.  若要重新连接到 DB2，请在 "**文件**" 菜单上单击 "**重新连接到 db2**"。  
   
-3.  若要重新连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，然后在**文件**菜单中，单击**重新连接到 SQL Server**。  
+3.  若要重新[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]连接到，请在 "**文件**" 菜单上单击 "**重新连接" SQL Server**。  
   
 ## <a name="next-step"></a>下一步  
-迁移过程中的下一步是[连接到 DB2 数据库](https://msdn.microsoft.com/5eb5801d-f0c3-4127-97c0-0b1ef49f4844)。  
+迁移过程的下一步是[连接到 DB2 数据库](https://msdn.microsoft.com/5eb5801d-f0c3-4127-97c0-0b1ef49f4844)。  
   
-## <a name="see-also"></a>请参阅  
-[迁移的 DB2 数据库移到 SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
-[连接到 DB2 数据库&#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
+## <a name="see-also"></a>另请参阅  
+[将 DB2 数据库迁移到 SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
+[连接到 DB2 数据库 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
 [连接到 SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)  
   

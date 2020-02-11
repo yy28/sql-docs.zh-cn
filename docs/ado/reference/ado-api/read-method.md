@@ -17,14 +17,14 @@ ms.assetid: 838502de-80f1-4eeb-8838-dd3d9403e567
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 992631b8fb3864b6d7404f86d2f65de222f0b1c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917409"
 ---
 # <a name="read-method"></a>Read 方法
-从二进制文件中读取指定的字节数[Stream](../../../ado/reference/ado-api/stream-object-ado.md)对象。  
+从二进制[流](../../../ado/reference/ado-api/stream-object-ado.md)对象中读取指定数目的字节。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,21 +33,21 @@ ms.locfileid: "67917409"
 Variant = Stream.Read ( NumBytes)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
- *变量*  
- 可选。 一个**长**值，该值指定要从文件中读取的字节数或[StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md)值**adReadAll**，这是默认设置。  
+#### <a name="parameters"></a>parameters  
+ *NumBytes*  
+ 可选。 一个**长整型**值，指定要从文件中读取的字节数，或[StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md)值**adReadAll**（这是默认值）。  
   
 ## <a name="return-value"></a>返回值  
- **读**方法读取指定的数目的字节数或从整个流**Stream**对象并返回生成的数据作为**变体**。  
+ **Read**方法从**流**对象读取指定数目的字节或整个流，并将生成的数据作为**变量**返回。  
   
 ## <a name="remarks"></a>备注  
- 如果*变量*个以上的字节数会留在**Stream**，返回剩余的字节。 读取的数据不填充以匹配指定的长度*变量*。 如果不有任何留下供读取的字节，则返回值为 null 的变体。 **读取**不能用于向后读取。  
+ 如果*NumBytes*大于**流**中剩余字节数，则仅返回剩余字节数。 不填充数据读取以匹配*NumBytes*指定的长度。 如果没有剩余字节可供读取，则返回具有 null 值的变量。 **读取**不能用于向后读取。  
   
 > [!NOTE]
->  *变量*始终测量字节。 文本**Stream**对象 ([类型](../../../ado/reference/ado-api/type-property-ado-stream.md)是**adTypeText**)，使用[ReadText](../../../ado/reference/ado-api/readtext-method.md)。  
+>  *NumBytes*始终度量字节。 对于文本**流**对象（[类型](../../../ado/reference/ado-api/type-property-ado-stream.md)为**AdTypeText**），请使用[ReadText](../../../ado/reference/ado-api/readtext-method.md)。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [流对象 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ReadText 方法](../../../ado/reference/ado-api/readtext-method.md)
