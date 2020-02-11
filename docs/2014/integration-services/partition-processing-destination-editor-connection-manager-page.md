@@ -1,5 +1,5 @@
 ---
-title: 分区处理目标编辑器 （连接管理器页） |Microsoft Docs
+title: 分区处理目标编辑器（"连接管理器" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 44e116ece7460787f272f0b8cc6e99a4300fc728
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056704"
 ---
 # <a name="partition-processing-destination-editor-connection-manager-page"></a>分区处理目标编辑器（“连接管理器”页）
@@ -31,26 +31,26 @@ ms.locfileid: "66056704"
   
 ## <a name="options"></a>选项  
  **“ODBC 目标编辑器”**  
- 从列表中选择一个现有连接管理器，或通过单击“新建”  创建一个新连接。  
+ 从列表中选择一个现有连接管理器，或通过单击“新建”**** 创建一个新连接。  
   
  **新建**  
- 通过使用“添加 Analysis Services 连接管理器”  对话框创建一个新连接。  
+ 通过使用“添加 Analysis Services 连接管理器”**** 对话框创建一个新连接。  
   
  **可用分区列表**  
  选择要处理的分区。  
   
  **处理方法**  
- 选择处理方法。 此选项的默认值为 **“完全”** 。  
+ 选择处理方法。 此选项的默认值为 **“完全”**。  
   
-|ReplTest1|Description|  
+|值|说明|  
 |-----------|-----------------|  
 |添加(增量式)|对分区执行增量处理。|  
 |完全|对分区执行完全处理。|  
 |仅限数据|对分区执行更新处理。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [分区处理目标编辑器（“映射”页）](../../2014/integration-services/partition-processing-destination-editor-mappings-page.md)   
- [分区处理目标编辑器（“高级”页）](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
+ [分区处理目标编辑器 &#40;映射 "页面&#41;](../../2014/integration-services/partition-processing-destination-editor-mappings-page.md)   
+ [分区处理目标编辑器 &#40;高级页面&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
   
   

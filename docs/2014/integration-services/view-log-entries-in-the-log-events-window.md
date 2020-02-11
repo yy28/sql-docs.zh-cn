@@ -1,5 +1,5 @@
 ---
-title: 在日志事件窗口中查看日志条目 |Microsoft Docs
+title: 在 "日志事件" 窗口中查看日志条目 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ed348a4525024052946ac30bfe6ec780ca86a4b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054631"
 ---
 # <a name="view-log-entries-in-the-log-events-window"></a>在“日志事件”窗口中查看日志项
@@ -50,7 +50,7 @@ ms.locfileid: "66054631"
   
 9. 打开文本编辑器，粘贴，然后将日志项保存到文本文件中。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services (SSIS) 日志记录](performance/integration-services-ssis-logging.md)  
   
   

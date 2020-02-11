@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 302772c87a1e1d4e5cf3ab1e7c5a304e6100b785
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099159"
 ---
 # <a name="rsinternalerror---reporting-services-error"></a>rsInternalError - Reporting Services 错误
@@ -31,7 +31,7 @@ ms.locfileid: "66099159"
 |组件|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
 |消息正文|报表服务器上出现内部错误。 有关详细信息，请参阅错误日志。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  这是一种一般性错误消息，后面通常跟着可提供详细信息的更具说明性的错误。  
   
  内部错误不常见。 如果出现此错误，可以查看报表服务器跟踪日志以了解详细信息。 此外，如果是以本地管理员的身份在出现错误的计算机上运行，则可以查看调用堆栈以了解详细信息。  
@@ -45,7 +45,7 @@ ms.locfileid: "66099159"
   
 ## <a name="internal-only"></a>仅内部  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [启动和停止报表服务器服务](../report-server/start-and-stop-the-report-server-service.md)  
   
   

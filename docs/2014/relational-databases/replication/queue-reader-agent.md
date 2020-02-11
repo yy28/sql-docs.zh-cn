@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7f07c9be82be63d01d563499a80e049e572a4150
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63262062"
 ---
 # <a name="queue-reader-agent"></a>队列读取器代理
@@ -27,10 +27,10 @@ ms.locfileid: "63262062"
 ## <a name="options"></a>选项  
  从 **“视图”** 菜单中选择要查看的队列读取器代理会话，然后在标记为 **“队列读取器代理的会话”** 的网格中选择特定的会话。 有关此会话的详细信息显示在标记为 **“所选会话中的操作”** 的网格中。 如果所选会话由于出错而结束，则还将显示一个标记为 **“所选会话的错误详细信息或消息”** 的文本区域。  
   
- **“视图”**  
+ **视图**  
  选择要查看的队列读取器代理会话。 队列读取器代理通常连续运行，因此可能只有一个可供查看的会话。  
   
- **状态**  
+ **Status**  
  队列读取器代理的状态。 下面列出了可能的状态值：  
   
 -   错误  
@@ -62,7 +62,7 @@ ms.locfileid: "63262062"
  **“所选会话的错误详细信息或消息”**  
  只有当所选会话在 **“状态”** 列中显示 **“错误”** 值时，才会显示此项。 此文本区域显示详细错误信息以及出错时尝试执行的命令。 另外，还包括指向与该错误相关的其他内容的链接。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [启动复制监视器](monitor/start-the-replication-monitor.md)   
  [使用复制监视器查看信息和执行任务](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [监视复制](monitoring-replication.md)   

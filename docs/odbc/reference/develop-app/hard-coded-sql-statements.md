@@ -15,22 +15,22 @@ ms.assetid: e355f5f1-4f1a-4933-8c74-ee73e90d2d19
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b0205208a28238f4fbccb5ae2fd96639b664bd6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139145"
 ---
 # <a name="hard-coded-sql-statements"></a>硬编码 SQL 语句
-通常执行固定的任务的应用程序包含硬编码的 SQL 语句。 例如，订单输入系统可能会使用对列表打开销售订单的以下调用：  
+执行固定任务的应用程序通常包含硬编码的 SQL 语句。 例如，订单输入系统可能使用以下调用来列出开放式销售订单：  
   
 ```  
 SQLExecDirect(hstmt, "SELECT OrderID FROM Orders WHERE Status = 'OPEN'", SQL_NTS);  
 ```  
   
- 有几个优点硬编码的 SQL 语句：可以测试时编写的应用程序;它们是在运行时; 构造的语句比易于实现和它们简化了应用程序。  
+ 硬编码的 SQL 语句有几个优点：可以在编写应用程序时对其进行测试;它们比在运行时构造的语句更简单：并简化了应用程序。  
   
- 使用语句参数和准备语句提供更好的方式来使用硬编码的 SQL 语句。 例如，假设在部件表包含 PartID、 描述和价格列。 此表中插入新行的一种方法是构造并执行**插入**语句：  
+ 使用语句参数和准备语句可以更好地使用硬编码的 SQL 语句。 例如，假设 Parts 表包含 PartID、Description 和 Price 列。 向此表中插入新行的一种方法是构造并执行**insert**语句：  
   
 ```  
 #define DESC_LEN 51  
@@ -51,7 +51,7 @@ sprintf_s(Statement, 100, "INSERT INTO Parts (PartID, Description,  Price) "
 SQLExecDirect(hstmt, Statement, SQL_NTS);  
 ```  
   
- 更好的方法是使用硬编码的参数化语句。 这有两个好处，通过使用硬编码数据值的语句。 首先，很容易构造参数化的语句，因为可以在其本机类型，例如整数和浮点数，而不将它们转换为字符串中发送的数据值。 其次，此类语句可以使用多个一次只需通过更改参数值并重新执行它;没有无需重新生成它。  
+ 更好的方法是使用硬编码的参数化语句。 与具有硬编码数据值的语句相比，这有两个优点。 首先，可以更轻松地构造参数化语句，因为数据值可以用其本机类型（如整数和浮点数）发送，而不是将其转换为字符串。 其次，只需通过更改参数值并 reexecuting 它，就可以多次使用此类语句;不需要重新生成它。  
   
 ```  
 #define DESC_LEN 51  
@@ -78,7 +78,7 @@ GetNewValues(&PartID, Desc, &Price);
 SQLExecDirect(hstmt, Statement, SQL_NTS);  
 ```  
   
- 假设要多次执行此语句，这样可以随时准备为甚至更高的效率：  
+ 假设多次执行此语句，则可以为提高效率做好准备：  
   
 ```  
 #define DESC_LEN 51  
@@ -106,7 +106,7 @@ while (GetNewValues(&PartID, Desc, &Price))
    SQLExecute(hstmt);  
 ```  
   
- 可能是使用该语句的最有效方法是构造包含语句的过程，如下面的代码示例中所示。 该过程是在开发时构建和数据源上存储，因为它不需要在运行时准备。 此方法的一个缺点是用于创建过程的语法是特定于 DBMS 的和必须为每个应用程序是在其运行的 DBMS 单独构造过程。  
+ 最有效的方法是使用语句来构造包含语句的过程，如下面的代码示例中所示。 由于过程是在开发时构造的，并存储在数据源上，因此无需在运行时进行准备。 此方法的缺点是用于创建过程的语法是 DBMS 特定的，必须为运行应用程序的每个 DBMS 单独构建过程。  
   
 ```  
 #define DESC_LEN 51  
@@ -129,4 +129,4 @@ while (GetNewValues(&PartID, Desc, &Price))
    SQLExecDirect(hstmt, "{call InsertPart(?, ?, ?)}", SQL_NTS);  
 ```  
   
- 有关参数、 预定义的语句和过程的详细信息，请参阅[执行语句](../../../odbc/reference/develop-app/executing-a-statement.md)。
+ 有关参数、预定义语句和过程的详细信息，请参阅[执行语句](../../../odbc/reference/develop-app/executing-a-statement.md)。

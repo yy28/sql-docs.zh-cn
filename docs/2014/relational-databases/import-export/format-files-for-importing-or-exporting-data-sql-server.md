@@ -15,16 +15,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8089309c8abe94d392b073fc916b2b0b8fa9292f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011944"
 ---
 # <a name="format-files-for-importing-or-exporting-data-sql-server"></a>用来导入或导出数据的格式化文件 (SQL Server)
   当向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中大容量导入数据或从该表中大容量导出数据时，可以使用格式化文件  存储大容量导入数据或大容量导出数据所需的所有格式信息。 这包括数据文件中相对于该表的各字段的格式信息。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持两种格式化文件类型：XML 格式和非 XML 格式化文件。 XML 格式化文件和非 XML 格式化文件在一个数据文件中包含每个字段的说明，并且 XML 格式化文件还包含相应表列的说明。 通常，XML 与非 XML 格式化文件可以互换。 但是，建议您为新的格式化文件使用 XML 语法，因为与非 XML 格式化文件相比，格式化文件具有多项优点。 有关详细信息，请参阅 [XML 格式化文件 (SQL Server)](xml-format-files-sql-server.md)。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持两种格式化文件：XML 格式化文件和非 XML 格式化文件。 XML 格式化文件和非 XML 格式化文件在一个数据文件中包含每个字段的说明，并且 XML 格式化文件还包含相应表列的说明。 通常，XML 与非 XML 格式化文件可以互换。 但是，建议您为新的格式化文件使用 XML 语法，因为与非 XML 格式化文件相比，格式化文件具有多项优点。 有关详细信息，请参阅 [XML 格式化文件 (SQL Server)](xml-format-files-sql-server.md)。  
   
  
   
@@ -35,7 +35,7 @@ ms.locfileid: "66011944"
 -   使您可以大容量导入数据，而不必添加或删除不需要的数据或者重新排列数据文件中现有数据的顺序。 当数据文件中的字段和表中的列存在不匹配的情况时，格式化文件尤其有用。  
   
 ##  <a name="ExamplesOfFFs"></a> 格式化文件的示例  
- 下面的示例说明了非 XML 格式化文件和 XML 格式化文件的布局。 这些格式化文件对应于 `HumanResources.myTeam` 示例数据库中的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 表。 该表包含四列：`EmployeeID`、`Name`、`Title` 和 `ModifiedDate`。  
+ 下面的示例说明了非 XML 格式化文件和 XML 格式化文件的布局。 这些格式化文件对应于 `HumanResources.myTeam` 示例数据库中的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 表。 该表包含四列： `EmployeeID`、 `Name`、 `Title`和 `ModifiedDate`。  
   
 > [!NOTE]  
 >  有关该表以及如何创建该表的信息，请参阅 [HumanResources.myTeam 示例表 (SQL Server)](humanresources-myteam-sample-table-sql-server.md)。  
@@ -53,7 +53,7 @@ The contents of this format file are as follows: 9.0
 4       SQLNCHAR      2       100     ""   4     Background               SQL_Latin1_General_CP1_CI_AS  
 ```  
   
- 有关详细信息，请参阅 [非 XML 格式化文件 (SQL Server)](non-xml-format-files-sql-server.md)。  
+ 有关详细信息，请参阅 [非 XML 格式化文件 (SQL Server)](non-xml-format-files-sql-server.md)早期版本支持的原始格式。  
   
  
   
@@ -128,9 +128,9 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
   
 
   
-## <a name="see-also"></a>请参阅  
- [非 XML 格式化文件 (SQL Server)](non-xml-format-files-sql-server.md)   
- [XML 格式化文件 (SQL Server)](xml-format-files-sql-server.md)   
+## <a name="see-also"></a>另请参阅  
+ [非 XML 格式化文件 &#40;SQL Server&#41;](non-xml-format-files-sql-server.md)   
+ [XML 格式化文件 &#40;SQL Server&#41;](xml-format-files-sql-server.md)   
  [用于批量导入或导出的数据格式 (SQL Server)](data-formats-for-bulk-import-or-bulk-export-sql-server.md)  
   
   
