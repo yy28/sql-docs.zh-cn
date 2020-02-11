@@ -14,26 +14,26 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 485c748aad8b07a5e8b92a02c03d51a82e5f362a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62990706"
 ---
 # <a name="extended-events"></a>扩展事件
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 扩展事件具有高度可伸缩且高度可配置的体系结构，使用户能够按需收集解决性能问题或确定性能问题所需的信息。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]扩展事件具有高度可缩放且高度可配置的体系结构，使用户能够收集故障排除所需的信息，或确定性能问题。  
   
  可以在 Web 上的 [SQL Server 扩展事件](https://blogs.msdn.com/b/extended_events/)中找到有关扩展事件的详细信息。  
   
 ## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 扩展事件的优点  
- 扩展事件是使用非常少的性能资源的轻型性能监视系统。 扩展事件提供两个图形用户界面（“新建会话向导”和“新建会话”），以便创建、修改、显示和分析你的会话数据。  
+ 扩展事件是使用非常少的性能资源的轻型性能监视系统。 扩展事件提供两个图形用户界面（"**新建会话向导**" 和 "**新建会话**"）来创建、修改、显示和分析您的会话数据。  
   
 ## <a name="extended-events-concepts"></a>扩展事件概念  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 扩展事件 (Extended Events) 是在现有概念（例如事件或事件使用者）的基础上建立的，它使用了 Windows 事件跟踪的概念并引入了新概念。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]扩展事件（扩展事件）在现有概念（例如事件或事件使用者）的基础上，使用 Windows 事件跟踪的概念，并引入了新概念。  
   
  下表描述了扩展事件中的概念。  
   
-|主题|Description|  
+|主题|说明|  
 |-----------|-----------------|  
 |[SQL Server 扩展事件包](sql-server-extended-events-packages.md)|介绍了扩展事件包，扩展事件会话运行期间这些包中的对象将用于获取和处理数据。|  
 |[SQL Server 扩展事件目标](../../database-engine/sql-server-extended-events-targets.md)|介绍了在事件会话期间可接收数据的事件使用者。|  
@@ -97,12 +97,12 @@ ms.locfileid: "62990706"
 |介绍如何识别影响数据库性能的锁来源。|[查找具有最多锁定的对象](find-the-objects-that-have-the-most-locks-taken-on-them.md)|  
 |介绍如何将扩展事件和 Windows 事件跟踪配合使用来监视系统活动。|[使用扩展事件监视系统活动](monitor-system-activity-using-extended-events.md)|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据层应用程序](../data-tier-applications/data-tier-applications.md)   
- [DAC 对 SQL Server 对象和版本的支持](../data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)   
+ [对 SQL Server 对象和版本的 DAC 支持](../data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)   
  [部署数据层应用程序](../data-tier-applications/deploy-a-data-tier-application.md)   
  [监视数据层应用程序](../data-tier-applications/monitor-data-tier-applications.md)   
  [扩展事件动态管理视图](../views/views.md)   
- [扩展事件目录视图&#40;TRANSACT-SQL&#41;](~/relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql  
+ [扩展事件目录视图 &#40;Transact-sql&#41;]（~/relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql  
   
   

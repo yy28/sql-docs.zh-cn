@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3657e45d18ac84ad737a016150692730f736b55f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917699"
 ---
 # <a name="database-mail-messaging-objects"></a>数据库邮件消息处理对象
@@ -32,7 +32,7 @@ ms.locfileid: "62917699"
   
  这些对象是数据库邮件在邮件主机数据库内的接口。 还会安装其他对象以执行上面列出的对象所提供的功能， 但是这些对象仅供内部使用。  
   
-|“属性”|类型|Description|  
+|名称|类型|说明|  
 |----------|----------|-----------------|  
 |[sysmail_allitems (Transact-SQL)](/sql/relational-databases/system-catalog-views/sysmail-allitems-transact-sql)|`View`|列出已提交到数据库邮件的所有邮件。|  
 |[sysmail_event_log (Transact-SQL)](/sql/relational-databases/system-catalog-views/sysmail-event-log-transact-sql)|`View`|列出有关 [Database Mail External Program](database-mail-external-program.md)行为的邮件。|  
@@ -49,7 +49,7 @@ ms.locfileid: "62917699"
   
 
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库邮件](database-mail.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   

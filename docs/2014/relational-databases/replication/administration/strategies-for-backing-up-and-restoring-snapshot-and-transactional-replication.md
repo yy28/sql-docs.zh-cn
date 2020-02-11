@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5011daf52b7eb5a14fb97ff3d39691caf4a563c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68210770"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>快照复制和事务复制的备份和还原策略
@@ -78,7 +78,7 @@ ms.locfileid: "68210770"
   
  复制支持将复制的数据库还原到从中创建备份的同一服务器和数据库。 如果将复制数据库的备份还原到其他服务器或数据库，则无法保留复制设置。 在这种情况下，您必须在还原备份后重新创建所有发布和订阅。  
   
-### <a name="publisher"></a>发布服务器  
+### <a name="publisher"></a>发布者  
  下面介绍了下列类型复制的还原步骤：  
   
 -   快照复制  
@@ -117,7 +117,7 @@ ms.locfileid: "68210770"
   
          有关如何运行分发代理的详细信息，请参阅[启动和停止复制代理 &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) 和[复制代理可执行文件概念](../concepts/replication-agent-executables-concepts.md)。  
   
-         有关如何验证命令的详细信息，请参阅[查看复制的命令和分发数据库中的其他信息&#40;复制 TRANSACT-SQL 编程&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md)并[查看信息和执行其任务使用复制监视器](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
+         有关如何验证命令的详细信息，请参阅[在分发数据库中查看复制的命令和其他信息 &#40;复制 Transact-sql 编程&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md)和[使用复制监视器查看信息和执行任务](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
     2.  从发布服务器、分发服务器和订阅服务器中删除复制配置，然后重新创建配置。 重新创建订阅时，指定订阅服务器已包含数据。 还原完成。  
   
@@ -134,7 +134,7 @@ ms.locfileid: "68210770"
   
          有关如何运行分发代理的详细信息，请参阅[启动和停止复制代理 &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) 和[复制代理可执行文件概念](../concepts/replication-agent-executables-concepts.md)。  
   
-         有关如何验证命令的详细信息，请参阅[查看复制的命令和分发数据库中的其他信息&#40;复制 TRANSACT-SQL 编程&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md)并[查看信息和执行其任务使用复制监视器](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
+         有关如何验证命令的详细信息，请参阅[在分发数据库中查看复制的命令和其他信息 &#40;复制 Transact-sql 编程&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md)和[使用复制监视器查看信息和执行任务](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
     2.  使用 [tablediff 实用工具](../../../tools/tablediff-utility.md) 或其他工具手动将发布服务器和订阅服务器同步。 这使您能够从订阅数据库恢复发布数据库备份中未包含的数据。 转到步骤 c。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "68210770"
   
      有关如何运行分发代理的详细信息，请参阅[启动和停止复制代理 &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) 和[复制代理可执行文件概念](../concepts/replication-agent-executables-concepts.md)。  
   
-     有关如何验证命令的详细信息，请参阅[查看复制的命令和分发数据库中的其他信息&#40;复制 TRANSACT-SQL 编程&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md)并[查看信息和执行其任务使用复制监视器](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
+     有关如何验证命令的详细信息，请参阅[在分发数据库中查看复制的命令和其他信息 &#40;复制 Transact-sql 编程&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md)和[使用复制监视器查看信息和执行任务](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 3.  如果使用的是排队更新订阅，则连接到每台订阅服务器，并从订阅数据库中的 [MSreplication_queue &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/msreplication-queue-transact-sql) 表中删除所有行。 转到步骤 4。  
   
@@ -205,19 +205,19 @@ ms.locfileid: "68210770"
   
     1.  在数据库 **B** 上重新创建发布。转到步骤 b。  
   
-    2.  在数据库 **B** 上重新创建对数据库 **A**上的发布的订阅，同时指定该订阅应使用备份进行初始化（ **sp_addsubscription** 的 **@sync_type** 参数的值为 [initialize with backup](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)）。 转到步骤 c。  
+    2.  在数据库**B**上重新创建对数据库**A**上的发布的订阅，同时指定该订阅应使用备份进行初始化（ [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)的**@sync_type**参数的值为**initialize with backup** ）。 转到步骤 c。  
   
-    3.  在数据库 **A** 上重新创建对数据库 **B**上的发布的订阅，同时指定订阅服务器已包含数据（ **sp_addsubscription** 的 **@sync_type** 参数的值为 [initialize with backup](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)）。 转到步骤 8。  
+    3.  在数据库**a**上重新创建对数据库**B**上的发布的订阅，同时指定订阅服务器已包含数据（**仅限** **@sync_type** [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)的参数的复制支持的值）。 转到步骤 8。  
   
 8.  运行分发代理以同步数据库 **A** 和 **B** 上的订阅。如果发布的表中有标识列，则转到步骤 9。 否则，转到步骤 10。  
   
 9. 还原后，在数据库 **A** 中为每个表分配的标识范围也将在数据库 **B** 中使用。确保还原的数据库 **B** 已收到发生故障的数据库 **B** 中传播到数据库 **A** 和数据库 **C** 的所有更改；然后重设每个表的标识范围种子。  
   
-    1.  在数据库 [B](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) 上还原数据库 **B** ，并检索输出参数 **@request_id** 。 转到步骤 b。  
+    1.  在数据库**B**上执行[sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql)并检索 output 参数**@request_id**。 转到步骤 b。  
   
     2.  默认情况下，分发代理设置为连续运行；因此，令牌应该自动发送到所有节点。 如果分发代理未以连续模式运行，请运行该代理。 有关详细信息，请参阅[复制代理可执行文件概念](../concepts/replication-agent-executables-concepts.md)或[启动和停止复制代理 (SQL Server Management Studio)](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)。 转到步骤 c。  
   
-    3.  在数据库 [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql)，执行时为其提供在步骤 b 中检索到的 **@request_id** 值。 请等到所有节点都指示它们已接收到对等请求。 转到步骤 d。  
+    3.  执行[sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql)，并提供**@request_id**在步骤 b 中检索到的值。 请等到所有节点都指示它们已接收到对等请求。 转到步骤 d。  
   
     4.  使用 [DBCC CHECKIDENT](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql) 在数据库 **B** 中对每个表重设种子以确保使用适当的范围。 转到步骤 10。  
   
@@ -229,11 +229,11 @@ ms.locfileid: "68210770"
   
     1.  停止对等拓扑中已发布表上的所有活动。 转到步骤 b。  
   
-    2.  在数据库 [B](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) 上还原数据库 **B** ，并检索输出参数 **@request_id** 。 转到步骤 c。  
+    2.  在数据库**B**上执行[sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql)并检索 output 参数**@request_id**。 转到步骤 c。  
   
     3.  默认情况下，分发代理设置为连续运行；因此，令牌应该自动发送到所有节点。 如果分发代理未以连续模式运行，请运行该代理。 转到步骤 d。  
   
-    4.  在数据库 [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql)，执行时为其提供在步骤 b 中检索到的 **@request_id** 值。 请等到所有节点都指示它们已接收到对等请求。 转到步骤 e。  
+    4.  执行[sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql)，并提供**@request_id**在步骤 b 中检索到的值。 请等到所有节点都指示它们已接收到对等请求。 转到步骤 e。  
   
     5.  在数据库 **B** 上重新创建对数据库 **C**上的发布的订阅，同时指定订阅服务器已包含数据。 转到步骤 b。  
   
@@ -243,7 +243,7 @@ ms.locfileid: "68210770"
   
     1.  在数据库 **B**上，查询 [MSpeer_lsns](/sql/relational-databases/system-tables/mspeer-lsns-transact-sql) 表，以检索数据库 **B** 从 **C**收到的最近事务的日志序列号 (LSN)。  
   
-    2.  在数据库 **B** 上重新创建对数据库 **C**上的发布的订阅，同时指定该订阅应基于 LSN 进行初始化（ **sp_addsubscription** 的 **@sync_type** 参数的值为 [initialize with backup](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)）。 转到步骤 b。  
+    2.  在数据库**B**上重新创建对数据库**C**上的发布的订阅，同时指定该订阅应基于 LSN 进行初始化（ [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)的**@sync_type**参数的值为**initialize from lsn** ）。 转到步骤 b。  
   
     3.  在数据库 **C** 上重新创建对数据库 **B**上的发布的订阅，同时指定订阅服务器已包含数据。 转到步骤 13。  
   
@@ -345,12 +345,12 @@ ms.locfileid: "68210770"
   
 2.  确保该数据库在复制配置和设置方面与发布数据库一致。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 数据库的备份和还原](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [备份和还原复制的数据库](back-up-and-restore-replicated-databases.md)   
  [“配置分发”](../configure-distribution.md)   
  [发布数据和数据库对象](../publish/publish-data-and-database-objects.md)   
- [订阅发布](../subscribe-to-publications.md)   
+ [Subscribe to Publications](../subscribe-to-publications.md)   
  [初始化订阅](../initialize-a-subscription.md)   
  [同步数据](../synchronize-data.md)  
   

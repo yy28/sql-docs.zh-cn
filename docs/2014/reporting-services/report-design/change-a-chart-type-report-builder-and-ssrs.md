@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e20363b7d26b2b668ca52d44615488e06573f730
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106380"
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>更改图表类型（报表生成器和 SSRS）
@@ -36,7 +36,7 @@ ms.locfileid: "66106380"
   
 2.  在“选择图表类型”  对话框中，从列表中选择图表类型。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   
  [仪表（报表生成器和 SSRS）](gauges-report-builder-and-ssrs.md)   
  [向报表添加图表（报表生成器和 SSRS）](add-a-chart-to-a-report-report-builder-and-ssrs.md)  

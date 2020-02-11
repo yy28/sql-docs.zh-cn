@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1d6bb42e4b35a74ef2bd6eefb85ea81b0ed18e40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63073842"
 ---
 # <a name="creating-and-managing-storage-for-memory-optimized-objects"></a>创建和管理用于内存优化的对象的存储
@@ -32,7 +32,7 @@ ms.locfileid: "63073842"
   
  内存优化表的存储具有以下键属性：  
   
--   所有内存优化表都映射到内存优化文件组。 使用 filestream 文件组来生成此文件组。  
+-   所有内存优化表都映射到内存优化的文件组。 此文件组使用 filestream 文件组生成。  
   
 -   没有任何页，且数据作为行保留。  
   
@@ -42,13 +42,13 @@ ms.locfileid: "63073842"
   
 -   与基于磁盘的表不同，内存优化表的存储不会被压缩。 在将压缩的（ROW 或 PAGE）基于磁盘的表迁移到内存优化表时，需要考虑大小的改变。  
   
--   内存优化表可以是持久的或非持久的。 只需为持久内存优化表配置存储。  
+-   内存优化表可以是持久的或非持久的。 只需为持久的内存优化表配置存储。  
   
  本节描述检查点文件对以及内存优化表中数据的存储方式的其他方面。  
   
  本节主题：  
   
--   [为内存优化表配置内存](configuring-storage-for-memory-optimized-tables.md)  
+-   [为内存优化表配置存储](configuring-storage-for-memory-optimized-tables.md)  
   
 -   [内存优化的文件组](the-memory-optimized-filegroup.md)  
   
@@ -62,7 +62,7 @@ ms.locfileid: "63073842"
   
 -   [监视数据与差异文件对的合并以及排除其故障](../../database-engine/monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [内存中 OLTP（内存中优化）](in-memory-oltp-in-memory-optimization.md)  
   
   

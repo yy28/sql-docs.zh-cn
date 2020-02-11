@@ -19,14 +19,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d15db702cb196842a5ddba25dbc3fa9cc18df5f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917112"
 ---
 # <a name="database-snapshots-sql-server"></a>数据库快照 (SQL Server)
-  数据库快照是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库（源数据库）的只读静态视图。 自创建快照那刻起，数据库快照在事务上与源数据库一致。 数据库快照始终与其源数据库位于同一服务器实例上。 当源数据库更新时，数据库快照也将更新。 因此，数据库快照存在的时间越长，就越有可能用完其可用磁盘空间。  
+  数据库快照是[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据库（*源数据库*）的只读静态视图。 自创建快照那刻起，数据库快照在事务上与源数据库一致。 数据库快照始终与其源数据库位于同一服务器实例上。 当源数据库更新时，数据库快照也将更新。 因此，数据库快照存在的时间越长，就越有可能用完其可用磁盘空间。  
   
  给定源数据库中可以存在多个快照。 在数据库所有者显式删除每个数据库快照之前，该快照将一直保留。  
   
@@ -45,14 +45,14 @@ ms.locfileid: "62917112"
   
 -   [相关任务](#RelatedTasks)  
   
-##  <a name="FeatureOverview"></a> 功能概述  
+##  <a name="FeatureOverview"></a>功能概述  
  数据库快照在数据页级运行。 在第一次修改源数据库页之前，先将原始页从源数据库复制到快照。 快照将存储原始页，保留它们在创建快照时的数据记录。 对要进行第一次修改的每一页重复此过程。 对于用户而言，数据库快照似乎始终保持不变，因为对数据库快照的读操作始终访问原始数据页，而与页驻留的位置无关。  
   
- 为了存储复制的原始页，快照使用一个或多个“稀疏文件” 。 最初，稀疏文件实质上是空文件，不包含用户数据并且未被分配存储用户数据的磁盘空间。 随着源数据库中更新的页越来越多，文件的大小也不断增长。 下图说明了两种相对的更新模式对快照大小的影响。 更新模式 A 反映的是在快照使用期限内仅有 30% 的原始页更新的环境。 更新模式 B 反映的是在快照使用期限内有 80% 的原始页更新的环境。  
+ 为了存储复制的原始页，快照使用一个或多个“稀疏文件” **。 最初，稀疏文件实质上是空文件，不包含用户数据并且未被分配存储用户数据的磁盘空间。 随着源数据库中更新的页越来越多，文件的大小也不断增长。 下图说明了两种相对的更新模式对快照大小的影响。 更新模式 A 反映的是在快照使用期限内仅有 30% 的原始页更新的环境。 更新模式 B 反映的是在快照使用期限内有 80% 的原始页更新的环境。  
   
  ![备用更新模式和快照大小](../../database-engine/media/dbview-04.gif "备用更新模式和快照大小")  
   
-##  <a name="Benefits"></a> 数据库快照的优点  
+##  <a name="Benefits"></a>数据库快照的优点  
   
 -   快照可用于报告目的。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "62917112"
   
      在测试环境中，当每一轮测试开始时针对要包含相同数据的数据库重复运行测试协议将十分有用。 在运行第一轮测试前，应用程序开发人员或测试人员可以在测试数据库中创建数据库快照。 每次运行测试之后，数据库都可以通过恢复数据库快照快速返回到它以前的状态。  
   
-##  <a name="TermsAndDefinitions"></a> 术语和定义  
+##  <a name="TermsAndDefinitions"></a>术语和定义  
  database snapshot  
  一个数据库（源数据库）的事务一致的只读静态视图。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "62917112"
  稀疏文件 (sparse file)  
  NTFS 文件系统提供的文件，需要的磁盘空间要比其他文件格式少很多。 稀疏文件用于存储复制到数据库快照的页面。 首次创建稀疏文件时，稀疏文件占用的磁盘空间非常少。 随着数据写入数据库快照，NTFS 会将磁盘空间逐渐分配给相应的稀疏文件。  
   
-##  <a name="LimitationsRequirements"></a> 数据库快照的先决条件和限制  
+##  <a name="LimitationsRequirements"></a>数据库快照的先决条件和限制  
  **本节内容：**  
   
 -   [先决条件](#Prerequisites)  
@@ -114,9 +114,9 @@ ms.locfileid: "62917112"
   
 -   [磁盘空间要求](#DiskSpace)  
   
--   [含有脱机文件组的数据库快照](#OfflineFGs)  
+-   [具有脱机文件组的数据库快照](#OfflineFGs)  
   
-###  <a name="Prerequisites"></a> 先决条件  
+###  <a name="Prerequisites"></a>先决条件  
  可以使用任何恢复模式的源数据库必须满足以下先决条件：  
   
 -   服务器实例必须在支持数据库快照的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本上运行。 有关详细信息，请参阅 [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
@@ -136,7 +136,7 @@ ms.locfileid: "62917112"
 > [!NOTE]  
 >  所有恢复模式都支持数据库快照。  
   
-###  <a name="LimitsOnSourceDb"></a> 源数据库的限制  
+###  <a name="LimitsOnSourceDb"></a>源数据库的限制  
  只要存在数据库快照，快照的源数据库就存在以下限制：  
   
 -   不能对数据库进行删除、分离或还原。  
@@ -148,7 +148,7 @@ ms.locfileid: "62917112"
   
 -   不能从源数据库或任何快照中删除文件。  
   
-###  <a name="LimitsOnDbSS"></a> 数据库快照的限制  
+###  <a name="LimitsOnDbSS"></a>数据库快照的限制  
  数据库快照存在以下限制：  
   
 -   数据库快照必须与源数据库在相同的服务器实例上创建和保留。  
@@ -192,9 +192,9 @@ ms.locfileid: "62917112"
     > [!NOTE]  
     >  对数据库快照执行的 SELECT 语句不能指定 FILESTREAM 列；否则，将返回如下错误消息： `Could not continue scan with NOLOCK due to data movement.`  
   
--   当有关只读快照的统计信息丢失或变得陈旧时， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将创建临时统计信息并在 tempdb 中进行维护。 有关更多信息，请参见 [Statistics](../statistics/statistics.md)。  
+-   当有关只读快照的统计信息丢失或变得陈旧时， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将创建临时统计信息并在 tempdb 中进行维护。 有关详细信息，请参阅[统计](../statistics/statistics.md)信息。  
   
-###  <a name="DiskSpace"></a> 磁盘空间要求  
+###  <a name="DiskSpace"></a>磁盘空间要求  
  数据库快照占用磁盘空间。 如果数据库快照用尽了磁盘空间，将被标记为可疑，必须将其删除。 （但是，源数据库不会受到影响，对其执行的操作仍能继续正常进行。）然而，与一份完整的数据库相比，快照具有高度空间有效性。 快照仅需足够存储空间来存储在其生存期中更改的页。 通常情况下，快照只会保留一段有限的时间，因此其大小不是主要问题。  
   
  但是，保留快照的时间越长，越有可能将可用空间用完。 稀疏文件最大只能增长到创建快照时相应的源数据库文件的大小。  
@@ -204,7 +204,7 @@ ms.locfileid: "62917112"
 > [!NOTE]  
 >  除文件空间外，数据库快照与数据库占用的资源量大致相同。  
   
-###  <a name="OfflineFGs"></a> 含有脱机文件组的数据库快照  
+###  <a name="OfflineFGs"></a>具有脱机文件组的数据库快照  
  当您尝试执行下列任何操作时，源数据库中的脱机文件组都将影响数据库快照：  
   
 -   创建快照  
@@ -229,13 +229,13 @@ ms.locfileid: "62917112"
   
 -   [查看数据库快照 (SQL Server)](view-a-database-snapshot-sql-server.md)  
   
--   [查看数据库快照的稀疏文件大小 (Transact-SQL)](view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)  
+-   [查看数据库快照的稀疏文件的大小 &#40;Transact-sql&#41;](view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)  
   
 -   [将数据库恢复到数据库快照](revert-a-database-to-a-database-snapshot.md)  
   
 -   [删除数据库快照 (Transact-SQL)](drop-a-database-snapshot-transact-sql.md)  
   
-## <a name="see-also"></a>请参阅  
- [数据库镜像和数据库快照 (SQL Server)](database-snapshots-sql-server.md)  
+## <a name="see-also"></a>另请参阅  
+ [数据库镜像和数据库快照 &#40;SQL Server&#41;](database-snapshots-sql-server.md)  
   
   

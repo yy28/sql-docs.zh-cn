@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c5c52b80601f7b1e8e73cffe0a6cad255d91ff82
-ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72172983"
 ---
 # <a name="percentile_cont-transact-sql"></a>PERCENTILE_CONT (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "72172983"
 
   基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列值的连续分布计算百分位数。 将内插结果，且结果可能不等于列中的任何特定值。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,7 +48,7 @@ PERCENTILE_CONT ( numeric_literal )
  WITHIN GROUP ( ORDER BY order_by_expression [ ASC | DESC ])      
  指定要排序的数值列表，并计算百分位数。 仅允许一个 order_by_expression  。 表达式必须计算得出精确的或近似数值类型，并且不允许使用其他数据类型。 精确数值类型为 int、bigint、smallint、tinyint、numeric、bit、decimal、smallmoney 和 money          。 近似数值类型为 float 和 real   。 默认的排序顺序为升序。  
   
- OVER (\< partition_by_clause> )    
+ OVER **(** \<partition_by_clause> **)**  
  将 FROM 子句生成的结果集划分为数个应用百分位数函数的分区。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。 无法在 PERCENTILE_CONT 函数中指定 OVER 语法的 \<ORDER BY 子句> 和 \<rows 或 range 子句>。  
   
 ## <a name="return-types"></a>返回类型  

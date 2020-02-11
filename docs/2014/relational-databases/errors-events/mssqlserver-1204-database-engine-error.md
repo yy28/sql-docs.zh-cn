@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ee0544c14bbf3e05fcb59e16a9bb3e0d8e61e33b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916098"
 ---
-# <a name="mssqlserver1204"></a>MSSQLSERVER_1204
+# <a name="mssqlserver_1204"></a>MSSQLSERVER_1204
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62916098"
 |符号名称|LK_OUTOF|  
 |消息正文|SQL Server 数据库引擎的实例此时无法获得 LOCK 资源。 请在活动用户较少时重新运行该语句。 请询问数据库管理员，检查此实例的锁定和内存配置，或检查是否有长时间运行的事务。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法获得锁资源。 这可能是由以下任一原因导致的：  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法从操作系统分配更多的内存，因为其他进程正在使用它，或者因为服务器在配置了“最大服务器内存”  选项的情况下运行。  

@@ -1,5 +1,5 @@
 ---
-title: SCOPE 语句 (MDX) |Microsoft Docs
+title: SCOPE 语句（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2f355842999b505a97c3387ab9e51d3b651c3b7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138282"
 ---
 # <a name="mdx-scripting---scope"></a>MDX 脚本 - SCOPE
@@ -78,12 +78,12 @@ Limited_Set ::=
 > [!NOTE]  
 >  SCOPE 语句会处理隐藏的成员。  
   
- 作用域语句将创建子多维数据集显示"空位置"，而不考虑**MDX 兼容性**设置。 例如，`Scope( Customer.State.members )` 语句可以在不包含州的国家或地区中包括州，但在其他情况下会插入不可见的占位符成员。  
+ SCOPE 语句将创建公开 "洞" 的子多维数据，而不考虑**MDX 兼容性**设置。 例如，`Scope( Customer.State.members )` 语句可以在不包含州的国家或地区中包括州，但在其他情况下会插入不可见的占位符成员。  
   
  在 SCOPE 语句中创建的计算成员和命名集不受 SCOPE 语句的影响。  
   
 ## <a name="example"></a>示例  
- 以下示例中的，从 MDX 计算脚本中 Adventure Works 示例解决方案、 定义为在 2005年会计年度和销售配额度量值，会计季度的当前作用域，然后到当前作用域中的单元格分配值，通过使用**ParallelPeriod**函数。 该示例然后修改使用另一个 SCOPE 语句，作用域，然后执行另一个分配使用[This (MDX)](../mdx/this-mdx.md)函数。  
+ 下面的示例（来自艾德公司示例解决方案中的 MDX 计算脚本）将当前范围定义为会计年度2005中的会计季度和销售配额度量值，然后使用**ParallelPeriod**函数将值分配给当前范围中的单元格。 然后，该示例使用另一个 SCOPE 语句修改作用域，然后使用[This （MDX）](../mdx/this-mdx.md)函数执行另一个赋值。  
   
 ```  
 Scope   
@@ -113,7 +113,7 @@ Scope
 End Scope ;     
 ```  
   
-## <a name="see-also"></a>请参阅  
- [MDX 脚本编写语句 (MDX)](../mdx/mdx-scripting-statements-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [Mdx 脚本语句 &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

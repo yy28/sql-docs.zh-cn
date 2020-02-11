@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dcb850ad7e99768781b225978f531ff991766924
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63046074"
 ---
 # <a name="preventing-invalid-requests"></a>防止无效请求
@@ -69,7 +69,7 @@ private void PublishReport()
   
  有关在将请求发送到报表服务器前可避免的错误类型的详细信息，请参阅 [SoapException 错误表](../soapexception-class/soapexception-errors-table.md)。 有关使用 try/catch 块进一步增强前一个示例的详细信息，请参阅[使用 Try 和 Catch 块](using-try-and-catch-blocks.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [介绍 Reporting Services 中的异常处理](../introducing-exception-handling-in-reporting-services.md)   
  [Reporting Services SoapException 类](../soapexception-class/reporting-services-soapexception-class.md)  
   

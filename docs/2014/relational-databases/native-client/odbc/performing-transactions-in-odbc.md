@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ade18b71fa83c7acbb16cb7facd19dd3de61a2e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63143316"
 ---
 # <a name="transactions-in-odbc"></a>ODBC 中的事务
-  ODBC 中的事务按连接级别进行管理。 在应用程序完成某一事务时，它提交或回滚通过该连接上的所有语句句柄完成的所有工作。 若要提交或回滚事务，应用程序应调用[SQLEndTran](../../native-client-odbc-api/sqlendtran.md)而非提交 COMMIT 或 ROLLBACK 语句。  
+  ODBC 中的事务按连接级别进行管理。 在应用程序完成某一事务时，它提交或回滚通过该连接上的所有语句句柄完成的所有工作。 若要提交或回滚事务，应用程序应调用[SQLEndTran](../../native-client-odbc-api/sqlendtran.md) ，而不是提交 COMMIT 或 ROLLBACK 语句。  
   
- 应用程序调用[SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md)管理事务的两个 ODBC 模式之间切换：  
+ 应用程序调用[SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) ，以在两种管理事务的 ODBC 模式之间切换：  
   
 -   自动提交模式  
   
@@ -32,15 +32,15 @@ ms.locfileid: "63143316"
   
 -   手动提交模式  
   
-     所有执行的语句包含在同一事务中，直到通过调用明确停止它**SQLEndTran**。  
+     所有已执行的语句都包含在同一事务中，直到通过调用**SQLEndTran**专门停止它。  
   
- 自动提交模式是针对 ODBC 的默认的事务模式。 建立连接，它是自动提交模式，直到**SQLSetConnectAttr**调用来切换到手动提交模式，从而自动提交模式设置。 在应用程序关闭自动提交后，发送到数据库的下一个语句将开始某一事务。 该事务随后仍然有效，直到应用程序调用**SQLEndTran**使用 SQL_COMMIT 或 SQL_ROLLBACK 选项。 命令发送到数据库后**SQLEndTran**启动下一个事务。  
+ 自动提交模式是针对 ODBC 的默认的事务模式。 建立连接后，该连接处于自动提交模式，直到调用**SQLSetConnectAttr** ，通过设置自动提交模式来切换为手动提交模式。 在应用程序关闭自动提交后，发送到数据库的下一个语句将开始某一事务。 然后，在应用程序调用带有 SQL_COMMIT 或 SQL_ROLLBACK 选项的**SQLEndTran**之前，该事务将一直有效。 **SQLEndTran**在启动下一个事务后发送到数据库的命令。  
   
  如果应用程序从手动提交模式切换到自动提交模式，则驱动程序将提交在该连接上当前打开的所有事务。  
   
- ODBC 应用程序不应使用 Transact-SQL 事务语句（例如 BEGIN TRANSACTION、COMMIT TRANSACTION 或 ROLLBACK TRANSACTION），因为这可能导致驱动程序中的不确定行为。 ODBC 应用程序应在自动提交模式下运行和不使用任何事务管理函数或语句，或在手动提交模式下运行并使用 ODBC **SQLEndTran**函数提交或回滚事务。  
+ ODBC 应用程序不应使用 Transact-SQL 事务语句（例如 BEGIN TRANSACTION、COMMIT TRANSACTION 或 ROLLBACK TRANSACTION），因为这可能导致驱动程序中的不确定行为。 ODBC 应用程序应在自动提交模式下运行，而不是使用任何事务管理函数或语句，或在手动提交模式下运行，并使用 ODBC **SQLEndTran**函数提交或回滚事务。  
   
-## <a name="see-also"></a>请参阅  
- [执行事务&#40;ODBC&#41;](../../../database-engine/dev-guide/performing-transactions-odbc.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;ODBC&#41;执行事务](../../../database-engine/dev-guide/performing-transactions-odbc.md)  
   
   

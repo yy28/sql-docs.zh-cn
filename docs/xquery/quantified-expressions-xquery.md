@@ -1,5 +1,5 @@
 ---
-title: 限定表达式 (XQuery) |Microsoft Docs
+title: 量化表达式（XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,10 +23,10 @@ ms.assetid: a3a75a6c-8f67-4923-8406-1ada546c817f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1cdbff23d2158dec00b6b8d050d6a4a90341bd23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946377"
 ---
 # <a name="quantified-expressions-xquery"></a>限定表达式 (XQuery)
@@ -46,9 +46,9 @@ ms.locfileid: "67946377"
 ( some | every ) <variable> in <Expression> (,...) satisfies <Expression>  
 ```  
   
- 可以在查询中使用这些表达式，来对作用于一个或多个序列上的表达式显式应用存在限定或全称限定。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，`satisfies` 子句中表达式的结果可以为：节点序列、空序列或布尔值。 限定中将使用该表达式结果的有效布尔值。 存在量词限定使用**某些**如果至少一个绑定的限定符的值表达式中具有的 True 结果将返回 True。 使用全称**每个**量词限定的所有值必须具有 True。  
+ 可以在查询中使用这些表达式，来对作用于一个或多个序列上的表达式显式应用存在限定或全称限定。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，`satisfies` 子句中表达式的结果可以为：节点序列、空序列或布尔值。 限定中将使用该表达式结果的有效布尔值。 如果限定符绑定的值中至少有一个值在满足表达式中的结果为 True，则使用**some**的存在性定量将返回 true。 使用**每个**的通用定量对于由限定符绑定的所有值都必须为 True。  
   
- 例如，以下查询检查每个\<位置 > 若要查看其是否具有 LocationID 属性的元素。  
+ 例如，下面的查询检查每个\<位置> 元素，以查看它是否具有 LocationID 属性。  
   
 ```  
 SELECT Instructions.query('  
@@ -64,13 +64,13 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- 由于 LocationID 是所需的属性\<位置 > 元素，也会得到预期的结果：  
+ 由于 LocationID 是> 元素\<位置所必需的属性，因此收到预期结果：  
   
 ```  
 <Result>All work centers have Location ID</Result>   
 ```  
   
- 而不是使用[query （） 方法](../t-sql/xml/query-method-xml-data-type.md)，可以使用[value （） 方法](../t-sql/xml/value-method-xml-data-type.md)到关系环境中，返回的结果，如下面的查询中所示。 如果所有生产车间都具有 LocationID 属性，则查询返回 True。 否则，查询返回 False。  
+ 您可以使用[value （）方法](../t-sql/xml/value-method-xml-data-type.md)将结果返回给关系世界，而不是使用[query （）](../t-sql/xml/query-method-xml-data-type.md)方法，如以下查询中所示。 如果所有生产车间都具有 LocationID 属性，则查询返回 True。 否则，查询返回 False。  
   
 ```  
 SELECT Instructions.value('  
@@ -93,7 +93,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- 这是部分结果：  
+ 下面是部分结果：  
   
 ```  
 ProductModelID SmallPicturesStored   
@@ -106,7 +106,7 @@ ProductModelID SmallPicturesStored
   
 -   绑定限定表达式中的变量时不支持类型断定。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [XQuery 表达式](../xquery/xquery-expressions.md)  
   
   

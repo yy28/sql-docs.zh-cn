@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a1fa03dbb8803c27ba917e662db1958361900b15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917589"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>创建 SQL Server 代理作业以存档数据库邮件和事件日志
@@ -31,7 +31,7 @@ ms.locfileid: "62917589"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a> 先决条件  
+###  <a name="Prerequisites"></a>先决条件  
  用于存储存档数据的新表可以位于特殊的存档数据库中。 另外，还可将行导出到文本文件中。  
  
   
@@ -39,7 +39,7 @@ ms.locfileid: "62917589"
  在生产环境中，可能需要进一步添加错误检查，并在作业失败的情况下向操作员发送电子邮件。  
   
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 权限  
  只有 **sysadmin** 固定服务器角色的成员才能执行本主题中介绍的存储过程。  
   
   
@@ -76,11 +76,11 @@ ms.locfileid: "62917589"
   
 ## <a name="to-create-a-step-to-archive-the-database-mail-messages"></a>创建步骤以存档数据库邮件  
   
-1.  在 **“步骤”** 页上，单击 **“新建”** 。  
+1.  在 **“步骤”** 页上，单击 **“新建”**。  
   
-2.  在 **“步骤名称”** 框中，键入 **“复制数据库邮件项”** 。  
+2.  在 **“步骤名称”** 框中，键入 **“复制数据库邮件项”**。  
   
-3.  在“类型”  框中，选择“Transact-SQL 脚本 (T-SQL)”  。  
+3.  在“类型”**** 框中，选择“Transact-SQL 脚本 (T-SQL)”****。  
   
 4.  在 **“数据库”** 框中，选择 **msdb**。  
   
@@ -102,11 +102,11 @@ ms.locfileid: "62917589"
   
 ## <a name="to-create-a-step-to-archive-the-database-mail-attachments"></a>创建步骤以存档数据库邮件附件  
   
-1.  在 **“步骤”** 页上，单击 **“新建”** 。  
+1.  在 **“步骤”** 页上，单击 **“新建”**。  
   
-2.  在 **“步骤名称”** 框中，键入 **“复制数据库邮件附件”** 。  
+2.  在 **“步骤名称”** 框中，键入 **“复制数据库邮件附件”**。  
   
-3.  在“类型”  框中，选择“Transact-SQL 脚本 (T-SQL)”  。  
+3.  在“类型”**** 框中，选择“Transact-SQL 脚本 (T-SQL)”****。  
   
 4.  在 **“数据库”** 框中，选择 **msdb**。  
   
@@ -129,11 +129,11 @@ ms.locfileid: "62917589"
   
 ## <a name="to-create-a-step-to-archive-the-database-mail-log"></a>创建步骤以存档数据库邮件日志  
   
-1.  在 **“步骤”** 页上，单击 **“新建”** 。  
+1.  在 **“步骤”** 页上，单击 **“新建”**。  
   
-2.  在 **“步骤名称”** 框中，键入 **“复制数据库邮件日志”** 。  
+2.  在 **“步骤名称”** 框中，键入 **“复制数据库邮件日志”**。  
   
-3.  在“类型”  框中，选择“Transact-SQL 脚本 (T-SQL)”  。  
+3.  在“类型”**** 框中，选择“Transact-SQL 脚本 (T-SQL)”****。  
   
 4.  在 **“数据库”** 框中，选择 **msdb**。  
   
@@ -156,11 +156,11 @@ ms.locfileid: "62917589"
   
 ## <a name="to-create-a-step-to-remove-the-archived-rows-from-database-mail"></a>创建步骤以从数据库邮件中删除已存档的行  
   
-1.  在 **“步骤”** 页上，单击 **“新建”** 。  
+1.  在 **“步骤”** 页上，单击 **“新建”**。  
   
-2.  在 **“步骤名称”** 框中，键入 **“从数据库邮件中删除行”** 。  
+2.  在 **“步骤名称”** 框中，键入 **“从数据库邮件中删除行”**。  
   
-3.  在“类型”  框中，选择“Transact-SQL 脚本 (T-SQL)”  。  
+3.  在“类型”**** 框中，选择“Transact-SQL 脚本 (T-SQL)”****。  
   
 4.  在 **“数据库”** 框中，选择 **msdb**。  
   
@@ -178,11 +178,11 @@ ms.locfileid: "62917589"
   
 ## <a name="to-create-a-step-to-remove-the-archived-items-from-database-mail-event-log"></a>创建步骤以从数据库邮件事件日志中删除已存档的项  
   
-1.  在 **“步骤”** 页上，单击 **“新建”** 。  
+1.  在 **“步骤”** 页上，单击 **“新建”**。  
   
-2.  在 **“步骤名称”** 框中，键入 **“从数据库邮件事件日志中删除行”** 。  
+2.  在 **“步骤名称”** 框中，键入 **“从数据库邮件事件日志中删除行”**。  
   
-3.  在“类型”  框中，选择“Transact-SQL 脚本 (T-SQL)”  。  
+3.  在“类型”**** 框中，选择“Transact-SQL 脚本 (T-SQL)”****。  
   
 4.  在 **“命令”** 框中，键入以下语句以从数据库邮件事件日志中删除早于当前月份的行：  
   
@@ -198,17 +198,17 @@ ms.locfileid: "62917589"
   
 ## <a name="to-schedule-the-job-to-run-periodically"></a>安排定期运行作业  
   
-1.  在 **“新建作业”** 对话框中，单击 **“计划”** 。  
+1.  在 **“新建作业”** 对话框中，单击 **“计划”**。  
   
-2.  在 **“计划”** 页上，单击 **“新建”** 。  
+2.  在 **“计划”** 页上，单击 **“新建”**。  
   
-3.  在 **“名称”** 框中，键入 **“存档数据库邮件”** 。  
+3.  在 **“名称”** 框中，键入 **“存档数据库邮件”**。  
   
-4.  在 **“计划类型”** 框中，选择 **“重复执行”** 。  
+4.  在 **“计划类型”** 框中，选择 **“重复执行”**。  
   
 5.  在 **“频率”** 区域中，选择相应的选项以便定期运行该作业，比如每月一次。  
   
-6.  在“每天频率”  区域中，选择“在 \<时间> 执行一次”  。  
+6.  在 "**每天频率**" 区域中，选择 "每** \<次出现>**。  
   
 7.  验证其他选项已按您希望的那样进行了配置，然后单击 **“确定”** 保存计划。  
   

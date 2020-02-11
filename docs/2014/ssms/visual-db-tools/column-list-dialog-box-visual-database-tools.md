@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7a6853d721a1504c3b44e733a2f2fbc6f37608be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62936442"
 ---
 # <a name="column-list-dialog-box-visual-database-tools"></a>“列列表”对话框 (Visual Database Tools)
@@ -36,7 +36,7 @@ ms.locfileid: "62936442"
  **数据类型属性**  
  显示所选表值对象中每一列的数据类型属性。 可能的属性值包括 NULLABLE、IDENTITY、ROWGUID 或空白。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [设计查询和视图操作指南主题 (Visual Database Tools)](visual-database-tools.md)  
   
   

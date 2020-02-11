@@ -14,20 +14,20 @@ ms.assetid: f9d03f17-1c0d-4e7c-9c04-8c316e07ef25
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26e5c36b41f68627a634714cfa06525c99451450
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67947057"
 ---
 # <a name="setup-dll-api-reference"></a>Setup DLL API 函数
-本部分介绍驱动程序安装程序 DLL API，包括两个函数的语法 (**ConfigDriver**并**ConfigDSN**)。 **ConfigDriver**并**ConfigDSN**可以是驱动程序 DLL 中或在单独的安装程序 DLL。  
+本部分介绍了驱动程序安装程序 DLL API 的语法，其中包含两个函数（**ConfigDriver**和**ConfigDSN**）。 **ConfigDriver**和**ConfigDSN**可以在驱动程序 dll 中或单独的安装程序 dll 中。  
   
- 此外，本部分介绍转换器安装程序 DLL API，包含单个函数的语法 (**ConfigTranslator**)。 **ConfigTranslator**可以是在转换程序 DLL 或在单独的安装程序 DLL。  
+ 此外，本部分还介绍了转换器安装程序 DLL API 的语法，它由一个函数（**ConfigTranslator**）组成。 **ConfigTranslator**可以在转换器 dll 中或单独的安装 dll 中。  
   
- 每个函数都标有 ODBC 中引入的版本。  
+ 每个函数都带有引入该函数的 ODBC 版本进行标记。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [ConfigDriver 函数](../../../odbc/reference/syntax/configdriver-function.md)  
   

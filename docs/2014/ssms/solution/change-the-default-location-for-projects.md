@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a772a80e6cb0e51682880c0579ec07914948372b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62956105"
 ---
 # <a name="change-the-default-location-for-projects"></a>更改项目的默认位置
@@ -25,9 +25,9 @@ ms.locfileid: "62956105"
   
 ### <a name="to-change-the-default-location-for-projects"></a>更改项目的默认位置  
   
-1.  通过从其他位置打开或保存文件或项目来更改默认位置。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 会存储上一次打开项目的位置并在下一次打开或保存项目时使用此位置。  
+1.  通过从其他位置打开或保存文件或项目来更改默认位置。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]存储以前打开的项目的位置，并将其用于下一次打开或保存项目。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [解决方案资源管理器](solution-explorer.md)  
   
   

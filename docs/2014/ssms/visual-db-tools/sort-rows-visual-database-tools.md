@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3235c9a9305e4476214add63f8710ba9de7b4c19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63049142"
 ---
 # <a name="sort-rows-visual-database-tools"></a>对行进行排序 (Visual Database Tools)
@@ -89,7 +89,7 @@ ms.locfileid: "63049142"
   
      请注意，该查询将 `state` 用作次要排序列。 因此，如果两个州的作者数相同，则这两个州将按字母顺序显示。  
   
--   **可使用国际数据进行排序** 也就是说，可以使用与该列的默认约定不同的排序约定对列进行排序。 例如，可以编写查询检索所有书名的 Jaime Pati??o。 若要按字母顺序显示书籍名称，请对 title 列使用 Spanish 排序顺序。 生成的 SQL 结果可能类似以下形式：  
+-   **可使用国际数据进行排序** 也就是说，可以使用与该列的默认约定不同的排序约定对列进行排序。 例如，可以编写一个查询，用于通过 Jaime Pati？？检索所有书名。i/o. 若要按字母顺序显示书籍名称，请对 title 列使用 Spanish 排序顺序。 生成的 SQL 结果可能类似以下形式：  
   
     ```  
     SELECT title  
@@ -110,8 +110,8 @@ ms.locfileid: "63049142"
          title COLLATE SQL_Spanish_Pref_CP1_CI_AS  
     ```  
   
-## <a name="see-also"></a>请参阅  
- [排序和分组查询结果&#40;可视化数据库工具&#41;](sort-and-group-query-results-visual-database-tools.md)   
+## <a name="see-also"></a>另请参阅  
+ [对查询结果进行排序和分组 &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
  [设计查询和视图操作指南主题 (Visual Database Tools)](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

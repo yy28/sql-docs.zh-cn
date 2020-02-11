@@ -1,5 +1,5 @@
 ---
-title: sp_refresh_parameter_encryption (TRANSACT-SQL) |Microsoft Docs
+title: sp_refresh_parameter_encryption （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a5f699f21b1f28537da2e2f0033fe6b17908186a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68002461"
 ---
-# <a name="sprefreshparameterencryption-transact-sql"></a>sp_refresh_parameter_encryption (TRANSACT-SQL)
+# <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-更新指定的非绑定到架构的存储的过程、 用户定义函数、 视图、 DML 触发器、 数据库级 DDL 触发器或当前数据库中的服务器级 DDL 触发器的参数的 Always Encrypted 元数据。 
+为当前数据库中指定的非绑定到架构的存储过程、用户定义函数、视图、DML 触发器、数据库级 DDL 触发器或服务器级 DDL 触发器的参数更新 Always Encrypted 元数据。 
 
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,9 +46,10 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 ## <a name="arguments"></a>参数
 
-`[ @name = ] 'module_name'` 是存储的过程、 用户定义函数、 视图、 DML 触发器、 数据库级 DDL 触发器或服务器级 DDL 触发器的名称。 *module_name*不能为公共语言运行时 (CLR) 存储过程或 CLR 函数。 *module_name*不能为绑定到架构的。 *module_name*是`nvarchar`，无默认值。 *module_name*可以是多个部分组成的标识符，但只能引用当前数据库中的对象。
+`[ @name = ] 'module_name'`存储过程、用户定义函数、视图、DML 触发器、数据库级 DDL 触发器或服务器级 DDL 触发器的名称。 *module_name*不能是公共语言运行时（CLR）存储过程或 CLR 函数。 *module_name*不能是绑定到架构的。 *module_name*为`nvarchar`，无默认值。 *module_name*可以是由多个部分组成的标识符，但只能引用当前数据库中的对象。
 
-`[ @namespace = ] ' < class > '` 是指定的类。 当*module_name*是 DDL 触发器，`<class>`是必需的。 `<class>` 为 `nvarchar(20)`。 有效输入包括`DATABASE_DDL_TRIGGER`和`SERVER_DDL_TRIGGER`。    
+`[ @namespace = ] ' < class > '`指定模块的类。 如果*module_name*是 DDL 触发器， `<class>`则是必需的。 
+  `<class>` 为 `nvarchar(20)`。 有效的输入`DATABASE_DDL_TRIGGER`为`SERVER_DDL_TRIGGER`和。    
 
 ## <a name="return-code-values"></a>返回代码值  
 
@@ -57,34 +58,34 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 ## <a name="remarks"></a>备注
 
-如果模块的参数加密元数据会过时:   
-* 加密属性的模块引用中，已更新的表中的列。 例如，列已被删除，已添加具有相同名称但不同的加密类型、 加密密钥或加密算法的新列。  
-* 模块引用另一个模块，在使用已过时的参数加密元数据。  
+如果以下情况，模块的参数的加密元数据可能会过时：   
+* 模块引用的表中列的加密属性已更新。 例如，已删除某列，并且添加了一个具有相同名称但具有不同加密类型、加密密钥或加密算法的新列。  
+* 模块引用了具有过时参数加密元数据的另一个模块。  
 
-如果修改了表的加密属性，`sp_refresh_parameter_encryption`直接或间接引用表的所有模块都应都运行。 而无需用户第一次刷新的内部模块将移到其调用方之前，可以按任意顺序，这些模块上调用此存储的过程。
+当修改表的加密属性时， `sp_refresh_parameter_encryption`应直接或间接引用该表。 可以按任意顺序在这些模块上调用此存储过程，而无需用户先刷新内部模块，然后才能移动到其调用方。
 
-`sp_refresh_parameter_encryption` 不会影响任何权限、 扩展属性，或`SET`与对象相关联的选项。 
+`sp_refresh_parameter_encryption`不会影响与对象关联的任何权限、 `SET`扩展属性或选项。 
 
 若要刷新服务器级 DDL 触发器，可以在任何数据库的上下文中执行此存储过程。
 
 > [!NOTE]
->  在运行时，将删除所有与对象相关联的签名`sp_refresh_parameter_encryption`。
+>  当你运行`sp_refresh_parameter_encryption`时，将删除与对象关联的所有签名。
 
 ## <a name="permissions"></a>权限
 
-需要`ALTER`模块上的权限和`REFERENCES`对任何 CLR 用户定义类型和引用的对象的 XML 架构集合的权限。   
+需要`ALTER`对模块的权限， `REFERENCES`以及对象引用的任何 CLR 用户定义类型和 XML 架构集合的权限。   
 
-当指定的模块是数据库级 DDL 触发器时，要求`ALTER ANY DATABASE DDL TRIGGER`当前数据库中的权限。    
+当指定的模块是数据库级 DDL 触发器时，需要`ALTER ANY DATABASE DDL TRIGGER`在当前数据库中具有权限。    
 
-当指定的模块是服务器级 DDL 触发器时，要求`CONTROL SERVER`权限。
+当指定的模块是服务器级 DDL 触发器时，需要`CONTROL SERVER`权限。
 
-使用定义的模块`EXECUTE AS`子句，`IMPERSONATE`需要对指定的主体具有权限。 通常情况下，刷新对象不会更改其`EXECUTE AS`主体，除非使用定义了该模块`EXECUTE AS USER`和现在解析为不同用户比它时模块已创建的主体的用户名。
+对于用`EXECUTE AS`子句定义的模块， `IMPERSONATE`需要对指定主体拥有权限。 通常，刷新对象时不会更改其`EXECUTE AS`主体，除非该模块是使用`EXECUTE AS USER`定义的，并且该主体的用户名现在解析为其他用户，而不是创建模块时的用户。
  
 ## <a name="examples"></a>示例
 
-下面的示例创建一个表和引用表的过程中，配置始终加密，，然后演示更改表和运行`sp_refresh_parameter_encryption`过程。  
+下面的示例创建一个表和一个过程，该过程引用该表，配置 Always Encrypted，然后演示更改表并运行该`sp_refresh_parameter_encryption`过程。  
 
-首先创建初始表和引用表的存储的过程。
+首先创建一个引用该表的初始表和一个存储过程。
 ```sql
 CREATE TABLE [Patients]([PatientID] [int] IDENTITY(1,1) NOT NULL,
     [SSN] [char](11), 
@@ -113,7 +114,7 @@ END;
 GO
 ```
 
-然后设置始终加密密钥。
+然后，设置 Always Encrypted 密钥。
 ```sql
 CREATE COLUMN MASTER KEY [CMK1]
 WITH
@@ -135,7 +136,7 @@ GO
 ```
 
 
-最后我们 SSN 列将替换为已加密的列，然后运行`sp_refresh_parameter_encryption`过程可以更新的始终加密的组件。
+最后，我们将 SSN 列替换为已加密的列，然后运行`sp_refresh_parameter_encryption`该过程来更新 Always Encrypted 组件。
 ```sql
 ALTER TABLE [Patients] DROP COLUMN [SSN];
 GO
@@ -153,8 +154,8 @@ EXEC sp_refresh_parameter_encryption [find_patient];
 GO
 ```
 
-## <a name="see-also"></a>请参阅 
+## <a name="see-also"></a>另请参阅 
 
-[始终加密](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
-[始终加密向导](../../relational-databases/security/encryption/always-encrypted-wizard.md)   
+[Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+[Always Encrypted 向导](../../relational-databases/security/encryption/always-encrypted-wizard.md)   
 

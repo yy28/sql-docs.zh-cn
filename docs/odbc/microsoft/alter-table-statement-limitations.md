@@ -14,16 +14,16 @@ ms.assetid: f3e88f85-edf4-47cd-a822-292b106ddb34
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1333cd6cd5946b7a3a70152e12f4d3decfa7fed0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138425"
 ---
 # <a name="alter-table-statement-limitations"></a>ALTER TABLE 语句限制
-DBASE 或 Paradox 驱动程序使用时，一旦创建索引并添加新记录，ALTER TABLE 语句不能更改表的结构，除非删除索引和表的内容被删除。  
+使用 dBASE 或 Paradox 驱动程序时，一旦创建了一个索引并添加了新记录，ALTER TABLE 语句就不能更改该表的结构，除非删除该索引并删除该表的内容。  
   
- Microsoft Excel 或文本文件驱动程序不支持 ALTER TABLE 语句。  
+ Microsoft Excel 或文本驱动程序不支持 ALTER TABLE 语句。  
   
 > [!NOTE]  
->  当您使用 Paradox 驱动程序而无需实现 borland 公司数据库引擎时，不支持 ALTER TABLE 语句;仅读取和追加允许使用的语句。
+>  如果在不实现 Borland 数据库引擎的情况下使用 Paradox 驱动程序，则不支持 ALTER TABLE 语句;只允许使用 read 和 append 语句。

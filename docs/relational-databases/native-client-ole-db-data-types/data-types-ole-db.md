@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fd73a7498914060757a9ce4e8137638440556ae3
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73770752"
 ---
 # <a name="data-types-ole-db"></a>数据类型 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  若要执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句并使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序处理结果，必须知道 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序在绑定参数或列时，如何将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型映射到 OLE DB 数据类型行集，以及在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中使用**ITableDefinition**接口创建表的时间。  
+  若要[!INCLUDE[tsql](../../includes/tsql-md.md)]使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client OLE DB 提供程序来执行语句并处理结果，您必须知道在行集[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内绑定参数或列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，Native Client OLE DB 提供程序如何将数据类型映射到 OLE DB 数据类型，以及何时使用**ITableDefinition**接口在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]创建表。  
   
 ## <a name="in-this-section"></a>本节内容  
   

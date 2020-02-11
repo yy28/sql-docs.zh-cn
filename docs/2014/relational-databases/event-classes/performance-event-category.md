@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b7f387145077e5a562279b6c72bc0f7eefadde36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63023307"
 ---
 # <a name="performance-event-category"></a>Performance 事件类别
@@ -28,7 +28,7 @@ ms.locfileid: "63023307"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|Description|  
+|主题|说明|  
 |-----------|-----------------|  
 |[Auto Stats 事件类](auto-stats-event-class.md)|指示已自动更新索引统计信息和列统计信息。|  
 |[Degree of Parallelism (7.0 Insert) 事件类](degree-of-parallelism-7-0-insert-event-class.md)|指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已经使用串行或并行计划执行 SELECT、INSERT、UPDATE 或 DELETE 语句。 此外，还会报告用来执行该操作的 CPU 数。|  
@@ -43,7 +43,7 @@ ms.locfileid: "63023307"
 |[Plan Guide Successful 事件类](plan-guide-successful-event-class.md)|指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已成功为计划指南中包含的查询或批处理生成执行计划。|  
 |[Plan Guide Unsuccessful 事件类](plan-guide-unsuccessful-event-class.md)|指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法为计划指南中包含的查询或批处理生成执行计划。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [扩展事件](../extended-events/extended-events.md)  
   
   

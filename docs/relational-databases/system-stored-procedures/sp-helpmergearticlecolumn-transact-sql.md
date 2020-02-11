@@ -1,5 +1,5 @@
 ---
-title: sp_helpmergearticlecolumn (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpmergearticlecolumn （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ ms.assetid: 651c017b-9e9a-48f2-a0bd-6fc896eab334
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: da2eec998176dfd46ab261fa405ecaa4b6e90044
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68126444"
 ---
-# <a name="sphelpmergearticlecolumn-transact-sql"></a>sp_helpmergearticlecolumn (Transact-SQL)
+# <a name="sp_helpmergearticlecolumn-transact-sql"></a>sp_helpmergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  返回合并发布的指定表或视图项目中的列的列表。 存储过程没有列，因此如果将存储过程指定为项目，则该存储过程会返回错误。 在发布服务器上对发布数据库执行此存储的过程。  
+  返回合并发布的指定表或视图项目中的列的列表。 存储过程没有列，因此如果将存储过程指定为项目，则该存储过程会返回错误。 此存储过程在发布服务器上对发布数据库执行。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,28 +38,28 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publication = ] 'publication'` 是发布的名称。*出版物*是**sysname**，无默认值。  
+`[ @publication = ] 'publication'`发布的名称。*发布*为**sysname**，无默认值。  
   
-`[ @article = ] 'article'` 是表或视图的项目在其上检索信息的名称。*一文*是**sysname**，无默认值。  
+`[ @article = ] 'article'`要检索其信息的项目的表或视图的名称。*项目*是**sysname**，无默认值。  
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**column_id**|**sysname**|标识列。|  
+|column_id |**sysname**|标识列。|  
 |column_name |**sysname**|表或视图的列名。|  
-|**已发布**|**bit**|指定是否发布列名称。<br /><br /> **1**指定正在发布该列。<br /><br /> **0**指定未发布。|  
+|**发布**|**bit**|指定是否发布列名称。<br /><br /> **1**指定正在发布列。<br /><br /> **0**指定不发布。|  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** （成功）或**1** （失败）  
   
 ## <a name="remarks"></a>备注  
- **sp_helpmergearticlecolumn**合并复制中使用。  
+ **sp_helpmergearticlecolumn**用于合并复制。  
   
 ## <a name="permissions"></a>权限  
- 只有的成员**replmonitor**分发数据库或发布的发布访问列表中的固定的数据库角色可以执行**sp_helpmergearticlecolumn**。  
+ 只有分发数据库中**replmonitor**固定数据库角色的成员或发布的发布访问列表中的成员才能执行**sp_helpmergearticlecolumn**。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

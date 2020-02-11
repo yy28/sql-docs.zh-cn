@@ -1,5 +1,5 @@
 ---
-title: 发布信息-跟踪令牌 （事务发布，SQL Server 2005 和更高版本） |Microsoft Docs
+title: 发布信息，跟踪令牌（事务发布，SQL Server 2005 及更高版本） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 287d565947a13621fd3ba39cff6437ff76894c03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63021698"
 ---
 # <a name="publication-information-tracer-tokens-transactional-publication-sql-server-2005-and-later"></a>发布信息，跟踪令牌（事务发布，SQL Server 2005 和更高版本）
@@ -35,11 +35,11 @@ ms.locfileid: "63021698"
 ## <a name="options"></a>选项  
  若要更改网格显示数据的方式，请右键单击网格，然后单击以下选项之一：  
   
--   **排序**：在“列排序”对话框中对一列或多个列进行排序  。  
+-   **排序**：按 **“列排序”** 对话框中的一列或多列排序。  
   
--   **选择要显示的列**：在“选择列”对话框中选择要显示的列以及它们的显示顺序  。  
+-   **选择要显示的列**：选择要显示哪些列以及要在 **“选择列”** 对话框中以何种顺序显示它们。  
   
--   **筛选器**：根据“筛选设置”对话框中的列值筛选网格中的行  。  
+-   **筛选器**：根据 **“筛选设置”** 对话框中的列值筛选网格中的行。  
   
 -   **清除筛选器**：清除网格的任何筛选设置。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "63021698"
  **总滞后时间**  
  在发布服务器上提交事务和在订阅服务器上提交相应事务之间所间隔的时间。 该值表示对于此订阅服务器，此时复制系统的端对端滞后时间。 值为 **“挂起”** 指示令牌尚未到达订阅服务器。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [启动和停止复制代理 (SQL Server Management Studio)](agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   
  [启动复制监视器](monitor/start-the-replication-monitor.md)   
  [为事务复制测量滞后时间和验证连接](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   

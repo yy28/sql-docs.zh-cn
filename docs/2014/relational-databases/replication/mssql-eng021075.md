@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4647b34db4cd224e5c76f6e960a5636deaeeac8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62938513"
 ---
-# <a name="mssqleng021075"></a>MSSQL_ENG021075
+# <a name="mssql_eng021075"></a>MSSQL_ENG021075
     
 ## <a name="message-details"></a>消息详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62938513"
 |符号名称||  
 |消息正文|发布 '%s' 的初始快照尚不可用。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  如果在快照代理完成生成快照的过程之前启动分发代理或合并代理，便会引发错误 MSSQL_ENG021075。  
   
 ## <a name="user-action"></a>用户操作  
@@ -42,7 +42,7 @@ ms.locfileid: "62938513"
   
  如果错误继续出现，请增加代理的日志记录并指定日志的输出文件。 此操作可能会提供找到该错误和/或其他错误消息的步骤，具体取决于错误的上下文。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [错误和事件参考（复制）](errors-and-events-reference-replication.md)  
   
   

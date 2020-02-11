@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d735fc81e38354630eb4486bbf6ca2bdae570e6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022238"
 ---
 # <a name="performance-tuning-for-oracle-publishers"></a>Oracle 发布服务器性能优化
@@ -40,7 +40,7 @@ ms.locfileid: "63022238"
   
  若要配置事务集作业，请参阅[为 Oracle 发布服务器配置事务集作业（复制 Transact-SQL 编程）](../administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置 Oracle 发布服务器](configure-an-oracle-publisher.md)   
  [Oracle 发布概述](oracle-publishing-overview.md)  
   

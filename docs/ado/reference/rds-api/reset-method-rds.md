@@ -1,5 +1,5 @@
 ---
-title: 重置方法 (RDS) |Microsoft Docs
+title: Reset 方法（RDS） |Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,17 +14,17 @@ ms.assetid: 3957197a-f543-4d6b-9e11-67a77c2063b7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 416aaefa95871e909a12117756ea59747c555650
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963496"
 ---
 # <a name="reset-method-rds"></a>Reset 方法 (RDS)
-客户端上执行排序或筛选**记录集**基于指定的排序和筛选器属性。  
+基于指定的排序和筛选器属性对客户端**记录集**执行排序或筛选。  
   
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,19 +33,19 @@ ms.locfileid: "67963496"
 DataControl.Reset(value)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *DataControl*  
- 表示的对象变量[rds。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象。  
+ 表示 RDS 的对象变量[。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象。  
   
- *value*  
- 可选。 一个**布尔**值，该值是**True** （默认） 如果你想要当前的"筛选"行集进行筛选。 **False**指示，原始行集进行筛选，删除任何以前的筛选器选项。  
+ *负值*  
+ 可选。 如果要对当前 "筛选的" 行集进行筛选，则为**True**的**布尔**值（默认值）。 **False**表示对原始行集进行筛选，删除所有以前的筛选选项。  
   
 ## <a name="remarks"></a>备注  
- [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md)， [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md)， [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md)， [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md)，和[FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md)属性提供排序和筛选功能在客户端缓存。 排序功能的一个列中的值对记录进行排序。 筛选功能显示基于查找条件，同时完整记录的子集[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)维护在缓存中。 **重置**方法将执行条件并将替换当前**记录集**使用可更新**记录集**。  
+ [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md)、 [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md)、 [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md)、 [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md)和[FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md)属性提供客户端缓存上的排序和筛选功能。 排序功能按一个列中的值对记录进行排序。 筛选功能根据查找条件显示记录子集，而完整的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)则保留在缓存中。 **Reset**方法将执行条件，并将当前**记录集**替换为可更新的**记录集**。  
   
- 如果对尚未提交，原始数据的更改**重置**方法将失败。 首先，使用[SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md)方法以将任何更改保存在一个读/写**记录集**，然后使用**重置**方法进行排序或筛选记录。  
+ 如果对尚未提交的原始数据进行了更改，则**Reset**方法将失败。 首先，使用[SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md)方法在读/写**记录集中**保存所有更改，然后使用**Reset**方法对记录进行排序或筛选。  
   
- 如果你想要在行集上执行多个筛选器，则可以使用可选*布尔*自变量与**重置**方法。 下面的示例演示如何执行此操作：  
+ 如果要在行集上执行多个筛选器，可以将可选的*布尔*参数与**Reset**方法一起使用。 以下示例介绍如何执行此操作：  
   
 ```  
 ADC.SQL = "Select au_lname from authors"  
@@ -70,11 +70,11 @@ ADC.FilterValue = "'T'"
 ADC.Reset(FALSE)   ' Rowset now has all Last Names > "T".  
 ```  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>请参阅  
- [FilterColumn、 FilterCriterion、 FilterValue，SortColumn 和 SortDirection 属性和重置方法示例 (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
+## <a name="see-also"></a>另请参阅  
+ [FilterColumn、FilterCriterion、FilterValue、SortColumn 和 SortDirection 属性和 Reset 方法示例（VBScript）](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
  [SubmitChanges 方法 (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: ErrorControl 属性 （SqlService 类） |Microsoft Docs
+title: ErrorControl 属性（SqlService 类） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 89cdfa63bff88c4f4bb5954402034b31ad7f77ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63060981"
 ---
 # <a name="errorcontrol-property-sqlservice-class"></a>ErrorControl 属性（SqlService 类）
@@ -37,16 +37,16 @@ object
 ```  
   
 ## <a name="parts"></a>组成部分  
- *object*  
+ *对象*  
  一个表示服务的 [SqlService 类](sqlservice-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个字符串值，用于指定启动期间服务无法启动时所报告的错误的严重性。 下表列出了可能的值。  
   
- Ignore  
+ 忽略  
  不通知用户。  
   
- 正常  
+ 一般  
  通知用户。  
   
  Severe  
@@ -55,13 +55,13 @@ object
  严重  
  系统将尝试使用正确的配置重新启动。  
   
- Unknown  
+ 未知  
  严重性未知。  
   
 ## <a name="remarks"></a>备注  
  此值指示出现故障时启动程序采取的操作。 所有的错误都由计算机系统记录。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [启动和停止服务](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

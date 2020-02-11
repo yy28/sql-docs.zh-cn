@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 52d059977481236883be931a78a302c249f43ae4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63137548"
 ---
 # <a name="sql-native-client-110-configuration"></a>SQL Native Client 11.0 配置
-  本节包含了按 F1 后看到的有关  配置管理器中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对话框的帮助主题。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 是客户端计算机用于连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的网络库，与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一起启动。  
+  本节包含了按 F1 后看到的有关 **** 配置管理器中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对话框的帮助主题。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client 是客户端计算机用于连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的网络库，从开始。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 配置中配置的设置将在运行客户端程序的计算机上使用。 在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的计算机上配置这些设置时，它们仅影响那些运行在服务器上的客户端程序。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "63137548"
   
     -   [客户端协议 - Shared Memory 属性（“协议”选项卡）](../../../2014/tools/configuration-manager/client-protocols-shared-memory-properties-protocol-tab.md)  
   
-    -   [客户端协议-TCP 和 IP 属性&#40;协议选项卡&#41;](../../../2014/tools/configuration-manager/client-protocols-tcp-and-ip-properties-protocol-tab.md)  
+    -   [客户端协议-TCP 和 IP 属性 &#40;协议选项卡&#41;](../../../2014/tools/configuration-manager/client-protocols-tcp-and-ip-properties-protocol-tab.md)  
   
     -   [客户端协议 - Named Pipes 属性（“协议”选项卡）](../../../2014/tools/configuration-manager/client-protocols-named-pipes-properties-protocol-tab.md)  
   
@@ -50,6 +50,6 @@ ms.locfileid: "63137548"
   
     -   [使用 TCP IP 创建有效的连接字符串](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)  
   
-    -   [使用 Named Pipes 创建有效的连接字符串](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-named-pipes.md)  
+    -   [使用命名管道创建有效的连接字符串](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-named-pipes.md)  
   
   

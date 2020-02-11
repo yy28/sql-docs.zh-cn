@@ -1,5 +1,5 @@
 ---
-title: Find 方法示例 (VB) |Microsoft Docs
+title: Find 方法示例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: bbf27dcc-9815-4e2f-8ea8-b8c9fe6dedd6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6513daf2a2d57b0ed2b9d68f6232112d238de037
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932629"
 ---
 # <a name="find-method-example-vb"></a>Find 方法示例 (VB)
-此示例使用[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象的[查找](../../../ado/reference/ado-api/find-method-ado.md)方法定位并业务中的标题数目进行计数***Pubs***数据库。 该示例假定基础提供程序不支持类似的功能。  
+此示例使用[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)对象的[Find](../../../ado/reference/ado-api/find-method-ado.md)方法来查找和计算***Pubs***数据库中业务标题的数目。 该示例假定基础提供程序不支持类似的功能。  
   
 ```  
 'BeginFindVB  
@@ -99,6 +99,6 @@ End Sub
 'EndFindVB  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [Find 方法 (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
+## <a name="see-also"></a>另请参阅  
+ [Find 方法（ADO）](../../../ado/reference/ado-api/find-method-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

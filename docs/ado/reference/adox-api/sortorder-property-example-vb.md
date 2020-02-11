@@ -1,5 +1,5 @@
 ---
-title: SortOrder 属性示例 (VB) |Microsoft Docs
+title: SortOrder 属性示例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4fe5c9bc18e0bc84dc8629ebc42227dad01ea3ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965191"
 ---
 # <a name="sortorder-property-example-vb"></a>SortOrder 属性示例 (VB)
-此示例演示[SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md)的属性[列](../../../ado/reference/adox-api/column-object-adox.md)已追加到[列](../../../ado/reference/adox-api/columns-collection-adox.md)系列[索引](../../../ado/reference/adox-api/index-object-adox.md)。 代码中的国家/地区列中附加一个升序索引**员工**表，然后显示记录。 然后代码将追加到中的国家/地区列的降序索引**员工**表，然后再次显示的记录。 显示按升序和降序排列索引之间的差异。  
+此示例演示已追加到[索引](../../../ado/reference/adox-api/index-object-adox.md)的[Columns](../../../ado/reference/adox-api/columns-collection-adox.md)集合的[列](../../../ado/reference/adox-api/column-object-adox.md)的[SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md)属性。 该代码将升序索引追加到**Employees**表中的 Country 列，然后显示记录。 然后，该代码将向**Employees**表中的 "国家/地区" 列附加一个降序索引，并再次显示记录。 显示升序和降序索引之间的差异。  
   
 ```  
 ' BeginSortOrderVB  
@@ -136,8 +136,8 @@ End Sub
 ' EndSortOrderVB  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [列对象 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [列集合 (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [索引对象 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
+## <a name="see-also"></a>另请参阅  
+ [列对象（ADOX）](../../../ado/reference/adox-api/column-object-adox.md)   
+ [列集合（ADOX）](../../../ado/reference/adox-api/columns-collection-adox.md)   
+ [Index 对象（ADOX）](../../../ado/reference/adox-api/index-object-adox.md)   
  [SortOrder 属性 (ADOX)](../../../ado/reference/adox-api/sortorder-property-adox.md)

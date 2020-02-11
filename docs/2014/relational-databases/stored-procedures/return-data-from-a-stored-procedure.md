@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6b11f924ce5692378896f1fd7d50186861abf223
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63140428"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>从存储过程中返回数据
@@ -27,7 +27,8 @@ ms.locfileid: "63140428"
  如果在过程定义中为参数指定 OUTPUT 关键字，则过程在退出时可将该参数的当前值返回给调用程序。 若要将参数值保存在可在调用程序中使用的变量中，调用程序在执行过程时必须使用 OUTPUT 关键字。 有关可用作输出参数的数据类型的详细信息，请参阅 [CREATE PROCEDURE (Transact-SQL)](/sql/t-sql/statements/create-procedure-transact-sql)。  
   
 ### <a name="examples-of-output-parameter"></a>输出参数的示例  
- 以下示例显示有一个输入参数和一个输出参数的过程。 `@SalesPerson` 参数将接收由调用程序指定的输入值。 SELECT 语句使用传递给输入参数的值来获取正确的 `SalesYTD` 值。 SELECT 语句还将该值赋给 `@SalesYTD` 输出参数，该参数在过程退出时将值返回给调用程序。  
+ 以下示例显示有一个输入参数和一个输出参数的过程。 
+  `@SalesPerson` 参数将接收由调用程序指定的输入值。 SELECT 语句使用传递给输入参数的值来获取正确的 `SalesYTD` 值。 SELECT 语句还将该值赋给 `@SalesYTD` 输出参数，该参数在过程退出时将值返回给调用程序。  
   
 ```  
 USE AdventureWorks2012;  
@@ -71,10 +72,11 @@ GO
  如果在调用过程时为参数指定 OUTPUT，而在过程定义中该参数又不是用 OUTPUT 定义的，那么将收到一条错误消息。 但是，在执行过程时，可以执行带有输出参数的过程而不指定 OUTPUT。 这样不会返回错误，但将无法在调用程序中使用输出值。  
   
 ### <a name="using-the-cursor-data-type-in-output-parameters"></a>在 OUTPUT 参数中使用 cursor 数据类型  
- [!INCLUDE[tsql](../../../includes/tsql-md.md)] 可以使用过程`cursor`数据类型用于 OUTPUT 参数。 如果`cursor`数据类型指定为参数，则必须为过程定义中该参数指定 VARYING 和 OUTPUT 关键字。 可以将参数指定为仅限 OUTPUT，但如果在参数声明中指定了 VARYING 关键字，则数据类型必须为`cursor`，并且还必须指定 OUTPUT 关键字。  
+ [!INCLUDE[tsql](../../../includes/tsql-md.md)]过程只能将`cursor`数据类型用于 OUTPUT 参数。 如果为`cursor`参数指定了数据类型，则必须在过程定义中为该参数指定不同和输出关键字。 参数只能指定为 OUTPUT，但如果在参数声明中指定了不同的关键字，则数据类型必须为`cursor` ，还必须指定 OUTPUT 关键字。  
   
 > [!NOTE]  
->  `cursor` 数据类型不能通过数据库 API（例如 OLE DB、ODBC、ADO 和 DB-Library）绑定到应用程序变量上。 因为必须先绑定 OUTPUT 参数，应用程序才可以执行过程，所以带有 `cursor` OUTPUT 参数的过程不能通过数据库 API 调用。 只有将 `cursor` OUTPUT 变量分配给 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 局部 `cursor` 变量时，才可以通过 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 批处理、过程或触发器调用这些过程。  
+>  
+  `cursor` 数据类型不能通过数据库 API（例如 OLE DB、ODBC、ADO 和 DB-Library）绑定到应用程序变量上。 因为必须先绑定 OUTPUT 参数，应用程序才可以执行过程，所以带有 `cursor` OUTPUT 参数的过程不能通过数据库 API 调用。 只有将 [!INCLUDE[tsql](../../../includes/tsql-md.md)] OUTPUT 变量分配给 `cursor` 局部 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 变量时，才可以通过 `cursor` 批处理、过程或触发器调用这些过程。  
   
 ### <a name="rules-for-cursor-output-parameters"></a>cursor 输出参数的规则  
  在执行过程时，以下规则适用于 `cursor` 输出参数：  
@@ -104,7 +106,7 @@ GO
     >  关闭状态只有在返回时才有影响。 例如，可以在过程中关闭游标，稍后再打开游标，然后将该游标的结果集返回给调用批处理、过程或触发器。  
   
 ### <a name="examples-of-cursor-output-parameters"></a>cursor 输出参数的示例  
- 在以下示例中，创建过程的指定输出参数， `@currency`_`cursor`使用`cursor`数据类型。 然后在批处理中调用该过程。  
+ 在下面的示例中，创建了使用`@currency``cursor` `cursor`数据类型指定输出参数 _ 的过程。 然后在批处理中调用该过程。  
   
  首先，创建以下过程，在 Currency 表上声明并打开一个游标。  
   
@@ -145,14 +147,14 @@ GO
 ```  
   
 ## <a name="returning-data-using-a-return-code"></a>使用返回代码返回数据  
- 过程可以返回一个整数值（称为“返回代码”），以指示过程的执行状态。 使用 RETURN 语句指定过程的返回代码。 与 OUTPUT 参数一样，执行过程时必须将返回代码保存到变量中，才能在调用程序中使用返回代码值。 例如，赋值变量`@result`的数据类型`int`用于存储过程的返回代码`my_proc`，如：  
+ 过程可以返回一个整数值（称为“返回代码”），以指示过程的执行状态。 使用 RETURN 语句指定过程的返回代码。 与 OUTPUT 参数一样，执行过程时必须将返回代码保存到变量中，才能在调用程序中使用返回代码值。 例如，数据类型`@result` `int`的赋值变量用于存储来自过程`my_proc`的返回代码，如：  
   
 ```  
 DECLARE @result int;  
 EXECUTE @result = my_proc;  
 ```  
   
- 返回代码通常用在过程内的控制流块中，以便为每种可能的错误情况设置返回代码值。 可以在 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句后使用 @@ERROR 函数，来检测该语句执行过程中是否有错误发生。  
+ 返回代码通常用在过程内的控制流块中，以便为每种可能的错误情况设置返回代码值。 可以在 @ERROR 语句后使用 @[!INCLUDE[tsql](../../../includes/tsql-md.md)] 函数，来检测该语句执行过程中是否有错误发生。  
   
 ### <a name="examples-of-return-codes"></a>返回代码的示例  
  下面的示例显示了带有错误处理设置（为各种错误设置特殊返回代码值）的 `usp_GetSalesYTD` 过程。 下表显示了由过程分配给每个可能错误的整数值，以及每个值的相应含义。  
@@ -253,12 +255,12 @@ GO
   
 ```  
   
-## <a name="see-also"></a>请参阅  
- [DECLARE @local_variable (Transact-SQL)](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
- [PRINT (Transact-SQL)](/sql/t-sql/language-elements/print-transact-sql)   
- [SET @local_variable (Transact-SQL)](/sql/t-sql/language-elements/set-local-variable-transact-sql)   
+## <a name="see-also"></a>另请参阅  
+ [DECLARE @local_variable &#40;transact-sql&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
+ [&#40;Transact-sql&#41;打印](/sql/t-sql/language-elements/print-transact-sql)   
+ [设置@local_variable &#40;transact-sql&#41;](/sql/t-sql/language-elements/set-local-variable-transact-sql)   
  [游标](../cursors.md)   
- [RETURN (Transact-SQL)](/sql/t-sql/language-elements/return-transact-sql)   
+ [返回 &#40;Transact-sql&#41;](/sql/t-sql/language-elements/return-transact-sql)   
  [@@ERROR (Transact-SQL)](/sql/t-sql/functions/error-transact-sql)  
   
   

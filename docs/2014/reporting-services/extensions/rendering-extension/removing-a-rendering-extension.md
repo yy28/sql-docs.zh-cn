@@ -15,16 +15,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 77a8a9ac44b35f338f978913985617e4f264ddb7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62988063"
 ---
 # <a name="removing-a-rendering-extension"></a>删除呈现扩展插件
-  若要删除[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]呈现扩展插件，只需删除`Extension`元素的呈现扩展插件从 rsreportserver.config 文件中，位于 **%ProgramFiles%\Microsoft SQL Server\MSRS10_50。\<实例名称 > services\reportserver**文件夹。 如果为报表服务器或报表设计器生成条目，则删除`Extension`元素从[RSReportDesigner Configuration File](../../report-server/rsreportdesigner-configuration-file.md)也。 在删除配置信息之后，该呈现扩展插件对于该组件将不再可用。  
+  若要删除[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]呈现扩展插件，只需`Extension`从 rsreportserver.config 文件中删除呈现扩展插件的元素，该元素位于 **%ProgramFiles%\Microsoft SQL Server \ MSRS10_50 中\< 。实例名> \Reporting Services\ReportServer**文件夹。 如果为报表设计器和 Report Server 生成了条目，则也从`Extension` [rsreportdesigner.config 配置文件](../../report-server/rsreportdesigner-configuration-file.md)中删除该元素。 在删除配置信息之后，该呈现扩展插件对于该组件将不再可用。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Reporting Services 配置文件](../../report-server/reporting-services-configuration-files.md)   
  [实现呈现扩展插件](implementing-a-rendering-extension.md)   
  [呈现扩展插件概述](rendering-extensions-overview.md)   

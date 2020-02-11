@@ -1,5 +1,5 @@
 ---
-title: IHpublisherconstraints (Transact SQL) |Microsoft Docs
+title: IHpublisherconstraints （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,28 +18,28 @@ ms.assetid: 537b1e1a-7228-4680-aa27-5ad7072ea01e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 44987e1b610483e6ce3cbca26c1efb8a1ef4c241
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67990261"
 ---
 # <a name="ihpublisherconstraints-transact-sql"></a>IHpublisherconstraints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **IHpublisherconstraints**系统表中占一行复制从非 SQL Server 发布服务器使用当前分发服务器的每个约束。 此表存储在分发数据库中。  
+  使用当前分发服务器从非 SQL Server 发布服务器复制的每个约束在**IHpublisherconstraints**系统表中各占一行。 此表存储在分发数据库中。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**publisherconstraint_id**|**int**|标识所发布的约束。|  
-|**table_id**|**int**|标识从表[IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md)约束所属。|  
-|**publisher_id**|**smallint**|标识非 SQL Server 发布服务器从其发布该列。|  
-|**名称**|**sysname**|所发布的约束的名称。|  
-|**类型**|**nvarchar(255)**|受支持的约束类型从[IHconstrainttypes](../../relational-databases/system-tables/ihconstrainttypes-transact-sql.md)系统表。|  
+|table_id |**int**|标识约束所属的[IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md)中的表。|  
+|**publisher_id**|**smallint**|标识正在发布该列的非 SQL Server 发布服务器。|  
+|**名称**|**Sysname**|所发布的约束的名称。|  
+|类型 |**nvarchar(255)**|[IHconstrainttypes](../../relational-databases/system-tables/ihconstrainttypes-transact-sql.md)系统表中受支持的约束类型。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [异类数据库复制](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [复制表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

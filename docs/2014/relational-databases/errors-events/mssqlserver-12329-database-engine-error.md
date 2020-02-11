@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1ab8f54e274f92e3ff9a320c57bd91b527d474ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915878"
 ---
-# <a name="mssqlserver12329"></a>MSSQLSERVER_12329
+# <a name="mssqlserver_12329"></a>MSSQLSERVER_12329
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62915878"
 |符号名称|HK_UNSUPPORTED_NON_LATIN_CODEPAGE|  
 |消息正文|*construct* 不支持排序规则中代码页不是 1252 的数据类型 char(n) 和 varchar(n)。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  请勿使用排序规则中代码页不是 1252 的数据类型 char(n) 和 varchar(n)。  
   
 ## <a name="user-action"></a>用户操作  

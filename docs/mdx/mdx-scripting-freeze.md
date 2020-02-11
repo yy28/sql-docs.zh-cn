@@ -1,5 +1,5 @@
 ---
-title: 冻结语句 (MDX) |Microsoft Docs
+title: 冻结语句（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 4738dab411fe55808034a6d9d81a16994089ea74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138289"
 ---
 # <a name="mdx-scripting---freeze"></a>MDX 脚本 - FREEZE
@@ -32,7 +32,7 @@ FREEZE Subcube_Expression
  返回子多维数据集的有效多维表达式 (MDX)。  
   
 ## <a name="remarks"></a>备注  
- **冻结**语句锁定指定的子多维数据集中的单元格的值，防止 MDX 中的后续语句更改其值在后续计算中使用的脚本将传递。  
+ **冻结**语句锁定指定子多维数据集中的单元的值，阻止 MDX 脚本中的后续语句在后续计算传递中更改其值。  
   
  在下面的示例中，A 和 B 表示 MDX 计算脚本中的子多维数据集：  
   
@@ -44,7 +44,7 @@ B = 3
   
  此时，A 和 B 都等于 3。  
   
- 现在，我们将**冻结**函数来锁定 A 子多维数据集中的单元格：  
+ 现在，我们插入了**冻结**函数以锁定子多维数据集中的单元：  
   
 ```  
 B = 2;  
@@ -55,7 +55,7 @@ B = 3
   
  现在 A 等于 2，B 等于 3。  
   
-## <a name="see-also"></a>请参阅  
- [MDX 脚本编写语句 (MDX)](../mdx/mdx-scripting-statements-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [Mdx 脚本语句 &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

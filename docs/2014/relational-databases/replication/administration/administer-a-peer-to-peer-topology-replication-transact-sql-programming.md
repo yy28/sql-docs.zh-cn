@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0cabfb4cd21de54dad2be1323fd29d8bb3bf076
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629718"
 ---
 # <a name="administer-a-peer-to-peer-topology-replication-transact-sql-programming"></a>管理对等拓扑（复制 Transact-SQL 编程）
@@ -37,7 +37,7 @@ ms.locfileid: "62629718"
   
 4.  通过使用 [bcp 实用工具](../../../tools/bcp-utility.md)在所有节点上以手动方式为新表大容量复制数据。  
   
-5.  执行 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)，在拓扑中的每个节点上创建新项目。 有关详细信息，请参阅 [定义项目](../publish/define-an-article.md)。  
+5.  执行 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) ，在拓扑中的每个节点上创建新项目。 有关详细信息，请参阅 [定义项目](../publish/define-an-article.md)。  
   
     > [!NOTE]  
     >  执行 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 之后，复制会将此项目自动添加到拓扑中的订阅。  
@@ -61,9 +61,9 @@ ms.locfileid: "62629718"
   
  [!code-sql[HowTo#sp_addp2particle_createarticle](../../../snippets/tsql/SQL15/replication/howto/tsql/addp2particle.sql#sp_addp2particle_createarticle)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [复制管理常见问题解答](frequently-asked-questions-for-replication-administrators.md)   
  [SQL Server 数据库的备份和还原](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [对等事务复制](../transactional/peer-to-peer-transactional-replication.md)  
+ [@loopback_detection](../transactional/peer-to-peer-transactional-replication.md)  
   
   

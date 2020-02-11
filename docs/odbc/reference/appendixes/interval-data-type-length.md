@@ -15,21 +15,21 @@ ms.assetid: e9eb38d8-f9db-4401-8c62-aa394054cbbf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a456db12ddb2594dc7b4c9e4f5c26e9cb4245621
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67947597"
 ---
 # <a name="interval-data-type-length"></a>间隔数据类型长度
-以下规则用于确定以字符为单位的时间间隔数据类型的长度。 中的字符数表示长度。 字节数取决于的字符集。 长度包括加在一起的以下值：  
+以下规则用于确定间隔数据类型的长度（字符）。 长度用字符数表示。 字节数取决于字符集。 长度包含同时添加的以下值：  
   
--   不是前导字段的时间间隔中每个字段的两个字符。  
+-   间隔中的每个字段都不是前导字段，两个字符。  
   
--   对于前导字段，或隐式前导精度的字符数。 如果未指定前导精度，默认值为 2。  
+-   对于前导字段，是表示快速或隐式前导精度的字符数。 如果未指定前导精度，则默认值为2。  
   
--   一个字符的字段之间的分隔符。  
+-   字段之间的分隔符为一个字符。  
   
--   加一的明示或暗示的秒精度。 如果未指定的秒精度，默认值为 6。  
+-   一，加上一个表达或隐含的秒精度。 如果未指定秒精度，则默认值为6。  
   
- 中包含的每个间隔数据类型的特定列长度值[列大小](../../../odbc/reference/appendixes/column-size.md)。
+ 每个间隔数据类型的特定列长度值都包含在[列大小](../../../odbc/reference/appendixes/column-size.md)中。

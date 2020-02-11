@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 898f16c0b0588fe61ae76e1e86e85713ba3f898a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63137494"
 ---
 # <a name="sql-server-agent-properties-advanced-tab"></a>SQL Server 代理属性（“高级”选项卡）
@@ -31,7 +31,7 @@ ms.locfileid: "63137494"
  显示发生错误时内存转储的存放位置。  
   
  **错误报告**  
- 当设置为“是”  时，如果发生严重错误，Dr. Watson 程序将把相关信息转发给 [!INCLUDE[msCoName](../../includes/msconame-md.md)]，或转发给错误服务器。 有关错误报告的详细信息，请在联机丛书中搜索主题“错误和使用报告设置”。  
+ 当设置为 **“是”** 时，如果发生严重错误，Dr. Watson 程序将把相关信息转发给 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ，或转发给错误服务器。 有关错误报告的详细信息，请在联机丛书中搜索主题“错误和使用报告设置”。  
   
  **实例 ID**  
  指示使用此服务的实例。  

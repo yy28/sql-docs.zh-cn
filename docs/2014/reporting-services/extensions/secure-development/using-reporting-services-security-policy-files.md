@@ -19,14 +19,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ee7ba55e48f4704c912e92a4d8352e7c891c06b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62989679"
 ---
 # <a name="using-reporting-services-security-policy-files"></a>使用 Reporting Services 安全策略文件
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 将组件安全策略信息存储在三个配置文件中，而这三个配置文件会在安装过程中复制到文件系统。 这些配置文件可以包含 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中代码程序集的内部使用安全策略和用户定义安全策略的组合。 三个配置文件对应于中的三个安全对象组件[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]:报表服务器和 Windows 服务、 报表管理器 Web 应用程序和报表设计器预览窗口。  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 将组件安全策略信息存储在三个配置文件中，而这三个配置文件会在安装过程中复制到文件系统。 这些配置文件可以包含 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中代码程序集的内部使用安全策略和用户定义安全策略的组合。 三个配置文件与 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的三个安全对象组件相对应：报表服务器和 Windows 服务、报表管理器 Web 应用程序以及报表设计器预览窗口。  
   
 > [!NOTE]  
 >  报表设计器有两种预览模式：预览选项卡以及在以 DebugLocal 模式启动报表项目时启动的弹出式预览窗口  。 “预览”选项卡不是安全对象组件，不应用安全策略设置  。 预览窗口旨在模拟报表服务器的功能，因此具有策略配置文件，您或管理员必须修改该文件才能在报表设计器中使用自定义程序集和自定义扩展插件。  
@@ -36,7 +36,7 @@ ms.locfileid: "62989679"
 ## <a name="policy-files-in-reporting-services"></a>Reporting Services 中的策略文件  
  下表列出了 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的策略配置文件、文件位置（假定默认安装）及其各自的功能。  
   
-|File name|位置（默认安装）|Description|  
+|文件名|位置（默认安装）|说明|  
 |---------------|---------------------------------------|-----------------|  
 |rssrvpolicy.config|C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer|报表服务器策略配置文件。 在将报表部署到报表服务器之后，这些安全策略主要影响报表表达式和自定义程序集。 此策略文件还影响部署到报表服务器的自定义数据、传递、呈现和安全扩展插件。|  
 |rsmgrpolicy.config|C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager|报表管理器策略配置文件。 这些安全策略影响扩展报表管理器的所有程序集，例如用于自定义传递的订阅用户界面扩展插件。|  
@@ -81,7 +81,7 @@ ms.locfileid: "62989679"
   
  可以逐个添加其他代码组。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [了解安全策略](understanding-security-policies.md)  
   
   

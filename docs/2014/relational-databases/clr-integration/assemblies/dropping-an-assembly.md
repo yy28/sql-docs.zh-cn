@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d7dceef4651804dabf4080d6f8b85d0597b1957b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919622"
 ---
 # <a name="dropping-an-assembly"></a>删除程序集
@@ -43,7 +43,7 @@ DROP ASSEMBLY MyDotNETAssembly
 -   在数据库中使用 WITH SCHEMABINDING 子句创建了使用 UDT 变量或参数的函数、存储过程或触发器。  
   
 ### <a name="finding-udt-dependencies"></a>查找 UDT 依赖关系  
- 在执行 DROP TYPE 语句之前，首先必须删除所有依赖对象。 以下[!INCLUDE[tsql](../../../includes/tsql-md.md)]查询找到的所有列和参数使用 UDT **AdventureWorks**数据库。  
+ 在执行 DROP TYPE 语句之前，首先必须删除所有依赖对象。 下面[!INCLUDE[tsql](../../../includes/tsql-md.md)]的查询查找使用**AdventureWorks**数据库中的 UDT 的所有列和参数。  
   
 ```  
 USE Adventureworks;  
@@ -63,14 +63,14 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
     ON at.user_type_id = c.user_type_id;   
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [管理 CLR 集成程序集](managing-clr-integration-assemblies.md)   
  [更改程序集](altering-an-assembly.md)   
  [创建程序集](creating-an-assembly.md)   
- [DROP AGGREGATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-aggregate-transact-sql)   
- [DROP FUNCTION (Transact-SQL)](/sql/t-sql/statements/drop-function-transact-sql)   
- [DROP PROCEDURE (Transact-SQL)](/sql/t-sql/statements/drop-procedure-transact-sql)   
+ [DROP &#40;Transact-sql&#41;](/sql/t-sql/statements/drop-aggregate-transact-sql)   
+ [DROP FUNCTION &#40;Transact-sql&#41;](/sql/t-sql/statements/drop-function-transact-sql)   
+ [DROP PROCEDURE &#40;Transact-sql&#41;](/sql/t-sql/statements/drop-procedure-transact-sql)   
  [DROP TRIGGER (Transact-SQL)](/sql/t-sql/statements/drop-trigger-transact-sql)   
- [DROP TYPE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-type-transact-sql)  
+ [DROP TYPE &#40;Transact-sql&#41;](/sql/t-sql/statements/drop-type-transact-sql)  
   
   

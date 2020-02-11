@@ -1,5 +1,5 @@
 ---
-title: ConnectionTimeout 属性 (ADO) |Microsoft Docs
+title: ConnectionTimeout 属性（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,27 +16,27 @@ ms.assetid: 8904a403-1383-4b4b-b53d-5c01d6f5deac
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 03d3de2c4aabaf4ad8cbc45d9900b33883ff9a48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933467"
 ---
 # <a name="connectiontimeout-property-ado"></a>ConnectionTimeout 属性 (ADO)
-指示时建立的连接终止尝试并生成错误之前所等待的时间。  
+指示在终止尝试并生成错误之前建立连接时等待的时间。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
- 设置或返回**长**值，该值指示，以秒为单位，多长时间等待要打开的连接。 默认值为 15。  
+ 设置或返回一个**长整型**值，该值指示等待连接打开的时间（以秒为单位）。 默认为 15.  
   
 ## <a name="remarks"></a>备注  
- 使用**ConnectionTimeout**上的属性[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象，如果从网络流量或大量服务器，请使用延迟进行必要放弃的连接尝试。 如果从时间**ConnectionTimeout**属性设置达到在连接打开之前发生错误和 ADO 取消尝试。 如果将属性设置为零，ADO 将等待无限期地打开连接。 请确保你编写的代码提供程序支持**ConnectionTimeout**功能。  
+ 使用[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象的**ConnectionTimeout**属性。如果从网络流量或繁重服务器使用延迟，则需要放弃连接尝试。 如果在打开连接之前， **ConnectionTimeout**属性设置的时间已过，则会发生错误并且 ADO 会取消尝试。 如果将属性设置为零，则 ADO 将无限期地等待连接打开。 请确保编写代码的提供程序支持**ConnectionTimeout**功能。  
   
- **ConnectionTimeout**时该连接已关闭，只读方式打开时，属性为读/写。  
+ 当连接关闭时， **ConnectionTimeout**属性是可读/写的，并且在打开时为只读。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>请参阅  
- [ConnectionString、 ConnectionTimeout 和 State 属性示例 (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
- [ConnectionString、 ConnectionTimeout 和 State 属性示例 （VC + +）](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
+## <a name="see-also"></a>另请参阅  
+ [ConnectionString、ConnectionTimeout 和 State 属性示例（VB）](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
+ [ConnectionString、ConnectionTimeout 和 State 属性示例（VC + +）](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
  [CommandTimeout 属性 (ADO)](../../../ado/reference/ado-api/commandtimeout-property-ado.md)

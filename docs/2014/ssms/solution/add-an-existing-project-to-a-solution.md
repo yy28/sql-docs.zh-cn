@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 84ee67faf36668a297cdfd801a84147ed236ce50
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62956072"
 ---
 # <a name="add-an-existing-project-to-a-solution"></a>在解决方案中添加现有项目
@@ -39,8 +39,8 @@ ms.locfileid: "62956072"
 > [!NOTE]  
 >  在多开发人员环境中，从共享目录添加现有项目之前，应确保所做更改不会影响或覆盖其他开发人员所做的更改。  
   
-## <a name="see-also"></a>请参阅  
- [项目&#40;SQL Server Management Studio&#41;](projects-sql-server-management-studio.md)   
+## <a name="see-also"></a>另请参阅  
+ [项目 &#40;SQL Server Management Studio&#41;](projects-sql-server-management-studio.md)   
  [解决方案 (SQL Server Management Studio)](solutions-sql-server-management-studio.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: CursorLocation 属性 (ADO) |Microsoft Docs
+title: CursorLocation 属性（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,35 +17,35 @@ ms.assetid: 39c8d86e-7ee9-4182-be5e-aad5ce952f84
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: afee71d4f37e2b3a27247fbeacf51dab66cc1e23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933286"
 ---
 # <a name="cursorlocation-property-ado"></a>CursorLocation 属性 (ADO)
 指示游标服务的位置。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
- 设置或返回**长**值，可以设置为之一[CursorLocationEnum](../../../ado/reference/ado-api/cursorlocationenum.md)值。  
+ 设置或返回一个可以设置为[CursorLocationEnum](../../../ado/reference/ado-api/cursorlocationenum.md)值之一的**Long**值。  
   
 ## <a name="remarks"></a>备注  
- 此属性可以访问该提供程序的各种游标库之间进行选择。 通常情况下，可以选择使用客户端游标库或其中一个位于服务器上。  
+ 此属性允许您在提供程序可访问的各种游标库之间进行选择。 通常，你可以选择使用客户端游标库还是位于服务器上的一个。  
   
- 此属性设置会影响仅后设置该属性建立的连接。 更改**CursorLocation**属性不起作用的现有连接。  
+ 此属性设置只影响在设置了属性后建立的连接。 更改**CursorLocation**属性不会影响现有连接。  
   
- 通过返回的游标[Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md)方法将继承此设置。 **记录集**对象将自动继承此设置其关联的连接。  
+ [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md)方法返回的游标继承了此设置。 **记录集**对象将自动从其关联的连接继承此设置。  
   
- 此属性为读/写上[连接](../../../ado/reference/ado-api/connection-object-ado.md)或已关闭[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，和上一个打开只读**记录集**。  
+ 此属性在[连接](../../../ado/reference/ado-api/connection-object-ado.md)或关闭的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)上是可读/写的，在打开的**记录集中**为只读。  
   
 > [!NOTE]
->  **远程数据服务使用情况**客户端上使用时**记录集**或**连接**对象**CursorLocation**属性只能设置为**adUseClient**。  
+>  **远程数据服务使用情况**使用客户端**记录集**或**连接**对象时，只能将**CursorLocation**属性设置为**adUseClient**。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
   
 |||  
 |-|-|  
 |[连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [附录 A：提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)

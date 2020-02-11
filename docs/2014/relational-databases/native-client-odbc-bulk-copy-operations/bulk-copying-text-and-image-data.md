@@ -1,5 +1,5 @@
 ---
-title: 大容量复制 Text 和 Image 数据 |Microsoft Docs
+title: 大容量复制文本和图像数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c468ec3cf52526192893458055cde857aeaa864d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067473"
 ---
 # <a name="bulk-copying-text-and-image-data"></a>大容量复制文本和图像数据
-  大型**文本**， **ntext**，并**图像**的值为大容量复制使用[bcp_moretext](../native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)函数。 你的代码[bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)有关**文本**， **ntext**，或**映像**列*pData*指针设置为数据将提供 NULL，指示**bcp_moretext**。 务必要指定每个提供数据的确切长度**文本**， **ntext**，或**图像**中每个大容量复制行的列。 如果列数据的长度不同于中指定的列长度[bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)，使用[bcp_collen](../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)长度设置为适当的值。 一个[bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)发送所有非**文本**、 非-**ntext**，和非-**映像**数据;，然后调用**bcp_moretext**发送**文本**， **ntext**，或**映像**单独单元中的数据。 大容量复制函数可确定已将当前的所有数据**文本**， **ntext**，或**图像**列时通过都发送的数据的长度之和**bcp_moretext**等于最新版本中指定的长度**bcp_collen**或**bcp_bind**。  
+  使用[bcp_moretext](../native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)函数大容量复制较大的**text**、 **ntext**和**image**值。 为**text**、 **ntext**或**image**列编写[bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) ，并将*pData*指针设置为 NULL，指示将使用**bcp_moretext**提供数据。 务必指定为每个大容量复制行中的每个**text**、 **ntext**或**image**列提供的数据的准确长度。 如果列的数据长度与[bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)中指定的列长度不同，则使用[bcp_collen](../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)将长度设置为正确的值。 [Bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)发送所有非**文本**、非**ntext**和非**图像**数据;然后，调用**bcp_moretext**以单独的单位发送**text**、 **ntext**或**image**数据。 大容量复制函数确定当通过**bcp_moretext**发送的数据的长度之和等于最新**bcp_collen**或**bcp_bind**中指定的长度时，已发送当前**text**、 **ntext**或**image**列的所有数据。  
   
- **bcp_moretext**没有参数，用于标识列。 如果有多个**文本**， **ntext**，或**图像**某行中，列**bcp_moretext**对**文本**， **ntext**，或**图像**具有最低序号和继续执行到具有最高序号的列的列开头的列。 **bcp_moretext**会从一列到下一步时发送的数据的长度之和等于最新版本中指定的长度**bcp_collen**或**bcp_bind**当前列。  
+ **bcp_moretext**没有用于标识列的参数。 如果一行中有多个**text**、 **ntext**或**image**列， **bcp_moretext**将对以具有最低序号的列执行运算，并使用最大序号的列执行对**text**、 **ntext**或**image**列的运算。 当发送的数据的长度与最新的 bcp_collen 中指定的长度等于当前列的最新**** 或**bcp_bind**时， **bcp_moretext**将从一列转到下一列。  
   
-## <a name="see-also"></a>请参阅  
- [执行大容量复制操作&#40;ODBC&#41;](performing-bulk-copy-operations-odbc.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;ODBC&#41;执行大容量复制操作](performing-bulk-copy-operations-odbc.md)  
   
   

@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: f2e2d696a09e5b5bb321da583efd76f580759ce6
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727666"
 ---
 # <a name="security-overview-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>SQL Server 机器学习服务中扩展性框架的安全性概述
@@ -36,7 +36,7 @@ ms.locfileid: "73727666"
 
 SQL Server 的数据库登录名和角色的数据安全模型扩展到 R 和 Python 脚本。 需要 SQL Server 登录名或 Windows 用户帐户才能运行使用 SQL Server 数据的外部脚本，或以 SQL Server 作为计算上下文运行的外部脚本。 具有执行临时查询权限的数据库用户可以从 R 或 Python 脚本访问相同的数据。
 
-登录名或用户帐户标识安全主体，该主体可能需要多个级别的访问权限，具体取决于外部脚本需求：
+登录名或用户帐户标识安全主体，该主体可能需要多个级别的访问权限，具体取决于外部脚本需求  ：
 
 + 访问启用了外部脚本的数据库的权限。
 + 从安全对象（如表）读取数据的权限。
@@ -62,7 +62,7 @@ SQL Server 的数据库登录名和角色的数据安全模型扩展到 R 和 Py
   + 写入或更新数据。
   + 创建新对象，例如表或存储过程。
 
-预配登录名或 Windows 用户帐户并为其提供必要的权限后，可以通过使用以 R 语言编写的数据源对象或以 Python 语言编写的 revoscalepy 库，或调用包含外部脚本的存储过程在 SQL Server 上运行外部脚本。
+预配登录名或 Windows 用户帐户并为其提供必要的权限后，可以通过使用以 R 语言编写的数据源对象或以 Python 语言编写的 revoscalepy 库，或调用包含外部脚本的存储过程在 SQL Server 上运行外部脚本  。
 
 每当从 SQL Server 启动外部脚本时，数据库引擎安全就会获取启动作业的用户的安全性上下文，并管理该用户或登录名到安全对象的映射。
 
@@ -72,47 +72,47 @@ SQL Server 的数据库登录名和角色的数据安全模型扩展到 R 和 Py
 
 ## <a name="services-used-in-external-processing-launchpad"></a>用于外部处理的服务 (Launchpad)
 
-扩展性框架向 SQL Server 安装中的[服务列表](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details)添加一个新的 NT 服务：[SQL Server Launchpad (MSSSQLSERVER)](extensibility-framework.md#launchpad)。
+扩展性框架向 SQL Server 安装中的[服务列表](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details)添加一个新的 NT 服务：[SQL Server Launchpad (MSSSQLSERVER)](extensibility-framework.md#launchpad)  。
 
 数据库引擎使用 SQL Server Launchpad 服务将 R 或 Python 会话实例化为单独的进程。 该进程在低权限帐户下运行；与 SQL Server、Launchpad 本身以及执行存储过程或主机查询的用户标识不同。 在单独的进程中以低权限帐户运行脚本是 SQL Server 中 R 和 Python 的安全和隔离模型的基础。
 
 除了启动外部进程外，Launchpad 还负责跟踪发起调用用户的标识，并将该标识映射到用于启动进程的低权限工作人员帐户。 在某些情况下，脚本或代码回调到 SQL Server 以获取数据和操作时，Launchpad 通常能够无缝地管理标识传输。 如果发出调用的用户具有足够的权限，则包含 SELECT 语句或调用函数以及其他编程对象的脚本通常都会成功。
 
 > [!NOTE]
-> 默认情况下，[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 配置为在 NT Service\MSSQLLaunchpad 下运行，其中预配有运行外部脚本所需的所有必要权限。 有关可配置选项的详细信息，请参阅 [SQL Server Launchpad 服务配置](../security/sql-server-launchpad-service-account.md)。
+> 默认情况下，[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 配置为在 NT Service\MSSQLLaunchpad 下运行，其中预配有运行外部脚本所需的所有必要权限  。 有关可配置选项的详细信息，请参阅 [SQL Server Launchpad 服务配置](../security/sql-server-launchpad-service-account.md)。
 
 <a name="sqlrusergroup"></a>
 
 ## <a name="identities-used-in-processing-sqlrusergroup"></a>用于处理的标识 (SQLRUserGroup)
 
-SQLRUserGroup（SQL 受限用户组）由 SQL Server 安装程序创建，并且包含低权限本地 Windows 用户帐户的池。 需要外部进程时，Launchpad 会使用可用的工作人员帐户来运行进程。 更具体地说，Launchpad 会激活可用的工作人员帐户，将其映射到发出调用用户的标识，并在工作人员帐户下运行该脚本。
+SQLRUserGroup（SQL 受限用户组）由 SQL Server 安装程序创建，并且包含低权限本地 Windows 用户帐户的池  。 需要外部进程时，Launchpad 会使用可用的工作人员帐户来运行进程。 更具体地说，Launchpad 会激活可用的工作人员帐户，将其映射到发出调用用户的标识，并在工作人员帐户下运行该脚本。
 
-+ SQLRUserGroup 链接到特定的实例。 已启用机器学习的每个实例都需要一个单独的工作人员帐户池。 帐户不能在各个实例之间共享。
++ SQLRUserGroup 链接到特定的实例  。 已启用机器学习的每个实例都需要一个单独的工作人员帐户池。 帐户不能在各个实例之间共享。
 
 + 用户帐户池的大小是静态的，默认值为 20，即支持 20 个并发会话。 可同时启动的外部运行时会话数量受此用户帐户池大小的限制。 
 
-+ 池中的工作人员帐户名称的格式为 SQLInstanceNamenn。 例如，在默认实例上，SQLRUserGroup 包含名为 MSSQLSERVER01、MSSQLSERVER02…直至 MSSQLSERVER20 的帐户。
++ 池中的工作人员帐户名称的格式为 SQLInstanceNamenn  。 例如，在默认实例上，SQLRUserGroup 包含名为 MSSQLSERVER01、MSSQLSERVER02…直至 MSSQLSERVER20 的帐户  。
 
 并行化任务不会使用其他帐户。 例如，如果用户运行使用并行处理的评分任务，则会针对所有线程重复使用相同的工作人员帐户。 如果要大量使用机器学习，可以增加用于运行外部脚本的帐户数量。 有关详细信息，请参阅[修改用于机器学习的用户帐户池](../../advanced-analytics/administration/modify-user-account-pool.md)。
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 ### <a name="appcontainer-isolation-in-sql-server-2019"></a>SQL Server 2019 中的 AppContainer 隔离
 
-在 SQL Server 2019 中，安装程序不再为 SQLRUserGroup 创建工作人员帐户。 而是通过 [AppContainer](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation) 来实现隔离。 在运行时，如果在存储过程或查询中检测到外部脚本，SQL Server 会调用 Launchpad，并请求提供特定于扩展的启动程序。 Launchpad 在进程中以标识调用相应的运行时环境，并实例化 AppContainer 以将其包含在内。 此更改十分有用，因为不再需要本地帐户和密码管理。 此外，在禁止本地用户帐户的安装上，不再依赖本地用户帐户意味着现在就可使用此功能。
+在 SQL Server 2019 中，安装程序不再为 SQLRUserGroup 创建工作人员帐户  。 而是通过 [AppContainer](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation) 来实现隔离。 在运行时，如果在存储过程或查询中检测到外部脚本，SQL Server 会调用 Launchpad，并请求提供特定于扩展的启动程序。 Launchpad 在进程中以标识调用相应的运行时环境，并实例化 AppContainer 以将其包含在内。 此更改十分有用，因为不再需要本地帐户和密码管理。 此外，在禁止本地用户帐户的安装上，不再依赖本地用户帐户意味着现在就可使用此功能。
 
 因为由 SQL Server 实现，所以 AppContainer 是一种内部机制。 尽管你不会在进程监视器中看到 AppContainer 的物理证据，但是可以在出站防火墙规则中找到它们，这些规则是由安装程序创建的，用于防止进程进行网络调用。 有关详细信息，请参阅 [SQL Server 机器学习服务的防火墙配置](../../advanced-analytics/security/firewall-configuration.md)。
 
 > [!Note]
-> 在 SQL Server 2019 中，SQLRUserGroup 现在只有一个成员，即一个 SQL Server Launchpad 服务帐户，而不是多个工作人员帐户。
+> 在 SQL Server 2019 中，SQLRUserGroup 现在只有一个成员，即一个 SQL Server Launchpad 服务帐户，而不是多个工作人员帐户  。
 ::: moniker-end
 
 ### <a name="permissions-granted-to-sqlrusergroup"></a>向 SQLRUserGroup 授予的权限
 
-默认情况下，SQLRUserGroup 的成员对 SQL Server Binn、R_SERVICES 和 PYTHON_SERVICES 目录中的文件具有读取和执行权限，可以访问使用 SQL Server 安装的 R 和 Python 分发中的可执行文件、库和内置数据集。 
+默认情况下，SQLRUserGroup 的成员对 SQL Server Binn、R_SERVICES 和 PYTHON_SERVICES 目录中的文件具有读取和执行权限，可以访问使用 SQL Server 安装的 R 和 Python 分发中的可执行文件、库和内置数据集     。 
 
-若要保护 SQL Server 上的敏感资源，可以选择定义拒绝访问 SQLRUserGroup 的访问控制列表 (ACL)。 相反，除了 SQL Server 本身之外，还可以授予访问主计算机上本地数据资源的权限。 
+若要保护 SQL Server 上的敏感资源，可以选择定义拒绝访问 SQLRUserGroup 的访问控制列表 (ACL)  。 相反，除了 SQL Server 本身之外，还可以授予访问主计算机上本地数据资源的权限。 
 
-根据设计，SQLRUserGroup 不具有数据库登录名或任何数据权限。 在某些情况下，你可能想要创建允许环回连接的登录名（特别是受信任的 Windows 标识是发出调用的用户时）。 此功能称为[默示身份验证](#implied-authentication)。 有关详细信息，请参阅[将 SQLRUserGroup 添加为数据库用户](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)。
+根据设计，SQLRUserGroup 不具有数据库登录名或任何数据权限  。 在某些情况下，你可能想要创建允许环回连接的登录名（特别是受信任的 Windows 标识是发出调用的用户时）。 此功能称为[默示身份验证](#implied-authentication)  。 有关详细信息，请参阅[将 SQLRUserGroup 添加为数据库用户](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)。
 
 ## <a name="identity-mapping"></a>标识映射
 
@@ -124,11 +124,11 @@ SQLRUserGroup（SQL 受限用户组）由 SQL Server 安装程序创建，并且
 
 ## <a name="implied-authentication-loop-back-requests"></a>默示身份验证（环回请求）
 
-默示身份验证介绍了连接请求行为，在该行为下，环回请求数据或操作时，以低权限工作人员帐户运行的外部进程会作为受信任的用户标识呈现给 SQL Server。 默示身份验证概念是 Windows 身份验证特有的，在指定信任连接的 SQL Server 连接字符串中，用于处理来自外部进程（如 R 或 Python 脚本）的请求。 有时，它也称为环回。
+默示身份验证介绍了连接请求行为，在该行为下，环回请求数据或操作时，以低权限工作人员帐户运行的外部进程会作为受信任的用户标识呈现给 SQL Server  。 默示身份验证概念是 Windows 身份验证特有的，在指定信任连接的 SQL Server 连接字符串中，用于处理来自外部进程（如 R 或 Python 脚本）的请求。 有时，它也称为环回  。
 
-信任连接可从 R 和 Python 脚本使用，但仅适用于其他配置。 在扩展性体系结构中，R 和 Python 进程在工作人员帐户下运行，从父级 SQLRUserGroup 继承权限。 连接字符串指定 `Trusted_Connection=True` 时，连接请求中会显示工作人员帐户的标识，此请求对 SQL Server 是默认未知的。
+信任连接可从 R 和 Python 脚本使用，但仅适用于其他配置。 在扩展性体系结构中，R 和 Python 进程在工作人员帐户下运行，从父级 SQLRUserGroup 继承权限  。 连接字符串指定 `Trusted_Connection=True` 时，连接请求中会显示工作人员帐户的标识，此请求对 SQL Server 是默认未知的。
 
-若要成功进行信任连接，必须为 SQLRUserGroup 创建数据库登录名。 完成此操作后，任何来自 SQLRUserGroup 的成员的信任连接都有权登录 SQL Server。 有关分步说明，请参阅[将 SQLRUserGroup 添加到数据库登录名](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)。
+若要成功进行信任连接，必须为 SQLRUserGroup 创建数据库登录名  。 完成此操作后，任何来自 SQLRUserGroup 的成员的信任连接都有权登录 SQL Server  。 有关分步说明，请参阅[将 SQLRUserGroup 添加到数据库登录名](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)。
 
 信任连接不是最广泛使用的连接请求形式。 R 或 Python 脚本指定连接时，通常使用 SQL 登录名或完全指定的用户名和密码（如果连接到 ODBC 数据源）。
 
@@ -146,7 +146,7 @@ SQLRUserGroup（SQL 受限用户组）由 SQL Server 安装程序创建，并且
 
 发送到或接收自外部脚本运行时的数据不支持[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)。 因为外部进程（R 或 Python）在 SQL Server 进程之外运行。 因此，外部运行时使用的数据不受数据库引擎的加密功能保护。 此行为与 SQL Server 计算机（从数据库读取数据并复制）上运行的任何其他客户端相同。
 
-因此，TDE 将不会应用到 R 或 Python 脚本中使用的任何数据、保存到磁盘中的任何数据或任何持久化中间结果。 但是，其他类型的加密（如在文件级别或文件夹级别应用的 Windows BitLocker 加密或第三方加密）仍适用。
+因此，TDE 将不会应用到 R 或 Python 脚本中使用的任何数据、保存到磁盘中的任何数据或任何持久化中间结果  。 但是，其他类型的加密（如在文件级别或文件夹级别应用的 Windows BitLocker 加密或第三方加密）仍适用。
 
 对于 [Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)，外部运行时无法访问加密密钥。 因此，无法将数据发送到脚本。
 

@@ -1,5 +1,5 @@
 ---
-title: 教程：所有权链和上下文切换 |Microsoft Docs
+title: 教程：所有权链和上下文切换 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,19 +14,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1ae566345f722399982c909244e77c564abb7b53
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524363"
 ---
-# <a name="tutorial-ownership-chains-and-context-switching"></a>教程：所有权链和上下文切换
+# <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
   本教程使用一个应用场景说明 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安全性概念，其中包括所有权链和用户上下文切换。  
   
 > [!NOTE]  
 >  若要运行本教程中的代码，您必须已配置混合模式安全性并且已安装 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 数据库。 有关混合模式安全性的详细信息，请参阅 [选择身份验证模式](security/choose-an-authentication-mode.md)。  
   
-## <a name="scenario"></a>应用场景  
+## <a name="scenario"></a>场景  
  在此应用场景中，两个用户需要帐户访问存储在 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 数据库中的采购订单数据。 要求如下：  
   
 -   第一个帐户 (TestManagerUser) 必须能够查看每个采购订单中的所有详细信息。  
@@ -48,7 +48,7 @@ ms.locfileid: "62524363"
  本示例中的每个代码块都将逐一加以说明。 若要复制完整的示例，请参阅本教程结尾部分的 [完整示例](#CompleteExample) 。  
   
 ## <a name="1-configure-the-environment"></a>1.配置环境  
- 使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 及以下代码打开 `AdventureWorks2012` 数据库，然后使用 `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] 语句检查 dbo 用户是否显示为上下文。  
+ 使用[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]和以下代码打开`AdventureWorks2012`数据库，然后使用`CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)]语句检查 dbo 用户是否显示为上下文。  
   
 ```  
 USE AdventureWorks2012;  
@@ -80,7 +80,8 @@ GO
   
  有关 CREATE USER 语句的详细信息，请参阅 [CREATE USER (Transact-SQL)](/sql/t-sql/statements/create-user-transact-sql)。 有关 CREATE LOGIN 语句的详细信息，请参阅 [CREATE LOGIN (Transact-SQL)](/sql/t-sql/statements/create-login-transact-sql)。  
   
- 使用以下代码将 `Purchasing` 架构的所有权更改为 `TestManagerUser` 帐户。 这样将允许该帐户对其包含的对象使用所有数据操作语言 (DML) 语句访问权限（如 `SELECT` 和 `INSERT` 权限）。 `TestManagerUser` 授予创建存储过程的能力。  
+ 使用以下代码将 `Purchasing` 架构的所有权更改为 `TestManagerUser` 帐户。 这样将允许该帐户对其包含的对象使用所有数据操作语言 (DML) 语句访问权限（如 `SELECT` 和 `INSERT` 权限）。 
+  `TestManagerUser` 授予创建存储过程的能力。  
   
 ```  
 /* Change owner of the Purchasing Schema to TestManagerUser */  
@@ -95,7 +96,7 @@ GRANT CREATE PROCEDURE
 GO  
 ```  
   
- 有关 GRANT 语句的详细信息，请参阅 [GRANT (Transact-SQL)](/sql/t-sql/statements/grant-transact-sql)。 有关存储过程的详细信息，请参阅[存储过程（数据库引擎）](stored-procedures/stored-procedures-database-engine.md)。 有关所有 [!INCLUDE[ssDE](../includes/ssde-md.md)] 权限的海报，请参阅 [https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142)。  
+ 有关 GRANT 语句的详细信息，请参阅 [GRANT (Transact-SQL)](/sql/t-sql/statements/grant-transact-sql)。 有关存储过程的详细信息，请参阅[存储过程（数据库引擎）](stored-procedures/stored-procedures-database-engine.md)。 有关所有[!INCLUDE[ssDE](../includes/ssde-md.md)]权限的海报，请参阅[https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142)。  
   
 ## <a name="2-create-a-stored-procedure-to-access-data"></a>2.创建存储过程以访问数据  
  若要切换数据库内的上下文，请使用 EXECUTE AS 语句。 EXECUTE AS 需要 IMPERSONATE 权限。  
@@ -156,7 +157,8 @@ GO
  有关 REVERT 语句的详细信息，请参阅 [REVERT (Transact-SQL)](/sql/t-sql/statements/revert-transact-sql)。  
   
 ## <a name="3-access-data-through-the-stored-procedure"></a>3.通过存储过程访问数据  
- `TestEmployeeUser` 除了拥有一个登录名以及分配给公共数据库角色的权限之外，对 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 数据库对象没有其他权限。 如果 `TestEmployeeUser` 试图访问基表，以下代码在将返回一个错误。  
+ 
+  `TestEmployeeUser` 除了拥有一个登录名以及分配给公共数据库角色的权限之外，对 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 数据库对象没有其他权限。 如果 `TestEmployeeUser` 试图访问基表，以下代码在将返回一个错误。  
   
 ```  
 EXECUTE AS LOGIN = 'TestEmployeeUser'  
@@ -200,7 +202,7 @@ DROP LOGIN TestManagerUser;
 GO  
 ```  
   
-##  <a name="CompleteExample"></a> 完整示例  
+##  <a name="CompleteExample"></a>完整示例  
  本部分显示完整的示例代码。  
   
 > [!NOTE]  
@@ -321,7 +323,7 @@ DROP LOGIN TestManagerUser;
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 数据库引擎和 Azure SQL Database 的安全中心](security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

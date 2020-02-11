@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5fcd3d72ef3e716cd640d35505b82df459eb37b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62920792"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>使用资源调控器限制备份压缩的 CPU 使用量 (Transact-SQL)
@@ -76,7 +76,7 @@ ms.locfileid: "62920792"
   
      有关详细信息，请参阅 [GRANT 数据库主体权限 (Transact-SQL)](/sql/t-sql/statements/grant-database-principal-permissions-transact-sql)。  
   
-### <a name="example-a-setting-up-a-login-and-user-transact-sql"></a>示例 a:设置登录名和用户 (Transact-SQL)  
+### <a name="example-a-setting-up-a-login-and-user-transact-sql"></a>示例 A：设置登录名和用户 (Transact-SQL)  
  只有当您选择为低优先级备份创建新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和用户时，下面的示例才对您有意义。 或者，如果存在适当的登录名和用户，也可以使用现有的登录名和用户。  
   
 > [!IMPORTANT]  
@@ -183,7 +183,7 @@ GO
     ALTER RESOURCE GOVERNOR RECONFIGURE;  
     ```  
   
-### <a name="example-b-configuring-resource-governor-transact-sql"></a>示例 b:配置资源调控器 (Transact-SQL)  
+### <a name="example-b-configuring-resource-governor-transact-sql"></a>示例 B：配置资源调控器 (Transact-SQL)  
  下例在一个事务内执行下列步骤：  
   
 1.  创建 `pMAX_CPU_PERCENT_20` 资源池。  
@@ -259,9 +259,9 @@ GO
  [[返回页首]](#Top)  
   
 ##  <a name="creating_compressed_backup"></a> 使用具有有限 CPU 的会话压缩备份  
- 要在限定了最大 CPU 的会话中创建压缩备份，应当以分类器函数中指定的用户身份登录。 在备份命令中，指定 WITH COMPRESSION ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 或选择**压缩备份** ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])。 若要创建压缩数据库备份，请参阅[创建完整数据库备份 (SQL Server)](create-a-full-database-backup-sql-server.md)。  
+ 要在限定了最大 CPU 的会话中创建压缩备份，应当以分类器函数中指定的用户身份登录。 在备份命令中，指定 WITH COMPRESSION （[!INCLUDE[tsql](../../includes/tsql-md.md)]）或选择**压缩备份**（[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]）。 若要创建压缩数据库备份，请参阅[创建完整数据库备份 (SQL Server)](create-a-full-database-backup-sql-server.md)。  
   
-### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>示例 c:创建压缩备份 (Transact-SQL)  
+### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>示例 C：创建压缩备份 (Transact-SQL)  
  下面的 [BACKUP](/sql/t-sql/statements/backup-transact-sql) 示例在一个采用新格式的备份文件 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 中创建 `Z:\SQLServerBackups\AdvWorksData.bak`数据库的压缩完整备份。  
   
 ```sql  
@@ -277,8 +277,8 @@ GO
   
  [[返回页首]](#Top)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建和测试分类器用户定义函数](../resource-governor/create-and-test-a-classifier-user-defined-function.md)   
- [Resource Governor](../resource-governor/resource-governor.md)  
+ [资源调控器](../resource-governor/resource-governor.md)  
   
   

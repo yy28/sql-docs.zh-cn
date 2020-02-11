@@ -1,5 +1,5 @@
 ---
-title: StripCalculatedMembers (MDX) |Microsoft Docs
+title: StripCalculatedMembers （MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d4a29a8227fc7b0452f17d6da0c1f47d37738ed0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036808"
 ---
 # <a name="stripcalculatedmembers-mdx"></a>StripCalculatedMembers (MDX)
@@ -32,7 +32,7 @@ StripCalculatedMembers(Set_Expression)
  返回集的有效多维表达式 (MDX)。  
   
 ## <a name="remarks"></a>备注  
- **StripCalculatedMembers**函数从集中删除计算的成员。 计算成员可以通过使用添加到一组[AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md)函数，返回的服务器，定义的计算的成员或通过使用 WITH 添加在查询自身中的计算的成员成员的语法。  
+ **StripCalculatedMembers**函数从集删除计算成员。 使用 WITH 成员语法，可以通过使用[AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md)函数（该函数返回在服务器上定义的计算成员）或在查询本身中添加的计算成员，将计算成员添加到集。  
   
 ## <a name="example"></a>示例  
  以下示例从查询中删除所有计算成员。  
@@ -77,7 +77,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>请参阅  
- [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

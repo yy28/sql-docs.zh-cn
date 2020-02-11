@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d7c61a21f149a50c4893c9c82d3624e0905a481b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022430"
 ---
-# <a name="script-to-grant-oracle-permissions"></a>授予 Oracle 权限的脚本
-  本主题中提供的脚本用于配置使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制发布数据的 Oracle 数据库。 安装后，该脚本也会出现在以下目录中： *\<驱动器>* :\\\Program Files\Microsoft SQL Server\\ *\<实例名称>* \MSSQL\Install\oracleadmin.sql。 有关配置 Oracle 数据库的详细信息，请参阅[配置 Oracle 发布服务器](configure-an-oracle-publisher.md)。  
+# <a name="script-to-grant-oracle-permissions"></a>Script to Grant Oracle Permissions
+  本主题中提供的脚本用于配置将使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]复制发布数据的 Oracle 数据库。 安装后，该脚本也会出现在以下目录中： * \<drive>*：\\\Program Files\Microsoft\\SQL Server*\<InstanceName>* \mssql\install\oracleadmin.sql。 有关配置 Oracle 数据库的详细信息，请参阅[配置 Oracle 发布服务器](configure-an-oracle-publisher.md)。  
   
 > [!NOTE]  
 >  该脚本包含 `GRANT CREATE ANY TRIGGER TO &&AdminLogin;`语句，事务复制所用的触发器需要这个语句。 如果您仅使用快照复制，请将该行从脚本中删除。  
@@ -124,7 +124,7 @@ GRANT CREATE VIEW TO &&ReplLogin;
 GRANT CREATE ANY TRIGGER TO &&ReplLogin;  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置 Oracle 发布服务器](configure-an-oracle-publisher.md)  
   
   

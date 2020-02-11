@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ee98c0144d492b74e8ddc2785b21b76a363eb92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915931"
 ---
-# <a name="mssqlserver1105"></a>MSSQLSERVER_1105
+# <a name="mssqlserver_1105"></a>MSSQLSERVER_1105
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62915931"
 |符号名称|NO_MORE_SPACE_IN_FG|  
 |消息正文|无法为数据库 '%.\*ls' 中的对象 '%.*ls'%.\*ls 分配空间，因为 '%.\*ls' 文件组已满。 请删除不需要的文件、删除文件组中的对象、将其他文件添加到文件组或为文件组中的现有文件启用自动增长，以便增加可用磁盘空间。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  文件组中没有可用的磁盘空间。  
   
 ## <a name="user-action"></a>用户操作  

@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cb523d8e9b1dbbb136475d0aa739491935f755ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62922150"
 ---
 # <a name="complete-database-restores-full-recovery-model"></a>完整数据库还原（完整恢复模式）
@@ -32,13 +32,13 @@ ms.locfileid: "62922150"
  还原数据库时，特别是在完整恢复模式或大容量日志恢复模式下，您应使用一个还原顺序。 *还原顺序* 由通过一个或多个还原阶段来移动数据的一个或多个还原操作组成。  
   
 > [!IMPORTANT]  
->  建议您不要附加或还原来自未知或不可信源的数据库。 这些数据库可能包含执行非预期 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码的恶意代码，或通过修改架构或物理数据库结构导致错误。 使用来自未知源或不可信源的数据库前，请在非生产服务器上针对数据库运行 [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) ，然后检查数据库中的代码，例如存储过程或其他用户定义代码。  
+>  建议您不要附加或还原来自未知或不可信源的数据库。 这些数据库可能包含执行非预期 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码的恶意代码，或通过修改架构或物理数据库结构导致错误。 使用未知或不受信任的源中的数据库之前，请在非生产服务器上的数据库上运行[DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) ，并检查数据库中的代码，例如存储过程或其他用户定义的代码。  
   
  **本主题内容：**  
   
 -   [将数据库还原到故障点](#PointOfFailure)  
   
--   [将数据库还原到日志备份中的某个时间点](#PointWithinBackup)  
+-   [将数据库还原到日志备份中的某个点](#PointWithinBackup)  
   
 -   [相关任务](#RelatedTasks)  
   
@@ -151,7 +151,7 @@ GO
 ##  <a name="RelatedTasks"></a> 相关任务  
  **还原完整数据库备份**  
   
--   [还原数据库备份&#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
+-   [还原数据库备份 &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
 -   [将数据库还原到新位置 (SQL Server)](restore-a-database-to-a-new-location-sql-server.md)  
   
@@ -175,7 +175,7 @@ GO
   
 -   [恢复到日志序列号 (SQL Server)](recover-to-a-log-sequence-number-sql-server.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
  [应用事务日志备份 (SQL Server)](transaction-log-backups-sql-server.md)   

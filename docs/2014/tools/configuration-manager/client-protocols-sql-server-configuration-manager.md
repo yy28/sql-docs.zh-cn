@@ -11,15 +11,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4f51cd7f77d938f806934ffd48ef9c1af9d6e478
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63065555"
 ---
 # <a name="client-protocols-sql-server-configuration-manager"></a>客户端协议（SQL Server 配置管理器）
-  若要配置此计算机上的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端所使用的协议顺序，请在控制台窗格中右键单击“客户端协议”，再单击“属性”，或者在详细信息窗格中右键单击某个协议，再单击“顺序”。     
+  若要配置此计算机上的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端所使用的协议顺序，请在控制台窗格中右键单击“客户端协议”，再单击“属性”，或者在详细信息窗格中右键单击某个协议，再单击“顺序”。************  
   
- 若要配置此计算机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端所使用的客户端协议属性，请在控制台窗格中单击“客户端协议”，再在详细信息窗格中右键单击所需的协议，然后单击“属性”。    
+ 若要配置此计算机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端所使用的客户端协议属性，请在控制台窗格中单击“客户端协议”，再在详细信息窗格中右键单击所需的协议，然后单击“属性”。********  
   
   

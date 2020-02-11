@@ -17,10 +17,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 22e08b5eb0bccc02303201b7fae46b55f1012fd8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011965"
 ---
 # <a name="create-a-server-role"></a>创建服务器角色
@@ -45,9 +45,9 @@ ms.locfileid: "63011965"
 ###  <a name="Restrictions"></a> 限制和局限  
  不能向服务器角色授予对数据库级安全对象的权限。 若要创建数据库角色，请参阅 [CREATE ROLE (Transact-SQL)](/sql/t-sql/statements/create-role-transact-sql)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
   
 -   要求具有 CREATE SERVER ROLE 权限，或者 sysadmin 固定服务器角色中的成员身份。  
   
@@ -69,13 +69,13 @@ ms.locfileid: "63011965"
   
 3.  右键单击“服务器角色”文件夹，然后选择“新建服务器角色…”   。  
   
-4.  在中**新的服务器角色-** _server_role_name_对话框中，在**常规**页上，输入中的新服务器角色的名称**服务器角色名称**框。  
+4.  在 "**新建服务器角色-**_server_role_name_ " 对话框中的 "**常规**" 页上，在 "**服务器角色名称**" 框中输入新服务器角色的名称。  
   
 5.  在 **“所有者”** 框中，输入拥有新角色的服务器主体的名称。 或者，单击省略号 (…) 打开“选择服务器登录名或角色”对话框   。  
   
 6.  在“安全对象”  下，选择一个或多个服务器级别的安全对象。 当选择安全对象时，可以向此服务器角色授予或拒绝针对该安全对象的权限。  
   
-7.  在**权限：显式**框中，选中复选框可授予、 授予再授予或拒绝此服务器角色的选定的安全对象的权限。 如果某个权限无法针对所有选定的安全对象进行授予或拒绝，则该权限将表示为部分选择。  
+7.  在 **“权限: 显式”** 框中，选中相应的复选框以针对选定的安全对象授予、授予再授予或拒绝此服务器角色的权限。 如果某个权限无法针对所有选定的安全对象进行授予或拒绝，则该权限将表示为部分选择。  
   
 8.  在 **“成员”** 页上，使用 **“添加”** 按钮将代表个人或组的登录名添加到新的服务器角色。  
   

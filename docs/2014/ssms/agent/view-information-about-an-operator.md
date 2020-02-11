@@ -18,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9d1cab01b6fc496de90975966bfcf29b70e041fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68188746"
 ---
 # <a name="view-information-about-an-operator"></a>View Information About an Operator
-  本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中查看有关 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理操作员的信息。  
+  本主题说明如何使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]在中查看有关代理操作员的信息。  
   
  **本主题内容**  
   
@@ -33,7 +33,7 @@ ms.locfileid: "68188746"
   
      [安全性](#Security)  
   
--   **若要查看有关操作员的信息，可使用：**  
+-   **若要查看有关操作员的信息，请使用：**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -41,10 +41,10 @@ ms.locfileid: "68188746"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
- 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
+####  <a name="Permissions"></a> 权限  
+ 默认情况下， **sysadmin**固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
   
@@ -60,19 +60,19 @@ ms.locfileid: "68188746"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开包含要查看的操作员的服务器。  
   
-2.  单击加号以展开 **“SQL Server 代理”** 。  
+2.  单击加号以展开 **“SQL Server 代理”**。  
   
 3.  单击加号以展开 **“操作员”** 文件夹。  
   
-4.  右键单击要查看的操作员，然后选择“属性”  。  
+4.  右键单击要查看的操作员，然后选择“属性”****。  
   
-     有关“operator_name 属性”   对话框包含的可用选项的详细信息，请参阅：  
+     有关 " _operator_name_**属性**" 对话框中包含的可用选项的详细信息，请参阅：  
   
-    -   [操作员属性和新运算符&#40;常规页&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+    -   [操作员属性和新操作员 &#40;常规 "页面&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-    -   [运算符属性：New 运算符&#40;通知页&#41;](operator-properties-new-operator-notifications-page.md)  
+    -   [操作员属性：新建操作员 &#40;通知页面&#41;](operator-properties-new-operator-notifications-page.md)  
   
-    -   [操作员属性（“历史记录”页）](operator-properties-history-page.md)  
+    -   ["操作员属性" &#40;"历史记录" 页&#41;](operator-properties-history-page.md)  
   
 5.  完成后，单击 **“确定”** 。  
   
@@ -97,6 +97,6 @@ ms.locfileid: "68188746"
     GO  
     ```  
   
- 有关详细信息，请参阅[sp_help_operator &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-operator-transact-sql)。  
+ 有关详细信息，请参阅[&#40;transact-sql&#41;sp_help_operator ](/sql/relational-databases/system-stored-procedures/sp-help-operator-transact-sql)。  
   
   

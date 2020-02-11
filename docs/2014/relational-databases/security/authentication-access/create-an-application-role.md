@@ -15,10 +15,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 032c371fd37bb66392761fff24bd30efb2bd5b37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011945"
 ---
 # <a name="create-an-application-role"></a>创建应用程序角色
@@ -41,9 +41,9 @@ ms.locfileid: "63011945"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要对数据库具有 ALTER ANY APPLICATION ROLE 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -62,14 +62,14 @@ ms.locfileid: "63011945"
   
 6.  在 **“默认架构”** 框中，通过输入对象名称指定将拥有此角色创建的对象的架构。 或者，单击省略号“(…)”以打开“定位架构”对话框   。  
   
-7.  在 **“密码”** 框中，输入新角色的密码。 在 **“确认密码”** 框中再次输入该密码。  
+7.  在 **“密码”** 框中，输入新角色的密码。 在“确认密码”框中再次输入该密码。   
   
 8.  在 **“此角色拥有的架构”** ，选择或查看此角色将拥有的架构。 架构只能由一个架构或角色拥有。  
   
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>其他选项  
- **应用程序角色的新**对话框还提供了两个其他页上的选项：**安全对象**并**扩展属性**。  
+ “应用程序角色 - 新建”对话框还在两个其他页上提供了选项：和“扩展属性”    。  
   
 -   **“安全对象”** 页将列出所有可能的安全对象以及可授予登录名的针对这些安全对象的权限。  
   

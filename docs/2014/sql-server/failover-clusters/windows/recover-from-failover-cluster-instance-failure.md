@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0c4da45e57342288cc23a9783709666f4c02d0bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63050008"
 ---
 # <a name="recover-from-failover-cluster-instance-failure"></a>从故障转移群集实例故障中恢复
@@ -29,12 +29,12 @@ ms.locfileid: "63050008"
   
 -   [从软件故障中恢复](#Scenario2)  
   
-##  <a name="Scenario1"></a> 从无法修复的故障中恢复  
+##  <a name="Scenario1"></a>从无法修复的故障中恢复  
  使用以下步骤从无法修复的故障中恢复。 例如，该故障可能是由磁盘控制器或操作系统的故障引起的。 在此情况中，故障是由两节点的群集中节点 1 的硬件故障造成的。  
   
 1.  节点 1 失败后， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 故障转移到节点 2。  
   
-2.  从 FCI 中逐出节点 1。 为此，从节点 2 打开“故障转移群集管理”器管理单元，右键单击节点 1，单击“移动操作”  ，然后单击“逐出节点”  。  
+2.  从 FCI 中逐出节点 1。 为此，从节点 2 打开“故障转移群集管理”器管理单元，右键单击节点 1，单击“移动操作”****，然后单击“逐出节点”****。  
   
 3.  验证节点 1 是否已从群集定义中逐出。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "63050008"
   
 7.  运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序以将节点 1 添加到 FCI。 有关详细信息，请参阅[在 SQL Server 故障转移群集中添加或删除节点（安装程序）](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。  
   
-##  <a name="Scenario2"></a> 从可修复的故障中恢复  
+##  <a name="Scenario2"></a>从可修复故障中恢复  
  使用以下步骤从可修复的故障中恢复。 在此情况中，故障由节点 1 关闭或脱机引起，但并非无法挽回。 这可能由操作系统故障、硬件故障或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例本身的故障引起。  
   
 1.  节点 1 失败后，FCI 故障转移到节点 2。  

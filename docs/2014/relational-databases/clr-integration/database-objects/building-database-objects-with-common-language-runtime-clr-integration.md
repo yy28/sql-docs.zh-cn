@@ -1,5 +1,5 @@
 ---
-title: 生成使用公共语言运行时 (CLR) 集成的数据库对象 |Microsoft Docs
+title: 通过公共语言运行时（CLR）集成生成数据库对象 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,14 +18,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8dc507d455636bf6256fd7ba4649dba53d32884e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919256"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>使用公共语言运行时 (CLR) 集成生成数据库对象
-  您可以生成使用的数据库对象[!INCLUDE[ssNoVersion](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]被称为"CLR 例程"。 这些例程包括：  
+  您可以使用[!INCLUDE[ssNoVersion](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]生成数据库对象，称为 "CLR 例程"。 这些例程包括：  
   
 -   标量值用户定义函数（标量 UDF）  
   
@@ -37,7 +37,7 @@ ms.locfileid: "62919256"
   
  CLR 例程在托管代码中具有相同的结构。 它们映射为某个类的公共静态（在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic .NET 中共享）方法。 除了例程之外，还可以使用 .NET Framework 定义用户定义类型 (UDT) 和用户定义的聚合函数。 将 UDT 和用户定义聚合映射为整个 .NET Framework 类。  
   
- 每种类型的.NET Framework 例程具有[!INCLUDE[tsql](../../../includes/ssnoversion-md.md)]的[!INCLUDE[tsql](../../../includes/tsql-md.md)]使用等效。 例如，标量 UDF 可以用于任意标量表达式中。 TVF 可以用于任意 FROM 子句中。 可以在 EXEC 语句中调用过程或从客户端应用程序调用。  
+ 每种类型的 .NET Framework 例程都[!INCLUDE[tsql](../../../includes/ssnoversion-md.md)]具有可[!INCLUDE[tsql](../../../includes/tsql-md.md)]使用等效的。 例如，标量 UDF 可以用于任意标量表达式中。 TVF 可以用于任意 FROM 子句中。 可以在 EXEC 语句中调用过程或从客户端应用程序调用。  
   
 > [!NOTE]  
 >  如果查询优化器确定这样做有益处，则在公共语言运行时上执行 CLR 对象（用户定义函数、用户定义类型或触发器）可能在多个线程上发生（并行计划）。 但是，如果用户定义函数访问数据，则会在串行计划上执行。 当在 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 之前的服务器版本上执行时，如果某一用户定义函数包含 LOB 参数或返回值，则也必须在串行计划上执行。  
@@ -71,7 +71,7 @@ ms.locfileid: "62919256"
  [CLR 触发器](../../../database-engine/dev-guide/clr-triggers.md)  
  说明如何实现和使用 CLR 触发器。  
   
-## <a name="see-also"></a>请参阅  
- [公共语言运行时&#40;CLR&#41;集成概述](../common-language-runtime-integration-overview.md)  
+## <a name="see-also"></a>另请参阅  
+ [公共语言运行时 &#40;CLR&#41; 集成概述](../common-language-runtime-integration-overview.md)  
   
   

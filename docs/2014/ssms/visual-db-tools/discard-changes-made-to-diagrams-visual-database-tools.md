@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a2f439c1d3350a30f1bdd8fe8c3fe917686d2401
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63125960"
 ---
 # <a name="discard-changes-made-to-diagrams-visual-database-tools"></a>放弃对关系图所做的更改 (Visual Database Tools)
@@ -33,8 +33,8 @@ ms.locfileid: "63125960"
     > [!CAUTION]  
     >  如果有其他打开的数据库关系图或表设计窗口连接到同一个数据库，请也关闭这些关系图或窗口而不保存更改。  
   
-## <a name="see-also"></a>请参阅  
- [使用数据库关系图&#40;可视化数据库工具&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>另请参阅  
+ [使用数据库关系图 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [使用数据库关系图中的表 (Visual Database Tools)](work-with-tables-in-database-diagram-visual-database-tools.md)  
   
   

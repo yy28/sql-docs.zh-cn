@@ -18,13 +18,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 49a10795cbb9177837960739890baebc221c0712
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035596"
 ---
-# <a name="sortintempdb-option-for-indexes"></a>用于索引的 SORT_IN_TEMPDB 选项
+# <a name="sort_in_tempdb-option-for-indexes"></a>用于索引的 SORT_IN_TEMPDB 选项
   当创建或重新生成索引时，通过将 SORT_IN_TEMPDB 选项设置为 ON，可以指定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 使用 **tempdb** 来存储用于生成索引的中间排序结果。 虽然此选项会增加创建索引所用的临时磁盘空间量，但是当 **tempdb** 与用户数据库位于不同的磁盘集上时，该选项可减少创建或重新生成索引所需的时间。 有关 **tempdb**的详细信息，请参阅 [配置 index create memory 服务器配置选项](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)。  
   
 ## <a name="phases-of-index-building"></a>索引生成阶段  
@@ -36,7 +36,7 @@ ms.locfileid: "63035596"
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将排序的索引叶行进程合并为单个排序流。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的排序合并组件从每个排序运行指令的第一页开始，在所有页中找出最低键，并将该叶行传递到索引创建组件。 然后处理下一个最低键，再处理下一个，依此类推。 当将最后一个叶索引行从排序运行指令页中提取出来时，该进程从此排序进程切换到下一页。 当处理完某个排序运行指令区中的所有页时，将释放该区。 每个叶索引行在传递到索引创建组件时，均包含在缓冲区的叶索引页中。 每个叶页在填充时被写入。 当写入叶页时， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 还生成该索引的上级。 每个上级索引页在填充时被写入。  
   
-## <a name="sortintempdb-option"></a>SORT_IN_TEMPDB 选项  
+## <a name="sort_in_tempdb-option"></a>SORT_IN_TEMPDB 选项  
  如果 SORT_IN_TEMPDB 设置为 OFF（默认设置），则排序运行指令将存储在目标文件组中。 在创建索引的第一阶段，交替读取基表页和写入排序运行指令会将读/写磁头从磁盘的一个区域移到另一个区域。 扫描数据页时，磁头位于数据页区域。 当填充排序缓冲区且当前排序运行指令必须写入磁盘时，磁头将移到某个可用空间区域，然后在继续扫描表页时移回数据页区域。 在第二阶段，读/写磁头的移动频率较高。 这时，排序进程通常交替读取各个排序运行区域。 排序运行指令和新的索引页都在目标文件组中生成。 这意味着 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在排序运行指令中分布读取的同时，还必须定期跳至索引区，以便在填充索引页时写入新的索引页。  
   
  如果 SORT_IN_TEMPDB 选项设置为 ON，并且 **tempdb** 与目标文件组位于不同的磁盘集上，那么在第一阶段，对数据页的读取与对 **tempdb**中排序工作区的写入发生在不同的磁盘上。 这意味着对数据键的磁盘读取在整个磁盘上通常较连续地进行，而对 **tempdb** 磁盘的写入通常也是连续的，就像生成最终索引的写入一样。 即使其他用户正在使用数据库且正在访问不同的磁盘地址，指定 SORT_IN_TEMPDB 选项时的总体读写模式的效率也比没有指定时要高。  

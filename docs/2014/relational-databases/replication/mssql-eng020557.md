@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6816a0301a03e2c0d01cfe78a5c88213394c445b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63057100"
 ---
-# <a name="mssqleng020557"></a>MSSQL_ENG020557
+# <a name="mssql_eng020557"></a>MSSQL_ENG020557
     
 ## <a name="message-details"></a>消息详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "63057100"
 |符号名称||  
 |消息正文|代理关闭。 有关详细信息，请参阅作业 '%s' 的 SQL Server 代理作业历史记录。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  复制代理在没有将原因写入相应的历史记录表的情况下关闭，或代理在某个过程中关闭。  
   
 ## <a name="user-action"></a>用户操作  
@@ -46,7 +46,7 @@ ms.locfileid: "63057100"
   
 -   如果错误继续出现，请增加代理的日志记录并指定日志的输出文件。 根据错误的上下文，这可能提供导致该错误和其他错误消息的步骤。 有关如何配置复制日志记录的详细信息，请参阅 Microsoft 知识库文章 [312292](https://support.microsoft.com/kb/312292)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [错误和事件参考（复制）](errors-and-events-reference-replication.md)  
   
   

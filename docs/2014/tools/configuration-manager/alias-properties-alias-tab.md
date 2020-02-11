@@ -1,5 +1,5 @@
 ---
-title: '&lt;别名&gt;属性 （别名选项卡） |Microsoft Docs'
+title: '&lt;别名&gt;属性（"别名" 选项卡） |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2ee874caeaa8be9e7b050336f74bab9487f15884
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035296"
 ---
-# <a name="ltaliasgt-properties-alias-tab"></a>&lt;Alias&gt; 属性（“别名”选项卡）
-  别名是可用于进行连接的备用名称。 别名封装了连接字符串所必需的元素，并使用用户所选择的名称显示这些元素。 使用“\<别名>属性”   对话框中的“别名”  页查看或指定别名连接字符串的元素。  
+# <a name="ltaliasgt-properties-alias-tab"></a>
+  &lt;Alias&gt; 属性（“别名”选项卡）
+  别名是可用于进行连接的备用名称。 别名封装了连接字符串所必需的元素，并使用用户所选择的名称显示这些元素。 使用“**别名>属性”****\<** 对话框中的“别名”**** 页查看或指定别名连接字符串的元素。  
   
 ## <a name="options"></a>选项  
  **别名**  
@@ -33,11 +34,11 @@ ms.locfileid: "63035296"
  连接所用的协议。  
   
  **Server**  
- 所连接的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。  
+ 要连接到的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的名称。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用 Shared Memory 协议创建有效的连接字符串](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   
  [使用 TCP IP 创建有效的连接字符串](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
- [使用 Named Pipes 创建有效的连接字符串](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-named-pipes.md)  
+ [使用命名管道创建有效的连接字符串](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-named-pipes.md)  
   
   

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b07f157294700b3b3b7958ce4cdc6f1589bff864
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196710"
 ---
 # <a name="table-properties"></a>表的属性
@@ -37,7 +37,7 @@ ms.locfileid: "68196710"
 4.  [“存储”页](#Storage)  
   
 ##  <a name="GeneralPage"></a> “常规”页  
- **“数据库”**  
+ **Database**  
  包含此表的数据库的名称。  
   
  **Server**  
@@ -65,7 +65,7 @@ ms.locfileid: "68196710"
  指示在创建对象时带引号的标识符选项是否设为 ON。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER (Transact SQL)](/sql/t-sql/statements/set-quoted-identifier-transact-sql)  
   
  **锁升级**  
- 指示表的锁升级粒度。 有关数据库引擎中的锁定的详细信息，请参阅 [SQL Server 事务锁定和行版本控制指南](https://msdn.microsoft.com/library/jj856598.aspx)。 可能的值有：  
+ 指示表的锁升级粒度。 有关数据库引擎中的锁定的详细信息，请参阅 [SQL Server 事务锁定和行版本控制指南](https://msdn.microsoft.com/library/jj856598.aspx)。 可能的值包括：  
   
  AUTO  
  此选项可让 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 选择适合于表架构的锁升级粒度。  
@@ -80,12 +80,12 @@ ms.locfileid: "68196710"
  DISABLE  
  在大多数情况下禁止锁升级。 表级别的锁未完全禁止。 例如，当扫描在可序列化隔离级别下没有聚集索引的表时， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 必须使用表锁来保证数据的完整性。  
   
- **对表进行复制**  
- 指示是否使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制将表复制到其他数据库。 可能的值为`True`或`False`。  
+ **表已复制**  
+ 指示是否使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制将表复制到其他数据库。 可能的值为 `True` 或 `False`。  
   
-##  <a name="ChangeTracking"></a> “更改跟踪”页  
+##  <a name="ChangeTracking"></a>更改跟踪页面  
  **更改跟踪**  
- 指示是否对相应的表启用了更改跟踪。 默认值为 `False`。  
+ 指示是否对相应的表启用了更改跟踪。 默认值是 `False`。  
   
  只有对数据库启用了更改跟踪，此选项才可用。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "68196710"
   
  有关更改跟踪的详细信息，请参阅[关于更改跟踪 (SQL Server)](../track-changes/about-change-tracking-sql-server.md)。  
   
-##  <a name="FileTable"></a> FileTable 页  
+##  <a name="FileTable"></a>FileTable 页  
  显示与 FileTable 相关的表的属性。 有关详细信息，请参阅 [FileTables (SQL Server)](../blob/filetables-sql-server.md)。  
   
  **FileTable 名称列排序规则**  
@@ -105,10 +105,10 @@ ms.locfileid: "68196710"
  **FileTable 目录名称**  
  FileTable 的根文件夹。  
   
- **启用 FileTable 命名空间**  
+ **已启用 FileTable 命名空间**  
  在为 `True` 时，该值指示该表为 FileTable。 如果您将该值更改为 `False`，则是在将 FileTable 更改为普通用户表。 如果您以后想要将该表更改回 FileTable，则该表将必须首先通过 FileTable 一致性检查，之后转换才会成功。  
   
-##  <a name="Storage"></a> “存储”页  
+##  <a name="Storage"></a>存储页  
  显示所选表中与存储相关的属性。  
   
 ### <a name="compression"></a>压缩  
@@ -128,11 +128,11 @@ ms.locfileid: "68196710"
  **文本文件组**  
  包含该表文本数据的文件组的名称。  
   
- **文件组**  
+ **文件**  
  包含该表的文件组的名称。  
   
- **已对表进行分区**  
- 可能值为 `True` 和 `False`。  
+ **表已分区**  
+ 可能的值为 `True` 和 `False`。  
   
  **Filestream 文件组**  
  如果该表包含具有 FILESTREAM 属性的 `varbinary(max)` 列，则指定 FILESTREAM 数据文件组的名称。 默认值为默认的 FILESTREAM 数据文件组。  
@@ -141,7 +141,7 @@ ms.locfileid: "68196710"
   
 ### <a name="general"></a>常规  
  **Vardecimal 存储格式已启用**  
- 当`True`，此只读值指示`decimal`和`numeric`使用 vardecimal 存储格式存储的数据类型。 若要更改此选项，请使用`vardecimal storage format`的选项[sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql)。 不推荐使用 Vardecimal 存储格式。 请改用 ROW 压缩。  
+ 如果`True`为，则此只读值表示使用`decimal` vardecimal `numeric`存储格式存储和数据类型。 若要更改此选项，请`vardecimal storage format`使用[sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql)的选项。 不推荐使用 Vardecimal 存储格式。 请改用 ROW 压缩。  
   
  **索引空间**  
  索引在表中所占的空间大小 (MB)。 此值不包括表的 XML 索引空间使用量。 如果 XML 索引属于表，则使用 [sp_spaceused](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql) 。  
@@ -169,8 +169,8 @@ ms.locfileid: "68196710"
   
  FILESTREAM 分区方案必须与 **“分区方案”** 选项中指定的方案对称。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [查看表定义](view-the-table-definition.md)   
- [修改列（数据库引擎）](../tables/modify-columns-database-engine.md)  
+ [数据库引擎&#41;修改列 &#40;](../tables/modify-columns-database-engine.md)  
   
   

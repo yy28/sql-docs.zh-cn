@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_set_parameter (TRANSACT-SQL) |Microsoft Docs
+title: managed_backup sp_set_parameter （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.assetid: bd8ae5fd-1337-4b7f-b0a4-153cbca9fa5f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 838a8b0d998476a37b0dd4d30cab5041ad4276a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942035"
 ---
-# <a name="managedbackupspsetparameter-transact-sql"></a>managed_backup.sp_set_parameter (TRANSACT-SQL)
+# <a name="managed_backupsp_set_parameter-transact-sql"></a>managed_backup sp_set_parameter （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   设置指定的智能管理系统参数的值。  
@@ -35,7 +35,7 @@ ms.locfileid: "67942035"
  可用的参数与 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 关联。 这些参数用于设置电子邮件通知、启用特定的扩展事件以及启用基于用户设置的策略的管理策略。 必须指定参数名称和参数值对。  
 
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,20 +47,20 @@ EXEC managed_backup.sp_set_parameter
   
 ##  <a name="Arguments"></a> 参数  
  @parameter_name  
- 要设置值的参数的名称。 @parameter_name 是 nvarchar （128）。 可用的参数名称是**SSMBackup2WANotificationEmailIds**， **SSMBackup2WADebugXevent**， **SSMBackup2WAEnableUserDefinedPolicy**， **FileRetentionDebugXevent**，并**StorageOperationDebugXevent**。  
+ 要设置值的参数的名称。 @parameter_name为 NVARCHAR （128）。 可用的参数名称为**SSMBackup2WANotificationEmailIds**、 **SSMBackup2WADebugXevent**、 **SSMBackup2WAEnableUserDefinedPolicy**、 **FileRetentionDebugXevent**和**StorageOperationDebugXevent**。  
   
  @parameter_value  
- 要设置的参数的值。 @parameter 值为 nvarchar （128）。  允许下列参数名称/值对：  
+ 要设置的参数的值。 @parameter值为 NVARCHAR （128）。  允许下列参数名称/值对：  
   
--   @parameter_name = 'Ssmbackup2wanotificationemailids': @parameter_value = 电子邮件  
+-   @parameter_name= "SSMBackup2WANotificationEmailIds"： @parameter_value = "email"  
   
--   @parameter_name = 'SSMBackup2WAEnableUserDefinedPolicy': @parameter_value = {'true' |false'}  
+-   @parameter_name= ' SSMBackup2WAEnableUserDefinedPolicy '： @parameter_value = {' true ' |"false"}  
   
--   @parameter_name = 'SSMBackup2WADebugXevent': @parameter_value = {'true' |false'}  
+-   @parameter_name= ' SSMBackup2WADebugXevent '： @parameter_value = {' true ' |"false"}  
   
--   @parameter_name = 'FileRetentionDebugXevent': @parameter_value = {'true' |false'}  
+-   @parameter_name= ' FileRetentionDebugXevent '： @parameter_value = {' true ' |"false"}  
   
--   @parameter_name = 'StorageOperationDebugXevent = {'true' |false'}  
+-   @parameter_name= ' StorageOperationDebugXevent ' = {' true ' |"false"}  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -71,7 +71,7 @@ EXEC managed_backup.sp_set_parameter
 ## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>权限  
- 需要**EXECUTE**上的权限**managed_backup.sp_set_parameter**存储过程。  
+ 需要对**managed_backup sp_set_parameter**存储过程的**EXECUTE**权限。  
   
 ## <a name="examples"></a>示例  
  以下示例启用操作并调试扩展事件。  

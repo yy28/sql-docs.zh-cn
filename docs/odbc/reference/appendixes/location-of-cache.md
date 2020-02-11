@@ -15,17 +15,17 @@ ms.assetid: 240d6162-4da6-4b1f-96c7-f379f4ecb16f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2a925b66b0d09a9beb32e4441d62bc4fa9296313
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67990745"
 ---
 # <a name="location-of-cache"></a>缓存的位置
 > [!IMPORTANT]  
->  此功能将 Windows 的未来版本中删除。 避免在新的开发工作中使用此功能并计划修改当前使用此功能的应用程序。 Microsoft 建议使用驱动程序的游标功能。  
+>  此功能将在 Windows 的将来版本中删除。 避免在新的开发工作中使用此功能，并计划修改当前使用此功能的应用程序。 Microsoft 建议使用驱动程序的游标功能。  
   
- 游标库缓存在内存中和 Windows® 临时文件中的数据。 这将限制仅由可用磁盘空间游标库可以处理的结果集的大小。 当要缓存的数据将跨越段边界，如果游标库缓存的末尾插入时使用临时文件。 相反，代替上次保存的数据块的缓存中添加要缓存的数据。 上次保存的数据块的保存在临时文件中。 如果游标库异常，终止如时在电源发生故障，它将保留在磁盘上的 Windows 临时文件。 它们被命名为 ~ CTT*nnnn*.tmp 和是否在当前目录中创建。  
+ 游标库将数据缓存在内存中，在 Windows®临时文件中。 这会限制游标库只能由可用磁盘空间处理的结果集的大小。 当要缓存的数据在游标库缓存末尾插入时，将使用临时文件。 而是添加要缓存的数据，以取代缓存中最后保存的数据块。 上次保存的数据块保存在临时文件中。 如果游标库异常终止，例如当电源发生故障时，它可以将 Windows 临时文件保留在磁盘上。 它们命名为 ~ CTT*nnnn*，并在当前目录中创建。  
   
 > [!NOTE]  
->  如果从只读共享或光盘 （如 Microsoft 基础类库示例），运行该应用程序时，游标库中 Microsoft® WindowsNT®/Windows2000 尝试在当前目录上的临时文件中缓存数据 SQLSTATEHY000 （常规错误-无法创建文件缓冲区） 将返回。
+>  如果 Microsoft® WindowsNT®中的游标库尝试缓存当前目录中的临时文件中的数据，而应用程序从只读共享或光盘（如 Microsoft 基础类库示例）运行，则将返回 SQLSTATE HY000 （一般错误-无法创建文件缓冲区）。

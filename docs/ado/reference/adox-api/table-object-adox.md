@@ -1,5 +1,5 @@
 ---
-title: 表对象 (ADOX) |Microsoft Docs
+title: Table 对象（ADOX） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,57 +16,57 @@ ms.assetid: a6d74000-0828-49ba-850a-63da865f8802
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 10f3add3cb243d54643c3294104ec2546e7737d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965167"
 ---
 # <a name="table-object-adox"></a>表对象 (ADOX)
-表示包括列、 索引和键的数据库表。  
+表示包含列、索引和键的数据库表。  
   
 ## <a name="remarks"></a>备注  
- 下面的代码创建一个新**表**:  
+ 下面的代码创建一个新**表**：  
   
 ```  
 Dim obj As New Table  
 ```  
   
- 使用属性和集合**表**对象，你可以：  
+ 使用**Table**对象的属性和集合，可以：  
   
--   标识与该表[名称属性 (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)属性。  
+-   标识具有[Name 属性（ADOX）](../../../ado/reference/adox-api/name-property-adox.md)属性的表。  
   
--   确定具有表的类型[类型属性 （表） (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)属性。  
+-   确定具有[Type 属性（表）（ADOX）](../../../ado/reference/adox-api/type-property-table-adox.md)属性的表的类型。  
   
--   访问包含表的数据库列[列集合 (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)集合。  
+-   使用[columns 集合（ADOX）](../../../ado/reference/adox-api/columns-collection-adox.md)集合访问表的数据库列。  
   
--   访问具有表的索引[索引集合 (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)。  
+-   使用[索引集合（ADOX）](../../../ado/reference/adox-api/indexes-collection-adox.md)访问表的索引。  
   
--   访问具有表的密钥[密钥集合 (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)。  
+-   使用[Keys 集合（ADOX）](../../../ado/reference/adox-api/keys-collection-adox.md)访问表的键。  
   
--   指定拥有具有目录[ParentCatalog 属性 (ADOX)](../../../ado/reference/adox-api/parentcatalog-property-adox.md)属性。  
+-   指定拥有具有[ParentCatalog 属性（ADOX）](../../../ado/reference/adox-api/parentcatalog-property-adox.md)属性的表的目录。  
   
--   返回日期信息与[DateCreated 属性 (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)并[DateModified 属性 (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md)属性。  
+-   返回具有[DateCreated 属性（adox）](../../../ado/reference/adox-api/datecreated-property-adox.md)和[DATEMODIFIED 属性（adox）](../../../ado/reference/adox-api/datemodified-property-adox.md)属性的日期信息。  
   
--   访问使用特定于提供程序的表属性[属性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)集合。  
+-   使用[Properties 集合（ADO）](../../../ado/reference/ado-api/properties-collection-ado.md)集合访问提供程序特定的表属性。  
   
 > [!NOTE]
->  数据访问接口可能不支持的所有属性**表**对象。 如果您设置的提供程序不支持的属性值，将会出错。 对新**表**对象，该对象追加到集合时，将发生错误。 对于现有对象，将其设置属性时，将发生错误。  
+>  您的数据访问接口可能不支持**表**对象的所有属性。 如果为提供程序不支持的属性设置了值，则会发生错误。 对于新**表**对象，当对象追加到集合时，将发生错误。 对于现有对象，在设置属性时会发生此错误。  
 >   
->  创建时**表**对象，一个可选属性的相应默认值是否存在不保证您的提供程序支持该属性。 您的提供程序支持的属性有关的详细信息，请参阅提供程序文档。  
+>  创建**表**对象时，是否存在可选属性的适当默认值并不保证提供程序支持该属性。 有关提供程序支持的属性的详细信息，请参阅提供程序文档。  
   
  本部分包含以下主题。  
   
 -   [表对象属性、方法和事件](../../../ado/reference/adox-api/table-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>请参阅  
- [目录 ActiveConnection 属性示例 (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
- [列和表 Append 方法、 Name 属性示例 (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [连接的 Close 方法、 表 Type 属性示例 (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
- [项 Append 方法、 密钥类型、 RelatedColumn、 RelatedTable 和 UpdateRule 属性示例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
- [ParentCatalog 属性示例 (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
- [列集合 (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [索引集合 (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)   
- [项集合 (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)   
- [属性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
+## <a name="see-also"></a>另请参阅  
+ [目录 ActiveConnection 属性示例（VB）](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
+ [列和表追加方法，Name 属性示例（VB）](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
+ [连接关闭方法，表类型属性示例（VB）](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
+ [键 Append 方法、Key Type、RelatedColumn、RelatedTable 和 UpdateRule 属性示例（VB）](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [ParentCatalog 属性示例（VB）](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
+ [列集合（ADOX）](../../../ado/reference/adox-api/columns-collection-adox.md)   
+ [索引集合（ADOX）](../../../ado/reference/adox-api/indexes-collection-adox.md)   
+ [键集合（ADOX）](../../../ado/reference/adox-api/keys-collection-adox.md)   
+ [Properties 集合（ADO）](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [表集合 (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)

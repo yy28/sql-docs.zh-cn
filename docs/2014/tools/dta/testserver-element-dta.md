@@ -1,5 +1,5 @@
 ---
-title: TestServer 元素 (DTA) |Microsoft Docs
+title: TestServer 元素（DTA） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 73f5cdd35404617be9563c33574b09f825a2c7ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63138699"
 ---
 # <a name="testserver-element-dta"></a>TestServer 元素 (DTA)
@@ -36,7 +36,7 @@ ms.locfileid: "63138699"
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|Description|  
+|特征|说明|  
 |--------------------|-----------------|  
 |**数据类型和长度**|**string**，长度没有限制。|  
 |**默认值**|无。|  
@@ -52,7 +52,7 @@ ms.locfileid: "63138699"
 ## <a name="example"></a>示例  
  有关此元素的用法示例，请参阅 [减轻生产服务器优化负荷](../../relational-databases/performance/reduce-the-production-server-tuning-load.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [XML 输入文件引用（数据库引擎优化顾问）](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

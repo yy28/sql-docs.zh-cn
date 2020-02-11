@@ -17,16 +17,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b560b36eb98ec73723a4ce25cb3c647f4962b634
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62509979"
 ---
 # <a name="xml-input-file-reference-database-engine-tuning-advisor"></a>XML 输入文件引用（数据库引擎优化顾问）
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问可以使用 XML 输入文件来优化数据库。 此 XML 文件指定要用于优化会话的数据库、表、工作负荷文件或表以及优化选项。 您还可以使用此文件指定一个用户指定的配置来执行“假设”分析。  
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)]优化顾问可以使用 XML 输入文件来优化数据库。 此 XML 文件指定要用于优化会话的数据库、表、工作负荷文件或表以及优化选项。 您还可以使用此文件指定一个用户指定的配置来执行“假设”分析。  
   
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问 XML 输入文件包含 XML 元素（每个元素包含文本或其他用于指定优化会话设置的元素）的层次结构。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问 XML 输入文件必须符合格式正确的 XML 的标准，因此所有的元素名称都区分大小写。 使用 Pascal case 来指定元素，即第一个字符大写，随后的所有串连单词的第一个字母都大写。  
+ 
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问 XML 输入文件包含 XML 元素（每个元素包含文本或其他用于指定优化会话设置的元素）的层次结构。 
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问 XML 输入文件必须符合格式正确的 XML 的标准，因此所有的元素名称都区分大小写。 使用 Pascal case 来指定元素，即第一个字符大写，随后的所有串连单词的第一个字母都大写。  
   
  所有元素值都必须符合 XML 命名约定。 有关这些约定的详细信息，请参阅 MSDN Library 中的 [XML Textual Content](https://go.microsoft.com/fwlink/?LinkId=7614) 。  
   
@@ -38,73 +40,73 @@ ms.locfileid: "62509979"
   
 ## <a name="dtaxml-root-element"></a>DTAXML 根元素  
   
--   [DTAXML 元素 (DTA)](dtaxml-element-dta.md)  
+-   [&#40;DTA&#41;的 DTAXML 元素](dtaxml-element-dta.md)  
   
 ## <a name="dtainput-elements"></a>DTAInput 元素  
   
--   [DTAInput 元素 (DTA)](dtainput-element-dta.md)  
+-   [&#40;DTA&#41;的 DTAInput 元素](dtainput-element-dta.md)  
   
 -   [服务器元素 (DTA)](server-element-dta.md)  
   
--   [工作负荷元素 (DTA)](workload-element-dta.md)  
+-   [&#40;DTA&#41;的工作负荷元素](workload-element-dta.md)  
   
--   [TuningOptions 元素 (DTA)](tuningoptions-element-dta.md)  
+-   [&#40;DTA&#41;的 TuningOptions 元素](tuningoptions-element-dta.md)  
   
--   [配置元素 (DTA)](configuration-element-dta.md)  
+-   [配置元素 &#40;DTA&#41;](configuration-element-dta.md)  
   
 ## <a name="server-elements"></a>服务器元素  
   
--   [服务器的名称元素 (DTA)](name-element-for-server-dta.md)  
+-   [服务器 &#40;DTA&#41;的名称元素](name-element-for-server-dta.md)  
   
--   [服务器的数据库元素 (DTA)](database-element-for-server-dta.md)  
+-   [Server &#40;DTA&#41;的数据库元素](database-element-for-server-dta.md)  
   
 ## <a name="workload-elements"></a>工作负荷元素  
   
--   [文件元素 (DTA)](file-element-dta.md)  
+-   [&#40;DTA&#41;的文件元素](file-element-dta.md)  
   
--   [工作负荷的数据库元素 (DTA)](database-element-for-workload-dta.md)  
+-   [用于工作负荷 &#40;DTA&#41;的数据库元素](database-element-for-workload-dta.md)  
   
--   [EventString 元素 (DTA)](eventstring-element-dta.md)  
+-   [&#40;DTA&#41;的 EventString 元素](eventstring-element-dta.md)  
   
 ## <a name="tuning-options-elements"></a>优化选项元素  
   
--   [TuningTimeInMin 元素 (DTA)](tuningtimeinmin-element-dta.md)  
+-   [&#40;DTA&#41;的 TuningTimeInMin 元素](tuningtimeinmin-element-dta.md)  
   
--   [StorageBoundInMB 元素 (DTA)](storageboundinmb-element-dta.md)  
+-   [&#40;DTA&#41;的 StorageBoundInMB 元素](storageboundinmb-element-dta.md)  
   
--   [TestServer 元素 (DTA)](testserver-element-dta.md)  
+-   [&#40;DTA&#41;的 TestServer 元素](testserver-element-dta.md)  
   
--   [FeatureSet 元素 (DTA)](featureset-element-dta.md)  
+-   [&#40;DTA&#41;的 FeatureSet 元素](featureset-element-dta.md)  
   
--   [分区元素 (DTA)](partitioning-element-dta.md)  
+-   [&#40;DTA&#41;分区元素](partitioning-element-dta.md)  
   
--   [DropOnlyMode 元素 (DTA)](droponlymode-element-dta.md)  
+-   [&#40;DTA&#41;的 DropOnlyMode 元素](droponlymode-element-dta.md)  
   
--   [KeepExisting 元素 (DTA)](keepexisting-element-dta.md)  
+-   [&#40;DTA&#41;的 KeepExisting 元素](keepexisting-element-dta.md)  
   
--   [OnlineIndexOperation 元素 (DTA)](onlineindexoperation-element-dta.md)  
+-   [&#40;DTA&#41;的 OnlineIndexOperation 元素](onlineindexoperation-element-dta.md)  
   
--   [DatabaseToConnect 元素 (DTA)](databasetoconnect-element-dta.md)  
+-   [&#40;DTA&#41;的 DatabaseToConnect 元素](databasetoconnect-element-dta.md)  
   
 ## <a name="configuration-elements"></a>配置元素  
   
--   [用于配置的服务器元素 (DTA)](server-element-for-configuration-dta.md)  
+-   [用于配置 &#40;DTA&#41;的服务器元素](server-element-for-configuration-dta.md)  
   
--   [配置的数据库元素 (DTA)](database-element-for-configuration-dta.md)  
+-   [用于配置 &#40;DTA&#41;的数据库元素](database-element-for-configuration-dta.md)  
   
--   [建议元素 (DTA)](recommendation-element-dta.md)  
+-   [DTA&#41;&#40;建议元素](recommendation-element-dta.md)  
   
--   [创建元素 (DTA)](create-element-dta.md)  
+-   [&#40;DTA&#41;创建元素](create-element-dta.md)  
   
--   [索引元素 (DTA)](index-element-dta.md)  
+-   [Index 元素 &#40;DTA&#41;](index-element-dta.md)  
   
--   [索引的名称元素 (DTA)](name-element-for-index-dta.md)  
+-   [用于索引 &#40;DTA&#41;的名称元素](name-element-for-index-dta.md)  
   
--   [索引的列元素 (DTA)](column-element-for-index-dta.md)  
+-   [用于索引 &#40;DTA&#41;的列元素](column-element-for-index-dta.md)  
   
--   [列的名称元素 (DTA)](name-element-for-column-dta.md)  
+-   [&#40;DTA&#41;的列的名称元素](name-element-for-column-dta.md)  
   
--   [索引的文件组元素 (DTA)](filegroup-element-for-index-dta.md)  
+-   [用于索引 &#40;DTA&#41;的文件组元素](filegroup-element-for-index-dta.md)  
   
 ## <a name="database-elements"></a>数据库元素  
   
@@ -112,13 +114,13 @@ ms.locfileid: "62509979"
   
 -   [数据库的架构元素 (DTA)](schema-element-for-database-dta.md)  
   
--   [架构的名称元素 (DTA)](name-element-for-schema-dta.md)  
+-   [架构 &#40;DTA&#41;的名称元素](name-element-for-schema-dta.md)  
   
--   [架构的表元素 (DTA)](table-element-for-schema-dta.md)  
+-   [架构 &#40;DTA&#41;的 Table 元素](table-element-for-schema-dta.md)  
   
--   [表的名称元素 (DTA)](name-element-for-table-dta.md)  
+-   [用于&#41;DTA 的表 &#40;名称元素](name-element-for-table-dta.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

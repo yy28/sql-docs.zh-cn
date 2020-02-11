@@ -26,10 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8bd4676eed22cea99808d87016231dbd2ebaf4cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63032093"
 ---
 # <a name="monitor-resource-usage-system-monitor"></a>监视资源使用情况（系统监视器）
@@ -69,9 +69,9 @@ ms.locfileid: "63032093"
   
 -   磁盘活动  
   
--   处理器使用率  
+-   处理器利用率  
   
--   内存使用量  
+-   内存使用率  
   
  监视运行系统监视器的系统会轻微地影响计算机性能。 因此，要么将系统监视器数据记录到另一个磁盘或计算机上，以便减少对所监视计算机的影响，要么从远程计算机上运行系统监视器。 只监视您感兴趣的计数器。 如果监视的计数器过多，将会增加监视过程中使用的资源开销，并影响所监视计算机的性能。  
   
@@ -80,12 +80,12 @@ ms.locfileid: "63032093"
 |任务说明|主题|  
 |----------------------|-----------|  
 |描述何时使用系统监视器，并讨论使用系统监视器时的性能开销。|[运行系统监视器](run-system-monitor.md)|  
-|描述如何监视磁盘计数器，以便确定其 SQL Server 组件生成的磁盘活动和 I/O 量。|[监视磁盘使用情况](monitor-disk-usage.md)|  
-|描述如何监视 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，以便确定 CPU 使用率是否在正常范围内。|[监视 CPU 使用率](monitor-cpu-usage.md)|  
-|描述如何监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，以便确认内存使用量是否在正常范围内。|[监视内存使用量](monitor-memory-usage.md)|  
+|描述如何监视磁盘计数器，以便确定其 SQL Server 组件生成的磁盘活动和 I/O 量。|[监视磁盘用量](monitor-disk-usage.md)|  
+|描述如何监视 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，以便确定 CPU 使用率是否在正常范围内。|[监视 CPU 用量](monitor-cpu-usage.md)|  
+|描述如何监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，以便确认内存使用量是否在正常范围内。|[监视内存用量](monitor-memory-usage.md)|  
 |描述如何创建一个在达到系统监视器计数器的阈值时发出的警报。|[创建 SQL Server 数据库警报](create-a-sql-server-database-alert.md)|  
-|描述如何创建图表、警报、日志和报表，以便监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。|[创建图表、警报、日志和报表](create-charts-alerts-logs-and-reports.md)|  
+|描述如何创建图表、警报、日志和报表，以便监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。|[创建图表、警报、日志和报告](create-charts-alerts-logs-and-reports.md)|  
 |列出系统监视器用来在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的计算机中监视活动的对象和计数器。|[使用 SQL Server 对象](use-sql-server-objects.md)|  
-|列出系统监视器用于监视内存中 OLTP 活动的对象和计数器。|[XTP&#40;内存中 OLTP&#41;性能计数器](../../integration-services/performance/performance-counters.md)|  
+|列出系统监视器用于监视内存中 OLTP 活动的对象和计数器。|[XTP &#40;内存中 OLTP&#41; 性能计数器](../../integration-services/performance/performance-counters.md)|  
   
   

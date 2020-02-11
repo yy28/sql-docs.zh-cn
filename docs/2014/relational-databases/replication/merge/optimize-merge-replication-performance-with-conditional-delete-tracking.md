@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a93eed388f494b7d0aeaac127b95bc0d87c76963
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68210694"
 ---
 # <a name="optimize-merge-replication-performance-with-conditional-delete-tracking"></a>用条件性删除跟踪优化合并复制的性能
@@ -48,7 +48,7 @@ ms.locfileid: "68210694"
   
 -   复制 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 编程：[为合并项目指定不应跟踪删除（复制 Transact-SQL 编程）](..//publish/specify-merge-replication-properties.md#tracking-deletes)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [合并复制的项目选项](article-options-for-merge-replication.md)   
  [使用仅下载项目优化合并复制的性能](optimize-merge-replication-performance-with-download-only-articles.md)  
   

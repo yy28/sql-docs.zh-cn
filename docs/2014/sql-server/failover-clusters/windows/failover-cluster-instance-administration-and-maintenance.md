@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 402e9e0d787d6f60e069625e908faee4fbecaeca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63049433"
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>故障转移群集实例管理和维护
@@ -37,7 +37,7 @@ ms.locfileid: "63049433"
  安装 FCI 后，您可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序对其进行更改或修复。 例如，您可以向 FCI 添加其他节点、将 FCI 作为独立实例运行或从 FCI 配置中删除节点。  
   
 ### <a name="adding-a-node-to-an-existing-failover-cluster-instance"></a>向现有故障转移群集实例添加节点  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序提供了用于维护现有 FCI 的选项。 如果选择此选项，则可通过在要添加到 FCI 的计算机上运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序，向 FCI 中添加其他节点。 有关详细信息，请参阅[创建新的 SQL Server 故障转移群集（安装程序）](../install/create-a-new-sql-server-failover-cluster-setup.md)和[在 SQL Server 故障转移群集中添加或删除节点（安装程序）](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]安装程序提供了用于维护现有 FCI 的选项。 如果选择此选项，则可通过在要添加到 FCI 的计算机上运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序，向 FCI 中添加其他节点。 有关详细信息，请参阅[创建新的 SQL Server 故障转移群集（安装程序）](../install/create-a-new-sql-server-failover-cluster-setup.md)和[在 SQL Server 故障转移群集中添加或删除节点（安装程序）](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。  
   
 ### <a name="removing-a-node-from-an-existing-failover-cluster-instance"></a>从现有故障转移群集实例删除节点  
  通过在要从 FCI 删除的计算机上运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序，可以从 FCI 中删除节点。 FCI 中的每个节点都可以看作是一个对等方，不依赖于 FCI 中的其他节点，因此，您可以删除其中的任何节点。 已损坏的节点不一定能被删除，并且删除过程将不会从不可用的节点中卸载 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 二进制文件。 可以随时将已删除的节点重新添加到 FCI。 有关详细信息，请参阅[在 SQL Server 故障转移群集中添加或删除节点（安装程序）](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。  
@@ -50,7 +50,7 @@ ms.locfileid: "63049433"
 > [!IMPORTANT]  
 >  请勿对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户和 WSFC 服务帐户使用同一帐户。 否则，如果更改了 WSFC 服务帐户的密码， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装将失败。  
   
- 在 [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]中，服务 SID 可用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户。 有关详细信息，请参阅 [配置 Windows 服务帐户和权限](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)预览版本升级问题的解答。  
+ 在 [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]中，服务 SID 可用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户。 有关详细信息，请参阅[配置 Windows 服务帐户和权限](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
   
 ## <a name="administering-a-failover-cluster-instance"></a>管理故障转移群集实例  
   
@@ -62,7 +62,7 @@ ms.locfileid: "63049433"
 |介绍用于从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集故障中恢复的过程。|[从故障转移群集实例故障中恢复](recover-from-failover-cluster-instance-failure.md)|  
 |介绍用于更改 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例的 IP 地址资源的过程。|[更改故障转移群集实例的 IP 地址](change-the-ip-address-of-a-failover-cluster-instance.md)|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置 HealthCheckTimeout 属性设置](configure-healthchecktimeout-property-settings.md)   
  [配置 FailureConditionLevel 属性设置](configure-failureconditionlevel-property-settings.md)   
  [查看和读取故障转移群集实例诊断日志](view-and-read-failover-cluster-instance-diagnostics-log.md)  

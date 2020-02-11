@@ -1,5 +1,5 @@
 ---
-title: SQL Server 代理存储过程 (TRANSACT-SQL) |Microsoft Docs
+title: SQL Server 代理存储过程（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +16,16 @@ ms.assetid: 9c8de925-928b-460c-9455-779c4c37b966
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0396823be5a733acc551dc52a96ff642b67076c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67950377"
 ---
 # <a name="sql-server-agent-stored-procedures-transact-sql"></a>SQL Server 代理存储过程 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持以下系统存储过程，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理使用这些过程来管理计划的活动和事件驱动的活动。  
   
 |||  
@@ -51,7 +52,7 @@ ms.locfileid: "67950377"
 |[sp_delete_jobserver](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)|[sp_notify_operator](../../relational-databases/system-stored-procedures/sp-notify-operator-transact-sql.md)|  
 |[sp_delete_jobstep](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)|[sp_post_msx_operation](../../relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql.md)|  
 |[sp_delete_jobsteplog](../../relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql.md)|[sp_purge_jobhistory](../../relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md)|  
-|[sp_delete_notification](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)|[sp_remove_job_from_targets](../../relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md)s|  
+|[sp_delete_notification](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)|[sp_remove_job_from_targets](../../relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md)|  
 |[sp_delete_operator](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)|[sp_resync_targetserver](../../relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql.md)|  
 |[sp_delete_proxy](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)|[sp_revoke_login_from_proxy](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)|  
 |[sp_delete_schedule](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)|[sp_revoke_proxy_from_subsystem](../../relational-databases/system-stored-procedures/sp-revoke-proxy-from-subsystem-transact-sql.md)|  
@@ -69,7 +70,7 @@ ms.locfileid: "67950377"
 |[sp_help_downloadlist](../../relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql.md)|[sp_update_targetservergroup](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)|  
 |[sp_help_job](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)||  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

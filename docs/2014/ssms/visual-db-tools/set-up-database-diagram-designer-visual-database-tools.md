@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d71ea2d6a10755ef52e0cac37ddcd2385d82d9cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067602"
 ---
 # <a name="set-up-database-diagram-designer-visual-database-tools"></a>设置数据库关系图设计器 (Visual Database Tools)
@@ -57,9 +57,9 @@ ms.locfileid: "63067602"
   
     9. sp_upgraddiagrams 存储过程  
   
-## <a name="see-also"></a>请参阅  
- [了解数据库关系图所有权&#40;可视化数据库工具&#41;](visual-database-tools.md)   
- [从以前的版本升级数据库关系图&#40;可视化数据库工具&#41;](upgrade-database-diagrams-from-previous-editions-visual-database-tools.md)   
+## <a name="see-also"></a>另请参阅  
+ [了解数据库关系图所有权 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [从早期版本升级数据库关系图 &#40;Visual Database Tools&#41;](upgrade-database-diagrams-from-previous-editions-visual-database-tools.md)   
  [ALTER AUTHORIZATION (Transact-SQL)](/sql/t-sql/statements/alter-authorization-transact-sql)  
   
   

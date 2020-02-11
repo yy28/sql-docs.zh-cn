@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4588e453087e71a55b104c997129a93de2edf1a0
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73786309"
 ---
 # <a name="sqlgetfunctions"></a>SQLGetFunctions
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序接口符合为 ODBC 定义的三个符合性级别（ISO、开放式组和 ODBC 级别2）。 **SQLGetFunctions**报告 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序支持所有 ODBC 函数。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序接口符合为 ODBC 定义的三个符合性级别（ISO、开放式组和 odbc 级别2）。 **SQLGetFunctions**报告[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client odbc 驱动程序支持所有 ODBC 函数。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLGetFunctions 函数](https://go.microsoft.com/fwlink/?LinkId=59353)   

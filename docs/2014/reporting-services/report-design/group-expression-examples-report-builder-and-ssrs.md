@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ce7b42b1c97964108797c58948216aaed0ad5431
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105742"
 ---
 # <a name="group-expression-examples-report-builder-and-ssrs"></a>组表达式示例（报表生成器和 SSRS）
@@ -33,7 +33,7 @@ ms.locfileid: "66105742"
 ## <a name="examples-of-group-expressions"></a>组表达式示例  
  下表提供了可用于定义组的组表达式示例。  
   
-|Description|表达式|  
+|说明|表达式|  
 |-----------------|----------------|  
 |按 `Region` 字段分组。|`=Fields!Region.Value`|  
 |按姓氏和名字分组。|`=Fields!LastName.Value`<br /><br /> `=Fields!FirstName.Value`|  
@@ -42,7 +42,7 @@ ms.locfileid: "66105742"
 |按三个不同年龄范围分组：<br /><br /> “小于 21”、“21 到 50”和“大于 50”。|`=IIF(First(Fields!Age.Value)<21,"Under 21",(IIF(First(Fields!Age.Value)>=21 AND First(Fields!Age.Value)<=50,"Between 21 and 50","Over 50")))`|  
 |按多个年龄范围分组。 本示例演示了一段以 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET 编写的自定义代码，此段代码可返回下列年龄范围的字符串：<br /><br /> 小于等于 25<br /><br /> 26 到 50<br /><br /> 51 到 75<br /><br /> 大于 75|`=Code.GetRangeValueByAge(Fields!Age.Value)`<br /><br /> 自定义代码：<br /><br /> `Function GetRangeValueByAge(ByVal age As Integer) As String`<br /><br /> `Select Case age`<br /><br /> `Case 0 To 25`<br /><br /> `GetRangeValueByByAge = "25 or Under"`<br /><br /> `Case 26 To 50`<br /><br /> `GetRangeValueByByAge = "26 to 50"`<br /><br /> `Case 51 to 75`<br /><br /> `GetRangeValueByByAge = "51 to 75"`<br /><br /> `Case Else`<br /><br /> `GetRangeValueByByAge = "Over 75"`<br /><br /> `End Select`<br /><br /> `Return GetRangeValueByByAge`<br /><br /> `End Function`|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [对数据进行筛选、分组和排序（报表生成器和 SSRS）](filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)   
  [报表设计器的表达式中的自定义代码和程序集引用 (SSRS)](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)  

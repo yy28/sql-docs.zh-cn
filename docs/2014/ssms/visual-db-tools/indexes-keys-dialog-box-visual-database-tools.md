@@ -1,5 +1,5 @@
 ---
-title: 索引和密钥对话框 (Visual Database Tools) |Microsoft Docs
+title: "\"索引和键\" 对话框（Visual Database Tools） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f0244530672e9db4a43f3dbe80f0c67cc86f8a67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015409"
 ---
 # <a name="indexes-and-keys-dialog-box-visual-database-tools"></a>“索引和键”对话框 (Visual Database Tools)
@@ -30,7 +30,7 @@ ms.locfileid: "63015409"
  **选定的主/唯一键或索引**  
  列出现有的主键/唯一键和索引。 选择其中任意一项可在右侧网格中显示其属性。 如果该列表为空，则表示尚未为该表定义任何 XML 索引。  
   
- **“添加”**  
+ **添加**  
  创建新的主键/唯一键或索引。  
   
  **删除**  
@@ -45,14 +45,14 @@ ms.locfileid: "63015409"
  **是唯一的**  
  指示输入到此索引或键中的数据是否必须是唯一的。 这不适用于 XML 索引。  
   
- **类型**  
+ 类型   
  指定在“选定的主/唯一键或索引”  列表中所选的项是否为唯一键、主键或索引。 此字段对于主键是只读的。  
   
  **标识类别**  
  展开此项可显示“名称”  和“说明”  属性字段。  
   
  **名称**  
- 显示键或索引的名称。 在创建一个新索引时，将基于表设计器的活动窗口中的表为其指定默认名称。 您可以随时更改该名称。  
+ 显示键或索引的名称。 在创建一个新索引时，将基于表设计器的活动窗口中的表为其指定默认名称。 可随时更改名称。  
   
  **说明**  
  提供一个描述键或索引的位置。 若要编写更详细的说明，请单击“说明”，再单击属性字段右侧显示的省略号按钮 (…)   。 这可以提供一个更大的文本编写区域。  
@@ -91,15 +91,15 @@ ms.locfileid: "63015409"
  **忽略重复的键**  
  指定在大容量插入操作过程中插入具有与现有键值相同的键值的行时的行为。 如果选择：  
   
--   **是** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将发出警告，忽略有问题的传入行，并尝试插入剩余行。  
+-   如果**是** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，则会发出警告，忽略有问题的传入行，并尝试插入剩余行。  
   
--   **否** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将发出错误信息并回滚整个大容量插入操作。  
+-   **不** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]会发出错误消息并回滚整个大容量插入操作。  
   
  **包含列**  
  显示一个用逗号分隔的列表，其中列出用于组成索引键的所有列的名称。 只能为非聚集索引指定子键列。 此属性对 XML 索引是隐藏的。  
   
  **已禁用**  
- 指示是否禁用此索引。 此属性是只读属性。 只有在 Visual Database tools 之外禁用了索引，此属性才可设置为“是”  。  
+ 指示是否禁用此索引。 这是只读属性。 只有在 Visual Database tools 之外禁用了索引，此属性才可设置为“是”  。  
   
  **为全文本键**  
  指定此索引是否为全文本键。 有关全文本键的详细信息，请参阅 SQL Server 联机丛书。 此属性对 XML 索引是隐藏的。  
@@ -113,8 +113,8 @@ ms.locfileid: "63015409"
  **允许行锁定**  
  指定对此索引是否允许行级锁定。 允许或禁用行级锁定会影响数据库性能。 建议设置为“是”  。  
   
-## <a name="see-also"></a>请参阅  
- [唯一约束和 Check 约束](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
+## <a name="see-also"></a>另请参阅  
+ [Unique 约束和 Check 约束](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
  [主键和外键约束](../../relational-databases/tables/primary-and-foreign-key-constraints.md)  
   
   

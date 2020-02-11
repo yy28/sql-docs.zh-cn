@@ -1,5 +1,5 @@
 ---
-title: 列和表 Append 方法、 命名属性示例 (VB) |Microsoft Docs
+title: 列和表追加方法，Name 属性示例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 678e5546-df5d-4cd0-bfe9-6cf13cb385c0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 898efdf4fe33ec3ce08028bd00b5654947048255
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966864"
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vb"></a>列和表 Append 方法、Name 属性示例 (VB)
-下面的代码演示如何创建一个新表。  
+下面的代码演示如何创建新表。  
   
 ```  
 ' BeginCreateTableVB  
@@ -66,11 +66,11 @@ End Sub
 ' EndCreateTableVB  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [Append 方法 （ADOX 列）](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append 方法 （ADOX 表）](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [列对象 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [列集合 (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Name 属性 (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   
- [表对象 (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
+## <a name="see-also"></a>另请参阅  
+ [Append 方法（ADOX 列）](../../../ado/reference/adox-api/append-method-adox-columns.md)   
+ [Append 方法（ADOX 表）](../../../ado/reference/adox-api/append-method-adox-tables.md)   
+ [列对象（ADOX）](../../../ado/reference/adox-api/column-object-adox.md)   
+ [列集合（ADOX）](../../../ado/reference/adox-api/columns-collection-adox.md)   
+ [Name 属性（ADOX）](../../../ado/reference/adox-api/name-property-adox.md)   
+ [Table 对象（ADOX）](../../../ado/reference/adox-api/table-object-adox.md)   
  [表集合 (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)

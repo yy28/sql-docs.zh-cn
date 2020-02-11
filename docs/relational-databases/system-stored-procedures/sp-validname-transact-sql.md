@@ -1,5 +1,5 @@
 ---
-title: sp_validname (TRANSACT-SQL) |Microsoft Docs
+title: sp_validname （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,18 +19,18 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c559c8a6af6add669e1cc4630b7bcfc9fc0aacc2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67936739"
 ---
-# <a name="spvalidname-transact-sql"></a>sp_validname (Transact-SQL)
+# <a name="sp_validname-transact-sql"></a>sp_validname (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  检查有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符名称。 所有非二进制及非零值的数据，包括可以通过使用存储的 Unicode 数据**nchar**， **nvarchar**，或**ntext**数据类型已被接受为有效的字符标识符名称。  
+  检查有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符名称。 所有非二进制和非零数据（包括可使用**nchar**、 **nvarchar**或**Ntext**数据类型存储的 Unicode 数据）都作为标识符名称的有效字符接受。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,9 +41,9 @@ sp_validname [@name =] 'name'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @name = ] 'name'` 是的名称[标识符](../../relational-databases/databases/database-identifiers.md)为要检查其有效性。 *名称*是**sysname**，无默认值。 *名称*不能为 NULL，不能为空字符串，并且不能包含二进制零字符。  
+`[ @name = ] 'name'`要检查其有效性的[标识符](../../relational-databases/databases/database-identifiers.md)的名称。 *名称*为**sysname**，无默认值。 *名称*不能为 NULL，不能为空字符串，并且不能包含二进制零字符。  
   
-`[ @raise_error = ] raise_error` 指定是否引发错误。 *raise_error*是**位**，默认值为 1。 这表示将显示错误。 0 表示不会显示错误消息。  
+`[ @raise_error = ] raise_error`指定是否引发错误。 *raise_error*为**bit**，默认值为1。 这表示将显示错误。 0 表示不会显示错误消息。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -51,12 +51,12 @@ sp_validname [@name =] 'name'
 ## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
-## <a name="see-also"></a>请参阅  
- [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [数据库引擎存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [NCHAR (Transact-SQL)](../../t-sql/functions/nchar-transact-sql.md)   
- [nchar 和 nvarchar &#40;TRANSACT-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
- [ntext、 text 和 image &#40;TRANSACT-SQL&#41;](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)   
+ [NCHAR &#40;Transact-sql&#41;](../../t-sql/functions/nchar-transact-sql.md)   
+ [nchar 和 nvarchar &#40;Transact-sql&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
+ [ntext、text 和 image &#40;Transact-sql&#41;](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

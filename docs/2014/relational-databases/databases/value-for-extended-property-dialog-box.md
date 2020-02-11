@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7ac8dd7682ecfe8df3b317bba578bca8358b9b11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916499"
 ---
 # <a name="value-for-extended-property-dialog-box"></a>“扩展属性的值”对话框
-  使用“*\<属性名称> 的值”* 对话框可输入或查看值。  这是一个可以从多个位置打开的公共对话框。  
+  使用 " **** * \<属性名称>* 的值" 对话框可输入或查看值。 这是一个可以从多个位置打开的公共对话框。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
  **扩展属性名称**  

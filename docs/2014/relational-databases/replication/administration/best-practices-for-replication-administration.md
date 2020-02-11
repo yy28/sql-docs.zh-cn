@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fb7a972d865f7afe1295c5dbdf5ad3ce0c886556
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629640"
 ---
-# <a name="best-practices-for-replication-administration"></a>复制管理最佳实践
-  在配置复制后，了解如何管理复制拓扑十分重要。 本主题介绍了许多方面的基本最佳实践指导原则，还提供了有关每一方面的详细信息的链接。 除了遵循本主题中介绍的最佳实践指导，请考虑阅读常见问题解答主题，以使自己熟悉常见的问题和问题：[复制管理常见问题解答](frequently-asked-questions-for-replication-administrators.md)。  
+# <a name="best-practices-for-replication-administration"></a>Best Practices for Replication Administration
+  在配置复制后，了解如何管理复制拓扑十分重要。 本主题介绍了许多方面的基本最佳实践指导原则，还提供了有关每一方面的详细信息的链接。 除了遵循本主题中介绍的最佳做法指导原则之外，还请仔细阅读常见问题解答主题，以了解常见的问题：[复制管理员常见问题解答](frequently-asked-questions-for-replication-administrators.md)。  
   
  将最佳实践指导原则分成两个部分很有用：  
   
@@ -58,12 +58,12 @@ ms.locfileid: "62629640"
   
 -   订阅数据库  
   
--   发布服务器、分发服务器和所有订阅服务器上的**msdb** 数据库和 **master** 数据库  
+-   发布服务器、分发服务器和所有订阅服务器上的**msdb**数据库和**master**数据库  
   
  对于复制的数据库，需要特别注意与备份和还原数据有关的信息。 有关详细信息，请参阅 [备份和还原复制的数据库](back-up-and-restore-replicated-databases.md)。  
   
 ## <a name="script-the-replication-topology"></a>编写复制拓扑脚本  
- 制订灾难恢复计划时，应要求对拓扑中的所有复制组件编写脚本，另外，脚本还可以用来自动处理重复性的任务。 脚本包含实现脚本化复制组件（如发布或订阅）所需的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 系统存储过程。 创建完组件后，可以在向导（如新建发布向导）或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中创建脚本。 您可以使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 **sqlcmd**查看、修改和运行脚本。 脚本可以与备份文件存储在一起，以便在必须重新配置复制拓扑时使用。 有关详细信息，请参阅 [Scripting Replication](../scripting-replication.md)。  
+ 制订灾难恢复计划时，应要求对拓扑中的所有复制组件编写脚本，另外，脚本还可以用来自动处理重复性的任务。 脚本包含实现脚本化复制组件（如发布或订阅）所需的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 系统存储过程。 可以在向导（如新建发布向导）中或创建组件后在中[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]创建脚本。 您可以使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 **sqlcmd**查看、修改和运行脚本。 脚本可以与备份文件存储在一起，以便在必须重新配置复制拓扑时使用。 有关详细信息，请参阅 [Scripting Replication](../scripting-replication.md)。  
   
  如果进行了任何属性更改，则应重新编写组件脚本。 如果对事务复制使用自定义存储过程，则应与脚本一起存储每个过程的副本。如果过程发生更改，应更新相应的副本（通常会由于架构更改或应用程序要求的更改而更新过程）。 有关自定义过程的详细信息，请参阅[指定如何传播事务项目的更改](../transactional/transactional-articles-specify-how-changes-are-propagated.md)。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "62629640"
   
 -   复制监视器是监视复制的最重要的工具，它允许您监视复制拓扑的总体运行状况。 有关详细信息，请参阅 [Monitoring Replication](../monitoring-replication.md)。  
   
--   [!INCLUDE[tsql](../../../includes/tsql-md.md)] 和复制管理对象 (RMO) 提供了监视复制的接口。 有关详细信息，请参阅 [Monitoring Replication](../monitoring-replication.md)。  
+-   [!INCLUDE[tsql](../../../includes/tsql-md.md)]和复制管理对象（RMO）提供用于监视复制的接口。 有关详细信息，请参阅 [Monitoring Replication](../monitoring-replication.md)。  
   
 -   系统监视器也可用于监视复制性能。 有关详细信息，请参阅 [Monitoring Replication with System Monitor](../monitor/monitoring-replication-with-system-monitor.md)。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "62629640"
  建议根据发布数据库的备份计划执行验证。 例如，如果发布数据库有一个每周执行一次的完整备份，则可以在每周完成备份后运行一次验证。 有关详细信息，请参阅[验证已复制的数据](../validate-data-at-the-subscriber.md)。  
   
 ## <a name="use-agent-profiles-to-change-agent-parameters-if-necessary"></a>如果有必要，使用代理配置文件更改代理参数  
- 代理配置文件为设置复制代理参数提供了一个便利的方法。 也可以在代理命令行上指定参数，但通常更适合使用预定义的代理配置文件或创建新的配置文件（如果需要更改参数值）。 例如，如果使用合并复制并且订阅服务器从宽带连接转为拨号连接，这时可考虑使用合并代理的“慢速链接”  配置文件，此配置文件使用一组更适合慢速通信链接的参数。 有关详细信息，请参阅 [Replication Agent Profiles](../agents/replication-agent-profiles.md)。  
+ 代理配置文件为设置复制代理参数提供了一个便利的方法。 也可以在代理命令行上指定参数，但通常更适合使用预定义的代理配置文件或创建新的配置文件（如果需要更改参数值）。 例如，如果使用合并复制并且订阅服务器从宽带连接转为拨号连接，这时可考虑使用合并代理的“慢速链接” **** 配置文件，此配置文件使用一组更适合慢速通信链接的参数。 有关详细信息，请参阅 [Replication Agent Profiles](../agents/replication-agent-profiles.md)。  
   
 ## <a name="adjust-publication-and-distribution-retention-periods-if-necessary"></a>如果有必要，调整发布和分发保持期  
  事务复制和合并复制分别使用保持期确定事务在分发数据库中的存储时间以及订阅必须同步的频率。 建议开始时使用默认设置，但要监视拓扑以确定是否需要调整默认设置。 例如，在合并复制中，发布保持期（默认为 14 天）决定元数据在系统表中的存储时间。 如果订阅总是在五天内同步，请考虑将该设置调整为较小的数字，这样可以减少元数据，还可能提供更好的性能。 有关详细信息，请参阅 [Subscription Expiration and Deactivation](../subscription-expiration-and-deactivation.md)。  
@@ -133,7 +133,7 @@ ms.locfileid: "62629640"
  在创建发布后，可能需要添加或删除项目或者更改发布和项目属性。 创建发布后，多数更改是允许的，但在某些情况下还需要生成发布的新快照，并且/或者重新初始化对发布的订阅。 有关详细信息，请参阅[更改发布和项目属性](../publish/change-publication-and-article-properties.md)和[向现有发布添加项目和从中删除项目](../publish/add-articles-to-and-drop-articles-from-existing-publications.md)。  
   
 ## <a name="understand-how-to-make-schema-changes-if-application-requirements-change"></a>如果应用程序的要求发生更改，了解如何进行架构更改  
- 在很多情况下，将应用程序投入生产后都需要进行架构更改。 在复制拓扑中，这些更改通常必须传播到所有的订阅服务器。 复制支持对已发布对象进行多种架构更改。 对 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 发布服务器中相应的已发布对象进行以下任何架构更改时，默认情况下更改都将传播到所有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器：  
+ 在很多情况下，将应用程序投入生产后都需要进行架构更改。 在复制拓扑中，这些更改通常必须传播到所有的订阅服务器。 复制支持对已发布对象进行多种架构更改。 对 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 发布服务器中相应的发布对象进行下列任何一种架构更改时，默认情况下会将该更改传播到所有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器：  
   
 -   ALTER TABLE  
   
@@ -147,7 +147,7 @@ ms.locfileid: "62629640"
   
  有关详细信息，请参阅[对发布数据库进行架构更改](../publish/make-schema-changes-on-publication-databases.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [复制管理常见问题解答](frequently-asked-questions-for-replication-administrators.md)  
   
   

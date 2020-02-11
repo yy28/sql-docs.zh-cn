@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2109346c60ca807dcc818941f9baff862a211247
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62921790"
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>恢复数据库但不还原数据 (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "62921790"
  RESTORE DATABASE *database_name* WITH RECOVERY  
   
 > [!NOTE]  
->  FROM =\<backup_device>   子句不用于仅恢复还原，因为不需要任何备份。  
+>  FROM **=backup_device> 子句不用于仅恢复还原，因为不需要任何备份**\<  。  
   
  **示例**  
   
@@ -63,7 +63,7 @@ RESTORE DATABASE AdventureWorks2012
   
  仅恢复文件还原的 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) 语法是：  
   
- RESTORE DATABASE *database_name* { FILE **=** _logical_file_name_ | FILEGROUP **=** _logical_filegroup_name_ }[ **,** ...*n* ] WITH RECOVERY  
+ *Database_name* {FILE **=** _logical_file_name_还原数据库 |FILEGROUP **=** _logical_filegroup_name_ } [ **，**.。。*n* ] 与恢复  
   
  **示例**  
   
@@ -88,7 +88,7 @@ RESTORE DATABASE Sales FILEGROUP=SalesGroup2 WITH RECOVERY;
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A>  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [联机还原 (SQL Server)](online-restore-sql-server.md)   
  [段落还原 (SQL Server)](piecemeal-restores-sql-server.md)   
  [文件还原（简单恢复模式）](file-restores-simple-recovery-model.md)   

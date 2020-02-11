@@ -1,5 +1,5 @@
 ---
-title: LOCALDB_ERROR_INSTANCE_STOP_FAILED | Microsoft Docs
+title: LOCALDB_ERROR_INSTANCE_STOP_FAILED |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fd8ddaef29cb41e7a503b3558629e6bc5e16557e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62990631"
 ---
-# <a name="localdberrorinstancestopfailed"></a>LOCALDB_ERROR_INSTANCE_STOP_FAILED
+# <a name="localdb_error_instance_stop_failed"></a>LOCALDB_ERROR_INSTANCE_STOP_FAILED
     
 ## <a name="details"></a>详细信息  
   
@@ -29,7 +29,7 @@ ms.locfileid: "62990631"
 |组件|本地数据库运行时 API|  
 |消息正文|无法在指定的时间内完成本地数据库实例的停止操作。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  停止操作在给定的时间内未能完成。  
   
 ## <a name="user-action"></a>用户操作  

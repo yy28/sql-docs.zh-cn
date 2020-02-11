@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 37c719beb625a533c2d8f279a8500365c4786c05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62990576"
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>对内存中 OLTP 数据库的高可用性支持
@@ -29,8 +29,8 @@ ms.locfileid: "62990576"
 -   **可比较的故障转移时间**   
     次要副本维持持久内存优化表的内存中状态。 在发生自动或强制故障转移时，由于不需要恢复，因此故障转移到新的主副本的时间相当于故障转移到基于磁盘的表的时间。 创建为 SCHEMA_ONLY 的内存优化表在此配置中受支持。 但是，由于未对这些表的更改进行日志记录，因此辅助副本上的这些表中不会存在任何数据。  
   
--   **可读取辅助角色**   
-    你可以访问和查询次要副本上的内存优化表（如果已针对读取访问进行配置）。 有关详细信息请参阅[活动次要副本：可读辅助副本 （AlwaysOn 可用性组）](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
+-   **可读辅助**   
+    你可以访问和查询次要副本上的内存优化表（如果已针对读取访问进行配置）。 有关详细信息，请参阅[活动次要副本：可读次要副本（AlwaysOn 可用性组）](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
 ## <a name="failover-clustering-instance-fci-and-in-memory-oltp-databases"></a>故障转移群集实例 (FCI) 和内存中 OLTP 数据库  
  若要在共享存储配置中实现高可用性，则可以在具有一个或多个带有内存优化表的数据库的实例上，设置故障转移群集。 你需要在设置 FCI 时考虑以下因素。  
@@ -42,12 +42,12 @@ ms.locfileid: "62990576"
     请注意，SCHEMA_ONLY 表将在故障转移后为空，并且没有行。 这是由应用程序设计和定义的。 这与你重启带有一个或多个 SCHEMA_ONLY 表的 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 数据库时的行为完全相同。  
   
 ## <a name="support-for-transaction-replication-in-in-memory-oltp"></a>对内存中 OLTP 中的事务复制的支持  
- 充当事务复制订阅服务器的表（不包括对等事务复制）可以配置为内存优化表。 其他复制配置与内存优化表不兼容。  有关详细信息，请参阅 [复制到内存优化表订阅服务器](../replication/replication-to-memory-optimized-table-subscribers.md)。  
+ 充当事务复制订阅服务器的表（不包括对等事务复制）可以配置为内存优化表。 其他复制配置与内存优化表不兼容。  有关详细信息，请参阅[复制到内存优化表订阅服务器](../replication/replication-to-memory-optimized-table-subscribers.md)。  
   
-## <a name="see-also"></a>请参阅  
- [AlwaysOn 可用性组 (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [AlwaysOn 可用性组概述&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [活动次要副本：可读辅助副本&#40;AlwaysOn 可用性组&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+## <a name="see-also"></a>另请参阅  
+ [AlwaysOn 可用性组（SQL Server）](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [活动辅助副本：可读辅助副本 &#40;AlwaysOn 可用性组&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [复制到内存优化表订阅服务器](../replication/replication-to-memory-optimized-table-subscribers.md)  
   
   

@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 87adf79d9420f70e132fd9a6c41a9ddacf298fa7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022716"
 ---
-# <a name="mssqlrepl027183"></a>MSSQL_REPL027183
+# <a name="mssql_repl027183"></a>MSSQL_REPL027183
     
 ## <a name="message-details"></a>消息详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "63022716"
 |符号名称||  
 |消息正文|合并进程未能使用参数化的行筛选器来枚举项目中的更改。 如果此操作仍失败，请增大该进程的查询超时值，缩短发布的保持期，并改进对已发布表的索引。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  在已筛选发布中处理更改时，如果出现合并代理超时，则会引发该错误。 超时可能由下列一种原因引起：  
   
 -   没有使用预计算分区优化。  
@@ -44,7 +44,7 @@ ms.locfileid: "63022716"
 -   未基于唯一键联接的已筛选表和涉及大量表的联接筛选器。  
   
 ## <a name="user-action"></a>用户操作  
- 若要解决此问题：  
+ 若要解决问题，请执行以下操作：  
   
 -   增大合并代理 **-QueryTimeOut** 参数的值，以在解决导致错误的基本问题后，仍可继续进行处理。 代理参数可以在代理配置文件和命令行中指定。 有关详细信息，请参阅：  
   
@@ -52,13 +52,13 @@ ms.locfileid: "63022716"
   
     -   [查看和修改复制代理命令提示符参数 (SQL Server Management Studio)](agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [复制代理可执行文件概念](concepts/replication-agent-executables-concepts.md)。  
+    -   [Replication Agent Executables Concepts](concepts/replication-agent-executables-concepts.md)的最小和最大内存量。  
   
 -   请尽可能使用预计算分区优化。 如果许多发布要求都得到满足，则默认使用此优化。 有关这些要求的详细信息，请参阅[使用预计算分区优化参数化筛选器性能](merge/parameterized-filters-optimize-for-precomputed-partitions.md)。 如果发布不满足这些要求，则请考虑重新设计发布。  
   
 -   指定发布保持期可能的最低设置，因为只有在达到保持期时，复制才会清除发布数据库和订阅数据库中的元数据。 有关详细信息，请参阅 [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md)。  
   
--   在维护合并复制过程中，应不定期检查与合并复制关联的系统表的增长：MSmerge_contents、MSmerge_genhistory，以及 MSmerge_tombstone、MSmerge_current_partition_mappings，以及 MSmerge_past_partition_mappings      。 定期对这些表重建索引。 有关详细信息，请参阅 [重新组织和重新生成索引](../indexes/indexes.md)。  
+-   在合并复制维护过程中，应不定期检查以下与合并复制相关联的系统表的增长情况： **MSmerge_contents**、 **MSmerge_genhistory**、 **MSmerge_tombstone**、 **MSmerge_current_partition_mappings**、 **MSmerge_past_partition_mappings**。 定期对这些表重建索引。 有关详细信息，请参阅 [重新组织和重新生成索引](../indexes/indexes.md)。  
   
 -   请确保用于筛选的列已建立了适当的索引，并根据需要重新生成这些索引。 有关详细信息，请参阅 [重新组织和重新生成索引](../indexes/indexes.md)。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "63022716"
   
 -   在同步之间的筛选表上进行较少量的更改，或更加频繁地运行合并代理。 有关如何设置同步计划的详细信息，请参阅 [Specify Synchronization Schedules](specify-synchronization-schedules.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [错误和事件参考（复制）](errors-and-events-reference-replication.md)  
   
   

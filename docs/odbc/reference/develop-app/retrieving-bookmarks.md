@@ -15,19 +15,19 @@ ms.assetid: a34c8f09-b786-4835-a44b-b7294c970aff
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f18b87adf31f19d2a93bb3af3e14c265ae3940af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68020576"
 ---
 # <a name="retrieving-bookmarks"></a>检索书签
-如果应用程序将使用书签，它必须设置为 SQL_UB_VARIABLE 之前准备或执行该语句的 SQL_ATTR_USE_BOOKMARKS 语句属性。 这是必要的因为它们使用构建和维护的书签可能代价高昂的操作，因此仅当应用程序可以进行良好时，才应启用书签。  
+如果应用程序将使用书签，则在准备或执行该语句前，它必须将 SQL_ATTR_USE_BOOKMARKS 语句特性设置为 SQL_UB_VARIABLE。 这是必需的，因为生成和维护书签是一种昂贵的操作，因此，只有当应用程序可以充分利用书签时，才应启用书签。  
   
- 作为结果集的第 0 列返回的书签。 有三种应用程序可以检索它们的方法：  
+ 书签将作为结果集的第0列返回。 应用程序可以使用三种方法来检索它们：  
   
--   绑定结果集的第 0 列。 **SQLFetch**或**SQLFetchScroll**返回列绑定以及其他数据行集中的每个行的书签。  
+-   绑定结果集的列0。 **SQLFetch**或**SQLFetchScroll**将返回行集中每一行的书签以及其他绑定列的数据。  
   
--   调用**SQLSetPos**定位到行集中的行，然后调用**SQLGetData**列 0。 如果驱动程序支持书签，它必须始终支持调用的能力**SQLGetData**列 0，即使它不允许应用程序可以调用**SQLGetData**之前最后一个绑定的其他列列。  
+-   调用**SQLSetPos**以定位到行集中的行，然后对列0调用**SQLGetData** 。 如果驱动程序支持书签，则它必须始终支持对列0调用**SQLGetData**的能力，即使它不允许应用程序在最后一个绑定列之前为其他列调用**SQLGetData** 。  
   
--   调用**SQLBulkOperations**与*操作*参数设置为 SQL_ADD 和绑定的列 0。 光标将插入行，并返回绑定的缓冲区中的行的书签。
+-   调用**SQLBulkOperations** ，并将*操作*参数设置为 SQL_ADD 和列0绑定。 光标插入行并返回绑定缓冲区中的行的书签。

@@ -1,5 +1,5 @@
 ---
-title: NumericScale 和 Precision 属性示例 (VB) |Microsoft Docs
+title: NumericScale 和 Precision 属性示例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: ea2ec614-34c8-41b7-8ebd-063798bd56b4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 671e7f144ff70bedf1556b506ead6c51d05ebd08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67952164"
 ---
-# <a name="adox-code-example-numericscale-and-precision-properties-example-vb"></a>ADO 代码示例：NumericScale 和 Precision 属性示例 (VB)
-此示例演示[NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md)并[精度](../../../ado/reference/adox-api/precision-property-adox.md)的属性[列](../../../ado/reference/adox-api/column-object-adox.md)对象。 此代码将显示其值**订单详细信息**表的*Northwind*数据库。  
+# <a name="adox-code-example-numericscale-and-precision-properties-example-vb"></a>ADOX 代码示例：NumericScale 和 Precision 属性示例 (VB)
+此示例演示[列](../../../ado/reference/adox-api/column-object-adox.md)对象的[NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md)和[Precision](../../../ado/reference/adox-api/precision-property-adox.md)属性。 此代码显示*Northwind*数据库的 "**订单详细信息**" 表的值。  
   
 ```  
 ' BeginNumericScalePrecVB  
@@ -75,7 +75,7 @@ End Sub
 ' EndNumericScalePrecVB  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [列对象 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [NumericScale 属性 (ADOX)](../../../ado/reference/adox-api/numericscale-property-adox.md)   
+## <a name="see-also"></a>另请参阅  
+ [列对象（ADOX）](../../../ado/reference/adox-api/column-object-adox.md)   
+ [NumericScale 属性（ADOX）](../../../ado/reference/adox-api/numericscale-property-adox.md)   
  [Precision 属性 (ADOX)](../../../ado/reference/adox-api/precision-property-adox.md)

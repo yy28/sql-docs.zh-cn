@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9a16d7565bb36eb7895db94da088927be7595f5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63043942"
 ---
 # <a name="delete-a-solution"></a>删除解决方案
@@ -37,9 +37,9 @@ ms.locfileid: "63043942"
   
 4.  在“文件”  菜单上，单击“删除”  。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [解决方案资源管理器](solution-explorer.md)   
- [创建新的解决方案](create-a-new-solution.md)   
+ [创建新解决方案](create-a-new-solution.md)   
  [创建项目](create-a-project.md)   
  [移除或删除项或项目](remove-or-delete-an-item-or-project.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 展开的 QName (XQuery) |Microsoft Docs
+title: 已展开-QName （XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7c50409ea35809c52de718a8281bf76f75a5a0e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68004582"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>与 QName 相关的函数 - expanded-QName
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  返回与命名空间中指定 URI 的 xs: qname 类型值 *$paramURI*中指定的本地名称和 *$paramLocal*。 如果 *$paramURI*是空字符串或空序列，它表示无命名空间。  
+  返回 xs： QName 类型的值，该类型具有在 *$paramURI*中指定的命名空间 URI 和 *$paramLocal*中指定的本地名称。 如果 *$paramURI*为空字符串或空序列，则它不表示任何命名空间。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,27 +41,27 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
  QName 的本地名称部分。  
   
 ## <a name="remarks"></a>备注  
- 以下规则适用于**expanded-qname （)** 函数：  
+ 以下内容适用于已**展开的 QName （）** 函数：  
   
--   如果 *$paramLocal*指定值不是 xs: ncname 类型的正确词汇格式中，会返回空序列，并表示动态错误。  
+-   如果指定的 *$paramLocal*值不是 Xs： NCName 类型的正确词法格式，则返回空序列并表示动态错误。  
   
--   在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中不支持从 xs:QName 类型转换为任何其他类型。 因此， **expanded-qname （)** 函数不能用于 XML 构造。 例如，当构造节点（如 `<e> expanded-QName(...) </e>`）时，其值就必须是非类型化的。 这就要求您将 `expanded-QName()` 返回的 xs:QName 类型值转换为 xdt:untypedAtomic。 但是，不支持此操作。 在本主题的后面的示例中给出了一种解决方案。  
+-   在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中不支持从 xs:QName 类型转换为任何其他类型。 因此，不能在 XML 构造中使用**展开的 QName （）** 函数。 例如，当构造节点（如 `<e> expanded-QName(...) </e>`）时，其值就必须是非类型化的。 这就要求您将 `expanded-QName()` 返回的 xs:QName 类型值转换为 xdt:untypedAtomic。 但是，不支持此操作。 在本主题的后面的示例中给出了一种解决方案。  
   
--   您可以修改或比较现有的 QName 类型值。 例如，`/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")`元素的值进行比较 <`e`>，返回的 qname **expanded-qname （)** 函数。  
+-   您可以修改或比较现有的 QName 类型值。 例如， `/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")`将元素的值（<`e`>）与**展开的 qname （）** 函数返回的 QName 进行比较。  
   
 ## <a name="examples"></a>示例  
- 本主题提供了一些针对 XML 实例存储在各种中的 XQuery 示例**xml**类型列中的[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]数据库。  
+ 本主题提供针对[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]数据库中各种**xml**类型列中存储的 xml 实例的 XQuery 示例。  
   
 ### <a name="a-replacing-a-qname-type-node-value"></a>A. 替换 QName 类型节点值  
  此示例说明了如何修改 QName 类型的元素节点的值。 该示例执行以下操作：  
   
 -   创建定义 QName 类型的元素的 XML 架构集合。  
   
--   创建一个包含**xml**使用 XML 架构集合的类型列。  
+-   使用 XML 架构集合创建一个具有**xml**类型列的表。  
   
 -   将 XML 实例保存在表中。  
   
--   使用**modify （)** 要修改的实例中的 QName 类型元素的值的 xml 数据类型的方法。 **Expanded-qname （)** 函数用于生成新的 QName 类型值。  
+-   使用 xml 数据类型的**modify （）** 方法修改实例中 QName type 元素的值。 **展开的 qname （）** 函数用于生成新的 QName 类型值。  
   
 ```  
 -- If XML schema collection (if exists)  
@@ -98,7 +98,7 @@ go
 </Root>   
 ```  
   
- 在以下查询中，<`ElemQN`> 元素的值替换为使用**modify （)** xml 数据类型和 XML DML，如所示的替换值的方法。  
+ 在下面的查询中，使用`ElemQN` xml 数据类型的**modify （）** 方法和 xml DML 的 replace （）方法替换 <> 元素值，如下所示。  
   
 ```  
 -- the value.  
@@ -113,7 +113,7 @@ SELECT * from T
 go  
 ```  
   
- 结果如下： 请注意，在元素 <`ElemQN`> 的 QName 类型现在具有新值：  
+ 结果如下： 请注意，QName 类型`ElemQN` <> 的元素现在有一个新值：  
   
 ```  
 <Root xmlns="QNameXSD" xmlns:ns="urn">  
@@ -132,7 +132,7 @@ go
 ```  
   
 ### <a name="b-dealing-with-the-limitations-when-using-the-expanded-qname-function"></a>B. 处理使用 expanded-QName() 函数时的限制。  
- **展开的 QName**函数不能用于 XML 构造。 下面的示例阐释了这一点。 为了消除此限制，该示例首先插入一个节点，然后修改此节点。  
+ 无法在 XML 构造中使用**展开的 QName**函数。 下面的示例对此进行了演示。 为了消除此限制，该示例首先插入一个节点，然后修改此节点。  
   
 ```  
 -- if exists drop the table T  
@@ -157,7 +157,7 @@ SELECT *
 FROM T  
 ```  
   
- 以下示例尝试添加另一个 <`root`> 元素但未成功，因为 XML 构造中不支持 expanded-qname （） 函数。  
+ 以下尝试添加了另一个`root` <> 元素，但是失败，因为 XML 构造中不支持扩展的 QName （）函数。  
   
 ```  
 update T SET xmlCol.modify('  
@@ -165,7 +165,7 @@ insert <root>{expanded-QName("http://ns","someLocalName")}</root> as last into /
 go  
 ```  
   
- 此解决方案是首先插入值的实例 <`root`> 元素，然后修改它。 在此示例中，使用初始值为空时 <`root`> 插入元素。 在此示例中的 XML 架构集合允许值为空 <`root`> 元素。  
+ 这样做的一种方法是先插入一个实例，其中包含 <`root`> 元素的值，然后对其进行修改。 在此示例中，插入 <`root`> 元素时将使用零初始值。 此示例中的 XML 架构集合允许 <`root`> 元素的 nil 值。  
   
 ```  
 update T SET xmlCol.modify('  
@@ -186,7 +186,7 @@ go
   
  `<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p1="http://ns">p1:someLocalName</root>`  
   
- 可以比较 QName 值，如以下查询所示。 查询仅返回 <`root`> 元素的值匹配 QName 类型返回值**expanded-qname （)** 函数。  
+ 可以比较 QName 值，如以下查询所示。 查询仅返回其值与`root` **展开的 qname （）** 函数返回的 QName 类型值匹配的 <> 元素。  
   
 ```  
 SELECT xmlCol.query('  
@@ -200,9 +200,9 @@ FROM T
 ```  
   
 ### <a name="implementation-limitations"></a>实现限制  
- 还有一个限制：**Expanded-qname （)** 函数接受空序列，第二个参数，并将返回空，而不是第二个参数不正确时引发运行时错误。  
+ 有一个限制：**展开的 QName （）** 函数接受空序列作为第二个参数，并将返回空，而不是在第二个参数不正确时引发运行时错误。  
   
-## <a name="see-also"></a>请参阅  
- [与 Qname 相关的函数&#40;XQuery&#41;](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
+## <a name="see-also"></a>另请参阅  
+ [与 QNames &#40;XQuery 相关的函数&#41;](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
   
   

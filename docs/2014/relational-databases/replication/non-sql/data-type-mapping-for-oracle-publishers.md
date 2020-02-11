@@ -15,18 +15,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 463dd08cfa9434396a1afea1e4851549f16496cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022646"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Oracle 发布服务器的数据类型映射
-  Oracle 数据类型并非始终与 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型完全匹配。 如果可能，在发布 Oracle 表时会自动选择匹配的数据类型。 在单一数据类型映射不清晰的情况下，提供备用的数据类型映射。 有关如何选择备用映射的信息，请参阅本主题后面的“指定备用数据类型映射”部分。  
+  Oracle 数据类型和[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据类型并不始终完全匹配。 如果可能，在发布 Oracle 表时会自动选择匹配的数据类型。 在单一数据类型映射不清晰的情况下，提供备用的数据类型映射。 有关如何选择备用映射的信息，请参阅本主题后面的“指定备用数据类型映射”部分。  
   
  下表显示了将数据从 Oracle 发布服务器移动到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器时，在 Oracle 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之间数据类型的默认映射情况。 “备用”列指示备用映射是否可用。  
   
-|Oracle 数据类型|SQL Server 数据类型|备用|  
+|Oracle 数据类型|SQL Server 数据类型|备选项|  
 |----------------------|--------------------------|------------------|  
 |BFILE|VARBINARY(MAX)|是|  
 |BLOB|VARBINARY(MAX)|是|  
@@ -49,7 +49,7 @@ ms.locfileid: "63022646"
 |RAW([1-2000])|VARBINARY([1-2000])|否|  
 |real|FLOAT|否|  
 |ROWID|CHAR(18)|否|  
-|timestamp|DATETIME|是|  
+|TIMESTAMP|DATETIME|是|  
 |TIMESTAMP(0-7)|DATETIME|是|  
 |TIMESTAMP(8-9)|DATETIME|是|  
 |TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|是|  
@@ -76,12 +76,13 @@ ms.locfileid: "63022646"
 -   使用 REF 的列  
   
 ### <a name="the-date-data-type"></a>DATE 数据类型  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的日期范围为自公元 1753 年 到公元 9999 年，而 Oracle 中的日期范围为自公元前 4712 年 到公元 4712 年。 如果类型为 DATE 的列包含超出 SQL Server 范围的值，则为该列选择备用数据类型 VARCHAR(19)。  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的日期范围为自公元 1753 年 到公元 9999 年，而 Oracle 中的日期范围为自公元前 4712 年 到公元 4712 年。 如果类型为 DATE 的列包含超出 SQL Server 范围的值，则为该列选择备用数据类型 VARCHAR(19)。  
   
 ### <a name="float-and-number-types"></a>FLOAT 和 NUMBER 类型  
  在 FLOAT 和 NUMBER 数据类型映射期间指定的小数位数和精度取决于为 Oracle 数据库中使用该数据类型的列指定的小数位数和精度。 精度指数字的位数。 小数位数指小数点后的数字位数。 例如，数 123.45 的精度是 5，小数位数是 2。  
   
- Oracle 允许定义小数位数大于精度的数，如 NUMBER(4,5)，但 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 要求精度等于或大于小数位数。 若要确保没有不发生数据截断，如果小数位数大于精度 Oracle 发布服务器上，精度设置为等于小数位数时，数据类型映射：NUMBER(4,5) 将映射为 NUMERIC(5,5)。  
+ Oracle 允许定义小数位数大于精度的数，如 NUMBER(4,5)，但 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 要求精度等于或大于小数位数。 为了确保不发生数据截断，如果在 Oracle 发布服务器上出现小数位数大于精度的情况，则会在映射数据类型时将精度设置为等于小数位数，例如 NUMBER(4,5) 将映射为 NUMERIC(5,5)。  
   
 > [!NOTE]  
 >  如果未指定 NUMBER 的小数位数和精度， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将默认使用最大的小数位数 (8) 和精度 (38)。 建议您在 Oracle 中设置特定小数位数和精度，以在复制数据时能够改善存储和性能。  
@@ -104,7 +105,7 @@ ms.locfileid: "63022646"
   
  若要指定备用数据类型映射，请参阅 [指定 Oracle 发布服务器的数据类型映射](../publish/specify-data-type-mappings-for-an-oracle-publisher.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置 Oracle 发布服务器](configure-an-oracle-publisher.md)   
  [Oracle 发布服务器的设计注意事项和限制](design-considerations-and-limitations-for-oracle-publishers.md)   
  [Oracle 发布概述](oracle-publishing-overview.md)  

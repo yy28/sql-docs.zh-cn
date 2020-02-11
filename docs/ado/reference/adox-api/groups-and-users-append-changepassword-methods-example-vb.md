@@ -1,5 +1,5 @@
 ---
-title: 组和用户 Append、 ChangePassword 方法示例 (VB) |Microsoft Docs
+title: 组和用户追加，ChangePassword 方法示例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,17 +16,17 @@ ms.assetid: c9426757-9cdd-4a95-b506-d3d011569109
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d2b384167358f578835256c0e3f7906db20cf5bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966200"
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vb"></a>组和用户 Append、ChangePassword 方法示例 (VB)
-此示例演示[追加](../../../ado/reference/adox-api/append-method-adox-groups.md)方法[组](../../../ado/reference/adox-api/groups-collection-adox.md)，并将[追加](../../../ado/reference/adox-api/append-method-adox-users.md)方法[用户](../../../ado/reference/adox-api/users-collection-adox.md)通过添加新[组](../../../ado/reference/adox-api/group-object-adox.md)和一个新[用户](../../../ado/reference/adox-api/user-object-adox.md)到系统。 新**组**追加到**组**的新集合**用户**。 因此，新**用户**添加到**组**。 此外， [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)方法用于指定**用户**密码。  
+此示例演示了[组](../../../ado/reference/adox-api/groups-collection-adox.md)的[追加](../../../ado/reference/adox-api/append-method-adox-groups.md)方法，以及[用户](../../../ado/reference/adox-api/users-collection-adox.md)通过向系统添加新[组](../../../ado/reference/adox-api/group-object-adox.md)和新[用户](../../../ado/reference/adox-api/user-object-adox.md)的[附加](../../../ado/reference/adox-api/append-method-adox-users.md)方法。 新**组**将追加到新**用户**的 "**组**" 集合中。 因此，新**用户**将添加到**该组**中。 此外， [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)方法用于指定**用户**密码。  
   
 > [!NOTE]
->  如果您要连接到的数据源提供程序支持 Windows 身份验证，则应指定**Trusted_Connection = yes**或**Integrated Security = SSPI**而不是用户 ID 和密码在连接字符串中的信息。  
+>  如果要连接到支持 Windows 身份验证的数据源提供程序，应在连接字符串中指定**Trusted_Connection = yes**或**集成安全性 = SSPI**而不是用户 ID 和密码信息。  
   
 ```  
 ' BeginGroupVB  
@@ -122,12 +122,12 @@ End Sub
 ' EndGroupVB  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [Append 方法 （ADOX 组）](../../../ado/reference/adox-api/append-method-adox-groups.md)   
- [Append 方法 （ADOX 用户）](../../../ado/reference/adox-api/append-method-adox-users.md)   
- [目录对象 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [ChangePassword 方法 (ADOX)](../../../ado/reference/adox-api/changepassword-method-adox.md)   
- [组对象 (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)   
- [组集合 (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
- [用户对象 (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)   
+## <a name="see-also"></a>另请参阅  
+ [Append 方法（ADOX 组）](../../../ado/reference/adox-api/append-method-adox-groups.md)   
+ [Append 方法（ADOX 用户）](../../../ado/reference/adox-api/append-method-adox-users.md)   
+ [目录对象（ADOX）](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [ChangePassword 方法（ADOX）](../../../ado/reference/adox-api/changepassword-method-adox.md)   
+ [组对象（ADOX）](../../../ado/reference/adox-api/group-object-adox.md)   
+ [组集合（ADOX）](../../../ado/reference/adox-api/groups-collection-adox.md)   
+ [用户对象（ADOX）](../../../ado/reference/adox-api/user-object-adox.md)   
  [用户集合 (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)

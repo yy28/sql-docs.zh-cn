@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89fc6a74486cad96be0baee374721e06520acfcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015299"
 ---
 # <a name="migrating-to-in-memory-oltp"></a>迁移到内存中 OLTP
@@ -32,7 +32,7 @@ ms.locfileid: "63015299"
   
 -   [在内存优化的表中实现 SQL_VARIANT](implementing-sql-variant-in-a-memory-optimized-table.md)  
   
--   [本机编译的存储过程的迁移问题](migration-issues-for-natively-compiled-stored-procedures.md)  
+-   [本机编译存储过程的迁移问题](migration-issues-for-natively-compiled-stored-procedures.md)  
   
 -   [迁移计算列](migrating-computed-columns.md)  
   
@@ -44,10 +44,10 @@ ms.locfileid: "63015299"
   
 -   [在内存优化的表中实现 IDENTITY](implementing-identity-in-a-memory-optimized-table.md)  
   
- 有关迁移方法的信息，请参阅 [内存中 OLTP - 常见的工作负荷模式和迁移注意事项](https://msdn.microsoft.com/library/dn673538.aspx)。  
+ 有关迁移方法的信息，请参阅[内存中 OLTP - 常见的工作负荷模式和迁移注意事项](https://msdn.microsoft.com/library/dn673538.aspx)。  
   
-## <a name="see-also"></a>请参阅  
- [内存中 OLTP（内存中优化）](in-memory-oltp-in-memory-optimization.md)   
+## <a name="see-also"></a>另请参阅  
+ [内存中 OLTP &#40;内存中优化&#41;](in-memory-oltp-in-memory-optimization.md)   
  [估算内存优化表的内存需求](memory-optimized-tables.md)  
   
   

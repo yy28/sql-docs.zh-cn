@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7cbc7981817a6c62db378976fe36a4dc753c6b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015878"
 ---
 # <a name="modify-a-stored-procedure"></a>修改存储过程
@@ -27,7 +27,7 @@ ms.locfileid: "63015878"
   
 -   **开始之前：** [限制和局限](#Restrictions)、[安全性](#Security)  
   
--   **若要更改过程，使用：** [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
+-   要更改该过程，请使用：  [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -36,9 +36,9 @@ ms.locfileid: "63015878"
   
  如果原来的过程定义是使用 WITH ENCRYPTION 或 WITH RECOMPILE 创建的，那么只有在 ALTER PROCEDURE 语句中也包含这些选项时，这些选项才有效。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求对过程具有 ALTER PROCEDURE 权限。  
   
 ##  <a name="Procedures"></a> 修改存储过程  
@@ -59,7 +59,7 @@ ms.locfileid: "63015878"
   
 4.  修改存储过程的文本。  
   
-5.  若要测试语法，请在“查询”  菜单上单击“分析”  。  
+5.  若要测试语法，请在 **“查询”** 菜单上，单击 **“分析”** 。  
   
 6.  若要将修改信息保存到过程定义中，请在 **“查询”** 菜单上单击 **“执行”** 。  
   
@@ -146,7 +146,7 @@ ms.locfileid: "63015878"
   
     ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ALTER PROCEDURE (Transact-SQL)](/sql/t-sql/statements/alter-procedure-transact-sql)  
   
   

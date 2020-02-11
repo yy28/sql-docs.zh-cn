@@ -1,5 +1,5 @@
 ---
-title: 过程 Delete 方法示例 (VB) |Microsoft Docs
+title: 过程 Delete 方法示例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 94f1ac93-e778-4a40-a85e-94bce5316ac7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f5c7dfc901434c086b46bfb11c70e1eb2ee3bff7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965363"
 ---
 # <a name="procedures-delete-method-example-vb"></a>过程 Delete 方法示例 (VB)
-下面的代码演示如何通过删除过程[删除](../../../ado/reference/adox-api/delete-method-adox-collections.md)方法[过程](../../../ado/reference/adox-api/procedures-collection-adox.md)集合。  
+下面的代码演示如何使用 procedure 集合的[delete](../../../ado/reference/adox-api/delete-method-adox-collections.md)方法[删除过程。](../../../ado/reference/adox-api/procedures-collection-adox.md)  
   
 ```  
 ' BeginDeleteProcedureVB  
@@ -54,9 +54,9 @@ End Sub
 ' EndDeleteProcedureVB  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [ActiveConnection 属性 (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [目录对象 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Delete 方法 （ADOX 集合）](../../../ado/reference/adox-api/delete-method-adox-collections.md)   
- [过程对象 (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
+## <a name="see-also"></a>另请参阅  
+ [ActiveConnection 属性（ADOX）](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
+ [目录对象（ADOX）](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Delete 方法（ADOX 集合）](../../../ado/reference/adox-api/delete-method-adox-collections.md)   
+ [Procedure 对象（ADOX）](../../../ado/reference/adox-api/procedure-object-adox.md)   
  [过程集合 (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)

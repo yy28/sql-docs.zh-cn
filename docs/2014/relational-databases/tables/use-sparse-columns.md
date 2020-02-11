@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1e98485d0a1887b2ac24da20d8b8a672c0060591
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196661"
 ---
 # <a name="use-sparse-columns"></a>使用稀疏列
@@ -65,7 +65,8 @@ ms.locfileid: "68196661"
 |`ntext`||  
   
 ## <a name="estimated-space-savings-by-data-type"></a>按数据类型所估算的空间节省量  
- 相对于未标记为 SPARSE 的相同数据所需的空间，稀疏列在存储非 Null 值时需要的存储空间更多。 下表说明了每种数据类型的空间使用情况。 **NULL 百分比** 列指示数据必须有多少比例为 NULL，才能实现 40% 的净空间节省。  
+ 相对于未标记为 SPARSE 的相同数据所需的空间，稀疏列在存储非 Null 值时需要的存储空间更多。 下表说明了每种数据类型的空间使用情况。 
+  **NULL 百分比** 列指示数据必须有多少比例为 NULL，才能实现 40% 的净空间节省。  
   
  **固定长度的数据类型**  
   
@@ -85,7 +86,7 @@ ms.locfileid: "68196661"
 |`uniqueidentifier`|16|20|43%|  
 |`date`|3|7|69%|  
   
- **长度依赖于精度的数据类型**  
+ **精度依赖于长度的数据类型**  
   
 |数据类型|非稀疏字节|稀疏字节|NULL 百分比|  
 |---------------|---------------------|------------------|---------------------|  
@@ -99,14 +100,14 @@ ms.locfileid: "68196661"
 |`decimal/numeric(38,s)`|17|21|42%|  
 |`vardecimal(p,s)`|使用 `decimal` 类型作为保守的估计。|||  
   
- **长度依赖于数据的数据类型**  
+ **数据依赖长度的数据类型**  
   
 |数据类型|非稀疏字节|稀疏字节|NULL 百分比|  
 |---------------|---------------------|------------------|---------------------|  
 |`sql_variant`|随基础数据类型而异|||  
-|`varchar` 或 `char`|2*|4*|60%|  
-|`nvarchar` 或 `nchar`|2*|4*+|60%|  
-|`varbinary` 或 `binary`|2*|4*|60%|  
+|`varchar`或`char`|2*|4*|60%|  
+|`nvarchar`或`nchar`|2*|4*+|60%|  
+|`varbinary`或`binary`|2*|4*|60%|  
 |`xml`|2*|4*|60%|  
 |`hierarchyid`|2*|4*|60%|  
   
@@ -158,7 +159,8 @@ ms.locfileid: "68196661"
   
      事务复制支持稀疏列，但它不支持可以与稀疏列一起使用的列集。 有关列集的详细信息，请参阅[使用列集](../tables/use-column-sets.md)。  
   
-     SPARSE 属性的复制由架构选项来决定，架构选项是通过使用 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 或者使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的  “项目属性”对话框来指定的。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本不支持稀疏列。 如果必须将数据复制到早期版本，需指定不应复制 SPARSE 属性。  
+     SPARSE 属性的复制由架构选项来决定，架构选项是通过使用 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 或者使用 ** 中的**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]“项目属性”对话框来指定的。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本不支持稀疏列。 如果必须将数据复制到早期版本，需指定不应复制 SPARSE 属性。  
   
      对于发布的表，不能向表中添加任何新的稀疏列，也不能更改现有列的稀疏属性。 如果需要执行此类操作，则应删除然后再重新创建发布。  
   
@@ -170,7 +172,7 @@ ms.locfileid: "68196661"
   
      更改跟踪支持稀疏列和列集。 当在表中更新列集时，更改跟踪将此视为整个行的更新。 由于不提供详细的更改跟踪，因此不能获取通过列集更新操作更新的稀疏列的准确集合。 如果通过 DML 语句显式更新稀疏列，则这些稀疏列上的更改跟踪将像平常一样工作，并且可以准确地识别出已更改的列的集合。  
   
--   变更数据捕获  
+-   更改数据捕获  
   
      变更数据捕获支持稀疏列，但不支持列集。  
   
@@ -231,10 +233,10 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  `1      Tire Spec 1  AXZZ217                  27`  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用列集](../tables/use-column-sets.md)   
  [CREATE TABLE (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql)   
- [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql)   
+ [ALTER TABLE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
  [sys.columns (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-columns-transact-sql)  
   
   

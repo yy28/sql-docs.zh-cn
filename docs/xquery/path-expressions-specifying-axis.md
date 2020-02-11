@@ -22,10 +22,10 @@ ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 07058816406ef6ac0d5a3356423e231a10ce6165
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946485"
 ---
 # <a name="path-expressions---specifying-axis"></a>路径表达式 - 指定轴
@@ -35,32 +35,33 @@ ms.locfileid: "67946485"
   
 -   轴  
   
--   一个[节点测试](../xquery/path-expressions-specifying-node-test.md)  
+-   [节点测试](../xquery/path-expressions-specifying-node-test.md)  
   
--   [（可选） 的零个或多个步骤限定符](../xquery/path-expressions-specifying-predicates.md)  
+-   [零或更多步骤限定符（可选）](../xquery/path-expressions-specifying-predicates.md)  
   
- 有关详细信息，请参阅[路径表达式&#40;XQuery&#41;](../xquery/path-expressions-xquery.md)。  
+ 有关详细信息，请参阅[路径表达式 &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)。  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 XQuery 实现支持以下轴步骤：  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 XQuery 实现支持以下轴步骤：  
   
-|Axis|描述|  
+|轴|说明|  
 |----------|-----------------|  
-|**child**|返回上下文节点的子级。|  
-|**descendant**|返回上下文节点的所有后代。|  
-|**parent**|返回上下文节点的父级。|  
+|**子代**|返回上下文节点的子级。|  
+|**子项**|返回上下文节点的所有后代。|  
+|**上层**|返回上下文节点的父级。|  
 |**attribute**|返回上下文节点的属性。|  
-|**self**|返回上下文节点本身。|  
-|**descendant-or-self**|返回上下文节点及其所有后代。|  
+|**解压**|返回上下文节点本身。|  
+|**子代或自助**|返回上下文节点及其所有后代。|  
   
- 所有这些轴，除**父**轴，是正轴。 **父**轴是反向轴，因为它会在文档层次结构中向后搜索。 例如，相对路径表达式 `child::ProductDescription/child::Summary` 包含两个步骤，每个步骤均指定一个 `child` 轴。 第一步是检索\<ProductDescription > 上下文节点的子元素。 每个\<ProductDescription > 元素节点，第二步检索\<摘要 > 元素节点子级。  
+ 所有这些轴（**父**轴除外）都是向前轴。 **父**轴是反向轴，因为它在文档层次结构中向后搜索。 例如，相对路径表达式 `child::ProductDescription/child::Summary` 包含两个步骤，每个步骤均指定一个 `child` 轴。 第一步将检索\<上下文节点的 ProductDescription> 元素子级。 对于每\<个 ProductDescription> 元素节点，第二步检索\<摘要> 元素节点子级。  
   
- 相对路径表达式 `child::root/child::Location/attribute::LocationID` 包含三个步骤。 前两个步骤各指定一个 `child` 轴，第三步是指定 `attribute` 轴。 执行的生产说明中的 XML 文档时**Production.ProductModel**表，该表达式将返回`LocationID`属性的\<位置 > 元素节点子级的\<根 > 元素。  
+ 相对路径表达式 `child::root/child::Location/attribute::LocationID` 包含三个步骤。 前两个步骤各指定一个 `child` 轴，第三步是指定 `attribute` 轴。 针对**ProductModel**表中的生产说明 XML 文档执行时，表达式将返回`LocationID` \< \<根> 元素的元素节点子级> 位置的属性。  
   
 ## <a name="examples"></a>示例  
- 本主题中的查询示例指定对**xml**类型列中的**AdventureWorks**数据库。  
+ 本主题中的查询示例是针对**AdventureWorks**数据库中的**xml**类型列指定的。  
   
 ### <a name="a-specifying-a-child-axis"></a>A. 指定 child 轴  
- 有关某个特定产品型号，以下查询检索\<功能 > 元素节点子级\<ProductDescription > 元素节点从产品目录说明存储在`Production.ProductModel`表。  
+ 对于特定的产品型号，下面的查询从\< \< `Production.ProductModel`表中存储的产品目录说明中检索 ProductDescription> 元素节点> 元素节点子节点的功能。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -72,12 +73,12 @@ WHERE ProductModelID=19
   
  请注意上述查询的以下方面：  
   
--   `query()`方法**xml**数据类型指定的路径表达式。  
+-   Xml `query()`数据类型的**** 方法指定路径表达式。  
   
--   路径表达式中的两个步骤都指定一个 `child` 轴和节点名称（`ProductDescription` 和 `Features`）作为节点测试。 有关节点测试的信息，请参阅[路径表达式步骤中指定节点测试](../xquery/path-expressions-specifying-node-test.md)。  
+-   路径表达式中的两个步骤都指定一个 `child` 轴和节点名称（`ProductDescription` 和 `Features`）作为节点测试。 有关节点测试的信息，请参阅[在路径表达式步骤中指定节点测试](../xquery/path-expressions-specifying-node-test.md)。  
   
 ### <a name="b-specifying-descendant-and-descendant-or-self-axes"></a>B. 指定 descendant 轴和 descendant-or-self 轴  
- 以下示例使用 descendant 轴和 descendant-or-self 轴。 指定在此示例中查询**xml**类型的变量。 该 XML 实例经过简化以方便说明生成的结果中的差异。  
+ 以下示例使用 descendant 轴和 descendant-or-self 轴。 本示例中的查询是针对**xml**类型变量指定的。 该 XML 实例经过简化以方便说明生成的结果中的差异。  
   
 ```  
 declare @x xml  
@@ -106,13 +107,13 @@ select @y
 </b>  
 ```  
   
- 在此表达式中，如果为路径表达式指定了 descendant 轴  
+ 在此表达式中，如果为路径表达式指定了 descendant 轴   
   
- `/child::a/child::b/descendant::*`则您请求的所有后代 <`b`> 元素节点。  
+ `/child::a/child::b/descendant::*`下，你将要求 <`b`> 元素节点的所有后代。  
   
- 节点测试中的星号 (*) 以一个节点测试表示节点名称。 因此，descendant 轴的主节点类型（元素节点）确定返回节点的类型。 即表达式返回所有元素节点。 但不返回文本节点。 有关主节点类型和及其与节点测试的关系的详细信息，请参阅[在路径表达式步骤中指定节点测试](../xquery/path-expressions-specifying-node-test.md)主题。  
+ 节点测试中的星号 (*) 以一个节点测试表示节点名称。 因此，descendant 轴的主节点类型（元素节点）确定返回节点的类型。 即表达式返回所有元素节点。 但不返回文本节点。 有关主节点类型及其与节点测试之间的关系的详细信息，请参阅[在路径表达式步骤中指定节点测试](../xquery/path-expressions-specifying-node-test.md)主题。  
   
- 元素节点 <`c`> 和 <`d`> 将返回以下结果中所示：  
+ 将返回元素节点`c` <> 和`d` <>，如以下结果所示：  
   
 ```  
 <c>text2  
@@ -121,9 +122,9 @@ select @y
 <d>text3</d>  
 ```  
   
- 如果指定了后代或自身轴而不是 descendant 轴，`/child::a/child::b/descendant-or-self::*`返回上下文节点中，元素 <`b`>，及其后代。  
+ 如果指定的是子代轴或自身轴而不是子代轴， `/child::a/child::b/descendant-or-self::*`则返回上下文节点、元素 <`b`> 及其子代。  
   
- 下面是结果：  
+ 结果如下：  
   
 ```  
 <b>text1  
@@ -139,7 +140,7 @@ select @y
 <d>text3</d>   
 ```  
   
- 下面的示例查询针对**AdventureWorks**数据库中检索的所有后代元素节点 <`Features`> 元素子级的 <`ProductDescription`> 元素：  
+ 以下针对**AdventureWorks**数据库的示例查询将检索 <`Features` `ProductDescription`> 元素的 <> 元素子级的所有后代元素节点：  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -151,9 +152,9 @@ WHERE ProductModelID=19
 ```  
   
 ### <a name="c-specifying-a-parent-axis"></a>C. 指定 parent 轴  
- 下面的查询返回 <`Summary`> 元素子级的 <`ProductDescription`> 元素中的产品目录 XML 文档存储在`Production.ProductModel`表。  
+ 下面的查询将返回`Summary` `ProductDescription` `Production.ProductModel`表中存储的产品目录 XML 文档中 <> 元素的 <> 元素子级。  
   
- 此示例使用 parent 轴来返回到父级的 <`Feature`> 元素并检索 <`Summary`> 元素子级的 <`ProductDescription`> 元素。  
+ 此示例使用父轴返回到 <`Feature`> 元素的父级，并检索 <`Summary` `ProductDescription`> 元素的 <> 子元素。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -174,7 +175,7 @@ WHERE  ProductModelID=19
   
  以下是一个关于 parent 轴的更为有用的示例。  
   
- 存储在每个产品型号目录说明**CatalogDescription**的列**ProductModel**表具有`<ProductDescription>`具有元素`ProductModelID`属性和`<Features>`子元素，如以下片段中所示：  
+ 在**ProductModel**表的**CatalogDescription**列中存储的每个产品型号目录说明都`<ProductDescription>`有一个元素， `ProductModelID`该元素`<Features>`具有属性和子元素，如以下片段中所示：  
   
 ```  
 <ProductDescription ProductModelID="..." >  
@@ -186,14 +187,14 @@ WHERE  ProductModelID=19
 </ProductDescription>  
 ```  
   
- 查询在 FLWOR 语句中设置了一个迭代器变量 `$f`，以返回 `<Features>` 元素的元素子级。 有关详细信息，请参阅[FLWOR 语句和迭代&#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)。 对于每个功能，`return` 子句都构造一个以下形式的 XML：  
+ 查询在 FLWOR 语句中设置了一个迭代器变量 `$f`，以返回 `<Features>` 元素的元素子级。 有关详细信息，请参阅[FLWOR 语句和迭代 &#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)。 对于每个功能，`return` 子句都构造一个以下形式的 XML：  
   
 ```  
 <Feature ProductModelID="...">...</Feature>  
 <Feature ProductModelID="...">...</Feature>  
 ```  
   
- 若要添加`ProductModelID`为每个`<Feature`> 元素，`parent`指定轴：  
+ 若要为`ProductModelID`每个`<Feature`> 元素添加， `parent`则指定轴：  
   
 ```  
 SELECT CatalogDescription.query('  

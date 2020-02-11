@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 83cf9390524d2fdc013fdddc41c610c28930e998
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015769"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>将现有 SQL 跟踪脚本转换为扩展事件会话
@@ -100,7 +100,7 @@ ms.locfileid: "63015769"
 ## <a name="to-create-the-extended-events-session"></a>创建扩展事件会话  
  使用查询编辑器可以创建扩展事件会话，并且将输出写入某一文件目标。 下面的步骤描述单个查询，并且提供介绍如何生成查询的说明。 有关完整查询示例，请参阅本主题的“示例”部分。  
   
-1.  添加语句以创建事件会话，并且使用要用于扩展事件会话的名称替换*session_name* 。  
+1.  添加语句来创建事件会话，并将*ession_name*替换为要用于扩展事件会话的名称。  
   
     ```sql
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
@@ -247,7 +247,7 @@ ADD TARGET package0.asynchronous_file_target
    (SET filename='c:\temp\ExtendedEventsStoredProcs.xel', metadatafile='c:\temp\ExtendedEventsStoredProcs.xem');  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [查看与 SQL 跟踪事件类等效的扩展事件](view-the-extended-events-equivalents-to-sql-trace-event-classes.md)  
   
   

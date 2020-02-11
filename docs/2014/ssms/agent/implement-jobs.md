@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cef657960da876b25003a6fc1017a372abe410a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63074002"
 ---
 # <a name="implement-jobs"></a>执行作业
@@ -43,7 +43,7 @@ ms.locfileid: "63074002"
 |包含有关如何查看现有作业、作业执行后的历史记录以及如何修改现有作业的信息。|[查看或修改作业](view-or-modify-jobs.md)|  
 |包含有关如何删除作业的信息。|[删除作业](delete-jobs.md)|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [实现 SQL Server 代理安全性](implement-sql-server-agent-security.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: CLEAR CALCULATIONS 语句 (MDX) |Microsoft Docs
+title: CLEAR 计算语句（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1b0766cb002960a96d702184ac9719abe7610afd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938025"
 ---
 # <a name="mdx-data-manipulation---clear-calculations"></a>MDX 数据操作 - CLEAR CALCULATIONS
@@ -32,12 +32,12 @@ CLEAR CALCULATIONS [FROMCube_Expression]
  有效的多维表达式 (MDX) 多维数据集表达式。  
   
 ## <a name="remarks"></a>备注  
- **FROM**多维数据集的上下文是已知的此类在 MDX 脚本时，可以省略子句。  
+ 当多维数据集的上下文已知时，可以省略**FROM**子句，例如在 MDX 脚本中。  
   
 > [!NOTE]  
 >  只有服务器管理员、数据库管理员或具有多维数据集中源数据访问权（即 ReadSourceData=true）的角色的成员才能执行此语句。  
   
-## <a name="see-also"></a>请参阅  
- [MDX 数据操作语句&#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [Mdx 数据操作语句 &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
   
   

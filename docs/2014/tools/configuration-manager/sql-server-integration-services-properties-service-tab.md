@@ -11,26 +11,27 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d4cb1b821604d125bc81148a06fb613c8547a449
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68186703"
 ---
 # <a name="sql-server-integration-services-properties-service-tab"></a>SQL Server Integration Services 属性（“服务”选项卡）
-  使用“ **属性”对话框中的“服务”选项卡可以查看或指定下列选项** [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  。  
+  使用“ **属性”对话框中的“服务”选项卡可以查看或指定下列选项**[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] **** 。  
   
 ## <a name="options"></a>选项  
  **二进制路径**  
  显示此服务所使用的程序文件的位置。  
   
  **错误控制**  
- 1 指示 `SERVICE_ERROR_NORMAL`。 如果在计算机启动过程中无法启动该服务，则启动程序会记录该错误并显示一个弹出消息框，但仍会继续执行启动操作。 此值不能更改。  
+ 1 指示 `SERVICE_ERROR_NORMAL`。 如果在计算机启动过程中无法启动该服务，则启动程序会记录该错误并显示一个弹出消息框，但仍会继续执行启动操作。 不能更改此值。  
   
  **退出代码**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 错误代码，定义了在启动或停止服务时遇到的任何问题。 如果错误是此类表示的服务所特有的，并且 **ServiceSpecificExitCode** 属性中包含该错误的相关信息，则此属性将设置为 **ERROR_SERVICE_SPECIFIC_ERROR** (1066)。 当服务运行时，会将此值设置为 NO_ERROR (0)；而当服务正常终止时，会再次对它进行设置。  
+ 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 错误代码，定义了在启动或停止服务时遇到的任何问题。 如果错误是此类表示的服务所特有的，并且 **ServiceSpecificExitCode** 属性中包含该错误的相关信息，则此属性将设置为 **ERROR_SERVICE_SPECIFIC_ERROR** (1066)。 当服务运行时，会将此值设置为 NO_ERROR (0)；而当服务正常终止时，会再次对它进行设置。  
   
- **Host Name**  
+ **主机名**  
  显示运行 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 服务的计算机或群集的名称。  
   
  **名称**  
@@ -40,18 +41,18 @@ ms.locfileid: "68186703"
  显示 Windows 进程 ID。  
   
  **SQL 服务类型**  
- 显示用于调用进程的服务的类型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装有多种服务。  
+ 显示用于调用进程的服务的类型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装多个服务。  
   
  **启动模式**  
  对此服务设置以下选项：  
   
--   手动：此服务不会在计算机启动时自动启动。 您必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器或其他工具来启动该服务。  
+-   手动：计算机启动时，此服务不自动启动。 您必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器或其他工具来启动该服务。  
   
--   自动：此服务将尝试启动此计算机启动时。  
+-   自动：计算机启动时，此服务将尝试启动。  
   
--   已禁用：无法启动此服务。  
+-   已禁用：此服务无法启动。  
   
  **状态**  
- 指示此服务是正在运行、已停止还是已禁用。 “...  ”指明状态更改是挂起的。  
+ 指示此服务是正在运行、已停止还是已禁用。 “...****”指明状态更改是挂起的。  
   
   

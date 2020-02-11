@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0986e654430a47cc494bf1646c222b4888fc105b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63033509"
 ---
 # <a name="preconnectstarting-event-class"></a>PreConnect:Starting 事件类
@@ -26,7 +26,7 @@ ms.locfileid: "63033509"
   
 ## <a name="preconnectstarting-event-class-data-columns"></a>PreConnect:Starting 事件类数据列  
   
-|数据列名称|数据类型|Description|列 ID|可筛选|  
+|数据列名称|数据类型|说明|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |EventClass|`int`|215|27|否|  
 |SPID|`int`|激发此事件的服务器进程的 ID。|12|是|  
@@ -35,9 +35,9 @@ ms.locfileid: "63033509"
 |ObjectID|`int`|用户定义的分类器对象的 ID。|22|是|  
 |ObjectName|`nvarchar(256)`|用户定义的分类器函数的两部分名称。 例如，dbo.classifier。|34|是|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [扩展事件](../extended-events/extended-events.md)   
- [PreConnect:Completed 事件类](preconnect-completed-event-class.md)   
+ [PreConnect： Completed 事件类](preconnect-completed-event-class.md)   
  [资源调控器](../resource-governor/resource-governor.md)  
   
   

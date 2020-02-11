@@ -1,5 +1,5 @@
 ---
-title: ReadyState 属性示例 (VBScript) |Microsoft Docs
+title: ReadyState 属性示例（VBScript） |Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,19 +15,19 @@ ms.assetid: e3e18da4-0511-4ece-a35d-699978bc28c6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5b27a26eede798b8a8f8df9d76451125f042510a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963607"
 ---
 # <a name="readystate-property-example-vbscript"></a>ReadyState 属性示例 (VBScript)
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 下面的示例演示如何读取[ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md)属性的[rds。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) VBScript 代码在运行时对象。 **ReadyState**是只读的属性。  
+ 下面的示例演示如何读取 RDS 的[ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md)属性[。](../../../ado/reference/rds-api/datacontrol-object-rds.md)在运行时在 VBScript 代码中的 DataControl 对象。 **ReadyState**是一个只读属性。  
   
- 若要测试此示例中，代码剪切并粘贴此之间\<正文 > 和\</b o d > 标记中普通的 HTML 文档并将其命名**RDSReadySt.asp**。 使用**查找**找到 Adovbs.inc 的文件并将它放置在你打算使用的目录中。 ASP 脚本将识别您的服务器。  
+ 若要测试此示例，请将此代码剪切并\<粘贴到常规\<HTML 文档中的 Body> 和/Body> 标记之间，并将其命名为**RDSReadySt**。 使用 "**查找**" 找到文件 Adovbs，并将其放入计划使用的目录中。 ASP 脚本将标识您的服务器。  
   
 ```  
 <!-- BeginReadyStateVBS -->  
@@ -109,8 +109,8 @@ body {
 <!-- EndReadyStateVBS -->  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
+## <a name="see-also"></a>另请参阅  
+ [DataControl 对象（RDS）](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [ReadyState 属性 (RDS)](../../../ado/reference/rds-api/readystate-property-rds.md)
 
 

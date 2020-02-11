@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5fb76e62e1816be53c312cc263053f854ad3b796
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62625923"
 ---
 # <a name="add-or-edit-join"></a>添加或编辑联接
@@ -58,11 +58,11 @@ ms.locfileid: "62625923"
         > [!CAUTION]  
         >  选择此选项表示联接筛选器中子表和父表是一对一还是一对多的关系。 如果父表中要联接的列具有保证唯一性的约束，才选择此选项。 如果未能正确设置此选项，可能无法收敛数据。  
   
-    -   仅限[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更高版本。 默认情况下，合并复制在同步过程中会逐行处理更改。 若要按单位处理相关更改，请选择 **“逻辑记录”** 。 只有满足使用逻辑记录的项目和发布要求，此选项才可用。 有关详细信息，请参阅[通过逻辑记录对相关行的更改进行分组](merge/group-changes-to-related-rows-with-logical-records.md)中的“使用逻辑记录的注意事项”部分。  
+    -   仅限 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更高版本。 默认情况下，合并复制在同步过程中会逐行处理更改。 若要按单位处理相关更改，请选择 **“逻辑记录”** 。 只有满足使用逻辑记录的项目和发布要求，此选项才可用。 有关详细信息，请参阅[通过逻辑记录对相关行的更改进行分组](merge/group-changes-to-related-rows-with-logical-records.md)中的“使用逻辑记录的注意事项”部分。  
   
  在添加或编辑完筛选器后，请单击 **“确定”** 以保存更改并关闭该对话框。 将对照 SELECT 子句中的表分析并运行指定的筛选器。 如果筛选语句有语法错误或其他问题，将会通知您编辑该筛选语句。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Create a Publication](publish/create-a-publication.md)   
  [查看和修改发布属性](publish/view-and-modify-publication-properties.md)   
  [筛选已发布数据](publish/filter-published-data.md)   

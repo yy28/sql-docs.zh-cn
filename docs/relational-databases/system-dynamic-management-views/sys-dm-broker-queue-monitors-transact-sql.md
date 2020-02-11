@@ -1,5 +1,5 @@
 ---
-title: sys.dm_broker_queue_monitors (TRANSACT-SQL) |Microsoft Docs
+title: sys. dm_broker_queue_monitors （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,26 +19,26 @@ ms.assetid: 401207dc-ef4a-4a3f-879c-76dcbb52d6bc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f2f363998699846ca5020127f19be6dc0ad59712
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67948637"
 ---
-# <a name="sysdmbrokerqueuemonitors-transact-sql"></a>sys.dm_broker_queue_monitors (Transact-SQL)
+# <a name="sysdm_broker_queue_monitors-transact-sql"></a>sys.dm_broker_queue_monitors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   对于实例中的每个队列监视器，相应地返回一行。 队列监视器负责管理队列的激活。  
   
 
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**int**|数据库的对象标识符，该数据库包含了监视器所观察的队列。 可以为 NULL。|  
-|**queue_id**|**int**|监视器所观察的队列的对象标识符。 可以为 NULL。|  
-|**State**|**nvarchar(32)**|此监视器的状态。 可以为 NULL。 这是以下值之一：<br /><br /> **非活动状态**<br /><br /> **收到通知**<br /><br /> **RECEIVES_OCCURRING**|  
-|**last_empty_rowset_time**|**datetime**|来自队列的 RECEIVE 上次返回空结果时的时间。 可以为 NULL。|  
-|**last_activated_time**|**datetime**|此队列监视器上次激活存储过程时的时间。 可以为 NULL。|  
-|**tasks_waiting**|**int**|当前正在 RECEIVE 语句中等待此队列的会话数。 可以为 NULL。<br /><br /> 注意:此数字包括任何执行接收语句，而不管队列监视器是否启动会话的会话。 它表示您是否与 RECEIVE 一起使用 WAITFOR。 基本上，这些任务都在等待到达队列的消息。|  
+|database_id |**int**|数据库的对象标识符，该数据库包含了监视器所观察的队列。 可以为 null.|  
+|**queue_id**|**int**|监视器所观察的队列的对象标识符。 可以为 null.|  
+|**状态**|**nvarchar （32）**|监视器的状态。 可以为 null. 这是以下各项之一：<br /><br /> **不用**<br /><br /> **NOTIFIED**<br /><br /> **RECEIVES_OCCURRING**|  
+|**last_empty_rowset_time**|**datetime**|来自队列的 RECEIVE 上次返回空结果时的时间。 可以为 null.|  
+|**last_activated_time**|**datetime**|此队列监视器上次激活存储过程时的时间。 可以为 null.|  
+|**tasks_waiting**|**int**|当前正在 RECEIVE 语句中等待此队列的会话数。 可以为 null.<br /><br /> 注意：此数字包括执行 receive 语句的任何会话，不管队列监视器是否启动了该会话。 它表示您是否与 RECEIVE 一起使用 WAITFOR。 基本上，这些任务都在等待到达队列的消息。|  
   
 ## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
@@ -74,9 +74,9 @@ ON ( t2.object_id = t4.queue_id  AND t4.database_id = DB_ID() )
 INNER JOIN sys.databases t5 ON ( t5.database_id = DB_ID() );  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [与 Service Broker 有关的动态管理视图 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
+ [Service Broker 相关的动态管理视图 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
   
 

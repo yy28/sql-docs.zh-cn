@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 043bf26fb17a3433e59623b5b3bfddaaea8bc89f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022516"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Oracle 发布服务器的设计注意事项和限制
-  从设计上，从 Oracle 数据库中进行发布几乎与从 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中进行发布一样。 不过，还应注意下列限制和问题：  
+  在设计上，从 Oracle 数据库中进行发布与从 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中进行发布几乎一样。 不过，还应注意下列限制和问题：  
   
 -   “Oracle Gateway”选项的性能优于“Oracle Complete”选项；但是，此选项不能用于在多个事务发布中发布同一个表。 一个表最多只能出现在一个事务发布中，但可以出现在任意多个快照发布中。 如果需要在多个事务发布中发布同一个表，请选择“Oracle Complete”选项。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "63022516"
   
 -   嵌套表  
   
--   Views  
+-   视图  
   
 -   包、包正文、过程和触发器  
   
@@ -103,7 +103,7 @@ ms.locfileid: "63022516"
   
  还要考虑下列问题：  
   
--   Oracle 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以不同方式处理 NULL：对于允许 NULL 值并包含在唯一约束或索引中的列，Oracle 允许存在多个值为 NULL 的行。 而在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，同一列只允许存在一个值为 NULL 的行，以确保唯一性。 不能发布允许 NULL 值的唯一约束或索引，因为对于索引或约束中包含的任何列，如果已发布的表中包含多个值为 NULL 的行，订阅服务器中将出现违反约束的情况。  
+-   Oracle 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 处理 NULL 的方式有所不同：对于允许 NULL 值并包含在唯一约束或索引中的列，Oracle 允许存在多个值为 NULL 的行。 而在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，同一列只允许存在一个值为 NULL 的行，以确保唯一性。 不能发布允许 NULL 值的唯一约束或索引，因为对于索引或约束中包含的任何列，如果已发布的表中包含多个值为 NULL 的行，订阅服务器中将出现违反约束的情况。  
   
 -   测试唯一性时， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将忽略字段中的尾随空格，而 Oracle 则不会忽略。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "63022516"
   
 -   标准事务发布支持表的最大列数为 1000。 Oracle 事务发布支持 995 列（进行复制时，将向每个已发布表中添加 5 列）。  
   
--   在 CREATE TABLE 语句中添加了 Collate 子句，以启用区分大小写的比较，这对主键和唯一约束非常重要。 此行为通过架构选项 0x1000 控制，该选项使用 [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 的 **@schema_option** 参数指定。  
+-   在 CREATE TABLE 语句中添加了 Collate 子句，以启用区分大小写的比较，这对主键和唯一约束非常重要。 此行为是通过架构选项0x1000 控制的，该选项是通过**@schema_option** [sp_addarticle &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)的参数指定的。  
   
 -   如果使用存储过程来配置或维护 Oracle 发布服务器，请不要将存储过程放到显式事务中。 用于连接 Oracle 发布服务器的链接服务器不支持这一操作。  
   
@@ -142,14 +142,14 @@ ms.locfileid: "63022516"
 -   不支持对已发布的 Oracle 表进行架构更改。 若要更改架构，请先删除发布，进行更改，然后重新创建发布和任何订阅。  
   
     > [!NOTE]  
-    >  如果在已发布的表中没有发生任何活动时执行架构更改以及发布和订阅的后续删除与重新创建，则可以为订阅指定“仅支持复制”选项。 这样不用将快照复制到每个订阅服务器上就能使订阅同步。 有关详细信息，请参阅[初始化事务订阅（不使用快照）](../initialize-a-transactional-subscription-without-a-snapshot.md)。  
+    >  如果在已发布的表中没有发生任何活动时执行架构更改以及发布和订阅的后续删除与重新创建，则可以为订阅指定“仅支持复制”选项。 这样不用将快照复制到每个订阅服务器上就能使订阅同步。 有关详细信息，请参阅 [初始化事务订阅（不使用快照）](../initialize-a-transactional-subscription-without-a-snapshot.md)中手动初始化订阅。  
   
 ### <a name="replication-security-model"></a>复制安全模式  
  Oracle 发布的安全模式与标准事务复制的安全模式相同，但下列情况除外：  
   
 -   通过下列方法之一指定快照代理和日志读取器代理在分发服务器和发布服务器之间建立连接时使用的帐户：  
   
-    -   [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) 的 **@security_mode** 参数（如果使用 Oracle 身份验证，则也请指定 **@login** 和 **@password** 的值）  
+    -   **@security_mode** [Sp_adddistpublisher &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)的参数（如果使用 Oracle 身份验证，则还**@login**指定**@password**和的值）  
   
     -   在 SQL Server Management Studio 的 **“连接到服务器”** 对话框中，在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器上配置 Oracle 发布服务器时就使用这种方法。  
   
@@ -157,15 +157,15 @@ ms.locfileid: "63022516"
   
 -   不能使用 [sp_changedistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql) 或通过属性表来更改快照代理和日志读取器代理建立连接时使用的帐户，但可以更改密码。  
   
--   如果将 [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) 的 **@security_mode** 参数值指定为 1（Windows 集成身份验证）：  
+-   如果为**@security_mode** [&#40;transact-sql&#41;sp_adddistpublisher](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)的参数指定值1（Windows 集成身份验证）：  
   
-    -   快照代理和日志读取器代理使用的进程帐户和密码（[sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) 和 [sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql) 的 **@job_login** 和 **@job_password** 参数）必须与连接 Oracle 发布服务器时使用的帐户和密码相同。  
+    -   用于快照代理和日志读取器代理的进程帐户和密码（ [sp_addpublication_snapshot &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)和**@job_password** [sp_addlogreader_agent &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql)）的**@job_login**和参数必须与用于连接到 Oracle 发布服务器的帐户和密码相同。  
   
-    -   不能通过 [sp_changepublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql) 或 [sp_changelogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql) 更改 **@job_login** 参数，但可以更改密码。  
+    -   不能通过**@job_login** [sp_changepublication_snapshot &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql)或[sp_changelogreader_agent &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql)来更改参数，但可以更改密码。  
   
  有关复制安全性的详细信息，请参阅[SQL Server 复制安全性](../security/view-and-modify-replication-security-settings.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Oracle 发布服务器的管理注意事项](administrative-considerations-for-oracle-publishers.md)   
  [配置 Oracle 发布服务器](configure-an-oracle-publisher.md)   
  [Oracle 发布概述](oracle-publishing-overview.md)  

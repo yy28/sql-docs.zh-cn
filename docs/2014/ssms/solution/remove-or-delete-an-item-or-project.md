@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dd6d04b186c68b128ad35ec5e5bd8b92ad1541c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035650"
 ---
 # <a name="remove-or-delete-an-item-or-project"></a>移除或删除项或项目
@@ -52,7 +52,7 @@ ms.locfileid: "63035650"
   
 3.  在“文件”  菜单上，单击“删除”  。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [解决方案资源管理器](solution-explorer.md)   
  [向项目添加新项](add-new-items-to-a-project.md)   
  [向项目中添加现有项](add-existing-items-to-a-project.md)  

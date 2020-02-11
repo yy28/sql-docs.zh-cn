@@ -24,10 +24,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3cc939ac63f1b53e2d2d24d70edc5fe0798bcc51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106099"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>自定义地图或地图层的数据和显示（报表生成器和 SSRS）
@@ -129,7 +129,7 @@ ms.locfileid: "66106099"
   
  组表达式指定如何为层上的每个地图元素聚合与空间数据具有一定关系的分析数据。 默认情况下，组表达式是为空间数据与分析数据之间的关系指定的一组匹配字段。 例如，对于显示某个国家或地区的城市位置和人口规模的气泡地图，匹配字段必须包括城市名称 [City] 和区域名称 [Region]，因为可能有多个城市具有相同的名称。 相应的组表达式包括两个字段：[City] 和 [Region]。  
   
- 有关详细信息，请参阅[地图提示：如何将形状文件导入 SQL Server 并聚合空间数据](https://go.microsoft.com/fwlink/?LinkID=214991)。  
+ 有关详细信息，请参阅 [地图提示：如何将形状文件导入到 SQL Server 中并且聚合空间数据](https://go.microsoft.com/fwlink/?LinkID=214991)。  
   
  
   
@@ -173,7 +173,7 @@ ms.locfileid: "66106099"
   
 
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [地图向导和地图层向导（报表生成器和 SSRS）](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
  [地图（报表生成器和 SSRS）](maps-report-builder-and-ssrs.md)  
   

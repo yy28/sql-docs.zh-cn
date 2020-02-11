@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 769b2b9caba541af3a1ea38e1969d8a6422950be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68188767"
 ---
 # <a name="synchronize-target-server-clocks-sql-server-management-studio"></a>Synchronize Target Server Clocks (SQL Server Management Studio)
@@ -40,9 +40,9 @@ ms.locfileid: "68188767"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -51,11 +51,11 @@ ms.locfileid: "68188767"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开要使目标服务器时钟与主服务器时钟同步的服务器。  
   
-2.  右键单击“SQL Server 代理”  ，指向“多服务器管理”  ，然后选择“管理目标服务器”  。  
+2.  右键单击“SQL Server 代理”****，指向“多服务器管理”****，然后选择“管理目标服务器”****。  
   
-3.  在 **“管理目标服务器”** 对话框中，单击 **“发布指令”** 。  
+3.  在 **“管理目标服务器”** 对话框中，单击 **“发布指令”**。  
   
-4.  在 **“指令类型”** 列表中，选择 **“同步时钟”** 。  
+4.  在 **“指令类型”** 列表中，选择 **“同步时钟”**。  
   
 5.  在 **“收件人”** 下，执行以下操作之一：  
   
@@ -84,6 +84,6 @@ ms.locfileid: "68188767"
     GO  
     ```  
   
- 有关详细信息，请参阅[sp_resync_targetserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql)。  
+ 有关详细信息，请参阅[&#40;transact-sql&#41;sp_resync_targetserver ](/sql/relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql)。  
   
   

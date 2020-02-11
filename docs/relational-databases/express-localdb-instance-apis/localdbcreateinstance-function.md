@@ -16,17 +16,17 @@ ms.assetid: 3eebb485-8a53-4a79-82a9-57b8de9f8e84
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 297dd5ca109e7b35d8d74d5daf1f8b1c7fd06703
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68126942"
 ---
 # <a name="localdbcreateinstance-function"></a>LocalDBCreateInstance 函数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   创建新的 SQL Server Express LocalDB 实例。  
   
- **标头文件：** sqlncli.h  
+ **头文件：** sqlncli.msi  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,7 +38,7 @@ HRESULT LocalDBCreateInstance(
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>parameters  
  *wszVersion*  
  [输入] LocalDB 版本，例如 11.0 或 11.0.1094.2。  
   
@@ -100,11 +100,11 @@ HRESULT LocalDBCreateInstance(
 ## <a name="remarks"></a>备注  
  如果 LocalDB 实例完全正常运行，指定的名称已存在并且其版本等于或高于所请求的版本，则结果为 S_OK。  
   
- 在现有实例变得对已损坏，因为在后续调用时的情况下**LocalDBCreateInstance** API 方法将失败。 必须手动修复损坏的实例或显式删除它们，然后才能再次使用。  
+ 如果现有实例损坏，对**LocalDBCreateInstance** API 方法的后续调用将失败。 必须手动修复损坏的实例或显式删除它们，然后才能再次使用。  
   
- 有关使用 LocalDB API 的代码示例，请参阅[SQL Server Express LocalDB 参考](../../relational-databases/sql-server-express-localdb-reference.md)。  
+ 有关使用 LocalDB API 的代码示例，请参阅[SQL Server Express LocalDB 引用](../../relational-databases/sql-server-express-localdb-reference.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server Express LocalDB 标头信息和版本信息](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
   
   

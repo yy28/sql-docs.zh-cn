@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9cb0f104d1555b18d18df38027c240a392d2ac66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918698"
 ---
 # <a name="view-collation-information"></a>查看排序规则信息
@@ -106,12 +106,12 @@ ms.locfileid: "62918698"
     SELECT name, collation_name FROM sys.columns WHERE name = N'<insert character data type column name>';  
     ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SERVERPROPERTY (Transact-SQL)](/sql/t-sql/functions/serverproperty-transact-sql)   
- [sys.fn_helpcollations (Transact-SQL)](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)   
- [sys.databases (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
- [sys.columns (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-columns-transact-sql)   
- [排序规则优先级 (Transact-SQL)](/sql/t-sql/statements/collation-precedence-transact-sql)   
- [sp_helpsort (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-helpsort-transact-sql)  
+ [sys. fn_helpcollations &#40;Transact-sql&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)   
+ [sys.databases &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
+ [sys.databases &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-columns-transact-sql)   
+ [排序规则优先级 &#40;Transact-sql&#41;](/sql/t-sql/statements/collation-precedence-transact-sql)   
+ [sp_helpsort &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsort-transact-sql)  
   
   

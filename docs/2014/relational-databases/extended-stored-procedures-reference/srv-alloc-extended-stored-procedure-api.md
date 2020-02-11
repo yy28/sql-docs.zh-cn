@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 61157ab8ba2b9f47caf89b6a16a3edd830437abf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63138904"
 ---
 # <a name="srv_alloc-extended-stored-procedure-api"></a>srv_alloc（扩展存储过程 API）
@@ -45,14 +45,14 @@ size
 ```  
   
 ## <a name="arguments"></a>参数  
- size  
+ *规格*  
  指定要分配的字节数。  
   
 ## <a name="returns"></a>返回  
- 指向新分配的空间的指针。 如果无法分配 size 字节，则返回 Null 指针。  
+ 指向新分配的空间的指针。 如果无法分配 size 字节，则返回 Null 指针**。  
   
 ## <a name="remarks"></a>备注  
- srv_alloc 函数等效于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows API GlobalAlloc 函数。 可以在扩展存储过程 API 应用程序中使用普通 Windows API C 运行时内存管理函数。  
+ srv_alloc 函数等效于 ** Windows API GlobalAlloc 函数**[!INCLUDE[msCoName](../../includes/msconame-md.md)]****。 可以在扩展存储过程 API 应用程序中使用普通 Windows API C 运行时内存管理函数。  
   
 > [!IMPORTANT]  
 >  应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)。  

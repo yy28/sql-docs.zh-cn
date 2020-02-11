@@ -17,14 +17,14 @@ ms.assetid: 869b8421-f71e-4dfd-adce-691bd3012b16
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4165dd51437f143351835bc1739ffb8279bd04ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67952484"
 ---
 # <a name="functions-accepting-string-parameters"></a>接受字符串参数的函数
-采用字符串参数的所有函数将都转换为 Unicode。 （导出函数的"W"形式。）转换的字节数进行计数的字符，对于这些适用的 ODBC Api。 这适用于以下函数：  
+采用字符串参数的所有函数都将转换为 Unicode。 （将导出函数的 "W" 形式。）字节计数被转换为适用的 ODBC Api 的字符计数。 这适用于以下函数：  
   
 -   **SQLConnect**  
   
@@ -34,7 +34,7 @@ ms.locfileid: "67952484"
   
 -   **SQLDescribeCol**  
   
--   **SQLError** (替换为**SQLGetDiagField**)  
+-   **SQLError** （替换为**SQLGetDiagField**）  
   
 -   **SQLExecDirect**  
   
@@ -46,9 +46,9 @@ ms.locfileid: "67952484"
   
 -   **SQLGetInfo**  
   
--   **SQLGetStmtOption** (将成为**SQLGetStmtAttr**)  
+-   **SQLGetStmtOption** （变为**SQLGetStmtAttr**）  
   
--   **SQLSetStmtOption** (将成为**SQLSetStmtAttr**)  
+-   **SQLSetStmtOption** （变为**SQLSetStmtAttr**）  
   
 -   **SQLGetConnectOption**  
   
