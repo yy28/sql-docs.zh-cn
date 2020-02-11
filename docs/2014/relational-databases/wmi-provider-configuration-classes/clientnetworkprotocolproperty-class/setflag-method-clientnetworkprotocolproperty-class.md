@@ -1,5 +1,5 @@
 ---
-title: SetFlag 方法 （ClientNetworkProtocolProperty 类） |Microsoft Docs
+title: SetFlag 方法（ClientNetworkProtocolProperty 类） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6c33eca0bf3281243aeee42ed89001cf9108d5d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245090"
 ---
 # <a name="setflag-method-clientnetworkprotocolproperty-class"></a>SetFlag 方法（ClientNetworkProtocolProperty 类）
-  设置引用的当前属性的标志[PropertyIdx 属性 （ClientNetworkProtocolProperty 类）](clientnetworkprotocolproperty-class.md)值。  
+  设置[PropertyIdx 属性（ClientNetworkProtocolProperty 类）](clientnetworkprotocolproperty-class.md)值引用的当前属性的标志。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,12 +39,12 @@ BoolValue
 ```  
   
 ## <a name="parts"></a>组成部分  
- *object*  
- 一个[ClientNetworkProtocolProperty 类](clientnetworkprotocolproperty-class.md)对象，表示使用的网络协议的属性[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]客户端。  
+ *对象*  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)]表示[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]客户端使用的网络协议属性的[ClientNetworkProtocolProperty 类](clientnetworkprotocolproperty-class.md)对象。  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
   
-|参数|Description|  
+|参数|说明|  
 |---------------|-----------------|  
 |*BoolValue*|一个指定标志的新值的布尔值。|  
   
@@ -53,7 +53,7 @@ BoolValue
   
 ## <a name="remarks"></a>备注  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置客户端协议](../../../database-engine/configure-windows/configure-client-protocols.md)  
   
   

@@ -15,10 +15,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ab0560e0df37c80a82017e5f076af969931a79e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63012008"
 ---
 # <a name="create-a-credential"></a>创建凭据
@@ -50,9 +50,9 @@ ms.locfileid: "63012008"
   
 -   一个登录名可以有多个映射的凭据，只要它们用于不同的提供程序即可。 每个登录名的每个提供程序只能有一个映射的凭据。 相同的凭据可以映射到其他登录名。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  必须具有 ALTER ANY CREDENTIAL 权限才能创建或修改凭据，并且必须具有 ALTER ANY LOGIN 权限才能将登录名映射到凭据。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -77,7 +77,7 @@ ms.locfileid: "63012008"
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-###  <a name="Credential"></a> 若要创建凭据  
+###  <a name="Credential"></a>创建凭据  
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   

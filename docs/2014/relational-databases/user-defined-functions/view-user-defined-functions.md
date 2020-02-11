@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ea37fdca56c222cbebbdcb00956938a92fe2c203
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211688"
 ---
 # <a name="view-user-defined-functions"></a>查看用户定义函数
@@ -45,9 +45,9 @@ ms.locfileid: "68211688"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  使用 **sys.sql_expression_dependencies** 查找函数的依赖关系要求对该数据库具有 VIEW DEFINITION 权限，以及对数据库具有 **sys.sql_expression_dependencies** 的 SELECT 权限。 系统对象定义（如 OBJECT_DEFINITION 中返回的对象定义）是公开可见的。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -66,11 +66,11 @@ ms.locfileid: "68211688"
   
     -   Aggregate 函数  
   
-4.  右键单击要查看其属性的函数，然后选择“属性”  。  
+4.  右键单击要查看其属性的函数，然后选择“属性”****。  
   
-     以下属性将显示在“函数属性 - function_name”对话框   。  
+     以下属性将显示在“函数属性 - function_name”对话框**** __。  
   
-     **“数据库”**  
+     **Database**  
      包含此函数的数据库的名称。  
   
      **Server**  
@@ -82,19 +82,19 @@ ms.locfileid: "68211688"
      **创建日期**  
      显示函数的创建日期。  
   
-     **执行身份**  
+     **Execute As**  
      执行该函数的上下文。  
   
      **名称**  
      当前函数的名称。  
   
-     **架构**  
+     **模式**  
      显示函数所属的架构。  
   
      **系统对象**  
      指示该函数是否为系统对象。 值为 True 和 False。  
   
-     **ANSI NULLs**  
+     **ANSI Null**  
      指示创建对象时是否选择了 ANSI NULLs 选项。  
   
      **已加密**  

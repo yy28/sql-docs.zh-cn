@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b87a950c29cf202124e27b319eb56fb6a6e1857d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914912"
 ---
-# <a name="mssqlserver208"></a>MSSQLSERVER_208
+# <a name="mssqlserver_208"></a>MSSQLSERVER_208
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62914912"
 |符号名称|SQ_BADOBJECT|  
 |消息正文|对象名 '%.*ls' 无效。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  找不到指定的对象。  
   
 ### <a name="possible-causes"></a>可能的原因  
@@ -69,8 +69,8 @@ ms.locfileid: "62914912"
   
 -   用户是否有权访问该对象。 若要验证用户是否有权访问该对象，请使用 **Has_Perms_By_Name** 系统函数。  
   
-## <a name="see-also"></a>请参阅  
- [USE (Transact-SQL)](/sql/t-sql/language-elements/use-transact-sql)   
+## <a name="see-also"></a>另请参阅  
+ [使用 &#40;Transact-sql&#41;](/sql/t-sql/language-elements/use-transact-sql)   
  [元数据可见性配置](../security/metadata-visibility-configuration.md)   
  [HAS_PERMS_BY_NAME (Transact-SQL)](/sql/t-sql/functions/has-perms-by-name-transact-sql)  
   

@@ -1,5 +1,5 @@
 ---
-title: 第 4 课：创建时序预测使用 DMX |Microsoft Docs
+title: 第4课：使用 DMX 创建时序预测 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 772e5f5f71ca82dd18fec48730522c80e907414f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63312093"
 ---
 # <a name="lesson-4-creating-time-series-predictions-using-dmx"></a>第 4 课：使用 DMX 创建时序预测
-  在本课和下一课中，您将使用数据挖掘扩展插件 (DMX) 创建不同类型的基于时序模型中创建的预测[第 1 课：创建时序挖掘模型和挖掘结构](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)和[第 2 课：向时序挖掘结构添加挖掘模型](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)。  
+  在本课和下一课中，您将使用数据挖掘扩展插件（DMX）基于您在[第1课：创建时序挖掘模型和挖掘结构](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)和[第2课：向时序挖掘结构中添加挖掘模型](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)中创建的时序模型创建不同类型的预测。  
   
  使用时序模型，可以通过许多选项来进行预测：  
   
@@ -31,22 +31,22 @@ ms.locfileid: "63312093"
  下面概述了进行这些类型的预测所需的语法：  
   
  默认的序列预测  
- 使用[PredictTimeSeries &#40;DMX&#41; ](/sql/dmx/predicttimeseries-dmx)若要从已经定型的挖掘模型中返回指定的数量的预测。  
+ 使用[PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)从定型挖掘模型返回指定数量的预测。  
   
- 有关示例，请参阅[PredictTimeSeries &#40;DMX&#41; ](/sql/dmx/predicttimeseries-dmx)或[时序模型查询示例](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)。  
+ 有关示例，请参阅[PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)或[时序模型查询示例](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)。  
   
  EXTEND_MODEL_CASES  
- 使用[PredictTimeSeries &#40;DMX&#41; ](/sql/dmx/predicttimeseries-dmx)带有 EXTEND_MODEL_CASES 参数添加新数据，扩展的序列，并基于更新后的挖掘模型创建预测。  
+ 使用带有 EXTEND_MODEL_CASES 参数的[PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)来添加新数据、扩展序列，并基于更新后的挖掘模型创建预测。  
   
  本教程包含有关如何使用 EXTEND_MODEL_CASES 的示例。  
   
  REPLACE_MODEL_CASES  
- 使用[PredictTimeSeries &#40;DMX&#41; ](/sql/dmx/predicttimeseries-dmx)带有 REPLACE_MODEL_CASES 参数以原始数据替换为新的数据序列，然后创建基于挖掘模型中的模式应用于新数据的预测系列。  
+ 使用带有 REPLACE_MODEL_CASES 参数的[PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)将原始数据替换为新的数据系列，然后基于将挖掘模型中的模式应用于新数据序列来创建预测。  
   
- 有关如何使用 REPLACE_MODEL_CASES 的示例，请参阅[第 2 课：生成预测方案&#40;数据挖掘中级教程&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)。  
+ 有关如何使用 REPLACE_MODEL_CASES 的示例，请参阅[第2课： &#40;中级数据挖掘教程&#41;生成预测方案](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)。  
   
 ## <a name="lesson-tasks"></a>课程任务  
- 在本课程中，将执行以下任务：  
+ 您将在本课中执行以下任务：  
   
 -   创建一个查询，基于现有数据获得默认预测。  
   
@@ -65,11 +65,11 @@ FROM [<mining model name>]
 WHERE [<criteria>]  
 ```  
   
- 选择列表可以包含模型中的列，如产品名称行的创建，预测或预测函数，如[Lag &#40;DMX&#41; ](/sql/dmx/lag-dmx)或[PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)，这是专门为时序挖掘模型。  
+ 选择列表可以包含模型中的列，例如要为其创建预测的产品系列的名称，或预测函数（如[Lag &#40;dmx&#41;](/sql/dmx/lag-dmx)或[PredictTimeSeries &#40;dmx&#41;](/sql/dmx/predicttimeseries-dmx)，它们专用于时序挖掘模型。  
   
 #### <a name="to-create-a-simple-time-series-prediction-query"></a>创建简单的时序预测查询  
   
-1.  在中**对象资源管理器**，右键单击该实例的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，依次指向**新查询**，然后单击**DMX**。  
+1.  在**对象资源管理器**中，右键单击实例[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，指向 "**新建查询**"，然后单击 " **DMX**"。  
   
      将打开查询编辑器，其中包含一个新的空白查询。  
   
@@ -81,7 +81,7 @@ WHERE [<criteria>]
     <select list>   
     ```  
   
-     使用：  
+     替换为：  
   
     ```  
     [Forecasting_MIXED].[ModelRegion],  
@@ -93,7 +93,8 @@ WHERE [<criteria>]
   
      第二行和第三行使用 `PredictTimeSeries` 函数。 每一行都预测一个不同的属性（`[Quantity]` 或 `[Amount]`）。 可预测属性名称后面的数字指定要预测的时间步长量。  
   
-     `AS` 子句用于为每个预测函数返回的列提供名称。 如果您不提供别名，则默认情况下将返回这两列，标签为 `Expression`。  
+     
+  `AS` 子句用于为每个预测函数返回的列提供名称。 如果您不提供别名，则默认情况下将返回这两列，标签为 `Expression`。  
   
 4.  将  
   
@@ -101,7 +102,7 @@ WHERE [<criteria>]
     [<mining model>]   
     ```  
   
-     使用：  
+     替换为：  
   
     ```  
     [Forecasting_MIXED]  
@@ -113,7 +114,7 @@ WHERE [<criteria>]
     WHERE [criteria>]   
     ```  
   
-     使用：  
+     替换为：  
   
     ```  
     WHERE [ModelRegion] = 'M200 Europe' OR  
@@ -133,11 +134,11 @@ WHERE [<criteria>]
     [ModelRegion] = 'M200 Pacific'  
     ```  
   
-6.  上**文件**菜单上，单击**另存 dmxquery1.dmx 另存为**。  
+6.  在 "**文件**" 菜单上，单击 "**将 DMXQuery1 另存为**"。  
   
-7.  在中**另存为**对话框中，浏览到相应的文件夹，并将文件命名`SimpleTimeSeriesPrediction.dmx`。  
+7.  在 "**另存为**" 对话框中，浏览到相应的文件夹，并将`SimpleTimeSeriesPrediction.dmx`该文件命名为。  
   
-8.  在工具栏上，单击**Execute**按钮。  
+8.  在工具栏上，单击 "**执行**" 按钮。  
   
      该查询将针对在 `WHERE` 子句中指定的产品和地区的每个组合（共两个组合）返回 6 个预测。  
   
@@ -146,10 +147,10 @@ WHERE [<criteria>]
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [第 5 课：扩展时序模型](../../2014/tutorials/lesson-5-extending-the-time-series-model.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)   
  [Lag &#40;DMX&#41;](/sql/dmx/lag-dmx)   
  [时序模型查询示例](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
- [第 2 课：生成预测方案&#40;数据挖掘中级教程&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
+ [第2课： &#40;中级数据挖掘教程构建预测方案&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   
   

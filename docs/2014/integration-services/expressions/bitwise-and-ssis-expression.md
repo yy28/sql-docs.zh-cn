@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f4785967ceafd105e8d7b56e24223edd40d08850
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62898432"
 ---
 # <a name="amp-bitwise-and-ssis-expression"></a>&amp;（位算符 AND）（SSIS 表达式）
@@ -93,7 +93,7 @@ ReorderPoint & SafetyStockLevel
   
  00000001  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [&&（逻辑 AND）（SSIS 表达式）](logical-and-ssis-expression.md)   
  [运算符优先级和结合性](operator-precedence-and-associativity.md)   
  [运算符（SSIS 表达式）](operators-ssis-expression.md)  

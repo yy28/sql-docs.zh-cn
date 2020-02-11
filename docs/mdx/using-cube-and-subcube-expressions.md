@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7c656bdaa0de108ade568a22bbcc734f38d43bfd
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893531"
 ---
 # <a name="using-cube-and-subcube-expressions"></a>使用多维数据集表达式和子多维数据集表达式
@@ -68,11 +68,11 @@ ms.locfileid: "68893531"
   
  子多维数据集标识符显示为*Subcube_Name*。 在 MDX 语句的 BNF 表示法说明中。  
   
-## <a name="see-also"></a>请参阅  
- [基本 MDX 查询 (MDX)](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query)   
- [在 MDX &#40;mdx 中生成子多维数据&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)   
- [创建子多维&#40;数据集语句 MDX&#41;](../mdx/mdx-data-definition-create-subcube.md)   
- [表达式&#40;MDX&#41;](../mdx/expressions-mdx.md)   
- [SCOPE 语句 (MDX)](../mdx/mdx-scripting-scope.md)  
+## <a name="see-also"></a>另请参阅  
+ [基本 MDX 查询 &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query)   
+ [在 MDX &#40;MDX 中生成子多维数据&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)   
+ [&#40;MDX 创建子多维数据集语句&#41;](../mdx/mdx-data-definition-create-subcube.md)   
+ [MDX&#41;&#40;表达式](../mdx/expressions-mdx.md)   
+ [SCOPE 语句 &#40;MDX&#41;](../mdx/mdx-scripting-scope.md)  
   
   

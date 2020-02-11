@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6a82902d69a1d5214b29f43d19ded58c76293ec4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914023"
 ---
-# <a name="mssqlserver3619"></a>MSSQLSERVER_3619
+# <a name="mssqlserver_3619"></a>MSSQLSERVER_3619
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62914023"
 |符号名称|SYS_NOLOG|  
 |消息正文|由于日志空间用尽，无法在数据库 ID %d 中写入检查点记录。 请与数据库管理员联系，截断日志或为数据库日志文件分配更多空间。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  事务日志的磁盘空间不足。  
   
 ## <a name="user-action"></a>用户操作  
