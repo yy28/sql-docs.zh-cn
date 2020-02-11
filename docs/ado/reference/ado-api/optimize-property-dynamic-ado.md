@@ -1,5 +1,5 @@
 ---
-title: Optimize 属性-动态 (ADO) |Microsoft Docs
+title: 优化属性-动态（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,26 +14,26 @@ ms.assetid: a491c4ce-2b04-4c84-be83-3846bde8d16b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3e8bb3c3787effe8418db735a72425a793b73e35
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931855"
 ---
 # <a name="optimize-property-dynamic-ado"></a>Optimize 属性 - 动态 (ADO)
-指定是否应在创建索引[字段](../../../ado/reference/ado-api/field-object.md)。  
+指定是否应在[字段](../../../ado/reference/ado-api/field-object.md)上创建索引。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
- 设置或返回**布尔**值，该值指示是否应创建索引。  
+ 设置或返回一个**布尔**值，该值指示是否应创建索引。  
   
 ## <a name="remarks"></a>备注  
- 索引可以提高查找或中的值进行排序的操作的性能[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。 索引是内部的 ADO;无法显式访问或应用程序中使用。  
+ 索引可以提高在[记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)查找或排序值的操作的性能。 索引是 ADO 内部的;你不能在应用程序中显式访问或使用该应用程序。  
   
- 若要在字段上创建索引，请设置**优化**属性设置为**True**。 若要删除索引，请将此属性设置为**False**。  
+ 若要对字段创建索引，请将**Optimize**属性设置为**True**。 若要删除索引，请将此属性设置为**False**。  
   
- **优化**动态属性追加到[字段](../../../ado/reference/ado-api/field-object.md)对象[属性](../../../ado/reference/ado-api/properties-collection-ado.md)集合时[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性设置为**adUseClient**。  
+ 当[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性设置为**AdUseClient**时， **Optimize**是追加到[Field](../../../ado/reference/ado-api/field-object.md)对象[Properties](../../../ado/reference/ado-api/properties-collection-ado.md) collection 的动态属性。  
   
-## <a name="usage"></a>用法  
+## <a name="usage"></a>使用情况  
   
 ```  
 Dim rs As New Recordset  
@@ -46,12 +46,12 @@ fld.Properties("Optimize") = True    'Create an index
 fld.Properties("Optimize") = False   'Delete an index  
 ```  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [字段对象](../../../ado/reference/ado-api/field-object.md)  
   
-## <a name="see-also"></a>请参阅  
- [Optimize 属性示例 (VB)](../../../ado/reference/ado-api/optimize-property-example-vb.md)   
- [Optimize 属性示例 （VC + +）](../../../ado/reference/ado-api/optimize-property-example-vc.md)   
+## <a name="see-also"></a>另请参阅  
+ [Optimize 属性示例（VB）](../../../ado/reference/ado-api/optimize-property-example-vb.md)   
+ [Optimize 属性示例（VC + +）](../../../ado/reference/ado-api/optimize-property-example-vc.md)   
  [筛选器属性](../../../ado/reference/ado-api/filter-property.md)   
- [Find 方法 (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
+ [Find 方法（ADO）](../../../ado/reference/ado-api/find-method-ado.md)   
  [Sort 属性](../../../ado/reference/ado-api/sort-property.md)

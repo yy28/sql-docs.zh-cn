@@ -1,5 +1,5 @@
 ---
-title: 处理定位更新和删除语句 |Microsoft Docs
+title: 正在处理定位更新和删除语句 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,27 +19,27 @@ ms.assetid: 2975dd97-48e6-4d0a-a9c7-40759a7d94c8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 41b4fe248f815e63c48a8da70edc88a1cc173667
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68028434"
 ---
 # <a name="processing-positioned-update-and-delete-statements"></a>处理定位更新和删除语句
 > [!IMPORTANT]  
->  此功能将 Windows 的未来版本中删除。 避免在新的开发工作中使用此功能并计划修改当前使用此功能的应用程序。 Microsoft 建议使用驱动程序的游标功能。  
+>  此功能将在 Windows 的将来版本中删除。 避免在新的开发工作中使用此功能，并计划修改当前使用此功能的应用程序。 Microsoft 建议使用驱动程序的游标功能。  
   
- 游标库支持定位更新和 delete 语句替换**WHERE CURRENT OF**子句中使用此类语句**其中**枚举其缓存中存储的值的子句每个绑定的列。 游标库传递新构造**更新**并**删除**语句来执行的驱动程序。 对于定位的更新语句，游标库然后更新其缓存中的行集缓冲区的值并设置到 SQL_ROW_UPDATED 的行状态数组中的相应值。 对于定位的 delete 语句，它为 SQL_ROW_DELETED 行状态数组中设置相应的值。  
+ 游标库通过将此类语句中的**WHERE CURRENT** of 子句替换为每个绑定列枚举其缓存中存储的值的**where**子句，来支持定位的 update 和 delete 语句。 游标库将新构造的**UPDATE**和**DELETE**语句传递到要执行的驱动程序。 对于定位的 update 语句，游标库随后将从行集缓冲区中的值更新其缓存，并将行状态数组中的相应值设置为 SQL_ROW_UPDATED。 对于定位的 delete 语句，它将行状态数组中的相应值设置为 SQL_ROW_DELETED。  
   
 > [!CAUTION]  
->  **其中**子句通过游标库来标识当前行来构造可能无法识别的任何行，标识不同的行，或标识多个行。 有关详细信息，请参阅[构造搜索语句](../../../odbc/reference/appendixes/constructing-searched-statements.md)、 本附录中更高版本。  
+>  由游标库构造的用于标识当前行的**WHERE**子句可能无法标识任何行、标识不同行或标识多个行。 有关详细信息，请参阅本附录后面的[构造搜索语句](../../../odbc/reference/appendixes/constructing-searched-statements.md)。  
   
- 定位 update 和 delete 语句受到以下限制：  
+ 定位的 update 和 delete 语句受到下列限制：  
   
--   定位 update 和 delete 语句仅在以下情况下使用： 当**选择**生成结果集的语句; 当**选择**语句未包含一个联接， **UNION**子句，或**分组依据**子句; 和选择列表中使用了别名或表达式的任何列时未绑定与**SQLBindCol**。  
+-   定位的 update 和 delete 语句仅在以下情况下可用：当**SELECT**语句生成结果集时;如果**SELECT**语句不包含联接、**联合**子句或**GROUP by**子句，则为;在选择列表中使用别名或表达式的任何列均未绑定到**SQLBindCol**。  
   
--   如果应用程序准备定位的 update 或 delete 语句，它必须后执行此操作这一操作称作**SQLFetch**或**SQLFetchScroll**。 尽管游标库提交到准备的驱动程序语句时，它将关闭语句并执行它直接在应用程序调用**SQLExecute**。  
+-   如果应用程序准备定位的 update 或 delete 语句，则必须在调用**SQLFetch**或**SQLFetchScroll**后执行此操作。 尽管游标库将该语句提交给驱动程序以准备准备，但它会关闭该语句，并在应用程序调用**SQLExecute**时直接执行该语句。  
   
--   如果该驱动程序支持只有一个活动语句，游标库获取结果的其余部分设置，然后 refetches 从其缓存到当前行之前执行定位更新或删除语句。 如果应用程序然后调用一个函数，在结果集中返回的元数据 (例如， **SQLNumResultCols**或**SQLDescribeCol**)，该游标库将返回错误。  
+-   如果驱动程序仅支持一个活动语句，则游标库将提取结果集的其余部分，然后在执行定位的 update 或 delete 语句之前从其缓存中 refetches 当前行集。 如果应用程序随后调用返回结果集中的元数据的函数（例如**SQLNumResultCols**或**SQLDescribeCol**），则游标库将返回错误。  
   
--   如果定位的 update 或 delete 语句执行包含每次在执行更新时自动更新的时间戳列的表的列，则所有后续的定位的更新或删除语句将失败的时间戳列是否绑定。 这是因为搜索更新或删除游标库创建语句将不会准确地识别要更新的行。 时间戳列搜索语句中的值将与时间戳列的自动更新后的值不匹配。
+-   如果对包含时间戳列的表的列执行定位的 update 或 delete 语句，并且每次执行更新时都会自动更新，则所有后续定位的 update 或 delete 语句都将失败，前提是 timestamp 列为绑定. 出现这种情况的原因是，游标库创建的搜索的 update 或 delete 语句并不能准确地识别要更新的行。 对于 timestamp 列，搜索语句中的值将与时间戳列的自动更新值不匹配。

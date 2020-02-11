@@ -22,16 +22,17 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: e204a1865c2a928079fcd9b32b31a8ae0c0bd0a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63238137"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server 审核操作组和操作
   使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 功能，你可以对服务器级别和数据库级别事件组以及各个事件进行审核。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](sql-server-audit-database-engine.md)。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核包括零个或多个审核操作项目。 这些审核操作项目可以是一组操作，例如 Server_Object_Change_Group，也可以是单个操作，例如对表的 SELECT 操作。  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核包括零个或多个审核操作项目。 这些审核操作项目可以是一组操作，例如 Server_Object_Change_Group，也可以是单个操作，例如对表的 SELECT 操作。  
   
 > [!NOTE]  
 >  Server_Object_Change_Group 包括对任何服务器对象（数据库或端点）的 CREATE、ALTER 和 DROP 操作。  
@@ -71,7 +72,7 @@ ms.locfileid: "63238137"
   
  下表介绍了服务器级审核操作组，并提供了适用的等效 SQL Server 事件类。  
   
-|操作组名称|Description|  
+|操作组名称|说明|  
 |-----------------------|-----------------|  
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|更改应用程序角色的密码时将引发此事件。 等效于 [Audit App Role Change Password Event Class](../../event-classes/audit-app-role-change-password-event-class.md)。|  
 |AUDIT_CHANGE_GROUP|创建、修改或删除任何审核时，均将引发此事件。 创建、修改或删除任何审核规范时，均将引发此事件。 任何针对某审核的更改均将在该审核中审核。 等效于 [Audit Change Audit Event Class](../../event-classes/audit-change-audit-event-class.md)。|  
@@ -80,13 +81,14 @@ ms.locfileid: "63238137"
 |DATABASE_CHANGE_GROUP|创建、更改或删除数据库时将引发此事件。 创建、更改或删除任何数据库时均将引发此事件。 等效于 [Audit Database Management Event Class](../../event-classes/audit-database-management-event-class.md)。|  
 |DATABASE_LOGOUT_GROUP|在包含数据库用户注销某一数据库时，会引发此事件。 等效于 Audit Database Logout 事件类。|  
 |DATABASE_MIRRORING_LOGIN_GROUP|引发此事件的目的是为了报告与数据库镜像传输安全性相关的审核消息。 等效于 [Audit Database Mirroring Login Event Class](../../event-classes/audit-database-mirroring-login-event-class.md)。|  
-|DATABASE_OBJECT_ACCESS_GROUP|访问数据库对象（如消息类型、程序集和协定）时将引发此事件。<br /><br /> 此事件由对任何数据库的任何访问而引发。 **注意：** 这可能导致生成大量审核记录。 <br /><br /> 等效于 [Audit Database Object Access Event Class](../../event-classes/audit-database-object-access-event-class.md)。|  
-|DATABASE_OBJECT_CHANGE_GROUP|针对数据库对象（如架构）执行 CREATE、ALTER 或 DROP 语句时将引发此事件。 创建、更改或删除任何数据库对象时均将引发此事件。 **注意：** 这可能导致大量审核记录。 <br /><br /> 等效于 [Audit Database Object Management Event Class](../../event-classes/audit-database-object-management-event-class.md)。|  
+|DATABASE_OBJECT_ACCESS_GROUP|访问数据库对象（如消息类型、程序集和协定）时将引发此事件。<br /><br /> 此事件由对任何数据库的任何访问而引发。 **注意：** 这可能会导致大型审核记录。 <br /><br /> 等效于 [Audit Database Object Access Event Class](../../event-classes/audit-database-object-access-event-class.md)。|  
+|DATABASE_OBJECT_CHANGE_GROUP|针对数据库对象（如架构）执行 CREATE、ALTER 或 DROP 语句时将引发此事件。 创建、更改或删除任何数据库对象时均将引发此事件。 **注意：** 这可能会导致大量的审核记录。 <br /><br /> 等效于 [Audit Database Object Management Event Class](../../event-classes/audit-database-object-management-event-class.md)。|  
 |DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP|在数据库范围内更改对象所有者时，将引发此事件。 服务器上任意数据库的任意对象所有权发生更改时，均将引发此事件。 等效于 [Audit Database Object Take Ownership Event Class](../../event-classes/audit-database-object-take-ownership-event-class.md)。|  
 |DATABASE_OBJECT_PERMISSION_CHANGE_GROUP|针对数据库对象（例如，程序集和架构）发出 GRANT、REVOKE 或 DENY 语句时将引发此事件。 服务器上任意数据库的任意对象权限发生更改时，均将引发此事件。 等效于 [Audit Database Object GDR Event Class](../../event-classes/audit-database-object-gdr-event-class.md)。|  
 |DATABASE_OPERATION_GROUP|数据库中发生操作（如检查点或订阅查询通知）时将引发此事件。 对于任何数据库的任何操作都将引发此事件。 等效于 [Audit Database Operation Event Class](../../event-classes/audit-database-operation-event-class.md)。|  
 |DATABASE_OWNERSHIP_CHANGE_GROUP|使用 ALTER AUTHORIZATION 语句更改数据库的所有者时，将引发此事件，并将检查执行该操作所需的权限。 服务器上任意数据库的任意数据库所有权发生更改时，均将引发此事件。 等效于 [Audit Change Database Owner Event Class](../../event-classes/audit-change-database-owner-event-class.md)。|  
-|DATABASE_PERMISSION_CHANGE_GROUP|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的任何主体针对某语句权限发出 GRANT、REVOKE 或 DENY 语句时均将引发此事件（仅适用于数据库事件，例如授予对某数据库的权限）。<br /><br /> 服务器上任意数据库的任意数据库权限发生更改 (GDR) 时，均将引发此事件。 等效于 [Audit Database Scope GDR Event Class](../../event-classes/audit-database-scope-gdr-event-class.md)。|  
+|DATABASE_PERMISSION_CHANGE_GROUP|
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的任何主体针对某语句权限发出 GRANT、REVOKE 或 DENY 语句时均将引发此事件（仅适用于数据库事件，例如授予对某数据库的权限）。<br /><br /> 服务器上任意数据库的任意数据库权限发生更改 (GDR) 时，均将引发此事件。 等效于 [Audit Database Scope GDR Event Class](../../event-classes/audit-database-scope-gdr-event-class.md)。|  
 |DATABASE_PRINCIPAL_CHANGE_GROUP|在数据库中创建、更改或删除主体（如用户）时，将引发此事件。 等效于 [Audit Database Principal Management Event Class](../../event-classes/audit-database-principal-management-event-class.md)。 （还等效于 Audit Add DB Principal 事件类，该事件类针对不推荐使用的 sp_grantdbaccess、sp_revokedbaccess、sp_addPrincipal 和 sp_dropPrincipal 存储过程时发生。）<br /><br /> 使用 sp_addrole 或 sp_droprole 存储过程添加或删除数据库角色时，将引发此事件。 创建、更改或删除任何数据库的任何主体时均将引发此事件。 等效于 [Audit Add Role 事件类](../../event-classes/audit-add-role-event-class.md)。|  
 |DATABASE_PRINCIPAL_IMPERSONATION_GROUP|数据库范围内存在模拟操作（如 EXECUTE AS \<主体> 或 SETPRINCIPAL）时将引发此事件。 此事件针对任何数据库中完成的模拟引发。 等效于 [Audit Database Principal Impersonation Event Class](../../event-classes/audit-database-principal-impersonation-event-class.md)。|  
 |DATABASE_ROLE_MEMBER_CHANGE_GROUP|向数据库角色添加登录名或从中删除登录名时将引发此事件。 此事件类由 sp_addrolemember、sp_changegroup 和 sp_droprolemember 存储过程引发。 任何数据库的任何数据库角色成员发生更改时，均将引发此事件。 等效于 [Audit Add Member to DB Role 事件类](../../event-classes/audit-add-member-to-db-role-event-class.md)。|  
@@ -102,10 +104,11 @@ ms.locfileid: "63238137"
 |SCHEMA_OBJECT_PERMISSION_CHANGE_GROUP|对架构对象执行 GRANT、DENY 或 REVOKE 语句时将引发此事件。 等效于 [Audit Schema Object GDR Event Class](../../event-classes/audit-schema-object-gdr-event-class.md)。|  
 |SERVER_OBJECT_CHANGE_GROUP|针对服务器对象执行 CREATE、ALTER 或 DROP 操作时将引发此事件。 等效于 [Audit Server Object Management Event Class](../../event-classes/audit-server-object-management-event-class.md)。|  
 |SERVER_OBJECT_OWNERSHIP_CHANGE_GROUP|服务器范围中的对象的所有者发生更改时将引发此事件。 等效于 [Audit Server Object Take Ownership Event Class](../../event-classes/audit-server-object-take-ownership-event-class.md)。|  
-|SERVER_OBJECT_PERMISSION_CHANGE_GROUP|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的任何主体针对某服务器对象权限发出 GRANT、REVOKE、或 DENY 语句时，将引发此事件。 等效于 [Audit Server Object GDR Event Class](../../event-classes/audit-server-object-gdr-event-class.md)。|  
+|SERVER_OBJECT_PERMISSION_CHANGE_GROUP|
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的任何主体针对某服务器对象权限发出 GRANT、REVOKE、或 DENY 语句时，将引发此事件。 等效于 [Audit Server Object GDR Event Class](../../event-classes/audit-server-object-gdr-event-class.md)。|  
 |SERVER_OPERATION_GROUP|使用安全审核操作（如使更改设置、资源、外部访问或授权）时将引发此事件。 等效于 [Audit Server Operation Event Class](../../event-classes/audit-server-operation-event-class.md)。|  
 |SERVER_PERMISSION_CHANGE_GROUP|为获取服务器范围内的权限（例如，创建登录名）而发出 GRANT、REVOKE 或 DENY 语句时，将引发此事件。 等效于 [Audit Server Scope GDR Event Class](../../event-classes/audit-server-scope-gdr-event-class.md)。|  
-|SERVER_PRINCIPAL_CHANGE_GROUP|创建、更改或删除服务器主体时将引发此事件。 等效于 [Audit Server Principal Management Event Class](../../event-classes/audit-server-principal-management-event-class.md)。<br /><br /> 主体发出 sp_defaultdb 或 sp_defaultlanguage 存储过程或 ALTER LOGIN 语句时，将引发此事件。 等效于 [Audit Addlogin Event Class](../../event-classes/audit-addlogin-event-class.md)。<br /><br /> 调用 sp_addlogin 和 sp_droplogin 存储过程时会引发此事件。 还等效于 [Audit Login Change Property Event Class](../../event-classes/audit-login-change-property-event-class.md)。<br /><br /> 引发此事件的 sp_grantlogin 或 sp_revokelogin 存储过程。 等效于 [Audit Login GDR Event Class](../../event-classes/audit-login-gdr-event-class.md)。|  
+|SERVER_PRINCIPAL_CHANGE_GROUP|创建、更改或删除服务器主体时将引发此事件。 等效于 [Audit Server Principal Management Event Class](../../event-classes/audit-server-principal-management-event-class.md)。<br /><br /> 主体发出 sp_defaultdb 或 sp_defaultlanguage 存储过程或 ALTER LOGIN 语句时，将引发此事件。 等效于 [Audit Addlogin Event Class](../../event-classes/audit-addlogin-event-class.md)。<br /><br /> 调用 sp_addlogin 和 sp_droplogin 存储过程时会引发此事件。 还等效于 [Audit Login Change Property Event Class](../../event-classes/audit-login-change-property-event-class.md)。<br /><br /> 此事件针对 sp_grantlogin 或 sp_revokelogin 存储过程引发。 等效于 [Audit Login GDR Event Class](../../event-classes/audit-login-gdr-event-class.md)。|  
 |SERVER_PRINCIPAL_IMPERSONATION_GROUP|服务器范围内发生模拟（如 EXECUTE AS \<登录名>）时将引发此事件。 等效于 [Audit Server Principal Impersonation Event Class](../../event-classes/audit-server-principal-impersonation-event-class.md)。|  
 |SERVER_ROLE_MEMBER_CHANGE_GROUP|向固定服务器角色添加登录名或从中删除登录名时将引发此事件。 此事件由 sp_addsrvrolemember 和 sp_dropsrvrolemember 存储过程引发。 等效于 [Audit Add Login to Server Role 事件类](../../event-classes/audit-add-login-to-server-role-event-class.md)。|  
 |SERVER_STATE_CHANGE_GROUP|修改 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务状态时将引发此事件。 等效于 [Audit Server Starts and Stops Event Class](../../event-classes/audit-server-starts-and-stops-event-class.md)。|  
@@ -125,7 +128,7 @@ ms.locfileid: "63238137"
   
  下表介绍了数据库级别审核操作组，并提供了适用的等效 SQL Server 事件类。  
   
-|操作组名称|Description|  
+|操作组名称|说明|  
 |-----------------------|-----------------|  
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|更改应用程序角色的密码时将引发此事件。 等效于 [Audit App Role Change Password Event Class](../../event-classes/audit-app-role-change-password-event-class.md)。|  
 |AUDIT_CHANGE_GROUP|创建、修改或删除任何审核时，均将引发此事件。 创建、修改或删除任何审核规范时，均将引发此事件。 任何针对某审核的更改均将在该审核中审核。 等效于 [Audit Change Audit Event Class](../../event-classes/audit-change-audit-event-class.md)。|  
@@ -138,9 +141,10 @@ ms.locfileid: "63238137"
 |DATABASE_OBJECT_PERMISSION_CHANGE_GROUP|针对数据库对象（例如，程序集和架构）发出 GRANT、REVOKE 或 DENY 语句时将引发此事件。 等效于 [Audit Database Object GDR Event Class](../../event-classes/audit-database-object-gdr-event-class.md)。|  
 |DATABASE_OPERATION_GROUP|数据库中发生操作（如检查点或订阅查询通知）时将引发此事件。 等效于 [Audit Database Operation Event Class](../../event-classes/audit-database-operation-event-class.md)。|  
 |DATABASE_OWNERSHIP_CHANGE_GROUP|使用 ALTER AUTHORIZATION 语句更改数据库的所有者时，将引发此事件，并将检查执行该操作所需的权限。 等效于 [Audit Change Database Owner Event Class](../../event-classes/audit-change-database-owner-event-class.md)。|  
-|DATABASE_PERMISSION_CHANGE_GROUP|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的任何用户针对某语句权限发出 GRANT、REVOKE 或 DENY 语句时均将引发此事件（仅适用于数据库事件，例如授予对数据库的权限）。 等效于 [Audit Database Scope GDR Event Class](../../event-classes/audit-database-scope-gdr-event-class.md)。|  
+|DATABASE_PERMISSION_CHANGE_GROUP|
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的任何用户针对某语句权限发出 GRANT、REVOKE 或 DENY 语句时均将引发此事件（仅适用于数据库事件，例如授予对数据库的权限）。 等效于 [Audit Database Scope GDR Event Class](../../event-classes/audit-database-scope-gdr-event-class.md)。|  
 |DATABASE_PRINCIPAL_CHANGE_GROUP|在数据库中创建、更改或删除主体（如用户）时，将引发此事件。 等效于 [Audit Database Principal Management Event Class](../../event-classes/audit-database-principal-management-event-class.md)。 还等效于 [Audit Add DB User 事件类](../../event-classes/audit-add-db-user-event-class.md)，该事件类针对不推荐使用的 sp_grantdbaccess、sp_revokedbaccess、sp_adduser 和 sp_dropuser 存储过程发生。<br /><br /> 使用不推荐使用的 sp_addrole 和 sp_droprole 存储过程添加或删除数据库角色时，将引发此事件。 等效于 [Audit Add Role 事件类](../../event-classes/audit-add-role-event-class.md)。|  
-|DATABASE_PRINCIPAL_IMPERSONATION_GROUP|如 EXECUTE AS 数据库范围内的发生模拟时引发此事件\<用户 > 或 SETUSER。 等效于 [Audit Database Principal Impersonation Event Class](../../event-classes/audit-database-principal-impersonation-event-class.md)。|  
+|DATABASE_PRINCIPAL_IMPERSONATION_GROUP|当数据库范围内存在模拟（如 EXECUTE AS \<user> 或 SETUSER）时，将引发此事件。 等效于 [Audit Database Principal Impersonation Event Class](../../event-classes/audit-database-principal-impersonation-event-class.md)。|  
 |DATABASE_ROLE_MEMBER_CHANGE_GROUP|向数据库角色添加登录名或从中删除登录名时将引发此事件。 此事件类与 sp_addrolemember、sp_changegroup 和 sp_droprolemember 存储过程一起使用。等效于 [Audit Add Member to DB Role 事件类](../../event-classes/audit-add-member-to-db-role-event-class.md)|  
 |DBCC_GROUP|主体发出任何 DBCC 命令时，将引发此事件。 等效于 [Audit DBCC Event Class](../../event-classes/audit-dbcc-event-class.md)。|  
 |FAILED_DATABASE_AUTHENTICATION_GROUP|指示某个主体尝试登录到包含数据库并且失败。 此类中的事件由新连接引发或由连接池中重用的连接引发。 引发此事件。|  
@@ -155,11 +159,11 @@ ms.locfileid: "63238137"
 ## <a name="database-level-audit-actions"></a>数据库级别审核操作  
  数据库级别的操作支持直接对数据库架构以及架构对象（例如表、视图、存储过程、函数、扩展存储过程、队列、同义词）进行的特定操作进行审核。 不审核类型、XML 架构集合、数据库和架构。 架构对象的审核可以在架构和数据库上配置，这意味着指定架构或数据库包含的所有架构对象上的事件都将被审核。 下表介绍了数据库级别的审核操作。  
   
-|操作|Description|  
+|操作|说明|  
 |------------|-----------------|  
 |SELECT|发出 SELECT 语句时将引发此事件。|  
 |UPDATE|发出 UPDATE 语句时将引发此事件。|  
-|Insert|发出 INSERT 语句时将引发此事件。|  
+|INSERT|发出 INSERT 语句时将引发此事件。|  
 |DELETE|发出 DELETE 语句时将引发此事件。|  
 |在运行 CREATE 语句前执行|发出 EXECUTE 语句时将引发此事件。|  
 |RECEIVE|发出 RECEIVE 语句时将引发此事件。|  
@@ -175,14 +179,14 @@ ms.locfileid: "63238137"
 ## <a name="audit-level-audit-action-groups"></a>审核级别的审核操作组  
  您也可以对审核过程中的操作进行审核。 这些操作可以是服务器范围或数据库范围的操作。 如果在数据库范围内，则仅针对数据库审核规范而进行。 下表介绍了审核级别的审核操作组。  
   
-|操作组名称|Description|  
+|操作组名称|说明|  
 |-----------------------|-----------------|  
-|AUDIT_ CHANGE_GROUP|发出以下命令之一时将引发此事件：<br /><br /> -   CREATE SERVER AUDIT<br />-   ALTER SERVER AUDIT<br />-   DROP SERVER AUDIT<br />-   CREATE SERVER AUDIT SPECIFICATION<br />-   ALTER SERVER AUDIT SPECIFICATION<br />-   DROP SERVER AUDIT SPECIFICATION<br />-   CREATE DATABASE AUDIT SPECIFICATION<br />-   ALTER DATABASE AUDIT SPECIFICATION<br />-   DROP DATABASE AUDIT SPECIFICATION|  
+|AUDIT_ CHANGE_GROUP|发出以下命令之一时将引发此事件：<br /><br /> -创建服务器审核<br />-ALTER SERVER AUDIT<br />-删除服务器审核<br />-创建服务器审核规范<br />-ALTER SERVER AUDIT 规范<br />-DROP SERVER 审核规范<br />-创建数据库审核规范<br />-ALTER DATABASE 审核规范<br />-删除数据库审核规范|  
   
 ## <a name="related-content"></a>相关内容  
  [创建服务器审核和服务器审核规范](create-a-server-audit-and-server-audit-specification.md)  
   
- [创建服务器审核规范和数据库审核规范](create-a-server-audit-and-database-audit-specification.md)  
+ [创建服务器审核和数据库审核规范](create-a-server-audit-and-database-audit-specification.md)  
   
  [CREATE SERVER AUDIT (Transact-SQL)](/sql/t-sql/statements/create-server-audit-transact-sql)  
   

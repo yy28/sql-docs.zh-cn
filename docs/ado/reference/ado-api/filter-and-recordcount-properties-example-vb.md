@@ -1,5 +1,5 @@
 ---
-title: Filter 和 RecordCount 属性示例 (VB) |Microsoft Docs
+title: Filter 和 RecordCount 属性示例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6f94440d9ddd0d0b5091f2a106f603397147ebda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918643"
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>Filter 和 RecordCount 属性示例 (VB)
-此示例中打开[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)中的发布服务器表***Pubs***数据库。 然后，它使用[筛选器](../../../ado/reference/ado-api/filter-property.md)属性可限制到特定的国家/地区中这些发布服务器的可见记录数。 **RecordCount**属性用来显示筛选和未筛选的记录集之间的差异。  
+此示例打开***Pubs***数据库的发布服务器表中的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。 然后，它使用[筛选器](../../../ado/reference/ado-api/filter-property.md)属性将可见记录的数目限制为特定国家/地区的发布者。 **RecordCount**属性用于显示已筛选和未筛选的记录集之间的差异。  
   
 ```  
 'BeginFilterVB  
@@ -108,13 +108,13 @@ End Sub
 ```  
   
 > [!NOTE]
->  如果知道想要选择的数据，是打开通常更高效**记录集**与 SQL 语句。 此示例演示如何创建一个**记录集**并从特定国家/地区获取记录。  
+>  如果知道要选择的数据，则打开包含 SQL 语句的**记录集**通常更有效。 此示例演示如何仅创建一个**记录集**，并从特定的国家/地区获取记录。  
   
 ```  
 Attribute VB_Name = "Filter"  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [筛选器属性](../../../ado/reference/ado-api/filter-property.md)   
- [RecordCount 属性 (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
+ [RecordCount 属性（ADO）](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -1,5 +1,5 @@
 ---
-title: RollupChildren (MDX) |Microsoft Docs
+title: RollupChildren （MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 89f7545af0d98de2a6bd97630a893057aac36b12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037056"
 ---
 # <a name="rollupchildren-mdx"></a>RollupChildren (MDX)
@@ -35,11 +35,11 @@ RollupChildren(Member_Expression, Unary_Operator)
  指定一元运算符的有效字符串表达式。  
   
 ## <a name="remarks"></a>备注  
- **RollupChildren**函数使用指定的一元运算符的指定成员的子级的值进行汇总。  
+ **RollupChildren**函数使用指定的一元运算符对指定成员的子级的值进行汇总。  
   
  下表说明了可用于此函数的有效一元运算符。  
   
-|运算符|结果|  
+|操作员|结果|  
 |--------------|------------|  
 |**+**|total = total + current child|  
 |**-**|总额 = 总额 - 当前子级|  
@@ -51,7 +51,7 @@ RollupChildren(Member_Expression, Unary_Operator)
  如果成员属性中的运算符未显示在列表中，则会发生错误。 求值顺序取决于同级的顺序，而不是运算符的优先顺序。  
   
 ## <a name="example"></a>示例  
- 下例使用名为“Alternate Rollup Operator”的成员属性（包含一元运算符的备用值）以备用方式汇总 Account（帐户）维度中 Net Profit（净利润）层次结构的子成员。 该成员属性不在 Adventure Works 多维数据集中，但是可以创建。 这种用法**RollupChildren**函数无法应用于假设分析的预算应用中使用。  
+ 下例使用名为“Alternate Rollup Operator”的成员属性（包含一元运算符的备用值）以备用方式汇总 Account（帐户）维度中 Net Profit（净利润）层次结构的子成员。 该成员属性不在 Adventure Works 多维数据集中，但是可以创建。 使用**RollupChildren**函数可以在预算应用程序中用于假设分析。  
   
 ```  
 RollupChildren  
@@ -59,7 +59,7 @@ RollupChildren
    , [Account].CurrentMember.Properties ('Alternate Rollup Operator') )  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 记录 (ADO for VisualC++语法) |Microsoft Docs
+title: 记录（适用于 Visual C++ 语法的 ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,10 +16,10 @@ ms.assetid: c4ce8532-a4d8-4f74-9488-9389b6695958
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: df62de2c5c51680047270d320ecc7c461bc47c53
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931438"
 ---
 # <a name="record-ado-for-visual-c-syntax"></a>记录（ADO for Visual C++ 语法）
@@ -35,7 +35,7 @@ MoveRecord(BSTR Source, BSTR Destination, BSTR UserName, BSTR Password, MoveReco
 Open(VARIANT Source, VARIANT ActiveConnection, ConnectModeEnum Mode, RecordCreateOptionsEnum CreateOptions, RecordOpenOptionsEnum Options, BSTR UserName, BSTR Password)  
 ```  
   
-## <a name="properties"></a>properties  
+## <a name="properties"></a>属性  
   
 ```  
 get_ActiveConnection(VARIANT *pvar)  
@@ -52,5 +52,5 @@ putref_Source(IDispatch *Source)
 get_State(ObjectStateEnum *pState)  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [记录对象 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)

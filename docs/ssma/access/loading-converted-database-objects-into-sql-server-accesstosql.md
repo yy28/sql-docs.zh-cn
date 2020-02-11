@@ -1,5 +1,5 @@
 ---
-title: 转换数据库对象加载到 SQL Server (AccessToSQL) |Microsoft Docs
+title: 将转换后的数据库对象加载到 SQL Server （AccessToSQL） |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -30,115 +30,115 @@ ms.assetid: 4e854eee-b10c-4f0b-9d9e-d92416e6f2ba
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 7effaa973b7a39df6fc0b9385a5cfde4fdad18d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67986321"
 ---
-# <a name="loading-converted-database-objects-into-sql-server-accesstosql"></a>转换数据库对象加载到 SQL Server (AccessToSQL)
-转换到访问数据库对象后[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，您可以加载到生成的数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 您既可以让 SSMA 创建对象，也可以编写对象脚本并自行运行这些脚本。 SSMA 此外，还允许使用的实际内容更新目标元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 数据库。  
+# <a name="loading-converted-database-objects-into-sql-server-accesstosql"></a>将转换后的数据库对象加载到 SQL Server （AccessToSQL）
+将 Access 数据库对象转换为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 后，可以将生成的数据库对象加载到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 中。 您可以使用 SSMA 创建这些对象，也可以编写对象脚本并自己运行脚本。 此外，SSMA 使你能够用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 数据库的实际内容更新目标元数据。  
   
-## <a name="choosing-between-synchronization-and-scripts"></a>同步和脚本之间进行选择  
-如果你想要将已转换的数据库对象加载到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]也无需修改的 SQL Azure，可以让 SSMA 直接创建或重新创建数据库对象。 该方法的过程快速而简单，但不允许对自定义[!INCLUDE[tsql](../../includes/tsql-md.md)]定义的代码[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 对象，而非存储过程。  
+## <a name="choosing-between-synchronization-and-scripts"></a>在同步和脚本之间进行选择  
+如果要在不进行修改的情况下将[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]转换后的数据库对象加载到或 SQL Azure，则可以让 SSMA 直接创建或重新创建数据库对象。 这种方法既简单又简单，但不允许自定义用于定义[!INCLUDE[tsql](../../includes/tsql-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 对象的代码（而不是存储过程）。  
   
-如果你想要修改[!INCLUDE[tsql](../../includes/tsql-md.md)]用于创建对象，或如果想要更好地控制对象的创建，使用 SSMA 来创建脚本。 你可以然后修改这些脚本、 单独创建每个对象和甚至使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理来安排创建这些对象。  
+如果要修改用于创建对象[!INCLUDE[tsql](../../includes/tsql-md.md)]的，或者如果想要对对象创建进行更多的控制，请使用 SSMA 创建脚本。 然后，你可以修改这些脚本，单独创建每个对象，甚至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用代理来计划创建这些对象。  
   
-## <a name="using-ssma-to-synchronize-objects-with-sql-server"></a>使用 SSMA 来与 SQL Server 中同步对象  
-使用 SSMA 创建[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 数据库对象，选择中的对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 元数据资源管理器，然后再同步的对象与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，如下面的过程中所示。 默认情况下，如果对象已经存在于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，并且如果 SSMA 元数据具有某些本地更改或对这些非常对象的定义更新 SSMA 会更改中的对象定义[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 您可以通过编辑更改默认行为**项目设置**。  
+## <a name="using-ssma-to-synchronize-objects-with-sql-server"></a>使用 SSMA 将对象与 SQL Server 同步  
+若要使用 SSMA 创建[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 数据库对象，请在或 SQL Azure 元[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据资源管理器中选择对象，然后将对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]与或 SQL Azure 同步，如以下过程中所示。 默认情况下，如果对象已存在于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 中，并且 SSMA 元数据具有对这些对象的定义的一些本地更改或更新，则 SSMA 将更改或 SQL Azure 中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的对象定义。 您可以通过编辑**项目设置**来更改默认行为。  
   
 > [!NOTE]  
-> 可以选择现有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或未转换从 Access 数据库的 SQL Azure 数据库对象。 但是，SSMA 将不重新创建或更改这些对象。  
+> 您可以选择不[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是从 Access 数据库转换的现有或 SQL Azure 的数据库对象。 但是，SSMA 不会重新创建或更改这些对象。  
   
-**若要使用 SQL Server 或 SQL Azure 同步对象**  
+**与 SQL Server 或 SQL Azure 同步对象**  
   
-1.  在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 元数据资源管理器中，展开顶部[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 节点，然后展开**数据库**。  
+1.  在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 元数据资源管理器中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，展开顶部或 SQL Azure "节点，然后展开"**数据库**"。  
   
 2.  选择要处理的对象：  
   
-    -   若要同步整个数据库，选择数据库名称旁边的复选框。  
+    -   若要同步完整数据库，请选中数据库名称旁边的复选框。  
   
-    -   以同步或省略了单个对象的类别，选择或清除的对象或文件夹旁边的复选框。  
+    -   若要同步或忽略对象的单个对象或类别，请选中或清除对象或文件夹旁边的复选框。  
   
-3.  选择要在中处理的对象后[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 元数据资源管理器中，右键单击**数据库**，然后单击**与数据库同步**。  
+3.  选择要处理的对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 元数据资源管理器后，右键单击 "**数据库**"，然后单击 "**与数据库同步**"。  
   
-    你还可以通过右键单击该对象或其父文件夹，然后单击同步单个对象的类别**与数据库同步**。  
+    您还可以通过右键单击对象或其父文件夹，然后单击 "**与数据库同步**"，来同步各个对象或对象类别。  
   
-    之后，将显示 SSMA**与数据库同步**对话框中，可以看到两组项的位置。 在左侧，SSMA 显示所选的数据库对象树中表示。 在右侧窗格中，您可以看到表示 SSMA 元数据中的相同对象的树。 您可以通过单击左侧或右侧展开树 + 按钮。 在操作列中放置两个树之间显示的同步方向。  
+    然后，SSMA 将显示与**数据库同步**对话框，您可以在其中看到两组项。 在左侧，SSMA 显示了树中表示的所选数据库对象。 在右侧，可以看到表示 SSMA 元数据中的相同对象的树。 可以通过单击右侧或左侧的 "+" 按钮展开树。 同步方向显示在两个树之间放置的 "操作" 列中。  
   
-    一个操作号可以有三种状态：  
+    操作签名可以有三种状态：  
   
-    -   向左的箭头表示元数据的内容将保存在数据库 （默认值）。  
+    -   向左箭头表示将在数据库中保存元数据的内容（默认值）。  
   
-    -   向右箭头意味着数据库内容将覆盖 SSMA 元数据。  
+    -   向右箭头表示数据库内容将覆盖 SSMA 元数据。  
   
-    -   跨登录意味着将执行任何操作。  
+    -   交叉符号表示不会执行任何操作。  
   
-    单击操作的符号以更改状态。 当您单击时将执行实际同步**确定**的按钮**与数据库同步**对话框。  
+    单击操作符号以更改状态。 当单击 "**与数据库同步**" 对话框中的 **"确定"** 按钮时，将执行实际同步。  
   
-## <a name="scripting-objects"></a>编写对象脚本  
-如果你想要保存[!INCLUDE[tsql](../../includes/tsql-md.md)]定义的转换后的数据库对象，或你想要更改的对象定义和运行编写自己的脚本，可以将已转换的数据库保存到的对象定义[!INCLUDE[tsql](../../includes/tsql-md.md)]脚本。  
+## <a name="scripting-objects"></a>脚本对象  
+如果要保存[!INCLUDE[tsql](../../includes/tsql-md.md)]转换后的数据库对象的定义，或者您想要更改对象定义并自己运行脚本，则可以将转换后的数据库对象定义保存到[!INCLUDE[tsql](../../includes/tsql-md.md)]脚本中。  
   
-**若要将一个或多个对象保存到脚本**  
+**将一个或多个对象保存到脚本**  
   
-1.  在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元数据资源管理器中，展开顶级节点 （服务器名称），然后展开**数据库**。  
+1.  在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "元数据资源管理器" 中，展开顶级节点（服务器名称），然后展开 "**数据库**"。  
   
 2.  执行以下一项或多项操作：  
   
-    -   若要编写脚本的完整数据库，请选择数据库名称旁边的复选框。  
+    -   若要为完整数据库编写脚本，请选中数据库名称旁边的复选框。  
   
-    -   若要编写脚本或省略单个视图，展开数据库，展开**视图**，然后选择或清除查看旁边的复选框。  
+    -   若要编写或省略单个视图，请展开数据库，展开 "**视图**"，然后选中或清除视图旁边的复选框。  
   
-    -   若要编写脚本或忽略各个表，展开数据库，展开**表**，然后选中或清除表旁边的复选框。  
+    -   若要编写或省略单个表，请展开数据库，展开 "**表**"，然后选中或清除表旁边的复选框。  
   
-    -   若要编写脚本或省略单独的表的索引，展开表，展开**索引**，然后选中或清除索引。  
+    -   若要为表编写或省略单个索引，请展开该表，展开 "**索引**"，然后选择或清除索引。  
   
-3.  右键单击**数据库**，然后选择**另存为脚本**。  
+3.  右键单击 "**数据库**"，然后选择 "**另存为脚本**"。  
   
-    此外可以编写脚本的单独对象。 若要编写脚本的对象，而不考虑该选择对象，右键单击该对象，并选择**另存为脚本**。  
+    你还可以编写单个对象的脚本。 若要为对象编写脚本，无论选择了哪个对象，右键单击该对象并选择 "**另存为脚本**"。  
   
-4.  在中**另存为**对话框框中，找到你想要保存该脚本文件中输入名称的文件夹**文件名**框中，然后依次**确定**。  
+4.  在 "**另存为**" 对话框中，找到要将脚本保存到的文件夹，在 **"文件名" 框中**输入文件名，然后单击 **"确定"**。  
   
-    SSMA 将追加.sql 文件扩展名。  
+    SSMA 将追加 .sql 文件扩展名。  
   
 ### <a name="modifying-scripts"></a>修改脚本  
-保存后[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 作为脚本的对象定义，可以使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]对脚本进行修改。  
+将[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 对象定义保存为脚本后，可以使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]来修改脚本。  
   
-**若要修改的脚本**  
+**修改脚本**  
   
-1.  上[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**文件**菜单中，依次指向**打开**，然后单击**文件**。  
+1.  在“文件”[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **** 菜单中，指向“打开”****，再单击“文件”****。  
   
-2.  在中**开放**对话框中，找到并选择你的脚本文件，并单击**确定**。  
+2.  在 "**打开**" 对话框中，找到并选择脚本文件，然后单击 **"确定"**。  
   
-3.  通过使用查询编辑器中编辑脚本文件。  
+3.  使用查询编辑器编辑脚本文件。  
   
-    有关查询编辑器的详细信息，请参阅"编辑器方便命令和功能"中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。  
+    有关查询编辑器的详细信息，请参阅联机丛书中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 "编辑器便捷命令和功能"。  
   
-4.  若要保存该脚本，在文件菜单上，选择**保存**。  
+4.  若要保存脚本，请在 "文件" 菜单上选择 "**保存**"。  
   
-### <a name="running-scripts"></a>正在运行的脚本  
-可以在运行脚本或单个语句[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
+### <a name="running-scripts"></a>运行脚本  
+您可以在中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]运行脚本或单独的语句。  
   
-**若要运行脚本**  
+**运行脚本**  
   
-1.  上[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**文件**菜单中，依次指向**打开**，然后单击**文件**。  
+1.  在 " [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **文件**" 菜单上，指向 "**打开**"，然后单击 "**文件**"。  
   
-2.  在中**开放**对话框中，找到并选择你的脚本文件，并单击**确定**。  
+2.  在 "**打开**" 对话框中，找到并选择脚本文件，然后单击 **"确定"**。  
   
-3.  若要运行完整的脚本，请按**F5**密钥。  
+3.  若要运行完整的脚本，请按**F5**键。  
   
-4.  若要运行一组语句，在查询编辑器窗口中，选择语句，然后按**F5**密钥。  
+4.  若要运行一组语句，请在 "查询编辑器" 窗口中选择语句，然后按**F5**键。  
   
-有关如何使用查询编辑器中运行脚本的详细信息，请参阅" [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]查询"中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。  
+有关如何使用查询编辑器来运行脚本的详细信息，请参阅联机丛书[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 "查询"。  
   
-你可以也运行脚本从命令行使用**sqlcmd**实用程序，并从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理。 有关详细信息**sqlcmd**，请参阅中的"sqlcmd 实用工具"[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。 有关详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理，请参阅"自动执行管理任务 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理)"中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。  
+还可以通过使用**sqlcmd**实用程序和代理从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]命令行运行脚本。 有关**sqlcmd**的详细信息，请参阅联机丛书中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "sqlcmd 实用工具"。 有关[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理的详细信息，请参阅联机丛书中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 "自动执行管理任务（代理）"。  
   
-## <a name="securing-objects-in-sql-server"></a>保护 SQL Server 中的对象  
-已加载到的已转换的数据库对象后[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，可以授予和拒绝对这些对象的权限。 它是一个好办法迁移之前执行此操作将数据到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关如何帮助保护信息对象中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅"安全注意事项的数据库和数据库应用程序"中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。  
+## <a name="securing-objects-in-sql-server"></a>在 SQL Server 中保护对象  
+将转换后的数据库对象加载到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中后，您可以对这些对象授予和拒绝权限。 在将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前，最好先执行此操作。 有关如何帮助保护中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的对象的信息，请参阅联机丛书中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 "数据库和数据库应用程序的安全注意事项"。  
   
 ## <a name="next-step"></a>下一步  
-迁移过程中的下一步是[将数据迁移到 SQL Server](migrating-access-data-into-sql-server-azure-sql-db-accesstosql.md)。  
+迁移过程的下一步是将[数据迁移到 SQL Server](migrating-access-data-into-sql-server-azure-sql-db-accesstosql.md)。  
   
-## <a name="see-also"></a>请参阅  
-[Access 数据库迁移到 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
+## <a name="see-also"></a>另请参阅  
+[将 Access 数据库迁移到 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

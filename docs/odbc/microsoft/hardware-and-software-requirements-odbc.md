@@ -1,5 +1,5 @@
 ---
-title: 硬件和软件要求 (ODBC) |Microsoft Docs
+title: 硬件和软件要求（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,41 +16,41 @@ ms.assetid: 6df2e9cd-de10-4629-97bd-32f2782616c7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6c09ddcac1409da08fedeaf946ac7fb9f6ef668e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67952444"
 ---
 # <a name="hardware-and-software-requirements-odbc"></a>硬件和软件要求 (ODBC)
 本主题列出了使用 ODBC 桌面数据库驱动程序的要求。  
   
 ## <a name="hardware-requirements"></a>硬件要求  
- 若要使用 ODBC 桌面数据库驱动程序，必须具有：  
+ 若要使用 ODBC 桌面数据库驱动程序，您必须：  
   
--   将 IBM 兼容的个人计算机。  
+-   与 IBM 兼容的个人计算机。  
   
--   包含 6 MB 的可用磁盘空间的硬盘。  
+-   硬盘有 6 MB 的可用磁盘空间。  
   
--   至少 16 MB 的随机存取内存 (RAM)。  
+-   至少 16 MB 的随机存取内存（RAM）。  
   
 ## <a name="software-requirements"></a>软件要求  
- 若要访问使用 ODBC 驱动程序的数据，必须具有：  
+ 若要使用 ODBC 驱动程序访问数据，您必须具有：  
   
 -   ODBC 驱动程序。  
   
--   32 位 ODBC 驱动程序管理器，版本 3.51 或更高版本 (所用的 Odbc32.dll)。  
+-   32位 ODBC 驱动程序管理器版本3.51 或更高版本（Odbc32.lib）。  
   
--   Microsoft Windows 95 或更高版本，或 Windows NT 4.0 或 Windows 2000。  
+-   Microsoft Windows 95 或更高版本，或者 Windows NT 4.0 或 Windows 2000。  
   
--   至少 20 KB 使用 Microsoft ODBC 驱动程序的应用程序的堆栈大小。  
+-   使用 Microsoft ODBC 驱动程序的应用程序的堆栈大小至少为 20 KB。  
   
- 在使用 Microsoft Windows NT 4.0 或 Windows 2000，32 位驱动程序是线程安全的但只能通过使用全局信号量，控制对该驱动程序的访问。 功能非常有限的驱动程序同时使用 Windows NT 下。 对 Jet ISAM 层的所有访问将都是单线程的所有应用程序使用 Microsoft Jet 引擎。  
+ 使用 Microsoft Windows NT 4.0 或 Windows 2000 时，32位驱动程序是线程安全的，但仅通过使用控制对驱动程序的访问的全局信号量来完成。 在 Windows NT 下，对驱动程序的并发使用非常有限。 对于使用 Microsoft Jet 引擎的所有应用程序，对 Jet ISAM 层的所有访问都是单线程的。  
   
- 在 Windows on Windows (WOW) 在 Microsoft Windows NT 4.0 上运行多个 16 位应用程序，必须在独立的内存空间中运行应用程序。 （由于 ODBC 不支持在同一进程中的多个环境，不能使用相同的内存空间。）若要在单独的内存空间中运行应用程序，选择应用程序的图标中的程序管理器，打开**文件**菜单，然后单击**属性**，然后单击**运行在单独的内存空间**。  
+ 在 Microsoft Windows NT 4.0 上的 windows on windows （WOW）上运行多个16位应用程序时，应用程序必须在单独的内存空间中运行。 （由于 ODBC 不支持同一进程中的多个环境，因此不能使用相同的内存空间。）若要在单独的内存空间中运行应用程序，请在程序管理器中选择该应用程序的图标，打开 "**文件**" 菜单，然后单击 "**属性**"，然后单击 "**在单独的内存空间中运行**"。  
   
- 不支持使用这些驱动程序通过 Windows 95 上的 16 位应用程序。  
+ 不支持通过 Windows 95 上的16位应用程序使用这些驱动程序。  
   
-## <a name="driver-specific-hardware-and-software-requirements"></a>特定于驱动程序硬件和软件要求  
+## <a name="driver-specific-hardware-and-software-requirements"></a>特定于驱动程序的硬件和软件要求  
   
--   MicrosoftAccess 和 dBASEdrivers 可能需要的 Autoexec.bat 或 Config.sys 文件中的更改。
+-   MicrosoftAccess 和 dBASEdrivers 可能需要在 Autoexec.bat 或 config.sys 文件中进行更改。

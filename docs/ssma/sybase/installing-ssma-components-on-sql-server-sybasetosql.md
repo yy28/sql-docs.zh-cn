@@ -1,5 +1,5 @@
 ---
-title: SQL Server (SybaseToSQL) 上安装 SSMA 组件 |Microsoft Docs
+title: 在 SQL Server 上安装 SSMA 组件（SybaseToSQL） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,62 +10,62 @@ ms.assetid: 5ad9e12c-2cdb-4dd2-8703-05a23242d19d
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 1fbc3a8f74b21bd5a53bdd874b5c41ef522e29f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68029007"
 ---
 # <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>在 SQL Server 上安装 SSMA 组件 (SybaseToSQL)
-除了安装 SSMA for 使用服务器端数据迁移，你还必须安装组件正在运行的计算机上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 这些组件包括 SSMA 扩展包，它支持数据迁移和 Sybase 提供程序以启用服务器到服务器的连接。  
+除了安装 SSMA 外，还必须在运行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的计算机上安装组件，才能使用服务器端数据迁移。 这些组件包括支持数据迁移的 SSMA 扩展包和用于启用服务器到服务器连接的 Sybase 提供程序。  
   
-## <a name="ssma-for-sybase-extension-pack"></a>SSMA for Sybase 扩展包  
-SSMA 扩展包添加了数据库， **sysdb**并**ssmatesterdb_syb**，为指定的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 **Sysdb**数据库包含的表和数据迁移所需的存储的过程。 **Ssmatester_syb**数据库包含的架构**ssma_sybase_utilities**，在其中创建 SSMA 测试器组件使用的对象 （表、 触发器、 视图）。  
+## <a name="ssma-for-sybase-extension-pack"></a>用于 Sybase 扩展包的 SSMA  
+SSMA 扩展包将数据库、 **sysdb**和**ssmatesterdb_syb**添加到指定的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。 **Sysdb**数据库包含迁移数据所需的表和存储过程。 **Ssmatester_syb**数据库包含架构**ssma_sybase_utilities**，在该架构中创建 ssma 测试器组件使用的对象（表、触发器和视图）。  
   
-此外，当你将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，SSMA 创建[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理作业时服务器端数据迁移引擎用于将数据迁移。  
+此外，在将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]会在服务器端数据迁移引擎用于迁移数据时创建代理作业。  
   
 ### <a name="installing-the-extension-pack"></a>安装扩展包  
-可以安装的扩展包前迁移到的数据的任何时间[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+在将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前，你可以随时安装扩展包。  
   
 > [!IMPORTANT]  
-> 若要安装的扩展包，您必须是 sysadmin 服务器角色的实例上的成员[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+> 若要安装扩展包，您必须是实例上 sysadmin 服务器角色的成员[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-**若要安装的扩展包**  
+**安装扩展包**  
   
-1.  复制 SSMA for Sybase 扩展包。*n*。Install.exe，其中*n*是正在运行的计算机的生成号[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+1.  复制 Sybase 扩展包的 SSMA。*n*。在运行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的计算机上安装 .exe，其中*n*是生成号。  
   
-2.  双击 SSMA for Sybase 扩展包。*n*。Install.exe。  
+2.  双击 "SSMA for Sybase Extension Pack"。*n*。安装 .exe。  
   
-3.  在欢迎页上，单击**下一步**。  
+3.  在“欢迎”页面上，单击“**下一步**”。  
   
-4.  在最终用户许可协议页上，阅读许可协议。 如果同意，请选择**我接受许可协议中条款**复选框，然后依次**下一步**。  
+4.  在 "最终用户许可协议" 页上，阅读许可协议。 如果同意，请选中 "**我接受许可协议中的条款**" 复选框，然后单击 "**下一步**"。  
   
-5.  在选择安装类型页上单击**典型**。  
+5.  在 "选择安装类型" 页上，单击 "**典型**"。  
   
-6.  在已准备好安装页上，单击**安装**。  
+6.  在 "准备安装" 页上，单击 "**安装**"。  
   
-7.  在已完成安装第一个步骤页上，单击**下一步**。  
+7.  在 "完成第一步安装" 页上，单击 "**下一**步"。  
   
-    将出现一个新的对话框，在其中选择的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]扩展包安装。  
+    此时将显示一个新对话框，您可以在其中选择[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用于安装扩展包的实例。  
   
-8.  选择的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您将是 ASE 数据库迁移，然后单击**下一步**。  
+8.  选择要将 ASE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库迁移到的实例，然后单击 "**下一步**"。  
   
-    默认实例具有相同名称的计算机。 命名的实例将跟一个反斜杠和实例名称。  
+    默认实例与计算机的名称相同。 命名实例后跟反斜杠和实例名称。  
   
-9. 在连接参数页上，选择身份验证方法，然后单击**下一步**。  
+9. 在 "连接参数" 页上，选择身份验证方法，然后单击 "**下一步**"。  
   
-    Windows 身份验证将使用你的 Windows 凭据来尝试登录到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果选择[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证，必须输入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名和密码。  
+    Windows 身份验证将使用您的 Windows 凭据来尝试登录到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果选择[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "身份验证"，则必须[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]输入登录名和密码。  
   
-10. 在管理服务器页上选择**安装实用程序数据库** *n*，其中*n*是否的版本号，然后单击**下一步**。  
+10. 在 "管理服务器" 页上，选择 "**安装实用程序数据库** *n*"，其中*n*是版本号，然后单击 "**下一步**"。  
   
-    **Sysdb**创建数据库并在该数据库中创建存储的过程。  
+    将创建**sysdb**数据库，并在该数据库中创建存储过程。  
   
-    如果**安装的测试人员数据库**选项处于选中状态的测试人员**ssmatesterdb_syb**将创建数据库。  
+    如果已选中 "**安装测试者数据库**" 选项，则将创建**ssmatesterdb_syb**数据库的测试人员。  
   
-11. 若要安装到另一个实例的实用工具[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，选择**返回到实例**，然后单击**下一步**。 若要退出向导，请单击**退出**。  
+11. 若要将实用工具安装到的另[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一个实例，请选择 "**返回到实例**"，然后单击 "**下一步**"。 或者，若要退出向导，请单击 "**退出**"。  
   
 ### <a name="sql-server-database-objects"></a>SQL Server 数据库对象  
-安装扩展包后，将会，请参阅**ssma_syb.bcp_migration_packages**表中**sysdb**数据库。 你将看到以下存储的过程：  
+安装扩展包后，将在**sysdb**数据库中看到一个**ssma_syb bcp_migration_packages**表。 你还将看到以下存储过程：  
   
 -   **bcp_clean_migration_data**  
   
@@ -87,26 +87,26 @@ SSMA 扩展包添加了数据库， **sysdb**并**ssmatesterdb_syb**，为指定
   
 -   **stop_agent_process**  
   
-你将数据迁移到每次[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，SSMA 创建[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理作业。 这些作业将命名为**ssma_syb 数据迁移包 {GUID}** ，而在中可见[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理节点[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Jobs 文件夹中。  
+每次将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，SSMA 会创建[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理作业。 这些作业**ssma_syb 数据迁移包 {GUID}** 命名，在 "作业" 文件夹的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "代理" [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]节点中可见。  
   
 ## <a name="sybase-providers"></a>Sybase 提供程序  
-从 ASE 到迁移数据时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQL Azure，直接在 ASE 之间迁移数据和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQL Azure。 它不会通过 SSMA 因为这将会减慢数据迁移。  
+将数据从 ASE 迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL azure 时，数据直接在 ASE 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL azure 之间迁移。 它不会经历 SSMA，因为这会降低数据迁移速度。  
   
-### <a name="installing-the-sybase-providers"></a>安装的 Sybase 提供程序  
-以下说明安装 Sybase 提供程序提供的基本安装步骤。 确切说明 Sybase 安装程序的版本而异。  
+### <a name="installing-the-sybase-providers"></a>安装 Sybase 提供程序  
+以下说明提供了安装 Sybase 提供程序的基本安装步骤。 确切的说明将有所不同，具体取决于 Sybase 安装程序的版本。  
   
 > [!IMPORTANT]  
-> 在运行安装程序之前，验证没有违反许可协议。  
+> 在运行安装程序之前，请验证你是否不违反许可协议。  
   
 1.  运行 Sybase ASE 安装程序。  
   
-2.  选择自定义安装程序。  
+2.  选择 "自定义安装"。  
   
-3.  在功能选择页中，选择 ODBC、 OLE DB 和 ADO.NET 数据提供程序。  
+3.  在 "功能选择" 页上，选择 ODBC、OLE DB 和 ADO.NET 数据提供程序。  
   
-4.  验证所选的功能，然后单击**完成**安装数据提供程序。  
+4.  验证所选功能，然后单击 "**完成**" 以安装数据提供程序。  
   
-## <a name="see-also"></a>请参阅  
-[安装 SSMA for Sybase 客户端&#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)  
-[将 Sybase ASE 数据库迁移到 SQL Server-Azure SQL 数据库&#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+## <a name="see-also"></a>另请参阅  
+[为 Sybase 客户端 &#40;SybaseToSQL&#41;安装 SSMA](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)  
+[将 Sybase ASE 数据库迁移到 SQL Server-Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

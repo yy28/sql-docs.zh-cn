@@ -13,18 +13,18 @@ ms.assetid: a28fadb9-b998-472a-b252-709507e92005
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f16cac6a715716dcef0a1c2b337716835c14b2b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67910375"
 ---
 # <a name="sqlsetconnectattrfordbcinfo-function"></a>SQLSetConnectAttrForDbcInfo 函数
-**符合性**  
- 版本引入了：ODBC 3.81 标准符合性：ODBC  
+**度**  
+ 引入的版本： ODBC 3.81 标准符合性： ODBC  
   
- **摘要**  
- **SQLSetConnectAttrForDbcInfo**等同于**SQLSetConnectAttr**，但它的连接信息令牌而不是连接句柄上设置的属性。  
+ **总结**  
+ **SQLSetConnectAttrForDbcInfo**与**SQLSetConnectAttr**相同，但它在连接信息标记而不是连接句柄上设置属性。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,45 +39,45 @@ SQLRETURN  SQLSetConnectAttrForDbcInfo(
   
 ## <a name="arguments"></a>参数  
  *hDbcInfoToken*  
- [输入]标记句柄。  
+ 送标记句柄。  
   
  *Attribute*  
- [输入]若要设置的属性。 有效的属性列表是驱动程序特定和的相同[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)。  
+ 送要设置的特性。 有效属性的列表是特定于驱动程序的，与[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)的是相同的。  
   
- *ValuePtr*  
- [输入]指向要与之关联的值*属性*。 具体取决于值*特性*， *ValuePtr*值将为 32 位无符号的整数值或将指向以 null 结尾的字符串。 请注意，如果*特性*自变量是特定于驱动程序的值中的值*ValuePtr*可能是一个有符号的整数。  
+ *将 valueptr*  
+ 送指向要与*属性*关联的值的指针。 根据*属性*的值，*将 valueptr*将为32位无符号整数值，或者将指向以 null 值结束的字符串。 请注意，如果*属性*参数是驱动程序特定的值，则*将 valueptr*中的值可能是带符号整数。  
   
  *StringLength*  
- [输入]如果*特性*是一个 ODBC 定义的属性和*ValuePtr*指向字符字符串或二进制缓冲区中，此参数应为的长度 **ValuePtr*。 对于字符串数据，此参数应包含在字符串中的字节数。  
+ 送如果*attribute*是 ODBC 定义的属性，并且*将 valueptr*指向字符串或二进制缓冲区，则此参数应为 **将 valueptr*的长度。 对于字符串数据，此参数应包含字符串中的字节数。  
   
- 如果*特性*是一个 ODBC 定义的属性和*ValuePtr*是一个整数*StringLength*将被忽略。  
+ 如果*attribute*是一个 ODBC 定义的属性，并且*将 valueptr*是一个整数，则将忽略*StringLength* 。  
   
- 如果*特性*是一个驱动程序定义的属性，该应用程序通过设置指示特性的驱动程序管理器的性质*StringLength*参数。 *StringLength*可以具有以下值：  
+ 如果*attribute*是驱动程序定义的属性，则应用程序通过设置*StringLength*参数来指示属性对驱动程序管理器的性质。 *StringLength*可具有以下值：  
   
--   如果*ValuePtr*是一个指向一个字符串，然后*StringLength*是 sql_nts; 的字符串的长度。  
+-   如果*将 valueptr*是指向字符串的指针，则*StringLength*是字符串或 SQL_NTS 的长度。  
   
--   如果*ValuePtr*是一个指向二进制缓冲区，则 SQL_LEN_BINARY_ATTR 将结果放置于该应用程序 (*长度*) 中的宏*StringLength*。 这会在负值*StringLength*。  
+-   如果*将 valueptr*是指向二进制缓冲区的指针，则该应用程序会将 SQL_LEN_BINARY_ATTR （*长度*）宏的结果放置在*StringLength*中。 这会在*StringLength*中置入负值。  
   
--   如果*ValuePtr*指向的字符串或二进制字符串以外的值，即*StringLength*应具有 SQL_IS_POINTER 的值。  
+-   如果*将 valueptr*是一个指向字符串或二进制字符串以外的值的指针，则*StringLength*的值应 SQL_IS_POINTER。  
   
--   如果*ValuePtr*包含一个固定长度值，则*StringLength*是 SQL_IS_INTEGER 或 SQL_IS_UINTEGER，根据需要。  
+-   如果*将 valueptr*包含固定长度的值，则*StringLength*根据需要 SQL_IS_INTEGER 或 SQL_IS_UINTEGER。  
   
 ## <a name="returns"></a>返回  
- SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_ERROR 或 SQL_INVALID_HANDLE。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR 或 SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>诊断  
- 与相同[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)，只不过驱动程序管理器将使用**HandleType** SQL_HANDLE_DBC_INFO_TOKEN 的和一个**处理**的*hDbcInfoToken*.  
+ 与[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)相同，不同之处在于，驱动程序管理器将使用 SQL_HANDLE_DBC_INFO_TOKEN 的**HandleType**和*hDbcInfoToken*的**句柄**。  
   
 ## <a name="remarks"></a>备注  
- **SQLSetConnectAttrForDbcInfo**等同于**SQLSetConnectAttr**，但它的属性上的连接信息令牌，而不是在上设置连接句柄。 例如，如果**SQLSetConnectAttr**不能识别特性**SQLSetConnectAttrForDbcInfo**还会为该属性返回 SQL_ERROR。  
+ **SQLSetConnectAttrForDbcInfo**与**SQLSetConnectAttr**相同，但它在连接信息令牌上设置属性，而不是在连接句柄上设置属性。 例如，如果**SQLSetConnectAttr**不能识别属性， **SQLSetConnectAttrForDbcInfo**还应返回该属性 SQL_ERROR。  
   
- 该驱动程序时驱动程序将返回 SQL_ERROR 或 SQL_INVALID_HANDLE，应忽略此属性来计算池 id。 此外，驱动程序管理器将获取的诊断信息*hDbcInfoToken*，并返回 SQL_SUCCESS_WITH_INFO 到中的应用程序[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)和[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md). 因此，应用程序可以检索有关为什么无法设置某些属性的详细信息。  
+ 当驱动程序返回 SQL_ERROR 或 SQL_INVALID_HANDLE 时，驱动程序应忽略此属性以计算池 ID。 同时，驱动程序管理器将从*hDbcInfoToken*获取诊断信息，并将 SQL_SUCCESS_WITH_INFO 返回到[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)和[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)中的应用程序。 因此，应用程序可以检索有关无法设置某些属性的详细信息。  
   
- 应用程序不应直接调用此函数。 支持识别驱动程序的连接池的 ODBC 驱动程序必须实现此函数。  
+ 应用程序不应直接调用此函数。 支持驱动程序感知连接池的 ODBC 驱动程序必须实现此功能。  
   
- 包括 sqlspi.h 的 ODBC 驱动程序开发。  
+ 包括用于 ODBC 驱动程序开发的 sqlspi。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [开发 ODBC 驱动程序](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [识别驱动程序的连接池](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [在 ODBC 驱动程序中开发连接池感知](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

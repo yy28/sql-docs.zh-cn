@@ -18,10 +18,10 @@ ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 10b4aa19b86530213f852ea90f959a1d7ef6c74f
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72251239"
 ---
 # <a name="filetablerootpath-transact-sql"></a>FileTableRootPath (Transact-SQL)
@@ -40,10 +40,10 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
  *FileTable_name*  
  FileTable 的名称。 *FileTable_name*的类型为**nvarchar**。 这是一个可选参数。 默认值为当前数据库。 指定*schema_name*也是可选的。 可以将 NULL 传递给*FileTable_name*以使用默认参数值  
   
- *\@选项*  
- 一个整数表达式，定义路径的服务器组件应如何进行格式化。 *\@选项*可以具有以下值之一：  
+ *\@选*  
+ 一个整数表达式，定义路径的服务器组件应如何进行格式化。 选项可以具有以下值之一： * \@*  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**0**|返回转换为 NetBIOS 格式的服务器名称，例如：<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> 这是默认值。|  
 |**1**|返回未经转换的服务器名称，例如：<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
@@ -82,7 +82,7 @@ WHERE Name = N'document.docx';
   
 ## <a name="security"></a>安全性  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  **FileTableRootPath**函数需要：  
   
 -   拥有 FileTable 的 SELECT 权限以获取特定 FileTable 的根路径。  

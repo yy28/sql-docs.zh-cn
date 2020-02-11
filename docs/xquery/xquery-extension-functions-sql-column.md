@@ -1,5 +1,5 @@
 ---
-title: 'sql: column 函数 (XQuery) |Microsoft Docs'
+title: sql： column （）函数（XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: df46abb8efdd5761797a599cf5a8cdebe02e5158
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946011"
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>XQuery 扩展函数 - sql:column()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  主题中所述[数据 XML 内部绑定关系](../t-sql/xml/binding-relational-data-inside-xml-data.md)，可以使用**sql:column(()** 时使用的功能[XML 数据类型方法](../t-sql/xml/xml-data-type-methods.md)若要显示的关系值在 XQuery 内。  
+  如主题在[Xml 内部绑定关系数据](../t-sql/xml/binding-relational-data-inside-xml-data.md)中所述，当使用[Xml 数据类型方法](../t-sql/xml/xml-data-type-methods.md)在 XQuery 内公开关系值时，可以使用**sql： column （（）** 函数。  
   
- 例如， [query （） 方法 （XML 数据类型）](../t-sql/xml/query-method-xml-data-type.md)用于指定对存储在变量或列中的 XML 实例的查询**xml**类型。 有时，您可能还希望查询使用其他非 XML 列中的值同时引入关系数据和 XML 数据。 若要执行此操作，您可以使用**sql: column**函数。  
+ 例如， [query （）方法（XML 数据类型）](../t-sql/xml/query-method-xml-data-type.md)用于对存储在**xml**类型的变量或列中的 xml 实例指定查询。 有时，您可能还希望查询使用其他非 XML 列中的值同时引入关系数据和 XML 数据。 为此，请使用**sql： column （）** 函数。  
   
  SQL 值将映射到相应的 XQuery 值，其类型将为 XQuery 基类型，等效于相应的 SQL 类型。  
   
@@ -39,11 +39,11 @@ sql:column("columnName")
 ```  
   
 ## <a name="remarks"></a>备注  
- 请注意，引用中指定的列**sql: column**在 XQuery 函数引用的正在处理的行中的列。  
+ 请注意，对在 XQuery 内的**sql： column （）** 函数中指定的列的引用将引用正在处理的行中的列。  
   
- 在中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，可以仅指**xml**实例的上下文中的源表达式的 XML DML 插入语句，否则，您不能引用的类型的列**xml**或 CLR用户定义的类型。  
+ 在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中，只能在 XML-DML insert 语句的源表达式的上下文中引用**xml**实例;否则，不能引用类型为**xml**的列或 CLR 用户定义类型的列。  
   
- **Sql: column**函数不支持在联接操作。 可改用 APPLY 操作。  
+ 联接操作中不支持**sql： column （）** 函数。 可改用 APPLY 操作。  
   
 ## <a name="examples"></a>示例  
   
@@ -59,11 +59,11 @@ sql:column("columnName")
   
  请注意构造的 XML 中的下列内容：  
   
--   **ProductID**， **ProductName**，并**ProductPrice**属性值从获取**产品**表。  
+-   **ProductID**、 **ProductName**和**ProductPrice**属性值是从**Product**表中获取的。  
   
--   **ProductModelID**属性值从检索**ProductModel**表。  
+-   从**ProductModel**表中检索**ProductModelID**属性值。  
   
--   若要使查询更加有趣**ProductModelName**属性值从获取**CatalogDescription**的列**xml 类型**。 由于未存储所有产品型号的 XML 产品型号目录信息，因此将使用 `if` 语句检索该值（如果存在）。  
+-   为了使查询更有趣， **ProductModelName**属性值是从**Xml 类型**的**CatalogDescription**列中获取的。 由于未存储所有产品型号的 XML 产品型号目录信息，因此将使用 `if` 语句检索该值（如果存在）。  
   
     ```sql
     SELECT P.ProductID, CatalogDescription.query('  
@@ -90,9 +90,9 @@ sql:column("columnName")
   
 -   由于从两个不同的表检索值，因此 FROM 子句指定两个表。 WHERE 子句中的条件用于筛选结果，并只检索产品型号具有目录说明的产品。  
   
--   **命名空间**中的关键字[XQuery Prolog](../xquery/modules-and-prologs-xquery-prolog.md)定义 XML 命名空间前缀"pd"，在查询主体中使用。 请注意，表别名（“P”和“PM”）是在查询本身的 FROM 子句中定义的。  
+-   [XQuery Prolog](../xquery/modules-and-prologs-xquery-prolog.md)中的**namespace**关键字用于定义查询主体中使用的 XML 命名空间前缀 "pd"。 请注意，表别名（“P”和“PM”）是在查询本身的 FROM 子句中定义的。  
   
--   **Sql: column**函数用于将非 XML 值引入 XML。  
+-   **Sql： column （）** 函数用于将非 xml 值引入到 xml 中。  
   
  下面是部分结果：  
   
@@ -105,7 +105,7 @@ ProductID               Result
 ...  
 ```  
   
- 下面的查询构造了包含产品特定信息的 XML。 此信息包括 ProductID、ProductName、ProductPrice 以及属于特定产品型号 (ProductModelID=19) 的所有产品的 ProductModelName（如果有）。 然后，XML 被分配给@x的变量 **xml** 类型。  
+ 下面的查询构造了包含产品特定信息的 XML。 此信息包括 ProductID、ProductName、ProductPrice 以及属于特定产品型号 (ProductModelID=19) 的所有产品的 ProductModelName（如果有）。 然后，将 XML 分配给@x **xml**类型的变量。  
   
 ```sql
 declare @x xml  
@@ -129,7 +129,7 @@ And P.ProductModelID = 19
 select @x  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server XQuery 扩展函数](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
  [类型化的 XML 与非类型化的 XML 的比较](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML 数据 (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)   

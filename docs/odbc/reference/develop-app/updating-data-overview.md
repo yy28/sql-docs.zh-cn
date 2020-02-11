@@ -16,18 +16,18 @@ ms.assetid: 062036a4-cda6-4aaa-9765-f1ec3e0b31b1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0701218b5ef489d1f8962ffadc9409986a0c36c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942815"
 ---
 # <a name="updating-data-overview"></a>更新数据概述
-应用程序可以更新数据，通过执行 SQL 语句或通过调用**SQLSetPos**或**SQLBulkOperations**。 **更新**，**删除**，和**插入**语句直接对数据源和驱动程序通常支持。 搜索 update 和 delete 语句包含要更改的行的规范。 定位 update 和 delete 语句和**SQLSetPos**作用于数据源通过游标并不太广泛支持。  
+应用程序可以通过执行 SQL 语句或通过调用**SQLSetPos**或**SQLBulkOperations**来更新数据。 **UPDATE**、 **DELETE**和**INSERT**语句直接对数据源执行操作，并且通常由驱动程序支持。 搜索的 update 和 delete 语句包含要更改的行的规范。 定位的 update 和 delete 语句和**SQLSetPos**通过游标对数据源执行操作，但不受广泛支持。  
   
- 游标是否可以检测到的结果集与在本部分中所述的方法所做的更改取决于游标和如何实现的类型。 只进游标不重新访问行，因此将不会检测任何更改。 有关是否可滚动游标可以检测到更改的信息，请参阅[可滚动游标](../../../odbc/reference/develop-app/scrollable-cursors.md)。  
+ 如果游标能检测到对结果集所做的更改，则此部分中所述的方法取决于游标的类型和实现方式。 只进游标不会重新访问行，因此将不会检测到任何更改。 有关可滚动游标能否检测更改的信息，请参阅可[滚动游标](../../../odbc/reference/develop-app/scrollable-cursors.md)。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [UPDATE、DELETE 和 INSERT 语句](../../../odbc/reference/develop-app/update-delete-and-insert-statements.md)  
   

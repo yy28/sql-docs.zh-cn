@@ -1,5 +1,5 @@
 ---
-title: sp_delete_schedule (TRANSACT-SQL) |Microsoft Docs
+title: sp_delete_schedule （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 18b2c985-47b8-49c8-82d1-8a4af3d7d33a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7a2a4e8a7cf58f8c4519d15ae46e2b278fcd1383
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68008957"
 ---
-# <a name="spdeleteschedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
+# <a name="sp_delete_schedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   删除计划。  
  
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,27 +40,27 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @schedule_id = ] schedule_id` 若要删除的计划的计划标识号。 *schedule_id*是**int**，默认值为 NULL。  
+`[ @schedule_id = ] schedule_id`要删除的计划的标识号。 *schedule_id*的值为**int**，默认值为 NULL。  
   
-> **注意**：任一*schedule_id*或*schedule_name*必须指定，但不能同时指定两者。  
+> **注意：** 必须指定*schedule_id*或*schedule_name* ，但不能同时指定两者。  
   
-`[ @schedule_name = ] 'schedule_name'` 若要删除的计划的名称。 *schedule_name*是**sysname**，默认值为 NULL。  
+`[ @schedule_name = ] 'schedule_name'`要删除的计划的名称。 *schedule_name*的默认值为**sysname**，默认值为 NULL。  
   
-> **注意**：任一*schedule_id*或*schedule_name*必须指定，但不能同时指定两者。  
+> **注意：** 必须指定*schedule_id*或*schedule_name* ，但不能同时指定两者。  
   
-`[ @force_delete = ] force_delete` 指定是否将计划附加到作业，此过程是否应失败。 *Force_delete*为 bit，默认值为**0**。 当*force_delete*是**0**，如果该计划附加到作业存储的过程将失败。 当*force_delete*是**1**，而不考虑是否将计划附加到作业中删除该计划。  
+`[ @force_delete = ] force_delete`指定在将计划附加到作业时，该过程是否应失败。 *Force_delete*为 bit，默认值为**0**。 当*force_delete*为**0**时，如果将计划附加到作业，则存储过程将失败。 当*force_delete*为**1**时，将删除计划，而不考虑是否将计划附加到作业。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** （成功）或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="remarks"></a>备注  
- 默认情况下，如果将计划附加到作业，则无法删除计划。 若要删除附加到作业的计划，指定的值**1**有关*force_delete*。 删除计划不会停止当前正在运行的作业。  
+ 默认情况下，如果将计划附加到作业，则无法删除计划。 若要删除附加到作业的计划，请将*force_delete*的值指定为**1** 。 删除计划不会停止当前正在运行的作业。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
+ 默认情况下， **sysadmin**固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
   
@@ -68,11 +68,11 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
   
 -   **SQLAgentOperatorRole**  
   
- 请注意，作业所有者可以将作业附加到计划以及从计划中分离作业，而不必要求也是计划所有者。 但是，不能删除计划如果分离后导致无作业，除非调用方是计划所有者。  
+ 请注意，作业所有者可以将作业附加到计划以及从计划中分离作业，而不必要求也是计划所有者。 但是，如果分离会使其不包含任何作业，则不能删除计划，除非调用方是计划所有者。  
   
  有关这些角色的权限的详细信息，请参阅 [SQL Server 代理固定数据库角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
- 只有的成员**sysadmin**角色可以删除其他用户拥有的作业计划。  
+ 只有**sysadmin**角色的成员才能删除其他用户拥有的作业计划。  
   
 ## <a name="examples"></a>示例  
   
@@ -101,7 +101,7 @@ EXEC dbo.sp_delete_schedule
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [执行作业](../../ssms/agent/implement-jobs.md)   
  [sp_add_schedule (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)  
   

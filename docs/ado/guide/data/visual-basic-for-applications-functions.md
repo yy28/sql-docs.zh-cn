@@ -16,42 +16,42 @@ ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 25cac9bffce7602ce211be7f83c7e55239061282
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923464"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic for Applications 函数
-以下 Visual Basic for Applications 函数可在数据整理 CALC 表达式：  
+以下 Visual Basic for Applications 函数可用于数据定形 CALC 表达式：  
   
 |||||||  
 |-|-|-|-|-|-|  
 |Abs|Asc|Atn|CBool|CByte|CCur|  
-|Cdate|CDbl|Chr|ChrB|ChrW|Chr$|  
+|CDate|CDbl|Chr|ChrB|ChrW|Chr$|  
 |ChrB $|CInt|CLng|Cos|CSng|CStr|  
 |Cvar|CVDate|CVErr|Date|Date$|DateAdd|  
-|DateDiff|DatePart|DateSerial|DateValue|Day|DDB|  
-|Error|Error$|Exp|Fix|格式|Format$|  
+|DateDiff|DatePart|DateSerial|DateValue|日期|DDB|  
+|错误|Error$|Exp|解决方法|格式|Format$|  
 |FV|Hex|Hex$|Hour|IIF|InStr|  
-|smallint|IPmt|IRR|IsDate|IsEmpty|IsError|  
+|Int|IPmt|IRR|IsDate|IsEmpty|IsError|  
 |IsNull|IsNumeric|IsObject|LCase|LCase$|Left|  
-|LeftB|Left$|后，leftb 将 $|Len|日志|LTrim|  
-|LTrim$|Mid|Mid$|Minute|MIRR|Month|  
-|现在|NPer|NPV|Oct|Oct$|Pmt|  
-|PPmt|PV|QBColor|Rate|RGB|Right|  
-|RightB|Right$|RightB $|Rnd|RTrim|RTrim $|  
-|第二个|Sgn|Sin|SLN|Space|Space$|  
+|Leftb 将|Left$|Leftb 将 $|Len|日志|LTrim|  
+|LTrim$|Mid|Mid$|分钟|MIRR|月份|  
+|Now|NPer|NPV|10 月|Oct$|Pmt|  
+|PPmt|PV|QBColor|费率|RGB|Right|  
+|Rightb 将|Right$|Rightb 将 $|Rnd|RTrim|RTrim $|  
+|秒|Sgn|Sin|SLN|空格|Space$|  
 |Sqr|Str|Str$|StrComp|StrConv|String|  
-|String$|SYD|Tan|Time|Time$|Timer|  
+|String$|SYD|Tan|时间|Time$|计时器|  
 |TimeSerial|TimeValue|Trim|Trim$|TypeName|UCase|  
-|UCase$|Val|VarType|Weekday|Year||  
+|UCase$|Val|VarType|星期|年龄||  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [访问分层记录集中的行](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
- [数据整理概述](../../../ado/guide/data/data-shaping-overview.md)   
- [正式 Shape 语法](../../../ado/guide/data/formal-shape-grammar.md)   
+ [数据定形概述](../../../ado/guide/data/data-shaping-overview.md)   
+ [正式形状语法](../../../ado/guide/data/formal-shape-grammar.md)   
  [数据整理所需的提供程序](../../../ado/guide/data/required-providers-for-data-shaping.md)   
  [Shape APPEND 子句](../../../ado/guide/data/shape-append-clause.md)   
- [常用 shape 命令](../../../ado/guide/data/shape-commands-in-general.md)   
+ [整体形状命令](../../../ado/guide/data/shape-commands-in-general.md)   
  [Shape COMPUTE 子句](../../../ado/guide/data/shape-compute-clause.md)

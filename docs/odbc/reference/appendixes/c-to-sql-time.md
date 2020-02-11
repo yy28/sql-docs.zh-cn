@@ -15,30 +15,30 @@ ms.assetid: a8da43c9-d9a5-45e5-bd9a-1dd633db2ee0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c4a3734ff8d9f0cb120e1d33433ee3a301bb59ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019299"
 ---
-# <a name="c-to-sql-time"></a>从 C 到 SQL：Time
-时间 ODBC C 数据类型的标识符是：  
+# <a name="c-to-sql-time"></a>从 C 到 SQL：时间
+ODBC C 数据类型的时间的标识符为：  
   
  SQL_C_TYPE_TIME  
   
- 下表显示 ODBC SQL 时间 C 数据可能会转换成的数据类型。 列和表中的条款的说明，请参阅[转换将数据从 C 到 SQL 数据类型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)。  
+ 下表显示了可将时间 C 数据转换到的 ODBC SQL 数据类型。 有关表中的列和字词的说明，请参阅[将数据从 C 转换为 SQL 数据类型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)。  
   
 |SQL 类型标识符|测试|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|列的字节长度 > = 8<br /><br /> 列字节长度 < 8<br /><br /> 数据值不是有效的时间|不适用<br /><br /> 22001<br /><br /> 22008|  
-|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|列的字符长度 > = 8<br /><br /> 列的字符长度 < 8<br /><br /> 数据值不是有效的时间|不适用<br /><br /> 22001<br /><br /> 22008|  
-|SQL_TYPE_TIME|数据值是有效的时间<br /><br /> 数据值不是有效的时间|不适用<br /><br /> 22007|  
-|SQL_TYPE_TIMESTAMP|数据值是有效的时间 [a]<br /><br /> 数据值不是有效的时间|不适用<br /><br /> 22007|  
+|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|列字节长度 >= 8<br /><br /> 列字节长度 < 8<br /><br /> 数据值不是有效时间|不适用<br /><br /> 22001<br /><br /> 22008|  
+|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|列字符长度 >= 8<br /><br /> 列字符长度 < 8<br /><br /> 数据值不是有效时间|不适用<br /><br /> 22001<br /><br /> 22008|  
+|SQL_TYPE_TIME|数据值为有效时间<br /><br /> 数据值不是有效时间|不适用<br /><br /> 22007|  
+|SQL_TYPE_TIMESTAMP|数据值为有效时间 [a]<br /><br /> 数据值不是有效时间|不适用<br /><br /> 22007|  
   
- [a] 时间戳部分设置为当前日期和时间戳部分设置为零秒的小数部分的日期。  
+ [a] 时间戳的日期部分设置为当前日期，时间戳的秒小数部分设置为零。  
   
- 有关哪些值是有效 SQL_C_TYPE_TIME 结构中的信息，请参阅[C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)本附录前面。  
+ 有关 SQL_C_TYPE_TIME 结构中的有效值的信息，请参阅本附录前面的[C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)。  
   
- 当时间 C 数据转换为字符 SQL 数据时，生成的字符数据，在"*hh*:*mm*:*ss*"格式。  
+ 将时间 C 数据转换为字符 SQL 数据时，生成的字符数据的格式为 "*hh*：*mm*：*ss*"。  
   
- 将数据从 C 数据类型，并假定数据缓冲区的大小是时间 C 数据类型的大小的时间转换时，该驱动程序将忽略长度/指示器值。 中传递的长度/指示器值*StrLen_or_Ind*中的参数**SQLPutData**并使用指定的缓冲区中*StrLen_or_IndPtr*中参数**SQLBindParameter**。 使用指定的数据缓冲区*DataPtr*中的参数**SQLPutData**并*ParameterValuePtr*中的参数**SQLBindParameter**.
+ 驱动程序在转换时间 C 数据类型的数据时忽略长度/指示器值，并假定数据缓冲区的大小为时间 C 数据类型的大小。 长度/指示器值传入**SQLPutData**中的*StrLen_or_Ind*参数和在**SQLBindParameter**中通过*StrLen_or_IndPtr*参数指定的缓冲区中。 数据缓冲区是通过**SQLPutData**中的*DataPtr*参数和**SQLBindParameter**中的*ParameterValuePtr*参数指定的。

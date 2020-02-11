@@ -1,5 +1,5 @@
 ---
-title: Qtd (MDX) |Microsoft Docs
+title: Qtd （MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7a8856b28d8eec76d2bc262c4209b007c0a7fa04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68020646"
 ---
 # <a name="qtd-mdx"></a>Qtd (MDX)
 
 
-  从与给定成员，从第一个同级成员开始和结尾的约束将给定成员相同的级别返回一组同级成员*季度*时间维度中的级别。  
+  从与给定成员相同的级别返回一组同级成员，从第一个同级成员开始，到给定成员的末尾，由时间维度中的*季度*级别进行约束。  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,12 +32,12 @@ Qtd( [ Member_Expression ] )
  返回成员的有效多维表达式 (MDX)。  
   
 ## <a name="remarks"></a>备注  
- 如果未指定成员 expressionis，默认值是第一个层次结构的当前成员类型的级别*季度*类型的第一个维中*时间*度量值组中。  
+ 如果未指定成员 expressionis，则默认值为第一个层次结构的当前成员，该层次结构的第一个层次结构的第一个维度中的第一个维度*的类型为*该度量值组中的*Time* 。  
   
- **Qtd**的快捷函数技术支持部门[PeriodsToDate &#40;MDX&#41; ](../mdx/periodstodate-mdx.md)其级别表达式参数设置为*季度*。 也就是说，`Qtd(Member_Expression)` 的功能与 `PeriodsToDate(Quarter_Level_Expression, Member_Expression)` 相同。  
+ **Qtd**函数是[PeriodsToDate &#40;MDX&#41;](../mdx/periodstodate-mdx.md)函数的快捷函数，其 level expression 参数设置为 "*季度*"。 也就是说，`Qtd(Member_Expression)` 的功能与 `PeriodsToDate(Quarter_Level_Expression, Member_Expression)` 相同。  
   
 ## <a name="example"></a>示例  
- 下面的示例返回的总和`Measures.[Order Quantity]`成员，包含在 2003年日历年度的第三季度前两个月内的聚合`Date`维度中，从**Adventure Works**多维数据集。  
+ 下面的示例将返回从`Measures.[Order Quantity]` **艾德工作**多维数据集中包含在该`Date`维度中的第三季度第三2003季度的第三个月的成员的总和。  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First2MonthsSecondSemester2003] AS  
@@ -53,7 +53,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -15,14 +15,14 @@ ms.assetid: e8ca40e8-459c-40e2-8dd3-3ec6d5ee7b51
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 486b76708354d4caf7e9efb2f73539b3eea9abf6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925031"
 ---
 # <a name="hybrid-commands"></a>混合命令
-混合命令都是部分参数化的命令。 例如：  
+混合命令是部分参数化命令。 例如：  
   
 ```  
 SHAPE {select * from plants}   
@@ -31,9 +31,9 @@ SHAPE {select * from plants}
              PlantRegion TO CustomerRegion )   
 ```  
   
- 混合命令的缓存行为是相同常规参数化命令。  
+ 混合命令的缓存行为与常规参数化命令的行为相同。  
   
-## <a name="see-also"></a>请参阅  
- [数据整理示例](../../../ado/guide/data/data-shaping-example.md)   
- [正式 Shape 语法](../../../ado/guide/data/formal-shape-grammar.md)   
+## <a name="see-also"></a>另请参阅  
+ [数据定形示例](../../../ado/guide/data/data-shaping-example.md)   
+ [正式形状语法](../../../ado/guide/data/formal-shape-grammar.md)   
  [常用 Shape 命令](../../../ado/guide/data/shape-commands-in-general.md)

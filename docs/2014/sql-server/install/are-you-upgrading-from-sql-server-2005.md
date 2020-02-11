@@ -10,17 +10,17 @@ ms.assetid: 3d50a66a-1845-4116-8b3a-7b5a2eeb78e6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1d5e44dac2201953858f06d834b1831aa1a22fe3
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 2db6a47de02b49397847dc9d713277ffcb152156
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75247283"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "75656574"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>是否从 SQL Server 2005 进行升级？
   需立即升级到较新版本的 SQL Server 和 Azure SQL 数据库的原因之一是，对 SQL Server 2005 的扩展支持已结束。 通过升级，你不仅可以维护安全性和合规性、获取突破性的性能，还可以优化你的数据平台基础结构。  
   
- 有关计划和自动化你的升级或迁移的详细信息、指南和工具，请参阅 [SQL Server 2005 终止支持](https://www.microsoft.com/server-cloud/products/sql-server-2005/)。  
+ 有关计划和自动化你的升级或迁移的详细信息、指南和工具，请参阅 [SQL Server 2005 终止支持](https://www.microsoft.com/sql-server/sql-server-2005)。  
   
 ## <a name="why-upgrade"></a>为什么升级？  
   
@@ -74,14 +74,14 @@ ms.locfileid: "75247283"
   
     -   若要获取 PDF 格式的更详细的“技术升级指南”，请 [单击此处](https://download.microsoft.com/download/7/1/5/715BDFA7-51B6-4D7B-AF17-61E78C7E538F/SQL_Server_2014_Upgrade_technical_guide.pdf)。  
   
--   有关计划和自动化你的升级或迁移的详细信息、指南和工具，请参阅 [SQL Server 2005 终止支持](https://www.microsoft.com/server-cloud/products/sql-server-2005/)。  
+-   有关计划和自动化你的升级或迁移的详细信息、指南和工具，请参阅 [SQL Server 2005 终止支持](https://www.microsoft.com/sql-server/sql-server-2005)。  
   
 ## <a name="get-sql-server-2014"></a>获取 SQL Server 2014  
  若要下载 SQL Server 2014 的评估副本，请[单击此处](https://www.microsoft.com/evalcenter/evaluate-sql-server-2014)。  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server 2014](https://www.microsoft.com/server-cloud/products/sql-server/default.aspx)   
- [SQL Server 2005 结束支持](https://www.microsoft.com/server-cloud/products/sql-server-2005/)   
+ [SQL Server 2014](https://docs.microsoft.com/sql/getting-started/getting-started-sql-server-2014)   
+ [SQL Server 2005 结束支持](https://www.microsoft.com/sql-server/sql-server-2005)   
  [从 SQL Server 2005 升级到 SQL Server 2016](https://msdn.microsoft.com/library/mt168847.aspx)  
   
   

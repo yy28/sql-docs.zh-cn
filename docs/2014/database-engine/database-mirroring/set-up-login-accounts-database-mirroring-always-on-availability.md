@@ -1,5 +1,5 @@
 ---
-title: 设置登录帐户对数据库镜像或 AlwaysOn 可用性组 (SQL Server) |Microsoft Docs
+title: 设置用于数据库镜像或 AlwaysOn 可用性组（SQL Server）的登录帐户 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5fd397349bc3fa3ed7f69e9e1293415ea96fc75d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754314"
 ---
 # <a name="set-up-login-accounts-for-database-mirroring-or-alwayson-availability-groups-sql-server"></a>设置数据库镜像或 AlwaysOn 可用性组的登录帐户 (SQL Server)
@@ -36,7 +36,7 @@ ms.locfileid: "62754314"
  如果两个服务器实例作为不同的帐户运行，则系统管理员必须使用 CREATE LOGIN [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句针对每个服务器实例为远程实例的启动服务帐户创建一个登录名。 有关详细信息，请参阅 [CREATE LOGIN (Transact-SQL)](/sql/t-sql/statements/create-login-transact-sql)。  
   
 > [!IMPORTANT]  
->  如果使用非域帐户运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则必须使用证书。 有关详细信息，请参阅 [使用数据库镜像终结点证书 (Transact-SQL)](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果使用非域帐户运行 ，则必须使用证书。 有关详细信息，请参阅[使用数据库镜像终结点证书 (Transact-SQL)](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)。  
   
  例如，若要使 loginA 下运行的服务器实例 sqlA 连接到在 loginB 下运行的服务器实例 sqlB，则 sqlB 上必须存在 loginA 且 sqlA 上必须存在 loginB。 此外，对于包含见证服务器实例 (sqlC) 且三个服务器实例运行在不同域帐户下的数据库镜像会话，必须创建下列登录帐户：  
   
@@ -60,9 +60,9 @@ ms.locfileid: "62754314"
   
 -   [使用数据库镜像终结点证书 (Transact-SQL)](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库镜像终结点 (SQL Server)](the-database-mirroring-endpoint-sql-server.md)   
  [数据库镜像配置故障排除 (SQL Server)](troubleshoot-database-mirroring-configuration-sql-server.md)   
- [解决 AlwaysOn 可用性组配置问题&#40;SQL Server&#41;](../availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+ [AlwaysOn 可用性组配置 &#40;SQL Server&#41;疑难解答](../availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
   

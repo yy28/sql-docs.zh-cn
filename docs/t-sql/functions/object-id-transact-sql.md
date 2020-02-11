@@ -27,13 +27,13 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2191fbd39cea24142b866f0acc9a27717896dab9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914864"
 ---
-# <a name="objectid-transact-sql"></a>OBJECT_ID (Transact-SQL)
+# <a name="object_id-transact-sql"></a>OBJECT_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   返回架构范围内对象的数据库对象标识号。  
@@ -41,7 +41,7 @@ ms.locfileid: "67914864"
 > [!IMPORTANT]  
 >  使用 OBJECT_ID 不能查询非架构范围内的对象（如 DDL 触发器）。 对于在 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 目录视图中找不到的对象，需要通过查询适当的目录视图来获取该对象的标识号。 例如，若要返回 DDL 触发器的对象标识号，请使用 `SELECT OBJECT_ID FROM sys.triggers WHERE name = 'DatabaseTriggerLog``'`。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -51,26 +51,26 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
 ```  
   
 ## <a name="arguments"></a>参数  
- **'** object_name **'**  
- 要使用的对象。 object_name 为 varchar 或 nvarchar。 如果 object_name 为 varchar，则它会隐式转换为 nvarchar。 可以选择是否指定数据库和架构名称。  
+ **'** *object_name* **'**  
+ 要使用的对象。 object_name 为 varchar 或 nvarchar    。 如果 object_name 为 varchar，则它会隐式转换为 nvarchar    。 可以选择是否指定数据库和架构名称。  
   
  **'** *object_type* **'**  
- 架构范围的对象类型。 object_type 为 varchar 或 nvarchar。 如果 object_type 为 varchar，则它会隐式转换为 nvarchar。 有关对象类型的列表，请参阅 [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 中的 type 列。  
+ 架构范围的对象类型。 object_type 为 varchar 或 nvarchar    。 如果 object_type 为 varchar，则它会隐式转换为 nvarchar    。 有关对象类型的列表，请参阅 [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 中的 type 列  。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  对于空间索引，OBJECT_ID 返回 NULL。  
   
  出现错误时，返回 NULL。  
   
  用户只能查看符合如下条件的安全对象的元数据：该安全对象为该用户所有，或已授予该用户对该安全对象的权限。 也就是说，如果用户对该对象没有任何权限，则那些会生成元数据的内置函数（如 OBJECT_ID）可能返回 NULL。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  当该参数对系统函数可选时，则采用当前数据库、主机、服务器用户或数据库用户。 内置函数后面必须跟括号。  
   
- 当指定临时表名时，除非当前数据库为 tempdb，否则必须在该临时表名之前加上数据库名称。 例如： `SELECT OBJECT_ID('tempdb..#mytemptable')`。  
+ 当指定临时表名时，除非当前数据库为 tempdb，否则必须在该临时表名之前加上数据库名称  。 例如：`SELECT OBJECT_ID('tempdb..#mytemptable')`。  
   
  系统函数可以在选择列表、WHERE 子句和任何允许使用表达式的地方使用。 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md) 和 [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)。  
   
@@ -97,11 +97,11 @@ DROP TABLE dbo.AWBuildVersion;
 GO  
 ```  
   
-### <a name="c-using-objectid-to-specify-the-value-of-a-system-function-parameter"></a>C. 使用 OBJECT_ID 指定系统函数的参数值  
+### <a name="c-using-object_id-to-specify-the-value-of-a-system-function-parameter"></a>C. 使用 OBJECT_ID 指定系统函数的参数值  
  以下示例使用 [sys.dm_db_index_operational_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md) 函数返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中 `Person.Address` 表的所有索引和分区信息。  
   
 > [!IMPORTANT]  
->  在使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数 DB_ID 和 OBJECT_ID 返回参数值时，请始终确保返回有效的 ID。 如果找不到数据库或对象的名称，例如相应名称不存在或拼写不正确，则两个函数都会返回 NULL。 sys.dm_db_index_operational_stats 函数将 NULL 解释为指定所有数据库或所有对象的通配符值。 由于这可能是无心之举，所以此部分中的示例说明了确定数据库 ID 和对象 ID 的安全方法。  
+>  在使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数 DB_ID 和 OBJECT_ID 返回参数值时，请始终确保返回有效的 ID。 如果找不到数据库或对象的名称，例如相应名称不存在或拼写不正确，则两个函数都会返回 NULL。 sys.dm_db_index_operational_stats 函数将 NULL 解释为指定所有数据库或所有对象的通配符值  。 由于这可能是无心之举，所以此部分中的示例说明了确定数据库 ID 和对象 ID 的安全方法。  
   
 ```  
 DECLARE @db_id int;  

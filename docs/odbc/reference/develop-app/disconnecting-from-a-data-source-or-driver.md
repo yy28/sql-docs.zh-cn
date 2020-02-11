@@ -1,5 +1,5 @@
 ---
-title: 断开与数据源或驱动程序 |Microsoft Docs
+title: 断开与数据源或驱动程序的连接 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ ms.assetid: 83dbf0bf-b400-41fb-8537-9b016050dc3c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a01220b6a4f15ee3770b844f41e7ddc5399f5f86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039757"
 ---
 # <a name="disconnecting-from-a-data-source-or-driver"></a>从数据源或驱动程序断开连接
-当应用程序使用完数据源时，它将调用**SQLDisconnect**。 **SQLDisconnect**释放在连接分配任何语句，并与数据源断开连接，驱动程序。 如果事务正在进行，它会返回错误。  
+当应用程序使用完数据源后，它将调用**SQLDisconnect**。 **SQLDisconnect**释放在连接上分配的所有语句，并断开驱动程序与数据源的连接。 如果事务正在进行中，它将返回错误。  
   
- 断开连接后，应用程序可以调用**SQLFreeHandle**以释放连接。 释放连接后, 是编程错误应用程序对 ODBC 函数; 的调用中使用的连接句柄这样做存在未定义，但可能严重后果。 当**SQLFreeHandle**调用时，该结构用于存储有关连接的信息的驱动程序版本。  
+ 断开连接后，应用程序可以调用**SQLFreeHandle**来释放连接。 释放连接后，它是一个应用程序编程错误，用于在对 ODBC 函数的调用中使用连接的句柄;这样做没有定义，但可能会产生严重后果。 调用**SQLFreeHandle**时，驱动程序将释放用于存储有关连接的信息的结构。  
   
- 应用程序还可以重复使用连接来连接到不同的数据源或重新连接到同一数据源。 决定保持连接，而不是断开连接并重新连接更高版本，要求应用程序编写器考虑每个选项; 的相对成本连接到数据源和保持连接状态都可以是具体取决于连接介质开销相对较大。 在进行正确的折衷方案时，应用程序还必须进行假设的可能性和进一步对同一数据源的操作的时间。
+ 应用程序还可以重新使用连接，以便连接到不同的数据源或重新连接到同一数据源。 决定保持连接状态，而不是在以后断开连接和重新连接，要求应用程序编写人员考虑每个选项的相对成本;连接到数据源和剩余连接可能会相对较高的成本，具体取决于连接媒体。 在进行正确的权衡时，应用程序还必须对同一数据源上的进一步操作的可能性和时间进行假设。

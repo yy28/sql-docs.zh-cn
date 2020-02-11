@@ -1,5 +1,5 @@
 ---
-title: 字段对象 |Microsoft Docs
+title: Field 对象 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,43 +16,43 @@ ms.assetid: b10a72fc-3c4b-4186-a70b-993dc9f7a092
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 04dbf3069896b9a7668d64a2f1d322f0b17ca5f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918687"
 ---
 # <a name="field-object"></a>字段对象
-表示与常见的数据类型的数据的列。  
+表示数据类型为通用数据类型的列。  
   
 ## <a name="remarks"></a>备注  
- 每个**字段**对象中的列对应[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。 您使用[值](../../../ado/reference/ado-api/value-property-ado.md)的属性**字段**对象设置或返回当前记录的数据。 根据的功能提供程序用于公开，一些集合、 方法或属性的**字段**对象可能不可用。  
+ 每个**字段**对象都对应于[记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)的一列。 使用**Field**对象的[Value](../../../ado/reference/ado-api/value-property-ado.md)属性可以设置或返回当前记录的数据。 根据提供程序公开的功能，**字段**对象的某些集合、方法或属性可能不可用。  
   
- 使用集合、 方法和属性的**字段**对象，您可以执行以下操作：  
+ 使用**Field**对象的集合、方法和属性，可以执行以下操作：  
   
--   返回与字段的名称[名称](../../../ado/reference/ado-api/name-property-ado.md)属性。  
+-   返回具有[name](../../../ado/reference/ado-api/name-property-ado.md)属性的字段的名称。  
   
--   查看或更改与字段中的数据**值**属性。 **值**是默认属性**字段**对象。  
+-   查看或更改 "**值**" 属性字段中的数据。 **值**是**Field**对象的默认属性。  
   
--   返回的字段的基本特征[类型](../../../ado/reference/ado-api/type-property-ado.md)，[精度](../../../ado/reference/ado-api/precision-property-ado.md)，并[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)属性。  
+-   返回具有[类型](../../../ado/reference/ado-api/type-property-ado.md)、[精度](../../../ado/reference/ado-api/precision-property-ado.md)和[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)属性的字段的基本特征。  
   
--   返回具有字段的声明的大小[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)属性。  
+-   返回具有[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)属性的字段的声明大小。  
   
--   返回与给定字段中的数据的实际大小[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)属性。  
+-   使用[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)属性返回给定字段中数据的实际大小。  
   
--   确定与给定字段的支持哪些类型的功能[特性](../../../ado/reference/ado-api/attributes-property-ado.md)属性和[属性](../../../ado/reference/ado-api/properties-collection-ado.md)集合。  
+-   使用[特性](../../../ado/reference/ado-api/attributes-property-ado.md)属性和[属性](../../../ado/reference/ado-api/properties-collection-ado.md)集合确定给定字段支持的功能类型。  
   
--   操作包含使用长度的二进制或长字符数据字段的值[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)并[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)方法。  
+-   用[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)和[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)方法操作包含长二进制或长字符数据的字段的值。  
   
--   如果提供程序支持批量更新，解决字段值中的差异在批更新与期间[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)并[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)属性。  
+-   如果提供程序支持批更新，则在批处理更新过程中通过[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)和[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)属性解析字段值中的差异。  
   
- 所有元数据属性 (**名称**，**类型**， **DefinedSize**，**精度**，和**NumericScale**) 可打开之前**字段**对象的**记录集**。 将它们设置在该时间可用于动态构建窗体。  
+ 在打开**字段**对象的**记录集**之前，所有元数据属性（**Name**、 **Type**、 **DefinedSize**、 **Precision**和**NumericScale**）都可用。 此时设置它们对于动态构造窗体非常有用。  
   
  本部分包含以下主题。  
   
--   [字段对象属性、 方法和事件](../../../ado/reference/ado-api/field-object-properties-methods-and-events.md)  
+-   [字段对象属性、方法和事件](../../../ado/reference/ado-api/field-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>请参阅  
- [字段集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [属性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
+## <a name="see-also"></a>另请参阅  
+ [Fields 集合（ADO）](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Properties 集合（ADO）](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -16,23 +16,23 @@ ms.assetid: ef2cbb93-cd00-40f8-b1d2-5f5723a991aa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f2138a5f8417fc9156c916719e96d707b9a29de9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68040008"
 ---
 # <a name="descriptors"></a>描述符
-描述符句柄是指保存有关列或动态参数的信息的数据结构。  
+描述符句柄指保存有关列或动态参数的信息的数据结构。  
   
- ODBC 函数进行隐式操作的列和参数数据设置和检索描述符字段。 例如，当**SQLBindCol**调用以将列数据绑定，它设置完整地描述绑定的描述符字段。 当**SQLColAttribute**调用来描述列的数据，它将返回描述符字段中存储数据。  
+ 对列和参数数据进行隐式设置并检索描述符字段的 ODBC 函数。 例如，当调用**SQLBindCol**绑定列数据时，它会设置完全描述绑定的描述符字段。 当调用**SQLColAttribute**来描述列数据时，它将返回存储在描述符字段中的数据。  
   
- 调用 ODBC 函数的应用程序需要不考虑如何描述符。 没有数据库操作所需应用程序获取对描述符的直接访问权限。 但是，对于某些应用程序，直接访问描述符简化了许多操作。 例如，将定向到描述符的访问权限使您能够重新绑定列数据，可以是相对于调用更高效**SQLBindCol**试。  
+ 调用 ODBC 函数的应用程序无需考虑到描述符。 无数据库操作要求应用程序获得对描述符的直接访问权限。 但对于某些应用程序，获取对描述符的直接访问可以简化许多操作。 例如，直接访问描述符可提供一种重新绑定列数据的方法，这比再次调用**SQLBindCol**更有效。  
   
 > [!NOTE]  
->  未定义描述符的物理表示形式。 应用程序直接访问说明符仅通过其字段操作通过调用 ODBC 函数与描述符句柄。  
+>  描述符的物理表示形式未定义。 应用程序通过使用描述符句柄调用 ODBC 函数，仅获取对描述符的直接访问。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [描述符类型](../../../odbc/reference/develop-app/types-of-descriptors.md)  
   

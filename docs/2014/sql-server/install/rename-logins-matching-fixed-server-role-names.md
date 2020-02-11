@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: df9d9e51846e286c67a4773823207524755d15dc
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72278213"
 ---
 # <a name="rename-logins-matching-fixed-server-role-names"></a>重命名与固定服务器角色名称匹配的登录名
@@ -28,7 +28,7 @@ ms.locfileid: "72278213"
 ## <a name="component"></a>组件  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>描述  
+## <a name="description"></a>说明  
  以下固定服务器角色名称是保留名称，因此不能用作用户定义的登录名。  
   
 -   **sysadmin**  
@@ -60,10 +60,10 @@ ms.locfileid: "72278213"
   
 2.  删除登录名。  
   
-3.  使用**sp_addlogin**系统过程创建新登录名。 为每个相应的登录名指定 **\@sid**参数的步骤1中返回的 sid。  
+3.  使用**sp_addlogin**系统过程创建新登录名。 为每个相应的登录名指定** \@sid**参数的步骤1中返回的 sid。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据库引擎升级问题](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 升级顾问&#91;新&#93;](sql-server-2014-upgrade-advisor.md)  
+ [SQL Server 2014 升级顾问 &#91;新&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

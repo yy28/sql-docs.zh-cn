@@ -1,5 +1,5 @@
 ---
-title: Sum (MDX) |Microsoft Docs
+title: Sum （MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: eb4e9d55ef2228404dd9113170066e4a3612a0a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036672"
 ---
 # <a name="sum-mdx"></a>Sum (MDX)
@@ -66,7 +66,7 @@ SELECT Measures.x ON 0
 FROM [Adventure Works]  
 ```  
   
- 下面的示例使用 WITH MEMBER 关键字和**之和**函数定义中包含的 Canada 和 United States 成员的 Reseller Sales Amount 度量值之和的度量值维度的计算的成员在 Geography 维度 country 属性层次结构。  
+ 下面的示例使用 WITH MEMBER 关键字和**SUM**函数在 "度量值" 维度中定义计算成员，该计算成员包含 "地域" 维度中 "国家/地区" 属性层次结构的 "分销商销售额" 度量美国值的总和。  
   
 ```  
 WITH MEMBER Measures.NorthAmerica AS SUM   
@@ -80,7 +80,7 @@ SELECT {[Measures].[NorthAmerica]} ON 0,
 FROM [Adventure Works]  
 ```  
   
- 通常情况下，**总和**函数与一起使用**CURRENTMEMBER**函数或函数，例如**YTD**返回一组，具体取决于层次结构的当前成员而异。 例如，下面的查询返回所有日期（从日历年的开始到行轴上显示的日期）的 Internet Sales Amount 度量值的总和。  
+ 通常情况下，SUM 函数与**CURRENTMEMBER**函数一起使用，或者与根据层次结构的 CURRENTMEMBER 返回不同的计算**集的计算****所得**集的函数。 例如，下面的查询返回所有日期（从日历年的开始到行轴上显示的日期）的 Internet Sales Amount 度量值的总和。  
   
  `WITH MEMBER MEASURES.YTDSUM AS`  
   
@@ -92,7 +92,7 @@ FROM [Adventure Works]
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>请参阅  
- [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

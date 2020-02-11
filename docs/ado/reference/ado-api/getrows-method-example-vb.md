@@ -1,5 +1,5 @@
 ---
-title: GetRows 方法示例 (VB) |Microsoft Docs
+title: GetRows 方法示例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 9f7c78bb-7bb8-4c4f-8e5a-4d3bfc8a208f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fedde638e343281c5d3810cc80c9ba8db820e839
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918465"
 ---
 # <a name="getrows-method-example-vb"></a>GetRows 方法示例 (VB)
-此示例使用[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)方法来检索指定的从的行数[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，然后使用生成的数据填充数组。 **GetRows**方法将返回所需的行数少于两种情况下： 任一 if [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)已达到，或者，如果**GetRows**尝试检索已记录删除由另一个用户。 该函数将返回**False**仅当第二种情况发生。 若要运行此过程需要 GetRowsOK 函数。  
+此示例使用[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)方法从[记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)检索指定数目的行，并使用生成的数据来填充数组。 在以下两种情况下， **GetRows**方法将返回小于所需的行数：如果已达到[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) ，或者**getrows**试图检索其他用户删除的记录，则为。 仅当发生第二种情况时，函数才返回**False** 。 运行此过程需要 GetRowsOK 函数。  
   
 ```  
 'BeginGetRowsVB  
@@ -112,6 +112,6 @@ End Sub
 'EndGetRowsVB  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [GetRows 方法 (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
+## <a name="see-also"></a>另请参阅  
+ [GetRows 方法（ADO）](../../../ado/reference/ado-api/getrows-method-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

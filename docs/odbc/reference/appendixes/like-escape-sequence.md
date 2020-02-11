@@ -15,30 +15,30 @@ ms.assetid: 798d75ea-be9d-4bef-b297-318bc327f1ca
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 629ceaf666ae732d0838a216272c308dcb5b5658
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68041709"
 ---
 # <a name="like-escape-sequence"></a>LIKE 转义序列
-ODBC LIKE 子句中使用转义序列。 此转义序列的语法如下所示：  
+ODBC 对 LIKE 子句使用转义序列。 此转义序列的语法如下所示：  
   
 ```  
 {'escape-character'}  
 ```  
   
 ## <a name="remarks"></a>备注  
- BNF 表示法中的语法是按如下所示：  
+ 在 BNF 表示法中，语法如下：  
   
- *ODBC-like-escape* ::=  
+ *类似 ODBC-escape* ：： =  
   
- *ODBC esc 启动器*转义*转义符* *ODBC esc 终止符*  
+ *Odbc-esc-发起程序*转义符 \*转义*符 ' *odbc-esc-终止符*  
   
- *escape-character* ::= *character*  
+ *转义*符：： =*字符*  
   
- *ODBC esc 启动器*:: = {  
+ *ODBC-esc-发起方*：： = {  
   
- *ODBC esc 终止符*:: =}  
+ *ODBC-esc-终止符*：： =}  
   
- 若要确定驱动程序是否支持 LIKE 转义序列，应用程序可以调用**SQLGetInfo** SQL_LIKE_ESCAPE_CLAUSE 信息类型。
+ 若要确定驱动程序是否支持类似的转义序列，应用程序可以使用 SQL_LIKE_ESCAPE_CLAUSE 信息类型调用**SQLGetInfo** 。

@@ -1,5 +1,5 @@
 ---
-title: 系统存储过程 (TRANSACT-SQL) |Microsoft 文档
+title: 系统存储过程（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 02/21/2016
 ms.prod: sql
@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 020d75e780dcc2036b70348fa57cf1007ce0e401
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037318"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>系统存储过程 (Transact-SQL)
@@ -36,50 +36,51 @@ ms.locfileid: "68037318"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|Category|描述|  
+|类别|说明|  
 |--------------|-----------------|  
-|[活动异地复制存储过程](https://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)|用于管理来管理 Azure SQL 数据库中的活动异地复制配置|  
-|[目录存储的过程](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)|用于实现 ODBC 数据字典功能，并隔离 ODBC 应用程序以使其不受基础系统表更改的影响。|  
-|[变更数据捕获存储的过程](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)|用于启用、禁用、或报告变更数据捕获对象。|  
+|[活动异地复制存储过程](https://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)|用于管理 Azure SQL 数据库中的活动异地复制配置|  
+|[目录存储过程](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)|用于实现 ODBC 数据字典功能，并隔离 ODBC 应用程序以使其不受基础系统表更改的影响。|  
+|[变更数据捕获存储过程](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)|用于启用、禁用、或报告变更数据捕获对象。|  
 |[游标存储过程](../../relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql.md)|用于实现游标变量功能。|  
 |[数据收集器存储过程](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)|用于处理数据收集器和以下组件：收集组、收集项和收集类型。|  
 |[数据库引擎存储过程](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)|用于 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的常规维护。|  
-|[数据库邮件存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)|用于从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例内执行电子邮件操作。|  
+|[数据库邮件存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)|用于从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例内执行电子邮件操作。|  
 |[数据库维护计划存储过程](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)|用于设置管理数据库性能所需的核心维护任务。|  
-|[分布式的查询存储过程](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)|用于实现和管理分布式查询。|  
-|[Filestream 和 FileTable 存储的过程&#40;Transact SQL&#41;](https://msdn.microsoft.com/library/54beca08-c012-4ebd-aa68-d8a10d221b64)|用于配置和管理 FILESTREAM 和 FileTable 功能。|  
-|[防火墙规则存储过程&#40;Azure SQL 数据库&#41;](../../relational-databases/system-stored-procedures/firewall-rules-stored-procedures-azure-sql-database.md)|用于配置 Azure SQL 数据库防火墙。|  
+|[分布式查询存储过程](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)|用于实现和管理分布式查询。|  
+|[Filestream 和 FileTable 存储过程 &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/54beca08-c012-4ebd-aa68-d8a10d221b64)|用于配置和管理 FILESTREAM 和 FileTable 功能。|  
+|[&#40;Azure SQL 数据库的防火墙规则存储过程&#41;](../../relational-databases/system-stored-procedures/firewall-rules-stored-procedures-azure-sql-database.md)|用于配置 Azure SQL 数据库防火墙。|  
 |[全文搜索存储过程](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)|用于实现和查询全文索引。|  
-|[常规扩展存储的过程](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)|用于提供从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例到外部程序的接口，以便进行各种维护活动。|  
+|[常规扩展存储过程](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)|用于提供从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例到外部程序的接口，以便进行各种维护活动。|  
 |[日志传送存储过程](../../relational-databases/system-stored-procedures/log-shipping-stored-procedures-transact-sql.md)|用于配置、修改和监视日志传送配置。|  
-|[管理数据仓库存储的过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)|用于配置管理数据仓库。|  
+|[管理数据仓库存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)|用于配置管理数据仓库。|  
 |[OLE 自动化存储过程](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)|用于使标准自动化对象能够在标准 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次中使用。|  
 |[基于策略的管理存储过程](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)|用于基于策略的管理。|  
-|[PolyBase 存储过程](https://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)|添加或从 PolyBase 横向扩展组中删除计算机。|  
-|[查询存储存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)|用于优化性能。|  
+|[PolyBase 存储过程](https://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)|在 PolyBase 横向扩展组中添加或删除计算机。|  
+|[查询存储存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)|用于优化性能。|  
 |[复制存储过程](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)|用于管理复制。|  
 |[安全性存储过程](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)|用于管理安全性。|  
-|[快照备份的存储的过程](https://msdn.microsoft.com/library/c278db87-5770-4037-a1e6-b9853a943339)|用于删除 FILE_SNAPSHOT 备份以及所有快照或删除单个备份文件快照。|  
-|[空间索引存储过程](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)|用于分析和改善空间索引的索引性能。|  
+|[快照备份存储过程](https://msdn.microsoft.com/library/c278db87-5770-4037-a1e6-b9853a943339)|用于删除 FILE_SNAPSHOT 备份及其所有快照或删除单个备份文件快照。|  
+|[空间索引存储过程](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)|用于分析和提高空间索引的索引性能。|  
 |[SQL Server 代理存储过程](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)|由 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 用于监视性能和活动。|  
 |[SQL Server Profiler 存储过程](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)|由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理用于管理计划的活动和事件驱动的活动。|  
-|[Stretch Database 存储过程](../../relational-databases/system-stored-procedures/stretch-database-extended-stored-procedures-transact-sql.md)|用于管理延伸数据库。|  
-|[临时表的存储的过程](https://msdn.microsoft.com/library/f28ca74e-7876-4592-b794-e78e3690fff6)|使用的临时表|  
+|[Stretch Database 存储过程](../../relational-databases/system-stored-procedures/stretch-database-extended-stored-procedures-transact-sql.md)|用于管理 stretch database。|  
+|[时态表存储过程](https://msdn.microsoft.com/library/f28ca74e-7876-4592-b794-e78e3690fff6)|用于临时表|  
 |[XML 存储过程](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)|用于 XML 文本管理。|  
   
 > [!NOTE]  
 >  除非另外特别说明，否则所有的系统存储过程将返回一个 0 值以表示成功。 若要表示失败，则返回一个非零值。  
   
 ## <a name="api-system-stored-procedures"></a>API 系统存储过程  
- 针对 ADO、OLE DB 以及 ODBC 应用程序运行 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的用户可能会注意到这些使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 引用未涵盖的系统存储过程的应用程序。 通过使用这些存储的过程[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序用于实现数据库 API 的功能。 这些存储过程只不过是访问接口或驱动程序所使用的机制，用来传达用户对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的请求。 它们只供提供程序或驱动程序内部使用。 调用它们显式从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-不支持基于应用程序。  
+ 针对 ADO、OLE DB 以及 ODBC 应用程序运行 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的用户可能会注意到这些使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 引用未涵盖的系统存储过程的应用程序。 本机客户端 OLE DB 访问接口和[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client ODBC 驱动程序使用这些存储过程来实现数据库 API 功能。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 这些存储过程只不过是访问接口或驱动程序所使用的机制，用来传达用户对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的请求。 它们只供提供程序或驱动程序内部使用。 不支持从基于的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]应用程序中显式调用它们。  
   
- Sp_createorphan 和 sp_droporphans 存储过程用于 ODBC **ntext**，**文本**，并**图像**处理。  
+ Sp_createorphan 和 sp_droporphans 存储过程用于 ODBC **ntext**、 **text**和**image**处理。  
   
  sp_reset_connection 存储过程由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用来支持事务中的远程存储过程调用。 从连接池中重用连接时，该存储过程还将导致激发 Audit Login 和 Audit Logout 事件。  
   
  下列表中的系统存储过程只在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中使用或通过客户端 API 使用，不适于一般客户使用。 随时可能对其进行更改，不保证兼容性。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书介绍了下列存储过程：  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书介绍了下列存储过程：  
   
 |||  
 |-|-|  
@@ -171,12 +172,12 @@ ms.locfileid: "68037318"
 |sp_views_rowset2|sp_xml_schema_rowset|  
 |sp_xml_schema_rowset2||  
   
-## <a name="see-also"></a>请参阅  
- [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)   
- [存储过程（数据库引擎）](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
- [运行存储的过程&#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/stored-procedures-running.md)   
- [运行存储的过程](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
- [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [&#40;Transact-sql&#41;创建过程](../../t-sql/statements/create-procedure-transact-sql.md)   
+ [存储过程 &#40;数据库引擎&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
+ [&#40;OLE DB 运行存储过程&#41;](../../relational-databases/native-client/ole-db/stored-procedures-running.md)   
+ [运行存储过程](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
+ [数据库引擎存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [运行存储过程](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)  
   
   

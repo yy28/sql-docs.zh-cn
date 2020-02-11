@@ -22,34 +22,35 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9f509b2a2544c67c9113bc700b7d98bfd4a24024
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62753811"
 ---
 # <a name="clr-stored-procedures"></a>CLR 存储过程
-  存储过程是不能用于标量表达式的例程。 与标量函数不同，存储过程可以向客户端返回表格结果和消息、调用数据定义语言 (DDL) 和数据操作语言 (DML) 语句并返回输出参数。 有关优点的 CLR 集成和托管代码之间进行选择并[!INCLUDE[tsql](../../includes/tsql-md.md)]，请参阅[CLR 集成概述](../../relational-databases/clr-integration/clr-integration-overview.md)。  
+  存储过程是不能用于标量表达式的例程。 与标量函数不同，存储过程可以向客户端返回表格结果和消息、调用数据定义语言 (DDL) 和数据操作语言 (DML) 语句并返回输出参数。 有关 CLR 集成的优点以及如何在托管代码和[!INCLUDE[tsql](../../includes/tsql-md.md)]之间进行选择的信息，请参阅[clr 集成概述](../../relational-databases/clr-integration/clr-integration-overview.md)。  
   
 ## <a name="requirements-for-clr-stored-procedures"></a>CLR 存储过程的要求  
- 在公共语言运行时 (CLR) 中，存储的过程作为实现中的类上的公共静态方法[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]程序集。 该静态方法可以声明为 void，或者返回整数值。 如果它返回某一整数值，则返回的整数将视作来自该存储过程的返回代码。 例如：  
+ 在公共语言运行时（CLR）中，存储过程作为[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]程序集中类的公共静态方法实现。 该静态方法可以声明为 void，或者返回整数值。 如果它返回某一整数值，则返回的整数将视作来自该存储过程的返回代码。 例如：  
   
  `EXECUTE @return_status = procedure_name`  
   
- @return_status变量将包含该方法返回的值。 如果该方法声明为 void，则返回代码是 0。  
+ @return_status变量将包含方法返回的值。 如果该方法声明为 void，则返回代码是 0。  
   
  如果该方法具有参数，则 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 实现中的参数数目应与该存储过程的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 声明中使用的参数数目相同。  
   
  传递到 CLR 存储过程的参数可以是在托管代码中具有等效值的任何本机 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型。 对于用于创建该过程的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法，应该使用最合适的等效本机 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型指定这些类型。 有关类型转换的详细信息，请参阅[映射 CLR 参数数据](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)。  
   
 ### <a name="table-valued-parameters"></a>表值参数  
- 表值参数 (TVP) 即传递到某一过程或函数的用户定义表类型，它提供了一种将多行数据传递到服务器的高效方法。 TVP 提供与参数数组类似的功能，但灵活性更高并且与 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的集成更紧密。 它们还提供提升性能的潜力。 TVP 还有助于减少到服务器的往返次数。 可以将数据作为 TVP 发送到服务器，而不是向服务器发送多个请求（例如，对于标量参数列表）。 用户定义表类型不能作为表值参数传递到在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程中执行的托管存储过程或函数，也不能从这些存储过程或函数中返回。 有关 Tvp 的详细信息，请参阅[使用表值参数&#40;数据库引擎&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)。  
+ 表值参数 (TVP) 即传递到某一过程或函数的用户定义表类型，它提供了一种将多行数据传递到服务器的高效方法。 TVP 提供与参数数组类似的功能，但灵活性更高并且与 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的集成更紧密。 它们还提供提升性能的潜力。 TVP 还有助于减少到服务器的往返次数。 可以将数据作为 TVP 发送到服务器，而不是向服务器发送多个请求（例如，对于标量参数列表）。 用户定义表类型不能作为表值参数传递到在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程中执行的托管存储过程或函数，也不能从这些存储过程或函数中返回。 有关 Tvp 的详细信息，请参阅[&#40;数据库引擎使用表值参数&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)。  
   
 ## <a name="returning-results-from-clr-stored-procedures"></a>从 CLR 存储过程中返回结果  
  信息可通过若干方式从 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 存储过程返回。 这包括输出参数、表格结果和消息。  
   
 ### <a name="output-parameters-and-clr-stored-procedures"></a>OUTPUT 参数和 CLR 存储过程  
- 与 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程一样，信息可通过使用 OUTPUT 参数从 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 存储过程返回。 用于创建 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] DML 语法与用于创建使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 撰写的存储过程相同。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 类中实现代码的相应参数应将传址调用参数用作参数。 请注意，Visual Basic 不支持采用与 Visual C# 的相同方法输出参数。 你必须按引用指定参数并应用\<out （) > 属性以表示输出参数，如以下所示：  
+ 与 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程一样，信息可通过使用 OUTPUT 参数从 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 存储过程返回。 用于创建 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] DML 语法与用于创建使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 撰写的存储过程相同。 
+  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 类中实现代码的相应参数应将传址调用参数用作参数。 请注意，Visual Basic 不支持采用与 Visual C# 的相同方法输出参数。 必须按引用指定参数，并应用\<Out （） > 特性来表示 OUTPUT 参数，如下所示：  
   
 ```  
 Imports System.Runtime.InteropServices  
@@ -127,7 +128,7 @@ Partial Public Class StoredProcedures
 End Class  
 ```  
   
- 一旦包含以上 CLR 的程序集存储已生成并创建在服务器上，以下过程[!INCLUDE[tsql](../../includes/tsql-md.md)]用于在数据库中，创建过程，并指定*总和*作为输出参数。  
+ 在服务器上生成并创建了包含上述 CLR 存储过程的程序集后，将使用以下[!INCLUDE[tsql](../../includes/tsql-md.md)]方法在数据库中创建该过程，并将*SUM*指定为输出参数。  
   
 ```  
 CREATE PROCEDURE PriceSum (@sum int OUTPUT)  
@@ -137,10 +138,11 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 -- AS EXTERNAL NAME TestStoredProc.[MyNS.StoredProcedures].PriceSum  
 ```  
   
- 请注意，*总和*声明为`int`SQL Server 数据类型，并且*值*CLR 存储过程中定义的参数被指定为`SqlInt32`CLR 数据类型。 当调用程序执行 CLR 存储过程时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]会自动将转换`SqlInt32`CLR 数据类型设置为`int`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型。  有关哪些 CLR 数据类型可以和不能转换的详细信息，请参阅[映射 CLR 参数数据](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)。  
+ 请注意， *sum*声明为`int` SQL Server 数据类型，并且 clr 存储过程中定义的*值*参数指定为`SqlInt32` clr 数据类型。 当调用程序执行 clr 存储[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]过程时，会自动将`SqlInt32` clr 数据类型转换为`int` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型。  有关可以转换和不能转换哪些 CLR 数据类型的详细信息，请参阅[映射 Clr 参数数据](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)。  
   
 ### <a name="returning-tabular-results-and-messages"></a>返回表格结果和消息  
- 将表格结果和消息返回到客户端通过 `SqlPipe` 对象执行，该对象通过使用 `Pipe` 类的 `SqlContext` 属性获取。 `SqlPipe` 对象具有 `Send` 方法。 通过调用 `Send` 方法，您可以通过管道将数据传输到调用应用程序。  
+ 将表格结果和消息返回到客户端通过 `SqlPipe` 对象执行，该对象通过使用 `Pipe` 类的 `SqlContext` 属性获取。 
+  `SqlPipe` 对象具有 `Send` 方法。 通过调用 `Send` 方法，您可以通过管道将数据传输到调用应用程序。  
   
  下面是 `SqlPipe.Send` 方法的若干重载，包括发送 `SqlDataReader` 的一个方法以及只发送文本字符串的另一个方法。  
   
@@ -381,7 +383,7 @@ END;
 ```  
   
 > [!NOTE]  
->  消息和结果集在客户端应用程序中以不同的方式检索。 例如，[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]结果集出现在**结果**视图中，而消息出现在**消息**窗格。  
+>  消息和结果集在客户端应用程序中以不同的方式检索。 例如， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]结果集将显示在 "**结果**" 视图中，消息将显示在 "**消息**" 窗格中。  
   
  如果以上 Visual C# 代码保存在 MyFirstUdp.cs 文件中并且使用以下语句编译：  
   
@@ -407,7 +409,7 @@ AS EXTERNAL NAME MyFirstUdp.StoredProcedures.HelloWorld;
 EXEC HelloWorld;  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [CLR 用户定义函数](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)   
  [CLR 用户定义类型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)   
  [CLR 触发器](../../../2014/database-engine/dev-guide/clr-triggers.md)  

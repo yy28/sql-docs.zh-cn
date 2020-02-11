@@ -20,22 +20,22 @@ ms.assetid: 496249e0-8eff-4c60-8358-5543bc3ead9c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6c96c903b68dee2d1d215804d318d47b4c39a7a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039504"
 ---
 # <a name="sqltransact-function"></a>SQLTransact 函数
-**符合性**  
- 版本引入了：ODBC 1.0 标准符合性：不推荐使用  
+**度**  
+ 引入的版本： ODBC 1.0 标准符合性：已弃用  
   
- **摘要**  
- 在 ODBC *3.x*，ODBC *2.x*函数**SQLTransact**已由**SQLEndTran**。 有关详细信息，请参阅[SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)。  
+ **总结**  
+ 在 ODBC 3.x*中，odbc* *2.x 函数* **SQLTransact**已被**SQLEndTran**取代。 有关详细信息，请参阅[SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)。  
   
 > [!NOTE]  
->  属性 SQL_ASYNC_DBC_FUNCTION_ENABLE，ODBC 3.8 中引入了，不受**SQLTransact**。 使用连接句柄上的异步操作的应用程序必须使用**SQLEndTran**。  
+>  **SQLTransact**不支持在 ODBC 3.8 中引入的属性 SQL_ASYNC_DBC_FUNCTION_ENABLE。 使用连接句柄上的异步操作的应用程序必须使用**SQLEndTran**。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ODBC API 参考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 头文件](../../../odbc/reference/install/odbc-header-files.md)

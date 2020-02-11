@@ -13,22 +13,22 @@ ms.assetid: e3c50eee-964a-4abd-810d-1bd51978e814
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 91200b79a075f594968fd5700993d96219e35b40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67927040"
 ---
-# <a name="ado-programmers-guide-for-using-ado-objects"></a>使用 ADO 对象的 ADO 程序员指南
-本文档概述了如何使用 ADO 对象来处理来自各种数据源的数据。 首先，引入总结了新功能和安装、 使用和重新分发 ADO 组件的要求。 接下来的部分讨论 ADO 对象的各种类型的使用。 最后，附录中讨论各种 Microsoft 提供的数据和服务提供商、 错误消息和提示有关如何在之外的其他示例和术语表的多个编程语言中使用 ADO。
+# <a name="ado-programmers-guide-for-using-ado-objects"></a>ADO 用于使用 ADO 对象的程序员指南
+本文档概述了如何使用 ADO 对象处理来自各种数据源的数据。 首先，简介概述了用于安装、使用和重新分发 ADO 组件的新功能和要求。 以下各节讨论各种类型的 ADO 对象的用法。 最后，附录还讨论了各种 Microsoft 提供的数据和服务提供程序、错误消息以及有关如何在多种编程语言中使用 ADO 以及示例和术语表的提示。
 
- 本部分包含以下主题。
+ 本部分包含下列主题。
 
--   [简介](../../ado/guide/ado-introduction.md)
+-   [介绍](../../ado/guide/ado-introduction.md)
 
--   [ActiveX 数据对象 (ADO)](../../ado/guide/data/activex-data-objects-ado.md)
+-   [ActiveX 数据对象（ADO）](../../ado/guide/data/activex-data-objects-ado.md)
 
--   [远程数据服务 (RDS)](../../ado/guide/remote-data-service/remote-data-service-rds.md)
+-   [远程数据服务（RDS）](../../ado/guide/remote-data-service/remote-data-service-rds.md)
 
 -   [ADO（多维）(ADO MD)](../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)
 

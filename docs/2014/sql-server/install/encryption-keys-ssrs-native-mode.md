@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 540cf25a150349c7b6399975d20d10bc202ed935
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952170"
 ---
 # <a name="encryption-keys-ssrs-native-mode"></a>加密密钥（SSRS 本机模式）
@@ -28,7 +28,7 @@ ms.locfileid: "71952170"
   
 -   配置新的报表服务器实例以共享或使用现有报表服务器数据库。  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式。  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]本机模式。  
   
 > [!IMPORTANT]  
 >  定期更改 Reporting Services 加密密钥是确保安全的好办法。 建议在升级 Reporting Services 主版本后立即更改密钥。 升级后更改密钥将使在升级周期外更改 Reporting Services 加密密钥所导致的额外服务中断降到最低程度。  
@@ -44,19 +44,19 @@ ms.locfileid: "71952170"
   
  若要打开此页，请启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器，然后在导航窗格中选择相应链接。 有关详细信息，请参阅 [Reporting Services Configuration Manager（本机模式）](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
-## <a name="options"></a>“常规”  
- **备份**  
+## <a name="options"></a>选项  
+ **Backup**  
  将对称密钥复制到您指定的文件。 对称密钥决不能以纯文本形式存储。 您必须键入密码来保护该文件。  
   
- **还原**  
+ **Restore**  
  将以前保存的对称密钥的副本应用于报表服务器数据库。 您必须提供密码对文件进行解锁。  
   
- 还原后的对称密钥副本将覆盖当前连接的报表服务器实例还原前的对称密钥副本。 还原对称密钥后，必须初始化使用该报表服务器数据库的所有报表服务器。 有关初始化报表服务器的详细信息，请参阅[初始化报表服务器&#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)。  
+ 还原后的对称密钥副本将覆盖当前连接的报表服务器实例还原前的对称密钥副本。 还原对称密钥后，必须初始化使用该报表服务器数据库的所有报表服务器。 有关初始化报表服务器的详细信息，请参阅[&#41;&#40;SSRS Configuration Manager 初始化报表服务器](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)。  
   
  **转**  
  重新创建对称密钥并对报表服务器数据库中的所有加密值重新进行加密。 请确保在重新创建对称密钥前停止报表服务器服务。  
   
- 在扩展部署中，对称密钥的所有副本都将替换为新的版本。 在更改对称密钥前，请务必检查加入扩展部署的服务器的列表，以确认仅对有效的报表服务器实例授予了对新密钥的访问权限。 “扩展部署”页列出了扩展部署中包含的服务器 。 在重新创建密钥前，请停止部署中包含的各个报表服务器上的报表服务器服务。  
+ 在扩展部署中，对称密钥的所有副本都将替换为新的版本。 在更改对称密钥前，请务必检查加入扩展部署的服务器的列表，以确认仅对有效的报表服务器实例授予了对新密钥的访问权限。 “扩展部署”页列出了扩展部署中包含的服务器 **** 。 在重新创建密钥前，请停止部署中包含的各个报表服务器上的报表服务器服务。  
   
  请注意，如果您具有许多数据源和订阅，则重新生成对称密钥的过程可能需要耗费较长的时间。  
   
@@ -68,10 +68,10 @@ ms.locfileid: "71952170"
  此信息无法自动更新。 一次只能更新一个使用存储的凭据和连接字符串的报表、订阅和共享数据源。  
   
 ## <a name="see-also"></a>另请参阅  
- [Reporting Services 配置管理器 F1 帮助主题&#40;SSRS 本机模式&#41; ](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+ [Reporting Services 配置管理器的 F1 帮助主题 &#40;SSRS 本机模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [备份和还原 Reporting Services 加密密钥](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
  [删除和重新创建加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
- [初始化 Report Server（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
- [存储加密的 Report Server 数据（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [&#40;SSRS Configuration Manager 初始化报表服务器&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
+ [将加密的报表服务器数据存储 &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

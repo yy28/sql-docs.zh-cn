@@ -20,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 744ebc5411e626c083676440502489029e888a28
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798193"
 ---
 # <a name="make-a-target-server"></a>设置目标服务器
-  本主题说明如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 SQL Server 管理对象 (SMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中生成目标服务器。  
+  本主题说明如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 SQL Server 管理对象 (SMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中生成目标服务器。  
   
  **本主题内容**  
   
@@ -48,7 +48,7 @@ ms.locfileid: "72798193"
 ###  <a name="Security"></a> Security  
  如果分布式作业的步骤与某个代理相关联，则该作业将在目标服务器上该代理帐户的上下文下运行。 请确保满足以下条件，否则与代理关联的作业步骤将不会从主服务器下载到目标服务器上：  
   
--   主服务器注册表子项 **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<*instance_name*> \SQL server Agent\AllowDownloadedJobsToMatchProxyName** （REG_DWORD）设置为1（true）。 默认情况下，此子项设置为 0 (False)。  
+-   主服务器注册表子项**\ HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\<*instance_name*> \sql 服务器 Agent\AllowDownloadedJobsToMatchProxyName** （REG_DWORD）设置为1（true）。 默认情况下，此子项设置为 0 (False)。  
   
 -   目标服务器上已存在与运行作业步骤的主服务器代理帐户同名的代理帐户。  
   
@@ -63,15 +63,16 @@ ms.locfileid: "72798193"
      若要解决此错误，请确保目标服务器上已存在与运行作业步骤的主服务器代理帐户同名的代理帐户。  
   
 ####  <a name="Permissions"></a> 权限  
- `sysadmin`默认情况下授予  固定服务器角色的成员执行此过程的权限。  
+ 默认情况下，为`sysadmin`固定服务器角色的成员执行此过程的权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-make-a-target-server"></a>生成目标服务器  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
+1.  在**对象资源管理器中，** 连接到的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例，然后展开该实例。  
   
-2.  右键单击“SQL Server 代理”，指向“多服务器管理”，然后单击“使其成为目标服务器”。 **“目标服务器向导”** 会指导您完成生成目标服务器的过程。  
+2.  右键单击“SQL Server 代理”****，指向“多服务器管理”****，然后单击“使其成为目标服务器”****。 
+  **“目标服务器向导”** 会指导您完成生成目标服务器的过程。  
   
 3.  从 **“选择主服务器”** 页中，选择此目标服务器将从中接收作业的主服务器。  
   
@@ -94,7 +95,7 @@ ms.locfileid: "72798193"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”。 本示例将当前服务器登记到 AdventureWorks1 主服务器中。 当前服务器的位置是 Building 21、Room 309、Rack 5。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 本示例将当前服务器登记到 AdventureWorks1 主服务器中。 当前服务器的位置是 Building 21、Room 309、Rack 5。  
   
     ```sql
     USE msdb ;  
@@ -105,9 +106,9 @@ ms.locfileid: "72798193"
     GO;  
     ```  
   
-     有关详细信息，请[参阅&#40;sp_msx_enlist transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)。  
+     有关详细信息，请参阅[&#40;transact-sql&#41;sp_msx_enlist ](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)。  
   
 ##  <a name="PowerShellProcedure"></a>使用 SQL Server 管理对象（SMO）  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [企业范围的自动化管理](automated-administration-across-an-enterprise.md)  

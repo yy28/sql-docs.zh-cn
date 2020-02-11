@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b956a9f51e013ce03801ff870e27f337c738b3c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762069"
 ---
-# <a name="mssqlserver8712"></a>MSSQLSERVER_8712
+# <a name="mssqlserver_8712"></a>MSSQLSERVER_8712
     
 ## <a name="details"></a>详细信息  
   
@@ -32,14 +32,14 @@ ms.locfileid: "62762069"
 |符号名称|USEPLAN_ERR_NO_INDEX|  
 |消息正文|USE PLAN 提示中指定的索引 '%.*ls' 不存在。 请指定一个现有索引，或者使用指定名称创建一个索引。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  USE PLAN 提示中指定的索引不存在。  
   
 ## <a name="user-action"></a>用户操作  
  请确保在 USE PLAN 提示中指定的所有索引均存在。  
   
-## <a name="see-also"></a>请参阅  
- [查询提示 (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-query)   
+## <a name="see-also"></a>另请参阅  
+ [Transact-sql&#41;的查询提示 &#40;](/sql/t-sql/queries/hints-transact-sql-query)   
  [计划指南](../performance/plan-guides.md)  
   
   

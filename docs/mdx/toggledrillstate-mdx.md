@@ -1,5 +1,5 @@
 ---
-title: ToggleDrillState (MDX) |Microsoft Docs
+title: ToggleDrillState （MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8d027a76a82de3fd82b6c0c81c54ace08167039b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036608"
 ---
 # <a name="toggledrillstate-mdx"></a>ToggleDrillState (MDX)
@@ -34,20 +34,20 @@ ToggleDrillState(Set_Expression1,Set_Expression2 [, [RECURSIVE] [,INCLUDE_CALC_M
  *Set_Expression2*  
  返回集的有效多维表达式 (MDX)。  
   
- *递归*  
- （可选）。 指示集的递归比较的关键字。 **ToggleDrillState**函数是一系列**DrillupMember**并**DrilldownMember**函数。 当成员处于时才适用递归**DrilldownMember**状态。  
+ *Recursive*  
+ （可选）。 指示集的递归比较的关键字。 **ToggleDrillState**函数是**DrillupMember**和**DrilldownMember**函数的组合。 仅当成员处于**DrilldownMember**状态时，递归才适用。  
   
  *Include_calc_members*  
  （可选）。 指示是否在深化级别包括计算成员（如果存在）的标志。  
   
 ## <a name="remarks"></a>备注  
- **ToggleDrillState**函数切换是存在于第一个集中的第二个集的每个成员的钻取状态。 第一个集可以包含任意维数的元组，但是第二个集必须包含单个维度的成员。 **ToggleDrillState**函数是一系列**DrillupMember**并**DrilldownMember**函数。 如果该成员*m*，第二个集是存在于第一个集中，该成员被深化 （即，有一个后代紧跟它），然后`DrillupMember(Set_Expression1, {m})`应用于第一个集中的元组的成员。 如果该*m*成员被浅 (即，没有任何子代*m*中紧跟*m*)，`DrilldownMember(Set_Expression1, {m}[, RECURSIVE])`应用于第一个集。  
+ **ToggleDrillState**函数用于切换第一个集中出现的第二个集的每个成员的钻取状态。 第一个集可以包含任意维数的元组，但是第二个集必须包含单个维度的成员。 **ToggleDrillState**函数是**DrillupMember**和**DrilldownMember**函数的组合。 如果第二个集的成员*m*位于第一个集中，并且该成员被向下钻取（即，在其后面紧跟一个后代），则`DrillupMember(Set_Expression1, {m})`将应用于第一个集中的成员或元组。 如果已向上钻取该*m*成员（即，没有*m 的后代* *），* `DrilldownMember(Set_Expression1, {m}[, RECURSIVE])`则应用于第一个集。  
   
- 如果可选**递归**使用标志，向上钻取和向下的钻取以递归方式应用。 关于循环标志的详细信息，请参阅[DrillupMember](../mdx/drillupmember-mdx.md)并[DrilldownMember](../mdx/drilldownmember-mdx.md)函数。  
+ 如果使用了可选的**递归**标志，则将以递归方式应用向上钻取和向下钻取。 有关递归标志的详细信息，请参阅[DrillupMember](../mdx/drillupmember-mdx.md)和[DrilldownMember](../mdx/drilldownmember-mdx.md)函数。  
   
- 查询 XMLA 属性 MdpropMdxDrillFunctions，您可以验证的服务器为钻取功能; 提供的支持级别请参阅[支持的 XMLA 属性&#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)有关详细信息。  
+ 通过查询 XMLA 属性 MdpropMdxDrillFunctions，可以验证服务器为钻取函数提供的支持级别;有关详细信息，请参阅[&#40;xmla&#41;支持的 Xmla 属性](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)。  
   
- 请参阅[数据库日志：MDX 集函数：Toggledrillstate （） 函数](https://go.microsoft.com/fwlink/?LinkId=517759)的方案和示例涉及此函数。  
+ 请参阅[数据库日志： MDX 集函数：适用于方案的 ToggleDrillState （）函数](https://go.microsoft.com/fwlink/?LinkId=517759)和涉及此函数的示例。  
   
 ## <a name="example"></a>示例  
  下例对第一个集中的澳大利亚成员进行深化，而对第一个集中的美国成员进行浅化。  
@@ -63,7 +63,7 @@ SELECT ToggleDrillState
    FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

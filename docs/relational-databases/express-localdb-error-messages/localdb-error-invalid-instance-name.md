@@ -10,13 +10,13 @@ ms.assetid: 709ac713-aadd-4d5b-a0f9-d859a79dd24c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3e2b24483b57c638d68e044bd3dda175cc76cc48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68011149"
 ---
-# <a name="localdberrorinvalidinstancename"></a>LOCALDB_ERROR_INVALID_INSTANCE_NAME
+# <a name="localdb_error_invalid_instance_name"></a>LOCALDB_ERROR_INVALID_INSTANCE_NAME
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="details"></a>详细信息  
@@ -29,7 +29,7 @@ ms.locfileid: "68011149"
 |组件|本地数据库运行时 API|  
 |消息正文|实例名称包含无效字符或太长。 请参阅 API 文档。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  实例名称包含无效字符或太长。  
   
 ## <a name="user-action"></a>用户操作  

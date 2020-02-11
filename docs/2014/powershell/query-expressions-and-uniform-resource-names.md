@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4fec86c0f732a4f47d3132be51226b877c428d5f
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782754"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>查询表达式和统一资源名称
@@ -41,7 +41,7 @@ ms.locfileid: "72782754"
 ```  
   
 ## <a name="arguments"></a>参数  
- *对象*  
+ *Object*  
  指定在表达式字符串的节点表示的对象的类型。 每个对象表示那些 SMO 对象模型名称空间中的一个集合类：  
   
  <xref:Microsoft.SqlServer.Management.Smo>  
@@ -63,22 +63,22 @@ ms.locfileid: "72782754"
  例如，为 **ServerCollection** 类指定“服务器”，为 **DatabaseCollection** 类指定“数据库”。  
   
  \@*PropertyName*  
- 指定与“对象”中指定的对象相关联的类的其中一个属性的名称。 属性名必须以字符 \@ 为前缀。 例如，对 Database\@ **类的 IsAnsiNull** **属性指定**IsAnsiNull。  
+ 指定与**“对象”中指定的对象相关联的类的其中一个属性的名称。 属性名必须以字符 \@ 为前缀。 例如，对 Database\@** 类的 IsAnsiNull**** 属性指定 **IsAnsiNull。  
   
- \@*BooleanPropertyName*=true()  
+ \@*布尔属性名称*= true （）  
  枚举指定的布尔属性设置为 TRUE 的所有对象。  
   
- \@*BooleanPropertyName*=false()  
+ \@*布尔属性名称*= false （）  
  枚举指定的布尔属性设置为 FALSE 的所有对象。  
   
- contains(\@StringPropertyName, 'PatternString')  
+ contains(\@StringPropertyName**, 'PatternString**')  
  枚举指定的字符串属性中包含“*PatternString*”中指定的一组字符（至少出现一次）的所有对象。  
   
- \@*StringPropertyName*='*PatternString*'  
+ \@*字符串属性名称*= '*模式字符串*'  
  枚举指定字符串属性的值与在“*PatternString*”中指定的字符模式完全相同的所有对象。  
   
- \@*DatePropertyName*= datetime('*DateString*')  
- 枚举指定日期属性的值与在“*DateString*”中指定的日期相匹配的所有对象。 *DateString* 必须遵循格式 yyyy-mm-dd hh:mi:ss.mmm  
+ \@*日期属性名称*= datetime （'*日期字符串*'）  
+ 枚举指定日期属性的值与在“*DateString*”中指定的日期相匹配的所有对象。 *日期字符串*的格式必须为 yyyy-mm-dd hh： mi： ss  
   
 |||  
 |-|-|  
@@ -92,18 +92,18 @@ ms.locfileid: "72782754"
   
  可以按照存储在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中的任何日期格式，计算以此格式指定的日期。  
   
- is_null(\@PropertyName)  
+ is_null(\@PropertyName**)  
  枚举指定属性的值为 NULL 的所有对象。  
   
  not(\<*PropertyExpression*>)  
  对 *PropertyExpression*的计算值求反，枚举与 *PropertyExpression*中指定的条件不匹配的所有对象。 例如，not(contains(\@Name, 'xyz')) 枚举名称中不含字符串 xyz 的所有对象。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  查询表达式是一些字符串，用于枚举 SMO 模型层次结构中的节点。 每个节点有一个筛选表达式，指定用于确定要枚举该节点的哪些对象的条件。 查询表达式在 XPath 表达式语言上建模。 查询表达式实现了 XPath 支持的一小部分表达式，还具有 XPath 中不提供的一些扩展。 XPath 表达式是一些字符串，指定用于枚举 XML 文档中的一个或多个标记的一组条件。 有关 XPath 的详细信息，请参阅 [W3C XPath Language](http://www.w3.org/TR/xpath20/)（W3C Xpath 语言）。  
   
  查询表达式必须以对服务器对象的绝对引用开头。 不允许使用以 / 开头的相对表达式。 查询表达式中指定的对象的顺序必须遵循相关对象模型中集合对象的层次结构。 例如，引用 Microsoft.SqlServer.Management.Smo 命令空间中对象的查询表达式必须从服务器节点开始，接下来才是数据库节点等。  
   
- 如果没有为对象指定 *\<FilterExpression>* ，将枚举该节点的所有对象。  
+ 如果没有为对象指定* \<FilterExpression>* ，则枚举该节点的所有对象。  
   
 ## <a name="uniform-resource-names-urn"></a>统一资源名称 (URN)  
  URN 是查询表达式的子集。 每个 URN 形成对单个对象的完全限定引用。 典型的 URN 使用 Name 属性来标识每个节点的单个对象。 例如，该 URN 引用一个特定列：  
@@ -157,5 +157,5 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_nul
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Invoke-PolicyEvaluation cmdlet](../database-engine/invoke-policyevaluation-cmdlet.md)   
+ [Invoke-policyevaluation cmdlet](../database-engine/invoke-policyevaluation-cmdlet.md)   
  [SQL Server Audit（数据库引擎）](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  

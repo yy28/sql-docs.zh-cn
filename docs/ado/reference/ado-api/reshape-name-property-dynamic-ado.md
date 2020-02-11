@@ -1,5 +1,5 @@
 ---
-title: Reshape Name 属性-动态 (ADO) |Microsoft Docs
+title: 调整名称属性-动态（ADO）的形状 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,33 +14,33 @@ ms.assetid: 690229d1-46cc-42e6-a57d-4438251fe248
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ec72b2b1908f967caee4610e27315acaab787ac9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917175"
 ---
 # <a name="reshape-name-property-dynamic-ado"></a>Reshape Name 属性 - 动态 (ADO)
-指定的名称[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。  
+指定[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象的名称。  
   
 ## <a name="return-values"></a>返回值  
- 返回**字符串**，它是值的名称**记录集**。  
+ 返回一个**字符串**值，该值是**记录集**的名称。  
   
 ## <a name="remarks"></a>备注  
- 名称保持不变的持续时间的连接或直到**记录集**已关闭。  
+ 名称在连接期间或在关闭**记录集**之前保持不变。  
   
- **改变形状名称**属性主要用于与的重新调整功能一起使用[适用于 OLE DB 的 Microsoft Data Shaping 服务](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)服务提供程序。 名称必须是唯一的以参与重新定型。  
+ **整形名称**属性主要用于 OLE DB 服务提供商的[Microsoft 数据定形服务](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)的重新造型功能。 名称必须是唯一的，才能参与重新整理。  
   
- 此属性是只读的但可以设置间接时**记录集**创建。 例如，如果一个子句的形状命令将创建**记录集**并为其提供通过使用别名**AS**关键字，该别名分配给**重新调整形状名称**属性。 如果声明没有别名，则**改变形状名称**属性分配生成的数据整理服务的唯一名称。 别名名称是否与现有的同名**记录集**，既不**记录集**直到其中一个发布可以解答。 可以通过设置唯一的名称中更改默认行为[改变形状名称](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)ADO 连接上的属性**True**。 将此属性设置为提供数据整理服务的权限来更改分配的用户名称，如有必要，以确保唯一性。 有关重新调整的详细信息，请参阅[适用于 OLE DB （ADO 服务提供商） 的 Microsoft Data Shaping 服务](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)。  
+ 此属性是只读的，但可以在创建**记录集**时间接设置。 例如，如果 Shape 命令的子句创建了一个**记录集**，并通过使用**AS**关键字为其指定了别名，则该别名将分配给 "**改变形状名称**" 属性。 如果未声明别名，则会为 "**调整形状名称**" 属性分配由数据定形服务生成的唯一名称。 如果别名与现有**记录集**的名称相同，则在释放其中一个记录集之前，都不会改变**记录集**的名称。 可以通过在 ADO 连接的 "[改变名称](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)" 属性中设置一个唯一的名称来更改默认行为，使其设置为**True**。 如果需要，设置此属性将为数据定形服务授予更改用户分配的名称的权限，以确保唯一性。 有关重构的详细信息，请参阅[Microsoft 数据定形服务 OLE DB （ADO 服务提供程序）](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)。  
   
- 使用**改变形状名称**属性时想要引用**记录集**形状命令时，或您不知道名称，因为它已由 Data Shaping 服务生成。 在这种情况下，无法生成形状命令通过串联命令返回的字符串周围**改变形状名称**属性。  
+ 当您想要在 Shape 命令中引用**记录集**时，或者当您不知道该名称，因为它是由数据定形服务生成的，则可以使用 "重设形状**名称**" 属性。 在这种情况下，可以通过将命令与 "**改变名称" 名称**属性所返回的字符串连接在一起，生成一个 SHAPE 命令。  
   
- **重新调整形状名称**动态属性追加到**记录集**对象的[属性](../../../ado/reference/ado-api/properties-collection-ado.md)集合时[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性设置为**adUseClient**。  
+ 当[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性设置为**AdUseClient**时，**改变名称**是追加到**Recordset**对象的[Properties](../../../ado/reference/ado-api/properties-collection-ado.md) collection 的动态属性。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>请参阅  
- [Microsoft 数据整理服务用于 OLE DB （ADO 服务提供程序）](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)   
- [常用 shape 命令](../../../ado/guide/data/shape-commands-in-general.md)   
+## <a name="see-also"></a>另请参阅  
+ [适用于 OLE DB 的 Microsoft 数据定形服务（ADO 服务提供程序）](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)   
+ [整体形状命令](../../../ado/guide/data/shape-commands-in-general.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

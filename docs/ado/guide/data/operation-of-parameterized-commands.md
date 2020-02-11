@@ -14,20 +14,20 @@ ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e7d4399a8cf279ed2283061fff9064ffcc1adfba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924737"
 ---
 # <a name="operation-of-parameterized-commands"></a>参数化命令的操作
-如果你正在使用较大的子**记录集**，尤其是相对于父级的大小**记录集**，但需要访问仅在几个子级的章节中，你可能会发现使用更加高效参数化的命令。  
+如果使用的是大型子**记录集**（特别是与父**记录集**的大小相比），但只需访问几个子章节，则可以发现使用参数化命令更有效。  
   
- 一个*非参数化命令*检索整个父和子**记录集**、 将章节列追加到父级、，然后将分配到每个父行的相关的子章节的引用.  
+ *非参数化命令*将检索整个父记录集和子**记录集**，并向父记录集追加章节列，然后为每个父行分配对相关子章节的引用。  
   
- 一个*参数化命令*检索整个父**记录集**，但会检索仅章**记录集**时访问的章节列。 这种检索策略的差异可以产生显著的性能优势。  
+ *参数化命令*将检索整个父**记录集**，但在访问章节列时，仅检索章节**记录集**。 检索策略的这种差异可能会显著提高性能。  
   
- 例如，可以指定以下：  
+ 例如，你可以指定以下内容：  
   
 ```  
 SHAPE {SELECT * FROM customer}   
@@ -35,26 +35,26 @@ SHAPE {SELECT * FROM customer}
    RELATE cust_id TO PARAMETER 0)  
 ```  
   
- 父和子表具有列名称的共同*cust_id*。 *子命令*具有"？"的占位符，RELATE 子句中引用 (即，"...参数 0"）。  
+ 父表和子表的列名称相同， *cust_id*。 *子命令*有一个 "？" 占位符，关系子句引用此占位符（即 ".。。参数 0 "）。  
   
 > [!NOTE]
->  参数子句仅与形状命令语法。 未与任一 ADO 关联[参数](../../../ado/reference/ado-api/parameter-object.md)对象或[参数](../../../ado/reference/ado-api/parameters-collection-ado.md)集合。  
+>  PARAMETER 子句仅适用于 shape 命令语法。 它不与 ADO[参数](../../../ado/reference/ado-api/parameter-object.md)对象或[参数](../../../ado/reference/ado-api/parameters-collection-ado.md)集合关联。  
   
- 执行参数化的形状命令时，将发生以下情况：  
+ 执行参数化形状命令时，将发生以下情况：  
   
-1.  *父命令*执行，并返回父级**记录集**Customers 表中。  
+1.  执行*父-命令*并返回 Customers 表中的父**记录集**。  
   
-2.  章节列追加到父级**记录集**。  
+2.  章节列将追加到父**记录集**。  
   
-3.  访问父行的章节列时，*子命令*执行使用 customer.cust_id 的值作为参数的值。  
+3.  访问父行的章节列时，将使用 cust_id 的值作为参数的值来执行*子命令*。  
   
-4.  步骤 3 中创建的数据提供程序行集中的所有行都用于填充子**记录集**。 在此示例中，这是在其中 cust_id 等于 customer.cust_id 的值订单表中的所有行。 默认情况下，子**记录集**s 将被缓存在客户端之前对父级的所有引用**记录集**发布。 若要更改此行为，请设置**记录集**[动态属性](../../../ado/reference/ado-api/ado-dynamic-property-index.md)**缓存子行**到**False**。  
+4.  在步骤3中创建的数据提供程序行集中的所有行都用于填充子**记录集**。 在此示例中，这是 Orders 表中的所有行，其中 cust_id 等于 customer cust_id 的值。 默认情况下，将在客户端上缓存子**记录集**，直到释放对父**记录集**的所有引用。 若要更改此行为，请将**记录集**[动态属性](../../../ado/reference/ado-api/ado-dynamic-property-index.md)**缓存子行**设置为**False**。  
   
-5.  对检索到的子行的引用 (即，子的一章**记录集**) 放置在父级的当前行的章节列**记录集**。  
+5.  对检索到的子行的引用（即，子**记录集**的章节）放置在父**记录集**的当前行的章节列中。  
   
-6.  访问另一行的章节列时，将重复步骤 3-5。  
+6.  访问另一行的章节列时，将重复执行步骤3-5。  
   
- **缓存子行**动态属性设置为**True**默认情况下。 根据查询的参数值而不同的缓存行为。 在使用单个参数，子查询中**记录集**为给定的参数值将缓存之间具有该值的子项的请求。 下面的代码演示此：  
+ 默认情况下，"**缓存子行**" 动态属性设置为**True** 。 缓存行为根据查询的参数值而有所不同。 在带有单个参数的查询中，给定参数值的子**记录集**将缓存在具有该值的子级的请求之间。 以下代码对此做了演示：  
   
 ```  
 SCmd = "SHAPE {select * from customer} " & _  
@@ -67,14 +67,14 @@ Rst1.MoveNext      ' Next cust_id passed to Param 0, & new rs fetched
 Rst1.MovePrevious  ' RstChild now holds cached rs, saving round trip.  
 ```  
   
- 在两个或多个参数与查询中，所有参数值与缓存的值都匹配时才使用缓存的子项。  
+ 在包含两个或更多参数的查询中，仅当所有参数值都与缓存的值匹配时，才使用缓存的子。  
   
-## <a name="parameterized-commands-and-complex-parent-child-relations"></a>参数化的命令和复杂的父子关系  
- 除了使用参数化的命令来提高性能的同等联接类型层次结构，参数化的命令可用于支持更复杂的父-子关系。 例如，考虑具有两个表的小联盟数据库： 一个团队 （team_id、 团队名称） 和其他的游戏 （日期、 home_team、 visiting_team） 组成。  
+## <a name="parameterized-commands-and-complex-parent-child-relations"></a>参数化命令和复杂的父子关系  
+ 除了使用参数化命令提高同等联接类型层次结构的性能外，参数化命令还可用于支持更复杂的父子关系。 例如，假设有一个具有两个表的小型联盟数据库：一个由团队（team_id、team_name）和其他游戏（date，home_team，visiting_team）组成。  
   
- 使用非参数化层次结构，没有方法相关联的方式中的团队和游戏表的子**记录集**每个团队包含其完整的计划。 您可以创建包含主计划或道路计划，但不是能同时包含的章节。 这是因为 RELATE 子句限制为窗体的父-子关系 (pc1 = cc1) 和 (pc2 = pc2)。 因此，如果您的命令包含"建立关系 team_id TO home_team，team_id TO visiting_team"，则会得到仅游戏团队已播放本身。 您需要的是"(team_id=home_team) 或者 (team_id = visiting_team)"，但 Shape 提供程序不支持 OR 子句。  
+ 使用非参数化层次结构时，无法将 "团队" 和 "游戏" 表关联起来，因为每个团队的子**记录集**都包含其完整计划。 您可以创建包含本计划或公路计划的章节，但不能同时包含这两者。 这是因为，关系子句会将您限制为窗体的父子关系（pc1 = cc1）和（pc2 = pc2）。 因此，如果你的命令包含 "将 team_id 关联到 home_team，team_id 到 visiting_team"，则只会获得一个团队在玩自己的游戏。 所需的是 "（team_id = home_team）或（team_id = visiting_team）"，但形状提供程序不支持或子句。  
   
- 若要获取所需的结果，可以使用参数化的命令。 例如：  
+ 若要获得所需的结果，可以使用参数化命令。 例如：  
   
 ```  
 SHAPE {SELECT * FROM teams}   
@@ -83,12 +83,12 @@ APPEND ({SELECT * FROM games WHERE home_team = ? OR visiting_team = ?}
                team_id TO PARAMETER 1)   
 ```  
   
- 此示例中利用 SQL WHERE 子句来获取所需的结果的更大的灵活性。  
+ 此示例利用了 SQL WHERE 子句的更大灵活性来获得所需的结果。  
   
 > [!NOTE]
->  使用 WHERE 子句，参数可以不使用 SQL 数据类型为 text、 ntext 和 image 或时，会导致错误包含以下说明： `Invalid operator for data type`。  
+>  使用 WHERE 子句时，参数不能使用 text、ntext 和 image 的 SQL 数据类型，也不会生成包含以下说明的错误： `Invalid operator for data type`。  
   
-## <a name="see-also"></a>请参阅  
- [数据整理示例](../../../ado/guide/data/data-shaping-example.md)   
- [正式 Shape 语法](../../../ado/guide/data/formal-shape-grammar.md)   
+## <a name="see-also"></a>另请参阅  
+ [数据定形示例](../../../ado/guide/data/data-shaping-example.md)   
+ [正式形状语法](../../../ado/guide/data/formal-shape-grammar.md)   
  [常用 Shape 命令](../../../ado/guide/data/shape-commands-in-general.md)

@@ -1,5 +1,5 @@
 ---
-title: 子集 (MDX) |Microsoft Docs
+title: 子集（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b1f9a79c0e0ba6d578b82d7b1d072f3543888a1c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036700"
 ---
 # <a name="subset-mdx"></a>Subset (MDX)
@@ -38,12 +38,12 @@ Subset(Set_Expression, Start [ ,Count ] )
  指定要返回的元组数的有效数值表达式。  
   
 ## <a name="remarks"></a>备注  
- 从指定集中**子集**函数返回包含指定的数目的元组，从指定的开始位置开始的子集。 开始位置基于以零为基的索引；即 0 对应于指定集中的第一个元组，1 对应于第二个元组，依此类推。  
+ 从指定的集中，**子集**函数返回一个子集，其中包含从指定的起始位置开始的指定数量的元组。 开始位置基于以零为基的索引；即 0 对应于指定集中的第一个元组，1 对应于第二个元组，依此类推。  
   
- 如果*计数*未指定，则该函数将返回中的所有元组*启动*到集的末尾。  
+ 如果未指定*Count* ，则函数将返回从*开始*到集末尾的所有元组。  
   
 ## <a name="example"></a>示例  
- 下例根据 Reseller Gross Profit（分销商毛利润），返回前五个销售产品子类别的分销商销售额度量值，而不管层次结构如何。 **子集**函数用于仅返回前五个集的结果后将结果排序使用**顺序**函数。  
+ 下例根据 Reseller Gross Profit（分销商毛利润），返回前五个销售产品子类别的分销商销售额度量值，而不管层次结构如何。 使用**Order**函数对结果进行排序后，只使用**子集**函数返回结果中的前五个集。  
   
 ```  
 SELECT Subset  
@@ -58,7 +58,7 @@ SELECT Subset
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

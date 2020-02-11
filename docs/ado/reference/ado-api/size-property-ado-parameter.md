@@ -1,5 +1,5 @@
 ---
-title: Size 属性 （ADO 参数） |Microsoft Docs
+title: Size 属性（ADO 参数） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,34 +16,34 @@ ms.assetid: e6bad449-ebdb-4dd3-886a-9e6f1e7ee5d2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3796f772dedb961ec34eb0639034350989f99142
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931057"
 ---
 # <a name="size-property-ado-parameter"></a>Size 属性（ADO 参数）
-指示的最大大小，以字节或字符，[参数](../../../ado/reference/ado-api/parameter-object.md)对象。  
+指示[参数](../../../ado/reference/ado-api/parameter-object.md)对象的最大大小，以字节或字符为单位。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
- 设置或返回**长**值，该值指示字节或字符中的值的最大大小**参数**对象。  
+ 设置或返回一个**长整型**值，该值指示**参数**对象中的值的最大大小（以字节为单位）。  
   
 ## <a name="remarks"></a>备注  
- 使用**大小**属性来确定值写入到的最大大小或从读取[值](../../../ado/reference/ado-api/value-property-ado.md)属性**参数**对象。  
+ 使用 " **Size** " 属性可确定从**参数**对象的[Value](../../../ado/reference/ado-api/value-property-ado.md)属性写入或读取的值的最大大小。  
   
- 如果指定的可变长度数据类型**参数**对象 (例如，任何**字符串**类型，如**以便您可以排除**)，必须设置对象的**大小**之前追加到属性[参数](../../../ado/reference/ado-api/parameters-collection-ado.md)集合; 否则，就会出错。  
+ 如果为**参数**对象指定长度可变的数据类型（例如，任何**字符串**类型，如**adVarChar**），则必须先设置对象的**Size**属性，然后再将其追加到[Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md)集合;否则，将发生错误。  
   
- 如果您已追加**参数**对象传递给**参数**的集合[命令](../../../ado/reference/ado-api/command-object-ado.md)对象，并将其类型更改为可变长度数据类型，则必须设置**参数**对象的**大小**之前执行属性**命令**对象; 否则，就会出错。  
+ 如果已将**参数**对象追加到[Command](../../../ado/reference/ado-api/command-object-ado.md)对象的**Parameters**集合，并将其类型更改为可变长度数据类型，则必须先设置**参数**对象的**Size**属性，然后再执行**命令**对象;否则，将发生错误。  
   
- 如果您使用[刷新](../../../ado/reference/ado-api/refresh-method-ado.md)方法来获取参数信息从提供程序和它返回一个或多个可变长度数据类型**参数**对象，ADO 可能会为基于参数分配内存在其最大可能大小，这可能会导致在执行期间出错。 若要防止出现错误，应显式设置**大小**执行命令前这些参数的属性。  
+ 如果使用[Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)方法从提供程序中获取参数信息，并返回一个或多个可变长度的数据类型**参数**对象，则 ADO 可能会根据其最大可能大小为参数分配内存，这可能会导致在执行过程中出错。 若要防止出现错误，应在执行命令之前显式设置这些参数的**大小**属性。  
   
- **大小**属性为读/写。  
+ **Size**属性是可读/写的。  
   
-## <a name="applies-to"></a>适用范围  
- [参数对象](../../../ado/reference/ado-api/parameter-object.md)  
+## <a name="applies-to"></a>应用于  
+ [Parameter 对象](../../../ado/reference/ado-api/parameter-object.md)  
   
-## <a name="see-also"></a>请参阅  
- [ActiveConnection、 CommandText、 CommandTimeout、 CommandType、 大小和方向属性示例 (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
- [ActiveConnection、 CommandText、 CommandTimeout、 CommandType、 大小和方向属性示例 （VC + +）](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
- [ActiveConnection、 CommandText、 CommandTimeout、 CommandType、 大小和方向属性示例 (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)   
+## <a name="see-also"></a>另请参阅  
+ [ActiveConnection、CommandText、CommandTimeout、CommandType、Size 和 Direction 属性示例（VB）](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
+ [ActiveConnection、CommandText、CommandTimeout、CommandType、Size 和 Direction 属性示例（VC + +）](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
+ [ActiveConnection、CommandText、CommandTimeout、CommandType、Size 和 Direction 属性示例（JScript）](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)   
  [Size 属性（ADO 流）](../../../ado/reference/ado-api/size-property-ado-stream.md)
