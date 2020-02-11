@@ -1,5 +1,5 @@
 ---
-title: Open 方法 (ADO Stream) |Microsoft Docs
+title: Open 方法（ADO 流） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: d26f48fb-904e-4932-a245-3b4332ca1600
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6549fd10b173a8e133c941ea4315634badb3f35f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917828"
 ---
 # <a name="open-method-ado-stream"></a>Open 方法（ADO 流）
-此时将打开[Stream](../../../ado/reference/ado-api/stream-object-ado.md)要操作的二进制或文本数据的流对象。  
+打开一个[流](../../../ado/reference/ado-api/stream-object-ado.md)对象以处理二进制或文本数据的流。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,37 +33,37 @@ ms.locfileid: "67917828"
 Stream.Open Source, Mode , OpenOptions, UserName, Password  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *数据源*  
- 可选。 一个**Variant**值，该值指定的数据源**Stream**。 *源*可能包含指向已知的树结构，如电子邮件或文件系统中的现有节点的绝对 URL 字符串。 应通过使用 URL 关键字指定 URL ("URL =*方案*://*服务器*/*文件夹*")。 或者，*源*可能包含对已打开的引用[记录](../../../ado/reference/ado-api/record-object-ado.md)对象，这将打开与关联的默认流**记录**。 如果*源*未指定，则**Stream**是实例化并打开，默认情况下与任何基础源相关联。 有关 URL 方案和其关联的提供程序的详细信息，请参阅[绝对和相对 Url](../../../ado/guide/data/absolute-and-relative-urls.md)。  
+ 可选。 一个**变量**值，指定**流**的数据源。 *源*可以包含指向已知树结构（如电子邮件或文件系统）中的现有节点的绝对 URL 字符串。 Url 应使用 url 关键字（"url =*方案*：//*服务器*/*文件夹*"）来指定。 另外， *Source*可能包含对已打开的[record](../../../ado/reference/ado-api/record-object-ado.md)对象的引用，该对象将打开与该**记录**关联的默认流。 如果未指定*源*，则默认情况下，将实例化并打开一个**流**，而不会关联到任何基础源。 有关 URL 方案及其关联的提供程序的详细信息，请参阅[绝对和相对 url](../../../ado/guide/data/absolute-and-relative-urls.md)。  
   
  *模式*  
- 可选。 一个[ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md)值，该值指定所产生的访问模式**Stream** (例如，读/写或只读)。 默认值是**adModeUnknown**。 请参阅[模式下](../../../ado/reference/ado-api/mode-property-ado.md)属性以获取有关访问模式的详细信息。 如果*模式下*未指定，则它由源对象继承。 例如，如果源**记录**在只读模式下打开**Stream**还将打开默认情况下在只读模式下。  
+ 可选。 一个[ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md)值，该值指定结果**流**的访问模式（例如，读/写或只读）。 默认值为**adModeUnknown**。 有关访问模式的详细信息，请参阅[模式](../../../ado/reference/ado-api/mode-property-ado.md)属性。 如果未指定模式，则源对象将继承该*模式*。 例如，如果以只读模式打开了源**记录**，则默认情况下，将在只读模式下打开**流**。  
   
  *OpenOptions*  
- 可选。 一个[StreamOpenOptionsEnum](../../../ado/reference/ado-api/streamopenoptionsenum.md)值。 默认值是**adOpenStreamUnspecified**。  
+ 可选。 [StreamOpenOptionsEnum](../../../ado/reference/ado-api/streamopenoptionsenum.md)值。 默认值为**adOpenStreamUnspecified**。  
   
- *UserName*  
- 可选。 一个**字符串**值，该值包含用户标识，如果需要请访问**Stream**对象。  
+ *用户名*  
+ 可选。 一个**字符串**值，该值包含用户标识，如有必要，它将访问**流**对象。  
   
- *密码*  
- 可选。 一个**字符串**值，该值包含密码，如果需要请访问**Stream**对象。  
+ *权限*  
+ 可选。 一个**字符串**值，该值包含在需要时访问**流**对象的密码。  
   
 ## <a name="remarks"></a>备注  
- 时**记录**对象作为源参数中传递*UserID*并*密码*参数不能因为访问**记录**对象已可用。 同样，[模式下](../../../ado/reference/ado-api/mode-property-ado.md)的**记录**对象传输到**Stream**对象。 当*源*未指定，则**Stream**打开不包含任何数据，但[大小](../../../ado/reference/ado-api/size-property-ado-stream.md)零 (0)。 若要避免丢失任何数据写入到这**Stream**时**Stream**是已关闭，保存**Stream**与[CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md)或[SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)方法，或将其保存到另一个内存位置。  
+ 作为 source 参数传入**记录**对象时，不使用*UserID*和*Password*参数，因为对**记录**对象的访问已可用。 同样，将**记录**对象的[模式](../../../ado/reference/ado-api/mode-property-ado.md)传输到**Stream**对象。 如果未指定*源*，则打开的**流**不包含任何数据，并且[大小](../../../ado/reference/ado-api/size-property-ado-stream.md)为零（0）。 若要避免在**流**关闭时丢失写入到此**流**的任何数据，请用[CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md)或[SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)方法保存该**流**，或将其保存到其他内存位置。  
   
- *OpenOptions*的值**adOpenStreamFromRecord**标识的内容*源*参数来在已打开**记录**对象。 默认行为是将视为*源*作为 URL 直接指向树状结构，如文件中的节点。 打开与该节点关联的默认流。  
+ **AdOpenStreamFromRecord**的*OpenOptions*值将*源*参数的内容标识为已打开的**记录**对象。 默认行为是将*源*视为直接指向树结构（如文件）中的节点的 URL。 将打开与该节点关联的默认流。  
   
- 虽然**Stream**是未打开，就可以读取的所有只读属性**Stream**。 如果**Stream**异步打开的所有后续操作 (而不检查[状态](../../../ado/reference/ado-api/state-property-ado.md)和其他只读属性) 被阻止，直到**打开**完成操作。  
+ 当**流**未打开时，可以读取**流**的所有只读属性。 如果**流**是异步打开的，则所有后续操作（除检查[状态](../../../ado/reference/ado-api/state-property-ado.md)和其他只读属性以外）都将被阻止，直到**打开**操作完成。  
   
- 除了了前面所述，通过不指定的选项外*源*，可以创建的实例**Stream**而无需将它与基础数据源相关联的内存中对象。 您可以动态地将数据添加到流通过二进制或文本数据写入**Stream**与[编写](../../../ado/reference/ado-api/write-method.md)或[WriteText](../../../ado/reference/ado-api/writetext-method.md)，或通过从文件加载数据[LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md)。  
+ 除了前面所述的选项，通过不指定*源*，你可以在内存中创建**流**对象的实例，而无需将其与基础源关联。 可以通过将二进制数据或文本数据写入**到流中**，[或者使用](../../../ado/reference/ado-api/write-method.md) [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md)从[文件中加载数据，从而](../../../ado/reference/ado-api/writetext-method.md)将数据动态添加到流中。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [流对象 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>请参阅  
- [Open 方法 （ADO 连接）](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [Open 方法 （ADO 记录）](../../../ado/reference/ado-api/open-method-ado-record.md)   
- [Open 方法 （ADO 记录集）](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
+## <a name="see-also"></a>另请参阅  
+ [Open 方法（ADO 连接）](../../../ado/reference/ado-api/open-method-ado-connection.md)   
+ [Open 方法（ADO 记录）](../../../ado/reference/ado-api/open-method-ado-record.md)   
+ [Open 方法（ADO 记录集）](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [OpenSchema 方法](../../../ado/reference/ado-api/openschema-method.md)   
  [SaveToFile 方法](../../../ado/reference/ado-api/savetofile-method.md)

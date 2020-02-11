@@ -10,10 +10,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: f175e9639b07c945b92b6fd715fa8b34ebea60c3
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73049909"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>SQL 文档的版本控制系统
@@ -113,7 +113,7 @@ ms.locfileid: "73049909"
 
 以下文章为 SQL Server 2017 添加了新内容。 本文介绍了在 2017 版中添加到 SQL Server 的功能。 大多数或所有这些新功能也是 2019 版的一部分。 下面是文章的属性。
 
-| Attribute | ReplTest1 |
+| Attribute | 值 |
 | :-------- | :---- |
 | 标题 | SQL Server 2017 的新增功能 |
 | 名字对象范围 | `>= sql-server-2017 || = sqlallproducts-allversions` |

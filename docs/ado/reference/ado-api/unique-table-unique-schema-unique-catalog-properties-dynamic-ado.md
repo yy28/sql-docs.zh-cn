@@ -1,5 +1,5 @@
 ---
-title: 控件更改到记录集基础表 (ADO) |Microsoft Docs
+title: 控制对记录集基表的更改（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,39 +16,39 @@ ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1b70920cd223223d5efb14925a6808168ca9cc16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67911681"
 ---
-# <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>唯一表、 唯一架构，唯一目录属性-动态 (ADO)
-使您能够密切控制修改为在特定的基表[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的由多个基表上的联接操作。  
+# <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>唯一表、唯一架构、唯一目录属性-动态（ADO）
+使您能够在[记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)控制对多个基表上的联接操作所形成的特定基表的修改。  
   
--   **唯一表**指定对其允许更新、 插入和删除操作的基础表的名称。  
+-   **唯一表**指定允许更新、插入和删除的基表的名称。  
   
--   **唯一的架构**指定*架构*，或表的所有者的名称。  
+-   **Unique 架构**指定表所有者的*架构*或名称。  
   
--   **唯一目录**指定*目录*，或包含表的数据库的名称。  
+-   **Unique catalog**指定包含表的数据库的*目录*或名称。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
- 设置或返回**字符串**是表、 架构或目录的名称的值。  
+ 设置或返回一个**字符串**值，该值是表、架构或目录的名称。  
   
 ## <a name="remarks"></a>备注  
- 由其目录、 架构和表名称唯一标识所需的基本表。 当**唯一表**属性设置的值**唯一架构**或**唯一目录**属性用于查找基表。 预期的位置，但不是必需的一个或两**唯一架构**并**唯一目录**属性设置之前**唯一表**属性设置。  
+ 所需基表由其目录、架构和表名唯一标识。 设置**Unique table**属性后，将使用**唯一架构**或**唯一目录**属性的值来查找基表。 它在设置**唯一的表**属性前设置，但不是必需的，也可以是**唯一的架构**和唯一的**目录**属性。  
   
- 主键**唯一表**视为整个主键**记录集**。 这是需要的主键的任何方法使用的密钥。  
+ **唯一表**的主键被视为整个**记录集**的主键。 这是用于需要主键的任何方法的键。  
   
- 虽然**唯一表**设置，则[删除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)方法影响仅命名的表。 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)，[重新同步](../../../ado/reference/ado-api/resync-method.md)，[更新](../../../ado/reference/ado-api/update-method.md)，以及[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)方法会影响任何适当基础表的**记录集**。  
+ 当设置**唯一表**时， [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)方法只影响指定的表。 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)、 [Resync](../../../ado/reference/ado-api/resync-method.md)、 [Update](../../../ado/reference/ado-api/update-method.md)和[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)方法会影响**记录集**的任何适当的基础基表。  
   
- **唯一表**执行任何自定义重新同步之前，必须指定。 如果**唯一表**未指定， [Resync Command](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)属性会产生任何效果。  
+ 在执行任何自定义重新同步之前，必须指定**唯一表**。 如果尚未指定**唯一表**， [Resync 命令](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)属性将不起作用。  
   
- 如果找不到唯一的基表，将导致运行时错误。  
+ 如果找不到唯一的基表，将产生运行时错误。  
   
- 这些动态属性被追加到**记录集**对象[属性](../../../ado/reference/ado-api/properties-collection-ado.md)集合时[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性设置为**adUseClient**。  
+ 当[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性设置为**adUseClient**时，这些动态属性将追加到**Recordset**对象[properties](../../../ado/reference/ado-api/properties-collection-ado.md) collection。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

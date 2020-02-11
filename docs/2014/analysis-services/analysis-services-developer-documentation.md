@@ -1,5 +1,5 @@
 ---
-title: 开发人员&#39;s 指南 (Analysis Services) |Microsoft Docs
+title: 开发人员&#39;指南（Analysis Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1beb0a644edb25537b85c559192ece9288c2de6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638780"
 ---
-# <a name="developer39s-guide-analysis-services"></a>开发人员&#39;s 指南 (Analysis Services)
+# <a name="developer39s-guide-analysis-services"></a>开发人员&#39;指南（Analysis Services）
     
 ## <a name="in-this-section"></a>本节内容  
  [表格模型编程](tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)  
@@ -35,10 +35,10 @@ ms.locfileid: "62638780"
  [Analysis Services 架构行集](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)  
  说明提供有关服务器状态、服务器操作和数据库对象的信息的架构行集。  
   
- [Analysis Services 脚本语言&#40;ASSL&#41;引用](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  
+ [Analysis Services 脚本语言 &#40;ASSL&#41; 参考](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  
  说明 XMLA 的 ASSL 扩展。 ASSL 提供补充 XMLA 规范的 Analysis Services 多维模型的数据定义和操作语言。  
   
- [XML for Analysis (XMLA) 参考](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
+ [XML for Analysis &#40;XMLA&#41; 引用](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
  介绍一些 XMLA 概念，它们可帮助您了解 XMLA 在自定义解决方案中的作用。 它还说明遵从 XMLA 1.1 规范的级别。  
   
   

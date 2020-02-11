@@ -1,5 +1,5 @@
 ---
-title: CompareBookmarks 方法 (ADO) |Microsoft Docs
+title: CompareBookmarks 方法（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,14 +18,14 @@ ms.assetid: d0b64286-2cc4-4a22-8f1d-9aefeebbcbc6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0d737c2f031fa3ba630eabb7e52dff0e056c3390
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919591"
 ---
 # <a name="comparebookmarks-method-ado"></a>CompareBookmarks 方法 (ADO)
-比较两个书签，并返回其相对值的指示。  
+比较两个书签，并返回其相对值的指示值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,9 +35,9 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
 ```  
   
 ## <a name="return-value"></a>返回值  
- 返回[CompareEnum](../../../ado/reference/ado-api/compareenum.md)值，该值指示由其书签的两条记录的相对行位置。  
+ 返回一个[CompareEnum](../../../ado/reference/ado-api/compareenum.md)值，该值指示由其书签表示的两个记录的相对行位置。  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *Bookmark1*  
  第一行的书签。  
   
@@ -45,20 +45,20 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
  第二行的书签。  
   
 ## <a name="remarks"></a>备注  
- 书签必须应用到同一[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象，或**记录集**对象并将其[克隆](../../../ado/reference/ado-api/clone-method-ado.md)。 您不能可靠地比较来自不同的书签**记录集**对象，即使它们创建从同一个源或命令。 也可以进行比较的书签**记录集**其基础提供程序不支持比较的对象。  
+ 书签必须应用于相同的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象或**记录集**对象及其[克隆](../../../ado/reference/ado-api/clone-method-ado.md)。 不能从不同的**记录集**对象中可靠地比较书签，即使它们是从同一源或命令创建的也是如此。 您也不能对其基础提供程序不支持比较的**记录集**对象的书签进行比较。  
   
- 一个书签，唯一标识中的某一行**记录集**对象。 使用[书签](../../../ado/reference/ado-api/bookmark-property-ado.md)要获取其书签的当前行的属性。  
+ 书签唯一标识**Recordset**对象中的行。 使用当前行的 "[书签](../../../ado/reference/ado-api/bookmark-property-ado.md)" 属性获取其书签。  
   
- 一个书签的数据类型是特定于每个提供程序，因为 ADO 公开其作为**变体**。 例如，SQL Server，书签将变为类型 DBTYPE_R8 的 (**Double**)。 ADO 将公开此类型作为**Variant**使用的子类型**Double**。  
+ 由于书签的数据类型特定于每个提供程序，因此 ADO 将其作为**变量**公开。 例如，SQL Server 书签的类型为 DBTYPE_R8 （**Double**）。 ADO 将此类型公开为具有**双精度**类型的**变体**。  
   
- 在比较书签时，ADO 将不会尝试任何类型的强制转换。 将值只被传递给提供程序进行比较。 如果传递给书签**CompareBookmarks**方法存储在不同类型的变量，它可以生成以下类型不匹配错误："自变量的类型不正确、 不在可接受范围内，或与相互冲突。"  
+ 比较书签时，ADO 不尝试任何类型的强制。 这些值只传递到进行比较的访问接口。 如果传递给**CompareBookmarks**方法的书签存储在不同类型的变量中，则它可能会生成以下类型不匹配错误： "参数的类型错误，超出了可接受的范围，或相互冲突。"  
   
- 一个书签，用于无效或格式不正确会导致错误。  
+ 无效或格式不正确的书签将导致错误。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>请参阅  
- [CompareBookmarks 方法示例 (VB)](../../../ado/reference/ado-api/comparebookmarks-method-example-vb.md)   
- [CompareBookmarks 方法示例 （VC + +）](../../../ado/reference/ado-api/comparebookmarks-method-example-vc.md)   
+## <a name="see-also"></a>另请参阅  
+ [CompareBookmarks 方法示例（VB）](../../../ado/reference/ado-api/comparebookmarks-method-example-vb.md)   
+ [CompareBookmarks 方法示例（VC + +）](../../../ado/reference/ado-api/comparebookmarks-method-example-vc.md)   
  [Bookmark 属性 (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)

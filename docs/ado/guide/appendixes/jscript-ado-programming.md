@@ -16,30 +16,30 @@ ms.assetid: 62273658-0fe7-4aac-b4d8-f725e6baf043
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8d07759405dc337667cc8971ce7795af428a0cfa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926804"
 ---
 # <a name="jscript-ado-programming"></a>JScript ADO 编程
 ## <a name="creating-an-ado-project"></a>创建 ADO 项目  
- Microsoft JScript 不支持类型库，因此不需要引用 ADO 在项目中。 因此，如命令行完成任何关联的功能是受不支持。 此外，默认情况下，ADO 枚举常量未在 JScript 中定义。  
+ Microsoft JScript 不支持类型库，因此您不需要在项目中引用 ADO。 因此，不支持任何相关功能，如命令行完成。 另外，默认情况下，未在 JScript 中定义 ADO 枚举的常量。  
   
- 但是，ADO 提供了具有两个包含文件包含要与 JScript 一起使用的以下定义：  
+ 但是，ADO 为你提供了包含以下定义的两个包含文件，以便与 JScript 一起使用：  
   
--   用于服务器端脚本使用 Adojavas.inc，ADO 库文件夹中安装。  
+-   对于服务器端脚本编写，请使用安装在 ADO 库文件夹中的 Adojavas。  
   
--   用于客户端侧脚本使用 Adcjavas.inc，ADO 库文件夹中安装。  
+-   对于客户端脚本编写，请使用安装在 ADO 库文件夹中的 Adcjavas。  
   
- 您可以复制，将从这些文件的常量定义粘贴到 ASP 页中，或者，如果你正在执行服务器端脚本，将 Adojavas.inc 文件复制到你的网站上的文件夹和引用从 ASP 页如下：  
+ 您可以将这些文件中的常量定义复制并粘贴到您的 ASP 页面中，或者，如果您正在执行服务器端脚本编写，请将 Adojavas 文件复制到您的网站上的一个文件夹中，然后从您的 ASP 页引用它，如下所示：  
   
 ```javascript
 <!--#include File="adojavas.inc"-->  
 ```  
   
 ## <a name="creating-ado-objects-in-jscript"></a>在 JScript 中创建 ADO 对象  
- 必须改用**CreateObject**函数调用：  
+ 您必须改用**CreateObject**函数调用：  
   
 ```javascript
 var Rs1;  
@@ -47,7 +47,7 @@ Rs1 = Server.CreateObject("ADODB.Recordset");
 ```  
   
 ## <a name="jscript-example"></a>JScript 示例  
- 下面的代码是打开的 Active Server Page (ASP) 文件中的 JScript 服务器端编程的一般示例**记录集**对象：  
+ 下面的代码是一个在 Active Server Page （ASP）文件中打开**Recordset**对象的 JScript 服务器端编程的一般示例：  
   
 ```javascript
 <%  @LANGUAGE="JScript" %>  

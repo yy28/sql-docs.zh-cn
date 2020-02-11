@@ -1,5 +1,5 @@
 ---
-title: InstanceName 属性 （ServerNetworkProtocolIPAddress 类） |Microsoft Docs
+title: InstanceName 属性（ServerNetworkProtocolIPAddress 类） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 79637e9f891c70a79e5388a4932957cbff8377f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62643386"
 ---
 # <a name="instancename-property-servernetworkprotocolipaddress-class"></a>InstanceName 属性（ServerNetworkProtocolIPAddress 类）
-  获取的实例的名称[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]上安装服务器网络协议。  
+  获取在其[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]上安装了服务器网络协议的实例的名称。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>组成部分  
- *object*  
+ *对象*  
  一个 [ServerNetworkProtocolIPAdress 类](servernetworkprotocolipaddress-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
@@ -45,7 +45,7 @@ object
   
 ## <a name="remarks"></a>备注  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置服务器网络协议和网络库](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

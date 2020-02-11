@@ -1,5 +1,5 @@
 ---
-title: 数据流路径编辑器 （数据查看器页） |Microsoft Docs
+title: 数据流路径编辑器（"数据查看器" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 39d263d85b8956da4366134393d48405ebe104ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060081"
 ---
 # <a name="data-flow-path-editor-data-viewers-page"></a>数据流路径编辑器（“数据查看器”页）
@@ -31,18 +31,18 @@ ms.locfileid: "66060081"
  **数据查看器类型**  
  列出数据查看器的类型。  
   
- **“添加”**  
- 单击此项可使用“配置数据查看器”  对话框来添加数据查看器。  
+ **添加**  
+ 单击此项可使用“配置数据查看器”**** 对话框来添加数据查看器。  
   
  **删除**  
  单击此项可删除所选数据查看器。  
   
  **配置**  
- 单击此项可使用“配置数据查看器”  对话框来配置所选数据查看器。  
+ 单击此项可使用“配置数据查看器”**** 对话框来配置所选数据查看器。  
   
-## <a name="see-also"></a>请参阅  
- [数据流路径编辑器&#40;常规页&#41;](general-page-of-integration-services-designers-options.md)   
- [数据流路径编辑器&#40;元数据页&#41;](../../2014/integration-services/data-flow-path-editor-metadata-page.md)   
+## <a name="see-also"></a>另请参阅  
+ [数据流路径编辑器 &#40;常规 "页面&#41;](general-page-of-integration-services-designers-options.md)   
+ [数据流路径编辑器 &#40;元数据页&#41;](../../2014/integration-services/data-flow-path-editor-metadata-page.md)   
  [数据流](data-flow/data-flow.md)   
  [在包中使用批注](use-annotations-in-packages.md)  
   

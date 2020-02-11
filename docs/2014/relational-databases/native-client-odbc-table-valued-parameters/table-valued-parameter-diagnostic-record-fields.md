@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c87e272b339357a18ef9f9a167672c1df4ed96e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62625871"
 ---
 # <a name="table-valued-parameter-diagnostic-record-fields"></a>表值参数诊断记录字段
   两个新的诊断字段 SQL_DIAG_SS_TABLE_COLUMN_NUMBER 和 SQL_DIAG_SS_TABLE_ROW_NUMBER 已经添加到诊断记录中。 这两个字段有助于确定哪些表值参数列值与错误和警告相关联。  
   
-## <a name="see-also"></a>请参阅  
- [表值参数&#40;ODBC&#41;](table-valued-parameters-odbc.md)  
+## <a name="see-also"></a>另请参阅  
+ [ODBC&#41;&#40;表值参数](table-valued-parameters-odbc.md)  
   
   

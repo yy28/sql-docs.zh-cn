@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d81180c9cbadec8816c401bc6b8c8d200e76e28b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62470181"
 ---
 # <a name="uninstall-sql-server-2014"></a>卸载 SQL Server 2014
@@ -22,7 +22,7 @@ ms.locfileid: "62470181"
   
 ## <a name="in-this-section"></a>本节内容  
  [卸载现有 SQL Server 实例（安装程序）](uninstall-an-existing-instance-of-sql-server-setup.md)  
- 本主题介绍如何手动卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的独立实例。  
+ 本主题介绍如何手动卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的独立实例。  
   
  [卸载 PowerPivot for SharePoint](uninstall-power-pivot-for-sharepoint.md)  
  本主题介绍如何手动卸载 PowerPivot for SharePoint。  
@@ -44,7 +44,7 @@ ms.locfileid: "62470181"
   
 -   [删除 SQL Server 2014 安装](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [计划 SQL Server 安装](planning-a-sql-server-installation.md)   
  [安装 SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)   
  [升级到 SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)  

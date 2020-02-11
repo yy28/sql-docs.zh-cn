@@ -14,10 +14,10 @@ ms.assetid: 5b16de66-5c39-49f5-992f-402a9eb319aa
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 82ad2fad9645d3d8277abac6328d23c7b18a0c94
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729215"
 ---
 # <a name="immediately-apply-member-permissions-master-data-services"></a>立即应用成员权限 (Master Data Services)
@@ -26,7 +26,7 @@ ms.locfileid: "73729215"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以立即应用成员权限，而不必等待定期应用的成员安全性。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  
   
 -   您必须具有在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中执行 mdm.udpSecurityMemberProcessRebuildModel 存储过程的权限。 有关详细信息，请参阅[数据库对象安全性 (Master Data Services)](../master-data-services/database-object-security-master-data-services.md)。  
@@ -37,7 +37,7 @@ ms.locfileid: "73729215"
   
 2.  创建新查询。  
   
-3.  键入以下文本，用数据库名称替换 database，用模型名称替换 Model_Name。  
+3.  键入以下文本，用数据库名称替换 database**，用模型名称替换 Model_Name**。  
   
     ```  
     USE [database];  
@@ -52,7 +52,7 @@ ms.locfileid: "73729215"
 4.  运行查询。  
   
 ## <a name="see-also"></a>另请参阅  
- [分配层次结构成员权限 (Master Data Services)](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
- [层次结构成员权限 (Master Data Services)](../master-data-services/hierarchy-member-permissions-master-data-services.md)  
+ [将层次结构成员权限分配 &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
+ [层次结构成员权限 &#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)  
   
   

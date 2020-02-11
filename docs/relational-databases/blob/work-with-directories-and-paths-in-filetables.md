@@ -13,10 +13,10 @@ ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2f31288df7d03bf527f1ee0a0bcd3b8ed84bba19
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908702"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>在 FileTable 中使用目录和路径
@@ -94,10 +94,10 @@ GO
   
 ||||  
 |-|-|-|  
-|*is_directory* **值**|*file_stream* **值**|**行为**|  
-|FALSE|NULL|这是将被系统定义的约束捕获的无效组合。|  
+|*is_directory* **value**|*file_stream* **value**|**行为**|  
+|FALSE|Null|这是将被系统定义的约束捕获的无效组合。|  
 |FALSE|\<value>|该项表示一个文件。|  
-|TRUE|NULL|该项表示一个目录。|  
+|TRUE|Null|该项表示一个目录。|  
 |TRUE|\<value>|这是将被系统定义的约束捕获的无效组合。|  
   
 ##  <a name="alwayson"></a> 将虚拟网络名称 (VNN) 用于 AlwaysOn 可用性组  

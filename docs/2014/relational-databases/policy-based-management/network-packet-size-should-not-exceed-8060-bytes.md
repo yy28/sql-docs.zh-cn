@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1d66ba3298b2346e2ec139f27ec53d6104ad0ac9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62625806"
 ---
 # <a name="network-packet-size-should-not-exceed-8060-bytes"></a>网络数据包大小不应超过 8060 字节
@@ -28,7 +28,7 @@ ms.locfileid: "62625806"
 ## <a name="for-more-information"></a>有关详细信息  
  [Microsoft 知识库文章 903002](https://go.microsoft.com/fwlink/?linkid=117749)  
   
-## <a name="see-also"></a>请参阅  
- [使用基于策略的管理来监视和强制执行最佳实践](monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
+## <a name="see-also"></a>另请参阅  
+ [使用基于策略的管理来监视和强制执行最佳做法](monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

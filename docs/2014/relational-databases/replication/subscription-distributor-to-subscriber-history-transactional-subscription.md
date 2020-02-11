@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b8d858e8b7ab62ac22902a15159163f8d6d01889
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62630561"
 ---
 # <a name="subscription-distributor-to-subscriber-history-transactional-subscription"></a>订阅，分发服务器到订阅服务器的历史记录（事务订阅）
@@ -28,7 +28,7 @@ ms.locfileid: "62630561"
  **视图**  
  选择要查看哪些分发代理会话。 分发代理通常连续运行，因此可能只有一个可供查看的会话。  
   
- **“状态”**  
+ **Status**  
  分发代理的状态。 下面列出了可能的状态值：  
   
 -   错误  
@@ -60,7 +60,7 @@ ms.locfileid: "62630561"
  **“所选会话的错误详细信息或消息”**  
  只有当所选会话在 **“状态”** 列中显示 **“错误”** 值时，才会显示此项。 此文本区域显示详细错误信息以及出错时尝试执行的命令。 另外，还包括指向与该错误相关的其他内容的链接。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [启动复制监视器](monitor/start-the-replication-monitor.md)   
  [使用复制监视器查看信息和执行任务](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [监视复制](monitoring-replication.md)   

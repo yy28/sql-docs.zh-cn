@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6bfb1bf3cd43bac47dfb06e4f24c74dc4835709b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629740"
 ---
 # <a name="join-filters"></a>Join Filters
@@ -43,7 +43,7 @@ ms.locfileid: "62629740"
 LoginID = SUSER_SNAME()  
 ```  
   
- 此筛选器确保每个雇员的订阅仅包含 **HumanResources.Employee** 表中与该雇员相关的数据（这在本例中是一个单行）。 有关详细信息，请参阅 [Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md)。  
+ 此筛选器确保每个雇员的订阅仅包含 **HumanResources.Employee** 表中与该雇员相关的数据（这在本例中是一个单行）。 有关详细信息，请参阅 [参数化行筛选器](parameterized-filters-parameterized-row-filters.md)。  
   
  下一步是将此筛选器扩展到各相关表，所使用的语法类似于指定两表间联接所使用的语法。 第一个联接筛选器子句是：  
   
@@ -86,7 +86,7 @@ SalesOrderHeader.SalesOrderID = SalesOrderDetail.SalesOrderID
   
      强烈建议在联接筛选器中而不要在子查询中表示所有这类逻辑。 如果您的应用程序要求行筛选器使用子查询，请确保子查询仅引用不发生更改的查找数据。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [为合并复制筛选已发布数据](filter-published-data-for-merge-replication.md)   
  [参数化行筛选器](parameterized-filters-parameterized-row-filters.md)  
   

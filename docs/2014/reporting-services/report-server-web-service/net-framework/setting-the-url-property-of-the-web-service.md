@@ -18,14 +18,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4036e38a0d0eb5e76934fa119b3bcc37342062a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62520283"
 ---
 # <a name="setting-the-url-property-of-the-web-service"></a>设置 Web 服务的 Url 属性
-  在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 应用程序中，随时可以修改应用程序当前指向的报表服务器 Web 服务的基 URL。 为此，只需设置服务对象的“Url”  属性。 例如：  
+  在[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]应用程序中，你可以随时修改应用程序当前定向到的报表服务器 Web 服务的基 URL。 为此，只需设置服务对象的“Url”**** 属性。 例如：  
   
 ```vb  
 Dim rs As New ReportingService2010()  
@@ -106,7 +106,7 @@ class Sample
   
  有关创建初始 Web 服务代理的详细信息，请参阅[创建 Web 服务代理](creating-the-web-service-proxy.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>   
  <xref:ReportService2010.ReportingService2010.GetItemDefinition%2A>   
  [使用 Web 服务和 .NET Framework 生成应用程序](building-applications-using-the-web-service-and-the-net-framework.md)   

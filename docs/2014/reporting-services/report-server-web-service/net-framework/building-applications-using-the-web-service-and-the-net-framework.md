@@ -21,18 +21,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5136c67077ff90e7bbbd66ae72fed891267ba7a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62520338"
 ---
 # <a name="building-applications-using-the-web-service-and-the-net-framework"></a>Building Applications Using the Web Service and the .NET Framework
-  借助 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]，可以通过熟悉的编程构造（如方法、基元类型和用户定义的复杂类型）使用 Web 服务。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 包含可用来创建 Web 服务客户端的基础结构和工具，这些客户端可以调用任何符合万维网联盟 (W3C) 标准的 Web 服务。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]利用，你可以使用熟悉的编程构造（如方法、基元类型和用户定义的复杂类型）来处理 Web 服务。 
+  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 包含可用来创建 Web 服务客户端的基础结构和工具，这些客户端可以调用任何符合万维网联盟 (W3C) 标准的 Web 服务。  
   
  报表服务器 Web 服务客户端是使用简单对象访问协议 (SOAP) 消息与报表服务器通信的任何组件或应用程序。  
   
- 要使用 .NET Framework 创建报表服务器 Web 服务，请按照以下基本步骤进行操作  ：  
+ **若要使用 .NET Framework 创建报表服务器 Web 服务客户端，请执行以下基本步骤：**  
   
 1.  创建 Web 服务的代理类。  
   
@@ -48,21 +49,21 @@ ms.locfileid: "62520338"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|Description|  
+|主题|说明|  
 |-----------|-----------------|  
-|[创建 Web 服务代理](creating-the-web-service-proxy.md)|介绍使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 将代理类添加到项目的方法。|  
+|[创建 Web 服务代理](creating-the-web-service-proxy.md)|介绍使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]将代理类添加到项目的方法。|  
 |[Web 服务身份验证](web-service-authentication.md)|介绍如何对针对报表服务器 Web 服务的调用进行身份验证。|  
-|[调用 Web 服务方法](calling-web-service-methods.md)|介绍如何在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中使用 SOAP API 调用 Web 服务方法。|  
+|[调用 Web 服务方法](calling-web-service-methods.md)|介绍如何在中[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]使用 SOAP API 调用 Web 服务方法。|  
 |[设置 Web 服务的 Url 属性](setting-the-url-property-of-the-web-service.md)|说明在创建 Web 引用之后，如何以编程方式将 Web 服务代理定向到新的服务器 URL。|  
 |[提供 Web 服务方法参数](supplying-web-service-method-arguments.md)|介绍如何调用 Web 服务方法并提供方法参数。|  
 |[省略可选 Web 服务对象的值](omitting-values-for-optional-web-service-objects.md)|介绍如何忽略可选 Web 服务对象的值。|  
-|[使用安全 Web 服务方法](using-secure-web-service-methods.md)|介绍 SecureConnectionLevel 设置以及它影响 Reporting Services SOAP API 使用的方式  。|  
+|[使用安全 Web 服务方法](using-secure-web-service-methods.md)|介绍 SecureConnectionLevel 设置以及它影响 Reporting Services SOAP API 使用的方式****。|  
 |[将设备信息设置传递给呈现扩展插件](passing-device-information-settings-to-rendering-extensions.md)|介绍用于将报表呈现为不同格式的设备信息设置。|  
 |[Reporting Services 传递扩展插件设置](reporting-services-delivery-extension-settings.md)|介绍用于通过报表服务器电子邮件传递报表的设置。|  
 |[使用 Reporting Services SOAP 标头](../../report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)|说明如何在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中使用 SOAP 标头。|  
 |[介绍 Reporting Services 中的异常处理](../../report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)|提供有关 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 处理错误时所用方法的信息。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [报表服务器 Web 服务](../report-server-web-service.md)   
  [技术参考 (SSRS)](../../technical-reference-ssrs.md)  
   

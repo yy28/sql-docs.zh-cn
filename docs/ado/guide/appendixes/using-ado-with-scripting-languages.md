@@ -1,5 +1,5 @@
 ---
-title: 使用 ADO 与脚本语言 |Microsoft Docs
+title: 使用 ADO 和脚本语言 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,58 +14,58 @@ ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b322dacbf85ec24b58e315ecbbf9d547d1481f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926480"
 ---
 # <a name="using-ado-with-scripting-languages"></a>配合使用 ADO 与脚本语言
-在脚本编写环境中，可使用 ADO 公开数据通过服务器端脚本。 在此方案中，ADO，基础 OLE DB 提供程序使用，并引用给定的数据存储区所需的任何其他组件安装在运行 Internet 信息服务 (IIS) 的服务器上。 ADO 使用 Active Server Pages (ASP)，是可以生成 HTML，例如脚本中引用的组件。 此 HTML 内容可以通过 HTTP 传递给客户端 Web 浏览器。 通过使用脚本，Web 页可以将操作发送回服务器端脚本，从而允许你更新、 遍历时，或查看特定的数据。  
+在脚本环境中，ADO 允许通过服务器端脚本来公开数据。 在此方案中，ADO、它使用的基础 OLE DB 提供程序以及引用给定数据存储所需的任何其他组件都安装在运行 Internet Information Services （IIS）的服务器上。 使用 Active Server Pages （ASP），ADO 是可生成 HTML 的脚本中引用的组件，例如。 可以通过 HTTP 将此 HTML 内容传递到客户端 Web 浏览器。 通过使用脚本，网页可以将操作发送回服务器端脚本，从而使您可以更新、遍历或查看特定数据。  
   
- 在网页中使用 ActiveX 对象之前，务必要知道的对象是否可安全执行脚本。 如果对象被视为可安全执行脚本，则意味着控件不能在用户计算机上执行任何有害操作，并因此可以执行而不请求用户的批准。 下表列出了 ADO 对象，并指示它们是否可安全执行脚本。  
+ 在网页中使用 ActiveX 对象之前，请务必了解该对象是否对脚本是安全的。 如果对象被视为脚本编写安全，则表示该控件不能在用户的计算机上执行任何有害操作，因此可以在不请求用户批准的情况下执行。 下表列出了 ADO 对象，并指示它们是否对脚本是安全的。  
   
-|Object|用于编写脚本安全？|  
+|Object|脚本安全？|  
 |------------|-------------------------|  
 |ADO 连接|是|  
 |ADO 命令|否|  
 |ADO 参数|否|  
 |ADO 记录集|是|  
 |ADO 记录|是|  
-|ADO Stream|是|  
+|ADO 流|是|  
 |ADO 错误|否|  
 |ADOX 目录|否|  
 |ADOX 单元集|否|  
-|RDS 数据控件|是|  
-|RDS 数据空间|是|  
+|RDS DataControl|是|  
+|RDS 空间|是|  
 |RDS DataFactory|否|  
   
- 下表列出了包括与 Windows DAC/MDAC 的提供程序，并指示它们是否可安全执行脚本。  
+ 下表列出了 Windows DAC/MDAC 中包含的提供程序，并指示它们是否对脚本是安全的。  
   
-|提供程序|用于编写脚本安全？|  
+|提供程序|脚本安全？|  
 |--------------|-------------------------|  
 |形状|是|  
-|持久保存|是|  
+|Persist|是|  
 |Remote|是|  
-|OLE DB Provider for SQL Server (SQLOLEDB)|否|  
-|OLE DB Provider for ODBC (MSDASQL)|否|  
+|SQL Server 的 OLE DB 提供程序（SQLOLEDB）|否|  
+|ODBC 的 OLE DB 提供程序（MSDASQL）|否|  
   
 ## <a name="odbc-data-sources"></a>ODBC 数据源  
- 脚本编写和非脚本编写的 ADO 代码之间的一个显著区别是 ODBC 数据源时，如果使用。 对于非脚本编写的应用程序，可以创建一个用户 DSN 中 ODBC 数据源管理器。 对于在 IIS 下运行的脚本，您必须创建系统 DSN;否则脚本将无法识别创建的数据源。 这适用于使用 Microsoft OLE DB Provider for ODBC 通过 Microsoft IIS 任何 ADO 脚本应用程序。  
+ 脚本编写和非脚本 ADO 代码之间的一个明显区别是 ODBC 数据源（如果使用）。 对于非脚本应用程序，可以在 ODBC 数据源管理器中创建一个用户 DSN。 对于在 IIS 下运行的脚本，必须创建系统 DSN;否则，您的脚本将无法识别您创建的数据源。 这适用于通过 microsoft IIS 使用适用于 ODBC 的 Microsoft OLE DB 提供程序的任何 ADO 脚本应用程序。  
   
 ## <a name="referencing-the-ado-library"></a>引用 ADO 库  
- 使用脚本语言不适用。  
+ 不适用于脚本语言。  
   
 ## <a name="handling-events"></a>处理事件  
- 使用脚本语言不适用。  
+ 不适用于脚本语言。  
   
- 以下主题包含有关使用 ADO 与脚本语言的更具体信息：  
+ 以下主题包含有关使用 ADO 和脚本语言的更具体的信息：  
   
 -   [VBScript ADO 编程](../../../ado/guide/appendixes/vbscript-ado-programming.md)  
   
 -   [JScript ADO 编程](../../../ado/guide/appendixes/jscript-ado-programming.md)  
   
-## <a name="see-also"></a>请参阅  
- [Microsoft ActiveX 数据对象 (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
- [使用 ADO 与 Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
+## <a name="see-also"></a>另请参阅  
+ [Microsoft ActiveX 数据对象（ADO）](../../../ado/microsoft-activex-data-objects-ado.md)   
+ [将 ADO 与 Microsoft Visual Basic 一起使用](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
  [配合使用 ADO 与 Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   

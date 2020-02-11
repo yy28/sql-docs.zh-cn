@@ -1,5 +1,5 @@
 ---
-title: AppendChunk 和 GetChunk 方法示例 (VB) |Microsoft Docs
+title: AppendChunk 和 GetChunk 方法示例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: c07862b5-e466-46bd-910b-59ac96709cb9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f7183dbc6b54e5560784e5de602a45da8e5a235a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920627"
 ---
-# <a name="appendchunk-and-getchunk-methods-example-vb"></a>AppendChunk 和 GetChunk 方法示例 (VB)
-此示例使用[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)并[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)方法以使用另一条记录中的数据填充图像字段。  
+# <a name="appendchunk-and-getchunk-methods-example-vb"></a>AppendChunk 和 GetChunk 方法示例（VB）
+此示例使用[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)和[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)方法来填充包含另一记录中的数据的图像字段。  
   
 ```  
 'BeginAppendChunkVB  
@@ -147,8 +147,8 @@ End Sub
 'EndAppendChunkVB  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [AppendChunk 方法 (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
- [字段对象](../../../ado/reference/ado-api/field-object.md)   
- [GetChunk 方法 (ADO)](../../../ado/reference/ado-api/getchunk-method-ado.md)   
- [参数对象](../../../ado/reference/ado-api/parameter-object.md)
+## <a name="see-also"></a>另请参阅  
+ [AppendChunk 方法（ADO）](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
+ [Field 对象](../../../ado/reference/ado-api/field-object.md)   
+ [GetChunk 方法（ADO）](../../../ado/reference/ado-api/getchunk-method-ado.md)   
+ [Parameter 对象](../../../ado/reference/ado-api/parameter-object.md)

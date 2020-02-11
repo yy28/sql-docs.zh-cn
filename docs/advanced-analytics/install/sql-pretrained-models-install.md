@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 97da2ed795d002fa47900eb21ead90b48b525387
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727558"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>在 SQL Server 上安装预先定型的机器学习模型
@@ -25,7 +25,7 @@ ms.locfileid: "73727558"
 
 若要使用预先定型的模型，请调用下表中列出的函数。
 
-| R 函数 (MicrosoftML) | Python 函数 (microsoftml) | 用法 |
+| R 函数 (MicrosoftML) | Python 函数 (microsoftml) | 使用情况 |
 |--------------------------|-------------------------------|-------|
 | [getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](https://docs.microsoft.com//machine-learning-server/python-reference/microsoftml/get-sentiment) | 对文本输入生成正负情绪分数。 |
 | [featurizeImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | 从图像文件输入中提取文本信息。 |

@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f3296d0162136a441d141d32089a674a67e7b5b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62466069"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>用于对内存优化表进行分区的应用程序模式
@@ -34,7 +34,7 @@ ms.locfileid: "62466069"
   
 -   添加活动分区。  
   
- ![分区切换。](../../database-engine/media/hekaton-partitioned-tables.gif "Partition switch.")  
+ ![分区切换。](../../database-engine/media/hekaton-partitioned-tables.gif "分区切换。")  
 活动数据维护  
   
  从删除 ActiveOrder 开始的操作需要在维护时段中完成，以避免在删除数据与切入临时表之间的时间内发生缺少数据的查询。  
@@ -209,7 +209,7 @@ SELECT OBJECT_NAME( object_id) , partition_number , row_count  FROM sys.dm_db_pa
   WHERE object_id = OBJECT_ID( 'dbo.SalesOrders_cold') AND index_id = 1;  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [内存优化表](memory-optimized-tables.md)  
+## <a name="see-also"></a>另请参阅  
+ [Memory-Optimized Tables](memory-optimized-tables.md)  
   
   

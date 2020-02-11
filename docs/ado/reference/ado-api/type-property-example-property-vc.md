@@ -1,5 +1,5 @@
 ---
-title: 键入属性示例 （属性） （VC + +） |Microsoft Docs
+title: Type 属性示例（属性）（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,16 +15,16 @@ ms.assetid: a4e23508-fbf3-4468-be55-212e7238802b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e13079d18c8887aa0cdba8e5ae06f86eebca897c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938867"
 ---
 # <a name="type-property-example-property-vc"></a>Type 属性示例（属性）(VC++)
-此示例演示[类型](../../../ado/reference/ado-api/type-property-ado.md)属性。 这是一个模型用于列出名称和类型的集合，如实用工具[属性](../../../ado/reference/ado-api/properties-collection-ado.md)，[字段](../../../ado/reference/ado-api/fields-collection-ado.md)，等等。  
+此示例演示了[Type](../../../ado/reference/ado-api/type-property-ado.md)属性。 它是一种用于列出集合名称和类型的实用工具的模型，如[属性](../../../ado/reference/ado-api/properties-collection-ado.md)、[字段](../../../ado/reference/ado-api/fields-collection-ado.md)等。  
   
- 我们不需要打开[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)访问其**属性**集合; 它们就应该考虑是否存在时**记录集**实例化对象。 但是，将设置[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性设置为**adUseClient**添加到多个动态属性**记录集**对象的**属性**集合，使该示例的一些更有趣。 为了进行说明，我们显式使用[项](../../../ado/reference/ado-api/item-property-ado.md)属性来访问每个[属性](../../../ado/reference/ado-api/property-object-ado.md)对象。  
+ 不需要打开[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)来访问其**Properties**集合;当实例化**Recordset**对象时，它们就会存在。 但是，如果将[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性设置为**adUseClient** ，则会将多个动态属性添加到**Recordset**对象的**properties**集合，使示例更有趣一些。 为了举例说明，我们显式使用[Item](../../../ado/reference/ado-api/item-property-ado.md)属性来访问每个[属性](../../../ado/reference/ado-api/property-object-ado.md)对象。  
   
 ```  
 // BeginTypePropertyCpp.cpp  
@@ -215,6 +215,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [属性对象 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
+## <a name="see-also"></a>另请参阅  
+ [Property 对象（ADO）](../../../ado/reference/ado-api/property-object-ado.md)   
  [Type 属性 (ADO)](../../../ado/reference/ado-api/type-property-ado.md)

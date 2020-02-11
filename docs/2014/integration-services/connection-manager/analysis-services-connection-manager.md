@@ -15,21 +15,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8f8ca9ce77e151e761e2cbb1f9128a44784af8ca
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68890394"
 ---
 # <a name="analysis-services-connection-manager"></a>Analysis Services 连接管理器
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接管理器使包能够连接到运行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库的服务器，或连接到用于访问多维数据集和维度数据的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目。 在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中开发包时，仅可连接到 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]项目。 在运行时，包会连接到您已部署 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的服务器和数据库。  
+  连接管理器使包能够[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]连接到运行数据库的服务器，或连接到提供多维[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据集和维度数据访问权限的项目。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中开发包时，仅可连接到 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]项目。 在运行时，包会连接到您已部署 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的服务器和数据库。  
   
  任务（如 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 执行 DDL 任务和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 处理任务）和目标（如数据挖掘模型定型目标）都使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接管理器。  
   
  有关 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库的详细信息，请参阅[多维模型数据库 (SSAS)](https://docs.microsoft.com/analysis-services/multidimensional-models/multidimensional-model-databases-ssas)。  
   
 ## <a name="configuration-of-the-analysis-services-connection-manager"></a>Analysis Services 连接管理器的配置  
- 将[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]连接管理器添加到包时, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]将创建[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]一个连接管理器, 该管理器在运行时作为连接进行解析, 设置连接管理器属性, 并将该连接管理器添加到包`Connections`上的集合。 该连接管理器的 `ConnectionManagerType` 属性设置为 `MSOLAP100`。  
+ 将[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]连接管理器添加到包时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ，将创建一个连接管理器，该管理器[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]在运行时作为连接进行解析，设置连接管理器属性，并将该连接`Connections`管理器添加到包上的集合。 该连接管理器的 `ConnectionManagerType` 属性设置为 `MSOLAP100`。  
   
  可以通过下列方式配置 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接管理器：  
   

@@ -1,5 +1,5 @@
 ---
-title: 以 XML 格式保留记录 |Microsoft Docs
+title: 用 XML 格式保存记录 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,19 +17,19 @@ ms.assetid: f3113ec4-ae31-428f-89c6-bc1024f128ea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 263f83093c46f4265559fe0b1844112687d4fc67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924596"
 ---
 # <a name="persisting-records-in-xml-format"></a>以 XML 格式保留记录
-ADTG 格式类似**记录集**暂留以 XML 格式使用 Microsoft OLE DB 永久性提供程序实现。 此提供程序从已保存的 XML 文件或流，其中包含生成的 ADO 的架构信息生成只进、 只读的行集。 同样，可能需要 ADO**记录集**，生成的 XML，并将其保存到文件或任何对象，该实现 COM 对象**IStream**接口。 (事实上，一个文件是支持的对象只是另一个示例**IStream**。)对于版本 2.5 及更高版本，ADO 依赖于在 Microsoft XML 分析器 (MSXML) 若要将 XML 加载到**记录集**; 因此 msxml.dll 是必需的。  
+与 ADTG 格式一样，XML 格式的**记录集**持久性是通过 Microsoft OLE DB 永久性提供程序实现的。 此提供程序从保存的 XML 文件或包含 ADO 生成的架构信息的流中生成只进只读行集。 同样，它可以采用 ADO**记录集**，生成 XML，并将其保存到文件或实现 COM **IStream**接口的任何对象。 （事实上，文件只是支持**IStream**的对象的另一个示例。）对于版本2.5 及更高版本，ADO 依赖 Microsoft XML 分析器（MSXML）将 XML 加载到**记录集中**;因此需要 msxml .dll。  
   
 > [!NOTE]
->  保存层次结构时，将应用一些限制**记录集**（数据形状） 为 XML 格式。 如果不能保存到 XML 层次结构**记录集**包含挂起的更新，且不能保存参数化分层**记录集**。 有关详细信息，请参阅[持久保存筛选和分层记录集](../../../ado/guide/data/persisting-filtered-and-hierarchical-recordsets.md)。  
+>  将分层**记录集**（数据形状）保存到 XML 格式时，有一些限制。 如果分层**记录集**包含挂起的更新，则无法保存到 XML，并且无法保存参数化分层**记录集**。 有关详细信息，请参阅[持久化筛选的和分层记录集](../../../ado/guide/data/persisting-filtered-and-hierarchical-recordsets.md)。  
   
- 若要将数据保存到 XML 并将其重新加载的最简单方法同样通过 ADO 是与**保存**并**打开**方法，分别。 下面的 ADO 代码示例演示如何保存中的数据**标题**到名为 titles.sav 文件表。  
+ 将数据保存到 XML 并通过 ADO 再次加载数据的最简单方法是分别使用**Save**和**Open**方法。 下面的 ADO 代码示例演示如何将**Titles**表中的数据保存到名为 sav 的文件中。  
   
 ```  
 Dim rs as new Recordset  
@@ -59,16 +59,16 @@ rs.Open "titles.sav",,,,adCmdFile
 rs2.open s  
 ```  
   
- ADO 始终仍然存在整个**记录集**对象。 如果你想要保留的行的子集**记录集**对象，请使用**筛选器**方法，以缩小行或更改你的选择子句。 但是，你必须打开**记录集**与客户端游标的对象 (**CursorLocation** = **adUseClient**) 使用**筛选**用于保存行的子集的方法。 例如，若要检索以字母"b"开头的标题，您可以应用筛选器打开到**记录集**对象：  
+ ADO 始终保留整个**记录集**对象。 如果要保存**Recordset**对象的一部分行，请使用**筛选器**方法缩小行或更改选择子句。 但是，必须使用客户端游标（**CursorLocation** = **adUseClient**）打开**记录集**对象，才能使用**筛选器**方法保存行的子集。 例如，若要检索以字母 "b" 开头的标题，可以将筛选器应用于打开的**Recordset**对象：  
   
 ```  
 rs.Filter "title_id like 'B*'"  
 rs.Save "btitles.sav", adPersistXML  
 ```  
   
- ADO 始终使用客户端游标引擎行集来生成可滚动，可存为书签**记录集**基于只进数据暂留提供程序生成的对象。  
+ ADO 始终使用客户端游标引擎行集在永久性提供程序生成的只进数据上生成可滚动的 bookmarkable**记录集**对象。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [XML 暂留格式](../../../ado/guide/data/xml-persistence-format.md)  
   

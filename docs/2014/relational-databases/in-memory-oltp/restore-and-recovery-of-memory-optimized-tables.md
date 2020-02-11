@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9560249e07cbd360914b5dab21eb68dc8e7f013f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62467241"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>内存优化表的还原和恢复
@@ -53,7 +53,7 @@ ms.locfileid: "62467241"
   
  此时，你可以创建资源池到数据库的绑定，然后使用 RESTORE WITH RECOVERY 使已还原的数据库处于联机状态。  由于在使数据库处于联机状态之前，绑定已就绪，其内存中 OLTP 内存消耗已正确算入。 这要求仅还原数据库一次。 第一条 RESTORE 命令是一条仅读取备份标头的信息性命令，而最后一条命令只触发恢复而实际不还原任何位。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [内存优化表的备份、还原和恢复](memory-optimized-tables.md)  
   
   

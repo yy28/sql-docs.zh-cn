@@ -1,5 +1,5 @@
 ---
-title: 控制事务 (ADO) |Microsoft Docs
+title: 控制事务（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,14 +13,14 @@ ms.assetid: 189240e8-3ffa-4024-81a9-c6cb5d17eee0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3a8a13ee7637c0cb16e33e626a218e28242dabf4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925779"
 ---
 # <a name="controlling-transactions-ado"></a>控制事务 (ADO)
-ADO 支持事务处理中的连接的帮助**BeginTrans**， **CommitTrans**，并**RollbackTrans**上的方法**连接**对象。 下面的简单代码段说明了实现事务处理在 ADO 中的大致的思路。  
+ADO 支持连接中的事务处理，并提供**连接**对象的**BeginTrans**、 **CommitTrans**和**RollbackTrans**方法的帮助。 以下简单的代码片段演示了如何在 ADO 中实现事务处理。  
   
 ```  
 Const DS = "MySqlServer"  
@@ -77,6 +77,6 @@ oRs.Close
 oConn.Close  
 ```  
   
- 此处事务处理用于确保作为一个单元的操作，更新两个记录和两个产品名称为交换或不会改变。  
+ 此处的事务处理用于确保两个记录更新为一个操作单位，并且两个产品名称要么相互替换，要么根本不进行更改。  
   
- 有关事务处理的详细的讨论，请参阅[更新和保存数据](../../../ado/guide/data/updating-and-persisting-data.md)。
+ 有关事务处理的详细讨论，请参阅[更新和保留数据](../../../ado/guide/data/updating-and-persisting-data.md)。

@@ -16,21 +16,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9ba2f9688adb5579616693470be151d757818117
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72796627"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>使用 WMI 提供程序管理服务和网络设置
   WMI 提供程序是可供 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 管理控制台 (MMC) 用来管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务和网络协议的已发布接口。 在 SMO 中，<xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 对象表示 WMI 提供程序。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 对象的运行与通过 <xref:Microsoft.SqlServer.Management.Smo.Server> 对象建立的与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的连接无关，而是使用 Windows 凭据连接到 WMI 服务。  
+ 
+  <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 对象的运行与通过 <xref:Microsoft.SqlServer.Management.Smo.Server> 对象建立的与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的连接无关，而是使用 Windows 凭据连接到 WMI 服务。  
   
 ## <a name="example"></a>示例  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  
   
- 对于使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] WMI 提供程序的程序，必须包括 `Imports` 语句以限定 WMI 命名空间。 请在应用程序的其他 `Imports` 语句之后、任何声明之前插入该语句，例如：  
+ 对于使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wmi 提供程序的程序，必须包含`Imports`语句以限定 wmi 命名空间。 请在应用程序的其他 `Imports` 语句之后、任何声明之前插入该语句，例如：  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   

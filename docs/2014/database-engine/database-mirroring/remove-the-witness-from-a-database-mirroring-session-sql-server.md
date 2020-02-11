@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0fee60fa1a78c2d6d0becb63b2319105016adf1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754669"
 ---
 # <a name="remove-the-witness-from-a-database-mirroring-session-sql-server"></a>从数据库镜像会话删除见证服务器 (SQL Server)
@@ -30,19 +30,19 @@ ms.locfileid: "62754669"
   
      [安全性](#Security)  
   
--   **删除见证服务器，使用：**  
+-   **若要替换删除见证服务器，请使用：**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **跟进：** [删除见证服务器之后](#FollowUp)  
+-   **跟进：**  [在删除见证服务器之后](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要对数据库拥有 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -51,7 +51,7 @@ ms.locfileid: "62754669"
   
 1.  连接至主体服务器实例，在 **对象资源管理器** 窗格中，单击服务器名称以展开服务器树。  
   
-2.  展开 **“数据库”** ，并选择要删除其见证服务器的数据库。  
+2.  展开 **“数据库”**，并选择要删除其见证服务器的数据库。  
   
 3.  右键单击数据库，选择 **“任务”** ，再单击 **“镜像”** 。 这样便可打开 **“数据库属性”** 对话框的 **“镜像”** 页。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "62754669"
   
 3.  发出以下语句：  
   
-     [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) *database_name* SET WITNESS OFF  
+     [更改数据库](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) *DATABASE_NAME*将见证服务器设置为关闭  
   
      其中， *database_name* 为镜像数据库的名称。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62754669"
     ALTER DATABASE AdventureWorks2012 SET WITNESS OFF ;  
     ```  
   
-##  <a name="FollowUp"></a> 跟进：删除见证服务器之后  
+##  <a name="FollowUp"></a>跟进：在删除见证服务器之后  
  关闭见证服务器将根据事务安全设置更改 [运行模式](database-mirroring-operating-modes.md)：  
   
 -   如果事务安全设置为 FULL（默认值），则会话将使用不带自动故障转移的高安全同步模式。  
@@ -96,10 +96,10 @@ ms.locfileid: "62754669"
   
 -   [添加或替换数据库镜像见证服务器 (SQL Server Management Studio)](../database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ALTER DATABASE 数据库镜像 (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
- [更改数据库镜像会话中的事务安全 (Transact-SQL)](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)   
- [使用 Windows 身份验证添加数据库镜像见证服务器 (Transact-SQL)](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)   
+ [&#40;Transact-sql&#41;更改数据库镜像会话中的事务安全](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)   
+ [使用 Windows 身份验证添加数据库镜像见证服务器 &#40;Transact-sql&#41;](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)   
  [数据库镜像见证服务器](database-mirroring-witness.md)  
   
   

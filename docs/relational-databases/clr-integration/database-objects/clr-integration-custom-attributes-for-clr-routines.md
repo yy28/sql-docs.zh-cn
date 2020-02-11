@@ -22,15 +22,15 @@ ms.assetid: 95069d22-b05d-4670-b053-15ee2a664e33
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f1ff346abc41ee4589a8d0b2193b167fb2cf24e0
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70212377"
 ---
 # <a name="clr-integration-custom-attributes-for-clr-routines"></a>CLR 例程的 CLR 集成自定义属性
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  列出的属性可应用于公共语言运行时（CLR）例程、用户定义类型和在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中注册的用户定义聚合。 如果未应用此属性，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将采用默认值。 列出的属性在**Microsoft sql**命名空间中定义。  
+  列出的属性可应用于公共语言运行时（CLR）例程、用户定义的类型以及在中[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]注册的用户定义聚合。 如果未应用此属性，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将采用默认值。 列出的属性在**Microsoft sql**命名空间中定义。  
   
 ## <a name="the-sqluserdefinedaggregate-attribute"></a>SqlUserDefinedAggregate 特性  
  **SqlUserDefinedAggregate**特性指示应将方法注册为用户定义的聚合。 必须使用此属性注释每个用户定义聚合。  

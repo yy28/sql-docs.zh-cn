@@ -1,5 +1,5 @@
 ---
-title: 作业步骤属性：新建作业步骤 （常规页） |Microsoft Docs
+title: 作业步骤属性：新建作业步骤（"常规" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,28 +13,28 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8a957e2032f3be0e48d5bcfa4ed4508775e04477
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62510951"
 ---
 # <a name="job-step-properties-new-job-step-general-page"></a>作业步骤属性：新建作业步骤（“常规”页）
-  使用此页可以查看和更改 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤的属性或定义新的作业步骤。  
+  使用此页可以查看和更改[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理作业步骤的属性或定义新的作业步骤。  
   
- 若要导航到此页，请在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对象资源管理器中展开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理，右键单击“作业”，单击“新建作业”，选择“步骤”页，再单击“新建”。 也可以通过以下方法导航到此页：在对象资源管理器中右键单击某项作业，单击“属性”，选择“步骤”页，再依次单击“新建”、“插入”或“编辑”。  
+ 若要导航到此页，请在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对象资源管理器中展开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理，右键单击“作业”****，单击“新建作业”****，选择“步骤”**** 页，再单击“新建”****。 也可以通过以下方法导航到此页：在对象资源管理器中右键单击某项作业，单击“属性”****，选择“步骤”**** 页，再依次单击“新建”****、“插入”**** 或“编辑”****。  
   
 ## <a name="options"></a>选项  
  **步骤名称**  
  设置作业步骤的名称。  
   
- **类型**  
+ 类型   
  设置作业步骤使用的子系统。 显示的用于定义作业步骤的选项会根据所选子系统的不同而变化。  
   
- **运行身份**  
- 为作业步骤设置代理帐户。 sysadmin 固定服务器角色的成员还可以指定“SQL 代理服务帐户”。  
+ **运行方式**  
+ 为作业步骤设置代理帐户。 sysadmin 固定服务器角色的成员还可以指定“SQL 代理服务帐户”****。  
   
- **“数据库”**  
+ **Database**  
  设置在其中运行作业步骤的数据库。 此选项并不适用于所有作业步骤类型。  
   
  **Command**  
@@ -47,7 +47,7 @@ ms.locfileid: "62510951"
  **全选**  
  选择命令文本。  
   
- **复制**  
+ **Copy**  
  将所选文本复制到剪贴板。  
   
  **粘贴**  
@@ -61,7 +61,7 @@ ms.locfileid: "62510951"
 > [!IMPORTANT]  
 >  在未来版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，将从 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理中删除 ActiveX 脚本编写子系统。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。  
   
- **VBScript**  
+ **所以**  
  将 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 脚本版本指定为作业步骤的语言。  
   
  **JScript**  
@@ -76,7 +76,7 @@ ms.locfileid: "62510951"
  **全选**  
  选择命令文本。  
   
- **复制**  
+ **Copy**  
  复制选定的文本。  
   
  **粘贴**  
@@ -92,7 +92,7 @@ ms.locfileid: "62510951"
  **全选**  
  选择命令文本。  
   
- **复制**  
+ **Copy**  
  复制选定的文本。  
   
  **粘贴**  
@@ -105,7 +105,7 @@ ms.locfileid: "62510951"
  **全选**  
  选择脚本文本。  
   
- **复制**  
+ **Copy**  
  复制选定的文本。  
   
  **粘贴**  
@@ -115,7 +115,7 @@ ms.locfileid: "62510951"
  **全选**  
  选择命令文本。  
   
- **复制**  
+ **Copy**  
  复制选定的文本。  
   
  **粘贴**  
@@ -125,20 +125,20 @@ ms.locfileid: "62510951"
  **全选**  
  选择命令文本。  
   
- **复制**  
+ **Copy**  
  复制选定的文本。  
   
  **粘贴**  
  粘贴剪贴板的内容。  
   
 ## <a name="options-for-replication-queue-reader-job-steps"></a>复制队列读取器作业步骤的选项  
- **“数据库”**  
+ **Database**  
  用于作业步骤的数据库。  
   
  **全选**  
  选择命令文本。  
   
- **复制**  
+ **Copy**  
  复制选定的文本。  
   
  **粘贴**  
@@ -148,7 +148,7 @@ ms.locfileid: "62510951"
  **全选**  
  选择命令文本。  
   
- **复制**  
+ **Copy**  
  复制选定的文本。  
   
  **粘贴**  
@@ -158,7 +158,7 @@ ms.locfileid: "62510951"
  **全选**  
  选择命令文本。  
   
- **复制**  
+ **Copy**  
  复制选定的文本。  
   
  **粘贴**  
@@ -174,7 +174,7 @@ ms.locfileid: "62510951"
  **全选**  
  选择命令文本。  
   
- **复制**  
+ **Copy**  
  复制选定的文本。  
   
  **粘贴**  
@@ -184,7 +184,7 @@ ms.locfileid: "62510951"
  **Server**  
  选择运行作业步骤的服务器。  
   
- **数据库**  
+ **Database**  
  用于作业步骤的数据库。  
   
  **打开**  
@@ -193,7 +193,7 @@ ms.locfileid: "62510951"
  **全选**  
  选择命令文本。  
   
- **复制**  
+ **Copy**  
  复制选定的文本。  
   
  **粘贴**  
@@ -214,22 +214,23 @@ ms.locfileid: "62510951"
 -   **SSIS 包存储区**  
   
  **Server**  
- 键入存储 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包的服务器名。 仅当为“包源”指定了 **SQL Server** 或“SSIS 包存储区”时，此选项才可用。  
+ 键入存储 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包的服务器名。 仅当为“包源”**** 指定了 **SQL Server** 或“SSIS 包存储区”**** 时，此选项才可用。  
   
- **Use Windows Authentication**  
+ **使用 Windows 身份验证**  
  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 身份验证登录到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
   
  **Use SQL Server Authentication**  
- 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果选择了此身份验证方法，请输入相应的“用户名”和“密码”。  
+ 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果选择了此身份验证方法，请输入相应的“用户名”**** 和“密码”****。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供身份验证是为了向后兼容。 为了增强安全性，请使用 Windows 身份验证（如果可能的话）。  
+>  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供身份验证是为了向后兼容。 为了增强安全性，请使用 Windows 身份验证（如果可能的话）。  
   
- **“包”**  
+ **包**  
  键入包的位置。  
   
 > [!IMPORTANT]  
->  对于受密码保护的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包，请单击“配置”选项卡，在“包密码”对话框中输入密码。 否则，执行受密码保护包的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业将失败。  
+>  对于受密码保护的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包，请单击“配置”**** 选项卡，在“包密码”**** 对话框中输入密码。 否则，执行受密码保护包的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业将失败。  
   
 ### <a name="configurations-tab"></a>“配置”选项卡  
  为 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包指定配置选项。 选择此选项卡后，以下选项可用：  
@@ -237,7 +238,7 @@ ms.locfileid: "62510951"
  **配置文件**  
  列出包的配置文件。  
   
- **“添加”**  
+ **添加**  
  添加包的配置文件。  
   
  **删除**  
@@ -246,7 +247,7 @@ ms.locfileid: "62510951"
  **上移**  
  将所选的配置文件上移。  
   
- **下移**  
+ **向下移动**  
  将所选的配置文件下移。  
   
 ### <a name="command-files-tab"></a>“命令文件”选项卡  
@@ -255,7 +256,7 @@ ms.locfileid: "62510951"
  **命令文件**  
  列出包的命令文件。  
   
- **“添加”**  
+ **添加**  
  添加命令文件。  
   
  **删除**  
@@ -264,7 +265,7 @@ ms.locfileid: "62510951"
  **上移**  
  将所选的命令文件上移。  
   
- **“下移”**  
+ **向下移动**  
  将所选的命令文件下移。  
   
 ### <a name="data-sources-tab"></a>“数据源”选项卡  
@@ -282,10 +283,10 @@ ms.locfileid: "62510951"
 ### <a name="execution-options-tab"></a>“执行选项”选项卡  
  在此选项卡上查看或更改包的执行选项。  
   
- **发生验证警告时包失败**  
+ **验证警告时包失败**  
  如果希望在出现验证警告时包执行失败，请选择此选项。  
   
- **验证但不执行包**  
+ **验证包而不执行**  
  如果希望作业步骤验证但不执行包，请选择此选项。  
   
  **最大并发可执行文件数**  
@@ -324,7 +325,7 @@ ms.locfileid: "62510951"
  **属性路径**  
  查看或更改属性的路径。  
   
- **ReplTest1**  
+ **值**  
  查看或更改属性的值。  
   
  **删除**  
@@ -336,10 +337,10 @@ ms.locfileid: "62510951"
  **仅执行已签名的包**  
  仅运行已经签名的包。 选择此选项后，如果包没有签名，则作业步骤失败。  
   
- **验证包内部版本**  
+ **验证包生成**  
  仅运行有特定内部版本号的包。 选择此选项后，如果包没有特定内部版本号，则作业步骤失败。  
   
- **生成**  
+ **构建**  
  键入包的内部版本号。  
   
  **验证包 ID**  
@@ -366,7 +367,7 @@ ms.locfileid: "62510951"
  **命令行**  
  键入用于此包的命令行选项。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [管理作业步骤](manage-job-steps.md)   
  [包的 SQL Server 代理作业](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)   
  [复制代理管理](../../relational-databases/replication/agents/replication-agent-administration.md)  

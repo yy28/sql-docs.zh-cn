@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0dd90613851184ad7fcff16ecf0a89875433dbfd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62512379"
 ---
 # <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>查看与 SQL 跟踪事件类等效的扩展事件
@@ -77,7 +77,7 @@ ms.locfileid: "62512379"
   
 -   对于用户可配置 SQL 跟踪事件类（UserConfigurable:1 到 UserConfigurable:9），扩展事件使用单个事件来代替它们。 该事件名为 user_event。 该事件通过使用 sp_trace_generateevent 引发，与 SQL 跟踪所使用的相同的存储过程。 无论哪一事件 ID 传递到该存储过程，都会返回 user_event 事件。 但是，event_id 字段作为事件数据的一部分返回。 这使您可以生成基于事件 ID 的谓词。 例如，如果你在代码中使用 UserConfigurable:0（事件 ID = 82），则可以将 user_event 事件添加到会话，并且指定谓词“event_id = 82”。 因此，你不必更改代码，因为 sp_trace_generateevent 存储过程生成扩展事件 user_event 事件以及等效的 SQL 跟踪事件类。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [sp_trace_generateevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql)  
   
   

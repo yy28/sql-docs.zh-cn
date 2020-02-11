@@ -1,5 +1,5 @@
 ---
-title: LOCALDB_ERROR_INSTANCE_ALREADY_SHARED | Microsoft Docs
+title: LOCALDB_ERROR_INSTANCE_ALREADY_SHARED |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5f562a0cbd489202d5dbab7de6ac0d19ebeef348
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62519364"
 ---
-# <a name="localdberrorinstancealreadyshared"></a>LOCALDB_ERROR_INSTANCE_ALREADY_SHARED
+# <a name="localdb_error_instance_already_shared"></a>LOCALDB_ERROR_INSTANCE_ALREADY_SHARED
     
 ## <a name="details"></a>详细信息  
   
@@ -29,7 +29,7 @@ ms.locfileid: "62519364"
 |组件|本地数据库运行时 API|  
 |消息正文|指定的本地数据库实例已经共享。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  已使用不同的共享名称共享指定的本地数据库实例。  
   
 ## <a name="user-action"></a>用户操作  

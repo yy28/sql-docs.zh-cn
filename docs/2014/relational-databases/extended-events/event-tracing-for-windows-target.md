@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e855b9de09727a4437cad99a2534aee9d960298b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62519301"
 ---
 # <a name="event-tracing-for-windows-target"></a>Windows 事件跟踪目标
@@ -48,12 +48,12 @@ ms.locfileid: "62519301"
   
  下表介绍了配置 ETW 目标时可用的选项。  
   
-|Option|允许的值|Description|  
+|选项|允许的值|说明|  
 |------------|--------------------|-----------------|  
-|default_xe_session_name|任何不超过 256 个字符的字符串。 该值是可选的。|扩展事件会话名称。 默认情况下为 XE_DEFAULT_ETW_SESSION。|  
-|default_etw_session_logfile_path|任何不超过 256 个字符的字符串。 该值是可选的。|扩展事件会话日志文件的路径。 默认情况下为 %TEMP%\ XEEtw.etl。|  
-|default_etw_session_logfile_size_mb|任何无符号整数。 该值是可选的。|扩展事件会话日志文件的大小 (MB)。 默认值为 20 MB。|  
-|default_etw_session_buffer_size_kb|任何无符号整数。 该值是可选的。|扩展事件会话内存缓冲区的大小 (KB)。 默认值为 128 KB。|  
+|default_xe_session_name|任何不超过 256 个字符的字符串。 此值是可选的。|扩展事件会话名称。 默认情况下为 XE_DEFAULT_ETW_SESSION。|  
+|default_etw_session_logfile_path|任何不超过 256 个字符的字符串。 此值是可选的。|扩展事件会话日志文件的路径。 默认情况下为 %TEMP%\ XEEtw.etl。|  
+|default_etw_session_logfile_size_mb|任何无符号整数。 此值是可选的。|扩展事件会话日志文件的大小 (MB)。 默认值为 20 MB。|  
+|default_etw_session_buffer_size_kb|任何无符号整数。 此值是可选的。|扩展事件会话内存缓冲区的大小 (KB)。 默认值为 128 KB。|  
 |retries|任何无符号整数。|尝试将事件发布给 ETW 子系统的重试次数，在此次数之后将删除该事件。 默认值为 0。|  
   
  这些设置的配置是可选的。 ETW 目标使用这些设置的默认值。  
@@ -86,7 +86,7 @@ ADD TARGET package0.etw_classic_sync_target
   
  有关说明如何使用 ETW 目标的完整示例的详细信息（包括如何查看数据），请参阅 [使用扩展事件监视系统活动](monitor-system-activity-using-extended-events.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 扩展事件目标](../../database-engine/sql-server-extended-events-targets.md)   
  [sys.dm_xe_session_targets (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
  [CREATE EVENT SESSION (Transact-SQL)](/sql/t-sql/statements/create-event-session-transact-sql)   

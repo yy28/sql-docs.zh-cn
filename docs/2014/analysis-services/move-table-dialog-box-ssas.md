@@ -1,5 +1,5 @@
 ---
-title: 移动表对话框 (SSAS) |Microsoft Docs
+title: "\"移动表\" 对话框（SSAS） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d6c680dd48f3588b92a2c87d9fa8d3c3a04dde39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077607"
 ---
 # <a name="move-table-dialog-box-ssas"></a>“移动表”对话框 (SSAS)
-  使用“移动表”  对话框可以更改表在模型设计器中的显示顺序。 若要访问此对话框，请右键单击要移动的表底部的选项卡，然后选择“移动”  。  
+  使用“移动表” **** 对话框可以更改表在模型设计器中的显示顺序。 若要访问此对话框，请右键单击要移动的表底部的选项卡，然后选择“移动”****。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
- **将表之前所选的表**  
- 您要移动的表将移到从该列表中选择的表之前的位置。 如果想要将某个表移到该组表的末尾，则选择“（移至末尾）”  。  
+ **将所选表移到下表前**  
+ 您要移动的表将移到从该列表中选择的表之前的位置。 如果想要将某个表移到该组表的末尾，则选择“（移至末尾）”****。  
   
   

@@ -1,5 +1,5 @@
 ---
-title: id 函数 (XQuery) |Microsoft Docs
+title: id 函数（XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: de99fc60-d0ad-4117-a17d-02bdde6512b4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 21bf98ac97c9a695b7b9576412d43c832011322d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68004667"
 ---
 # <a name="functions-on-sequences---id"></a>基于序列的函数 - id
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  返回与匹配一个或多个 xs: idref 值中提供的值的 xs: id 值的元素节点的顺序 *$arg*。  
+  返回具有 xs： ID 值的元素节点序列，该序列与 *$arg*中提供的一个或多个 XS： IDREF 值的值相匹配。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,20 +44,20 @@ fn:id($arg as xs:IDREF*) as element()*
  如果 xs:IDREF 值不匹配任何元素，则该函数返回空序列。  
   
 ## <a name="examples"></a>示例  
- 本主题提供了一些针对 XML 实例存储在各种中的 XQuery 示例**xml**类型列中的[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]数据库。  
+ 本主题提供针对[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]数据库中各种**xml**类型列中存储的 xml 实例的 XQuery 示例。  
   
 ### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>A. 基于 IDREF 属性值检索元素  
- 下面的示例使用 fn: id 来检索 <`employee`> 基于 IDREF manager 属性的元素。 在此示例中，manager 属性是一个 IDREF 类型的属性，eid 属性是一个 ID 类型的属性。  
+ 下面的示例使用 fn： id 基于 IDREF manager 属性`employee`检索 <> 元素。 在此示例中，manager 属性是一个 IDREF 类型的属性，eid 属性是一个 ID 类型的属性。  
   
- 对于特定的 manager 属性值， **id （)** 函数查找 <`employee`> 元素，其 ID 类型属性值匹配输入的 IDREF 值。 换句话说，对于特定雇员**id （)** 函数返回雇员经理。  
+ 对于特定的管理器属性值， **id （）** 函数将查找 id `employee`类型属性值与输入 IDREF 值匹配的 <> 元素。 换言之，对于特定的员工， **id （）** 函数返回 employee 经理。  
   
  在该示例中执行下列操作：  
   
 -   创建一个 XML 架构集合。  
   
--   类型化**xml**使用 XML 架构集合来创建变量。  
+-   使用 XML 架构集合创建类型化的**xml**变量。  
   
--   该查询将检索具有 ID 属性值引用的元素**管理器**IDREF 属性的 <`employee`> 元素。  
+-   查询检索具有 ID 属性值的元素，该属性值由 <`employee`> 元素的**管理器**IDREF 特性引用。  
   
 ```  
 -- If exists, drop the XML schema collection (SC).  
@@ -98,9 +98,9 @@ Go
  该查询返回值“Dave”。 这表示 Dave 是 Joe 的经理。  
   
 ### <a name="b-retrieving-elements-based-on-the-orderlist-idrefs-attribute-value"></a>B. 基于 OrderList IDREFS 属性值检索元素  
- 在下面的示例的 OrderList 属性 <`Customer`> 元素是一个 IDREFS 类型属性。 它列出特定客户的订单 ID。 对于每个订单 id，没有 <`Order`> 元素下的子 <`Customer`> 提供订单值。  
+ 在下面的示例中，<`Customer`> 元素的 OrderList 属性是一个 IDREFS 类型属性。 它列出特定客户的订单 ID。 对于每个订单 id，<`Order` `Customer`> 提供订单值 <> 元素子级。  
   
- 查询表达式 `data(CustOrders:Customers/Customer[1]/@OrderList)[1]` 检索第一个客户的 IDRES 列表中的第一个值。 然后将此值传递给**id （)** 函数。 然后，该函数查找 <`Order`> 元素的 OrderID 属性值匹配的输入**id （)** 函数。  
+ 查询表达式 `data(CustOrders:Customers/Customer[1]/@OrderList)[1]` 检索第一个客户的 IDRES 列表中的第一个值。 然后，将此值传递给**id （）** 函数。 然后，该函数查找其`Order` "订单 id" 属性值与**id （）** 函数的输入匹配的 <> 元素。  
   
 ```  
 drop xml schema collection SC  
@@ -176,11 +176,11 @@ select @x.query('declare namespace CustOrders="Customers";
 ### <a name="implementation-limitations"></a>实现限制  
  限制如下：  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支持的两个参数版本**id （)** 。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]不支持 id 的双参数版本 **（）**。  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 需要的参数类型**id （)** 为 xs: idref * 的子类型。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]要求**id （）** 的参数类型是 XS： IDREF * 的子类型。  
   
-## <a name="see-also"></a>请参阅  
- [基于序列的函数](https://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)  
+## <a name="see-also"></a>另请参阅  
+ [序列上的函数](https://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)  
   
   

@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ea50de3955ab152cbd92d5fd50ef8b2281a67eb7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62518647"
 ---
 # <a name="passing-device-information-settings-to-rendering-extensions"></a>将设备信息设置传递给呈现扩展插件
@@ -42,7 +42,7 @@ ms.locfileid: "62518647"
 </DeviceInfo>  
 ```  
   
- 当报表作为 HTML 段落呈现时，报表的内容包含在 TABLE 元素内，而不使用 HTML 或 BODY 元素。 可以使用 HTML 段落将报表并入现有 HTML 文档中。 有关 HTML 输出的设备信息设置的详细信息，请参阅 [HTML Device Information Settings](../../html-device-information-settings.md)。  
+ 当报表作为 HTML 段落呈现时，报表的内容包含在 TABLE 元素内，而不使用 HTML 或 BODY 元素。 可以使用 HTML 段落将报表并入现有 HTML 文档中。 有关 HTML 输出的设备信息设置的详细信息，请参阅 [HTML 设备信息设置](../../html-device-information-settings.md)。  
   
 ## <a name="passing-device-information-using-url-access"></a>使用 URL 访问传递设备信息  
  您也可以通过 URL 访问传递设备信息设置。 设备信息设置以 URL 参数的形式传递。 可以将以下 URL 访问字符串传递到报表服务器以生成不带 HTML 查看器工具栏的所呈现报表。  
@@ -53,7 +53,7 @@ http://<Server Name>/reportserver?/SampleReports/Sales Order Detail&rs:Command=R
   
  有关详细信息，请参阅[在 URL 中指定设备信息设置](../../specify-device-information-settings-in-a-url.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [呈现扩展插件的设备信息设置 (Reporting Services)](../../device-information-settings-for-rendering-extensions-reporting-services.md)   
  [在 RSReportServer.Config 中自定义呈现扩展插件参数](../../customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [使用 Web 服务和.NET Framework 构建应用程序](building-applications-using-the-web-service-and-the-net-framework.md)  

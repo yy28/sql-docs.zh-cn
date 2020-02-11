@@ -1,5 +1,5 @@
 ---
-title: Delete 方法示例 (VBScript) |Microsoft Docs
+title: Delete 方法示例（VBScript） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,20 +15,20 @@ ms.assetid: 78935d6d-1c1a-4306-a83a-1763210c69f9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9464af64c9b55d49aa23336d48a21480c4c54013
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919108"
 ---
 # <a name="delete-method-example-vbscript"></a>Delete 方法示例 (VBScript)
-此示例使用[删除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)方法来删除从指定的记录[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
+此示例使用[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)方法从[记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)删除指定的记录。  
   
- 使用下面的示例 Active Server Page (ASP)。 若要查看此示例中完全正常运行，必须具有源 AdvWorks.mdb （随 SDK 一起安装） 位于 C:\Program Files\Microsoft 平台 SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb 或编辑路径以反映代码示例中的数据此文件的实际位置。 这是 Microsoft Access 数据库文件。  
+ 在 Active Server Page （ASP）中使用以下示例。 若要查看此完全功能的示例，必须将数据源 Advworks-srv01 （随 SDK 一起安装）置于 C:\Program Files\Microsoft 平台 SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb，或编辑示例代码中的路径以反映此文件的实际位置。 这是一个 Microsoft Access 数据库文件。  
   
- 使用**查找**找到 Adovbs.inc 的文件并将它放置在你打算使用的目录中。 剪切并将以下代码粘贴到记事本或其他文本编辑器，并将其保存为**DeleteVBS.asp**。 你可以在任何客户端浏览器中查看结果。  
+ 使用 "**查找**" 找到文件 Adovbs，并将其放入计划使用的目录中。 将以下代码剪切并粘贴到记事本或其他文本编辑器中，并将其保存为**DeleteVBS**。 您可以在任何客户端浏览器中查看结果。  
   
- 若要演练本示例，请尝试使用[AddNew](../../../ado/reference/ado-api/addnew-method-example-vbscript.md)首先添加某些记录的示例。 然后您可以尝试将其删除。 在任何客户端浏览器中查看结果。  
+ 若要执行该示例，请先尝试使用[AddNew](../../../ado/reference/ado-api/addnew-method-example-vbscript.md)示例添加一些记录。 然后，你可以尝试删除它们。 在任何客户端浏览器中查看结果。  
   
 ```  
 <!-- BeginDeleteVBS -->  
@@ -169,6 +169,6 @@ End Sub
 <!-- EndDeleteVBS -->  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [Delete 方法 （ADO 记录集）](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
+## <a name="see-also"></a>另请参阅  
+ [Delete 方法（ADO 记录集）](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

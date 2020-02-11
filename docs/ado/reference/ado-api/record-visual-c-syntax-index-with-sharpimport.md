@@ -1,5 +1,5 @@
 ---
-title: '记录 (VisualC++使用 #import 语法索引) |Microsoft Docs'
+title: '记录（Visual C++ 语法索引与 #import） |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,13 +16,13 @@ ms.assetid: ba6dd186-9552-4b6c-960b-3ee6cd589afd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f39e5802e08fd47f5442cd7d394b6589ce56c597
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917348"
 ---
-# <a name="record-visual-c-syntax-index-with-import"></a>记录 (VisualC++使用 #import 语法索引)
+# <a name="record-visual-c-syntax-index-with-import"></a>Record （#import Visual C++ 语法索引）
 ## <a name="methods"></a>方法  
   
 ```  
@@ -48,7 +48,7 @@ HRESULT Open( const _variant_t & Source, const _variant_t
     Options, _bstr_t UserName, _bstr_t Password );  
 ```  
   
-## <a name="properties"></a>properties  
+## <a name="properties"></a>属性  
   
 ```  
 _variant_t GetActiveConnection( );  
@@ -77,5 +77,5 @@ enum ObjectStateEnum GetState( );
 __declspec(property(get=GetState)) enum ObjectStateEnum State;  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [记录对象 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)

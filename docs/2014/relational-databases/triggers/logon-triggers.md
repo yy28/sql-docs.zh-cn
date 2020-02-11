@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 867c341443b7ce1c459806eaac5427a06a8bbebe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62473228"
 ---
 # <a name="logon-triggers"></a>登录触发器
@@ -50,7 +50,7 @@ ms.locfileid: "62473228"
 -   触发器正文中出现严重级别大于 20 的错误。  
   
 ## <a name="disabling-a-logon-trigger"></a>禁用登录触发器  
- 登录触发器可以有效地阻止所有用户（包括 `sysadmin` 固定服务器角色的成员）与[!INCLUDE[ssDE](../../../includes/ssde-md.md)]的成功连接。 在登录触发器正在阻止连接时，`sysadmin` 固定服务器角色的成员可通过使用专用管理员连接，或者通过以最小配置模式 (-f) 启动[!INCLUDE[ssDE](../../../includes/ssde-md.md)]，来进行连接。 有关详细信息，请参阅 [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md)。  
+ 登录触发器可以有效地阻止所有用户（包括 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 固定服务器角色的成员）与`sysadmin`的成功连接。 在登录触发器正在阻止连接时，`sysadmin` 固定服务器角色的成员可通过使用专用管理员连接，或者通过以最小配置模式 (-f) 启动[!INCLUDE[ssDE](../../../includes/ssde-md.md)]，来进行连接。 有关详细信息，请参阅 [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md)。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -62,7 +62,7 @@ ms.locfileid: "62473228"
 |说明如何返回有关登录触发器的信息。|[sys.server_triggers (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-server-triggers-transact-sql)<br /><br /> [sys.server_trigger_events (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-server-trigger-events-transact-sql)|  
 |说明如何捕获登录触发器事件数据。||  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [DDL 触发器](../triggers/ddl-triggers.md)  
   
   

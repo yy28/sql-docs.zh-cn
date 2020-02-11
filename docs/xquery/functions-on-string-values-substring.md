@@ -1,5 +1,5 @@
 ---
-title: substring 函数 (XQuery) |Microsoft Docs
+title: substring 函数（XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 2b3b8651-de51-46dc-af82-c86c45eac871
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 2188cff20411fe90d4858763f65cff7f6fe9c9d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68004640"
 ---
 # <a name="functions-on-string-values---substring"></a>基于字符串值的函数 - substring
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  返回的值的一部分 *$sourceString*的值指示的位置处开始 *$startingLoc，* ，并持续所指示的值的字符数 *$长度*。  
+  返回 *$sourceString*的值的一部分，从 *$startingLoc*的值指示的位置开始，并继续查找 *$length*的值所指示的字符数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,35 +44,35 @@ fn:substring($sourceString as xs:string?,
  资源字符串。  
   
  *$startingLoc*  
- 子字符串在资源字符串中的起点。 如果此值为负数或 0，则只返回那些所在位置大于零的字符。 如果大于的长度 *$sourceString*，则返回零长度字符串。  
+ 子字符串在资源字符串中的起点。 如果此值为负数或 0，则只返回那些所在位置大于零的字符。 如果大于 *$sourceString*的长度，则返回长度为零的字符串。  
   
  *$length*  
- [可选] 要检索的字符数。 如果未指定，则从中指定的位置返回的所有字符 *$startingLoc*到字符串的末尾。  
+ [可选] 要检索的字符数。 如果未指定，它将返回 *$startingLoc*中指定的位置中的所有字符，直到字符串的末尾。  
   
 ## <a name="remarks"></a>备注  
  带有三个参数的函数将返回 `$sourceString` 中其位置 `$p` 遵守以下指定的字符串：  
   
  `fn:round($startingLoc) <= $p < fn:round($startingLoc) + fn:round($length)`  
   
- 值 *$length*可能会超出中的值的字符数 *$sourceString*遵循的起始位置。 在这种情况下，子字符串返回的字符最多的最终 *$sourceString*。  
+ *$Length*的值可以大于开始位置之后 *$sourceString*的值中的字符数。 在这种情况下，子字符串返回 *$sourceString*结尾的字符。  
   
  字符串中第一个字符位于位置 1。  
   
- 如果的值 *$sourceString*是空序列，它将作为长度为零的字符串进行处理。 否则为如果任一 *$startingLoc*或 *$length*是空序列，则返回空序列。  
+ 如果 *$sourceString*的值是空序列，则会将其作为长度为零的字符串来处理。 否则，如果 *$startingLoc*或 *$length*是空序列，则返回空序列。  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>补充字符（代理项对）  
- XQuery 函数中代理对的行为依赖于数据库兼容级别，并且在某些情况下，还依赖于函数的默认命名空间 URI。 有关详细信息，请参阅主题中的"XQuery 函数可识别代理"部分[SQL Server 2016 中数据库引擎功能的重大更改](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)。 另请参阅[ALTER DATABASE 兼容性级别&#40;TRANSACT-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)并[排序规则和 Unicode 支持](../relational-databases/collations/collation-and-unicode-support.md)。  
+ XQuery 函数中代理对的行为依赖于数据库兼容级别，并且在某些情况下，还依赖于函数的默认命名空间 URI。 有关详细信息，请参阅[SQL Server 2016 中数据库引擎功能的重大更改](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)主题中的 "XQuery 函数是代理感知" 部分。 另请参阅[ALTER DATABASE 兼容级别 &#40;transact-sql&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)和[排序规则和 Unicode 支持](../relational-databases/collations/collation-and-unicode-support.md)。  
   
 ## <a name="implementation-limitations"></a>实现限制  
- SQL Server 要求 *$startingLoc*并 *$length 参数*的类型 xs: decimal 而不是 xs: double。  
+ SQL Server 要求 *$startingLoc*和 *$length 参数*的类型为 xs： decimal 而不是 xs： double。  
   
- SQL Server 允许 *$startingLoc*并 *$length*为空序列，因为空序列是映射到 （） 的动态错误结果的可能值。  
+ SQL Server 允许 *$startingLoc*和 *$length*为空序列，因为空序列是一个可能的值，导致动态错误被映射到（）。  
   
 ## <a name="examples"></a>示例  
- 本主题提供了一些针对 XML 实例存储在各种 XQuery 示例**xml**类型列中的[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]数据库。  
+ 本主题提供了针对[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]数据库中各种**xml**类型列中存储的 xml 实例的 XQuery 示例。  
   
 ### <a name="a-using-the-substring-xquery-function-to-retrieve-partial-summary-product-model-descriptions"></a>A. 使用 substring() XQuery 函数来检索部分概要产品型号说明  
- 该查询将检索说明产品型号的文本的前 50 个字符 <`Summary`> 文档中的元素。  
+ 查询检索描述产品型号的文本的前50个字符，<`Summary`文档中> 元素。  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -85,11 +85,11 @@ where CatalogDescription.exist('/pd:ProductDescription')  = 1;
   
  请注意上述查询的以下方面：  
   
--   **String （)** 函数返回的字符串值 <`Summary`> 元素。 使用此函数，因为 <`Summary`> 元素包含文本和子元素 (html 格式的元素)，因为将跳过这些元素并检索所有文本。  
+-   **String （）** 函数返回<`Summary`> 元素的字符串值。 使用此函数，因为 <`Summary`> 元素同时包含文本和子元素（html 格式设置元素），并且因为将跳过这些元素并检索所有文本。  
   
--   **Substring （)** 函数来检索的字符串值中检索前 50 个字符**string （)** 。  
+-   **Substring （）** 函数检索**字符串（）** 检索到的字符串值中的前50个字符。  
   
- 这是部分结果：  
+ 下面是部分结果：  
   
 ```  
 ProductModelID Result  
@@ -99,7 +99,7 @@ ProductModelID Result
 ...  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [针对 xml 数据类型的 XQuery 函数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

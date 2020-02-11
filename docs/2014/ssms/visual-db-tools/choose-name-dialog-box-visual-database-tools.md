@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c1916c87eae6a884775ae612e42381a12586d894
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62509959"
 ---
 # <a name="choose-name-dialog-box-visual-database-tools"></a>“选择名称”对话框 (Visual Database Tools)
-  当你选择时，会显示此对话框**保存\<TableName**>，**保存\<DiagramName >** ，或者**保存\<ViewName >** 从**文件**菜单。  
+  当你在 "**文件**" 菜单中选择 "**保存\<TableName**>"、" ** \<保存 DiagramName>**" 或 " ** \<保存 ViewName>** 时，将显示此对话框。  
   
  **输入表、关系图或视图的名称。**  
  提供一个文本框，您可以在其中为表、关系图或视图键入名称。  

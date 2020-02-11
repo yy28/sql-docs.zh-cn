@@ -1,5 +1,5 @@
 ---
-title: MarshalOptions 属性示例 （VC + +） |Microsoft Docs
+title: MarshalOptions 属性示例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: a3b6fc09-ce21-450d-9063-bac505208d31
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26ce0f7bce4af9a57963a7efa29f6bcbc4280c29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932273"
 ---
 # <a name="marshaloptions-property-example-vc"></a>MarshalOptions 属性示例 (VC++)
-此示例使用[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)属性来指定哪些行发送到服务器的所有行或仅修改的行。  
+此示例使用[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)属性来指定要发送回服务器的行-所有行或只是修改的行。  
   
 ```  
 // BeginMarshalOptionsCpp.cpp  
@@ -244,5 +244,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [MarshalOptions 属性 (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)

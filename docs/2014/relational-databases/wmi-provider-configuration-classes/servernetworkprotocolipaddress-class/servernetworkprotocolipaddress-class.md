@@ -19,18 +19,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b987e8770b4bef8c09974fc8b0770f4a8a6b45cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62643377"
 ---
 # <a name="servernetworkprotocolipaddress-class"></a>ServerNetworkProtocolIPAddress 类
-  [ServerNetworkProtocolIPAddress 类] servernetworkprotocolipaddress class.md) 表示服务器网络协议支持的 IP 地址。  
+  [ServerNetworkProtocolIPAddress Class] ServerNetworkProtocolIPAddress-class.md）表示服务器网络协议支持的 IP 地址。  
   
- 使用 [ServerNetworkProtocolIPAddress 类] servernetworkprotocolipaddress class.md) 可以执行以下任务：  
+ 利用 [ServerNetworkProtocolIPAddress Class] ServerNetworkProtocolIPAddress-class.md）可以执行以下任务：  
   
--   检查的实例的名称[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+-   检查实例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的名称。  
   
 -   检查 IP 地址名称和协议名称。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62643377"
   
 -   启用和禁用 IP 地址。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置服务器网络协议和网络库](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

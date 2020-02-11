@@ -16,26 +16,26 @@ ms.assetid: 9028aba4-90fc-4dfc-88e4-fa8a7b6fedee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ba165d51dde5224dac65467061eac0d38aeefc7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931426"
 ---
 # <a name="recordopenoptionsenum"></a>RecordOpenOptionsEnum
-指定用于打开选项[记录](../../../ado/reference/ado-api/record-object-ado.md)。 这些值可以组合使用或者。  
+指定用于打开[记录](../../../ado/reference/ado-api/record-object-ado.md)的选项。 可以使用或组合这些值。  
   
-|常量|ReplTest1|描述|  
+|一直|值|说明|  
 |--------------|-----------|-----------------|  
-|**adDelayFetchFields**|0x8000|向与关联的字段的提供程序指示**记录**最初，不需要检索，但可以在首次尝试访问该字段进行检索。 此标志，缺少所指示的默认行为是检索所有**记录**对象字段。|  
-|**adDelayFetchStream**|0x4000|向默认流与关联的提供程序指示**记录**最初不需要检索。 此标志，缺少所指示的默认行为是检索与关联的默认流**记录**对象。|  
-|**adOpenAsync**|0x1000|指示**记录**在异步模式下打开对象。|  
-|**adOpenExecuteCommand**|0x10000|指示源字符串包含应执行的命令文本。 此值相当于**adCmdText**选项卡上**Recordset.Open**。|  
+|**adDelayFetchFields**|0x8000|向提供程序指出，不需要最初检索与**记录**关联的字段，但在第一次尝试访问该字段时可进行检索。 缺少此标志时，默认行为是检索所有**记录**对象字段。|  
+|**adDelayFetchStream**|0x4000|向提供程序指示，不需要最初检索与**记录**关联的默认流。 缺少此标志时，默认行为是检索与**Record**对象关联的默认流。|  
+|**adOpenAsync**|0x1000|指示在异步模式下打开**记录**对象。|  
+|**adOpenExecuteCommand**|0x10000|指示源字符串包含应执行的命令文本。 此值等效于 Recordset 上的**adCmdText**选项。**打开**。|  
 |**adOpenRecordUnspecified**|-1|默认值。 指示未指定任何选项。|  
-|**adOpenOutput**|0x800000|指示如果源指向包含一个可执行脚本的节点 (如。ASP 页面），然后打开**记录**将包含执行的脚本的结果。 此值才有效，且非集合记录。|  
+|**adOpenOutput**|0x800000|指示如果源指向包含可执行脚本的节点（如），则为。ASP 页），则打开的**记录**将包含已执行脚本的结果。 此值仅对非集合记录有效。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
- 这些常量不具有 ADO/WFC 等效项。  
+ 这些常量没有 ADO/WFC 等效项。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [Open 方法（ADO 记录）](../../../ado/reference/ado-api/open-method-ado-record.md)

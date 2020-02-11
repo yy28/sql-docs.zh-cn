@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 58076b9ad8c32563ae8502de148803ac762b35f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62472927"
 ---
 # <a name="pick-schedule-for-job"></a>为作业选取计划
-  使用此对话框可以为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业选取现有的计划。  
+  使用此对话框可以为[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理作业选择现有计划。  
   
 ## <a name="options"></a>选项  
  **可用计划**  
@@ -41,9 +41,9 @@ ms.locfileid: "62472927"
  列出附加到计划的作业编号。 单击编号可以查看相应作业的属性。  
   
  **属性**  
- 启动“作业计划属性”  对话框，可以在该对话框中查看该计划的有关信息。  
+ 启动“作业计划属性”**** 对话框，可以在该对话框中查看该计划的有关信息。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建计划并将计划附加到作业](create-and-attach-schedules-to-jobs.md)  
   
   

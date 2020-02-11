@@ -1,5 +1,5 @@
 ---
-title: sysmail_delete_profileaccount_sp (TRANSACT-SQL) |Microsoft Docs
+title: sysmail_delete_profileaccount_sp （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: b58d06f2-d6c9-4c8e-95bd-027c50f4621a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cf2e5f7e05286da23f4bccc94d1017f00cb7db70
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67909188"
 ---
-# <a name="sysmaildeleteprofileaccountsp-transact-sql"></a>sysmail_delete_profileaccount_sp (Transact-SQL)
+# <a name="sysmail_delete_profileaccount_sp-transact-sql"></a>sysmail_delete_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   从数据库邮件配置文件中删除帐户。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,16 +40,16 @@ sysmail_delete_profileaccount_sp  {   [ @profile_id = ] profile_id | [ @profile_
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @profile_id = ] profile_id` 若要删除配置文件的配置文件 ID。 *profile_id*是**int**，默认值为 NULL。 任一*profile_id*或*profile_name*可能指定。  
+`[ @profile_id = ] profile_id`要删除的配置文件的配置文件 ID。 *profile_id*的值为**int**，默认值为 NULL。 可以指定*profile_id*或*profile_name* 。  
   
-`[ @profile_name = ] 'profile_name'` 要删除的配置文件配置文件名称。 *profile_name*是**sysname**，默认值为 NULL。 任一*profile_id*或*profile_name*可能指定。  
+`[ @profile_name = ] 'profile_name'`要删除的配置文件的配置文件名称。 *profile_name*的默认值为**sysname**，默认值为 NULL。 可以指定*profile_id*或*profile_name* 。  
   
-`[ @account_id = ] account_id` 要删除的帐户 ID。 *account_id*是**int**，默认值为 NULL。 任一*account_id*或*account_name*可能指定。  
+`[ @account_id = ] account_id`要删除的帐户 ID。 *account_id*的值为**int**，默认值为 NULL。 可以指定*account_id*或*account_name* 。  
   
-`[ @account_name = ] 'account_name'` 若要删除的帐户的名称。 *account_name*是**sysname**，默认值为 NULL。 任一*account_id*或*account_name*可能指定。  
+`[ @account_name = ] 'account_name'`要删除的帐户的名称。 *account_name*的默认值为**sysname**，默认值为 NULL。 可以指定*account_id*或*account_name* 。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** （成功）或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
  无  
@@ -61,10 +61,10 @@ sysmail_delete_profileaccount_sp  {   [ @profile_id = ] profile_id | [ @profile_
   
  如果指定了配置文件但没有指定帐户，此存储过程将从指定的配置文件中删除所有帐户。 例如，如果您正在更改配置文件使用的 SMTP 服务器，则可方便地从配置文件中删除所有帐户，然后根据需要添加新帐户。  
   
- 存储的过程**sysmail_delete_profileaccount_sp**处于**msdb**数据库中，归**dbo**架构。 必须使用由三部分名称执行该过程，如果当前数据库不是**msdb**。  
+ 存储过程**sysmail_delete_profileaccount_sp**在**msdb**数据库中，由**dbo**架构拥有。 如果当前数据库不是**msdb**，则必须使用由三部分组成的名称来执行该过程。  
   
 ## <a name="permissions"></a>权限  
- 执行此过程默认情况下的成员的权限**sysadmin**固定的服务器角色。  
+ 此过程的执行权限默认授予**sysadmin**固定服务器角色的成员。  
   
 ## <a name="examples"></a>示例  
  以下示例显示了如何从配置文件 `Audit Account` 中删除帐户 `AdventureWorks Administrator`。  
@@ -75,10 +75,10 @@ EXECUTE msdb.dbo.sysmail_delete_profileaccount_sp
     @account_name = 'Audit Account' ;  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库邮件](../../relational-databases/database-mail/database-mail.md)   
  [创建数据库邮件帐户](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [数据库邮件配置对象](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [数据库邮件存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [数据库邮件存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

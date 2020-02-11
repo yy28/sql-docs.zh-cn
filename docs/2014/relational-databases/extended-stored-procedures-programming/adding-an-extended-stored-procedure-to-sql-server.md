@@ -1,5 +1,5 @@
 ---
-title: 添加扩展存储过程到 SQL Server |Microsoft Docs
+title: 将扩展存储过程添加到 SQL Server |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3a5e5ab2d0dba0d7d39fcf3223f0aeec5ab6a058
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62512345"
 ---
 # <a name="adding-an-extended-stored-procedure-to-sql-server"></a>将扩展存储过程添加到 SQL Server
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 请改用 CLR 集成。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]请改用 CLR 集成。  
   
- 包含扩展存储过程函数的 DLL 充当对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的扩展。 若要安装此 DLL，请将文件复制到一个目录，例如包含标准[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]DLL 文件 (C:\Program Files\Microsoft SQL Server\MSSQL12.0。*x*默认情况下 \MSSQL\Binn)。  
+ 包含扩展存储过程函数的 DLL 充当对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的扩展。 若要安装此 DLL，请将文件复制到一个目录中，例如包含标准[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DLL 文件的目录（C:\PROGRAM Files\Microsoft SQL Server\MSSQL12.0.*x*默认情况下为 \MSSQL\Binn）。  
   
  在将扩展存储过程 DLL 复制到服务器之后，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统管理员必须将 DLL 中的每个扩展存储过程函数注册到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 可以使用 sp_addextendedproc 系统存储过程完成该操作。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "62512345"
 sp_addextendedproc 'xp_hello', 'c:\Program Files\Microsoft SQL Server\MSSQL12.0.MSSQLSERVER\MSSQL\Binn\xp_hello.dll';  
 ```  
   
- 如果在 `sp_addextendedproc` 中指定的函数名称与 DLL 中的函数名称不完全匹配，则新名称将在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中注册，但该名称是不可使用的。 例如，尽管`xp_Hello`注册为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]扩展存储的过程位于`xp_hello.dll`，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将不能在 DLL 中找到该函数，如果您使用`xp_Hello`更高版本调用该函数。  
+ 如果在 `sp_addextendedproc` 中指定的函数名称与 DLL 中的函数名称不完全匹配，则新名称将在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中注册，但该名称是不可使用的。 例如，尽管注册`xp_Hello`为位于中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xp_hello.dll`的扩展存储过程，但如果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]稍后使用`xp_Hello`调用函数，将无法在 DLL 中查找函数。  
   
 ```  
 --Register the function (xp_hello) with an initial upper case  
@@ -92,8 +92,8 @@ Server: Msg 2812, Level 16, State 62, Line 1
   
  不需要停止和重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-## <a name="see-also"></a>请参阅  
- [sp_addextendedproc &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql)   
- [sp_dropextendedproc (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql)  
+## <a name="see-also"></a>另请参阅  
+ [sp_addextendedproc &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql)   
+ [sp_dropextendedproc &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql)  
   
   

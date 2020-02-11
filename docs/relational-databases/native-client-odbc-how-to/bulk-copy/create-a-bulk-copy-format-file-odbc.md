@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f4085375ac361bb7ae40e0d69bea919a1ac431dc
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73781705"
 ---
 # <a name="create-a-bulk-copy-format-file-odbc"></a>创建大容量复制格式化文件 (ODBC)
@@ -27,7 +27,7 @@ ms.locfileid: "73781705"
   此示例演示如何使用大容量复制函数来创建数据文件和格式化文件。 此示例是面向 ODBC 3.0 版或更高版本开发的。  
   
 > [!IMPORTANT]  
->  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
+>  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，则应通过[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)对其进行加密。  
   
 ### <a name="to-create-a-bulk-copy-format-file"></a>创建大容量复制格式化文件  
   
@@ -62,11 +62,11 @@ ms.locfileid: "73781705"
   
  此示例连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 若要连接到命名实例，请更改 ODBC 数据源的定义以使用以下格式指定实例：server\namedinstance。 默认情况下，[!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] 将安装在命名实例中。  
   
- 执行第一个（[!INCLUDE[tsql](../../../includes/tsql-md.md)]）代码列表，以创建该示例将使用的表。  
+ 执行第一个（ [!INCLUDE[tsql](../../../includes/tsql-md.md)]）代码列表，以创建此示例将使用的表。  
   
  使用 odbc32.lib 和 odbcbcp.lib 编译第二个 (C++) 代码列表。  
   
- 执行第三个（[!INCLUDE[tsql](../../../includes/tsql-md.md)]）代码列表，以删除该示例使用的表。  
+ 执行第三个[!INCLUDE[tsql](../../../includes/tsql-md.md)]（）代码列表，以删除该示例使用的表。  
   
 ```  
 use AdventureWorks  
@@ -215,7 +215,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [大容量复制 SQL Server odbc 驱动程序操作指南主题&#40;odbc&#41; ](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
+ [SQL Server ODBC 驱动程序的大容量复制操作指南主题 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [使用数据文件和格式化文件](../../../relational-databases/native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
   
   

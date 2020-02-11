@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2f6361e3e6a295398bdd88d56a6c70a79e92b526
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62467413"
 ---
 # <a name="unique-particle-attribution-constraint"></a>唯一粒子归属约束
@@ -80,15 +80,15 @@ ms.locfileid: "62467413"
 ## <a name="finding-more-information"></a>查找详细信息  
  以下文档由 World Wide Web 联合会 (W3C) 发布，其中包含唯一粒子归属约束的技术说明：  
   
- "XML 架构第 1 部分：Structures Second Edition，W3C Proposed Edited 的 Recommendation":  
+ “XML Schema Part 1: Structures Second Edition, W3C Proposed Edited Recommendation”：  
   
--   第 3.8.6 节：模型组架构组件约束  
+-   第 3.8.6 节：Constraints on Model Group Schema Components  
   
--   附录 h:唯一粒子归属约束 （非标准） 的分析  
+-   附录 H：Analysis of the Unique Particle Attribution Constraint (non-normative)  
   
  若要查看该文档，请访问 [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?linkid=48881)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [XML 架构集合 (SQL Server)](xml-schema-collections-sql-server.md)  
   
   

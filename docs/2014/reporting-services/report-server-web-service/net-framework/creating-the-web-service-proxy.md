@@ -17,21 +17,22 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: decf503b7da6fb4e3f3a3846a714b1062255f1a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62520371"
 ---
 # <a name="creating-the-web-service-proxy"></a>创建 Web 服务代理
   客户端和 Web 服务可以通过 SOAP 消息进行通信，这些消息将输入参数和输出参数封装为 XML。 代理类将参数映射到 XML 元素，然后通过网络发送 SOAP 消息。 通过这种方法，代理类使您不必在 SOAP 级别与 Web 服务通信，并允许您在支持 SOAP 和 Web 服务代理的任何开发环境中调用 Web 服务方法。  
   
- 可以通过两种方法，使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 将代理类添加到开发项目中：使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中的 WSDL 工具和在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中添加 Web 引用。 下列各节更为详细地讨论这一主题。  
+ 可以通过两种方法使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]将代理类添加到开发项目中：使用中[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]的 WSDL 工具和在中[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]添加 Web 引用。 下列各节更为详细地讨论这一主题。  
   
 ## <a name="adding-the-proxy-using-the-wsdl-tool"></a>使用 WSDL 工具添加代理  
- [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 包括 Web 服务描述语言工具 (Wsdl.exe)，它使得您能够生成 Web 服务代理以用于 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 开发环境中。 在支持 Web 服务的语言（当前为 C# 和 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]）中创建客户端代理的最常用方法是使用 WSDL 工具。  
+ 
+  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 包括 Web 服务描述语言工具 (Wsdl.exe)，它使得您能够生成 Web 服务代理以用于 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 开发环境中。 在支持 Web 服务的语言（当前为 c # 和[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]）中创建客户端代理的最常用方法是使用 WSDL 工具。  
   
- **使用 Wsdl.exe 将代理类添加到项目中**  
+ **使用 Wsdl.exe 将代理类添加到项目**  
   
 1.  从命令提示符下，使用 Wsdl.exe 创建代理类，同时指定（至少）指向报表服务器 Web 服务的 URL。  
   
@@ -66,17 +67,18 @@ ReportingService2010 service = new ReportingService2010();
  有关 Wsdl.exe 工具的详细信息（包括其完整语法），请参阅 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 文档中的“Web 服务描述语言工具”。 有关 Web 服务代理的完整解释，请参阅 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 文档中的“创建 XML Web 服务代理”。  
   
 ## <a name="adding-the-proxy-using-a-web-reference-in-visual-studio"></a>在 Visual Studio 中使用 Web 引用添加代理  
- Web 引用使一个项目可以使用一个或多个 Web 服务。 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 使用户可以通过以下几个简单步骤向项目添加 Web 服务引用。  
+ Web 引用使一个项目可以使用一个或多个 Web 服务。 
+  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 使用户可以通过以下几个简单步骤向项目添加 Web 服务引用。  
   
- **将 Web 引用添加到项目**  
+ **添加对项目的 Web 引用**  
   
-1.  在“解决方案资源管理器”  中，选择要使用 Web 服务的项目。  
+1.  在“解决方案资源管理器”**** 中，选择要使用 Web 服务的项目。  
   
-2.  在“项目”  菜单中，单击“添加 Web 引用”  。  
+2.  在“项目”**** 菜单中，单击“添加 Web 引用”****。  
   
-     “添加 Web 引用”  对话框打开。  
+     “添加 Web 引用”**** 对话框打开。  
   
-3.  在“URL”  字段中，输入指向报表服务器 Web 服务的完整路径。  
+3.  在“URL”**** 字段中，输入指向报表服务器 Web 服务的完整路径。  
   
      报表服务器 Web 服务的报表执行端点的简化 URL 可能如下所示：  
   
@@ -93,15 +95,15 @@ ReportingService2010 service = new ReportingService2010();
   
 4.  验证项目是否可以使用报表服务器 Web 服务，以及您是否具有适当的权限访问报表服务器。  
   
-5.  在“Web 引用名”  字段中输入一个名称，将在代码中使用该名称以编程方式访问报表服务器 Web 服务。  
+5.  在“Web 引用名”**** 字段中输入一个名称，将在代码中使用该名称以编程方式访问报表服务器 Web 服务。  
   
-6.  选择“添加引用”  按钮，以在应用程序中创建对 Web 服务的引用。  
+6.  选择“添加引用”**** 按钮，以在应用程序中创建对 Web 服务的引用。  
   
-     新引用将出现在“解决方案资源管理器”  中处于活动状态的项目的“Web 引用”节点下，其名称在“Web 引用名”  字段中指定。  
+     新引用将出现在“解决方案资源管理器”**** 中处于活动状态的项目的“Web 引用”节点下，其名称在“Web 引用名”**** 字段中指定。  
   
-7.  在“解决方案资源管理器”  中，展开“Web 引用”文件夹，以记下与可用于项目中的项的 Web 引用类对应的命名空间。  
+7.  在“解决方案资源管理器”**** 中，展开“Web 引用”文件夹，以记下与可用于项目中的项的 Web 引用类对应的命名空间。  
   
-     在将 Web 引用添加到项目后，关联的文件将显示在“解决方案资源管理器”  的“Web 引用”文件夹内的某个文件夹中。  
+     在将 Web 引用添加到项目后，关联的文件将显示在“解决方案资源管理器”**** 的“Web 引用”文件夹内的某个文件夹中。  
   
  在添加 Web 引用之后，使用以下语法创建代理类的实例：  
   
@@ -118,7 +120,7 @@ rs.Credentials = System.Net.CredentialCache.DefaultCredentials
   
 ```  
   
- 还可以将“using”  （在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 中为“Import”  ）指令添加到报表服务器 Web 服务引用中。 如果您使用该指令，则不必完全限定命名空间中的类型。 为此，请在文件中添加以下代码：  
+ 还可以将“using”****（在 ** 中为“Import”**[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]）指令添加到报表服务器 Web 服务引用中。 如果您使用该指令，则不必完全限定命名空间中的类型。 为此，请在文件中添加以下代码：  
   
 ```vb  
 Import myNamespace.myReferenceName  
@@ -128,7 +130,7 @@ Import myNamespace.myReferenceName
 using myNamespace.myReferenceName;  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [报表服务器 Web 服务](../report-server-web-service.md)   
  [使用 Web 服务和 .NET Framework 生成应用程序](building-applications-using-the-web-service-and-the-net-framework.md)   
  [技术参考 (SSRS)](../../technical-reference-ssrs.md)  

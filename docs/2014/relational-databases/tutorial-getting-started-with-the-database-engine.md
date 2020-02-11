@@ -1,5 +1,5 @@
 ---
-title: 教程：数据库引擎入门 |Microsoft Docs
+title: 教程：数据库引擎入门 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 07f8ecc0e6550fcec63a0b1ebb906cd5ffd3aaf1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524325"
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>教程：数据库引擎入门
@@ -42,9 +42,9 @@ ms.locfileid: "62524325"
   
  若要使用本教程，您的系统必须安装以下组件：  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]的用户。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 可通过运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安装程序进行安装或者通过从 [Microsoft 下载中心](https://go.microsoft.com/fwlink/?LinkId=144346)下载并安装。  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 列中的一个值匹配。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]可以通过运行[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]安装程序或者通过从[Microsoft 下载中心](https://go.microsoft.com/fwlink/?LinkId=144346)下载和安装来安装。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [教程：SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
   
   

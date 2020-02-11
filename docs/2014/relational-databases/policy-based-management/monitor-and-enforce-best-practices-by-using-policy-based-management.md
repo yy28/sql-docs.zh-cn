@@ -13,17 +13,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bfc7cc16c9751ebdf64a8e9cd110547255c944ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62626044"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>使用基于策略的管理来监视和强制执行最佳实践
-  基于策略的管理允许您监视的最佳实践[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供一组可以作为最佳实践策略导入的策略文件，然后针对包含实例、实例对象、数据库或数据库对象的目标集评估策略。 您可以手动评估策略，将策略设置为根据计划评估目标集，或者将策略设置为根据事件评估目标集。 有关基于策略的管理的详细信息，请参阅 [使用基于策略的管理来管理服务器](administer-servers-by-using-policy-based-management.md)。  
+  通过基于策略的管理，可以监视的[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]最佳实践。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供一组可以作为最佳实践策略导入的策略文件，然后针对包含实例、实例对象、数据库或数据库对象的目标集评估策略。 您可以手动评估策略，将策略设置为根据计划评估目标集，或者将策略设置为根据事件评估目标集。 有关基于策略的管理的详细信息，请参阅 [使用基于策略的管理来管理服务器](administer-servers-by-using-policy-based-management.md)。  
   
 ## <a name="policy-and-rules-for-database-engine"></a>用于数据库引擎的策略和规则  
- 下表列出了包含的安装的策略[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]并包含有关每个策略评估的最佳实践规则的信息。 策略存储为 XML 文件并且必须导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中。 有关如何导入策略的详细信息，请参阅 [导入基于策略的管理策略](import-a-policy-based-management-policy.md)。  
+ 下表列出了安装时随附的策略[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并包括有关每个策略评估的最佳实践规则的信息。 策略存储为 XML 文件并且必须导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中。 有关如何导入策略的详细信息，请参阅 [导入基于策略的管理策略](import-a-policy-based-management-policy.md)。  
   
 |策略名称|最佳实践规则|  
 |-----------------|------------------------|  
@@ -38,8 +39,8 @@ ms.locfileid: "62626044"
 |Guest 权限|[对用户数据库的 Guest 权限](guest-permissions-on-user-databases.md)|  
 |上次成功备份的日期|[过时的备份](outdated-backup.md)|  
 |未授予公共服务器权限|[服务器 public 权限](server-public-permissions.md)|  
-|SQL Server 32 位关联掩码重叠|[正确的关联掩码和关联输入的输出掩码重叠](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
-|SQL Server 64 位关联掩码重叠|[正确的关联掩码和关联输入的输出掩码重叠](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
+|SQL Server 32 位关联掩码重叠|[正确的关联掩码和关联输入输出掩码重叠](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
+|SQL Server 64 位关联掩码重叠|[正确的关联掩码和关联输入输出掩码重叠](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
 |SQL Server 关联掩码|[保留关联掩码默认值](keep-the-affinity-mask-default-value.md)|  
 |SQL Server 阻塞的进程阈值|[增加或禁用阻塞的进程阈值](increase-or-disable-blocked-process-threshold.md)|  
 |SQL Server 默认跟踪|[默认跟踪日志文件已禁用](default-trace-log-files-disabled.md)|  
@@ -60,7 +61,7 @@ ms.locfileid: "62626044"
 |Windows 事件日志中的群集磁盘资源损坏错误|[检测 SCSI 主机适配器问题](detect-scsi-host-adapter-issues.md)|  
 |Windows 事件日志中的设备驱动程序控制错误|[设备驱动程序控制错误](device-driver-control-error.md)|  
 |Windows 事件日志中的设备未就绪错误|[设备未就绪错误](device-not-ready-error.md)|  
-|Windows 事件日志中的失败的 I_O 请求错误|[检测失败的输入的输出请求](detect-failed-input-and-output-requests.md)|  
+|Windows 事件日志中的失败的 I_O 请求错误|[检测失败的输入输出请求](detect-failed-input-and-output-requests.md)|  
 |Windows 事件日志中的 I_O 延迟警告|[检查磁盘输入和输出子系统是否存在 IO 延迟问题](check-disk-input-and-output-subsystem-for-io-delay-problems.md)|  
 |Windows 事件日志中的硬件分页错误期间的 I_O 错误|[Input and Output Error During Hard Page Fault](input-and-output-error-during-hard-page-fault.md)|  
 |Windows 事件日志中的读取重试错误|[检查磁盘 I/O 子系统是否存在读取重试问题](check-disk-input-output-subsystem-for-read-retry-problems.md)|  

@@ -1,5 +1,5 @@
 ---
-title: 操作员属性：新建操作员 （通知页） |Microsoft Docs
+title: 操作员属性：新建操作员（"通知" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a04465712667205674ddd8ea8bab7d82c3250261
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62630694"
 ---
 # <a name="operator-properties-new-operator-notifications-page"></a>操作员属性：新建操作员（“通知”页）
@@ -40,13 +40,13 @@ ms.locfileid: "62630694"
  **电子邮件**  
  使用电子邮件通知此操作员。  
   
- **寻呼程序**  
+ **接收**  
  通过将电子邮件发送到寻呼地址来通知此操作员。  
   
  **Net send**  
  使用 **net send**通知此操作员。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [运算符](operators.md)  
   
   

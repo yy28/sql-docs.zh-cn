@@ -1,5 +1,5 @@
 ---
-title: CalculationPassValue (MDX) |Microsoft Docs
+title: CalculationPassValue （MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ae667d2cecb65f2525aaf855d3d1b70d40a59b21
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68016872"
 ---
 # <a name="calculationpassvalue-mdx"></a>CalculationPassValue (MDX)
@@ -44,7 +44,7 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
  一个访问标志值，指定*Pass_Value*参数包含计算传递的从零开始的索引。 如果未指定访问标志值，则 ABSOLUTE 将作为默认访问标志值。  
   
  RELATIVE  
- 一个访问标志值，指定*Pass_Value*参数包含从触发计算的计算传递的相对偏移量。 如果偏移量解析为某个小于 0 的计算传递索引，则使用计算传递 0，并且不会出错。  
+ 一个访问标志值，指定*Pass_Value*参数包含触发计算计算传递的相对偏移量。 如果偏移量解析为某个小于 0 的计算传递索引，则使用计算传递 0，并且不会出错。  
   
  ALL  
  如果设置此标志，则除了存储引擎加载的值外，其余值均为空值。 如果未设置此标志，则聚合这些值而不进行任何计算。  
@@ -52,16 +52,16 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
 ## <a name="remarks"></a>备注  
  如果提供了数值表达式，则函数通过计算指定计算传递中的指定 MDX 数值表达式来返回一个数值，或者通过访问标志以及访问标志修饰符对其进行修改。  
   
- 如果提供的字符串表达式，该函数通过计算指定的计算传递中的指定的 MDX 字符串表达式来返回一个字符串值和修改 （可选） 通过访问标志以及访问标志修饰符 *。*  
+ 如果提供了字符串表达式，则函数通过计算指定计算传递中的指定 MDX 字符串表达式，并根据需要通过访问标志和访问标志修饰符进行修改来返回字符串值 *。*  
   
- 中的自动递归解决方法[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，此函数的用处。  
+ 利用中[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的自动递归解决方法，此函数不太实用。  
   
 > [!NOTE]  
->  只有管理员才能使用**CalculationPassValue** MDX 脚本中的函数。 如果在不具有管理员特权的角色上下文中运行包含此函数的 MDX 脚本，则会发生错误。  
+>  只有管理员才能在 MDX 脚本中使用**CalculationPassValue**函数。 如果在不具有管理员特权的角色上下文中运行包含此函数的 MDX 脚本，则会发生错误。  
   
-## <a name="see-also"></a>请参阅  
- [CalculationCurrentPass (MDX)](../mdx/calculationcurrentpass-mdx.md)   
+## <a name="see-also"></a>另请参阅  
+ [CalculationCurrentPass &#40;MDX&#41;](../mdx/calculationcurrentpass-mdx.md)   
  [IIf &#40;MDX&#41;](../mdx/iif-mdx.md)   
- [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
+ [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

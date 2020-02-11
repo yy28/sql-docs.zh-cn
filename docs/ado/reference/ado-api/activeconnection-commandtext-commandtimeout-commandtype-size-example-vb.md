@@ -1,5 +1,5 @@
 ---
-title: 存储过程属性示例 (VB) |Microsoft Docs
+title: 存储过程属性示例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -19,14 +19,14 @@ ms.assetid: dade4531-0bcc-4a52-8f86-b110ba2a3f9d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fd91fdf0321d16e5b7d498d5ee814006a2e3419d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921647"
 ---
-# <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-vb"></a>ActiveConnection、 CommandText、 CommandTimeout、 CommandType、 大小和方向属性示例 (VB)
-此示例使用[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)， [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)， [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md)， [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)，[大小](../../../ado/reference/ado-api/size-property-ado-parameter.md)，并[方向](../../../ado/reference/ado-api/direction-property.md)属性来执行存储的过程。  
+# <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-vb"></a>ActiveConnection、CommandText、CommandTimeout、CommandType、Size 和 Direction 属性示例（VB）
+此示例使用[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)、 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)、 [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md)、 [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)、 [Size](../../../ado/reference/ado-api/size-property-ado-parameter.md)和[Direction](../../../ado/reference/ado-api/direction-property.md)属性来执行存储过程。  
   
 ```  
 'BeginActiveConnectionVB  
@@ -133,15 +133,15 @@ End Sub
 'EndActiveConnectionVB  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [ActiveCommand 属性 (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
- [命令对象 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [CommandText 属性 (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
- [CommandTimeout 属性 (ADO)](../../../ado/reference/ado-api/commandtimeout-property-ado.md)   
- [CommandType 属性 (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)   
- [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+## <a name="see-also"></a>另请参阅  
+ [ActiveCommand 属性（ADO）](../../../ado/reference/ado-api/activecommand-property-ado.md)   
+ [Command 对象（ADO）](../../../ado/reference/ado-api/command-object-ado.md)   
+ [CommandText 属性（ADO）](../../../ado/reference/ado-api/commandtext-property-ado.md)   
+ [CommandTimeout 属性（ADO）](../../../ado/reference/ado-api/commandtimeout-property-ado.md)   
+ [CommandType 属性（ADO）](../../../ado/reference/ado-api/commandtype-property-ado.md)   
+ [Connection 对象（ADO）](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Direction 属性](../../../ado/reference/ado-api/direction-property.md)   
  [参数对象](../../../ado/reference/ado-api/parameter-object.md)   
- [记录对象 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Record 对象（ADO）](../../../ado/reference/ado-api/record-object-ado.md)   
+ [Recordset 对象（ADO）](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Size 属性（ADO 参数）](../../../ado/reference/ado-api/size-property-ado-parameter.md)

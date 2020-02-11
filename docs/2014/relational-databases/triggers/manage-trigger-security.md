@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: bcdc2af7f67c1ea4bda49e09cfe92eda43c9dea3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524123"
 ---
 # <a name="manage-trigger-security"></a>管理触发器安全性
@@ -92,7 +92,7 @@ ms.locfileid: "62524123"
     DEALLOCATE trig_cur;  
     ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [CREATE TRIGGER (Transact-SQL)](/sql/t-sql/statements/create-trigger-transact-sql)   
  [DML 触发器](../triggers/dml-triggers.md)   
  [DDL 触发器](../triggers/ddl-triggers.md)  

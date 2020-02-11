@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2055602dae01e71ac320f5838181c8d8b08534a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62757644"
 ---
 # <a name="tabular-model-programming"></a>表格模型编程
@@ -25,16 +25,16 @@ ms.locfileid: "62757644"
  本节提供有关如何以编程方式使用表格模型实体及其属性的详细信息。  
   
 ## <a name="in-this-section"></a>本节内容  
- [用于商业智能的 CSDL 批注 (CSDLBI)](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
+ [用于商业智能的 CSDL 批注 &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
  [了解表格对象模型](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   
- [用于商业智能的 CSDL 注释技术参考](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl)  
+ [适用于 CSDL 的 BI 注释技术参考](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl)  
   
  [IMDEmbedded 接口](imdembeddeddata-interface.md)  
   
-## <a name="see-also"></a>请参阅  
- [表格建模&#40;SSAS 表格&#41;](../tabular-models/tabular-models-ssas.md)   
- [表格模型设计器&#40;SSAS 表格&#41;](../tabular-model-designer-ssas-tabular.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;SSAS 表格&#41;的表格建模](../tabular-models/tabular-models-ssas.md)   
+ [&#40;SSAS 表格&#41;的表格模型设计器](../tabular-model-designer-ssas-tabular.md)  
   
   

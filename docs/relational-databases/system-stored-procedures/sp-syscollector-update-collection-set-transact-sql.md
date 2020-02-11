@@ -1,5 +1,5 @@
 ---
-title: sp_syscollector_update_collection_set (TRANSACT-SQL) |Microsoft Docs
+title: sp_syscollector_update_collection_set （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,13 +19,13 @@ ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0a351eaa746654d26d7f51536a41fc2677a2f67e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68010565"
 ---
-# <a name="spsyscollectorupdatecollectionset-transact-sql"></a>sp_syscollector_update_collection_set (Transact-SQL)
+# <a name="sp_syscollector_update_collection_set-transact-sql"></a>sp_syscollector_update_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   用于修改用户定义的收集组的属性或重命名用户定义的收集组。  
@@ -33,7 +33,7 @@ ms.locfileid: "68010565"
 > [!WARNING]  
 >  在配置为代理的 Windows 帐户是非交互用户或者是尚未登录的交互用户时，配置文件目录将不存在，并且临时目录的创建将失败。 因此，如果您正在域控制器上使用代理帐户，则必须指定已使用至少一次的交互帐户，以便确保创建了配置文件目录。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -55,39 +55,39 @@ sp_syscollector_update_collection_set
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @collection_set_id = ] collection_set_id` 是收集组的唯一本地标识符。 *collection_set_id*是**int**并且必须具有一个值，如果*名称*为 NULL。  
+`[ @collection_set_id = ] collection_set_id`收集组的唯一本地标识符。 *collection_set_id*为**int** ，并且*name*为 NULL 时必须具有值。  
   
-`[ @name = ] 'name'` 是收集组的名称。 *名称*是**sysname**并且必须具有一个值，如果*collection_set_id*为 NULL。  
+`[ @name = ] 'name'`收集组的名称。 *名称*为**sysname** ，并且*collection_set_id*为 NULL 时必须具有值。  
   
-`[ @new_name = ] 'new_name'` 是收集组的新名称。 *new_name*是**sysname**，并且如果使用，不能为空字符串。 *new_name*必须是唯一的。 有关当前收集组名称的列表，请查询 syscollector_collection_sets 系统视图。  
+`[ @new_name = ] 'new_name'`收集组的新名称。 *new_name*为**sysname**，如果使用，则不能为空字符串。 *new_name*必须是唯一的。 有关当前收集组名称的列表，请查询 syscollector_collection_sets 系统视图。  
   
-`[ @target = ] 'target'` 保留供将来使用。  
+`[ @target = ] 'target'`保留供将来使用。  
   
-`[ @collection_mode = ] collection_mode` 是要使用的数据集合的类型。 *collection_mode*是**smallint** ，可以具有以下值之一：  
+`[ @collection_mode = ] collection_mode`要使用的数据集合的类型。 *collection_mode*为**smallint** ，可以具有以下值之一：  
   
  0 - 缓存模式。 数据收集和上载分别位于各自的计划中。 为连续收集指定缓存模式。  
   
  1 - 非缓存模式。 数据的收集和上载位于同一个计划中。 为临时收集或快照收集指定非缓存模式。  
   
- 如果从非缓存模式更改为缓存模式 (0)，则还必须指定*schedule_uid*或*schedule_name*。  
+ 如果从非缓存模式更改为缓存模式（0），则还必须指定*schedule_uid*或*schedule_name*。  
   
-`[ @days_until_expiration = ] days_until_expiration` 是收集的数据保存在管理数据仓库中的天数。 *days_until_expiration*是**smallint**。 *days_until_expiration*必须为 0 或正整数。  
+`[ @days_until_expiration = ] days_until_expiration`收集的数据保存在管理数据仓库中的天数。 *days_until_expiration*为**smallint**。 *days_until_expiration*必须是0或正整数。  
   
-`[ @proxy_id = ] proxy_id` 是的唯一标识符[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理的代理帐户。 *proxy_id*是**int**。  
+`[ @proxy_id = ] proxy_id`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理的代理帐户的唯一标识符。 *proxy_id*是**int**。  
   
-`[ @proxy_name = ] 'proxy_name'` 是代理服务器的名称。 *proxy_name*是**sysname**并且可以为 null。  
+`[ @proxy_name = ] 'proxy_name'`代理的名称。 *proxy_name*是**sysname** ，可为 null。  
   
-`[ @schedule_uid = ] 'schedule_uid'` 是指向计划的 GUID。 *schedule_uid*是**uniqueidentifier**。  
+`[ @schedule_uid = ] 'schedule_uid'`指向计划的 GUID。 *schedule_uid*是**uniqueidentifier**。  
   
- 若要获取*schedule_uid*，查询 sysschedules 系统表。  
+ 若要获取*schedule_uid*，请查询 sysschedules 引用系统表。  
   
- 当*collection_mode*设置为 0， *schedule_uid*或*schedule_name*必须指定。 当*collection_mode*设置为 1， *schedule_uid*或*schedule_name*如果指定，则忽略。  
+ 如果*collection_mode*设置为0，则必须指定*schedule_uid*或*schedule_name* 。 如果*collection_mode*设置为1，则将忽略指定的*schedule_uid*或*schedule_name* 。  
   
-`[ @schedule_name = ] 'schedule_name'` 为计划的名称。 *schedule_name*是**sysname**并且可以为 null。 如果指定， *schedule_uid*必须为 NULL。 若要获取*schedule_name*，查询 sysschedules 系统表。  
+`[ @schedule_name = ] 'schedule_name'`计划的名称。 *schedule_name*是**sysname** ，可为 null。 如果已指定，则*schedule_uid*必须为 NULL。 若要获取*schedule_name*，请查询 sysschedules 引用系统表。  
   
-`[ @logging_level = ] logging_level` 为日志记录级别。 *logging_level*是**smallint**使用以下值之一：  
+`[ @logging_level = ] logging_level`日志记录级别。 *logging_level*为**smallint** ，并具有以下值之一：  
   
- 0-记录执行信息和[!INCLUDE[ssIS](../../includes/ssis-md.md)]跟踪的事件：  
+ 0-记录执行信息和[!INCLUDE[ssIS](../../includes/ssis-md.md)]跟踪事件：  
   
 -   启动/停止收集组  
   
@@ -95,7 +95,7 @@ sp_syscollector_update_collection_set
   
 -   错误信息  
   
- 1-级别 0 日志记录和：  
+ 1级日志记录和：  
   
 -   执行统计信息  
   
@@ -105,19 +105,19 @@ sp_syscollector_update_collection_set
   
  2 - 级别 1 日志记录和来自 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 的详细事件信息。  
   
- 默认值为*logging_level*为 1。  
+ *Logging_level*的默认值为1。  
   
-`[ @description = ] 'description'` 是收集组的描述。 *描述*是**nvarchar(4000)** 。  
+`[ @description = ] 'description'`收集组的说明。 *说明*为**nvarchar （4000）**。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** （成功）或**1** （失败）  
   
 ## <a name="remarks"></a>备注  
  sp_syscollector_update_collection_set 必须在 msdb 系统数据库的上下文中运行。  
   
- 任一*collection_set_id*或*名称*必须有一个值，都不能为 NULL。 若要获取这些值，请查询 syscollector_collection_sets 系统视图。  
+ *Collection_set_id*或*name*必须具有值，两者都不能为 NULL。 若要获取这些值，请查询 syscollector_collection_sets 系统视图。  
   
- 如果收集组正在运行，则可以只更新*schedule_uid*并*说明*。 若要停止该收集组，请使用[sp_syscollector_stop_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql.md)。  
+ 如果收集组正在运行，则只能更新*schedule_uid*和*说明*。 若要停止收集组，请使用[sp_syscollector_stop_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql.md)。  
   
 ## <a name="permissions"></a>权限  
  要求具有 dc_admin 或 dc_operator（拥有 EXECUTE 权限）固定数据库角色的成员身份才能执行此过程。 尽管 dc_operator 可以运行此存储过程，但是此角色的成员在其属性更改权限方面受到限制。 下列属性只能由 dc_admin 更改：  
@@ -178,10 +178,10 @@ EXEC dbo.sp_syscollector_update_collection_set
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [数据收集](../../relational-databases/data-collection/data-collection.md)   
- [syscollector_collection_sets &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)   
- [dbo.sysschedules &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
+ [syscollector_collection_sets &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)   
+ [sysschedules 引用 &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
   
   

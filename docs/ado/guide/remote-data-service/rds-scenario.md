@@ -14,38 +14,38 @@ ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 665afeb4be263ae0772557d2d2f30e112596f289
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922440"
 ---
 # <a name="rds-scenario"></a>RDS 方案
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 通讯簿应用程序是演示如何使用远程数据服务 (RDS) 来构建简单、 感知数据的 Web 应用程序-online 公司通讯的方案。 此方案可用于 Microsoft Visual Basic Scripting Edition (VBScript) 和 COM 的编程人员，以便了解如何使用 RDS，感知数据的 ActiveX 控件，更有经验的软件开发者要生成以数据为中心的 Web 应用程序。  
+ 通讯簿应用程序是一种方案，演示如何使用远程数据服务（RDS）构建一个简单的数据感知 Web 应用程序，即联机企业通讯簿。 此方案对于想要了解如何将数据感知 ActiveX 控件与 RDS 一起使用的 Microsoft Visual Basic Scripting Edition （VBScript）和 COM 程序员非常有用，还适用于需要构建以数据为中心的 Web 应用程序的更有经验的软件开发人员。  
   
- 此方案假定你知道如何使用 ActiveX 控件的基本 HTML 布局标记、 使用 DHTML 数据绑定技术和程序。  
+ 此方案假设你知道如何使用基本 HTML 布局标记，如何使用 DHTML 数据绑定技术，以及如何使用 ActiveX 控件编程。  
   
- 如果已安装 SDK，可以在 samples\dataaccess\rds\AddressBook\AddressBook.asp SDK 目录中找到通讯簿示例应用程序的完整源代码。 若要查看通讯簿方案，请在 Internet Explorer 4.0 或更高版本中，键入**https://*webserver*/RDS/AddressBook/AddressBook.asp**其中*web 服务器*名称提供给正在运行 Internet Information Services (IIS) 和 ASP 在 Windows NT 4.0 或 Windows 2000 Web 服务器计算机。  
+ 如果已安装 SDK，则可以在 SDK 目录的 samples\dataaccess\rds\AddressBook\AddressBook.asp. 中找到通讯簿示例应用程序的完整源代码。 若要查看通讯簿方案，请在 Internet Explorer 4.0 或更高版本中，键入**https://*web*服务器/RDS/AddressBook/AddressBook.asp** ，其中， *web*服务器是向运行 Internet Information Services （IIS）和 Asp 的 Windows NT 4.0 或 windows 2000 Web 服务器计算机提供的名称。  
   
 ## <a name="introduction-to-address-book"></a>通讯簿简介  
- 通讯簿示例应用程序提供了可用于通过 intranet 进行发布的可搜索目录是简单的联机通讯簿。 通讯簿旨在使用户可以请求员工有关的信息的一个或多个字段中输入搜索字符串。 若要显示的基本功能的远程数据服务，示例应用程序有意保持小，具有最小数量的对象和搜索字段。  
+ 通讯簿示例应用程序提供了一个简单的联机通讯簿，可用于通过 intranet 发布可搜索的目录。 通讯簿的设计使用户可以在一个或多个字段中输入搜索字符串来请求有关员工的信息。 为了向您展示远程数据服务的基本功能，示例应用程序有意保存为小，并具有最小数量的对象和搜索字段。  
   
- 应用程序界面由以下几个部分组成：  
+ 应用程序接口由以下部分组成：  
   
--   非可视**rds。DataControl**客户端用于连接到数据库的数据绑定对象。  
+-   非 visual **RDS。DataControl**用于连接到数据库的客户端使用的数据绑定对象。  
   
--   充当员工属性搜索条件的输入字段的 HTML 文本框。  
+-   作为员工属性搜索条件的输入字段的 HTML 文本框。  
   
--   HTML 命令按钮可以生成查询，清除搜索字段，包含员工信息更新数据库、 取消挂起的更改，并导航的网格中显示的数据行。  
+-   用于生成查询、清除搜索字段、用员工信息更新数据库、取消挂起的更改，以及导航网格中显示的数据行的 HTML 命令按钮。  
   
--   DHTML 数据绑定来显示数据从查询返回的对后端数据库 (通过**rds。DataControl**数据绑定对象) 的表中。  
+-   用于显示针对后端数据库的查询返回的数据的 DHTML 数据绑定（通过**RDS。DataControl**数据绑定对象）。  
   
--   VBScript 例程，连接每个元素前面所述，并允许它们进行交互。 VBScript 代码还用于初始化**rds。DataControl**对象，并动态创建 HTML 表的名称中的列标题**rds。DataControl**记录集字段。  
+-   VBScript 例程连接前面提到的每个元素，并允许它们进行交互。 VBScript 代码还用于初始化**RDS。DataControl**对象，并从 RDS 的名称以动态方式创建 HTML 表中的列标题 **。DataControl**记录集字段。  
   
- 单击链接，从步骤到步骤来设置和运行的应用场景，以及若要了解有关方案的工作方式的详细信息。  
+ 请按照步骤中的链接来设置和运行方案，并详细了解该方案的工作原理。  
   
  此方案包含以下主题。  
   
@@ -61,9 +61,9 @@ ms.locfileid: "67922440"
   
 -   [通讯簿导航按钮](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [通讯簿应用程序的系统要求](../../../ado/guide/remote-data-service/system-requirements-for-the-address-book-application.md)   
- [Microsoft ActiveX 数据对象 (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
+ [Microsoft ActiveX 数据对象（ADO）](../../../ado/microsoft-activex-data-objects-ado.md)   
  [RDS 基础知识](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
  [RDS 教程](../../../ado/guide/remote-data-service/rds-tutorial.md)
 

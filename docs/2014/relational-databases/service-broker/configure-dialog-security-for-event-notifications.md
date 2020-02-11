@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1c62812b138afef0244bbad5f3d17bafb4064537
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62630710"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>配置事件通知的对话安全模式
@@ -32,7 +32,7 @@ ms.locfileid: "62630710"
   
  建立源服务器和目标服务器接收消息所用的 TCP 端口。 同时，必须确定目标服务的名称。  
   
- **步骤 2：配置加密和证书共享数据库级身份验证。**  
+ **步骤 2：配置数据库级身份验证的加密和证书共享。**  
   
  同时在源服务器和目标服务器中完成下列操作。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62630710"
 |切换到在其中创建事件通知的源数据库，如果仍未以源数据库用户身份连接，则立即执行此操作。|切换到目标数据库以接收事件通知消息。|  
 |[创建事件通知](/sql/t-sql/statements/create-event-notification-transact-sql)，并指定目标数据库的 Broker Service 和标识符。||  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [GRANT (Transact-SQL)](/sql/t-sql/statements/grant-transact-sql)   
  [BACKUP CERTIFICATE (Transact-SQL)](/sql/t-sql/statements/backup-certificate-transact-sql)   
  [sys.databases (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   

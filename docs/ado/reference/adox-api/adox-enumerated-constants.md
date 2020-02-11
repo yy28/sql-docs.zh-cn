@@ -13,30 +13,30 @@ ms.assetid: 9d91f511-d46f-44ef-97ef-77bf93836186
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8ff18386cb9da4edbeaa8930d138ba9951965ee0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67928557"
 ---
 # <a name="adox-enumerated-constants"></a>ADOX 枚举常量
-若要帮助调试，ADOX 枚举常量列出每个常量的值。 但是，此值是纯粹是参考性的并且可能从一个版本的 ADOX 更改为另一个。 你的代码应仅依赖名称不是实际值的枚举常量。  
+为了协助调试，ADOX 枚举常量会列出每个常量的值。 不过，此值是纯粹的建议，可能会因 ADOX 的一个版本而发生变化。 你的代码只应依赖于枚举常量的名称，而不是实际值。  
   
- 以下枚举的常量定义。  
+ 定义下面的枚举常数。  
   
-|枚举|描述|  
+|枚举|说明|  
 |-----------------|-----------------|  
-|[ActionEnum](../../../ado/reference/adox-api/actionenum.md)|指定何时执行操作的类型**SetPermissions**调用。|  
-|[AllowNullsEnum](../../../ado/reference/adox-api/allownullsenum.md)|指定要编制索引是否具有 null 值的记录。|  
-|[ColumnAttributesEnum](../../../ado/reference/adox-api/columnattributesenum.md)|指定的特征**列**。|  
-|[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)|指定的数据类型**字段**，**参数**，或**属性**。|  
-|[InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md)|指定对象如何继承权限集与**SetPermissions**。|  
-|[KeyTypeEnum](../../../ado/reference/adox-api/keytypeenum.md)|指定的类型**密钥**： 主键、 外，或唯一。|  
+|[ActionEnum](../../../ado/reference/adox-api/actionenum.md)|指定在调用**SetPermissions**时要执行的操作的类型。|  
+|[AllowNullsEnum](../../../ado/reference/adox-api/allownullsenum.md)|指定是否为具有 null 值的记录编制索引。|  
+|[ColumnAttributesEnum](../../../ado/reference/adox-api/columnattributesenum.md)|指定**列**的特征。|  
+|[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)|指定**字段**、**参数**或**属性**的数据类型。|  
+|[InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md)|指定对象如何继承具有**SetPermissions**的权限集。|  
+|[KeyTypeEnum](../../../ado/reference/adox-api/keytypeenum.md)|指定**键**的类型： primary、foreign 或 unique。|  
 |[ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md)|指定要为其设置权限或所有权的数据库对象的类型。|  
-|[RightsEnum](../../../ado/reference/adox-api/rightsenum.md)|指定对某个对象的权限或组或用户权限。|  
-|[RuleEnum](../../../ado/reference/adox-api/ruleenum.md)|指定何时应遵循的规则**密钥**被删除。|  
+|[RightsEnum](../../../ado/reference/adox-api/rightsenum.md)|指定组或用户对对象的权限。|  
+|[RuleEnum](../../../ado/reference/adox-api/ruleenum.md)|指定删除**密钥**时要遵循的规则。|  
 |[SortOrderEnum](../../../ado/reference/adox-api/sortorderenum.md)|指定索引列的排序顺序。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ADOX API 参考](../../../ado/reference/adox-api/adox-api-reference.md)   
  [数据定义语言和安全性的 ADO 扩展 (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

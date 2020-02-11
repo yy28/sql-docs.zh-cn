@@ -1,5 +1,5 @@
 ---
-title: bcp_batch | Microsoft Docs
+title: bcp_batch |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,14 +19,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c41e8d90adc8ff6eb2058feebe3f33c10edbfa92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62631381"
 ---
-# <a name="bcpbatch"></a>bcp_batch
-  提交所有以前大容量复制从程序变量和行发送到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]由[bcp_sendrow](bcp-sendrow.md)。  
+# <a name="bcp_batch"></a>bcp_batch
+  将以前从程序变量大容量复制的所有行提交[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到[bcp_sendrow](bcp-sendrow.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,17 +40,17 @@ hdbc
   
 ## <a name="arguments"></a>参数  
  *hdbc*  
- 是大容量复制启用 ODBC 连接句柄。  
+ 是启用大容量复制的 ODBC 连接句柄。  
   
 ## <a name="returns"></a>返回  
- 保存到的最后一个调用后的行数**bcp_batch**，则发生错误时为-1。  
+ 在最后一次调用**bcp_batch**之后保存的行数; 如果出现错误，则为-1。  
   
 ## <a name="remarks"></a>备注  
- 大容量复制批处理定义事务。 当应用程序使用[bcp_bind](bcp-bind.md)并**bcp_sendrow**大容量复制行从程序变量到 SQL Server 表，会提交这些行仅当程序调用**bcp_batch**或[bcp_done](bcp-done.md)。  
+ 大容量复制批处理定义事务。 当应用程序使用[bcp_bind](bcp-bind.md)和**bcp_sendrow**将行从程序变量大容量复制到 SQL Server 表时，只在程序调用**bcp_batch**或[bcp_done](bcp-done.md)时才提交行。  
   
- 您可以调用**bcp_batch**后每个*n*行中 （如下所示的遥测应用程序） 的传入数据趋缓时。 如果应用程序不会调用**bcp_batch**才提交大容量复制行时，才**bcp_done**调用。  
+ 可以在每*n*行调用一次**bcp_batch** ，或在传入数据中有趋缓时调用（如在遥测应用程序中）。 如果应用程序不调用**bcp_batch**仅当调用**bcp_done**时才提交大容量复制的行。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [大容量复制函数](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

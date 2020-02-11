@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7922638ed06f52740a3c34f6e66ff72dbb5bbd98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62714804"
 ---
 # <a name="create-and-run-traces-using-transact-sql-stored-procedures"></a>使用 Transact-SQL 存储过程创建和运行跟踪
@@ -39,14 +39,14 @@ ms.locfileid: "62714804"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|Description|  
+|主题|说明|  
 |-----------|-----------------|  
 |[优化 SQL 跟踪](sql-trace.md)|说明如何降低跟踪对系统性能的影响。|  
 |[筛选跟踪](filter-a-trace.md)|介绍使用筛选器进行跟踪。|  
 |[限制跟踪文件和表的大小](limit-trace-file-and-table-sizes.md)|说明如何限制写入跟踪数据的文件和表的大小。 请注意，只有 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 可以将跟踪信息写入表。|  
 |[安排跟踪](schedule-traces.md)|说明如何设置跟踪的开始时间和结束时间。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [sp_trace_create (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-create-transact-sql)   
  [sp_trace_setevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [sp_trace_setfilter (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql)   

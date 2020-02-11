@@ -16,10 +16,10 @@ ms.assetid: 9fdc9762-e203-4cff-9212-54f450bf18d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a92a9ead66736ff2b72813d6d4cbec5acfcda4fe
-ms.sourcegitcommit: 82b70c39550402a2b0b327db32bf5ecf88b50d3c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73032964"
 ---
 # <a name="transfer-octet-length"></a>传输八位字节长度
@@ -29,16 +29,16 @@ ms.locfileid: "73032964"
   
 |SQL 类型标识符|长度|  
 |-------------------------|------------|  
-|所有字符类型 [a]|列的已定义或最大值（以字节为单位）。 此值与描述符字段 SQL_DESC_OCTET_LENGTH 的值相同。|  
+|所有字符类型 [a]|列的已定义或最大值（以字节为单位）。 此值与描述符字段 SQL_DESC_OCTET_LENGTH 相同。|  
 |SQL_DECIMAL<br />SQL_NUMERIC|如果字符集为 ANSI，则保留此数据的字符表示形式所需的字节数; 如果字符集为 UNICODE，则为此数字的两倍。 这是位数的最大数目加两，因为数据以字符串形式返回，而数字、符号和小数点需要字符。 例如，定义为 NUMERIC （10，3）的列的传输长度为12。|  
-|SQL_TINYINT|@shouldalert|  
+|SQL_TINYINT|1|  
 |SQL_SMALLINT|2|  
 |SQL_INTEGER|4|  
 |SQL_BIGINT| 8 |  
 |SQL_REAL|4|  
 |SQL_FLOAT|8|  
 |SQL_DOUBLE|8|  
-|SQL_BIT|@shouldalert|  
+|SQL_BIT|1|  
 |所有二进制类型 [a]|保留定义的（对于固定类型）或最大值（对于变量类型）字符数所需的字节数。|  
 |SQL_TYPE_DATE<br />SQL_TYPE_TIME|6（SQL_DATE_STRUCT 或 SQL_TIME_STRUCT 结构的大小）。|  
 |SQL_TYPE_TIMESTAMP|16（SQL_TIMESTAMP_STRUCT 结构的大小）。|  

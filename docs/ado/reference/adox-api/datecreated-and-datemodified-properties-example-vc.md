@@ -1,5 +1,5 @@
 ---
-title: DateCreated 和 DateModified 属性示例 （VC + +） |Microsoft Docs
+title: DateCreated 和 DateModified 属性示例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b964beee-83c7-4f91-8255-3ba864c9adfd
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 07fe23064173ba6e5c64294f9ea89615909cb10f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dd6117e48fbdf79af24227b9b5b499afd1a60288
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966604"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76939591"
 ---
 # <a name="datecreated-and-datemodified-properties-example-vc"></a>DateCreated 和 DateModified 属性示例 (VC++)
-此示例演示[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)并[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)添加一个新的属性[列](../../../ado/reference/adox-api/column-object-adox.md)到现有[表](../../../ado/reference/adox-api/table-object-adox.md)和创建一个新**表**。 若要运行此示例需要 DateOutput 过程。  
+此示例演示[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)和[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)属性，方法是将新[列](../../../ado/reference/adox-api/column-object-adox.md)添加到现有[表](../../../ado/reference/adox-api/table-object-adox.md)并创建新**表**。 若要运行此示例，需要 DateOutput 过程。  
   
 ```  
 // BeginDateCreatedCpp.cpp  
@@ -101,7 +101,7 @@ void DateCreatedX() {
     }  
   
     catch(...) {  
-        cout << "Error occured in include files...." << endl;  
+        cout << "Error occurred in include files...." << endl;  
     }  
 }  
   
@@ -114,8 +114,8 @@ void DateOutPut(_bstr_t strTemp , _TablePtr tblTemp) {
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [列对象 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [DateCreated 属性 (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)   
- [DateModified 属性 (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md)   
+## <a name="see-also"></a>另请参阅  
+ [列对象（ADOX）](../../../ado/reference/adox-api/column-object-adox.md)   
+ [DateCreated 属性（ADOX）](../../../ado/reference/adox-api/datecreated-property-adox.md)   
+ [DateModified 属性（ADOX）](../../../ado/reference/adox-api/datemodified-property-adox.md)   
  [表对象 (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)

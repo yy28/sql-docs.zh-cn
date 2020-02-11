@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ea4ce4bfe51f844d6d2916623f5a9cc3ffbe01a6
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73781394"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>准备和执行语句 (ODBC)
@@ -81,7 +81,7 @@ ms.locfileid: "73781394"
   
     -   调用 SQLExecute 以执行预定义语句。  
   
-    -   如果使用执行时数据输入参数，则 SQLExecute 将返回 SQL_NEED_DATA。 使用 SQLParamData 和 SQLPutData 以区块形式发送数据。  
+    -   如果使用执行时数据输入参数，则 SQLExecute 返回 SQL_NEED_DATA。 使用 SQLParamData 和 SQLPutData 以区块形式发送数据。  
   
 ### <a name="to-prepare-a-statement-with-row-wise-bound-parameters"></a>用按行绑定参数预定义语句  
   
@@ -111,9 +111,9 @@ ms.locfileid: "73781394"
   
     -   调用 SQLExecute 以执行预定义语句。 驱动程序将有效地执行 SQL 语句 S 次，每组参数一次。  
   
-    -   如果使用执行时数据输入参数，则 SQLExecute 将返回 SQL_NEED_DATA。 使用 SQLParamData 和 SQLPutData 以区块形式发送数据。  
+    -   如果使用执行时数据输入参数，则 SQLExecute 返回 SQL_NEED_DATA。 使用 SQLParamData 和 SQLPutData 以区块形式发送数据。  
   
 ## <a name="see-also"></a>另请参阅  
- [执行查询操作指南主题&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+ [&#40;ODBC&#41;执行查询操作指南主题](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   

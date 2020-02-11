@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dfb77db3676c8df124b65199fb0b806755e550a1
-ms.sourcegitcommit: b4962530f90234017073b3fdd2248936b2de4e69
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71077514"
 ---
 # <a name="command-prompt-utility-reference-database-engine"></a>命令提示实用工具参考（数据库引擎）
@@ -28,30 +28,30 @@ ms.locfileid: "71077514"
   
 |**实用工具**|**说明**|**安装位置**|  
 |-----------------|---------------------|----------------------|  
-|[bcp Utility](bcp-utility.md)|用于在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例和用户指定格式的数据文件之间复制数据。|\<驱动器:>\Program Files\\\Client SDK\ODBC\110\Tools\Binn[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|  
+|[bcp 实用工具](bcp-utility.md)|用于在实例[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]和用户指定格式的数据文件之间复制数据。|\<*驱动器*： > \program Files\\[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\Client SDK\ODBC\110\Tools\Binn|  
 |[dta 实用工具](dta/dta-utility.md)|用于分析工作负荷并建议物理设计结构，以优化该工作负荷下的服务器性能。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[dtexec 实用工具](../integration-services/packages/dtexec-utility.md)|用于配置和执行 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包。 该命令提示实用工具的用户界面版本称为 **DTExecUI**，它可提供执行包实用工具。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]DTS\Binn|  
-|[Encrypt](../integration-services/dtutil-utility.md)|用于管理 SSIS 包。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]DTS\Binn|  
-|[使用部署实用工具部署模型解决方案](https://docs.microsoft.com/analysis-services/multidimensional-models/deploy-model-solutions-with-the-deployment-utility)|用于将 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目部署到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn\VShell\Common7\IDE|  
+|[dtutil 实用工具](../integration-services/dtutil-utility.md)|用于管理 SSIS 包。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]DTS\Binn|  
+|[使用部署实用工具部署模型解决方案](https://docs.microsoft.com/analysis-services/multidimensional-models/deploy-model-solutions-with-the-deployment-utility)|用于将 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目部署到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn\VShell\Common7\IDE|  
 |[osql 实用工具](osql-utility.md)|您可以在命令提示符下输入 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句、系统过程和脚本文件。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[Profiler 实用工具](profiler-utility.md)|用于在命令提示符下启动 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
-|[RS.exe 实用工具 (SSRS)](../reporting-services/tools/rs-exe-utility-ssrs.md)|用于运行专门管理 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器的脚本。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
-|[rsconfig 实用工具 (SSRS)](../reporting-services/tools/rsconfig-utility-ssrs.md)|用于配置报表服务器连接。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
+|[RS 实用程序 &#40;SSRS&#41;](../reporting-services/tools/rs-exe-utility-ssrs.md)|用于运行专门管理 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器的脚本。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
+|[rsconfig 实用工具 &#40;SSRS&#41;](../reporting-services/tools/rsconfig-utility-ssrs.md)|用于配置报表服务器连接。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[rskeymgmt 实用工具 (SSRS)](../reporting-services/tools/rskeymgmt-utility-ssrs.md)|用于管理报表服务器上的加密密钥。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
-|[sqlagent90 应用程序](sqlagent90-application.md)|用于在命令提示符下启动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理。|\<驱动器>:\Program Files\Microsoft SQL Server\\<*instance_name*>\MSSQL\Binn|  
-|[sqlcmd 实用工具](sqlcmd-utility.md)|您可以在命令提示符下输入 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句、系统过程和脚本文件。|\<驱动器:>\Program Files\\\Client SDK\ODBC\110\Tools\Binn[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|  
+|[sqlagent90 应用程序](sqlagent90-application.md)|用于在命令提示符下启动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理。|\<驱动器>： \Program Files\Microsoft SQL Server\\<*instance_name*> \mssql\binn|  
+|[sqlcmd 实用工具](sqlcmd-utility.md)|您可以在命令提示符下输入 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句、系统过程和脚本文件。|\<*驱动器*： > \program Files\\[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\Client SDK\ODBC\110\Tools\Binn|  
 |[SQLdiag 实用工具](sqldiag-utility.md)|用于为 [!INCLUDE[msCoName](../includes/msconame-md.md)] 客户服务和支持部门收集诊断信息。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[sqllogship 应用程序](sqllogship-application.md)|应用程序可用其执行日志传送配置中的备份、复制和还原操作以及相关的清除任务，而无需运行备份、复制和还原作业。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[SqlLocalDB 实用工具](sqllocaldb-utility.md)|针对程序开发人员的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的执行模式。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
-|[sqlmaint 实用工具](sqlmaint-utility.md)|用于执行在早期版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中创建的数据库维护计划。|\<drive>:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn|  
+|[sqlmaint 实用工具](sqlmaint-utility.md)|用于执行在早期版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中创建的数据库维护计划。|\<驱动器>： \Program Files\Microsoft SQL Server\MSSQL12。MSSQLSERVER\MSSQL\Binn|  
 |[sqlps 实用工具](sqlps-utility.md)|用于运行 PowerShell 命令和脚本。 加载和注册 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 提供程序和 cmdlet。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
-|[sqlservr 应用程序](sqlservr-application.md)|用于在命令提示符下启动和停止 [!INCLUDE[ssDE](../includes/ssde-md.md)] 实例以进行故障排除。|\<drive>:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn|  
+|[sqlservr Application](sqlservr-application.md)|用于在命令提示符下启动和停止 [!INCLUDE[ssDE](../includes/ssde-md.md)] 实例以进行故障排除。|\<驱动器>： \Program Files\Microsoft SQL Server\MSSQL12。MSSQLSERVER\MSSQL\Binn|  
 |[Ssms 实用工具](../ssms/ssms-utility.md)|用于在命令提示符下启动 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn\VSShell\Common7\IDE|  
 |[tablediff 实用工具](tablediff-utility.md)|用于比较两个表中的数据以查看数据是否无法收敛，这对于排除复制拓扑故障很有用。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]COM|  
   
- **使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 访问 [!INCLUDE[win8](../includes/win8-md.md)]**  
+ **使用访问[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager[!INCLUDE[win8](../includes/win8-md.md)]**  
   
- 因为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器是 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理控制台程序的一个管理单元而不是单独的程序，所以，当运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 时，[!INCLUDE[win8](../includes/win8-md.md)] 配置管理器不显示为一个应用程序。 要打开 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器，请在“搜索”超级按钮中的“应用”下，键入 **SQLServerManager12.msc**（对于 **）或** SQLServerManager11.msc **（对于** ），然后按“Enter”键[!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssSQL11](../includes/sssql11-md.md)]。  
+ 因为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器是 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理控制台程序的一个管理单元而不是单独的程序，所以，当运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 时， [!INCLUDE[win8](../includes/win8-md.md)]配置管理器不显示为一个应用程序。 若要[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]打开 Configuration Manager，请在 "**搜索**" 超级按钮中的 "**应用**" 下[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]，键入**sqlservermanager12.msc** （对于）或[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] **sqlservermanager11.msc** （），然后按**enter**。  
   
 ## <a name="command-prompt-utilities-syntax-conventions"></a>命令提示实用工具语法约定  
   
@@ -67,6 +67,6 @@ ms.locfileid: "71077514"
  [复制日志读取器代理](../relational-databases/replication/agents/replication-log-reader-agent.md)   
  [复制合并代理](../relational-databases/replication/agents/replication-merge-agent.md)   
  [复制队列读取器代理](../relational-databases/replication/agents/replication-queue-reader-agent.md)   
- [复制快照代理](../relational-databases/replication/agents/replication-snapshot-agent.md)  
+ [Replication Snapshot Agent](../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
   

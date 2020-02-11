@@ -15,19 +15,19 @@ ms.assetid: d6a91cd6-3905-4e3a-98ab-37fce893dbe1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 597abe268979852d754e2e3e86ae81daa8f3fed8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019064"
 ---
 # <a name="cursor-library-cache"></a>游标库缓存
 > [!IMPORTANT]  
->  此功能将 Windows 的未来版本中删除。 避免在新的开发工作中使用此功能并计划修改当前使用此功能的应用程序。 Microsoft 建议使用驱动程序的游标功能。  
+>  此功能将在 Windows 的将来版本中删除。 避免在新的开发工作中使用此功能，并计划修改当前使用此功能的应用程序。 Microsoft 建议使用驱动程序的游标功能。  
   
- 在结果集中的数据的每一行，该游标库缓存中每个绑定列的数据的长度和行状态的每个绑定列的数据。 游标库使用这两个缓存中的值来返回通过**SQLFetch**并**SQLFetchScroll** ，并构造搜索的语句定位操作。 有关详细信息，请参阅[构造搜索语句](../../../odbc/reference/appendixes/constructing-searched-statements.md)。  
+ 对于结果集中的每个数据行，游标库将缓存每个绑定列的数据、每个绑定列中的数据长度以及行的状态。 游标库使用缓存中的值来通过**SQLFetch**和**SQLFetchScroll**返回，并为定位操作构造搜索语句。 有关详细信息，请参阅[构造搜索语句](../../../odbc/reference/appendixes/constructing-searched-statements.md)。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [列数据](../../../odbc/reference/appendixes/column-data.md)  
   

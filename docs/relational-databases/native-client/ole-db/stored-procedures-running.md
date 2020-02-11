@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6329b0ff8f4d502916d2046e404fcecac8fc5869
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73759344"
 ---
 # <a name="stored-procedures---running"></a>存储过程 - 运行
@@ -37,7 +37,7 @@ ms.locfileid: "73759344"
   
 -   增加功能。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序支持三种 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 存储过程用于返回数据的机制：  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序支持[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]存储过程用于返回数据的三个机制：  
   
 -   过程中的每一条 SELECT 语句都生成一个结果集。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "73759344"
   
  应用程序必须能够处理来自存储过程的所有这些输出。  
   
- 在结果处理期间，不同的 OLE DB 访问接口返回输出参数和返回值的时间不同。 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序的情况下，在使用者检索或取消存储过程返回的结果集之前，不会提供输出参数和返回代码。 返回代码和输出参数在最后一个来自服务器的 TDS 数据包中返回。  
+ 在结果处理期间，不同的 OLE DB 访问接口返回输出参数和返回值的时间不同。 对于[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序，在使用者检索或取消存储过程返回的结果集之前，不会提供输出参数和返回代码。 返回代码和输出参数在最后一个来自服务器的 TDS 数据包中返回。  
   
  访问接口返回输出参数和返回值时，使用 DBPROP_OUTPUTPARAMETERAVAILABILITY 属性进行报告。 此属性位于 DBPROPSET_DATASOURCEINFO 属性集中。  
   

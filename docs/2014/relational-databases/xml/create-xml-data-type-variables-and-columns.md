@@ -14,14 +14,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3fe1414131991a35b316a50da730f42e8b02d462
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637990"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>创建 XML 数据类型的变量和列
-  `xml` 数据类型是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的内置数据类型，并有些类似于其他内置类型（如 `int` 和 `varchar`）。 您可以使用其他内置类型`xml`数据类型作为列类型时创建的表作为变量的类型、 参数类型、 函数返回类型，或在[CAST 和 CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)。  
+  
+  `xml` 数据类型是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的内置数据类型，并有些类似于其他内置类型（如 `int` 和 `varchar`）。 与其他内置类型一样，在创建表作为变量类型`xml` 、参数类型、函数返回类型或在[CAST 和 CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)中时，可以使用数据类型作为列类型。  
   
 ## <a name="creating-columns-and-variables"></a>创建列和变量  
  若要创建 `xml` 类型列作为表的一部分，请使用 `CREATE TABLE` 语句，如下例所示：  
@@ -66,7 +67,8 @@ CREATE TABLE T (XmlColumn xml
                   default CAST(N'<element1/><element2/>' AS xml))  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还支持对 `xml` 类型列的 NULL 和 NOT NULL 约束。 例如：  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还支持对 `xml` 类型列的 NULL 和 NOT NULL 约束。 例如：  
   
 ```  
 CREATE TABLE T (XmlColumn xml NOT NULL)  
@@ -87,7 +89,8 @@ CREATE TABLE T (XmlColumn xml NOT NULL)
   
 -   COLLATE  
   
-     XML 提供了它自己的编码。 排序规则只适用于字符串类型。 `xml` 数据类型不是字符串类型。 但是，它有字符串表示形式并允许与字符串数据类型之间的相互转换。  
+     XML 提供了它自己的编码。 排序规则只适用于字符串类型。 
+  `xml` 数据类型不是字符串类型。 但是，它有字符串表示形式并允许与字符串数据类型之间的相互转换。  
   
 -   RULE  
   
@@ -103,7 +106,7 @@ END
 GO  
 ```  
   
- 注意，如果实例中的 `exist()` 元素包含 `xml` 属性，则 `1` 数据类型的 `<ProductDescription>` 方法返回 `ProductID` 。 否则，它将返回 `0`。  
+ 注意，如果实例中的 `exist()` 元素包含 `xml` 属性，则 `1` 数据类型的 `<ProductDescription>` 方法返回 `ProductID` 。 否则，将返回 `0`。  
   
  现在，您就可以创建带有列级约束的表，如下所示：  
   
@@ -127,9 +130,9 @@ INSERT INTO T values(1,'<Product />')
 ```  
   
 ## <a name="same-or-different-table"></a>相同或不同的表  
- `xml`数据类型列可以包含其他关系列的表中或在单独的表具有外键关系与主表创建。  
+ 可以`xml`在包含其他关系列的表中创建数据类型列，也可以在具有与主表的外键关系的单独表中创建数据类型列。  
   
- 创建`xml`当以下条件之一为 true 时相同的表中的数据类型列：  
+ 如果满足`xml`以下条件之一，则在同一个表中创建数据类型列：  
   
 -   您的应用程序对 XML 列执行数据检索，并且不需要 XML 列的 XML 索引。  
   

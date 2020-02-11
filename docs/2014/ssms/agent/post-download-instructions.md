@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 607ca94af07916fc76ddb02d2c81bf299efc39c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62473046"
 ---
 # <a name="post-download-instructions"></a>发布下载指令
@@ -30,7 +30,7 @@ ms.locfileid: "62473046"
  查看下载指令的说明。  
   
  **轮询间隔**  
- 设置目标服务器的轮询间隔。 仅适用于“设置轮询间隔”  指令。  
+ 设置目标服务器的轮询间隔。 仅适用于“设置轮询间隔”**** 指令。  
   
  **所有目标服务器**  
  选择此选项可以将下载指令发布到所有目标服务器。  
@@ -38,7 +38,7 @@ ms.locfileid: "62473046"
  **以下目标服务器**  
  选择此选项可以将下载指令发布到所选目标服务器。  
   
- **选择**  
+ **单击**  
  指定目标服务器应接收下载指令。  
   
  **目标服务器**  
@@ -50,7 +50,7 @@ ms.locfileid: "62473046"
  **轮询间隔**  
  查看目标服务器的当前轮询间隔。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [企业范围的自动化管理](automated-administration-across-an-enterprise.md)  
   
   

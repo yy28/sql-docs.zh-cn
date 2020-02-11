@@ -1,5 +1,5 @@
 ---
-title: 挖掘图例对话框 （挖掘模型查看器） |Microsoft Docs
+title: "\"挖掘图例\" 对话框（挖掘模型查看器） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44c109694f0a3263ff1ad40d1c343a1af91ce630
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077769"
 ---
 # <a name="mining-legend-dialog-box-mining-model-viewer"></a>“挖掘图例”对话框（挖掘模型查看器）
@@ -34,7 +34,7 @@ ms.locfileid: "66077769"
   
 -   关联模型  
   
-## <a name="options"></a>“选项”  
+## <a name="options"></a>选项  
  决策树模型  
  [使用 Microsoft 树查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
@@ -52,9 +52,9 @@ ms.locfileid: "66077769"
  线性回归模型  
  [使用 Microsoft 树查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
-## <a name="see-also"></a>请参阅  
- [数据挖掘算法 &#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [挖掘模型查看器（数据挖掘模型设计器）](mining-model-viewers-data-mining-model-designer.md)   
+## <a name="see-also"></a>另请参阅  
+ [数据挖掘算法 &#40;Analysis Services 数据挖掘&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [挖掘模型查看器 &#40;数据挖掘模型设计器&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [数据挖掘模型查看器](data-mining/data-mining-model-viewers.md)  
   
   

@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 00ab769ee2051edc499d586ab7d5ee1fa47dd854
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62468214"
 ---
 # <a name="command-syntax"></a>命令语法
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口可以识别由 DBGUID_SQL 宏指定的命令语法。 有关[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 访问接口，说明符指示 ODBC SQL、 ISO、 组合和[!INCLUDE[tsql](../../includes/tsql-md.md)]是有效的语法。 例如，以下 SQL 语句使用 ODBC SQL 转义序列指定 LCASE 字符串函数：  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序识别 DBGUID_SQL 宏指定的命令语法。 对于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序，说明符指示 ODBC SQL、ISO 和[!INCLUDE[tsql](../../includes/tsql-md.md)]的综合是有效的语法。 例如，以下 SQL 语句使用 ODBC SQL 转义序列指定 LCASE 字符串函数：  
   
 ```  
 SELECT customerid={fn LCASE(CustomerID)} FROM Customers  
@@ -35,10 +35,10 @@ SELECT customerid={fn LCASE(CustomerID)} FROM Customers
 SELECT customerid=LOWER(CustomerID) FROM Customers  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口处理任一格式的语句已成功时指定为命令的文本。  
+ 当[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定为命令的文本时，Native Client OLE DB 提供程序成功地处理语句的一种形式。  
   
 ## <a name="stored-procedures"></a>存储过程  
- 执行时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]存储过程使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序命令，请在命令文本中使用 ODBC CALL 转义序列。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口然后使用远程过程调用机制的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]优化命令处理。 例如，以下 ODBC SQL 语句是比 [!INCLUDE[tsql](../../includes/tsql-md.md)] 形式更常使用的命令文本：  
+ 使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB provider 命令执行存储过程时，请在命令文本中使用 ODBC CALL 转义序列。 然后[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，Native Client OLE DB 提供程序使用的远程过程调用机制[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]来优化命令处理。 例如，以下 ODBC SQL 语句是比 [!INCLUDE[tsql](../../includes/tsql-md.md)] 形式更常使用的命令文本：  
   
 -   ODBC SQL  
   
@@ -52,7 +52,7 @@ SELECT customerid=LOWER(CustomerID) FROM Customers
     EXECUTE SalesByCategory 'Produce', '1995'  
     ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [命令](commands.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 流和暂留 |Microsoft Docs
+title: 流和持久性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,23 +14,23 @@ ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22fbf503196c467a7816bf4e9c76151276cc6d4a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924020"
 ---
 # <a name="streams-and-persistence"></a>流和暂留
-[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象[保存](../../../ado/reference/ado-api/save-method.md)方法存储，或*仍然存在*即**记录集**在文件中，和[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法还原**记录集**从该文件。  
+[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)对象[保存](../../../ado/reference/ado-api/save-method.md)方法存储或*保留*文件中的**记录集**，而[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法则从该文件还原**记录集**。  
   
- 使用 ADO 2.7 或更高版本，**保存**并**打开**方法，可以在保持**记录集**到[Stream](../../../ado/reference/ado-api/stream-object-ado.md)对象。 使用远程数据服务 (RDS) 和 Active Server Pages (ASP) 时，此功能是特别有用。  
+ 使用 ADO 2.7 或更高版本，**保存**和**打开**方法也可以将**记录集**保存到[流](../../../ado/reference/ado-api/stream-object-ado.md)对象。 当使用远程数据服务（RDS）和 Active Server Pages （ASP）时，此功能特别有用。  
   
- 有关如何暂留可由本身在 ASP 页上的详细信息，请参阅当前的 ASP 文档。  
+ 有关如何在 ASP 页上自行使用持久性的详细信息，请参阅当前 ASP 文档。  
   
- 以下是几个方案，展示了如何**Stream**可以使用对象和持久性。  
+ 下面是一些演示如何使用**流**对象和持久性的方案。  
   
 ## <a name="scenario-1"></a>方案 1  
- 这种情况下，只需将保存**记录集**到一个文件，再到**Stream**。 接着，它会持久的流到另一**记录集**。  
+ 此方案只是将**记录集**保存到文件，然后保存到**流**中。 然后，它会将保存的流打开到另一个**记录集中**。  
   
 ```  
 Dim rs1 As ADODB.Recordset  
@@ -50,7 +50,7 @@ rs2.Open stm
 ```  
   
 ## <a name="scenario-2"></a>方案 2  
- 这种情况下仍然存在**记录集**成**Stream**以 XML 格式。 然后，它读取**Stream**到可以检查、 操作或显示的字符串。  
+ 此方案将**记录集**保存到 XML 格式的**流**中。 然后，它会将**流**读入一个字符串，可以检查、操作或显示该字符串。  
   
 ```  
 Dim rs As ADODB.Recordset  
@@ -76,7 +76,7 @@ strRst = stm.ReadText(adReadAll)
 ```  
   
 ## <a name="scenario-3"></a>方案 3  
- 此示例代码演示了 ASP 代码保持**记录集**作为 XML 直接与**响应**对象：  
+ 此示例代码演示了 ASP 代码将**记录集**作为 XML 直接保存到**响应**对象：  
   
 ```  
 ...  
@@ -100,11 +100,11 @@ Set rs = nothing
 ```  
   
 ## <a name="scenario-4"></a>方案 4  
- 在此方案中，ASP 代码将写入的内容**记录集**ADTG 格式到客户端。 [用于 OLE DB 的 Microsoft 游标服务](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)可以使用此数据来创建已断开连接**记录集**。  
+ 在此方案中，ASP 代码会将 ADTG 格式的**记录集**内容写入客户端。 [适用于 OLE DB 的 Microsoft 游标服务](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)可以使用此数据创建断开连接的**记录集**。  
   
- RDS 上的新属性[DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)， [URL](../../../ado/reference/rds-api/url-property-rds.md)，指向生成的相应的.asp 页**记录集**。 这意味着**记录集**可以获取对象没有 RDS 的情况下使用服务器端[DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)对象或用户编写的业务对象。 这大大简化了 RDS 编程模型。  
+ RDS [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)， [URL](../../../ado/reference/rds-api/url-property-rds.md)上的新属性指向生成**记录集**的 .asp 页面。 这意味着，可以使用服务器端[DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)对象或用户编写业务对象来获取**记录集**对象。 这大大简化了 RDS 编程模型。  
   
- 服务器端代码中，名为 https://server/directory/recordset.asp:  
+ 服务器端代码，名为https://server/directory/recordset.asp:  
   
 ```  
 <%  
@@ -118,7 +118,7 @@ rs.Save response, adPersistADTG
 %>  
 ```  
   
- 客户端的代码：  
+ 客户端代码：  
   
 ```  
 <HTML>  
@@ -147,7 +147,7 @@ rs.Save response, adPersistADTG
 </HTML>  
 ```  
   
- 开发人员也可以选择使用**记录集**客户端上的对象：  
+ 开发人员还可以选择在客户端上使用**Recordset**对象：  
   
 ```  
 ...  
@@ -160,7 +160,7 @@ function GetRs()
 ...  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [Open 方法 （ADO 记录集）](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [记录对象 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+## <a name="see-also"></a>另请参阅  
+ [Open 方法（ADO 记录集）](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
+ [Record 对象（ADO）](../../../ado/reference/ado-api/record-object-ado.md)   
  [Save 方法](../../../ado/reference/ado-api/save-method.md)

@@ -19,14 +19,14 @@ ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7e2f83a3637af8f0e89c4125d3207c8c54b86763
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917163"
 ---
 # <a name="resync-method"></a>重新同步方法
-刷新在当前数据[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象，或[字段](../../../ado/reference/ado-api/fields-collection-ado.md)的集合[记录](../../../ado/reference/ado-api/record-object-ado.md)对象，从基础数据库。  
+刷新当前[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象中的数据，或从基础数据库刷新[记录](../../../ado/reference/ado-api/record-object-ado.md)对象的[字段](../../../ado/reference/ado-api/fields-collection-ado.md)集合中的数据。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,43 +35,43 @@ ms.locfileid: "67917163"
 Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *AffectRecords*  
- 可选。 [AffectEnum](../../../ado/reference/ado-api/affectenum.md)值，该值确定的记录数**重新同步**方法将会影响。 默认值是**adAffectAll**。 此值不是适用于**重新同步**方法**字段**的集合**记录**对象。  
+ 可选。 一个[AffectEnum](../../../ado/reference/ado-api/affectenum.md)值，用于确定**Resync**方法将影响的记录数。 默认值为**adAffectAll**。 此值不能用于**Record**对象的 "**字段**" 集合的 "重新**同步**" 方法。  
   
  *ResyncValues*  
- 可选。 一个[ResyncEnum](../../../ado/reference/ado-api/resyncenum.md)值，该值指定是否覆盖基础值。 默认值是**adResyncAllValues**。  
+ 可选。 一个[ResyncEnum](../../../ado/reference/ado-api/resyncenum.md)值，该值指定是否覆盖基础值。 默认值为**adResyncAllValues**。  
   
 ## <a name="remarks"></a>备注  
   
 ## <a name="recordset"></a>记录集  
- 使用**重新同步**方法来重新同步中当前的记录**记录集**与基础数据库。 如果使用静态或只进游标，但你想要查看基础数据库中的任何更改，这非常有用。  
+ 使用 "重新**同步**" 方法可使当前**记录集中**的记录与基础数据库重新同步。 如果你使用的是静态或只进游标，但你想要查看基础数据库中的任何更改，这会很有用。  
   
- 如果您设置[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性设置为**adUseClient**，**重新同步**功能仅适用于非只读**记录集**对象。  
+ 如果将[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性设置为**adUseClient**，则只能对非只读**记录集**对象进行重新**同步**。  
   
- 与不同[Requery](../../../ado/reference/ado-api/requery-method.md)方法，**重新同步**方法不会重新执行**记录集**对象的基本命令。 基础数据库中的新记录将不可见。  
+ 与[Requery](../../../ado/reference/ado-api/requery-method.md)方法不同， **Resync**方法不会重新执行**Recordset**对象的基础命令。 基础数据库中的新记录将不可见。  
   
- 如果尝试重新同步失败由于与基础数据发生冲突 （例如，一条记录已被删除另一个用户），访问接口将返回到的警告[错误](../../../ado/reference/ado-api/errors-collection-ado.md)集合中，运行时错误时发生。 使用[筛选器](../../../ado/reference/ado-api/filter-property.md)属性 (**adFilterConflictingRecords**) 和[状态](../../../ado/reference/ado-api/status-property-ado-recordset.md)属性来查找有冲突的记录。  
+ 如果尝试重新同步失败是由于与基础数据发生冲突（例如，另一个用户删除了记录），则提供程序将向[错误](../../../ado/reference/ado-api/errors-collection-ado.md)集合返回警告，并发生运行时错误。 使用[Filter](../../../ado/reference/ado-api/filter-property.md)属性（**AdFilterConflictingRecords**）和[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)属性可查找存在冲突的记录。  
   
- 如果[唯一表](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)并[Resync Command](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)设置的动态属性，并**记录集**是执行多个表，则联接运算的结果**重新同步**方法将执行命令中给定**Resync Command**属性中命名的表上仅**唯一表**属性。  
+ 如果设置了[唯一的表](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)和[Resync 命令](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)动态属性，并且**记录集**是对多个表执行联接操作的结果，则**Resync**方法将仅对在**Unique 表**属性中指定的表执行**resync command**属性中给定的命令。  
   
 ## <a name="fields"></a>字段  
- 使用**重新同步**方法来重新同步的值**字段**的集合**记录**具有基础数据源对象。 [计数](../../../ado/reference/ado-api/count-property-ado.md)属性不受此方法。  
+ 使用 "重新**同步**" 方法可使**Record**对象的 "**字段**" 集合的值与基础数据源重新同步。 [Count](../../../ado/reference/ado-api/count-property-ado.md)属性不受此方法的影响。  
   
- 如果*ResyncValues*设置为**adResyncAllValues** （默认值）， [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)，[值](../../../ado/reference/ado-api/value-property-ado.md)，和[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)的属性[字段](../../../ado/reference/ado-api/field-object.md)同步集合中的对象。 如果*ResyncValues*设置为**adResyncUnderlyingValues**，将仅**UnderlyingValue**同步属性。  
+ 如果*将 ResyncValues*设置为**adResyncAllValues** （默认值），则将同步集合中[Field](../../../ado/reference/ado-api/field-object.md)对象的[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)、 [value](../../../ado/reference/ado-api/value-property-ado.md)和[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)属性。 如果*ResyncValues*设置为**adResyncUnderlyingValues**，则只同步**UnderlyingValue**属性。  
   
- 值**状态**属性为每个**字段**对象在调用时还会影响的行为**重新同步**。 有关**字段**具有对象**状态**的值**adFieldPendingUnknown**或者**adFieldPendingInsert**，**重新同步**不起作用。 有关**状态**的值**adFieldPendingChange**或**adFieldPendingDelete**，**重新同步**同步字段的数据值，数据源中仍存在。  
+ 调用时每个**Field**对象的**Status**属性的值也会影响重新**同步**的行为。 对于**状态**值为**adFieldPendingUnknown**或**adFieldPendingInsert**的**字段**对象，重新**同步**不起作用。 对于**adFieldPendingChange**或**adFieldPendingDelete**的**状态值**， **Resync**同步数据源中仍存在的字段的数据值。  
   
- **重新同步**将不会修改**状态**的值**域**对象，除非发生错误时**重新同步**调用。 例如，如果该字段不再存在，该提供程序将返回一个适当**状态**值**字段**对象，如**adFieldDoesNotExist**。 返回**状态**中的值可以以逻辑方式组合值**状态**属性。  
+ 重新**同步**不会修改**字段**对象的**状态值**，除非在调用重新**同步**时发生错误。 例如，如果该字段不存在，则提供程序将返回**字段**对象的相应**状态值**，如**adFieldDoesNotExist**。 返回的**状态值**可以在 "**状态**" 属性的值中以逻辑方式组合。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
   
 |||  
 |-|-|  
 |[字段集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
-## <a name="see-also"></a>请参阅  
- [Resync 方法示例 (VB)](../../../ado/reference/ado-api/resync-method-example-vb.md)   
- [Resync 方法示例 （VC + +）](../../../ado/reference/ado-api/resync-method-example-vc.md)   
- [Clear 方法 (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
+## <a name="see-also"></a>另请参阅  
+ [Resync 方法示例（VB）](../../../ado/reference/ado-api/resync-method-example-vb.md)   
+ [Resync 方法示例（VC + +）](../../../ado/reference/ado-api/resync-method-example-vc.md)   
+ [Clear 方法（ADO）](../../../ado/reference/ado-api/clear-method-ado.md)   
  [UnderlyingValue 属性](../../../ado/reference/ado-api/underlyingvalue-property.md)

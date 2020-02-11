@@ -14,20 +14,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6f065793a86eb5c4c6ebb55883e2e206ccff9b9c
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798273"
 ---
 # <a name="create-an-activex-script-job-step"></a>Create an ActiveX Script Job Step
-  本主题介绍如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)] 或 SQL Server 管理对象，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中创建和定义用于执行 ActiveX 脚本的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤。  
+  本主题介绍如何在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]创建和定义代理作业步骤，该步骤使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]或 SQL Server 管理对象执行 ActiveX 脚本。  
   
 -   **开始之前：**  
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要创建 Transact-SQL 作业步骤，可使用：**  
   
@@ -49,15 +49,15 @@ ms.locfileid: "72798273"
   
 #### <a name="to-create-an-activex-script-job-step"></a>创建 ActiveX 脚本作业步骤  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
+1.  在**对象资源管理器中，** 连接到的[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例，然后展开该实例。  
   
-2.  展开 **“SQL Server 代理”** ，创建一个新作业或右键单击一个现有作业，再单击 **“属性”** 。 有关创建作业的详细信息，请参阅 [创建作业](create-jobs.md)。  
+2.  展开 **“SQL Server 代理”**，创建一个新作业或右键单击一个现有作业，再单击 **“属性”**。 有关创建作业的详细信息，请参阅 [创建作业](create-jobs.md)。  
   
-3.  在 **“作业属性”** 对话框中，单击 **“步骤”** 页，再单击 **“新建”** 。  
+3.  在 **“作业属性”** 对话框中，单击 **“步骤”** 页，再单击 **“新建”**。  
   
-4.  在 **“新建作业步骤”** 对话框中，键入作业的 **“步骤名称”** 。  
+4.  在 **“新建作业步骤”** 对话框中，键入作业的 **“步骤名称”**。  
   
-5.  在 **“类型”** 列表中，单击 **“ActiveX 脚本”** 。  
+5.  在 **“类型”** 列表中，单击 **“ActiveX 脚本”**。  
   
 6.  在 **“运行身份”** 列表中，选择该作业将要使用的代理帐户和凭据。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "72798273"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```sql
     -- create an ActiveX Script job step written in VBScript that creates a restore point  
@@ -98,7 +98,7 @@ ms.locfileid: "72798273"
     GO  
     ```  
   
- 有关详细信息，请[参阅&#40;sp_add_jobstep transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)。  
+ 有关详细信息，请参阅[&#40;transact-sql&#41;sp_add_jobstep ](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)。  
   
 ##  <a name="SMO"></a>使用 SQL Server 管理对象  
  **创建 ActiveX 脚本作业步骤**  

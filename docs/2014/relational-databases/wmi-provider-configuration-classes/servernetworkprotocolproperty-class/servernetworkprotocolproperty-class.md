@@ -19,16 +19,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 39d0a86147d40bb4f2eaf85dbf5b9ae92bfe540d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62642910"
 ---
 # <a name="servernetworkprotocolproperty-class"></a>ServerNetworkProtocolProperty 类
-  [ServerNetworkProtocolProperty 类] servernetworkprotocolproperty class.md) 表示服务器网络协议的属性。  
+  [ServerNetworkProtocolProperty Class] ServerNetworkProtocolProperty-class.md）表示服务器网络协议的属性。  
   
- 使用方法是 [ServerNetworkProtocolProperty 类] servernetworkprotocolproperty-class.md)，可以执行以下任务：  
+ 利用 [ServerNetworkProtocolProperty Class] ServerNetworkProtocolProperty-class.md），您可以执行以下任务：  
   
 -   检查当前属性所属的协议。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62642910"
   
 -   设置当前属性的标志。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置服务器网络协议和网络库](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   
