@@ -1,5 +1,5 @@
 ---
-title: 使用 SQLBulkOperations 提取行 |Microsoft Docs
+title: 提取 SQLBulkOperations 的行 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,23 +18,23 @@ ms.assetid: 0efee2d6-ce94-411e-9976-97ba28b8da37
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 60b6673c4a6d618e52c78b48fe7307c20c8628f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68069844"
 ---
 # <a name="fetching-rows-with-sqlbulkoperations"></a>使用 SQLBulkOperations 提取行
-可以通过调用到行集使用书签 refetched 数据**SQLBulkOperations。** 由绑定的书签列中的书签标识要提取的行。 不会获取 SQL_COLUMN_IGNORE 值的列。  
+可以通过调用 SQLBulkOperations，使用书签将数据制约到行集 **。** 要提取的行由绑定书签列中的书签标识。 不提取值为 SQL_COLUMN_IGNORE 的列。  
   
- 若要执行大容量提取操作与**SQLBulkOperations**，应用程序执行以下：  
+ 若要通过**SQLBulkOperations**执行批量提取，应用程序执行以下操作：  
   
-1.  检索并缓存的更新的所有行的书签。 如果存在多个书签，并且使用按列绑定，书签将存储在数组中;如果存在多个书签，并且使用按行绑定，书签存储数组中的行结构。  
+1.  检索并缓存要更新的所有行的书签。 如果使用多个书签和逐列绑定，则书签存储在数组中;如果使用多个书签和按行绑定，书签将存储在行结构的数组中。  
   
-2.  将 SQL_ATTR_ROW_ARRAY_SIZE 语句属性设置为要提取的行数，并将绑定包含书签值或书签，到第 0 列的数组的缓冲区。  
+2.  将 SQL_ATTR_ROW_ARRAY_SIZE 语句特性设置为要提取的行数，并将包含书签值或书签数组的缓冲区绑定到列0。  
   
-3.  根据需要在每个列的长度/指示器缓冲区中设置的值。 这是 sql_nts; 的数据的列绑定到字符串缓冲区绑定到二进制缓冲区和 SQL_NULL_DATA 的任何列设置为 NULL 的列的数据的字节长度的字节长度。 应用程序设置的值设置为其默认值 （如果存在） 的列或 SQL_COLUMN_IGNORE 到 NULL （如果一个不使用） 的长度/指示器缓冲区中。  
+3.  根据需要设置每列的长度/指示器缓冲区中的值。 这是绑定到字符串缓冲区的列的数据或 SQL_NTS 的字节长度、绑定到二进制缓冲区的列的数据字节长度，以及要设置为 NULL 的所有列的 SQL_NULL_DATA。 应用程序将设置为默认值（如果存在）的列的长度/指示器缓冲区中的值设置为默认值（如果存在）或 NULL （如果没有） SQL_COLUMN_IGNORE。  
   
-4.  调用**SQLBulkOperations**与*操作*参数设置为 SQL_FETCH_BY_BOOKMARK。  
+4.  调用**SQLBulkOperations** ，并将*操作*参数设置为 SQL_FETCH_BY_BOOKMARK。  
   
- 没有此应用程序使用行操作数组以防止操作无需执行对某些列。 应用程序选择想要通过将这些行的书签复制到绑定的书签数组提取的行。
+ 应用程序不需要使用行操作数组来阻止对某些列执行操作。 应用程序将选择要提取的行，方法是将这些行的书签仅复制到绑定书签数组中。

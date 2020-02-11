@@ -15,34 +15,34 @@ ms.assetid: 52310260-a892-4b27-ad2e-bf164b98ee80
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f32929b9cd5d2f69ae4ffbb8d13f7ec09d9972ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68064274"
 ---
 # <a name="unicode-data-and-server-code-pages"></a>Unicode 数据和服务器代码页
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 请改用 CLR 集成。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]请改用 CLR 集成。  
   
  扩展存储过程 API 将对 Unicode 数据启用；但是，它不对 Unicode 元数据启用。 #define Unicode 指令不影响扩展存储过程 API。  
   
- 由扩展存储过程 API 返回的或由您的扩展存储过程应用程序提供给它的所有元数据都假定位于服务器的多字节代码页中。 扩展存储过程 API 服务器应用程序的默认代码页是运行应用程序可通过调用获取的计算机的 ANSI 代码页**srv_pfield**字段参数设置为 SRV_SPROC_CODEPAGE。  
+ 由扩展存储过程 API 返回的或由您的扩展存储过程应用程序提供给它的所有元数据都假定位于服务器的多字节代码页中。 扩展存储过程 API 服务器应用程序的默认代码页是运行应用程序的计算机的 ANSI 代码页，可以通过调用**srv_pfield** ，并将字段参数设置为 SRV_SPROC_CODEPAGE 来获取此页。  
   
  如果您的扩展存储过程 API 应用程序启用了 Unicode，则必须将您的 Unicode 元数据列名称、错误消息等转换为多字节数据，然后才能将该数据传递给扩展存储过程 API。  
   
 ## <a name="example"></a>示例  
- 以下扩展存储过程提供了上述 Unicode 转换的示例。 注意：  
+ 以下扩展存储过程提供了上述 Unicode 转换的示例。 请注意：  
   
--   列数据作为 Unicode 数据传递**srv_describe**因为该列被描述为 SRVNVARCHAR。  
+-   列数据将作为 Unicode 数据传递到**srv_describe** ，因为该列被描述为 SRVNVARCHAR。  
   
--   列名称元数据传递给**srv_describe**作为多字节数据。  
+-   列名元数据将作为多字节数据传递到**srv_describe** 。  
   
-     扩展存储过程调用**srv_pfield**字段参数设置为 SRV_SPROC_CODEPAGE，若要获取的多字节代码页[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+     扩展存储过程调用**srv_pfield** ，并将字段参数设置为 SRV_SPROC_CODEPAGE 以获取的多字节代码页[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
--   错误消息传递给**srv_sendmsg**作为多字节数据。  
+-   错误消息将作为多字节数据传递到**srv_sendmsg** 。  
   
     ```  
     __declspec(dllexport) RETCODE proc1 (SRV_PROC *srvproc)  
@@ -150,7 +150,7 @@ ms.locfileid: "68064274"
   
     ```  
   
-## <a name="see-also"></a>请参阅  
- [srv_wsendmsg&#40;扩展存储过程 API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-wsendmsg-extended-stored-procedure-api.md)  
+## <a name="see-also"></a>另请参阅  
+ [扩展存储过程 API srv_wsendmsg &#40;&#41;](../../relational-databases/extended-stored-procedures-reference/srv-wsendmsg-extended-stored-procedure-api.md)  
   
   

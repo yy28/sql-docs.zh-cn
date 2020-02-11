@@ -1,5 +1,5 @@
 ---
-title: ODBC 服务提供程序接口 (SPI) 参考 |Microsoft Docs
+title: ODBC 服务提供程序接口（SPI）参考 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,20 +11,20 @@ ms.assetid: cdeffb4a-f344-4abe-97f3-be2ede1c8e59
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 88053620fa413c50a8faff4cc47cbbe1457249f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68073836"
 ---
 # <a name="odbc-service-provider-interface-spi-reference"></a>ODBC 服务提供程序接口 (SPI) 参考
-传统上，ODBC 定义应用程序编程接口 (API)。 在 API 函数可以调用应用程序和驱动程序管理器和驱动程序中实现它们。  
+传统上，ODBC 定义了应用程序编程接口（API）。 API 中的函数可以由应用程序调用，它们应在驱动程序管理器和驱动程序内实现。  
   
- 添加了识别驱动程序的连接池功能，通过 ODBC 引入了服务提供程序接口 (SPI)。 在 SPI 函数用于驱动程序管理器和驱动程序之间的通信。 SPI 函数的实现是由驱动程序;驱动程序管理器不会公开 SPI 函数对应用程序。 应用程序不应直接调用这些函数。  
+ 添加了驱动程序感知连接池功能后，ODBC 会引入服务提供程序接口（SPI）。 SPI 中的函数用于驱动程序管理器和驱动程序之间的通信。 SPI 函数由驱动程序实现;驱动程序管理器不会向应用程序公开 SPI 函数。 应用程序不应直接调用这些函数。  
   
- 包括 sqlspi.h 的 ODBC 驱动程序开发。  
+ 包括用于 ODBC 驱动程序开发的 sqlspi。  
   
- 本部分包含以下主题  
+ 本节包含下列主题  
   
 -   [SQLCleanupConnectionPoolID](../../../odbc/reference/syntax/sqlcleanupconnectionpoolid-function.md)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68073836"
   
 -   [SQLSetDriverConnectInfo](../../../odbc/reference/syntax/installation-and-configuration-wwi-oltp.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [开发 ODBC 驱动程序](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [开发中的 ODBC 驱动程序的连接池感知](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)   
+ [在 ODBC 驱动程序中开发连接池感知](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)   
  [驱动程序管理器连接池](../../../odbc/reference/develop-app/driver-manager-connection-pooling.md)

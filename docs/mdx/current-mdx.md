@@ -1,5 +1,5 @@
 ---
-title: 当前 (MDX) |Microsoft Docs
+title: 当前（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 821d517419b90df44b7943a1e0edde12ef667b6e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68047119"
 ---
 # <a name="current-mdx"></a>Current (MDX)
@@ -34,13 +34,13 @@ Set_Expression.Current
 ## <a name="remarks"></a>备注  
  迭代过程的每一步中所操作的元组就是当前元组。 **当前**函数返回该元组。 该函数仅在对集执行迭代的过程中有效。  
   
- 循环访问集的 MDX 函数包括[生成](../mdx/generate-mdx.md)函数。  
+ 遍历集的 MDX 函数包括[生成](../mdx/generate-mdx.md)函数。  
   
 > [!NOTE]  
 >  该函数只能使用已命名的集（使用集别名或定义命名集）。  
   
 ## <a name="examples"></a>示例  
- 下面的示例演示如何使用**当前**函数嵌套**生成**:  
+ 下面的示例演示如何在**生成**中使用**当前**函数：  
   
  `WITH`  
   
@@ -66,7 +66,7 @@ Set_Expression.Current
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>请参阅  
- [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

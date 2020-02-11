@@ -10,59 +10,59 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f33d36cccbbea6f37139410f9d3d6e03f740ee96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68067619"
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>WideWorldImportersDW ETL 工作流
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-使用*WWI_Integration* ETL 包，以将数据从 WideWorldImporters 数据库迁移到 WideWorldImportersDW 数据库，随着数据的更改。 定期运行包 （通常每日）。
+当数据更改时，使用*WWI_Integration* ETL 包将数据从 WideWorldImporters 数据库迁移到 WideWorldImportersDW 数据库。 包定期运行（通常为每天）。
 
-包可确保通过使用 SQL Server Integration Services 安排 T-SQL 的大容量操作 （而不是在 Integration Services 中的单独转换） 的高性能。
+包通过使用 SQL Server Integration Services 来协调大容量 T-sql 操作（而不是 Integration Services 中的单独转换）来确保高性能。
 
-首先，加载维度，并随后加载事实数据表。 在出现故障后的任何时间，可以重新运行包。
+首先加载维度，然后加载事实数据表。 在发生故障后，可以随时重新运行包。
 
 工作流如下所示：
 
  ![WideWorldImporters ETL 工作流](media/wide-world-importers/wideworldimporters-etl-workflow.png)
 
-在工作流启动使用表达式的任务，用于确定适当的截止时间。 截止时间是当前时间减几分钟时间。 （这种方法是比请求的数据从右到当前时间更可靠。）任何毫秒为单位的时间将被截断。
+工作流以确定适当截止时间的表达式任务开头。 截止时间是当前时间减去几分钟。 （与向当前时间请求的数据相比，此方法更可靠。）任何毫秒都将从该时间被截断。
 
-主处理首先会填充日期维度表。 在处理可确保，已在表中填充了当前年份的所有日期。
+主处理首先填充 "日期" 维度表。 处理可确保已在表中填充了当前年份的所有日期。
 
-接下来，一系列的数据流任务加载每个维度。 然后，它们的加载每个事实。
+接下来，一系列数据流任务加载每个维度。 然后，它们会加载每个事实。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
-- SQL Server 2016 （或更高版本），与 WideWorldImporters 和 WideWorldImportersDW 数据库 （在相同或不同的 SQL Server 实例）
+- SQL Server 2016 （或更高版本），其中包含 WideWorldImporters 和 WideWorldImportersDW 数据库（在 SQL Server 的相同或不同的实例中）
 - SQL Server Management Studio
 - SQL Server 2016 Integration Services
-  - 请确保创建的 Integration Services 目录。 若要创建的 Integration Services 目录，在 SQL Server Management Studio 对象资源管理器中，右键单击**Integration Services**，然后选择**添加目录**。 保留默认选项。 系统会提示启用 SQLCLR 和提供密码。
+  - 确保创建 Integration Services 目录。 若要创建 Integration Services 目录，请在 SQL Server Management Studio 对象资源管理器中右键单击**Integration Services**，然后选择 "**添加目录**"。 保留默认选项。 系统将提示您启用 SQLCLR 并提供密码。
 
 
 ## <a name="download"></a>下载
 
-该示例的最新版本，请参阅[wide world 导入程序版本](https://go.microsoft.com/fwlink/?LinkID=800630)。 下载*每日 ETL.ispac* Integration Services 包文件。
+有关该示例的最新版本，请参阅[宽-全球导入程序-版本](https://go.microsoft.com/fwlink/?LinkID=800630)。 下载 *.ispac* Integration Services 包文件。
 
-若要重新创建示例数据库的源代码，请参阅[wide world importers](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-integration-etl)。
+若要使源代码重新创建示例数据库，请参阅[宽世界导入程序](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-integration-etl)。
 
 ## <a name="install"></a>安装
 
 1. 部署 Integration Services 包：
-   1. 在 Windows 资源管理器中打开*每日 ETL.ispac*包。 这将启动 SQL Server Integration Services 部署向导。
-   2. 下**选择源**，为项目部署遵循的默认值指向的路径*每日 ETL.ispac*包。
-   3. 下**选择目标**，输入托管 Integration Services 目录的服务器的名称。
-   4. 例如，名为的新文件夹中选择 Integration Services 目录下的路径*WideWorldImporters*。
-   5. 选择**部署**以完成该向导。
+   1. 在 Windows 资源管理器中，打开 *.ispac*包。 这将启动 SQL Server Integration Services 部署向导。
+   2. 在 "**选择源**" 下，按项目部署的默认值，并将路径指向*每日 .ispac*包。
+   3. 在 "**选择目标**" 下，输入承载 Integration Services 目录的服务器的名称。
+   4. 选择 Integration Services 目录下的路径，例如，在名为*WideWorldImporters*的新文件夹中。
+   5. 选择 "**部署**" 以完成向导。
 
-2. 创建 ETL 过程的 SQL Server 代理作业：
-   1. 在 Management Studio 中，右键单击**SQL Server 代理**，然后选择**新建** > **作业**。
-   2. 例如，输入一个名称， *WideWorldImporters ETL*。
-   3. 添加**作业步骤**类型的**SQL Server Integration Services 包**。
-   4. 选择具有 Integration Services 目录的服务器，然后选择*日常 ETL*包。
-   5. 下**配置** > **连接管理器**，确保正确配置的源和目标的连接。 默认值是连接到本地实例。
-   6. 选择**确定**创建作业。
+2. 为 ETL 过程创建 SQL Server 代理作业：
+   1. 在 Management Studio 中，右键单击**SQL Server 代理**，然后选择 "**新建** > **作业**"。
+   2. 输入名称，例如， *WIDEWORLDIMPORTERS ETL*。
+   3. 添加**SQL Server Integration Services 包**类型的**作业步骤**。
+   4. 选择具有 "Integration Services" 目录的服务器，然后选择 "*每日 ETL*包"。
+   5. 在 "**配置** > **连接管理器**" 下，确保已正确配置与源和目标的连接。 默认值为连接到本地实例。
+   6. 选择 **"确定"** 以创建作业。
 
 3. 执行或计划作业。

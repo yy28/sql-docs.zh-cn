@@ -1,5 +1,5 @@
 ---
-title: sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL) | Microsoft Docs
+title: sys. fn_stmt_sql_handle_from_sql_stmt （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,18 +14,18 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 92ebff45c8599e6257ad22f563da6af5067d8e3c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68059272"
 ---
-# <a name="sysfnstmtsqlhandlefromsqlstmt-transact-sql"></a>sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
+# <a name="sysfn_stmt_sql_handle_from_sql_stmt-transact-sql"></a>sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  获取**stmt_sql_handle**为[!INCLUDE[tsql](../../includes/tsql-md.md)]语句在给定参数化类型 （简单或强制）。 这使您可以通过在查询存储中存储的查询是指其**stmt_sql_handle**当您知道其文本。  
+  获取给定**** 参数化类型[!INCLUDE[tsql](../../includes/tsql-md.md)] （simple 或强制）下的语句的 stmt_sql_handle。 这使你可以通过在知道查询存储的文本时使用其**stmt_sql_handle**来引用其中存储的查询。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,14 +39,14 @@ sys.fn_stmt_sql_handle_from_sql_stmt
   
 ## <a name="arguments"></a>参数  
  *query_sql_text*  
- 是所需的句柄的查询存储区中查询的文本。 *query_sql_text*是**nvarchar （max)** ，无默认值。  
+ 要作为句柄的查询在查询存储中的文本。 *query_sql_text*为**nvarchar （max）**，无默认值。  
   
  *query_param_type*  
- 是查询的参数类型。 *query_param_type*是**tinyint**。 可能的值有：  
+ 查询的参数类型。 *query_param_type*是**tinyint**。 可能的值为：  
   
--   NULL-默认值为 0  
+-   NULL-默认值为0  
   
--   0-无  
+-   0 - None  
   
 -   1-用户  
   
@@ -55,12 +55,12 @@ sys.fn_stmt_sql_handle_from_sql_stmt
 -   3-强制  
   
 ## <a name="columns-returned"></a>返回的列  
- 下表列出的列的 sys.fn_stmt_sql_handle_from_sql_stmt 返回。  
+ 下表列出了 sys.databases. fn_stmt_sql_handle_from_sql_stmt 返回的列。  
   
-|列名|type|描述|  
+|列名称|类型|说明|  
 |-----------------|----------|-----------------|  
-|**statement_sql_handle**|**varbinary(64)**|SQL 句柄。|  
-|**query_sql_text**|**nvarchar(max)**|文本[!INCLUDE[tsql](../../includes/tsql-md.md)]语句。|  
+|**statement_sql_handle**|**varbinary （64）**|SQL 句柄。|  
+|**query_sql_text**|**nvarchar(max)**|[!INCLUDE[tsql](../../includes/tsql-md.md)]语句的文本。|  
 |**query_parameterization_type**|**tinyint**|查询参数化类型。|  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -69,7 +69,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
 ## <a name="remarks"></a>备注  
   
 ## <a name="permissions"></a>权限  
- 需要**EXECUTE**上，对数据库的权限和**删除**查询存储目录视图的权限。  
+ 要求对数据库具有**EXECUTE**权限，并对查询存储目录视图具有**DELETE**权限。  
   
 ## <a name="examples"></a>示例  
  下面的示例执行一个语句，然后使用`sys.fn_stmt_sql_handle_from_sql_stmt`返回该语句的 SQL 句柄。  
@@ -79,7 +79,7 @@ SELECT * FROM sys.databases;
 SELECT * FROM sys.fn_stmt_sql_handle_from_sql_stmt('SELECT * FROM sys.databases', NULL);  
 ```  
   
- 使用该函数与其他动态管理视图关联的查询存储数据。 下面的示例：  
+ 使用函数可以将查询存储数据与其他动态管理视图关联。 以下示例：  
   
 ```  
 SELECT qt.query_text_id, q.query_id, qt.query_sql_text, qt.statement_sql_handle,  
@@ -92,14 +92,14 @@ JOIN sys.dm_exec_query_stats AS qs
     ON fn_handle_from_stmt.statement_sql_handle = qs.statement_sql_handle;  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [sp_query_store_force_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [sp_query_store_force_plan &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)   
  [sp_query_store_remove_plan &#40;Transct-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
- [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)   
- [sp_query_store_reset_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
- [sp_query_store_flush_db &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)   
- [sp_query_store_remove_query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
+ [sp_query_store_unforce_plan &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)   
+ [sp_query_store_reset_exec_stats &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
+ [sp_query_store_flush_db &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)   
+ [sp_query_store_remove_query &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
  [查询存储目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
- [使用查询存储来监视性能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
+ [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
   
   

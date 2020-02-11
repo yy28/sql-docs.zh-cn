@@ -1,5 +1,5 @@
 ---
-title: sysmail_help_profileaccount_sp (TRANSACT-SQL) |Microsoft Docs
+title: sysmail_help_profileaccount_sp （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c4f0ceb580ddc7538dd1ea98b9e08a82cd8d35b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68044494"
 ---
-# <a name="sysmailhelpprofileaccountsp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
+# <a name="sysmail_help_profileaccount_sp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   列出与一个或多个数据库邮件配置文件相关联的帐户。  
     
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,23 +43,23 @@ sysmail_help_profileaccount_sp
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @profile_id = ] profile_id` 是到列表的配置文件的配置文件 ID。 *profile_id*是**int**，默认值为 NULL。 任一*profile_id*或*profile_name*必须指定。  
+`[ @profile_id = ] profile_id`要列出的配置文件的配置文件 ID。 *profile_id*的值为**int**，默认值为 NULL。 必须指定*profile_id*或*profile_name* 。  
   
-`[ @profile_name = ] 'profile_name'` 是到列表的配置文件的配置文件名称。 *profile_name*是**sysname**，默认值为 NULL。 任一*profile_id*或*profile_name*必须指定。  
+`[ @profile_name = ] 'profile_name'`要列出的配置文件的配置文件名称。 *profile_name*的默认值为**sysname**，默认值为 NULL。 必须指定*profile_id*或*profile_name* 。  
   
-`[ @account_id = ] account_id` 是列表的帐户 ID。 *account_id*是**int**，默认值为 NULL。 当*account_id*并*account_name*同时为 null，将列出配置文件中的所有帐户。  
+`[ @account_id = ] account_id`要列出的帐户 ID。 *account_id*的值为**int**，默认值为 NULL。 当*account_id*和*account_name*均为 NULL 时，将列出配置文件中的所有帐户。  
   
-`[ @account_name = ] 'account_name'` 是列出的名称。 *account_name*是**sysname**，默认值为 NULL。 当*account_id*并*account_name*同时为 null，将列出配置文件中的所有帐户。  
+`[ @account_name = ] 'account_name'`要列出的帐户的名称。 *account_name*的默认值为**sysname**，默认值为 NULL。 当*account_id*和*account_name*均为 NULL 时，将列出配置文件中的所有帐户。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** （成功）或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
  返回包含以下列的结果集。  
   
 ||||  
 |-|-|-|  
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |**profile_id**|**int**|配置文件的配置文件 ID。|  
 |**profile_name**|**sysname**|配置文件的名称。|  
 |**account_id**|**int**|帐户的帐户 ID。|  
@@ -67,15 +67,15 @@ sysmail_help_profileaccount_sp
 |**sequence_number**|**int**|配置文件中的帐户的序号。|  
   
 ## <a name="remarks"></a>备注  
- 如果未*profile_id*或*profile_name*指定，则此存储的过程返回的实例中的每个配置文件的信息。  
+ 如果未指定*profile_id*或*profile_name* ，则此存储过程将返回实例中的每个配置文件的信息。  
   
- 存储的过程**sysmail_help_profileaccount_sp**处于**msdb**数据库中，归**dbo**架构。 必须使用由三部分名称执行该过程，如果当前数据库不是**msdb**。  
+ 存储过程**sysmail_help_profileaccount_sp**在**msdb**数据库中，由**dbo**架构拥有。 如果当前数据库不是**msdb**，则必须使用由三部分组成的名称来执行该过程。  
   
 ## <a name="permissions"></a>权限  
- 执行此过程默认情况下的成员的权限**sysadmin**固定的服务器角色。  
+ 此过程的执行权限默认授予**sysadmin**固定服务器角色的成员。  
   
 ## <a name="examples"></a>示例  
- **A.按名称列出的帐户以执行特定的配置文件**  
+ **A. 按名称列出特定配置文件的帐户**  
   
  以下示例通过指定配置文件名称以列出 `AdventureWorks Administrator` 配置文件的信息。  
   
@@ -93,7 +93,7 @@ profile_id  profile_name                 account_id  account_name         sequen
 131         AdventureWorks Administrator 198         Admin-BackupServer   2  
 ```  
   
- **B.特定的配置文件按配置文件 id 列出的帐户**  
+ **B. 按配置文件 ID 列出特定配置文件的帐户**  
   
  以下示例通过指定配置文件的配置文件 ID 以列出 `AdventureWorks Administrator` 配置文件的信息。  
   
@@ -111,7 +111,7 @@ profile_id  profile_name                 account_id  account_name         sequen
 131         AdventureWorks Administrator 198         Admin-BackupServer   2  
 ```  
   
- **C.列出所有配置文件的帐户**  
+ **C. 列出所有配置文件的帐户**  
   
  以下示例列出实例中的所有配置文件的帐户。  
   
@@ -129,10 +129,10 @@ profile_id  profile_name                 account_id  account_name         sequen
 106         AdventureWorks Operator      210         Operator-MainServer  1  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库邮件](../../relational-databases/database-mail/database-mail.md)   
  [创建数据库邮件帐户](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [数据库邮件配置对象](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [数据库邮件存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [数据库邮件存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

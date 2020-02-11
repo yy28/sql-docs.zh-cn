@@ -1,5 +1,5 @@
 ---
-title: sys.dm_xe_map_values (TRANSACT-SQL) |Microsoft Docs
+title: sys. dm_xe_map_values （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,34 +20,34 @@ ms.assetid: c0c5dd7e-9cee-47e2-b65a-88194c00aa1f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6eb770951e48f7145311fb75de18a17236a09d7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68090322"
 ---
-# <a name="sysdmxemapvalues-transact-sql"></a>sys.dm_xe_map_values (Transact-SQL)
+# <a name="sysdm_xe_map_values-transact-sql"></a>sys.dm_xe_map_values (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   返回一个内部数字键到可读文本的映射。  
  
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|name|**nvarchar(256)**|映射的名称。 在本地系统是唯一的名称。 不可为 null。|  
+|name|**nvarchar(256)**|映射的名称。 名称在本地系统中是唯一的。 不可为 null。|  
 |object_package_guid|**uniqueidentifier**|包含映射的包的 GUID。 不可为 null。|  
 |map_key|**int**|内部键值。 不可为 null。|  
-|map_value|**nvarchar(3072)**|键值的说明。 不可为 null。|  
+|map_value|**nvarchar （3072）**|键值的说明。 不可为 null。|  
   
 ## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ### <a name="relationship-cardinalities"></a>关系基数  
   
-|From|若要|关系|  
+|从|目标|关系|  
 |----------|--------|------------------|  
 |dm_xe_map_values.object_package_guid<br /><br /> dm_xe_map_values.name|sys.dm_xe_objects.package_guid<br /><br /> sys.dm_xe_objects.name|多对一| 
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

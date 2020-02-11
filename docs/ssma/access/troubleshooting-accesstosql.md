@@ -1,5 +1,5 @@
 ---
-title: 故障排除 (AccessToSQL) |Microsoft Docs
+title: 故障排除（AccessToSQL） |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,28 +10,28 @@ ms.assetid: 04cd7ffa-5402-4aba-90dd-8b562dd4b0bb
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: ea7cfd8940bdfbcda32d7a7338906db020b8c34a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68051476"
 ---
-# <a name="troubleshooting-accesstosql"></a>故障排除 (AccessToSQL)
-不常见遇到迁移问题正好执行控制台脚本或命令。  
+# <a name="troubleshooting-accesstosql"></a>故障排除（AccessToSQL）
+不太常见的情况是在执行控制台脚本或命令的中间运行迁移问题。  
   
-可修复的错误可能会涉及到了：  
+可修复的错误可能与以下内容相关：  
   
 1.  函数  
   
 2.  过程  
   
-3.  “查看”  
+3.  查看  
   
 4.  触发器  
   
-5.  修改的数据类型  
+5.  修改数据类型  
   
 6.  更改项目设置  
   
-可以通过打开通过控制台创建的项目文件使用 SSMA 用户界面修复了问题。  
+通过打开通过控制台创建的项目文件，可以使用 SSMA 用户界面解决这些问题。  
   

@@ -1,5 +1,5 @@
 ---
-title: 非重复计数 (MDX) |Microsoft Docs
+title: DistinctCount （MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a5364b32aeb69019f7438b2c6d0e8f5ab716e39f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68077255"
 ---
 # <a name="distinctcount-mdx"></a>DistinctCount (MDX)
@@ -32,7 +32,7 @@ DistinctCount(Set_Expression)
  返回集的有效多维表达式 (MDX)。  
   
 ## <a name="remarks"></a>备注  
- **DistinctCount**函数等同于`Count(Distinct(Set_Expression), EXCLUDEEMPTY)`。  
+ **DistinctCount**函数等效于`Count(Distinct(Set_Expression), EXCLUDEEMPTY)`。  
   
 ## <a name="examples"></a>示例  
  以下查询说明如何使用 DistinctCount 函数：  
@@ -61,8 +61,8 @@ DistinctCount(Set_Expression)
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>请参阅  
- [Count（集）(MDX)](../mdx/count-set-mdx.md)   
- [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#41; &#40;MDX&#41;&#40;集计数](../mdx/count-set-mdx.md)   
+ [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

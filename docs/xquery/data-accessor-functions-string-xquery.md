@@ -1,5 +1,5 @@
 ---
-title: 字符串函数 (XQuery) |Microsoft Docs
+title: string 函数（XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 7baa2959-9340-429b-ad53-3df03d8e13fc
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9cb30d81102c17f2c3ce04b31ac7ff2b9689343e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038941"
 ---
 # <a name="data-accessor-functions---string-xquery"></a>数据取值函数 - string (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  返回的值 *$arg*表示为字符串。  
+  返回表示为字符串的 *$arg*的值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,21 +41,21 @@ fn:string($arg as item()?) as xs:string
   
 ## <a name="remarks"></a>备注  
   
--   如果 *$arg*是空序列，则返回零长度字符串。  
+-   如果 *$arg*是空序列，则返回长度为零的字符串。  
   
--   如果 *$arg*是一个节点，该函数返回的使用字符串值取值函数获取的节点的字符串值。 W3C XQuery 1.0 和 XPath 2.0 数据模型规范中对此进行了定义。  
+-   如果 *$arg*是节点，则该函数将返回使用字符串值访问器获取的节点的字符串值。 W3C XQuery 1.0 和 XPath 2.0 数据模型规范中对此进行了定义。  
   
--   如果 *$arg*是一个原子值，该函数返回相同的字符串返回的表达式强制转换为**xs: string**， *$arg*，除非另有说明。  
+-   如果 *$arg*是原子值，则该函数返回由表达式 cast 作为**xs： string**、 *$arg*返回的同一字符串，但在其他情况下除外。  
   
--   如果类型 *$arg*是**xs: anyuri**，则 URI 将转换为字符串，而不转义特殊字符。  
+-   如果 *$arg*的类型为**xs： ANYURI**，则 URI 将转换为字符串，而不会转义特殊字符。  
   
--   在此实现中， **fn: string**没有仅可以使用上下文相关的谓词的上下文中的参数。 特别要指出的是，它只能在方括号 ([ ]) 内使用。  
+-   此实现，不带参数的**fn： string （）** 只能用于上下文相关的谓词的上下文中。 特别要指出的是，它只能在方括号 ([ ]) 内使用。  
   
 ## <a name="examples"></a>示例  
- 本主题提供了一些针对 XML 实例存储在各种中的 XQuery 示例**xml**类型列中的 AdventureWorks 数据库。  
+ 本主题提供了对存储在 AdventureWorks 数据库的各种**xml**类型列中的 xml 实例的 XQuery 示例。  
   
 ### <a name="a-using-the-string-function"></a>A. 使用 string 函数  
- 以下查询将检索 <`Features`> 子元素节点 <`ProductDescription`> 元素。  
+ 下面的查询检索 <`Features` `ProductDescription`> 元素的 <> 子元素节点。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -79,7 +79,7 @@ WHERE ProductModelID=19
 </PD:Features>  
 ```  
   
- 如果指定**string （)** 函数，收到指定节点的字符串值。  
+ 如果指定**string （）** 函数，将接收指定节点的字符串值。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -98,7 +98,7 @@ These are the product highlights.
 ```  
   
 ### <a name="b-using-the-string-function-on-various-nodes"></a>B. 对各种节点使用 string 函数  
- 在下面的示例中，一个 XML 实例被分配给一个 xml 类型变量。 指定查询来演示了应用的结果**string （)** 对各种节点。  
+ 在下面的示例中，一个 XML 实例被分配给一个 xml 类型变量。 指定查询以说明将**string （）** 应用于各种节点的结果。  
   
 ```  
 declare @x xml  
@@ -118,7 +118,7 @@ just text
 select @x.query('string(/)')  
 ```  
   
- 下面是结果：  
+ 结果如下：  
   
 ```  
 This is a comment 10  
@@ -138,13 +138,13 @@ select @x.query('string(/processing-instruction()[1])')
 select @x.query('string(/comment()[1])')  
 ```  
   
- 下面是结果：  
+ 结果如下：  
   
 ```  
 This is a comment   
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [针对 xml 数据类型的 XQuery 函数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

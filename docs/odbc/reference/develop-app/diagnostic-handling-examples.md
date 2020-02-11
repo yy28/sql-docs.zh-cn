@@ -15,14 +15,14 @@ ms.assetid: 57f88c22-e7fa-4270-a0bf-443a2684cf6e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 13c713da543883ac4a5c4aaa0aad0631ae47be30
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039949"
 ---
 # <a name="diagnostic-handling-examples"></a>诊断处理示例
-下面的示例演示如何各种组件中的 ODBC 连接可能会生成诊断消息以及如何各种驱动程序可能会返回到应用程序使用的诊断**SQLGetDiagRec**。  
+下面的示例演示了 ODBC 连接中的各种组件如何生成诊断消息，以及各种驱动程序如何使用**SQLGetDiagRec**将诊断返回到应用程序。  
   
 -   [基于文件的驱动程序诊断示例](../../../odbc/reference/develop-app/file-based-driver-diagnostic-example.md)  
   

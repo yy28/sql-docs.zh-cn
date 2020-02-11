@@ -14,48 +14,48 @@ ms.assetid: 270f669e-8aab-4db0-95a4-f2b3c69538b3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fd4ec3e05acfd4faaafd38a79e48c67d03d86bd4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68070176"
 ---
 # <a name="string-functions"></a>字符串函数
-下表列出了字符串操作函数。 应用程序可以确定由驱动程序支持哪些字符串函数，应调用**SQLGetInfo**与*信息类型*SQL_STRING_FUNCTIONS。  
+下表列出了字符串操作函数。 应用程序可以通过使用 SQL_STRING_FUNCTIONS*信息类型*调用**SQLGetInfo**来确定驱动程序支持的字符串函数。  
   
 ## <a name="remarks"></a>备注  
- 参数表示为*string_exp*可以是列的名称*字符字符串文本*，或另一个标量函数，其中的基础数据类型可以表示为 SQL_CHAR、 SQL_ 的结果VARCHAR 或 SQL_LONGVARCHAR。  
+ 表示为*string_exp*的参数可以是列的名称、*字符字符串*或其他标量函数的结果，其中，基础数据类型可表示为 SQL_CHAR、SQL_VARCHAR 或 SQL_LONGVARCHAR。  
   
- 参数表示为*character_exp*是可变长度的字符串。  
+ 表示为*character_exp*的参数是可变长度字符串。  
   
- 参数表示为*启动*，*长度*，或*计数*可以*数值文字*或另一个标量函数的结果，基础数据类型可以表示为 SQL_TINYINT、 SQL_SMALLINT 或 SQL_INTEGER。  
+ 表示为*开始*、*长度*或*计数*的参数可以是*数字文本*或其他标量函数的结果，其中，基础数据类型可表示为 SQL_TINYINT、SQL_SMALLINT 或 SQL_INTEGER。  
   
- 此处列出的字符串函数都是基于 1 的;也就是说，在字符串中的第一个字符是字符 1。  
+ 此处列出的字符串函数从1开始;也就是说，字符串中的第一个字符是字符1。  
   
- ODBC 3.0 以符合 SQL-92 中添加了 BIT_LENGTH、 CHAR_LENGTH、 CHARACTER_LENGTH、 OCTET_LENGTH 和位置字符串标量函数。  
+ ODBC 3.0 中添加了 BIT_LENGTH、CHAR_LENGTH、CHARACTER_LENGTH、OCTET_LENGTH 和位置字符串标量函数，以使其符合 SQL-92。  
   
-|函数|描述|  
+|函数|说明|  
 |--------------|-----------------|  
-|**ASCII(** _string_exp_ **)**  (ODBC 1.0)|返回的最左侧字符的 ASCII 代码值*string_exp*为整数。|  
-|**BIT_LENGTH(** _string_exp_ **)**  (ODBC 3.0)|返回字符串表达式的长度（以位为单位）。<br /><br /> 仅对于字符串数据类型不起作用，因此将不隐式转换*string_exp*字符串而是将返回其指定任何数据类型 （内部） 大小。|  
-|**CHAR(** _code_ **)**  (ODBC 1.0)|返回具有将 ASCII 字符代码的指定值*代码*。 值*代码*应为介于 0 和 255 之间; 否则，返回值为数据源决定。|  
-|**CHAR_LENGTH(** _string_exp_ **)**  (ODBC 3.0)|以字符为单位的字符串表达式，返回的长度，如果字符串表达式的字符数据类型;否则，返回的长度以字节为单位的字符串表达式 （最小整数不小于位数除以 8 数）。 （此函数是 CHARACTER_LENGTH 函数相同。）|  
-|**CHARACTER_LENGTH(** _string_exp_ **)**  (ODBC 3.0)|以字符为单位的字符串表达式，返回的长度，如果字符串表达式的字符数据类型;否则，返回的长度以字节为单位的字符串表达式 （最小整数不小于位数除以 8 数）。 （此函数是 CHAR_LENGTH 函数相同。）|  
-|**CONCAT(** _string_exp1_,_string_exp2_ **)**  (ODBC 1.0)|返回一个字符串的串联的结果*string_exp2*到*string_exp1*。 生成的字符串依赖于 DBMS。 例如，如果列表示由*string_exp1*包含一个 NULL 值，则 DB2 将返回 NULL，但 SQL Server 将返回非 NULL 字符串。|  
-|**DIFFERENCE(** _string_exp1_,_string_exp2_ **)**  (ODBC 2.0)|返回一个整数值，该值指示由 SOUNDEX 函数的返回值之间的差异*string_exp1*并*string_exp2*。|  
-|**插入 (** _string_exp1_，*启动*，*长度*， _string_exp2_ **)** (ODBC 1.0)|返回一个字符的字符串的位置*长度*已从删除字符*string_exp1*，起点*启动*，以及在何处*string_exp2*是否已插入*string_exp，* 开始*启动*。|  
-|**LCASE(** _string_exp_ **)** (ODBC 1.0)|返回一个字符串等于的中*string_exp*，所有大写字符转换为小写字符。|  
-|**左 (** _string_exp_，_计数_ **)** (ODBC 1.0)|返回最左侧*计数*个字符*string_exp*。|  
-|**LENGTH(** _string_exp_ **)** (ODBC 1.0)|返回中的字符数*string_exp，* 不包括尾随空格。<br /><br /> **长度**只接受字符串。 因此会隐式转换*string_exp*字符串，并返回此字符串 （不是内部的大小的数据类型） 的长度。|  
-|**LOCATE(** _string_exp1_, *string_exp2*[, *start*] **)** (ODBC 1.0)|返回的第一个匹配项的起始位置*string_exp1*内*string_exp2*。 搜索的第一个匹配项*string_exp1*开头的第一个字符位置中*string_exp2*除非可选参数*启动*，指定。 如果*启动*指定与所指示的值的字符位置开始执行搜索*启动*。 中的第一个字符定位*string_exp2*值 1 指示。 如果*string_exp1*中找不到*string_exp2*，返回值 0。<br /><br /> 如果应用程序可以调用具有的定位标量函数*string_exp1*， *string_exp2*，并*启动*参数，驱动程序返回 SQL_FN_STR_LOCATE 时**SQLGetInfo**使用调用*选项*SQL_STRING_FUNCTIONS。 如果应用程序可以调用具有唯一的定位标量函数*string_exp1*并*string_exp2*参数，驱动程序返回 SQL_FN_STR_LOCATE_2 时**SQLGetInfo**调用带*选项*SQL_STRING_FUNCTIONS。 驱动程序支持调用具有两个或三个参数的查找函数的返回 SQL_FN_STR_LOCATE 和 SQL_FN_STR_LOCATE_2。|  
-|**LTRIM(** _string_exp_ **)** (ODBC 1.0)|返回的字符*string_exp*，带有前导空白已删除。|  
-|**OCTET_LENGTH(** _string_exp_ **)** (ODBC 3.0)|返回字符串表达式的长度（以字节为单位）。 结果为不小于位数除以 8 所得数的最小整数。<br /><br /> 仅对于字符串数据类型不起作用，因此将不隐式转换*string_exp*字符串而是将返回其指定任何数据类型 （内部） 大小。|  
-|**POSITION(** _character_exp_ **IN** _character_exp_ **)** (ODBC 3.0)|返回第二个的字符表达式中的第一个字符表达式的位置。 结果是实现定义的精度和小数位数为 0 的精确数值。|  
-|**REPEAT(** _string_exp,_ _count_ **)** (ODBC 1.0)|返回一个字符字符串组成*string_exp*重复*计数*时间。|  
-|**REPLACE(** _string_exp1_, *string_exp2*, _string_exp3_ **)** (ODBC 1.0)|搜索*string_exp1*的 foroccurrences *string_exp2*，并替换*string_exp3*。|  
-|**右 (** _string_exp_，_计数_ **)** (ODBC 1.0)|返回最右侧*计数*个字符*string_exp*。|  
-|**RTRIM(** _string_exp_ **)** (ODBC 1.0)|返回的字符*string_exp*尾随空白已删除。|  
-|**SOUNDEX(** _string_exp_ **)** (ODBC 2.0)|返回一个表示中单词的声音的数据源相关的字符字符串*string_exp*。 例如，SQL Server 返回 4 位数字的 SOUNDEX 代码;Oracle 返回每个单词的注音表示形式。|  
-|**空间 (** _计数_ **)** (ODBC 2.0)|返回一个字符串组成*计数*空格。|  
-|**子字符串 (** _string_exp_，*启动*，长度 **)** (ODBC 1.0)|返回一个字符串，派生自*string_exp*中所指定的字符位置开始，*启动*有关*长度*字符。|  
-|**UCASE(** _string_exp_ **)** (ODBC 1.0)|返回一个字符串等于的中*string_exp*，所有小写字符都转换为大写字符。|
+|**ASCII （** _string_exp_ **）** （ODBC 1.0）|以整数形式返回*string_exp*最左侧字符的 ASCII 代码值。|  
+|**BIT_LENGTH （** _string_exp_ **）** （ODBC 3.0）|返回字符串表达式的长度（以位为单位）。<br /><br /> 仅对字符串数据类型有效，因此将不会隐式地将*string_exp*转换为字符串，而是返回所提供的任何数据类型的（内部）大小。|  
+|**CHAR （** _code_ **）** （ODBC 1.0）|返回具有由*代码*指定的 ASCII 代码值的字符。 *代码*的值应介于0到255之间;否则，返回值取决于数据源。|  
+|**CHAR_LENGTH （** _string_exp_ **）** （ODBC 3.0）|如果字符串表达式的数据类型为，则返回字符串表达式的长度（以字符为字符）; 否则返回。否则，返回字符串表达式的长度（以字节为单位）（不小于位数除以8的位数）。 （此函数与 CHARACTER_LENGTH 函数相同。）|  
+|**CHARACTER_LENGTH （** _string_exp_ **）** （ODBC 3.0）|如果字符串表达式的数据类型为，则返回字符串表达式的长度（以字符为字符）; 否则返回。否则，返回字符串表达式的长度（以字节为单位）（不小于位数除以8的位数）。 （此函数与 CHAR_LENGTH 函数相同。）|  
+|**CONCAT （** _string_exp1_、_string_exp2_**）** （ODBC 1.0）|返回一个字符串，该字符串是将*string_exp2*连接到*string_exp1*的结果。 生成的字符串依赖于 DBMS。 例如，如果*string_exp1*表示的列包含 null 值，则 DB2 将返回 null，但 SQL Server 返回非 NULL 字符串。|  
+|**差异（** _string_exp1_、_string_exp2_**）** （ODBC 2.0）|返回一个整数值，该值指示对于*string_exp1*和*string_exp2*，SOUNDEX 函数返回的值之间的差异。|  
+|**INSERT （** _string_exp1_、 *start*、 *length*、 _string_exp2_**）** （ODBC 1.0）|返回一个字符串，其中的*长度*字符已从*string_exp1*中删除，从*开始*，开始， *string_exp2*已插入*string_exp，* 从*开始*。|  
+|**LCASE （** _string_exp_ **）** （ODBC 1.0）|返回一个字符串，该字符串等于*string_exp*中的所有大写字符都转换为小写的字符串。|  
+|**LEFT （** _string_exp_， _count_**）** （ODBC 1.0）|返回*string_exp*最左端的*计数*字符。|  
+|**LENGTH （** _string_exp_ **）** （ODBC 1.0）|返回 string_exp 中的字符数 *，* 不包括尾随空格。<br /><br /> **长度**仅接受字符串。 因此，会将*string_exp*隐式转换为字符串，并返回此字符串的长度（而不是数据类型的内部大小）。|  
+|**定位（** _string_exp1_、 *string_exp2*[， *start*]**）** （ODBC 1.0）|返回*string_exp1*在*string_exp2*中的第一个匹配项的起始位置。 搜索第一次出现的*string_exp1*将以*string_exp2*中的第一个字符位置开始，除非指定了可选参数*start*。 如果指定了*start* ，搜索将以*start*值所指示的字符位置开始。 *String_exp2*中的第一个字符位置由值1指示。 如果在*string_exp2*中找不到*string_exp1* ，则返回值0。<br /><br /> 如果应用程序可以调用带有*string_exp1*、 *string_exp2*和*start*参数的定位标量函数，则使用 SQL_STRING_FUNCTIONS*选项*调用**SQLGetInfo**时，驱动程序将返回 SQL_FN_STR_LOCATE。 如果应用程序只能调用带有*string_exp1*和*STRING_EXP2*参数的定位标量函数，则使用 SQL_STRING_FUNCTIONS*选项*调用**SQLGetInfo**时，驱动程序将返回 SQL_FN_STR_LOCATE_2。 支持调用带有两个或三个参数的定位函数的驱动程序同时返回 SQL_FN_STR_LOCATE 和 SQL_FN_STR_LOCATE_2。|  
+|**LTRIM （** _string_exp_ **）** （ODBC 1.0）|返回删除了前导空格的*string_exp*字符。|  
+|**OCTET_LENGTH （** _string_exp_ **）** （ODBC 3.0）|返回字符串表达式的长度（以字节为单位）。 结果为不小于位数除以 8 所得数的最小整数。<br /><br /> 仅对字符串数据类型有效，因此将不会隐式地将*string_exp*转换为字符串，而是返回所提供的任何数据类型的（内部）大小。|  
+|**位置（** _character_exp_ **** _character_exp_**）** （ODBC 3.0）|返回第二个字符表达式中第一个字符表达式的位置。 结果是具有实现定义的精度和小数位数为0的精确数值。|  
+|**重复（** _string_exp、_ _count_**）** （ODBC 1.0）|返回由*string_exp*重复*计数*时间组成的字符串。|  
+|**REPLACE （** _string_exp1_、 *string_exp2*、 _string_exp3_**）** （ODBC 1.0）|搜索*string_exp2* *string_exp1* foroccurrences，并将替换为*string_exp3*。|  
+|**RIGHT （** _string_exp_， _count_**）** （ODBC 1.0）|返回*string_exp*最右侧的*计数*字符。|  
+|**RTRIM （** _string_exp_ **）** （ODBC 1.0）|返回删除了尾随空格*string_exp*的字符。|  
+|**SOUNDEX （** _string_exp_ **）** （ODBC 2.0）|返回一个与数据源相关的字符串，该字符串表示*string_exp*中单词的声音。 例如，SQL Server 返回一个4位数的 SOUNDEX 代码;Oracle 返回每个单词的拼音表示形式。|  
+|**SPACE （** _count_ **）** （ODBC 2.0）|返回由*count*空格组成的字符串。|  
+|**SUBSTRING （** _string_exp_、 *start*、length **）** （ODBC 1.0）|返回从*string_exp*派生的字符串，从 " *start* " 中指定的字符位置开始，*长度*字符。|  
+|**UCASE （** _string_exp_ **）** （ODBC 1.0）|返回一个字符串，该字符串等于*string_exp*中的所有小写字符均转换为大写的字符串。|

@@ -1,5 +1,5 @@
 ---
-title: WillChangeField 和 FieldChangeComplete 事件 (ADO) |Microsoft Docs
+title: WillChangeField 和 FieldChangeComplete 事件（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -20,14 +20,14 @@ ms.assetid: 3e49fb89-c45b-4d39-823e-3cc887c59b37
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7484e2a57925cc22c83456c244dc67aded5cefd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67945882"
 ---
 # <a name="willchangefield-and-fieldchangecomplete-events-ado"></a>WillChangeField 和 FieldChangeComplete 事件 (ADO)
-**WillChangeField**挂起操作更改的一个或多个值之前，将调用事件[字段](../../../ado/reference/ado-api/field-object.md)中的对象[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。 **FieldChangeComplete**的一个或多个值后，将调用事件**字段**对象已更改。  
+在挂起的操作更改[记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)一个或多个[字段](../../../ado/reference/ado-api/field-object.md)对象的值之前调用**WillChangeField**事件。 在一个或多个**字段**对象的值更改后调用**FieldChangeComplete**事件。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,33 +37,33 @@ WillChangeField cFields, Fields, adStatus, pRecordset
 FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *cFields*  
- 一个**长**，该值指示数**字段**中的对象*字段*。  
+ Long 类型的**值**，指示字段中**字段**对象*的数量*。  
   
  *Fields*  
- 有关**WillChangeField**，则*字段*参数是一个数组**变体**，其中包含**字段**对象的原始值。 有关**FieldChangeComplete**，则*字段*参数是一个数组**变体**，其中包含**字段**具有已更改的值的对象.  
+ 对于**WillChangeField**，*字段*参数是包含具有原始值的**字段**对象的**变量**的数组。 对于**FieldChangeComplete**， *Fields*参数是包含值已更改的**字段**对象的**变量**的数组。  
   
  *pError*  
- [错误](../../../ado/reference/ado-api/error-object.md)对象。 它描述了如果发生的错误的值*adStatus*是**adStatusErrorsOccurred**; 不会设置。  
+ 一个[错误](../../../ado/reference/ado-api/error-object.md)对象。 它描述了*adStatus*的值为**adStatusErrorsOccurred**时所发生的错误;否则，不会设置。  
   
  *adStatus*  
  [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)状态值。  
   
- 当**WillChangeField**是调用，此参数设置为**adStatusOK**引发该事件的操作是否成功。 设置为**adStatusCantDeny**如果此事件不能请求取消的挂起的操作。  
+ 调用**WillChangeField**时，如果导致事件的操作成功，则将此参数设置为**adStatusOK** 。 如果此事件无法请求取消挂起操作，则将其设置为**adStatusCantDeny** 。  
   
- 当**FieldChangeComplete**是调用，此参数设置为**adStatusOK**引发该事件的操作是否成功，或向**adStatusErrorsOccurred**如果操作失败。  
+ 调用**FieldChangeComplete**时，如果导致事件的操作成功，则此参数设置为**adStatusOK** ; 如果操作失败，则设置为**adStatusErrorsOccurred** 。  
   
- 之前**WillChangeField**返回时，将此参数设置为**adStatusCancel**请求取消的挂起的操作。  
+ 在**WillChangeField**返回之前，将此参数设置为**adStatusCancel** ，以请求取消挂起的操作。  
   
- 之前**FieldChangeComplete**返回时，将此参数设置为**adStatusUnwantedEvent**以防止后续的通知。  
+ 在**FieldChangeComplete**返回之前，将此参数设置为**adStatusUnwantedEvent** ，以防止后续通知。  
   
  *pRecordset*  
- 一个**记录集**对象。 **记录集**有关发生此事件。  
+ **记录集**对象。 发生此事件的**记录集**。  
   
 ## <a name="remarks"></a>备注  
- 一个**WillChangeField**或**FieldChangeComplete**设置时，事件可能会发生[值](../../../ado/reference/ado-api/value-property-ado.md)属性和调用[更新](../../../ado/reference/ado-api/update-method.md)方法使用字段和值的数组参数。  
+ 设置[Value](../../../ado/reference/ado-api/value-property-ado.md)属性并使用字段和值数组参数调用[Update](../../../ado/reference/ado-api/update-method.md)方法时，可能会发生**WillChangeField**或**FieldChangeComplete**事件。  
   
-## <a name="see-also"></a>请参阅  
- [ADO 事件模型示例 （VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+## <a name="see-also"></a>另请参阅  
+ [ADO 事件模型示例（VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO 事件处理程序摘要](../../../ado/guide/data/ado-event-handler-summary.md)

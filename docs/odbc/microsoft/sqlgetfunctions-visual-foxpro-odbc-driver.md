@@ -13,25 +13,25 @@ ms.assetid: 8102932a-88b3-49d8-bf7a-c766f54878c0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: da74bbb64a76f6c3ff6c55754798b975dab83826
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68003331"
 ---
 # <a name="sqlgetfunctions-visual-foxpro-odbc-driver"></a>SQLGetFunctions（Visual FoxPro ODBC 驱动程序）
 > [!NOTE]  
->  本主题包含 Visual FoxPro ODBC 驱动程序特定信息。 有关此函数的常规信息，请参阅下的相应主题[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)。  
+>  本主题包含特定于 Visual FoxPro ODBC 驱动程序的信息。 有关此函数的常规信息，请参阅[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)中的相应主题。  
   
  支持：完全  
   
- ODBC API 一致性：级别 1  
+ ODBC API 一致性：级别1  
   
- 返回支持的所有函数，则返回 TRUE。  
+ 对于所有支持的函数，返回 TRUE。  
   
- Visual FoxPro ODBC 驱动程序支持所有 ODBC API 核心和 1 级函数。 下表指示驱动程序是否支持特定的级别 2 函数。  
+ Visual FoxPro ODBC 驱动程序支持所有 ODBC API Core 和级别1的函数。 下表指示驱动程序是否支持特定的第2级功能。  
   
-|*函数*|支持|  
+|*才能*|支持|  
 |----------------|---------------|  
 |SQL_API_SQLBROWSECONNECT|否|  
 |SQL_API_SQLCOLUMNPRIVELEGES|否|  
@@ -51,4 +51,4 @@ ms.locfileid: "68003331"
 |SQL_API_SQLSETSCROLLOPTIONS|是|  
 |SQL_API_SQLTABLEPRIVILEGES|否|  
   
- 有关详细信息，请参阅[SQLGetFunctions](../../odbc/reference/syntax/sqlgetfunctions-function.md)中*ODBC 程序员参考*。
+ 有关详细信息，请参阅*ODBC 程序员参考*中的[SQLGetFunctions](../../odbc/reference/syntax/sqlgetfunctions-function.md) 。

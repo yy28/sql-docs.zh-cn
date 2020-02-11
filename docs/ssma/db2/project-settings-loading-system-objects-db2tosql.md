@@ -1,5 +1,5 @@
 ---
-title: 项目设置 （加载系统对象） (DB2ToSQL) |Microsoft Docs
+title: 项目设置（加载系统对象）（DB2ToSQL） |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,39 +10,39 @@ ms.assetid: 9a545233-1b0a-488a-a1ec-c33aa608dcc1
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 5c12a2ddb97c6d599e5adfc57277e0a5f64288e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68060191"
 ---
-# <a name="project-settingsloading-system-objects-db2tosql"></a>项目设置 （加载系统对象） (DB2ToSQL)
-正在加载系统对象页**项目设置**对话框可以指定的 DB2 系统对象 SSMA 将转换并将加载到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+# <a name="project-settingsloading-system-objects-db2tosql"></a>项目设置（加载系统对象）（DB2ToSQL）
+您可以在 "**项目设置**" 对话框的 "加载系统对象" 页中指定 SSMA 转换和加载到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]哪些 DB2 系统对象。  
   
-加载系统对象窗格中现已推出**项目设置**并**默认项目设置**对话框：  
+"**项目设置**" 和 "**默认项目设置**" 对话框中提供了 "加载系统对象" 窗格：  
   
--   若要指定所有的 SSMA 项目的设置**工具**菜单中，选择**默认项目设置**，选择迁移项目类型设置为其所需查看或更改从**迁移目标版本**下拉列表单击**常规**底部的左窗格中，然后单击**加载系统对象**。  
+-   若要指定所有 SSMA 项目的设置，请在 "**工具**" 菜单上，选择 "**默认项目设置**"，从 "**迁移目标版本**" 下拉菜单中选择需要查看或更改其设置的迁移项目类型，然后单击左窗格底部的 "**常规**"，然后单击 "**加载系统对象**"。  
   
--   若要在指定的当前项目中，设置**工具**菜单中，选择**项目设置**，单击**常规**底部的左窗格中，然后单击**加载系统对象**。  
+-   若要指定当前项目的设置，请在 "**工具**" 菜单上选择 "**项目设置**"，单击左侧窗格底部的 "**常规**"，然后单击 "**加载系统对象**"。  
   
 ## <a name="default-settings"></a>默认设置  
-将转换的系统对象会占用系统资源，需要一些时间。 若要提高性能，SSMA 仅选择的使用频率最高的系统对象，如下面的列表中所示：  
+转换系统对象会消耗系统资源并花费时间。 为了提高性能，SSMA 仅选择最常使用的系统对象，如下面的列表所示：  
   
--   SYS.DBMS_OUTPUT  
+-   系统.DBMS_OUTPUT  
   
--   SYS.DBMS_PIPE  
+-   系统.DBMS_PIPE  
   
--   SYS.DBMS_UTILITY  
+-   系统.DBMS_UTILITY  
   
--   SYS。标准  
+-   系统.标准  
   
--   SYS.UTL_FILE  
+-   系统.UTL_FILE  
   
--   SYS.DBMS_LOB  
+-   系统.DBMS_LOB  
   
--   SYS.DBMS_SQL  
+-   系统.DBMS_SQL  
   
--   SYS.DBMS_SESSION  
+-   系统.DBMS_SESSION  
   
-如果您的 DB2 对象引用其他系统对象，则应选择这些对象。 如果不选择引用的 DB2 数据库对象的系统对象，SSMA 将报告转换错误。 如果你收到转换错误引起的缺少的系统对象，在此对话框中选择所缺少的对象。 然后可以重复根据需要转换。  
+如果 DB2 对象引用其他系统对象，则应选择这些对象。 如果不选择 DB2 数据库对象引用的系统对象，SSMA 将报告转换错误。 如果收到由于缺少系统对象而导致的转换错误，请在此对话框中选择缺少的对象。 然后，可以根据需要重复转换。  
   

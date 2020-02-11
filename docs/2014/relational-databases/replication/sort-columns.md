@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 73e991f46f2cadb0fe7e7e9d10e6e616d2d634c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63270733"
 ---
 # <a name="sort-columns"></a>列排序
@@ -27,16 +27,16 @@ ms.locfileid: "63270733"
 2.  在网格的第二行中，选择 **“列名”** 列中的 **“连接类型”** 并从 **“排序顺序”** 列中选择一个值。  
   
 ## <a name="options"></a>选项  
- **“状态”**  
+ **列名称**  
  要作为排序依据的列的名称。 可以按一个或多个列进行排序。 出于列值计算方式方面的原因，不能按 **“发布”** 选项卡上的 **“当前平均性能”** 或 **“当前最差的性能”** 列进行排序。  
   
- **“排序顺序”**  
+ **排序顺序**  
  指定值为 **“升序”** 或 **“降序”** 。  
   
  **全部清除**  
  清除排序网格中的所有行。 若要移除某个行，请选择该行，然后按 Delete 键。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [监视复制](monitoring-replication.md)  
   
   

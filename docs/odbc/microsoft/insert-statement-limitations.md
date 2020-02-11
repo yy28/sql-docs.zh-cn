@@ -15,31 +15,31 @@ ms.assetid: dea05698-527a-41ab-8729-bbed85556185
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1676af6216ac703e9a8976951ec2888b9e940b67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085526"
 ---
 # <a name="insert-statement-limitations"></a>INSERT 语句限制
-插入的数据进行截断而不发出警告右侧太长，无法适应列。  
+如果插入的数据太长而无法放入列中，则会在右侧截断插入的数据。  
   
- 尝试插入不在范围内的列的数据类型的值会导致 NULL 插入列。  
+ 如果尝试插入的值超出列的数据类型的范围，则会导致在列中插入 NULL。  
   
- 当使用 dBASE、 Microsoft Excel、 Paradox 或 Textdriver 时，将插入列的长度为零的字符串实际上将插入 NULL 改为。  
+ 使用 dBASE、Microsoft Excel、Paradox 或 Textdriver 时，将长度为零的字符串插入列实际上是插入 NULL。  
   
- 使用 Microsoft Excel 驱动程序时，如果为空字符串插入到的列，则为空字符串转换为 NULL;使用空字符串的 WHERE 子句中执行的搜索选择语句将不会在该列上成功。  
+ 使用 Microsoft Excel 驱动程序时，如果插入列中的空字符串，则将空字符串转换为 NULL;使用 WHERE 子句中的空字符串执行的搜索 SELECT 语句对该列不会成功。  
   
- 该表不能在两种情况下 Paradox 驱动程序更新：  
+ 在以下两种情况下，不能通过 Paradox 驱动程序来更新表：  
   
--   当未对表定义唯一索引。 这不是为一个空表，它可以更新与单一行，即使未对表定义唯一索引，则返回 true。 如果不具有唯一索引的空表中插入单个行，则应用程序不能创建唯一索引，或在插入单个行后插入其他数据。  
+-   表上未定义唯一索引时。 这对于空表并不适用，即使表中未定义唯一索引，也可以使用单个行更新该表。 如果在没有唯一索引的空表中插入单个行，则在插入单个行后，应用程序将无法创建唯一索引或插入其他数据。  
   
--   如果未实现 borland 公司数据库引擎，只读取和追加 Paradox 表上允许语句。  
+-   如果未实现 Borland 数据库引擎，则只允许在 Paradox 表中使用 read 和 append 语句。  
   
- 使用文本驱动程序时，NULL 值都是固定长度的文件中的填补空白的字符串，但没有空格分隔的文件中表示。 例如，在包含三个字段的以下行，第二个字段是一个 NULL 值：  
+ 使用文本驱动程序时，在固定长度的文件中用空白填充的字符串表示 NULL 值，但用分隔的文件中的空格表示。 例如，在包含三个字段的下一行中，第二个字段为 NULL 值：  
   
 ```  
 "Smith:,, 123  
 ```  
   
- 使用文本驱动程序时，可以用前导空格填充所有列的值。 任何行的长度必须小于或等于 65,543 字节。
+ 使用文本驱动程序时，所有列值都可以用前导空格填充。 任何行的长度必须小于或等于65543字节。

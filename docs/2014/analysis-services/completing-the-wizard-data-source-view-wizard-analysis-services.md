@@ -1,5 +1,5 @@
 ---
-title: 完成向导 （数据源视图向导） (Analysis Services) |Microsoft Docs
+title: 完成向导（数据源视图向导）（Analysis Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d5dce0aa56997537e4911b0607ca9fba392dd847
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087635"
 ---
 # <a name="completing-the-wizard-data-source-view-wizard-analysis-services"></a>完成向导（数据源视图向导）(Analysis Services)
@@ -29,7 +29,7 @@ ms.locfileid: "66087635"
  **预览**  
  显示数据源视图中包括的表和视图。 单击 **“上一步”** 可以进行更改。  
   
-## <a name="see-also"></a>请参阅  
- [数据源视图向导的 F1 帮助&#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)  
+## <a name="see-also"></a>另请参阅  
+ [数据源视图向导的 F1 帮助 &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)  
   
   
