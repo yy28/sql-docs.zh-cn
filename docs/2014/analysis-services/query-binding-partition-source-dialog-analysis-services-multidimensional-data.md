@@ -1,5 +1,5 @@
 ---
-title: 查询绑定详细信息 （源分区对话框) (Analysis Services-多维数据) |Microsoft Docs
+title: 查询绑定详细信息（"分区源" 对话框）（Analysis Services 多维数据） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 604a42cc0b3519f1034733e12f72dc1a7c969ce6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070564"
 ---
 # <a name="query-binding-detail-partition-source-dialog-box-analysis-services---multidimensional-data"></a>查询绑定详细信息（“分区源”对话框）（Analysis Services - 多维数据）
@@ -26,16 +26,16 @@ ms.locfileid: "66070564"
  **数据源**  
  选择要对其执行查询的数据源，以便为分区提供事实数据。  
   
- **“数据集属性”**  
+ **查询**  
  键入或修改在处理分区过程中检索事实数据时所使用的 SQL 语句。  
   
 > [!IMPORTANT]  
->  通过指定 WHERE 子句，可以将记录的子集用于此分区。 当多个分区都基于单一事实数据表时，防止数据重复很重要。 有关详细信息，请参阅[分区源对话框&#40;Analysis Services-多维数据&#41;](partition-source-dialog-box-analysis-services-multidimensional-data.md)。  
+>  通过指定 WHERE 子句，可以将记录的子集用于此分区。 当多个分区都基于单一事实数据表时，防止数据重复很重要。 有关详细信息，请参阅 "[分区源" 对话框 &#40;Analysis Services 多维数据&#41;](partition-source-dialog-box-analysis-services-multidimensional-data.md)。  
   
- **检查**  
- 单击此项可以验证“查询”  中的语句是否为有效的 SQL 语句。  
+ **查阅**  
+ 单击此项可以验证“查询”**** 中的语句是否为有效的 SQL 语句。  
   
-## <a name="see-also"></a>请参阅  
- [分区源对话框&#40;Analysis Services-多维数据&#41;](partition-source-dialog-box-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>另请参阅  
+ ["分区源" 对话框 &#40;Analysis Services 多维数据&#41;](partition-source-dialog-box-analysis-services-multidimensional-data.md)  
   
   

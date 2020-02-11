@@ -10,10 +10,10 @@ ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 40482e599244f0e5102195cd0e34c3718a06d149
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75258444"
 ---
 # <a name="managing-a-domain"></a>管理域
@@ -58,7 +58,7 @@ ms.locfileid: "75258444"
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|通过运行知识发现并以交互方式管理知识来生成知识库|[构建知识库](../data-quality-services/building-a-knowledge-base.md)|  
+|通过运行知识发现并以交互方式管理知识来生成知识库|[生成知识库](../data-quality-services/building-a-knowledge-base.md)|  
 |将知识导入知识库，或从知识库中导出知识。|[导入和导出知识](../data-quality-services/importing-and-exporting-knowledge.md)|  
 |创建一个复合域，并将知识添加到该域中。|[管理复合域](../data-quality-services/managing-a-composite-domain.md)|  
   

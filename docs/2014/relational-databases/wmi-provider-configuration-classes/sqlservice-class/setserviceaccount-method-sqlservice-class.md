@@ -1,5 +1,5 @@
 ---
-title: SetServiceAccount 方法 （SqlService 类） |Microsoft Docs
+title: SetServiceAccount 方法（SqlService 类） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 65f9c926a75ae4d64e54d6f600aba2a70f0482cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63218099"
 ---
 # <a name="setserviceaccount-method-sqlservice-class"></a>SetServiceAccount 方法（SqlService 类）
@@ -40,28 +40,28 @@ ServiceStartName , ServiceStartPassword
 ```  
   
 ## <a name="parts"></a>组成部分  
- *object*  
+ *对象*  
  一个表示服务的 [SqlService 类](sqlservice-class.md) 对象。  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *ServiceStartName*  
  一个指定运行服务所用帐户名的字符串值。 根据不同的服务类型，帐户名可能的格式为“域名\用户名”。 服务进程运行时，将使用以下两种格式之一登录：  
   
 -   如果帐户属于内置域，则可以指定“\用户名”。  
   
--   如果指定 NULL，则该服务将以登录**LocalSystem**帐户。  
+-   如果指定 NULL，则该服务将作为**LocalSystem**帐户登录。  
   
- 对于内核或系统级驱动程序*StartName*包含驱动程序对象名称 \FileSystem\Rdr 或 \Driver\Xns，I/O 系统用于加载设备驱动程序。 如果指定 NULL，驱动程序将以 I/O 系统基于服务名称创建的默认对象名称运行，例如 DWDOM\Admin。  
+ 对于内核或系统级驱动程序， *StartName*包含驱动程序对象名称（\FileSystem\Rdr 或 \Driver\Xns），i/o 系统使用该名称加载设备驱动程序。 如果指定 NULL，驱动程序将以 I/O 系统基于服务名称创建的默认对象名称运行，例如 DWDOM\Admin。  
   
  *ServiceStartPassword*  
- 一个字符串值，指定的密码中的帐户名称*StartName*参数。 如果不更改密码，请指定 NULL。 如果服务没有密码，请指定一个空字符串。  
+ 一个字符串值，该值指定*StartName*参数中的帐户名称的密码。 如果不更改密码，请指定 NULL。 如果服务没有密码，请指定一个空字符串。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个 `uint32` 值，如果服务已成功修改，则为 0；如果不支持请求，则为 1。 其他任何数字表示出现错误。  
   
 ## <a name="remarks"></a>备注  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [启动和停止服务](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

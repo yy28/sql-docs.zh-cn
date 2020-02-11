@@ -1,5 +1,5 @@
 ---
-title: sp_dbmmonitordropalert (TRANSACT-SQL) |Microsoft Docs
+title: sp_dbmmonitordropalert （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -19,18 +19,18 @@ ms.assetid: fe4a134b-25bf-464e-a5c4-358de215b65a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4776e043505c787e74c9cecf766325d189c4f702
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108117"
 ---
-# <a name="spdbmmonitordropalert-transact-sql"></a>sp_dbmmonitordropalert (Transact-SQL)
+# <a name="sp_dbmmonitordropalert-transact-sql"></a>sp_dbmmonitordropalert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   通过将阈值设置为 NULL 来删除指定性能指标的警告。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,7 +47,7 @@ sp_dbmmonitordropalert database_name
  *alert_id*  
  整数值，用于标识要删除的警告。 如果省略此参数，将删除此数据库的所有警告。 若要删除特定性能指标的警告，请指定下列值之一：  
   
-|ReplTest1|性能指标|警告阈值|  
+|值|性能指标|警告阈值|  
 |-----------|------------------------|-----------------------|  
 |1|最早的未发送事务|指定在主体服务器实例上生成警告之前，发送队列中可以累积的事务的分钟数。 该警告有助于度量数据丢失的可能性（以时间计），并且特别适用于高性能模式。 但是，当镜像因伙伴断开连接而暂停或挂起时，该警告也适用于高安全模式。|  
 |2|未发送日志|指定未发送日志达到多少 KB 后，在主体服务器实例上生成一个警告。 该警告有助于度量数据丢失的可能性（以 KB 计），并且特别适用于高性能模式。 但是，当镜像因伙伴断开连接而暂停或挂起时，该警告也适用于高安全模式。|  
@@ -56,15 +56,15 @@ sp_dbmmonitordropalert database_name
 |5|保留期|用于控制数据库镜像状态表中的行保留多长时间的元数据。|  
   
 > [!NOTE]  
->  此过程将删除警告阈值，而不考虑是否使用指定它们**sp_dbmmonitorchangealert**或数据库镜像监视器。  
+>  此过程会删除警告阈值，无论它们是使用**sp_dbmmonitorchangealert**还是数据库镜像监视器指定。  
   
- 有关与这些警告对应的事件 Id 的信息，请参阅[使用警告阈值和镜像性能指标的警报&#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)。  
+ 有关与警告相对应的事件 Id 的详细信息，请参阅[对镜像性能指标使用警告阈值和警报 &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)。  
   
 ## <a name="return-code-values"></a>返回代码值  
  无  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  
@@ -82,8 +82,8 @@ EXEC sp_dbmmonitordropalert AdventureWorks2012, 5;
 EXEC sp_dbmmonitordropalert AdventureWorks2012 ;  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [监视数据库镜像 (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
+## <a name="see-also"></a>另请参阅  
+ [监视数据库镜像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [sp_dbmmonitorchangealert (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)  
   
   

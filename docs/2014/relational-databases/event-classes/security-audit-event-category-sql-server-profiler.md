@@ -17,18 +17,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9f2f854c7a6dbd0d1ab569f87bf053a5b9f45058
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63044206"
 ---
 # <a name="security-audit-event-category-sql-server-profiler"></a>Security Audit 事件类别 (SQL Server Profiler)
-  **Security Audit** 事件类别包含安全审核事件。  
+  "**安全审核**" 事件类别包含安全审核事件。  
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|描述|  
+|主题|说明|  
 |-----------|-----------------|  
 |[Audit Add DB User 事件类](audit-add-db-user-event-class.md)|指示已在数据库中添加或删除作为数据库用户的登录名。|  
 |[Audit Add Login to Server Role 事件类](audit-add-login-to-server-role-event-class.md)|指示已在固定服务器角色中添加或删除登录名。|  
@@ -50,7 +50,7 @@ ms.locfileid: "63044206"
 |[Audit Database Operation 事件类](audit-database-operation-event-class.md)|指示已发生各种操作（如检查点操作或订阅查询通知）。|  
 |[Audit Database Principal Impersonation 事件类](audit-database-principal-impersonation-event-class.md)|指示已在数据库范围中发生模拟。|  
 |[Audit Database Principal Management 事件类](audit-database-principal-management-event-class.md)|指示已在数据库中创建、更改或删除主体。|  
-|[Audit Database Scope GDR 事件类](audit-database-scope-gdr-event-class.md)|指示在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中用户已针对语句权限发出 GRANT、REVOKE 或 DENY。|  
+|[Audit Database Scope GDR 事件类](audit-database-scope-gdr-event-class.md)|指示已为中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的用户的语句权限发出 GRANT、REVOKE 或 DENY。|  
 |[Audit DBCC 事件类](audit-dbcc-event-class.md)|指示已发出 DBCC 命令。|  
 |[审核全文事件类](audit-fulltext-event-class.md)|指示全文事件已发生。|  
 |[Audit Login Change Password 事件类](audit-login-change-password-event-class.md)|指示用户已更改其 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录密码。|  

@@ -1,5 +1,5 @@
 ---
-title: 第 7 课：将数据文件移动到 Azure 存储 |Microsoft Docs
+title: 第7课：将数据文件移到 Azure 存储 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 25ae3cee8e08292297449914bfb6e40dfc1b4b3a
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175462"
 ---
-# <a name="lesson-7-move-your-data-files-to-azure-storage"></a>第 7 课：将数据文件移到 Azure 存储
-  在本课中, 您将学习如何将数据文件移到 Azure 存储 (而不是您的 SQL Server 实例) 中。 不需要学完第 4、5 和 6 课即可听懂本课。  
+# <a name="lesson-7-move-your-data-files-to-azure-storage"></a>第 7 课：将数据文件移动到 Azure 存储
+  在本课中，您将学习如何将数据文件移到 Azure 存储（而不是您的 SQL Server 实例）中。 不需要学完第 4、5 和 6 课即可听懂本课。  
   
- 若要将数据文件移到 Azure 存储, 可以使用`ALTER DATABASE`语句, 因为它可帮助更改数据文件的位置。  
+ 若要将数据文件移到 Azure 存储，可以使用`ALTER DATABASE`语句，因为它可帮助更改数据文件的位置。  
   
  本课假定您已完成以下步骤：  
   
@@ -32,7 +32,7 @@ ms.locfileid: "70175462"
   
 -   已在源计算机上创建了 SQL Server 凭据。  
   
- 接下来, 使用以下步骤将数据文件移到 Azure 存储:  
+ 接下来，使用以下步骤将数据文件移到 Azure 存储：  
   
 1.  首先，在源计算机中创建测试数据库，然后向其添加一些数据。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "70175462"
   
     ```  
   
-3.  当你运行此操作时, 你将看到以下消息:在系统目录中已修改 "Testdb1alter '" 文件。 新路径将在数据库下次启动时使用。 "  
+3.  当你运行此操作时，你将看到以下消息： "文件" Testdb1alter ' "已在系统目录中修改。 新路径将在数据库下次启动时使用。 "  
   
 4.  然后，将数据库设为脱机状态。  
   
@@ -74,9 +74,9 @@ ms.locfileid: "70175462"
   
     ```  
   
-5.  现在, 需要使用以下方法之一将数据文件复制到 Azure 存储:[AzCopy 工具](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx)、 [Put 页面](https://msdn.microsoft.com/library/azure/ee691975.aspx)、[存储客户端库参考](https://msdn.microsoft.com/library/azure/dn261237.aspx)或第三方存储资源管理器工具。  
+5.  现在，需要使用以下方法之一将数据文件复制到 Azure 存储： [AzCopy 工具](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx)、 [Put 页面](https://msdn.microsoft.com/library/azure/ee691975.aspx)、[存储客户端库参考](https://msdn.microsoft.com/library/azure/dn261237.aspx)或第三方存储资源管理器工具。  
   
-     **重要提示：** 使用此新增强功能时, 请始终确保创建的是页 blob 而不是块 blob。  
+     **重要提示：** 使用此新增强功能时，请始终确保创建的是页 blob 而不是块 blob。  
   
 6.  然后，将数据库设为联机状态。  
   
@@ -89,6 +89,6 @@ ms.locfileid: "70175462"
   
  **下一课：**  
   
- [第 8 课：将数据库还原到 Azure 存储](lesson-7-restore-a-database-to-a-point-in-time.md)  
+ [第8课。将数据库还原到 Azure 存储](lesson-7-restore-a-database-to-a-point-in-time.md)  
   
   

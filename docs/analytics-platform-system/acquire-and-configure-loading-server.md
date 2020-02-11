@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ef49bb86c8e16600f2ff1bf2d1c7a92ecc5af964
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401479"
 ---
 # <a name="acquire-and-configure-a-loading-server-for-parallel-data-warehouse"></a>为并行数据仓库获取和配置加载服务器
@@ -86,7 +86,7 @@ ms.locfileid: "74401479"
 --> 
   
 ## <a name="Step5"></a>步骤5：开始加载  
-你现在已准备好开始加载数据。 有关更多信息，请参阅：  
+你现在已准备好开始加载数据。 有关详细信息，请参阅：  
   
 1.  [dwloader 命令行加载工具](dwloader.md)  
   

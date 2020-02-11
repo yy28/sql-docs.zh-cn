@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f5f30232a4f6d382af6e3a21f022b86cdf1a4fd4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196613"
 ---
 # <a name="view-the-dependencies-of-a-table"></a>查看表的依赖关系
@@ -31,7 +31,7 @@ ms.locfileid: "68196613"
   
      [安全性](#Security)  
   
--   使用以下工具查看表的依赖关系：   
+-   **若要查看表的依赖项，请使用：**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -39,22 +39,22 @@ ms.locfileid: "68196613"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求对数据库具有 VIEW DEFINITION 权限，并对数据库的 sys.sql_expression_dependencies 具有 SELECT 权限。 默认情况下，SELECT 权限仅授予 db_owner 固定数据库角色的成员。 将 SELECT 和 VIEW DEFINITION 权限授予其他用户时，被授权者可以查看数据库中的所有依赖关系。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-view-the-dependencies-of-a-table"></a>查看表的依赖关系  
   
-1.  在 **“对象资源管理器”** 中，展开 **“数据库”** ，再展开其中的某个数据库，然后展开 **“表”** 。  
+1.  在 **“对象资源管理器”** 中，展开 **“数据库”**，再展开其中的某个数据库，然后展开 **“表”**。  
   
-2.  右键单击某个表，然后单击“查看依赖关系”  。  
+2.  右键单击某个表，然后单击“查看依赖关系”****。  
   
-3.  在“对象依赖关系 \<对象名称>”   对话框中，选择“依赖于 \<对象名称> 的对象”   或“\<对象名称> 依赖的对象”    。  
+3.  在 "**对象依赖关系**_\<对象名称>_ " 对话框中，选择 "**依赖于** _ \<对象名称>_ 的对象" 或 "对象_\<名称>_**依赖**的**对象**"。  
   
-4.  在 **“依赖关系”** 网格中选择一个对象。 对象类型（如“触发器”或“存储过程”）显示在“类型”  框中。  
+4.  在 **“依赖关系”** 网格中选择一个对象。 对象类型（如“触发器”或“存储过程”）显示在“类型”**** 框中。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

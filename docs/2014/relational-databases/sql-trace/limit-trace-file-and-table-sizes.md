@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 59e6a79d868e4bfa0ec0af7190d54a8bc13bf395
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63136463"
 ---
 # <a name="limit-trace-file-and-table-sizes"></a>限制跟踪文件和表的大小
@@ -29,7 +29,7 @@ ms.locfileid: "63136463"
 > [!NOTE]  
 >  如果将跟踪数据保存到已经存在的文件，则可以向该文件追加数据或覆盖该文件。 如果选择向该文件追加数据，而此跟踪文件已经达到或超过指定的最大文件大小，则会通知您，并提示您可以增加最大文件大小或指定新文件。 对跟踪表也是如此。  
   
-## <a name="maximum-file-size"></a>最大文件大小  
+## <a name="maximum-file-size"></a>文件大小上限  
  指定有最大文件大小的跟踪在达到最大文件大小时，会停止将跟踪信息保存到该文件。 使用此选项可将事件分组成更小、更容易管理的文件。 此外，限制文件大小使得无人参与的跟踪运行起来更加安全，因为跟踪会在达到最大文件大小后停止。 可以为通过 Transact-SQL 存储过程或使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]创建的跟踪设置最大文件大小。  
   
  最大文件大小选项的上限为 1 GB。 默认最大文件大小为 5 MB。  
@@ -53,7 +53,7 @@ ms.locfileid: "63136463"
   
  [设置跟踪表的最大表大小 (SQL Server Profiler)](../../tools/sql-server-profiler/set-a-maximum-table-size-for-a-trace-table-sql-server-profiler.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [sp_trace_create (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-create-transact-sql)  
   
   

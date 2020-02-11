@@ -1,5 +1,5 @@
 ---
-title: 导出跟踪模板 (SQL Server Profiler) |Microsoft Docs
+title: 导出跟踪模板（SQL Server Profiler） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f4fcc8f39f668422189780f89da0935f21444173
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184251"
 ---
 # <a name="export-a-trace-template-sql-server-profiler"></a>导出跟踪模板 (SQL Server Profiler)
@@ -34,11 +34,11 @@ ms.locfileid: "63184251"
   
 3.  输入所导出模板文件的文件名，然后单击 **“保存”** 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建跟踪模板 (SQL Server Profiler)](create-a-trace-template-sql-server-profiler.md)   
  [修改跟踪模板 (SQL Server Profiler)](../../database-engine/modify-a-trace-template-sql-server-profiler.md)   
  [从正在运行的跟踪中派生模板 (SQL Server Profiler)](derive-a-template-from-a-running-trace-sql-server-profiler.md)   
  [从跟踪文件或跟踪表派生模板 (SQL Server Profiler)](derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   
- [SQL Server 事件探查器](sql-server-profiler.md)  
+ [SQL Server Profiler](sql-server-profiler.md)  
   
   

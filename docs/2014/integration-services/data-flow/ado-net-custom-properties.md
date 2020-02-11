@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ee7d1aba2b468c8aa0420bbacc76aea652ae7556
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62828659"
 ---
 # <a name="ado-net-custom-properties"></a>ADO NET 自定义属性
@@ -24,7 +24,7 @@ ms.locfileid: "62828659"
   
  下表介绍 ADO NET 源的自定义属性。 所有属性均可读/写。  
   
-|属性名称|数据类型|Description|  
+|属性名称|数据类型|说明|  
 |-------------------|---------------|-----------------|  
 |CommandTimeout|String|该值指定 SQL 命令超时之前等待的秒数。值为 0 时指示命令永远不会超时。|  
 |SqlCommand|String|ADO NET 源可以用来提取数据的 SQL 语句。<br /><br /> 当包加载时，可以使用 ADO NET 源将使用的 SQL 语句动态更新此属性。 有关详细信息，请参阅 [Integration Services (SSIS) 表达式](../expressions/integration-services-ssis-expressions.md)和[在包中使用属性表达式](../expressions/use-property-expressions-in-packages.md)。|  
@@ -40,7 +40,7 @@ ms.locfileid: "62828659"
   
  下表介绍了 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 目标的自定义属性。 所有属性均可读/写。 这些属性在 **“ADO NET 目标编辑器”** 中不可用，但可以使用 **“高级编辑器”** 进行设置。  
   
-|属性|数据类型|Description|  
+|properties|数据类型|说明|  
 |--------------|---------------|-----------------|  
 |BatchSize|Integer|向服务器发送的批中的行数。 值 **0** 指示批大小与内部缓冲区大小匹配。 此属性的默认值为 **0**。|  
 |CommandTimeOut|Integer|SQL 命令在超时前可以运行的最大秒数。值 **0** 表示不限制时间。 此属性的默认值为 **0**。|  
@@ -48,7 +48,7 @@ ms.locfileid: "62828659"
   
  有关详细信息，请参阅 [ADO NET Destination](ado-net-destination.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Common Properties](../common-properties.md)  
   
   

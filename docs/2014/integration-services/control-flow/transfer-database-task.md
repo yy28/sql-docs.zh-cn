@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f7ddf838269932c19b0614d5a5219a7f03daed17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830146"
 ---
 # <a name="transfer-database-task"></a>传输数据库任务
@@ -51,7 +51,7 @@ ms.locfileid: "62830146"
   
  此外，在覆盖目标数据库时会写入 `OnInformation` 事件的日志项。  
   
-## <a name="security-and-permissions"></a>安全性和权限  
+## <a name="security-and-permissions"></a>安全和权限  
  若要使用脱机模式传输数据库，运行包的用户必须是 sysadmin 服务器角色的成员。  
   
  若要使用联机模式传输数据库，运行包的用户必须是 sysadmin 服务器角色的成员或所选数据库的数据库所有者 (dbo)。  
@@ -71,9 +71,9 @@ ms.locfileid: "62830146"
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   
--   [传输数据库任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)  
+-   [传输数据库任务编辑器 &#40;常规 "页面&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [传输数据库任务编辑器（“数据库”页）](../transfer-database-task-editor-databases-page.md)  
+-   [传输数据库任务编辑器 &#40;数据库 "页&#41;](../transfer-database-task-editor-databases-page.md)  
   
 -   [“表达式”页](../expressions/expressions-page.md)  
   

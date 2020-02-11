@@ -17,10 +17,10 @@ ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fdcf5a9dcd462562886c7815b500c43145b749a3
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75322222"
 ---
 # <a name="sp_replmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "75322222"
 
   更改发布的监视阈值标准。 在分发服务器的分发数据库上执行此存储过程，用于监视复制。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [transact-sql 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -57,16 +57,16 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 |值|说明|  
 |-----------|-----------------|  
 |**0**|事务发布。|  
-|**2**|快照发布。|  
-|**pps-2**|合并发布。|  
+|**1**|快照发布。|  
+|**2**|合并发布。|  
 |NULL（默认值）|复制尝试确定发布类型。|  
   
 `[ @metric_id = ] metric_id`正在更改的发布阈值指标的 ID。 *metric_id*为**int**，默认值为 NULL，可以是下列值之一。  
   
 |值|指标名称|  
 |-----------|-----------------|  
-|**2**|**过期**-监视对事务发布的订阅是否即将过期。|  
-|**pps-2**|**延迟**-监视对事务发布的订阅的性能。|  
+|**1**|**过期**-监视对事务发布的订阅是否即将过期。|  
+|**2**|**延迟**-监视对事务发布的订阅的性能。|  
 |**4**|**mergeexpiration** -监视对合并发布的订阅是否即将过期。|  
 |**5**|**mergeslowrunduration** -监视通过低带宽（拨号）连接进行的合并同步的持续时间。|  
 |**6**|**mergefastrunduration** -监视通过高带宽局域网（LAN）连接进行的合并同步的持续时间。|  
