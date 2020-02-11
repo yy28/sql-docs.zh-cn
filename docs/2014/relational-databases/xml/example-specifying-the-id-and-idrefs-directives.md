@@ -1,5 +1,5 @@
 ---
-title: 例如：指定 ID 和 IDREFS 指令 | Microsoft Docs
+title: 示例：指定 ID 和 IDREFS 指令 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8771eb523153a2a03b7e10dd58b3c1a85504f63e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63288880"
 ---
-# <a name="example-specifying-the-id-and-idrefs-directives"></a>例如：指定 ID 和 IDREFS 指令
+# <a name="example-specifying-the-id-and-idrefs-directives"></a>示例：指定 ID 和 IDREFS 指令
   可以将元素属性指定为 `ID` 类型属性，然后就可以使用 `IDREFS` 属性来引用它。 这将启用文档内链接，与关系数据库中主键和外键关系类似。  
   
  此示例说明如何使用 `ID` 和 `IDREFS` 指令来创建 `ID` 和 `IDREFS` 类型的属性。 因为 ID 不能是整数值，所以对此示例中的 ID 值进行了转换。 也就是说，它们进行了类型转换。 ID 值中使用了前缀。  
@@ -36,9 +36,10 @@ ms.locfileid: "63288880"
 </Customer>  
 ```  
   
- < `SalesOrderIDList` > 元素的 `Customer` 属性是一个多值属性，它引用 < `SalesOrderID` > 元素的 `SalesOrder` 属性。 若要建立此链接，必须将 `SalesOrderID` 属性声明为 `ID` 类型，并且必须将 < `Customer`> 元素的 `SalesOrderIDList` 属性声明为 `IDREFS` 类型。 因为一个客户可请求多个订单，所以使用 `IDREFS` 类型。  
+ < `SalesOrderIDList` > 元素的 `Customer` 属性是一个多值属性，它引用 < `SalesOrderID` > 元素的 `SalesOrder` 属性。 若要建立此链接，必须将 `SalesOrderID` 属性声明为 `ID` 类型，并且必须将 < `SalesOrderIDList`> 元素的 `Customer` 属性声明为 `IDREFS` 类型。 因为一个客户可请求多个订单，所以使用 `IDREFS` 类型。  
   
- `IDREFS` 类型的元素也有多个值。 因此，必须使用单独的 SELECT 子句来重复使用相同的标记、父级和键列信息。 然后，`ORDER BY` 必须确保组成 `IDREFS` 值的行的序列成组显示在它们的父元素下。  
+ 
+  `IDREFS` 类型的元素也有多个值。 因此，必须使用单独的 SELECT 子句来重复使用相同的标记、父级和键列信息。 然后，`ORDER BY` 必须确保组成 `IDREFS` 值的行的序列成组显示在它们的父元素下。  
   
  下面是生成所需的 XML 的查询。 该查询使用 `ID` 和 `IDREFS` 指令来覆盖列名称（`SalesOrder!2!SalesOrderID!ID`、 `Customer!1!SalesOrderIDList!IDREFS`）中的类型。  
   
@@ -77,7 +78,7 @@ INNER JOIN Sales.SalesOrderHeader AS SOH
 FOR XML EXPLICIT;  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [将 EXPLICIT 模式与 FOR XML 一起使用](use-explicit-mode-with-for-xml.md)  
   
   

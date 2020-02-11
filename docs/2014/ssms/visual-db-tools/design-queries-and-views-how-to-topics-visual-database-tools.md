@@ -21,20 +21,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca92258bb764014b6f985ea08aa1a2606037a019
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63316071"
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>设计查询和视图操作指南主题 (Visual Database Tools)
   查询和视图设计器可以帮助您创建和维护应用程序的数据检索和数据操作部分。  
   
 ## <a name="in-this-section"></a>本节内容  
- [打开查询和视图设计器 (Visual Database Tools)](visual-database-tools.md)  
+ [&#40;Visual Database Tools 打开查询和视图设计器&#41;](visual-database-tools.md)  
  提供在查询和视图设计器中打开新的或现有查询或视图的步骤。  
   
- [在查询和视图设计器中导航 (Visual Database Tools)](navigate-in-the-query-and-view-designer-visual-database-tools.md)  
+ [在查询和视图设计器中导航 &#40;Visual Database Tools&#41;](navigate-in-the-query-and-view-designer-visual-database-tools.md)  
  提供可在查询和视图设计器中使用的键组合和鼠标操作的列表。  
   
  [查询和视图设计器工具 (Visual Database Tools)](query-and-view-designer-tools-visual-database-tools.md)  

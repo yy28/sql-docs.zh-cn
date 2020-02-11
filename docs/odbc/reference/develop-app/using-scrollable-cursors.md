@@ -14,22 +14,22 @@ ms.assetid: c5d795ba-70b0-420f-a944-b1894061a755
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 33f2050be5a0fb1b6d58bf00dd8c76c33219a237
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68079572"
 ---
 # <a name="using-scrollable-cursors"></a>使用可滚动游标
-使用可滚动游标需要这三个步骤：  
+使用可滚动游标需要以下三个步骤：  
   
 1.  确定游标功能。  
   
-2.  设置光标。  
+2.  设置游标。  
   
-3.  滚动和提取的行。  
+3.  滚动和提取行。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [确定游标功能](../../../odbc/reference/develop-app/determining-cursor-capabilities.md)  
   

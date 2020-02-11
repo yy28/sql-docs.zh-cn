@@ -1,5 +1,5 @@
 ---
-title: 显示表对话框 (Analysis Services-多维数据) |Microsoft Docs
+title: "\"显示表\" 对话框（Analysis Services 多维数据） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d21063bf403d9973ac4ff09725545e47e84a7cd2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068661"
 ---
 # <a name="show-table-dialog-box-analysis-services---multidimensional-data"></a>“显示表”对话框（Analysis Services - 多维数据）
@@ -26,24 +26,24 @@ ms.locfileid: "66068661"
   
 -   在 **维度设计器** 的 **“维度结构”** 页上，在 **“工具栏”** 窗格中单击 **“显示表”**。  
   
--   在**维度设计器**的“维度结构”页上，右键单击“数据源视图”窗格的背景，然后选择“显示表”。  
+-   在**维度设计器**的“维度结构”页上，右键单击“数据源视图”窗格的背景，然后选择“显示表”************。  
   
 -   在 **多维数据集设计器** 的 **“多维数据集结构”** 页上，在 **“工具栏”** 窗格中单击 **“显示表”**。  
   
--   在**多维数据集设计器**的“多维数据集结构”页上，右键单击“数据源视图”窗格的背景，然后选择“显示表”。  
+-   在**多维数据集设计器**的“多维数据集结构”页上，右键单击“数据源视图”窗格的背景，然后选择“显示表”************。  
   
--   在**数据挖掘模型设计器**的“挖掘结构”页上，右键单击“数据源视图”窗格的背景，然后选择“显示表”。  
+-   在**数据挖掘模型设计器**的“挖掘结构”页上，右键单击“数据源视图”窗格的背景，然后选择“显示表”************。  
   
 ## <a name="options"></a>选项  
  **选择要显示的其他表**  
- 选择要添加到“数据源视图”窗格中的表。 使用此选项可显示一个包含可用对象及其类型的网格，这些对象及其类型与“筛选器”中设置的筛选器匹配（如果未设置“筛选器”，则为所有表），但尚未显示在当前关系图中。  
+ 选择要添加到“数据源视图”窗格中的表****。 使用此选项可显示一个包含可用对象及其类型的网格，这些对象及其类型与“筛选器”**** 中设置的筛选器匹配（如果未设置“筛选器”****，则为所有表），但尚未显示在当前关系图中。  
   
- **Filter**  
- 键入用来限制所列对象的筛选器，再单击该按钮，即可对“选择要显示的其他表”中列出的表进行筛选。  
+ **筛选器**  
+ 键入用来限制所列对象的筛选器，再单击该按钮，即可对“选择要显示的其他表”**** 中列出的表进行筛选。  
   
-## <a name="see-also"></a>请参阅  
- [Analysis Services 设计器和对话框&#40;多维数据&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [数据源视图&#40;维度结构选项卡，维度设计器&#41; &#40;Analysis Services-多维数据&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
- [数据源视图&#40;多维数据集结构选项卡，多维数据集设计器&#41; &#40;Analysis Services-多维数据&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;多维数据的 Analysis Services 设计器和对话框&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [数据源视图 &#40;维度结构 "选项卡，维度设计器&#41; &#40;Analysis Services 多维数据&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
+ [数据源视图 &#40;多维数据集结构 "选项卡、多维数据集设计器&#41; &#40;Analysis Services 多维数据&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)  
   
   

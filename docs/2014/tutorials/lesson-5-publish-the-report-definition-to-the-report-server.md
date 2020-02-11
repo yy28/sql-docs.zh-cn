@@ -1,5 +1,5 @@
 ---
-title: 第 5 课：将报表定义发布到报表服务器 |Microsoft Docs
+title: 第5课：将报表定义发布到报表服务器 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: c9c561657767c1b1e593fa9dcd9702b72193004d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63272871"
 ---
 # <a name="lesson-5-publish-the-report-definition-to-the-report-server"></a>第 5 课：将报表定义发布到报表服务器
@@ -22,7 +22,7 @@ ms.locfileid: "63272871"
   
 ### <a name="to-publish-the-report-to-the-report-catalog"></a>将报表发布到报表目录  
   
-1.  代码替换为`PublishReportDefinition()`Program.cs 文件中的方法 (对于 Module1.vb [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) 使用以下代码：  
+1.  将 Program.cs 文件中`PublishReportDefinition()`方法的代码（对于的[!INCLUDE[vbprvb](../includes/vbprvb-md.md)]Module1）替换为以下代码：  
   
     ```csharp  
     private void PublishReportDefinition()  
@@ -77,10 +77,10 @@ ms.locfileid: "63272871"
     ```  
   
 ## <a name="next-lesson"></a>下一课  
- 在下一课中，将编译并运行`SampleRDLSchema`应用程序。 请参阅[第 6 课：运行 RDL 架构应用程序&#40;VB C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md)。  
+ 在下一课中，您将编译并运行`SampleRDLSchema`该应用程序。 请参阅[第6课：运行 RDL 架构应用程序 &#40;VB-C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md)。  
   
-## <a name="see-also"></a>请参阅  
- [使用从 RDL 架构生成的类更新报表&#40;SSRS 教程&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
+## <a name="see-also"></a>另请参阅  
+ [使用从 RDL 架构生成的类更新报表 &#40;SSRS 教程&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
  [报表定义语言 (SSRS)](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

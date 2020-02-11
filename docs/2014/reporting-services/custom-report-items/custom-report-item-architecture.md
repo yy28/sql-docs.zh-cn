@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a053eb55547da9030eebe9036667cca2e14606f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63264967"
 ---
 # <a name="custom-report-item-architecture"></a>自定义报表项体系结构
@@ -32,9 +32,9 @@ ms.locfileid: "63264967"
   
  ![自定义报表项设计时组件](../../../2014/reporting-services/media/customreportitemdesign-timecomponentarchitecture.gif "自定义报表项设计时组件")  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建自定义报表项运行时组件](../custom-report-items/creating-a-custom-report-item-run-time-component.md)   
  [创建自定义报表项设计时组件](../custom-report-items/creating-a-custom-report-item-design-time-component.md)   
- [如何：部署自定义报表项](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
+ [如何部署自定义报表项](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
   

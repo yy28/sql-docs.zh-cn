@@ -1,5 +1,5 @@
 ---
-title: CreateRecordset 方法示例 (VB) |Microsoft Docs
+title: CreateRecordset 方法示例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,16 +15,16 @@ ms.assetid: 2de8fd02-0f49-4d47-8bd3-397726d1c644
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bb1bda7808b8875da5982b70e749f45ec15e5958
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919348"
 ---
 # <a name="createrecordset-method-example-vb"></a>CreateRecordset 方法示例 (VB)
-您可以创建[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象，并指定的列信息。 然后可以将数据插入**记录集**对象; 基础行集缓冲区插入。  
+您可以创建[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象并指定列信息。 然后，可以将数据插入**Recordset**对象;基础行集缓冲插入。  
   
- 下面的代码示例演示如何定义**记录集**通过使用[提高](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)对象。 此外可以执行此操作与[rds。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象。  
+ 下面的代码示例演示如何使用[RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)对象定义**记录集**。 还可以通过 RDS 执行此操作[。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象。  
   
 ```  
 'BeginRsDefineShapeVB  

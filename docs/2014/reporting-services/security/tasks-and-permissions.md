@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 01cbf00850c5dd57e7ca1575a1a0cb826c009714
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101460"
 ---
 # <a name="tasks-and-permissions"></a>任务和权限
@@ -38,12 +38,12 @@ ms.locfileid: "66101460"
 ## <a name="system-and-item-level-tasks"></a>系统级任务和项级任务  
  任务分为两类：系统级任务和项级任务。 一个角色只能包含单个类别中的任务。 下表对每一类别的任务进行了说明。  
   
-|Category|Description|  
+|类别|说明|  
 |--------------|-----------------|  
 |[项级任务](tasks-and-permissions-item-level-tasks.md)|对报表服务器管理的项（例如文件夹、报表、报表模型和资源）执行的操作。<br /><br /> 项级任务的作用域为报表服务器文件夹命名空间。 通过报表服务器上的文件夹或通过 URL 访问的项都受到包含项级任务的角色分配的保护。|  
 |[系统级任务](tasks-and-permissions-system-level-tasks.md)|在系统级执行的操作，例如，管理可用于多个项的作业或共享计划。 系统级任务的作用域扩展到报表服务器文件夹命名空间之外。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [角色定义](role-definitions.md)   
  [预定义角色](role-definitions-predefined-roles.md)   
  [授予对本机模式报表服务器的权限](granting-permissions-on-a-native-mode-report-server.md)  

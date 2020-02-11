@@ -1,5 +1,5 @@
 ---
-title: 查看临时过程 (Master Data Services) 中发生的错误 |Microsoft Docs
+title: 查看在临时过程中出现的错误（Master Data Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 75b7fb5a1b98f599a07e47101f93268779ca39b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478570"
 ---
 # <a name="view-errors-that-occur-during-the-staging-process-master-data-services"></a>查看临时过程中出现的错误 (Master Data Services)
@@ -26,12 +26,12 @@ ms.locfileid: "65478570"
   
 -   stg.viw_name_RelationshipErrorDetails 用于层次结构关系更新。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  
   
 -   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中，必须具有对 stg.viw_name_MemberErrorDetails 或 stg.viw_name_RelationshipErrorDetails 视图的 SELECT 权限。  
   
--   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](administrators-master-data-services.md)。  
   
 ### <a name="to-view-staging-errors"></a>查看临时错误  
   
@@ -48,8 +48,8 @@ ms.locfileid: "65478570"
 ## <a name="next-steps"></a>后续步骤  
  有关错误消息的详细信息，请参阅[临时过程错误 (Master Data Services)](../../2014/master-data-services/staging-process-errors-master-data-services.md)。  
   
-## <a name="see-also"></a>请参阅  
- [数据导入&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)   
+## <a name="see-also"></a>另请参阅  
+ [数据导入 &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)   
  [临时过程故障排除 (Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-the-staging-process-master-data-services.aspx)  
   
   

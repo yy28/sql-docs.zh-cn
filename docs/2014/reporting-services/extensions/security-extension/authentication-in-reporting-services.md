@@ -16,19 +16,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c4fc4d98eb32fb07def2fd317ebb7f5a6f6332cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63282152"
 ---
 # <a name="authentication-in-reporting-services"></a>Reporting Services 中的身份验证
   身份验证是确立用户对某一身份的权限的过程。 您可以使用多种方法来验证某一用户的身份。 最常见的方法是使用密码。 例如，在实现窗体身份验证时，您希望某一实现查询用户的凭据（通常通过请求提供登录名和密码的某些界面），然后根据数据存储区（例如数据库表或配置文件）验证用户。 如果无法验证凭据，该身份验证过程将失败，并且用户将假定匿名身份。  
   
 ## <a name="custom-authentication-in-reporting-services"></a>Reporting Services 中的自定义身份验证  
- 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中，Windows 操作系统通过集成的安全性或通过用户凭据的显式接受和验证，处理用户的身份验证。 可以在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中开发自定义身份验证，以支持附加的身份验证架构。 这可以通过安全扩展插件接口 <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension> 实现。 所有扩展插件都继承自报表服务器部署和使用的任何扩展插件的 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 基接口。 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 以及 <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension> 是 <xref:Microsoft.ReportingServices.Interfaces> 命名空间的成员。  
+ 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中，Windows 操作系统通过集成的安全性或通过用户凭据的显式接受和验证，处理用户的身份验证。 可以在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中开发自定义身份验证，以支持附加的身份验证架构。 这可以通过安全扩展插件接口 <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension> 实现。 所有扩展插件都继承自报表服务器部署和使用的任何扩展插件的 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 基接口。 
+  <xref:Microsoft.ReportingServices.Interfaces.IExtension> 以及 <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension> 是 <xref:Microsoft.ReportingServices.Interfaces> 命名空间的成员。  
   
- 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中对报表服务器进行身份验证的主要方式是 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 方法。 此 Reporting Services Web 服务成员可用于将用户凭据传递到某一报表服务器以进行验证。 在基础安全扩展插件实现**IAuthenticationExtension.LogonUser**其中包含自定义身份验证代码。 在窗体身份验证示例 LogonUser 中，对提供的凭据和数据库中的自定义用户存储执行身份验证检查  。 LogonUser 的实现的示例如下  ：  
+ 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中对报表服务器进行身份验证的主要方式是 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 方法。 此 Reporting Services Web 服务成员可用于将用户凭据传递到某一报表服务器以进行验证。 基础安全扩展插件实现包含自定义身份验证代码的**IAuthenticationExtension。** 在窗体身份验证示例 LogonUser 中，对提供的凭据和数据库中的自定义用户存储执行身份验证检查****。 LogonUser 的实现的示例如下****：  
   
 ```  
 public bool LogonUser(string userName, string password, string authority)  
@@ -95,7 +96,7 @@ internal static bool VerifyPassword(string suppliedUserName,
 }  
 ```  
   
-## <a name="authentication-flow"></a>身份验证流程  
+## <a name="authentication-flow"></a>身份验证流  
  Reporting Services Web 服务提供自定义身份验证扩展插件，以便支持通过报表管理器和报表服务器进行窗体身份验证。  
   
  Reporting Services Web 服务的 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 方法用于将凭据提交到报表服务器以供身份验证。 该 Web 服务使用 HTTP 标头将身份验证票证（通称为“cookie”）从服务器传递到客户端，以便用于已验证的登录请求。  
@@ -108,7 +109,7 @@ internal static bool VerifyPassword(string suppliedUserName,
   
 1.  客户端应用程序调用 Web 服务 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 方法以便验证某一用户的身份。  
   
-2.  Web 服务方法调用了<xref:ReportService2010.ReportingService2010.LogonUser%2A>方法的安全扩展插件，具体而言，实现的类**IAuthenticationExtension**。  
+2.  Web 服务调用安全扩展插件的<xref:ReportService2010.ReportingService2010.LogonUser%2A>方法，具体而言，就是实现**IAuthenticationExtension**的类。  
   
 3.  您的 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 实现验证用户存储或安全机构中的用户名和密码。  
   
@@ -126,7 +127,8 @@ internal static bool VerifyPassword(string suppliedUserName,
 ## <a name="forms-authentication"></a>窗体身份验证  
  窗体身份验证是一种 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 身份验证，其中，未经身份验证的用户定向到某一 HTML 窗体。 一旦用户提供凭据后，系统将发出包含身份验证票证的 cookie。 对于以后的请求，系统首先检查 cookie 以确定报表服务器是否已验证用户的身份。  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 可以扩展，以便使用可通过 Reporting Services API 提供的安全可扩展接口支持窗体身份验证。 如果您扩展 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 以使用窗体身份验证，则将安全套接字层 (SSL) 用于与报表服务器的全部通信，以便防止恶意用户获取对其他用户的 cookie 的访问。 SSL 使客户端和报表服务器能够彼此进行身份验证，并且确保没有其他计算机可以读取两台计算机之间的通信内容。 通过 SSL 连接从客户端传送的所有数据都进行加密，以便恶意用户无法截获发送给报表服务器的密码或数据。  
+ 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 可以扩展，以便使用可通过 Reporting Services API 提供的安全可扩展接口支持窗体身份验证。 如果您扩展 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 以使用窗体身份验证，则将安全套接字层 (SSL) 用于与报表服务器的全部通信，以便防止恶意用户获取对其他用户的 cookie 的访问。 SSL 使客户端和报表服务器能够彼此进行身份验证，并且确保没有其他计算机可以读取两台计算机之间的通信内容。 通过 SSL 连接从客户端传送的所有数据都进行加密，以便恶意用户无法截获发送给报表服务器的密码或数据。  
   
  实现窗体身份验证通常是为了支持针对非 Windows 的其他平台的帐户和身份验证。 向请求对某一报表服务器的访问的用户提供一个图形界面，并且提供的凭据将提交到安全机构以便进行身份验证。  
   
@@ -142,11 +144,14 @@ internal static bool VerifyPassword(string suppliedUserName,
   
 -   如果您使用窗体身份验证，则必须在 Internet 信息服务 (IIS) 的报表服务器虚拟目录上启用匿名访问。  
   
--   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 身份验证必须设置为“窗体”。 在报表服务器的 Web.config 文件中配置 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 身份验证。  
+-   
+  [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 身份验证必须设置为“窗体”。 在报表服务器的 Web.config 文件中配置 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 身份验证。  
   
--   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 在验证用户的身份并为其授权时，既可以使用 Windows 身份验证，也可以使用自定义身份验证，但不能同时使用二者。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 不支持同时使用多个安全扩展插件。  
+-   
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 在验证用户的身份并为其授权时，既可以使用 Windows 身份验证，也可以使用自定义身份验证，但不能同时使用二者。 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 不支持同时使用多个安全扩展插件。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [实现安全扩展插件](../security-extension/implementing-a-security-extension.md)  
   
   

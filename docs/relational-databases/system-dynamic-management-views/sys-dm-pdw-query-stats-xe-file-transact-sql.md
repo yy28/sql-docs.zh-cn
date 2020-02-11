@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_query_stats_xe_file (TRANSACT-SQL) |Microsoft Docs
+title: sys. dm_pdw_query_stats_xe_file （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,24 +13,24 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 6e1224db9ce74d214320231419301b1fbc1b84cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68044510"
 ---
-# <a name="sysdmpdwquerystatsxefile-transact-sql"></a>sys.dm_pdw_query_stats_xe_file (Transact SQL)
+# <a name="sysdm_pdw_query_stats_xe_file-transact-sql"></a>sys. dm_pdw_query_stats_xe_file （Transact-sql）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  此 DMV 已弃用，将在未来的版本中删除。 在此版本中，它将返回 0 行。  
+  此 DMV 已弃用，并将在将来的版本中删除。 在此版本中，它返回0行。  
   
-|列名|数据类型|描述|范围|  
+|列名|数据类型|说明|范围|  
 |-----------------|---------------|-----------------|-----------|  
-|事件|**nvarchar(60)**|此视图的键。||  
+|event|**nvarchar （60）**|此视图的键。||  
 |data|**xml**|||  
-|pdw_node_id|**int**|此 Xevent 实例正在其运行的节点。||  
+|pdw_node_id|**int**|此 Xevent 实例正在其上运行的节点。||  
   
-## <a name="see-also"></a>请参阅  
- [SQL 数据仓库和并行数据仓库动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+## <a name="see-also"></a>另请参阅  
+ [SQL 数据仓库和并行数据仓库动态管理视图 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

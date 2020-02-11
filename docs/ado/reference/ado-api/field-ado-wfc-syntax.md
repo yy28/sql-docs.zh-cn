@@ -1,5 +1,5 @@
 ---
-title: 字段 (ADO-WFC 语法) |Microsoft Docs
+title: Field （ADO-WFC 语法） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,14 +14,14 @@ ms.assetid: 7e01cb24-2338-4f92-ad46-8d97248e1a4d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 583e6de7dc8c3ea05d61dda53c3e630d05e4d5f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918752"
 ---
 # <a name="field-ado---wfc-syntax"></a>字段（ADO - WFC 语法）
-## <a name="package-commswfcdata"></a>包 com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>包 .com. 数据  
   
 ### <a name="methods"></a>方法  
   
@@ -34,7 +34,7 @@ public char[] getCharChunk(int len)
 public String getStringChunk(int len)  
 ```  
   
-### <a name="properties"></a>properties  
+### <a name="properties"></a>属性  
   
 ```  
 public int getActualSize()  
@@ -44,7 +44,7 @@ public com.ms.com.IUnknown getDataFormat()
 public void setDataFormat(com.ms.com.IUnknown format)  
 ```  
   
- （有关详细信息，请参阅 com.ms.wfc.data.IDataFormat 接口的文档）。  
+ （有关详细信息，请参阅 IDataFormat 接口的文档。）  
   
 ```  
 public int getDefinedSize()  
@@ -64,13 +64,13 @@ public AdoProperties getProperties()
 ```  
   
 ### <a name="field-accessor-methods"></a>字段访问器方法  
- [值](../../../ado/reference/ado-api/value-property-ado.md)的属性[字段](../../../ado/reference/ado-api/field-object.md)对象获取或设置该对象的内容。 内容表示为变体，可以分配一个值的对象的类型和任意多个数据类型。  
+ [Field](../../../ado/reference/ado-api/field-object.md)对象的[Value](../../../ado/reference/ado-api/value-property-ado.md)属性可获取或设置该对象的内容。 内容表示为一种变量，一种可以为其分配值和多个数据类型的对象的类型。  
   
- ADO/WFC 实现**值**具有属性**getValue**方法，该返回变体的对象; 方法并**setValue**方法，它使用作为参数的变体。 变体是在某些语言中，如 Microsoft Visual Basic 高效率。  
+ ADO/WFC 使用**getValue**方法实现**Value**属性，该方法返回变量对象;和**setValue**方法，该方法采用变量作为参数。 变体在某些语言（如 Microsoft Visual Basic）中效率高。  
   
- 除了**值**属性，提供了 ADO/WFC*访问器*方法使用 Java 数据类型来获取和设置的内容**字段**对象。 这些方法中的大多数其名称分别为窗体**获取**_数据类型_或**设置**_数据类型_。  
+ 除了**Value**属性，ADO/WFC 还提供使用 Java 数据类型获取和设置**字段**对象内容的*访问器*方法。 这些方法中的大多数都具有格式为**获取**_数据_类型或**设置**_数据类型_的名称。  
   
- 有两个值得注意的例外情况：之一**getObject**方法会返回强制转换为指定类的对象。 没有任何**getNull**属性; 而是有**isNull**返回一个布尔值，该值指示字段是否为 null 的属性。  
+ 有两个值得注意的异常：其中一个**getObject**方法返回强制转换为指定类的对象。 没有**getNull**属性;相反，有一个**isNull**属性，它返回一个布尔值，指示该字段是否为 null。  
   
 ```  
 public native boolean getBoolean();  
@@ -98,5 +98,5 @@ public Object getObject(Class c)
 public void setObject(Object value)  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [字段对象](../../../ado/reference/ado-api/field-object.md)

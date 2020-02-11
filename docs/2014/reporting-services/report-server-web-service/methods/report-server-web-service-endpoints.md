@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 976e8452e50d293fb8125bfbdde1bd17a8f3be07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63283490"
 ---
 # <a name="report-server-web-service-endpoints"></a>报表服务器 Web 服务端点
@@ -33,7 +33,7 @@ ms.locfileid: "63283490"
 >  当报表服务器配置为 SharePoint 集成模式时，<xref:ReportService2005> API 将返回 `rsOperationNotSupportedSharePointMode` 错误。 如果报表服务器配置为本机模式，<xref:ReportService2006> API 将返回 `rsOperationNotSupportedNativeMode` 错误。 同样，在非预期模式中使用 <xref:ReportService2010> 中的模式特定 API 时，API 将返回相应的错误。  
   
 > [!NOTE]  
->  在 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 中不推荐使用 <xref:ReportService2005> 和 <xref:ReportService2006> 端点。 <xref:ReportService2010> 端点包含两个端点的功能和其他管理功能。  
+>  在 <xref:ReportService2005> 中不推荐使用 <xref:ReportService2006> 和 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 端点。 <xref:ReportService2010> 端点包含两个端点的功能和其他管理功能。  
   
  如果将报表服务器配置为本机模式或 SharePoint 集成模式，则可以使用以下 URL 之一访问管理端点的 WSDL：  
   
@@ -63,9 +63,9 @@ http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx?
 ## <a name="sharepoint-proxy-endpoints"></a>SharePoint 代理端点  
  当报表服务器配置为 SharePoint 集成模式且已安装 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 外接程序时，将在 SharePoint 服务器上安装一组代理端点。 当将报表服务器配置为 SharePoint 集成模式时，代理端点是用于开发报表解决方案的主要 API。 当针对代理端点进行开发时，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 外接程序在可信帐户身份验证模式下管理 SharePoint 服务器与报表服务器之间的凭据交换。 当针对报表服务器端点进行开发时，调用应用程序必须在可信帐户身份验证模式下管理凭据交换。 下表列出随 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 外接程序安装的端点。  
   
-|代理端点|Description|  
+|代理端点|说明|  
 |--------------------|-----------------|  
-|<xref:ReportService2006>|为管理配置为 SharePoint 集成模式的报表服务器提供 API。 **注意：** 此终结点中已弃用[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]。|  
+|<xref:ReportService2006>|为管理配置为 SharePoint 集成模式的报表服务器提供 API。 **注意：** 此终结点在中[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]已弃用。|  
 |<xref:ReportService2010>|为管理配置为本机模式或 SharePoint 集成模式的报表服务器提供 API。|  
 |<xref:ReportExecution2005>|提供用于运行和导航报表的 API。|  
 |<xref:ReportServiceAuthentication>|提供 API，以便在将 SharePoint Web 应用程序配置为窗体身份验证时，针对报表服务器对用户进行身份验证。|  
@@ -84,7 +84,7 @@ http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx
 http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportServiceAuthentication.asmx  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用 Web 服务和.NET Framework 构建应用程序](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
   
   

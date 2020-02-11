@@ -1,5 +1,5 @@
 ---
-title: 提示用户输入连接信息 |Microsoft Docs
+title: 提示用户提供连接信息 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,31 +21,31 @@ ms.assetid: da98e9b9-a4ac-4a9d-bae6-e9252b1fe1e5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7dfc63aaa6f162d382d6d8b3c627ff078c76825c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68079057"
 ---
 # <a name="prompting-the-user-for-connection-information"></a>提示用户输入连接信息
-如果应用程序使用**SQLConnect**并需要提示用户输入的任何连接信息，如用户名和密码，它必须执行此操作本身。 尽管这样，应用程序来控制其"外观"，它可能会强制应用程序以包含特定于驱动程序的代码。 当应用程序需要提示用户提供特定于驱动程序的连接信息时，将发生这种情况。 这会带来的不可能的情况下，对于通用应用程序，用于处理所有驱动程序，包括编写的应用程序时不存在的驱动程序。  
+如果应用程序使用**SQLConnect** ，并需要提示用户输入任何连接信息（例如用户名和密码），则它必须是其本身。 虽然这允许应用程序控制其 "外观"，但它可能会强制应用程序包含特定于驱动程序的代码。 当应用程序需要提示用户提供特定于驱动程序的连接信息时，会发生这种情况。 这对于一般应用程序而言是一种不可能的情况，设计用于处理任何和所有驱动程序，包括编写应用程序时不存在的驱动程序。  
   
- **SQLDriverConnect**可以提示用户输入连接信息。 例如，前面所述的自定义程序可以将传递到下面的连接字符串**SQLDriverConnect**:  
+ **SQLDriverConnect**可以提示用户输入连接信息。 例如，前面提到的自定义程序可以将以下连接字符串传递给**SQLDriverConnect**：  
   
 ```  
 DSN=XYZ Corp;  
 ```  
   
- 然后，该驱动程序可能显示一个对话框，提示输入用户 Id 和密码，类似于下图。  
+ 然后，驱动程序可能会显示一个对话框，提示输入用户 Id 和密码，如下图所示。  
   
- ![提示输入用户 Id 和密码的对话框](../../../odbc/reference/develop-app/media/pr18.gif "pr18")  
+ ![提示输入用户 ID 和密码的对话框](../../../odbc/reference/develop-app/media/pr18.gif "pr18")  
   
- 该驱动程序可以提示输入连接信息是对泛型和垂直应用程序特别有用。 这些应用程序不应包含特定于驱动程序的信息，并具有所需的信息的驱动程序提示保持该应用程序中的信息。 这是通过前面的两个示例所示。 当应用程序传递到驱动程序数据源名称时，该应用程序不包含任何特定于驱动程序的信息，并因此是为未绑定到的特定驱动程序。 当应用程序传递到驱动程序的完整连接字符串时，它是为绑定到该字符串无法解释的驱动程序。  
+ 驱动程序可以提示连接信息对于一般和垂直应用程序特别有用。 这些应用程序不应包含特定于驱动程序的信息，并且让驱动程序提示其需要的信息会将信息保留在应用程序之外。 上面两个示例显示了这种情况。 当应用程序仅将数据源名称传递给驱动程序时，应用程序不包含任何特定于驱动程序的信息，因此不会绑定到特定驱动程序。 当应用程序将完整的连接字符串传递给驱动程序时，它将绑定到可能解释该字符串的驱动程序。  
   
- 通用应用程序可能会采取进一步的此步骤，并甚至不指定数据源。 当**SQLDriverConnect**收到空连接字符串，该驱动程序管理器显示以下对话框。  
+ 一般的应用程序可能会更进一步，甚至不指定数据源。 当**SQLDriverConnect**收到空的连接字符串时，驱动程序管理器将显示以下对话框。  
   
- ![选择数据源对话框](../../../odbc/reference/develop-app/media/ch06a.gif "CH06A")  
+ ![“选择数据源”对话框](../../../odbc/reference/develop-app/media/ch06a.gif "CH06A")  
   
- 在用户选择数据源后，驱动程序管理器将构造一个连接字符串，指定该数据源，并将其传递给驱动程序。 然后，驱动程序可以提示用户输入其所需的任何其他信息。  
+ 用户选择数据源之后，驱动程序管理器会构造一个连接字符串，指定该数据源并将其传递给驱动程序。 然后，该驱动程序可以提示用户输入所需的任何其他信息。  
   
- 控制在其下该驱动程序会提示用户的条件*DriverCompletion*标志; 有始终提示，提示如有必要，或者永远不会提示的选项。 此标志的完整说明，请参阅[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)函数说明。
+ 驱动程序提示用户的条件由*DriverCompletion*标志控制;有一些选项可供选择，如有必要，还可以提示或从不提示。 有关此标志的完整说明，请参阅[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)函数说明。

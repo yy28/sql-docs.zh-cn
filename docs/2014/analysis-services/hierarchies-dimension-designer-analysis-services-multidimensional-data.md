@@ -1,5 +1,5 @@
 ---
-title: 层次结构 （维度结构选项卡，维度设计器） (Analysis Services-多维数据) |Microsoft Docs
+title: 层次结构（"维度结构" 选项卡，维度设计器）（Analysis Services 多维数据） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a68cd859e93105c2fb4aa570dbf727fe7112bdab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080788"
 ---
 # <a name="hierarchies-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>层次结构（“维度结构”选项卡，维度设计器）（Analysis Services - 多维数据）
@@ -30,7 +30,7 @@ ms.locfileid: "66080788"
   
 -   单击级别名称旁的箭头，显示或隐藏属性关系。  
   
- **若要显示层次结构窗格**  
+ **显示“层次结构”窗格**  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，打开 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目，然后打开所需的维度。  
   
@@ -40,10 +40,10 @@ ms.locfileid: "66080788"
  **层次结构**  
  显示当前创建的层次结构。 每个层次结构中都包含组成层次结构级别的属性。 属性关系也显示出来，但它们是只读的。  
   
-## <a name="see-also"></a>请参阅  
- [维度结构&#40;维度设计器&#41; &#40;Analysis Services-多维数据&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
- [属性&#40;维度结构选项卡，维度设计器&#41; &#40;Analysis Services-多维数据&#41;](attributes-dimension-designer-analysis-services-multidimensional-data.md)   
- [数据源视图&#40;维度结构选项卡，维度设计器&#41; &#40;Analysis Services-多维数据&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
- [工具栏&#40;维度结构选项卡，维度设计器&#41; &#40;Analysis Services-多维数据&#41;](toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>另请参阅  
+ [维度设计器&#41; &#40;Analysis Services 多维数据的维度结构 &#40;&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
+ [属性 &#40;维度结构 "选项卡，维度设计器&#41; &#40;Analysis Services 多维数据&#41;](attributes-dimension-designer-analysis-services-multidimensional-data.md)   
+ [数据源视图 &#40;维度结构 "选项卡，维度设计器&#41; &#40;Analysis Services 多维数据&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
+ [&#41; &#40;Analysis Services 多维数据的工具栏 &#40;"维度结构" 选项卡、"维度设计器"&#41;](toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md)  
   
   

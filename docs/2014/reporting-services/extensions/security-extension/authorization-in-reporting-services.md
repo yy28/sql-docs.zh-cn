@@ -13,14 +13,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ac9f9882724e9ba0341bf11af948c948070e6774
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63282246"
 ---
 # <a name="authorization-in-reporting-services"></a>Reporting Services 中的授权
-  授权是指确定是否应为某个身份授予其请求的、针对报表服务器数据库的给定资源的访问权限的过程。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用基于角色的授权体系结构，根据用户的应用程序角色分配为用户授予针对给定资源的访问权限。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的安全扩展插件包含对一个授权组件的实现，该组件用于在报表服务器上对用户进行身份验证后授予用户访问权限。 在某一用户尝试通过 SOAP API 和通过 URL 访问对系统或报表服务器项执行操作时，调用授权。 这可通过安全扩展插件接口**IAuthorizationExtension**。 如前所述，所有扩展插件均继承自 IExtension，这是部署的所有扩展插件的基接口  。 **IExtension**并**IAuthorizationExtension**属于**Microsoft.ReportingServices.Interfaces**命名空间。  
+  授权是指确定是否应为某个身份授予其请求的、针对报表服务器数据库的给定资源的访问权限的过程。 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用基于角色的授权体系结构，根据用户的应用程序角色分配为用户授予针对给定资源的访问权限。 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的安全扩展插件包含对一个授权组件的实现，该组件用于在报表服务器上对用户进行身份验证后授予用户访问权限。 在某一用户尝试通过 SOAP API 和通过 URL 访问对系统或报表服务器项执行操作时，调用授权。 这可以通过安全扩展接口**IAuthorizationExtension**来实现。 如前所述，所有扩展插件均继承自 IExtension，这是部署的所有扩展插件的基接口****。 **IExtension**和**IAuthorizationExtension**是**microsoft.reportingservices.interfaces.dll**命名空间的成员。  
   
 ## <a name="checking-access"></a>检查访问  
  在授权中，任何自定义安全实现的关键环节都是访问权限检查，访问权限检查是在 <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> 方法中实现的。 每当用户尝试对报表服务器执行操作时，就会调用 <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A>。 为每个操作类型都将重载 <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> 方法。 对于文件夹操作，访问检查的示例可能如下：  
@@ -68,7 +70,8 @@ public bool CheckAccess(
  安全描述符是使用 Web 服务 <xref:ReportService2010.ReportingService2010.SetPolicies%2A> 和 <xref:ReportService2010.ReportingService2010.SetSystemPolicies%2A> 方法创建的。  
   
 ### <a name="authorization-flow"></a>授权流程  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 授权由当前配置为在服务器上运行的安全扩展插件控制。 授权是基于角色的，并且限制为 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 安全体系结构提供的权限和操作。 下图描述授权用户对报表服务器数据库中的项执行操作的流程：  
+ 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 授权由当前配置为在服务器上运行的安全扩展插件控制。 授权是基于角色的，并且限制为 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 安全体系结构提供的权限和操作。 下图描述授权用户对报表服务器数据库中的项执行操作的流程：  
   
  ![Reporting Services 安全授权流程](../../media/rosettasecurityextensionauthorizationflow.gif "Reporting Services 安全授权流程")  
   

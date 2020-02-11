@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 12ba4a2d03e98d5f2dac79917e23a93c0a24cdb0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65481208"
 ---
 # <a name="web-configuration-page-master-data-services-configuration-manager"></a>“Web 配置”页（Master Data Services 配置管理器）
@@ -24,7 +24,7 @@ ms.locfileid: "65481208"
   
 ## <a name="configure-the-web-application"></a>配置 Web 应用程序  
   
-|控件名称|Description|  
+|控件名称|说明|  
 |------------------|-----------------|  
 |**网站**|创建新网站，选择默认网站，或者选择其他可用的网站（如果列出）。 此列表显示在本地计算机上的 Internet Information Services (IIS) 中定义的网站。 创建新网站时，将自动创建新的 Web 应用程序。 选择默认网站或其他现有的网站时，必须手动创建应用程序。|  
 |**Web 应用程序**|选择用于配置的 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序。 此框仅显示所选网站中的 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序。<br /><br /> 如果什么都没显示，请单击 **“创建应用程序”** 创建网站。|  
@@ -32,22 +32,22 @@ ms.locfileid: "65481208"
   
 ## <a name="associate-application-with-database"></a>将应用程序与数据库相关联  
   
-|控件名称|Description|  
+|控件名称|说明|  
 |------------------|-----------------|  
-|**选择**|打开 **“连接到服务器”** 对话框，从中连接到某一 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例并选择要与所选 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web 应用程序相关联的 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 数据库。|  
+|**单击**|打开 **“连接到服务器”** 对话框，从中连接到某一 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例并选择要与所选 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web 应用程序相关联的 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 数据库。|  
 |**SQL Server 实例**|显示承载 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库的所选 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 实例的名称。 在您连接到某一 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例并选择某一数据库之前，此项为空。|  
-|**“数据库”**|显示与所选 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web 应用程序相关联的 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 数据库的名称。 在您连接到某一 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例并选择某一数据库之前，此项为空。|  
+|**Database**|显示与所选 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web 应用程序相关联的 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 数据库的名称。 在您连接到某一 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例并选择某一数据库之前，此项为空。|  
   
 ## <a name="enable-dqs-integration"></a>启用 DQS 集成  
   
-|控件名称|Description|  
+|控件名称|说明|  
 |------------------|-----------------|  
 |**启用与 Data Quality Services 的集成**|选择此选项可启用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]中提供的数据质量功能。 有关详细信息，请参阅 [实现 Data Quality Services 与 Master Data Services 的集成](install-windows/enable-data-quality-services-integration-with-master-data-services.md)。|  
   
-## <a name="see-also"></a>请参阅  
- [为 Master Data Services 数据库和网站设置](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
- [Web 应用程序要求&#40;Master Data Services&#41;](install-windows/web-application-requirements-master-data-services.md)   
- [创建主数据管理器 Web 应用程序 (Master Data Services)](install-windows/create-a-master-data-manager-web-application-master-data-services.md)   
- [MDS 2014 和"服务不可用"错误](https://blogs.msdn.com/b/womeninanalytics/archive/2015/08/19/mds-2014-and-service-unavailable-error.aspx)  
+## <a name="see-also"></a>另请参阅  
+ [为 Master Data Services 设置数据库和网站](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
+ [Web 应用程序要求 &#40;Master Data Services&#41;](install-windows/web-application-requirements-master-data-services.md)   
+ [&#40;Master Data Services 创建主数据管理器 Web 应用程序&#41;](install-windows/create-a-master-data-manager-web-application-master-data-services.md)   
+ [MDS 2014 和 "服务不可用" 错误](https://blogs.msdn.com/b/womeninanalytics/archive/2015/08/19/mds-2014-and-service-unavailable-error.aspx)  
   
   

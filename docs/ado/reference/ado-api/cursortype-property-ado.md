@@ -1,5 +1,5 @@
 ---
-title: CursorType 属性 (ADO) |Microsoft Docs
+title: CursorType 属性（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,46 +16,46 @@ ms.assetid: b62c66ca-58d5-430e-9257-eb38c65e48c2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4dc881b96a1e2641d4946340c9462455197f2043
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919248"
 ---
 # <a name="cursortype-property-ado"></a>CursorType 属性 (ADO)
-指示使用中的游标类型[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。  
+指示[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象中使用的游标的类型。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
- 设置或返回[CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md)值。 默认值是**adOpenForwardOnly**。  
+ 设置或返回一个[CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md)值。 默认值为**adOpenForwardOnly**。  
   
 ## <a name="remarks"></a>备注  
- 使用**CursorType**属性指定的游标打开时应使用的类型**记录集**对象。  
+ 使用**CursorType**属性可以指定在打开**Recordset**对象时应使用的游标类型。  
   
- 仅设置**adOpenStatic**如果，则支持[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性设置为**adUseClient**。 如果设置不支持的值，则会不产生任何错误;最接近的支持**CursorType**将改为使用。  
+ 如果[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性设置为**adUseClient**，则仅支持**adOpenStatic**的设置。 如果设置了不受支持的值，则不会产生错误;将改用最近支持的**CursorType** 。  
   
- 如果提供程序不支持请求的游标类型，它可能返回另一个游标类型。 **CursorType**属性将更改以匹配实际游标类型在使用时[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象处于打开状态。 若要验证返回的游标的特定功能，请使用[支持](../../../ado/reference/ado-api/supports-method.md)方法。 关闭后**记录集**，则**CursorType**属性恢复为原始设置。  
+ 如果提供程序不支持所请求的游标类型，则它可能返回另一个游标类型。 当[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)对象处于打开状态时， **CursorType**属性将更改以匹配实际使用的游标类型。 若要验证返回的游标的特定功能，请使用[支持](../../../ado/reference/ado-api/supports-method.md)方法。 关闭**记录集**后， **CursorType**属性将恢复为其原始设置。  
   
- 下图显示了提供程序功能 (由标识**支持**方法常量) 所需的每个游标类型。  
+ 下图显示了每个游标类型所需的提供程序功能（由**支持**的方法常量标识）。  
   
-|此游标类型的记录集|这些常量的所有支持方法必须返回 True|  
+|对于此 CursorType 的记录集|对于所有这些常量，支持方法必须返回 True|  
 |----------------------------------------|---------------------------------------------------------------------|  
-|**adOpenForwardOnly**|无|  
-|**adOpenKeyset**|**adBookmark**， **adHoldRecords**， **adMovePrevious**， **adResync**|  
+|**adOpenForwardOnly**|none|  
+|**adOpenKeyset**|**adBookmark**、 **adHoldRecords**、 **adMovePrevious**、 **adResync**|  
 |**adOpenDynamic**|**adMovePrevious**|  
-|**adOpenStatic**|**adBookmark**， **adHoldRecords**， **adMovePrevious**， **adResync**|  
+|**adOpenStatic**|**adBookmark**、 **adHoldRecords**、 **adMovePrevious**、 **adResync**|  
   
 > [!NOTE]
->  尽管**支持**(**adUpdateBatch**) 批处理更新你的条件为真动态游标和只进游标，则应使用 keyset 或 static 游标。 设置[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)属性设置为**adLockBatchOptimistic**并**CursorLocation**属性设置为**adUseClient**启用光标对于 OLE DB，所需的批处理更新的服务。  
+>  虽然对于动态和只进游标，**支持**（**adUpdateBatch**）可能是 true，但对于批处理更新，应使用键集或静态游标。 将[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)属性设置为**AdLockBatchOptimistic** ，将**CursorLocation**属性设置为**adUseClient** ，以便为批更新启用 OLE DB 的游标服务。  
   
- **CursorType**属性为读/写时**记录集**打开时为已关闭，只读的。  
+ 当**记录集**关闭时， **CursorType**属性是可读/写的。  
   
 > [!NOTE]
->  **远程数据服务使用情况**客户端上使用时**记录集**对象， **CursorType**可以将属性设置为仅**adOpenStatic**。  
+>  **远程数据服务使用情况**在客户端**记录集**对象上使用时，只能将**CursorType**属性设置为**adOpenStatic**。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>请参阅  
- [CursorType、 LockType、 和 EditMode 属性示例 (VB)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vb.md)   
- [CursorType、 LockType、 和 EditMode 属性示例 （VC + +）](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)   
+## <a name="see-also"></a>另请参阅  
+ [CursorType、LockType 和 EditMode 属性示例（VB）](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vb.md)   
+ [CursorType、LockType 和 EditMode 属性示例（VC + +）](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)   
  [Supports 方法](../../../ado/reference/ado-api/supports-method.md)

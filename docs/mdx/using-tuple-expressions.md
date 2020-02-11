@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 55b55f2104e900104c051021fc02761d32c63e5e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68135133"
 ---
 # <a name="using-tuple-expressions"></a>使用元组表达式
@@ -25,7 +25,7 @@ ms.locfileid: "68135133"
   
  元组标识符的完整表达式由一个或多个用括号括起的显式指定的成员组成：  
   
- (*Member_expression* [，*Member_expression* ...])  
+ （*Member_expression* [，*Member_expression* ...]）  
   
  元组可以是完全限定的，可以包含多个隐式成员，也可以只包含一个成员。  
   
@@ -36,15 +36,15 @@ ms.locfileid: "68135133"
   
 -   如果隐式引用的层次结构有默认成员，则将该默认成员添加到元组中。  
   
--   如果隐式引用的层次结构没有默认成员， **（全部）** 使用默认层次结构的成员。  
+-   如果隐式引用的层次结构没有默认成员，则使用默认层次结构的 " **（全部）** " 成员。  
   
 -   如果隐式引用的层次结构没有默认成员，则使用该层次结构最上层的第一个成员。  
   
 ## <a name="one-member-tuples"></a>一个成员的元组  
  如果元组表达式仅有一个成员，MDX 将把该成员转换为单成员元组，以计算该表达式。 换言之，使用成员表达式 `[Measures].[TestMeasure]`（而不是元组表达式）与使用元组表达式 `( [Measures].[TestMeasure] ).` 的效果相同。  
   
-## <a name="see-also"></a>请参阅  
- [表达式&#40;MDX&#41;](../mdx/expressions-mdx.md)   
- [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [MDX&#41;&#40;表达式](../mdx/expressions-mdx.md)   
+ [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

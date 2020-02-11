@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c0ccfb05b7b9eb6244e6d403c8975c3af1358a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250661"
 ---
 # <a name="reinitialize-subscriptions"></a>重新初始化订阅
@@ -41,7 +41,7 @@ ms.locfileid: "63250661"
   
  若要重新初始化订阅中的所有项目，请使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、存储过程或复制管理对象 (RMO)。 若要重新初始化快照发布和事务发布中的单个项目，必须使用存储过程。 有关详细信息，请参阅 [Reinitialize a Subscription](reinitialize-a-subscription.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [初始化订阅](initialize-a-subscription.md)   
  [订阅过期和停用](subscription-expiration-and-deactivation.md)  
   

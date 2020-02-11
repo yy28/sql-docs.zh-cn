@@ -1,5 +1,5 @@
 ---
-title: ADCPROP_UPDATERESYNC_ENUM | Microsoft Docs
+title: ADCPROP_UPDATERESYNC_ENUM |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,23 +16,23 @@ ms.assetid: bc9e1a37-e969-47e9-8382-0bbfffa2034f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 82a5473a68303d429794d8b98c4e91293e4e30cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921404"
 ---
-# <a name="adcpropupdateresyncenum"></a>ADCPROP_UPDATERESYNC_ENUM
-指定是否[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)方法后跟一个隐式[重新同步](../../../ado/reference/ado-api/resync-method.md)方法操作，如果是，该操作的范围。  
+# <a name="adcprop_updateresync_enum"></a>ADCPROP_UPDATERESYNC_ENUM
+指定[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)方法是否后跟隐式重新[同步](../../../ado/reference/ado-api/resync-method.md)方法操作，如果是，则为该操作的范围。  
   
-|常量|ReplTest1|描述|  
+|一直|值|说明|  
 |--------------|-----------|-----------------|  
-|**adResyncAll**|15|调用**重新同步**与所有其他 ADCPROP_UPDATERESYNC_ENUM 成员的组合值。|  
-|**adResyncAutoIncrement**|1|默认值。 尝试检索自动递增，或生成的数据源，例如 Microsoft Jet 自动编号字段或 Microsoft SQL Server 标识列的列的新标识值。|  
-|**adResyncConflicts**|2|调用**重新同步**的 update 或 delete 操作因并发冲突而导致的失败的所有行。|  
-|**adResyncInserts**|8|调用**重新同步**为所有成功插入的行。 但是，不重新同步自动递增列的值。 相反，新插入的行的内容进行重新同步基于现有的主键值。 如果主键是自动增量值，**重新同步**不会检索预期行的内容。 对于自动递增 AutoIncrement 主键值，调用**UpdateBatch**合并值与**adResyncAutoIncrement** + **adResyncInserts**.|  
-|**adResyncNone**|0|不会调用**重新同步**。|  
-|**adResyncUpdates**|4|调用**重新同步**的所有已成功更新行。|  
+|**adResyncAll**|15|调用与所有其他 ADCPROP_UPDATERESYNC_ENUM 成员的组合值的重新**同步**。|  
+|**adResyncAutoIncrement**|1|默认值。 尝试检索数据源自动递增或生成的列的新标识值，如 Microsoft Jet AutoNumber 字段或 Microsoft SQL Server 的标识列。|  
+|**adResyncConflicts**|2|针对因并发冲突而失败的更新或删除操作的所有行调用重新**同步**。|  
+|**adResyncInserts**|8|为所有成功插入的行调用重新**同步**。 但是，自动增量列值不会重新同步。 相反，新插入行的内容会根据现有的主键值进行重新同步。 如果主键是自动增量值，则重新**同步**不会检索目标行的内容。 若要自动递增自动增量主键值，请调用具有组合值**adResyncAutoIncrement** + **adResyncInserts**的**UpdateBatch** 。|  
+|**adResyncNone**|0|不会调用**Resync**。|  
+|**adResyncUpdates**|4|为所有已成功更新的行调用重新**同步**。|  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [Update Resync 属性 - 动态 (ADO)](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md)

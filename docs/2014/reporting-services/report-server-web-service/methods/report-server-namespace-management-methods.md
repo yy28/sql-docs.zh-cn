@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 64827063e6e406f91307e7db1b33d6b42a196168
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63283979"
 ---
 # <a name="report-server-namespace-management-methods"></a>报表服务器命名空间管理方法
@@ -62,7 +62,7 @@ ms.locfileid: "63283979"
 |<xref:ReportService2010.ReportingService2010.SetSystemProperties%2A>|在报表服务器或 SharePoint 场中设置一个或多个系统属性。|  
 |<xref:ReportService2010.ReportingService2010.ValidateExtensionSettings%2A>|验证 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 扩展插件设置。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用 Web 服务和 .NET Framework 生成应用程序](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [报表服务器 Web 服务](../report-server-web-service.md)   
  [报表服务器 Web 服务方法](report-server-web-service-methods.md)   

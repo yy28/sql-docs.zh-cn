@@ -16,27 +16,27 @@ ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 68aaa0bfb8aa72c9e94a8b5db65768fe85895f0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917743"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
-指定是否[参数](../../../ado/reference/ado-api/parameter-object.md)表示输入的参数、 输出参数，这既是输入和输出参数或从存储过程的返回值。  
+指定[参数](../../../ado/reference/ado-api/parameter-object.md)是否表示输入参数、输出参数、输入参数和输出参数，或存储过程的返回值。  
   
-|常量|ReplTest1|描述|  
+|一直|值|说明|  
 |--------------|-----------|-----------------|  
-|**adParamInput**|1|默认值。 指示该参数表示的输入的参数。|  
-|**adParamInputOutput**|3|指示该参数表示这两个输入和输出参数。|  
-|**adParamOutput**|2|指示该参数表示输出参数。|  
-|**adParamReturnValue**|4|指示该参数表示返回值。|  
-|**adParamUnknown**|0|指示参数方向为未知。|  
+|**adParamInput**|1|默认值。 指示参数表示输入参数。|  
+|**adParamInputOutput**|3|指示参数表示输入参数和输出参数。|  
+|**adParamOutput**|2|指示参数表示输出参数。|  
+|**adParamReturnValue**|4|指示参数表示返回值。|  
+|**adParamUnknown**|0|指示参数方向未知。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
- 包： **com.ms.wfc.data**  
+ Package： **.com. 数据**  
   
-|常量|  
+|一直|  
 |--------------|  
 |AdoEnums.ParameterDirection.INPUT|  
 |AdoEnums.ParameterDirection.INPUTOUTPUT|  
@@ -44,7 +44,7 @@ ms.locfileid: "67917743"
 |AdoEnums.ParameterDirection.RETURNVALUE|  
 |AdoEnums.ParameterDirection.UNKNOWN|  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
   
 |||  
 |-|-|  

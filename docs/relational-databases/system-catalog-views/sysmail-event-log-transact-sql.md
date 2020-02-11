@@ -1,5 +1,5 @@
 ---
-title: sysmail_event_log (TRANSACT-SQL) |Microsoft Docs
+title: sysmail_event_log （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,39 +18,39 @@ ms.assetid: 440bc409-1188-4175-afc4-c68e31e44fed
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4241ac9a457aa51f32ec12e9b1d8b83aa534995e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68060218"
 ---
-# <a name="sysmaileventlog-transact-sql"></a>sysmail_event_log (Transact-SQL)
+# <a name="sysmail_event_log-transact-sql"></a>sysmail_event_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  数据库邮件系统返回的每个 Windows 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 消息都在视图中占一行。 （在此上下文中的消息将引用一条消息，例如错误消息，不是电子邮件。）配置**日志记录级别**使用的参数**配置系统参数**对话框中的数据库邮件配置向导，或[sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)存储过程来确定返回的消息。  
+  数据库邮件系统返回的每个 Windows 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 消息都在视图中占一行。 （此上下文中的消息是指消息，例如错误消息，而不是电子邮件。）使用数据库邮件配置向导的 "**配置系统参数**" 对话框或[sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)存储过程来配置**日志记录级别**参数，以确定返回的消息。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**Log_id**|**int**|日志中项的标识符。|  
-|**event_type**|**varchar(11)**|插入日志中的通告的类型。 可能值为错误、警告、信息性消息、成功消息以及其他内部消息。|  
+|**event_type**|**varchar （11）**|插入日志中的通告的类型。 可能值为错误、警告、信息性消息、成功消息以及其他内部消息。|  
 |**log_date**|**datetime**|记录日志条目的日期和时间。|  
-|**description**|**nvarchar(max)**|要记录的消息的文本。|  
+|**2008**|**nvarchar(max)**|要记录的消息的文本。|  
 |**process_id**|**int**|数据库邮件外部程序的进程 ID。 每当数据库邮件外部程序启动时，该进程 ID 通常都会更改。|  
 |**mailitem_id**|**int**|邮件队列中邮件项的标识符。 如果消息与特定的电子邮件项不相关，则该值为 NULL。|  
-|**account_id**|**int**|**Account_id**与事件相关的帐户。 如果消息与特定的帐户不相关，则该值为 NULL。|  
+|**account_id**|**int**|与事件相关的帐户的**account_id** 。 如果消息与特定的帐户不相关，则该值为 NULL。|  
 |**last_mod_date**|**datetime**|上次修改行的日期和时间。|  
 |**last_mod_user**|**sysname**|上次修改行的用户。 对于电子邮件，这是发送邮件的用户。 对于数据库邮件外部程序生成的消息，这是程序的用户上下文。|  
   
 ## <a name="remarks"></a>备注  
- 如果数据库邮件故障排除，搜索**sysmail_event_log**与电子邮件失败相关的事件的视图。 某些消息（例如，数据库邮件外部程序的失败）并不与特定的电子邮件相关。 若要搜索与特定电子邮件相关的错误，请查找**mailitem_id**中的失败电子邮件**sysmail_faileditems**查看，然后搜索**sysmail_event_log**与该订阅相关的消息**mailitem_id**。 当从返回错误**sp_send_dbmail**、 电子邮件并未提交到数据库邮件系统和在此视图中不显示错误。  
+ 在对数据库邮件进行故障排除时，请在**sysmail_event_log**视图中搜索与电子邮件失败相关的事件。 某些消息（例如，数据库邮件外部程序的失败）并不与特定的电子邮件相关。 若要搜索与特定电子邮件相关的错误，请在 " **sysmail_faileditems** " 视图中查找失败电子邮件的**mailitem_id** ，然后在**sysmail_event_log**中搜索与该**mailitem_id**相关的消息。 如果从**sp_send_dbmail**返回错误，则不会将电子邮件提交到数据库邮件系统，并且错误不会显示在此视图中。  
   
- 如果单个帐户传递尝试失败，则在重试过程中数据库邮件将会包含错误消息，直到邮件项传递成功或者失败为止。 如果最终成功，所有累积错误被记录为单独的警告包括**account_id**。 这样，即使电子邮件已被发送，也会出现警告。 如果最终传递失败，先前的所有警告都记录为一个错误消息，而无需**account_id**，因为所有帐户都已都失败。  
+ 如果单个帐户传递尝试失败，则在重试过程中数据库邮件将会包含错误消息，直到邮件项传递成功或者失败为止。 如果最终成功，所有累计错误都将记录为单独的警告，包括**account_id**。 这样，即使电子邮件已被发送，也会出现警告。 如果出现终极传递失败，则所有以前的警告都将记录为一条错误消息，而不包含**account_id**，因为所有帐户都失败了。  
   
 ## <a name="permissions"></a>权限  
- 您必须是属于**sysadmin**固定的服务器角色或**DatabaseMailUserRole**要访问此视图的数据库角色。 成员**DatabaseMailUserRole**不是成员的**sysadmin**角色，只能看到他们所提交的电子邮件的事件。  
+ 您必须是**sysadmin**固定服务器角色或**DatabaseMailUserRole**数据库角色的成员才能访问此视图。 不是**sysadmin**角色成员的**DatabaseMailUserRole**成员只能看到他们提交的电子邮件的事件。  
   
-## <a name="see-also"></a>请参阅  
- [sysmail_faileditems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [sysmail_faileditems &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)   
  [数据库邮件外部程序](../../relational-databases/database-mail/database-mail-external-program.md)  
   
   

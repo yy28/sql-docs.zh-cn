@@ -1,5 +1,5 @@
 ---
-title: 设置全局跟踪选项 (SQL Server Profiler) |Microsoft Docs
+title: 设置全局跟踪选项（SQL Server Profiler） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c09927de3c10ab3b937101edc6b9da37503abb11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63267406"
 ---
 # <a name="set-global-trace-options-sql-server-profiler"></a>设置全局跟踪选项 (SQL Server Profiler)
@@ -44,7 +44,7 @@ ms.locfileid: "63267406"
   
     -   **默认重播线程数** ：控制重播期间使用的处理器线程数。 线程数越多，重播越快，但这会导致重播期间服务器的性能降低。 建议将该项设置为 **4**。 下表列出了可用选项：  
   
-        |ReplTest1|Description|  
+        |值|说明|  
         |-----------|-----------------|  
         |**2**|最小值。 使用两个线程重播。|  
         |**4**|默认值。|  
@@ -52,7 +52,7 @@ ms.locfileid: "63267406"
   
     -   “默认 Health Monitor 等待间隔(秒)”  设置重播线程可以阻塞其他进程的最长时间（以秒为单位）。 下表说明了这些值。  
   
-        |ReplTest1|Description|  
+        |值|说明|  
         |-----------|-----------------|  
         |**0**|最小值。 设置为 **0** 表示 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 永远不会停止阻塞进程。|  
         |**3600**|默认值。 允许不超过 **3600** 秒（1 小时）的阻塞进程。|  
@@ -60,14 +60,14 @@ ms.locfileid: "63267406"
   
     -   “默认 Health Monitor 轮询间隔(秒)”  设置阻塞进程的轮询重播线程的频率。 下表说明了这些值。  
   
-        |ReplTest1|Description|  
+        |值|说明|  
         |-----------|-----------------|  
         |**1**|最小值。 设置为 **1** 表示 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 每秒针对阻塞进程轮询一次。|  
         |**60**|默认值。 每分钟针对阻塞进程轮询一次。|  
         |**86400**|最大值。 每 **86400** 秒（一天）针对阻塞进程轮询一次。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [设置跟踪显示默认值 (SQL Server Profiler)](sql-server-profiler.md)   
- [SQL Server 事件探查器](sql-server-profiler.md)  
+ [SQL Server Profiler](sql-server-profiler.md)  
   
   

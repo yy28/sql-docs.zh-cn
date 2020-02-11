@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59225dd445ec2d075b9c7c8ca7eac52af2020a68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63273735"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>演练：添加和更改数据库关系图
   本演练说明了如何创建和修改数据库关系图以及如何通过数据库关系图组件更改数据库。 您将看到如何向关系图添加表、如何创建表之间的关系、如何对列创建约束和索引以及如何更改每个表的信息级别。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  为了完成本演练，您需要：  
   
 -   能够访问带有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 示例数据库的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]  
@@ -44,7 +44,7 @@ ms.locfileid: "63273735"
   
 3.  右键单击“数据库关系图”节点并选择“新建数据库关系图”  。  
   
-     如果数据库没有创建关系图所需的对象，将显示以下消息：**此数据库缺少一个或多个使用数据库关系图所需的支持对象。要创建它们吗？** 选择 **“是”** 。  
+     如果此数据库没有创建关系图所必需的对象，则将显示下列消息： **此数据库没有使用数据库关系图创建功能所需的一个或多个支持对象。要创建它们吗？** 选择“是”  。  
   
      此时将显示“添加表”  对话框。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "63273735"
   
 1.  右键单击 `Address` 表。 在快捷菜单上，指向“表视图”  ，再单击“标准”  。  
   
-     表网格将显示三个列：“列名”、“数据类型”和“允许 NULL 值”    。  
+     表的网格将显示三个列：“列名”  、“数据类型”  和“允许 Null 值”  。  
   
 2.  右键单击 `Address` 表，单击“表视图”  并选择“键”  。  
   
@@ -70,50 +70,51 @@ ms.locfileid: "63273735"
   
 1.  右键单击现有表外部的关系图设计器并选择“新建表”  。  
   
-2.  在中**选择名称**对话框中，单击**确定**以接受默认名称`Table1`。  
+2.  在 "**选择名称**" 对话框中，单击 **"确定"** 以接受`Table1`默认名称。  
   
-     将出现一个具有三个列的新表网格：“列名”、“数据类型”和“允许 NULL 值”    。  
+     将显示具有以下三列的新表网格：“列名”  、“数据类型”  和“允许 Null 值”  。  
   
-3.  添加以下信息到`Table1`:  
+3.  将以下信息添加到`Table1`：  
   
-    |**列名**|**数据类型**|**允许 Null 值**|  
+    |**列名称**|**数据类型**|**允许 Null 值**|  
     |---------------------|-------------------|---------------------|  
     |`T1col1`|`int`|已选中|  
     |`T1col2`|`varchar(50)`|已选中|  
     |`T1col3`|`float`|已选中|  
   
-4.  右键单击 `T1col1` 并选择“设置主键”  。  
+4.  右键单击 `T1col1` 并选择“设置主键”****。  
   
      列名旁将显示一个钥匙图标。  
   
-5.  从“文件”  菜单，单击“保存 Diagram1”  。  
+5.  从“文件”**** 菜单，单击“保存 Diagram1”****。  
   
-6.  在中**选择名称**对话框中，单击**确定**以接受默认名称`Diagram1`。  
+6.  在 "**选择名称**" 对话框中，单击 **"确定"** 以接受`Diagram1`默认名称。  
   
-7.  将显示“保存”  对话框和一条指出 `Table1` 将保存到数据库的消息。 单击 **“是”** 。  
+7.  将显示“保存”**** 对话框和一条指出 `Table1` 将保存到数据库的消息。 单击 **“是”** 。  
   
 ## <a name="modifying-table-structure"></a>修改表结构  
  您可以添加检查约束，并在关系图设计器中建立表之间的关系。  
   
 #### <a name="to-create-check-constraints"></a>创建检查约束  
   
-1.  在 `Table1` 中，右键单击 `T1col3` 行并选择“CHECK 约束”  。  
+1.  在 `Table1` 中，右键单击 `T1col3` 行并选择“CHECK 约束”****。  
   
-     此时将显示“CHECK 约束”  对话框。  
+     此时将显示“CHECK 约束”**** 对话框。  
   
-2.  单击 **“添加”** 。  
+2.  单击“添加”  。  
   
-     “选定的 CHECK 约束”  列表中将出现一个新约束，默认名称为 `CK_Table1`。  
+     “选定的 CHECK 约束”**** 列表中将出现一个新约束，默认名称为 `CK_Table1`。  
   
-3.  在网格中选择“表达式”  行并单击省略号按钮。  
+3.  在网格中选择“表达式”**** 行并单击省略号按钮。  
   
-     此时将显示“CHECK 约束表达式”  对话框。  
+     此时将显示“CHECK 约束表达式”**** 对话框。  
   
-4.  键入 `T1col3 > 5` ，然后单击 **“确定”** 。  
+4.  键入 `T1col3 > 5` ，然后单击 **“确定”**。  
   
-     `Table1` 现在有了一个约束，即输入到 `T1col3` 中的所有值都必须大于 5。  
+     
+  `Table1` 现在有了一个约束，即输入到 `T1col3` 中的所有值都必须大于 5。  
   
-5.  单击 **“关闭”** 。  
+5.  单击“关闭”  。  
   
 #### <a name="to-create-relationships-between-tables"></a>在表之间创建关系  
   
@@ -130,54 +131,54 @@ ms.locfileid: "63273735"
   
 2.  将 `T2col1` 拖动到 `T1col1`。  
   
-     出现两个对话框：背景中的“外键关系”  对话框和前景中的“表和列”  对话框。  
+     将显示两个对话框：背景中的“外键关系”**** 对话框和前景中的“表和列”**** 对话框。  
   
-3.  单击“确定”  保存新的关系。  
+3.  单击“确定”**** 保存新的关系。  
   
-4.  再单击“确定”  。  
+4.  再单击“确定”****。  
   
 ## <a name="creating-indexes"></a>创建索引  
  您可以对大多数数据类型（包括 XML）创建索引。  
   
 #### <a name="to-create-a-standard-index"></a>创建标准索引  
   
-1.  右键单击 `Table1` 并选择“索引/键”  。  
+1.  右键单击 `Table1` 并选择“索引/键”****。  
   
-     此时将显示“索引/键”  对话框。  
+     此时将显示“索引/键”**** 对话框。  
   
-2.  单击 **“添加”** 。  
+2.  单击“添加”  。  
   
-     “选定的主/唯一键或索引”  列表中将出现一个新索引，并使用类似 `IX_Table1` 的默认名称。  
+     “选定的主/唯一键或索引”**** 列表中将出现一个新索引，并使用类似 `IX_Table1` 的默认名称。  
   
-3.  选择“列”  行并单击省略号按钮。  
+3.  选择“列”**** 行并单击省略号按钮。  
   
-     此时将显示“索引列”  对话框。  
+     此时将显示“索引列”**** 对话框。  
   
-4.  单击“列名”  下方的下拉箭头并选择 `T1col2`。  
+4.  单击“列名”**** 下方的下拉箭头并选择 `T1col2`。  
   
     > [!NOTE]  
     >  您可以通过选择 `T1col2` 下的单元并选择其他列名来向此索引添加其他列。  
   
-5.  单击“确定”  保存此索引。  
+5.  单击“确定”**** 保存此索引。  
   
-6.  在“索引/键”  对话框中单击“关闭”  。  
+6.  在“索引/键”**** 对话框中单击“关闭”****。  
   
 #### <a name="to-create-an-xml-index"></a>创建 XML 索引  
   
-1.  右键单击 `T2col1` 并选择“设置主键”  。  
+1.  右键单击 `T2col1` 并选择“设置主键”****。  
   
     > [!NOTE]  
     >  添加 XML 索引要求将表中的另一列设置为聚集主键。  
   
-2.  在 `T2col3` 中右键单击 `Table2` 行，并选择“XML 索引”  。  
+2.  在 `T2col3` 中右键单击 `Table2` 行，并选择“XML 索引”****。  
   
-     此时将显示“XML 索引”  对话框。  
+     此时将显示“XML 索引”**** 对话框。  
   
-3.  单击 **“添加”** 。  
+3.  单击“添加”  。  
   
-     将向“选定的 XML 索引”  列表中添加一个具有默认值的 XML 索引。  
+     将向“选定的 XML 索引”**** 列表中添加一个具有默认值的 XML 索引。  
   
-4.  单击 **“关闭”** 。  
+4.  单击“关闭”  。  
   
     > [!NOTE]  
     >  XML 索引是按列创建的。 第一个 XML 索引是主索引，所有其他索引都是辅助索引。  
@@ -187,13 +188,13 @@ ms.locfileid: "63273735"
   
 #### <a name="to-save-a-database-diagram"></a>保存数据库关系图  
   
-1.  在“文件”  菜单上，选择“保存 Diagram1”  。  
+1.  在“文件”**** 菜单上，选择“保存 Diagram1”****。  
   
-     此时将显示“保存”  对话框。 如果选中了“表受到影响时警告”  ，则会列出有关新表或更改的表的信息。  
+     此时将显示“保存”**** 对话框。 如果选中了“表受到影响时警告”****，则会列出有关新表或更改的表的信息。  
   
-2.  单击“确定”  。  
+2.  单击“确定”。   
   
-3.  如果发生了任何错误，则会出现“保存后的通知”  对话框，显示错误及其原因。 修复错误并再次保存关系图。  
+3.  如果发生了任何错误，则会出现“保存后的通知”**** 对话框，显示错误及其原因。 修复错误并再次保存关系图。  
   
 ## <a name="next-steps"></a>后续步骤  
  虽然这是一个仅包含两个现有表和两个新表的简单关系图，但是它展示了创建现有数据库的关系图或直观地创建新架构的潜力。 建议了解的其他内容包括：  
@@ -206,13 +207,13 @@ ms.locfileid: "63273735"
   
 -   将关系图复制到位图  
   
-## <a name="see-also"></a>请参阅  
- [自定义关系图中显示的信息量&#40;可视化数据库工具&#41;](visual-database-tools.md)   
- [设置数据库关系图设计器&#40;可视化数据库工具&#41;](set-up-database-diagram-designer-visual-database-tools.md)   
- [将表添加到关系图&#40;可视化数据库工具&#41;](add-tables-to-diagrams-visual-database-tools.md)   
- [创建关系图上的表之间的关系&#40;可视化数据库工具&#41;](create-relationships-between-tables-on-a-diagram-visual-database-tools.md)   
+## <a name="see-also"></a>另请参阅  
+ [自定义关系图中显示的信息量 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [&#40;Visual Database Tools 设置数据库关系图设计器&#41;](set-up-database-diagram-designer-visual-database-tools.md)   
+ [在 Visual Database Tools &#40;向关系图中添加表&#41;](add-tables-to-diagrams-visual-database-tools.md)   
+ [在 Visual Database Tools&#41;的关系图上创建表之间的关系 &#40;](create-relationships-between-tables-on-a-diagram-visual-database-tools.md)   
  [创建 XML 索引](../../relational-databases/xml/create-xml-indexes.md)   
- [将数据库关系图复制到剪贴板&#40;可视化数据库工具&#41;](copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)   
+ [将数据库关系图的图像复制到剪贴板 &#40;Visual Database Tools&#41;](copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)   
  [使用关系图布局 (Visual Database Tools)](work-with-diagram-layout-visual-database-tools.md)  
   
   

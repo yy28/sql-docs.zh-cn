@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fd223c0a66b533cb2b405dd0e766f7053b7a4e89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63275970"
 ---
 # <a name="sql-pane-visual-database-tools"></a>SQL 窗格 (Visual Database Tools)
@@ -53,12 +53,12 @@ ms.locfileid: "63275970"
 > [!NOTE]  
 >  如果输入 SQL 语句，但随后通过更改“关系图”窗格和“条件”窗格对查询做进一步更改，则查询和视图设计器将重新生成和显示 SQL 语句。 在某些情况下，此操作产生的 SQL 语句在构造上和原先输入的 SQL 语句将有所不同（尽管该语句始终会产生相同的结果）。 当使用的搜索条件涉及用 AND 和 OR 链接的多个子句时，尤其可能产生这种差异。  
   
-## <a name="see-also"></a>请参阅  
- [创建查询&#40;可视化数据库工具&#41;](visual-database-tools.md)   
- [运行查询&#40;可视化数据库工具&#41;](run-queries-visual-database-tools.md)   
- [设计查询和视图操作指南主题&#40;可视化数据库工具&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
- [关系图窗格&#40;可视化数据库工具&#41;](diagram-pane-visual-database-tools.md)   
- [条件窗格&#40;可视化数据库工具&#41;](criteria-pane-visual-database-tools.md)   
+## <a name="see-also"></a>另请参阅  
+ [&#40;Visual Database Tools 创建查询&#41;](visual-database-tools.md)   
+ [&#40;Visual Database Tools 运行查询&#41;](run-queries-visual-database-tools.md)   
+ [&#40;Visual Database Tools 的设计查询和视图操作指南主题&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [Visual Database Tools &#40;的 "关系图" 窗格&#41;](diagram-pane-visual-database-tools.md)   
+ [Visual Database Tools &#40;的 "条件" 窗格&#41;](criteria-pane-visual-database-tools.md)   
  [“结果”窗格 (Visual Database Tools)](results-pane-visual-database-tools.md)  
   
   

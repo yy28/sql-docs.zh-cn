@@ -11,14 +11,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 84339eab432194327759fbdad505cdb1af60517b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479437"
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>分类的 Web 服务操作 (Master Data Services)
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web 服务包含一组完整的操作，可让您通过编写代码以控制 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 通过其用户界面所执行的所有功能。 Web 服务操作由 <xref:Microsoft.MasterDataServices.IService> 接口定义，并在 <xref:Microsoft.MasterDataServices.ServiceClient> 类中作为方法实现。 本主题将 Web 服务操作分组为概念性类别，以帮助您了解如何使用 Web 服务 API。  
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web 服务包含一组完整的操作，可让你编写代码来控制通过其用户界面[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]执行的所有功能。 Web 服务操作由 <xref:Microsoft.MasterDataServices.IService> 接口定义，并在 <xref:Microsoft.MasterDataServices.ServiceClient> 类中作为方法实现。 本主题将 Web 服务操作分组为概念性类别，以帮助您了解如何使用 Web 服务 API。  
   
 ## <a name="model-operations"></a>模型操作  
  这些操作用于创建、更新和删除模型，以及对所有模型内容（如实体、层次结构和版本）执行操作。 有关详细信息，请参阅[模型 (Master Data Services)](../models-master-data-services.md)。  
@@ -137,7 +137,7 @@ ms.locfileid: "65479437"
 |<xref:Microsoft.MasterDataServices.ServiceClient.StagingProcess%2A>|  
   
 ## <a name="data-export-operations"></a>数据导出操作  
- 这些操作可用于通过使用订阅视图导出数据。 有关详细信息，请参阅[导出数据&#40;Master Data Services&#41;](../overview-exporting-data-master-data-services.md)。  
+ 这些操作可用于通过使用订阅视图导出数据。 有关详细信息，请参阅将[数据导出 &#40;Master Data Services&#41;](../overview-exporting-data-master-data-services.md)。  
   
 ||  
 |-|  
@@ -146,7 +146,7 @@ ms.locfileid: "65479437"
 |<xref:Microsoft.MasterDataServices.ServiceClient.ExportViewListGet%2A>|  
 |<xref:Microsoft.MasterDataServices.ServiceClient.ExportViewUpdate%2A>|  
   
-## <a name="security-operations"></a>安全操作  
+## <a name="security-operations"></a>安全运营  
  这些操作用于修改控制对 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库进行访问的安全设置。 有关详细信息，请参阅[安全性 (Master Data Services)](../security-master-data-services.md)  
   
 ||  

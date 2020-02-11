@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 5ed0a510a6b74e3c33e9cb7ed9d789ad8242a499
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63270227"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>使用更改跟踪 (SQL Server)
@@ -48,7 +48,7 @@ ms.locfileid: "63270227"
   
      下图说明了如何使用 CHANGETABLE(CHANGES …) 获取更改。  
   
-     ![更改跟踪查询输出的示例](../../database-engine/media/queryoutput.gif "更改跟踪查询输出的示例")  
+     ![变更跟踪查询输出的示例](../../database-engine/media/queryoutput.gif "更改跟踪查询输出的示例")  
   
  CHANGE_TRACKING_CURRENT_VERSION() 函数  
  用于获取当前版本，以供下次查询更改时使用。 该版本表示上次提交的事务的版本。  
@@ -431,7 +431,7 @@ COMMIT TRAN
   
 -   当客户端查询更改时，会在服务器上为每个客户端记录上次同步的版本号。 如果数据有问题，则上次同步的版本号将不匹配。 这表明需要进行重新初始化。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [跟踪数据更改 (SQL Server)](../track-changes/track-data-changes-sql-server.md)   
  [关于更改跟踪 (SQL Server)](../track-changes/about-change-tracking-sql-server.md)   
  [管理更改跟踪 (SQL Server)](../track-changes/manage-change-tracking-sql-server.md)   

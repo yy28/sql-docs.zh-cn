@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e406b42346e936fe72c70e5cb13b75ffb3f1f8fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098314"
 ---
-# <a name="listipaddresses-method-wmi-msreportserverconfigurationsetting"></a>ListIPAddresses 方法 (WMI MSReportServer_ConfigurationSetting)
+# <a name="listipaddresses-method-wmi-msreportserver_configurationsetting"></a>ListIPAddresses 方法 (WMI MSReportServer_ConfigurationSetting)
   列出报表服务器计算机的 IP 地址。  
   
 ## <a name="syntax"></a>语法  
@@ -36,11 +36,11 @@ public void ListIPAddresses (out string[] IPAddress,
     out int HRESULT);  
 ```  
   
-## <a name="parameters"></a>Parameters  
- *IPAddress[]*  
+## <a name="parameters"></a>parameters  
+ *IPAddress []*  
  [out] 计算机的 IP 地址列表。  
   
- *IPVersion[]*  
+ *IPVersion []*  
  [out] IP 地址的版本。  
   
  *IsDhcpEnabled[]*  
@@ -56,14 +56,14 @@ public void ListIPAddresses (out string[] IPAddress,
  返回 *HRESULT* ，指示方法调用是成功还是失败。 值 0 指示方法调用已成功；错误代码指示调用未成功。  
   
 ## <a name="remarks"></a>备注  
- *IPVersion* 字符串为 V4、V6。  
+ *IPVersion*字符串为 V4、V6。  
   
- 如果*IsDhcpEnabled*是`True`，则*IPAddress*是动态的。 不应用于 SSL 绑定。  
+ 如果*IsDhcpEnabled*为`True`，则*IPAddress*为 dynamic。 不应用于 SSL 绑定。  
   
 ## <a name="requirements"></a>要求  
- **命名空间:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](msreportserver-configurationsetting-members.md)  
   
   

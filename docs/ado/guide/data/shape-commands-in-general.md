@@ -1,5 +1,5 @@
 ---
-title: 形状的命令通常 |Microsoft Docs
+title: 整体形状命令 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,44 +14,44 @@ ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 09fec8bd07d036fd6a93b8f6bcb54a51a68150fa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924178"
 ---
 # <a name="shape-commands-in-general"></a>常用 Shape 命令
-数据整理定义的形状的列**记录集**，所列的方式表示的实体之间的关系**记录集**用数据填充。  
+数据定形定义了整形**记录集**的列、列所表示的实体之间的关系，以及使用数据填充**记录集**的方式。  
   
- 形状**记录集**可以包含以下类型的列。  
+ 形状的**记录集**可以包含以下类型的列。  
   
-|列类型|描述|  
+|列类型|说明|  
 |-----------------|-----------------|  
-|data|字段从**记录集**查询命令返回到数据提供程序，表或以前形状**记录集**。|  
-|一章|对另一个引用**记录集**称为*章*。 章节列使其可以定义*父-子*关系其中*父*是**记录集**的包含章节列和*子*是**记录集**由一章。|  
-|聚合|通过执行派生列的值*聚合函数*上的所有行或子级的所有行的列**记录集**。 (请参阅以下主题中的聚合函数[聚合函数、 CALC 函数和 NEW 关键字](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md)。)|  
-|计算的表达式|通过 Visual Basic 应用程序中的同一行的列的表达式计算派生列的值**记录集**。 表达式是 CALC 函数的参数。 (请参阅以下主题中的计算表达式[聚合函数、 CALC 函数和 NEW 关键字](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md)并在[Visual Basic for Applications 函数](../../../ado/guide/data/visual-basic-for-applications-functions.md)。)|  
-|新|在更高版本时可以使用数据填充的空的虚构字段。 使用 NEW 关键字定义该列。 (请参阅以下主题中的新关键字[聚合函数、 CALC 函数和 NEW 关键字](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md)。)|  
+|data|查询命令返回给数据访问接口、表或之前形状**记录集**的**记录集**的字段。|  
+|段|对另一**记录集**的引用，称为*章节*。 通过章节列可以定义*父子关系，* 其中的*父*项是包含章列的**记录集**，而*子级*是本章表示的**记录集**。|  
+|aggregate|通过对子**记录集**的所有行的所有行或列执行*聚合函数*来派生列的值。 （请参阅以下主题中的聚合函数、[聚合函数、CALC 函数和新关键字](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md)。）|  
+|计算表达式|列的值是通过对**记录集**的同一行中的列计算 Visual Basic for Applications 表达式来派生的。 表达式是 CALC 函数的参数。 （请参阅以下主题中的计算表达式：[聚合函数、CALC 函数、NEW 关键字](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md)和[Visual Basic for Applications 函数](../../../ado/guide/data/visual-basic-for-applications-functions.md)。）|  
+|新的|空的制造字段，可以在以后使用数据进行填充。 列是用 NEW 关键字定义的。 （请参阅以下主题中的 NEW 关键字：[聚合函数、CALC 函数和 New 关键字](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md)。）|  
   
- 形状命令可以包含指定的查询命令来将返回基础数据提供程序的子句**记录集**对象。 查询的语法取决于基础数据提供程序的要求。 通常，这是 SQL，虽然 ADO 不需要任何特定的查询语言使用。  
+ Shape 命令可以包含一个子句，该子句指定对将返回**Recordset**对象的基础数据提供程序的查询命令。 查询的语法取决于基础数据提供程序的要求。 这通常是 SQL，尽管 ADO 不需要使用任何特定的查询语言。  
   
- 可以通过发出形状命令**记录集**对象或设置[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)属性[命令](../../../ado/reference/ado-api/command-object-ado.md)对象，然后再调用[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)方法。  
+ 可以通过**Recordset**对象或通过设置[命令](../../../ado/reference/ado-api/command-object-ado.md)对象的[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)属性，然后调用[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)方法来发出形状命令。  
   
- 可以使用 SQL JOIN 子句来关联两个表;但是，一种分层**记录集**可以更高效地表示的信息。 每一行**记录集**创建由冗余地从一个表联接重复信息。 一种分层**记录集**只有一个父**记录集**为每个多个子**记录集**对象。  
+ 您可以使用 SQL 联接子句来关联两个表;但是，分层**记录集**可以更高效地表示信息。 联接创建的**记录集**的每一行都重复从一个表中冗余的信息。 分层**记录集**的每个子**记录**集对象只有一个父**记录集**。  
   
- 可以嵌套形状命令。 即*父命令*或*子命令*本身可能是另一个形状命令。  
+ 形状命令可以嵌套。 也就是说，*父-command*或*子命令*本身可以是另一个 shape 命令。  
   
- Shape 提供程序始终返回客户端游标，即使用户指定光标所在的位置**adUseServer**。  
+ 即使用户指定了**adUseServer**的光标位置，形状提供程序也始终返回客户端游标。  
   
- 您可以访问**记录集**组件的形状**记录集**以编程方式或通过相应的可视化控件。  
+ 您可以通过编程方式或通过适当的视觉对象访问形状**记录集**的**记录**集组件。  
   
- Microsoft 提供了一种可视化工具生成形状命令 (请参阅[数据环境设计器](https://go.microsoft.com/fwlink/?LinkId=5689)Visual Basic 6 文档中)，另一个显示分层光标 （请参阅"使用 Microsoft 层次结构Flexgrid 控件"中的 Visual Basic 6 文档）。  
+ Microsoft 提供了一种可视化工具，该工具可生成形状命令（请参阅 Visual Basic 6 文档中的[数据环境设计器](https://go.microsoft.com/fwlink/?LinkId=5689)）和显示分层游标的另一种工具（请参阅 Visual Basic 6 文档中的 "使用 Microsoft 分层 Flexgrid 控件"）。  
   
- 了解如何浏览的分层**记录集**，请参阅[访问分层记录集的行](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)。  
+ 有关导航分层**记录集**的信息，请参阅[访问分层记录集中的行](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)。  
   
- 有关语法正确的形状命令的精确信息，请参阅[正式 Shape 语法](../../../ado/guide/data/formal-shape-grammar.md)。  
+ 有关语法正确的形状命令的详细信息，请参阅[正式的形状语法](../../../ado/guide/data/formal-shape-grammar.md)。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [聚合函数、CALC 函数和 NEW 关键字](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md)  
   

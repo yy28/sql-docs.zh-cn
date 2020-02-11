@@ -16,27 +16,27 @@ ms.assetid: 4013075d-dbea-4bbc-a6f4-c345a55c5633
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f356097f1262630d47b4b4b4048c61d42816a4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918237"
 ---
 # <a name="marshaloptionsenum"></a>MarshalOptionsEnum
-指定应返回哪些记录到服务器。  
+指定应返回到服务器的记录。  
   
-|常量|值|描述|  
+|一直|值|说明|  
 |--------------|-----------|-----------------|  
-|**adMarshalAll**|0|默认值。 返回到服务器的所有行。|  
-|**adMarshalModifiedOnly**|1|仅返回已修改的到服务器的行。|  
+|**adMarshalAll**|0|默认值。 将所有行返回到服务器。|  
+|**adMarshalModifiedOnly**|1|仅返回服务器上已修改的行。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
- 包： **com.ms.wfc.data**  
+ Package： **.com. 数据**  
   
-|常量|  
+|一直|  
 |--------------|  
-|AdoEnums.MarshalOptions.ALL|  
-|AdoEnums.MarshalOptions.MODIFIEDONLY|  
+|AdoEnums. MarshalOptions. ALL|  
+|AdoEnums. MarshalOptions. MODIFIEDONLY|  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [MarshalOptions 属性 (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)

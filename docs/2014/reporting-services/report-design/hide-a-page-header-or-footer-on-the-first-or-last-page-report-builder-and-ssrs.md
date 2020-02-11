@@ -1,5 +1,5 @@
 ---
-title: 隐藏页眉或页脚的第一个或最后一页 （报表生成器和 SSRS） |Microsoft Docs
+title: 在第一页或最后一页上隐藏页眉或页脚（报表生成器和 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6f3033ea0c95841d15b1b71068c9a566abbfac98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105706"
 ---
 # <a name="hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs"></a>隐藏第一页或最后一页的页眉或页脚（报表生成器和 SSRS）
@@ -27,7 +27,7 @@ ms.locfileid: "66105706"
   
 1.  在“设计”视图中打开报表。  
   
-2.  右键单击页面页眉，再单击“页眉属性”。 将打开 **“报表表头属性”** 对话框。  
+2.  右键单击页面页眉，再单击“页眉属性”  。 将打开 **“报表表头属性”** 对话框。  
   
 3.  确保未选中 **“显示此报表的页眉”** 。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66105706"
   
 1.  在“设计”视图中打开报表。  
   
-2.  右键单击页面页脚，再单击“页脚属性”。 将打开 **“报表表尾属性”** 对话框。  
+2.  右键单击页面页脚，再单击“页脚属性”  。 将打开 **“报表表尾属性”** 对话框。  
   
 3.  确保未选中 **“显示此报表的页脚”** 。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66105706"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [页眉和页脚（报表生成器和 SSRS）](page-headers-and-footers-report-builder-and-ssrs.md)   
  [Reporting Services 中的分页（报表生成器和 SSRS）](pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [添加或删除页面页眉或页脚（报表生成器和 SSRS）](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  

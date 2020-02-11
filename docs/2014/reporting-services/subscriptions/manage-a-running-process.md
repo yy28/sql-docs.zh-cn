@@ -28,16 +28,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0c465a50547d8ca45947dc5db5c56221a8a4538
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100823"
 ---
 # <a name="manage-a-running-process"></a>管理运行中的进程
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可监视报表服务器上正在运行的作业的状态。 报表服务器会定期扫描正在进行的作业，并将状态信息写入到报表服务器数据库或针对 SharePoint 模式的服务应用程序数据库中。 如果正在执行以下任意进程，则表明正在处理作业：对远程或本地数据库服务器的查询执行、报表处理以及报表呈现。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]监视 Report Server 上运行的作业的状态。 报表服务器会定期扫描正在进行的作业，并将状态信息写入到报表服务器数据库或针对 SharePoint 模式的服务应用程序数据库中。 如果正在执行以下任意进程，则表明正在处理作业：对远程或本地数据库服务器的查询执行、报表处理以及报表呈现。  
   
- 您可以同时管理“用户作业  ”和“系统作业  ”。  
+ 您可以同时管理“用户作业 ** ”和“系统作业 **”。  
   
 -   用户作业是由各个用户或订阅启动的。 这包括按需运行报表，请求报表历史记录快照，手动创建报表快照，以及处理标准订阅等。  
   
@@ -66,10 +66,10 @@ ms.locfileid: "66100823"
   
 -   [以编程方式管理作业](#bkmk_programmatically)  
   
-##  <a name="bkmk_native"></a> 查看和取消作业（本机模式）  
- 可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 查看或取消报表服务器上正在运行的作业。 您必须刷新页面，才能检索当前正在运行的作业的列表或从报表服务器数据库中获取最新的作业状态信息。 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中连接到报表服务器之后，您可以打开作业文件夹以查看该报表服务器计算机上当前正在处理的报表的列表。 在“作业属性”页上显示了每个作业的状态信息。 打开“取消报表服务器作业”对话框可以查看所有作业的状态信息。  
+##  <a name="bkmk_native"></a>查看和取消作业（本机模式）  
+ 您可以使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]查看或取消 Report Server 上运行的作业。 您必须刷新页面，才能检索当前正在运行的作业的列表或从报表服务器数据库中获取最新的作业状态信息。 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中连接到报表服务器之后，您可以打开作业文件夹以查看该报表服务器计算机上当前正在处理的报表的列表。 在“作业属性”页上显示了每个作业的状态信息。 打开“取消报表服务器作业”对话框可以查看所有作业的状态信息。  
   
- 可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 查看或取消报表服务器上正在运行的作业。 您必须刷新页面，才能检索当前正在运行的作业的列表或从报表服务器数据库中获取最新的作业状态信息。 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中连接到报表服务器之后，您可以打开作业文件夹以查看该报表服务器计算机上当前正在处理的报表的列表。 在“作业属性”页上显示了每个作业的状态信息。 打开“取消报表服务器作业”对话框可以查看所有作业的状态信息。  
+ 您可以使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]查看或取消 Report Server 上运行的作业。 您必须刷新页面，才能检索当前正在运行的作业的列表或从报表服务器数据库中获取最新的作业状态信息。 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中连接到报表服务器之后，您可以打开作业文件夹以查看该报表服务器计算机上当前正在处理的报表的列表。 在“作业属性”页上显示了每个作业的状态信息。 打开“取消报表服务器作业”对话框可以查看所有作业的状态信息。  
   
  无法使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 列出或取消模型生成、模型处理或数据驱动订阅。 Reporting Services 没有提供取消模型生成或处理的方法。 但是，您可以按照本主题中的说明取消数据驱动订阅。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66100823"
   
 2.  打开 **“作业”** 文件夹。  
   
-3.  右键单击报表，再单击“取消作业”  。  
+3.  右键单击报表，再单击“取消作业”****。  
   
 ### <a name="how-to-cancel-a-data-driven-subscription"></a>如何取消数据驱动订阅  
   
@@ -89,40 +89,42 @@ ms.locfileid: "66100823"
   
 3.  将其设置为 `False`。  
   
-4.  保存该文件。  
+4.  保存文件。  
   
-5.  在报表管理器中，从报表的“订阅”选项卡或从“我的订阅”中删除数据驱动订阅  。  
+5.  在报表管理器中，从报表的“订阅”选项卡或从“我的订阅”中删除数据驱动订阅****。  
   
 6.  删除订阅之后，在 RSReportServer.config 文件中查找 `IsNotificationService`，并将其设置为 `True`。  
   
-7.  保存该文件。  
+7.  保存文件。  
   
 ### <a name="configuring-frequency-settings-for-retrieving-job-status"></a>配置检索作业状态的频率设置  
- 正在运行的作业存储在报表服务器的临时数据库中。 您可以修改 RSReportServer.config 文件中的配置设置，以控制报表服务器扫描正在进行的作业的频率，以及正在运行的作业的状态在多长时间间隔后从“新”更改为“正在运行”。 `RunningRequestsDbCycle` 设置指定报表服务器扫描正在运行的进程的频率。 默认情况下，每隔 60 秒记录一次状态信息。 `RunningRequestsAge` 设置指定作业的状态从“新”更改为“正在运行”的时间间隔。  
+ 正在运行的作业存储在报表服务器的临时数据库中。 您可以修改 RSReportServer.config 文件中的配置设置，以控制报表服务器扫描正在进行的作业的频率，以及正在运行的作业的状态在多长时间间隔后从“新”更改为“正在运行”。 
+  `RunningRequestsDbCycle` 设置指定报表服务器扫描正在运行的进程的频率。 默认情况下，每隔 60 秒记录一次状态信息。 
+  `RunningRequestsAge` 设置指定作业的状态从“新”更改为“正在运行”的时间间隔。  
   
-##  <a name="bkmk_sharepoint"></a> 查看和取消作业（SharePoint 模式）  
+##  <a name="bkmk_sharepoint"></a>查看和取消作业（SharePoint 模式）  
  使用 SharePoint 管理中心为每个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序完成 SharePoint 模式部署中作业的管理。  
   
 #### <a name="to-manage-jobs-in-sharepoint-mode"></a>在 SharePoint 模式下管理作业  
   
-1.  在 SharePoint 管理中心中，单击 **“管理服务应用程序”** 。  
+1.  在 SharePoint 管理中心中，单击 "**管理服务应用程序**"。  
   
 2.  查找并单击您的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序的名称，以打开“管理应用程序”页。  
   
-3.  单击 **“管理作业”** 。  
+3.  单击 "**管理作业**"  
   
 4.  单击 **“作业 ID”** 查看作业的详细信息。  
   
 5.  或单击您的作业的框，然后单击 **“删除”** 以取消作业。 删除作业并不会删除订阅。  
   
-##  <a name="bkmk_programmatically"></a> 以编程方式管理作业  
+##  <a name="bkmk_programmatically"></a>以编程方式管理作业  
  您可以通过编程方式或使用脚本来管理作业。 有关详细信息，请参阅 <xref:ReportService2010.ReportingService2010.ListJobs%2A>、 <xref:ReportService2010.ReportingService2010.CancelJob%2A>。  
   
-## <a name="see-also"></a>请参阅  
- [取消报表服务器作业 (Management Studio)](../tools/cancel-report-server-jobs-management-studio.md)   
- [作业属性 (Management Studio)](../tools/job-properties-management-studio.md)   
- [修改 Reporting Services 配置文件 (RSreportserver.config)](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
- [RSReportServer 配置文件](../report-server/rsreportserver-config-configuration-file.md)   
+## <a name="see-also"></a>另请参阅  
+ [取消报表服务器作业 &#40;Management Studio&#41;](../tools/cancel-report-server-jobs-management-studio.md)   
+ [作业属性 &#40;Management Studio&#41;](../tools/job-properties-management-studio.md)   
+ [&#40;Rsreportserver.config 修改 Reporting Services 配置文件&#41;](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [Rsreportserver.config 配置文件](../report-server/rsreportserver-config-configuration-file.md)   
  [报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)   
  [监视报表服务器性能](../report-server/monitoring-report-server-performance.md)  
   

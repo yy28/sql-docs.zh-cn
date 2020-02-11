@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8c8dfb41890049918799bb3638f52dc222fc5dcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100642"
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>使用外部数据源提供订阅方数据（数据驱动订阅）
@@ -60,7 +60,7 @@ ms.locfileid: "66100642"
 -   报表服务器将为结果集中的每一行都创建一个报表传递。 如果结果集包含三百多行，则报表服务器将尝试传递三百个报表。  
   
 ## <a name="setting-delivery-options-using-variable-data-from-a-subscriber-database"></a>使用订阅服务器数据库中的变量数据设置传递选项  
- 可以使用订阅服务器数据库中的数据为每个接收者自定义传递选项。 您所使用的传递扩展插件的类型将确定哪些选项是可用的。 如果正在使用报表服务器电子邮件传递扩展插件，则该查询应包含每个订阅方的电子邮件别名。 如果正在使用文件共享传递，则订阅方数据应包含可用于创建订阅方特定的报表文件或提供传递目标的值。 有关详细信息，请参阅[File Share Delivery in Reporting Services](file-share-delivery-in-reporting-services.md)并[Reporting Services 中的电子邮件传递](e-mail-delivery-in-reporting-services.md)。  
+ 可以使用订阅服务器数据库中的数据为每个接收者自定义传递选项。 您所使用的传递扩展插件的类型将确定哪些选项是可用的。 如果正在使用报表服务器电子邮件传递扩展插件，则该查询应包含每个订阅方的电子邮件别名。 如果正在使用文件共享传递，则订阅方数据应包含可用于创建订阅方特定的报表文件或提供传递目标的值。 有关详细信息，请参阅[中的文件共享传递 Reporting Services](file-share-delivery-in-reporting-services.md)和[Reporting Services 中的电子邮件传递](e-mail-delivery-in-reporting-services.md)。  
   
 ## <a name="passing-parameter-values-from-the-subscriber-database-to-the-report"></a>将参数值从订阅服务器数据库传递到报表  
  如果要为参数化报表创建数据驱动订阅，则可以使用变量参数值来自定义每个报表的输出。 例如，订阅服务器数据库可能包含雇员标识号、雇用日期、职务和办公地点信息，这些信息可用来筛选报表数据。 如果报表接受基于这些数据或其他可用列数据的参数，则可以将参数映射到相应的列。  
@@ -78,8 +78,8 @@ ms.locfileid: "66100642"
   
  如果执行了上述任何更改，则必须更新订阅。  
   
-## <a name="see-also"></a>请参阅  
- [创建、 修改和删除数据驱动订阅](data-driven-subscriptions.md)   
+## <a name="see-also"></a>另请参阅  
+ [创建、修改和删除数据驱动订阅](data-driven-subscriptions.md)   
  [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [订阅和传递 (Reporting Services)](subscriptions-and-delivery-reporting-services.md)  
   

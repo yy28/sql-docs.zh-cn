@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ac2b8ca912f02aecc5e1b3e76d04d84b501db89b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63253485"
 ---
 # <a name="remove-joins-visual-database-tools"></a>删除联接 (Visual Database Tools)
@@ -35,9 +35,9 @@ ms.locfileid: "63253485"
   
  查询和视图设计器将删除联接线并相应地更改 [SQL 窗格](sql-pane-visual-database-tools.md)中的语句。  
   
-## <a name="see-also"></a>请参阅  
- [自动联接表&#40;可视化数据库工具&#41;](join-tables-automatically-visual-database-tools.md)   
- [手动联接表&#40;可视化数据库工具&#41;](join-tables-manually-visual-database-tools.md)   
+## <a name="see-also"></a>另请参阅  
+ [&#40;Visual Database Tools 自动联接表&#41;](join-tables-automatically-visual-database-tools.md)   
+ [&#40;Visual Database Tools&#41;中手动联接表](join-tables-manually-visual-database-tools.md)   
  [使用联接进行查询 (Visual Database Tools)](query-with-joins-visual-database-tools.md)  
   
   

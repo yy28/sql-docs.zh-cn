@@ -1,5 +1,5 @@
 ---
-title: （除）(DMX) |Microsoft Docs
+title: 拆分（DMX） |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 17f1233310ce8b070e12fbf25dca0e256ff34664
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68070742"
 ---
 # <a name="divide-dmx"></a>（除）(DMX)
@@ -27,7 +27,7 @@ ms.locfileid: "68070742"
 Dividend / Divisor  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *被除数*  
  一个返回数值的有效数据挖掘扩展 (DMX) 表达式。  
   
@@ -42,11 +42,11 @@ Dividend / Divisor
   
  两个表达式必须具有相同的数据类型，或者其中一个表达式必须能够隐式转换为另一个表达式的数据类型。 如果除数的计算结果为 Null 值，则该运算符将产生错误。 如果除数和被除数的计算结果均为 Null 值，则该运算符将返回 Null 值。  
   
-## <a name="see-also"></a>请参阅  
- [算术运算符&#40;DMX&#41;](../dmx/operators-arithmetic.md)   
- [数据挖掘扩展插件&#40;DMX&#41;运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [运算符&#40;DMX&#41;](../dmx/operators-dmx.md)   
- [除&#40;SSIS 表达式&#41;](../integration-services/expressions/divide-ssis-expression.md)   
- [&#40;除&#41; &#40;Transact SQL&#41;](../t-sql/language-elements/divide-transact-sql.md)  
+## <a name="see-also"></a>另请参阅  
+ [算术运算符 &#40;DMX&#41;](../dmx/operators-arithmetic.md)   
+ [数据挖掘扩展插件 &#40;DMX&#41; 运算符引用](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [运算符 &#40;DMX&#41;](../dmx/operators-dmx.md)   
+ [将 &#40;SSIS 表达式相除&#41;](../integration-services/expressions/divide-ssis-expression.md)   
+ [&#40;相除&#41; &#40;Transact-sql&#41;](../t-sql/language-elements/divide-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: VisualC++的 ADO 扩展 |Microsoft Docs
+title: ADO Visual C++ 扩展 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,28 +16,28 @@ ms.assetid: 2952ece0-7217-4448-bb09-f6b64f43b7e2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: db11e86ab479ad0df4224d59c3408729fa9903ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926372"
 ---
 # <a name="visual-c-extensions-for-ado"></a>ADO 的 Visual C++ 扩展
-编程 ADO 与视觉对象的首选的方法C++使用 **#import**指令，如中所述[Microsoft Visual C++ ADO 编程](../../../ado/guide/appendixes/visual-c-ado-programming.md)。 但是，早期版本的 ADO 使用视觉对象的编程的另一种方法随一起提供C++： 视觉对象C++扩展。 本部分介绍此功能对于那些必须维护视觉对象C++扩展的代码，但新的 ADO 代码应使用编写 #**导入**。
+Visual C++ 使用 **#import**指令编程 ado 的首选方法，如[Microsoft Visual C++ ADO 编程](../../../ado/guide/appendixes/visual-c-ado-programming.md)中所述。 但是，早期版本的 ADO 附带了使用 Visual C++ 进行编程的替代方法： Visual C++ 扩展。 本部分记录了此功能，适用于必须保留 Visual C++ 扩展代码的用户，但应使用 #**import**编写新的 ADO 代码。
 
- 最麻烦的作业视觉对象中的一个C++编程人员人脸使用 ADO 检索数据将数据转换时返回到 VARIANT 数据类型为C++数据类型，然后将转换后的数据存储在类或结构。 除了繁琐外，检索C++通过 VARIANT 数据类型的数据会降低性能。
+ 使用 ADO 检索数据时，Visual C++ 程序员面临的一项最枯燥的工作是将返回的数据类型转换为 c + + 数据类型，然后将转换后的数据存储在类或结构中。 除了非常繁琐的情况外，通过 VARIANT 数据类型检索 c + + 数据会降低性能。
 
- ADO 提供了接口，支持数据检索至本机 C /C++数据类型而无需通过变体，并还提供了预处理器宏，可以简化使用接口。 结果是一个灵活的工具，更易于使用，并且可以提供最佳性能。
+ ADO 提供了一个接口，该接口支持在不通过变量的情况下将数据检索到本机 C/c + + 数据类型，还提供了可简化接口使用的预处理器宏。 其结果是一个灵活的工具，更易于使用并具有极高的性能。
 
- 常见的 C /C++客户端的方案是将绑定中的记录[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)到 C /C++结构或类包含本机 C /C++类型。 变体时，这涉及到从变体编写转换代码到 C /C++的本机类型。 视觉对象C++针对 ADO 扩展使此方案中更容易的视觉对象C++程序员。
+ 常见的 C/c + + 客户端方案是将记录[集中](../../../ado/reference/ado-api/recordset-object-ado.md)的记录绑定到 c/c + + 结构或包含本机 C/c + + 类型的类。 通过变体时，这涉及到从变体到 C/c + + 本机类型的转换代码。 ADO 的 Visual C++ 扩展针对 Visual C++ 程序员，使此方案更容易。
 
- 请参阅以下主题，了解有关视觉对象的详细信息C++ADO 的扩展。
+ 请参阅以下主题以了解有关 ADO Visual C++ 扩展的详细信息。
 
--   [使用视觉对象C++的 ADO 扩展](../../../ado/guide/appendixes/using-visual-c-extensions.md)
+-   [使用 ADO Visual C++ 扩展](../../../ado/guide/appendixes/using-visual-c-extensions.md)
 
 -   [Visual C++ 扩展标头](../../../ado/guide/appendixes/visual-c-extensions-header.md)
 
--   [ADO 使用视觉对象C++扩展插件示例](../../../ado/guide/appendixes/visual-c-extensions-example.md)
+-   [带有 Visual C++ 扩展的 ADO 示例](../../../ado/guide/appendixes/visual-c-extensions-example.md)
 
-## <a name="see-also"></a>请参阅
- [ADO 视觉对象C++COM 的语法索引](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md) [VisualC++扩展示例](../../../ado/guide/appendixes/visual-c-extensions-example.md)[使用视觉对象C++扩展](../../../ado/guide/appendixes/using-visual-c-extensions.md) [VisualC++扩展标头](../../../ado/guide/appendixes/visual-c-extensions-header.md)
+## <a name="see-also"></a>另请参阅
+ [用于 COM Visual C++ 扩展的 Visual C++ 语法索引的 ADO](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md) [](../../../ado/guide/appendixes/visual-c-extensions-example.md) [Visual C++ 扩展](../../../ado/guide/appendixes/using-visual-c-extensions.md) [Visual C++ 扩展标头](../../../ado/guide/appendixes/visual-c-extensions-header.md)

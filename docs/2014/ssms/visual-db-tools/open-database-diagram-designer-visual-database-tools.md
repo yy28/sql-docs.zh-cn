@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2a4fb2a6fc58d008dc0c69824282f5ac35b2bb6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63254735"
 ---
 # <a name="open-database-diagram-designer-visual-database-tools"></a>打开数据库关系图设计器 (Visual Database Tools)
@@ -48,7 +48,7 @@ ms.locfileid: "63254735"
   
 3.  “数据库关系图”  菜单将添加到主菜单，该关系图也会在设计器窗格中打开。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [设计数据库关系图 (Visual Database Tools)](visual-database-tools.md)  
   
   

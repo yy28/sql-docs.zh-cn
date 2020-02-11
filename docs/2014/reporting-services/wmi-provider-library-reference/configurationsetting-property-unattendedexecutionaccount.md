@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4f032cd8a9e8d5305f4eef82f815b4f0e328756a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097429"
 ---
-# <a name="unattendedexecutionaccount-property-wmi-msreportserverconfigurationsetting"></a>UnattendedExecutionAccount 属性 (WMI MSReportServer_ConfigurationSetting)
+# <a name="unattendedexecutionaccount-property-wmi-msreportserver_configurationsetting"></a>UnattendedExecutionAccount 属性 (WMI MSReportServer_ConfigurationSetting)
   返回以无人参与方式运行报表时报表服务器将模拟的用户帐户。 只读。  
   
 ## <a name="syntax"></a>语法  
@@ -45,9 +45,9 @@ public string UnattendedExecutionAccount;
  [MSReportServer_ConfigurationSetting 类](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>要求  
- **命名空间:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](msreportserver-configurationsetting-members.md)  
   
   

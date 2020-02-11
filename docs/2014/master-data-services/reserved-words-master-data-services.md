@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5435c2a48417156abd6d4f831bf61c9ba6440fab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482575"
 ---
 # <a name="reserved-words-master-data-services"></a>保留字 (Master Data Services)
@@ -36,20 +36,20 @@ ms.locfileid: "65482575"
   
 -   [成员](#members)  
   
-##  <a name="models"></a> Models  
- 如果你创建一个模型名称设置为**名称**，请不要选择**使用与模型相同的名称创建实体**因为**名称**不能用于实体的名称。  
+##  <a name="models"></a>机型  
+ 如果创建的模型的名称设置为 "**名称**"，请不要选择 "**使用与模型相同的名称创建实体**"，因为**名称**不能用于实体名称。  
   
-##  <a name="entities"></a> 实体  
+##  <a name="entities"></a>条目  
  对于实体名称，不能使用 **Name** 或 **Code**。  
   
-##  <a name="exhierarchies"></a> 显式层次结构  
+##  <a name="exhierarchies"></a>显式层次结构  
  对于显式层次结构名称，不能使用 **Name** 或 **Code**。  
   
-##  <a name="attributes"></a> 属性  
+##  <a name="attributes"></a>属性  
   
--   **ID**  
+-   **识别**  
   
--   **Code**  
+-   **代码**  
   
 -   **名称**  
   
@@ -69,10 +69,10 @@ ms.locfileid: "65482575"
   
 -   **Version_ID**  
   
-##  <a name="members"></a> 成员  
- 对于成员，不能使用**MDMMemberStatus**或**根**有关**代码**属性值。  
+##  <a name="members"></a>组员  
+ 对于成员，不能对**Code**属性值使用**MDMMemberStatus**或**ROOT** 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Master Data Services 概述](master-data-services-overview-mds.md)  
   
   

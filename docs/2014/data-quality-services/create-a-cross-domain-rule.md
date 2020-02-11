@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 9478564d6fde6596fe6f407bb9a9a2b389b2a1d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480991"
 ---
 # <a name="create-a-cross-domain-rule"></a>创建跨域规则
@@ -25,7 +25,7 @@ ms.locfileid: "65480991"
   
  将分别为复合域中的单一域之一定义跨域规则的 If 子句和 Then 子句。 必须为不同的单一域定义每个子句。 跨域规则必须与多个单一域相关；不能为复合域定义简单域规则（仅针对单一域）。 您应该通过为单一域定义域规则来这样做。 If 子句和 Then 子句可分别包含一个或多个条件。  
   
- 具有可定义条件的跨域规则将规则逻辑应用于条件中的值的同义词以及这些值本身。 If 和 Then 子句的可定义条件是值等于、值不等于、值处于和值不处于。 例如，假设对复合域具有以下跨域规则：“对于‘城市’，如果值等于‘Los Angeles’，那么对于‘州’，值等于‘CA’。 如果“Los Angeles”和“LA”是同义词，则此规则对于“Los Angeles CA”和“LA CA”将返回正确结果，对于“Los Angeles WA”和“LA WA”将返回错误结果。  
+ 具有可定义条件的跨域规则将规则逻辑应用于条件中的值的同义词以及这些值本身。 If 和 Then 子句的可定义条件是值等于、值不等于、值处于和值不处于。 例如，假定对于某一复合域，你具有以下跨域规则：“For 'City', if Value is equal to 'Los Angeles', then for 'State', Value is equal to 'CA'”。 如果“Los Angeles”和“LA”是同义词，则此规则对于“Los Angeles CA”和“LA CA”将返回正确结果，对于“Los Angeles WA”和“LA WA”将返回错误结果。  
   
  除了让您知道跨域规则的有效性之外，跨域规则 *“值等于”* 中的可定义 **Then**子句还在数据清理活动过程中更正数据。 有关详细信息，请参阅 [Data Correction using Definitive Cross-Domain Rules](../../2014/data-quality-services/cleanse-data-in-a-composite-domain.md#CDCorrection) 中的 [Cleanse Data in a Composite Domain](../../2014/data-quality-services/cleanse-data-in-a-composite-domain.md)。  
   
@@ -33,19 +33,19 @@ ms.locfileid: "65480991"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a> 先决条件  
+###  <a name="Prerequisites"></a>先决条件  
  若要创建一个跨域规则，必须已创建并打开了一个复合域。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_administrator 角色，才能创建跨域规则。  
   
-##  <a name="Create"></a> 创建跨域规则  
+##  <a name="Create"></a>创建跨域规则  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../../2014/data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 的主屏幕中，打开或创建一个知识库。 选择 **“域管理”** 作为活动，然后单击 **“打开”** 或 **“创建”** 。 有关详细信息，请参阅 [创建知识库](../../2014/data-quality-services/create-a-knowledge-base.md) 或 [打开知识库](../../2014/data-quality-services/open-a-knowledge-base.md)。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 的主屏幕中，打开或创建一个知识库。 选择 **“域管理”** 作为活动，然后单击 **“打开”** 或 **“创建”**。 有关详细信息，请参阅 [创建知识库](../../2014/data-quality-services/create-a-knowledge-base.md) 或 [打开知识库](../../2014/data-quality-services/open-a-knowledge-base.md)。  
   
     > [!NOTE]  
     >  域管理在 Data Quality Service 客户端页面中执行，该页面包含用于单独域管理操作的五个选项卡。 它不是一个向导驱动的过程；任何管理操作都可以单独执行。  
@@ -54,7 +54,7 @@ ms.locfileid: "65480991"
   
 4.  单击 **“复合域规则”** 选项卡。  
   
-5.  单击 **“添加新的域规则”** ，然后为该规则输入名称和说明。  
+5.  单击 **“添加新的域规则”**，然后为该规则输入名称和说明。  
   
 6.  选择 **“活动”** 可指定将运行该规则（默认设置），取消选中则可以阻止该规则运行。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "65480991"
   
     3.  如果该条件需要值，则在文本框中输入与该条件相关联的值。  
   
-    4.  如果 If 子句要求其他条件，则单击 **“向所选子句添加新的条件”** 。 选择操作符和条件，并且根据需要为该条件输入值。  
+    4.  如果 If 子句要求其他条件，则单击 **“向所选子句添加新的条件”**。 选择操作符和条件，并且根据需要为该条件输入值。  
   
     5.  若要更改这些条件的顺序，请通过单击其左侧选择一个条件，再单击向上或向下箭头。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "65480991"
   
 9. 继续执行下面的测试过程。  
   
-##  <a name="Test"></a> 测试跨域规则  
+##  <a name="Test"></a>测试跨域规则  
   
 1.  按如下所示测试跨域规则：  
   
@@ -94,7 +94,7 @@ ms.locfileid: "65480991"
   
 2.  在完成了您的跨域规则后，单击 **“完成”** 以完成域管理活动，如 [End the Domain Management Activity](../../2014/data-quality-services/end-the-domain-management-activity.md)中所述。  
   
-##  <a name="FollowUp"></a> 跟进：创建跨域规则后  
+##  <a name="FollowUp"></a>跟进：在创建跨域规则后  
  在创建跨域规则后，您可以对域执行其他域管理任务，可以执行知识发现以便向域添加知识，或者可以向域添加匹配策略。 有关详细信息，请参阅[执行知识发现](../../2014/data-quality-services/perform-knowledge-discovery.md)、[管理域](../../2014/data-quality-services/managing-a-domain.md)或[创建匹配策略](../../2014/data-quality-services/create-a-matching-policy.md)。  
   
   

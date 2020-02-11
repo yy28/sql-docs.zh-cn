@@ -1,5 +1,5 @@
 ---
-title: CommandType 属性 (ADO) |Microsoft Docs
+title: CommandType 属性（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,30 +16,30 @@ ms.assetid: ca44809c-8647-48b6-a7fb-0be70a02f53e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0cd6d06a50047f431700af9418a504faa4bd6957
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919694"
 ---
 # <a name="commandtype-property-ado"></a>CommandType 属性 (ADO)
-指示的类型[命令](../../../ado/reference/ado-api/command-object-ado.md)对象。  
+指示[命令](../../../ado/reference/ado-api/command-object-ado.md)对象的类型。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回一个或多个[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)值。  
   
 > [!NOTE]
->  不要使用**CommandTypeEnum**的值**adCmdFile**或**adCmdTableDirect**与**CommandType**。 这些值仅用作选项与[开放](../../../ado/reference/ado-api/open-method-ado-recordset.md)并[再次查询](../../../ado/reference/ado-api/requery-method.md)方法[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
+>  不要将**adCmdFile**或**adCmdTableDirect**的**CommandTypeEnum**值与**CommandType**一起使用。 这些值只能用作[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)和重新[查询](../../../ado/reference/ado-api/requery-method.md)方法的选项。  
   
 ## <a name="remarks"></a>备注  
- 使用**CommandType**属性来优化计算[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)属性。  
+ 使用**CommandType**属性优化[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)属性的计算。  
   
- 如果**CommandType**属性值设置为默认值为**adCmdUnknown**，您可能会遇到性能降低的程度，因为 ADO 必须进行到提供程序的调用，以确定如果**CommandText**属性是一个 SQL 语句、 存储的过程或表名称。 如果您知道使用哪种类型的命令，设置**CommandType**属性指示 ADO 来直接转到相关代码。 如果**CommandType**属性中的命令类型不匹配**CommandText**属性时，发生错误时调用[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)方法。  
+ 如果**CommandType**属性值设置为默认值**adCmdUnknown**，则可能会遇到性能降低的情况，因为 ADO 必须对访问接口进行调用，以确定**CommandText**属性是否为 SQL 语句、存储过程或表名。 如果你知道要使用哪种类型的命令，则设置**CommandType**属性将指示 ADO 直接跳到相关代码。 如果**CommandType**属性与**CommandText**属性中的命令类型不匹配，则在调用[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)方法时会发生错误。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [命令对象 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## <a name="see-also"></a>请参阅  
- [ActiveConnection、 CommandText、 CommandTimeout、 CommandType、 大小和方向属性示例 (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
- [ActiveConnection、 CommandText、 CommandTimeout、 CommandType、 大小和方向属性示例 （VC + +）](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
- [ActiveConnection、 CommandText、 CommandTimeout、 CommandType、 大小和方向属性示例 (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)
+## <a name="see-also"></a>另请参阅  
+ [ActiveConnection、CommandText、CommandTimeout、CommandType、Size 和 Direction 属性示例（VB）](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
+ [ActiveConnection、CommandText、CommandTimeout、CommandType、Size 和 Direction 属性示例（VC + +）](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
+ [ActiveConnection、CommandText、CommandTimeout、CommandType、Size 和 Direction 属性示例（JScript）](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)

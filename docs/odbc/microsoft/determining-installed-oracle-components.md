@@ -1,5 +1,5 @@
 ---
-title: 确定安装的 Oracle 组件 |Microsoft Docs
+title: 确定已安装的 Oracle 组件 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ ms.assetid: 3b018f6a-9db0-4aa1-8ec4-afc5f76d7cad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0567e38d34b9400dcaf6b170d821aa0e5fd0e263
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68079014"
 ---
 # <a name="determining-installed-oracle-components"></a>确定安装的 Oracle 组件
 > [!IMPORTANT]  
->  此功能将 Windows 的未来版本中删除。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 相反，使用提供的 Oracle 的 ODBC 驱动程序。  
+>  此功能将在 Windows 的将来版本中删除。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 请改用 Oracle 提供的 ODBC 驱动程序。  
   
- 若要确定您的系统 （和它们的版本） 上安装的 Oracle 组件，请导航到 \Orainst Oracle 主目录下。 打开一个以下文本文件：Nt.rgs、 Win95.rgs 或 Win98.rgs。  
+ 若要确定系统上安装的 Oracle 组件及其版本，请导航到 Oracle 主目录下的 \Orainst 目录。 打开以下文本文件之一： Nt. rgs、Win95 或 Win98。  
   
- 文件格式是类似于下面：  
+ 文件格式如下所示：  
   
 ```  
 0 ntinstall     all    "orainst"  "3.3.1.0.0C"  "Oracle Installer"  
@@ -37,4 +37,4 @@ ms.locfileid: "68079014"
 69 w32plus80    all    "plus80"   "8.0.5.0.0"   "SQL*Plus"  
 ```  
   
- .Rgs 文件还包含安装信息和每个组件的说明。
+ .Rgs 文件还包含每个组件的安装信息和说明。

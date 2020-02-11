@@ -1,5 +1,5 @@
 ---
-title: 筛选事件在跟踪 (SQL Server Profiler) |Microsoft Docs
+title: 筛选跟踪中的事件（SQL Server Profiler） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 851fd1c1f3249a36af6de66aaa374088fab1c1ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63298171"
 ---
 # <a name="filter-events-in-a-trace-sql-server-profiler"></a>在跟踪中筛选事件 (SQL Server Profiler)
@@ -32,23 +32,23 @@ ms.locfileid: "63298171"
   
      **“事件选择”** 选项卡包含一个网格控件。 网格控件是包含所有可跟踪事件类的表。 每个事件类在表中占一行。 事件类可能略有不同，这取决于所连接服务器的类型和版本。 事件类由网格的“事件” **“事件”** 列进行标识，并按事件类别进行分组。 其余列则列出每个事件类可以返回的数据列。  
   
-2.  单击 **“列筛选器”.**  
+2.  单击 "**列筛选器"。**  
   
-     此时将显示“编辑筛选器”对话框。 “编辑筛选器”对话框包含一个比较运算符列表，可以使用这些运算符在跟踪中筛选事件。  
+     此时将显示“编辑筛选器”**** 对话框。 “编辑筛选器”对话框包含一个比较运算符列表，可以使用这些运算符在跟踪中筛选事件****。  
   
 3.  若要应用筛选器，请单击比较运算符，再键入要用于该筛选器的值。  
   
-4.  单击“确定” 。  
+4.  单击“确定”。   
   
- **注意事项：**  
+ **放**  
   
 -   如果要对“事件选择”选项卡上的 **StartTime** 和 **EndTime** 数据列设置筛选条件，那么请确保：  
   
     -   输入的日期符合此格式： `YYYY/MM/DD HH:mm:sec`。  
   
-         -或-  
+         - 或 -  
   
-    -   在 **“常规选项”** 对话框中选中了 **“使用区域设置来显示日期和时间值”** 。 要查看“常规选项”对话框，请在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的“工具”菜单上单击“选项”。  
+    -   在 "**常规选项**" 对话框中选中 "**使用区域设置来显示日期和时间值**"。 要查看“常规选项”对话框，请在 ** 的“工具”菜单上单击“选项”**[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ********。  
   
          -以及-  
   
@@ -56,7 +56,7 @@ ms.locfileid: "63298171"
   
 -   如果从 **osql** 实用工具或 **sqlcmd** 实用工具跟踪事件，则始终将 **%** 追加到 **TextData** 数据列上的筛选器。  
   
-## <a name="see-also"></a>请参阅  
- [SQL Server 事件探查器](sql-server-profiler.md)  
+## <a name="see-also"></a>另请参阅  
+ [SQL Server Profiler](sql-server-profiler.md)  
   
   

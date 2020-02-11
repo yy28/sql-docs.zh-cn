@@ -1,5 +1,5 @@
 ---
-title: 计算属性对话框 (Analysis Services-多维数据) |Microsoft Docs
+title: "\"计算属性\" 对话框（Analysis Services 多维数据） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2a8dfe06f3f05dead3686d0319ba0958388994ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088319"
 ---
 # <a name="calculation-properties-dialog-box-analysis-services---multidimensional-data"></a>“计算属性”对话框（Analysis Services - 多维数据）
@@ -37,8 +37,8 @@ ms.locfileid: "66088319"
  **关联的度量值组**  
  选择应在客户端应用程序中显示其中的计算成员或命名集的度量值组，其中包括 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。  
   
-## <a name="see-also"></a>请参阅  
- [计算&#40;多维数据集设计器&#41; &#40;Analysis Services-多维数据&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
- [Analysis Services 设计器和对话框&#40;多维数据&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+## <a name="see-also"></a>另请参阅  
+ [多维数据集设计器&#41; &#40;&#40;计算 Analysis Services 多维数据&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
+ [&#40;多维数据的 Analysis Services 设计器和对话框&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

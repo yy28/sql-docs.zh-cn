@@ -1,5 +1,5 @@
 ---
-title: 查看筛选器信息 (SQL Server Profiler) |Microsoft Docs
+title: 查看筛选器信息（SQL Server Profiler） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8496eee2134d9f89163fce6b6ad3ef07ba49b1af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63276801"
 ---
 # <a name="view-filter-information-sql-server-profiler"></a>查看筛选器信息 (SQL Server Profiler)
@@ -37,7 +37,7 @@ ms.locfileid: "63276801"
 > [!NOTE]  
 >  具有分配值的比较运算符显示为粗体格式。  
   
-## <a name="see-also"></a>请参阅  
- [SQL Server 事件探查器](sql-server-profiler.md)  
+## <a name="see-also"></a>另请参阅  
+ [SQL Server Profiler](sql-server-profiler.md)  
   
   

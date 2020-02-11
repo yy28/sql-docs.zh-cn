@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fa7b0d32a62e5e2d729e05c88b892ccaffc0fc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106819"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>向 URL 添加超链接（报表生成器和 SSRS）
@@ -23,22 +23,22 @@ ms.locfileid: "66106819"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- 如果您和您的用户有权使用对报表服务器的 URL 请求来查看某一报表服务器上的报表，则您还可以指定指向这些报表的 URL。 例如，可以指定一个报表，并在用户首次查看该报表时隐藏文档结构图。 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中 [Reporting Services 文档](https://go.microsoft.com/fwlink/?linkid=121312)中的 [URL 访问 (SSRS)](../url-access-ssrs.md)。  
+ 如果您和您的用户有权使用对报表服务器的 URL 请求来查看某一报表服务器上的报表，则您还可以指定指向这些报表的 URL。 例如，可以指定一个报表，并在用户首次查看该报表时隐藏文档结构图。 有关详细信息，请参阅 [ 联机丛书中 ](../url-access-ssrs.md)Reporting Services 文档[中的 ](https://go.microsoft.com/fwlink/?linkid=121312)URL 访问 (SSRS)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
  还可以向具有 **“操作”** 属性的任何项的 URL 添加超链接，例如图表中的文本框、图像或计算序列。 用户单击该报表项时，将执行您所定义的操作。 有关详细信息，请参阅[“操作属性”对话框（报表生成器和 SSRS）](../action-properties-dialog-box-report-builder-and-ssrs.md)和[指定外部项的路径（报表生成器和 SSRS）](specifying-paths-to-external-items-report-builder-and-ssrs.md)。  
   
- 若要快速开始，请参阅[教程：设置文本格式（报表生成器）](../tutorial-format-text-report-builder.md)。  
+ 若要快速开始使用，请参阅[教程：设置文本格式（报表生成器）](../tutorial-format-text-report-builder.md)。  
   
 > [!NOTE]  
->  绑定到数据集字段的链接容易被篡改。 有关详细信息，请参阅 msdn.microsoft.com 上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][联机丛书](https://go.microsoft.com/fwlink/?LinkId=154888)中的[保护报表和资源](../security/secure-reports-and-resources.md)。  
+>  绑定到数据集字段的链接容易被篡改。 有关详细信息，请参阅 msdn.microsoft.com 上 [](../security/secure-reports-and-resources.md)联机丛书[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的[保护报表和资源](https://go.microsoft.com/fwlink/?LinkId=154888)。  
   
 ### <a name="to-add-a-hyperlink"></a>添加超链接  
   
-1.  在报表设计视图中，右键单击要添加链接的文本框、图像或图表，然后单击 **“属性”** 。  
+1.  在报表设计视图中，右键单击要添加链接的文本框、图像或图表，然后单击 **“属性”**。  
   
-2.  在“属性”对话框中，单击 **“操作”** 。  
+2.  在“属性”对话框中，单击 **“操作”**。  
   
-3.  选择 **“转到 URL”** 。 其他部分将显示在此选项的对话框中。  
+3.  选择 **“转到 URL”**。 其他部分将显示在此选项的对话框中。  
   
 4.  在 **“选择 URL”** 中，键入或选择某一 URL 或者计算结果为某一 URL 的表达式，或者单击下拉箭头并单击包含 URL 的字段的名称。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66106819"
   
 7.  若要测试该链接，请单击 **“运行”** 以预览报表，然后单击对其设置此链接的报表项。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [交互式排序、文档结构图和链接（报表生成器和 SSRS）](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [创建文档结构图（报表生成器和 SSRS）](create-a-document-map-report-builder-and-ssrs.md)  
   

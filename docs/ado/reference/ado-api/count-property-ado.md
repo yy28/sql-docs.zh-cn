@@ -1,5 +1,5 @@
 ---
-title: Count 属性 (ADO) |Microsoft Docs
+title: Count 属性（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,26 +16,26 @@ ms.assetid: da9ccd1f-d402-41a2-940c-45556fc5340d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 292a4a8c26b3b10aa47fcbe7046a5897f601ed9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919357"
 ---
 # <a name="count-property-ado"></a>Count 属性 (ADO)
 指示集合中的对象数。  
   
 ## <a name="return-value"></a>返回值  
- 返回**长**值。  
+ 返回一个**长整型**值。  
   
 ## <a name="remarks"></a>备注  
- 使用**计数**属性来确定给定集合中的对象数。  
+ 使用**Count**属性来确定给定集合中有多少个对象。  
   
- 由于对集合成员的编号从零开始，应始终将循环从零个成员开始和结束值为**计数**减 1 的属性。 如果你使用的 Microsoft Visual Basic 并想要循环访问集合的成员，而不检查**计数**属性，请使用**为每个...下一步**命令。  
+ 由于集合成员的编号以零开始，因此，您始终应始终从零个成员开始编写循环，并以**Count**属性的值减1结束。 如果使用的是 Microsoft Visual Basic 并且想要循环遍历集合的成员而不检查**Count**属性，请使用**For Each .。。下一个**命令。  
   
- 如果**计数**属性为零，则集合中没有任何对象。  
+ 如果**Count**属性为零，则集合中不存在任何对象。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
   
 ||||  
 |-|-|-|  
@@ -47,7 +47,7 @@ ms.locfileid: "67919357"
 |[属性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)|[表集合 (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|[用户集合 (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|  
 |[视图集合 (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
-## <a name="see-also"></a>请参阅  
- [Count 属性示例 (VB)](../../../ado/reference/ado-api/count-property-example-vb.md)   
- [Count 属性示例 （VC + +）](../../../ado/reference/ado-api/count-property-example-vc.md)   
+## <a name="see-also"></a>另请参阅  
+ [Count 属性示例（VB）](../../../ado/reference/ado-api/count-property-example-vb.md)   
+ [Count 属性示例（VC + +）](../../../ado/reference/ado-api/count-property-example-vc.md)   
  [Refresh 方法 (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

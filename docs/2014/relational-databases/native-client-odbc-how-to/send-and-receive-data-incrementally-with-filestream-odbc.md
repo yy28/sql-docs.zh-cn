@@ -1,5 +1,5 @@
 ---
-title: 发送和接收数据以增量方式与 FILESTREAM (ODBC) |Microsoft Docs
+title: 通过 FILESTREAM 以增量方式发送和接收数据（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -11,23 +11,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ac4965e665013cad4cd17068633a812cc5813826
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68205525"
 ---
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>通过 FILESTREAM 以增量方式发送和接收数据 (ODBC)
   此示例显示如何通过 FILESTREAM 功能使用 SQLPutData 和 SQLGetData 以增量方式发送和接收数据。  
   
- 有关 FILESTREAM 功能的详细信息，请参阅[FILESTREAM 支持&#40;ODBC&#41;](../native-client/odbc/filestream-support-odbc.md)。  
+ 有关 FILESTREAM 功能的详细信息，请参阅[Filestream 支持 &#40;ODBC&#41;](../native-client/odbc/filestream-support-odbc.md)。  
   
 ## <a name="example"></a>示例  
- 编译并运行此示例之前，启用 FILESTREAM 支持 ([启用和配置 FILESTREAM](../blob/enable-and-configure-filestream.md))。  
+ 在编译并运行此示例之前，启用 FILESTREAM 支持（[启用和配置 filestream](../blob/enable-and-configure-filestream.md)）。  
   
  第一个 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表创建此示例使用的数据库。 您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例必须具有写访问权限才能运行此脚本（例如，采用本地系统帐户登录）。  
   
- 第二个代码列表是 C++ 代码。 您必须指定一个服务器；在 C++ 代码列表中，将“MyServer”更改为一个有效的服务器名称。 请确保您的 INCLUDE 环境变量包括含有 sqlncli.h 的目录。 使用 odbc32.lib、user32.lib、/D "_UNICODE"、/D "UNICODE"、odbc32.lib 和 /EHsc 编译 C++ 代码列表。  
+ 第二个代码列表是 C++ 代码。 您必须指定一个服务器；在 C++ 代码列表中，将“MyServer”更改为一个有效的服务器名称。 请确保 INCLUDE 环境变量包含包含 sqlncli.msi 的目录。 使用 odbc32.lib、user32.lib、/D "_UNICODE"、/D "UNICODE"、odbc32.lib 和 /EHsc 编译 C++ 代码列表。  
   
  第三个 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表删除此示例使用的数据库。  
   

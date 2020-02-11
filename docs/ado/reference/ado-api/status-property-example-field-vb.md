@@ -1,5 +1,5 @@
 ---
-title: Status 属性示例 （字段） (VB) |Microsoft Docs
+title: Status 属性示例（字段）（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c28a0b615a9f250c8539e87abf9fefbc11f513ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67916830"
 ---
 # <a name="status-property-example-field-vb"></a>Status 属性示例（字段）(VB)
-下面的示例从读/写文件夹使用打开文档[发布的 Internet 提供商](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)。 [状态](../../../ado/reference/ado-api/status-property-ado-field.md)的属性[字段](../../../ado/reference/ado-api/field-object.md)的对象[记录](../../../ado/reference/ado-api/record-object-ado.md)首先将设置为**adFieldPendingInsert**，则更新为**adFieldOk**。  
+下面的示例使用[Internet 发布提供程序](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)从读/写文件夹打开文档。 [记录](../../../ado/reference/ado-api/record-object-ado.md)的[Field](../../../ado/reference/ado-api/field-object.md)对象的[Status](../../../ado/reference/ado-api/status-property-ado-field.md)属性将首先设置为**AdFieldPendingInsert**，然后将其更新为**adFieldOk**。  
   
 ```  
 'BeginStatusFieldVB  
@@ -79,19 +79,19 @@ End Sub
 'EndStatusFieldVB  
 ```  
   
- 以下示例删除一个已知**字段**从**记录**从文档打开。 **状态**首先将属性设置为**adFieldOK**，然后**adFieldPendingUnknown**。  
+ 下面的示例从文档中打开的**记录**中删除已知**字段**。 **Status**属性将首先设置为**adFieldOK**，然后设置为**adFieldPendingUnknown**。  
   
 ```  
 Attribute VB_Name = "StatusField"  
 ```  
   
- 下面的代码删除**字段**从**记录**上只读的文档打开。 **状态**将设置为**adFieldPendingDelete**。 在[更新](../../../ado/reference/ado-api/update-method.md)，删除将失败并**状态**将是**adFieldPendingDelete**加上**adFieldPermissionDenied**。 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)清除挂起**状态**设置。  
+ 下面的代码从在只读文档上打开的**记录**中删除**字段**。 **状态**将设置为**adFieldPendingDelete**。 在[更新](../../../ado/reference/ado-api/update-method.md)时，删除将失败，并且**状态**将为**adFieldPendingDelete** + **adFieldPermissionDenied**。 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)清除挂起**状态**设置。  
   
 ```  
 Attribute VB_Name = "StatusField"  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [字段对象](../../../ado/reference/ado-api/field-object.md)   
- [记录对象 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+## <a name="see-also"></a>另请参阅  
+ [Field 对象](../../../ado/reference/ado-api/field-object.md)   
+ [Record 对象（ADO）](../../../ado/reference/ado-api/record-object-ado.md)   
  [Status 属性（ADO 字段）](../../../ado/reference/ado-api/status-property-ado-field.md)

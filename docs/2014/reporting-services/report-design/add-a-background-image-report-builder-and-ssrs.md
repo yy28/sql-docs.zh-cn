@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 52e25a2977a324277fc9688d45911e2c8be59005
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106939"
 ---
 # <a name="add-a-background-image-report-builder-and-ssrs"></a>添加背景图像（报表生成器和 SSRS）
@@ -67,7 +67,7 @@ ms.locfileid: "66106939"
   
          对于图表中的背景图像， **BackgroundRepeat** 可设置为 **Default**、 **Repeat**、 **Fit**和 **Clip**，但不可设置为 **RepeatX** 或 **RepeatY**。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [图像（报表生成器和 SSRS）](images-report-builder-and-ssrs.md)   
  [“图像属性”对话框 ->“常规”（报表生成器和 SSRS）](../image-properties-dialog-box-general-report-builder-and-ssrs.md)  
   

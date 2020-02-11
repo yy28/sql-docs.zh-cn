@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a72673641fc0f67e22d88d5ea104089b273dedce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105163"
 ---
 # <a name="runningvalue-function-report-builder-and-ssrs"></a>RunningValue 函数（报表生成器和 SSRS）
@@ -30,7 +30,7 @@ ms.locfileid: "66105163"
 RunningValue(expression, function, scope)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *expression*  
  要对其执行聚合的表达式，例如， `[Quantity]`。  
   
@@ -38,7 +38,8 @@ RunningValue(expression, function, scope)
  (`Enum`) 要应用于表达式的聚合函数的名称，例如，`Sum`。 此函数不能为 `RunningValue`、`RowNumber` 或 `Aggregate`。  
   
  *作用域*  
- (`String`) 一个字符串常量，表示数据集、数据区域或组的名称，也可以为 Null（在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中为 `Nothing`），它指定在其中计算聚合的上下文。 `Nothing` 指定最外层的上下文，通常为报表数据集。  
+ (`String`) 一个字符串常量，表示数据集、数据区域或组的名称，也可以为 Null（在 `Nothing` 中为 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]），它指定在其中计算聚合的上下文。 
+  `Nothing` 指定最外层的上下文，通常为报表数据集。  
   
 ## <a name="return-type"></a>返回类型  
  由 *function* 参数中指定的聚合函数确定。  
@@ -46,7 +47,8 @@ RunningValue(expression, function, scope)
 ## <a name="remarks"></a>备注  
  作用域的每个新实例 `RunningValue` 的值都会重置为 0。 如果指定组，则会在更改组表达式时重置该运行值。 如果指定数据区域，则会为该数据区域的每个新实例重置该运行值。 如果指定数据集，则不会在整个数据集中重置该运行值。  
   
- `RunningValue` 不能在筛选器或排序表达式中使用。  
+ 
+  `RunningValue` 不能在筛选器或排序表达式中使用。  
   
  为其计算运行值的数据集必须具有相同的数据类型。 若要将具有多个数值数据类型的数据转换为同一数据类型，请使用类似 `CInt`、`CDbl` 或 `CDec` 的转换函数。 有关详细信息，请参阅 [Type Conversion Functions](https://go.microsoft.com/fwlink/?LinkId=96142)（类型转换函数）。  
   
@@ -58,7 +60,7 @@ RunningValue(expression, function, scope)
   
 -   嵌套聚合的作用域不能为数据集的名称。  
   
--   *表达式*不能包含`First`， `Last`， `Previous`，或`RunningValue`函数。  
+-   *表达式*不能包含`First`、 `Last`、 `Previous`或`RunningValue`函数。  
   
 -   *Expression* 不得包含用于指定 *recursive*的嵌套聚合。  
   
@@ -87,7 +89,7 @@ RunningValue(expression, function, scope)
 =RunningValue(Fields!Traffic Charges.Value, Sum, Nothing)  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在报表中使用表达式（报表生成器和 SSRS）](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)   
  [表达式中的数据类型（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)   

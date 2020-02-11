@@ -16,55 +16,55 @@ ms.assetid: 7d4a5496-ec2d-4936-b36a-7049a82be4b4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c37a7385cc3aabb725f86261203d22b5b10c3be6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918875"
 ---
 # <a name="eventreasonenum"></a>EventReasonEnum
-指定导致了事件发生的原因。  
+指定导致事件发生的原因。  
   
-|常量|ReplTest1|描述|  
+|一直|值|说明|  
 |--------------|-----------|-----------------|  
-|**adRsnAddNew**|1|操作添加一个新的记录。|  
-|**adRsnClose**|9|操作关闭**记录集**。|  
+|**adRsnAddNew**|1|操作已添加一条新记录。|  
+|**adRsnClose**|9|操作关闭了**记录集**。|  
 |**adRsnDelete**|2|操作删除了记录。|  
-|**adRsnFirstChange**|11|操作的记录所做的第一个更改。|  
-|**adRsnMove**|10|操作将在记录指针**记录集**。|  
-|**adRsnMoveFirst**|12|操作移动到中的第一个记录的记录指针**记录集**。|  
-|**adRsnMoveLast**|15|操作移到最后一个记录中记录指针**记录集**。|  
-|**adRsnMoveNext**|13|操作中的下一个记录将记录指针**记录集**。|  
-|**adRsnMovePrevious**|14|操作移到上一记录中记录指针**记录集**。|  
-|**adRsnRequery**|7|重新查询操作[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。|  
-|**adRsnResynch**|8|操作重新同步**记录集**与数据库。|  
-|**adRsnUndoAddNew**|5|撤消删除操作添加一个新的记录。|  
-|**adRsnUndoDelete**|6|撤消删除操作删除记录。|  
-|**adRsnUndoUpdate**|4|撤消删除操作记录的更新。|  
-|**adRsnUpdate**|3|操作更新现有记录。|  
+|**adRsnFirstChange**|11|操作对记录进行第一次更改。|  
+|**adRsnMove**|10|操作在记录**集中**移动记录指针。|  
+|**adRsnMoveFirst**|12|操作将记录指针移动到记录**集中**的第一条记录。|  
+|**adRsnMoveLast**|15|操作将记录指针移动到记录**集中**的最后一条记录。|  
+|**adRsnMoveNext**|13|操作将记录指针移动到记录**集中**的下一条记录。|  
+|**adRsnMovePrevious**|14|操作将记录指针移动到记录**集中**的上一个记录。|  
+|**adRsnRequery**|7|操作将重新查询[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。|  
+|**adRsnResynch**|8|操作将**记录集**与数据库重新同步。|  
+|**adRsnUndoAddNew**|5|操作反转了新记录的添加。|  
+|**adRsnUndoDelete**|6|操作已反转记录的删除。|  
+|**adRsnUndoUpdate**|4|操作反转了记录的更新。|  
+|**adRsnUpdate**|3|操作更新了现有记录。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
- 包： **com.ms.wfc.data**  
+ Package： **.com. 数据**  
   
-|常量|  
+|一直|  
 |--------------|  
-|AdoEnums.EventReason.ADDNEW|  
-|AdoEnums.EventReason.CLOSE|  
-|AdoEnums.EventReason.DELETE|  
+|AdoEnums. EventReason|  
+|AdoEnums. EventReason. 关闭|  
+|AdoEnums. EventReason. DELETE|  
 |AdoEnums.EventReason.FIRSTCHANGE|  
-|AdoEnums.EventReason.MOVE|  
-|AdoEnums.EventReason.MOVEFIRST|  
-|AdoEnums.EventReason.MOVELAST|  
-|AdoEnums.EventReason.MOVENEXT|  
-|AdoEnums.EventReason.MOVEPREVIOUS|  
-|AdoEnums.EventReason.REQUERY|  
-|AdoEnums.EventReason.RESYNCH|  
+|AdoEnums. EventReason|  
+|AdoEnums. EventReason. MOVEFIRST|  
+|AdoEnums. EventReason. MOVELAST|  
+|AdoEnums. EventReason|  
+|AdoEnums. EventReason. MOVEPREVIOUS|  
+|AdoEnums. EventReason|  
+|AdoEnums. EventReason|  
 |AdoEnums.EventReason.UNDOADDNEW|  
 |AdoEnums.EventReason.UNDODELETE|  
 |AdoEnums.EventReason.UNDOUPDATE|  
-|AdoEnums.EventReason.UPDATE|  
+|AdoEnums. EventReason. UPDATE|  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
   
 |||  
 |-|-|  

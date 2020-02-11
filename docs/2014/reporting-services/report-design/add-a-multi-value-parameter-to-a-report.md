@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 72a827e8f15627e986008e57ecb9a180b715a8a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106805"
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>将多值参数添加到报表
@@ -44,7 +44,7 @@ ms.locfileid: "66106805"
     ```  
   
     > [!IMPORTANT]  
-    >  如果不包含在变量两侧括号，如上所示，报表将无法呈现并会显示"必须声明标量变量"错误。  
+    >  如果在上面所示的变量周围不包含括号，则报表将无法呈现并显示 "必须声明标量变量" 错误。  
   
      自动为查询变量创建嵌入数据集或共享数据集的数据集参数。 自动为数据集参数创建报表参数。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "66106805"
     ```  
   
     > [!IMPORTANT]  
-    >  如果不包含在变量两侧括号，如上所示，报表将无法呈现并会显示"必须声明标量变量"错误。  
+    >  如果在上面所示的变量周围不包含括号，则报表将无法呈现并显示 "必须声明标量变量" 错误。  
   
      自动为查询变量创建嵌入数据集或共享数据集的数据集参数。 自动为数据集参数创建报表参数。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "66106805"
   
      有关详细信息，请参阅[为报表参数添加、更改或删除可用值（报表生成器和 SSRS）](add-change-or-delete-available-values-for-a-report-parameter.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [向报表添加级联参数（报表生成器和 SSRS）](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
  [添加、更改或删除报表参数（报表生成器和 SSRS）](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
   

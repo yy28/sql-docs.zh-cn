@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 706b930627039b5d2944b162ba9681808bfcc62c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105469"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>规划地图报表（报表生成器和 SSRS）
@@ -23,7 +23,7 @@ ms.locfileid: "66105469"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="MapPurpose"></a> 指定地图的作用  
+##  <a name="MapPurpose"></a>指定地图的用途  
  良好的报表设计可以提供相关的信息以帮助用户采取措施来解决问题。 若要创建有用的、易于理解的地图显示，请确定您希望地图帮助您回答的问题。 例如，在某个地图上，您可以实现以下数据类型的可视化，以确定市场商机：  
   
 -   每个商店的相关销售额。  
@@ -38,7 +38,7 @@ ms.locfileid: "66105469"
   
  
   
-##  <a name="Data"></a> 指定空间数据和分析数据  
+##  <a name="Data"></a>指定空间数据和分析数据  
  您必须指定您需要哪些空间数据和分析数据。  
   
  分析数据可来自报表数据集，来自与地图库中的地图一起包括的示例数据，或者来自与 ESRI 形状文件中的空间数据一起包括的分析数据。  
@@ -66,7 +66,8 @@ ms.locfileid: "66105469"
   
 -   Bing 地图图块，为地图视图提供背景。 若要在地图中显示图块，必须将报表服务器配置为支持 Bing 地图 Web 服务。  
   
- 有关详细信息，请参阅 [地图向导和地图层向导（报表生成器和 SSRS）](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)中的“在何处可以获取 ESRI 形状文件？”。  
+ 有关详细信息，请参阅 
+  [地图向导和地图层向导（报表生成器和 SSRS）](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)中的“在何处可以获取 ESRI 形状文件？”。  
   
  空间数据可能具有政治敏感性，并且可能具有版权。 请检查空间数据源的使用条款和隐私声明，以了解如何在报表中使用空间数据。  
   
@@ -77,7 +78,7 @@ ms.locfileid: "66105469"
   
  空间数据必须包含以下字段：  
   
--   **Spatial data.** 一个空间数据字段，它具有一系列坐标来定义每个点、线条或多边形。  
+-   **空间数据。** 一个空间数据字段，它具有一系列坐标来定义每个点、线条或多边形。  
   
 -   **匹配字段。** 一个或多个唯一标识每个空间数据字段的字段。 例如，对于表示商店位置的点，可以使用商店的名称。 如果商店名称在空间数据中不唯一，则可以包含市县的名称以及商店名称。  
   
@@ -98,7 +99,7 @@ ms.locfileid: "66105469"
   
 
   
-##  <a name="MapType"></a> 选择地图类型  
+##  <a name="MapType"></a>选择地图类型  
  当您运行“地图”向导时，可以向报表添加地图并添加第一个地图层。 通过向导，可以向报表添加以下地图类型之一：  
   
 -   基本图，显示位置而没有关联的分析数据。  
@@ -113,12 +114,12 @@ ms.locfileid: "66105469"
 |-----------------|-----------------|----------------|-----------------------------|  
 |![rs_MapType_Polygon_Basic](../media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|基本图|Polygon|只显示区域的地图，例如，销售区域。<br /><br /> 选项：通过调色板改变颜色或使用一种颜色。 调色板是一组预定义的颜色。 当分配完调色板中的所有颜色后，将分配颜色的阴影。|  
 |![rs_MapType_Polygon_ColorAnalytical](../media/rs-maptype-polygon-coloranalytical.gif "rs_MapType_Polygon_ColorAnalytical")|颜色分析图|Polygon|一个按变化的颜色显示分析数据的地图，例如，按区域列出的销售数据。|  
-|![rs_MapType_Polygon_Bubble](../media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|气泡图|Polygon|一个在各区域中心以不同气泡大小显示分析数据的地图，例如，按区域列出的销售数据。<br /><br /> 选项：改变根据第二个分析字段的区域颜色以及指定颜色规则。|  
+|![rs_MapType_Polygon_Bubble](../media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|气泡图|Polygon|一个在各区域中心以不同气泡大小显示分析数据的地图，例如，按区域列出的销售数据。<br /><br /> 选项：根据第二个分析字段改变区域颜色以及指定颜色规则。|  
 |![rs_MapType_Line_Basic](../media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|基本线条图|行|只显示线条的地图，例如，交货路线。<br /><br /> 选项：通过调色板改变颜色或使用一种颜色。|  
-|![rs_MapType_Line_Analytical](../media/rs-maptype-line-analytical.gif "rs_MapType_Line_Analytical")|分析线条图|行|线条颜色和宽度发生变化的地图，例如，交货的包装数和按路线的实时度量。<br /><br /> 选项：改变线条宽度，通过一个分析字段改变线条颜色第二个分析字段，指定颜色规则。|  
-|![rs_MapType_Marker_Basic](../media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|基本标记地图|点|在每个位置显示一个标记的地图，例如，市县。<br /><br /> 选项：通过调色板改变颜色或使用一种颜色，并更改标记样式。|  
-|![rs_MapType_Marker_Bubble](../media/rs-maptype-marker-bubble.gif "rs_MapType_Marker_Bubble")|气泡标记地图|点|对每个位置显示一个气泡且气泡大小按一个分析数据字段变化的地图，例如，按市县列出的销售数据。<br /><br /> 选项：改变气泡颜色第二个分析字段，以及指定颜色规则。|  
-|![rs_MapType_Marker_Analytical](../media/rs-maptype-marker-analytical.gif "rs_MapType_Marker_Analytical")|分析标记地图|点|在每个位置显示一个标记且标记颜色、大小和类型随分析数据发生变化的地图，例如，最畅销的产品、利润范围和折扣策略。<br /><br /> 选项：改变标记类型通过一个分析字段，改变标记大小的第二个分析字段中，通过第三个分析字段改变标记颜色以及指定颜色规则。|  
+|![rs_MapType_Line_Analytical](../media/rs-maptype-line-analytical.gif "rs_MapType_Line_Analytical")|分析线条图|行|线条颜色和宽度发生变化的地图，例如，交货的包装数和按路线的实时度量。<br /><br /> 选项：通过一个分析字段改变线条宽度，通过第二个分析字段改变线条颜色，以及指定颜色规则。|  
+|![rs_MapType_Marker_Basic](../media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|基本标记地图|Point|在每个位置显示一个标记的地图，例如，市县。<br /><br /> 选项：通过调色板改变颜色或使用一种颜色，以及更改标记样式。|  
+|![rs_MapType_Marker_Bubble](../media/rs-maptype-marker-bubble.gif "rs_MapType_Marker_Bubble")|气泡标记地图|Point|对每个位置显示一个气泡且气泡大小按一个分析数据字段变化的地图，例如，按市县列出的销售数据。<br /><br /> 选项：根据第二个分析字段改变气泡颜色以及指定颜色规则。|  
+|![rs_MapType_Marker_Analytical](../media/rs-maptype-marker-analytical.gif "rs_MapType_Marker_Analytical")|分析标记地图|Point|在每个位置显示一个标记且标记颜色、大小和类型随分析数据发生变化的地图，例如，最畅销的产品、利润范围和折扣策略。<br /><br /> 选项：通过一个分析字段改变标记类型，通过第二个分析字段改变标记大小，通过第三个分析字段改变标记颜色，以及指定颜色规则。|  
   
  在使用“地图”向导添加地图之后，您可以使用“层”向导创建其他层或更改用于层的选项。 有关向导的详细信息，请参阅[地图向导和地图层向导（报表生成器和 SSRS）](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)。  
   
@@ -126,7 +127,7 @@ ms.locfileid: "66105469"
   
  
   
-##  <a name="Legend"></a> 规划图例  
+##  <a name="Legend"></a>规划图例  
  为了帮助用户解释地图，可以添加多个地图图例、一个色阶和一个距离刻度。 当您设计地图时，请规划要在何处显示图例。 可以指定有关每个图例的以下信息：  
   
 -   **图例位置。** 例如，图例可以显示在视区内部或外部，并相对于视区显示在 12 个分离的位置。  
@@ -145,7 +146,7 @@ ms.locfileid: "66105469"
   
 
   
-##  <a name="Embedding"></a> 在报表定义大小与报表处理时间之间达到平衡  
+##  <a name="Embedding"></a>平衡报表定义大小和报表处理时间  
  针对地图的良好报表设计要求您在控制报表性能和报表定义大小的选项之间达到平衡。 基于空间数据或 Bing 地图图块的地图元素可以是静态的且可嵌入到报表定义中；它们也可以是动态的，而在每次处理报表时创建。 必须在静态或动态地图数据之间进行折衷，并找出适合您所在环境的平衡点。 在制定这一决策时，请考虑以下信息：  
   
 -   嵌入的地图元素可能显著增加报表定义的大小，但会减少在报表中查看地图所需的时间。 报表服务器可能具有大小限制，您需要注意这一点。  
@@ -160,10 +161,10 @@ ms.locfileid: "66105469"
   
 
   
-## <a name="see-also"></a>请参阅  
- [自定义地图或地图层的数据和显示（报表生成器和 SSRS）](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [教程：地图报表（报表生成器）](../tutorial-map-report-report-builder.md)   
+## <a name="see-also"></a>另请参阅  
+ [自定义地图或地图层的数据和显示 &#40;报表生成器和 SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
+ [教程：将报表 &#40;报表生成器地图&#41;](../tutorial-map-report-report-builder.md)   
  [地图（报表生成器和 SSRS）](maps-report-builder-and-ssrs.md)   
- [报表故障排除：地图报表（报表生成器和 SSRS）](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [报表故障排除：地图报表 &#40;报表生成器和 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

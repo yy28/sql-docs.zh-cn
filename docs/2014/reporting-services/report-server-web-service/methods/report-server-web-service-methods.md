@@ -18,21 +18,21 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 37d0031ebfb4ec6d31da6aad9a8842c0623cb75b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63283483"
 ---
 # <a name="report-server-web-service-methods"></a>报表服务器 Web 服务方法
-  根据不同的组件功能，报表服务器 Web 服务方法包含不同的类别。 这些方法通过作为 <xref:ReportService2010.ReportingService2010> 和 <xref:ReportExecution2005.ReportExecutionService> 类的成员公开的若干 Web 服务端点（三个用于报表管理，一个用于报表执行）提供。 这些类可使用代理类工具（如 wsdl.exe）生成，[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 中包含此工具。 有关使用报表服务器 Web 服务和 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 的详细信息，请参阅[使用 Web 服务和 .NET Framework 生成应用程序](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)。  
+  根据不同的组件功能，报表服务器 Web 服务方法包含不同的类别。 这些方法通过作为 <xref:ReportService2010.ReportingService2010> 和 <xref:ReportExecution2005.ReportExecutionService> 类的成员公开的若干 Web 服务端点（三个用于报表管理，一个用于报表执行）提供。 这些类可通过代理类工具（如 wsdl.exe）生成，该工具随[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 一起提供。 有关使用报表服务器 Web 服务和 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 的详细信息，请参阅[使用 Web 服务和 .NET Framework 生成应用程序](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)。  
   
 ## <a name="endpoints-and-methods"></a>端点和方法  
  下表列出了报表服务器 Web 服务的端点以及 <xref:ReportService2010.ReportingService2010> 端点提供的方法的类别。 有关其他终结点中可用方法的信息，请参阅[技术参考 (SSRS)](../../technical-reference-ssrs.md)。  
   
-|主题|Description|  
+|主题|说明|  
 |-----------|-----------------|  
-|[报表服务器 Web 服务终结点](report-server-web-service-endpoints.md)|介绍如何管理和执行报表服务器 Web 服务的端点。|  
+|[报表服务器 Web 服务端点](report-server-web-service-endpoints.md)|介绍如何管理和执行报表服务器 Web 服务的端点。|  
 |[报表服务器命名空间管理方法](report-server-namespace-management-methods.md)|介绍可用来管理报表服务器数据库的方法。 特别值得一提的是，您可以管理文件夹和资源，并设置项属性。|  
 |[授权方法](authorization-methods.md)|介绍可用来管理任务、角色和策略的方法。|  
 |[数据源和连接方法](data-sources-and-connection-methods.md)|介绍可用来设置和管理报表的数据源连接和凭据信息的方法。|  
@@ -44,7 +44,7 @@ ms.locfileid: "63283483"
 |[订阅和传递方法](subscription-and-delivery-methods.md)|介绍可用来创建和管理订阅和报表传递的方法。|  
 |[链接报表方法](linked-reports-methods.md)|介绍可用来创建和管理链接报表的方法。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [访问 SOAP API](../accessing-the-soap-api.md)   
  [使用 Web 服务和 .NET Framework 生成应用程序](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [报表服务器 Web 服务](../report-server-web-service.md)   

@@ -1,5 +1,5 @@
 ---
-title: sp_dbmmonitorresults (TRANSACT-SQL) |Microsoft Docs
+title: sp_dbmmonitorresults （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,18 +19,18 @@ ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e46116111e9f1e85cdaad48e9742e62fba187e74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67899181"
 ---
-# <a name="spdbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
+# <a name="sp_dbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   从存储数据库镜像监视历史记录的状态表中返回所监视数据库的状态行，并允许您选择该过程是否预先获得最新状态。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -60,11 +60,11 @@ sp_dbmmonitorresults database_name
   
  5 = 最后两天的行  
   
- 6 = 最后一个 100 行  
+ 6 = 最后100行  
   
- 7 = 最后一个 500 行  
+ 7 = 最后500行  
   
- 8 = 最后一个 1,000 行  
+ 8 = 最后1000行  
   
  9 = 最后 1,000,000 行  
   
@@ -73,7 +73,7 @@ sp_dbmmonitorresults database_name
   
  0 = 不更新数据库的状态。 仅使用最后两行计算结果，其保留时间取决于何时刷新状态表。  
   
- 1 = 通过调用来更新数据库状态**sp_dbmmonitorupdate**计算结果之前。 但是，如果已更新状态表在前 15 秒或用户不是成员的**sysadmin**固定服务器角色**sp_dbmmonitorresults**运行，而不更新状态。  
+ 1 = 在计算结果之前通过调用**sp_dbmmonitorupdate**来更新数据库的状态。 但是，如果状态表在前15秒内已更新，或者该用户不是**sysadmin**固定服务器角色的成员，则**sp_dbmmonitorresults**在不更新状态的情况下运行。  
   
 ## <a name="return-code-values"></a>返回代码值  
  无  
@@ -81,10 +81,10 @@ sp_dbmmonitorresults database_name
 ## <a name="result-sets"></a>结果集  
  返回指定数据库的所请求行数的历史记录状态。 每一行包含以下信息：  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|镜像数据库的名称。|  
-|**角色**|**int**|服务器实例的当前镜像角色：<br /><br /> 1 = 主体<br /><br /> 2 = 镜像|  
+|**职位**|**int**|服务器实例的当前镜像角色：<br /><br /> 1 = 主体<br /><br /> 2 = 镜像|  
 |**mirroring_state**|**int**|数据库的状态：<br /><br /> 0 = 已挂起<br /><br /> 1 = 已断开连接<br /><br /> 2 = 正在同步<br /><br /> 3 = 挂起故障转移<br /><br /> 4 = 已同步|  
 |**witness_status**|**int**|在数据库的数据库镜像会话中见证服务器的连接状态，可以是：<br /><br /> 0 = 未知<br /><br /> 1 = 已连接<br /><br /> 2 = 已断开|  
 |**log_generation_rate**|**int**|自上次更新此数据库的镜像状态以来生成的日志量（KB/秒）。|  
@@ -100,13 +100,13 @@ sp_dbmmonitorresults database_name
 |**local_time**|**datetime**|更新此行时本地服务器实例上的系统时钟时间。|  
   
 ## <a name="remarks"></a>备注  
- **sp_dbmmonitorresults**可以执行的上下文中仅**msdb**数据库。  
+ **sp_dbmmonitorresults**只能在**msdb**数据库的上下文中执行。  
   
 ## <a name="permissions"></a>权限  
- 要求的成员身份**sysadmin**固定的服务器角色中或在**dbm_monitor**固定的数据库角色的**msdb**数据库。 **Dbm_monitor**角色使其成员可以查看数据库镜像状态，但不是更新它，但不是查看或配置数据库镜像事件。  
+ 要求具有**sysadmin**固定服务器角色的成员身份或**msdb**数据库中**dbm_monitor**固定数据库角色的成员身份。 **Dbm_monitor**角色使其成员可以查看数据库镜像状态，但不会对其进行更新，而不会查看或配置数据库镜像事件。  
   
 > [!NOTE]  
->  第一次**sp_dbmmonitorupdate**执行时，它会创建**dbm_monitor**固定的数据库角色的**msdb**数据库。 成员**sysadmin**固定的服务器角色可以添加到任何用户**dbm_monitor**固定的数据库角色。  
+>  **Sp_dbmmonitorupdate**第一次执行时，它将在**msdb**数据库中创建**dbm_monitor**固定数据库角色。 **Sysadmin**固定服务器角色的成员可以将任何用户添加到**dbm_monitor**固定数据库角色。  
   
 ## <a name="examples"></a>示例  
  以下示例返回在前面两个小时内记录的行，但不更新数据库状态。  
@@ -116,12 +116,12 @@ USE msdb;
 EXEC sp_dbmmonitorresults AdventureWorks2012, 2, 0;  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [监视数据库镜像 (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [sp_dbmmonitorchangemonitoring &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
- [sp_dbmmonitoraddmonitoring &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)   
- [sp_dbmmonitordropmonitoring &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)   
- [sp_dbmmonitorhelpmonitoring &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [监视数据库镜像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
+ [sp_dbmmonitorchangemonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
+ [sp_dbmmonitoraddmonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)   
+ [sp_dbmmonitordropmonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)   
+ [sp_dbmmonitorhelpmonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
  [sp_dbmmonitorupdate (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)  
   
   

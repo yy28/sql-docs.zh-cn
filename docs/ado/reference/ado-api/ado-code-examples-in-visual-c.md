@@ -1,5 +1,5 @@
 ---
-title: 视觉对象中的 ADO 代码示例C++|Microsoft Docs
+title: Visual C++ 中的 ADO 代码示例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,17 +15,17 @@ ms.assetid: af30b764-398f-4918-aaa7-3952226cf544
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7741b6757cef08dcc4d5a05574f22c4f4538d97f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921182"
 ---
 # <a name="ado-code-examples-in-visual-c"></a>Visual C++ 中的 ADO 代码示例
-使用下面的代码示例来了解如何使用 ADO 方法、 属性和事件时在 Microsoft Visual 中编写C++。  
+使用以下代码示例来了解如何在 Microsoft Visual C++ 中写入时使用 ADO 方法、属性和事件。  
   
 > [!NOTE]
->  将粘贴整个代码示例中的，从开头到末尾到代码编辑器。 如果使用完整的示例或段落格式设置都将丢失，该示例可能无法正确运行。  
+>  从开头到末尾将整个代码示例粘贴到代码编辑器中。 如果使用了部分示例或段落格式丢失，则示例可能无法正常运行。  
   
 ## <a name="methods"></a>方法  
   
@@ -35,7 +35,7 @@ ms.locfileid: "67921182"
   
 -   [AppendChunk 和 GetChunk 方法示例](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vc.md)  
   
--   [BeginTrans、 CommitTrans 和 RollbackTrans 方法示例](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vc.md)  
+-   [BeginTrans、CommitTrans 和 RollbackTrans 方法示例](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vc.md)  
   
 -   [Cancel 方法示例](../../../ado/reference/ado-api/cancel-method-example-vc.md)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "67921182"
   
 -   [Delete 方法示例](../../../ado/reference/ado-api/delete-method-example-vc.md)  
   
--   [执行、 再次查询和清除方法示例](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vc.md)  
+-   [执行、再次查询和清除方法示例](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vc.md)  
   
 -   [Find 方法示例](../../../ado/reference/ado-api/find-method-example-vc.md)  
   
@@ -53,11 +53,11 @@ ms.locfileid: "67921182"
   
 -   [GetString 方法示例](../../../ado/reference/ado-api/getstring-method-example-vc.md)  
   
--   [MoveFirst、 MoveLast、 MoveNext 和 MovePrevious 方法示例](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vc.md)  
+-   [MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法示例](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vc.md)  
   
 -   [NextRecordset 方法示例](../../../ado/reference/ado-api/nextrecordset-method-example-vc.md)  
   
--   [Open 和 Close 方法示例](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)  
+-   [打开和关闭方法示例](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)  
   
 -   [OpenSchema 方法示例](../../../ado/reference/ado-api/openschema-method-example-vc.md)  
   
@@ -65,9 +65,9 @@ ms.locfileid: "67921182"
   
 -   [Resync 方法示例](../../../ado/reference/ado-api/resync-method-example-vc.md)  
   
--   [保存和打开方法示例](../../../ado/reference/ado-api/save-and-open-methods-example-vc.md)  
+-   [保存并打开方法示例](../../../ado/reference/ado-api/save-and-open-methods-example-vc.md)  
   
--   [Seek 方法和 Index 属性示例](../../../ado/reference/ado-api/seek-method-and-index-property-example-vc.md)  
+-   [Seek 方法和索引属性示例](../../../ado/reference/ado-api/seek-method-and-index-property-example-vc.md)  
   
 -   [支持方法示例](../../../ado/reference/ado-api/supports-method-example-vc.md)  
   
@@ -75,35 +75,35 @@ ms.locfileid: "67921182"
   
 -   [UpdateBatch 和 CancelBatch 方法示例](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vc.md)  
   
-## <a name="properties"></a>properties  
+## <a name="properties"></a>属性  
   
--   [AbsolutePage、 PageCount、 和 PageSize 属性示例](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vc.md)  
+-   [AbsolutePage、PageCount 和 PageSize 属性示例](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vc.md)  
   
 -   [AbsolutePosition 和 CursorLocation 属性示例](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-vc.md)  
   
 -   [ActiveCommand 属性示例](../../../ado/reference/ado-api/activecommand-property-example-vc.md)  
   
--   [ActiveConnection、 CommandText、 CommandTimeout、 CommandType、 大小和方向属性示例](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)  
+-   [ActiveConnection、CommandText、CommandTimeout、CommandType、Size 和 Direction 属性示例](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)  
   
 -   [ActualSize 和 DefinedSize 属性示例](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vc.md)  
   
--   [Attributes 和 Name 属性示例](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)  
+-   [特性和名称属性示例](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)  
   
--   [BOF、 EOF 和 Bookmark 属性示例](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)  
+-   [BOF、EOF 和 Bookmark 属性示例](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)  
   
 -   [CacheSize 属性示例](../../../ado/reference/ado-api/cachesize-property-example-vc.md)  
   
--   [ConnectionString、 ConnectionTimeout 和 State 属性示例](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)  
+-   [ConnectionString、ConnectionTimeout 和 State 属性示例](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)  
   
 -   [Count 属性示例](../../../ado/reference/ado-api/count-property-example-vc.md)  
   
--   [CursorType、 LockType、 和 EditMode 属性示例](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)  
+-   [CursorType、LockType 和 EditMode 属性示例](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)  
   
--   [Description、 HelpContext、 HelpFile、 NativeError、 数、 源和 SQLState 属性示例](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)  
+-   [Description、HelpContext、帮助，NativeError、Number、Source 和 SQLState 属性示例](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)  
   
 -   [Filter 和 RecordCount 属性示例](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)  
   
--   [属性编制索引和查找方法示例](../../../ado/reference/ado-api/seek-method-and-index-property-example-vc.md)  
+-   [Index 属性和 Seek 方法示例](../../../ado/reference/ado-api/seek-method-and-index-property-example-vc.md)  
   
 -   [IsolationLevel 和 Mode 属性示例](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vc.md)  
   
@@ -119,7 +119,7 @@ ms.locfileid: "67921182"
   
 -   [OriginalValue 和 UnderlyingValue 属性示例](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vc.md)  
   
--   [Prepared 的属性示例](../../../ado/reference/ado-api/prepared-property-example-vc.md)  
+-   [已准备的属性示例](../../../ado/reference/ado-api/prepared-property-example-vc.md)  
   
 -   [Provider 和 DefaultDatabase 属性示例](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vc.md)  
   
@@ -133,9 +133,9 @@ ms.locfileid: "67921182"
   
 -   [StayInSync 属性示例](../../../ado/reference/ado-api/stayinsync-property-example-vc.md)  
   
--   [Type 属性示例 （字段）](../../../ado/reference/ado-api/status-property-example-vc.md)  
+-   [Type 属性示例（字段）](../../../ado/reference/ado-api/status-property-example-vc.md)  
   
--   [Type 属性示例 （属性）](../../../ado/reference/ado-api/type-property-example-property-vc.md)  
+-   [Type 属性示例（属性）](../../../ado/reference/ado-api/type-property-example-property-vc.md)  
   
 -   [Value 属性示例](../../../ado/reference/ado-api/value-property-example-vc.md)  
   
@@ -145,7 +145,7 @@ ms.locfileid: "67921182"
   
 -   [ADO 事件模型示例](../../../ado/reference/ado-api/ado-events-model-example-vc.md)  
   
-## <a name="see-also"></a>请参阅  
- [在 Visual Basic 中的 ADO 代码示例](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
+## <a name="see-also"></a>另请参阅  
+ [Visual Basic 中的 ADO 代码示例](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
  [ADO 代码示例 VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
  [附录 D：ADO 示例](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

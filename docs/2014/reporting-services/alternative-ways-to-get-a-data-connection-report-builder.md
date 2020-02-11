@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 36f489f25adc9746f844a6289ca8a2849ad83870
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109986"
 ---
 # <a name="alternative-ways-to-get-a-data-connection-report-builder"></a>获取数据连接的备选方法（报表生成器）
@@ -31,13 +31,13 @@ ms.locfileid: "66109986"
   
 #### <a name="to-specify-a-data-connection-from-a-list-of-shared-data-sources"></a>从共享数据源列表指定数据连接  
   
-1.  在“选择数据集”页上，选择“创建数据集”，然后单击“下一步”    。 将打开“选择数据源的连接”  页面。  
+1.  在“选择数据集”页上，选择“创建数据集”，然后单击“下一步”************。 将打开“选择数据源的连接”  页面。  
   
 2.  从数据源列表中选择有权访问的数据源。  
   
 3.  若要验证是否能连接到数据源，请单击“测试连接”  。 将显示消息“已成功地创建连接”。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-4.  单击“下一步”  。  
+4.  单击“下一步”。   
   
      如果需要，请输入您的凭据。 要本地保存凭据，请选择“保存连接的密码”  。 如果不选择此选项，则每当您运行该报表时系统将提示您输入凭据。  
   
@@ -45,9 +45,9 @@ ms.locfileid: "66109986"
   
 #### <a name="to-specify-a-data-connection-by-browsing-to-a-shared-data-source-on-a-report-server"></a>通过浏览到报表服务器上的共享数据源来指定数据连接  
   
-1.  在“选择数据集”页上，选择“创建数据集”，然后单击“下一步”    。 将打开“选择数据源的连接”  页面。  
+1.  在“选择数据集”页上，选择“创建数据集”，然后单击“下一步”************。 将打开“选择数据源的连接”  页面。  
   
-2.  单击 **“浏览”** 。 “选择数据源”对话框随即打开  。  
+2.  单击“浏览”  。 “选择数据源”对话框随即打开  。  
   
 3.  从“查找范围”下拉列表中选择“最近使用的站点和服务器”   。 在数据源窗格中，单击服务器的 URL，然后单击“打开”  。  
   
@@ -65,14 +65,14 @@ ms.locfileid: "66109986"
   
      将显示消息“已成功地创建连接”。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  单击“下一步”  。  
+7.  单击“下一步”。   
   
 8.  如果系统提示您输入用户名和密码，请输入您的凭据。 要本地保存凭据，请选择“保存连接的密码”  。  
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [向报表添加数据&#40;报表生成器和 SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [教程&#40;报表生成器&#41;](report-builder-tutorials.md)  
+## <a name="see-also"></a>另请参阅  
+ [将数据添加到报表 &#40;报表生成器和 SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [教程 &#40;报表生成器&#41;](report-builder-tutorials.md)  
   
   

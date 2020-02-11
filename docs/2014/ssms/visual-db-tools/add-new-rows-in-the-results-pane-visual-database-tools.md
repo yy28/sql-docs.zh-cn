@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cda813db916faf4819f85d3d09213679fba2eeec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63459994"
 ---
 # <a name="add-new-rows-in-the-results-pane-visual-database-tools"></a>在“结果”窗格中添加新行 (Visual Database Tools)
@@ -47,14 +47,14 @@ ms.locfileid: "63459994"
   
 4.  离开该行可以将其提交到数据库。  
   
- 如果在保存行时出错，查询和视图数据库设计器将显示一条消息，然后返回到您所编辑的行。 然后，您可以：  
+ 如果在保存行时出错，查询和视图数据库设计器将显示一条消息，然后返回到您所编辑的行。 然后，可以：  
   
 -   通过对该行进行进一步的编辑以解决错误。  
   
 -   按 Esc 取消编辑。 如果在已经进行了更改的某个单元格中按 Esc，则将取消对该单元格所做的更改。 如果在未进行更改的单元格中按 Esc，则将取消对整个行所做的更改。  
   
-## <a name="see-also"></a>请参阅  
- [使用结果窗格中的数据&#40;可视化数据库工具&#41;](results-pane-visual-database-tools.md)   
+## <a name="see-also"></a>另请参阅  
+ [使用 Visual Database Tools &#40;的 "结果" 窗格中的数据&#41;](results-pane-visual-database-tools.md)   
  [执行基本的查询操作 (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

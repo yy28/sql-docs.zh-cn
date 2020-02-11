@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b7fc20f857f42c854fcf01947c39ea88206bb5b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63264884"
 ---
 # <a name="custom-report-item-class-libraries"></a>自定义报表项类库
@@ -63,7 +63,7 @@ ms.locfileid: "63264884"
 |`OnPaint`|当响应 `Paint` 事件时调用。|  
   
 ### <a name="microsoftreportdesignercustomreportitemattribute"></a>Microsoft.ReportDesigner.CustomReportItemAttribute  
- 这是用于标识自定义报表项的类型的属性。 名称必须匹配的值的 <`Name`> 的属性`ReportItem`报表设计器配置文件中的元素。  
+ 这是用于标识自定义报表项的类型的属性。 该名称必须与报表设计器配置文件中`Name` `ReportItem`元素的 <> 属性的值相匹配。  
   
 #### <a name="public-methods"></a>公共方法  
   
@@ -130,7 +130,7 @@ ms.locfileid: "63264884"
 |`DataSetName`|包含要拖放的字段的数据集的名称。|  
 |`Fields`|要拖放的字段 (`Microsoft.ReportDesigner.Field`) 的集合。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [报表定义语言 (SSRS)](../reports/report-definition-language-ssrs.md)   
  [创建自定义报表项运行时组件](creating-a-custom-report-item-run-time-component.md)   
  [创建自定义报表项设计时组件](creating-a-custom-report-item-design-time-component.md)  

@@ -1,5 +1,5 @@
 ---
-title: 数据整理示例 |Microsoft Docs
+title: 数据定形示例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,14 +13,14 @@ ms.assetid: 1bfdcad4-52e1-45bc-ad21-783657ef0a44
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a946329ad95a2b226f186e571152268baa5f37c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925666"
 ---
 # <a name="data-shaping-example"></a>数据整理示例
-以下数据整理命令演示了如何构建一种分层**记录集**从**客户**并**订单**Northwind 数据库中的表。  
+以下数据定形命令演示了如何在 Northwind 数据库的**Customers**和**Orders**表中生成分层**记录集**。  
   
 ```  
 SHAPE {SELECT CustomerID, ContactName FROM Customers}   
@@ -28,23 +28,23 @@ APPEND ({SELECT OrderID, OrderDate, CustomerID FROM Orders} AS chapOrders
 RELATE customerID TO customerID)   
 ```  
   
- 当使用此命令以打开**记录集**对象 (如中所示[Visual Basic 示例的数据整理](../../../ado/guide/data/visual-basic-example-of-data-shaping.md))，它会创建一个章节 (**chapOrders**) 返回每个记录从**客户**表。 本章包含的子集**记录集**返回从**订单**表。 **ChapOrders**章包含有关所发出的给定客户订单的所有请求的信息。 在此示例中，一章包含三列：**OrderID**， **OrderDate**，和**CustomerID**。  
+ 当使用此命令打开**记录集**对象（如[数据定形 Visual Basic 示例](../../../ado/guide/data/visual-basic-example-of-data-shaping.md)所示）时，它将为从**Customers**表返回的每个记录创建一个章节（**chapOrders**）。 本章包含从**Orders**表返回的**记录集**的一个子集。 **ChapOrders**章节包含给定客户所下订单的所有请求信息。 在此示例中，本章包含三列：**订单 id**、**订货日期**和**CustomerID**。  
   
- 所产生的形状的前两个条目**记录集**如下所示：  
+ 结果形状**记录集**的前两个条目如下所示：  
   
-|CustomerID|ContactName|OrderID|OrderDate|CustomerID|  
+|CustomerID|联系人姓名|OrderID|OrderDate|CustomerID|  
 |----------------|-----------------|-------------|---------------|----------------|  
 |ALFKI|Maria Ander|10643<br /><br /> 10692<br /><br /> 10702<br /><br /> 10835<br /><br /> 10952<br /><br /> 11011|1997-08-25<br /><br /> 1997-10-03<br /><br /> 1997-10-13<br /><br /> 1998-01-15<br /><br /> 1998-03-16<br /><br /> 1998-04-09|ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI|  
 |ANATR|Ana Trujillo|10308<br /><br /> 10625<br /><br /> 10759<br /><br /> 10926|1996-09-18<br /><br /> 1997-08-08<br /><br /> 1997-11-28<br /><br /> 1998-03-04|ANATR<br /><br /> ANATR<br /><br /> ANATR<br /><br /> ANATR|  
   
- 在形状命令中，追加用于创建子级**记录集**与父**记录集**（因为特定于提供程序的命令已讨论的形状关键字后立即返回早） 通过 RELATE 子句。 父级和子级通常共同具有至少一列：中的父行的列的值为子级的所有行中的列的值相同。  
+ 在 SHAPE 命令中，APPEND 用于创建与父**记录集**相关的子**记录集**（与在前面讨论的 "SHAPE" 关键字之后的特定于提供程序的命令返回的子记录集）。 父节点和子节点通常至少具有一个公共列：父级的行中的列的值与子的所有行中的列的值相同。  
   
- 没有使用形状命令的第二个方法： 即生成一个父级**记录集**来自子元素**记录集**。 子组织单位中的记录**记录集**进行分组，通常使用 BY 子句和一个行添加到父**记录集**子组织单位中每个生成组。 如果省略了 BY 子句，则子**记录集**单个组和父级将窗体**记录集**将包含一个行。 这可用于对整个子计算"总计"聚合**记录集**。  
+ 还有另一种使用形状命令的方法：即，从子**记录集**生成父**记录集**。 子**记录集中**的记录通常通过使用 by 子句进行分组，并向子记录集中的每个结果组的父记录**集**添加一行。 如果省略了 BY 子句，则子**记录集**将形成单个组并且父**记录集**将只包含一行。 这对于计算整个子**记录集**的 "总计" 聚合很有用。  
   
- 形状命令构造还可以以编程方式创建形状**记录集**。 然后，您可以访问的组件**记录集**以编程方式或通过相应的可视化控件。 形状命令发出类似于任何其他 ADO 命令文本。 有关详细信息，请参阅[形状的命令通常](../../../ado/guide/data/shape-commands-in-general.md)。  
+ 使用 SHAPE command 构造，还可以以编程方式创建形状**记录集**。 然后，你可以通过编程方式或通过适当的视觉对象访问该**记录集**的组件。 像任何其他 ADO 命令文本一样发出一个 shape 命令。 有关详细信息，请参阅[常规的形状命令](../../../ado/guide/data/shape-commands-in-general.md)。  
   
- 无论采用哪种方式父级**记录集**是格式正确，它将包含用于相关的一个子级的章节列**记录集**。 如果你想，父级**记录集**还可以包含聚合 （SUM、 MIN、 MAX 等） 的列的子行。 父级和子级**记录集**可以有包含在中的行的表达式中的列**记录集**，以及列即新建和最初为空。  
+ 无论父**记录集**的构成方式如何，它都将包含一个用于将其与子**记录集**相关联的章节列。 如果需要，父**记录集**还可以具有在子行上包含聚合（SUM、MIN、MAX 等）的列。 父**记录集和子记录集**的列都可以包含**记录集中**行的表达式，还可以包含新的和初始为空的列。  
   
- 本部分继续执行下面的主题。  
+ 本部分继续介绍以下主题。  
   
 -   [Visual Basic 数据整理示例](../../../ado/guide/data/visual-basic-example-of-data-shaping.md)

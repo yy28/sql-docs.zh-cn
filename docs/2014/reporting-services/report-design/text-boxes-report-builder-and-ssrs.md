@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fb96831c54a67a6ea74ca984cb346dcaaf50a335
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104633"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>文本框（报表生成器和 SSRS）
@@ -28,7 +28,7 @@ ms.locfileid: "66104633"
 > [!NOTE]  
 >  如果将报表数据集字段值直接拖到报表设计图面或报表设计图面上的文本框中，则在运行报表时只能看到结果集中的第一个值。 若要看到某个字段的所有值，必须将该字段拖到表或矩阵内的单元中。 这样，在您运行报表时，将看到该字段中的所有值。  
   
- 若要以自由格式布局显示重复的文本，请在列表数据区域中放置一个文本框。 如果想对多个值重复某窗体，例如为每个客户重复一次客户发票窗体，请使用列表。 有关详细信息，请参阅[列出了&#40;报表生成器和 SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)。  
+ 若要以自由格式布局显示重复的文本，请在列表数据区域中放置一个文本框。 如果想对多个值重复某窗体，例如为每个客户重复一次客户发票窗体，请使用列表。 有关详细信息，请参阅[列出 &#40;报表生成器和 SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)。  
   
  如果想控制文本框布局和最后一个文本框下面的空白，请使用矩形容器。 有关详细信息，请参阅[矩形和线条（报表生成器和 SSRS）](rectangles-and-lines-report-builder-and-ssrs.md)。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66104633"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="GrowShrinkTextBox"></a> 扩大和收缩文本框  
+##  <a name="GrowShrinkTextBox"></a>增大和收缩文本框  
  默认情况下，文本框的大小是固定的。 您可以允许文本框基于其内容垂直收缩或扩展。 有关详细信息，请参阅 [允许文本框扩大或收缩（报表生成器和 SSRS）](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)的详细信息。  
   
 ## <a name="orienting-a-text-box"></a>确定文本框的方向  
@@ -53,18 +53,18 @@ ms.locfileid: "66104633"
   
  方向是对文本框设置的并且适用于文本框中的所有文本。 不能为文本框的各个部分指定不同的方向。  
   
- 若要快速开始使用更改文本方向，请参阅中关于旋转文本的部分[教程：设置文本格式（报表生成器）](../tutorial-format-text-report-builder.md)。 有关详细信息，请参阅[设置文本框方向&#40;报表生成器和 SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md)。  
+ 若要快速开始更改文本方向，请参阅教程中有关旋转文本的部分[：设置文本格式 &#40;报表生成器&#41;](../tutorial-format-text-report-builder.md)。 有关详细信息，请参阅[设置文本框方向 &#40;报表生成器和 SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md)。  
   
 ##  <a name="HowTo"></a> 操作指南主题  
- [添加、移动或删除文本框（报表生成器和 SSRS）](add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  
+ [添加、移动或删除文本框 &#40;报表生成器和 SSRS&#41;](add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  
   
  [设置文本框中文本的格式（报表生成器和 SSRS）](format-text-in-a-text-box-report-builder-and-ssrs.md)  
   
- [设置文本框方向（报表生成器和 SSRS）](set-text-box-orientation-report-builder-and-ssrs.md)  
+ [设置文本框方向 &#40;报表生成器和 SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md)  
   
- [允许文本框扩大或收缩（报表生成器和 SSRS）](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)  
+ [允许文本框扩大或收缩 &#40;报表生成器和 SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [设置文本和占位符的格式（报表生成器和 SSRS）](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [设置数字和日期格式（报表生成器和 SSRS）](formatting-numbers-and-dates-report-builder-and-ssrs.md)  
   

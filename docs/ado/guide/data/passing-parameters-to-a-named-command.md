@@ -14,16 +14,16 @@ ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9799fb3f05871c16cfcd8edb5f2a50c6f7792978
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924694"
 ---
 # <a name="passing-parameters-to-a-named-command"></a>将参数传递给命名命令
-只需命令的结果作为传递*出*变量的已命名的命令参数已参数化的命令可为传入的*中*命名命令的变量。  
+正如命令的结果作为命名命令的*out*变量传递外，参数化命令的参数可以作为*in*变量传入命名命令。  
   
- 下面的代码示例尝试检索所有订单放置客户通过其**CustomerID**是来自 Northwind 数据库的"ALKFI"。 值**CustomerID**在调用已命名的命令时提供。  
+ 下面的代码示例尝试检索客户（其**CustomerID**为 "ALKFI"）在 Northwind 数据库中所下的所有订单。 在调用命名命令时，将提供**CustomerID**的值。  
   
 ```  
 Const DS = "MySqlServer"  
@@ -76,21 +76,21 @@ Set objConn = Nothing
 Set objComm = Nothing  
 ```  
   
- 请注意，所有输入的参数必须在之前的任何输出变量和参数的数据类型必须匹配或可以转换为与相应的字段。 以下语句-  
+ 请注意，所有输入参数必须位于任何输出变量之前，且参数的数据类型必须匹配或可以转换为相应字段的数据类型。 以下语句-  
   
 ```  
 objConn.GetOrdersOf 12345, objRs  
 ```  
   
- -将导致错误的数据类型不匹配，因为必需的输入的参数的**字符串**类型，不是**整数**类型。  
+ -将导致数据类型不匹配的错误，因为所需的输入参数为**字符串**类型，而不是**整数**类型。  
   
- 以下调用-  
+ 以下调用  
   
 ```  
 objConn.GetOrdersOf "12345", objRs  
 ```  
   
- -虽然有效，但会产生空结果集，因为在数据库中不存在任何此类记录。  
+ -有效，但将产生空的结果集，因为数据库中不存在此类记录。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

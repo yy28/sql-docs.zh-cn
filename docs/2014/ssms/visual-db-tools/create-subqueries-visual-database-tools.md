@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e68809c7551e3c6711fadd9973c472dcb4e90307
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63270623"
 ---
 # <a name="create-subqueries-visual-database-tools"></a>创建子查询 (Visual Database Tools)
@@ -30,9 +30,9 @@ ms.locfileid: "63270623"
   
 1.  创建主查询。  
   
-2.  在 SQL 窗格中选择 SQL 语句，然后使用“复制”将该查询移动到剪贴板中。  
+2.  在 SQL 窗格中选择 SQL 语句，然后使用“复制”  将该查询移动到剪贴板中。  
   
-3.  启动新查询，然后使用“粘贴”将第一个查询移动到新查询的 WHERE 或 FROM 子句中。  
+3.  启动新查询，然后使用“粘贴”  将第一个查询移动到新查询的 WHERE 或 FROM 子句中。  
   
      例如，假设有两个表（`products` 和 `suppliers`），您希望创建显示瑞典供应商的所有产品的查询。 在 `suppliers` 表中创建第一个查询以查找所有的瑞典供应商：  
   
@@ -60,8 +60,8 @@ ms.locfileid: "63270623"
       WHERE (country = 'Sweden'))  
     ```  
   
-## <a name="see-also"></a>请参阅  
- [支持的查询类型&#40;可视化数据库工具&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>另请参阅  
+ [Visual Database Tools &#40;支持的查询类型&#41;](visual-database-tools.md)   
  [指定搜索条件 (Visual Database Tools)](specify-search-criteria-visual-database-tools.md)  
   
   

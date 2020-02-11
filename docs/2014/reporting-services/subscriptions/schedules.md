@@ -18,36 +18,36 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 12096cd9269718f9eb75ca4fcbd1dbc11e25e6c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100748"
 ---
-# <a name="schedules"></a>“计划”
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了共享计划和报表特定计划，可帮助您控制报表的处理和分发。 这两种计划类型之间的区别在于对它们进行定义、存储和管理的方式。 这两种类型的计划的内部构造是相同的。 所有计划都指定一种重复执行类型：每月、每周或每日。 在重复执行类型中，您将为事件发生的频率设置间隔和范围。 无论您创建的是共享计划还是报表特定计划，重复执行模式的类型以及指定那些模式的方式是相同的。  
+# <a name="schedules"></a>计划
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了“共享计划”和“报表特定计划”，可帮助控制报表的处理和分发   。 这两种计划类型之间的区别在于对它们进行定义、存储和管理的方式。 这两种类型的计划的内部构造是相同的。 所有计划都指定一种重复执行类型：每月、每周或每日。 在重复执行类型中，您将为事件发生的频率设置间隔和范围。 无论您创建的是共享计划还是报表特定计划，重复执行模式的类型以及指定那些模式的方式是相同的。  
   
  本主题内容：  
   
--   [可以对计划执行哪些操作](#bkmk_whatyoucando)  
+-   [可对计划执行的操作](#bkmk_whatyoucando)  
   
--   [比较计划共享和报表特定计划](#bkmk_compare)  
+-   [比较共享计划和报表特定计划](#bkmk_compare)  
   
 -   [配置数据源](#bkmk_configuredatasources)  
   
 -   [存储凭据和处理帐户](#bkmk_credentials)  
   
--   [如何计划和传递处理的工作原理](#bkmk_how_scheduling_works)  
+-   [计划和传递处理的工作原理](#bkmk_how_scheduling_works)  
   
--   [服务器依赖关系](#bkmk_serverdependencies)  
+-   [服务器依赖项](#bkmk_serverdependencies)  
   
--   [停止 SQL Server 代理的影响](#bkmk_stoppingagent)  
+-   [停止 SQL Server 代理的效果](#bkmk_stoppingagent)  
   
 -   [停止报表服务器服务的影响](#bkmk_stoppingservice)  
   
   
 ##  <a name="bkmk_whatyoucando"></a> 可对计划执行的操作  
- 可以使用本机模式下的报表管理器或 SharePoint 模式下的 SharePoint 站点管理页来创建和管理计划。 您可以：  
+ 可以使用本机模式下的报表管理器或 SharePoint 模式下的 SharePoint 站点管理页来创建和管理计划。 可以：  
   
 -   计划标准订阅或数据驱动订阅中的报表传递时间。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "66100748"
 ##  <a name="bkmk_credentials"></a> 存储凭据和处理帐户  
  您对计划的处理权限取决于您的角色分配中的任务。 如果使用预定义角色，则作为“内容管理员”和“系统管理员”的用户可以创建和管理任何计划。 如果您使用自定义角色分配，角色分配必须包括支持计划操作的任务。  
   
-|执行的操作|包括此任务|本机模式预定义角色|SharePoint 模式组|  
+|要执行此操作|包括此任务|本机模式预定义角色|SharePoint 模式组|  
 |----------------|-----------------------|----------------------------------|----------------------------|  
 |创建、修改或删除共享计划|管理共享计划|系统管理员|所有者|  
 |选择共享计划|查看共享计划|系统用户|成员|  
@@ -128,7 +128,7 @@ ms.locfileid: "66100748"
  Reporting Services 维护一个针对所有计划操作的事件队列。 它定期轮询队列，检查是否有新事件。 默认情况下，每隔 10 秒扫描一次队列。 通过修改 RSReportServer.config 文件中的 `PollingInterval`、`IsNotificationService` 和 `IsEventService` 配置设置可以更改此间隔。 SharePoint 模式还将 RSreporserver.config 用于这些设置，并且值应用于所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序。 有关详细信息，请参阅 [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)。  
   
 ##  <a name="bkmk_serverdependencies"></a> 服务器依赖关系  
- 计划和传递处理器需要启动报表服务器服务和 SQL Server 代理。 计划和传递处理功能必须通过启用`ScheduleEventsAndReportDeliveryEnabled`的属性**Reporting Services 的外围应用配置**中基于策略的管理方面。 SQL Server 代理和报表服务器服务必须都在运行，才能执行计划的操作。  
+ 计划和传递处理器需要启动报表服务器服务和 SQL Server 代理。 必须通过基于策略的管理中 "Reporting Services" 方面`ScheduleEventsAndReportDeliveryEnabled`的 "**外围应用配置**器" 的属性启用 "计划和传递处理" 功能。 SQL Server 代理和报表服务器服务必须都在运行，才能执行计划的操作。  
   
 > [!NOTE]  
 >  可以使用 **Reporting Services 的外围应用配置器** 方面临时或永久停止计划操作。 虽然可以创建并部署自定义传递扩展插件，但是计划和传递处理器本身不是可扩展的。 该工具管理事件和通知的方式是不可更改的。 关于关闭功能的详细信息，请参阅 **Turn Reporting Services Features On or Off** 中的 [“预定的事件和传递”](../report-server/turn-reporting-services-features-on-or-off.md)一节。  
@@ -142,7 +142,7 @@ ms.locfileid: "66100748"
 ###  <a name="bkmk_stoppingservice"></a> 停止报表服务器服务的影响  
  如果停止报表服务器服务，SQL Server 代理会继续向队列中添加报表处理请求。 来自 SQL Server 代理的状态信息将指示作业成功。 但是，由于报表服务器服务已停止，因此实际上不会发生报表处理。 在您重新启动报表服务器服务之前，请求将在队列中一直累积。 重新启动报表服务器服务后，将按顺序处理队列中的所有报表处理请求。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建、修改和删除报表历史记录中的快照](../report-server/create-modify-and-delete-snapshots-in-report-history.md)   
  [订阅和传递 (Reporting Services)](subscriptions-and-delivery-reporting-services.md)   
  [Data-Driven Subscriptions](data-driven-subscriptions.md)   

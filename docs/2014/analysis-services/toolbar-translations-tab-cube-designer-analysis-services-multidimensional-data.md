@@ -1,5 +1,5 @@
 ---
-title: 工具栏 （翻译选项卡，多维数据集设计器） (Analysis Services-多维数据) |Microsoft Docs
+title: 工具栏（"翻译" 选项卡，多维数据集设计器）（Analysis Services 多维数据） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 316263c823c371d4c90415d694adcadef26f2030
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065943"
 ---
 # <a name="toolbar-translations-tab-cube-designer-analysis-services---multidimensional-data"></a>工具栏（“翻译”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
@@ -22,11 +22,11 @@ ms.locfileid: "66065943"
   
 ## <a name="options"></a>选项  
   
-|Option|Description|  
+|选项|说明|  
 |------------|-----------------|  
 |**添加商业智能**|单击此项可显示 **“商业智能向导”** ，并向多维数据集添加商业智能功能。|  
-|**处理**|单击此项可显示 **“处理”** 对话框，并处理所选多维数据集。|  
+|**进程**|单击此项可显示 **“处理”** 对话框，并处理所选多维数据集。|  
 |**新建翻译**|单击此项可以在所选多维数据集中创建新翻译。|  
-|**删除翻译**|单击此项可显示 **“删除对象”** 对话框并删除所选翻译。<br /><br /> 注意：仅当中选中了翻译时，才启用此选项**翻译详细信息**窗格。|  
+|**删除翻译**|单击此项可显示 **“删除对象”** 对话框并删除所选翻译。<br /><br /> 注意：只有在“翻译详细信息” **** 窗格中选中了翻译时，才会启用此选项。|  
   
   

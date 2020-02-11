@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0ebe093973174fe1e245ced134888d3e10417467
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478842"
 ---
 # <a name="recursive-hierarchies-master-data-services"></a>递归层次结构 (Master Data Services)
@@ -46,7 +46,7 @@ ms.locfileid: "65478842"
   
 -   派生层次结构不能包含多个递归关系。 但是，它可以具有其他派生关系（例如，包含“经理到雇员”递归关系的派生层次结构还可以具有“国家/地区到经理”关系和“雇员到商店”关系）。  
   
--   不能将成员权限（在“层次结构成员”  选项卡上）分配给递归层次结构中的成员。  
+-   不能将成员权限（在“层次结构成员”**** 选项卡上）分配给递归层次结构中的成员。  
   
 -   递归层次结构不能包括循环关系。 例如，如果 Sandeep 是 Katherine 的经理，则 Katherine 不能是 Sandeep 的经理。 此外，Katherine 不能管理她自己。  
   
@@ -54,14 +54,14 @@ ms.locfileid: "65478842"
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|创建派生层次结构。|[创建派生层次结构 (Master Data Services)](create-a-derived-hierarchy-master-data-services.md)|  
-|更改现有派生层次结构的名称。|[更改派生层次结构名称 (Master Data Services)](../../2014/master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
-|删除现有派生层次结构。|[删除派生层次结构 (Master Data Services)](../../2014/master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
+|创建派生层次结构。|[创建派生层次结构 &#40;Master Data Services&#41;](create-a-derived-hierarchy-master-data-services.md)|  
+|更改现有派生层次结构的名称。|[更改派生层次结构名称 &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
+|删除现有派生层次结构。|[删除派生层次结构 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
   
 ## <a name="related-content"></a>相关内容  
   
--   [基于域的属性 (Master Data Services)](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
+-   [基于域的属性 &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
   
--   [派生层次结构 (Master Data Services)](../../2014/master-data-services/derived-hierarchies-master-data-services.md)  
+-   [派生层次结构 &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)  
   
   

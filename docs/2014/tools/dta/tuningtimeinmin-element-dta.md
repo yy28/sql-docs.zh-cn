@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c30c6a4f746ae9aa81b8c1a71c0e380bdd26df03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63268158"
 ---
 # <a name="tuningtimeinmin-element-dta"></a>TuningTimeInMin 元素 (DTA)
@@ -36,9 +36,10 @@ ms.locfileid: "63268158"
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|Description|  
+|特征|说明|  
 |--------------------|-----------------|  
-|**数据类型和长度**|`unsignedInt`，长度没有限制。|  
+|**数据类型和长度**|
+  `unsignedInt`，长度没有限制。|  
 |**默认值**|480 分钟（8 小时）。|  
 |**出现次数**|除非已为 `NumberOfEvents` 元素指定了一个值，否则为必需项。|  
   
@@ -47,11 +48,11 @@ ms.locfileid: "63268158"
 |关系|元素|  
 |------------------|--------------|  
 |**父元素**|[TuningOptions 元素 (DTA)](tuningoptions-element-dta.md)|  
-|**子元素**|None|  
+|**子元素**|无|  
   
 ## <a name="example"></a>示例  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>说明  
  以下代码示例显示如何将 12 个小时设置为最长优化时间：  
   
 ## <a name="code"></a>代码  
@@ -66,7 +67,7 @@ ms.locfileid: "63268158"
 </DTAInput>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [XML 输入文件引用（数据库引擎优化顾问）](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

@@ -15,13 +15,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: af5bbc51420d8f32144bc91f687ae58b86d10d52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479398"
 ---
 # <a name="derived-hierarchies-master-data-services"></a>派生层次结构 (Master Data Services)
+  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 派生层次结构从在模型的实体之间已存在的基于域的属性关系中派生。  
   
  您可以创建一个派生层次结构，以便突出显示模型中任何现有的基于域的属性关系。  
@@ -53,11 +54,11 @@ ms.locfileid: "65479398"
   
  该层次结构显示如何对成员进行分组。 具有最多成员的实体位于底部。  
   
- ![从模型结构派生的层次结构](../../2014/master-data-services/media/mds-conc-derived-hierarchy-structure.gif "Hierarchy Derived from Model Structure")  
+ ![从模型结构派生的层次结构](../../2014/master-data-services/media/mds-conc-derived-hierarchy-structure.gif "从模型结构派生的层次结构")  
   
  在派生层次结构中，可以突出显示 Product 和 Subcategory 之间的关系，然后突出显示 Subcategory 和 Category 之间的关系。 当您查看此层次结构中的成员时，在树的每个级别中包含同一实体中的成员。  
   
- ![山地自行车派生层次结构示例](../../2014/master-data-services/media/mds-conc-derived-hierarchy-example.gif "Mountain Bike Derived Hierarchy Example")  
+ ![山地车派生层次结构示例](../../2014/master-data-services/media/mds-conc-derived-hierarchy-example.gif "山地车派生层次结构示例")  
   
  这种类型的层次结构防止将成员移到无效的级别。 例如，可以将 Road-650 自行车从子类别“公路自行车”移到另一个子类别“山地车”。 不能直接将 Road-650 移到某个类别下，如 1 {自行车}。 每次在层次结构树中移动成员时，将更改该成员基于域的属性值以反映移动。  
   
@@ -70,22 +71,22 @@ ms.locfileid: "65479398"
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|创建新的派生层次结构。|[创建派生层次结构 (Master Data Services)](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
-|隐藏或删除现有派生层次结构中的级别。|[隐藏或删除派生层次结构中的级别 (Master Data Services)](../../2014/master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md)|  
-|更改现有派生层次结构的名称。|[更改派生层次结构名称 (Master Data Services)](../../2014/master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
-|删除现有派生层次结构。|[删除派生层次结构 (Master Data Services)](../../2014/master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
+|创建新的派生层次结构。|[创建派生层次结构 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
+|隐藏或删除现有派生层次结构中的级别。|[隐藏或删除派生层次结构中的级别 &#40;Master Data Services&#41;](../../2014/master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md)|  
+|更改现有派生层次结构的名称。|[更改派生层次结构名称 &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
+|删除现有派生层次结构。|[删除派生层次结构 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
 |||  
   
 ## <a name="related-content"></a>相关内容  
   
--   [基于域的属性 (Master Data Services)](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
+-   [基于域的属性 &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
   
--   [显式层次结构 (Master Data Services)](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
+-   [显式层次结构 &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   
--   [递归层次结构 (Master Data Services)](../../2014/master-data-services/recursive-hierarchies-master-data-services.md)  
+-   [递归层次结构 &#40;Master Data Services&#41;](../../2014/master-data-services/recursive-hierarchies-master-data-services.md)  
   
--   [具有显式顶端的派生层次结构 (Master Data Services)](../../2014/master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
+-   [具有显式大写字母 &#40;Master Data Services 的派生层次结构&#41;](../../2014/master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
   
--   [集合 (Master Data Services)](../../2014/master-data-services/collections-master-data-services.md)  
+-   [集合 &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
   
   

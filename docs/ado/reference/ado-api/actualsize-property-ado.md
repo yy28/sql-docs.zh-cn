@@ -1,5 +1,5 @@
 ---
-title: ActualSize 属性 (ADO) |Microsoft Docs
+title: ActualSize 属性（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,27 +16,27 @@ ms.assetid: 722803d0-cef5-4d4c-b79d-3f2f58052229
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6d405113044d10244d8c4fc3483c6220bf630dc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921421"
 ---
 # <a name="actualsize-property-ado"></a>ActualSize 属性 (ADO)
-指示字段的值以字节为单位的实际长度。  
+指示字段值的实际长度（以字节为单位）。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
- 返回**长**值。  
+ 返回一个**长整型**值。  
   
 ## <a name="remarks"></a>备注  
- 使用**ActualSize**属性返回的实际长度[字段](../../../ado/reference/ado-api/field-object.md)对象的值。 为所有字段**ActualSize**属性是只读的。 如果 ADO 无法确定的长度**字段**对象的值**ActualSize**属性返回**adUnknown**。  
+ 使用**ActualSize**属性可以返回[字段](../../../ado/reference/ado-api/field-object.md)对象的值的实际长度。 对于所有字段， **ActualSize**属性是只读的。 如果 ADO 无法确定**字段**对象的值的长度，则**ActualSize**属性将返回**adUnknown**。  
   
- **ActualSize**并[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)属性有所不同，如下面的示例中所示。 一个**字段**对象的声明的类型**adVarChar** ，并返回最大长度 50 个字符**DefinedSize**属性值为 50，但**ActualSize**它将返回的属性值是当前记录的字段中存储的数据的长度。 **字段**与**DefinedSize**大于 255 个字节将被视为可变长度列。  
+ **ActualSize**和[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)属性不同，如以下示例中所示。 声明类型为**adVarChar**且最大长度为50个字符的**Field**对象将返回**DefinedSize**属性值50，但它返回的**ActualSize**属性值是存储在当前记录的字段中的数据的长度。 **DefinedSize**大于255字节的**字段**将被视为可变长度列。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [字段对象](../../../ado/reference/ado-api/field-object.md)  
   
-## <a name="see-also"></a>请参阅  
- [ActualSize 和 DefinedSize 属性示例 (VB)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vb.md)   
- [ActualSize 和 DefinedSize 属性示例 （VC + +）](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vc.md)   
+## <a name="see-also"></a>另请参阅  
+ [ActualSize 和 DefinedSize 属性示例（VB）](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vb.md)   
+ [ActualSize 和 DefinedSize 属性示例（VC + +）](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vc.md)   
  [DefinedSize 属性](../../../ado/reference/ado-api/definedsize-property.md)

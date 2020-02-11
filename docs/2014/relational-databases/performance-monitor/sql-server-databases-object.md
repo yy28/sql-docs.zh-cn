@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b4c0c7a5626f3eb48509d7a4cfbf239f7cb931da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250651"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server，Databases 对象
@@ -29,38 +29,38 @@ ms.locfileid: "63250651"
   
  下表说明了 SQL Server **Databases** 计数器。  
   
-|SQL Server Databases 计数器|描述|  
+|SQL Server Databases 计数器|说明|  
 |-----------------------------------|-----------------|  
 |**Active Transactions**|数据库的活动事务数。|  
 |**Backup/Restore Throughput/sec**|每秒数据库的备份和还原操作的读取/写入吞吐量。 例如，并行使用多个备份设备或使用更快的设备时，可以测量数据库备份操作性能的变化情况。 数据库的备份或还原操作的吞吐量可以确定备份和还原操作的进程和性能。|  
-|**Bulk Copy Rows/sec**|每秒大容量复制的行数。|  
-|**Bulk Copy Throughput/sec**|每秒大容量复制的数据量 (KB)。|  
-|**Commit table entries**|数据库提交表的内存中部分的大小。 有关详细信息，请参阅 [sys.dm_tran_commit_table (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/change-tracking-sys-dm-tran-commit-table)。|  
-|**Data File(s) Size (KB)**|数据库中所有数据文件的累计大小 (KB)，包括任何自动增长。 监视此计数器非常有用，例如可以确定 **tempdb**的准确大小。|  
-|**DBCC Logical Scan Bytes/sec**|每秒数据库控制台命令 (DBCC) 的逻辑读取扫描字节数。|  
+|**大容量复制行数/秒**|每秒大容量复制的行数。|  
+|**大容量复制吞吐量/秒**|每秒大容量复制的数据量 (KB)。|  
+|**提交表项**|数据库提交表的内存中部分的大小。 有关详细信息，请参阅 [sys.dm_tran_commit_table (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/change-tracking-sys-dm-tran-commit-table)。|  
+|**数据文件大小（KB）**|数据库中所有数据文件的累计大小 (KB)，包括任何自动增长。 监视此计数器非常有用，例如可以确定 **tempdb**的准确大小。|  
+|**DBCC 逻辑扫描字节数/秒**|每秒数据库控制台命令 (DBCC) 的逻辑读取扫描字节数。|  
 |**Log Cache Hit Ratio**|日志缓存所满足的日志缓存读取数所占的百分比。|  
-|**Log Cache Reads/sec**|每秒通过日志管理器缓存执行的读取数。|  
-|**Log File(s) Size (KB)**|数据库中所有事务日志文件的累计大小 (KB)。|  
-|**Log File(s) Used Size (KB)**|数据库中所有日志文件的累计已用大小。|  
-|**Log Flush Wait Time**|刷新日志的总等待时间（毫秒）。 在 AlwaysOn 辅助数据库上，此值表示日志记录强制写入磁盘的等待时间。|  
-|**Log Flush Waits/sec**|每秒等待日志刷新的提交数目。|  
-|**Log Flush Write Time (ms)**|执行在最后一秒完成的写入日志刷新信息的时间（毫秒）。|  
-|**Log Flushes/sec**|每秒日志刷新数目。|  
-|**Log Growths**|数据库事务日志增长的总次数。|  
+|**日志缓存读取数/秒**|每秒通过日志管理器缓存执行的读取数。|  
+|**日志文件大小（KB）**|数据库中所有事务日志文件的累计大小 (KB)。|  
+|**已用日志文件大小（KB）**|数据库中所有日志文件的累计已用大小。|  
+|**日志刷新等待时间**|刷新日志的总等待时间（毫秒）。 在 AlwaysOn 辅助数据库上，此值表示日志记录强制写入磁盘的等待时间。|  
+|**日志刷新等待数/秒**|每秒等待日志刷新的提交数目。|  
+|**日志刷新写入时间（毫秒）**|执行在最后一秒完成的写入日志刷新信息的时间（毫秒）。|  
+|**日志刷新次数/秒**|每秒日志刷新数目。|  
+|**日志增长总数**|数据库事务日志增长的总次数。|  
 |**Log Shrinks**|数据库事务日志收缩的总次数。|  
-|**Log Pool Cache Misses/sec**|日志块在日志池中不可用的请求数。 “日志池”  是事务日志的内存中缓存。 这种缓存用于优化对恢复、事务复制、回滚和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]日志的读取操作。|  
-|**Log Pool Disk Reads/sec**|日志池发出的提取日志块的磁盘读取数。|  
-|**Log Pool Requests/sec**|日志池处理的日志块请求数。|  
+|**日志池缓存未命中数/秒**|日志块在日志池中不可用的请求数。 “日志池”** 是事务日志的内存中缓存。 这种缓存用于优化对恢复、事务复制、回滚和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]日志的读取操作。|  
+|**日志池磁盘读取次数/秒**|日志池发出的提取日志块的磁盘读取数。|  
+|**日志池请求数/秒**|日志池处理的日志块请求数。|  
 |**Log Truncations**|已收缩事务日志的次数。|  
-|**Percent Log Used**|日志中已用空间所占的百分比。|  
-|**Repl.Pending Xacts**|发布数据库事务日志中已做复制标记但尚未传递到分发数据库的事务数。|  
-|**Repl.Trans.Rate**|每秒从发布数据库事务日志中读出并传递到分发数据库的事务数。|  
-|**Shrink Data Movement Bytes/sec**|每秒由自动收缩操作或者 DBCC SHRINKDATABASE 或 DBCC SHRINKFILE 语句移动的数据量。|  
-|**Tracked transactions/sec**|数据库提交表中记录的已提交的事务数。|  
-|**Transactions/sec**|每秒为数据库启动的事务数。<br /><br /> **Transactions/sec** 不对仅限 XTP 的事务（本机编译存储过程启动的事务）进行计数。|  
-|**Write Transactions/sec**|在上一秒钟内写入数据库并提交的事务数。|  
+|**使用的日志百分比**|日志中已用空间所占的百分比。|  
+|**正在等待个事务**|发布数据库事务日志中已做复制标记但尚未传递到分发数据库的事务数。|  
+|**Repl. Trans. Rate**|每秒从发布数据库事务日志中读出并传递到分发数据库的事务数。|  
+|**收缩数据移动字节数/秒**|每秒由自动收缩操作或者 DBCC SHRINKDATABASE 或 DBCC SHRINKFILE 语句移动的数据量。|  
+|**跟踪的事务数/秒**|数据库提交表中记录的已提交的事务数。|  
+|**每秒事务数**|每秒为数据库启动的事务数。<br /><br /> **每秒事务**数不会对仅限 XTP 的事务（本机编译存储过程启动的事务）进行计数。|  
+|**写入事务数/秒**|在上一秒钟内写入数据库并提交的事务数。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [监视资源使用情况（系统监视器）](monitor-resource-usage-system-monitor.md)   
  [SQL Server，数据库副本](sql-server-database-replica.md)  
   

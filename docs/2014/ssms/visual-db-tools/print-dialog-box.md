@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8019f762d6d80ced2688f0e93f7ad0e0a29bd3f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63313023"
 ---
 # <a name="print-dialog-box"></a>“打印”对话框
@@ -26,13 +26,13 @@ ms.locfileid: "63313023"
  **名称**  
  指定打印机。 从列表中选择打印机。 您选择的打印机将成为默认打印机，直至您关闭 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或选择另一不同的打印机。 在列表下方字段中显示的信息适用于所选打印机。  
   
- **“状态”**  
+ **Status**  
  描述所选打印机的状态，例如：忙或准备就绪。  
   
- **类型**  
+ 类型   
  标识所选打印机。  
   
- **位置**  
+ **Where**  
  标识所选打印机的位置及其使用的打印机端口。  
   
  **注释**  

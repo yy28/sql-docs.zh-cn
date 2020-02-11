@@ -13,37 +13,37 @@ ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a5f28b5d593524288a755f4c9455bba39554d7bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924819"
 ---
 # <a name="namespaces"></a>命名空间
-XML 暂留格式在 ADO 中使用以下四个命名空间。  
+ADO 中的 XML 持久性格式使用以下四个命名空间。  
   
 ## <a name="remarks"></a>备注  
- XML 暂留格式在 ADO 中使用以下四个命名空间。  
+ ADO 中的 XML 持久性格式使用以下四个命名空间。  
   
-|前缀|描述|  
+|前缀|说明|  
 |------------|-----------------|  
-|s|引用包含的元素和属性定义当前记录集的架构的"XML 数据"命名空间。|  
-|dt|引用的数据类型定义规范。|  
-|rs|引用的命名空间包含元素和属性特定于 ADO 记录集属性和属性。|  
-|z|引用的当前行集架构。|  
+|s|引用 "XML 数据" 命名空间，其中包含定义当前记录集的架构的元素和属性。|  
+|dt|引用数据类型定义规范。|  
+|rs|引用包含特定于 ADO 记录集属性和属性的元素和属性的命名空间。|  
+|z|引用当前行集的架构。|  
   
- 客户端不应将其自身标记添加到这些命名空间，如规范所定义。 例如，客户端不应定义为一个命名空间"urn： 架构-microsoft-com:rowset"然后写出类似于"rs: MyOwnTag。" 若要了解有关命名空间的详细信息，请参阅[W3C XML 建议中的命名空间](http://www.w3.org/TR/REC-xml-names/)。  
+ 客户端不应根据规范的定义将其自己的标记添加到这些命名空间中。 例如，客户端不应将命名空间定义为 "urn：架构-microsoft com：行集"，然后写出诸如 "rs： MyOwnTag" 之类的内容。 若要了解有关命名空间的详细信息，请参阅 " [XML 中的 W3C 命名空间" 建议](http://www.w3.org/TR/REC-xml-names/)。  
   
 > [!IMPORTANT]
->  架构标记的 ID 必须是"RowsetSchema，"并使用来指代当前行集的架构的命名空间必须指向"#RowsetSchema。"  
+>  架构标记的 ID 必须是 "RowsetSchema"，并且用于引用当前行集的架构的命名空间必须指向 "#RowsetSchema"。  
   
- 请注意命名空间的冒号和等号之间的部分的前缀是任意的。  
+ 请注意，命名空间的前缀-冒号和等号之间的部分是任意的。  
   
 ```  
 xmlns:rs="urn:schemas-microsoft-com:rowset"  
 ```  
   
- 用户可以定义这是任何名称，只要整个 XML 文档一致地使用此名称。 ADO 始终写出"s、"rs、"dt，"并"z，"但这些前缀名称不是硬编码到加载组件。  
+ 用户可以将此名称定义为任何名称，只要该名称在整个 XML 文档中始终使用。 ADO 始终写出 "s"、"rs"、"dt" 和 "z"，但这些前缀名称未硬编码为加载组件。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [以 XML 格式保留记录](../../../ado/guide/data/persisting-records-in-xml-format.md)

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 32b46265b5da376bc974b55c48bf54bad88917d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102162"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>在报表服务器上配置基本身份验证
@@ -38,7 +38,7 @@ ms.locfileid: "66102162"
   
 1.  在文本编辑器中打开 RSReportServer.config。  
   
-     该文件位于 *\<驱动器 >:* \Program Files\Microsoft SQL Server\MSRS12。MSSQLSERVER\Reporting Services\ReportServer。  
+     文件位于* \<驱动器>：* \Program Files\Microsoft SQL Server\MSRS12。MSSQLSERVER\Reporting Services\reportserver。  
   
 2.  查找 <`Authentication`>。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66102162"
           </AuthenticationTypes>  
     ```  
   
-4.  将它粘贴到的现有条目 <`Authentication`>。  
+4.  将其粘贴到 <`Authentication`> 的现有条目上。  
   
      如果使用的是多个身份验证类型，则只能添加 `RSWindowsBasic` 元素，而不能删除 `RSWindowsNegotiate`、`RSWindowsNTLM` 或 `RSWindowsKerberos` 的条目。  
   
@@ -73,9 +73,9 @@ ms.locfileid: "66102162"
   
      请注意，不能将 `Custom` 与其他身份验证类型一起使用。  
   
-5.  空值替换为 <`Realm`> 或 <`DefaultDomain`> 对您环境有效的值。  
+5.  将 <`Realm`> 或 <`DefaultDomain`> 的空值替换为对环境有效的值。  
   
-6.  保存该文件。  
+6.  保存文件。  
   
 7.  如果配置了扩展部署，请对该部署中的其他报表服务器重复这些步骤。  
   
@@ -84,11 +84,13 @@ ms.locfileid: "66102162"
 ## <a name="rswindowsbasic-reference"></a>RSWindowsBasic 引用  
  配置基本身份验证时，可以指定以下元素。  
   
-|元素|Required|有效值|  
+|元素|必选|有效值|  
 |-------------|--------------|------------------|  
-|LogonMethod|是<br /><br /> 如果不指定值，将使用 3。|`2` = 网络登录，针对要对纯文本密码进行身份验证的高性能服务器。<br /><br /> `3` = 明文登录，在此情况下，登录凭据保留在随各 HTTP 请求一起发送的身份验证包中，这样，该服务器在连接到网络中的其他服务器时可以模拟该用户。 （默认值）<br /><br /> 注意：中不支持值 0 （针对交互登录） 和 1 （针对批处理登录） [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]。|  
-|领域|可选|指定包含授权和身份验证功能的资源分区，这些功能用于控制对组织中受保护资源的访问。|  
-|默认域|可选|指定服务器用来对用户进行身份验证的域。 此值是可选的。但如果忽略此值，报表服务器会将计算机名称用作域。 如果计算机是域的成员，则该域是默认域。 如果在域控制器上安装了报表服务器，则所用的域为该计算机控制的域。|  
+|LogonMethod|是<br /><br /> 如果不指定值，将使用 3。|
+  `2` = 网络登录，针对要对纯文本密码进行身份验证的高性能服务器。<br /><br /> 
+  `3` = 明文登录，在此情况下，登录凭据保留在随各 HTTP 请求一起发送的身份验证包中，这样，该服务器在连接到网络中的其他服务器时可以模拟该用户。 （默认值）<br /><br /> 注意： [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]不支持值 0（针对交互登录）和 1（针对批处理登录）。|  
+|Realm|可选|指定包含授权和身份验证功能的资源分区，这些功能用于控制对组织中受保护资源的访问。|  
+|DefaultDomain|可选|指定服务器用来对用户进行身份验证的域。 此值是可选的。但如果忽略此值，报表服务器会将计算机名称用作域。 如果计算机是域的成员，则该域是默认域。 如果在域控制器上安装了报表服务器，则所用的域为该计算机控制的域。|  
   
 ## <a name="enabling-anonymous-access-to-report-builder-application-files"></a>启用对报表生成器应用程序文件的匿名访问  
  报表生成器使用 ClickOnce 技术下载其应用程序文件，并在客户端计算机上安装这些文件。 当客户端计算机启动 ClickOnce 应用程序时，ClickOnce 应用程序启动程序将发出对报表服务器计算机上的其他应用程序文件的请求。 如果将报表服务器配置为使用基本身份验证，则 ClickOnce 应用程序启动程序将无法进行身份验证检查，因为它不支持基本身份验证。  
@@ -101,7 +103,7 @@ ms.locfileid: "66102162"
   
 -   将 `IsReportBuilderAnonymousAccessEnabled` 元素添加到 RSReportServer.config，并将其设置为 `True`。 保存该文件后，报表服务器将创建报表生成器的新端点。 该端点将内部用于访问程序文件，并且不具有可在代码中使用的编程接口。 具有不同的端点可使报表生成器在报表服务器服务进程边界中其自己的应用程序域中运行。  
   
--   还可以指定最低特权帐户以在与报表服务器不同的安全上下文下处理请求。 此帐户将成为匿名帐户，用于访问报表服务器上的报表生成器文件。 该帐户在 ASP.NET 工作进程中设置线程的标识。 该线程中运行的请求会被传递到报表服务器，而不进行身份验证检查。 此帐户等效于使用 IUSR_\<计算机 > 时启用匿名访问和模拟进程帐户在 Internet 信息服务 (IIS)，用于设置 ASP.NET 工作线程的安全上下文。 若要指定该帐户，需要将其添加到报表生成器 Web.config 文件中。  
+-   还可以指定最低特权帐户以在与报表服务器不同的安全上下文下处理请求。 此帐户将成为匿名帐户，用于访问报表服务器上的报表生成器文件。 该帐户在 ASP.NET 工作进程中设置线程的标识。 该线程中运行的请求会被传递到报表服务器，而不进行身份验证检查。 此帐户等效于 Internet Information Services （IIS\<）中的 IUSR_ 计算机> 帐户，该帐户用于在启用匿名访问和模拟时设置 ASP.NET 工作进程的安全上下文。 若要指定该帐户，需要将其添加到报表生成器 Web.config 文件中。  
   
  若要启用对报表生成器程序文件的匿名访问，必须将报表服务器配置为使用基本身份验证。 如果未将报表服务器配置为使用基本身份验证，在尝试启用匿名访问时，将收到一个错误。  
   
@@ -137,7 +139,7 @@ ms.locfileid: "66102162"
   
      如果包含一个 Web.config 文件，则必须将身份验证模式设置为 `Windows`。  
   
-     `Identity impersonate` 可以是 `True` 或 `False`。  
+     `Identity impersonate`可以是`True`或`False`。  
   
     -   如果不希望 ASP.NET 读取安全令牌，则将它设置为 `False`。 该请求将在报表服务器服务的安全上下文中运行。  
   
@@ -155,7 +157,7 @@ ms.locfileid: "66102162"
   
 8.  重新启动报表服务器。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [报表服务器应用程序的应用程序域](../report-server/application-domains-for-report-server-applications.md)   
  [Reporting Services 安全性和保护](reporting-services-security-and-protection.md)  
   

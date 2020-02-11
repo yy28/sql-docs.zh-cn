@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 463a9385f4622f85cd1cbd5666517464be3cffd4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250468"
 ---
 # <a name="filter-published-data-for-merge-replication"></a>为合并复制筛选已发布数据
@@ -31,7 +31,7 @@ ms.locfileid: "63250468"
   
  筛选器不能包含复制所用的 `rowguidcol` 来标识行。 默认情况下，这是您设置合并复制时添加的列，命名为 **rowguid**。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [发布数据和数据库对象](../publish/publish-data-and-database-objects.md)  
   
   

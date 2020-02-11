@@ -1,5 +1,5 @@
 ---
-title: 例如：指定 HIDE 指令 | Microsoft Docs
+title: 示例：指定 HIDE 指令 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 901fa0d72798862f54ebc23131870b704538cb8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287741"
 ---
-# <a name="example-specifying-the-hide-directive"></a>例如：指定 HIDE 指令
+# <a name="example-specifying-the-hide-directive"></a>示例：指定 HIDE 指令
   此示例说明如何使用 **HIDE** 指令。 当希望查询返回一个属性以对该查询所返回的通用表中的行进行排序，但是不希望该属性出现在最终所得到的 XML 文档中时，该指令很有用。  
   
  以下查询将构造此 XML：  
@@ -67,7 +67,7 @@ FOR XML EXPLICIT
 go  
 ```  
   
- 下面是结果：  
+ 结果如下：  
   
 ```  
 <ProductModel ProdModelID="19" Name="Mountain-100">  
@@ -81,7 +81,7 @@ go
 </ProductModel>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [将 EXPLICIT 模式与 FOR XML 一起使用](use-explicit-mode-with-for-xml.md)  
   
   

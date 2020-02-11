@@ -1,5 +1,5 @@
 ---
-title: 选项 （设计人员 Analysis Services 设计器的常规） |Microsoft Docs
+title: 选项（设计器-Analysis Services 设计器-常规） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3378dd7ada96b1885d802804a6e2e2e3dcbd0891
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63283653"
 ---
-# <a name="options-designers-analysis-services-designers-general"></a>选项 （设计人员 Analysis Services 设计器的常规）
+# <a name="options-designers-analysis-services-designers-general"></a>选项（设计器-Analysis Services 设计器-常规）
   使用“设计器”  、“维护计划”  、“Analysis Services”  和“常规”  页可以确定 Analysis Services 设计器的默认行为。  
   
 ## <a name="connectivity"></a>连接  

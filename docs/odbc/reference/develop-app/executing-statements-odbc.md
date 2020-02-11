@@ -11,16 +11,16 @@ ms.assetid: 09063f43-f5f0-4cf0-baa9-12fec8898997
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 71f99fadf1b4a0885dd1615de781cbc393c6da33
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68069945"
 ---
 # <a name="executing-statements-odbc"></a>执行语句 ODBC
-ODBC 应用程序通过执行 SQL 语句来执行几乎所有数据库访问权限。 一般事件顺序是分配语句句柄、 设置任何语句属性、 执行语句，检索任何结果，并释放语句句柄。  
+ODBC 应用程序通过执行 SQL 语句来执行几乎所有数据库访问。 事件的一般顺序是分配语句句柄、设置任意语句属性、执行语句、检索任何结果，以及释放语句句柄。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [分配语句句柄](../../../odbc/reference/develop-app/allocating-a-statement-handle-odbc.md)  
   

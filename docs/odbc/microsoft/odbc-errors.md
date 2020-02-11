@@ -13,16 +13,16 @@ ms.assetid: 33542afe-4dc7-4db8-b625-fec51a4718d3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7aa5d75b01fc30783505b2e149f3487b50f75150
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915828"
 ---
 # <a name="odbc-errors"></a>ODBC 错误
-当发生错误时，Microsoft ODBC 桌面数据库驱动程序返回本机错误号、 SQLSTATE （ODBC 错误代码） 和一条错误消息。  
+出现错误时，Microsoft ODBC 桌面数据库驱动程序将返回本机错误号、SQLSTATE （ODBC 错误代码）和错误消息。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [本机错误](../../odbc/microsoft/native-error.md)  
   

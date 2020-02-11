@@ -14,30 +14,30 @@ ms.assetid: dbd32576-0453-4e90-ae45-1a81cee8259d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 210b66a800670f033508f903b18778f88ddd4c8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68061627"
 ---
 # <a name="scrollable-cursor-types"></a>可滚动游标类型
-四种类型的可滚动游标是静态、 动态、 由键集驱动和混合。 静态游标检测少或没有更改，但相对比较便宜，来实现。 动态游标检测到的所有更改，但难以实现。 由键集驱动和混合游标介于二者之间，能检测到大部分变化，但在更少的开销比动态游标。  
+四种类型的可滚动游标为静态、动态、键集驱动和混合。 静态游标只检测少量的更改，但要实现的成本相对较低。 动态游标检测所有更改，但实现成本高昂。 键集驱动游标和混合游标位于之间，检测大多数更改，但代价比动态游标更小。  
   
- 使用以下术语来定义每种类型的可滚动游标的特征：  
+ 以下术语用于定义每种类型的可滚动游标的特征：  
   
--   **自己的更新、 删除和插入。** 更新、 删除和插入通过游标，通过对调用进行**SQLBulkOperations**或**SQLSetPos**或使用定位更新或删除语句。  
+-   **自己的更新、删除和插入。** 通过调用**SQLBulkOperations**或**SQLSetPos**或者使用定位的 update 或 delete 语句，可以通过游标进行更新、删除和插入操作。  
   
--   **其他更新、 删除和插入。** 更新、 删除和不所做的光标，包括所做的其他操作在同一事务中插入、 所做通过其他事务和所做的其他应用程序。  
+-   **其他更新、删除和插入。** 不是由游标进行的更新、删除和插入操作，包括由同一事务中的其他操作所做的更改、通过其他事务进行的操作以及其他应用程序所做的更改。  
   
--   **成员身份。** 在结果集中的行集。  
+-   **成员身份.** 结果集中的行集。  
   
--   **顺序。** 游标返回的行顺序。  
+-   **为了.** 游标返回行的顺序。  
   
--   **值。** 在结果集中的每个行中的值。  
+-   **分隔.** 结果集中每一行的值。  
   
- 有关如何更新、 删除和插入数据的信息，请参阅[更新数据概述](../../../odbc/reference/develop-app/updating-data-overview.md)。  
+ 有关如何更新、删除和插入数据的信息，请参阅[更新数据概述](../../../odbc/reference/develop-app/updating-data-overview.md)。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [ODBC 静态游标](../../../odbc/reference/develop-app/odbc-static-cursors.md)  
   

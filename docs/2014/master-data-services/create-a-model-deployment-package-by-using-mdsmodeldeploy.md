@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0378394c274e66d71eebd642188f20194d29236b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480007"
 ---
 # <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>使用 MDSModelDeploy 创建模型部署包
@@ -26,8 +26,8 @@ ms.locfileid: "65480007"
   
  如果需要部署仅包含模型对象的包，可改为在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序中使用模型部署向导。 有关详细信息，请参阅 [使用向导创建模型部署包](../../2014/master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)。  
 > [!NOTE]  
-> 此版本的 MDSModelDeploy 工具不能使用多个千兆字节 (GB) 的内存。 当创建或使用部署大型模型**模型对象和数据**选项时，可能会出现"内存不足"或"Stream 时间过长"错误。 若要解决此问题，请使用 MDS 暂存部署数据;或升级到 MDS 2016 或更高版本，其中包括 MDSModelDeploy 工具的更新的版本。
-## <a name="prerequisites"></a>先决条件  
+> 此版本的 MDSModelDeploy 工具无法使用超过千兆字节（GB）的内存。 使用 "**模型对象和数据**" 选项创建或部署大型模型时，可能会出现 "内存不足" 或 "流过长" 错误。 若要解决此问题，请使用 MDS 过渡部署数据;或升级到 MDS 2016 或更高版本，其中包括 MDSModelDeploy 工具的更新版本。
+## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  
   
 1.  运行 MDSModelDeploy 工具所需的基本权限如下所示：  
@@ -58,7 +58,7 @@ ms.locfileid: "65480007"
   
  模型对于您要创建的包必须存在。 有关详细信息，请参阅[创建模型 (Master Data Services)](create-a-model-master-data-services.md)。  
   
- 有关详细信息，请参阅 [管理员 (Master Data Services)](../../2014/master-data-services/administrators-master-data-services.md)。  
+ 有关详细信息，请参阅[管理员 (Master Data Services)](../../2014/master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>使用 MDSModelDeploy 创建模型部署包  
   
@@ -66,7 +66,7 @@ ms.locfileid: "65480007"
   
 2.  导航到 MDSModelDeploy.exe 所在的位置。  
   
-    -   如果 MDS 安装在默认位置，该文件位于*驱动器*: \Program Files\Microsoft SQL Server\120\Master Data Services\Configuration。  
+    -   如果 MDS 安装在默认位置，则该文件位于*drive*： \PROGRAM Files\Microsoft SQL Server\120\Master Data services\configuration。中。  
   
     -   如果 MDS 未安装在默认位置，请在本地计算机上搜索 MDSModelDeploy.exe。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "65480007"
   
     -   若要显示所有可用选项，请键入 `MDSModelDeploy` ，然后按 Enter 键。  
   
-    -   若要显示某个选项的帮助，请键入以下命令，其中 OptionName  是该选项的名称：`MDSModelDeploy help OptionName`。  
+    -   若要显示某个选项的帮助，请键入以下命令，其中 OptionName** 是该选项的名称：`MDSModelDeploy help OptionName`。  
   
 4.  可选。 如果您有多个 Web 应用程序，通过键入下面的命令并按 Enter 键，确定您要部署到的服务的名称：  
   
@@ -92,14 +92,14 @@ ms.locfileid: "65480007"
   
      如果您不希望包含数据，请不要使用 `-version` 和 `-includedata` 开关。  
   
-6.  按 Enter 键。 成功创建包后，将显示一条消息“MDSModelDeploy 操作已成功完成”。  
+6.  按 Enter。 成功创建包后，将显示一条消息“MDSModelDeploy 操作已成功完成”。  
   
 ## <a name="next-steps"></a>后续步骤  
   
 -   [使用 MDSModelDeploy 部署模型部署包](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
   
-## <a name="see-also"></a>请参阅  
- [模型部署选项 (Master Data Services)](../../2014/master-data-services/model-deployment-options-master-data-services.md)   
- [部署模型 (Master Data Services)](../../2014/master-data-services/deploying-models-master-data-services.md)  
+## <a name="see-also"></a>另请参阅  
+ [模型部署选项 &#40;Master Data Services&#41;](../../2014/master-data-services/model-deployment-options-master-data-services.md)   
+ [&#40;Master Data Services 部署模型&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
   

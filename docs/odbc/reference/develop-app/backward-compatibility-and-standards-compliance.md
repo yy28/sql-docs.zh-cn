@@ -15,16 +15,16 @@ ms.assetid: b5eee7be-28ed-4467-8cf1-2205e2010a53
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7588859abb8298a9191409e5c05df1949e85ba89
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67909869"
 ---
 # <a name="backward-compatibility-and-standards-compliance"></a>后向兼容性和标准符合性
-向后兼容性是较新的 ODBC 组件的功能，以便使用旧的 ODBC 组件。 以下各节讨论这些组件在 ODBC 中的更改的影响*3.x*。 主要包含在其中的信息解决写入 ODBC *3.x*应用程序和如何向后兼容性问题由 ODBC 驱动程序。 有关如何向后兼容性的特定指南问题影响的 ODBC 写入*3.x*驱动程序，请参阅[附录 g:为了向后兼容的驱动程序指南](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)。  
+向后兼容性是较新的 ODBC 组件与旧的 ODBC 组件配合使用的能力。 以下部分讨论了这些组件如何受到 ODBC 2.x 中的更改的*影响。* 其中包含的信息主要用于处理 ODBC 3.x 应用程序的编写和 ODBC*驱动程序如何*处理后向兼容性问题。 有关向后兼容性问题如何*影响 ODBC 1.x*驱动程序编写的特定准则，请参阅[附录 G：驱动程序准则，以获得向后兼容性](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [受影响的 ODBC 组件](../../../odbc/reference/develop-app/affected-odbc-components.md)  
   
@@ -32,7 +32,7 @@ ms.locfileid: "67909869"
   
 -   [应用程序/驱动程序兼容性](../../../odbc/reference/develop-app/application-and-driver-compatibility.md)  
   
--   [新增功能](../../../odbc/reference/develop-app/new-features.md)  
+-   [新功能](../../../odbc/reference/develop-app/new-features.md)  
   
 -   [重复的功能](../../../odbc/reference/develop-app/duplicated-features.md)  
   

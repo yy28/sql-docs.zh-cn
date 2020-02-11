@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8245c048d4c1a1314835ad70fc7305c7afabd3f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63284464"
 ---
 # <a name="save-queries-visual-database-tools"></a>保存查询 (Visual Database Tools)
@@ -27,19 +27,19 @@ ms.locfileid: "63284464"
   
 1.  创建查询。  
   
-2.  从“文件”  菜单上单击“保存 <query_name>”  。  
+2.  从“文件”**** 菜单上单击“保存 <query_name>”****。  
   
     > [!NOTE]  
-    >  将为新创建的查询分配系统名称。 若要自行选择查询名称，请选择“将 <query_name> 另存为”  。  
+    >  将为新创建的查询分配系统名称。 若要自行选择查询名称，请选择“将 <query_name> 另存为”****。  
   
 3.  查询将保存到解决方案资源管理器中项目的“查询”文件夹中。  
   
-## <a name="see-also"></a>请参阅  
- [创建查询&#40;可视化数据库工具&#41;](visual-database-tools.md)   
- [运行查询&#40;可视化数据库工具&#41;](run-queries-visual-database-tools.md)   
- [放弃对查询所做的更改&#40;可视化数据库工具&#41;](discard-changes-made-to-queries-visual-database-tools.md)   
- [设计查询和视图操作指南主题&#40;可视化数据库工具&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
- [类型的查询&#40;可视化数据库工具&#41;](types-of-queries-visual-database-tools.md)   
+## <a name="see-also"></a>另请参阅  
+ [&#40;Visual Database Tools 创建查询&#41;](visual-database-tools.md)   
+ [&#40;Visual Database Tools 运行查询&#41;](run-queries-visual-database-tools.md)   
+ [放弃对 &#40;Visual Database Tools&#41;的查询所做的更改](discard-changes-made-to-queries-visual-database-tools.md)   
+ [&#40;Visual Database Tools 的设计查询和视图操作指南主题&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [Visual Database Tools &#40;查询类型&#41;](types-of-queries-visual-database-tools.md)   
  [执行基本的查询操作 (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

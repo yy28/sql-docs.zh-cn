@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cfedde2b9bdeff831029f2f3916f28bec480d659
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106399"
 ---
 # <a name="report-and-group-variables-collections-references-report-builder-and-ssrs"></a>报表和组变量集合引用（报表生成器和 SSRS）
@@ -43,11 +43,11 @@ ms.locfileid: "66106399"
   
 -   **只读使用** ：设置值一次以便为报表会话创建一个常量，例如创建一个时间戳。  
   
-     因为当用户在报表中翻页时，文本框中的表达式将按需计算，所以，如果用户通过使用“上一页”  按钮向前和向后翻页，动态值（例如，包括返回时间的 `Now()` 函数的表达式）可以返回不同的值。 通过将报表变量的值设置为表达式 `=Now()`，然后在表达式中添加变量，可确保整个报表处理过程中使用相同的值。  
+     因为当用户在报表中翻页时，文本框中的表达式将按需计算，所以，如果用户通过使用“上一页”`Now()`**按钮向前和向后翻页，动态值（例如，包括返回时间的**  函数的表达式）可以返回不同的值。 通过将报表变量的值设置为表达式 `=Now()`，然后在表达式中添加变量，可确保整个报表处理过程中使用相同的值。  
   
 -   **读写使用** ：设置值一次并在报表会话中序列化该值。 变量的读写选项提供了一个比在报表定义的代码块中使用静态变量更好的选择。  
   
-     如果清除**只读**选项的变量，可写属性，该变量设置为`true`。 若要从某一表达式更新值，请使用 SetValue 方法，例如 `=Variables!MyVariable.SetValue("123")`。  
+     如果清除某个变量的**只读**选项，则该变量的可写属性将设置为`true`。 若要从某一表达式更新值，请使用 SetValue 方法，例如 `=Variables!MyVariable.SetValue("123")`。  
   
     > [!NOTE]  
     >  您不能控制报表处理器何时初始化一个变量或何时对更新变量的表达式进行计算。 变量初始化的执行顺序未定义。  
@@ -71,7 +71,7 @@ ms.locfileid: "66106399"
   
  若要引用表达式中的变量，请使用全局集合语法，例如 `=Variables!GroupDescription.Value`。 在设计图面上，文本框中的值显示为 `<<Expr>>`。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [对数据进行筛选、分组和排序（报表生成器和 SSRS）](filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [表达式中的内置集合（报表生成器和 SSRS）](built-in-collections-in-expressions-report-builder.md)   
  [表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)  

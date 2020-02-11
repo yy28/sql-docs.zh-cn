@@ -17,11 +17,11 @@ ms.assetid: ef448c39-a9ad-4f07-8ef3-65bd4cef672a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 447a0892049317813fa9fe6986e6219922a11e28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68068694"
 ---
 # <a name="calling-sqlclosecursor"></a>调用 SQLCloseCursor
-因为**SQLCloseCursor**几乎与相同**SQLFreeStmt** SQL_CLOSE，与驱动程序管理器未映射此函数。 替换函数映射，以便现有 ODBC *2.x*应用程序可以轻松地将移动到 ODBC *3.x* ，使用的新功能。 这种移动简化此类应用程序，若要开始使用新的 ODBC *3.x*以模块化方式的条件代码内的功能。 **SQLCloseCursor**不表示任何新功能。 应用程序不会通过将移到获得任何优势**SQLCloseCursor**从**SQLFreeStmt**与 SQL_CLOSE。
+由于**SQLCloseCursor**与具有 SQL_CLOSE 的**SQLFreeStmt**几乎相同，因此，驱动程序管理器不会映射该函数。 将映射替换函数，以便*现有的 odbc* *2.x 应用程序*可以通过使用新函数轻松移动到 ODBC 2.x。 此类移动使此类应用程序可以更轻松地以模块化方式在条件代码内开始使用新*的 ODBC 2.x 功能。* **SQLCloseCursor**不表示任何新功能。 应用程序不能通过使用 SQL_CLOSE 从**SQLFreeStmt**移到**SQLCloseCursor**获得任何优势。

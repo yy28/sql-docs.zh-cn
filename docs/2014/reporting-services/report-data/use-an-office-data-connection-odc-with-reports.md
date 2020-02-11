@@ -1,5 +1,5 @@
 ---
-title: 将 Office 数据连接 (.odc) 用于报表 (SharePoint 集成模式下，Reporting Services) |Microsoft Docs
+title: 将 Office 数据连接（.odc）用于报表（SharePoint 集成模式下 Reporting Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 983f60396f48e488b20e25f18751f615ded799ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106963"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports-reporting-services-in-sharepoint-integrated-mode"></a>将 Office 数据连接 (.odc) 用于报表（SharePoint 集成模式下的 Reporting Services）
@@ -58,7 +58,7 @@ ms.locfileid: "66106963"
   
 4.  选择 **“Microsoft OLE DB Provider for SQL Server”** ，然后单击 **“下一步”** 。  
   
-5.  输入服务器名称（默认情况下，该名称是计算机的网络名称）和具有有效登录名及数据库权限的用户帐户。 单击“下一步”  。  
+5.  输入服务器名称（默认情况下，该名称是计算机的网络名称）和具有有效登录名及数据库权限的用户帐户。 单击“下一步”。   
   
 6.  选择一个数据库，然后单击 **“确定”** 以关闭 **“数据链接”** 对话框。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66106963"
   
 2.  在 **“上载”** 菜单中，单击 **“上载文档”** 。  
   
-3.  单击 **“浏览”** 。  
+3.  单击“浏览”  。  
   
 4.  选择所创建的 .odc 文件。 默认情况下，.odc 文件位于“我的文档”文件夹的“我的数据源”中。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "66106963"
   
      如果尝试将上述步骤用于 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库和示例报表，请注意：只有 Company Sales 报表可不经修改地立即与 .odc 文件一起使用。 其他示例报表包含有不能与 OLE DB 提供程序配合使用的查询参数和功能。 但是，如果先在报表设计器中对这些报表进行修改，那么就可以让报表与 OLE DB 访问接口配合使用。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建、修改和删除共享数据源 (SSRS)](create-modify-and-delete-shared-data-sources-ssrs.md)  
   
   

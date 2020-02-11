@@ -13,24 +13,24 @@ ms.assetid: f4dd546a-0a6c-4397-8ee7-fafa6b9da543
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 71afc3c0bac0ea64285c450640d96fe5f5d709b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68064972"
 ---
 # <a name="sqlbindcol-cursor-library"></a>SQLBindCol（游标库）
 > [!IMPORTANT]  
->  此功能将 Windows 的未来版本中删除。 避免在新的开发工作中使用此功能并计划修改当前使用此功能的应用程序。 Microsoft 建议使用驱动程序的游标功能。  
+>  此功能将在 Windows 的将来版本中删除。 避免在新的开发工作中使用此功能，并计划修改当前使用此功能的应用程序。 Microsoft 建议使用驱动程序的游标功能。  
   
- 本主题介绍如何使用**SQLBindCol**游标库中的函数。 有关常规信息**SQLBindCol**，请参阅[SQLBindCol 函数](../../../odbc/reference/syntax/sqlbindcol-function.md)。  
+ 本主题讨论如何在游标库中使用**SQLBindCol**函数。 有关**SQLBindCol**的常规信息，请参阅[SQLBindCol 函数](../../../odbc/reference/syntax/sqlbindcol-function.md)。  
   
- 应用程序分配游标库，以返回到当前行中的一个或多个缓冲区。 它将调用**SQLBindCol**将这些缓冲区绑定到结果集的一个或多个时间。  
+ 应用程序为游标库分配一个或多个缓冲区以返回中的当前行集。 它一次或多次调用**SQLBindCol** ，将这些缓冲区绑定到结果集。  
   
- 应用程序可以调用**SQLBindCol**重新绑定结果集列后它被称为**SQLExtendedFetch**， **SQLFetch**，或**SQLFetchScroll**，只要 C 数据类型、 列大小和十进制数字的绑定列保持不变。 应用程序不需要关闭游标重新绑定到不同的地址的列。  
+ 应用程序可以调用**SQLBindCol** ，以便在调用**SQLExtendedFetch**、 **SQLFetch**或**SQLFetchScroll**后重新绑定结果集列，前提是绑定列的 C 数据类型、列大小和小数位数保持不变。 应用程序无需关闭游标即可将列重新绑定到不同地址。  
   
- 游标库支持设置 SQL_ATTR_ROW_BIND_OFFSET_PTR 语句属性来使用绑定偏移量。 (**SQLBindCol**无需进行此重新绑定为其调用。)如果游标库用于 ODBC *3.x*驱动程序，绑定偏移量不使用时**SQLFetch**调用。 如果使用绑定偏移量**SQLFetch**用于 ODBC 游标库时，将调用*2.x*驱动程序由于**SQLFetch**然后映射到**SQLExtendedFetch**。  
+ 游标库支持将 SQL_ATTR_ROW_BIND_OFFSET_PTR 语句特性设置为使用绑定偏移量。 （无需调用**SQLBindCol**即可进行此重新绑定。）如果游标库*与 ODBC 1.x*驱动程序一起使用，则在调用**SQLFetch**时不使用绑定偏移量。 如果在将游标库*与 ODBC 2.x*驱动程序一起使用时调用**SQLFetch** ，则使用绑定偏移量，因为**SQLFetch**随后映射到**SQLExtendedFetch**。  
   
- 游标库支持调用**SQLBindCol**可将书签列绑定。  
+ 游标库支持调用**SQLBindCol**来绑定书签列。  
   
- 当使用 ODBC *2.x*驱动程序，该游标库返回 SQLSTATE HY090 （字符串或缓冲区长度无效） 时**SQLBindCol**调用以不设置为值的缓冲区长度为书签列等于 4。 当使用 ODBC *3.x*驱动程序，该游标库允许要为任意大小的缓冲区。
+ 当*使用 ODBC 2.x*驱动程序时，当调用**SQLBindCol**将书签列的缓冲长度设置为不等于4的值时，游标库将返回 SQLSTATE HY090 （无效的字符串或缓冲区长度）。 当*使用 ODBC 1.x*驱动程序时，游标库允许缓冲区为任意大小。

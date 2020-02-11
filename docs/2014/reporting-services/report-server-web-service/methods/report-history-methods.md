@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f78dba913c4daa1c2e47682b282721b5f0fe27d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63260686"
 ---
 # <a name="report-history-methods"></a>报表历史记录方法
@@ -34,7 +34,7 @@ ms.locfileid: "63260686"
 |<xref:ReportService2010.ReportingService2010.SetItemHistoryLimit%2A>|指定报表服务器保留项的快照数。|  
 |<xref:ReportService2010.ReportingService2010.SetItemHistoryOptions%2A>|设置项历史记录选项，这些选项指定何时为指定的目录项创建项历史记录快照。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用 Web 服务和 .NET Framework 生成应用程序](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [报表服务器 Web 服务](../report-server-web-service.md)   
  [报表服务器 Web 服务方法](report-server-web-service-methods.md)   

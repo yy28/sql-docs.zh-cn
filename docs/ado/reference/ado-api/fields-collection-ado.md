@@ -1,5 +1,5 @@
 ---
-title: 字段集合 (ADO) |Microsoft Docs
+title: Fields 集合（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,32 +18,32 @@ ms.assetid: 7c371474-b88f-4730-afa5-44163a0488d5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9c9216ee655e371633837c5653ebac56fac1a782
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918715"
 ---
 # <a name="fields-collection-ado"></a>字段集合 (ADO)
-包含所有[字段](../../../ado/reference/ado-api/field-object.md)的对象[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)或[记录](../../../ado/reference/ado-api/record-object-ado.md)对象。  
+包含[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)或[Record](../../../ado/reference/ado-api/record-object-ado.md)对象的所有[字段](../../../ado/reference/ado-api/field-object.md)对象。  
   
 ## <a name="remarks"></a>备注  
- 一个**记录集**对象具有**字段**组成的集合**字段**对象。 每个**字段**对象中的列对应**记录集**。 您可以填充**字段**集合，然后再打开**记录集**通过调用[刷新](../../../ado/reference/ado-api/refresh-method-ado.md)集合方法。  
+ **记录集**对象包含由**字段**对象组成的**字段**集合。 每个**字段**对象都对应于**记录集中**的一列。 您可以通过对集合调用[Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)方法，在打开**记录集**之前填充**字段**集合。  
   
 > [!NOTE]
->  请参阅**字段**如何使用更多详细说明的主题**字段**对象。  
+>  有关如何使用**字段**对象的更详细说明，请参阅**字段**对象主题。  
   
- **字段**集合中存在[追加](../../../ado/reference/ado-api/append-method-ado.md)方法，它会暂时将创建并添加**字段**到集合中，对象和一个**更新**方法，完成任何添加或删除操作。  
+ **字段**集合具有[Append](../../../ado/reference/ado-api/append-method-ado.md)方法，该方法暂时创建**字段**对象并将其添加到集合，并使用**Update**方法完成所有添加或删除操作。  
   
- 一个**记录**对象具有可以使用索引的两个特殊字段[FieldEnum](../../../ado/reference/ado-api/fieldenum.md)常量。 一个常量访问包含的默认流的字段**记录**，和其他访问包含的绝对 URL 字符串的字段**记录**。  
+ **记录**对象有两个可以使用[FieldEnum](../../../ado/reference/ado-api/fieldenum.md)常量进行索引的特殊字段。 一个常量访问包含**记录**的默认流的字段，另一个字段访问包含该**记录**的绝对 URL 字符串的字段。  
   
- 某些提供程序 (例如， [Microsoft OLE DB 访问接口用于 Internet 发布](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)) 可能会填充**字段**子集可用字段的集合**记录**或**记录集**。 其他字段不会添加到集合，直到它们被首次引用的名称或按你的代码索引。  
+ 某些提供程序（例如，[用于 Internet 发布的 Microsoft OLE DB 提供程序](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)）可以使用**记录**或**记录集**的可用字段的子集填充**字段**集合。 其他字段将不会添加到集合中，直到它们首先被名称引用或由您的代码进行索引。  
   
- 如果你尝试按名称引用不存在的字段的新**字段**对象将附加到**字段**具有集合[状态](../../../ado/reference/ado-api/status-property-ado-field.md)的**adFieldPendingInsert**。 当您调用[更新](../../../ado/reference/ado-api/update-method.md)，ADO 将数据源中创建一个新域，如果您的提供程序允许。  
+ 如果尝试按名称引用不存在的字段，新的**字段**对象将追加到[状态](../../../ado/reference/ado-api/status-property-ado-field.md)为 " **adFieldPendingInsert**" 的**字段**集合。 调用[Update](../../../ado/reference/ado-api/update-method.md)时，如果提供程序允许，ADO 将在数据源中创建一个新字段。  
   
  本部分包含以下主题。  
   
--   [字段集合属性、 方法和事件](../../../ado/reference/ado-api/fields-collection-properties-methods-and-events.md)  
+-   [字段集合属性、方法和事件](../../../ado/reference/ado-api/fields-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [字段对象](../../../ado/reference/ado-api/field-object.md)

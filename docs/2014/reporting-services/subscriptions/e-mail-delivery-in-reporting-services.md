@@ -15,20 +15,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 68024e36dd5f8188097ebcc673056c1b6d11e59b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100889"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services 中的电子邮件传递
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中包含电子邮件传递扩展插件，该插件提供了通过电子邮件将报表发送到单个用户或组的方式。 电子邮件传递扩展插件是通过 Reporting Services 配置管理器并编辑 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置文件进行配置的。  
   
- 若要通过电子邮件分发或接收报表，请定义标准订阅或数据驱动订阅。 您一次只能订阅或分发一个报表。 您不能创建在一个电子邮件中传递多个报表的订阅。 有关订阅的详细信息，请参阅[创建、 修改和删除标准订阅&#40;本机模式下的 Reporting Services&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)。  
+ 若要通过电子邮件分发或接收报表，请定义标准订阅或数据驱动订阅。 您一次只能订阅或分发一个报表。 您不能创建在一个电子邮件中传递多个报表的订阅。 有关订阅的详细信息，请参阅[创建、修改和删除纯模式&#41;中 &#40;Reporting Services 的标准订阅](create-and-manage-subscriptions-for-native-mode-report-servers.md)。  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式下&#124;SharePoint 2010 和 SharePoint 2013<br /><br /> **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Sharepoint 模式 &#124; SharePoint 2010 和 SharePoint 2013<br /><br /> **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]本机模式|  
   
 ## <a name="e-mail-delivery-options"></a>电子邮件传递选项  
  报表服务器电子邮件传递可以通过以下方式传递报表：  
@@ -37,9 +37,9 @@ ms.locfileid: "66100889"
   
 -   在电子邮件的“主题:”行中发送通知。 默认情况下，订阅定义中的“主题:”行包含以下变量（这些变量将在处理订阅时替换为报表特定的信息）：  
   
-     **@ReportName** 指定报表的名称。  
+     **@ReportName**指定报表的名称。  
   
-     **@ExecutionTime** 指定执行报表的时间。  
+     **@ExecutionTime**指定报表的执行时间。  
   
      您可以将这些变量与静态文本组合在一起，也可以修改每个订阅的“主题:”行中的文本。  
   
@@ -47,9 +47,9 @@ ms.locfileid: "66100889"
   
      如果您的浏览器支持 HTML 4.0 和 MHTML，并且您选择了 Web 存档呈现格式，那么报表将嵌入为邮件的一部分。 其他所有呈现格式（CSV、PDF 等）都将报表作为附件进行传递。 您可以在 RSReportServer 配置文件中禁用此功能。  
   
-     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不会检查附件或邮件的大小。 如果附件或邮件的大小超出邮件服务器允许的最大限制，则无法传递报表。 如果是大型报表，请选择其他传递选项（例如 URL 或通知）。  
+     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]在发送报表之前，不会检查附件或邮件的大小。 如果附件或邮件的大小超出邮件服务器允许的最大限制，则无法传递报表。 如果是大型报表，请选择其他传递选项（例如 URL 或通知）。  
   
- 在您创建订阅时，将设置确定报表传递方式的传递选项。 例如，如果选择在订阅中“包含链接”，电子邮件将包含一个指向该报表的超链接  。  
+ 在您创建订阅时，将设置确定报表传递方式的传递选项。 例如，如果选择在订阅中“包含链接”，电子邮件将包含一个指向该报表的超链接****。  
   
 ## <a name="role-based-e-mail-settings"></a>基于角色的电子邮件设置  
  订阅报表时，根据您的角色中包含的是“管理单独的订阅”任务，还是“管理所有订阅”任务，您所使用的电子邮件传递设置将有所不同。  
@@ -71,18 +71,18 @@ ms.locfileid: "66100889"
   
  有关如何配置本机模式报表服务器的信息，请参阅以下内容：  
   
--   [为电子邮件传递配置报表服务器&#40;SSRS 配置管理器&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
+-   [配置报表服务器，以便 &#40;SSRS Configuration Manager 发送电子邮件&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
   
--   [电子邮件设置-配置管理器&#40;SSRS 本机模式&#41;](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)  
+-   [电子邮件设置-Configuration Manager &#40;SSRS 本机模式下&#41;](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)  
   
  有关如何配置 SharePoint 模式报表服务器的信息，请参阅以下内容：  
   
--   [为 Reporting Services 服务应用程序配置电子邮件（SharePoint 2010 和 SharePoint 2013）](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
+-   [&#40;SharePoint 2010 和 SharePoint 2013 为 Reporting Services 服务应用程序配置电子邮件&#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [任务和权限](../security/tasks-and-permissions.md)   
  [订阅和传递 (Reporting Services)](subscriptions-and-delivery-reporting-services.md)   
- [数据驱动订阅](data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [角色分配](../security/role-assignments.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 查询选项执行 （ANSI 页） |Microsoft Docs
+title: 查询选项执行（ANSI 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: d9a8b5dea5ab90137c95c9ddaf609c63532dd5b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089081"
 ---
 # <a name="query-options-execution-ansi-page"></a>“查询选项”中的“执行”（ANSI 页）
-  使用此页可指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用 ISO (ANSI) 标准中指定的全部或部分设置运行查询。  
+  使用此页可以指定[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]将使用 ISO （ANSI）标准中指定的全部或部分设置运行查询。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
- **SET ANSI_DEFAULTS**  
+ **设置 ANSI_DEFAULTS**  
  选择所有默认的 ISO 设置。 默认情况下，此框不可用，因为只配置了部分 ISO 设置。  
   
  **SET QUOTED_IDENTIFIER**  
@@ -53,7 +53,7 @@ ms.locfileid: "66089081"
  **SET ANSI_NULLS**  
  指定在与 Null 值一起使用等于 (`=`) 和不等于 (`<>`) 比较运算符时采用符合 ISO 标准的行为。 当选中 **SET ANSI_NULLS** 时，所有与 Null 值进行比较求得的值均为 UNKNOWN，这是符合 ISO 标准的行为。 如果未选中 **SET ANSI_NULLS** ，则在数据值为 NULL 时，所有数据与空值的比较求得的值为 TRUE。 默认情况下选择此选项。  
   
- 重置为默认值   
+ **重置为默认值**  
  将此页上的所有值重置为原始默认值。  
   
   

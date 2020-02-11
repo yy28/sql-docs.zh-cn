@@ -11,16 +11,16 @@ ms.assetid: a9d41800-9068-4b76-895a-32b2853692dd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5b2113167bb3440c0d772a99b4b8098104d7ed11
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68129250"
 ---
 # <a name="standard-database-access-architectures"></a>标准数据库访问体系结构
-在查看上一节中所述的数据库访问组件，事实证明，其中的编程的两个接口和数据流协议-非常适合进行标准化。 其他两个组件的 IPC 机制和网络协议的不只驻留在太低级别，但它们都高度依赖于网络和操作系统。 此外，还有可让用户实施标准化的第三个方法的网关的。  
+在查看上一节中所述的数据库访问组件时，这就是其中的两个-编程接口和数据流协议，这是标准化的候选项。 其他两个组件-IPC 机制和网络协议-不仅驻留在较低的级别，而且它们在高度上依赖于网络和操作系统。 还有第三种方法-网关，可提供标准化的可能性。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [标准编程接口](../../odbc/reference/standard-programming-interface.md)  
   

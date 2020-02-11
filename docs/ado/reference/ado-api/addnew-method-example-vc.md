@@ -1,5 +1,5 @@
 ---
-title: AddNew 方法示例 （VC + +） |Microsoft Docs
+title: AddNew 方法示例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 9cc8774b-6711-4837-b442-959eaf79343e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5962d04ddae54f2455a99eb29587d3dc98d69420
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921259"
 ---
 # <a name="addnew-method-example-vc"></a>AddNew 方法示例 (VC++)
-此示例使用[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)方法来创建具有指定名称的新记录。  
+此示例使用[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)方法创建具有指定名称的新记录。  
   
 ```  
 // BeginAddNewCpp.cpp  
@@ -213,6 +213,6 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [AddNew 方法 (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
+## <a name="see-also"></a>另请参阅  
+ [AddNew 方法（ADO）](../../../ado/reference/ado-api/addnew-method-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

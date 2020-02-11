@@ -1,5 +1,5 @@
 ---
-title: 相关 (MDX) |Microsoft Docs
+title: 相关（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 35227d129f70a505a33157d1aa945da5acb219d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68045204"
 ---
 # <a name="correlation-mdx"></a>Correlation (MDX)
@@ -38,12 +38,12 @@ Correlation( Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] )
  通常是单元坐标（返回代表 X 轴的值的数字）的多维表达式 (MDX) 的有效数值表达式。  
   
 ## <a name="remarks"></a>备注  
- **相关**函数可用于通过第一个计算以获得 y 轴的值的第一个数值表达式对指定的集计算两对值相关系数。 然后，此函数根据第二个数值表达式（如果存在）对指定集求值，以获取 X 轴对应的值。 如果未指定第二个数值表达式，则此函数使用指定集中的单元的当前上下文作为 X 轴的值。  
+ **相关**函数通过首先针对第一个数值表达式计算指定的集来计算两对值对的相关系数，以获得 y 轴的值。 然后，此函数根据第二个数值表达式（如果存在）对指定集求值，以获取 X 轴对应的值。 如果未指定第二个数值表达式，则此函数使用指定集中的单元的当前上下文作为 X 轴的值。  
   
 > [!NOTE]  
->  **相关**函数将忽略空单元或单元格包含文本或逻辑值。 但是，该函数将包含值为零的单元。  
+>  **相关**函数会忽略空单元或包含文本或逻辑值的单元。 但是，该函数将包含值为零的单元。  
   
-## <a name="see-also"></a>请参阅  
- [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
