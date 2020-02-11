@@ -11,10 +11,10 @@ ms.assetid: ad5b83b1-8e40-4ef8-9ba8-4ea17a58b672
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 08cb402143cd5290d0f228d2dcab242c3139408a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729244"
 ---
 # <a name="import-data-from-tables-master-data-services"></a>从表导入数据 (Master Data Services)
@@ -29,9 +29,9 @@ ms.locfileid: "73729244"
   
 -   必须有权执行 \< 数据库中的 stg.udp_\_name>_Leaf、stg.udp\<\_name>_Consolidated 或 \<[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]name>_Relationship 存储过程。  
   
--   模型的状态不能是“已提交”。  
+-   模型的状态不能是“已提交” ****。  
   
- **添加、更新和删除 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中的数据**  
+ **添加、更新和删除数据库中的[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]数据**  
   
 1.  准备要导入 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中相应临时表的成员，包括必需字段的提供值。 有关临时表的概述，请参阅[概述：导入表中数据 (Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "73729244"
   
 2.  打开 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 并为自己的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库连接到数据库引擎实例。  
   
-     有关更多信息，请参见 [SQL Server Management Studio](https://msdn.microsoft.com/library/66a6b7b1-de6a-4161-82bd-98ded486947b)。  
+     有关详细信息，请参阅[SQL Server Management Studio](https://msdn.microsoft.com/library/66a6b7b1-de6a-4161-82bd-98ded486947b)。  
   
 3.  使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 导入和导出向导将数据导入到临时表。  
   
@@ -61,19 +61,19 @@ ms.locfileid: "73729244"
   
          有关临时存储过程和临时表的概述，请参阅[概述：导入表中数据 (Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)。 有关临时存储过程参数以及代码示例的详细信息，请参阅[临时存储过程 (Master Data Services)](../master-data-services/staging-stored-procedure-master-data-services.md)。  
   
-    -   使用主数据管理的“集成管理” 功能区域。  
+    -   使用主数据管理的“集成管理” **** 功能区域。  
   
-         “临时批处理” 页上，在下拉列表中选择向其添加数据的模型，然后单击“开始批处理”。 “状态” 字段将指示执行批处理的状态。 有关状态的详细信息，请参阅[导入状态 (Master Data Services)](../master-data-services/import-statuses-master-data-services.md)。  
+         “临时批处理” **** 页上，在下拉列表中选择向其添加数据的模型，然后单击“开始批处理” ****。 “状态” **** 字段将指示执行批处理的状态。 有关状态的详细信息，请参阅[导入状态 (Master Data Services)](../master-data-services/import-statuses-master-data-services.md)。  
   
-         ![主数据管理器中的 "临时批处理" 页](../master-data-services/media/mds-stagingbatchespage.png "主数据管理器中的 "临时批处理" 页")  
+         ![主数据管理器中的“临时批处理”页](../master-data-services/media/mds-stagingbatchespage.png "主数据管理器中的“临时批处理”页")  
   
-         按照  **中的“临时批处理间隔”设置所确定的间隔启动临时过程。** [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 有关详细信息，请参阅[系统设置 (Master Data Services)](../master-data-services/system-settings-master-data-services.md)。  
+         按照 ** 中的“临时批处理间隔”设置所确定的间隔启动临时过程。**[!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 有关详细信息，请参阅[系统设置 (Master Data Services)](../master-data-services/system-settings-master-data-services.md)。  
   
 5.  查看在临时过程中出现的错误。 有关详细信息，请参阅[查看临时过程中出现的错误 (Master Data Services)](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)和[临时过程错误 (Master Data Services)](../master-data-services/staging-process-errors-master-data-services.md)。  
   
 6.  根据业务规则对数据进行验证。  
   
-     在主数据管理器中，导航到模型的“资源管理器” 功能区域，然后应用业务规则以验证数据。 有关详细信息，请参阅[业务规则验证特定成员 (Master Data Services)](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)。 同时可以使用存储过程来验证数据。 有关详细信息，请参阅 [验证存储过程 (Master Data Services)](../master-data-services/validation-stored-procedure-master-data-services.md)。  
+     在主数据管理器中，导航到模型的“资源管理器” **** 功能区域，然后应用业务规则以验证数据。 有关详细信息，请参阅[业务规则验证特定成员 (Master Data Services)](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)。 同时可以使用存储过程来验证数据。 有关详细信息，请参阅[验证存储过程 (Master Data Services)](../master-data-services/validation-stored-procedure-master-data-services.md)。  
   
      使用临时表加载数据时，不会自动根据业务规则验证数据。 有关执行何种验证以及何时执行的详细信息，请参阅[验证 (Master Data Services)](../master-data-services/validation-master-data-services.md)。  
   

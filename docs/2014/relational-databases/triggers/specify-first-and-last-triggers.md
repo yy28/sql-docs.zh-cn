@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a851a19a7f00afd055bb2ee8f00eaf4621a1e98f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524133"
 ---
 # <a name="specify-first-and-last-triggers"></a>指定第一个和最后一个触发器
@@ -28,11 +28,11 @@ ms.locfileid: "62524133"
   
  若要指定 AFTER 触发器的顺序，请使用 **sp_settriggerorder** 存储过程。 **sp_settriggerorder** 有下列选项。  
   
-|Option|Description|  
+|选项|说明|  
 |------------|-----------------|  
 |**第一个**|指定 DML 触发器是执行触发操作时激发的第一个 AFTER 触发器。|  
 |**上一次**|指定 DML 触发器是执行触发操作时激发的最后一个 AFTER 触发器。|  
-|**无**|指定不按特定的顺序激发 DML 触发器。 主要用于将某个触发器重置为第一个或最后一个触发器。|  
+|无 |指定不按特定的顺序激发 DML 触发器。 主要用于将某个触发器重置为第一个或最后一个触发器。|  
   
  以下示例说明如何使用 **sp_settriggerorder**：  
   
@@ -55,7 +55,7 @@ sp_settriggerorder @triggername = 'MyTrigger', @order = 'first', @stmttype = 'UP
   
  复制将为包含在立即更新订阅或排队更新订阅中的任意表自动生成第一个触发器。 复制要求其触发器为第一个触发器。 在尝试将带有第一个触发器的表包含在立即更新订阅或排队更新订阅中时，复制将引发错误。 如果在表已经包含在订阅中之后尝试使某个触发器成为第一个触发器， **sp_settriggerorder** 将返回错误。 如果在复制触发器上使用 ALTER，或使用 **sp_settriggerorder** 将复制触发器更改为最后一个触发器或无触发器，订阅将无法正常工作。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [OBJECTPROPERTY (Transact-SQL)](/sql/t-sql/functions/objectpropertyex-transact-sql)   
  [sp_settriggerorder (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-settriggerorder-transact-sql)  
   

@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b4518884b3fe17ea3a638ed21210775af7c4921c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62640340"
 ---
 # <a name="move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility"></a>将 UCP 从 SQL Server 的一个实例移到另一个实例（SQL Server 实用工具）
@@ -34,7 +34,7 @@ ms.locfileid: "62640340"
   
 5.  将 UMDW 的备份还原到新 UCP。 有关详细信息，请参阅 [通过备份和还原来复制数据库](../databases/copy-databases-with-backup-and-restore.md)。  
   
-6.  将实例注册到新的 UCP 中，使它们由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具管理。 有关详细信息，请参阅 [注册 SQL Server 实例（SQL Server 实用工具）](enroll-an-instance-of-sql-server-sql-server-utility.md)的一个实例移到另一个实例。  
+6.  将实例注册到新的 UCP 中，使它们由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具管理。 有关详细信息，请参阅[注册 SQL Server 的实例（SQL Server 实用工具）](enroll-an-instance-of-sql-server-sql-server-utility.md)。  
   
 7.  根据需要，为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的托管实例实现自定义策略定义。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62640340"
   
 9. 若要刷新数据，请在“实用工具资源管理器”  中右键单击“托管实例”  节点，然后选择“刷新”  。 列表视图数据将显示在 **“实用工具资源管理器”** 内容窗格中。 有关详细信息，请参阅[查看资源运行状况策略结果（SQL Server 实用工具）](view-resource-health-policy-results-sql-server-utility.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 实用工具的功能和任务](sql-server-utility-features-and-tasks.md)   
  [注册 SQL Server 实例（SQL Server 实用工具）](enroll-an-instance-of-sql-server-sql-server-utility.md)  
   

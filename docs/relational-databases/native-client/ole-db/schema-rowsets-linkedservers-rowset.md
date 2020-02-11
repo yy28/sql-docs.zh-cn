@@ -15,20 +15,20 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3a109f663ade5c1b52f9e6d6ca9cd83efac4b3ec
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73759361"
 ---
 # <a name="schema-rowsets---linkedservers-rowset"></a>架构行集 - LINKEDSERVERS 行集
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  LINKEDSERVERS 行集用于枚举可以参与  **分布式查询的组织数据源**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+  LINKEDSERVERS 行集用于枚举可以参与 ** 分布式查询的组织数据源**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
- LINKEDSERVERS 行集包含以下列。  
+ LINKEDSERVERS 行集包含以下列****。  
   
-|列名|类型指示符|说明|  
+|列名称|类型指示符|说明|  
 |-----------------|--------------------|-----------------|  
 |SVR_NAME|DBTYPE_WSTR|链接服务器的名称。|  
 |SVR_PRODUCT|DBTYPE_WSTR|标识由链接服务器的名称所表示的数据存储的类型的制造商或其他名称。|  
@@ -40,6 +40,6 @@ ms.locfileid: "73759361"
  行集按 SRV_NAME 排序，并支持对 SRV_NAME 的单个限制。  
   
 ## <a name="see-also"></a>另请参阅  
- [架构行集支持 (OLE DB)](../../../relational-databases/native-client/ole-db/schema-rowset-support-ole-db.md)  
+ [架构行集支持 &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowset-support-ole-db.md)  
   
   

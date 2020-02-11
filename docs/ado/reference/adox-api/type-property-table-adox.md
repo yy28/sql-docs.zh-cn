@@ -1,5 +1,5 @@
 ---
-title: 类型属性 （表） (ADOX) |Microsoft Docs
+title: Type 属性（表）（ADOX） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,27 +18,27 @@ ms.assetid: 7b6e14bb-fb69-4d74-aaca-f5d380f4d887
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e1cab50c2aa784c77fbd4a51bc3d72daf115620c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965014"
 ---
 # <a name="type-property-table-adox"></a>Type 属性（表）(ADOX)
 指示表的类型。  
   
 ## <a name="return-values"></a>返回值  
- 返回**字符串**值，该值指定类型的表; 例如，"TABLE"、"系统表"或"全局临时"。  
+ 返回一个**字符串**值，该值指定表的类型;例如，"表"、"系统表" 或 "全局临时"。  
   
 ## <a name="remarks"></a>备注  
- 该属性为只读。  
+ 此属性为只读。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [表对象 (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)  
   
-## <a name="see-also"></a>请参阅  
- [目录 ActiveConnection 属性示例 (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
- [连接的 Close 方法、 表 Type 属性示例 (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
- [Type 属性 （列） (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)   
- [Type 属性 （密钥） (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)   
+## <a name="see-also"></a>另请参阅  
+ [目录 ActiveConnection 属性示例（VB）](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
+ [连接关闭方法，表类型属性示例（VB）](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
+ [Type 属性（列）（ADOX）](../../../ado/reference/adox-api/type-property-column-adox.md)   
+ [Type 属性（Key）（ADOX）](../../../ado/reference/adox-api/type-property-key-adox.md)   
  [表对象 (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)

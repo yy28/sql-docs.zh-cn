@@ -16,13 +16,13 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.openlocfilehash: 6ea2e46b38919ae72ea70440523d75517e6efa92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62512544"
 ---
-# <a name="use-the-systemhealth-session"></a>使用 system_health 会话
+# <a name="use-the-system_health-session"></a>使用 system_health 会话
   system_health 会话是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]默认包含的扩展事件会话。 该会话在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 启动时自动启动，并且运行时不会对性能造成任何明显影响。 该会话收集的系统数据可用于帮助对 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的性能问题进行故障排除。 因此，我们建议您不要停止或删除该会话。  
   
  该会话收集的信息包括：  
@@ -67,14 +67,14 @@ WHERE xe.name = 'system_health'
   
  若要查看事件文件中的会话数据，请使用 Management Studio 中提供的扩展事件用户界面。 有关详细信息，请参阅 [View Event Session Data](../../database-engine/view-event-session-data.md) 。  
   
-## <a name="restoring-the-systemhealth-session"></a>还原 system_health 会话  
+## <a name="restoring-the-system_health-session"></a>还原 system_health 会话  
  如果删除 system_health 会话，则可以通过在查询编辑器中执行 **u_tables.sql** 文件来还原该会话。 该文件位于下面的文件夹中，其中 C: 表示您安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 程序文件的驱动器：  
   
- C:\Program Files\Microsoft SQL Server\MSSQL12.\<*instanceid*>\MSSQL\Install  
+ C:\Program Files\Microsoft SQL Server\MSSQL12。\< *instanceid*> \mssql\install  
   
  请注意，在还原该会话后，必须使用 ALTER EVENT SESSION 语句或使用对象资源管理器中的 **“扩展事件”** 节点启动会话。 否则，该会话会在您下次重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务时自动启动。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [扩展事件工具](extended-events-tools.md)  
   
   

@@ -11,21 +11,21 @@ ms.assetid: ace6085b-355b-435b-8734-503fc3c12ec2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0a97bed3bb921b9c881a98d8d9a9031ef7630f26
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68111897"
 ---
 # <a name="odbc-service-provider-interface-summary"></a>ODBC 服务提供程序接口摘要
-下表介绍 ODBC 服务提供程序接口函数。 有关语法和语义为每个函数的详细信息，请参阅[ODBC 服务提供程序接口 (SPI) 参考](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)。  
+下表介绍了 ODBC 服务提供程序接口函数。 有关每个函数的语法和语义的详细信息，请参阅[ODBC 服务提供程序接口（SPI）参考](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)。  
   
-|函数名称|用途|  
+|函数名称|目的|  
 |-------------------|-------------|  
-|[SQLSetConnectAttrForDbcInfo](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)|与相同[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)，但它的连接信息令牌而不是连接句柄上设置的属性。|  
-|[SQLSetDriverConnectInfo](../../../odbc/reference/syntax/sqldrivertodatasource-function.md)|为应用程序的连接信息令牌设置的连接字符串[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)调用。|  
-|[SQLSetConnectInfo](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)|为应用程序的连接信息令牌设置数据源、 用户 ID 和密码[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)调用。|  
-|[SQLGetPoolID](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)|检索池 id。|  
-|[SQLRateConnection](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)|确定是否驱动程序可以重复使用现有连接池中的连接。|  
-|[SQLPoolConnect](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)|如果可以重复使用在池中没有连接，请创建新的连接。|  
-|[SQLCleanupConnectionPoolID](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)|通知池 ID 已超时的驱动程序。|
+|[SQLSetConnectAttrForDbcInfo](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)|与[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)相同，但它在连接信息标记而不是连接句柄上设置属性。|  
+|[SQLSetDriverConnectInfo](../../../odbc/reference/syntax/sqldrivertodatasource-function.md)|将连接字符串设置为应用程序的[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)调用的连接信息令牌。|  
+|[SQLSetConnectInfo](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)|将数据源、用户 ID 和密码设置为应用程序的[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)调用的连接信息令牌。|  
+|[SQLGetPoolID](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)|检索池 ID。|  
+|[SQLRateConnection](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)|确定驱动程序是否可以重复使用连接池中的现有连接。|  
+|[SQLPoolConnect](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)|如果池中不能重复使用连接，则创建一个新连接。|  
+|[SQLCleanupConnectionPoolID](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)|通知驱动程序池 ID 已超时。|

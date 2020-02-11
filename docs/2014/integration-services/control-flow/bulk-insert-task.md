@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9b5da9ff28dc658f870033a02fe88b14ea442c51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832869"
 ---
 # <a name="bulk-insert-task"></a>大容量插入任务
@@ -64,7 +64,7 @@ ms.locfileid: "62832869"
 ## <a name="custom-log-entries-available-on-the-bulk-insert-task"></a>大容量插入任务可用的自定义日志项  
  下表列出了大容量插入任务的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../performance/integration-services-ssis-logging.md)和[日志记录的自定义消息](../custom-messages-for-logging.md)。  
   
-|日志项|Description|  
+|日志项|说明|  
 |---------------|-----------------|  
 |`BulkInsertTaskBegin`|指示大容量插入开始。|  
 |`BulkInsertTaskEnd`|指示大容量插入完成。|  
@@ -89,11 +89,11 @@ ms.locfileid: "62832869"
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   
--   [大容量插入任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)  
+-   [大容量插入任务编辑器 &#40;常规页&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [大容量插入任务编辑器（“连接”页）](../bulk-insert-task-editor-connection-page.md)  
+-   [大容量插入任务编辑器 &#40;连接页&#41;](../bulk-insert-task-editor-connection-page.md)  
   
--   [大容量插入任务编辑器（“选项”页）](../bulk-insert-task-editor-options-page.md)  
+-   [大容量插入任务编辑器 &#40;选项 "页面&#41;](../bulk-insert-task-editor-options-page.md)  
   
 -   [“表达式”页](../expressions/expressions-page.md)  
   

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 164ae15bdd93034ebcca109a01142b3106a78592
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637910"
 ---
 # <a name="install-and-configure-semantic-search"></a>安装和配置语义搜索
@@ -26,7 +26,7 @@ ms.locfileid: "73637910"
 ## <a name="installing-semantic-search"></a>安装语义搜索  
   
 ###  <a name="HowToCheckInstalled"></a>如何：检查是否安装了语义搜索  
- 查询 **SERVERPROPERTY (Transact-SQL)** 元数据函数的 [IsFullTextInstalled](/sql/t-sql/functions/serverproperty-transact-sql) 属性。  
+ 查询 [SERVERPROPERTY (Transact-SQL)](/sql/t-sql/functions/serverproperty-transact-sql) 元数据函数的 **IsFullTextInstalled** 属性。  
   
  返回值 1 表示安装了全文搜索和语义搜索；返回值 0 表示未安装它们。  
   
@@ -36,7 +36,7 @@ GO
 ```  
   
 ###  <a name="BasicsSemanticSearch"></a>如何：安装语义搜索  
- 若要安装语义搜索，在安装过程中，请在“要安装的功能”页上选择“全文和语义提取搜索”。  
+ 若要安装语义搜索，在安装过程中，请在“要安装的功能”**** 页上选择“全文和语义提取搜索”****。  
   
  统计语义搜索依赖于全文搜索。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的这两个可选功能是一起安装的。  
   
@@ -61,9 +61,9 @@ GO
   
     -   在 **安装介质上找到名为** SemanticLanguageDatabase.msi [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 Windows 安装程序包。 根据目标系统，找到 32 位或 64 位版本的安装程序包。 包含文件夹的名称标识 32 位或 64 位版本文件；文件名本身对于这两个版本是相同的。  
   
-    -   从[Microsoft？？下载安装程序包SQL Server？？2014语义语言统计信息](https://go.microsoft.com/fwlink/?LinkID=296743)页面上 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 下载中心。  
+    -   从[Microsoft？？下载安装程序包SQL Server？？2014语义语言统计信息](https://go.microsoft.com/fwlink/?LinkID=296743)页面[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。  
   
-2.  运行 **SemanticLanguageDatabase.msi** Windows 安装程序包，以提取数据库和日志文件。  
+2.  运行**Semanticlanguagedatabase.msi** Windows 安装程序包，以提取数据库和日志文件。  
   
      也可以选择更改目标目录。 默认情况下，安装程序将文件提取到32位或 64-位 Program Files 文件夹中名为**Microsoft 语义语言数据库**的文件夹中。 MSI 文件包含压缩的数据库文件和日志文件。  
   
@@ -75,9 +75,9 @@ GO
 >  提取语义语言统计数据库时，向文件系统默认位置中的数据库文件和日志文件分配受限权限。 因此，如果将文件放入默认位置，您可能没有附加该数据库的权限。 如果在尝试附加数据库时引发了错误，请删除这些文件，或检查并根据需要修复文件系统权限。  
   
  **2.附加语义语言统计数据库。**  
- 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或通过 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]FOR ATTACH[ 语法调用 ](/sql/t-sql/statements/create-database-sql-server-transact-sql)CREATE DATABASE (SQL Server Transact-SQL)**将数据库附加到** 实例。 有关详细信息，请参阅[数据库分离和附加 (SQL Server)](../databases/database-detach-and-attach-sql-server.md)。  
+ 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或通过 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]FOR ATTACH[ 语法调用 ](/sql/t-sql/statements/create-database-sql-server-transact-sql)CREATE DATABASE (SQL Server Transact-SQL)** 将数据库附加到 ** 实例。 有关详细信息，请参阅[数据库分离和附加 (SQL Server)](../databases/database-detach-and-attach-sql-server.md)。  
   
- 默认情况下，该数据库的名称为 **semanticsdb**。 也可以选择在附加数据库时为数据库提供其他名称。 当使用后续步骤注册数据库时，必须提供此名称。  
+ 默认情况下，该数据库的名称为**semanticsdb**。 也可以选择在附加数据库时为数据库提供其他名称。 当使用后续步骤注册数据库时，必须提供此名称。  
   
 ```sql  
 CREATE DATABASE semanticsdb  

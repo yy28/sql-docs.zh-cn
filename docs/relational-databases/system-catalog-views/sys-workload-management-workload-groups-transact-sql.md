@@ -14,10 +14,10 @@ ms.author: rortloff
 manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
 ms.openlocfilehash: 76b5b09a07189db127c970e75dac2894fdbea1ae
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73633441"
 ---
 # <a name="sysworkload_management_workload_groups-transact-sql"></a>sys. workload_management_workload_groups （Transact-sql）

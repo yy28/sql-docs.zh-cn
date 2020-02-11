@@ -25,10 +25,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 41775a529d34aa5ca457f92c9d26e327b74705ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721909"
 ---
 # <a name="replication-agents-overview"></a>复制代理概述
@@ -58,7 +58,7 @@ ms.locfileid: "62721909"
 ## <a name="replication-maintenance-jobs"></a>复制维护作业  
  复制包含许多执行计划维护和按需维护的维护作业。 有关详细信息，请参阅[复制代理管理](replication-agent-administration.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [启动和停止复制代理 (SQL Server Management Studio)](start-and-stop-a-replication-agent-sql-server-management-studio.md)   
  [运行复制维护作业 (SQL Server Management Studio)](../administration/run-replication-maintenance-jobs-sql-server-management-studio.md)   
  [复制代理可执行文件概念](../concepts/replication-agent-executables-concepts.md)   

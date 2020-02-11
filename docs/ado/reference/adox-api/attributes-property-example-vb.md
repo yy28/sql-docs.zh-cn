@@ -1,5 +1,5 @@
 ---
-title: Attributes 属性示例 (VB) |Microsoft Docs
+title: Attributes 属性示例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: c0ed8195-09af-42c8-99c7-038ecc8a5c9f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 378fecc379febf3daa6e17ebb2ccad748c40989f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67967139"
 ---
 # <a name="attributes-property-example-vb"></a>Attributes 属性示例 (VB)
-此示例演示[特性](../../../ado/reference/adox-api/attributes-property-adox.md)的属性[列](../../../ado/reference/adox-api/column-object-adox.md)。 将其设置为**adColNullable**允许用户设置的值[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)[字段](../../../ado/reference/ado-api/field-object.md)为空字符串。 在此情况下，用户可以区分无法知道数据的记录和记录数据中不适用。  
+此示例演示[列](../../../ado/reference/adox-api/column-object-adox.md)的 "[特性](../../../ado/reference/adox-api/attributes-property-adox.md)" 属性。 如果将其设置为**adColNullable** ，则允许用户将[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)[字段](../../../ado/reference/ado-api/field-object.md)的值设置为空字符串。 在这种情况下，用户可以区分数据未知的记录和不应用数据的记录。  
   
 ```  
 ' BeginAttributesVB  
@@ -125,7 +125,7 @@ End Sub
 ' EndAttributesVB  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [Attributes 属性 (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)   
- [目录对象 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+## <a name="see-also"></a>另请参阅  
+ [Attributes 属性（ADOX）](../../../ado/reference/adox-api/attributes-property-adox.md)   
+ [目录对象（ADOX）](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [列对象 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)

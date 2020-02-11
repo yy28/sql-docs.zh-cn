@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 84647752eb549bd5d3607637d679e58356597a6b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827220"
 ---
 # <a name="excel-destination"></a>Excel 目标
@@ -40,17 +40,18 @@ ms.locfileid: "62827220"
 ## <a name="usage-considerations"></a>使用注意事项  
  Excel 连接管理器使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet 4.0 及其支持的 Excel ISAM（索引顺序存取方法）驱动程序来连接 Excel 数据源，并在 Excel 数据源中进行数据读写操作。  
   
- 许多现有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知识库文章都记录了该访问接口和驱动程序的行为。虽然这些文章并非专门介绍 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 或其前身 Data Transformation Services，但您仍可了解到一些可能导致意外结果的行为。 有关使用及行为的 Excel 驱动程序的常规信息，请参阅[操作方法：使用 ADO 与来自 Visual Basic 或 VBA 的 Excel 数据](https://support.microsoft.com/kb/257819)。  
+ 许多现有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知识库文章都记录了该访问接口和驱动程序的行为。虽然这些文章并非专门介绍 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 或其前身 Data Transformation Services，但您仍可了解到一些可能导致意外结果的行为。 有关 Excel 驱动程序的使用及行为的一般信息，请参阅 [如何将 ADO 与来自 Visual Basic 或 VBA 的 Excel 数据一起使用](https://support.microsoft.com/kb/257819)。  
   
  在将数据保存到 Excel 目标时，Excel 驱动程序所附带的 Jet 访问接口的以下行为可以导致意外的结果。  
   
--   **保存文本数据**。 Excel 驱动程序将文本数据值保存到 Excel 目标时，驱动程序将在每个单元内的文本之前添加单引号字符 (') 以确保所保存的值将被解释为文本值。 如果拥有或要开发将读取或处理所保存的数据的其他应用程序，则可能需要包括特殊的措施，以处理位于每个文本值前面的单引号字符。  
+-   **正在保存文本数据**。 Excel 驱动程序将文本数据值保存到 Excel 目标时，驱动程序将在每个单元内的文本之前添加单引号字符 (') 以确保所保存的值将被解释为文本值。 如果拥有或要开发将读取或处理所保存的数据的其他应用程序，则可能需要包括特殊的措施，以处理位于每个文本值前面的单引号字符。  
   
      有关如何避免包括单引号的信息，请参阅 msdn.com 上的博客文章： [在 SSIS 包中使用 Excel 目标数据流组件时，单引号会在数据转换成 Excel 时追加到所有字符串](https://go.microsoft.com/fwlink/?LinkId=400876)。  
   
--   **保存 memo (ntext) 数据**。 若要将大于 255 个字符的字符串成功地保存到 Excel 列中，驱动程序必须将该目标列的数据类型识别为 **memo** ，而不是 **string**。 如果目标表中已存在数据行，则由驱动程序抽样的前几行的 memo 列中必须至少包含一个长度大于 255 个字符的值的实例。 如果在包设计或运行时创建目标表，然后在 CREATE TABLE 语句必须使用 LONGTEXT （或其同义词之一） 作为备注列的数据类型。  
+-   **正在保存备注（ntext） da**ta。 若要将大于 255 个字符的字符串成功地保存到 Excel 列中，驱动程序必须将该目标列的数据类型识别为 **memo** ，而不是 **string**。 如果目标表中已存在数据行，则由驱动程序抽样的前几行的 memo 列中必须至少包含一个长度大于 255 个字符的值的实例。 如果目标表是在包设计或运行时创建的，则 CREATE TABLE 语句必须使用 LONGTEXT （或其同义词之一）作为 memo 列的数据类型。  
   
--   **数据类型**。 Excel 驱动程序只识别有限的一组数据类型。 例如，所有数值列均解释为双精度 (DT_R8)，并且所有字符串列（除了 memo 列）均解释为 255 个字符的 Unicode 字符串 (DT_WSTR)。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 按如下所示方式映射 Excel 数据类型：  
+-   **数据类型**。 Excel 驱动程序只识别有限的一组数据类型。 例如，所有数值列均解释为双精度 (DT_R8)，并且所有字符串列（除了 memo 列）均解释为 255 个字符的 Unicode 字符串 (DT_WSTR)。 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 按如下所示方式映射 Excel 数据类型：  
   
     -   数值    双精度浮点 (DT_R8)  
   
@@ -58,13 +59,14 @@ ms.locfileid: "62827220"
   
     -   布尔     布尔 (DT_BOOL)  
   
-    -   日期/时间`datetime`(DT_DATE)  
+    -   日期/时间`datetime` （DT_DATE）  
   
     -   字符串     Unicode 字符串，长度为 255 (DT_WSTR)  
   
     -   Memo     Unicode 文本流 (DT_NTEXT)  
   
--   **数据类型和长度转换**。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 不隐式转换数据类型。 因此，在将 Excel 数据加载到非 Excel 目标中之前，可能需要使用“派生列”或“数据转换”转换机制显式地转换它，或者在将其加载到 Excel 目标中之前将其转换为非 Excel 数据。 这种情况下，可能需要通过使用导入和导出向导（它将自动配置所需转换）来创建初始包。 下面是一些可能必需的转换的示例：  
+-   **数据类型和长度转换**。 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 不隐式转换数据类型。 因此，在将 Excel 数据加载到非 Excel 目标中之前，可能需要使用“派生列”或“数据转换”转换机制显式地转换它，或者在将其加载到 Excel 目标中之前将其转换为非 Excel 数据。 这种情况下，可能需要通过使用导入和导出向导（它将自动配置所需转换）来创建初始包。 下面是一些可能必需的转换的示例：  
   
     -   Unicode Excel 字符串列与具有特定代码页的非 Unicode 字符串列之间的转换。  
   
@@ -81,13 +83,14 @@ ms.locfileid: "62827220"
   
  有关可以在 **“Excel 目标编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
   
--   [Excel 目标编辑器（“连接管理器”页）](../excel-destination-editor-connection-manager-page.md)  
+-   [Excel 目标编辑器 &#40;连接管理器页&#41;](../excel-destination-editor-connection-manager-page.md)  
   
--   [Excel 目标编辑器（“映射”页）](../excel-destination-editor-mappings-page.md)  
+-   [Excel 目标编辑器 &#40;映射 "页面&#41;](../excel-destination-editor-mappings-page.md)  
   
--   [Excel 目标编辑器（“错误输出”页）](../excel-destination-editor-error-output-page.md)  
+-   [Excel 目标编辑器 &#40;错误输出页&#41;](../excel-destination-editor-error-output-page.md)  
   
- **“高级编辑器”** 对话框反映了所有能以编程方式设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
+ 
+  **“高级编辑器”** 对话框反映了所有能以编程方式设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
 -   [Common Properties](../common-properties.md)  
   
@@ -97,21 +100,21 @@ ms.locfileid: "62827220"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
--   [使用 SQL Server Integration Services (SSIS) 将数据导入 Excel 或从 Excel 导出数据](../load-data-to-from-excel-with-ssis.md)  
+-   [使用 SQL Server Integration Services (SSIS) 从 Excel 导入数据或将数据导出到 Excel](../load-data-to-from-excel-with-ssis.md)  
   
--   [使用 Foreach 循环容器循环遍历 Excel 文件和表](../control-flow/foreach-loop-container.md)  
+-   [使用 Foreach 循环容器，循环遍历 Excel 文件和表](../control-flow/foreach-loop-container.md)  
   
 -   [设置数据流组件的属性](set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>相关内容  
   
--   博客文章[Integration Services 中的 Excel、 3 的第 1 部分：连接和组件](https://go.microsoft.com/fwlink/?LinkId=217674)，dougbert.com 上的  
+-   dougbert.com 上的博客文章： [Integration Services 中的 Excel 第 1 部分（共 3 部分）：连接和组件](https://go.microsoft.com/fwlink/?LinkId=217674)。  
   
--   博客文章[Integration Services 中的 Excel、 3 的第 2 部分：表和数据类型](https://go.microsoft.com/fwlink/?LinkId=217675)，dougbert.com 上的。  
+-   dougbert.com 上的博客文章： [Integration Services 中的 Excel 第 2 部分（共 3 部分）：表和数据类型](https://go.microsoft.com/fwlink/?LinkId=217675)。  
   
--   博客文章[Integration Services 中的 Excel、 3 的第 3 部分：问题和替代方案](https://go.microsoft.com/fwlink/?LinkId=217676)，dougbert.com 上的。  
+-   dougbert.com 上的博客文章： [Integration Services 中的 Excel 第 3 部分（共 3 部分）：问题和替代方案](https://go.microsoft.com/fwlink/?LinkId=217676)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Excel 源](excel-source.md)   
  [Integration Services (SSIS) 变量](../integration-services-ssis-variables.md)   
  [数据流](data-flow.md)   

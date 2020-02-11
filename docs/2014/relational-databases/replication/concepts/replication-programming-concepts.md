@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf393a3e0f117098dc4a85bae3e6c68728f43a64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721801"
 ---
 # <a name="replication-programming-concepts"></a>复制编程概念
@@ -92,7 +92,7 @@ ms.locfileid: "62721801"
   
      利用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 编程和 .NET 公共语言运行时 (CLR) 的优点的面向对象开发环境。 对于 .NET 开发和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 应用程序，编程环境推荐使用托管代码。 使用托管复制接口可以在无须了解 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 的情况下以面向对象的方式进行复制管理编程，而且它还可在运行复制代理时提供某些脚本所不具备的回调功能。 托管代码是开发可重用组件和用户界面应用程序的最佳环境。  
   
--   **脚本**  
+-   **脚本编写**  
   
      简单应用程序，执行一系列命令，如 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本中的复制系统存储过程或批处理文件中的命令。 您可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 进程内托管提供程序在托管环境中执行脚本，使用托管复制接口可以实现同样的功能，而且该接口还提供回调功能。 脚本是执行运行次数少且无需回调功能的任务的最佳环境，如安装复制服务器。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "62721801"
   
 2.  除了销售应用程序所需的典型数据访问外，此应用程序还应允许销售人员通过单击按钮来按需同步请求订阅。 由于销售代表要安装并运行该应用程序，因此该应用程序还要能在客户端配置订阅并应用初始快照。 作为可选功能，该应用程序还可以使用 Windows 提供的用于检测无线网络连接的基础结构，在检测到无线连接时自动同步订阅。  
   
-3.  遵守所有复制安全指南，包括连接发布服务器时使用 Windows 身份验证和虚拟专用网 (VPN)。 如果需要实现 Web 同步，请使用安全套接字层 (SSL) 连接。 有关详细信息，请参阅[配置 Web 同步](../configure-web-synchronization.md)。  
+3.  遵守所有复制安全指南，包括连接发布服务器时使用 Windows 身份验证和虚拟专用网 (VPN)。 如果需要实现 Web 同步，请使用安全套接字层 (SSL) 连接。 有关详细信息，请参阅 [Configure Web Synchronization](../configure-web-synchronization.md)。  
   
 4.  为了利用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 的功能，应使用托管代码语言开发应用程序。  
   

@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 561d1d32cef9102200bcc3b0730c96afed06d91a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727477"
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r-in-sql-server"></a>在 SQL Server 中通过 R 进行数据浏览和预测性建模
@@ -21,7 +21,7 @@ ms.locfileid: "73727477"
 
 本文介绍通过与 SQL Server 集成可以实现的数据科学过程的改进。
 
-适用范围：SQL Server 2016 R Services、SQL Server 2017 机器学习服务
+适用对象：SQL Server 2016 R Services、SQL Server 2017 机器学习服务
 
 ## <a name="the-data-science-process"></a>数据科学过程
 
@@ -70,7 +70,7 @@ RevoScaleR 包还允许更改 *执行上下文*。 这意味着，不管是完�
 
 开发 R 解决方案时，请确保下载 Microsoft R Client。 此免费下载包括支持远程计算上下文和可缩放算法所需的库：
 
-+ **[!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)]:** R 运行时的一个分发版以及一组包（例如 Intel 数学内核库），用于提升标准 R 操作的性能。  
++ **[!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)]：** R 运行时的一个分发版以及一组包（例如 Intel 数学内核库），用于提升标准 R 操作的性能。  
   
 + **RevoScaleR：** 一个 R 包，可用于将计算推送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 [!INCLUDE[rsql_rre-noversion](../../includes/rsql-rre-noversion-md.md)] 列中的一个值匹配。 它还包括一组常用 R 函数，这些函数在重新设计后具有更好的性能和可伸缩性。 你可以通过 **rx** 前缀来标识这些性能已改善的函数。 它还包括了针对各种源的增强数据提供程序；这些函数具有前缀 **Rx**。
 

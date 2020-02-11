@@ -10,13 +10,13 @@ ms.assetid: fdf2b601-4d5d-4789-9bf8-93d884a16350
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8f26ea8c426f0bffb85f8c0e8a397ad6d7a835c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67995824"
 ---
-# <a name="localdberrorinstanceconfigurationcorrupt"></a>LOCALDB_ERROR_INSTANCE_CONFIGURATION_CORRUPT
+# <a name="localdb_error_instance_configuration_corrupt"></a>LOCALDB_ERROR_INSTANCE_CONFIGURATION_CORRUPT
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="details"></a>详细信息  
@@ -29,7 +29,7 @@ ms.locfileid: "67995824"
 |组件|本地数据库运行时 API|  
 |消息正文|本地数据库实例已损坏。 有关错误详细信息，请参阅 Windows 应用程序日志。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  实例配置已损坏。  
   
 ## <a name="user-action"></a>用户操作  

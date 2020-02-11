@@ -18,10 +18,10 @@ ms.assetid: 8fb81ab3-15f1-4a71-be72-2072c6bcc670
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 957faa6c58c9149ec703fe9fa269e379d4e5b6f6
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660423"
 ---
 # <a name="protocolname-property-sqlserveralias-class"></a>ProtocolName 属性（SqlServerAlias 类）
@@ -36,11 +36,11 @@ object.ProtocolName [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
- 表示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 别名的[SqlServerAlias 类](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md)对象。  
+ *对象*  
+ 一个表示[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]别名的[SqlServerAlias 类](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md)对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个指定服务器连接别名使用的协议的名称的字符串值。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
   

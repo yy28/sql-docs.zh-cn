@@ -24,10 +24,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6ecaeed10c5903b50d848a42ff3b12ee96ebeaf5
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73779140"
 ---
 # <a name="fetching-result-data"></a>提取结果数据
@@ -53,17 +53,18 @@ ms.locfileid: "73779140"
   
  用于处理将数据移入或移出程序变量的 ODBC 函数（如**SQLGetData**、 **SQLBindCol**和[SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)）支持隐式数据类型转换。 例如，如果应用程序将某一整数列绑定到某一字符串程序变量，则驱动程序将会首先自动把数据从整数转换为字符，然后将其置于该程序变量中。  
   
- 应用程序中的数据转换应尽可能少。 如果对应用程序执行的处理不要求数据转换，则应用程序应将列和参数绑定到同一数据类型的程序变量。 但是，如果数据必须从一种类型转换为另一种类型，让驱动程序执行转换比在应用程序中执行转换的效率更高。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序通常只将数据直接从网络缓冲区传输到应用程序的变量。 请求驱动程序执行数据转换将强制驱动程序把数据存入缓冲区并使用 CPU 周期来转换数据。  
+ 应用程序中的数据转换应尽可能少。 如果对应用程序执行的处理不要求数据转换，则应用程序应将列和参数绑定到同一数据类型的程序变量。 但是，如果数据必须从一种类型转换为另一种类型，让驱动程序执行转换比在应用程序中执行转换的效率更高。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序通常只将数据直接从网络缓冲区传输到应用程序的变量。 请求驱动程序执行数据转换将强制驱动程序把数据存入缓冲区并使用 CPU 周期来转换数据。  
   
  除了**text**、 **ntext**和**image**数据之外，程序变量还应足够大以保存从列传入的数据。 如果某一应用程序尝试检索结果集数据，而放置这些数据的变量太小以致无法保存数据，则驱动程序将生成一个警告。 这强制驱动程序为消息分配内存，并且驱动程序和应用程序都必须将 CPU 周期花在处理消息和执行错误处理上。 应用程序应或者分配在大小上足以存放检索的数据的变量，或者在选择列表中使用 SUBSTRING 函数减小结果集中列的大小。  
   
  在使用 SQL_C_DEFAULT 指定 C 变量的类型时必须小心。 SQL_C_DEFAULT 指定 C 变量的类型与列或参数的 SQL 数据类型匹配。 如果为**ntext**、 **nchar**或**nvarchar**列指定了 SQL_C_DEFAULT，则会将 Unicode 数据返回到应用程序。 如果尚未对应用程序进行编码以处理 Unicode 数据，则上述操作可能导致不同的问题。 对于**uniqueidentifier** （SQL_GUID）数据类型，可能会出现相同的问题类型。  
   
- **text**、 **ntext**和**image**数据通常太大，无法放入单个程序变量，通常使用**SQLGetData**而不是**SQLBindCol**进行处理。 使用服务器游标时，将优化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序，以便在提取行时不传输未绑定的**text**、 **ntext**或**image**列的数据。 在应用程序为列发出**SQLGetData**之前，不会实际从服务器中检索**text**、 **ntext**或**image**数据。  
+ **text**、 **ntext**和**image**数据通常太大，无法放入单个程序变量，通常使用**SQLGetData**而不是**SQLBindCol**进行处理。 使用服务器游标[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，NATIVE Client ODBC 驱动程序会经过优化，以便在提取行时不传输未绑定的**text**、 **ntext**或**image**列的数据。 在应用程序为列发出**SQLGetData**之前，不会实际从服务器中检索**text**、 **ntext**或**image**数据。  
   
  此优化可应用于应用程序，以便用户在滚动和向下滚动时不显示**text**、 **ntext**或**image**数据。 用户选择行后，应用程序可以调用**SQLGetData**来检索**text**、 **ntext**或**image**数据。 这会为用户不选择的任何行保存**文本**、 **ntext**或**图像**数据的传输，并且可以保存非常大的数据量。  
   
 ## <a name="see-also"></a>另请参阅  
- [处理结果&#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+ [&#40;ODBC&#41;处理结果](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

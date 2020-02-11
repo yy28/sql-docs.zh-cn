@@ -15,10 +15,10 @@ ms.assetid: 9fd7a555-43bf-4796-a8b6-1ca63a291216
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: e12489cc490c5b8ee9f363e329da9a057fac8f3f
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728980"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>重叠的模型和成员权限（主数据服务）
@@ -29,13 +29,13 @@ ms.locfileid: "73728980"
   
  如果成员具有不同于其相应模型对象的权限，适用以下规则：  
   
--   **“拒绝”** 覆盖所有其他权限。  
+-   **Deny**替代所有其他权限。  
   
--   模型级别的 **“管理员”** 权限可覆盖所有其他权限，并将更改为子级别上的所有 (CRUD) 访问权限。  
+-   模型级别的**管理员**权限将覆盖所有其他权限，并更改为对子级别的所有（CRUD）访问权限。  
   
 -   有效访问权限与成员和属性权限相交。  
   
-     例如，如果成员权限包括 **“创建”** 和 **“更新”** ，则属性的权限是 **“更新”** 。 有效权限是 **“更新”** 。  
+     例如，如果成员权限包括 **“创建”** 和 **“更新”**，则属性的权限是 **“更新”**。 有效权限是 **“更新”**。  
   
  下图显示在属性权限不同于成员权限时，哪些权限对单个属性值有效。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "73728980"
  ![mds_conc_overlap_model_example_2](../master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
 ## <a name="see-also"></a>另请参阅  
- [如何确定权限 (Master Data Services)](../master-data-services/how-permissions-are-determined-master-data-services.md)   
+ [如何 Master Data Services &#40;确定权限&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   
  [重叠的用户和组权限 &#40;Master Data Services&#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
   
   

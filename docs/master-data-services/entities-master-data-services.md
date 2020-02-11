@@ -14,10 +14,10 @@ ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 9326cafa216ad11e7b7a818d34fe035220402c33
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728153"
 ---
 # <a name="entities-master-data-services"></a>实体 (Master Data Services)
@@ -58,26 +58,26 @@ ms.locfileid: "73728153"
   
  在下面的示例中，Product 实体是中心实体。 Subcategory 实体是 Product 实体的基于域的属性。 Category 实体是 Subcategory 实体的基于域的属性。 StandardCost 和 ListPrice 是 Product 实体的自由格式的属性，FilePhoto 是 Product 实体的文件属性。  
   
- ![Product 实体树结构](../master-data-services/media/mds-conc-entity-ui.gif "Product 实体树结构")  
+ ![产品实体树结构](../master-data-services/media/mds-conc-entity-ui.gif "产品实体树结构")  
   
 > [!NOTE]  
 >  这是基于 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 用户界面 (UI) 的一个示例。 树状层次结构显示实体和基于域的属性之间的关系。 它旨在显示关系而不是表示重要性级别。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|创建新实体。|[创建实体 (Master Data Services)](../master-data-services/create-an-entity-master-data-services.md)|  
-|更改现有实体的名称。|[编辑实体 (Master Data Services)](../master-data-services/edit-an-entity-master-data-services.md)|  
-|删除现有实体。|[删除实体 (Master Data Services)](../master-data-services/delete-an-entity-master-data-services.md)|  
-|将权限分配给实体。|[分配模型对象权限 (Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)|  
+|创建新实体。|[创建实体 &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)|  
+|更改现有实体的名称。|[编辑实体 &#40;Master Data Services&#41;](../master-data-services/edit-an-entity-master-data-services.md)|  
+|删除现有实体。|[删除实体 &#40;Master Data Services&#41;](../master-data-services/delete-an-entity-master-data-services.md)|  
+|将权限分配给实体。|[&#40;Master Data Services 分配模型对象权限&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)|  
   
 ## <a name="related-content"></a>相关内容  
   
--   [模型 (Master Data Services)](../master-data-services/models-master-data-services.md)  
+-   [Master Data Services &#40;模型&#41;](../master-data-services/models-master-data-services.md)  
   
--   [成员 (Master Data Services)](../master-data-services/members-master-data-services.md)  
+-   [成员 &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)  
   
--   [属性 (Master Data Services)](../master-data-services/attributes-master-data-services.md)  
+-   [属性 &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  
   
   

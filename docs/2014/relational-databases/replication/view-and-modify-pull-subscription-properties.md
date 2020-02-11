@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 06bfc2148f7a367fa02d94109e9b5b8a250fd1f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68198977"
 ---
 # <a name="view-and-modify-pull-subscription-properties"></a>查看和修改请求订阅属性
@@ -39,7 +39,7 @@ ms.locfileid: "68198977"
      [复制管理对象 (RMO)](#RMOProcedure)  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 在“订阅属性 - \<Publisher>:  \<PublicationDatabase>”对话框（可从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 访问）中，查看发布服务器或订阅服务器的请求订阅属性。 可以从订阅服务器中查看更多属性，并且可以在订阅服务器上修改属性。 也可以从发布服务器的 **“所有订阅”** 选项卡上查看属性信息，此选项卡可以通过复制监视器访问。 有关启动复制监视器的信息，请参阅[启动复制监视器](monitor/start-the-replication-monitor.md)。  
+ 在“订阅属性 - **发布服务器>：\<PublicationDatabase>”对话框（可从 \< 访问该对话框）中，可以从发布服务器或订阅服务器查看请求订阅属性。** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可以从订阅服务器中查看更多属性，并且可以在订阅服务器上修改属性。 也可以从发布服务器的 **“所有订阅”** 选项卡上查看属性信息，此选项卡可以通过复制监视器访问。 有关启动复制监视器的信息，请参阅[启动复制监视器](monitor/start-the-replication-monitor.md)。  
   
 #### <a name="to-view-pull-subscription-properties-from-the-publisher-in-management-studio"></a>从 Management Studio 中的发布服务器查看请求订阅属性  
   
@@ -76,23 +76,23 @@ ms.locfileid: "68198977"
   
 #### <a name="to-view-the-properties-of-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>查看对快照发布或事务发布的请求订阅的属性  
   
-1.  在订阅服务器上，执行 [sp_helppullsubscription](/sql/relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql)。 指定 **@publisher** 或复制管理对象 (RMO) 在 **@publisher_db** 和 **@publication** 访问该对话框）中，可以从发布服务器或订阅服务器查看请求订阅属性。 此操作将返回关于存储在订阅服务器上系统表中的订阅的信息。  
+1.  在订阅服务器上，执行 [sp_helppullsubscription](/sql/relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql)。 指定**@publisher**、 **@publisher_db**和**@publication**。 此操作将返回关于存储在订阅服务器上系统表中的订阅的信息。  
   
-2.  在订阅服务器上，执行 [sp_helpsubscription_properties](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql)。 指定 **@publisher** 或复制管理对象 (RMO) 在 **@publisher_db** 或复制管理对象 (RMO) 在 **@publication** ，并将下列值之一指定给 **@publication_type** ：  
+2.  在订阅服务器上，执行 [sp_helpsubscription_properties](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql)。 为**@publisher** **@publication_type**指定**@publisher_db**、 **@publication**、和以下值之一：  
   
     -   **0** - 订阅属于事务发布。  
   
     -   **1** - 订阅属于快照发布。  
   
-3.  在发布服务器上，执行 [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql)。 指定 **@publication** 和 **@subscriber** 访问该对话框）中，可以从发布服务器或订阅服务器查看请求订阅属性。  
+3.  在发布服务器上，执行 [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql)。 指定**@publication**和**@subscriber**。  
   
-4.  在发布服务器上，执行 [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql)，同时指定 **@subscriber** 访问该对话框）中，可以从发布服务器或订阅服务器查看请求订阅属性。 此操作将显示关于订阅服务器的信息。  
+4.  在发布服务器上，执行[sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql)， **@subscriber**并指定。 此操作将显示关于订阅服务器的信息。  
   
 #### <a name="to-change-the-properties-of-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>更改对快照发布或事务发布的请求订阅的属性  
   
-1.  在订阅服务器上，执行 [sp_change_subscription_properties](/sql/relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql)，同时指定 **@publisher** 或复制管理对象 (RMO) 在 **@publisher_db** 或复制管理对象 (RMO) 在 **@publication** ，然后将值 **0** （对于事务发布）或 **1** （对于快照发布）指定给 **@publication_type** ，将被更改的订阅属性指定给 **@property** ，将新值指定给 **@value** 访问该对话框）中，可以从发布服务器或订阅服务器查看请求订阅属性。  
+1.  在订阅服务器上，执行[sp_change_subscription_properties](/sql/relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql)， **@publisher**同时**@publisher_db**指定**@publication**、、、值为**0** （事务）或**1** （快照） **@publication_type**、要更改为**@property**的订阅属性，以及新值为。 **@value**  
   
-2.  （可选）在订阅服务器上，对订阅数据库执行 [sp_changesubscriptiondtsinfo](/sql/relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql)。 将分发代理作业的 ID 指定给 **@jobid** ，并指定以下 Data Transformation Services (DTS) 包属性：  
+2.  （可选）在订阅服务器上，对订阅数据库执行 [sp_changesubscriptiondtsinfo](/sql/relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql)。 为**@jobid**指定分发代理作业的 ID，并指定以下数据转换服务（DTS）包属性：  
   
     -   **@dts_package_name**  
   
@@ -107,17 +107,17 @@ ms.locfileid: "68198977"
   
 #### <a name="to-view-the-properties-of-a-pull-subscription-to-a-merge-publication"></a>查看对合并发布的请求订阅的属性  
   
-1.  在订阅服务器上，执行 [sp_helpmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql)。 指定 **@publisher** 或复制管理对象 (RMO) 在 **@publisher_db** 和 **@publication** 访问该对话框）中，可以从发布服务器或订阅服务器查看请求订阅属性。  
+1.  在订阅服务器上，执行 [sp_helpmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql)。 指定**@publisher**、 **@publisher_db**和**@publication**。  
   
-2.  在订阅服务器上，执行 [sp_helpsubscription_properties](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql)。 指定 **@publisher** 或复制管理对象 (RMO) 在 **@publisher_db** 或复制管理对象 (RMO) 在 **@publication** ，并将值 2 指定给 **@publication_type** 访问该对话框）中，可以从发布服务器或订阅服务器查看请求订阅属性。  
+2.  在订阅服务器上，执行 [sp_helpsubscription_properties](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql)。 将**@publisher**、 **@publisher_db** **@publication**、和的值指定为**@publication_type**2。  
   
-3.  在发布服务器上，执行 [sp_helpmergesubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql) 以显示订阅信息。 若要返回有关特定订阅的信息，则必须指定 **@publication** 或复制管理对象 (RMO) 在 **@subscriber** ，并将值 **pull** 指定给 **@subscription_type** 访问该对话框）中，可以从发布服务器或订阅服务器查看请求订阅属性。  
+3.  在发布服务器上，执行 [sp_helpmergesubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql) 以显示订阅信息。 若要返回有关特定订阅的信息，您必须**@publication**为**@subscriber** **@subscription_type** **、和的值**指定。  
   
-4.  在发布服务器上，执行 [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql)，同时指定 **@subscriber** 访问该对话框）中，可以从发布服务器或订阅服务器查看请求订阅属性。 此操作将显示关于订阅服务器的信息。  
+4.  在发布服务器上，执行[sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql)， **@subscriber**并指定。 此操作将显示关于订阅服务器的信息。  
   
 #### <a name="to-change-the-properties-of-a-pull-subscription-to-a-merge-publication"></a>更改对合并发布的请求订阅的属性  
   
-1.  在订阅服务器上，执行 [sp_changemergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql)。 指定 **@publication** 或复制管理对象 (RMO) 在 **@publisher** 或复制管理对象 (RMO) 在 **@publisher_db** ，将被更改的订阅属性指定给 **@property** ，将新值指定给 **@value** 访问该对话框）中，可以从发布服务器或订阅服务器查看请求订阅属性。  
+1.  在订阅服务器上，执行 [sp_changemergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql)。 指定**@publication**、 **@publisher**、 **@publisher_db**、要更改为**@property**的订阅属性，并将新值指定**@value**为。  
   
 ##  <a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
  用于查看或修改请求订阅属性的 RMO 类取决于订阅请求订阅的发布类型。  
@@ -126,7 +126,7 @@ ms.locfileid: "68198977"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与订阅服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.TransPullSubscription> 类的实例。  
+2.  创建的 <xref:Microsoft.SqlServer.Replication.TransPullSubscription> 类的实例。  
   
 3.  设置 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>、 <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>、 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>和 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> 属性。  
   
@@ -144,7 +144,7 @@ ms.locfileid: "68198977"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与订阅服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.MergePullSubscription> 类的实例。  
+2.  创建的 <xref:Microsoft.SqlServer.Replication.MergePullSubscription> 类的实例。  
   
 3.  设置 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>、 <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>、 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>和 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> 属性。  
   
@@ -158,7 +158,7 @@ ms.locfileid: "68198977"
   
 8.  关闭所有连接。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用复制监视器查看信息和执行任务](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)   
  [订阅发布](subscribe-to-publications.md)  

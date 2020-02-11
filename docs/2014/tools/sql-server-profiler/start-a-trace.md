@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1c53c039d6194edbc37438ef30ac4fef0113ae87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211035"
 ---
 # <a name="start-a-trace"></a>启动跟踪
@@ -43,11 +43,11 @@ ms.locfileid: "68211035"
 > [!NOTE]  
 >  在使用现有跟踪时，可以查看属性，但是不能修改属性。 若要修改属性，请停止或暂停跟踪。  
   
-## <a name="see-also"></a>请参阅  
- [连接到服务器后自动启动跟踪 (SQL Server Profiler)](start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
- [暂停跟踪 (SQL Server Profiler)](pause-a-trace-sql-server-profiler.md)   
- [停止跟踪 (SQL Server Profiler)](stop-a-trace-sql-server-profiler.md)   
- [清除跟踪窗口 (SQL Server Profiler)](clear-a-trace-window-sql-server-profiler.md)   
+## <a name="see-also"></a>另请参阅  
+ [连接到服务器后自动启动跟踪 &#40;SQL Server Profiler&#41;](start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
+ [暂停跟踪 &#40;SQL Server Profiler&#41;](pause-a-trace-sql-server-profiler.md)   
+ [停止跟踪 &#40;SQL Server Profiler&#41;](stop-a-trace-sql-server-profiler.md)   
+ [清除跟踪窗口 &#40;SQL Server Profiler&#41;](clear-a-trace-window-sql-server-profiler.md)   
  [在跟踪暂停或停止之后运行跟踪 (SQL Server Profiler)](run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler.md)  
   
   

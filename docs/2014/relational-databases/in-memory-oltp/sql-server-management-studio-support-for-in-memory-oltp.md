@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1b640d9d27e9ad624dab83fdb97a301b3a54b1e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62468186"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>对内存中 OLTP 的 SQL Server Management Studio 支持
@@ -93,11 +93,11 @@ ms.locfileid: "62468186"
   
     -   上下文菜单  
   
-    -   筛选设置  
+    -   筛选器设置  
   
     -   编写脚本为  
   
-    -   “任务”  
+    -   任务  
   
     -   报表  
   
@@ -136,9 +136,9 @@ ms.locfileid: "62468186"
   
         -   复制数据库。 对于具有内存优化的对象的数据库，将不在事务内执行在目标服务器上创建数据库以及传输数据。  
   
-        -   导入和导出数据。 使用  “[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 从一个或多个表或视图中导入和导出向导复制数据”选项。 如果目标表是目标数据库中不存在的内存优化表：  
+        -   导入和导出数据。 使用 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“** 从一个或多个表或视图中导入和导出向导复制数据”选项。 如果目标表是目标数据库中不存在的内存优化表：  
   
-            1.  在 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入与导出向导”** 中的 **“指定表复制或查询”** 屏幕上，选择 **“复制一个或多个表或视图的数据”** 。 再单击 **“下一步”** 。  
+            1.  在 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入与导出向导”** 中的 **“指定表复制或查询”** 屏幕上，选择 **“复制一个或多个表或视图的数据”** 。 然后单击“下一步”  。  
   
             2.  单击 **“编辑映射”** 。 然后选择 **“创建目标表”** 并单击 **“编辑 SQL”** 。 在目标数据库上输入用于创建内存优化表的 CREATE TABLE 语法。 单击 **“确定”** 并完成向导中的剩余步骤。  
   
@@ -153,9 +153,9 @@ ms.locfileid: "62468186"
 ## <a name="unsupported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>中不支持的功能 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  对于内存中 OLTP 对象，数据库引擎不支持的功能和操作， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 同样不支持。  
   
- 有关详细信息不受支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]功能，请参阅[支持的 SQL Server 功能](unsupported-sql-server-features-for-in-memory-oltp.md)。  
+ 有关不支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的功能的详细信息，请参阅[支持的 SQL Server 功能](unsupported-sql-server-features-for-in-memory-oltp.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 对内存中 OLTP 的支持](sql-server-support-for-in-memory-oltp.md)  
   
   

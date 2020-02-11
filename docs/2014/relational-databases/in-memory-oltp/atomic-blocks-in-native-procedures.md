@@ -11,14 +11,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 83ec721d214633df7daf9ace5ae45c3cdb51ca97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62467277"
 ---
 # <a name="atomic-blocks"></a>ATOMIC 块
-  `BEGIN ATOMIC` 属于 ANSI SQL 标准。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仅在本机编译存储过程的顶级支持原子块。  
+  
+  `BEGIN ATOMIC` 属于 ANSI SQL 标准。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仅在本机编译存储过程的顶级支持原子块。  
   
 -   每个本机编译的存储过程都恰好包含一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句块。 这个语句块是原子块。  
   
@@ -31,7 +33,7 @@ ms.locfileid: "62467277"
   
  如果在会话上没有处于活动状态的事务，则 `BEGIN ATOMIC` 将开始一个新事务。 如果在该块的作用域外未引发异常，则在该块的末尾将提交该事务。 如果该块引发异常（也就是说，未在该块内捕获和处理异常），则该事务将被回滚。 对于跨单个原子块的事务（单个本机编译的存储过程），您无需编写显式的 `BEGIN TRANSACTION` 和 `COMMIT` 或 `ROLLBACK` 语句。  
   
- 本机编译的存储过程支持使用 `TRY`、`CATCH` 和 `THROW` 构造进行错误处理。 不支持 `RAISERROR`。  
+ 本机编译的存储过程支持使用 `TRY`、`CATCH` 和 `THROW` 构造进行错误处理。 `RAISERROR`不受支持。  
   
  下面的示例说明针对原子块和本机编译存储过程的错误处理行为：  
   
@@ -123,25 +125,25 @@ ORDER BY c1
 GO  
 ```  
   
- 以下特定于内存优化表的错误消息是注定事务终止的。 如果它们在原子块的作用域中发生，则它们将导致中止事务：10772、 41301、 41302、 41305、 41325、 41332 和 41333。  
+ 以下特定于内存优化表的错误消息是注定事务终止的。 如果它们在原子块的作用域中发生，将导致中止事务：10772、41301、41302、41305、41325、41332 和 41333。  
   
 ## <a name="session-settings"></a>会话设置  
  在编译存储过程时原子块中的会话设置是固定的。 某些设置可使用 `BEGIN ATOMIC` 指定，而其他设置则始终固定为相同值。  
   
  以下选项对于 `BEGIN ATOMIC` 而言是必需的：  
   
-|必需设置|Description|  
+|必需设置|说明|  
 |----------------------|-----------------|  
 |`TRANSACTION ISOLATION LEVEL`|支持的值为 `SNAPSHOT`、`REPEATABLEREAD` 和 `SERIALIZABLE`。|  
 |`LANGUAGE`|确定日期和时间格式以及系统消息。 支持 [sys.syslanguages (Transact-SQL)](/sql/relational-databases/system-compatibility-views/sys-syslanguages-transact-sql) 中的所有语言和别名。|  
   
  以下设置是可选的：  
   
-|可选设置|Description|  
+|可选设置|说明|  
 |----------------------|-----------------|  
 |`DATEFORMAT`|支持所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期格式。 指定后，`DATEFORMAT` 将取代与 `LANGUAGE` 相关联的默认日期格式。|  
 |`DATEFIRST`|指定后，`DATEFIRST` 将取代与 `LANGUAGE` 相关联的默认设置。|  
-|`DELAYED_DURABILITY`|支持的值为`OFF`和`ON`。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务提交可以是完全持久、默认或延迟的持久。有关详细信息，请参阅[控制事务持久性](../logs/control-transaction-durability.md)。|  
+|`DELAYED_DURABILITY`|支持的值为 `OFF` 和 `ON`。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]事务提交可以是完全持久、默认或延迟的持久。有关详细信息，请参阅[控制事务持续](../logs/control-transaction-durability.md)性。|  
   
  下面的 SET 选项对于所有本机编译存储过程中的所有原子块具有相同的系统默认值：  
   
@@ -161,7 +163,7 @@ GO
 |TEXTSIZE|0|  
 |XACT_ABORT|OFF<br /><br /> 未捕获的异常导致原子块回滚，但不会导致事务中止，除非错误是注定事务终止的。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [本机编译的存储过程](natively-compiled-stored-procedures.md)  
   
   

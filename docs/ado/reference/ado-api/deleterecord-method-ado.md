@@ -1,5 +1,5 @@
 ---
-title: DeleteRecord 方法 (ADO) |Microsoft Docs
+title: DeleteRecord 方法（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 2726498c-dbd8-4266-983b-ae7d62c39142
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 409c4e21395b7b903cf4ff03726fbd37a2a218d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919085"
 ---
 # <a name="deleterecord-method-ado"></a>DeleteRecord 方法 (ADO)
-删除所表示的实体[记录](../../../ado/reference/ado-api/record-object-ado.md)。  
+删除[记录](../../../ado/reference/ado-api/record-object-ado.md)表示的实体。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,25 +33,25 @@ ms.locfileid: "67919085"
 Record.DeleteRecord Source, Async  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *数据源*  
- 可选。 一个**字符串**值，该值包含要删除的 URL 标识的实体 （例如，文件或目录）。 如果*源*省略或指定了空字符串，表示由当前的实体[记录](../../../ado/reference/ado-api/record-object-ado.md)被删除。 如果记录是集合记录 ([RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)的**adCollectionRecord**，例如目录) 也将删除所有子项 （例如，子目录）。  
+ 可选。 一个**字符串**值，该值包含用于标识要删除的实体（例如，文件或目录）的 URL。 如果省略了*Source*或指定了空字符串，则将删除当前[记录](../../../ado/reference/ado-api/record-object-ado.md)表示的实体。 如果记录是集合记录（[RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md) of **adCollectionRecord**，例如目录），则所有子项（例如，子目录）也将被删除。  
   
- *Async*  
- 可选。 一个**布尔**值，当**True**，指定删除操作是异步。  
+ *异步*  
+ 可选。 一个**布尔**值，如果**为 True**，则指定删除操作为异步。  
   
 ## <a name="remarks"></a>备注  
- 表示此对象上的操作**记录**此方法完成后可能会失败。 在调用**DeleteRecord**，则**记录**应关闭，因为的行为**记录**可能会变得不可预知根据提供程序的更新时**记录**与数据源。  
+ 此方法完成后，对此**记录**所表示的对象执行的操作可能会失败。 在调用**DeleteRecord**之后，应关闭**记录**，因为**记录**的行为可能会因提供程序用数据源更新**记录**的时间而变得不可预知。  
   
- 如果此**记录**来自[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，则此操作的结果将不会立即反映到**记录集**。 刷新**记录集**通过关闭并重新打开它，或通过执行**记录集**[再次查询](../../../ado/reference/ado-api/requery-method.md)方法，[更新](../../../ado/reference/ado-api/update-method.md)方法，或[重新同步](../../../ado/reference/ado-api/resync-method.md)方法。  
+ 如果此**记录**是从[记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)获取的，则此操作的结果不会立即反映在**记录集中**。 刷新记录集，方法是关闭然后重新打开该**记录集**，或者**执行 recordset** [Requery](../../../ado/reference/ado-api/requery-method.md)方法、 [Update](../../../ado/reference/ado-api/update-method.md)方法或重新[同步](../../../ado/reference/ado-api/resync-method.md)方法。  
   
 > [!NOTE]
->  Url 使用 http 方案将自动调用[Microsoft OLE DB 访问接口用于 Internet 发布](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)。 有关详细信息，请参阅[绝对和相对 Url](../../../ado/guide/data/absolute-and-relative-urls.md)。  
+>  使用 http 方案的 Url 将自动调用[用于 Internet 发布的 Microsoft OLE DB 提供程序](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)。 有关详细信息，请参阅[绝对和相对 url](../../../ado/guide/data/absolute-and-relative-urls.md)。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [记录对象 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
-## <a name="see-also"></a>请参阅  
- [Delete 方法 （ADO 字段集合）](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
- [Delete 方法 （ADO 参数集合）](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)   
+## <a name="see-also"></a>另请参阅  
+ [Delete 方法（ADO 字段集合）](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
+ [Delete 方法（ADO 参数集合）](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)   
  [Delete 方法（ADO 记录集）](../../../ado/reference/ado-api/delete-method-ado-recordset.md)

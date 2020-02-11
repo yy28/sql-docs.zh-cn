@@ -1,5 +1,5 @@
 ---
-title: 使用 WMI Provider for Server Events |Microsoft Docs
+title: 使用服务器事件的 WMI 提供程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,10 +21,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0519561b24d8aff32adc7c375657fa85b9dfa496
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68195729"
 ---
 # <a name="working-with-the-wmi-provider-for-server-events"></a>使用 WMI Provider for Server Events
@@ -46,7 +46,7 @@ SELECT name, is_broker_enabled, service_broker_guid FROM sys.databases;
  若要在数据库中启用 [!INCLUDE[ssSB](../../includes/sssb-md.md)] ，请使用 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) 语句的 ENABLE_BROKER SET 选项。  
   
 ## <a name="specifying-a-connection-string"></a>指定连接字符串  
- 应用程序通过连接到 WMI Provider for Server Events 所定义的 WMI 命名空间，将该提供程序定向到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 Windows WMI 服务将此命名空间映射到提供程序 DLL Sqlwep.dll 并将其加载到内存。 每个实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]具有其自己的 WMI 命名空间，默认为： \\ \\。\\*根*\Microsoft\SqlServer\ServerEvents\\*instance_name*。 *instance_name*的默认安装中默认为 MSSQLSERVER [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 应用程序通过连接到 WMI Provider for Server Events 所定义的 WMI 命名空间，将该提供程序定向到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 Windows WMI 服务将此命名空间映射到提供程序 DLL Sqlwep.dll 并将其加载到内存。 每个实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]都有自己的 WMI 命名空间，默认为\\ \\：。\\*根*\Microsoft\SqlServer\ServerEvents\\*instance_name*。 默认情况下， *instance_name*默认为中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]MSSQLSERVER。  
   
 ## <a name="permissions-and-server-authentication"></a>权限和服务器身份验证  
  若要访问 WMI Provider for Server Events，运行 WMI 管理应用程序的客户端必须对应于该应用程序的连接字符串中指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中已经过 Windows 身份验证的登录名或组。  
@@ -109,9 +109,9 @@ WHERE DatabaseName = "AdventureWorks2012"
     -   DENY 或 REVOKE（仅适用于 ALTER DATABASE、ALTER ANY DATABASE EVENT NOTIFICATION、CREATE DATABASE DDL EVENT NOTIFICATION、CONTROL SERVER、ALTER ANY EVENT NOTIFICATION、CREATE DDL EVENT NOTIFICATION 或 CREATE TRACE EVENT NOTIFICATION 权限。）  
   
 ## <a name="working-with-event-data-on-the-client-side"></a>使用客户端的事件数据  
- WMI 提供程序后 for Server Events 在目标数据库中，创建所需的事件通知的事件通知将事件数据发送到名为 msdb 中的目标服务**SQL/通知/ProcessWMIEventProviderNotification/v1.0**。 目标服务将事件放在队列`msdb`名为**WMIEventProviderNotificationQueue**。 (服务和队列动态创建提供程序时它首次连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。)然后，该提供程序从此队列读取 XML 事件数据，并返回到客户端应用程序之前将其转换为托管的对象格式 (MOF)。 MOF 数据由 WQL 查询作为公共信息模型 (CIM) 类定义请求的事件属性组成。 每个属性具有相应的 CIM 类型。 例如，将 `SPID` 属性作为 CIM 类型 `Sint32` 返回。 在 [WMI Provider for Server Events 类和属性](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md)中的每个事件类下列出每个属性的 CIM 类型。  
+ 在 WMI Provider for Server Events 在目标数据库中创建所需的事件通知后，该事件通知将事件数据发送到 msdb 中名为**SQL/notification/ProcessWMIEventProviderNotification/** v1.0 的目标服务。 目标服务将事件放入名为**WMIEventProviderNotificationQueue**的`msdb`队列中。 （当首次连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，提供程序会动态创建服务和队列。）然后，提供程序从该队列中读取 XML 事件数据，并在将其返回到客户端应用程序之前将其转换为托管对象格式（MOF）。 MOF 数据由 WQL 查询作为公共信息模型 (CIM) 类定义请求的事件属性组成。 每个属性具有相应的 CIM 类型。 例如，将 `SPID` 属性作为 CIM 类型 `Sint32` 返回。 在 [WMI Provider for Server Events 类和属性](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md)中的每个事件类下列出每个属性的 CIM 类型。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [WMI Provider for Server Events 的概念](https://technet.microsoft.com/library/ms180560.aspx)  
   
   

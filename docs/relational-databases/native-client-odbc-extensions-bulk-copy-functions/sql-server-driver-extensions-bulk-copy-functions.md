@@ -17,18 +17,20 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6bee3ca51a46559231242188835ff1b75624cb68
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782054"
 ---
 # <a name="sql-server-driver-extensions---bulk-copy-functions"></a>SQL Server 驱动程序扩展 - 大容量复制函数
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  开放式数据库连接 (ODBC) 是 Microsoft Win32 应用程序编程接口，应用程序使用该接口来访问 ODBC 数据源中的数据。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序参考未提供所有 ODBC 函数调用的文字说明。 只讨论那些与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序一起使用时具有特定于驱动程序的参数或行为的函数。  
+  开放式数据库连接 (ODBC) 是 Microsoft Win32 应用程序编程接口，应用程序使用该接口来访问 ODBC 数据源中的数据。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序参考未提供所有 ODBC 函数调用的文字说明。 只讨论那些与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序一起使用时具有特定于驱动程序的参数或行为的函数。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序符合 ODBC 3.51 规范。 若要全面了解 ODBC 3.51，请从[数据访问和存储开发人员中心](https://go.microsoft.com/fwlink?linkid=4173)下载 Microsoft 数据访问组件 SDK，或者联机查看[odbc 程序员参考](https://go.microsoft.com/fwlink/?LinkId=45250)。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序符合 ODBC 3.51 规范。 若要全面了解 ODBC 3.51，请从[数据访问和存储开发人员中心](https://go.microsoft.com/fwlink?linkid=4173)下载 Microsoft 数据访问组件 SDK，或者联机查看[odbc 程序员参考](https://go.microsoft.com/fwlink/?LinkId=45250)。  
  
  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序的特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的大容量复制 API 扩展，客户端应用程序可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中快速添加或提取数据行。  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 时，您可以在 SQLNCLI11.LIB 和 SQLNCLI.H 中引用大容量复制函数 (BCP)。  
   
@@ -74,6 +76,6 @@ ms.locfileid: "73782054"
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 驱动程序扩展](https://msdn.microsoft.com/library/1043bc93-965d-4939-bd1c-21e9d8d3e9ac)   
- [正在执行大容量&#40;复制操作 ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
+ [&#40;ODBC&#41;执行大容量复制操作](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
   

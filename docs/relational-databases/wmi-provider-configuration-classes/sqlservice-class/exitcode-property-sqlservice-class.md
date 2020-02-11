@@ -18,10 +18,10 @@ ms.assetid: e6b8bff2-946f-4abe-bd50-1f7bb11fdddf
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 392fc529b10e79d96a83ccd896733d14d0b8b4dc
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73659676"
 ---
 # <a name="exitcode-property-sqlservice-class"></a>ExitCode 属性（SqlService 类）
@@ -36,13 +36,13 @@ object.ExitCode [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
+ *对象*  
  一个表示服务的 [SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个指定退出代码的 **uint32** 值。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
  如果错误是此类表示的服务所特有的，则此属性将设置为 ERROR_SERVICE_SPECIFIC_ERROR (1066)。 当服务运行时，将此值设置为 NO_ERROR；而当服务正常终止时，再次将它设置为此值。  
   
 ## <a name="see-also"></a>另请参阅  

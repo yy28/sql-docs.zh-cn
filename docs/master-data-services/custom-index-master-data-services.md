@@ -11,10 +11,10 @@ ms.assetid: c57bf8b8-55a6-4b6c-9adb-91b5f4f1ee3c
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 52ca3533dfb8c53e4bbf1cd9f431a290221f2d5e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729495"
 ---
 # <a name="custom-index-master-data-services"></a>自定义索引 (Master Data Services)
@@ -56,11 +56,11 @@ ms.locfileid: "73729495"
   
 -   不能更改自定义索引中包含的特性类型。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|创建索引|[创建索引 (Master Data Services)](../master-data-services/create-an-index-master-data-services.md)|  
-|编辑和删除索引|[编辑和删除索引 (Master Data Services)](../master-data-services/edit-and-delete-an-index-master-data-services.md)|  
+|创建索引|[创建索引 &#40;Master Data Services&#41;](../master-data-services/create-an-index-master-data-services.md)|  
+|编辑和删除索引|[编辑和删除索引 &#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-index-master-data-services.md)|  
   
   

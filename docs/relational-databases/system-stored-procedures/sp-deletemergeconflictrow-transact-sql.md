@@ -1,5 +1,5 @@
 ---
-title: sp_deletemergeconflictrow (TRANSACT-SQL) |Microsoft Docs
+title: sp_deletemergeconflictrow （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ ms.assetid: 64cf1186-28b8-4cd9-88f1-a7808a9c8d60
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a315bc147cf86df40cf6fa216b8c45eeb1fcccca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68111960"
 ---
-# <a name="spdeletemergeconflictrow-transact-sql"></a>sp_deletemergeconflictrow (Transact-SQL)
+# <a name="sp_deletemergeconflictrow-transact-sql"></a>sp_deletemergeconflictrow (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  从冲突表中删除行或[MSmerge_conflicts_info &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)表。 此存储过程在存储冲突表的计算机的任何数据库中执行。  
+  从冲突表[MSmerge_conflicts_info 或 &#40;transact-sql&#41;](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)表中删除行。 此存储过程在存储冲突表的计算机的任何数据库中执行。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,28 +41,28 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @conflict_table = ] 'conflict_table'` 是的冲突表的名称。 *conflict_table*是**sysname**，默认值为 **%** 。 如果*conflict_table*指定为 NULL 或 **%** ，则认为冲突是删除冲突和相匹配的行*rowguid*和*origin_datasource 中*并*source_object*从删除[MSmerge_conflicts_info &#40;-&#41; ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)表。  
+`[ @conflict_table = ] 'conflict_table'`冲突表的名称。 *conflict_table*的默认值为**sysname**，默认**%** 值为。 如果将*conflict_table*指定为**%** NULL 或，则认为冲突为删除冲突，并从[MSmerge_conflicts_info &#40;transact-sql&#41;](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)表中删除与*rowguid*和*origin_datasource*和*source_object*匹配的行。  
   
-`[ @source_object = ] 'source_object'` 是源表的名称。 *source_object*是**nvarchar(386)** ，默认值为 NULL。  
+`[ @source_object = ] 'source_object'`源表的名称。 *source_object*为**nvarchar （386）**，默认值为 NULL。  
   
-`[ @rowguid = ] 'rowguid'` 是删除冲突的行标识符。 *rowguid*是**uniqueidentifier**，无默认值。  
+`[ @rowguid = ] 'rowguid'`删除冲突的行标识符。 *rowguid*是**uniqueidentifier**，无默认值。  
   
-`[ @origin_datasource = ] 'origin_datasource'` 为冲突的起源。 *origin_datasource 中*是**varchar(255)** ，无默认值。  
+`[ @origin_datasource = ] 'origin_datasource'`冲突的起源。 *origin_datasource*的值为**varchar （255）**，无默认值。  
   
-`[ @drop_table_if_empty = ] 'drop_table_if_empty'` 是一个标志，指示*conflict_table*是如果要删除为空。 *drop_table_if_empty*是**varchar(10)** ，默认值为 FALSE。  
+`[ @drop_table_if_empty = ] 'drop_table_if_empty'`一个标志，指示在为空时要删除*conflict_table* 。 *drop_table_if_empty*的值为**varchar （10）**，默认值为 FALSE。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** （成功）或**1** （失败）  
   
 ## <a name="remarks"></a>备注  
- **sp_deletemergeconflictrow**合并复制中使用。  
+ **sp_deletemergeconflictrow**用于合并复制。  
   
- [MSmerge_conflicts_info &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)表是系统表，并且不删除从数据库中，即使它为空。  
+ [MSmerge_conflicts_info &#40;transact-sql&#41;](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)表是系统表，不会从数据库中删除（即使它为空）。  
   
 ## <a name="permissions"></a>权限  
- 只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_deletemergeconflictrow**。  
+ 只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_deletemergeconflictrow**。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

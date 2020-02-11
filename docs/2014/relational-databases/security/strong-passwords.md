@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 97b13e8ccf7ef331320d15254dde3480331c4bb0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62470354"
 ---
 # <a name="strong-passwords"></a>强密码
@@ -52,7 +52,7 @@ ms.locfileid: "62470354"
   
 -   以 $ 或 \@ 字符开头。  
   
- 如果用于 OLE DB 或 ODBC 连接字符串，则登录名或密码不能包含以下字符：[] {}() , ; ? * ! \@ 的用户。 这些字符用于初始化连接或分隔连接值。  
+ 如果用于 OLE DB 或 ODBC 连接字符串，则登录名或密码不能包含以下字符：[] {}() , ; ? * ! \@. 这些字符用于初始化连接或分隔连接值。  
   
 ## <a name="related-content"></a>相关内容  
  [密码策略](password-policy.md)  

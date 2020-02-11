@@ -1,5 +1,5 @@
 ---
-title: 命令 (ADO-WFC 语法) |Microsoft Docs
+title: Command （ADO-WFC 语法） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,14 +14,14 @@ ms.assetid: 39d0aa06-03ac-4c9a-8400-83947756ef99
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4722316cc92567000294c57089afd8840bea1bcd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919829"
 ---
 # <a name="command-ado---wfc-syntax"></a>命令（ADO - WFC 语法）
-## <a name="package-commswfcdata"></a>包 com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>包 .com. 数据  
   
 ### <a name="constructor"></a>构造函数  
   
@@ -44,9 +44,9 @@ public int executeUpdate(Object[] parameters, int options)
 public int executeUpdate()  
 ```  
   
- **ExecuteUpdate**方法是特殊的大小写方法，调用基础 ADO**执行**带有某些参数的方法。 **ExecuteUpdate**方法不支持的返回**记录集**对象，因此**执行**方法的*选项*参数是使用修改**AdoEnums.ExecuteOptions.NORECORDS**。 之后**执行**方法完成，其更新*RecordsAffected*参数传递回**executeUpdate**方法，最后返回作为**int**。  
+ **ExecuteUpdate**方法是一种特殊的 case 方法，该方法使用某些参数调用基础 ADO **execute**方法。 **ExecuteUpdate**方法不支持返回**Recordset**对象，因此将使用**AdoEnums**修改**execute**方法的*options*参数。 **Execute**方法完成后，其更新的*RecordsAffected*参数会传递回**executeUpdate**方法，该方法最终返回为**int**。  
   
-### <a name="properties"></a>properties  
+### <a name="properties"></a>属性  
   
 ```  
 public com.ms.wfc.data.Connection getActiveConnection()  
@@ -69,5 +69,5 @@ public com.ms.wfc.data.Parameters getParameters()
 public AdoProperties getProperties()  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [命令对象 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)

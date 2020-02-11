@@ -17,15 +17,15 @@ ms.assetid: f3c5d981-eaa3-4d34-9b91-37e42636aa81
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: a5415e9d425087f42e3058328f061660ffbe8c1e
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73658954"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-vbscript"></a>使用 VBScript 访问用于配置管理的 WMI 提供程序
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  本部分介绍如何创建一个 VBScript 程序，用于列出计算机上运行的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已安装实例的版本。  
+  本部分介绍如何创建一个 VBScript 程序，用于列出计算机上运行的已安装[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的版本。  
   
  代码示例列出了运行在计算机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例及其版本。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "73658954"
   
 4.  使用 `ExecQuery` 方法和 WQL 查询检索 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已安装实例的名称和版本。  
   
-5.  保存该文件。  
+5.  保存文件。  
   
 6.  在命令提示符下键入**cscript** test.txt 来运行该脚本。  
 

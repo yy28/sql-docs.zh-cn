@@ -1,5 +1,5 @@
 ---
-title: AddNew 方法示例 (VBScript) |Microsoft Docs
+title: AddNew 方法示例（VBScript） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,18 +15,18 @@ ms.assetid: dcdcaf0a-b9b0-4d81-8728-43c38c4c853b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e8329b1edd2e240e00221096bd501d3edf204e71
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921284"
 ---
 # <a name="addnew-method-example-vbscript"></a>AddNew 方法示例 (VBScript)
-此示例使用[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)方法来创建具有指定名称的新记录。  
+此示例使用[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)方法创建具有指定名称的新记录。  
   
- 使用下面的示例 Active Server Page (ASP)。 使用**查找**找到 Adovbs.inc 的文件并将它放置在你打算使用的目录中。 剪切并粘贴到记事本或其他文本编辑器，下面的代码，然后将其保存为**AddNewVBS.asp**。 你可以在任何客户端浏览器中查看结果。  
+ 在 Active Server Page （ASP）中使用以下示例。 使用 "**查找**" 找到文件 Adovbs，并将其放入计划使用的目录中。 剪切下面的代码并将其粘贴到记事本或其他文本编辑器中，并将其保存为**AddNewVBS**。 您可以在任何客户端浏览器中查看结果。  
   
- 若要演练本示例，在 HTML 窗体中添加一条新记录。 单击**添加新**。 请参阅[Delete 方法示例](../../../ado/reference/ado-api/delete-method-example-vbscript.md)删除不需要的记录。  
+ 若要执行此示例，请在 HTML 窗体中添加一个新记录。 单击 "**新增**"。 请参阅[Delete 方法示例](../../../ado/reference/ado-api/delete-method-example-vbscript.md)，删除不需要的记录。  
   
 ```  
 <!-- BeginAddNewVBS -->  
@@ -212,6 +212,6 @@ End Sub
 <!-- EndAddNewVBS -->  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [AddNew 方法 (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
+## <a name="see-also"></a>另请参阅  
+ [AddNew 方法（ADO）](../../../ado/reference/ado-api/addnew-method-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

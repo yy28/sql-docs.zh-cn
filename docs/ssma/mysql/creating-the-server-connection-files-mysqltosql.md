@@ -1,5 +1,5 @@
 ---
-title: 创建服务器连接文件 (MySQLToSQL) |Microsoft Docs
+title: 创建服务器连接文件（MySQLToSQL） |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,16 +13,16 @@ ms.assetid: df0e970c-da0b-4118-b359-c9dcbbad16d6
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 1df2c474afa5e062dfa22cf05af6b0edf036f768
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68103038"
 ---
 # <a name="creating-the-server-connection-files-mysqltosql"></a>创建服务器连接文件 (MySQLToSQL)
-脚本文件的服务器部分中或在单独的服务器连接文件中，可以指定服务器信息。 服务器连接文件的命令行参数是， `-c <serverconnectionfile>`。 如果脚本文件和服务器连接文件中存在相同的服务器 id，则被视为脚本文件中的服务器定义。  
+服务器信息可以在脚本文件的 "服务器" 部分中指定，也可以在单独的服务器连接文件中指定。 服务器连接文件的命令行参数为， `-c <serverconnectionfile>`。 如果脚本文件和服务器连接文件中同时存在相同的服务器 id，则考虑脚本文件中的服务器定义。  
   
-**示例：**  
+**实例**  
   
 ```xml  
 <!--Sample of server connection file commands -->  
@@ -85,11 +85,11 @@ ms.locfileid: "68103038"
 ```  
   
 ## <a name="server-connection-file-validation"></a>服务器连接文件验证  
-用户可以轻松地验证他/她服务器连接文件和架构定义文件**M2SSConsoleScriptServersSchema.xsd**架构文件夹中可用。  
+用户可以根据 "架构" 文件夹中提供的架构定义文件 " **2ssconsolescriptserversschema"** 来轻松验证其服务器连接文件。  
   
 ## <a name="next-step"></a>下一步  
-在操作控制台中的下一步是[执行 SSMA 控制台&#40;MySQLToSQL&#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)  
+操作控制台的下一步是[执行 SSMA 控制台 &#40;MySQLToSQL&#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)  
   
-## <a name="see-also"></a>请参阅  
-[执行 SSMA 控制台 (MySQL)](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
+## <a name="see-also"></a>另请参阅  
+[执行 SSMA 控制台（MySQL）](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
   

@@ -11,17 +11,17 @@ ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a629ead2f102c20466126bdfa9952962311bb750
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728300"
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>分类的 Web 服务操作 (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web 服务包含一组完整的操作，可让您通过编写代码以控制 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 通过其用户界面所执行的所有功能。{3} Web 服务操作由 <xref:Microsoft.MasterDataServices.IService> 接口定义，并在 <xref:Microsoft.MasterDataServices.ServiceClient> 类中作为方法实现。 本主题将 Web 服务操作分组为概念性类别，以帮助您了解如何使用 Web 服务 API。  
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web 服务包含一组完整的操作，可让你编写代码来控制通过其用户界面[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]执行的所有功能。 Web 服务操作由 <xref:Microsoft.MasterDataServices.IService> 接口定义，并在 <xref:Microsoft.MasterDataServices.ServiceClient> 类中作为方法实现。 本主题将 Web 服务操作分组为概念性类别，以帮助您了解如何使用 Web 服务 API。  
   
 ## <a name="model-operations"></a>模型操作  
  这些操作用于创建、更新和删除模型，以及对所有模型内容（如实体、层次结构和版本）执行操作。 有关详细信息，请参阅[模型 (Master Data Services)](../../master-data-services/models-master-data-services.md)。  
@@ -121,7 +121,7 @@ ms.locfileid: "73728300"
 |<xref:Microsoft.MasterDataServices.ServiceClient.DataQualityOperationStatus%2A>|  
   
 ## <a name="data-import-operations"></a>数据导入操作  
- 这些操作用于将数据导入到 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库。 有关详细信息，请参阅[概述：导入表中数据 (Master Data Services)](../../master-data-services/overview-importing-data-from-tables-master-data-services.md)。  
+ 这些操作用于将数据导入到 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库。 有关详细信息，请参阅[概述：从表导入数据 &#40;Master Data Services&#41;](../../master-data-services/overview-importing-data-from-tables-master-data-services.md)。  
   
 ||  
 |-|  
@@ -149,7 +149,7 @@ ms.locfileid: "73728300"
 |<xref:Microsoft.MasterDataServices.ServiceClient.ExportViewListGet%2A>|  
 |<xref:Microsoft.MasterDataServices.ServiceClient.ExportViewUpdate%2A>|  
   
-## <a name="security-operations"></a>安全操作  
+## <a name="security-operations"></a>安全运营  
  这些操作用于修改控制对 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库进行访问的安全设置。 有关详细信息，请参阅[安全性 (Master Data Services)](../../master-data-services/security-master-data-services.md)  
   
 ||  

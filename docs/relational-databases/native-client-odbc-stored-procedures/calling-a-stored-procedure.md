@@ -20,23 +20,23 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ba7e6b23ac2091e6ae772e48b91a70613ae8f455
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73778958"
 ---
 # <a name="calling-a-stored-procedure"></a>调用存储过程
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序支持 ODBC 调用转义序列和用于执行存储过程的 [!INCLUDE[tsql](../../includes/tsql-md.md)][EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)语句;ODBC 调用转义序列是首选方法。 使用 ODBC 语法使应用程序能检索存储过程的返回代码，还可以对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序进行优化以使用最初为在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的两台计算机间发送远程过程调用 (RPC) 开发的协议。 此 RPC 协议通过避免在服务器上进行大量参数处理和语句分析来提高性能。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序支持 ODBC 调用转义序列和[!INCLUDE[tsql](../../includes/tsql-md.md)]用于执行存储过程的[EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)语句;ODBC 调用转义序列是首选方法。 使用 ODBC 语法使应用程序能检索存储过程的返回代码，还可以对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序进行优化以使用最初为在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的两台计算机间发送远程过程调用 (RPC) 开发的协议。 此 RPC 协议通过避免在服务器上进行大量参数处理和语句分析来提高性能。  
   
 > [!NOTE]  
->  当使用带有 ODBC 的命名参数调用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程时（有关详细信息，请参阅[按名称绑定参数（命名参数）](https://go.microsoft.com/fwlink/?LinkID=209721)），参数名称必须以 "\@" 字符开头。 这是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特有的限制。 与 Microsoft 数据访问组件 (MDAC) 相比，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序更加严格地遵守此限制。  
+>  当使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]带有 ODBC 的命名参数调用存储过程时（有关详细信息，请参阅[按名称绑定参数（命名参数）](https://go.microsoft.com/fwlink/?LinkID=209721)），参数名称必须以 "\@" 字符开头。 这是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特有的限制。 与 Microsoft 数据访问组件 (MDAC) 相比，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序更加严格地遵守此限制。  
   
  调用过程的 ODBC CALL 转义序列是：  
   
- {[ **？ =** ]**调用**_procedure_name_[（[*parameter*] [ **，** [*parameter*]] ...）]}  
+ {[**？ =**]**调用**_procedure_name_[（[*parameter*] [**，**[*parameter*]] ...）]}  
   
  其中*procedure_name*指定过程的名称，*参数*指定过程参数。 只有使用 ODBC CALL 转义序列的语句中才支持命名参数。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "73778958"
   
  过程调用的输入和输入/输出参数可以省略。 如果使用括号但不带任何参数调用过程，驱动程序将指示数据源使用第一个参数的默认值。 例如：  
   
- {**call** _procedure_name_ **（）** }  
+ {**call** _procedure_name_**（）**}  
   
  如果该过程不具有任何参数，则它可能失败。 如果不带括号调用过程，驱动程序将不发送任何参数值。 例如：  
   

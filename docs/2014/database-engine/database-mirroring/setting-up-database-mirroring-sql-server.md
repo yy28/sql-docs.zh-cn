@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c6b7fcdc3f50b941feac4958daa6dad49fde9eac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754457"
 ---
 # <a name="setting-up-database-mirroring-sql-server"></a>设置数据库镜像 (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "62754457"
   
 1.  主体服务器、镜像服务器和见证服务器（如果有）都必须由位于单独的主机系统中的独立服务器实例承载。 每个服务器实例都需要数据库镜像端点。 如果您需要创建一个数据库镜像端点，请确保其他服务器实例无法访问该端点。  
   
-     服务器实例对数据库镜像使用的验证形式是其数据库镜像端点的一种属性。 两种类型的传输安全性可用于数据库镜像：Windows 身份验证或基于证书的身份验证。 有关详细信息，请参阅[针对数据库镜像和 AlwaysOn 可用性组的传输安全性&#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)。  
+     服务器实例对数据库镜像使用的验证形式是其数据库镜像端点的一种属性。 数据库镜像可以使用两种类型的传输安全功能：Windows 身份验证或基于证书的身份验证。 有关详细信息，请参阅[数据库镜像的传输安全性和 AlwaysOn 可用性组 &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)。  
   
      网络访问要求是特定于身份验证形式的，如下所示：  
   
@@ -44,7 +44,7 @@ ms.locfileid: "62754457"
   
          若要在给定的服务器实例上启用数据库镜像的证书验证，系统管理员必须配置每个服务器实例，以在出站连接和进站连接中使用证书。 必须先配置出站连接。 有关详细信息，请参阅[使用数据库镜像终结点证书 (Transact-SQL)](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)。  
   
-2.  确保所有数据库用户在镜像服务器上都有登录名。 有关详细信息，请参阅[设置的登录帐户的数据库镜像或 AlwaysOn 可用性组&#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)。  
+2.  确保所有数据库用户在镜像服务器上都有登录名。 有关详细信息，请参阅[设置数据库镜像的登录帐户或 AlwaysOn 可用性组 &#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)。  
   
 3.  在将承载镜像数据库的服务器实例上，设置镜像数据库所需的环境的其余部分。 有关详细信息，请参阅 [当数据库在其他服务器实例上可用时管理元数据 (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "62754457"
   
     3.  还原自完整数据库备份或差异数据库备份以来进行的所有日志备份。  
   
-     有关详细信息，请参阅 [为镜像准备镜像数据库 (SQL Server)](prepare-a-mirror-database-for-mirroring-sql-server.md)。  
+     有关详细信息，请参阅 [为镜像准备镜像数据库 (SQL Server)](prepare-a-mirror-database-for-mirroring-sql-server.md)的各版本中均未提供见证服务器实例。  
   
     > [!IMPORTANT]  
     >  在进行主体数据库的备份后，尽快完成剩余设置步骤。 对伙伴开始镜像之前，应该创建原始数据库的当前日志备份并将其还原到将来的镜像数据库。  
@@ -93,9 +93,9 @@ ms.locfileid: "62754457"
         >  在高性能模式下，WITNESS 需设置为 OFF。 有关详细信息，请参阅[仲裁：见证服务器如何影响数据库可用性（数据库镜像）](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
   
 > [!NOTE]  
->  有关使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 设置使用 Microsoft Windows 身份验证的数据库镜像的示例，请参阅[示例：使用 Windows 身份验证设置数据库镜像 (Transact-SQL)](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)。  
+>  有关通过 [!INCLUDE[tsql](../../includes/tsql-md.md)] 使用 Microsoft Windows 身份验证设置数据库镜像的示例，请参阅[示例：使用 Windows 身份验证设置数据库镜像 (Transact SQL)](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)。  
 >   
->  有关使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 来设置使用基于证书的安全机制的数据库镜像的示例，请参阅[示例：使用证书设置数据库镜像 (Transact-SQL)](example-setting-up-database-mirroring-using-certificates-transact-sql.md)。  
+>  有关通过 [!INCLUDE[tsql](../../includes/tsql-md.md)] 使用基于证书的安全设置数据库镜像的示例，请参阅 [示例：使用证书设置数据库镜像 (Transact-SQL)](example-setting-up-database-mirroring-using-certificates-transact-sql.md)。  
   
  
   
@@ -118,7 +118,7 @@ ms.locfileid: "62754457"
  [示例：使用证书设置数据库镜像 (Transact-SQL)](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
  包含使用基于证书的身份验证创建带有见证服务器的数据库镜像会话所需的所有阶段的示例。  
   
- [设置登录帐户对数据库镜像或 AlwaysOn 可用性组&#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)  
+ [设置用于数据库镜像或 AlwaysOn 可用性组 &#40;SQL Server 的登录帐户&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)  
  说明了创建使用本地服务器实例以外的帐户的远程服务器实例登录。  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
@@ -154,10 +154,10 @@ ms.locfileid: "62754457"
   
  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库镜像 (SQL Server)](database-mirroring-sql-server.md)   
- [数据库镜像：互操作性和共存 &#40;SQL Server&#41;](database-mirroring-interoperability-and-coexistence-sql-server.md)   
- [传输安全模式的数据库镜像和 AlwaysOn 可用性组&#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
+ [数据库镜像：互操作性和共存 (SQL Server)](database-mirroring-interoperability-and-coexistence-sql-server.md)   
+ [用于数据库镜像和 AlwaysOn 可用性组 &#40;SQL Server 的传输安全&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [指定服务器网络地址（数据库镜像）](specify-a-server-network-address-database-mirroring.md)  
   
   

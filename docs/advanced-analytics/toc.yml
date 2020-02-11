@@ -1,6 +1,6 @@
 - name: SQL Server 机器学习服务文档
   href: ../advanced-analytics/index.yml
-- name: 欢迎使用 SQL Server >
+- name: SQL Server 文档 >
   href: ../sql-server/index.yml
 - name: 概述
   expanded: true
@@ -47,11 +47,11 @@
   items:
     - name: Python
       items:
-        - name: 创建 Python 脚本
+        - name: 运行 Python 脚本
           href: ../advanced-analytics/tutorials/quickstart-python-create-script.md
-        - name: 处理数据类型和对象
+        - name: 数据结构和对象
           href: ../advanced-analytics/tutorials/quickstart-python-data-structures.md
-        - name: 写入 Python 函数
+        - name: Python 函数
           href: ../advanced-analytics/tutorials/quickstart-python-functions.md
         - name: 对模型进行训练和评分
           href: ../advanced-analytics/tutorials/quickstart-python-train-score-model.md
@@ -59,9 +59,9 @@
       items:
         - name: 创建 R 脚本
           href: ../advanced-analytics/tutorials/quickstart-r-create-script.md
-        - name: 处理数据类型和对象
+        - name: 数据类型和对象
           href: ../advanced-analytics/tutorials/quickstart-r-data-types-and-objects.md
-        - name: 编写 R 函数
+        - name: R 函数
           href: ../advanced-analytics/tutorials/quickstart-r-functions.md
         - name: 对模型进行训练和评分
           href: ../advanced-analytics/tutorials/quickstart-r-train-score-model.md
@@ -113,11 +113,11 @@
           href: ../advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md
         - name: 在 T-SQL 中使用 R
           items:
-            - name: 1. 简介
+            - name: 1. 介绍
               href: ../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md
             - name: 2. 数据研究
               href: ../advanced-analytics/tutorials/sqldev-explore-and-visualize-the-data.md
-            - name: 3. 特征工程
+            - name: 3. 特性工程
               href: ../advanced-analytics/tutorials/sqldev-create-data-features-using-t-sql.md
             - name: 4. 训练和部署
               href: ../advanced-analytics/tutorials/sqldev-train-and-save-a-model-using-t-sql.md
@@ -125,13 +125,13 @@
               href: ../advanced-analytics/tutorials/sqldev-operationalize-the-model.md
         - name: 在 R 工具中使用 SQL ML
           items:
-            - name: 1. 简介
+            - name: 1. 介绍
               href: ../advanced-analytics/tutorials/walkthrough-data-science-end-to-end-walkthrough.md
             - name: 2. 数据研究
               href: ../advanced-analytics/tutorials/walkthrough-view-and-summarize-data-using-r.md
             - name: 3. 图形和绘图
               href: ../advanced-analytics/tutorials/walkthrough-create-graphs-and-plots-using-r.md
-            - name: 4. 特征工程
+            - name: 4. 特性工程
               href: ../advanced-analytics/tutorials/walkthrough-create-data-features.md
             - name: 5. 生成并保存模型
               href: ../advanced-analytics/tutorials/walkthrough-build-and-save-the-model.md
@@ -139,36 +139,36 @@
               href: ../advanced-analytics/tutorials/walkthrough-deploy-and-use-the-model.md
         - name: RevoScaleR 深入了解
           items:
-            - name: 1. 简介
+            - name: 介绍
               href: ../advanced-analytics/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md
-            - name: 2. 创建数据库和权限
+            - name: 1. 创建数据库和权限
               href: ../advanced-analytics/tutorials/deepdive-work-with-sql-server-data-using-r.md
-            - name: 3. 创建 RxSqlServerData 对象
+            - name: 2. 创建 RxSqlServerData 对象
               href: ../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md
-            - name: 4. 查询和修改数据
+            - name: 3. 查询和修改数据
               href: ../advanced-analytics/tutorials/deepdive-query-and-modify-the-sql-server-data.md
-            - name: 5. 定义计算上下文
+            - name: 4. 定义计算上下文
               href: ../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md
-            - name: 6. 计算摘要统计信息
+            - name: 5. 计算摘要统计信息
               href: ../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md
-            - name: 7. 可视化数据
+            - name: 6. 可视化数据
               href: ../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md
-            - name: 8. 创建模型
+            - name: 7. 创建模型
               href: ../advanced-analytics/tutorials/deepdive-create-models.md
-            - name: 9. 对新数据进行评分
+            - name: 8. 对新数据进行评分
               href: ../advanced-analytics/tutorials/deepdive-score-new-data.md
-            - name: 10. 转换数据
+            - name: 9. 转换数据
               href: ../advanced-analytics/tutorials/deepdive-transform-data-using-r.md
-            - name: 11. 使用 rxImport 加载数据
+            - name: 10. 使用 rxImport 加载数据
               href: ../advanced-analytics/tutorials/deepdive-load-data-into-memory-using-rximport.md
-            - name: 12. 使用 rxDataStep 创建表
+            - name: 11. 使用 rxDataStep 创建表
               href: ../advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md
-            - name: 13. 执行区块分析
+            - name: 12. 执行区块分析
               href: ../advanced-analytics/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md
-            - name: 14. 在 SQL Server 和 XDF 文件之间移动数据
+            - name: 13. 使用 XDF 文件移动数据
               href: ../advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
-            - name: 15. 使用 rxExec 发送自定义 R
-              href: ../advanced-analytics/tutorials/r-tutorial-custom-r-functions.md
+            - name: 14. 使用 rxExec 发送自定义 R
+              href: ../advanced-analytics/tutorials/deepdive-custom-r-functions-using-rxexec.md
     - name: 示例数据
       items:
         - name: 航空公司数据集
@@ -189,9 +189,9 @@
       href: ../advanced-analytics/concepts/extension-python.md
     - name: R 扩展
       href: ../advanced-analytics/concepts/extension-r.md
-    - name: Security
+    - name: 安全性
       href: ../advanced-analytics/concepts/security.md
-- name: 操作指南
+- name: 操作方法指南
   items:
     - name: 连接
       items:
@@ -243,27 +243,41 @@
           items:
             - name: 获取 Python 包信息
               href: ../advanced-analytics/package-management/python-package-information.md
-            - name: 安装 Python 包
+            - name: 通过 sqlmlutils 安装
               href: ../advanced-analytics/package-management/install-additional-python-packages-on-sql-server.md
+            - name: 通过 Python 工具安装
+              href: ../advanced-analytics/package-management/install-python-packages-standard-tools.md
         - name: 安装新 R 包
           items:
             - name: 获取 R 包信息
               href: ../advanced-analytics/package-management/r-package-information.md
-            - name: 安装 R 包
+            - name: 通过 R 工具安装
+              href: ../advanced-analytics/package-management/install-r-packages-standard-tools.md
+            - name: 通过 sqlmlutils 安装
               href: ../advanced-analytics/package-management/install-additional-r-packages-on-sql-server.md
+            - name: 通过 T-SQL 安装
+              href: ../advanced-analytics/package-management/install-r-packages-with-tsql.md
+            - name: 使用 RevoScaleR
+              items:
+                - name: 通过 RevoScaleR 安装
+                  href: ../advanced-analytics/package-management/install-r-packages-with-revoscaler.md
+                - name: 启用远程 R 管理
+                  href: ../advanced-analytics/package-management/r-package-how-to-enable-or-disable.md
+                - name: 同步 R 包
+                  href: ../advanced-analytics/package-management/package-install-uninstall-and-sync.md
             - name: 创建 miniCRAN 存储库
               href: ../advanced-analytics/package-management/create-a-local-package-repository-using-minicran.md
             - name: 使用 R 包的提示
               href: ../advanced-analytics/package-management/tips-for-using-r-packages.md
     - name: 管理
       items:
-        - name: 监视器
+        - name: 监视
           items:
             - name: 使用 SSMS 报表进行监视
               href: ../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-custom-reports-management-studio.md
             - name: 使用 DMV 进行监视
               href: ../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views.md
-            - name: 扩展事件
+            - name: 扩展的事件
               items:
                 - name: 使用扩展事件进行监视
                   href: ../advanced-analytics/administration/extended-events.md
@@ -277,7 +291,7 @@
               href: ../advanced-analytics/administration/resource-governor.md
             - name: 创建资源池
               href: ../advanced-analytics/administration/create-external-resource-pool.md
-    - name: Security
+    - name: 安全性
       items:
         - name: 授予用户权限
           href: ../advanced-analytics/security/user-permission.md
@@ -319,7 +333,7 @@
           href: ../advanced-analytics/r/ref-r-olapr.md
         - name: sqlrutils
           href: ../advanced-analytics/r/ref-r-sqlrutils.md
-- name: Resources
+- name: 资源
   items:
     - name: 发行说明 >
       href: ../sql-server/sql-server-2017-release-notes.md?toc=../toc.json

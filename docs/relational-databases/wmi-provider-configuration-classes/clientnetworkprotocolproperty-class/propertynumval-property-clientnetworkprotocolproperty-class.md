@@ -18,10 +18,10 @@ ms.assetid: 12b02d97-702b-434f-baf6-e49a6b2cd4de
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 7eb04378883ca9aa973b1dfcd89083087566a413
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73658886"
 ---
 # <a name="propertynumval-property-clientnetworkprotocolproperty-class"></a>PropertyNumVal 属性（ClientNetworkProtocolProperty 类）
@@ -36,11 +36,11 @@ object.PropertyNumVal [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
- 一个[ClientNetworkProtocolProperty 类](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md)对象，该对象表示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 客户端使用的网络协议的属性。  
+ *对象*  
+ 表示[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]客户端使用的网络协议属性的[ClientNetworkProtocolProperty 类](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md)对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个 u**int32**值，该值指定当前属性的数值。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
   

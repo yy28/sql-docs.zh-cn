@@ -11,10 +11,10 @@ ms.assetid: 83a03b85-ea7f-4b4a-b19b-f7eca534ffae
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 2890487c4bbdf23ca4f1d7fa13aa15764f8029d8
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728870"
 ---
 # <a name="test-a-user39s-permissions-master-data-services"></a>测试用户权限 (Master Data Services)
@@ -25,15 +25,15 @@ ms.locfileid: "73728870"
   
 ### <a name="to-test-a-users-security"></a>测试用户的安全设置  
   
-1.  在 Internet Explorer 7 和更高版本中，依次单击 **“工具”** 、 **“Internet 选项”** 和 **“安全”** 选项卡。  
+1.  在 Internet Explorer 7 和更高版本中，依次单击 **“工具”**、 **“Internet 选项”** 和 **“安全”** 选项卡。  
   
 2.  单击 **“本地 Intranet”** ，然后单击 **“自定义级别”** 按钮。  
   
-3.  在 **“用户验证”** 部分，选择 **“用户名和密码提示”** 。  
+3.  在 **“用户验证”** 部分，选择 **“用户名和密码提示”**。  
   
 4.  下次您打开浏览器窗口时，将提示您输入用户名和密码。  
   
 ## <a name="see-also"></a>另请参阅  
- [安全性 (Master Data Services)](../master-data-services/security-master-data-services.md)  
+ [安全 &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
   
   
