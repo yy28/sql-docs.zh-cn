@@ -1,5 +1,5 @@
 ---
-title: SSMA 控制台 (AccessToSQL) 中的命令行选项 |Microsoft Docs
+title: SSMA 控制台中的命令行选项（AccessToSQL） |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/19/2017
@@ -11,25 +11,25 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: f6a2bb7e10e487d65c0fa8dfd406a30f9acd557a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68265528"
 ---
-# <a name="command-line-options-in-the-ssma-console-accesstosql"></a>SSMA 控制台 (AccessToSQL) 中的命令行选项
-Microsoft 为您提供了一套稳健的命令行选项来执行和控制 SSMA 活动。 下来的几节提供其他详细信息。  
+# <a name="command-line-options-in-the-ssma-console-accesstosql"></a>SSMA 控制台中的命令行选项（AccessToSQL）
+Microsoft 为你提供了一组强大的命令行选项来执行和控制 SSMA 活动。 后续部分提供了更多详细信息。  
   
 ## <a name="command-line-options-in-the-ssma-console"></a>SSMA 控制台中的命令行选项  
-此处所述的控制台命令选项。  
+本文介绍了控制台命令选项。  
   
-对于本部分中，术语 option 也称为转换。  
+出于本部分的目的，术语 "option" 也称为 "switch"。  
   
-选项不区分大小写，并且可能会启动与 **-** 或 **/** 字符。  
+选项不区分大小写，并且可以以 "**-**" 或 "**/**" 字符开头。  
   
-如果指定了选项，是必须指定相应的选项参数。  
+如果指定了选项，则必须指定相应的选项参数。  
   
-由空白，必须从选项字符分隔选项参数。  
+选项参数必须与选项字符之间用空格分隔。  
   
 **语法示例：**  
   
@@ -37,23 +37,23 @@ Microsoft 为您提供了一套稳健的命令行选项来执行和控制 SSMA �
   
 `C:\> SSMAforAccessConsole.EXE -s "C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\AssessmentReportGenerationSample.xml" -v "C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\VariableValueFileSample.xml" -c "C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ServersConnectionFileSample.xml"`  
   
-包含空格的文件夹或文件名称应指定用双引号括起来。  
+应将包含空格的文件夹或文件名指定为双引号。  
   
-命令行条目和错误消息的输出存储在标准输出或指定文件中。  
+命令行项和错误消息的输出存储在 STDOUT 或指定文件中。  
   
-### <a name="script-file-option--sscript"></a>编写的脚本文件选项:-s/脚本  
-强制性开关，脚本文件路径/名称指定命令序列 SSMA 要执行该脚本。  
+### <a name="script-file-option--sscript"></a>脚本文件选项：-s/脚本  
+脚本文件路径/名称是必需的开关，指定 SSMA 要执行的命令序列的脚本。  
   
 **语法示例：**  
   
 `C:\>SSMAforAccessConsole.EXE -s "C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml"`  
   
-### <a name="variable-value-file-option--vvariable"></a>变量值文件选项:-v/变量  
-变量值文件包含脚本文件中使用的变量。 开关是可选的。 如果未在可变文件中声明变量和脚本文件中使用，应用程序将生成一个错误并终止控制台执行。  
+### <a name="variable-value-file-option--vvariable"></a>变量值文件选项：-v/variable  
+变量值文件包含脚本文件中使用的变量。 开关是可选的。 如果变量未在变量文件中声明并在脚本文件中使用，则应用程序将生成错误并终止控制台执行。  
   
 **语法示例：**  
   
--   在多个变量值文件中，可能是一个具有默认值，另一个具有特定于实例的值在适用时定义的变量。 最后一个命令行参数中指定的变量文件采用首选项，以防止出现重复的变量：  
+-   在多个变量值文件中定义的变量，可能有一个具有默认值的变量，另一个是特定于实例的值（如果适用）。 在命令行参数中指定的最后一个变量文件采用首选项，以防出现重复的变量：  
   
     `C:\>SSMAforAccessConsole.EXE -s`  
   
@@ -61,14 +61,14 @@ Microsoft 为您提供了一套稳健的命令行选项来执行和控制 SSMA �
   
     `projects\global_variablevaluefile.xml -v "c:\migrationprojects\instance_variablevaluefile.xml"`  
   
-### <a name="server-connection-file-option--cserverconnection"></a>服务器连接文件选项:-c/serverconnection  
-此文件包含服务器的每个服务器的连接信息。 每个服务器定义标识的唯一服务器 id。 服务器 Id 与连接相关的命令的脚本文件中引用。  
+### <a name="server-connection-file-option--cserverconnection"></a>服务器连接文件选项：-c/microsoft.sqlserver.management.common.serverconnection>  
+此文件包含每个服务器的服务器连接信息。 每个服务器定义由唯一的服务器 ID 标识。 脚本文件中引用了与连接相关的命令的服务器 Id。  
   
-服务器定义可以是服务器连接文件和/或脚本文件的一部分。 在脚本文件中的服务器 id 将优先于服务器连接文件，以防服务器 id 重复。  
+服务器定义可以是服务器连接文件和/或脚本文件的一部分。 脚本文件中的服务器 id 优先于服务器连接文件，以防出现服务器 id 重复。  
   
 **语法示例：**  
   
--   脚本文件中使用服务器 Id。 它们是单独的服务器连接文件中定义的。 此文件使用变量值文件中定义的变量：  
+-   服务器 Id 在脚本文件中使用。 它们在单独的服务器连接文件中定义。 此文件使用变量值文件中定义的变量：  
   
     `C:\>SSMAforAccessConsole.EXE -s "C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml"  -v`  
   
@@ -76,16 +76,16 @@ Microsoft 为您提供了一套稳健的命令行选项来执行和控制 SSMA �
   
     `c:\SsmaProjects\myserverconnectionsfile1.xml`  
   
--   服务器定义嵌入的脚本文件：  
+-   服务器定义嵌入到脚本文件中：  
   
     `C:\>SSMAforAccessConsole.EXE -s "C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml"`  
   
-### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>XML 输出选项:-x / xmloutput [xmloutputfile]  
-此命令用于将命令输出消息到控制台或 xml 文件以 xml 格式输出。  
+### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>XML output 选项：-x/xmloutput [xmloutputfile]  
+此命令用于将 xml 格式的命令输出消息输出到控制台或 xml 文件。  
   
-有两个选项可用于 xmloutput，即：  
+Xmloutput 提供了两个选项，即：  
   
--   如果文件路径提供 xmloutput 切换后，输出是重定向到该文件。  
+-   如果在 xmloutput 开关之后提供了 filepath，则会将输出重定向到文件。  
   
     **语法示例：**  
   
@@ -93,14 +93,14 @@ Microsoft 为您提供了一套稳健的命令行选项来执行和控制 SSMA �
   
     `"C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml"  -x d:\xmloutput\project1output.xml`  
   
--   如果没有 filepath xmloutput 切换后提供，则 xmlout 显示控制台本身上。  
+-   如果在 xmloutput 开关之后未提供 filepath，则 xmlout 将显示在控制台上。  
   
     **语法示例：**  
   
     `C:\>SSMAforAccessConsole.EXE -s "C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml"  -xmloutput`  
   
-### <a name="log-file-option--llog"></a>日志文件选项:-l/日志  
-在控制台应用程序中的所有 SSMA 操作都记录在日志文件，并包含开关是可选。 如果在命令行指定了日志文件，它的路径，则在指定的位置获取生成日志。 否则，它获取生成在其默认位置。  
+### <a name="log-file-option--llog"></a>日志文件选项：-l/日志  
+控制台应用程序中的所有 SSMA 操作都记录在一个日志文件中，并且开关是可选的。 如果在命令行中指定了日志文件及其路径，则会在指定的位置生成日志。 否则，它将在其默认位置生成。  
   
 **语法示例：**  
   
@@ -108,8 +108,8 @@ Microsoft 为您提供了一套稳健的命令行选项来执行和控制 SSMA �
   
 `"C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml"  -l c:\SsmaProjects\migration1.log`  
   
-### <a name="project-environment-folder-option--eprojectenvironment"></a>项目环境文件夹选项:-e/projectenvironment  
-此可选开关表示当前的 SSMA 项目的项目环境设置文件夹。  
+### <a name="project-environment-folder-option--eprojectenvironment"></a>项目环境文件夹选项：-e/projectenvironment  
+此可选开关表示当前 SSMA 项目的项目环境设置文件夹。  
   
 **语法示例：**  
   
@@ -121,57 +121,57 @@ Microsoft 为您提供了一套稳健的命令行选项来执行和控制 SSMA �
 |-|  
 ||  
   
-### <a name="secure-password-option--psecurepassword"></a>安全的密码选项:-p/securepassword  
-此选项指示服务器连接的加密的密码。 它不同于所有其他选项，但它不会执行任何脚本或任何与迁移相关的活动，帮助可帮助管理的迁移项目中使用的服务器连接的密码加密。  
+### <a name="secure-password-option--psecurepassword"></a>安全密码选项：-p/securepassword  
+此选项指示服务器连接的加密密码。 它与所有其他选项的不同之处在于，它不会执行任何与迁移相关的活动中的任何脚本或帮助，但有助于管理迁移项目中使用的服务器连接的密码加密。  
   
-不能作为命令行参数输入任何其他选项或密码。 否则，它会导致错误。 有关详细信息，请参阅[管理密码](managing-passwords-accesstosql.md)部分。  
+不能输入任何其他选项或密码作为命令行参数。 否则，会导致错误。 有关详细信息，请参阅[管理密码](managing-passwords-accesstosql.md)部分。  
   
-支持以下子选项`-p/securepassword`:  
+支持以下子选项`-p/securepassword`：  
   
--   若要添加密码，或更新现有密码，为受保护存储对于指定的服务器 ID，或者在服务器连接文件中定义的所有服务器 Id:  
+-   若要为指定的服务器 ID 或服务器连接文件中定义的所有服务器 Id 添加密码或更新现有密码，请执行以下操作：  
   
     `-p|-securepassword -a|add    {"<server_id>[, .n]"|all}``-c|-serverconnection <server-connection-file> [-v|variable <variable-value-file>]``[-o|overwrite]`  
   
     `-p|-securepassword -a|add    {"<server_id>[, .n]"|all}``-s|-script <server-connection-file> [-v|variable <variable-value-file>] [-o|overwrite]`  
   
--   从指定的服务器 ID 的所有服务器 Id; 二是受保护的存储中删除加密的密码：  
+-   若要从指定服务器 ID 或所有服务器 Id 的受保护存储中删除加密密码：  
   
     `-p/securepassword -r/remove {<server_id> [, ...n] | all}`  
   
--   要显示的密码加密的服务器 Id 列表：  
+-   若要显示为其加密密码的服务器 Id 的列表，请执行以下操作：  
   
     `-p/securepassword -l/list`  
   
--   若要导出加密文件的受保护存储中存储的密码。 该文件是使用用户指定的密码加密。  
+-   将存储在受保护的存储中的密码导出到加密文件中。 此文件是用用户指定的密码加密的。  
   
     `-p/securepassword -e/export {<server-id> [, ...n] | all} <encrypted-password -file>`  
   
--   加密文件之前导出导入到本地使用用户指定的密码的保护存储。 一旦该文件进行解密，它存储在一个新文件，又在本地计算机加密。  
+-   使用用户指定的密码短语，先前导出的加密文件将导入到本地受保护的存储中。 文件解密后，它将存储在新文件中，后者将在本地计算机上加密。  
   
     `-p/securepassword -i/import {<server-id> [, ...n] | all} <encrypted-password -file>`  
   
     可以使用逗号分隔符指定多个服务器 Id。  
   
-### <a name="help-option--help"></a>Help 选项:-？ / 帮助  
-显示语法摘要 SSMA 控制台选项：  
+### <a name="help-option--help"></a>帮助选项：-？/Help  
+显示 SSMA 控制台选项的语法摘要：  
   
 `C:\>SSMAforAccessConsole.EXE -?`  
   
-SSMA 控制台命令行选项以表格形式显示，请参阅[附录-1 &#40;AccessToSQL&#41;](../../ssma/access/appendix-1-accesstosql.md)。  
+如要表格显示 SSMA 控制台命令行选项，请参阅[附录 1 &#40;AccessToSQL&#41;](../../ssma/access/appendix-1-accesstosql.md)。  
   
-### <a name="securepassword-help-option--securepassword--help"></a>SecurePassword Help 选项:-securepassword-？ / 帮助  
-显示语法摘要 SSMA 控制台选项：  
+### <a name="securepassword-help-option--securepassword--help"></a>SecurePassword 帮助选项：-SecurePassword-？/Help  
+显示 SSMA 控制台选项的语法摘要：  
   
 `C:\>SSMAforAccessConsole.EXE -securepassword -?`  
   
-SSMA 控制台命令行选项以表格形式显示，请参阅[附录-1 &#40;AccessToSQL&#41;](../../ssma/access/appendix-1-accesstosql.md)  
+如要表格显示 SSMA 控制台命令行选项，请参阅[附录-1 &#40;AccessToSQL&#41;](../../ssma/access/appendix-1-accesstosql.md)  
   
 ### <a name="next-steps"></a>后续步骤  
-下一步取决于你的项目要求：  
+下一步取决于项目要求：  
   
-1.  用于指定密码或导出 / 导入密码，请参阅[管理密码&#40;AccessToSQL&#41;](../../ssma/access/managing-passwords-accesstosql.md)。  
+1.  若要指定密码或导出/导入密码，请参阅[管理密码 &#40;AccessToSQL&#41;](../../ssma/access/managing-passwords-accesstosql.md)。  
   
-2.  用于生成报告，请参阅[生成报表&#40;AccessToSQL&#41;](../../ssma/access/generating-reports-accesstosql.md)。  
+2.  有关生成报表的详细 &#40;，请参阅[&#41;中生成报表](../../ssma/access/generating-reports-accesstosql.md)。  
   
-3.  有关故障排除控制台中的问题，请参阅[故障排除&#40;AccessToSQL&#41;](../../ssma/access/troubleshooting-accesstosql.md)。  
+3.  有关控制台中问题的疑难解答，请参阅[排查 &#40;AccessToSQL&#41;](../../ssma/access/troubleshooting-accesstosql.md)。  
   

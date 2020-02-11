@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 22f1fbc9470eb4002bb40f0e4e513f35134c442e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774331"
 ---
 # <a name="add-a-secondary-database-to-a-log-shipping-configuration-sql-server"></a>向日志传送配置添加辅助数据库 (SQL Server)
@@ -41,28 +41,28 @@ ms.locfileid: "62774331"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  日志传送存储过程要求 **sysadmin** 固定服务器角色中的成员身份。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-add-a-log-shipping-secondary-database"></a>添加日志传送辅助数据库  
   
-1.  右键单击要在日志传送配置中用作主数据库的数据库，然后单击“属性”  。  
+1.  右键单击要在日志传送配置中用作主数据库的数据库，然后单击“属性”****。  
   
 2.  在 **“选择页”** 下，单击 **“事务日志传送”** 。  
   
-3.  在 **“辅助服务器实例和数据库”** 下，单击 **“添加”** 。  
+3.  在 **“辅助服务器实例和数据库”** 下，单击 **“添加”**。  
   
 4.  单击 **“连接”** ，连接到要用作辅助服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
-5.  在 **“辅助数据库”** 框中，从列表中选择一个数据库或键入要创建的数据库的名称。  
+5.  在 "**辅助数据库**" 框中，从列表中选择一个数据库或键入要创建的数据库的名称。  
   
 6.  在 **“初始化辅助数据库”** 选项卡上，选择要用于初始化辅助数据库的选项。  
   
-7.  在 **“复制文件”** 选项卡的 **“复制文件的目标文件夹”** 框中，键入应将事务日志备份复制到的文件夹的路径。 该文件夹通常位于辅助服务器上。  
+7.  在 "**复制文件" 选项卡**上的 "**复制文件的目标文件夹**" 框中，键入应将事务日志备份复制到其中的文件夹的路径。 该文件夹通常位于辅助服务器上。  
   
 8.  请注意 **“复制作业”** 下的 **“计划”** 框中列出的复制计划。 如果要自定义安装计划，请单击 **“计划”** ，然后根据需要调整 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理计划。 此计划应为大致的备份计划。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "62774331"
   
 13. 请注意 **“还原作业”** 下 **“计划”** 框中列出的还原计划。 如果要自定义安装计划，请单击 **“计划”** ，然后根据需要调整 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理计划。 此计划应为大致的备份计划。  
   
-14. 单击 **“确定”** 中向现有的日志传送配置添加辅助数据库。  
+14. 单击“确定”。   
   
 15. 在“数据库属性”对话框上单击 **“确定”** ，以开始配置过程。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "62774331"
   
 ##  <a name="RelatedTasks"></a> 相关任务  
   
--   [日志传送升级到 SQL Server 2014 &#40;Transact SQL&#41;](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
+-   [将日志传送升级到 SQL Server 2014 &#40;Transact-sql&#41;](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   
 -   [配置日志传送 (SQL Server)](configure-log-shipping-sql-server.md)  
   
@@ -110,7 +110,7 @@ ms.locfileid: "62774331"
   
 -   [故障转移到日志传送辅助服务器 (SQL Server)](fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [关于日志传送 (SQL Server)](about-log-shipping-sql-server.md)   
  [日志传送表和存储过程](log-shipping-tables-and-stored-procedures.md)  
   

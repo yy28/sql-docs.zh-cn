@@ -16,10 +16,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 98d595be891fbae75cfe90d06ceccec232e7e53e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62772286"
 ---
 # <a name="sql-server-2014-product-specifications"></a>SQL Server 2014 产品规格
@@ -42,14 +42,16 @@ ms.technology:
 This HTML comment can be erased, if you like.
 -->
 
- [按 SQL Server 版本划分的计算能力限制](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的每个版本支持的处理器的最大数目。  
+ [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的每个版本支持的处理器的最大数目。  
   
  [SQL Server 2014 的版本和组件](../sql-server/editions-and-components-of-sql-server-2016.md)  
  选择要安装的组件和功能。  
   
  [SQL Server 2014 各个版本支持的功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的每个版本支持的功能。  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的每个版本支持的功能。  
   
  [SQL Server 的最大容量规范](../sql-server/maximum-capacity-specifications-for-sql-server.md)  
  各种 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对象的最大容量。  

@@ -1,5 +1,5 @@
 ---
-title: 连接到现有的次要副本页 （添加副本向导和添加数据库向导） |Microsoft Docs
+title: "\"连接到现有的辅助副本\" 页（添加副本向导和添加数据库向导） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,26 +14,26 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 345d92c6d0d276a24a3d7d7abbc7c633205bc972
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62792002"
 ---
 # <a name="connect-to-existing-secondary-replicas-page-add-replica-wizard-and-add-databases-wizard"></a>“连接到现有的次要副本”页（添加副本向导和添加数据库向导）
-  本帮助主题介绍 **“连接到现有的辅助副本”** 页的选项。 本主题由 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] 的“ [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] ”和“ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]”使用。  
+  本帮助主题介绍 "**连接到现有的辅助副本**" 页的选项。 本主题由 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] 的“ [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] ”和“ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]”使用。  
   
  **网格列：**  
  **服务器实例**  
  显示将承载可用性副本的服务器实例的名称。  
   
- **连接为**  
- 显示在建立了连接后连接到服务器实例的帐户。 如果此页对于某一给定的服务器实例显示 **“未连接”** ，则您将需要单击 **“连接”** 或 **“全部连接”** 按钮。  
+ **连接身份**  
+ 显示在建立了连接后连接到服务器实例的帐户。 如果此页对于某一给定的服务器实例显示 **“未连接”**，则您将需要单击 **“连接”** 或 **“全部连接”** 按钮。  
   
- **“连接”**  
+ **连接**  
  如果此服务器实例正基于与您将需要连接到的其他服务器实例不同的帐户运行，则单击此选项。  
   
- **“全部连接”**  
+ **全部连接**  
  仅当您需要连接到的每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例都作为相同用户帐户中的服务运行时，才单击此选项。  
   
  **取消**  
@@ -49,7 +49,7 @@ ms.locfileid: "62792002"
   
 
   
-## <a name="see-also"></a>请参阅  
- [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+## <a name="see-also"></a>另请参阅  
+ [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d4501bc77a28746de3b0ce97b7b619889093650d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918573"
 ---
 # <a name="set-or-change-the-server-collation"></a>设置或更改服务器排序规则
-  服务器排序规则用作与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例一起安装的所有系统数据库以及任何新创建的用户数据库的默认排序规则。 服务器排序规则是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装期间指定的。 有关详细信息，请参阅 [Collation and Unicode Support](collation-and-unicode-support.md)。  
+  服务器排序规则用作与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例一起安装的所有系统数据库以及任何新创建的用户数据库的默认排序规则。 服务器排序规则是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装期间指定的。 有关详细信息，请参阅 [排序规则和 Unicode 支持](collation-and-unicode-support.md)。  
   
 ## <a name="changing-the-server-collation"></a>更改服务器排序规则  
  更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的默认排序规则的操作可能会比较复杂，包括以下步骤：  
@@ -49,8 +49,8 @@ ms.locfileid: "62918573"
 > [!NOTE]  
 >  可以为创建的每个新数据库指定默认排序规则，而不更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的默认排序规则。  
   
-## <a name="see-also"></a>请参阅  
- [Collation and Unicode Support](collation-and-unicode-support.md)   
+## <a name="see-also"></a>另请参阅  
+ [排序规则和 Unicode 支持](collation-and-unicode-support.md)   
  [设置或更改数据库排序规则](set-or-change-the-database-collation.md)   
  [设置或更改列排序规则](set-or-change-the-column-collation.md)   
  [重新生成系统数据库](../databases/system-databases.md)  

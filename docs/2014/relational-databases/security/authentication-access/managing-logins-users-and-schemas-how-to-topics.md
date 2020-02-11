@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2f09d633ccd8dfc8bdfdda27c75ac3a710475d93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011501"
 ---
 # <a name="managing-logins-users-and-schemas-how-to-topics"></a>管理登录名、用户和架构操作指南主题
@@ -34,7 +34,7 @@ ms.locfileid: "63011501"
   
 -   [向主体授予权限](grant-a-permission-to-a-principal.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [主体（数据库引擎）](principals-database-engine.md)   
  [保护 SQL Server](../securing-sql-server.md)  
   

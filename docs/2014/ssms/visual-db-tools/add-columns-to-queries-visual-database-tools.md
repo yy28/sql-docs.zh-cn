@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: aef64ed8031664dcbefa7d0e30bf9f63435b292c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015698"
 ---
 # <a name="add-columns-to-queries-visual-database-tools"></a>向查询中添加列 (Visual Database Tools)
@@ -40,7 +40,7 @@ ms.locfileid: "63015698"
   
 ### <a name="to-add-all-columns-for-one-table-or-table-valued-object"></a>添加一个表或表值对象的所有列  
   
--   在中**关系图窗格**，选中复选框旁边 **\*（所有列）** 。  
+-   在 "**关系图" 窗格**中，选择 " ** \*（所有列）**" 旁边的复选框。  
   
 ### <a name="to-add-all-columns-for-all-tables-and-table-structured-objects"></a>添加所有表和表结构对象的所有列  
   
@@ -50,11 +50,11 @@ ms.locfileid: "63015698"
   
 3.  在“属性”窗口中，单击“输出所有列”  ，然后从下拉列表中选择“是”  或“否”  。  
   
-## <a name="see-also"></a>请参阅  
- [从查询结果中删除列&#40;可视化数据库工具&#41;](visual-database-tools.md)   
- [从查询中删除列&#40;可视化数据库工具&#41;](remove-columns-from-queries-visual-database-tools.md)   
- [指定搜索条件&#40;可视化数据库工具&#41;](specify-search-criteria-visual-database-tools.md)   
- [汇总查询结果&#40;可视化数据库工具&#41;](summarize-query-results-visual-database-tools.md)   
+## <a name="see-also"></a>另请参阅  
+ [从查询结果中删除列 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [&#40;Visual Database Tools&#41;从查询中删除列](remove-columns-from-queries-visual-database-tools.md)   
+ [指定 Visual Database Tools &#40;搜索条件&#41;](specify-search-criteria-visual-database-tools.md)   
+ [&#40;Visual Database Tools&#41;汇总查询结果](summarize-query-results-visual-database-tools.md)   
  [执行基本的查询操作 (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 结果页 （AlwaysOn 可用性组向导） |Microsoft Docs
+title: "\"结果\" 页（AlwaysOn 可用性组向导） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a76c87b38dc333f55745c61620398f086a3db5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62789008"
 ---
 # <a name="results-page-alwayson-availability-group-wizards"></a>“结果”页（AlwaysOn 可用性组向导）
@@ -34,10 +34,10 @@ ms.locfileid: "62789008"
  **结果**  
  对于每个已完成的步骤，显示下列超链接文本之一。  
   
-|结果|Description|  
+|结果|说明|  
 |------------|-----------------|  
 |**错误**|指示验证步骤失败。 单击该链接可以查看错误消息。|  
-|**成功**|指示此验证步骤已成功完成。|  
+|**Success**|指示此验证步骤已成功完成。|  
   
 
   
@@ -53,7 +53,7 @@ ms.locfileid: "62789008"
   
 
   
-## <a name="see-also"></a>请参阅  
- [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+## <a name="see-also"></a>另请参阅  
+ [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Hyperion Essbase 查询设计器用户界面 (报表生成器) |Microsoft Docs
+title: Hyperion Essbase 查询设计器用户界面（报表生成器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7d751b91bf21e30fb910f306c1b37155b209887a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891401"
 ---
 # <a name="hyperion-essbase-query-designer-user-interface-report-builder"></a>Hyperion Essbase 查询设计器用户界面（报表生成器）
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了一个图形查询设计器，用于为 [!INCLUDE[extEssbase](../includes/extessbase-md.md)] 数据源生成多维表达式 (MDX) 查询。 MDX 图形查询设计器有两种模式:设计模式和查询模式。 每种模式都提供一个“元数据”窗格，从该窗格中可以拖动在数据源中定义的多维数据集的成员，以生成可在处理报表时检索数据的 MDX 查询。  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]提供了一个图形查询设计器，用于为[!INCLUDE[extEssbase](../includes/extessbase-md.md)]数据源生成多维表达式（MDX）查询。 MDX 图形查询设计器有两种模式：设计模式和查询模式。 每种模式都提供一个“元数据”窗格，从该窗格中可以拖动在数据源中定义的多维数据集的成员，以生成可在处理报表时检索数据的 MDX 查询。  
   
 > [!IMPORTANT]  
 >  用户创建和运行查询时访问数据源。 您应授予对数据源的最小权限（如只读权限）。  
@@ -33,11 +33,11 @@ ms.locfileid: "68891401"
 ## <a name="graphical-query-designer-in-design-mode"></a>设计模式下的图形查询设计器  
  为使用 [!INCLUDE[extEssbase](../includes/extessbase-md.md)] 数据源的数据集编辑 MDX 查询时，图形查询设计器将在设计模式下打开。 下图列出了设计模式的窗格。  
   
- ![用于 Hyperion Essbase 数据源的查询设计器](media/rsqd-dshyperionessbase-mdx-designmode.gif "Query Designer for Hyperion Essbase data source")  
+ ![用于 Hyperion Essbase 数据源的查询设计器](media/rsqd-dshyperionessbase-mdx-designmode.gif "用于 Hyperion Essbase 数据源的查询设计器")  
   
  下表列出了设计模式下的窗格。  
   
-|Pane|Functions|  
+|窗格|函数|  
 |----------|--------------|  
 |“选择多维数据集”按钮|显示当前选定的多维数据集。|  
 |“元数据”窗格|显示多维数据集的层次结构列表。|  
@@ -52,27 +52,27 @@ ms.locfileid: "68891401"
 ### <a name="toolbar-for-the-graphical-query-designer-in-design-mode-toolbar"></a>设计模式下的图形查询设计器工具栏  
  查询设计器工具栏提供了可以帮助您使用图形界面来设计 MDX 查询的按钮。 下表显示这些按钮并介绍了它们的功能。  
   
-|Button|描述|  
+|按钮|说明|  
 |------------|-----------------|  
 |**编辑为文本**|在基于文本的查询设计器和图形查询设计器之间切换。 不可用于此数据源类型。|  
-|**导入**|从文件系统中的报表定义 (.rdl) 文件导入现有查询。|  
-|![刷新数据集字段](media/rsqdicon-refreshfields.gif "Refresh dataset fields")|刷新数据源的元数据。|  
-|![Add calculated member](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|显示 **“计算成员生成器”** 对话框。 使用此按钮可以创建或编辑计算成员表达式，其中包括设置 **“求解次序”** 属性。|  
-|![切换显示空单元格](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "Toggle for show empty cells")|在“数据”窗格中的显示或不显示空单元格之间切换。 （这等同于在 MDX 中使用 NON EMPTY 子句）。|  
-|![自动执行查询](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "AutoExecute the query")|自动运行查询并在每次更改（如在“数据”窗格中删除一列）之后显示结果。 结果将显示在“数据”窗格中。|  
+|**Import**|从文件系统中的报表定义 (.rdl) 文件导入现有查询。|  
+|![刷新数据集字段](media/rsqdicon-refreshfields.gif "刷新数据集字段")|刷新数据源的元数据。|  
+|![添加计算成员](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "添加计算成员")|显示 **“计算成员生成器”** 对话框。 使用此按钮可以创建或编辑计算成员表达式，其中包括设置 **“求解次序”** 属性。|  
+|![切换显示空单元](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "切换显示空单元")|在“数据”窗格中的显示或不显示空单元格之间切换。 （这等同于在 MDX 中使用 NON EMPTY 子句）。|  
+|![自动执行查询](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "自动执行查询")|自动运行查询并在每次更改（如在“数据”窗格中删除一列）之后显示结果。 结果将显示在“数据”窗格中。|  
 |![删除](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-delete.gif "删除")|从查询中删除选定项。 使用此按钮可以删除“筛选器”窗格中的选定行。|  
 |![运行查询](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "运行查询")|运行查询并在“数据”窗格中显示结果。|  
-|![取消查询](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-cancel.gif "Cancel the query")|取消查询。|  
-|![切换到设计模式](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Switch to Design mode")|在设计模式和查询模式之间切换。|  
+|![取消查询](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-cancel.gif "取消查询")|取消查询。|  
+|![切换到设计模式](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "切换到设计模式")|在设计模式和查询模式之间切换。|  
   
 ## <a name="graphical-query-designer-in-query-mode"></a>查询模式下的图形查询设计器  
  若要将图形查询设计器更改为查询模式，请单击工具栏上的 **“设计模式”** 切换按钮。  
   
- ![用于 Hyperion 的查询模式下的查询设计器](media/rsqd-hyperionessbase-mdx-querymode.gif "Query Designer in Query Mode for Hyperion")  
+ ![用于 Hyperion 的查询模式的查询设计器](media/rsqd-hyperionessbase-mdx-querymode.gif "用于 Hyperion 的查询模式的查询设计器")  
   
  下表介绍了每个窗格的功能。  
   
-|Pane|Functions|  
+|窗格|函数|  
 |----------|--------------|  
 |“选择多维数据集”按钮|显示当前选定的多维数据集。|  
 |“元数据/函数”窗格|显示一个选项卡式窗口，其中列出了可用于创建查询文本的元数据或函数列表。|  
@@ -86,13 +86,13 @@ ms.locfileid: "68891401"
   
 -   **编辑为文本**  
   
--   **添加计算成员** (![Add calculated member](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
+-   **添加计算成员**（![添加计算成员](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "添加计算成员")）  
   
--   **显示空单元格**（![切换显示空单元格](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "Toggle for show empty cells")）  
+-   **显示空单元格**（![切换以显示空单元格](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "切换显示空单元")）  
   
--   **自动执行**（![自动执行查询](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "AutoExecute the query")）  
+-   **自动执行**（![自动执行查询](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "自动执行查询")）  
   
-## <a name="see-also"></a>请参阅  
- [查询设计器（报表生成器）](../../2014/reporting-services/query-designers-report-builder.md)  
+## <a name="see-also"></a>另请参阅  
+ [查询设计器 &#40;报表生成器&#41;](../../2014/reporting-services/query-designers-report-builder.md)  
   
   

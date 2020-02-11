@@ -1,5 +1,5 @@
 ---
-title: 加密的数据库与 AlwaysOn 可用性组 (SQL Server) |Microsoft Docs
+title: AlwaysOn 可用性组（SQL Server）的加密数据库 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5bafd990a7c115a6108b699a61897f9e587e83c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62814633"
 ---
 # <a name="encrypted-databases-with-alwayson-availability-groups-sql-server"></a>加密的数据库与 AlwaysOn 可用性组 (SQL Server)
@@ -54,8 +54,8 @@ ms.locfileid: "62814633"
   
 -   [使用“将数据库添加到可用性组向导”(SQL Server Management Studio)](availability-group-add-database-to-group-wizard.md)  
   
-## <a name="see-also"></a>请参阅  
- [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>另请参阅  
+ [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [透明数据加密 (TDE)](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
   
   

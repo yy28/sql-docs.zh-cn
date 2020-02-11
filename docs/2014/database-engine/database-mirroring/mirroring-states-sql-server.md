@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9e3e3756f65baa7e1b62e3a84ff709a60b9c887b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754555"
 ---
 # <a name="mirroring-states-sql-server"></a>镜像状态 (SQL Server)
@@ -33,7 +33,7 @@ ms.locfileid: "62754555"
   
  可能的数据库镜像状态如下所示：  
   
-|镜像状态|Description|  
+|镜像状态|说明|  
 |---------------------|-----------------|  
 |SYNCHRONIZING|镜像数据库的内容滞后于主体数据库的内容。 主体服务器正在将日志记录发送到镜像服务器（正在将更改应用于镜像数据库以使其前滚）。<br /><br /> 在数据库镜像会话开始时，数据库处于 SYNCHRONIZING 状态。 主体服务器为数据库提供服务，同时镜像服务器尽量与主体服务器保持同步。|  
 |SYNCHRONIZED|当镜像服务器与主体服务器几乎保持同步时，镜像状态将更改为 SYNCHRONIZED。 只要主体服务器继续向镜像服务器发送更改，并且镜像服务器继续将更改应用于镜像数据库，数据库就会保持此状态。<br /><br /> 如果将事务安全性设置为 FULL，则 SYNCHRONIZED 状态同时支持自动故障转移和手动故障转移，并且在故障转移后不会丢失数据。<br /><br /> 如果关闭事务安全性，则即使处于 SYNCHRONIZED 状态，也总可能丢失某些数据。|  
@@ -41,7 +41,7 @@ ms.locfileid: "62754555"
 |PENDING_FAILOVER|此状态只在故障转移开始之后的主体服务器中存在，但此时服务器尚未转换到镜像角色。<br /><br /> 当故障转移开始时，主体数据库将进入 PENDING_FAILOVER 状态，快速终止任何用户连接，并在此后不久便接管镜像角色。|  
 |DISCONNECTED|伙伴已失去与其他伙伴的通信。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [监视数据库镜像 (SQL Server)](database-mirroring-sql-server.md)  
   
   

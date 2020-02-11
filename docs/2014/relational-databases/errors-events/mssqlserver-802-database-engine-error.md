@@ -1,5 +1,5 @@
 ---
-title: MSSQLSERVER_802 | Microsoft Docs
+title: MSSQLSERVER_802 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c1caf78bedc85f7de7a55b67daee4c227d2a8dd2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762359"
 ---
-# <a name="mssqlserver802"></a>MSSQLSERVER_802
+# <a name="mssqlserver_802"></a>MSSQLSERVER_802
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62762359"
 |符号名称|NO_BUFS|  
 |消息正文|缓冲池中的可用内存不足。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  当缓冲池已满且缓冲池无法再增大时，会导致此错误。  
   
 ## <a name="user-action"></a>用户操作  
@@ -40,7 +40,7 @@ ms.locfileid: "62762359"
   
 1.  验证其他应用程序或服务是否占用此服务器上的内存。 重新配置不太重要的应用程序或服务，使其占用更少的内存。  
   
-2.  开始收集性能监视器计数器[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **:缓冲区管理器**， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **:内存管理器**。  
+2.  开始收集 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Buffer Manager**、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Memory Manager** 的性能监视器计数器。  
   
 3.  检查下面的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存配置参数：  
   

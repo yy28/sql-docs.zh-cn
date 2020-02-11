@@ -1,5 +1,5 @@
 ---
-title: 选择并配置受影响的对象 (OracleToSQL) |Microsoft Docs
+title: 选择并配置受影响的对象（OracleToSQL） |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,30 +14,30 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: c06fb621cab581e934ba4655ed6507149d109c60
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68266497"
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>选择并配置受影响的对象 (OracleToSQL)
-在此页可以选择表和外键，在其中更改应进行比较时 SSMA 验证在上一步中选择的对象的执行结果。 此外，还可以自定义验证参数。  
+在此页上，您可以选择表和外键，在 SSMA 验证在上一步中选择的对象的执行结果时应比较的更改。 此外，还可以自定义验证参数。  
   
-## <a name="selection-of-affected-objects"></a>选择的受影响的对象  
-在位于左侧和右侧的窗口上 Oracle 对象树中，检查表和外键，在其中更改应进行比较以相同。  
+## <a name="selection-of-affected-objects"></a>选择受影响的对象  
+在位于窗口左侧的 Oracle 对象树中，检查表和外键，其中应比较的更改是否相同。  
   
-SSMA 测试人员无法验证任何这些对象，如果你将看到标记为链接**有些选定的对象包含错误**在对象树。 单击此链接可查看这些对象为何不能进行比较的原因，从而清除所选的错误的对象。  
+如果 SSMA 测试人员无法验证这些对象中的任何一个，你将看到标记为**某些选定对象**的链接在对象树下包含错误。 单击此链接可查看无法比较这些对象的原因，以及清除错误对象的选择。  
   
 ## <a name="table"></a>表  
-表选项卡包含选定的表的网格视图。 该网格包含有关所选表的以下信息：  
+"表" 选项卡包含所选表的网格视图。 该网格包含有关所选表的下列信息：  
   
 -   列名  
   
 -   数据类型  
   
--   精度  
+-   Precision  
   
--   小数位数  
+-   缩放  
   
 -   规则  
   
@@ -45,72 +45,72 @@ SSMA 测试人员无法验证任何这些对象，如果你将看到标记为链
   
 -   标识  
   
--   可以为 Null  
+-   Nullable  
   
 ## <a name="sql"></a>Sql  
-SQL 选项卡包含"创建表"选定的表的 SQL。  
+SQL 选项卡包含所选表的 "创建表" SQL。  
   
-## <a name="data"></a>Data  
-数据选项卡显示所选择的表中的数据。  
+## <a name="data"></a>data  
+"数据" 选项卡显示所选表中的数据。  
   
-## <a name="properties"></a>properties  
-属性选项卡显示所选表的属性。 以下字段是属性选项卡下存在：  
+## <a name="properties"></a>属性  
+"属性" 选项卡显示所选表的属性。 "属性" 选项卡下提供以下字段：  
   
--   创建或上次修改时间  
+-   已创建或上次修改  
   
--   Object Name  
+-   对象名称  
   
 ## <a name="columns-comparison-settings"></a>列比较设置  
-建立在上表中的列的比较规则**列比较**页。 可以进行以下设置。  
+为 "**列比较**" 页上的表列建立比较规则。 可以进行以下设置。  
   
-### <a name="use-during-test-comparisons"></a>比较测试期间使用  
-确定此列将参与测试结果验证。  
+### <a name="use-during-test-comparisons"></a>在测试比较期间使用  
+确定此列是否将参与测试结果验证。  
   
--   如果愿意 **，则返回 True**，SSMA 在 Oracle 上执行测试，并显示在 SQL Server 中列的内容后将比较此列的内容。 
+-   如果选择 " **True**"，则 SSMA 将在 Oracle 上执行测试后将此列的内容与 SQL Server 中列的内容进行比较。 
   
--   如果愿意**False**，将从结果验证中排除列。  
+-   如果选择 "**False**"，则将从结果验证中排除列。  
   
 ### <a name="use-custom-scale"></a>使用自定义缩放  
-对于数值数据类型的列，可以设置用于比较的自定义规模。  
+对于数值数据类型的列，可以设置比较的自定义刻度。  
   
--   如果愿意 **，则返回 True**，将根据舍入数字值**比较规模**值之前对它们进行比较。  
+-   如果选择 " **True**"，则在比较小数位数之前，将根据**比较比例**值对数值进行舍入。  
   
--   如果愿意**False**，数值比较将是准确。  
+-   如果选择**False**，则数字比较将是精确的。  
   
-### <a name="comparing-scale"></a>比较规模  
+### <a name="comparing-scale"></a>比较刻度  
   
--   才可用**使用自定义比例**选项设置为**True**。 这是数值比较的精度。  
+-   仅当 "**使用自定义缩放**" 选项设置为**True**时可用。 这是数值比较的精度。  
   
-### <a name="date-time-comparing"></a>日期时间比较  
-定义日期/时间值进行比较。  
+### <a name="date-time-comparing"></a>比较日期时间  
+定义日期/时间值的比较方式。  
   
--   如果选择**比较整个日期**，将执行完整比较这两个平台中的值。  
+-   如果选择 "**比较整个日期**"，则将执行两个平台中的值的完全比较。  
   
--   如果选择**比较仅日期**，将忽略部分的时间。  
+-   如果选择 "**仅比较日期**"，则将忽略时间部分。  
   
--   如果选择**比较仅限时间**、 将忽略部分日期。  
+-   如果选择 "**仅比较时间**"，则将忽略日期部分。  
   
--   如果选择**忽略毫秒**，最多秒将比较结果。  
+-   如果选择 "**忽略毫秒**"，则会将结果与秒进行比较。  
   
--   如果选择**忽略日期和毫秒**，结果将是比较仅由时间部分与忽略的一秒的小数部分。  
+-   如果选择 "**忽略日期和毫秒**"，则结果将只按时间部分进行比较，而忽略秒的小数部分。  
   
 ### <a name="ignore-strings-case"></a>忽略字符串大小写  
 控制比较的区分大小写。  
   
--   如果愿意 **，则返回 True**，比较将为不区分大小写。  
+-   如果选择 " **True**"，则比较不区分大小写。  
   
--   如果愿意**False**，比较将考虑字母大小写。  
+-   如果选择 " **False**"，则比较会考虑字母大小写。  
   
 ## <a name="comparing-sql"></a>比较 SQL  
-您可以查看在生成的 SSMA 测试人员的选择语句**比较 SQL**页。 测试人员将比较行的行按这些语句的结果集。 Oracle 结果集的每个下一步行应等于下一行的 SQL Server 中生成的结果集。
+您可以在**比较 SQL**页面上查看 SSMA 测试器生成的 SELECT 语句。 测试人员将逐行比较这些语句的结果集。 Oracle 结果集的每个后续行应等于 SQL Server 中生成的结果集的下一行。
   
-您可以编辑这些 SELECT 语句，以提供自定义验证。 若要保存所做的更改，在 Oracle 中也可以在 SQL Server 语句，请使用**应用**按钮下的源和目标 SQL，相应地。  
+您可以编辑这些 SELECT 语句以提供自定义验证。 若要在 Oracle 和 SQL Server 语句中保存更改，请相应地使用 source 和 target SQL 下的 "**应用**" 按钮。  
   
 ## <a name="next-step"></a>下一步  
-[自定义调用顺序&#40;OracleToSQL&#41;](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
+[自定义调用顺序 &#40;OracleToSQL&#41;](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
   
-## <a name="see-also"></a>请参阅  
-[完成测试用例准备&#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
-[运行测试用例&#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
-[测试迁移的数据库对象&#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+## <a name="see-also"></a>另请参阅  
+[完成测试用例准备 &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
+[&#40;OracleToSQL&#41;运行测试用例](../../ssma/oracle/running-test-cases-oracletosql.md)  
+[测试迁移的数据库对象 &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

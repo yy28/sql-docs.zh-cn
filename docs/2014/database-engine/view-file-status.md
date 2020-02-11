@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3034ec95573d2f3c43ab28f2ad31e5ba41661cfc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773363"
 ---
 # <a name="view-file-status"></a>查看文件状态
@@ -40,9 +40,9 @@ ms.locfileid: "62773363"
   
 1.  在解决方案资源管理器中，选择一个项。  
   
-2.  上**文件**菜单，依次指向**源代码管理**，然后单击**SourceSafe 属性**。  
+2.  在 "**文件**" 菜单上，指向 "**源代码管理**"，然后单击 " **SourceSafe 属性**"。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [设置和检索版本信息](../../2014/database-engine/set-and-retrieve-version-information.md)   
  [查看项目历史记录](../../2014/database-engine/view-project-history.md)   
  [检索文件](../../2014/database-engine/retrieve-files.md)   

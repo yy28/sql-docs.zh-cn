@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1a89632ad5502cee9599d1eea6e1cd0a0bebe7d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770983"
 ---
 # <a name="ole-db-source"></a>OLE DB 源
@@ -42,11 +42,13 @@ ms.locfileid: "62770983"
   
  这个源使用 OLE DB 连接管理器连接到数据源，而该连接管理器则指定要使用的 OLE DB 访问接口。 有关详细信息，请参阅 [OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md)。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目也提供可据以创建 OLE DB 连接管理器的数据源对象，从而使 OLE DB 源可以使用数据源和数据源视图。  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目也提供可据以创建 OLE DB 连接管理器的数据源对象，从而使 OLE DB 源可以使用数据源和数据源视图。  
   
  根据不同的 OLE DB 访问接口，对 OLE DB 源存在一些限制：  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Oracle 不支持 Oracle 数据类型 BLOB、CLOB、NCLOB、BFILE 或 UROWID，因此，OLE DB 源不能从包含这些数据类型列的表中提取数据。  
+-   
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Oracle 不支持 Oracle 数据类型 BLOB、CLOB、NCLOB、BFILE 或 UROWID，因此，OLE DB 源不能从包含这些数据类型列的表中提取数据。  
   
 -   IBM OLE DB DB2 访问接口和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB DB2 访问接口不支持使用调用存储过程的 SQL 命令。 如果使用这种命令，OLE DB 源将无法创建列元数据，这样一来，数据流中 OLE DB 源之后的数据流组件将没有可用的列数据，从而导致数据流执行失败。  
   
@@ -57,12 +59,13 @@ ms.locfileid: "62770983"
   
  OLE DB 源使用 OLE DB 连接管理器来连接到它从中提取数据的数据源。 取决于 OLE DB 连接管理器所使用的访问接口和连接管理器所连接的关系数据库管理系统 (RDBMS)，参数的命名和列出将应用不同的规则。 如果参数名是从 RDBMS 返回的，则可以使用参数名来将参数列表中的参数映射到 SQL 语句中的参数；否则，参数将按它们在参数列表中的序数位置映射到 SQL 语句中的参数。 支持的参数名类型按访问接口而各不相同。 例如，某些访问接口要求使用变量或列名称，而某些访问接口则要求使用诸如 0 或 Param0 这样的符号名称。 应当参阅访问接口对应的文档，了解有关在 SQL 语句中使用的参数名称的信息。  
   
- 使用 OLE DB 连接管理器时，不能使用参数化子查询，这是因为 OLE DB 源不能通过 OLE DB 访问接口派生参数信息。 但是，可以使用表达式将参数值连接到查询字符串并设置该源的 SqlCommand 属性。在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中，可以使用“OLE DB 源编辑器”对话框配置 OLE DB 源，并在“设置查询参数”对话框中将参数映射到变量。  
+ 使用 OLE DB 连接管理器时，不能使用参数化子查询，这是因为 OLE DB 源不能通过 OLE DB 访问接口派生参数信息。 但是，可以使用表达式将参数值连接到查询字符串并设置该源的 SqlCommand 属性。在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中，可以使用“OLE DB 源编辑器”对话框配置 OLE DB 源，并在“设置查询参数”对话框中将参数映射到变量。********  
   
 ### <a name="specifying-parameters-by-using-ordinal-positions"></a>使用序号位置指定参数  
  如果没有返回参数名，则 **“设置查询参数”** 对话框中的 **“参数”** 列表中的参数列出顺序将控制运行时参数将映射哪个参数标记。 列表中的第一个参数将映射到 SQL 语句中的第一个 ?， 第二个参数映射到第二个 ?，以此类推。  
   
- 以下 SQL 语句选择 **数据库的** Product [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 表中的行。 **Mappings** 列表中的第一个参数映射到 **Color** 列的第一个参数，第二个参数映射到 **Size** 列。  
+ 以下 SQL 语句选择 **数据库的** Product [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 表中的行。 
+  **Mappings** 列表中的第一个参数映射到 **Color** 列的第一个参数，第二个参数映射到 **Size** 列。  
   
  `SELECT * FROM Production.Product WHERE Color = ? AND Size = ?`  
   
@@ -90,11 +93,11 @@ ms.locfileid: "62770983"
   
  有关可以在 **“OLE DB 源编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
   
--   [OLE DB 源编辑器（“连接管理器”页）](../ole-db-source-editor-connection-manager-page.md)  
+-   [OLE DB 源编辑器 &#40;"连接管理器" 页&#41;](../ole-db-source-editor-connection-manager-page.md)  
   
--   [OLE DB 源编辑器（“列”页）](../ole-db-source-editor-columns-page.md)  
+-   [OLE DB 源编辑器 &#40;列 "页&#41;](../ole-db-source-editor-columns-page.md)  
   
--   [OLE DB 源编辑器（“错误输出”页）](../ole-db-source-editor-error-output-page.md)  
+-   [OLE DB 源编辑器 &#40;错误输出页&#41;](../ole-db-source-editor-error-output-page.md)  
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
@@ -115,7 +118,7 @@ ms.locfileid: "62770983"
 ## <a name="related-content"></a>相关内容  
  social.technet.microsoft.com 上的 Wiki 文章 [SSIS 与 Oracle 连接器](https://go.microsoft.com/fwlink/?LinkId=220670)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [OLE DB 目标](ole-db-destination.md)   
  [Integration Services (SSIS) 变量](../integration-services-ssis-variables.md)   
  [数据流](data-flow.md)  

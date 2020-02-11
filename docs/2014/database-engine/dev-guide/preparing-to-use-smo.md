@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ebc622c0adb9fe2422c1cd215de36b6ba79057c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780828"
 ---
 # <a name="preparing-to-use-smo"></a>准备使用 SMO
@@ -25,6 +25,6 @@ ms.locfileid: "62780828"
   
 |||  
 |-|-|  
-|**准备使用 SMO**<br /><br /> -   [语法约定](../../relational-databases/server-management-objects-smo/smo-syntax-conventions.md)介绍了本部分中使用的语法约定。<br />-   [系统要求](../../../2014/database-engine/dev-guide/system-requirements.md)指定用于安装和使用 SMO 的系统要求。<br />-   [文件和版本号](../../relational-databases/server-management-objects-smo/files-and-version-numbers.md)列出了 SMO 组件和相应的版本号。|-   [安装 SMO](../../relational-databases/server-management-objects-smo/installing-smo.md)提供有关安装 SMO 的说明。|  
+|**准备使用 SMO**<br /><br /> -   [语法约定](../../relational-databases/server-management-objects-smo/smo-syntax-conventions.md)介绍了本节中使用的语法约定。<br />-   [系统要求](../../../2014/database-engine/dev-guide/system-requirements.md)指定安装和使用 SMO 的系统要求。<br />-   [文件和版本号](../../relational-databases/server-management-objects-smo/files-and-version-numbers.md)列出了 SMO 组件和相应的版本号。|-   [安装 smo](../../relational-databases/server-management-objects-smo/installing-smo.md)说明了如何安装 smo。|  
   
   

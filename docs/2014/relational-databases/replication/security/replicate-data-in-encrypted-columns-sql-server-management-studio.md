@@ -15,16 +15,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 97fd1ef113ec76a00394da298f1def188168a37d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62955840"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>复制加密列中的数据 (SQL Server Management Studio)
   通过使用复制，您可以发布加密的列数据。 若要在订阅服务器上解密并使用此数据，则订阅服务器上也必须有用于在发布服务器上加密该数据的密钥。 复制并不提供安全机制来传输加密密钥。 您必须在订阅服务器上手动重新创建加密密钥。 本主题说明如何在发布服务器上加密列并确保订阅服务器上提供有加密密钥。  
   
- 基本步骤如下所述：  
+ 基本步骤如下所示：  
   
 1.  在发布服务器上创建对称密钥。  
   
@@ -56,11 +56,11 @@ ms.locfileid: "62955840"
   
 4.  执行 [CLOSE SYMMETRIC KEY](/sql/t-sql/statements/close-symmetric-key-transact-sql) 以关闭密钥。  
   
-5.  发布包含加密列的表。 有关详细信息，请参阅 [Create a Publication](../publish/create-a-publication.md)。  
+5.  发布包含加密列的表。 有关详细信息，请参阅[创建发布](../publish/create-a-publication.md)。  
   
 6.  订阅发布。 有关详细信息，请参阅[创建请求订阅](../create-a-pull-subscription.md)或[创建推送订阅](../create-a-push-subscription.md)。  
   
-7.  初始化订阅。 有关详细信息，请参阅 [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md)。  
+7.  初始化订阅。 有关详细信息，请参阅 [创建并应用初始快照](../create-and-apply-the-initial-snapshot.md)。  
   
 8.  在订阅服务器上，使用与步骤 1 中相同的 ALGORITHM、KEY_SOURCE 和 IDENTITY_VALUE 值执行 [CREATE SYMMETRIC KEY](/sql/t-sql/statements/create-symmetric-key-transact-sql) 。 您可以为 ENCRYPTION BY 指定不同的值。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62955840"
   
  [!code-sql[HowTo#sp_SubscriberEncryptedColumn](../../../snippets/tsql/SQL15/replication/howto/tsql/subscriberencryptedcolumn.sql#sp_subscriberencryptedcolumn)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 复制安全性](view-and-modify-replication-security-settings.md)   
  [在两个服务器上创建相同的对称密钥](../../security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
   

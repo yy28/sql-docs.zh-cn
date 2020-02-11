@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 24587f27710381ac787fe8045029df681e401af5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63036187"
 ---
 # <a name="set-index-options"></a>设置索引选项
@@ -51,13 +51,13 @@ ms.locfileid: "63036187"
   
 ###  <a name="Restrictions"></a> 限制和局限  
   
--   以下选项通过使用 ALTER INDEX 语句中的 SET 子句，立即应用于索引：ALLOW_PAGE_LOCKS、ALLOW_ROW_LOCKS、IGNORE_DUP_KEY 和 STATISTICS_NORECOMPUTE。  
+-   使用 ALTER INDEX 语句中的 SET 子句，将以下选项立即应用到索引：ALLOW_PAGE_LOCKS、ALLOW_ROW_LOCKS、IGNORE_DUP_KEY 和 STATISTICS_NORECOMPUTE。  
   
--   通过使用 ALTER INDEX REBUILD 或 CREATE INDEX WITH DROP_EXISTING，可以在重新生成索引时设置下列选项：PAD_INDEX、FILLFACTOR、SORT_IN_TEMPDB、IGNORE_DUP_KEY、STATISTICS_NORECOMPUTE、ONLINE、ALLOW_ROW_LOCKS、ALLOW_PAGE_LOCKS、MAXDOP 和 DROP_EXISTING（仅 CREATE INDEX）。  
+-   使用 ALTER INDEX REBUILD 或 CREATE INDEX WITH DROP_EXISTING 重新生成索引时，可以设置以下选项：PAD_INDEX、FILLFACTOR、SORT_IN_TEMPDB、IGNORE_DUP_KEY、STATISTICS_NORECOMPUTE、ONLINE、ALLOW_ROW_LOCKS、ALLOW_PAGE_LOCKS、MAXDOP 和 DROP_EXISTING（仅 CREATE INDEX）。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求对表或视图具有 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -68,17 +68,17 @@ ms.locfileid: "63036187"
   
 2.  单击加号以便展开 **“表”** 文件夹。  
   
-3.  右键单击你要修改索引属性的表，然后选择“设计”  。  
+3.  右键单击你要修改索引属性的表，然后选择“设计”****。  
   
-4.  在“表设计器”  菜单上，单击“索引/键”  。  
+4.  在 "**表设计器**" 菜单上，单击 "**索引/键**"。  
   
 5.  选择要修改的索引。 其属性将显示在主网格中。  
   
 6.  更改任意属性的设置以自定义索引。  
   
-7.  单击 **“关闭”** 。  
+7.  单击“关闭”  。  
   
-8.  在“文件”  菜单上，选择“保存”  以保存 _table_name_。  
+8.  在 "**文件**" 菜单上，选择 "**保存**_table_name_。  
   
 #### <a name="to-modify-the-properties-of-an-index-in-object-explorer"></a>在对象资源管理器中修改索引的属性  
   
@@ -90,13 +90,13 @@ ms.locfileid: "63036187"
   
 4.  单击加号以便展开 **“索引”** 文件夹。  
   
-5.  右键单击要修改其属性的索引，然后选择“属性”  。  
+5.  右键单击要修改其属性的索引，然后选择“属性”****。  
   
-6.  在 **“选择页”** 下，选择 **“选项”** 。  
+6.  在 **“选择页”** 下，选择 **“选项”**。  
   
 7.  更改任意属性的设置以自定义索引。  
   
-8.  若要添加、删除或更改索引列的位置，请从“索引属性 -  index_name”  对话框中选择“常规”  页。 有关详细信息，请参阅 [Index Properties F1 Help](index-properties-f1-help.md)  
+8.  若要添加、删除或更改索引列的位置，请从“索引属性 - **** index_name”**对话框中选择“常规”** __ 页。 有关详细信息，请参阅 [Index Properties F1 Help](index-properties-f1-help.md)  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -146,6 +146,6 @@ ms.locfileid: "63036187"
   
      [!code-sql[IndexDDL#AlterIndex2](../../snippets/tsql/SQL14/tsql/indexddl/transact-sql/alterindex.sql#alterindex2)]  
   
- 有关详细信息，请参阅 [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql)。  
+ 有关详细信息，请参阅[ALTER INDEX &#40;transact-sql&#41;](/sql/t-sql/statements/alter-index-transact-sql)。  
   
   

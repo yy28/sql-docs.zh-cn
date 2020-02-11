@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b073e6025bc1483db2482a03d525b758d39efea4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917441"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>创建用户定义的数据类型别名
@@ -45,9 +45,9 @@ ms.locfileid: "62917441"
   
 -   用户定义的数据类型别名必须符合标识符的规则。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求在当前数据库中具有 CREATE TYPE 权限，以及具有对 *schema_name*的 ALTER 权限。 如果未指定 *schema_name* ，则将应用用于确定当前用户的架构的默认名称解析规则。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -62,7 +62,7 @@ ms.locfileid: "62917441"
      **Data type**  
      从列表框中选择基本数据类型。 该列表框显示除 `geography`、`geometry`、`hierarchyid`、`sysname`、`timestamp` 和 `xml` 数据类型之外的所有数据类型。 不能编辑现有的用户定义数据类型的数据类型。  
   
-     **默认**  
+     **Default**  
      （可选）选择要绑定到用户定义数据类型别名的规则或默认值。  
   
      **长度/精度**  
@@ -71,18 +71,18 @@ ms.locfileid: "62917441"
      不为 `nvarchar(max)`、`varchar(max)` 或 `varbinary(max)` 数据类型显示长度。  
   
      **名称**  
-     如果创建新的用户定义数据类型别名，请键入用于在整个数据库中表示用户定义数据类型的唯一名称。 最大字符数必须符合系统`sysname`数据类型。 不能编辑现有的用户定义数据类型别名的名称。  
+     如果创建新的用户定义数据类型别名，请键入用于在整个数据库中表示用户定义数据类型的唯一名称。 最大字符数必须与系统`sysname`数据类型匹配。 不能编辑现有的用户定义数据类型别名的名称。  
   
      **规则**  
      （可选）选择要绑定到用户定义数据类型别名的规则。  
   
-     **小数位数**  
+     **缩放**  
      指定可以在小数点右存储的十进制数字的最大位数。  
   
      **架构**  
      从包含当前用户的所有可用架构的列表中选择架构。 默认选择是当前用户的默认架构。  
   
-     **存储器**  
+     **存储**  
      显示用户定义数据类型别名的最大存储大小。 最大存储大小会根据精度的不同而变化。  
   
     |||  
@@ -92,7 +92,7 @@ ms.locfileid: "62917441"
     |20 - 28|13|  
     |29 - 38|17|  
   
-     有关`nchar`并`nvarchar`数据类型的存储值始终是两次中的值**长度**。  
+     对于`nchar`和`nvarchar`数据类型，存储值始终是**值的两倍。**  
   
      不为 `nvarchar(max)`、`varchar(max)` 或 `varbinary(max)` 数据类型显示存储。  
   
@@ -123,7 +123,7 @@ CREATE TYPE ssn
 FROM varchar(11) NOT NULL ;  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库标识符](database-identifiers.md)   
  [CREATE TYPE (Transact-SQL)](/sql/t-sql/statements/create-type-transact-sql)  
   

@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 98a8476ef317a0ddfa6f7fc27c0c9572ed12817a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770171"
 ---
 # <a name="unpivot-transformation"></a>逆透视转换
@@ -29,11 +29,11 @@ ms.locfileid: "62770171"
   
  下面的关系图显示对 Product 列逆透视数据之前的数据集。  
   
- ![逆透视后的数据集](../../media/mw-dts-18.gif "Dataset after it is unpivoted")  
+ ![逆透视后的数据集](../../media/mw-dts-18.gif "逆透视后的数据集")  
   
  下面的关系图显示对 Product 列逆透视数据之后的数据集。  
   
- ![逆透视前的数据集](../../media/mw-dts-17.gif "Dataset before it is unpivoted")  
+ ![逆透视前的数据集](../../media/mw-dts-17.gif "逆透视前的数据集")  
   
  在某些情况下，逆透视结果可能包含具有意外值的行。 例如，如果关系图中显示的要逆透视的示例数据在 Fred 的所有 Qty 列中都具有空值，则输出将只包括 Fred 的一行，而非五行。 Qty 列将为空或包含零，具体取决于列数据类型。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62770171"
   
  有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [通用属性](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [转换自定义属性](transformation-custom-properties.md)  
   

@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d57f5938cb888a955645f5a9e0b01eeacfc1142b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812786"
 ---
 # <a name="change-source-control-connections"></a>更改源代码管理连接
@@ -31,9 +31,9 @@ ms.locfileid: "62812786"
   
 #### <a name="to-open-the-source-control-user-interface-from-the-studio-environment"></a>从 Studio 环境中打开源代码管理用户界面  
   
-1.  上**文件**菜单，依次指向**源代码管理**，然后单击**启动 Microsoft Visual SourceSafe**。  
+1.  在 "**文件**" 菜单上，指向 "**源代码管理**"，然后单击 "**启动 Microsoft Visual SourceSafe**"。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [源代码管理基础知识](../../2014/database-engine/source-control-basics.md)   
  [设置源代码管理选项](../../2014/database-engine/set-source-control-options.md)   
  [从源代码管理中排除文件](../../2014/database-engine/exclude-files-from-source-control.md)  

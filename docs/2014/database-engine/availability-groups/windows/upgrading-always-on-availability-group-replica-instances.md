@@ -1,5 +1,5 @@
 ---
-title: 升级和更新可用性组服务器停机时间最短和数据丢失 |Microsoft Docs
+title: 升级和更新可用性组服务器，停机时间和数据丢失最少 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8e9be78ff13d39b4cdcaf60516ac20b9a85648d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812924"
 ---
 # <a name="upgrade-and-update-of-availability-group-servers-with-minimal-downtime-and-data-loss"></a>在停机时间和数据丢失最少的情况下升级和更新可用性组服务器
   将服务器实例从 SQL Server 2012 更新或升级到 Service Pack 或更高版本时，您可以通过执行顺序更新或升级将可用性组的停机时间降低到一个手动故障转移所需的时间。 对于升级 SQL Server 版本，它称为“滚动升级”；对于使用修复程序或 Service Pack 更新当前 SQL Server 版本，它称为“滚动更新”。  
   
- 此主题仅讨论 SQL Server 升级/更新。 与操作系统相关升级/更新的高度可用的 SQL Server 实例上运行，请参阅[跨群集迁移的 AlwaysOn 可用性组以进行操作系统升级](https://msdn.microsoft.com/library/jj873730.aspx)  
+ 此主题仅讨论 SQL Server 升级/更新。 有关运行高度可用 SQL Server 实例的操作系统相关升级/更新，请参阅[用于操作系统升级的 AlwaysOn 可用性组的跨群集迁移](https://msdn.microsoft.com/library/jj873730.aspx)  
   
 ## <a name="rolling-upgradeupdate-best-practices-for-alwayson-availability-groups"></a>AlwaysOn 可用性组的滚动升级/更新最佳做法  
  在执行服务器升级/更新时应遵循以下最佳做法以尽量减小可用性组的停机时间和数据丢失量：  
@@ -96,7 +96,7 @@ ms.locfileid: "62812924"
 ## <a name="availability-group-with-failover-cluster-instance-nodes"></a>具有故障转移群集实例节点的可用性组  
  如果可用性组包含故障转移群集实例 (FCI) 节点，您应在升级/更新活动节点前升级/更新不活动的节点。 下图显示一个常见的可用性组方案（它包含 FCI 用于本地高可用性且用于远程灾难恢复的 FCI 之间采用异步提交模式）和升级顺序。  
   
- ![FCI 的可用性组升级](../../media/agupgrade-ag-fci-dr.gif "FCI 的可用性组升级")  
+ ![具有 FCI 的可用性组升级](../../media/agupgrade-ag-fci-dr.gif "具有 FCI 的可用性组升级")  
   
 1.  升级/更新 REMOTE2  
   
@@ -115,9 +115,9 @@ ms.locfileid: "62812924"
   
 |可用性组|Node1|Node2|Node3|  
 |------------------------|-----------|-----------|-----------|  
-|AG1|基本|||  
-|AG2||基本||  
-|AG3|||基本|  
+|AG1|主|||  
+|AG2||主||  
+|AG3|||主|  
   
  按以下顺序执行负载平衡的滚动升级/更新可能在您的情况下是合适的：  
   
@@ -139,9 +139,9 @@ ms.locfileid: "62812924"
   
 |可用性组|Node1|Node2|Node3|  
 |------------------------|-----------|-----------|-----------|  
-|AG1||基本||  
-|AG2|基本|||  
-|AG3|||基本|  
+|AG1||主||  
+|AG2|主|||  
+|AG3|||主|  
   
  根据您的特定实现，您的升级/更新路径可能不同，客户端应用程序经历的停机时间也可能不同。  
   

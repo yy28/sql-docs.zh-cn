@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c9dbc755d5ee95b74991b249bc037fb6fc5a9f11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62806699"
 ---
 # <a name="maintenance-plan-subplan-properties"></a>维护计划（子计划属性）
@@ -30,10 +30,10 @@ ms.locfileid: "62806699"
  **说明**  
  输入子计划的说明。 说明限制在 512 个字符以内。  
   
- **计划**  
+ **“计划”**  
  单击计划图标可指定子计划中的任务应该在何时运行，或者单击带红色 x 的计划图标可删除现有子计划的计划。  
   
-## <a name="see-also"></a>请参阅  
- [中对象资源管理器的](maintenance-plans.md)  
+## <a name="see-also"></a>另请参阅  
+ [维护计划](maintenance-plans.md)  
   
   

@@ -27,10 +27,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2bd8009f3270c35f34c4cac87247263caac35854
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999830"
 ---
 # <a name="object-explorer"></a>“对象资源管理器”
@@ -41,12 +41,12 @@ ms.locfileid: "62999830"
   
 ## <a name="object-explorer-tasks"></a>对象资源管理器任务  
   
-|Description|主题|  
+|说明|主题|  
 |-----------------|-----------|  
 |介绍如何打开对象资源管理器和配置定义资源管理器的行为的选项。|[打开和配置对象资源管理器](open-and-configure-object-explorer.md)|  
 |介绍如何将对象资源管理器连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]实例。|[从对象资源管理器连接到实例](connect-to-an-instance-from-object-explorer.md)|  
 |介绍如何管理在对象资源管理器层次结构中表示为节点的对象。|[使用对象资源管理器管理对象](manage-objects-by-using-object-explorer.md)|  
 |介绍“对象资源管理器详细信息”窗格、服务器中所有对象的表格视图及管理这些对象的用户界面。|[对象资源管理器详细信息窗格](object-explorer-details-pane.md)|  
-|介绍在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中运行自定义报表的方法。|[Management Studio 中的自定义报表](custom-reports-in-management-studio.md)|  
+|介绍在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中运行自定义报表的方法。|[Management Studio 中的自定义报告](custom-reports-in-management-studio.md)|  
   
   

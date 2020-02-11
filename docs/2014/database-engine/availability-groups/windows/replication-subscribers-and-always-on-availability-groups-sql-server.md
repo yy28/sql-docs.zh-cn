@@ -1,5 +1,5 @@
 ---
-title: 复制订阅服务器和 AlwaysOn 可用性组 (SQL Server) |Microsoft Docs
+title: 复制订阅服务器和 AlwaysOn 可用性组（SQL Server） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/16/2019
 ms.prod: sql-server-2014
@@ -15,17 +15,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: eac9f39478b66df98de0483f8dc68d3e671ce045
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62789143"
 ---
 # <a name="replication-subscribers-and-alwayson-availability-groups-sql-server"></a>复制订阅服务器和 AlwaysOn 可用性组 (SQL Server)
   当包含作为复制订阅服务器的数据库的 AlwaysOn 可用性组发生故障转移时，复制订阅可能会失败。 对于事务复制推送订阅服务器，如果订阅是使用 AG 侦听器名称创建的，则在故障转移后，分发代理会自动继续复制。 对于事务复制拉取订阅服务器，如果订阅是使用 AG 侦听器名称创建的，且原始订阅服务器已启动并正在运行，则在故障转移后，分发代理会自动继续复制。 这是因为仅在原始订阅服务器（AG 的主要副本）上创建分发代理作业。 对于合并订阅服务器，复制管理员必须通过重新创建订阅手动重新配置订阅服务器。  
   
 ## <a name="what-is-supported"></a>支持的操作  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制支持订阅服务器的自动故障转移、事务订阅服务器的自动故障转移以及合并订阅服务器的手动故障转移。 不支持可用性数据库上分发服务器的故障转移。 AlwaysOn 不能与 Websync 和[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Compact 应用场景结合使用。  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制支持订阅服务器的自动故障转移、事务订阅服务器的自动故障转移以及合并订阅服务器的手动故障转移。 不支持可用性数据库上分发服务器的故障转移。 AlwaysOn 不能与 Websync 和[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Compact 应用场景结合使用。  
   
  **合并请求订阅的故障转移**  
   

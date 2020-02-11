@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 805c89c24b0a16051de1d555b484a0870de0cfde
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830008"
 ---
 # <a name="transfer-logins-task"></a>传输登录名任务
@@ -44,7 +44,7 @@ ms.locfileid: "62830008"
   
  此外，还有 `OnInformation` 事件的日志项（报告已传输的登录名数），以及 `OnWarning` 事件的日志项（是为目标服务器上每个被覆盖的登录名写入的）。  
   
-## <a name="security-and-permissions"></a>安全性和权限  
+## <a name="security-and-permissions"></a>安全和权限  
  若要浏览源服务器上的登录名并在目标服务器上创建登录名，用户必须同时是这两台服务器上 sysadmin 服务器角色的成员。  
   
 ## <a name="configuration-of-the-transfer-logins-task"></a>传输登录名任务的配置  
@@ -68,7 +68,7 @@ ms.locfileid: "62830008"
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   
--   [传输登录名任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)  
+-   [传输登录名任务编辑器 &#40;常规 "页面&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [传输登录名任务编辑器（“登录名”页）](../transfer-logins-task-editor-logins-page.md)  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bb547f3aa1352006b91641727f34ba85ba41dea5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106183"
 ---
 # <a name="controlling-row-and-column-headings-report-builder-and-ssrs"></a>控制行标题和列标题（报表生成器和 SSRS）
@@ -38,9 +38,9 @@ ms.locfileid: "66106183"
 ## <a name="understanding-rows-and-columns-in-a-tablix-data-region"></a>了解 Tablix 数据区域中的行和列  
  表或矩阵是基础 tablix 数据区域的模板。 Tablix 数据区域可能具有四个区域：行组区（控制报表中向下扩展的行）、列组区（控制报表中横向扩展的列）、正文区（显示数据）和角区。 若要了解在何处设置属性来控制重复或冻结标题，首先应了解 tablix 数据区域有两种表示形式：  
   
--   **在报表定义中** Tablix 数据区域定义中的每行或每列都是特定行组或列组的 tablix 成员。 Tablix 成员是静态成员或动态成员。 静态 tablix 成员包含标签或小计，每组重复一次。 动态 tablix 成员包含组值，每个唯一组值（也称为组实例）重复一次。  
+-   **在报表定义中**Tablix 数据区域定义中的每行或每列都是特定行组或列组的 tablix 成员。 Tablix 成员是静态成员或动态成员。 静态 tablix 成员包含标签或小计，每组重复一次。 动态 tablix 成员包含组值，每个唯一组值（也称为组实例）重复一次。  
   
--   **在设计图面上** 在设计图面上，虚线将 tablix 数据区域分为四个区域。 Tablix 数据区域中的每个单元被组织为行和列。 行和列与组（包括详细信息组）关联。 对于选定的 tablix 数据区域，行控点和列控点以及突出显示栏指示组成员身份。 行组或列组区域中的单元表示 tablix 成员的组头。 一行或一列可以与多个组关联。  
+-   **在设计图面上**在设计图面上，虚线将 tablix 数据区域分为四个区域。 Tablix 数据区域中的每个单元被组织为行和列。 行和列与组（包括详细信息组）关联。 对于选定的 tablix 数据区域，行控点和列控点以及突出显示栏指示组成员身份。 行组或列组区域中的单元表示 tablix 成员的组头。 一行或一列可以与多个组关联。  
   
      有关详细信息，请参阅 [Tablix 数据区域（报表生成器和 SSRS）](../tablix-data-region-report-builder-and-ssrs.md)和 [Tablix 数据区域单元格、行和列（报表生成器和 SSRS）](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66106183"
   
 -   [具有行组但没有行组区域的表](#TableRowGroupsNoGroupHeader)  
   
-###  <a name="Matrix"></a> 矩阵  
+###  <a name="Matrix"></a>矩阵  
  默认情况下，简单矩阵具有一个行组和一个列组。 下图显示的矩阵具有一个基于 Category 的行组和一个基于 Geography 的列组：  
   
  ![“矩阵”、“类别”行和“地域”列组](../media/rs-basicmatrixdesign.gif "“矩阵”、“类别”行和“地域”列组")  
@@ -74,14 +74,14 @@ ms.locfileid: "66106183"
   
  [返回页首](#Top)  
   
-###  <a name="TableNoGroups"></a> 没有行组的表  
+###  <a name="TableNoGroups"></a>没有行组的表  
  默认情况下，没有组的简单表包含详细信息组。 下图所示的表显示了类别、订单号和销售数据：  
   
  ![设计，具有一个静态行、一个动态行的表](../media/rs-tableheaderstaticdesign.gif "设计，具有一个静态行、一个动态行的表")  
   
  因为该表只有 tablix 正文区，所以没有虚线。 第一行显示列标题，表示一个未与组关联的静态 tablix 成员。 第二行显示详细信息数据，表示一个与详细信息组关联的动态 tablix 成员。 下图在预览中显示此表：  
   
- ![预览，具有一个静态行、一个动态行的表](../media/rs-tableheaderstaticpreview.gif "预览，具有一个静态行、一个动态行的表")  
+ ![预览，具有一个静态、一个动态行的表](../media/rs-tableheaderstaticpreview.gif "预览，具有一个静态、一个动态行的表")  
   
  若要重复或冻结列标题，请设置某一静态行（该静态行是 tablix 数据区域定义一部分）的 tablix 成员的属性。 若要选择静态行，必须使用“分组”窗格的高级模式。 下图显示的是“行组”窗格：  
   
@@ -95,7 +95,7 @@ ms.locfileid: "66106183"
   
  [返回页首](#Top)  
   
-###  <a name="TableRowGroupsGroupHeader"></a> 具有行组和行组区域的表  
+###  <a name="TableRowGroupsGroupHeader"></a>具有行组和行组区域的表  
  如果向简单表中添加行组，将向设计图面上的表添加一个行组区域。 下图显示的表具有一个基于 Category 的行组：  
   
  ![设计，具有一个行组和详细信息的表](../media/rs-tableheaderdynamicwithgroupheadercelldesign.gif "设计，具有一个行组和详细信息的表")  
@@ -112,11 +112,11 @@ ms.locfileid: "66106183"
   
  ![行组，具有静态成员的高级模式](../media/rs-tableheaderdynamicwithgroupheadercelladvanced.gif "行组，具有静态成员的高级模式")  
   
- 为所列出的 tablix 成员：Static  、(Static  )、Category 和 (Details  )。 带有括号 () 的 tablix 成员指示没有相应的组头。 若要重复或冻结列标题，请选择上面的 Static tablix 成员，然后在“属性”窗格中设置属性。  
+ 列出的 tablix 成员包括： **Static**、(**Static**)、Category 和 (**Details**)。 带有括号 () 的 tablix 成员指示没有相应的组头。 若要重复或冻结列标题，请选择上面的 Static tablix 成员，然后在“属性”窗格中设置属性。  
   
  [返回页首](#Top)  
   
-###  <a name="TableRowGroupsNoGroupHeader"></a> 具有行组但没有行组区域的表  
+###  <a name="TableRowGroupsNoGroupHeader"></a>具有行组但没有行组区域的表  
  在很多情况下，表可能具有行组但没有行组区域。 其中的两种情况为：  
   
 -   开始时表具有行组和行组区域，后来删除了行组区域的列。 仅删除列而不是组。 例如，您可能想将表格式控制为简单网格。  
@@ -125,11 +125,11 @@ ms.locfileid: "66106183"
   
  下图所示的表在设计图面上具有行组但没有行组区域：  
   
- ![设计，具有行组但无组标头的表](../media/rs-tableheaderdynamicwithnogroupheadercelldesign.gif "设计，具有行组但无组标头的表")  
+ ![设计，具有行组但无组头的表](../media/rs-tableheaderdynamicwithnogroupheadercelldesign.gif "设计，具有行组但无组头的表")  
   
  该表有三行。 第一行包含列标题。 第二行包含组值和小计。 第三行包含详细信息数据。 因为只有 tablix 正文区，所以没有虚线。 下图在预览中显示此表：  
   
- ![预览，具有行组但无组标头的表](../media/rs-tableheaderdynamicwithnogroupheadercellpreview.gif "预览，具有行组但无组标头的表")  
+ ![预览，具有行组但无组头的表](../media/rs-tableheaderdynamicwithnogroupheadercellpreview.gif "预览，具有行组但无组头的表")  
   
  若要控制如何重复或始终显示行，必须设置每一行 tablix 成员的属性。 在默认模式下，此示例与具有行组和组头的表的上一示例没有差别。 下图显示的是默认模式下此表的“分组”窗格：  
   
@@ -137,9 +137,9 @@ ms.locfileid: "66106183"
   
  但是，在高级模式中，此布局结构显示一组不同的 tablix 成员。 下图显示的是高级模式中此表的“分组”窗格：  
   
- ![行组、高级、无组标头。](../media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "行组、高级、无组标头。")  
+ ![行组、高级、无组头。](../media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "行组、高级、无组头。")  
   
- 在行组窗格中列出了以下 tablix 成员：(Static  )、(Category)、(Static  ) 和 (Details  )。 若要重复或冻结列标题，请选择上面的 (**Static**) tablix 成员，然后在“属性”窗格中设置属性。  
+ 在“行组”窗格中列出了以下 tablix 成员：(**Static**)、(Category)、(**Static**) 和 (**Details**)。 若要重复或冻结列标题，请选择顶级（**Static**） tablix 成员，然后在 "属性" 窗格中设置属性。  
   
  [返回页首](#Top)  
   
@@ -160,10 +160,10 @@ ms.locfileid: "66106183"
   
  有关详细信息，请参阅[呈现行为（报表生成器和 SSRS）](rendering-behaviors-report-builder-and-ssrs.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [对数据进行筛选、分组和排序（报表生成器和 SSRS）](filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [列表（报表生成器和 SSRS）](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Reporting Services 中的分页（报表生成器和 SSRS）](pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [导出报表&#40;报表生成器和 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
+ [导出报表 &#40;报表生成器和 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

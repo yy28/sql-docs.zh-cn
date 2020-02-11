@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76d84c3ea8da6d564db01fba3d02ac15a72fffc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829601"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
@@ -32,7 +32,7 @@ ms.locfileid: "62829601"
  XML 验证功能可轻松扩展以适应大型 XML 文档和大量错误。 由于输出文件本身采用 XML 格式，你可以查询和分析输出。 例如，如果输出中包含大量错误，你可以按本主题中所述，使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 查询对错误分组。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) 引入`ValidationDetails`属性中的[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Service Pack 2。 该属性也会出现在[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]和 SQL Server 2016 中。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] （[!INCLUDE[ssIS](../../includes/ssis-md.md)]）在 Service `ValidationDetails` Pack 2 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引入了属性。 SQL Server 2016 中[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]还提供了和中的属性。  
   
 ## <a name="sample-output-for-xml-thats-valid"></a>有效的 XML 示例输出  
  下面是有效 XML 文件的示例输出文件（带有验证结果）。  
@@ -116,10 +116,10 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
   
  下面是上述文本中第二个示例查询在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的结果。  
   
- ![在 Management Studio 中使用查询对 XML 错误分组](../media/queryforxmlerrors.jpg "在 Management Studio 中使用查询对 XML 错误分组")  
+ ![用于将 XML 错误分组到 Management Studio 中的查询](../media/queryforxmlerrors.jpg "用于将 XML 错误分组到 Management Studio 中的查询")  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [XML 任务](xml-task.md)   
- [XML 任务编辑器（“常规”页）](../xml-task-editor-general-page.md)  
+ [XML 任务编辑器 &#40;常规 "页面&#41;](../xml-task-editor-general-page.md)  
   
   

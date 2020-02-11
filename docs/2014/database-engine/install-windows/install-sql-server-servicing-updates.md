@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 07f438f86a22b866351a0b83ee7634338f3ad2cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62775340"
 ---
 # <a name="install-sql-server-2014-servicing-updates"></a>安装 SQL Server 2014 服务更新
@@ -37,16 +37,16 @@ ms.locfileid: "62775340"
   
 -   网络共享  
   
- 在找到最新版本的适用更新后，安装程序将下载这些更新并将其与当前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装进程集成在一起。 产品更新可包括累积更新、Service Pack 或者 Service Pack 连同累积更新。 产品更新功能是的扩展[补充功能](https://go.microsoft.com/fwlink/?LinkId=219945)中[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]PCU1。  
+ 在找到最新版本的适用更新后，安装程序将下载这些更新并将其与当前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程集成在一起。 产品更新可包括累积更新、Service Pack 或者 Service Pack 连同累积更新。 产品更新功能是 PCU1 中[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]提供的补充[功能](https://go.microsoft.com/fwlink/?LinkId=219945)的扩展。  
   
 ## <a name="installing-updates-for-includesscurrentincludessscurrent-mdmd-after-it-has-already-been-installed"></a>在已安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 后为其安装更新  
- 已安装实例上[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，我们建议你应用所有可用的更新：常规分发发布 (GDR-关键安全/更新)、 Service Pack (SP)，以及最新可用累积更新 (CU)。  
+ 在的已安装实例[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]上，我们建议你应用所有可用的更新：常规分发版本（GDR-安全/关键更新）、Service PACK （SP）以及最新的可用累积更新（CU）。  
   
- 根据服务发布的类型，SQL Server 更新均可通过 Microsoft Update (MU)、 Microsoft 下载中心，和/或客户支持服务修补程序服务器。 SQL Server 的安全和关键更新自动提供的 Microsoft 更新 （以便能够看到这些更新需要若要选择加入 mu 通过 Windows Update 控制面板中）。 可选/重要以及下载中心下载 Service Pack 是 MU 上可用。 CU 知识库文章中提供的 Microsoft 修补程序下载服务器上提供了累积更新。  
+ 根据服务发布的类型，可以通过 Microsoft 更新（MU）、Microsoft 下载中心和/或客户支持服务修补程序服务器提供 SQL Server 更新。 Microsoft 更新自动提供 SQL Server 的安全更新和关键更新（通过控制面板中的 Windows 更新，可以查看需要选择加入 MU 的这些更新）。 在 MU 上，Service Pack 可作为可选/重要下载和下载中心提供。 在 CU 知识库文章中提供的 Microsoft 修补程序下载服务器上提供了累积更新。  
   
-## <a name="see-also"></a>请参阅  
- [从安装向导安装 SQL Server 2014&#40;安装程序&#41;](install-sql-server-from-the-installation-wizard-setup.md)   
- [从命令提示符安装更新](installing-updates-from-the-command-prompt.md)[到 SQL Server 2014 实例添加功能&#40;安装程序&#41;](add-features-to-an-instance-of-sql-server-setup.md)   
+## <a name="see-also"></a>另请参阅  
+ [从安装向导安装 SQL Server 2014 &#40;安装程序&#41;](install-sql-server-from-the-installation-wizard-setup.md)   
+ [从命令提示符安装更新](installing-updates-from-the-command-prompt.md)会[将功能添加到 SQL Server 2014 &#40;安装程序的实例&#41;](add-features-to-an-instance-of-sql-server-setup.md)   
  [删除 SQL Server 2014 安装](repair-a-failed-sql-server-installation.md)  
   
   

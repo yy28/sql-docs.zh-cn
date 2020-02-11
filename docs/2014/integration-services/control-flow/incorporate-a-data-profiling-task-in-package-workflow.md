@@ -13,20 +13,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5d8096ee89a9c0b63c89849a02317dc23b2b130e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831608"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>合并包工作流中的数据事件探查任务
-  数据事件探查和清除在其早期阶段不适合作为自动过程。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，通常需要对数据事件探查任务的输出进行直观的分析和人为判断，以确定报告的冲突是有意义还是过多。 即使在确认了数据质量问题之后，仍然需要通过周详的计划来确定执行清除的最佳方法。  
+  数据事件探查和清除在其早期阶段不适合作为自动过程。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，数据事件探查任务的输出通常要求进行可视分析和人工判断，以确定报告的冲突是有意义还是过多。 即使在确认了数据质量问题之后，仍然需要通过周详的计划来确定执行清除的最佳方法。  
   
  不过，在确定了有关数据质量的条件之后，您可能希望对数据源自动执行定期的分析和清除。 请考虑下面的方案：  
   
 -   **在增量加载之前检查数据质量**。 使用数据事件探查任务计算用于 Customers 表 CustomerName 列的新数据的列 Null 比率配置文件。 如果 Null 值的百分比大于 20%，则向操作员发送包含该配置文件输出的电子邮件并结束该包。 否则，请继续执行增量加载。  
   
--   **满足指定条件时自动执行清除**。 使用数据事件探查任务根据省/市/自治区的查找表计算 State 列的值包含配置文件，根据邮政编码的查找表计算 ZIP Code/Postal Code 列的值包含配置文件。 如果 State 值的包含强度小于 80%，但 ZIP Code/Postal Code 值的包含强度大于 99%，则表明两个问题： 首先，State 数据无效。 其次，ZIP Code/Postal Code 数据有效。 启动数据流任务，该任务通过从当前的 Zip Code/Postal Code 值中查找正确的 State 值来清除 State 数据。  
+-   **满足指定条件时自动执行清理**。 使用数据事件探查任务根据省/市/自治区的查找表计算 State 列的值包含配置文件，根据邮政编码的查找表计算 ZIP Code/Postal Code 列的值包含配置文件。 如果 State 值的包含强度小于 80%，但 ZIP Code/Postal Code 值的包含强度大于 99%，则表明两个问题： 首先，State 数据无效。 其次，ZIP Code/Postal Code 数据有效。 启动数据流任务，该任务通过从当前的 Zip Code/Postal Code 值中查找正确的 State 值来清除 State 数据。  
   
  具有可以将数据流任务合并到其中的工作流后，还需要了解添加此任务所需的步骤。 下一部分介绍合并数据流任务的一般过程。 最后两部分介绍如何将数据流任务直接连接到数据源或连接到从该数据流转换的数据。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62831608"
   
  在将数据事件探查任务合并到包的工作流中时，请注意该任务的以下两个功能：  
   
--   **任务输出**。 数据事件探查任务根据 DataProfile.xsd 架构以 XML 格式将输出写入文件或包变量。 因此，如果希望在包的条件工作流中使用配置文件结果，则需要查询该 XML 输出。 您可以方便地使用 Xpath 查询语言查询此 XML 输出。 若要学习此 XML 输出的结构，可以打开一个示例输出文件或打开该架构本身。 若要打开输出文件或架构，可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]、另一个 XML 编辑器或文本编辑器（如记事本）。  
+-   **任务输出**。 数据事件探查任务根据 DataProfile.xsd 架构以 XML 格式将输出写入文件或包变量。 因此，如果希望在包的条件工作流中使用配置文件结果，则需要查询该 XML 输出。 您可以方便地使用 Xpath 查询语言查询此 XML 输出。 若要学习此 XML 输出的结构，可以打开一个示例输出文件或打开该架构本身。 若要打开输出文件或架构，可以使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]、另一个 XML 编辑器或文本编辑器（如记事本）。  
   
     > [!NOTE]  
     >  数据配置文件查看器中显示的某些配置文件结果是不能在输出中直接找到的计算值。 例如，列 Null 比率配置文件的输出包括总行数和包含 Null 值的行数。 您需要查询这两个值，然后计算包含 Null 值的行的百分比，以得到列 Null 比率。  
@@ -102,9 +102,9 @@ ms.locfileid: "62831608"
   
 -   在 **“变量”** 窗口中，添加并配置以下两个包变量：  
   
-    -   输入名称， `ProfileConnectionName`，为一个变量并设置到此变量的类型**字符串**。  
+    -   为其中一个变量`ProfileConnectionName`输入名称，并将此变量的类型设置为**String**。  
   
-    -   输入名称， `AddressLine2NullRatio`、 其他变量并将设置到此变量的类型**Double**。  
+    -   为另一个变量`AddressLine2NullRatio`输入名称，并将此变量的类型设置为**Double**。  
   
 ### <a name="configure-the-data-profiling-task"></a>配置数据事件探查任务  
  在以下情况下，必须对数据事件探查任务进行配置：  
@@ -121,7 +121,7 @@ ms.locfileid: "62831608"
   
 2.  打开 **“数据事件探查任务编辑器”** 以配置该任务。  
   
-3.  在该编辑器的 **“常规”** 页上，选择前面配置的文件连接管理器的名称作为 **“目标”** 。  
+3.  在该编辑器的 **“常规”** 页上，选择前面配置的文件连接管理器的名称作为 **“目标”**。  
   
 4.  在该编辑器的 **“配置文件请求”** 页上，创建新的列 Null 比率配置文件。  
   
@@ -142,9 +142,9 @@ ms.locfileid: "62831608"
   
 4.  在 **“脚本”** 页上，选择首选编程语言。 然后，使两个包变量对该脚本可用：  
   
-    1.  有关`ReadOnlyVariables`，选择`ProfileConnectionName`。  
+    1.  对于`ReadOnlyVariables`，请`ProfileConnectionName`选择。  
   
-    2.  有关**ReadWriteVariables**，选择`AddressLine2NullRatio`。  
+    2.  对于**ReadWriteVariables**，请`AddressLine2NullRatio`选择。  
   
 5.  选择 **“编辑脚本”** 以打开脚本开发环境。  
   
@@ -293,7 +293,7 @@ ms.locfileid: "62831608"
   
 -   在将脚本任务连接到工作流下游分支的优先约束中，写入使用变量值定位工作流的表达式。  
   
-     例如，可以将优先约束的 **“求值运算”** 设置为 **“表达式和约束”** 。 然后，可以使用 `@AddressLine2NullRatio < .90` 作为该表达式的值。 当前面的任务成功并且所选列的 Null 值的百分比小于 90% 时，这将使工作流遵循所选的路径。  
+     例如，可以将优先约束的 **“求值运算”** 设置为 **“表达式和约束”**。 然后，可以使用 `@AddressLine2NullRatio < .90` 作为该表达式的值。 当前面的任务成功并且所选列的 Null 值的百分比小于 90% 时，这将使工作流遵循所选的路径。  
   
 ## <a name="connecting-the-data-profiling-task-to-transformed-data-from-the-data-flow"></a>将数据事件探查任务连接到从数据流转换的数据  
  您可以不对直接来自数据源的数据进行事件探查，而是对数据流中已加载并转换的数据进行事件探查。 不过，数据事件探查任务仅针对持久化数据而不针对内存中的数据进行操作。 因此，必须首先使用目标组件将已转换的数据保存到临时表中。  
@@ -327,7 +327,7 @@ ms.locfileid: "62831608"
   
 7.  在将脚本任务连接到工作流下游分支的优先约束中，写入使用变量值定位工作流的表达式。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [设置数据事件探查任务](data-profiling-task.md)   
  [数据配置文件查看器 (Data Profile Viewer)](data-profile-viewer.md)  
   

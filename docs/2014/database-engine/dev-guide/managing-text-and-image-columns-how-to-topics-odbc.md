@@ -1,5 +1,5 @@
 ---
-title: 管理 text 和 image 列操作指南主题 (ODBC) |Microsoft Docs
+title: 管理文本和图像列操作指南主题（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8645cf56a37e41d681daed2c05c3db9bf34c98e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780982"
 ---
 # <a name="managing-text-and-image-columns-how-to-topics-odbc"></a>管理 text 和 image 列操作指南主题 (ODBC)
@@ -22,11 +22,11 @@ ms.locfileid: "62780982"
   
 ## <a name="in-this-section"></a>本节内容  
   
--   [使用执行时数据参数&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/managing-text-and-image-columns-use-data-at-execution-parameters.md)  
+-   [使用执行时数据参数 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/managing-text-and-image-columns-use-data-at-execution-parameters.md)  
   
--   [使用执行时数据列&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/managing-text-and-image-columns-use-data-at-execution-columns.md)  
+-   [使用执行时数据列 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/managing-text-and-image-columns-use-data-at-execution-columns.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ODBC 操作指南主题](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
   

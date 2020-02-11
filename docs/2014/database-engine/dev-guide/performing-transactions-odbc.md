@@ -1,5 +1,5 @@
 ---
-title: 执行事务 (ODBC) |Microsoft Docs
+title: 执行事务（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f4a4d4ce67d6087ca6efd2cb2285604a3d79d64f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781023"
 ---
 # <a name="performing-transactions-odbc"></a>执行事务 (ODBC)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序支持 ODBC API 事务管理函数。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 为单个服务器上的本地事务提供全面支持。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序使用这些功能支持用于管理事务的 ODBC API 函数。  
+  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序支持 ODBC API 事务管理函数。 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 为单个服务器上的本地事务提供全面支持。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序使用这些功能支持用于管理事务的 ODBC API 函数。  
   
  通过使用 Microsoft 分布式事务处理协调器 (MS DTC)，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序可以参与跨多个服务器的分布式事务处理。  
   

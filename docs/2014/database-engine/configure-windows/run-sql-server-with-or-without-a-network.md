@@ -22,14 +22,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 050986f4c78fc285e936b206c82faef90b89d75e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62810355"
 ---
 # <a name="run-sql-server-with-or-without-a-network"></a>在网络上或不在网络上运行 SQL Server
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以在网络上运行，也可以不在网络上运行。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以在网络上运行，也可以在没有网络的情况下正常运行。  
   
 ## <a name="running-sql-server-on-a-network"></a>在网络上运行 SQL Server  
  若要使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 能够通过网络进行通信， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务必须正在运行。 默认情况下， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 将自动启动内置的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。 若要了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务是否已启动，请在命令提示符下键入：  
@@ -49,8 +49,8 @@ ms.locfileid: "62810355"
   
  当从本地客户端（如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sqlcmd **）连接到独立的**实例时，将不使用网络而使用本地管道直接连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 本地管道和网络管道的区别在于是否使用网络。 除非特别指明，否则本地管道和网络管道都使用标准管道 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .\pipe\sql\query) 与\\\\实例建立连接。  
   
- 如果在连接到本地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时不指定服务器名称，则使用的就是本地管道。 如果连接到本地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例并显式指定了服务器名称，则所使用的就是网络管道或另一种网络进程间通信 (IPC) 机制，例如，网间数据包交换/有序数据包交换 (IPX/SPX)（假定已将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置成使用多种网络）。 由于独立的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持网络管道，因此必须在从客户端连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时，省略不必要的 **/**  <Server_name> 自变量。 例如，若要从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] osql **连接到独立的**实例，请键入：  
+ 如果在连接到本地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时不指定服务器名称，则使用的就是本地管道。 如果连接到本地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例并显式指定了服务器名称，则所使用的就是网络管道或另一种网络进程间通信 (IPC) 机制，例如，网间数据包交换/有序数据包交换 (IPX/SPX)（假定已将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置成使用多种网络）。 由于独立[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的不支持网络管道，因此在**/** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]从客户端连接到实例时，必须省略不必要的 _<Server_name>_ 参数。 例如，若要从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] osql **连接到独立的**实例，请键入：  
   
- osql /Usa /P \<saPassword>    
+ **osql/Usa/p** _ \<saPassword>_  
   
   

@@ -13,16 +13,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b196aaa30934e4206886b8b6290e402b6c28fce5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771313"
 ---
-# <a name="finish"></a>“完成”
+# <a name="finish"></a>完成
   **“完成”** 页总结了向导过程。 单击 **“完成”** 可关闭向导并且生成您在“创建 CDC 实例”向导中定义的所有表。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [如何创建 SQL Server 更改数据库实例](how-to-create-the-sql-server-change-database-instance.md)   
  [使用新建实例向导](use-the-new-instance-wizard.md)  
   

@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3c3747149b23c6217f321eff9d19621189b89b66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011986"
 ---
 # <a name="create-a-database-schema"></a>创建数据库架构
@@ -35,7 +35,7 @@ ms.locfileid: "63011986"
   
      [安全性](#Security)  
   
--   **若要创建架构，可使用：**  
+-   **若要创建架构，请使用：**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -49,9 +49,9 @@ ms.locfileid: "63011986"
   
 -   在创建数据库对象时，如果您将某一有效的域主体（用户或组）指定为对象所有者，则该域主体将作为架构添加到数据库中。 这个新架构将为该域主体所拥有。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
   
 -   需要对数据库拥有 CREATE SCHEMA 权限。  
   
@@ -65,20 +65,22 @@ ms.locfileid: "63011986"
   
 2.  展开要在其中创建新数据库架构的数据库。  
   
-3.  右键单击“安全性”文件夹，指向“新建”，并选择“架构”    。  
+3.  右键单击“安全性”文件夹，指向“新建”，并选择“架构”************。  
   
-4.  在“架构 - 新建”对话框中的“常规”页上，在“架构名称”框中输入新架构的名称    。  
+4.  在“架构 - 新建”对话框中的“常规”页上，在“架构名称”框中输入新架构的名称************。  
   
 5.  在 **“架构所有者”** 框中，输入要拥有该架构的数据库用户或角色的名称。 或者，单击 **“搜索”** 以打开 **“搜索角色和用户”** 对话框。  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>其他选项  
- “架构 - 新建”对话框还在两个其他页上提供了选项：  “权限”和“扩展属性”   。  
+ "**架构-新建**" 对话框还提供了两个附加页面的选项：**权限**和**扩展属性**。  
   
--   **“权限”** 页将列出所有可能的安全对象以及可授予登录名的针对这些安全对象的权限。  
+-   
+  **“权限”** 页将列出所有可能的安全对象以及可授予登录名的针对这些安全对象的权限。  
   
--   **“扩展属性”** 页允许您向数据库用户添加自定义属性。  
+-   
+  **“扩展属性”** 页允许您向数据库用户添加自定义属性。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

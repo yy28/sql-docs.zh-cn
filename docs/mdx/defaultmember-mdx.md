@@ -1,5 +1,5 @@
 ---
-title: DefaultMember (MDX) |Microsoft Docs
+title: DefaultMember （MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a0b5039ae62eac25d698442d4aeb92ad3c4ebc3a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892901"
 ---
 # <a name="defaultmember-mdx"></a>DefaultMember (MDX)
@@ -35,7 +35,7 @@ Hierarchy_Expression.DefaultMember
  特性的默认成员用于在查询中不包括特性的情况下计算表达式。  
   
 ## <a name="example"></a>示例  
- 下面的示例将**DefaultMember**函数与**Name**函数结合使用, 以返回艾德工作多维数据集中目标货币维度的默认成员。 该示例返回**美元**。 **Name**函数用于返回度量值的名称, 而不是度量**值**的默认属性。  
+ 下面的示例将**DefaultMember**函数与**Name**函数结合使用，以返回艾德工作多维数据集中目标货币维度的默认成员。 该示例返回**美元**。 **Name**函数用于返回度量值的名称，而不是度量**值**的默认属性。  
   
 ```  
 WITH MEMBER Measures.x AS   
@@ -44,8 +44,8 @@ SELECT Measures.x ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)   
+## <a name="see-also"></a>另请参阅  
+ [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
  [定义默认成员](https://docs.microsoft.com/analysis-services/multidimensional-models/attribute-properties-define-a-default-member)  
   
   

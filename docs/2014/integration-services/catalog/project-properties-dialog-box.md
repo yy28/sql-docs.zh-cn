@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b27a3cc8a768f60a5e2d430fe04ca514aafe1f37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771645"
 ---
 # <a name="project-properties-dialog-box"></a>“项目属性”对话框
@@ -45,7 +45,7 @@ ms.locfileid: "62771645"
   
 4.  展开包含您要设置其属性的项目的文件夹。  
   
-5.  右键单击该项目，然后单击“属性”。  
+5.  右键单击该项目，然后单击“属性”  。  
   
 ##  <a name="general"></a> 设置“常规”页上的选项  
  使用“常规”页查看项目属性。  
@@ -53,7 +53,7 @@ ms.locfileid: "62771645"
  **名称**  
  列出项目名称。  
   
- **Identifier**  
+ **标识符**  
  列出项目 ID。  
   
  **说明**  
@@ -69,12 +69,12 @@ ms.locfileid: "62771645"
  使用 **“权限”** 页可以查看和设置项目的显式权限。  
   
  浏览  
- 使用“浏览所有主体”对话框，单击“浏览”选择要为其设置权限的用户和角色。  
+ 使用“浏览所有主体”  对话框，单击“浏览”  选择要为其设置权限的用户和角色。  
   
  **名称**  
  列出用户或角色的名称。  
   
- **类型**  
+ 类型   
  列出用户或角色的类型。  
   
  **权限**  
@@ -84,9 +84,9 @@ ms.locfileid: "62771645"
  列出授予权限的用户或角色。  
   
  **授予**  
- 选择“授予”时，为所选用户或角色授予权限。  
+ 选择“授予”  时，为所选用户或角色授予权限。  
   
  **拒绝**  
- 选择“拒绝”时，为所选用户或角色拒绝权限。  
+ 选择“拒绝”  时，为所选用户或角色拒绝权限。  
   
   

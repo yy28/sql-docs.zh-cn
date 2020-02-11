@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 58d94afea9c6801d75a67f6f9136441d536eb696
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62956142"
 ---
 # <a name="add-existing-items-to-a-project"></a>向项目中添加现有项
-  向项目中添加新项，以扩展应用程序功能。 现有项可以是查询，也可以是杂项文件。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 包含两个项目类型：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 脚本项目和 Analysis Services 脚本项目。 至于哪些查询文件可以添加到项目中，则取决于项目类型。 例如，可以将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询（扩展名为 .sql 的文件）添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 脚本项目，但是不能将其添加到 Analysis Services 脚本项目。 若要将其他文件扩展名与项目类型相关联，请参阅[将文件扩展名与代码编辑器](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)。  
+  向项目中添加新项，以扩展应用程序功能。 现有项可以是查询，也可以是杂项文件。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 有两个项目类型： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 脚本项目和 Analysis Services 脚本项目。 至于哪些查询文件可以添加到项目中，则取决于项目类型。 例如，可以将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询（扩展名为 .sql 的文件）添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 脚本项目，但是不能将其添加到 Analysis Services 脚本项目。 若要将其他文件扩展名关联到项目类型，请参阅[将文件扩展名与代码编辑器关联](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)。  
   
 ### <a name="to-add-an-existing-query-or-a-miscellaneous-file-to-a-project"></a>向项目中添加现有查询或杂项文件  
   
@@ -45,15 +45,15 @@ ms.locfileid: "62956142"
      使用此选项可以筛选所显示的文件和文件夹。 输入要用来筛选的完整或部分文件名，使用星号 (`*`) 作为通配符。  
   
     > [!NOTE]  
-    >  通过在“文件名”  框中输入 URL 或网络路径，导航到 Web 和网络位置。 例如，输入 http://mywebsite 可显示 mywebsite Web 位置中可用的文件，输入 \\ \myserver\myshare 可显示 myserver 上的 myshare 位置中可用的文件   。  
+    >  通过在“文件名”  框中输入 URL 或网络路径，导航到 Web 和网络位置。 例如，输入  **可显示 mywebsite Web 位置中可用的文件，输入 http://mywebsite\myserver\myshare 可显示 myserver 上的 myshare 位置中可用的文件** **\\** 。  
   
      **文件类型**  
      使用此选项基于文件扩展名筛选文件。 每个产品列出最常用文件类型的默认筛选器。  
   
-     **“添加”**  
+     **添加**  
      使用此下拉按钮可以向项目中添加项以及在默认编辑器中打开该项。  
   
-    -   **“添加”**  
+    -   **添加**  
   
          将现有项复制到磁盘上的项目文件夹，并添加解决方案资源管理器中选定项目下的项。 对该项所做的任何更改没有反映原始位置中的项。 这是该文件类型的默认编辑器。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "62956142"
   
 4.  该文件将添加到项目的“查询”  或“杂项文件”  文件夹中。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [解决方案资源管理器](solution-explorer.md)   
  [向项目添加新项](add-new-items-to-a-project.md)   
  [移除或删除项或项目](remove-or-delete-an-item-or-project.md)  

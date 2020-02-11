@@ -1,5 +1,5 @@
 ---
-title: 例如：以 XML 形式检索产品型号信息 | Microsoft Docs
+title: 示例：以 XML 形式检索产品型号信息 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b48b333a5619aaad7f7f6af1c6e8cf908ba35bb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62704710"
 ---
-# <a name="example-retrieving-product-model-information-as-xml"></a>例如：以 XML 形式检索产品型号信息
+# <a name="example-retrieving-product-model-information-as-xml"></a>示例：以 XML 形式检索产品型号信息
   下面的查询将返回产品型号信息。 `RAW` 子句中指定了 `FOR XML` 模式。  
   
 ## <a name="example"></a>示例  
@@ -52,7 +52,7 @@ FOR XML RAW, ELEMENTS;
 GO  
 ```  
   
- 下面是结果：  
+ 结果如下：  
   
 ```  
 <row>  
@@ -77,7 +77,7 @@ FOR XML RAW, TYPE ;
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [将 RAW 模式与 FOR XML 一起使用](use-raw-mode-with-for-xml.md)  
   
   

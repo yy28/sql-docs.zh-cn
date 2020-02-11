@@ -1,5 +1,5 @@
 ---
-title: 异常消息框编程 |Microsoft Docs
+title: 程序异常消息框 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 316afc6d5f3a87ff7431240681066ac5ee66ede6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780689"
 ---
 # <a name="program-exception-message-box"></a>对异常消息框编程
@@ -29,45 +29,46 @@ ms.locfileid: "62780689"
   
 1.  将托管代码项目中的某个引用添加到 Microsoft.ExceptionMessageBox.dll 程序集。  
   
-2.  （可选）添加`using`(C#) 或`Imports`([!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic.NET) 指令以使用<xref:Microsoft.SqlServer.MessageBox>命名空间。  
+2.  可有可无添加`using` （c #）或`Imports` （[!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .net）指令以使用<xref:Microsoft.SqlServer.MessageBox>命名空间。  
   
 3.  创建 try-catch 块处理预期异常。  
   
-4.  在 `catch` 块中，创建 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> 类的实例。 传递<xref:System.Exception>处理对象`try` - `catch`块。  
+4.  在 `catch` 块中，创建 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> 类的实例。 传递由`try` - <xref:System.Exception> `catch`块处理的对象。  
   
 5.  （可选）为 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> 设置下列一个或多个属性：  
   
-    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Buttons%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons> 枚举，用于指定要在异常消息框中显示的按钮。  
+    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Buttons%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons>枚举，指定要在异常消息框中显示的按钮。  
   
-    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.DefaultButton%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDefaultButton> 枚举，用于指定异常消息框的默认按钮。  
+    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.DefaultButton%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDefaultButton>枚举，用于指定异常消息框的默认按钮。  
   
-    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Options%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxOptions> 用于控制异常消息框的其他行为的枚举。  
+    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Options%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxOptions>枚举，用于控制异常消息框的其他行为。  
   
-    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Symbol%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol> 枚举，用于指定要在异常消息框中显示的符号。  
+    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Symbol%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol>枚举，指定要在异常消息框中显示的符号。  
   
 6.  调用 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> 方法。 传递异常消息框所属的父窗口。  
   
-7.  （可选）记下的值返回<xref:System.Windows.Forms.DialogResult>枚举，如果您需要确定哪个按钮用户单击。  
+7.  可有可无如果需要确定用户单击<xref:System.Windows.Forms.DialogResult>的是哪个按钮，请注意返回的枚举值。  
   
 #### <a name="to-display-the-exception-message-box-without-an-exception"></a>显示没有异常的异常消息框  
   
 1.  将托管代码项目中的某个引用添加到 Microsoft.ExceptionMessageBox.dll 程序集。  
   
-2.  （可选）添加`using`(C#) 或`Imports`(Visual Basic.NET) 指令以使用<xref:Microsoft.SqlServer.MessageBox>命名空间。  
+2.  可有可无添加`using` （c #）或`Imports` （Visual Basic .net）指令以使用<xref:Microsoft.SqlServer.MessageBox>命名空间。  
   
-3.  创建 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> 类的实例。 将消息文本作为 <xref:System.String> 值传递。  
+3.  创建的 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> 类的实例。 将消息文本作为 <xref:System.String> 值传递。  
   
 4.  （可选）为 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> 设置下列一个或多个属性：  
   
-    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Buttons%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons> 枚举，用于指定要在异常消息框中显示的按钮。  
+    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Buttons%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons>枚举，指定要在异常消息框中显示的按钮。  
   
-    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Caption%2A> - 异常消息框的对话框标题。  
+    -   
+  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Caption%2A> - 异常消息框的对话框标题。  
   
-    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.DefaultButton%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDefaultButton> 枚举，用于指定异常消息框对话框的默认按钮。  
+    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.DefaultButton%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDefaultButton>枚举，用于指定异常消息框对话框的默认按钮。  
   
-    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Options%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxOptions> 用于控制异常消息框的其他行为的枚举。  
+    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Options%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxOptions>枚举，用于控制异常消息框的其他行为。  
   
-    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Symbol%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol> 枚举，用于指定要在异常消息框中显示的符号。  
+    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Symbol%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol>枚举，指定要在异常消息框中显示的符号。  
   
 5.  调用 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> 方法。 传递异常消息框所属的父窗口。  
   
@@ -77,29 +78,30 @@ ms.locfileid: "62780689"
   
 1.  将托管代码项目中的某个引用添加到 Microsoft.ExceptionMessageBox.dll 程序集。  
   
-2.  （可选）添加`using`(C#) 或`Imports`(Visual Basic.NET) 指令以使用<xref:Microsoft.SqlServer.MessageBox>命名空间。  
+2.  可有可无添加`using` （c #）或`Imports` （Visual Basic .net）指令以使用<xref:Microsoft.SqlServer.MessageBox>命名空间。  
   
 3.  按以下两种方式之一创建 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> 类的实例：  
   
-    -   传递<xref:System.Exception>处理对象`try` - `catch`块。  
+    -   传递由`try` - <xref:System.Exception> `catch`块处理的对象。  
   
     -   将消息文本作为 <xref:System.String> 值传递。  
   
 4.  为 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Buttons%2A> 设置以下值之一：  
   
-    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.AbortRetryIgnore> -显示**中止**，**重试**，并**忽略**按钮。  
+    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.AbortRetryIgnore>-显示 "**中止**"、"**重试**" 和 "**忽略**" 按钮。  
   
-    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.Custom> - 显示自定义按钮。  
+    -   
+  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.Custom> - 显示自定义按钮。  
   
-    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.OK> -显示**确定**按钮。  
+    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.OK>-显示 **"确定"** 按钮。  
   
-    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.OKCancel> -显示**确定**并**取消**按钮。  
+    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.OKCancel>-显示 **"确定" 和 "** **取消**" 按钮。  
   
-    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.RetryCancel> -显示**重试**并**取消**按钮。  
+    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.RetryCancel>-显示 "**重试**" 和 "**取消**" 按钮。  
   
-    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.YesNo> -显示**是**并**否**按钮。  
+    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.YesNo>-显示 **"是" 和 "** **否**" 按钮。  
   
-    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.YesNoCancel> -显示**是**，**否**，并**取消**按钮。  
+    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.YesNoCancel>-显示 **"是**"、"**否**" 和 "**取消**" 按钮。  
   
 5.  （可选）如果使用自定义按钮，请调用 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.SetButtonText%2A> 方法的重载之一以指定最多五个自定义按钮的文本。  
   
@@ -111,11 +113,11 @@ ms.locfileid: "62780689"
   
 1.  将托管代码项目中的某个引用添加到 Microsoft.ExceptionMessageBox.dll 程序集。  
   
-2.  （可选）添加`using`(C#) 或`Imports`(Visual Basic.NET) 指令以使用<xref:Microsoft.SqlServer.MessageBox>命名空间。  
+2.  可有可无添加`using` （c #）或`Imports` （Visual Basic .net）指令以使用<xref:Microsoft.SqlServer.MessageBox>命名空间。  
   
 3.  按以下两种方式之一创建 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> 类的实例：  
   
-    -   传递<xref:System.Exception>处理对象`try` - `catch`块。  
+    -   传递由`try` - <xref:System.Exception> `catch`块处理的对象。  
   
     -   将消息文本作为 <xref:System.String> 值传递。  
   
@@ -136,14 +138,14 @@ ms.locfileid: "62780689"
     4.  调用 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> 方法。 计算指定的注册表项，仅当注册表项中存储的数据为 0 时才显示异常消息框。 如果显示对话框且用户在单击按钮前选中复选框，则注册表项中的数据设置为 1。  
   
 ## <a name="example"></a>示例  
- 此示例使用异常消息框，其唯一**确定**按钮以显示从应用程序异常，包括处理的异常以及其他特定于应用程序的信息的信息。  
+ 此示例使用带有 **"确定"** 按钮的异常消息框，以显示应用程序异常中的信息，该异常包含处理的异常以及其他特定于应用程序的信息。  
   
  [!code-csharp[HowTo#emb_showOKbutton](../../snippets/csharp/SQL15/replication/howto/cs/embform.cs#emb_showokbutton)]  
   
  [!code-vb[HowTo#emb_vb_showOKbutton](../../snippets/visualbasic/SQL15/replication/howto/vb/embform.vb#emb_vb_showokbutton)]  
   
 ## <a name="example"></a>示例  
- 此示例使用具有异常消息框**是**并**否**中供用户选择的按钮。  
+ 此示例使用具有 **"是"** 和 "**否**" 按钮的异常消息框，用户从中选择。  
   
  [!code-csharp[HowTo#emb_showYesNobutton](../../snippets/csharp/SQL15/replication/howto/cs/embform.cs#emb_showyesnobutton)]  
   

@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a90a30a0ae7fe09d49b1d42b577b13370c48c0de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62775437"
 ---
 # <a name="install-sql-server-powershell"></a>安装 SQL Server PowerShell
@@ -29,17 +29,17 @@ ms.locfileid: "62775437"
   
     -   一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供程序。 通过该提供程序，可以使用类似于文件系统路径的路径，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象的层次结构中导航。 每个对象都与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象模型中的一个类关联。 您可以使用该类的方法和属性来针对对象执行工作。 例如，如果通过 cd 切换到路径中的某个数据库对象，则可以使用 Microsoft.SqlServer.Managment.SMO.Database 类的方法和属性来管理该数据库。  
   
--   **Sqlps**导入到 Windows PowerShell 2.0 会话中以便加载的模块[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理单元。  
+-   导**** 入到 Windows PowerShell 2.0 会话中以便加载[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理单元的 sqlps 模块。  
   
--   已弃用**sqlps**实用程序，启动 Windows PowerShell 2.0 会话并且导入**sqlps**模块。  
+-   不推荐使用的**sqlps**实用工具，用于启动 Windows PowerShell 2.0 会话并导入**sqlps**模块。  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 支持从对象资源管理器树启动 Windows PowerShell 会话。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理支持 Windows PowerShell 作业步骤。  
   
- 如果 Windows PowerShell 2.0 尚未安装，或已被卸载，则必须通过以下上的说明安装它[Windows Management Framework](https://go.microsoft.com/fwlink/?LinkId=186214)页。  
+ 如果 Windows PowerShell 2.0 尚未安装或已卸载，则必须按照[Windows Management Framework](https://go.microsoft.com/fwlink/?LinkId=186214)页上的说明进行安装。  
   
  如果在安装程序完成后卸载了 Windows PowerShell，用于 Windows PowerShell 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能将无法使用。 Windows PowerShell 可由 Windows 用户卸载，某些 Windows 操作系统升级可能会要求卸载 Windows PowerShell。 若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 功能，您必须通过使用 Windows Management Framework 重新安装 PowerShell 2.0。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server PowerShell](../../powershell/sql-server-powershell.md)  
   
   

@@ -17,14 +17,15 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b671200dce3b5be1e01e40b09ff285563c4d4f6b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62985777"
 ---
 # <a name="reporting-services-extensions"></a>Reporting Services 扩展插件
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的模块化体系结构旨在实现可扩展性。 提供了一个托管代码 API，以便您能够轻松地开发、安装和管理由许多 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 组件使用的扩展插件。 可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 创建专用或共享的程序集，并添加新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能以满足不断发展的业务需要。  
+  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的模块化体系结构旨在实现可扩展性。 提供了一个托管代码 API，以便您能够轻松地开发、安装和管理由许多 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 组件使用的扩展插件。 您可以使用创建专用或共享的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]程序集，并[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]添加新功能以满足不断发展的业务需求。  
   
  通过 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的独树一帜的可扩展体系结构，开发人员可以扩展产品及其组件的特定功能。 目前，全面支持扩展 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的数据处理功能。 数据处理 API 包括大家所熟悉的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据访问接口构造和约定，使开发人员能够将附加的数据处理功能内置于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中。 这些数据处理扩展插件向报表服务器和报表设计器中添加功能，从而可以将自定义数据无缝集成到报表中。  
   

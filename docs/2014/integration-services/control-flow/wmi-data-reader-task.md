@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 12340ae2ba13bf6219cf9940a56eeaa8b995f3e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829490"
 ---
 # <a name="wmi-data-reader-task"></a>WMI 数据读取器任务
@@ -74,7 +74,7 @@ Select * FROM Win32_QuickFixEngineering
 ## <a name="custom-logging-messages-available-on-the-wmi-data-reader-task"></a>WMI 数据读取器任务可用的自定义日志记录消息  
  下表列出了 WMI 数据读取器任务的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../performance/integration-services-ssis-logging.md)和[日志记录的自定义消息](../custom-messages-for-logging.md)。  
   
-|日志项|Description|  
+|日志项|说明|  
 |---------------|-----------------|  
 |`WMIDataReaderGettingWMIData`|指示任务已开始读取 WMI 数据。|  
 |`WMIDataReaderOperation`|报告任务所运行的 WQL 查询。|  
@@ -84,7 +84,7 @@ Select * FROM Win32_QuickFixEngineering
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的信息，请单击以下主题之一：  
   
--   [WMI 数据读取器任务编辑器（“WMI 选项”页）](../wmi-data-reader-task-editor-wmi-options-page.md)  
+-   [WMI 数据读取器任务编辑器 &#40;WMI 选项 "页&#41;](../wmi-data-reader-task-editor-wmi-options-page.md)  
   
 -   [“表达式”页](../expressions/expressions-page.md)  
   
@@ -97,7 +97,7 @@ Select * FROM Win32_QuickFixEngineering
   
 -   [设置任务或容器的属性](../set-the-properties-of-a-task-or-container.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 任务](integration-services-tasks.md)   
  [控制流](control-flow.md)  
   

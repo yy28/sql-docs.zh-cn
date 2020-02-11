@@ -18,14 +18,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4fe5b3123776a97de8a460d829c7bd38b60f8617
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891892"
 ---
 # <a name="sap-netweaver-bi-query-designer-user-interface"></a>SAP NetWeaver BI 查询设计器用户界面
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了图形查询设计器，可用于为 SAP NetWeaver® Business Intelligence 数据源生成多维表达式 (MDX) 查询。 MDX 图形查询设计器有两种模式:设计模式和查询模式。 每种模式都提供一个元数据窗格，在该窗格中，您可以从 InfoCube、MultiProvider 或根据数据源定义的启用 Web 的查询中拖动成员，创建 MDX 查询以便在处理报表时检索数据。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]提供了一个图形查询设计器，用于为 SAP NetWeaver®商业智能数据源生成多维表达式（MDX）查询。 MDX 图形查询设计器有两种模式：设计模式和查询模式。 每种模式都提供一个元数据窗格，在该窗格中，您可以从 InfoCube、MultiProvider 或根据数据源定义的启用 Web 的查询中拖动成员，创建 MDX 查询以便在处理报表时检索数据。  
   
 > [!IMPORTANT]  
 >  用户创建和运行查询时访问数据源。 您应授予对数据源的最小权限（如只读权限）。  
@@ -37,11 +37,11 @@ ms.locfileid: "68891892"
 ## <a name="graphical-query-designer-in-design-mode"></a>设计模式下的图形查询设计器  
  编辑使用 [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] 数据源的数据集查询时，图形查询设计器将以设计模式打开。 下图列出了设计模式的窗格。  
   
- ![在设计模式下使用 MDX 的查询设计器](../media/rsqd-dssapbw-mdx-designmode.gif "Query Designer using MDX in Design Mode")  
+ ![在设计模式下使用 MDX 的查询设计器](../media/rsqd-dssapbw-mdx-designmode.gif "在设计模式下使用 MDX 的查询设计器")  
   
  下表列出了设计模式下的窗格。  
   
-|Pane|Functions|  
+|窗格|函数|  
 |----------|--------------|  
 |“选择多维数据集”按钮|显示当前选择的 InfoCube、MultiProvider 或启用 Web 的查询。|  
 |“元数据”窗格|显示 InfoCube、MultiProvider 和查询的层次列表。 在数据源中创建的查询可能显示在相应的多维数据集下。|  
@@ -53,30 +53,30 @@ ms.locfileid: "68891892"
 ### <a name="toolbar-for-the-graphical-query-designer-in-design-mode-toolbar"></a>设计模式下的图形查询设计器工具栏  
  查询设计器工具栏提供了可以帮助您使用图形界面来设计 MDX 查询的按钮。 下表介绍了这些按钮及其功能。  
   
-|Button|描述|  
+|按钮|说明|  
 |------------|-----------------|  
 |**编辑为文本**|在基于文本的查询设计器和图形查询设计器之间切换。 不可用于此数据源类型。|  
-|**导入**|从文件系统中的报表定义 (.rdl) 文件导入现有查询。 有关详细信息，请参阅 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。|  
-|![刷新数据集字段](../media/rsqdicon-refreshfields.gif "Refresh dataset fields")|刷新数据源的元数据。|  
-|![Add calculated member](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|显示 **“计算成员生成器”** 对话框。|  
-|![切换显示空单元格](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "Toggle for show empty cells")|在“数据”窗格中的显示或不显示空单元格之间切换。 （这等同于在 MDX 中使用 NON EMPTY 子句）。|  
-|![自动执行查询](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "AutoExecute the query")|自动运行查询并在每次更改（如在“数据”窗格中删除一列）之后显示结果。 结果将显示在“数据”窗格中。|  
+|**Import**|从文件系统中的报表定义 (.rdl) 文件导入现有查询。 有关详细信息，请参阅 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。|  
+|![刷新数据集字段](../media/rsqdicon-refreshfields.gif "刷新数据集字段")|刷新数据源的元数据。|  
+|![添加计算成员](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "添加计算成员")|显示 **“计算成员生成器”** 对话框。|  
+|![切换显示空单元](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "切换显示空单元")|在“数据”窗格中的显示或不显示空单元格之间切换。 （这等同于在 MDX 中使用 NON EMPTY 子句）。|  
+|![自动执行查询](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "自动执行查询")|自动运行查询并在每次更改（如在“数据”窗格中删除一列）之后显示结果。 结果将显示在“数据”窗格中。|  
 |![删除](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-delete.gif "删除")|通过查询在“数据”窗格中删除选定列。|  
-|![“查询参数”对话框图标](https://docs.microsoft.com/analysis-services/analysis-services/media/iconqueryparameter.gif "Icon for the Query Parameters dialog box")|显示 **“变量”** 对话框。 仅当选定的多维数据集为“查询”多维数据集时此按钮才可用（因为只有“查询”多维数据集支持变量）。 当向变量分配默认值时，将创建一个相应的报表参数。|  
+|![“查询参数”对话框图标](https://docs.microsoft.com/analysis-services/analysis-services/media/iconqueryparameter.gif "“查询参数”对话框图标")|显示 **“变量”** 对话框。 仅当选定的多维数据集为“查询”多维数据集时此按钮才可用（因为只有“查询”多维数据集支持变量）。 当向变量分配默认值时，将创建一个相应的报表参数。|  
 |![运行查询](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "运行查询")|运行查询并在“数据”窗格中显示结果。|  
-|![取消查询](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-cancel.gif "Cancel the query")|取消查询。|  
-|![切换到设计模式](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Switch to Design mode")|在设计模式和查询模式之间切换。|  
+|![取消查询](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-cancel.gif "取消查询")|取消查询。|  
+|![切换到设计模式](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "切换到设计模式")|在设计模式和查询模式之间切换。|  
   
 ## <a name="graphical-query-designer-in-query-mode"></a>查询模式下的图形查询设计器  
  若要将图形查询设计器更改为查询模式，请单击工具栏上的 **“设计模式”** 切换按钮。  
   
  下图列出了查询模式下查询设计器的各个部分。  
   
- ![查询视图中的 SAP BW MDX 查询设计器](../media/rsqd-dssapbw-mdx-querymode.gif "SAP BW MDX query designer in query view")  
+ ![查询视图中的 SAP BW MDX 查询设计器](../media/rsqd-dssapbw-mdx-querymode.gif "查询视图中的 SAP BW MDX 查询设计器")  
   
  下表介绍了每个窗格的功能。  
   
-|Pane|Functions|  
+|窗格|函数|  
 |----------|--------------|  
 |“选择多维数据集”按钮|显示当前选择的 InfoCube、MultiProvider 或其他多维数据集。|  
 |“元数据/函数”窗格|显示一个选项卡式窗口，其中列出了可用于创建查询文本的元数据或函数列表。|  
@@ -95,16 +95,16 @@ ms.locfileid: "68891892"
   
 -   **编辑为文本**  
   
--   **添加计算成员** (![Add calculated member](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
+-   **添加计算成员**（![添加计算成员](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "添加计算成员")）  
   
--   **显示空单元格**（![切换显示空单元格](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "Toggle for show empty cells")）  
+-   **显示空单元格**（![切换以显示空单元格](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "切换显示空单元")）  
   
--   **自动执行**（![自动执行查询](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "AutoExecute the query")）  
+-   **自动执行**（![自动执行查询](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "自动执行查询")）  
   
--   **删除** (![删除](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-delete.gif "删除"))  
+-   **删除**（![delete](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-delete.gif "删除")）  
   
-## <a name="see-also"></a>请参阅  
- [创建共享数据集或嵌入数据集（报表生成器和 SSRS）](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>另请参阅  
+ [创建共享数据集或嵌入数据集 &#40;报表生成器和 SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [RSReportDesigner 配置文件](../report-server/rsreportdesigner-configuration-file.md)  
   
   

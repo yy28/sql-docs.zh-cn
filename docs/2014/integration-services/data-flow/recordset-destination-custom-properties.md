@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6010c87de750c3c23fbd03564887624064286dbd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770773"
 ---
 # <a name="recordset-destination-custom-properties"></a>记录集目标自定义属性
@@ -22,7 +22,7 @@ ms.locfileid: "62770773"
   
  下表介绍记录集目标的自定义属性。 所有属性均可读/写。  
   
-|属性名称|数据类型|描述|  
+|属性名称|数据类型|说明|  
 |-------------------|---------------|-----------------|  
 |VariableName|String|包含 ADO 记录集的变量的名称。|  
   
@@ -30,7 +30,7 @@ ms.locfileid: "62770773"
   
  有关详细信息，请参阅 [Recordset Destination](recordset-destination.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Common Properties](../common-properties.md)  
   
   

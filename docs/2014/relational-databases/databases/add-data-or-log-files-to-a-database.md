@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4519ed412e3148d8e0c70a77c00db969be73a9c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917697"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>向数据库中添加数据文件或日志文件
@@ -50,9 +50,9 @@ ms.locfileid: "62917697"
   
 -   可以为每个数据库指定最多 32,767 个文件和 32,767 个文件组。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要对数据库拥有 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -71,7 +71,7 @@ ms.locfileid: "62917697"
   
 6.  选择文件类型：数据或日志。  
   
-7.  对于数据文件，从列表中选择应包含该文件的文件组，或选择“\<新文件组>”  来创建新的文件组。 事务日志不能放在文件组中。  
+7.  对于数据文件，从列表中选择应包含该文件的文件组，或选择“**新文件组>”\<** 来创建新的文件组。 事务日志不能放在文件组中。  
   
 8.  指定文件的初始大小。 根据数据库中您希望的最大数据量，使数据文件尽可能大。  
   
@@ -97,9 +97,9 @@ ms.locfileid: "62917697"
 11. 指定文件位置的路径。 指定的路径必须存在才能添加文件。  
   
     > [!NOTE]  
-    >  默认情况下，数据和事务日志放在相同的驱动器和路径中以适应单磁盘系统，但这对于生产环境可能并非最佳方式。 有关详细信息，请参阅 [Database Files and Filegroups](database-files-and-filegroups.md)。  
+    >  默认情况下，数据和事务日志放在相同的驱动器和路径中以适应单磁盘系统，但这对于生产环境可能并非最佳方式。 有关详细信息，请参阅 [数据库文件和文件组](database-files-and-filegroups.md)。  
   
-12. 单击“确定”  。  
+12. 单击“确定”。   
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -109,13 +109,13 @@ ms.locfileid: "62917697"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此实例向数据库添加由两个文件组成的文件组。 此示例在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中创建文件组 `Test1FG1`，然后将两个 5MB 的文件添加到该文件组。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此实例向数据库添加由两个文件组成的文件组。 此示例在 `Test1FG1` 数据库中创建文件组 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ，然后将两个 5MB 的文件添加到该文件组。  
   
  [!code-sql[DatabaseDDL#AlterDatabase2](../../snippets/tsql/SQL14/tsql/databaseddl/transact-sql/alterdatabase.sql#alterdatabase2)]  
   
  有关更多示例，请参阅 [ALTER DATABASE 文件和文件组选项 (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Database Files and Filegroups](database-files-and-filegroups.md)   
  [删除数据库中的数据文件或日志文件](delete-data-or-log-files-from-a-database.md)   
  [增加数据库的大小](increase-the-size-of-a-database.md)  

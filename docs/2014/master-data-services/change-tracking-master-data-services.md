@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7b4b7d9d9d153456ca471196c6480465d057e412
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483524"
 ---
 # <a name="change-tracking-master-data-services"></a>更改跟踪 (Master Data Services)
@@ -32,15 +32,15 @@ ms.locfileid: "65483524"
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|向更改跟踪组添加属性。|[向更改跟踪组添加属性 (Master Data Services)](add-attributes-to-a-change-tracking-group-master-data-services.md)|  
-|创建业务规则以便基于属性更改启动操作。|[基于属性值更改启动操作 (Master Data Services)](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
+|向更改跟踪组添加属性。|[将属性添加到更改跟踪组 &#40;Master Data Services&#41;](add-attributes-to-a-change-tracking-group-master-data-services.md)|  
+|创建业务规则以便基于属性更改启动操作。|[基于属性值更改启动操作 &#40;Master Data Services&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
   
 ## <a name="related-content"></a>相关内容  
   
--   [验证 (Master Data Services)](../../2014/master-data-services/validation-master-data-services.md)  
+-   [验证 &#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)  
   
--   [业务规则 (Master Data Services)](../../2014/master-data-services/business-rules-master-data-services.md)  
+-   [业务规则 &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
--   [属性 (Master Data Services)](../../2014/master-data-services/attributes-master-data-services.md)  
+-   [属性 &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   
   

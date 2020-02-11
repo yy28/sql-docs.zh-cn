@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1c57974bc671802d3ade3263d8650883683c846e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827912"
 ---
 # <a name="create-new-infoobject"></a>新建 InfoObject
@@ -120,7 +120,7 @@ ms.locfileid: "62827912"
 ### <a name="attributes-list"></a>“属性”列表  
  **“属性”** 列表显示所创建的 InfoObject 的属性。 **“属性”** 列表包含以下列标题：  
   
- **“InfoObject”**  
+ **InfoObject**  
  查看 InfoObject 的名称  
   
  **说明**  
@@ -129,7 +129,7 @@ ms.locfileid: "62827912"
  **InfoObject 类型**  
  查看 InfoObject 的类型。 下表列出了该类型的可能值。  
   
-|ReplTest1|Description|  
+|值|说明|  
 |-----------|-----------------|  
 |CHA|特征|  
 |KYF|关键数字|  
@@ -139,12 +139,12 @@ ms.locfileid: "62827912"
 ### <a name="attributes-options"></a>属性选项  
  使用以下选项添加和删除所创建的 InfoObject 的属性：  
   
- **“添加”**  
+ **添加**  
  添加现有的 InfoObject 作为属性。  
   
  要添加现有 InfoObject，请单击“添加”，然后使用 **“查找 InfoObject”** 对话框查找 InfoObject。 有关此对话框的详细信息，请参阅 [Look Up InfoObject](look-up-infoobject.md)。  
   
- **“新建”**  
+ **新建**  
  添加新的 InfoObject 作为属性。  
   
  要创建和添加新的 InfoObject，请单击“新建”，然后使用 **“新建 InfoObject”** 对话框的一个新实例来创建新的 InfoObject。  
@@ -152,11 +152,11 @@ ms.locfileid: "62827912"
  **删除**  
  从“属性”  列表删除选择的 InfoObject。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [“创建事务数据的 InfoCube”](create-infocube-for-transaction-data.md)   
  [“创建 InfoSource”](create-infosource.md)   
- [“创建事务数据的 InfoSource”](create-infosource-for-transaction-data.md)   
+ [创建事务数据的 InfoSource](create-infosource-for-transaction-data.md)   
  [创建主数据的 InfoSource](create-infosource-for-master-data.md)   
- [Microsoft Connector 1.1 for SAP BW 的 F1 帮助](../microsoft-connector-for-sap-bw-f1-help.md)  
+ [Microsoft Connector 1.1 for SAP BW F1 帮助](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

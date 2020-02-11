@@ -17,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: da56cbf334bca884e71469c63429135d6db84953
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63140627"
 ---
 # <a name="setting-large-data"></a>设置大型数据
-  使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序，您可以通过将指针传递给使用者存储对象设置 BLOB 数据。  
+  使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序，可以通过将指针传递到使用者存储对象来设置 BLOB 数据。  
   
  使用者创建包含数据的存储对象，并将指向此存储对象的指针传递给访问接口。 然后，访问接口从使用者存储对象读取数据，并将其写入 BLOB 列中。  
   
- 为了将指针传递给它自己的存储对象，使用者创建一个取值函数，该取值函数绑定 BLOB 列的值。 然后，使用者通过绑定 BLOB 列的取值函数调用 IRowsetChange::SetData 或 IRowsetChange::InsertRow 方法   。 它将指针传递给使用者的存储对象中的某个存储接口。  
+ 为了将指针传递给它自己的存储对象，使用者创建一个取值函数，该取值函数绑定 BLOB 列的值。 然后，使用者通过绑定 BLOB 列的取值函数调用 IRowsetChange::SetData 或 IRowsetChange::InsertRow 方法********。 它将指针传递给使用者的存储对象中的某个存储接口。  
   
  本主题涉及可用于以下函数的功能：  
   
@@ -39,19 +39,19 @@ ms.locfileid: "63140627"
 -   IRowsetUpdate::Update  
   
 ## <a name="how-to-set-large-data"></a>如何设置大型数据  
- 为了将指针传递给它自己的存储对象，使用者创建一个绑定 BLOB 列的值的取值函数，然后调用 IRowsetChange::SetData 或 IRowsetChange::InsertRow 方法   。 若要设置 BLOB 数据，请：  
+ 为了将指针传递给它自己的存储对象，使用者创建一个绑定 BLOB 列的值的取值函数，然后调用 IRowsetChange::SetData 或 IRowsetChange::InsertRow 方法********。 若要设置 BLOB 数据，请：  
   
-1.  创建一个描述应如何访问 BLOB 列的 DBOBJECT 结构。 将 DBOBJECT 结构的 dwFlag 元素设置为 STGM_READ，并将 iid 元素设置为 IID_ISequentialStream（要公开的接口）   。  
+1.  创建一个描述应如何访问 BLOB 列的 DBOBJECT 结构。 将 DBOBJECT 结构的*dwFlag*元素设置为 STGM_READ，并将*iid*元素设置为 IID_ISequentialStream （要公开的接口）。  
   
 2.  设置 DBPROPSET_ROWSET 属性组中的属性，以使行集可更新。  
   
-3.  通过使用 DBBINDING 结构数组创建一组绑定（每列一个）。 将 DBBINDING 结构中的 wType 元素设置为 DBTYPE_IUNKNOWN，并将 pObject 元素设置为指向创建的 DBOBJECT 结构   。  
+3.  通过使用 DBBINDING 结构数组创建一组绑定（每列一个）。 将 DBBINDING 结构中的 wType 元素设置为 DBTYPE_IUNKNOWN，并将 pObject 元素设置为指向创建的 DBOBJECT 结构****。  
   
 4.  使用 DBBINDINGS 结构数组中的绑定信息创建取值函数。  
   
-5.  调用 GetNextRows 将后续的行提取到行集中  。 调用 GetData 以读取行集中的数据  。  
+5.  调用 GetNextRows 将后续的行提取到行集中****。 调用 GetData 以读取行集中的数据****。  
   
-6.  创建一个包含数据（及长度指示器）的存储对象，然后通过绑定 BLOB 列的取值函数调用 IRowsetChange::SetData（或 IRowsetChange::InsertRow）以设置数据   。  
+6.  创建一个包含数据（及长度指示器）的存储对象，然后通过绑定 BLOB 列的取值函数调用 IRowsetChange::SetData（或 IRowsetChange::InsertRow）以设置数据********。  
   
 ## <a name="example"></a>示例  
  本示例说明如何设置 BLOB 数据。 本示例创建表、添加示例记录、从行集中提取该记录，然后设置该 BLOB 字段的值：  
@@ -717,8 +717,8 @@ Exit:
 } //end function  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [BLOB 和 OLE 对象](blobs-and-ole-objects.md)   
+## <a name="see-also"></a>另请参阅  
+ [Blob 和 OLE 对象](blobs-and-ole-objects.md)   
  [使用大值类型](../native-client/features/using-large-value-types.md)  
   
   

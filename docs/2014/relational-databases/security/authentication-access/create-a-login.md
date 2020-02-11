@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: b765248e43dc66b9e1c038df27ca9a8b6135706d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63012020"
 ---
 # <a name="create-a-login"></a>创建一个登录名
@@ -40,23 +40,23 @@ ms.locfileid: "63012020"
   
      [安全性](#Security)  
   
--   **若要创建登录名，使用：**  
+-   **若要创建登录名，可使用**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **跟进：** [在创建登录名后采取的步骤](#FollowUp)  
+-   **跟进：**  [在创建登录名后采取的步骤](#FollowUp)  
   
 ##  <a name="Background"></a> 背景  
- 登录名是一个可由安全系统进行身份验证的安全主体或实体。 用户需要使用登录名连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 您可基于 Windows 主体（例如，域用户或 Windows 域组）创建登录名，或者也可创建一个并非基于 Windows 主体的登录名（例如，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名）。  
+ 登录名是一个可由安全系统进行身份验证的安全主体或实体。 用户需要使用登录名连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 您可基于 Windows 主体（例如，域用户或 Windows 域组）创建登录名，或者也可创建一个并非基于 Windows 主体的登录名（例如， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名）。  
   
 > [!NOTE]  
->  若要使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证，[!INCLUDE[ssDE](../../../includes/ssde-md.md)]必须使用混合模式身份验证。 有关详细信息，请参阅[选择身份验证模式](../choose-an-authentication-mode.md)。  
+>  若要使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证，[!INCLUDE[ssDE](../../../includes/ssde-md.md)]必须使用混合模式身份验证。 有关详细信息，请参阅 [选择身份验证模式](../choose-an-authentication-mode.md)。  
   
  可以向作为安全主体的登录名授予权限。 登录名的作用域是整个 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]。 若要连接 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例上的特定数据库，登录名必须映射到数据库用户。 数据库内的权限是向数据库用户而不是登录名授予和拒绝授予的。 可将作用域为整个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的权限（例如 `CREATE ENDPOINT` 权限）授予一个登录名。  
   
-##  <a name="Security"></a> 安全性  
+##  <a name="Security"></a> Security  
   
 ### <a name="permissions"></a>权限  
  需要拥有服务器上的 `ALTER ANY LOGIN` 或 `ALTER LOGIN` 权限。  
@@ -81,13 +81,13 @@ ms.locfileid: "63012020"
   
     4.  单击“高级…”以显示更多高级搜索选项  。 有关详细信息，请参阅 [选择“用户”、“计算机”或“组”对话框 - 高级页面](https://technet.microsoft.com/library/cc733110.aspx)。  
   
-    5.  单击 **“确定”** 中创建登录名。  
+    5.  单击“确定”。   
   
 4.  若要基于 Windows 主体创建一个登录名，请选择 **“Windows 身份验证”** 。 这是默认选项。  
   
 5.  若要创建一个保存在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中的登录名，请选择 **“SQL Server 身份验证”** 。  
   
-    1.  在 **“密码”** 框中，输入新用户的密码。 在 **“确认密码”** 框中再次输入该密码。  
+    1.  在“密码”框中，输入新用户的密码。  在“确认密码”框中再次输入该密码。   
   
     2.  在更改现有密码时，选择 **“指定旧密码”** ，然后在 **“旧密码”** 框中键入旧密码。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "63012020"
  “登录名 - 新建”对话框中还提供了其他四个页面上选项：  “服务器角色”、“用户映射”、“安全对象”和“状态”     。  
   
 ### <a name="server-roles"></a>“服务器角色”  
- **“服务器角色”** 页将列出可分配给新登录名的所有可能的角色。 可用选项包括：  
+ **“服务器角色”** 页将列出可分配给新登录名的所有可能的角色。 提供了以下选项：  
   
  “bulkadmin”  复选框  
  **bulkadmin** 固定服务器角色的成员可以运行 BULK INSERT 语句。  
@@ -125,7 +125,7 @@ ms.locfileid: "63012020"
  **diskadmin** 固定服务器角色的成员可以管理磁盘文件。  
   
  “processadmin”  复选框  
- **processadmin** 固定服务器角色的成员可以终止在 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 实例中运行的进程。  
+ **processadmin** 固定服务器角色的成员可以终止在 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]实例中运行的进程。  
   
  “public”  复选框  
  默认情况下，所有 SQL Server 用户、组和角色都属于 **public** 固定服务器角色。  
@@ -140,18 +140,18 @@ ms.locfileid: "63012020"
  **setupadmin** 固定服务器角色成员可以添加和删除链接服务器，并可以执行某些系统存储过程。  
   
  “sysadmin”  复选框  
- **sysadmin** 固定服务器角色的成员可以在 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 中执行任何活动。  
+ **sysadmin** 固定服务器角色的成员可以在 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]中执行任何活动。  
   
 ### <a name="user-mapping"></a>用户映射  
  **“用户映射”** 页将列出可应用于登录名的所有可能的数据库以及这些数据库上的数据库角色成员身份。 选定的数据库将确定对登录名可用的角色成员身份。 此页还将提供以下选项：  
   
  **映射到此登录名的用户**  
- 选择此登录名可以访问的数据库。 选择某个数据库时，其有效的数据库角色将会显示在“数据库角色成员身份：_database_name_”  窗格中。  
+ 选择此登录名可以访问的数据库。 选择某个数据库时，其有效的数据库角色将会显示在“数据库角色成员身份: _database_name_”  窗格中。  
   
- **地图**  
+ **Map**  
  允许登录名访问下面列出的数据库。  
   
- **“数据库”**  
+ **Database**  
  列出服务器上可用的数据库。  
   
  **用户**  
@@ -160,10 +160,10 @@ ms.locfileid: "63012020"
  **默认架构**  
  指定用户的默认架构。 首次创建用户时，其默认架构是 **dbo**。 可以指定并不存在的默认架构。 对于已映射到 Windows 组、证书或非对称密钥的用户，无法为其指定默认架构。  
   
- **已启用 Guest 帐户：** _database_name_  
+ 已启用 Guest 帐户：  _database_name_  
  只读属性，指示所选数据库是否已启用 Guest 帐户。 可使用 Guest 帐户的 **“登录属性”** 对话框的 **“状态”** 页来启用或禁用 Guest 帐户。  
   
- **数据库角色成员身份：** _database_name_  
+ 数据库角色成员身份：  _database_name_  
  选择用户在指定数据库中的角色。 在每个数据库中，所有用户都是 **public** 角色的成员，并且不能被删除。 有关数据库角色的详细信息，请参阅 [数据库级别的角色](database-level-roles.md)。  
   
 ### <a name="securables"></a>安全对象  
@@ -176,10 +176,10 @@ ms.locfileid: "63012020"
   
 1.  单击 **“搜索”** 。  
   
-2.  在“添加对象”对话框中，选择以下选项之一：  **特定对象...** ，**类型的所有对象...** ，或**服务器**_server_name_。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  在 "**添加对象**" 对话框中，选择下列选项之一： "**特定对象 ...**"、 **"类型的所有对象**..." 或 **"服务器**_server_name_"。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     > [!NOTE]  
-    >  选择“服务器_server_name_”  将会使用该服务器的所有安全对象自动填充上部网格。  
+    >  选择**服务器**_server_name_会自动用所有服务器的安全对象填充上部网格。  
   
 3.  如果选择“特定对象…”：   
   
@@ -198,7 +198,7 @@ ms.locfileid: "63012020"
  **名称**  
  添加到网格中的每个主体或安全对象的名称。  
   
- **类型**  
+ 类型   
  描述每个项目的类型。  
   
  **“显式”选项卡**  
@@ -219,7 +219,7 @@ ms.locfileid: "63012020"
  **拒绝**  
  选中该选项可以拒绝该登录名具有该权限。 清除该选项将撤消此权限。  
   
-### <a name="status"></a>“登录属性”  
+### <a name="status"></a>状态  
  **“状态”** 页将列出可对选定的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名配置的一些身份验证和授权选项。  
   
  此页还将提供以下选项：  
@@ -236,7 +236,7 @@ ms.locfileid: "63012020"
   
  选择此选项以启用或禁用此登录名。 此选项将 ALTER LOGIN 语句与 ENABLE 或者 DISABLE 选项配合使用。  
   
- **SQL Server Authentication**  
+ **SQL Server 身份验证**  
  仅当所选的登录名使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证进行连接并且登录名已锁定时，复选框“登录名已锁定”  才可用。该设置是只读的。 若要解除对已锁定登录名的锁定，请执行带 UNLOCK 选项的 ALTER LOGIN。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
@@ -285,6 +285,6 @@ ms.locfileid: "63012020"
   
 -   若要授权登录名使用数据库，请参阅 [创建数据库用户](../authentication-access/create-a-database-user.md)。  
   
--   若要向登录名授予权限，请参阅[向主体授予权限](grant-a-permission-to-a-principal.md)。  
+-   若要向登录名授予权限，请参阅 [向主体授予权限](grant-a-permission-to-a-principal.md)。  
   
   

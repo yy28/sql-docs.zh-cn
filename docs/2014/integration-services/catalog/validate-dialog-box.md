@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8380b3ff1502088e0131b182149e90e31d2be42c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771644"
 ---
 # <a name="validate-dialog-box"></a>“验证”对话框
@@ -57,10 +57,10 @@ ms.locfileid: "62771644"
  **容器**  
  列出包含参数的对象。  
   
- **参数**  
+ **Parameter**  
  列出参数的名称  
   
- **ReplTest1**  
+ **值**  
  列出参数值。  
   
  **“连接管理器”** 选项卡列出了用于验证项目或包的连接管理器属性值。  
@@ -76,7 +76,7 @@ ms.locfileid: "62771644"
  **属性名称**  
  列出连接管理器属性的名称。  
   
- **ReplTest1**  
+ **值**  
  列出分配给连接管理器属性的值。  
   
   

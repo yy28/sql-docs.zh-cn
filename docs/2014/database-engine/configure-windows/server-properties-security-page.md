@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3a42d496a59f489238d270fcb6bb17f3e1ff6421
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809001"
 ---
 # <a name="server-properties-security-page"></a>服务器属性（“安全性”页）
@@ -36,7 +36,7 @@ ms.locfileid: "62809001"
 >  更改安全性配置后需要重新启动服务。 将服务器身份验证改为 SQL Server 和 Windows 身份验证模式时，不会自动启用 SA 帐户。 若要使用 SA 帐户，请执行带有 ENABLE 选项的 [ALTER LOGIN](/sql/t-sql/statements/alter-login-transact-sql) 命令。  
   
 ## <a name="login-auditing"></a>登录审核  
- **无**  
+ 无   
  关闭登录审核。  
   
  **仅限失败的登录**  
@@ -71,7 +71,7 @@ ms.locfileid: "62809001"
  **跨数据库所有权链接**  
  选中此项将允许数据库成为跨数据库所有权链的源或目标。 有关详细信息，请参阅 [跨数据库所有权链接服务器配置选项](cross-db-ownership-chaining-server-configuration-option.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [服务器配置选项 (SQL Server)](server-configuration-options-sql-server.md)  
   
   

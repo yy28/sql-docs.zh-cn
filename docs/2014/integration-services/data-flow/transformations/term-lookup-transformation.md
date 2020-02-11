@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 01b6388dbec5ed563dd8e7fa4476335a3ace998d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770313"
 ---
 # <a name="term-lookup-transformation"></a>字词查找转换
@@ -56,11 +56,11 @@ ms.locfileid: "62770313"
   
  如果查找项包含的字词与引用集中的字词重叠，即一个子字词出现在多个引用记录中，则字词查找转换仅返回一个查找结果。 下面的示例显示查找项包含重叠子字词时的结果。 在本示例中，重叠的子字词为 *Windows*，它出现在两个引用字词中。 但是，转换并不返回两个结果，而仅返回一个引用字词 *Windows*。 第二个引用字词 *Windows 7 Professional*并未返回。  
   
-|项|ReplTest1|  
+|Item|值|  
 |----------|-----------|  
 |输入字词|Windows 7 Professional|  
 |引用字词|Windows、Windows 7 Professional|  
-|“输出”|Windows|  
+|输出|Windows|  
   
  字词查找转换可以匹配包含特殊字符的名词和名词短语，而引用表中的数据可能包含这些字符。 特殊字符如下所示：%、@，&、$、#、\*:、;、。、  ！、？、\<>、+、=、^、~、|、\\/、（、）、[、]、{、}、" 和 '。  
   
@@ -78,7 +78,8 @@ ms.locfileid: "62770313"
   
  InputColumnType 属性设置为 0 或 2 的转换输出列包含列的 CustomLineageID 属性，该属性包含由上游数据流组件分配给列的沿袭标识符。  
   
- 字词查找转换还将两列添加到转换输出，默认名称分别为 `Term` 和 `Frequency`。 `Term` 包含查找表中的字词，而 `Frequency` 包含引用表中的字词在输入数据集中出现的次数。 这些列不包含 CustomLineageID 属性。  
+ 字词查找转换还将两列添加到转换输出，默认名称分别为 `Term` 和 `Frequency`。 
+  `Term` 包含查找表中的字词，而 `Frequency` 包含引用表中的字词在输入数据集中出现的次数。 这些列不包含 CustomLineageID 属性。  
   
  查找表必须是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或 Access 数据库中的表。 如果将字词提取转换的输出保存到表，则可以使用此表作为引用表，但也可以使用其他表。 必须先将平面文件中、Excel 工作簿或其他源的文本导入到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库或 Access 数据库，然后才能使用字词查找转换。  
   
@@ -94,15 +95,15 @@ ms.locfileid: "62770313"
   
  有关可在 **“字词查找转换编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
   
--   [字词查找转换编辑器（“引用表”选项卡）](../../term-lookup-transformation-editor-reference-table-tab.md)  
+-   [字词查找转换编辑器 &#40;引用表 "选项卡&#41;](../../term-lookup-transformation-editor-reference-table-tab.md)  
   
 -   [字词查找转换编辑器（“字词查找”选项卡）](../../term-lookup-transformation-editor-term-lookup-tab.md)  
   
--   [字词查找转换编辑器（“高级”选项卡）](../../term-lookup-transformation-editor-advanced-tab.md)  
+-   [字词查找转换编辑器 &#40;高级 "选项卡&#41;](../../term-lookup-transformation-editor-advanced-tab.md)  
   
  有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [通用属性](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [转换自定义属性](transformation-custom-properties.md)  
   

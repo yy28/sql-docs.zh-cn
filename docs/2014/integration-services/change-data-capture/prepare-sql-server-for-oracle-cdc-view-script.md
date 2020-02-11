@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bef06da3e6e1702a713aa2b4ca2e448e7ee461af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771256"
 ---
 # <a name="prepare-sql-server-for-oracle-cdc-view-script"></a>为 Oracle CDC 视图脚本准备 SQL Server
@@ -25,10 +25,10 @@ ms.locfileid: "62771256"
  **另存为**  
  将脚本保存在一个文本文件中，您可以将该文本文件保存在所需的任何位置。 然后，可以通过将脚本粘贴到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]在以后运行脚本。  
   
- **复制**  
+ **Copy**  
  将脚本复制到剪贴板。 然后，您可以将脚本粘贴到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 来运行它们，并创建 MSXDBCDC 数据库。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [为 CDC 准备 SQL Server](prepare-sql-server-for-cdc.md)  
   
   

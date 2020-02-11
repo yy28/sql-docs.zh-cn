@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16fa57c35c2c40d307b73809c21ccfbedc54f705
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917078"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>通过分离和附加来移动数据库 (Transact-SQL)
@@ -46,10 +46,10 @@ ms.locfileid: "62917078"
     > [!NOTE]  
     >  如果尝试在不指定日志文件的情况下附加数据库，则附加操作将会在日志文件的原始位置中查找文件。 如果原始位置还有一份日志，则附加该日志。 若要避免使用原始日志文件，请指定新日志文件的路径，或在日志文件复制到新位置之后，删除其原始副本。  
   
-3.  附加复制的文件。 有关详细信息，请参阅 [Attach a Database](attach-a-database.md)。  
+3.  附加复制的文件。 有关详细信息，请参阅[附加数据库](attach-a-database.md)。  
   
 ## <a name="example"></a>示例  
- 下面的示例创建一份[!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)]连接到附加到的服务器实例的查询编辑器窗口中执行语句。  
+ 下面的示例创建了[!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)]语句的副本，这些语句在连接到附加到的服务器实例的查询编辑器窗口中执行。  
   
 1.  分离[!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)]语句：  
   
@@ -60,7 +60,7 @@ ms.locfileid: "62917078"
     GO  
     ```  
   
-2.  使用所选方法，将数据库文件（AdventureWorks208R2_Data.mdf 和 AdventureWorks208R2_log）复制到：C:\MySQLServer\AdventureWorks208R2_Data.mdf 和 C:\MySQLServer\AdventureWorks208R2_Log.ldf。  
+2.  使用您选择的方法，将数据库文件（AdventureWorks208R2_Data.mdf 和 AdventureWorks208R2_log）分别复制到：C:\MySQLServer\AdventureWorks208R2_Data.mdf 和 C:\MySQLServer\AdventureWorks208R2_Log.ldf。  
   
     > [!IMPORTANT]  
     >  对于生产数据库，请将数据库和事务日志存放在不同的磁盘上。  
@@ -81,7 +81,7 @@ ms.locfileid: "62917078"
   
      在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，新附加的数据库在对象资源管理器中不是立即可见的。 若要查看数据库，请在对象资源管理器中，单击 **“查看”** ，再单击 **“刷新”** 。 在对象资源管理器中展开 **“数据库”** 节点后，新附加的数据库即显示在数据库列表中。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库分离和附加 (SQL Server)](database-detach-and-attach-sql-server.md)  
   
   

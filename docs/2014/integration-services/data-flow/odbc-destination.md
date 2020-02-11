@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9de91ba98533e82fbf63376ed6d9c56ad73a000c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771023"
 ---
 # <a name="odbc-destination"></a>ODBC 目标
@@ -31,7 +31,7 @@ ms.locfileid: "62771023"
   
 -   **批处理**：在此模式中，ODBC 目标将基于发现的 ODBC 访问接口功能尝试使用最高效的插入方法。 对于大多数现今的 ODBC 访问接口，这意味着准备具有参数的 INSERT 语句，然后使用按行数组参数绑定（其中，数组大小由 **BatchSize** 属性控制）。 如果选择“批处理”  并且提供程序不支持此方法，则 ODBC 目标将自动切换到“逐行”  模式。  
   
--   **逐行**：在此模式中，ODBC 目标准备具有参数的 INSERT 语句并使用“SQL 执行”  来一次一行地插入行。  
+-   **逐行**：在此模式中，ODBC 目标准备具有参数的 INSERT 语句并且使用“SQL 执行”  来一次一行地插入行。  
   
 ## <a name="error-handling"></a>错误处理  
  ODBC 目标有一个错误输出。 组件的错误输出包括以下输出列：  
@@ -44,7 +44,7 @@ ms.locfileid: "62771023"
   
  根据错误行为设置，CDC 目标支持在错误输出中返回在提取过程中发生的错误（数据转换、截断）。 有关详细信息，请参阅 [ODBC 源编辑器（“错误输出”页）](../odbc-source-editor-error-output-page.md)。  
   
-## <a name="parallelism"></a>并行  
+## <a name="parallelism"></a>并行度  
  对于可对同一台计算机或不同计算机（并非一般的全局会话限制）上的相同表或不同表并行运行的 ODBC 目标组件的数目没有限制。  
   
  但是，要使用的 ODBC 访问接口的限制可能会限制通过该访问接口的同时连接的数目。 这些限制将会限制 ODBC 目标可能支持的并行实例的数目。 SSIS 开发人员必须知道要使用的任何 ODBC 访问接口的限制并且在生成 SSIS 包时将这些限制元素考虑进去。  
@@ -83,6 +83,6 @@ ms.locfileid: "62771023"
   
 -   [通过使用 ODBC 目标来加载数据](odbc-destination.md)  
   
--   [ODBC Destination Custom Properties](odbc-destination-custom-properties.md)  
+-   [ODBC 目标自定义属性](odbc-destination-custom-properties.md)  
   
   

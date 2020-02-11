@@ -1,5 +1,5 @@
 ---
-title: 条件窗格 (Visual Database Tools) 中组合搜索条件的约定 |Microsoft Docs
+title: 在 "条件" 窗格中组合搜索条件的约定（Visual Database Tools） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3a1022770526386640f0ad2aa114a2161ba16dc8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63140395"
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>在“条件”窗格中组合搜索条件的约定 (Visual Database Tools)
@@ -123,9 +123,9 @@ WHERE
   
  一般情况下，以下规则将决定 AND 和 OR 子句在“条件”窗格中的显示方式：  
   
--   所有用 AND 链接的条件都显示在“筛选器”  网格列中或同一个“或...”  列中。  
+-   所有用 AND 链接的条件都显示在“筛选器”**** 网格列中或同一个“或...”**** 列中。  
   
--   所有用 OR 链接的条件都显示在不同的“或...”  列中。  
+-   所有用 OR 链接的条件都显示在不同的“或...”**** 列中。  
   
 -   如果 AND 和 OR 子句组合的逻辑结果是将 AND 分布到多个 OR 子句中，则“条件”窗格将根据需要重复 AND 子句以明确地表示结果。  
   
@@ -166,7 +166,7 @@ WHERE (hire_date < '01/01/95' ) AND
   
  如果更改查询（如更改“条件”窗格中的某个值），查询和视图设计器将在 SQL 窗格中重新创建 SQL 语句。 重新创建的 SQL 语句将与“条件”窗格的显示形式相似，而不是与原始语句相似。 例如，如果“条件”窗格中包含分布式的 AND 子句，则会用清楚明了的分布式 AND 子句重新创建 SQL 窗格中的结果语句。 有关详细信息，请参阅本主题前面部分中的“AND 如何与多个 OR 子句一起使用”。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [指定搜索条件 (Visual Database Tools)](specify-search-criteria-visual-database-tools.md)  
   
   

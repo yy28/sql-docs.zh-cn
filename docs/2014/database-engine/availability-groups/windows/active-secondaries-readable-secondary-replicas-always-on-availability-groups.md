@@ -1,5 +1,5 @@
 ---
-title: 活动次要副本：可读次要副本 (Alwayson 可用性组） |Microsoft Docs
+title: 活动辅助副本：可读辅助副本（Always On 可用性组） |Microsoft Docs
 ms.custom: ''
 ms.date: 10/27/2017
 ms.prod: sql-server-2014
@@ -18,21 +18,22 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 86340f1bdb9b178c23295c61378d781e2d4a83cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62789849"
 ---
-# <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>活动次要副本：可读次要副本 (Alwayson 可用性组）
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 活动辅助功能包括支持对一个或多个次要副本的只读访问（可读次要副本  ）。 可读辅助副本允许对其所有辅助数据库的只读访问。 但是，可读辅助数据库并非设置为只读。 它们是动态的。 当对相应主数据库的更改应用到某一给定的辅助数据库时，该辅助数据库将更改。 对于典型的辅助副本，包括持久内存优化表，辅助数据库中的数据接近实时。 此外，全文检索与辅助数据库同步。 在许多情况下，主数据库和相应的辅助数据库之间的数据滞后时间只有几秒钟。  
+# <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>活动次要副本：可读次要副本（AlwaysOn 可用性组）
+  
+  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 活动辅助功能包括支持对一个或多个次要副本的只读访问（可读次要副本**）。 可读辅助副本允许对其所有辅助数据库的只读访问。 但是，可读辅助数据库并非设置为只读。 它们是动态的。 当对相应主数据库的更改应用到某一给定的辅助数据库时，该辅助数据库将更改。 对于典型的辅助副本，包括持久内存优化表，辅助数据库中的数据接近实时。 此外，全文检索与辅助数据库同步。 在许多情况下，主数据库和相应的辅助数据库之间的数据滞后时间只有几秒钟。  
   
  在主数据库中进行的安全设置会对辅助数据库永久保留。 这包括用户、数据库角色和应用程序角色及其各自的权限；如果对主数据库启用了透明数据加密 (TDE)，还将包括 TDE。  
   
 > [!NOTE]  
->  尽管您无法将数据写入辅助数据库，但可以在承载辅助副本的服务器实例上写入读写数据库，包括用户数据库和 **tempdb**之类的系统数据库。  
+>  尽管你无法将数据写入辅助数据库，但可以在托管次要副本的服务器实例上写入读写数据库，包括用户数据库和 **tempdb**之类的系统数据库。  
   
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 还支持对可读辅助副本（*只读路由*）的读意向连接请求的重新路由。 有关只读路由的详细信息，请参阅 [使用侦听程序连接到只读次要副本（只读路由）](../../listeners-client-connectivity-application-failover.md#ConnectToSecondary)。  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]还支持对可读辅助副本（*只读路由*）的读意向连接请求的重新路由。 有关只读路由的详细信息，请参阅 [使用侦听程序连接到只读次要副本（只读路由）](../../listeners-client-connectivity-application-failover.md#ConnectToSecondary)。  
   
  
   
@@ -53,7 +54,7 @@ ms.locfileid: "62789849"
   
 -   对于辅助副本上的基于磁盘的表和内存优化表类型，都可以对表变量执行 DML 操作。  
   
-##  <a name="bkmk_Prerequisites"></a> 可用性组先决条件  
+##  <a name="bkmk_Prerequisites"></a>可用性组的先决条件  
   
 -   **可读辅助副本（必需）**  
   
@@ -62,7 +63,7 @@ ms.locfileid: "62789849"
     > [!NOTE]  
     >  或者，数据库管理员可以配置任何可用性副本，以便在主角色下运行时排除只读连接。  
   
-     有关详细信息，请参阅本主题后面的 [关于对可用性副本的客户端连接访问 (SQL Server)](about-client-connection-access-to-availability-replicas-sql-server.md)之类的系统数据库。  
+     有关详细信息，请参阅[关于可用性副本的客户端连接访问 (SQL Server)](about-client-connection-access-to-availability-replicas-sql-server.md)。  
   
 -   **可用性组侦听器**  
   
@@ -70,7 +71,7 @@ ms.locfileid: "62789849"
   
 -   **只读路由**  
   
-     “只读路由”  指的是 SQL Server 将定向到可用性组侦听器的传入的读意向连接请求路由到可用的可读辅助副本的能力。 只读路由的先决条件如下：  
+     *只读路由*指 SQL Server 的是将定向到可用性组侦听器的传入的读意向连接请求路由到可用的可读辅助副本的能力。 只读路由的先决条件如下：  
   
     -   为支持只读路由，可读辅助副本需要一个只读路由 URL。 此 URL 仅在本地副本在辅助角色下运行时起作用。 必须根据需要在逐个副本的基础上指定只读路由 URL。 每个只读路由 URL 都用于将读意向请求路由到一个特定的可读辅助副本。 通常，向每个可读辅助副本分配一个只读路由 URL。  
   
@@ -79,10 +80,10 @@ ms.locfileid: "62789849"
         > [!NOTE]  
         >  读意向连接请求将被路由到当前主副本的只读路由列表上的第一个可用可读辅助副本。 没有负载平衡。  
   
-     有关详细信息，请参阅[为可用性组配置只读路由 (SQL Server)](configure-read-only-routing-for-an-availability-group-sql-server.md)。  
+     有关详细信息，请参阅 [为可用性组配置只读路由 (SQL Server)](configure-read-only-routing-for-an-availability-group-sql-server.md)。  
   
 > [!NOTE]  
->  有关可用性组侦听程序的信息，以及只读路由的详细信息，请参阅 [可用性组侦听程序、客户端连接以及应用程序故障转移 (SQL Server)](../../listeners-client-connectivity-application-failover.md)之类的系统数据库。  
+>  有关可用性组侦听程序的信息，以及只读路由的详细信息，请参阅 [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../listeners-client-connectivity-application-failover.md)。  
   
 ##  <a name="bkmk_LimitationsRestrictions"></a> 限制和局限  
  不完全支持某些操作，如下所示：  
@@ -109,19 +110,19 @@ ms.locfileid: "62789849"
 > [!NOTE]  
 >  如果你在托管可读次要副本的服务器实例上查询 [sys.dm_db_index_physical_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql) 动态管理视图，则可能会遇到 REDO 阻塞问题。 这是因为此动态管理视图获取指定用户表或视图的 IS 锁，而该锁可能阻止 REDO 线程对该用户表或视图的 X 锁请求。  
   
-##  <a name="bkmk_Performance"></a> 性能注意事项  
+##  <a name="bkmk_Performance"></a>性能注意事项  
  此节讨论可读辅助数据库的几个性能注意事项  
   
  
   
-###  <a name="DataLatency"></a> 数据滞后时间  
+###  <a name="DataLatency"></a>数据延迟  
  如果您的只读工作负荷可以容忍一定程度的数据滞后，则实现对辅助副本的只读访问很有用。 在数据滞后不可接受的情况下，请考虑对主副本运行只读工作负荷。  
   
  主副本将主数据库上的更改日志记录发送到辅助副本。 在每个辅助数据库上，专用重做线程应用这些日志记录。 在读访问权限的辅助数据库上，给定的数据更改不显示在查询结果中，直到包含更改的日志记录已应用到辅助数据库并且已在主数据库上提交事务。  
   
  这意味着在主副本和辅助副本之间将会存在一定程度的滞后时间，通常只需几秒钟。 但是，在极少数情况下，例如在网络问题降低了网络吞吐量的情况下，滞后时间可能会较长。 在存在 I/O 瓶颈和数据移动操作处于挂起状态时，将增加滞后时间。 为了监视挂起的数据移动，可以使用 [AlwaysOn 面板](use-the-always-on-dashboard-sql-server-management-studio.md) 或 [sys.dm_hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql) 动态管理视图。  
   
-####  <a name="bkmk_LatencyWithInMemOLTP"></a> 具有内存优化表的数据库上的数据延迟  
+####  <a name="bkmk_LatencyWithInMemOLTP"></a>具有内存优化表的数据库上的数据延迟  
  为读取工作负荷访问辅助副本上的内存优化表时， *安全时间戳* 将用于从已于 *安全时间戳*之前提交的事务中返回行。 安全时间戳是垃圾收集线程用于对主副本上的行进行垃圾收集所使用的最早时间戳提示。 此时间戳将在自上次更新起内存优化表上的 DML 事务数超过内部阈值时更新。 每当主副本上最早的事务时间戳更新时，持久的内存优化表上的下一 DML 事务会将此时间戳作为特定日志记录的一部分发送到辅助副本。 辅助副本上的重做线程会在处理此日志记录时更新安全时间戳。  
   
 #### <a name="the-impact-of-safe-timestamp-on-latency"></a>安全时间戳对延迟的影响  
@@ -154,7 +155,7 @@ GO
   
 ```  
   
-###  <a name="ReadOnlyWorkloadImpact"></a> 只读工作负荷的影响  
+###  <a name="ReadOnlyWorkloadImpact"></a>只读工作负荷的影响  
  为辅助副本配置只读访问时，辅助数据库上的只读工作负荷占用来自重做线程的系统资源，如 CPU 和 I/O（对于基于磁盘的表），特别是在基于磁盘的表的只读工作负荷大量占用 I/O 的情况下。 访问内存优化表时没有 IO 影响，因为所有行都驻留在内存中。  
   
  此外，辅助副本上的只读工作负荷还会阻止通过日志记录应用的数据定义语言 (DDL) 发生更改。  
@@ -168,21 +169,21 @@ GO
 > [!NOTE]  
 >  如果 REDO 线程被次要副本上的查询阻塞，将引发 **sqlserver.lock_redo_blocked** XEvent。  
   
-###  <a name="bkmk_Indexing"></a> 索引  
+###  <a name="bkmk_Indexing"></a>编入  
  若要优化可读辅助副本上的只读工作负荷，您可能需要对辅助数据库中的表创建索引。 因为您无法在辅助数据库上进行架构或数据更改，所以应在主数据库中创建索引，并且允许更改通过重做进程传输到辅助数据库。  
   
  若要监视辅助副本上的索引使用活动，请查询 **sys.dm_db_index_usage_stats**动态管理视图的 **user_seeks**、 **user_scans** 和 [user_lookups](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql) 列。  
   
-###  <a name="Read-OnlyStats"></a> 只读访问数据库的统计信息  
+###  <a name="Read-OnlyStats"></a>只读访问数据库的统计信息  
  表和索引视图的列的统计信息用于优化查询计划。 对于可用性组，作为应用事务日志记录操作的一部分，在主数据库上创建和维护的统计信息将自动保留在辅助数据库中。 但是，辅助数据库上的只读工作负荷需要的统计信息可能与在主数据库上创建的统计信息不同。 但是，因为辅助数据库被限制为只读访问，所以无法在辅助数据库上创建统计信息。  
   
  为了解决此问题，辅助副本在 **tempdb**中创建和维护辅助数据库的临时统计信息。 将在临时统计信息名称后追加后缀 The suffix _readonly_database_statistic，以便将临时统计信息与主数据库永久保存的永久统计信息加以区分。  
   
  只有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以创建和更新临时统计信息。 但是，您可以借助用于永久统计信息的相同工具来删除临时统计信息和监视其属性：  
   
--   使用 [DROP STATISTICS](/sql/t-sql/statements/drop-statistics-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句删除临时统计信息。  
+-   使用[DROP statistics](/sql/t-sql/statements/drop-statistics-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)]语句删除临时统计信息。  
   
--   使用 **sys.stats** 和 **sys.stats_columns** 目录视图监视统计信息。 **sys_stats** 包含一个 **is_temporary**列，用于指示哪些统计信息是永久的，哪些统计信息是临时的。  
+-   使用 sys.stats** 和 sys.stats_columns** 目录视图监视统计信息****。 **sys_stats**包含一个列**is_temporary**，用于指示哪些统计信息是永久的，哪些统计信息是临时的。  
   
  不支持自动更新主副本或辅助副本上内存优化表的统计信息。 必须监视辅助副本上的查询性能和计划，在需要时手动更新主副本上的统计信息。 不过，会在主副本和辅助副本上自动创建缺少的统计信息。  
   
@@ -190,8 +191,9 @@ GO
   
 
   
-####  <a name="StalePermStats"></a> 辅助数据库上陈旧的永久统计信息  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可检测辅助数据库上的永久统计信息的过时时间。 但是，除了通过主数据库进行更改外，不能对永久统计信息进行更改。 为了进行查询优化， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在辅助数据库上为基于磁盘的表创建临时统计信息并使用它们来替代过时的永久统计信息。  
+####  <a name="StalePermStats"></a>辅助数据库上陈旧的永久统计信息  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可检测辅助数据库上的永久统计信息的过时时间。 但是，除了通过主数据库进行更改外，不能对永久统计信息进行更改。 为了进行查询优化， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在辅助数据库上为基于磁盘的表创建临时统计信息并使用它们来替代过时的永久统计信息。  
   
  永久统计信息在主数据库上进行更新后，自动将它们永久保存到辅助数据库。 然后， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用更新的永久统计信息，该信息比临时统计信息要新。  
   
@@ -201,9 +203,9 @@ GO
   
 -   因为临时统计信息存储于 **tempdb**中，所以重新启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务将导致所有临时统计信息消失。  
   
--   后缀 suffix _readonly_database_statistic 是为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]生成的统计信息预留的。 在主数据库上创建统计信息时不能使用此后缀。 有关详细信息，请参阅[统计信息](../../../relational-databases/statistics/statistics.md)。  
+-   后缀 suffix _readonly_database_statistic 是为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]生成的统计信息预留的。 在主数据库上创建统计信息时不能使用此后缀。 有关详细信息，请参阅[统计](../../../relational-databases/statistics/statistics.md)信息。  
   
-##  <a name="bkmk_AccessInMemTables"></a> 访问辅助副本上的内存优化表  
+##  <a name="bkmk_AccessInMemTables"></a>访问辅助副本上的内存优化表  
  辅助副本上的读取工作负荷隔离级别只是主副本上允许的隔离级别。 辅助副本上没有隔离级别映射。 这确保可在主副本上运行的所有报表工作负荷都无需任何更改就可以在辅助副本上运行。 这样，您可以轻松地将报表工作负荷从主副本迁移到辅助副本，或者从辅助副本迁移到主副本（当辅助副本不可用时）。  
   
  以下查询在辅助副本上运行失败的方式与它们在主副本上失败的方式相同。  
@@ -238,7 +240,7 @@ GO
     SELECT * FROM t_hk WITH (UPDLOCK)  
     ```  
   
--   对于跨容器事务，具有会话隔离级别的事务"快照"的访问不支持内存优化表。 例如，  
+-   对于跨容器事务，不支持会话隔离级别为 "快照" 的事务访问内存优化表。 例如，  
   
     ```sql  
     SET TRANSACTION ISOLATION LEVEL SNAPSHOT  
@@ -255,7 +257,7 @@ GO
     Memory optimized tables and natively compiled stored procedures cannot be accessed or created when the session TRANSACTION ISOLATION LEVEL is set to SNAPSHOT.  
     ```  
   
-##  <a name="bkmk_CapacityPlanning"></a> 容量规划注意事项  
+##  <a name="bkmk_CapacityPlanning"></a>容量规划注意事项  
   
 -   对于基于磁盘的表，可读次要副本出于以下两个原因需要占用 **tempdb** 中的空间：  
   
@@ -292,10 +294,10 @@ GO
   
 ##  <a name="RelatedContent"></a> 相关内容  
   
--   [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 官方团队博客](https://blogs.msdn.com/b/sqlalwayson/)  
   
-## <a name="see-also"></a>请参阅  
- [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>另请参阅  
+ [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [关于对可用性副本的客户端连接访问 &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md)   
  [可用性组侦听程序、客户端连接和应用程序故障转移 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [统计信息](../../../relational-databases/statistics/statistics.md)  

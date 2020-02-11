@@ -1,5 +1,5 @@
 ---
-title: 第 1 步：创建工作文件夹和环境变量 | Microsoft Docs
+title: 步骤 1：创建工作文件夹和环境变量 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b58da11d973d169a0372e59c7e8d7e174e3cf789
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767649"
 ---
-# <a name="step-1-creating-working-folders-and-environment-variables"></a>第 1 步：创建工作文件夹和环境变量
+# <a name="step-1-creating-working-folders-and-environment-variables"></a>步骤 1：创建工作文件夹和环境变量
   在此任务中，您将创建工作文件夹 (C:\DeploymentTutorial) 和新的系统环境变量（`DataTransfer` 和 `LoadXMLData`），在后面的教程任务中您将使用它们。  
   
  工作文件夹位于 C 驱动器的根目录。 如果必须使用其他驱动器或位置，也可以使用其他驱动器或位置。 但是，您需要记下此位置；然后，只要教程引用 DeploymentTutorial 工作文件夹的位置，就使用它。  
@@ -36,7 +36,7 @@ ms.locfileid: "62767649"
   
 3.  在“文件”  菜单上，指向“新建”  ，再单击“文件夹”  。  
   
-4.  重命名为新文件夹`DeploymentTutorial`。  
+4.  将新文件夹重`DeploymentTutorial`命名为。  
   
 ### <a name="to-create-local-environment-variables"></a>创建本地环境变量  
   
@@ -48,11 +48,11 @@ ms.locfileid: "62767649"
   
 4.  在“环境变量”  对话框的“系统变量”  框架中，单击“新建”  。  
   
-5.  在中**新建系统变量**对话框中，键入`DataTransfer`中**变量名**框中，和`C:\DeploymentTutorial\datatransferconfig.dtsconfig`中**变量值**框。  
+5.  在 "**新建系统变量**" 对话框中， `DataTransfer`在 "变量**名**" 框中`C:\DeploymentTutorial\datatransferconfig.dtsconfig`键入，然后在 "**变量值**" 框中键入。  
   
-6.  单击“确定”  。  
+6.  单击“确定”。   
   
-7.  单击**新建**同样，然后键入`LoadXMLData`中**变量名**框中，和`C:\DeploymentTutorial\loadxmldataconfig.dtsconfig`中**变量值**框。  
+7.  再次单击 "**新建**"， `LoadXMLData`然后在 "变量**名称**" 框`C:\DeploymentTutorial\loadxmldataconfig.dtsconfig`和 "**变量值**" 框中键入。  
   
 8.  单击“确定”  退出“环境变量”  对话框。  
   
@@ -70,11 +70,11 @@ ms.locfileid: "62767649"
   
 4.  在“环境变量”  对话框的“系统变量”  框架中，单击“新建”  。  
   
-5.  在中**新建系统变量**对话框中，键入`DataTransfer`中**变量名**框中，和`C:\DeploymentTutorialInstall\datatransferconfig.dtsconfig`中**变量值**框。  
+5.  在 "**新建系统变量**" 对话框中， `DataTransfer`在 "变量**名称**" 框中`C:\DeploymentTutorialInstall\datatransferconfig.dtsconfig`键入，然后在 "**变量值**" 框中键入。  
   
-6.  单击“确定”  。  
+6.  单击“确定”。   
   
-7.  单击**新建**同样，然后键入`LoadXMLData`中**变量名**框中，和`C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig`中**变量值**框。  
+7.  再次单击 "**新建**"， `LoadXMLData`然后在 "变量**名称**" 框`C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig`和 "**变量值**" 框中键入。  
   
 8.  单击“确定”  退出“环境变量”  对话框。  
   
@@ -85,6 +85,6 @@ ms.locfileid: "62767649"
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [步骤 2：创建部署项目](../integration-services/lesson-1-2-creating-the-deployment-project.md)  
   
-![集成服务图标 （小）](media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![Integration Services 图标（小）](media/dts-16.gif "集成服务图标（小）")**保持与 Integration Services 最**新  <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
   

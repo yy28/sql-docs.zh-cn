@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 049f6e04dd8d0a81c81a16ee294ffe1c44553095
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762779"
 ---
-# <a name="mssqlserver7903"></a>MSSQLSERVER_7903
+# <a name="mssqlserver_7903"></a>MSSQLSERVER_7903
     
 ## <a name="details"></a>详细信息  
   
@@ -30,9 +30,9 @@ ms.locfileid: "62762779"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC2_FS_ORPHANED_FILE|  
-|消息正文|表错误：对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，列 ID C_ID 的 Filestream 目录中找到孤立的文件 FILE。|  
+|消息正文|表错误：在对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，列 ID C_ID 的 FileStream 目录中发现孤立文件“FILE”。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  在 FILESTREAM 列目录中发现了 FILESTREAM 文件，但是在分区中缺少对应的列值。  
   
 ## <a name="user-action"></a>用户操作  

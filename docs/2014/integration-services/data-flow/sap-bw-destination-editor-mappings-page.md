@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0af079eaa96fd7925ef361b398cd628641c55a3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770869"
 ---
 # <a name="sap-bw-destination-editor-mappings-page"></a>SAP BW 目标编辑器（“映射”页）
@@ -52,7 +52,7 @@ ms.locfileid: "62770869"
   
  要将输入列映射到目标列，请将 **“可用输入列”** 列表中的列拖放到 **“可用目标列”** 列表中的列上。  
   
- **“可用目标列”**  
+ **可用目标列**  
  查看可用目标列的列表。  
   
  要将输入列映射到目标列，请将 **“可用输入列”** 列表中的列拖放到 **“可用目标列”** 列表中的列上。  
@@ -71,15 +71,15 @@ ms.locfileid: "62770869"
  **输入列**  
  查看您所选的输入列。  
   
- 要将不同输入列映射到相同目标列，请在该列表中选择不同输入列。 要删除映射，请选择“\<ignore>”以从输出中排除该输入列  。  
+ 要将不同输入列映射到相同目标列，请在该列表中选择不同输入列。 要删除映射，请选择“**ignore>”以从输出中排除该输入列\<** 。  
   
  **目标列**  
  查看每个可用目标列，而不管是否已对该列进行映射。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SAP BW 目标编辑器（“连接管理器”页）](sap-bw-destination-editor-connection-manager-page.md)   
  [SAP BW 目标编辑器（“错误输出”页）](sap-bw-destination-editor-error-output-page.md)   
  [SAP BW 目标编辑器（“高级”页）](sap-bw-destination-editor-advanced-page.md)   
- [Microsoft Connector 1.1 for SAP BW 的 F1 帮助](../microsoft-connector-for-sap-bw-f1-help.md)  
+ [Microsoft Connector 1.1 for SAP BW F1 帮助](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

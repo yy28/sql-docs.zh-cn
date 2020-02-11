@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1803850e770b42a411a0e6e7a62096afc9b8d3f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762678"
 ---
-# <a name="mssqlserver8601"></a>MSSQLSERVER_8601
+# <a name="mssqlserver_8601"></a>MSSQLSERVER_8601
     
 ## <a name="details"></a>详细信息  
   
@@ -30,9 +30,9 @@ ms.locfileid: "62762678"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|INVALID_INTERFACE_ERR|  
-|消息正文|内部查询处理器错误:查询处理器未能获得对所需接口的访问权限。|  
+|消息正文|内部查询处理器错误: 查询处理器未能获得对所需接口的访问权限。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  内部处理错误；无法获得对所需接口的访问权限。  
   
 ## <a name="user-action"></a>用户操作  

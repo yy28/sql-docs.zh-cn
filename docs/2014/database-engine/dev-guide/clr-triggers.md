@@ -26,17 +26,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 87d822e97a75bbd08375980fe6a6f0341d8f9c60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755255"
 ---
 # <a name="clr-triggers"></a>CLR 触发器
   由于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 与 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行时 (CLR) 集成，因此，您可以使用任何 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 语言来创建 CLR 触发器。 本部分包含通过 CLR 集成实现的触发器的特定信息。 有关触发器的完整讨论，请参阅[DDL 触发器](../../relational-databases/triggers/ddl-triggers.md)。  
   
 ## <a name="what-are-triggers"></a>什么是触发器？  
- 触发器是特殊类型的存储过程，可在执行某个语言事件时自动运行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包括两种常规类型的触发器：数据操作语言 (DML) 触发器和数据定义语言 (DDL) 触发器。 当 `INSERT`、`UPDATE` 或 `DELETE` 语句修改指定表或视图中的数据时，可以使用 DML 触发器。 DDL 触发器激发存储过程以响应各种 DDL 语句，这些语句主要以 `CREATE`、`ALTER` 和 `DROP` 开头。 DDL 触发器可用于管理任务，例如审核和控制数据库操作。  
+ 触发器是特殊类型的存储过程，可在执行某个语言事件时自动运行。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包括两种常规类型的触发器：数据操作语言 (DML) 触发器和数据定义语言 (DDL) 触发器。 当 `INSERT`、`UPDATE` 或 `DELETE` 语句修改指定表或视图中的数据时，可以使用 DML 触发器。 DDL 触发器激发存储过程以响应各种 DDL 语句，这些语句主要以 `CREATE`、`ALTER` 和 `DROP` 开头。 DDL 触发器可用于管理任务，例如审核和控制数据库操作。  
   
 ## <a name="unique-capabilities-of-clr-triggers"></a>CLR 触发器的特有功能  
  采用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 编写的触发器具有如下功能：确定已使用 `UPDATE(column)` 和 `COLUMNS_UPDATED()` 函数更新激发视图或表中的哪些列。  
@@ -49,14 +50,16 @@ ms.locfileid: "62755255"
   
 -   访问有关执行 DDL 语句所影响的数据库对象的信息。  
   
- 这些功能采用查询语言在内部提供，或者由 `SqlTriggerContext` 类提供。 有关优点的 CLR 集成和托管代码之间进行选择并[!INCLUDE[tsql](../../includes/tsql-md.md)]，请参阅[CLR 集成概述](../../relational-databases/clr-integration/clr-integration-overview.md)。  
+ 这些功能采用查询语言在内部提供，或者由 `SqlTriggerContext` 类提供。 有关 CLR 集成的优点以及如何在托管代码和[!INCLUDE[tsql](../../includes/tsql-md.md)]之间进行选择的信息，请参阅[clr 集成概述](../../relational-databases/clr-integration/clr-integration-overview.md)。  
   
 ## <a name="using-the-sqltriggercontext-class"></a>使用 SqlTriggerContext 类  
- `SqlTriggerContext` 类不能公开构造，只能通过访问 CLR 触发器主体中的 `SqlContext.TriggerContext` 属性获取。 通过调用 `SqlTriggerContext` 属性可以从活动的 `SqlContext` 中获取 `SqlContext.TriggerContext` 类：  
+ 
+  `SqlTriggerContext` 类不能公开构造，只能通过访问 CLR 触发器主体中的 `SqlContext.TriggerContext` 属性获取。 通过调用 `SqlTriggerContext` 属性可以从活动的 `SqlContext` 中获取 `SqlContext.TriggerContext` 类：  
   
  `SqlTriggerContext myTriggerContext = SqlContext.TriggerContext;`  
   
- `SqlTriggerContext` 类提供有关触发器的上下文信息。 该上下文信息包括导致触发器被激发的操作的类型，以及在 UPDATE 操作中进行了修改的列，如果是 DDL 触发器，则还包括描述触发操作的 XML `EventData` 结构。 有关详细信息，请参阅[EVENTDATA &#40;TRANSACT-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql)。  
+ 
+  `SqlTriggerContext` 类提供有关触发器的上下文信息。 该上下文信息包括导致触发器被激发的操作的类型，以及在 UPDATE 操作中进行了修改的列，如果是 DDL 触发器，则还包括描述触发操作的 XML `EventData` 结构。 有关详细信息，请参阅[EVENTDATA &#40;transact-sql&#41;](/sql/t-sql/functions/eventdata-transact-sql)。  
   
 ### <a name="determining-the-trigger-action"></a>确定触发器操作  
  获取 `SqlTriggerContext` 之后，可以使用它来确定导致触发器被激发的操作类型。 该信息可通过 `TriggerAction` 类的 `SqlTriggerContext` 属性获得。  
@@ -71,10 +74,10 @@ ms.locfileid: "62755255"
   
 -   对于 DDL 触发器，可能的 TriggerAction 值的列表要长得多。 有关详细信息，请参阅 .NET Framework SDK 中的“TriggerAction 枚举”。  
   
-### <a name="using-the-inserted-and-deleted-tables"></a>使用插入和删除表  
- DML 触发器语句使用两个特殊的表：**插入**表和**删除**表。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会自动创建和管理这两种表。 您可以使用这两种临时表来测试特定数据修改的影响以及设置 DML 触发器操作条件；但是，不能直接更改表中的数据。  
+### <a name="using-the-inserted-and-deleted-tables"></a>使用插入的和删除的表  
+ DML 触发器语句使用两种特殊的表：**插入**的表和**已删除**的表。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]自动创建和管理这些表。 您可以使用这两种临时表来测试特定数据修改的影响以及设置 DML 触发器操作条件；但是，不能直接更改表中的数据。  
   
- CLR 触发器可以访问**插入**并**删除**通过 CLR 进程内提供程序的表。 这是通过从 SqlContext 对象获取 `SqlCommand` 对象来完成的。 例如：  
+ CLR 触发器可以通过 CLR 进程内提供程序访问**插入**的和**删除**的表。 这是通过从 SqlContext 对象获取 `SqlCommand` 对象来完成的。 例如：  
   
  C#  
   
@@ -96,7 +99,8 @@ command.CommandText = "SELECT * FROM " + "inserted"
 ```  
   
 ### <a name="determining-updated-columns"></a>确定更新的列  
- 可以使用 `ColumnCount` 对象的 `SqlTriggerContext` 属性确定 UPDATE 操作已修改的列数。 此外，还可以使用 `IsUpdatedColumn` 方法，该方法采用列序号作为输入参数，以便确定是否已更新列。 `True` 值指示已更新此列。  
+ 可以使用 `ColumnCount` 对象的 `SqlTriggerContext` 属性确定 UPDATE 操作已修改的列数。 此外，还可以使用 `IsUpdatedColumn` 方法，该方法采用列序号作为输入参数，以便确定是否已更新列。 
+  `True` 值指示已更新此列。  
   
  例如，以下代码段（摘自本主题后面的 EmailAudit 触发器）列出所有已更新的列：  
   
@@ -135,7 +139,8 @@ reader.Close()
 ### <a name="accessing-eventdata-for-clr-ddl-triggers"></a>访问 DDL 触发器的 EventData  
  像常规触发器一样，DDL 触发器将激发存储过程以响应事件。 但与 DML 触发器不同的是，它们不会为响应针对表或视图的 UPDATE、INSERT 或 DELETE 语句而激发， 而是为响应各种 DDL 语句而激发，这些语句主要以 CREATE、ALTER 和 DROP 开头。 DDL 触发器可用于管理任务，例如审核和监视数据库操作和架构更改。  
   
- `EventData` 类的 `SqlTriggerContext` 属性提供了有关激发 DDL 触发器的事件的信息。 该属性包含一个 `xml` 值。 xml 架构包括下列相关信息：  
+ 
+  `EventData` 类的 `SqlTriggerContext` 属性提供了有关激发 DDL 触发器的事件的信息。 该属性包含一个 `xml` 值。 xml 架构包括下列相关信息：  
   
 -   事件时间。  
   
@@ -230,7 +235,7 @@ End Class
  在本示例中，请考虑这样一种情况：允许用户选择他们需要的任何 ID，但是您希望知道哪些用户专门输入了电子邮件地址作为 ID。 以下触发器将检测该信息并将其记录到审核表。  
   
 > [!NOTE]  
->  此处显示了如何使用 `SqlPipe` 对象发送结果和消息，此示例仅用于说明用途，通常，建议您不要将此示例用作生产代码。 返回的其他数据可能会导致意外和应用程序错误  
+>  此处显示了如何使用 `SqlPipe` 对象发送结果和消息，此示例仅用于说明用途，通常，建议您不要将此示例用作生产代码。 返回的额外数据可能并非预期并可能导致应用程序错误。  
   
 ```csharp  
 using System;  
@@ -480,7 +485,7 @@ GO CREATE TABLE UserNameAudit
 )  
 ```  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建触发器的语句[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]如下所示，并且假定程序集**SQLCLRTest**在当前已注册[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。  
+ 在[!INCLUDE[tsql](../../includes/tsql-md.md)]中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]创建触发器的语句如下所示，并且假定已在**** 当前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库中注册程序集 SQLCLRTest。  
   
 ```  
 CREATE TRIGGER EmailAudit  
@@ -512,7 +517,8 @@ The statement has been terminated.
  此异常也是预期行为，并且执行激发触发器操作的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句前后的 try/catch 块是必需的，以便继续执行。 尽管引发了两个异常，仍可以回滚事务，并且更改不会提交到表中。 CLR 触发器和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 触发器之间的主要区别在于：[!INCLUDE[tsql](../../includes/tsql-md.md)] 触发器可以在回滚事务之后继续执行更多工作。  
   
 ### <a name="example"></a>示例  
- 下面的触发器对表执行简单的 INSERT 语句验证。 如果插入的整数值等于 1，则回滚事务，并且该值不会插入到表中。 所有其他整数值将插入到表中。 请注意，`Transaction.Rollback` 方法前后存在 try/catch 块。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本创建测试表、程序集和托管存储过程。 请注意，两个 INSERT 语句包装在 try/catch 块中，这样可以捕获在完成执行触发器时所引发的异常。  
+ 下面的触发器对表执行简单的 INSERT 语句验证。 如果插入的整数值等于 1，则回滚事务，并且该值不会插入到表中。 所有其他整数值将插入到表中。 请注意，`Transaction.Rollback` 方法前后存在 try/catch 块。 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本创建测试表、程序集和托管存储过程。 请注意，两个 INSERT 语句包装在 try/catch 块中，这样可以捕获在完成执行触发器时所引发的异常。  
   
  C#  
   
@@ -655,12 +661,12 @@ DROP ASSEMBLY ValidationTriggers;
 DROP TABLE Table1;  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [CREATE TRIGGER (Transact-SQL)](/sql/t-sql/statements/create-trigger-transact-sql)   
  [DML 触发器](../../relational-databases/triggers/dml-triggers.md)   
  [DDL 触发器](../../relational-databases/triggers/ddl-triggers.md)   
  [TRY...CATCH (Transact-SQL)](/sql/t-sql/language-elements/try-catch-transact-sql)   
- [生成与公共语言运行时的数据库对象&#40;CLR&#41;集成](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)   
+ [通过公共语言运行时 &#40;CLR&#41; 集成生成数据库对象](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)   
  [EVENTDATA (Transact-SQL)](/sql/t-sql/functions/eventdata-transact-sql)  
   
   

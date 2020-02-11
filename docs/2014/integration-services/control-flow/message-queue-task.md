@@ -18,14 +18,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7857294534f1c3c434f43c302cee8864925d953
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831474"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
-  通过消息队列任务，你可以使用消息队列（也称为 MSMQ）在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包之间发送和接收消息，或将消息发送到由自定义应用程序处理的应用程序队列。 这些消息可以采用简单文本格式、文件格式或变量及其值的格式。  
+  使用消息队列任务，可以使用消息队列（也称为 MSMQ）在包之间[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]发送和接收消息，或者将消息发送到自定义应用程序处理的应用程序队列。 这些消息可以采用简单文本格式、文件格式或变量及其值的格式。  
   
  用消息队列任务可以协调整个企业的运作。 如果目标不可用或繁忙，可以将消息排队供以后发送；例如，该任务可以将要发给销售代表的离线便携式计算机的消息排队，当他们连接到网络时就会收到消息。 可以将消息队列任务用于下列目的：  
   
@@ -47,13 +47,17 @@ ms.locfileid: "62831474"
 ## <a name="message-types"></a>消息类型  
  可以按下列方式配置消息队列任务提供的消息类型：  
   
--   `Data file` 消息指定文件包含消息。 在接收消息时，可以将任务配置为保存文件、覆盖现有文件以及指定该任务可从中接收消息的包。  
+-   
+  `Data file` 消息指定文件包含消息。 在接收消息时，可以将任务配置为保存文件、覆盖现有文件以及指定该任务可从中接收消息的包。  
   
--   `String` 消息将消息指定为字符串。 在接收消息时，可以将任务配置为比较接收到的字符串和用户定义字符串，并根据对比结果执行操作。 字符串比较可以是完全匹配、区分大小写或不区分大小写，或者使用子字符串。  
+-   
+  `String` 消息将消息指定为字符串。 在接收消息时，可以将任务配置为比较接收到的字符串和用户定义字符串，并根据对比结果执行操作。 字符串比较可以是完全匹配、区分大小写或不区分大小写，或者使用子字符串。  
   
--   `String message to variable` 将源消息指定为发送到目标变量的字符串。 可以将任务配置为使用完全匹配、不区分大小写或子字符串的比较方式来比较接收到的字符串和用户定义字符串。 这种消息类型只能在任务接收消息时使用。  
+-   
+  `String message to variable` 将源消息指定为发送到目标变量的字符串。 可以将任务配置为使用完全匹配、不区分大小写或子字符串的比较方式来比较接收到的字符串和用户定义字符串。 这种消息类型只能在任务接收消息时使用。  
   
--   `Variable` 指定消息包含一个或多个变量。 可以将任务配置为指定消息中所包含变量的名称。 在接收消息时，可以将任务配置为指定任务从中接收消息的包和作为消息目标的变量。  
+-   
+  `Variable` 指定消息包含一个或多个变量。 可以将任务配置为指定消息中所包含变量的名称。 在接收消息时，可以将任务配置为指定任务从中接收消息的包和作为消息目标的变量。  
   
 ## <a name="sending-messages"></a>发送消息  
  配置消息队列任务以发送消息时，可以使用消息队列技术当前支持的加密算法（RC2 和 RC4）之一来加密消息。 与较新的算法相比，这两种加密算法都被视为加密性很弱的算法，但消息队列技术尚不支持较新的算法。 因此，在使用消息队列任务发送消息时，应考虑您的加密需要。  
@@ -74,7 +78,7 @@ ms.locfileid: "62831474"
 ## <a name="custom-logging-messages-available-on-the-message-queue-task"></a>消息队列任务可用的自定义日志记录消息  
  下表列出了消息队列任务的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../performance/integration-services-ssis-logging.md)和[日志记录的自定义消息](../custom-messages-for-logging.md)。  
   
-|日志项|Description|  
+|日志项|说明|  
 |---------------|-----------------|  
 |`MSMQAfterOpen`|指示任务已完成打开消息队列的操作。|  
 |`MSMQBeforeOpen`|指示任务开始打开消息队列。|  
@@ -88,11 +92,11 @@ ms.locfileid: "62831474"
 ## <a name="configuration-of-the-message-queue-task"></a>消息队列任务的配置  
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。 有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的信息，请单击以下主题之一：  
   
--   [消息队列任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)  
+-   [消息队列任务编辑器 &#40;常规页&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [消息队列任务编辑器（“接收”页）](../message-queue-task-editor-receive-page.md)  
+-   [消息队列任务编辑器 &#40;接收页面&#41;](../message-queue-task-editor-receive-page.md)  
   
--   [消息队列任务编辑器（“发送”页）](../message-queue-task-editor-send-page.md)  
+-   [消息队列任务编辑器 &#40;发送页面&#41;](../message-queue-task-editor-send-page.md)  
   
 -   [“表达式”页](../expressions/expressions-page.md)  
   
@@ -101,7 +105,7 @@ ms.locfileid: "62831474"
 ## <a name="related-tasks"></a>Related Tasks  
  有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的详细信息，请参阅 [设置任务或容器的属性](../set-the-properties-of-a-task-or-container.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 任务](integration-services-tasks.md)   
  [控制流](control-flow.md)  
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3f577f7798da2ba7b7ee4259ecc98994f713cfc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762345"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>创建数据库快照 (Transact-SQL)
@@ -30,14 +30,14 @@ ms.locfileid: "62762345"
   
      [最佳做法：命名数据库快照](#Naming)  
   
--   **若要创建数据库快照，请使用：** [Transact-SQL](#TsqlProcedure)  
+-   **若要创建数据库快照，请使用：**  [transact-sql](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a> 先决条件  
+###  <a name="Prerequisites"></a>先决条件  
  可以使用任何恢复模式的源数据库必须满足以下先决条件：  
   
--   服务器实例必须运行支持数据库快照的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 有关中的数据库快照支持信息[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，请参阅[SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+-   服务器实例必须运行支持数据库快照的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 有关中[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的数据库快照支持的信息，请参阅[SQL Server 2014 的各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 -   源数据库必须处于联机状态，除非该数据库是数据库镜像会话中的镜像数据库。  
   
@@ -55,9 +55,9 @@ ms.locfileid: "62762345"
   
 -   [最佳做法：限制数据库快照的数量](#Limiting_Number)  
   
--   [最佳做法：将客户端连接到数据库快照](#Client_Connections)  
+-   [最佳做法：到数据库快照的客户端连接](#Client_Connections)  
   
-####  <a name="Naming"></a> 最佳做法：命名数据库快照  
+####  <a name="Naming"></a>最佳做法：命名数据库快照  
  创建数据库快照之前，考虑如何命名它们是非常重要的。 每个数据库快照都需要一个唯一的数据库名称。 为了便于管理，数据库快照的名称可以包含标识数据库的信息，例如：  
   
 -   源数据库的名称。  
@@ -82,29 +82,29 @@ AdventureWorks_snapshot_noon
 AdventureWorks_snapshot_evening  
 ```  
   
-####  <a name="Limiting_Number"></a> 最佳做法：限制数据库快照的数量  
+####  <a name="Limiting_Number"></a>最佳做法：限制数据库快照的数量  
  随着时间的变化创建一系列快照可捕获源数据库的连续快照。 每个数据库快照会一直保存在系统中，直到被显式删除。 因为每个快照会随着原始页的更新而不断增长，所以您可能想在创建新快照后通过删除旧的快照来节省空间。  
   
 > [!NOTE]  
 >  如果想要还原到某个数据库快照，则需要从该数据库中删除所有其他快照。  
   
-####  <a name="Client_Connections"></a> 最佳做法：客户端连接到数据库快照  
+####  <a name="Client_Connections"></a>最佳做法：到数据库快照的客户端连接  
  若要使用数据库快照，客户端需要知道它的位置。 正在创建或删除另一个数据库快照时，用户可以从一个数据库快照读取。 但是，如果用新快照替代现有快照，您需要将客户端重新定向到新快照。 用户可以通过 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]手动连接到数据库快照。 但是，若要支持生产环境，您应该创建一个编程解决方案，该方案透明地将报表编写客户端定向到数据库的最新数据库快照。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  可创建数据库的任何用户都可以创建数据库快照；但是，若要创建镜像数据库的快照，你必须是 **sysadmin** 固定服务器角色的成员。  
   
-##  <a name="TsqlProcedure"></a> 如何创建数据库快照（使用 Transact-SQL）  
+##  <a name="TsqlProcedure"></a>如何创建数据库快照（使用 Transact-sql）  
  **创建数据库快照**  
   
 > [!NOTE]  
->  有关此过程的示例，请参阅本节后面的 [示例 (Transact-SQL)](#TsqlExample)。  
+>  有关此过程的示例，请参阅本节后面的[示例 (Transact-SQL)](#TsqlExample)。  
   
 1.  根据源数据库的当前大小，确保有足够的磁盘空间存放数据库快照。 数据库快照的最大大小为创建快照时源数据库的大小。 有关详细信息，请参阅[查看数据库快照的稀疏文件大小 (Transact-SQL)](view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)。  
   
-2.  使用 AS SNAPSHOT OF 子句对文件执行 CREATE DATABASE 语句。 创建快照需要指定源数据库的每个数据库文件的逻辑名称。 语法如下：  
+2.  使用 AS SNAPSHOT OF 子句对文件执行 CREATE DATABASE 语句。 创建快照需要指定源数据库的每个数据库文件的逻辑名称。 语法如下所示：  
   
      CREATE DATABASE *database_snapshot_name*  
   
@@ -112,7 +112,7 @@ AdventureWorks_snapshot_evening
   
      (  
   
-     NAME =*logical_file_name*,  
+     NAME =*logical_file_name*，  
   
      FILENAME ='*os_file_name*'  
   
@@ -122,7 +122,7 @@ AdventureWorks_snapshot_evening
   
      [;]  
   
-     其中，source_database_name  是源数据库，logical_file_name  是引用该文件时在 SQL Server 中使用的逻辑名称，os_file_name  是创建该文件时操作系统使用的路径和文件名，database_snapshot_name  是将数据库恢复到的快照的名称。 有关该语法的完整描述，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](/sql/t-sql/statements/create-database-sql-server-transact-sql)。  
+     其中，source_database_name** 是源数据库，logical_file_name** 是引用该文件时在 SQL Server 中使用的逻辑名称，os_file_name** 是创建该文件时操作系统使用的路径和文件名，database_snapshot_name** 是将数据库恢复到的快照的名称。 有关该语法的完整描述，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](/sql/t-sql/statements/create-database-sql-server-transact-sql)。  
   
     > [!NOTE]  
     >  创建数据库快照时，CREATE DATABASE 语句中不允许有日志文件、脱机文件、还原文件和不起作用的文件。  
@@ -138,7 +138,7 @@ AdventureWorks_snapshot_evening
   
 -   B. [对 Sales 数据库创建快照](#Creating_on_Sales)  
   
-####  <a name="Creating_on_AW"></a> A. 对 AdventureWorks 数据库创建快照  
+####  <a name="Creating_on_AW"></a>的. 对 AdventureWorks 数据库创建快照  
  此示例对 `AdventureWorks` 数据库创建数据库快照。 快照名称 `AdventureWorks_dbss_1800`及其稀疏文件的名称 `AdventureWorks_data_1800.ss`指明了创建时间 6 P.M.（1800 小时）。  
   
 ```  
@@ -149,8 +149,8 @@ AS SNAPSHOT OF AdventureWorks;
 GO  
 ```  
   
-####  <a name="Creating_on_Sales"></a> B. 对 Sales 数据库创建快照  
- 此示例对 `sales_snapshot1200`数据库创建数据库快照 `Sales` 。 在示例中，"创建具有文件组的数据库"中创建此数据库[CREATE DATABASE &#40;SQL Server TRANSACT-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)。  
+####  <a name="Creating_on_Sales"></a>B. 对 Sales 数据库创建快照  
+ 此示例对 `sales_snapshot1200`数据库创建数据库快照 `Sales` 。 此数据库是在[创建数据库 &#40;SQL Server transact-sql&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)中的 "创建具有文件组的数据库" 示例中创建的。  
   
 ```  
 --Creating sales_snapshot1200 as snapshot of the  
@@ -180,7 +180,7 @@ GO
   
 -   [删除数据库快照 (Transact-SQL)](drop-a-database-snapshot-transact-sql.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [CREATE DATABASE (SQL Server Transact-SQL)](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [数据库快照 (SQL Server)](database-snapshots-sql-server.md)  
   

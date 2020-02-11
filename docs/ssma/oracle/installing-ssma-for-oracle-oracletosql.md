@@ -1,5 +1,5 @@
 ---
-title: 安装 SSMA for Oracle (OracleToSQL) |Microsoft Docs
+title: 安装 SSMA for Oracle （OracleToSQL） |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,28 +11,28 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 0b146c1585bdcddcf2d45c6b9efbd24f7e90d718
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68263021"
 ---
 # <a name="installing-ssma--for-oracle-oracletosql"></a>安装 SSMA for Oracle (OracleToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 迁移助手 (SSMA) for Oracle 包括客户端应用程序，用于执行从到的 Oracle 迁移[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和 Azure SQL DB。 它还包含支持数据迁移和使用 Oracle 系统函数在你迁移的数据库中的扩展包。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Oracle 迁移助手（SSMA）包含一个客户端应用程序，该应用程序用于执行从 Oracle 到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AZURE SQL DB 的迁移。 它还包含一个扩展包，支持数据迁移，并在迁移的数据库中使用 Oracle 系统功能。  
   
-将从中执行迁移步骤在计算机上安装客户端应用程序。 必须安装的扩展包文件的计算机上托管的已迁移的数据库。 该计算机必须运行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+将客户端应用程序安装在要从中执行迁移步骤的计算机上。 你必须在将承载迁移数据库的计算机上安装扩展包文件。 该计算机必须正在运行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-## <a name="upgrading-ssma-for-oracle"></a>升级适用于 Oracle 的 SSMA  
-如果你想要升级到更高版本的适用于 Oracle 的 SSMA，您必须首先卸载客户端和服务器扩展包，，然后安装较新版本。  
+## <a name="upgrading-ssma-for-oracle"></a>升级 SSMA for Oracle  
+如果要升级到 SSMA for Oracle 的更高版本，必须先卸载客户端和服务器扩展包，然后安装较新的版本。  
   
 ## <a name="contents"></a>目录  
   
-|主题|描述|  
+|主题|说明|  
 |---------|---------------|  
-|[安装 SSMA for Oracle 客户端&#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)|提供有关安装 SSMA 客户端有关的信息和说明。|  
-|[SQL Server 上安装 SSMA 组件&#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)|提供有关的信息和说明的实例上安装的扩展包[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
-|[删除 SSMA for Oracle 组件&#40;OracleToSQL&#41;](../../ssma/oracle/removing-ssma-for-oracle-components-oracletosql.md)|说明如何卸载客户端程序和扩展包。|  
+|[安装 SSMA for Oracle Client &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)|提供有关安装 SSMA 客户端的信息和说明。|  
+|[在 SQL Server 上安装 SSMA 组件 &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)|提供有关在的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上安装扩展包的和说明的信息。|  
+|[删除 SSMA for Oracle 组件 &#40;OracleToSQL&#41;](../../ssma/oracle/removing-ssma-for-oracle-components-oracletosql.md)|提供有关卸载客户端程序和扩展包的说明。|  
   
-## <a name="see-also"></a>请参阅  
-[迁移的 Oracle 数据库移到 SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+## <a name="see-also"></a>另请参阅  
+[将 Oracle 数据库迁移到 SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

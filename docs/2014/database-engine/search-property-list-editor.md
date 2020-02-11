@@ -13,21 +13,22 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 818e1176cb5a4f81205a36dc7be6fd9fded286ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773665"
 ---
 # <a name="search-property-list-editor"></a>搜索属性列表编辑器
   使用此对话框可以在搜索属性列表中添加或删除搜索属性。  
   
 ## <a name="to-use-sql-server-management-studio-to-manage-search-property-lists"></a>使用 SQL Server Management Studio 管理搜索属性列表  
- 有关如何创建、 查看或删除搜索属性列表，以及有关如何配置为属性搜索的全文索引的信息，请参阅[使用搜索属性列表搜索文档属性](../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
+ 有关如何创建、查看或删除搜索属性列表以及如何为属性搜索配置全文索引的信息，请参阅[使用搜索属性列表搜索文档属性](../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
   
 ## <a name="options"></a>选项  
  **属性名称**  
- 指定要用来标识全文查询中的属性的名称。 属性名称可以包含内部空格。 **“属性名称”** 的最大长度为 256 个字符。 此名称可以是“作者”或“家庭地址”等此类用户友好名称，也可以是 Windows 的属性规范名称，如 `System.Author` 或 `System.Contact.HomeAddress`。 **“属性名称”** 必须唯一标识属性集中的属性。  
+ 指定要用来标识全文查询中的属性的名称。 属性名称可以包含内部空格。 
+  **“属性名称”** 的最大长度为 256 个字符。 此名称可以是“作者”或“家庭地址”等此类用户友好名称，也可以是 Windows 的属性规范名称，如 `System.Author` 或 `System.Contact.HomeAddress`。 **属性名称**必须唯一标识属性集中的属性。  
   
  开发人员使用属性名称来标识 [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 谓词中的属性。 因此，当添加属性时，务必指定一个在含义上表示该属性的值。  
   
@@ -48,14 +49,14 @@ ms.locfileid: "62773665"
   
  属性说明是可选的。  
   
- **若要配置全文索引的搜索属性列表**  
+ **配置搜索属性列表以进行全文索引**  
   
 -   [使用搜索属性列表搜索文档属性](../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   
 ## <a name="permissions"></a>权限  
- 请参阅[ALTER SEARCH PROPERTY LIST &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql)。  
+ 请参阅[ALTER SEARCH PROPERTY LIST &#40;transact-sql&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ALTER SEARCH PROPERTY LIST (Transact-SQL)](/sql/t-sql/statements/alter-search-property-list-transact-sql)   
  [使用搜索属性列表搜索文档属性](../relational-databases/search/search-document-properties-with-search-property-lists.md)   
  [sys.registered_search_property_lists (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql)  

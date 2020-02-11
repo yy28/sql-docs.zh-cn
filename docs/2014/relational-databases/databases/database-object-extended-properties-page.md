@@ -13,17 +13,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8561661b2893cceb1cea9a31326d856bc1287acb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917202"
 ---
 # <a name="database-object-extended-properties-page"></a>数据库对象（“扩展属性”页）
   使用扩展属性，您可以向数据库对象添加自定义属性。 使用此页可以查看或修改所选对象的扩展属性。 **“扩展属性”** 页对于所有类型的数据库对象都是相同的。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
- **“数据库”**  
+ **Database**  
  显示所选数据库的名称。 此字段为只读。  
   
  **排序规则**  
@@ -38,7 +38,7 @@ ms.locfileid: "62917202"
  **删除**  
  删除所选扩展属性。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [扩展属性目录视图 (Transact-SQL)](/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties)  
   
   

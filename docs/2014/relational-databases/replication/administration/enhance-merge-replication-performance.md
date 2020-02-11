@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e9db5352c80cfc45fd6856339e2aaf680b631a47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62805875"
 ---
 # <a name="enhance-merge-replication-performance"></a>增强合并复制性能
@@ -33,7 +33,7 @@ ms.locfileid: "62805875"
   
 -   对行筛选器和联接筛选器中使用的列建立索引。  
   
-     在发布的项目上使用行筛选器时，则对筛选器的 WHERE 子句中使用的每一列创建索引。 如果不创建索引， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 必先读取表中的每一行来确定该行是否应包括在分区中。 使用索引， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可快速找到要包括的行。 如果复制只根据索引就能完全解析筛选器的 WHERE 子句，处理速度将最快。  
+     在发布的项目上使用行筛选器时，则对筛选器的 WHERE 子句中使用的每一列创建索引。 如果没有索引， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]则必须读取表中的每一行，以确定该行是否应包括在分区中。 使用索引， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可快速找到要包括的行。 如果复制只根据索引就能完全解析筛选器的 WHERE 子句，处理速度将最快。  
   
      对联接筛选器中使用的所有列进行索引也很重要。 每当合并代理运行时，它都会搜索基表来确定父表中及相关表中的哪些行包括在分区中。 对联接的列创建索引可避免每当合并代理运行时， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 都读取表中的每一行。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "62805875"
   
 -   交错订阅同步计划。  
   
-     如果大量订阅服务器需要与发布服务器同步，则考虑将计划交错开，以便合并代理在不同时间运行。 有关详细信息，请参阅 [Specify Synchronization Schedules](../specify-synchronization-schedules.md)。  
+     如果大量订阅服务器需要与发布服务器同步，则考虑将计划交错开，以便合并代理在不同时间运行。 有关详细信息，请参阅[指定同步计划](../specify-synchronization-schedules.md)。  
   
 ## <a name="merge-agent-parameters"></a>合并代理参数  
  有关合并代理及其参数的详细信息，请参阅 [Replication Merge Agent](../agents/replication-merge-agent.md)。  
@@ -100,13 +100,13 @@ ms.locfileid: "62805875"
   
      将订阅服务器升级到 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更高版本，即可升级订阅服务器上的订阅所用的合并代理。 若要利用众多新功能和性能优化，则需要 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更高版本的合并代理。  
   
--   如果通过快速连接来同步订阅，并通过发布服务器和订阅服务器发送更改，请为合并代理使用 ParallelUploadDownload 参数  。  
+-   如果通过快速连接来同步订阅，并通过发布服务器和订阅服务器发送更改，请为合并代理使用 ParallelUploadDownload 参数****。  
   
-     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引入了一个新的合并代理参数：-ParallelUploadDownload  。 设置此参数能够使合并代理并行处理上载到发布服务器和下载到订阅服务器的更改。 这对于使用高速网络带宽的大容量环境非常有用。 代理参数可以在代理配置文件和命令行中指定。 有关详细信息，请参阅：  
+     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]引入了新的合并代理参数： **-ParallelUploadDownload**。 设置此参数能够使合并代理并行处理上载到发布服务器和下载到订阅服务器的更改。 这对于使用高速网络带宽的大容量环境非常有用。 代理参数可以在代理配置文件和命令行中指定。 有关详细信息，请参阅：  
   
     -   [处理复制代理配置文件](../agents/replication-agent-profiles.md)  
   
-    -   [查看和修改复制代理命令提示符参数 &#40;SQL Server Management Studio&#41;](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
+    -   [查看和修改复制代理命令提示符参数 (SQL Server Management Studio)](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
     -   [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)  
   
@@ -140,10 +140,10 @@ ms.locfileid: "62805875"
   
 -   不定期地重新对合并复制系统表建立索引。  
   
-     在维护合并复制过程中，应不定期检查与合并复制关联的系统表的增长：MSmerge_contents、MSmerge_genhistory，以及 MSmerge_tombstone、MSmerge_current_partition_mappings，以及 MSmerge_past_partition_mappings      。 定期对这些表重建索引。 有关详细信息，请参阅 [重新组织和重新生成索引](../../indexes/reorganize-and-rebuild-indexes.md)。  
+     在合并复制维护过程中，应不定期检查以下与合并复制相关联的系统表的增长情况： **MSmerge_contents**、 **MSmerge_genhistory**、 **MSmerge_tombstone**、 **MSmerge_current_partition_mappings**、 **MSmerge_past_partition_mappings**。 定期对这些表重建索引。 有关详细信息，请参阅 [重新组织和重新生成索引](../../indexes/reorganize-and-rebuild-indexes.md)。  
   
 -   使用复制监视器中的 **“同步历史记录”** 选项卡监视同步性能。  
   
-     对于合并复制，复制监视器会在 **“同步历史记录”** 选项卡中显示同步过程中所处理的每个项目的详细统计信息，其中包括每个处理阶段（如上载更改、下载更改等）所用的时间。 它可帮助查明导致速度降低的特定表，是用来解决合并订阅性能问题的最佳途径。 有关查看详细统计信息详细信息，请参阅[使用复制监视器查看信息和执行任务](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
+     对于合并复制，复制监视器会在 **“同步历史记录”** 选项卡中显示同步过程中所处理的每个项目的详细统计信息，其中包括每个处理阶段（如上载更改、下载更改等）所用的时间。 它可帮助查明导致速度降低的特定表，是用来解决合并订阅性能问题的最佳途径。 有关查看详细统计信息的详细信息，请参阅[使用复制监视器查看信息和执行任务](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
   

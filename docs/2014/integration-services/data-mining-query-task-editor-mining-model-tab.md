@@ -1,5 +1,5 @@
 ---
-title: 数据挖掘查询任务编辑器 ("挖掘模型" 选项卡) |Microsoft Docs
+title: 数据挖掘查询任务编辑器（"挖掘模型" 选项卡） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e31e64226d826db1ac41d3411a542d4eac281ad1
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68890777"
 ---
 # <a name="data-mining-query-task-editor-mining-model-tab"></a>数据挖掘查询任务编辑器（“挖掘模型”选项卡）
@@ -37,15 +37,15 @@ ms.locfileid: "68890777"
  键入数据挖掘查询任务的说明。  
   
 ## <a name="mining-model-tab-options"></a>挖掘模型选项卡选项  
- **“连接”**  
- 从列表中选择 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 连接管理器，或单击“新建”创建新的连接管理器。  
+ **连接**  
+ 从列表中选择 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 连接管理器，或单击****“新建”创建新的连接管理器。  
   
- **相关主题：** [Analysis Services 连接管理器](connection-manager/analysis-services-connection-manager.md)  
+ **相关主题：**  [Analysis Services 连接管理器](connection-manager/analysis-services-connection-manager.md)  
   
  **新建**  
  创建新的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 连接管理器。  
   
- **相关主题：** [“添加 Analysis Services 连接管理器”对话框 UI 参考](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **相关主题：** [添加 Analysis Services 连接管理器对话框 UI 参考](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **挖掘结构**  
  从列表中选择挖掘结构。  
@@ -53,10 +53,10 @@ ms.locfileid: "68890777"
  **挖掘模型**  
  选择建立在所选挖掘结构上的挖掘模型。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [数据挖掘查询任务编辑器（“查询”选项卡）](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
- [数据挖掘查询任务编辑器（“输出”选项卡）](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
- [数据挖掘设计器](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
+ [数据挖掘查询任务编辑器 &#40;查询选项卡&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
+ [数据挖掘查询任务编辑器 &#40;输出 "选项卡&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
+ [Data Mining Designer](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
   
   

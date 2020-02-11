@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b0588bbc8c21c9946ac72a2db92c593e48973dfa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62787062"
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>配置 user options 服务器配置选项
@@ -40,7 +40,7 @@ ms.locfileid: "62787062"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **跟进：** [在配置 user options 配置选项之后](#FollowUp)  
+-   **跟进：** [在配置用户选项配置选项之后](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62787062"
   
 -   下表列出并说明了 **user options**的配置值。 并非所有配置值都是相互兼容的。 例如，不能同时设置 ANSI_NULL_DFLT_ON 和 ANSI_NULL_DFLT_OFF。  
   
-    |ReplTest1|配置|Description|  
+    |值|配置|说明|  
     |-----------|-------------------|-----------------|  
     |1|DISABLE_DEF_CNST_CHK|控制执行期间或延迟的约束检查。|  
     |2|IMPLICIT_TRANSACTIONS|对于 DBLIB 网络库连接，控制执行语句时是否隐式启动事务。 IMPLICIT_TRANSACTIONS 设置对 ODBC 或 OLEDB 连接没有影响。|  
@@ -68,9 +68,9 @@ ms.locfileid: "62787062"
   
 -   **user options** 中位的位置与 @@OPTIONS 中位的位置相同。 每个连接都有自己的 @@OPTIONS 函数，该函数表示配置环境。 登录到 \ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时，用户会收到将当前 **user options** 值指定为 @@OPTIONS 的默认环境。 对 **user options** 执行 SET 语句会影响会话的 @@OPTIONS 函数的相应值。 在此设置更改后创建的所有连接都将收到新值。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  默认情况下，所有用户都具备不带参数或仅带第一个参数的 **sp_configure** 的执行权限。 若要执行带两个参数的 **sp_configure** 以更改配置选项或运行 RECONFIGURE 语句，则用户必须具备 ALTER SETTINGS 服务器级别的权限。 ALTER SETTINGS 权限由 **sysadmin** 和 **serveradmin** 固定服务器角色隐式持有。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -105,10 +105,10 @@ GO
   
 ```  
   
-##  <a name="FollowUp"></a> 跟进：在配置 user options 配置选项之后  
+##  <a name="FollowUp"></a> 跟进：在配置用户选项配置选项之后  
  该设置将立即生效，无需重新启动服务器。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [RECONFIGURE (Transact-SQL)](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [服务器配置选项 (SQL Server)](server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   

@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b1b79c0908f8639df869d01a8ff862afc5be77cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754239"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>决定哈希索引的正确存储桶数
@@ -24,7 +24,7 @@ ms.locfileid: "62754239"
   
  有关非聚集哈希索引的详细信息，请参阅 [Hash Indexes](hash-indexes.md) 和 [Guidelines for Using Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。  
   
- 将为内存优化表上的每个哈希索引分配一个哈希表。 为指定的索引分配的哈希表的大小`BUCKET_COUNT`中的参数[CREATE TABLE &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-table-transact-sql)或[CREATE TYPE &#40;-&#41; ](/sql/t-sql/statements/create-type-transact-sql). Bucket 数将在内部舍入到 2 的下一次幂。 例如，指定 300,000 的 Bucket 计数将导致 524,288 的实际 Bucket 计数。  
+ 将为内存优化表上的每个哈希索引分配一个哈希表。 为索引分配的哈希表的大小由 CREATE TABLE 中的`BUCKET_COUNT`参数指定[&#40;transact-sql&#41;](/sql/t-sql/statements/create-table-transact-sql)或[&#40;transact-sql&#41;的 CREATE 类型](/sql/t-sql/statements/create-type-transact-sql)中。 Bucket 数将在内部舍入到 2 的下一次幂。 例如，指定 300,000 的 Bucket 计数将导致 524,288 的实际 Bucket 计数。  
   
  有关 Bucket 计数的文章和视频链接，请参阅 [如何确定哈希索引（内存 OLTP）的正确 Bucket 计数](https://www.mssqltips.com/sqlservertip/3104/determine-bucketcount-for-hash-indexes-for-sql-server-memory-optimized-tables/)。  
   
@@ -63,7 +63,7 @@ FROM
  对于 (SpecialOfferID, ProductID) 上的示例索引，这导致 121317 / 484 = 251。 这意味着索引键值具有平均值 251，并因此应该是一个非聚集索引。  
   
 ## <a name="troubleshooting-the-bucket-count"></a>Bucket 计数故障排除  
- 若要对内存优化表中的 bucket 计数问题进行故障排除，请使用[sys.dm_db_xtp_hash_index_stats &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql)若要获取的空 bucket 和行链长度有关的统计信息。 可以使用下面的查询获取与当前数据库中所有哈希索引有关的统计信息。 如果数据库中有大型表，查询可能会用几分钟时间运行。  
+ 若要解决内存优化表中的 bucket 计数问题，请使用[sys. dm_db_xtp_hash_index_stats &#40;transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql)获取有关空 bucket 和行链长度的统计信息。 可以使用下面的查询获取与当前数据库中所有哈希索引有关的统计信息。 如果数据库中有大型表，查询可能会用几分钟时间运行。  
   
 ```sql  
 SELECT   
@@ -82,12 +82,12 @@ FROM sys.dm_db_xtp_hash_index_stats AS hs
  用于评估哈希索引运行状况的两个关键指标是：  
   
  *empty_bucket_percent*  
- *empty_bucket_percent* 指示哈希索引中空 Bucket 的数目。  
+ *empty_bucket_percent*指示哈希索引中的空 bucket 数。  
   
  如果 *empty_bucket_percent* 小于 10%，则该 Bucket 计数可能过低。 理想状态下， *empty_bucket_percent* 应该为 33% 或更高。 如果 Bucket 计数与索引键值的数目匹配，则由于哈希分布，大约 1/3 的 Bucket 是空的。  
   
  *avg_chain_length*  
- *avg_chain_length* 指示哈希桶中行链的平均长度。  
+ *avg_chain_length*指示哈希桶中行链的平均长度。  
   
  如果 *avg_chain_length* 大于 10 并且 *empty_bucket_percent* 大于 10%，则可能有许多重复索引键值并且非聚集索引可能更适合。 理想的平均链长度应该是 1。  
   
@@ -137,11 +137,11 @@ GO
   
  考虑此表上的三个哈希索引：  
   
--   IX_Status:50%的 bucket 是空的这很好。 但是，平均链长非常高 (65,536)。 这指示存在大量重复值。 因此，在此情况下使用非聚集哈希索引是不恰当的。 应改用非聚集索引。  
+-   IX_Status：50% 的 Bucket 是空的，这很好。 但是，平均链长非常高 (65,536)。 这指示存在大量重复值。 因此，在此情况下使用非聚集哈希索引是不恰当的。 应改用非聚集索引。  
   
--   IX_OrderSequence:0%的 bucket 是空的这是过低。 此外，平均链长度是 8。 因为此索引中的值是唯一的，所以，这意味着平均而言 8 个值映射到每个 Bucket。 应增加 Bucket 计数。 因为索引键具有 262,144 个唯一值，所以，Bucket 计数应至少为 262,144。 如果预期将来会出现增长，则该数目还应该更高。  
+-   IX_OrderSequence：0% 的 Bucket 是空的，这太低了。 此外，平均链长度是 8。 因为此索引中的值是唯一的，所以，这意味着平均而言 8 个值映射到每个 Bucket。 应增加 Bucket 计数。 因为索引键具有 262,144 个唯一值，所以，Bucket 计数应至少为 262,144。 如果预期将来会出现增长，则该数目还应该更高。  
   
--   主键索引 (PK__SalesOrder...):36%的 bucket 是空的这很好。 此外，平均链长度为 1，这也不错。 无需进行更改。  
+-   主键索引（PK__SalesOrder ...）：36% 的 bucket 是空的，这很好。 此外，平均链长度为 1，这也不错。 无需进行更改。  
   
  有关排除与内存优化哈希索引有关的问题的详细信息，请参阅 [Troubleshooting Common Performance Problems with Memory-Optimized Hash Indexes](../../2014/database-engine/troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes.md)。  
   
@@ -177,7 +177,7 @@ GO
 -   如果全文检索扫描是对性能起着主要作用的操作，则使用接近于索引键值实际数目的 Bucket 计数。  
   
 ### <a name="big-tables"></a>大型表  
- 对于大型表，内存使用量可能成问题。 例如，2.5 亿行的表具有 4 个哈希索引，每个都有一个 10 亿的 bucket 计数与哈希表的开销是 4 个索引 * 10 亿 bucket \* 8 字节 = 32 千兆字节的内存使用率。 在为每个索引选择 2.5 亿的 Bucket 计数时，针对哈希表的总开销将是 8 GB。 请注意，这是除了 8 字节的内存使用情况的每个索引将添加到每个单独的行，这是在此方案中的 8 千兆字节 (4 个索引\*8 个字节\*2.5 亿行)。  
+ 对于大型表，内存使用量可能成问题。 例如，对于具有4个哈希索引的250000000行表，其中每个索引的 bucket 计数为1000000000，哈希表的开销为4个索引 * \* 1000000000 bucket 8 字节 = 32 gb 内存使用率。 在为每个索引选择 2.5 亿的 Bucket 计数时，针对哈希表的总开销将是 8 GB。 请注意，这是除了8个字节的内存使用量之外，每个索引每个索引将添加到每个单独的行，这是\*此方案\*中的 8 gb （4个索引8字节250000000行）。  
   
  全表扫描通常不是影响 OLTP 工作负荷的关键因素。 因此，需要在内存使用量与点查找和插入操作的性能之间进行权衡：  
   
@@ -185,7 +185,7 @@ GO
   
 -   在优化点查找的性能时，Bucket 计数最好是唯一索引值的两倍甚至三倍。 较高的 Bucket 计数意味着内存使用量的增加，并且也意味着全文检索扫描所需时间的增加。  
   
-## <a name="see-also"></a>请参阅  
- [内存优化表上的索引](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  
+## <a name="see-also"></a>另请参阅  
+ [内存优化的表的索引](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 在完全缓存模式下使用缓存连接管理器实现查找转换 |Microsoft Docs
+title: 使用缓存连接管理器在完全缓存模式下实现查找转换 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ddfed959b0f8147a8a4e48a011f65ec011f3846c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833666"
 ---
 # <a name="implement-a-lookup-transformation-in-full-cache-mode-using-the-cache-connection-manager"></a>在完全缓存模式下使用缓存连接管理器实现查找转换
@@ -49,7 +49,7 @@ ms.locfileid: "62833666"
   
 -   在不同的包中将缓存连接管理器配置为使用同一缓存文件。  
   
- 有关详细信息，请参阅下列主题：  
+ 有关详情，请参阅以下主题：  
   
 -   [缓存转换](../data-flow/transformations/cache-transform.md)  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62833666"
   
 -   [序列容器](../control-flow/sequence-container.md)  
   
- 有关演示如何在完全缓存模式下使用缓存连接管理器来实现查找转换的视频，请参阅[如何：在完全缓存模式下实现查找转换（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkId=131031)。  
+ 有关演示如何使用缓存连接管理器在完全缓存模式下实现查找转换的视频，请参阅 [如何在完全缓存模式下实现查找转换（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkId=131031)。  
   
 ### <a name="to-implement-a-lookup-transformation-in-full-cache-mode-in-one-package-by-using-cache-connection-manager-and-a-data-source-in-the-data-flow"></a>在完全缓存模式下使用缓存连接管理器和数据流中的数据源在单个包中实现查找转换  
   
@@ -177,7 +177,7 @@ ms.locfileid: "62833666"
     -   对于 **“文件名”** ，请键入文件路径，或者单击 **“浏览”** 选择文件。  
   
     > [!NOTE]  
-    >  包的保护级别不适用于缓存文件。 如果缓存文件包含敏感信息，可使用访问控制列表 (ACL) 来限制对存储该文件的位置或文件夹的访问。 应只允许访问某些帐户。 有关详细信息，请参阅[访问包使用的文件](../access-to-files-used-by-packages.md)。  
+    >  包的保护级别不适用于缓存文件。 如果缓存文件包含敏感信息，可使用访问控制列表 (ACL) 来限制对存储该文件的位置或文件夹的访问。 应只允许访问某些帐户。 有关详细信息，请参阅 [访问包使用的文件](../access-to-files-used-by-packages.md)。  
   
 11. 如果在步骤 8 中复制了列元数据，请单击“列”  ，选择空行，然后按 Ctrl+V 粘贴列元数据。  
   
@@ -279,8 +279,8 @@ ms.locfileid: "62833666"
   
 9. 运行包。  
   
-## <a name="see-also"></a>请参阅  
- [在完全缓存模式下使用 OLE DB 连接管理器来实现查找转换](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
+## <a name="see-also"></a>另请参阅  
+ [在完全缓存模式下使用 OLE DB 连接管理器实现查找转换](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
  [在不缓存模式或部分缓存模式下实现查找](../data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Integration Services 转换](../data-flow/transformations/integration-services-transformations.md)  
   

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 22225f9a1791185ed78dfc75d92c3dbced7be3ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769334"
 ---
 # <a name="datepart-ssis-expression"></a>DATEPART（SSIS 表达式）
@@ -49,16 +49,16 @@ DATEPART(datepart, date)
   
 |datepart|缩写形式|  
 |--------------|-------------------|  
-|Year|yy、yyyy|  
+|年龄|yy、yyyy|  
 |季度|qq、q|  
-|Month|mm、m|  
+|月份|mm、m|  
 |Dayofyear|dy、y|  
-|Day|dd、d|  
+|日期|dd、d|  
 |Week|wk、ww|  
-|Weekday|dw|  
+|星期|dw|  
 |Hour|Hh|  
 |Minute|mi、n|  
-|第二个|ss、s|  
+|秒|ss、s|  
 |Millisecond|Ms|  
   
 ## <a name="ssis-expression-examples"></a>SSIS 表达式示例  
@@ -80,7 +80,7 @@ DATEPART("dd", ModifiedDate)
 DATEPART("yy",GETDATE())  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [DATEADD（SSIS 表达式）](dateadd-ssis-expression.md)   
  [DATEDIFF（SSIS 表达式）](datediff-ssis-expression.md)   
  [DAY（SSIS 表达式）](day-ssis-expression.md)   

@@ -13,22 +13,23 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 55102e5b91b9b544a38338dbbbbcd882bc66f84a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767979"
 ---
 # <a name="preview-data-dialog-box-sql-server-import-and-export-wizard"></a>“预览数据”对话框（SQL Server 导入和导出向导）
-  使用**预览数据**对话框中查看的查询的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]导入和导出向导将发送到数据源。 您也可使用此对话框预览多达 200 行的示例数据。  
+  使用 "**预览数据**" 对话框可以查看[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]导入和导出向导将发送到数据源的查询。 您也可使用此对话框预览多达 200 行的示例数据。  
   
- 若要详细了解[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]导入和导出向导，请参阅[SQL Server 导入和导出向导](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。 若要了解有关用于启动向导，选项以及已成功运行该向导所需的权限，请参阅[运行 SQL Server 导入和导出向导](start-the-sql-server-import-and-export-wizard.md)。  
+ 若要了解有关导[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]入和导出向导的详细信息，请参阅[SQL Server 导入和导出向导](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。 若要了解启动向导的选项以及成功运行向导所需的权限，请参阅[运行 SQL Server 导入和导出向导](start-the-sql-server-import-and-export-wizard.md)。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导的作用是将数据从源复制到目标。 该向导还可以为您创建目标数据库和目标表。 但是，如果必须复制多个数据库或表，或者必须复制其他类型的数据库对象，则应改用复制数据库向导。 有关详细信息，请参阅 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导的作用是将数据从源复制到目标。 该向导还可以为您创建目标数据库和目标表。 但是，如果必须复制多个数据库或表，或者必须复制其他类型的数据库对象，则应改用复制数据库向导。 有关详细信息，请参阅 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)。  
   
- **若要打开预览数据对话框**  
+ **打开“预览数据”对话框**  
   
--   上**选择源表和视图**页[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]导入和导出向导中，单击**预览**。  
+-   在导入和导出向导的 "**选择源表和视图**" 页上，单击 " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **预览**"。  
   
 ## <a name="options"></a>选项  
  **数据源**  

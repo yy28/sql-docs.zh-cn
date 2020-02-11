@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d047d1c584e176f5446361dd29821eb4ff18aa74
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771206"
 ---
 # <a name="how-to-work-with-cdc-services"></a>如何使用 CDC 服务
@@ -54,7 +54,7 @@ ms.locfileid: "62771206"
   
          有关如何为对 MSXDBCDC 数据库具有写入权限的登录名（例如 **db_owner** 数据库角色）输入凭据的信息，请参阅 [创建和编辑 Oracle CDC 服务](create-and-edit-an-oracle-cdc-service.md) 和 [连接到 SQL Server](connection-to-sql-server.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用 CDC 服务](work-with-cdc-services.md)  
   
   

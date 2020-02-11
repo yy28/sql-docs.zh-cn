@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0f2b9006c03ec0d22ab9194c385d95a2829c023e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762406"
 ---
-# <a name="mssqlserver7907"></a>MSSQLSERVER_7907
+# <a name="mssqlserver_7907"></a>MSSQLSERVER_7907
     
 ## <a name="details"></a>详细信息  
   
@@ -30,9 +30,9 @@ ms.locfileid: "62762406"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC2_FS_INVALID_COLUMN_DIRECTORY|  
-|消息正文|表错误：分区 ID PN_ID 中的目录 'DIRECTORY' 不是有效的 Filestream 目录。|  
+|消息正文|表错误：分区 ID PN_ID 中的目录 'DIRECTORY' 不是有效的 FileStream 目录。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  列目录的名称是分区的关系引擎列 ID。 如果无法将列目录名称转换为列 ID，则该目录不是有效的列目录。  
   
 ## <a name="user-action"></a>用户操作  

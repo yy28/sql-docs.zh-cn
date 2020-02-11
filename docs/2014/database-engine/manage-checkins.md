@@ -15,26 +15,26 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 767e89a777fc530d4622a32f31c984d0e48004ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774289"
 ---
 # <a name="manage-checkins"></a>管理签入
   要将对源代码管理文件所做的更改应用于其他用户，必须签入此文件。 签入文件时，已创建的版本将复制到源代码管理提供程序，并成为文件的最新版本。具有相应权限的用户通常可使用此版本。  
   
- 使用[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]签入文件。 如果您不但需要定期更新源代码管理存储区，而且需要控制一组文件，则可以指定签入的文件仍对您保持签出状态。  
+ 使用[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]签入文件。 如果您不但需要定期更新源代码管理存储区，而且需要控制一组文件，则可以指定签入的文件仍对您保持签出状态。  
   
  下表对本部分的主题进行了说明：  
   
-|主题|Description|  
+|主题|说明|  
 |-----------|-----------------|  
 |[签入文件](../../2014/database-engine/check-in-files.md)|介绍如何签入已修改的文件。|  
 |[查看已修改的文件列表](../../2014/database-engine/view-a-list-of-modified-files.md)|介绍如何在完成工作时显示一个可以一起签入的已修改文件列表。|  
 |[编辑签入文件](../../2014/database-engine/edit-checked-in-files.md)|介绍如何配置 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 环境，以便修改未签出的文件。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [管理签出](../../2014/database-engine/manage-checkouts.md)  
   
   

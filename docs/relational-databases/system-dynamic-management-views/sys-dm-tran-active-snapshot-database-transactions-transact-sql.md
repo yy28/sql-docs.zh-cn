@@ -1,5 +1,5 @@
 ---
-title: sys.dm_tran_active_snapshot_database_transactions (TRANSACT-SQL) |Microsoft Docs
+title: sys. dm_tran_active_snapshot_database_transactions （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,13 +21,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a17fb16130aea073c7a878334ac78b0347267b6b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68262704"
 ---
-# <a name="sysdmtranactivesnapshotdatabasetransactions-transact-sql"></a>sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
+# <a name="sysdm_tran_active_snapshot_database_transactions-transact-sql"></a>sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中，此动态管理视图为所有生成行版本或可能访问行版本的活动事务返回虚拟表。 存在下列一个或多个条件时便包含事务：  
@@ -47,7 +47,7 @@ ms.locfileid: "68262704"
  此动态管理视图不包括系统事务。  
   
 > [!NOTE]  
->  若要调用此项从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_tran_active_snapshot_database_transactions**。  
+>  若要从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]调用此，请使用名称**dm_pdw_nodes_tran_active_snapshot_database_transactions**。  
   
 ## <a name="syntax"></a>语法  
   
@@ -58,7 +58,7 @@ sys.dm_tran_active_snapshot_database_transactions
   
 ## <a name="table-returned"></a>返回的表  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**transaction_id**|**bigint**|分配给事务的唯一标识号。 事务 ID 主要用于在锁定操作中标识事务。|  
 |**transaction_sequence_num**|**bigint**|事务序列号。 它是在事务启动时分配给事务的唯一序列号。 不生成版本记录且不使用快照扫描的事务不会接收到事务序列号。|  
@@ -67,17 +67,17 @@ sys.dm_tran_active_snapshot_database_transactions
 |**session_id**|**int**|启动事务的会话的 ID。|  
 |**first_snapshot_sequence_num**|**bigint**|拍摄快照时处于活动状态的事务的最小事务序列号。 当执行快照事务时，它会拍摄当时所有活动事务的快照。 对于非快照事务，此列显示 0。|  
 |**max_version_chain_traversed**|**int**|为查找在事务上一致的版本而遍历的版本链的最大长度。|  
-|**average_version_chain_traversed**|**real**|被遍历的版本链中的行版本平均数。|  
+|**average_version_chain_traversed**|**实际上**|被遍历的版本链中的行版本平均数。|  
 |**elapsed_time_seconds**|**bigint**|自事务获取其事务序列号以来所经过的时间。|  
-|**pdw_node_id**|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 对于此分布的节点标识符。|  
+|pdw_node_id |**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
 ## <a name="permissions"></a>权限
 
-上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
-上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层，需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准版和基本层，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
+在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要权限。   
+在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层上，需要`VIEW DATABASE STATE`具有数据库中的权限。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
 
 ## <a name="remarks"></a>备注  
- **sys.dm_tran_active_snapshot_database_transactions**报告事务分配事务序列号 (XSN)。 XSN 在事务首次访问版本存储区时分配。 在为快照隔离或使用行版本控制的已提交读隔离启用的数据库中，下面的示例说明何时将 XSN 分配给事务：  
+ **sys. dm_tran_active_snapshot_database_transactions**报告分配有事务序列号（XSN）的事务。 XSN 在事务首次访问版本存储区时分配。 在为快照隔离或使用行版本控制的已提交读隔离启用的数据库中，下面的示例说明何时将 XSN 分配给事务：  
   
 -   如果事务在可序列化隔离级别下运行，则 XSN 在事务首次执行导致创建行版本的语句（例如，UPDATE 操作）时分配。  
   
@@ -143,18 +143,18 @@ elapsed_time_seconds
 333  
 ```  
   
- 以下信息的计算结果的结果**sys.dm_tran_active_snapshot_database_transactions**:  
+ 以下信息将从 sys.databases 计算结果**dm_tran_active_snapshot_database_transactions**：  
   
--   XSN-57:因为此事务未在快照隔离下运行`is_snapshot`值和`first_snapshot_sequence_num`是`0`。 由于 ALLOW_SNAPSHOT_ISOLATION 或 READ_COMMITTED_SNAPSHOT 数据库选项中有一个为 ON 或两者均为 ON，因此 `transaction_sequence_num` 表明已为此事务分配事务序列号。  
+-   XSN-57：由于此事务未在快照隔离下运行，因此`is_snapshot` ，值`first_snapshot_sequence_num`为`0`。 由于 ALLOW_SNAPSHOT_ISOLATION 或 READ_COMMITTED_SNAPSHOT 数据库选项中有一个为 ON 或两者均为 ON，因此 `transaction_sequence_num` 表明已为此事务分配事务序列号。  
   
--   XSN-58:此事务不快照隔离下运行和 XSN-57 相同的信息也适用。  
+-   XSN-58：此事务未在快照隔离下运行，因此适用与 XSN-57 相同的信息。  
   
--   XSN-59:这是在快照隔离下运行的第一个活动事务。 此事务读取在 XSN-57 之前提交的数据，如由 `first_snapshot_sequence_num` 指示的数据。 此事务的输出结果还说明，为一行遍历的最大版本链是 `1`，并且该事务为所访问的每一行遍历的版本链平均值为 `1`。 这表示事务 XSN-57、XSN-58 和 XSN-60 尚未对行进行修改并提交。  
+-   XSN-59：这是在快照隔离下运行的第一个活动事务。 此事务读取在 XSN-57 之前提交的数据，如由 `first_snapshot_sequence_num` 指示的数据。 此事务的输出结果还说明，为一行遍历的最大版本链是 `1`，并且该事务为所访问的每一行遍历的版本链平均值为 `1`。 这表示事务 XSN-57、XSN-58 和 XSN-60 尚未对行进行修改并提交。  
   
--   XSN-60:这是在快照隔离下运行的第二个事务。 输出显示了与 XSN-59 相同的信息。  
+-   XSN-60：这是在快照隔离下运行的第二个事务。 输出显示了与 XSN-59 相同的信息。  
   
-## <a name="see-also"></a>请参阅  
- [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [&#40;Transact-sql&#41;设置事务隔离级别](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与事务相关的动态管理视图和函数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   

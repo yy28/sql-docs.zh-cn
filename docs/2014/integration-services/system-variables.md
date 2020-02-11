@@ -17,21 +17,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 58254a5c9f9031e4657f7a3a2eb5cb73be4fbdea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62927220"
 ---
 # <a name="system-variables"></a>系统变量
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了一组系统变量，其中存储有关正在运行的包及其对象的信息。 可以在表达式和属性表达式中使用这些变量自定义包、容器、任务和事件处理程序。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]提供一组系统变量，这些变量存储有关正在运行的包及其对象的信息。 可以在表达式和属性表达式中使用这些变量自定义包、容器、任务和事件处理程序。  
   
  可以在执行 SQL 任务用来将变量映射到参数的参数绑定中使用所有变量（系统和用户定义）。  
   
 ## <a name="system-variables-for-packages"></a>包的系统变量  
  下表介绍 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 为包提供的系统变量。  
   
-|系统变量|数据类型|Description|  
+|系统变量|数据类型|说明|  
 |---------------------|---------------|-----------------|  
 |**CancelEvent**|Int32|Windows 事件对象的句柄，任务可以向其发送信号以指示任务应停止运行。|  
 |`ContainerStartTime`|DateTime|容器的开始时间。|  
@@ -41,15 +41,15 @@ ms.locfileid: "62927220"
 |`ExecutionInstanceGUID`|String|正在执行的包实例的唯一标识符。|  
 |`FailedConfigurations`|String|失败的包配置的名称。|  
 |`IgnoreConfigurationsOnLoad`|Boolean|指示在加载包时是否忽略包配置。|  
-|**InteractiveMode**|Boolean|指示是否在交互模式中运行包。 如果包正在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中运行，则此属性将设置为 `True`。 如果包正在使用**DTExec**命令提示实用工具的属性设置为`False`。|  
+|**InteractiveMode**|Boolean|指示是否在交互模式中运行包。 如果包正在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中运行，则此属性将设置为 `True`。 如果包正在使用**DTExec**命令提示实用工具运行，则将属性设置为`False`。|  
 |`LocaleId`|Int32|包所使用的区域设置。|  
-|**MachineName**|String|正在运行包的计算机的名称。|  
+|**计算机**|String|正在运行包的计算机的名称。|  
 |**OfflineMode**|Boolean|指示该包是否处于脱机模式下。 脱机模式不获取与数据源的连接。|  
 |**PackageID**|String|包的唯一标识符。|  
 |**PackageName**|String|包的名称。|  
 |**StartTime**|DateTime|包开始运行的时间。|  
 |`ServerExecutionID`|Int64|在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器上执行的包的执行 ID。<br /><br /> 默认值为零。 仅当该包在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器上由 ISServerExec 执行时更改该值。 存在子包时，将该值从父包传递到子包。|  
-|**UserName**|String|启动包的用户的帐户。 用户名由域名限定。|  
+|**用户名**|String|启动包的用户的帐户。 用户名由域名限定。|  
 |**VersionBuild**|Int32|包版本。|  
 |**VersionComment**|String|包版本的注释。|  
 |**VersionGUID**|String|版本的唯一标识符。|  
@@ -59,14 +59,14 @@ ms.locfileid: "62927220"
 ## <a name="system-variables-for-containers"></a>容器的系统变量  
  下表介绍 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 为 For 循环、Foreach 循环和序列容器提供的系统变量。  
   
-|系统变量|数据类型|Description|容器|  
+|系统变量|数据类型|说明|容器|  
 |---------------------|---------------|-----------------|---------------|  
 |`LocaleId`|Int32|容器使用的区域设置。|For 循环容器<br /><br /> Foreach 循环容器<br /><br /> 序列容器|  
   
 ## <a name="system-variables-for-tasks"></a>任务的系统变量  
  下表介绍 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 为任务提供的系统变量。  
   
-|系统变量|数据类型|Description|  
+|系统变量|数据类型|说明|  
 |---------------------|---------------|-----------------|  
 |**CreationName**|String|任务的名称。|  
 |`LocaleId`|Int32|任务所使用的区域设置。|  
@@ -77,19 +77,19 @@ ms.locfileid: "62927220"
 ## <a name="system-variables-for-event-handlers"></a>事件处理程序的系统变量  
  下表介绍 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 为事件处理程序所提供的系统变量。 并非所有变量对所有事件处理程序都可用。  
   
-|系统变量|数据类型|Description|事件处理程序|  
+|系统变量|数据类型|说明|事件处理程序|  
 |---------------------|---------------|-----------------|-------------------|  
 |**取消**|Boolean|指示在出现错误、警告或查询取消时事件处理程序是否停止运行。|OnError 事件处理程序<br /><br /> OnWarning 事件处理程序<br /><br /> OnQueryCancel 事件处理程序|  
-|**ErrorCode**|Int32|错误标识符。|OnError 事件处理程序<br /><br /> OnInformation 事件处理程序<br /><br /> OnWarning 事件处理程序|  
+|**错误**|Int32|错误标识符。|OnError 事件处理程序<br /><br /> OnInformation 事件处理程序<br /><br /> OnWarning 事件处理程序|  
 |**ErrorDescription**|String|对错误的说明。|OnError 事件处理程序<br /><br /> OnInformation 事件处理程序<br /><br /> OnWarning 事件处理程序|  
 |**ExecutionStatus**|Boolean|当前的执行状态。|OnExecStatusChanged 事件处理程序|  
 |`ExecutionValue`|DBNull|执行值。|OnTaskFailed 事件处理程序|  
 |`LocaleId`|Int32|事件处理程序所使用的区域设置。|所有事件处理程序|  
-|**PercentComplete**|Int32|已完成工作的百分比。|OnProgress 事件处理程序|  
+|**完成**|Int32|已完成工作的百分比。|OnProgress 事件处理程序|  
 |**ProgressCountHigh**|Int32|64 位值的高位部分，指示由 OnProgress 事件处理的操作的总数。|OnProgress 事件处理程序|  
 |`ProgressCountLow`|Int32|64 位值的低位部分，指示由 OnProgress 事件处理的操作的总数。|OnProgress 事件处理程序|  
 |**ProgressDescription**|String|进度说明。|OnProgress 事件处理程序|  
-|`Propagate`|Boolean|指示是否将该事件传播到较高等级的事件处理程序。<br /><br /> 注意：值`Propagate`包的验证过程中忽略变量。<br /><br /> 如果在子包中将 `Propagate` 设置为 `False`，这并不会防止事件向上传播至父包。|所有事件处理程序|  
+|`Propagate`|Boolean|指示是否将该事件传播到较高等级的事件处理程序。<br /><br /> 注意：在包的验证过程中将忽略 `Propagate` 变量的值。<br /><br /> 如果在子包中将 `Propagate` 设置为 `False`，这并不会防止事件向上传播至父包。|所有事件处理程序|  
 |`SourceDescription`|String|事件处理程序中引发事件的可执行文件的说明。|所有事件处理程序|  
 |`SourceID`|String|引发事件的事件处理程序中可执行文件的唯一标识符。|所有事件处理程序|  
 |**SourceName**|String|引发事件的事件处理程序中可执行文件的名称。|所有事件处理程序|  

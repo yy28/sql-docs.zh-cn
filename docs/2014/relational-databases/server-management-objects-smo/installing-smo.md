@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6aa18a6b40f073dbccd28d82477d0b1c5e2b69fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62753629"
 ---
 # <a name="installing-smo"></a>安装 SMO
@@ -26,7 +26,7 @@ ms.locfileid: "62753629"
   
  默认情况下，SMO 程序集安装在 [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)] 目录下。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 2014 安装快速入门](../../getting-started/quick-start-installation-of-sql-server-2014.md)  
   
   

@@ -13,14 +13,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d396dd41c7643991063bfa476059362c668673e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62808248"
 ---
 # <a name="continue-with-restore"></a>继续还原
-  使用 **“继续还原”** 对话框可指示是否要还原到下一个备份集。 若要延迟还原操作（例如，需要更换磁带），请待您做好继续操作的准备后再单击 **“确定”** 。  
+  使用 **“继续还原”** 对话框可指示是否要还原到下一个备份集。 若要延迟还原操作（例如，需要更换磁带），请待您做好继续操作的准备后再单击 **“确定”**。  
   
  单击 **“否”** 将终止还原顺序，但是会将数据库保持在还原状态。 若要在以后继续执行还原操作，请使用相应的 **“还原数据库”** 或 **“还原事务日志”** 任务。  
   
@@ -34,10 +34,10 @@ ms.locfileid: "62808248"
  **备份集说明**  
  显示备份集的说明。  
   
-## <a name="see-also"></a>请参阅  
- [查看备份磁带或文件的内容 (SQL Server)](../relational-databases/backup-restore/view-the-contents-of-a-backup-tape-or-file-sql-server.md)   
+## <a name="see-also"></a>另请参阅  
+ [查看备份磁带或文件的内容 &#40;SQL Server&#41;](../relational-databases/backup-restore/view-the-contents-of-a-backup-tape-or-file-sql-server.md)   
  [查看逻辑备份设备的属性和内容 (SQL Server)](../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)   
- [还原数据库备份&#40;SQL Server Management Studio&#41;](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)   
+ [还原数据库备份 &#40;SQL Server Management Studio&#41;](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)   
  [还原事务日志备份 (SQL Server)](../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
   

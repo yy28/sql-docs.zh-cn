@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4bf9e58296b70f29e3e328782b463ecbbf7f6aab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770336"
 ---
 # <a name="pivot-transformation"></a>透视转换
@@ -46,7 +46,7 @@ ms.locfileid: "62770336"
  输入数据可能包含重复行，这会导致透视转换失败。 “重复行”表示在设置键列和透视列中具有相同值的行。 为了避免失败，可以将转换配置为将错误行重定向到错误输出或预先聚合值，以确保不存在重复行。  
   
 ##  <a name="options"></a> “透视”对话框中的选项  
- 可以通过设置 **“透视”** 对话框中的选项来配置透视操作。 若要打开“透视”对话框，请在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中将透视转换添加到包，右键单击该组件，然后单击“编辑”。    
+ 可以通过设置 **“透视”** 对话框中的选项来配置透视操作。 若要打开“透视”对话框，请在  **中将透视转换添加到包，右键单击该组件，然后单击“编辑”。** [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]   
   
  以下列表介绍了 **“透视”** 对话框中的选项。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "62770336"
   
  下表显示对 **年** 列透视数据前的数据集。  
   
-|年|产品名称|总计|  
+|年龄|产品名称|总计|  
 |----------|------------------|-----------|  
 |2004|HL Mountain Tire|1504884.15|  
 |2003|Road Tire Tube|35920.50|  
@@ -133,7 +133,7 @@ ms.locfileid: "62770336"
 ## <a name="related-content"></a>相关内容  
  有关如何设置数据流组件属性的信息，请参阅 [设置数据流组件属性](../set-the-properties-of-a-data-flow-component.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [逆透视转换](pivot-transformation.md)   
  [数据流](../data-flow.md)   
  [Integration Services 转换](integration-services-transformations.md)  

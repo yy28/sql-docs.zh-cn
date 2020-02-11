@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2886fffebdf06ea16ebe8b6992387be3c22e0bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916943"
 ---
 # <a name="model-database"></a>model 数据库
@@ -73,12 +73,12 @@ ms.locfileid: "62916943"
 |PARAMETERIZATION|SIMPLE|是|  
 |QUOTED_IDENTIFIER|OFF|是|  
 |READ_COMMITTED_SNAPSHOT|OFF|是|  
-|RECOVERY|取决于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]edition<sup>1</sup>|是|  
+|RECOVERY|取决于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本<sup>1</sup>|是|  
 |RECURSIVE_TRIGGERS|OFF|是|  
 |Service Broker 选项|DISABLE_BROKER|否|  
 |TRUSTWORTHY|OFF|否|  
   
- <sup>1</sup>若要验证数据库的当前恢复模式，请参阅[查看或更改数据库的恢复模式&#40;SQL Server&#41; ](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)或[sys.databases &#40;-&#41; ](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
+ <sup>1</sup>若要验证数据库的当前恢复模式，请参阅[查看或更改数据库的恢复模式 &#40;SQL Server&#41;](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)或[sys.databases &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)。  
   
  有关这些数据库选项的说明，请参阅 [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)。  
   
@@ -89,11 +89,11 @@ ms.locfileid: "62916943"
   
 -   更改排序规则。 默认排序规则为服务器排序规则。  
   
--   更改数据库所有者。 **模型** 的所有者是 **sa**。  
+-   更改数据库所有者。 **模型**由**sa**所有。  
   
 -   删除数据库。  
   
--   从数据库中删除 **guest** 用户。  
+-   正在从数据库中删除**guest**用户。  
   
 -   启用变更数据捕获。  
   

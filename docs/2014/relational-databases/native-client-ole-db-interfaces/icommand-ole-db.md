@@ -1,5 +1,5 @@
 ---
-title: ICommand (OLE DB) |Microsoft Docs
+title: ICommand （OLE DB） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,19 +13,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d4e583b08cf0ba55268c4acb9e19722d3a693d50
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62987322"
 ---
 # <a name="icommand-ole-db"></a>ICommand (OLE DB)
   本主题讨论特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 的 OLE DB 行为。  
   
 ## <a name="icommandexecute"></a>ICommand::Execute  
- 如果插入的数据大于列的大小，通常会导致错误。 但是，可能会出现将返回 S_OK、但 dwStatus 将设置为 DBSTATUS_S_TRUNCATED 的情况。 这通常发生在时插入数据使用参数，其中列是不足够大以保存数据，并`ICommandWithParameters::SetParameterInfo`尚未调用。  
+ 如果插入的数据大于列的大小，通常会导致错误。 但是，可能会出现将返回 S_OK、但 dwStatus 将设置为 DBSTATUS_S_TRUNCATED 的情况**。 当用参数插入数据时，通常会发生这种情况，列的大小不足以容纳数据， `ICommandWithParameters::SetParameterInfo`并且尚未调用。  
   
-## <a name="see-also"></a>请参阅  
- [接口&#40;OLE DB&#41;](../../database-engine/dev-guide/interfaces-ole-db.md)  
+## <a name="see-also"></a>另请参阅  
+ [接口 &#40;OLE DB&#41;](../../database-engine/dev-guide/interfaces-ole-db.md)  
   
   

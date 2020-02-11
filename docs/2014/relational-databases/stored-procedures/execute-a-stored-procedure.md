@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0cd447f6ad12ee12c96f6bcbb6af858aa32fdb06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63016068"
 ---
 # <a name="execute-a-stored-procedure"></a>执行存储过程
@@ -119,25 +119,25 @@ ms.locfileid: "63016068"
   
     2.  阻止过程在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动时执行。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  有关详细信息，请参阅 [EXECUTE AS (Transact-SQL)](/sql/t-sql/statements/execute-as-transact-sql) 和 [EXECUTE AS 子句 (Transact-SQL)](/sql/t-sql/statements/execute-as-clause-transact-sql)。  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  有关详细信息，请参阅 [EXECUTE (Transact-SQL)](/sql/t-sql/language-elements/execute-transact-sql)中执行存储过程。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-execute-a-stored-procedure"></a>执行存储过程  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，再依次展开该实例、 **“数据库”**。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，再依次展开该实例、 **“数据库”** 。  
   
-2.  展开所需的数据库，然后依次展开 **“可编程性”** 和 **“存储过程”**。  
+2.  展开所需的数据库，然后依次展开 **“可编程性”** 和 **“存储过程”** 。  
   
-3.  右键单击所需的用户定义存储过程，然后单击“执行存储过程”。  
+3.  右键单击所需的用户定义存储过程，然后单击“执行存储过程”  。  
   
 4.  在 **“执行过程”** 对话框中，为每个参数指定一个值以及它是否应传递 Null 值。  
   
-     **参数**  
+     **Parameter**  
      指示参数的名称。  
   
      **数据类型**  
@@ -149,10 +149,10 @@ ms.locfileid: "63016068"
      **传递空值**  
      将 NULL 作为参数值传递。  
   
-     **ReplTest1**  
+     **值**  
      在调用过程时键入参数的值。  
   
-5.  若要执行存储过程，请单击 **“确定”**。  
+5.  若要执行存储过程，请单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -160,9 +160,9 @@ ms.locfileid: "63016068"
   
 1.  连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例演示如何执行应有一个参数的存储过程。 该示例执行 `uspGetEmployeeManagers` 存储过程，并将值  `6` 指定为 `@EmployeeID` 参数。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例演示如何执行应有一个参数的存储过程。 该示例执行 `uspGetEmployeeManagers` 存储过程，并将值  `6` 指定为 `@EmployeeID` 参数。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -175,9 +175,9 @@ GO
   
 1.  连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例演示如何使用 [sp_procoption](/sql/relational-databases/system-stored-procedures/sp-procoption-transact-sql) 设置过程自动执行。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例演示如何使用 [sp_procoption](/sql/relational-databases/system-stored-procedures/sp-procoption-transact-sql) 设置过程自动执行。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -191,9 +191,9 @@ EXEC sp_procoption @ProcName = '<procedure name>'
   
 1.  连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明如何使用 [sp_procoption](/sql/relational-databases/system-stored-procedures/sp-procoption-transact-sql) 阻止过程自动执行。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例说明如何使用 [sp_procoption](/sql/relational-databases/system-stored-procedures/sp-procoption-transact-sql) 阻止过程自动执行。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -204,7 +204,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
   
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [指定参数](specify-parameters.md)   
  [配置 scan for startup procs 服务器配置选项](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)   
  [EXECUTE (Transact-SQL)](/sql/t-sql/language-elements/execute-transact-sql)   

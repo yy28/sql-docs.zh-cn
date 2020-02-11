@@ -24,21 +24,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2f3ce90e2670357d0842b0a6ac7838f396465bab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768159"
 ---
 # <a name="sql-server-import-and-export-wizard"></a>SQL Server 导入和导出向导
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]导入和导出向导提供了最简单的方法来创建[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]将数据从源复制到目标的包。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]导入和导出向导提供了最简单的方法， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]可用于创建将数据从源复制到目标的包。  
   
 > [!NOTE]  
 >  在 64 位计算机上，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会安装 64 位版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导 (DTSWizard.exe)。 但是，有些数据源（如 Access 或 Excel）只提供 32 位提供程序。 若要使用这些数据源，您可能需要安装并运行 32 位版本的向导。 若要安装 32 位版本的向导，必须在安装过程中选择“客户端工具”或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。  
   
  可以从“开始”菜单、从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或使用命令提示符启动 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 导入和导出向导。 有关详细信息，请参阅[运行 SQL Server 导入和导出向导](start-the-sql-server-import-and-export-wizard.md)。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导可以将数据复制到提供托管 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据访问接口或本机 OLE DB 访问接口的任何数据源，也可以从这些数据源复制数据。 可用访问接口的列表包括下列数据源：  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导可以将数据复制到提供托管 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据访问接口或本机 OLE DB 访问接口的任何数据源，也可以从这些数据源复制数据。 可用访问接口的列表包括下列数据源：  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
@@ -50,11 +51,12 @@ ms.locfileid: "62768159"
   
  启动向导的环境不同，某些向导功能的工作方式也会有所不同：  
   
--   如果在启动[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]导入和导出向导[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，您立即运行包通过选择**立即执行**复选框。 默认情况下，此复选框处于选中状态，包会立即运行。  
+-   如果在中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]启动[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]导入和导出向导，则可以通过选中 "**立即执行**" 复选框来立即运行包。 默认情况下，此复选框处于选中状态，包会立即运行。  
   
-     还可以决定是将包保存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还是保存到文件系统。 如果选择保存包，还必须指定包保护级别。 有关包保护级别的详细信息，请参阅[包中敏感数据的访问控制](../security/access-control-for-sensitive-data-in-packages.md)。  
+     还可以决定是将包保存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还是保存到文件系统。 如果选择保存包，还必须指定包保护级别。 有关包保护级别的详细信息，请参阅[对包中敏感数据的访问控制](../security/access-control-for-sensitive-data-in-packages.md)。  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导创建包并复制数据之后，可以使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器通过添加任务、转换和事件驱动的逻辑，打开和更改保存的包。  
+     
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导创建包并复制数据之后，可以使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器通过添加任务、转换和事件驱动的逻辑，打开和更改保存的包。  
   
     > [!NOTE]  
     >  在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 中，未提供用来保存该向导所创建的包的选项。  
@@ -74,22 +76,25 @@ ms.locfileid: "62768159"
   
 -   如果希望创建新的目标数据库、表或文件，则需要具有创建新的数据库、表或文件的足够权限。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，这需要具有 CREATE DATABASE 或 CREATE TABLE 权限。  
   
--   如果你想要保存由向导编写到 msdb 数据库或文件系统的足够权限创建的包。 在[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，这需要具有在 msdb 数据库的 INSERT 权限。  
+-   如果希望保存向导创建的包，则需要具有向 msdb 数据库或文件系统进行写入操作的足够权限。 在[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，这需要对 msdb 数据库具有 INSERT 权限。  
   
 ## <a name="mapping-data-types-in-the-import-and-export-wizard"></a>在导入和导出向导中映射数据类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导提供了最低限度的转换功能。 除了支持在新的目标表和目标文件中设置列的名称、数据类型和数据类型属性之外，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导不支持任何列级转换。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导提供了最低限度的转换功能。 除了支持在新的目标表和目标文件中设置列的名称、数据类型和数据类型属性之外，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导不支持任何列级转换。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的映射文件来将数据类型从一个数据库版本或系统映射到另一个数据库版本或系统。 例如，它可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 映射到 Oracle。 默认情况下，XML 格式的映射文件安装在 C:\Program Files\Microsoft SQL Server\100\DTS\MappingFiles 中。 如果业务需要在数据类型之间进行不同的映射，则可以更新映射以影响向导所执行的映射。 例如，如果你想[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **nchar**数据类型映射到 DB2**图形**数据类型，而不是 DB2 **VARGRAPHIC**数据类型时将数据从传输[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到 DB2，更改**nchar**应当将 SqlClientToIBMDB2.xml 映射文件，以使用在映射**图形**而不是**VARGRAPHIC。**  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的映射文件来将数据类型从一个数据库版本或系统映射到另一个数据库版本或系统。 例如，它可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 映射到 Oracle。 默认情况下，XML 格式的映射文件安装在 C:\Program Files\Microsoft SQL Server\100\DTS\MappingFiles 中。 如果业务需要在数据类型之间进行不同的映射，则可以更新映射以影响向导所执行的映射。 例如[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，如果想要在将数据从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]传输到 db2 时将**nchar**数据类型映射到 db2**图形**数据类型而不是 db2 **VARGRAPHIC**数据类型，则可以更改 sqlclienttoibmdb2.xml 映射文件中的**nchar**映射，以使用**图形**而不是**VARGRAPHIC。**  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括很多常用源和目标组合之间的映射，您可以在映射文件目录中添加新的映射文件，以支持其他源和目标。 新的映射文件必须遵守所发布的 XSD 架构，并在源和目标的唯一组合之间进行映射。  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括很多常用源和目标组合之间的映射，您可以在映射文件目录中添加新的映射文件，以支持其他源和目标。 新的映射文件必须遵守所发布的 XSD 架构，并在源和目标的唯一组合之间进行映射。  
   
 > [!NOTE]  
 >  如果编辑现有映射文件，或者向文件夹中添加新的映射文件，则必须关闭并重新打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，以便识别新的或更改过的文件。  
   
 ## <a name="external-resources"></a>外部资源  
   
--   视频中，[将 SQL Server 数据导出到 Excel （SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkID=200975)，technet.microsoft.com 上  
+-   Technet.microsoft.com 上的视频[将 SQL Server 数据导出到 Excel （SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkID=200975)  
   
--   CodePlex 示例[从 ODBC 导出到平面文件使用向导教程：课程包](https://go.microsoft.com/fwlink/?LinkId=217657)，msftisprodsamples.codeplex.com 上  
+-   CodePlex 示例，[使用向导从 ODBC 导出到平面文件教程：课程包](https://go.microsoft.com/fwlink/?LinkId=217657)，在 msftisprodsamples.codeplex.com 上  
   
   

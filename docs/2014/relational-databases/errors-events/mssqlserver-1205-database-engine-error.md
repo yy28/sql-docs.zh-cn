@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ef8a59c98bc6669a13b5a4ffeb516b4063db23c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915889"
 ---
-# <a name="mssqlserver1205"></a>MSSQLSERVER_1205
+# <a name="mssqlserver_1205"></a>MSSQLSERVER_1205
     
 ## <a name="details"></a>详细信息  
   
@@ -32,8 +32,8 @@ ms.locfileid: "62915889"
 |符号名称|LK_VICTIM|  
 |消息正文|事务(进程 ID %d)与另一个进程被死锁在 %.*ls 资源上，并且已被选作死锁牺牲品。 重新运行该事务。|  
   
-## <a name="explanation"></a>解释  
- 在不同事务中访问资源的顺序冲突，从而导致死锁。 例如：  
+## <a name="explanation"></a>说明  
+ 在单独的事务上以相互冲突的顺序访问资源，从而导致死锁。 例如：  
   
 -   Transaction1 更新 **Table1.Row1**，而 Transaction2 更新 **Table2.Row2**。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62915889"
   
 -   之所以出现死锁，是因为 Transaction1 在等待 Transaction2 完成，但 Transaction2 在等待 Transaction1 完成。  
   
- 系统将检测到此死锁，并将所涉及的事务之一选作“牺牲品”，然后发出此消息，回滚牺牲品的事务。  
+ 系统将检测到此死锁并将选择其中一个作为“受害者”的事务，并将发出此消息，回滚受害者的事务。  
   
 ## <a name="user-action"></a>用户操作  
  重新执行事务。 您还可以修订应用程序以避免死锁。 可以重试被选作牺牲品的事务，而且很可能成功，具体取决于同时执行的操作。  

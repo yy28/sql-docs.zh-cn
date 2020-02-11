@@ -13,17 +13,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b957cfa6416b9c557123a235bc62832057f907c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62691753"
 ---
 # <a name="place-data-and-log-files-on-separate-drives"></a>将数据和日志文件放到不同的驱动器上
   此规则检查是否将数据和日志文件放到了不同的逻辑驱动器上。 将数据和日志文件放到同一个设备上会导致该设备的争用，并且会导致性能降低。 将文件放到不同的驱动器上允许数据和日志文件的 I/O 活动同时发生。  
   
 ## <a name="best-practices-recommendations"></a>最佳做法建议  
- 创建新的数据库时，为数据和日志指定不同的驱动器。 若要在创建数据库后移动文件，则必须使数据库脱机。 使用以下方法之一移动文件：  
+ 创建新的数据库时，为数据和日志指定不同的驱动器。 若要在创建数据库后移动文件，则必须使数据库脱机。 使用下列方法之一移动文件：  
   
 > [!NOTE]  
 >  此策略无法通过装入点检测分开的物理设备。  
@@ -41,7 +41,7 @@ ms.locfileid: "62691753"
   
  [数据库分离和附加 (SQL Server)](../databases/database-detach-and-attach-sql-server.md)  
   
-## <a name="see-also"></a>请参阅  
- [使用基于策略的管理来监视和强制执行最佳实践](monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
+## <a name="see-also"></a>另请参阅  
+ [使用基于策略的管理来监视和强制执行最佳做法](monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

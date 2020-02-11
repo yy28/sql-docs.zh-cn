@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a7a5744aa2adcaab74ca09bbb962c8c69d985b79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771513"
 ---
 # <a name="advanced-connection-properties"></a>高级连接属性
@@ -31,7 +31,7 @@ ms.locfileid: "62771513"
 > [!IMPORTANT]  
 >  不要在 **“高级连接属性”** 对话框中包含登录凭据。 否则，它们将在没有加密的情况下通过网络传递。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [访问 CDC 设计器控制台](access-the-cdc-designer-console.md)   
  [用于实例创建的 SQL Server 连接](sql-server-connection-for-instance-creation.md)  
   

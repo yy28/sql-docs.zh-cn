@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 16f5876211a987dff593721310ee31667d428b81
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761668"
 ---
-# <a name="mssqlserver9524"></a>MSSQLSERVER_9524
+# <a name="mssqlserver_9524"></a>MSSQLSERVER_9524
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62761668"
 |符号名称|XMLERR_INVALID_COLUMNSET_XML|  
 |消息正文|提供的 XML 内容不符合稀疏列集所需的 XML 格式。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  已尝试修改列集。 列集的 XML 内容必须满足列集的格式限制要求。 列集的常用格式如下所示：  
   
  `<column_name_1>value1</column_name_1><column_name_2>value2</column_name_2>...`  

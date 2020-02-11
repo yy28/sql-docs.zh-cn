@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 78dfc544d7fd01f6641df6c0968d4a59a668cdd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62960029"
 ---
 # <a name="securing-replication-over-the-internet"></a>Securing Replication Over the Internet
@@ -37,7 +37,7 @@ ms.locfileid: "62960029"
 ## <a name="web-synchronization-through-iis"></a>通过 IIS 的 Web 同步  
  合并复制的 Web 同步选项提供了用 HTTPS 协议复制数据的功能，这是一种通过防火墙复制数据的简便方法。 有关详细信息，请参阅[配置 Web 同步](../configure-web-synchronization.md)和 [Web 同步的安全体系结构](security-architecture-for-web-synchronization.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Replication Security Best Practices](replication-security-best-practices.md)   
  [SQL Server 复制安全性](view-and-modify-replication-security-settings.md)  
   

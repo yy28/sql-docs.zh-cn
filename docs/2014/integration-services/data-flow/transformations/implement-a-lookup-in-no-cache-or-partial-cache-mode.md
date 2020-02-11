@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 97da627058fa6da67e8ef623b267d0f7cbaa6c7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770691"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>在不缓存模式或部分缓存模式下实现查找
@@ -54,7 +54,7 @@ ms.locfileid: "62770691"
   
 7.  在 **“连接”** 页上，从 **“OLE DB 连接管理器”** 列表中选择一个连接管理器，或单击 **“新建”** 创建一个新的连接管理器。 有关详细信息，请参阅 [OLE DB Connection Manager](../../connection-manager/ole-db-connection-manager.md)。  
   
-8.  执行下列步骤之一：  
+8.  执行以下步骤中的一个：  
   
     -   单击 **“使用表或视图”** ，然后选择一个表或视图，或单击 **“新建”** 创建表或视图。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "62770691"
   
 14. 单击 **“确定”** 以保存对查找转换的更改，然后运行包。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 转换](integration-services-transformations.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 第 1 课：创建 Web 服务客户端项目 |Microsoft Docs
+title: 第1课：创建 Web 服务客户端项目 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: aa992d78e8075459115fb4a298b8c8dba02a8157
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62676047"
 ---
 # <a name="lesson-1-creating-the-web-service-client-project"></a>第 1 课：创建 Web 服务客户端项目
@@ -22,22 +22,22 @@ ms.locfileid: "62676047"
   
 ### <a name="to-create-a-console-application"></a>创建控制台应用程序  
   
-1.  上**文件**菜单，依次指向**新建**，然后单击**项目**以打开**新项目**对话框。  
+1.  在 "**文件**" 菜单上，指向 "**新建**"，然后单击 "**项目**" 以打开 "**新建项目**" 对话框。  
   
-2.  在左窗格中下,**已安装的模板**，单击**Visual Basic**或**Visual C#** 节点，然后选择某个类别，项目的类型从展开的列表。  
+2.  在左窗格中的 "**已安装的模板**" 下，单击 " **Visual Basic** " 或 " **Visual c #** " 节点，然后从展开的列表中选择一类项目类型。  
   
-3.  选择**控制台应用程序**项目类型。  
+3.  选择 "**控制台应用程序**" 项目类型。  
   
-4.  在中**名称**框中，输入你的项目的名称。 键入名称`GetPropertiesSample`。  
+4.  在 "**名称**" 框中，输入项目的名称。 键入名称`GetPropertiesSample`。  
   
-5.  在中**位置**框中，输入你想要保存你的项目，或者单击路径**浏览**以导航到的文件夹。  
+5.  在 "**位置**" 框中，输入要保存项目的路径，或单击 "**浏览**" 导航到该文件夹。  
   
-6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] 在解决方案资源管理器中将显示你的项目的折叠的视图。  
+6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]项目的折叠视图以解决方案资源管理器显示。  
   
-     在解决方案资源管理器中，展开该项目节点。 具有默认名称为 Program.cs 的文件 (对于 Module1.vb [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) 已添加到你的项目。  
+     在解决方案资源管理器中，展开该项目节点。 已将默认名称为 Program.cs （为的[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]Module1）的文件添加到项目。  
   
-## <a name="see-also"></a>请参阅  
- [第 2 课：添加 Web 引用](../../2014/tutorials/lesson-2-adding-a-web-reference.md)   
- [访问报表服务器 Web 服务使用 Visual Basic 或 Visual C&#35; &#40;SSRS 教程&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
+## <a name="see-also"></a>另请参阅  
+ [第2课：添加 Web 引用](../../2014/tutorials/lesson-2-adding-a-web-reference.md)   
+ [使用 Visual Basic 或 Visual C&#35; &#40;SSRS 教程访问报表服务器 Web 服务&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
   
   

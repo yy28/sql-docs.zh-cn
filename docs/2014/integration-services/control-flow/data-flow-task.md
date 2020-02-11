@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eab0ef5519aea7f563104d61146ed5f441d15981
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832447"
 ---
 # <a name="data-flow-task"></a>数据流任务
@@ -41,12 +41,14 @@ ms.locfileid: "62832447"
   
  以下关系图显示具有多个数据流的数据流任务。  
   
- ![数据流](../media/mw-dts-09.gif "Data flows")  
+ ![数据流](../media/mw-dts-09.gif "数据流")  
   
 ## <a name="log-entries"></a>日志项  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供了可用于所有任务的一组日志事件。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 还提供了可用于多个任务的自定义日志条目。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../performance/integration-services-ssis-logging.md)和[日志记录的自定义消息](../custom-messages-for-logging.md)。 数据流任务包括下列自定义日志项：  
+ 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供了可用于所有任务的一组日志事件。 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 还提供了可用于多个任务的自定义日志条目。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../performance/integration-services-ssis-logging.md)和[日志记录的自定义消息](../custom-messages-for-logging.md)。 数据流任务包括下列自定义日志项：  
   
-|日志项|Description|  
+|日志项|说明|  
 |---------------|-----------------|  
 |`BufferSizeTuning`|指示数据流任务更改了缓冲区的大小。 日志条目描述了大小更改的原因，并列出了临时的新缓冲区大小。|  
 |`OnPipelinePostEndOfRowset`|表示组件已经给出它的行集结束信号，该信号由对 `ProcessInput` 方法的最后调用设置。 对于数据流中处理输入的每个组件，都会写入一项。 该项包括组件的名称。|  
@@ -86,13 +88,13 @@ ms.locfileid: "62832447"
   
  许多日志事件都写入多个项，并且多个日志条目的消息都包含复杂的数据。 为了便于理解和交流复杂消息的内容，可以对消息文本进行分析。 根据日志的位置，可以使用 Transact-SQL 语句或脚本组件用列或其他更有用的格式来分离复杂文本。  
   
- 例如，下表包含消息“已经为数据流组件提供了若干行作为输入。 :  :1185:OLE DB 源输出:1180:排序:1181:对输入进行排序:76”，已解析为列。 该消息由 `OnPipelineRowsSent` 事件在将行从 OLE DB 源发送到排序转换时写入。  
+ 例如，下表包含消息“已经为数据流组件提供了若干行作为输入。 :  : 1185 : OLE DB 源输出 : 1180 : 排序 : 1181 : 对输入进行排序 : 76”，并解析为列。 该消息由 `OnPipelineRowsSent` 事件在将行从 OLE DB 源发送到排序转换时写入。  
   
-|“列”|Description|ReplTest1|  
+|列|说明|值|  
 |------------|-----------------|-----------|  
 |**PathID**|OLE DB 源和排序转换之间的路径中的 `ID` 属性值。|1185|  
 |**PathName**|路径的 `Name` 属性值。|OLE DB 源输出|  
-|**ComponentID**|值`ID`排序转换的属性。|1180|  
+|**Id**|排序转换的`ID`属性的值。|1180|  
 |**ComponentName**|排序转换的 `Name` 属性值。|排序|  
 |**InputID**|排序转换的输入的 `ID` 属性值。|1181|  
 |**InputName**|排序转换的输入的 `Name` 属性值。|对输入进行排序|  

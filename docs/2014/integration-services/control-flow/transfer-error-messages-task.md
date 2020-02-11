@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eaefd6e7ae4748505db9bd84601de6166f9d5f98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830119"
 ---
 # <a name="transfer-error-messages-task"></a>传输错误消息任务
@@ -40,7 +40,7 @@ ms.locfileid: "62830119"
   
  传输错误消息任务支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 源和目标。 对于使用哪个版本作为源或目标，没有限制。  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>事件  
  该任务引发一个报告已经传输的错误消息数的信息事件。  
   
  传输错误消息任务并不报告错误消息传输的进度，它仅报告 0% 和 100 % 完成。  
@@ -57,7 +57,7 @@ ms.locfileid: "62830119"
   
  此外，`OnInformation` 事件的日志项报告已传输的错误消息数，`OnWarning event`的日志项是为目标服务器上被覆盖的每个错误消息写入的。  
   
-## <a name="security-and-permissions"></a>安全性和权限  
+## <a name="security-and-permissions"></a>安全和权限  
  若要新建错误消息，运行该包的用户必须是目标服务器上 sysadmin 的成员或 serveradmin 服务器角色。  
   
 ## <a name="configuration-of-the-transfer-error-messages-task"></a>配置传输错误消息任务  
@@ -65,7 +65,7 @@ ms.locfileid: "62830119"
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   
--   [传输错误消息任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)  
+-   [传输错误消息任务编辑器 &#40;常规页&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [传输错误消息任务编辑器（“消息”页）](../transfer-error-messages-task-editor-messages-page.md)  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62830119"
   
 -   [设置任务或容器的属性](../set-the-properties-of-a-task-or-container.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 任务](integration-services-tasks.md)   
  [控制流](control-flow.md)  
   

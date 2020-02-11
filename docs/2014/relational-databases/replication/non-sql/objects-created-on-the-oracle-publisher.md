@@ -13,16 +13,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99e1d1f0692e5460e2c7003b0ab8dca860deca4f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022147"
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>Objects Created on the Oracle Publisher
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制将数据库对象安装在 Oracle 发布服务器上以启用更改跟踪和转发（[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不会在 Oracle 发布服务器上安装任何二进制文件）。 下表列出了在将 Oracle 发布服务器标识为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器上的发布服务器时，在其上所创建的对象。 对象说明仅供参考。 不应对这些对象做任何修改。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]复制会将数据库对象安装在 Oracle 发布服务器上以启用更改跟踪[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]和转发（不会在 Oracle 发布服务器上安装任何二进制文件）。 下表列出了在将 Oracle 发布服务器标识为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器上的发布服务器时，在其上所创建的对象。 对象说明仅供参考。 不应对这些对象做任何修改。  
   
-|Object Name|对象类型|Description|  
+|对象名称|对象类型|说明|  
 |-----------------|-----------------|-----------------|  
 |HREPL_ArticleNlog_V|表|更改跟踪表，当对已发布的表中进行了更改时，可使用此表存储更改信息。 为每个已发布的表创建一个更改跟踪表。|  
 |HREPL_Changes|表|Xactset 作业内部用来确定等待分配给事务集的更改数量的表。 有关此作业的详细信息，请参阅 [Performance Tuning for Oracle Publishers](performance-tuning-for-oracle-publishers.md)（Oracle 发布服务器的性能优化）。|  
@@ -45,10 +45,10 @@ ms.locfileid: "63022147"
 |HREPL_ExecuteCommand|过程|在 Oracle 发布包代码之外定义的、用于在发布服务器上执行命令的过程。|  
 |HREPL_ArticleN_Trigger_Row|触发器|为每个已发布表生成的、用于跟踪行更改的触发器。|  
 |HREPL_ArticleN_Trigger_Stmt|触发器|为每个已发布表生成的、用于跟踪语句级更改的触发器。|  
-|HREPL_Article_I_J|“查看”|为每个已发布表创建的、用于查询已发布表的视图。|  
-|HREPL_Log_I_J_K|“查看”|为每个已发布表创建的、用于查询更改跟踪表的视图。|  
+|HREPL_Article_I_J|查看|为每个已发布表创建的、用于查询已发布表的视图。|  
+|HREPL_Log_I_J_K|查看|为每个已发布表创建的、用于查询更改跟踪表的视图。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置 Oracle 发布服务器](configure-an-oracle-publisher.md)   
  [有关 Oracle 发布的术语词汇表](glossary-of-terms-for-oracle-publishing.md)   
  [Oracle 发布概述](oracle-publishing-overview.md)  

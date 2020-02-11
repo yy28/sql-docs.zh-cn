@@ -1,5 +1,5 @@
 ---
-title: 第 5 课：扩展时序模型 |Microsoft Docs
+title: 第5课：扩展时序模型 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2716e985897f8115d189d9410b7cdb13fb1af291
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62822057"
 ---
 # <a name="lesson-5-extending-the-time-series-model"></a>第 5 课：扩展时序模型
@@ -26,7 +26,7 @@ ms.locfileid: "62822057"
   
  例如，假定您已经在几个月之前为现有销售数据的挖掘模型定型。 当您获得新的销售数据时，您可能希望更新销售预测以合并新数据。 这可以通过一个步骤来完成，即提供新销售数字作为输入数据并基于复合数据集生成新预测。  
   
-## <a name="making-predictions-with-extendmodelcases"></a>使用 EXTEND_MODEL_CASES 进行预测  
+## <a name="making-predictions-with-extend_model_cases"></a>使用 EXTEND_MODEL_CASES 进行预测  
  下面是几个使用 EXTEND_MODEL_CASES 进行时序预测的一般示例。 第一个示例使您能够从原始模型的最后一个时间步长开始指定预测数：  
   
 ```  
@@ -49,7 +49,7 @@ PREDICTION JOIN <source query>
   
 #### <a name="to-create-a-singleton-prediction-query-on-a-time-series-model"></a>针对时序模型创建单独预测查询  
   
-1.  在中**对象资源管理器**，右键单击该实例的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，依次指向**新查询**，然后单击**DMX**。  
+1.  在**对象资源管理器**中，右键单击实例[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，指向 "**新建查询**"，然后单击 " **DMX**"。  
   
      将打开查询编辑器，其中包含一个新的空白查询。  
   
@@ -61,7 +61,7 @@ PREDICTION JOIN <source query>
     SELECT [<model columns>,] PredictTimeSeries(<table column reference>, n, EXTEND_MODEL_CASES)   
     ```  
   
-     使用：  
+     替换为：  
   
     ```  
     SELECT [Model Region],  
@@ -78,7 +78,7 @@ PREDICTION JOIN <source query>
     FROM <mining model>  
     ```  
   
-     使用：  
+     替换为：  
   
     ```  
     FROM [Forecasting_MIXED]  
@@ -90,7 +90,7 @@ PREDICTION JOIN <source query>
     PREDICTION JOIN <source query>  
     ```  
   
-     使用：  
+     替换为：  
   
     ```  
     NATURAL PREDICTION JOIN   
@@ -111,7 +111,7 @@ PREDICTION JOIN <source query>
     [WHERE <criteria>]  
     ```  
   
-     使用：  
+     替换为：  
   
     ```  
     WHERE [ModelRegion] = 'M200 Europe' OR  
@@ -138,15 +138,15 @@ PREDICTION JOIN <source query>
     [ModelRegion] = 'M200 Pacific'  
     ```  
   
-7.  上**文件**菜单上，单击**另存 dmxquery1.dmx 另存为**。  
+7.  在 "**文件**" 菜单上，单击 "**将 DMXQuery1 另存为**"。  
   
-8.  在中**另存为**对话框中，浏览到相应的文件夹，并将文件命名`Singleton_TimeSeries_Query.dmx`。  
+8.  在 "**另存为**" 对话框中，浏览到相应的文件夹，并将`Singleton_TimeSeries_Query.dmx`该文件命名为。  
   
-9. 在工具栏上，单击**Execute**按钮。  
+9. 在工具栏上，单击 "**执行**" 按钮。  
   
      该查询将返回 Europe 和 Pacific 地区 M200 自行车的销售量预测。  
   
-## <a name="understanding-prediction-start-with-extendmodelcases"></a>了解以 EXTEND_MODEL_CASES 开始的预测  
+## <a name="understanding-prediction-start-with-extend_model_cases"></a>了解以 EXTEND_MODEL_CASES 开始的预测  
  现在，您已经基于原始模型用新数据创建了预测，现在可以对结果进行比较，以了解销售数据更新对预测的影响。 在这样做之前，请检查刚创建的代码，并注意以下事项：  
   
 -   您仅为 Europe 地区提供了新数据。  
@@ -155,7 +155,7 @@ PREDICTION JOIN <source query>
   
  下表显示了为 M200 Europe 提供的新值对预测的影响。 您没有为 Pacific 地区的 M200 产品提供任何新数据，只是为了进行比较而提供此序列：  
   
- **产品和区域：M200 Europe**  
+ **产品和区域： M200 欧洲**  
   
 |||||  
 |-|-|-|-|  
@@ -167,7 +167,7 @@ PREDICTION JOIN <source query>
 |M200 Europe|11/25/2008 12:00:00 AM|56|68|  
 |M200 Europe|12/25/2008 12:00:00 AM|74|89|  
   
- **产品和区域：M200 Pacific**  
+ **产品和区域： M200 太平洋**  
   
 |||||  
 |-|-|-|-|  
@@ -192,7 +192,7 @@ PREDICTION JOIN <source query>
   
 -   请求对四个时间段进行预测，其中起点是时间片 3，终点是时间片 6。  
   
- 换而言之，如果您的新数据包含 n 个时间段，并请求对时间步长 1 至 n，则预测将与新数据的时间段一致。 若要获取对数据未覆盖的时间段的新预测，您必须从新数据序列之后的时间段 n+1 处开始预测，或者确保您请求了其他的时间段。  
+ 换言之，如果您的新数据包含 n 个时间段，并且您请求对时间步长1至 n 进行预测，则预测将与新数据的时间段一致。 若要获取对数据未覆盖的时间段的新预测，您必须从新数据序列之后的时间段 n+1 处开始预测，或者确保您请求了其他的时间段。  
   
 > [!NOTE]  
 >  添加新数据时不能进行历史预测。  
@@ -218,7 +218,7 @@ WHERE [ModelRegion] = 'M200 Europe'
   
  预测结果从时间段 3 开始，该时间段在您提供的 2 个月的新数据之后。  
   
- **产品和区域：M200 Europe**  
+ **产品和区域： M200 欧洲**  
   
  具有更新数据的模型（具有 EXTEND_MODEL_CASES 的 PredictTimeSeries）  
   
@@ -229,11 +229,11 @@ WHERE [ModelRegion] = 'M200 Europe'
 |M200 Europe|11/25/2008 12:00:00 AM|68|  
 |M200 Europe|12/25/2008 12:00:00 AM|89|  
   
-## <a name="making-predictions-with-replacemodelcases"></a>使用 REPLACE_MODEL_CASES 进行预测  
- 如果您想对一组事例的某个模型定型，然后将该模型应用到不同的数据序列，则替换模型事例非常有用。 此方案的详细的演练所示[第 2 课：生成预测方案&#40;数据挖掘中级教程&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)。  
+## <a name="making-predictions-with-replace_model_cases"></a>使用 REPLACE_MODEL_CASES 进行预测  
+ 如果您想对一组事例的某个模型定型，然后将该模型应用到不同的数据序列，则替换模型事例非常有用。 [第2课：生成预测方案 &#40;中级数据挖掘教程&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)中提供了此方案的详细演练。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [时序模型查询示例](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
- [PredictTimeSeries (DMX)](/sql/dmx/predicttimeseries-dmx)  
+ [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)  
   
   

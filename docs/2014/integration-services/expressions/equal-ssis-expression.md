@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: be894aa43636cc81c9dbd462cb8b5aff55dbcd84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769263"
 ---
 # <a name="-equal-ssis-expression"></a>==（等于）（SSIS 表达式）
@@ -35,7 +35,7 @@ expression1 == expression2
   
 ## <a name="arguments"></a>参数  
  *expression1、expression2*  
- 为任意有效的表达式。  
+ 为任何有效的表达式。  
   
 ## <a name="result-types"></a>结果类型  
  DT_BOOL  
@@ -45,14 +45,14 @@ expression1 == expression2
   
  表达式集， *expression1* 和 *expression2*，必须遵守下列规则之一：  
   
--   **Numeric**   *expression1* 和 *expression2* 必须为数值数据类型。 数据类型的交集必须为数值数据类型，此类型在表达式计算器隐式数值转换的有关规则中指定。 两个数值数据类型的交集不能为空。 有关详细信息，请参阅 [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md)。  
+-   **Numeric***expression1* 和 *expression2* 必须为数值数据类型。 数据类型的交集必须为数值数据类型，此类型在表达式计算器隐式数值转换的有关规则中指定。 两个数值数据类型的交集不能为空。 有关详细信息，请参阅 [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md)。  
   
 -   **Character** ： *expression1* 和 *expression2* 的计算结果必须为 DT_STR 或 DT_WSTR 数据类型。 两个表达式的计算结果可以为不同的字符串数据类型。  
   
     > [!NOTE]  
     >  字符串比较区分大小写、重音、假名和全半角。  
   
--   **“日期”、“时间”或“日期/时间”** ：expression1  和 expression2  的计算结果必须为下面的数据类型之一：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
+-   **Date、Time 或 Date/Time***expression1* 和 *expression2* 的计算结果必须为下列数据类型之一：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
   
     > [!NOTE]  
     >  系统不支持对计算结果为时间数据类型的表达式和计算结果为日期或日期/时间数据类型的表达式进行比较。 否则系统会生成错误。  
@@ -75,13 +75,13 @@ expression1 == expression2
   
     -   如果每个表达式都是日期数据类型，但是只有一个表达式具有时区偏移量，系统会假设没有时区偏移量的日期数据类型采用的是协调世界时 (UTC)。  
   
--   **Logical**   *expression1* 和 *expression2* 的计算结果必须为布尔值。  
+-   **Logical***expression1* 和 *expression2* 的计算结果必须为布尔值。  
   
 -   **GUID** ： *expression1* 和 *expression2* 的计算结果必须为 DT_GUID 数据类型。  
   
 -   **Binary** ： *expression1* 和 *expression2* 的计算结果必须为 DT_BYTES 数据类型。  
   
--   **BLOB**：expression1 和 expression2 的计算结果必须为同一个二进制大型对象块 (BLOB) 数据类型：   DT_TEXT、DT_NTEXT 或 DT_IMAGE。  
+-   **BLOB** ： *expression1* 和 *expression2* 的计算结果必须为同一 BLOB（二进制大型对象块）数据类型：DT_TEXT、DT_NTEXT 或 DT_IMAGE。  
   
  有关数据类型的详细信息，请参阅 [Integration Services Data Types](../data-flow/integration-services-data-types.md)。  
   
@@ -102,8 +102,8 @@ ListPrice == 500
 @LPrice == 500  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [!=（不等于）（SSIS 表达式）](equal-ssis-expression.md)   
+## <a name="see-also"></a>另请参阅  
+ [\!=（不等于）（SSIS 表达式）](equal-ssis-expression.md)   
  [运算符优先级和结合性](operator-precedence-and-associativity.md)   
  [运算符（SSIS 表达式）](operators-ssis-expression.md)  
   

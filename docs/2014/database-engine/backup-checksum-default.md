@@ -10,10 +10,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1db1ae871082ffe5b638e249592c75064eba47fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62788796"
 ---
 # <a name="backup-checksum-default"></a>备份校验和默认值
@@ -23,13 +23,13 @@ ms.locfileid: "62788796"
   
 |||  
 |-|-|  
-|**ReplTest1**|**含义**|  
+|**值**|**含义**|  
 |0|已禁用。 这是默认设置。|  
-|1|Enabled|  
+|1|已启用|  
   
- 此设置将立即生效。  
+ 设置立即生效。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在备份或还原期间启用或禁用备份校验和 (SQL Server)](../relational-databases/backup-restore/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  
   
   

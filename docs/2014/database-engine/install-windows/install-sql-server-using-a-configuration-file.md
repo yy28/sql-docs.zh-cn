@@ -1,5 +1,5 @@
 ---
-title: 安装 SQL Server 2014 使用配置文件 |Microsoft Docs
+title: 使用配置文件安装 SQL Server 2014 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/20/2016
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 38cd8aeb157a94a28b1cfd831bcfacfb3e93ea6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62775280"
 ---
 # <a name="install-sql-server-2014-using-a-configuration-file"></a>使用配置文件安装 SQL Server 2014
@@ -52,11 +52,12 @@ FEATURES=SQL,Tools
 1.  插入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装介质， 然后双击根文件夹中的 Setup.exe。 若要从网络共享进行安装，请找到共享中的根文件夹，然后双击 Setup.exe。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Edition 安装程序不会自动创建配置文件。 以下命令将启动安装程序并创建配置文件。  
+    >  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Edition 安装程序不会自动创建配置文件。 以下命令将启动安装程序并创建配置文件。  
     >   
     >  SETUP.exe /UIMODE=Normal /ACTION=INSTALL  
   
-2.  按照向导操作，直到出现 **“准备安装”** 页。 配置文件的路径是在 **“准备安装”** 页的配置文件路径部分中指定的。 有关如何安装详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[从安装向导安装 SQL Server 2014&#40;安装&#41;](install-sql-server-from-the-installation-wizard-setup.md)。  
+2.  按照向导操作，直到出现 **“准备安装”** 页。 配置文件的路径是在 **“准备安装”** 页的配置文件路径部分中指定的。 有关如何安装[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的详细信息，请参阅安装[向导中的安装 SQL Server 2014 &#40;安装&#41;](install-sql-server-from-the-installation-wizard-setup.md)。  
   
 3.  取消安装并且不要真正完成安装，以便生成 INI 文件。  
   
@@ -71,23 +72,23 @@ FEATURES=SQL,Tools
   
 #### <a name="how-to-use-a-configuration-file-to-install-a-stand-alone-includessnoversionincludesssnoversion-mdmd-instance"></a>如何使用配置文件安装独立的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例  
   
--   通过命令提示符运行安装，然后使用 *ConfigurationFile* 参数提供 ConfigurationFile.ini 文件。  
+-   在命令提示符下运行安装，并使用*configurationfile.ini*参数提供 configurationfile.ini。  
   
 #### <a name="how-to-use-a-configuration-file-to-prepare-and-complete-an-image-of-a-stand-alone-includessnoversionincludesssnoversion-mdmd-instance-sysprep"></a>如何使用配置文件准备和完成独立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的映像 (SysPrep)  
   
 1.  准备一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例并在同一计算机上配置它们。  
   
-    -   从安装中心的“高级”页运行“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的独立实例的映像准备”，并捕获准备映像配置文件。  
+    -   从安装中心的**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“高级”页运行****“** 的独立实例的映像准备”，并捕获准备映像配置文件。  
   
     -   将同一个准备映像配置文件用作准备 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的多个实例的模板。  
   
-    -   从安装中心的“高级”页运行“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已准备独立实例的映像完成”，以便在计算机上配置准备的实例。  
+    -   从安装中心的**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“高级”页运行****“** 的已准备独立实例的映像完成”，以便在计算机上配置准备的实例。  
   
 2.  使用 Windows SysPrep 工具准备操作系统的映像，包括未配置的、已准备的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
-    -   从安装中心的“高级”页运行“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的独立实例的映像准备”，并捕获准备映像配置文件。  
+    -   从安装中心的“高级”页运行**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“** 的独立实例的映像准备”，并捕获准备映像配置文件。  
   
-    -   从安装中心的“高级”页运行“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已准备独立实例的映像完成”，但在捕获完全的配置文件之后，在“已准备好完成”页上取消它。  
+    -   从安装中心的**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“高级”页运行****“** 的已准备独立实例的映像完成”，但在捕获完全的配置文件之后，在****“已准备好完成”页上取消它。  
   
     -   可以将完全的映像配置文件随 Windows 映像一起存储，以便自动执行已准备实例的配置。  
   
@@ -138,7 +139,7 @@ Setup.exe /ConfigurationFile=MyConfigurationFile.INI
 Setup.exe /SQLSVCPASSWORD="************" /AGTSVCPASSWORD="************" /ASSVCPASSWORD="************" /ISSVCPASSWORD="************" /RSSVCPASSWORD="************" /ConfigurationFile=MyConfigurationFile.INI  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [从命令提示符安装 SQL Server 2014](install-sql-server-from-the-command-prompt.md)   
  [SQL Server 故障转移群集安装](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)   
  [升级 SQL Server 故障转移群集](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)  

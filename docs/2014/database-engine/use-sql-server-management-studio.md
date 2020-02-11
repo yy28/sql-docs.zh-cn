@@ -15,18 +15,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 544d4b40c66f345aa563cbc96380639c729ae1d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773868"
 ---
 # <a name="use-sql-server-management-studio"></a>使用 SQL Server Management Studio
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) 是用于访问、 配置、 管理、 管理和开发的所有组件的集成的环境[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 SSMS 将大量图形工具与丰富的脚本编辑器相结合，使各种技术水平的开发人员和管理员都能访问 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]（SSMS）是一个集成环境，用于访问、配置、管理和开发的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]所有组件。 SSMS 将大量图形工具与丰富的脚本编辑器相结合，使各种技术水平的开发人员和管理员都能访问 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
   
  SSMS 将早期版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中所包含的企业管理器、查询分析器和 Analysis Manager 结合到单一的环境中。 此外，SSMS 还可以与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的所有组件（例如 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]）协同工作。 开发人员可以获得熟悉的体验，而数据库管理员可获得功能齐全的单一实用工具，其中包含易于使用的图形工具和丰富的脚本撰写功能。  
   
- 下载并安装从 SSMS [Microsoft Developer Network](https://msdn.microsoft.com/library/dn434042.aspx)。  
+ 从[Microsoft 开发人员网络](https://msdn.microsoft.com/library/dn434042.aspx)下载和安装 SSMS。  
   
 ## <a name="in-this-section"></a>本节内容  
  [SQL Server Management Studio 中的功能](features-in-sql-server-management-studio.md)  
@@ -77,7 +77,7 @@ ms.locfileid: "62773868"
  [Visual Database Tool 设计器](../ssms/visual-db-tools/visual-database-tool-designers.md)  
  介绍了 Visual Database Tools，您可以使用它来创建查询，设计或修改数据库结构或更新数据。  
   
-## <a name="see-also"></a>请参阅  
- [查看或更改服务器属性 (SQL Server)](configure-windows/view-or-change-server-properties-sql-server.md)  
+## <a name="see-also"></a>另请参阅  
+ [查看或更改服务器属性 &#40;SQL Server&#41;](configure-windows/view-or-change-server-properties-sql-server.md)  
   
   

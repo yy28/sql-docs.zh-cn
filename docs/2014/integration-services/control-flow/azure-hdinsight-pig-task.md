@@ -14,31 +14,31 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3da6ce80cc9e7bff25614e8589b4bf85dfc68e81
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832701"
 ---
 # <a name="azure-hdinsight-pig-task"></a>Azure HDInsight Pig 任务
 使用 **“Azure HDInsight Pig 任务”** 在 Azure HDInsight 群集上运行 Pig 脚本。
      
-若要添加“Azure HDInsight Pig 任务”，可将其拖放到 SSIS 设计器，并双击或右键单击该任务，然后单击“编辑”，以查看以下“Azure HDInsight Pig 任务编辑器”对话框。  
+若要添加“Azure HDInsight Pig 任务”  ，可将其拖放到 SSIS 设计器，并双击或右键单击该任务，然后单击“编辑”  ，以查看以下“Azure HDInsight Pig 任务编辑器”  对话框。  
   
  以下列表介绍了此对话框中的字段。  
   
-1.  对于 HDInsightConnection 字段，请选择一个现有 Azure HDInsight 连接管理器，或创建一个新的连接管理器，引用用于执行脚本的 Azure HDInsight 群集。
+1.  对于 HDInsightConnection 字段，请选择现有的 Azure HDInsight 连接管理器或创建一个新的 Azure HDInsight 群集，用于执行该脚本****。
   
-2.  对于 AzureStorageConnection 字段，请选择一个现有 Azure 存储连接管理器，或创建一个新的连接管理器，引用与群集关联的 Azure 存储帐户。 只有在需要下载脚本执行输出和错误日志时，才需要执行此操作。
+2.  对于 AzureStorageConnection 字段，请选择一个现有 Azure 存储连接管理器，或创建一个新的连接管理器，引用与群集关联的 Azure 存储帐户****。 只有在需要下载脚本执行输出和错误日志时，此操作才有必要。
  
-3.  对于 BlobContainer 字段，指定与群集关联的存储容器名称。 只有在需要下载脚本执行输出和错误日志时，才需要执行此操作。
+3.  对于 BlobContainer 字段，指定与群集关联的存储容器名称****。 只有在需要下载脚本执行输出和错误日志时，此操作才有必要。
   
-4.  对于 LocalLogFolder 字段，指定脚本执行输出和错误日志要下载到的文件夹。 只有在需要下载脚本执行输出和错误日志时，此操作才有必要。   
+4.  对于 LocalLogFolder 字段，指定脚本执行输出和错误日志要下载到的文件夹****。 只有在需要下载脚本执行输出和错误日志时，此操作才有必要。   
   
 5.  有两种方法可指定要执行的 Pig 脚本：
   
-    1.  **内联脚本**：通过在“输入脚本”对话框中键入要执行的内联脚本来指定“脚本”字段。
+    1.  **内联脚本**：通过在 "**输入脚本**" 对话框中键入要执行的脚本来指定**脚本**字段。
   
-    2.  **脚本文件**：将脚本文件上传到 Azure Blob 存储，并指定“BlobName”字段。 如果该 blob 不在默认存储帐户或与 HDInsight 群集关联的容器中，则必须指定 ExternalStorageAccountName 和 ExternalBlobContainer 字段。 对于外部 blob，请确保它已配置为可公开访问。  
+    2.  **脚本文件**：将脚本文件上传到 Azure Blob 存储，并指定**BlobName**字段。 如果该 blob 不在默认存储帐户或与 HDInsight 群集关联的容器中，则必须指定 ExternalStorageAccountName 和 ExternalBlobContainer 字段********。 对于外部 blob，请确保它已配置为可公开访问。  
   
      如果同时指定两者，则使用脚本文件并忽略内联脚本。

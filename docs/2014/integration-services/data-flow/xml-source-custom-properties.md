@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e5c992253304d2a1c493f52a9e24cf569ff29883
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770181"
 ---
 # <a name="xml-source-custom-properties"></a>XML 源自定义属性
@@ -22,7 +22,7 @@ ms.locfileid: "62770181"
   
  下表介绍 XML 源的自定义属性。 所有属性均可读/写。  
   
-|属性名称|数据类型|Description|  
+|属性名称|数据类型|说明|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer|用来访问 XML 数据的模式。|  
 |UseInlineSchema|Boolean|该值指示是否要在 XML 源中使用内联架构定义。 此属性的默认值为 `False`。|  
@@ -31,7 +31,7 @@ ms.locfileid: "62770181"
   
  下表描述了 XML 源的输出的自定义属性。 所有属性均可读/写。  
   
-|属性名称|数据类型|Description|  
+|属性名称|数据类型|说明|  
 |-------------------|---------------|-----------------|  
 |RowsetID|String|标识与输出关联的行集的值。|  
   
@@ -39,7 +39,7 @@ ms.locfileid: "62770181"
   
  有关详细信息，请参阅 [XML Source](xml-source.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Common Properties](../common-properties.md)  
   
   

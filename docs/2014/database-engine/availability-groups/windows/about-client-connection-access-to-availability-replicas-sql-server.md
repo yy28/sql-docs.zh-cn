@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13a863603353ee47639cd327c8c5eebd6df8e12a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62789839"
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>关于对可用性副本的客户端连接访问 (SQL Server)
@@ -53,7 +53,7 @@ ms.locfileid: "62789839"
  不允许任何用户连接。 辅助数据库不可用于读访问。 这是辅助角色中的默认行为。  
   
  仅读意向连接  
- 辅助数据库都仅适用于其`Application Intent`连接属性设置为`ReadOnly`(*读意向连接*)。  
+ 辅助数据库仅适用于`Application Intent`连接属性设置为`ReadOnly`的连接（*读意向连接*）。  
   
  有关此连接属性的信息，请参阅 [对高可用性、灾难恢复的 SQL Server Native Client 支持](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62789839"
  主数据库同时允许读写连接和只读连接。 这是主角色的默认行为。  
   
  仅允许读/写连接  
- 当`Application Intent`连接属性设置为**ReadWrite**或未设置，允许的连接。 连接为其`Application Intent`连接字符串关键字设置为`ReadOnly`不允许。 仅允许读写连接可帮助防止您的客户错误地将读意向工作负荷连接到主副本。  
+ 如果`Application Intent`连接属性设置为**ReadWrite**或未设置，则允许连接。 不允许`Application Intent`连接字符串关键字设置为`ReadOnly`的连接。 仅允许读写连接可帮助防止您的客户错误地将读意向工作负荷连接到主副本。  
   
  有关此连接属性的信息，请参阅 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
   
@@ -80,13 +80,13 @@ ms.locfileid: "62789839"
   
 |副本角色|副本上支持的连接访问|连接意向|连接尝试结果|  
 |------------------|--------------------------------------------|-----------------------|--------------------------------|  
-|辅助副本|All|指定了读意向、读写意向或未指定连接意向|成功|  
+|辅助副本|All|指定了读意向、读写意向或未指定连接意向|Success|  
 |辅助副本|无（这是默认辅助行为。）|指定了读意向、读写意向或未指定连接意向|失败|  
-|辅助副本|仅限读意向|读意向|成功|  
+|辅助副本|仅限读意向|读意向|Success|  
 |辅助副本|仅限读意向|指定了读写意向或未指定连接意向|失败|  
-|基本|所有（这是默认主要行为。）|指定了只读意向、读写意向或未指定连接意向|成功|  
-|基本|读写|仅限读意向|失败|  
-|基本|读写|指定了读写意向或未指定连接意向|成功|  
+|主|所有（这是默认主要行为。）|指定了只读意向、读写意向或未指定连接意向|Success|  
+|主|读写|仅限读意向|失败|  
+|主|读写|指定了读写意向或未指定连接意向|Success|  
   
  有关配置可用性组接受到其副本的客户端连接的信息，请参阅， [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../listeners-client-connectivity-application-failover.md)。  
   
@@ -97,8 +97,8 @@ ms.locfileid: "62789839"
   
 |副本|提交模式|初始角色|辅助角色的连接访问|主角色的连接访问|  
 |-------------|-----------------|------------------|------------------------------------------|----------------------------------------|  
-|Replica1|同步|基本|None|读写|  
-|Replica2|同步|辅助副本|None|读写|  
+|Replica1|同步|主|无|读写|  
+|Replica2|同步|辅助副本|无|读写|  
 |Replica3|异步|辅助副本|仅读意向|读写|  
 |Replica4|异步|辅助副本|仅限读意向|读写|  
   
@@ -118,12 +118,12 @@ ms.locfileid: "62789839"
   
 ##  <a name="RelatedContent"></a> 相关内容  
   
--   [Microsoft SQL Server AlwaysOn 解决方案指南有关高可用性和灾难恢复](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 官方团队博客](https://blogs.msdn.com/b/sqlalwayson/)  
   
-## <a name="see-also"></a>请参阅  
- [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>另请参阅  
+ [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [可用性组侦听程序、客户端连接和应用程序故障转移 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [统计信息](../../../relational-databases/statistics/statistics.md)  
   

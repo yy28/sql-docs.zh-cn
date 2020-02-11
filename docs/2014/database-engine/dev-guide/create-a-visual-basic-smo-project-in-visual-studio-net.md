@@ -1,5 +1,5 @@
 ---
-title: 在 Visual Studio.NET 中创建 Visual Basic SMO 项目 |Microsoft Docs
+title: 在 Visual Studio .NET 中创建 Visual Basic SMO 项目 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 662916720b9953e0374bedb29890a36ced0cfac0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62753332"
 ---
 # <a name="create-a-visual-basic-smo-project-in-visual-studio-net"></a>在 Visual Studio .NET 中创建 Visual Basic SMO 项目
@@ -30,17 +30,17 @@ ms.locfileid: "62753332"
   
 1.  启动 [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]（或 [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)]）。  
   
-2.  在“文件”菜单中，单击“新建项目”。   此时将显示“新建项目”  对话框。  
+2.  在“文件”菜单中，单击“新建项目”。   将显示“新建项目”对话框  。  
   
-3.  在中**项目类型**对话框中，选择**Visual Basic**，然后选择**Windows**。 在中[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]已安装的模板窗格中，选择**控制台应用程序。**  
+3.  在 "**项目类型**" 对话框中，选择 " **Visual Basic**"，然后选择 " **Windows**"。 在 " [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]已安装的模板" 窗格中选择 "**控制台应用程序"。**  
   
-4.  （可选）在中**名称**字段中，键入新应用程序的名称。  
+4.  可有可无在 "**名称**" 字段中，键入新应用程序的名称。  
   
-5.  单击**确定**加载[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]控制台应用程序模板。  
+5.  单击 **"确定"** 加载[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] "控制台应用程序" 模板。  
   
 6.  在“项目”菜单中，选择“添加引用”。   此时将显示“添加引用”对话框。   
   
-7.  单击**浏览**，在 C:\Program Files\Microsoft SQL Server\120\SDK\Assemblies 文件夹中，找到 SMO 程序集，然后选择以下文件。 这些文件是构建一个 SMO 应用程序至少需要的文件：  
+7.  单击 "**浏览**"，找到 C:\PROGRAM Files\Microsoft SQL Server\120\SDK\Assemblies 文件夹中的 SMO 程序集，然后选择以下文件。 这些文件是构建一个 SMO 应用程序至少需要的文件：  
   
      Microsoft.SqlServer.ConnectionInfo.dll  
   
@@ -59,9 +59,9 @@ ms.locfileid: "62753332"
   
 9. 单击 **“打开”** 。  
   
-10. 上**视图**菜单上，单击**代码**。 或者选择 Module1.vb 窗口以显示代码窗口。  
+10. 在 "**视图**" 菜单上，单击 "**代码**"，或选择 "Module1" 窗口以显示代码窗口。  
   
-11. 在代码中，任何声明前，键入以下内容**导入**语句以限定 SMO 命名空间中的类型。  
+11. 在代码的任何声明前，键入以下**Imports**语句以限定 SMO 命名空间中的类型。  
   
     ```  
     Imports Microsoft.SqlServer.Management.Smo  

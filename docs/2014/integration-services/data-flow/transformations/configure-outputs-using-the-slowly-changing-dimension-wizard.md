@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c0e64b60c027f7d6750a1afdb9988e1d6aac3ac1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770601"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>使用渐变维度向导配置输出
@@ -48,11 +48,11 @@ ms.locfileid: "62770601"
   
 4.  选择每列的更改类型。  
   
-    -   **“变化的属性”** 覆盖记录中的现有值。  
+    -   **更改属性**将覆盖记录中的现有值。  
   
-    -   **“历史属性”** 创建新记录而不更新现有记录。  
+    -   **历史属性**创建新记录，而不是更新现有记录。  
   
-    -   **“固定的属性”** 指示列值不得更改。  
+    -   **Fixed 属性**指示列值不得更改。  
   
 5.  设置固定和变化的属性选项。  
   
@@ -74,12 +74,12 @@ ms.locfileid: "62770601"
   
      下列关系图所示的示例数据流支持固定的属性更改、变化的属性更改以及历史属性更改、推断成员和对匹配记录的更改。  
   
-     ![渐变维度向导的数据流](../../media/dimensionwizard.gif "Data flow from Slowly Changing Dimension Wizard")  
+     ![渐变维度向导的数据流](../../media/dimensionwizard.gif "渐变维度向导的数据流")  
   
 ## <a name="updating-slowly-changing-dimension-outputs"></a>更新渐变维度输出  
  更新渐变维度转换输出配置的最简单方法就是重新运行渐变维度向导并从向导页修改属性。 也可以使用 **“高级编辑器”** 对话框或以编程方式更新渐变维度转换。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Slowly Changing Dimension Transformation](slowly-changing-dimension-transformation.md)  
   
   

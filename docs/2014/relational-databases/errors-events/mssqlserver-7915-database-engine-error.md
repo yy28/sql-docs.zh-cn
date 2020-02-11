@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fb60bfa05e75c06b7da04042aa1abfbd42b756c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761909"
 ---
-# <a name="mssqlserver7915"></a>MSSQLSERVER_7915
+# <a name="mssqlserver_7915"></a>MSSQLSERVER_7915
     
 ## <a name="details"></a>详细信息  
   
@@ -30,12 +30,12 @@ ms.locfileid: "62761909"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC2_REPAIR_IAM_CHAIN_REBUILT|  
-|消息正文|修复:对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID （类型为 TYPE） 的 IAM 链已在页 P_ID 前截断，并将重新生成。|  
+|消息正文|修复: 对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID（类型为 TYPE）的 IAM 链已在页 P_ID 前截断，将重新生成该链。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  这是 REPAIR 发送的信息性消息，指示修补了指定的索引分配映射 (IAM) 链，以便可以重新生成它。 此修补可能需要分配新的 IAM 链头或者删除错误页。  
   
 ## <a name="user-action"></a>用户操作  
- None  
+ 无  
   
   

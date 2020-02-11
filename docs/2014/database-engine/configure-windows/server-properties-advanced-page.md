@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 998d42d262e3f980b4b35ed82b26904399d6b33c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809378"
 ---
 # <a name="server-properties-advanced-page"></a>服务器属性（“高级”页）
@@ -34,7 +34,7 @@ ms.locfileid: "62809378"
  **FILESTREAM 访问级别**  
  显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上支持的 FILESTREAM 的当前级别。 若要更改访问级别，请选择以下值之一：  
   
- **禁用**  
+ **已禁用**  
  无法将二进制大型对象 (BLOB) 数据存储在文件系统中。 这是默认值。  
   
  **已启用 Transact-SQL 访问**  
@@ -76,7 +76,7 @@ ms.locfileid: "62809378"
   
  如果全文目录不可用，则会重新生成关联的全文检索。 此选项仅对 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库可用。  
   
- **Rebuild**  
+ **重新生成**  
  使用新的和增强的断字符重新生成全文目录。 重新生成索引可能需要一些时间，且升级后可能需要占用大量的 CPU 和内存。  
   
  **重置**  
@@ -112,7 +112,7 @@ ms.locfileid: "62809378"
   
  对设置的更改将立即生效。  
   
-## <a name="parallelism"></a>并行：  
+## <a name="parallelism"></a>并行度：  
  **并行的开销阈值**  
  指定阈值，在高于该阈值时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将创建并运行查询并行计划。 开销指的是在特定硬件配置中运行串行计划估计需要花费的时间（秒）。 只能为对称多处理器设置此选项。 有关详细信息，请参阅 [配置并行的开销阈值服务器配置选项](configure-the-cost-threshold-for-parallelism-server-configuration-option.md)。  
   

@@ -1,5 +1,5 @@
 ---
-title: 将匹配与 master 和 model 数据库排序规则的用户定义数据库设置 |Microsoft Docs
+title: 将用户定义数据库的排序规则设置为与 master 和 model 数据库的排序规则 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dfb00b1cc1a9930f7a374403b40e2c0d793eb090
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773305"
 ---
 # <a name="set-the-collation-of-user-defined-databases-to-match-those-of-the-master-and-model-databases"></a>将用户定义的数据库排序规则设置为与 master 和 model 数据库的排序规则一致
@@ -48,11 +48,11 @@ ms.locfileid: "62773305"
   
  [sys.databases (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   
- [Microsoft 知识库文章 325335](https://go.microsoft.com/fwlink/?linkid=117751)  
+ [Microsoft 知识库文章325335](https://go.microsoft.com/fwlink/?linkid=117751)  
   
- [如何：从命令提示符安装 SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=81585)  
+ [如何从命令提示符安装 SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=81585)  
   
-## <a name="see-also"></a>请参阅  
- [使用基于策略的管理来监视和强制执行最佳实践](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
+## <a name="see-also"></a>另请参阅  
+ [使用基于策略的管理来监视和强制执行最佳做法](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

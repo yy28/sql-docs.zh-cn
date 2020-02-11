@@ -1,5 +1,5 @@
 ---
-title: sp_procoption (TRANSACT-SQL) |Microsoft Docs
+title: sp_procoption （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bc004c611c218324ce2d2d8b764b3ab05cb73e5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67896588"
 ---
-# <a name="spprocoption-transact-sql"></a>sp_procoption (Transact-SQL)
+# <a name="sp_procoption-transact-sql"></a>sp_procoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  设置或清除自动执行的存储过程。 设置为自动执行运行每次的实例的存储的过程[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已启动。  
+  设置或清除自动执行的存储过程。 每次启动实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，都将运行设置为自动执行的存储过程。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,17 +41,17 @@ sp_procoption [ @ProcName = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @ProcName = ] 'procedure'` 是要为其设置选项的名称。 *过程*是**nvarchar(776)** ，无默认值。  
+`[ @ProcName = ] 'procedure'`要为其设置选项的过程的名称。 *过程*为**nvarchar （776）**，无默认值。  
   
-`[ @OptionName = ] 'option'` 是要设置的名称。 唯一的值为*选项*是**启动**。  
+`[ @OptionName = ] 'option'`要设置的选项的名称。 *选项*的唯一值为 "**启动**"。  
   
-`[ @OptionValue = ] 'value'` 是否要选项设置为 on ( **，则返回 true**或**上**) 或禁用 (**false**或者**关闭**)。 *值*是**varchar(12)** ，无默认值。  
+`[ @OptionValue = ] 'value'`指示是将选项设置为启用（**true**或**on**）还是禁用（**false**或**off**）。 *值*为**varchar （12）**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或错误号（失败）  
   
 ## <a name="remarks"></a>备注  
- 启动过程中必须是**主**数据库，并且不能包含输入或输出参数。 所有数据库恢复后将开始执行存储过程，并在开始时记录“恢复已完成”消息。  
+ 启动过程必须在**master**数据库中，并且不能包含输入参数或输出参数。 所有数据库恢复后将开始执行存储过程，并在开始时记录“恢复已完成”消息。  
   
 ## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  
@@ -73,7 +73,7 @@ EXEC sp_procoption @ProcName = N'<procedure name>'
     , @OptionValue = 'off';   
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [执行存储过程](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)  
   
   

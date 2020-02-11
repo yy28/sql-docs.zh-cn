@@ -16,16 +16,17 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 6b4aa4358259492e1b49672b054eddb8713c7473
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211988"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>创建服务器审核规范和数据库审核规范
   本主题介绍如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中创建服务器审核和数据库审核规范。  
   
- “  审核” [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库涉及到跟踪和记录系统中发生的事件。 *SQL Server Audit* 对象收集单个服务器实例或数据库级操作和操作组以进行监视。 这种审核处于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例级别。 每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例可以具有多个审核。 *数据库级别审核规范* 对象属于审核。 针对每个审核，您可以为每个 SQL Server 数据库创建一个数据库审核规范。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](sql-server-audit-database-engine.md)。  
+ “  审核” [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库涉及到跟踪和记录系统中发生的事件。 *SQL Server Audit* 对象收集单个服务器实例或数据库级操作和操作组以进行监视。 这种审核处于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例级别。 每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例可以具有多个审核。 
+  *数据库级别审核规范* 对象属于审核。 针对每个审核，您可以为每个 SQL Server 数据库创建一个数据库审核规范。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](sql-server-audit-database-engine.md)。  
   
  **本主题内容**  
   
@@ -35,7 +36,7 @@ ms.locfileid: "68211988"
   
      [安全性](#Security)  
   
--   **若要创建服务器审核规范和数据库审核规范，请使用：**  
+-   **若要创建服务器审核和数据库审核规范，请使用：**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -50,9 +51,9 @@ ms.locfileid: "68211988"
   
  数据库审核规范位于创建它们的数据库（`tempdb` 系统数据库除外）中。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
   
 -   具有 ALTER ANY DATABASE AUDIT 权限的用户可以创建数据库审核规范并将其绑定到任何审核。  
   
@@ -64,7 +65,7 @@ ms.locfileid: "68211988"
   
 1.   在对象资源管理器中，展开“安全性”文件夹。  
   
-2.  右键单击“审核”文件夹，然后选择“新建审核…”   。有关详细信息，请参阅 [创建服务器审核和服务器审核规范](create-a-server-audit-and-server-audit-specification.md)。  
+2.  右键单击 "**审核**" 文件夹，然后选择 "**新建审核 ...**"。有关详细信息，请参阅[创建服务器审核和服务器审核规范](create-a-server-audit-and-server-audit-specification.md)。  
   
 3.  在完成选项选择后，请单击 **“确定”** 。  
   
@@ -74,9 +75,10 @@ ms.locfileid: "68211988"
   
 2.  展开 **“安全性”** 文件夹。  
   
-3.  右键单击“数据库审核规范”文件夹，然后选择“新建数据库审核规范…”   。  
+3.  右键单击“数据库审核规范”文件夹，然后选择“新建数据库审核规范…”********。  
   
-     **“创建数据库审核规范”** 对话框中提供了以下选项。  
+     
+  **“创建数据库审核规范”** 对话框中提供了以下选项。  
   
      **名称**  
      数据库审核规范的名称。 这是在创建新服务器审核规范时自动生成的，但是您可以对其进行编辑。  
@@ -102,7 +104,7 @@ ms.locfileid: "68211988"
      **省略号 (...)**  
      打开 **“选择对象”** 对话框以基于指定的 **“对象名称”** 浏览和选择可用对象。  
   
-4.  在完成选项选择后，请单击 **“确定”** 。  
+4.  在完成选项选择后，请单击 **“确定”**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
