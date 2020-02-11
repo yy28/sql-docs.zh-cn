@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 51b69c7092a81fd84cc586e79dbb201c69c668ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62912594"
 ---
-# <a name="mssqlserver8680"></a>MSSQLSERVER_8680
+# <a name="mssqlserver_8680"></a>MSSQLSERVER_8680
     
 ## <a name="details"></a>详细信息  
   
@@ -30,9 +30,9 @@ ms.locfileid: "62912594"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|REMOTE_ERR|  
-|消息正文|内部查询处理器错误:查询处理器在处理远程查询操作过程中遇到意外错误。|  
+|消息正文|内部查询处理器错误: 查询处理器在处理远程查询阶段的过程中遇到意外错误。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  内部查询处理错误。  
   
 ## <a name="user-action"></a>用户操作  

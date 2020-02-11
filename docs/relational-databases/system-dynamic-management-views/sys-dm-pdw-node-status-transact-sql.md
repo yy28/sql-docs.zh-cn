@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_node_status (TRANSACT-SQL) |Microsoft Docs
+title: sys. dm_pdw_node_status （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,35 +13,35 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4cd8788d19b06329d0280efc43a13a9a218e056c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67899370"
 ---
-# <a name="sysdmpdwnodestatus-transact-sql"></a>sys.dm_pdw_node_status (Transact-SQL)
+# <a name="sysdm_pdw_node_status-transact-sql"></a>sys. dm_pdw_node_status （Transact-sql）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  保存的其他信息 (通过[sys.dm_pdw_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)) 有关的性能和设备的所有节点的状态。 它列出了每个节点在装置中的一行。  
+  保存有关所有设备节点的性能和状态的附加信息（高于[sys.databases dm_pdw_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)）。 它为设备中的每个节点列出一行。  
   
-|列名|数据类型|描述|范围|  
+|列名|数据类型|说明|范围|  
 |-----------------|---------------|-----------------|-----------|  
-|pdw_node_id|**int**|与节点关联的唯一数字 id。<br /><br /> 此视图的键。|整个设备，而不考虑类型是唯一的。|  
+|pdw_node_id|**int**|与节点关联的唯一数字 id。<br /><br /> 此视图的键。|在设备中唯一，而不考虑类型。|  
 |process_id|**int**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
 |process_name|**nvarchar(255)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
-|allocated_memory|**bigint**|总分配此节点上的内存。||  
-|available_memory|**bigint**|在此节点上的总可用内存。||  
-|process_cpu_usage|**bigint**|总进程的 CPU 使用率，以刻度为单位。||  
-|total_cpu_usage|**bigint**|总 CPU 使用率，以刻度为单位。||  
+|allocated_memory|**bigint**|此节点上已分配的内存总量。||  
+|available_memory|**bigint**|此节点上的可用内存总量。||  
+|process_cpu_usage|**bigint**|总进程 CPU 使用率（以计时周期为单位）。||  
+|total_cpu_usage|**bigint**|总 CPU 使用率（以刻度为单位）。||  
 |thread_count|**bigint**|在此节点上使用的线程的总数。||  
-|handle_count|**bigint**|使用此节点上的句柄的总数。||  
-|total_elapsed_time|**bigint**|系统启动或重新启动后经过的总时间。|系统启动或重新启动后经过的总时间。 如果 total_elapsed_time 超过一个整数 （以毫秒为单位的 24.8 天） 的最大值，它将导致具体化失败由于溢出。<br /><br /> 以毫秒为单位的最大值相当于 24.8 天。|  
-|is_available|**bit**|指示此节点是否有可用的标记。||  
-|sent_time|**datetime**|此节点的网络包发送最后一个时间。||  
-|received_time|**datetime**|上次接收的网络包的此节点的时间。||  
-|error_id|**nvarchar(36)**|在此节点发生的最后一个错误的唯一标识符。||  
+|handle_count|**bigint**|在此节点上使用的句柄总数。||  
+|total_elapsed_time|**bigint**|自系统启动或重新启动以来经过的总时间。|自系统启动或重新启动以来经过的总时间。 如果 total_elapsed_time 超过了整数的最大值24.8 （以毫秒为单位），则会导致具体化失败，因为溢出。<br /><br /> 最大值（以毫秒为单位）等效于24.8 天。|  
+|is_available|**bit**|指示此节点是否可用的标志。||  
+|sent_time|**datetime**|此节点上次发送网络包的时间。||  
+|received_time|**datetime**|此节点上次收到网络包的时间。||  
+|error_id|**nvarchar （36）**|此节点上发生的最后一个错误的唯一标识符。||  
   
-## <a name="see-also"></a>请参阅  
- [SQL 数据仓库和并行数据仓库动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+## <a name="see-also"></a>另请参阅  
+ [SQL 数据仓库和并行数据仓库动态管理视图 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

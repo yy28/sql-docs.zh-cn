@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e44e658d2aaf8be9a9e591f627f60798f6ba4121
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105401"
 ---
 # <a name="range-charts-report-builder-and-ssrs"></a>范围图（报表生成器和 SSRS）
@@ -22,18 +22,18 @@ ms.locfileid: "66105401"
   
  下图显示了具有三个序列的平面范围图。  
   
- ![全距图](../media/rs-rangechart.gif "Range chart")  
+ ![范围图](../media/rs-rangechart.gif "范围图")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="variations"></a>变体  
   
--   **平滑范围图**。 平滑范围图显示的是曲线而不是直线。  
+-   **平滑范围**。 平滑范围图显示的是曲线而不是直线。  
   
--   **柱形范围图**。 柱形范围图使用柱形图而不是面积图来显示范围。  
+-   **列范围**。 柱形范围图使用柱形图而不是面积图来显示范围。  
   
--   **条形范围图**。 条形范围图使用条形图而不是面积图来显示范围。  
+-   **条形范围**。 条形范围图使用条形图而不是面积图来显示范围。  
   
 ## <a name="data-considerations-for-range-charts"></a>范围图的数据注意事项  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66105401"
   
 -   可以使用范围条形图创建甘特图。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   
  [图表类型（报表生成器和 SSRS）](chart-types-report-builder-and-ssrs.md)   
  [设置图表格式&#40;报表生成器和 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  

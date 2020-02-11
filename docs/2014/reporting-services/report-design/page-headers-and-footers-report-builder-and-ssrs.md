@@ -24,10 +24,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7b746f27653f5e8d1c24a584ac19c8fbac05a57c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105532"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>页眉和页脚（报表生成器和 SSRS）
@@ -60,9 +60,9 @@ ms.locfileid: "66105532"
 |表体中的文本框|是|否|  
 |&PageNumber|是|否|  
 |&TotalPages|是|否|  
-|聚合函数|是。 例如，<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|是。 例如，<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
-|页面上各个项的字段集合|间接支持。 例如，<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|是。 例如，<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
-|数据绑定图像|间接支持。 例如： `=ReportItems!TXT_Photo.Value`|是。 例如，<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  
+|聚合函数|是的。 例如，<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|是的。 例如，<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
+|页面上各个项的字段集合|间接支持。 例如，<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|是的。 例如，<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
+|数据绑定图像|间接支持。 例如： `=ReportItems!TXT_Photo.Value`|是的。 例如，<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  
   
  本主题的以下部分介绍了在页眉和页脚中常用来获取变量数据的现成表达式。 还有一部分介绍 Excel 呈现扩展插件如何处理页眉和页脚。 有关表达式的详细信息，请参阅[表达式（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "66105532"
   
  有关详细信息，请参阅 [导出到 Microsoft Excel（报表生成器和 SSRS）](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)中处理数据。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在报表中嵌入图像（报表生成器和 SSRS）](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
  [矩形和线条（报表生成器和 SSRS）](rectangles-and-lines-report-builder-and-ssrs.md)  
   

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a91d050e489aa782ab10490d294a7fba8c806fe4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62688901"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>合并复制的备份和还原策略
@@ -30,7 +30,7 @@ ms.locfileid: "62688901"
 -   各个订阅服务器上的订阅数据库    
 -   发布服务器、分发服务器和所有订阅服务器上的 **master** 和 **msdb** 系统数据库。 当备份这些数据库中的一个数据库或相关的复制数据库时，应同时备份这些数据库。 例如，应在备份发布数据库的同时备份发布服务器上的 **master** 和 **msdb** 数据库。 如果还原发布数据库，请确保 **master** 和 **msdb** 数据库在复制配置和设置方面与发布数据库保持一致。  
   
- 如果执行定期日志备份，则在日志备份中应捕获所有与复制相关的更改。 如果不执行日志备份，则当与复制相关的设置发生更改时，应执行备份。 有关详细信息，请参阅 [需要已更新备份的常用操作](common-actions-requiring-an-updated-backup.md)。  
+ 如果执行定期日志备份，则在日志备份中应捕获所有与复制相关的更改。 如果不执行日志备份，则当与复制相关的设置发生更改时，应执行备份。 有关详细信息，请参阅 [Common Actions Requiring an Updated Backup](common-actions-requiring-an-updated-backup.md)。  
   
  选择以下一种方法来备份和还原发布数据库，然后遵循针对分发数据库和订阅数据库列出的建议。  
   
@@ -51,12 +51,12 @@ ms.locfileid: "62688901"
   
 -   如果发布未经筛选，则应能通过与最新订阅服务器同步来更新发布数据库。  
   
--   如果发布经过筛选，则可能无法更新发布数据库。 请考虑分区使每个订阅接收仅对在单个区域的客户数据的表：北、 东、 南和西部。 如果每个数据分区至少有一个订阅服务器，那么使每个分区与订阅服务器同步会更新发布数据库。 但是，以西分区为例，如果其中的数据未复制到任何订阅服务器，那么发布服务器上的此数据就无法更新。  
+-   如果发布经过筛选，则可能无法更新发布数据库。 假设有一个按如下方式分区的表：每个订阅仅收到一个区域（北部、东部、南部和西部）的客户数据。 如果每个数据分区至少有一个订阅服务器，那么使每个分区与订阅服务器同步会更新发布数据库。 但是，以西分区为例，如果其中的数据未复制到任何订阅服务器，那么发布服务器上的此数据就无法更新。  
   
 > [!IMPORTANT]  
 >  使发布数据库与订阅数据库同步可使已发布的表还原到一个时间点，该时间点比从备份还原的其他未发布表的时间点更近。  
   
- 如果要与运行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 早期版本的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]的订阅服务器同步，则订阅不可匿名；它必须是客户端订阅或服务器订阅（在早期版本中分别称为本地订阅和全局订阅）。  
+ 如果与运行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 版本的订阅服务器同步，则订阅无法匿名；它必须是客户端订阅或服务器订阅（在早期版本中称为本地订阅和全局订阅）。  
   
  若要同步订阅，请参阅 [Synchronize a Push Subscription](../synchronize-a-push-subscription.md) 和 [Synchronize a Pull Subscription](../synchronize-a-pull-subscription.md)。  
   
@@ -83,12 +83,12 @@ ms.locfileid: "62688901"
   
  若要设置发布保持期，请参阅[设置订阅的过期期限](../publish/set-the-expiration-period-for-subscriptions.md)。  
   
- 若要同步订阅，请参阅 [同步推送订阅](../synchronize-a-push-subscription.md) 和 [同步请求订阅](../synchronize-a-pull-subscription.md)。  
+ 若要同步订阅，请参阅 [Synchronize a Push Subscription](../synchronize-a-push-subscription.md) 和 [Synchronize a Pull Subscription](../synchronize-a-pull-subscription.md)。  
   
 ## <a name="backing-up-and-restoring-a-republishing-database"></a>备份和还原重新发布的数据库  
  如果某个数据库从发布服务器订阅数据，并依次将同样的数据发布给其他订阅数据库，则称该数据库为重新发布数据库。 还原重新发布数据库时，请遵从此主题中“备份和还原发布数据库”和“备份和还原订阅数据库”两节所介绍的准则。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 数据库的备份和还原](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [备份和还原复制的数据库](back-up-and-restore-replicated-databases.md)  
   

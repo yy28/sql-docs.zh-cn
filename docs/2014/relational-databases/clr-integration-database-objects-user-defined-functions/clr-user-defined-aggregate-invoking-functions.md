@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8f70a2df2fd824d8a0021a0985d6f75e79efce48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919606"
 ---
 # <a name="invoking-clr-user-defined-aggregate-functions"></a>调用 CLR 用户定义聚合函数
@@ -32,11 +32,11 @@ ms.locfileid: "62919606"
   
 -   当前用户必须对用户定义聚合拥有 `EXECUTE` 权限。  
   
--   必须使用两部分组成的名称的窗体调用用户定义聚合*schema_name.udagg_name*。  
+-   用户定义聚合必须使用由两部分组成的名称来调用，格式为*schema_name. udagg_name*。  
   
--   用户定义聚合的参数类型必须匹配或可隐式转换为*input_type*聚合，如中所定义的`CREATE AGGREGATE`语句。  
+-   用户定义聚合的参数类型必须匹配或可隐式转换为聚合的*input_type* ，如语句中所`CREATE AGGREGATE`定义。  
   
--   用户定义聚合的返回类型必须与匹配*return_type*中`CREATE AGGREGATE`语句。  
+-   用户定义聚合的返回类型必须与`CREATE AGGREGATE`语句中的*return_type*匹配。  
   
 ## <a name="example-1"></a>示例 1  
  以下是一个用户定义聚合函数的示例，该函数从某个表的一列中获取一组字符串值，然后将这些值连接起来：  
@@ -196,7 +196,7 @@ Public Class Concatenate
 End Class  
 ```  
   
- 一旦您将代码编译为**MyAgg.dll**，可以注册中的聚合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，如下所示：  
+ 将代码编译到**MyAgg**中后，可以按如下所示在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]注册聚合：  
   
 ```  
 CREATE ASSEMBLY MyAgg FROM 'C:\MyAgg.dll';  
@@ -441,7 +441,7 @@ SELECT dbo.WeightedAvg(ItemValue, ItemWeight) FROM @myTable;
 go  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [CLR 用户定义聚合](clr-user-defined-aggregates.md)  
   
   

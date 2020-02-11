@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 处理任务编辑器 （常规页） |Microsoft Docs
+title: Analysis Services 处理任务编辑器（"常规" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 183862eadad3661353228bbcde132b6cd8241501
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061444"
 ---
 # <a name="analysis-services-processing-task-editor-general-page"></a>Analysis Services 处理任务编辑器（“常规”页）
-  可以使用“Analysis Services 处理任务编辑器”对话框的“常规”页，对 Analysis Services 处理任务进行命名和说明   。  
+  可以使用“Analysis Services 处理任务编辑器”对话框的“常规”页，对 Analysis Services 处理任务进行命名和说明********。  
   
  若要了解此任务，请参阅 [Analysis Services Processing Task](control-flow/analysis-services-processing-task.md)。  
   
@@ -36,9 +36,9 @@ ms.locfileid: "66061444"
  **说明**  
  键入 Analysis Services 处理任务的说明。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Analysis Services 处理任务编辑器（Analysis Services 页）](../../2014/integration-services/analysis-services-processing-task-editor-analysis-services-page.md)   
+ [Analysis Services 处理任务编辑器 &#40;Analysis Services "页&#41;](../../2014/integration-services/analysis-services-processing-task-editor-analysis-services-page.md)   
  [Analysis Services 执行 DDL 任务](control-flow/analysis-services-execute-ddl-task.md)  
   
   
