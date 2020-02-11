@@ -1,5 +1,5 @@
 ---
-title: 标识符 (MDX) |Microsoft Docs
+title: 标识符（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c11561ac71aa72469a809ea25297d62133aa93da
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891212"
 ---
 # <a name="identifiers-mdx"></a>标识符 (MDX)
@@ -34,7 +34,7 @@ ms.locfileid: "68891212"
   
     -   由 Unicode 标准2.0 定义的字母。 除了其他语言的字母字符外，Unicode 定义的字母还包括从 a 到 z 以及从 A 到 Z 的拉丁字符。  
   
-    -   下划线 (_)。  
+    -   下划线（_）。  
   
 2.  后续字符可以是：  
   
@@ -42,9 +42,9 @@ ms.locfileid: "68891212"
   
     -   基本拉丁字符或其他国家/地区字符中的十进制数字。  
   
-    -   下划线 (_)。  
+    -   下划线（_）。  
   
-3.  标识符一定不能是 MDX 保留关键字。 MDX 中的保留关键字区分大小写。 有关详细信息, 请参阅[保留&#40;关键字 MDX&#41;语法](../mdx/reserved-keywords-mdx-syntax.md)。  
+3.  标识符一定不能是 MDX 保留关键字。 MDX 中的保留关键字区分大小写。 有关详细信息，请参阅[保留关键字 &#40;MDX 语法&#41;](../mdx/reserved-keywords-mdx-syntax.md)。  
   
 4.  不允许嵌入空格或特殊字符。  
   
@@ -79,11 +79,12 @@ ms.locfileid: "68891212"
   
 -   当对象的名称或名称中的一部分使用保留关键字时。  
   
-     建议不要将保留关键字用作对象名称。 从早期版本的升级的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]数据库可能包含标识符, 这些标识符包含早期版本中未保留的单词, 但现在已保留。 必须先更改对象的标识符，才能使用分隔标识符引用对象。  
+     建议不要将保留关键字用作对象名称。 从早期版本的升级的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]数据库可能包含标识符，这些标识符包含早期版本中未保留的单词，但现在已保留。 必须先更改对象的标识符，才能使用分隔标识符引用对象。  
   
 -   当对象的名称使用未被列为限定标识符的字符时。  
   
-     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 允许分隔标识符使用当前代码页中的任意字符。 但是，不加选择地在对象名称中使用特殊字符会使 MDX 语句和脚本难以读取和维护。  
+     
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 允许分隔标识符使用当前代码页中的任意字符。 但是，不加选择地在对象名称中使用特殊字符会使 MDX 语句和脚本难以读取和维护。  
   
 ### <a name="formatting-rules-for-delimited-identifiers"></a>分隔标识符的格式规则  
  分隔标识符的主体可以包含当前代码页中的字符（包括分隔符本身）的任意组合。 如果分隔标识符的主体包含分隔符，则需进行特殊处理：  
@@ -122,9 +123,9 @@ ms.locfileid: "68891212"
   
  此外，还分隔了上一示例中的 Measures 标识符，以说明分隔多个标识符的情况。  
   
-## <a name="see-also"></a>请参阅  
- [MDX 语言参考 (MDX)](../mdx/mdx-language-reference-mdx.md)   
- [MDX 查询基础知识 (Analysis Services)](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)   
- [MDX 语法元素&#40;mdx&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [Mdx 语言参考 &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
+ [MDX 查询基础知识 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)   
+ [Mdx 语法元素 &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

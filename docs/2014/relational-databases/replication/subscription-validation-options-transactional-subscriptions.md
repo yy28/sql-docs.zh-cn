@@ -15,14 +15,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a82e13202209121897a5e5878a141c8d53800a47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62745418"
 ---
 # <a name="subscription-validation-options-transactional-subscriptions"></a>订阅验证选项（事务订阅）
-  使用 **“订阅验证选项”** 对话框可以指定是仅使用行计数进行验证，还是使用行计数和二进制校验和进行验证。  
+  使用 "**订阅验证选项**" 对话框可以指定是仅使用行计数进行验证，还是使用行计数和二进制校验和进行验证。  
   
 ## <a name="options"></a>选项  
  **验证订阅服务器与发布服务器具有相同的复制数据行数**  
@@ -34,7 +34,7 @@ ms.locfileid: "62745418"
  **完成验证后停止运行分发代理**  
  默认情况下，分发代理会连续运行。 选择此选项可以在执行验证之后停止运行代理。 这样，就可以在继续将数据复制到订阅服务器之前检查验证是否成功。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [验证订阅服务器上的数据](validate-data-at-the-subscriber.md)   
  [验证已复制的数据](validate-data-at-the-subscriber.md)  
   

@@ -16,42 +16,42 @@ ms.assetid: 506fdd70-4452-4e83-95d5-c94311988dfa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 233b2f84b6a60c7b5162edce6c1b76b63946ae81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931287"
 ---
 # <a name="recordstatusenum"></a>RecordStatusEnum
-指定[状态](../../../ado/reference/ado-api/status-property-ado-recordset.md)的批更新和其他大容量操作的记录。  
+指定有关批更新和其他批量操作的记录的[状态](../../../ado/reference/ado-api/status-property-ado-recordset.md)。  
   
-|常量|值|描述|  
+|一直|值|说明|  
 |--------------|-----------|-----------------|  
-|**adRecCanceled**|0x100|指示由于操作被取消而不保存记录。|  
-|**adRecCantRelease**|0x400|指示由于现有记录已被锁定，而不保存新记录。|  
-|**adRecConcurrencyViolation**|0x800|指示由于正在使用乐观并发，而不保存记录。|  
-|**adRecDBDeleted**|0x40000|指示从数据源已删除记录。|  
+|**adRecCanceled**|0x100|指示未保存记录，因为该操作已取消。|  
+|**adRecCantRelease**|0x400|指示未保存新记录，因为现有记录已锁定。|  
+|**adRecConcurrencyViolation**|0x800|指示未保存记录，因为正在使用乐观并发。|  
+|**adRecDBDeleted**|0x40000|指示已从数据源中删除记录。|  
 |**adRecDeleted**|0x4|指示记录已被删除。|  
-|**adRecIntegrityViolation**|0x1000|指示由于用户违反了完整性约束，而不保存记录。|  
-|**adRecInvalid**|0x10|指示由于其书签无效，而不保存记录。|  
-|**adRecMaxChangesExceeded**|0x2000|指示由于过多挂起的更改，而不保存记录。|  
-|**adRecModified**|0x2|指示记录已修改。|  
-|**adRecMultipleChanges**|0x40|指示该记录不保存，因为它会影响多个记录。|  
-|**adRecNew**|0x1|指示新记录。|  
-|**adRecObjectOpen**|0x4000|指示由于与打开的存储对象发生冲突而未保存记录。|  
+|**adRecIntegrityViolation**|0x1000|指示未保存记录，因为用户违反了完整性约束。|  
+|**adRecInvalid**|0x10|指示未保存记录，因为其书签无效。|  
+|**adRecMaxChangesExceeded**|0x2000|指示未保存记录，因为挂起的更改太多。|  
+|**adRecModified**|0x2|指示已修改记录。|  
+|**adRecMultipleChanges**|0x40|指示未保存记录，因为它会影响多个记录。|  
+|**adRecNew**|0x1|指示记录是新记录。|  
+|**adRecObjectOpen**|0x4000|指示由于与打开的存储对象冲突而未保存记录。|  
 |**adRecOK**|0|指示已成功更新记录。|  
-|**adRecOutOfMemory**|0x8000|指示由于在计算机内存不足而不保存记录。|  
-|**adRecPendingChanges**|0x80|指示由于它是指挂起的插入，而不保存记录。|  
-|**adRecPermissionDenied**|0x10000|指示由于用户没有足够的权限，而不保存记录。|  
-|**adRecSchemaViolation**|0x20000|指示由于违反了基础数据库的结构而不保存记录。|  
-|**adRecUnmodified**|0x8|指示不修改记录。|  
+|**adRecOutOfMemory**|0x8000|指示由于计算机内存不足而未保存记录。|  
+|**adRecPendingChanges**|0x80|指示未保存记录，因为它引用了挂起的插入。|  
+|**adRecPermissionDenied**|0x10000|指示未保存记录，因为用户没有足够的权限。|  
+|**adRecSchemaViolation**|0x20000|指示未保存记录，因为它违反了基础数据库的结构。|  
+|**adRecUnmodified**|0x8|指示未修改记录。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
- AdoEnums.RecordStatus。  
+ AdoEnums.RecordStatus.  
   
- 包： **com.ms.wfc.data**  
+ Package： **.com. 数据**  
   
-|常量|  
+|一直|  
 |--------------|  
 |AdoEnums.RecordStatus.CANCELED|  
 |AdoEnums.RecordStatus.CANTRELEASE|  
@@ -72,5 +72,5 @@ ms.locfileid: "67931287"
 |AdoEnums.RecordStatus.SCHEMAVIOLATION|  
 |AdoEnums.RecordStatus.UNMODIFIED|  
   
-## <a name="applies-to"></a>适用范围  
- [Status 属性 （ADO 记录集）](../../../ado/reference/ado-api/status-property-ado-recordset.md)
+## <a name="applies-to"></a>应用于  
+ [Status 属性（ADO 记录集）](../../../ado/reference/ado-api/status-property-ado-recordset.md)

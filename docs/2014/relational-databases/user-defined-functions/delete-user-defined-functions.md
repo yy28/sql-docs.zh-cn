@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f6c2580e17c204b534ec4c8ebadec3a1e992a4d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196461"
 ---
 # <a name="delete-user-defined-functions"></a>删除用户定义函数
@@ -42,9 +42,9 @@ ms.locfileid: "68196461"
   
 -   如果存在引用此函数并且已生成索引的计算列，则您将无法删除该函数。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要具有对该函数所属架构的 ALTER 权限，或对该函数的 CONTROL 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -68,7 +68,7 @@ ms.locfileid: "68196461"
 5.  在 **“删除对象”** 对话框中，单击 **“确定”** 。  
   
     > [!IMPORTANT]  
-    >  单击“删除对象”  对话框中的“显示依赖关系”  ，打开“_function_name_ 依赖关系”  对话框。 这将显示依赖于该函数的所有对象和该函数依赖的所有对象。  
+    >  单击 "**删除对象**" 对话框中的 "**显示依赖关系**"，打开 " _function_name_**依赖**关系" 对话框。 这将显示依赖于该函数的所有对象和该函数依赖的所有对象。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

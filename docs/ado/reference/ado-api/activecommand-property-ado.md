@@ -1,5 +1,5 @@
 ---
-title: ActiveCommand 属性 (ADO) |Microsoft Docs
+title: ActiveCommand 属性（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,30 +16,30 @@ ms.assetid: fb4088d5-5968-42d6-aeaa-3955046bb4da
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d2a2f23360cf3ce032d14af7ca475d5c2c3ea638
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921679"
 ---
 # <a name="activecommand-property-ado"></a>ActiveCommand 属性 (ADO)
-指示[命令](../../../ado/reference/ado-api/command-object-ado.md)创建关联对象[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。  
+指示创建关联[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象的[命令](../../../ado/reference/ado-api/command-object-ado.md)对象。  
   
 ## <a name="return-value"></a>返回值  
- 返回**Variant** ，其中包含**命令**对象。 默认值为空对象引用。  
+ 返回一个包含**命令**对象的**变量**。 默认值为 null 对象引用。  
   
 ## <a name="remarks"></a>备注  
  **ActiveCommand**属性是只读的。  
   
- 如果**命令**对象不用于创建当前**记录集**，然后**Null**返回对象引用。  
+ 如果未使用**命令**对象创建当前**记录集**，则返回**Null**对象引用。  
   
- 此属性用于查找关联**命令**对象时你可以仅生成**记录集**对象。  
+ 当只给定生成的**记录集**对象时，使用此属性可查找关联的**命令**对象。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>请参阅  
- [ActiveCommand 属性示例 (VB)](../../../ado/reference/ado-api/activecommand-property-example-vb.md)   
- [ActiveCommand 属性示例 (JScript)](../../../ado/reference/ado-api/activecommand-property-example-jscript.md)   
- [ActiveCommand 属性示例 （VC + +）](../../../ado/reference/ado-api/activecommand-property-example-vc.md)   
+## <a name="see-also"></a>另请参阅  
+ [ActiveCommand 属性示例（VB）](../../../ado/reference/ado-api/activecommand-property-example-vb.md)   
+ [ActiveCommand 属性示例（JScript）](../../../ado/reference/ado-api/activecommand-property-example-jscript.md)   
+ [ActiveCommand 属性示例（VC + +）](../../../ado/reference/ado-api/activecommand-property-example-vc.md)   
  [命令对象 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)

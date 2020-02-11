@@ -1,5 +1,5 @@
 ---
-title: SQL Server 代理表 (Transact SQL) |Microsoft Docs
+title: SQL Server 代理表（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 6cb39bfd-079e-4be4-9c42-2fa234c65ce1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fcc811542ad0b7884b703a02b4c983b8752ba200
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68130591"
 ---
 # <a name="sql-server-agent-tables-transact-sql"></a>SQL Server 代理表 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  本节中的主题介绍存储 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理所用信息的系统表。 所有表都都位于 msdb 数据库中的 dbo 架构。  
+  本节中的主题介绍存储 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理所用信息的系统表。 所有表都位于 msdb 数据库的 dbo 架构中。  
   
 ## <a name="in-this-section"></a>本节内容  
  [dbo.sysalerts](../../relational-databases/system-tables/dbo-sysalerts-transact-sql.md)  
@@ -47,7 +47,7 @@ ms.locfileid: "68130591"
  存储将由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理执行的各个预定作业的信息。  
   
  [dbo.sysjobschedules](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
- 包含要由执行的作业的计划信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理  
+ 包含[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理要执行的作业的计划信息  
   
  [dbo.sysjobservers](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)  
  存储特定作业与一个或多个目标服务器的关联或关系。  

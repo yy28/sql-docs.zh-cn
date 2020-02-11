@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d5783f393cbbe70e89e2d1ee4b7e05481fdc3ab9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62922098"
 ---
 # <a name="enable-or-disable-backup-checksums-during-backup-or-restore-sql-server"></a>在备份或还原期间启用或禁用备份校验和 (SQL Server)
@@ -38,10 +38,10 @@ ms.locfileid: "62922098"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
- BACKUP  
+####  <a name="Permissions"></a> 权限  
+ 备份  
  默认情况下，为 **sysadmin** 固定服务器角色以及 **db_owner** 和 **db_backupoperator** 固定数据库角色的成员授予 BACKUP DATABASE 和 BACKUP LOG 权限。  
   
  备份设备的物理文件的所有权和权限问题可能会妨碍备份操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必须能够读取和写入设备；运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的帐户必须具有写入权限。 但是，用于在系统表中为备份设备添加项目的 [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)不检查文件访问权限。 备份设备物理文件的这些问题可能直到为备份或还原而访问物理资源时才会出现。  
@@ -57,7 +57,7 @@ ms.locfileid: "62922098"
   
 1.  执行以下步骤以便 [创建数据库备份](create-a-full-database-backup-sql-server.md)。  
   
-2.  在 **“选项”** 页的 **“可靠性”** 部分中，单击 **“写入介质前检查校验和”**。  
+2.  在 **“选项”** 页的 **“可靠性”** 部分中，单击 **“写入介质前检查校验和”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -65,7 +65,7 @@ ms.locfileid: "62922098"
   
 1.  连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
 3.  若要启用备份校验和，请在 [BACKUP](/sql/t-sql/statements/backup-transact-sql) 语句中指定 WITH CHECKSUM 选项。 若要禁用备份校验和，请指定 WITH NO_CHECKSUM 选项。 这是默认行为，但压缩备份除外。 下面的示例指定执行校验和。  
   
@@ -80,7 +80,7 @@ GO
   
 1.  连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
 3.  若要启用备份校验和，请在 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) 语句中指定 WITH CHECKSUM 选项。 这是压缩备份的默认行为。 若要禁用备份校验和，请指定 WITH NO_CHECKSUM 选项。 这是默认行为，但压缩备份除外。 下面的示例指定执行备份校验和。  
   
@@ -94,7 +94,7 @@ GO
 > [!WARNING]  
 >  在明确请求 CHECKSUM 进行还原操作并且备份包含备份校验和时，与默认情况相同，将同时验证备份校验和及页校验和。 但是，如果备份集不包含备份校验和，还原操作将失败，并显示一条消息指明校验和不存在。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [RESTORE FILELISTONLY (Transact-SQL)](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)   
  [RESTORE HEADERONLY (Transact-SQL)](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)   
  [RESTORE LABELONLY (Transact-SQL)](/sql/t-sql/statements/restore-statements-labelonly-transact-sql)   

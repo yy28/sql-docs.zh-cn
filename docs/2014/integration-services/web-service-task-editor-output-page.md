@@ -1,5 +1,5 @@
 ---
-title: Web 服务任务编辑器 （输出页） |Microsoft Docs
+title: Web 服务任务编辑器（"输出" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7924570253bf2f805d91c4dfabc3d5facf44cccc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054470"
 ---
 # <a name="web-service-task-editor-output-page"></a>Web 服务任务编辑器（“输出”页）
@@ -30,7 +30,7 @@ ms.locfileid: "66054470"
  **OutputType**  
  选择存储结果时所使用的存储类型。 此属性具有下表所列的选项。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**文件连接**|将结果存储在文件中。 选择此值将显示动态选项 **File**。|  
 |**变量**|将结果存储在变量中。 选择此值将显示动态选项 **Variable**。|  
@@ -38,21 +38,21 @@ ms.locfileid: "66054470"
 ## <a name="outputtype-dynamic-options"></a>OutputType 动态选项  
   
 ### <a name="outputtype--file-connection"></a>OutputType = 文件连接  
- **File**  
- 在列表中选择一个文件连接管理器，或单击“\<新建连接…>”，新建一个连接管理器  。  
+ **文件**  
+ 在列表中选择一个文件连接管理器， \<或单击 "**新建连接 ...** "> 创建新的连接管理器。  
   
  **相关主题：** [文件连接管理器](connection-manager/file-connection-manager.md)、[文件连接管理器编辑器](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="outputtype--variable"></a>OutputType = 变量  
  **变量**  
- 从列表中选择变量，或单击“\<新建变量...>”，创建新的变量  。  
+ 在列表中选择变量，或单击\<"**新建变量 ...** "> 创建新变量。  
   
- **相关主题：** [Integration Services &#40;SSIS&#41; 变量](integration-services-ssis-variables.md)、[添加变量](../../2014/integration-services/add-variable.md)  
+ **相关主题：**  [Integration Services &#40;SSIS&#41; 变量](integration-services-ssis-variables.md)、[添加变量](../../2014/integration-services/add-variable.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Web 服务任务编辑器（“常规”页）](general-page-of-integration-services-designers-options.md)   
- [Web 服务任务编辑器（“输入”页）](../../2014/integration-services/web-service-task-editor-input-page.md)   
+ [Web 服务任务编辑器 &#40;常规 "页面&#41;](general-page-of-integration-services-designers-options.md)   
+ [Web 服务任务编辑器 &#40;输入页&#41;](../../2014/integration-services/web-service-task-editor-input-page.md)   
  [“表达式”页](expressions/expressions-page.md)  
   
   

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6e9232f5de2172c7dfbe503a26188fdf4d05550c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011480"
 ---
 # <a name="query-properties-visual-database-tools"></a>查询属性 (Visual Database Tools)
@@ -42,7 +42,7 @@ ms.locfileid: "63011480"
  **查询设计器类别**  
  展开此项可显示剩余的属性。  
   
- **目的表**  
+ **目标表**  
  指定要向其中插入数据的表的名称。 如果正在创建“插入”查询或“生成表”查询，则会显示此列表。 对于“插入”查询，请从列表中选择表名。  
   
  对于“生成表”查询，请键入新表的名称。 若要在另一个数据源中创建目的表，请指定完全限定的表名，包括目标数据源名称、所有者（如有需要）以及表名。  
@@ -82,8 +82,8 @@ ms.locfileid: "63011480"
  **With Ties**  
  指定视图将包括 WITH TIES 子句。 如果视图包含 ORDER BY 子句和基于百分比的 TOP 子句，WITH TIES 将非常有用。 如果设置了该选项，并且百分比截止位置在一组行的中间，且这些行在 ORDER BY 子句中具有相同的值，则视图将会扩展，以包含所有这样的行。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 或更高版本。）  
   
-## <a name="see-also"></a>请参阅  
- [使用参数查询&#40;可视化数据库工具&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>另请参阅  
+ [用参数查询 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [设计查询和视图操作指南主题 (Visual Database Tools)](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

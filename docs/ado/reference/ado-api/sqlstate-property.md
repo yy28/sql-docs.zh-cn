@@ -18,24 +18,24 @@ ms.assetid: f9e25967-54b0-444d-af2a-0d2c75365d3e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e43ace17f3f2b709c327f185a189a107b6b73065
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67916885"
 ---
 # <a name="sqlstate-property"></a>SQLState 属性
-指示 SQL 状态的给定[错误](../../../ado/reference/ado-api/error-object.md)对象。  
+指示给定[错误](../../../ado/reference/ado-api/error-object.md)对象的 SQL 状态。  
   
 ## <a name="return-value"></a>返回值  
- 返回 5 个字符**字符串**值，该值遵循 ANSI SQL 标准并指示错误代码。  
+ 返回一个包含五个字符的字符串值，该**字符串**值遵循 ANSI SQL 标准并指示错误代码。  
   
 ## <a name="remarks"></a>备注  
- 使用**SQLState**要读取的提供程序返回的 SQL 语句处理期间发生错误时的五字符错误代码属性。 例如，使用 Microsoft OLE DB Provider for ODBC 与 Microsoft SQL Server 数据库时, 状态的 SQL 错误代码来源于 ODBC 中，基于特定于 ODBC 的错误或错误的来源于 Microsoft SQL Server，并已进行映射到 ODBC错误。 这些错误代码记录在 ANSI SQL 标准，但不同的数据源可能以不同方式实现。  
+ 使用**SQLState**属性可读取在处理 SQL 语句期间出错时提供程序返回的五个字符的错误代码。 例如，将 Microsoft OLE DB Provider for ODBC 与 Microsoft SQL Server 数据库一起使用时，SQL 状态错误代码源自 ODBC，基于特定于 ODBC 的错误或源自 Microsoft SQL Server 的错误，然后映射到 ODBC错误. ANSI SQL 标准中记录了这些错误代码，但不同的数据源可能以不同的方式实现这些错误代码。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [错误对象](../../../ado/reference/ado-api/error-object.md)  
   
-## <a name="see-also"></a>请参阅  
- [Description、 HelpContext、 HelpFile、 NativeError、 数、 源和 SQLState 属性示例 (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
- [Description、 HelpContext、 HelpFile、 NativeError、 数、 源和 SQLState 属性示例 （VC + +）](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
+## <a name="see-also"></a>另请参阅  
+ [Description、HelpContext、帮助，NativeError、Number、Source 和 SQLState 属性示例（VB）](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
+ [Description、HelpContext、帮助，NativeError、Number、Source 和 SQLState 属性示例（VC + +）](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   

@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 46b1155878aae6cc7f667965cfae065ed1a9cacc
-ms.sourcegitcommit: 03884a046aded85c7de67ca82a5b5edbf710be92
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74564744"
 ---
 # <a name="sysdm_pdw_resource_waits-transact-sql"></a>sys. dm_pdw_resource_waits （Transact-sql）
@@ -29,14 +29,14 @@ ms.locfileid: "74564744"
 |wait_id|**bigint**|请求在等待列表中的位置。|从0开始的序号。 所有等待条目都不是唯一的。|  
 |session_id|**nvarchar （32）**|发生等待状态的会话的 ID。|请参阅 dm_pdw_exec_sessions sys.databases 中的 session_id [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)。|  
 |type|**nvarchar(255)**|此项表示的等待类型。|可能的值：<br /><br /> 连接<br /><br /> 并发查询并发<br /><br /> 分布式查询并发<br /><br /> DMS 并发<br /><br /> 备份并发|  
-|object_type|**nvarchar(255)**|受等待影响的对象的类型。|可能的值：<br /><br /> **对象**<br /><br /> **数据**<br /><br /> **主板**<br /><br /> **模式**<br /><br /> **程序**|  
+|object_type|**nvarchar(255)**|受等待影响的对象的类型。|可能的值：<br /><br /> **对象**<br /><br /> **DATABASE**<br /><br /> **主板**<br /><br /> **SCHEMA**<br /><br /> **程序**|  
 |object_name|**nvarchar （386）**|受等待影响的指定对象的名称或 GUID。|表和视图显示有由三部分组成的名称。<br /><br /> 索引和统计信息显示为由四部分组成的名称。<br /><br /> "名称"、"主体" 和 "数据库" 是字符串名称。|  
 |request_id|**nvarchar （32）**|发生等待状态的请求的 ID。|请求的 QID 标识符。<br /><br /> 加载请求的 GUID 标识符。|  
-|request_time|**型**|请求锁或资源的时间。||  
-|acquire_time|**型**|获取锁或资源的时间。||  
+|request_time|**datetime**|请求锁或资源的时间。||  
+|acquire_time|**datetime**|获取锁或资源的时间。||  
 |state|**nvarchar(50)**|等待状态的状态。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|priority|**整形**|等待项的优先级。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|concurrency_slots_used|**整形**|内部|请参阅下面的[监视资源等待](#monitor-resource-waits)|  
+|priority|**int**|等待项的优先级。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|concurrency_slots_used|**int**|内部|请参阅下面的[监视资源等待](#monitor-resource-waits)|  
 |resource_class|**nvarchar （20）**|内部 |请参阅下面的[监视资源等待](#monitor-resource-waits)|  
   
 ## <a name="monitor-resource-waits"></a>监视资源等待 

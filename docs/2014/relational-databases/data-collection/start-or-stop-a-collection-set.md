@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 96f5a873e8d172254e1ea18abbd0c570b27a35ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918436"
 ---
 # <a name="start-or-stop-a-collection-set"></a>启动或停止收集组
@@ -49,7 +49,7 @@ ms.locfileid: "62918436"
   
 -   与常规存储过程不同的是，数据收集器存储过程的参数已严格类型化，不支持自动的数据类型转换。 如果这些参数不是使用正确的输入参数数据类型（正如参数说明中指定的一样）调用的，则存储过程会返回错误。  
   
-###  <a name="Prerequisites"></a> 先决条件  
+###  <a name="Prerequisites"></a>先决条件  
   
 -   必须启动 SQL Server 代理。  
   
@@ -57,9 +57,9 @@ ms.locfileid: "62918436"
   
 -   若要获取有关收集组的信息，请查询 [syscollector_collection_sets](/sql/relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql) 目录视图。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求具有 **dc_operator** 固定数据库角色的成员身份。 如果收集组没有代理帐户，则需要具有 **sysadmin** 固定服务器角色的成员身份。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -76,7 +76,7 @@ ms.locfileid: "62918436"
   
 1.  在对象资源管理器中，依次展开 **“管理”** 节点、 **“数据收集”** 和 **“系统数据收集组”** 。  
   
-2.  右键单击要停止的收集组，然后单击“停止数据收集组”  。  
+2.  右键单击要停止的收集组，然后单击 **“停止数据收集组”** 。  
   
      将出现一个消息框，显示此操作的结果，收集组图标上的红色圆圈指示收集组已经停止。  
   
@@ -110,7 +110,7 @@ GO
 EXEC sp_syscollector_stop_collection_set @collection_set_id = 1;  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据收集器视图 (Transact-SQL)](/sql/relational-databases/system-catalog-views/data-collector-views-transact-sql)   
  [“数据收集”](data-collection.md)  
   

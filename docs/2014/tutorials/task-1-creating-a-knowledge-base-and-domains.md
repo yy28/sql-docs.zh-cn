@@ -1,5 +1,5 @@
 ---
-title: 任务 1：创建知识库和域 |Microsoft Docs
+title: 任务1：创建知识库和域 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,54 +11,54 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 79edd8566f2b3c9b586bc8c8815e1d9bc586fb05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65481246"
 ---
 # <a name="task-1-creating-a-knowledge-base-and-domains"></a>任务 1：创建知识库和域
-  在本任务中，您将创建**供应商**知识库，并创建用于清理数据和匹配数据以便删除重复项的域。  
+  在此任务中，您将创建**供应商**知识库并创建用于清理数据和匹配数据的域以删除重复项。  
   
-1.  启动**数据质量客户端**。 单击**启动**，依次指向**所有程序**，单击**Microsoft SQL Server 2012**，单击**Data Quality Services**，然后单击**数据质量客户端**。  
+1.  启动**Data Quality Client**。 单击 "**开始**"，依次指向 "**所有程序**"、 **Microsoft SQL Server 2012**、" **Data Quality Services**"，然后单击 " **Data Quality Client**"。  
   
-2.  在中**连接到服务器**对话框框中，选择数据库服务器实例依据 DQS 安装，并单击**Connect**。  
+2.  在 "**连接到服务器**" 对话框中，选择安装 DQS 的数据库服务器实例，然后单击 "**连接**"。  
   
-     ![连接到服务器对话框](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-01.jpg "连接到服务器对话框")  
+     !["连接到服务器" 对话框](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-01.jpg "“连接到服务器”对话框")  
   
-3.  在数据质量客户端主页上，在**知识库管理**窗格中，单击**新的知识库**。  
+3.  在 Data Quality Client 主页的 "**知识库管理**" 窗格中，单击 "**新建知识库**"。  
   
-     ![知识库管理-新建知识库](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-02.jpg "知识库管理-新建知识库")  
+     ![知识库管理 - 新建知识库](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-02.jpg "知识库管理 - 新建知识库")  
   
-4.  输入**供应商**有关**名称**知识库。  
+4.  输入该知识库的**名称**的**供应商**。  
   
-     ![新建知识库-域管理](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-03.jpg "新建知识库-域管理")  
+     ![新建知识库 - 域管理](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-03.jpg "新建知识库 - 域管理")  
   
-5.  确认**从创建知识库**字段设置为**None**由于您创建的**供应商**从零开始的知识库。  
+5.  请确认将 "**创建知识库**" 字段设置为 "**无**"，因为您是从头开始创建**供应商**知识库的。  
   
-6.  确认**域管理**选择了**活动**然后单击**下一步**。 通过域管理活动，您可以在知识库中创建和管理域。  
+6.  确认为**活动**选择了 "**域管理**"，然后单击 "**下一步**"。 通过域管理活动，您可以在知识库中创建和管理域。  
   
-7.  在中**域管理**窗口中，单击**创建域**工具栏按钮以创建一个域。  
+7.  在 "**域管理**" 窗口中，单击 "**创建域**" 工具栏按钮以创建域。  
   
-     ![创建域工具栏按钮](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-04.jpg "创建域工具栏按钮")  
+     ![“创建域”工具栏按钮](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-04.jpg "“创建域”工具栏按钮")  
   
-8.  中**创建一个域**对话框中，键入**Supplier ID**有关**域名**，然后单击**确定**。  
+8.  在 "**创建域**" 对话框中，键入**域名**的 "**供应商 ID** "，然后单击 **"确定"**。  
   
-     ![创建域对话框](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-05.jpg "创建域对话框")  
+     ![“创建域”对话框](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-05.jpg "“创建域”对话框")  
   
-9. 重复执行前一步以便创建具有所有默认设置的以下域。 若要简化本教程，请设置**数据类型**的所有域作为**字符串**。 其他允许的数据类型包括：Integer、 Decimal 和 Date。 当**使用前导值**选项是所选 （默认值），所有同义词将都替换为输出中同义词组的前导值。 设置**规范化字符串**选项 （默认值） 在域值中删除任何特殊字符。 **输出格式设置为**选项允许您选择的域中的数据值输出时采用的格式设置。 选择**启用拼写检查器**（默认值） 可填充域时对所有的字符串值运行拼写检查器。 **语言**设置指定的语言版本**拼写检查器**你想要应用。 选择**禁用语法错误算法**可填充域而不检查是否存在语法错误的字符串值。 请参阅[创建一个域](https://msdn.microsoft.com/library/hh510401.aspx)更多详细信息的 MSDN library 中的主题。  
+9. 重复执行前一步以便创建具有所有默认设置的以下域。 为简化本教程，请将所有域的**数据类型**设置为**String**。 其他允许的数据类型是：Integer、Decimal 和 Date。 如果选择了 "**使用前导值**" 选项（默认值），则会将所有同义词替换为输出中的同义词组的前导值。 设置**正常化字符串**选项（默认值）将删除域值中的任何特殊字符。 利用 "将**输出格式设置为**" 选项，您可以选择在输出域中的数据值时要应用的格式设置。 选择 "**启用拼写检查**器（默认值）" 可在填充域时对所有字符串值运行拼写检查器。 **语言**设置指定要应用的**拼写检查**器的语言版本。 选择 "**禁用语法错误算法**" 可填充域而不检查字符串值是否存在语法错误。 有关更多详细信息，请参阅 MSDN library 中的[创建域](https://msdn.microsoft.com/library/hh510401.aspx)主题。  
   
     -   Supplier Name  
   
-    -   Contact Email  
+    -   联系人电子邮件  
   
     -   Address Line  
   
-    -   City  
+    -   城市  
   
-    -   State  
+    -   状态  
   
-    -   Country  
+    -   国家/地区  
   
     -   Zip  
   

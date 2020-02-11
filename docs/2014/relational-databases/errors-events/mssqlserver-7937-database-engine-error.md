@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1a78aac96c0f0362c36367511035d8e4544b2017
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762789"
 ---
-# <a name="mssqlserver7937"></a>MSSQLSERVER_7937
+# <a name="mssqlserver_7937"></a>MSSQLSERVER_7937
     
 ## <a name="details"></a>详细信息  
   
@@ -30,9 +30,9 @@ ms.locfileid: "62762789"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC2_FS_MISSING_COLUMN_DIRECTORY|  
-|消息正文|表错误：Filestream 目录中的列 ID C_ID 的对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID 未找到。|  
+|消息正文|表错误: 找不到对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID 的列 ID C_ID 的 Filestream 目录。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  在分区中存在指定的列；但在 FILESTREAM 数据空间中却找不到对应的 FILESTREAM 目录。  
   
 ## <a name="user-action"></a>用户操作  

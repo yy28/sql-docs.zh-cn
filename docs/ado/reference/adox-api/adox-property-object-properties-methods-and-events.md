@@ -1,5 +1,5 @@
 ---
-title: ADOX 属性对象属性、 方法和事件 |Microsoft Docs
+title: ADOX 属性对象属性、方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,14 +13,14 @@ ms.assetid: 640780dc-5733-4f0c-9c11-6f43c1db5901
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ebf2fdef9d526cf2ca991a4b123f8e20db358497
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930357"
 ---
 # <a name="adox-property-object-properties-methods-and-events"></a>ADOX 属性对象属性、方法和事件
-## <a name="properties"></a>properties  
+## <a name="properties"></a>属性  
  [Attributes 属性 (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)  
   
  [Name 属性 (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)  
@@ -32,8 +32,8 @@ ms.locfileid: "67930357"
 ## <a name="methods"></a>方法  
  无。  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>事件  
  无。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [属性对象 (ADOX)](../../../ado/reference/adox-api/property-object-adox.md)

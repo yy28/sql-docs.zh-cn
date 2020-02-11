@@ -1,5 +1,5 @@
 ---
-title: SubmitChanges 方法示例 (VBScript) |Microsoft Docs
+title: SubmitChanges 方法示例（VBScript） |Microsoft Docs
 ms.prod: sql
 ms.technology: connectivity
 ms.custom: ''
@@ -14,19 +14,19 @@ ms.assetid: 619bc7fd-ad0a-44ea-9678-ad40a662c258
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a74f69947d6d1a1d730d39875f32a0cfc7286705
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963369"
 ---
 # <a name="submitchanges-method-example-vbscript"></a>SubmitChanges 方法示例 (VBScript)
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 下面的代码段演示如何使用[SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md)方法替换[rds。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象。  
+ 下面的代码段演示如何将[SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md)方法用于[RDS。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象。  
   
- 若要测试此示例中，剪切并粘贴到正常的 ASP 文档的此代码并将其命名**SubmitChangesCtrlVBS.asp**。 ASP 脚本将识别您的服务器。  
+ 若要测试此示例，请将此代码剪切并粘贴到普通的 ASP 文档中，然后将其命名为**SubmitChangesCtrlVBS**。 ASP 脚本将标识您的服务器。  
   
 ```  
 <!-- BeginCancelUpdateVBS -->  
@@ -116,8 +116,8 @@ End Sub
 <!-- EndCancelUpdateVBS -->  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
+## <a name="see-also"></a>另请参阅  
+ [DataControl 对象（RDS）](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [SubmitChanges 方法 (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
 
 

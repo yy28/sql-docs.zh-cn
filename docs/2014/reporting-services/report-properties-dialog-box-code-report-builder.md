@@ -1,5 +1,5 @@
 ---
-title: 报表属性对话框，代码 （报表生成器） |Microsoft Docs
+title: "\"报表属性\" 对话框-\"代码（报表生成器） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d2a4ef9c25607226c3898c10c0ec9ff245de8a18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104449"
 ---
 # <a name="report-properties-dialog-box-code-report-builder"></a>“报表属性”对话框 ->“代码”（报表生成器和 SSRS）
@@ -24,10 +24,10 @@ ms.locfileid: "66104449"
   
 ## <a name="options"></a>选项  
  **自定义代码**  
- 键入要在报表中使用的方法。 代码必须是用 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]编写的。  
+ 键入要在报表中使用的方法。 必须编写[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]代码。  
   
-## <a name="see-also"></a>请参阅  
- [报表设计器的表达式中的自定义代码和程序集引用 (SSRS)](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
+## <a name="see-also"></a>另请参阅  
+ [报表设计器 &#40;SSRS 中的表达式中的自定义代码和程序集引用&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
  [报表和组变量集合引用（报表生成器和 SSRS）](report-design/built-in-collections-report-and-group-variables-references-report-builder.md)   
  [表达式示例（报表生成器和 SSRS）](report-design/expression-examples-report-builder-and-ssrs.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: StartMode 属性 （SqlService 类） |Microsoft Docs
+title: StartMode 属性（SqlService 类） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: bf77e36824c05a0f07bc789c380cffbc1518669d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63187819"
 ---
 # <a name="startmode-property-sqlservice-class"></a>StartMode 属性（SqlService 类）
@@ -37,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>组成部分  
- *object*  
+ *对象*  
  一个表示服务的 [SqlService 类](sqlservice-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
@@ -54,15 +54,15 @@ object
  自动  
  值 = 2。 服务将在系统启动期间由服务控制管理器自动启动。  
   
- Manual  
+ 手动  
  值 = 3。 服务将在进程调用 `StartService` 方法时由计算机管理器启动。  
   
- 禁用  
+ 已禁用  
  值 = 4。 无法启动服务。  
   
 ## <a name="remarks"></a>备注  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [启动和停止服务](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

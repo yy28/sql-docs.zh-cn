@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 083fa7998e347b3aa3abe7aacbf9585a18047b20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100229"
 ---
 # <a name="new-shared-schedule-management-studio"></a>新建共享计划 (Management Studio)
@@ -35,7 +35,7 @@ ms.locfileid: "66100229"
  **名称**  
  键入共享计划的名称。 当用户为报表和订阅选择共享计划时，此名称会出现在下拉列表中。 请确保提供能够很方便地适合列表并能够轻松地区分不同共享计划的描述性名称。 名称必须至少包含一个字母数字字符。 还可以包含空格和某些符号。 在指定名称时请不要使用以下字符：  
   
- ; ? : \@ & = + , $ / * \< >  
+ ; ? ： \@ & = +，$/*\< >  
   
  " /  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66100229"
  **此计划的结束日期**  
  指定此计划的过期日期。  
   
- **类型**  
+ 类型   
  指定重复执行模式是主要基于小时、天、周还是月。  
   
  **小时(重复执行模式)**  
@@ -63,7 +63,7 @@ ms.locfileid: "66100229"
  **一次**  
  选择此选项可以创建只在特定日期和时间运行一次的计划。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Management Studio 中报表服务器的 F1 帮助](report-server-in-management-studio-f1-help.md)   
  [在 Management Studio 中连接到报表服务器](connect-to-a-report-server-in-management-studio.md)   
  [创建、修改和删除计划](../subscriptions/create-modify-and-delete-schedules.md)   

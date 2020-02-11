@@ -1,5 +1,5 @@
 ---
-title: 选项 （文本编辑器： XML:Tabs 页） |Microsoft Docs
+title: 选项（文本编辑器： XML：选项卡页） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,26 +13,26 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: ae595b42274e012032e79754650b573b5d80053b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089133"
 ---
 # <a name="options-text-editorxmltabs-page"></a>选项（“文本编辑器”:“XML”:“选项卡”页）
-  此对话框支持您更改 XML 编辑器（用于编辑 XML 文档）的跳格行为。 若要显示这些设置，请在 **“工具”** 菜单上单击 **“选项”** ，展开 **“文本编辑器”** 文件夹，展开 **XML** 子文件夹，再单击 **“制表符”** 。  
+  此对话框支持您更改 XML 编辑器（用于编辑 XML 文档）的跳格行为。 若要显示这些设置，请在 **“工具”** 菜单上单击 **“选项”** ，展开 **“文本编辑器”** 文件夹，展开 **XML** 子文件夹，再单击 **“制表符”**。  
   
 ## <a name="setting-options-in-multiple-locations"></a>在多个位置设置选项  
- XML 编辑器的选项也可在“所有语言”和“常规”对话框中设置。  如果使用 **“所有语言”** 对话框来设置其他 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 编辑器（例如 DMX 或 MDX 编辑器）的其他选项，则必须使用此对话框重置 XML 编辑器选项。  
+ XML 编辑器的选项也可在“所有语言”和“常规”对话框中设置。 **** 如果使用 "**所有语言**" 对话框来设置其他[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]编辑器（例如 DMX 或 MDX 编辑器）的其他选项，则必须使用此对话框重置 XML 编辑器选项。  
   
 ## <a name="indenting"></a>缩进  
  **无**  
  选择此选项后，则按 Enter 键时所创建的新行不会缩进。 光标置于新行的第一列。  
   
- **Block**  
+ **模块**  
  如果选择此选项，则按 Enter 时创建的新行的自动缩进距离与上一行的缩进距离相同。  
   
- **Smart**  
+ **智能**  
  选择此选项后，则按 Enter 键时所创建的新行会根据上下文调整位置。 例如，在左大括号 ({) 后，包含的行将自动多缩进一个制表位。 对应的右大括号 (}) 将根据其左大括号重新对齐。  
   
 ## <a name="tabs"></a>制表符  

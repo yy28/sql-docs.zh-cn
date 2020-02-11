@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4f86c02acfcefba4972769367649cfd6b2075107
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103623"
 ---
 # <a name="process-large-reports"></a>处理大型报表
@@ -68,11 +68,11 @@ ms.locfileid: "66103623"
   
  如果希望使用电子邮件形式传递报表，请配置订阅以包含相应的链接。 避免以附件形式发送报表。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [订阅和传递 (Reporting Services)](../subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [设置报表处理属性](set-report-processing-properties.md)   
  [为报表数据源指定凭据和连接信息](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [报表服务器内容管理（SSRS 本机模式）](report-server-content-management-ssrs-native-mode.md)   
- [预加载缓存（报表管理器）](preload-the-cache-report-manager.md)  
+ [报表管理器预加载缓存 &#40;&#41;](preload-the-cache-report-manager.md)  
   
   

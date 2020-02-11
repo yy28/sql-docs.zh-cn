@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e4aa55a321f4eea99643ec39cbf5b72682ec7929
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62912868"
 ---
-# <a name="mssqlserver8621"></a>MSSQLSERVER_8621
+# <a name="mssqlserver_8621"></a>MSSQLSERVER_8621
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62912868"
 |符号名称|OPTIMIZER_STACK_OVERFLOW_ERR|  
 |消息正文|查询处理器在优化查询时堆栈空间不足。 请简化查询。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  出错的最可能原因是扩展查询的大小。 在每个视图的定义、计算列、[!INCLUDE[tsql](../../includes/tsql-md.md)] 函数和它引用的公用表表达式以及级联操作（如更新辅助索引、视图和触发器）方面，扩展查询将替换原始查询。  
   
  很可能查询在某个维度中很大；例如，视图定义所引用的表数，或者很大的标量表达式。  

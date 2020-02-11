@@ -1,5 +1,5 @@
 ---
-title: OriginalValue 和 UnderlyingValue 属性示例 （VC + +） |Microsoft Docs
+title: OriginalValue 和 UnderlyingValue 属性示例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: c5762ad2-f43b-453d-b44a-9c70210eb00f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b4950634f473ca70c26b7b2b2c8159fb9a75fb0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931829"
 ---
-# <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>OriginalValue 和 UnderlyingValue 属性示例 （VC + +）
-此示例演示[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)并[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)通过显示一条消息，如果一条记录的基础数据的属性已更改期间[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)批处理更新。  
+# <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>OriginalValue 和 UnderlyingValue 属性示例（VC + +）
+此示例演示[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)和[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)属性，如果记录的基础数据在[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)批处理更新期间发生了更改，则显示一条消息。  
   
 ## <a name="example"></a>示例  
   
@@ -194,32 +194,32 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **数据已更改 ！**  
-**标题 ID:PS1372**  
+ **数据已更改！**  
+**标题 ID： PS1372**  
 **当前值： self_help**   
-**原始值： 心理学**   
-**基础值： 社会学**   
-**数据已更改 ！**  
-**标题 ID:PS2091**  
+**原始值：心理学**   
+**基础值：社会学**   
+**数据已更改！**  
+**标题 ID： PS2091**  
 **当前值： self_help**   
-**原始值： 心理学**   
-**基础值： 社会学**   
-**数据已更改 ！**  
-**标题 ID:PS2106**  
+**原始值：心理学**   
+**基础值：社会学**   
+**数据已更改！**  
+**标题 ID： PS2106**  
 **当前值： self_help**   
-**原始值： 心理学**   
-**基础值： 社会学**   
-**数据已更改 ！**  
-**标题 ID:PS3333**  
+**原始值：心理学**   
+**基础值：社会学**   
+**数据已更改！**  
+**标题 ID： PS3333**  
 **当前值： self_help**   
-**原始值： 心理学**   
-**基础值： 社会学**   
-**数据已更改 ！**  
-**标题 ID:PS7777**  
+**原始值：心理学**   
+**基础值：社会学**   
+**数据已更改！**  
+**标题 ID： PS7777**  
 **当前值： self_help**   
-**原始值： 心理学**   
-**基础值： 社会学**    
-## <a name="see-also"></a>请参阅  
- [OriginalValue 属性 (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
- [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+**原始值：心理学**   
+**基础值：社会学**    
+## <a name="see-also"></a>另请参阅  
+ [OriginalValue 属性（ADO）](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
+ [Recordset 对象（ADO）](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [UnderlyingValue 属性](../../../ado/reference/ado-api/underlyingvalue-property.md)

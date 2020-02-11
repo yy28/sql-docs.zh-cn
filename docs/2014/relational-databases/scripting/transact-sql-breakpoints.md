@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 024f079d28c5ce144282bf09fff675fd308a8173
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243143"
 ---
 # <a name="transact-sql-breakpoints"></a>Transact-SQL 断点
@@ -36,7 +36,7 @@ ms.locfileid: "75243143"
 |说明如何指定一个条件，该条件定义断点是否基于指定 Transact-SQL 表达式的计算结果而中断。|[指定断点条件](specify-a-breakpoint-condition.md)|  
 |说明如何指定一个命中计数，该命中计数仅在包含断点的语句已执行了指定次数时才会导致断点中断。|[指定命中计数](specify-a-hit-count.md)|  
 |说明如何指定一个筛选器，该筛选器使断点仅对于指定的进程或线程才会中断。|[指定断点筛选器](specify-a-breakpoint-filter.md)|  
-|说明如何指定一个“命中条件”操作，该“命中条件” **** 操作是一种在执行断点语句时执行的自定义操作。 示例将打印一条消息。|[指定断点操作](specify-a-breakpoint-action.md)|  
+|说明如何指定一个“命中条件”操作，该“命中条件”  操作是一种在执行断点语句时执行的自定义操作。 示例将打印一条消息。|[指定断点操作](specify-a-breakpoint-action.md)|  
 |说明如何编辑断点的位置。|[编辑断点位置](edit-a-breakpoint-location.md)|  
   
 ## <a name="see-also"></a>另请参阅  

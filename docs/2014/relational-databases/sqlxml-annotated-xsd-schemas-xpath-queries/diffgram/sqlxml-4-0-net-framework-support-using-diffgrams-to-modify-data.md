@@ -26,14 +26,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e704688537684c367bf4d8f2eec95db2affcc0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012696"
 ---
 # <a name="using-diffgrams-to-modify-data-in-sqlxml-40"></a>使用 DiffGram 修改 SQLXML 4.0 中的数据
-  DiffGram 格式在中引入**数据集**组成部分[!INCLUDE[msCoName](../../../includes/msconame-md.md)].NET Framework。 在 .NET Framework 中，您可以创建 DiffGram，并使用它来修改 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中的表的数据。  
+  DiffGram 格式是在[!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 的**数据集**组件中引入的。 在 .NET Framework 中，您可以创建 DiffGram，并使用它来修改 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中的表的数据。  
   
 > [!NOTE]  
 >  本部分简单介绍了 DiffGram，并提供了如何使用 DiffGram 的示例。 本部分假定您熟悉 .NET Framework 中的 DiffGram。 本文档重点关注特定于 SQLXML 的 DiffGram 问题。  
@@ -42,7 +42,7 @@ ms.locfileid: "66012696"
  [SQLXML 4.0 中的 DiffGrams 简介](introduction-to-diffgrams-in-sqlxml-4-0.md)  
  提供有关 Diffgram 的基本信息。  
   
- [DiffGram 示例&#40;SQLXML 4.0&#41;](diffgram-examples-sqlxml-4-0.md)  
+ [&#40;SQLXML 4.0&#41;的 DiffGram 示例](diffgram-examples-sqlxml-4-0.md)  
  提供使用 Diffgram 的示例。  
   
  [使用 ADO 执行 DiffGram &#40;SQLXML 4.0&#41;](executing-a-diffgram-by-using-ado-sqlxml-4-0.md)  

@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 60d5af2752a426faca3069541deeae3a6aa4f495
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245193"
 ---
 # <a name="configure-the-transact-sql-debugger"></a>配置 Transact-SQL 调试器
@@ -162,10 +162,10 @@ ms.locfileid: "75245193"
 * 服务器需要通过 RPC 回复客户端通信。 运行 SQL Server 服务的帐户应具有对客户端的身份验证权限。  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-sql 调试器](transact-sql-debugger.md)   
+ [Transact-SQL 调试器](transact-sql-debugger.md)   
  [运行 Transact-sql 调试器](run-the-transact-sql-debugger.md)   
  [单步执行 Transact-sql 代码](step-through-transact-sql-code.md)   
- [Transact-sql 调试器信息](transact-sql-debugger-information.md)   
- [数据库引擎查询编辑器 &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)  
+ [Transact-SQL 调试器信息](transact-sql-debugger-information.md)   
+ [数据库引擎查询编辑器 (SQL Server Management Studio)](database-engine-query-editor-sql-server-management-studio.md)  
   
   

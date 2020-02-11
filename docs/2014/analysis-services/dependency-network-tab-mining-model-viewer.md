@@ -1,5 +1,5 @@
 ---
-title: 依赖关系网络选项卡 （挖掘模型查看器） |Microsoft Docs
+title: "\"依赖关系网络\" 选项卡（挖掘模型查看器） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 819a69ad9c1b1415726d816e2cbc1faa92bd6cd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081943"
 ---
 # <a name="dependency-network-tab-mining-model-viewer"></a>“依赖关系网络”选项卡（挖掘模型查看器）
+  
   **“依赖关系网络”** 选项卡提供挖掘模型所包含的所有属性的图形视图，并显示这些属性之间的关系。  
   
- **“依赖关系网络”**  选项卡用于多种类型的挖掘模型，包括 Naïve Bayes 模型、决策树模型和关联模型。 有关如何在这些模型的上下文中解释 **“依赖关系网络”**  选项卡的内容的详细信息，请参阅以下链接：  
+ 
+  **“依赖关系网络”**  选项卡用于多种类型的挖掘模型，包括 Naïve Bayes 模型、决策树模型和关联模型。 有关如何在这些模型的上下文中解释 **“依赖关系网络”**  选项卡的内容的详细信息，请参阅以下链接：  
   
  [使用 Microsoft 树查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
@@ -37,7 +39,7 @@ ms.locfileid: "66081943"
  **挖掘模型**  
  从当前挖掘结构的挖掘模型中选择一个挖掘模型以进行查看。 挖掘模型将在自定义查看器中打开。 用于每个模型的自定义查看器的类型由您用来创建该模型的算法决定。  
   
- **Viewer**  
+ **查看器**  
  选择用于浏览所选挖掘模型的查看器。 对于每个挖掘模型，可以使用为其提供的自定义查看器，也可以使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 挖掘内容查看器。 还可以使用插件查看器（如果有）。 Microsoft 内容树查看器可用于所有模型，并表示 HTML 表中的模型内容。  
   
  **放大**  
@@ -52,7 +54,7 @@ ms.locfileid: "66081943"
  **复制整个图形**  
  将完整的关系图复制到剪贴板。  
   
- **Links**  
+ **链接**  
  通过调整属性右侧的滑块，可以调整查看器显示的链接（边缘）数和节点数。 向下拖动滑动条将增大阈值，以便只显示最强链接。 对于每种模型类型，均使用一个略为不同的值来表示图形中的链接：  
   
 -   在 **决策树** 模型中，边缘表示连接的预测强度（部分地由拆分分数决定）。  
@@ -63,9 +65,9 @@ ms.locfileid: "66081943"
   
  所有模型类型的一般规则是：链接越强，两个属性之间的预测关系就越强。  
   
-## <a name="see-also"></a>请参阅  
- [数据挖掘算法 &#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [挖掘模型查看器（数据挖掘模型设计器）](mining-model-viewers-data-mining-model-designer.md)   
+## <a name="see-also"></a>另请参阅  
+ [数据挖掘算法 &#40;Analysis Services 数据挖掘&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [挖掘模型查看器 &#40;数据挖掘模型设计器&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [数据挖掘模型查看器](data-mining/data-mining-model-viewers.md)  
   
   

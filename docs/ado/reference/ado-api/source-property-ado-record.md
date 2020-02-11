@@ -1,5 +1,5 @@
 ---
-title: 源属性 （ADO 记录） |Microsoft Docs
+title: Source 属性（ADO 记录） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -21,35 +21,35 @@ ms.assetid: 2c18279e-6f35-4af0-b12e-8f1543d9ed20
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b1870d8cd8253e1b6de74ce093d51ca6e33c5c6d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930938"
 ---
 # <a name="source-property-ado-record"></a>Source 属性（ADO 记录）
-指示数据源或由表示对象[记录](../../../ado/reference/ado-api/record-object-ado.md)。  
+指示[记录](../../../ado/reference/ado-api/record-object-ado.md)所表示的数据源或对象。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
- 设置或返回**Variant**值，该值指示表示的实体**记录**。  
+ 设置或返回一个**变量**值，该值指示由**记录**表示的实体。  
   
 ## <a name="remarks"></a>备注  
- **源**属性将返回*源*自变量**记录**对象[打开](../../../ado/reference/ado-api/open-method-ado-record.md)方法。 它可以包含一个绝对或相对 URL 字符串。 可以设置不使用绝对 URL [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)属性以直接打开**记录**对象。 隐式**连接**这种情况下创建对象。  
+ **Source**属性返回**Record**对象[Open](../../../ado/reference/ado-api/open-method-ado-record.md)方法的*source*参数。 它可以包含绝对或相对的 URL 字符串。 可以使用绝对 URL，而无需将[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)属性设置为直接打开**记录**对象。 在这种情况下，将创建一个隐式**连接**对象。  
   
- **源**属性还可以包含对已打开的引用**记录集**，这将打开**记录**对象，表示当前行中的**记录集**。  
+ **Source**属性还可以包含对已打开的**记录集**的引用，该记录集打开表示**记录集中**的当前行的**记录**对象。  
   
- **源**属性可能还包含对引用[命令](../../../ado/reference/ado-api/command-object-ado.md)对象可从提供程序返回一行数据。  
+ **Source**属性还可以包含对[命令](../../../ado/reference/ado-api/command-object-ado.md)对象的引用，该对象将从提供程序返回一行数据。  
   
- 如果**ActiveConnection**还设置属性，则**源**属性必须指向该连接的作用域中存在某些对象。 例如，在树状命名空间中，如果**源**属性包含绝对 URL，它必须指向现有的连接字符串中的 URL 标识的节点范围内的节点。 如果**源**属性包含的相对 URL，然后通过设置上下文中对其验证**ActiveConnection**属性。  
+ 如果同时设置了**ActiveConnection**属性，则**源**属性必须指向在该连接的作用域中存在的某个对象。 例如，在树结构命名空间中，如果**源**属性包含绝对 URL，则它必须指向在连接字符串中由 URL 标识的节点范围内的节点。 如果**Source**属性包含相对 URL，则会在**ActiveConnection**属性设置的上下文中对其进行验证。  
   
- **源**属性为读/写同时**记录**对象已关闭，并且为只读时**记录**对象处于打开状态。  
+ 当**记录对象处于**关闭状态时，**源**属性是读/写的，并且在**记录**对象处于打开状态时为只读。  
   
 > [!NOTE]
->  Url 使用 http 方案将自动调用[Microsoft OLE DB 访问接口用于 Internet 发布](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)。 有关详细信息，请参阅[绝对和相对 Url](../../../ado/guide/data/absolute-and-relative-urls.md)。  
+>  使用 http 方案的 Url 将自动调用[用于 Internet 发布的 Microsoft OLE DB 提供程序](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)。 有关详细信息，请参阅[绝对和相对 url](../../../ado/guide/data/absolute-and-relative-urls.md)。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [记录对象 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
-## <a name="see-also"></a>请参阅  
- [源属性 （ADO 错误）](../../../ado/reference/ado-api/source-property-ado-error.md)   
+## <a name="see-also"></a>另请参阅  
+ [Source 属性（ADO 错误）](../../../ado/reference/ado-api/source-property-ado-error.md)   
  [Source 属性（ADO 记录集）](../../../ado/reference/ado-api/source-property-ado-recordset.md)

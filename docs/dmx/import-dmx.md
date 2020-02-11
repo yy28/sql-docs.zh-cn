@@ -1,5 +1,5 @@
 ---
-title: 导入 (DMX) |Microsoft Docs
+title: 导入（DMX） |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2141a4f8ccc6e34ec3010ad3ce8e8e3789d09132
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892757"
 ---
 # <a name="import-dmx"></a>IMPORT (DMX)
@@ -28,7 +28,7 @@ IMPORT FROM <filename>
 ```  
   
 ## <a name="arguments"></a>参数  
- *filename*  
+ *名字*  
  一个包含要导入的文件的名称和位置的字符串。  
   
 ## <a name="remarks"></a>备注  
@@ -43,11 +43,11 @@ IMPORT FROM <filename>
 IMPORT FROM 'C:\TEMP\Association_NEW.dmb'  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [数据挖掘扩展&#40;插件&#41; DMX 数据定义语句](../dmx/dmx-statements-data-definition.md)   
- [数据挖掘扩展&#40;插件&#41; DMX 数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
- [数据挖掘扩展&#40;插件&#41; DMX 语句参考](../dmx/data-mining-extensions-dmx-statements.md)   
- [导出&#40;DMX&#41;](../dmx/export-dmx.md)   
+## <a name="see-also"></a>另请参阅  
+ [数据挖掘扩展插件 &#40;DMX&#41; 数据定义语句](../dmx/dmx-statements-data-definition.md)   
+ [数据挖掘扩展插件 &#40;DMX&#41; 数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
+ [数据挖掘扩展插件 &#40;DMX&#41; 语句参考](../dmx/data-mining-extensions-dmx-statements.md)   
+ [导出 &#40;DMX&#41;](../dmx/export-dmx.md)   
  [导出和导入数据挖掘对象](https://docs.microsoft.com/analysis-services/data-mining/export-and-import-data-mining-objects)  
   
   

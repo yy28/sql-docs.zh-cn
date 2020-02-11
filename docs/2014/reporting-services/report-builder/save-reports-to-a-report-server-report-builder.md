@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9c94117f277f0d058bd67c61e8dabc609d009337
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107641"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>将报表保存到报表服务器（报表生成器）
@@ -25,7 +25,7 @@ ms.locfileid: "66107641"
   
 ### <a name="to-save-a-report-to-a-report-server"></a>将报表保存到报表服务器  
   
-1.  从“报表生成器”按钮，单击 **“保存”**。 **另存为**_\<报表项\>_ 对话框随即打开。  
+1.  从“报表生成器”按钮，单击 **“保存”** 。 此时将打开 "**另存为**_\<报表项\> _ " 对话框。  
   
     > [!NOTE]  
     >  如果正在重新保存报表，会自动将其重新保存到以前的位置。 使用“另存为”选项可以更改位置。  
@@ -40,7 +40,7 @@ ms.locfileid: "66107641"
   
 ### <a name="to-save-a-report-as-a-different-name"></a>将报表另存为不同名称  
   
-1.  从“报表生成器”按钮，单击 **“另存为”**。 **另存为**_\<报表项\>_ 对话框随即打开。  
+1.  从“报表生成器”按钮，单击 **“另存为”** 。 此时将打开 "**另存为**_\<报表项\> _ " 对话框。  
   
 2.  浏览到报表服务器位置或要保存报表的文件共享。  
   
@@ -48,9 +48,9 @@ ms.locfileid: "66107641"
   
 4.  在 **“项类型”** 中，选择要保存的报表项的类型。 报表的类型为 Reports(*.rdl)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [查找、查看和管理报表（报表生成器和 SSRS）](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [导出报表&#40;报表生成器和 SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
+ [导出报表 &#40;报表生成器和 SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [保存报表（报表生成器）](saving-reports-report-builder.md)   
  [将报表导出为其他文件类型（报表生成器和 SSRS）](../export-a-report-as-another-file-type-report-builder-and-ssrs.md)  
   

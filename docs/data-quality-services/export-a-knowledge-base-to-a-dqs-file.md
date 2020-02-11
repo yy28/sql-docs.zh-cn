@@ -10,10 +10,10 @@ ms.assetid: a324ead5-c8aa-4e26-abe3-ef415add00f8
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 1462fe698ada4786bd0c252f33c8c19e0c5bae7e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251609"
 ---
 # <a name="export-a-knowledge-base-to-a-dqs-file"></a>将知识库导出到 .dqs 文件
@@ -26,14 +26,14 @@ ms.locfileid: "75251609"
   
  导出过程创建的 .dqs 数据文件已加密，所以无法查看内容。  
   
-##  <a name="BeforeYouBegin"></a>开始之前  
+##  <a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Prerequisites"></a>先决条件  
  若要将知识库导出到 .dqs 数据文件，您必须已创建并打开了知识库。 您无需具有要导出到的 .dqs 文件，系统将为您创建一个。  
   
-###  <a name="Security"></a>安全  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>访问  
+####  <a name="Permissions"></a> 权限  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_administrator 角色，才能将知识库导出到 .dqs 数据文件。  
   
 ##  <a name="Export"></a>将知识库导出到 dqs 文件  
@@ -46,7 +46,7 @@ ms.locfileid: "75251609"
   
 4.  在“导出到数据文件”对话框中，转到要保存该文件的文件夹，命名该文件或保留知识库名称，将“DQS 数据文件 (**.dqs)”保留为“另存为”类型，然后单击“保存”****\***********。  
   
-5.  在 **“导出知识库”** 对话框中，验证状态行是否指示导出已完成。 单击“确定”****。  
+5.  在 **“导出知识库”** 对话框中，验证状态行是否指示导出已完成。 单击“确定”。   
   
 ##  <a name="FollowUp"></a>跟进：在将域导出到 dqs 文件后  
  将知识库导出到 .dqs 文件后，您可以将知识库导入到同一个 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] （使用新名称）或导入到另一个 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]中。  

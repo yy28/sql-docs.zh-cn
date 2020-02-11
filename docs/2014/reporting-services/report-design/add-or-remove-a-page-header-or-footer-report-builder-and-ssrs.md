@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 88a4cb2598b8c57813f3d2034434eeef31f49a76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106553"
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>添加或删除页眉或页脚（报表生成器和 SSRS）
@@ -47,11 +47,11 @@ ms.locfileid: "66106553"
   
     -   **矩形**  
   
-    -   **Image**  
+    -   **图像**  
   
-3.  右键单击页眉，然后单击“页眉属性”  添加边框、背景图像或颜色，或调整页眉宽度。 再单击 **“确定”** 。  
+3.  右键单击页眉，然后单击“页眉属性”  添加边框、背景图像或颜色，或调整页眉宽度。 然后单击“确定”  。  
   
-4.  右键单击页脚，然后单击“页脚属性”  添加边框、背景图像或颜色，或调整页脚宽度。 再单击 **“确定”** 。  
+4.  右键单击页脚，然后单击“页脚属性”  添加边框、背景图像或颜色，或调整页脚宽度。 然后单击“确定”  。  
   
 ### <a name="to-remove-a-page-header-or-footer"></a>删除页眉或页脚  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66106553"
 > [!NOTE]  
 >  一旦删除，报表中将不再包含页眉或页脚。 如果随后再次添加页眉或页脚，您之前添加到页眉或页脚中的任何项都将不再显示。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [页眉和页脚（报表生成器和 SSRS）](page-headers-and-footers-report-builder-and-ssrs.md)  
   
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66f1f8f57dca3ad2edba3f4b63100b2de3ae5659
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779109"
 ---
 # <a name="migrate-query-plans"></a>迁移查询计划
@@ -26,7 +26,7 @@ ms.locfileid: "62779109"
   
  若要在升级前创建计划指南，请按照以下步骤执行操作：  
   
-1.  使用记录每个任务关键查询的当前计划[sp_create_plan_guide](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)存储过程并在 USE PLAN 查询提示中指定的查询计划。  
+1.  使用[sp_create_plan_guide](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)存储过程并在 USE plan 查询提示中指定查询计划，记录每个任务关键查询的当前计划。  
   
 2.  验证计划指南是否适用于此查询。  
   
@@ -41,16 +41,16 @@ ms.locfileid: "62779109"
 ## <a name="example"></a>示例  
  下面的示例显示如何通过创建计划指南来为查询记录升级前的计划。  
   
-### <a name="step-1-collect-the-plan"></a>第 1 步：收集计划  
+### <a name="step-1-collect-the-plan"></a>步骤 1：收集计划  
  计划指南中记录的查询计划必须采用 XML 格式。 可通过以下方式生成 XML 格式的查询计划：  
   
 -   [SET SHOWPLAN_XML](/sql/t-sql/statements/set-showplan-xml-transact-sql)  
   
 -   [SET STATISTICS XML](/sql/t-sql/statements/set-statistics-xml-transact-sql)  
   
--   查询的 query_plan 列[sys.dm_exec_query_plan](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql)动态管理函数。  
+-   查询[sys.databases dm_exec_query_plan](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql)动态管理函数的 query_plan 列。  
   
--   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] [Showplan XML](../../relational-databases/event-classes/showplan-xml-event-class.md)， [Showplan XML Statistics Profile](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md)，并且[Showplan XML For Query Compile](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md)事件类。  
+-   显示[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] [计划](../../relational-databases/event-classes/showplan-xml-event-class.md)xml、显示[计划 xml 统计信息](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md)以及[用于查询编译](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md)事件类的显示计划 xml。  
   
  下面的示例通过查询动态管理视图收集语句 `SELECT City, StateProvinceID, PostalCode FROM Person.Address ORDER BY PostalCode DESC;` 的查询计划。  
   
@@ -65,7 +65,7 @@ SELECT query_plan
 GO  
 ```  
   
-### <a name="step-2-create-the-plan-guide-to-force-the-plan"></a>第 2 步：创建计划指南以强制实施计划  
+### <a name="step-2-create-the-plan-guide-to-force-the-plan"></a>步骤 2：创建计划指南以强制实施计划  
  在计划指南中使用 XML 格式的查询计划（通过上述任一方法获取），将该查询计划作为字符串文字复制并粘贴在 sp_create_plan_guide 的 OPTION 子句中指定的 USE PLAN 查询提示中。  
   
  在 XML 计划本身中，先将计划中出现的引号 (') 通过第二个引号进行转义，然后再创建计划指南。 例如，对于包含 `WHERE A.varchar = 'This is a string'` 的计划，必须通过将该代码修改为 `WHERE A.varchar = ''This is a string''` 来进行转义。  
@@ -88,12 +88,12 @@ EXECUTE sp_create_plan_guide
 GO  
 ```  
   
-### <a name="step-3-verify-that-the-plan-guide-is-applied-to-the-query"></a>步骤 3：验证计划指南应用于查询  
+### <a name="step-3-verify-that-the-plan-guide-is-applied-to-the-query"></a>步骤 3：验证计划指南是否适用于查询  
  再次运行查询，并检查生成的查询计划。 您应看到该计划与您在计划指南中指定的计划相符。  
   
-## <a name="see-also"></a>请参阅  
- [sp_create_plan_guide (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
- [查询提示 (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-query)   
+## <a name="see-also"></a>另请参阅  
+ [sp_create_plan_guide &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [Transact-sql&#41;的查询提示 &#40;](/sql/t-sql/queries/hints-transact-sql-query)   
  [计划指南](../../relational-databases/performance/plan-guides.md)  
   
   

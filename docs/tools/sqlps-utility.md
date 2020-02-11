@@ -1,6 +1,6 @@
 ---
-title: sqlps 实用工具 | Microsoft Docs
-ms.custom: ''
+title: sqlps 实用工具
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,19 +14,19 @@ ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: cbc4492aa3c52e08eb6cbce71012da9f91f371aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 6d76286b8632797ab871693a26ff6e19523cc256
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68223738"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75304826"
 ---
 # <a name="sqlps-utility"></a>sqlps 实用工具
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   **sqlps** 实用工具可启动 Windows PowerShell 会话，同时加载和注册 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 提供程序和 cmdlet。 您可以输入 PowerShell 命令或脚本，它们使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 组件来处理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例及其对象。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] 改用 **sqlps** PowerShell 模块。 有关 **sqlps** 模块的详细信息，请参阅 [Import the SQLPS Module](../relational-databases/scripting/import-the-sqlps-module.md)。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)]改用 sqlps PowerShell 模块  。 有关 **sqlps** 模块的详细信息，请参阅 [Import the SQLPS Module](../relational-databases/scripting/import-the-sqlps-module.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -76,7 +76,7 @@ sqlps
  [ **-?** |  **-Help** ]  
  显示 **sqlps** 实用工具选项的语法摘要。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **Sqlps** 实用工具启动 PowerShell 环境 (PowerShell.exe) 并加载 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 模块。 该模块也命名为 **sqlps**，它将加载并注册以下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 管理单元：  
   
 -   Microsoft.SqlServer.Management.PSProvider.dll  

@@ -18,10 +18,10 @@ ms.assetid: b90755fd-7cac-4bdb-8e45-e95119a7665c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 32f13ed373bb13b05040bcda3f68cb9890e2d301
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73659414"
 ---
 # <a name="protocoldisplayname-property-clientnetlibinfo-class"></a>ProtocolDisplayName 属性（ClientNetLibInfo 类）
@@ -36,13 +36,13 @@ object.ProtocolDisplayName [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
+ *对象*  
  一个表示有关客户端网络库的信息的 [ClientNetLibInfo 类](../../../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个指定用作协议的显示名称的字符串值。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>另请参阅  
  [配置客户端协议](https://technet.microsoft.com/library/ms181035.aspx)  

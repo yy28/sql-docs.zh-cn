@@ -1,5 +1,5 @@
 ---
-title: 管理密码 (OracleToSQL) |Microsoft Docs
+title: 管理密码（OracleToSQL） |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,39 +14,39 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: d8520224662c02d1ffbe9fd2fd6ef76f8b1e698a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68262925"
 ---
 # <a name="managing-passwords-oracletosql"></a>管理密码 (OracleToSQL)
-本部分是如何确保数据库密码和导入或导出跨服务器的过程：  
+本部分介绍如何保护数据库密码，以及如何在服务器之间导入或导出数据库密码：  
   
 1.  保护密码  
   
 2.  导出或导入加密的密码  
   
 ## <a name="securing-password"></a>保护密码  
-SSMA 允许你保护你的数据库的密码。  
+SSMA 允许保护数据库的密码。  
   
-使用以下过程来实现安全的连接：  
+使用以下过程来实现安全连接：  
   
-指定一个有效的密码，使用以下三种方法之一：  
+使用以下三种方法之一指定有效密码：  
   
-1.  **清除文本：** 在密码节点的值属性中键入数据库密码。 服务器连接文件的脚本文件的服务器部分中的服务器定义节点下找到它。  
+1.  **清除文本：** 在 "密码" 节点的 "值" 属性中键入数据库密码。 它在脚本文件或服务器连接文件的服务器部分中的 "服务器定义" 节点下找到。  
   
-    密码以明文形式是不安全的。 因此，您将遇到以下警告消息中的控制台输出： *"服务器&lt;服务器 id&gt;密码是提供不安全的明文形式 SSMA 控制台应用程序提供了一个选项来保护通过加密的密码，请参阅-securepassword 选项 SSMA 帮助文件中的详细信息信息。*  
+    明文形式的密码不安全。 因此，您将在控制台输出中看到以下警告消息： *"服务器&lt;服务器 id&gt;密码以非安全明文形式提供"，SSMA 控制台应用程序提供了通过加密来保护密码的选项，有关详细信息，请参阅 securepassword 选项。*  
   
-    **加密的密码：** 在这种情况下，指定的密码，在本地计算机中 ProtectedStorage.ssma 以加密形式存储。  
+    **加密密码：** 在此示例中，指定的密码以加密形式存储在 ProtectedStorage. ssma 中的本地计算机上。  
   
     -   **保护密码**  
   
-        -   执行`SSMAforOracleConsole.exe`与`-securepassword`，并在命令行传递包含中的服务器定义部分的密码节点的连接或脚本文件的服务器添加开关。  
+        -   `SSMAforOracleConsole.exe`在命令行上`-securepassword`执行，并在服务器定义部分传递包含 password 节点的服务器连接或脚本文件，并在命令行上执行。  
   
-        -   在提示符下，要求用户输入数据库密码并确认它。  
+        -   在提示符下，要求用户输入数据库密码并进行确认。  
   
-            服务器定义 id 和其相应的加密的密码存储在本地计算机上的文件  
+            服务器定义 id 及其相应的加密密码存储在本地计算机上的文件中  
             
             示例 1：  
             
@@ -72,29 +72,29 @@ SSMA 允许你保护你的数据库的密码。
     
     -   **删除加密的密码**  
   
-        执行`SSMAforOracleConsole.exe`与`-securepassword`和`-remove`开关在命令行传递的服务器 id，以从本地计算机上存在受保护的存储文件中删除加密的密码。  
+        在命令行传递`-securepassword`服务器`-remove` id 的情况下执行，并从本地计算机上的受保护存储文件中删除加密的密码。 `SSMAforOracleConsole.exe`  
         
-        例如：  
+        示例：  
         
             C:\SSMA\SSMAforOracleConsole.EXE -securepassword -remove all
             C:\SSMA\SSMAforOracleConsole.EXE -securepassword -remove "source_1,target_1"  
   
-    -   **列出其密码进行加密的服务器 Id**  
+    -   **列出其密码已加密的服务器 Id**  
   
-        执行`SSMAforOracleConsole.exe`与`-securepassword`和`-list`切换通过在命令行列出了其密码已加密的服务器 id。  
+        在命令`SSMAforOracleConsole.exe`行中`-securepassword`使用`-list`和开关执行，以列出其密码已加密的所有服务器 id。  
   
-        例如：  
+        示例：  
         
             C:\SSMA\SSMAforOracleConsole.EXE -securepassword -list  
   
     > [!NOTE]  
-    > 1.  在脚本或服务器连接文件中提及的明文密码将优先于受保护的文件中的加密密码。  
-    > 2.  在服务器连接文件或脚本文件的服务器部分中存在没有密码时或者如果它不在固定在本地计算机上，控制台将提示您输入的密码。  
+    > 1.  脚本或服务器连接文件中提及的明文密码优先于安全文件中的加密密码。  
+    > 2.  如果服务器连接文件或脚本文件的服务器部分中不存在密码，或者本地计算机上未保护密码，控制台将提示你输入密码。  
   
 ## <a name="exporting-or-importing-encrypted-passwords"></a>导出或导入加密的密码  
-SSMA 控制台应用程序，可将加密的数据库密码在本地计算机上的文件中存在导出为受保护的文件，反之亦然。 它有助于使加密的密码机独立。 导出功能读取服务器 id 和密码从本地保护的存储，并将信息保存在加密文件。 提示用户为受保护的文件输入密码。 请确保输入的密码是 8 个字符长度或详细信息。 不同的计算机上，此受保护的文件是可移植的。 导入功能从受保护的文件读取服务器 id 和密码信息。 用户提示输入密码的受保护文件，并将信息追加到受保护的本地存储。  
+SSMA 控制台应用程序允许将本地计算机上的文件中存在的加密数据库密码导出到受保护的文件，反之亦然。 它有助于独立加密密码计算机。 导出功能从本地受保护的存储读取服务器 id 和密码，并将信息保存在加密文件中。 系统将提示用户输入安全文件的密码。 请确保输入的密码长度为8个字符或更长。 此安全文件可在不同的计算机之间移植。 导入功能从安全文件中读取服务器 id 和密码信息。 系统将提示用户输入安全文件的密码，并将该信息附加到本地受保护的存储中。  
   
-例如：  
+示例：  
 
     Export password
     
@@ -110,7 +110,7 @@ SSMA 控制台应用程序，可将加密的数据库密码在本地计算机上
     
     Please confirm password: xxxxxxxx  
   
-例如：  
+示例：  
 
     Import an encrypted password
     
@@ -126,6 +126,6 @@ SSMA 控制台应用程序，可将加密的数据库密码在本地计算机上
     
     Please confirm password: xxxxxxxx  
   
-## <a name="see-also"></a>请参阅  
-[执行 SSMA 控制台 (Oracle)](https://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
+## <a name="see-also"></a>另请参阅  
+[执行 SSMA 控制台（Oracle）](https://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
   

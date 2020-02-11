@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ace6059545a4c46e3af279ad7c6104456478801c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022548"
 ---
 # <a name="new-subscription-wizard-ui-reference"></a>新建订阅向导（用户界面参考）
@@ -24,7 +24,7 @@ ms.locfileid: "63022548"
   
 -   [<代理名称> 代理位置](agentname-agent-location.md)  
   
--   [订阅服务器](subscribers.md)  
+-   [“发布服务器属性”](subscribers.md)  
   
 -   [添加非 SQL Server 订阅服务器](add-non-sql-server-subscriber.md)  
   
@@ -42,8 +42,8 @@ ms.locfileid: "63022548"
   
 -   [HOST_NAME 值](host-name-values.md)  
   
-## <a name="see-also"></a>请参阅  
- [创建请求订阅](create-a-pull-subscription.md)   
+## <a name="see-also"></a>另请参阅  
+ [Create a Pull Subscription](create-a-pull-subscription.md)   
  [ssSDSFull](create-a-push-subscription.md)   
  [订阅发布](subscribe-to-publications.md)   
 

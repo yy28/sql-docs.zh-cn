@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 87bfaef1ad5dc4c9b1f907c27955ca3f156038a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067803"
 ---
 # <a name="results-pane-visual-database-tools"></a>“结果”窗格 (Visual Database Tools)
@@ -62,12 +62,12 @@ ms.locfileid: "63067803"
   
  如果某个查询发生更改，则在“结果”窗格的右下角会出现一个警报图标和文本“查询已更改”。 该图标在窗格的左上角反复出现。  
   
-## <a name="see-also"></a>请参阅  
- [创建查询&#40;可视化数据库工具&#41;](create-queries-visual-database-tools.md)   
- [运行查询&#40;可视化数据库工具&#41;](run-queries-visual-database-tools.md)   
- [设计查询和视图操作指南主题&#40;可视化数据库工具&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
- [关系图窗格&#40;可视化数据库工具&#41;](diagram-pane-visual-database-tools.md)   
- [条件窗格&#40;可视化数据库工具&#41;](criteria-pane-visual-database-tools.md)   
+## <a name="see-also"></a>另请参阅  
+ [&#40;Visual Database Tools 创建查询&#41;](create-queries-visual-database-tools.md)   
+ [&#40;Visual Database Tools 运行查询&#41;](run-queries-visual-database-tools.md)   
+ [&#40;Visual Database Tools 的设计查询和视图操作指南主题&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [Visual Database Tools &#40;的 "关系图" 窗格&#41;](diagram-pane-visual-database-tools.md)   
+ [Visual Database Tools &#40;的 "条件" 窗格&#41;](criteria-pane-visual-database-tools.md)   
  [使用“结果”窗格中的数据 (Visual Database Tools)](results-pane-visual-database-tools.md)  
   
   

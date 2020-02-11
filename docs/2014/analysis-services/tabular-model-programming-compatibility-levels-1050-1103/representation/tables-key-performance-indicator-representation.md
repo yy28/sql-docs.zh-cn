@@ -1,5 +1,5 @@
 ---
-title: 关键绩效指标表示形式 （表格） |Microsoft Docs
+title: 关键绩效指标表示形式（表格） |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d0981b473ef29ac709213c1e9eee1cea01f47e2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62795437"
 ---
 # <a name="key-performance-indicator-representation-tabular"></a>关键绩效指标表示形式（表格）
   KPI 用于根据目标值度量由基础度量值定义的值的性能。  
   
 ## <a name="key-performance-indicator-representation"></a>关键绩效指标表示形式  
- 在表格对象模型一个关键绩效指标 kpi-客户端应用程序以图形方式显示的其他信息的度量值。 KPI 通常包含关于要实现的目标和度量值相对于目标的状态的信息，以及客户端工具如何以图形方式显示状态的信息。  
+ 在表格对象模型中，关键绩效指标-kpi-是一个度量值，其中包含客户端应用程序以图形方式显示的其他信息。 KPI 通常包含关于要实现的目标和度量值相对于目标的状态的信息，以及客户端工具如何以图形方式显示状态的信息。  
   
 ### <a name="key-performance-indicator-in-amo"></a>AMO 中的关键绩效指标  
  在使用 AMO 管理表格模型 KPI 时，对于 AMO 中的 KPI 没有一对一的对象匹配；AMO <xref:Microsoft.AnalysisServices.Kpi> 对象不用于此目的；在 AMO 中，对于表格模型，KPI 表示为在 <xref:Microsoft.AnalysisServices.MdxScript.Commands%2A> 集合和 <xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A> 中的元素之一中创建的一系列对象。  
@@ -221,6 +221,6 @@ private void addStaticKPI(object sender, EventArgs e)
 ```  
   
 ## <a name="amo2tabular-sample"></a>AMO2Tabular 示例  
- 为了理解如何使用 AMO 创建和操作关键绩效指标表示形式，请参阅 AMO 到表格示例; 的源代码具体查看以下源文件：AddKPIs.cs。 该示例位于 Codeplex。 有关该代码的重要说明：提供该代码只是为了支持本文介绍的逻辑概念，不应用于生产环境中；也不应用于除教学之外的其他用途。  
+ 为了理解如何使用 AMO 创建和操作关键绩效指标表示形式，请参阅 AMO 到表格示例中的源代码；具体来讲，请查看以下源文件：AddKPIs.cs。 该示例位于 Codeplex。 有关该代码的重要说明：提供该代码只是为了支持本文介绍的逻辑概念，不应用于生产环境中；也不应用于除教学之外的其他用途。  
   
   

@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6d9fb152507979232d27308d107278d4b6d3bccb
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243200"
 ---
 # <a name="run-transact-sql-script-files-using-sqlcmd"></a>使用 sqlcmd 运行 Transact-SQL 脚本文件
@@ -25,7 +25,7 @@ ms.locfileid: "75243200"
   
  若要使用记事本创建一个简单的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本文件，请执行下列操作：  
   
-1.  单击 **“开始”**，依次指向 **“所有程序”**、 **“附件”**，再单击 **“记事本”**。  
+1.  单击 **“开始”** ，依次指向 **“所有程序”** 、 **“附件”** ，再单击 **“记事本”** 。  
   
 2.  复制以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码并将其粘贴到记事本：  
   
@@ -54,8 +54,7 @@ ms.locfileid: "75243200"
   
 3.  按 Enter。  
   
- 
-  [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 员工的姓名和地址列表便会输出到命令提示符窗口。  
+ [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 员工的姓名和地址列表便会输出到命令提示符窗口。  
   
 ### <a name="to-save-this-output-to-a-text-file"></a>将此输出保存到文本文件中  
   

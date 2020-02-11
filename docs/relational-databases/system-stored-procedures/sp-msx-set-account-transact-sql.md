@@ -1,5 +1,5 @@
 ---
-title: sp_msx_set_account (TRANSACT-SQL) |Microsoft Docs
+title: sp_msx_set_account （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 314ec720-3a37-48f7-bb6b-8d5b894bf843
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 22372412f9c3f905b8978741b556724ca880568c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108022"
 ---
-# <a name="spmsxsetaccount-transact-sql"></a>sp_msx_set_account (Transact-SQL)
+# <a name="sp_msx_set_account-transact-sql"></a>sp_msx_set_account (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   设置目标服务器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理主服务器帐户名和密码。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,23 +39,24 @@ sp_msx_set_account [ @credential_name = ] 'credential_name'  | [ @credential_id 
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @credential_name = ] 'credential_name'` 要用于登录到主服务器的凭据的名称。 所提供的名称必须是现有凭据的名称。 任一*credential_name*或*credential_id*必须指定。  
+`[ @credential_name = ] 'credential_name'`用于登录到主服务器的凭据的名称。 所提供的名称必须是现有凭据的名称。 必须指定*credential_name*或*credential_id* 。  
   
-`[ @credential_id = ] credential_id` 要用于登录到主服务器的凭据的标识符。 标识符必须是现有凭据的标识符。 任一*credential_name*或*credential_id*必须指定。  
+`[ @credential_id = ] credential_id`用于登录到主服务器的凭据的标识符。 标识符必须是现有凭据的标识符。 必须指定*credential_name*或*credential_id* 。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** （成功）或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
  无。  
   
 ## <a name="remarks"></a>备注  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用凭据存储目标服务器用于登录到主服务器的用户名和密码信息。 该过程将设置此目标服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理用于登录到主服务器的凭据。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用凭据存储目标服务器用于登录到主服务器的用户名和密码信息。 该过程将设置此目标服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理用于登录到主服务器的凭据。  
   
- 所指定的凭据必须是现有凭据。 有关创建凭据的详细信息，请参阅[CREATE CREDENTIAL &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)。  
+ 所指定的凭据必须是现有凭据。 有关创建凭据的详细信息，请参阅[CREATE credential &#40;transact-sql&#41;](../../t-sql/statements/create-credential-transact-sql.md)。  
   
 ## <a name="permissions"></a>权限  
- 执行权限**sp_msx_set_account**的成员默认**sysadmin**固定的服务器角色。  
+ **Sp_msx_set_account**默认授予**sysadmin**固定服务器角色成员的权限。  
   
 ## <a name="examples"></a>示例  
  以下是设置该服务器，以使用凭据 `MsxAccount` 登录到主服务器的示例。  
@@ -68,9 +69,9 @@ EXECUTE dbo.sp_msx_set_account @credential_name = MsxAccount ;
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [SQL Server 代理存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [SQL Server 代理存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
- [sp_msx_get_account &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-msx-get-account-transact-sql.md)  
+ [sp_msx_get_account &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-msx-get-account-transact-sql.md)  
   
   

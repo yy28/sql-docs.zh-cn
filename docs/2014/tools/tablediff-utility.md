@@ -1,5 +1,5 @@
 ---
-title: tablediff 实用工具 |Microsoft Docs
+title: tablediff 实用程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,16 +19,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cb8b8bec38b428ca7b2eea5166867141b34a2405
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68185978"
 ---
 # <a name="tablediff-utility"></a>tablediff 实用工具
+  
   **tablediff** 实用工具用于比较两个非收敛表中的数据，它对于排除复制拓扑中的非收敛故障非常有用。 可以从命令提示符或在批处理文件中使用该实用工具执行以下任务：  
   
--   在充当复制发布服务器的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例中的源表与充当复制订阅服务器的一个或多个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例中的目标表之间进行逐行比较。  
+-   在充当复制发布服务器的实例[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中的源表与[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]充当复制订阅服务器的一个或多个实例中的目标表之间进行逐行比较。  
   
 -   通过只比较行数和架构可以执行快速比较。  
   
@@ -76,8 +77,8 @@ ms.locfileid: "68185978"
  [ **-?** ]  
  返回支持参数的列表。  
   
- **-sourceserver** *source_server_name*[ **\\** _instance_name_]  
- 源服务器的名称。 指定_源\_服务器\_名称_的默认实例为[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 指定_源\_服务器\_名称_ **\\** _实例\_名称_对于命名实例的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-sourceserver** *source_server_name*[**\\**_instance_name_]  
+ 源服务器的名称。 为的默认实例指定_\_源服务器\_名称。_ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 为[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的命名实例指定_源\_服务器\_名称__\__ **\\**实例名称。  
   
  **-sourcedatabase** *source_database*  
  源数据库的名称。  
@@ -100,8 +101,8 @@ ms.locfileid: "68185978"
  **-sourcelocked**  
  在使用 TABLOCK 和 HOLDLOCK 表提示的比较过程中锁定源表。  
   
- **-destinationserver** *destination_server_name*[ **\\** _实例\_名称_]  
- 目标服务器的名称。 指定 *destination_server_name* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 指定_目标\_服务器\_名称_ **\\** _实例\_名称_对于命名实例的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-destinationserver** *destination_server_name*[**\\**_实例\_名称_]  
+ 目标服务器的名称。 指定 *destination_server_name* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 为的命名实例指定_\_目标\_服务器名称_**\\**_\_实例名称。_ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
   
  **-destinationdatabase** *subscription_database*  
  目标数据库的名称。  
@@ -112,7 +113,7 @@ ms.locfileid: "68185978"
  **-destinationschema** *destination_schema_name*  
  目标表的架构所有者。 默认情况下，表所有者假定为 dbo。  
   
- **-destinationpassword** *destination_password*  
+ **-destinationpassword (** *destination_password*  
  使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证连接到目标服务器时所使用的登录帐户的密码。  
   
 > [!IMPORTANT]  
@@ -125,7 +126,7 @@ ms.locfileid: "68185978"
  在使用 TABLOCK 和 HOLDLOCK 表提示的比较过程中锁定目标表。  
   
  **-b** *large_object_bytes*  
- 大型对象数据类型列中要比较的字节数，这些数据类型包括：`text`、`ntext`、`image`、`varchar(max)`、`nvarchar(max)` 和 `varbinary(max)`。 *large_object_bytes* 默认为列的大小。 任何大于 *large_object_bytes* 的数据不会进行比较。  
+ 大型对象数据类型列中要比较的字节数，这些数据类型包括：`text`、`ntext`、`image`、`varchar(max)`、`nvarchar(max)` 和 `varbinary(max)`。 *large_object_bytes*默认为列的大小。 任何大于 *large_object_bytes* 的数据不会进行比较。  
   
  **-bf**  *number_of_statements*  
  使用 [!INCLUDE[tsql](../includes/tsql-md.md)] -f [!INCLUDE[tsql](../includes/tsql-md.md)] 选项时要写入到当前 **脚本文件中的** 语句数。 当 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句数超过 *number_of_statements*时，将创建一个新的 [!INCLUDE[tsql](../includes/tsql-md.md)] 脚本文件。  
@@ -162,14 +163,14 @@ ms.locfileid: "68185978"
   
 ## <a name="return-value"></a>返回值  
   
-|ReplTest1|Description|  
+|值|说明|  
 |-----------|-----------------|  
-|**0**|成功|  
+|**0**|Success|  
 |**1**|严重错误|  
 |**2**|存在表差异|  
   
 ## <a name="remarks"></a>备注  
- **tablediff** 实用工具不能用于非[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服务器。  
+ **Tablediff**实用工具不能用于非[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]服务器。  
   
  不支持包含 `sql_variant` 数据类型列的表。  
   
@@ -177,8 +178,9 @@ ms.locfileid: "68185978"
   
 |源数据类型|目标数据类型|  
 |----------------------|---------------------------|  
-|`tinyint`|`smallint`、`int` 或 `bigint`|  
-|`smallint`|`int` 或 `bigint`|  
+|`tinyint`|
+  `smallint`、`int` 或 `bigint`|  
+|`smallint`|`int`或`bigint`|  
 |`int`|`bigint`|  
 |`timestamp`|`varbinary`|  
 |`varchar(max)`|`text`|  
@@ -219,7 +221,7 @@ ms.locfileid: "68185978"
   
  若要使用 **-o** 或 **-f** 选项，必须对指定的文件目录位置拥有写入权限。  
   
-## <a name="see-also"></a>请参阅  
- [比较所复制表的差异（复制编程）](../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)  
+## <a name="see-also"></a>另请参阅  
+ [比较复制的表 &#40;复制编程的差异&#41;](../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)  
   
   

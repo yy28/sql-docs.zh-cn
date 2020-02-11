@@ -14,14 +14,14 @@ ms.assetid: e770e626-68b1-4ddf-a217-d7b30311e2ee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1882c5298d92e17a7ddaa165288fddfab7fdb02b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924307"
 ---
 # <a name="sample-recordset-for-examining-data"></a>用于检查数据的示例记录集
-首先，让我们看看**记录集**对象返回使用以下 SQL 查询，执行针对 Microsoft SQL Server 中的基的 Northwind 示例数据。  
+首先，让我们看一下使用以下 SQL 查询返回的**Recordset**对象，该查询针对 Microsoft SQL Server 中的 Northwind 示例数据库执行。  
   
 ```  
 SELECT ProductID,ProductName,UnitPrice   
@@ -29,16 +29,16 @@ FROM Products
 WHERE CategoryID = 7    
 ```  
   
- 所产生的**记录集**对象包含下表中所示在数据库中的所有生成。  
+ 生成的**记录集**对象包含下表所示的数据库中的所有生成。  
   
 |ProductID|ProductName|UnitPrice|  
 |---------------|-----------------|---------------|  
-|7|柳贡干的梨|30.0000|  
-|14|豆腐|23.2500|  
-|28|Rssle 泡菜口味|45.6000|  
-|51|猪肉干|53.0000|  
-|74|Longlife 豆腐|10.0000|  
+|7|叔叔 Bob 的随机是 Pears|30.0000|  
+|14|Tofu|23.2500|  
+|28|Rssle Sauerkraut|45.6000|  
+|51|Manjimup 是苹果|53.0000|  
+|74|Longlife Tofu|10.0000|  
   
- 如果您有兴趣自行获取这些结果，请尝试以下 JScript 示例：  
+ 如果你希望自己获得这些结果，请尝试以下 JScript 示例：  
   
--   [若要返回记录集的 JScript 示例](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md)
+-   [返回记录集的 JScript 示例](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md)

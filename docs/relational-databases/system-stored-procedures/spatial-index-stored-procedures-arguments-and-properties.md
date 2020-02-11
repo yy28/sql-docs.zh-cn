@@ -15,10 +15,10 @@ ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 82b906be4568b15a18c55247532bf35b6cd939a7
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69028897"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>空间索引存储过程-参数和属性
@@ -26,25 +26,25 @@ ms.locfileid: "69028897"
 
   本主题介绍空间索引存储过程的参数和属性。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
  有关特定空间索引存储过程的语法，请参阅下列主题：  
   
--   [sp_help_spatial_geometry_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
+-   [sp_help_spatial_geometry_index &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
   
--   [sp_help_spatial_geometry_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geometry_index_xml &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
   
--   [sp_help_spatial_geography_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
+-   [sp_help_spatial_geography_index &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
   
--   [sp_help_spatial_geography_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geography_index_xml &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
 ## <a name="arguments"></a>参数  
 `[ @tabname = ] 'tabname'`已为其指定了空间索引的表的限定名称或非限定名称。  
   
- 仅当指定了限定表时才需要引号。 如果提供的是完全限定名称（包括数据库名称），则数据库名称必须是当前数据库的名称。 *tabname*的值为**nvarchar**(776), 无默认值。  
+ 仅当指定了限定表时才需要引号。 如果提供的是完全限定名称（包括数据库名称），则数据库名称必须是当前数据库的名称。 *tabname*的值为**nvarchar**（776），无默认值。  
   
-`[ @indexname = ] 'indexname'`指定的空间索引的名称。 *indexname*的值为**sysname** , 无默认值。  
+`[ @indexname = ] 'indexname'`指定的空间索引的名称。 *indexname*的值为**sysname** ，无默认值。  
   
 `[ @verboseoutput = ] 'verboseoutput'`要返回的属性名称和值的范围。  
   
@@ -52,32 +52,32 @@ ms.locfileid: "69028897"
   
  \>0 = 所有属性  
   
- *verboseoutput*为**tinyint** , 无默认值。  
+ *verboseoutput*为**tinyint** ，无默认值。  
   
-`[ @query_sample = ] 'query_sample'`是一个代表性的查询示例, 可用于测试索引的有用性。 它可以是一个有代表性的对象或查询窗口。 *query_sample*为**geometry** , 无默认值。  
+`[ @query_sample = ] 'query_sample'`是一个代表性的查询示例，可用于测试索引的有用性。 它可以是一个有代表性的对象或查询窗口。 *query_sample*是不带默认值的**几何图形**。  
   
-`[ @xml_output = ] 'xml_output'`一个输出参数, 它在 XML 片段中返回结果集。 *xml_output*的值为**xml** , 无默认值。  
+`[ @xml_output = ] 'xml_output'`一个输出参数，它在 XML 片段中返回结果集。 *xml_output*为**xml** ，无默认值。  
   
-## <a name="properties"></a>properties  
- 设置 verboseoutput = 0 以返回核心属性, 如下表所示;  **\@** verboseoutput > 0 返回空间索引的所有属性。  **\@**  
+## <a name="properties"></a>属性  
+ 设置** \@verboseoutput** = 0 以返回核心属性，如下表所示;verboseoutput > 0 返回空间索引的所有属性。 ** \@**  
   
  **Base_Table_Rows**  
  基表中的行数 值为**bigint**。  
   
  **Bounding_Box_xmin**  
- **几何图形**类型的空间索引的 X 最小边界框属性。 对于**geography**类型, 此属性值为 NULL。 值为**float**。  
+ **几何图形**类型的空间索引的 X 最小边界框属性。 对于**geography**类型，此属性值为 NULL。 值为**float**。  
   
  **Bounding_Box_ymin**  
- **几何图形**类型的空间索引的 Y 最小范围框属性。 对于**geography**类型, 此属性值为 NULL。 值为**float**。  
+ **几何图形**类型的空间索引的 Y 最小范围框属性。 对于**geography**类型，此属性值为 NULL。 值为**float**。  
   
  **Bounding_Box_xmax**  
- **几何图形**类型的空间索引的 X 最大边界框属性。 对于**geography**类型, 此属性值为 NULL。 值为**float**。  
+ **几何图形**类型的空间索引的 X 最大边界框属性。 对于**geography**类型，此属性值为 NULL。 值为**float**。  
   
  **Bounding_Box_ymax**  
- **几何图形**类型的空间索引的 Y 最大边界框属性。 对于**geography**类型, 此属性值为 NULL。 值为**float**。  
+ **几何图形**类型的空间索引的 Y 最大边界框属性。 对于**geography**类型，此属性值为 NULL。 值为**float**。  
   
  **Grid_Size_Level_1**  
- 空间索引的第1级网格密度:  
+ 空间索引的第1级网格密度：  
   
  对于 LOW 为 16  
   
@@ -88,7 +88,7 @@ ms.locfileid: "69028897"
  值为**int**。  
   
  **Grid_Size_Level_2**  
- 空间索引的第2级网格密度:  
+ 空间索引的第2级网格密度：  
   
  对于 LOW 为 16  
   
@@ -99,7 +99,7 @@ ms.locfileid: "69028897"
  值为**int**。  
   
  **Grid_Size_Level_3**  
- 空间索引的第3级网格密度:  
+ 空间索引的第3级网格密度：  
   
  对于 LOW 为 16  
   
@@ -133,14 +133,14 @@ ms.locfileid: "69028897"
  索引行/数字基表行的数量。 值为**bigint**。  
   
  **Total_Number_Of_ObjectCells_In_Level0_For_QuerySample**  
- 指示代表查询示例是否落在**几何**索引的边界框之外和根单元格 (级别0单元格) 之外。 这可以是 0（不在级别 0 单元格中）或 1。 如果在级别 0 单元格中，则所调查的索引不是该查询示例的适当索引。 这是一个核心属性。 值为**bigint**。  
+ 指示代表查询示例是否落在**几何**索引的边界框之外和根单元格（级别0单元格）之外。 这可以是 0（不在级别 0 单元格中）或 1。 如果在级别 0 单元格中，则所调查的索引不是该查询示例的适当索引。 这是一个核心属性。 值为**bigint**。  
   
  **Total_Number_Of_ObjectCells_In_Level0_In_Index**  
- 在级别0中分割的索引对象的单元格实例数 (根单元格, 在**几何图形**的边界框之外)。 这是一个核心属性。 值为**bigint**。  
+ 在级别0中分割的索引对象的单元格实例数（根单元格，在**几何图形**的边界框之外）。 这是一个核心属性。 值为**bigint**。  
   
- 对于**几何**索引, 如果索引的边界框小于数据域, 则会发生这种情况。 如果查询窗口的一部分位于边界框外部, 则级别0中的对象数量很多可能需要辅助筛选器, 并且将降低索引性能 (例如, **Total_Number_Of_ObjectCells_In_Level0_For_QuerySample**为 1)。 如果查询窗口落在边框之内，级别 0 中较多的对象数量实际上可能会提高索引的性能。  
+ 对于**几何**索引，如果索引的边界框小于数据域，则会发生这种情况。 如果查询窗口的一部分位于边界框外部，则级别0中的对象数可能需要辅助筛选器，并且将降低索引性能（例如**Total_Number_Of_ObjectCells_In_Level0_For_QuerySample**为1）。 如果查询窗口落在边框之内，级别 0 中较多的对象数量实际上可能会提高索引的性能。  
   
- NULL 实例和空实例在级别 0 进行计数但是不会影响性能。 级别 0 的单元格数量将与基表处 NULL 实例和空实例的数量一样多。 对于**地理**索引, 级别0的单元格数量将等于 NULL, 空实例 + 1 个单元格, 因为查询示例计数为1。  
+ NULL 实例和空实例在级别 0 进行计数但是不会影响性能。 级别 0 的单元格数量将与基表处 NULL 实例和空实例的数量一样多。 对于**地理**索引，级别0的单元格数量将等于 NULL，空实例 + 1 个单元格，因为查询示例计数为1。  
   
  **Total_Number_Of_ObjectCells_In_Level1_In_Index**  
  分割的索引对象的单元格实例的数目。 这是一个核心属性。 值为**bigint**。  
@@ -155,28 +155,28 @@ ms.locfileid: "69028897"
  使用级别 4 精度进行分割的索引对象的单元格实例数量。 这是一个核心属性。 值为**bigint**。  
   
  **Total_Number_Of_interior_ObjectCells_In_Level1_In_Index**  
- 被分割级别1的对象完全覆盖的单元格数, 因而是对象的内部。 (Cell_attributevalue 为2。)这是一个核心属性。 值为**bigint**。  
+ 被分割级别1的对象完全覆盖的单元格数，因而是对象的内部。 （Cell_attributevalue 为2。）这是一个核心属性。 值为**bigint**。  
   
  **Total_Number_Of_interior_ObjectCells_In_Level2_In_Index**  
- 对象在分割级别2上完全覆盖的单元格的数目, 因此是对象的内部。 (Cell_attribute 值为2。)这是一个核心属性。 值为**bigint**。  
+ 对象在分割级别2上完全覆盖的单元格的数目，因此是对象的内部。 （Cell_attribute 值为 2。）这是一个核心属性。 值为**bigint**。  
   
  **Total_Number_Of_interior_ObjectCells_In_Level3_In_Index**  
- 在分割级别3由对象完全覆盖的单元格的数目, 因此是对象的内部。 (Cell_attribute 值为2。)这是一个核心属性。 值为**bigint**。  
+ 在分割级别3由对象完全覆盖的单元格的数目，因此是对象的内部。 （Cell_attribute 值为 2。）这是一个核心属性。 值为**bigint**。  
   
  **Total_Number_Of_interior_ObjectCells_In_Level4_In_Index**  
- 单元格的数目，这些单元格将被位于分割级别 4 的一个对象完全覆盖并因此位于该对象内部。 (Cell_attribute 值为2。)这是一个核心属性。 值为**bigint**。  
+ 单元格的数目，这些单元格将被位于分割级别 4 的一个对象完全覆盖并因此位于该对象内部。 （Cell_attribute 值为 2。）这是一个核心属性。 值为**bigint**。  
   
  **Total_Number_Of_intersecting_ObjectCells_In_Level1_In_Index**  
- 在分割级别1与对象相交的单元格的数目。 (Cell_attribute 值为1。)这是一个核心属性。 值为**bigint**。  
+ 在分割级别1与对象相交的单元格的数目。 （Cell_attribute 值为1。）这是一个核心属性。 值为**bigint**。  
   
  **Total_Number_Of_intersecting_ObjectCells_In_Level2_In_Index**  
- 在镶嵌级别2上与对象相交的单元格的数目。 (Cell_attribute 值为1。)这是一个核心属性。 值为**bigint**。  
+ 在镶嵌级别2上与对象相交的单元格的数目。 （Cell_attribute 值为1。）这是一个核心属性。 值为**bigint**。  
   
  **Total_Number_Of_intersecting_ObjectCells_In_Level3_In_Index**  
- 在分割级别3与对象相交的单元格的数目。 (Cell_attribute 值为1。)这是一个核心属性。 值为**bigint**。  
+ 在分割级别3与对象相交的单元格的数目。 （Cell_attribute 值为1。）这是一个核心属性。 值为**bigint**。  
   
  **Total_Number_Of_intersecting_ObjectCells_In_Level4_In_Index**  
- 分割级别 4 中与某个对象相交的单元格的数目。 (Cell_attribute 值为1。)这是一个核心属性。 值为**bigint**。  
+ 分割级别 4 中与某个对象相交的单元格的数目。 （Cell_attribute 值为1。）这是一个核心属性。 值为**bigint**。  
   
  **Total_Number_Of_Border_ObjectCells_In_Level0_For_QuerySample**  
  指示查询示例是否位于边框之外的根单元格 0 中，但是与其相接触。 这是一个核心属性。 值为**bigint**。  
@@ -185,19 +185,19 @@ ms.locfileid: "69028897"
 >  此信息只有在确定是否存在边框可能漏掉的靠近边框的对象时才有用。  
   
  **Total_Number_Of_Border_ObjectCells_In_Level0_In_Index**  
- 级别 0 中与边框接触的对象的数目。 (Cell_attribute 值为0。)值为**bigint**。  
+ 级别 0 中与边框接触的对象的数目。 （Cell_attribute 值为0。） 值为**bigint**。  
   
  **Total_Number_Of_Border_ObjectCells_In_Level1_In_Index**  
- 在分割级别1上触及网格单元边界的对象单元格的数目。 (Cell_attribute 值为0。)这是一个核心属性。 值为**bigint**。  
+ 在分割级别1上触及网格单元边界的对象单元格的数目。 （Cell_attribute 值为0。）这是一个核心属性。 值为**bigint**。  
   
  **Total_Number_Of_Border_ObjectCells_In_Level2_In_Index**  
- 在分割级别2上触及网格单元边界的对象单元格的数目。 (Cell_attribute 值为0。)这是一个核心属性。 值为**bigint**。  
+ 在分割级别2上触及网格单元边界的对象单元格的数目。 （Cell_attribute 值为0。）这是一个核心属性。 值为**bigint**。  
   
  **Total_Number_Of_Border_ObjectCells_In_Level3_In_Index**  
- 在分割级别3处触摸网格单元边界的对象单元格的数目。 (Cell_attribute 值为0。)这是一个核心属性。 值为**bigint**。  
+ 在分割级别3处触摸网格单元边界的对象单元格的数目。 （Cell_attribute 值为0。）这是一个核心属性。 值为**bigint**。  
   
  **Total_Number_Of_Border_ObjectCells_In_Level4_In_Index**  
- 分割级别 4 中与某个网格单元格边界接触的对象单元格的数目。 (Cell_attribute 值为0。)这是一个核心属性。 值为**bigint**。  
+ 分割级别 4 中与某个网格单元格边界接触的对象单元格的数目。 （Cell_attribute 值为0。）这是一个核心属性。 值为**bigint**。  
   
  **Interior_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**  
  包含被某个对象覆盖的叶单元格的网格的总面积（全部叶单元格）百分比。  
@@ -207,10 +207,10 @@ ms.locfileid: "69028897"
  值为**float**。  
   
  **Intersecting_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**  
- 与**Interior_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**相同, 不同之处在于它们是部分覆盖的单元格。 值为**float**。  
+ 与**Interior_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**相同，不同之处在于它们是部分覆盖的单元格。 值为**float**。  
   
  **Border_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**  
- 与**Interior_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**相同, 不同之处在于它们是边框单元。 值为**float**。  
+ 与**Interior_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**相同，不同之处在于它们是边框单元。 值为**float**。  
   
  **Average_Cells_Per_Object_Normalized_To_Leaf_Grid**  
  每个标准化为叶网格的对象的平均单元格数 通过它可以了解对象的空间大小，或者说对象究竟有多么大。 值为**float**。  
@@ -224,40 +224,40 @@ ms.locfileid: "69028897"
  由于列可以包含多个 SRID，并且具有不同 SRID 的对象永远不相交，所以 SRID 的数量指出了索引的选择性。  
   
  **Width_Of_Cell_In_Level1**  
- 索引网格中的单元格的宽度属性。 度量单位由索引提供, 并依赖于索引数据的 SRID。 值为**float**。  
+ 索引网格中的单元格的宽度属性。 度量单位由索引提供，并依赖于索引数据的 SRID。 值为**float**。  
   
  **Width_Of_Cell_In_Level2**  
- 索引网格中的单元格的宽度属性。 度量单位由索引提供, 并依赖于索引数据的 SRID。 值为**float**。  
+ 索引网格中的单元格的宽度属性。 度量单位由索引提供，并依赖于索引数据的 SRID。 值为**float**。  
   
  **Width_Of_Cell_In_Level3**  
- 索引网格中的单元格的宽度属性。 度量单位由索引提供, 并依赖于索引数据的 SRID。 值为**float**。  
+ 索引网格中的单元格的宽度属性。 度量单位由索引提供，并依赖于索引数据的 SRID。 值为**float**。  
   
  **Width_Of_Cell_In_Level4**  
  索引网格中的单元格的宽度属性。 度量单位由索引提供，并且取决于所索引数据的 SRID。 值为**float**。  
   
  **Height_Of_Cell_In_Level1**  
- 索引网格中的单元格的高度属性。 度量单位由索引提供, 并依赖于索引数据的 SRID。 值为**float**。  
+ 索引网格中的单元格的高度属性。 度量单位由索引提供，并依赖于索引数据的 SRID。 值为**float**。  
   
  **Height_Of_Cell_In_Level2**  
- 索引网格中的单元格的高度属性。 度量单位由索引提供, 并依赖于索引数据的 SRID。 值为**float**。  
+ 索引网格中的单元格的高度属性。 度量单位由索引提供，并依赖于索引数据的 SRID。 值为**float**。  
   
  **Height_Of_Cell_In_Level3**  
- 索引网格中的单元格的高度属性。 度量单位由索引提供, 并依赖于索引数据的 SRID。 值为**float**。  
+ 索引网格中的单元格的高度属性。 度量单位由索引提供，并依赖于索引数据的 SRID。 值为**float**。  
   
  **Height_Of_Cell_In_Level4**  
- 索引网格中的单元格的高度属性。 度量单位由索引提供, 并依赖于索引数据的 SRID。 值为**float**。  
+ 索引网格中的单元格的高度属性。 度量单位由索引提供，并依赖于索引数据的 SRID。 值为**float**。  
   
  **Area_Of_Cell_In_Level1**  
- 索引网格中的单元格的面积属性。 度量单位由索引提供, 并依赖于索引数据的 SRID。 值为**float**。  
+ 索引网格中的单元格的面积属性。 度量单位由索引提供，并依赖于索引数据的 SRID。 值为**float**。  
   
  **Area_Of_Cell_In_Level2**  
- 索引网格中的单元格的面积属性。 度量单位由索引提供, 并依赖于索引数据的 SRID。 值为**float**。  
+ 索引网格中的单元格的面积属性。 度量单位由索引提供，并依赖于索引数据的 SRID。 值为**float**。  
   
  **Area_Of_Cell_In_Level3**  
- 索引网格中的单元格的面积属性。 度量单位由索引提供, 并依赖于索引数据的 SRID。 值为**float**。  
+ 索引网格中的单元格的面积属性。 度量单位由索引提供，并依赖于索引数据的 SRID。 值为**float**。  
   
  **Area_Of_Cell_In_Level4**  
- 索引网格中的单元格的面积属性。 度量单位由索引提供, 并依赖于索引数据的 SRID。 值为**float**。  
+ 索引网格中的单元格的面积属性。 度量单位由索引提供，并依赖于索引数据的 SRID。 值为**float**。  
   
  **CellArea_To_BoundingBoxArea_Percentage_In_Level1**  
  范围1级单元的边界框覆盖率的百分比。 值为**float**。  
@@ -295,7 +295,7 @@ ms.locfileid: "69028897"
  如果 O 是输出的行的数目，将返回百分比形式的 S/O。 这是一个核心属性。 值为**float。**  
   
  **Primary_Filter_Efficiency**  
- 如果 P 行由主筛选器选择, 而 O 是输出的行数, 则此 returnsO/P 为百分比。 主要筛选器的效率越高，次要筛选所必须处理的误报就越少。 这是一个核心属性。 值为**float。**  
+ 如果 P 行由主筛选器选择，而 O 是输出的行数，则此 returnsO/P 为百分比。 主要筛选器的效率越高，次要筛选所必须处理的误报就越少。 这是一个核心属性。 值为**float。**  
   
 ## <a name="permissions"></a>权限  
  用户必须是**公共**角色的成员。 需要服务器和对象的 READ ACCESS 权限。 这适用于所有空间索引存储过程。  
@@ -306,19 +306,19 @@ ms.locfileid: "69028897"
 ## <a name="examples"></a>示例  
  有关示例，请参阅下列主题：  
   
--   [sp_help_spatial_geometry_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
+-   [sp_help_spatial_geometry_index &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
   
--   [sp_help_spatial_geometry_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geometry_index_xml &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
   
--   [sp_help_spatial_geography_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
+-   [sp_help_spatial_geography_index &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
   
--   [sp_help_spatial_geography_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geography_index_xml &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
 ## <a name="requirements"></a>要求  
   
-## <a name="see-also"></a>请参阅  
- [空间索引存储过程&#40;transact-sql&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
- [sp_help_spatial_geometry_index &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [空间索引存储过程 &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
+ [sp_help_spatial_geometry_index &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
  [空间索引概述](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [XQuery 基础知识](../../xquery/xquery-basics.md)   
  [XQuery 语言参考 (SQL Server)](../../xquery/xquery-language-reference-sql-server.md)  

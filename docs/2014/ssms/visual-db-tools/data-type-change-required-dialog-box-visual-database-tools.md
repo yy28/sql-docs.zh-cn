@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b04814ed725dde1a579ed969000b280816c1880a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63270571"
 ---
 # <a name="data-type-change-required-dialog-box-visual-database-tools"></a>“需要更改数据类型”对话框 (Visual Database Tools)
@@ -27,7 +27,7 @@ ms.locfileid: "63270571"
  **是**  
  更改列表中显示的相关列的数据类型属性，以保留现有的关系。  
   
- **“否”**  
+ **是**  
  取消对数据类型的更改，并将刚更改的列还原为以前的数据类型。  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 使用查询和视图设计器对国际数据 (Visual Database Tools) |Microsoft Docs
+title: 使用国际化数据的查询和视图设计器（Visual Database Tools） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -23,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 673ad13ff5688fb17eaa4b975644256f072a3aef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204618"
 ---
 # <a name="use-the-query-and-view-designer-with-international-data-visual-database-tools"></a>对国际数据使用查询和视图设计器 (Visual Database Tools)
-  在 [查询和视图设计器](visual-database-tools.md) 中，可以使用任何语言的数据，也可以在任何 Windows 操作系统版本中使用查询和视图设计器。 以下准则概括介绍了需要注意的一些差异，并提供有关管理国际应用程序中的数据的信息。  
+  您可以使用任何语言和任何版本的 Windows 操作系统中的数据的[查询和视图设计器](visual-database-tools.md)。 以下准则概括介绍了需要注意的一些差异，并提供有关管理国际应用程序中的数据的信息。  
   
 ## <a name="localized-information-in-the-criteria-and-sql-panes"></a>“条件”窗格和 SQL 窗格中的本地化信息  
  如果使用“条件”窗格创建查询，则可以使用与计算机中的 Windows 区域设置相应的格式输入信息。 例如，如果要搜索数据，则可以在“条件”列中采用您所习惯的格式输入数据，但以下情况除外：  
@@ -50,13 +50,13 @@ ms.locfileid: "63204618"
   
  在“条件”窗格中以本地特定格式输入数据时，查询和视图设计器会在 SQL 窗格中将其自动转换为 ANSI 格式。 例如，如果区域设置设置为“标准德语”，则可以在“条件”窗格中以类似于“31.12.96”的格式输入数据。 但是，该日期在 SQL 窗格中将以 ANSI 日期时间格式显示为 `{ ts '1996-12-31 00:00:00' }.` ，如果直接在 SQL 窗格中输入数据，则必须以 ANSI 格式输入。  
   
-## <a name="sort-order"></a>“排序顺序”  
+## <a name="sort-order"></a>排序顺序  
  查询中数据的排序顺序由数据库决定。 Windows“区域设置”对话框中设置的选项不影响查询的排序顺序。 但是，在任何特定查询中，可以请求以特定的顺序返回行。  
   
 ## <a name="using-double-byte-characters"></a>使用双字节字符  
  可以输入 DBCS 字符作为文字或数据库对象名称（例如表和视图的名称或别名）。 也可以使用 DBCS 字符作为参数名和参数标记字符。 但是，不能在 SQL 语言元素（如函数名或 SQL 关键字）中使用 DBCS 字符。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [设计查询和视图操作指南主题 (Visual Database Tools)](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

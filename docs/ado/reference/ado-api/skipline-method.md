@@ -17,14 +17,14 @@ ms.assetid: 0abc00fe-ee09-4c8e-b1f2-48ee9c5f3329
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c8439f7d8fabc5675e43fca5bba006b22574b992
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931049"
 ---
 # <a name="skipline-method"></a>SkipLine 方法
-读取文本时，跳过整个一行[Stream](../../../ado/reference/ado-api/stream-object-ado.md)。  
+读取文本[流](../../../ado/reference/ado-api/stream-object-ado.md)时，跳过整行。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,9 +34,9 @@ Stream.SkipLine
 ```  
   
 ## <a name="remarks"></a>备注  
- 将跳过所有字符，直至并包括下一步的行分隔符。 默认情况下[LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md)是**adCRLF**。 如果你尝试来试图跳过[EOS](../../../ado/reference/ado-api/eos-property.md)，将会保留在当前位置**EOS**。  
+ 将跳过所有字符，直到下一个行分隔符。 默认情况下， [LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md)为**adCRLF**。 如果尝试跳过超过[eos](../../../ado/reference/ado-api/eos-property.md)，当前位置将保持在**eos**。  
   
- **SkipLine**方法使用文本流 ([类型](../../../ado/reference/ado-api/type-property-ado-stream.md)是**adTypeText**)。  
+ **SkipLine**方法用于文本流（[类型](../../../ado/reference/ado-api/type-property-ado-stream.md)为**adTypeText**）。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [流对象 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

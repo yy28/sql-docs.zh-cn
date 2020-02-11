@@ -2,8 +2,7 @@
 title: 执行 SQL Server 迁移评估
 titleSuffix: Data Migration Assistant
 description: 了解如何在迁移到另一个 SQL Server 或 Azure SQL 数据库之前，使用数据迁移助手评估本地 SQL Server
-ms.custom: seo-lt-2019
-ms.date: 12/10/2019
+ms.date: 01/15/2020
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,16 +14,17 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: b6d9fd3f31885641451b3ade2f0f4543d9f44455
-ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 8b01469536655fc351ecf742ed284f3f6c68f707
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2019
-ms.locfileid: "75001902"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76037165"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>使用数据迁移助手进行 SQL Server 迁移评估
 
-下面的分步说明可帮助你通过使用数据迁移助手执行迁移到本地 SQL Server、SQL Server 在 Azure VM 或 Azure SQL 数据库上运行的第一个评估。
+下面的分步说明将帮助你执行第一次评估，以迁移到本地 SQL Server、SQL Server 在 Azure VM 上运行，或者通过使用数据迁移助手迁移到 Azure SQL Database。
 
    > [!NOTE]
    > 数据迁移助手 v 5.0 为在应用程序代码中分析数据库连接和嵌入式 SQL 查询引入了支持。 有关详细信息，请参阅博客文章[使用数据迁移助手对应用程序的数据访问层进行评估](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Using-Data-Migration-Assistant-to-assess-an-application-s-data/ba-p/990430)。
@@ -114,6 +114,9 @@ ms.locfileid: "75001902"
 
     ![添加源并开始评估](../dma/media/dma-assesssqlonprem/select-database1.png)
 
+> [!NOTE]
+> 可以并发运行多个评估，然后打开“所有评估”页来查看评估的状态。****
+
 ## <a name="view-results"></a>查看结果
 
 评估的持续时间取决于添加的数据库数和每个数据库的架构大小。 为每个数据库提供结果后，就会显示结果。
@@ -156,4 +159,6 @@ ms.locfileid: "75001902"
 
 在所有数据库都完成评估后，选择 "**导出报告**" 将结果导出到 JSON 文件或 CSV 文件。 然后，您就可以方便地分析数据。
 
-可以并发运行多个评估，然后打开“所有评估”页来查看评估的状态。****
+## <a name="save-and-load-assessments"></a>保存和加载评估
+
+除了导出评估结果，你还可以将评估详细信息保存到文件，并加载评估文件以供以后查看。  有关详细信息，请参阅文章[保存和加载评估与数据迁移助手](../dma/dma-save-load-assessments.md)。

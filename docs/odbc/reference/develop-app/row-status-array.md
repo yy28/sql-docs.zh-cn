@@ -18,21 +18,21 @@ ms.assetid: 4b69f189-2722-4314-8a02-f4ffecd6dabd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 57b187bf4f14bd5c05f91a433fa331e954fa0fb9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68020367"
 ---
 # <a name="row-status-array"></a>行状态数组
-除了数据之外， **SQLFetch**并**SQLFetchScroll**可以返回一个数组，其中提供行集中的每个行的状态。 此数组是通过将 SQL_ATTR_ROW_STATUS_PTR 语句属性指定的。 此数组分配的应用程序，并且必须由 SQL_ATTR_ROW_ARRAY_SIZE 语句属性指定的所有元素。 设置数组中的值**SQLBulkOperations**， **SQLFetch**， **SQLFetchScroll**，和**SQLSetPos。** 值描述的行和该状态是否已更改自上次提取的状态。  
+除数据外， **SQLFetch**和**SQLFetchScroll**还可以返回一个数组，该数组提供行集中的每一行的状态。 此数组是通过 SQL_ATTR_ROW_STATUS_PTR 语句特性指定的。 此数组由应用程序分配，并且必须具有与 SQL_ATTR_ROW_ARRAY_SIZE 语句特性指定的数目相同的元素。 数组中的值由**SQLBulkOperations**、 **SQLFetch**、 **SQLFetchScroll**和**SQLSetPos 设置。** 值描述行的状态，以及该状态自上次提取后是否已更改。  
   
-|行状态数组值|描述|  
+|行状态数组值|说明|  
 |----------------------------|-----------------|  
-|SQL_ROW_SUCCESS|已成功提取行，并且自上次提取以来未发生更改。|  
-|SQL_ROW_SUCCESS_WITH_INFO|已成功提取行，并且自上次提取以来未发生更改。 但是，有关行返回一条警告。|  
+|SQL_ROW_SUCCESS|该行已成功提取，自从上次提取后未发生更改。|  
+|SQL_ROW_SUCCESS_WITH_INFO|该行已成功提取，自从上次提取后未发生更改。 但对于该行，返回了警告。|  
 |SQL_ROW_ERROR|提取行时出错。|  
-|SQL_ROW_UPDATED|行已成功提取和上次提取后进行了更新。 如果再次提取或刷新的行**SQLSetPos**，其状态更改为新状态。<br /><br /> 某些驱动程序无法检测到对数据的更改，因此不能返回此值。 若要确定驱动程序是否可以检测到 refetched 行的更新，应用程序调用**SQLGetInfo** SQL_ROW_UPDATES 选项。|  
-|SQL_ROW_DELETED|已删除行，因为它上次提取。|  
-|SQL_ROW_ADDED|通过插入行**SQLBulkOperations**。 如果再次提取或刷新的行**SQLSetPos**，其状态是 SQL_ROW_SUCCESS。<br /><br /> 不设置此值**SQLFetch**或**SQLFetchScroll**。|  
-|SQL_ROW_NOROW|行集重叠的结果集的末尾并不返回任何行时，对应于此元素的行状态数组。|
+|SQL_ROW_UPDATED|该行已成功提取，自从上次提取后已被更新。 如果再次提取或刷新**SQLSetPos**，则其状态将更改为新状态。<br /><br /> 某些驱动程序无法检测到数据更改，因此无法返回此值。 若要确定驱动程序是否可以检测到制约行的更新，应用程序需要使用 SQL_ROW_UPDATES 选项调用**SQLGetInfo** 。|  
+|SQL_ROW_DELETED|该行自上次提取之后已被删除。|  
+|SQL_ROW_ADDED|该行由**SQLBulkOperations**插入。 如果再次提取行或**SQLSetPos**刷新该行，则其状态将 SQL_ROW_SUCCESS。<br /><br /> 此值不是由**SQLFetch**或**SQLFetchScroll**设置的。|  
+|SQL_ROW_NOROW|行集与结果集的末尾重叠，并且未返回对应行状态数组的此元素的行。|

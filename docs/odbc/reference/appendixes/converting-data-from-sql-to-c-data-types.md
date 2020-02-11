@@ -21,55 +21,55 @@ ms.assetid: 029727f6-d3f0-499a-911c-bcaf9714e43b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 95a44698c12abf0de64c8d6f7d316e9156dc139c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019115"
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>将数据从 SQL 转换为 C 数据类型
-当应用程序调用**SQLFetch**， **SQLFetchScroll**，或**SQLGetData**，驱动程序从数据源检索数据。 如果有必要，它将数据从转换中的驱动程序在检索到指定的数据类型的数据类型*TargetType*中的参数**SQLBindCol**或**SQLGetData。** 最后，它将数据存储在指向的位置*TargetValuePtr*中的参数**SQLBindCol**或**SQLGetData** （和 ARD SQL_DESC_DATA_PTR 字段）。  
+当应用程序调用**SQLFetch**、 **SQLFetchScroll**或**SQLGetData**时，驱动程序将从数据源中检索数据。 如果需要，它会将数据从驱动程序检索到的数据类型转换为**SQLBindCol**或 SQLGetData 中的*TargetType*参数所指定的数据类型 **。** 最后，它将数据存储在**SQLBindCol**或**SQLGetData**中的*TargetValuePtr*参数所指向的位置（以及 ARD 的 "SQL_DESC_DATA_PTR" 字段）。  
   
- 下表显示支持的从 ODBC SQL 转换到 ODBC C 数据类型的数据类型。 实心的圆表示默认值转换为 SQL 数据类型 (数据将转换成时的 C 数据类型的值*TargetType*为 SQL_C_DEFAULT)。 空心圆表示支持的转换。  
+ 下表显示了从 ODBC SQL 数据类型到 ODBC C 数据类型的支持转换。 实心圆圈表示 SQL 数据类型的默认转换（当*TargetType*的值 SQL_C_DEFAULT 时，数据将转换为 C 数据类型）。 空心圆表示支持的转换。  
   
- 用于 ODBC *3.x*应用程序使用 ODBC *2.x*驱动程序，从特定于驱动程序的数据类型可能不受支持的转换。  
+ 对于*使用 odbc 2.x*驱动程序的 odbc 1.x 应用程序，可能不支持从特定于*驱动程序的*数据类型进行转换。  
   
- 转换后的数据的格式不受 Windows® 国家/地区设置。  
+ 转换后的数据的格式不受 Windows®的 "国家/地区" 设置的影响。  
   
- 以下各节中的表介绍驱动程序或数据源将数据从数据源; 检索到的转换支持所有 ODBC C 数据类型从它们支持的 ODBC SQL 数据类型的转换所需的驱动程序。 对于给定的 ODBC SQL 数据类型，第一列的表列出了合法的输入的值*TargetType*中的参数**SQLBindCol**并**SQLGetData**。 第二列列出了通常使用的测试结果*BufferLength*中指定的参数**SQLBindCol**或**SQLGetData**，该驱动程序执行到确定是否可以将转换数据。 对于每个结果的第三个和第四个列列出放置在指定的缓冲区中的值*TargetValuePtr*并*StrLen_or_IndPtr*中指定的参数**SQLBindCol**或**SQLGetData**驱动程序已尝试将数据转换之后。 ( *StrLen_or_IndPtr*参数对应于 ARD 的 SQL_DESC_OCTET_LENGTH_PTR 字段。)最后一列列出了为每个得到的结果返回的 SQLSTATE **SQLFetch**， **SQLFetchScroll**，或**SQLGetData**。  
+ 以下各节中的表描述了驱动程序或数据源如何转换从数据源检索的数据;驱动程序需要支持从其支持的 ODBC SQL 数据类型转换到所有 ODBC C 数据类型。 对于给定的 ODBC SQL 数据类型，表的第一列将列出**SQLBindCol**和**SQLGetData**中*TargetType*参数的合法输入值。 第二列列出测试结果（通常使用**SQLBindCol**或**SQLGetData**中指定的*BufferLength*参数），驱动程序将执行该参数以确定是否可以转换数据。 对于每个结果，第三列和第四列都列出了*TargetValuePtr*参数指定的缓冲区中的值*StrLen_or_IndPtr* ，并在驱动程序尝试转换数据后在**SQLBindCol**或**SQLGetData**中指定了这些值。 （ *StrLen_or_IndPtr*参数对应于 ARD 的 SQL_DESC_OCTET_LENGTH_PTR 字段。）最后一列列出了**SQLFetch**、 **SQLFetchScroll**或**SQLGetData**返回的每个结果的 SQLSTATE。  
   
- 如果*TargetType*中的参数**SQLBindCol**或**SQLGetData**包含未显示对于给定的 ODBC SQL 数据类型，表中的 ODBC C 数据类型的标识符**SQLFetch**， **SQLFetchScroll**，或**SQLGetData**返回 SQLSTATE 07006 （受限制的数据类型属性冲突）。 如果*TargetType*参数中包含的指定从特定于驱动程序的 SQL 数据类型转换为 ODBC C 数据类型的标识符和驱动程序，不支持此转换**SQLFetch**，**SQLFetchScroll**，或**SQLGetData**返回 SQLSTATE HYC00 （未实现的可选功能）。  
+ 如果**SQLBindCol**或**SQLGetData**中的*TARGETTYPE*参数包含用于给定 odbc SQL 数据类型的表中未显示的 odbc C 数据类型的标识符，则**SQLFETCH**、 **SQLFetchScroll**或**SQLGetData**将返回 SQLSTATE 07006 （受限制的数据类型属性冲突）。 如果*TargetType*参数包含一个标识符，该标识符指定从驱动程序特定的 SQL 数据类型转换为 ODBC C 数据类型，并且驱动程序不支持此转换，则**SQLFetch**、 **SQLFETCHSCROLL**或**SQLGetData**将返回 SQLSTATE HYC00 （未实现可选功能）。  
   
- 尽管它不会显示表中，但驱动程序将在指定的缓冲区中返回 SQL_NULL_DATA *StrLen_or_IndPtr*时 SQL 数据值为 NULL 的参数。 有关使用的说明*StrLen_or_IndPtr*当进行多个调用时检索数据，请参阅[SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)函数说明。 字符计数时，SQL 数据转换为字符 C 数据，以返回\* *StrLen_or_IndPtr*不包括 null 终止字节。 如果*TargetValuePtr*为 null 指针**SQLGetData**返回 SQLSTATE HY009 （null 指针的使用无效）; 在**SQLBindCol**，这将解除绑定列。  
+ 尽管表中没有显示，但当 SQL 数据值为 NULL 时，驱动程序将在*StrLen_or_IndPtr*参数所指定的缓冲区中返回 SQL_NULL_DATA。 有关在执行多个调用来检索数据时*StrLen_or_IndPtr*使用的说明，请参阅[SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)函数说明。 当 SQL 数据转换为字符 C 数据时， \* *StrLen_or_IndPtr*中返回的字符数不包括 null 终止字节。 如果*TargetValuePtr*为 null 指针，则**SQLGETDATA**将返回 SQLSTATE HY009 （Null 指针的使用无效）;在**SQLBindCol**中，此取消绑定列。  
   
- 表中使用以下术语和约定：  
+ 表中使用了以下术语和约定：  
   
--   **数据的字节长度**是 C 数据可用于在返回的字节数 **TargetValuePtr*、 是否返回到应用程序之前，数据将被截断。 对于字符串数据，这不包括 null 终止字符的空间。  
+-   **数据的字节长度**是在 **TargetValuePtr*中可返回的 C 数据的字节数，无论在将数据返回到应用程序之前数据是否会被截断。 对于字符串数据，不包括 null 终止字符的空间。  
   
--   **字符字节长度**是以字符格式显示数据所需的字节总数。 这是为每个 C 数据类型的部分中定义的一样[显示大小](../../../odbc/reference/appendixes/display-size.md)，只不过字符字节长度是以字节为单位，而显示大小是以字符为单位。  
+-   **字符字节长度**是以字符格式显示数据所需的总字节数。 这是针对节[显示大小](../../../odbc/reference/appendixes/display-size.md)中的每个 C 数据类型定义的，只不过字符字节长度以字节为单位，而显示大小为字符。  
   
--   中的词*斜体*表示函数自变量或 SQL 语法元素。 为语法元素的语法，请参阅[附录 c:SQL 语法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)。  
+-   *斜体*中的单词表示函数自变量或 SQL 语法的元素。 有关语法元素的语法，请参阅 "[附录 C： SQL 语法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)"。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
--   [从 SQL 到 c:字符](../../../odbc/reference/appendixes/sql-to-c-character.md)  
+-   [从 SQL 到 C：字符](../../../odbc/reference/appendixes/sql-to-c-character.md)  
   
--   [从 SQL 到 c:数值](../../../odbc/reference/appendixes/sql-to-c-numeric.md)  
+-   [从 SQL 到 C：数字](../../../odbc/reference/appendixes/sql-to-c-numeric.md)  
   
--   [从 SQL 到 c:位](../../../odbc/reference/appendixes/sql-to-c-bit.md)  
+-   [从 SQL 到 C：位](../../../odbc/reference/appendixes/sql-to-c-bit.md)  
   
--   [从 SQL 到 c:二进制文件](../../../odbc/reference/appendixes/sql-to-c-binary.md)  
+-   [从 SQL 到 C：二进制](../../../odbc/reference/appendixes/sql-to-c-binary.md)  
   
--   [从 SQL 到 c:日期](../../../odbc/reference/appendixes/sql-to-c-date.md)  
+-   [从 SQL 到 C：日期](../../../odbc/reference/appendixes/sql-to-c-date.md)  
   
--   [从 SQL 到 c:GUID](../../../odbc/reference/appendixes/sql-to-c-guid.md)  
+-   [从 SQL 到 C：GUID](../../../odbc/reference/appendixes/sql-to-c-guid.md)  
   
--   [从 SQL 到 c:时间](../../../odbc/reference/appendixes/sql-to-c-time.md)  
+-   [从 SQL 到 C：时间](../../../odbc/reference/appendixes/sql-to-c-time.md)  
   
--   [从 SQL 到 c:时间戳](../../../odbc/reference/appendixes/sql-to-c-timestamp.md)  
+-   [从 SQL 到 C：时间戳](../../../odbc/reference/appendixes/sql-to-c-timestamp.md)  
   
--   [从 SQL 到 c:年月间隔](../../../odbc/reference/appendixes/sql-to-c-year-month-intervals.md)  
+-   [从 SQL 到 C：年月间隔](../../../odbc/reference/appendixes/sql-to-c-year-month-intervals.md)  
   
--   [从 SQL 到 c:日期时间间隔](../../../odbc/reference/appendixes/sql-to-c-day-time-intervals.md)  
+-   [从 SQL 到 C：日期时间间隔](../../../odbc/reference/appendixes/sql-to-c-day-time-intervals.md)  
   
 -   [从 SQL 到 C 的数据转换示例](../../../odbc/reference/appendixes/sql-to-c-data-conversion-examples.md)

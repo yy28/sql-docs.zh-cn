@@ -17,14 +17,14 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 87d19bc837219b5573dd237310b11dab9f146406
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811036"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
-  @No__t_0*内存中*列存储索引通过使用基于列的数据存储和基于列的查询处理来存储和管理数据。 列存储索引适合于主要执行大容量加载和只读查询的数据仓库工作负荷。 与传统面向行的存储方式相比，使用列存储索引存档可最多提高 **10 倍查询性能**，与使用非压缩数据大小相比，可提供多达 **7 倍数据压缩率**。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *内存中*列存储索引通过使用基于列的数据存储和基于列的查询处理来存储和管理数据。 列存储索引适合于主要执行大容量加载和只读查询的数据仓库工作负荷。 与传统面向行的存储方式相比，使用列存储索引存档可最多提高 **10 倍查询性能** ，与使用非压缩数据大小相比，可提供多达 **7 倍数据压缩率** 。  
   
 > [!NOTE]  
 >  我们将聚集列存储索引视为存储大型数据仓库事实表的标准，希望它可在大多数数据仓库方案中使用。 由于聚集列存储索引是可更新的，因此工作负荷可执行大量插入、更新和删除操作。  
@@ -40,9 +40,10 @@ ms.locfileid: "68811036"
 -   [相关任务和主题](#related)  
   
 ##  <a name="basics"></a> 基础知识  
- *columnstore index* 是使用列式数据格式（称为列存储）存储、检索和管理数据的技术。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持聚集列存储索引和非聚集列存储索引。 这两种索引都使用相同的内存中列存储技术，但它们在用途和支持的功能上存在差异。  
+ *列存储索引*是使用列式数据格式（称为列存储）存储、检索和管理数据的一种技术。 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持聚集列存储索引和非聚集列存储索引。 这两种索引都使用相同的内存中列存储技术，但它们在用途和支持的功能上存在差异。  
   
-###  <a name="benefits"></a> 优点  
+###  <a name="benefits"></a> 优势  
  列存储索引适合于对大型数据集执行分析的大多数只读查询。 通常，列存储索引是针对数据仓库工作负荷的查询。 列存储索引为使用全表扫描的查询带来很大的性能好处，但不适合于查找数据并且搜索特定值的查询。  
   
  列存储索引的优点：  
@@ -62,7 +63,7 @@ ms.locfileid: "68811036"
   
 ||  
 |-|  
-|**适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。|  
+|**适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]到[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。|  
   
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，聚集列存储索引：  
   
@@ -82,7 +83,7 @@ ms.locfileid: "68811036"
   
 ||  
 |-|  
-|**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。|  
+|**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]到[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。|  
   
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，非聚集列存储索引：  
   
@@ -102,13 +103,14 @@ ms.locfileid: "68811036"
  以下关键概念和术语与列存储索引相关联。  
   
  列存储索引  
- *columnstore index* 是使用列式数据格式（称为列存储）存储、检索和管理数据的技术。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持聚集列存储索引和非聚集列存储索引。 这两种索引都使用相同的内存中列存储技术，但它们在用途和支持的功能上存在差异。  
+ *列存储索引*是使用列式数据格式（称为列存储）存储、检索和管理数据的一种技术。 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持聚集列存储索引和非聚集列存储索引。 这两种索引都使用相同的内存中列存储技术，但它们在用途和支持的功能上存在差异。  
   
  列存储  
- “列存储”是在逻辑上组织为包含行和列的表、在物理上以按列数据格式存储的数据。  
+ “列存储”** 是在逻辑上组织为包含行和列的表、在物理上以按列数据格式存储的数据。  
   
  行存储  
- “行存储”是在逻辑上组织为包含行和列的表、在物理上以按行数据格式存储的数据。 这是存储关系表数据的传统方法。  
+ “行存储”** 是在逻辑上组织为包含行和列的表、在物理上以按行数据格式存储的数据。 这是存储关系表数据的传统方法。  
   
  行组和列段  
  为获得高性能和高压缩率，列存储索引将表划分为由行构成的组，称为行组，然后以按列形式压缩每个行组。 行组中的行数必须足够大，以便提高压缩率，并且足够小，以便从内存中操作中受益。  
@@ -117,7 +119,7 @@ ms.locfileid: "68811036"
  行*组是同时压缩为列*存储格式的一组行。  
   
  列段  
- “列段”是来自行组内的数据列。  
+ *列段*是行组内的数据列。  
   
 -   每个行组通常可包含的最大行数是 1,048,576 行。  
   
@@ -151,9 +153,9 @@ ms.locfileid: "68811036"
 ##  <a name="dataload"></a>正在加载数据  
   
 ###  <a name="dataload_nci"></a>将数据加载到非聚集列存储索引  
- 若要将数据加载到非聚集列存储索引中，请首先将数据加载到作为堆或聚集索引存储的传统行存储表中，然后使用[CREATE 列存储&#40;索引 transact-sql&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql)创建非聚集列存储索引.  
+ 若要将数据加载到非聚集列存储索引中，请首先将数据加载到作为堆或聚集索引存储的传统行存储表中，然后使用[CREATE 列存储索引 &#40;transact-sql&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)创建非聚集列存储索引。  
   
- ![将数据加载到列存储索引](../../database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "将数据加载到列存储索引")  
+ ![将数据加载到列存储索引中](../../database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "将数据加载到列存储索引中")  
   
  具有非聚集列存储索引的表在该索引被删除或禁用前是只读的。 若要更新表和非聚集列存储索引，您可以切换入和移出分区。您还可以禁用该索引，更新该表，然后重新生成索引。  
   
@@ -198,18 +200,18 @@ ms.locfileid: "68811036"
 ### <a name="nonclustered-columnstore-indexes"></a>非聚集列存储索引  
  对于常见任务，请参阅 [Using Nonclustered Columnstore Indexes](../../database-engine/using-nonclustered-columnstore-indexes.md)。  
   
--   [CREATE COLUMNSTORE INDEX (Transact-SQL)](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
+-   [&#40;Transact-sql&#41;创建列存储索引](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
   
--   [ALTER INDEX &#40;transact-sql&#41; ](/sql/t-sql/statements/alter-index-transact-sql) with REBUILD。  
+-   [ALTER INDEX &#40;](/sql/t-sql/statements/alter-index-transact-sql)具有 REBUILD 的 transact-sql&#41;。  
   
 -   [DROP INDEX (Transact-SQL)](/sql/t-sql/statements/drop-index-transact-sql)  
   
 ### <a name="clustered-columnstore-indexes"></a>聚集列存储索引  
  对于常见任务，请参阅 [Using Clustered Columnstore Indexes](../../database-engine/using-clustered-columnstore-indexes.md)。  
   
--   [CREATE 聚集列存储&#40;索引 transact-sql&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
+-   [&#40;Transact-sql&#41;创建聚集列存储索引](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
   
--   [ALTER INDEX &#40;transact-sql&#41; ](/sql/t-sql/statements/alter-index-transact-sql) ，重新生成或重新组织。  
+-   [更改索引 &#40;](/sql/t-sql/statements/alter-index-transact-sql)包含重新生成或重新组织的 transact-sql&#41;。  
   
 -   [DROP INDEX (Transact-SQL)](/sql/t-sql/statements/drop-index-transact-sql)  
   
@@ -219,19 +221,19 @@ ms.locfileid: "68811036"
   
 -   [DELETE (Transact-SQL)](/sql/t-sql/statements/delete-transact-sql)  
   
-### <a name="metadata"></a>“浏览器”  
+### <a name="metadata"></a>元数据  
  列存储索引中的所有列在元数据中作为包含性列存储。 列存储索引中没有任何键列。  
   
 -   [sys.indexes (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)  
   
 -   [sys.index_columns (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-index-columns-transact-sql)  
   
--   [sys.partitions (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql)  
+-   [sys.databases &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql)  
   
--   [sys.column_store_segments (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-column-store-segments-transact-sql)  
+-   [sys. column_store_segments &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-column-store-segments-transact-sql)  
   
--   [sys.column_store_dictionaries (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql)  
+-   [sys. column_store_dictionaries &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql)  
   
--   [sys.column_store_row_groups (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql)  
+-   [sys. column_store_row_groups &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql)  
   
   

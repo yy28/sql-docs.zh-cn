@@ -1,5 +1,5 @@
 ---
-title: SQLColumnPrivileges | Microsoft Docs
+title: SQLColumnPrivileges |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a5356d408a5116f6ab2cd6ae6e0e16d2dc7c26df
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73787474"
 ---
 # <a name="sqlcolumnprivileges"></a>SQLColumnPrivileges
@@ -28,7 +28,7 @@ ms.locfileid: "73787474"
   
  可以对静态服务器游标执行**SQLColumnPrivileges** 。 尝试对可更新的（动态或键集）游标执行**SQLColumnPrivileges**时，将返回 SQL_SUCCESS_WITH_INFO，指示游标类型已更改。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序支持链接服务器上的表的报告信息，方法是接受两部分名称的*CatalogName*参数： *Linked_Server_Name。 Catalog_Name*。  
+ Native Client ODBC 驱动程序通过接受由两部分组成的*CatalogName*参数的名称来支持链接服务器上表的报告信息： *Linked_Server_Name。 Catalog_Name。* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLColumnPrivileges 函数](https://go.microsoft.com/fwlink/?LinkId=59335)   

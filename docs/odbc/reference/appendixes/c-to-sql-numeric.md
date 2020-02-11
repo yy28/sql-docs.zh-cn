@@ -15,14 +15,14 @@ ms.assetid: af4095ff-06c3-4b04-83bf-19f9ee098dc2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6dc440e27b362fef9c9794cf0005c6af0b435efc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019308"
 ---
-# <a name="c-to-sql-numeric"></a>从 C 到 SQL：Numeric
-数值的 ODBC C 数据类型的标识符是：  
+# <a name="c-to-sql-numeric"></a>从 C 到 SQL：数字
+数字 ODBC C 数据类型的标识符为：  
   
  SQL_C_STINYINT  
   
@@ -52,19 +52,19 @@ ms.locfileid: "68019308"
   
  SQL_C_UBIGINT  
   
- 下表显示 ODBC SQL 数值 C 数据可能会转换成的数据类型。 列和表中的条款的说明，请参阅[转换将数据从 C 到 SQL 数据类型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)。  
+ 下表显示了可转换数值 C 数据的 ODBC SQL 数据类型。 有关表中的列和字词的说明，请参阅[将数据从 C 转换为 SQL 数据类型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)。  
   
 |SQL 类型标识符|测试|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|数字位数 < = 列的字节长度<br /><br /> 数字位数 > 列的字节长度|不适用<br /><br /> 22001|  
-|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|字符数 < = 列的字符长度<br /><br /> 字符数 > 列的字符长度|不适用<br /><br /> 22001|  
-|SQL_DECIMAL[b]<br /><br /> SQL_NUMERIC[b]<br /><br /> SQL_TINYINT[b]<br /><br /> SQL_SMALLINT[b]<br /><br /> SQL_INTEGER[b]<br /><br /> SQL_BIGINT[b]|数据转换而无需截断或截断的小数位数<br /><br /> 转换为具有整数数字串截断数据|不适用<br /><br /> 22003|  
-|SQL_REAL<br /><br /> SQL_FLOAT<br /><br /> SQL_DOUBLE|数据是数字转换到的数据类型的范围内<br /><br /> 数据是数字转换到的数据类型的范围之外|不适用<br /><br /> 22003|  
-|SQL_BIT|数据为 0 或 1<br /><br /> 数据为大于 0，小于 2，且不等于 1<br /><br /> 数据是小于 0 或大于或等于 2|不适用<br /><br /> 22001<br /><br /> 22003|  
-|SQL_INTERVAL_YEAR[a]<br /><br /> SQL_INTERVAL_MONTH[a]<br /><br /> SQL_INTERVAL_DAY[a]<br /><br /> SQL_INTERVAL_HOUR[a]<br /><br /> SQL_INTERVAL_MINUTE[a]<br /><br /> SQL_INTERVAL_SECOND[a]|不会被截断的数据。<br /><br /> 数据截断。|不适用<br /><br /> 22015|  
+|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|位数 <= 列字节长度<br /><br /> 列字节长度 > 位数|不适用<br /><br /> 22001|  
+|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|<字符数 = 列字符长度<br /><br /> 字符数 > 列字符长度|不适用<br /><br /> 22001|  
+|SQL_DECIMAL [b]<br /><br /> SQL_NUMERIC [b]<br /><br /> SQL_TINYINT [b]<br /><br /> SQL_SMALLINT [b]<br /><br /> SQL_INTEGER [b]<br /><br /> SQL_BIGINT [b]|转换的数据没有截断或小数位数被截断<br /><br /> 用整位数截断转换的数据|不适用<br /><br /> 22003|  
+|SQL_REAL<br /><br /> SQL_FLOAT<br /><br /> SQL_DOUBLE|数据在要将数字转换到的数据类型的范围内<br /><br /> 数据超出了数字要转换到的数据类型的范围|不适用<br /><br /> 22003|  
+|SQL_BIT|数据为0或1<br /><br /> 数据大于0，小于2，并且不等于1<br /><br /> 数据小于0或大于等于2|不适用<br /><br /> 22001<br /><br /> 22003|  
+|SQL_INTERVAL_YEAR [a]<br /><br /> SQL_INTERVAL_MONTH [a]<br /><br /> SQL_INTERVAL_DAY [a]<br /><br /> SQL_INTERVAL_HOUR [a]<br /><br /> SQL_INTERVAL_MINUTE [a]<br /><br /> SQL_INTERVAL_SECOND [a]|数据不会被截断。<br /><br /> 数据被截断。|不适用<br /><br /> 22015|  
   
- [a] 仅的精确数值数据类型 （SQL_C_STINYINT、 SQL_C_UTINYINT、 SQL_C_SSHORT、 SQL_C_USHORT、 SQL_C_SLONG、 SQL_C_ULONG 或 SQL_C_NUMERIC） 支持这些转换。 不支持的近似数值数据类型 （SQL_C_FLOAT 或 SQL_C_DOUBLE）。 精确数字的 C 数据类型不能转换为时间间隔的时间间隔精度不是单个字段的 SQL 类型。  
+ [a] 仅支持精确数值数据类型（SQL_C_STINYINT、SQL_C_UTINYINT、SQL_C_SSHORT、SQL_C_USHORT、SQL_C_SLONG、SQL_C_ULONG 或 SQL_C_NUMERIC）的转换。 它们不受近似数值数据类型（SQL_C_FLOAT 或 SQL_C_DOUBLE）的支持。 不能将确切的数字 C 数据类型转换为其间隔精度不是单个字段的间隔 SQL 类型。  
   
- [b] 为"n/a"的情况下，驱动程序可能会选择性地返回 SQL_SUCCESS_WITH_INFO 和 01S07 时截断小数部分。  
+ [b] 为 "n/a" 的情况，驱动程序可以选择在存在小数部分截断时返回 SQL_SUCCESS_WITH_INFO 和01S07。  
   
- 该驱动程序将数据转换的数字的 C 数据类型时，将忽略此长度/指示器值，并假定数据缓冲区的大小是数值的 C 数据类型的大小。 中传递的长度/指示器值*StrLen_or_Ind*中的参数**SQLPutData**并使用指定的缓冲区中*StrLen_or_IndPtr*中参数**SQLBindParameter**。 使用指定的数据缓冲区*DataPtr*中的参数**SQLPutData**并*ParameterValuePtr*中的参数**SQLBindParameter**.
+ 驱动程序在转换数字 C 数据类型的数据时忽略长度/指示器值，并假定数据缓冲区的大小为数值 C 数据类型的大小。 长度/指示器值传入**SQLPutData**中的*StrLen_or_Ind*参数和在**SQLBindParameter**中通过*StrLen_or_IndPtr*参数指定的缓冲区中。 数据缓冲区是通过**SQLPutData**中的*DataPtr*参数和**SQLBindParameter**中的*ParameterValuePtr*参数指定的。

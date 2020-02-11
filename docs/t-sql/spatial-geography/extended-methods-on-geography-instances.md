@@ -13,10 +13,10 @@ ms.assetid: d1822f1b-c1dd-4f2f-ab7c-6617c05a2b6c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 00c70a3b5b7bfba6bcd04fd622b4520c3a419848
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930461"
 ---
 # <a name="extended-methods-on-geography-instances"></a>地理实例上的扩展方法
@@ -50,7 +50,7 @@ ms.locfileid: "67930461"
   
 -   [EnvelopeCenter](../../t-sql/spatial-geography/envelopecenter-geography-data-type.md)  
   
--   [Filter](../../t-sql/spatial-geography/filter-geography-data-type.md)  
+-   [筛选器](../../t-sql/spatial-geography/filter-geography-data-type.md)  
   
 -   [HasM（geography 数据类型）](../../t-sql/spatial-geography/hasm-geography-data-type.md)  
   

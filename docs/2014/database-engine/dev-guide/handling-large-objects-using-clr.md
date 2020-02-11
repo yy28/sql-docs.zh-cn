@@ -11,21 +11,23 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7253264398316f2fb8bc0c1f1b4587c0e597beee
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74054830"
 ---
 # <a name="handling-large-objects-using-clr"></a>使用 CLR 处理大型对象
   SQL Server 的 `HandlingLOBUsingCLR` 示例说明了如何通过使用公共语言运行时 (CLR) 存储过程在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 与服务器可访问的文件系统之间传输大型对象 (LOB)。 本示例说明了如何在服务器端代码中访问文件，以及如何从基于 CLR 的存储过程中调用动态查询和存储过程。 此示例还说明了如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 注册和注销 CLR 方法和程序集。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必备条件  
  若要创建和运行此项目，必须安装下列软件：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]网站[免费获取 ](https://www.microsoft.com/download/details.aspx?id=42299) Express  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]网站[免费获取 ](https://www.microsoft.com/download/details.aspx?id=42299) Express  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开发人员[网站](https://archive.codeplex.com/?p=SqlServerSamples)提供的 AdventureWorks 数据库  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开发人员[网站](https://archive.codeplex.com/?p=SqlServerSamples)提供的 AdventureWorks 数据库  
   
 -   .NET Framework SDK 2.0 或更高版本，或 Microsoft Visual Studio 2005 或更高版本。 您可以免费获取 .NET Framework SDK。  
   
@@ -64,7 +66,7 @@ ms.locfileid: "74054830"
   
 3.  由于此示例需要签名的程序集，请通过键入以下命令创建一个非对称密钥：  
   
-## <a name="sample-code"></a>示例代码  
+## <a name="sample-code"></a>代码示例  
  下面是此示例的代码列表。  
   
  C#  
@@ -573,7 +575,7 @@ END  -- END of sp_InsertDocument
 GO  
 ```  
   
- 下面的 [!INCLUDE[tsql](../../includes/tsql-md.md)] （`test.sql`）通过执行存储过程测试该示例。  
+ 以下[!INCLUDE[tsql](../../includes/tsql-md.md)] （`test.sql`）通过执行存储过程来测试该示例。  
   
 ```  
 USE AdventureWorks  
@@ -629,6 +631,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [公共语言运行时 (CLR) 集成的使用方案和示例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+ [公共语言运行时 &#40;CLR&#41; 集成的使用方案和示例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

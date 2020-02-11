@@ -1,5 +1,5 @@
 ---
-title: sp_grant_proxy_to_subsystem (TRANSACT-SQL) |Microsoft Docs
+title: sp_grant_proxy_to_subsystem （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,19 +18,19 @@ ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 96e044b94244492202058d6dc2b2f048a9c1db6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68123823"
 ---
-# <a name="spgrantproxytosubsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
+# <a name="sp_grant_proxy_to_subsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   授权代理访问子系统。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,41 +41,42 @@ sp_grant_proxy_to_subsystem
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @proxy_id = ] id` 要授予访问权限的代理代理标识号。 *Proxy_id*是**int**，默认值为 NULL。 任一*proxy_id*或*proxy_name*必须指定，但不能同时指定两者。  
+`[ @proxy_id = ] id`要为其授予访问权限的代理的代理标识号。 *Proxy_id*的值为**int**，默认值为 NULL。 必须指定*proxy_id*或*proxy_name* ，但不能同时指定两者。  
   
-`[ @proxy_name = ] 'proxy_name'` 要授予访问权限的代理的名称。 *Proxy_name*是**sysname**，默认值为 NULL。 任一*proxy_id*或*proxy_name*必须指定，但不能同时指定两者。  
+`[ @proxy_name = ] 'proxy_name'`要为其授予访问权限的代理的名称。 *Proxy_name*的值为**sysname**，默认值为 NULL。 必须指定*proxy_id*或*proxy_name* ，但不能同时指定两者。  
   
-`[ @subsystem_id = ] id` 若要授予访问权限的子系统的 id 号。 *Subsystem_id*是**int**，默认值为 NULL。 任一*subsystem_id*或*subsystem_name*必须指定，但不能同时指定两者。 下表列出了每个子系统的值。  
+`[ @subsystem_id = ] id`要向其授予访问权限的子系统的 id 号。 *Subsystem_id*的值为**int**，默认值为 NULL。 必须指定*subsystem_id*或*subsystem_name* ，但不能同时指定两者。 下表列出了每个子系统的值。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
-|**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX 脚本<br /><br /> **\*\* 重要\* \*** 将删除 ActiveX 脚本编写子系统[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未来版本中的代理[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。|  
-|**3**|操作系统 (**CmdExec**)|  
+|**2**|
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX 脚本<br /><br /> ** \* \*重要\*提示**在的未来版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，将从代理中删除 ActiveX 脚本编写子系统。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。|  
+|**3**|操作系统（**CmdExec**）|  
 |**4**|复制快照代理|  
 |**5**|复制日志读取器代理|  
 |**6**|复制分发代理|  
 |**7**|Replication Merge Agent|  
 |**8**|复制队列读取器代理|  
-|**9**|Analysis Services 查询|  
-|**10**|Analysis Services 命令|  
-|**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] 包执行|  
+|**900**|Analysis Services 查询|  
+|**万**|Analysis Services 命令|  
+|**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)]包执行|  
 |**12**|PowerShell 脚本|  
 | &nbsp; | &nbsp; |
   
-`[ @subsystem_name = ] 'subsystem_name'` 若要授予访问权限的子系统的名称。 **Subsystem_name**是**sysname**，默认值为 NULL。 任一*subsystem_id*或*subsystem_name*必须指定，但不能同时指定两者。 下表列出了每个子系统的值。  
+`[ @subsystem_name = ] 'subsystem_name'`要向其授予访问权限的子系统的名称。 **Subsystem_name**的值为**sysname**，默认值为 NULL。 必须指定*subsystem_id*或*subsystem_name* ，但不能同时指定两者。 下表列出了每个子系统的值。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**ActiveScripting**|ActiveX 脚本|  
-|**CmdExec**|操作系统 (**CmdExec**)|  
+|**CmdExec**|操作系统（**CmdExec**）|  
 |**快照**|复制快照代理|  
-|**LogReader**|复制日志读取器代理|  
-|**Distribution**|复制分发代理|  
+|**异类**|复制日志读取器代理|  
+|**分发**|复制分发代理|  
 |**合并**|Replication Merge Agent|  
 |**QueueReader**|复制队列读取器代理|  
 |**ANALYSISQUERY**|Analysis Services 查询|  
 |**ANALYSISCOMMAND**|Analysis Services 命令|  
-|**Dts**|SSIS 包执行|  
+|**Dt**|SSIS 包执行|  
 |**PowerShell**|PowerShell 脚本|  
 | &nbsp; | &nbsp; |
   
@@ -83,7 +84,7 @@ sp_grant_proxy_to_subsystem
  授权代理访问子系统将不更改代理中指定的主体服务器的权限。  
   
 ## <a name="permissions"></a>权限  
- 只有的成员**sysadmin**固定的服务器角色可以执行**sp_grant_proxy_to_subsystem**。  
+ 只有**sysadmin**固定服务器角色的成员才能**sp_grant_proxy_to_subsystem**执行。  
   
 ## <a name="examples"></a>示例  
   
@@ -113,11 +114,11 @@ EXEC dbo.sp_grant_proxy_to_subsystem
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [实现 SQL Server 代理安全性](../../ssms/agent/implement-sql-server-agent-security.md)   
- [sp_revoke_proxy_from_subsystem &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-proxy-from-subsystem-transact-sql.md)   
- [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
- [sp_delete_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)   
- [sp_update_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-proxy-transact-sql.md)  
+ [sp_revoke_proxy_from_subsystem &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-revoke-proxy-from-subsystem-transact-sql.md)   
+ [sp_add_proxy &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
+ [sp_delete_proxy &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)   
+ [sp_update_proxy &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-proxy-transact-sql.md)  
   
   

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e5d91c82d892888d2e6edde5615ba05a2a9ebf3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011758"
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>使用 bcp 指定数据文件中的前缀长度 (SQL Server)
@@ -50,17 +50,17 @@ ms.locfileid: "66011758"
   
  在大容量导出数据并以本机数据类型或字符格式存储数据时，请使用下表中显示的前缀长度。  
   
-|SQL Server<br /><br /> 数据类型|本机格式<br /><br /> NOT NULL|本机格式<br /><br /> NULL|字符格式<br /><br /> NOT NULL|字符格式<br /><br /> NULL|  
+|SQL Server<br /><br /> 数据类型|本机格式<br /><br /> NOT NULL|本机格式<br /><br /> Null|字符格式<br /><br /> NOT NULL|字符格式<br /><br /> Null|  
 |------------------------------|--------------------------------|----------------------------|-----------------------------------|-------------------------------|  
 |`char`|2|2|2|2|  
 |`varchar`|2|2|2|2|  
 |`nchar`|2|2|2|2|  
 |`nvarchar`|2|2|2|2|  
-|`text` <sup>1</sup>|4|4|4|4|  
-|`ntext` <sup>1</sup>|4|4|4|4|  
+|`text`<sup>1</sup>|4|4|4|4|  
+|`ntext`<sup>1</sup>|4|4|4|4|  
 |`binary`|2|2|2|2|  
 |`varbinary`|2|2|2|2|  
-|`image` <sup>1</sup>|4|4|4|4|  
+|`image`<sup>1</sup>|4|4|4|4|  
 |`datetime`|0|1|0|1|  
 |`smalldatetime`|0|1|0|1|  
 |`decimal`|1|1|1|1|  
@@ -81,19 +81,19 @@ ms.locfileid: "66011758"
 |UDT（用户定义的数据类型）|8|8|8|8|  
 |XML|8|8|8|8|  
   
- <sup>1</sup> `ntext`， `text`，和`image`中的未来版本将删除的数据类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 请避免在新开发工作中使用这些数据类型，并考虑修改当前使用这些数据类型的应用程序。 相反，使用 `nvarchar(max)`、`varchar(max)` 和 `varbinary(max)`。  
+ <sup>1</sup>在`ntext`的`text` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]未来版本`image`中将删除、和数据类型。 请避免在新开发工作中使用这些数据类型，并考虑修改当前使用这些数据类型的应用程序。 请`nvarchar(max)`改用`varchar(max)`、和`varbinary(max)` 。  
   
-##  <a name="PrefixLengthsImport"></a> 大容量导入时的前缀长度  
+##  <a name="PrefixLengthsImport"></a>大容量导入的前缀长度  
  大容量导入数据时，前缀长度为最初创建数据文件时指定的值。 如果数据文件不是由 **bcp** 命令创建，那么可能没有长度前缀字符。 在这种情况下，将前缀长度指定为 0。  
   
 > [!NOTE]  
 >  若要在不是使用 **bcp**创建的数据文件中指定前缀长度，请使用本主题前面的 [批量导出时的前缀长度](#PrefixLengthsExport)中介绍的长度。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [bcp 实用工具](../../tools/bcp-utility.md)   
  [数据类型 (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql)   
- [使用 bcp 指定字段长度 (SQL Server)](specify-field-length-by-using-bcp-sql-server.md)   
- [指定字段终止符和行终止符 (SQL Server)](specify-field-and-row-terminators-sql-server.md)   
- [使用 bcp 指定文件存储类型 (SQL Server)](specify-file-storage-type-by-using-bcp-sql-server.md)  
+ [使用 bcp &#40;SQL Server 指定字段长度&#41;](specify-field-length-by-using-bcp-sql-server.md)   
+ [指定字段终止符和行终止符 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)   
+ [使用 bcp &#40;SQL Server 指定文件存储类型&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
   
   

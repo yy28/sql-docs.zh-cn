@@ -1,5 +1,5 @@
 ---
-title: 定义新度量值 （多维数据集向导） |Microsoft Docs
+title: 定义新度量值（多维数据集向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,22 +13,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8f526c1327f67bdcf84dce44e670eb195de9a96a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082112"
 ---
 # <a name="define-new-measures-cube-wizard"></a>定义新度量值（多维数据集向导）
   可以使用 **“定义新度量值”** 页，为在不使用数据源的情况下创建的多维数据集创建新的度量值。  
   
 > [!NOTE]  
->  仅当在“选择创建方法”  页上选择了“在数据源中生成表”  后，才会显示此页。  
+>  仅当在“选择创建方法”**** 页上选择了“在数据源中生成表”**** 后，才会显示此页。  
   
 ## <a name="select-measures-from-template-options"></a>用于从模板中选择度量值的选项  
   
 > [!NOTE]  
->  仅当在“选择创建方法”  页上选择了“模板”  后，才会显示此部分列出的选项。  
+>  仅当在“选择创建方法”**** 页上选择了“模板”**** 后，才会显示此部分列出的选项。  
   
  **从模板中选择度量值**  
  显示多维数据集模板中要包含在多维数据集中的度量值。  
@@ -40,7 +40,7 @@ ms.locfileid: "66082112"
   
  若要将模板中的所有度量值都包含在多维数据集中，请选中标头内的复选框。  
   
- **“度量值名称”**  
+ **度量值名称**  
  列出模板中可用的度量值。  
   
  若要重命名度量值，请单击该度量值并键入新名称。  
@@ -63,15 +63,15 @@ ms.locfileid: "66082112"
 ## <a name="add-new-measures-options"></a>用于添加新度量值的选项  
   
 > [!NOTE]  
->  本部分中列出的选项将始终显示在“定义新度量值”  页上。  
+>  本部分中列出的选项将始终显示在“定义新度量值”**** 页上。  
   
  **添加新度量值**  
  显示并允许定义要包含在多维数据集中的其他度量值。  
   
- **“度量值名称”**  
+ **度量值名称**  
  列出要包含在多维数据集中的新度量值。  
   
- 若要添加新度量值，请单击 **“添加新度量值”** ，然后键入新度量值的名称。  
+ 若要添加新度量值，请单击 **“添加新度量值”**，然后键入新度量值的名称。  
   
  **度量值组**  
  列出度量值的度量值组。  
@@ -93,9 +93,9 @@ ms.locfileid: "66082112"
   
  若要从多维数据集中删除新度量值，请单击该度量值所对应的 **X** 按钮。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [多维数据集向导的 F1 帮助](cube-wizard-f1-help.md)   
- [多维数据集对象&#40;Analysis Services-多维数据&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
+ [多维数据集对象 &#40;Analysis Services 多维数据&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [多维模型中的多维数据集](multidimensional-models/cubes-in-multidimensional-models.md)   
  [多维模型中的维度](multidimensional-models/dimensions-in-multidimensional-models.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: true 函数 (XQuery) |Microsoft Docs
+title: true 函数（XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 318e370d-0444-4812-afe4-307df7ef9f3b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 56f2dde1899340f036024253405379e094de59a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039041"
 ---
 # <a name="boolean-constructor-functions---true-xquery"></a>布尔构造函数 - true (XQuery)
@@ -34,10 +34,10 @@ fn:true() as xs:boolean
 ```  
   
 ## <a name="examples"></a>示例  
- 本主题提供了一些针对 XML 实例存储在各种中的 XQuery 示例**xml**类型列中的 AdventureWorks 数据库。  
+ 本主题提供了对存储在 AdventureWorks 数据库的各种**xml**类型列中的 xml 实例的 XQuery 示例。  
   
 ### <a name="a-using-the-true-xquery-boolean-function"></a>A. 使用 XQuery 布尔函数 true()  
- 下面的示例查询一个非类型化**xml**变量。 中的表达式**value （)** 方法返回布尔值**true （)** 如果"aaa"是属性的值。 **Value （)** 方法**xml**数据类型的布尔值转换为位并将其返回。  
+ 下面的示例将查询一个非类型化的**xml**变量。 如果 "aaa" 是属性值，则**value （）** 方法中的表达式返回布尔**true （）** 。 **Xml**数据类型的**value （）** 方法将布尔值转换为位并将其返回。  
   
 ```  
 DECLARE @x XML  
@@ -47,11 +47,11 @@ go
 -- result = 1  
 ```  
   
- 在以下示例中，指定了查询针对类型化**xml**列。 `if`表达式将检查的类型化布尔值 <`ROOT`> 元素，并相应地返回构造的 XML。 该示例执行以下操作：  
+ 在下面的示例中，对类型化的**xml**列指定了查询。 `if`表达式检查 <`ROOT`> 元素的类型化布尔值，并相应地返回构造的 XML。 该示例执行以下操作：  
   
--   创建 XML 架构集合，用于定义 <`ROOT`> xs: boolean 类型的元素。  
+-   创建定义 xs： boolean 类型的 <`ROOT`> 元素的 XML 架构集合。  
   
--   创建一个具有类型化表**xml**使用 XML 架构集合的列。  
+-   使用 XML 架构集合创建包含类型化**xml**列的表。  
   
 -   将 XML 实例保存在列中并查询它。  
   
@@ -88,7 +88,7 @@ DROP XML SCHEMA COLLECTION SC
 go  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [布尔构造函数&#40;XQuery&#41;](https://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)  
+## <a name="see-also"></a>另请参阅  
+ [布尔构造函数 &#40;XQuery&#41;](https://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)  
   
   

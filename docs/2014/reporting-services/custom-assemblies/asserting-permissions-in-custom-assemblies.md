@@ -19,25 +19,25 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f66896479ec06d78b94d6fe084ff806e3af67727
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63265383"
 ---
 # <a name="asserting-permissions-in-custom-assemblies"></a>在自定义程序集中断言权限
-  默认情况下，自定义程序集代码以受限的 Execution 权限集运行  。 在某些情况下，您可能想要实现对您的安全系统内的受保护资源（例如文件或注册表）进行安全调用的自定义程序集。 为此，您必须执行以下操作：  
+  默认情况下，自定义程序集代码以受限的 Execution 权限集运行****。 在某些情况下，您可能想要实现对您的安全系统内的受保护资源（例如文件或注册表）进行安全调用的自定义程序集。 为此，您必须执行以下操作：  
   
-1.  标识代码为进行安全调用所需的确切权限。 如果此方法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 库的一部分，则此信息应包括在方法文档中。  
+1.  标识代码为进行安全调用所需的确切权限。 如果此方法是[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]库的一部分，则此信息应包括在方法文档中。  
   
 2.  修改报表服务器策略配置文件，以便向自定义程序集授予所需的权限。 有关安全策略配置文件的详细信息，请参阅[使用 Reporting Services 安全策略文件](../extensions/secure-development/using-reporting-services-security-policy-files.md)。  
   
-3.  将所需权限断言为按其进行安全调用的方法的一部分。 这是必需的，因为报表服务器调用的自定义程序集代码属于报表表达式宿主程序集，默认以 Execution 权限运行  。 Execution 权限集允许代码运行，但无法使用受保护的资源  。  
+3.  将所需权限断言为按其进行安全调用的方法的一部分。 这是必需的，因为报表服务器调用的自定义程序集代码属于报表表达式宿主程序集，默认以 Execution 权限运行****。 Execution 权限集允许代码运行，但无法使用受保护的资源****。  
   
-4.  如果自定义程序集使用强名称签名，请使用 AllowPartiallyTrustedCallersAttribute 标记该自定义程序集  。 这是必需的，因为自定义程序集是从报表表达式宿主程序集中的报表表达式调用的，默认情况下，将不向该报表表达式宿主程序集授予 FullTrust；因此，它是“部分信任的”调用方  。 有关详细信息，请参阅[使用具有强名称的自定义程序集](using-strong-named-custom-assemblies.md)。  
+4.  如果自定义程序集使用强名称签名，请使用 AllowPartiallyTrustedCallersAttribute 标记该自定义程序集****。 这是必需的，因为自定义程序集是从报表表达式宿主程序集中的报表表达式调用的，默认情况下，将不向该报表表达式宿主程序集授予 FullTrust；因此，它是“部分信任的”调用方****。 有关详细信息，请参阅[使用具有强名称的自定义程序集](using-strong-named-custom-assemblies.md)。  
   
 ## <a name="implementing-a-secure-call"></a>实现安全调用  
- 您可以修改策略配置文件，以便向您的程序集授予特定的权限。 例如，如果您正在编写用于处理货币换算的自定义程序集，则可能需要从某一文件读取当前外币汇率。 为了检索汇率信息，需要将一个附加的安全权限 FileIOPermission 添加到该程序集的权限集  。 您可以在策略配置文件中输入以下附加内容：  
+ 您可以修改策略配置文件，以便向您的程序集授予特定的权限。 例如，如果您正在编写用于处理货币换算的自定义程序集，则可能需要从某一文件读取当前外币汇率。 为了检索汇率信息，需要将一个附加的安全权限 FileIOPermission 添加到该程序集的权限集****。 您可以在策略配置文件中输入以下附加内容：  
   
 ```  
 <PermissionSet class="NamedPermissionSet"  
@@ -89,7 +89,7 @@ try
   
  有关详细信息，请参阅 .NET Framework 开发人员指南中的“.NET Framework 安全性”。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [将自定义程序集用于报表](using-custom-assemblies-with-reports.md)  
   
   

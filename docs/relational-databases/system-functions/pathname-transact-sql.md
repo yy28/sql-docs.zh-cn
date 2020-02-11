@@ -18,10 +18,10 @@ ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b64c1d0d6032ce5032a92c840635fdf0c087e571
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72251952"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "72251952"
 
   返回 FILESTREAM 二进制大型对象 (BLOB) 路径。 OpenSqlFilestream API 使用此路径返回应用程序可用于通过使用 Win32 Api 处理 BLOB 数据的句柄。 PathName 是只读的。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,15 +39,15 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 ```  
   
 ## <a name="arguments"></a>参数  
- column_name  
+ column_name   
  **Varbinary （max）** FILESTREAM 列的列名称。 *column_name*必须是列名称。 它不能是表达式，也不能是 CAST 或 CONVERT 语句的结果。  
   
  如果为任何其他数据类型的列或**varbinary （max）** Columnthat 请求路径名，则不会有 FILESTREAM 存储属性导致查询编译时错误。  
   
- *\@选项*  
- 一个整数[表达式](../../t-sql/language-elements/expressions-transact-sql.md)，定义路径的服务器组件应如何进行格式化。 *\@选项*可以是下列值之一。 默认值为 0。  
+ *\@选*  
+ 一个整数[表达式](../../t-sql/language-elements/expressions-transact-sql.md)，定义路径的服务器组件应如何进行格式化。 选项可以为下列值之一。 * \@* 默认值为 0。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |0|返回转换为 BIOS 格式的服务器名称，例如：`\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
 |1|返回未经转换的服务器名称，例如：`\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
@@ -60,7 +60,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  当数据库属于 Always On 可用性组时， *use_replica_computer_name*的值对**PathName**函数的输出具有以下影响：  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |未指定。|函数返回路径中的虚拟网络名称 (VNN)。|  
 |0|函数返回路径中的虚拟网络名称 (VNN)。|  
@@ -72,7 +72,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 ## <a name="return-value"></a>返回值  
  返回的值是 BLOB 的完全限定逻辑路径或 NETBIOS 路径。 PathName 不返回 IP 地址。 尚未创建 FILESTREAM BLOB 时返回 NULL。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  ROWGUID 列必须在任何调用 PathName 的查询中可见。  
   
  只能使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 来创建 FILESTREAM BLOB。  
@@ -149,7 +149,7 @@ DROP DATABASE PathNameDB;
   
 ## <a name="see-also"></a>另请参阅  
  [二进制大型对象 &#40;Blob&#41; 数据 &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
- [GET_FILESTREAM_TRANSACTION_CONTEXT &#40;transact-sql&#41; ](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
+ [GET_FILESTREAM_TRANSACTION_CONTEXT &#40;Transact-sql&#41;](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
  [使用 OpenSqlFilestream 访问 FILESTREAM 数据](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   
   

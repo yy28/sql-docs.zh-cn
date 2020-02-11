@@ -5,22 +5,37 @@ description: 了解在 Kubernetes 上运行并为关系数据和 HDFS 数据提�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6bbb185936b2a388014a16ae0a6ecc6c52c5d29a
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 23eb15b1f7b763688a3657406bab12106a18f977
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706660"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75720930"
 ---
 # <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>什么是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]？
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 从 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 开始，借助 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 可部署在 Kubernetes 上运行的 SQL Server、Spark 和 HDFS 容器的可缩放群集。 这些组件并行运行以确保可读取、写入和处理 Transact-SQL 或 Spark 中的大数据，这样你就可以借助大量大数据轻松合并并分析高价值关系数据。
+
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 介绍 SQL Server 大数据群集。
+
+使用 SQL Server 大数据群集可执行以下操作：
+
+- [部署](../big-data-cluster/deploy-get-started.md) SQL Server、Spark 和在 Kubernetes 上运行的 HDFS 容器的可缩放群集。 
+- 在 Transact-SQL 或 Spark 中读取、写入和处理大数据。
+- 通过大容量大数据轻松合并和分析高价值关系数据。
+- 查询外部数据源。
+- 在由 SQL Server 管理的 HDFS 中存储大数据。
+- 通过群集查询多个外部数据源的数据。
+- 将数据用于 AI、机器学习和其他分析任务。
+- 在 [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] 中[部署和运行应用程序](../big-data-cluster/concept-application-deployment.md)。
+- 使用 [PolyBase](../relational-databases/polybase/polybase-guide.md) 虚拟化数据。 使用外部表从外部 SQL Server、Oracle、Teradata、MongoDB 和 ODBC 数据源查询数据。
+- 使用 Always On 可用性组技术为 SQL Server 主实例和所有数据库提供高可用性。
 
 有关最新版本的新功能和已知问题的详细信息，请参阅[发行说明](release-notes-big-data-cluster.md)。
 

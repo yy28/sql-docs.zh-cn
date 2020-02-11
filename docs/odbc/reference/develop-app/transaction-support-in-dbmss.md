@@ -14,11 +14,11 @@ ms.assetid: 0fc2ae34-4748-4120-9fc3-bb28c8ed867e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 72353e9917996ecacdc5971b4a11f9c73718ba43
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037629"
 ---
 # <a name="transaction-support-in-dbmss"></a>DBMS 中的事务支持
-某些数据库，如 dBASE、 Paradox 和 Btrieve，尤其是桌面数据库不支持事务。 支持事务的数据库，甚至之间是中的 SQL 语句类型可以是在事务中的变体。 有关详细信息，请参阅中的 SQL_TXN_CAPABLE 选项[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)函数说明。
+某些数据库（特别是 dBASE、Paradox 和 Btrieve 等桌面数据库）不支持事务。 甚至在支持事务的数据库中，事务中的 SQL 语句类型都有不同的变化。 有关详细信息，请参阅[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)函数说明中的 SQL_TXN_CAPABLE 选项。

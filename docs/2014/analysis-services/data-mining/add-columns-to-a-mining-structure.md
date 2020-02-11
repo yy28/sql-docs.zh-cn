@@ -1,5 +1,5 @@
 ---
-title: 将列添加到挖掘结构 |Microsoft Docs
+title: 向挖掘结构中添加列 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85a713bb9da24a67ebe8fdd097535c5a9d5ac98e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086229"
 ---
 # <a name="add-columns-to-a-mining-structure"></a>向挖掘结构中添加列
@@ -31,9 +31,10 @@ ms.locfileid: "66086229"
   
 1.  在数据挖掘设计器中选择 **“挖掘结构”** 选项卡。  
   
-2.  右键单击挖掘结构并选择“添加列”  。  
+2.  右键单击挖掘结构并选择“添加列”****。  
   
-     **“选择列”** 对话框将打开。  
+     
+  **“选择列”** 对话框将打开。  
   
 3.  在 **“源表”** 下，从数据源视图中选择列所在的表。  
   
@@ -44,7 +45,7 @@ ms.locfileid: "66086229"
 > [!NOTE]  
 >  如果您添加的列已经存在，则结构中将会包含一个副本，并在其名称后追加“1”。 在挖掘结构列的 **“名称”** 属性中键入新名称，可以更改已复制列的名称，使之更具说明性。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [挖掘结构任务和操作指南](mining-structure-tasks-and-how-tos.md)  
   
   

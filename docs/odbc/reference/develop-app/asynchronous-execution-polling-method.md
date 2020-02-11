@@ -1,5 +1,5 @@
 ---
-title: 异步执行 （轮询方法） |Microsoft Docs
+title: 异步执行（轮询方法） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,29 +13,29 @@ ms.assetid: 8cd21734-ef8e-4066-afd5-1f340e213f9c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 97fe8af6f02e9797bc14578edda09c420f8f94e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68077052"
 ---
 # <a name="asynchronous-execution-polling-method"></a>异步执行（轮询方法）
-在 ODBC 3.8 和 Windows 7 SDK 之前, 是仅在语句函数上允许异步操作。 有关详细信息，请参阅**以异步方式执行语句操作**，本主题中更高版本。  
+在 ODBC 3.8 和 Windows 7 SDK 之前，只允许对语句函数执行异步操作。 有关详细信息，请参阅本主题后面的**异步执行语句操作**。  
   
- Windows 7 SDK 中的 ODBC 3.8 引入了异步执行与连接相关的操作。 有关详细信息，请参阅**以异步方式执行连接操作**本主题后面的部分。  
+ Windows 7 SDK 中的 ODBC 3.8 介绍了与连接相关的操作的异步执行。 有关详细信息，请参阅本主题后面的**异步执行连接操作**部分。  
   
- 在 Windows 7 SDK 中，为异步语句或连接操作，将异步操作已完成使用轮询方法确定应用程序。 从 Windows 8 SDK 开始，您可以确定异步操作已完成使用的通知方法。 有关详细信息，请参阅[异步执行 （通知方法）](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md)。  
+ 在 Windows 7 SDK 中，对于异步语句或连接操作，应用程序确定使用轮询方法完成了异步操作。 从 Windows 8 SDK 开始，你可以使用通知方法确定异步操作是否已完成。 有关详细信息，请参阅[异步执行（通知方法）](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md)。  
   
- 默认情况下，驱动程序执行 ODBC 函数以同步方式;也就是说，应用程序调用的函数和驱动程序才会返回控制对应用程序完成执行函数。 不过，可以以异步方式; 执行某些函数也就是说，应用程序调用该函数和驱动程序，最小处理后返回控制应用程序。 第一个函数仍在执行时，应用程序然后可以调用其他函数。  
+ 默认情况下，驱动程序同步执行 ODBC 函数;也就是说，应用程序将调用一个函数，并且在完成执行函数之前，驱动程序不会将控制返回给应用程序。 但是，某些函数可以异步执行;也就是说，应用程序调用函数，并且驱动程序在最小处理后会将控制权返回给应用程序。 然后，应用程序可以在第一个函数仍在执行时调用其他函数。  
   
- 异步执行支持很大程度上在数据源上执行的大多数功能，如要建立的连接、 准备和执行 SQL 语句的函数检索元数据，提取数据，并提交事务。 数据源上当前正在执行任务所用较长的时间，如登录过程或复杂查询针对大型数据库时，它是最有用。  
+ 大多数在数据源上执行的函数都支持异步执行，如用于建立连接、准备和执行 SQL 语句、检索元数据、提取数据和提交事务的函数。 如果要对数据源执行的任务需要很长时间，例如登录过程或针对大型数据库的复杂查询，则此方法最有用。  
   
- 当应用程序执行的函数与语句或进行异步处理的连接时，驱动程序执行最少量的处理 （如检查有错误的参数）、 将传递到数据源，处理并返回控制对 SQL_STILL_EXECUTING 返回代码的应用程序。 然后，应用程序执行其他任务。 若要确定异步函数完成时，应用程序轮询该驱动程序按固定间隔通过调用具有作为其最初使用的相同参数的函数。 如果该函数仍在执行，它将返回 SQL_STILL_EXECUTING;如果它已完成执行，它将返回它具有它以同步方式执行，比如 SQL_SUCCESS、 SQL_ERROR 或 SQL_NEED_DATA 返回的代码。  
+ 当应用程序使用已为异步处理启用的语句或连接执行函数时，驱动程序将执行最小数量的处理（如检查错误的参数）、对数据源进行干预并返回向应用程序控制 SQL_STILL_EXECUTING 返回代码。 然后，应用程序执行其他任务。 若要确定异步函数何时完成，应用程序将使用与最初使用的参数相同的参数调用函数，从而定期轮询驱动程序。 如果函数仍在执行，它将返回 SQL_STILL_EXECUTING;如果它已完成执行，则它将返回其返回的代码（例如 SQL_SUCCESS、SQL_ERROR 或 SQL_NEED_DATA）。  
   
- 函数执行同步或异步是特定的驱动程序。 例如，假设在驱动程序中缓存的结果集元数据。 在这种情况下，需要很少的时间来执行**SQLDescribeCol**和驱动程序应只需执行该函数而不是人为延迟执行。 另一方面，如果驱动程序需要从数据源检索元数据，它应返回控制应用程序时它执行此操作。 因此，应用程序必须能够处理 SQL_STILL_EXECUTING 之外的返回代码，首先以异步方式执行函数时。  
+ 函数是同步执行还是异步执行特定于驱动程序。 例如，假设结果集元数据缓存在驱动程序中。 在这种情况下，执行**SQLDescribeCol**所需的时间很短，驱动程序只需执行函数而不是人为延迟执行。 另一方面，如果驱动程序需要从数据源检索元数据，则应在执行此操作时将控件返回给应用程序。 因此，应用程序必须能够在第一次异步执行函数时，处理除 SQL_STILL_EXECUTING 以外的返回代码。  
   
-## <a name="executing-statement-operations-asynchronously"></a>以异步方式执行语句的操作  
- 以下语句功能对数据源执行操作，并且能够以异步方式执行：  
+## <a name="executing-statement-operations-asynchronously"></a>异步执行语句操作  
+ 以下语句函数对数据源执行操作，并且可以异步执行：  
   
 ||||  
 |-|-|-|  
@@ -49,15 +49,15 @@ ms.locfileid: "68077052"
 |[SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)|[SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)|[SQLSpecialColumns](../../../odbc/reference/syntax/sqlspecialcolumns-function.md)|  
 |[SQLStatistics](../../../odbc/reference/syntax/sqlstatistics-function.md)|[SQLTablePrivileges](../../../odbc/reference/syntax/sqltableprivileges-function.md)|[SQLTables](../../../odbc/reference/syntax/sqltables-function.md)|  
   
- 异步语句执行控制每个语句或在每个连接基础，具体取决于数据源上。 也就是说，应用程序不指定将特定的函数是以异步方式执行，但在特定语句上执行任何函数是以异步方式执行。 若要查找支持的一个扩展，应用程序调用[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) SQL_ASYNC_MODE 的选项。 如果支持连接级别 （适用于语句句柄） 的异步执行，则，返回 SQL_AM_CONNECTION如果支持语句级异步执行，SQL_AM_STATEMENT。  
+ 异步语句执行基于每个语句或每个连接进行控制，具体取决于数据源。 也就是说，应用程序指定不以异步方式执行特定函数，但对特定语句执行的任何函数都将以异步方式执行。 若要找出受支持的应用程序，应用程序将使用 SQL_ASYNC_MODE 的选项调用[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) 。 如果支持连接级异步执行（对于语句句柄），则返回 SQL_AM_CONNECTION;SQL_AM_STATEMENT 是否支持语句级别的异步执行。  
   
- 若要指定使用特定的语句执行的函数是要以异步方式执行，则应用程序调用**SQLSetStmtAttr**与 SQL_ATTR_ASYNC_ENABLE 属性并将其设置为 SQL_ASYNC_ENABLE_ON。 如果支持连接级别异步处理，则将 sql_attr_async_enable 设置语句属性是只读的其值为已分配该语句的连接的连接属性相同。 它是特定于驱动程序的语句属性的值是否设置在语句分配时或更高版本。 尝试设置它将返回 SQL_ERROR 并且 SQLSTATE HYC00 （未实现的可选功能）。  
+ 若要指定要以异步方式执行使用特定语句执行的函数，应用程序需要使用 SQL_ATTR_ASYNC_ENABLE 特性调用**SQLSetStmtAttr** ，并将其设置为 SQL_ASYNC_ENABLE_ON。 如果支持连接级异步处理，则 SQL_ATTR_ASYNC_ENABLE 语句特性为只读，其值与在其上分配语句的连接的连接属性相同。 它是特定于驱动程序的，无论语句特性的值是在语句分配时间还是之后设置的。 尝试设置它将返回 SQL_ERROR 和 SQLSTATE HYC00 （未实现可选功能）。  
   
- 若要指定与特定连接执行的函数是要以异步方式执行，则应用程序调用**SQLSetConnectAttr**与 SQL_ATTR_ASYNC_ENABLE 属性并将其设置为 SQL_ASYNC_ENABLE_ON。 将为在连接上分配的所有将来的语句句柄启用异步执行;它是驱动程序定义将通过此操作是否启用现有的语句句柄。 如果 SQL_ATTR_ASYNC_ENABLE 设置为 SQL_ASYNC_ENABLE_OFF，在连接上的所有语句都都在同步模式。 如果在连接上的活动语句时，启用异步执行，则返回错误。  
+ 若要指定要以异步方式执行使用特定连接执行的函数，应用程序需要使用 SQL_ATTR_ASYNC_ENABLE 特性调用**SQLSetConnectAttr** ，并将其设置为 SQL_ASYNC_ENABLE_ON。 将为该连接上已分配的所有未来语句句柄启用异步执行;它是驱动程序定义的，此操作是否将启用现有的语句句柄。 如果 SQL_ATTR_ASYNC_ENABLE 设置为 SQL_ASYNC_ENABLE_OFF，则连接上的所有语句都处于同步模式。 如果在连接上存在活动语句时启用了异步执行，则会返回错误。  
   
- 若要确定在该驱动程序可以支持对给定连接的异步模式下的活动并发语句的最大数目，应用程序调用**SQLGetInfo** SQL_MAX_ASYNC_CONCURRENT_STATEMENTS 选项。  
+ 若要确定在给定连接上驱动程序可以支持的异步模式下活动并发语句的最大数量，应用程序需要使用 SQL_MAX_ASYNC_CONCURRENT_STATEMENTS 选项调用**SQLGetInfo** 。  
   
- 下面的代码演示了轮询模型的工作原理：  
+ 下面的代码演示了轮询模型的工作方式：  
   
 ```  
 SQLHSTMT  hstmt1;  
@@ -75,11 +75,11 @@ while ((rc=SQLExecDirect(hstmt1,"SELECT * FROM Orders",SQL_NTS))==SQL_STILL_EXEC
 // When the statement has finished executing, retrieve the results.  
 ```  
   
- 函数以异步方式执行，而应用程序可以对任何其他语句调用函数。 应用程序也可以只与异步语句相关联的任何连接上调用函数。 但应用程序只能调用原始函数和 （不带语句句柄或其关联的连接，环境句柄） 的以下函数语句操作完成后返回 SQL_STILL_EXECUTING:  
+ 当函数以异步方式执行时，应用程序可以对任何其他语句调用函数。 应用程序还可以对任何连接调用函数，与异步语句关联的函数除外。 但在语句操作返回 SQL_STILL_EXECUTING 之后，应用程序才能调用原始函数和以下函数（使用语句句柄或其关联的连接，环境句柄）：  
   
 -   [SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)  
   
--   [SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md) （对语句句柄）  
+-   [SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md) （在语句句柄上）  
   
 -   [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)  
   
@@ -101,7 +101,7 @@ while ((rc=SQLExecDirect(hstmt1,"SELECT * FROM Orders",SQL_NTS))==SQL_STILL_EXEC
   
 -   [SQLNativeSql](../../../odbc/reference/syntax/sqlnativesql-function.md)  
   
- 如果应用程序调用任何其他函数使用异步语句或者使用与该语句相关联的连接，则该函数将返回 SQLSTATE HY010 （函数序列错误），例如。  
+ 例如，如果应用程序调用带有异步语句的任何其他函数或与该语句关联的连接，则函数返回 SQLSTATE HY010 （函数序列错误）。  
   
 ```  
 SQLHDBC       hdbc1, hdbc2;  
@@ -134,45 +134,45 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
 }  
 ```  
   
- 当应用程序调用一个函数来确定是否仍在执行以异步方式时，它必须使用原始语句句柄。 这是因为在每个语句的基础上跟踪异步执行。 应用程序还必须提供有效的其他自变量的值-原始参数将执行的操作-过去的错误检查驱动程序管理器中。 但是，该驱动程序检查语句句柄，并确定以异步方式执行该语句后，它会忽略所有其他参数。  
+ 当应用程序调用函数来确定它是否仍以异步方式执行时，它必须使用原始语句句柄。 这是因为，将基于每个语句跟踪异步执行。 该应用程序还必须为其他参数提供有效值，原始参数将在驱动程序管理器中进行以前的错误检查。 但是，驱动程序检查语句句柄并确定语句是异步执行的，它将忽略所有其他参数。  
   
- 以异步方式-执行函数时，即它返回 SQL_STILL_EXECUTING 后，才会返回不同的代码的应用程序可以取消它通过调用**SQLCancel**或**SQLCancelHandle**具有相同的语句句柄。 这不保证取消函数执行。 例如，该函数可能具有已完成。 此外，通过返回的代码**SQLCancel**或**SQLCancelHandle**仅指示尝试取消该函数成功，不是它真正取消函数。 若要确定是否已取消该函数，该应用程序再次调用此函数。 如果该函数已被取消，则返回 SQL_ERROR 并且 SQLSTATE HY008 （已取消的操作）。 如果未取消该函数，则返回另一个代码，比如 SQL_SUCCESS、 SQL_STILL_EXECUTING 或使用不同的 SQLSTATE SQL_ERROR。  
+ 当函数以异步方式执行时，即在返回 SQL_STILL_EXECUTING 之后，在返回不同的代码之前，应用程序可以通过使用相同的语句句柄调用**SQLCancel**或**SQLCancelHandle**来取消它。 这不能保证取消函数执行。 例如，函数可能已经完成。 此外， **SQLCancel**或**SQLCancelHandle**返回的代码仅指示是否已成功取消函数，而不是实际取消函数。 若要确定是否已取消该函数，应用程序将再次调用该函数。 如果该函数已取消，它将返回 SQL_ERROR 和 SQLSTATE HY008 （操作已取消）。 如果未取消该函数，它将返回其他代码，如 SQL_SUCCESS、SQL_STILL_EXECUTING 或 SQL_ERROR 不同的 SQLSTATE。  
   
- 若要禁用特定语句的异步执行时的驱动程序支持语句级异步处理，应用程序调用**SQLSetStmtAttr** sql_attr_async_enable 设置与特性，并将其设置为 SQL_ASYNC_ENABLE_OFF。 如果该驱动程序支持连接级别异步处理，应用程序调用**SQLSetConnectAttr**将 SQL_ATTR_ASYNC_ENABLE 设置为 SQL_ASYNC_ENABLE_OFF，禁用异步执行的所有语句连接。  
+ 若要在驱动程序支持语句级异步处理时禁用特定语句的异步执行，应用程序将使用 SQL_ATTR_ASYNC_ENABLE 特性调用**SQLSetStmtAttr** ，并将其设置为 SQL_ASYNC_ENABLE_OFF。 如果驱动程序支持连接级别的异步处理，则应用程序会调用**SQLSetConnectAttr**将 SQL_ATTR_ASYNC_ENABLE 设置为 SQL_ASYNC_ENABLE_OFF，这将禁用连接上的所有语句的异步执行。  
   
- 应用程序应处理原始函数在重复循环中的诊断记录。 如果**SQLGetDiagField**或**SQLGetDiagRec**时执行的异步函数，调用它将返回当前列表的诊断记录。 每次重复的原始函数调用，它会清除以前的诊断记录。  
+ 应用程序应在原始函数的重复循环中处理诊断记录。 如果在执行异步函数时调用**SQLGetDiagField**或**SQLGetDiagRec** ，则它将返回诊断记录的当前列表。 每次重复原始函数调用时，它会清除以前的诊断记录。  
   
 ## <a name="executing-connection-operations-asynchronously"></a>以异步方式执行连接操作  
- ODBC 3.8 之前, 允许异步执行，用于与语句相关的操作如准备、 执行和提取，也与目录元数据操作。 从 ODBC 3.8，异步执行也可能是为与连接相关的操作，如连接、 断开、 commit 和 rollback。  
+ 在 ODBC 3.8 之前，允许异步执行与语句相关的操作，例如准备、执行和提取，以及用于目录元数据操作。 从 ODBC 3.8 开始，异步执行也可用于连接相关的操作，如连接、断开连接、提交和回滚。  
   
- 有关 ODBC 3.8 的详细信息，请参阅[What's New in ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md)。  
+ 有关 ODBC 3.8 的详细信息，请参阅[odbc 3.8 中的新增功能](../../../odbc/reference/what-s-new-in-odbc-3-8.md)。  
   
- 以异步方式执行连接操作可在以下方案中：  
+ 以异步方式执行连接操作在以下情况下非常有用：  
   
--   当少量的线程管理大量设备非常高的数据费率。 若要最大程度提高响应能力和可伸缩性最好的是异步的所有操作。  
+-   当少量线程管理大量具有非常高的数据速率的设备时。 若要最大程度地提高响应能力和可伸缩性，所有操作都是异步的。  
   
--   当你想要通过多个连接，以减少已用的传输时间重叠数据库操作。  
+-   希望在多个连接上重叠数据库操作，以减少已用的传输时间。  
   
--   高效的异步 ODBC 调用和取消连接操作的功能使应用程序能够允许用户取消任何速度慢的操作而无需等待超时。  
+-   有效的异步 ODBC 调用和取消连接操作的功能使应用程序能够允许用户取消任何慢速操作，而无需等待超时。  
   
- 以下函数，对连接句柄，以异步方式执行：  
+ 现在可以异步执行以下函数，这些函数可对连接句柄执行操作：  
   
 ||||  
 |-|-|-|  
 |[SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|[SQLDisconnect](../../../odbc/reference/syntax/sqldisconnect-function.md)|  
 |[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|[SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
   
- 若要确定驱动程序是否支持对这些函数的异步操作，应用程序调用**SQLGetInfo** SQL_ASYNC_DBC_FUNCTIONS 使用。 如果支持异步操作，则返回 SQL_ASYNC_DBC_CAPABLE。 如果不支持异步操作，则返回 SQL_ASYNC_DBC_NOT_CAPABLE。  
+ 若要确定驱动程序是否支持对这些函数的异步操作，应用程序需要使用 SQL_ASYNC_DBC_FUNCTIONS 调用**SQLGetInfo** 。 如果支持异步操作，则返回 SQL_ASYNC_DBC_CAPABLE。 如果不支持异步操作，则返回 SQL_ASYNC_DBC_NOT_CAPABLE。  
   
- 若要指定与特定连接执行的函数是要以异步方式执行，则应用程序调用**SQLSetConnectAttr**和 SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE 属性设置为 SQL_ASYNC_DBC_ENABLE_ON。 将连接属性设置之前建立的连接始终以同步方式执行。 此外，设置连接的操作属性与 SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE **SQLSetConnectAttr**始终以同步方式执行。  
+ 若要指定以异步方式执行使用特定连接执行的函数，应用程序将调用**SQLSetConnectAttr**并将 SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE 特性设置为 SQL_ASYNC_DBC_ENABLE_ON。 建立连接之前设置连接属性始终以同步方式执行。 此外，SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE 将连接属性设置为 " **SQLSetConnectAttr** " 的操作始终同步执行。  
   
- 应用程序可以启用异步操作，然后再进行连接。 由于驱动程序管理器无法确定要建立连接之前，请使用的驱动程序，驱动程序管理器将始终返回成功**SQLSetConnectAttr**。 但是，它可能无法连接如果 ODBC 驱动程序不支持异步操作。  
+ 应用程序可以在建立连接前启用异步操作。 因为在建立连接之前，驱动程序管理器无法确定要使用的驱动程序，所以，驱动程序管理器将始终在**SQLSetConnectAttr**中返回 success。 但是，如果 ODBC 驱动程序不支持异步操作，则可能无法连接。  
   
- 一般情况下，可以有最多一个以异步方式执行函数与特定的连接句柄或语句句柄相关联。 但是，连接句柄可以有多个相关联的语句句柄。 如果没有连接句柄上执行异步操作，相关联的语句句柄可以执行异步操作。 同样，如果有任何相关联的语句句柄上无异步操作正在进行中可以具有连接句柄上的异步操作。 尝试执行异步操作使用句柄当前正在执行异步操作将返回 HY010，"函数序列错误"。  
+ 通常，最多可以有一个与特定连接句柄或语句句柄关联的异步执行函数。 但是，一个连接句柄可以有多个关联的语句句柄。 如果在连接句柄上没有执行异步操作，则关联语句句柄可执行异步操作。 同样，如果任何关联语句句柄上都没有正在进行的异步操作，则可以在连接句柄上执行异步操作。 如果尝试使用当前正在执行异步操作的句柄执行异步操作，将返回 HY010，"函数序列错误"。  
   
- 如果连接操作返回 SQL_STILL_EXECUTING，应用程序可以只调用原始函数，下列功能为该连接句柄：  
+ 如果连接操作返回 SQL_STILL_EXECUTING，则应用程序只能调用该连接句柄的原始函数和以下函数：  
   
--   **SQLCancelHandle** （在连接句柄）  
+-   **SQLCancelHandle** （在连接句柄上）  
   
 -   **SQLGetDiagField**  
   
@@ -194,25 +194,25 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
   
 -   **SQLGetFunctions**  
   
- 应用程序应处理原始函数在重复循环中的诊断记录。 如果执行异步函数时调用 SQLGetDiagField 或 SQLGetDiagRec，它将返回当前列表的诊断记录。 每次重复的原始函数调用，它会清除以前的诊断记录。  
+ 应用程序应在原始函数的重复循环中处理诊断记录。 如果在执行异步函数时调用 SQLGetDiagField 或 SQLGetDiagRec，则它将返回诊断记录的当前列表。 每次重复原始函数调用时，它会清除以前的诊断记录。  
   
- 如果正在连接时，应用程序收到 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO 原始函数调用中打开或关闭以异步方式，该操作已完成。  
+ 如果以异步方式打开或关闭连接，则当应用程序接收到原始函数调用中的 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO 时，操作即完成。  
   
- 一个新的函数已添加到 ODBC 3.8 **SQLCancelHandle**。 此函数取消六个连接函数 (**SQLBrowseConnect**， **SQLConnect**， **SQLDisconnect**， **SQLDriverConnect**，**SQLEndTran**，并**SQLSetConnectAttr**)。 应用程序应调用**SQLGetFunctions**若要确定驱动程序是否支持**SQLCancelHandle**。 如同**SQLCancel**，则**SQLCancelHandle**返回成功，它并不意味着操作已取消。 应用程序应调用再次用于确定该操作已取消的原始函数。 **SQLCancelHandle**使您可以取消连接句柄或语句句柄上的异步操作。 使用**SQLCancelHandle**取消操作语句句柄是调用相同**SQLCancel**。  
+ 新函数已添加到 ODBC 3.8， **SQLCancelHandle**。 此函数取消六个连接函数（**SQLBrowseConnect**、 **SQLConnect**、 **SQLDisconnect**、 **SQLDriverConnect**、 **SQLEndTran**和**SQLSetConnectAttr**）。 应用程序应调用**SQLGetFunctions**来确定驱动程序是否支持**SQLCancelHandle**。 与**SQLCancel**一样，如果**SQLCancelHandle**返回成功，则并不意味着该操作已取消。 应用程序应再次调用原始函数以确定操作是否已取消。 **SQLCancelHandle**可让你取消对连接句柄或语句句柄的异步操作。 使用**SQLCancelHandle**取消对语句句柄的操作与调用**SQLCancel**相同。  
   
- 不需要支持这两个**SQLCancelHandle**和在同一时间的异步连接操作。 驱动程序可以支持异步连接操作，但不是**SQLCancelHandle**，反之亦然。  
+ 不需要同时支持**SQLCancelHandle**和异步连接操作。 驱动程序可以支持异步连接操作，但不支持**SQLCancelHandle**，反之亦然。  
   
- 异步连接操作并**SQLCancelHandle**也可由 ODBC 3.x 和 ODBC 2.x 应用程序使用 ODBC 3.8 驱动程序和 ODBC 3.8 驱动程序管理器。 有关如何启用旧的应用程序以使用更高版本的 ODBC 版本中的新增功能信息，请参阅[兼容性矩阵](../../../odbc/reference/develop-app/compatibility-matrix.md)。  
+ ODBC 1.x 和 ODBC 2.x 应用程序也可以使用 ODBC 3.8 驱动程序和 ODBC 3.8 驱动程序管理器来使用异步连接操作和**SQLCancelHandle** 。 有关如何使较旧的应用程序在更高版本的 ODBC 版本中使用新功能的信息，请参阅[兼容性矩阵](../../../odbc/reference/develop-app/compatibility-matrix.md)。  
   
 ### <a name="connection-pooling"></a>连接池  
- 只要启用了连接池，仅在最低程度来建立的连接支持异步操作 (与**SQLConnect**并**SQLDriverConnect**) 和关闭与的连接**SQLDisconnect**。 应用程序应仍将能够处理来自 SQL_STILL_EXECUTING 返回值，但是**SQLConnect**， **SQLDriverConnect**，并**SQLDisconnect**。  
+ 只要启用了连接池，就只支持使用异步操作建立连接（使用**SQLConnect**和**SQLDriverConnect**）并关闭与**SQLDisconnect**的连接。 但应用程序仍然能够处理来自**SQLConnect**、 **SQLDriverConnect**和**SQLDisconnect**的 SQL_STILL_EXECUTING 返回值。  
   
- 启用连接池后， **SQLEndTran**并**SQLSetConnectAttr**支持异步操作。  
+ 启用连接池时，支持**SQLEndTran**和**SQLSetConnectAttr**异步操作。  
   
 ## <a name="example"></a>示例  
   
-### <a name="description"></a>描述  
- 下面的示例演示如何使用**SQLSetConnectAttr**若要启用异步执行的与连接相关的函数。  
+### <a name="description"></a>说明  
+ 下面的示例演示如何使用**SQLSetConnectAttr**来启用与连接相关的函数的异步执行。  
   
 ### <a name="code"></a>代码  
   
@@ -265,8 +265,8 @@ BOOL AsyncConnect (SQLHANDLE hdbc)
   
 ## <a name="example"></a>示例  
   
-### <a name="description"></a>描述  
- 此示例演示使用异步提交操作。 此外可以执行回滚操作这种方式。  
+### <a name="description"></a>说明  
+ 此示例演示异步提交操作。 还可以通过此方法完成回滚操作。  
   
 ### <a name="code"></a>代码  
   
@@ -294,5 +294,5 @@ BOOL AsyncCommit ()
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [执行语句 ODBC](../../../odbc/reference/develop-app/executing-statements-odbc.md)

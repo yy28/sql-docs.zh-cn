@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: 328d795f692597689628f6fa189d597f73fbb76a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244624"
 ---
 # <a name="disconnect-from-a-registered-server-sql-server-management-studio"></a>断开与已注册服务器的连接 (SQL Server Management Studio)
@@ -29,6 +29,6 @@ ms.locfileid: "75244624"
   
 #### <a name="to-disconnect-from-a-registered-server"></a>断开与已注册服务器的连接  
   
--   在对象资源管理器中，右键单击服务器，然后单击****“断开连接”，或者在对象资源管理器工具栏上单击****“断开连接”图标。  
+-   在对象资源管理器中，右键单击服务器，然后单击  “断开连接”，或者在对象资源管理器工具栏上单击  “断开连接”图标。  
   
   

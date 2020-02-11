@@ -14,32 +14,32 @@ ms.assetid: c2c6af1a-3c44-4c9d-ad33-b381552c71af
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d045858ddd0cde818eedb983f10527fe7e94a2fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963687"
 ---
 # <a name="rds-methods"></a>RDS 方法
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 |||  
 |-|-|  
-|[取消 (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)|取消执行的挂起异步方法调用。|  
-|[CancelUpdate (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)|取消对当前或新的行进行任何更改**记录集**对象。|  
-|[ConvertToString (RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)|将转换**记录集**为 MIME 字符串，表示记录集数据。|  
-|[CreateObject (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)|创建目标业务对象的代理，并返回的指针。|  
-|[CreateRecordset (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)|创建一个空断开**记录集**。|  
-|[Execute 方法 (RDS)](../../../ado/reference/rds-api/execute-method-rds.md)|执行请求，并创建一个高级的数据集 （适用于与 ADO 2.5 及更高版本一起使用）。|  
-|[Execute21 方法 (RDS)](../../../ado/reference/rds-api/execute21-method-rds.md)|执行请求，并创建一个高级的数据集 （适用于与 ADO 2.1 一起使用）。|  
-|[InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md)|返回一个指向所请求的接口的对象的功能更强大版本上。|  
-|[MoveFirst、 MoveLast、 MoveNext、 MovePrevious (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)|将移动到 first、 last、 下一步，或上一个记录中指定**记录集**对象。|  
-|[查询 (RDS)](../../../ado/reference/rds-api/query-method-rds.md)|使用有效的 SQL 查询字符串返回**记录集**。|  
-|[刷新 (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)|将重新查询中指定的数据源**Connect**属性和更新查询结果。|  
-|[重置 (RDS)](../../../ado/reference/rds-api/reset-method-rds.md)|客户端上执行排序或筛选**记录集**、 根据指定的排序和筛选器属性。|  
-|[SubmitChanges (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)|提交挂起的更改的本地缓存和可更新**记录集**到中指定的数据源**Connect**属性。|  
-|[Synchronize 方法 (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md)|将给定的记录集与指定连接字符串 （适用于与 ADO 2.5 及更高版本一起使用） 的数据库同步。|  
-|[Synchronize21 方法 (RDS)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|将给定的记录集与指定连接字符串 （适用于与 ADO 2.1 一起使用） 的数据库同步。|
+|[取消（RDS）](../../../ado/reference/rds-api/cancel-method-rds.md)|取消执行挂起的异步方法调用。|  
+|[CancelUpdate （RDS）](../../../ado/reference/rds-api/cancelupdate-method-rds.md)|取消对**记录集**对象的当前行或新行所做的任何更改。|  
+|[ConvertToString （RDS）](../../../ado/reference/rds-api/converttostring-method-rds.md)|将**记录集**转换为表示记录集数据的 MIME 字符串。|  
+|[CreateObject （RDS）](../../../ado/reference/rds-api/createobject-method-rds.md)|为目标业务对象创建代理并返回指向它的指针。|  
+|[CreateRecordset （RDS）](../../../ado/reference/rds-api/createrecordset-method-rds.md)|创建一个空的、断开连接的**记录集**。|  
+|[Execute 方法 (RDS)](../../../ado/reference/rds-api/execute-method-rds.md)|执行请求并创建高级数据行集（用于 ADO 2.5 和更高版本）。|  
+|[Execute21 方法 (RDS)](../../../ado/reference/rds-api/execute21-method-rds.md)|执行请求并创建高级数据行集（以便与 ADO 2.1 一起使用）。|  
+|[InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md)|返回一个指针，该指针指向对象的更好的版本上所请求的接口。|  
+|[MoveFirst、MoveLast、MoveNext、MovePrevious （RDS）](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)|移动到指定**记录集**对象中的第一条、最后一条、下一条记录或上一条记录。|  
+|[查询（RDS）](../../../ado/reference/rds-api/query-method-rds.md)|使用有效的 SQL 查询字符串返回**记录集**。|  
+|[刷新（RDS）](../../../ado/reference/rds-api/refresh-method-rds.md)|重新查询**连接**属性中指定的数据源，并更新查询结果。|  
+|[Reset （RDS）](../../../ado/reference/rds-api/reset-method-rds.md)|基于指定的排序和筛选器属性，对客户端**记录集**执行排序或筛选。|  
+|[SubmitChanges （RDS）](../../../ado/reference/rds-api/submitchanges-method-rds.md)|将本地缓存的可更新**记录集**的挂起的更改提交到**连接**属性中指定的数据源。|  
+|[Synchronize 方法 (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md)|使用连接字符串指定的数据库同步给定的记录集（用于 ADO 2.5 和更高版本）。|  
+|[Synchronize21 方法 (RDS)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|将给定的记录集与连接字符串指定的数据库同步（以便与 ADO 2.1 一起使用）。|
 
 

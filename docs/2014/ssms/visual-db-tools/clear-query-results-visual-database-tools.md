@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5c53b87f01cd8bbcba4ff8377a98606737654877
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63255793"
 ---
 # <a name="clear-query-results-visual-database-tools"></a>清除查询结果 (Visual Database Tools)
@@ -35,9 +35,9 @@ ms.locfileid: "63255793"
   
      如果在清除“结果”窗格时正在执行某个查询，则查询和视图设计器将停止该查询。  
   
-## <a name="see-also"></a>请参阅  
- [运行查询&#40;可视化数据库工具&#41;](run-queries-visual-database-tools.md)   
- [停止查询&#40;可视化数据库工具&#41;](stop-a-query-visual-database-tools.md)   
+## <a name="see-also"></a>另请参阅  
+ [&#40;Visual Database Tools 运行查询&#41;](run-queries-visual-database-tools.md)   
+ [停止查询 &#40;Visual Database Tools&#41;](stop-a-query-visual-database-tools.md)   
  [使用“结果”窗格中的数据 (Visual Database Tools)](visual-database-tools.md)  
   
   

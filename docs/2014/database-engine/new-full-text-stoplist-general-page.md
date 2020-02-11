@@ -1,5 +1,5 @@
 ---
-title: 新全文非索引字表 （常规页） |Microsoft Docs
+title: 新建全文非索引字表（"常规" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: eca5e82b9d23709b45949cfe6af9022f1243ef08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774209"
 ---
 # <a name="new-full-text-stoplist-general-page"></a>新建全文非索引字表（“常规”页）
-  使用此对话框可以创建全文非索引字表。 “非索引字表”  是一组称为“非索引字”  的常用字，在使用非索引字表的表的全文索引中会省略这些非索引字。 有关详细信息，请参阅 [为全文搜索配置和管理非索引字和非索引字表](../relational-databases/search/full-text-search.md)。  
+  使用此对话框可以创建全文非索引字表。 “非索引字表” ** 是一组称为“非索引字” ** 的常用字，在使用非索引字表的表的全文索引中会省略这些非索引字。 有关详细信息，请参阅 [为全文搜索配置和管理非索引字和非索引字表](../relational-databases/search/full-text-search.md)。  
   
- **若要使用 SQL Server Management Studio 创建非索引字表**  
+ **使用 SQL Server Management Studio 创建非索引字表**  
   
 -   [为全文搜索配置和管理非索引字和非索引字表](../relational-databases/search/full-text-search.md)  
   
@@ -30,7 +30,7 @@ ms.locfileid: "62774209"
  **全文非索引字表名称**  
  输入全文非索引字表的名称。  
   
- **“所有者”**  
+ **所有者**  
  指定全文非索引字表的所有者。 如果希望将所有权分配给您自己（即分配给当前用户），请将此字段留空。  
   
  若要指定另一个用户，请单击浏览按钮。  
@@ -55,7 +55,7 @@ ms.locfileid: "62774209"
   
  如果源非索引字表的停止词中指定的任何语言未在当前数据库中注册，CREATE FULLTEXT STOPLIST 将成功，但会返回警告且不会添加相应的停止词。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ALTER FULLTEXT STOPLIST (Transact-SQL)](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)   
  [CREATE FULLTEXT STOPLIST (Transact-SQL)](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)   
  [DROP FULLTEXT STOPLIST (Transact-SQL)](/sql/t-sql/statements/drop-fulltext-stoplist-transact-sql)   

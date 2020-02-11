@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be20c79c4c44d65b4d6b1177d06cea5ef66c164b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242059"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>SQL Server 2014 教程
@@ -43,7 +43,7 @@ ms.locfileid: "75242059"
 |技术|说明|  
 |----------------|-----------------|  
 |[SSAS&#41;Analysis Services 教程 &#40;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|了解如何开发和部署 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 表格或多维模型。 还了解如何使用 PowerPivot 之类的工具来分析模型中的数据。|  
-|[Reporting Services 的教程 &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|了解如何创建基本报表和订阅。|  
+|[Reporting Services 教程 (SSRS)](../reporting-services/reporting-services-tutorials-ssrs.md)|了解如何创建基本报表和订阅。|  
 |[Integration Services 教程](../integration-services/integration-services-tutorials.md)|了解如何创建和部署 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包。|  
 |[数据库引擎教程](../relational-databases/database-engine-tutorials.md)|了解如何连接到数据库引擎实例并生成和运行 Transact-SQL 语句。|  
 |[复制教程](../relational-databases/replication/replication-tutorials.md)|了解如何使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]设置和运行复制技术。|  

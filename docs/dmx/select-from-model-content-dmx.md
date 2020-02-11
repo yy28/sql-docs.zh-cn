@@ -1,5 +1,5 @@
 ---
-title: 选择 " &lt;从&gt;模型"。内容 (DMX) |Microsoft Docs
+title: 选择 " &lt;从&gt;模型"。内容（DMX） |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,13 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 61cbacee45147b7b6203e9cb2164c02cdc2c7453
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892833"
 ---
-# <a name="select-from-ltmodelgtcontent-dmx"></a>选择 " &lt;从&gt;模型"。内容 (DMX)
+# <a name="select-from-ltmodelgtcontent-dmx"></a>选择 " &lt;从&gt;模型"。内容（DMX）
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   返回指定数据挖掘模型的挖掘模型架构行集。  
@@ -42,18 +42,18 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  *条件表达式*  
  可选。 一个限制条件，用于限制从列列表返回的值。  
   
- *expression*  
+ *表达式*  
  可选。 一个返回标量值的表达式。  
   
 ## <a name="remarks"></a>备注  
- 从 _\<模型_ **中选择**> **。CONTENT**语句返回特定于每种算法的内容。 例如，您可能希望在自定义应用程序中，使用某个关联规则模型的所有规则的说明。 您可以使用 "**从模型\<中选择" >。CONTENT**语句来返回模型的 NODE_RULE 列中的值。  
+ 从_ \<模型_**中选择**>**。CONTENT**语句返回特定于每种算法的内容。 例如，您可能希望在自定义应用程序中，使用某个关联规则模型的所有规则的说明。 您可以使用 "**从模型\<中选择">。** 返回模型的 NODE_RULE 列中的值的内容语句。  
   
  下表列出了挖掘模型内容中包含的列。  
   
 > [!NOTE]  
->  算法可能会为了正确表示内容而对列做出不同的解释。 有关每种算法的挖掘模型内容的说明, 以及有关如何解释和查询每种模型类型的挖掘模型内容的提示, 请参阅[挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)。  
+>  算法可能会为了正确表示内容而对列做出不同的解释。 有关每种算法的挖掘模型内容的说明，以及有关如何解释和查询每种模型类型的挖掘模型内容的提示，请参阅[挖掘模型内容 &#40;Analysis Services 数据挖掘&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)。  
   
-|CONTENT 行集列|描述|  
+|CONTENT 行集列|说明|  
 |---------------------------|-----------------|  
 |MODEL_CATALOG|目录名称。 如果提供程序不支持目录，则为 NULL。|  
 |MODEL_SCHEMA|未限定的架构名称。 如果提供程序不支持架构，则为 NULL。|  
@@ -91,7 +91,7 @@ WHERE NODE_TYPE = 1
  以下查询使用**IsDescendant**函数返回上一个查询中返回的节点的直接子节点。  
   
 > [!NOTE]  
->  因为 NODE_NAME 的值是一个字符串, 所以不能使用子 select 语句将 NODE_ID 作为参数返回到**IsDescendant**函数。  
+>  由于 NODE_NAME 的值是字符串，因此不能使用子 select 语句将 NODE_ID 作为参数返回给**IsDescendant**函数。  
   
 ```  
 SELECT NODE_NAME, NODETYPE, NODE_CAPTION   
@@ -136,15 +136,15 @@ WHERE NODE_TYPE = 26
   
  示例结果：  
   
-|MODEL_NAME|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|  
+|MODEL_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|  
 |-----------------|-----------------------|------------------------|---------------|  
 |TM_NaiveBayes|Bike Buyer|Missing|0|  
 |TM_NaiveBayes|Bike Buyer|0|6556|  
 |TM_NaiveBayes|Bike Buyer|1|6383|  
   
-## <a name="see-also"></a>请参阅  
- [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
- [数据挖掘扩展&#40;插件&#41; DMX 数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
- [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
+## <a name="see-also"></a>另请参阅  
+ [选择 &#40;DMX&#41;](../dmx/select-dmx.md)   
+ [数据挖掘扩展插件 &#40;DMX&#41; 数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
+ [数据挖掘扩展插件 &#40;DMX&#41; 语句参考](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

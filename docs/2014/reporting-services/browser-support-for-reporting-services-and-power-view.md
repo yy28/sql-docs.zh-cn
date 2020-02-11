@@ -9,12 +9,12 @@ ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
-ms.openlocfilehash: cd3a3e268e09e882b4e38eee6a620843fcc21a23
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: f82cf64ef78280b3c9562ae28afc71d06a03b1da
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75241204"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76925788"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>规划 Reporting Services 和 Power View 浏览器支持 (Reporting Services 2014)
   在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中，可以使用 Web 浏览器查看报表和运行报表管理器。 并非所有浏览器都支持所有的报表功能。 本主题将说明对于报表管理器管理功能、查看报表、Visual Studio 中的报表查看器控件的支持和要求。 本主题还将概述对于支持的浏览器的功能可用性、身份验证要求和脚本要求。  
@@ -52,7 +52,7 @@ ms.locfileid: "75241204"
   
 - 有关 SharePoint 2010 浏览器支持的详细信息，请参阅[计划浏览器支持（SharePoint Server 2010）](https://technet.microsoft.com/library/cc263526\(office.14\).aspx) （https://technet.microsoft.com/library/cc263526(office.14).aspx)。  
   
-|**浏览器**|**Windows 8 和8。1**|**Windows 7**|**Windows Server 2012 和 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6-10。9**|  
+|**浏览器**|**Windows 8 和 8.1**|**Windows 7**|**Windows Server 2012 和 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6-10。9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
 |**Internet Explorer 11（适用于台式机）**|32 位、64 位|32 位、64 位|32 位、64 位|32 位、64 位|不支持|不支持|  
 |**Internet Explorer 10（适用于台式机）**|32 位、64 位|32 位、64 位|32 位、64 位|32 位、64 位|不支持|不支持|  
@@ -75,7 +75,7 @@ ms.locfileid: "75241204"
   
 -   有关 SharePoint 2013 浏览器支持的详细信息，请参阅[在 sharepoint 2013 中计划浏览器支持](https://technet.microsoft.com/library/cc263526\(office.15\).aspx)（https://technet.microsoft.com/library/cc263526(office.15).aspx)。  
   
-|**浏览器**|**Windows 8 和8。1**|**Windows 7**|**Windows Server 2012 和 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6-10。9**|  
+|**浏览器**|**Windows 8 和 8.1**|**Windows 7**|**Windows Server 2012 和 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6-10。9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
 |**Internet Explorer 11（适用于台式机）**|32 位、64 位|32 位、64 位|32 位、64 位|32 位、64 位|不支持|不支持|  
 |**Internet Explorer 10（适用于台式机）**|32 位、64 位|32 位、64 位|32 位、64 位|32 位、64 位|不支持|不支持|  
@@ -91,7 +91,7 @@ ms.locfileid: "75241204"
 
  下面是可以用于运行 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 本机模式报表管理器以便管理报表和报表服务器的支持的浏览器的当前列表。  
   
-|浏览器|  
+|浏览者|  
 |-------------|  
 |Internet Explorer 7 或更新版本且必须启用了脚本撰写功能。|  
 |Mozilla FireFox （最新公开发布的版本）|  
@@ -102,7 +102,7 @@ ms.locfileid: "75241204"
 
  以下是报表查看器支持的浏览器和功能的当前列表。 报表查看器支持从 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表管理器和 SharePoint 库查看报表。  
   
-|**浏览器**|**Windows 8 和8。1**|**Windows 7**|**Windows Server 2012 和 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6-10。9**|**适用于 iPad 的 iOS 6-7**|  
+|**浏览器**|**Windows 8 和 8.1**|**Windows 7**|**Windows Server 2012 和 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6-10。9**|**适用于 iPad 的 iOS 6-7**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|----------------------------|  
 |**Internet Explorer 11（适用于台式机）**|32 位、64 位|32 位、64 位|32 位、64 位|不支持|不支持|不支持|不支持|  
 |**Internet Explorer 10（适用于台式机）**|32 位、64 位|32 位、64 位|32 位、64 位|不支持|不支持|不支持|不支持|  
@@ -159,7 +159,7 @@ ms.locfileid: "75241204"
 
  ReportViewer Web 服务器控件用于在 ASP.NET Web 应用程序中嵌入报表功能。 这些控件随 Visual Studio 一起提供，并且支持与本主题中所述的其他组件不同的浏览器和浏览器版本。 用于查看应用程序的浏览器类型确定您可以在应用程序中提供的 ReportViewer 功能类型。 使用本主题中提供的表确定哪些支持的浏览器受报表功能的限制以及支持的平台。  
   
- 由于支持的浏览器的呈现引擎不同，一些高级报表功能在不同浏览器中可能会以不同方式显示。  例如，文本旋转。  
+ 由于支持的浏览器的呈现引擎不同，一些高级报表功能可能会在不同的浏览器中以不同的方式显示。  例如，文本旋转。  
   
 ### <a name="scripting-requirements"></a>脚本要求
 
@@ -171,12 +171,12 @@ ms.locfileid: "75241204"
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
-|**浏览器**|**Windows 8**和**Windows 8.1**|**Windows 7**|**Windows Server 2012**和**2012 R2**|**Windows Server 2008**和**2008 R2**|**Windows Server 2003**|**Mac OS X 10.6-10。9**|**本票**|  
+|**浏览器**|**Windows 8**和**Windows 8.1**|**Windows 7**|**Windows Server 2012**和**2012 R2**|**Windows Server 2008**和**2008 R2**|**Windows Server 2003**|**Mac OS X 10.6-10。9**|**说明**|  
 |**Internet Explorer 11 （适用于桌面）**|是|是|是|不支持|不支持|不支持|Internet Explorer 支持全部 ReportViewer 功能。|  
 |**Internet Explorer 10（适用于台式机）**|是|是|是|不支持|不支持|不支持|Internet Explorer 支持全部 ReportViewer 功能。|  
 |**Internet Explorer 9**|不支持|是|不支持|是|是|是|Internet Explorer 支持全部 ReportViewer 功能。|  
-|**Internet Explorer 8.0**|不支持|是|不支持|是|是<sup>1</sup>|不支持|Internet Explorer 支持全部 ReportViewer 功能。 <sup>2</sup>|  
-|**Internet Explorer 7.0**|不支持|是|不支持|是|是<sup>1</sup>|不支持|Internet Explorer 支持全部 ReportViewer 功能。 <sup>2</sup>|  
+|**Internet Explorer 8.0**|不支持|是|不支持|是|是<sup>1</sup>|不支持|Internet Explorer 支持全部 ReportViewer 功能。 <sup>1</sup>|  
+|**Internet Explorer 7.0**|不支持|是|不支持|是|是<sup>1</sup>|不支持|Internet Explorer 支持全部 ReportViewer 功能。 <sup>1</sup>|  
 |**Firefox （最新公开发布的版本）**|是|是|是|是|是|不支持|不支持打印和缩放。|  
 |**Safari （最新公开发布的版本）**|不支持|不支持|不支持|不支持|不支持|是|不支持打印和缩放。<br /><br /> 在此浏览器中禁用了用于在参数化报表上选择日期的日历控件。 用户必须在参数提示区域中手动键入要使用的日期。|  
 |**Chrome （最新公开发布的版本）**|是|是|是|是|是|不支持|不支持打印和缩放。|  

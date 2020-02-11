@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 263fdcd4b09c4acc6c2bba4d67629f867d64c6b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779477"
 ---
 # <a name="hash-indexes"></a>哈希索引
@@ -22,11 +22,12 @@ ms.locfileid: "62779477"
   
  哈希索引包含以数组形式组织的 Bucket 集合。 哈希函数将索引键映射到哈希索引中对应的 Bucket。 下图展示映射到哈希索引中三个不同 Bucket 的三个索引键。 出于演示目的，哈希函数的名称为 f(x)。  
   
- ![索引键映射到不同 bucket。](../../2014/database-engine/media/hekaton-tables-2.gif "索引键映射到不同 bucket。")  
+ ![映射到不同 Bucket 的索引键。](../../2014/database-engine/media/hekaton-tables-2.gif "映射到不同 Bucket 的索引键。")  
   
  用于哈希索引的哈希函数具有以下特征：  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 拥有一个用于所有哈希索引的哈希函数。  
+-   
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 拥有一个用于所有哈希索引的哈希函数。  
   
 -   哈希函数具有确定性。 同一索引键始终映射到哈希索引中的同一 Bucket。  
   
@@ -34,7 +35,7 @@ ms.locfileid: "62779477"
   
 -   哈希函数经过均衡处理，这意味着索引键值在哈希桶上的分布通常符合泊松分布。  
   
-     泊松分布并非均匀分布。 索引键值并非均匀地分布在哈希 Bucket中。 例如，泊松分布*n*个不同索引键转移*n*哈希存储桶中大约三分之一的空 bucket，三分之一的 bucket 包含一个索引键和其他第三个结果包含两个索引键。 少量 Bucket 将包含两个以上的键。  
+     泊松分布并非均匀分布。 索引键值并非均匀地分布在哈希 Bucket中。 例如，对于*n*个哈希桶上的*n*个不同索引键的泊松分布会生成大约一个第三个空的存储桶，第三个存储桶包含一个索引键，另一个包含两个索引键。 少量 Bucket 将包含两个以上的键。  
   
  如果两个索引键映射到同一个哈希 Bucket，则产生哈希冲突。 大量哈希冲突可影响读取操作的性能。  
   
@@ -44,9 +45,9 @@ ms.locfileid: "62779477"
   
  该图有三个包含行的 Bucket。 顶部的第二个 Bucket 包含三个红色行。 第四个 Bucket 包含一个蓝色行。 底部的 Bucket 包含两个绿色行。 这些可能是同一行的不同版本。  
   
- 有关内存优化表的索引的详细信息，请参阅[在内存优化表上使用索引的准则](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+ 有关内存优化表的索引的详细信息，请参阅[在内存优化表上使用索引的准则](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。  
   
-## <a name="see-also"></a>请参阅  
- [内存优化表上的索引](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  
+## <a name="see-also"></a>另请参阅  
+ [内存优化的表的索引](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  
   
   

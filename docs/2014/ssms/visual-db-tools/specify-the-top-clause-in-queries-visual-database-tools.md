@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7f9587a5e653d2df8cbe169fe5030542b86d8aaf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63194972"
 ---
 # <a name="specify-the-top-clause-in-queries-visual-database-tools"></a>在查询中指定 TOP 子句 (Visual Database Tools)
@@ -34,25 +34,25 @@ ms.locfileid: "63194972"
   
 1.  在解决方案资源管理器中打开一个查询或创建新的查询。  
   
-2.  在“视图”菜单中，单击“属性窗口”。  
+2.  在“视图”  菜单中，单击“属性窗口”  。  
   
-3.  在“属性”窗口中，找到并展开“Top 规范”属性。  
+3.  在“属性”  窗口中，找到并展开“Top 规范”  属性。  
   
-4.  单击“(最前面)”子属性并将其设置为“是”。  
+4.  单击“(最前面)”  子属性并将其设置为“是”  。  
   
-5.  在“表达式”子属性中，键入结果为数值的表达式（例如，“10”或“2*5”）。  
+5.  在“表达式”  子属性中，键入结果为数值的表达式（例如，“10”或“2*5”）。  
   
-6.  单击“百分比”子属性，并指示将“表达式”属性视为所有返回行的百分比（是）还是返回行的绝对数值（否）。  
+6.  单击“百分比”  子属性，并指示将“表达式”  属性视为所有返回行的百分比（是）还是返回行的绝对数值（否）。  
   
-7.  如果查询使用 ORDER BY 子句，请单击“With Ties”子属性，然后选择“是”在只包含组中部分行时显示该组中的所有行，或选择“否”截断这些行。  
+7.  如果查询使用 ORDER BY 子句，请单击“With Ties”  子属性，然后选择“是”  在只包含组中部分行时显示该组中的所有行，或选择“否”  截断这些行。  
   
  执行以上过程时，请注意 SQL 窗格中显示的 TOP 子句会随之更改，以反映属性的最新设置。  
   
 > [!NOTE]  
->  还可以通过在 SQL 窗格中编辑 TOP 子句来更改“Top 规范”的子属性的值。  
+>  还可以通过在 SQL 窗格中编辑 TOP 子句来更改“Top 规范”  的子属性的值。  
   
-## <a name="see-also"></a>请参阅  
- [设计查询和视图操作指南主题&#40;可视化数据库工具&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>另请参阅  
+ [&#40;Visual Database Tools 的设计查询和视图操作指南主题&#41;](visual-database-tools.md)   
  [查询属性 (Visual Database Tools)](query-properties-visual-database-tools.md)  
   
   

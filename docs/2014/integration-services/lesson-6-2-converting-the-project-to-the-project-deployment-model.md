@@ -1,5 +1,5 @@
 ---
-title: 第 2 步：将项目转换为项目部署模型 |Microsoft Docs
+title: 步骤 2：将项目转换为项目部署模型 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1ba6dcb7052fed3d209dd87f55789a99df24116c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767349"
 ---
-# <a name="step-2-converting-the-project-to-the-project-deployment-model"></a>第 2 步：将项目转换为项目部署模型
+# <a name="step-2-converting-the-project-to-the-project-deployment-model"></a>步骤 2：将项目转换为项目部署模型
   在本任务中，你将使用 Integration Services 项目转换向导将项目转换为项目部署模型。  
   
 ### <a name="converting-the-project-to-the-project-deployment-model"></a>将项目转换为项目部署模型  
@@ -51,6 +51,6 @@ ms.locfileid: "62767349"
 13. 单击“参数”选项卡，然后验证包现在是否包含用于 VarFolderName 的参数，以及值是否为第 5 课配置文件中为 New Sample Data 文件夹指定的相同路径。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [步骤 3：测试第 6 课包](lesson-6-3-testing-the-lesson-6-package.md)  
+ [步骤 3：测试 Lesson 6 包](lesson-6-3-testing-the-lesson-6-package.md)  
   
   

@@ -14,35 +14,35 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3b5cc194306a4baecb2c5fa5478bf4733d1386af
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67284982"
 ---
 # <a name="relationship-staging-table-master-data-services"></a>关系临时表 (Master Data Services)
   使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中的关系临时表 (stg.name_Relationship) 基于成员之间的相互关系更改显式层次结构中的成员位置。  
   
-##  <a name="TableColumns"></a> 表列  
+##  <a name="TableColumns"></a>表列  
  下表说明 Relationship 临时表中每个字段的用途。  
   
-|列名|Description|  
+|列名|说明|  
 |-----------------|-----------------|  
-|**ID**|自动分配的标识符。 不要在此字段中输入值。 如果尚未处理此批次，则此字段为空。|  
-|**RelationshipType**<br /><br /> Required|正在设置的关系的类型。 可能的值有：<br /><br /> **1**：父级<br /><br /> **2**：同级（同一级）|  
-|**ImportStatus_ID**<br /><br /> Required|导入过程的状态。 可能的值有：<br /><br /> **0**- 指定此值表示记录已经准备好临时存储。<br /><br /> **1**- 自动分配的值，表示记录的暂存过程已成功。<br /><br /> **2**- 自动分配的值，表示记录的临时过程已失败。|  
+|**识别**|自动分配的标识符。 不要在此字段中输入值。 如果尚未处理此批次，则此字段为空。|  
+|**RelationshipType**<br /><br /> 必选|正在设置的关系的类型。 可能的值为：<br /><br /> **1**:P 为何<br /><br /> **2**：同级（处于同一级别）|  
+|**ImportStatus_ID**<br /><br /> 必选|导入过程的状态。 可能的值为：<br /><br /> **0**，您指定此为以指示记录已准备好进行过渡。<br /><br /> **1**，它是自动分配的，表示记录的临时过程已成功完成。<br /><br /> **2**，它是自动分配的，表示记录的临时过程已失败。|  
 |**Batch_ID**<br /><br /> 仅对 Web 服务为必需的|自动分配的标识符，该标识符将记录分组以便临时存储。 将为此批次中的所有成员分配此标识符，此标识符显示在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 用户界面中的 **ID** 列。<br /><br /> 如果尚未处理此批次，则此字段为空。|  
 |**BatchTag**<br /><br /> 必需，但是 Web 服务除外|批次的唯一名称，最多包含 50 个字符。|  
-|**HierarchyName**<br /><br /> Required|显式层次结构名称。 每个合并成员只能属于一个层次结构。|  
-|**ParentCode**<br /><br /> Required|对于父-子关系，是将为子叶成员或合并成员的父级的合并成员代码。<br /><br /> 对于同级关系，为以下同级之一的代码。|  
-|**ChildCode**<br /><br /> Required|对于父-子关系，是将为子级的合并成员或叶成员的代码。<br /><br /> 对于同级关系，为以下同级之一的代码。|  
+|**HierarchyName**<br /><br /> 必选|显式层次结构名称。 每个合并成员只能属于一个层次结构。|  
+|**ParentCode**<br /><br /> 必选|对于父-子关系，是将为子叶成员或合并成员的父级的合并成员代码。<br /><br /> 对于同级关系，为以下同级之一的代码。|  
+|**ChildCode**<br /><br /> 必选|对于父-子关系，是将为子级的合并成员或叶成员的代码。<br /><br /> 对于同级关系，为以下同级之一的代码。|  
 |**排序顺序**<br /><br /> 可选|一个整数，表示该成员相对于父级下其他成员的成员顺序。 每个子成员应具有唯一标识符。|  
-|**ErrorCode**|显示错误代码。 有关 **ImportStatus_ID** 为 **2**的所有记录，请参阅 [临时过程错误 (Master Data Services)](staging-process-errors-master-data-services.md)。|  
+|**错误**|显示错误代码。 有关 **ImportStatus_ID** 为 **2** 的所有记录，请参阅[临时过程错误 (Master Data Services)](staging-process-errors-master-data-services.md)。|  
   
-## <a name="see-also"></a>请参阅  
- [使用临时过程移动显式层次结构成员&#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)   
- [数据导入&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)   
- [查看临时过程中发生的错误&#40;Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)   
- [临时过程错误 (Master Data Services)](staging-process-errors-master-data-services.md)  
+## <a name="see-also"></a>另请参阅  
+ [使用 &#40;Master Data Services 的临时过程移动显式层次结构成员&#41;](add-update-and-delete-data-master-data-services.md)   
+ [数据导入 &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)   
+ [查看临时过程中发生的错误 &#40;Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)   
+ [暂存过程错误 &#40;Master Data Services&#41;](staging-process-errors-master-data-services.md)  
   
   

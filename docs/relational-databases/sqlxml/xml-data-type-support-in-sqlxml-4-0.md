@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4c56efd6c79b7ce7d74af621963f4b12e734d5f9
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75252173"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>SQLXML 4.0 中的 xml 数据类型支持
@@ -51,6 +51,6 @@ ms.locfileid: "75252173"
 -   SQLXML 4.0 不会基于的行为保留 XML 声明处理指令（例如） [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 相反，XML 声明被视为对[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] xml 分析器的指令，并且在将数据转换为**xml**数据类型后，其特性（版本、编码和独立）将丢失。 XML 数据在内部存储为 UCS-2。 XML 实例中的所有其他处理指令都将保留;它们在**xml**列中是允许的，并且可以由 SQLXML 支持。  
   
 ## <a name="see-also"></a>另请参阅  
- [XML Data &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
+ [XML 数据 (SQL Server)](../../relational-databases/xml/xml-data-sql-server.md)  
   
   

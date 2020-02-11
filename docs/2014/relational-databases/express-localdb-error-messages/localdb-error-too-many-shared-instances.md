@@ -1,5 +1,5 @@
 ---
-title: LOCALDB_ERROR_TOO_MANY_SHARED_INSTANCES | Microsoft Docs
+title: LOCALDB_ERROR_TOO_MANY_SHARED_INSTANCES |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9be09d2579e074c1dfc5d34d721f2918f2022112
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63044012"
 ---
-# <a name="localdberrortoomanysharedinstances"></a>LOCALDB_ERROR_TOO_MANY_SHARED_INSTANCES
+# <a name="localdb_error_too_many_shared_instances"></a>LOCALDB_ERROR_TOO_MANY_SHARED_INSTANCES
     
 ## <a name="details"></a>详细信息  
   
@@ -29,7 +29,7 @@ ms.locfileid: "63044012"
 |组件|本地数据库运行时 API|  
 |消息正文|共享的实例太多，无法生成唯一的用户实例名。 请取消共享某些现有共享实例。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  共享的实例太多，无法生成唯一的用户实例名。  
   
 ## <a name="user-action"></a>用户操作  

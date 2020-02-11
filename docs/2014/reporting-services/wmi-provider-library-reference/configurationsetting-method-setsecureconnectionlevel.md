@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ede290f794ab61dac62c39bc47b80516385474fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097957"
 ---
-# <a name="setsecureconnectionlevel-method-wmi-msreportserverconfigurationsetting"></a>SetSecureConnectionLevel 方法 (WMI MSReportServer_ConfigurationSetting)
+# <a name="setsecureconnectionlevel-method-wmi-msreportserver_configurationsetting"></a>SetSecureConnectionLevel 方法 (WMI MSReportServer_ConfigurationSetting)
   设置报表服务器的安全连接级别。  
   
 ## <a name="syntax"></a>语法  
@@ -40,7 +40,7 @@ public void SetSecureConnectionLevel(Int32 Level,
     out Int32 HRESULT);  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>parameters  
  *级别*  
  表示安全连接级别的整数值。  
   
@@ -53,14 +53,14 @@ public void SetSecureConnectionLevel(Int32 Level,
 ## <a name="remarks"></a>备注  
  调用时，报表服务器 SecureConnectionLevel 属性设置为指定的值。 值为 0 表示关闭了 SSL。 值大于或等于 1 标识打开了 SSL。  
   
--   当设置值时，更改报表服务器配置文件中的 SecureConnectionLevel 元素，并`URLRoot`配置文件中的元素设置为使用"https://"，如果指定*级别*大于或如果等于 1 或使用"http://"指定*级别*为 0。  
+-   设置该值时，将更改 Report Server 配置文件中的 SecureConnectionLevel 元素，并将配置文件中`URLRoot`的元素设置为如果指定的*级别*大于或等于1，则将配置文件中的元素设置为使用 "https://"; 如果指定的*级别*为0，则设置为 "http://"。  
   
  在 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]中，SecureConnectionLevel 成为一个开关，默认值为 0。 对于任何通过 SetSecureConnectionLevel 方法 API 传递的大于或等于 1 的值，SSL 将被视为打开，并且在 rsreportserver.config 文件中相应地设置配置属性 SecureConnectionLevel。 将仍允许值为 2 和 3，以便向后兼容。  
   
 ## <a name="requirements"></a>要求  
- **命名空间:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](msreportserver-configurationsetting-members.md)  
   
   

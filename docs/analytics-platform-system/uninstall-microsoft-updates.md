@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: a5ebe1ee911f7500505cdbd1962d28c35461a635
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399458"
 ---
 # <a name="uninstall-microsoft-updates-in-analytics-platform-system"></a>卸载分析平台系统中的 Microsoft 更新
@@ -39,7 +39,7 @@ ms.locfileid: "74399458"
     ```  
   
 ## <a name="next-steps"></a>后续步骤
-有关更多信息，请参阅：
+有关详细信息，请参阅：
 - [&#40;Analytics Platform System&#41;下载并应用 Microsoft 更新](download-and-apply-microsoft-updates.md) 
 - [&#40;Analytics Platform System&#41;应用分析平台系统修补程序](apply-analytics-platform-system-hotfixes.md)  
 - [&#40;Analytics Platform System&#41;卸载分析平台系统修补程序](uninstall-analytics-platform-system-hotfixes.md)  

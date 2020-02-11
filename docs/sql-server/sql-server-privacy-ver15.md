@@ -11,10 +11,10 @@ author: MsSQLGirl
 ms.author: jukoesma
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: bbb8a21ee63e0a14778ee57874ba0ef385ac6cba
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71150290"
 ---
 # <a name="sql-server-2019-privacy-supplement"></a>SQL Server 2019 隐私补充
@@ -23,7 +23,7 @@ ms.locfileid: "71150290"
 
 本文总结了已启用 Internet 的功能，这些功能可收集并向 Microsoft 发送匿名功能使用情况和诊断数据。 SQL Server 可能会收集标准计算机信息，并可能会将有关使用情况和性能的数据传输给 Microsoft 进行分析，以便改进产品的质量、安全性和可靠性。 本文用作整个 [Microsoft 隐私声明](https://go.microsoft.com/fwlink/?LinkId=521839)的附录。 本文中的数据分类仅适用于 SQL Server 本地产品版本。 它不适用于：
 
-- Azure SQL Database
+- Azure SQL 数据库
 - [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms?view=sql-server-2017)
 - SQL Server Data Tools (SSDT)
 - Azure Data Studio
@@ -44,7 +44,7 @@ ms.locfileid: "71150290"
 
 ### <a name="permitted-usage-scenarios"></a>允许的使用方案
 
-|应用场景 |访问限制 |保留期要求 |
+|场景 |访问限制 |保留期要求 |
 |---------|---------|---------|
 |这些凭据通过使用情况和诊断数据始终保留在用户计算机上。 |- |- |
 |故障转储可以包含访问控制数据。 |- |故障转储：最长 30 天。 |
@@ -63,7 +63,7 @@ ms.locfileid: "71150290"
 
 ### <a name="permitted-usage-scenarios"></a>允许的使用方案
 
-|应用场景  |访问限制  |保留期要求 |
+|场景  |访问限制  |保留期要求 |
 |---------|---------|---------|
 |此数据通过使用情况和诊断数据保留在用户计算机上。 |- |- |
 |故障转储可以包含客户内容，并可以发送至 Microsoft。 |- |故障转储：最长 30 天。 |
@@ -86,7 +86,7 @@ ms.locfileid: "71150290"
 
 ### <a name="permitted-usage-scenarios"></a>允许的使用方案
 
-|应用场景  |访问限制  |保留期要求|
+|场景  |访问限制  |保留期要求|
 |---------|---------|---------|
 |此数据通过使用情况和诊断数据保留在用户计算机上。 |- |- |
 |故障转储可包含 EUII，并可发送至 Microsoft。 |- |故障转储：最长 30 天 |
@@ -108,7 +108,7 @@ ms.locfileid: "71150290"
 
 ### <a name="permitted-usage-scenarios"></a>允许的使用方案
 
-|应用场景  |访问限制  |保留期要求|
+|场景  |访问限制  |保留期要求|
 |---------|---------|---------| 
 |Microsoft 可以使用该数据来优化功能和/或修复当前功能中的 bug。 |仅限 Microsoft 内部使用，不允许第三方访问。 Microsoft 可向原始客户公开数据。  例如，仪表板 |最短 90 天 - 最长 3 年 |
 |客户可自愿向 Microsoft 发送包含客户内容的用户反馈。 |仅限 Microsoft 内部使用，不允许第三方访问。 |客户可自愿向 Microsoft 发送包含客户内容的用户反馈。 |
@@ -124,7 +124,7 @@ ms.locfileid: "71150290"
 -   组织名称（例如：Microsoft Corp.）
 
 ### <a name="permitted-usage-scenarios"></a>允许的使用方案
-|应用场景  |访问限制  |保留期要求|
+|场景  |访问限制  |保留期要求|
 |---------|---------|---------|
 | Microsoft 可能会收集 Azure 虚拟机中运行的 SQL Server 实例的一般使用情况数据，其明确目的是为客户提供在 Azure 虚拟机中使用 SQL Server 所需的 Azure 可选权益。 | Microsoft 可以向客户公开数据，例如通过 Azure 门户，从而帮助在 Azure 虚拟机中运行 SQL Server 的客户访问特定用于在 Azure 中运行 SQL Server 的权益。 | 最短 90 天 - 最长 3 年 |
 
@@ -151,7 +151,7 @@ Microsoft does 会检查由使用 SQL Server 的其他程序设置的应用程�
 
 ### <a name="permitted-usage-scenarios"></a>允许的使用方案
 
-|应用场景  |访问限制  |保留期要求|
+|场景  |访问限制  |保留期要求|
 |---------|---------|---------|
 |Microsoft 可能使用它来优化功能，并/或修复当前功能中的 bug。|仅限 Microsoft 内部使用，不允许第三方访问。 |最短 90 天 - 最长 3 年 |
 |可用于向客户提供建议。  例如，“根据产品的使用情况，建议使用功能 X，因为它性能更优良  。” |例如，Microsoft 可通过仪表板向原始客户公开该数据。 |客户数据安全日志：最短 3 年 - 最长 6 年 |
@@ -176,7 +176,7 @@ Microsoft does 会检查由使用 SQL Server 的其他程序设置的应用程�
 > 所有对象元数据值在收集之前都会经过哈希处理。
 >
 
-|应用场景  |访问限制  |保留期要求|
+|场景  |访问限制  |保留期要求|
 |---------|---------|---------|
 |Microsoft 可能使用它来优化功能，并/或修复当前功能中的 bug。 |仅限 Microsoft 内部使用，不允许第三方访问。 |最短 90 天 - 最长 3 年|
 

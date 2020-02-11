@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2856bca26e8a49ffdb2ed5187479434c7762015b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62702628"
 ---
 # <a name="perspectives"></a>透视
@@ -32,13 +32,13 @@ ms.locfileid: "62702628"
   
  使用透视之前，必须先更新和处理多维数据集。  
   
- 多维数据集可以是非常复杂的对象的用户以浏览[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 单个多维数据集可以表示完整的数据仓库内容，一个多维数据集中可以有多个度量值组，以表示基于多个维度表的多个事实数据表和多个维度。 此类多维数据集可能非常复杂并且功能强大，但用户可能只需要与多维数据集的一小部分进行交互即可满足其商业智能和报表要求，因此这样的多维数据集会令用户感到过于复杂。  
+ 多维数据集可能是非常复杂的对象，供[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]用户浏览。 单个多维数据集可以表示完整的数据仓库内容，一个多维数据集中可以有多个度量值组，以表示基于多个维度表的多个事实数据表和多个维度。 此类多维数据集可能非常复杂并且功能强大，但用户可能只需要与多维数据集的一小部分进行交互即可满足其商业智能和报表要求，因此这样的多维数据集会令用户感到过于复杂。  
   
- 在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，可以使用透视来降低感知到的多维数据集中的复杂性[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 透视可定义多维数据集的可查看子集，借此您可以将注意力集中在多维数据集中的特定业务或特定应用程序上。 透视可控制多维数据集所包含对象的可见性。 可在透视中显示或隐藏以下对象：  
+ 在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，您可以使用透视来减小中[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]多维数据集的感知复杂性。 透视可定义多维数据集的可查看子集，借此您可以将注意力集中在多维数据集中的特定业务或特定应用程序上。 透视可控制多维数据集所包含对象的可见性。 可在透视中显示或隐藏以下对象：  
   
 -   维度  
   
--   特性  
+-   属性  
   
 -   层次结构  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62702628"
   
 -   操作  
   
- 例如， **Adventure Works**多维数据集内[!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)]示例[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库包含十一个度量值组和二十一个不同的多维数据集维度，以表示销售、 预期销售和财务数据。 客户端应用程序可以直接引用完整的多维数据集，但如果用户试图提取基本销售预期信息，则这一点可能颇具吸引力。 相反，可以使用同一个用户**销售目标**透视来限制的视图**Adventure Works**到与销售预期的那些对象的多维数据集。  
+ 例如， [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)]示例[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库中的**艾德工作**多维数据集包含十一个度量值组和二十个不同的多维数据集维度，表示销售、销售预测和财务数据。 客户端应用程序可以直接引用完整的多维数据集，但如果用户试图提取基本销售预期信息，则这一点可能颇具吸引力。 相反，同一用户可以使用 "**销售目标**" 透视将 "**艾德公司**" 多维数据集的视图仅限制为与销售预测相关的对象。  
   
  多维数据集中通过透视对用户隐藏的对象仍可以使用 XML for Analysis (XMLA)、多维表达式 (MDX) 或数据挖掘扩展插件 (DMX) 语句直接进行引用和检索。 透视不会限制对多维数据集中对象的访问，而且也不应以此方式进行使用，相反，应使用透视来为访问多维数据集的用户提供更好的体验。  
   

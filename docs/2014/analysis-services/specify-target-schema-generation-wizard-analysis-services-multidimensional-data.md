@@ -1,5 +1,5 @@
 ---
-title: 指定目标 （架构生成向导） (Analysis Services-多维数据) |Microsoft Docs
+title: 指定目标（架构生成向导）（Analysis Services 多维数据） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e780758513aebc90dd35399894e78d0096cb0400
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068244"
 ---
 # <a name="specify-target-schema-generation-wizard-analysis-services---multidimensional-data"></a>指定目标（架构生成向导）（Analysis Services - 多维数据）
@@ -30,13 +30,13 @@ ms.locfileid: "66068244"
  键入新的数据源视图的名称。  
   
 > [!NOTE]  
->  只有在选中“创建新的数据源视图”  时，才启用此选项。  
+>  只有在选中“创建新的数据源视图”**** 时，才启用此选项。  
   
  **数据源**  
  选择将与新数据源视图相关联的数据源。  
   
 > [!NOTE]  
->  只有在选中“创建新的数据源视图”  时，才启用此选项。  
+>  只有在选中“创建新的数据源视图”**** 时，才启用此选项。  
   
  **新建**  
  单击此项，将显示数据源向导并可以定义与新数据源视图相关联的新数据源。  
@@ -46,8 +46,8 @@ ms.locfileid: "66068244"
  **使用现有数据源视图**  
  选择此选项将选择现有的数据源视图，以包含由此向导生成的关系架构。  
   
-## <a name="see-also"></a>请参阅  
- [架构生成向导的 F1 帮助&#40;Analysis Services-多维数据&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)   
- [Analysis Services 向导&#40;多维数据&#41;](analysis-services-wizards-multidimensional-data.md)  
+## <a name="see-also"></a>另请参阅  
+ [架构生成向导的 F1 帮助 &#40;Analysis Services 多维数据&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)   
+ [&#40;多维数据的 Analysis Services 向导&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

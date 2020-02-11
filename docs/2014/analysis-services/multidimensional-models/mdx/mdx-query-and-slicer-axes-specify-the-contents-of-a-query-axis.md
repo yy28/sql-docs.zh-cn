@@ -1,5 +1,5 @@
 ---
-title: 指定查询轴 (MDX) 的内容 |Microsoft Docs
+title: 指定查询轴的内容（MDX） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 892198c217918fd2b2a374261c6eac5e31d0a428
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074075"
 ---
 # <a name="specifying-the-contents-of-a-query-axis-mdx"></a>指定查询轴的内容 (MDX)
@@ -71,7 +71,7 @@ FROM [Adventure Works]
   
 ```  
   
- 在集定义前面使用的 NON EMPTY 关键字提供了一种简便方法，从轴中删除所有空元组。 例如，到目前为止我们已看到的示例中没有任何数据中多维数据集的 2004 年 8 月及更高版本。 要从单元集中删除列中没有数据的所有行，只需在 Rows 轴定义中的集前面添加 NON EMPTY 即可，如下所示：  
+ 在集定义前面使用的 NON EMPTY 关键字提供了一种简便方法，从轴中删除所有空元组。 例如，在我们已看到的示例中，到目前为止，多维数据集中没有从8月2004开始的数据。 要从单元集中删除列中没有数据的所有行，只需在 Rows 轴定义中的集前面添加 NON EMPTY 即可，如下所示：  
   
 ```  
 SELECT {[Measures].[Internet Sales Amount]} ON COLUMNS,  
@@ -114,7 +114,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>请参阅  
- [指定切片器轴的内容 (MDX)](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;MDX&#41;指定切片器轴的内容](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   

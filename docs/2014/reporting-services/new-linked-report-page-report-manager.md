@@ -1,5 +1,5 @@
 ---
-title: 新建链接的报表页 （报表管理器） |Microsoft Docs
+title: "\"新建链接报表\" 页（报表管理器） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b6aab8fc0c8e083181779c13654b0d7d42531e50
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108171"
 ---
 # <a name="new-linked-report-page-report-manager"></a>“新建链接报表”页（报表管理器）
@@ -31,7 +31,7 @@ ms.locfileid: "66108171"
   
 2.  悬停在该报表之上，然后单击下拉箭头。  
   
-3.  在下拉菜单中，单击 **“创建链接报表”** 。  
+3.  在下拉菜单中，单击 **“创建链接报表”**。  
   
 ###### <a name="to-open-the-new-linked-report-page-from-the-general-properties-page-of-a-report"></a>从报表的“常规属性”页打开“新建链接报表”页  
   
@@ -41,24 +41,24 @@ ms.locfileid: "66108171"
   
 3.  在下拉菜单中，单击 **“管理”** 。 这会打开该报表的“常规”属性页。  
   
-4.  在项工具栏中，单击 **“创建链接报表”** 。  
+4.  在项工具栏中，单击 **“创建链接报表”**。  
   
 ## <a name="options"></a>选项  
  **名称**  
- 指定链接报表的名称。 名称必须至少包含一个字母数字字符。 还可以包含空格和某些符号。 但是，指定名称时不得使用字符 ; ? : \@ & = +，$ / * \< > |"或 / 指定名称时。  
+ 指定链接报表的名称。 名称必须至少包含一个字母数字字符。 还可以包含空格和某些符号。 但是，指定名称时不得使用字符 ; ? ： \@ & = +，$/* \< > |"或/。  
   
  **说明**  
  键入对报表内容的说明。 有权访问该报表的用户可以在“内容”页中查看此说明。  
   
- **Location**  
+ **位置**  
  指定包含该报表的文件夹路径。 默认情况下，链接报表创建时位于基础报表所在的文件夹中。 单击 **“更改位置”** 可以将链接报表放入其他文件夹。  
   
  **确定**  
  单击 **“确定”** 可以保存更改并返回基础报表的“常规”属性页。  
   
-## <a name="see-also"></a>请参阅  
- [创建链接的报表](reports/create-a-linked-report.md)   
- [报表的“常规”属性页（报表管理器）](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
+## <a name="see-also"></a>另请参阅  
+ [创建链接报表](reports/create-a-linked-report.md)   
+ [报表 &#40;报表管理器的 "常规属性" 页&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

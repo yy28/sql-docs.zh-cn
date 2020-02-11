@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 48e5aeab043fcfd0e65150ea3a1008d726cb0ffc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62869252"
 ---
-# <a name="mssqlserver2574"></a>MSSQLSERVER_2574
+# <a name="mssqlserver_2574"></a>MSSQLSERVER_2574
     
 ## <a name="details"></a>详细信息  
   
@@ -30,9 +30,9 @@ ms.locfileid: "62869252"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC_EMPTY_INDEX_TREE_LEVEL_PAGE|  
-|消息正文|表错误：页 P_ID 为空对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID （类型为 TYPE） 中。 在 B 树的 LEVEL 级上，这是不允许的。|  
+|消息正文|表错误：对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID（类型为 TYPE）中的页 P_ID 为空。 在 B 树的 LEVEL 级上，这是不允许的。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  指定索引叶级上方的 B 树页为空，即它不包含行。 对于 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 中的叶级页，此行为是可能的，但是在树级中决不可能。  
   
 ## <a name="user-action"></a>用户操作  

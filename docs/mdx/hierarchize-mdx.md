@@ -1,5 +1,5 @@
 ---
-title: Hierarchize (MDX) |Microsoft Docs
+title: Hierarchize （MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8ab2c866f201c53684c316282a143b4f672cb8e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68105431"
 ---
 # <a name="hierarchize-mdx"></a>Hierarchize (MDX)
@@ -32,14 +32,14 @@ Hierarchize(Set_Expression [ , POST ] )
  返回集的有效多维表达式 (MDX)。  
   
 ## <a name="remarks"></a>备注  
- **Hierarchize**函数将指定集的成员组织到层次结构的顺序。 此函数始终保留重复项。  
+ **Hierarchize**函数将指定集的成员组织成层次顺序。 此函数始终保留重复项。  
   
--   如果**POST**未指定，则该函数对其自然顺序中的某个级别中的成员进行排序。 如果未指定其他排序条件，则成员的自然顺序就是它们在层次结构中的默认排序顺序。 子成员会紧跟在它们的父成员之后。  
+-   如果未指定**POST** ，则函数将按其自然顺序对级别中的成员进行排序。 如果未指定其他排序条件，则成员的自然顺序就是它们在层次结构中的默认排序顺序。 子成员会紧跟在它们的父成员之后。  
   
--   如果**POST**指定，则**Hierarchize**函数对使用非自然顺序排序的级别中的成员进行排序。 也就是说，子成员优先于他们的父级。  
+-   如果指定了**post** ， **Hierarchize**函数将使用后自然顺序对级别中的成员进行排序。 也就是说，子成员优先于他们的父级。  
   
 ## <a name="example"></a>示例  
- 下例浅化了 Canada 成员。 **Hierarchize**函数用于其所需的组织指定的集中的成员在层次结构顺序**DrillUpMember**函数。  
+ 下例浅化了 Canada 成员。 **Hierarchize**函数用于按层次结构顺序组织指定集成员，这是**DrillUpMember**函数所必需的。  
   
 ```  
 SELECT DrillUpMember   
@@ -58,7 +58,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
- 下面的示例返回的总和`Measures.[Order Quantity]`成员，2003 年中包含的第一个九个月内的聚合`Date`维度中，从**Adventure Works**多维数据集。 **PeriodsToDate**函数定义的聚合函数对其进行操作的集中的元组。 **Hierarchize**函数组织层次结构顺序中的产品维度中的成员的指定集的成员。  
+ 下面的示例从**艾德工作**多维数据`Measures.[Order Quantity]`集中返回`Date`维度中包含的前九个月（2003）聚合的成员的总和。 **PeriodsToDate**函数定义聚合函数对其进行运算的集中的元组。 **Hierarchize**函数以分层顺序从产品维度中组织指定成员集的成员。  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS Count  
@@ -85,7 +85,7 @@ WHERE ([Geography].[State-Province].x,
    [Measures].[Declining Reseller Sales])  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

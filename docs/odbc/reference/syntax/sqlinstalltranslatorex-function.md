@@ -20,20 +20,20 @@ ms.assetid: a0630602-53c1-4db0-98ce-70d160aedf8d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 43acc6708b5df71893c2c6b7658ca99bfb73f616
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019005"
 ---
 # <a name="sqlinstalltranslatorex-function"></a>SQLInstallTranslatorEx 函数
-**符合性**  
- 版本引入了：ODBC 3.0  
+**度**  
+ 引入的版本： ODBC 3。0  
   
- **摘要**  
- **SQLInstallTranslatorEx**将有关转换器的信息添加到 Odbcinst.ini 部分中的系统信息 (HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCINST。INI\ODBC 翻译人员注册表项）。  
+ **总结**  
+ **SQLInstallTranslatorEx**将有关转换器的信息添加到系统信息的 odbcinst.ini 部分（HKEY_LOCAL_MACHINE \software\odbc\odbcinst。INI\ODBC 转换器注册表项）。  
   
- 功能**SQLInstallTranslatorEx**还可以访问与[ODBCCONF。EXE](../../../odbc/odbcconf-exe.md)。  
+ 还可以通过 ODBCCONF 访问**SQLInstallTranslatorEx**功能[。EXE](../../../odbc/odbcconf-exe.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -51,71 +51,71 @@ BOOL SQLInstallTranslatorEx(
   
 ## <a name="arguments"></a>参数  
  *lpszTranslator*  
- [输入]这必须包含双向以 null 结尾的描述转换器的关键字值对的列表。 有关关键字值对语法的详细信息，请参阅[转换器规范子项](../../../odbc/reference/install/translator-specification-subkeys.md)。  
+ 送这必须包含用于描述转换器的关键字/值对的双向结尾列表。 有关关键字-值对语法的详细信息，请参阅[转换器规范子项](../../../odbc/reference/install/translator-specification-subkeys.md)。  
   
- **转换器**并**安装程序**关键字必须包含在*lpszTranslator*字符串。 DLL 列出与翻译**转换器**关键字和转换器安装程序 DLL 的下列出了带有**安装程序**关键字。 每个对终止 NULL 字节，并且整个列表终止 NULL 字节。 （也就是说，两个 NULL 字节标记列表的末尾。）格式*lpszTranslator*如下所示：  
+ *LpszTranslator*字符串中必须包含**转换器**和**安装**关键字。 翻译 DLL 与**translator**关键字一起列出，转换器设置 Dll 与**setup**关键字一起列出。 每对都以 NULL 字节结束，整个列表以 NULL 字节结束。 （也就是说，两个 NULL 字节标记列表的末尾。）*LpszTranslator*的格式如下所示：  
   
- \0Translator=*转换器 DLL 文件名*\0[Setup=*安装程序 DLL 文件名*\0]\0  
+ \0Translator =*转换器-dll-filename*\ 0 [setup =*setup.exe-filename*\ 0] \ 0  
   
  *lpszPathIn*  
- [输入]转换器将在安装或 null 指针的完整路径。 如果*lpszPath*是 null 指针，转换器将安装在系统目录中。  
+ 送要安装转换器的完整路径或 null 指针。 如果*lpszPath*为 null 指针，则将在系统目录中安装转换器。  
   
  *lpszPathOut*  
- [输出]翻译人员应安装的目标目录的路径。 如果转换器从未安装， *lpszPathOut*等同于*lpszPathIn*。 如果存在以前安装了转换器*lpszPathOut*是以前安装的路径。  
+ 输出应安装转换器的目标目录的路径。 如果从未安装过转换器，则*lpszPathOut*与*lpszPathIn*相同。 如果以前安装了转换器，则*lpszPathOut*是之前安装的路径。  
   
  *cbPathOutMax*  
- [输入]长度*lpszPathOut。*  
+ 送LpszPathOut 的长度 *。*  
   
  *pcbPathOut*  
- [输出]可用于在返回的字节总数*lpszPathOut*。 可用来返回的字节数是否大于或等于*cbPathOutMax*中的输出路径*lpszPathOut*将被截断为*pcbPathOutMax*减null 终止字符。 *PcbPathOut*参数可以是 null 指针。  
+ 输出可在*lpszPathOut*中返回的总字节数。 如果可返回的字节数大于或等于*cbPathOutMax*，则*lpszPathOut*中的输出路径将截断为*pcbPathOutMax*减 null 终止字符。 *PcbPathOut*参数可以为 null 指针。  
   
  *fRequest*  
- [输入]请求的类型。 *fRequest*必须包含以下值之一：  
+ 送请求的类型。 *fRequest*必须包含下列值之一：  
   
- ODBC_INSTALL_INQUIRY:查询有关在其中安装转换器。  
+ ODBC_INSTALL_INQUIRY：查询可在何处安装转换器。  
   
- ODBC_INSTALL_COMPLETE:完成安装请求。  
+ ODBC_INSTALL_COMPLETE：完成安装请求。  
   
  *lpdwUsageCount*  
- [输出]翻译后调用此函数的使用情况计数。  
+ 输出调用此函数后转换器的使用计数。  
   
- 应用程序不应设置的使用计数。 ODBC 将保持此计数。  
+ 应用程序不应设置使用计数。 ODBC 将维护此计数。  
   
 ## <a name="returns"></a>返回  
- 如果成功，则返回 FALSE 出现故障时，该函数返回 TRUE。  
+ 如果此函数成功，则返回 TRUE，否则返回 FALSE。  
   
 ## <a name="diagnostics"></a>诊断  
- 当**SQLInstallTranslatorEx**返回 FALSE，关联 *\*pfErrorCode*可以通过调用获取的值**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以返回的值**SQLInstallerError** ，并解释了此函数的每个上下文中。  
+ 当**SQLInstallTranslatorEx**返回 FALSE 时，可以* \** 通过调用**SQLInstallerError**获取关联的 pfErrorCode 值。 下表列出了可由**SQLInstallerError**返回的* \*pfErrorCode*值，并说明了此函数的上下文中的每个值。  
   
-|*\*pfErrorCode*|Error|描述|  
+|*\*pfErrorCode*|错误|说明|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|常规安装程序错误|出错的其中没有特定的安装程序错误。|  
-|ODBC_ERROR_INVALID_BUFF_LEN|无效缓冲区长度|*LpszPathOut*参数不是足够大以包含输出路径。 在缓冲区中包含的被截断的路径。<br /><br /> *CbPathOutMax*参数为 0，并且*fRequest*参数为 ODBC_INSTALL_COMPLETE。|  
-|ODBC_ERROR_INVALID_REQUEST_TYPE|请求的类型无效|*FRequest*参数不是以下之一：<br /><br /> ODBC_INSTALL_INQUIRY ODBC_INSTALL_COMPLETE|  
-|ODBC_ERROR_INVALID_KEYWORD_VALUE|无效的关键字值对|*LpszTranslator*参数包含语法错误。|  
-|ODBC_ERROR_INVALID_PATH|无效的安装路径|*LpszPathIn*参数包含无效的路径。|  
-|ODBC_ERROR_INVALID_PARAM_SEQUENCE|无效的参数序列|*LpszTranslator*参数不包含一系列关键字值对。|  
-|ODBC_ERROR_USAGE_UPDATE_FAILED|无法递增或递减注册表的组件使用情况计数|安装程序无法递增翻译人员的使用情况计数。|  
+|ODBC_ERROR_GENERAL_ERR|常规安装程序错误|出现错误，但没有特定的安装程序错误。|  
+|ODBC_ERROR_INVALID_BUFF_LEN|缓冲区长度无效|*LpszPathOut*参数不够大，无法包含输出路径。 缓冲区包含截断的路径。<br /><br /> *CbPathOutMax*参数为0，并且*fRequest*参数 ODBC_INSTALL_COMPLETE。|  
+|ODBC_ERROR_INVALID_REQUEST_TYPE|请求的类型无效|*FRequest*参数不是以下项之一：<br /><br /> ODBC_INSTALL_INQUIRY ODBC_INSTALL_COMPLETE|  
+|ODBC_ERROR_INVALID_KEYWORD_VALUE|关键字-值对无效|*LpszTranslator*参数包含语法错误。|  
+|ODBC_ERROR_INVALID_PATH|安装路径无效|*LpszPathIn*参数包含无效路径。|  
+|ODBC_ERROR_INVALID_PARAM_SEQUENCE|参数序列无效|*LpszTranslator*参数不包含关键字/值对的列表。|  
+|ODBC_ERROR_USAGE_UPDATE_FAILED|不能增加或减少注册表的组件使用计数|安装程序未能递增转换器的使用计数。|  
   
 ## <a name="comments"></a>注释  
- **SQLInstallTranslatorEx**提供了一种安装只需翻译的机制。 此函数不会实际复制的任何文件。 调用程序负责将翻译文件复制。  
+ **SQLInstallTranslatorEx**提供一种机制来仅安装转换器。 此函数不会实际复制任何文件。 调用程序负责复制转换器文件。  
   
- **SQLInstallTranslatorEx**已安装的转换器的组件使用计数递增 1。 如果已有某个版本的转换器，但不是存在对该转换器的组件使用计数，新组件使用情况计数值设置为 2。  
+ **SQLInstallTranslatorEx**将安装的转换器的组件使用计数增加1。 如果转换器的某个版本已存在，但该转换器的组件使用计数不存在，则新的 "组件使用计数" 值将设置为2。  
   
- 应用程序安装程序是负责以物理方式将翻译文件的复制和维护文件使用情况计数。 如果转换器文件以前尚未安装，应用程序安装程序必须复制文件，并创建文件或文件使用率计数。 如果文件先前已安装，安装程序只需增加文件使用情况计数。  
+ 应用程序安装程序负责物理复制转换器文件并维护文件使用计数。 如果以前未安装转换器文件，则应用程序安装程序必须复制该文件或文件，并创建文件或文件使用计数。 如果以前安装过该文件，则安装程序只会递增文件使用计数。  
   
- 如果应用程序之前安装较旧版本的转换器，翻译人员应为卸载并再重新安装，以便有效的转换器组件使用计数。 **SQLRemoveTranslator**应调用要递减的组件使用计数，然后**SQLInstallTranslatorEx**应调用来增加的组件使用情况计数。 应用程序安装程序必须使用新文件替换旧的文件。 文件使用情况计数将保持不变，并使用较早的版本文件的其他应用程序现在将使用较新版本。  
+ 如果应用程序以前安装了较旧版本的转换器，则应该卸载并重新安装该转换器，以便转换器组件的使用计数有效。 应调用**SQLRemoveTranslator**来减小组件使用计数，然后调用**SQLInstallTranslatorEx**来递增组件使用计数。 应用程序安装程序必须将旧文件替换为新文件。 文件使用计数将保持不变，并且使用较旧版本文件的其他应用程序现在将使用较新的版本。  
   
- 中的路径的长度*lpszPathOut*中**SQLInstallTranslatorEx**允许对两阶段的安装过程，因此应用程序可以确定什么*cbPathOutMax*应通过调用**SQLInstallTranslatorEx**与*fRequest* ODBC_INSTALL_INQUIRY 模式。 这将返回中可用的字节总数*pcbPathOut*缓冲区。 **SQLInstallTranslatorEx**然后可以使用调用*fRequest* ODBC_INSTALL_COMPLETE 的并且*cbPathOutMax*参数设置中的值为*pcbPathOut*缓冲区，再加上 null 终止字符。  
+ **SQLInstallTranslatorEx**的*lpszPathOut*中的路径长度允许两阶段安装过程，因此应用程序可以通过使用 ODBC_INSTALL_INQUIRY 模式的*FRequest*调用**SQLInstallTranslatorEx**来确定*cbPathOutMax* 。 这将返回*pcbPathOut*缓冲区中可用的总字节数。 然后，可以使用 ODBC_INSTALL_COMPLETE 的*fRequest*调用**SQLInstallTranslatorEx** ，并将*cbPathOutMax*参数设置为*pcbPathOut*缓冲区中的值加上 null 终止字符。  
   
- 如果您选择不使用的两阶段模型**SQLInstallTranslatorEx**，则必须设置*cbPathOutMax*，其定义的到值 _MAX_PATH 的目标目录的路径的存储大小为在 Stdlib.h 中定义，以防止发生截断。  
+ 如果选择不使用**SQLInstallTranslatorEx**的两阶段模型，则必须将*cbPathOutMax*定义为目标目录的路径的存储大小，以在 stdlib.h 中定义的值 _MAX_PATH，以防止截断。  
   
- 当*fRequest*是 ODBC_INSTALL_COMPLETE， **SQLInstallTranslatorEx**不允许*lpszPathOut*为 NULL (或*cbPathOutMax*若要为 0）。 如果*fRequest* ODBC_INSTALL_COMPLETE，则返回 FALSE 时，将返回可用于返回的字节数是大于或等于*cbPathOutMax*，与结果发生截断。  
+ ODBC_INSTALL_COMPLETE *fRequest*时， **SQLInstallTranslatorEx**不允许*LpszPathOut*为 NULL （或*cbPathOutMax*为0）。 如果*fRequest* ODBC_INSTALL_COMPLETE，则当可返回的字节数大于或等于*cbPathOutMax*时，将返回 FALSE，并将发生截断。  
   
 ## <a name="related-functions"></a>相关函数  
   
-|有关信息|请参阅|  
+|有关以下方面的信息|请参阅|  
 |---------------------------|---------|  
 |返回默认转换选项|[ConfigTranslator](../../../odbc/reference/syntax/configtranslator-function.md)|  
 |选择转换器|[SQLGetTranslator](../../../odbc/reference/syntax/sqlgettranslator-function.md)|  
-|删除翻译人员|[SQLRemoveTranslator](../../../odbc/reference/syntax/sqlremovetranslator-function.md)|
+|删除转换器|[SQLRemoveTranslator](../../../odbc/reference/syntax/sqlremovetranslator-function.md)|

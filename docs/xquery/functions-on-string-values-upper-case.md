@@ -1,5 +1,5 @@
 ---
-title: upper-case 函数 (XQuery) |Microsoft Docs
+title: 大写字母函数（XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 5bd01ad2-7adf-48fb-bf42-41e200419d37
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0dcbcbc0cd6c0cf479aee7a7c3fd8c5e53a53d28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68004616"
 ---
 # <a name="functions-on-string-values---upper-case"></a>基于字符串值的函数 - upper-case
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  此函数将转换中的每个字符 *$arg*为其等效的大写。 Unicode 码位的 Microsoft Windows 二进制大小写转换指定如何将字符转换为大写。 这一标准与 Unicode 标准码位标准的映射不相同。  
+  此函数将 *$arg*中的每个字符转换为其大写等效项。 Unicode 码位的 Microsoft Windows 二进制大小写转换指定如何将字符转换为大写。 这一标准与 Unicode 标准码位标准的映射不相同。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,12 +42,12 @@ fn:upper-case($arg as xs:string?) as xs:string
 |*$arg*|要转换为大写的字符串值。|  
   
 ## <a name="remarks"></a>备注  
- 如果的值 *$arg*是空的则返回一个零长度字符串。  
+ 如果 *$arg*的值为空，则返回零长度字符串。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-changing-a-string-to-upper-case"></a>A. 将字符串更改为大写  
- 下面的示例更改输入的字符串 abcDEF ！@4为大写。  
+ 下面的示例将输入字符串 "abcDEF！@4"到大写"。  
   
 ```  
 DECLARE @x xml = N'abcDEF!@4';  
@@ -118,7 +118,7 @@ where CatalogDescription.exist('
   
  `</Prod>`  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [针对 xml 数据类型的 XQuery 函数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.fn_cdc_get_min_lsn (Transact-SQL) | Microsoft Docs
+title: sys. fn_cdc_get_min_lsn （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,18 +21,18 @@ ms.assetid: bd49e28a-128b-4f6b-8545-6a2ec3f4afb3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 52c6b8d2db395560524c2a9fa46aca680ca9eea2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046401"
 ---
-# <a name="sysfncdcgetminlsn-transact-sql"></a>sys.fn_cdc_get_min_lsn (Transact-SQL)
+# <a name="sysfn_cdc_get_min_lsn-transact-sql"></a>sys.fn_cdc_get_min_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  返回从指定的捕获实例的 start_lsn 列值[cdc.change_tables](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md)系统表。 该值表示捕获实例的有效性间隔的低端点。  
+  从[cdc. change_tables](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md)系统表返回指定捕获实例的 start_lsn 列值。 该值表示捕获实例的有效性间隔的低端点。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,11 +42,11 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
 ```  
   
 ## <a name="arguments"></a>参数  
- **'** *capture_instance_name* **'**  
- 是的捕获实例的名称。 *capture_instance_name*是**sysname**。  
+ **"** *capture_instance_name* **"**  
+ 捕获实例的名称。 *capture_instance_name* **sysname**。  
   
 ## <a name="return-types"></a>返回类型  
- **binary(10)**  
+ **binary （10）**  
   
 ## <a name="remarks"></a>备注  
  当捕获实例不存在或调用方未获得访问与该捕获实例关联的更改数据的授权时，将返回 0x00000000000000000000。  
@@ -59,7 +59,7 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
 ## <a name="examples"></a>示例  
   
 ### <a name="a-returning-the-minimum-lsn-value-for-a-specified-capture-instance"></a>A. 为指定捕获实例返回最小 LSN 值  
- 下例为 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的捕获实例 `HumanResources_Employee` 返回最小 LSN 值。  
+ 下例为 `HumanResources_Employee` 数据库中的捕获实例 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 返回最小 LSN 值。  
   
 ```  
 USE AdventureWorks2-12;  
@@ -94,8 +94,8 @@ ELSE
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [sys.fn_cdc_get_max_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [sys. fn_cdc_get_max_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
  [事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)  
   
   

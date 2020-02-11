@@ -21,17 +21,17 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4e18f635b7bbdd8fa96a565fef6aef5be5bde87f
-ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74097869"
 ---
-# <a name="sysdm_exec_input_buffer-transact-sql"></a>sys.dm_exec_input_buffer (Transact-SQL)
+# <a name="sysdm_exec_input_buffer-transact-sql"></a>sys. dm_exec_input_buffer （Transact-sql）
 
 [!INCLUDE[tsql-appliesto-2014sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2014sp2-asdb-xxxx-xxx-md.md)]
 
-返回有关提交到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的语句的信息。
+返回有关提交给实例的语句的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]信息。
 
 ## <a name="syntax"></a>语法
 
@@ -51,25 +51,25 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 
 ## <a name="table-returned"></a>返回的表
 
-|列名|数据类型|描述|
+|列名称|数据类型|说明|
 |-----------------|---------------|-----------------|
-|event_type|**nvarchar(256)**|给定 spid 在输入缓冲区中的事件类型。|
-|**参数**|**int**|为语句提供的所有参数。|
+|**event_type**|**nvarchar(256)**|给定 spid 在输入缓冲区中的事件类型。|
+|**parameters**|**smallint**|为语句提供的所有参数。|
 |**event_info**|**nvarchar(max)**|给定 spid 的输入缓冲区中的语句文本。|
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
-在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上，如果用户具有 VIEW SERVER STATE 权限，则用户将在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例上看到所有正在执行的会话;否则，用户将只看到当前会话。
+在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上，如果用户具有 VIEW SERVER STATE 权限，则用户将在实例上看到所有正在执行的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]会话;否则，用户将只看到当前会话。
 
 > [!IMPORTANT]
 > 在不使用 VIEW SERVER STATE 权限 SQL Server Management Studio 的情况下（例如在触发器、存储过程或函数中）对 SQL Server 运行此 DMV 会引发对 master 数据库的权限错误。
 
-在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]上，如果用户是数据库所有者，则用户将看到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]上所有正在执行的会话;否则，用户将只看到当前会话。
+在[!INCLUDE[ssSDS](../../includes/sssds-md.md)]上，如果用户是数据库所有者，则用户将看到上的所有正在执行的[!INCLUDE[ssSDS](../../includes/sssds-md.md)]会话;否则，用户将只看到当前会话。
 
 > [!IMPORTANT]
 > 在不带所有者权限的 Azure SQL 数据库 SQL Server Management Studio （如触发器、存储过程或函数）中运行此 DMV 会引发对 master 数据库的权限错误。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 此动态管理函数可与 sys.databases 结合使用，dm_exec_sessions 或**dm_exec_requests。**
 
@@ -98,7 +98,7 @@ GO
 
 ## <a name="see-also"></a>另请参阅
 
-- [与执行相关的动态管理视图和函数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
+- [与执行相关的动态管理视图和函数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
 - [sys.dm_exec_sessions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)
-- [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)
+- [sys. dm_exec_requests &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)
 - [DBCC INPUTBUFFER (Transact-SQL)](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)

@@ -1,5 +1,5 @@
 ---
-title: 设置货币换算选项 （商业智能向导） |Microsoft Docs
+title: 设置货币换算选项（商业智能向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97e44dc259c79c7bb1aef5cc5cbff8b06dc6c48e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068748"
 ---
 # <a name="set-currency-conversion-options-business-intelligence-wizard"></a>设置货币换算选项（商业智能向导）
@@ -29,21 +29,21 @@ ms.locfileid: "66068748"
  **选择包含汇率的度量值组**  
  选择包含货币换算计算要引用的汇率的度量值组。  
   
- **指定的先导货币**  
+ **指定先导货币**  
  选择作为度量值组的先导货币的成员。  
   
- **选择如何输入了汇率 （选择示例货币）**  
+ **选择如何输入了汇率(选择示例货币)**  
  从货币维度中选择代表示例货币的成员，以便更改“每 1 示例货币折合 X 先导货币”和“每 1 先导货币折合 X 示例货币”选项的文本，使其更好地显示汇率方向。  
   
- **每 1 示例货币折合 x 先导**  
+ **每 1 示例货币折合 X 先导货币**  
  选择此选项可以指示比率度量值组中的汇率代表指定先导货币的换算比例。  
   
- **每 1 先导货币折合 x 示例货币**  
+ **每 1 先导货币折合 X 示例货币**  
  选择此选项可以指示比率度量值组中的汇率代表指定示例货币的换算比例。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [商业智能向导的 F1 帮助](business-intelligence-wizard-f1-help.md)   
- [多维数据集设计器&#40;Analysis Services-多维数据&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [维度设计器&#40;Analysis Services-多维数据&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+ [多维数据集设计器 &#40;Analysis Services 多维数据&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [维度设计器 &#40;Analysis Services 多维数据&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

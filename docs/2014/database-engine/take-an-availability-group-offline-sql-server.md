@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 87dff347bd0aee1211093d9e3406a24670a80e7f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228173"
 ---
 # <a name="take-an-availability-group-offline-sql-server"></a>使可用性组脱机 (SQL Server)
@@ -28,7 +28,7 @@ ms.locfileid: "75228173"
   
 
   
-##  <a name="BeforeYouBegin"></a>开始之前  
+##  <a name="BeforeYouBegin"></a> 开始之前  
   
 > [!CAUTION]  
 >  仅将 OFFLINE 选项用于可用性组资源的跨群集迁移。  
@@ -39,15 +39,15 @@ ms.locfileid: "75228173"
   
 -   可用性组当前必须处于联机状态。  
   
-###  <a name="Recommendations"></a>针对  
+###  <a name="Recommendations"></a> 建议  
  在您使可用性组脱机之前，删除可用性组侦听器。 有关详细信息，请参阅 [删除可用性组侦听程序 (SQL Server)](availability-groups/windows/remove-an-availability-group-listener-sql-server.md)的操作系统升级。  
   
-###  <a name="Security"></a>安全  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>访问  
+####  <a name="Permissions"></a> 权限  
  对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  
   
-##  <a name="TsqlProcedure"></a>使用 Transact-sql  
+##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **使可用性组脱机**  
   
 1.  连接到为可用性组承载可用性副本的服务器实例。 此副本可以是主副本或辅助副本。  
@@ -71,13 +71,13 @@ ALTER AVAILABILITY GROUP AccountsAG OFFLINE;
   
 -   **如果在使组脱机之前未删除可用性组侦听器：** 如果要将可用性组迁移到其他 WSFC 群集，请删除该侦听器的 VNN 和 VIP。 你可以通过使用故障转移群集管理控制台、 [Remove-ClusterResource](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx) PowerShell cmdlet 或 [cluster.exe](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx)删除侦听程序的 VNN 和 VIP。 请注意，在 Windows 8 上不推荐使用 cluster.exe。  
   
-##  <a name="RelatedTasks"></a>相关任务  
+##  <a name="RelatedTasks"></a> 相关任务  
   
--   [&#40;SQL Server 中删除可用性组侦听器&#41;](availability-groups/windows/remove-an-availability-group-listener-sql-server.md)  
+-   [删除可用性组侦听程序 (SQL Server)](availability-groups/windows/remove-an-availability-group-listener-sql-server.md)  
   
 -   [更改服务器实例 &#40;SQL Server 的 HADR 群集上下文&#41;](availability-groups/windows/change-the-hadr-cluster-context-of-server-instance-sql-server.md)  
   
-##  <a name="RelatedContent"></a>相关内容  
+##  <a name="RelatedContent"></a> 相关内容  
   
 -   [SQL Server 2012 技术文章](https://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   

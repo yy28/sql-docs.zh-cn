@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dba1f3598abb8877721ff77d3dabcc8af8e0b94a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62899880"
 ---
 # <a name="sort-transformation"></a>排序转换
@@ -47,7 +47,7 @@ ms.locfileid: "62899880"
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [通用属性](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [转换自定义属性](transformation-custom-properties.md)  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62899880"
 ## <a name="related-content"></a>相关内容  
  codeplex.com 上的示例 [SortDeDuplicateDelimitedString 自定义 SSIS 组件](https://go.microsoft.com/fwlink/?LinkId=220821)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据流](../data-flow.md)   
  [Integration Services 转换](integration-services-transformations.md)  
   

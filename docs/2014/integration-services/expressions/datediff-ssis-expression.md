@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b42115278e6866063639c7ce2fc596749ad2d39f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62898082"
 ---
 # <a name="datediff-ssis-expression"></a>DATEDIFF（SSIS 表达式）
@@ -48,16 +48,16 @@ DATEDIFF(datepart, startdate, endate)
   
 |datepart|缩写形式|  
 |--------------|-------------------|  
-|Year|yy、yyyy|  
+|年龄|yy、yyyy|  
 |季度|qq、q|  
-|Month|mm、m|  
+|月份|mm、m|  
 |Dayofyear|dy、y|  
-|Day|dd、d|  
+|日期|dd、d|  
 |Week|wk、ww|  
-|Weekday|dw、w|  
+|星期|dw、w|  
 |Hour|Hh|  
 |Minute|mi、n|  
-|第二个|ss、s|  
+|秒|ss、s|  
 |Millisecond|Ms|  
   
  如果任何参数为空，则 DATEDIFF 返回的结果为空。  
@@ -81,13 +81,13 @@ DATEDIFF("dd", (DT_DBTIMESTAMP)"8/1/2003", (DT_DBTIMESTAMP)"8/8/2003")
 DATEDIFF("mm", (DT_DBTIMESTAMP)"8/1/2003",GETDATE())  
 ```  
   
- 此示例返回 **ModifiedDate** 列中的日期与 **YearEndDate** 变量之间的周数。 如果**YearEndDate**具有`date`数据类型，没有显式强制转换是必需的。  
+ 此示例返回 **ModifiedDate** 列中的日期与 **YearEndDate** 变量之间的周数。 如果**YearEndDate**的`date`数据类型为，则不需要显式强制转换。  
   
 ```  
 DATEDIFF("Week", ModifiedDate,@YearEndDate)  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [DATEADD（SSIS 表达式）](dateadd-ssis-expression.md)   
  [DATEPART（SSIS 表达式）](datepart-ssis-expression.md)   
  [DAY（SSIS 表达式）](day-ssis-expression.md)   

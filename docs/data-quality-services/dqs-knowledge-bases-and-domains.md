@@ -10,10 +10,10 @@ ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: b84c1cee7dd805e68e0742c72980d7fb8a55c54b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251643"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>DQS 知识库和域
@@ -148,7 +148,7 @@ ms.locfileid: "75251643"
   
 |||  
 |-|-|  
-|创建、打开知识库，将知识添加到知识库，以及对知识库执行发现|[构建知识库](../data-quality-services/building-a-knowledge-base.md)|  
+|创建、打开知识库，将知识添加到知识库，以及对知识库执行发现|[生成知识库](../data-quality-services/building-a-knowledge-base.md)|  
 |对域和知识库执行导入和导出操作|[导入和导出知识](../data-quality-services/importing-and-exporting-knowledge.md)|  
 |创建单一域、域规则、基于字词的关系，以及更改域值|[管理域](../data-quality-services/managing-a-domain.md)|  
 |创建复合域、创建跨域规则，以及使用值关系|[管理复合域](../data-quality-services/managing-a-composite-domain.md)|  

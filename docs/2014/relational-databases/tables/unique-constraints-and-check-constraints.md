@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2a8dfd7da9bb1ccc60d18e68ccbe4930a6edb00d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196678"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>唯一约束和 CHECK 约束
@@ -45,13 +45,13 @@ ms.locfileid: "68196678"
   
  可以将多个 CHECK 约束应用于单个列。 还可以通过在表级创建 CHECK 约束，将一个 CHECK 约束应用于多个列。 例如，多列 CHECK 约束可用于确认 **country_region** 列值为 **USA** 的任意行是否在 **state** 列中还有一个由两个字符构成的值。 这使得在一个位置可以同时检查多个条件。  
   
- CHECK 约束类似于 FOREIGN KEY 约束，因为可以控制放入列中的值。 区别在于确定哪些值是有效的方式：FOREIGN KEY 约束从另一个表，获取有效值的列表，而 CHECK 约束确定有效的值的逻辑表达式。  
+ CHECK 约束类似于 FOREIGN KEY 约束，因为可以控制放入列中的值。 但是，它们在确定有效值的方式上有所不同：FOREIGN KEY 约束从其他表获得有效值列表，而 CHECK 约束通过逻辑表达式确定有效值。  
   
 > [!CAUTION]  
 >  包括隐式或显式数据类型转换的约束可能会导致某些操作失败。 例如，为表定义的作为分区切换的源的此类约束可能会导致 ALTER TABLE...SWITCH 操作失败。 在约束定义中避免数据类型转换。  
   
 ### <a name="limitations-of-check-constraints"></a>CHECK 约束的限制  
- CHECK 约束不接受计算结果为 FALSE 的值。 因为空值的计算结果为 UNKNOWN，所以表达式中存在这些值可能会覆盖约束。 例如，假设上放置约束`int`列**MyColumn**指定的**MyColumn**可以包含值 10 (**MyColumn = 10**)。 如果将值 NULL 插入到 **MyColumn**， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将插入 NULL 且不返回错误。  
+ CHECK 约束不接受计算结果为 FALSE 的值。 因为空值的计算结果为 UNKNOWN，所以表达式中存在这些值可能会覆盖约束。 `int`例如，假设您对列设置了约束， **MyColumn**指定**MyColumn**只能包含值10（**MyColumn = 10**）。 如果将值 NULL 插入到 **MyColumn**， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将插入 NULL 且不返回错误。  
   
  如果 CHECK 约束检查的条件对于表中的任何行都不是 FALSE，它将返回 TRUE。 CHECK 约束在行级执行。 如果刚创建的表没有任何行，则此表的任何 CHECK 约束都视为有效。 这种情况可能会产生意外结果，如下面的示例所示。  
   

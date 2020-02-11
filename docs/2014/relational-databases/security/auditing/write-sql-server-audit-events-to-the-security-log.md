@@ -16,10 +16,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: bd272abda4b22f220e3fc599111d10cb4979f42e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211972"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>将 SQL Server 审核事件写入安全日志
@@ -60,9 +60,9 @@ ms.locfileid: "68211972"
 ###  <a name="Restrictions"></a> 限制和局限  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 计算机的管理员应了解安全日志的本地设置可能会被域策略覆盖。 在这种情况下，域策略可能会覆盖子类别设置 (**auditpol /get /subcategory:"application generated"** )。 这可能会影响 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在无法检测 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 尝试审核的事件是否将不被记录的情况下记录事件的能力。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  您必须是 Windows 管理员，才能配置这些设置。  
   
 ##  <a name="auditpolAccess"></a> 在 Windows 中使用 auditpol 配置审核对象访问设置  
@@ -117,7 +117,7 @@ ms.locfileid: "68211972"
   
 7.  关闭安全策略工具。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server Audit（数据库引擎）](sql-server-audit-database-engine.md)  
   
   

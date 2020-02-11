@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_rda_schema_update_status (TRANSACT-SQL) |Microsoft Docs
+title: sys. dm_db_rda_schema_update_status （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,35 +17,35 @@ ms.assetid: 364e3caa-a7c6-4be5-a029-0b19da34de3e
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 611fe9d5bea47204b655f2defe5072d2dd17be92
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67937017"
 ---
-# <a name="stretch-database---sysdmdbrdaschemaupdatestatus"></a>Stretch Database-sys.dm_db_rda_schema_update_status
+# <a name="stretch-database---sysdm_db_rda_schema_update_status"></a>Stretch Database-sys. dm_db_rda_schema_update_status
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  包含为当前数据库中的每个已启用延伸的表的远程数据存档每个架构更新任务行。 任务通过任务 id 标识。  
+  当前数据库中每个已启用延伸的表的远程数据存档的每个架构更新任务在表中占一行。 任务由其任务 id 标识。  
   
- **dm_db_rda_schema_update_status**的范围限定为当前数据库上下文。 请确保你想要查看架构更新状态的已启用延伸的表的数据库上下文中。  
+ **dm_db_rda_schema_update_status**的作用域限定为当前数据库上下文。 请确保在已启用延伸的表的数据库上下文中，要查看其架构更新状态。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**table_id**|**int**|正在更新本地已启用延伸的表的远程数据存档架构的 ID。|  
-|**database_id**|**int**|包含本地启用延伸的表的数据库的 ID。|  
+|table_id |**int**|正在更新其远程数据存档架构的本地 Stretch 已启用表的 ID。|  
+|database_id |**int**|包含启用了延伸的本地表的数据库的 ID。|  
 |**task_id**|**bigint**|远程数据存档架构更新任务的 ID。|  
 |**task_type**|**int**|远程数据存档架构更新任务的类型。|  
-|**task_type_desc**|**nvarchar**|远程数据存档架构更新任务的类型的说明。|  
+|**task_type_desc**|**nvarchar**|远程数据存档架构更新任务的类型说明。|  
 |**task_state**|**int**|远程数据存档架构更新任务的状态。|  
-|**task_state_des**|**nvarchar**|远程数据存档架构更新任务的状态的说明。|  
-|**start_time_utc**|**datetime**|UTC 时间的远程数据存档已开始的架构更新。|  
-|**end_time_utc**|**datetime**|已完成的远程数据存档架构更新的 UTC 时间。|  
-|**error_number**|**int**|如果远程数据存档架构更新失败，出现，则该错误的错误号否则，为 null。|  
-|**error_severity**|**int**|如果远程数据存档架构更新失败，发生错误的严重级别否则，为 null。|  
-|**error_state**|**int**|如果远程数据存档架构更新失败，出现，则该错误的状态否则，为 null。 Error_state 指示条件或发生错误的位置。|  
+|**task_state_des**|**nvarchar**|远程数据存档架构更新任务的状态说明。|  
+|**start_time_utc**|**datetime**|远程数据存档架构更新开始的 UTC 时间。|  
+|**end_time_utc**|**datetime**|远程数据存档架构更新完成时的 UTC 时间。|  
+|**error_number**|**int**|如果远程数据存档架构更新失败，则表明出现了错误的错误号;否则为 null。|  
+|**error_severity**|**int**|如果远程数据存档架构更新失败，则表明出现了错误的严重性;否则为 null。|  
+|**error_state**|**int**|如果远程数据存档架构更新失败，则表明出现了错误的状态;否则为 null。 Error_state 指示发生错误的条件或位置。|  
   
-## <a name="see-also"></a>请参阅  
- [Stretch 数据库](../../sql-server/stretch-database/stretch-database.md)  
+## <a name="see-also"></a>另请参阅  
+ [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
   

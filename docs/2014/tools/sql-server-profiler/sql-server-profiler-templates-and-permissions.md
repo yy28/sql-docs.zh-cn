@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7d7e92758707217a42afbd41649720907adfeaa3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211057"
 ---
 # <a name="sql-server-profiler-templates-and-permissions"></a>SQL Server Profiler 模板和权限
@@ -42,7 +42,7 @@ ms.locfileid: "68211057"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|描述|  
+|主题|说明|  
 |-----------|-----------------|  
 |[SQL Server Profiler 模板](sql-server-profiler-templates.md)|介绍 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]附带的预定义跟踪模板。|  
 |[运行 SQL Server Profiler 所需的权限](permissions-required-to-run-sql-server-profiler.md)|介绍运行 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]时所需的权限。|  
@@ -56,8 +56,8 @@ ms.locfileid: "68211057"
 |[使用 SQL Server Profiler 筛选跟踪](filter-traces-with-sql-server-profiler.md)|介绍如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]设置针对数据列的筛选器以筛选跟踪输出。|  
 |[重播跟踪](replay-traces.md)|解释重播跟踪的意义以及重播跟踪所需的条件。|  
   
-## <a name="see-also"></a>请参阅  
- [SQL Server Profiler](sql-server-profiler.md)   
+## <a name="see-also"></a>另请参阅  
+ [SQL Server 事件探查器](sql-server-profiler.md)   
  [启动 SQL Server Profiler](start-sql-server-profiler.md)  
   
   

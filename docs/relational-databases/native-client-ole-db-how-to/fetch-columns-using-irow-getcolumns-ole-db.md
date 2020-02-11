@@ -14,25 +14,25 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1d95f551a965758db6f6140770d6823543d6922d
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73768234"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>使用 IRow::GetColumns 提取列 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  通过 IRow 接口可以直接访问结果集中某一行的列。 因而，IRow 是一种从具有一行的结果集中检索列的有效方法。  
+  通过 IRow 接口可以直接访问结果集中某一行的列****。 因而，IRow 是一种从具有一行的结果集中检索列的有效方法****。  
   
- 所提供的代码示例显示如何使用 IRow 提取单一行。 在本示例中，将一次从该行中检索一列。 此示例说明：  
+ 所提供的代码示例显示如何使用 IRow 提取单一行****。 在本示例中，将一次从该行中检索一列。 此示例说明：  
   
 -   如何提取一组列（依次）。  
   
--   如何两次访问某一列。 第一次获取实际列宽度，稍后访问实际数据。 在 DBCOLUMNACCESS 结构中，如果 pData 为 NULL 且 cbMaxLen 为 0，则对于 IRow **>GetColumns() 的调用只返回实际列长度**-。 在这种情况下，可以再次对同一列调用 IRow->GetColumns() 以检索实际数据。  
+-   如何两次访问某一列。 第一次获取实际列宽度，稍后访问实际数据。 在 DBCOLUMNACCESS 结构中，如果 pData 为 NULL 且 cbMaxLen 为 0，则对于 IRow **>GetColumns() 的调用只返回实际列长度**********-****。 在这种情况下，可以再次对同一列调用 IRow->GetColumns() 以检索实际数据****。  
   
 > [!IMPORTANT]  
->  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
+>  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，则应通过[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)对其进行加密。  
   
 ### <a name="to-fetch-columns-using-irowgetcolumns"></a>使用 IRow::GetColumns 提取列  
   

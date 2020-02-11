@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5dac84fe42185806ae468593876a6bd439c1c689
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68890646"
 ---
 # <a name="data-mining-model-training-destination"></a>数据挖掘模型定型目标
@@ -35,15 +35,15 @@ ms.locfileid: "68890646"
   
  此目标有一个输入，没有输出。  
   
- 数据挖掘模型定型目标使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接管理器连接到包含挖掘结构以及目标为其定型的挖掘模型的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的实例。 有关详细信息，请参阅 [Analysis Services Connection Manager](../connection-manager/analysis-services-connection-manager.md)。  
+ 数据挖掘模型定型目标使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]连接管理器连接到包含目标所[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]定型挖掘结构和挖掘[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]模型的项目或实例。 有关详细信息，请参阅 [Analysis Services Connection Manager](../connection-manager/analysis-services-connection-manager.md)。  
   
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可以在 **“数据挖掘模型定型编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
   
--   [数据挖掘模型定型编辑器（“连接”选项卡）](../data-mining-model-training-editor-connection-tab.md)  
+-   [数据挖掘模型定型编辑器 &#40;连接 "选项卡&#41;](../data-mining-model-training-editor-connection-tab.md)  
   
--   [数据挖掘模型定型编辑器（“列”选项卡）](../data-mining-model-training-editor-columns-tab.md)  
+-   [数据挖掘模型定型编辑器 &#40;列 "选项卡&#41;](../data-mining-model-training-editor-columns-tab.md)  
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   

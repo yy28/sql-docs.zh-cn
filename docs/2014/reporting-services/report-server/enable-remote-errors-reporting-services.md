@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e2d239dfc3d094f72d40ce6d020610fe1c0eabbc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103809"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>启用远程错误 (Reporting Services)
@@ -33,14 +33,15 @@ ms.locfileid: "66103809"
   
 -   [修改 ConfigurationInfo 表（本机模式）](#bkmk_ConfigurationInfo)  
   
-##  <a name="bkmk_sharepoint"></a> 为 SharePoint 模式启用远程错误  
- 可以通过两个不同的过程为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式启用远程错误。 对于两个不同的报表服务器体系结构，过程是不同的。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版本中引入的基于较新的 SharePoint 服务的体系结构利用可为每个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序配置的设置。 较旧的体系结构利用单一站点级别的设置。  
+##  <a name="bkmk_sharepoint"></a>为 SharePoint 模式启用远程错误  
+ 可以通过两个不同的过程为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式启用远程错误。 对于两个不同的报表服务器体系结构，过程是不同的。 
+  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版本中引入的基于较新的 SharePoint 服务的体系结构利用可为每个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序配置的设置。 较旧的体系结构利用单一站点级别的设置。  
   
 #### <a name="enable-remote-errors-for-a-reporting-services-service-application"></a>为 Reporting Services 服务应用程序启用远程错误  
   
-1.  对于随 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或较新版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]一起安装的 SharePoint 模式报表服务器，启用服务应用程序设置 **“启用远程错误”** 。 可为每个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序配置该设置。  
+1.  对于随 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或较新版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]一起安装的 SharePoint 模式报表服务器，启用服务应用程序设置 **“启用远程错误”**。 可为每个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序配置该设置。  
   
-2.  在 SharePoint 管理中心的 **“应用程序管理”** 组中，单击 **“管理服务应用程序”** 。  
+2.  在 SharePoint 管理中心的 "**应用程序管理**" 组中，单击 "**管理服务应用程序**"。  
   
 3.  找到您的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序并单击其名称。  
   
@@ -48,33 +49,33 @@ ms.locfileid: "66103809"
   
 5.  在 **“安全性”** 部分，单击 **“启用远程错误”** 。  
   
-6.  单击“确定”  。  
+6.  单击“确定”。   
   
 #### <a name="enable-remote-errors-for-a-sharepoint-site"></a>为 SharePoint 站点启用远程错误  
   
-1.  对于随 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 之前的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]版本安装的 SharePoint 模式报表服务器，启用站点设置 **“启用本地模式下的远程错误”** 。  
+1.  对于随 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 之前的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]版本安装的 SharePoint 模式报表服务器，启用站点设置 **“启用本地模式下的远程错误”**。  
   
 2.  在 **“站点操作”** 中，单击您要修改的站点对应的 **“站点设置”** 。  
   
 3.  在 **“Reporting Services”** 组，单击 **“Reporting Services 站点设置”** 。  
   
-4.  单击 **“启用本地模式下的远程错误”** 。  
+4.  单击 **“启用本地模式下的远程错误”**。  
   
-5.  单击 **“确定”** 。  
+5.  单击 **"确定"**  
   
-##  <a name="bkmk_mgtStudio"></a> 通过 SQL Server Management Studio 启用远程错误（本机模式）  
+##  <a name="bkmk_mgtStudio"></a>通过 SQL Server Management Studio 启用远程错误（本机模式）  
   
 1.  启动 Management Studio 并连接到报表服务器实例。 有关详细信息，请参阅 [联机丛书中的](../tools/connect-to-a-report-server-in-management-studio.md) 连接到 Management Studio 中的报表服务器 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-2.  右键单击报表服务器节点，然后选择“属性”  。  
+2.  右键单击报表服务器节点，然后选择“属性”****。  
   
-3.  单击 **“高级”** 以打开属性页。 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的[服务器属性（“高级”页）- Reporting Services](../tools/server-properties-advanced-page-reporting-services.md)。  
+3.  单击 **“高级”** 以打开属性页。 有关详细信息，请参阅 [ 联机丛书中的](../tools/server-properties-advanced-page-reporting-services.md)服务器属性（“高级”页）- Reporting Services[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-4.  在中`EnableRemoteErrors`，选择`True`。  
+4.  在`EnableRemoteErrors`中， `True`选择。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="bkmk_script"></a> 通过脚本启用远程错误（本机模式）  
+##  <a name="bkmk_script"></a>通过脚本启用远程错误（本机模式）  
   
 1.  创建文本文件并将以下脚本复制到该文件中。  
   
@@ -96,7 +97,7 @@ ms.locfileid: "66103809"
   
 2.  将文件另存为 EnableRemoteErrors.rss。  
   
-3.  单击 **“开始”** ，指向 **“运行”** ，键入 **cmd**，再单击 **“确定”** 打开命令提示符窗口。  
+3.  单击 **“开始”**，指向 **“运行”**，键入 **cmd**，再单击 **“确定”** 打开命令提示符窗口。  
   
 4.  导航到包含您刚刚创建的 .rss 文件的目录。  
   
@@ -106,11 +107,11 @@ ms.locfileid: "66103809"
     rs -i EnableRemoteErrors.rss -s http://servername/ReportServer  
     ```  
   
-6.  有关详细信息，请参阅 [RS.exe 实用工具 (SSRS)](../tools/rs-exe-utility-ssrs.md)  
+6.  有关详细信息，请参阅[RS &#40;SSRS&#41;](../tools/rs-exe-utility-ssrs.md)  
   
-##  <a name="bkmk_ConfigurationInfo"></a> 修改 ConfigurationInfo 表（本机模式）  
+##  <a name="bkmk_ConfigurationInfo"></a>修改 ConfigurationInfo 表（本机模式）  
   
 1.  > [!NOTE]  
-    >  您可以编辑**ConfigurationInfo**若要设置报表服务器数据库中的表`EnableRemoteErrors`到`True`，但报表服务器正在使用中，应使用 SQL Server Management Studio 或脚本来修改设置。 如果修改了数据库中的设置，则需要重新启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务，然后更改才会生效。  
+    >  您可以编辑 Report Server 数据库中的**ConfigurationInfo**表以设置`EnableRemoteErrors`为`True`，但如果 Report Server 正在使用中，则应使用 SQL Server Management Studio 或脚本来修改设置。 如果修改了数据库中的设置，则需要重新启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务，然后更改才会生效。  
   
   

@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9de758c6a54ca1993efc8873a02293331a129b33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62870945"
 ---
 # <a name="database-engine-error-severities"></a>数据库引擎错误严重性
@@ -29,7 +29,7 @@ ms.locfileid: "62870945"
 ## <a name="levels-of-severity"></a>严重性级别  
  下表列出并说明 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]所引起错误的严重级别。  
   
-|严重级别|Description|  
+|严重性级别|说明|  
 |--------------------|-----------------|  
 |0-9|返回不太严重的状态信息或报表错误的信息性消息。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不会引起严重级别为 0 到 9 的系统错误。|  
 |10|返回不太严重的状态信息或报表错误的信息性消息。 由于兼容性原因， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在将错误信息返回到调用应用程序前将严重性级别从 10 转换为 0。|  
@@ -54,7 +54,7 @@ ms.locfileid: "62870945"
 ## <a name="user-defined-error-message-severity"></a>用户定义的错误消息严重性  
  可以使用 **sp_addmessage** 将严重级别为 1 到 25 的用户定义错误消息添加到 **sys.messages** 目录视图中。 这些用户定义的错误消息可供 RAISERROR 使用。 有关详细信息，请参阅 [sp_addmessage (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmessage-transact-sql)。  
   
- 可用 RAISERROR 生成严重性级别为 1 到 25 的用户定义错误消息。 RAISERROR 可以引用 **sys.messages** 目录视图中存储的用户定义错误消息，也可以动态地生成消息。 生成错误时如果使用 **sys.messages** 中的用户定义错误消息，则 RAISERROR 指定的严重级别将覆盖 **sys.messages** 中指定的严重级别。 有关详细信息，请参阅 [RAISERROR (Transact-SQL)](/sql/t-sql/language-elements/raiserror-transact-sql)。  
+ 可用 RAISERROR 生成严重性级别为 1 到 25 的用户定义错误消息。 RAISERROR 可以引用 **sys.messages** 目录视图中存储的用户定义错误消息，也可以动态地生成消息。 生成错误时如果使用 **sys.messages** 中的用户定义错误消息，则 RAISERROR 指定的严重级别将覆盖 **sys.messages**中指定的严重级别。 有关详细信息，请参阅 [RAISERROR (Transact-SQL)](/sql/t-sql/language-elements/raiserror-transact-sql)。  
   
 ## <a name="error-severity-and-trycatch"></a>错误严重性和 TRY...CATCH  
  TRY...CATCH 构造可捕捉所有严重级别大于 10 但不终止数据库连接的错误。  
@@ -63,12 +63,12 @@ ms.locfileid: "62870945"
   
  终止数据库连接的错误（通常严重级别为 20 到 25）不由 CATCH 块处理，因为连接终止后执行也中止了。  
   
- 有关详细信息，请参阅 [TRY...CATCH (Transact-SQL)](/sql/t-sql/language-elements/try-catch-transact-sql)所遇到问题的类型。  
+ 有关详细信息，请参阅 [TRY...CATCH (Transact-SQL)](/sql/t-sql/language-elements/try-catch-transact-sql)。  
   
 ## <a name="retrieving-error-severity"></a>检索错误严重性  
  系统函数 ERROR_SEVERITY 可用来检索导致 TRY...CATCH 构造的 CATCH 块运行的错误的严重性。 如果是在 CATCH 块的作用域之外调用 ERROR_SEVERITY，则 ERROR_SEVERITY 返回空值。 有关详细信息，请参阅 [ERROR_SEVERITY (Transact-SQL)](/sql/t-sql/functions/error-severity-transact-sql)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [了解数据库引擎错误](../native-client-ole-db-errors/errors.md)   
  [sys.messages (Transact-SQL)](/sql/relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages)   
  [System Functions (Transact-SQL)](/sql/t-sql/functions/system-functions-transact-sql)   

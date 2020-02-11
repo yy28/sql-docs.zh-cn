@@ -1,5 +1,5 @@
 ---
-title: 数据源 (SSAS 表格) |Microsoft Docs
+title: 数据源（SSAS 表格） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 94718b35efdcf31a0c9de19930cc765f7d9db5d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082330"
 ---
 # <a name="data-sources-ssas-tabular"></a>数据源（SSAS 表格）
@@ -22,13 +22,13 @@ ms.locfileid: "66082330"
   
 ## <a name="related-topics-and-tasks"></a>相关主题和任务  
   
-|主题|Description|  
+|主题|说明|  
 |-----------|-----------------|  
-|[支持的数据源（SSAS 表格）](tabular-models/data-sources-supported-ssas-tabular.md)|本主题提供有关可以从中导入数据的不同数据源的信息。|  
-|[支持的数据类型（SSAS 表格）](tabular-models/data-types-supported-ssas-tabular.md)|本主题提供有关表格模型中支持的各种数据类型的信息。|  
-|[模拟（SSAS 表格）](tabular-models/impersonation-ssas-tabular.md)|本主题提供有关模拟的信息，该信息提供在连接到数据源以导入和刷新数据时 Analysis Services 使用的登录凭据。|  
-|[导入数据（SSAS 表格）](import-data-ssas-tabular.md)|本节中的任务说明如何从不同的数据源导入数据。|  
-|[处理数据（SSAS 表格）](process-data-ssas-tabular.md)|本节中的任务说明如何处理（刷新）或更改已导入模型的数据。|  
-|[编辑现有数据源连接（SSAS 表格）](edit-an-existing-data-source-connection-ssas-tabular.md)|说明如何编辑已创建并用于从源导入数据的数据源连接。|  
+|[&#40;SSAS 表格&#41;支持的数据源](tabular-models/data-sources-supported-ssas-tabular.md)|本主题提供有关可以从中导入数据的不同数据源的信息。|  
+|[&#40;SSAS 表格&#41;支持的数据类型](tabular-models/data-types-supported-ssas-tabular.md)|本主题提供有关表格模型中支持的各种数据类型的信息。|  
+|[模拟 &#40;SSAS 表格&#41;](tabular-models/impersonation-ssas-tabular.md)|本主题提供有关模拟的信息，该信息提供在连接到数据源以导入和刷新数据时 Analysis Services 使用的登录凭据。|  
+|[&#40;SSAS 表格&#41;导入数据](import-data-ssas-tabular.md)|本节中的任务说明如何从不同的数据源导入数据。|  
+|[&#40;SSAS 表格&#41;处理数据](process-data-ssas-tabular.md)|本节中的任务说明如何处理（刷新）或更改已导入模型的数据。|  
+|[编辑现有数据源连接 &#40;SSAS 表格&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)|说明如何编辑已创建并用于从源导入数据的数据源连接。|  
   
   
