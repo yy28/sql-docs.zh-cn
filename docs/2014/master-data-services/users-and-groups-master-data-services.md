@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 58373531871a5db8ff859280de52cbe21562bfb5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478619"
 ---
 # <a name="users-and-groups-master-data-services"></a>用户和组 (Master Data Services)
@@ -34,17 +34,17 @@ ms.locfileid: "65478619"
   
  若要在用户界面的 **“资源管理器”** 功能区域中执行操作，必须为组或用户分配对 **“资源管理器”** 功能区域的访问权限以及对模型对象的相应权限。  
   
- 如果用户或组需要访问其他功能区域，该用户或组必须是管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](administrators-master-data-services.md)。  
+ 如果用户或组需要访问其他功能区域，该用户或组必须是管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](administrators-master-data-services.md)。  
   
-## <a name="best-practice"></a>最佳实践  
+## <a name="best-practice"></a>最佳做法  
  为了简化管理，请创建组并为每个组分配针对功能区域和模型对象的权限。 然后，您可以从这些组中添加和删除用户，而无需访问 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 用户界面。  
   
  不要向单个用户分配其他权限，也不要将一个用户包括在对 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]具有访问权限的多个组中。 此外，不要使用层次结构成员权限，除非您希望某个组对特定成员具有受限的访问权限。  
   
-## <a name="see-also"></a>请参阅  
- [添加用户 (Master Data Services)](../../2014/master-data-services/add-a-user-master-data-services.md)   
- [添加组 (Master Data Services)](../../2014/master-data-services/add-a-group-master-data-services.md)   
+## <a name="see-also"></a>另请参阅  
+ [添加用户 &#40;Master Data Services&#41;](../../2014/master-data-services/add-a-user-master-data-services.md)   
+ [添加组 &#40;Master Data Services&#41;](../../2014/master-data-services/add-a-group-master-data-services.md)   
  [删除用户或组 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-users-or-groups-master-data-services.md)   
- [测试用户权限 &#40;Master Data Services&#41;](../../2014/master-data-services/test-a-user-s-permissions-master-data-services.md)  
+ [测试用户 &#40;Master Data Services 的权限&#41;](../../2014/master-data-services/test-a-user-s-permissions-master-data-services.md)  
   
   

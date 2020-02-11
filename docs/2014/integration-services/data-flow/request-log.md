@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 521d40529501d761b8e50300c16a816284109695
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770883"
 ---
 # <a name="request-log"></a>请求日志
@@ -42,13 +42,13 @@ ms.locfileid: "62770883"
     >  单击 **“预览”** 还将打开 **“预览”** 对话框。 有关此对话框的详细信息，请参阅 [Preview](preview.md)。  
   
 ## <a name="options"></a>选项  
- **Time**  
+ **时间**  
  显示所记录事件的时间。  
   
- **类型**  
+ 类型   
  显示所记录事件的类型。 下表列出了可能的事件类型。  
   
-|ReplTest1|Description|  
+|值|说明|  
 |-----------|-----------------|  
 |S|成功消息。|  
 |E|错误消息|  
@@ -56,11 +56,11 @@ ms.locfileid: "62770883"
 |I|信息性消息。|  
 |A|操作已中止。|  
   
- **Message**  
+ **消息**  
  显示与记录事件相关联的消息文本。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SAP BW 源编辑器（“连接管理器”页）](sap-bw-source-editor-connection-manager-page.md)   
- [Microsoft Connector 1.1 for SAP BW 的 F1 帮助](../microsoft-connector-for-sap-bw-f1-help.md)  
+ [Microsoft Connector 1.1 for SAP BW F1 帮助](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

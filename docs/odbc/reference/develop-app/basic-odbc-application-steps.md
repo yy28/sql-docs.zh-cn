@@ -14,28 +14,28 @@ ms.assetid: a92d1f78-c669-47ad-88c4-0b1a93503dfc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 524c4b8f8c9467358a3868f191f8a0d527ca3d70
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67909818"
 ---
 # <a name="basic-odbc-application-steps"></a>基本 ODBC 应用程序步骤
-本部分介绍 ODBC 应用程序的常规流程。 不太可能的任何应用程序按此顺序完全调用所有这些函数。 但是，大多数应用程序使用这些步骤的某些变体。 在下图中显示的基本应用程序的步骤。  
+本部分介绍 ODBC 应用程序的常规流程。 任何应用程序不太可能会完全按此顺序调用所有这些函数。 但是，大多数应用程序都使用这些步骤的一些变化形式。 下图显示了基本应用程序步骤。  
   
  ![ODBC 应用程序的基本步骤](../../../odbc/reference/develop-app/media/pr10.gif "pr10")  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
--   [步骤 1：连接到数据源](../../../odbc/reference/develop-app/step-1-connect-to-the-data-source.md)  
+-   [步骤 1：连接数据源](../../../odbc/reference/develop-app/step-1-connect-to-the-data-source.md)  
   
 -   [步骤 2：初始化应用程序](../../../odbc/reference/develop-app/step-2-initialize-the-application.md)  
   
 -   [步骤 3：生成并执行 SQL 语句](../../../odbc/reference/develop-app/step-3-build-and-execute-an-sql-statement.md)  
   
--   [步骤 4a:提取的结果](../../../odbc/reference/develop-app/step-4a-fetch-the-results.md)  
+-   [步骤 4a：提取结果](../../../odbc/reference/develop-app/step-4a-fetch-the-results.md)  
   
--   [步骤 4b:提取行计数](../../../odbc/reference/develop-app/step-4b-fetch-the-row-count.md)  
+-   [步骤 4b：提取行计数](../../../odbc/reference/develop-app/step-4b-fetch-the-row-count.md)  
   
 -   [步骤 5：提交事务](../../../odbc/reference/develop-app/step-5-commit-the-transaction.md)  
   

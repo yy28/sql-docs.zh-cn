@@ -1,5 +1,5 @@
 ---
-title: 计算列 (SSAS 表格) |Microsoft Docs
+title: 计算列（SSAS 表格） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,21 +11,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e9a93fffba5c34d26cdb0305b0f6a97369e51b3e
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67284894"
 ---
 # <a name="calculated-columns-ssas-tabular"></a>计算列（SSAS 表格）
-  在表格模型中，通过计算列可以将新数据添加到您的模型。 而不是粘贴或导入到列的值，您可以创建用于定义列的行级值的 DAX 公式。 然后，计算列可用于报表、数据透视表或数据透视图中，您可以像使用任何其他数据列一样使用计算列。  
+  在表格模型中，通过计算列可以将新数据添加到您的模型。 您可以创建定义列的行级值的 DAX 公式，而不是在列中粘贴或导入值。 然后，计算列可用于报表、数据透视表或数据透视图中，您可以像使用任何其他数据列一样使用计算列。  
   
 > [!NOTE]  
 >  在 DirectQuery 模式下，表格模型不支持计算列。 有关详细信息，请参阅 [DirectQuery 模式（SSAS 表格）](directquery-mode-ssas-tabular.md)。  
   
  本主题的内容：  
   
--   [优势](#bkmk_understanding)  
+-   [便利](#bkmk_understanding)  
   
 -   [命名计算列](#bkmk_naming)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "67284894"
   
  此公式将从 StartDate 列中提取月份。 它然后计算表中每一行的月末值。 第二个参数指定 StartDate 中该月前或该月后的月份数；在这个例子中，0 意味着同一月。 例如，如果 StartDate 列中的值为 6/1/2001，则计算列中的值将是 6/30/2001。  
   
-##  <a name="bkmk_naming"></a> 命名计算列  
+##  <a name="bkmk_naming"></a>命名计算列  
  默认情况下，新的计算列将添加到表中其他列的右侧，并且自动向该列分配默认名称 **CalculatedColumn1**、 **CalculatedColumn2**，依此类推。 您也可以右键单击某一列，然后单击“插入列”以便在两个现有列之间创建一个新列。 您可以通过单击和拖动在同一个表中重新排列列，并且可以在创建列后重命名列；但是，您应该知道针对计算列的更改的以下限制：  
   
 -   每个列名称在表中都必须唯一。  
@@ -62,7 +62,7 @@ ms.locfileid: "67284894"
   
 -   有一些字符不能用于列名中。 有关详细信息，请参阅 [PowerPivot 的 DAX 语法规范](/dax/dax-syntax-reference)中的“命名要求”。  
   
-##  <a name="bkmk_perf"></a> 计算列的性能  
+##  <a name="bkmk_perf"></a>计算列的性能  
  与用于度量值的公式相比，用于计算列的公式可能会消耗更多的资源。 原因之一是：计算列的结果始终是为表中的每一行计算的，而度量值仅是为报表、数据透视表或数据透视图中使用的筛选器定义的单元计算的。 例如，某个具有 100 万行的表将始终具有含 100 万个结果的计算列，并且对性能具有相应影响。 但是，数据透视表通常会通过应用行和列标题对数据进行筛选；因此，仅为数据透视表的每个单元中的数据子集计算度量值。  
   
  一个公式对于在公式中引用的对象（例如其他列或计算值的表达式）具有依赖关系。 例如，对于基于其他列的计算列，或对于包含引用列的表达式的计算，只有在计算这些相关列之后，才会计算它们。 默认情况下，在工作簿中启用自动刷新；因此，在更新值和刷新公式时，所有此类依赖项都可能会影响性能。  
@@ -79,13 +79,13 @@ ms.locfileid: "67284894"
   
 ##  <a name="bkmk_rel_tasks"></a> 相关任务  
   
-|主题|Description|  
+|主题|说明|  
 |-----------|-----------------|  
-|[创建计算列（SSAS 表格）](ssas-calculated-columns-create-a-calculated-column.md)|本主题中的任务描述了如何向表中添加新的计算列。|  
+|[&#40;SSAS 表格创建计算列&#41;](ssas-calculated-columns-create-a-calculated-column.md)|本主题中的任务描述了如何向表中添加新的计算列。|  
   
-## <a name="see-also"></a>请参阅  
- [表和列（SSAS 表格）](tables-and-columns-ssas-tabular.md)   
- [度量值（SSAS 表格）](measures-ssas-tabular.md)   
- [计算（SSAS 表格）](calculations-ssas-tabular.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;SSAS 表格&#41;的表和列](tables-and-columns-ssas-tabular.md)   
+ [&#40;SSAS 表格&#41;度量值](measures-ssas-tabular.md)   
+ [&#40;SSAS 表格&#41;计算](calculations-ssas-tabular.md)  
   
   

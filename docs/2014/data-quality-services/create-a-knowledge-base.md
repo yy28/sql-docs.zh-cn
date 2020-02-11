@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2402a69f428fe0c9ba2359f100e2baf16e1a1d04
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480999"
 ---
 # <a name="create-a-knowledge-base"></a>创建知识库
@@ -25,19 +25,19 @@ ms.locfileid: "65480999"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a> 先决条件  
+###  <a name="Prerequisites"></a>先决条件  
  要创建知识库，您必须安装有 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 和 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_administrator 角色，才能创建知识库。  
   
-##  <a name="Createaknowledgebase"></a> Create a knowledge base  
+##  <a name="Createaknowledgebase"></a>创建知识库  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../../2014/data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中，单击 **“新建知识库”** 。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中，单击 **“新建知识库”**。  
   
 3.  输入新知识库的名称和说明。  
   
@@ -45,9 +45,9 @@ ms.locfileid: "65480999"
   
     -   如果您不想基于现有知识库或数据文件来创建新知识库，则选择 **“无”** 。  
   
-    -   选择 **“现有知识库”** 可以基于已在 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]上创建的知识库或默认知识库来创建新知识库。 从 **“选择知识库”** 下拉列表中选择知识库，或者单击 **“浏览”** 以便显示 **“选择知识库”** 对话框，选择新知识库要基于的一个现有知识库，然后单击 **“确定”** 。 在您从 Tablet 中选择一个知识库时，将在该对话框的右侧窗格中显示知识库中的域和匹配规则。 你还可以选择“DQS 数据”  知识库，这是默认的知识库，包含与美国公司、地址和有关方数据相关的通用全新域和知识。  
+    -   选择 **“现有知识库”** 可以基于已在 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]上创建的知识库或默认知识库来创建新知识库。 从 **“选择知识库”** 下拉列表中选择知识库，或者单击 **“浏览”** 以便显示 **“选择知识库”** 对话框，选择新知识库要基于的一个现有知识库，然后单击 **“确定”**。 在您从 Tablet 中选择一个知识库时，将在该对话框的右侧窗格中显示知识库中的域和匹配规则。 你还可以选择“DQS 数据” **** 知识库，这是默认的知识库，包含与美国公司、地址和有关方数据相关的通用全新域和知识。  
   
-    -   选择 **“自 DQS 文件导入”** 将基于 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]上的 DQS 文件创建新的知识库。 单击 **“浏览”** ，选择扩展名为 .dqs 的 DQS 数据文件，然后单击 **“确定”** 。  
+    -   选择 **“自 DQS 文件导入”** 将基于 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]上的 DQS 文件创建新的知识库。 单击 **“浏览”**，选择扩展名为 .dqs 的 DQS 数据文件，然后单击 **“确定”**。  
   
 5.  在 **“选择活动”** 中，选择要对新知识库执行的活动：  
   
@@ -57,9 +57,9 @@ ms.locfileid: "65480999"
   
     -   选择 **“匹配策略”** 可以创建匹配策略，并将其添加到知识库。  
   
-6.  单击 **“创建”** 。  
+6.  单击 **“创建”**。  
   
-##  <a name="FollowUp"></a> 跟进：创建知识库后  
+##  <a name="FollowUp"></a>跟进：在创建知识库后  
  在创建一个知识库后，系统将会向您提供可用于执行知识发现的向导、可用于创建匹配策略的向导或者可用于执行域管理的若干页。 有关知识发现、域管理或匹配策略的详细信息，请参阅[执行知识发现](../../2014/data-quality-services/perform-knowledge-discovery.md)[管理域](../../2014/data-quality-services/managing-a-domain.md)或[创建匹配策略](../../2014/data-quality-services/create-a-matching-policy.md)。  
   
   

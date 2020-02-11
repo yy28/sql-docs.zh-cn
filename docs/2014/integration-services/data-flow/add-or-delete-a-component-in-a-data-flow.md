@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5677fe0742c44924483b4e49b50e9746b6ed7449
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832207"
 ---
 # <a name="add-or-delete-a-component-in-a-data-flow"></a>在数据流中添加或删除组件
@@ -51,7 +51,7 @@ ms.locfileid: "62832207"
   
 6.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [连接数据流中的组件](data-flow.md)   
  [在数据流组件中配置错误输出](../configure-an-error-output-in-a-data-flow-component.md)   
  [数据流](data-flow.md)  

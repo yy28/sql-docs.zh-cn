@@ -18,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5b1317bc41be836cfad5159339a4e7c90fcfbc83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62811248"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>使用扩展保护连接到数据库引擎
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自  始支持扩展保护 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。 **针对验证的扩展保护** 是操作系统实现的一项网络组件功能。 Windows 7 和 Windows Server 2008 R2 支持**扩展保护** 。 旧**操作系统的 Service Pack 中包括** 扩展保护 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 功能。 使用**扩展保护**进行连接时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会更安全。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自  始支持扩展保护 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。 **针对验证的扩展保护** 是操作系统实现的一项网络组件功能。 Windows 7 和 Windows Server 2008 R2 支持**扩展保护** 。 旧**操作系统的 Service Pack 中包括** 扩展保护 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 功能。 使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]扩展保护**进行连接时，** 会更安全。  
   
 > [!IMPORTANT]  
 >  默认情况下，Windows 不启用 **扩展保护** 。 有关如何在 Windows 中启用 **扩展保护** 的信息，请参阅 [针对验证的扩展保护](https://support.microsoft.com/kb/968389)。  
@@ -76,7 +76,7 @@ ms.locfileid: "62811248"
   
 -   **接受的 NTLM SPN**  
   
-     当多个 SPN 知道一个服务器时，需要 **“接受的 NTLM SPN”** 变量。 当客户端尝试使用服务器不知道的有效 SPN 连接到服务器时，服务绑定将失败。 为避免此问题，用户可以使用 **“接受的 NTLM SPN”** 指定表示服务器的多个 SPN。 **“接受的 NTLM SPN”** 是一系列由分号分隔的 SPN。 例如，若要允许 SPN **MSSQLSvc/ HostName1.Contoso.com** 和 **MSSQLSvc/ HostName2.Contoso.com**，请在“接受的 NTLM SPN”  框中键入 **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com** 。 变量的最大长度为 2048 个字符。 **“接受的 NTLM SPN”** 位于 **配置管理器中的“MSSQLSERVER 的协议属性”（“高级”选项卡）**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
+     当多个 SPN 知道一个服务器时，需要 **“接受的 NTLM SPN”** 变量。 当客户端尝试使用服务器不知道的有效 SPN 连接到服务器时，服务绑定将失败。 为避免此问题，用户可以使用 **“接受的 NTLM SPN”** 指定表示服务器的多个 SPN。 **“接受的 NTLM SPN”** 是一系列由分号分隔的 SPN。 例如，若要允许 SPN **MSSQLSvc/ HostName1.Contoso.com** 和 **MSSQLSvc/ HostName2.Contoso.com**，请在“接受的 NTLM SPN”  框中键入 **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com** 。 变量的最大长度为 2048 个字符。 **“接受的 NTLM SPN”** 位于 **配置管理器中的“MSSQLSERVER 的协议属性”（“高级”选项卡）** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
   
 ## <a name="enabling-extended-protection-for-the-database-engine"></a>为数据库引擎启用扩展保护  
  若要使用 **扩展保护**，服务器和客户端都必须具有支持 **扩展保护**的操作系统，并且必须在操作系统上启用 **扩展保护** 。 有关如何为操作系统启用 **扩展保护** 的详细信息，请参阅 [针对验证的扩展保护](https://support.microsoft.com/kb/968389)。  
@@ -85,7 +85,7 @@ ms.locfileid: "62811248"
   
 1.  在 **“开始”** 菜单上，选择 **“所有程序”** ，指向 **Microsoft SQL Server** ，再单击 **“SQL Server 配置管理器”** 。  
   
-2.  展开“SQL Server 网络配置”  、右键单击“  *\<* *>* ，然后单击“属性”  。  
+2.  展开“SQL Server 网络配置” ****、右键单击“ **** *\<**>*，然后单击“属性” ****。  
   
 3.  对于渠道绑定和服务绑定，同时在 **“高级”** 选项卡上将 **“扩展保护”** 设置为适当的设置。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "62811248"
   
  当通过 HTTP 连接或 HTTPS 连接使用 IIS 访问 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可以利用 IIS 提供的扩展保护。 有关配置 IIS 使用扩展保护的详细信息，请参阅 [Configure Extended Protection in IIS 7.5（在 IIS 7.5 中配置扩展保护）](https://go.microsoft.com/fwlink/?LinkId=181105)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [服务器网络配置](server-network-configuration.md)   
  [客户端网络配置](client-network-configuration.md)   
  [针对验证的扩展保护概述](https://go.microsoft.com/fwlink/?LinkID=177943)   

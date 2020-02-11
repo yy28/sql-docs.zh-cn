@@ -15,15 +15,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a9a7bdca770bccaac50da1ac6a7688eabd335e20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62791861"
 ---
 # <a name="availability-group-is-not-ready-for-automatic-failover"></a>可用性组未准备好进行自动故障转移
     
-## <a name="introduction"></a>简介  
+## <a name="introduction"></a>介绍  
   
 |||  
 |-|-|  
@@ -32,7 +32,7 @@ ms.locfileid: "62791861"
 |**类别**|**严重**|  
 |**方面**|可用性组 (availability group)|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>说明  
  此策略检查验证可用性组是否至少具有一个故障转移就绪的辅助副本。 当主副本的故障转移模式为自动但是可用性组中没有故障转移就绪的辅助副本时，此策略处于不正常状态并引发警报。  
   
  当至少一个辅助副本的自动故障转移就绪时，此策略处于正常状态。  
@@ -50,8 +50,8 @@ ms.locfileid: "62791861"
   
 -   使用此策略验证数据是否处于同步状态以及自动故障转移目标是否 SYNCHRONIZED，然后解决可用性副本的问题。  
   
-## <a name="see-also"></a>请参阅  
- [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [使用 AlwaysOn 面板 (SQL Server Management Studio)](use-the-always-on-dashboard-sql-server-management-studio.md)  
+## <a name="see-also"></a>另请参阅  
+ [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [使用 AlwaysOn 仪表板 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

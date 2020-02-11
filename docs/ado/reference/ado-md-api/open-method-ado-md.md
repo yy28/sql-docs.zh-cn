@@ -1,5 +1,5 @@
 ---
-title: Open 方法 (ADO MD) |Microsoft Docs
+title: Open 方法（ADO MD） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: a87d8080-a238-45e5-bc80-9a8625b3810f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 089fad427989c26ed1ed22ec3e9267297a29b820
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949380"
 ---
 # <a name="open-method-ado-md"></a>Open 方法 (ADO MD)
-检索多维查询的结果，并返回到结果[单元集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)。  
+检索多维查询的结果，并将结果返回到[单元集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,23 +33,23 @@ ms.locfileid: "67949380"
 Cellset.Open Source, ActiveConnection  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *数据源*  
- 可选。 一个**变体**的计算结果为有效的多维查询，例如多维表达式 (MDX) 查询。 *源*参数对应于[源](../../../ado/reference/ado-md-api/source-property-ado-md.md)属性。 有关 MDX 的详细信息，请参阅[OLE DB 的联机分析处理 (OLAP)](https://msdn.microsoft.com/8a7673c6-3ca1-4411-9f1e-adf1e47df4f3) Microsoft 数据访问组件 SDK 中的文档。  
+ 可选。 计算结果为有效多维查询的**变量**，如多维表达式（MDX）查询。 *Source*参数对应于[source](../../../ado/reference/ado-md-api/source-property-ado-md.md)属性。 有关 MDX 的详细信息，请参阅 Microsoft 数据访问组件 SDK 中的[联机分析处理（OLAP）的 OLE DB](https://msdn.microsoft.com/8a7673c6-3ca1-4411-9f1e-adf1e47df4f3)文档。  
   
  *ActiveConnection*  
- 可选。 一个**Variant**的计算结果为字符串指定有效的 ADO[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象变量的名称或连接的定义。 *ActiveConnection*参数指定要在其中打开连接[单元集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)对象。 如果通过连接定义为此参数，ADO 将打开一个新的连接，使用指定的参数。 *ActiveConnection*参数对应于[ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)属性。  
+ 可选。 一个**变量**，其计算结果为字符串，该字符串指定有效的 ADO[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象变量名称或连接定义。 *ActiveConnection*参数指定要在其中打开[单元集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)对象的连接。 如果传递此参数的连接定义，ADO 将使用指定的参数打开新连接。 *ActiveConnection*参数对应于[ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)属性。  
   
 ## <a name="remarks"></a>备注  
- **打开**方法将生成错误，如果省略了其参数之一并且未在尝试打开之前设置其相应的属性值**单元集**。  
+ 如果在尝试打开**单元集**之前省略了其参数的任何一个参数并且尚未设置其相应的属性值，则**Open**方法会生成错误。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [单元集对象 (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
   
-## <a name="see-also"></a>请参阅  
- [单元集示例 (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
- [ActiveConnection 属性 (ADO MD)](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)   
- [Close 方法 (ADO MD)](../../../ado/reference/ado-md-api/close-method-ado-md.md)   
- [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [源属性 (ADO MD)](../../../ado/reference/ado-md-api/source-property-ado-md.md)   
+## <a name="see-also"></a>另请参阅  
+ [单元集示例（VB）](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
+ [ActiveConnection 属性（ADO MD）](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)   
+ [Close 方法（ADO MD）](../../../ado/reference/ado-md-api/close-method-ado-md.md)   
+ [Connection 对象（ADO）](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Source 属性（ADO MD）](../../../ado/reference/ado-md-api/source-property-ado-md.md)   
  [State 属性 (ADO MD)](../../../ado/reference/ado-md-api/state-property-ado-md.md)

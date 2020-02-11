@@ -1,5 +1,5 @@
 ---
-title: 键入属性示例 （字段） (VB) |Microsoft Docs
+title: Type 属性示例（字段）（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: accb72f5-a3bd-4a7e-92b6-6da0783b4b75
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0ab43149a0e938be4359203b0da750b04a82b545
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67936685"
 ---
 # <a name="type-property-example-field-vb"></a>Type 属性示例（字段）(VB)
-此示例演示[类型](../../../ado/reference/ado-api/type-property-ado.md)通过显示的值相对应的常数的名称的属性[类型](../../../ado/reference/ado-api/type-property-ado.md)属性的所有[字段](../../../ado/reference/ado-api/field-object.md)中的对象***员工***表。 若要运行此过程需要 FieldType 函数。  
+此示例通过显示与***Employees***表中所有[Field](../../../ado/reference/ado-api/field-object.md)对象的[Type](../../../ado/reference/ado-api/type-property-ado.md)属性值相对应的常量的名称，演示了[type](../../../ado/reference/ado-api/type-property-ado.md)属性。 运行此过程需要 FieldType 函数。  
   
 ```  
 'BeginTypeFieldVB  
@@ -105,6 +105,6 @@ End Sub
 Attribute VB_Name = "TypeField"  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [字段对象](../../../ado/reference/ado-api/field-object.md)   
+## <a name="see-also"></a>另请参阅  
+ [Field 对象](../../../ado/reference/ado-api/field-object.md)   
  [Type 属性 (ADO)](../../../ado/reference/ado-api/type-property-ado.md)

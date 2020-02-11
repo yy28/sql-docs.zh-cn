@@ -1,5 +1,5 @@
 ---
-title: 删除列对话框 |Microsoft Docs
+title: "\"删除列\" 对话框 |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 211d5020c85c5295f195389904385981db46d315
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109342"
 ---
 # <a name="delete-columns-dialog-box"></a>“删除列”对话框
@@ -32,8 +32,8 @@ ms.locfileid: "66109342"
  **仅删除列**  
  选择此选项可以仅删除选定的列。  
   
-## <a name="see-also"></a>请参阅  
- [报表设计器的 F1 帮助](tools/report-designer-f1-help.md)   
+## <a name="see-also"></a>另请参阅  
+ [报表设计器 F1 帮助](tools/report-designer-f1-help.md)   
  [对数据进行筛选、分组和排序（报表生成器和 SSRS）](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Tablix 数据区域（报表生成器和 SSRS）](../../2014/reporting-services/tablix-data-region-report-builder-and-ssrs.md)   
  [表、矩阵和列表（报表生成器和 SSRS）](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c9d58fb2a5702a2a6c3f5ac74ae970411d887b62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809346"
 ---
 # <a name="server-properties-connections-page"></a>服务器属性（“连接”页）
@@ -33,7 +33,7 @@ ms.locfileid: "62809346"
  **Default connection options**  
  指定默认连接选项，如下表所述：  
   
-|配置选项|Description|  
+|配置选项|说明|  
 |--------------------------|-----------------|  
 |**disable deferred constraint checking**|控制执行期间或延迟的约束检查。|  
 |**隐式事务**|控制在运行一条语句时，是否隐式启动一项事务。|  
@@ -70,8 +70,8 @@ ms.locfileid: "62809346"
  **“运行值”**  
  查看此窗格上选项的当前运行值。 这些值是只读的。  
   
-## <a name="see-also"></a>请参阅  
- [选项&#40;查询执行： SQL Server: 高级页&#41;](../options-query-execution-sql-server-advanced-page.md)   
+## <a name="see-also"></a>另请参阅  
+ [查询执行 &#40;选项： SQL Server： "高级" 页&#41;](../options-query-execution-sql-server-advanced-page.md)   
  [服务器配置选项 (SQL Server)](server-configuration-options-sql-server.md)  
   
   

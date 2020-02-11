@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 22b1c18cba793d5845e2adf92b1dca300911a72f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62823794"
 ---
 # <a name="manage-files-with-encoding"></a>管理使用编码的文件
@@ -42,7 +42,7 @@ ms.locfileid: "62823794"
   
 #### <a name="to-save-a-file-with-a-different-encoding-or-line-ending-type"></a>用其他编码或行尾类型保存文件  
   
-1.  上**文件**菜单上，单击**保存\<文件名 > 作为**。  
+1.  在 "**文件**" 菜单上，单击 "**将文件名保存\<> 为**"。  
   
 2.  在“文件另存为”  对话框中，展开“保存”  按钮，再单击“编码保存”  。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62823794"
   
 -   UTF8 文件不能在 Visual SourceSafe 中安全使用，因为在签入、签出、差异检查和合并过程中，会产生导致 UTF8 文件编辑器出现问题的更改。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [用于管理解决方案和项目的文件](files-that-manage-solutions-and-projects.md)   
  [将文件扩展名与代码编辑器关联](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
   

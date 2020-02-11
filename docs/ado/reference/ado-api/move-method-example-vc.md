@@ -1,5 +1,5 @@
 ---
-title: Move 方法示例 （VC + +） |Microsoft Docs
+title: Move 方法示例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 0e08af60-f668-4092-8b6a-9e8b6db90448
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5ad0cfea4762dc1e6e757a0fe6182505927b70c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932090"
 ---
 # <a name="move-method-example-vc"></a>Move 方法示例 (VC++)
-此示例使用[移动](../../../ado/reference/ado-api/move-method-ado.md)记录指针定位的方法根据用户输入。  
+此示例使用[Move](../../../ado/reference/ado-api/move-method-ado.md)方法基于用户输入定位记录指针。  
   
 ## <a name="example"></a>示例  
   
@@ -257,5 +257,5 @@ Enter number of records to Move
 (positive or negative, Enter to quit):  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Move 方法 (ADO)](../../../ado/reference/ado-api/move-method-ado.md)

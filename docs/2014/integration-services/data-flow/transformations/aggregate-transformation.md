@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4759050a9453e1925ea47bc3dbf66d13aa821feb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770633"
 ---
 # <a name="aggregate-transformation"></a>聚合转换
@@ -30,14 +30,14 @@ ms.locfileid: "62770633"
 ## <a name="operations"></a>操作  
  聚合转换支持下列运算。  
   
-|操作|Description|  
+|Operation|说明|  
 |---------------|-----------------|  
 |Group by|将数据集划分为组。 任何数据类型的列都可用于分组。 有关详细信息，请参阅 [GROUP BY (Transact-SQL)](/sql/t-sql/queries/select-group-by-transact-sql)。|  
-|Sum|对列中的值求和。 只能对数值数据类型的列求和。 有关详细信息，请参阅 [SUM (Transact-SQL)](/sql/t-sql/functions/sum-transact-sql)。|  
+|SUM|对列中的值求和。 只能对数值数据类型的列求和。 有关详细信息，请参阅 [SUM (Transact-SQL)](/sql/t-sql/functions/sum-transact-sql)。|  
 |平均值|返回列中值的平均值。 只能对数值数据类型的列求平均值。 有关详细信息，请参阅 [AVG (Transact-SQL)](/sql/t-sql/functions/avg-transact-sql)。|  
 |Count|返回组中的项数。 有关详细信息，请参阅 [COUNT (Transact-SQL)](/sql/t-sql/functions/count-transact-sql)。|  
 |Count distinct|返回组中的唯一非空值的数量。|  
-|最低要求|返回组中的最小值。 有关详细信息，请参阅 [MIN (Transact-SQL)](/sql/t-sql/functions/min-transact-sql)。 与 Transact-SQL MIN 函数不同，此运算只能用于数值、日期和时间数据类型。|  
+|最小值|返回组中的最小值。 有关详细信息，请参阅 [MIN (Transact-SQL)](/sql/t-sql/functions/min-transact-sql)。 与 Transact-SQL MIN 函数不同，此运算只能用于数值、日期和时间数据类型。|  
 |最大值|返回组中的最大值。 有关详细信息，请参阅 [MAX (Transact-SQL)](/sql/t-sql/functions/max-transact-sql)。 与 Transact-SQL MAX 函数不同，此运算只能用于数值、日期和时间数据类型。|  
   
  聚合转换处理空值的方式和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 关系数据库引擎相同。 此行为在 SQL-92 标准中定义。 下列规则适用：  
@@ -100,7 +100,7 @@ ms.locfileid: "62770633"
   
  聚合转换是异步过程，也就是说它并非逐行地占用和发布数据， 而是占用整个行集，执行其分组和聚合操作，然后发布结果。  
   
- 此转换不传递任何列，而是在数据流中为发布的数据创建新列。 只有应用聚合函数的输入列或转换用于分组的输入列才复制到转换输出。 例如，聚合转换输入可能有三列：CountryRegion  、City  和 Population  。 转换按 **CountryRegion** 列分组，并对 **Population** 列应用 Sum 函数。 因此，输出不包含 **City** 列。  
+ 此转换不传递任何列，而是在数据流中为发布的数据创建新列。 只有应用聚合函数的输入列或转换用于分组的输入列才复制到转换输出。 例如，聚合转换输入可能有三列： **CountryRegion**、 **City**和 **Population**。 转换按 **CountryRegion** 列分组，并对 **Population** 列应用 Sum 函数。 因此，输出不包含 **City** 列。  
   
  也可将多个输出添加到聚合转换，并将每个聚合定向到不同输出。 例如，如果聚合转换应用 Sum 和 Average 函数，则可以将每个聚合定向到不同输出。  
   
@@ -112,13 +112,13 @@ ms.locfileid: "62770633"
   
  有关可在 **“聚合转换编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
   
--   [聚合转换编辑器（“聚合”选项卡）](../../aggregate-transformation-editor-aggregations-tab.md)  
+-   [聚合转换编辑器 &#40;聚合 "选项卡&#41;](../../aggregate-transformation-editor-aggregations-tab.md)  
   
--   [聚合转换编辑器（“高级”选项卡）](../../aggregate-transformation-editor-advanced-tab.md)  
+-   [聚合转换编辑器 &#40;高级 "选项卡&#41;](../../aggregate-transformation-editor-advanced-tab.md)  
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [通用属性](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [转换自定义属性](transformation-custom-properties.md)  
   
@@ -133,7 +133,7 @@ ms.locfileid: "62770633"
 ## <a name="related-tasks"></a>Related Tasks  
  [使用聚合转换来聚合数据集中的值](aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据流](../data-flow.md)   
  [Integration Services 转换](integration-services-transformations.md)  
   

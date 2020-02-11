@@ -1,5 +1,5 @@
 ---
-title: sp_dropmergesubscription (TRANSACT-SQL) |Microsoft Docs
+title: sp_dropmergesubscription （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8bf38ef67089c65d53bedcb56afd81de3e21a413
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933875"
 ---
-# <a name="spdropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
+# <a name="sp_dropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  删除对合并发布的订阅及其关联的合并代理。 在发布服务器上对发布数据库执行此存储的过程。  
+  删除对合并发布的订阅及其关联的合并代理。 此存储过程在发布服务器上对发布数据库执行。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,43 +42,43 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publication = ] 'publication'` 为发布名称。 *发布*是**sysname**，默认值为 NULL。 该发布必须已经存在，并符合标识符的相关规则。  
+`[ @publication = ] 'publication'`发布名称。 *发布*为**sysname**，默认值为 NULL。 该发布必须已经存在，并符合标识符的相关规则。  
   
-`[ @subscriber = ] 'subscriber'` 是订阅服务器的名称。 *订阅服务器上*是**sysname**，默认值为 NULL。  
+`[ @subscriber = ] 'subscriber'`订阅服务器的名称。 *订阅服务器*的值为**sysname**，默认值为 NULL。  
   
-`[ @subscriber_db = ] 'subscriber_db'` 是订阅数据库的名称。 *subscription_database*是**sysname**，默认值为 NULL。  
+`[ @subscriber_db = ] 'subscriber_db'`订阅数据库的名称。 *subscription_database*的默认值为**sysname**，默认值为 NULL。  
   
-`[ @subscription_type = ] 'subscription_type'` 是订阅的类型。 *subscription_type*是**nvarchar(15)** ，可以是下列值之一。  
+`[ @subscription_type = ] 'subscription_type'`订阅的类型。 *subscription_type*为**nvarchar （15）**，可以是下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
-|**所有**|推送订阅、请求订阅和匿名订阅|  
+|**一切**|推送订阅、请求订阅和匿名订阅|  
 |**匿名**|匿名订阅。|  
-|**push**|推送订阅。|  
-|**pull**|请求订阅。|  
-|**同时**（默认值）|推送订阅和请求订阅。|  
+|**请求**|推送订阅。|  
+|**请求**|请求订阅。|  
+|**both** （默认值）|推送订阅和请求订阅。|  
   
-`[ @ignore_distributor = ] ignore_distributor` 指示是否无需连接到分发服务器上执行此存储的过程。 *ignore_distributor*是**位**，默认值为**0**。 该参数可用于删除订阅，但不清除分发服务器上的任务。 在必须重新安装分发服务器的情况下，该参数也很有用。  
+`[ @ignore_distributor = ] ignore_distributor`指示是否在未连接到分发服务器的情况下执行此存储过程。 *ignore_distributor*为**bit**，默认值为**0**。 该参数可用于删除订阅，但不清除分发服务器上的任务。 在必须重新安装分发服务器的情况下，该参数也很有用。  
   
-`[ @reserved = ] reserved` 已保留供将来使用。 *保留*是**位**，默认值为**0**。  
+`[ @reserved = ] reserved`保留供将来使用。 *reserved*为**bit**，默认值为**0**。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** （成功）或**1** （失败）  
   
 ## <a name="remarks"></a>备注  
- **sp_dropmergesubscription**合并复制中使用。  
+ **sp_dropmergesubscription**用于合并复制。  
   
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_dropmergesubscription](../../relational-databases/replication/codesnippet/tsql/sp-dropmergesubscription_1.sql)]  
   
 ## <a name="permissions"></a>权限  
- 只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_dropmergesubscription**。  
+ 只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_dropmergesubscription**。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [删除推送订阅](../../relational-databases/replication/delete-a-push-subscription.md)   
  [删除请求订阅](../../relational-databases/replication/delete-a-pull-subscription.md)   
- [sp_addmergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
- [sp_changemergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
- [sp_helpmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
+ [sp_addmergesubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
+ [sp_changemergesubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
+ [sp_helpmergesubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
   
   

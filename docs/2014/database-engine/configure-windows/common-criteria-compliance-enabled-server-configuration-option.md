@@ -18,16 +18,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8fef699da6e63c534d19e0d66bfa076f85348d29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62786636"
 ---
 # <a name="common-criteria-compliance-enabled-server-configuration-option"></a>common criteria compliance enabled 服务器配置选项
   common criteria compliance enabled 选项用于启用通用准则所需的下列元素：  
   
-|条件|Description|  
+|条件|说明|  
 |--------------|-----------------|  
 |残留信息保护 (RIP)|RIP 要求将内存重新分配给新资源之前，用已知的位模式覆盖内存分配。 满足 RIP 标准有助于提高安全性；然而，覆盖内存分配会使性能降低。 启用 common criteria compliance enabled 选项之后，将执行覆盖操作。|  
 |查看登录统计信息的能力|启用 common criteria compliance enabled 选项之后，将启用登录审核。 用户每次成功登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，系统都会提供有关上一次成功登录的时间、上一次登录失败的时间以及上一次成功登录时间和当前登录时间之间尝试登录的次数的信息。 可以通过查询 [sys.dm_exec_sessions](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql) 动态管理视图来查看这些登录统计信息。|  
@@ -40,7 +40,7 @@ ms.locfileid: "62786636"
   
  如果使用 sp_configure 系统存储过程来更改该设置，则只有在“show advanced options”设置为 1 时才能更改“common criteria compliance enabled”。 该设置在服务器重新启动后生效。 可能的值为 0 和 1：  
   
--   0 表示未启用符合通用准则。 这是默认设置。  
+-   0 表示未启用符合通用准则。 这是默认值。  
   
 -   1 表示启用了符合通用准则。  
   
@@ -58,7 +58,7 @@ RECONFIGURE
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [服务器配置选项 (SQL Server)](server-configuration-options-sql-server.md)  
   
   

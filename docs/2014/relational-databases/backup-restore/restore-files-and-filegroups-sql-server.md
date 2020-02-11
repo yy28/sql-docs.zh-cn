@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2d056e61abd08a75b1a1b62117d351b2c55d7e09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62921143"
 ---
 # <a name="restore-files-and-filegroups-sql-server"></a>还原文件和文件组 (SQL Server)
@@ -51,13 +51,13 @@ ms.locfileid: "62921143"
   
 -   在简单恢复模式下，文件必须属于只读文件组。  
   
--   在完整恢复模式或大容量日志恢复模式下，必须先备份活动事务日志（称为日志尾部），然后才能还原文件。 有关详细信息，请参阅 [备份事务日志 (SQL Server)](back-up-a-transaction-log-sql-server.md)中还原文件和文件组。  
+-   在完整恢复模式或大容量日志恢复模式下，必须先备份活动事务日志（称为日志尾部），然后才能还原文件。 有关详细信息，请参阅 [备份事务日志 (SQL Server)](back-up-a-transaction-log-sql-server.md)数据库还原到一个新位置并且可以选择重命名该数据库。  
   
 -   若要还原已加密的数据库，您必须有权访问用于对数据库进行加密的证书或非对称密钥。 如果没有证书或非对称密钥，数据库将无法还原。 因此，只要需要该备份，就必须保留用于对数据库加密密钥进行加密的证书。 有关详细信息，请参阅 [SQL Server Certificates and Asymmetric Keys](../security/sql-server-certificates-and-asymmetric-keys.md)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  如果不存在要还原的数据库，则用户必须有 CREATE DATABASE 权限才能执行 RESTORE。 如果数据库存在，则 RESTORE 权限默认授予 **sysadmin** 和 **dbcreator** 固定服务器角色成员以及数据库的所有者 (**dbo**)（对于 FROM DATABASE_SNAPSHOT 选项，数据库始终存在）。  
   
  RESTORE 权限被授予那些成员身份信息始终可由服务器使用的角色。 因为只有在固定数据库可以访问且没有损坏时（在执行 RESTORE 时并不会总是这样）才能检查固定数据库角色成员身份，所以 **db_owner** 固定数据库角色成员没有 RESTORE 权限。  
@@ -94,11 +94,11 @@ ms.locfileid: "62921143"
     |-----------------|------------|  
     |**还原**|选中的复选框指示要还原的备份集。|  
     |**名称**|备份集的名称。|  
-    |**文件类型**|指定备份中的数据类型：**数据**，**日志**，或**Filestream 数据**。 包含在表中的数据备份在 **“数据”** 文件中。 事务日志数据备份在 **“日志”** 文件中。 存储在文件系统上的二进制大型对象 (BLOB) 数据备份在 **Filestream 数据** 文件中。|  
-    |**类型**|执行的备份类型：“完整”、“差异”或“事务日志”    。|  
+    |**文件类型**|指定备份中数据的类型：数据、日志，或 Filestream 数据    。 包含在表中的数据备份在 **“数据”** 文件中。 事务日志数据备份在 **“日志”** 文件中。 存储在文件系统上的二进制大型对象 (BLOB) 数据备份在 **Filestream 数据** 文件中。|  
+    |类型 |执行的备份类型：“完整”、“差异”或“事务日志”    。|  
     |**Server**|执行备份操作的数据库引擎实例的名称。|  
     |**文件逻辑名称**|文件的逻辑名称。|  
-    |**“数据库”**|备份操作中涉及的数据库的名称。|  
+    |**Database**|备份操作中涉及的数据库的名称。|  
     |**开始日期**|备份操作开始的日期和时间，按客户端的区域设置显示。|  
     |**完成日期**|备份操作完成的日期和时间，按客户端的区域设置显示。|  
     |**大小**|备份集的大小（字节）。|  
@@ -131,13 +131,13 @@ ms.locfileid: "62921143"
     |列标题|值|  
     |-----------------|------------|  
     |**原始文件名**|源备份文件的完整路径。|  
-    |**文件类型**|指定备份中的数据类型：**数据**，**日志**，或**Filestream 数据**。 包含在表中的数据备份在 **“数据”** 文件中。 事务日志数据备份在 **“日志”** 文件中。 存储在文件系统上的二进制大型对象 (BLOB) 数据备份在 **Filestream 数据** 文件中。|  
+    |**文件类型**|指定备份中数据的类型：数据、日志，或 Filestream 数据    。 包含在表中的数据备份在 **“数据”** 文件中。 事务日志数据备份在 **“日志”** 文件中。 存储在文件系统上的二进制大型对象 (BLOB) 数据备份在 **Filestream 数据** 文件中。|  
     |**还原为**|要还原的数据库文件的完整路径。 若要指定新的还原文件，请单击文本框，再编辑建议的路径和文件名。 更改 **“还原为”** 列中的路径或文件名等效于在 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE 语句中使用 MOVE 选项。|  
   
 11. **“恢复状态”** 面板确定还原操作之后的数据库状态。  
   
      **回退未提交的事务，使数据库处于可以使用的状态。无法还原其他事务日志。(RESTORE WITH RECOVERY)**  
-     恢复数据库。 这是默认行为。 请仅在要还原所有必要的备份时选择此选项。 此选项等效于在 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE 语句中指定 WITH RECOVERY。  
+     恢复数据库。 此选项为默认行为。 请仅在要还原所有必要的备份时选择此选项。 此选项等效于在 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE 语句中指定 WITH RECOVERY。  
   
      **不对数据库执行任何操作，不回退未提交的事务。可以还原其他事务日志。(RESTORE WITH NORECOVERY)**  
      使数据库处于还原状态。 若要恢复数据库，则将需要使用前面的 RESTORE WITH RECOVERY 选项（请参阅上面的内容）来执行另一个还原操作。 此选项等效于在 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE 语句中指定 WITH NORECOVERY。  
@@ -205,8 +205,8 @@ RESTORE LOG MyDatabase
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [还原数据库备份&#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)   
+## <a name="see-also"></a>另请参阅  
+ [还原数据库备份 &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)   
  [备份文件和文件组 (SQL Server)](back-up-files-and-filegroups-sql-server.md)   
  [创建完整数据库备份 (SQL Server)](create-a-full-database-backup-sql-server.md)   
  [备份事务日志 (SQL Server)](back-up-a-transaction-log-sql-server.md)   

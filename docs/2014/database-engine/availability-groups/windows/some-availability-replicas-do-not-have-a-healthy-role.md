@@ -15,15 +15,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 50518e78585b7e56f62411edc539d0f9ac3db9e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62788181"
 ---
 # <a name="some-availability-replicas-do-not-have-a-healthy-role"></a>一些可用性副本不具有正常运行的角色
     
-## <a name="introduction"></a>简介  
+## <a name="introduction"></a>介绍  
   
 |||  
 |-|-|  
@@ -32,7 +32,7 @@ ms.locfileid: "62788181"
 |**类别**|**警告**|  
 |**方面**|可用性组 (availability group)|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>说明  
  此策略将汇总所有可用性副本的连接状态，并且检查是否存在未处于正常运行角色的任何可用性副本。 在有可用性副本既不是主副本也不是辅助副本时，此策略处于不正常状态。 否则，该策略处于正常状态。  
   
 > [!NOTE]  
@@ -44,8 +44,8 @@ ms.locfileid: "62788181"
 ## <a name="possible-solution"></a>可能的解决方法  
  使用可用性副本策略状态查找角色不是主副本或辅助副本的可用性副本，然后解决该可用性副本上的问题。  
   
-## <a name="see-also"></a>请参阅  
- [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [使用 AlwaysOn 面板 (SQL Server Management Studio)](use-the-always-on-dashboard-sql-server-management-studio.md)  
+## <a name="see-also"></a>另请参阅  
+ [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [使用 AlwaysOn 仪表板 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

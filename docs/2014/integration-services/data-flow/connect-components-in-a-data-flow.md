@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 90d3e9e50ef16e51e9669a92cfb53f5f734c83ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827914"
 ---
 # <a name="connect-components-in-a-data-flow"></a>连接数据流中的组件
@@ -29,7 +29,7 @@ ms.locfileid: "62827914"
   
 2.  在解决方案资源管理器中，双击该包将其打开。  
   
-3.  单击“控制流”  选项卡，然后双击包含要连接的组件所在数据流的数据流任务。  
+3.  单击“控制流”**** 选项卡，然后双击包含要连接的组件所在数据流的数据流任务。  
   
 4.  在 **“数据流”** 选项卡的设计图面上，选择要连接的转换或源。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62827914"
   
 6.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在数据流中添加或删除组件](data-flow.md)   
  [在数据流组件中配置错误输出](../configure-an-error-output-in-a-data-flow-component.md)   
  [数据流](data-flow.md)  

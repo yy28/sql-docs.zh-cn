@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fcc071c10a2daa31190727dfc9f3cbe617bdcb66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831520"
 ---
 # <a name="ftp-task"></a>FTP 任务
@@ -39,7 +39,7 @@ ms.locfileid: "62831520"
   
  这意味着 FTP 任务可以接收多个文件和删除多个远程文件；但如果使用连接管理器，则该任务只能发送一个文件和删除一个本地文件，因为文件连接管理器只能访问一个文件。 若要访问多个本地文件，FTP 任务必须使用变量来提供路径信息。 例如，包含“C:\Test\\*.txt”的变量所提供的路径可以支持删除或发送 Test 目录中所有以 .txt 为扩展名的文件。  
   
- 若要发送多个文件和访问多个本地文件及目录，还可以通过在 Foreach 循环中包含 FTP 任务来多次执行 FTP 任务。 Foreach 循环可以使用 For Each 文件枚举器对目录中的文件进行枚举。 有关详细信息，请参阅 [Foreach Loop Container](foreach-loop-container.md)。  
+ 若要发送多个文件和访问多个本地文件及目录，还可以通过在 Foreach 循环中包含 FTP 任务来多次执行 FTP 任务。 Foreach 循环可以使用 For Each 文件枚举器对目录中的文件进行枚举。 有关详细信息，请参阅 [Foreach 循环容器](foreach-loop-container.md)。  
   
  FTP 任务支持在路径中使用通配符 *?* 和 *\** 。 这使得任务可以访问多个文件。 但是，只能在路径中指定文件名的部分使用通配符。 例如，C:\MyDirectory\\*.txt 是有效路径，而 C:\\\*\MyText.txt 则不是。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62831520"
 ## <a name="predefined-ftp-operations"></a>预定义的 FTP 操作  
  FTP 任务包含一组预定义的操作。 下表介绍了这些运算。  
   
-|操作|Description|  
+|Operation|说明|  
 |---------------|-----------------|  
 |发送文件|将文件从本地计算机发送到 FTP 服务器。|  
 |接收文件|将文件从 FTP 服务器保存到本地计算机。|  
@@ -62,7 +62,7 @@ ms.locfileid: "62831520"
 ## <a name="custom-log-entries-available-on-the-ftp-task"></a>FTP 任务可用的自定义日志项  
  下表列出了 FTP 任务的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../performance/integration-services-ssis-logging.md)和[日志记录的自定义消息](../custom-messages-for-logging.md)。  
   
-|日志项|Description|  
+|日志项|说明|  
 |---------------|-----------------|  
 |`FTPConnectingToServer`|指示任务已启动与 FTP 服务器的连接。|  
 |`FTPOperation`|报告任务所执行的 FTP 操作的开始及其类型。|  
@@ -74,9 +74,9 @@ ms.locfileid: "62831520"
   
  有关如何以编程方式设置这些属性的详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask>。  
   
-## <a name="see-also"></a>请参阅  
- [FTP 任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)   
- [FTP 任务编辑器（“文件传输”页）](../ftp-task-editor-file-transfer-page.md)   
+## <a name="see-also"></a>另请参阅  
+ [FTP 任务编辑器 &#40;常规 "页面&#41;](../general-page-of-integration-services-designers-options.md)   
+ [FTP 任务编辑器 &#40;文件传输页面&#41;](../ftp-task-editor-file-transfer-page.md)   
  [Integration Services 任务](integration-services-tasks.md)   
  [控制流](control-flow.md)  
   

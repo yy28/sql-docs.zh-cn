@@ -16,20 +16,20 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e92668088ce0f30f680d4198ad0c3348a21fbff6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781946"
 ---
 # <a name="system-requirements"></a>系统要求
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象 (SMO) 使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]`System.Data.SqlClient`要连接到的实例进行通信的对象驱动程序[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理对象（SMO）使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] `System.Data.SqlClient`对象驱动程序连接到实例并与实例通信[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
- SMO 客户端要求[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]附带的本机客户端[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]2.0。  
+ SMO 客户端[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]需要包含在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 中的 Native Client。  
   
- 若要使用 SMO 开发应用程序，必须具有[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008 安装。  
+ 若要使用 SMO 开发应用程序，必须[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]安装2008。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 安装概述](https://technet.microsoft.com/library/bb500438\(v=SQL.105\).aspx)  
   
   

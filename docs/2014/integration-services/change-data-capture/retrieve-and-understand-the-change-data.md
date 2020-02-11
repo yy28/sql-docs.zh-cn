@@ -13,17 +13,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76635a5c1f1140bb66adf1d9ac40885c3dc43269
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771219"
 ---
 # <a name="retrieve-and-understand-the-change-data"></a>检索和了解变更数据
   在用于执行变更数据增量加载的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的数据流中，第一个任务是运行查询以检索变更数据。 在数据流任务中在源组件内执行此查询。 然后，使用下游转换和目标将变更数据应用到目标。  
   
 > [!NOTE]  
->  在创建用于执行变更数据增量加载的包的过程中，第三步是创建包含表值函数的查询。 有关此查询的详细信息，请参阅[创建函数以检索变更数据](create-the-function-to-retrieve-the-change-data.md)。 有关创建用于执行变更数据增量加载的包的完整过程的说明，请参阅[变更数据捕获 (SSIS)](change-data-capture-ssis.md)。  
+>  在创建用于执行变更数据增量加载的包的过程中，第三步是创建包含表值函数的查询。 有关此查询的详细信息，请参阅 [创建函数以检索变更数据](create-the-function-to-retrieve-the-change-data.md)。 有关创建用于执行变更数据增量加载的包的完整过程的说明，请参阅[变更数据捕获 (SSIS)](change-data-capture-ssis.md)。  
   
 ## <a name="adding-the-data-flow-task"></a>添加数据流任务  
  在包的数据流中，您将检索变更数据，根据所发生的变更的类型分隔行，然后将变更应用到目标。  

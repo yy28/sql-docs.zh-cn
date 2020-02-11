@@ -1,5 +1,5 @@
 ---
-title: 了解游标和锁定 |Microsoft Docs
+title: 了解游标和锁 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,22 +14,22 @@ ms.assetid: c1b7d7e6-1707-4ce2-863f-0c6dea967df6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 41fd90d4f30c080951bd5d68407e38adac482418
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923792"
 ---
 # <a name="understanding-cursors-and-locks"></a>了解游标和锁定
-请务必了解这样您就可以选择应用程序的数据访问要求的最佳和最高效的游标类型游标的工作方式。 不太理想的游标配置可以进行数据访问操作带来痛苦的煎熬。  
+务必要了解游标的工作方式，以便为应用程序的数据访问要求选择最佳和最有效的游标类型。 小于最佳的游标配置可以使数据访问操作不厌其烦缓慢。  
   
- 许多功能的 ADO**记录集**对象由类型和位置的光标处以及锁类型。  
+ ADO**记录集**对象的很多功能由游标的类型和位置以及锁类型决定。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [什么是游标？](../../../ado/guide/data/what-is-a-cursor.md)  
   
--   [类型的游标](../../../ado/guide/data/types-of-cursors-ado.md)  
+-   [游标类型](../../../ado/guide/data/types-of-cursors-ado.md)  
   
 -   [游标位置的重要性](../../../ado/guide/data/the-significance-of-cursor-location.md)  
   

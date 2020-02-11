@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14e699be884ff24136b8bae1a744593be86c42ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917987"
 ---
 # <a name="unpack-a-dac-package"></a>解压缩 DAC 包
@@ -29,7 +29,7 @@ ms.locfileid: "62917987"
   
 2.  **若要解压缩 DAC，请使用：** [“解压缩数据层应用程序”对话框](#UnpackDACDial)、[检查 DAC 包的内容](#ExamDACPack)  
   
-##  <a name="Security"></a> 安全性  
+##  <a name="Security"></a> Security  
  建议您不要从未知或不可信源部署 DAC 包。 此类 DAC 可能包含恶意代码，这些代码可能会执行非预期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码，或者通过修改架构导致错误。 在使用来自未知或不可信源的 DAC 之前，请将其部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的一个独立的测试实例中，解压缩该 DAC 并检查代码，例如存储过程或者其他用户定义的代码。  
   
 ##  <a name="UnpackDACDial"></a> “解压缩数据层应用程序”对话框  
@@ -82,7 +82,7 @@ ms.locfileid: "62917987"
   
  有关详细信息，请参阅 [Validate a DAC Package](validate-a-dac-package.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据层应用程序](data-tier-applications.md)   
  [部署数据层应用程序](deploy-a-data-tier-application.md)   
  [升级数据层应用程序](upgrade-a-data-tier-application.md)  

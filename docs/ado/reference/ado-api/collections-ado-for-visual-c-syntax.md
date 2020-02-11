@@ -1,5 +1,5 @@
 ---
-title: 集合 (ADO for VisualC++语法) |Microsoft Docs
+title: 集合（ADO for Visual C++ 语法） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,14 +18,14 @@ ms.assetid: 6a0109a0-f2d9-4f7c-8e1e-42763f9acaea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f18884c7a1aabe138408cca7eb529f4f21120330
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919912"
 ---
 # <a name="collections-ado-for-visual-c-syntax"></a>集合（ADO for Visual C++ 语法）
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>parameters  
   
 ### <a name="methods"></a>方法  
   
@@ -43,7 +43,7 @@ Refresh(void);
   
 -   [Refresh 方法 (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-### <a name="properties"></a>properties  
+### <a name="properties"></a>属性  
   
 ```  
 get_Count(long *c);  
@@ -74,7 +74,7 @@ Refresh(void);
   
 -   [Refresh 方法 (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-### <a name="properties"></a>properties  
+### <a name="properties"></a>属性  
   
 ```  
 get_Count(long *c);  
@@ -102,7 +102,7 @@ Refresh(void);
   
 -   [Refresh 方法 (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-### <a name="properties"></a>properties  
+### <a name="properties"></a>属性  
   
 ```  
 get_Count(long *c);  
@@ -115,7 +115,7 @@ get_Item(VARIANT Index, ADOError **ppvObject);
   
 -   [Item 属性 (ADO)](../../../ado/reference/ado-api/item-property-ado.md)  
   
-## <a name="properties"></a>properties  
+## <a name="properties"></a>属性  
   
 ### <a name="methods"></a>方法  
   
@@ -127,7 +127,7 @@ Refresh(void);
   
 -   [Refresh 方法 (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-### <a name="properties"></a>properties  
+### <a name="properties"></a>属性  
   
 ```  
 get_Count(long *c);  
@@ -140,8 +140,8 @@ get_Item(VARIANT Index, ADOProperty **ppvObject);
   
 -   [Item 属性 (ADO)](../../../ado/reference/ado-api/item-property-ado.md)  
   
-## <a name="see-also"></a>请参阅  
- [错误集合 (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [字段集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [参数集合 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
+## <a name="see-also"></a>另请参阅  
+ [Errors 集合（ADO）](../../../ado/reference/ado-api/errors-collection-ado.md)   
+ [Fields 集合（ADO）](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Parameters 集合（ADO）](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [属性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

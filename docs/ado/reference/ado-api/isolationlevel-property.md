@@ -16,29 +16,29 @@ ms.assetid: ea84e4b2-fbf2-4eef-b9ce-796b22e21800
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dc360bc91e977228a6f9139089a7bfa87d912e1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918443"
 ---
 # <a name="isolationlevel-property"></a>IsolationLevel 属性
-指示隔离级别[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。  
+指示[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象的隔离级别。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
- 设置或返回[IsolationLevelEnum](../../../ado/reference/ado-api/isolationlevelenum.md)值。 默认值是**adXactReadCommitted**。  
+ 设置或返回一个[IsolationLevelEnum](../../../ado/reference/ado-api/isolationlevelenum.md)值。 默认值为**adXactReadCommitted**。  
   
 ## <a name="remarks"></a>备注  
- 使用**IsolationLevel**属性来设置隔离级别**连接**对象。 设置下一次调用之前不会生效[BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法。 如果您请求的隔离级别不可用，提供程序可能返回下一更高级别的隔离，而不更新**IsolationLevel**属性。  
+ 使用**IsolationLevel**属性可以设置**连接**对象的隔离级别。 直到下一次调用[BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法时，此设置才会生效。 如果请求的隔离级别不可用，则提供程序可能返回下一个更高的隔离级别，而不更新**IsolationLevel**属性。  
   
- **IsolationLevel**属性为读/写。  
+ **IsolationLevel**属性是可读/写的。  
   
 > [!NOTE]
->  **远程数据服务使用情况**客户端上使用时**连接**对象， **IsolationLevel**可以将属性设置为仅**adXactUnspecified**。 由于用户正在使用断开连接**记录集**对象上的客户端缓存，可能有多用户的问题。 例如，当两个不同的用户尝试更新同一条记录，远程数据服务只是允许的用户首次更新的记录以"win。 第二个用户的更新请求会失败并出现错误。  
+>  **远程数据服务使用情况**使用客户端**连接**对象时，只能将**IsolationLevel**属性设置为**adXactUnspecified**。 由于用户在客户端缓存上使用断开连接的**记录集**对象，因此可能会出现多用户问题。 例如，当两个不同的用户尝试更新同一记录时，远程数据服务只允许将记录更新到 "win" 的用户。 第二个用户的更新请求将失败并出现错误。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>请参阅  
- [IsolationLevel 和 Mode 属性示例 (VB)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vb.md)   
- [IsolationLevel 和 Mode 属性示例 （VC + +）](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vc.md)   
+## <a name="see-also"></a>另请参阅  
+ [IsolationLevel 和 Mode 属性示例（VB）](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vb.md)   
+ [IsolationLevel 和 Mode 属性示例（VC + +）](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vc.md)   

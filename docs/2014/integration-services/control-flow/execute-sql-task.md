@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6be23e1a45f2b2ed0cc055c5032a72ffe2387399
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831765"
 ---
 # <a name="execute-sql-task"></a>执行 SQL 任务
@@ -42,7 +42,7 @@ ms.locfileid: "62831765"
 ## <a name="connecting-to-a-data-source"></a>连接数据源  
  执行 SQL 任务可使用不同类型的连接管理器来连接到在其中运行 SQL 语句或存储过程的数据源。 此任务可使用下表中列出的连接类型。  
   
-|连接类型|连接管理器|  
+|连接类型|“ODBC 源编辑器”|  
 |---------------------|------------------------|  
 |EXCEL|[Excel 连接管理器](../connection-manager/excel-connection-manager.md)|  
 |OLE DB|[OLE DB 连接管理器](../connection-manager/ole-db-connection-manager.md)|  
@@ -54,9 +54,9 @@ ms.locfileid: "62831765"
 ## <a name="creating-sql-statements"></a>创建 SQL 语句  
  此任务使用的 SQL 语句的源可以是包含语句的任务属性、到包含一个或多个语句的文件的连接，或者是包含语句的变量的名称。 必须用源数据库管理系统 (DBMS) 的方言编写 SQL 语句。 有关详细信息，请参阅 [Integration Services (SSIS) 查询](../integration-services-ssis-queries.md)。  
   
- 如果 SQL 语句存储在某个文件中，则该任务使用文件连接管理器来连接到该文件。 有关详细信息，请参阅 [File Connection Manager](../connection-manager/file-connection-manager.md)。  
+ 如果 SQL 语句存储在某个文件中，则该任务使用文件连接管理器来连接到该文件。 有关详细信息，请参阅[文件连接管理器](../connection-manager/file-connection-manager.md)。  
   
- 在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中，可以使用 **“执行 SQL 任务编辑器”** 对话框来键入 SQL 语句，也可使用 **“查询生成器”** （用于创建 SQL 查询的图形用户界面）键入。 有关详细信息，请参阅[执行 SQL 任务编辑器（常规页）](../execute-sql-task-editor-general-page.md)和[查询生成器](../query-builder.md)。  
+ 在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中，可以使用 **“执行 SQL 任务编辑器”** 对话框来键入 SQL 语句，也可使用 **“查询生成器”**（用于创建 SQL 查询的图形用户界面）键入。 有关详细信息，请参阅[执行 SQL 任务编辑器（常规页）](../execute-sql-task-editor-general-page.md)和[查询生成器](../query-builder.md)。  
   
 > [!NOTE]  
 >  执行 SQL 任务可能无法成功分析在执行 SQL 任务外编写的有效 SQL 语句。  
@@ -85,15 +85,15 @@ ms.locfileid: "62831765"
 > [!NOTE]  
 >  只有数据访问接口支持这些参数时，才可在执行 SQL 任务中使用它们。  
   
- 有关在执行 SQL 任务中使用参数和返回代码的信息，请参阅[执行 SQL 任务中的参数和返回代码](execute-sql-task.md)。  
+ 有关在执行 SQL 任务中使用参数和返回代码的信息，请参阅 [执行 SQL 任务中的参数和返回代码](execute-sql-task.md)。  
   
 ## <a name="specifying-a-result-set-type"></a>指定结果集类型  
  执行 SQL 任务可能有结果集返回也可能没有结果集返回，这取决于 SQL 命令的类型。 例如，SELECT 语句通常返回结果集，而 INSERT 语句通常不返回结果集。 SELECT 语句所返回的结果集可包含零行、单行或多行。 存储过程还可返回指示过程的执行状态的整数值（称为返回代码）。 这种情况下，结果集由单行组成。  
   
- 有关从执行 SQL 任务的 SQL 命令中检索结果集的信息，请参阅[执行 SQL 任务中的结果集](../result-sets-in-the-execute-sql-task.md)。  
+ 有关从执行 SQL 任务的 SQL 命令中检索结果集的信息，请参阅 [执行 SQL 任务中的结果集](../result-sets-in-the-execute-sql-task.md)。  
   
 ## <a name="troubleshooting-the-execute-sql-task"></a>执行 SQL 任务故障排除  
- 可以记录执行 SQL 任务对外部数据访问接口的调用。 您可以使用这项日志记录功能对执行 SQL 任务运行的 SQL 命令进行故障排除。 若要记录执行 SQL 任务对外部数据访问接口的调用，请在包级别启用包日志记录并选择 **“诊断”** 事件。 有关详细信息，请参阅[包执行的疑难解答工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)。  
+ 可以记录执行 SQL 任务对外部数据访问接口的调用。 您可以使用这项日志记录功能对执行 SQL 任务运行的 SQL 命令进行故障排除。 若要记录执行 SQL 任务对外部数据访问接口的调用，请在包级别启用包日志记录并选择 **“诊断”** 事件。 有关详细信息，请参阅 [包执行的疑难解答工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)。  
   
  有时，SQL 命令或存储过程会返回多个结果集。 这些结果集不仅包含 `SELECT` 查询结果的行集，还包含 `RAISERROR` 或 `PRINT` 语句的错误结果的单个值。 该任务是否忽略第一个结果集之后出现的结果集中的错误，取决于所用的连接管理器类型：  
   
@@ -104,7 +104,7 @@ ms.locfileid: "62831765"
 ### <a name="custom-log-entries"></a>自定义日志项  
  下表介绍了执行 SQL 任务的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../performance/integration-services-ssis-logging.md)和[日志记录的自定义消息](../custom-messages-for-logging.md)。  
   
-|日志项|Description|  
+|日志项|说明|  
 |---------------|-----------------|  
 |`ExecuteSQLExecutingQuery`|提供有关 SQL 语句的执行阶段的信息。 在任务获得与数据库的连接时、任务开始准备 SQL 语句时以及执行完 SQL 语句之后写入日志项。 准备阶段的日志条目包括任务所使用的 SQL 语句。|  
   
@@ -127,11 +127,11 @@ ms.locfileid: "62831765"
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   
--   [执行 SQL 任务编辑器&#40;常规页&#41;](../execute-sql-task-editor-general-page.md)  
+-   [&#40;"常规" 页上执行 SQL 任务编辑器&#41;](../execute-sql-task-editor-general-page.md)  
   
--   [执行 SQL 任务编辑器&#40;参数映射页&#41;](../execute-sql-task-editor-parameter-mapping-page.md)  
+-   [执行 SQL 任务编辑器 &#40;参数映射页&#41;](../execute-sql-task-editor-parameter-mapping-page.md)  
   
--   [执行 SQL 任务编辑器&#40;结果集页&#41;](../execute-sql-task-editor-result-set-page.md)  
+-   [&#40;"结果集" 页上执行 SQL 任务编辑器&#41;](../execute-sql-task-editor-result-set-page.md)  
   
 -   [“表达式”页](../expressions/expressions-page.md)  
   

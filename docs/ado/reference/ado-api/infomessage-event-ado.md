@@ -1,5 +1,5 @@
 ---
-title: InfoMessage 事件 (ADO) |Microsoft Docs
+title: InfoMessage 事件（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 468c87dd-e3bc-4084-9941-94d10743d4e9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 25eef06b7e25538cb874d99af98aee95495b95ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932335"
 ---
 # <a name="infomessage-event-ado"></a>InfoMessage 事件 (ADO)
-**InfoMessage**只要期间出现警告时调用事件**ConnectionEvent**操作。  
+只要在**ConnectionEvent**操作过程中出现警告，就会调用**InfoMessage**事件。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,19 +33,19 @@ ms.locfileid: "67932335"
 InfoMessage pError, adStatus, pConnection  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *pError*  
- [错误](../../../ado/reference/ado-api/error-object.md)对象。 此参数包含返回的任何错误。 如果返回了多个错误，枚举**错误**集合以找到它们。  
+ 一个[错误](../../../ado/reference/ado-api/error-object.md)对象。 此参数包含返回的任何错误。 如果返回多个错误，则枚举**错误**集合以找到它们。  
   
  *adStatus*  
- [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)状态值。 如果出现警告时， *adStatus*设置为**adStatusOK**并*pError*包含警告。  
+ [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)状态值。 如果出现警告， *adStatus*将设置为**AdStatusOK** ，而*pError*将包含警告。  
   
- 此事件返回之前，请将此参数设置为**adStatusUnwantedEvent**以防止后续的通知。  
+ 在此事件返回之前，将此参数设置为**adStatusUnwantedEvent**以防止后续通知。  
   
  *pConnection*  
- 一个[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。 连接出现警告。 例如，可能出现警告，当打开**连接**对象或执行[命令](../../../ado/reference/ado-api/command-object-ado.md)上**连接**。  
+ [连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。 发生警告的连接。 例如，打开**连接**对象或对**连接**执行[命令](../../../ado/reference/ado-api/command-object-ado.md)时，可能会出现警告。  
   
-## <a name="see-also"></a>请参阅  
- [ADO 事件模型示例 （VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+## <a name="see-also"></a>另请参阅  
+ [ADO 事件模型示例（VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO 事件处理程序摘要](../../../ado/guide/data/ado-event-handler-summary.md)   
  [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

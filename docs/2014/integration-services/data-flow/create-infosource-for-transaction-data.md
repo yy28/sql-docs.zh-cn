@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6d99a357c754add722fb6d5b5d880d1c472a5989
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827941"
 ---
 # <a name="create-infosource-for-transaction-data"></a>创建事务数据的 InfoSource
@@ -78,10 +78,10 @@ ms.locfileid: "62827941"
  **InfoObject**  
  显示与数据流列相关联的 InfoObject 的名称。  
   
- **“类型”**  
+ 类型   
  显示与数据流列相关联的 InfoObject 的类型。 下表列出了该类型的可能值。  
   
-|ReplTest1|Description|  
+|值|说明|  
 |-----------|-----------------|  
 |CHA|特征|  
 |UNI|单位|  
@@ -91,8 +91,8 @@ ms.locfileid: "62827941"
  **单位字段**  
  指定 InfoObject 将使用的单位。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [“创建 InfoSource”](create-infosource.md)   
- [Microsoft Connector 1.1 for SAP BW 的 F1 帮助](../microsoft-connector-for-sap-bw-f1-help.md)  
+ [Microsoft Connector 1.1 for SAP BW F1 帮助](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

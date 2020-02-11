@@ -1,5 +1,5 @@
 ---
-title: 聚合函数、 CALC 函数和 NEW 关键字 |Microsoft Docs
+title: 聚合函数、CALC 函数和 NEW 关键字 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,38 +16,38 @@ ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5a7ed836b9b57ddd690dd85dd94cc12cb967c472
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926000"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>聚合函数、CALC 函数和 NEW 关键字
-数据整理支持以下函数。 分配给包含的列的一章来操作的名称是*章别名*。  
+数据定形支持以下功能。 分配给包含要操作的列的章节的名称是*章节别名*。  
   
- 可以是完全限定，包含通向章包含每个章节列名称的一章别名*列名，* 各项之间由句点。 例如，如果父一章，chap1，包含子章节，chap2，具有一个 amount 列，amt 设置，则限定的名称将为 chap1.chap2.amt。  
+ 章节别名可以是完全限定的，其中包含每个章节列名，其中包含*列名称，* 并以句点分隔。 例如，如果父章节 chap1 包含一个 chap2，其中包含一个 "金额" 列，则该限定名称为 "chap1"。  
   
-|聚合函数|描述|  
+|聚合函数|说明|  
 |-------------------------|-----------------|  
-|SUM (*章别名*。*列名称*)|计算指定列中的所有值的总和。|  
-|AVG (*章别名*。*列名称*)|计算指定列中的所有值的平均值。|  
-|最大值 (*章别名*。*列名称*)|计算指定列中的最大值。|  
-|最小值 (*章别名*。*列名称*)|计算指定列中的最小值。|  
-|计数 (*章别名*[。*列名称*])|对指定的别名中的行数进行计数。 如果指定的列，该列为其为非 Null 的唯一行包含在计数中。|  
-|STDEV (*章别名*。*列名称*)|计算指定列中的标准偏差。|  
-|任何 (*章别名*。*列名称*)|指定列的值。 仅当列的值是相同的一章中的所有行时，任何具有可预测的值。<br /><br /> **请注意**列不包含所有一章中的行的相同值，如果形状命令任意返回值的任何函数的值之一。|  
+|SUM （*章节别名*。*列名*）|计算指定列中所有值的总和。|  
+|AVG （*章节别名*。*列名*）|计算指定列中所有值的平均值。|  
+|MAX （*章节别名*。*列名*）|计算指定列中的最大值。|  
+|MIN （*章节别名*。*列名*）|计算指定列中的最小值。|  
+|计数（*章节别名*[.*列名*]）|计算指定别名中的行数。 如果指定了列，则只会在计数中包含该列非 Null 的行。|  
+|STDEV （*章节别名*。*列名*）|计算指定列中的标准偏差。|  
+|ANY （*章节别名*。*列名*）|指定列的值。 只有当章节中所有行的列的值相同时，ANY 才具有可预测的值。<br /><br /> **注意**如果列中的所有行都不包含相同的值，则 SHAPE 命令将随意返回值之一作为 ANY 函数的值。|  
   
-|计算的表达式|描述|  
+|计算表达式|说明|  
 |---------------------------|-----------------|  
-|CALC(*expression*)|计算的任意表达式，但只能在的行上**记录集**包含 CALC 函数。 任何表达式中使用这些[Visual Basic for Applications (VBA) 函数](../../../ado/guide/data/visual-basic-for-applications-functions.md)允许。|  
+|CALC （*expression*）|计算任意表达式，但仅在包含 CALC 函数的**记录集**的行上。 允许使用这些[Visual Basic for Applications （VBA）函数](../../../ado/guide/data/visual-basic-for-applications-functions.md)的任何表达式。|  
   
-|新的关键字|描述|  
+|NEW 关键字|说明|  
 |-----------------|-----------------|  
-|NEW *field-type* [(*width* &#124; *scale* &#124; *precision* &#124; *error* [, *scale* &#124; *error*])]|将添加到指定的类型的空列**记录集**。|  
+|新*字段类型*[（*width* &#124;*刻度*&#124;*精度*&#124;*错误*[，*小数位数*&#124;*错误*]）]|将指定类型的空列添加到**记录集**。|  
   
- *字段类型*传递使用 NEW 关键字可以是任何以下数据类型。  
+ 用 NEW 关键字传递的*字段类型*可以是以下任意数据类型。  
   
-|OLE DB 数据类型|ADO 数据类型 equivalent(s)|  
+|OLE DB 数据类型|ADO 数据类型等效项|  
 |-----------------------|-----------------------------------|  
 |DBTYPE_BSTR|adBSTR|  
 |DBTYPE_BOOL|adBoolean|  
@@ -59,9 +59,9 @@ ms.locfileid: "67926000"
 |DBTYPE_I8|adBigInt|  
 |DBTYPE_UI8|adUnsignedBigInt|  
 |DBTYPE_GUID|adGuid|  
-|DBTYPE_BYTES|adBinary，AdVarBinary，adLongVarBinary|  
-|DBTYPE_STR|每，以便您可以排除 adLongVarChar|  
-|DBTYPE_WSTR|adWChar，adVarWChar adLongVarWChar|  
+|DBTYPE_BYTES|adBinary, AdVarBinary, adLongVarBinary|  
+|DBTYPE_STR|adChar, adVarChar, adLongVarChar|  
+|DBTYPE_WSTR|adWChar, adVarWChar, adLongVarWChar|  
 |DBTYPE_NUMERIC|adNumeric|  
 |DBTYPE_DBDATE|adDBDate|  
 |DBTYPE_DBTIME|adDBTime|  
@@ -70,9 +70,9 @@ ms.locfileid: "67926000"
 |DBTYPE_FILETIME|adFileTime|  
 |DBTYPE_ERROR|adError|  
   
- （在 OLE DB DBTYPE_DECIMAL，或在 ADO 中，adDecimal） 十进制类型的新字段时，必须指定的精度和小数位数的值。  
+ 如果新字段的类型为 decimal （OLE DB、DBTYPE_DECIMAL 或 ADO，adDecimal），则必须指定精度和小数位数。  
   
-## <a name="see-also"></a>请参阅  
- [数据整理示例](../../../ado/guide/data/data-shaping-example.md)   
- [正式 Shape 语法](../../../ado/guide/data/formal-shape-grammar.md)   
+## <a name="see-also"></a>另请参阅  
+ [数据定形示例](../../../ado/guide/data/data-shaping-example.md)   
+ [正式形状语法](../../../ado/guide/data/formal-shape-grammar.md)   
  [常用 Shape 命令](../../../ado/guide/data/shape-commands-in-general.md)

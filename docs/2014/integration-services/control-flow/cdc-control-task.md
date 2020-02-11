@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e1ddc919b4658395c6a4268f03131bc92291f1b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832879"
 ---
 # <a name="cdc-control-task"></a>CDC 控制任务
@@ -28,7 +28,7 @@ ms.locfileid: "62832879"
   
  下列操作处理初始加载和更改处理的同步：  
   
-|操作|Description|  
+|Operation|说明|  
 |---------------|-----------------|  
 |ResetCdcState|此操作用于重置与当前 CDC 上下文相关联的持久的 CDC 状态。 在此操作运行后，来自 LSN-timestamp `sys.fn_cdc_get_max_lsn` 表的当前最大 LSN 将成为下一处理范围的起始范围。 此操作要求到源数据库的连接。|  
 |MarkInitialLoadStart|此操作用于初始加载包的开头，以便在初始加载包开始读取源表之前记录源数据库中的当前 LSN。 此操作要求到源数据库的连接以便调用 `sys.fn_cdc_get_max_lsn`。<br /><br /> 如果在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC（也就是说，不是 Oracle）上工作时选择 MarkInitialLoadStart，则在连接管理器中指定的用户必须是 db_owner 或 sysadmin。|  
@@ -37,10 +37,10 @@ ms.locfileid: "62832879"
   
  下列操作用于管理处理范围：  
   
-|操作|Description|  
+|Operation|说明|  
 |---------------|-----------------|  
 |GetProcessingRange|在调用使用 CDC 源数据流的数据流之前使用此操作。 此操作建立 CDC 源数据流在调用时读取的 LSN 的范围。 该范围存储于一个 SSIS 包变量中，在数据流处理期间 CDC 源将使用该变量。<br /><br /> 有关存储的状态的详细信息，请参阅 [定义状态变量](../data-flow/define-a-state-variable.md)。|  
-|MarkProcessedRange|解码的字符：此操作在每次 CDC 运行后（在 CDC 数据流成功完成后）执行，以便记录在 CDC 运行中完全处理的上一个 LSN。 下一次执行 GetProcessingRange 时，此位置将是处理范围的起始位置。|  
+|MarkProcessedRange|此操作在每次 CDC 运行后（在 CDC 数据流成功完成后）执行，以便记录在 CDC 运行中完全处理的上一个 LSN。 下一次执行 GetProcessingRange 时，此位置将是处理范围的起始位置。|  
   
 ## <a name="handling-cdc-state-persistency"></a>处理 CDC 状态持久性  
  此 CDC 控制任务维护激活之间的持久性状态。 在 CDC 状态中存储的信息用于确定和维护 CDC 包的处理范围以及用于检测到错误条件。 该持久性状态以字符串的形式存储。 有关详细信息，请参阅 [定义状态变量](../data-flow/define-a-state-variable.md)。  

@@ -11,13 +11,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3a35d5cdb9db4c56579a4229b2d08014a99da542
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63072741"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>内存优化表的持续性
+  
   [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 为内存优化表提供完整持续性。 提交更改内存优化表的事务时，假设基础存储可用， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] （就像对基于磁盘的表一样）会保证更改是永久的（数据库重新启动时仍然有效）。 持续性有两个重要方面：事务日志记录和在磁盘存储上持久保存数据更改。  
   
 ## <a name="transaction-log"></a>事务日志  
@@ -87,8 +88,9 @@ ms.locfileid: "63072741"
   
  后台线程使用合并策略计算所有关闭的 CFP，然后启动一个或多个合并请求以便验证 CFP 的资格。 这些合并请求由脱机检查点线程处理。 将定期进行对合并策略的评估，并且在关闭检查点时也会进行评估。  
   
-### <a name="includesssql14includessssql14-mdmd-merge-policy"></a>[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 合并策略  
- [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 实现以下合并策略：  
+### <a name="includesssql14includessssql14-mdmd-merge-policy"></a>[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]合并策略  
+ 
+  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 实现以下合并策略：  
   
 -   在考虑已删除的行后，如果可以合并 2 个或更多的连续 CFP，则计划进行合并，这样，最后生成的行可以适合于 1 个 CFP 的理想大小。 CFP 的理想大小按如下方式确定：  
   
@@ -108,16 +110,16 @@ ms.locfileid: "63072741"
   
  不是具有可用空间的所有 CFP 都符合合并条件。 例如，如果两个相邻的 CFP 为 60% 满，则它们将不符合合并条件，并且其中每个 CFP都将有 40% 的未使用存储空间。 在最差情形下，所有 CFP 都将为 50% 满，存储利用率仅为 50%。 已删除的行可能由于 CFP 不符合合并条件而仍存在于存储中，但这些行可能已因内存中垃圾回收而从内存中删除。 存储和内存的管理与垃圾回收是独立的。 活动 CFP（不是所有 CFP 都在更新）使用的内存可以最高达到内存中持久表大小的 2 倍。  
   
- 如果需要手动合并可以显式执行通过调用[sys.sp_xtp_merge_checkpoint_files &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql)。  
+ 如果需要，可以通过调用[sp_xtp_merge_checkpoint_files &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql)显式执行手动合并。  
   
 ### <a name="life-cycle-of-a-cfp"></a>CFP 的生命周期  
- CPF 首先要经过若干状态，然后才能被释放。 在任何给定时间，Cfp 都处于以下几个阶段之一：PRECREATED、 UNDER CONSTRUCTION、 ACTIVE、 MERGE TARGET、 MERGED SOURCE、 REQUIRED FOR BACKUP/HA、 IN TRANSITION TO TOMBSTONE 和逻辑删除。 有关这些阶段的说明，请参阅 [sys.dm_db_xtp_checkpoint_files (Transact SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)。  
+ CPF 首先要经过若干状态，然后才能被释放。 在任何给定时间，CFP 都处于以下阶段之一：PRECREATED、UNDER CONSTRUCTION、ACTIVE、MERGE TARGET、MERGED SOURCE、REQUIRED FOR BACKUP/HA、IN TRANSITION TO TOMBSTONE 和 TOMBSTONE。 有关这些阶段的说明，请参阅 [sys.dm_db_xtp_checkpoint_files (Transact SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)。  
   
- 在考虑处于各种状态的 CFP 所占用的存储空间后，持久的内存优化表所占用的整个存储空间最高可为内存中表大小的 2 倍。 DMV [sys.dm_db_xtp_checkpoint_files &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)能查询以列出所有 Cfp 内存优化文件组中，包括其阶段。 将 CFP 从 MERGE SOURCE 状态转换为 TOMBSTONE 及最终垃圾收集可能占用五个检查点，其中每个检查点后跟一个事务日志备份（如果数据库针对完整或大容量日志恢复模式进行了配置）。  
+ 在考虑处于各种状态的 CFP 所占用的存储空间后，持久的内存优化表所占用的整个存储空间最高可为内存中表大小的 2 倍。 可以查询 DMV [sys. dm_db_xtp_checkpoint_files &#40;transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql) ，以列出内存优化文件组中的所有 cfp，包括其阶段。 将 CFP 从 MERGE SOURCE 状态转换为 TOMBSTONE 及最终垃圾收集可能占用五个检查点，其中每个检查点后跟一个事务日志备份（如果数据库针对完整或大容量日志恢复模式进行了配置）。  
   
  您可以手动强制在检查点后进行日志备份，以便加快垃圾回收速度，但这将添加 5 个空 CFP（5 个数据/差异文件对，每个数据文件的大小为 128MB）。 在生产方案中，作为备份策略的一部分进行的自动检查点和日志备份可使 CFP 无缝通过这些阶段，而无需任何手动干预。 垃圾回收进程的影响是，具有内存优化表的数据库与其在内存中的大小相比，可能具有更大的存储大小。 CFP 是内存中的持久内存优化表大小的最多四倍并不少见。  
   
-## <a name="see-also"></a>请参阅  
- [创建和管理用于内存优化的对象的存储](creating-and-managing-storage-for-memory-optimized-objects.md)  
+## <a name="see-also"></a>另请参阅  
+ [创建和管理用于内存优化对象的存储](creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

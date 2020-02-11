@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 72b426c504532f9c112eaaa1222b0349f3e5d814
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832588"
 ---
 # <a name="column-null-ratio-profile-request-options-data-profiling-task"></a>列 Null 比率配置文件请求选项（数据事件探查任务）
@@ -25,7 +25,7 @@ ms.locfileid: "62832588"
 > [!NOTE]  
 >  本主题中介绍的选项显示在 **“数据事件探查任务编辑器”** 的 **“配置文件请求”** 页中。 有关此编辑器页的详细信息，请参阅[数据事件探查任务编辑器（“配置文件请求”页）](data-profiling-task-editor-profile-requests-page.md)。  
   
- 有关如何使用数据事件探查任务的详细信息，请参阅[设置数据事件探查任务](data-profiling-task.md)。 有关如何使用数据配置文件查看器分析数据事件探查任务输出的详细信息，请参阅 [数据配置文件查看器](data-profile-viewer.md)。  
+ 有关如何使用数据事件探查任务的详细信息，请参阅 [设置数据事件探查任务](data-profiling-task.md)。 有关如何使用数据配置文件查看器分析数据事件探查任务输出的详细信息，请参阅 [数据配置文件查看器](data-profile-viewer.md)。  
   
 ## <a name="request-properties-options"></a>请求属性选项  
  对于 **“列 Null 比率请求”** ， **“请求属性”** 窗格显示下面的选项组：  
@@ -43,7 +43,7 @@ ms.locfileid: "62832588"
   
  有关详细信息，请参阅本主题中的“TableorView 选项”部分。  
   
- **Column**  
+ **列**  
  选择要进行事件探查的现有列。 选择 **(\*)** 可对所有列进行事件探查。  
   
  有关详细信息，请参阅本主题中的“Column 选项”部分。  
@@ -57,7 +57,7 @@ ms.locfileid: "62832588"
   
 #### <a name="column-options"></a>Column 选项  
  **IsWildCard**  
- 指定是否已选择通配符 **(\*)** 。 如果已选择 **(\*)** 来对所有列进行事件探查，则此选项设置为 **True**。 如果您已选择要对单独列进行事件探查，则为 **False** 。 此选项是只读的。  
+ 指定是否已选择通配符 **(\*)** 。 如果已选择 **(** ) **来对所有列进行事件探查，则此选项设置为 \*True**。 如果您已选择要对单独列进行事件探查，则为 **False** 。 此选项是只读的。  
   
  **ColumnName**  
  显示所选列的名称。 如果已选择 **(\*)** 来对所有列进行事件探查，则此选项空白。 此选项是只读的。  
@@ -69,7 +69,7 @@ ms.locfileid: "62832588"
  **RequestID**  
  键入一个标识此配置文件请求的描述性名称。 通常无需更改自动生成的值。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据事件探查任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)   
  [单个表快速配置文件窗体（数据事件探查任务）](single-table-quick-profile-form-data-profiling-task.md)  
   

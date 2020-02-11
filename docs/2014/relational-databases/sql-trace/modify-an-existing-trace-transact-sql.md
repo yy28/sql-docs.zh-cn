@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 56d4f7d922c0c229b1e2126f93611670adf7c702
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63135620"
 ---
 # <a name="modify-an-existing-trace-transact-sql"></a>修改现有跟踪 (Transact-SQL)
@@ -29,27 +29,27 @@ ms.locfileid: "63135620"
   
 2.  若要修改跟踪事件，请执行 **sp_trace_setevent** ，并通过参数指定更改。 下面按顺序列出了参数：  
   
-    -   **@traceid** (Trace ID)  
+    -   **@traceid**（跟踪 ID）  
   
-    -   **@eventid** (Event ID)  
+    -   **@eventid**（事件 ID）  
   
-    -   **@columnid** (Column ID)  
+    -   **@columnid**（列 ID）  
   
-    -   **@on** (ON)  
+    -   **@on**基于  
   
-     修改 **@on** 参数时，请记住它与 **@columnid** 参数是相互作用的：  
+     修改**@on**参数时，请记住它与**@columnid**参数的交互：  
   
     |ON|列 ID|结果|  
     |--------|---------------|------------|  
-    |ON (**1**)|NULL|事件打开， 所有列被清除。|  
+    |ON (**1**)|Null|事件打开， 所有列被清除。|  
     ||NOT NULL|指定事件的列打开。|  
-    |OFF (**0**)|NULL|事件关闭， 所有列被清除。|  
+    |OFF (**0**)|Null|事件关闭， 所有列被清除。|  
     ||NOT NULL|指定事件的列关闭。|  
   
 > [!IMPORTANT]
->  与常规的存储过程不同，所有 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 存储过程 (<strong>sp_trace_xx</strong>) 参数的类型都受到严格限制，不支持自动的数据类型转换  。 如果这些参数不是使用正确的输入参数数据类型（正如参数说明中指定的一样）调用的，则存储过程会返回错误。  
+>  与常规的存储过程不同，所有 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 存储过程 (<strong>sp_trace_xx *) 参数的类型都受到严格限制，不支持自动的数据类型转换*</strong>。 如果这些参数不是使用正确的输入参数数据类型（正如参数说明中指定的一样）调用的，则存储过程会返回错误。  
 
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [sp_trace_setevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [sp_trace_setstatus (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql)   
  [系统存储过程 (Transact-SQL)](/sql/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql)   

@@ -18,33 +18,33 @@ ms.assetid: 00a0c8b8-8b63-433f-95b8-020ab05874a0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 582d0b87edd4729ce54cc2a7323b0a63443cab82
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938859"
 ---
 # <a name="underlyingvalue-property"></a>UnderlyingValue 属性
-指示当前的值[字段](../../../ado/reference/ado-api/field-object.md)数据库中的对象。  
+指示数据库中[Field](../../../ado/reference/ado-api/field-object.md)对象的当前值。  
   
 ## <a name="return-value"></a>返回值  
- 返回**Variant**值，该值指示的值**字段**。  
+ 返回一个表示**字段**值的**变量**值。  
   
 ## <a name="remarks"></a>备注  
- 使用**UnderlyingValue**属性，以便从数据库返回当前字段值。 中的字段值**UnderlyingValue**属性是对您的事务可见，并且可能是一个新的更新由其他事务的结果的值。 这可能不同于[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)属性，这反映了最初返回到的值[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
+ 使用**UnderlyingValue**属性从数据库返回当前字段值。 **UnderlyingValue**属性中的字段值是对你的事务可见的值，可能是另一个事务的最新更新导致的。 这可能不同于[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)属性，后者反映最初返回到[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的值。  
   
- 这是类似于使用[重新同步](../../../ado/reference/ado-api/resync-method.md)方法，但**UnderlyingValue**属性将返回从当前记录仅特定字段的值。 这是相同的值，该值[重新同步](../../../ado/reference/ado-api/resync-method.md)方法使用替换[值](../../../ado/reference/ado-api/value-property-ado.md)属性。  
+ 这类似于使用[Resync](../../../ado/reference/ado-api/resync-method.md)方法，但**UnderlyingValue**属性仅返回当前记录中特定字段的值。 此值与[Resync](../../../ado/reference/ado-api/resync-method.md)方法用来替换[value](../../../ado/reference/ado-api/value-property-ado.md)属性的值相同。  
   
- 当使用此属性与**OriginalValue**属性，可以解析从批处理更新而引起的冲突。  
+ 当你将此属性与**OriginalValue**属性一起使用时，你可以解决因批更新引起的冲突。  
   
-## <a name="record"></a>录制  
- 有关[记录](../../../ado/reference/ado-api/record-object-ado.md)对象，此属性将为空的字段前添加[更新](../../../ado/reference/ado-api/update-method.md)调用。  
+## <a name="record"></a>Record  
+ 对于[记录](../../../ado/reference/ado-api/record-object-ado.md)对象，在调用[Update](../../../ado/reference/ado-api/update-method.md)之前添加的字段的此属性将为空。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [字段对象](../../../ado/reference/ado-api/field-object.md)  
   
-## <a name="see-also"></a>请参阅  
- [OriginalValue 和 UnderlyingValue 属性示例 (VB)](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vb.md)   
- [OriginalValue 和 UnderlyingValue 属性示例 （VC + +）](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vc.md)   
- [OriginalValue 属性 (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
+## <a name="see-also"></a>另请参阅  
+ [OriginalValue 和 UnderlyingValue 属性示例（VB）](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vb.md)   
+ [OriginalValue 和 UnderlyingValue 属性示例（VC + +）](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vc.md)   
+ [OriginalValue 属性（ADO）](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
  [重新同步方法](../../../ado/reference/ado-api/resync-method.md)

@@ -18,14 +18,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 61d194edf727cb39a80fae852cee735c24ff560c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63065687"
 ---
 # <a name="hierarchical-data-sql-server"></a>层次结构数据 (SQL Server)
-  内置`hierarchyid`数据类型，从而更便于存储和查询分层数据。 `hierarchyid` 最适宜表示树，树是最常见的分层数据类型。  
+  内置`hierarchyid`数据类型使存储和查询层次结构数据变得更加容易。 `hierarchyid`针对表示树（这是最常见的分层数据类型）进行了优化。  
   
  层次结构数据定义为一组通过层次结构关系互相关联的数据项。 在层次结构关系中，一个数据项是另一个项的父级。 通常存储在数据库中的层次结构数据示例包括以下内容：  
   
@@ -42,7 +42,9 @@ ms.locfileid: "63065687"
  使用 [hierarchyid](/sql/t-sql/data-types/hierarchyid-data-type-method-reference) 作为数据类型来创建具有层次结构的表，或描述存储在另一个位置的数据层次结构。 在 [中使用](/sql/t-sql/data-types/hierarchyid-data-type-method-reference) hierarchyid 函数 [!INCLUDE[tsql](../includes/tsql-md.md)] 查询和管理层次结构数据。  
   
 ##  <a name="keyprops"></a> hierarchyid 的关键属性  
- `hierarchyid` 数据类型的值表示树层次结构中的位置。 `hierarchyid` 的值具有以下属性：  
+ 
+  `hierarchyid` 数据类型的值表示树层次结构中的位置。 
+  `hierarchyid` 的值具有以下属性：  
   
 -   非常紧凑  
   
@@ -50,7 +52,8 @@ ms.locfileid: "63065687"
   
 -   按深度优先顺序进行比较  
   
-     给定两个`hierarchyid`值  并**b**， **< b**意味着之前 b 树的深度优先遍历中。 `hierarchyid` 数据类型的索引按深度优先顺序排序，在深度优先遍历中相邻的节点的存储位置也相邻。 例如，一条记录的子级的存储位置与该记录的存储位置是相邻的。  
+     假设有`hierarchyid`两个值**a**和**b**， **a<b**表示在树的深度优先遍历中，a 位于 b 之前。 
+  `hierarchyid` 数据类型的索引按深度优先顺序排序，在深度优先遍历中相邻的节点的存储位置也相邻。 例如，一条记录的子级的存储位置与该记录的存储位置是相邻的。  
   
 -   支持任意插入和删除  
   
@@ -74,7 +77,8 @@ ms.locfileid: "63065687"
   
 -   XML  
   
- `hierarchyid` 通常优于这些替代项。 但是，在下面详述的特定情况下，使用这些替代项可能更好。  
+ 
+  `hierarchyid` 通常优于这些替代项。 但是，在下面详述的特定情况下，使用这些替代项可能更好。  
   
 ### <a name="parentchild"></a>父/子  
  使用父/子方法时，每一行都包含对父级的引用。 下表定义了一个用于在父/子关系中包含父行和子行的典型表：  
@@ -108,7 +112,7 @@ GO
   
 -   很少跨层次结构的不同部分执行查询。 也就是说，通常仅对层次结构中的单个点进行查询。 在这些情况下，存储在一起并不重要。 例如，如果组织表仅用于为各个雇员处理工资单，则使用父/子更好。  
   
--   非叶子树移动频繁并且性能非常重要。 在父/子表示形式中，更改层次结构中行的位置将影响单个行。 更改行中的位置`hierarchyid`使用情况会影响*n*行，其中*n*要移动的子树中的节点数。  
+-   非叶子树移动频繁并且性能非常重要。 在父/子表示形式中，更改层次结构中行的位置将影响单个行。 更改`hierarchyid`使用中某行的位置将影响*n*行，其中*n*是要移动的子树中的节点数。  
   
      如果非叶子树移动频繁并且性能非常重要，但多数移动操作都是在比较明确的层次结构级别上进行的，请考虑将较高和较低的级别拆分成两个层次结构。 这样，所有的移动操作都是移到较高层次结构的叶级。 例如，假设有一个由服务承载的网站的层次结构。 各网站包含许多以分层方式排列的页面。 承载的网站可能移动到网站层次结构中的其他位置，但是从属的页面很少会重新排列。 这种情况可表示如下：  
   
@@ -122,7 +126,7 @@ GO
   
   
 ### <a name="xml"></a>XML  
- XML 文档是一个树，因此单个 XML 数据类型实例可以表示一个完整的层次结构。 在中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]创建 XML 索引时，`hierarchyid`在内部使用的值来表示层次结构中的位置。  
+ XML 文档是一个树，因此单个 XML 数据类型实例可以表示一个完整的层次结构。 在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]创建 XML 索引时， `hierarchyid`在内部使用值来表示层次结构中的位置。  
   
  当满足以下所有条件时，使用 XML 数据类型会更好：  
   
@@ -159,7 +163,7 @@ GO
   
      在广度优先索引中，一个节点的所有直属子级存储在一起。 因此，广度优先索引在响应有关直属子级的查询方面效率很高，“查找此经理直属的所有雇员”就属于这类查询。  
   
- 采用深度优先、广度优先还是结合使用这两种索引，以及将哪一种设为聚集键（如果有），取决于上述两种查询类型的相对重要性以及 SELECT 与DML 操作的相对重要性。 有关索引策略的详细示例，请参阅[教程：使用 hierarchyid 数据类型](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)。  
+ 采用深度优先、广度优先还是结合使用这两种索引，以及将哪一种设为聚集键（如果有），取决于上述两种查询类型的相对重要性以及 SELECT 与DML 操作的相对重要性。 有关索引策略的详细示例，请参阅 [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)。  
   
   
 ### <a name="creating-indexes"></a>创建索引  
@@ -265,7 +269,7 @@ VALUES ('/', 'Earth', 'Planet');
 ##  <a name="tasks"></a> 相关任务  
   
 ###  <a name="migrating"></a> 从父/子迁移到 hierarchyid  
- 大多数树都使用父/子结构来表示。 从父/子结构迁移到表使用的最简单办法`hierarchyid`是使用临时列或临时表来跟踪每个级别的层次结构节点的编号。 有关迁移父/子表的示例，请参阅第 1 课的[教程：使用 hierarchyid 数据类型](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)。  
+ 大多数树都使用父/子结构来表示。 从父/子结构迁移到使用`hierarchyid`的表的最简单方法是使用临时列或临时表来跟踪层次结构中每个级别的节点数。 有关迁移父/子表的示例，请参阅 [教程：使用 hierarchyid 数据类型](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)的第 1 课。  
   
   
 ###  <a name="BKMK_ManagingTrees"></a> 使用 hierarchyid 管理树  
@@ -319,7 +323,7 @@ GO
   
   
 #### <a name="example-using-a-serializable-transaction"></a>使用可序列化事务的示例  
- 该 **Org_BreadthFirst** 索引可确保确定 **@last_child** 使用范围查找。 除了应用程序可能需要检查的其他错误情况之外，插入后出现重复键冲突表示试图添加具有同一 ID 的多个雇员，因此必须重新计算 **@last_child** 。 下面的代码使用可序列化事务和广度优先索引来计算新节点的值：  
+ 该 **Org_BreadthFirst** 索引可确保确定 **@last_child** 使用范围查找。 除了应用程序可能需要检查的其他错误情况之外，插入后出现重复键冲突表示试图添加具有同一 id 的多个雇员，因此**@last_child**必须重新计算。 下面的代码使用可序列化事务和广度优先索引来计算新节点的值：  
   
 ```  
 CREATE TABLE Org_T2  
@@ -389,7 +393,7 @@ GO
   
   
 ###  <a name="findclr"></a> 使用 CLR 查找祖先  
- 查找级别最低的共同祖先就是一项涉及层次结构中两个节点的常用操作。 可以在编写此[!INCLUDE[tsql](../includes/tsql-md.md)]或 CLR，因为`hierarchyid`类型是中均提供。 建议用 CLR，因为用它时查找速度会更快。  
+ 查找级别最低的共同祖先就是一项涉及层次结构中两个节点的常用操作。 这可以用[!INCLUDE[tsql](../includes/tsql-md.md)]或 CLR 编写，因为这两种`hierarchyid`类型都可用。 建议用 CLR，因为用它时查找速度会更快。  
   
  使用下面的 CLR 代码来列出祖先，并查找级别最低的共同祖先：  
   
@@ -497,7 +501,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
   
   
 ###  <a name="BKMK_MovingSubtrees"></a> 移动子树  
- 另一项常用操作是移动子树。 下面的过程采用 **@oldMgr** 的子树作为参数，使其（包括 **@oldMgr** ）成为 **@newMgr** 进行子树查询时速度明显加快。  
+ 另一项常用操作是移动子树。 下面的过程将获取的子**@oldMgr**树，并使其**@oldMgr**（包括）的**@newMgr**子树。  
   
 ```  
 CREATE PROCEDURE MoveOrg(@oldMgr nvarchar(256), @newMgr nvarchar(256) )  
@@ -523,9 +527,9 @@ GO
 ```  
   
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [hierarchyid 数据类型方法引用](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)   
- [教程：使用 hierarchyid 数据类型](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
+ [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid (Transact-SQL)](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)  
   
   

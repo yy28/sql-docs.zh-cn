@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 23bd163d63fa3939e35facc49cb3be7f8f07ff91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63023220"
 ---
-# <a name="mssqleng021076"></a>MSSQL_ENG021076
+# <a name="mssql_eng021076"></a>MSSQL_ENG021076
     
 ## <a name="message-details"></a>消息详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "63023220"
 |符号名称||  
 |消息正文|项目 '%s' 的初始快照尚不可用。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  如果分发代理在快照代理生成完快照之前启动，则会引发错误 MSSQL_ENG021076。 仅当发布包含单个项目时才会引发此错误。 如果发布包含多个项目，将引发 MSSQL_ENG021075。 有关详细信息，请参阅 [MSSQL_ENG021075](mssql-eng021075.md)。  
   
 ## <a name="user-action"></a>用户操作  
@@ -42,7 +42,7 @@ ms.locfileid: "63023220"
   
  如果错误继续出现，请增加代理的日志记录并指定日志的输出文件。 此操作可能会提供找到该错误和/或其他错误消息的步骤，具体取决于错误的上下文。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [错误和事件参考（复制）](errors-and-events-reference-replication.md)  
   
   

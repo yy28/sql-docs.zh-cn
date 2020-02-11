@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b7cef1e64ab9c499c52ac3bbc0364a05bfcc812
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829486"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>传输主存储过程任务
@@ -56,7 +56,7 @@ ms.locfileid: "62829486"
   
  此外，`OnInformation` 事件的日志项报告已传输的存储过程数，`OnWarning` 事件的日志项是为目标服务器上被覆盖的每个存储过程写入的。  
   
-## <a name="security-and-permissions"></a>安全性和权限  
+## <a name="security-and-permissions"></a>安全和权限  
  用户必须具有查看源服务器上 **master** 数据库中的存储过程列表的权限，而且必须是 sysadmin 服务器角色的成员，或者必须具有对目标服务器上 **master** 数据库中所创建的存储过程的权限。  
   
 ## <a name="configuration-of-the-transfer-master-stored-procedures-task"></a>传输主存储过程任务的配置  
@@ -64,7 +64,7 @@ ms.locfileid: "62829486"
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的信息，请单击以下主题之一：  
   
--   [传输主存储过程任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)  
+-   [传输主存储过程任务编辑器 &#40;常规页&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [传输主存储过程任务编辑器（“存储过程”页）](../transfer-master-stored-procedures-task-editor-stored-procedures-page.md)  
   
@@ -81,7 +81,7 @@ ms.locfileid: "62829486"
   
 -   [设置任务或容器的属性](../set-the-properties-of-a-task-or-container.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [传输 SQL Server 对象任务](transfer-sql-server-objects-task.md)   
  [Integration Services 任务](integration-services-tasks.md)   
  [控制流](control-flow.md)  

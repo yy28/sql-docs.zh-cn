@@ -18,10 +18,10 @@ ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a79b8399a6b435d4ed8b391b040e4800f1f50405
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67988442"
 ---
 # <a name="configure-read-only-routing-for-an-always-on-availability-group"></a>为 Always On 可用性组配置只读路由
@@ -34,7 +34,7 @@ ms.locfileid: "67988442"
 >  有关如何配置可读次要副本的信息，请参阅 [配置对可用性副本的只读访问 (SQL Server)](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)。  
 
   
-##  <a name="Prerequisites"></a> 先决条件  
+##  <a name="Prerequisites"></a>先决条件  
   
 -   可用性组必须拥有可用性组侦听器。 有关详细信息，请参阅 [创建或配置可用性组侦听程序 (SQL Server)](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)。  
   
@@ -166,11 +166,11 @@ GO
   
     -   若要为辅助角色配置只读路由，请指定 **ReadonlyRoutingConnectionUrl"** _url_ **"** 参数。  
   
-         其中， *url* 是当路由到副本时要用于建立只读连接的连接完全限定域名 (FQDN) 和端口。 例如：  `-ReadonlyRoutingConnectionUrl "TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024"`  
+         其中， *url* 是当路由到副本时要用于建立只读连接的连接完全限定域名 (FQDN) 和端口。 例如：`-ReadonlyRoutingConnectionUrl "TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024"`  
   
          有关详细信息，请参阅 [计算 AlwaysOn 的 read_only_routing_url](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)。  
   
-    -   若要为主要角色配置连接访问，请指定 **ReadonlyRoutingList"** _server_ **"** [ **,** ...*n* ]，其中， *server* 标识一个托管可用性组中的只读次要副本的服务器实例。 例如：  `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
+    -   若要为主要角色配置连接访问，请指定 **ReadonlyRoutingList"** _server_ **"** [ **,** ...*n* ]，其中， *server* 标识一个托管可用性组中的只读次要副本的服务器实例。 例如：`-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
   
         > [!NOTE]  
         >  您必须先设置副本的只读路由 URL，然后才能为其配置只读路由列表。  
@@ -197,7 +197,7 @@ Set-SqlAvailabilityReplica -ReadOnlyRoutingConnectionUrl "TCP://SecondaryServer.
 Set-SqlAvailabilityReplica -ReadOnlyRoutingList "SecondaryServer","PrimaryServer" -InputObject $primaryReplica  
 ```  
   
-##  <a name="FollowUp"></a>跟进：配置只读路由之后  
+##  <a name="FollowUp"></a> 跟进：配置只读路由之后  
  在这两种角色中配置当前主副本和可读辅助副本以支持只读路由后，可读辅助副本可接收/读取来自通过可用性组侦听器连接的客户端的读意向连接。  
   
 > [!TIP]  
@@ -227,7 +227,7 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
 ### <a name="if-read-only-routing-is-not-working-correctly"></a>如果只读路由未正确工作  
  有关解决只读路由配置问题的信息，请参阅 [只读路由未正确工作](../../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md#ROR)。  
   
-##  <a name="RelatedTasks"></a> 后续步骤 
+##  <a name="RelatedTasks"></a>后续步骤 
 **查看只读路由配置**  
   
 -   [sys.availability_read_only_routing_lists (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql.md)  

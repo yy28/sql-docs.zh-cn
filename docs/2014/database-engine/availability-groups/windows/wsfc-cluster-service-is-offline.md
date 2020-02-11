@@ -15,15 +15,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cfab5de4cd3d171d4d8b7515e65b0a9cd117ac16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812882"
 ---
 # <a name="wsfc-cluster-service-is-offline"></a>WSFC 群集服务处于脱机状态
     
-## <a name="introduction"></a>简介  
+## <a name="introduction"></a>介绍  
   
 |||  
 |-|-|  
@@ -32,7 +32,7 @@ ms.locfileid: "62812882"
 |**类别**|**严重**|  
 |**方面**|SQL Server 实例|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>说明  
  此策略检查 Windows Server 故障转移群集 (WSFC) 的状态。 此策略处于不正常状态，在 WSFC 群集处于脱机状态或者处于强制仲裁状态时将引发警报。 此群集中承载的所有可用性组处于脱机状态或者需要灾难恢复操作。  
   
  在群集状态为正常仲裁时，此群集状态是正常的。  
@@ -46,8 +46,8 @@ ms.locfileid: "62812882"
 ## <a name="possible-solution"></a>可能的解决方法  
  使用群集管理器工具可执行强制仲裁或灾难恢复工作流。 如果您通过执行强制仲裁或灾难恢复无法解决该问题，请与您的群集管理员联系以便帮助解决此问题。 有关详细信息，请参阅 [联机丛书中的](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md) 在无仲裁情况下强制启动 WSFC 群集 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
-## <a name="see-also"></a>请参阅  
- [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [使用 AlwaysOn 面板 (SQL Server Management Studio)](use-the-always-on-dashboard-sql-server-management-studio.md)  
+## <a name="see-also"></a>另请参阅  
+ [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [使用 AlwaysOn 仪表板 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

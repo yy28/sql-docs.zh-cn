@@ -11,31 +11,32 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 19308ee2838238f0dea6cfdaeb228a250591613b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63049333"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>查看和读取故障转移群集实例诊断日志
   将 SQL Server 资源 DLL 的所有严重错误和警告事件写入 Windows 事件日志。 正在运行的特定于 SQL Server 的诊断信息日志由 [sp_server_diagnostics (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)系统存储过程捕获，并会写入 SQL Server 故障转移群集诊断日志文件（也称为 *SQLDIAG* 日志）中。  
   
--   **开始之前：** [建议](#Recommendations)，[安全](#Security)  
+-   **开始之前：**  [建议](#Recommendations)、[安全性](#Security)  
   
--   **若要查看诊断日志，使用：** [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
+-   **若要查看诊断日志，请使用：**  [SQL Server Management Studio](#SSMSProcedure)， [transact-sql](#TsqlProcedure)  
   
--   **配置诊断日志设置，请使用：** [Transact-SQL](#TsqlConfigure)  
+-   **若要配置诊断日志设置，请使用：** [transact-sql](#TsqlConfigure)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Recommendations"></a> 建议  
- 默认情况下，SQLDIAG 存储在 SQL Server 实例目录的本地 LOG 文件夹下，例如 C\Program Files\Microsoft SQL Server\MSSQL12。\<实例名 > \MSSQL\LOG 的 AlwaysOn 故障转移群集实例 (FCI) 的自有节点。 每个 SQLDIAG 日志文件的大小固定为 100 MB。 在被回收用于新日志之前，计算机上有十个这样的日志文件。  
+ 默认情况下，SQLDIAG 存储在 SQL Server 实例目录的本地 LOG 文件夹下，例如 "C\Program Files\Microsoft SQL Server\MSSQL12。\<AlwaysOn 故障转移群集实例（FCI）的所属节点的 InstanceName> \mssql\log "。 每个 SQLDIAG 日志文件的大小固定为 100 MB。 在被回收用于新日志之前，计算机上有十个这样的日志文件。  
   
- 这些日志使用扩展事件文件格式。 **sys.fn_xe_file_target_read_file** 系统函数可用于读取由扩展事件创建的文件。 每行返回一个 XML 格式的事件。 查询系统视图以将 XML 数据作为结果集分析。 有关详细信息，请参阅 [sys.fn_xe_file_target_read_file (Transact SQL)](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)。  
+ 这些日志使用扩展事件文件格式。 
+  **sys.fn_xe_file_target_read_file** 系统函数可用于读取由扩展事件创建的文件。 每行返回一个 XML 格式的事件。 查询系统视图以将 XML 数据作为结果集分析。 有关详细信息，请参阅 [sys.fn_xe_file_target_read_file (Transact SQL)](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  运行 **fn_xe_file_target_read_file**需要 VIEW SERVER STATE 权限。  
   
  以管理员身份打开 SQL Server Management Studio  
@@ -43,13 +44,13 @@ ms.locfileid: "63049333"
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **查看诊断日志文件：**  
   
-1.  从“文件”  菜单，选择“打开文件”   ，然后选择要查看的诊断日志文件。  
+1.  从“文件”**** 菜单，选择“打开文件”********，然后选择要查看的诊断日志文件。  
   
 2.  事件在右窗格中显示为行，默认情况下，仅显示出 **name**和 **timestamp** 这两列。  
   
      这还会激活 **“扩展事件”** 菜单。  
   
-3.  若要查看更多列，转到 **“扩展事件”** 菜单，然后选择 **“选择列”** 。  
+3.  若要查看更多列，转到 **“扩展事件”** 菜单，然后选择 **“选择列”**。  
   
      将打开一个显示出可用列的对话框，您可在其中选择要显示的列。  
   
@@ -91,13 +92,13 @@ ORDER BY Time;
  **配置诊断日志属性**  
   
 > [!NOTE]  
->  有关此过程的示例，请参阅本节后面的 [示例 (Transact-SQL)](#TsqlExample)。  
+>  有关此过程的示例，请参阅本节后面的[示例 (Transact-SQL)](#TsqlExample)。  
   
- 使用数据定义语言 (DDL) 语句`ALTER SERVER CONFIGURATION`，可以启动或停止诊断数据的日志记录捕获[sp_server_diagnostics &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)过程，并设置 SQLDIAG 日志配置参数，如日志文件滚动更新计数、 日志文件大小和文件位置。 有关语法详细信息，请参阅 [Setting diagnostic log options](/sql/t-sql/statements/alter-server-configuration-transact-sql#Diagnostic)。  
+ 使用数据定义语言（DDL）语句`ALTER SERVER CONFIGURATION`，可以启动或停止记录由[sp_server_diagnostics &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)过程捕获的诊断数据，并设置 SQLDIAG 日志配置参数，如日志文件滚动更新计数、日志文件大小和文件位置。 有关语法详细信息，请参阅 [Setting diagnostic log options](/sql/t-sql/statements/alter-server-configuration-transact-sql#Diagnostic)。  
   
 ###  <a name="ConfigTsqlExample"></a> 示例 (Transact-SQL)  
   
-####  <a name="TsqlExample"></a> Setting diagnostic log options  
+####  <a name="TsqlExample"></a>设置诊断日志选项  
  本节中的示例说明如何设置诊断日志选项的值。  
   
 ##### <a name="a-starting-diagnostic-logging"></a>A. 启动诊断日志记录  
@@ -130,7 +131,7 @@ ALTER SERVER CONFIGURATION
 SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [故障转移群集实例的故障转移策略](failover-policy-for-failover-cluster-instances.md)  
   
   

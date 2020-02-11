@@ -1,5 +1,5 @@
 ---
-title: CommandTimeout 属性 (ADO) |Microsoft Docs
+title: CommandTimeout 属性（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,33 +16,33 @@ ms.assetid: c611f857-d6b0-4dca-8925-f4a02e769eb0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7c8c6b10e63e4cacce0124eb11102db796168d9b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919701"
 ---
 # <a name="commandtimeout-property-ado"></a>CommandTimeout 属性 (ADO)
-指示在终止尝试并生成错误之前执行命令时，请等待的时间。  
+指示在终止尝试并生成错误之前执行命令时等待的时间。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
- 设置或返回**长**值，该值指示，以秒为单位，多长时间等待要执行的命令。 默认值为 30。  
+ 设置或返回一个**长整型**值，该值指示等待命令执行所用的时间（以秒为单位）。 默认值为30。  
   
 ## <a name="remarks"></a>备注  
- 使用**CommandTimeout**上的属性[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象或[命令](../../../ado/reference/ado-api/command-object-ado.md)对象，以允许取消[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)方法由于网络流量或大量服务器，请使用从延迟调用。 如果在间隔中设置**CommandTimeout**前该命令完成执行时，出现错误和 ADO 取消的命令经过的属性。 如果将属性设置为零，ADO 将执行完成之前无限期等待。 请确保你编写的代码的支持的提供程序和数据源**CommandTimeout**功能。  
+ 使用[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象或[命令](../../../ado/reference/ado-api/command-object-ado.md)对象上的**CommandTimeout**属性，以允许取消[执行](../../../ado/reference/ado-api/execute-method-ado-command.md)方法调用，因为网络流量或服务器使用的时间延迟。 如果在命令完成执行之前， **CommandTimeout**属性中设置的时间间隔已过，则会发生错误并且 ADO 将取消该命令。 如果将属性设置为零，则 ADO 将无限期等待，直到执行完成为止。 请确保编写代码的访问接口和数据源支持**CommandTimeout**功能。  
   
- **CommandTimeout**上设置**连接**对象不起任何作用**CommandTimeout**上设置**命令**对象上相同**连接**; 即**命令**对象的**CommandTimeout**属性不会继承的值**连接**对象的**CommandTimeout**值。  
+ **连接**对象上的**CommandTimeout**设置对同一**连接**上**命令**对象上的**CommandTimeout**设置不起任何作用;也就是说，**命令**对象的**CommandTimeout**属性不继承**Connection**对象的**CommandTimeout**值。  
   
- 上**连接**对象， **CommandTimeout**后的属性保持为读/写**连接**打开。  
+ 在**连接**对象上， **CommandTimeout**属性在**连接**打开后保持为读/写。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
   
 |||  
 |-|-|  
 |[命令对象 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|  
   
-## <a name="see-also"></a>请参阅  
- [ActiveConnection、 CommandText、 CommandTimeout、 CommandType、 大小和方向属性示例 (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
- [ActiveConnection、 CommandText、 CommandTimeout、 CommandType、 大小和方向属性示例 （VC + +）](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
- [ActiveConnection、 CommandText、 CommandTimeout、 CommandType、 大小和方向属性示例 (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)   
+## <a name="see-also"></a>另请参阅  
+ [ActiveConnection、CommandText、CommandTimeout、CommandType、Size 和 Direction 属性示例（VB）](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
+ [ActiveConnection、CommandText、CommandTimeout、CommandType、Size 和 Direction 属性示例（VC + +）](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
+ [ActiveConnection、CommandText、CommandTimeout、CommandType、Size 和 Direction 属性示例（JScript）](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)   
  [ConnectionTimeout 属性 (ADO)](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)

@@ -17,16 +17,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 023700b1922946cc1234468aeb0551785067666c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63128707"
 ---
 # <a name="localdbstoptracing-function"></a>LocalDBStopTracing 函数
   对当前 Windows 用户拥有的所有 SQL Server Express LocalDB 实例禁用 API 调用跟踪。  
   
- **标头文件：** sqlncli.h  
+ **头文件：** sqlncli.msi  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,9 +42,9 @@ HRESULT LocalDBStopTracing();
  发生了意外错误。 有关详细信息，请参阅事件日志。  
   
 ## <a name="remarks"></a>备注  
- 有关使用 LocalDB API 的代码示例，请参阅[SQL Server Express LocalDB 参考](../sql-server-express-localdb-reference.md)。  
+ 有关使用 LocalDB API 的代码示例，请参阅[SQL Server Express LocalDB 引用](../sql-server-express-localdb-reference.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server Express LocalDB 标头信息和版本信息](sql-server-express-localdb-header-and-version-information.md)  
   
   

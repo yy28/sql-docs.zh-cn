@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f13db8a1e22c88c4433cd8928479a6ed1af540f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833122"
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>在控制流中添加或删除任务或容器
@@ -53,7 +53,7 @@ ms.locfileid: "62833122"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
   
-2.  在解决方案资源管理器中，双击该包将其打开。 执行以下操作之一：  
+2.  在解决方案资源管理器中，双击该包将其打开。 执行下列操作之一：  
   
     -   单击“控制流”  选项卡，右键单击要删除的任务或容器，然后单击“删除”  。  
   
@@ -61,9 +61,9 @@ ms.locfileid: "62833122"
   
 3.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 任务](integration-services-tasks.md)   
  [Integration Services 容器](integration-services-containers.md)   
- [“控制流”](control-flow.md)  
+ [控制流](control-flow.md)  
   
   

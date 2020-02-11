@@ -1,5 +1,5 @@
 ---
-title: GetPermissions 和 SetPermissions 方法示例 (VB) |Microsoft Docs
+title: GetPermissions 和 SetPermissions 方法示例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: aa366d98-8c7a-4189-bdd8-1d663b243d33
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 11250cf591f576052434c641d8c65ba681000666
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966242"
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vb"></a>GetPermissions 和 SetPermissions 方法示例 (VB)
-此示例演示[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)并[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)方法。 下面的代码为订单表的完全访问权限提供给管理员用户。  
+此示例演示[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)和[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)方法。 以下代码为管理员用户提供 Orders 表的完全访问权限。  
   
 ```  
 ' BeginGrantPermissionsVB  
@@ -94,9 +94,9 @@ End Sub
 ' EndGrantPermissionsVB  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [目录对象 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [GetPermissions 方法 (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)   
- [SetPermissions 方法 (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)   
- [用户对象 (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)   
+## <a name="see-also"></a>另请参阅  
+ [目录对象（ADOX）](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [GetPermissions 方法（ADOX）](../../../ado/reference/adox-api/getpermissions-method-adox.md)   
+ [SetPermissions 方法（ADOX）](../../../ado/reference/adox-api/setpermissions-method-adox.md)   
+ [用户对象（ADOX）](../../../ado/reference/adox-api/user-object-adox.md)   
  [用户集合 (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)

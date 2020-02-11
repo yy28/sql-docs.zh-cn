@@ -1,5 +1,5 @@
 ---
-title: 摘要页 （AlwaysOn 可用性组向导） |Microsoft Docs
+title: "\"摘要\" 页（AlwaysOn 可用性组向导） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -16,20 +16,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b0bdeebb2d064bd647c19ea143474ef7738a4ab5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62814063"
 ---
 # <a name="summary-page-alwayson-availability-group-wizards"></a>“摘要”页（AlwaysOn 可用性组向导）
-  本帮助主题介绍 **“摘要”** 页中的选项。 本主题适用于 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]、 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 、 [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] 和 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 使用此页上的网格可以查看您为新的可用性组进行的选择。 若要进行一项或多项更改，请单击 **“上一步”** 返回到相关的一个或多个页面。 更改完成后，单击 **“下一步”** 返回到 **“摘要”** 页。 如果您对所做选择满意，则单击 **“完成”** 。  
+  本帮助主题介绍 **“摘要”** 页中的选项。 本主题适用于 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]、 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 、 [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] 和 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 使用此页上的网格可以查看您为新的可用性组进行的选择。 若要进行一项或多项更改，请单击 **“上一步”** 返回到相关的一个或多个页面。 更改完成后，单击 **“下一步”** 返回到 **“摘要”** 页。 如果您对所做选择满意，则单击 **“完成”**。  
   
-##  <a name="PageOptions"></a> “摘要”页选项  
+##  <a name="PageOptions"></a>"摘要" 页选项  
  **脚本**  
  单击此选项可为摘要网格中所列的操作生成 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本。 系统将提示您指定脚本的目标。  
   
- **“上一步”**  
+ **以前**  
  单击此选项可返回当前页的上一页。 您可以使用 **“上一步”** 按钮导航回之前的任意页，还可以更改已指定的任何值。  
   
  **“完成”**  
@@ -52,7 +52,7 @@ ms.locfileid: "62814063"
   
 
   
-## <a name="see-also"></a>请参阅  
- [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+## <a name="see-also"></a>另请参阅  
+ [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

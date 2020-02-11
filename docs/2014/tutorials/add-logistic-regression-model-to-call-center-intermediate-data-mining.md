@@ -1,5 +1,5 @@
 ---
-title: 向呼叫中心结构 （数据挖掘中级教程） 中添加逻辑回归模型 |Microsoft Docs
+title: 向呼叫中心结构中添加逻辑回归模型（数据挖掘中级教程） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 32e66a84dea20964c11c7de0aa568530aa8c28c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62823274"
 ---
 # <a name="adding-a-logistic-regression-model-to-the-call-center-structure-intermediate-data-mining-tutorial"></a>向呼叫中心结构中添加逻辑回归模型（数据挖掘中级教程）
@@ -28,47 +28,47 @@ ms.locfileid: "62823274"
   
 ### <a name="to-add-a-new-mining-model-to-the-call-center-mining-structure"></a>向呼叫中心挖掘结构中添加新的挖掘模型  
   
-1.  在中[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，在解决方案资源管理器中右键单击挖掘结构**Call Center Binned**，然后选择**打开设计器**。  
+1.  在[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]的解决方案资源管理器中，右键单击挖掘结构**呼叫中心装箱**，然后选择 "**打开设计器**"。  
   
-2.  在数据挖掘设计器中，单击**挖掘模型**选项卡。  
+2.  在数据挖掘设计器中，单击 "**挖掘模型**" 选项卡。  
   
-3.  单击**创建相关的挖掘模型**。  
+3.  单击 "**创建相关挖掘模型**"。  
   
-4.  在中**新建挖掘模型**对话框中，对于**模型名称**，类型`Call Center - LR`。  有关**算法名称**，选择**Microsoft 逻辑回归**。  
+4.  在 "**新建挖掘模型**" 对话框的 "**模型名称**" 中`Call Center - LR`，键入。  对于 "**算法名称**"，选择 " **Microsoft 逻辑回归**"。  
   
-5.  单击“确定”  。  
+5.  单击“确定”。   
   
-     新的挖掘模型将显示在**挖掘模型**选项卡。  
+     新的挖掘模型将显示在 "**挖掘模型**" 选项卡中。  
   
 ### <a name="to-customize-the-logistic-regression-model"></a>自定义逻辑回归模型  
   
-1.  为新挖掘模型列中`Call Center - LR`，将 Fact CallCenter ID 作为键。  
+1.  在新挖掘模型`Call Center - LR`的列中，将事实 CallCenter ID 保留为键。  
   
-2.  将 ServiceGrade 和 Level Two Operators 到的值更改**Predict**。  
+2.  将 ServiceGrade 和 Level 2 运算符的值更改为 "**预测**"。  
   
      这些列既可以用作输入，也可以用于预测。 本质上，您对同一数据创建了两个独立的模型：一个预测操作员数，一个预测服务等级。  
   
-3.  更改到的所有其他列**输入**。  
+3.  将所有其他列更改为**输入**。  
   
 ### <a name="to-specify-the-seed-and-process-the-models"></a>指定种子并处理模型  
   
-1.  在中**挖掘模型**选项卡上，该模型名为 Call Center-LR，右键单击该列并选择**设置算法参数**。  
+1.  在 "**挖掘模型**" 选项卡中，右键单击名为呼叫中心-LR 的模型的列，然后选择 "**设置算法参数**"。  
   
-2.  在 HOLDOUT_SEED 参数所在的行，单击下的空单元格**值**，然后键入`1`。 单击“确定”  。  
+2.  在 HOLDOUT_SEED 参数所在的行中，单击 "**值**" 下的空单元， `1`然后键入。 单击“确定”。   
   
     > [!NOTE]  
     >  选择哪个值作为种子无关紧要，关键是您需要对所有相关模型使用同一个种子。  
   
-3.  在中**挖掘模型**菜单中，选择**处理挖掘结构和所有模型**。 单击**是**将更新后的数据挖掘项目部署到服务器。  
+3.  在 "**挖掘模型**" 菜单中，选择 "**处理挖掘结构和所有模型**"。 单击 **"是"** 将更新后的数据挖掘项目部署到服务器。  
   
-4.  在中**处理挖掘模型**对话框中，单击**运行**。  
+4.  在 "**处理挖掘模型**" 对话框中，单击 "**运行**"。  
   
-5.  单击**关闭**以关闭**处理进度**对话框中，然后单击**关闭**中再次**处理挖掘模型**对话框。  
+5.  单击 "**关闭**" 关闭 "**处理进度**" 对话框，然后再次单击 "**处理挖掘模型**" 对话框中的 "**关闭**"。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [创建呼叫中心模型的预测&#40;数据挖掘中级教程&#41;](../../2014/tutorials/create-predictions-call-center-models-intermediate-data-mining-tutorial.md)  
+ [&#40;中级数据挖掘教程为呼叫中心模型创建预测&#41;](../../2014/tutorials/create-predictions-call-center-models-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>请参阅  
- [处理要求和注意事项（数据挖掘）](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+## <a name="see-also"></a>另请参阅  
+ [数据挖掘 &#40;处理要求和注意事项&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

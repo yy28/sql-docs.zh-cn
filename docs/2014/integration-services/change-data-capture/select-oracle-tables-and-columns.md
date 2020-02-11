@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fe951cb7811bb8cc92414564fda466657d2fae8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771053"
 ---
 # <a name="select-oracle-tables-and-columns"></a>选择 Oracle 表和列
@@ -49,7 +49,7 @@ ms.locfileid: "62771053"
   
  在使用正确的对话框[为捕获更改选择 Oracle 表](select-oracle-tables-for-capturing-changes.md)或[对为捕获更改选择的表进行更改](make-changes-to-the-tables-selected-for-capturing-changes.md)后，单击“下一步”  以[生成和运行补充日志记录脚本](generate-and-run-the-supplemental-logging-script.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [如何创建 SQL Server 更改数据库实例](how-to-create-the-sql-server-change-database-instance.md)   
  [编辑表](edit-tables.md)   
  [将表添加到 CDC 实例](add-tables-to-a-cdc-instance.md)   

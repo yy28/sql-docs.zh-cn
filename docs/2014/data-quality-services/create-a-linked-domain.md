@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7c9d5f86ba0be02ba21529aafc02897195ff4396
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65481015"
 ---
 # <a name="create-a-linked-domain"></a>创建链接域
@@ -31,25 +31,25 @@ ms.locfileid: "65481015"
 ### <a name="controlling-data-flow-to-composite-domains"></a>控制到复合域的数据流  
  链接域使您能够控制字段与复合域之间的数据流。 您可以区分一个字段中的数据何时流向复合域，而另一个非常相似的域中的数据何时不流向复合域。 这是通过指定以下内容来实现的：在两个链接域中，一个域是复合域的一部分，而另一个域则不是。 从域角度来看，链接域是完全相同的。 它们包含同样的知识。 然而，从复合域的角度来看，链接域是不同的。 一个参与复合域；另一个则不参与。  
   
- 示例是一条包含以下字段的记录：Customer First Name、Customer Last Name 和 Father's First Name。 假设同时将客户的名字和父亲的名字映射到 First Name 域，并使 First Name 域和 Last Name 域成为 Full Name 复合域的组成部分。 问题是父亲的名字将添加到复合域，但没有姓氏。 但是，如果将这两个名字字段链接到一个域并链接这两个域，则可以将 Customer First Name 域链接到 Full Name 复合域，但不将 Father’s First Name 字段添加到复合域；从而防止将 Father’s First Name 添加到复合域。  
+ 例如，一条包含以下字段的记录：Customer First Name、Customer Last Name 和 Father’s First Name。 假设同时将客户的名字和父亲的名字映射到 First Name 域，并使 First Name 域和 Last Name 域成为 Full Name 复合域的组成部分。 问题是父亲的名字将添加到复合域，但没有姓氏。 但是，如果将这两个名字字段链接到一个域并链接这两个域，则可以将 Customer First Name 域链接到 Full Name 复合域，但不将 Father’s First Name 字段添加到复合域；从而防止将 Father’s First Name 添加到复合域。  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a> 先决条件  
+###  <a name="Prerequisites"></a>先决条件  
  若要创建链接域，您必须具有知识库和要链接到的现有域。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_administrator 角色，才能创建链接域。  
   
-##  <a name="Create"></a> 创建链接域  
+##  <a name="Create"></a>创建链接域  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../../2014/data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 的主屏幕中，打开或创建一个知识库。 选择 **“域管理”** 作为活动，然后单击 **“打开”** 或 **“创建”** 。 有关详细信息，请参阅 [创建知识库](../../2014/data-quality-services/create-a-knowledge-base.md) 或 [打开知识库](../../2014/data-quality-services/open-a-knowledge-base.md)。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 的主屏幕中，打开或创建一个知识库。 选择 **“域管理”** 作为活动，然后单击 **“打开”** 或 **“创建”**。 有关详细信息，请参阅 [创建知识库](../../2014/data-quality-services/create-a-knowledge-base.md) 或 [打开知识库](../../2014/data-quality-services/open-a-knowledge-base.md)。  
   
-3.  从 **“域管理”** 页上的 **“域列表”** 中，右键单击您要将新域链接到的域，然后单击 **“创建链接域”** 。  
+3.  从 **“域管理”** 页上的 **“域列表”** 中，右键单击您要将新域链接到的域，然后单击 **“创建链接域”**。  
   
     > [!NOTE]  
     >  没有专门用于创造链接域的图标。 您只能使用上下文菜单中的命令。  
@@ -62,7 +62,7 @@ ms.locfileid: "65481015"
   
 7.  单击 **“完成”** 以完成域管理活动，如 [结束域管理活动](../../2014/data-quality-services/end-the-domain-management-activity.md)中所述。  
   
-##  <a name="Map"></a> Map two fields to linked domains  
+##  <a name="Map"></a>将两个字段映射到链接域  
   
 1.  为知识发现活动打开一个知识库，并将此知识库映射到数据库以及表或视图。  
   
@@ -72,17 +72,17 @@ ms.locfileid: "65481015"
   
 4.  在“创建域”对话框中，输入名称和说明，然后单击“确定”。  
   
-##  <a name="FollowUp"></a> 跟进：创建链接域后  
+##  <a name="FollowUp"></a>跟进：在创建链接域后  
  在创建链接域后，您可以对域执行其他域管理任务，可以执行知识发现以便向域添加知识，或者可以向域添加匹配策略。 有关详细信息，请参阅[执行知识发现](../../2014/data-quality-services/perform-knowledge-discovery.md)、[管理域](../../2014/data-quality-services/managing-a-domain.md)或[创建匹配策略](../../2014/data-quality-services/create-a-matching-policy.md)。  
   
-##  <a name="Behavior"></a> 链接域的行为  
+##  <a name="Behavior"></a>链接域的行为  
  可以更改链接域的设置，如下所示：  
   
 -   您可以更改链接域的名称和说明。  
   
--   若要更改 **“数据类型”** 、 **“使用前导值”** 或 **“将输出格式设置为”** 属性，请选择链接到的域，然后在该域的 **“域属性”** 选项卡中更改这些设置。 您不能在链接域的属性中更改这些设置。 有关详细信息，请参阅 [创建域](../../2014/data-quality-services/create-a-domain.md)。  
+-   若要更改 **“数据类型”**、 **“使用前导值”** 或 **“将输出格式设置为”** 属性，请选择链接到的域，然后在该域的 **“域属性”** 选项卡中更改这些设置。 您不能在链接域的属性中更改这些设置。 有关详细信息，请参阅 [创建域](../../2014/data-quality-services/create-a-domain.md)。  
   
--   可以针对链接域或它链接到的域更改“域管理”页的 **“引用数据”** 、 **“域规则”** 、 **“域值”** 和 **“基于字词的关系”** 选项卡中的设置，并且这些更改将被另一个域继承。  
+-   可以针对链接域或它链接到的域更改“域管理”页的 **“引用数据”**、 **“域规则”**、 **“域值”** 和 **“基于字词的关系”** 选项卡中的设置，并且这些更改将被另一个域继承。  
   
  链接域具有以下特征：  
   

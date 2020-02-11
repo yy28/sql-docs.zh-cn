@@ -1,5 +1,5 @@
 ---
-title: ActionEnum | Microsoft Docs
+title: ActionEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,18 +16,18 @@ ms.assetid: f948febd-c885-4621-823b-421e116fec4e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fad40c6daed6fd86f93da3f658af6a21c33ca762
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67928624"
 ---
 # <a name="actionenum"></a>ActionEnum
-指定何时执行操作的类型[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)调用。  
+指定在调用[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)时要执行的操作的类型。  
   
-|常量|ReplTest1|描述|  
+|一直|值|说明|  
 |--------------|-----------|-----------------|  
-|**adAccessDeny**|3|组或用户将被拒绝指定的权限。|  
-|**adAccessGrant**|1|组或用户将至少具有在所请求的权限。|  
-|**adAccessRevoke**|4|组或用户的任何显式访问权限将被吊销。|  
-|**adAccessSet**|2|组或用户将具有请求的权限。|
+|**adAccessDeny**|3|该组或用户将被拒绝指定的权限。|  
+|**adAccessGrant**|1|该组或用户将至少具有所需的权限。|  
+|**adAccessRevoke**|4|组或用户的所有显式访问权限将被吊销。|  
+|**adAccessSet**|2|该组或用户将拥有完全请求的权限。|

@@ -1,5 +1,5 @@
 ---
-title: 命名空间 uri 函数 (XQuery) |Microsoft Docs
+title: 命名空间 uri 函数（XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 05412c69aa121b9de14f2bab16555db2a8a4fdb4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67929945"
 ---
 # <a name="functions-on-nodes---namespace-uri"></a>基于节点的函数 - namespace-uri
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  返回的命名空间 URI 中指定的 QName *$arg*为 xs: string。  
+  返回 *$arg*中指定的 QName 的命名空间 URI 作为 xs： string。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,14 +42,14 @@ fn:namespace-uri($arg as node()?) as xs:string
   
 -   如果省略该参数，则默认值为上下文节点。  
   
--   在 SQL Server 中， **fn:namespace-uri()** 没有仅可以使用上下文相关的谓词的上下文中的参数。 特别要指出的是，它只能在方括号 ([ ]) 内使用。  
+-   在 SQL Server 中，无参数的**fn： namespace （）** 只能用于上下文相关的谓词的上下文中。 特别要指出的是，它只能在方括号 ([ ]) 内使用。  
   
--   如果 *$arg*是空序列，则返回零长度字符串。  
+-   如果 *$arg*是空序列，则返回长度为零的字符串。  
   
--   如果 *$arg*是一个元素或属性节点的展开的 QName 不在命名空间，该函数返回长度为零的字符串  
+-   如果 *$arg*是其展开的 QName 不在命名空间中的元素或属性节点，则该函数将返回长度为零的字符串。  
   
 ## <a name="examples"></a>示例  
- 本主题提供了一些针对 XML 实例存储在各种 XQuery 示例**xml**类型列中的 AdventureWorks 数据库。  
+ 本主题提供了针对 AdventureWorks 数据库中各种**xml**类型列中存储的 xml 实例的 XQuery 示例。  
   
 ### <a name="a-retrieve-namespace-uri-of-a-specific-node"></a>A. 检索特定节点的命名空间 URI  
  下面的查询是针对非类型化的 XML 实例指定的。 查询表达式 (`namespace-uri(/ROOT[1])`) 将检索指定节点的命名空间 URI 部分。  
@@ -61,7 +61,7 @@ SELECT @x.query('namespace-uri(/ROOT[1])')
   
  由于指定的 QName 没有命名空间 URI 部分而只有本地名称部分，因此结果是长度为零的字符串。  
   
- 下面的查询指定类型的 instructions **xml**列。 表达式中， `namespace-uri(/AWMI:root[1]/AWMI:Location[1])`，返回的命名空间 URI 的第一个 <`Location`> 元素子级的 <`root`> 元素。  
+ 下面的查询是针对指令类型化的**xml**列指定的。 表达式`namespace-uri(/AWMI:root[1]/AWMI:Location[1])`返回 <`Location` `root`> 元素的第一个 <> 元素子级的命名空间 URI。  
   
 ```  
 SELECT Instructions.query('  
@@ -71,14 +71,14 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- 下面是结果：  
+ 结果如下：  
   
 ```  
 https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions  
 ```  
   
 ### <a name="b-using-namespace-uri-without-argument-in-a-predicate"></a>B. 在谓词中使用没有参数的 namespace-uri()  
- 对类型为 xml 的 CatalogDescription 列指定了以下查询。 表达式将返回其命名空间 URI 为 `https://www.adventure-works.com/schemas/OtherFeatures` 的所有元素节点。 命名空间-**uri （)** 函数指定不带参数，并使用上下文节点。  
+ 对类型为 xml 的 CatalogDescription 列指定了以下查询。 表达式将返回其命名空间 URI 为 `https://www.adventure-works.com/schemas/OtherFeatures` 的所有元素节点。 指定的命名空间**uri （）** 函数不带参数，并且使用上下文节点。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -98,15 +98,15 @@ WHERE ProductModelID=19
 ...  
 ```  
   
- 可以将以前查询中的命名空间 URI 更改为 `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`。 你随后会收到的所有元素节点子级 <`ProductDescription`> 元素展开的 QName 的命名空间 URI 部分是`https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`。  
+ 可以将以前查询中的命名空间 URI 更改为 `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`。 然后，您将收到 <`ProductDescription`> 元素的所有元素节点子级，该元素的命名空间 URI 部分为已`https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`展开的 QName。  
   
 ### <a name="implementation-limitations"></a>实现限制  
  限制如下：  
   
--   **Namespace-uri （)** 函数返回类型 xs: string，而不是 xs: anyuri 的实例。  
+-   **命名空间 uri （）** 函数返回类型为 xs： string 而不是 Xs： anyURI 的实例。  
   
-## <a name="see-also"></a>请参阅  
- [基于节点的函数](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
- [local-name 函数&#40;XQuery&#41;](../xquery/functions-on-nodes-local-name.md)  
+## <a name="see-also"></a>另请参阅  
+ [节点上的函数](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
+ [&#40;XQuery&#41;本地名称函数](../xquery/functions-on-nodes-local-name.md)  
   
   
