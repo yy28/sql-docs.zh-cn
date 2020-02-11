@@ -16,18 +16,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 40a621af401b33394b996468c581e85e3635355c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63137598"
 ---
-# <a name="extended-stored-procedures-programmer39s-reference"></a>扩展存储的过程程序员&#39;的参考
+# <a name="extended-stored-procedures-programmer39s-reference"></a>扩展存储过程程序员&#39;s 参考
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]请改用 CLR 集成。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 扩展存储过程 API（以前是开放式数据服务的一部分）提供了基于服务器的应用程序编程接口 (API)，用于扩展 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。 该 API 由用于生成应用程序的 C 和 C++ 函数及宏组成。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)]扩展存储过程 API （以前是开放式数据服务的一部分）提供了基于服务器的应用程序编程接口（API），用于[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]扩展功能。 该 API 由用于生成应用程序的 C 和 C++ 函数及宏组成。  
   
  随着诸如 CLR 集成这样更新和功能更强大的技术的出现，对扩展存储过程的需求已大幅减少。  
   

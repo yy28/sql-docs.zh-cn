@@ -1,5 +1,5 @@
 ---
-title: RDS 编程模型的详细信息 |Microsoft Docs
+title: RDS 编程模型详细信息 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,68 +13,68 @@ ms.assetid: 3e57af8d-519b-4467-a0bd-af468534cefd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7d7251e3a403168e8383e636a8e6b5f712b9f7bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922529"
 ---
 # <a name="rds-programming-model-in-detail"></a>RDS 编程模型的详细信息
-RDS 编程模型的关键元素如下：  
+以下是 RDS 编程模型的关键元素：  
   
--   RDS.DataSpace  
+-   RDS.空间  
   
--   RDSServer.DataFactory  
+-   RDSServer. DataFactory  
   
 -   RDS.DataControl  
   
--   Event  
+-   事件  
   
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
-## <a name="rdsdataspace"></a>RDS.DataSpace  
- 在服务器和要调用的服务器程序，必须指定客户端应用程序。 反过来，应用程序接收对服务器程序的引用，并可以将该引用，就好像服务器程序本身。  
+## <a name="rdsdataspace"></a>RDS.空间  
+ 客户端应用程序必须指定要调用的服务器和服务器程序。 在返回时，应用程序将接收对服务器程序的引用，并可以将引用视为服务器程序本身。  
   
- RDS 对象模型包含此功能通过[rds。数据空间](../../../ado/reference/rds-api/dataspace-object-rds.md)对象。  
+ RDS 对象模型将此功能与 Rds 结合在一起[。空间](../../../ado/reference/rds-api/dataspace-object-rds.md)对象。  
   
- 使用一个程序标识符，指定服务器程序或*ProgID*。 服务器使用*ProgID*和服务器计算机的注册表来查找要初始化的实际程序有关的信息。  
+ 使用程序标识符或*ProgID*指定服务器程序。 服务器使用*ProgID*和服务器计算机的注册表来查找有关要启动的实际程序的信息。  
   
- RDS 使在内部根据服务器程序是否在远程服务器上跨 Internet 或 intranet; 区别服务器上本地局域网;或不在服务器上所有，而是在本地动态链接库 (DLL)。 这一区别确定如何在客户端和服务器之间交换和具有重要意义有形中返回到客户端应用程序的引用的类型信息。 但是，从应用角度来看，这一区别没有任何特殊的意义。 最重要的就是，您将收到某个可用的程序的引用。  
+ RDS 根据服务器程序是否在 Internet 或 intranet 上的远程服务器上进行区分;本地网络上的服务器;而不是在服务器上，而是在本地动态链接库（DLL）上。 这种区别决定了如何在客户端和服务器之间交换信息，并在返回到客户端应用程序的引用类型中产生有形差异。 然而，从角度来看，这种区别没有特殊意义。 重要的是，您会收到一个可供使用的程序参考。  
   
-## <a name="rdsserverdatafactory"></a>RDSServer.DataFactory  
- RDS 提供了默认的服务器程序，可以执行针对数据源并返回的 SQL 查询[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象或采取**记录集**对象并更新数据源。  
+## <a name="rdsserverdatafactory"></a>RDSServer. DataFactory  
+ RDS 提供了一个默认服务器程序，该程序可以对数据源执行 SQL 查询，并返回[recordset](../../../ado/reference/ado-api/recordset-object-ado.md)对象或获取记录**集**对象并更新数据源。  
   
- RDS 对象模型包含此功能通过[提高](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)对象。  
+ RDS 对象模型将此功能与[RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)对象结合在一起。  
   
- 此外，此对象具有用于创建一个空的方法**记录集**您可以以编程方式填充的对象 ([CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md))，并将转换为另一种方法**记录集**到要生成的网页的文本字符串的对象 ([ConvertToString](../../../ado/reference/rds-api/converttostring-method-rds.md))。  
+ 此外，此对象还提供了一种方法，用于创建可通过编程方式填充的空**记录集**对象（[CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md)），以及将**记录集**对象转换为文本字符串以生成网页（[ConvertToString](../../../ado/reference/rds-api/converttostring-method-rds.md)）的另一种方法。  
   
- 使用 ADO 中，您可以重写一些标准的连接和命令行为**提高**与**DataFactory**命令处理程序，并包含连接的自定义文件，和安全参数。  
+ 使用 ADO，你可以使用**DataFactory**处理程序和包含连接、命令和安全参数的自定义文件替代**RDSServer. DataFactory**的一些标准连接和命令行为。  
   
- 服务器程序有时称为*业务对象*。 您可以编写自己的自定义业务对象可以执行复杂的数据访问、 有效性检查，依次类推。 甚至在编写自定义业务对象，可以创建的实例**提高**对象，并使用它的一些方法来完成您自己的任务。  
+ 服务器程序有时称为*业务对象*。 您可以编写自己的自定义业务对象，该对象可执行复杂的数据访问、有效性检查等操作。 即使编写自定义业务对象，也可以创建**RDSServer DataFactory**对象的实例并使用它的某些方法来完成自己的任务。  
   
 ## <a name="rdsdatacontrol"></a>RDS.DataControl  
- RDS 提供了一种的功能合并**rds。DataSpace**和**提高**，并且启用可视控件能够轻松地**记录集**查询从数据源返回的对象。 RDS 尝试最常见的情况下，若要执行尽可能多地以自动获取访问权限的服务器上的信息并将其显示在可视控件。  
+ RDS 提供了一种结合使用 Rds 的功能的方法 **。数据空间**和 DataFactory，并使可视控件可以轻松地使用数据源中的查询所返回的**Recordset**对象。 **RDSServer** 最常见的情况是，RDS 尝试尽可能多地自动访问服务器上的信息，并将其显示在视觉对象控件中。  
   
- RDS 对象模型包含此功能通过[rds。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象。  
+ RDS 对象模型将此功能与 Rds 结合在一起[。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象。  
   
- **Rds。DataControl**具有两个方面。 与数据源相关的一个方面。 如果设置的命令和使用连接信息**Connect**并**SQL**的属性**rds。DataControl**，它将自动使用**rds。DataSpace**以创建为默认值的引用**提高**对象。 然后**提高**将使用**Connect**属性值连接到数据源，请使用**SQL**属性的值以获取**记录集**从数据源，并返回**记录集**对象传递给**rds。DataControl**。  
+ **RDS。DataControl**有两个方面。 一个方面就是数据源。 如果使用 RDS 的**Connect**和**SQL**属性设置命令和连接信息 **。DataControl**，它将自动使用**RDS。** 用于创建对默认**RDSServer DataFactory**对象的引用的空间。 然后， **RDSServer**将使用**连接**属性值连接到数据源，使用**SQL**属性值从数据源中获取**记录集**，并将**记录集**对象返回到**RDS。DataControl**。  
   
- 第二个方面与显示的返回**记录集**可视控件中的信息。 可以将与可视控件相关联**rds。DataControl** （在称为绑定的进程） 并获取访问权限的信息关联**记录集**对象，在 Microsoft® Internet Explorer 中的网页上显示查询结果。 每个**rds。DataControl**对象将一个绑定**记录集**对象，表示为一个或多个可视控件 （例如，文本框、 组合框，网格控件等） 的单个查询的结果。 可能有多个**rds。DataControl**每一页上的对象。 每个**rds。DataControl**对象可以连接到不同的数据源，并包含一个单独的查询的结果。  
+ 第二个方面是在视觉对象控件中显示返回的**记录集**信息。 可以将视觉对象控件与 RDS 进行关联 **。DataControl** （在称为 "绑定" 的进程中）并获取对关联**Recordset**对象中的信息的访问权限，从而在 Microsoft® Internet Explorer 中的网页上显示查询结果。 每个**RDS。DataControl**对象将一个**记录集**对象（表示单个查询的结果）绑定到一个或多个可视控件（例如，文本框、组合框、网格控件等）。 可能有多个**RDS。** 每页上的 DataControl 对象。 每个**RDS。DataControl**对象可以连接到其他数据源，并包含单独查询的结果。  
   
- **Rds。DataControl**对象还具有它自己的方法用于导航、 排序和筛选关联的行**记录集**对象。 这些方法非常相似，但不是与 ADO 上的方法相同**记录集**对象。  
+ **RDS。DataControl**对象还具有自己的方法，用于对关联的**Recordset**对象的行进行导航、排序和筛选。 这些方法类似，但不同于 ADO**记录集**对象上的方法。  
   
-## <a name="events"></a>Events  
- RDS 支持两个自己独立于 ADO 事件模型的事件。 [OnReadyStateChange](../../../ado/reference/rds-api/onreadystatechange-event-rds.md)调用事件时**rds。DataControl** [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md)属性更改，因此通知您已成功完成一个异步操作后，已终止，或遇到错误。 [OnError](../../../ado/reference/rds-api/onerror-event-rds.md)事件时出现错误，即使调用异步操作期间发生错误。  
+## <a name="events"></a>事件  
+ RDS 支持其自己的两个事件，这些事件独立于 ADO 事件模型。 只要 RDS，就会调用[onReadyStateChange](../../../ado/reference/rds-api/onreadystatechange-event-rds.md)事件 **。DataControl** [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md)属性更改，因此当异步操作成功完成、终止或遇到错误时，通知您。 只要发生错误，就会调用[onError](../../../ado/reference/rds-api/onerror-event-rds.md)事件，即使在异步操作期间发生了错误。  
   
 > [!NOTE]
->  Microsoft Internet Explorer 到 RDS 提供两个其他事件： **onDataSetChanged**，这指示**记录集**功能，但仍检索行和**onDataSetComplete**，表示**记录集**已完成中检索行。  
+>  Microsoft Internet Explorer 向 RDS： **onDataSetChanged**提供了两个附加事件，这指示**记录集**正常运行，但仍检索行，而**onDataSetComplete**指示**记录集**已完成行的检索。  
   
-## <a name="see-also"></a>请参阅  
- [RDS 编程模型和对象](../../../ado/guide/remote-data-service/rds-programming-model-with-objects.md)   
- [DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [DataFactory 对象 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
- [DataSpace 对象 (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
+## <a name="see-also"></a>另请参阅  
+ [具有对象的 RDS 编程模型](../../../ado/guide/remote-data-service/rds-programming-model-with-objects.md)   
+ [DataControl 对象（RDS）](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
+ [DataFactory 对象（RDSServer）](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
+ [空间对象（RDS）](../../../ado/reference/rds-api/dataspace-object-rds.md)   
  [RDS 方案](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS 教程](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [RDS 使用情况和安全性](../../../ado/guide/remote-data-service/rds-usage-and-security.md)

@@ -1,5 +1,5 @@
 ---
-title: IHconstrainttypes (Transact SQL) |Microsoft Docs
+title: IHconstrainttypes （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,24 +18,24 @@ ms.assetid: 955d6fa9-0b31-4335-a3cd-e4c4d90ad308
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e4d24c94cc4c6dca00fc0e3fd9cd93626da6e4fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68076454"
 ---
 # <a name="ihconstrainttypes-transact-sql"></a>IHconstrainttypes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **IHconstrainttypes**系统表中占一行，每种类型的非 SQL Server 约束支持的非 SQL Server 发布服务器。 此表存储在分发数据库中。  
+  对于非 SQL Server 发布服务器所支持的每种类型的非 SQL Server 约束， **IHconstrainttypes**系统表中各占一行。 此表存储在分发数据库中。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**type**|**nvarchar(255)**|受支持的非 SQL Server 约束类型的名称。|  
+|type |**nvarchar(255)**|受支持的非 SQL Server 约束类型的名称。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [异类数据库复制](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [复制表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

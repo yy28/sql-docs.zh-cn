@@ -1,5 +1,5 @@
 ---
-title: Instr (MDX) |Microsoft Docs
+title: Instr （MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 201580b71086dfe39e669966070dae2dca72e3eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68105304"
 ---
 # <a name="instr-mdx"></a>Instr (MDX)
@@ -36,13 +36,13 @@ InStr([start, ]searched_string, search_string[, compare])
  *search_string*  
  要对其进行搜索的字符串表达式。  
   
- *比较*  
- （可选）一个整数值。 始终忽略此参数。 定义与其他的兼容性**Instr**其他语言中的函数。  
+ *并排*  
+ （可选）一个整数值。 始终忽略此参数。 定义它是为了与其他语言中的其他**Instr**函数兼容。  
   
 ## <a name="return-value"></a>返回值  
- 起始位置的整数值*String2*中*String1*。  
+ 以*string1*开头位置为*string2*的整数值。  
   
- 此外， **InStr**函数将返回根据条件下表中列出的值：  
+ 此外， **InStr**函数返回下表中列出的值，具体取决于条件：  
   
 |条件|返回值|  
 |---------------|------------------|  
@@ -59,7 +59,7 @@ InStr([start, ]searched_string, search_string[, compare])
 >  **Instr**始终执行不区分大小写的比较。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示的使用情况**Instr**函数，并演示了不同的结果情形。  
+ 下面的示例演示如何使用**Instr**函数并显示不同的结果方案。  
   
 ```  
 with   

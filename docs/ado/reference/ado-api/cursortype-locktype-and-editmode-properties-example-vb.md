@@ -1,5 +1,5 @@
 ---
-title: CursorType、 LockType、 和 EditMode 属性示例 (VB) |Microsoft Docs
+title: CursorType、LockType 和 EditMode 属性示例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 2cb4a304-f40a-4897-8b93-82c2d8e93500
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4556a243206d373a110aaab6a56bd43bf487abff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919271"
 ---
-# <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>CursorType、 LockType、 和 EditMode 属性示例 (VB)
-此示例演示如何设置[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)并[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)属性，然后打开才能[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。 它还显示的值[EditMode](../../../ado/reference/ado-api/editmode-property.md)各种条件下的属性。 若要运行此过程需要 EditModeOutput 函数。  
+# <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>CursorType、LockType 和 EditMode 属性示例（VB）
+此示例演示如何在打开[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)之前设置[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)和[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)属性。 它还在各种条件下显示[EditMode](../../../ado/reference/ado-api/editmode-property.md)属性的值。 运行此过程需要 EditModeOutput 函数。  
   
 ```  
 'BeginEditModeVB  
@@ -122,11 +122,11 @@ End Function
 'EndEditModeVB  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [CursorType 属性 (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   
+## <a name="see-also"></a>另请参阅  
+ [CursorType 属性（ADO）](../../../ado/reference/ado-api/cursortype-property-ado.md)   
  [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md)   
  [EditMode 属性](../../../ado/reference/ado-api/editmode-property.md)   
  [EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md)   
- [LockType 属性 (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   
+ [LockType 属性（ADO）](../../../ado/reference/ado-api/locktype-property-ado.md)   
  [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

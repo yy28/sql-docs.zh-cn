@@ -13,29 +13,29 @@ ms.assetid: ff40c9c0-b847-4426-a099-1bff47e6e872
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5962882de08712dcff75790de7c58d69f965a3bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68086386"
 ---
 # <a name="sqlgetdata-cursor-library"></a>SQLGetData（游标库）
 > [!IMPORTANT]  
->  此功能将 Windows 的未来版本中删除。 避免在新的开发工作中使用此功能并计划修改当前使用此功能的应用程序。 Microsoft 建议使用驱动程序的游标功能。  
+>  此功能将在 Windows 的将来版本中删除。 避免在新的开发工作中使用此功能，并计划修改当前使用此功能的应用程序。 Microsoft 建议使用驱动程序的游标功能。  
   
- 本主题介绍如何使用**SQLGetData**游标库中的函数。 有关常规信息**SQLGetData**，请参阅[SQLGetData 函数](../../../odbc/reference/syntax/sqlgetdata-function.md)。  
+ 本主题讨论如何在游标库中使用**SQLGetData**函数。 有关**SQLGetData**的常规信息，请参阅[SQLGetData 函数](../../../odbc/reference/syntax/sqlgetdata-function.md)。  
   
- 游标库实现**SQLGetData**通过第一个构造**选择**语句与**其中**枚举每个绑定其缓存中存储的值的子句当前行中的列。 然后执行**选择**语句来重新选择行并调用**SQLGetData**驱动程序以从数据源 （而不是缓存） 中检索数据中。  
+ 游标库通过先使用**WHERE**子句构造一个**SELECT**语句来实现**SQLGetData** ，该语句可枚举当前行中每个绑定列中存储的值。 然后，它会执行**SELECT**语句以重新选择该行，并在驱动程序中调用**SQLGetData** ，以从数据源检索数据（而不是缓存）。  
   
 > [!CAUTION]  
->  **其中**子句通过游标库来标识当前行来构造可能无法识别的任何行，标识不同的行，或标识多个行。 有关详细信息，请参阅[构造搜索语句](../../../odbc/reference/appendixes/constructing-searched-statements.md)。  
+>  由游标库构造的用于标识当前行的**WHERE**子句可能无法标识任何行、标识不同行或标识多个行。 有关详细信息，请参阅[构造搜索语句](../../../odbc/reference/appendixes/constructing-searched-statements.md)。  
   
- 如果 SQL_ATTR_USE_BOOKMARKS 语句属性设置为 SQL_UB_VARIABLE， **SQLGetData**可以调用第 0 返回书签的数据列。  
+ 如果 SQL_ATTR_USE_BOOKMARKS 语句特性设置为 SQL_UB_VARIABLE，则可以对第0列调用**SQLGetData** ，以返回书签数据。  
   
- 调用**SQLGetData**受到以下限制：  
+ 对**SQLGetData**的调用受到以下限制：  
   
--   **SQLGetData**不能调用为只进游标。  
+-   对于只进游标，不能调用**SQLGetData** 。  
   
--   **SQLGetData**仅在满足以下条件时可调用：**选择**语句生成的结果集;**选择**语句未包含一个联接， **UNION**子句，或**分组依据**子句; 以及所有选择列表中使用了别名或表达式的列与未绑定**SQLBindCol**。  
+-   仅当满足以下条件时，才能调用**SQLGetData** ： **SELECT**语句生成的结果集;**SELECT**语句不包含联接、**联合**子句或**GROUP by**子句;在选择列表中使用别名或表达式的任何列都不与**SQLBindCol**绑定。  
   
--   如果该驱动程序支持只有一个活动语句，该游标库会提取结果集执行之前的 rest**选择**语句，并调用**SQLGetData**。
+-   如果驱动程序仅支持一个活动语句，则在执行**SELECT**语句并调用**SQLGetData**之前，游标库将提取结果集的其余部分。

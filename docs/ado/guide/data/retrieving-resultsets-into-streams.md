@@ -1,5 +1,5 @@
 ---
-title: 为流检索结果集 |Microsoft Docs
+title: 检索流中的结果集 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,19 +15,19 @@ ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2f0c76a668c7191467e9f66ba48c486aceea16df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924349"
 ---
 # <a name="retrieving-resultsets-into-streams"></a>检索流中的结果集
-而不是接收结果中的传统**记录集**对象，ADO 改成流检索查询结果。 ADO **Stream**对象 (或其他支持 COM 的对象**IStream**接口，如 ASP**请求**并**响应**对象) 可用于包含这些结果。 此功能的一个用途是检索 XML 格式的结果。 借助 SQL Server，例如，XML 可以返回结果在多个方面，例如使用 SQL SELECT 查询使用 FOR XML 子句或使用 XPath 查询。  
+ADO 不必接收传统**记录集**对象中的结果，而是可以将查询结果检索到流中。 ADO**流**对象（或支持 COM **IStream**接口的其他对象（如 ASP**请求**和**响应**对象）可用于包含这些结果。 此功能的一种用途是检索 XML 格式的结果。 例如，使用 SQL Server，可以通过多种方式返回 XML 结果，例如，使用带有 SQL SELECT 查询的 FOR XML 子句或使用 XPath 查询。  
   
- 若要接收流格式而不是在查询结果**记录集**，必须指定**adExecuteStream**常量从**ExecuteOptionEnum**为的参数**Execute**方法**命令**对象。 如果您的提供程序支持此功能，将在流中执行时返回结果。 您可能需要指定其他特定于提供程序的属性之前执行的代码。 例如，对于 Microsoft OLE DB Provider for SQL Server，属性，如**输出 Stream**中**属性**的集合**命令**对象必须是指定。 与此功能相关的特定于 SQL Server 的动态属性的详细信息，请参阅 SQL Server 联机丛书中的 XML-Related 属性。  
+ 若要以流格式而不是在**记录集中**接收查询结果，必须将**ExecuteOptionEnum**中的**adExecuteStream**常量指定为**命令**对象的**Execute**方法的参数。 如果提供程序支持此功能，则在执行时将在流中返回结果。 可能需要在代码执行之前指定其他特定于访问接口的属性。 例如，对于 SQL Server 的 Microsoft OLE DB 提供程序，必须指定**Command**对象的**properties**集合中的**Output Stream**之类的属性。 有关与此功能相关的 SQL Server 特定的动态属性的详细信息，请参阅 SQL Server 联机丛书中与 XML 相关的属性。  
   
 ## <a name="for-xml-query-example"></a>FOR XML 查询示例  
- 下面的示例是用 VBScript 编写到 Northwind 数据库：  
+ 下面的示例通过 VBScript 写入 Northwind 数据库：  
   
 ```html
 <!-- BeginRecordAndStreamVBS -->  
@@ -142,21 +142,21 @@ ms.locfileid: "67924349"
   
  FOR XML 子句指示 SQL Server 以 XML 文档的形式返回数据。  
   
-### <a name="for-xml-syntax"></a>有关 XML 语法  
+### <a name="for-xml-syntax"></a>FOR XML 语法  
   
 ```syntax
 FOR XML [RAW|AUTO|EXPLICIT]  
 ```  
   
- 有关 XML RAW 生成具有列的值作为属性的泛型行元素。 FOR XML AUTO 使用试探法来生成层次结构树有基于表的名称的元素名称。 FOR XML EXPLICIT 通用表生成的具有生成完整描述了由元数据的关系。  
+ FOR XML RAW 生成将列值作为属性的通用行元素。 FOR XML AUTO 使用试探法根据表名称生成包含元素名称的层次结构树。 FOR XML EXPLICIT 会生成一个通用表，其中的关系由元数据完全描述。  
   
- FOR XML 中选择的 SQL 语句示例如下：  
+ 下面是 SQL SELECT FOR XML 语句的示例：  
   
 ```sql
 SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO  
 ```  
   
- 可以在字符串中指定命令，如前面所示，分配给**CommandText**，或在 XML 模板查询分配给的窗体**CommandStream**。 有关 XML 模板查询的详细信息，请参阅[命令流](../../../ado/guide/data/command-streams.md)ADO 或使用 SQL Server 联机丛书中的命令输入流中。  
+ 此命令可以在字符串中指定，如前面所示，分配给**CommandText**，或指定给**CommandStream**的 XML 模板查询的形式。 有关 XML 模板查询的详细信息，请参阅 ADO 中的[命令流](../../../ado/guide/data/command-streams.md)或使用 SQL Server 联机丛书中的命令输入流。  
   
  作为 XML 模板查询，FOR XML 查询如下所示：  
   
@@ -164,13 +164,13 @@ SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO
 <sql:query> SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO </sql:query>  
 ```  
   
- 此示例指定 ASP**响应**对象**输出 Stream**属性：  
+ 此示例为**输出流**属性指定 ASP**响应**对象：  
   
 ```vb
 adoCmd.Properties("Output Stream") = Response  
 ```  
   
- 接下来，指定**adExecuteStream**的参数**Execute**。 此示例包装在 XML 标记，以便创建 XML 数据岛中的流：  
+ 接下来，指定**Execute**的**adExecuteStream**参数。 此示例包装 XML 标记中的流以创建 XML 数据岛：  
   
 ```vb
 Response.write "<XML ID=MyDataIsle>"  
@@ -179,4 +179,4 @@ Response.write "</XML>"
 ```  
   
 ### <a name="remarks"></a>备注  
- 此时，XML 已传输到客户端浏览器，它已准备好显示。 这是通过使用客户端 VBScript 将 XML 文档绑定到的 DOM 和循环通过每个子节点，来生成 HTML 中的产品的列表实例。
+ 此时，XML 已流式传输到客户端浏览器，并已准备好显示。 为此，可使用客户端 VBScript 将 XML 文档绑定到 DOM 实例，并循环遍历每个子节点以在 HTML 中生成产品列表。

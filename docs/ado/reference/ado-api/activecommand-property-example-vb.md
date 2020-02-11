@@ -1,5 +1,5 @@
 ---
-title: ActiveCommand 属性示例 (VB) |Microsoft Docs
+title: ActiveCommand 属性示例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,16 +15,16 @@ ms.assetid: 23b06499-62df-4f46-88eb-6da392f9b456
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d97f655c89c07f7866fbdee6aab236f942b5499c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921683"
 ---
 # <a name="activecommand-property-example-vb"></a>ActiveCommand 属性示例 (VB)
-此示例演示[ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md)属性。  
+此示例演示了[ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md)属性。  
   
- 给定一个子例程[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象，其**ActiveCommand**属性用于显示命令文本和参数，用于创建**记录集**。  
+ 为子程序提供了一个[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象，该对象的**ActiveCommand**属性用于显示创建该**记录集**的命令文本和参数。  
   
 ```  
 'BeginActiveCommandVB  
@@ -90,11 +90,11 @@ End Sub
 'EndActiveCommandVB  
 ```  
   
- **ActiveCommandXprint**例程提供仅**记录集**对象，但它必须打印命令文本和参数，用于创建**记录集**。 此可执行，因为**记录集**对象的**ActiveCommand**属性产生关联[命令](../../../ado/reference/ado-api/command-object-ado.md)对象。  
+ **ActiveCommandXprint**例程仅提供**recordset**对象，但它必须打印用于创建该**记录集**的命令文本和参数。 这可以是因为**记录集**对象的**ActiveCommand**属性生成关联的[命令](../../../ado/reference/ado-api/command-object-ado.md)对象。  
   
- **命令**对象的[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)属性将生成创建的参数化的命令**记录集**。 **命令**对象的[参数](../../../ado/reference/ado-api/parameters-collection-ado.md)集合生成命令的参数占位符已替换的值 (" **？** ")。  
+ **命令**对象的[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)属性生成创建**记录集**的参数化命令。 **Command**对象的[Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md)集合生成替换为命令的参数占位符（"**？**"）的值。  
   
- 最后，输出错误消息或作者的名称和 ID。  
+ 最后，打印错误消息或作者名称和 ID。  
   
 ```  
 'BeginActiveCommandPrintVB  
@@ -120,7 +120,7 @@ End Sub
 'EndActiveCommandPrintVB  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [ActiveCommand 属性 (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
- [命令对象 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+## <a name="see-also"></a>另请参阅  
+ [ActiveCommand 属性（ADO）](../../../ado/reference/ado-api/activecommand-property-ado.md)   
+ [Command 对象（ADO）](../../../ado/reference/ado-api/command-object-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

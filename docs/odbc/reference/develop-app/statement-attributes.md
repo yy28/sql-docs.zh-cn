@@ -14,24 +14,24 @@ ms.assetid: 4c59cd8e-a713-4095-9065-20d5bdeafe43
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c74f1a79ef79b682bc2900d671e07bbe34c4dbf5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107272"
 ---
 # <a name="statement-attributes"></a>语句属性
-语句属性是语句的特征。 例如，若要使用书签和什么类型的游标语句的结果与使用设置语句属性。  
+语句特性是语句的特征。 例如，是否使用书签以及与语句的结果集一起使用的游标类型是语句特性。  
   
- 使用设置语句属性**SQLSetStmtAttr**并使用其当前设置检索**SQLGetStmtAttr**。 应用程序设置任何语句属性，则不要求所有语句属性都具有默认值，其中一些特定于驱动程序。  
+ 语句属性设置为**SQLSetStmtAttr** ，其当前设置通过**SQLGetStmtAttr**检索。 不要求应用程序设置任何语句属性;所有语句属性都具有默认值，其中一些属性是特定于驱动程序的。  
   
- 语句属性可以设置当取决于该属性本身。 在执行语句前，必须设置 SQL_ATTR_CONCURRENCY、 SQL_ATTR_CURSOR_TYPE、 SQL_ATTR_SIMULATE_CURSOR 和 SQL_ATTR_USE_BOOKMARKS 语句属性。 Sql_attr_async_enable 设置和 SQL_ATTR_NOSCAN 语句属性可以在任何时间设置，但再次使用该语句后才会应用。 SQL_ATTR_MAX_LENGTH 和 SQL_ATTR_MAX_ROWS，sql_attr_query_timeout 时，可语句属性可以设置在任何时候，但它是特定于驱动程序它们应用之前再次使用该语句。 可以在任何时间设置的其余的语句属性。  
+ 如果可以设置语句特性，则依赖于特性本身。 在执行语句之前，必须设置 SQL_ATTR_CONCURRENCY、SQL_ATTR_CURSOR_TYPE、SQL_ATTR_SIMULATE_CURSOR 和 SQL_ATTR_USE_BOOKMARKS 语句特性。 SQL_ATTR_ASYNC_ENABLE 和 SQL_ATTR_NOSCAN 语句特性可以随时设置，但在再次使用该语句之前不会应用。 SQL_ATTR_MAX_LENGTH、SQL_ATTR_MAX_ROWS 和 SQL_ATTR_QUERY_TIMEOUT 语句特性可以随时设置，但它是特定于驱动程序的，无论是否在再次使用该语句之前应用这些特性。 可以随时设置其余的语句属性。  
   
 > [!NOTE]  
->  设置在连接级别的语句属性通过调用的能力**SQLSetConnectAttr** ODBC 3 中已弃用。*x*。 ODBC 3。*x*应用程序应永远不会在连接级别设置语句属性。 ODBC 3。*x*驱动程序仅需要支持此功能，如果他们应适用于 ODBC 2。*x*应用程序。 有关详细信息，请参阅[SQLSetConnectOption 映射](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md)中附录 g:为了向后兼容的驱动程序指南。  
+>  通过调用**SQLSetConnectAttr**在连接级别设置语句属性的功能已在 ODBC 3 中弃用。*x*。 ODBC 3。*x*应用程序不应在连接级别设置语句属性。 ODBC 3。*x*驱动程序只有在使用 ODBC 2 时才需要支持此功能。*x*应用程序。 有关详细信息，请参阅附录 G：驱动程序准则中的[SQLSetConnectOption 映射](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md)，以实现向后兼容性。  
 >   
->  一种例外是 SQL_ATTR_METADATA_ID 和 SQL_ATTR_ASYNC_ENABLE 属性，这是连接属性和语句属性，可在连接级别或语句级别设置。  
+>  这种情况的一个例外是 SQL_ATTR_METADATA_ID 和 SQL_ATTR_ASYNC_ENABLE 属性，它们都是连接属性和语句属性，并且可以在连接级别或语句级别设置。  
 >   
->  在 ODBC 3 中引入的语句属性均不项。*x* （除外 SQL_ATTR_METADATA_ID) 可以设置在连接级别。  
+>  ODBC 3 中未引入任何语句属性。*x* （SQL_ATTR_METADATA_ID 除外）可以在连接级别设置。  
   
  有关详细信息，请参阅[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)函数说明。

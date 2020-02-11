@@ -1,5 +1,5 @@
 ---
-title: 复制表 (TRANSACT-SQL) |Microsoft Docs
+title: 复制表（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 5696ee73-5d7c-4f26-b7ee-6831c9c3edf7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3dc89ce68529212246d85bdbafa8d9487b77a067
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67910228"
 ---
 # <a name="replication-tables-transact-sql"></a>复制表 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  复制系统表支持复制拓扑。 如果将用户数据库配置为发布服务器或订阅服务器，则复制会将系统表添加到数据库中。 从复制拓扑删除用户数据库时，将删除这些表。 通用规则有关使用系统表，请参阅[系统表&#40;TRANSACT-SQL&#41;](system-tables-transact-sql.md)。  
+  复制系统表支持复制拓扑。 如果将用户数据库配置为发布服务器或订阅服务器，则复制会将系统表添加到数据库中。 从复制拓扑删除用户数据库时，将删除这些表。 有关使用系统表的一般规则，请参阅[系统表 &#40;transact-sql&#41;](system-tables-transact-sql.md)。  
   
 ## <a name="replication-tables"></a>复制表  
  下面是复制所使用的系统表的列表，列表按数据库分组。  
@@ -34,7 +34,7 @@ ms.locfileid: "67910228"
   
 |||  
 |-|-|  
-|[MSreplication_options &#40;Transact-SQL&#41;](msreplication-options-transact-sql.md)||  
+|[MSreplication_options &#40;Transact-sql&#41;](msreplication-options-transact-sql.md)||  
 | &nbsp; | &nbsp; |
  
 ### <a name="replication-tables-in-the-msdb-database"></a>msdb 数据库中的复制表  
@@ -73,7 +73,7 @@ ms.locfileid: "67910228"
 |[MSqreader_history](msqreader-history-transact-sql.md)            ||
 | &nbsp; | &nbsp; |
   
- 分发数据库中的这些表用于将数据从非复制[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 有关详细信息，请参阅[非 SQL Server 发布服务器](../../relational-databases/replication/non-sql/non-sql-server-publishers.md)。  
+ 分发数据库中的这些表用于从非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器复制数据。 有关详细信息，请参阅[非 SQL Server 发布服务器](../../relational-databases/replication/non-sql/non-sql-server-publishers.md)。  
   
 |||  
 |-|-|  
@@ -91,7 +91,7 @@ ms.locfileid: "67910228"
  
 |||  
 |-|-|  
-|[conflict_\<schema>_\<table>](conflict-schema-table-transact-sql.md)       |[MSpeer_request](mspeer-request-transact-sql.md)|
+|[conflict_\<架构>_\<表>](conflict-schema-table-transact-sql.md)       |[MSpeer_request](mspeer-request-transact-sql.md)|
 |[MSdynamicsnapshotjobs](msdynamicsnapshotjobs-transact-sql.md)             |[MSpeer_response](mspeer-response-transact-sql.md)|
 |[MSdynamicsnapshotviews](msdynamicsnapshotviews-transact-sql.md)           |[MSpeer_topologyrequest](mspeer-topologyrequest-transact-sql.md)|  
 |[MSmerge_altsyncpartners](msmerge-altsyncpartners-transact-sql.md)         |[MSpeer_topologyresponse](mspeer-topologyresponse-transact-sql.md)|  
@@ -138,7 +138,7 @@ ms.locfileid: "67910228"
 |[MSmerge_settingshistory](msmerge-settingshistory-transact-sql.md)               |[systranschemas](../../relational-databases/system-views/systranschemas-transact-sql.md)| 
 | &nbsp; | &nbsp; |
 
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置发布和分发](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [禁用发布和分发](../../relational-databases/replication/disable-publishing-and-distribution.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  

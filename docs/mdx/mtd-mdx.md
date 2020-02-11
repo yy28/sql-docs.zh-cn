@@ -1,5 +1,5 @@
 ---
-title: Mtd (MDX) |Microsoft Docs
+title: Mtd （MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e604f66e48c8c8bb93ff5fd4abb174449f0fcdd9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68088444"
 ---
 # <a name="mtd-mdx"></a>Mtd (MDX)
@@ -32,9 +32,9 @@ Mtd( [ Member_Expression ] )
  返回成员的有效多维表达式 (MDX)。  
   
 ## <a name="remarks"></a>备注  
- 如果未指定成员表达式，默认值是第一个层次结构的当前成员类型的级别*几个月*类型的第一个维中*时间*度量值组中。  
+ 如果未指定成员表达式，则默认值为第一个层次结构的当前成员，该层次结构的第一个层次结构中的第一个维度*的类型为*"*月*"。  
   
- **Mtd**的快捷函数技术支持部门[PeriodsToDate](../mdx/periodstodate-mdx.md)函数级别所基于的属性层次结构的 Type 属性设置为时*个月*。 也就是说，`Mtd(Member_Expression)` 等效于 `PeriodsToDate(Month_Level_Expression,Member_Expression)`。  
+ 当级别所基于的属性层次结构的 Type 属性设置为*月份*时， **Mtd**函数是[PeriodsToDate](../mdx/periodstodate-mdx.md)函数的快捷函数。 也就是说，`Mtd(Member_Expression)` 等效于 `PeriodsToDate(Month_Level_Expression,Member_Expression)`。  
   
 ## <a name="example"></a>示例  
  下例将返回 2002 年 7 月（截止于 2002 年 7 月 20 日）Internet 销售的当月运费成本总和。  
@@ -49,8 +49,8 @@ SELECT Measures.x ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Sum &#40;MDX&#41;](../mdx/sum-mdx.md)   
- [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
+ [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

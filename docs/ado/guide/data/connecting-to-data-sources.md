@@ -13,20 +13,20 @@ ms.assetid: 82770486-37bd-4c90-885f-6817a7c77ad7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 000302715e7ce7d3a8ae53f06d61f54e98cbd883
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925790"
 ---
 # <a name="connecting-to-data-sources"></a>连接到数据源
-ADO**连接**对象表示与数据源，包括 DBMS、 文件存储区中或以逗号分隔的文本文件的唯一会话。 对于客户端/服务器数据库系统，ADO 连接可以是实际的网络连接到服务器。  
+ADO**连接**对象表示与数据源的唯一会话，包括 DBMS、文件存储区或逗号分隔的文本文件。 对于客户端/服务器数据库系统，ADO 连接可以是与服务器的实际网络连接。  
   
- **连接**对象支持各种[属性和方法](../../../ado/reference/ado-api/connection-object-properties-methods-and-events.md)用于指定连接配置，打开和关闭连接、 创建和执行的命令对数据源并提供有关设计的基础数据源的架构行集的窗体中的信息，等等。具体取决于提供程序、 一些集合、 方法或属性的支持的功能**连接**对象可能不可用。  
+ **Connection**对象支持不同的[属性和方法](../../../ado/reference/ado-api/connection-object-properties-methods-and-events.md)来指定连接配置、打开和关闭连接、针对数据源创建和执行命令，以及以架构行集的形式提供有关基础数据源设计的信息，等等。根据提供程序支持的功能，**连接**对象的某些集合、方法或属性可能不可用。  
   
- 可以连接到数据源通过使用**连接**对象或通过使用**记录集**对象。  
+ 您可以通过使用**连接**对象或通过使用**记录集**对象来连接到数据源。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [使用连接对象](../../../ado/guide/data/using-a-connection-object.md)  
   

@@ -16,19 +16,19 @@ ms.assetid: db63d610-f86f-4029-9d66-fed616c8a818
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2a29fc2d02cb46dda44fa22b2344cbab475443f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68096534"
 ---
 # <a name="cursor-type-and-concurrency-combinations"></a>游标类型和并发组合
 > [!IMPORTANT]  
->  此功能将 Windows 的未来版本中删除。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 相反，使用提供的 Oracle 的 ODBC 驱动程序。  
+>  此功能将在 Windows 的将来版本中删除。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 请改用 Oracle 提供的 ODBC 驱动程序。  
   
- 游标类型控制光标向用户提供的功能。 并发选项控制可更新性和锁定行为的结果集。  
+ 游标类型控制向用户提供的游标的功能。 并发选项控制结果集的更新和锁定行为。  
   
-|游标类型|并发 （允许的值）|  
+|游标类型|并发（允许值）|  
 |-----------------|------------------------------------|  
 |SQL_CURSOR_FORWARD_ONLY|SQL_CONCUR_READ_ONLY|  
 |SQL_CURSOR_STATIC|SQL_CONCUR_READ_ONLY|  
@@ -36,7 +36,7 @@ ms.locfileid: "68096534"
   
  <sup>[1]</sup>请参阅[使用由键集驱动的游标的限制](../../odbc/microsoft/limitations-of-using-keyset-driven-cursors.md)。  
   
- <sup>[2]</sup> SQL_CONCUR_LOCK 仅 SQL_AUTOCOMMIT 连接选项设置为 SQL_AUTOCOMMIT_OFF 时支持。  
+ 仅当 SQL_AUTOCOMMIT 连接选项设置为 SQL_AUTOCOMMIT_OFF 时，才支持<sup>[2]</sup> SQL_CONCUR_LOCK。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [连接选项](../../odbc/microsoft/connect-options.md)

@@ -1,5 +1,5 @@
 ---
-title: CREATE ACTION 语句 (MDX) |Microsoft Docs
+title: CREATE ACTION 语句（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b723a706521b24c9aa216c46f617d8ff94997137
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68098554"
 ---
 # <a name="mdx-data-definition---create-action"></a>MDX 数据定义 - CREATE ACTION
@@ -72,38 +72,38 @@ FOR
  一个有效的字符串表达式。  
   
 ## <a name="remarks"></a>备注  
- 客户端应用程序可能会创建和执行不安全的操作，也可能会使用不安全的函数。 若要避免这种情况下，使用**安全选项**属性。 有关详细信息，请参阅“Safety Options 属性”。  
+ 客户端应用程序可能会创建和执行不安全的操作，也可能会使用不安全的函数。 若要避免出现这种情况，请使用 "**安全选项**" 属性。 有关详细信息，请参阅“Safety Options 属性”。  
   
 > [!NOTE]  
->  包括此语句是为了向后兼容。 新增操作[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，不支持钻取或报表操作，例如。  
+>  包括此语句是为了向后兼容。 不支持对[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]（如钻取或报表操作）的新操作。  
   
 ## <a name="action-types"></a>操作类型  
- 下表介绍了不同类型中提供的操作[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  
+ 下表描述了中[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]可用的不同类型的操作。  
   
-|操作类型|描述|  
+|操作类型|说明|  
 |-----------------|-----------------|  
-|**URL**|返回的操作字符串是一个 URL，应使用 Internet 浏览器打开此 URL。<br /><br /> 注意:如果此操作不会以`https://`或`https://`，该操作将在浏览器对不可用除非**SafetyOptions**设置为**DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**。|  
+|**链接**|返回的操作字符串是一个 URL，应使用 Internet 浏览器打开此 URL。<br /><br /> 注意：如果此操作不是`https://`以或`https://`开头的，则浏览器将无法使用此操作，除非**SafetyOptions**设置为**DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**。|  
 |**HTML**|返回的操作字符串是一个 HTML 脚本。 应将该字符串保存到文件中，并使用 Internet 浏览器来呈现该文件。 在这种情况下，整个脚本会在所生成的 HTML 中运行。|  
-|**语句**|返回的操作字符串是需要通过设置执行的语句**ICommand::SetText**为字符串并调用命令对象的方法**icommand:: Execute**方法。 如果该命令失败，会返回一条错误。|  
-|**数据集**|返回的操作字符串是需要通过设置运行一个 MDX 语句**ICommand::SetText**为字符串并调用命令对象的方法**icommand:: Execute**方法。 所请求的接口 ID (IID) 应该**IDataset**。 如果创建了数据集，就说明命令成功了。 客户端应用程序应当允许用户浏览返回的数据集。|  
-|**行集**|类似于**数据集**，而不是请求的 IID 是，但**IDataset**，客户端应用程序应寻求的 IID **IRowset**。 如果创建了行集，就说明命令成功了。 客户端应用程序应当允许用户浏览返回的行集。|  
-|**命令行**|客户端应用程序应执行该操作字符串。 该字符串是一个命令行。|  
-|**专有**|客户端应用程序不应显示和执行该操作，除非该应用程序针对该操作进行了特殊的自定义设置。 专有操作不返回到客户端应用程序，除非客户端应用程序明确要求这些通过设置适当的限制**APPLICATION_NAME**。|  
+|**损益**|返回的操作字符串是一个语句，需要通过将命令对象的**ICommand：： SetText**方法设置为字符串并调用**ICommand：： Execute**方法来执行此语句。 如果该命令失败，会返回一条错误。|  
+|**集会**|返回的操作字符串是一个 MDX 语句，需要通过将命令对象的**ICommand：： SetText**方法设置为字符串并调用**ICommand：： Execute**方法来运行。 请求的接口 ID （IID）应为**IDataset**。 如果创建了数据集，就说明命令成功了。 客户端应用程序应当允许用户浏览返回的数据集。|  
+|**该行**|与**DATASET**类似，但客户端应用程序应要求**IRowset**的 iid，而不是请求**IDataset**的 iid。 如果创建了行集，就说明命令成功了。 客户端应用程序应当允许用户浏览返回的行集。|  
+|**行为**|客户端应用程序应执行该操作字符串。 该字符串是一个命令行。|  
+|**专有**|客户端应用程序不应显示和执行该操作，除非该应用程序针对该操作进行了特殊的自定义设置。 除非客户端应用程序通过对**APPLICATION_NAME**设置适当的限制来明确要求这些操作，否则不会将专用操作返回到客户端应用程序。|  
   
 ## <a name="invocation-types"></a>调用类型  
  下表介绍了可在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中执行的各种调用。 调用类型仅用于帮助客户端应用程序来确定何时调用操作， 并不真正决定操作的调用行为。  
   
-|调用类型|描述|  
+|调用类型|说明|  
 |---------------------|-----------------|  
 |**交互式**|应该由客户端应用程序通过用户交互来调用操作。|  
 |**ON_OPEN**|应该在打开目标对象时由客户端应用程序调用操作。 目前尚未实现此调用类型。|  
-|**BATCH**|应该由客户端应用程序在某一批处理操作中涉及到目标对象（由客户端应用程序确定）时调用操作。 目前尚未实现此调用类型。|  
+|**批处理**|应该由客户端应用程序在某一批处理操作中涉及到目标对象（由客户端应用程序确定）时调用操作。 目前尚未实现此调用类型。|  
   
 ### <a name="scope"></a>范围  
  每个操作均针对一个特定的多维数据集定义，并且在该多维数据集中具有唯一的名称。 操作可具有下表所列的作用域之一。  
   
  多维数据集作用域  
- 操作不依赖于特定维度、 成员或单元格;例如："启动终端仿真的 AS / 400 生产系统"。  
+ 操作不依赖于特定的维度、成员或单元，例如：“为 AS/400 生产系统启动终端仿真”。  
   
  维度作用域  
  操作适用于特定的维度。 这些操作不依赖于所选的特定级别或成员。  
@@ -118,9 +118,9 @@ FOR
  操作仅适用于特定的单元。  
   
  集作用域  
- 此操作仅适用于某个集。 该名称， **ActionParameterSet**，是保留供操作的表达式内的应用程序。  
+ 此操作仅适用于某个集。 名称（ **ActionParameterSet**）是保留给操作的表达式内的应用程序使用的。  
   
-## <a name="see-also"></a>请参阅  
- [MDX 数据定义语句&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [Mdx 数据定义语句 &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

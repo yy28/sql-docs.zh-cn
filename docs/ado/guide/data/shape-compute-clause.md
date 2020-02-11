@@ -1,5 +1,5 @@
 ---
-title: 形状 COMPUTE 子句 |Microsoft Docs
+title: 形状计算子句 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fa6862808643f3d687fa406cb3fc2aa23c9b7d7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924147"
 ---
 # <a name="shape-compute-clause"></a>Shape COMPUTE 子句
-Shape COMPUTE 子句生成父级**记录集**，其列包含的引用的子**记录集**; 可选列是其内容的一章，新的或计算的列，或子级上执行聚合函数的结果**记录集**或以前成型**记录集**; 以及从子级的所有列**记录集**中列出可选的 BY 子句。  
+Shape 计算子句生成父**记录集**，其列包含对子**记录集**的引用;其内容为章节、新列或计算列的可选列，或者对子**记录**集或之前形状的**记录集**执行聚合函数的结果。可选的 from 子句中列出的子**记录集中**的任何列。  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,34 +32,34 @@ SHAPE child-command [AS] child-alias
    [BY grp-field-list]  
 ```  
   
-## <a name="description"></a>描述  
- 此子句的部分如下所示：  
+## <a name="description"></a>说明  
+ 此子句的组成部分如下所示：  
   
- *child-command*  
+ *子命令*  
  包含以下项之一：  
   
--   在大括号内的查询命令 ("{}")，则返回一个子级**记录集**对象。 该命令颁发给基础数据提供程序，且其语法取决于该提供程序的要求。 这通常是 SQL 语言中，虽然 ADO 不需要任何特定的查询语言。  
+-   大括号（"{}"）中的一个查询命令，该命令返回子**记录集**对象。 将向基础数据提供程序发出命令，其语法取决于提供程序的要求。 这通常是 SQL 语言，尽管 ADO 不需要任何特定的查询语言。  
   
--   现有的形状的名称**记录集**。  
+-   现有整形**记录集**的名称。  
   
--   另一个形状命令。  
+-   另一个 shape 命令。  
   
--   表关键字后, 跟的表中的数据提供程序的名称。  
+-   TABLE 关键字，后跟数据提供程序中表的名称。  
   
- *child-alias*  
- 用于引用的别名**记录集**返回的*子命令。* *子别名*需要在计算子句中的列列表中，并定义父级和子级之间的关系**记录集**对象。  
+ *子别名*  
+ 用于引用*子命令*返回的**记录集**的别名。 COMPUTE 子句的列列表中必须有*子别名*，并定义父记录集对象和子**记录集**对象之间的关系。  
   
- *appended-column-list*  
- 在其中每个元素定义的生成的父代中的列列表。 每个元素包含的章节列、 一个新列、 计算的列中或从子聚合函数计算得出的值**记录集**。  
+ *追加的列列表*  
+ 一个列表，其中的每个元素在生成的父项中定义列。 每个元素都包含章节列、新列、计算列或由子**记录集中**的聚合函数生成的值。  
   
- *grp-field-list*  
- 中的父和子列的列表**记录集**对象，指定应如何在子分组的行。  
+ *grp*  
+ 父记录集对象和子**记录集**对象中的列的列表，用于指定应如何将行分组到子级中。  
   
- 中的每列*grp 字段列表*没有的相应列中的子和父**记录集**对象。 父级中的每一行**记录集**，则*grp 字段列表*列具有唯一值和子**记录集**引用的父行只包含子它的行*grp 字段列表*列具有相同的值的父行。  
+ 对于*grp 列表*中的每个列，子记录集对象和父**记录集**对象中都有相应的列。 对于父**记录集中**的每一行， *grp*列都具有唯一值，并且父行引用的子**记录集**只包含其*grp*列与父行具有相同值的子行。  
   
- 如果包括，BY 子句，则子**记录集**的行分组基于计算子句中的列。 父级**记录集**将包含每个组的子组织单位中的行的一行**记录集**。  
+ 如果包括 BY 子句，则将根据 COMPUTE 子句中的列对子**记录集**的行进行分组。 父**记录集**对于子**记录集中**的每个行组将占一行。  
   
- 如果省略了 BY 子句，则整个子**记录集**被视为单个组和父**记录集**将包含一个行。 该行将引用整个子**记录集**。 省略 BY 子句，可对整个子计算"总计"聚合**记录集**。  
+ 如果省略了 BY 子句，则整个子**记录集**将被视为单个组，并且父**记录集**将只包含一行。 该行将引用整个子**记录集**。 省略 BY 子句可计算整个子**记录集**的 "总计" 聚合。  
   
  例如：  
   
@@ -67,26 +67,26 @@ SHAPE child-command [AS] child-alias
 SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.OrderAmount) as TotalSales         
 ```  
   
- 无论采用哪种方式父级**记录集**构成 （使用计算或使用追加），它将包含用于相关的一个子级的章节列**记录集**。 如果您愿意，父级**记录集**还可能包含聚合 （SUM、 MIN、 MAX 等） 的列包含的子行。 父级和子级**记录集**可能包含在中的行的表达式中包含的列**记录集**，以及列新与最初为空。  
+ 不管父**记录集**的构成方式（使用计算或使用追加），它都将包含一个用于将其与子**记录集**相关联的章节列。 如果需要，父**记录集**还可以包含子行中包含聚合（SUM、MIN、MAX 等）的列。 父**记录集和子记录集**都可能包含列，这些列包含**记录集中**行的表达式，还包含新的和初始为空的列。  
   
-## <a name="operation"></a>操作  
- *子命令*颁发给提供程序，则返回一个子级**记录集**。  
+## <a name="operation"></a>Operation  
+ 向提供程序发送*子命令*，后者返回子**记录集**。  
   
- COMPUTE 子句指定的父列**记录集**，这可能是到子引用**记录集**，一个或多个聚合、 计算的表达式或新列。 如果没有 BY 子句，它定义的列还追加到父级**记录集**。 BY 子句用于指定如何的子行**记录集**进行分组。  
+ COMPUTE 子句指定父**记录集**的列，可能是对子**记录集**的引用、一个或多个聚合、一个计算表达式或新列。 如果有 BY 子句，则它定义的列也会附加到父**记录集**。 BY 子句指定如何对子**记录集**的行进行分组。  
   
- 例如，假设您有一个名为人口统计信息，其中包括状态、 城市和填充字段。 （表中的填充图提供了仅作为示例）。  
+ 例如，假设有一个名为 "人口统计" 的表，其中包含州、城市和人口字段。 （表中的人口数字仅作为示例提供）。  
   
-|状态|City|人口数|  
+|状态|城市|人口数|  
 |-----------|----------|----------------|  
-|WA|Seattle|700,000|  
+|WA|西雅图|700000|  
 |或|Medford|200,000|  
 |或|Portland|400,000|  
-|CA|Los Angeles|800,000|  
-|CA|San Diego|600,000|  
+|CA|洛杉矶|800000|  
+|CA|San Diego|600000|  
 |WA|Tacoma|500,000|  
 |或|Corvallis|300,000|  
   
- 现在，发出以下形状命令：  
+ 现在，请发出以下 shape 命令：  
   
 ```  
 rst.Open  "SHAPE {select * from demographics} AS rs "  & _  
@@ -94,52 +94,52 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
            objConnection  
 ```  
   
- 此命令将打开形状**记录集**具有两个级别。 父级别是一个已生成**记录集**具有聚合的列 (`SUM(rs.population)`)、 列引用子**记录集**(`rs`)，和列进行分组子**记录集**(`state`)。 子级别**记录集**返回的查询命令 (`select * from demographics`)。  
+ 此命令打开具有两个级别的形状**记录集**。 父级别`SUM(rs.population)`是带有聚合列（）的生成的**记录集**、引用子**记录集**的列（`rs`）和用于对子**记录集**进行分组的列`state`（）。 子级别是查询命令（`select * from demographics`）返回的**记录集**。  
   
- 子**记录集**详细信息行进行分组的状态，但没有特定的顺序在其他情况下。 也就是说，组不会按字母或数字顺序。 如果你想父级**记录集**若要进行排序，可以使用**记录集排序**方法以对父**记录集**。  
+ 子**记录集**详细信息行将按状态分组，而不是以特定顺序分组。 也就是说，组不会按字母顺序或数字顺序排列。 如果希望对父**记录集**进行排序，则可以使用**记录集排序**方法对父**记录集**进行排序。  
   
- 你现在可以导航打开的父**记录集**并访问子详细信息**记录集**对象。 有关详细信息，请参阅[访问分层记录集的行](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)。  
+ 你现在可以导航打开的父**记录集**并访问子详细信息**记录集**对象。 有关详细信息，请参阅[访问分层记录集中的行](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)。  
   
-## <a name="resultant-parent-and-child-detail-recordsets"></a>结果的父和子详细信息记录集  
+## <a name="resultant-parent-and-child-detail-recordsets"></a>最终的父和子详细信息记录集  
   
 ### <a name="parent"></a>Parent  
   
-|SUM (rs。填充）|rs|状态|  
+|SUM （rs。总数|rs|状态|  
 |---------------------------|--------|-----------|  
-|1,300,000|对 child1 引用|CA|  
-|1,200,000|对 child2 引用|WA|  
-|1,100,000|对 child3 引用|或|  
+|1300000|对 child1 的引用|CA|  
+|1200000|对 child2 的引用|WA|  
+|1100000|对 child3 的引用|或|  
   
 ## <a name="child1"></a>Child1  
   
-|状态|City|人口数|  
+|状态|城市|人口数|  
 |-----------|----------|----------------|  
-|CA|Los Angeles|800,000|  
-|CA|San Diego|600,000|  
+|CA|洛杉矶|800000|  
+|CA|San Diego|600000|  
   
-## <a name="child2"></a>Child2  
+## <a name="child2"></a>Child2 的子磁盘）  
   
-|状态|City|人口数|  
+|状态|城市|人口数|  
 |-----------|----------|----------------|  
-|WA|Seattle|700,000|  
+|WA|西雅图|700000|  
 |WA|Tacoma|500,000|  
   
 ## <a name="child3"></a>Child3  
   
-|状态|City|人口数|  
+|状态|城市|人口数|  
 |-----------|----------|----------------|  
 |或|Medford|200,000|  
 |或|Portland|400,000|  
 |或|Corvallis|300,000|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [访问分层记录集中的行](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
- [数据整理概述](../../../ado/guide/data/data-shaping-overview.md)   
- [字段对象](../../../ado/reference/ado-api/field-object.md)   
- [正式 Shape 语法](../../../ado/guide/data/formal-shape-grammar.md)   
- [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [数据定形概述](../../../ado/guide/data/data-shaping-overview.md)   
+ [Field 对象](../../../ado/reference/ado-api/field-object.md)   
+ [正式形状语法](../../../ado/guide/data/formal-shape-grammar.md)   
+ [Recordset 对象（ADO）](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [数据整理所需的提供程序](../../../ado/guide/data/required-providers-for-data-shaping.md)   
  [Shape APPEND 子句](../../../ado/guide/data/shape-append-clause.md)   
- [常用 shape 命令](../../../ado/guide/data/shape-commands-in-general.md)   
- [Value 属性 (ADO)](../../../ado/reference/ado-api/value-property-ado.md)   
+ [整体形状命令](../../../ado/guide/data/shape-commands-in-general.md)   
+ [Value 属性（ADO）](../../../ado/reference/ado-api/value-property-ado.md)   
  [Visual Basic for Applications 函数](../../../ado/guide/data/visual-basic-for-applications-functions.md)

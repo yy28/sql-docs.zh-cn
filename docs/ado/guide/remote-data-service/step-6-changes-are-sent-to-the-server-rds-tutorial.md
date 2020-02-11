@@ -1,5 +1,5 @@
 ---
-title: 步骤 6：将更改发送到服务器 （RDS 教程） |Microsoft Docs
+title: 步骤6：将更改发送到服务器（RDS 教程） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,17 +13,17 @@ ms.assetid: b1e927d6-7d50-4978-9eef-045043cdce7a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a48b9c54496100bfe502bd496b12f35ced9ea8ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922047"
 ---
 # <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>步骤 6：将更改发送到服务器（RDS 教程）
-如果**记录集**编辑对象，可以将任何更改 （即，对行进行添加、 更改或删除） 发回服务器。  
+如果编辑**Recordset**对象，则可以将任何更改（即，添加、更改或删除的行）发送回服务器。  
   
 > [!NOTE]
->  可以使用 ADO 对象和 Microsoft OLE DB 远程处理提供程序隐式调用 RDS 的默认行为。 查询可以返回**记录集**s，并编辑**记录集**s 可以更新数据源。 本教程不会调用与 ADO 对象，RDS，但这是它将如何呈现它的形式：  
+>  可以用 ADO 对象和 Microsoft OLE DB 远程处理提供程序隐式调用 RDS 的默认行为。 查询可以返回**记录集**，并且编辑的**记录集**可以更新数据源。 本教程不调用具有 ADO 对象的 RDS，但这是它的外观：  
   
 ```vb
 Dim rs as New ADODB.Recordset  
@@ -34,7 +34,7 @@ rs.   ' The equivalent of
 ...  
 ```  
   
- **A 部分**假设您仅使用这种情况下的[rds。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)并且**记录集**对象现在与**rds。DataControl**。 [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md)方法的任何更改会更新数据源**记录集**对象如果[Server](../../../ado/reference/rds-api/server-property-rds.md)并[Connect](../../../ado/reference/rds-api/connect-property-rds.md)仍设置属性。  
+ **部分 A**假设在这种情况下，你只使用了[RDS。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)和**记录集**对象现在与**RDS 关联。DataControl**。 如果仍设置[服务器](../../../ado/reference/rds-api/server-property-rds.md)和[连接](../../../ado/reference/rds-api/connect-property-rds.md)属性， [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md)方法会将数据源更新为**记录集**对象的任何更改。  
   
 ```vb
 Sub RDSTutorial6A()  
@@ -52,7 +52,7 @@ DC.
 ...  
 ```  
   
- **B 部分**或者，你可以更新与服务器[提高](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)对象，指定的连接和一个**记录集**对象。  
+ **B 部分**或者，您可以使用[DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)对象（指定连接和**记录集**对象）更新服务器。  
   
 ```vb
 Sub RDSTutorial6B()  
@@ -69,12 +69,12 @@ blnStatus = DF."DSN=Pubs", RS
 End Sub  
 ```  
   
- **这是本教程结束。**  
+ **本教程到此结束。**  
   
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
-## <a name="see-also"></a>请参阅  
- [Microsoft OLE DB 远程处理提供程序 （ADO 服务提供程序）](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md)   
+## <a name="see-also"></a>另请参阅  
+ [Microsoft OLE DB 远程处理提供程序（ADO 服务提供程序）](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md)   
  [RDS 教程](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [RDS 教程 (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

@@ -1,5 +1,5 @@
 ---
-title: 删除记录使用 Delete 方法 |Microsoft Docs
+title: 使用 Delete 方法删除记录 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,32 +16,32 @@ ms.assetid: bfed5cfa-7f57-463b-9da2-0c612a079d30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5a862a244f06c64767f41529b4fff36881895a0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925555"
 ---
 # <a name="deleting-records-using-the-delete-method"></a>使用 Delete 方法删除记录
-使用**删除**方法将当前记录或一组中的记录标记**记录集**对象以备删除。 如果**记录集**对象不允许记录删除，就会出错。 如果要立即更新模式中，删除数据库中立即执行。 如果不能 （由于数据库完整性的冲突，例如） 已成功删除了记录，该记录将保持在编辑模式下调用后面**更新。** 这意味着更新使用必须取消[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)之前移出当前记录 (例如，使用[关闭](../../../ado/reference/ado-api/close-method-ado.md)，[移动](../../../ado/reference/ado-api/move-method-ado.md)，或[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md))。  
+使用**Delete**方法将当前记录或记录**集**对象中的一组记录标记为删除。 如果**记录集**对象不允许删除记录，则会发生错误。 如果处于立即更新模式，则会立即删除数据库中的删除操作。 如果无法成功删除记录（例如，由于数据库完整性冲突），则在调用 Update 后，该记录将继续处于编辑模式 **。** 这意味着，必须先使用[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)取消更新，然后再离开当前记录（例如，使用[Close](../../../ado/reference/ado-api/close-method-ado.md)、 [Move](../../../ado/reference/ado-api/move-method-ado.md)或[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)）。  
   
- 如果要在批更新模式中，记录将被标记为从缓存中删除，并在调用时，会发生实际删除**UpdateBatch**方法。 (若要查看已删除的记录，请设置**筛选器**属性设置为**adFilterAffectedRecords**后**删除**称为。)  
+ 如果处于批处理更新模式，记录将标记为从缓存中删除，并且在调用**UpdateBatch**方法时会发生实际的删除。 （若要查看已删除的记录，请在调用**Delete**后将**Filter**属性设置为**adFilterAffectedRecords** 。）  
   
- 尝试从已删除的记录中检索字段值将生成错误。 删除当前记录后, 已删除的记录保持最新，直到你将移动到另一条记录。 一次您移开的已删除的记录，将不再可访问。  
+ 尝试从已删除的记录中检索字段值将生成错误。 删除当前记录后，删除的记录将保持当前状态，直到您移到另一记录为止。 离开删除的记录后，它将无法再访问。  
   
- 如果将嵌套在事务中的删除，则可以使用恢复已删除的记录**RollbackTrans**方法。 如果要在批更新模式中，您可以通过使用取消挂起的删除或挂起的删除操作组**CancelBatch**方法。  
+ 如果在事务中嵌套删除，则可以使用**RollbackTrans**方法恢复已删除的记录。 如果处于批处理更新模式，可以使用**CancelBatch**方法取消挂起的删除或挂起的删除组。  
   
- 如果尝试删除的记录将因与基础数据发生冲突而失败 （例如，一条记录已由另一个用户删除），访问接口将返回到的警告**错误**集合，但不会停止程序执行。 仅当在所有请求的记录上不存在冲突，将发生运行时错误。  
+ 如果由于与基础数据发生冲突而导致删除记录的尝试失败（例如，记录已被其他用户删除），则提供程序会将警告返回到**错误**集合，但不会暂停程序执行。 仅当所有请求的记录上发生冲突时才会发生运行时错误。  
   
- 如果**唯一表**设置动态属性和**记录集**是执行多个表的联接操作的结果**删除**方法将仅删除行从表中名为**唯一表**属性。  
+ 如果设置了 "**唯一表**动态" 属性，并且**记录集**是对多个表执行联接操作的结果，则**delete**方法将仅删除 "**唯一表**" 属性中命名的表中的行。  
   
- **删除**方法采用一个可选参数，可以指定哪些记录受到**删除**操作。 为此参数唯一有效的值为以下 ADO **AffectEnum**枚举常量：  
+ **Delete**方法采用一个可选参数，该参数可用于指定哪些记录受**删除**操作的影响。 此参数的有效值只有下面的一个： ****  
   
--   **adAffectCurrent**影响仅当前记录。  
+-   **adAffectCurrent**仅影响当前记录。  
   
--   **adAffectGroup**影响满足当前的记录**筛选器**属性设置。 **筛选器**属性必须设置为**FilterGroupEnum**值或数组**书签**要使用此选项。  
+-   **adAffectGroup**仅影响满足当前**Filter**属性设置的记录。 **筛选器**属性必须设置为**FilterGroupEnum**值或**书签**数组才能使用此选项。  
   
- 下面的代码演示示例： 指定**adAffectGroup**调用时**删除**方法。 此示例将某些记录添加到示例**记录集**并更新数据库。 然后它将筛选**记录集**使用**adFilterAffectedRecords**筛选器枚举的常数，但仍将新添加的记录显示在**记录集。** 最后，调用**删除**方法，并指定所有满足当前的记录**筛选器**应删除属性的设置 （新记录）。  
+ 下面的代码演示了在调用**Delete**方法时指定**adAffectGroup**的示例。 此示例向示例**记录集**添加一些记录，并更新数据库。 然后，它使用**adFilterAffectedRecords**筛选器枚举常量来筛选**记录集**，该常量仅保留在**记录集中**可见的新添加的记录。 最后，它调用**Delete**方法，并指定应删除满足当前**Filter**属性设置（新记录）的所有记录。  
   
 ```  
 'BeginDeleteGroup  

@@ -20,18 +20,18 @@ ms.assetid: 4a3618b7-d2b8-43c6-a1fd-7a4e6fa8c7d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8de1a2053913ee0339c58a4a27ccd45772487e77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68118666"
 ---
 # <a name="sqlcolumns-function"></a>SQLColumns 函数
-**符合性**  
- 版本引入了：ODBC 1.0 标准符合性：打开组  
+**度**  
+ 引入的版本： ODBC 1.0 标准符合性：打开组  
   
- **摘要**  
- **SQLColumns**返回指定表中的列名称的列表。 驱动程序将返回作为结果集上指定此信息*StatementHandle*。  
+ **总结**  
+ **SQLColumns**返回指定表中的列名列表。 驱动程序将此信息作为结果集返回到指定的*StatementHandle*。  
   
 ## <a name="syntax"></a>语法  
   
@@ -51,92 +51,92 @@ SQLRETURN SQLColumns(
   
 ## <a name="arguments"></a>参数  
  *StatementHandle*  
- [输入]语句句柄。  
+ 送语句句柄。  
   
  *CatalogName*  
- [输入]目录名称。 如果驱动程序支持目录有关的某些表而不是其他人，例如当驱动程序检索数据从不同 Dbms，空字符串 ("") 指示没有目录的那些表。 *CatalogName*不能包含字符串的搜索模式。  
+ 送目录名称。 如果驱动程序为某些表（而不是其他表）支持目录，例如当驱动程序从不同 Dbms 中检索数据时，则为空字符串（""）表示没有目录的那些表。 *CatalogName*不能包含字符串搜索模式。  
   
 > [!NOTE]  
->  如果 SQL_ATTR_METADATA_ID 语句属性设置为 SQL_TRUE， *CatalogName*视为标识符和其大小写并不重要。 SQL_FALSE，若是*CatalogName*是普通参数; 按字面意思，处理和其大小写很重要。 有关详细信息，请参阅[中目录函数的自变量](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)。  
+>  如果 SQL_ATTR_METADATA_ID 语句特性设置为 SQL_TRUE，则*CatalogName*被视为标识符，并且其大小写不重要。 如果 SQL_FALSE，则*CatalogName*是普通参数;它按原义处理，其大小写很重要。 有关详细信息，请参阅[目录函数中的参数](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)。  
   
  *NameLength1*  
- [输入]以字符为单位的长度 **CatalogName*。  
+ 送**CatalogName*中的字符的长度。  
   
  *SchemaName*  
- [输入]架构名称的字符串搜索模式。 如果驱动程序支持架构有关的某些表而不是其他人，例如当驱动程序检索数据从不同 Dbms，空字符串 ("") 指示没有架构的那些表。  
+ 送架构名称的字符串搜索模式。 如果驱动程序支持某些表的架构，而不支持其他表的架构（例如，当驱动程序从不同 Dbms 检索数据时），则空字符串（""）指示不具有架构的表。  
   
 > [!NOTE]  
->  如果 SQL_ATTR_METADATA_ID 语句属性设置为 SQL_TRUE， *SchemaName*视为标识符和其大小写并不重要。 SQL_FALSE，若是*SchemaName*是模式值自变量; 按字面意思，处理和其大小写很重要。  
+>  如果 SQL_ATTR_METADATA_ID 语句特性设置为 SQL_TRUE，则*SchemaName*被视为标识符，并且其大小写不重要。 如果 SQL_FALSE，则*SchemaName*为模式值参数;它按原义处理，其大小写很重要。  
   
  *NameLength2*  
- [输入]以字符为单位的长度 **SchemaName*。  
+ 送**SchemaName*中的字符的长度。  
   
  *TableName*  
- [输入]表名称的字符串搜索模式。  
+ 送表名的字符串搜索模式。  
   
 > [!NOTE]  
->  如果 SQL_ATTR_METADATA_ID 语句属性设置为 SQL_TRUE， *TableName*视为标识符和其大小写并不重要。 SQL_FALSE，若是*TableName*是模式值自变量; 按字面意思，处理和其大小写很重要。  
+>  如果 SQL_ATTR_METADATA_ID 语句特性设置为 SQL_TRUE，则*TableName*将被视为标识符，并且其大小写不重要。 如果 SQL_FALSE，则*TableName*为模式值参数;它按原义处理，其大小写很重要。  
   
  *NameLength3*  
- [输入]以字符为单位的长度 **TableName*。  
+ 送**TableName*的长度（字符）。  
   
  *ColumnName*  
- [输入]列名称的字符串搜索模式。  
+ 送列名称的字符串搜索模式。  
   
 > [!NOTE]  
->  如果 SQL_ATTR_METADATA_ID 语句属性设置为 SQL_TRUE， *ColumnName*视为标识符和其大小写并不重要。 SQL_FALSE，若是*ColumnName*是模式值自变量; 按字面意思，处理和其大小写很重要。  
+>  如果 SQL_ATTR_METADATA_ID 语句特性设置为 SQL_TRUE，则*ColumnName*被视为标识符，并且其大小写不重要。 如果 SQL_FALSE，则*ColumnName*为模式值参数;它按原义处理，其大小写很重要。  
   
  *NameLength4*  
- [输入]以字符为单位的长度 **ColumnName*。  
+ 送**ColumnName*的长度（字符）。  
   
 ## <a name="returns"></a>返回  
- SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_STILL_EXECUTING、 SQL_ERROR 或 SQL_INVALID_HANDLE。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR 或 SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>诊断  
- 当**SQLColumns**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，关联的 SQLSTATE 值可以通过调用来获取**SQLGetDiagRec**与*HandleType*的 SQL_HANDLE_STMT 和一个*处理*的*StatementHandle*。 下表列出了通常由返回的 SQLSTATE 值**SQLColumns** ，并解释了此函数; 每个上下文中的表示法"（数据挖掘）"之前 SQLSTATEs 返回由驱动程序管理器的说明。 与每个 SQLSTATE 值关联的返回代码是 SQL_ERROR，除非另有说明。  
+ 当**SQLColumns**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 时，可以通过使用*HandleType*的 SQL_HANDLE_STMT 和*StatementHandle*的*句柄*调用**SQLGetDiagRec**来获取关联的 SQLSTATE 值。 下表列出了通常由**SQLColumns**返回的 SQLSTATE 值，并对该函数的上下文中的每个值进行了说明："（DM）" 表示法位于驱动程序管理器返回的 SQLSTATEs 的说明之前。 除非另有说明，否则与每个 SQLSTATE 值相关联的返回代码将 SQL_ERROR。  
   
-|SQLSTATE|Error|描述|  
+|SQLSTATE|错误|说明|  
 |--------------|-----------|-----------------|  
-|01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
-|08S01|通讯链接失败|该驱动程序和驱动程序已连接到数据源之间的通信链接失败之前函数已完成处理。|  
-|24000|游标状态无效|在打开游标的*StatementHandle*，并**SQLFetch**或**SQLFetchScroll**已调用一样。 如果此错误返回由驱动程序管理器**SQLFetch**或**SQLFetchScroll**未返回 SQL_NO_DATA，和如果驱动程序返回**SQLFetch**或**SQLFetchScroll**已返回 sql_no_data 为止。<br /><br /> 在打开游标的*StatementHandle*但**SQLFetch**或**SQLFetchScroll**尚未调用。|  
-|40001|序列化失败|事务已回滚，由于其他事务与资源死锁。|  
-|40003|语句完成情况未知|此函数中，在执行期间失败关联的连接，无法确定事务的状态。|  
-|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义任何特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*MessageText*缓冲区描述错误以及其原因。|  
-|HY001|内存分配错误|该驱动程序无法分配支持执行或完成该函数所需的内存。|  
-|HY008|操作已取消|异步处理的已启用*StatementHandle*。 调用该函数，和之前执行完毕**SQLCancel**或**SQLCancelHandle**上调用了*StatementHandle*。 然后在再次调用该函数*StatementHandle*。<br /><br /> 调用该函数，和之前执行完毕**SQLCancel**或**SQLCancelHandle**上调用了*StatementHandle*来自不同线程中多线程应用程序。|  
-|HY009|使用空指针无效|SQL_ATTR_METADATA_ID 语句属性设置为 SQL_TRUE， *CatalogName*参数为 null 指针和 SQL_CATALOG_NAME*信息类型*支持目录名称返回。<br /><br /> (DM) SQL_ATTR_METADATA_ID 语句属性设置为 SQL_TRUE，并*SchemaName*， *TableName*，或*ColumnName*参数是空指针。|  
-|HY010|函数序列错误|(DM) 为与之关联的连接句柄调用以异步方式执行的函数*StatementHandle*。 此异步函数仍在执行时**SQLColumns**调用函数。<br /><br /> （数据挖掘） **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**曾为*StatementHandle*和返回 SQL_PARAM_DATA_可用。 数据已检索到的所有经过流处理参数之前调用此函数。<br /><br /> (DM) 的调用以异步方式执行的函数 （不是此类似） *StatementHandle*和仍在执行时调用此函数。<br /><br /> （数据挖掘） **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或者**SQLSetPos**曾为*StatementHandle*和返回 SQL_NEED_DATA。 数据已发送的所有执行时数据参数或列之前调用此函数。|  
-|HY013|内存管理错误|无法处理函数调用，因为基础内存对象无法访问，可能是由于内存不足的情况。|  
-|HY090|字符串或缓冲区长度无效|(DM) 之一的名称长度参数值小于 0 但不是等于 SQL_NTS。|  
-|||名称长度参数之一的值超出了相应的目录或名称的最大长度值。 可以通过调用获取每个目录或名称的最大长度**SQLGetInfo**与*信息类型*值。 （请参阅"注释"。）|  
-|HY117|由于未知的事务状态而挂起连接。 仅断开连接，并允许使用只读的函数。|(DM) 有关挂起状态的详细信息，请参阅[SQLEndTran 函数](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
-|HYC00|未实现的可选功能|指定的目录名称，并在驱动程序或数据源不支持目录。<br /><br /> 指定的架构名称，并在驱动程序或数据源不支持架构。<br /><br /> 为架构名称、 表名或列名，指定字符串的搜索模式和数据源不支持的一个或多个这些参数的搜索模式。<br /><br /> 驱动程序或数据源不支持 SQL_ATTR_CONCURRENCY 和 SQL_ATTR_CURSOR_TYPE 语句属性的当前设置的组合。<br /><br /> SQL_ATTR_USE_BOOKMARKS 语句属性设置为 SQL_UB_VARIABLE，并且 SQL_ATTR_CURSOR_TYPE 语句属性设置为游标类型，该驱动程序不支持书签。|  
-|HYT00|超时时间已到|查询超时期限过期之前的数据源返回的结果集。 通过设置超时期限**SQLSetStmtAttr**，SQL_ATTR_QUERY_TIMEOUT。|  
-|HYT01|连接超时时间已到|连接超时期限过期之前的数据源响应此请求。 通过设置连接超时期**SQLSetConnectAttr**，SQL_ATTR_CONNECTION_TIMEOUT。|  
-|IM001|驱动程序不支持此函数|(DM) 驱动程序与相关联*StatementHandle*不支持该函数。|  
-|IM017|轮询异步通知模式中禁用|只要使用通知模型，将禁用轮询。|  
-|IM018|**SQLCompleteAsync**尚未调用以完成此句柄上以前的异步操作。|如果句柄上的上一个函数调用返回 SQL_STILL_EXECUTING，如果启用通知模式，则**SQLCompleteAsync**必须要对其进行后期处理并完成该操作的句柄上调用。|  
+|01000|一般警告|驱动程序特定的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
+|08S01|通信链接失败|在函数完成处理之前，驱动程序与连接到的数据源之间的通信链接失败。|  
+|24000|无效的游标状态|在*StatementHandle*上打开了游标，并且调用了**SQLFetch**或**SQLFetchScroll** 。 如果**SQLFetch**或**SQLFetchScroll**未返回 SQL_NO_DATA，驱动程序管理器将返回此错误，如果**SQLFetch**或**SQLFetchScroll**已 SQL_NO_DATA 返回，则由驱动程序返回。<br /><br /> 在*StatementHandle*上打开了游标，但尚未调用**SQLFetch**或**SQLFetchScroll** 。|  
+|40001|序列化失败|由于另一个事务发生资源死锁，事务已回滚。|  
+|40003|语句完成情况未知|在执行此函数的过程中关联的连接失败，无法确定事务的状态。|  
+|HY000|常规错误|发生了一个错误，该错误没有特定的 SQLSTATE，没有为其定义实现特定的 SQLSTATE。 MessageText 缓冲区中的**SQLGetDiagRec**返回的错误消息描述了错误及其原因。 * \**|  
+|HY001|内存分配错误|驱动程序无法分配支持执行或完成此函数所需的内存。|  
+|HY008|操作已取消|已为*StatementHandle*启用异步处理。 函数被调用，在完成执行之前，在*StatementHandle*上调用了**SQLCancel**或**SQLCancelHandle** 。 然后，在*StatementHandle*上再次调用该函数。<br /><br /> 函数被调用，在完成执行之前，从多线程应用程序中的另一个线程调用*StatementHandle*上的**SQLCancel**或**SQLCancelHandle** 。|  
+|HY009|空值指针的使用无效|SQL_ATTR_METADATA_ID 语句特性设置为 SQL_TRUE， *CatalogName*参数为 null 指针，SQL_CATALOG_NAME 的*InfoType*返回支持的目录名称。<br /><br /> （DM） SQL_ATTR_METADATA_ID 语句特性设置为 SQL_TRUE， *SchemaName*、 *TableName*或*ColumnName*参数为 null 指针。|  
+|HY010|函数序列错误|（DM）为与*StatementHandle*关联的连接句柄调用了异步执行的函数。 调用**SQLColumns**函数时，此异步函数仍在执行。<br /><br /> 为*StatementHandle*调用了**SQLExecute**、 **SQLExecDirect**或**SQLMoreResults** ，并返回 SQL_PARAM_DATA_AVAILABLE。 在检索所有流式处理参数的数据之前调用此函数。<br /><br /> （DM）为*StatementHandle*调用了异步执行的函数（而不是此函数），并且在调用此函数时仍在执行。<br /><br /> （DM） **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**或**SQLSetPos**调用了*StatementHandle*并返回 SQL_NEED_DATA。 在为所有执行时数据参数或列发送数据之前，将调用此函数。|  
+|HY013|内存管理错误|未能处理函数调用，原因可能是由于内存不足而无法访问基础内存对象。|  
+|HY090|字符串或缓冲区长度无效|（DM）某个名称长度参数的值小于0但不等于 SQL_NTS。|  
+|||名称长度参数之一的值超出了相应目录或名称的最大长度值。 可以通过使用*InfoType*值调用**SQLGetInfo**来获取每个目录或名称的最大长度。 （请参阅 "备注"。）|  
+|HY117|由于未知的事务状态，连接被挂起。 仅允许断开连接和只读函数。|（DM）有关挂起状态的详细信息，请参阅[SQLEndTran 函数](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
+|HYC00|未实现的可选功能|指定了目录名称，并且驱动程序或数据源不支持目录。<br /><br /> 指定了架构名称，并且驱动程序或数据源不支持架构。<br /><br /> 为架构名称、表名称或列名称指定了字符串搜索模式，并且数据源不支持其中一个或多个参数的搜索模式。<br /><br /> 驱动程序或数据源不支持 SQL_ATTR_CONCURRENCY 和 SQL_ATTR_CURSOR_TYPE 语句特性的当前设置的组合。<br /><br /> SQL_ATTR_USE_BOOKMARKS 语句特性设置为 SQL_UB_VARIABLE，并且 SQL_ATTR_CURSOR_TYPE 语句特性设置为该驱动程序不支持书签的游标类型。|  
+|HYT00|超时时间已到|在数据源返回结果集之前，查询超时期限已过期。 超时期限通过**SQLSetStmtAttr**设置，SQL_ATTR_QUERY_TIMEOUT。|  
+|HYT01|连接超时已过期|连接超时期限在数据源响应请求之前过期。 连接超时期限通过**SQLSetConnectAttr**设置，SQL_ATTR_CONNECTION_TIMEOUT。|  
+|IM001|驱动程序不支持此功能|（DM）与*StatementHandle*关联的驱动程序不支持该函数。|  
+|IM017|在异步通知模式下禁用轮询|无论何时使用通知模型，都将禁用轮询。|  
+|IM018|尚未调用**SQLCompleteAsync**来完成此句柄上先前的异步操作。|如果句柄上的上一个函数调用返回 SQL_STILL_EXECUTING 并且启用了通知模式，则必须在句柄上调用**SQLCompleteAsync** ，以执行后处理并完成操作。|  
   
 ## <a name="comments"></a>注释  
- 此函数通常用于在语句执行之前从数据源的目录中检索一个表或表的列的信息。 **SQLColumns**可用于检索返回的项的所有类型的数据**SQLTables**。 除了基本的表，这可能包括 （但不限于） 视图、 同义词、 系统表等。 与之相反，函数**SQLColAttribute**并**SQLDescribeCol**描述结果集和函数中的列**SQLNumResultCols**返回的数在结果集中的列。 有关详细信息，请参阅[使用的目录数据](../../../odbc/reference/develop-app/uses-of-catalog-data.md)。  
+ 此函数通常在语句执行之前用于从数据源的目录中检索有关一个或多个表的列的信息。 **SQLColumns**可用于检索**SQLTables**返回的所有类型的项的数据。 除基表外，这可能包括（但不限于）视图、同义词、系统表等。 与此相反，函数**SQLColAttribute**和**SQLDescribeCol**描述结果集中的列，而函数**SQLNumResultCols**返回结果集中的列数。 有关详细信息，请参阅[目录数据的使用](../../../odbc/reference/develop-app/uses-of-catalog-data.md)。  
   
 > [!NOTE]  
->  有关常规使用、 参数以及 ODBC 目录函数返回的数据的详细信息，请参阅[目录函数](../../../odbc/reference/develop-app/catalog-functions.md)。  
+>  有关 ODBC 目录函数的常规用法、参数和返回数据的详细信息，请参阅[目录函数](../../../odbc/reference/develop-app/catalog-functions.md)。  
   
- **SQLColumns**以按 TABLE_CAT、 按 TABLE_SCHEM、 TABLE_NAME 和 ORDINAL_POSITION 标准结果集的形式返回结果。  
-  
-> [!NOTE]  
->  当应用程序适用于 ODBC 2。*x*驱动程序，没有 ORDINAL_POSITION 列返回的结果集中。 因此，使用 ODBC 2 时。*x*驱动程序，则返回的列列表中的列的顺序**SQLColumns**不一定与列的顺序相同时，返回应用程序对所有执行 SELECT 语句该表中的列。  
+ **SQLColumns**将结果以标准结果集的形式返回，并按 TABLE_CAT、TABLE_SCHEM、TABLE_NAME 和 ORDINAL_POSITION 排序。  
   
 > [!NOTE]  
->  **SQLColumns**可能不会返回所有列。 例如，驱动程序可能不返回有关伪列，如 Oracle ROWID 的信息。 应用程序可以使用任何有效的列，是否将其返还**SQLColumns**。  
+>  当应用程序与 ODBC 2 一起使用时。*x*驱动程序，则不会在结果集中返回 ORDINAL_POSITION 列。 因此，在使用 ODBC 2 时。*x*驱动程序， **SQLColumns**返回的列列表中列的顺序并不一定与应用程序对该表中的所有列执行 SELECT 语句时返回的列的顺序相同。  
+  
+> [!NOTE]  
+>  **SQLColumns**可能不会返回所有列。 例如，驱动程序可能不返回有关伪列的信息，如 Oracle ROWID。 应用程序可以使用任何有效的列，无论其是否由**SQLColumns**返回。  
 >   
->  可以返回的某些列**SQLStatistics**不返回由**SQLColumns**。 例如， **SQLColumns**不返回列中的表达式或筛选器，例如薪金 + 权益或部门创建的索引 = 0012。  
+>  **SQLColumns**未返回可由**SQLStatistics**返回的某些列。 例如， **SQLColumns**不返回通过表达式或筛选器创建的索引中的列，例如薪金 + 权益或部门 = 0012。  
   
- VARCHAR 列的长度未显示在表;实际长度取决于数据源。 若要确定 TABLE_CAT、 按 TABLE_SCHEM、 TABLE_NAME 和 COLUMN_NAME 列的实际长度，应用程序可以调用**SQLGetInfo**使用 SQL_MAX_CATALOG_NAME_LEN、 SQL_MAX_SCHEMA_NAME_LEN、 SQL_MAX_TABLE_NAME_LEN，和 SQL_MAX_COLUMN_NAME_LEN 选项。  
+ VARCHAR 列的长度不显示在表中;实际长度取决于数据源。 若要确定 TABLE_CAT、TABLE_SCHEM、TABLE_NAME 和 COLUMN_NAME 列的实际长度，应用程序可以使用 SQL_MAX_CATALOG_NAME_LEN、SQL_MAX_SCHEMA_NAME_LEN、SQL_MAX_TABLE_NAME_LEN 和 SQL_MAX_COLUMN_NAME_LEN 选项调用**SQLGetInfo** 。  
   
- 对于 ODBC 3 重命名为以下各列。*x*。 列名称更改不会影响后向兼容性，因为应用程序将绑定的列号。  
+ 已为 ODBC 3 重命名了以下列。*x*。 列名称更改不会影响向后兼容性，因为应用程序按列号进行绑定。  
   
 |ODBC 2.0 列|ODBC 3。*x*列|  
 |---------------------|-----------------------|  
@@ -147,7 +147,7 @@ SQLRETURN SQLColumns(
 |SCALE|DECIMAL_DIGITS|  
 |RADIX|NUM_PREC_RADIX|  
   
- 以下各列已添加到返回的结果集**SQLColumns** ODBC 3。*x*:  
+ 以下列已添加到**SQLColumns** for ODBC 3 返回的结果集中。*x*：  
   
 |||  
 |-|-|  
@@ -155,31 +155,31 @@ SQLRETURN SQLColumns(
 |COLUMN_DEF|SQL_DATA_TYPE|  
 |IS_NULLABLE|SQL_DATETIME_SUB|  
   
- 下表列出了在结果集中的列。 列 18 (IS_NULLABLE) 之外的其他列可以定义由驱动程序。 应用程序应获得访问驱动程序特定列的倒计时从结果集而不是指定显式的序号位置的末尾。 有关详细信息，请参阅[目录函数返回数据](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)。  
+ 下表列出了结果集中的列。 列18（IS_NULLABLE）以外的其他列可由驱动程序定义。 应用程序应通过从结果集的末尾倒计时而不是指定显式序号位置，来获取对特定于驱动程序的列的访问权限。 有关详细信息，请参阅[目录函数返回的数据](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)。  
   
-|列名|“列”<br /><br /> number|数据类型|注释|  
+|列名称|列<br /><br /> 数字|数据类型|注释|  
 |-----------------|-----------------------|---------------|--------------|  
-|TABLE_CAT (ODBC 1.0)|1|Varchar|目录名称;如果不适用于数据源为 NULL。 如果驱动程序支持目录有关的某些表而不是其他人，如当驱动程序检索数据时从不同 Dbms，它返回空字符串 ("") 不具有目录这些表。|  
-|按 TABLE_SCHEM (ODBC 1.0)|2|Varchar|架构名称;如果不适用于数据源为 NULL。 如果驱动程序支持架构有关的某些表而不是其他人，如当驱动程序检索数据时从不同 Dbms，它返回空字符串 ("") 不具有架构的这些表。|  
-|TABLE_NAME (ODBC 1.0)|3|Varchar 不为 NULL|表名。|  
-|COLUMN_NAME (ODBC 1.0)|4|Varchar 不为 NULL|列名称。 该驱动程序返回空字符串不具有名称的列。|  
-|DATA_TYPE (ODBC 1.0)|5|Smallint（非 NULL）|SQL 数据类型。 这可以是 ODBC SQL 数据类型或特定于驱动程序的 SQL 数据类型。 对于日期时间和间隔数据类型，此列返回的简洁数据类型 （如 SQL_TYPE_DATE 或 SQL_INTERVAL_YEAR_TO_MONTH，而不是如 SQL_DATETIME 或 SQL_INTERVAL nonconcise 数据类型）。 有关有效的 ODBC SQL 数据类型的列表，请参阅[SQL 数据类型](../../../odbc/reference/appendixes/sql-data-types.md)中附录 d:数据类型。 有关特定于驱动程序的 SQL 数据类型的信息，请参阅驱动程序的文档。<br /><br /> 对于 ODBC 3 返回的数据类型。*x*和 ODBC 2。*x*应用程序可能会有所不同。 有关详细信息，请参阅[向后兼容性和标准符合性](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)。|  
-|TYPE_NAME (ODBC 1.0)|6|Varchar 不为 NULL|数据源相关的数据类型名称;"例如，CHAR"、"VARCHAR"、"MONEY"、"LONG VARBINAR"或者"CHAR FOR BIT DATA （）"。|  
-|COLUMN_SIZE (ODBC 1.0)|7|Integer|如果 DATA_TYPE 为 SQL_CHAR 或 SQL_VARCHAR，此列包含的列的字符的最大长度。 对于 datetime 数据类型，这是所需的值转换为字符时显示的字符总数。 对于数值数据类型，这是总位数，或者允许在列中，总位数是根据 NUM_PREC_RADIX 列。 间隔数据类型，这是文本的时间间隔的字符表示形式中的字符数 (根据间隔起始精度的定义，请参阅[间隔数据类型长度](../../../odbc/reference/appendixes/interval-data-type-length.md)中附录 d:数据类型）。 有关详细信息，请参阅[列的大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)中附录 d:数据类型。|  
-|BUFFER_LENGTH (ODBC 1.0)|8|Integer|如果指定 SQL_C_DEFAULT，数据的长度以字节为单位传输的 SQLGetData、 SQLFetch 或 SQLFetchScroll 操作。 对于数值数据，此大小可能不同于数据源上存储的数据量。 此值可能不同于字符数据的 COLUMN_SIZE 列中。 长度有关的详细信息，请参阅[列的大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)中附录 d:数据类型。|  
-|DECIMAL_DIGITS (ODBC 1.0)|9|Smallint|小数点右侧的有效位数的总数。 有关 SQL_TYPE_TIME 和 SQL_TYPE_TIMESTAMP，此列包含秒的小数部分组件中的位数。 对于其他数据类型，这是列的十进制数字的数据源中。 对于包含时间部分的时间间隔数据类型，此列包含小数点 （秒的小数部分） 右侧的位数。 对于不包含时间部分的时间间隔数据类型，此列是 0。 十进制数字的详细信息，请参阅[列的大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)中附录 d:数据类型。 DECIMAL_DIGITS 不适用的数据类型则返回 NULL。|  
-|NUM_PREC_RADIX (ODBC 1.0)|10|Smallint|对于数值数据类型，为 10 或 2。 如果它是 10，COLUMN_SIZE 和 DECIMAL_DIGITS 中的值为提供允许为列的小数位数编号。 例如，DECIMAL(12,5) 列将返回为 10，12，COLUMN_SIZE 和 5; DECIMAL_DIGITS NUM_PREC_RADIXFLOAT 列可能会返回 10 月 15 日，COLUMN_SIZE 和 DECIMAL_DIGITS 的 NULL NUM_PREC_RADIX。<br /><br /> 如果它是 2，COLUMN_SIZE 和 DECIMAL_DIGITS 中的值为指定的列中允许的位数。 例如，FLOAT 列可能返回 2，53，COLUMN_SIZE 和 DECIMAL_DIGITS 的为 NULL 的基数。<br /><br /> 不适用 NUM_PREC_RADIX 对于数据类型则返回 NULL。|  
-|可以为 NULL (ODBC 1.0)|11|Smallint（非 NULL）|SQL_NO_NULLS 如果列可以包含 NULL 值。<br /><br /> SQL_NULLABLE 如果列接受 NULL 值。<br /><br /> 如果不知道列是否接受 NULL 值，SQL_NULLABLE_UNKNOWN。<br /><br /> 此列返回的值不同于为 IS_NULLABLE 列返回的值。 列可以接受 null 值，但不能确定列不接受 null 值指示明确地指示可以为 NULL 的列。 列不能接受 null 值，但不能确定列接受 null 值指示明确地指示 IS_NULLABLE 列。|  
-|备注 (ODBC 1.0)|12|Varchar|列的说明。|  
-|COLUMN_DEF (ODBC 3.0)|13|Varchar|列的默认值。 如果它用引号引起来，应将此列中的值解释为字符串。<br /><br /> 如果指定为默认值为 NULL，此列是词 NULL，不能用引号括起来。 如果默认值不能表示而无需截断，此列将包含没有封闭单引号会被截断。 如果未指定默认值时，此列将为 NULL。<br /><br /> 可在除生成的新列定义，它包含的值被截断时 COLUMN_DEF 的值。|  
-|SQL_DATA_TYPE (ODBC 3.0)|14|Smallint（非 NULL）|SQL 数据类型，显示在 IRD 中的 SQL_DESC_TYPE 记录字段中。 这可以是 ODBC SQL 数据类型或特定于驱动程序的 SQL 数据类型。 此列是日期时间和间隔数据类型除外 DATA_TYPE 列相同。 此列返回的 nonconcise 数据类型 （如 SQL_DATETIME 或 SQL_INTERVAL），而不是简洁数据类型 （如 SQL_TYPE_DATE 或 SQL_INTERVAL_YEAR_TO_MONTH） 对于 datetime 和 interval 数据类型。 如果此列返回 SQL_DATETIME 或 SQL_INTERVAL，则可从 SQL_DATETIME_SUB 列确定特定的数据类型。 有关有效的 ODBC SQL 数据类型的列表，请参阅[SQL 数据类型](../../../odbc/reference/appendixes/sql-data-types.md)中附录 d:数据类型。 有关特定于驱动程序的 SQL 数据类型的信息，请参阅驱动程序的文档。<br /><br /> 对于 ODBC 3 返回的数据类型。*x*和 ODBC 2。*x*应用程序可能会有所不同。 有关详细信息，请参阅[向后兼容性和标准符合性](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)。|  
-|SQL_DATETIME_SUB (ODBC 3.0)|15|Smallint|日期时间和间隔数据类型的子类型代码。 对于其他数据类型，此列返回 NULL。 有关日期时间和间隔子代码的详细信息，请参阅"SQL_DESC_DATETIME_INTERVAL_CODE"中[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)。|  
-|CHAR_OCTET_LENGTH (ODBC 3.0)|16|Integer|以字节为单位的最大长度的字符或二进制数据类型列。 对于所有其他数据类型，此列返回 NULL。|  
-|ORDINAL_POSITION (ODBC 3.0)|17|Integer（非 NULL）|表中列的序号位置。 表中的第一列是数字 1。|  
-|IS_NULLABLE (ODBC 3.0)|18|Varchar|"否"如果列不包含 null 值。<br /><br /> "是"如果列可以包含 Null。<br /><br /> 如果为 Null 性为未知，该列将返回零长度字符串。<br /><br /> 根据 ISO 规则确定为 Null 性。 遵从 ISO SQL 标准的 DBMS 不能返回空字符串。<br /><br /> 此列返回的值不同于返回为 NULL 的列的值。 （请参阅可以为 NULL 的列的说明。）|  
+|TABLE_CAT （ODBC 1.0）|1|Varchar|目录名称;如果不适用于数据源，则为 NULL。 如果驱动程序为某些表（而不是其他表）支持目录，例如当驱动程序从不同 Dbms 检索数据时，它将为没有目录的表返回空字符串（""）。|  
+|TABLE_SCHEM （ODBC 1.0）|2|Varchar|架构名称;如果不适用于数据源，则为 NULL。 如果驱动程序支持某些表的架构，而不支持其他表的架构，例如当驱动程序从不同 Dbms 检索数据时，它将为没有架构的表返回空字符串（""）。|  
+|TABLE_NAME （ODBC 1.0）|3|Varchar not NULL|表名。|  
+|COLUMN_NAME （ODBC 1.0）|4|Varchar not NULL|列名称。 对于没有名称的列，驱动程序返回空字符串。|  
+|DATA_TYPE （ODBC 1.0）|5|Smallint（非 NULL）|SQL 数据类型。 这可以是 ODBC SQL 数据类型，也可以是特定于驱动程序的 SQL 数据类型。 对于 datetime 和 interval 数据类型，此列返回简洁的数据类型（如 SQL_TYPE_DATE 或 SQL_INTERVAL_YEAR_TO_MONTH，而不是 SQL_DATETIME 或 SQL_INTERVAL 之类的 nonconcise 数据类型）。 有关有效 ODBC SQL 数据类型的列表，请参阅附录 D：数据类型中的[SQL 数据类型](../../../odbc/reference/appendixes/sql-data-types.md)。 有关特定于驱动程序的 SQL 数据类型的信息，请参阅驱动程序的文档。<br /><br /> 为 ODBC 3 返回的数据类型。*x*和 ODBC 2。*x*应用程序可能不同。 有关详细信息，请参阅[向后兼容性和标准符合性](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)。|  
+|TYPE_NAME （ODBC 1.0）|6|Varchar not NULL|依赖于数据源的数据类型名称;例如，"CHAR"、"VARCHAR"、"MONEY"、"LONG VARBINAR" 或 "CHAR （） FOR BIT DATA"。|  
+|COLUMN_SIZE （ODBC 1.0）|7|Integer|如果 DATA_TYPE SQL_CHAR 或 SQL_VARCHAR，则此列包含列的最大长度（以字符为限）。 对于 datetime 数据类型，这是在转换为字符时显示值所需的字符总数。 对于数字数据类型，这是列中允许的总位数或总位数，根据 NUM_PREC_RADIX 列。 对于间隔数据类型，这是间隔文本的字符表示形式的字符数（由间隔前导精度定义，请参阅附录 D：数据类型中的[时间间隔数据类型长度](../../../odbc/reference/appendixes/interval-data-type-length.md)）。 有关详细信息，请参阅附录 D：数据类型中的[列大小、十进制数字、传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)。|  
+|BUFFER_LENGTH （ODBC 1.0）|8|Integer|指定 SQL_C_DEFAULT 时，在 SQLGetData、SQLFetch 或 SQLFetchScroll 操作上传输的数据的长度（以字节为单位）。 对于数值数据，此大小可能与数据源中存储的数据的大小不同。 此值可能与字符数据 COLUMN_SIZE 列不同。 有关长度的详细信息，请参阅附录 D：数据类型中的[列大小、十进制数字、传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)。|  
+|DECIMAL_DIGITS （ODBC 1.0）|9|Smallint|小数点右边的有效位数的总数。 对于 SQL_TYPE_TIME 和 SQL_TYPE_TIMESTAMP，此列包含秒小数部分的位数。 对于其他数据类型，这是数据源中列的小数位数。 对于包含时间部分的间隔数据类型，此列包含小数点右侧的位数（秒的小数部分）。 对于不包含时间部分的间隔数据类型，此列为0。 有关十进制数字的详细信息，请参阅附录 D：数据类型中的[列大小、十进制数字、传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)。 对于 DECIMAL_DIGITS 不适用的数据类型，将返回 NULL。|  
+|NUM_PREC_RADIX （ODBC 1.0）|10|Smallint|对于数字数据类型，为10或2。 如果为10，则 COLUMN_SIZE 和 DECIMAL_DIGITS 中的值提供列允许的小数位数。 例如，DECIMAL （12，5）列返回的 NUM_PREC_RADIX 为10，COLUMN_SIZE 为12，DECIMAL_DIGITS 为 5;FLOAT 列可能返回 NUM_PREC_RADIX 10、COLUMN_SIZE 15 和 DECIMAL_DIGITS 为 NULL。<br /><br /> 如果为2，则 COLUMN_SIZE 和 DECIMAL_DIGITS 中的值将给出列中允许的位数。 例如，FLOAT 列可能返回基数2、COLUMN_SIZE 53 和 NULL 的 DECIMAL_DIGITS。<br /><br /> 对于 NUM_PREC_RADIX 不适用的数据类型，将返回 NULL。|  
+|可以为 NULL （ODBC 1.0）|11|Smallint（非 NULL）|如果列中不能包含 NULL 值，则 SQL_NO_NULLS。<br /><br /> 如果列接受空值，则 SQL_NULLABLE。<br /><br /> 如果不知道列是否接受空值，则 SQL_NULLABLE_UNKNOWN。<br /><br /> 为此列返回的值与为 IS_NULLABLE 列返回的值不同。 可以为 NULL 的列指示列可以接受 Null，但不能确定列不接受 Null 值。 IS_NULLABLE 列表明，列不能接受 Null 值，但却无法指示列是否接受 Null 值。|  
+|备注（ODBC 1.0）|12|Varchar|列的说明。|  
+|COLUMN_DEF （ODBC 3.0）|13|Varchar|列的默认值。 如果此列中的值用引号引起来，则应将其解释为字符串。<br /><br /> 如果将 NULL 指定为默认值，则此列为单词 NULL，而不是用引号引起来。 如果在不截断的情况下不能表示默认值，此列将包含截断的，而不包含单引号。 如果未指定默认值，则此列为 NULL。<br /><br /> COLUMN_DEF 的值可以用于生成新的列定义，除非它包含截断的值。|  
+|SQL_DATA_TYPE （ODBC 3.0）|14|Smallint（非 NULL）|SQL 数据类型，因为它显示在 IRD 的 "SQL_DESC_TYPE 记录" 字段中。 这可以是 ODBC SQL 数据类型，也可以是特定于驱动程序的 SQL 数据类型。 此列与 DATA_TYPE 列相同，datetime 和 interval 数据类型除外。 此列返回 DATETIME 和 INTERVAL 数据类型的 nonconcise 数据类型（如 SQL_DATETIME 或 SQL_INTERVAL），而不是简单数据类型（如 SQL_TYPE_DATE 或 SQL_INTERVAL_YEAR_TO_MONTH）。 如果此列返回 SQL_DATETIME 或 SQL_INTERVAL，则可以从 SQL_DATETIME_SUB 列确定特定数据类型。 有关有效 ODBC SQL 数据类型的列表，请参阅附录 D：数据类型中的[SQL 数据类型](../../../odbc/reference/appendixes/sql-data-types.md)。 有关特定于驱动程序的 SQL 数据类型的信息，请参阅驱动程序的文档。<br /><br /> 为 ODBC 3 返回的数据类型。*x*和 ODBC 2。*x*应用程序可能不同。 有关详细信息，请参阅[向后兼容性和标准符合性](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)。|  
+|SQL_DATETIME_SUB （ODBC 3.0）|15|Smallint|Datetime 和 interval 数据类型的子类型代码。 对于其他数据类型，该列返回 NULL。 有关 datetime 和 interval 子代码的详细信息，请参阅[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)中的 "SQL_DESC_DATETIME_INTERVAL_CODE"。|  
+|CHAR_OCTET_LENGTH （ODBC 3.0）|16|Integer|字符或二进制数据类型列的最大长度（以字节为单位）。 对于所有其他数据类型，此列返回 NULL。|  
+|ORDINAL_POSITION （ODBC 3.0）|17|Integer（非 NULL）|表中列的序号位置。 表中的第一列是数字1。|  
+|IS_NULLABLE （ODBC 3.0）|18|Varchar|如果列不包含 Null，则为 "否"。<br /><br /> 如果列可以包含 Null，则为 "是"。<br /><br /> 如果为 Null 性为未知，该列将返回零长度字符串。<br /><br /> 根据 ISO 规则确定为 Null 性。 遵从 ISO SQL 标准的 DBMS 不能返回空字符串。<br /><br /> 为此列返回的值与为可为 NULL 的列返回的值不同。 （请参阅可以为 NULL 的列的说明。）|  
   
 ## <a name="code-example"></a>代码示例  
- 在以下示例中，应用程序声明为返回的结果集的缓冲区**SQLColumns**。 它将调用**SQLColumns**以返回 EMPLOYEE 表中的每个列的说明结果集。 然后，它调用**SQLBindCol**将列绑定结果集中的缓冲区。 最后，应用程序读取的数据与每一行**SQLFetch**和对其进行处理。  
+ 在下面的示例中，应用程序声明**SQLColumns**返回的结果集的缓冲区。 它调用**SQLColumns**来返回一个结果集，该结果集描述 EMPLOYEE 表中的每一列。 然后，它调用**SQLBindCol**将结果集中的列绑定到缓冲区。 最后，应用程序将每行数据与**SQLFetch**一起提取并处理数据。  
   
 ```cpp  
 // SQLColumns_Function.cpp  
@@ -285,18 +285,18 @@ int main() {
   
 ## <a name="related-functions"></a>相关函数  
   
-|有关信息|请参阅|  
+|有关以下方面的信息|请参阅|  
 |---------------------------|---------|  
 |将缓冲区绑定到结果集中的列|[SQLBindCol 函数](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
-|取消语句处理|[SQLCancel 函数](../../../odbc/reference/syntax/sqlcancel-function.md)|  
-|返回一个或多列的权限|[SQLColumnPrivileges 函数](../../../odbc/reference/syntax/sqlcolumnprivileges-function.md)|  
-|提取的数据块或滚动浏览结果集|[SQLFetchScroll 函数](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
-|正在提取多行数据|[SQLFetch 函数](../../../odbc/reference/syntax/sqlfetch-function.md)|  
-|返回唯一标识行或自动更新的事务的列|[SQLSpecialColumns 函数](../../../odbc/reference/syntax/sqlspecialcolumns-function.md)|  
+|正在取消语句处理|[SQLCancel 函数](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|返回一个或多个列的权限|[SQLColumnPrivileges 函数](../../../odbc/reference/syntax/sqlcolumnprivileges-function.md)|  
+|提取数据块或滚动结果集|[SQLFetchScroll Function（SQLFetchScroll 函数）](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
+|提取多行数据|[SQLFetch 函数](../../../odbc/reference/syntax/sqlfetch-function.md)|  
+|返回唯一标识行的列，或由事务自动更新的列|[SQLSpecialColumns 函数](../../../odbc/reference/syntax/sqlspecialcolumns-function.md)|  
 |返回表统计信息和索引|[SQLStatistics 函数](../../../odbc/reference/syntax/sqlstatistics-function.md)|  
-|数据源中返回的表的列表|[SQLTables 函数](../../../odbc/reference/syntax/sqltables-function.md)|  
-|返回一个表或表的权限|[SQLTablePrivileges 函数](../../../odbc/reference/syntax/sqltableprivileges-function.md)|  
+|返回数据源中的表的列表|[SQLTables 函数](../../../odbc/reference/syntax/sqltables-function.md)|  
+|返回一个或多个表的权限|[SQLTablePrivileges Function（SQLTablePrivileges 函数）](../../../odbc/reference/syntax/sqltableprivileges-function.md)|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ODBC API 参考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 头文件](../../../odbc/reference/install/odbc-header-files.md)

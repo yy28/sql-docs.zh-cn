@@ -17,14 +17,14 @@ ms.assetid: 8a8594f2-422b-4d2e-94f8-7fe337445900
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c2e56178ad306d5b39c2445c391c3bbabe4fc424
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917036"
 ---
 # <a name="savetofile-method"></a>SaveToFile 方法
-将保存的二进制内容组成[Stream](../../../ado/reference/ado-api/stream-object-ado.md)到文件。  
+将[流](../../../ado/reference/ado-api/stream-object-ado.md)的二进制内容保存到文件。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,26 +33,26 @@ ms.locfileid: "67917036"
 Stream.SaveToFile FileName, SaveOptions  
 ```  
   
-#### <a name="parameters"></a>Parameters  
- *FileName*  
- 一个**字符串**值，该值包含到的文件的完全限定名称的内容**Stream**将保存。 您可以将其保存到任何有效的本地位置，或你有权访问通过 UNC 值的任何位置。  
+#### <a name="parameters"></a>parameters  
+ *名字*  
+ 一个**字符串**值，该值包含**流**的内容将保存到的文件的完全限定名称。 可以保存到任何有效的本地位置，也可以通过 UNC 值进行访问。  
   
- *SaveOptions*  
- 一个[SaveOptionsEnum](../../../ado/reference/ado-api/saveoptionsenum.md)值，该值指定是否应通过创建一个新的文件**SaveToFile**，如果尚不存在。 默认值是**adSaveCreateNotExists**。 通过这些选项可以指定是否指定的文件不存在，就会出错。 您还可以指定**SaveToFile**将覆盖现有文件的当前内容。  
+ *System.xml.linq.saveoptions>*  
+ 一个[SaveOptionsEnum](../../../ado/reference/ado-api/saveoptionsenum.md)值，该值指定是否应由**SaveToFile**创建新文件（如果它尚不存在）。 默认值为**adSaveCreateNotExists**。 使用这些选项，可以指定在指定的文件不存在时出现错误。 还可以指定**SaveToFile**覆盖现有文件的当前内容。  
   
 > [!NOTE]
->  如果覆盖现有文件 (当**adSaveCreateOverwrite**设置)， **SaveToFile**将遵循新的任何字节的原始的现有文件的截断[EOS](../../../ado/reference/ado-api/eos-property.md)。  
+>  如果覆盖现有文件（如果设置了**adSaveCreateOverwrite** ），则**SaveToFile**将从新的[EOS](../../../ado/reference/ado-api/eos-property.md)之后的原始现有文件中截断所有字节。  
   
 ## <a name="remarks"></a>备注  
- **SaveToFile**可用于复制的内容**Stream**到本地文件的对象。 中的内容或属性的没有变化**Stream**对象。 **Stream**对象必须在打开之前调用**SaveToFile**。  
+ **SaveToFile**可用于将**Stream**对象的内容复制到本地文件。 **Stream**对象的内容或属性没有变化。 在调用**SaveToFile**之前，必须打开**流**对象。  
   
- 此方法不会更改的关联**Stream**到其基础源对象。 **Stream**对象将仍与相关联的原始 URL 或**记录**已打开时其源。  
+ 此方法不会更改**流**对象与基础源的关联。 **流**对象仍将与打开时源的原始 URL 或**记录**相关联。  
   
- 之后**SaveToFile**操作，当前的位置 ([位置](../../../ado/reference/ado-api/position-property-ado.md)) 流中设置为流 (0) 的开始位置。  
+ **SaveToFile**操作完成后，流中的当前位置（[位置](../../../ado/reference/ado-api/position-property-ado.md)）将设置为流的开头（0）。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [流对象 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>请参阅  
- [Open 方法 (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
+## <a name="see-also"></a>另请参阅  
+ [Open 方法（ADO 流）](../../../ado/reference/ado-api/open-method-ado-stream.md)   
  [Save 方法](../../../ado/reference/ado-api/save-method.md)

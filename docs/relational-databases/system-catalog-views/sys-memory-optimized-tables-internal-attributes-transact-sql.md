@@ -1,5 +1,5 @@
 ---
-title: sys.memory_optimized_tables_internal_attributes (TRANSACT-SQL) |Microsoft Docs
+title: sys. memory_optimized_tables_internal_attributes （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -21,23 +21,23 @@ author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ea116b0d4a70b647c6c3a719443f8e35f177169b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68102386"
 ---
-# <a name="sysmemoryoptimizedtablesinternalattributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
+# <a name="sysmemory_optimized_tables_internal_attributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 对于用于存储用户内存优化表的每个内部内存优化表都包含一行。 每个用户表与一个或多个内部表对应。 单个表用于核心数据存储。 其他内部表用于支持功能，如用于内存优化表的临时、列存储索引和行外 (LOB) 存储。
  
-| 列名  | 数据类型  | 描述 |
+| 列名称  | 数据类型  | 说明 |
 | :------ |:----------| :-----|
 |object_id  |**int**|       用户表的 ID。 为支持用户表（如针对 Hk/列存储组合情况的行外存储或已删除行）而存在的内部内存优化表将相同 object_id 作为其父级。 |
 |xtp_object_id  |**bigint**|    与用于支持用户表的内部内存优化表对应的内存中 OLTP 对象 ID。 它在数据库中是唯一的，可以在对象的生存期内更改。 
 |type|  **int** |   内部表的类型。<br/><br/> 0 => DELETED_ROWS_TABLE <br/> 1 => USER_TABLE <br/> 2 => DICTIONARIES_TABLE<br/>3 => SEGMENTS_TABLE<br/>4 => ROW_GROUPS_INFO_TABLE<br/>5 => INTERNAL OFF-ROW DATA TABLE<br/>252 => INTERNAL_TEMPORAL_HISTORY_TABLE | 
-|type_desc| **nvarchar(60)**|   类型的说明<br/><br/>DELETED_ROWS_TABLE -> 跟踪列存储索引的已删除行的内部表<br/>USER_TABLE -> 包含行内用户数据的表<br/>DICTIONARIES_TABLE -> 列存储索引的字典<br/>SEGMENTS_TABLE -> 列存储索引的压缩段<br/>ROW_GROUPS_INFO_TABLE -> 有关列存储索引的压缩行组的元数据<br/>INTERNAL OFF-ROW DATA TABLE -> 用于行外列存储的内部表。 在这种情况下，minor_id 反映 column_id。<br/>INTERNAL_TEMPORAL_HISTORY_TABLE -> 基于磁盘的历史记录表的热结尾。 插入历史记录中的行会先插入此内部内存优化表中。 有一个后台任务以异步方式将行从此内部表移动到基于磁盘的历史记录表。 |
+|type_desc| **nvarchar （60）**|   类型的说明<br/><br/>DELETED_ROWS_TABLE -> 跟踪列存储索引的已删除行的内部表<br/>USER_TABLE -> 包含行内用户数据的表<br/>DICTIONARIES_TABLE -> 列存储索引的字典<br/>SEGMENTS_TABLE -> 列存储索引的压缩段<br/>ROW_GROUPS_INFO_TABLE -> 有关列存储索引的压缩行组的元数据<br/>INTERNAL OFF-ROW DATA TABLE -> 用于行外列存储的内部表。 在这种情况下，minor_id 反映 column_id。<br/>INTERNAL_TEMPORAL_HISTORY_TABLE -> 基于磁盘的历史记录表的热结尾。 插入历史记录中的行会先插入此内部内存优化表中。 有一个后台任务以异步方式将行从此内部表移动到基于磁盘的历史记录表。 |
 |minor_id|  **int**|    0 指示用户或内部表<br/><br/>非 0 指示行外存储的列的 ID。 在 sys.columns 中与 column_id 联接。<br/><br/>每个行外存储的列都在此系统视图中具有对应行。|
 
 ## <a name="permissions"></a>权限  
@@ -97,7 +97,7 @@ WHERE moa.type=5;
 
 ### <a name="c-returning-memory-consumption-of-columnstore-indexes-on-memory-optimized-tables"></a>C. 返回内存优化表上的列存储索引的内存占用情况
 
-使用下面的查询内存优化表上显示列存储索引的内存使用情况：
+使用以下查询来显示内存优化表的列存储索引的内存占用情况：
 
 ```Transact-SQL
 SELECT
@@ -113,7 +113,7 @@ WHERE moa.type IN (0, 2, 3, 4)
 GROUP BY o.schema_id, moa.object_id, i.name;
 ```
 
-在用于内存优化表的列存储索引的内部结构中使用以下查询细分内存使用情况：
+使用以下查询在内存优化表上分解用于列存储索引的内部结构的内存消耗：
 
 ```Transact-SQL
 SELECT

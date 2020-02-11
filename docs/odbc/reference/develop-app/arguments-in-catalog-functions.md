@@ -1,5 +1,5 @@
 ---
-title: 目录函数中的自变量 |Microsoft Docs
+title: 目录函数中的参数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,14 +16,14 @@ ms.assetid: f5e0abec-8f24-42e0-b94f-16dd1f2004fd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 649c00f1db486dab4a996138be4e26b0e270fbae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106295"
 ---
 # <a name="arguments-in-catalog-functions"></a>目录函数中的自变量
-所有目录函数都接受自变量与该应用程序可以将限制返回的数据的作用域。 例如，第一个和第二个调用到**SQLTables**下面的代码中返回的结果集包含所有表有关的信息，而第三个调用返回订单表有关的信息：  
+所有目录函数都接受应用程序可用于限制返回的数据范围的参数。 例如，在以下代码中对**SQLTables**的第一次和第二次调用返回包含有关所有表的信息的结果集，而第三次调用返回 Orders 表的相关信息：  
   
 ```  
 SQLTables(hstmt1, NULL, 0, NULL, 0, NULL, 0, NULL, 0);  
@@ -31,22 +31,22 @@ SQLTables(hstmt2, NULL, 0, NULL, 0, "%", SQL_NTS, NULL, 0);
 SQLTables(hstmt3, NULL, 0, NULL, 0, "Orders", SQL_NTS, NULL, 0);  
 ```  
   
- 目录函数字符串参数分为四种不同类型： 普通参数 (OA)、 模式值自变量 (PV)、 标识符 (ID)、 参数和值列表自变量 （批量许可）。 大多数字符串自变量可以是两种不同类型，具体取决于 SQL_ATTR_METADATA_ID 语句属性的值之一。 下表列出了每个目录函数的参数，并描述 SQL_ATTR_METADATA_ID SQL_TRUE 或 SQL_FALSE 值的参数的类型。  
+ 目录函数字符串参数分为四种不同的类型：普通参数（OA）、模式值参数（PV）、标识符参数（ID）和值列表参数（VL）。 大多数字符串参数可以是两种不同类型之一，具体取决于 SQL_ATTR_METADATA_ID 语句特性的值。 下表列出了每个目录函数的参数，并描述了 SQL_ATTR_METADATA_ID 的 SQL_TRUE 或 SQL_FALSE 值的参数的类型。  
   
-|函数|参数|键入时 SQL_<br /><br /> ATTR_METADATA_<br /><br /> ID = SQL_FALSE|键入时 SQL_<br /><br /> ATTR_METADATA_<br /><br /> ID = SQL_TRUE|  
+|函数|参数|键入 when SQL_<br /><br /> ATTR_METADATA_<br /><br /> ID = SQL_FALSE|键入 when SQL_<br /><br /> ATTR_METADATA_<br /><br /> ID = SQL_TRUE|  
 |--------------|--------------|---------------------------------------------------------------|--------------------------------------------------------------|  
-|**SQLColumnPrivileges**|*CatalogName* *SchemaName* *TableName* *ColumnName*|OA OA OA PV|ID ID ID ID|  
-|**SQLColumns**|*CatalogName* *SchemaName* *TableName* *ColumnName*|OA PV PV PV|ID ID ID ID|  
-|**SQLForeignKeys**|*PKCatalogName* *PKSchemaName* *PKTableName* *FKCatalogName* *FKSchemaName* *FKTableName*|OA OA OA OA OA OA|ID ID ID ID ID ID|  
-|**SQLPrimaryKeys**|*CatalogName* *SchemaName* *TableName*|OA OA OA|ID 为 ID ID|  
-|**SQLProcedureColumns**|*CatalogName* *SchemaName* *ProcName* *ColumnName*|OA PV PV PV|ID ID ID ID|  
-|**SQLProcedures**|*CatalogName* *SchemaName* *ProcName*|OA PV PV|ID 为 ID ID|  
-|**SQLSpecialColumns**|*CatalogName* *SchemaName* *TableName*|OA OA OA|ID 为 ID ID|  
-|**SQLStatistics**|*CatalogName* *SchemaName* *TableName*|OA OA OA|ID 为 ID ID|  
-|**SQLTablePrivileges**|*CatalogName* *SchemaName* *TableName*|OA PV PV|ID 为 ID ID|  
-|**SQLTables**|*CatalogName* *SchemaName* *TableName* *TableType*|PV PV PV 批量许可|ID ID ID 批量许可|  
+|**SQLColumnPrivileges**|*CatalogName* *SchemaName* *TableName* *ColumnName*|OA OA OA PV|ID ID ID|  
+|**SQLColumns**|*CatalogName* *SchemaName* *TableName* *ColumnName*|OA PV PV|ID ID ID|  
+|**SQLForeignKeys**|*PKCatalogName* *PKSchemaName* *PKTableName* *FKCatalogName* *FKSchemaName* *FKTableName*|OA OA OA OA OA|ID ID ID ID ID|  
+|**SQLPrimaryKeys**|*CatalogName* *SchemaName* *TableName*|OA OA OA|ID ID ID|  
+|**SQLProcedureColumns**|*CatalogName* *SchemaName* *ProcName* *ColumnName*|OA PV PV|ID ID ID|  
+|**SQLProcedures**|*CatalogName* *SchemaName* *ProcName*|OA PV PV|ID ID ID|  
+|**SQLSpecialColumns**|*CatalogName* *SchemaName* *TableName*|OA OA OA|ID ID ID|  
+|**SQLStatistics**|*CatalogName* *SchemaName* *TableName*|OA OA OA|ID ID ID|  
+|**SQLTablePrivileges**|*CatalogName* *SchemaName* *TableName*|OA PV PV|ID ID ID|  
+|**SQLTables**|*CatalogName* *SchemaName* *TableName* *TableType*|PV PV PV VL|ID ID ID VL|  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [普通自变量](../../../odbc/reference/develop-app/ordinary-arguments.md)  
   

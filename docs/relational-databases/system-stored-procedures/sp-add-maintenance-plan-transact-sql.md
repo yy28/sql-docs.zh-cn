@@ -1,5 +1,5 @@
 ---
-title: sp_add_maintenance_plan (TRANSACT-SQL) |Microsoft Docs
+title: sp_add_maintenance_plan （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 01ab1834-6260-47cb-a1b7-20722217b062
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: aa33e418b81cb2f77a39f20d36bba7a25caffb4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68104583"
 ---
-# <a name="spaddmaintenanceplan-transact-sql"></a>sp_add_maintenance_plan (Transact-SQL)
+# <a name="sp_add_maintenance_plan-transact-sql"></a>sp_add_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   添加维护计划并返回计划 ID。  
@@ -34,7 +34,7 @@ ms.locfileid: "68104583"
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,19 +45,19 @@ sp_add_maintenance_plan [ @plan_name = ] 'plan_name' ,
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @plan_name = ] 'plan_name'` 指定要添加的维护计划的名称。 *plan_name*是**varchar （128)** 。  
+`[ @plan_name = ] 'plan_name'`指定要添加的维护计划的名称。 *plan_name*为**varchar （128）**。  
   
- **@plan_id = '** *plan_id* **'**  
+ ** ** @plan_id = '** plan_id **'**  
  指定维护计划的 ID。 *plan_id*是**uniqueidentifier**。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="remarks"></a>备注  
- **sp_add_maintenance_plan**必须从运行**msdb**数据库并创建新的但为空，维护计划。 若要添加一个或多个数据库并将它们与作业或作业相关联，请执行**sp_add_maintenance_plan_db**并**sp_add_maintenance_plan_job**。  
+ 必须从**msdb**数据库运行**sp_add_maintenance_plan** ，并创建一个新的、空的维护计划。 若要添加一个或多个数据库并将其与一个或多个作业相关联，请执行**sp_add_maintenance_plan_db**和**sp_add_maintenance_plan_job**。  
   
 ## <a name="permissions"></a>权限  
- 只有的成员**sysadmin**固定的服务器角色可以执行**sp_add_maintenance_plan**。  
+ 只有**sysadmin**固定服务器角色的成员才能**sp_add_maintenance_plan**执行。  
   
 ## <a name="examples"></a>示例  
  创建一个名为 Myplan 的维护计划。  
@@ -75,8 +75,8 @@ GO
 'The id for the maintenance plan "Myplan" is:' FAD6F2AB-3571-11D3-9D4A-00C04FB925FC  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [维护计划](../../relational-databases/maintenance-plans/maintenance-plans.md)   
- [数据库维护计划存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
+ [数据库维护计划存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   
   

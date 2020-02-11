@@ -1,5 +1,5 @@
 ---
-title: Provider 和 DefaultDatabase 属性示例 （VC + +） |Microsoft Docs
+title: Provider 和 DefaultDatabase 属性示例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: d9868c99-425a-4b10-af67-1929ed513fda
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 20226c4c9c8d25541cee7fac786b85af5c12859f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931487"
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vc"></a>Provider 和 DefaultDatabase 属性示例 (VC++)
-此示例演示[提供程序](../../../ado/reference/ado-api/provider-property-ado.md)通过打开三个属性[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象使用不同的提供程序。 它还使用[DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)属性将默认数据库设置为 Microsoft ODBC 提供程序。  
+此示例通过使用不同的提供程序打开三个[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象来演示[提供程序](../../../ado/reference/ado-api/provider-property-ado.md)的属性。 它还使用[DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)属性设置 Microsoft ODBC 提供程序的默认数据库。  
   
 ```  
 // Provider_and_DefaultDatabase_Properties.cpp  
@@ -133,7 +133,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+## <a name="see-also"></a>另请参阅  
+ [Connection 对象（ADO）](../../../ado/reference/ado-api/connection-object-ado.md)   
  [DefaultDatabase 属性](../../../ado/reference/ado-api/defaultdatabase-property.md)   
  [Provider 属性 (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)

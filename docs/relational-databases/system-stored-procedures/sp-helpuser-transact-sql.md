@@ -1,5 +1,5 @@
 ---
-title: sp_helpuser (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpuser （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,21 +18,21 @@ ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a170c5e43329d90a4977db12a98bd9d2e556e91d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68048162"
 ---
-# <a name="sphelpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
+# <a name="sp_helpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   报告有关当前数据库中数据库级主体的信息。  
   
 > [!IMPORTANT]  
->  **sp_helpuser**不返回有关在中引入的安全对象的信息[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。 使用[sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)相反。  
+>  **sp_helpuser**不返回有关中[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]引入的安全对象的信息。 改用[sys.databases database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) 。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,42 +42,42 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @name_in_db = ] 'security_account'` 是数据库用户或当前数据库中的数据库角色的名称。 *security_account*必须存在于当前数据库。 *security_account*是**sysname**，默认值为 NULL。 如果*security_account*未指定，则**sp_helpuser**返回有关所有数据库主体的信息。  
+`[ @name_in_db = ] 'security_account'`当前数据库中的数据库用户或数据库角色的名称。 当前数据库中必须存在*security_account* 。 *security_account*的默认值为**sysname**，默认值为 NULL。 如果未指定*security_account* ， **sp_helpuser**将返回有关所有数据库主体的信息。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
- 下表显示了结果集当没有用户帐户也不是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]为指定 Windows 用户或*security_account*。  
+ 下表显示了在用户帐户和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Windows 用户均未指定*security_account*的情况下的结果集。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**UserName**|**sysname**|当前数据库中的用户。|  
-|**RoleName**|**sysname**|角色所属**用户名**所属。|  
-|**LoginName**|**sysname**|登录名**用户名**。|  
-|**DefDBName**|**sysname**|默认数据库**用户名**。|  
+|**用户名**|**sysname**|当前数据库中的用户。|  
+|**RoleName**|**sysname**|**用户名**所属的角色。|  
+|**LoginName**|**sysname**|**用户名**的登录名。|  
+|**DefDBName**|**sysname**|**用户名**的默认数据库。|  
 |**DefSchemaName**|**sysname**|数据库用户的默认架构。|  
-|**UserID**|**smallint**|ID**用户名**当前数据库中。|  
+|**Id**|**smallint**|当前数据库中的**用户名**的 ID。|  
 |**SID**|**smallint**|用户的安全标识号 (SID)。|  
   
  下表显示未指定用户帐户，并且当前数据库中存在别名时的结果集。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|当前数据库中已经化名为用户名的登录名。|  
 |**UserNameAliasedTo**|**sysname**|当前数据库中登录名要化名为的用户名。|  
   
- 下表显示了结果集时为指定角色*security_account*。  
+ 下表显示了为*security_account*指定角色时的结果集。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**Role_name**|**sysname**|当前数据库中角色的名称。|  
 |**Role_id**|**smallint**|当前数据库中角色的角色 ID。|  
 |**Users_in_role**|**sysname**|当前数据库中角色的成员。|  
-|**用户 Id**|**smallint**|角色的成员的用户 ID。|  
+|**Id**|**smallint**|角色成员的用户 ID。|  
   
 ## <a name="remarks"></a>备注  
- 若要查看数据库角色的成员身份的信息，请使用[sys.database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)。 若要查看有关服务器角色成员的信息，请使用[sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)，若要查看有关服务器级别主体的信息，请使用[sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)。  
+ 若要查看有关数据库角色成员身份的信息，请使用[sys. database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)。 若要查看有关服务器角色成员的信息，请使用[sys. server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)，若要查看有关服务器级主体的信息，请使用[sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)。  
   
 ## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
@@ -107,11 +107,11 @@ EXEC sp_helpuser 'dbo';
 EXEC sp_helpuser 'db_securityadmin';  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [安全存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [主体（数据库引擎）](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [sys.database_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
+ [sys. database_principals &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [sys.database_role_members (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   
  [sys.server_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [sys.server_role_members (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)  

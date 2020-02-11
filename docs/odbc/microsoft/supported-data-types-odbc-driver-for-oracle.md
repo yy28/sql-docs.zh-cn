@@ -1,5 +1,5 @@
 ---
-title: 支持的数据类型 （Oracle ODBC 驱动程序） |Microsoft Docs
+title: 支持的数据类型（Oracle ODBC 驱动程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ ms.assetid: 21d5f8d9-a3aa-4aa4-bc37-ff8bc90c0870
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 145170afee5ab791602695c662ce1e80e86cae7e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915673"
 ---
 # <a name="supported-data-types-odbc-driver-for-oracle"></a>支持的数据类型（Oracle ODBC 驱动程序）
 > [!IMPORTANT]  
->  此功能将 Windows 的未来版本中删除。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 相反，使用提供的 Oracle 的 ODBC 驱动程序。  
+>  此功能将在 Windows 的将来版本中删除。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 请改用 Oracle 提供的 ODBC 驱动程序。  
   
- Oracle ODBC 驱动程序支持所有 Oracle 7.3 数据类型;但是，它不支持任何此处列出的新 Oracle8 数据类型。  
+ 用于 Oracle 的 ODBC 驱动程序支持所有 Oracle 7.3 数据类型;但是，它不支持此处列出的任何新的 Oracle8 数据类型。  
   
-|数据类型|Oracle 7.3|Oracle8|  
+|数据类型|Oracle 7。3|Oracle8|  
 |---------------|----------------|-------------|  
 |BFILE|不适用|不支持|  
 |BLOB|不适用|不支持|  
@@ -34,7 +34,7 @@ ms.locfileid: "67915673"
 |CLOB|不适用|不支持|  
 |DATE|支持|支持|  
 |FLOAT|支持|支持|  
-|整数|支持|支持|  
+|INTEGER|支持|支持|  
 |LONG|支持|支持|  
 |LONG RAW|支持|支持|  
 |NCHAR|不适用|不支持|  
@@ -43,7 +43,7 @@ ms.locfileid: "67915673"
 |NVARCHAR2|不适用|不支持|  
 |RAW|支持|支持|  
 |VARCHAR2|支持|支持|  
-|MLSLABEL|不提供支持。|不提供支持。|  
+|MLSLABEL|不支持。|不支持。|  
   
 > [!NOTE]  
->  VARCHAR 列的允许大小的详细信息，请参阅[VARCHAR 列大小](../../odbc/microsoft/varchar-column-size-odbc-driver-for-oracle.md)本指南中。
+>  有关 VARCHAR 列允许大小的详细信息，请参阅本指南中的[Varchar 列大小](../../odbc/microsoft/varchar-column-size-odbc-driver-for-oracle.md)。

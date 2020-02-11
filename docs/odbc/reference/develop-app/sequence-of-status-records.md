@@ -1,5 +1,5 @@
 ---
-title: 状态记录的序列 |Microsoft Docs
+title: 状态记录顺序 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,19 +15,19 @@ ms.assetid: 0e0436cc-230f-44b0-b373-04a57e83ee76
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 67eac22a630305f32f141ea18861e5638445f19b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68094352"
 ---
 # <a name="sequence-of-status-records"></a>状态记录的序列
-如果返回了两个或多个状态记录，驱动程序管理器和驱动程序对其进行排序根据以下规则。 具有最高排名的记录是第一条记录。 记录 （驱动程序管理器、 驱动程序、 网关，等） 的源不被视为时排名记录。  
+如果返回了两个或更多状态记录，驱动程序管理器和驱动程序将根据以下规则对它们进行排序。 排名最高的记录是第一条记录。 对记录进行排序时，不考虑记录源（驱动程序管理器、驱动程序和网关等）。  
   
--   **错误**描述错误的状态记录具有最高排名。 在错误的记录，指示事务失败或发生故障的可能的事务的记录 outrank 所有其他记录。 如果两个或多个记录描述相同的错误条件，请打开组 CLI 规范 （通过 HZ 类 03） 所定义的 SQLSTATEs outrank ODBC 定义和驱动程序定义 SQLSTATEs。  
+-   **错误**描述错误的状态记录的排名最高。 在错误记录中，表示事务失败或事务失败的记录 outrank 所有其他记录。 如果两个或更多记录描述相同的错误条件，则由开放式组 CLI 规范（类03到 HZ） outrank 定义的 SQLSTATEs 定义的 SQLSTATEs。  
   
--   **无数据值定义实现**描述驱动程序定义的无数据值 （类 02） 的状态记录具有第二个最高排名。  
+-   **实现-未定义数据值**描述驱动程序定义的不包含数据值的状态记录（第02类）的排名最高。  
   
--   **警告**描述警告 （类 01） 的状态记录具有最低排名。 如果两个或多个记录描述警告 SQLSTATEs 打开组 CLI 规范所定义的相同警告条件 outrank ODBC 定义和驱动程序定义 SQLSTATEs。  
+-   **警告**描述警告（类01）的状态记录的排名最低。 如果两个或更多记录描述了相同的警告条件，则由开放式组 CLI 规范 outrank 定义的警告 SQLSTATEs 由 ODBC 定义的 SQLSTATEs 和驱动程序定义的。  
   
- 如果有两个或多个记录的最高排名，是不明确的记录是第一条记录。 所有其他记录的顺序未定义。 具体而言之前的错误, 可能出现警告，因为应用程序时应该检查状态的所有记录函数将返回 SQL_SUCCESS 以外的值。
+ 如果有两个或更多个记录的排名最高，则不确定哪个记录是第一条记录。 所有其他记录的顺序是不确定的。 特别是，由于警告可能出现在错误之前，因此当函数返回 SQL_SUCCESS 以外的值时，应用程序应检查所有状态记录。

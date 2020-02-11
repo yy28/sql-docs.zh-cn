@@ -1,5 +1,5 @@
 ---
-title: IsolationLevel 和 Mode 属性示例 （VC + +） |Microsoft Docs
+title: IsolationLevel 和 Mode 属性示例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fb39288499e2a78523ca29f2e1e4feff4ea9a310
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932311"
 ---
-# <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel 和 Mode 属性示例 （VC + +）
-此示例使用[模式](../../../ado/reference/ado-api/mode-property-ado.md)以打开一个独占的连接，并[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)属性可以打开的事务的执行中的其他事务隔离。  
+# <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel 和 Mode 属性示例（VC + +）
+此示例使用[Mode](../../../ado/reference/ado-api/mode-property-ado.md)属性打开独占连接，使用[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)属性打开在其他事务隔离中执行的事务。  
   
 ## <a name="example"></a>示例  
   
@@ -223,26 +223,26 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **连接模式是独占**  
-**事务隔离**  
-**繁忙管理层的数据库指南-业务**  
-**烹饪与计算机：暗中资产负债表的业务**  
-**你可以抵御计算机压力 ！-业务**  
-**有关计算机的业务的直接对话**  
-**硅谷 Gastronomic 视为-mod_cook**  
-**Gourmet 微波-mod_cook**  
-**计算机特别爱看美食-決的心理学**  
-**但它是用户友好？-popular_comp**  
-**硅谷-popular_comp 的秘密**  
-**Net 刷屏-popular_comp**  
-**计算机 Phobic 和非恐惧症的个人：行为变体-self_help**  
-**是愤怒的防范对象？-self_help**  
-**而无需担心-self_help 生命**  
-**长时间的数据 Deprivation:四个案例研究-self_help**  
-**情感安全性：一种新算法-self_help**  
-**洋葱、 Leeks 和蒜蓉：烹饪地中海-trad_cook 机密**  
-**在 Buckingham 店厨房-trad_cook 五十年**  
+ **连接模式为独占模式**  
+**事务被隔离**  
+**繁忙的 Executive 数据库指南-业务**  
+**计算机烹饪： Surreptitious 余额表-业务**  
+**您可以对付计算机压力！-业务**  
+**直接谈论计算机-企业**  
+**硅谷 mod_cook Gastronomic**  
+**Gourmet 微波 mod_cook**  
+**计算机烹饪-UNDECIDED 的心理学**  
+**但用户是否友好？-popular_comp**  
+**硅谷的机密-popular_comp**  
+**Net 礼节-popular_comp**  
+**计算机善始善终和非善始善终个体：行为差异-self_help**  
+**敌人愤怒吗？-self_help**  
+**不害怕 self_help 的生活**  
+**长时间数据 Deprivation：四个案例研究-self_help**  
+**激动人心的安全性：一种新的算法-self_help**  
+**Onions、Leeks 和大蒜： trad_cook 地中海的密码**  
+**50年 Buckingham Palace Kitchens-trad_cook**  
 **寿司，任何人？-trad_cook**   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IsolationLevel 属性](../../../ado/reference/ado-api/isolationlevel-property.md)   
  [Mode 属性 (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)

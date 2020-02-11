@@ -1,5 +1,5 @@
 ---
-title: 操作非参数化命令 |Microsoft Docs
+title: 非参数化命令的操作 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,16 +14,16 @@ ms.assetid: 9700e50a-9f17-4ba3-8afb-f750741dc6ca
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3512b484425749ed027f6533dab7398765c1af2e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924740"
 ---
 # <a name="operation-of-non-parameterized-commands"></a>操作非参数化命令
-对于非参数化命令，执行所有提供程序命令和**记录集**命令执行时创建。 如果该命令同步执行的所有**记录集**将完全填充。 如果选择了异步填充模式，填充的状态**记录集**将取决于填充模式和的大小**记录集**。  
+对于非参数化命令，会执行所有提供程序命令，并在命令执行过程中创建**记录集**。 如果以同步方式执行命令，将完全填充所有**记录集**。 如果选择了异步填充模式，则**记录集**的填充状态将取决于填充模式和**记录集**的大小。  
   
- 例如，*父命令*可能会返回**记录集**的 Customers 表，从公司的客户并*子命令*可能返回**记录集**的 Orders 表中的所有客户的订单。  
+ 例如， *parent-command*可能会从 customers 表中为公司返回一个**记录集**，*子命令*可能会返回 orders 表中所有客户的订单**记录集**。  
   
 ```  
 SHAPE {SELECT * FROM Customers}   
@@ -31,17 +31,17 @@ SHAPE {SELECT * FROM Customers}
    RELATE customerID TO customerID)  
 ```  
   
- 对于非参数化父-子关系，每个父级和子级**记录集**对象必须具有共同点要将其关联的列。 RELATE 子句中对列的命名*父列*第一个，然后*子列*。 列可能具有不同的名称在其各自**记录集**对象而必须引用相同的信息来指定有意义的关系。 例如，**客户**并**订单记录集**对象均可以是客户 id 字段。 由于子级的成员身份**记录集**由提供程序命令，子**记录集**可以包含孤立的行。 这些孤立的行将无法访问而无需其他重新调整。  
+ 对于非参数化的父子关系，每个父记录集对象和子**记录集**对象都必须具有共同的列以将它们关联起来。 列首先在关联子句、*父列*和*子列*中进行命名。 这些列在各自的**记录集**对象中可能具有不同的名称，但必须引用相同的信息才能指定有意义的关系。 例如，"**客户**" 和 "**订单" 记录集**对象可以有 customerID 字段。 由于子**记录集**的成员身份由提供程序命令确定，因此子**记录集**可以包含孤立的行。 这些孤立行不可访问，无需进行额外的整形。  
   
- 数据整理将章节列追加到父级**记录集**。 中的章节列的值是对子组织单位中的行的引用**记录集**，其中满足 RELATE 子句。 也就是说，相同的值是在*父列*给定的父行中的*子列*的一章子级的所有行。 当同一 RELATE 子句中使用多个 TO 子句时，它们是隐式组合使用 AND 运算符。 如果在 RELATE 子句中的父列不构成对父键**记录集**，单个子行可以有多个父行。  
+ 数据定形将章节列附加到父**记录集**。 章节列中的值是对子**记录集中**的行的引用，后者满足了关系子句。 也就是说，在给定父行的*父列*中，同一值位于章节子项的所有行的*子列*中。 当在同一个关系子句中使用多个 TO 子句时，它们使用 AND 运算符隐式组合在一起。 如果 "关联" 子句中的父列不构成父**记录集**的键，则一个子行可以有多个父行。  
   
- 在访问中的章节列的引用时，会自动检索 ADO**记录集**表示引用。 请注意，在非参数化命令中，虽然整个子**记录集**已检索，章节只显示的行的子集。  
+ 访问 "章节" 列中的引用时，ADO 会自动检索引用所表示的**记录集**。 请注意，虽然已检索整个子**记录集**，但在非参数化命令中，章节只显示行的子集。  
   
- 如果没有追加的列*章别名*，它将自动生成名称。 一个[字段](../../../ado/reference/ado-api/field-object.md)列将附加到对象**记录集**对象的[字段](../../../ado/reference/ado-api/fields-collection-ado.md)集合，并且其数据类型将是**adChapter**.  
+ 如果追加列没有*章节别名*，将自动为其生成名称。 该列的[字段](../../../ado/reference/ado-api/field-object.md)对象将追加到**Recordset**对象的[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)集合，其数据类型将为**adChapter**。  
   
- 了解如何浏览的分层**记录集**，请参阅[访问分层记录集的行](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)。  
+ 有关导航分层**记录集**的信息，请参阅[访问分层记录集中的行](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)。  
   
-## <a name="see-also"></a>请参阅  
- [数据整理示例](../../../ado/guide/data/data-shaping-example.md)   
- [正式 Shape 语法](../../../ado/guide/data/formal-shape-grammar.md)   
+## <a name="see-also"></a>另请参阅  
+ [数据定形示例](../../../ado/guide/data/data-shaping-example.md)   
+ [正式形状语法](../../../ado/guide/data/formal-shape-grammar.md)   
  [常用 Shape 命令](../../../ado/guide/data/shape-commands-in-general.md)

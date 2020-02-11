@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 723d481bc858d7d1db4a63cbb32ab5614eddbb55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097174"
 ---
 # <a name="using-logical-functions"></a>使用逻辑函数
@@ -20,9 +20,9 @@ ms.locfileid: "68097174"
 
   逻辑函数对对象和表达式执行逻辑操作或比较并返回布尔值。 在多维表达式 (MDX) 中，逻辑函数对确定成员的位置至关重要。  
   
- 最常使用的逻辑函数是**IsEmpty**函数。 有关如何使用的详细信息**IsEmpty**函数中，请参阅[处理空值](../mdx/working-with-empty-values.md)。  
+ 最常用的逻辑函数是**IsEmpty**函数。 有关如何使用**IsEmpty**函数的详细信息，请参阅使用[空值](../mdx/working-with-empty-values.md)。  
   
- 以下查询说明如何使用**IsLeaf**并**IsAncestor**函数：  
+ 下面的查询演示了如何使用**IsLeaf**和**IsAncestor**函数：  
   
  `WITH`  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68097174"
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>请参阅  
- [函数&#40;MDX 语法&#41;](../mdx/functions-mdx-syntax.md)  
+## <a name="see-also"></a>另请参阅  
+ [函数 &#40;MDX 语法&#41;](../mdx/functions-mdx-syntax.md)  
   
   

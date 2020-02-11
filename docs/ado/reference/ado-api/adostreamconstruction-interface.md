@@ -16,38 +16,38 @@ ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 70a6dd02722a34159b345a83b32897aa8c38d0ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920789"
 ---
 # <a name="adostreamconstruction-interface"></a>ADOStreamConstruction 接口
-**ADOStreamConstruction**界面用于构造 ADO **Stream**从 OLE DB 对象**IStream** C 中的对象 /C++应用程序。  
+**ADOStreamConstruction**接口用于从 c/c + + 应用程序中的 OLE DB **ISTREAM**对象构造 ADO**流**对象。  
   
-## <a name="properties"></a>properties  
+## <a name="properties"></a>属性  
   
 |||  
 |-|-|  
-|[Stream 属性](../../../ado/reference/ado-api/stream-property.md)|读/写。 获取/设置 OLE DB **Stream**对象。|  
+|[Stream 属性](../../../ado/reference/ado-api/stream-property.md)|读/写。 获取/设置 OLE DB**流**对象。|  
   
 ## <a name="methods"></a>方法  
  无。  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>事件  
  无。  
   
 ## <a name="remarks"></a>备注  
- 提供 OLE DB **IStream**对象 (`pStream`)，ADO 构造**Stream**对象 (`adoStr`) 相当于以下三个基本操作：  
+ 给定一个 OLE DB **IStream**对象（`pStream`），将 ADO**流**对象（`adoStr`）的构造分为以下三个基本操作：  
   
-1.  创建 ADO **Stream**对象：  
+1.  创建 ADO**流**对象：  
   
     ```  
     Stream20Ptr adoStr;  
     adoStr.CreateInstance(__uuidof(Stream));  
     ```  
   
-2.  查询**IADOStreamConstruction**接口**Stream**对象：  
+2.  查询**Stream**对象上的**IADOStreamConstruction**接口：  
   
     ```  
     adoStreamConstructionPtr adoStrConstruct=NULL;  
@@ -55,7 +55,7 @@ ms.locfileid: "67920789"
                          (void**)&adoStrConstruct);  
     ```  
   
- 调用`IADOStreamConstruction::get_Stream`属性方法以设置 OLE DB **IStream**对象上 ADO **Stream**对象：  
+ 调用`IADOStreamConstruction::get_Stream`属性方法，设置 ADO**流**对象上的 OLE DB **IStream**对象：  
   
 ```  
 IUnknown *pUnk=NULL;  
@@ -63,14 +63,14 @@ pRowset->QueryInterface(IID_IUnknown, (void**)&pUnk);
 adoStrConstruct->put_Stream(pUnk);  
 ```  
   
- 所产生的`adoStr`对象现在表示 ADO **Stream**构造从 OLE DB 对象**IStream**对象。  
+ 生成`adoStr`的对象现在表示从 OLE DB **IStream**对象构造的 ADO**流**对象。  
   
 ## <a name="requirements"></a>要求  
  **版本：** ADO 2.0 或更高版本  
   
  **库：** msado15.dll  
   
- **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
+ **UUID：** 00000283-0000-0010-8000-00AA006D2EA4  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ADO API 参考](../../../ado/reference/ado-api/ado-api-reference.md)

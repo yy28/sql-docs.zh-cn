@@ -16,27 +16,27 @@ ms.assetid: 81272ae3-2165-4f4e-adfe-9ede0368cb17
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f8926e932317096cb3891cc8c480164268751cea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917001"
 ---
 # <a name="searchdirectionenum"></a>SearchDirectionEnum
-指定的记录中搜索的方向[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
+指定记录[集](../../../ado/reference/ado-api/recordset-object-ado.md)内的记录搜索的方向。  
   
-|常量|ReplTest1|描述|  
+|一直|值|说明|  
 |--------------|-----------|-----------------|  
-|**adSearchBackward**|-1|搜索向后，在开头处停止**记录集**。 如果找不到匹配项，在定位记录指针[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)。|  
-|**adSearchForward**|1|向前搜索，在末尾处停止**记录集**。 如果找不到匹配项，在定位记录指针[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)。|  
+|**adSearchBackward**|-1|向后搜索，在**记录集**的开头处停止。 如果找不到匹配项，则记录指针将置于[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)。|  
+|**adSearchForward**|1|向前搜索，在**记录集**末尾停止。 如果未找到匹配项，则记录指针定位于[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
- 包： **com.ms.wfc.data**  
+ Package： **.com. 数据**  
   
-|常量|  
+|一直|  
 |--------------|  
 |AdoEnums.SearchDirection.BACKWARD|  
 |AdoEnums.SearchDirection.FORWARD|  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [Find 方法 (ADO)](../../../ado/reference/ado-api/find-method-ado.md)

@@ -1,5 +1,5 @@
 ---
-title: Append 方法 (ADO) |Microsoft Docs
+title: Append 方法（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 17fa0ff30e8dcdbf7ea67080f17c3e066bba8605
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920675"
 ---
 # <a name="append-method-ado"></a>Append 方法 (ADO)
-将对象追加到集合。 如果集合是[字段](../../../ado/reference/ado-api/fields-collection-ado.md)，一个新[字段](../../../ado/reference/ado-api/field-object.md)之前将其追加到集合，可创建对象。  
+将对象追加到集合。 如果集合是[字段](../../../ado/reference/ado-api/fields-collection-ado.md)，则可在将新字段对象追加到集合之前创建新的[字段](../../../ado/reference/ado-api/field-object.md)对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,68 +33,68 @@ collection.Append object
 fields.Append Name, Type, DefinedSize, Attrib, FieldValue  
 ```  
   
-#### <a name="parameters"></a>Parameters  
- *collection*  
+#### <a name="parameters"></a>parameters  
+ *集合*  
  集合对象。  
   
- *字段*  
- 一个**字段**集合。  
+ *区域*  
+ **字段**集合。  
   
- *object*  
- 一个表示要追加的对象的对象变量。  
+ *对象*  
+ 一个对象变量，表示要追加的对象。  
   
  *名称*  
- 一个**字符串**值，该值包含新名称**字段**对象，并不能相同的名称中的任何其他对象*字段*。  
+ 一个包含新**字段**对象名称的**字符串**值，不能与*字段*中的任何其他对象同名。  
   
- *类型*  
- 一个[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)值，其默认值为**adEmpty**，指定新字段的数据类型。 ADO 中，不支持以下数据类型和应不时，使用追加到新的字段[记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md): **adIDispatch**， **adIUnknown**， **adVariant**。  
+ 类型   
+ 一个[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)值，其默认值为**adEmpty**，指定新字段的数据类型。 ADO 不支持以下数据类型，在将新字段追加到[Recordset 对象（ADO）](../../../ado/reference/ado-api/recordset-object-ado.md)时不应使用这些数据类型： **adIDispatch**、 **adIUnknown**、 **adVariant**。  
   
  *DefinedSize*  
- 可选。 一个**长**值，该值表示定义的大小，以字节为单位的新字段或字符。 此参数的默认值派生自*类型*。 具有字段*DefinedSize*大于 255 个字节将被视为可变长度列。 默认值为*DefinedSize*未指定。  
+ 可选。 一个**长整型**值，表示新字段的定义的大小（以字符或字节为单位）。 此参数的默认值是从*类型*派生的。 具有大于255字节的*DefinedSize*的字段将被视为可变长度列。 未指定*DefinedSize*的默认值。  
   
  *Attrib*  
- 可选。 一个[FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md)值，其默认值为**adFldDefault**，，指定新字段的特性。 如果未指定此值，该字段将包含属性派生自*类型*。  
+ 可选。 一个[FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md)值，其默认值为**adFldDefault**，用于指定新字段的特性。 如果未指定此值，则字段将包含派生自*类型*的特性。  
   
  *FieldValue*  
- 可选。 一个**变体**，表示新字段的值。 如果未指定，该字段追加值为 null。  
+ 可选。 一个表示新字段的值的**变量**。 如果未指定，则使用 null 值追加字段。  
   
 ## <a name="remarks"></a>备注  
   
 ## <a name="parameters-collection"></a>Parameters 集合  
- 必须设置[类型](../../../ado/reference/ado-api/type-property-ado.md)的属性[参数](../../../ado/reference/ado-api/parameter-object.md)之前追加到对象[参数](../../../ado/reference/ado-api/parameters-collection-ado.md)集合。 如果选择可变长度数据类型，则还必须设置[大小](../../../ado/reference/ado-api/size-property-ado-parameter.md)属性设置为大于零的值。  
+ 必须先设置[参数](../../../ado/reference/ado-api/parameter-object.md)对象的[Type](../../../ado/reference/ado-api/type-property-ado.md)属性，然后再将其追加到[Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md)集合。 如果选择可变长度的数据类型，则还必须将 " [Size](../../../ado/reference/ado-api/size-property-ado-parameter.md) " 属性设置为大于零的值。  
   
- 自己描述参数最大程度减少对提供程序的调用，因此可以提高性能，使用存储的过程或参数化的查询时。 但是，您必须知道的参数的属性关联的存储过程或参数化您想要调用的查询。  
+ 使用存储过程或参数化查询，自行描述参数可最大程度地减少对提供程序的调用，从而提高性能。 但是，您必须知道与要调用的存储过程或参数化查询相关联的参数的属性。  
   
- 使用[CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)方法来创建**参数**具有相应的属性设置和使用的对象**追加**方法将其添加到[参数](../../../ado/reference/ado-api/parameters-collection-ado.md)集合。 这样可以设置和返回参数值，而无需调用的参数信息的提供程序。 如果你正在编写不提供参数信息的提供程序，必须使用此方法来手动填充**参数**集合，以便在所有使用参数。  
+ 使用[CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)方法创建具有相应属性设置的**参数**对象，并使用**Append**方法将它们添加到[Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md)集合。 这使你可以设置和返回参数值，而无需调用提供程序来获取参数信息。 如果要写入未提供参数信息的提供程序，则必须使用此方法手动填充**参数**集合以使用参数。  
   
 ## <a name="fields-collection"></a>字段集合  
- *FieldValue*添加时，参数才有效**字段**对象传递给[记录](../../../ado/reference/ado-api/record-object-ado.md)对象，不**记录集**对象。 与**记录**对象，可以将附加字段，并在同一时间提供值。 与**记录集**对象，您必须创建字段时**记录集**已关闭，，然后打开**记录集**并将值分配到的字段。  
+ 仅当向[记录](../../../ado/reference/ado-api/record-object-ado.md)对象添加**字段**对象，而不是**记录集**对象时， *FieldValue*参数才有效。 使用**Record**对象，可以同时追加字段并提供值。 对于**recordset**对象，您必须在**记录集**关闭时创建字段，然后打开该**记录集**并向字段分配值。  
   
 > [!NOTE]
->  对新**字段**已追加到的对象**字段**的集合**记录**对象，[值](../../../ado/reference/ado-api/value-property-ado.md)属性必须设置在任何其他前**字段**可以指定属性。 首先，为特定值**值**属性必须具有已分配和[更新](../../../ado/reference/ado-api/update-method.md)上**字段**名集合。 然后，其他属性，如[类型](../../../ado/reference/ado-api/type-property-ado.md)或[属性](../../../ado/reference/ado-api/attributes-property-ado.md)可访问。 **字段**以下数据类型的对象 (**DataTypeEnum**) 不能追加到**字段**集合，并将导致出现错误： **adArray**，**adChapter**， **adEmpty**， **adPropVariant**，以及**adUserDefined**。 此外，通过 ADO 不支持以下数据类型： **adIDispatch**， **adIUnknown**，并**adIVariant**。 对于这些类型，不会发生错误时追加，但使用时会产生不可预知的结果，包括内存泄漏。  
+>  对于附加到**Record**对象的**Fields**集合的新**字段**对象，必须先设置[Value](../../../ado/reference/ado-api/value-property-ado.md)属性，然后才能指定任何其他**字段**属性。 首先，必须在名为的**字段**集合上分配和[更新](../../../ado/reference/ado-api/update-method.md)**值**属性的特定值。 然后，可以访问其他属性，例如[类型](../../../ado/reference/ado-api/type-property-ado.md)或[属性](../../../ado/reference/ado-api/attributes-property-ado.md)。 以下数据类型（**DataTypeEnum**）的**字段**对象无法追加到**Fields**集合，并将导致发生错误： **adArray**、 **adChapter**、 **adEmpty**、 **adPropVariant**和**adUserDefined**。 此外，ADO 不支持以下数据类型： **adIDispatch**、 **adIUnknown**和**adIVariant**。 对于这些类型，追加时不会发生错误，但使用可能产生不可预知的结果，包括内存泄漏。  
   
 ## <a name="recordset"></a>记录集  
- 如果未设置[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性，然后再调用**追加**方法， **CursorLocation**将被设置为**adUseClient** ([CursorLocationEnum](../../../ado/reference/ado-api/cursorlocationenum.md)值) 时自动[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)调用对象。  
+ 如果在调用**Append**方法之前未设置[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性，则在调用[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)对象的[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法时， **CursorLocation**将自动设置为**adUseClient** （一个[CursorLocationEnum](../../../ado/reference/ado-api/cursorlocationenum.md)值）。  
   
- 如果将发生运行时错误**追加**上调用方法**字段**的一种开放集合**记录集**，或在**记录集**其中[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)设置属性。 仅可以将附加到的字段**记录集**的未打开，并且尚未连接到数据源。 这通常是这种情况时**记录集**对象会生成与[CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md)方法或分配给对象变量。  
+ 如果对打开的**记录集**的**字段**集合或已设置[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)属性的**记录集**调用**Append**方法，将会发生运行时错误。 您只能向未打开且尚未连接到数据源的**记录集**追加字段。 当使用[CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md)方法制造**Recordset**对象或将其分配给对象变量时，通常会出现这种情况。  
   
-## <a name="record"></a>录制  
- 如果将不会发生运行时错误**追加**上调用方法**字段**的一种开放集合**记录**。 该新字段将添加到**字段**系列**记录**对象。 如果**记录**派生自**记录集**，新字段不会出现在**字段**系列**记录集**对象。  
+## <a name="record"></a>Record  
+ 如果对打开的**记录**的**字段**集合调用**Append**方法，则不会发生运行时错误。 新字段将添加到**Record**对象的 "**字段**" 集合中。 如果**记录**是从**记录集**派生的，则新字段将不会出现在**recordset**对象的 "**字段**" 集合中。  
   
- 可以创建一个不存在的字段，并将其追加到**字段**通过将值分配给字段对象，如同它已存在于集合中的集合。 赋值将触发自动创建和追加**字段**对象，然后分配将被完成。  
+ 通过将值分配给字段对象，可以创建不存在的字段并将其追加到**字段集合中**，就像它已存在于集合中一样。 分配将触发**字段**对象的自动创建和追加，然后将完成分配。  
   
- 后追加**字段**到**字段**的集合**记录**对象，请调用**更新**方法**字段**集合以保存更改。  
+ 将**字段**追加到**Record**对象的**Fields**集合后，调用**fields**集合的**Update**方法来保存更改。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
   
 - [字段集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
 - [参数集合 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)  
   
-## <a name="see-also"></a>请参阅  
- [Append 和 CreateParameter 方法示例 (VB)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vb.md)   
- [Append 和 CreateParameter 方法示例 （VC + +）](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vc.md)   
- [CreateParameter 方法 (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
- [Delete 方法 （ADO 字段集合）](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
- [Delete 方法 （ADO 参数集合）](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)   
- [Delete 方法 （ADO 记录集）](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
+## <a name="see-also"></a>另请参阅  
+ [Append 和 CreateParameter 方法示例（VB）](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vb.md)   
+ [Append 和 CreateParameter 方法示例（VC + +）](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vc.md)   
+ [CreateParameter 方法（ADO）](../../../ado/reference/ado-api/createparameter-method-ado.md)   
+ [Delete 方法（ADO 字段集合）](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
+ [Delete 方法（ADO 参数集合）](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)   
+ [Delete 方法（ADO 记录集）](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [Update 方法](../../../ado/reference/ado-api/update-method.md)

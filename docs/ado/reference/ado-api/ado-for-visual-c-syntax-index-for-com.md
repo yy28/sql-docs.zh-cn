@@ -1,5 +1,5 @@
 ---
-title: ADO 视觉对象C++COM 的语法索引 |Microsoft Docs
+title: 用于 COM Visual C++ 语法索引的 ADO |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,39 +17,39 @@ ms.assetid: d02b199e-1e52-4cc9-b118-750952ae7f63
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 74562de6d4bd606e4cb9217cdd119646f51e2e47
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920980"
 ---
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>用于 COM 的 ADO for Visual C++ 语法索引‎
-此索引是对基于 Microsoft Visual ADO 语言参考的交叉引用C++。  
+此索引是基于 Microsoft Visual C++ 的 ADO 语言参考的交叉引用。  
   
- 如果您使用 **#import**指令在应用程序中，标头将生成文件，使您可以使用 Microsoft Visual Basic 类似的语法。 窗体的属性名称**get_** _PropertyName_ 并 **put_** _PropertyName_ 可以视为如同它们声明为 *PropertyName*。 然后可以将属性视为而不是函数的数据成员。  
+ 如果在应用程序中使用 **#import**指令，则会生成一个标头文件，使你能够使用类似于 Microsoft Visual Basic 的语法。 格式**get_**_propertyname_和**put_**_propertyname_的属性名称可以被视为只声明为*propertyname*。 然后，可以将属性视为数据成员而不是函数。  
   
- 所有方法、 属性和事件都返回的函数**HRESULT**，其中进行测试以确定是否函数成功执行。  
+ 所有方法、属性和事件都是返回**HRESULT**的函数，可以对其进行测试以确定函数是否已成功执行。  
   
- 视觉对象中的方法和属性语法C++列出的以下元素：  
+ 为以下元素列出了 Visual C++ 中的方法和属性语法：  
   
 -   [集合](../../../ado/reference/ado-api/collections-ado-for-visual-c-syntax.md)  
   
--   [命令对象](../../../ado/reference/ado-api/command-ado-for-visual-c-syntax.md)  
+-   [Command 对象](../../../ado/reference/ado-api/command-ado-for-visual-c-syntax.md)  
   
--   [连接对象](../../../ado/reference/ado-api/connection-ado-for-visual-c-syntax.md)  
+-   [Connection 对象](../../../ado/reference/ado-api/connection-ado-for-visual-c-syntax.md)  
   
--   [错误对象](../../../ado/reference/ado-api/error-ado-for-visual-c-syntax.md)  
+-   [Error 对象](../../../ado/reference/ado-api/error-ado-for-visual-c-syntax.md)  
   
--   [字段对象](../../../ado/reference/ado-api/field-ado-for-visual-c-syntax.md)  
+-   [Field 对象](../../../ado/reference/ado-api/field-ado-for-visual-c-syntax.md)  
   
 -   [参数对象](../../../ado/reference/ado-api/parameter-ado-for-visual-c-syntax.md)  
   
--   [记录对象](../../../ado/reference/ado-api/record-ado-for-visual-c-syntax.md)  
+-   [Record 对象](../../../ado/reference/ado-api/record-ado-for-visual-c-syntax.md)  
   
--   [记录集对象](../../../ado/reference/ado-api/recordset-ado-for-visual-c-syntax.md)  
+-   [Recordset 对象](../../../ado/reference/ado-api/recordset-ado-for-visual-c-syntax.md)  
   
 -   [Stream 对象](../../../ado/reference/ado-api/stream-ado-for-visual-c-syntax.md)  
   
-## <a name="see-also"></a>请参阅  
- [ADO 视觉对象C++使用 #import 语法索引](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
+## <a name="see-also"></a>另请参阅  
+ [ADO for Visual C++ 语法索引与 #import](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
  [Microsoft ActiveX 数据对象 (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)

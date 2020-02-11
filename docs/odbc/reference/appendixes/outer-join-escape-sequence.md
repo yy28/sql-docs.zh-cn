@@ -15,38 +15,38 @@ ms.assetid: 2cfd1525-6677-4d36-9b9e-730496853750
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 576fe7268ccf71a8c926f6b1124ebbf8a8c711b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68100644"
 ---
 # <a name="outer-join-escape-sequence"></a>外部联接转义序列
-ODBC 使用的外部联接转义序列。 此转义序列的语法如下所示：  
+ODBC 对外部联接使用转义序列。 此转义序列的语法如下所示：  
   
 ```  
 {oj outer-join}  
 ```  
   
 ## <a name="remarks"></a>备注  
- BNF 表示法中的语法是按如下所示：  
+ 在 BNF 表示法中，语法如下：  
   
- *ODBC 外部-联接的转义*:: =  
+ *ODBC-外部联接-escape* ：： =  
   
- *ODBC esc 启动器*oj*外部联接 ODBC esc 终止符*  
+ *Odbc* -oj*外部联接 odbc-esc-终止符*  
   
- *外部联接*:: = *l e-n* [*相关名称*] {左侧&#124;右&#124;完整}  
+ *外部联接*：： =*表名*[*相关名称*] {LEFT &#124; RIGHT &#124; FULL}  
   
- 外部联接 {*l e-n* [*相关名称*] &#124; *外部联接*} ON  
+ 外部联接 {*表名*[*相关名称*] &#124;*外接联接*}  
   
- *search-*  
+ *寻找*  
   
- *条件*  
+ *状态*  
   
- *correlation-name* ::= *user-defined-name*  
+ *相关名称*：： =*用户定义的名称*  
   
- *ODBC esc 启动器*:: = {  
+ *ODBC-esc-发起方*：： = {  
   
- *ODBC esc 终止符*:: =}  
+ *ODBC-esc-终止符*：： =}  
   
- 若要确定支持此语句中的哪些部分，应用程序调用**SQLGetInfo** SQL_OJ_CAPABILITIES 信息类型。 用于外部联接*搜索条件*必须包含仅之间指定的联接条件*表名*。
+ 若要确定支持此语句的哪些部分，应用程序需要使用 SQL_OJ_CAPABILITIES 信息类型调用**SQLGetInfo** 。 对于外部联接，*搜索条件*必须只包含指定*表名称*之间的联接条件。

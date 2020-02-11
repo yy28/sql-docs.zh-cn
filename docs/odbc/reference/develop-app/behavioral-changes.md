@@ -15,34 +15,34 @@ ms.assetid: a17ae701-6ab6-4eaf-9e46-d3b9cd0a3a67
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fc9f8dcc3782204c8bf1c9add1200e451edcf127
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68103868"
 ---
 # <a name="behavioral-changes"></a>行为更改
-行为更改是为其这些更改*语法*接口的保持不变，但*语义*已更改。 有关这些更改，在 ODBC 2 中使用的功能。*x*行为将不同于在 ODBC 3 相同的功能。*x*。  
+行为更改是指这些更改，接口的*语法*保持不变，但*语义*发生了更改。 对于这些更改，为 ODBC 2 中使用的功能。*x*的行为不同于 ODBC 3 中的相同功能。*x*。  
   
- 无论应用程序表现出 ODBC 2。*x*行为或 ODBC 3。*x*行为由 SQL_ATTR_ODBC_VERSION 环境属性。 此 32 位值设置为 SQL_OV_ODBC2 展现出 ODBC 2。*x*行为和 SQL_OV_ODBC3 展现出 ODBC 3。*x*行为。  
+ 应用程序是否展示 ODBC 2。*x*行为或 ODBC 3。*x*行为取决于 SQL_ATTR_ODBC_VERSION 环境属性。 此32位值设置为显示 ODBC 2 SQL_OV_ODBC2。*x*行为，并 SQL_OV_ODBC3 展示 ODBC 3。*x*行为。  
   
- 通过调用设置 SQL_ATTR_ODBC_VERSION 环境属性**SQLSetEnvAttr**。 应用程序调用后**SQLAllocHandle**若要在分配环境句柄，它必须调用**SQLSetEnvAttr**立即将它展示的行为。 （因此，没有为新环境状态来描述环境句柄在一个已分配但 versionless 的状态。）有关详细信息，请参阅[附录 b:状态转换表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)。  
+ SQL_ATTR_ODBC_VERSION 环境特性是通过调用**SQLSetEnvAttr**设置的。 在应用程序调用**SQLAllocHandle**来分配环境句柄之后，必须立即调用**SQLSetEnvAttr**来设置它所展示的行为。 （因此，有一个新的环境状态用于在已分配但 versionless 的状态下描述环境句柄。）有关详细信息，请参阅[附录 B： ODBC 状态转换表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)。  
   
- 应用程序指出它展示 SQL_ATTR_ODBC_VERSION 环境属性，但该属性使用哪种行为上与 ODBC 2 应用程序的连接无效。*x*或 ODBC 3。*x*驱动程序。 ODBC 3。*x*应用程序可以连接到 ODBC 2。*x*或 3。*x*驱动程序，无论环境属性的设置。  
+ 应用程序规定它与 SQL_ATTR_ODBC_VERSION 环境属性表现的行为，但该属性对应用程序与 ODBC 2 的连接不起作用。*x*或 ODBC 3。*x*驱动程序。 ODBC 3。*x*应用程序可以连接到 ODBC 2。*x*或3。*x*驱动程序，不管环境属性的设置如何。  
   
- ODBC 3。*x*应用程序应永远不会调用**SQLAllocEnv**。 因此，如果驱动程序管理器接收到调用**SQLAllocEnv**，它可以识别应用程序作为 ODBC 2。*x*应用程序。  
+ ODBC 3。*x*应用程序不应调用**SQLAllocEnv**。 因此，如果驱动程序管理器接收到对**SQLAllocEnv**的调用，它会将该应用程序识别为 ODBC 2。*x*应用程序。  
   
- SQL_ATTR_ODBC_VERSION 特性会影响 ODBC 3 的三个不同的方面。*x*驱动程序的行为：  
+ SQL_ATTR_ODBC_VERSION 特性会影响 ODBC 3 的三个不同方面。*x*驱动程序的行为：  
   
 -   SQLSTATEs  
   
--   日期、 时间和时间戳的数据类型  
+-   日期、时间和时间戳的数据类型  
   
--   *CatalogName*中的参数**SQLTables**接受 ODBC 3 中的搜索模式。*x*，但不是在 ODBC 2。*x*  
+-   **SQLTables**中的*CATALOGNAME*参数接受 ODBC 3 中的搜索模式。*x*，但不在 ODBC 2 中。*x*  
   
- SQL_ATTR_ODBC_VERSION 环境属性的设置不会影响**SQLSetParam**或**SQLBindParam**。 **SQLColAttribute**也不受此位。 尽管**SQLColAttribute**返回受影响的属性的预期的行为由 ODBC （日期类型、 精度、 小数位数和长度） 的版本，由的值*FieldIdentifier*自变量。 当*FieldIdentifier*等于的 SQL_DESC_TYPE、 **SQLColAttribute**返回 ODBC 3。*x*的日期、 时间和时间戳; 代码时*FieldIdentifier*等于 SQL_COLUMN_TYPE， **SQLColAttribute**返回的 ODBC 2。*x*日期、 时间和时间戳的代码。  
+ SQL_ATTR_ODBC_VERSION 环境属性的设置不会影响**SQLSetParam**或**SQLBindParam**。 **SQLColAttribute**也不受此位的影响。 尽管**SQLColAttribute**返回受 ODBC 版本（日期类型、精度、小数位数和长度）影响的属性，但预期的行为由*FieldIdentifier*参数的值确定。 当*FieldIdentifier*等于 SQL_DESC_TYPE 时， **SQLCOLATTRIBUTE**将返回 ODBC 3。日期、时间和时间戳的*x*代码;当*FieldIdentifier*等于 SQL_COLUMN_TYPE 时， **SQLCOLATTRIBUTE**将返回 ODBC 2。日期、时间和时间戳的*x*代码。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [SQLSTATE 映射](../../../odbc/reference/develop-app/sqlstate-mappings.md)  
   

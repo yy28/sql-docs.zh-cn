@@ -1,5 +1,5 @@
 ---
-title: Prompt 属性-动态 (ADO) |Microsoft Docs
+title: Prompt 属性-动态（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,27 +14,27 @@ ms.assetid: c4f001b5-8d16-4d39-a42e-c0e2faaaceaf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cde7a5ad0324bc7d5cde5e1a794eeb9e2cb3381a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931578"
 ---
 # <a name="prompt-property-dynamic-ado"></a>Prompt 属性 - 动态 (ADO)
-指定的 OLE DB 访问接口是否应提示用户输入的初始化信息。  
+指定 OLE DB 提供程序是否应提示用户提供初始化信息。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
- 设置并返回[ConnectPromptEnum](../../../ado/reference/ado-api/connectpromptenum.md)值。  
+ 设置并返回一个[ConnectPromptEnum](../../../ado/reference/ado-api/connectpromptenum.md)值。  
   
 ## <a name="remarks"></a>备注  
- **Prompt**是动态的属性，这可能会追加到[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象的[属性](../../../ado/reference/ado-api/properties-collection-ado.md)OLE DB 访问接口的集合。 若要初始化的信息提示，OLE DB 访问接口通常将向用户显示一个对话框。  
+ **Prompt**是动态属性，OLE DB 提供程序可以将其附加到[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象的[Properties](../../../ado/reference/ado-api/properties-collection-ado.md)集合。 为了提示输入初始化信息，OLE DB 提供程序通常会向用户显示一个对话框。  
   
- 动态属性[连接](../../../ado/reference/ado-api/connection-object-ado.md)后，会丢失对象**连接**已关闭。 **Prompt**属性必须在重新打开之前重置**连接**若要使用非默认值。  
+ **连接关闭**时，[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象的动态属性将丢失。 必须先重置**Prompt**属性，然后再重新打开**连接**，才能使用默认值以外的值。  
   
 > [!NOTE]
->  不要指定提供程序应提示用户在其中将无法再以响应对话框的用户的方案中。 例如，用户将无法再响应如果而不是用户的客户端上的服务器系统上运行应用程序或应用程序在系统上运行与在没有用户登录。 在这些情况下，应用程序将无限期地等待响应并似乎锁定。  
+>  不要指定提供程序在用户将无法响应对话框的情况下是否应提示用户。 例如，如果应用程序正在服务器系统而不是用户的客户端上运行，或者如果应用程序在没有用户登录的系统上运行，则用户将无法响应。 在这些情况下，应用程序会无限期等待响应，并似乎锁定。  
   
-## <a name="usage"></a>用法  
+## <a name="usage"></a>使用情况  
   
 ```  
 Set cn = New Connection  
@@ -42,5 +42,5 @@ cn.Provider = "SQLOLEDB"
 cn.Properties("Prompt") = adPromptNever    ' do not prompt the user  
 ```  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

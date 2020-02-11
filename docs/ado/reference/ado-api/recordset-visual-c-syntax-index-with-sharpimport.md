@@ -1,5 +1,5 @@
 ---
-title: '记录集 (VisualC++使用 #import 语法索引) |Microsoft Docs'
+title: '记录集（Visual C++ 语法索引与 #import） |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,13 +16,13 @@ ms.assetid: fe41da71-b607-4329-94da-60964b8efcdc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: be0dd3aba94e228ce32e09660c867ca5385e755b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931270"
 ---
-# <a name="recordset-visual-c-syntax-index-with-import"></a>记录集 (VisualC++使用 #import 语法索引)
+# <a name="recordset-visual-c-syntax-index-with-import"></a>Recordset （#import Visual C++ 语法索引）
 ## <a name="methods"></a>方法  
   
 ```  
@@ -88,7 +88,7 @@ HRESULT Seek( const _variant_t & KeyValues, enum SeekEnum
 VARIANT_BOOL Supports( enum CursorOptionEnum CursorOptions );  
 ```  
   
-## <a name="properties"></a>properties  
+## <a name="properties"></a>属性  
   
 ```  
 enum PositionEnum GetAbsolutePage( );  
@@ -203,5 +203,5 @@ __declspec(property(get=GetStayInSync,put=PutStayInSync)) VARIANT_BOOL
     StayInSync;  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

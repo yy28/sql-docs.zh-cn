@@ -1,5 +1,5 @@
 ---
-title: 项目设置 （加载对象） (AccessToSQL) |Microsoft Docs
+title: 项目设置（加载对象）（AccessToSQL） |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,67 +10,67 @@ ms.assetid: 9ec1c1e8-a3e1-4e81-bf49-631f87daa209
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c8aebc643d3d313dcf97bbe69044ee795649ba46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67929429"
 ---
-# <a name="project-settings-loading-objects-accesstosql"></a>项目设置 （加载对象） (AccessToSQL)
-正在加载对象项目设置允许你配置的 SQL Server 数据库对象访问数据库对象的同步方式。  
+# <a name="project-settings-loading-objects-accesstosql"></a>项目设置（加载对象）（AccessToSQL）
+通过 "加载对象" 项目设置，你可以配置如何将 Access 数据库对象与 SQL Server 数据库对象进行同步。  
   
-刷新访问数据库中的对象以及与 SQL Server 数据库同步对象，则默认操作指定默认设置。 有关详细信息，请参阅[从数据库刷新&#40;AccessToSQL&#41;](../../ssma/access/refresh-from-database-accesstosql.md)  
+默认操作指定用于刷新 Access 数据库中的对象的默认设置，以及用于将对象与 SQL Server 数据库同步的默认设置。 有关详细信息，请参阅[Refresh From Database &#40;AccessToSQL&#41;](../../ssma/access/refresh-from-database-accesstosql.md)  
   
-您可以访问包含相同的设置的两个不同的同步页：  
+您可以访问两个包含相同设置的不同同步页：  
   
--   在指定的所有将来的 SSMA 项目设置**工具**菜单中，单击**DefaultProject 设置**，然后单击**加载对象**在左窗格的底部。  
+-   若要指定所有未来 SSMA 项目的设置，请在 "**工具**" 菜单上单击 " **DefaultProject 设置**"，然后单击左窗格底部的 "**加载对象**"。  
   
--   若要在指定的当前项目中，设置**工具**菜单中，单击**项目设置**，然后单击**加载对象**在左窗格的底部。  
+-   若要指定当前项目的设置，请在 "**工具**" 菜单上单击 "**项目设置**"，然后单击左窗格底部的 "**加载对象**"。  
   
 ## <a name="options"></a>选项  
   
 ##### <a name="misc"></a>杂项  
   
-##### <a name="attempts"></a>尝试次数  
-提供有关若干传递对象加载到 SQL Server 所需的信息。 在多个传递中通常执行加载到 SQL Server 对象。 无法加载在第一次传递，如外键中的对象可能会成功加载下一步中。  
+##### <a name="attempts"></a>多次  
+提供要加载到 SQL Server 中的传递对象数的相关信息。 将对象加载到 SQL Server 通常是在多个阶段中执行的。 在第一次传递中无法加载的对象（如外键）可能会在下一步中成功加载。  
   
-默认值为 2。  
+默认情况下，值为2。  
   
-## <a name="synchronization-for-sql-server"></a>适用于 SQL Server 的同步  
+## <a name="synchronization-for-sql-server"></a>SQL Server 同步  
   
-##### <a name="default-action-on-local-and-remote-object-change"></a>在本地和远程对象更改的默认操作  
-对象定义更改在 SSMA 中和在数据库服务器上时，请在同步对话框中指定的默认设置。  
+##### <a name="default-action-on-local-and-remote-object-change"></a>本地和远程对象更改时的默认操作  
+当对象定义在 SSMA 中和数据库服务器上发生更改时，在同步对话框中指定默认设置。  
   
--   如果选择**从数据库刷新**，SSMA 将数据库定义到的元数据时加载满足的条件。  
+-   如果选择 "**从数据库刷新**"，则在满足条件时，SSMA 会将数据库定义加载到元数据中。  
   
--   如果选择**写入到数据库**，SSMA 将更新根据 SSMA 元数据内容数据库中的对象时满足的条件。  
+-   如果选择了 "**写入数据库**"，则在满足条件时，SSMA 将根据 SSMA 元数据内容来更新数据库中的对象。  
   
--   如果选择**跳过**，SSMA 将不执行刷新操作。  
+-   如果选择 "**跳过**"，SSMA 不会执行任何刷新操作。  
   
-##### <a name="default-action-on-local-object-change"></a>在本地对象发生更改的默认操作  
-在 SSMA 中的对象发生更改时，请在同步对话框中指定的默认设置。  
+##### <a name="default-action-on-local-object-change"></a>本地对象更改时的默认操作  
+当对象在 SSMA 中发生更改时，在同步对话框中指定默认设置。  
   
--   如果选择**从数据库刷新**，SSMA 将数据库定义到的元数据时加载满足的条件。  
+-   如果选择 "**从数据库刷新**"，则在满足条件时，SSMA 会将数据库定义加载到元数据中。  
   
--   如果选择**写入到数据库**，SSMA 将更新根据 SSMA 元数据内容数据库中的对象时满足的条件。  
+-   如果选择 "**写入数据库**"，则在满足条件时，SSMA 会根据 SSMA 元数据内容更新数据库中的对象。  
   
--   如果选择**跳过**，SSMA 将不执行刷新操作。  
+-   如果选择 "**跳过**"，SSMA 不会执行任何刷新操作。  
   
-##### <a name="default-action-on-remote-object-change"></a>在远程对象更改的默认操作  
-在同步对话框中指定的默认设置，当数据库服务器上更改对象。  
+##### <a name="default-action-on-remote-object-change"></a>远程对象更改时的默认操作  
+在数据库服务器上的对象发生更改时，在同步对话框中指定默认设置。  
   
--   如果选择**从数据库刷新**，SSMA 将数据库定义到的元数据时加载满足的条件。  
+-   如果选择 "**从数据库刷新**"，则在满足条件时，SSMA 会将数据库定义加载到元数据中。  
   
--   如果选择**写入到数据库**，SSMA 将更新根据 SSMA 元数据内容数据库中的对象时满足的条件。  
+-   如果选择 "**写入数据库**"，则在满足条件时，SSMA 会根据 SSMA 元数据内容更新数据库中的对象。  
   
--   如果选择**跳过**，SSMA 将不执行刷新操作。  
+-   如果选择 "**跳过**"，SSMA 不会执行任何刷新操作。  
   
 ##### <a name="default-action-when-local-object-metadata-is-missing"></a>缺少本地对象元数据时的默认操作  
-缺少本地元数据时，请在同步对话框中指定的默认设置。  
+当缺少本地元数据时，指定同步对话框中的默认设置。  
   
--   如果选择**从数据库刷新**，SSMA 数据库选项中选择刷新时满足的条件。  
+-   如果选择 "**从数据库刷新**"，则在满足条件时，SSMA 将选择 "从数据库刷新" 选项。  
   
--   如果选择**写入到数据库**，SSMA 将对象从数据库中删除时满足的条件。  
+-   如果选择 "**写入数据库**"，则在满足条件时，SSMA 将从数据库中删除该对象。  
   
--   如果选择**跳过**，SSMA 将不执行刷新操作。  
+-   如果选择 "**跳过**"，SSMA 不会执行任何刷新操作。  
   
