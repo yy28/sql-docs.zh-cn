@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 696a114c74ecb6d4b8f4cfe6b2d16b33869e1602
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478906"
 ---
 # <a name="data-quality-matching-in-the-mds-add-in-for-excel"></a>用于 Excel 的 MDS 外接程序中的数据质量匹配
@@ -48,12 +48,12 @@ ms.locfileid: "65478906"
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|将外部数据与 MDS 管理的数据进行合并以便准备进行比较。|[合并数据（用于 Excel 的 MDS 外接程序）](combine-data-mds-add-in-for-excel.md)|  
-|使用 DQS 知识来查找您的数据中的相似之处。|[匹配相似数据（用于 Excel 的 MDS 外接程序）](match-similar-data-mds-add-in-for-excel.md)|  
+|将外部数据与 MDS 管理的数据进行合并以便准备进行比较。|[合并数据 &#40;MDS Add-in for Excel&#41;](combine-data-mds-add-in-for-excel.md)|  
+|使用 DQS 知识来查找您的数据中的相似之处。|[匹配相似的数据 &#40;MDS Add-in for Excel&#41;](match-similar-data-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>相关内容  
   
--   [发布数据&#40;MDS add-in for Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+-   [MDS Add-in for Excel&#41;发布数据 &#40;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
 -   [数据匹配](../../data-quality-services/data-matching.md)  
   

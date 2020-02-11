@@ -20,10 +20,10 @@ ms.assetid: 89099668-1dc6-4b07-9d8b-49bc95c7bfc0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8e4068d9763460995335fe5adbd6684ecb70d8b7
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73982618"
 ---
 # <a name="sysresource_governor_configuration-transact-sql"></a>sys.resource_governor_configuration (Transact-SQL)
@@ -31,16 +31,16 @@ ms.locfileid: "73982618"
 
   返回存储的资源调控器状态。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |classifier_function_id|**int**|分类器函数存储在元数据中时的 ID。 不可为 null。<br /><br /> **注意**此函数用于对新会话进行分类，并使用规则将工作负荷路由到相应的工作负荷组。 有关详细信息，请参阅 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)。|  
 |is_enabled|**bit**|指示资源调控器的当前状态：<br /><br /> 0 = 不启用 Resource Governor。<br /><br /> 1 = 启用 Resource Governor。<br /><br /> 不可为 null。|  
 |max_outstanding_io_per_volume|**int**|**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。<br /><br /> 每个卷待定 I/O 的最大数目。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  该目录视图显示元数据中存储的资源调控器配置。 若要查看内存中的配置，请使用对应的动态管理视图。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要查看内容，则需要拥有 VIEW ANY DEFINITION 权限；若要更改内容，则需要拥有 CONTROL SERVER 权限。  
   
 ## <a name="examples"></a>示例  
@@ -66,9 +66,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Resource Governor 目录视图&#40;transact-sql&#41; ](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)   
+ [Resource Governor 目录视图 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [sys. dm_resource_governor_configuration &#40;transact-sql&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md)   
- [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)  
+ [sys. dm_resource_governor_configuration &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md)   
+ [资源调控器](../../relational-databases/resource-governor/resource-governor.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sp_xp_cmdshell_proxy_account (TRANSACT-SQL) |Microsoft Docs
+title: sp_xp_cmdshell_proxy_account （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -20,21 +20,21 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 59ea64e16f1469c12461a559c3f102094615fa12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67950462"
 ---
-# <a name="spxpcmdshellproxyaccount-transact-sql"></a>sp_xp_cmdshell_proxy_account (Transact-SQL)
+# <a name="sp_xp_cmdshell_proxy_account-transact-sql"></a>sp_xp_cmdshell_proxy_account (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  创建的代理凭据**xp_cmdshell**。  
+  为**xp_cmdshell**创建代理凭据。  
   
 > [!NOTE]  
->  **xp_cmdshell**默认处于禁用状态。 若要启用**xp_cmdshell**，请参阅[xp_cmdshell 服务器配置选项](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)。  
+>  默认情况下，禁用**xp_cmdshell** 。 若要启用**xp_cmdshell**，请参阅[Xp_cmdshell 服务器配置选项](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,22 +44,22 @@ sp_xp_cmdshell_proxy_account [ NULL | { 'account_name' , 'password' } ]
 ```  
   
 ## <a name="arguments"></a>参数  
- NULL  
+ Null  
  指定应删除的代理凭据。  
   
  *account_name*  
  指定要成为代理的 Windows 登录名。  
   
- *password*  
+ password   
  指定 Windows 帐户的密码。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="remarks"></a>备注  
- 将调用代理凭据 **# # xp_cmdshell_proxy_account # #** 。  
+ 代理凭据将称为 **# #xp_cmdshell_proxy_account # #**。  
   
- 当使用 NULL 选项执行**sp_xp_cmdshell_proxy_account**删除代理凭据。  
+ 当使用 NULL 选项执行时， **sp_xp_cmdshell_proxy_account**会删除代理凭据。  
   
 ## <a name="permissions"></a>权限  
  需要 CONTROL SERVER 权限。  
@@ -82,11 +82,11 @@ EXEC sp_xp_cmdshell_proxy_account NULL;
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [xp_cmdshell &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [xp_cmdshell &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [sys.credentials (Transact-SQL)](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)  
+ [安全存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)  
   
   

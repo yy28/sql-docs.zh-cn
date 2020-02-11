@@ -1,5 +1,5 @@
 ---
-title: 监视的功能 |Microsoft Docs
+title: 要监视的功能 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,18 +13,18 @@ ms.assetid: 0fb1693b-11c3-43b1-bb16-c3323b7b2d45
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f48a3c7568a9db8b599f6d5a1997607fb16e6020
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68069885"
 ---
 # <a name="features-to-watch-for"></a>要监视的功能
-本部分介绍大量的应用程序开发人员往往需要理所当然的功能。 实际上，这些功能差异很大支持和 Dbms; 支持的方式故障代码，使其很可能会导致可互操作应用程序中的问题。  
+本部分介绍应用程序开发人员经常获得的一些功能。 事实上，这些功能在 Dbms 之间的支持和方式方面有所不同;对它们的代码失败可能会导致互操作应用程序出现问题。  
   
- 本部分不会列出应用程序开发人员需要考虑的所有功能。 该信息，请参阅[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)， [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)，并[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)函数说明、[附录 c:SQL 语法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)，并讨论每个功能此手册的部分。  
+ 本部分未列出应用程序开发人员需要考虑的所有功能。 有关此信息，请参阅[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)、 [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)和[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)函数说明，[附录 C： SQL 语法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)，以及本手册中讨论每项功能的部分。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [版本号](../../../odbc/reference/develop-app/version-number.md)  
   

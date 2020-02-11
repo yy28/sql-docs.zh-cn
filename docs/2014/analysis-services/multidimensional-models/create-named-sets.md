@@ -1,5 +1,5 @@
 ---
-title: 创建命名的集 |Microsoft Docs
+title: 创建命名集 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1fc4ab5d778535fdc4e2186c5bc88741b4367f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076141"
 ---
 # <a name="create-named-sets"></a>创建命名集
@@ -43,9 +43,9 @@ ms.locfileid: "66076141"
  您可以将多维数据集组件从 **“计算工具”** 窗格的 **“元数据”** 选项卡中拖动或复制到 **“命名集窗体编辑器”** 窗格的 **“表达式”** 框中。 您可以将函数从 **“计算工具”** 窗格的 **“函数”** 选项卡中拖动或复制到 **“命名集窗体编辑器”** 窗格的 **“表达式”** 框中。  
   
 > [!IMPORTANT]  
->  如果通过显式命名集的成员创建的集表达式，将成员的列表括在大括号中 ({})。  
+>  如果通过显式命名集中的成员来创建集表达式，请用大括号（{}）将成员列表括起来。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [多维模型中的计算](calculations-in-multidimensional-models.md)  
   
   
