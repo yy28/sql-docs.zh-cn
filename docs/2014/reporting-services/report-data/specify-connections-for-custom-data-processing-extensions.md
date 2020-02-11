@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 734eca26e94b4b879590c889c6c3c479c155c7be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107046"
 ---
 # <a name="specify-connections-for-custom-data-processing-extensions"></a>指定用于自定义数据处理扩展插件的连接
@@ -76,13 +76,13 @@ ms.locfileid: "66107046"
 |数据库凭据|您可以使用数据库身份验证针对使用 `IDbConnectionExtension` 的自定义数据处理扩展插件配置连接。|  
 |无凭据|如果指定了无人参与的执行帐户，则连接字符串将确定使用的凭据。<br /><br /> 如果未定义无人参与的执行帐户，则报表服务器将无法进行连接。|  
   
-## <a name="see-also"></a>请参阅  
- [配置无人参与的执行帐户（SSRS 配置管理器）](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+## <a name="see-also"></a>另请参阅  
+ [&#40;SSRS Configuration Manager 配置无人参与的执行帐户&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
  [为报表数据源指定凭据和连接信息](specify-credential-and-connection-information-for-report-data-sources.md)   
- [数据连接、 数据源和 Reporting Services 中的连接字符串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [Reporting Services 中的数据连接、数据源和连接字符串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [实现数据处理扩展插件](../extensions/data-processing/implementing-a-data-processing-extension.md)   
  [报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)   
- [创建、删除或修改共享数据源（报表管理器）](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [配置报表的数据源属性（报表管理器）](configure-data-source-properties-for-a-report-report-manager.md)  
+ [创建、删除或修改共享数据源 &#40;报表管理器&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [配置报表的数据源属性 &#40;报表管理器&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
   
   

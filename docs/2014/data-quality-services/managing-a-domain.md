@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 93b5666bd2d57fb0a8ffae435818a02ba152217c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484120"
 ---
 # <a name="managing-a-domain"></a>管理域
@@ -49,7 +49,7 @@ ms.locfileid: "65484120"
 |将引用数据服务附加到单一域或复合域|[将域或复合域附加到参考数据](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)|  
 |更改或增加知识库中的值|[更改域值](../../2014/data-quality-services/change-domain-values.md)|  
 |使用验证和标准化规则|[创建域规则](../../2014/data-quality-services/create-a-domain-rule.md)|  
-|使用关系更正作为域中值的一部分的字词|[创建基于术语的关系](../../2014/data-quality-services/create-term-based-relations.md)|  
+|使用关系更正作为域中值的一部分的字词|[创建基于字词的关系](../../2014/data-quality-services/create-term-based-relations.md)|  
 |完成、关闭或取消域管理活动|[结束域管理活动](../../2014/data-quality-services/end-the-domain-management-activity.md)|  
   
 ## <a name="related-tasks"></a>Related Tasks  

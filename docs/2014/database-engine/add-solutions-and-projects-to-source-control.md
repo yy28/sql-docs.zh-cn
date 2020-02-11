@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6d9cc15f79235e225dc6589a16b48c373479e639
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62792087"
 ---
 # <a name="add-solutions-and-projects-to-source-control"></a>将解决方案和项目添加到源代码管理
@@ -29,12 +29,12 @@ ms.locfileid: "62792087"
   
  下表对本部分的主题进行了说明：  
   
-|主题|Description|  
+|主题|说明|  
 |-----------|-----------------|  
-|[将解决方案添加到源代码管理](../../2014/database-engine/add-solutions-to-source-control.md)|介绍您可以添加的项目类型，并说明如何将解决方案添加到源代码管理中。|  
+|[在源代码管理中添加解决方案](../../2014/database-engine/add-solutions-to-source-control.md)|介绍您可以添加的项目类型，并说明如何将解决方案添加到源代码管理中。|  
 |[将项目添加到源代码管理](../../2014/database-engine/add-projects-to-source-control.md)|说明如何将项目添加到解决方案中。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [从源代码管理打开解决方案和项目](../../2014/database-engine/open-solutions-and-projects-from-source-control.md)  
   
   

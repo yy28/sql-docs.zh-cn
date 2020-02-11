@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 78b78021f32faed097a4faf29ea139dd85f429e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015639"
 ---
 # <a name="delete-a-stored-procedure"></a>删除存储过程
@@ -27,16 +27,16 @@ ms.locfileid: "63015639"
   
 -   **开始之前：** [限制和局限](#Restrictions)、[安全性](#Security)  
   
--   **若要删除过程，使用：** [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
+-   要删除该过程，请使用：  [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Restrictions"></a> 限制和局限  
  如果依赖对象和脚本尚未更新以反映过程的删除，则删除过程可能会导致这些对象和脚本失败。 但是，如果创建了具有相同名称和参数的新过程来替换已被删除的过程，那么引用该过程的其他对象仍能成功处理。 有关详细信息，请参阅 [查看存储过程的依赖关系](view-the-dependencies-of-a-stored-procedure.md)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要拥有对该过程所属架构的 ALTER 权限，或对该过程的 CONTROL 权限。  
   
 ##  <a name="Procedures"></a> 如何删除存储过程  
@@ -90,7 +90,7 @@ ms.locfileid: "63015639"
   
 6.  从所有依赖对象和脚本中删除对该过程的引用。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建存储过程](create-a-stored-procedure.md)   
  [修改存储过程](modify-a-stored-procedure.md)   
  [重命名存储过程](rename-a-stored-procedure.md)   

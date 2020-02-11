@@ -1,5 +1,5 @@
 ---
-title: sysmail_update_profileaccount_sp (TRANSACT-SQL) |Microsoft Docs
+title: sysmail_update_profileaccount_sp （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 92ca7488-29db-414e-8e36-08b0a8f542bb
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 246081eb5c362cb76a4c037693ee6c40b999fcdd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037335"
 ---
-# <a name="sysmailupdateprofileaccountsp-transact-sql"></a>sysmail_update_profileaccount_sp (Transact-SQL)
+# <a name="sysmail_update_profileaccount_sp-transact-sql"></a>sysmail_update_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   更新数据库邮件配置文件中帐户的序列号。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,21 +42,21 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @profile_id = ] profile_id` 要更新该配置文件的配置文件 ID。 *profile_id*是**int**，默认值为 NULL。 任一*profile_id*或*profile_name*必须指定。  
+`[ @profile_id = ] profile_id`要更新的配置文件的配置文件 ID。 *profile_id*的值为**int**，默认值为 NULL。 必须指定*profile_id*或*profile_name* 。  
   
-`[ @profile_name = ] 'profile_name'` 要更新的配置文件配置文件名称。 *profile_name*是**sysname**，默认值为 NULL。 任一*profile_id*或*profile_name*必须指定。  
+`[ @profile_name = ] 'profile_name'`要更新的配置文件的配置文件名称。 *profile_name*的默认值为**sysname**，默认值为 NULL。 必须指定*profile_id*或*profile_name* 。  
   
-`[ @account_id = ] account_id` 要更新的帐户 ID。 *account_id*是**int**，默认值为 NULL。 任一*account_id*或*account_name*必须指定。  
+`[ @account_id = ] account_id`要更新的帐户 ID。 *account_id*的值为**int**，默认值为 NULL。 必须指定*account_id*或*account_name* 。  
   
-`[ @account_name = ] 'account_name'` 要更新的帐户的名称。 *account_name*是**sysname**，默认值为 NULL。 任一*account_id*或*account_name*必须指定。  
+`[ @account_name = ] 'account_name'`要更新的帐户的名称。 *account_name*的默认值为**sysname**，默认值为 NULL。 必须指定*account_id*或*account_name* 。  
   
-`[ @sequence_number = ] sequence_number` 新的帐户的序列号。 *sequence_number*是**int**，无默认值。 序列号可以确定帐户在配置文件中的使用顺序。  
+`[ @sequence_number = ] sequence_number`帐户的新序列号。 *sequence_number*为**int**，没有默认值。 序列号可以确定帐户在配置文件中的使用顺序。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** （成功）或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="remarks"></a>备注  
  如果指定的帐户与指定的配置文件不相关，则会返回错误。  
@@ -65,13 +65,13 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
   
  如果存在具有相同序列号的多个帐户，则数据库邮件将仅使用其中一个帐户发送给定的电子邮件。 在此情况下，数据库邮件不能保证使用具有该序列号的特定帐户，也不能保证使用同一个帐户发送各个邮件。  
   
- 存储的过程**sysmail_update_profileaccount_sp**处于**msdb**数据库中，归**dbo**架构。 必须使用由三部分名称执行该过程，如果当前数据库不是**msdb**。  
+ 存储过程**sysmail_update_profileaccount_sp**在**msdb**数据库中，由**dbo**架构拥有。 如果当前数据库不是**msdb**，则必须使用由三部分组成的名称来执行该过程。  
   
 ## <a name="permissions"></a>权限  
- 执行此过程默认情况下的成员的权限**sysadmin**固定的服务器角色。  
+ 此过程的执行权限默认授予**sysadmin**固定服务器角色的成员。  
   
 ## <a name="examples"></a>示例  
- 下面的示例更改帐户的序列号`Admin-BackupServer`的配置文件内`AdventureWorks Administrator`中**msdb**数据库。 执行此代码后，该帐户的序列号为 `3`，指示前两个帐户失败后将尝试使用此帐户。  
+ 下面的示例在**msdb**数据库的配置文件`AdventureWorks Administrator`中`Admin-BackupServer`更改帐户的序列号。 执行此代码后，该帐户的序列号为 `3`，指示前两个帐户失败后将尝试使用此帐户。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_profileaccount_sp  
@@ -80,10 +80,10 @@ EXECUTE msdb.dbo.sysmail_update_profileaccount_sp
     ,@sequence_number = 3;  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库邮件](../../relational-databases/database-mail/database-mail.md)   
  [创建数据库邮件帐户](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [数据库邮件配置对象](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [数据库邮件存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [数据库邮件存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

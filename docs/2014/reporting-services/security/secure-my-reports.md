@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 88bceac4d712eb1010e4915e11267b7d2ee258a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101737"
 ---
 # <a name="secure-my-reports"></a>保护“我的报表”
@@ -34,7 +34,7 @@ ms.locfileid: "66101737"
   
  “我的报表”角色分配由以下元素组成：   
   
--   用户的“我的报表”文件夹，位于“用户文件夹\\\<用户名>\我的报表”文件夹下  。  
+-   用户的“我的报表”文件夹，位于“用户文件夹\\*用户名>\我的报表”文件夹下\<* 。  
   
 -   用户帐户，在激活“我的报表”文件夹时确定。 当用户单击报表管理器中的“我的报表”文件夹时，或将报表从报表设计器发布到“我的报表”文件夹时，将激活一个文件夹。 当用户请求“我的报表”链接的属性时，也将激活此文件夹。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66101737"
   
  禁用“我的报表”后，将从报表管理器中删除指向“我的报表”文件夹的链接。 支持“我的报表”的基础文件夹结构（即用户文件夹及其子文件夹）仍然可用，如果用户知道文件夹路径，仍可对其进行访问。 删除“我的报表”角色中的任务可以确保禁止对该文件夹的访问。   
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [保护报表和资源](secure-reports-and-resources.md)   
  [保护文件夹](secure-folders.md)   
  [授予对本机模式报表服务器的权限](granting-permissions-on-a-native-mode-report-server.md)  

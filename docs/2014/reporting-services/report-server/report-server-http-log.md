@@ -13,16 +13,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ca3437315803ff8435640bf58219fe93f96e242a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103398"
 ---
 # <a name="report-server-http-log"></a>报表服务器 HTTP 日志
+  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器 HTTP 日志文件记录报表服务器所处理的所有 HTTP 请求和响应。 由于请求溢出和超时错误不会到达报表服务器，因此这些错误不会记录在日志文件中。  
   
- 默认情况下，不启用 HTTP 日志记录。 若要启用 HTTP 日志记录，修改**ReportingServicesService.exe.config**配置文件以在安装中使用此功能。  
+ 默认情况下，不启用 HTTP 日志记录。 若要启用 HTTP 日志记录，请修改**reportingservicesservice.exe.config**配置文件以在安装中使用此功能。  
   
 ## <a name="viewing-log-information"></a>查看日志信息  
  该日志为 ASCII 文本文件。 可以使用任何文本编辑器查看该文件。 报表服务器 HTTP 日志文件等同于 IIS 中的 W3C 扩展日志文件，并且使用与其类似的字段，因此可以使用现有的 IIS 日志文件查看器来读取报表服务器 HTTP 日志文件。 下表提供有关 HTTP 日志文件的其他信息：  
@@ -35,7 +36,7 @@ ms.locfileid: "66103398"
 |**创建和保留文件**|当您在配置文件中启用了日志、重新启动服务以及报表服务器处理 HTTP 请求时，会创建 HTTP 日志。 如果您配置了相应的设置但并未看到日志文件，请打开报表或启动报表服务器应用程序（如报表管理器）以生成 HTTP 请求从而创建日志文件。<br /><br /> 在各服务重新启动并且随后发生对报表服务器的 HTTP 请求时，会创建日志文件的新实例。<br /><br /> 默认情况下，跟踪日志大小限制为 32 MB，并在 14 天后删除。|  
   
 ## <a name="configuration-settings-for-report-server-http-log"></a>报表服务器 HTTP 日志的配置设置  
- 若要配置报表服务器 HTTP 日志，使用记事本来修改**ReportingServicesService.exe.config**文件。 此配置文件位于 \Program Files\Microsoft SQL Server\MSSQL.n\Reporting Services\ReportServer\Bin 文件夹。  
+ 若要配置报表服务器 HTTP 日志，请使用记事本来修改**reportingservicesservice.exe.config**文件。 此配置文件位于 \Program Files\Microsoft SQL Server\MSSQL.n\Reporting Services\ReportServer\Bin 文件夹。  
   
  若要启用 HTTP 服务器，请将 `http:4` 添加到 ReportingServicesService.exe.config 文件的 RStrace 部分。 所有其他 HTTP 日志文件项都是可选的。 下面的示例包括所有设置，因此您可以将整个内容都粘贴到 RStrace 部分，然后删除您不需要的设置。  
   
@@ -54,14 +55,14 @@ ms.locfileid: "66103398"
 ```  
   
 ## <a name="log-file-fields"></a>日志文件字段  
- 下表对在日志中可用的字段进行了说明： 该字段列表是可配置的；您可以通过 `HTTPTraceSwitches` 配置设置来指定要包括哪些字段。 **默认**列指定是否在字段将自动包含在日志文件是否未指定`HTTPTraceSwitches`。  
+ 下表对在日志中可用的字段进行了说明： 该字段列表是可配置的；您可以通过 `HTTPTraceSwitches` 配置设置来指定要包括哪些字段。 如果**** 未指定`HTTPTraceSwitches`，则默认列指定是否将自动包含在日志文件中的字段。  
   
-|字段|Description|，则“默认”|  
+|字段|说明|默认|  
 |-----------|-----------------|-------------|  
-|HttpTraceFileName|该值是可选的。 默认值为 ReportServerServiceHTTP_。 如果您想要使用其他文件命名约定（例如，在将日志文件保存到中央位置时要包括服务器名），则可指定不同的值。|是|  
-|HTTPTraceSwitches|该值是可选的。 如果指定该字段，则可以逗号分隔的格式配置要在日志文件中使用的字段。|否|  
+|HttpTraceFileName|此值是可选的。 默认值为 ReportServerServiceHTTP_。 如果您想要使用其他文件命名约定（例如，在将日志文件保存到中央位置时要包括服务器名），则可指定不同的值。|是|  
+|HTTPTraceSwitches|此值是可选的。 如果指定该字段，则可以逗号分隔的格式配置要在日志文件中使用的字段。|否|  
 |Date|活动发生的日期。|否|  
-|Time|活动发生的时间。|否|  
+|时间|活动发生的时间。|否|  
 |ClientIp|访问报表服务器的客户端的 IP 地址。|是|  
 |UserName|访问报表服务器的用户的名称。|否|  
 |ServerPort|连接使用的端口号。|否|  
@@ -78,7 +79,7 @@ ms.locfileid: "66103398"
 |CookieSent|服务器发送的 cookie 的内容。|否|  
 |Referrer|客户端以前访问过的站点。|否|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [报表服务器服务跟踪日志](report-server-service-trace-log.md)   
  [Reporting Services 日志文件和来源](../report-server/reporting-services-log-files-and-sources.md)   
  [错误和事件参考 (Reporting Services)](../troubleshooting/errors-and-events-reference-reporting-services.md)  

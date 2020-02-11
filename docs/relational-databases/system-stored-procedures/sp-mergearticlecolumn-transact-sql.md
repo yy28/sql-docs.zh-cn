@@ -1,5 +1,5 @@
 ---
-title: sp_mergearticlecolumn (TRANSACT-SQL) |Microsoft Docs
+title: sp_mergearticlecolumn （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ff669af64b6aed312481264127d69eee1ad674e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68078162"
 ---
-# <a name="spmergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
+# <a name="sp_mergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  对合并发布进行垂直分区。 在发布服务器上对发布数据库执行此存储的过程。  
+  对合并发布进行垂直分区。 此存储过程在发布服务器上对发布数据库执行。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,36 +43,36 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，无默认值。  
+`[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，无默认值。  
   
-`[ @article = ] 'article'` 是在发布中项目的名称。 *文章*是**sysname**，无默认值。  
+`[ @article = ] 'article'`发布中项目的名称。 *项目*是**sysname**，无默认值。  
   
-`[ @column = ] 'column'` 标识要在其中创建垂直分区的列。 *列*是**sysname**，默认值为 NULL。 如果为 NULL 和 `@operation = N'add'`，默认情况下，源表中的所有列将添加到项目。 *列*不能为 NULL 时*操作*设置为**删除**。 若要从项目中排除列，请执行**sp_mergearticlecolumn**并指定*列*并`@operation = N'drop'`为每个要删除的列从指定*文章*.  
+`[ @column = ] 'column'`标识要在其中创建垂直分区的列。 *列*的值为**sysname**，默认值为 NULL。 如果为 NULL 和 `@operation = N'add'`，默认情况下，源表中的所有列将添加到项目。 将*操作*设置为**drop**时，*列*不能为 NULL。 若要从项目中排除列，请执行**sp_mergearticlecolumn** ，并`@operation = N'drop'`指定要从指定*项目*中删除的*列*以及每个列。  
   
-`[ @operation = ] 'operation'` 是复制状态。 *操作*是**nvarchar(4)** ，使用默认值为 ADD。 **添加**会标记列以进行复制。 **删除**清除该列。  
+`[ @operation = ] 'operation'`是复制状态。 *操作*为**nvarchar （4）**，默认值为 ADD。 **添加**标记列以进行复制。 **drop**清除列。  
   
-`[ @schema_replication = ] 'schema_replication'` 指定合并代理运行时将传播架构更改。 *schema_replication*是**nvarchar(5)** ，默认值为 FALSE。  
+`[ @schema_replication = ] 'schema_replication'`指定在合并代理运行时将传播架构更改。 *schema_replication*为**nvarchar （5）**，默认值为 FALSE。  
   
 > [!NOTE]  
->  仅**FALSE**支持*schema_replication*。  
+>  *Schema_replication*仅支持**FALSE** 。  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 启用或禁用使快照失效的功能。 *force_invalidate_snapshot*是**位**，默认值为**0**。  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`启用或禁用使快照失效的功能。 *force_invalidate_snapshot*为一个**位**，默认值为**0**。  
   
- **0**指定对合并项目的更改不会导致快照无效。  
+ **0**指定对合并项目所做的更改不会导致快照无效。  
   
- **1**指定对合并项目的更改可能导致快照无效，如果是这种情况的值**1**提供了新快照的权限。  
+ **1**指定对合并项目所做的更改可能会导致快照无效，如果是这种情况，则值**1**将为新快照提供权限。  
   
-`[ @force_reinit_subscription = ]force_reinit_subscription_` 启用或禁用使订阅重新初始化的功能。 *force_reinit_subscription*为 bit，默认值为**0**。  
+`[ @force_reinit_subscription = ]force_reinit_subscription_`启用或禁用使订阅重新初始化的功能。 *force_reinit_subscription*是一位，默认值为**0**。  
   
- **0**指定对合并项目的更改不会导致重新初始化订阅。  
+ **0**指定对合并项目所做的更改不会导致重新初始化订阅。  
   
- **1**指定对合并项目的更改可能导致订阅重新初始化，如果是这种情况的值**1**使订阅重新初始化发生的权限。  
+ **1**指定对合并项目所做的更改可能导致订阅重新初始化，如果是这种情况，则值**1**将授予重新初始化订阅的权限。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** （成功）或**1** （失败）  
   
 ## <a name="remarks"></a>备注  
- **sp_mergearticlecolumn**合并复制中使用。  
+ **sp_mergearticlecolumn**用于合并复制。  
   
  如果正在使用自动标识范围管理，则不能从项目删除标识列。 有关详细信息，请参阅[复制标识列](../../relational-databases/replication/publish/replicate-identity-columns.md)。  
   
@@ -84,9 +84,9 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
  [!code-sql[HowTo#sp_AddMergeArticle](../../relational-databases/replication/codesnippet/tsql/sp-mergearticlecolumn-tr_1.sql)]  
   
 ## <a name="permissions"></a>权限  
- 只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_mergearticlecolumn**。  
+ 只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_mergearticlecolumn**。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [定义和修改合并项目间的联接筛选器](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
  [定义和修改合并项目的参数化行筛选器](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [筛选已发布数据](../../relational-databases/replication/publish/filter-published-data.md)   

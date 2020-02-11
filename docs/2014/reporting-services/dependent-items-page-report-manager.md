@@ -1,5 +1,5 @@
 ---
-title: 依赖项页 （报表管理器） |Microsoft Docs
+title: "\"依赖项\" 页（报表管理器） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 59c022a0e6c57a85d83b25be3fe9dbe0c9dfeeb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109325"
 ---
 # <a name="dependent-items-page-report-manager"></a>“依赖项”页（报表管理器）
@@ -29,7 +29,7 @@ ms.locfileid: "66109325"
   
 2.  悬停在该项之上，然后单击下拉箭头。  
   
-3.  在下拉菜单中，单击 **“管理”**。 这会打开该数据源的“常规属性”页。  
+3.  在下拉菜单中，单击 **“管理”** 。 这会打开该数据源的“常规属性”页。  
   
 4.  选择 **“依赖项”** 选项卡。  
   
@@ -43,28 +43,28 @@ ms.locfileid: "66109325"
  **删除**  
  单击此选项可从报表服务器数据库中删除报表或模型。 单击 **“删除”** 之前，请选中要删除的每个项旁边的复选框。  
   
- **“移动”**  
+ **移动**  
  单击此选项可在文件夹层次结构中重新定位报表或模型。 单击 **“移动”** 之前，请选中要移动的每个项旁边的复选框。 这将打开“移动项”页，可以在此页上浏览文件夹以选择新的位置。  
   
  **编辑**  
  单击“属性”图标可以访问报表或模型的属性页。  
   
- **类型**  
+ 类型   
  显示项类型的图标。  
   
- **修改的日期**  
+ **修改日期**  
  显示报表或模型的上次修改日期和时间。  
   
  **修改者**  
  显示上次修改项属性的用户名。  
   
- **运行时**  
+ **运行时间**  
  对于以报表执行快照形式运行的报表，此属性用于显示上次刷新报表的日期和时间。  
   
-## <a name="see-also"></a>请参阅  
- [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)   
+## <a name="see-also"></a>另请参阅  
+ [报表管理器 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)   
  [报表管理器（SSRS 本机模式）](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [“内容”页（报表管理器）](../../2014/reporting-services/contents-page-report-manager.md)   
+ ["内容" 页 &#40;报表管理器&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

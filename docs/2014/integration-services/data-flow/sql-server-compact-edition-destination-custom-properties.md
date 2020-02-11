@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bf554cac0bf20e93826c183c888b1b0176e6e7da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900934"
 ---
 # <a name="sql-server-compact-edition-destination-custom-properties"></a>SQL Server Compact Edition 目标自定义属性
@@ -22,7 +22,7 @@ ms.locfileid: "62900934"
   
  下表介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 目标的自定义属性。 所有属性均可读/写。  
   
-|属性名称|数据类型|Description|  
+|属性名称|数据类型|说明|  
 |-------------------|---------------|-----------------|  
 |TableName|String|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 数据库中目标表的名称。<br /><br /> 此属性的值可以使用属性表达式来指定。|  
   
@@ -30,7 +30,7 @@ ms.locfileid: "62900934"
   
  有关详细信息，请参阅 [SQL Server Compact Edition 目标](sql-server-compact-edition-destination.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Common Properties](../common-properties.md)  
   
   

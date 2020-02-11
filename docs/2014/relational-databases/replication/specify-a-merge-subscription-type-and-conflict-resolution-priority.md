@@ -1,5 +1,5 @@
 ---
-title: 指定合并订阅类型和冲突解决优先级 (SQL Server Management Studio) |Microsoft Docs
+title: 指定合并订阅类型和冲突解决优先级（SQL Server Management Studio） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0ef72b3c36e1cfc7d59792056e080d1cbf2d5c55
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63156348"
 ---
 # <a name="specify-a-merge-subscription-type-and-conflict-resolution-priority-sql-server-management-studio"></a>指定合并订阅类型和冲突解决优先级 (SQL Server Management Studio)
-  可以在新建订阅向导的 **“订阅类型”** 页上指定合并订阅类型和冲突解决优先级。 有关使用此向导的详细信息，请参阅 [Create a Pull Subscription](create-a-pull-subscription.md) 和 [Create a Push Subscription](create-a-push-subscription.md)。  
+  在新建订阅向导的 "**订阅类型**" 页上指定合并订阅类型和冲突解决优先级。 有关使用此向导的详细信息，请参阅 [Create a Pull Subscription](create-a-pull-subscription.md) 和 [Create a Push Subscription](create-a-push-subscription.md)。  
   
- 订阅类型无法修改后创建订阅，但可针对服务器订阅类型对修改优先级**订阅属性-\<发布服务器 >:\<发布数据库 >** 对话框。 有关访问此对话框的详细信息，请参阅 [View and Modify Push Subscription Properties](view-and-modify-push-subscription-properties.md) 和 [View and Modify Pull Subscription Properties](view-and-modify-pull-subscription-properties.md)。  
+ 创建订阅后订阅类型无法修改，但对于“订阅属性 - **发布服务器>: \<发布数据库>”\<** 对话框中的服务器订阅类型来说，优先级可以更改。 有关访问此对话框的详细信息，请参阅 [View and Modify Push Subscription Properties](view-and-modify-push-subscription-properties.md) 和 [View and Modify Pull Subscription Properties](view-and-modify-pull-subscription-properties.md)。  
   
 ### <a name="to-specify-a-merge-subscription-type-and-conflict-resolution-priority"></a>指定合并订阅类型和冲突解决优先级  
   
@@ -33,12 +33,12 @@ ms.locfileid: "63156348"
   
 ### <a name="to-modify-the-conflict-resolution-priority"></a>修改冲突解决优先级  
   
-1.  在中**订阅属性-\<发布服务器 >:\<发布数据库 >** 在发布服务器上，输入的值 (0.00 到 99.99)**优先级**选项。  
+1.  在发布服务器的“订阅属性 - **发布服务器>: \<发布数据库>”\<** 中，输入“优先级”**** 选项的值（0.00 到 99.99）。  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+## <a name="see-also"></a>另请参阅  
+ [高级合并复制冲突的检测和解决](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [订阅发布](subscribe-to-publications.md)  
   
   

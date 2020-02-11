@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 663de184c811291c4b583ddbaf2fb6862097c54f
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73882179"
 ---
 # <a name="set-the-expiration-period-for-subscriptions"></a>设置订阅的过期期限
@@ -41,7 +41,7 @@ ms.locfileid: "73882179"
   
 ###  <a name="Recommendations"></a> 建议  
   
--   订阅过期期限也称为“发布保持期”。 合并复制元数据的清除依赖于此设置：  
+-   订阅过期期限也称为“发布保持期”  。 合并复制元数据的清除依赖于此设置：  
   
     -   在到达保持期之前，复制无法清除发布数据库和订阅数据库中的元数据。 在为保持期指定较大值时务必谨慎，因为这可能对复制性能产生负面影响。 如果能很有把握地预测出所有订阅服务器都将在该时间段内定期同步，则建议使用较低的设置。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "73882179"
 3.  （可选）在发布服务器上，执行 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)。 为 **property 指定 retention_period_unit，并为** value 指定新的订阅过期时间单位 **\@** **\@** 。  
   
 ## <a name="see-also"></a>另请参阅  
- [复制系统存储过程概念](../concepts/replication-system-stored-procedures-concepts.md)   
- [Subscription Expiration and Deactivation](../subscription-expiration-and-deactivation.md)  
+ [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
+ [订阅过期和停用](../subscription-expiration-and-deactivation.md)  
   
   

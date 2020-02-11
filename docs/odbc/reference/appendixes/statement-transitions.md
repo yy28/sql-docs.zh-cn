@@ -15,53 +15,53 @@ ms.assetid: 3d70e0e3-fe83-4b4d-beac-42c82495a05b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b0d46bad2e0b37c5e6751a4895cdf1899aee4b01
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68070097"
 ---
 # <a name="statement-transitions"></a>语句转换
 ODBC 语句具有以下状态。  
   
-|状态|描述|  
+|状态|说明|  
 |-----------|-----------------|  
-|S0|未分配的语句。 （连接状态必须是 C4、 C5 或 C6。 有关详细信息，请参阅[连接转换](../../../odbc/reference/appendixes/connection-transitions.md)。)|  
-|S1|已分配的语句。|  
-|S2|已准备的语句。 将不创建任何结果集。|  
-|S3|已准备的语句。 将创建一个 （可能为空） 的结果集。|  
-|S4|创建的语句执行和无结果集。|  
-|S5|创建的语句执行和 （可能为空） 的结果集。 游标是打开并进行定位在结果集中的第一行之前。|  
-|S6|光标就定位与**SQLFetch**或**SQLFetchScroll**。|  
-|S7|光标就定位与**SQLExtendedFetch**。|  
-|S8|函数需要数据。 **SQLParamData**尚未调用。|  
-|S9|函数需要数据。 **SQLPutData**尚未调用。|  
-|S10|函数需要数据。 **SQLPutData**已调用。|  
-|S11|仍在执行。 语句处于此状态后以异步方式执行的函数将返回 SQL_STILL_EXECUTING。 语句将暂时处于此状态时执行的语句句柄可以接受任何函数。 处于状态的状态表除外的任何状态表中未显示 S11 临时居住**SQLCancel**。 虽然语句暂时处于 S11 状态，该函数可以取消通过调用**SQLCancel**从另一个线程。|  
-|S12|已取消的异步执行。 S12，直到返回 SQL_STILL_EXECUTING 之外的值，应用程序必须调用已取消的函数。 该函数已成功取消，仅当该函数将返回 SQL_ERROR 并且 SQLSTATE HY008 （已取消的操作）。 如果它返回任何其他值，如 SQL_SUCCESS，取消操作失败，并通常执行的函数。|  
+|S0|未分配语句。 （连接状态必须是 C4、C5 或 C6。 有关详细信息，请参阅[连接转换](../../../odbc/reference/appendixes/connection-transitions.md)。）|  
+|S1|已分配语句。|  
+|S2|预定义语句。 不会创建任何结果集。|  
+|S3|预定义语句。 将创建一个（可能为空）结果集。|  
+|S4|已执行语句，但未创建结果集。|  
+|S5|已执行语句并创建了一个（可能为空）结果集。 游标已打开并定位在结果集的第一行之前。|  
+|S6|与**SQLFetch**或**SQLFetchScroll**定位的光标。|  
+|S7|光标定位到**SQLExtendedFetch**。|  
+|S8|函数需要数据。 尚未调用**SQLParamData** 。|  
+|S9|函数需要数据。 尚未调用**SQLPutData** 。|  
+|S10|函数需要数据。 已调用**SQLPutData** 。|  
+|S11|仍在执行。 如果异步执行的函数返回 SQL_STILL_EXECUTING，则语句将处于此状态。 在执行接受语句句柄的任何函数时，语句暂时处于此状态。 状态 S11 中的临时居住不显示在**SQLCancel**状态表除外的任何状态表中。 当语句暂时处于 S11 状态时，可以通过从另一个线程调用**SQLCancel**来取消该函数。|  
+|S12|异步执行已取消。 在 S12 中，应用程序必须调用已取消的函数，直到它返回 SQL_STILL_EXECUTING 以外的值。 仅当函数返回 SQL_ERROR 和 SQLSTATE HY008 （操作已取消）时才已成功取消该函数。 如果返回任何其他值（如 SQL_SUCCESS），则取消操作将失败，并且该函数将正常执行。|  
   
- 已准备好的状态，为已知状态 S2 和 S3 状态通过 S7 S5，如光标状态、 需要数据指出，指出通过 S10 S8 和异步状态作为状态 S11 和 S12。 在每个这些组中，转换将单独显示时不同的组中; 每种状态在大多数情况下，每个转换状态在每个组是相同的。  
+ 状态 S2 和 S3 称为准备状态，通过 S7 将 S5 声明为游标状态，将 S8 通过 S10 状态视为需要数据状态，并将 S11 和 S12 状态视为异步状态。 在其中每个组中，仅当组中的每个状态都不同时，转换才会单独显示;大多数情况下，每个组中的每个状态的转换都是相同的。  
   
- 下表显示每个 ODBC 函数如何影响语句的状态。  
+ 下表显示了每个 ODBC 函数如何影响语句状态。  
   
 ## <a name="sqlallochandle"></a>SQLAllocHandle  
   
 |S0<br /><br /> 未分配|S1<br /><br /> 分配|S2-S3<br /><br /> Prepared|S4<br /><br /> 执行|S5-S7<br /><br /> 游标|S8-S10<br /><br /> 需要数据|S11-S12<br /><br /> 异步|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|--[1], [5], [6]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
-|--[2], [5]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
-|S1[3]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
-|--[4], [5]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
+|--[1]，[5]，[6]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
+|--[2]，[5]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
+|S1 [3]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
+|--[4]，[5]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
   
- [1] 此行显示转换时*HandleType*已 SQL_HANDLE_ENV。  
+ [1] 此行显示 SQL_HANDLE_ENV *HandleType*时的转换。  
   
- [2] 此行显示转换时*HandleType*已 SQL_HANDLE_DBC。  
+ [2] 在 SQL_HANDLE_DBC *HandleType*时，该行显示转换。  
   
- [3] 此行显示转换时*HandleType*已 SQL_HANDLE_STMT。  
+ [3] 此行显示*HandleType* SQL_HANDLE_STMT 时的转换。  
   
- [4] 此行显示转换时*HandleType*已 SQL_HANDLE_DESC。  
+ [4] 此行显示*HandleType* SQL_HANDLE_DESC 时的转换。  
   
- [5] 调用**SQLAllocHandle**与*OutputHandlePtr*指向有效的句柄将覆盖该句柄而不考虑以前的内容的处理，并可能会导致问题的 ODBC 驱动程序。 它是不正确的 ODBC 应用程序编程以调用**SQLAllocHandle**两次，为定义的相同应用程序变量 *\*OutputHandlePtr*而无需调用**SQLFreeHandle**以重新分配它之前释放句柄。 覆盖 ODBC 句柄以这种方式可能会导致不一致的行为或 ODBC 驱动程序部分的错误。  
+ [5] 调用**SQLAllocHandle**时，如果*OutputHandlePtr*指向有效的句柄，则会覆盖该句柄，而不考虑该句柄以前的内容，并可能导致 ODBC 驱动程序出现问题。 这是不正确的 ODBC 应用程序编程，用为* \*OutputHandlePtr*定义的同一个应用程序变量来调用**SQLAllocHandle**两次，而不调用**SQLFreeHandle**来释放该句柄，然后再重新分配它。 以这种方式覆盖 ODBC 句柄可能会导致 ODBC 驱动程序部分出现不一致的行为或错误。  
   
 ## <a name="sqlbindcol"></a>SQLBindCol  
   
@@ -75,7 +75,7 @@ ODBC 语句具有以下状态。
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|--|--|--|--|HY010|HY010|  
   
-## <a name="sqlbrowseconnect-sqlconnect-and-sqldriverconnect"></a>SQLBrowseConnect、 SQLConnect 和 SQLDriverConnect  
+## <a name="sqlbrowseconnect-sqlconnect-and-sqldriverconnect"></a>SQLBrowseConnect、SQLConnect 和 SQLDriverConnect  
   
 |S0<br /><br /> 未分配|S1<br /><br /> 分配|S2-S3<br /><br /> Prepared|S4<br /><br /> 执行|S5-S7<br /><br /> 游标|S8-S10<br /><br /> 需要数据|S11-S12<br /><br /> 异步|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
@@ -85,19 +85,19 @@ ODBC 语句具有以下状态。
   
 |S0<br /><br /> 未分配|S1<br /><br /> 分配|S2-S3<br /><br /> Prepared|S4<br /><br /> 执行|S5-S7<br /><br /> 游标|S8-S10<br /><br /> 需要数据|S11-S12<br /><br /> 异步|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH|HY010|HY010|24000|请参阅下一个表|HY010|NS [c] HY010 o|  
+|IH|HY010|HY010|24000|查看下一个表|HY010|NS [c] HY010 o|  
   
 ## <a name="sqlbulkoperations-cursor-states"></a>SQLBulkOperations （游标状态）  
   
-|S5<br /><br /> 打开|S6<br /><br /> SQLFetch 或 SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
+|S5<br /><br /> 已打开|S6<br /><br /> SQLFetch 或 SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
 |-------------------|---------------------------------------|-----------------------------|  
-|-[s] S8 [d] S11 [x]|-[s] S8 [d] S11 [x]|HY010|  
+|--[s] S8 [d] S11 [x]|--[s] S8 [d] S11 [x]|HY010|  
   
 ## <a name="sqlcancel"></a>SQLCancel  
   
 |S0<br /><br /> 未分配|S1<br /><br /> 分配|S2-S3<br /><br /> Prepared|S4<br /><br /> 执行|S5-S7<br /><br /> 游标|S8-S10<br /><br /> 需要数据|S11-S12<br /><br /> 异步|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH|--|--|--|--|S1 [1] S2 [nr] 和 [2] S3 [r] 和 [2] S5 [3] 和 [5] S6 ([3] 或 [4]) 和 [6] S7 [4] 和 [7]|请参阅下一个表|  
+|IH|--|--|--|--|S1 [1] S2 [nr] 和 [2] S3 [r] 和 [2] S5 [3] 和 [5] S6 （[3] 或 [4]）和 [6] S7 [4] 和 [7]|查看下一个表|  
   
  [1] **SQLExecDirect**返回 SQL_NEED_DATA。  
   
@@ -107,84 +107,84 @@ ODBC 语句具有以下状态。
   
  [4] **SQLSetPos**返回 SQL_NEED_DATA。  
   
- [5] **SQLFetch**， **SQLFetchScroll**，或**SQLExtendedFetch**尚未调用。  
+ [5] 未调用**SQLFetch**、 **SQLFetchScroll**或**SQLExtendedFetch** 。  
   
- [6] **SQLFetch**或**SQLFetchScroll**已调用一样。  
+ 已调用 [6] **SQLFetch**或**SQLFetchScroll** 。  
   
- [7] **SQLExtendedFetch**已调用一样。  
+ 已调用 [7] **SQLExtendedFetch** 。  
   
 ## <a name="sqlcancel-asynchronous-states"></a>SQLCancel （异步状态）  
   
-|S11<br /><br /> 仍在执行|S12<br /><br /> 异步取消|  
+|S11<br /><br /> 仍在执行|S12<br /><br /> 已取消异步|  
 |-----------------------------|-----------------------------|  
-|NS[1] S12[2]|S12|  
+|NS [1] S12 [2]|S12|  
   
- [1] 语句处于临时状态 S11 当函数正在执行时。 **SQLCancel**从另一个线程调用。  
+ [1] 执行函数时，语句暂时处于 S11 状态。 **SQLCancel**是从其他线程调用的。  
   
- [2] 上，语句处于状态 S11，因为异步调用一个函数返回 SQL_STILL_EXECUTING。  
+ [2] 该语句处于状态 S11，因为一个以异步方式返回的函数 SQL_STILL_EXECUTING。  
   
 ## <a name="sqlclosecursor"></a>SQLCloseCursor  
   
 |S0<br /><br /> 未分配|S1<br /><br /> 分配|S2-S3<br /><br /> Prepared|S4<br /><br /> 执行|S5-S7<br /><br /> 游标|S8-S10<br /><br /> 需要数据|S11-S12<br /><br /> 异步|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH|24000|24000|24000|S1 np S3 [p]|HY010|HY010|  
+|IH|24000|24000|24000|S1 [np] S3 [p]|HY010|HY010|  
   
 ## <a name="sqlcolattribute"></a>SQLColAttribute  
   
 |S0<br /><br /> 未分配|S1<br /><br /> 分配|S2-S3<br /><br /> Prepared|S4<br /><br /> 执行|S5-S7<br /><br /> 游标|S8-S10<br /><br /> 需要数据|S11-S12<br /><br /> 异步|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH|HY010|请参阅下一个表|24000|-[s] S11 [x]|HY010|NS [c] HY010 o|  
+|IH|HY010|查看下一个表|24000|--[s] S11 [x]|HY010|NS [c] HY010 o|  
   
 ## <a name="sqlcolattribute-prepared-states"></a>SQLColAttribute （已准备状态）  
   
 |S2<br /><br /> 无结果|S3<br /><br /> 结果|  
 |-----------------------|--------------------|  
-|--[1] 07005[2]|-[s] S11 x|  
+|--[1] 07005 [2]|--[s] S11 x|  
   
- [1] *FieldIdentifier*已 SQL_DESC_COUNT。  
+ [1] *FieldIdentifier* SQL_DESC_COUNT。  
   
- [2] *FieldIdentifier*未 SQL_DESC_COUNT。  
+ 未 SQL_DESC_COUNT [2] *FieldIdentifier* 。  
   
-## <a name="sqlcolumnprivileges-sqlcolumns-sqlforeignkeys-sqlgettypeinfo-sqlprimarykeys-sqlprocedurecolumns-sqlprocedures-sqlspecialcolumns-sqlstatistics-sqltableprivileges-and-sqltables"></a>SQLColumnPrivileges、 SQLColumns、 SQLForeignKeys、 SQLGetTypeInfo、 SQLPrimaryKeys、 SQLProcedureColumns、 SQLProcedures、 SQLSpecialColumns、 SQLStatistics、 SQLTablePrivileges 和 SQLTables  
+## <a name="sqlcolumnprivileges-sqlcolumns-sqlforeignkeys-sqlgettypeinfo-sqlprimarykeys-sqlprocedurecolumns-sqlprocedures-sqlspecialcolumns-sqlstatistics-sqltableprivileges-and-sqltables"></a>SQLColumnPrivileges、SQLColumns、SQLForeignKeys、SQLGetTypeInfo、SQLPrimaryKeys、SQLProcedureColumns、SQLProcedures、SQLSpecialColumns、SQLStatistics、SQLTablePrivileges 和 SQLTables  
   
 |S0<br /><br /> 未分配|S1<br /><br /> 分配|S2-S3<br /><br /> Prepared|S4<br /><br /> 执行|S5-S7<br /><br /> 游标|S8-S10<br /><br /> 需要数据|S11-S12<br /><br /> 异步|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|(IH)|S5 [s] S11 [x]|S1 [e] S5 [s] S11 [x]|S1 [e] 和 [1] S5 [s] 和 [1] S11 [x] 和 [1] 24000 [2]|请参阅下一个表|HY010|NS [c] HY010 o|  
+|IH|S5 [s] S11 [x]|S1 [e] S5 [s] S11 [x]|S1 [e] 和 [1] S5 [s] 和 [1] S11 [x] 和 [1] 24000 [2]|查看下一个表|HY010|NS [c] HY010 o|  
   
- [1] 当前结果的上一次或仅结果，或没有当前的结果。 有关多个结果的详细信息，请参阅[多个结果](../../../odbc/reference/develop-app/multiple-results.md)。  
+ [1] 当前结果为最后一个或唯一的结果，或者没有当前结果。 有关多个结果的详细信息，请参阅[多个结果](../../../odbc/reference/develop-app/multiple-results.md)。  
   
  [2] 当前结果不是最后一个结果。  
   
-## <a name="sqlcolumnprivileges-sqlcolumns-sqlforeignkeys-sqlgettypeinfo-sqlprimarykeys-sqlprocedurecolumns-sqlprocedures-sqlspecialcolumns-sqlstatistics-sqltableprivileges-and-sqltables-cursor-states"></a>SQLColumnPrivileges、 SQLColumns、 SQLForeignKeys、 SQLGetTypeInfo、 SQLPrimaryKeys、 SQLProcedureColumns、 SQLProcedures、 SQLSpecialColumns、 SQLStatistics、 SQLTablePrivileges 和 SQLTables （游标状态）  
+## <a name="sqlcolumnprivileges-sqlcolumns-sqlforeignkeys-sqlgettypeinfo-sqlprimarykeys-sqlprocedurecolumns-sqlprocedures-sqlspecialcolumns-sqlstatistics-sqltableprivileges-and-sqltables-cursor-states"></a>SQLColumnPrivileges、SQLColumns、SQLForeignKeys、SQLGetTypeInfo、SQLPrimaryKeys、SQLProcedureColumns、SQLProcedures、SQLSpecialColumns、SQLStatistics、SQLTablePrivileges 和 SQLTables （游标状态）  
   
-|S5<br /><br /> 打开|S6<br /><br /> SQLFetch 或 SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
+|S5<br /><br /> 已打开|S6<br /><br /> SQLFetch 或 SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
 |-------------------|---------------------------------------|-----------------------------|  
-|24000|24000[1]|24000|  
+|24000|24000 [1]|24000|  
   
- [如果，则返回由驱动程序管理器 1] 此错误**SQLFetch**或**SQLFetchScroll**未返回 SQL_NO_DATA 和时，返回的驱动程序**SQLFetch**或**SQLFetchScroll**已返回 sql_no_data 为止。  
+ [1] 如果**SQLFetch**或**SQLFetchScroll**未返回 SQL_NO_DATA，驱动程序管理器会返回此错误，如果**SQLFetch**或**SQLFetchScroll**已 SQL_NO_DATA 返回，则驱动程序将返回此错误。  
   
 ## <a name="sqlcopydesc"></a>SQLCopyDesc  
   
 |S0<br /><br /> 未分配|S1<br /><br /> 分配|S2-S3<br /><br /> Prepared|S4<br /><br /> 执行|S5-S7<br /><br /> 游标|S8-S10<br /><br /> 需要数据|S11-S12<br /><br /> 异步|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH[1]|--|--|--|--|HY010|NS [c] 和 [3] HY010 [o] 或 [4]|  
-|IH[2]|HY010|请参阅下一个表|24000|-[s] S11 x|HY010|NS [c] 和 [3] HY010 [o] 或 [4]|  
+|IH [1]|--|--|--|--|HY010|NS [c] 和 [3] HY010 [o] 或 [4]|  
+|IH [2]|HY010|查看下一个表|24000|--[s] S11 x|HY010|NS [c] 和 [3] HY010 [o] 或 [4]|  
   
- [1] 此行显示转换时*SourceDescHandle*参数是 ARD、 APD，还是 IPD。  
+ [1] 在*SourceDescHandle*参数是 ARD、APD 或 IPD 时，该行显示转换。  
   
- [2] 此行显示转换时*SourceDescHandle*参数为 IRD。  
+ [2] 当*SourceDescHandle*参数是 IRD 时，该行显示转换。  
   
- [3] *SourceDescHandle*并*TargetDescHandle*自变量是中的相同**SQLCopyDesc**以异步方式运行的函数。  
+ [3] *SourceDescHandle*和*TargetDescHandle*参数与异步运行的**SQLCopyDesc**函数相同。  
   
- [4] 既*SourceDescHandle*自变量或*TargetDescHandle*自变量 （或两者） 已在不同于**SQLCopyDesc**正在运行的函数以异步方式。  
+ [4] *SourceDescHandle*参数或*TargetDescHandle*参数（或两者）与异步运行的**SQLCopyDesc**函数不同。  
   
 ## <a name="sqlcopydesc-prepared-states"></a>SQLCopyDesc （已准备状态）  
   
 |S2<br /><br /> 无结果|S3<br /><br /> 结果|  
 |-----------------------|--------------------|  
-|24000[1]|-[s] S11 [x]|  
+|24000 [1]|--[s] S11 [x]|  
   
- [1]该行显示的转换时*SourceDescHandle*参数为 IRD。  
+ 2当*SourceDescHandle*参数是 IRD 时，该行显示转换。  
   
 ## <a name="sqldatasources-and-sqldrivers"></a>SQLDataSources 和 SQLDrivers  
   
@@ -196,69 +196,69 @@ ODBC 语句具有以下状态。
   
 |S0<br /><br /> 未分配|S1<br /><br /> 分配|S2-S3<br /><br /> Prepared|S4<br /><br /> 执行|S5-S7<br /><br /> 游标|S8-S10<br /><br /> 需要数据|S11-S12<br /><br /> 异步|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH|HY010|请参阅下一个表|24000|-[s] S11 [x]|HY010|NS [c] HY010 o|  
+|IH|HY010|查看下一个表|24000|--[s] S11 [x]|HY010|NS [c] HY010 o|  
   
 ## <a name="sqldescribecol-prepared-states"></a>SQLDescribeCol （已准备状态）  
   
 |S2<br /><br /> 无结果|S3<br /><br /> 结果|  
 |-----------------------|--------------------|  
-|07005|-[s] S11 [x]|  
+|07005|--[s] S11 [x]|  
   
 ## <a name="sqldescribeparam"></a>SQLDescribeParam  
   
 |S0<br /><br /> 未分配|S1<br /><br /> 分配|S2-S3<br /><br /> Prepared|S4<br /><br /> 执行|S5-S7<br /><br /> 游标|S8-S10<br /><br /> 需要数据|S11-S12<br /><br /> 异步|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH|HY010|-[s] S11 [x]|HY010|HY010|HY010|NS [c] HY010 [o]|  
+|IH|HY010|--[s] S11 [x]|HY010|HY010|HY010|NS [c] HY010 [o]|  
   
 ## <a name="sqldisconnect"></a>SQLDisconnect  
   
 |S0<br /><br /> 未分配|S1<br /><br /> 分配|S2-S3<br /><br /> Prepared|S4<br /><br /> 执行|S5-S7<br /><br /> 游标|S8-S10<br /><br /> 需要数据|S11-S12<br /><br /> 异步|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|--[1]|S0[1]|S0[1]|S0[1]|S0[1]|(HY010)|(HY010)|  
+|--[1]|S0 [1]|S0 [1]|S0 [1]|S0 [1]|HY010|HY010|  
   
- [1] 调用**SQLDisconnect**释放与连接关联的所有语句。 此外，这将返回的连接状态到 C2;S0 语句状态之前必须 C4 连接状态。  
+ [1] 调用**SQLDisconnect**将释放与该连接关联的所有语句。 而且，这会将连接状态返回到 C2;在语句状态为 S0 之前，连接状态必须为 C4。  
   
 ## <a name="sqlendtran"></a>SQLEndTran  
   
 |S0<br /><br /> 未分配|S1<br /><br /> 分配|S2-S3<br /><br /> Prepared|S4<br /><br /> 执行|S5-S7<br /><br /> 游标|S8-S10<br /><br /> 需要数据|S11-S12<br /><br /> 异步|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|--|--|-[2] 或 [3] S1 [1]|-S1 [3] [np] 和 （[1] 或 [2]） S1 [p] 和 [1] S2 [p] 和 [2]|-S1 [3] [np] 和 （[1] 或 [2]） S1 [p] 和 [1] S3 [p] 和 [2]|(HY010)|(HY010)|  
+|--|--|--[2] 或 [3] S1 [1]|--[3] S1 [np] 和（[1] 或 [2]） S1 [p] 和 [1] S2 [p] 和 [2]|--[3] S1 [np] 和（[1] 或 [2]） S1 [p] 和 [1] S3 [p] 和 [2]|HY010|HY010|  
   
- [1] *CompletionType*自变量是 SQL_COMMIT 和**SQLGetInfo** SQL_CURSOR_COMMIT_BEHAVIOR 信息类型，将返回 SQL_CB_DELETE 或*CompletionType*自变量是 SQL_ROLLBACK 和**SQLGetInfo**返回 SQL_CB_DELETE SQL_CURSOR_ROLLBACK_BEHAVIOR 信息类型。  
+ [1] *CompletionType*参数为 SQL_COMMIT， **SQLGetInfo**返回 SQL_CURSOR_COMMIT_BEHAVIOR 信息类型的 SQL_CB_DELETE，或者*CompletionType*参数为 SQL_ROLLBACK， **SQLGetInfo**返回 SQL_CB_DELETE 信息类型的 SQL_CURSOR_ROLLBACK_BEHAVIOR。  
   
- [2] *CompletionType*自变量是 SQL_COMMIT 和**SQLGetInfo** SQL_CURSOR_COMMIT_BEHAVIOR 信息类型，将返回 SQL_CB_CLOSE 或*CompletionType*自变量是 SQL_ROLLBACK 和**SQLGetInfo**返回 SQL_CB_CLOSE SQL_CURSOR_ROLLBACK_BEHAVIOR 信息类型。  
+ [2] *CompletionType*参数为 SQL_COMMIT， **SQLGetInfo**返回 SQL_CURSOR_COMMIT_BEHAVIOR 信息类型的 SQL_CB_CLOSE，或者*CompletionType*参数为 SQL_ROLLBACK， **SQLGetInfo**返回 SQL_CB_CLOSE 信息类型的 SQL_CURSOR_ROLLBACK_BEHAVIOR。  
   
- [3] *CompletionType*自变量是 SQL_COMMIT 和**SQLGetInfo** SQL_CURSOR_COMMIT_BEHAVIOR 信息类型，将返回 SQL_CB_PRESERVE 或*CompletionType*自变量是 SQL_ROLLBACK 和**SQLGetInfo**返回 SQL_CB_PRESERVE SQL_CURSOR_ROLLBACK_BEHAVIOR 信息类型。  
+ [3] *CompletionType*参数为 SQL_COMMIT， **SQLGetInfo**返回 SQL_CURSOR_COMMIT_BEHAVIOR 信息类型的 SQL_CB_PRESERVE，或者*CompletionType*参数为 SQL_ROLLBACK， **SQLGetInfo**返回 SQL_CB_PRESERVE 信息类型的 SQL_CURSOR_ROLLBACK_BEHAVIOR。  
   
 ## <a name="sqlexecdirect"></a>SQLExecDirect  
   
 |S0<br /><br /> 未分配|S1<br /><br /> 分配|S2-S3<br /><br /> Prepared|S4<br /><br /> 执行|S5-S7<br /><br /> 游标|S8-S10<br /><br /> 需要数据|S11-S12<br /><br /> 异步|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|(IH)|S4 [s] 和 [nr] S5 [s] 和 [r] [d] S8 S11 [x]|-[e] 和 [1] S1 [e] 和 [2] S4 [s] 和 [nr] S5 [s] 和 [r] [d] S8 S11 [x]|-[e]，[1] 和 [3] S1 [e]，[2] 和 [3] S4 [s] [nr] 和 [3] S5 [s] [r] 和 [3] S8 [d] 和 [3] S11 [x] 和 [3] 24000 [4]|请参阅下一个表|HY010|NS [c] HY010 [o]|  
+|IH|S4 [s] 和 [nr] S5 [s] 和 [r] S8 [d] S11 [x]|--[e] 和 [1] S1 [e] 和 [2] S4 [s] 和 [nr] S5 [s] 和 [r] S8 [d] S11 [x]|--[e]、[1] 和 [3] S1 [e]、[2] 和 [3] S4 [s]、[nr] 和 [3] S5 [s]、[r] 和 [3] S8 [d] 和 [3] 24000 [4]|查看下一个表|HY010|NS [c] HY010 [o]|  
   
- [1] 错误返回由驱动程序管理器。  
+ [1] 驱动程序管理器返回了错误。  
   
- [2] 上，不返回了错误的驱动程序管理器。  
+ [2] 驱动程序管理器未返回该错误。  
   
- [3] 当前结果的上一次或仅结果，或没有当前的结果。 有关多个结果的详细信息，请参阅[多个结果](../../../odbc/reference/develop-app/multiple-results.md)。  
+ [3] 当前结果为最后一个或唯一的结果，或者没有当前结果。 有关多个结果的详细信息，请参阅[多个结果](../../../odbc/reference/develop-app/multiple-results.md)。  
   
  [4] 当前结果不是最后一个结果。  
   
 ## <a name="sqlexecdirect-cursor-states"></a>SQLExecDirect （游标状态）  
   
-|S5<br /><br /> 打开|S6<br /><br /> SQLFetch 或 SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
+|S5<br /><br /> 已打开|S6<br /><br /> SQLFetch 或 SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
 |-------------------|---------------------------------------|-----------------------------|  
 |24000|24000 [1]|24000|  
   
- [如果，则返回由驱动程序管理器 1] 此错误**SQLFetch**或**SQLFetchScroll**未返回 SQL_NO_DATA，和如果驱动程序返回**SQLFetch**或**SQLFetchScroll**已返回 sql_no_data 为止。  
+ [1] 如果**SQLFetch**或**SQLFetchScroll**未返回 SQL_NO_DATA，驱动程序管理器会返回此错误，如果**SQLFetch**或**SQLFetchScroll**已 SQL_NO_DATA 返回，则由驱动程序返回。  
   
 ## <a name="sqlexecute"></a>SQLExecute  
   
 |S0<br /><br /> 未分配|S1<br /><br /> 分配|S2-S3<br /><br /> Prepared|S4<br /><br /> 执行|S5-S7<br /><br /> 游标|S8-S10<br /><br /> 需要数据|S11-S12<br /><br /> 异步|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|(IH)|(HY010)|请参阅下一个表|S2 [e] p 和 [1] S4 [s] [p] [nr] 和 [1] S5 [s] [p] [r] 和 [1] S8 [d] [p] 和 [1] S11 [x]，[p] 和 [1] 24000 [p] 和 [2] HY010 [np]|请参阅游标状态表|HY010|NS [c] HY010 [o]|  
+|IH|HY010|查看下一个表|S2 [e]，p，和 [1] S4 [s]，[p]，[nr]，[1] S5 [s]，[p]，[r] 和 [1] S8 [d]，[p]，and [1] S11 [x]，[p]，[1] 24000 [p] 和 [2] HY010 [np]|请参阅游标状态表|HY010|NS [c] HY010 [o]|  
   
- [1] 当前结果的上一次或仅结果，或没有当前的结果。 有关多个结果的详细信息，请参阅[多个结果](../../../odbc/reference/develop-app/multiple-results.md)。  
+ [1] 当前结果为最后一个或唯一的结果，或者没有当前结果。 有关多个结果的详细信息，请参阅[多个结果](../../../odbc/reference/develop-app/multiple-results.md)。  
   
  [2] 当前结果不是最后一个结果。  
   
@@ -266,64 +266,64 @@ ODBC 语句具有以下状态。
   
 |S2<br /><br /> 无结果|S3<br /><br /> 结果|  
 |-----------------------|--------------------|  
-|S4 [s] [d] S8 S11 [x]|S5 [s] [d] S8 S11 [x]|  
+|S4 [s] S8 [d] S11 [x]|S5 [s] S8 [d] S11 [x]|  
   
 ## <a name="sqlexecute-cursor-states"></a>SQLExecute （游标状态）  
   
-|S5<br /><br /> 打开|S6<br /><br /> SQLFetch 或 SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
+|S5<br /><br /> 已打开|S6<br /><br /> SQLFetch 或 SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
 |-------------------|---------------------------------------|-----------------------------|  
-|24000 [p] HY010 [np]|24000 [p]、 [1] HY010 [np]|24000 [p] HY010 [np]|  
+|24000 [p] HY010 [np]|24000 [p]，[1] HY010 [np]|24000 [p] HY010 [np]|  
   
- [如果，则返回由驱动程序管理器 1] 此错误**SQLFetch**或**SQLFetchScroll**未返回 SQL_NO_DATA，和如果驱动程序返回**SQLFetch**或**SQLFetchScroll**已返回 sql_no_data 为止。  
+ [1] 如果**SQLFetch**或**SQLFetchScroll**未返回 SQL_NO_DATA，驱动程序管理器会返回此错误，如果**SQLFetch**或**SQLFetchScroll**已 SQL_NO_DATA 返回，则由驱动程序返回。  
   
 ## <a name="sqlextendedfetch"></a>SQLExtendedFetch  
   
 |S0<br /><br /> 未分配|S1<br /><br /> 分配|S2-S3<br /><br /> Prepared|S4<br /><br /> 执行|S5-S7<br /><br /> 游标|S8-S10<br /><br /> 需要数据|S11-S12<br /><br /> 异步|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH|S1010|S1010|24000|请参阅下一个表|S1010|NS [c] S1010 [o]|  
+|IH|S1010|S1010|24000|查看下一个表|S1010|NS [c] S1010 [o]|  
   
 ## <a name="sqlextendedfetch-cursor-states"></a>SQLExtendedFetch （游标状态）  
   
-|S5<br /><br /> 打开|S6<br /><br /> SQLFetch 或 SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
+|S5<br /><br /> 已打开|S6<br /><br /> SQLFetch 或 SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
 |-------------------|---------------------------------------|-----------------------------|  
-|S7 [s] 或 [nf] S11 [x]|S1010|-[s] 或 [nf] S11 [x]|  
+|S7 [s] 或 [nf-e] S11 [x]|S1010|--[s] 或 [nf-e] S11 [x]|  
   
 ## <a name="sqlfetch-and-sqlfetchscroll"></a>SQLFetch 和 SQLFetchScroll  
   
 |S0<br /><br /> 未分配|S1<br /><br /> 分配|S2-S3<br /><br /> Prepared|S4<br /><br /> 执行|S5-S7<br /><br /> 游标|S8-S10<br /><br /> 需要数据|S11-S12<br /><br /> 异步|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH|HY010|HY010|24000|请参阅下一个表|HY010|NS [c] HY010 [o]|  
+|IH|HY010|HY010|24000|查看下一个表|HY010|NS [c] HY010 [o]|  
   
 ## <a name="sqlfetch-and-sqlfetchscroll-cursor-states"></a>SQLFetch 和 SQLFetchScroll （游标状态）  
   
-|S5<br /><br /> 打开|S6<br /><br /> SQLFetch 或 SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
+|S5<br /><br /> 已打开|S6<br /><br /> SQLFetch 或 SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
 |-------------------|---------------------------------------|-----------------------------|  
-|S6 [s] 或 [nf] S11 [x]|-[s] 或 [nf] S11 [x]|HY010|  
+|S6 [s] 或 [nf-e] S11 [x]|--[s] 或 [nf-e] S11 [x]|HY010|  
   
 ## <a name="sqlfreehandle"></a>SQLFreeHandle  
   
 |S0<br /><br /> 未分配|S1<br /><br /> 分配|S2-S3<br /><br /> Prepared|S4<br /><br /> 执行|S5-S7<br /><br /> 游标|S8-S10<br /><br /> 需要数据|S11-S12<br /><br /> 异步|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|-- [1]|HY010|HY010|HY010|HY010|HY010|HY010|  
+|--[1]|HY010|HY010|HY010|HY010|HY010|HY010|  
 |IH [2]|S0|S0|S0|S0|HY010|HY010|  
-|-- [3]|--|--|--|--|--|--|  
+|--[3]|--|--|--|--|--|--|  
   
- [1] 此行显示转换时*HandleType*为 SQL_HANDLE_ENV 或 SQL_HANDLE_DBC。  
+ [1] 当*HandleType* SQL_HANDLE_ENV 或 SQL_HANDLE_DBC 时，该行显示转换。  
   
- [2] 此行显示转换时*HandleType*已 SQL_HANDLE_STMT。  
+ [2] 在 SQL_HANDLE_STMT *HandleType*时，该行显示转换。  
   
- [3] 此行显示转换时*HandleType* SQL_HANDLE_DESC，显式分配的描述符。  
+ [3] 此行显示*HandleType* SQL_HANDLE_DESC 并显式分配描述符时的转换。  
   
 ## <a name="sqlfreestmt"></a>SQLFreeStmt  
   
 |S0<br /><br /> 未分配|S1<br /><br /> 分配|S2-S3<br /><br /> Prepared|S4<br /><br /> 执行|S5-S7<br /><br /> 游标|S8-S10<br /><br /> 需要数据|S11-S12<br /><br /> 异步|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH [1]|--|--|S1 np S2 [p]|S1 np S3 [p]|HY010|HY010|  
+|IH [1]|--|--|S1 [np] S2 [p]|S1 [np] S3 [p]|HY010|HY010|  
 |IH [2]|--|--|--|--|HY010|HY010|  
   
- [1] 此行显示转换时*选项*已 SQL_CLOSE。  
+ [1] 在 SQL_CLOSE*选项*时，该行显示转换。  
   
- [2] 此行显示转换时*选项*SQL_UNBIND 或 SQL_RESET_PARAMS。 如果*选项*参数为 SQL_DROP 和基础驱动程序是 ODBC 3 *.x*驱动程序，驱动程序管理器将其映射到调用**SQLFreeHandle**与*HandleType*设置为 SQL_HANDLE_STMT。 有关详细信息，请参阅有关的转换表[SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)。  
+ [2] 当*选项*为 SQL_UNBIND 或 SQL_RESET_PARAMS 时，该行显示转换。 如果*选项*参数为 SQL_DROP，而基础*驱动程序为 ODBC 1.x 驱动程序*，则驱动程序管理器会将此项映射到对**SQLFreeHandle**的调用，并将*HandleType*设置为 SQL_HANDLE_STMT。 有关详细信息，请参阅[SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)的转换表。  
   
 ## <a name="sqlgetconnectattr"></a>SQLGetConnectAttr  
   
@@ -341,54 +341,54 @@ ODBC 语句具有以下状态。
   
 |S0<br /><br /> 未分配|S1<br /><br /> 分配|S2-S3<br /><br /> Prepared|S4<br /><br /> 执行|S5-S7<br /><br /> 游标|S8-S10<br /><br /> 需要数据|S11-S12<br /><br /> 异步|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH|HY010|HY010|24000|请参阅下一个表|HY010|NS [c] HY010 [o]|  
+|IH|HY010|HY010|24000|查看下一个表|HY010|NS [c] HY010 [o]|  
   
 ## <a name="sqlgetdata-cursor-states"></a>SQLGetData （游标状态）  
   
-|S5<br /><br /> 打开|S6<br /><br /> SQLFetch 或 SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
+|S5<br /><br /> 已打开|S6<br /><br /> SQLFetch 或 SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
 |-------------------|---------------------------------------|-----------------------------|  
-|24000|-[s] 或 [nf] [x] 24000 [b] HY109 S11 [i]|-[s] 或 [nf] [x] 24000 [b] HY109 S11 [i]|  
+|24000|--[s] 或 [nf-e] S11 [x] 24000 [b] HY109 [i]|--[s] 或 [nf-e] S11 [x] 24000 [b] HY109 [i]|  
   
 ## <a name="sqlgetdescfield-and-sqlgetdescrec"></a>SQLGetDescField 和 SQLGetDescRec  
   
 |S0<br /><br /> 未分配|S1<br /><br /> 分配|S2-S3<br /><br /> Prepared|S4<br /><br /> 执行|S5-S7<br /><br /> 游标|S8-S10<br /><br /> 需要数据|S11-S12<br /><br /> 异步|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH|-[1] 或 [2] HY010 [3]|请参阅下一个表|-[1] 或 [2] 24000 [3]|-[1]，[2] 或 [3] S11 [3] 和 [x]|HY010|NS [c] 或 [4] HY010 [o] 和 [5]|  
+|IH|--[1] 或 [2] HY010 [3]|查看下一个表|--[1] 或 [2] 24000 [3]|--[1]、[2] 或 [3] S11 [3] 和 [x]|HY010|NS [c] 或 [4] HY010 [o] 和 [5]|  
   
- [1] *DescriptorHandle*参数为 APD 或 ARD。  
+ [1] *DescriptorHandle*参数是 APD 或 ARD。  
   
- [2] *DescriptorHandle*参数为 IPD。  
+ [2] *DescriptorHandle*参数是 IPD。  
   
- [3] *DescriptorHandle*参数为 IRD。  
+ [3] *DescriptorHandle*参数是 IRD。  
   
- [4] *DescriptorHandle*参数为与相同*DescriptorHandle*中的参数**SQLGetDescField**或者**SQLGetDescRec**以异步方式运行的函数。  
+ [4] *DescriptorHandle*参数与异步运行的**SQLGetDescField**或**SQLGetDescRec**函数中的*DescriptorHandle*参数相同。  
   
- [5] *DescriptorHandle*参数为不同于*DescriptorHandle*中的参数**SQLGetDescField**或**SQLGetDescRec**以异步方式运行的函数。  
+ [5] *DescriptorHandle*参数与异步运行的**SQLGetDescField**或**SQLGetDescRec**函数中的*DescriptorHandle*参数不同。  
   
 ## <a name="sqlgetdescfield-and-sqlgetdescrec-prepared-states"></a>SQLGetDescField 和 SQLGetDescRec （已准备状态）  
   
 |S2<br /><br /> 无结果|S3<br /><br /> 结果|  
 |-----------------------|--------------------|  
-|-[1]，[2] 或 [3] S11 [2] 和 [x]|-[1]，[2] 或 [3] S11 [x]|  
+|--[1]、[2] 或 [3] S11 [2] 和 [x]|--[1]、[2] 或 [3] S11 [x]|  
   
- [1] *DescriptorHandle*参数为 APD 或 ARD。  
+ [1] *DescriptorHandle*参数是 APD 或 ARD。  
   
- [2] *DescriptorHandle*参数为 IPD。  
+ [2] *DescriptorHandle*参数是 IPD。  
   
- [3] *DescriptorHandle*参数为 IRD。 请注意，这些函数始终返回 SQL_NO_DATA 处于状态 S2 时*DescriptorHandle*已 IRD。  
+ [3] *DescriptorHandle*参数是 IRD。 请注意，当*DescriptorHandle*为 IRD 时，这些函数始终返回状态 S2 SQL_NO_DATA。  
   
 ## <a name="sqlgetdiagfield-and-sqlgetdiagrec"></a>SQLGetDiagField 和 SQLGetDiagRec  
   
 |S0<br /><br /> 未分配|S1<br /><br /> 分配|S2-S3<br /><br /> Prepared|S4<br /><br /> 执行|S5-S7<br /><br /> 游标|S8-S10<br /><br /> 需要数据|S11-S12<br /><br /> 异步|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--[1]|--|--|--|--|--|--|  
-|IH[2]|--[3]|--[3]|--|--|--[3]|--[3]|  
+|IH [2]|--[3]|--[3]|--|--|--[3]|--[3]|  
   
- [1] 此行显示转换时*HandleType*为 SQL_HANDLE_ENV、 SQL_HANDLE_DBC 或 SQL_HANDLE_DESC。  
+ [1] 当*HandleType*为 SQL_HANDLE_ENV、SQL_HANDLE_DBC 或 SQL_HANDLE_DESC 时，该行显示转换。  
   
- [2] 此行显示转换时*HandleType*已 SQL_HANDLE_STMT。  
+ [2] 在 SQL_HANDLE_STMT *HandleType*时，该行显示转换。  
   
- [3] **SQLGetDiagField**始终返回一个错误消息，在此状态时*DiagIdentifier*是 SQL_DIAG_ROW_COUNT。  
+ [3] 当 SQL_DIAG_ROW_COUNT *DiagIdentifier*时， **SQLGetDiagField**始终返回此状态的错误。  
   
 ## <a name="sqlgetenvattr"></a>SQLGetEnvAttr  
   
@@ -412,35 +412,35 @@ ODBC 语句具有以下状态。
   
 |S0<br /><br /> 未分配|S1<br /><br /> 分配|S2-S3<br /><br /> Prepared|S4<br /><br /> 执行|S5-S7<br /><br /> 游标|S8-S10<br /><br /> 需要数据|S11-S12<br /><br /> 异步|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH|--[1] 24000[2]|--[1] 24000[2]|--[1] 24000[2]|请参阅下一个表|HY010|HY010|  
+|IH|--[1] 24000 [2]|--[1] 24000 [2]|--[1] 24000 [2]|查看下一个表|HY010|HY010|  
   
- [1] 将语句属性不是 SQL_ATTR_ROW_NUMBER。  
+ [1] 语句特性未 SQL_ATTR_ROW_NUMBER。  
   
- [2] 的语句属性是 SQL_ATTR_ROW_NUMBER。  
+ [2] 语句属性已 SQL_ATTR_ROW_NUMBER。  
   
 ## <a name="sqlgetstmtattr-cursor-states"></a>SQLGetStmtAttr （游标状态）  
   
-|S5<br /><br /> 打开|S6<br /><br /> SQLFetch 或 SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
+|S5<br /><br /> 已打开|S6<br /><br /> SQLFetch 或 SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
 |-------------------|---------------------------------------|-----------------------------|  
-|--[1] 24000[2]|-[1] 或 ([v] 和 [2]) 24000 [b] 和 [2] HY109 [i] 和 [2]|-[i] 或 ([v] 和 [2]) 24000 [b] 和 [2] HY109 [1] 和 [2]|  
+|--[1] 24000 [2]|--[1] 或（[v] 和 [2]） 24000 [b] 和 [2] HY109 [i] 和 [2]|--[i] 或（[v] 和 [2]） 24000 [b] 和 [2] HY109 [1] 和 [2]|  
   
- [1]*特性*参数不为 SQL_ATTR_ROW_NUMBER。  
+ [1] 未 SQL_ATTR_ROW_NUMBER*特性*参数。  
   
- [2]*特性*参数为 SQL_ATTR_ROW_NUMBER。  
+ [2]*特性*参数 SQL_ATTR_ROW_NUMBER。  
   
 ## <a name="sqlmoreresults"></a>SQLMoreResults  
   
 |S0<br /><br /> 未分配|S1<br /><br /> 分配|S2-S3<br /><br /> Prepared|S4<br /><br /> 执行|S5-S7<br /><br /> 游标|S8-S10<br /><br /> 需要数据|S11-S12<br /><br /> 异步|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|(IH)|--[1]|--[1]|-[s] 和 [2] S1 [nf] [np] 和 [4] S2 [nf] [p] 和 [4] S5 [s] 和 [3] S11 [x]|S1 [nf] [np] 和 [4] S3 [nf] [p] 和 [4] S4 [s] 和 [2] S5 [s] 和 [3] S11 [x]|HY010|NS [c] HY010 [o]|  
+|IH|--[1]|--[1]|--[s] 和 [2] S1 [nf-e]，[np]，[4] S2 [nf-e]，[p]，and [4] S5 [s] 和 [3] S11 [x]|S1 [nf-e]，[np]，and [4] S3 [nf-e]，[p] 和 [4] S4 [s] 和 [2] S5 [s] 和 [3] S11 [x]|HY010|NS [c] HY010 [o]|  
   
- [1] 该函数始终在此状态下返回 SQL_NO_DATA。  
+ [1] 函数始终返回此状态 SQL_NO_DATA。  
   
- [2] 的下一个结果是行计数。  
+ [2] 下一个结果是行计数。  
   
- [3] 的下一个结果是结果集。  
+ [3] 下一个结果是一个结果集。  
   
- [4] 当前结果是最后一个结果。  
+ [4] 当前结果为最后一个结果。  
   
 ## <a name="sqlnativesql"></a>SQLNativeSql  
   
@@ -452,53 +452,53 @@ ODBC 语句具有以下状态。
   
 |S0<br /><br /> 未分配|S1<br /><br /> 分配|S2-S3<br /><br /> Prepared|S4<br /><br /> 执行|S5-S7<br /><br /> 游标|S8-S10<br /><br /> 需要数据|S11-S12<br /><br /> 异步|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH|HY010|-[s] S11 [x]|-[s] S11 [x]|-[s] S11 [x]|HY010|NS [c] HY010 [o]|  
+|IH|HY010|--[s] S11 [x]|--[s] S11 [x]|--[s] S11 [x]|HY010|NS [c] HY010 [o]|  
   
 ## <a name="sqlnumresultcols"></a>SQLNumResultCols  
   
 |S0<br /><br /> 未分配|S1<br /><br /> 分配|S2-S3<br /><br /> Prepared|S4<br /><br /> 执行|S5-S7<br /><br /> 游标|S8-S10<br /><br /> 需要数据|S11-S12<br /><br /> 异步|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH|HY010|-[s] S11 [x]|-[s] S11 [x]|-[s] S11 [x]|HY010|NS [c] HY010 [o]|  
+|IH|HY010|--[s] S11 [x]|--[s] S11 [x]|--[s] S11 [x]|HY010|NS [c] HY010 [o]|  
   
 ## <a name="sqlparamdata"></a>SQLParamData  
   
 |S0<br /><br /> 未分配|S1<br /><br /> 分配|S2-S3<br /><br /> Prepared|S4<br /><br /> 执行|S5-S7<br /><br /> 游标|S8-S10<br /><br /> 需要数据|S11-S12<br /><br /> 异步|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH|HY010|HY010|HY010|HY010|请参阅下一个表|NS [c] HY010 [o]|  
+|IH|HY010|HY010|HY010|HY010|查看下一个表|NS [c] HY010 [o]|  
   
-## <a name="sqlparamdata-need-data-states"></a>SQLParamData （需要的数据状态）  
+## <a name="sqlparamdata-need-data-states"></a>SQLParamData （需要数据状态）  
   
-|S8<br /><br /> 需要数据|S9<br /><br /> 必须将|S10<br /><br /> 可以将|  
+|S8<br /><br /> 需要数据|S9<br /><br /> 必须放入|S10<br /><br /> 可以将|  
 |----------------------|---------------------|---------------------|  
-|S1 [e] 和 [1] S2 [e] [nr] 和 S3 [2] [e] [r] 和 [2] S5 [e] 和 [4] S6 [e] 和 [5] S7 [e] 和 [3] S9 [d] S11 [x]|HY010|S1 [e] 和 S2 [1] [e] [nr] 和 S3 [2] [e] [r] 和 [2] S4 [s] [nr] 和 ([1] 或 [2]) S5 [s] [r] 和 ([1] 或 [2]) S5 ([s] 或 [e]) 和 [4] S6 ([s] 或 [e]) 和 [5] S7 ([s] 或 [e]) 和 S9 [3] [d] S11 [x]|  
+|S1 [e] 和 [1] S2 [e]，[nr]，和 [2] S3 [e]，[r]，[2] S5 [e] 和 [4] S6 [e] 和 [5] S7 [e] 和 [3] S9 [d] S11 [x]|HY010|S1 [e] 和 [1] S2 [e]，[nr]，和 [2] S3 [e]，[r]，[2] S4 [s]，[nr]，and （[1] 或 [2]） S5 [s]，[r]、和（[1] 或 [2]） S5 （[s] 或 [e]）和 [4] S6 （[s] 或 [e]）和 [5] S7 （[s] 或 [e]）和 [3] S9 [d] S11 [x]|  
   
  [1] **SQLExecDirect**返回 SQL_NEED_DATA。  
   
  [2] **SQLExecute**返回 SQL_NEED_DATA。  
   
- [3] **SQLSetPos**必须已从状态 S7 调用并返回 SQL_NEED_DATA。  
+ [3] 已从状态 S7 调用**SQLSetPos** ，并返回 SQL_NEED_DATA。  
   
- [4] **SQLBulkOperations**必须已从状态 S5 调用并返回 SQL_NEED_DATA。  
+ [4] **SQLBulkOperations**已从 S5 状态调用，并返回 SQL_NEED_DATA。  
   
- [5] **SQLSetPos**或**SQLBulkOperations**必须已从状态 S6 调用并返回 SQL_NEED_DATA。  
+ [5] 已从状态 S6 调用了**SQLSetPos**或**SQLBulkOperations** ，并返回 SQL_NEED_DATA。  
   
 ## <a name="sqlprepare"></a>SQLPrepare  
   
 |S0<br /><br /> 未分配|S1<br /><br /> 分配|S2-S3<br /><br /> Prepared|S4<br /><br /> 执行|S5-S7<br /><br /> 游标|S8-S10<br /><br /> 需要数据|S11-S12<br /><br /> 异步|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|(IH)|S2 [s] 和 [nr] S3 [s] 和 [r] S11 [x]|-[s] 或 ([e] 和 [1]) S1 [e] 和 [2] S11 [x]|S1 [e] 和 [3] S2 [s] [nr] 和 [3] S3 [s] [r] 和 [3] S11 [x] 和 [3] 24000 [4]|请参阅下一个表|HY010|NS [c] HY010 [o]|  
+|IH|S2 [s] 和 [nr] S3 [s] 和 [r] S11 [x]|--[s] 或（[e] 和 [1]） S1 [e] 和 [2] S11 [x]|S1 [e] 和 [3] S2 [s]，[nr]，[3] S3 [s]，[r]，[3] S11 [x] 和 [3] 24000 [4]|查看下一个表|HY010|NS [c] HY010 [o]|  
   
- [1] 准备工作之外的原因导致验证失败 (SQLSTATE 是 HY009 [无效的参数值] 或 HY090 [无效字符串或缓冲区长度])。  
+ [1] 除了验证语句（SQLSTATE was HY009 [无效参数值] 或 HY090 [无效字符串或缓冲区长度]）以外的原因，准备工作失败。  
   
- [2] 所做的准备失败验证该语句时 (SQLSTATE 未 HY009 [无效的参数值] 或 HY090 [无效字符串或缓冲区长度])。  
+ [2] 验证语句时准备失败（SQLSTATE 不是 HY009 [无效的参数值] 或 HY090 [无效的字符串或缓冲区长度]）。  
   
- [3] 当前结果的上一次或仅结果，或没有当前的结果。 有关多个结果的详细信息，请参阅[多个结果](../../../odbc/reference/develop-app/multiple-results.md)。  
+ [3] 当前结果为最后一个或唯一的结果，或者没有当前结果。 有关多个结果的详细信息，请参阅[多个结果](../../../odbc/reference/develop-app/multiple-results.md)。  
   
  [4] 当前结果不是最后一个结果。  
   
 ## <a name="sqlprepare-cursor-states"></a>SQLPrepare （游标状态）  
   
-|S5<br /><br /> 打开|S6<br /><br /> SQLFetch 或 SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
+|S5<br /><br /> 已打开|S6<br /><br /> SQLFetch 或 SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
 |-------------------|---------------------------------------|-----------------------------|  
 |24000|24000|24000|  
   
@@ -506,43 +506,43 @@ ODBC 语句具有以下状态。
   
 |S0<br /><br /> 未分配|S1<br /><br /> 分配|S2-S3<br /><br /> Prepared|S4<br /><br /> 执行|S5-S7<br /><br /> 游标|S8-S10<br /><br /> 需要数据|S11-S12<br /><br /> 异步|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH|HY010|HY010|HY010|HY010|请参阅下一个表|NS [c] HY010 [o]|  
+|IH|HY010|HY010|HY010|HY010|查看下一个表|NS [c] HY010 [o]|  
   
-## <a name="sqlputdata-need-data-states"></a>SQLPutData （需要的数据状态）  
+## <a name="sqlputdata-need-data-states"></a>SQLPutData （需要数据状态）  
   
-|S8<br /><br /> 需要数据|S9<br /><br /> 必须将|S10<br /><br /> 可以将|  
+|S8<br /><br /> 需要数据|S9<br /><br /> 必须放入|S10<br /><br /> 可以将|  
 |----------------------|---------------------|---------------------|  
-|HY010|S1 [e] 和 [1] S2 [e] [nr] 和 S3 [2] [e] [r] 和 [2] S5 [e] 和 [4] S6 [e] 和 [5] S7 [e] 和 [3] S10 [s] S11 [x]|-[s] [e] S1 和 S2 [1] [e] [nr] 和 [2] S3 [e] [r] 和 [2] S5 [e] 和 [4] S6 [e] 和 [5] S7 [e] 和 [3] [x] S11 hy011 并显示 [6]|  
+|HY010|S1 [e] 和 [1] S2 [e]，[nr]，和 [2] S3 [e]，[r]，[2] S5 [e] 和 [4] S6 [e] 和 [5] S7 [e] 和 [3] S10 [s] S11 [x]|--[s] S1 [e] 和 [1] S2 [e]，[nr]，[2] S3 [e]，[r]，and [2] S5 [e] 和 [4] S6 [e] 和 [3] S11 [x] HY011 [6]|  
   
  [1] **SQLExecDirect**返回 SQL_NEED_DATA。  
   
  [2] **SQLExecute**返回 SQL_NEED_DATA。  
   
- [3] **SQLSetPos**必须已从状态 S7 调用并返回 SQL_NEED_DATA。  
+ [3] 已从状态 S7 调用**SQLSetPos** ，并返回 SQL_NEED_DATA。  
   
- [4] **SQLBulkOperations**必须已从状态 S5 调用并返回 SQL_NEED_DATA。  
+ [4] **SQLBulkOperations**已从 S5 状态调用，并返回 SQL_NEED_DATA。  
   
- [5] **SQLSetPos**或**SQLBulkOperations**必须已从状态 S6 调用并返回 SQL_NEED_DATA。  
+ [5] 已从状态 S6 调用了**SQLSetPos**或**SQLBulkOperations** ，并返回 SQL_NEED_DATA。  
   
- [6] 一个或多个调用**SQLPutData**单个参数返回 SQL_SUCCESS，，然后调用**SQLPutData**使用相同的参数进行*StrLen_or_Ind*设置为 SQL_NULL_DATA。  
+ [6] 对**SQLPutData**的一个或多个调用返回 SQL_SUCCESS，然后使用*StrLen_or_Ind* **设置为 SQL_NULL_DATA**对同一参数进行调用。  
   
 ## <a name="sqlrowcount"></a>SQLRowCount  
   
 |S0<br /><br /> 未分配|S1<br /><br /> 分配|S2-S3<br /><br /> Prepared|S4<br /><br /> 执行|S5-S7<br /><br /> 游标|S8-S10<br /><br /> 需要数据|S11-S12<br /><br /> 异步|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|(IH)|(HY010)|(HY010)|--|--|(HY010)|(HY010)|  
+|IH|HY010|HY010|--|--|HY010|HY010|  
   
 ## <a name="sqlsetconnectattr"></a>SQLSetConnectAttr  
   
 |S0<br /><br /> 未分配|S1<br /><br /> 分配|S2-S3<br /><br /> Prepared|S4<br /><br /> 执行|S5-S7<br /><br /> 游标|S8-S10<br /><br /> 需要数据|S11-S12<br /><br /> 异步|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|--[1]|--|--|--|--[2] 24000[3]|HY010|HY010|  
+|--[1]|--|--|--|--[2] 24000 [3]|HY010|HY010|  
   
- [1] 此行显示转换时*特性*连接属性。 有关转换何时*特性*为语句属性，请参阅有关的语句转换表**SQLSetStmtAttr**。  
+ [1] 此行显示*属性*为连接属性时的转换。 对于 "当*属性*为语句时转换" 属性，请参阅**SQLSetStmtAttr**的语句转换表。  
   
- [2]*特性*参数不为 SQL_ATTR_CURRENT_CATALOG。  
+ [2] 未 SQL_ATTR_CURRENT_CATALOG*特性*参数。  
   
- [3]*特性*参数为 SQL_ATTR_CURRENT_CATALOG。  
+ [3]*特性*参数 SQL_ATTR_CURRENT_CATALOG。  
   
 ## <a name="sqlsetcursorname"></a>SQLSetCursorName  
   
@@ -554,9 +554,9 @@ ODBC 语句具有以下状态。
   
 |S0<br /><br /> 未分配|S1<br /><br /> 分配|S2-S3<br /><br /> Prepared|S4<br /><br /> 执行|S5-S7<br /><br /> 游标|S8-S10<br /><br /> 需要数据|S11-S12<br /><br /> 异步|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH[1]|--|--|--|--|HY010|HY010|  
+|IH [1]|--|--|--|--|HY010|HY010|  
   
- [1] 此行显示转换其中*DescriptorHandle*自变量是一种 ARD、 APD、 IPD，或 (对于**SQLSetDescField**) IRD 时*FieldIdentifier*参数是 SQL_DESC_ARRAY_STATUS_PTR 或 SQL_DESC_ROWS_PROCESSED_PTR。 它是调用错误**SQLSetDescField**为 IRD 时*FieldIdentifier*为其他任何值。  
+ [1] 此行显示转换，其中*DescriptorHandle*参数是 ARD、APD、IPD，或（如果**SQLSetDescField**） *IRD 参数为*SQL_DESC_ARRAY_STATUS_PTR 或 SQL_DESC_ROWS_PROCESSED_PTR。 当*FieldIdentifier*为任何其他值时，为 IRD 调用**SQLSetDescField**是错误的。  
   
 ## <a name="sqlsetenvattr"></a>SQLSetEnvAttr  
   
@@ -568,20 +568,20 @@ ODBC 语句具有以下状态。
   
 |S0<br /><br /> 未分配|S1<br /><br /> 分配|S2-S3<br /><br /> Prepared|S4<br /><br /> 执行|S5-S7<br /><br /> 游标|S8-S10<br /><br /> 需要数据|S11-S12<br /><br /> 异步|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH|HY010|HY010|24000|请参阅下一个表|HY010|NS [c] HY010 [o]|  
+|IH|HY010|HY010|24000|查看下一个表|HY010|NS [c] HY010 [o]|  
   
 ## <a name="sqlsetpos-cursor-states"></a>SQLSetPos （游标状态）  
   
-|S5<br /><br /> 打开|S6<br /><br /> SQLFetch 或 SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
+|S5<br /><br /> 已打开|S6<br /><br /> SQLFetch 或 SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
 |-------------------|---------------------------------------|-----------------------------|  
-|24000|-[s] S8 [d] [x] 24000 [b] HY109 S11 [i]|-[s] S8 [d] [x] 24000 [b] HY109 S11 [i]|  
+|24000|--[s] S8 [d] S11 [x] 24000 [b] HY109 [i]|--[s] S8 [d] S11 [x] 24000 [b] HY109 [i]|  
   
 ## <a name="sqlsetstmtattr"></a>SQLSetStmtAttr  
   
 |S0<br /><br /> 未分配|S1<br /><br /> 分配|S2-S3<br /><br /> Prepared|S4<br /><br /> 执行|S5-S7<br /><br /> 游标|S8-S10<br /><br /> 需要数据|S11-S12<br /><br /> 异步|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH|--|--[1] HY011[2]|--[1] 24000[2]|--[1] 24000[2]|HY010 [np] 或 [1] HY011 [p] 和 [2]|HY010 [np] 或 [1] HY011 [p] 和 [2]|  
+|IH|--|--[1] HY011 [2]|--[1] 24000 [2]|--[1] 24000 [2]|HY010 [np] 或 [1] HY011 [p] 和 [2]|HY010 [np] 或 [1] HY011 [p] 和 [2]|  
   
- [1]*特性*SQL_ATTR_CONCURRENCY、 SQL_ATTR_CURSOR_TYPE、 SQL_ATTR_SIMULATE_CURSOR、 SQL_ATTR_USE_BOOKMARKS、 SQL_ATTR_CURSOR_SCROLLABLE 或将 SQL_ATTR_CURSOR_SENSITIVITY 参数不是。  
+ [1]*特性*参数不是 SQL_ATTR_CONCURRENCY、SQL_ATTR_CURSOR_TYPE、SQL_ATTR_SIMULATE_CURSOR、SQL_ATTR_USE_BOOKMARKS、SQL_ATTR_CURSOR_SCROLLABLE 或 SQL_ATTR_CURSOR_SENSITIVITY。  
   
- [2]*特性*参数为 SQL_ATTR_CONCURRENCY、 SQL_ATTR_CURSOR_TYPE、 SQL_ATTR_SIMULATE_CURSOR、 SQL_ATTR_USE_BOOKMARKS、 SQL_ATTR_CURSOR_SCROLLABLE 或将 SQL_ATTR_CURSOR_SENSITIVITY。
+ [2]*特性*参数 SQL_ATTR_CONCURRENCY、SQL_ATTR_CURSOR_TYPE、SQL_ATTR_SIMULATE_CURSOR、SQL_ATTR_USE_BOOKMARKS、SQL_ATTR_CURSOR_SCROLLABLE 或 SQL_ATTR_CURSOR_SENSITIVITY。

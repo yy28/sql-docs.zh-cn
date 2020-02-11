@@ -25,10 +25,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3aa122e19d890b0b994e4403dcc59b3131571d7c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629685"
 ---
 # <a name="subscribe-to-publications"></a>订阅发布
@@ -72,14 +72,14 @@ ms.locfileid: "62629685"
   
  **删除推送订阅**  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]设置用户帐户 ：[删除推送订阅](delete-a-push-subscription.md)  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]：[删除推送订阅](delete-a-push-subscription.md)  
   
 > [!NOTE]  
 >  删除订阅不会从订阅服务器中删除已发布的对象。  
   
  **创建请求订阅**  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]设置用户帐户 ：[创建请求订阅](create-a-pull-subscription.md)  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]：[创建请求订阅](create-a-pull-subscription.md)  
   
  **查看或修改请求订阅属性**  
   
@@ -89,7 +89,7 @@ ms.locfileid: "62629685"
   
  [删除请求订阅](delete-a-pull-subscription.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [保护订阅服务器](security/secure-the-subscriber.md)   
  [订阅过期和停用](subscription-expiration-and-deactivation.md)  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d454f84295d86b373c3b5462580641a719435a17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104800"
 ---
 # <a name="subreports-report-builder-and-ssrs"></a>子报表（报表生成器和 SSRS）
@@ -54,7 +54,7 @@ ms.locfileid: "66104800"
   
  在报表生成器中，若要预览主报表中的子报表，这两个报表必须位于相同报表服务器中，否则必须指定子报表的完整路径。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [钻取、深化、子报表和嵌套数据区域（报表生成器和 SSRS）](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

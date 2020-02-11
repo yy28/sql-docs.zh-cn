@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f58f6a181d1c3bda8556d0ac07fd0f983cb8b52f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63045989"
 ---
 # <a name="soapexception-errors-table"></a>SoapException 错误表
@@ -99,7 +99,7 @@ ms.locfileid: "63045989"
 |CancelJob |rsJobWasCanceled |  
 |ListSecureMethods |rsServerConfigurationError |  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [介绍 Reporting Services 中的异常处理](../introducing-exception-handling-in-reporting-services.md)   
  [错误和事件参考 (Reporting Services)](../../troubleshooting/errors-and-events-reference-reporting-services.md)   
  [Reporting Services SoapException 类](reporting-services-soapexception-class.md)   

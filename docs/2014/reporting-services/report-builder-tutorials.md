@@ -1,5 +1,5 @@
 ---
-title: 教程 （报表生成器） |Microsoft Docs
+title: 教程（报表生成器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3859dbf74d1def19b5f3aad405a884ae607fbca3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107973"
 ---
 # <a name="tutorials-report-builder"></a>教程（报表生成器）
@@ -28,13 +28,13 @@ ms.locfileid: "66107973"
  [获取数据连接的备选方式（报表生成器）](alternative-ways-to-get-a-data-connection-report-builder.md)  
  大多数这些教程都使用嵌入数据源。 如果您有权访问共享数据源，则可以改为使用共享数据源。 本主题将介绍用于使用共享数据源的步骤。  
   
- [教程：生成基本表报表（报表生成器）](tutorial-creating-a-basic-table-report-report-builder.md)  
+ [教程：创建基本表报表（报表生成器）](tutorial-creating-a-basic-table-report-report-builder.md)  
  按照本教程中的步骤来学习如何创建第一个报表。 本教程将向您演示如何使用报表生成器来创建数据源连接、定义简单查询、生成包含数据的布局、设置报表的格式以及添加分组和总计。  
   
- [教程：生成矩阵报表（报表生成器）](tutorial-creating-a-matrix-report-report-builder.md)  
+ [教程：创建矩阵报表（报表生成器）](tutorial-creating-a-matrix-report-report-builder.md)  
  按照本教程中的步骤学习如何添加和配置矩阵。 使用表或矩阵向导创建报表数据源、数据集和布局，然后在报表生成器的“设计”  视图内增强矩阵的效果。  
   
- [教程：生成自由格式报表（报表生成器）](tutorial-creating-a-free-form-report-report-builder.md)  
+ [教程：创建自由格式的报表（报表生成器）](tutorial-creating-a-free-form-report-report-builder.md)  
  按照本教程中的步骤学习如何从头创建自由格式的报表。 此报表在外观上与新闻稿类似。  
   
  [教程：设置文本格式（报表生成器）](tutorial-format-text-report-builder.md)  
@@ -61,15 +61,15 @@ ms.locfileid: "66107973"
  [教程：向报表添加参数（报表生成器）](tutorial-add-a-parameter-to-your-report-report-builder.md)  
  按照本教程中的步骤来学习如何通过使用参数自定义报表外观和内容。  
   
- [教程：生成钻取报表和主报表（报表生成器）](tutorial-creating-drillthrough-and-main-reports-report-builder.md)  
+ [教程：创建钻取报表和主报表（报表生成器）](tutorial-creating-drillthrough-and-main-reports-report-builder.md)  
  按照本教程中的步骤学习如何为基于 Analysis Services 多维数据集的钻取方案创建报表。 您将创建主报表并允许它用于钻取，并创建作为钻取操作的目标的报表。  
   
  [教程：表达式简介](tutorial-introducing-expressions.md)  
  按照本教程中的步骤，学习如何使用表达式连接、计算和查找字段值并显示在报表中。 您还将学习如何使用表达式有条件地显示不同图像和指示器状态。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [报表设计视图（报表生成器）](report-builder/report-design-view-report-builder.md)   
  [SQL Server 2014 中的报表生成器](report-builder/report-builder-in-sql-server-2016.md)   
- [教程：创建快速图表报表脱机&#40;报表生成器&#41;](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+ [教程：脱机创建快速图表报表 &#40;报表生成器&#41;](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
   
   

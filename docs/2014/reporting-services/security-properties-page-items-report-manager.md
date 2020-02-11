@@ -1,5 +1,5 @@
 ---
-title: 安全属性页，项 （报表管理器） |Microsoft Docs
+title: 项的 "安全性" 属性页（报表管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5ad98fe533caefa937d969754fa1278354e5c6e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102173"
 ---
 # <a name="security-properties-page-items-report-manager"></a>项的“安全性”属性页（报表管理器）
@@ -39,7 +39,7 @@ ms.locfileid: "66102173"
   
     -   单击 **“管理”** 以打开该项的“常规属性”页。 然后，选择 **“安全性”** 选项卡。  
   
- **编辑项安全设置**  
+ **编辑项安全性**  
  单击此选项可更改为当前项定义安全性的方式。 如果编辑文件夹的安全性，则更改将应用于当前文件夹及其所有子文件夹的内容。  
   
  此按钮对于主文件夹不可用。  
@@ -47,10 +47,10 @@ ms.locfileid: "66102173"
  编辑项安全性时可以使用以下按钮。  
   
  **删除**  
- 选中要删除的组名或用户名旁边的复选框，再单击 **“删除”** 。 如果角色分配是剩余的唯一角色分配，或者如果它是定义报表服务器的安全基线的内置角色分配（如“Built-in\Administrators”），则不能删除该角色分配。 删除角色分配不会删除组或用户帐户或角色定义。  
+ 选中要删除的组名或用户名旁边的复选框，再单击 **“删除”**。 如果角色分配是剩余的唯一角色分配，或者如果它是定义报表服务器的安全基线的内置角色分配（如“Built-in\Administrators”），则不能删除该角色分配。 删除角色分配不会删除组或用户帐户或角色定义。  
   
  **新建角色分配**  
- 单击此选项可打开“新建角色分配”页，该页用于为当前项创建其他角色分配。 有关详细信息，请参阅[新建角色分配：编辑角色分配页&#40;报表管理器&#41;](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md)。  
+ 单击此选项可打开“新建角色分配”页，该页用于为当前项创建其他角色分配。 有关详细信息，请参阅 "[新建角色分配：编辑角色分配" 页 &#40;报表管理器&#41;](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md)。  
   
  **恢复到父级安全设置**  
  单击此选项可将安全设置重置到其直接父文件夹的安全设置。 如果贯穿报表服务器文件夹层次结构的继承是完整的，则使用顶层文件夹（即主文件夹）的安全设置。  
@@ -58,11 +58,11 @@ ms.locfileid: "66102173"
  **组或用户**  
  列出属于当前项的现有角色分配的组和用户。 当前文件夹的现有角色分配是为此列中显示的组和用户定义的。 单击组名或用户名可以查看或编辑角色分配的详细信息。  
   
- **Roles**  
+ **角色**  
  列出属于现有角色分配的一个或多个角色定义。 如果为一个组帐户或用户帐户分配了多个角色，则该组或用户可以执行属于这些角色的所有任务。 若要查看与角色关联的任务，请使用 SQL Server Management Studio 来查看每个角色定义中的任务。  
   
-## <a name="see-also"></a>请参阅  
- [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)   
+## <a name="see-also"></a>另请参阅  
+ [报表管理器 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)   
  [预定义角色](security/role-definitions-predefined-roles.md)   
  [授予对本机模式报表服务器的权限](security/granting-permissions-on-a-native-mode-report-server.md)   
  [角色分配](security/role-assignments.md)   

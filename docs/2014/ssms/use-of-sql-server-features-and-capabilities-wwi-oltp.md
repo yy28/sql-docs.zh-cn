@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2365ec137329675e2cd88e7f5bf7e1781aa3308f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63280484"
 ---
 # <a name="arguments-for-external-tools"></a>外部工具的参数
@@ -25,7 +25,7 @@ ms.locfileid: "63280484"
   
  下表列出了外部工具的参数。  
   
-|“属性”|参数|描述|  
+|名称|参数|说明|  
 |----------|--------------|-----------------|  
 |**项路径**|$(ItemPath)|当前源代码的完整文件名（以驱动器 + 路径 + 文件名形式定义）；如果一个非源代码窗口处于活动状态，则该参数将是空白的。|  
 |**项目录**|$(ItemDir)|当前源代码的目录（以驱动器 + 路径形式定义）；如果一个非源代码窗口处于活动状态，则该参数将是空白的。|  
@@ -43,10 +43,10 @@ ms.locfileid: "63280484"
 |**解决方案目录**|$(SolutionDir)|当前解决方案的目录（以驱动器 + 路径的形式定义）。|  
 |**解决方案文件名**|$(SolutionFileName)|当前解决方案的文件名（以驱动器 + 路径 + 文件名形式定义）。|  
   
- <sup>1</sup>当前行、 当前列中或当前文本基于游标在文本编辑器中的位置，在状态栏中所示。  
+ <sup>1</sup>当前行、当前列或当前文本基于游标在文本编辑器中的位置（如状态栏中所示）。  
   
-## <a name="see-also"></a>请参阅  
- [外部工具对话框](external-tools-dialog-box.md)   
+## <a name="see-also"></a>另请参阅  
+ ["外部工具" 对话框](external-tools-dialog-box.md)   
  [常规用户界面元素](general-user-interface-elements.md)  
   
   

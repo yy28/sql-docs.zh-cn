@@ -1,5 +1,5 @@
 ---
-title: 授予用户访问报表服务器 （报表管理器） |Microsoft Docs
+title: 授予用户对报表服务器的访问权限（报表管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,24 +17,25 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 31c5fa6b3ca1f42ea87fc1514f55ce325f8a021a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101991"
 ---
 # <a name="grant-user-access-to-a-report-server-report-manager"></a>授予用户对报表服务器的访问权限（报表管理器）
+  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用基于角色的安全性向用户授予对报表服务器的访问权限。 在新安装的报表服务器上，只有作为本地 Administrators 组的成员的用户具有对报表服务器内容和操作的权限。 若要使其他用户可以使用报表服务器，必须创建将用户帐户或组帐户映射到指定任务集合的预定义角色的角色分配。  
   
- **SharePoint 模式报表服务器：** 对于配置为 SharePoint 集成模式报表服务器，你配置使用 SharePoint 权限的 SharePoint 站点的访问权限。 对 SharePoint 站点的权限级别确定对报表服务器内容和操作的访问权限。 您必须是站点管理员才能授予对 SharePoint 站点的权限。 有关详细信息，请参阅 [在 SharePoint 站点上授予对报表服务器项的权限](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)。  
+ **SharePoint 模式报表服务器：** 对于配置为 SharePoint 集成模式的 Report Server，你可以使用 SharePoint 权限从 SharePoint 站点配置访问权限。 对 SharePoint 站点的权限级别确定对报表服务器内容和操作的访问权限。 您必须是站点管理员才能授予对 SharePoint 站点的权限。 有关详细信息，请参阅 [在 SharePoint 站点上授予对报表服务器项的权限](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)。  
   
- **本机模式报表服务器：** 本主题侧重于报表服务器配置为纯模式和使用的报表管理器要将用户分配到角色。 有两种类型的角色：  
+ **本机模式报表服务器：** 本主题重点介绍为纯模式配置的 Report Server，以及如何使用报表管理器将用户分配到角色。 有两种类型的角色：  
   
 -   项级角色用于查看、添加和管理报表服务器内容、订阅、报表处理和报表历史记录。 可以对根节点（主文件夹）或位于该层次结构中的特定下级文件夹或项定义项级角色分配。  
   
 -   系统级角色授予对不限于任何特定项的站点范围操作的访问权限。 例如，使用报表生成器和使用共享计划。  
   
-     两种类型的角色互为补充，应结合使用。 因此，将用户添加到报表服务器的操作分为两个部分。 如果将用户分配到项级角色，则还应将该用户分配到系统级角色。 将用户分配到角色时，必须选择已定义的角色。 若要创建、修改或删除角色，请使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 有关详细信息，请参阅 [创建、删除或修改角色 (Management Studio)](role-definitions-create-delete-or-modify.md)。  
+     两种类型的角色互为补充，应结合使用。 因此，将用户添加到报表服务器的操作分为两个部分。 如果将用户分配到项级角色，则还应将该用户分配到系统级角色。 将用户分配到角色时，必须选择已定义的角色。 若要创建、修改或删除角色，请[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]使用。 有关详细信息，请参阅 [创建、删除或修改角色 (Management Studio)](role-definitions-create-delete-or-modify.md)。  
   
 ## <a name="before-you-start"></a>开始之前  
  在将用户添加到本机模式的报表服务器之前查看以下列表。  
@@ -43,7 +44,7 @@ ms.locfileid: "66101991"
   
 -   若要将此任务委托给其他用户，请创建将用户帐户映射到“内容管理员”和“系统管理员”角色的角色分配。 具有“内容管理员”和“系统管理员”权限的用户可以将用户添加到报表服务器。  
   
--   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中，查看“系统角色”和“用户角色”的预定义角色，以便熟悉每个角色中的各种任务。 由于报表管理器中不显示任务说明，因此需要在开始添加用户之前熟悉角色。  
+-   在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中，查看 "系统角色" 和 "用户角色" 的预定义角色，以便熟悉每个角色中的各种任务。 由于报表管理器中不显示任务说明，因此需要在开始添加用户之前熟悉角色。  
   
 -   根据需要自定义这两个角色或定义其他角色以包括所需的任务集合。 例如，如果计划对单独的项使用自定义安全设置，则可能希望创建新的角色定义以授予对文件夹的查看访问权限。  
   
@@ -51,15 +52,15 @@ ms.locfileid: "66101991"
   
 1.  启动 [报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)。  
   
-2.  单击 **“网站设置”** 。  
+2.  单击 **“网站设置”**。  
   
 3.  单击 **“安全性”** 。  
   
-4.  单击 **“新建角色分配”** 。  
+4.  单击 **“新建角色分配”**。  
   
-5.  在中**组或用户名**，输入 Windows 域用户或组帐户按以下格式：\<域 >\\< 帐户\>。 如果使用窗体身份验证或自定义安全性，则以适用于您的部署的格式指定该用户帐户或组帐户。  
+5.  在 "**组或用户名**" 中，按以下格式输入 Windows 域用户或组帐户\<： " \\域>\><帐户"。 如果使用窗体身份验证或自定义安全性，则以适用于您的部署的格式指定该用户帐户或组帐户。  
   
-6.  选择一个系统角色，然后单击 **“确定”** 。  
+6.  选择一个系统角色，然后单击 **“确定”**。  
   
      角色是可累积的，因此如果同时选择了“系统管理员”和“系统用户”，则用户或组可以执行这两种角色的任务。  
   
@@ -71,23 +72,23 @@ ms.locfileid: "66101991"
   
 2.  悬停在该项之上，然后单击下拉箭头。  
   
-3.  在下拉菜单中，单击“安全性”  。  
+3.  在下拉菜单中，单击“安全性”****。  
   
-4.  单击 **“新建角色分配”** 。  
+4.  单击 **“新建角色分配”**。  
   
     > [!NOTE]  
-    >  如果某项当前从父项继承安全性，则在工具栏中单击 **“编辑项安全设置”** 可以更改安全设置。 然后，单击 **“新建角色分配”** 。  
+    >  如果某项当前从父项继承安全性，则在工具栏中单击 **“编辑项安全设置”** 可以更改安全设置。 然后，单击 **“新建角色分配”**。  
   
-5.  在中**组或用户名**，输入 Windows 域用户或组帐户按以下格式：\<域 >\\< 帐户\>。 如果使用窗体身份验证或自定义安全性，则以适用于您的部署的格式指定该用户帐户或组帐户。  
+5.  在 "**组或用户名**" 中，按以下格式输入 Windows 域用户或组帐户\<： " \\域>\><帐户"。 如果使用窗体身份验证或自定义安全性，则以适用于您的部署的格式指定该用户帐户或组帐户。  
   
-6.  选择一个或多个角色定义（说明用户或组应如何访问该项），再单击 **“确定”** 。  
+6.  选择一个或多个角色定义（说明用户或组应如何访问该项），再单击 **“确定”**。  
   
 7.  重复上述步骤，为其他用户或组创建分配。  
   
-## <a name="see-also"></a>请参阅  
- (create-and-manage-role-assignments.md)   
- [新建角色分配：编辑角色分配页&#40;报表管理器&#41;](../new-role-assignment-edit-role-assignment-page-report-manager.md)   
- [项的“安全性”属性页（报表管理器）](../security-properties-page-items-report-manager.md)   
+## <a name="see-also"></a>另请参阅  
+ （create-and-manage-role-assignments.md）   
+ [新建角色分配：编辑角色分配页 &#40;报表管理器&#41;](../new-role-assignment-edit-role-assignment-page-report-manager.md)   
+ ["安全属性" 页，项 &#40;报表管理器&#41;](../security-properties-page-items-report-manager.md)   
  [角色分配](role-assignments.md)   
  [角色定义](role-definitions.md)  
   

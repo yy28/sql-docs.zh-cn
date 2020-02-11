@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 07077fabaca18170496a1b4e972da7b7e34cd4fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056258"
 ---
 # <a name="save-a-package-to-the-file-system"></a>将包保存到文件系统
@@ -32,12 +32,12 @@ ms.locfileid: "66056258"
   
 2.  在解决方案资源管理器中，单击要保存的包。  
   
-3.  在 **“文件”** 菜单上单击 **“保存选定项”** 。  
+3.  在 **“文件”** 菜单上单击 **“保存选定项”**。  
   
     > [!NOTE]  
     >  可以在“属性”窗口中验证保存包的路径及文件名。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services (SSIS) 包](../../2014/integration-services/integration-services-ssis-packages.md)   
  [保存一个包副本](../../2014/integration-services/save-a-copy-of-a-package.md)  
   

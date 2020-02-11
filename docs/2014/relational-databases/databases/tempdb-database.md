@@ -16,24 +16,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0b1265d3ef58f6ef0946937b15411b0cb79a3c20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916869"
 ---
 # <a name="tempdb-database"></a>tempdb 数据库
-  **tempdb** 系统数据库是一个全局资源，可供连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的所有用户使用，并可用于保存下列各项：  
+  **Tempdb**系统数据库是一个全局资源，可供连接到实例的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所有用户使用，并用于保存以下内容：  
   
 -   显式创建的临时用户对象，例如全局或局部临时表、临时存储过程、表变量或游标。  
   
--   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]创建的内部对象，例如，用于存储假脱机或排序的中间结果的工作表。  
+-   
+  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]创建的内部对象，例如，用于存储假脱机或排序的中间结果的工作表。  
   
 -   由使用已提交读（使用行版本控制隔离或快照隔离事务）的数据库中数据修改事务生成的行版本。  
   
 -   由数据修改事务为实现联机索引操作、多个活动的结果集 (MARS) 以及 AFTER 触发器等功能而生成的行版本。  
   
- **tempdb** 中的操作是最小日志记录操作。 这将使事务产生回滚。 每次启动**时都会重新创建** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，从而在系统启动时总是具有一个干净的数据库副本。 在断开联接时会自动删除临时表和存储过程，并且在系统关闭后没有活动连接。 因此 **tempdb** 中不会有什么内容从一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会话保存到另一个会话。 不允许对 **tempdb**进行备份和还原操作。  
+ 
+  **tempdb** 中的操作是最小日志记录操作。 这将使事务产生回滚。 **** 每次启动时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]都会重新创建 tempdb，以便系统始终以干净的数据库副本开头。 在断开联接时会自动删除临时表和存储过程，并且在系统关闭后没有活动连接。 因此， **tempdb**中永远不会有任何内容从一个会话保存[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到另一个会话。 不允许对**tempdb**进行备份和还原操作。  
   
 ## <a name="physical-properties-of-tempdb"></a>tempdb 的物理属性  
  下表列出了 **tempdb** 数据和日志文件的初始配置值。 对于不同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，这些文件的大小可能略有不同。  
@@ -43,7 +45,7 @@ ms.locfileid: "62916869"
 |主数据|tempdev|tempdb.mdf|按 10% 自动增长，直到磁盘已满|  
 |日志|templog|templog.ldf|以 10% 的速度自动增长到最大 2 TB|  
   
- 大小**tempdb**可能会影响系统的性能。 例如，如果**tempdb**大小太小，可能是系统处理，而不使用自动增长的数据库以支持工作负荷要求每次启动[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 您可以通过增加的大小来避免此开销**tempdb**。  
+ **Tempdb**的大小会影响系统的性能。 例如，如果**tempdb**的大小太小，则在每次启动[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，系统处理自动增长数据库，以支持工作负荷需求。 可以通过增加**tempdb**的大小来避免此开销。  
   
 ## <a name="performance-improvements-in-tempdb"></a>tempdb 的性能提高  
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中， **tempdb** 性能以下列方式进行提高：  
@@ -54,13 +56,13 @@ ms.locfileid: "62916869"
   
 -   减少了 **tempdb** 的日志开销。 从而减少了 **tempdb** 日志文件上的磁盘 I/O 带宽消耗。  
   
--   分配混合的页中的算法**tempdb**得到了改进。  
+-   改进了在**tempdb**中分配混合页的算法。  
   
 ### <a name="moving-the-tempdb-data-and-log-files"></a>移动 tempdb 数据和日志文件  
- 若要移动 **tempdb** 数据和日志文件，请参阅 [移动系统数据库](system-databases.md)。  
+ 若要移动**tempdb**数据和日志文件，请参阅[移动系统数据库](system-databases.md)。  
   
 ### <a name="database-options"></a>数据库选项  
- 下表列出了 **tempdb** 数据库中每个数据库选项的默认值，以及是否可以修改该选项。 若要查看这些选项的当前设置，请使用 [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 目录视图。  
+ 下表列出了**tempdb**数据库中每个数据库选项的默认值以及该选项是否可以修改。 若要查看这些选项的当前设置，请使用 [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 目录视图。  
   
 |数据库选项|默认值|是否可修改|  
 |---------------------|-------------------|---------------------|  
@@ -96,7 +98,7 @@ ms.locfileid: "62916869"
  有关这些数据库选项的说明，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-set-options)。  
   
 ## <a name="restrictions"></a>限制  
- 不能对 **tempdb** 数据库执行以下操作：  
+ 不能对**tempdb**数据库执行以下操作：  
   
 -   添加文件组。  
   
@@ -104,13 +106,13 @@ ms.locfileid: "62916869"
   
 -   更改排序规则。 默认排序规则为服务器排序规则。  
   
--   更改数据库所有者。 **tempdb** 的所有者是 **sa**。  
+-   更改数据库所有者。 **tempdb**归**sa**所有。  
   
 -   创建数据库快照。  
   
 -   删除数据库。  
   
--   从数据库中删除 **guest** 用户。  
+-   正在从数据库中删除**guest**用户。  
   
 -   启用变更数据捕获。  
   
@@ -142,7 +144,7 @@ ms.locfileid: "62916869"
   
  [移动数据库文件](move-database-files.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在 SQL Server 2005 中使用 tempdb](https://chresandro.wordpress.com/2014/09/29/working-with-tempdb-in-sql-server-2005/)  
   
   

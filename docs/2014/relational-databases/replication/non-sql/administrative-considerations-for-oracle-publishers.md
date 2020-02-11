@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 42791ed9e60ad633ee1331dfc8326d58c0546000
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022557"
 ---
 # <a name="administrative-considerations-for-oracle-publishers"></a>Oracle 发布服务器的管理注意事项
@@ -62,7 +62,7 @@ ms.locfileid: "63022557"
   
  有关删除和重新配置发布服务器的信息，请参阅主题 [Troubleshooting Oracle Publishers](troubleshooting-oracle-publishers.md)中的“进行需要重新配置发布服务器的更改”部分。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置 Oracle 发布服务器](configure-an-oracle-publisher.md)   
  [Oracle 发布服务器的设计注意事项和限制](design-considerations-and-limitations-for-oracle-publishers.md)   
  [Oracle 发布概述](oracle-publishing-overview.md)  

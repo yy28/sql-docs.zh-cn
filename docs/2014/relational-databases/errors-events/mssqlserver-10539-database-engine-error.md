@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 18fafa113002b4a2420ac8784c48451a1d69aa56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916062"
 ---
-# <a name="mssqlserver10539"></a>MSSQLSERVER_10539
+# <a name="mssqlserver_10539"></a>MSSQLSERVER_10539
     
 ## <a name="details"></a>详细信息  
   
@@ -32,13 +32,13 @@ ms.locfileid: "62916062"
 |符号名称|PG_NO_PLAN_FOR_STMT|  
 |消息正文|由于查询计划对于初始偏移量为 %d 的语句不可用，因此无法从缓存创建计划指南 '%.*ls'。 如果该语句依赖于尚未创建的数据库对象，则可能出现此问题。 请确保所有必要的数据库对象都已存在，并在创建该计划指南之前先执行该语句。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  在计划缓存中，查询计划不能用于具有指定初始偏移量的语句。  
   
 ## <a name="user-action"></a>用户操作  
  请确保所有必要的数据库对象都已存在，并在创建该计划指南之前先执行该语句。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [sp_create_plan_guide_from_handle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)  
   
   

@@ -15,22 +15,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9334e4d44663f5d0637d6933eb7a72eae74d4a84
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243652"
 ---
 # <a name="search-an-active-document-incrementally"></a>增量搜索活动文档
   您可以通过输入文字来对单个文档或窗口执行渐进式搜索。 搜索操作会突出显示与在文档或窗口的渐进式搜索过程中输入的字符相匹配的第一个字符集。 渐进式搜索会自动搜索文档或窗口内的所有文字，但隐藏文字除外。  
   
- 对于 **“大小写匹配”** 选项，渐进式搜索将使用上一次搜索的条件。 例如，如果使用“在文件中查找”**** 对话框跨多个文件执行搜索，并选择“大小写匹配”****，然后执行渐进式搜索，则此搜索将区分大小写。  
+ 对于 **“大小写匹配”** 选项，渐进式搜索将使用上一次搜索的条件。 例如，如果使用“在文件中查找”  对话框跨多个文件执行搜索，并选择“大小写匹配”  ，然后执行渐进式搜索，则此搜索将区分大小写。  
   
 ### <a name="to-search-incrementally"></a>执行渐进式搜索  
   
 1.  打开您要搜索的文件或窗口。  
   
-2.  在 **“编辑”** 菜单中，指向 **“高级”**，然后单击 **“渐进式搜索”**。  
+2.  在 **“编辑”** 菜单中，指向 **“高级”** ，然后单击 **“渐进式搜索”** 。  
   
      光标图标会变为带箭头的望远镜，指示搜索方向，并且状态栏显示“渐进式搜索”。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "75243652"
  [搜索和替换](search-and-replace.md)   
  [交互式搜索文档](search-documents-interactively.md)   
  [使用结果列表搜索文档](search-documents-using-results-lists.md)   
- [用通配符搜索文本](search-text-with-wildcards.md)   
- [用正则表达式搜索文本](search-text-with-regular-expressions.md)  
+ [使用通配符搜索文本](search-text-with-wildcards.md)   
+ [使用正则表达式搜索文本](search-text-with-regular-expressions.md)  
   
   

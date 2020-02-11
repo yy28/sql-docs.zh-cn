@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 017292aa073c0b5745f313b61592a5c57199567c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106951"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>用于 XML 报表数据的 XML 查询语法 (SSRS)
-  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，可以为 XML 数据源创建数据集。 定义数据源后，可以为数据集创建查询。 根据数据源所指向的 XML 数据类型，可以通过包括 XML `Query` 或元素路径来创建数据集查询。 XML`Query`开头**\<查询 >** 标记并包括命名空间和 XML 元素的数据源而异。 元素路径与命名空间无关，它使用与 XPath 类似的语法指定要使用的来自基础 XML 数据的节点和节点属性。 有关元素路径的详细信息，请参阅[用于 XML 报表数据的元素路径语法 (SSRS)](report-data-ssrs.md)。  
+  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，可以为 XML 数据源创建数据集。 定义数据源后，可以为数据集创建查询。 根据数据源所指向的 XML 数据类型，可以通过包括 XML `Query` 或元素路径来创建数据集查询。 XML `Query`从>标记的** \<查询**开始，并包含不同于数据源的命名空间和 XML 元素。 元素路径与命名空间无关，它使用与 XPath 类似的语法指定要使用的来自基础 XML 数据的节点和节点属性。 有关元素路径的详细信息，请参阅[用于 XML 报表数据的元素路径语法 (SSRS)](report-data-ssrs.md)。  
   
  可以为以下类型的 XML 数据创建 XML 数据源：  
   
@@ -56,17 +56,19 @@ ms.locfileid: "66106951"
   
 |XML 数据源|查询示例|  
 |---------------------|-------------------|  
-|ListChildren 方法 web 服务 XML 数据。|`<Query>`<br /><br /> `<Method Name="ListChildren" Namespace="https://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices" />`<br /><br /> `</Query>`|  
+|使用 ListChildren 方法获得的 Web 服务 XML 数据。|`<Query>`<br /><br /> `<Method Name="ListChildren" Namespace="https://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices" />`<br /><br /> `</Query>`|  
 |使用 SoapAction 获得的 Web 服务 XML 数据。|`<Query xmlns=namespace>`<br /><br /> `<SoapAction>http://schemas/microsoft.com/sqlserver/2005/03/23/reporting/reportingservices/ListChildren</SoapAction>`<br /><br /> `</Query>`|  
 |使用命名空间的 XML 文档或嵌入的 XML 数据。<br /><br /> 为元素路径指定命名空间的查询元素。|`<Query xmlns:es="https://schemas.microsoft.com/StandardSchemas/ExtendedSales">`<br /><br /> `<ElementPath>/Customers/Customer/Orders/Order/es:LineItems/es:LineItem</ElementPath>`<br /><br /> `</Query>`|  
 |嵌入的 XML 文档。|`<Query>`<br /><br /> `<XmlData>`<br /><br /> `<Customers>`<br /><br /> `<Customer ID="1">Bobby</Customer>`<br /><br /> `</Customers>`<br /><br /> `</XmlData>`<br /><br /> `<ElementPath>Customer {@}</ElementPath>`<br /><br /> `</Query>`|  
 |使用默认值的 XML 文档。|*No query*。<br /><br /> 元素路径是从 XML 文档本身派生而来的，并且与命名空间无关。|  
   
 > [!NOTE]  
->  第一个 Web 服务示例列出了使用 <xref:ReportService2006.ReportingService2006.ListChildren%2A> 方法获得的 Web 服务 XML 数据。 若要运行此查询，必须创建新的数据源并将连接字符串设置为 http://localhost/reportserver/reportservice2006.asmx。 <xref:ReportService2006.ReportingService2006.ListChildren%2A> 方法有两个参数：`Item` 和 `Recursive`。 将 `Item` 的默认值设置为 `/` 并将 `Recursive` 设置为 `1`。  
+>  第一个 Web 服务示例列出了使用 <xref:ReportService2006.ReportingService2006.ListChildren%2A> 方法获得的 Web 服务 XML 数据。 若要运行此查询，必须创建新的数据源并将连接字符串设置为 http://localhost/reportserver/reportservice2006.asmx。 
+  <xref:ReportService2006.ReportingService2006.ListChildren%2A> 方法有两个参数：`Item` 和 `Recursive`。 将 `Item` 的默认值设置为 `/` 并将 `Recursive` 设置为 `1`。  
   
 ## <a name="specifying-namespaces"></a>指定命名空间  
- 使用 XML `Query` 元素可以指定在数据源的 XML 数据中使用的命名空间。 下面的 XML 查询使用命名空间 `sales`。 `sales:LineItems` 和 `sales:LineItem` 的 XML `ElementPath` 节点使用命名空间 `sales`。  
+ 使用 XML `Query` 元素可以指定在数据源的 XML 数据中使用的命名空间。 下面的 XML 查询使用命名空间 `sales`。 
+  `ElementPath` 和 `sales:LineItems` 的 XML `sales:LineItem` 节点使用命名空间 `sales`。  
   
 ```  
 <Query xmlns:sales=  
@@ -87,11 +89,11 @@ ms.locfileid: "66106951"
   
 |XML 查询元素|数据集中的结果字段|  
 |-----------------------|-------------------------------------|  
-|\<Query/>|值 a: https://schemas.microsoft.com/..。<br /><br /> 值 b: https://schemas.microsoft.com/..。<br /><br /> 值 c: https://schemas.microsoft.com/..。|  
-|\<xmldp:Query xmlns:xmldp="https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns:ns="https://schemas.microsoft.com/..."><br /><br /> \<xmldp:ElementPath>Root {}/ns:Element2/Node\</xmldp:ElementPath><br /><br /> \</xmldp:Query>|值 D<br /><br /> 值 E<br /><br /> 值 F|  
+|\<Query/>|值 A： https://schemas.microsoft.com/..。<br /><br /> 值 B： https://schemas.microsoft.com/..。<br /><br /> 值 C： https://schemas.microsoft.com/..。|  
+|\<xmldp： Query xmlns： xmldp = "https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns： ns = "https://schemas.microsoft.com/..。"><br /><br /> \<xmldp： ElementPath>根{}/Ns： Element2/Node\</xmldp： ElementPath><br /><br /> \</xmldp：查询>|值 D<br /><br /> 值 E<br /><br /> 值 F|  
   
 #### <a name="xml-document-dpnamespacexml"></a>XML 文档：DPNamespace.xml  
- 可以复制此 XML 并将其保存到报表设计器可访问的 URL 以用作 XML 数据源：例如 http://localhost/DPNamespace.xml。  
+ 可以复制此 XML 并将其保存到报表设计器可访问的 URL 以用作 XML 数据源：例如 http://localhost/DPNamespace.xml 。  
   
 ```  
 <Root xmlns:ns="https://schemas.microsoft.com/...">  
@@ -108,7 +110,7 @@ ms.locfileid: "66106951"
 </Root>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [XML 连接类型 (SSRS)](xml-connection-type-ssrs.md)   
  [Reporting Services 教程 (SSRS)](../reporting-services-tutorials-ssrs.md)  
   

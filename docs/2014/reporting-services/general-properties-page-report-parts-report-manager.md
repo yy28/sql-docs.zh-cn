@@ -1,5 +1,5 @@
 ---
-title: 常规属性页上，报表部件 （报表管理器） |Microsoft Docs
+title: 报表部件的 "常规属性" 页（报表管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aa3f8b6ec0cd81f1a29ea3262bd3ec52dd8158ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109090"
 ---
 # <a name="general-properties-page-report-parts-report-manager"></a>报表部件的“常规”属性页（报表管理器）
@@ -34,7 +34,7 @@ ms.locfileid: "66109090"
 3.  在下拉列表中，单击 **“管理”**。 此时，将打开“常规”属性页。  
   
 ## <a name="options"></a>选项  
- **修改的日期**  
+ **修改日期**  
  上次在服务器上修改报表部件属性的日期和时间或上次将报表部件的新版本发布到服务器的日期和时间。 只读。  
   
  **修改者**  
@@ -43,7 +43,7 @@ ms.locfileid: "66109090"
  **创建日期**  
  最初将报表部件发布到服务器的日期和时间。 只读。  
   
- **创建的**  
+ **创建者**  
  最初创建报表部件的用户名。 只读。  
   
  **大小**  
@@ -58,30 +58,30 @@ ms.locfileid: "66109090"
  **在列表视图中隐藏**  
  选择此选项可对正在报表管理器中使用列表视图模式的用户隐藏报表部件。 列表视图模式是浏览报表服务器文件夹层次结构时的默认视图格式。 虽然可以在列表视图中隐藏项，但不能在详细信息视图中隐藏项。 如果希望限制访问项，必须创建角色分配。  
   
- **类型**  
+ 类型   
  报表部件的类型。 只读。  
   
- **Apply**  
- 保存更改。  
+ **应用**  
+ 保存所做更改。  
   
  **删除**  
  从报表服务器数据库中删除报表部件。 从服务器删除报表部件时，将不阻止已具有该报表部件的现有报表的呈现。  
   
- **“移动”**  
- 单击以打开“移动项”页，在报表服务器文件夹层次结构中移动报表部件。 有关详细信息，请参阅[移动项页&#40;报表管理器&#41;](../../2014/reporting-services/move-items-page-report-manager.md)。  
+ **移动**  
+ 单击以打开“移动项”页，在报表服务器文件夹层次结构中移动报表部件。 有关详细信息，请参阅报表管理器&#41;上的 "[移动项" 页 &#40;](../../2014/reporting-services/move-items-page-report-manager.md)。  
   
  **下载**  
  提取要以 .rsc 文件形式保存的报表部件定义的副本。 .rsc 文件可以上载到报表服务器文件夹，或用于替换报表服务器文件夹中现有的报表部件。  
   
- **替换**  
+ **全部**  
  用 .rsc 文件中的另一个定义替换该报表部件定义。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [管理报表部件](report-design/managing-report-parts.md)   
  [报表管理器（SSRS 本机模式）](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [“内容”页（报表管理器）](../../2014/reporting-services/contents-page-report-manager.md)   
+ ["内容" 页 &#40;报表管理器&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [报表部件（报表生成器和 SSRS）](report-parts-report-builder-and-ssrs.md)   
- [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)   
+ [报表管理器 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)   
  [报表生成器中的报表部件和数据集](report-data/report-parts-and-datasets-in-report-builder.md)  
   
   

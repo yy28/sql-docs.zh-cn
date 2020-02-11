@@ -1,5 +1,5 @@
 ---
-title: 第 11 课：创建分区 |Microsoft Docs
+title: 第11课：创建分区 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,40 +11,40 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 06ffe60802e52bd0ae141435628fc3812dc2c7c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079203"
 ---
 # <a name="lesson-11-create-partitions"></a>第 11 课：创建分区
-  在本课中，您将创建分区，以便将 Internet Sales 表划分为可独立于其他分区进行处理（刷新）的更小逻辑部分。 默认情况下，在模型中包括的每个表具有一个分区，其中包括所有表的列和行。 对于 Internet Sales 表中，我们想要将数据划分按年份;为每个表的五年的一个分区。  然后，每个分区可独立进行处理。 若要了解详细信息，请参阅[分区（SSAS 表格）](tabular-models/partitions-ssas-tabular.md)。  
+  在本课中，您将创建分区，以便将 Internet Sales 表划分为可独立于其他分区进行处理（刷新）的更小逻辑部分。 默认情况下，模型中包含的每个表都有一个分区，其中包含表的所有列和行。 对于 Internet Sales 表，我们希望按年份划分数据;每个表的5年的一个分区。  可以独立处理每个分区。 若要了解详细信息，请参阅[分区（SSAS 表格）](tabular-models/partitions-ssas-tabular.md)。  
   
- 估计的时间才能完成本课程中：**15 分钟**  
+ 本课预计完成时间：**15 分钟**  
   
-## <a name="prerequisites"></a>先决条件  
- 本主题是表格建模教程的一部分，该教程应按顺序学习。 执行任务之前在本课程中，您应当已完成上一课：[第 10 课：创建层次结构](lesson-9-create-hierarchies.md)。  
+## <a name="prerequisites"></a>必备条件  
+ 本主题是表格建模教程的一部分，应当按顺序完成。 在执行本课程中的任务之前，应该已完成上一课：[第 10 课：创建层次结构](lesson-9-create-hierarchies.md)。  
   
 ## <a name="create-partitions"></a>创建分区  
   
 #### <a name="to-create-partitions-in-the-internet-sales-table"></a>在 Internet Sales 表中创建分区  
   
-1.  在模型设计器中，依次单击“Internet Sales”  表、“表”  菜单和“分区”  。  
+1.  在模型设计器中，依次单击“Internet Sales”**** 表、“表”**** 菜单和“分区”****。  
   
-     “分区管理器”  对话框将打开。  
+     “分区管理器”**** 对话框将打开。  
   
-2.  在中**分区管理器**对话框中**分区**，单击**Internet Sales**分区。  
+2.  在 "**分区管理器**" 对话框的 "**分区**" 中，单击 " **Internet 销售**" 分区。  
   
-3.  在中**分区名称**，将名称更改为`Internet Sales 2005`。  
+3.  在 "**分区名称**" 中，将`Internet Sales 2005`名称更改为。  
   
     > [!TIP]  
     >  在继续执行下一步之前，您将注意到“表预览”窗口中的列名显示模型表中包含的、但其列名来自源中的这些列（已勾选）。 这是因为“表预览”窗口显示源表（而非模型表）中的列。  
   
-4.  选择位于预览窗口右侧上方的“查询编辑器”  按钮。  
+4.  选择位于预览窗口右侧上方的“查询编辑器”**** 按钮。  
   
      因为您希望分区只包含特定期间内的那些行，所以您必须包含 WHERE 子句。 您只能通过使用 SQL 语句创建 WHERE 子句。  
   
-5.  在“SQL 语句”  字段中，通过粘贴以下语句替换现有语句：  
+5.  在“SQL 语句”**** 字段中，通过粘贴以下语句替换现有语句：  
   
     ```  
     SELECT   
@@ -77,45 +77,45 @@ ms.locfileid: "66079203"
   
      本语句指定分区应包含以下行中的所有数据：对于这些行，OrderDate 对应于在 WHERE 子句中指定的 2005 日历年。  
   
-6.  单击 **“验证”** 。  
+6.  单击 **“验证”**。  
   
-     请注意，此时将显示一条警告，指出某些列在源中不存在。 这是因为在[第 3 课：重命名列](rename-columns.md)，重命名这些列的 Internet Sales 表中的模型，使其不同于在源中这些相同列。  
+     请注意，此时将显示一条警告，指出某些列在源中不存在。 这是因为在[第3课：重命名列](rename-columns.md)时，在模型中将 Internet Sales 表中的这些列重命名为不同于源中相同列。  
   
-#### <a name="to-create-a-partition-for-the-2006-year-in-the-internet-sales-table"></a>若要为 Internet Sales 表中的 2006 年创建分区  
+#### <a name="to-create-a-partition-for-the-2006-year-in-the-internet-sales-table"></a>在 Internet Sales 表中创建2006年的分区  
   
-1.  在中**分区管理器**对话框中**分区**，单击`Internet Sales 2005`刚创建的分区，然后**复制**。  
+1.  在 "**分区管理器**" 对话框的 "**分区**" 中`Internet Sales 2005` ，单击刚创建的分区，然后**复制**。  
   
-2.  在中**分区名称**，类型`Internet Sales 2006`。  
+2.  在 "**分区名称**" `Internet Sales 2006`中，键入。  
   
-3.  在 SQL 语句，为了使分区只包含这些行 2006 年，使用以下内容替换 WHERE 子句：  
+3.  在 SQL 语句中，要使分区只包含2006年的那些行，请将 WHERE 子句替换为以下内容：  
   
     ```  
     WHERE (([OrderDate] >= N'2006-01-01 00:00:00') AND ([OrderDate] < N'2007-01-01 00:00:00'))  
     ```  
   
-#### <a name="to-create-a-partition-for-the-2007-year-in-the-internet-sales-table"></a>若要为 Internet Sales 表中的 2007 年创建分区  
+#### <a name="to-create-a-partition-for-the-2007-year-in-the-internet-sales-table"></a>在 Internet Sales 表中创建2007年的分区  
   
-1.  在“分区管理器”  对话框中，单击“复制”  。  
+1.  在“分区管理器”**** 对话框中，单击“复制”****。  
   
-2.  在中**分区名称**，类型`Internet Sales 2007`。  
+2.  在 "**分区名称**" `Internet Sales 2007`中，键入。  
   
-3.  在中**切换到**，选择**查询编辑器**。  
+3.  在 "**切换到**" 中，选择 "**查询编辑器**"。  
   
-4.  在 SQL 语句，为了使分区只包含这些行为 2007 年，使用以下内容替换 WHERE 子句：  
+4.  在 SQL 语句中，要使分区只包含2007年的那些行，请将 WHERE 子句替换为以下内容：  
   
     ```  
     WHERE (([OrderDate] >= N'2007-01-01 00:00:00') AND ([OrderDate] < N'2008-01-01 00:00:00'))  
     ```  
   
-#### <a name="to-create-a-partition-for-the-2008-year-in-the-internet-sales-table"></a>若要为 Internet Sales 表中的 2008 年创建分区  
+#### <a name="to-create-a-partition-for-the-2008-year-in-the-internet-sales-table"></a>在 Internet Sales 表中创建2008年的分区  
   
-1.  在“分区管理器”  对话框中，单击“新建”  。  
+1.  在“分区管理器”**** 对话框中，单击“新建”****。  
   
-2.  在中**分区名称**，类型`Internet Sales 2008`。  
+2.  在 "**分区名称**" `Internet Sales 2008`中，键入。  
   
-3.  在中**切换到**，选择**查询编辑器**。  
+3.  在 "**切换到**" 中，选择 "**查询编辑器**"。  
   
-4.  在 SQL 语句，为了使分区只包含那些的行则在 2008 年，使用以下内容替换 WHERE 子句：  
+4.  在 SQL 语句中，要使分区只包含2008年的那些行，请将 WHERE 子句替换为以下内容：  
   
     ```  
     WHERE (([OrderDate] >= N'2008-01-01 00:00:00') AND ([OrderDate] < N'2009-01-01 00:00:00'))  
@@ -123,11 +123,11 @@ ms.locfileid: "66079203"
   
 #### <a name="to-create-a-partition-for-the-2009-year-in-the-internet-sales-table"></a>在 Internet Sales 表中为 2009 年份创建分区  
   
-1.  在“分区管理器”  对话框中，单击“新建”  。  
+1.  在“分区管理器”**** 对话框中，单击“新建”****。  
   
-2.  在中**分区名称**，类型`Internet Sales 2009`。  
+2.  在 "**分区名称**" `Internet Sales 2009`中，键入。  
   
-3.  在中**切换到**，选择**查询编辑器**。  
+3.  在 "**切换到**" 中，选择 "**查询编辑器**"。  
   
 4.  在 SQL 语句中，要使分区只包含 2009 年份的这些行，请将 WHERE 子句替换为：  
   
@@ -136,23 +136,23 @@ ms.locfileid: "66079203"
     ```  
   
 ## <a name="process-partitions"></a>处理分区  
- 在“分区管理器”  对话框中，请注意，对于刚才创建的每个新分区，分区名称旁边会有一个星号 ( **\*** )。 这指示尚未处理（刷新）分区。 当您创建新分区时，您应运行“处理分区”或“处理表”操作以刷新这些分区中的数据。  
+ 在“分区管理器”**** 对话框中，请注意，对于刚才创建的每个新分区，分区名称旁边会有一个星号 (**\***)。 这指示尚未处理（刷新）分区。 当您创建新分区时，您应运行“处理分区”或“处理表”操作以刷新这些分区中的数据。  
   
 #### <a name="to-process-internet-sales-partitions"></a>处理 Internet Sales 分区  
   
-1.  单击“确定”  关闭“分区管理器”  对话框。  
+1.  单击“确定”**** 关闭“分区管理器”**** 对话框。  
   
-2.  在模型设计器中，单击“Internet Sales”  表，然后单击“模型”  菜单，指向“处理”  （刷新），然后单击“处理分区”  。  
+2.  在模型设计器中，单击“Internet Sales”**** 表，然后单击“模型”**** 菜单，指向“处理”****（刷新），然后单击“处理分区”****。  
   
-3.  在“处理分区”  对话框中，确认“模式”  已设置为“处理默认值”  。  
+3.  在“处理分区”**** 对话框中，确认“模式”**** 已设置为“处理默认值”****。  
   
-4.  在“处理”  列中选中所创建的全部五个分区的复选框，然后单击“确定”  。  
+4.  选中创建的五个分区中每个分区的“处理”列中的复选框，并单击“确定”。********  
   
      如果系统提示您输入模拟凭据，则输入您在第 2 课的第 6 步中指定的 Windows 用户名和密码。  
   
-     **数据过程**对话框然后随即出现并显示每个分区的处理详细信息。 您将注意到对于每个分区转移了不同的行数。 这是因为，每个分区值包含您在 SQL 语句的 WHERE 子句中指定的年份的那些行。 对于 2010 年份没有数据。  
+     然后，将出现 "**数据处理**" 对话框，并显示每个分区的进程详细信息。 请注意，为每个分区传输的行数不同。 这是因为每个分区仅包括 SQL 语句的 WHERE 子句中指定的年份的那些行。 对于 2010 年份没有数据。  
   
 ## <a name="next-steps"></a>后续步骤  
- 若要继续学习本教程，请转到下一课：课程：[第 12 课：创建角色](lesson-11-create-roles.md)。  
+ 若要继续学习本教程，请转到下一课：[第 12 课：创建角色](lesson-11-create-roles.md)。  
   
   

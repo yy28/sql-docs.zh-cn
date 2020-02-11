@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6799bc899a7e65082d83398f79996bea8d9dd2d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061789"
 ---
 # <a name="add-variable"></a>添加变量
@@ -31,19 +31,19 @@ ms.locfileid: "66061789"
  **名称**  
  键入变量名称。  
   
- **Namespace**  
+ **命名空间**  
  指定变量的命名空间。 默认情况下，用户定义变量位于 **User** 命名空间中。  
   
  **值类型**  
  选择数据类型。  
   
- **ReplTest1**  
+ **值**  
  键入值。 该值必须与 **“值类型”** 选项中指定的数据类型相符。  
   
  **只读**  
  如果选择此项，则变量将是只读的。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services (SSIS) 变量](integration-services-ssis-variables.md)   
  [Integration Services 数据类型](data-flow/integration-services-data-types.md)   
  [在包中使用变量](../../2014/integration-services/use-variables-in-packages.md)  

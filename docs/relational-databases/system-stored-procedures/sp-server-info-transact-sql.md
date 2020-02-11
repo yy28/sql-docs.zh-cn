@@ -1,5 +1,5 @@
 ---
-title: sp_server_info (Transact-sql) |Microsoft Docs
+title: sp_server_info （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,19 +18,19 @@ ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7409dcee64c7867b8811a282be71070923d48aa1
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68702854"
 ---
-# <a name="spserverinfo-transact-sql"></a>sp_server_info (Transact-SQL)
+# <a name="sp_server_info-transact-sql"></a>sp_server_info (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、数据库网关或基础数据源的属性名称和匹配值的列表。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,42 +40,42 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @attribute_id = ] 'attribute_id'`属性的整数 ID。 *attribute_id*的值为**int**, 默认值为 NULL。  
+`[ @attribute_id = ] 'attribute_id'`属性的整数 ID。 *attribute_id*的值为**int**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  无  
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**ATTRIBUTE_ID**|**int**|属性的 ID 号。|  
-|**ATTRIBUTE_NAME**|**varchar(** 60 **)**|特性名称。|  
-|**ATTRIBUTE_VALUE**|**varchar(** 255 **)**|属性的当前设置。|  
+|**ATTRIBUTE_NAME**|**varchar （** 60 **）**|特性名称。|  
+|**ATTRIBUTE_VALUE**|**varchar （** 255 **）**|属性的当前设置。|  
   
  下表列出了各个属性。 [!INCLUDE[msCoName](../../includes/msconame-md.md)]ODBC 客户端库当前在连接时使用属性**1**、 **2**、 **18**、 **22**和**500** 。  
   
 |ATTRIBUTE_ID|ATTRIBUTE_NAME 说明|ATTRIBUTE_VALUE|  
 |-------------------|---------------------------------|----------------------|  
 |**1**|DBMS_NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|**2**|DBMS_VER|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] - *x.xx.xxxx*|  
-|**10**|OWNER_TERM|owner|  
-|**11**|TABLE_TERM|table|  
+|**2**|DBMS_VER|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] - *x xx*|  
+|**万**|OWNER_TERM|owner|  
+|**11**|TABLE_TERM|表|  
 |**12**|MAX_OWNER_NAME_LENGTH|128|  
-|**13**|TABLE_LENGTH<br /><br /> 指定表名的最大字符数。|128|  
+|**9**|TABLE_LENGTH<br /><br /> 指定表名的最大字符数。|128|  
 |**14**|MAX_QUAL_LENGTH<br /><br /> 指定表限定符（由三部分组成的表名的第一部分）名称的最大长度。|128|  
 |**15**|COLUMN_LENGTH<br /><br /> 指定列名的最大字符数。|128|  
 |**16**|IDENTIFIER_CASE<br /><br /> 在数据库（系统目录中对象的事例）中指定用户定义的名称（表名、列名、存储过程名）。|SENSITIVE|  
 |**17**|TX_ISOLATION<br /><br /> 指定服务器所采用的初始事务隔离级别，此级别与 SQL-92 中定义的隔离级别相对应。|2|  
 |**18**|COLLATION_SEQ<br /><br /> 指定该服务器的字符集排序。|charset=iso_1 sort_order=dictionary_iso charset_num=1 sort_order_num=51|  
 |**19**|SAVEPOINT_SUPPORT<br /><br /> 指定基础 DBMS 是否支持命名保存点。|Y|  
-|**20**|MULTI_RESULT_SETS<br /><br /> 指定基础数据库或网关本身是否支持多个结果集（通过网关可以将多个语句与返回给客户端的多个结果集一起发送）。|Y|  
-|**22**|ACCESSIBLE_TABLES<br /><br /> 指定在**sp_tables**中是否只返回当前用户可访问的表、视图等 (即至少具有表的 SELECT 权限的用户)。|Y|  
+|**0.2**|MULTI_RESULT_SETS<br /><br /> 指定基础数据库或网关本身是否支持多个结果集（通过网关可以将多个语句与返回给客户端的多个结果集一起发送）。|Y|  
+|**22**|ACCESSIBLE_TABLES<br /><br /> 指定在**sp_tables**中，网关是否只返回当前用户可访问的表、视图等（即至少具有表的 SELECT 权限的用户）。|Y|  
 |**100**|USERID_LENGTH<br /><br /> 指定用户名的最大字符数。|128|  
-|**101**|QUALIFIER_TERM<br /><br /> 指定表限定符（由三部分组成的名称的第一部分）的 DBMS 供应商术语。|“数据库”|  
+|**101**|QUALIFIER_TERM<br /><br /> 指定表限定符（由三部分组成的名称的第一部分）的 DBMS 供应商术语。|database|  
 |**102**|NAMED_TRANSACTIONS<br /><br /> 指定基础 DBMS 是否支持命名事务。|Y|  
 |**103**|SPROC_AS_LANGUAGE<br /><br /> 指定能否将存储过程作为语言事件执行。|Y|  
-|**104**|ACCESSIBLE_SPROC<br /><br /> 指定在**sp_stored_procedures**中是否只返回当前用户可执行的存储过程。|Y|  
+|**104**|ACCESSIBLE_SPROC<br /><br /> 指定是否在**sp_stored_procedures**中，网关仅返回由当前用户执行的存储过程。|Y|  
 |**105**|MAX_INDEX_COLS<br /><br /> 指定 DBMS 索引中的最大列数。|16|  
 |**106**|RENAME_TABLE<br /><br /> 指定是否可以重命名表。|Y|  
 |**107**|RENAME_COLUMN<br /><br /> 指定是否可以重命名列。|Y|  
@@ -88,13 +88,13 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**500**|SYS_SPROC_VERSION<br /><br /> 指定当前实现的目录存储过程的版本。|当前的版本号|  
   
 ## <a name="remarks"></a>备注  
- **sp_server_info**返回**SQLGetInfo**在 ODBC 中提供的信息的子集。  
+ **sp_server_info**返回 ODBC 中**SQLGetInfo**提供的信息的子集。  
   
 ## <a name="permissions"></a>权限  
  需要对架构的 SELECT 权限。  
   
-## <a name="see-also"></a>请参阅  
- [目录存储过程&#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [&#40;Transact-sql&#41;的目录存储过程](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: NamedParameters 属性 (ADO) |Microsoft Docs
+title: NamedParameters 属性（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,22 +16,22 @@ ms.assetid: 42409387-026c-435f-a9b1-bf4167095875
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d63c413ebed585782ca5ce0568119dd7e05bf8ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932065"
 ---
 # <a name="namedparameters-property-ado"></a>NamedParameters 属性 (ADO)
 指示是否应将参数名称传递给提供程序。  
   
 ## <a name="remarks"></a>备注  
- 如果此属性为 true，ADO 将传递的值**名称**中的每个参数的属性**参数**集合[命令对象](../../../ado/reference/ado-api/command-object-ado.md)。 提供程序使用的参数名称匹配中的参数**CommandText**或**CommandStream**属性。 如果此属性为 false （默认值），将忽略参数名称和提供程序使用参数的顺序以匹配到中的参数的值**CommandText**或**CommandStream**属性。  
+ 当此属性为 true 时，ADO 将为[命令对象](../../../ado/reference/ado-api/command-object-ado.md)传递**参数**集合中每个参数的**Name**属性的值。 提供程序使用参数名来匹配**CommandText**或**CommandStream**属性中的参数。 如果此属性为 false （默认值），则忽略参数名，并且提供程序使用参数的顺序将值与**CommandText**或**CommandStream**属性中的参数相匹配。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [命令对象 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## <a name="see-also"></a>请参阅  
- [CommandText 属性 (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
- [CommandStream 属性 (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md)   
+## <a name="see-also"></a>另请参阅  
+ [CommandText 属性（ADO）](../../../ado/reference/ado-api/commandtext-property-ado.md)   
+ [CommandStream 属性（ADO）](../../../ado/reference/ado-api/commandstream-property-ado.md)   
  [参数集合 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)

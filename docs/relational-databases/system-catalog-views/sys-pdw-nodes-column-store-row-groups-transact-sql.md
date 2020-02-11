@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: b1cbdc63907933f173c7d32a2dde3151dd4db7af
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399873"
 ---
 # <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys. pdw_nodes_column_store_row_groups （Transact-sql）
@@ -26,18 +26,18 @@ ms.locfileid: "74399873"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**整形**|基础表的 ID。 这是计算节点上的物理表，而不是控制节点上逻辑表的 object_id。 例如，object_id 与 sys.databases 中的 object_id 不匹配。<br /><br /> 若要与 sys.databases 联接，请使用 sys. pdw_index_mappings。|  
-|**index_id**|**整形**|*Object_id*表上的聚集列存储索引的 ID。|  
-|**partition_number**|**整形**|保存行组*row_group_id*的表分区的 ID。 你可以使用*partition_number*将此 DMV 加入 sys.databases。|  
-|**row_group_id**|**整形**|此行组的 ID。 这在分区中是唯一的。|  
+|**object_id**|**int**|基础表的 ID。 这是计算节点上的物理表，而不是控制节点上逻辑表的 object_id。 例如，object_id 与 sys.databases 中的 object_id 不匹配。<br /><br /> 若要与 sys.databases 联接，请使用 sys. pdw_index_mappings。|  
+|**index_id**|**int**|*Object_id*表上的聚集列存储索引的 ID。|  
+|**partition_number**|**int**|保存行组*row_group_id*的表分区的 ID。 你可以使用*partition_number*将此 DMV 加入 sys.databases。|  
+|**row_group_id**|**int**|此行组的 ID。 这在分区中是唯一的。|  
 |**dellta_store_hobt_id**|**bigint**|delta 行组的 hobt_id；或如果行组类型不是 delta，则为 NULL。 delta 行组是正在接受新记录的读/写行组。 增量行组具有**打开**状态。 delta 行组仍采用行存储格式，并且尚未压缩成列存储格式。|  
 |**状态**|**tinyint**|与 state_description 关联的 ID 号。<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
 |**state_desccription**|**nvarchar （60）**|行组的持久状态的说明：<br /><br /> OPEN-正在接受新记录的读/写行组。 开放的行组仍采用行存储格式，并且尚未压缩成列存储格式。<br /><br /> 已关闭-已填充但尚未由元组移动器进程压缩的行组。<br /><br /> 压缩-已填充和压缩的行组。|  
 |**total_rows**|**bigint**|行组中物理存储的总行数。 一些行可能已删除，但它们仍被存储。 一个行组中的最大行数为 1,048,576（十六进制 FFFFF）。|  
 |**deleted_rows**|**bigint**|在标记为删除的行组中物理存储的行数。<br /><br /> 对于增量行组，始终为0。|  
-|**size_in_bytes**|**整形**|此行组中所有页面的组合大小（以字节为单位）。 此大小不包括存储元数据或共享字典所需的大小。|  
-|**pdw_node_id**|**整形**|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]节点的唯一 id。|  
-|**distribution_id**|**整形**|分布的唯一 id。|
+|**size_in_bytes**|**int**|此行组中所有页面的组合大小（以字节为单位）。 此大小不包括存储元数据或共享字典所需的大小。|  
+|pdw_node_id |**int**|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]节点的唯一 id。|  
+|distribution_id |**int**|分布的唯一 id。|
   
 ## <a name="remarks"></a>备注  
  针对每个表中具有聚合或非聚合列存储索引的每个列存储行组返回一行。  

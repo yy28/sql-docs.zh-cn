@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 647fa27d872829a60d32c0cdc7686938ae796f2a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770373"
 ---
 # <a name="create-relationships"></a>创建关系
@@ -48,7 +48,7 @@ ms.locfileid: "62770373"
  **相似性输出别名**  
  为包含所选列相似性得分的新输出列指定名称。 如果将该值保留为空，将不会创建输出列。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../integration-services-error-and-message-reference.md)   
  [模糊查找转换编辑器（“列”选项卡）](../../fuzzy-lookup-transformation-editor-columns-tab.md)   
  [查找转换编辑器（“列”页）](../../lookup-transformation-editor-columns-page.md)   

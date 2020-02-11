@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 73415bf802973fcac8cd0fe29c6db3bd5e110f6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015279"
 ---
 # <a name="migration-issues-for-natively-compiled-stored-procedures"></a>本机编译的存储过程的迁移问题
@@ -34,7 +34,7 @@ ms.locfileid: "63015279"
   
 -   [在本机编译存储过程中实现 OR 运算符](../../database-engine/implementing-the-or-operator-in-natively-compiled-stored-procedures.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [迁移到内存中 OLTP](migrating-to-in-memory-oltp.md)  
   
   

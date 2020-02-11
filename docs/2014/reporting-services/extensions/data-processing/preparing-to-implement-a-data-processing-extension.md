@@ -14,22 +14,22 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3343823399b0500e0a329e160e5545d4dd372a54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63165029"
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>准备实现数据处理扩展插件
-  在实现 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据处理扩展插件之前，应定义要实现的接口。 你可能要提供整个接口组的特定于扩展插件的实现，或者只是要针对某一子集（例如 <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> 和 <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> 接口）提供实现，客户端在其中主要与作为 DataReader 对象的结果集交互，并且使用 [!INCLUDE[ssRS](../../../includes/ssrs.md)] 数据处理扩展插件作为结果集和数据源之间的桥梁  。  
+  在实现[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]数据处理扩展插件之前，应定义要实现的接口。 你可能要提供整个接口组的特定于扩展插件的实现，或者只是要针对某一子集（例如 <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> 和 <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> 接口）提供实现，客户端在其中主要与作为 DataReader 对象的结果集交互，并且使用 ** 数据处理扩展插件作为结果集和数据源之间的桥梁**[!INCLUDE[ssRS](../../../includes/ssrs.md)]。  
   
  然后，您可以通过以下两种方式之一实现数据处理扩展插件：  
   
--   数据处理扩展插件类可以实现 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 数据提供程序接口，并且可以选择实现 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 提供的扩展数据处理扩展插件接口。  
+-   您的数据处理扩展插件类可以[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]实现数据提供程序接口，还可以选择提供的扩展数据[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]处理扩展插件接口。  
   
 -   您的数据处理扩展插件类可以实现 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 提供的数据处理扩展插件接口，并且可以选择实现扩展数据处理扩展插件接口。  
   
- 如果您的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据处理扩展插件将不支持某一特定的属性或方法，则将该属性或方法作为无操作实现。 如果某一客户端期望特定的行为，则引发 NotSupportedException 异常  。  
+ 如果您的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据处理扩展插件将不支持某一特定的属性或方法，则将该属性或方法作为无操作实现。 如果某一客户端期望特定的行为，则引发 NotSupportedException 异常****。  
   
 > [!NOTE]  
 >  某一属性或方法的无操作实现只应用于您选择实现的那些接口的属性和方法。 您选择不实现的可选接口应排除在您的数据处理扩展插件程序集之外。 有关某一接口是必需接口还是可选接口的详细信息，请参阅本节后面的表。  
@@ -64,23 +64,23 @@ ms.locfileid: "63165029"
 ## <a name="available-extension-interfaces"></a>可用的扩展插件接口  
  下表介绍可用接口以及实现是必需的还是可选的。  
   
-|接口|Description|实现|  
+|接口|说明|实现|  
 |---------------|-----------------|--------------------|  
-|IDbConnection|表示与某一数据源的唯一会话。 在客户端/服务器数据库系统的情况下，该会话可等效于到服务器的一个网络连接。|Required|  
+|IDbConnection|表示与某一数据源的唯一会话。 在客户端/服务器数据库系统的情况下，该会话可等效于到服务器的一个网络连接。|必选|  
 |IDbConnectionExtension|表示可由 [!INCLUDE[ssRS](../../../includes/ssrs.md)] 数据处理扩展插件针对安全性和身份验证实现的附加连接属性。|可选|  
-|IDbTransaction|表示本地事务。|Required|  
+|IDbTransaction|表示本地事务。|必选|  
 |IDbTransactionExtension|表示可由 [!INCLUDE[ssRS](../../../includes/ssrs.md)] 数据处理扩展插件实现的附加事务属性。|可选|  
-|IDbCommand|表示在连接到数据源时使用的查询或命令。|Required|  
+|IDbCommand|表示在连接到数据源时使用的查询或命令。|必选|  
 |IDbCommandAnalysis|表示用于分析某一查询并返回在该查询中使用的参数名称列表的附加命令信息。|可选|  
-|IDataParameter|表示传递到命令或查询的参数或名称/值对。|Required|  
-|IDataParameterCollection|表示与某一命令或查询相关的所有参数的集合。|Required|  
-|IDataReader|提供从数据源读取数据的只进、只读流的方法。|Required|  
+|IDataParameter|表示传递到命令或查询的参数或名称/值对。|必选|  
+|IDataParameterCollection|表示与某一命令或查询相关的所有参数的集合。|必选|  
+|IDataReader|提供从数据源读取数据的只进、只读流的方法。|必选|  
 |IDataReaderExtension|提供一种方法来读取一个或多个通过在数据源执行命令所获得的只进结果集流。 此接口为字段聚合提供附加支持。|可选|  
-|IExtension|为 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据处理扩展插件提供基类。 还使实现者可为扩展插件包括本地化的名称并将配置设置从配置文件传递到扩展插件。|Required|  
+|IExtension|为 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据处理扩展插件提供基类。 还使实现者可为扩展插件包括本地化的名称并将配置设置从配置文件传递到扩展插件。|必选|  
   
  数据处理扩展插件接口将尽可能与 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 数据访问接口、方法和属性的子集完全相同。 有关实现完整 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 数据访问接口的详细信息，请参阅 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 软件开发包 (SDK) 文档中的“实现 .NET Framework 数据访问接口”。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Reporting Services 扩展插件](../reporting-services-extensions.md)   
  [实现数据处理扩展插件](implementing-a-data-processing-extension.md)   
  [Reporting Services 扩展插件库](../reporting-services-extension-library.md)  

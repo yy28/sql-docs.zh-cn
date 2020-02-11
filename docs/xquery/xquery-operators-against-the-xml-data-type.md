@@ -1,5 +1,5 @@
 ---
-title: XQuery 运算符针对 xml 数据类型 |Microsoft Docs
+title: 针对 xml 数据类型的 XQuery 运算符 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ ms.assetid: 39ca3d2e-e928-4333-872b-75c4ccde8e79
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b113fbd8111072790d1f0904b3e751c6629725b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67945958"
 ---
 # <a name="xquery-operators-against-the-xml-data-type"></a>针对 xml 数据类型的 XQuery 运算符
@@ -32,16 +32,16 @@ ms.locfileid: "67945958"
   
 -   值比较运算符（eq、ne、lt、gt、le、ge）  
   
--   常规比较运算符 (=、 ！ =、 \<，>， \<=、 > =)  
+-   用于常规比较的运算符（=、！ = \<、、> \<、=、>=）  
   
- 有关这些运算符的详细信息，请参阅[比较表达式&#40;XQuery&#41;](../xquery/comparison-expressions-xquery.md)  
+ 有关这些运算符的详细信息，请参阅[&#40;XQuery 的比较表达式&#41;](../xquery/comparison-expressions-xquery.md)  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-general-operators"></a>A. 使用一般运算符  
- 此查询说明了应用于序列和比较序列的一般运算符的使用方法。 该查询将检索每个客户的电话号码序列**AdditionalContactInfo**的列**联系人**表。 然后，将这个序列与两个电话号码（“111-111-1111”、“222-2222”）序列进行比较。  
+ 此查询说明了应用于序列和比较序列的一般运算符的使用方法。 查询从**Contact**表的**AdditionalContactInfo**列中检索每个客户的电话号码序列。 然后，将这个序列与两个电话号码（“111-111-1111”、“222-2222”）序列进行比较。  
   
- 该查询使用 **=** 比较运算符。 在右侧序列中的每个节点 **=** 与左侧和右侧序列中每个节点比较运算符。 如果节点匹配，则节点比较结果将是 **，则返回 TRUE**。 然后将其转换为整数并与 1 进行比较，然后查询将返回客户 ID。  
+ 查询使用**=** 比较运算符。 **=** 运算符右侧序列中的每个节点都与左侧序列中的每个节点进行比较。 如果节点匹配，则节点比较为**TRUE**。 然后将其转换为整数并与 1 进行比较，然后查询将返回客户 ID。  
   
 ```sql
 WITH XMLNAMESPACES (  
@@ -55,7 +55,7 @@ WHERE  AdditionalContactInfo.value('
       'bit')= cast(1 as bit)  
 ```  
   
- 还有另一种方法观察上一个查询的工作原理：每个电话号码值从检索**AdditionalContactInfo**列与两个电话号码集进行比较。 如果该值处于集中，则该客户将返回到结果中。  
+ 还可以通过另一种方法来观察上一个查询的工作原理：从**AdditionalContactInfo**列检索的每个电话号码值都将与两个电话号码的集合进行比较。 如果该值处于集中，则该客户将返回到结果中。  
   
 ### <a name="b-using-a-numeric-operator"></a>B. 使用数字运算符  
  此查询中的运算符 + 是一个值运算符，因为它应用于单个项。 例如，将值 1 添加到查询返回的许多大小值上：  
@@ -78,7 +78,7 @@ where ProductModelID=7
 ```  
   
 ### <a name="c-using-a-value-operator"></a>C. 使用值运算符  
- 以下查询将检索 <`Picture`> 针对某个产品型号图片大小为"小型"的元素：  
+ 下面的查询将检索图片`Picture`大小为 "small" 的产品型号的 <> 元素：  
   
 ```sql
 SELECT CatalogDescription.query('  
@@ -91,9 +91,9 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- 因为两个操作数都**eq**运算符是原子值，在查询中使用值运算符。 可以使用常规比较运算符来编写相同的查询 ( **=** )。  
+ 由于**eq**运算符的两个操作数都是原子值，因此在查询中使用值运算符。 您可以通过使用常规比较运算符（ **=** ）来编写相同的查询。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [针对 xml 数据类型的 XQuery 函数](../xquery/xquery-functions-against-the-xml-data-type.md)   
  [XML 数据 (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)   
  [XQuery 语言参考 (SQL Server)](../xquery/xquery-language-reference-sql-server.md)  

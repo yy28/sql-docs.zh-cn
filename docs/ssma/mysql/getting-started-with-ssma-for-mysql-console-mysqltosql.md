@@ -1,5 +1,5 @@
 ---
-title: 开始使用 SSMA for MySQL 控制台 (MySQLToSQL) |Microsoft Docs
+title: 与 SSMA for MySQL 控制台（MySQLToSQL）入门 |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,57 +13,57 @@ ms.assetid: 218d502c-059f-4d48-9aea-61e553d74303
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 88cf4716ea02b8c5dbcbd73e9839c6bacfbed10b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68075418"
 ---
 # <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>SSMA for MySQL 控制台入门 (MySQLToSQL)
-本部分介绍的过程启动并开始使用 MySQL 控制台应用程序。 此外列出，本文所述，将使用的约定在典型的 SSMA 控制台输出窗口中。  
+本部分介绍了启动和入门 MySQL 控制台应用程序的过程。 本文还列出了在典型的 SSMA 控制台输出窗口中使用的约定。  
   
 ## <a name="launching-ssma-console"></a>启动 SSMA 控制台  
 使用以下步骤启动 SSMA 控制台应用程序：  
   
-1.  转到**启动**，然后指向**所有程序**。  
+1.  中转到 "**开始**"，然后指向 "**所有程序**"。  
   
-2.  单击**SQL Server Migration Assistant 的 MySQL 命令提示符**快捷方式。  
+2.  单击 " **SQL Server 迁移助手获取 MySQL 命令提示符**" 快捷方式。  
   
-    它将显示 SSMA 控制台使用情况菜单和`(/? Help)`，以帮助你开始使用控制台应用程序。  
+    它显示 "SSMA 控制台使用情况" `(/? Help)`菜单和，以帮助你开始使用控制台应用程序。  
   
 ## <a name="procedure-for-using-the-ssma-console"></a>使用 SSMA 控制台的过程  
-在 Windows 系统上成功启动控制台之后，可以使用以下步骤才能使用它：  
+在 Windows 系统上成功启动控制台后，可以使用以下步骤来处理它：  
   
-1.  通过脚本文件配置 SSMA 控制台。 本部分的详细信息，请参阅[创建脚本文件&#40;MySQLToSQL&#41; ](../../ssma/mysql/creating-script-files-mysqltosql.md) 。  
+1.  通过脚本文件配置 SSMA 控制台。 有关此部分的详细信息，请参阅[创建脚本文件 &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-script-files-mysqltosql.md) 。  
   
-2.  [创建变量值文件&#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)  
+2.  [创建变量值文件 &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)  
   
-3.  [创建服务器连接文件&#40;MySQLToSQL&#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)  
+3.  [&#40;MySQLToSQL 创建服务器连接文件&#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)  
   
-4.  [执行 SSMA 控制台&#40;MySQLToSQL&#41; ](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)根据您的项目需求  
+4.  基于你的项目需求[执行 SSMA 控制台 &#40;MySQLToSQL&#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)  
   
 其他功能：  
   
-1.  [保护密码](managing-passwords-mysqltosql.md)和导出 / 导入到其他窗口机  
+1.  [保护密码](managing-passwords-mysqltosql.md)，并将其导出/导入到其他窗口计算机上  
   
-2.  [生成报告](generating-reports-mysqltosql.md)若要查看详细的 xml 输出为评估 /conversion 和数据迁移的报告。 此外可以刷新和同步命令的生成详细的错误报告。  
+2.  [生成报表](generating-reports-mysqltosql.md)以查看详细的 xml 输出报告，以便进行评估/conversion 和数据迁移。 还可以为刷新和同步命令生成详细的错误报告。  
   
 ## <a name="ssma-console-output-conventions"></a>SSMA 控制台输出约定  
-执行 SSMA 脚本命令和选项，时控制台程序为用户在控制台上显示的结果和消息 （信息、 错误等），或如有必要，将重定向到的 xml 输出文件。 每种类型的输出中的消息是由唯一的颜色表示。 例如，白色颜色中的文本消息表示文件的脚本命令;以绿色表示一个表示提示用户输入，依此类推。  
+执行 SSMA 脚本命令和选项后，控制台程序会在控制台上向用户显示结果和消息（信息、错误等），或在需要时将其重定向到 xml 输出文件。 输出中的每种消息类型都用一种独特的颜色表示。 例如，以白色表示的短信表示脚本文件命令;绿色颜色表示用户输入的提示，等等。  
   
 ![SSMAConsoleOutput_MySQL](../../ssma/mysql/media/ssmaconsoleoutput_mysql.jpg "SSMAConsoleOutput_MySQL")  
   
 下表中的控制台输出的颜色解释：  
   
-|颜色|描述|  
+|Color|说明|  
 |---------|---------------|  
-|Red|执行期间出错|  
-|灰色|日期和时间戳，向用户显示消息|  
-|白色|脚本文件命令、 消息类型|  
-|Yellow|警告|  
-|绿色|提示用户输入|  
-|蓝绿色|开始、 完成和操作的结果|  
+|Red|执行过程中出现错误|  
+|灰色|日期和时间戳，向用户发送消息|  
+|白色|脚本文件命令，消息类型|  
+|独︹|警告|  
+|绿色|提示输入用户-输入|  
+|蓝|操作的开始、完成和结果|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [安装 SSMA for MySQL](installing-ssma-for-mysql-mysqltosql.md)  
   

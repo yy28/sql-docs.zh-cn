@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f1ec180247a3df15af58f95e041a0c426a35cdb4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637737"
 ---
 # <a name="columns-with-a-name-specified-as-a-wildcard-character"></a>名称指定为通配符的列
@@ -36,7 +36,7 @@ WHERE E.BusinessEntityID=1
 FOR XML PATH;  
 ```  
   
- 下面是结果：  
+ 结果如下：  
   
  `<row EmpID="1">KenJS??nchez</row>`  
   
@@ -71,7 +71,7 @@ GO
   
  `</row>`  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [将 PATH 模式与 FOR XML 一起使用](use-path-mode-with-for-xml.md)  
   
   

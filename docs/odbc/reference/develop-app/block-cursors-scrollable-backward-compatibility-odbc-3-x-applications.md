@@ -1,5 +1,5 @@
 ---
-title: 块和用于 ODBC 的可滚动游标兼容性 3.x |Microsoft Docs
+title: ODBC 2.x 的块和可滚动游标兼容性 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,30 +17,30 @@ ms.assetid: 82f6cf68-cfde-4417-9788-d6382ca14bf8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7d12906f8dec0bfb12fc861c067e6e615e758a3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68134991"
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility-for-odbc-3x-applications"></a>ODBC 3.x 应用程序的块游标、可滚动游标和后向兼容性
-这两者的存在**SQLFetchScroll**并**SQLExtendedFetch**表示首先清除拆分 ODBC 之间应用程序编程接口 (API)，这是组的函数中服务提供程序接口 (SPI)，这是组的函数和应用程序调用，该驱动程序实现。 此拆分所需平衡 ODBC 中的要求*3.x*，使用**SQLFetchScroll**，以与标准保持一致，并与 ODBC 兼容*2.x*，使用**SQLExtendedFetch**。  
+**SQLFetchScroll**和**SQLExtendedFetch**的存在都表示应用程序编程接口（API）（它是应用程序调用的函数集）与服务提供程序接口（SPI）之间的 ODBC 中的第一个明确拆分，后者是驱动程序实现的函数集。 需要此拆分来*平衡 odbc 2.x*中的要求，该要求使用**SQLFetchScroll**，以符合标准并与使用**SQLExtendedFetch***的 odbc 2.x 兼容。*  
   
- ODBC *3.x* API，这是组函数的应用程序调用，包括**SQLFetchScroll**和相关的语句属性。 ODBC *3.x* SPI，这是一组函数的驱动程序实现，包括**SQLFetchScroll**， **SQLExtendedFetch**，和相关的语句属性。 由于 ODBC 不正式实施之间的 API 和 SPI 的划分，所以有可能适用于 ODBC *3.x*应用程序可以调用**SQLExtendedFetch**和相关的语句属性。 但是，没有适用于 ODBC 理由*3.x*应用程序来执行此操作。 有关 Api 和 Spi 的详细信息，请参阅简介[ODBC 体系结构](../../../odbc/reference/odbc-architecture.md)。  
+ *ODBC 2.X* API 是应用程序调用的函数集，包括**SQLFetchScroll**和相关语句属性。 *ODBC 2.X* SPI 是驱动程序实现的一组函数，包括**SQLFetchScroll**、 **SQLExtendedFetch**和相关的语句属性。 由于 ODBC 不会在 API 与 SPI 之间正式强制实现此拆分，因此，ODBC *1.x 应用程序*可以调用**SQLExtendedFetch**和相关的语句属性。 不过 *，ODBC 1.x*应用程序没有理由执行此操作。 有关 Api 和 SPIs 的详细信息，请参阅[ODBC 体系结构](../../../odbc/reference/odbc-architecture.md)简介。  
   
- 有关如何信息 ODBC *3.x*驱动程序管理器将调用映射到 ODBC *2.x*和 ODBC *3.x*驱动程序和函数和语句属性 ODBC *3.x*驱动程序应实现块和可滚动游标，请参阅[驱动程序的用途](../../../odbc/reference/appendixes/what-the-driver-does.md)中附录 g:为了向后兼容的驱动程序指南。  
+ 有关 ODBC *1.X 驱动程序*管理器如何映射对 odbc 2.x 驱动程序和*odbc 2.x*驱动程序的调用，*以及 odbc 2.x* *驱动程序应*为块和可滚动游标实现哪些函数和语句属性的信息，请参阅附录 G：驱动程序指南中的[驱动程序功能](../../../odbc/reference/appendixes/what-the-driver-does.md)以了解向后兼容性。  
   
- 下表总结了哪些功能和语句属性 ODBC *3.x*应用程序应使用块和可滚动的光标。 它还列出了 ODBC 之间的更改*2.x*和 ODBC *3.x*此区域中该 ODBC *3.x*应用程序应注意的是与 ODBC 兼容*2.x*驱动程序。  
+ 下表总结*了 ODBC 2.x*应用程序应将哪些函数和语句特性用于块和可滚动游标。 它还列出了 ODBC 2.x*和 odbc* *2.x 在此区域中的更改*，odbc 3.x 应用程序应该知道*与 odbc 2.x* *驱动程序兼容*。  
   
-|函数或<br /><br /> 语句属性|注释|  
+|函数或<br /><br /> 语句特性|注释|  
 |-----------------------------------------|--------------|  
-|SQL_ATTR_FETCH_BOOKMARK_PTR|指向要用于该书签**SQLFetchScroll**。<br /><br /> 当应用程序设置此在 ODBC *2.x*驱动程序，这必须指向定长书签。|  
-|SQL_ATTR_ROW_STATUS_PTR|指向行状态数组填充**SQLFetch**， **SQLFetchScroll**， **SQLBulkOperations**，以及**SQLSetPos**。<br /><br /> 如果在 ODBC 中的应用程序设置这*2.x*驱动程序并调用**SQLBulkOperation**与*操作*的之前调用 SQL_ADD **SQLFetchScroll**， **SQLFetch**，或**SQLExtendedFetch**，SQLSTATE HY011 （属性不能立即设置） 返回。<br /><br /> 当应用程序调用**SQLFetch**在 ODBC *2.x*驱动程序**SQLFetch**映射到**SQLExtendedFetch**并因此返回此数组中的值。|  
-|SQL_ATTR_ROWS_FETCHED_PTR|指向的缓冲区**SQLFetch**并**SQLFetchScroll**返回提取的行数。<br /><br /> 当应用程序调用**SQLFetch**在 ODBC *2.x*驱动程序**SQLFetch**映射到**SQLExtendedFetch**并因此返回在此缓冲区中的值。|  
-|SQL_ATTR_ROW_ARRAY_SIZE|设置行集大小。<br /><br /> 如果应用程序调用**SQLBulkOperations**与*操作*SQL_ADD 在 ODBC 中的*2.x* SQL_ROWSET_SIZE 的驱动程序，将用于调用不 SQL_ATTR_ROW_ARRAY_调整大小，因为调用映射到**SQLSetPos**与*操作*SQL_ADD，使用 SQL_ROWSET_SIZE。<br /><br /> 调用**SQLSetPos**与*操作*的 SQL_ADD 或**SQLExtendedFetch** ODBC 中*2.x*驱动程序将使用 SQL_ROWSET_SIZE。<br /><br /> 调用**SQLFetch**或**SQLFetchScroll** ODBC 中*2.x*驱动程序使用 SQL_ATTR_ROW_ARRAY_SIZE。|  
-|**SQLBulkOperations**|执行 insert 和书签操作。 当**SQLBulkOperations**与*操作*SQL_ADD 的在 ODBC 中调用*2.x*驱动程序，它将映射到**SQLSetPos**与*操作*SQL_ADD。 以下是实现详细信息：<br /><br /> -当使用 ODBC *2.x*驱动程序，应用程序必须使用仅与关联的隐式分配的 ARD *StatementHandle*; 它不能分配另一个 ARD 添加行，因为显式描述符操作不支持 ODBC *2.x*驱动程序。 应用程序必须使用**SQLBindCol**将不绑定到 ARD **SQLSetDescField**或**SQLSetDescRec**。<br />-当调用 ODBC *3.x*驱动程序，应用程序可以调用**SQLBulkOperations**与*操作*的之前调用 SQL_ADD **SQLFetch**或**SQLFetchScroll**。 调用 ODBC 时*2.x*驱动程序，应用程序必须调用**SQLFetchScroll**之前调用**SQLBulkOperations** SQL_ADD 操作使用。|  
-|**SQLFetch**|返回下一步的行集。 以下是实现详细信息：<br /><br /> -当应用程序调用**SQLFetch**在 ODBC *2.x*驱动程序，它将映射到**SQLExtendedFetch**。<br />-当应用程序调用**SQLFetch**在 ODBC *3.x*驱动程序，它将返回使用 SQL_ATTR_ROW_ARRAY_SIZE 语句属性指定的行数。|  
-|**SQLFetchScroll**|返回指定行集。 以下是实现详细信息：<br /><br /> -当应用程序调用**SQLFetchScroll**在 ODBC *2.x*驱动程序，它将返回 SQLSTATE 01S01 （行中的错误） 之前应用于单个行的每个错误。 这是仅因为 ODBC *3.x*驱动程序管理器可以将其映射到**SQLExtendedFetch**并**SQLExtendedFetch**返回此的 SQLSTATE。 当应用程序调用**SQLFetchScroll**在 ODBC *3.x*驱动程序，它永远不会返回 SQLSTATE 01S01 （行中的错误）。<br />-当应用程序调用**SQLFetchScroll**在 ODBC *2.x*使用的驱动程序*FetchOrientation*设置为 SQL_FETCH_BOOKMARK， *FetchOffset*参数必须设置为 0。 SQLSTATE HYC00 如果偏移量基于书签提取，将尝试使用 ODBC，则返回 （未实现的可选功能） *2.x*驱动程序。|  
+|SQL_ATTR_FETCH_BOOKMARK_PTR|指向要用于**SQLFetchScroll**的书签。<br /><br /> 当应用程序*在 ODBC 2.x*驱动程序中设置此项时，它必须指向固定长度的书签。|  
+|SQL_ATTR_ROW_STATUS_PTR|指向由**SQLFetch**、 **SQLFetchScroll**、 **SQLBulkOperations**和**SQLSetPos**填充的行状态数组。<br /><br /> 如果应用程序*在 ODBC 2.x*驱动程序中设置此项，并在调用**SQLFetchScroll**、 **SQLFetch**或**SQLExtendedFetch**之前使用 SQL_ADD 的*操作*调用**SQLBulkOperation** ，则会返回 SQLSTATE HY011 （现在不能设置特性）。<br /><br /> 当应用程序*在 ODBC 2.x*驱动程序中调用**SQLFetch**时， **SQLFetch**将映射到**SQLExtendedFetch** ，因而返回此数组中的值。|  
+|SQL_ATTR_ROWS_FETCHED_PTR|指向缓冲区，其中**SQLFetch**和**SQLFetchScroll**返回提取的行数。<br /><br /> 当应用程序*在 ODBC 2.x*驱动程序中调用**SQLFetch**时， **SQLFetch**将映射到**SQLExtendedFetch** ，因此在此缓冲区中返回一个值。|  
+|SQL_ATTR_ROW_ARRAY_SIZE|设置行集大小。<br /><br /> 如果应用程序*在 ODBC 2.x*驱动程序中使用 SQL_ADD 的*操作*调用**SQLBulkOperations** ，则 SQL_ROWSET_SIZE 将用于调用，而不是 SQL_ATTR_ROW_ARRAY_SIZE，因为调用会映射到使用 SQL_ADD*操作*的**SQLSetPos** ，这将使用 SQL_ROWSET_SIZE。<br /><br /> 在*ODBC 2.x*驱动程序中使用 SQL_ADD**或 SQLExtendedFetch**的*操作*调用**SQLSetPos**时使用 SQL_ROWSET_SIZE。<br /><br /> 在*ODBC 2.x*驱动程序中调用**SQLFetch**或**SQLFetchScroll**将使用 SQL_ATTR_ROW_ARRAY_SIZE。|  
+|**SQLBulkOperations**|执行插入和书签操作。 当*在 ODBC 2.x*驱动程序中调用 SQL_ADD*操作*的**SQLBulkOperations**时，它将映射到具有 SQL_ADD*操作*的**SQLSetPos** 。 下面是实现的详细信息：<br /><br /> -*使用 ODBC 2.x 驱动程序时*，应用程序必须仅使用与*StatementHandle*关联的隐式分配的 ARD;由于 ODBC 2.x 驱动程序不支持显式描述符操作，因此它不能分配另一个 ARD 来添加*行。* 应用程序必须使用**SQLBindCol**绑定到 ARD，而不是**SQLSetDescField**或**SQLSetDescRec**。<br />-*调用 ODBC 1.x*驱动程序时，应用程序可以调用 SQL_ADD **SQLBulkOperations** ，然后调用** **SQLFetch**或**SQLFetchScroll**。 调用*ODBC 2.x*驱动程序时，应用程序必须先调用**SQLFetchScroll** ，然后才能调用具有 SQL_ADD 操作的**SQLBulkOperations** 。|  
+|**SQLFetch**|返回下一个行集。 下面是实现的详细信息：<br /><br /> -当应用程序*在 ODBC 2.x*驱动程序中调用**SQLFetch**时，它将映射到**SQLExtendedFetch**。<br />-当应用程序*在 ODBC 1.x*驱动程序中调用**SQLFetch**时，它将返回使用 SQL_ATTR_ROW_ARRAY_SIZE 语句特性指定的行数。|  
+|**SQLFetchScroll**|返回指定的行集。 下面是实现的详细信息：<br /><br /> -当应用程序*在 ODBC 2.x*驱动程序中调用**SQLFetchScroll**时，它将在应用于单个行的每个错误之前返回 SQLSTATE 01S01 （行中的错误）。 这只是*因为 ODBC 2.X*驱动程序管理器将此映射到**SQLExtendedFetch** ， **SQLExtendedFetch**返回此 SQLSTATE。 当应用程序*在 ODBC 1.x*驱动程序中调用**SQLFetchScroll**时，它绝不会返回 SQLSTATE 01S01 （行中的错误）。<br />-当应用程序*在 ODBC 2.x*驱动程序中调用**SQLFetchScroll**时，如果*FetchOrientation*设置为 SQL_FETCH_BOOKMARK，则*FetchOffset*参数必须设置为0。 如果尝试*使用 ODBC 2.x*驱动程序进行基于偏移量的书签提取，则返回 SQLSTATE HYC00 （未实现可选功能）。|  
   
 > [!NOTE]  
->  ODBC *3.x*应用程序不应使用**SQLExtendedFetch**或 SQL_ROWSET_SIZE 语句属性。 相反，它们应使用**SQLFetchScroll**和 SQL_ATTR_ROW_ARRAY_SIZE 语句属性。 ODBC *3.x*应用程序不应使用**SQLSetPos**与*操作*SQL_ADD 的但应使用**SQLBulkOperations**与*操作*SQL_ADD。
+>  ODBC *2.x*应用程序不应使用**SQLExtendedFetch**或 SQL_ROWSET_SIZE 语句特性。 相反，它们应使用**SQLFetchScroll**和 SQL_ATTR_ROW_ARRAY_SIZE 语句特性。 ODBC *2.x*应用程序不应将**SQLSetPos**与 SQL_ADD 的*操作*一起使用，但应将**SQLBulkOperations**与*操作*SQL_ADD 的操作一起使用。

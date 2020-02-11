@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 548e894f64aba590475472d843337d8de1fe5e0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761001"
 ---
 # <a name="disable-foreign-key-constraints-with-insert-and-update-statements"></a>使用 INSERT 和 UPDATE 语句禁用外键约束
@@ -45,9 +45,9 @@ ms.locfileid: "62761001"
 ###  <a name="Restrictions"></a> 限制和局限  
  在禁用这些约束后，在将来插入或更新列时，将不会根据约束条件进行验证。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要对表的 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -60,7 +60,7 @@ ms.locfileid: "62761001"
   
 3.  在“表设计器”  下的网格中，单击  “强制外键约束”，然后从下拉菜单中选择  “否”。  
   
-4.  单击 **“关闭”** 。  
+4.  单击“关闭”  。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

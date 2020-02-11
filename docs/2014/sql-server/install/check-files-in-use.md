@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 34b51b26454766498ee601baae3ccc52cd1c5768
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66096533"
 ---
 # <a name="check-files-in-use"></a>检查正在使用的文件
@@ -26,13 +26,14 @@ ms.locfileid: "66096533"
   
  为了使安装后无需重新启动计算机，安装程序将显示正在锁定文件的进程的列表。 停止或结束列表中的进程和应用程序。 然后，单击 **“刷新检查”** 重新运行相应检查。 单击 **“停职检查”** 结束正在运行的检查。 如果找不到锁定的文件，则该表为空。 关闭或停止所有锁定的进程以后，单击 **“下一步”** 继续。  
   
- 安装程序将信息记录在日志文件中。 有关如何查看日志文件的详细信息，请参阅[查看和阅读 SQL Server 安装程序日志文件](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)和[如何：阅读 SQL Server 安装日志文件](https://go.microsoft.com/fwlink/?LinkID=134490)。  
+ 安装程序将信息记录在日志文件中。 有关如何查看日志文件的详细信息，请参阅 [查看和读取 SQL Server 安装日志文件](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md) 和 [如何读取 SQL Server 安装日志文件](https://go.microsoft.com/fwlink/?LinkID=134490)。  
   
  日志文件中包括下列信息：  
   
 -   进程的名称  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能的名称  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能的名称  
   
 -   进程类型  
   
@@ -44,9 +45,9 @@ ms.locfileid: "66096533"
   
 ## <a name="uielement-list"></a>UIElement 列表  
   
-|“属性”|Description|  
+|名称|说明|  
 |----------|-----------------|  
-|Process|显示以下进程的全名，该进程正在使用要更新的文件。|  
+|进程|显示以下进程的全名，该进程正在使用要更新的文件。|  
 |类型|显示进程的类型。|  
 |帐户|显示运行进程的帐户。|  
 |进程 ID|显示进程 ID。|  

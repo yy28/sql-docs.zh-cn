@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
 ms.openlocfilehash: 6fba15e73edf14b9bb794012c8fe56ec8264a5b2
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73632955"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>SQL Server 2012 Service Pack 发行说明
@@ -148,7 +148,7 @@ ms.locfileid: "73632955"
 #### <a name="to-use-powerpivot-for-excel-with-excel-2013-you-must-use-the-add-in-that-is-installed-with-excel"></a>若要将 PowerPivot for Excel 与 Excel 2013 一起使用，您必须使用与 Excel 一起安装的外接程序  
 **问题：** 在 Office 2010 中，PowerPivot for Excel 是一种可从 [https://www.microsoft.com/bi/powerpivot.aspx](https://www.microsoft.com/bi/powerpivot.aspx) 下载的独立加载项。 也可以从 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=29074)下载它。 请注意有两个版本的 PowerPivot 加载项可下载：一个随 SQL Server 2008 R2 提供，而另一个随 SQL Server 2012 提供。 但对于 Office 2013，PowerPivot for Excel 随 Office 一起提供并且在您安装 Excel 时安装。 尽管 PowerPivot for Excel 2010 的 SQL Server 2008 R2 和 SQL Server 2012 版本与 Excel 2013 不兼容，但是，如果您想要将 Excel 2010 与 Excel 2013 并行运行，仍可以在您的客户端计算机上安装 PowerPivot for Excel 2010。 换言之，Excel 的两个版本可以共存，因此可以使用相应的 PowerPivot 外接程序。  
   
-**解决方法：** 若要使用 PowerPivot for Excel 2013，必须启用 COM 加载项。 从 Excel 2013，选择“**文件**” | “**选项**” | “**外接程序**”。从“**管理**”下拉框中，选择“**COM 外接程序**”，然后单击“**执行**”。 从“ **COM 外接程序**”中，选择 **Microsoft Office PowerPivot for Excel 2013** ，然后单击“ **确定**”。  
+**解决方法：** 若要使用 PowerPivot for Excel 2013，必须启用 COM 加载项。 从 Excel 2013，选择“**文件**” | “**选项**” | “**外接程序**”。从“ **管理** ”下拉框中，选择“ **COM 外接程序** ”，然后单击“ **执行**”。 从“ **COM 外接程序**”中，选择 **Microsoft Office PowerPivot for Excel 2013** ，然后单击“ **确定**”。  
   
 ### <a name="reporting-services"></a>Reporting Services  
   

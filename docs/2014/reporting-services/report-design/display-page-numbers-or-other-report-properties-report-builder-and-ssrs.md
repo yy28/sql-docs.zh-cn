@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8530a13af0e0ae6f1b769adcaa7cb6e9a3fbc0ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106039"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>显示页码或其他报表属性（报表生成器和 SSRS）
@@ -62,7 +62,7 @@ ms.locfileid: "66106039"
   
 1.  右键单击包含 [&PageNumber] 的文本框，然后单击“表达式”  。  
   
-     “为以下项设置表达式: Value”  文本框包含表达式 =Globals!PageNumber。  
+     “为以下项设置表达式: 值”文本框包含表达式 =Globals!PageNumber  。  
   
 2.  将光标放在 = 号后，然后键入 `"Page " &`。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "66106039"
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [页眉和页脚（报表生成器和 SSRS）](page-headers-and-footers-report-builder-and-ssrs.md)   
  [设置文本框中文本的格式（报表生成器和 SSRS）](format-text-in-a-text-box-report-builder-and-ssrs.md)  
   

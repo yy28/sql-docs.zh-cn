@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d125a725a9e1c0cab34c7066fd9554ef0099d6e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62901102"
 ---
 # <a name="odbc-source"></a>ODBC 源
@@ -53,11 +53,11 @@ ms.locfileid: "62901102"
   
 -   **批处理**：组件将基于发现的 ODBC 访问接口功能尝试使用最高效的提取方法。 对于大多数现今的 ODBC 提供程序，这是具有数组绑定的 SQLFetchScroll（其中，数组大小由 **BatchSize** 属性确定）。 如果选择“批处理”  并且提供程序不支持此方法，则 ODBC 目标将自动切换到“逐行”  模式。  
   
--   **逐行**：组件使用 SQLFetch 来检索行，每次检索一行。  
+-   **逐行**：组件使用 SQLFetch 来一次一行的检索行。  
   
  有关 **FetchMethod** 属性的详细信息，请参阅 [ODBC Source Custom Properties](odbc-source-custom-properties.md)。  
   
-## <a name="parallelism"></a>Parallelism  
+## <a name="parallelism"></a>并行度  
  对于可对同一台计算机或不同计算机（并非一般的全局会话限制）上的相同表或不同表并行运行的 ODBC 源组件的数目没有限制。  
   
  但是，要使用的 ODBC 访问接口的限制可能会限制通过该访问接口的同时连接的数目。 这些限制将会限制 ODBC 源可能支持的并行实例的数目。 SSIS 开发人员必须知道要使用的任何 ODBC 访问接口的限制并且在生成 SSIS 包时将这些限制元素考虑进去。  
@@ -94,6 +94,6 @@ ms.locfileid: "62901102"
   
 -   [使用 ODBC 源提取数据](odbc-source.md)  
   
--   [ODBC Source Custom Properties](odbc-source-custom-properties.md)  
+-   [ODBC 源自定义属性](odbc-source-custom-properties.md)  
   
   

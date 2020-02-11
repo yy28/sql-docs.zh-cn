@@ -1,5 +1,5 @@
 ---
-title: 为 SQL Server 代理 （SQL Server 配置管理器） 设置服务启动帐户 |Microsoft Docs
+title: 设置 SQL Server 代理的服务启动帐户（SQL Server 配置管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 30c50d1f6efc44c17eac76e0e03432c2461da296
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63033640"
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>为 SQL Server 代理设置服务启动帐户（SQL Server 配置管理器）
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服务启动帐户定义了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理在运行时所用的 Windows 帐户及其网络权限。 本主题说明了如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中通过 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 配置管理器设置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]代理服务帐户。  
   
  **本主题内容**  
@@ -42,10 +43,10 @@ ms.locfileid: "63033640"
   
 -   “对象资源管理器”仅在您拥有使用权限时才显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理节点。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
- 若要执行其功能[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理必须配置为使用的是的成员的帐户的凭据`sysadmin`固定的服务器角色中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 该帐户必须拥有以下 Windows 权限：  
+####  <a name="Permissions"></a> 权限  
+ 若要执行其功能[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，必须将代理配置为使用作为中`sysadmin` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]固定服务器角色的成员的帐户的凭据。 该帐户必须拥有以下 Windows 权限：  
   
 -   以服务身份登录 (SeServiceLogonRight)  
   
@@ -55,40 +56,41 @@ ms.locfileid: "63033640"
   
 -   调整进程的内存配额 (SeIncreaseQuotaPrivilege)  
   
- 有关所需的 Windows 权限的详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理服务帐户，请参阅[为 SQL Server 代理服务选择帐户](select-an-account-for-the-sql-server-agent-service.md)和[配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
+ 有关[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理服务帐户所需的 Windows 权限的详细信息，请参阅为[SQL Server 代理服务选择帐户](select-an-account-for-the-sql-server-agent-service.md)和[配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-set-the-service-startup-account-for-sql-server-agent"></a>为 SQL Server 代理设置服务启动帐户  
   
-1.  在 **“已注册的服务器”** 中，单击加号以便展开 **“数据库引擎”** 。  
+1.  在 **“已注册的服务器”** 中，单击加号以便展开 **“数据库引擎”**。  
   
 2.  单击加号以便展开 **“本地服务器组”** 文件集。  
   
-3.  右键单击要设置服务启动帐户的服务器实例，然后选择“SQL Server 配置管理器…”  。  
+3.  右键单击要设置服务启动帐户的服务器实例，然后选择“SQL Server 配置管理器…”****。  
   
-4.  在 **“用户帐户控制”** 对话框中，请单击 **“是”** 。  
+4.  在 **“用户帐户控制”** 对话框中，请单击 **“是”**。  
   
-5.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器的控制台窗格中，选择 **“SQL Server 服务”** 。  
+5.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器的控制台窗格中，选择 **“SQL Server 服务”**。  
   
-6.  在详细信息窗格中，右键单击“SQL Server 代理 (server_name)”   （其中 server_name  是要更改其服务启动帐户的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理实例的名称），然后选择“属性”  。  
+6.  在详细信息窗格中，右键单击**SQL Server 代理**_（server_name）_，其中*server_name*是要更改其服务[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]启动帐户的代理实例的名称，然后选择 "**属性**"。  
   
-7.  在“SQL Server 代理 (server_name)”   的“属性”  对话框的“登录”  选项卡中，选择“登录身份”  下的以下选项之一：  
+7.  在 " **SQL Server 代理**_（server_name）_ **属性**" 对话框的 "**登录**" 选项卡中，选择 "**登录身份**" 下的以下选项之一：  
   
-    -   **内置帐户**：如果你的作业仅需要本地服务器中的资源，则选择此选项。 有关如何选择 Windows 内置帐户类型的信息，请参阅 [为 SQL Server 代理服务选择帐户](https://msdn.microsoft.com/library/ms191543.aspx)。  
+    -   **内置帐户**：如果作业仅需要本地服务器中的资源，请选择此选项。 有关如何选择 Windows 内置帐户类型的信息，请参阅 [为 SQL Server 代理服务选择帐户](https://msdn.microsoft.com/library/ms191543.aspx)。  
   
         > [!IMPORTANT]  
-        >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务不支持 **中的** Local Service [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]帐户。  
+        >  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务不支持 **中的** Local Service [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]帐户。  
   
-    -   **本帐户**：如果作业需要网络上的资源（包括应用程序资源），如果要将事件转发到其他 Windows 应用程序日志，或者如果要通过电子邮件或寻呼程序来通知操作员，则选择此选项。  
+    -   **此帐户**：如果作业需要网络上的资源（包括应用程序资源），请选择此选项;如果要将事件转发到其他 Windows 应用程序日志，则为;如果要通过电子邮件或寻呼来通知操作员，则为。  
   
          如果您选择此选项：  
   
         1.  在 **“帐户名称”** 框中，输入将用来运行 SQL Server 代理的帐户。 或者，单击 **“浏览”** 打开 **“选择用户或组”** 对话框并选择要使用的帐户。  
   
-        2.  在 **“密码”** 框中，输入帐户密码。 在“确认密码”  框中重新输入密码。  
+        2.  在 **“密码”** 框中，输入帐户密码。 在“确认密码”**** 框中重新输入密码。  
   
-8.  单击“确定”  。  
+8.  单击“确定”。   
   
 9. 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器中，单击 **“关闭”** 按钮。  
   

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4bc9f0865ed5ff00099f121f254d17aafc298f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807442"
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>添加或替换数据库镜像见证服务器 (SQL Server Management Studio)
@@ -40,15 +40,15 @@ ms.locfileid: "62807442"
   
 6.  在 **“包括见证服务器”** 对话框中，单击 **“是”** ，再单击 **“下一步”** 。  
   
-7.  在 **“选择要配置的服务器”** 对话框中，将自动选中 **“见证服务器实例”** 复选框。 单击“下一步”  。  
+7.  在 **“选择要配置的服务器”** 对话框中，将自动选中 **“见证服务器实例”** 复选框。 单击“下一步”。   
   
-8.  在 **“主体服务器实例”** 对话框中，保留现有的端口和端点。 单击“下一步”  。  
+8.  在 **“主体服务器实例”** 对话框中，保留现有的端口和端点。 单击“下一步”。   
   
 9. 在 **“见证服务器实例”** 对话框中，单击 **“连接”** 。  
   
-10. 在  “连接到服务器”对话框的  “服务器名称”字段中，指定见证服务器实例，并使用 Windows 身份验证（默认设置）。 单击 **“连接”** 。  
+10. 在  “连接到服务器”对话框的  “服务器名称”字段中，指定见证服务器实例，并使用 Windows 身份验证（默认设置）。 单击“连接”  。  
   
-11. 建立连接之后，便会在 **“见证服务器实例”** 对话框中显示见证服务器实例的侦听器端口和数据库镜像端点。 单击“下一步”  。  
+11. 建立连接之后，便会在 **“见证服务器实例”** 对话框中显示见证服务器实例的侦听器端口和数据库镜像端点。 单击“下一步”。   
   
 12. **“服务帐户”** 对话框包含主体服务器实例、镜像服务器实例和见证服务器实例的域服务帐户字段。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "62807442"
   
          域名必须大写。  
   
-     单击“下一步”  。  
+     单击“下一步”。   
   
 13. 在 **“完成该向导”** 摘要屏幕中，检查见证服务器配置（可选），再单击 **“完成”** 。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62807442"
   
      若要启用见证服务器并将会话更改为具有自动故障转移功能的高安全性模式，请单击  “确定”。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库镜像见证服务器](database-mirroring-witness.md)   
  [数据库镜像 (SQL Server)](database-mirroring-sql-server.md)   
  [数据库属性（“镜像”页）](../../relational-databases/databases/database-properties-mirroring-page.md)   

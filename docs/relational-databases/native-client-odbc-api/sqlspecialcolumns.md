@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d5550503d4c9854fb40e816124c16dbc19c2c6fd
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73785445"
 ---
 # <a name="sqlspecialcolumns"></a>SQLSpecialColumns
@@ -26,17 +26,18 @@ ms.locfileid: "73785445"
 
   请求行标识符（*IdentifierType* SQL_BEST_ROWID）时， **SQLSpecialColumns**为除 SQL_SCOPE_CURROW 以外的任何请求的作用域返回空的结果集（无数据行）。 生成的结果集指示仅在此作用域内这些列有效。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持标识符的伪列。 **SQLSpecialColumns**结果集将所有列标识为 SQL_PC_NOT_PSEUDO。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持标识符的伪列。 **SQLSpecialColumns**结果集将所有列标识为 SQL_PC_NOT_PSEUDO。  
   
  可以对静态游标执行**SQLSpecialColumns** 。 尝试对可更新的（键集驱动或动态）执行**SQLSpecialColumns**将返回 SQL_SUCCESS_WITH_INFO 指示游标类型已更改。  
   
 ## <a name="sqlspecialcolumns-support-for-enhanced-date-and-time-features"></a>SQLSpecialColumns 对日期和时间增强功能的支持  
  有关为日期/时间类型 DATA_TYPE、TYPE_NAME、COLUMN_SIZE、BUFFER_LENGTH 和 DECIMAL_DIGTS 返回的列的值的信息，请参阅[目录元数据](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md)。  
   
- 有关更多常规信息，请参阅[日期和&#40;时间&#41;改进 ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+ 有关更多常规信息，请参阅[ODBC&#41;&#40;日期和时间改进](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="sqlspecialcolumns-support-for-large-clr-udts"></a>SQLSpecialColumns 对大型 CLR UDT 的支持  
- **SQLSpecialColumns**支持大型 CLR 用户定义类型（udt）。 有关详细信息，请参阅[大型 CLR 用户定义类型&#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ **SQLSpecialColumns**支持大型 CLR 用户定义类型（udt）。 有关详细信息，请参阅[&#40;ODBC&#41;的大型 CLR 用户定义类型](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLSpecialColumns 函数](https://go.microsoft.com/fwlink/?LinkId=59371)   

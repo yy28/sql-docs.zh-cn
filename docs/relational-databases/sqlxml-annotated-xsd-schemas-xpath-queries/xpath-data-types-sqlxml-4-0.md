@@ -29,10 +29,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 089b2b006d0159c63e480c8627762ac37dec98b8
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75247090"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath 数据类型 (SQLXML 4.0)
@@ -75,7 +75,7 @@ ms.locfileid: "75247090"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不执行针对节点集的位置选择：例如，XPath 查询 `Customer[3]` 意味着第三个客户；但在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中不支持此类型的位置选择。 因此，不会实现 XPath 规范所述的节点集到**字符串**或节点集到**数字**的转换。 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用“任何”语义，而 XPath 规范指定“第一个”语义。 例如，根据 W3C XPath 规范，XPath 查询`Order[OrderDetail/@UnitPrice > 10.0]`会选择包含**单价**大于10.0 的第一个**OrderDetail**的订单。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，此 XPath 查询选择具有**单价**大于10.0 的所有**OrderDetail**的订单。  
   
- 转换为**布尔值**将生成一个存在测试;因此，XPath 查询`Products[@Discontinued=true()]`等效于 sql 表达式 "Products. 废止 is not null"，而不是 sql 表达式 "Products. 废止 = 1"。 若要使查询等效于后面的 SQL 表达式，请首先将节点集转换为非**布尔**类型，如**number**。 例如，`Products[number(@Discontinued) = true()]`。  
+ 转换为**布尔值**将生成一个存在测试;因此，XPath 查询`Products[@Discontinued=true()]`等效于 sql 表达式 "Products. 废止 is not null"，而不是 sql 表达式 "Products. 废止 = 1"。 若要使查询等效于后面的 SQL 表达式，请首先将节点集转换为非**布尔**类型，如**number**。 例如，`Products[number(@Discontinued) = true()]` 。  
   
  因为如果运算符对于节点集中任一节点为 TRUE，则大多数运算符均定义为 TRUE；所以，在节点集为空时，这些运算的计算结果始终为 FALSE。 因此，如果 A 为空，则 `A = B` 和 `A != B` 均为 FALSE，并且 `not(A=B)` 和 `not(A!=B)` 均为 TRUE。  
   
@@ -91,8 +91,8 @@ ms.locfileid: "75247090"
   
 |XDR 数据类型|等效<br /><br /> XPath 数据类型|使用的 SQL Server 转换|  
 |-------------------|------------------------------------|--------------------------------|  
-|Nonebin.base64bin.hex|N/A|NoneEmployeeID|  
-|布尔值|布尔值|CONVERT(bit, EmployeeID)|  
+|Nonebin.base64bin.hex|空值|NoneEmployeeID|  
+|boolean|boolean|CONVERT(bit, EmployeeID)|  
 |number、int、float、i1、i2、i4、i8、r4、r8、ui1、ui2、ui4、ui8|数字|CONVERT(float(53), EmployeeID)|  
 |id、idref、idrefsentity、entities、enumerationnotation、nmtoken、nmtokens、chardate、Timedate、Time.tz、string、uri、uuid|字符串|CONVERT(nvarchar(4000), EmployeeID, 126)|  
 |fixed14.4|无（在 XPath 中没有等效于 fixed14.4 XDR 数据类型的数据类型）|CONVERT(money, EmployeeID)|  
