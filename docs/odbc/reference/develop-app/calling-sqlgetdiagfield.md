@@ -17,11 +17,11 @@ ms.assetid: 3c4fb606-b81c-4f11-9820-f0a54e3bc401
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2ef69704ae6984f41080aea009f17ac09bafefd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68134980"
 ---
 # <a name="calling-sqlgetdiagfield"></a>调用 SQLGetDiagField
-当 ODBC *3.x*应用程序调用**SQLGetDiagField** ODBC 中*2.x*驱动程序，该驱动程序将返回 SQL_SUCCESS 和相应的信息在 *\*DiagInfoPtr*如果*DiagIdentifier*参数是 SQL_DIAG_CLASS_ORIGIN、 SQL_DIAG_CLASS_SUBCLASS_ORIGIN、 SQL_DIAG_CONNECTION_NAME、 SQL_DIAG_MESSAGE_TEXT、 SQL_DIAG_本机，SQL_DIAG_NUMBER、 SQL_DIAG_RETURNCODE、 SQL_DIAG_SERVER_NAME 或 SQL_DIAG_SQLSTATE。 所有其他诊断字段将返回 SQL_ERROR。
+当 odbc 1.x*应用程序**在 odbc 2.x*驱动程序中调用**SQLGetDiagField**时，如果*DiagIdentifier*参数 SQL_DIAG_CLASS_ORIGIN、SQL_DIAG_CLASS_SUBCLASS_ORIGIN、SQL_DIAG_CONNECTION_NAME、SQL_DIAG_MESSAGE_TEXT、SQL_DIAG_NATIVE、SQL_DIAG_NUMBER、SQL_DIAG_RETURNCODE、SQL_DIAG_SERVER_NAME 或 SQL_DIAG_SQLSTATE，则驱动程序将返回 SQL_SUCCESS 和* \*DiagInfoPtr*中的相应信息。 所有其他诊断字段都将返回 SQL_ERROR。

@@ -16,37 +16,37 @@ ms.assetid: 68bfa83a-5df4-4bef-8736-0f88ae8c29ea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bef70bd72425e749865e31ecf162e719737dd272
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932848"
 ---
 # <a name="executeoptionenum"></a>ExecuteOptionEnum
-指定如何提供程序应执行的命令。  
+指定提供程序执行命令的方式。  
   
-|常量|ReplTest1|描述|  
+|一直|值|说明|  
 |--------------|-----------|-----------------|  
-|**adAsyncExecute**|0x10|指示应以异步方式执行该命令。<br /><br /> 此值不能合并在一起[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)值**adCmdTableDirect**。|  
-|**adAsyncFetch**|0x20|指示的各行中指定的初始数量后[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)应以异步方式检索属性。|  
-|**adAsyncFetchNonBlocking**|0x40|指示检索时永远不会阻止主线程。 如果检索不到请求的行，当前行自动移动到文件末尾。<br /><br /> 如果您打开[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)从[Stream](../../../ado/reference/ado-api/stream-object-ado.md)包含永久存储**记录集**， **adAsyncFetchNonBlocking**不会一种效果;该操作将同步和正在阻塞。<br /><br /> **adAsynchFetchNonBlocking**没有时生效[adCmdTableDirect](../../../ado/reference/ado-api/commandtypeenum.md)选项用于打开**记录集**。|  
-|**adExecuteNoRecords**|0x80|指示命令文本的命令或存储的过程不返回行 （例如，仅将数据插入的命令）。 如果检索不到任何行，它们被丢弃而不会返回。<br /><br /> **adExecuteNoRecords**只能为可选参数的形式传递**命令**或**连接执行**方法。|  
-|**adExecuteStream**|0x400|指示应以流的形式返回的命令执行的结果。<br /><br /> **adExecuteStream**只能为可选参数的形式传递**Command Execute**方法。|  
-|**adExecuteRecord**||指示**CommandText**是命令或返回单个行，其中应作为返回的存储的过程**记录**对象。|  
-|**adOptionUnspecified**|-1|指示该命令未指定。|  
+|**adAsyncExecute**|0x10|指示该命令应以异步方式执行。<br /><br /> 此值不能与[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)值**adCmdTableDirect**组合。|  
+|**adAsyncFetch**|0x20|指示应异步检索在[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)属性中指定的初始数量后的其余行。|  
+|**adAsyncFetchNonBlocking**|0x40|指示在检索时，主线程永远不会阻塞。 如果尚未检索请求的行，则当前行将自动移动到文件末尾。<br /><br /> 如果从包含持久存储的**记录集**的[流](../../../ado/reference/ado-api/stream-object-ado.md)打开[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，则**adAsyncFetchNonBlocking**将不起作用;操作将是同步和阻止操作。<br /><br /> 当使用[adCmdTableDirect](../../../ado/reference/ado-api/commandtypeenum.md)选项打开**记录集**时， **adAsynchFetchNonBlocking**不起作用。|  
+|**adExecuteNoRecords**|0x80|指示命令文本是不返回行的命令或存储过程（例如，仅插入数据的命令）。 如果检索到任何行，则它们将被放弃且不会返回。<br /><br /> 只能将**adExecuteNoRecords**作为可选参数传递到**命令**或**连接执行**方法。|  
+|**adExecuteStream**|0x400|指示应以流的形式返回命令执行的结果。<br /><br /> 只能将**adExecuteStream**作为可选参数传递到**命令执行**方法。|  
+|**adExecuteRecord**||指示**CommandText**是一个命令或存储过程，它返回应作为**记录**对象返回的单个行。|  
+|**adOptionUnspecified**|-1|指示未指定命令。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
- 包： **com.ms.wfc.data**  
+ Package： **.com. 数据**  
   
-|常量|  
+|一直|  
 |--------------|  
 |AdoEnums.ExecuteOption.ASYNCEXECUTE|  
 |AdoEnums.ExecuteOption.ASYNCFETCH|  
 |AdoEnums.ExecuteOption.ASYNCFETCHNONBLOCKING|  
 |AdoEnums.ExecuteOption.NORECORDS|  
-|AdoEnums.ExecuteOption.UNSPECIFIED|  
+|AdoEnums. ExecuteOption。未指定|  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
   
 |||  
 |-|-|  

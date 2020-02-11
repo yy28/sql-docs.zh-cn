@@ -17,10 +17,10 @@ ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c7da3db641d6e0b9aa53d570a7d0cf9bdc731477
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75322244"
 ---
 # <a name="sp_removedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "75322244"
 > [!NOTE]  
 >  只有当其他删除复制对象的方法都失败后，才应当使用此过程。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [transact-sql 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -84,6 +84,6 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [禁用发布和分发](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [&#40;Transact-sql&#41;系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -15,10 +15,10 @@ ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 02adc815ee969af43b56e51966ded1b1fde6f101
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244151"
 ---
 # <a name="perform-knowledge-discovery"></a>执行知识发现
@@ -29,14 +29,14 @@ ms.locfileid: "75244151"
   
  知识发现是包括三个步骤的向导驱动的过程，其中每个步骤都必须完成。  
   
-##  <a name="BeforeYouBegin"></a>开始之前  
+##  <a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Prerequisites"></a>先决条件  
  如果您对其发现运行的源数据位于 Excel 文件中，则必须在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 计算机上安装 Microsoft Excel。 否则，您在映射阶段中将无法选择 Excel 文件。 由 Microsoft Excel 创建的文件可以具有 .xlsx、.xls 或 .csv 扩展名。 如果使用 64 位版本的 Excel，则仅支持 Excel 2003 文件 (.xls)；而不支持 Excel 2007 或 2010 文件 (.xlsx)。 如果您使用的是 64 位版本的 Excel 2007 或 2010，则将文件另存为 .xls 文件或 .csv 文件，或者改而安装 32 位版本的 Excel。  
   
-###  <a name="Security"></a>安全  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>访问  
+####  <a name="Permissions"></a> 权限  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_administrator 角色，才能创建知识库。  
   
 ##  <a name="FirstStep"></a>第一步：开始知识发现  
@@ -187,7 +187,7 @@ ms.locfileid: "75244151"
   
 8.  **从 Excel 导入域值**：通过单击 "**导入值**" 图标的向下箭头，然后选择 "**从 excel 导入域值**"，从 excel 电子表格添加新值。 输入文件名，根据需要选择 **“将第一行用作标头”** ，然后单击 **“确定”**。 有关详细信息，请参阅 [将值从 Excel 文件导入到域](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)。  
   
-9. **导入项目值**：通过单击 "**导入值**" 图标的向下箭头，然后选择 "**导入项目值**"，从数据质量项目添加新值。 输入文件名，根据需要选择 **“将第一行用作标头”** ，然后单击 **“确定”**。 选择您从中导入值的项目，然后单击 **“确定”**。 将显示导入的值。 单击 **“完成”**。 有关详细信息，请参阅“将项目值导入到域中”。  
+9. **导入项目值**：通过单击 "**导入值**" 图标的向下箭头，然后选择 "**导入项目值**"，从数据质量项目添加新值。 输入文件名，根据需要选择 **“将第一行用作标头”** ，然后单击 **“确定”**。 选择您从中导入值的项目，然后单击 **“确定”**。 将显示导入的值。 单击“完成”  。 有关详细信息，请参阅“将项目值导入到域中”。  
   
 10. **删除所选域值**：通过选择值，然后单击 "**删除所选域值**" 按钮，从域中删除一个或多个现有值。 无法删除 DQS_NULL 的项，因此，如果您选择要删除的多个值，并且 DQS_NULL 的项是其中之一，则操作将失败。  
   

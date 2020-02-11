@@ -15,10 +15,10 @@ ms.assetid: a7b589ac-104d-4b68-b4aa-9f5fc192b13d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e04b5308aeca5881f624122c70ad74c27417a46b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75258336"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>托管数据库对象监视和故障排除
@@ -40,9 +40,9 @@ ms.locfileid: "75258336"
  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了对象和计数器，系统监视器可以使用它们监视运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机中的活动。 对象可以是任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁或 Windows 进程。 每个对象有一个或多个计数器，用于确定所要监视对象的各方面信息。 有关详细信息，请参阅 [使用 SQL Server 对象](../../relational-databases/performance-monitor/use-sql-server-objects.md)。  
   
-|对象|说明|  
+|Object|说明|  
 |------------|-----------------|  
-|[SQL Server，CLR 对象](../../relational-databases/performance-monitor/sql-server-clr-object.md)|CLR 执行所花的总时间。|  
+|[SQL Server CLR 对象](../../relational-databases/performance-monitor/sql-server-clr-object.md)|CLR 执行所花的总时间。|  
   
 ## <a name="windows-system-monitor-perfmonexe-counters"></a>Windows 系统监视器 (PERFMON.EXE) 计数器  
  Windows 系统监视器 (PERFMON.EXE) 工具具有多个性能计数器，可用来监视 CLR 集成应用程序。 可以通过“sqlservr”进程名称筛选 .NET CLR 性能计数器，以跟踪当前正在运行的 CLR 集成应用程序。  
@@ -62,15 +62,15 @@ ms.locfileid: "75258336"
 |------------------|-----------------|  
 |[sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)|返回有关在数据库中注册的程序集的信息。|  
 |[sys. assembly_references &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)|标识引用其他程序集的程序集。|  
-|[sys. assembly_modules &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|返回有关在程序集中定义的每个函数、存储过程和触发器的信息。|  
+|[sys.assembly_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|返回有关在程序集中定义的每个函数、存储过程和触发器的信息。|  
 |[sys. assembly_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md)|返回有关在数据库中注册的程序集文件的信息。|  
 |[sys. assembly_types &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-assembly-types-transact-sql.md)|标识由程序集定义的用户定义类型 (UDT)。|  
 |[sys. module_assembly_usages &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-module-assembly-usages-transact-sql.md)|标识在其中定义 CLR 模块的程序集。|  
 |[sys. parameter_type_usages &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql.md)|返回有关属于用户定义类型的参数的信息。|  
-|[sys. server_assembly_modules &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-server-assembly-modules-transact-sql.md)|标识在其中定义 CLR 触发器的程序集。|  
-|[sys. server_triggers &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md)|标识服务器上的服务器级别 DDL 触发器，包括 CLR 触发器。|  
+|[sys.server_assembly_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-assembly-modules-transact-sql.md)|标识在其中定义 CLR 触发器的程序集。|  
+|[sys.server_triggers (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md)|标识服务器上的服务器级别 DDL 触发器，包括 CLR 触发器。|  
 |[sys. type_assembly_usages &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-type-assembly-usages-transact-sql.md)|标识在其中定义用户定义类型的程序集。|  
-|[sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)|返回在数据库中注册的系统和用户定义类型。|  
+|[sys.types (Transact-SQL)](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)|返回在数据库中注册的系统和用户定义类型。|  
   
 ## <a name="dynamic-management-views"></a>动态管理视图  
  动态管理视图和函数返回可用于监视服务器实例的运行状况、诊断故障以及优化性能的服务器状态信息。 有关详细信息，请参阅[&#40;transact-sql&#41;中的动态管理视图和函数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。  
@@ -81,8 +81,8 @@ ms.locfileid: "75258336"
 |[sys. dm_clr_loaded_assemblies &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)|标识在服务器上注册的每个托管程序集。|  
 |[sys. dm_clr_properties &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-properties-transact-sql.md)|返回有关宿主 CLR 的信息。|  
 |[sys. dm_clr_tasks &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-tasks-transact-sql.md)|标识当前正在运行的所有 CLR 任务。|  
-|[sys. dm_exec_cached_plans &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)|返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为加快查询执行而缓存的查询执行计划的信息。|  
-|[sys. dm_exec_query_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)|返回缓存查询计划的聚合性能统计信息。|  
+|[sys.dm_exec_cached_plans (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)|返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为加快查询执行而缓存的查询执行计划的信息。|  
+|[sys.dm_exec_query_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)|返回缓存查询计划的聚合性能统计信息。|  
 |[sys. dm_exec_requests &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|返回有关在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中正在执行的每个请求的信息。|  
 |[sys. dm_os_memory_clerks &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)|返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中当前处于活动状态的所有内存分配器，包括 CLR 内存分配器。|  
   

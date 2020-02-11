@@ -1,5 +1,5 @@
 ---
-title: NumericScale 和 Precision 属性示例 (VB) |Microsoft Docs
+title: NumericScale 和 Precision 属性示例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 9c1e2322-c225-49d1-a120-a343f23cea73
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bf9fc4f0e96a714c8d00d2ffa9e36dea73e55fe1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932055"
 ---
 # <a name="numericscale-and-precision-properties-example-vb"></a>NumericScale 和 Precision 属性示例 (VB)
-此示例使用[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)并[精度](../../../ado/reference/ado-api/precision-property-ado.md)要显示的小数位数和精度中字段的属性***折扣***的表***Pubs***数据库。  
+此示例使用[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)和[Precision](../../../ado/reference/ado-api/precision-property-ado.md)属性显示***Pubs***数据库的***折扣***表中的字段的小数位数和精度。  
   
 ```  
 'BeginNumericScaleVB  
@@ -73,8 +73,8 @@ End Sub
 'EndNumericScaleVB  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [字段对象](../../../ado/reference/ado-api/field-object.md)   
- [NumericScale 属性 (ADO)](../../../ado/reference/ado-api/numericscale-property-ado.md)   
+## <a name="see-also"></a>另请参阅  
+ [Field 对象](../../../ado/reference/ado-api/field-object.md)   
+ [NumericScale 属性（ADO）](../../../ado/reference/ado-api/numericscale-property-ado.md)   
  [参数对象](../../../ado/reference/ado-api/parameter-object.md)   
  [Precision 属性 (ADO)](../../../ado/reference/ado-api/precision-property-ado.md)

@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e615a8e316cb5c8e15056eeaa111b5daf1ef5513
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244945"
 ---
 # <a name="color-coding-in-query-editors"></a>查询编辑器中的颜色编码
@@ -27,14 +27,14 @@ ms.locfileid: "75244945"
   
 |Color|类别|  
 |-----------|--------------|  
-|红色|SQL 字符串|  
-|暗绿色|备注|  
+|Red|SQL 字符串|  
+|暗绿色|注释|  
 |黑色，银色背景|SQLCMD 命令|  
 |洋红色|系统函数|  
-|厚︹|系统表、视图或表值函数。 此外，还包括系统架构 sys 和 INFORMATION_SCHEMA。|  
+|绿色|系统表、视图或表值函数。 此外，还包括系统架构 sys 和 INFORMATION_SCHEMA。|  
 |蓝色|关键字|  
 |青色|行号或模板参数|  
-|褐紫红色|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]存储过程|  
+|褐紫红色|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程|  
 |深灰色|运算符|  
   
 ## <a name="status-bar"></a>状态栏  

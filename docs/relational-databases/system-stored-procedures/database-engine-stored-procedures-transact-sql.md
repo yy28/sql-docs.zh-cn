@@ -1,5 +1,5 @@
 ---
-title: 数据库引擎存储过程 (TRANSACT-SQL) |Microsoft Docs
+title: 数据库引擎存储过程（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/02/2015
 ms.prod: sql
@@ -17,15 +17,16 @@ ms.assetid: 2ce018e9-1a3b-4530-a87d-842456a555ad
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 40548043b601d2a2309d9d5180f1200228f11bb4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942417"
 ---
 # <a name="database-engine-stored-procedures-transact-sql"></a>数据库引擎存储过程 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持用于对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例进行常规维护的以下系统存储过程。  
   
 |||  
@@ -80,7 +81,7 @@ ms.locfileid: "67942417"
 |[sp_getapplock](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)|[sys.sp_xtp_checkpoint_force_garbage_collection](../../relational-databases/system-stored-procedures/sys-sp-xtp-checkpoint-force-garbage-collection-transact-sql.md)|  
 |[sp_getbindtoken](../../relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md)|[sys.sp_xtp_unbind_db_resource_pool](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

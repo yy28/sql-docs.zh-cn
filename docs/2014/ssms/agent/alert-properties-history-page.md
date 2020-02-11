@@ -13,21 +13,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bdda14df5463fc9bd2a90d990d7c2be35f910d4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68189832"
 ---
 # <a name="alert-properties-history-page"></a>警报属性（“历史记录”页）
-  使用此页可以查看和修改 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报的历史记录。  
+  使用此页可以查看和修改代理警报的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]历史记录。  
   
 ## <a name="options"></a>选项  
  **上次警报的日期**  
- 显示指定事件上次发生的日期，或者如果自从创建警报后从未发生该事件则显示“(从未发生)”  。  
+ 显示指定事件上次发生的日期，或者如果自从创建警报后从未发生该事件则显示“(从未发生)”****。  
   
  **上次响应的日期**  
- 显示警报上次响应该事件的日期，或者如果自从创建警报后从未发生该事件则显示“(从未响应)”  。  
+ 显示警报上次响应该事件的日期，或者如果自从创建警报后从未发生该事件则显示“(从未响应)”****。  
   
  **发生次数**  
  自从创建警报后或从上次重置计数后，该事件发生的总次数。  
@@ -35,7 +35,7 @@ ms.locfileid: "68189832"
  **重置计数**  
  重置此页上的信息。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [警报](alerts.md)  
   
   

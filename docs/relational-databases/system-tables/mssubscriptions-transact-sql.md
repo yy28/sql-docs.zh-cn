@@ -18,10 +18,10 @@ ms.assetid: b7e8301d-d115-41f6-8d4f-e0d25f453b25
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ca4364709462eee9df62baa8193dec9f8ea36241
-ms.sourcegitcommit: 722f2ec5a1af334f5bcab8341bc744d16a115273
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74866030"
 ---
 # <a name="mssubscriptions-transact-sql"></a>MSsubscriptions (Transact-SQL)
@@ -31,22 +31,22 @@ ms.locfileid: "74866030"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**publisher_database_id**|**整形**|发布服务器数据库的 ID。|  
+|**publisher_database_id**|**int**|发布服务器数据库的 ID。|  
 |**publisher_id**|**smallint**|发布服务器的 ID。|  
 |**publisher_db**|**sysname**|发布服务器数据库的名称。|  
-|**publication_id**|**整形**|发布 ID。|  
-|**article_id**|**整形**|项目的 ID。|  
+|**publication_id**|**int**|发布 ID。|  
+|**article_id**|**int**|项目的 ID。|  
 |**subscriber_id**|**smallint**|订阅服务器 ID。|  
 |**subscriber_db**|**sysname**|订阅数据库的名称。|  
-|**subscription_type**|**整形**|订阅的类型：<br /><br /> **0** = 推送。<br /><br /> **1** = 请求。<br /><br /> **2** = 匿名。|  
+|**subscription_type**|**int**|订阅的类型：<br /><br /> **0** = 推送。<br /><br /> **1** = 请求。<br /><br /> **2** = 匿名。|  
 |**sync_type**|**tinyint**|同步类型：<br /><br /> **1** = 自动。<br /><br /> **2** = 不同步。|  
 |**状态值**|**tinyint**|订阅的状态：<br /><br /> **0** = 非活动。<br /><br /> **1** = 已订阅。<br /><br /> **2** = 活动。|  
 |**subscription_seqno**|**varbinary （16）**|快照事务序列号。|  
-|**snapshot_seqno_flag**|**小段**|指示快照事务序列号的源，其中，值为**1**表示**subscription_seqno**是快照序列号。|  
+|**snapshot_seqno_flag**|**bit**|指示快照事务序列号的源，其中，值为**1**表示**subscription_seqno**是快照序列号。|  
 |**independent_agent**|**bit**|表明该发布是否有独立的分发代理。|  
-|**subscription_time**|**型**|仅限内部使用。|  
-|**loopback_detection**|**小段**|适用于作为双向事务复制拓扑的一部分的订阅。 环回检测将确定分发代理是否将在订阅服务器上发起的事务发送回订阅服务器：<br /><br /> **1** = 不发送回。<br /><br /> **0** = 发送回。<br /><br />|  
-|**agent_id**|**整形**|代理的 ID。|  
+|**subscription_time**|**datetime**|仅限内部使用。|  
+|**loopback_detection**|**bit**|适用于作为双向事务复制拓扑的一部分的订阅。 环回检测将确定分发代理是否将在订阅服务器上发起的事务发送回订阅服务器：<br /><br /> **1** = 不发送回。<br /><br /> **0** = 发送回。<br /><br />|  
+|**agent_id**|**int**|代理的 ID。|  
 |**update_mode**|**tinyint**|更新的类型。|  
 |**publisher_seqno**|**varbinary （16）**|该订阅在发布服务器上的事务序列号。|  
 |**ss_cplt_seqno**|**varbinary （16）**|用于表示并发快照处理已完成的序列号。|  

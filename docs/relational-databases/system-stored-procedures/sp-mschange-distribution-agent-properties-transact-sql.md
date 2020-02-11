@@ -17,10 +17,10 @@ ms.assetid: 7dac5e68-bf84-433a-a531-66921f35126f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1a2e2e3c0074c3fcc53298c2556c786c9b7057db
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75322250"
 ---
 # <a name="sp_mschange_distribution_agent_properties-transact-sql"></a>sp_MSchange_distribution_agent_properties (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "75322250"
 
   更改在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或更高版本的分发服务器上运行的分发代理作业的属性。 当发布服务器在 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 实例上运行时，可使用此存储过程更改属性。 此存储过程在分发服务器上对分发数据库执行。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [transact-sql 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -60,7 +60,7 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
   
  下表说明了可以更改的分发服务器代理作业的属性，以及对这些属性值的限制。  
   
-|属性|值|说明|  
+|properties|值|说明|  
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||用来运行代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户的登录名。|  
 |**distrib_job_password**||用来运行代理作业的 Windows 帐户的密码。|  
@@ -71,11 +71,11 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
 |**subscriber_password**||订阅服务器密码。<br /><br /> [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]|  
 |**subscriber_provider**||唯一编程标识符 (PROGID)，用于注册非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源的 OLE DB 访问接口。 *此属性仅对非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *订阅服务器有效。*|  
 |**subscriber_providerstring**||OLE DB 访问接口特定的连接字符串，用于标识数据源。 *此属性仅对非 SQL Server 订阅服务器有效。*|  
-|**subscriber_security_mode**|**2**|Windows 身份验证。<br /><br /> [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]|  
+|**subscriber_security_mode**|**1**|Windows 身份验证。<br /><br /> [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]|  
 ||**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]验证.|  
 |**subscriber_type**|**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器|  
-||**2**|ODBC 数据源服务器|  
-||**三维空间**|OLE DB 访问接口|  
+||**1**|ODBC 数据源服务器|  
+||**3**|OLE DB 访问接口|  
 |**subscriptionstreams**||指示每个分发代理允许的连接数，用于将更改批并行应用于订阅服务器。 *对于非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *订阅服务器、Oracle 发布服务器或对等订阅*，不支持。|  
   
 > [!NOTE]  

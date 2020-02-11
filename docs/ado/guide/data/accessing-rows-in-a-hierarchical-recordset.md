@@ -14,24 +14,24 @@ ms.assetid: 25f1d2a1-6d5e-4457-aa07-5db5c75dee18
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e73b2ca96cc5e7eb7683b72aa19fd59a318b8596
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926359"
 ---
-# <a name="accessing-rows-in-a-hierarchical-recordset-example"></a>访问分层记录集 （示例） 中的行
-下面的示例显示了的步骤所需访问的行以分层[记录集](../../../ado/reference/ado-api/recordset-object-ado.md):
+# <a name="accessing-rows-in-a-hierarchical-recordset-example"></a>访问分层记录集中的行（示例）
+下面的示例演示访问分层[记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)的行所需的步骤：
 
-1.  **记录集**中的对象**作者**并**titleauthor**表相关的作者 id。
+1.  **作者**和**titleauthor**表中的**记录集**对象均由作者 ID 相关联。
 
-2.  外部循环显示每个作者的名字和姓氏的名称、 状态和标识。
+2.  外部循环显示每个作者的名字和姓氏、省/市/自治区和标识。
 
-3.  在追加**记录集**从检索的每一行[字段](../../../ado/reference/ado-api/fields-collection-ado.md)集合并分配给*rstTitleAuthor*。
+3.  每行的追加的**记录集**从[字段](../../../ado/reference/ado-api/fields-collection-ado.md)集合中检索并分配给*rstTitleAuthor*。
 
-4.  内部循环显示四个字段从每个行中追加**记录集**。
+4.  内部循环显示追加的**记录集中**每一行的四个字段。
 
- [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)属性设置为**false**为便于说明，以便您可以看到一章更改显式在外部循环的每次迭代中。 若要使效率更高的代码示例，可以移动分配在步骤 2 中的第一行前面的步骤 3 中，以便分配仅执行一次。 然后设置[StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)属性设置为**true**，以便*rstTitleAuthor*将隐式和自动更改为相应的一章每当*rst*将移到新行。
+ 出于说明目的， [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)属性设置为**false** ，以便您可以看到在外部循环的每次迭代中显式更改章节。 为了使代码示例更高效，你可以在步骤3中移动步骤2中第一行之前的分配，以便仅执行一次分配。 然后将[StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)属性设置为**true**，以便当*rst*移动到新行时， *rstTitleAuthor*将隐式地自动更改为相应的章节。
 
 ## <a name="example"></a>示例
 
@@ -67,5 +67,5 @@ Sub datashape()
 End Sub
 ```
 
-## <a name="see-also"></a>请参阅
- [数据整理概述](../../../ado/guide/data/data-shaping-overview.md)[字段对象](../../../ado/reference/ado-api/field-object.md)[字段集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md) [正式 Shape 语法](../../../ado/guide/data/formal-shape-grammar.md) [Microsoft 数据整理用于 OLE DB 服务（ADO 服务提供程序）](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [必需的提供程序数据整理](../../../ado/guide/data/required-providers-for-data-shaping.md)[形状 APPEND 子句](../../../ado/guide/data/shape-append-clause.md)[形状中的命令常规](../../../ado/guide/data/shape-commands-in-general.md) [Shape 计算子句](../../../ado/guide/data/shape-compute-clause.md) [Visual Basic for Applications 函数](../../../ado/guide/data/visual-basic-for-applications-functions.md)
+## <a name="see-also"></a>另请参阅
+ [数据定形概述](../../../ado/guide/data/data-shaping-overview.md)[字段对象](../../../ado/reference/ado-api/field-object.md)[字段集合（ado）](../../../ado/reference/ado-api/fields-collection-ado.md) [正式形状语法](../../../ado/guide/data/formal-shape-grammar.md) [Microsoft 数据定形服务 OLE DB （ADO 服务提供程序）](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) [记录集对象（Ado）](../../../ado/reference/ado-api/recordset-object-ado.md) [必需的数据定形的提供程序](../../../ado/guide/data/required-providers-for-data-shaping.md)形状[计算子句](../../../ado/guide/data/shape-compute-clause.md)中的[APPEND 子句](../../../ado/guide/data/shape-append-clause.md) [shape 命令](../../../ado/guide/data/shape-commands-in-general.md) [Visual Basic for Applications 函数](../../../ado/guide/data/visual-basic-for-applications-functions.md)

@@ -16,30 +16,30 @@ ms.assetid: 6aaaf6d0-1376-4473-bea6-b81f2645a9ac
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f242a3596735a4bc43256d05b87100e71295a3da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926431"
 ---
 # <a name="vbscript-ado-programming"></a>VBScript ADO 编程
 ## <a name="creating-an-ado-project"></a>创建 ADO 项目  
- Microsoft Visual Basic、 Scripting Edition 不支持类型库中，因此不需要在项目中引用 ADO。 因此，如命令行完成任何关联的功能是受不支持。 此外，默认情况下，ADO 枚举常量不在 VBScript 中定义。  
+ Microsoft Visual Basic 脚本编写版不支持类型库，因此您不需要在项目中引用 ADO。 因此，不支持任何相关功能，如命令行完成。 此外，默认情况下，VBScript 中未定义 ADO 枚举的常量。  
   
- 但是，ADO 提供了两个包含文件包含以下定义可以与 VBScript 一起使用：  
+ 但是，ADO 提供包含以下定义的两个包含文件用于 VBScript：  
   
--   用于服务器端脚本编写用途 Adovbs.inc，安装在 c:\Program Files\Common Files\System\ado\ 文件夹中默认情况下。  
+-   对于服务器端脚本使用 Adovbs，默认情况下，该文件安装在 c:\Program Files\Common Files\System\ado\ 文件夹中。  
   
--   供客户端侧脚本使用 Adcvbs.inc，安装在 c:\Program Files\Common Files\System\msdac\ 文件夹中默认情况下。  
+-   对于客户端脚本使用 Adcvbs，默认情况下，该文件安装在 c:\Program Files\Common Files\System\msdac\ 文件夹中。  
   
- 您可以复制，将从这些文件的常量定义粘贴到 ASP 页中，或者，如果你正在执行服务器端脚本，将 Adovbs.inc 文件复制到你的网站上的文件夹和引用从 ASP 页如下：  
+ 您可以将常数定义从这些文件复制并粘贴到您的 ASP 页中，或者，如果您正在执行服务器端脚本编写，请将 Adovbs 文件复制到您的网站上的一个文件夹中，然后从您的 ASP 页引用它，如下所示：  
   
 ```vb
 <!--#include File="adovbs.inc"-->  
 ```  
   
 ## <a name="creating-ado-objects-in-vbscript"></a>在 VBScript 中创建 ADO 对象  
- 不能使用**Dim**语句将分配给 VBScript 中的特定类型的对象。 此外，VBScript 不支持**新建**与一起使用的语法**Dim**在应用程序的 Visual Basic 中的语句。 必须改用**CreateObject**函数调用：  
+ 不能使用**Dim**语句将对象分配到 VBScript 中的特定类型。 另外，VBScript 不支持 Visual Basic for Applications 中**Dim**语句使用的**新**语法。 您必须改用**CreateObject**函数调用：  
   
 ```vb
 Dim Rs1  
@@ -47,7 +47,7 @@ Set Rs1 = Server.CreateObject( "ADODB.Recordset" )
 ```  
   
 ## <a name="vbscript-examples"></a>VBScript 示例  
- 以下代码是 VBScript Active Server Page (ASP) 文件中的服务器端编程的一般示例：  
+ 以下代码是 Active Server Page （ASP）文件中 VBScript 服务器端编程的一般示例：  
   
 ```vb
 <%  @LANGUAGE="VBSCRIPT" %>  
@@ -74,13 +74,13 @@ Response.Write("Success!")
 </HTML>  
 ```  
   
- 使用 ADO 文档中包含更具体的 VBScript 示例。 有关详细信息，请参阅[Microsoft Visual Basic Scripting Edition 中的 ADO 代码示例](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)。  
+ ADO 文档附带了更为具体的 VBScript 示例。 有关详细信息，请参阅[Microsoft Visual Basic Scripting Edition 中的 ADO 代码示例](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)。  
   
-## <a name="differences-between-vbscript-and-visual-basic"></a>VBScript 和 Visual Basic 之间的差异  
- 使用 ADO 与 VBScript 是类似于使用 ADO 与 Visual Basic 在许多方面，包括如何使用语法。 但是，存在一些重要差异：  
+## <a name="differences-between-vbscript-and-visual-basic"></a>VBScript 与 Visual Basic 之间的差异  
+ 使用 ADO 和 VBScript 类似于将 ADO 与 Visual Basic 一起使用，其中包括如何使用语法。 但存在一些重要的差异：  
   
--   VBScript 的支持仅 Variant 数据类型，可以容纳不同类型的数据。 可以将所需的数据存储在 Variant 数据类型，以及数据将适当地发挥由于强制转换由 VBScript 执行。 它识别 ADO 中，所需的类型，并将相应地转换中将该变量的值。  
+-   VBScript 仅支持 Variant 数据类型，该类型可以保存不同类型的数据。 您可以在变量数据类型中存储所需的数据，数据将正常运行，因为 VBScript 执行了强制转换。 它识别 ADO 所需的类型，并相应地转换变量中的值。  
   
--   不能使用**上错误 goto\<标签 >** VBScript 中。  
+-   在 VBScript 中，不能使用**on error goto \<label>** 。  
   
--   VBScript 支持，一些内置的 Visual Basic 函数如**Msgbox**，**日期**，并**IsNumeric**。 但是，由于 VBScript 是 Visual Basic 的一个子集，并非所有的内置函数支持。 例如，不支持 VBScript**格式**函数和文件 I/O 功能。
+-   VBScript 支持某些内置 Visual Basic 函数，例如**Msgbox**、 **Date**和**IsNumeric**。 但是，由于 VBScript 是 Visual Basic 的子集，因此并非所有内置函数都受支持。 例如，VBScript 不支持**Format**函数和文件 i/o 函数。

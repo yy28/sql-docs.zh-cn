@@ -23,10 +23,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 98f2ee047bccf7cd3843fe34aaf8f5caec0dc11a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257469"
 ---
 # <a name="data-type-conversions-and-the-sqldatatype-annotation-sqlxml-40"></a>数据类型转换和 sql： datatype 批注（SQLXML 4.0）
@@ -42,9 +42,9 @@ ms.locfileid: "75257469"
   
 |XSD 数据类型|SQL Server 转换|  
 |-------------------|---------------------------|  
-|布尔|CONVERT(bit, COLUMN)|  
+|Boolean|CONVERT(bit, COLUMN)|  
 |Date|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
-|decimal|CONVERT(money, COLUMN)|  
+|Decimal|CONVERT(money, COLUMN)|  
 |id/idref/idrefs|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
 |nmtoken/nmtokens|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
 |时间|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
@@ -59,26 +59,26 @@ ms.locfileid: "75257469"
 |SQL Server 数据类型|XSD 数据类型|  
 |--------------------------|-------------------|  
 |**bigint**|**漫长**|  
-|**二进制**|**base64Binary**|  
-|**小段**|**变量**|  
+|**binary**|**base64Binary**|  
+|**bit**|**变量**|  
 |**char**|**类似**|  
-|**型**|**型**|  
-|**式**|**式**|  
-|**float**|**仔细**|  
-|**影像**|**base64Binary**|  
-|**整形**|**整形**|  
-|**money**|**式**|  
+|**datetime**|**型**|  
+|**Decimal**|**Decimal**|  
+|**float**|**double**|  
+|**图像**|**base64Binary**|  
+|**int**|**int**|  
+|**money**|**Decimal**|  
 |**nchar**|**类似**|  
 |**ntext**|**类似**|  
 |**nvarchar**|**类似**|  
-|**加法**|**式**|  
-|**real**|**float**|  
+|**加法**|**Decimal**|  
+|**实际上**|**float**|  
 |**smalldatetime**|**型**|  
 |**smallint**|**short**|  
-|**smallmoney**|**式**|  
+|**smallmoney**|**Decimal**|  
 |**sql_variant**|**类似**|  
 |**sysname**|**类似**|  
-|**全文**|**类似**|  
+|**text**|**类似**|  
 |**标志**|**型**|  
 |**tinyint**|**unsignedByte**|  
 |**varbinary**|**base64Binary**|  

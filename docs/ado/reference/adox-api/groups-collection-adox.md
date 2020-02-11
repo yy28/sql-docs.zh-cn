@@ -1,5 +1,5 @@
 ---
-title: 组集合 (ADOX) |Microsoft Docs
+title: 组集合（ADOX） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,39 +18,39 @@ ms.assetid: 09aa7b0a-69d5-4564-80a7-20ad8189670f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e39be3cf32f04a60e554928f66cdc6123322f19c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966187"
 ---
 # <a name="groups-collection-adox"></a>组集合 (ADOX)
-包含所有存储[组](../../../ado/reference/adox-api/group-object-adox.md)目录或用户的对象。  
+包含目录或用户的所有存储的[组](../../../ado/reference/adox-api/group-object-adox.md)对象。  
   
 ## <a name="remarks"></a>备注  
- **组**系列[目录](../../../ado/reference/adox-api/catalog-object-adox.md)表示所有目录的组帐户。 **组**集合[用户](../../../ado/reference/adox-api/user-object-adox.md)表示只有该用户所属的组。  
+ [目录](../../../ado/reference/adox-api/catalog-object-adox.md)的**Groups**集合表示所有目录的组帐户。 [用户](../../../ado/reference/adox-api/user-object-adox.md)的**Groups**集合仅表示该用户所属的组。  
   
- [追加](../../../ado/reference/adox-api/append-method-adox-groups.md)方法**组**是唯一的 ADOX 集合。 你可以：  
+ **组**集合的[APPEND](../../../ado/reference/adox-api/append-method-adox-groups.md)方法对于 ADOX 是唯一的。 可以：  
   
--   将新的安全组添加到具有集合**追加**方法。  
+-   使用**Append**方法将新的安全组添加到集合。  
   
- 剩余的属性和方法是标准到 ADO 集合。 你可以：  
+ 其余属性和方法对于 ADO 集合是标准的。 可以：  
   
--   访问集合中具有一组[项](../../../ado/reference/ado-api/item-property-ado.md)属性。  
+-   使用[Item](../../../ado/reference/ado-api/item-property-ado.md)属性访问集合中的组。  
   
--   返回与集合中包含的组数[计数](../../../ado/reference/ado-api/count-property-ado.md)属性。  
+-   返回集合中包含[Count](../../../ado/reference/ado-api/count-property-ado.md)属性的组的数目。  
   
--   从集合中删除组[删除](../../../ado/reference/adox-api/delete-method-adox-collections.md)方法。  
+-   使用[Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md)方法从集合中删除组。  
   
--   更新以反映与当前的数据库架构集合中的对象[刷新](../../../ado/reference/ado-api/refresh-method-ado.md)方法。  
+-   更新集合中的对象，以反映包含[Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)方法的当前数据库架构。  
   
 > [!NOTE]
->  之前追加**组**对象传递给**组**的集合**用户**对象，**组**对象具有相同[名称](../../../ado/reference/adox-api/name-property-adox.md)如要追加的一个必须已存在于**组**的集合**目录**。  
+>  在将**组**对象追加到**用户**对象的**groups**集合之前，**目录**的**组**集合中必须已经存在与要追加的组[对象同名的](../../../ado/reference/adox-api/name-property-adox.md)**组**对象。  
   
  本部分包含以下主题。  
   
 -   [组集合属性、方法和事件](../../../ado/reference/adox-api/groups-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>请参阅  
- [目录对象 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+## <a name="see-also"></a>另请参阅  
+ [目录对象（ADOX）](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [组对象 (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)

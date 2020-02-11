@@ -1,7 +1,7 @@
 ---
 title: 创建分析报表
 description: 在数据库实验助手中创建分析报表
-ms.date: 11/21/2019
+ms.date: 01/24/2020
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -12,12 +12,12 @@ author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 4d3f057ffcfb1030b473b69f96b7204b3a975613
-ms.sourcegitcommit: aaa42f26c68abc2de10eb58444fe6b490c174eab
+ms.openlocfilehash: f82aba87632abea4ac5fbc8b54daa6dfd0eb5b4a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74307977"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76831841"
 ---
 # <a name="create-analysis-reports-in-database-experimentation-assistant-sql-server"></a>在数据库实验助手（SQL Server）中创建分析报表
 
@@ -25,29 +25,24 @@ ms.locfileid: "74307977"
 
 ## <a name="create-an-analysis-report"></a>创建分析报告
 
-在 DEA 中，选择菜单图标。 在展开的菜单中，选择 "清单" 图标旁边的 "**分析报表**"。
+1. 在 DEA 中，选择 "列表" 图标，指定服务器名称和身份验证类型，根据具体情况选择或取消选择 "**加密连接**" 和 "**信任服务器证书**" 复选框，然后选择 "**连接**"。
 
-![分析菜单](./media/database-experimentation-assistant-create-report/dea-create-reports-menu.png)
+   ![用跟踪文件连接到服务器](./media/database-experimentation-assistant-create-report/dea-connect-to-server-with-trace-files.png)
 
-在 "**分析报表**" 下，选择 "**新建分析报表**"。
+2. 在 "**分析报表**" 屏幕上，选择 "**新建分析报表**"。
 
-![新建分析报表菜单](./media/database-experimentation-assistant-create-report/dea-create-reports-new-report.png)
+   ![创建新分析报告](./media/database-experimentation-assistant-create-report/dea-create-an-analysis-report.png)
 
-输入或选择以下信息：
+3. 在 "**新建分析报表**" 屏幕上，指定报表的名称、目标1和目标2跟踪文件的存储位置和路径，然后选择 "**启动**"。
 
-- **报表名称**：输入报表的名称。 报表名称用于 A 和 B 数据库。 示例： *A （或 B）* + *报表名称* + *唯一标识符*。
-- **服务器名称**：输入要包含在、B 和分析数据库中的服务器计算机的名称。
-- **SQL Server 实例名称**：输入要用于报表的 SQL Server 实例的名称。
-- **源服务器跟踪**：输入 SQL Server （2008 R2）第一个 trace （. trace.dat.trc）文件。
-- **目标服务器的跟踪**：在 trace.dat.trc 文件中输入目标 SQL Server （2014）。
+   ![指定新分析报表详细信息](./media/database-experimentation-assistant-create-report/dea-new-analysis-report-details.png)
 
-![新建分析报表页](./media/database-experimentation-assistant-create-report/dea-create-reports-inputs.png)
+   如果输入的信息有效，则会创建分析报告。
 
-## <a name="generate-a-report"></a>生成报告
+   ![新建分析报表](./media/database-experimentation-assistant-create-report/dea-newly-created-analysis-report.png)
 
-在 "**新建分析报表**" 页上输入或选择所需信息后，请选择 "**开始**" 以开始创建报表。 如果输入的信息有效，则会创建分析报告。 否则，包含无效信息的文本框将突出显示为红色。 请确保输入正确的值，然后选择 "**启动**"。
-
-将生成新的分析报告。 分析数据库遵循命名方案分析和*用户指定的报表名称* + *唯一标识符*。
+      > [!NOTE]
+      > 如果输入的任何信息无效，则包含错误信息的文本框将突出显示为红色。 进行必要的更正，然后再次选择 "**启动**"。
 
 ## <a name="frequently-asked-questions-about-analysis-reports"></a>有关分析报表的常见问题
 
@@ -57,11 +52,7 @@ DEA 使用统计测试来分析工作负荷，并确定每个查询从目标1到
 
 **问：是否可以在生成另一个报表时创建新的分析报表？**
 
-不能。  目前，一次只能生成一个报表以防止冲突。 但是，可以同时运行多个捕获和重播。
-
-**问：我将 DEA 升级到了2.0 版。是否仍然可以查看和使用旧报表？**
-
-是的。 若要查看以前生成的报表，您必须更新报表的架构。 有关详细信息，请参阅[DEA 2.0：在 DEA 中更新用于分析的数据库架构报表](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-updating-db-schema-for-analysis-report-in-the-database-experimentation-assistant/)。
+不是。  目前，一次只能生成一个报表以防止冲突。 但是，可以同时运行多个捕获和重播。
 
 **问：我是否可以使用命令提示符生成分析报告？**
 
@@ -105,7 +96,7 @@ DEA 使用统计测试来分析工作负荷，并确定每个查询从目标1到
 
 如果数据不存在，则可能是数据没有正确复制，或者数据库可能已损坏。 如果仅缺少某些数据，则在捕获或重播中创建的跟踪文件可能未准确捕获工作负荷。 如果数据存在，请检查% temp%\\DEA 中的日志文件以查看是否记录了任何错误。 然后，再次尝试生成分析报告。
 
-更多问题或反馈？ 选择左下角的笑脸图标，通过 DEA 工具提交反馈。 
+更多问题或反馈？ 选择左下角的笑脸图标，通过 DEA 工具提交反馈。
 
 ## <a name="see-also"></a>另请参阅
 

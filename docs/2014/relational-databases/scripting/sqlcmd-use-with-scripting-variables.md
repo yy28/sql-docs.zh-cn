@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6893d00a1fa7fb0986be2eb6241c596160085e2f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243170"
 ---
 # <a name="use-sqlcmd-with-scripting-variables"></a>将 sqlcmd 与脚本变量结合使用
@@ -104,7 +104,7 @@ ms.locfileid: "75243170"
 ## <a name="sqlcmd-scripting-variables"></a>sqlcmd 脚本变量  
  将 **sqlcmd** 定义的变量称为脚本变量。 下表列出了 **sqlcmd** 脚本变量。  
   
-|变量|相关选项|R/W|默认值|  
+|变量|相关选项|R/W|默认|  
 |--------------|--------------------|----------|-------------|  
 |SQLCMDUSER*|-U|R|""|  
 |SQLCMDPASSWORD*|-P|--|""|  
@@ -117,7 +117,7 @@ ms.locfileid: "75243170"
 |SQLCMDCOLSEP|-s|R/W|" "|  
 |SQLCMDCOLWIDTH|-w|R/W|"0"|  
 |SQLCMDPACKETSIZE|-a|R|"4096"|  
-|SQLCMDERRORLEVEL|-m|R/W|"0"|  
+|SQLCMDERRORLEVEL|-M|R/W|"0"|  
 |SQLCMDMAXVARTYPEWIDTH|-y|R/W|"256"|  
 |SQLCMDMAXFIXEDTYPEWIDTH|-y|R/W|"0" = 无限制|  
 |SQLCMDEDITOR||R/W|"edit.com"|  

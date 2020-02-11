@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8ee3d5bb623de84704de97b798573b769d85ae15
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243062"
 ---
 # <a name="output-window"></a>输出窗口
@@ -25,14 +25,14 @@ ms.locfileid: "75243062"
   
  **访问“输出”窗口**  
   
--   在 **“视图”** 菜单上单击 **“其他窗口”**，再单击 **“输出”**。  
+-   在 **“视图”** 菜单上单击 **“其他窗口”** ，再单击 **“输出”** 。  
   
 ## <a name="options"></a>选项  
  **输出窗格列表**  
  显示要查看的输出窗格的列表。 可能会有多个信息窗格可用，取决于哪些工具已经使用 **“输出”** 窗口将信息传递给用户。  
   
  **输出窗格**  
- 显示“输出窗格列表”**** 中所选窗格的输出结果。  
+ 显示“输出窗格列表”  中所选窗格的输出结果。  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-sql 调试器](transact-sql-debugger.md)  
+ [Transact-SQL 调试器](transact-sql-debugger.md)  

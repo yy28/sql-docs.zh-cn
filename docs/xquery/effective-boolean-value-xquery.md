@@ -1,5 +1,5 @@
 ---
-title: 有效的布尔值 (XQuery) |Microsoft 文档
+title: 有效的布尔值（XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,10 +18,10 @@ ms.assetid: 506682b1-b6c9-45e2-aa54-7abd5844c3f1
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 4eb94e51896e08f60389edde0c2a6cd0461e8538
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67929950"
 ---
 # <a name="effective-boolean-value-xquery"></a>有效的布尔值 (XQuery)
@@ -37,7 +37,7 @@ ms.locfileid: "67929950"
   
 -   逻辑表达式  
   
--   [不起作用](../xquery/functions-on-boolean-values-not-function.md)  
+-   [Not 函数](../xquery/functions-on-boolean-values-not-function.md)  
   
 -   FLWOR 表达式的 WHERE 子句  
   
@@ -45,7 +45,7 @@ ms.locfileid: "67929950"
   
 -   [QuantifiedeExpressions](../xquery/quantified-expressions-xquery.md)  
   
- 下面是有效的布尔值示例。 当**如果**处理表达式，可确定有效的布尔值的条件。 由于 `/a[1]` 返回空序列，因此有效的布尔值为 False。 结果以包含一个文本节点 (False) 的 XML 返回。  
+ 下面是有效的布尔值示例。 当处理**if**表达式时，将确定条件的有效布尔值。 由于 `/a[1]` 返回空序列，因此有效的布尔值为 False。 结果以包含一个文本节点 (False) 的 XML 返回。  
   
 ```  
 value is false  
@@ -64,11 +64,11 @@ SELECT @x.query('if (/a[1]) then "true" else "false"')
 go  
 ```  
   
- 当查询类型化**xml**列或变量，可以具有布尔类型的节点。 **Data （)** 这种情况下返回一个布尔值。 如果查询表达式返回布尔值 True，则有效的布尔值为 True，如下例所示。 本例中对下列各项也进行了说明：  
+ 查询类型化的**xml**列或变量时，可以具有布尔类型的节点。 此情况下的**数据（）** 将返回一个布尔值。 如果查询表达式返回布尔值 True，则有效的布尔值为 True，如下例所示。 本例中对下列各项也进行了说明：  
   
--   创建一个 XML 架构集合。 元素\<b > 在集合中为布尔类型。  
+-   创建一个 XML 架构集合。 集合中\<的元素 b> 为布尔类型。  
   
--   类型化**xml**创建并查询变量。  
+-   创建并查询类型化的**xml**变量。  
   
 -   表达式 `data(/b[1])` 返回布尔值 True。 因此，这种情况下，有效的布尔值为 True。  
   
@@ -88,8 +88,8 @@ SELECT @x.query('if (data(/b[2])) then "true" else "false"')
 go  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [XQuery 基础知识](../xquery/xquery-basics.md)   
- [FLWOR 语句和迭代&#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)  
+ [FLWOR 语句和迭代 &#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)  
   
   

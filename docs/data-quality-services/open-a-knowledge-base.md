@@ -12,10 +12,10 @@ ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 91f5e7effe54b9955537d90d639a820b5428a5c3
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75246012"
 ---
 # <a name="open-a-knowledge-base"></a>打开知识库
@@ -24,14 +24,14 @@ ms.locfileid: "75246012"
 
   本主题描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中打开现有的知识库，以及如何准备知识库以用于域管理、知识发现或添加匹配策略。  
   
-##  <a name="BeforeYouBegin"></a>开始之前  
+##  <a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Prerequisites"></a>先决条件  
  若要打开知识库，该知识库必须已创建，并且已发布（如果另一个人创建了此知识库）或已关闭（如果您创建了该知识库）。  
   
-###  <a name="Security"></a>安全  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>访问  
+####  <a name="Permissions"></a> 权限  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_administrator 角色，才能打开知识库。  
   
 ##  <a name="Open"></a>打开知识库  
@@ -53,7 +53,7 @@ ms.locfileid: "75246012"
   
     -   选择 **“匹配策略”** 可以创建匹配策略，并将其添加到知识库。  
   
-5.  单击“打开”****。  
+5.  单击 **“打开”** 。  
   
     > [!NOTE]  
     >  还可以通过右键单击知识库，然后单击“打开”来打开该知识库。 上下文菜单中的其他命令支持用其他名称保存它、对其解除锁定、放弃操作、重命名或显示其属性。  

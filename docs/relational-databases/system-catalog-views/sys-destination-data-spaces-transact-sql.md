@@ -1,5 +1,5 @@
 ---
-title: sys.destination_data_spaces (TRANSACT-SQL) |Microsoft Docs
+title: sys. destination_data_spaces （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,18 +20,18 @@ ms.assetid: 92df932b-ad5c-43f8-81f4-b158823ab189
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 68a9e46232246c5f3a088765f77f44a9bc018269
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68079372"
 ---
-# <a name="sysdestinationdataspaces-transact-sql"></a>sys.destination_data_spaces (Transact-SQL)
+# <a name="sysdestination_data_spaces-transact-sql"></a>sys.destination_data_spaces (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   分区方案的每个数据空间目标对应一行。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**partition_scheme_id**|**int**|分区到数据空间的分区架构的 ID。|  
 |**destination_id**|**int**|分区架构内唯一的目标映射的 ID（从 1 开始的序号）。|  
@@ -40,7 +40,7 @@ ms.locfileid: "68079372"
 ## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

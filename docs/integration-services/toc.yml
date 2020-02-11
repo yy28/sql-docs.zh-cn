@@ -78,6 +78,8 @@
   href: ../integration-services/integration-services-ssis-development-and-management-tools.md
 - name: “项目和解决方案”
   href: ../integration-services/integration-services-ssis-projects-and-solutions.md
+- name: SSIS DevOps
+  href: ../integration-services/devops/ssis-devops-overview.md
 - name: 用户界面
   href: ../integration-services/integration-services-user-interface.md
   items:
@@ -188,7 +190,7 @@
       href: ../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md
     - name: WMI 连接管理器
       href: ../integration-services/connection-manager/wmi-connection-manager.md
-- name: “控制流”
+- name: 控制流
   items:
     - name: 概述
       href: ../integration-services/control-flow/control-flow.md
@@ -566,13 +568,13 @@
               href: ../integration-services/data-flow/look-up-infopackage.md
             - name: 新建 InfoObject
               href: ../integration-services/data-flow/create-new-infoobject.md
-            - name: 创建事务数据的 InfoCube
+            - name: “创建事务数据的 InfoCube”
               href: ../integration-services/data-flow/create-infocube-for-transaction-data.md
             - name: 查找 InfoObject
               href: ../integration-services/data-flow/look-up-infoobject.md
             - name: “创建 InfoSource”
               href: ../integration-services/data-flow/create-infosource.md
-            - name: “创建事务数据的 InfoSource”
+            - name: 创建事务数据的 InfoSource
               href: ../integration-services/data-flow/create-infosource-for-transaction-data.md
             - name: “创建主数据的 InfoSource”
               href: ../integration-services/data-flow/create-infosource-for-master-data.md
@@ -819,7 +821,7 @@
           href: ../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md
         - name: <=（小于或等于）（SSIS 表达式）
           href: ../integration-services/expressions/less-than-or-equal-to-ssis-expression.md
-        - name: '? 解码的字符：（条件）（SSIS 表达式）'
+        - name: '? :（条件）（SSIS 表达式）'
           href: ../integration-services/expressions/conditional-ssis-expression.md
     - name: 函数（SSIS 表达式）
       href: ../integration-services/expressions/functions-ssis-expression.md
@@ -906,7 +908,7 @@
   href: ../integration-services/integration-services-ssis-event-handlers.md
 - name: 查询
   href: ../integration-services/integration-services-ssis-queries.md
-- name: 中的
+- name: 事务
   href: ../integration-services/integration-services-transactions.md
 - name: 部署 Integration Services (SSIS) 项目和包
   href: ../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md
@@ -925,7 +927,7 @@
       href: ../integration-services/packages/sql-server-agent-jobs-for-packages.md
     - name: 使用 SQL Server 代理在远程服务器上平衡包的负载
       href: ../integration-services/packages/load-balancing-packages-on-remote-servers-by-using-sql-server-agent.md
-- name: 扩展
+- name: Scale Out
   items:
     - name: 概述
       href: ../integration-services/scale-out/integration-services-ssis-scale-out.md
@@ -1119,7 +1121,7 @@
           href: ../integration-services/system-stored-procedures/catalog-create-execution-dump.md
         - name: catalog.create_folder
           href: ../integration-services/system-stored-procedures/catalog-create-folder-ssisdb-database.md
-    - name: DELETE
+    - name: 删除
       items:
         - name: catalog.delete_customized_logging_level
           href: ../integration-services/system-stored-procedures/catalog-delete-customized-logging-level.md
@@ -1153,7 +1155,7 @@
           href: ../integration-services/system-stored-procedures/catalog-get-project-ssisdb-database.md
     - name: catalog.grant_permission
       href: ../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md
-    - name: “移动”
+    - name: 移动
       items:
         - name: catalog.move_environment
           href: ../integration-services/system-stored-procedures/catalog-move-environment-ssisdb-database.md
@@ -1161,7 +1163,7 @@
           href: ../integration-services/system-stored-procedures/catalog-move-project-ssisdb-database.md
     - name: catalog.remove_data_tap
       href: ../integration-services/system-stored-procedures/catalog-remove-data-tap.md
-    - name: Rename
+    - name: 重命名
       items:
         - name: catalog.rename_customized_logging_level
           href: ../integration-services/system-stored-procedures/catalog-rename-customized-logging-level.md
@@ -1173,7 +1175,7 @@
       href: ../integration-services/system-stored-procedures/catalog-restore-project-ssisdb-database.md
     - name: catalog.revoke_permission
       href: ../integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database.md
-    - name: 将
+    - name: 设置
       items:
         - name: catalog.set_customized_logging_level_description
           href: ../integration-services/system-stored-procedures/catalog-set-customized-logging-level-description.md
@@ -1205,7 +1207,7 @@
       href: ../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md
     - name: catalog.stop_operation
       href: ../integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database.md
-    - name: Update
+    - name: 更新
       items:
         - name: catalog.update_logdb_info（SSISDB 数据库）
           href: ../integration-services/system-stored-procedures/catalog-update-logdb-info.md
@@ -1463,7 +1465,7 @@
 - name: Microsoft Connector for Oracle
   href: ../integration-services/data-flow/oracle-connector.md
   items:
-    - name: Oracle 连接管理器
+    - name: Oracle Connection Manager
       href: ../integration-services/data-flow/oracle-connection-manager.md
     - name: Oracle 源
       href: ../integration-services/data-flow/oracle-source.md
@@ -1471,6 +1473,17 @@
       href: ../integration-services/data-flow/oracle-destination.md
     - name: 数据类型支持
       href: ../integration-services/data-flow/oracle-data-type-support.md
+- name: Microsoft Connector for Teradata
+  href: ../integration-services/data-flow/Teradata-connector.md
+  items:
+    - name: Teradata 连接管理器
+      href: ../integration-services/data-flow/Teradata-connection-manager.md
+    - name: Teradata 源
+      href: ../integration-services/data-flow/Teradata-source.md
+    - name: Teradata 目标
+      href: ../integration-services/data-flow/Teradata-destination.md
+    - name: 数据类型支持
+      href: ../integration-services/data-flow/Teradata-data-type-support.md
 - name: Attunity 推出的用于 Oracle 和 Teradata 的 Microsoft Connector
   href: ../integration-services/attunity-connectors.md
 - name: SQL Server 导入和导出向导
@@ -1547,7 +1560,7 @@
   href: ../integration-services/load-data-to-sql-database-with-ssis.md
 - name: 将数据加载到 SQL 数据仓库
   href: ../integration-services/load-data-to-sql-data-warehouse.md
-- name: 变更数据捕获
+- name: 更改数据捕获
   items:
     - name: 概述
       href: ../integration-services/change-data-capture/change-data-capture-ssis.md
@@ -1612,7 +1625,7 @@
                   href: ../integration-services/change-data-capture/generate-and-run-the-supplemental-logging-script.md
                 - name: 生成镜像表和 CDC 捕获实例
                   href: ../integration-services/change-data-capture/generate-mirror-tables-and-cdc-capture-instances.md
-                - name: “完成”
+                - name: 完成
                   href: ../integration-services/change-data-capture/finish.md
             - name: 编辑实例属性
               href: ../integration-services/change-data-capture/edit-instance-properties.md
@@ -1636,7 +1649,7 @@
               href: ../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md
             - name: 如何创建 SQL Server 更改数据库实例
               href: ../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md
-            - name: 如何管理 CDC 实例
+            - name: How to Manage a CDC Instance
               href: ../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md
             - name: 如何编辑 CDC 实例属性
               href: ../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md
@@ -1646,7 +1659,7 @@
           href: ../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md
         - name: 高级连接属性
           href: ../integration-services/change-data-capture/advanced-connection-properties.md
-        - name: 用于运行脚本的 Oracle 凭据
+        - name: Oracle Credentials for Running Script
           href: ../integration-services/change-data-capture/oracle-credentials-for-running-script.md
         - name: Oracle 补充日志记录脚本
           href: ../integration-services/change-data-capture/oracle-supplemental-logging-script.md
@@ -1679,7 +1692,7 @@
               href: ../integration-services/change-data-capture/connection-to-sql-server-for-delete.md
             - name: 创建和编辑 Oracle CDC 服务
               href: ../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md
-            - name: 管理 Oracle CDC 服务
+            - name: Manage an Oracle CDC Service
               href: ../integration-services/change-data-capture/manage-an-oracle-cdc-service.md
             - name: 为 CDC 准备 SQL Server
               href: ../integration-services/change-data-capture/prepare-sql-server-for-cdc.md
@@ -1825,7 +1838,7 @@
               href: ../integration-services/lesson-3-2-running-the-package-installation-wizard.md
             - name: 第 3-3 课 — 测试已部署的包
               href: ../integration-services/lesson-3-3-testing-the-deployed-packages.md
-- name: Resources
+- name: 资源
   items:
     - name: SSIS 论坛 >>
       href: 'https://social.msdn.microsoft.com/Forums/en-US/home'

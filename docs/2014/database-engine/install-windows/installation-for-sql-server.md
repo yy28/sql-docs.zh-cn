@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 96afef098b711c65e1bcb46d5f687c95061f2c94
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228414"
 ---
 # <a name="installation-for-sql-server-2014"></a>SQL Server 2014 安装
@@ -56,7 +56,7 @@ ms.locfileid: "75228414"
 ## <a name="in-this-section"></a>本节内容  
  无论使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导还是命令提示符安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，安装都包括下列步骤：  
   
- [规划 SQL Server 安装](../../sql-server/install/planning-a-sql-server-installation.md)  
+ [计划 SQL Server 安装](../../sql-server/install/planning-a-sql-server-installation.md)  
  说明如何为安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]而准备计算机：  
   
 -   硬件和软件要求。  
@@ -95,5 +95,5 @@ ms.locfileid: "75228414"
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 安装中的新增功能](../../sql-server/install/what-s-new-in-sql-server-installation.md)   
- [安装 SQL Server 2014 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+ [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   

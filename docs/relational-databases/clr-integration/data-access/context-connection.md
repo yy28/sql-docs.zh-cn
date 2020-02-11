@@ -18,15 +18,15 @@ ms.assetid: 67dd1925-d672-4986-a85f-bce4fe832ef7
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 3b091f515af926fb17cea424b4f8875baf0fa83a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68068424"
 ---
 # <a name="context-connection"></a>上下文连接
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  内部数据访问问题是一种非常常见的情况。 即您希望访问正在执行公共语言运行时 (CLR) 存储过程或函数的相同服务器。 一种选择是创建一个连接使用**System.Data.SqlClient.SqlConnection**，指定指向本地服务器的连接字符串，并打开该连接。 这要求指定登录凭据。 此连接位于不同的数据库会话与存储的过程或函数中，它可能具有不同**设置**选项，位于一个单独的事务，并且不到您的临时表，等等。 如果托管存储过程或函数代码正在 SQL Server 进程中执行，则是因为有人连接到了该服务器并执行了 SQL 语句调用它。 您可能希望存储的过程或函数的该连接，以及其事务上下文中执行**设置**选项，依次类推。 这称为上下文连接。  
+  内部数据访问问题是一种非常常见的情况。 即您希望访问正在执行公共语言运行时 (CLR) 存储过程或函数的相同服务器。 一个选项是使用**SqlClient**创建一个连接，指定指向本地服务器的连接字符串，然后打开该连接。 这要求指定登录凭据。 连接位于与存储过程或函数不同的数据库会话中，它可能具有不同的**SET**选项，位于不同的事务中，看不到您的临时表等。 如果托管存储过程或函数代码正在 SQL Server 进程中执行，则是因为有人连接到了该服务器并执行了 SQL 语句调用它。 您可能希望存储过程或函数在该连接的上下文中执行，同时还需要在其事务、 **SET**选项等。 这称为上下文连接。  
   
  利用上下文连接，您可以在首先调用代码的同一上下文中执行 Transact-SQL 语句。 若要获取上下文连接，您必须使用“context connection”连接字符串关键字，如以下示例所示：  
   

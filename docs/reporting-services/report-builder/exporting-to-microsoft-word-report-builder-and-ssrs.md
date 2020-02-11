@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9efad50aeb778c4cae01145fb39dd10a71c42ca0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 328f3bc8106cd499326cfce79430fef7886cd9b2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66413562"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75688208"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>导出到 Microsoft Word（报表生成器和 SSRS）
 
@@ -53,9 +53,9 @@ ms.locfileid: "66413562"
 ##  <a name="DocumentProperties"></a> 文档属性  
  Word 呈现器会将以下元数据写入 DOCX 文件。  
   
-|报表元素属性|描述|  
+|报表元素属性|说明|  
 |-------------------------------|-----------------|  
-|Report Title (report title)|Title|  
+|Report Title (report title)|标题|  
 |Report.Author|作者|  
 |Report.Description|注释|  
   
@@ -72,9 +72,9 @@ ms.locfileid: "66413562"
   
  发生此情况的原因在于，Word 呈现器针对与 **PageNumber** 和 **TotalPages** 之类的分页相关的字段对报表进行分析，并且仅处理简单引用，而不处理对函数的调用。 在此情况下，该表达式将调用 **ToString** 函数。 下面两个表达式是等效的，并且当在报表生成器或报表设计器中预览报表时，或者在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户或 SharePoint 库中呈现已发布的报表时，这两个表达式都正确呈现。 但是，Word 呈现器仅对第二个表达式成功进行分析，并且呈现正确的页码。  
   
--   **复杂表达式：**  表达式为 `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
+-   复杂表达式：  表达式为 `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
   
--   **具有文本运行的表达式：** 文本 **Average Sales**和表达式  `=Avg(Fields!YTDPurchase.Value, "Sales)`，以及文本 **Page Number**和表达式 `=Globals!PageNumber`  
+-   具有文本运行的表达式：  文本 Average Sales 和表达式 `=Avg(Fields!YTDPurchase.Value, "Sales)` 以及文本 Page Number 和表达式 `=Globals!PageNumber`    
   
  若要避免此问题，在表头和表尾中使用表达式时，请使用多文本运行，而非一个复杂表达式。 下面两个表达式是等效的。 第一个表达式是复杂表达式，第二个表达式使用文本运行。 Word 呈现器仅成功分析第二个表达式。  
   
@@ -151,7 +151,7 @@ ms.locfileid: "66413562"
 > [!IMPORTANT]  
 >  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 (.doc) 呈现扩展插件不推荐使用。 有关详细信息，请参阅 [SQL Server 2016 的 SQL Server Reporting Services 中不推荐使用的功能](~/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)。  
   
- 如果安装了针对 Word、Excel 和 PowerPoint 的 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office 兼容包，Word 呈现器将与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2003 兼容。 有关详细信息，请参阅 [用于 Word、Excel 和 PowerPoint 的 Microsoft Office 兼容包](https://www.microsoft.com/download/details.aspx?id=12439)。  
+ 如果安装了针对 Word、Excel 和 PowerPoint 的 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office 兼容包，Word 呈现器将与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2003 兼容。 有关详细信息，请参阅 [用于 Word、Excel 和 PowerPoint 的 Microsoft Office 兼容包](https://www.microsoft.com/download/details.aspx?id=1285)。
   
  与 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 兼容的以前版本的 Word 呈现扩展插件已重命名为 Word 2003。 默认情况下，只提供 Word 呈现扩展插件。 您必须更新 Reporting Services 配置文件，才能使用 Word 2003 呈现扩展插件。 Word 2003 呈现器生成的文件的内容类型为 **application/vnd.ms-word** ，并且文件的文件扩展名为 .doc。  
   

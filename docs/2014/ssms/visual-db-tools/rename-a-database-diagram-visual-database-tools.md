@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8f177f8b2c399be020817ccc4228c58f11976512
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63228366"
 ---
 # <a name="rename-a-database-diagram-visual-database-tools"></a>重命名数据库关系图 (Visual Database Tools)
@@ -39,7 +39,7 @@ ms.locfileid: "63228366"
   
      该数据库关系图随即以新名称显示在对象资源管理器中。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用数据库关系图 (Visual Database Tools)](visual-database-tools.md)  
   
   

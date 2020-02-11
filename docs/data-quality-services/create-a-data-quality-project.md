@@ -15,10 +15,10 @@ ms.assetid: 19c52d2b-d28e-4449-ab59-5fe0dc326cd9
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 99b869f153e6dacac799f8630283dbaf8d27660b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245490"
 ---
 # <a name="create-a-data-quality-project"></a>创建数据质量项目
@@ -27,14 +27,14 @@ ms.locfileid: "75245490"
 
   本主题介绍如何使用 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]创建数据质量项目。 数据质量项目用于在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中运行清理或匹配活动。  
   
-##  <a name="BeforeYouBegin"></a>开始之前  
+##  <a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Prerequisites"></a>先决条件  
  对于清理或匹配活动，您必须具有要在数据质量项目中使用的相关知识库。  
   
-###  <a name="Security"></a>安全  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>访问  
+####  <a name="Permissions"></a> 权限  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_kb_operator 角色才能创建数据质量项目。  
   
 ##  <a name="Create"></a>创建数据质量项目  

@@ -14,10 +14,10 @@ ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 3a50b48b4c498020b3428af2eca2c9d045187682
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251787"
 ---
 # <a name="create-a-matching-policy"></a>创建匹配策略
@@ -28,14 +28,14 @@ ms.locfileid: "75251787"
   
  创建匹配规则分为三个阶段：一个映射过程，您可以在其中确定数据源并将域映射到列；一个匹配策略过程，您可以在其中创建一个或多个匹配规则并单独测试每个匹配规则；以及一个匹配结果过程，您可以在其中一起运行所有匹配规则；如果您对结果感到满意，则将该策略添加到知识库。 将在“匹配策略”活动向导的单独页面上执行上述每个过程，这使您可以在不同页面之间来回移动，重新运行过程，并结束特定的匹配策略过程和返回到过程的相同阶段。 在一起测试所有规则之后，如果需要，您可以返回到 **“匹配策略”** 页，调整单个规则，再次单独测试此规则，然后返回到 **“匹配结果”** 页面以再次同时运行所有规则。 DQS 向您提供有关源数据、匹配规则和匹配结果的统计信息，使您能够针对匹配策略制定明智的决策，从而优化此策略。  
   
-##  <a name="BeforeYouBegin"></a>开始之前  
+##  <a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Prerequisites"></a>先决条件  
  如果源数据在 Excel 文件中，则必须在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 计算机上安装 Microsoft Excel。 否则，您在映射阶段中将无法选择 Excel 文件。 由 Microsoft Excel 创建的文件可以具有 .xlsx、.xls 或 .csv 扩展名。 如果使用 64 位版本的 Excel，则仅支持 Excel 2003 文件 (.xls)；而不支持 Excel 2007 或 2010 文件 (.xlsx)。 如果您使用的是 64 位版本的 Excel 2007 或 2010，则将文件另存为 .xls 文件或 .csv 文件，或者改而安装 32 位版本的 Excel。  
   
-###  <a name="Security"></a>安全  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>访问  
+####  <a name="Permissions"></a> 权限  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_administrator 角色，才能创建匹配策略。  
   
 ##  <a name="MatchingRules"></a>如何设置匹配规则参数  
@@ -62,7 +62,7 @@ ms.locfileid: "75251787"
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中，单击 **“新建知识库”** 以便在新知识库中创建匹配策略。 为知识库输入名称，输入描述，并根据需要设置 **“创建知识库自”** 。 单击活动的 **“匹配策略”** 。 单击 **“下一步”** 继续。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中，单击 **“新建知识库”** 以便在新知识库中创建匹配策略。 为知识库输入名称，输入描述，并根据需要设置 **“创建知识库自”** 。 单击活动的 **“匹配策略”** 。 单击“下一步”继续。   
   
 3.  单击 **“打开知识库”** 以便在现有知识库中创建或修改匹配策略。 选择知识库，选择 **“匹配策略”**，然后单击 **“下一步”**。 还可以单击 **“最近的知识库”** 下的某个知识库。 如果您打开当正在处理匹配策略时关闭的知识库，您将进入关闭匹配策略活动时所在的阶段（由知识库表中或 **“最近的知识库”** 下知识库名称中的 **“状态”** 列所指示）。 如果您打开包括匹配策略且已完成的知识库，则将进入 **“匹配策略”** 页。 如果您打开不包括匹配策略但已完成的知识库，则将进入 **“映射”** 页。  
   

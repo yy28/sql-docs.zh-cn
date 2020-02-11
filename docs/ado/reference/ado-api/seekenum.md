@@ -16,28 +16,28 @@ ms.assetid: f0ec0c92-8253-47c6-9a14-e5dbccbad219
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 886825b4d32354572a5162487add419b00ec35d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931066"
 ---
 # <a name="seekenum"></a>SeekEnum
-指定的类型[Seek](../../../ado/reference/ado-api/seek-method.md)执行。  
+指定要执行的[搜索](../../../ado/reference/ado-api/seek-method.md)的类型。  
   
-|常量|值|描述|  
+|一直|值|说明|  
 |--------------|-----------|-----------------|  
-|**adSeekFirstEQ**|1|查找与相等的第一个键*架构*。|  
-|**adSeekLastEQ**|2|查找等于的最后一个键*架构*。|  
-|**adSeekAfterEQ**|4|查找密钥等于*架构*或紧随其后将具有匹配的发生位置。|  
-|**adSeekAfter**|8|紧靠在何处查找键的匹配*架构*本来将要发生。|  
-|**adSeekBeforeEQ**|16|查找密钥等于*架构*或之前将具有匹配的发生位置。|  
-|**adSeekBefore**|32|之前查找密钥，其中使用的匹配*架构*本来将要发生。|  
+|**adSeekFirstEQ**|1|查找等于*架构*的第一个键。|  
+|**adSeekLastEQ**|2|查找等于*架构*的最后一个键。|  
+|**adSeekAfterEQ**|4|查找等效于*架构*的键，或只查找在匹配项发生的位置。|  
+|**adSeekAfter**|8|在出现与*架构*的匹配的位置之前查找密钥。|  
+|**adSeekBeforeEQ**|16|查找等于*架构*的键，或刚好早于匹配的位置。|  
+|**adSeekBefore**|32|在出现与*架构*匹配的位置之前查找密钥。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
- 包： **com.ms.wfc.data**  
+ Package： **.com. 数据**  
   
-|常量|  
+|一直|  
 |--------------|  
 |AdoEnums.Seek.FIRSTEQ|  
 |AdoEnums.Seek.LASTEQ|  
@@ -46,5 +46,5 @@ ms.locfileid: "67931066"
 |AdoEnums.Seek.BEFOREEQ|  
 |AdoEnums.Seek.BEFORE|  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [Seek 方法](../../../ado/reference/ado-api/seek-method.md)

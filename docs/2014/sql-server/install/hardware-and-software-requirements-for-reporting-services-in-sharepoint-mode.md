@@ -11,23 +11,23 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 56ddfce4fc1812e99870c22eeb0e15be64c5decb
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245626"
 ---
 # <a name="hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode"></a>SharePoint 模式下的 Reporting Services 的硬件和软件要求
 
   本主题介绍在 SharePoint 模式下运行的[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]先决条件、硬件要求和安装注意事项。 因为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式需要 SharePoint 服务器，大多数要求均基于 SharePoint 环境。 对于本机模式的报表服务器，您的硬件应满足运行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的最低硬件和软件要求。 有关详细信息，请参阅 [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)。  
   
--   [必备条件](#bkmk_prereq)  
+-   [先决条件](#bkmk_prereq)  
   
 -   [报表服务器数据库要求](#bkmk_report_server_database)  
   
 -   [Power View 要求](#bkmk_powerview)  
   
--   [详细信息](#bkmk_more_information)  
+-   [更多信息](#bkmk_more_information)  
   
 ##  <a name="bkmk_prereq"></a>先决条件  
   
@@ -66,7 +66,7 @@ ms.locfileid: "75245626"
 
  查看 Office.Microsoft.com 上的最新 [Power View 文档](https://office.microsoft.com/excel-help/power-view-explore-visualize-and-present-your-data-HA102835634.aspx) 。 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]是 Microsoft Excel 2013 的一项功能，是 Microsoft SharePoint Server 2010 和[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 2013 Enterprise edition Reporting Services 外接程序的一部分。  
   
-##  <a name="bkmk_more_information"></a>详细信息
+##  <a name="bkmk_more_information"></a> 详细信息
 
  有关 SharePoint 更改的信息，请参阅[从 sharepoint 2010 到 sharepoint 2013 的更改](https://technet.microsoft.com/library/ff607742\(office.15\).aspx)（https://technet.microsoft.com/library/ff607742(office.15).aspx)。  
   

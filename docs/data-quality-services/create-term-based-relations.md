@@ -12,10 +12,10 @@ ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: a982279e06a1968cf80335cd16dd9eb74e458c3e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251780"
 ---
 # <a name="create-term-based-relations"></a>创建基于字词的关系
@@ -52,14 +52,14 @@ ms.locfileid: "75251780"
   
  如果您将在清理过程中收集的数据质量知识导入到域中，TBR 所更改的值将作为正确值导入。  
   
-##  <a name="BeforeYouBegin"></a>开始之前  
+##  <a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Prerequisites"></a>先决条件  
  若要创建基于字词的关系，您必须具有在域管理活动中打开的知识库。  
   
-###  <a name="Security"></a>安全  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>访问  
+####  <a name="Permissions"></a> 权限  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_administrator 角色，才能创建基于字词的关系。  
   
 ##  <a name="Create"></a>创建基于字词的关系  

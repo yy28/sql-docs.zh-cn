@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 50d1eb4d7a6070572e674f5ee7f8794837e63aa1
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75225258"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>增强的日期和时间类型的大容量复制更改（OLE DB 和 ODBC）
@@ -113,15 +113,15 @@ ms.locfileid: "75225258"
 |转换后 -><br /><br /> 从|date|time|smalldatetime|datetime|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
 |Date|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
-|时间|N/A|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
+|时间|空值|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
 |Smalldatetime|1,2|1,4,10|1|1|1,10|1,5,10|1,11|1,11|  
 |Datetime|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
 |Datetime2|1,2|1,4,10|1,10 (ODBC)1,12 (OLE DB)|1,10|1,10|1,5,10|1,3|1,3|  
 |Datetimeoffset|1,2,8|1,4,8,10|1,8,10|1,8,10|1,8,10|1,10|1,3|1,3|  
-|Char/wchar (date)|9|-|9,6 (ODBC)9,6,12 (OLE DB)|9,6 (ODBC)9,6,12 (OLE DB)|9,6|9,5,6|N/A|N/A|  
-|Char/wchar (time)|-|9,10|9,7,10 (ODBC)9,7,10,12 (OLE DB)|9,7,10 (ODBC)9,7,10, 12 (OLE DB)|9,7,10|9,5,7,10|N/A|N/A|  
-|Char/wchar (datetime)|9,2|9,4,10|9,10 (ODBC)9,10,12 (OLE DB)|9,10 (ODBC)9,10,12 (OLE DB)|9,10|9,5,10|N/A|N/A|  
-|Char/wchar (datetimeoffset)|9,2,8|9,4,8,10|9,8,10 (ODBC)9,8,10,12 (OLE DB)|9,8,10 (ODBC)9,8,10,12 (OLE DB)|9,8,10|9,10|N/A|N/A|  
+|Char/wchar (date)|9|-|9,6 (ODBC)9,6,12 (OLE DB)|9,6 (ODBC)9,6,12 (OLE DB)|9,6|9,5,6|空值|空值|  
+|Char/wchar (time)|-|9,10|9,7,10 (ODBC)9,7,10,12 (OLE DB)|9,7,10 (ODBC)9,7,10, 12 (OLE DB)|9,7,10|9,5,7,10|空值|空值|  
+|Char/wchar (datetime)|9,2|9,4,10|9,10 (ODBC)9,10,12 (OLE DB)|9,10 (ODBC)9,10,12 (OLE DB)|9,10|9,5,10|空值|空值|  
+|Char/wchar (datetimeoffset)|9,2,8|9,4,8,10|9,8,10 (ODBC)9,8,10,12 (OLE DB)|9,8,10 (ODBC)9,8,10,12 (OLE DB)|9,8,10|9,10|空值|空值|  
 ||||||||||
 
 #### <a name="key-to-symbols"></a>符号含义  
@@ -141,7 +141,7 @@ ms.locfileid: "75225258"
 |10|如果在客户端到服务器转换时发生具有数据丢失的截断，则发出错误 (OLE DB)，或者生成 ODBC 诊断记录，同时还生成 SQLSTATE 22008 和消息“日期时间字段溢出”。 如果值处于服务器使用的 UTC 范围可表示的范围外，也会发生此错误。 如果在服务器到客户端转换时发生秒或秒的小数部分截断，则只会显示警告。|  
 |11|如果发生具有数据丢失的截断，则生成诊断记录。<br /><br /> 在服务器到客户端转换时，这是警告 (ODBC SQLSTATE S1000)。<br /><br /> 在客户端到服务器转换时，这是错误 (ODBC SQLSTATE 22001)。|  
 |12|秒设置为零，秒的小数部分被放弃。 可能没有截断错误。|  
-|N/A|现有 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更早版本的行为将保持。|  
+|空值|现有 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更早版本的行为将保持。|  
 |||
 
 ## <a name="see-also"></a>另请参阅  

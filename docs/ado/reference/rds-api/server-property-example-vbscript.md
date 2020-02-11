@@ -1,5 +1,5 @@
 ---
-title: 服务器属性示例 (VBScript) |Microsoft Docs
+title: 服务器属性示例（VBScript） |Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,17 +15,17 @@ ms.assetid: 0fe57af9-a4d0-4986-a2e3-beaa4d26ed58
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 661734c710cbc4aa8823965e22559c519e793d41
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963489"
 ---
 # <a name="server-property-example-vbscript"></a>Server 属性示例 (VBScript)
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 下面的代码演示如何设置[rds。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)参数在设计时间，并将其绑定到数据识别控件使用 SQLOLEDB 访问接口。 剪切和粘贴到正常的 ASP 文档的此代码并将其命名**ServerDesignVBS.asp**。 ASP 脚本将识别您的服务器。  
+ 下面的代码演示如何设置[RDS。](../../../ado/reference/rds-api/datacontrol-object-rds.md)在设计时使用 DataControl 参数，并使用 SQLOLEDB 提供程序将其绑定到数据感知控件。 将此代码剪切并粘贴到普通的 ASP 文档中，然后将其命名为**ServerDesignVBS**。 ASP 脚本将标识您的服务器。  
   
 ```  
 <!-- BeginServerDesignVBS -->  
@@ -89,7 +89,7 @@ body {
 <!-- EndServerDesignVBS -->  
 ```  
   
- 下面的示例演示如何设置所需的参数的**rds。DataControl**在运行时。 若要测试此示例中，剪切并粘贴到正常的 ASP 文档的此代码并将其命名**ServerRuntimeVBS.asp**。 ASP 脚本将识别您的服务器。  
+ 下面的示例演示如何设置 RDS 的必需参数 **。** 在运行时 DataControl。 若要测试此示例，请将此代码剪切并粘贴到普通的 ASP 文档中，然后将其命名为**ServerRuntimeVBS**。 ASP 脚本将标识您的服务器。  
   
 ```  
 <!-- BeginServerRuntimeVBS -->  
@@ -176,8 +176,8 @@ End Sub
 <!-- EndServerRuntimeVBS -->  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
+## <a name="see-also"></a>另请参阅  
+ [DataControl 对象（RDS）](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Server 属性 (RDS)](../../../ado/reference/rds-api/server-property-rds.md)
 
 

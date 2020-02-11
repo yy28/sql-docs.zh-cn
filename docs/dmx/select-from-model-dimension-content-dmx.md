@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM&lt;模型&gt;。DIMENSION_CONTENT (DMX) |Microsoft Docs
+title: 选择 " &lt;从&gt;模型"。DIMENSION_CONTENT （DMX） |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7fac89454cd31c1334e41d4c2367143f31476e20
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67928360"
 ---
-# <a name="select-from-ltmodelgtdimensioncontent-dmx"></a>SELECT FROM&lt;模型&gt;。DIMENSION_CONTENT (DMX)
+# <a name="select-from-ltmodelgtdimension_content-dmx"></a>选择 " &lt;从&gt;模型"。DIMENSION_CONTENT （DMX）
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  挖掘模型可用作 OLAP 多维数据集中的一个维度，模型中的每个节点表示一个维度成员。 **SELECT FROM\<模型 >。Dimension_CONTENT**语句可以返回模型中的维度用法相关的内容。  
+  挖掘模型可用作 OLAP 多维数据集中的一个维度，模型中的每个节点表示一个维度成员。 **从模型中\<选择>。Dimension_CONTENT**语句以维度形式返回与其使用情况有关的模型的内容。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,7 +42,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.Dimension_CONTENT
  *条件表达式*  
  可选。 一个限制条件，用于限制从列列表返回的值。  
   
- *expression*  
+ *表达式*  
  可选。 一个返回标量值的表达式。  
   
 ## <a name="remarks"></a>备注  
@@ -56,9 +56,9 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.Dimension_CONTENT
 |NODE_NAME|成员属性。|  
 |NODE_UNIQUE_NAME|键属性。|  
 |NODE_TYPE|成员属性。|  
-|NODE_CAPTION|有关 CaptionColumn**密钥**属性。|  
+|NODE_CAPTION|**键**属性的 CaptionColumn。|  
 |CHILDREN_CARDINALITY|成员属性。|  
-|PARENT_UNIQUE_NAME|有关 RelatedAttribute**密钥**属性 (父-子层次结构中的 ParentAttribute)。|  
+|PARENT_UNIQUE_NAME|**键**属性的 RelatedAttribute （在父子层次结构中为 ParentAttribute）。|  
 |NODE_DESCRIPTION|成员属性。|  
 |NODE_RULE|成员属性。|  
 |MARGINAL_RULE|成员属性。|  
@@ -68,7 +68,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.Dimension_CONTENT
   
 ## <a name="examples"></a>示例  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>说明  
  该示例从 `[TM Decision Tree]` 模型内容中选择了所有列，这些模型内容与用作维度的模型相关。  
   
 ### <a name="code"></a>代码  
@@ -78,10 +78,10 @@ SELECT *
 FROM [TM Decision Tree].Dimension_Content  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
- [数据挖掘扩展插件&#40;DMX&#41;数据定义语句](../dmx/dmx-statements-data-definition.md)   
- [数据挖掘扩展插件&#40;DMX&#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
- [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
+## <a name="see-also"></a>另请参阅  
+ [选择 &#40;DMX&#41;](../dmx/select-dmx.md)   
+ [数据挖掘扩展插件 &#40;DMX&#41; 数据定义语句](../dmx/dmx-statements-data-definition.md)   
+ [数据挖掘扩展插件 &#40;DMX&#41; 数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
+ [数据挖掘扩展插件 &#40;DMX&#41; 语句参考](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

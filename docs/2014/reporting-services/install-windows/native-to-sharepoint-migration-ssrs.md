@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: adf6b91b1c83f490ffe6c85fecd374fca7c1a085
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75253176"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>本机到 SharePoint 迁移 (SSRS)
@@ -22,17 +22,17 @@ ms.locfileid: "75253176"
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]本机模式 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式  
   
-##  <a name="bkmk_native_to_sharepoint"></a>Reporting Services 迁移工具  
+##  <a name="bkmk_native_to_sharepoint"></a> Reporting Services 迁移工具  
  此工具支持将内容从本机模式部署迁移到 SharePoint 模式部署。 此工具不支持从 SharePoint 模式迁移到 SharePoint 模式或从 SharePoint 模式迁移到本机模式。  
   
- 有关详细信息，请参阅[Reporting Services 迁移工具](https://www.microsoft.com/download/details.aspx?id=29560)（https://www.microsoft.com/download/details.aspx?id=29560)。  
+ 有关详细信息，请参阅 [Reporting Services 迁移工具](https://www.microsoft.com/download/details.aspx?id=29560) (https://www.microsoft.com/download/details.aspx?id=29560) 。  
   
 ## <a name="use-script-to-migrate-content"></a>使用脚本迁移内容  
  如果迁移工具不满足您的要求，您可以手动迁移报表服务器数据。 下面概述了要将报表项从一个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署迁移到另一个时所需完成的步骤。 此方法支持将本机或 SharePoint 模式作为源或目标服务器。  
   
 1.  备份和还原加密密钥。 这是用于加密数据的密钥。 加密密钥还用于对密码进行加密，例如为数据源连接存储的密码。 但是，不能迁移密码，并且您将需要在目标环境中重新输入这些密码。  
   
-2.  ** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS 脚本：** 编写调用报表服务器 Web 服务 SOAP 方法的 Visual Basic 脚本以在数据库之间复制数据。 使用 **RS.exe** 实用工具运行此脚本。 Rs.exe 随 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]一起安装。  
+2.  **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS 脚本：** 编写调用报表服务器 Web 服务 SOAP 方法的 Visual Basic 脚本，以便在各数据库之间复制数据。 使用 **RS.exe** 实用工具运行此脚本。 Rs.exe 随 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]一起安装。  
   
     -   [Reporting Services 用于在报表服务器之间迁移内容的 rs .Exe 脚本的示例](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。 以下主题说明如何使用可从 CodePlex 下载的示例脚本。  
   
@@ -42,9 +42,9 @@ ms.locfileid: "75253176"
   
  下表概述了可以使用脚本迁移的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 对象：  
   
-|对象|是否可编写脚本|说明|  
+|Object|是否可编写脚本|注释|  
 |------------|---------------------|--------------|  
-|报告|是|在迁移后，重新为数据源输入密码。|  
+|报表|是|在迁移后，重新为数据源输入密码。|  
 |Datasources|是|在迁移后，重新将报表链接到数据源。|  
 |Models|是||  
 |数据集|是||  

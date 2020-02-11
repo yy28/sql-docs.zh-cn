@@ -32,10 +32,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: eb307599c48c72697f696e78eb7ed988dc03ca37
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75252644"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlcommand-object"></a>SQLXML 托管类 - SqlXmlCommand 对象
@@ -75,7 +75,7 @@ public SqlXmlCommand(string cnString)
  void ClearParameters （）  
  清除为给定命令对象创建的参数。 如果您想要对同一命令对象执行多个查询，则此方法很有用。  
   
-## <a name="properties"></a>“属性”  
+## <a name="properties"></a>属性  
  SqlXmlCommand 对象还支持以下属性：  
   
  ClientSideXml  

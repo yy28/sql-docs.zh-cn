@@ -21,10 +21,10 @@ author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
 ms.openlocfilehash: ae34c89fd570921bec26d8a11537c58b6bba2302
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75247307"
 ---
 # <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys. dm_resource_governor_resource_pools_history_ex （Transact-sql）

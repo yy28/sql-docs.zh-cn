@@ -13,10 +13,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: 17c1e63789e9c2069d8fdecd8bd62b64bf8a886d
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244660"
 ---
 # <a name="create-a-central-management-server-and-server-group-sql-server-management-studio"></a>创建中央管理服务器和服务器组 (SQL Server Management Studio)
@@ -25,26 +25,26 @@ ms.locfileid: "75244660"
 > [!NOTE]  
 >  不能将早于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 指定为中央管理服务器。  
   
- **本主题中的**  
+ **本主题内容**  
   
 -   **开始之前：**  
   
-     [安全](#Security)  
+     [安全性](#Security)  
   
 -   **若要创建中央管理服务器和服务器组，请使用：**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a>开始之前  
+##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a>安全  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>访问  
+####  <a name="Permissions"></a> 权限  
  msdb 数据库中有两个数据库角色可授予对中央管理服务器的访问权限。 只有 ServerGroupAdministratorRole 角色的成员能够管理中央管理服务器。 若要连接到中央管理服务器，需要具有 ServerGroupReaderRole 角色的成员身份。  
   
  由于中央管理服务器维护的连接是在用户的上下文中使用 Windows 身份验证执行的，因此对注册的服务器的有效权限可能有所不同。 例如，用户可能是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A 实例上 sysadmin 固定服务器角色的成员，但仅具有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] B 实例的有限权限。  
   
-##  <a name="SSMSProcedure"></a>使用 SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  下面的过程说明如何执行以下步骤。  
   
 1.  创建中央管理服务器。  
@@ -53,7 +53,7 @@ ms.locfileid: "75244660"
   
 #### <a name="create-a-central-management-server"></a>创建中央管理服务器  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的 **“视图”** 菜单上，单击 **“已注册的服务器”**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的 **“视图”** 菜单上，单击 **“已注册的服务器”** 。  
   
 2.  在“已注册的服务器”中，展开“数据库引擎”****，右键单击“中央管理服务器”****，然后单击“注册中央管理服务器”****。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "75244660"
   
 6.  单击 **“测试”**，对连接进行测试。  
   
-7.  单击**保存**。 
+7.  单击“保存”  。 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例将出现在 **“中央管理服务器”** 文件夹下。  
   
 #### <a name="create-a-new-server-group-and-add-servers-to-the-group"></a>创建新服务器组并向该组添加服务器  

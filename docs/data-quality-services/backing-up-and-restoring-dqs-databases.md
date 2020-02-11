@@ -10,10 +10,10 @@ ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 94b2529323e5a075b6fd423fd8c69ece7a0535c0
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75258849"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>备份和还原 DQS 数据库
@@ -22,7 +22,7 @@ ms.locfileid: "75258849"
 
   本主题说明如何备份和还原 DQS 数据库。  
   
-##  <a name="BeforeYouBegin"></a>开始之前  
+##  <a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Prerequisites"></a>先决条件  
   
@@ -32,9 +32,9 @@ ms.locfileid: "75258849"
   
 -   确保没有用户已登录 DQS 服务器。  
   
-###  <a name="Security"></a>安全  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>访问  
+####  <a name="Permissions"></a> 权限  
   
 -   您的 Windows 用户帐户必须为 SQL Server 实例中 sysadmin 固定服务器角色的成员，才能执行备份和还原操作。  
   
@@ -75,6 +75,6 @@ ms.locfileid: "75258849"
 12. 按 F5 执行这些语句。 检查 **“结果”** 窗格以验证是否已成功执行这些语句。  
   
 ## <a name="see-also"></a>另请参阅  
- [管理 DQS 数据库](../data-quality-services/manage-dqs-databases.md)  
+ [Manage DQS Databases](../data-quality-services/manage-dqs-databases.md)  
   
   

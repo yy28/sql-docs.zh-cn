@@ -1,25 +1,26 @@
 ---
-title: 如何：调试存储过程 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 调试存储过程
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL.DATA.TOOLS.EXECUTESTOREDPROCEDURE.DIALOG
 ms.assetid: e3c8707f-0f6b-4265-8a5a-81f079330b52
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3f1cc7e8213f9282680f652512fe78c7bc5e8b44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: efd64369a6a8e666d67f2c277df62dc9af9c4e99
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929628"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241444"
 ---
 # <a name="how-to-debug-stored-procedures"></a>如何：调试存储过程
+
 使用 Transact\-SQL 调试器，你可以通过为 SQL 存储过程显示 SQL 调用堆栈、局部变量和参数，以交互方式调试存储过程。 与其他编程语言中的调试一样，你可以在调试 Transact\-SQL 脚本的同时查看和修改局部变量和参数、查看全局变量以及控制和管理断点。  
   
 本示例说明如何通过单步执行创建和调试 Transact\-SQL 存储过程。  

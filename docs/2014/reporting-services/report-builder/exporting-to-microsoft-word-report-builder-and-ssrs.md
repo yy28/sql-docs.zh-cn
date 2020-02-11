@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a2808ff3bb6cfab084854a8d9cd7cf5511dfd0fc
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244504"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>导出到 Microsoft Word（报表生成器和 SSRS）
@@ -42,7 +42,7 @@ ms.locfileid: "75244504"
   
  Word 中不呈现新闻报道样式的列报表。 不呈现表体及页背景图像和颜色。  
   
-##  <a name="Pagination"></a>分页  
+##  <a name="Pagination"></a> 分页  
  在 Word 中打开报表后，Word 将根据页大小再次对整个报表重新进行分页。 重新分页可能导致在您不想添加分页符的位置插入分页符，在某些情况下，可能使导出的报表在一行中有两个连续的分页符或者添加空页。 您可以调整页边距来尝试更改 Word 的分页情况。  
   
  此呈现器仅支持逻辑分页符。  
@@ -62,7 +62,7 @@ ms.locfileid: "75244504"
 |-------------------------------|-----------------|  
 |Report Title (report title)|标题|  
 |Report.Author|作者|  
-|Report.Description|说明|  
+|Report.Description|注释|  
   
 ##  <a name="ReportHeadersFooters"></a>页眉和页脚  
  页眉和页脚在 Word 中作为页眉和页脚区域呈现。 如果报表页码或者指示报表总页数的表达式出现在页眉或页脚，则它们将转化为 Word 域，以便在呈现的报表中显示准确的页码。 如果报表中设置了表头或表尾高度，则 Word 无法支持此设置。 在某些情况下，PrintOnFirstPage 属性可指定页眉和页脚中的文本是否打印在报表的第一页上。 如果呈现的报表具有多页并且每一页都仅包含单个部分，则可以将 PrintOnFirstPage 设置为 False，并且文本将不会显示在第一页上；否则，无论 PrintOnFirstPage 属性的值如何，都将打印文本。  
@@ -83,7 +83,7 @@ ms.locfileid: "75244504"
   
  若要避免此问题，在表头和表尾中使用表达式时，请使用多文本运行，而非一个复杂表达式。 下面两个表达式是等效的。 第一个表达式是复杂表达式，第二个表达式使用文本运行。 Word 呈现器仅成功分析第二个表达式。  
   
-##  <a name="Interactivity"></a>互动  
+##  <a name="Interactivity"></a> 交互  
  Word 中支持一些交互元素。 下面是对一些特定行为的说明。  
   
 ### <a name="show-and-hide"></a>显示和隐藏  
@@ -188,13 +188,13 @@ ms.locfileid: "75244504"
 ##  <a name="Differences"></a>Word 和 Word 2003 呈现器之间的差异  
  使用 Word 呈现器或 Word 2003 呈现器呈现的报表往往从外观上无法区分。 但是，您可以在 Word 或 Word 2003 格式之间注意到这两者之间的细微差异。  
   
-##  <a name="DeviceInfo"></a>设备信息设置  
+##  <a name="DeviceInfo"></a> 设备信息设置  
  通过更改设备信息设置，可以更改此呈现器的某些默认设置，例如忽略超链接和钻取链接，或者展开可以切换的所有项（不管报表呈现时该项的原始状态如何）。 有关详细信息，请参阅 [Word Device Information Settings](../word-device-information-settings.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [Reporting Services &#40;报表生成器和 SSRS 中的分页&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [呈现行为 &#40;报表生成器和 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [不同报表呈现扩展插件的交互功能 &#40;报表生成器和 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
- [&#40;报表生成器和 SSRS 呈现报表项&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [表、矩阵和列表 &#40;报表生成器和 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
+ [Reporting Services 中的分页（报表生成器和 SSRS）](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [呈现行为（报表生成器和 SSRS）](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）](interactive-functionality-different-report-rendering-extensions.md)   
+ [呈现报表项（报表生成器和 SSRS）](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [表、矩阵和列表（报表生成器和 SSRS）](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

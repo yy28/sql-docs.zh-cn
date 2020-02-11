@@ -17,10 +17,10 @@ ms.assetid: 7947a788-3fd7-469f-84db-b03ba89a153c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6c5c3c2573465072de0d1f0a7c08d47df5d387b6
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75321795"
 ---
 # <a name="sp_mschange_snapshot_agent_properties-transact-sql"></a>sp_MSchange_snapshot_agent_properties (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "75321795"
 
   更改在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或更高版本的分发服务器上运行的快照代理作业的属性。 当发布服务器在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 实例上运行时，可使用此存储过程更改属性。 此存储过程在分发服务器上对分发数据库执行。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [transact-sql 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -67,8 +67,8 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
   
 |值|说明|  
 |-----------|-----------------|  
-|**2**|一次|  
-|**pps-2**|按需|  
+|**1**|一次|  
+|**2**|按需|  
 |**4**|每天一次|  
 |**8**|每周|  
 |**万**|每月|  
@@ -81,10 +81,10 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
   
 |值|说明|  
 |-----------|-----------------|  
-|**2**|一次|  
-|**pps-2**|秒|  
+|**1**|一次|  
+|**2**|秒|  
 |**4**|分钟|  
-|**8**|小时|  
+|**8**|Hour|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*的间隔。 *frequency_subday_interval*为**int**，没有默认值。  
   

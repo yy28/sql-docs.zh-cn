@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: ef953aa369e831e47d38db403b982919bd4bd830
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: e0f81a49af551836881ca71b49ff6a15d22a9897
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056547"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76162618"
 ---
-# <a name="best-practices-for-running-data-migration-assistant"></a>运行数据迁移助手的最佳实践
+# <a name="best-practices-for-running-data-migration-assistant"></a>运行数据迁移助手的最佳做法
 本文提供了有关安装、评估和迁移的一些最佳实践信息。
 
 ## <a name="installation"></a>安装
@@ -41,3 +41,5 @@ ms.locfileid: "74056547"
 - 连接到源服务器和目标服务器时，启用加密连接。 使用 SSL 加密会提高在数据迁移助手和 SQL Server 实例之间跨网络传输的数据的安全性，这在迁移 SQL 登录名时尤为有用。 如果未使用 SSL 加密并且网络遭到攻击者的攻击，则迁移的 SQL 登录名可能会由攻击者动态截获和/或修改。
 
     但是，如果所有访问都具有某项安全 Intranet 配置，则可能不需要使用加密。 启用加密会降低性能，因为加密和解密数据包需要额外的开销。 有关详细信息，请参阅 [加密连接 SQL Server](https://go.microsoft.com/fwlink/?linkid=832513)。
+    
+- 在迁移数据之前，检查源数据库和目标数据库上的不受信任的约束。 迁移后，请再次分析目标数据库，以确定是否有任何约束在数据移动过程中不受信任。 根据需要修复不受信任的约束。 使约束不受信任可能会导致执行计划不佳，并且可能会影响性能。

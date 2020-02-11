@@ -1,5 +1,5 @@
 ---
-title: ADO Java 类包装器 |Microsoft Docs
+title: ADO Java 类包装 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,14 +13,14 @@ ms.assetid: 1fc09dc1-9e32-412e-9f43-b8eb8bb483ca
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 70486a27cfbe5c977d371906da89563059685093
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67927009"
 ---
 # <a name="ado-java-class-wrappers"></a>ADO Java 类包装器
-此代码声明了 ADO 的实例[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)类包装器，并初始化它，所有内容位于相同的代码行。 此外，为每个中的参数声明的变量[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法，尤其是对于[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)并[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) （由于 Java 不支持枚举类型）。 它打开和关闭**记录集**对象。 只设置为 NULL 的 Rs1 计划 Java 执行系统和间歇性发布的未使用的对象时释放该变量。  
+此代码声明了 ADO[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)类包装的实例，并将其初始化，所有代码都在相同的代码行中。 此外，它还声明[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法中每个参数的变量，尤其是对于[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)和[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) （因为 Java 不支持枚举类型）。 它将打开并关闭**Recordset**对象。 将 Rs1 设置为 NULL 仅计划在 Java 对未使用的对象执行其系统化和间歇性释放时要释放的变量。  
   
 ```java
 public static void main( String args[])  
@@ -40,5 +40,5 @@ public static void main( String args[])
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用 Java 适用的 Microsoft SDK](../../../ado/guide/appendixes/using-the-microsoft-sdk-for-java.md)

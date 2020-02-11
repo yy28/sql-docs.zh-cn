@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c195d2bba2bacfe5ee05ed423dcc2bea1b7581e5
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75231785"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>向表值参数中插入数据
@@ -71,6 +71,6 @@ ms.locfileid: "75231785"
  在执行时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口将回调行集对象以提取行并读取列数据。  
   
 ## <a name="see-also"></a>另请参阅  
- [表值参数 &#40;OLE DB&#41;](table-valued-parameters-ole-db.md)   
- [使用表值参数 &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+ [表值参数 (OLE DB)](table-valued-parameters-ole-db.md)   
+ [使用表值参数 (OLE DB)](../native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   

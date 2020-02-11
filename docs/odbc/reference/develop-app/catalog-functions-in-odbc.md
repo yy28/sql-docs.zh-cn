@@ -14,32 +14,32 @@ ms.assetid: 4f28f557-7eca-4905-aa6d-45a6cf501a66
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a8cd46fbc8f633ef31f00fa60ced885f9455f185
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68062731"
 ---
 # <a name="catalog-functions-in-odbc"></a>ODBC 中的目录函数
 ODBC 包含以下目录函数：  
   
-|函数|描述|  
+|函数|说明|  
 |--------------|-----------------|  
-|**SQLTables**|返回数据源中的目录、 架构、 表或表类型的列表。|  
-|**SQLColumns**|一个或多个表中返回的列的列表。|  
-|**SQLStatistics**|返回有关单个表的统计信息的列表。 也会返回一系列与该表相关联的索引。|  
-|**SQLSpecialColumns**|返回唯一标识单个表中的行的列的列表。 此外会自动更新此表中返回的列的列表。|  
-|**SQLPrimaryKeys**|返回构成单个表的主键列的列表。|  
-|**SQLForeignKeys**|在单个表或单个表引用其他表中的外键的列表中返回外键的列表。|  
-|**SQLTablePrivileges**|返回与一个或多个表关联的特权的列表。|  
-|**SQLColumnPrivileges**|返回一个表中的一个或多个列与关联的特权的列表。|  
-|**SQLProcedures**|返回数据源中的过程的列表。|  
-|**SQLProcedureColumns**|在结果集中的单个过程返回输入和输出参数、 返回值和列的列表。|  
-|**SQLGetTypeInfo**|返回数据源支持的 SQL 数据类型的列表。 在通常使用这些数据类型**CREATE TABLE**并**ALTER TABLE**语句。|  
+|**SQLTables**|返回数据源中的目录、架构、表或表类型的列表。|  
+|**SQLColumns**|返回一个或多个表中的列的列表。|  
+|**SQLStatistics**|返回有关单个表的统计信息列表。 还返回与该表关联的索引列表。|  
+|**SQLSpecialColumns**|返回在单个表中唯一标识行的列的列表。 还返回该表中自动更新的列的列表。|  
+|**SQLPrimaryKeys**|返回构成单个表的主键的列的列表。|  
+|**SQLForeignKeys**|返回单个表中的外键列表，或引用单个表的其他表中的外键列表。|  
+|**SQLTablePrivileges**|返回与一个或多个表关联的特权列表。|  
+|**SQLColumnPrivileges**|返回与一个表中的一个或多个列关联的特权列表。|  
+|**SQLProcedures**|返回数据源中的过程列表。|  
+|**SQLProcedureColumns**|返回单个过程的结果集中的输入和输出参数、返回值和列的列表。|  
+|**SQLGetTypeInfo**|返回数据源支持的 SQL 数据类型的列表。 这些数据类型通常在**CREATE TABLE**和**ALTER TABLE**语句中使用。|  
   
- 因为**SQLTables**， **SQLColumns**， **SQLStatistics**，以及**SQLSpecialColumns**符合开放组 CLI 和**SQLGetTypeInfo**符合 ISO 92 CLI，它们实现大多数驱动程序。 剩余的目录函数是在 ODBC 一致性级别中。  
+ 由于**SQLTables**、 **SQLColumns**、 **SQLStatistics**和**SQLSpecialColumns**符合开放组 CLI，并且**SQLGetTypeInfo**符合 ISO 92 cli，因此它们由大多数驱动程序实现。 其余目录函数为 ODBC 一致性级别。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [目录函数返回的数据](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)  
   

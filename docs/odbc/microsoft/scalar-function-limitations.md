@@ -14,11 +14,11 @@ ms.assetid: 023d94b9-3ed6-46d3-9a66-f2872f505bbb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ea36de05f813fc32a90a855bd0c08d020cf1f9a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67987926"
 ---
 # <a name="scalar-function-limitations"></a>标量函数限制
-只能通过使用 ODBC 规范格式支持标量函数。
+仅使用 ODBC 规范格式支持标量函数。

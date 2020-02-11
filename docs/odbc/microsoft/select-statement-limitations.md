@@ -14,23 +14,23 @@ ms.assetid: c6b05955-f8fd-4706-a1a7-a8dbd74870c2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0cde0158e72d1e24c112c8e7955f0d6b317bd729
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67987859"
 ---
 # <a name="select-statement-limitations"></a>SELECT 语句限制
-SELECT 语句中的非聚合列不能在聚合函数列。  
+不能将聚合函数列与 SELECT 语句中的非聚合列混合使用。  
   
- 中有 GROUP BY 子句的 SELECT 语句的选择列表只能有 GROUP BY 子句中的表达式或 set 函数。  
+ 具有 GROUP BY 子句的 SELECT 语句的选择列表只能包含 GROUP BY 子句中的表达式或 set 函数。  
   
- 不支持使用包含 GROUP BY 子句的 SELECT 语句中的星号 （若要选择所有列）。 必须指定要选择的列的名称。  
+ 不支持在包含 GROUP BY 子句的 SELECT 语句中使用星号（选择所有列）。 必须指定要选择的列的名称。  
   
- 不支持的垂直条 SELECT 语句中使用。 如果您需要引用包含一个垂直条数据值，请在 SELECT 语句中使用参数。  
+ 不支持在 SELECT 语句中使用竖线。 如果需要引用包含竖线的数据值，请在 SELECT 语句中使用参数。  
   
- 当在 SELECT 语句中使用列别名，"为"word 前面必须有别名。 例如，"SELECT col1 作为从 b。" 而无需"为"，该语句将返回错误。  
+ 在 SELECT 语句中使用列别名时，该别名前面必须是 "as"。 例如，"选择 col1 作为 a from b"。 如果没有 "as"，语句将返回错误。  
   
- 如果 SELECT 语句中输入了不正确的列名称，则将返回一个 SQLSTATE 07001 错误，"错误数的参数，"，而不是 SQLSTATE S0022 错误"列找不到。"  
+ 如果在 SELECT 语句中输入了不正确的列名称，则会返回 SQLSTATE 07001 错误，"参数的数目不正确"，而不是 SQLSTATE S0022 错误，"找不到列"。  
   
- 使用 Microsoft Excel 驱动程序时，如果为空字符串插入到的列，则为空字符串转换为 NULL;使用空字符串的 WHERE 子句中执行的搜索选择语句将不会在该列上成功。
+ 使用 Microsoft Excel 驱动程序时，如果插入列中的空字符串，则将空字符串转换为 NULL;使用 WHERE 子句中的空字符串执行的搜索 SELECT 语句对该列不会成功。

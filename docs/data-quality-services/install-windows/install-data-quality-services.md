@@ -10,10 +10,10 @@ ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: b7a9d9ce36a3419883adae9050ffabd0d1f9b012
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75252191"
 ---
 # <a name="install-data-quality-services"></a>安装 Data Quality Services

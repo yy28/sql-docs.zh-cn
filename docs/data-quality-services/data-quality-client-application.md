@@ -10,10 +10,10 @@ ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 4a789386fbbef91590ec025787e47c7655753a3b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251736"
 ---
 # <a name="data-quality-client-application"></a>数据质量客户端应用程序
@@ -32,18 +32,18 @@ ms.locfileid: "75251736"
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|说明如何使用 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序。|[运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)|  
+|说明如何使用 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序。|[运行数据质量客户端应用程序](../data-quality-services/run-the-data-quality-client-application.md)|  
   
 ## <a name="related-content"></a>相关内容  
   
 |内容说明|主题|  
 |-------------------------|-----------|  
 |说明如何使用 DQS 中的知识库和域。|[DQS 知识库和域](../data-quality-services/dqs-knowledge-bases-and-domains.md)|  
-|说明如何在 DQS 中清理数据。|[数据清理](../data-quality-services/data-cleansing.md)|  
+|说明如何在 DQS 中清理数据。|[Data Cleansing](../data-quality-services/data-cleansing.md)|  
 |说明如何在 DQS 中执行匹配。|[数据匹配](../data-quality-services/data-matching.md)|  
-|说明如何管理 DQS。|[DQS 管理](../data-quality-services/dqs-administration.md)|  
+|说明如何管理 DQS。|[dqs 管理](../data-quality-services/dqs-administration.md)|  
   
 ## <a name="see-also"></a>另请参阅  
- [Data Quality Client 主屏幕](../data-quality-services/data-quality-client-home-screen.md)  
+ [数据质量客户端主屏幕](../data-quality-services/data-quality-client-home-screen.md)  
   
   

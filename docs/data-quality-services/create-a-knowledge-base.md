@@ -1,5 +1,5 @@
 ---
-title: Create a Knowledge Base
+title: 创建知识库
 ms.date: 06/04/2013
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -13,26 +13,26 @@ ms.assetid: 2733a284-975f-4650-abcc-cc2aad074cab
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 20421ab3584eac51feb09ba717f293449825574c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75247326"
 ---
-# <a name="create-a-knowledge-base"></a>Create a Knowledge Base
+# <a name="create-a-knowledge-base"></a>创建知识库
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   本主题描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中创建知识库，以及如何准备知识库以用于域管理、知识发现或添加匹配策略。  
   
-##  <a name="BeforeYouBegin"></a>开始之前  
+##  <a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Prerequisites"></a>先决条件  
  要创建知识库，您必须安装有 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 和 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]。  
   
-###  <a name="Security"></a>安全  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>访问  
+####  <a name="Permissions"></a> 权限  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_administrator 角色，才能创建知识库。  
   
 ##  <a name="Createaknowledgebase"></a>创建知识库  

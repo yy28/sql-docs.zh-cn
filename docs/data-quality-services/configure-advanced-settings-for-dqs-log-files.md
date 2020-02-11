@@ -13,10 +13,10 @@ ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: f4c0431afb7d1c2de0fc5e4fae5e7c7c25639002
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75255615"
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>Configure Advanced Settings for DQS Log Files
@@ -28,11 +28,11 @@ ms.locfileid: "75255615"
 > [!NOTE]  
 >  这些活动不能使用 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]执行，并且仅面向高级用户。  
   
-##  <a name="BeforeYouBegin"></a>开始之前  
+##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a>安全  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>访问  
+####  <a name="Permissions"></a> 权限  
   
 -   您的 Windows 用户帐户必须是 SQL Server 实例中 sysadmin 固定服务器角色的成员，才能修改 DQS_MAIN 中 A_CONFIGURATION 表的配置设置。  
   

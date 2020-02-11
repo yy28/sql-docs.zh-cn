@@ -16,16 +16,16 @@ ms.assetid: 23ed7f5e-e945-4c36-9dbc-e0f93b6d23c5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e31d9f93423db572d2759857b11d3f79af56583b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68077084"
 ---
 # <a name="application-and-driver-compatibility"></a>应用程序和驱动程序兼容性
-ODBC 应用程序和驱动程序分为许多类别，除了其版本。 与某些驱动程序; 不兼容的这些应用程序一些在其他情况下，应用程序或驱动程序的类型可能会它们之间的向后兼容性问题重的负担。  
+除了版本之外，ODBC 应用程序和驱动程序也属于多个类别。 其中一些应用程序与某些驱动程序不兼容;在其他情况下，应用程序或驱动程序的类型可能会影响它们之间的向后兼容性问题。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [应用程序类型](../../../odbc/reference/develop-app/types-of-applications.md)  
   

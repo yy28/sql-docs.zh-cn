@@ -15,21 +15,21 @@ ms.assetid: 4e0d189b-e407-47e0-92a9-f9982230dd0e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6f7bf7e77f892f10de17402b59e732523d58fbc6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036551"
 ---
 # <a name="choosing-an-sql-grammar"></a>选择 SQL 语法
-可以在构造 SQL 语句时使用的第一个决定是要使用的语法。 除了可从各种标准主体，例如 Open Group、 ANSI 和 ISO 语法几乎每个 DBMS 供应商定义其自己的语法，其中每个稍有不同标准。  
+构造 SQL 语句时要作出的第一决定是使用哪种语法。 除了来自各种标准主体的语法（如开放组、ANSI 和 ISO），几乎每个 DBMS 供应商都定义自己的语法，其中每个都与标准略有不同。  
   
- [附录 C：SQL 语法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)，介绍了所有 ODBC 驱动程序必须都支持的最小 SQL 语法。 此语法是 SQL-92 的入门级的子集。 驱动程序可能支持其他语法，以符合中间、 完整或通过 SQL-92 FIPS 127-2 过渡级别定义。 有关详细信息，请参阅[SQL 最低语法](../../../odbc/reference/appendixes/sql-minimum-grammar.md)附录 c： 驱动器中SQL 语法和 SQL-92。  
+ [附录 C： Sql 语法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)介绍了所有 ODBC 驱动程序必须支持的最低 SQL 语法。 此语法是 SQL-92 的条目级别的子集。 驱动程序可能支持其他语法，以符合 SQL-92 定义的中间、完整或 FIPS 127-2 转换级别。 有关详细信息，请参阅附录 C： SQL 语法和 SQL-92 中的[SQL 最低语法](../../../odbc/reference/appendixes/sql-minimum-grammar.md)。  
   
- 此外定义了附录 C*转义序列*包含等外部联接中，通常可用的语言功能的标准语法，不包括在 SQL-92 语法。 有关详细信息，请参阅[ODBC 转义序列](../../../odbc/reference/appendixes/odbc-escape-sequences.md)附录 c： 驱动器中SQL 语法，并[转义序列](../../../odbc/reference/develop-app/escape-sequences.md)，在本部分中更高版本。  
+ 附录 C 还定义了包含 SQL-92 语法未涵盖的常用语言功能（例如外部联接）的标准语法的*转义序列*。 有关详细信息，请参阅本部分后面的附录 C： SQL 语法和[转义序列](../../../odbc/reference/develop-app/escape-sequences.md)中的[ODBC 转义序列](../../../odbc/reference/appendixes/odbc-escape-sequences.md)。  
   
- 所选的语法会影响该驱动程序如何处理该语句。 SQL-92 SQL 和到如何使用特定于 SQL 的 ODBC 定义的转义序列，则必须修改驱动程序。 由于大多数 SQL 语法基于一个或多个各种标准，因此大多数驱动程序将执行很少或没有工作，以满足此要求。 它通常仅包含搜索定义的转义序列的 ODBC 和它们替换为特定于 DBMS 的语法。 当驱动程序遇到无法识别的语法时，它假定语法是特定于 DBMS 的并将传递而无需执行的数据源的修改 SQL 语句。  
+ 所选择的语法将影响驱动程序处理该语句的方式。 驱动程序必须将 SQL-92 SQL 和 ODBC 定义的转义序列修改为 DBMS 特定的 SQL。 由于大多数 SQL 语法基于一个或多个不同的标准，因此大多数驱动程序很少或没有工作来满足此要求。 它通常只包含搜索由 ODBC 定义的转义序列，并将其替换为 DBMS 特定的语法。 当驱动程序遇到无法识别的语法时，它假定语法是 DBMS 特定的，并传递 SQL 语句而不修改数据源以进行执行。  
   
- 因此，实际上有两个选项的语法，使用： SQL-92 语法 （和 ODBC 转义序列） 和特定于 DBMS 的语法。 这两种，仅 SQL-92 语法是互操作性，因此可互操作的所有应用程序应使用它。 不是可互操作的应用程序可以使用 SQL-92 语法或特定于 DBMS 的语法。 特定于 DBMS 的语法有两大好处：它们可以利用不受 SQL-92 任何功能，他们会略微更快，因为驱动程序不需要对其进行修改。 可以通过设置 SQL_ATTR_NOSCAN 语句属性，它将停止搜索并替换转义序列中的驱动程序部分强制执行后一种功能。  
+ 因此，实际上有两种选择要使用的语法： SQL-92 语法（和 ODBC 转义序列）和 DBMS 特定的语法。 对于这两种方法，只有 SQL 92 语法可互操作，因此所有互操作应用程序都应使用它。 不可互操作的应用程序可以使用 SQL-92 语法或 DBMS 特定的语法。 DBMS 特定的语法有两个优点：它们可以利用 SQL-92 未涵盖的任何功能，并且它们的速度更快，因为驱动程序不必修改它们。 可以通过设置 SQL_ATTR_NOSCAN 语句特性来部分强制执行后一项功能，这会阻止驱动程序搜索和替换转义序列。  
   
- 如果使用 SQL-92 语法，则该应用程序可以发现如何修改驱动程序通过调用**SQLNativeSql**。 调试应用程序时，这是通常很有用。 **SQLNativeSql**接受 SQL 语句并将其返回后，驱动程序进行了修改。 由于此函数在核心接口一致性级别，它被支持的所有驱动程序。
+ 如果使用的是 SQL-92 语法，则应用程序可以通过调用**SQLNativeSql**来发现它被驱动程序修改的方式。 调试应用程序时，这通常很有用。 **SQLNativeSql**接受 SQL 语句，并在驱动程序修改后返回该语句。 由于此函数位于核心接口一致性级别，因此它受所有驱动程序的支持。

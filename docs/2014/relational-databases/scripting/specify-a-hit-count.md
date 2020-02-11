@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a049491513b826b2b050081b40cb5319ca74160f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243206"
 ---
 # <a name="specify-a-hit-count"></a>指定命中计数
@@ -43,11 +43,11 @@ ms.locfileid: "75243206"
   
 #### <a name="to-specify-a-hit-count"></a>指定命中计数  
   
-1.  在编辑器窗口中，右键单击断点符号，然后单击快捷菜单上的“命中计数”****。  
+1.  在编辑器窗口中，右键单击断点符号，然后单击快捷菜单上的“命中计数”  。  
   
-     -或者-  
+     -或-  
   
-     在“断点”**** 窗口中，右键单击断点符号，然后单击快捷菜单上的“命中计数”****。  
+     在“断点”  窗口中，右键单击断点符号，然后单击快捷菜单上的“命中计数”  。  
   
 2.  在 **“断点命中计数”** 对话框中，从 **“命中断点时”** 框中选择所需行为。  
   
@@ -57,11 +57,11 @@ ms.locfileid: "75243206"
   
 #### <a name="to-view-or-reset-the-current-hit-count"></a>查看或重置当前命中计数  
   
-1.  在编辑器窗口中，右键单击断点符号，然后单击快捷菜单上的“命中计数”****。  
+1.  在编辑器窗口中，右键单击断点符号，然后单击快捷菜单上的“命中计数”  。  
   
-     -或者-  
+     -或-  
   
-     在“断点”**** 窗口中，右键单击断点符号，然后单击快捷菜单上的“命中计数”****。  
+     在“断点”  窗口中，右键单击断点符号，然后单击快捷菜单上的“命中计数”  。  
   
 2.  在 **“断点命中计数”** 对话框中， **“当前命中计数:”** 显示在 **“重置”** 按钮的正上方。  
   

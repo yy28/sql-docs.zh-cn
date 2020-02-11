@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3ca62d8d45ab5a116ab657646abf2393c69e73c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211807"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>指定表中的计算列
-  计算列是虚拟列，并非实际存储在表中，除非此列标记为 PERSISTED。 计算列的表达式可以使用其他列中的数据来计算其所属列的值。 可以通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中为计算列指定一个表达式。  
+  计算列是虚拟列，并非实际存储在表中，除非此列标记为 PERSISTED。 计算列的表达式可以使用其他列中的数据来计算其所属列的值。 可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中为计算列指定一个表达式。  
   
  **本主题内容**  
   
@@ -44,9 +44,9 @@ ms.locfileid: "68211807"
   
 -   计算列不能作为 INSERT 或 UPDATE 语句的目标。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要对表的 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -72,7 +72,7 @@ ms.locfileid: "68211807"
   
 1.  在“对象资源管理器”  中，右键单击该表以及你要对其更改和展开“列”  文件夹的列。  
   
-2.  右键单击你要为其指定计算列公式的列，然后单击“删除”  。 单击 **“确定”** 。  
+2.  右键单击你要为其指定计算列公式的列，然后单击“删除”  。 单击“确定”。   
   
 3.  添加一个新列，然后按照前面的步骤添加新计算列以指定新计算列公式。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "68211807"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。 此示例创建了一个表，其中具有一个计算列，该列将 `QtyAvailable` 列的值乘以 `UnitPrice` 列的值。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 此示例创建了一个表，其中具有一个计算列，该列将 `QtyAvailable` 列的值乘以 `UnitPrice` 列的值。  
   
     ```  
     CREATE TABLE dbo.Products   
@@ -111,7 +111,7 @@ ms.locfileid: "68211807"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。 以下示例向在前一个示例中创建的表添加一个新列。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 以下示例向在前一个示例中创建的表添加一个新列。  
   
     ```  
     ALTER TABLE dbo.Products ADD RetailValue AS (QtyAvailable * UnitPrice * 1.35);  
@@ -124,7 +124,7 @@ ms.locfileid: "68211807"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  若要将现有列更改为计算列，您必须删除后重新创建该计算列。 将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。 以下示例修改在前一个示例中添加的列。  
+3.  若要将现有列更改为计算列，您必须删除后重新创建该计算列。 将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 以下示例修改在前一个示例中添加的列。  
   
     ```  
     ALTER TABLE dbo.Products DROP COLUMN RetailValue;  
@@ -133,6 +133,6 @@ ms.locfileid: "68211807"
   
     ```  
   
-     有关详细信息，请参阅 [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql)。  
+     有关详细信息，请参阅[ALTER TABLE &#40;transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)。  
   
 ###  <a name="TsqlExample"></a>  

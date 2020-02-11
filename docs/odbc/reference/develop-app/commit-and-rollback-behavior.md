@@ -14,11 +14,11 @@ ms.assetid: 2ac8f012-e46d-41ca-81bb-e4a3246e3241
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 643d7d4174df66abfcee274c1f987e8f405d19b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083344"
 ---
 # <a name="commit-and-rollback-behavior"></a>提交和回滚行为
-在服务器 Dbms 之间常见行为是关闭游标并放弃时提交或回滚语句预定义的语句。 桌面数据库会更容易保持打开游标并保持预定义的语句。 有关详细信息，请参阅中的 SQL_CURSOR_COMMIT_BEHAVIOR 和 SQL_CURSOR_ROLLBACK_BEHAVIOR 选项[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)函数说明和[游标和准备语句上的事务的效果](../../../odbc/reference/develop-app/effect-of-transactions-on-cursors-and-prepared-statements.md).
+服务器 Dbms 中的常见行为是在提交或回滚语句时关闭游标并放弃已准备的语句。 桌面数据库更有可能保持游标打开并保持预定义的语句。 有关详细信息，请参阅[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)函数说明中的 SQL_CURSOR_COMMIT_BEHAVIOR 和 SQL_CURSOR_ROLLBACK_BEHAVIOR 选项，以及[事务对游标和预定义语句的影响](../../../odbc/reference/develop-app/effect-of-transactions-on-cursors-and-prepared-statements.md)。

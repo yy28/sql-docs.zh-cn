@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 07c5118c654faccea2d9bab01040ce17b1d5699a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232473"
 ---
 # <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>步骤 2：添加和配置 Foreach 循环容器
@@ -39,11 +39,11 @@ ms.locfileid: "75232473"
   
 1.  在“SQL Server Data Tools”**** 中，单击“控制流”**** 选项卡。  
   
-2.  在“SSIS 工具箱”**** 中，展开“容器”****，然后将“Foreach 循环容器”**** 拖到“控制流”**** 选项卡的设计图面上。  
+2.  在“SSIS 工具箱”  中，展开“容器”  ，然后将“Foreach 循环容器”  拖到“控制流”  选项卡的设计图面上。  
   
 3.  右键单击新添加的“Foreach 循环容器”****，然后选择“编辑”****。  
   
-4.  在 " **Foreach 循环编辑器**" 对话框的 "**常规**" 页上， **** 对于 "名称`Foreach File in Folder`"，输入。 单击“确定”****。  
+4.  在 " **Foreach 循环编辑器**" 对话框的 "**常规**" 页上， **** 对于 "名称`Foreach File in Folder`"，输入。 单击“确定”。   
   
 5.  右键单击 "Foreach 循环容器"，单击 "**属性**"，然后在 "属性窗口中， `LocaleID`验证属性是否设置为"**英语（美国）**"。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "75232473"
   
 2.  单击“集合”****。  
   
-3.  在“集合”**** 页上，选择“Foreach 文件枚举器”****。  
+3.  在“集合”  页上，选择“Foreach 文件枚举器”  。  
   
 4.  在“枚举器配置”**** 组中，单击“浏览”****。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "75232473"
     > [!IMPORTANT]  
     >  变量名称区分大小写。  
   
-4.  单击“确定”****。  
+4.  单击“确定”。   
   
 5.  再次单击“确定”****，退出“Foreach 循环编辑器”**** 对话框。  
   
@@ -89,9 +89,9 @@ ms.locfileid: "75232473"
 -   将**提取示例货币数据**数据流任务拖到现在已重命名`Foreach File in Folder`的 Foreach 循环容器上。  
   
 ## <a name="next-lesson-task"></a>下一课程任务  
- [步骤3：修改平面文件连接管理器](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+ [步骤 3：修改平面文件连接管理器](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [配置 Foreach 循环容器](control-flow/foreach-loop-container.md)   
- [使用包中的变量](use-variables-in-packages.md)  
+ [在包中使用变量](use-variables-in-packages.md)  
   

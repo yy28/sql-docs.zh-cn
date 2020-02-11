@@ -1,6 +1,6 @@
 ---
-title: 项目 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: 项目 (SQL Server Management Studio)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c13af859-ca66-4e43-b76a-0650ac6566c0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c994120589a4fa31c5968743a38f89a8ad2d1dfc
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: b1a0df1686543cfe69a998149ede45ea2f845894
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68259450"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251868"
 ---
 # <a name="projects-sql-server-management-studio"></a>项目 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68259450"
 项目还可以集成到源代码管理系统中。  
   
 ## <a name="connecting-to-an-instance-of-sql-server-from-a-script-project"></a>从脚本项目连接到 SQL Server 实例  
-脚本项目可能包含与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 通过单击连接，可以连接到项目中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 这将打开一个 SQL 脚本窗口，该窗口将连接到在所选连接中定义的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 如果通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的连接打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 MDX 脚本，则在打开编辑器并且加载脚本之后，系统将使用“连接到 SQL Server”对话框提示你输入密码。  
+脚本项目可能包含与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 通过单击连接，可以连接到项目中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 这将打开一个 SQL 脚本窗口，该窗口将连接到在所选连接中定义的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 如果通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的连接打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 MDX 脚本，则在打开编辑器并且加载脚本之后，系统将使用“连接到 SQL Server”  对话框提示你输入密码。  
   
 相应窗口关闭后，连接也将随之关闭。  
   

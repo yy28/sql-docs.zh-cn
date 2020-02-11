@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8b9cbd080a138b939224d6bb88218b46e52a23f4
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75255454"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>为 SharePoint 跟踪日志 (ULS) 启用 Reporting Services 事件
@@ -40,11 +40,11 @@ ms.locfileid: "75255454"
 ##  <a name="bkmk_general"></a>一般 ULS 日志建议  
  下表列出了监视 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 环境的推荐事件类别和级别。 记录事件时，每一项都包括记录事件的时间、进程名和线程 ID。  
   
-|类别|层次|说明|  
+|类别|级别|说明|  
 |--------------|-----------|-----------------|  
 |数据库|Verbose|记录涉及数据库访问的事件。|  
 |常规|Verbose|记录涉及访问以下各项的事件：<br /><br /> [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]网页<br /><br /> 报表查看器 HTTP 处理程序<br /><br /> 报表访问（.rdl 文件）<br /><br /> 数据源（.rsds 文件）<br /><br /> SharePoint 网站上的 URL（.smdl 文件）|  
-|Office Server 常规|Exception|记录登录失败。|  
+|Office Server 常规|异常|记录登录失败。|  
 |拓扑|Verbose|记录当前用户信息。|  
 |Web 部件|Verbose|记录涉及访问报表查看器 Web 部件的事件。|  
   

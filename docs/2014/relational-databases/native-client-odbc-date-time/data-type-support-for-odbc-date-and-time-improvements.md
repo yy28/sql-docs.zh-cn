@@ -1,5 +1,5 @@
 ---
-title: 数据类型为 ODBC 日期和时间改进的支持 |Microsoft Docs
+title: 对 ODBC 日期和时间改进的数据类型支持 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,12 +13,12 @@ ms.assetid: 8e0d9ba2-3ec1-4680-86e3-b2590ba8e2e9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1823e1416f546105205782d313f75e148e0aa848
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d3ee53add852917cdd234c9306c9ddaf46da0818
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63206993"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76939607"
 ---
 # <a name="data-type-support-for-odbc-date-and-time-improvements"></a>针对 ODBC 日期/时间改进的数据类型支持
   本主题提供有关支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期和时间数据类型的 ODBC 类型的信息。  
@@ -32,12 +32,12 @@ ms.locfileid: "63206993"
   
  下表显示完整的服务器类型映射。 注意，该表的某些单元格包含两个条目；在这些情况下，第一个是针对 ODBC 3.0 的值，第二个是针对 ODBC 2.0 的值。  
   
-|SQL Server 数据类型|SQL 数据类型|ReplTest1|  
+|SQL Server 数据类型|SQL 数据类型|值|  
 |--------------------------|-------------------|-----------|  
-|DATETIME|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
+|Datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
-|Date|SQL_TYPE_DATE<br /><br /> SQL_DATE|91 (sql.h)<br /><br /> 9 (sqlext.h)|  
-|Time|SQL_SS_TIME2|-154 (SQLNCLI.h)|  
+|Date|SQL_TYPE_DATE<br /><br /> SQL_DATE|91（sql .h）<br /><br /> 9（sqltypes.h）|  
+|时间|SQL_SS_TIME2|-154 （SQLNCLI.MSI）|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|-155 (SQLNCLI.h)|  
 |Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
   
@@ -57,11 +57,12 @@ ms.locfileid: "63206993"
   
 |SQL Server 数据类型|ODBC 数据类型|客户端转换的字符串格式|  
 |--------------------------|--------------------|------------------------------------------|  
-|DATETIME|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对于 Datetime 最多支持三位数字的秒小数部分。|  
+|Datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对于 Datetime 最多支持三位数字的秒小数部分。|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:hh:ss'<br /><br /> 此数据类型精确到 1 分钟。 秒部分在输出中将为零，在输入中由服务器进行四舍五入。|  
 |Date|SQL_TYPE_DATE<br /><br /> SQL_DATE|'yyyy-mm-dd'|  
-|Time|SQL_SS_TIME2|'hh:mm:ss[.9999999]'<br /><br /> 可以选择指定最多达到七位数字的秒小数部分。|  
-|Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|年-月-日 hh:mm:ss[.9999999]'<br /><br /> 可以选择指定最多达到七位数字的秒小数部分。|  
+|时间|SQL_SS_TIME2|'hh:mm:ss[.9999999]'<br /><br /> 可以选择指定最多达到七位数字的秒小数部分。|  
+|Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|"yyyy-mm-dd hh： mm： ss [. 维]"<br /><br /> 可以选择指定最多达到七位数字的秒小数部分。|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|'yyyy-mm-dd hh:mm:ss[.9999999] +/- hh:mm'<br /><br /> 可以选择指定最多达到七位数字的秒小数部分。|  
   
  日期/时间文字的 ODBC 转义序列没有更改。  
@@ -105,7 +106,7 @@ ms.locfileid: "63206993"
   
 -   SQL_SS_TIMESTAMPOFFSET_STRUCT  
   
-### <a name="sqlsstime2struct"></a>SQL_SS_TIME2_STRUCT  
+### <a name="sql_ss_time2_struct"></a>SQL_SS_TIME2_STRUCT  
  此结构在 32 位和 64 位操作系统中都填充到 12 个字节。  
   
 ```  
@@ -117,7 +118,7 @@ typedef struct tagSS_TIME2_STRUCT {
 } SQL_SS_TIME2_STRUCT;  
 ```  
   
-### <a name="sqlsstimestampoffsetstruct"></a>SQL_SS_TIMESTAMPOFFSET_STRUCT  
+### <a name="sql_ss_timestampoffset_struct"></a>SQL_SS_TIMESTAMPOFFSET_STRUCT  
   
 ```  
 typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {  
@@ -135,7 +136,7 @@ typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {
   
  如果 `timezone_hour` 是负数，则 `timezone_minute` 必须是负数或零。 如果 `timezone_hour` 是正数，则 `timezone_minute` 必须是正数或零。 如果 `timezone_hour` 是零，则 `timezone_minute` 可能是 -59 到 +59 范围内的任何值。  
   
-## <a name="see-also"></a>请参阅  
- [日期和时间改进&#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
+## <a name="see-also"></a>另请参阅  
+ [ODBC&#41;&#40;的日期和时间改进](date-and-time-improvements-odbc.md)  
   
   

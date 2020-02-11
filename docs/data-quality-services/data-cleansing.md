@@ -10,10 +10,10 @@ ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 46ca0fe453548cab780d1e2b32c6a8d98a32de11
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251767"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
@@ -100,11 +100,11 @@ ms.locfileid: "75251767"
   
  在清理数据质量项目向导的 **“导出”** 页中导出已清理的数据时，您通过选中 **“标准化输出”** 复选框来指定是否要以标准化格式导出已清理的数据。 默认情况下，以标准化格式导出已清理的数据，即选中该复选框。 有关导出已清理的数据的详细信息，请参阅[使用 DQS（内部）知识清理数据](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)。  
   
-##  <a name="Related"></a>相关任务  
+##  <a name="Related"></a> 相关任务  
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|说明如何配置清理活动的阈值。|[配置清理和匹配的阈值](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)|  
+|说明如何配置清理活动的阈值。|[配置清理和匹配活动的阈值](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)|  
 |说明如何使用 DQS 中内置的知识清理数据。|[使用 DQS &#40;内部&#41; 知识清理数据](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)|  
 |说明如何使用引用数据服务中的知识清理数据。|[使用引用数据清理数据 &#40;外部&#41; 知识](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
 |说明如何清理复合域。|[清理复合域中的数据](../data-quality-services/cleanse-data-in-a-composite-domain.md)|  

@@ -1,5 +1,5 @@
 ---
-title: sys.default_constraints (TRANSACT-SQL) |Microsoft Docs
+title: sys. default_constraints （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,21 +21,21 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 816f5c563713eaa59337d765a7ccadafbd5c73a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68079379"
 ---
-# <a name="sysdefaultconstraints-transact-sql"></a>sys.default_constraints (Transact-SQL)
+# <a name="sysdefault_constraints-transact-sql"></a>sys.default_constraints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  使用包含 （而不是作为 CREATE DEFAULT 语句的 CREATE TABLE 或 ALTER TABLE 语句的一部分创建），该默认定义是每个对象的行**sys.objects.type** = d。  
+  每个对象都包含一个对应的行，每个对象都是默认定义（作为 CREATE TABLE 或 ALTER TABLE 语句的一部分创建，而不是 CREATE DEFAULT 语句），具有**sys.databases** = D。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**\<从 sys.objects 继承的列 >**||此视图所继承的列的列表，请参阅[sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
-|**parent_column_id**|**int**|中列的 ID **parent_object_id**所属此默认值。|  
+|**\<继承自 sys.databases 的列>**||有关此视图所继承的列的列表，请参阅[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
+|**parent_column_id**|**int**|此默认所属**parent_object_id**中的列的 ID。|  
 |**定义**|**nvarchar(max)**|定义此默认值的 SQL 表达式。|  
 |**is_system_named**|**bit**|1 = 名称由系统生成。<br /><br /> 0 = 名称由用户提供。|  
   
@@ -57,9 +57,9 @@ WHERE d.parent_object_id = OBJECT_ID(N'HumanResources.Employee', N'U')
 AND c.name = 'VacationHours';  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [&#40;Transact-sql&#41;的对象目录视图](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [查询 SQL Server 系统目录常见问题解答](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
+ [查询 SQL Server 系统目录常见问题](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c9858638287876d31733035d1a6bb6d95705708f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228722"
 ---
 # <a name="creation-and-configuration-of-availability-groups-sql-server"></a>创建和配置可用性组 (SQL Server)
@@ -34,16 +34,16 @@ ms.locfileid: "75228722"
   
  
   
-##  <a name="RelatedTasks"></a>相关任务  
+##  <a name="RelatedTasks"></a> 相关任务  
  **为配置服务器实例[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]**  
   
--   [启用和禁用 AlwaysOn 可用性组 &#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)  
+-   [启用和禁用 AlwaysOn 可用性组 (SQL Server)](enable-and-disable-always-on-availability-groups-sql-server.md)  
   
 -   [为 AlwaysOn 可用性组 &#40;SQL Server PowerShell 创建数据库镜像端点&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
--   [为 Windows 身份验证创建数据库镜像端点 &#40;Transact-sql&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
+-   [为 Windows 身份验证创建数据库镜像终结点 (Transact-SQL)](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
--   [允许数据库镜像终结点使用证书进行出站连接 &#40;Transact-sql&#41;](../../database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
+-   [允许数据库镜像终结点使用证书进行出站连接 (Transact-SQL)](../../database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
  **配置 AlwaysOn 可用性组入门**  
   
@@ -51,33 +51,33 @@ ms.locfileid: "75228722"
   
  **创建和配置新的可用性组**  
   
--   [使用可用性组向导 &#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md)  
+-   [使用可用性组向导 (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)  
   
 -   [&#40;Transact-sql 创建可用性组&#41;](create-an-availability-group-transact-sql.md)  
   
 -   [创建可用性组 &#40;SQL Server PowerShell&#41;](../../../powershell/sql-server-powershell.md)  
   
--   [使用 "新建可用性组" 对话框 &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
+-   [使用“新建可用性组”对话框 (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
 -   [在添加或修改可用性副本时指定终结点 URL &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
--   [创建或配置可用性组侦听器 &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [创建或配置可用性组侦听程序 (SQL Server)](create-or-configure-an-availability-group-listener-sql-server.md)  
   
 -   [配置灵活的故障转移策略以控制自动故障转移的条件（AlwaysOn 可用性组）](configure-flexible-automatic-failover-policy.md)  
   
--   [在可用性副本上配置备份 &#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)  
+-   [配置可用性副本备份 (SQL Server)](configure-backup-on-availability-replicas-sql-server.md)  
   
--   [配置对可用性副本的只读访问 &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md)  
+-   [配置对可用性副本的只读访问 (SQL Server)](configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
--   [为可用性组 &#40;SQL Server 配置只读路由&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md)  
+-   [为可用性组配置只读路由 (SQL Server)](configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
--   [将辅助副本联接到可用性组 &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
+-   [将辅助副本联接到可用性组 (SQL Server)](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
 -   [启动 AlwaysOn 辅助数据库的数据移动 &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md)  
   
--   [为可用性组手动准备辅助数据库 &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
+-   [为可用性组手动准备辅助数据库 (SQL Server)](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
--   [将辅助数据库联接到可用性组 &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)  
+-   [将辅助数据库联接到可用性组 (SQL Server)](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
 -   [管理可用性组数据库的登录名和作业 &#40;SQL Server&#41;](../../logins-and-jobs-for-availability-group-databases.md)  
   
@@ -87,7 +87,7 @@ ms.locfileid: "75228722"
   
 -   [排除失败的添加文件操作 &#40;AlwaysOn 可用性组&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a>相关内容  
+##  <a name="RelatedContent"></a> 相关内容  
   
 -   **博客**  
   

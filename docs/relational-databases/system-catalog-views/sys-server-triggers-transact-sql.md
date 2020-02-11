@@ -1,5 +1,5 @@
 ---
-title: sys.server_triggers (TRANSACT-SQL) |Microsoft Docs
+title: sys. server_triggers （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,26 +20,26 @@ ms.assetid: 25926ff4-9271-45bf-bc32-d5d3344bd47a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 995a9b5fe4786e1e188a8bbdc612cce743e77a18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68133005"
 ---
-# <a name="sysservertriggers-transact-sql"></a>sys.server_triggers (Transact-SQL)
+# <a name="sysserver_triggers-transact-sql"></a>sys.server_triggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  包含 object_type 为 TR 或 TA 的所有服务器级别 DDL 触发器的集合。 如果是 CLR 触发器的程序集必须加载到**主**数据库。 所有服务器级别 DDL 触发器名称存在于单个全局范围内。  
+  包含 object_type 为 TR 或 TA 的所有服务器级别 DDL 触发器的集合。 对于 CLR 触发器，程序集必须加载到**master**数据库中。 所有服务器级别 DDL 触发器名称存在于单个全局范围内。  
   
-|列名|数据类型|描述|  
+|列名|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|触发器的名称。|  
+|**路径名**|**sysname**|触发器的名称。|  
 |**object_id**|**int**|对象的 ID。|  
 |**parent_class**|**tinyint**|父级的类。 始终为：<br /><br /> 100 = 服务器|  
-|**parent_class_desc**|**nvarchar(60)**|父类的说明。 始终为：<br /><br /> SERVER。|  
+|**parent_class_desc**|**nvarchar （60）**|父类的说明。 始终为：<br /><br /> SERVER。|  
 |**parent_id**|**int**|对 SERVER 上的触发器，此值始终为 0。|  
-|**type**|**char(2)**|对象类型：<br /><br /> TA = 程序集 (CLR) 触发器<br /><br /> TR = SQL 触发器|  
-|**type_desc**|**nvarchar(60)**|对象类型的类的说明。<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
+|type |**char （2）**|对象类型：<br /><br /> TA = 程序集 (CLR) 触发器<br /><br /> TR = SQL 触发器|  
+|**type_desc**|**nvarchar （60）**|对象类型的类的说明。<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
 |**create_date**|**datetime**|触发器的创建日期。|  
 |**modify_date**|**datetime**|上一次使用 ALTER 语句修改触发器的日期。|  
 |**is_ms_shipped**|**bit**|由内部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件代表用户创建的触发器。|  
@@ -48,7 +48,7 @@ ms.locfileid: "68133005"
 ## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

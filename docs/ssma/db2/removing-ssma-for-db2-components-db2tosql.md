@@ -1,5 +1,5 @@
 ---
-title: 删除 SSMA for DB2 组件 (DB2ToSQL) |Microsoft Docs
+title: 删除 DB2 组件的 SSMA （DB2ToSQL） |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,30 +10,30 @@ ms.assetid: 4ee0d698-6246-48eb-b963-d62be81cab6a
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 25c8222009c2ea9358c0bab2ad5ae077588fb3cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68060101"
 ---
-# <a name="removing-ssma-for-db2-components-db2tosql"></a>删除 SSMA for DB2 组件 (DB2ToSQL)
-完成后将数据库迁移在 DB2 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，可能需要卸载 SSMA 组件。 您可以在任何时候卸载客户端组件。 但是，不应卸载扩展包[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]除非你已迁移的数据库不能再使用中的函数**ssma_DB2**的架构**sysdb**数据库。  
+# <a name="removing-ssma-for-db2-components-db2tosql"></a>删除 DB2 组件的 SSMA （DB2ToSQL）
+完成将数据库从 DB2 迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之后，你可能想要卸载 SSMA 组件。 你可以随时卸载客户端组件。 但是，除非您迁移的数据库不再使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysdb**数据库的**ssma_DB2**架构中的函数，否则不应从卸载扩展包。  
   
-## <a name="uninstalling-the-ssma-for-db2-client"></a>卸载 SSMA for DB2 客户端  
-您可以通过使用卸载 SSMA**添加或删除程序**。  
+## <a name="uninstalling-the-ssma-for-db2-client"></a>卸载 DB2 客户端的 SSMA  
+可以使用 "**添加或删除程序**" 卸载 SSMA。  
   
-**若要卸载的 SSMA**  
+**卸载 SSMA**  
   
-1.  在控制面板中，打开**添加或删除程序**。  
+1.  在控制面板中，打开 **“添加或删除程序”**。  
   
-2.  选择 **[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for DB2**，然后单击**删除**。  
+2.  ** [!INCLUDE[msCoName](../../includes/msconame_md.md)]选择[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "迁移助手**"，然后单击 "**删除**"。  
   
-3.  若要确认你想要卸载 SSMA，请单击**是**。  
+3.  若要确认是否要卸载 SSMA，请单击 **"是"**。  
   
-## <a name="uninstalling-the-extension-pack"></a>卸载扩展包  
-如果您确信你迁移的数据库不使用中的对象**sysdb.ssma_DB2**架构，您可以通过删除架构中删除的扩展包-有是没有 Windows 卸载  
+## <a name="uninstalling-the-extension-pack"></a>正在卸载扩展包  
+如果你确定已迁移的数据库不使用**ssma_DB2 sysdb**架构中的对象，则可以通过将其从架构中删除来删除扩展包-无 Windows 卸载  
   
-## <a name="see-also"></a>请参阅  
-[安装 SSMA for DB2 客户端&#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)  
-[SQL Server 上安装 SSMA 组件&#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)  
+## <a name="see-also"></a>另请参阅  
+[安装 SSMA for DB2 Client &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)  
+[在 SQL Server 上安装 SSMA 组件 &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)  
   

@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 2bc231a064862c5e2a16f60d85a5166fd4765566
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727589"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>从命令行安装 SQL Server 机器学习 R 和 Python 组件
@@ -48,7 +48,7 @@ ms.locfileid: "73727589"
 通过命令提示符安装时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持完全静默模式（通过使用 /Q 参数）或简单静默模式（通过使用 /QS 参数）。 /QS 开关仅显示进度，不接受任何输入，也不显示错误消息（如果遇到）。 仅当指定 /Action=install 时才支持 /QS 参数。
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-| 参数 | 描述 |
+| 参数 | 说明 |
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | 安装数据库内版本：SQL Server R Services（数据库内）。  |
 | /FEATURES = SQL_SHARED_MR | 为独立版本安装 R 功能：SQL Server R Server（独立版）。 独立服务器是未绑定到数据库引擎实例的“共享功能”。|
@@ -59,7 +59,7 @@ ms.locfileid: "73727589"
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-| 参数 | 描述 |
+| 参数 | 说明 |
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | 安装数据库内版本：SQL Server 机器学习服务（数据库内）。  |
 | /FEATURES = SQL_INST_MR | 将此与 AdvancedAnalytics 配对。 安装（数据库内）R 功能，包括 Microsoft R Open 和专用 R 包。 |
@@ -74,7 +74,7 @@ ms.locfileid: "73727589"
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-| 参数 | 描述 |
+| 参数 | 说明 |
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | 安装数据库内版本：SQL Server 机器学习服务（数据库内）。  |
 | /FEATURES = SQL_INST_MR | 将此与 AdvancedAnalytics 配对。 安装（数据库内）R 功能，包括 Microsoft R Open 和专用 R 包。 |

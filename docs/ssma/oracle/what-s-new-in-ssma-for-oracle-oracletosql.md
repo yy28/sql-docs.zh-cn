@@ -2,23 +2,36 @@
 title: SSMA for Oracle 中的新增功能（OracleToSQL） |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 12/04/2019
+ms.date: 01/22/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: f196932ee9a37c9a814ad619b604520093b6098d
-ms.sourcegitcommit: 26868c8ac3217176b370d972a26d307598a10328
+ms.openlocfilehash: d78f7c213c6e745ecd99ff31d078f1383b4792e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74834277"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76516579"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>SSMA for Oracle 中的新增功能（OracleToSQL）
 
 本文列出了每个版本中 Oracle 更改的 SQL Server 迁移助手（SSMA）。
+
+## <a name="ssma-v86"></a>SSMA v 8。6
+
+除了旨在提高可用性和性能的目标修补集外，通过添加使用户能够在转换后的代码中省略 SSMA 扩展属性的设置，还增强了 SSMA for Oracle 的 v 8.6 版本。
+
+若要利用此设置，请在 SSMA for Oracle 中导航到 "**工具** > " "**项目设置** > " "**常规** > **转换**"，然后在 "**杂项**" 下，将 "**省略扩展属性**" 设置的值更新为 **"是"**。
+
+![省略扩展属性设置](../oracle/media/ssma-omit-extended-properties.png)
+
+此外，SSMA for Oracle 现在还改进了 XMLTABLE 子句的分析。
+
+> [!IMPORTANT]
+> 对于 SSMA 的8.5 和更高版本，.Net 4.7.2 是必备组件。 如果需要安装此版本，可以从[此处](https://dotnet.microsoft.com/download/dotnet-framework/net472)下载运行时文件。
 
 ## <a name="ssma-v85"></a>SSMA 8。5
 
@@ -208,7 +221,7 @@ SSMA for Oracle 的 v2.0 版本包含以下更改：
 
 * Windows 和 Linux 上的 SQL Server 2017 现在是支持迁移的目标平台。 此功能在 technical preview 中，允许将架构和数据移动到目标 SQL server。
 * SSMA 现在支持自动更新，以下载最新版本的 SSMA。
-* SSMA 可安装二进制文件现在通过 Windows installer 包文件（.msi）传递。
+* SSMA 可安装二进制文件现在通过 Windows Installer 包文件（.msi）传递。
 
 ## <a name="may-2016"></a>2016 年 5 月
 

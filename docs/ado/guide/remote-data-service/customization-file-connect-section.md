@@ -1,5 +1,5 @@
 ---
-title: 自定义文件 Connect 部分 |Microsoft Docs
+title: 自定义文件连接部分 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,26 +14,26 @@ ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1de3710590cf49de30ff8e79a6ff829b124c42dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922806"
 ---
 # <a name="customization-file-connect-section"></a>自定义文件 Connect 部分
-该处理程序的默认行为是拒绝所有连接。 **连接**节指定该行为的例外情况。 例如，如果所有**连接**部分已不存在或为空，则默认情况下无法不建立任何连接。  
+处理程序的默认行为是拒绝所有连接。 "**连接**" 部分指定该行为的例外情况。 例如，如果所有**连接**部分都不存在或为空，则默认情况下无法建立连接。  
   
- **连接**部分可以包含：  
+ "**连接**" 部分可以包含：  
   
--   默认访问项的指定的默认读取和写入操作允许对此连接。 如果在部分中没有任何默认访问权限条目，将忽略该节。  
+-   指定在此连接上允许的默认读写操作的默认访问项。 如果部分中没有默认访问项，则将忽略该部分。  
   
--   新的连接字符串，用于替换客户端连接字符串。  
+-   替换客户端连接字符串的新连接字符串。  
   
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 ## <a name="syntax"></a>语法  
- 默认访问项的形式：  
+ 默认访问项的格式为：  
   
 ```console
   
@@ -42,7 +42,7 @@ accessRight
   
 ```  
   
- 替换连接字符串条目的形式：  
+ 替换连接字符串条目的格式如下：  
   
 ```console
   
@@ -53,22 +53,22 @@ connectionString
   
 ## <a name="remarks"></a>备注  
   
-|组成部分|描述|  
+|部分|说明|  
 |----------|-----------------|  
-|**“连接”**|文本字符串，用于指示这是一个连接字符串条目。|  
-|**_connectionString_**|一个字符串，将整个客户端的连接字符串。|  
-|**访问**|文本字符串，用于指示这是访问项。|  
-|**_种_**|以下访问权限之一：<br /><br /> -   **NoAccess** -用户无法访问数据源。<br />-   **ReadOnly** -用户可以读取的数据源。<br />-   **ReadWrite** -用户可以读取或写入到数据源。|  
+|**连接**|指示这是一个连接字符串项的文字字符串。|  
+|**_connectionString_**|替换整个客户端连接字符串的字符串。|  
+|**Access**|指示这是一个访问项的文字字符串。|  
+|**_accessRight_**|以下访问权限之一：<br /><br /> -   **NoAccess** -用户无法访问数据源。<br />-   **ReadOnly** -用户可以读取数据源。<br />-   **ReadWrite** -用户可以读取或写入数据源。|  
   
- 如果你想要允许任何连接 （实际上，禁用默认处理程序行为），在中设置的访问权限条目**连接默认**部分`Access=ReadWrite`，然后删除或注释掉任何其他**连接**_标识符_部分。  
+ 如果要允许任何连接（有效地禁用默认处理程序行为），请将 "**连接默认值**" 部分中的 "访问" `Access=ReadWrite`项设置为，并删除或注释掉任何其他**连接**_标识符_部分。  
   
-## <a name="see-also"></a>请参阅  
- [自定义文件 Logs 部分](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
+## <a name="see-also"></a>另请参阅  
+ [自定义文件日志部分](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
  [自定义文件 SQL 部分](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
  [自定义文件 UserList 部分](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
  [自定义 DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [所需的客户端设置](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [了解自定义项文件](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
+ [必需的客户端设置](../../../ado/guide/remote-data-service/required-client-settings.md)   
+ [了解自定义文件](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
  [编写自己的自定义处理程序](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
 
 

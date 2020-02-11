@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9192afa87b3a035bbc048fa2476c18c1673a7a39
-ms.sourcegitcommit: 3ec48823bee1c092ce2aba6011b95174de03fb65
+ms.openlocfilehash: 71864b1670d61448b48e3acdc89d9c2d231c782d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926952"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244410"
 ---
 # <a name="sql-server-help-and-feedback"></a>SQL Server 帮助和反馈
 
@@ -22,7 +22,7 @@ ms.locfileid: "68926952"
 
 ## <a name="contact-microsoft-support"></a>请联系 Microsoft 支持部门
 
-具有支持计划的客户可以通过 Microsoft 支持部门[票证](https://support.microsoft.com/en-us/hub/4343728/support-for-business)。  有关详细信息，请查看[适用于企业的支持选项](https://support.microsoft.com/en-us/help/4341255/support-for-business)。 
+具有支持计划的客户可以通过 Microsoft 支持部门[票证](https://support.microsoft.com/hub/4343728/support-for-business)。  有关详细信息，请查看[适用于企业的支持选项](https://support.microsoft.com/help/4341255/support-for-business)。 
 
 没有支持计划的客户可以向社区寻求帮助，或通过 [https://aka.ms/sqlfeedback](https://aka.ms/sqlfeedback) 上的用户心声提交 bug。
 

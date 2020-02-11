@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e89f4835b95b1fe497df32ad9f773be84ccb161b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232730"
 ---
 # <a name="xml-task"></a>XML 任务
@@ -53,7 +53,7 @@ ms.locfileid: "75232730"
 ## <a name="predefined-xml-operations"></a>预定义的 XML 运算  
  XML 任务包含一组用来处理 XML 文档的预定义运算。 下表介绍了这些运算。  
   
-|操作|说明|  
+|Operation|说明|  
 |---------------|-----------------|  
 |差异|比较两个 XML 文档。 Diff 运算把源 XML 文档作为基准文档，将其与另一个 XML 文档进行比较，检测二者间的差异，并将差异写入 XML Diffgram 文档。 此运算包含用来自定义比较的属性。|  
 |合并|合并两个 XML 文档。 Merge 运算使用源 XML 文档作为基文档，将第二个文档的内容添加到其中。 此运算可以在基文档内指定合并位置。|  
@@ -110,7 +110,7 @@ ms.locfileid: "75232730"
 ## <a name="custom-logging-messages-available-on-the-xml-task"></a>XML 任务可用的自定义日志记录消息  
  下表介绍了 XML 任务的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../performance/integration-services-ssis-logging.md)和[日志记录的自定义消息](../custom-messages-for-logging.md)。  
   
-|日志条目|说明|  
+|日志项|说明|  
 |---------------|-----------------|  
 |`XMLOperation`|提供任务所执行的操作的相关信息|  
   
@@ -121,7 +121,7 @@ ms.locfileid: "75232730"
   
 -   [XML 任务编辑器 &#40;常规 "页面&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [用 XML 任务验证 XML](xml-task.md)  
+-   [Validate XML with the XML Task](xml-task.md)  
   
 -   [“表达式”页](../expressions/expressions-page.md)  
   

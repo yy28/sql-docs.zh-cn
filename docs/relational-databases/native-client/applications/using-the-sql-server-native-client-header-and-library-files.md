@@ -23,10 +23,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fd697e0e1ab788413af5e35f9d947fc7e784759f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75258726"
 ---
 # <a name="using-the-sql-server-native-client-header-and-library-files"></a>使用 SQL Server Native Client 头文件和库文件
@@ -87,7 +87,7 @@ include "sqlncli.h";
   
 ## <a name="component-names-and-properties-by-version"></a>基于版本的组件名称和属性  
   
-|属性|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 10.0<br /><br /> SQL Server 2008|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]|MDAC|  
+|properties|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 10.0<br /><br /> SQL Server 2008|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]|MDAC|  
 |--------------|--------------------------------------------------|-------------------------------------------------------|---------------------------------------------------------------|----------|  
 |ODBC 驱动程序名称|SQL Native Client|SQL Server Native Client 10.0|SQL Server Native Client 11.0|SQL Server|  
 |ODBC 头文件名|Sqlncli.h|Sqlncli.h|Sqlncli.h|Odbcss.h|  
@@ -108,6 +108,6 @@ include "sqlncli.h";
  有关详细信息，请参阅执行[大容量复制操作](../../../relational-databases/native-client/features/performing-bulk-copy-operations.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [构建具有 SQL Server Native Client 的应用程序](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
+ [使用 SQL Server Native Client 生成应用程序](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

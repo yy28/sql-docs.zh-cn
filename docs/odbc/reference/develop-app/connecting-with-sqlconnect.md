@@ -1,5 +1,5 @@
 ---
-title: 使用 SQLConnect 连接 |Microsoft Docs
+title: 与 SQLConnect 连接 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ ms.assetid: b16319d2-2c2c-4341-abb5-caa9e17362b4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e37cef235949473beb52e0836553ca16316bc744
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083126"
 ---
 # <a name="connecting-with-sqlconnect"></a>使用 SQLConnect 连接
-**SQLConnect**是最简单的连接函数。 它需要数据源名称，并接受可选的用户 ID 和密码。 它适用于应用程序硬编码数据源名称，不需要用户 ID 或密码。 它也适用于良好的应用程序，以便控制其自己"外观和感觉"或具有没有用户界面。 此类应用程序可以生成使用的数据源的列表**SQLDataSources**、 提示用户输入数据源、 用户 ID 和密码，然后再调用**SQLConnect**。  
+**SQLConnect**是最简单的连接函数。 它需要数据源名称，并接受可选的用户 ID 和密码。 它适用于对数据源名称进行硬编码且不需要用户 ID 或密码的应用程序。 它也适用于想要控制自己的 "外观" 或没有用户界面的应用程序。 此类应用程序可以使用**SQLDataSources**生成数据源的列表、提示用户输入数据源、用户 ID 和密码，然后调用**SQLConnect**。  
   
- 下面的示例连接到 Northwind 数据库，使用名为 Northwind，DSN，并从所有员工表中的记录中都检索所有名字和姓氏字段。  
+ 下面的示例使用名为 Northwind 的 DSN 连接到 Northwind 数据库，并检索 Employees 表中所有记录的所有名字和姓氏字段。  
   
 ```  
 // Connecting_with_SQLConnect.cpp  

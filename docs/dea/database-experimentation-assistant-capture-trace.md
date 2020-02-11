@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 999fd3f6caca13ecd768a9560915c53c732af27c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 1c87d791d5a5a16ec3b0d07c6a630f133a7f673c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75258536"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76831548"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>在数据库实验助手中捕获跟踪
 
@@ -133,7 +133,7 @@ SQL Server 中的查询缓存可能会影响评估结果。 建议在服务应�
 
 - 运行 SQL Server 的计算机的名称有效。 若要确认，请尝试使用 SQL Server Management Studio （SSMS）连接到运行 SQL Server 的计算机。
 - 防火墙配置不会阻止与运行 SQL Server 的计算机的连接。
-- 用户具有博客发布[重播常见问题解答](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-replay-faq/)中列出的权限。
+- 用户具有[重播常见问题解答](https://docs.microsoft.com/sql/dea/database-experimentation-assistant-replay-trace?view=sql-server-ver15#frequently-asked-questions-about-trace-replay)中列出的权限。
 - 跟踪名称不遵循标准翻转约定（捕获\_1）。 改为尝试跟踪名称（如\_Capture 1A 或 Capture1）。
 
 下面是你可能会看到的一些可能的错误以及解决这些错误的解决方案：

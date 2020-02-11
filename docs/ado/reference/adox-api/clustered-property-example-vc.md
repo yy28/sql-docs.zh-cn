@@ -1,5 +1,5 @@
 ---
-title: Clustered 属性示例 （VC + +） |Microsoft Docs
+title: 聚集属性示例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: b993e357-3e2e-48a7-a627-76909160c97f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 33ef2ac09d81d85c6b9170c84bffbc8491dbd995
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ac845019bf2f8a8582f20adb5d4f8861f622fe44
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966941"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76925496"
 ---
 # <a name="clustered-property-example-vc"></a>Clustered 属性示例 (VC++)
-此示例演示[Clustered](../../../ado/reference/adox-api/clustered-property-adox.md)的属性[索引](../../../ado/reference/adox-api/index-object-adox.md)。 请注意，Microsoft Jet 数据库不支持聚集的索引，因此此示例将返回**False**有关**Clustered**属性中的所有索引*Northwind*数据库。  
+此示例演示[索引](../../../ado/reference/adox-api/index-object-adox.md)的[聚集](../../../ado/reference/adox-api/clustered-property-adox.md)属性。 请注意，Microsoft Jet 数据库不支持聚集索引，因此，此示例将为*Northwind*数据库中的所有索引的**聚集**属性返回**False** 。  
   
 ```  
 // BeginClusteredCpp.cpp  
@@ -82,11 +82,11 @@ void ClusteredX() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in ClusteredX...."<< endl;  
+      cout << "Error occurred in ClusteredX...."<< endl;  
    }  
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [Clustered 的属性 (ADOX)](../../../ado/reference/adox-api/clustered-property-adox.md)   
+## <a name="see-also"></a>另请参阅  
+ [聚集属性（ADOX）](../../../ado/reference/adox-api/clustered-property-adox.md)   
  [索引对象 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)

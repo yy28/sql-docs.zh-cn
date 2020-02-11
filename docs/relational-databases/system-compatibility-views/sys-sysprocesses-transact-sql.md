@@ -21,10 +21,10 @@ ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d9da0f09c2506e0d596a485aee112f9f188b6d12
-ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74947149"
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses (Transact-SQL)
@@ -46,11 +46,11 @@ ms.locfileid: "74947149"
 |waitresource|**nchar （256）**|锁资源的文本化表示法。|  
 |dbid|**smallint**|当前正由进程使用的数据库 ID。|  
 |uid|**smallint**|执行命令的用户 ID。 如果用户数和角色数超过 32,767，则发生溢出或返回 NULL。|  
-|cpu|**整形**|进程的累计 CPU 时间。 无论 SET STATISTICS TIME 选项是 ON 还是 OFF，都为所有进程更新该项。|  
+|cpu|**int**|进程的累计 CPU 时间。 无论 SET STATISTICS TIME 选项是 ON 还是 OFF，都为所有进程更新该项。|  
 |physical_io|**bigint**|进程的累计磁盘读取和写入。|  
-|memusage|**整形**|当前为此进程分配的过程缓存中的页数。 一个负数，表示进程正在释放由另一个进程分配的内存。|  
-|login_time|**型**|客户端进程登录到服务器的时间。|  
-|last_batch|**型**|客户端进程上次执行远程存储过程调用或 EXECUTE 语句的时间。|  
+|memusage|**int**|当前为此进程分配的过程缓存中的页数。 一个负数，表示进程正在释放由另一个进程分配的内存。|  
+|login_time|**datetime**|客户端进程登录到服务器的时间。|  
+|last_batch|**datetime**|客户端进程上次执行远程存储过程调用或 EXECUTE 语句的时间。|  
 |ecid|**smallint**|用于唯一标识代表单个进程进行操作的子线程的执行上下文 ID。|  
 |open_tran|**smallint**|进程的打开事务数。|  
 |status|**nchar （30）**|进程 ID 状态。 可能的值包括：<br /><br /> **** = 睡眠[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]正在重置会话。<br /><br /> **正在运行**= 会话正在运行一个或多个批处理。 多个活动的结果集 (MARS) 启用后，会话可以运行多个批。 有关详细信息，请参阅[使用多个活动的结果集 (MARS)](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)。<br /><br /> **背景**= 会话正在运行一个后台任务，例如死锁检测。<br /><br /> **rollback** = 会话具有正在处理的事务回滚。<br /><br /> **挂起**= 会话正在等待工作线程变为可用。<br /><br /> 可**运行**= 会话中的任务在等待获取时间量程时位于计划程序的可运行队列中。<br /><br /> **spinloop** = 会话中的任务正在等待旋转锁可用。<br /><br /> 已**挂起**= 会话正在等待事件（如 i/o）完成。|  
@@ -66,9 +66,9 @@ ms.locfileid: "74947149"
 |loginame|**nchar （128）**|登录名。|  
 |context_info|**二进制（128）**|使用 SET CONTEXT_INFO 语句存储在批中的数据。|  
 |sql_handle|**二进制（20）**|表示当前正在执行的批或对象。<br /><br /> **注意**此值是从对象的批或内存地址派生的。 通过使用基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 哈希的算法无法计算此值。|  
-|stmt_start|**整形**|为指定 sql_handle 运行当前 SQL 语句的起始偏移量。|  
-|stmt_end|**整形**|所指定 sql_handle 的当前 SQL 语句的结束偏移量。<br /><br /> -1 指出当前语句为指定的 sql_handle 运行到 fn_get_sql 函数返回结果的结尾。|  
-|request_id|**整形**|请求 ID。 用于标识在特定会话中运行的请求。|
+|stmt_start|**int**|为指定 sql_handle 运行当前 SQL 语句的起始偏移量。|  
+|stmt_end|**int**|所指定 sql_handle 的当前 SQL 语句的结束偏移量。<br /><br /> -1 指出当前语句为指定的 sql_handle 运行到 fn_get_sql 函数返回结果的结尾。|  
+|request_id|**int**|请求 ID。 用于标识在特定会话中运行的请求。|
 |page_resource |**binary （8）** |**适用**于：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br /><br /> 如果`waitresource`列包含页，则为页资源的8字节的十六进制表示形式。 |  
   
 ## <a name="remarks"></a>备注  

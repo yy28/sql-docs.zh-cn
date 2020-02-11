@@ -13,25 +13,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a9759134504c7b55f5008783a2e6c3bd9ebf1755
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243222"
 ---
 # <a name="specify-a-breakpoint-filter"></a>指定断点筛选器
   断点筛选器对断点进行限制，使其仅对指定的计算机、操作系统进程和线程执行操作。 断点筛选器通常在调试并行应用程序时使用。  
   
-##  <a name="BKMK_ActionConsiderations"></a>筛选器注意事项  
+##  <a name="BKMK_ActionConsiderations"></a> 筛选器注意事项  
  断点筛选器通常不与 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器结合使用，因为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本和存储过程不是并行应用程序。  
   
 #### <a name="to-specify-a-breakpoint-filter"></a>指定断点筛选器  
   
-1.  在“编辑器”窗口中，右键单击断点符号，然后单击快捷菜单上的“筛选器”****。  
+1.  在“编辑器”窗口中，右键单击断点符号，然后单击快捷菜单上的“筛选器”  。  
   
-     -或者-  
+     -或-  
   
-     在“断点”**** 窗口中，右键单击断点符号，然后单击快捷菜单上的“筛选器”****。  
+     在“断点”  窗口中，右键单击断点符号，然后单击快捷菜单上的“筛选器”  。  
   
 2.  在 **“断点筛选器”** 对话框中，使用 **“筛选器”** 框按名称指定计算机，或者按名称或 ID 编号指定操作系统进程和线程：  
   
@@ -48,5 +48,5 @@ ms.locfileid: "75243222"
   
 ## <a name="see-also"></a>另请参阅  
  [指定断点条件](specify-a-breakpoint-condition.md)   
- [指定命中次数](specify-a-hit-count.md)   
+ [指定命中计数](specify-a-hit-count.md)   
  [指定断点操作](specify-a-breakpoint-action.md)  

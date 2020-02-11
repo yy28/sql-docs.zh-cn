@@ -1,5 +1,5 @@
 ---
-title: 系统表 (Transact-sql) |Microsoft Docs
+title: 系统表（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -23,10 +23,10 @@ ms.assetid: 56b8ad51-930c-4e5c-8d99-8c939d5b70ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 292b6cdce6b2f13445e50f79c956f07eb8d33de7
-ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69903595"
 ---
 # <a name="system-tables-transact-sql"></a>系统表 (Transact-SQL)
@@ -40,29 +40,31 @@ ms.locfileid: "69903595"
   
 -   系统存储过程  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和函数  
+-   
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和函数  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象 (SMO)  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理对象（SMO）  
   
 -   复制管理对象 (RMO)  
   
 -   数据库 API 目录函数  
   
- 这些组件构成一个已发布的 API，用以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 获取系统信息。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 维护这些组件在不同版本间的兼容性。 系统表的格式取决于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内部体系结构，并且可能因不同的版本而异。 因此，直接访问系统表中未记录列的应用程序可能需要进行更改，然后才能访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的更高版本。  
+ 这些组件构成一个已发布的 API，用以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 获取系统信息。 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 维护这些组件在不同版本间的兼容性。 系统表的格式取决于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内部体系结构，并且可能因不同的版本而异。 因此，直接访问系统表中未记录列的应用程序可能需要进行更改，然后才能访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的更高版本。  
   
 ## <a name="in-this-section"></a>本节内容  
  系统表主题按下列功能范围进行组织：  
   
 |||  
 |-|-|  
-|[备份和还原表&#40;transact-sql&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)|[日志传送表 (Transact-SQL)](../../relational-databases/system-tables/log-shipping-tables-transact-sql.md)|  
-|[变更数据捕获表&#40;transact-sql&#41;](../../relational-databases/system-tables/change-data-capture-tables-transact-sql.md)|[复制表 (Transact-SQL)](../../relational-databases/system-tables/replication-tables-transact-sql.md)|  
-|[数据库维护计划表&#40;transact-sql&#41;](../../relational-databases/system-tables/database-maintenance-plan-tables-transact-sql.md)|[SQL Server 代理 Tables &#40;transact-sql&#41;](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)|  
-|[SQL Server 扩展事件表&#40;transact-sql&#41;](../../relational-databases/extended-events/xevents-references-system-objects.md#system-tables)|[sysoledbusers &#40;transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-sysoledbusers-transact-sql.md)|  
-|[Integration Services Tables &#40;transact-sql&#41;](../../relational-databases/system-tables/integration-services-tables-transact-sql.md)|[systranschemas &#40;transact-sql&#41;](../../relational-databases/system-views/systranschemas-transact-sql.md)|  
+|[&#40;Transact-sql&#41;备份和还原表](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)|[日志传送表 (Transact-SQL)](../../relational-databases/system-tables/log-shipping-tables-transact-sql.md)|  
+|[变更数据捕获表 (Transact-SQL)](../../relational-databases/system-tables/change-data-capture-tables-transact-sql.md)|[复制表 (Transact-SQL)](../../relational-databases/system-tables/replication-tables-transact-sql.md)|  
+|[数据库维护计划表 &#40;Transact-sql&#41;](../../relational-databases/system-tables/database-maintenance-plan-tables-transact-sql.md)|[&#40;Transact-sql&#41;的 SQL Server 代理表](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)|  
+|[SQL Server 扩展事件表 (Transact-SQL)](../../relational-databases/extended-events/xevents-references-system-objects.md#system-tables)|[sysoledbusers &#40;Transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-sysoledbusers-transact-sql.md)|  
+|[&#40;Transact-sql&#41;的 Integration Services 表](../../relational-databases/system-tables/integration-services-tables-transact-sql.md)|[systranschemas &#40;Transact-sql&#41;](../../relational-databases/system-views/systranschemas-transact-sql.md)|  
   
-## <a name="see-also"></a>请参阅  
- [兼容性&#40;视图 transact-sql&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [Transact-sql&#41;的兼容性视图 &#40;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

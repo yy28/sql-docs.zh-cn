@@ -17,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f9c887f74e9516702cdd04085483c5b583f10e18
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242640"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>使用 IRow::Open 和 ISequentialStream 提取 BLOB 数据
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  **IRow：： Open**仅支持要打开 DBGUID_STREAM 和 DBGUID_NULL 类型的对象。  
+  IRow::Open 只支持打开 DBGUID_STREAM 和 DBGUID_NULL 对象类型  。  
   
- 以下函数使用 IRow::Open**** 和 ISequentialStream**** 提取大型数据。  
+ 以下函数使用 IRow::Open  和 ISequentialStream  提取大型数据。  
   
 ```cpp
 void InitializeAndExecuteCommand()  
@@ -79,7 +79,7 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
 }  
 ```  
   
- 大型数据可使用 ISequentialStream**** 接口进行绑定或检索。 对于绑定列，状态标志指示是否通过设置 DBSTATUS_S_TRUNCATED 来截断数据。  
+ 大型数据可使用 ISequentialStream  接口进行绑定或检索。 对于绑定列，状态标志指示是否通过设置 DBSTATUS_S_TRUNCATED 来截断数据。  
   
 ## <a name="see-also"></a>另请参阅  
  [使用 IRow 提取 BLOB 数据](https://msdn.microsoft.com/library/badbd6ac-20aa-4891-a14f-48d38e7f30de)  

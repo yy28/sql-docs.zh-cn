@@ -17,10 +17,10 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 35f9cdfcc40d417a6aed19a3abe0e590061b2eb7
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75256006"
 ---
 # <a name="sysdm_exec_query_statistics_xml-transact-sql"></a>sys. dm_exec_query_statistics_xml （Transact-sql）
@@ -38,18 +38,18 @@ sys.dm_exec_query_statistics_xml(session_id)
 *session_id*  
  要查找的批处理的会话 id。 *session_id*为**smallint**。 可以从以下动态管理对象中获取*session_id* ：  
   
--   [sys. dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+-   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
--   [sys. dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)  
+-   [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)  
   
--   [sys. dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)  
+-   [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)  
 
 ## <a name="table-returned"></a>返回的表
 
 |列名|数据类型|说明|  
 |-----------------|---------------|-----------------|
 |session_id|**smallint**|会话的 ID。 不可为 Null。|
-|request_id|**整形**|请求的 ID。 不可为 Null。|
+|request_id|**int**|请求的 ID。 不可为 Null。|
 |sql_handle|**varbinary （64）**|是唯一标识查询所属的批处理或存储过程的标记。 可以为 NULL。|
 |plan_handle|**varbinary （64）**|是一个标记，用于为当前正在执行的批处理唯一标识查询执行计划。 可以为 NULL。|
 |query_plan|**xml**|包含与*plan_handle*包含部分统计信息的查询执行计划的运行时显示计划表示形式。 显示计划的格式为 XML。 为包含即席 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、存储过程调用以及用户定义函数调用等内容的每个批查询生成一个计划。 可以为 NULL。|
@@ -97,6 +97,6 @@ GO
   
 ## <a name="see-also"></a>另请参阅
   [跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
- [动态管理视图和函数 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与数据库相关的动态管理视图 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
 

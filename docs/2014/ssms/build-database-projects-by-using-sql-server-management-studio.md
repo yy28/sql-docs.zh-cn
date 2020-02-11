@@ -16,21 +16,25 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 134ac290601e463063f78a59ea8fd5923d095663
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211267"
 ---
 # <a name="build-database-projects-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 生成数据库项目
-  数据库脚本项目是与数据库或数据库的某一部分关联的一组经过整理的脚本、连接信息和模板。 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供了 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 用于在脚本项目上下文中管理和设计 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 包含设计器、编辑器、指南和向导，可帮助用户开发、部署和维护数据库。  
+  数据库脚本项目是与数据库或数据库的某一部分关联的一组经过整理的脚本、连接信息和模板。 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]提供[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]用于在脚本项目上下文[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中管理和设计数据库的。 
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 包含设计器、编辑器、指南和向导，可帮助用户开发、部署和维护数据库。  
   
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio  
- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 是一套管理工具，用于管理从属于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的组件。 此集成环境使用户可以在一个界面内执行各种任务，例如，备份数据、编辑查询和自动执行常见函数。  
+ 
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 是一套管理工具，用于管理从属于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的组件。 此集成环境使用户可以在一个界面内执行各种任务，例如，备份数据、编辑查询和自动执行常见函数。  
   
- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 包含以下工具：  
+ 
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 包含以下工具：  
   
--   代码编辑器，用于编写和编辑脚本，是一种功能丰富的脚本编辑器。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 提供了四种版本的代码编辑器：针对 [!INCLUDE[ssDE](../includes/ssde-md.md)] 脚本的 [!INCLUDE[tsql](../includes/tsql-md.md)] 查询编辑器、DMX 查询编辑器、MDX 查询编辑器和 XML/A 查询编辑器。  
+-   代码编辑器，用于编写和编辑脚本，是一种功能丰富的脚本编辑器。 
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 提供了四种版本的代码编辑器：针对 [!INCLUDE[ssDE](../includes/ssde-md.md)] 脚本的 [!INCLUDE[tsql](../includes/tsql-md.md)] 查询编辑器、DMX 查询编辑器、MDX 查询编辑器和 XML/A 查询编辑器。  
   
 -   对象资源管理器，用于查找、修改、编写脚本或运行从属于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例的对象。  
   
@@ -40,7 +44,8 @@ ms.locfileid: "68211267"
   
 -   属性窗口，用于显示当前选定对象的属性。  
   
- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 通过提供下列项目支持有效的工作过程：  
+ 
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 通过提供下列项目支持有效的工作过程：  
   
 -   断开连接的访问。 可以编写和编辑脚本，而不用与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例连接。  
   
@@ -59,13 +64,13 @@ ms.locfileid: "68211267"
   
 -   用脚本保存连接信息。  
   
- 解决方案资源管理器是开发人员用来创建和重用与同一项目相关的脚本的一种工具。 如果以后需要类似的任务，就可以使用项目中存储的脚本组。 如果你曾经使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]创建过应用程序，就会发现解决方案资源管理器非常熟悉。  
+ 解决方案资源管理器是开发人员用来创建和重用与同一项目相关的脚本的一种工具。 如果以后需要类似的任务，就可以使用项目中存储的脚本组。 如果使用[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]创建了应用程序，则会发现解决方案资源管理器非常熟悉。  
   
  解决方案由一个或多个脚本项目组成。 项目则由一个或多个脚本或连接组成。 项目中可能还包括非脚本文件。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用 SQL Server Management Studio](../database-engine/use-sql-server-management-studio.md)   
- [查询和文本编辑器&#40;SQL Server Management Studio&#41;](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)   
+ [查询和文本编辑器 &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)   
  [解决方案 (SQL Server Management Studio)](solution/solutions-sql-server-management-studio.md)  
   
   

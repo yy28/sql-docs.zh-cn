@@ -1,5 +1,5 @@
 ---
-title: 作为一个连接对象的方法调用存储过程 |Microsoft Docs
+title: 在连接对象上调用存储过程作为方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,16 +15,16 @@ ms.assetid: 35ffdb79-a931-4271-a3bb-0cd804cf173e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2189bf9b2a82cdf21fdd13ed77a977f6b333ac87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925899"
 ---
 # <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>在连接对象上作为方法调用存储过程
-就像在关联的打开的本机方法，可以调用存储的过程**连接**对象。 它类似于上调用的命名的命令**连接**对象。  
+您可以调用存储过程，就像它是关联打开的**连接**对象上的本机方法一样。 这类似于在**连接**对象上调用命名命令。  
   
- 在 Northwind 示例数据库中，名为 CustOrdersOrders，此处列出再次为方便起见，下面的 Visual Basic 代码示例调用存储的过程。  
+ 下面的 Visual Basic 代码示例调用 Northwind 示例数据库中名为 CustOrdersOrders 的存储过程，该存储过程在此处再次列出以便于方便。  
   
 ```  
 CREATE PROCEDURE CustOrdersOrders @CustomerID nchar(5) AS  
@@ -34,7 +34,7 @@ WHERE CustomerID = @CustomerID
 ORDER BY OrderID  
 ```  
   
- 下面的代码示例演示如何调用存储的过程，就好像在关联的打开的本机方法**连接**对象。  
+ 下面的代码示例演示了如何调用存储过程，就像它是关联打开的**连接**对象上的本机方法一样。  
   
 ```  
 Const DS = "MySQLServer"  
@@ -78,5 +78,5 @@ Set objConn = Nothing
 Set objComm = Nothing  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

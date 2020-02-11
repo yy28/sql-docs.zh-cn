@@ -1,5 +1,5 @@
 ---
-title: ^ （幂） (MDX) |Microsoft Docs
+title: ^ （Power）（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 9b1ebeaca9e81103d2038d6f7a34fe9221cc68f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68055589"
 ---
 # <a name="-power-mdx"></a>^（幂）(MDX)
@@ -27,7 +27,7 @@ ms.locfileid: "68055589"
 Numeric_Expression ^ Numeric_Expression  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *Numeric_Expression*  
  返回数值的有效多维表达式 (MDX) 表达式。  
   
@@ -37,7 +37,7 @@ Numeric_Expression ^ Numeric_Expression
 ## <a name="remarks"></a>备注  
  两个表达式必须具有相同的数据类型，或者其中一个表达式必须能够隐式转换为另一个表达式的数据类型。 如果一个表达式的值为空值，则此运算符返回空值。  
   
-## <a name="see-also"></a>请参阅  
- [MDX 运算符参考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [Mdx 运算符引用 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

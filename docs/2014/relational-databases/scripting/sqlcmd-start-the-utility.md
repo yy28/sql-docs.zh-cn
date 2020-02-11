@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 80f8f63b4ddb3e8641ef503a615d57c63be35164
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243269"
 ---
 # <a name="start-the-sqlcmd-utility"></a>启动 sqlcmd 实用工具
@@ -54,6 +54,6 @@ ms.locfileid: "75243269"
     >  输入的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句存储在缓冲区中。 在遇到 GO 命令时，它们将作为批处理命令执行。  
   
 ## <a name="see-also"></a>另请参阅  
- [使用 sqlcmd 运行 Transact-sql 脚本文件](sqlcmd-run-transact-sql-script-files.md)  
+ [使用 sqlcmd 运行 Transact-SQL 脚本文件](sqlcmd-run-transact-sql-script-files.md)  
   
   

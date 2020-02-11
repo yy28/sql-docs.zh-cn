@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 50b051cf2780fc1a94830c461d9ae30674bb7dad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65481156"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>备份和还原 DQS 数据库
@@ -22,7 +22,7 @@ ms.locfileid: "65481156"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a> 先决条件  
+###  <a name="Prerequisites"></a>先决条件  
   
 -   您必须知道或记住您在 DQS 服务器安装过程中提供的数据库主密钥的密码。  
   
@@ -30,15 +30,15 @@ ms.locfileid: "65481156"
   
 -   确保没有用户已登录 DQS 服务器。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
   
 -   您的 Windows 用户帐户必须为 SQL Server 实例中 sysadmin 固定服务器角色的成员，才能执行备份和还原操作。  
   
 -   您必须具有 DQS_MAIN 数据库的 dqs_administrator 角色，才能终止 DQS 中任何正在运行的活动或停止任何正在运行的过程。  
   
-##  <a name="BackupRestore"></a> 备份和还原 DQS 数据库  
+##  <a name="BackupRestore"></a>备份和还原 DQS 数据库  
   
 1.  启动 Microsoft SQL Server Management Studio 并连接到适当的 SQL Server 实例。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "65481156"
   
 6.  断开与当前 SQL Server 实例的连接，然后连接到要还原这些数据库的 SQL Server 实例。  
   
-7.  还原 DQS_MAIN 数据库。 若要还原的 SQL Server 数据库的分步说明，请参阅[还原数据库备份&#40;SQL Server Management Studio&#41;](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)。  
+7.  还原 DQS_MAIN 数据库。 有关还原 SQL Server 数据库的分步说明，请参阅[还原数据库备份 &#40;SQL Server Management Studio&#41;](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)。  
   
 8.  还原 DQS_PROJECTS 数据库。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "65481156"
   
 10. 在“对象资源管理器”中，右键单击服务器，再单击 **“新建查询”**。  
   
-11. 在“查询编辑器”窗口中，复制以下 SQL 语句，然后将 \<PASSWORD> 替换为在 DQS 安装过程中为数据库主密钥提供的密码：  
+11. 在查询编辑器窗口中，复制以下 SQL 语句，并将* \<password>* 替换为在 DQS 安装过程中为数据库主密钥提供的密码：  
   
     ```  
     USE [DQS_MAIN]  
@@ -72,7 +72,7 @@ ms.locfileid: "65481156"
   
 12. 按 F5 执行这些语句。 检查 **“结果”** 窗格以验证是否已成功执行这些语句。  
   
-## <a name="see-also"></a>请参阅  
- [管理 DQS 数据库](../../2014/data-quality-services/manage-dqs-databases.md)  
+## <a name="see-also"></a>另请参阅  
+ [Manage DQS Databases](../../2014/data-quality-services/manage-dqs-databases.md)  
   
   

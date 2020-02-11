@@ -13,16 +13,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dfaba668e4f2328610656db6a61f01960814bff0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68189515"
 ---
 # <a name="create-a-sql-server-agent-proxy"></a>创建 SQL Server 代理的代理帐户
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建 SQL Server 代理的代理。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的代理帐户定义作业步骤可以运行的安全上下文。 每个代理对应于一个安全凭据。 若要设置特定作业步骤的权限，请创建一个具有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理子系统所需权限的代理，再将该代理分配给该作业步骤。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的代理帐户定义作业步骤可以运行的安全上下文。 每个代理对应于一个安全凭据。 若要设置特定作业步骤的权限，请创建一个具有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理子系统所需权限的代理，再将该代理分配给该作业步骤。  
   
  **本主题内容**  
   
@@ -32,7 +33,7 @@ ms.locfileid: "68189515"
   
      [安全性](#Security)  
   
--   **若要创建 SQL Server 代理的代理帐户，请使用：**  
+-   **创建 SQL Server 代理代理，使用：**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -44,19 +45,21 @@ ms.locfileid: "68189515"
   
 -   如果没有凭据，那么在创建代理之前必须先创建凭据。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的代理帐户使用凭据存储 Windows 用户帐户的相关信息。 凭据中指定的用户必须对正在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机具有“以批处理作业登录”权限。  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的代理帐户使用凭据存储 Windows 用户帐户的相关信息。 凭据中指定的用户必须对正在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机具有“以批处理作业登录”权限。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理检查代理帐户的子系统访问权限，并在每次运行作业步骤时向代理帐户授予访问权限。 如果代理对子系统不再具有访问权限，则作业步骤将失败。 否则，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理将模拟代理帐户中指定的用户并运行作业步骤。  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理检查代理帐户的子系统访问权限，并在每次运行作业步骤时向代理帐户授予访问权限。 如果代理对子系统不再具有访问权限，则作业步骤将失败。 否则，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理将模拟代理帐户中指定的用户并运行作业步骤。  
   
 -   创建代理帐户不会更改凭据中指定的用户对代理帐户具有的权限。 例如，您可以为不具有连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的权限的用户创建代理帐户。 在这种情况下，使用该代理帐户的作业步骤无法连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 -   如果用户的登录帐户具有访问代理帐户的权限，或者用户属于具有访问代理帐户的权限的任何角色，则用户可以在作业步骤中使用代理帐户。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
   
--   只有 **sysadmin** 固定服务器角色的成员才有权创建、修改或删除代理帐户。 必须将不属于 sysadmin 固定服务器角色成员的用户添加到 msdb 数据库中的以下 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理固定数据库角色之一，才能使用代理   ：SQLAgentUserRole、SQLAgentReaderRole 或 SQLAgentOperatorRole    。  
+-   只有 **sysadmin** 固定服务器角色的成员才有权创建、修改或删除代理帐户。 必须将不属于 **sysadmin** 固定服务器角色的成员的用户添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中的以下** 代理固定数据库角色之一，才能使用代理： **SQLAgentUserRole**、 **SQLAgentReaderRole**或 **SQLAgentOperatorRole**。  
   
 -   如果除了代理之外还需要创建凭据，则要求 `ALTER ANY CREDENTIAL` 权限。  
   
@@ -66,9 +69,9 @@ ms.locfileid: "68189515"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开要在 SQL Server 代理上创建代理的服务器。  
   
-2.  单击加号以展开 **“SQL Server 代理”** 。  
+2.  单击加号以展开 **“SQL Server 代理”**。  
   
-3.  右键单击“代理”  文件夹，然后选择“新建代理”  。  
+3.  右键单击“代理”**** 文件夹，然后选择“新建代理”****。  
   
 4.  在 **“新建代理帐户”** 对话框的 **“常规”** 页中，在 **“代理名称”** 框中输入代理帐户的名称。  
   
@@ -117,8 +120,8 @@ ms.locfileid: "68189515"
   
 -   [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)  
   
--   [sp_add_proxy &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-proxy-transact-sql)  
+-   [sp_add_proxy &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-proxy-transact-sql)  
   
--   [sp_grant_proxy_to_subsystem &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql)  
+-   [sp_grant_proxy_to_subsystem &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql)  
   
   

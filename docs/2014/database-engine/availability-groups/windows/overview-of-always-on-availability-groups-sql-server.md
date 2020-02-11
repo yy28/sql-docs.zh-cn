@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a047a41769467d243b146f304c71662328b50cfb
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228752"
 ---
 # <a name="overview-of-alwayson-availability-groups-sql-server"></a>AlwaysOn 可用性组概述 (SQL Server)
@@ -105,7 +105,7 @@ ms.locfileid: "75228752"
   
  有关详细信息，请参阅[故障转移和故障转移模式（AlwaysOn 可用性组）](failover-and-failover-modes-always-on-availability-groups.md)。  
   
-##  <a name="ClientConnections"></a>客户端连接  
+##  <a name="ClientConnections"></a> 客户端连接  
  您可以通过创建一个可用性组侦听器来提供到给定可用性组的主副本的客户端连接。 “可用性组侦听器” ** 提供一组附加到给定可用性组的资源，以便将客户端连接定向到相应的可用性副本。  
   
  一个可用性组侦听器与一个唯一的 DNS 名称（用作虚拟网络名称 (VNN)）、一个或多个虚拟 IP 地址 (VIP) 和一个 TCP 端口号关联。 有关详细信息，请参阅 [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../listeners-client-connectivity-application-failover.md)概念。  
@@ -142,11 +142,11 @@ ms.locfileid: "75228752"
   
  有关详细信息，请参阅[自动页修复（适用于可用性组和数据库镜像）](../../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)。  
   
-##  <a name="RelatedTasks"></a>相关任务  
+##  <a name="RelatedTasks"></a> 相关任务  
   
 -   [入门 AlwaysOn 可用性组 &#40;SQL Server&#41;](getting-started-with-always-on-availability-groups-sql-server.md)  
   
-##  <a name="RelatedContent"></a>相关内容  
+##  <a name="RelatedContent"></a> 相关内容  
   
 -   **博客**  
   
@@ -180,5 +180,5 @@ ms.locfileid: "75228752"
  [&#40;SQL Server&#41;创建和配置可用性组](creation-and-configuration-of-availability-groups-sql-server.md)   
  [活动辅助副本：可读辅助副本 &#40;AlwaysOn 可用性组&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [活动辅助副本：辅助副本上的备份 &#40;AlwaysOn 可用性组&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
- [可用性组侦听器、客户端连接和应用程序故障转移 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)  
+ [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../listeners-client-connectivity-application-failover.md)  
   

@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 0649e167ebaa90267422594ccd193ba468838e6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68187290"
 ---
 # <a name="reading-the-data-in-a-table-tutorial"></a>读取表中的数据（教程）
@@ -86,7 +86,7 @@ ms.locfileid: "68187290"
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [摘要：创建数据库对象](lesson-1-5-summary-creating-database-objects.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SELECT (Transact-SQL)](/sql/t-sql/queries/select-transact-sql)  
   
   

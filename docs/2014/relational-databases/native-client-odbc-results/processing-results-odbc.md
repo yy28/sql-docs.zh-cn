@@ -1,5 +1,5 @@
 ---
-title: 处理结果 (ODBC) |Microsoft Docs
+title: 处理结果（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cb490ab23d146dc8131c16e22b0d63f07b79d482
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68207041"
 ---
 # <a name="processing-results-odbc"></a>处理结果 (ODBC)
@@ -30,13 +30,13 @@ ms.locfileid: "68207041"
   
  ODBC 目录函数也可以检索数据。 例如， [SQLColumns](../native-client-odbc-api/sqlcolumns.md)检索有关数据源中的列的数据。 这些结果集可以包含零行或更多行。  
   
- 其他 SQL 语句（如 GRANT 或 REVOKE）不返回结果集。 对于这些语句的返回代码**SQLExecute**或**SQLExecDirect**通常是唯一的指示该语句已成功。  
+ 其他 SQL 语句（如 GRANT 或 REVOKE）不返回结果集。 对于这些语句，从**SQLExecute**或**SQLExecDirect**返回的代码通常是语句成功的唯一指示。  
   
- 每个 INSERT、UPDATE 和 DELETE 语句均返回一个仅包含受修改影响的行数的结果集。 此计数由可用时应用程序调用[SQLRowCount](../native-client-odbc-api/sqlrowcount.md)。 ODBC 3。*x*应用程序必须调用**SQLRowCount**若要检索的结果设置或[SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md)取消它。 如果应用程序执行批处理或包含多个 INSERT、 UPDATE 或 DELETE 语句的存储的过程，必须使用处理来自每个修改语句的结果集**SQLRowCount**或取消使用**SQLMoreResults**。 通过在批处理或存储过程中包含 SET NOCOUNT ON 语句，可以取消这些计数。  
+ 每个 INSERT、UPDATE 和 DELETE 语句均返回一个仅包含受修改影响的行数的结果集。 当应用程序调用[SQLRowCount](../native-client-odbc-api/sqlrowcount.md)时，此计数可用。 ODBC 3。*x*应用程序必须调用**SQLRowCount**来检索结果集，或[SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md)将其取消。 当应用程序执行包含多个 INSERT、UPDATE 或 DELETE 语句的批处理或存储过程时，必须使用**SQLRowCount**处理每个修改语句的结果集，或使用**SQLMoreResults**来取消结果集。 通过在批处理或存储过程中包含 SET NOCOUNT ON 语句，可以取消这些计数。  
   
- Transact-SQL 包括 SET NOCOUNT 语句。 当 NOCOUNT 选项设置上时，SQL Server 不返回受语句影响的行的计数和**SQLRowCount**返回 0。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序版本引入了驱动程序特定[SQLGetStmtAttr](../native-client-odbc-api/sqlgetstmtattr.md)选项 SQL_SOPT_SS_NOCOUNT_STATUS，用以报告 NOCOUNT 选项是开还是关。 随时**SQLRowCount**返回 0，应用程序应测试 SQL_SOPT_SS_NOCOUNT_STATUS。 如果返回 SQL_NC_ON，从 0 的值**SQLRowCount**仅指示 SQL Server 尚未返回行计数。 如果返回 SQL_NC_OFF，则表示 NOCOUNT 为 off 的 0 值和**SQLRowCount**指示语句未影响任何行。 应用程序不应显示的值**SQLRowCount**当 SQL_SOPT_SS_NOCOUNT_STATUS 为 SQL_NC_OFF 时。 大型批处理或存储过程可能包含多个 SET NOCOUNT 语句，因此程序员不能假定 SQL_SOPT_SS_NOCOUNT_STATUS 保持不变。 每次都应测试选项**SQLRowCount**返回 0。  
+ Transact-SQL 包括 SET NOCOUNT 语句。 当 NOCOUNT 选项设置为 on 时，SQL Server 不返回受语句影响的行数， **SQLRowCount**返回0。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序版本引入了特定于驱动程序的[SQLGetStmtAttr](../native-client-odbc-api/sqlgetstmtattr.md)选项 SQL_SOPT_SS_NOCOUNT_STATUS，以报告 NOCOUNT 选项是打开还是关闭。 无论何时**SQLRowCount**返回0，应用程序都应测试 SQL_SOPT_SS_NOCOUNT_STATUS。 如果返回 SQL_NC_ON，则**SQLRowCount**的值将仅指示 SQL Server 未返回行计数。 如果返回 SQL_NC_OFF，则表示 NOCOUNT 为 OFF，0与**SQLRowCount**的值指示该语句不会影响任何行。 SQL_NC_OFF SQL_SOPT_SS_NOCOUNT_STATUS 时，应用程序不应显示**SQLRowCount**的值。 大型批处理或存储过程可能包含多个 SET NOCOUNT 语句，因此程序员不能假定 SQL_SOPT_SS_NOCOUNT_STATUS 保持不变。 每次**SQLRowCount**返回0时，应测试该选项。  
   
- 有若干其他 Transact-SQL 语句在消息中而不是在结果集中返回它们的值。 当[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序收到这些消息时，它将返回 SQL_SUCCESS_WITH_INFO 以使应用程序了解信息性消息可用。 然后，应用程序可以调用**SQLGetDiagRec**来检索这些消息。 以这种方式工作的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句如下：  
+ 有若干其他 Transact-SQL 语句在消息中而不是在结果集中返回它们的值。 当[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序收到这些消息时，它将返回 SQL_SUCCESS_WITH_INFO，让应用程序知道提供信息性消息。 然后，应用程序可以调用**SQLGetDiagRec**来检索这些消息。 以这种方式工作的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句如下：  
   
 -   DBCC  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68207041"
   
 -   RAISERROR  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序的 RAISERROR 严重性为 11 或更高版本将返回 SQL_ERROR。 如果 RAISERROR 的严重性级别为 19 或更高，则连接也会断开。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序在严重性为11或更高的 RAISERROR 上返回 SQL_ERROR。 如果 RAISERROR 的严重性级别为 19 或更高，则连接也会断开。  
   
  为了处理 SQL 语句产生的结果集，应用程序会执行以下操作：  
   
@@ -64,20 +64,20 @@ ms.locfileid: "68207041"
   
 ## <a name="in-this-section"></a>本节内容  
   
--   [确定结果集的特征&#40;ODBC&#41;](determining-the-characteristics-of-a-result-set-odbc.md)  
+-   [确定结果集的特征 &#40;ODBC&#41;](determining-the-characteristics-of-a-result-set-odbc.md)  
   
--   [分配存储](assigning-storage.md)  
+-   [分配存储区](assigning-storage.md)  
   
 -   [提取结果数据](fetching-result-data.md)  
   
--   [映射数据类型&#40;ODBC&#41;](mapping-data-types-odbc.md)  
+-   [将数据类型映射 &#40;ODBC&#41;](mapping-data-types-odbc.md)  
   
 -   [数据类型用法](data-type-usage.md)  
   
 -   [字符数据的自动转换](autotranslation-of-character-data.md)  
   
-## <a name="see-also"></a>请参阅  
- [SQL Server 本机客户端&#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)   
- [处理结果操作指南主题&#40;ODBC&#41;](../../database-engine/dev-guide/processing-results-how-to-topics-odbc.md)  
+## <a name="see-also"></a>另请参阅  
+ [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)   
+ [处理结果操作指南主题 &#40;ODBC&#41;](../../database-engine/dev-guide/processing-results-how-to-topics-odbc.md)  
   
   

@@ -33,10 +33,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a71a5c756953c6b70e51422b5c1032b117eb7785
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75246713"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>SQL Server XML 大容量加载对象模型 (SQLXML 4.0)
@@ -47,7 +47,7 @@ ms.locfileid: "75246713"
  执行  
  通过使用作为参数提供的架构文件和数据文件（或流），大容量加载数据。  
   
-## <a name="properties"></a>“属性”  
+## <a name="properties"></a>属性  
  BulkLoad  
  指定是否应执行大容量加载。 如果只想生成架构（请参阅后面的 SchemaGen、SGDropTables 和 SGUseID 属性）而不执行大容量加载，则此属性很有用。 此属性是一个布尔属性。 当此属性设置为 TRUE 时，XML 大容量加载将执行。 当此属性设置为 FALSE 时，XML 大容量加载将不执行。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "75246713"
  在此属性设置为 TRUE 时，XML 大容量加载检查每个插入的值的约束（这意味着约束冲突将导致错误）。  
   
 > [!NOTE]  
->  若要将此属性保留为 "FALSE"，您必须对目标表具有**ALTER TABLE**权限。 有关详细信息，请参阅 [ALTER TABLE (Transact-SQL)](../../../t-sql/statements/alter-table-transact-sql.md)。  
+>  若要将此属性保留为 "FALSE"，您必须对目标表具有**ALTER TABLE**权限。 有关详细信息，请参阅[ALTER TABLE &#40;transact-sql&#41;](../../../t-sql/statements/alter-table-transact-sql.md)。  
   
  默认值为 FALSE。 在该值设置为 FALSE 时，XML 大容量加载在插入操作期间将忽略这些约束。 在当前实现中，您必须按照映射架构中的主键和外键关系的顺序定义表。 也就是说，具有主键的表必须在具有外键的相应表之前定义；否则，XML 大容量加载将失败。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "75246713"
  在设置为 TRUE 时，在插入操作期间触发器将照常触发。  
   
 > [!NOTE]  
->  若要将此属性保留为 "FALSE"，您必须对目标表具有**ALTER TABLE**权限。 有关详细信息，请参阅 [ALTER TABLE (Transact-SQL)](../../../t-sql/statements/alter-table-transact-sql.md)。  
+>  若要将此属性保留为 "FALSE"，您必须对目标表具有**ALTER TABLE**权限。 有关详细信息，请参阅[ALTER TABLE &#40;transact-sql&#41;](../../../t-sql/statements/alter-table-transact-sql.md)。  
   
  请注意，如果 ID 传播正在进行，则此选项不适用并且触发器将保持。 这将在 `KeepIdentity=False` 并且存在定义的关系（即，父级是标识字段并且在生成子级时值将提供给子级）发生。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "75246713"
  此属性的值适用于在大容量加载中涉及的所有列。 默认值为 TRUE。  
   
 > [!NOTE]  
->  若要将此属性保留为 TRUE，您必须对目标表具有**ALTER TABLE**权限。 否则，它必须设置为 FALSE 的值。 有关详细信息，请参阅 [ALTER TABLE (Transact-SQL)](../../../t-sql/statements/alter-table-transact-sql.md)。  
+>  若要将此属性保留为 TRUE，您必须对目标表具有**ALTER TABLE**权限。 否则，它必须设置为 FALSE 的值。 有关详细信息，请参阅[ALTER TABLE &#40;transact-sql&#41;](../../../t-sql/statements/alter-table-transact-sql.md)。  
   
  KeepNulls  
  指定哪些值将用于在 XML 文档中缺少相应属性或子元素的列。 此属性是一个布尔属性。 当此属性设置为 TRUE 时，XML 大容量加载将 Null 值分配给该列。 它并不分配在服务器上设置的该列的默认值（如果有）。 此属性的值适用于在大容量加载中涉及的所有列。  

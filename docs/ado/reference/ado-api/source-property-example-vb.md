@@ -1,5 +1,5 @@
 ---
-title: 源属性示例 (VB) |Microsoft Docs
+title: Source 属性示例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 7c83eb01-71c7-4c5d-9778-6270471c8164
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5161dc2aa0a0a213095a160cf0473c138cdf2cf5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930910"
 ---
 # <a name="source-property-example-vb"></a>Source 属性示例 (VB)
-此示例演示[源](../../../ado/reference/ado-api/source-property-ado-recordset.md)通过打开三个属性[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象基于不同的数据源。  
+此示例通过打开基于不同数据源的三个[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象来演示[源](../../../ado/reference/ado-api/source-property-ado-recordset.md)属性。  
   
 ```  
 'BeginSourceVB  
@@ -126,6 +126,6 @@ End Sub
 'EndSourceVB  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+## <a name="see-also"></a>另请参阅  
+ [Recordset 对象（ADO）](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Source 属性（ADO 记录集）](../../../ado/reference/ado-api/source-property-ado-recordset.md)

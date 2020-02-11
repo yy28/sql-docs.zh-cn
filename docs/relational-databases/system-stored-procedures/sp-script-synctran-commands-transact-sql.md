@@ -1,5 +1,5 @@
 ---
-title: sp_script_synctran_commands (TRANSACT-SQL) |Microsoft Docs
+title: sp_script_synctran_commands （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ ms.assetid: f132694a-dd05-405b-9d84-21acce9e564a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d7caca72f684dfb6428361a4550860b3bea3f273
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68126413"
 ---
-# <a name="spscriptsynctrancommands-transact-sql"></a>sp_script_synctran_commands (Transact-SQL)
+# <a name="sp_script_synctran_commands-transact-sql"></a>sp_script_synctran_commands (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  生成一个包含脚本**sp_addsynctrigger**将应用于在订阅服务器上的可更新订阅的调用。 还有一个**sp_addsynctrigger**调用每篇文章中发布。 在生成的脚本还包含**sp_addqueued_artinfo**创建的调用**MSsubsciption_articles**处理排队的发布所需的表。 在发布服务器上对发布数据库执行此存储的过程。  
+  生成一个脚本，该脚本包含要应用于可更新订阅的订阅服务器上的**sp_addsynctrigger**调用。 对于发布中的每个项目，都有一个**sp_addsynctrigger**调用。 生成的脚本还包含创建处理已排队发布所需的**MSsubsciption_articles**表的**sp_addqueued_artinfo**调用。 此存储过程在发布服务器上对发布数据库执行。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,27 +38,27 @@ sp_script_synctran_commands [@publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publication = ] 'publication'` 是要为其编写脚本的名称。 *发布*是**sysname**，无默认值。  
+`[ @publication = ] 'publication'`要编写脚本的发布的名称。 *发布*为**sysname**，无默认值。  
   
-`[ @article = ] 'article'` 是要为其编写脚本的名称。 *文章*是**sysname**，默认值为**所有**，表示指定的所有项目都写入脚本。  
+`[ @article = ] 'article'`要编写脚本的项目的名称。 *项目*的默认值为**sysname**，默认值为**all**，表示为所有项目编写脚本。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** （成功）或**1** （失败）  
   
 ## <a name="results-set"></a>结果集  
- **sp_script_synctran_commands**返回一个结果集包含单个**nvarchar(4000)** 列。 该结果集构成的完整脚本创建这两项所需**sp_addsynctrigger**并**sp_addqueued_artinfo**调用要应用于订阅服务器。  
+ **sp_script_synctran_commands**返回由单个**nvarchar （4000）** 列组成的结果集。 结果集构成了创建要在订阅服务器上应用的**sp_addsynctrigger**和**sp_addqueued_artinfo**调用所需的完整脚本。  
   
 ## <a name="remarks"></a>备注  
- **sp_script_synctran_commands**快照和事务复制中使用。  
+ **sp_script_synctran_commands**用于快照复制和事务复制。  
   
  **sp_addqueued_artinfo**用于排队的可更新订阅。  
   
 ## <a name="permissions"></a>权限  
- 只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_script_synctran_commands**。  
+ 只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_script_synctran_commands**。  
   
-## <a name="see-also"></a>请参阅  
- [sp_addsynctriggers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsynctriggers-transact-sql.md)   
- [sp_addqueued_artinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addqueued-artinfo-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [sp_addsynctriggers &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsynctriggers-transact-sql.md)   
+ [sp_addqueued_artinfo &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addqueued-artinfo-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

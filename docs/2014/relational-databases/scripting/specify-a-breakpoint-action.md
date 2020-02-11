@@ -14,18 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 08df1a4c00bf3b019cf45f168aeeaaf27fdb751c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243237"
 ---
 # <a name="specify-a-breakpoint-action"></a>指定断点操作
-  命中操作**时**的断点指定[!INCLUDE[tsql](../../includes/tsql-md.md)]调试器对断点执行的自定义任务。 如果达到指定的命中计数并满足所有指定的断点条件，则调试器将执行为断点指定的操作。  
+  断点 **“命中条件”** 操作指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器针对某个断点执行的自定义任务。 如果达到指定的命中计数并满足所有指定的断点条件，则调试器将执行为断点指定的操作。  
   
-##  <a name="BKMK_ActionConsiderations"></a>操作注意事项  
- 当命中计数和断点条件都得到满足时，断点的默认操作为中断执行。 
-  **调试器中** “命中条件” [!INCLUDE[tsql](../../includes/tsql-md.md)] 操作的主要用途是通过指定打印消息，将信息打印到调试器的 **“输出”** 窗口。  
+##  <a name="BKMK_ActionConsiderations"></a> 操作注意事项  
+ 当命中计数和断点条件都得到满足时，断点的默认操作为中断执行。 **调试器中** “命中条件” [!INCLUDE[tsql](../../includes/tsql-md.md)] 操作的主要用途是通过指定打印消息，将信息打印到调试器的 **“输出”** 窗口。  
   
  打印消息在 **“打印消息”** 选项中指定并被指定为一个文本字符串，其中包含的表达式包括正在调试的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中的信息。 表达式包括：  
   
@@ -49,18 +48,17 @@ ms.locfileid: "75243237"
   
 #### <a name="to-specify-a-when-hit-action"></a>指定命中条件操作  
   
-1.  在编辑器窗口中，右键单击断点符号，然后在快捷菜单上单击“命中条件”****。  
+1.  在编辑器窗口中，右键单击断点符号，然后在快捷菜单上单击“命中条件”  。  
   
-     -或者-  
+     -或-  
   
-     在“断点”**** 窗口中，右键单击断点符号，然后在快捷菜单上单击“命中条件”****。  
+     在“断点”  窗口中，右键单击断点符号，然后在快捷菜单上单击“命中条件”  。  
   
 2.  在 **“当命中断点时”** 对话框中，选择您需要的行为：  
   
     1.  选择 **“打印消息”** ，以便当命中断点时在调试器的输出窗口中打印消息。  
   
-    2.  
-  **“运行宏”** 选项不可用于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器中而呈灰显状态。  
+    2.  **“运行宏”** 选项不可用于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器中而呈灰显状态。  
   
     3.  如果您不想暂停执行断点，请选择 **“继续执行”** 。 仅当选择了 **“打印消息”** 选项时，此选项才可用。  
   

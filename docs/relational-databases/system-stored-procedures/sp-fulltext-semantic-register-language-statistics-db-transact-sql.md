@@ -1,5 +1,5 @@
 ---
-title: sp_fulltext_semantic_register_language_statistics_db (TRANSACT-SQL) |Microsoft Docs
+title: sp_fulltext_semantic_register_language_statistics_db （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,20 +18,20 @@ ms.assetid: bef1b104-5a44-4327-9ae4-45eae3000f7e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 59cf70574a73827887542221f556e65e46090395
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124214"
 ---
-# <a name="spfulltextsemanticregisterlanguagestatisticsdb-transact-sql"></a>sp_fulltext_semantic_register_language_statistics_db (Transact-SQL)
+# <a name="sp_fulltext_semantic_register_language_statistics_db-transact-sql"></a>sp_fulltext_semantic_register_language_statistics_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的当前实例中注册预先填充的语义语言统计数据库。  
   
  仅在已附加此语言统计数据库并使用此存储过程注册该数据库后，才能启动语义提取。 只需对每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例执行一次此任务。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,11 +42,11 @@ GO
 ```  
   
 ##  <a name="Arguments"></a> 参数  
- [ @dbname = ] '*database_name*'  
- 要为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的当前实例注册的语义语言统计数据库的名称。 必须已经附加数据库。 *database_name*是**sysname**，且不能为 NULL。  
+ [ @dbname = ]"*database_name*"  
+ 要为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的当前实例注册的语义语言统计数据库的名称。 必须已经附加数据库。 *database_name* **sysname**，并且不能为 NULL。  
   
 ## <a name="return-code-value"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** （成功）或**1** （失败）  
   
 ## <a name="result-set"></a>结果集  
  无。  
@@ -54,7 +54,7 @@ GO
 ## <a name="general-remarks"></a>一般备注  
  语义语言统计数据库包含对文本内容进行语义处理时所需的与语言相关的统计信息。  
   
- **sp_fulltext_semantic_register_language_statistics_db**将执行以下步骤：  
+ **sp_fulltext_semantic_register_language_statistics_db**执行以下步骤：  
   
 1.  检查 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的版本是否支持语义处理。  
   
@@ -73,7 +73,7 @@ GO
  有关详细信息，请参阅 [安装和配置语义搜索](../../relational-databases/search/install-and-configure-semantic-search.md)。  
   
 ## <a name="metadata"></a>元数据  
- 实例上安装了语义语言统计数据库有关的信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，查询目录视图[sys.fulltext_semantic_language_statistics_database &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)。  
+ 有关实例上安装的语义语言统计信息数据库的信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请查询目录视图[Fulltext_semantic_language_statistics_database sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)。  
   
 ## <a name="security"></a>安全性  
   
@@ -81,14 +81,14 @@ GO
  需要具有 CONTROL SERVER 权限。  
   
 ## <a name="examples"></a>示例  
- 下面的示例演示如何通过调用注册语义语言统计数据库**sp_fulltext_semantic_register_language_statistics_db**。  
+ 下面的示例演示如何通过调用**sp_fulltext_semantic_register_language_statistics_db**来注册语义语言统计信息数据库。  
   
 ```sql  
 EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = 'semanticsDb';  
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [安装和配置语义搜索](../../relational-databases/search/install-and-configure-semantic-search.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_nodes_columns (TRANSACT-SQL) |Microsoft Docs
+title: sys. pdw_nodes_columns （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,28 +13,28 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 201af9001703bb8f1dfbdaf2c41151697b945df3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68059406"
 ---
-# <a name="syspdwnodescolumns-transact-sql"></a>sys.pdw_nodes_columns (Transact-SQL)
+# <a name="syspdw_nodes_columns-transact-sql"></a>sys. pdw_nodes_columns （Transact-sql）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   显示用户定义表和用户定义视图的列。  
   
-|列名|数据类型|描述|范围|  
+|列名|数据类型|说明|范围|  
 |-----------------|---------------|-----------------|-----------|  
 |object_id|**int**|此列所属对象的 ID。||  
-|name|**sysname**|列的名称。 对象中是唯一的。||  
-|column_id|**int**|列的 ID。 对象中是唯一的。||  
-|system_type_id|**tinyint**|系统类型的列的 ID。||  
+|name|**sysname**|列的名称。 对象中唯一的。||  
+|column_id|**int**|列的 ID。 对象中唯一的。||  
+|system_type_id|**tinyint**|列的系统类型的 ID。||  
 |user_type_id|**int**|用户定义的列类型的 ID。||  
-|max_length|**smallint**|列的最大长度（字节）。|包括对不受支持的列类型 （无效）-1。|  
-|精度|**tinyint**|如果基于数值; 列的精度否则为为 0。||  
-|小数位数|**tinyint**|如果基于数值，则为列的小数位数；否则为 0。||  
-|collation_name|**sysname**|如果基于字符的; 的列的排序规则名称否则，为 NULL。||  
+|max_length|**smallint**|列的最大长度（字节）。|对于不受支持的列类型，包含-1 （无效）。|  
+|精度|**tinyint**|如果基于数值，则为该列的精度；否则为 0。||  
+|scale|**tinyint**|如果基于数值，则为列的小数位数；否则为 0。||  
+|collation_name|**sysname**|如果基于字符，则为该列排序规则的名称；否则为 NULL。||  
 |is_nullable|**bit**|1 = 列可为空。||  
 |is_ansi_padded|**bit**|1 = 如果列为字符、二进制或变量类型，则该列使用 ANSI_PADDING ON 行为。|始终为 0。|  
 |is_rowguidcol|**bit**|1 = 列为声明的 ROWGUIDCOL。|始终为 0。|  
@@ -44,20 +44,20 @@ ms.locfileid: "68059406"
 |is_replicated|**bit**|1 = 列已复制。|始终为 0。|  
 |is_non_sql_subscribed|**bit**|1 = 列具有非 SQL 订阅服务器。|始终为 0。|  
 |is_merge_published|**bit**|1 = 列已合并发布。|始终为 0。|  
-|is_dts_replicated|**bit**|1 = 列通过使用 SSIS 进行复制。|始终为 0。|  
+|is_dts_replicated|**bit**|1 = 使用 SSIS 复制列。|始终为 0。|  
 |is_xml_document|**bit**|1 = 内容为完整的 XML 文档。|始终为 0。|  
 |xml_collection_id|**int**|0 = 没有 XML 架构集合。|始终为 0。|  
-|default_object_id|**int**|默认对象; ID0 = 无默认值。|始终为 0。|  
+|default_object_id|**int**|默认对象的 ID;0 = 无默认值。|始终为 0。|  
 |rule_object_id|**int**|绑定到列的独立规则的 ID。 <br />0 = 无独立规则。|始终为 0。|  
 |is_sparse|**bit**|1 = 列为稀疏列。|始终为 0。|  
 |is_column_set|**bit**|1 = 列为列集。|始终为 0。|  
-|pdw_node_id|**int**|唯一标识符[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]节点。|NOT NULL|  
+|pdw_node_id|**int**|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]节点的唯一标识符。|NOT NULL|  
   
 ## <a name="permissions"></a>权限  
  需要 CONTROL SERVER 权限。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL 数据仓库和并行数据仓库目录视图](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
- [sys.all_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)  
+ [sys. all_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)  
   
   

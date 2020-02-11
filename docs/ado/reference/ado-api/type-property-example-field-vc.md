@@ -1,5 +1,5 @@
 ---
-title: 键入属性示例 （字段） （VC + +） |Microsoft Docs
+title: Type 属性示例（字段）（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8e166b4c7517a6901bb383629821daebe56984a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67936654"
 ---
 # <a name="type-property-example-field-vc"></a>Type 属性示例（字段）(VC++)
-此示例演示[类型](../../../ado/reference/ado-api/type-property-ado.md)通过显示的值相对应的常数的名称的属性**类型**属性的所有[字段](../../../ado/reference/ado-api/field-object.md)中的对象***员工***表。 若要运行此过程需要 FieldType 函数。  
+此示例通过显示与***Employees***表中所有[Field](../../../ado/reference/ado-api/field-object.md)对象的**Type**属性值相对应的常量的名称，演示了[type](../../../ado/reference/ado-api/type-property-ado.md)属性。 运行此过程需要 FieldType 函数。  
   
 ## <a name="example"></a>示例  
   
@@ -155,21 +155,21 @@ void PrintComError(_com_error &e) {
   
  **Employee 表中的字段：**  
  **名称： emp_id**  
- **类型： 每**  
+ **类型： adChar**  
  **名称： fname**  
- **类型： 以便您可以排除**  
+ **类型： adVarChar**  
  **名称： minit**  
- **类型： 每**  
+ **类型： adChar**  
  **名称： lname**  
- **类型： 以便您可以排除**  
+ **类型： adVarChar**  
  **名称： job_id**  
  **类型： adSmallInt**  
  **名称： job_lvl**  
  **类型： adUnsignedTinyInt**  
  **名称： pub_id**  
- **类型： 每**  
+ **类型： adChar**  
  **名称： hire_date**  
  **类型： adDBTimeStamp**   
-## <a name="see-also"></a>请参阅  
- [字段对象](../../../ado/reference/ado-api/field-object.md)   
+## <a name="see-also"></a>另请参阅  
+ [Field 对象](../../../ado/reference/ado-api/field-object.md)   
  [Type 属性 (ADO)](../../../ado/reference/ado-api/type-property-ado.md)

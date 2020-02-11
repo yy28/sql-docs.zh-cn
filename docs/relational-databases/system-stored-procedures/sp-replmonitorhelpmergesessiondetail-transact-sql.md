@@ -17,10 +17,10 @@ ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b5e29916d4dc8419311c9639cc5321b1cf391940
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75321614"
 ---
 # <a name="sp_replmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "75321614"
 
   返回有关特定复制合并代理会话的项目级详细信息，该会话用于监视合并复制。 结果集包括在会话过程中被同步的每个项目的详细信息行。 另外还包括提供会话初始化的行以及汇总上载和下载会话阶段的行。 此存储过程针对分发服务器的分发数据库或订阅服务器的订阅数据库执行。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [transact-sql 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,19 +44,19 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**PhaseID**|**整形**|同步会话的阶段，可以是下列值之一：<br /><br /> **0** = 初始化或汇总行<br /><br /> **1** = 上载<br /><br /> **2** = 下载|  
+|**PhaseID**|**int**|同步会话的阶段，可以是下列值之一：<br /><br /> **0** = 初始化或汇总行<br /><br /> **1** = 上载<br /><br /> **2** = 下载|  
 |**ArticleName**|**sysname**|被同步的项目的名称。 **ArticleName**还包含结果集中不表示项目详细信息的行的汇总信息。|  
-|**完成**|**式**|指示当前正在运行或已失败的会话中，给定的项目详细信息行中应用的全部更改的百分比。|  
-|**RelativeCost**|**式**|指示同步项目所花时间占会话的同步总时间的百分比。|  
-|**持续时间**|**整形**|代理会话的长度。|  
-|**插入**|**整形**|会话中的插入数。|  
-|**更新**|**整形**|会话中的更新数。|  
-|**清除**|**整形**|会话中的删除数。|  
-|**冲突**|**整形**|会话中发生的冲突数。|  
-|**ErrorID**|**整形**|会话错误的 ID。|  
-|**SeqNo**|**整形**|结果集中会话的顺序。|  
-|**RowType**|**整形**|指示结果集中的每一行所提供的信息类型。<br /><br /> **0** = 初始化<br /><br /> **1** = 上载摘要<br /><br /> **2** = 项目上传详细信息<br /><br /> **3** = 下载摘要<br /><br /> **4** = 项目下载详细信息|  
-|**SchemaChanges**|**整形**|会话中的架构更改数。|  
+|**完成**|**Decimal**|指示当前正在运行或已失败的会话中，给定的项目详细信息行中应用的全部更改的百分比。|  
+|**RelativeCost**|**Decimal**|指示同步项目所花时间占会话的同步总时间的百分比。|  
+|**Duration**|**int**|代理会话的长度。|  
+|**Inserts**|**int**|会话中的插入数。|  
+|**更新**|**int**|会话中的更新数。|  
+|**Deletes**|**int**|会话中的删除数。|  
+|**冲突**|**int**|会话中发生的冲突数。|  
+|**ErrorID**|**int**|会话错误的 ID。|  
+|**SeqNo**|**int**|结果集中会话的顺序。|  
+|**RowType**|**int**|指示结果集中的每一行所提供的信息类型。<br /><br /> **0** = 初始化<br /><br /> **1** = 上载摘要<br /><br /> **2** = 项目上传详细信息<br /><br /> **3** = 下载摘要<br /><br /> **4** = 项目下载详细信息|  
+|**SchemaChanges**|**int**|会话中的架构更改数。|  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  

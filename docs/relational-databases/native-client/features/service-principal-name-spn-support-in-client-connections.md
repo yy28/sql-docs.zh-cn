@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dd5de2c8ebb163fce7287f49df35c2bc5e88f438
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75247425"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>客户端连接中的服务主体名称 (SPN) 支持
@@ -37,7 +37,7 @@ ms.locfileid: "75247425"
 >  只有在使用 Windows 集成安全性进行连接时，才使用客户端应用程序指定的 SPN。  
   
 > [!TIP]  
->  ** [!INCLUDE[msCoName](../../../includes/msconame-md.md)]的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] kerberos Configuration Manager**是一种诊断工具，可帮助解决与 Kerberos 相关[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的连接问题。 有关详细信息，请参阅 [Microsoft Kerberos Configuration Manager for SQL Server](https://www.microsoft.com/download/details.aspx?id=39046)。  
+>  **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** 是一款诊断工具，可帮助解决与 Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]相关的连接问题。 有关详细信息，请参阅 [Microsoft Kerberos Configuration Manager for SQL Server](https://www.microsoft.com/download/details.aspx?id=39046)。  
   
  有关 Kerberos 的详细信息，请参阅下列文章：  
   
@@ -48,7 +48,7 @@ ms.locfileid: "75247425"
 ## <a name="usage"></a>使用情况  
  下表介绍了客户端应用程序可启用安全身份验证的最常见应用场景。  
   
-|方案|说明|  
+|场景|说明|  
 |--------------|-----------------|  
 |早期应用程序不指定 SPN。|该兼容应用场景可确保不会对针对先前版本 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]开发的应用程序的行为进行任何更改。 如果未指定 SPN，则应用程序使用已生成的 SPN，但不能识别使用哪个身份验证方法。|  
 |使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 当前版本的客户端应用程序将连接字符串中的 SPN 指定为域用户或计算机帐户、特定于实例的 SPN 或用户定义的字符串。|在访问接口、初始化或连接字符串中可使用 **ServerSPN** 关键字进行以下操作：<br /><br /> -指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例用于连接的帐户。 这可简化对 Kerberos 身份验证的访问。 如果 Kerberos 密钥发行中心 (KDC) 存在且指定了正确的帐户，则使用 Kerberos 身份验证的可能性大于 NTLM。 KDC 通常与域控制器在同一台计算机上。<br /><br /> -指定 SPN 可查找 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的服务帐户。 对于每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例，会生成两个可用于此目的的默认 SPN。 但是，不能保证 Active Directory 中存在这些密钥，因此这种情况下无法保证 Kerberos 身份验证。<br /><br /> -指定将用于查找 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的服务帐户的 SPN。 此 SPN 可以是任何映射到服务帐户的用户定义字符串。 这种情况下，必须手动在 KDC 中注册密钥，且密钥必须满足用户定义的 SPN 的规则。<br /><br /> 
@@ -100,7 +100,7 @@ ms.locfileid: "75247425"
 |语法|说明|  
 |------------|-----------------|  
 |MSSQLSvc/*fqdn*|使用除 TCP 之外的协议时访问接口生成的用于默认实例的默认 SPN。<br /><br /> *fqdn*为完全限定的域名。|  
-|MSSQLSvc/*fqdn*：*端口*|使用 TCP 时访问接口生成的默认 SPN。<br /><br /> *端口*是 TCP 端口号。|  
+|MSSQLSvc/*fqdn*:*port*|使用 TCP 时访问接口生成的默认 SPN。<br /><br /> *port* 是 TCP 端口号。|  
 |MSSQLSvc/*fqdn*：*InstanceName*|使用除 TCP 之外的协议时访问接口生成的用于命名实例的默认 SPN。<br /><br /> *InstanceName*是[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例名称。|  
 |HOST/*fqdn*<br /><br /> HOST/*MachineName*|映射到内置计算机帐户的 SPN，这些内置计算机帐户由 Windows 自动注册。|  
 |*用户名*@*域*|域帐户的直接规范。<br /><br /> *用户名*是 Windows 用户帐户名。<br /><br /> *域*为 Windows 域名或完全限定的域名。|  
@@ -110,9 +110,9 @@ ms.locfileid: "75247425"
 ## <a name="odbc-and-ole-db-syntax-supporting-spns"></a>支持 SPN 的 ODBC 和 OLE DB 语法  
  有关特定于语法的信息，请参阅以下主题：  
   
--   [&#40;ODBC 的客户端连接中&#41; 的服务主体名称 &#40;Spn&#41;](../../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)  
+-   [客户端连接中的服务主体名称 (SPN) (ODBC)](../../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)  
   
--   [&#41; 客户端连接中的服务主体名称 &#40;Spn &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
+-   [客户端连接中的服务主体名称 (SPN) (OLE DB)](../../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
   
  有关演示此功能的示例应用程序的信息，请参阅 [SQL Server 数据编程示例](https://msftdpprodsamples.codeplex.com/)。  
   

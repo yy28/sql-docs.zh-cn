@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 974e5e6c03c32b0457295b749604323e7f1b870e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75254617"
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db"></a>客户端连接中的服务主体名称 (SPN) (OLE DB)
@@ -60,6 +60,6 @@ ms.locfileid: "75254617"
 |IDBProperties::SetProperties|可以调用 IDBProperties::SetProperties 来设置新的数据源初始化属性 SSPROP_INITSERVERSPN 和 SSPROP_INIT_FAILOVERPARTNERSPN 的值。<br /><br /> 可以随时设置这些属性，不过如果数据源已经打开，将返回以下错误：DB_E_ERRORSOCCURRED，“多步 OLE DB 操作生成了错误。 检查每个 OLE DB 状态值（如果有）。 未执行任何操作。”|  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server Native Client &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
+ [SQL Server Native Client (OLE DB)](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

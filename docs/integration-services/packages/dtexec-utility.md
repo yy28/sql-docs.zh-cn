@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b27fc68fc3c7685583248b39a7c27d4d33efa38c
-ms.sourcegitcommit: e0067f3687003e1b59a83619fdd19b666cf61e10
+ms.openlocfilehash: 7f2e417ddefc0094fc6320deafea40251ba77372
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74249744"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761851"
 ---
 # <a name="dtexec-utility"></a>dtexec 实用工具
 
@@ -424,7 +424,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/SQ[L]** _package_path_：加载存储在 msdb 数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的包  。 使用包部署模型部署存储在 **msdb** 数据库中的包。 若要使用项目部署模型运行部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的包，请使用 **/ISServer** 选项。 有关包和项目部署模型的详细信息，请参阅 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)。   
   
-     *package_path* 参数指定要检索的包的名称。 如果文件夹包含在路径中，则文件夹将以反斜杠（“\\”）结束。 *package_path* 值可以用引号引起来。 如果 *package_path* 参数中指定的路径或文件名包含空格，则必须在 *package_path* 参数两侧加上引号。  
+-   *package_path* 参数指定要检索的包的名称。 如果文件夹包含在路径中，则文件夹将以反斜杠（“\\”）结束。 *package_path* 值可以用引号引起来。 如果 *package_path* 参数中指定的路径或文件名包含空格，则必须在 *package_path* 参数两侧加上引号。  
   
      你可以将 **/User**、 **/Password**和 **/Server** 选项与 **/SQL** 选项一起使用。  
   
@@ -434,7 +434,7 @@ dtexec /option [value] [/option [value]]...
   
     > **重要说明!!** [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-     如果省略 **/Server** 选项，则假定使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的默认本地实例。  
+-   如果省略 **/Server** 选项，则假定使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的默认本地实例。  
   
      **/SQL** 选项不能与 **/DTS** 或 **/File** 选项一起使用。 如果指定多个选项， **dtexec** 将失败。  
   

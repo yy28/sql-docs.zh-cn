@@ -1,5 +1,5 @@
 ---
-title: 使用简洁的函数 |Microsoft Docs
+title: 使用简洁函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,21 +15,21 @@ ms.assetid: 31ac070f-8c59-4fd5-bd5a-466bb27dbca0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 43004601845d3032d404c308b7b1fa4850f694ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68022189"
 ---
 # <a name="using-concise-functions"></a>使用简洁的函数
-某些 ODBC 函数获取描述符的隐式访问权限。 应用程序编写器可能会发现它们相对于调用更方便**SQLSetDescField**或**SQLGetDescField**。 调用这些函数*简洁*函数由于它们执行的许多功能，包括设置或获取描述符字段。 一些简洁的函数允许应用程序设置或检索单个函数调用中的多个相关的描述符字段。  
+某些 ODBC 函数会获得对描述符的隐式访问权限。 应用程序编写器可能会发现它们比调用**SQLSetDescField**或**SQLGetDescField**更方便。 这些函数称为*简洁*函数，因为它们执行多个函数，包括设置或获取描述符字段。 某些简明函数允许应用程序在单个函数调用中设置或检索多个相关的描述符字段。  
   
- 简洁的函数可以调用而无需第一个检索使用作为参数的描述符句柄。 这些函数使用与语句句柄关联调用的描述符字段。  
+ 在未首先检索用作参数的描述符句柄的情况下，可以调用简洁函数。 这些函数适用于与调用它们的语句句柄关联的描述符字段。  
   
- 简洁的函数**SQLBindCol**并**SQLBindParameter**通过将相对应的描述符字段设置为其参数绑定的列或参数。 每个函数执行比只需设置描述符的更多任务。 **SQLBindCol**并**SQLBindParameter**提供的数据列或动态参数绑定的完整规范。 应用程序可以但是，通过调用更改绑定的详细信息**SQLSetDescField**或**SQLSetDescRec** ，并且可用于一系列到合适的调用，从而完全绑定的列或参数这些函数。  
+ 简洁函数**SQLBindCol**和**SQLBindParameter**通过设置对应于参数的描述符字段来绑定列或参数。 其中每个函数执行的任务比只是设置描述符要多。 **SQLBindCol**和**SQLBindParameter**提供数据列或动态参数的绑定的完整规范。 但是，应用程序可以通过调用**SQLSetDescField**或**SQLSetDescRec**来更改绑定的各个详细信息，并可以通过对这些函数进行一系列适当的调用来完全绑定列或参数。  
   
- 简洁的函数**SQLColAttribute**， **SQLDescribeCol**， **SQLDescribeParam**， **SQLNumParams**，和**SQLNumResultCols**检索描述符字段中的值。  
+ 简洁函数**SQLColAttribute**、 **SQLDescribeCol**、 **SQLDescribeParam**、 **SQLNumParams**和**SQLNumResultCols**检索描述符字段中的值。  
   
- **SQLSetDescRec**并**SQLGetDescRec**是简洁的函数，使用一次调用设置或获取影响的数据类型和列或参数的数据的存储的多个描述符字段。 **SQLSetDescRec**是一种有效的方法来更改在一个步骤中的列或参数的数据绑定。  
+ **SQLSetDescRec**和**SQLGetDescRec**是一项简洁的功能，其中一次调用、设置或获取多个描述符字段，它们会影响列或参数数据的数据类型和存储。 **SQLSetDescRec**是一种在一步中更改列或参数数据绑定的有效方法。  
   
- **SQLSetStmtAttr**并**SQLGetStmtAttr**充当简洁的函数，在某些情况下。 (请参阅[描述符字段](../../../odbc/reference/develop-app/descriptor-fields.md)。)
+ 在某些情况下， **SQLSetStmtAttr**和**SQLGetStmtAttr**用作简洁的函数。 （请参阅[描述符字段](../../../odbc/reference/develop-app/descriptor-fields.md)。）

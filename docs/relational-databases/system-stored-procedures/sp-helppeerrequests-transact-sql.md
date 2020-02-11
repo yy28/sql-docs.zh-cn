@@ -1,5 +1,5 @@
 ---
-title: sp_helppeerrequests (TRANSACT-SQL) |Microsoft Docs
+title: sp_helppeerrequests （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ ms.assetid: 37bd503e-46c4-47c6-996e-be7ffe636fe8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5b9e2a370c9acc9c22dac7e5e60ceb10e08e46ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68137634"
 ---
-# <a name="sphelppeerrequests-transact-sql"></a>sp_helppeerrequests (Transact-SQL)
+# <a name="sp_helppeerrequests-transact-sql"></a>sp_helppeerrequests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  返回通过执行其中启动这些请求的对等复制拓扑中参与者收到的所有状态请求的信息[sp_requestpeerresponse &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)随时在拓扑中的已发布的数据库。 此存储过程将对参与对等复制拓扑的发布服务器上的发布数据库执行。 有关详细信息，请参阅 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。  
+  返回对等复制拓扑中参与者收到的所有状态请求的信息，这些请求是通过在拓扑中的任何已发布数据库上执行[sp_requestpeerresponse &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)启动的。 此存储过程将对参与对等复制拓扑的发布服务器上的发布数据库执行。 有关详细信息，请参阅 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,32 +38,32 @@ sp_helppeerrequests [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publication = ] 'publication'` 是为其发送状态请求的对等拓扑中发布的名称。 *发布*是**sysname**，无默认值。  
+`[ @publication = ] 'publication'`发送了状态请求的对等拓扑中的发布名称。 *发布*为**sysname**，无默认值。  
   
-`[ @description = ] 'description'` 可用于标识各个状态请求，它使您可以筛选返回的响应基于用户定义的信息调用时提供的值[sp_requestpeerresponse &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)。 *描述*是**nvarchar(4000)** ，默认值为 **%** 。 默认情况下，返回发布的所有状态请求。 使用此参数仅状态请求返回匹配中提供的值的说明*描述*，其中使用匹配字符字符串[如&#40;TRANSACT-SQL&#41; ](../../t-sql/language-elements/like-transact-sql.md)子句。  
+`[ @description = ] 'description'`可用于标识各个状态请求的值，这使你能够根据在调用[sp_requestpeerresponse &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)时提供的用户定义的信息筛选返回的响应。 *description*的值为**nvarchar （4000）**，默认值**%** 为。 默认情况下，返回发布的所有状态请求。 此参数用于仅返回其说明与*说明*中提供的值匹配的状态请求，其中使用[类似的 &#40;transact-sql&#41;](../../t-sql/language-elements/like-transact-sql.md)子句来匹配字符串。  
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|标识一个请求。|  
-|**publication**|**sysname**|为之发送状态请求的发布的名称。|  
+|**识别**|**int**|标识一个请求。|  
+|**发布**|**sysname**|为之发送状态请求的发布的名称。|  
 |**sent_date**|**datetime**|发送状态请求的日期和时间。|  
-|**description**|**nvarchar(4000)**|可用于标识各个状态请求的用户定义的信息。|  
+|**2008**|**nvarchar(4000)**|可用于标识各个状态请求的用户定义的信息。|  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** （成功）或**1** （失败）  
   
 ## <a name="remarks"></a>备注  
- **sp_helppeerrequests**对等事务复制中使用。  
+ **sp_helppeerrequests**用于对等事务复制。  
   
- **sp_helppeerrequests**时还原发布的数据库在对等拓扑中使用。  
+ 还原在对等拓扑中发布的数据库时，将使用**sp_helppeerrequests** 。  
   
 ## <a name="permissions"></a>权限  
- 只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_helppeerrequests**。  
+ 只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_helppeerrequests**。  
   
-## <a name="see-also"></a>请参阅  
- [sp_deletepeerrequesthistory &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
- [sp_helppeerresponses &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)  
+## <a name="see-also"></a>另请参阅  
+ [sp_deletepeerrequesthistory &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
+ [sp_helppeerresponses &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)  
   
   

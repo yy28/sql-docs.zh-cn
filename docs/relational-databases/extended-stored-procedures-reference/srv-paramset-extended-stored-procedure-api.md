@@ -20,10 +20,10 @@ ms.assetid: 2a509206-a1b8-4b20-b0a2-ef680cef7bd8
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c3ec0de44aacbcfb2d4e6b96d7525da900017e01
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75253554"
 ---
 # <a name="srv_paramset-extended-stored-procedure-api"></a>srv_paramset（扩展存储过程 API）
@@ -57,16 +57,16 @@ len
  *srvproc*  
  指向作为特定客户端连接句柄（在这里为接收远程存储过程调用的句柄）的 SRV_PROC 结构的指针。 该结构包含扩展存储过程 API 库用于管理应用程序和客户端之间的通信和数据的信息。  
   
- *北*  
+ *n*  
  指示要设置的参数的编号。 第一个参数是 1。  
   
- *数据*  
+ *data*  
  是指向要发送回客户端的数据值的指针，该数据值将作为远程存储过程返回参数。  
   
  *长度*  
  指定要返回的数据的实际长度。 如果参数的数据类型的长度为常量且该数据类型不允许 null 值（例如 srvbit 或 srvint1），则将会忽略 len******。  
   
-## <a name="returns"></a>Returns  
+## <a name="returns"></a>返回  
  如果参数值设置成功，则返回 SUCCEED，否则返回 FAIL。 如果属于以下情况则返回 FAIL：无当前远程存储过程、没有第 n 个远程存储过程参数、参数不是返回参数以及 len 参数是非法的****。  
   
  如果 len 为 0，则返回 NULL**。 将 len 设置为 0 是将 NULL 返回给客户端的唯一方法**。  

@@ -14,25 +14,25 @@ ms.assetid: 0b81af6f-b9ae-4f7c-b59b-b5bdd775036f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7ae9cc9066f66d10d94370336e8a46155f1a03c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925736"
 ---
 # <a name="creating-and-executing-a-simple-command"></a>创建和执行简单的命令
-一个简单的命令是指未参数化并且需要不暂留。 有三种方法来创建和执行简单的命令。  
+简单的命令不是参数化的，不需要持久性。 有三种方法可以创建和执行简单的命令。  
   
--   使用**命令**对象  
+-   使用**Command**对象  
   
 -   使用**连接**对象  
   
--   使用**记录集**对象  
+-   使用**Recordset**对象  
   
-## <a name="using-a-command-object"></a>使用命令对象  
- 创建一个简单的命令使用**命令**对象，必须将分配到的指令**CommandText**属性**命令**对象并设置适当的值**CommandType**属性。 执行命令要求打开的连接分配给**ActiveConnection**的属性**命令**对象，然后通过调用**Execute**方法上**命令**对象。  
+## <a name="using-a-command-object"></a>使用 Command 对象  
+ 若要使用**command**对象创建简单的命令，必须将指令分配给**Command**对象的**CommandText**属性，并为**CommandType**属性设置适当的值。 执行命令要求将打开的连接分配给**command**对象的**ActiveConnection**属性，然后对**命令**对象调用**Execute**方法。  
   
- 下面的代码段显示了使用的基本方法**命令**对象对数据源执行命令。 此示例使用返回行的命令，并返回作为执行命令的结果**记录集**对象。  
+ 下面的代码片段演示了使用**command**对象对数据源执行命令的基本方法。 此示例使用返回行的命令，并将命令执行的结果作为**Recordset**对象返回。  
   
 ```  
     'BeginBasicCmd  
@@ -107,8 +107,8 @@ End Function
 'EndNewConnection  
 ```  
   
-## <a name="using-a-recordset-object"></a>使用记录集对象  
- 此外可以创建一个命令，作为文本字符串以及 pa 到**开放**方法**记录集**对象，与命令类型 (adCmdText) 一起执行。 以下代码片段演示此操作。  
+## <a name="using-a-recordset-object"></a>使用 Recordset 对象  
+ 你还可以创建一个命令作为文本字符串，并将其作为**记录集**对象的**Open**方法，并将其作为命令类型（adCmdText），用于执行。 下面的代码段演示了这一点。  
   
 ```  
   
@@ -147,7 +147,7 @@ Set objRs = Nothing
 ```  
   
 ## <a name="using-a-connection-object"></a>使用连接对象  
- 此外可以在打开的连接对象上执行命令。 前面的代码示例现在将成为此：  
+ 还可以对打开的连接对象执行命令。 前面的代码示例现在变为：  
   
 ```  
 Const DS = "MySqlServer"  

@@ -1,5 +1,5 @@
 ---
-title: '- （除外）(MDX) |Microsoft Docs'
+title: '- 只有（MDX） |Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,13 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: cf0121d1be3cd2943a801f3c72ca4952b70ec681
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139084"
 ---
-# <a name="except-mdx-operator"></a>Except (MDX) 运算符
+# <a name="except-mdx-operator"></a>Except （MDX）运算符
 
 
   执行一个集运算，以返回两个集之间的不同项并删除重复成员。  
@@ -27,7 +27,7 @@ ms.locfileid: "68139084"
 Set_Expression - Set_Expression  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *Set_Expression*  
  返回集的有效多维表达式 (MDX)。  
   
@@ -35,7 +35,7 @@ Set_Expression - Set_Expression
  由两个指定集的非共享成员组成的集。  
   
 ## <a name="remarks"></a>备注  
- **-（排除）** 运算符在功能上等效于[除](../mdx/except-mdx-function.md)函数。  
+ **-（Except）** 运算符在功能上等效于[Except](../mdx/except-mdx-function.md)函数。  
   
 ## <a name="examples"></a>示例  
  以下示例演示此运算符的用法：  
@@ -51,7 +51,7 @@ FROM
     [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [MDX 运算符参考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [Mdx 运算符引用 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

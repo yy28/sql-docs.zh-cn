@@ -14,10 +14,10 @@ ms.assetid: 4fccfd24-aede-4882-be69-ec1e82682e16
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 6edcf577b7783662a02efc3531ac02c2535ef078
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245418"
 ---
 # <a name="manage-dqs-log-files"></a>管理 DQS 日志文件
@@ -77,14 +77,14 @@ ms.locfileid: "75245418"
   [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)] 组件日志文件位于 %APPDATA%\SSDQS\Log。 
   [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)] 日志文件包含与服务器日志文件中相似的一组信息，但前者针对的是 [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)]。  
   
-##  <a name="RT"></a>相关任务  
+##  <a name="RT"></a> 相关任务  
   
 |任务说明|主题|  
 |----------------------|-----------|  
 |介绍如何使用 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]为 DQS 日志文件配置日志严重性设置。|[为 DQS 日志文件配置严重级别](../data-quality-services/configure-severity-levels-for-dqs-log-files.md)|  
-|介绍如何为 DQS 日志文件手动配置高级设置。|[为 DQS 日志文件配置高级设置](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)|  
+|介绍如何为 DQS 日志文件手动配置高级设置。|[Configure Advanced Settings for DQS Log Files](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)|  
   
 ## <a name="see-also"></a>另请参阅  
- [DQS 管理](../data-quality-services/dqs-administration.md)  
+ [dqs 管理](../data-quality-services/dqs-administration.md)  
   
   

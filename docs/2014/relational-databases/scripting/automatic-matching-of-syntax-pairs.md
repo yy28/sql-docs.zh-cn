@@ -14,18 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 49b121f776ec6a9d363236fab03a1da2228311a6
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244802"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>语法对的自动匹配
   使用自动匹配语法对功能，可获得有关必须以成对方式进行编码的语法元素是否正确配对的即时反馈。 这种匹配在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器中被称为分隔符匹配，在 Analysis Services XMLA 查询编辑器中被称为大括号匹配，而在 MDX 和 DMX 编辑器中则被称为圆括号匹配。  
   
 ## <a name="database-engine-query-editor-delimiter-matching"></a>数据库引擎查询编辑器的分隔符匹配  
- 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器与标识代码块边界的分隔符相匹配。 有两种匹配方式：  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器与标识代码块边界的分隔符相匹配。 有两种匹配方式：  
   
 -   键入成对分隔符中的第二个分隔符后，该编辑器将突出显示此对分隔符中的两个分隔符。  
   
@@ -37,9 +36,9 @@ ms.locfileid: "75244802"
 |前导分隔符|结尾分隔符|  
 |--------------------|-----------------------|  
 |**(**|**)**|  
-|**准备**|**端面**|  
+|**BEGIN**|**END**|  
 |**BEGIN TRY**|**END TRY**|  
-|**BEGIN CATCH**|**结束捕获**|  
+|**BEGIN CATCH**|**END CATCH**|  
   
  自动分隔符匹配不识别中括号标识符 ([ObjectName]) 或引号标识符 ("ObjectName") 之类的分隔符。 由于颜色编码已形象地指示出字符串是否已进行分隔，因此成对分隔符匹配功能与字符串文字 ('string') 的单引号分隔符不匹配。  
   

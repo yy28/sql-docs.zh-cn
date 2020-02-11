@@ -1,5 +1,5 @@
 ---
-title: sp_delete_database_backuphistory (TRANSACT-SQL) |Microsoft Docs
+title: sp_delete_database_backuphistory （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 4c237944-453d-49fb-8d0e-4596945ac147
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ff85b52e0b0ed6715b64287f0c0e5abd5a0ae9c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085815"
 ---
-# <a name="spdeletedatabasebackuphistory-transact-sql"></a>sp_delete_database_backuphistory (Transact-SQL)
+# <a name="sp_delete_database_backuphistory-transact-sql"></a>sp_delete_database_backuphistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   从备份和还原历史记录表中删除有关指定数据库的信息。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,7 +39,7 @@ sp_delete_database_backuphistory [ @database_name = ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @database_name = ] database_name` 指定的备份和还原操作中涉及的数据库的名称。 *database_name*是**sysname**，无默认值。  
+`[ @database_name = ] database_name`指定在备份和还原操作中涉及的数据库的名称。 *database_name* **sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -48,7 +48,7 @@ sp_delete_database_backuphistory [ @database_name = ] 'database_name'
  无  
   
 ## <a name="remarks"></a>备注  
- **sp_delete_database_backuphistory**必须从运行**msdb**数据库。  
+ 必须从**msdb**数据库运行**sp_delete_database_backuphistory** 。  
   
  此存储过程影响下列表：  
   
@@ -81,8 +81,8 @@ EXEC sp_delete_database_backuphistory @database_name = 'AdventureWorks2012';
   
 ```  
   
-## <a name="see-also"></a>请参阅  
- [sp_delete_backuphistory &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [sp_delete_backuphistory &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)   
  [备份历史记录和标头信息 (SQL Server)](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   
   

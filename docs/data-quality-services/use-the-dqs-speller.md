@@ -10,10 +10,10 @@ ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 087d7c7636b456e9cba07eb16abdd135abb43c4e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257751"
 ---
 # <a name="use-the-dqs-speller"></a>使用 DQS 拼写检查器
@@ -34,14 +34,14 @@ ms.locfileid: "75257751"
   
  拼写检查器仅适用于数据类型为字符串的单一域。 单一域中属于字符串数据类型的所有值都发送到拼写检查器以便进行验证。 拼写检查器不适用于复合域，并且不适用于并非字符串类型的其他类型的域、混合值（例如没有空格的字母和数字）、罗马数字、单个字符以及仅由大写字母构成的值。  
   
-##  <a name="BeforeYouBegin"></a>开始之前  
+##  <a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Prerequisites"></a>先决条件  
  若要运行拼写检查器，您必须具有在知识发现或域管理活动中打开的知识库和域；必须在您要运行域的页中为该域启用了拼写检查器；并且必须为该域指定了语言属性。  
   
-###  <a name="Security"></a>安全  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>访问  
+####  <a name="Permissions"></a> 权限  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_administrator 角色，才能运行拼写检查器。  
   
 ##  <a name="Enable"></a>启用拼写检查器  
