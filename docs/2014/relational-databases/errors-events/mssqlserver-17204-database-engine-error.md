@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b2fd28a126b3a0a7f833c6410d4e590b5dc07e5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62869612"
 ---
-# <a name="mssqlserver17204"></a>MSSQLSERVER_17204
+# <a name="mssqlserver_17204"></a>MSSQLSERVER_17204
     
 ## <a name="details"></a>详细信息  
   
@@ -30,9 +30,9 @@ ms.locfileid: "62869612"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBLKIO_DEVOPENFAILED|  
-|消息正文|%ls:无法打开文件号 %d 的文件 %ls。  操作系统错误: %ls。|  
+|消息正文|%ls: 无法打开文件号 %d 的文件 %ls。  操作系统错误: %ls。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  SQL Server 由于指定错误而无法打开指定的文件。  
   
 ## <a name="user-action"></a>用户操作  

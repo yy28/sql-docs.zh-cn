@@ -22,10 +22,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 7120efd623905f05e1f02c6c02856b793ad15cea
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055956"
 ---
 # <a name="keep-nulls-or-default-values-during-bulk-import-sql-server"></a>在批量导入期间保留 Null 或默认值 (SQL Server)
@@ -37,7 +37,7 @@ ms.locfileid: "74055956"
 
 |轮廓|
 |---|
-|[保留 Null 值](#keep_nulls)<br />[对 INSERT 使用默认值...SELECT * FROM OPENROWSET(BULK...)](#keep_default)<br />[示例测试条件](#etc)<br />&emsp;&#9679;&emsp;[示例表](#sample_table)<br />&emsp;&#9679;&emsp;[示例数据文件](#sample_data_file)<br />&emsp;&#9679;&emsp;[示例非 XML 格式化文件](#nonxml_format_file)<br />[在大容量导入期间保留 Null 或使用默认值](#import_data)<br />&emsp;&#9679;&emsp;[在不使用格式化文件的情况下使用 bcp 并保留 NULL 值](#bcp_null)<br />&emsp;&#9679;&emsp;[在使用非 XML 格式化文件的情况下使用 bcp 并保留 Null 值](#bcp_null_fmt)<br />&emsp;&#9679;&emsp;[在不使用格式化文件的情况下使用 bcp 和默认值](#bcp_default)<br />&emsp;&#9679;&emsp;[在使用非 XML 格式化文件的情况下使用 bcp 和默认值](#bcp_default_fmt)<br />&emsp;&#9679;&emsp;[在不使用格式化文件的情况下使用 BULK INSERT 并保留 Null 值](#bulk_null)<br />&emsp;&#9679;&emsp;[在使用非 XML 格式化文件的情况下使用 BULK INSERT 并保留 Null 值](#bulk_null_fmt)<br />&emsp;&#9679;&emsp;[在不使用格式化文件的情况下使用 BULK INSERT 和默认值](#bulk_default)<br />&emsp;&#9679;&emsp;[在使用非 XML 格式化文件的情况下使用 BULK INSERT 和默认值](#bulk_default_fmt)<br />&emsp;&#9679;&emsp;[在使用非 XML 格式化文件的情况下使用 OPENROWSET(BULK...) 并保留 Null 值](#openrowset__null_fmt)<br />&emsp;&#9679;&emsp;[在使用非 XML 格式化文件的情况下使用 OPENROWSET(BULK...) 和默认值](#openrowset__default_fmt)
+|[保留 Null 值](#keep_nulls)<br />[对 INSERT 使用默认值...SELECT * FROM OPENROWSET(BULK...)](#keep_default)<br />[示例测试条件](#etc)<br />&emsp;&#9679;&emsp;[示例表](#sample_table)<br />&emsp;&#9679;&emsp;[示例数据文件](#sample_data_file)<br />&emsp;&#9679;&emsp;[示例非 XML 格式化文件](#nonxml_format_file)<br />[在批量导入期间保留 Null 或使用默认值](#import_data)<br />&emsp;&#9679;&emsp;[在不使用格式化文件的情况下使用 bcp 并保留 NULL 值](#bcp_null)<br />&emsp;&#9679;&emsp;[在使用非 XML 格式化文件的情况下使用 bcp 并保留 Null 值](#bcp_null_fmt)<br />&emsp;&#9679;&emsp;[在不使用格式化文件的情况下使用 bcp 和默认值](#bcp_default)<br />&emsp;&#9679;&emsp;[在使用非 XML 格式化文件的情况下使用 bcp 和默认值](#bcp_default_fmt)<br />&emsp;&#9679;&emsp;[在不使用格式化文件的情况下使用 BULK INSERT 并保留 Null 值](#bulk_null)<br />&emsp;&#9679;&emsp;[在使用非 XML 格式化文件的情况下使用 BULK INSERT 并保留 Null 值](#bulk_null_fmt)<br />&emsp;&#9679;&emsp;[在不使用格式化文件的情况下使用 BULK INSERT 和默认值](#bulk_default)<br />&emsp;&#9679;&emsp;[在使用非 XML 格式化文件的情况下使用 BULK INSERT 和默认值](#bulk_default_fmt)<br />&emsp;&#9679;&emsp;[在使用非 XML 格式化文件的情况下使用 OPENROWSET(BULK...) 并保留 Null 值](#openrowset__null_fmt)<br />&emsp;&#9679;&emsp;[在使用非 XML 格式化文件的情况下使用 OPENROWSET(BULK...) 和默认值](#openrowset__default_fmt)
 
 ## 保留 Null 值<a name="keep_nulls"></a>  
 下列限定符指定在大容量导入操作期间数据文件中的空字段保留其空值，而不继承表列的默认值（如果存在）。  对于 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)，默认情况下，未在批量加载操作中指定的所有列都会设置为 NULL。
