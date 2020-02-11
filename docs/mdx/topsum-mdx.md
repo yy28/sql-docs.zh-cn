@@ -1,5 +1,5 @@
 ---
-title: TopSum (MDX) |Microsoft Docs
+title: TopSum （MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5bbcfe52e62757ea00427eb9fd6ed979eb8d32e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097391"
 ---
 # <a name="topsum-mdx"></a>TopSum (MDX)
@@ -31,17 +31,17 @@ TopSum(Set_Expression, Value, Numeric_Expression)
  *Set_Expression*  
  返回集的有效多维表达式 (MDX)。  
   
- *ReplTest1*  
+ *值*  
  指定与每个元组相比较的值的有效数值表达式。  
   
  *Numeric_Expression*  
  返回度量值的有效数值表达式，通常是多维表达式 (MDX)。  
   
 ## <a name="remarks"></a>备注  
- **TopSum**函数计算对指定集，对该集按降序排序的指定度量值的总和。 然后，该函数返回最大值元素，其指定数值表达式的合计至少为指定值。 此函数返回集的最小子集，其累积合计至少为指定值。 返回的元素按从大到小的顺序排序。  
+ **TopSum**函数计算对指定集求值的指定度量值的总和，并按降序对集进行排序。 然后，该函数返回最大值元素，其指定数值表达式的合计至少为指定值。 此函数返回集的最小子集，其累积合计至少为指定值。 返回的元素按从大到小的顺序排序。  
   
 > [!IMPORTANT]  
->  像[BottomSum](../mdx/bottomsum-mdx.md)函数， **TopSum**函数总是会在层次结构。  
+>  与[BottomSum](../mdx/bottomsum-mdx.md)函数一样， **TopSum**函数始终中断层次结构。  
   
 ## <a name="example"></a>示例  
  下面的示例返回 Geography 维度中 Geography 层次结构内 City 级别的最小成员集（对于 Bike 类别），使用 Reseller Sales Amount 度量值时该集的累积合计至少为 6,000,000（从集中具有最大销售额的成员开始）。  
@@ -57,7 +57,7 @@ FROM [Adventure Works]
 WHERE([Product].[Product Categories].Bikes)  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3f51e8f62a6be442c123c5a1309293e204caf08f
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783222"
 ---
 # <a name="defect-a-target-server-from-a-master-server"></a>将目标服务器从主服务器脱离
@@ -42,7 +42,7 @@ ms.locfileid: "72783222"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 权限  
  若要执行此存储过程，用户必须为 `sysadmin` 固定服务器角色的成员。  
@@ -53,7 +53,7 @@ ms.locfileid: "72783222"
   
 1.  在 **对象资源管理器**中，展开配置为目标服务器的服务器。  
   
-2.  右键单击 **“SQL Server 代理”** ，指向 **“多服务器管理”** ，然后单击 **“脱离”** 。  
+2.  右键单击 **“SQL Server 代理”**，指向 **“多服务器管理”**，然后单击 **“脱离”**。  
   
 3.  单击 **“是”** 确认要从主服务器脱离此目标服务器。  
   
@@ -65,18 +65,18 @@ ms.locfileid: "72783222"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
 ```sql
 sp_msx_defect ;  
 ```  
   
- 有关详细信息，请[参阅&#40;sp_msx_defect transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-defect-transact-sql)。  
+ 有关详细信息，请参阅[&#40;transact-sql&#41;sp_msx_defect ](/sql/relational-databases/system-stored-procedures/sp-msx-defect-transact-sql)。  
   
 ##  <a name="PowerShellProcedure"></a>使用 SQL Server 管理对象（SMO）  
  使用 `MsxDefect Method`。  
   
 ## <a name="see-also"></a>另请参阅  
  [创建多服务器环境](create-a-multiserver-environment.md)   
- [企业范围的自动化管理](automated-administration-across-an-enterprise.md)   
- [使多台目标服务器脱离主服务器](defect-multiple-target-servers-from-a-master-server.md)  
+ [跨企业的自动化管理](automated-administration-across-an-enterprise.md)   
+ [Defect Multiple Target Servers from a Master Server](defect-multiple-target-servers-from-a-master-server.md)  

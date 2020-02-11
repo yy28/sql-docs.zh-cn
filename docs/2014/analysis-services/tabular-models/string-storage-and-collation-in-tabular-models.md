@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1eb30dbddac82db8fb0f6047985ce6fb743042cb
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874488"
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>表格模型中的字符串存储和排序规则
@@ -38,10 +38,10 @@ ms.locfileid: "70874488"
 |trEE|  
 |PlAnT|  
 |PlAnT|  
-|trEE|  
+|树|  
 |PlAnT|  
 |trEE|  
-|trEE|  
+|树|  
 |PlAnT|  
 |trEE|  
   
@@ -62,7 +62,7 @@ ms.locfileid: "70874488"
 ## <a name="locale-and-collation-order"></a>区域设置和排序规则顺序  
  在比较字符串（文本值）时，定义等效性的内容通常是有关如何解释此类字符串的区域性方面。 在某些区域性中，某个字符的重音或大小写可能会完全改变该字符串的含义；因此，在为任何特定语言或区域确定等效性时，通常会考虑此类差异。  
   
- 通常，在使用您的计算机时，该计算机已配置为符合您自己的区域性期望和语言行为，并且文本值排序和比较之类的字符串运算在行为上符合预期。 控制特定于语言的行为的设置通过 Windows 中的“区域设置和区域”设置定义。 应用程序将读取这些设置，并相应地更改其行为。 在某些情况下，应用程序具有的功能可以允许您更改应用程序的区域性行为或比较字符串的方式。  
+ 通常，在使用您的计算机时，该计算机已配置为符合您自己的区域性期望和语言行为，并且文本值排序和比较之类的字符串运算在行为上符合预期。 控制特定于语言的行为的设置通过 Windows 中的“区域设置和区域”**** 设置定义。 应用程序将读取这些设置，并相应地更改其行为。 在某些情况下，应用程序具有的功能可以允许您更改应用程序的区域性行为或比较字符串的方式。  
   
  在您创建一个表格模型数据库时，默认情况下该数据库将以语言标识符和排序规则的形式继承这些区域性和语言设置。  
   
@@ -70,7 +70,8 @@ ms.locfileid: "70874488"
   
 -   排序规则定义字符的顺序及其等效性。  
   
- 特别要注意的是，语言标识符不仅标识语言，还标识使用该语言的国家或地区。 每个语言标识符还具有默认的排序规则规范。 有关语言标识符的详细信息，请参阅 [Microsoft 分配的区域设置 ID](https://msdn.microsoft.com/goglobal/bb964664.aspx)。 您可以使用 LCID Dec 列在手动插入值时获取正确的 ID。 有关排序规则的 SQL 概念的详细信息，请参阅 [COLLATE (Transact-SQL)](/sql/t-sql/statements/collations)。 有关针对 Windows 排序规则名称的排序规则指示符和比较样式的信息，请参阅 [Windows 排序规则名称 (Transact-SQL)](/sql/t-sql/statements/windows-collation-name-transact-sql)。 [SQL Server 排序规则名称 (Transact-SQL)](/sql/t-sql/statements/sql-server-collation-name-transact-sql) 主题介绍了如何将 Windows 排序规则名称映射到用于 SQL 的名称。  
+ 特别要注意的是，语言标识符不仅标识语言，还标识使用该语言的国家或地区。 每个语言标识符还具有默认的排序规则规范。 有关语言标识符的详细信息，请参阅 [Microsoft 分配的区域设置 ID](https://msdn.microsoft.com/goglobal/bb964664.aspx)。 您可以使用 LCID Dec 列在手动插入值时获取正确的 ID。 有关排序规则的 SQL 概念的详细信息，请参阅 [COLLATE (Transact-SQL)](/sql/t-sql/statements/collations)。 有关针对 Windows 排序规则名称的排序规则指示符和比较样式的信息，请参阅 [Windows 排序规则名称 (Transact-SQL)](/sql/t-sql/statements/windows-collation-name-transact-sql)。 
+  [SQL Server 排序规则名称 (Transact-SQL)](/sql/t-sql/statements/sql-server-collation-name-transact-sql) 主题介绍了如何将 Windows 排序规则名称映射到用于 SQL 的名称。  
   
  一旦创建了您的表格模型数据库后，该模型中的所有新对象都将从数据库属性继承语言和排序规则属性。 所有对象都是这样的。 继承路径将从该对象开始，查看父级中是否存在要继承的任何语言和排序规则属性，如果找不到，则继续向上查找到顶部，在数据库级别查找语言和排序规则属性。 换言之，如果您没有为某一对象指定语言和排序规则属性，则默认情况下，对象将继承其最接近的父级的属性。  
   
