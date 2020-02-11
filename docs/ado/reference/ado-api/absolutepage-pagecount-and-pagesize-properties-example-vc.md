@@ -1,5 +1,5 @@
 ---
-title: AbsolutePage、 PageCount、 和 PageSize 属性示例 （VC + +） |Microsoft Docs
+title: AbsolutePage、PageCount 和 PageSize 属性示例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 38ca4e1b-c109-4fba-b590-bdd6994f770e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a14b6ad09d33fd3e856065919dff52da99911fa7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921849"
 ---
-# <a name="absolutepage-pagecount-and-pagesize-properties-example-vc"></a>AbsolutePage、 PageCount、 和 PageSize 属性示例 （VC + +）
-此示例使用[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)， [PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)，并[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)属性来显示名称和雇用日期从***员工***表中，一次的五个记录。  
+# <a name="absolutepage-pagecount-and-pagesize-properties-example-vc"></a>AbsolutePage、PageCount 和 PageSize 属性示例（VC + +）
+此示例使用[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)、 [PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)和[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)属性显示***Employee***表中的名称和雇用日期，每次显示5个记录。  
   
 ```  
 // BeginAbsolutePageCpp.cpp  
@@ -178,8 +178,8 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [AbsolutePage 属性 (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
- [PageCount 属性 (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)   
- [PageSize 属性 (ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)   
+## <a name="see-also"></a>另请参阅  
+ [AbsolutePage 属性（ADO）](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
+ [PageCount 属性（ADO）](../../../ado/reference/ado-api/pagecount-property-ado.md)   
+ [PageSize 属性（ADO）](../../../ado/reference/ado-api/pagesize-property-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

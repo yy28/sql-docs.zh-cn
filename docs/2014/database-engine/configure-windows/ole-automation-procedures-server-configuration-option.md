@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f00c238dfb32089261c51936b3937b0657c58b08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62782025"
 ---
 # <a name="ole-automation-procedures-server-configuration-option"></a>Ole Automation Procedures 服务器配置选项
@@ -32,7 +32,7 @@ ms.locfileid: "62782025"
   
  当启用 OLE Automation Procedures 时，对 **sp_OACreate** 的调用将会启动 OLE 共享执行环境。  
   
- 当前值`Ole Automation Procedures`选项可以查看和更改通过使用**sp_configure**系统存储过程。  
+ 可以使用 sp_configure 系统存储`Ole Automation Procedures`过程来查看和更改选项的当前值**** 。  
   
 ## <a name="examples"></a>示例  
  以下示例显示了如何查看 OLE Automation Procedures 的当前设置。  
@@ -55,10 +55,10 @@ RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
  [RECONFIGURE (Transact-SQL)](/sql/t-sql/language-elements/reconfigure-transact-sql)   
- [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)   
+ [外围应用配置器](../../relational-databases/security/surface-area-configuration.md)   
  [服务器配置选项 (SQL Server)](server-configuration-options-sql-server.md)  
   
   

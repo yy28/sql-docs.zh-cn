@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f48a62e1dff2fbc1d226077c2271e8a8a71efb2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874493"
 ---
 # <a name="clr-user-defined-functions"></a>CLR 用户定义函数
@@ -39,7 +39,7 @@ ms.locfileid: "62874493"
  [CLR 用户定义聚合](clr-user-defined-aggregates.md)  
  说明如何实现和使用用户定义聚合。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [用户定义函数](../user-defined-functions/user-defined-functions.md)  
   
   

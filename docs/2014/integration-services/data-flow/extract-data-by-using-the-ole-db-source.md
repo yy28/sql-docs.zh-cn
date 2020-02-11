@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8303cc8e30a9099a11a43cc2b4bfac341873a044
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62902577"
 ---
 # <a name="extract-data-by-using-the-ole-db-source"></a>使用 OLE DB 源提取数据
@@ -56,15 +56,15 @@ ms.locfileid: "62902577"
   
 8.  也可以通过编辑 **“输出列”** 列表中的值来更新输出列的名称。  
   
-9. 若要配置错误输出，请单击 **“错误输出”**。 有关详细信息，请参阅 [在数据流组件中配置错误输出](../configure-an-error-output-in-a-data-flow-component.md)。  
+9. 若要配置错误输出，请单击 **“错误输出”** 。 有关详细信息，请参阅 [在数据流组件中配置错误输出](../configure-an-error-output-in-a-data-flow-component.md)。  
   
 10. 可以单击 **“预览”** ，查看最多 200 行 OLE DB 源所提取的数据。  
   
-11. 单击“确定” 。  
+11. 单击“确定”。   
   
 12. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [OLE DB 源](ole-db-source.md)   
  [Integration Services 转换](transformations/integration-services-transformations.md)   
  [Integration Services 路径](integration-services-paths.md)   

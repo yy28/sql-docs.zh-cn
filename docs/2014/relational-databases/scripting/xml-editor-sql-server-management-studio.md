@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c4fc4e1b0f0340d579b1f6ee22db888417089352
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242943"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>XML 编辑器 (SQL Server Management Studio)
@@ -36,10 +36,10 @@ ms.locfileid: "75242943"
   
 |查看|说明|支持的文件类型|  
 |----------|-----------------|--------------------------|  
-|**模式**|用于直观地创建和修改 XML 架构以及 ADO.NET 数据集。|.xsd|  
+|**架构**|用于直观地创建和修改 XML 架构以及 ADO.NET 数据集。|.xsd|  
 |**数据**|用于在结构化数据网格中直观地修改 XML 数据文件。|.xml|  
 |**XML**|用于编辑 XML；源编辑器提供有颜色编码和 IntelliSense 功能，包括“完成单词”和“列出成员”。|.xml .xsd .xslt .wsdl.web.resx.tdl.wsf.hta.disco.vsdisco.config|  
-|**显示**|显示使用 SET SHOWPLAN_XML ON 选项创建的 xml 查询计划。|.showplan|  
+|**显示计划**|显示使用 SET SHOWPLAN_XML ON 选项创建的 xml 查询计划。|.showplan|  
   
 ## <a name="schema-view"></a>“架构”视图  
  “架构”视图可以直观地显示构成 XML 架构和 ADO.NET 数据集的元素、属性、类型等。  
@@ -81,8 +81,7 @@ ms.locfileid: "75242943"
 ## <a name="data-view"></a>数据视图  
  “数据”视图提供一个可用于修改 .xml 文件的数据网格。 在“数据”视图中只能编辑 XML 文件中的内容（不包括标记和结构）。  
   
- “数据”视图中有两个单独的区域： **“数据表”** 和 **“数据”**。 “数据表”**** 区域用于按照嵌套顺序（从最外层到最内层）列出 XML 文件中所定义的关系。 
-  **“数据”** 区域是一个数据网格，会根据“数据表”区域中的所选内容显示数据。  
+ “数据”视图中有两个单独的区域： **“数据表”** 和 **“数据”** 。 “数据表”  区域用于按照嵌套顺序（从最外层到最内层）列出 XML 文件中所定义的关系。 **“数据”** 区域是一个数据网格，会根据“数据表”区域中的所选内容显示数据。  
   
 > [!NOTE]  
 >  新创建的 XML 文件不包含数据，因此不能在“数据”视图中显示。 另外，有一些 XML 文档实例根本不能调用“数据”视图。 即使系统认为 XML 文件的格式正确，但如果其中的数据不是结构化数据，则在尝试切换到“数据”视图时将生成以下消息：“尽管此文档的格式良好，但它包含了数据视图无法显示的结构”。  
@@ -99,7 +98,7 @@ ms.locfileid: "75242943"
  XML 视图提供了一个用于编辑原始 XML 数据的编辑器，并提供有 IntelliSense 和颜色编码功能。 在处理具有关联架构的 .xsd 文件和 .xml 文件时，可以使用语句结束功能。 键入\<以启动标记，将显示在该位置有效的元素列表。 在键入元素名称并按空格键后，将显示相应元素所支持属性的列表。  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)]IntelliSense 选项在工具栏上不可用。 若要在 XML 编辑器中访问这些选项，请在 **“编辑”** 菜单上单击 **IntelliSense**。  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 选项。 若要在 XML 编辑器中访问这些选项，请在 **“编辑”** 菜单上单击 **IntelliSense**。  
   
 ## <a name="showplan-view"></a>“显示计划”视图  
  在使用 SET SHOWPLAN_XML ON 选项创建查询计划时，可以将其保存为 XML 格式。 双击带有 .showplan 扩展名的文件即可打开该查询计划。  

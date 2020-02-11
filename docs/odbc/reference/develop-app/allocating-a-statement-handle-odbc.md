@@ -16,16 +16,16 @@ ms.assetid: 4ce3b446-34ab-46dc-96e5-f40ec95c267e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d50b0a31aed4935c805ca30620575ccff70d4a0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68077204"
 ---
 # <a name="allocating-a-statement-handle-odbc"></a>分配语句句柄 ODBC
-应用程序可执行语句之前，必须分配语句句柄，如下所示：  
+在应用程序可以执行语句之前，它必须分配语句句柄，如下所示：  
   
-1.  应用程序声明类型 HSTMT 的变量。 然后，它调用**SQLAllocHandle** ，并将传递此变量，用来将语句和 SQL_HANDLE_STMT 选项分配连接句柄的地址。 例如：  
+1.  应用程序声明类型为 HSTMT 的变量。 然后，它调用**SQLAllocHandle**并传递此变量的地址、要在其中分配语句的连接的句柄和 SQL_HANDLE_STMT 选项。 例如：  
   
     ```  
     SQLHSTMT hstmt1;  
@@ -33,10 +33,10 @@ ms.locfileid: "68077204"
     SQLAllocHandle(SQL_HANDLE_STMT, hdbc1, &hstmt1);  
     ```  
   
-2.  驱动程序管理器分配要在其中存储有关的语句和调用信息的结构**SQLAllocHandle** SQL_HANDLE_STMT 选项与驱动程序中。  
+2.  驱动程序管理器分配一个结构，在该结构中存储有关语句的信息并使用 SQL_HANDLE_STMT 选项调用驱动程序中的**SQLAllocHandle** 。  
   
-3.  驱动程序分配其自己要在其中存储有关语句的信息的结构，并返回到驱动程序管理器的驱动程序语句句柄。  
+3.  驱动程序将分配其自己的结构，以便在其中存储有关语句的信息并将驱动程序语句句柄返回到驱动程序管理器。  
   
-4.  驱动程序管理器返回到应用程序变量中的应用程序的驱动程序管理器的语句句柄。  
+4.  驱动程序管理器将驱动程序管理器语句句柄返回到应用程序变量中的应用程序。  
   
- 语句句柄标识调用 ODBC 函数时要使用哪个语句。 语句句柄的详细信息，请参阅[语句句柄](../../../odbc/reference/develop-app/statement-handles.md)。
+ 语句句柄标识在调用 ODBC 函数时要使用的语句。 有关语句句柄的详细信息，请参阅[语句句柄](../../../odbc/reference/develop-app/statement-handles.md)。

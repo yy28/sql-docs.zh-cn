@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bd7fed6fff4ddd55ef56e4c5b342c56b6c2f462f
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73632790"
 ---
 # <a name="start-sql-server-management-studio"></a>启动 SQL Server Management Studio
@@ -24,15 +24,17 @@ ms.locfileid: "73632790"
   
 #### <a name="to-open-sql-server-management-studio"></a>打开 SQL Server Management Studio  
   
-1.  在 "**开始**" 菜单上，指向 "**所有程序**"，指向 "[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]"，然后单击 " **SQL Server Management Studio**"。  
+1.  在 "**开始**" 菜单上，指向 "**所有程序**" [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]，指向 ""，然后单击 " **SQL Server Management Studio**"。  
   
     > [!NOTE]  
-    >  默认情况下不会安装 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 如果 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 不可用，则运行安装程序安装此程序。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 不可用于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]。 可以从[Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=7593)免费下载 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Express，但其用户界面不同于本教程中所述的用户界面。  
+    >  默认情况下不会安装 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 如果 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 不可用，则运行安装程序安装此程序。 
+  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 不可用于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]可以从[Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=7593)免费下载 Express，但其用户界面不同于本教程中所述的用户界面。  
   
-2.  在“连接到服务器”对话框中，确认默认设置，再单击“连接”。 若要进行连接，"**服务器名称**" 框必须包含安装了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机的名称。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 是命名实例，则 "**服务器名称**" 框还应包含格式为 \<*computer_name*> *\\<instance_name*> 的实例名称。  
+2.  在“连接到服务器”对话框中，确认默认设置，再单击“连接”。******** 若要进行连接，"**服务器名称**" 框必须包含安装的计算机[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的名称。 如果[!INCLUDE[ssDE](../../includes/ssde-md.md)]是命名实例，则 "**服务器名称**" 框还应包含格式\<为*computer_name*>\\<*instance_name*> 的实例名称。  
   
 ## <a name="management-studio-components"></a>Management Studio 组件  
- [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 在专用于特定信息类型的窗口中显示信息。 数据库信息显示在对象资源管理器和文档窗口中。  
+ 
+  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 在专用于特定信息类型的窗口中显示信息。 数据库信息显示在对象资源管理器和文档窗口中。  
   
 -   对象资源管理器是服务器中所有数据库对象的树视图。 此树视图可以包括 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的数据库。 对象资源管理器包括与其连接的所有服务器的信息。 打开 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]时，系统会提示您将对象资源管理器连接到上次使用的设置。 您可以在“已注册的服务器”组件中双击任意服务器进行连接，但无需注册要连接的服务器。  
   
@@ -42,7 +44,7 @@ ms.locfileid: "73632790"
   
 #### <a name="to-show-the-registered-servers-window"></a>显示“已注册的服务器”窗口  
   
-1.  在“视图”菜单上，单击“已注册的服务器”。  
+1.  在“视图”菜单上，单击“已注册的服务器”。********  
   
      “已注册的服务器”窗口将显示在对象资源管理器的上面。 “已注册的服务器”窗口列出的是经常管理的服务器。 可以在此列表中添加和删除服务器。 列出的服务器中仅包含运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机上的 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]实例。  
   

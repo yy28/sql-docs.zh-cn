@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 01ef137ef7297be5171bcfdcacd13c80e4da4624
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63301732"
 ---
 # <a name="operator-properties-history-page"></a>操作员属性（“历史记录”页）
@@ -24,15 +24,15 @@ ms.locfileid: "63301732"
   
 ## <a name="options"></a>选项  
  **通过电子邮件**  
- 通过电子邮件进行的最近通知尝试，或者，如果从未通过电子邮件通知过此操作员，此选项将为“(从未发送电子邮件)”  。  
+ 通过电子邮件进行的最近通知尝试，或者，如果从未通过电子邮件通知过此操作员，此选项将为“(从未发送电子邮件)”****。  
   
  **通过寻呼程序**  
- 通过寻呼程序进行的最近通知尝试，或者，如果从未通过寻呼程序通知过此操作员，此选项将为“(从未寻呼)”  。  
+ 通过寻呼程序进行的最近通知尝试，或者，如果从未通过寻呼程序通知过此操作员，此选项将为“(从未寻呼)”****。  
   
  **通过 net send**  
- 通过 net send 进行的最近通知尝试，或者，如果从未通过网络发送通知过此操作员，此选项将为“(从未通过网络发送通知)”  。  
+ 通过 net send 进行的最近通知尝试，或者，如果从未通过网络发送通知过此操作员，此选项将为“(从未通过网络发送通知)”****。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [运算符](operators.md)  
   
   

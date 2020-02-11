@@ -1,5 +1,5 @@
 ---
-title: MSsnapshotdeliveryprogress (Transact SQL) |Microsoft Docs
+title: MSsnapshotdeliveryprogress （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -18,26 +18,26 @@ ms.assetid: 9164bfe2-6fc4-4b52-946a-09ea3cf67041
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 638bea3db68712300ad2284e50676bf1df67c9ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139811"
 ---
 # <a name="mssnapshotdeliveryprogress-transact-sql"></a>MSsnapshotdeliveryprogress (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSsnapshotdeliveryprogress**表用于跟踪已成功传递到订阅服务器上应用快照时的文件。 此数据用于在合并代理无法在会话时传送所有文件的情况下恢复文件传送，从而避免在下次运行合并代理时传送相同文件。 此表存储在订阅服务器的订阅数据库中。  
+  **MSsnapshotdeliveryprogress**表用于跟踪在应用快照时已成功传送到订阅服务器的文件。 此数据用于在合并代理无法在会话时传送所有文件的情况下恢复文件传送，从而避免在下次运行合并代理时传送相同文件。 此表存储在订阅服务器的订阅数据库中。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**session_token**|nvarchar(260) |标识从中成功传送文件的快照文件夹的路径。 使用参数化筛选器，该字符串的发布**dynsnap**将追加到值。|  
-|**progress_token_hash**|**int**|生成的哈希值的值基于*progress_token*用于提高查找效率给定*progress_token*值。|  
-|**progress_token**|**nvarchar(500)**|标识已成功传送的文件，其值为文件名和路径的组合。|  
-|**progress_timestamp**|**datetime**|**Datetime**值，该值指示成功传送快照文件。|  
+|**session_token**|**nvarchar(260)**|标识从中成功传送文件的快照文件夹的路径。 对于使用参数化筛选器的发布，会将字符串**dynsnap**追加到值。|  
+|**progress_token_hash**|**int**|基于*progress_token*的值生成的哈希值可提高给定*progress_token*值的查找效率。|  
+|**progress_token**|**nvarchar （500）**|标识已成功传送的文件，其值为文件名和路径的组合。|  
+|**progress_timestamp**|**datetime**|**Datetime**值，该值指示快照文件成功传递的时间。|  
   
-## <a name="see-also"></a>请参阅  
- [复制表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

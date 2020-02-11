@@ -1,5 +1,5 @@
 ---
-title: 命名空间的 uri-从的 QName (XQuery) |Microsoft Docs
+title: 命名空间 uri-从-QName （XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 4ab3f003-2a3b-4268-9e88-b615e35701b2
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 96edefd5409520109e2b2155507dd8879ed4b0d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946637"
 ---
 # <a name="functions-related-to-qnames---namespace-uri-from-qname"></a>与 QName 相关的函数 - namespace-uri-from-QName
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  返回一个字符串，表示指定的 QName 的命名空间 uri *$arg*。 如果，则结果为空序列 *$arg*是空序列。  
+  返回表示 *$arg*指定的 QName 的命名空间 uri 的字符串。 如果 *$arg*是空序列，则结果为空序列。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,17 +38,17 @@ namespace-uri-from-QName($arg as xs:QName?) as xs:string?
  是返回其命名空间 URI 的 QName。  
   
 ## <a name="examples"></a>示例  
- 本主题提供了一些针对 XML 实例存储在各种中的 XQuery 示例**xml**类型列中的 AdventureWorks 数据库。  
+ 本主题提供了对存储在 AdventureWorks 数据库的各种**xml**类型列中的 xml 实例的 XQuery 示例。  
   
 ### <a name="a-retrieve-the-namespace-uri-from-a-qname"></a>A. 检索 QName 的命名空间 URI  
- 有关工作示例，请参阅[本地名称从 QName &#40;XQuery&#41;](../xquery/functions-related-to-qnames-local-name-from-qname.md)。  
+ 有关工作示例，请参阅[本地名称 from-QName &#40;XQuery&#41;](../xquery/functions-related-to-qnames-local-name-from-qname.md)。  
   
 ### <a name="implementation-limitations"></a>实现限制  
  限制如下：  
   
--   **Namespace-uri-from-qname （)** 函数将返回而不是 xs: anyuri xs: string 的实例。  
+-   **命名空间 uri-QName （）** 函数返回 xs： string 的实例，而不是 Xs： anyURI。  
   
-## <a name="see-also"></a>请参阅  
- [与 Qname 相关的函数&#40;XQuery&#41;](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
+## <a name="see-also"></a>另请参阅  
+ [与 QNames &#40;XQuery 相关的函数&#41;](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
   
   

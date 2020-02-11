@@ -1,7 +1,7 @@
 ---
-title: xp_sprintf (TRANSACT-SQL) |Microsoft Docs
+title: xp_sprintf （Transact-sql） |Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/09/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 1eedd65c-03cc-4eab-b76e-04684fdfec52
 author: CarlRabeler
 ms.author: carlrab
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec2ad672135453750d5880d63a8f90f3e3d4c558
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3ba1648da108762b03155eb93e1ee11c53a75583
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898360"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "75831767"
 ---
-# <a name="xpsprintf-transact-sql"></a>xp_sprintf (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="xp_sprintf-transact-sql"></a>xp_sprintf (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   设置一系列字符和值的格式并将其存储到字符串输出参数中。 每个格式参数都用相应的参数替换。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,16 +40,16 @@ xp_sprintf { string OUTPUT , format }
 ```  
   
 ## <a name="arguments"></a>参数  
- *string*  
- 是**varchar**接收输出的变量。  
+ *类似*  
+ 接收输出的**varchar**变量。  
   
  OUTPUT  
  如果指定，则将变量值放在输出参数中。  
   
- *format*  
- 是的占位符的格式字符串*自变量*值，类似于 C 语言支持**sprintf**函数。 目前仅支持 %s 格式参数。  
+ *形式*  
+ 带有*参数*值占位符的格式字符串，类似于 C 语言的**sprintf**函数所支持的值。 目前仅支持 %s 格式参数。  
   
- argument   
+ *实际*  
  字符串，代表相应格式参数的值。  
   
  *n*  
@@ -67,9 +66,9 @@ xp_sprintf { string OUTPUT , format }
 ## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [常规扩展存储的过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
- [xp_sscanf &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/xp-sscanf-transact-sql.md)  
+ [&#40;Transact-sql&#41;的常规扩展存储过程](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
+ [xp_sscanf &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/xp-sscanf-transact-sql.md)  
   
   

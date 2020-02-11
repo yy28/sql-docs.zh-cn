@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 530cca00459ed1ae170272dfd20a54928f039b38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900310"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>为合并转换和合并联接转换排序数据
@@ -71,7 +71,7 @@ ms.locfileid: "62900310"
   
 5.  单击 **“输入属性和输出属性”** 选项卡。  
   
-6.  单击 **\<组件名称 > 输出**，并设置`IsSorted`属性设置为`True`。  
+6.  单击** \<"组件名称> 输出**"，并`IsSorted`将属性`True`设置为。  
   
     > [!NOTE]  
     >  如果手动将输出的 `IsSorted` 属性设置为 `True`且没有对数据进行排序，则当你运行该包时，可能会在下游合并或合并联接转换中产生缺失数据或错误数据比较。  
@@ -102,11 +102,11 @@ ms.locfileid: "62900310"
   
 9. 对每个已排序的列，重复步骤 8。  
   
-10. 单击“确定”  。  
+10. 单击“确定”。   
   
 11. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [合并转换](merge-transformation.md)   
  [合并联接转换](merge-join-transformation.md)   
  [Integration Services 转换](integration-services-transformations.md)   

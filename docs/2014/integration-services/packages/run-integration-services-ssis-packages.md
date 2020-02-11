@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5a3ecbe615d60a703b66dff78cd77ddfde0a20d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767079"
 ---
 # <a name="execution-of-projects-and-packages"></a>项目和包的执行
@@ -30,19 +30,19 @@ ms.locfileid: "62767079"
   
  为了在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器上存储包，您使用项目部署模型将项目部署到服务器。 有关信息，请参阅 [Deploy Projects to Integration Services Server](../deploy-projects-to-integration-services-server.md)。  
   
- 为了在 SSIS 包存储区、msdb 数据库或文件系统中存储包，您使用包部署模型。 有关详细信息，请参阅[包部署&#40;SSIS&#41;](legacy-package-deployment-ssis.md)。  
+ 为了在 SSIS 包存储区、msdb 数据库或文件系统中存储包，您使用包部署模型。 有关详细信息，请参阅[包部署 &#40;SSIS&#41;](legacy-package-deployment-ssis.md)。  
   
-|Tool|在 Integration Services 服务器上存储的包|在 SSIS 包存储区或 msdb 数据库中存储的包|在文件系统中存储的包，在属于 SSIS 包存储区的位置之外|  
+|工具|在 Integration Services 服务器上存储的包|在 SSIS 包存储区或 msdb 数据库中存储的包|在文件系统中存储的包，在属于 SSIS 包存储区的位置之外|  
 |----------|-----------------------------------------------------------------|--------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|  
 |**SQL Server Data Tools**|否|否<br /><br /> 但是，你可以将现有包从包括 msdb 数据库的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区添加到项目中。 以此方式将现有包添加到项目中将在文件系统中生成该包的本地副本。|是|  
-|**SQL Server Management Studio（连接到托管 Integration Services 服务器的数据库引擎实例时）**<br /><br /> 有关详细信息，请参阅 [Execute Package Dialog Box](../execute-package-dialog-box.md)|是|否<br /><br /> 但是，可以从这些位置将包导入服务器。|否<br /><br /> 但是，可以从文件系统将包导入服务器。|  
-|**SQL Server Management Studio（连接到管理 SSIS 包存储的 Integration Services 服务时）**|否|是|否<br /><br /> 但是，可以从文件系统将包导入 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区中。|  
+|**SQL Server Management Studio，当您连接到承载 Integration Services 服务器的数据库引擎的实例时**<br /><br /> 有关详细信息，请参阅 [Execute Package Dialog Box](../execute-package-dialog-box.md)|是|否<br /><br /> 但是，可以从这些位置将包导入服务器。|否<br /><br /> 但是，可以从文件系统将包导入服务器。|  
+|**SQL Server Management Studio，当它连接到管理 SSIS 包存储区的 Integration Services 服务时**|否|是|否<br /><br /> 但是，可以从文件系统将包导入 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区中。|  
 |**dtexec**<br /><br /> 有关详细信息，请参阅 [dtexec Utility](dtexec-utility.md)。|是|是|是|  
 |**dtexecui**<br /><br /> 有关详细信息，请参阅[执行包实用工具 (DtExecUI) 用户界面参考](execute-package-utility-dtexecui-ui-reference.md)|否|是|是|  
 |**SQL Server 代理**<br /><br /> 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业计划运行包。<br /><br /> 有关详细信息，请参阅 [SQL Server Agent Jobs for Packages](sql-server-agent-jobs-for-packages.md)。|是|是|是|  
 |**内置存储过程**<br /><br /> 有关详细信息，请参阅 [catalog.start_execution（SSISDB 数据库）](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database)|是|否|否|  
-|**托管的 API，通过使用** <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空间中的类型和成员|是|否|否|  
-|**托管的 API，通过使用** <xref:Microsoft.SqlServer.Dts.Runtime> 命名空间中的类型和成员|目前不可用|是|是|  
+|<xref:Microsoft.SqlServer.Management.IntegrationServices> **托管 API，通过使用命名空间中的类型和成员**|是|否|否|  
+|<xref:Microsoft.SqlServer.Dts.Runtime> **托管 API，通过使用命名空间中的类型和成员**|目前不可用|是|是|  
   
 ## <a name="execution-and-logging"></a>执行和日志记录  
  可以启用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包进行日志记录，这样就可以在日志文件中捕获运行时信息。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../performance/integration-services-ssis-logging.md)。  
@@ -57,7 +57,7 @@ ms.locfileid: "62767079"
   
 -   [使用 SQL Server Management Studio 在 SSIS 服务器上运行包](../run-a-package-on-the-ssis-server-using-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [dtexec 实用工具](dtexec-utility.md)   
  [SQL Server 导入和导出向导](../import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)  
   

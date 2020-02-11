@@ -14,17 +14,17 @@ ms.assetid: 958a179c-97d9-4717-8d06-d33b715a9773
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4d985786e4743b8bcc691cf6888c24153f5cb5f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019076"
 ---
 # <a name="cursor-library-code-example"></a>游标库代码示例
 > [!IMPORTANT]  
->  此功能将 Windows 的未来版本中删除。 避免在新的开发工作中使用此功能并计划修改当前使用此功能的应用程序。 Microsoft 建议使用驱动程序的游标功能。  
+>  此功能将在 Windows 的将来版本中删除。 避免在新的开发工作中使用此功能，并计划修改当前使用此功能的应用程序。 Microsoft 建议使用驱动程序的游标功能。  
   
- 以下示例使用游标库从 ORDERS 表中检索每个订单 ID、 打开的日期和状态。 然后，它显示 20 行的数据。 如果用户更新此数据，该代码将更新的行集缓冲区，并执行定位的更新语句。 最后，它会提示用户的方向滚动，并重复此过程。  
+ 下面的示例使用游标库检索 ORDERS 表中每个订单的 ID、打开日期和状态。 然后，它会显示20行数据。 如果用户更新这些数据，则代码会更新行集缓冲区并执行定位的 update 语句。 最后，它会提示用户滚动滚动并重复该过程。  
   
 ```  
 #define ROWS 20  

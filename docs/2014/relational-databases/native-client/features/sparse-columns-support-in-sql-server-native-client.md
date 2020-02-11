@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21b79a06acd838278073dee58026269f63b0da04
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75231712"
 ---
 # <a name="sparse-columns-support-in-sql-server-native-client"></a>SQL Server Native Client 中的稀疏列支持
@@ -32,7 +32,7 @@ ms.locfileid: "75231712"
 ## <a name="user-scenarios-for-sparse-columns-and-sql-server-native-client"></a>稀疏列和 SQL Server Native Client 的用户应用场景  
  下表为具有稀疏列的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 用户总结了常见用户应用场景：  
   
-|方案|行为|  
+|场景|行为|  
 |--------------|--------------|  
 |**select \* From table**或 IOpenRowset：： OpenRowset。|返回不是稀疏 `column_set` 的成员的所有列，以及包含是稀疏 `column_set` 的成员的所有非空列值的 XML 列。|  
 |按名称引用列。|可以不考虑其稀疏列状态或 `column_set` 成员身份如何而引用列。|  

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ab7c4496465de8297f07dd18b3aa2acf26ab305d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100501"
 ---
 # <a name="cancel-report-server-jobs-management-studio"></a>取消报表服务器作业 (Management Studio)
@@ -39,7 +39,7 @@ ms.locfileid: "66100501"
  **名称**  
  显示报表的名称。 订阅通过其各自的说明进行标识。  
   
- **类型**  
+ 类型   
  有效值为 **User** 和 **System**。  
   
  **Start Time**  
@@ -48,13 +48,13 @@ ms.locfileid: "66100501"
  **用户名**  
  对于由用户启动的作业，此列显示用户名。  
   
- **“状态”**  
+ **Status**  
  显示作业的状态。 有效值为 **“新”** 和 **“正在运行”** 。 当作业开始时，状态始终为 **“新”** 。 在 60 秒之后，状态会改为 **“正在运行”** 。 必须刷新该页才能看到变化。  
   
  **确定**  
  取消一个或多个作业。 作业会立即取消，并且不能恢复。 如果错误地取消了某个作业，则必须再次请求报表或订阅功能以启动新作业。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Management Studio 中报表服务器的 F1 帮助](report-server-in-management-studio-f1-help.md)   
  [在 Management Studio 中连接到报表服务器](connect-to-a-report-server-in-management-studio.md)   
  [管理运行中的进程](../subscriptions/manage-a-running-process.md)  

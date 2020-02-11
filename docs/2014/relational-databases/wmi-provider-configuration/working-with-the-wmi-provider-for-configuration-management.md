@@ -1,5 +1,5 @@
 ---
-title: 使用配置管理的 WMI 提供程序 |Microsoft Docs
+title: 使用 WMI 提供程序进行配置管理 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,19 +20,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9d9f3ab9f80c6f2c77153439cf554f0ae8598586
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68195774"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>使用 WMI 提供程序进行配置管理
   在使用用于计算机管理的 WMI 提供程序编程之前，请考虑下列事项：  
   
-## <a name="binding"></a>Binding  
+## <a name="binding"></a>绑定  
  用于配置管理的 WMI 提供程序是一个 COM 对象模型，它支持早期绑定和后期绑定。 借助后期绑定，您可以使用脚本语言（如 VBScript）以编程方式操作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务、网络设置和别名。  
   
- 有关如何使用脚本语言的 WMI 提供程序实现进行编程的详细信息，请参阅[!INCLUDE[msCoName](../../includes/msconame-md.md)]MSDN[网站](https://go.microsoft.com/fwlink/?linkid=15426)。  
+ 有关使用脚本语言对 WMI 提供程序实现进行编程的详细信息[!INCLUDE[msCoName](../../includes/msconame-md.md)] ，请[参阅 MSDN 网站](https://go.microsoft.com/fwlink/?linkid=15426)。  
   
 ## <a name="specifying-a-connection-string"></a>指定连接字符串  
  应用程序通过连接到 WMI 提供程序所定义的 WMI 命名空间，将用于配置管理的该提供程序定向到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 Windows WMI 服务将此命名空间映射到提供程序 DLL 并将其加载到内存。 所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例均由一个 WMI 命名空间表示。 默认命名空间为  
@@ -41,9 +41,9 @@ ms.locfileid: "68195774"
 \\.\root\Microsoft\SqlServer\ComputerManagement12\instance_name  
 ```  
   
- 其中 `instance_name` 默认为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 默认安装中的 `MSSQLSERVER`。  
+ 其中 `instance_name` 默认为 `MSSQLSERVER` 默认安装中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
- **注意：** 如果通过 Windows 防火墙进行连接，需要确保已正确配置您的计算机。 请参阅"通过 Windows 防火墙连接"文章中的 Windows Management Instrumentation 文档[!INCLUDE[msCoName](../../includes/msconame-md.md)]MSDN[网站](https://go.microsoft.com/fwlink/?linkid=15426)。  
+ **注意：** 如果要通过 Windows 防火墙进行连接，则需要确保计算机配置正确。 请[参阅 MSDN 网站](https://go.microsoft.com/fwlink/?linkid=15426)上[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Management Instrumentation 文档中的 "通过 Windows 防火墙连接" 一文。  
   
 ## <a name="permissions-and-server-authentication"></a>权限和服务器身份验证  
  若要访问用于配置管理的 WMI 提供程序，客户端 WMI 管理脚本必须在目标计算机上的管理员上下文中运行。 您需要具有要管理的计算机上的本地 Windows Administrators 组的成员身份。  
@@ -54,7 +54,7 @@ ms.locfileid: "68195774"
   
  用于配置管理的 WMI 提供程序支持安全证书。 有关证书的详细信息，请参阅[加密层次结构](../security/encryption/encryption-hierarchy.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 配置管理器](../sql-server-configuration-manager.md)  
   
   

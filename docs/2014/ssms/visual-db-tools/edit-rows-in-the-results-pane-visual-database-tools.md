@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1ff20051f5486fc8e9550c961f838ab5dc5c738
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63028347"
 ---
 # <a name="edit-rows-in-the-results-pane-visual-database-tools"></a>在“结果”窗格中编辑行 (Visual Database Tools)
@@ -40,8 +40,8 @@ ms.locfileid: "63028347"
   
 4.  鼠标移出该行即可保存更改。  
   
-## <a name="see-also"></a>请参阅  
- [使用结果窗格中的数据&#40;可视化数据库工具&#41;](work-with-data-in-the-results-pane-visual-database-tools.md)   
+## <a name="see-also"></a>另请参阅  
+ [使用 Visual Database Tools &#40;的 "结果" 窗格中的数据&#41;](work-with-data-in-the-results-pane-visual-database-tools.md)   
  [更新结果的规则 (Visual Database Tools)](rules-for-updating-results-visual-database-tools.md)  
   
   

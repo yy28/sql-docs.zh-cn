@@ -1,5 +1,5 @@
 ---
-title: 重命名多维数据库 (Analysis Services) |Microsoft Docs
+title: 重命名多维数据库（Analysis Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,20 +13,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 28ec21d4cb0cda01852316c1198bd68df3058ffc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073151"
 ---
 # <a name="rename-a-multidimensional-database-analysis-services"></a>重命名多维数据库 (Analysis Services)
-  更改 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库名称的方式取决于如何连接 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库。 若要更改现有数据库的名称，则必须在联机模式下进行连接。 若要更改 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目中要进行实例化的对象所在数据库的名称，必须以项目模式进行连接。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]更改[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库名称的方式取决于连接到[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库的方式。 若要更改现有数据库的名称，则必须在联机模式下进行连接。 若要更改 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目中要进行实例化的对象所在数据库的名称，必须以项目模式进行连接。  
   
 ### <a name="to-change-the-database-name-in-online-mode"></a>在联机模式下更改数据库名称  
   
 1.  使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]，直接连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库。  
   
-2.  在解决方案资源管理器中，右键单击该数据库，再单击“编辑数据库”  。  
+2.  在解决方案资源管理器中，右键单击该数据库，再单击“编辑数据库”****。  
   
 3.  在 **“数据库名称”** 文本框中，更改数据库名称。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66073151"
   
 1.  打开 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目。  
   
-2.  在解决方案资源管理器中，右键单击 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目，再单击“属性”  。  
+2.  在解决方案资源管理器中，右键单击 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目，再单击“属性”****。  
   
 3.  在 **“属性页”** 对话框中，单击 **“配置属性”** 部分中的 **“部署”** 。  
   
@@ -50,10 +50,10 @@ ms.locfileid: "66073151"
   
 -   右键单击 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库并且编辑 Name 属性。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在 Analysis Services 中配置服务器属性](../server-properties/server-properties-in-analysis-services.md)   
- [设置多维数据库属性 (Analysis Services)](set-multidimensional-database-properties-analysis-services.md)   
- [配置 Analysis Services 项目属性 (SSDT)](configure-analysis-services-project-properties-ssdt.md)   
- [部署 Analysis Services 项目 (SSDT)](deploy-analysis-services-projects-ssdt.md)  
+ [设置多维数据库属性 &#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)   
+ [配置 Analysis Services 项目属性 &#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)   
+ [&#40;SSDT 部署 Analysis Services 项目&#41;](deploy-analysis-services-projects-ssdt.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 架构生成向导的 F1 帮助 (Analysis Services-多维数据) |Microsoft Docs
+title: 架构生成向导的 F1 帮助（Analysis Services 多维数据） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dbc1f6daf1039d24830bc91140f82e061b88ae65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069949"
 ---
 # <a name="schema-generation-wizard-f1-help-analysis-services---multidimensional-data"></a>架构生成向导的 F1 帮助（Analysis Services - 多维数据）
@@ -36,15 +36,15 @@ ms.locfileid: "66069949"
   
 ## <a name="in-this-section"></a>本节内容  
   
--   [指定目标&#40;架构生成向导&#41; &#40;Analysis Services-多维数据&#41;](specify-target-schema-generation-wizard-analysis-services-multidimensional-data.md)  
+-   [&#41; &#40;Analysis Services 多维数据指定目标 &#40;架构生成向导&#41;](specify-target-schema-generation-wizard-analysis-services-multidimensional-data.md)  
   
--   [主题区域数据库架构选项&#40;架构生成向导&#41; &#40;Analysis Services-多维数据&#41;](subject-area-database-schema-options-analysis-services-multidimensional-data.md)  
+-   [主题区域数据库架构选项 &#40;架构生成向导&#41; &#40;Analysis Services 多维数据&#41;](subject-area-database-schema-options-analysis-services-multidimensional-data.md)  
   
--   [指定命名约定&#40;架构生成向导&#41; &#40;Analysis Services-多维数据&#41;](specify-naming-conventions-schema-generation-analysis-services-multidimensional-data.md)  
+-   [指定命名约定 &#40;架构生成向导&#41; &#40;Analysis Services 多维数据&#41;](specify-naming-conventions-schema-generation-analysis-services-multidimensional-data.md)  
   
--   [完成向导&#40;架构生成向导&#41; &#40;Analysis Services-多维数据&#41;](complete-schema-generation-wizard-analysis-services-multidimensional-data.md)  
+-   [完成向导 &#40;架构生成向导&#41; &#40;Analysis Services 多维数据&#41;](complete-schema-generation-wizard-analysis-services-multidimensional-data.md)  
   
-## <a name="see-also"></a>请参阅  
- [Analysis Services 向导&#40;多维数据&#41;](analysis-services-wizards-multidimensional-data.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;多维数据的 Analysis Services 向导&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

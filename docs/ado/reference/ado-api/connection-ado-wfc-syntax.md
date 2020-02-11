@@ -1,5 +1,5 @@
 ---
-title: 连接 (ADO-WFC 语法) |Microsoft Docs
+title: 连接（ADO-WFC 语法） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,14 +14,14 @@ ms.assetid: 8cfc35bb-91e2-47da-ad4c-982e9162cd51
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 64647d577170a79b1f600b7162a0338ea19c572e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919539"
 ---
 # <a name="connection-ado---wfc-syntax"></a>连接（ADO - WFC 语法）
-## <a name="package-commswfcdata"></a>包 com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>包 .com. 数据  
   
 ### <a name="constructor"></a>构造函数  
   
@@ -44,7 +44,7 @@ public int executeUpdate(String commandText)
 public int executeUpdate(String commandText, int options)  
 ```  
   
- **ExecuteUpdate**方法是特殊的大小写方法，调用基础 ADO**执行**带有某些参数的方法。 **ExecuteUpdate**方法不支持的返回**记录集**对象，因此**执行**方法的*选项*参数是使用修改**AdoEnums.ExecuteOptions.NORECORDS**。 之后**执行**方法完成，其更新*RecordsAffected*参数传递回**executeUpdate**方法，最后返回作为**int**。  
+ **ExecuteUpdate**方法是一种特殊的 case 方法，该方法使用某些参数调用基础 ADO **execute**方法。 **ExecuteUpdate**方法不支持返回**Recordset**对象，因此将使用**AdoEnums**修改**execute**方法的*options*参数。 **Execute**方法完成后，其更新的*RecordsAffected*参数会传递回**executeUpdate**方法，该方法最终返回为**int**。  
   
 ```  
 public void open()   
@@ -58,7 +58,7 @@ public Recordset openSchema(int schema)
 public Recordset openSchema(int schema, Object[] restrictions)  
 ```  
   
-### <a name="properties"></a>properties  
+### <a name="properties"></a>属性  
   
 ```  
 public int getAttributes()  
@@ -85,8 +85,8 @@ public AdoProperties getProperties()
 public com.ms.wfc.data.Errors getErrors()  
 ```  
   
-### <a name="events"></a>Events  
- 有关 ADO/WFC 事件的详细信息，请参阅[ADO 事件实例化的语言](../../../ado/guide/data/ado-event-instantiation-by-language.md)。  
+### <a name="events"></a>事件  
+ 有关 ADO/WFC 事件的详细信息，请参阅[按语言的 Ado 事件实例化](../../../ado/guide/data/ado-event-instantiation-by-language.md)。  
   
 ```  
 public void addOnBeginTransComplete(ConnectionEventHandler handler)  
@@ -109,5 +109,5 @@ public void addOnWillExecute(ConnectionEventHandler handler)
 public void removeOnWillExecute(ConnectionEventHandler handler)  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5053cc16734cc18c75e163fec4c06b1768e590cc
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68941066"
 ---
 # <a name="view-and-modify-publication-properties"></a>查看和修改发布属性
@@ -55,9 +55,9 @@ ms.locfileid: "68941066"
 -   创建发布之后，某些属性更改要求新的快照。 如果发布具有多个订阅，某些更改还会要求重新初始化所有订阅。 有关详细信息，请参阅[更改发布和项目属性](change-publication-and-article-properties.md)和[向现有发布添加项目和从中删除项目](add-articles-to-and-drop-articles-from-existing-publications.md)。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 可在“发布属性 - \<发布>”对话框（在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 和复制监视器中可用）中查看和修改发布属性。 有关启动复制监视器的信息，请参阅[启动复制监视器](../monitor/start-the-replication-monitor.md)。  
+ 可在“发布属性 - \<发布>”对话框（在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 和复制监视器中可用）中查看和修改发布属性。  有关启动复制监视器的信息，请参阅[启动复制监视器](../monitor/start-the-replication-monitor.md)。  
   
- “发布属性 - \<发布>”对话框中包括以下页：  
+ “发布属性 - \<发布>”对话框中包括以下页：   
   
 -   **“常规”** 页，包含发布名称和说明、数据库名称、发布类型以及订阅过期设置。  
   
@@ -102,29 +102,29 @@ ms.locfileid: "68941066"
   
 #### <a name="to-view-the-properties-of-a-snapshot-or-transactional-publication"></a>查看快照发布或事务发布的属性  
   
-1.  执行[sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql), 并指定发布参数的发布 **\@** 名称。 如果未指定此参数，则会返回发布服务器上所有发布的相关信息。  
+1.  执行 [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql)，为 \@publication 参数指定该发布的名称  。 如果未指定此参数，则会返回发布服务器上所有发布的相关信息。  
   
 #### <a name="to-change-the-properties-of-a-snapshot-or-transactional-publication"></a>更改快照发布或事务发布的属性  
   
-1.  执行[sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), 在 **\@属性**参数中指定要更改的发布属性, 并在 **\@value**参数中指定此属性的新值。  
+1.  执行 [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)，在 \@property 参数中指定要更改的发布属性，并在 \@value 参数中指定此属性的新值   。  
   
     > [!NOTE]  
-    >  如果更改需要生成新快照, 则还必须为 **\@force_invalidate_snapshot**指定值**1** , 并且如果更改需要重新初始化订阅服务器, 则必须将值指定为**1** **对于\@force_reinit_subscription**。 有关更改时需要新快照或重新初始化的属性的详细信息，请参阅[更改发布和项目属性](change-publication-and-article-properties.md)。  
+    >  如果该更改将要求生成新快照，则还必须将 \@force_invalidate_snapshot 的值指定为 1，而如果该更改将要求重新初始化订阅服务器，则必须将 \@force_reinit_subscription 的值指定为 1     。 有关更改时需要新快照或重新初始化的属性的详细信息，请参阅[更改发布和项目属性](change-publication-and-article-properties.md)。  
   
 #### <a name="to-view-the-properties-of-a-merge-publication"></a>查看合并发布的属性  
   
-1.  执行[sp_helpmergepublication](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql), 并指定发布参数的发布 **\@** 名称。 如果未指定此参数，则会返回发布服务器上所有发布的相关信息。  
+1.  执行 [sp_helpmergepublication](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql)，为 \@publication 参数指定该发布的名称  。 如果未指定此参数，则会返回发布服务器上所有发布的相关信息。  
   
 #### <a name="to-change-the-properties-of-a-merge-publication"></a>更改合并发布的属性  
   
-1.  执行[sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), 在 **\@属性**参数中指定要更改的发布属性, 并在 **\@value**参数中指定此属性的新值。  
+1.  执行 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)，在 \@property 参数中指定要更改的发布属性，并在 \@value 参数中指定此属性的新值   。  
   
     > [!NOTE]  
-    >  如果更改需要生成新快照, 则还必须为 **\@force_invalidate_snapshot**指定值**1** , 并且如果更改需要重新初始化订阅服务器, 则必须将值指定为**1对于 force_reinit_subscription,** 有关在更改时需要新快照或重新初始化的属性的详细信息, 请参阅[更改发布和项目属性](change-publication-and-article-properties.md)。  **\@**  
+    >  如果该更改将要求生成新快照，则还必须将 \@force_invalidate_snapshot 的值指定为 1，而如果该更改将要求重新初始化订阅服务器，则必须将 \@force_reinit_subscription 的值指定为 1。有关那些在更改后要求生成新快照或重新初始化的属性的详细信息，请参阅[更改发布和项目属性](change-publication-and-article-properties.md)     。  
   
 #### <a name="to-view-the-properties-of-a-snapshot"></a>查看快照的属性  
   
-1.  执行[sp_helppublication_snapshot](/sql/relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql), 并指定发布参数的发布 **\@** 名称。  
+1.  执行 [sp_helppublication_snapshot](/sql/relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql)，为 \@publication 参数指定该发布的名称  。  
   
 #### <a name="to-change-the-properties-of-a-snapshot"></a>更改快照的属性  
   
@@ -160,7 +160,7 @@ ms.locfileid: "68941066"
   
 4.  （可选）若要更改属性，为一个或多个可设置的属性设置新值。 使用逻辑 AND 运算符（在 Microsoft Visual C# 中为 `&`，在 Microsoft Visual Basic 中为 `And`）可确定是否为 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 属性设置了给定的 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 值。 使用逻辑 OR 运算符（在 Visual C# 中为 `|`，在 Visual Basic 中为 `Or`）和逻辑异或运算符（在 Visual C# 中为 `^`，在 Visual Basic 中为 `Xor`）可更改 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 属性的 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 值。  
   
-5.  （可选）如果已将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 的值指定为 `true`，则调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法以在服务器上提交更改。 如果将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 的值指定为 `false`（默认值），则会将更改立即发送到服务器。  
+5.  （可选）如果已将 `true` 的值指定为 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>，则调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法以在服务器上提交更改。 如果将 `false` 的值指定为 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>（默认值），则会将更改立即发送到服务器。  
   
 #### <a name="to-view-or-modify-properties-of-a-merge-publication"></a>查看或修改合并发布的属性  
   
@@ -172,7 +172,7 @@ ms.locfileid: "68941066"
   
 4.  （可选）若要更改属性，为一个或多个可设置的属性设置新值。 使用逻辑 AND 运算符（在 Visual C# 中为 `&`，在 Visual Basic 中为 `And`）可确定是否为 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 属性设置了给定的 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 值。 使用逻辑 OR 运算符（在 Visual C# 中为 `|`，在 Visual Basic 中为 `Or`）和逻辑异或运算符（在 Visual C# 中为 `^`，在 Visual Basic 中为 `Xor`）可更改 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 属性的 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 值。  
   
-5.  （可选）如果已将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 的值指定为 `true`，则调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法以在服务器上提交更改。 如果将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 的值指定为 `false`（默认值），则会将更改立即发送到服务器。  
+5.  （可选）如果已将 `true` 的值指定为 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>，则调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法以在服务器上提交更改。 如果将 `false` 的值指定为 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>（默认值），则会将更改立即发送到服务器。  
   
 ###  <a name="PShellExample"></a> 示例 (RMO)  
  该示例设置事务发布的发布属性。 这些更改将被缓存，直至将其显式发送到服务器。  
@@ -187,7 +187,7 @@ ms.locfileid: "68941066"
   
  [!code-vb[HowTo#rmo_vb_ChangeMergePub_ddl](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changemergepub_ddl)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [发布数据和数据库对象](publish-data-and-database-objects.md)   
  [更改发布和项目属性](change-publication-and-article-properties.md)   
  [对发布数据库进行架构更改](make-schema-changes-on-publication-databases.md)   

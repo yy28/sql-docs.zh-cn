@@ -11,16 +11,16 @@ ms.assetid: 646d5f0b-df0c-47a6-a630-99cac1026a4c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 06f98cd40ee003a7e8805e6b83fdac0940526e49
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67990630"
 ---
 # <a name="odbc-escape-sequences"></a>ODBC 转义序列
-在 ODBC 中使用以下的转义序列。 在本部分中的语法使用中定义的某些元素[SQL 语句中使用元素](../../../odbc/reference/appendixes/elements-used-in-sql-statements.md)。  
+ODBC 中使用了以下转义序列。 本部分中的语法使用[SQL 语句中使用的元素](../../../odbc/reference/appendixes/elements-used-in-sql-statements.md)中定义的某些元素。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [日期、时间和时间戳转义序列](../../../odbc/reference/appendixes/date-time-and-timestamp-escape-sequences.md)  
   

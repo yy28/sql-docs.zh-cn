@@ -1,5 +1,5 @@
 ---
-title: sp_polybase_leave_group (TRANSACT-SQL) |Microsoft Docs
+title: sp_polybase_leave_group （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,20 +14,20 @@ ms.assetid: ef87a8f1-5407-47b5-b8bf-bd7d08c0f0fe
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0071746f2d65dd0c9c699beeacf404bf3dd7bb65
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67941928"
 ---
-# <a name="sppolybaseleavegroup-transact-sql"></a>sp_polybase_leave_group (TRANSACT-SQL)
+# <a name="sp_polybase_leave_group-transact-sql"></a>sp_polybase_leave_group （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  从横向扩展计算 PolyBase 组中删除 SQL Server 实例。 
+  从 PolyBase 组中删除用于扩展计算的 SQL Server 实例。 
  
- SQL Server 实例都必须具有[PolyBase 指南](../../relational-databases/polybase/polybase-guide.md)安装功能。  PolyBase 支持非 SQL Server 数据源，例如 Hadoop 和 Azure blob 存储的集成。 另请参阅[sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md)。  
+ SQL Server 实例必须安装[PolyBase 指南](../../relational-databases/polybase/polybase-guide.md)功能。  PolyBase 启用了非 SQL Server 数据源，如 Hadoop 和 Azure blob 存储。 另请参阅[sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md)。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,21 +41,21 @@ sp_polybase_leave_group;
  0（成功）或 1（失败）  
   
 ## <a name="permissions"></a>权限  
- 要求具有 CONTROL SERVER 权限。  
+ 需要 CONTROL SERVER 权限。  
   
 ## <a name="remarks"></a>备注  
- 仅可以从组中删除计算节点。  
+ 只能从组中删除计算节点。  
   
- 运行后的存储的过程，重启 PolyBase 引擎和 PolyBase 数据移动服务在计算机上。 若要验证的头节点上运行以下 DMV: **sys.dm_exec_compute_nodes**。  
+ 运行存储过程后，重新启动计算机上的 PolyBase 引擎和 PolyBase 数据移动服务。 验证在头节点上运行以下 DMV： **sys. dm_exec_compute_nodes**。  
   
 ## <a name="example"></a>示例  
- 该示例从 PolyBase 组中删除当前的计算机。  
+ 该示例从 PolyBase 组中删除当前计算机。  
   
 ```sql  
 EXEC sp_polybase_leave_group ;  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [PolyBase 入门](../../relational-databases/polybase/get-started-with-polybase.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8c554959fedba58f743f1dd37d3c97554d0f00d3
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243254"
 ---
 # <a name="spatial-results-window"></a>“空间结果”窗口
-  "**空间结果**" 窗口提供了用于查看空间数据的可视化映射工具。 若要查看空间结果，查询结果中必须包括一个包含几何图形或地域数据的空间列。  
+  **“空间结果”** 窗口提供了用于查看空间数据的可视化映射工具。 若要查看空间结果，查询结果中必须包括一个包含几何图形或地域数据的空间列。  
   
 > [!NOTE]  
 >  仅当结果返回到 **“结果”** 窗口中的某个网格时， **“空间结果”** 窗口才可用。 如果指定将结果作为文本返回，则此窗口不可用。  
@@ -37,7 +37,7 @@ ms.locfileid: "75243254"
   
  此选项不适用于几何图形数据。  
   
- **贴近**  
+ **Zoom**  
  按指数比例调整映射显示。  
   
  **显示网格线**  
@@ -49,9 +49,9 @@ ms.locfileid: "75243254"
 >  不能标记点实例。  
   
 ## <a name="see-also"></a>另请参阅  
- [查看对象资源管理器中的空间数据](view-spatial-data-in-object-explorer.md)   
- [空间数据 &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md)   
- [数据库引擎查询编辑器 &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)   
- [查询和文本编辑器 &#40;SQL Server Management Studio&#41;](query-and-text-editors-sql-server-management-studio.md)  
+ [在对象资源管理器中查看空间数据](view-spatial-data-in-object-explorer.md)   
+ [空间数据 (SQL Server)](../spatial/spatial-data-sql-server.md)   
+ [数据库引擎查询编辑器 (SQL Server Management Studio)](database-engine-query-editor-sql-server-management-studio.md)   
+ [查询和文本编辑器 (SQL Server Management Studio)](query-and-text-editors-sql-server-management-studio.md)  
   
   

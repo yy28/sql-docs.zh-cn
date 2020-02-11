@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5fd06c01ddbb92679bc728350850f487b1ad5db8
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73766045"
 ---
 # <a name="set-large-data-ole-db"></a>设置大型数据 (OLE DB)
@@ -25,28 +25,28 @@ ms.locfileid: "73766045"
 
   此示例显示如何设置 BLOB 数据、创建表、添加示例记录、从行集中提取该记录，然后设置该 BLOB 字段的值。 IA64 平台不支持此示例。  
   
- 为了将指针传递给它自己的存储对象，使用者创建一个绑定 BLOB 列的值的取值函数，然后调用 IRowsetChange::SetData 或 IRowsetChange::InsertRow 方法。  
+ 为了将指针传递给它自己的存储对象，使用者创建一个绑定 BLOB 列的值的取值函数，然后调用 IRowsetChange::SetData 或 IRowsetChange::InsertRow 方法********。  
   
  此示例要求使用 AdventureWorks 示例数据库，其可从 [Microsoft SQL Server 示例和社区项目](https://go.microsoft.com/fwlink/?LinkID=85384)主页下载。  
   
 > [!IMPORTANT]  
->  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
+>  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，则应通过[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)对其进行加密。  
   
 ## <a name="procedures"></a>过程  
   
 #### <a name="to-set-blob-data"></a>设置 BLOB 数据  
   
-1.  创建一个描述应如何访问 BLOB 列的 DBOBJECT 结构。 将 DBOBJECT 结构的 dwFlag 元素设置为 STGM_READ，并将 iid 元素设置为 IID_ISequentialStream（要公开的接口）。  
+1.  创建一个描述应如何访问 BLOB 列的 DBOBJECT 结构。 将 DBOBJECT 结构的 dwFlag 元素设置为 STGM_READ，并将 iid 元素设置为 IID_ISequentialStream（要公开的接口）********。  
   
 2.  设置 DBPROPSET_ROWSET 属性组中的属性，以使行集可更新。  
   
-3.  通过使用 DBBINDING 结构数组创建一组绑定（每列一个）。 将 DBBINDING 结构中的 wType 元素设置为 DBTYPE_IUNKNOWN，并将 pObject 元素设置为指向创建的 DBOBJECT 结构。  
+3.  通过使用 DBBINDING 结构数组创建一组绑定（每列一个）。 将 DBBINDING 结构中的 wType 元素设置为 DBTYPE_IUNKNOWN，并将 pObject 元素设置为指向创建的 DBOBJECT 结构********。  
   
 4.  使用 DBBINDINGS 结构数组中的绑定信息创建取值函数。  
   
-5.  调用 GetNextRows 将后续的行提取到行集中。 调用 GetData 以读取行集中的数据。  
+5.  调用 GetNextRows 将后续的行提取到行集中****。 调用 GetData 以读取行集中的数据****。  
   
-6.  若要设置数据，创建一个存储对象（其中包含数据以及长度指示器），然后通过绑定 BLOB 列的取值函数调用 IRowsetChange::SetData（或 IRowsetChange::InsertRow）。  
+6.  若要设置数据，创建一个存储对象（其中包含数据以及长度指示器），然后通过绑定 BLOB 列的取值函数调用 IRowsetChange::SetData（或 IRowsetChange::InsertRow）********。  
 
 ## <a name="example"></a>示例  
   

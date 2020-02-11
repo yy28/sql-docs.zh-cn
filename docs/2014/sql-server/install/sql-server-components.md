@@ -22,10 +22,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 514524f063bf78ceb4862612dd8c78ce8cf78fc4
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811086"
 ---
 # <a name="sql-server-components"></a>SQL Server 组件
@@ -37,11 +37,11 @@ ms.locfileid: "68811086"
   
  若要对其他计算机进行分析，请遵循下列准则：  
   
--   若要扫描非群集实例, 请输入计算机名。  
+-   若要扫描非群集实例，请输入计算机名。  
   
 -   若要扫描群集实例，请输入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例的名称。  
   
--   若要扫描安装在群集节点上的非群集组件, 请输入故障转移群集节点的计算机名称。  
+-   若要扫描安装在群集节点上的非群集组件，请输入故障转移群集节点的计算机名称。  
   
     > [!IMPORTANT]  
     >  切勿包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名。  
@@ -50,8 +50,8 @@ ms.locfileid: "68811086"
   
  如果扫描 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，则必须指定本地计算机的名称。 升级顾问仅扫描本地报表服务器。  
   
- **察觉**  
- "**检测**" 按钮访问指定的计算机并检测要分析的组件:  
+ **Detect**  
+ "**检测**" 按钮访问指定的计算机并检测要分析的组件：  
   
 -   如果要分析远程计算机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，则必须在远程计算机上启用远程注册表服务。  
   
@@ -62,9 +62,9 @@ ms.locfileid: "68811086"
 -   如果在计算机的注册表中发现 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，将检测到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 不过，升级顾问仅扫描本地报表服务器。  
   
  **组件**  
- 选择要分析的组件。 可以单击 "**检测**" 按钮, 选择计算机上安装的所有组件。 检测为已安装在计算机上的组件旁边会出现一个复选标记。 还可以通过选中或清除各个组件旁边的复选框来手动选择所要分析的组件。  
+ 选择要分析的组件。 可以单击 "**检测**" 按钮，选择计算机上安装的所有组件。 检测为已安装在计算机上的组件旁边会出现一个复选标记。 还可以通过选中或清除各个组件旁边的复选框来手动选择所要分析的组件。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用升级顾问](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
  [升级顾问用户界面参考](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)  
   

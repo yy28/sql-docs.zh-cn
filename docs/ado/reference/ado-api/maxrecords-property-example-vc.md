@@ -1,5 +1,5 @@
 ---
-title: MaxRecords 属性示例 （VC + +） |Microsoft Docs
+title: MaxRecords 属性示例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: af6b399b-e546-4de5-9cd1-5a6e0ec7ddc7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bde93002771c219b6358cd1ecd1325fd77208d8d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932248"
 ---
 # <a name="maxrecords-property-example-vc"></a>MaxRecords 属性示例 (VC++)
-此示例使用[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)以打开[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)包含 10 个最贵的书中***标题***表。  
+此示例使用[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)属性打开一个[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，其中包含***标题***表中的10个最昂贵的标题。  
   
 ## <a name="example"></a>示例  
   
@@ -165,17 +165,17 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **价格的前十个标题：**  
-**但它是用户友好？---22.95**  
-**计算机 Phobic 和非恐惧症的个人：---21.59 行为的变体**  
-**洋葱、 Leeks 和蒜蓉：烹饪地中海---20.95 机密**  
-**硅谷---20.00 的秘密**  
-**繁忙主管的数据库指南---19.99**  
-**有关计算机---19.99 直接对话**  
-**硅谷 Gastronomic 将---19.99**  
-**长时间的数据 Deprivation:四个案例研究---19.99**  
+ **按价格排列的十大标题：**  
+**但用户是否友好？---22.95**  
+**计算机善始善终和非善始善终个体：行为变化形式---21.59**  
+**Onions、Leeks 和大蒜：地中海的密码---20.95**  
+**硅低谷的机密---20.00**  
+**繁忙的 Executive 数据库指南---19.99**  
+**直接谈论---19.99 的计算机**  
+**硅谷 Gastronomic---19.99**  
+**长时间数据 Deprivation：四个案例研究---19.99**  
 **寿司，任何人？---14.99**  
-**在 Buckingham 店厨房---11.95 五十年**   
-## <a name="see-also"></a>请参阅  
- [MaxRecords 属性 (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
+**50年 Buckingham Palace Kitchens---11.95**   
+## <a name="see-also"></a>另请参阅  
+ [MaxRecords 属性（ADO）](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

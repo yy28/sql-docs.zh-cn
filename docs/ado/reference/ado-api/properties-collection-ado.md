@@ -1,5 +1,5 @@
 ---
-title: 属性集合 (ADO) |Microsoft Docs
+title: Properties 集合（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,27 +18,27 @@ ms.assetid: 1d539aa8-ce0d-4418-ab03-8d0a3c1e9d82
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 01c2ea6b885ed2619b79413beb09ca4bf2835162
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917561"
 ---
 # <a name="properties-collection-ado"></a>属性集合 (ADO)
-包含所有[属性](../../../ado/reference/ado-api/property-object-ado.md)对象的特定实例的对象。  
+包含对象的特定实例的所有[属性](../../../ado/reference/ado-api/property-object-ado.md)对象。  
   
 ## <a name="remarks"></a>备注  
- 某些 ADO 对象具有**属性**组成的集合**属性**对象。 每个**属性**对象对应于特定于访问接口的 ADO 对象的特征。  
+ 某些 ADO 对象具有属性**集合，其中包含****属性**对象。 每个**属性**对象对应于特定于提供程序的 ADO 对象的特性。  
   
 > [!NOTE]
->  请参阅[属性](../../../ado/reference/ado-api/property-object-ado.md)如何使用更多详细说明的主题**属性**对象。  
+>  有关如何使用**属性**对象的更详细说明，请参阅[属性](../../../ado/reference/ado-api/property-object-ado.md)对象主题。  
   
- **动态属性**的**记录集**对象超出范围 （变得不可用） 时转**记录集**已关闭。  
+ 记录**集**关闭时， **Recordset**对象的**动态属性**超出范围（变为不可用）。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
--   [属性集合属性、 方法和事件](../../../ado/reference/ado-api/properties-collection-properties-methods-and-events.md)  
+-   [属性集合属性、方法和事件](../../../ado/reference/ado-api/properties-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>请参阅  
- [属性对象 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
+## <a name="see-also"></a>另请参阅  
+ [Property 对象（ADO）](../../../ado/reference/ado-api/property-object-ado.md)   
  [附录 A：提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)

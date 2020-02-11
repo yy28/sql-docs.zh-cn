@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ef1a23d21e5945e15d497bab3480b48f8cf3fe6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098213"
 ---
-# <a name="reencryptsecureinformation-method-wmi-msreportserverconfigurationsetting"></a>ReencryptSecureInformation 方法 (WMI MSReportServer_ConfigurationSetting)
+# <a name="reencryptsecureinformation-method-wmi-msreportserver_configurationsetting"></a>ReencryptSecureInformation 方法 (WMI MSReportServer_ConfigurationSetting)
   生成新的加密密钥，并使用新密钥对目录中的所有安全信息进行重新加密。  
   
 ## <a name="syntax"></a>语法  
@@ -38,7 +38,7 @@ Public Sub ReencryptSecureInformation(ByRef HRESULT as Int32, ByRef ExtendedErro
 public void ReencryptSecureInformation (out Int32 HRESULT, out string[] ExtendedErrors);  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>parameters  
  *HRESULT*  
  [out] 指示调用是成功还是失败的值。  
   
@@ -58,9 +58,9 @@ public void ReencryptSecureInformation (out Int32 HRESULT, out string[] Extended
  如果此方法运行在扩展部署中的计算机上，则扩展部署中的每台计算机将都需要再次进行初始化。  
   
 ## <a name="requirements"></a>要求  
- **命名空间:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](msreportserver-configurationsetting-members.md)  
   
   

@@ -14,15 +14,15 @@ ms.assetid: ebe58a83-a7b0-4747-86c8-2af2940471ef
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8420589761a1f8cb1f9cf8a3022842863fd30758
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046887"
 ---
 # <a name="dynamic-tracing"></a>动态跟踪
-可以启用或禁用运行的应用程序中的任何位置跟踪。 这允许应用程序跟踪任意数量的函数调用。  
+在应用程序运行中的任何位置都可以启用或禁用跟踪。 这样，应用程序便可以跟踪任意数量的函数调用。  
   
- 在变量**ODBCSharedTraceFlag**设置以启用动态跟踪。 此变量是在所有运行副本的驱动程序管理器之间共享。 如果任何应用程序设置此变量，为所有当前正在运行的 ODBC 应用程序启用跟踪。 若要启用关闭时启用了动态跟踪的跟踪，应用程序调用**SQLSetConnectAttr** SQL_ATTR_TRACE 设 SQL_TRACE_OFF。 此调用将关闭该应用程序关闭跟踪。 使用 odbc32.lib 进行链接的应用程序可以修改此变量的用途。 可以在实时窗口中，而不是 ODBC 会话后，必须打开跟踪文件显示跟踪数据。 控件可以添加到应用程序的屏幕，若要启用将在打开或关闭跟踪。  
+ 变量**ODBCSharedTraceFlag**设置为动态启用跟踪。 此变量在驱动程序管理器的所有正在运行的副本之间共享。 如果任何应用程序设置此变量，则会为当前正在运行的所有 ODBC 应用程序启用跟踪。 若要在启用动态跟踪时关闭跟踪功能，应用程序将调用**SQLSetConnectAttr** ，将 SQL_ATTR_TRACE 设置为 SQL_TRACE_OFF。 此调用只会为该应用程序关闭跟踪。 链接到 Odbc32.lib 的应用程序可以修改此变量的使用。 跟踪数据可以显示在实时窗口中，而不是显示在 ODBC 会话之后必须打开的跟踪文件中。 控件可以添加到应用程序的屏幕上，以打开或关闭跟踪。  
   
- 跟踪 DLL 随 ODBC 3 *.x*不是线程安全的。 不保证日志文件编写正确，如果启用全局跟踪 (变量**ODBCSharedTraceFlag**设置) 和多个应用程序在同一时间将写入到跟踪文件。 这种情况不会返回错误。
+ ODBC 1.x 附带的跟踪 DLL 不*是线程安全的。* 如果启用了全局跟踪（设置了变量**ODBCSharedTraceFlag** ），并同时向跟踪文件写入了多个应用程序，则不能保证正确写入日志文件。 此条件不会返回错误。

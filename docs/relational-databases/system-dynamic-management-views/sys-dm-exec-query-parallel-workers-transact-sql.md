@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_query_parallel_workers (TRANSACT-SQL) |Microsoft Docs
+title: sys. dm_exec_query_parallel_workers （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql
@@ -22,30 +22,30 @@ ms.author: pelopes
 manager: ajayj
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 000dd995427f8eafec759688db1ab76a6546b789
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68263261"
 ---
-# <a name="sysdmexecqueryparallelworkers-transact-sql"></a>sys.dm_exec_query_parallel_workers (Transact-SQL)
+# <a name="sysdm_exec_query_parallel_workers-transact-sql"></a>sys.dm_exec_query_parallel_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  返回每个节点的辅助角色可用性信息。  
+  返回每个节点的工作线程可用性信息。  
   
-|名称|数据类型|描述|  
+|名称|数据类型|说明|  
 |----------|---------------|-----------------|  
-|**node_id**|**int**|NUMA 节点 id。|  
-|**scheduler_count**|**int**|此节点上的计划程序数。|  
-|**max_worker_count**|**int**|用于并行查询的工作线程的最大数目。|  
-|**reserved_worker_count**|**int**|保留的并行查询的工作线程数加上的所有请求都使用的主工作线程数。| 
-|**free_worker_count**|**int**|适用于任务的工作线程数。<br /><br />**注意：** 每个传入请求会占用最少 1 辅助角色，即从可用的辅助角色数中减去。  就可以免费的辅助进程计数可以是负数负载很重的服务器上。| 
-|**used_worker_count**|**int**|并行查询使用的工作线程数。|  
+|**node_id**|**int**|NUMA 节点 ID。|  
+|**scheduler_count**|**int**|此节点上的计划程序数目。|  
+|**max_worker_count**|**int**|并行查询的最大工作线程数。|  
+|**reserved_worker_count**|**int**|并行查询保留的辅助角色数，以及所有请求使用的主辅助进程数。| 
+|**free_worker_count**|**int**|可用于任务的工作线程数。<br /><br />**注意：** 每个传入请求使用至少1个辅助角色，从免费工作线程数中减去。  在负载过重的服务器上，免费辅助角色计数可能为负数。| 
+|**used_worker_count**|**int**|并行查询使用的辅助进程数。|  
   
 ## <a name="permissions"></a>权限  
 
-上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
-上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层，需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准版和基本层，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
+在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要权限。   
+在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层上，需要`VIEW DATABASE STATE`具有数据库中的权限。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
  
 ## <a name="examples"></a>示例  
   
@@ -55,7 +55,7 @@ ms.locfileid: "68263261"
 SELECT * FROM sys.dm_exec_query_parallel_workers;  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [与执行相关的动态管理视图和函数&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_os_workers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)
+ [与执行相关的动态管理视图和函数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [sys. dm_os_workers &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)

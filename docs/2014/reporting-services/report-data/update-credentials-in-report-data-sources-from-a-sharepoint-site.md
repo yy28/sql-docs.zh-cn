@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d0573325ec63d930b6191572ec4b274053a7d72b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106999"
 ---
 # <a name="update-credentials-in-report-data-sources-from-a-sharepoint-site"></a>从 SharePoint 站点更新报表数据源的凭据
@@ -84,7 +84,7 @@ ms.locfileid: "66106999"
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [将文档上传到 SharePoint 库（SharePoint 模式下的 Reporting Services）](../upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)  
   
   

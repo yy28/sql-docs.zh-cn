@@ -11,19 +11,19 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 32819a694769092c255c4b2ed918dd8fde99362e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482607"
 ---
 # <a name="apply-business-rules-mds-add-in-for-excel"></a>应用业务规则（用于 Excel 的 MDS 外接程序）
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 中，如果需要验证数据并确认其有效，可应用业务规则。 您可以更正验证结果并重新发布数据。  
   
 > [!NOTE]  
->  发布数据时会自动验证数据。 有关详细信息，请参阅 [验证存储过程 (Master Data Services)](../validation-stored-procedure-master-data-services.md)。  
+>  发布数据时会自动验证数据。 有关详细信息，请参阅[验证存储过程 (Master Data Services)](../validation-stored-procedure-master-data-services.md)。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“资源管理器”** 功能区域。  
@@ -32,14 +32,14 @@ ms.locfileid: "65482607"
   
 ### <a name="to-apply-business-rules"></a>应用业务规则  
   
-1.  在 **“发布并验证”** 组中，单击 **“应用规则”** 。  
+1.  在 **“发布并验证”** 组中，单击 **“应用规则”**。  
   
     > [!NOTE]  
     >  一次验证的成员（行）的数目取决于 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]中的设置。 有关详细信息，请参阅 [Business Rule Settings](../system-settings-master-data-services.md#BusinessRules)。  
   
 2.  根据业务规则对数据进行验证后，将显示两个状态列。 如果不自动显示这些列，请在 **“发布并验证”** 组中，单击 **“显示状态”** 以查看这些列。  
   
-## <a name="see-also"></a>请参阅  
- [发布数据&#40;MDS add-in for Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+## <a name="see-also"></a>另请参阅  
+ [MDS Add-in for Excel&#41;发布数据 &#40;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

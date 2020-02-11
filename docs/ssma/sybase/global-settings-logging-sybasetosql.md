@@ -1,5 +1,5 @@
 ---
-title: 全局设置 （日志记录） (SybaseToSQL) |Microsoft Docs
+title: 全局设置（日志记录）（SybaseToSQL） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,51 +10,51 @@ ms.assetid: 4cb4da20-3b99-4aae-8c80-329ee23e796e
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 26e24bc55df7eef0af34f9cd23215f27ba314700
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68029049"
 ---
 # <a name="global-settings-logging-sybasetosql"></a>全局设置（日志记录）(SybaseToSQL)
-使用**全局设置**对话框可以指定 SSMA 的日志记录设置。 通常情况下，仅当与产品支持人员时，才会更改这些设置。  
+使用 "**全局设置**" 对话框指定 SSMA 的日志记录设置。 通常，只能在使用产品支持时更改这些设置。  
   
-若要访问此对话框，请在**工具**菜单中，选择**全局设置**，然后单击**日志记录**左窗格底部的按钮。  
+若要访问此对话框，请在 "**工具**" 菜单上选择 "**全局设置**"，然后单击左窗格底部的 "**日志记录**" 按钮。  
   
 ## <a name="options"></a>选项  
 **消息级别**  
-下以下选项将可用**消息级别**:  
+"**消息" 级别**下面有以下选项：  
   
-|Option|描述|  
+|选项|说明|  
 |----------|---------------|  
-|**[所有类别]**|用于设置以下选项中的所有日志记录级别。|  
-|**Collector**|收集有关源架构的元数据并将其保存到项目。|  
-|**转换器**|转换为结构的源数据库对象，如表和存储的过程对应[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]结构。|  
-|**数据迁移器**|将数据迁移从源数据库到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
-|**格式化程序**|为生成脚本的转换器的子组件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]架构。|  
-|**图形用户界面**|使用 SSMA 工具时出现的消息。|  
-|**链接器**|解析的 SQL 标识符，并提供对其他组件的信息。|  
-|**其他**|不在任何其他类别中的所有消息。|  
-|**分析器**|分析源架构。|  
-|**同步器**|加载源数据库对象到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
-|**TreeConverter**|将转换到的源元数据中的对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元数据。|  
+|**[所有类别]**|用于设置以下所有选项的日志记录级别。|  
+|**收集器**|收集有关源架构的元数据并将其保存到项目中。|  
+|**转换器**|将源数据库对象（如表和存储过程）的结构转换为相应[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的结构。|  
+|**数据迁移**|将源数据库中的数据迁移[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到中。|  
+|**格式化**|为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]架构生成脚本的转换器的子组件。|  
+|**图形用户界面**|使用 SSMA 工具时显示的消息。|  
+|**链接器**|解析 SQL 标识符并向其他组件提供信息。|  
+|**其他**|所有不在任何其他类别的消息。|  
+|**Parser**|分析源架构。|  
+|**者**|将源数据库对象加载[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到中。|  
+|**TreeConverter**|将源元数据中的对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]转换为元数据。|  
   
-每个选项下**消息级别**，为 SSMA 配置以下日志记录级别之一：  
+对于 "**消息级别**" 下的每个选项，请为 SSMA 配置以下日志记录级别之一：  
   
 |||  
 |-|-|  
-|**致命错误**|仅错误消息写入日志。|  
-|**错误**|在日志中写入错误消息和错误消息。|  
-|**警告**|警告、 错误和错误消息写入日志。|  
-|**Info**|信息性、 警告、 错误消息和错误消息写入日志。|  
-|**调试**|将所有消息，包括调试消息，向日志都写入。|  
+|**错误**|仅将严重错误消息写入日志。|  
+|**错误**|写入日志的错误消息和严重错误消息。|  
+|**警告**|将警告、错误和严重错误消息写入日志。|  
+|**信息**|将信息性、警告、错误和严重错误消息写入日志。|  
+|**调试**|将所有消息（包括调试消息）写入日志。|  
   
 **日志文件路径**  
-文件路径和名称的 SSMA 日志文件。 若要指定其他名称，单击当前路径，然后单击浏览 ( **...** ) 按钮。  
+SSMA 日志文件的文件路径和名称。 若要指定其他名称，请单击当前路径，然后单击浏览（**...**）按钮。  
   
 **日志文件大小**  
-日志文件以 kb 为单位的最大大小。 最小大小为 10 KB。 默认大小为 10240 KB。  
+日志文件的最大大小（KB）。 最小大小为 10 KB。 默认大小为 10240 KB。  
   
-**日志文件的总数**  
-当一个日志已满时，SSMA 将重命名日志文件，并启动一个新。 通过使用此设置，指定日志文件，使最大数目。 最小值为 2。  
+**日志文件总数**  
+当一个日志填充时，SSMA 将重命名该日志文件并启动一个新日志文件。 通过使用此设置，指定要保留的日志文件的最大数目。 最小值为2。  
   

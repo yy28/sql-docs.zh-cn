@@ -1,5 +1,5 @@
 ---
-title: 计算 （多维数据集设计器） (Analysis Services-多维数据) |Microsoft Docs
+title: 计算（多维数据集设计器）（Analysis Services 多维数据） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 07138beba90f3f863d81a24c7c92b2d9fd4a4276
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088292"
 ---
 # <a name="calculations-cube-designer-analysis-services---multidimensional-data"></a>计算（多维数据集设计器）（Analysis Services - 多维数据）
-  可以使用多维数据集设计器中的“计算”  选项卡查看和编辑计算，包括所选多维数据集的计算成员、命名集和多维表达式 (MDX) 脚本命令。  
+  可以使用多维数据集设计器中的“计算”**** 选项卡查看和编辑计算，包括所选多维数据集的计算成员、命名集和多维表达式 (MDX) 脚本命令。  
   
 ## <a name="form-view-and-script-view"></a>窗体视图和脚本视图  
  在查看或编辑计算时， **“计算”** 选项卡支持两种不同的视图：  
@@ -35,28 +35,28 @@ ms.locfileid: "66088292"
   
 ## <a name="panes"></a>窗格  
  **工具栏**  
- 在窗体视图和脚本视图中使用工具栏可以执行此选项卡上的常规操作。有关此窗格的详细信息，请参阅[工具栏（“计算”选项卡，多维数据集设计器）（Analysis Services - 多维数据）](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)。  
+ 使用窗体视图和脚本视图中的工具栏可以执行此选项卡上的常规操作。有关此窗格的详细信息，请参阅[Toolbar &#40;计算 "选项卡、多维数据集设计器&#41; &#40;Analysis Services 多维数据&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)。  
   
  **脚本组织程序**  
- 使用窗体视图中的“脚本组织程序”  窗格，可以按排序格式显示多维数据集脚本的内容。 有关此窗格的详细信息，请参阅[脚本组织程序（“计算”选项卡，多维数据集设计器）（Analysis Services - 多维数据）](script-organizer-cube-designer-analysis-services-multidimensional-data.md)。  
+ 使用窗体视图中的“脚本组织程序”**** 窗格，可以按排序格式显示多维数据集脚本的内容。 有关此窗格的详细信息，请参阅[脚本组织程序（“计算”选项卡，多维数据集设计器）（Analysis Services - 多维数据）](script-organizer-cube-designer-analysis-services-multidimensional-data.md)。  
   
  **计算工具**  
- 使用窗体视图和脚本视图中的“计算工具”  窗格，可以显示可用于多维数据集的元数据、函数和工具。 有关此窗格的详细信息，请参阅[计算工具（“计算”选项卡，多维数据集设计器）（Analysis Services - 多维数据）](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)。  
+ 使用窗体视图和脚本视图中的“计算工具”**** 窗格，可以显示可用于多维数据集的元数据、函数和工具。 有关此窗格的详细信息，请参阅[计算工具（“计算”选项卡，多维数据集设计器）（Analysis Services - 多维数据）](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)。  
   
  **脚本编辑器**  
- 使用脚本视图中的“脚本编辑器”  窗格可以编辑整个多维数据集脚本，在窗体视图中使用该窗格可以编辑多维数据集脚本中所包含的脚本命令。 有关此窗格的详细信息，请参阅[脚本编辑器（“计算”选项卡，多维数据集设计器）（Analysis Services - 多维数据）](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)。  
+ 使用脚本视图中的“脚本编辑器”**** 窗格可以编辑整个多维数据集脚本，在窗体视图中使用该窗格可以编辑多维数据集脚本中所包含的脚本命令。 有关此窗格的详细信息，请参阅[脚本编辑器（“计算”选项卡，多维数据集设计器）（Analysis Services - 多维数据）](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)。  
   
  **计算成员窗体编辑器**  
- 使用窗体视图中的“计算成员窗体编辑器”  窗格可以编辑多维数据集脚本中的计算成员。 有关此窗格的详细信息，请参阅[计算成员窗体编辑器（“计算”选项卡，多维数据集设计器）（Analysis Services - 多维数据）](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)。  
+ 使用窗体视图中的“计算成员窗体编辑器”**** 窗格可以编辑多维数据集脚本中的计算成员。 有关此窗格的详细信息，请参阅[计算成员窗体编辑器（“计算”选项卡，多维数据集设计器）（Analysis Services - 多维数据）](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)。  
   
- **命名的集窗体编辑器**  
- 使用窗体视图中的“命名集窗体编辑器”  窗格可以编辑多维数据集脚本中的命名集。 有关此窗格的详细信息，请参阅[命名集窗体编辑器（“计算”选项卡，多维数据集设计器）（Analysis Services - 多维数据）](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md)。  
+ **命名集窗体编辑器**  
+ 使用窗体视图中的“命名集窗体编辑器”**** 窗格可以编辑多维数据集脚本中的命名集。 有关此窗格的详细信息，请参阅[命名集窗体编辑器（“计算”选项卡，多维数据集设计器）（Analysis Services - 多维数据）](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md)。  
   
-## <a name="see-also"></a>请参阅  
- [多维数据集对象&#40;Analysis Services-多维数据&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
- [计算](multidimensional-models-olap-logical-cube-objects/calculations.md)   
- [MDX 脚本编写基础知识 (Analysis Services)](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
- [多维数据集设计器&#40;Analysis Services-多维数据&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>另请参阅  
+ [多维数据集对象 &#40;Analysis Services 多维数据&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
+ [考虑](multidimensional-models-olap-logical-cube-objects/calculations.md)   
+ [MDX 脚本编写基础 &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [多维数据集设计器 &#40;Analysis Services 多维数据&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [创建命名集](multidimensional-models/create-named-sets.md)  
   
   

@@ -12,10 +12,10 @@ ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 3986854293f50a34f51170e00b4204b78fba1b63
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251657"
 ---
 # <a name="domain-management-domain-list"></a>域管理：域列表
@@ -27,8 +27,8 @@ ms.locfileid: "75251657"
 ## <a name="options"></a>选项  
   
 ### <a name="domains-list"></a>域列表  
- **域名**  
- 此列表显示了知识库中的所有域。 将针对在该列表中选择的域执行您在右侧窗格的选项卡式页中执行的操作。 有关详细信息，请参阅本主题后面的  
+ **域**  
+ 此列表显示了知识库中的所有域。 将针对在该列表中选择的域执行您在右侧窗格的选项卡式页中执行的操作。 有关详细信息，请参阅  
   
  **创建复合域**  
  在知识库中创建一个新的复合域。 此命令将显示 **“创建复合域”** 对话框。 通过右键单击某个域或单击域列表上方的图标可以使用此命令。 有关详细信息，请参阅 [创建复合域](../data-quality-services/create-a-composite-domain.md)。  

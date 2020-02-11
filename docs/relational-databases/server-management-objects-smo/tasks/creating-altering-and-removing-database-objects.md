@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0229ca7a79db5f502b603df2194843eb8a5fac7f
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74096042"
 ---
 # <a name="creating-altering-and-removing-database-objects"></a>创建、更改和删除数据库对象
@@ -36,7 +36,7 @@ ms.locfileid: "74096042"
   
 5.  创建对象。  
 
- 在 SMO 应用程序中创建 SMO 对象的实例时，它们不存在于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例上，直到发出**Create**方法。 但是，不需要为每个单独的对象发出**Create**方法。 如果对象具有一组子对象，则只需父对象即可运行**Create**方法。 例如，表定义要求它至少包含一个列才能存在。 并且，列不能独立于表存在。 表与其列之间存在相互依赖的关系。  
+ 当在 SMO 应用程序中创建 SMO 对象的实例时，它们在的实例上不存在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，直到发出**Create**方法。 但是，不需要为每个单独的对象发出**Create**方法。 如果对象具有一组子对象，则只需父对象即可运行**Create**方法。 例如，表定义要求它至少包含一个列才能存在。 并且，列不能独立于表存在。 表与其列之间存在相互依赖的关系。  
   
  使用 <xref:Microsoft.SqlServer.Management.Dmf.Policy.Alter%2A> 方法可以更改对象。 对对象的若干更改（例如，向对象的集合之一添加子对象或更改属性值）将组成一批共同运行。 **Alter**方法减少了网络流量，并提高了整体性能。  
   

@@ -1,5 +1,5 @@
 ---
-title: 更改数据捕获表 (TRANSACT-SQL) |Microsoft Docs
+title: 变更数据捕获表（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,10 +13,10 @@ ms.assetid: a4372d0b-50ca-4e58-80f6-2ed3cb52a84a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7d6d87ee8b2aa05c3156acb2db9c6604380db887
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68082685"
 ---
 # <a name="change-data-capture-tables-transact-sql"></a>变更数据捕获表 (Transact-SQL)
@@ -25,7 +25,7 @@ ms.locfileid: "68082685"
   更改数据捕获时会对表启用更改跟踪，这样，对表所做的数据操作语言 (DML) 和数据定义语言 (DDL) 更改就可以增量加载到数据仓库中。 本节中的主题介绍存储变更数据捕获操作所用的信息的系统表。  
   
 ## <a name="in-this-section"></a>本节内容  
- [cdc.<capture_instance>_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)  
+ [cdc. <capture_instance>_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)  
  为对关联源表中的已捕获列所做的每项更改返回一行。  
   
  [cdc.captured_columns](../../relational-databases/system-tables/cdc-captured-columns-transact-sql.md)  
@@ -43,11 +43,11 @@ ms.locfileid: "68082685"
  [cdc.index_columns](../../relational-databases/system-tables/cdc-index-columns-transact-sql.md)  
  为与更改表关联的每个索引列返回一行。  
   
- [dbo.cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)  
+ [cdc_jobs &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)  
  返回变更数据捕获代理作业的配置参数。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [更改数据捕获存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
- [更改数据捕获函数&#40;Transact SQL&#41;](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)  
+ [变更数据捕获函数 (Transact-SQL)](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)  
   
   

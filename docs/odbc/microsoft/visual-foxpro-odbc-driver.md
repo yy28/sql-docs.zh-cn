@@ -16,32 +16,32 @@ ms.assetid: 27359133-dd41-478f-8902-996022deb845
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 80a388fd459ab9fb71a115ca7f9cf9149c872caf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68030677"
 ---
 # <a name="visual-foxpro-odbc-driver"></a>Visual FoxPro ODBC 驱动程序
-Microsoft Visual FoxPro 是数据库构造和应用程序开发功能强大的面向对象的环境。 Microsoft Visual FoxPro ODBC 驱动程序使应用程序以打开查询，并更新 Visual FoxPro 和早期版本的 FoxPro 通过开放式数据库连接 (ODBC) 界面中的数据。  
+Microsoft Visual FoxPro 是一种面向对象的功能强大的环境，用于数据库构造和应用程序开发。 通过 Microsoft Visual FoxPro ODBC 驱动程序，应用程序可以通过开放式数据库连接（ODBC）接口，在 Visual FoxPro 和更早的版本中打开、查询和更新数据。  
   
- 例如，使用 Microsoft Visual FoxPro ODBC 驱动程序可以执行以下操作：  
+ 例如，通过 Microsoft Visual FoxPro ODBC 驱动程序，您可以执行以下操作：  
   
--   使用 Microsoft Query 来查询和更新 Visual FoxPro 数据从 Microsoft Excel 工作表。  
+-   使用 Microsoft Query 从 Microsoft Excel 工作表查询和更新 Visual FoxPro 数据。  
   
--   创建邮件合并字母 Visual FoxPro 数据中使用 Microsoft Word。  
+-   通过 Microsoft Word 使用视觉 FoxPro 数据创建邮件合并字母。  
   
--   查询和更新 Visual FoxPro 视图和 Microsoft Access 中的表。  
+-   查询并更新 Microsoft Access 中的 Visual FoxPro 视图和表。  
   
--   使用 Visual FoxPro 作为数据存储区的 Microsoft Visual Basic 中，Microsoft Visual C++，和 C 应用程序。  
+-   使用 Visual FoxPro 作为 Microsoft Visual Basic、Microsoft Visual C++ 和 C 应用程序的数据存储。  
   
- 可以使用该驱动程序来完成其他许多任务。 下表列出了几个主题，以帮助您入门。  
+ 您可以使用该驱动程序来完成许多其他任务。 下表列出了可帮助你入门的一些主题。  
   
-|若要|请参阅|  
+|目标|请参阅|  
 |--------|---------|  
-|详细了解使用 Microsoft Office Visual FoxPro 数据|[从 Microsoft Office 访问 Visual FoxPro 数据](../../odbc/microsoft/accessing-visual-foxpro-data-from-microsoft-office.md)|  
-|了解如何在 Visual Basic 应用程序中使用 Visual FoxPro 数据|[Visual FoxPro ODBC 驱动程序中使用 Visual Basic 应用程序](../../odbc/microsoft/using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application.md)|  
-|查看一个简单的示例使用视觉对象C++若要访问 Visual FoxPro 数据|[在 C 中使用 Visual FoxPro ODBC 驱动程序或C++应用程序](../../odbc/microsoft/using-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application.md)|  
-|请参阅受支持的硬件和软件的列表|[系统要求](../../odbc/microsoft/system-requirements-visual-foxpro-odbc-driver.md)|  
+|了解有关在 Microsoft Office 中使用视觉 FoxPro 数据的详细信息|[从 Microsoft Office 访问 Visual FoxPro 数据](../../odbc/microsoft/accessing-visual-foxpro-data-from-microsoft-office.md)|  
+|了解如何在 Visual Basic 应用程序中使用视觉 FoxPro 数据|[将 Visual FoxPro ODBC 驱动程序用于 Visual Basic 应用程序](../../odbc/microsoft/using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application.md)|  
+|查看使用 Visual C++ 访问视觉 FoxPro 数据的简单示例|[将 Visual FoxPro ODBC 驱动程序用于 C 或 c + + 应用程序](../../odbc/microsoft/using-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application.md)|  
+|查看支持的硬件和软件的列表|[系统要求](../../odbc/microsoft/system-requirements-visual-foxpro-odbc-driver.md)|  
   
- 有关下载和安装的 Visual FoxPro ODBC 驱动程序的信息，请参阅[Visual FoxPro ODBC 驱动程序](https://go.microsoft.com/fwlink/?LinkId=121318)在 MSDN 下载。
+ 有关下载和安装 Visual FoxPro ODBC 驱动程序的信息，请参阅 MSDN 上的[Visual FOXPRO Odbc 驱动程序](https://go.microsoft.com/fwlink/?LinkId=121318)下载。

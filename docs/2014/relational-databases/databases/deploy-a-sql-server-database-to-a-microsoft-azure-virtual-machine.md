@@ -43,14 +43,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c7d84fbe56d36bd91f2b7f8b49a3df73fb383c6e
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175736"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>将 SQL Server 数据库部署到 Microsoft Azure 虚拟机
-  使用 "将**SQL Server 数据库部署到 AZURE VM** " 向导，将数据库从 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例部署到 Azure 虚拟机（VM）中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此向导利用完整数据库备份操作，因此可始终复制 SQL Server 用户数据库中的完整数据架构和数据。 此向导还为您进行所有 Azure VM 配置，因此不需要预先配置 VM。  
+  使用 "将**SQL Server 数据库部署到 AZURE VM** " 向导，将数据库从的[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例部署到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] azure 虚拟机（VM）中的。 此向导利用完整数据库备份操作，因此可始终复制 SQL Server 用户数据库中的完整数据架构和数据。 此向导还为您进行所有 Azure VM 配置，因此不需要预先配置 VM。  
   
  您无法使用此向导进行差异备份，因为此向导将不会覆盖具有相同的数据库名称的现有数据库。 若要替换 VM 上的现有数据库，必须先删除现有数据库或更改数据库名称。 如果在未提交的部署操作的数据库名称与 VM 上的现有数据库之间存在命名冲突，此向导将建议为未提交的数据库追加数据库名称以便您能完成操作。  
   
@@ -88,9 +88,9 @@ ms.locfileid: "70175736"
   
  在运行 Windows Server 操作系统的计算机上，您必须使用以下配置设置来运行此向导：  
   
--   禁用增强安全性配置：使用“服务器管理器”>“本地服务器”将 Internet Explorer 增强安全性配置 (ESC) 设置为“OFF”。  
+-   禁用增强安全性配置：使用“服务器管理器”>“本地服务器”将 Internet Explorer 增强安全性配置 (ESC) 设置为“OFF”****。  
   
--   启用 JavaScript：“Internet Explorer”>“Internet 选项”>“安全性”>“客户级别”>“脚本”>“活动脚本”：“启用”。  
+-   启用 JavaScript：“Internet Explorer”>“Internet 选项”>“安全性”>“客户级别”>“脚本”>“活动脚本”：“启用”****。  
   
 ###  <a name="limitations"></a> 限制和局限  
  针对此操作的数据库大小限制为 1 TB。  
@@ -119,14 +119,14 @@ ms.locfileid: "70175736"
   
  如果在未提交的部署操作的数据库名称与 VM 上的现有数据库之间存在命名冲突，此向导将建议为未提交的数据库追加数据库名称以便您能完成操作。  
   
-###  <a name="filestream"></a> 用于将支持 FILESTREAM 的数据库部署到 Azure VM 的注意事项  
+###  <a name="filestream"></a>将启用了 FILESTREAM 的数据库部署到 Azure VM 时的注意事项  
  在部署其 BLOBS 存储于 FILESTREAM 对象中的数据库时，请注意以下准则和限制：  
   
 -   部署功能不能将支持 FILESTREAM 的数据库部署到一个新的 VM 中。 如果在运行该向导前没有在 VM 中启用 FILESTREAM，则数据库还原操作将失败，并且向导操作将不能成功完成。 若要成功部署使用 FILESTREAM 的数据库，请在启动该向导前在宿主 VM 上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中启用 FILESTREAM。 有关详细信息，请参阅 [FILESTREAM (SQL Server)](https://msdn.microsoft.com/library/gg471497.aspx)。  
   
 -   如果您的数据库使用内存中 OLTP，则无需对该数据库进行任何修改即可将它部署到 Azure VM 中。 有关详细信息，请参阅 [内存中 OLTP（内存中优化）](https://msdn.microsoft.com/library/dn133186\(SQL.120\).aspx)。  
   
-###  <a name="geography"></a> 针对资产的地理分布的注意事项  
+###  <a name="geography"></a>针对资产的地理分布的注意事项  
  请注意，以下资产必须位于相同地理区域中：  
   
 -   云服务  
@@ -137,14 +137,14 @@ ms.locfileid: "70175736"
   
  如果上面列出的资产未共置在一起，则该向导将无法成功完成。  
   
-###  <a name="configuration_settings"></a> 向导配置设置  
+###  <a name="configuration_settings"></a>向导配置设置  
  使用以下配置详细信息可修改针对部署到 Azure VM 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库部署设置。  
   
--   **配置文件的默认路径** - %LOCALAPPDATA%\SQL Server\Deploy to SQL in WA VM\DeploymentSettings.xml  
+-   **配置文件的默认路径**-%LOCALAPPDATA%\SQL SERVER\DEPLOY TO to SQL in WA VM\DeploymentSettings.xml  
   
 -   **配置文件结构**  
   
-    -   \<DeploymentSettings>  
+    -   \<Deploymentsettings.json>  
   
         -   <OtherSettings  
   
@@ -164,7 +164,8 @@ ms.locfileid: "70175736"
   
             -   Publisher="" />  
   
-    -   \</DeploymentSettings>  
+    -   
+  \</DeploymentSettings>  
   
  **配置文件值**  
   
@@ -189,20 +190,20 @@ ms.locfileid: "70175736"
   
 -   **不再显示此页。** - 单击此复选框可以阻止在将来显示“简介”页。  
   
--   “下一步” - 进入“源设置”页。  
+-   **下一步**-继续到 "**源设置**" 页。  
   
 -   **取消** - 取消操作并关闭向导。  
   
 -   **Help** -启动向导的 MSDN 帮助主题。  
   
-##  <a name="Source_settings"></a> 源设置  
- 使用此页可连接到承载要部署到 Azure VM 的数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 还将指定一个临时位置，以便在将文件传输到 Azure 之前从本地计算机保存文件。 这可以是共享网络位置。  
+##  <a name="Source_settings"></a>源设置  
+ 使用此页可连接到承载要部署[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到 Azure VM 的数据库的实例。 还将指定一个临时位置，以便在将文件传输到 Azure 之前从本地计算机保存文件。 这可以是共享网络位置。  
   
  **选项**  
   
--   单击 "**连接 ...** "，然后为承载要部署的数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例指定连接详细信息。  
+-   单击 "**连接 ...** "，然后为承载要部署的数据库的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例指定连接详细信息。  
   
--   使用“选择数据库”下拉列表来指定要部署的数据库。  
+-   使用 **“选择数据库”** 下拉列表来指定要部署的数据库。  
   
 -   在 "**其他设置**" 字段中，指定可供 Azure VM 服务访问的共享文件夹。  
   
@@ -219,7 +220,7 @@ ms.locfileid: "70175736"
   
 -   **订阅**-选择、键入或粘贴与本地证书存储中的管理证书或发布配置文件相匹配的 AZURE 订阅 ID。  
   
-##  <a name="Deployment_settings"></a> “部署设置”页  
+##  <a name="Deployment_settings"></a>部署设置页  
  使用此页可以指定目标服务器并提供有关新数据库的详细信息。  
   
  **选项**  
@@ -241,7 +242,7 @@ ms.locfileid: "70175736"
 -   **数据库**-指定或确认新数据库的名称。 如果数据库名称在目标 SQL Server 实例上已存在，建议您修改该名称。  
   
 ##  <a name="Summary"></a> 摘要页  
- 使用此页可查看操作的指定设置。 若要使用指定设置完成部署操作，请单击 **“完成”** 。 若要取消部署操作并退出向导，请单击 **“取消”** 。  
+ 使用此页可查看操作的指定设置。 若要使用指定设置完成部署操作，请单击 **“完成”**。 若要取消部署操作并退出向导，请单击 **“取消”**。  
   
  将数据库详细信息部署到 Azure VM 上的 SQL Server 数据库可能需要手动步骤。 将为您详细说明这些步骤。  
   
@@ -255,8 +256,8 @@ ms.locfileid: "70175736"
  [数据库生命周期管理](../database-lifecycle-management.md)   
  [导出数据层应用程序](../data-tier-applications/export-a-data-tier-application.md)   
  [导入 BACPAC 文件以创建新的用户数据库](../data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)   
- [Azure SQL Database 备份和还原](https://msdn.microsoft.com/library/azure/jj650016.aspx)   
- [Azure 虚拟机中的 SQL Server 部署](https://msdn.microsoft.com/library/dn133141.aspx)   
+ [Azure SQL 数据库备份和还原](https://msdn.microsoft.com/library/azure/jj650016.aspx)   
+ [在 Azure 虚拟机中部署 SQL Server](https://msdn.microsoft.com/library/dn133141.aspx)   
  [准备迁移到 Azure 虚拟机中的 SQL Server](https://msdn.microsoft.com/library/dn133142.aspx)  
   
   

@@ -11,10 +11,10 @@ ms.assetid: 835a032c-e37c-4f35-8ab0-5e4ae25c2e9b
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a62ad36e17fd25a922615ed4d7b8a49c12a14adf
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728610"
 ---
 # <a name="change-the-order-of-attributes"></a>更改属性的顺序
@@ -23,7 +23,7 @@ ms.locfileid: "73728610"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，可以更改属性的顺序。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
@@ -32,30 +32,30 @@ ms.locfileid: "73728610"
   
 ### <a name="to-change-the-order-of-an-attribute"></a>更改属性的顺序  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”** 。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
   
-2.  在“管理模型” 页上，从网格中选择一个模型，然后单击“实体”。  
+2.  在“管理模型” **** 页上，从网格中选择一个模型，然后单击“实体” ****。  
   
-3.  在“管理实体” 页上，选择要为其创建属性的实体所在的行。  
+3.  在“管理实体” **** 页上，选择要为其创建属性的实体所在的行。  
   
-4.  单击 **“属性”** 。  
+4.  单击 **“属性”**。  
   
-5.  在“管理属性”页上，执行下列操作之一。  
+5.  在“管理属性” **** 页上，执行下列操作之一。  
   
-    -   如果属性是针对叶成员，则从“成员类型” 列表框选择“叶” 。  
+    -   如果是叶成员的属性，请从“成员类型” **** 列表框中选择“叶” **** 。  
   
-    -   如果属性是针对合并成员，则从“成员类型” 列表框中选择“合并” 。  
+    -   如果属性是针对合并成员，则从“成员类型” **** 列表框中选择“合并” **** 。  
   
-    -   如果属性是针对集合，则从“成员类型” 列表框中选择“集合” 。  
+    -   如果是集合的属性，请从“成员类型” **** 列表框中选择“集合” **** 。  
   
 6.  选择要更改其顺序的属性所在的行。  
   
     > [!NOTE]  
     >  不能更改 Name 或 Code 属性的顺序。  
   
-7.  单击“上移”或“下移”。  
+7.  单击“上移”或“下移”。********  
   
 ## <a name="see-also"></a>另请参阅  
- [属性 (Master Data Services)](../master-data-services/attributes-master-data-services.md)  
+ [属性 &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  
   
   

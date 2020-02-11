@@ -10,16 +10,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
 ms.openlocfilehash: f03c9999471f1f196263cfab43960008c7d26aaf
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "74096117"
 ---
 # <a name="includesql-server-2019includessssqlv15-mdmd-release-notes"></a>[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 发行说明
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文介绍了 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 的限制和已知问题。 若要了解相关信息，请参阅：
+本文介绍了 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 的限制和已知问题。 如需相关信息，请参阅：
 
 > [[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 中的新增功能](../sql-server/what-s-new-in-sql-server-ver15.md)
 

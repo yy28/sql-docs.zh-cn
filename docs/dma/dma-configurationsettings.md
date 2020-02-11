@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 ms.openlocfilehash: fc280fa541e2a6b5ea984086d694ffdd3f7c39a8
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056544"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>为数据迁移助手配置设置
@@ -39,7 +39,7 @@ ms.locfileid: "74056544"
 
 ## <a name="number-of-databases-to-assess-in-parallel"></a>要并行评估的数据库数
 
-数据迁移助手并行评估多个数据库。 在评估期间数据迁移助手提取数据层应用程序（dacpac）以了解数据库架构。 如果在同一台服务器上并行评估了多个数据库，则此操作可能会超时。 
+数据迁移助手并行评估多个数据库。 在评估期间数据迁移助手提取数据层应用程序（dacpac）以了解数据库架构。如果在同一台服务器上并行评估了多个数据库，则此操作可能会超时。 
 
 从数据迁移助手 v2.0 开始，可以通过设置 parallelDatabases 配置值进行控制。 默认值为8。
 
@@ -82,19 +82,19 @@ ms.locfileid: "74056544"
 在评估期间，数据迁移助手提取数据层应用程序（dacpac）以了解数据库架构。 对于极大型数据库，或如果服务器负载过大，此操作可能会失败并出现超时。 从数据迁移 v1.0 开始，可以修改以下配置值以避免错误。 
 
 > [!NOTE]
-> 默认情况下，将对整个 &lt;dacfx&gt; 条目进行注释。 删除注释，然后根据需要修改值。
+> 默认情况&lt;下&gt; ，将对整个 dacfx 条目进行注释。 删除注释，然后根据需要修改值。
 
 - commandTimeout
 
-   此参数设置 IDbCommand 属性，以*秒为单位*。 （默认值 = 60）
+   此参数设置 IDbCommand 属性，以*秒为单位*。（默认值 = 60）
 
 - databaseLockTimeout
 
-   此参数等效于[设置锁定\_超时超时](../t-sql/statements/set-lock-timeout-transact-sql.md)时间 *（以毫秒为单位）* \_期限。 （默认值 = 5000）
+   此参数等效于[设置锁定\_超时\_超时期限](../t-sql/statements/set-lock-timeout-transact-sql.md)（以*毫秒为单位）*。（默认值 = 5000）
 
 - maxDataReaderDegreeOfParallelism
 
-  此参数设置要使用的 SQL 连接池连接的数量。 （默认值 = 8）
+  此参数设置要使用的 SQL 连接池连接的数量。（默认值 = 8）
 
 ```
 <advisorGroup>

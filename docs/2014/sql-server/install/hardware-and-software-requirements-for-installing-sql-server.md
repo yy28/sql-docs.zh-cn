@@ -46,10 +46,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce6cef69abe7c2461552229363c8334ca56555b4
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245656"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server-2014"></a>Hardware and Software Requirements for Installing SQL Server 2014
@@ -73,7 +73,7 @@ ms.locfileid: "75245656"
 -   
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序安装该产品所需的以下软件组件：  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client{2}  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装程序支持文件  
   
@@ -100,7 +100,7 @@ ms.locfileid: "75245656"
   
 |组件|要求|  
 |---------------|-----------------|  
-|.NET framework|在选择 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]、复制或 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]时，.NET 3.5 SP1 是 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]所必需的，但不再由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序安装。 <br />-如果您运行安装程序但没有 .NET 3.5 SP1，则安装[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]程序将要求您先下载并安装 .NET 3.5 sp1，然后才能继续[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装。 （从[Microsoft .NET Framework 3.5 Service Pack 1](https://www.microsoft.com/download/details.aspx?id=22)安装 .NET 3.5 SP1。）错误消息中包含指向下载中心的链接，也可从 Windows 更新下载 .NET 3.5 SP1。 若要避免在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装期间中断，可在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序之前，先下载并安装 .NET 3.5 SP1。<br />-如果在安装了[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 或[!INCLUDE[win8](../../includes/win8-md.md)]的计算机上运行安装程序，则必须先启用 .NET Framework 3.5 SP1 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，然后再安装。<br />-如果没有 internet 访问，则必须在运行安装程序之前下载并安装 .NET Framework 3.5 SP1，才能安装以上提到的任何组件。 有关如何获取和[!INCLUDE[win8](../../includes/win8-md.md)]启用和[!INCLUDE[win8srv](../../includes/win8srv-md.md)]的 .NET Framework 3.5 的建议和指南的详细信息，请参阅[Microsoft .NET Framework 3.5 部署注意事项](https://msdn.microsoft.com/library/windows/hardware/hh975396)（。https://msdn.microsoft.com/library/windows/hardware/hh975396)<br /><br /> .NET 4.0 是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]所必需的。 
+|.NET Framework|在选择 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]、复制或 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]时，.NET 3.5 SP1 是 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]所必需的，但不再由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序安装。 <br />-如果您运行安装程序但没有 .NET 3.5 SP1，则安装[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]程序将要求您先下载并安装 .NET 3.5 sp1，然后才能继续[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装。 （从[Microsoft .NET Framework 3.5 Service Pack 1](https://www.microsoft.com/download/details.aspx?id=22)安装 .NET 3.5 SP1。）错误消息中包含指向下载中心的链接，也可从 Windows 更新下载 .NET 3.5 SP1。 若要避免在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装期间中断，可在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序之前，先下载并安装 .NET 3.5 SP1。<br />-如果在安装了[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 或[!INCLUDE[win8](../../includes/win8-md.md)]的计算机上运行安装程序，则必须先启用 .NET Framework 3.5 SP1 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，然后再安装。<br />-如果没有 internet 访问，则必须在运行安装程序之前下载并安装 .NET Framework 3.5 SP1，才能安装以上提到的任何组件。 有关如何获取和[!INCLUDE[win8](../../includes/win8-md.md)]启用和[!INCLUDE[win8srv](../../includes/win8srv-md.md)]的 .NET Framework 3.5 的建议和指南的详细信息，请参阅[Microsoft .NET Framework 3.5 部署注意事项](https://msdn.microsoft.com/library/windows/hardware/hh975396)（。https://msdn.microsoft.com/library/windows/hardware/hh975396)<br /><br /> .NET 4.0 是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]所必需的。 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在功能安装步骤中安装 .NET 4.0。<br />-如果要安装[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]版本，请确保 Internet 连接在计算机上可用。 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将下载并安装 .NET Framework 4，因为 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 介质不包含该软件。<br />-[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]不会在[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 或[!INCLUDE[win8srv](../../includes/win8srv-md.md)]的服务器核心模式上安装 .net 4.0。 您必须首先安装 .NET 4.0，然后才能在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] SP1 或 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 的 Server Core 安装上安装 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]。|  
 |Windows PowerShell|
@@ -211,7 +211,7 @@ ms.locfileid: "75245656"
   [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Enterprise 64 位<br /><br /> 
   [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Standard 64 位<br /><br /> 
   [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Web 64 位|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]商业智能|[!INCLUDE[winserver2019_datacenter_md](../../includes/winserver2019-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2019_standard_md](../../includes/winserver2019-standard-md.md)]<br/><br/>[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Business Intelligence{2}|[!INCLUDE[winserver2019_datacenter_md](../../includes/winserver2019-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2019_standard_md](../../includes/winserver2019-standard-md.md)]<br/><br/>[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>
   [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter 64 位<br /><br /> 
   [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard 64 位<br /><br /> 
   [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials 64 位<br /><br /> 
@@ -463,7 +463,7 @@ ms.locfileid: "75245656"
   
  实际硬盘空间需求取决于系统配置和您决定安装的功能。 有关各个版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅 SQL Server 2014 的各个[版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 下表提供了 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 各组件对磁盘空间的要求。  
   
-|**具有**|**磁盘空间要求**|  
+|**功能**|**磁盘空间要求**|  
 |-----------------|--------------------------------|  
 |
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和数据文件、复制、全文搜索以及 Data Quality Services|811 MB|  
@@ -489,7 +489,7 @@ ms.locfileid: "75245656"
   
     > **注意：** 对于独立安装或群集安装[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，数据文件不支持 SMB 存储。 请改用直接连接存储或存储区域网络。  
   
-    > **重要说明！** SMB 存储可由 Windows 文件服务器或第三方 SMB 存储设备承载。 如果使用 Windows 文件服务器，该 Windows 文件服务器版本应为 2008 或更高。 有关将 SMB 文件共享作为存储选项安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的详细信息，请参阅 [SMB 文件共享用作存储选项时安装 SQL Server](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md)。  
+    > **重要说明!!** SMB 存储可由 Windows 文件服务器或第三方 SMB 存储设备承载。 如果使用 Windows 文件服务器，该 Windows 文件服务器版本应为 2008 或更高。 有关将 SMB 文件共享作为存储选项安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的详细信息，请参阅 [SMB 文件共享用作存储选项时安装 SQL Server](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md)。  
   
     > **警告!!!!**  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集安装只支持使用本地磁盘安装 tempdb 文件。 确保为 tempdb 数据和日志文件指定的路径在**所有**群集节点上都有效。 在故障转移期间，如果 tempdb 目录对故障转移目标节点不可用，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源将无法联机。  
@@ -510,6 +510,6 @@ ms.locfileid: "75245656"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序不能在只读域控制器上创建安全组或设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户。 在这种情况下，安装将失败。  
   
 ## <a name="see-also"></a>另请参阅  
- [规划 SQL Server 安装](planning-a-sql-server-installation.md)   
- [SQL Server 安装的安全注意事项](security-considerations-for-a-sql-server-installation.md)   
+ [计划 SQL Server 安装](planning-a-sql-server-installation.md)   
+ [安装 SQL Server 的安全注意事项](security-considerations-for-a-sql-server-installation.md)   
  [SQL Server 2014 的产品规格](../../getting-started/sql-server-2014-product-specifications.md)  

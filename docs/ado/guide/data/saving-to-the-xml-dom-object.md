@@ -1,5 +1,5 @@
 ---
-title: 将保存到 XML DOM 对象 |Microsoft Docs
+title: 正在保存到 XML DOM 对象 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,14 +13,14 @@ ms.assetid: 4d20fd28-aaf8-4232-83ce-f9d1e5f93dae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fe4790fa7fc1a2859013500f44dcd4a266719f39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924315"
 ---
 # <a name="saving-to-the-xml-dom-object"></a>保存到 XML DOM 对象
-可以在 MSXML DOM 对象的实例的 XML 格式保存记录集，如下面的 Visual Basic 代码中所示：  
+可以将 XML 格式的记录集保存到 MSXML DOM 对象的实例，如以下 Visual Basic 代码所示：  
   
 ```  
 Dim xDOM As New MSXML.DOMDocument  
@@ -35,5 +35,5 @@ rsXML.Save xDOM, adPersistADO   'Save Recordset directly into a DOM tree.
 ...  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [以 XML 格式保留记录](../../../ado/guide/data/persisting-records-in-xml-format.md)

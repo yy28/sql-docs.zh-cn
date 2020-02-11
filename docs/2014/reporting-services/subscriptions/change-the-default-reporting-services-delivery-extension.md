@@ -13,21 +13,21 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e37dcf69a09d92236e0b8f4f97cb99541f1c7532
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783245"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>更改默认 Reporting Services 传递扩展插件
-  你可以通过修改 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 配置设置，来更改显示在订阅定义页的“传递方式” 列表中的默认传递扩展插件。 例如，你可以修改该配置，以便在用户创建新订阅时，文件共享传递（而非电子邮件传递）默认处于选中状态。 你还可以更改传递扩展插件在用户界面中的排列顺序。  
+  你可以通过修改 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 配置设置，来更改显示在订阅定义页的“传递方式” **** 列表中的默认传递扩展插件。 例如，你可以修改该配置，以便在用户创建新订阅时，文件共享传递（而非电子邮件传递）默认处于选中状态。 你还可以更改传递扩展插件在用户界面中的排列顺序。  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Native mode | [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint mode  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]本机模式 |[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint 模式  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 同时包含“电子邮件”和“Windows 文件共享”这两种传递扩展插件。 如果您部署了自定义扩展插件或第三方扩展插件来支持自定义传递，则报表服务器可能具有其他传递扩展插件。 传递扩展插件的可用性取决于它是否在报表服务器上进行了部署。  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]包括电子邮件和 Windows 文件共享传递是扩展。 如果您部署了自定义扩展插件或第三方扩展插件来支持自定义传递，则报表服务器可能具有其他传递扩展插件。 传递扩展插件的可用性取决于它是否在报表服务器上进行了部署。  
   
 ## <a name="default-native-mode-report-server-configuration"></a>默认的本机模式报表服务器配置  
- 报表管理器的“传递方式” 列表中传递扩展插件的显示顺序取决于 **RSReportServer.config** 文件中传递扩展插件项的顺序。 例如，下图显示列表中最先显示的是“电子邮件”，并且它默认处于选中状态。  
+ 报表管理器的“传递方式” **** 列表中传递扩展插件的显示顺序取决于 **RSReportServer.config** 文件中传递扩展插件项的顺序。 例如，下图显示列表中最先显示的是“电子邮件”，并且它默认处于选中状态。  
   
  ![传递扩展插件的默认列表](../media/ssrs-default-delivery.png "传递扩展插件的默认列表")  
   
@@ -53,7 +53,7 @@ ms.locfileid: "72783245"
   
      在文本编辑器中打开 RSReportServer.config 文件。 有关配置文件的详细信息，请参阅 [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)。 更改该配置后，UI 的外观将类似于下图：  
   
-     ![修改后的传递扩展插件列表](../media/ssrs-modified-delivery.png "修改后的传递扩展插件列表")  
+     ![修改后的传递扩展插件的列表](../media/ssrs-modified-delivery.png "修改后的传递扩展插件的列表")  
   
 2.  将 DeliveryUI 部分修改为如以下示例所示，并注意关键更改：  
   
@@ -79,7 +79,7 @@ ms.locfileid: "72783245"
     </DeliveryUI>  
     ```  
   
-3.  保存配置文件。  
+3.  保存此配置文件。  
   
 4.  报表服务器将在几分钟内重新加载该配置文件，随后新设置将生效。 你可以重新启动报表服务器服务，以强制加载配置文件。  
   
@@ -92,11 +92,11 @@ ms.locfileid: "72783245"
      已修改 RSReportServer.config 文件  
   
 ## <a name="sharepoint-mode-report-servers"></a>SharePoint 模式报表服务器  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint 模式会将扩展插件信息存储在 SharePoint 服务应用程序数据库中，而非 RsrReportServer.config 文件中。 在 SharePoint 模式下，传递扩展插件配置将使用 PowerShell 进行修改。  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]SharePoint 模式将扩展信息存储在 SharePoint 服务应用程序数据库中，而不是存储在而非 rsrreportserver.config 文件中。 在 SharePoint 模式下，传递扩展插件配置将使用 PowerShell 进行修改。  
   
 #### <a name="configure-the-default-delivery-extension"></a>配置默认传递扩展插件  
   
-1.  打开“SharePoint Management Shell”。  
+1.  打开“SharePoint Management Shell” ****。  
   
 2.  如果你已经知道 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服务应用程序的名称，则可以跳过此步骤。 使用以下 PowerShell，将 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服务应用程序列在 SharePoint 场中。  
   
@@ -116,4 +116,4 @@ ms.locfileid: "72783245"
  [Rsreportserver.config 配置文件](../report-server/rsreportserver-config-configuration-file.md)   
  [Reporting Services 中的文件共享传递](file-share-delivery-in-reporting-services.md)   
  [Reporting Services 中的电子邮件传递](e-mail-delivery-in-reporting-services.md)   
- [配置报表服务器以进行电子邮件&#40;传递 SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
+ [配置报表服务器，以便 &#40;SSRS Configuration Manager 发送电子邮件&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  

@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ccb9642982b8680e4111346298e7a70bbc606dbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011888"
 ---
 # <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Prerequisites for Minimal Logging in Bulk Import
@@ -37,7 +37,7 @@ ms.locfileid: "66011888"
 -   指定了表锁定（使用 TABLOCK）。  
   
     > [!NOTE]  
-    >  尽管在最小日志记录的大容量导入操作过程中，数据插入操作没有记录在事务日志中，但每当为表分配新区时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]仍会记录区分配信息。  
+    >  尽管在最小日志记录的大容量导入操作过程中，数据插入操作没有记录在事务日志中，但每当为表分配新区时， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 仍会记录区分配信息。  
   
 -   表不是内存优化表。  
   
@@ -64,18 +64,18 @@ ms.locfileid: "66011888"
   
 ##  <a name="RelatedTasks"></a> 相关任务  
   
--   [查看或更改数据库的恢复模式 (SQL Server)](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)  
+-   [查看或更改数据库的恢复模式 &#40;SQL Server&#41;](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)  
   
 
   
-## <a name="see-also"></a>请参阅  
- [恢复模式 (SQL Server)](../backup-restore/recovery-models-sql-server.md)   
+## <a name="see-also"></a>另请参阅  
+ [恢复模式 &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md)   
  [bcp 实用工具](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)   
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
- [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)   
- [表提示 (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-table)   
+ [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [Transact-sql&#41;&#40;表提示](/sql/t-sql/queries/hints-transact-sql-table)   
  [INSERT (Transact-SQL)](/sql/t-sql/statements/insert-transact-sql)  
   
   

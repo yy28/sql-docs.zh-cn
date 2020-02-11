@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 26306f8ad2adf01ebdcbf1b52169f1c2ec964920
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243082"
 ---
 # <a name="command-window"></a>“命令”窗口
@@ -26,7 +26,7 @@ ms.locfileid: "75243082"
 ## <a name="task-list"></a>任务列表  
  **访问 "命令" 窗口**  
   
--   在 **“调试”** 菜单中，单击 **“启动调试”**。  
+-   在 **“调试”** 菜单中，单击 **“启动调试”** 。  
   
  **打印变量的值**  
   
@@ -41,4 +41,4 @@ ms.locfileid: "75243082"
 -   在**命令**中，键入**Debug. 快速\<VARIABLENAME>**，然后按 enter。  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-sql 调试器](transact-sql-debugger.md)  
+ [Transact-SQL 调试器](transact-sql-debugger.md)  

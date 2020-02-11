@@ -1,5 +1,5 @@
 ---
-title: floor 函数 (XQuery) |Microsoft Docs
+title: floor 函数（XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 4ace57dd-b66e-4b60-a2b9-a1b0f1a0831d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1c27e432dc258b4d2b9d21bfe0ab28df8ee5b510
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946535"
 ---
 # <a name="numeric-values-functions---floor"></a>数值函数 - floor
@@ -39,23 +39,23 @@ fn:floor ($arg as numeric?) as numeric?
  将应用该函数的数字。  
   
 ## <a name="remarks"></a>备注  
- 如果类型 *$arg*是三个基本数字类型之一**xs: float**， **xs: double**，或**xs: decimal**，返回类型是与相同 *$arg*类型。 如果类型 *$arg*是从其中一个数值类型派生的类型的返回类型为基的数值类型。  
+ 如果 *$arg*的类型为三个数值基类型之一 **： xs： float**、 **xs： double**或**xs： decimal**，则返回类型与 *$arg*类型相同。 如果 *$arg*的类型是派生自其中一个数值类型的类型，则返回类型为基本数值类型。  
   
- 如果对 fn: floor、 fn: ceiling 或 fn: round 函数的输入**xdt: untypedatomic**，非类型化的数据，它将隐式转换为**xs: double**。 任何其他类型都会生成静态错误。  
+ 如果向 fn： floor、fn：天花板或 fn： round 函数的输入为**xdt： untypedAtomic**，非类型化数据，则它将隐式转换为**xs： double**。 任何其他类型都会生成静态错误。  
   
 ## <a name="examples"></a>示例  
- 本主题提供了一些针对 XML 实例存储在各种中的 XQuery 示例**xml**类型列中的 AdventureWorks 示例数据库。  
+ 本主题提供了针对在 AdventureWorks 示例数据库的各种**xml**类型列中存储的 xml 实例的 XQuery 示例。  
   
- 可以使用中的工作示例[ceiling 函数 (XQuery)](../xquery/numeric-values-functions-ceiling.md)有关**floor （)** XQuery 函数。 您需要做的就是替换**ceiling （)** 与查询中的函数**floor （)** 函数。  
+ 您可以使用[天花板函数（XQuery）](../xquery/numeric-values-functions-ceiling.md)中的工作示例作为**floor （）** XQuery 函数。 您只需用**floor （）** 函数替换查询中的**天花板（）** 函数。  
   
 ## <a name="implementation-limitations"></a>实现限制  
  限制如下：  
   
--   **Floor （)** 函数将所有整数值都映射到 xs: decimal。  
+-   **Floor （）** 函数将所有整数值映射到 xs： decimal。  
   
-## <a name="see-also"></a>请参阅  
- [ceiling 函数&#40;XQuery&#41;](../xquery/numeric-values-functions-ceiling.md)   
- [round 函数&#40;XQuery&#41;](../xquery/numeric-values-functions-round.md)   
+## <a name="see-also"></a>另请参阅  
+ [天花板函数 &#40;XQuery&#41;](../xquery/numeric-values-functions-ceiling.md)   
+ [&#40;XQuery&#41;循环函数](../xquery/numeric-values-functions-round.md)   
  [针对 xml 数据类型的 XQuery 函数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

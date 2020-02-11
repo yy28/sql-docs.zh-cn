@@ -1,5 +1,5 @@
 ---
-title: 连接到数据源 （Oracle ODBC 驱动程序） |Microsoft Docs
+title: 连接到数据源（用于 Oracle 的 ODBC 驱动程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,26 +14,26 @@ ms.assetid: f724a9c5-342a-4f4e-a030-ec34f7378eaf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b0e9e62c8e03166ec2f76b1c6bcb5000a062bac3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68082039"
 ---
 # <a name="connecting-to-a-data-source-odbc-driver-for-oracle"></a>连接到数据源（Oracle ODBC 驱动程序）
 > [!IMPORTANT]  
->  此功能将 Windows 的未来版本中删除。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 相反，使用提供的 Oracle 的 ODBC 驱动程序。  
+>  此功能将在 Windows 的将来版本中删除。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 请改用 Oracle 提供的 ODBC 驱动程序。  
   
- ODBC 应用程序可以通过多种方式传递的连接信息。 例如，应用程序可能具有驱动程序始终提示用户输入连接信息。 或应用程序可能希望指定数据源连接的连接字符串。 如何连接到数据源取决于 ODBC 应用程序所使用的连接方法。  
+ ODBC 应用程序可以通过多种方式传递连接信息。 例如，应用程序可能会让驱动程序始终提示用户输入连接信息。 或者，应用程序可能需要一个指定数据源连接的连接字符串。 连接到数据源的方式取决于 ODBC 应用程序所使用的连接方法。  
   
- 一种常用的方式连接到数据源是通过数据源对话框。 如果 ODBC 应用程序设置为使用一个对话框，该对话框会显示，并将提示您输入适当的数据源连接信息。  
+ 连接到数据源的一种常用方法是通过 "数据源" 对话框。 如果 ODBC 应用程序设置为使用对话框，则会显示该对话框，并提示您输入适当的数据源连接信息。  
   
- 此外可以连接到数据源使用[连接字符串](../../odbc/microsoft/connection-string-format-and-attributes.md)。  
+ 你还可以使用[连接字符串](../../odbc/microsoft/connection-string-format-and-attributes.md)连接到数据源。  
   
-### <a name="to-connect-to-a-data-source-using-a-dialog-box"></a>若要连接到使用对话框中的数据源  
+### <a name="to-connect-to-a-data-source-using-a-dialog-box"></a>使用对话框连接到数据源  
   
-1.  数据源对话框出现时，选择 Oracle 数据源，然后单击确定。 连接对话框。  
+1.  出现 "数据源" 对话框时，选择 Oracle 数据源，然后单击 "确定"。 此时将显示“连接”对话框。  
   
-2.  填写连接对话框中的相应信息，然后单击确定。  
+2.  填写 "连接" 对话框的相应信息，然后单击 "确定"。  
   
- 连接后对信息进行验证，你的应用程序可以使用用于 Oracle 的 ODBC 驱动程序来访问数据源包含的信息。
+ 验证连接信息后，应用程序可以使用 Oracle 的 ODBC 驱动程序访问数据源所包含的信息。

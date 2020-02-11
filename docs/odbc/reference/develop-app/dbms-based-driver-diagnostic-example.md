@@ -15,16 +15,16 @@ ms.assetid: a80d54b0-43ff-4dfd-b6cb-f4694a5ed765
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ef42fe2ab881a7e24d680e0dd941cbea0d95488f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68076893"
 ---
 # <a name="dbms-based-driver-diagnostic-example"></a>基于 DBMS 的驱动程序诊断示例
-基于 DBMS 的驱动程序将请求发送到 DBMS，并返回到应用程序通过驱动程序管理器的信息。 由于驱动程序接口与驱动程序管理器的组件，其格式，并返回自变量**SQLGetDiagRec**。  
+基于 DBMS 的驱动程序向 DBMS 发送请求，并通过驱动程序管理器将信息返回给应用程序。 由于驱动程序是与驱动程序管理器进行交互的组件，因此它将格式化并返回**SQLGetDiagRec**的参数。  
   
- 例如，如果使用 Oracle Rdb 遇到无效的游标名称 SQL/服务，Microsoft 驱动程序，它可能会返回以下值从**SQLGetDiagRec**:  
+ 例如，如果使用 SQL/Services，用于 Oracle Rdb 的 Microsoft 驱动程序遇到无效的游标名称，则它可能从**SQLGetDiagRec**返回以下值：  
   
 ```  
 SQLSTATE:         "34000"  
@@ -32,9 +32,9 @@ Native Error:      0
 Diagnostic Msg:   "[Microsoft][ODBC Rdb Driver]Invalid cursor name: EMPLOYEE_CURSOR."  
 ```  
   
- 驱动程序中发生错误，因为它添加前缀到诊断消息供应商 ([Microsoft]) 和驱动程序 ([ODBC Rdb Driver])。  
+ 由于此错误发生在驱动程序中，因此它会将前缀添加到供应商的诊断消息（[Microsoft]）和驱动程序（[ODBC Rdb 驱动程序]）。  
   
- 如果 DBMS 找不到 EMPLOYEE 表，该驱动程序可能会设置格式，并返回中的以下值**SQLGetDiagRec**:  
+ 如果 DBMS 找不到表 EMPLOYEE，驱动程序可能会设置格式并从**SQLGetDiagRec**返回以下值：  
   
 ```  
 SQLSTATE:         "42S02"  
@@ -43,4 +43,4 @@ Diagnostic Msg:   "[Microsoft][ODBC Rdb Driver][Rdb] %SQL-F-RELNOTDEF, Table EMP
                   "is not defined in schema."  
 ```  
   
- 因为数据源中发生错误，该驱动程序将添加到诊断消息的数据源标识符 ([Rdb]) 的前缀。 由于驱动程序与数据源对接的组件，但它会将其供应商 ([Microsoft]) 和标识符 ([ODBC Rdb Driver]) 前缀添加到诊断消息。
+ 由于错误发生在数据源中，因此驱动程序将数据源标识符（[Rdb]）的前缀添加到了诊断消息。 由于驱动程序是与数据源接口的组件，因此它向诊断消息添加了其供应商（[Microsoft]）和标识符（[ODBC Rdb 驱动程序]）的前缀。

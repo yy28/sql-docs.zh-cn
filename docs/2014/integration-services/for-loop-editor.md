@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e450559355baf1242e5d822761256047f4790fe2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058569"
 ---
 # <a name="for-loop-editor"></a>For 循环编辑器
@@ -43,10 +43,10 @@ ms.locfileid: "66058569"
  **说明**  
  提供 For 循环容器的说明。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [“表达式”页](expressions/expressions-page.md)   
  [Foreach 循环容器](control-flow/foreach-loop-container.md)   
- [配置 For Loop 容器](../../2014/integration-services/configure-a-for-loop-container.md)  
+ [配置 For 循环容器](../../2014/integration-services/configure-a-for-loop-container.md)  
   
   

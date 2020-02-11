@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 421b0da3209d79444b391467dd5a5462086e25c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105926"
 ---
 # <a name="expression-reference-report-builder-and-ssrs"></a>表达式引用（报表生成器和 SSRS）
@@ -48,7 +48,7 @@ ms.locfileid: "66105926"
   
  [ReportItems 集合引用（报表生成器和 SSRS）](built-in-collections-reportitems-collection-references-report-builder.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [表达式（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)  
   
   

@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fd994f7ec89f154f106df25190819b227495f290
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73788721"
 ---
 # <a name="updating-data-in-rowsets---resynchronizing-rows"></a>更新行集中的数据 - 重新同步行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序仅支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持游标的行集上的**IRowsetResynch** 。 IRowsetResynch 并不是需要时就可用。 使用者在打开行集前必须请求该接口。  
+  Native Client OLE DB 提供程序仅支持支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]游标的行集上的**IRowsetResynch。** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **IRowsetResynch**不可用于点播。 使用者在打开行集前必须请求该接口。  
   
 ## <a name="see-also"></a>另请参阅  
  [更新行集中的数据](../../relational-databases/native-client-ole-db-rowsets/updating-data-in-rowsets.md)  

@@ -9,49 +9,13 @@ metadata:
   author: MashaMSFT
   ms.author: mathoma
   ms.date: 10/14/2019
-  ms.openlocfilehash: 6d9e92db1b261899846fd0de3c28488717cc58e1
-  ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+  ms.openlocfilehash: 2a7c0d83963f82862c89c1262409fe600dcbd7d3
+  ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 11/04/2019
-  ms.locfileid: "73536233"
+  ms.lasthandoff: 01/31/2020
+  ms.locfileid: "76831747"
 landingContent:
-- title: SQL Server
-  linkLists:
-  - linkListType: whats-new
-    links:
-    - text: SQL Server 2019
-      url: what-s-new-in-sql-server-ver15.md
-    - text: Azure Data Studio
-      url: ../azure-data-studio/what-is.md
-    - text: Linux 上的 SQL Server
-      url: ../linux/sql-server-linux-overview.md
-  - linkListType: quickstart
-    links:
-    - text: 连接并查询 (SSMS)
-      url: ../ssms/tutorials/connect-query-sql-server.md
-    - text: 连接并查询 (Azure Data Studio)
-      url: ../azure-data-studio/quickstart-sql-server.md
-  - linkListType: download
-    links:
-    - text: SQL Server
-      url: https://www.microsoft.com/en-us/sql-server/sql-server-downloads
-    - text: SQL Server Management Studio
-      url: ../ssms/download-sql-server-management-studio-ssms.md
-    - text: Azure Data Studio
-      url: ../azure-data-studio/download.md
-  - linkListType: reference
-    links:
-    - text: Transact-SQL
-      url: ../t-sql/language-reference.md
-    - text: SQL PowerShell
-      url: ../powershell/sql-server-powershell.md
-    - text: 示例数据库
-      url: https://docs.microsoft.com/sql/samples/sql-samples-where-are
-    - text: 内部机制和体系结构指南
-      url: https://aka.ms/sqlserverguides
-    - text: 先前版本 2005-2014
-      url: https://docs.microsoft.com/sql/toc/previous-versions-sql-server
 - title: Azure 上的 SQL
   linkLists:
   - linkListType: overview
@@ -66,37 +30,189 @@ landingContent:
       url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
     - text: Linux VM 上的 SQL Server
       url: ../linux/quickstart-install-connect-clouds.md
-- title: 管理
+    - text: Azure 数据库迁移服务
+      url: /azure/dms/dms-overview
+- title: 迁移
   linkLists:
-  - linkListType: deploy
-    links:
-    - text: 安装 SQL Server
-      url: https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server
-    - text: 升级 SQL Server
-      url: ../database-engine/install-windows/upgrade-sql-server.md
   - linkListType: overview
     links:
-    - text: Security
-      url: https://docs.microsoft.com/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database
-    - text: 监视和优化性能
-      url: https://docs.microsoft.com/sql/relational-databases/performance/monitor-and-tune-for-performance
-    - text: 内存数据库
-      url: ..//relational-databases/in-memory-database.md
-    - text: 自动优化
-      url: ../relational-databases/automatic-tuning/automatic-tuning.md
-    - text: 智能查询处理
-      url: https://aka.ms/IQP
-  - linkListType: concept
+    - text: 迁移内容
+      url: migrate/index.yml
+    - text: 数据迁移指南
+      url: https://datamigration.microsoft.com/
+    - text: 数据库兼容性认证
+      url: https://aka.ms/dbcompat
+    - text: 数据迁移助手 (DMA)
+      url: ../dma/dma-overview.md
+    - text: SQL Server 迁移助手 (SSMA)
+      url: ../ssma/sql-server-migration-assistant.md
+- title: SQL Server
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: SQL Server 2019
+      url: what-s-new-in-sql-server-ver15.md
+    - text: SQL Server 大数据群集
+      url: ../big-data-cluster/big-data-cluster-overview.md
+    - text: Azure Data Studio
+      url: ../azure-data-studio/what-is.md
+    - text: Linux 上的 SQL Server
+      url: ../linux/sql-server-linux-overview.md
+  - linkListType: quickstart
+    links:
+    - text: 连接并查询 (SSMS)
+      url: ../ssms/tutorials/connect-query-sql-server.md
+    - text: 连接并查询 (Azure Data Studio)
+      url: ../azure-data-studio/quickstart-sql-server.md
+  - linkListType: download
+    links:
+    - text: SQL Server
+      url: https://www.microsoft.com/sql-server/sql-server-downloads
+    - text: SQL Server Management Studio
+      url: ../ssms/download-sql-server-management-studio-ssms.md
+    - text: Azure Data Studio
+      url: ../azure-data-studio/download.md
+  - linkListType: reference
+    links:
+    - text: Transact-SQL (T-SQL)
+      url: ../t-sql/language-reference.md
+    - text: SQL Server 2014 文档
+      url: https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014
+    - text: SQL 教育资源
+      url: ../sql-server/educational-sql-resources.yml
+    - text: 示例数据库
+      url: https://docs.microsoft.com/sql/samples/sql-samples-where-are
+    - text: 内部机制和体系结构指南
+      url: https://aka.ms/sqlserverguides
+    - text: 2012-2005 年的早期版本
+      url: https://docs.microsoft.com/sql/toc/previous-versions-sql-server
+- title: 业务连续性
+  linkLists:
+  - linkListType: overview
     links:
     - text: 备份和还原
       url: ../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md
-    - text: AlwaysOn 可用性组
+    - text: Always On 可用性组
       url: ../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
-    - text: 故障转移群集实例
-      url: failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md
-    - text: SQL Server 复制
+    - text: AlwaysOn 故障转移群集实例
+      url: failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md
+    - text: 数据库镜像
+      url: ../database-engine/database-mirroring/database-mirroring-sql-server.md
+    - text: 日志传送
+      url: ../database-engine/log-shipping/about-log-shipping-sql-server.md
+    - text: 复制
       url: ../relational-databases/replication/sql-server-replication.md
-- title: Business Intelligence
+- title: 安全性
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: SQL 漏洞评估
+      url: ../relational-databases/security/sql-vulnerability-assessment.md
+    - text: 访问管理
+      url: ../relational-databases/security/authentication-access/determining-effective-database-engine-permissions.md
+    - text: Always Encrypted
+      url: ../relational-databases/security/encryption/always-encrypted-database-engine.md
+    - text: 审核
+      url: ../relational-databases/security/auditing/sql-server-audit-database-engine.md
+    - text: 指定位址空间
+      url: ../relational-databases/security/encryption/always-encrypted-enclaves.md
+    - text: 动态数据掩码
+      url: ../relational-databases/security/dynamic-data-masking.md
+    - text: 透明数据加密 (TDE)
+      url: ../relational-databases/security/encryption/transparent-data-encryption.md
+    - text: 行级安全性
+      url: ../relational-databases/security/row-level-security.md
+- title: 数据库设计
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 排序规则
+      url: ../relational-databases/collations/collation-and-unicode-support.md
+    - text: 数据库
+      url: ../relational-databases/databases/databases.md
+    - text: 图形
+      url: ../relational-databases/graphs/sql-graph-overview.md
+    - text: 索引
+      url: ../relational-databases/indexes/indexes.md
+    - text: 视图
+      url: ../relational-databases/views/views.md
+    - text: 用户定义的函数
+      url: ../relational-databases/user-defined-functions/user-defined-functions.md
+    - text: 表
+      url: ../relational-databases/tables/tables.md
+    - text: 存储过程
+      url: ../relational-databases/stored-procedures/stored-procedures-database-engine.md
+- title: 管理和监视
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 事务日志管理
+      url: ../relational-databases/logs/the-transaction-log-sql-server.md
+    - text: 维护计划
+      url: ../relational-databases/maintenance-plans/maintenance-plans.md
+    - text: SQL Server 代理
+      url: ../ssms/agent/sql-server-agent.md
+    - text: 跟踪更改
+      url: ../relational-databases/track-changes/track-data-changes-sql-server.md
+    - text: 数据压缩
+      url: ../relational-databases/data-compression/data-compression.md
+    - text: 扩展事件
+      url: ../relational-databases/extended-events/extended-events.md
+    - text: SQLdiag
+      url: ../tools/sqldiag-utility.md
+    - text: SQL Profiler
+      url: ../tools/sql-server-profiler/sql-server-profiler.md
+- title: 优化
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 性能中心
+      url: ../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md
+    - text: 智能查询处理
+      url: https://aka.ms/IQP
+    - text: 自动优化
+      url: ../relational-databases/automatic-tuning/automatic-tuning.md
+    - text: 数据库优化顾问
+      url: ../relational-databases/performance/database-engine-tuning-advisor.md
+    - text: 内存中 OLTP
+      url: ../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md
+  - linkListType: concept
+    links:
+    - text: 基数估计
+      url: ../relational-databases/performance/cardinality-estimation-sql-server.md
+    - text: 统计信息
+      url: ../relational-databases/statistics/statistics.md
+    - text: 索引
+      url: ../relational-databases/indexes/indexes.md
+- title: 查询数据
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Transact-SQL (T-SQL)
+      url: ../t-sql/language-reference.md
+    - text: SQL PowerShell
+      url: ../powershell/sql-server-powershell.md
+    - text: 脚本编写
+      url: ../ssms/scripting/database-engine-scripting.md
+    - text: 联接
+      url: ../relational-databases/performance/joins.md
+    - text: 全文搜索
+      url: ../relational-databases/search/full-text-search.md
+    - text: 同义词
+      url: ../relational-databases/synonyms/synonyms-database-engine.md
+- title: 大数据和机器学习
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: SQL Server 大数据群集
+      url: ../big-data-cluster/big-data-cluster-overview.md
+    - text: 分析平台系统
+      url: https://www.microsoft.com/sql/analytics-platform-system/
+    - text: SQL Server 机器学习（R 和 Python）
+      url: https://docs.microsoft.com/sql/advanced-analytics/
+    - text: 通过 Polybase 进行数据虚拟化
+      url: ../relational-databases/polybase/polybase-guide.md
+- title: 商业智能
   linkLists:
   - linkListType: overview
     links:
@@ -108,33 +224,3 @@ landingContent:
       url: ../integration-services/sql-server-integration-services.md
     - text: Azure 数据工厂
       url: https://docs.microsoft.com/azure/data-factory/
-- title: 迁移
-  linkLists:
-  - linkListType: overview
-    links:
-    - text: 数据迁移指南
-      url: https://datamigration.microsoft.com/
-    - text: 数据库兼容性认证
-      url: https://aka.ms/dbcompat
-    - text: Azure 数据库迁移服务
-      url: https://docs.microsoft.com/azure/dms/dms-overview
-    - text: 数据迁移助手 (DMA)
-      url: ../dma/dma-overview.md
-    - text: 数据库实验助手
-      url: ../dea/database-experimentation-assistant-overview.md
-    - text: SQL Server 迁移助手 (SSMA)
-      url: ../ssma/sql-server-migration-assistant.md
-- title: 大数据和机器学习
-  linkLists:
-  - linkListType: overview
-    links:
-    - text: SQL Server 大数据群集
-      url: ../big-data-cluster/big-data-cluster-overview.md
-    - text: 分析平台系统
-      url: https://www.microsoft.com/sql/analytics-platform-system/
-    - text: SQL Server 机器学习
-      url: https://docs.microsoft.com/sql/advanced-analytics/
-    - text: R Services
-      url: ../advanced-analytics/r/sql-server-r-services.md
-    - text: 通过 Polybase 进行数据虚拟化
-      url: ../relational-databases/polybase/polybase-guide.md

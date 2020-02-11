@@ -18,14 +18,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 65436da64ca7c718de053dab520edad71dac6228
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68199460"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>对发布数据库进行架构更改
-  复制支持对已发布对象进行多种架构更改。 对 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 发布服务器中相应的已发布对象进行以下任何架构更改时，默认情况下更改都将传播到所有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器：  
+  复制支持对已发布对象进行多种架构更改。 对 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 发布服务器中相应的发布对象进行下列任何一种架构更改时，默认会将该更改传播到所有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器：  
   
 -   ALTER TABLE  
   
@@ -57,7 +57,7 @@ ms.locfileid: "68199460"
   
 -   架构更改需遵守 [!INCLUDE[tsql](../../../includes/tsql-md.md)]规定的所有限制。 例如，ALTER TABLE 不允许对主键列执行 ALTER 语句。  
   
--   仅对初始快照执行数据类型映射。 架构更改不会映射到以前版本的数据类型。 例如，如果在 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中使用 `ALTER TABLE ADD datetime2 column` 语句，则不会将数据类型转换为 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 订阅服务器的 `nvarchar`。 在某些情况下，架构更改在发布服务器上受到阻止。  
+-   仅对初始快照执行数据类型映射。 架构更改不会映射到以前版本的数据类型。 例如，如果在 `ALTER TABLE ADD datetime2 column` 中使用 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 语句，则不会将数据类型转换为 `nvarchar` 订阅服务器的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。 在某些情况下，架构更改在发布服务器上受到阻止。  
   
 -   如果发布被设置为允许传播架构更改，则不论为发布中的项目设置的相关架构选项是什么，都会传播架构更改。 例如，如果选择不复制某个表项目的外键约束，但随后又发出 ALTER TABLE 命令，将外键添加到发布服务器中的表中，那么外键将被添加到订阅服务器中的表中。 若要防止出现这种情况，请在发出 ALTER TABLE 命令之前禁用架构更改的传播。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "68199460"
   
 -   若要将一个新列添加到表中但不在现有发布中包括此列，请禁用架构更改复制，然后执行 ALTER TABLE \<Table> ADD \<Column>。  
   
--   若要在现有发布中包括现有列，请使用 [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)、[sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) 或“发布属性 - \<发布>”对话框。   
+-   若要在现有发布中包括现有列，请使用 [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)、[sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) 或“发布属性 - **发布>”对话框。\<**  
   
      有关详细信息，请参阅 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)。 这要求重新初始化订阅。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "68199460"
   
 -   若要从现有发布中删除列并从发布服务器中的表中删除该列，请执行 ALTER TABLE \<Table> DROP \<Column>。 默认情况下，该列然后将从所有订阅服务器中的表中删除。  
   
--   若要从现有发布中删除列但在发布服务器中的表中保留该列，请使用 [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)、[sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) 或“发布属性 - \<发布>”对话框。   
+-   若要从现有发布中删除列但在发布服务器中的表中保留该列，请使用 [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)、[sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) 或“发布属性 - **发布>”对话框。\<**  
   
      有关详细信息，请参阅 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)。 这要求生成一个新的快照。  
   
@@ -146,9 +146,10 @@ ms.locfileid: "68199460"
         |`hierarchyid`|允许更改|阻止更改|阻止更改|  
         |`geography` 和 `geometry`|允许更改|允许更改<sup>1</sup>|阻止更改|  
         |`filestream`|允许更改|阻止更改|阻止更改|  
-        |`date`、`time`、`datetime2` 和 `datetimeoffset`|允许更改|允许更改<sup>1</sup>|阻止更改|  
+        |
+  `date`、`time`、`datetime2` 和 `datetimeoffset`|允许更改|允许更改<sup>1</sup>|阻止更改|  
   
-         <sup>1</sup> SQL Server Compact 订阅服务器中转换这些订阅服务器上的数据类型。  
+         <sup>1</sup> SQL Server Compact 订阅服务器在订阅服务器中转换这些数据类型。  
   
 -   如果在应用架构更改时发生错误（如由于添加的外键引用订阅服务器中不可用的表而导致错误），同步将失败，必须重新初始化订阅。  
   
@@ -156,12 +157,12 @@ ms.locfileid: "68199460"
   
 -   合并复制提供了在排除故障期间跳过架构更改的存储过程。 有关详细信息，请参阅 [sp_markpendingschemachange &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql) 和 [sp_enumeratependingschemachanges &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql)。  
   
-## <a name="see-also"></a>请参阅  
- [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
- [ALTER VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-view-transact-sql)   
- [ALTER PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-procedure-transact-sql)   
- [ALTER FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-function-transact-sql)   
- [ALTER TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-trigger-transact-sql)   
+## <a name="see-also"></a>另请参阅  
+ [ALTER TABLE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
+ [ALTER VIEW &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-view-transact-sql)   
+ [ALTER PROCEDURE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-procedure-transact-sql)   
+ [ALTER FUNCTION &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-function-transact-sql)   
+ [ALTER TRIGGER (Transact-SQL)](/sql/t-sql/statements/alter-trigger-transact-sql)   
  [发布数据和数据库对象](publish-data-and-database-objects.md)   
  [重新生成自定义事务过程以反映架构更改](../transactional/transactional-articles-regenerate-to-reflect-schema-changes.md)  
   

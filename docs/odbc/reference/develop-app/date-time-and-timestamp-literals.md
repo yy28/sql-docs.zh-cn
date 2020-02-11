@@ -1,5 +1,5 @@
 ---
-title: 日期、 时间和时间戳文本 |Microsoft Docs
+title: 日期、时间和时间戳文本 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,37 +13,37 @@ ms.assetid: 2b42a52a-6353-494c-a179-3a7533cd729f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e6191995c9d1c488fc5af056248ba39dd3eb4607
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68076985"
 ---
 # <a name="date-time-and-timestamp-literals"></a>日期、时间和时间戳文本
-日期、 时间和时间戳文本的转义序列是  
+日期、时间和时间戳文本的转义序列是  
   
- **{**  _-type_ **'** _value_ **'}**  
+ **{**  _-type_ **"** _value_ **"}**  
   
- 其中*文本类型*下表中列出的值之一。  
+ 其中，*原义类型*是下表中列出的值之一。  
   
-|*literal-type*|含义|设置格式的*值*|  
+|*文本类型*|含义|*值*的格式|  
 |---------------------|-------------|-----------------------|  
-|**d**|Date|*yyyy*-*mm*-*dd*|  
-|**t**|时间 *|*hh*:*mm*:*ss*[1]|  
-|**ts**|时间戳|*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.*f...* ][1]|  
+|**2-d**|Date|*yyyy*-** mm-*dd*|  
+|**关心**|阶段|*hh*：*mm*：*ss*[1]|  
+|**ts**|时间戳|*yyyy*-** mm-*dd* *hh*：*mm*：*ss*[。*f ...*]2|  
   
- [1] 的数字文本，其中包含秒组成部分的时间戳间隔中小数点右侧位数是依赖于的秒精度，因为 SQL_DESC_PRECISION 描述符字段中包含。 (有关详细信息，请参阅[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)。)  
+ [1] 时间或时间间隔文本中小数点右边的位数，其中包含秒部分，它取决于 SQL_DESC_PRECISION 描述符字段中包含的秒精度。 （有关详细信息，请参阅[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)。）  
   
- 有关日期、 时间和时间戳转义序列的详细信息，请参阅[日期、 时间和时间戳转义序列](../../../odbc/reference/appendixes/date-time-and-timestamp-escape-sequences.md)附录 c： 驱动器中SQL 语法。  
+ 有关日期、时间和时间戳转义序列的详细信息，请参阅附录 C： SQL 语法中的[日期、时间和时间戳转义序列](../../../odbc/reference/appendixes/date-time-and-timestamp-escape-sequences.md)。  
   
- 例如，这两个以下的 SQL 语句更新销售订单 1023 Orders 表中的打开的日期。 第一个语句使用的转义序列语法。 第二个语句的日期列中使用 Oracle Rdb 本机语法并不是可互操作。  
+ 例如，以下两个 SQL 语句均更新 Orders 表中销售订单1023的打开日期。 第一条语句使用转义序列语法。 第二个语句使用 "日期" 列的 Oracle Rdb 本机语法，它无法互操作。  
   
 ```  
 UPDATE Orders SET OpenDate={d '1995-01-15'} WHERE OrderID=1023  
 UPDATE Orders SET OpenDate='15-Jan-1995' WHERE OrderID=1023  
 ```  
   
- 此外可以绑定到日期、 时间或时间戳参数的字符变量中放置日期、 时间或时间戳文本的转义序列。 例如，下面的代码使用日期参数绑定到字符变量来更新 Orders 表中的销售订单 1023年打开日期：  
+ 日期、时间或时间戳文字的转义序列也可以放入绑定到日期、时间或时间戳参数的字符变量中。 例如，下面的代码使用绑定到字符变量的 date 参数来更新 Orders 表中销售订单1023的开放日期：  
   
 ```  
 SQLCHAR      OpenDate[56]; // The size of a date literal is 55.  
@@ -63,7 +63,7 @@ strcpy_s( (char*) OpenDate, _countof(OpenDate), "{d '1995-01-15'}");
 SQLExecDirect(hstmt, "UPDATE Orders SET OpenDate=? WHERE OrderID = 1023", SQL_NTS);  
 ```  
   
- 但是，它是参数直接绑定到的日期结构通常更高效：  
+ 但是，将参数直接绑定到日期结构通常更高效：  
   
 ```  
 SQL_DATE_STRUCT   OpenDate;  
@@ -82,10 +82,10 @@ OpenDate.day = 15;
 SQLExecDirect(hstmt, "UPDATE Employee SET OpenDate=? WHERE OrderID = 1023", SQL_NTS);  
 ```  
   
- 若要确定是否有驱动程序支持 ODBC 转义序列的日期、 时间或时间戳文本，应用程序调用**SQLGetTypeInfo**。 如果数据源支持的日期、 时间戳数据类型，它还必须支持相应的转义序列。  
+ 若要确定驱动程序是否支持日期、时间或时间戳文本的 ODBC 转义序列，应用程序将调用**SQLGetTypeInfo**。 如果数据源支持日期、时间或时间戳数据类型，它还必须支持相应的转义序列。  
   
- 数据源还可以支持 ANSI SQL-92 规范中定义的日期时间文字的日期、 时间或时间戳文本的 ODBC 转义序列从不同的。 若要确定数据源是否支持 ANSI 文本，应用程序调用**SQLGetInfo** SQL_ANSI_SQL_DATETIME_LITERALS 选项。  
+ 数据源还可以支持 ANSI SQL-92 规范中定义的 datetime 文本，它们不同于日期、时间或时间戳文本的 ODBC 转义序列。 若要确定数据源是否支持 ANSI 文本，应用程序需要使用 SQL_ANSI_SQL_DATETIME_LITERALS 选项调用**SQLGetInfo** 。  
   
- 若要确定驱动程序是否支持间隔文字的 ODBC 转义序列，应用程序调用**SQLGetTypeInfo**。 如果数据源支持的日期时间间隔数据类型，它还必须支持相应的转义序列。  
+ 若要确定驱动程序是否支持用于间隔文本的 ODBC 转义序列，应用程序将调用**SQLGetTypeInfo**。 如果数据源支持日期时间间隔数据类型，它还必须支持相应的转义序列。  
   
- 数据源还可以支持 ANSI SQL-92 规范中定义的日期时间文字的日期时间间隔文字的 ODBC 转义序列从不同的。 若要确定数据源是否支持 ANSI 文本，应用程序调用**SQLGetInfo** SQL_ANSI_SQL_DATETIME_LITERALS 选项。
+ 数据源还可以支持 ANSI SQL-92 规范中定义的 datetime 文本，它们不同于 datetime 间隔文本的 ODBC 转义序列。 若要确定数据源是否支持 ANSI 文本，应用程序需要使用 SQL_ANSI_SQL_DATETIME_LITERALS 选项调用**SQLGetInfo** 。

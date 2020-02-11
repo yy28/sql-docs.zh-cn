@@ -1,5 +1,5 @@
 ---
-title: 使用 HAVING 和 WHERE 子句在同一个查询 (Visual Database Tools) |Microsoft Docs
+title: 在同一查询中使用 HAVING 和 WHERE 子句（Visual Database Tools） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f7aafcd72eff1d21dfe02c8957496398d327cf38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204629"
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>在同一查询中使用 HAVING 和 WHERE 子句 (Visual Database Tools)
@@ -59,9 +59,9 @@ HAVING AVG(price) > 10
   
 2.  如果 WHERE 条件要基于的列不在“条件”窗格中，请添加该列。  
   
-3.  除非数据列是 GROUP BY 子句的一部分或包含在聚合函数中，否则请清除“输出”  列。  
+3.  除非数据列是 GROUP BY 子句的一部分或包含在聚合函数中，否则请清除“输出”**** 列。  
   
-4.  在“筛选器”  列中，指定 WHERE 条件。 查询和视图设计器会将该条件添加到 SQL 语句的 HAVING 子句中。  
+4.  在“筛选器”**** 列中，指定 WHERE 条件。 查询和视图设计器会将该条件添加到 SQL 语句的 HAVING 子句中。  
   
     > [!NOTE]  
     >  此过程的示例中显示的查询将联接 `titles` 和 `publishers`这两张表。  
@@ -76,7 +76,7 @@ HAVING AVG(price) > 10
     HAVING publishers.state = 'CA'  
     ```  
   
-5.  在“分组依据”  列中，从组和汇总选项的列表中选择 **Where**。 查询和视图设计器将从 SQL 语句的 HAVING 子句中移除该条件，并将其添加到 WHERE 子句中。  
+5.  在“分组依据”**** 列中，从组和汇总选项的列表中选择 **Where**。 查询和视图设计器将从 SQL 语句的 HAVING 子句中移除该条件，并将其添加到 WHERE 子句中。  
   
      SQL 语句更改为包含 WHERE 子句：  
   
@@ -88,8 +88,8 @@ HAVING AVG(price) > 10
     GROUP BY titles.pub_id  
     ```  
   
-## <a name="see-also"></a>请参阅  
- [排序和分组查询结果&#40;可视化数据库工具&#41;](sort-and-group-query-results-visual-database-tools.md)   
+## <a name="see-also"></a>另请参阅  
+ [对查询结果进行排序和分组 &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
  [汇总查询结果 (Visual Database Tools)](summarize-query-results-visual-database-tools.md)  
   
   

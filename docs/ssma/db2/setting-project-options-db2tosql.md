@@ -1,5 +1,5 @@
 ---
-title: 设置项目选项 (DB2ToSQL) |Microsoft Docs
+title: 设置项目选项（DB2ToSQL） |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,23 +10,23 @@ ms.assetid: f325a606-97ac-48bc-b344-b55f5e086a48
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d384433e5a2653291fac4d990bb3660b31c13855
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68060033"
 ---
-# <a name="setting-project-options-db2tosql"></a>设置项目选项 (DB2ToSQL)
-对于每个 SSMA 项目可以设置项目级别选项。 这些选项用于指定对象转换、 对象加载、 用户界面和数据迁移设置。 在转换到的对象之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，验证配置选项是否适用于该项目。  
+# <a name="setting-project-options-db2tosql"></a>设置项目选项（DB2ToSQL）
+对于每个 SSMA 项目，可以设置项目级别选项。 这些选项指定对象转换、对象加载、用户界面和数据迁移设置。 在将对象转换为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或将数据迁移[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到之前，请验证配置选项是否适用于项目。  
   
-SSMA 允许你配置的所有项目的默认选项。 这些选项不适用于您创建任何新项目。 然后可以自定义每个项目的选项。  
+SSMA 可让你配置所有项目的默认选项。 这些选项将应用于您创建的任何新项目。 然后，你可以自定义每个项目的选项。  
   
 ## <a name="configuration-options-and-modes"></a>配置选项和模式  
-SSMA 具有五个集的项目设置：  
+SSMA 有五组项目设置：  
   
 -   项目信息  
   
--   常规 （转换、 迁移，加载对象）  
+-   常规（转换、迁移、加载对象）  
   
 -   Synchronization  
   
@@ -34,7 +34,7 @@ SSMA 具有五个集的项目设置：
   
 -   类型映射  
   
-它还具有四种模式来配置这些设置：  
+它还具有四种配置这些设置的模式：  
   
 -   默认  
   
@@ -44,58 +44,58 @@ SSMA 具有五个集的项目设置：
   
 -   自定义  
   
-建议大多数用户使用的默认模式。 乐观模式使多个当前 DB2 语法，并易于阅读。 但是，保留当前的语法可能不会准确。 如果 DB2 语法必须转换为等效[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]语法中，完整模式中执行的最完整的转换，但生成的代码可能更难以阅读。 在自定义模式下，您可以设置选项。  
+对于大多数用户，建议使用默认模式。 乐观模式会保留更多当前 DB2 语法，并且更易于阅读。 但是，保持当前语法可能不准确。 如果必须将 DB2 语法转换为等效[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]语法，则完整模式将执行最完整的转换，但生成的代码可能更难以读取。 在 "自定义" 模式下，设置选项。  
   
-有关设置以及如何在每种模式中应用设置的详细信息，请参阅以下主题：  
+有关设置以及如何在每个模式下应用这些设置的详细信息，请参阅以下主题：  
   
--   [项目设置&#40;转换&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-conversion-db2tosql.md)  
+-   [&#40;转换的项目设置&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-conversion-db2tosql.md)  
   
--   [项目设置&#40;迁移&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-migration-db2tosql.md)  
+-   [&#40;迁移的项目设置&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-migration-db2tosql.md)  
   
--   [项目设置&#40;同步&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md)  
+-   [&#40;同步的项目设置&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md)  
   
--   [项目设置&#40;GUI&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-gui-db2tosql.md)  
+-   [&#40;GUI 的项目设置&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-gui-db2tosql.md)  
   
--   [项目设置&#40;类型映射&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md)  
+-   [项目设置 &#40;类型映射&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md)  
   
 ## <a name="setting-project-options"></a>设置项目选项  
-在 SSMA 中，可以配置所有项目的默认的设置。 这些设置保存到 SSMA 配置文件，并应用于创建任何新项目。  
+在 SSMA 中，可以配置所有项目的默认设置。 这些设置将保存到 SSMA 配置文件，并应用于你创建的任何新项目。  
   
-**若要设置项目选项的默认值**  
+**设置默认项目选项**  
   
-1.  上**工具**菜单上，单击**默认项目设置**。  
+1.  在 "**工具**" 菜单上，单击 "**默认项目设置**"。  
   
-2.  在中**默认项目设置**对话框，请使用以下过程之一：  
+2.  在 "**默认项目设置**" 对话框中，使用以下过程之一：  
   
-    -   选择迁移项目类型设置为其所需查看或更改从**迁移目标版本**下拉列表单击**常规**底部的左窗格中，并选择转换或迁移。  
+    -   从 "**迁移目标版本**" 下拉框中选择需要查看或更改其设置的 "迁移项目类型"，然后在左窗格底部单击 "**常规**"，然后选择 "转换" 或 "迁移"。  
   
-    -   若要选择预定义的模式，在**模式下**下拉列表框中，选择**默认**， **Optimistic**，或**完整**。  
+    -   若要选择预定义模式，请在 "**模式**" 下拉框中选择 "**默认**"、"**乐观**" 或 "**完整**"。  
   
-    -   若要指定自定义设置，选择或输入新的设置或值。  
+    -   若要指定自定义设置，请选择或输入新的设置或值。  
   
-3.  单击**确定**以保存设置。  
+3.  单击“确定”保存设置。****  
   
-此外可以自定义当前项目的设置。 这些设置保存到当前项目文件。  
+你还可以自定义当前项目的设置。 这些设置保存到当前项目文件中。  
   
-**若要自定义的当前项目设置**  
+**为当前项目自定义设置**  
   
-1.  上**工具**菜单上，单击**项目设置**。  
+1.  在 "**工具**" 菜单上单击 "**项目设置**"。  
   
-2.  在中**项目设置**对话框，请使用以下过程之一：  
+2.  在 "**项目设置**" 对话框中，使用以下过程之一：  
   
-    -   若要选择预定义的模式，在**模式下**下拉列表框中，选择**默认**， **Optimistic**，或**完整**。  
+    -   若要选择预定义模式，请在 "**模式**" 下拉框中选择 "**默认**"、"**乐观**" 或 "**完整**"。  
   
-    -   若要在中指定自定义模式，**模式下**框中，选择**自定义**，然后选择相应的项目设置。  
+    -   若要指定自定义模式，请在 "**模式**" 框中选择 "**自定义**"，然后选择相应的项目设置。  
   
-3.  单击**确定**以保存设置。  
+3.  单击“确定”保存设置。****  
   
 ## <a name="next-steps"></a>后续步骤  
-迁移的下一步取决于您的项目需求：  
+迁移的下一步取决于你的项目需求：  
   
--   若要自定义源和目标数据类型的映射，请参阅[映射 DB2 和 SQL Server 数据类型&#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)。  
+-   若要自定义源和目标数据类型的映射，请参阅[映射 DB2 和 SQL Server 数据类型 &#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)。  
   
--   否则，将转换到 DB2 数据库对象定义[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]对象定义。 有关详细信息，请参阅[转换 DB2 架构&#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)。  
+-   否则，您可以将 DB2 数据库对象定义转换为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]对象定义。 有关详细信息，请参阅将[DB2 架构转换 &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)。  
   
-## <a name="see-also"></a>请参阅  
-[映射 DB2 和 SQL Server 数据类型&#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)  
+## <a name="see-also"></a>另请参阅  
+[映射 DB2 和 SQL Server 数据类型 &#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)  
   

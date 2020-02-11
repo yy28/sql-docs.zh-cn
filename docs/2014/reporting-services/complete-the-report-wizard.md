@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 08d78fc30dbdafa8d65ac01943e729b6cf0d890d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109787"
 ---
 # <a name="complete-the-report-wizard"></a>完成报表向导
@@ -32,7 +32,7 @@ ms.locfileid: "66109787"
  **预览报表**  
  选择此选项可预览所创建的报表。 否则，它将在设计视图中打开。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [报表向导帮助](../../2014/reporting-services/report-wizard-help.md)  
   
   

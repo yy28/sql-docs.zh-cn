@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f88a966e2095f527f36c84498e026c1e23aaa2ab
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73785225"
 ---
 # <a name="bulk-copying-from-program-variables"></a>从程序变量执行大容量复制
@@ -51,41 +51,41 @@ ms.locfileid: "73785225"
   
  **Bcp_bind**_类型_参数使用 db-library 数据类型标识符，而非 ODBC 数据类型标识符。 在 sqlncli.msi 中定义了 DB-LIBRARY 数据类型标识符，以便与 ODBC **bcp_bind**函数结合使用。  
   
- 大容量复制函数并不支持所有 ODBC C 数据类型。 例如，大容量复制函数不支持 ODBC SQL_C_TYPE_TIMESTAMP 结构，因此请使用[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)或[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)将 odbc SQL_TYPE_TIMESTAMP 数据转换为 SQL_C_CHAR 变量。 如果随后使用 SQLCHARACTER*类型*参数**bcp_bind**将该变量绑定到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime**列，则大容量复制函数会将字符变量中的 timestamp 转义子句转换为正确的日期时间格式。  
+ 大容量复制函数并不支持所有 ODBC C 数据类型。 例如，大容量复制函数不支持 ODBC SQL_C_TYPE_TIMESTAMP 结构，因此请使用[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)或[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)将 odbc SQL_TYPE_TIMESTAMP 数据转换为 SQL_C_CHAR 变量。 如果随后将**bcp_bind**与 SQLCHARACTER 的*类型*参数结合使用，将变量绑定到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime**列，则大容量复制函数会将字符变量中的 timestamp 转义子句转换为正确的日期时间格式。  
   
  下表列出了从 ODBC SQL 数据类型映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型时推荐使用的数据类型。  
   
 |ODBC SQL 数据类型|ODBC C 数据类型|bcp_bind*类型*参数|SQL Server 数据类型|  
 |-----------------------|----------------------|--------------------------------|--------------------------|  
-|SQL_CHAR|SQL_C_CHAR|SQLCHARACTER|**character**<br /><br /> **char**|  
-|SQL_VARCHAR|SQL_C_CHAR|SQLCHARACTER|**varchar**<br /><br /> **字符变化**<br /><br /> **char varying**<br /><br /> **sysname**|  
+|SQL_CHAR|SQL_C_CHAR|SQLCHARACTER|**字符**<br /><br /> **char**|  
+|SQL_VARCHAR|SQL_C_CHAR|SQLCHARACTER|**varchar**<br /><br /> **字符变化**<br /><br /> **char 可变**<br /><br /> **sysname**|  
 |SQL_LONGVARCHAR|SQL_C_CHAR|SQLCHARACTER|**text**|  
 |SQL_WCHAR|SQL_C_WCHAR|SQLNCHAR|**nchar**|  
 |SQL_WVARCHAR|SQL_C_WCHAR|SQLNVARCHAR|**nvarchar**|  
 |SQL_WLONGVARCHAR|SQL_C_WCHAR|SQLNTEXT|**ntext**|  
-|SQL_DECIMAL|SQL_C_CHAR|SQLCHARACTER|**decimal**<br /><br /> **dec**<br /><br /> **money**<br /><br /> **smallmoney**|  
-|SQL_NUMERIC|SQL_C_NUMERIC|SQLNUMERICN|**numeric**|  
+|SQL_DECIMAL|SQL_C_CHAR|SQLCHARACTER|**Decimal**<br /><br /> **十进制**<br /><br /> **money**<br /><br /> **smallmoney**|  
+|SQL_NUMERIC|SQL_C_NUMERIC|SQLNUMERICN|**加法**|  
 |SQL_BIT|SQL_C_BIT|SQLBIT|**bit**|  
-|SQL_TINYINT（有符号）|SQL_C_SSHORT|SQLINT2|**int**|  
+|SQL_TINYINT（有符号）|SQL_C_SSHORT|SQLINT2|**smallint**|  
 |SQL_TINYINT（无符号）|SQL_C_UTINYINT|SQLINT1|**tinyint**|  
-|SQL_SMALL_INT（有符号）|SQL_C_SSHORT|SQLINT2|**int**|  
-|SQL_SMALL_INT（无符号）|SQL_C_SLONG|SQLINT4|**int**<br /><br /> **integer**|  
-|SQL_INTEGER（有符号）|SQL_C_SLONG|SQLINT4|**int**<br /><br /> **integer**|  
-|SQL_INTEGER（无符号）|SQL_C_CHAR|SQLCHARACTER|**decimal**<br /><br /> **dec**|  
+|SQL_SMALL_INT（有符号）|SQL_C_SSHORT|SQLINT2|**smallint**|  
+|SQL_SMALL_INT（无符号）|SQL_C_SLONG|SQLINT4|**int**<br /><br /> **整数**|  
+|SQL_INTEGER（有符号）|SQL_C_SLONG|SQLINT4|**int**<br /><br /> **整数**|  
+|SQL_INTEGER（无符号）|SQL_C_CHAR|SQLCHARACTER|**Decimal**<br /><br /> **十进制**|  
 |SQL_BIGINT（有符号和无符号）|SQL_C_CHAR|SQLCHARACTER|**bigint**|  
-|SQL_REAL|SQL_C_FLOAT|SQLFLT4|**real**|  
+|SQL_REAL|SQL_C_FLOAT|SQLFLT4|**实际上**|  
 |SQL_FLOAT|SQL_C_DOUBLE|SQLFLT8|**float**|  
 |SQL_DOUBLE|SQL_C_DOUBLE|SQLFLT8|**float**|  
-|SQL_BINARY|SQL_C_BINARY|SQLBINARY|**binary**<br /><br /> **timestamp**|  
+|SQL_BINARY|SQL_C_BINARY|SQLBINARY|**binary**<br /><br /> **标志**|  
 |SQL_VARBINARY|SQL_C_BINARY|SQLBINARY|**varbinary**<br /><br /> **二进制改变**|  
-|SQL_LONGVARBINARY|SQL_C_BINARY|SQLBINARY|**image**|  
+|SQL_LONGVARBINARY|SQL_C_BINARY|SQLBINARY|**图像**|  
 |SQL_TYPE_DATE|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  
 |SQL_TYPE_TIME|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  
 |SQL_TYPE_TIMESTAMP|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  
 |SQL_GUID|SQL_C_GUID|SQLUNIQUEID|**uniqueidentifier**|  
 |SQL_INTERVAL_|SQL_C_CHAR|SQLCHARACTER|**char**|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 没有以**tinyint**、无符号的**smallint**或无符号**整数**数据类型进行签名。 若要在迁移这些数据类型时防止丢失数据值，应使用第二大整数数据类型创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表。 若要防止用户以后添加原始数据类型所允许范围之外的值，应对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列应用一条规则，将允许的值限定在原始源中的数据类型所支持的范围之内：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不具有有符号**tinyint**、无符号**smallint**或无符号**整数**数据类型。 若要在迁移这些数据类型时防止丢失数据值，应使用第二大整数数据类型创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表。 若要防止用户以后添加原始数据类型所允许范围之外的值，应对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列应用一条规则，将允许的值限定在原始源中的数据类型所支持的范围之内：  
   
 ```  
 CREATE TABLE Sample_Ints(STinyIntCol   SMALLINT,  
@@ -105,15 +105,16 @@ sp_bindrule USmallInt_Rule, 'Sample_Ints.USmallIntCol'
 GO  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不直接支持 interval 数据类型。 不过，应用程序可以将 interval 转义序列作为字符串存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字符列中。 该应用程序可以读取它们供以后使用，但是它们无法用在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不直接支持 interval 数据类型。 不过，应用程序可以将 interval 转义序列作为字符串存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字符列中。 该应用程序可以读取它们供以后使用，但是它们无法用在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中。  
   
- 可以使用大容量复制函数将从 ODBC 数据源中读取的数据快速加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中。 使用[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)将结果集的列绑定到程序变量，然后使用**bcp_bind**将相同的程序变量绑定到大容量复制操作。 然后，调用[SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)或**SQLFetch**将数据从 ODBC 数据源提取到程序变量中，并调用[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)将数据从程序变量大容量复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 可以使用大容量复制函数将从 ODBC 数据源中读取的数据快速加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中。 使用[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)将结果集的列绑定到程序变量，然后使用**bcp_bind**将相同的程序变量绑定到大容量复制操作。 然后，调用[SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)或**SQLFetch**将数据从 ODBC 数据源提取到程序变量中，并调用[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)将数据从程序变量大容量复制到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  应用程序可以在任何需要更改最初在**bcp_bind** _pData_参数中指定的数据变量的地址时使用[bcp_colptr](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md)函数。 应用程序可以在任何需要更改最初在**bcp_bind**_cbData_参数中指定的数据长度时使用[bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)函数。  
   
  无法使用大容量复制功能将数据从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 读取到程序变量中；没有与 "bcp_readrow" 函数类似的功能。 只能将数据从应用程序发送到服务器。  
   
 ## <a name="see-also"></a>另请参阅  
- [正在执行大容量&#40;复制操作 ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
+ [&#40;ODBC&#41;执行大容量复制操作](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
   

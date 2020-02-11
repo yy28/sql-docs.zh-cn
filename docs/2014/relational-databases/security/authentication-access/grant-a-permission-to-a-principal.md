@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 9b0ff18a9b3c6ff338a2b827b91ff20bbc7b2ce9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011956"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>向主体授予权限
@@ -45,9 +45,9 @@ ms.locfileid: "63011956"
   
 -   对类似的安全对象（表、视图和过程）进行配置，使它们属于同一个架构，然后向架构授予权限。 例如，工资架构可能拥有多个表、视图和存储过程。 通过授予针对该架构的访问权限，可以同时授予执行工资功能所需的所有权限。 有关可向哪些安全对象授予权限的详细信息，请参阅 [Securables](../securables.md)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  授权者（或使用 AS 选项指定的主体）必须具有使用 GRANT OPTION 授予的权限本身，或具有隐含授予该权限的更高权限。 **sysadmin** 固定服务器角色成员可以授予任何权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -65,7 +65,7 @@ ms.locfileid: "63011956"
   
 4.  右键单击某一存储过程，然后选择“属性”  。  
   
-5.  在中**存储过程属性-** _stored_procedure_name_对话框中的，在选择页上，选择下**权限**。 使用此页可以将用户或角色添加到存储过程以及指定这些用户或角色所具有的权限。  
+5.  在 "**存储过程属性-**_stored_procedure_name_ " 对话框中的 "选择页" 下，选择 "**权限**"。 使用此页可以将用户或角色添加到存储过程以及指定这些用户或角色所具有的权限。  
   
 6.  完成后，单击 **“确定”** 。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "63011956"
   
  有关详细信息，请参阅 [GRANT (Transact-SQL)](/sql/t-sql/statements/grant-transact-sql) 和 [GRANT 对象权限 (Transact-SQL)](/sql/t-sql/statements/grant-object-permissions-transact-sql)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [主体（数据库引擎）](principals-database-engine.md)  
   
   

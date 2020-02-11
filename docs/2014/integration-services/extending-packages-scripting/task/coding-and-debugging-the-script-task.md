@@ -22,19 +22,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 620b778069ef45deeeb5552296798736a1ebe5f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768405"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>脚本任务的编码和调试
-  在“脚本任务编辑器”  中配置完脚本任务后，即可在脚本任务开发环境中编写自己的自定义代码。  
+  在“脚本任务编辑器”**** 中配置完脚本任务后，即可在脚本任务开发环境中编写自己的自定义代码。  
   
 ## <a name="script-task-development-environment"></a>脚本任务开发环境  
- 脚本任务将 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 用作脚本自身的开发环境。  
+ 脚本任务[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]将 Tools for Applications （VSTA）用作脚本自身的开发环境。  
   
- 脚本代码以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 编写。 在“脚本任务编辑器”  中设置 **ScriptLanguage** 属性可指定脚本语言。 如果您倾向于使用其他编程语言，您可以用您选择的语言开发自定义程序集，然后通过脚本任务中的代码调用其功能。  
+ 脚本代码以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 编写。 在“脚本任务编辑器”**** 中设置 **ScriptLanguage** 属性可指定脚本语言。 如果您倾向于使用其他编程语言，您可以用您选择的语言开发自定义程序集，然后通过脚本任务中的代码调用其功能。  
   
  您在脚本任务中创建的脚本存储在包定义中。 由于没有单独的脚本文件， 因此，使用脚本任务不会影响包部署。  
   
@@ -47,17 +47,20 @@ ms.locfileid: "62768405"
  创建或修改包含在脚本任务中的脚本时，VSTA 会打开一个空的新项目或重新打开现有项目。 创建此 VSTA 项目不会影响包的部署，因为项目保存在包文件内；脚本任务不会创建其他文件。  
   
 ### <a name="project-items-and-classes-in-the-script-task-project"></a>脚本任务项目中的项目项和类  
- 默认情况下，显示在 VSTA 项目资源管理器窗口中的脚本任务项目包含单个项：`ScriptMain`。 `ScriptMain` 项又包含单个类，名称也为 `ScriptMain`。 该类中的代码元素根据您选择的脚本任务编程语言而有所不同：  
+ 默认情况下，显示在 VSTA 项目资源管理器窗口中的脚本任务项目包含单个项：`ScriptMain`。 
+  `ScriptMain` 项又包含单个类，名称也为 `ScriptMain`。 该类中的代码元素根据您选择的脚本任务编程语言而有所不同：  
   
--   如果脚本任务配置为[!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)]编程语言中，`ScriptMain`类具有一个公共子例程`Main`。 `ScriptMain.Main` 子例程是运行脚本任务时运行库所调用的方法。  
+-   如果脚本任务配置为[!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)]编程语言，则`ScriptMain`类有一个公共子例程。 `Main` 
+  `ScriptMain.Main` 子例程是运行脚本任务时运行库所调用的方法。  
   
-     默认情况下，新脚本的 `Main` 子例程中只有一行代码：`Dts.TaskResult = ScriptResults.Success`。 此代码行通知运行库任务运行成功。 `Dts.TaskResult`中讨论属性[从脚本任务返回结果](../../extending-packages-scripting/task/returning-results-from-the-script-task.md)。  
+     默认情况下，新脚本的 `Main` 子例程中只有一行代码：`Dts.TaskResult = ScriptResults.Success`。 此代码行通知运行库任务运行成功。 `Dts.TaskResult` [从脚本任务返回结果](../../extending-packages-scripting/task/returning-results-from-the-script-task.md)中对属性进行了讨论。  
   
 -   如果脚本任务配置为 Visual C# 编程语言，则 `ScriptMain` 类有一个公共方法：`Main`。 此方法在脚本任务运行时调用。  
   
      默认情况下，`Main` 方法包含一行代码：`Dts.TaskResult = (int)ScriptResults.Success`。 此代码行通知运行库任务运行成功。  
   
- `ScriptMain` 项可包含 `ScriptMain` 类之外的类。 这些类仅在它们所在的脚本任务中可用。  
+ 
+  `ScriptMain` 项可包含 `ScriptMain` 类之外的类。 这些类仅在它们所在的脚本任务中可用。  
   
  默认情况下，`ScriptMain` 项目项包含以下自动生成的代码。 该代码模板还提供脚本任务的概览以及有关如何检索和操作 SSIS 对象（如变量、事件和连接）的其他信息。  
   
@@ -200,17 +203,17 @@ To open Help, press F1.
  脚本任务项目可包含默认的 `ScriptMain` 项以外的项。 您可以向项目添加类、模块和代码。 您还可以使用文件夹来组织项组。 您添加的所有项在包中都将持久化。  
   
 ### <a name="references-in-the-script-task-project"></a>脚本任务项目中的引用  
- 在“项目资源管理器”中右键单击脚本任务项目，然后单击“添加引用”，可以添加对托管程序集的引用   。 有关详细信息，请参阅[引用脚本解决方案中的其他程序集](../referencing-other-assemblies-in-scripting-solutions.md)。  
+ 在“项目资源管理器”中右键单击脚本任务项目，然后单击“添加引用”，可以添加对托管程序集的引用********。 有关详细信息，请参阅[引用脚本解决方案中的其他程序集](../referencing-other-assemblies-in-scripting-solutions.md)。  
   
 > [!NOTE]  
->  可以在“类视图”或“项目资源管理器”中查看 VSTA IDE 中的项目引用   。 这些窗口都可以从“视图”菜单中打开  。 可以从“项目”菜单、“项目资源管理器”或“类视图”添加新引用    。  
+>  可以在“类视图”或“项目资源管理器”中查看 VSTA IDE 中的项目引用********。 这些窗口都可以从“视图”菜单中打开****。 可以从“项目”菜单、“项目资源管理器”或“类视图”添加新引用************。  
   
 ## <a name="interacting-with-the-package-in-the-script-task"></a>在脚本任务中与包进行交互  
  脚本任务使用全局 `Dts` 对象（<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> 类的一个实例）及其成员与包含包和 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 运行库进行交互。  
   
  下表列出了 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> 类的主要公共成员，该类通过全局 `Dts` 对象向脚本任务代码公开。 本节中的主题详细讨论这些成员的使用。  
   
-|成员|用途|  
+|成员|目的|  
 |------------|-------------|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A>|提供对包中定义的连接管理器的访问。|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A>|提供事件接口，使脚本任务能够引发错误、警告和信息性消息。|  
@@ -220,9 +223,10 @@ To open Help, press F1.
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Transaction%2A>|提供任务的容器运行于的事务（如果有）。|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>|提供对 `ReadOnlyVariables` 和 `ReadWriteVariables` 任务属性中列出的、在脚本中使用的变量的访问。|  
   
- <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> 类还包含一些您可能不会使用的公共成员。  
+ 
+  <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> 类还包含一些您可能不会使用的公共成员。  
   
-|成员|Description|  
+|成员|说明|  
 |------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.VariableDispenser%2A>|使用 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 属性可更加方便地访问变量。 虽然您可以使用 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.VariableDispenser%2A>，但您必须为读和写显式调用锁定和解锁变量的方法。 使用 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 属性时，脚本任务会为您处理锁定语义。|  
   
@@ -245,9 +249,9 @@ To open Help, press F1.
   
 -   blogs.msdn.com 上的博客文章：[VSTA setup and configuration troubles for SSIS 2008 and R2 installations（针对 SSIS 2008 和 R2 安装的 VSTA 安装和配置难题）](https://go.microsoft.com/fwlink/?LinkId=215661)。  
   
-![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![Integration Services 图标（小）](../../media/dts-16.gif "集成服务图标（小）")**保持与 Integration Services 最**新  <br /> 若要从 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [引用脚本解决方案中的其他程序集](../referencing-other-assemblies-in-scripting-solutions.md)   
  [在脚本任务编辑器中配置脚本任务](configuring-the-script-task-in-the-script-task-editor.md)  
   

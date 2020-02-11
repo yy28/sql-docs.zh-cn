@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 69877c6a20e37e012925185d0b807e9579066e35
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754388"
 ---
 # <a name="service-accounts-configure-database-mirroring-security-wizard"></a>服务帐户（配置数据库镜像安全向导）
   使用 Windows 身份验证时，如果服务器实例使用若干个不同的帐户，请为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定服务帐户。 这些服务帐户必须都是域帐户（在相同域或可信域中）。  
   
- 如果所有服务器实例都使用同一域帐户或使用基于证书的身份验证，则请将这些字段留空。 只需单击 **“完成”** ，向导将根据当前向导的帐户自动配置帐户。  
+ 如果所有服务器实例都使用同一域帐户或使用基于证书的身份验证，则请将这些字段留空。 只需单击 **“完成”**，向导将根据当前向导的帐户自动配置帐户。  
   
 > [!IMPORTANT]  
 >  如果将服务器实例的数据库镜像端点配置为使用证书，您必须将服务帐户字段保留为空。  
@@ -34,25 +34,25 @@ ms.locfileid: "62754388"
 -   [启动配置数据库镜像安全向导 (SQL Server Management Studio)](start-the-configuring-database-mirroring-security-wizard.md)  
   
 ## <a name="options"></a>选项  
- **主体**  
+ **作主**  
  指定主体服务器实例的服务帐户。 以大写形式输入域名：  
   
- *DOMAINNAME*\\*username*  
+ *DOMAINNAME*\\*用户名*  
   
- **镜像**  
+ **制作**  
  指定镜像服务器实例的服务帐户。 以大写形式输入域名：  
   
- *DOMAINNAME*\\*username*  
+ *DOMAINNAME*\\*用户名*  
   
  **Witness**  
  指定见证服务器实例的服务帐户。 以大写形式输入域名：  
   
- *DOMAINNAME*\\*username*  
+ *DOMAINNAME*\\*用户名*  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库属性（“镜像”页）](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [启动数据库镜像监视器 (SQL Server Management Studio)](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [数据库镜像 (SQL Server)](database-mirroring-sql-server.md)   
- [设置登录帐户对数据库镜像或 AlwaysOn 可用性组&#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)  
+ [设置用于数据库镜像或 AlwaysOn 可用性组 &#40;SQL Server 的登录帐户&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)  
   
   

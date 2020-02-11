@@ -13,23 +13,25 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 15a9ea69771699cf2b845d8018dfad1d1af511d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014081"
 ---
 # <a name="polygon"></a>Polygon
-  一个`Polygon`是存储为一系列点定义一个外部边界环和零个或多个内部环的二维表面。  
+  `Polygon`是存储为一系列点的二维表面，这些点定义一个外部边界环和零个或多个内部环。  
   
 ## <a name="polygon-instances"></a>Polygon 实例  
- 可以从至少具有三个不同点的环中构建一个 `Polygon` 实例。 `Polygon` 实例也可以为空。  
+ 可以从至少具有三个不同点的环中构建一个 `Polygon` 实例。 
+  `Polygon` 实例也可以为空。  
   
- `Polygon` 的外部环和任意内部环定义了其边界。 环内部的空间定义了 `Polygon` 的内部。  
+ 
+  `Polygon` 的外部环和任意内部环定义了其边界。 环内部的空间定义了 `Polygon` 的内部。  
   
  下图显示了 `Polygon` 实例的示例。  
   
- ![几何 Polygon 实例的示例](../../database-engine/media/polygon.gif "几何 Polygon 实例的示例")  
+ ![几何多边形实例的示例](../../database-engine/media/polygon.gif "几何 Polygon 实例的示例")  
   
  如图中所示：  
   
@@ -48,11 +50,14 @@ ms.locfileid: "66014081"
   
  要使环可接受，需要满足以下条件。  
   
--   `LineString` 实例必须是已接受的实例。  
+-   
+  `LineString` 实例必须是已接受的实例。  
   
--   `LineString` 实例至少必须有四个点。  
+-   
+  `LineString` 实例至少必须有四个点。  
   
--   `LineString` 实例的起始点和结束点必须相同。  
+-   
+  `LineString` 实例的起始点和结束点必须相同。  
   
  下面的示例显示接受的 `Polygon` 实例。  
   
@@ -64,7 +69,9 @@ DECLARE @g4 geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(3 0, 6 0, 6 3, 
 DECLARE @g5 geometry = 'POLYGON((1 1, 1 1, 1 1, 1 1))';  
 ```  
   
- `@g4` 和 `@g5` 显示接受的 `Polygon` 实例可能不是有效的 `Polygon` 实例。 `@g5` 还显示 Polygon 实例只需包含一个具有任意四个点的环便可以被接受。  
+ 
+  `@g4` 和 `@g5` 显示接受的 `Polygon` 实例可能不是有效的 `Polygon` 实例。 
+  `@g5` 还显示 Polygon 实例只需包含一个具有任意四个点的环便可以被接受。  
   
  下面的示例引发 `System.FormatException`，因为 `Polygon` 实例未被接受。  
   
@@ -73,14 +80,17 @@ DECLARE @g1 geometry = 'POLYGON((1 1, 3 3, 1 1))';
 DECLARE @g2 geometry = 'POLYGON((1 1, 3 3, 3 1, 1 5))';  
 ```  
   
- `@g1` 未被接受，因为外部环的 `LineString` 实例不包含足够的点。 `@g2` 未被接受，因为外部环 `LineString` 实例的起始点与结束点不同。 下面的示例有一个可接受的外部环，但内部环不可接受。 这也会引发 `System.FormatException`。  
+ 
+  `@g1` 未被接受，因为外部环的 `LineString` 实例不包含足够的点。 
+  `@g2` 未被接受，因为外部环 `LineString` 实例的起始点与结束点不同。 下面的示例有一个可接受的外部环，但内部环不可接受。 这也会引发 `System.FormatException`。  
   
 ```  
 DECLARE @g geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(0 0, 3 0, 0 0))';  
 ```  
   
 ### <a name="valid-instances"></a>有效实例  
- `Polygon` 的内部环在单个切点处既可与自身接触也可彼此接触，但如果 `Polygon` 的内部环交叉，则该实例无效。  
+ 
+  `Polygon` 的内部环在单个切点处既可与自身接触也可彼此接触，但如果 `Polygon` 的内部环交叉，则该实例无效。  
   
  下面的示例显示有效的 `Polygon` 实例。  
   
@@ -91,7 +101,7 @@ DECLARE @g3 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20), (10 0
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g3` 有效，因为两个内部环在一个点相切并且没有相互交叉。 下面的示例显示无效的 `Polygon` 实例。  
+ `@g3`有效，因为两个内部环在单个点上接触，不彼此相交。 下面的示例显示无效的 `Polygon` 实例。  
   
 ```  
 DECLARE @g1 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20), (20 0, 0 10, 0 -20, 20 0))';  
@@ -103,7 +113,9 @@ DECLARE @g6 geometry = 'POLYGON((1 1, 1 1, 1 1, 1 1))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid(), @g5.STIsValid(), @g6.STIsValid();  
 ```  
   
- `@g1` 无效，因为内部环在两个位置接触外部环。 `@g2` 无效，因为第二个内部环位于第一个内部环的内部。 `@g3` 无效，因为两个内部环在多个连续点接触。 `@g4` 无效，因为两个内部环的内部重叠。 `@g5` 无效，因为外部环不是第一个环形。 `@g6` 无效，因为环未至少具有三个不同的点。  
+ `@g1`无效，因为内部环在两个位置接触外部环。 
+  `@g2` 无效，因为第二个内部环位于第一个内部环的内部。 `@g3`无效，因为两个内部环在多个连续点接触。 
+  `@g4` 无效，因为两个内部环的内部重叠。 `@g5`无效，因为外部环不是第一环。 `@g6`无效，因为环没有至少三个不同的点。  
   
 ## <a name="examples"></a>示例  
  下面的示例创建了一个带有孔和 SRID 为 10 的简单 `geometry``Polygon` 实例。  
@@ -144,11 +156,11 @@ SELECT @g.ToString()
   
  上面返回的几何图形实例是 `Point(1 3)`。  如果给出的 `Polygon` 是 `POLYGON((1 3, 1 5, 1 3, 1 3))` ，则 `MakeValid()` 将返回 `LINESTRING(1 3, 1 5)`。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [STArea（geometry 数据类型）](/sql/t-sql/spatial-geometry/starea-geometry-data-type)   
- [STExteriorRing（geometry 数据类型）](/sql/t-sql/spatial-geometry/stexteriorring-geometry-data-type)   
- [STNumInteriorRing（geometry 数据类型）](/sql/t-sql/spatial-geometry/stnuminteriorring-geometry-data-type)   
- [STInteriorRingN（geometry 数据类型）](/sql/t-sql/spatial-geometry/stinteriorringn-geometry-data-type)   
+ [STExteriorRing &#40;geometry 数据类型&#41;](/sql/t-sql/spatial-geometry/stexteriorring-geometry-data-type)   
+ [STNumInteriorRing &#40;geometry 数据类型&#41;](/sql/t-sql/spatial-geometry/stnuminteriorring-geometry-data-type)   
+ [STInteriorRingN &#40;geometry 数据类型&#41;](/sql/t-sql/spatial-geometry/stinteriorringn-geometry-data-type)   
  [STCentroid（geometry 数据类型）](/sql/t-sql/spatial-geometry/stcentroid-geometry-data-type)   
  [STPointOnSurface（geometry 数据类型）](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type)   
  [MultiPolygon](../spatial/polygon.md)   

@@ -1,5 +1,5 @@
 ---
-title: sp_dropremotelogin (TRANSACT-SQL) |Microsoft Docs
+title: sp_dropremotelogin （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,22 +18,22 @@ ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
 author: VanMSFT
 ms.openlocfilehash: c316f48f3e590fcba419e125f8e327b25ee1ede6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933825"
 ---
-# <a name="spdropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
+# <a name="sp_dropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   删除映射到本地登录名的远程登录名，该登录名用于针对运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地服务器执行远程存储过程。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] 请改用链接的服务器和链接服务器存储的过程。  
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]请改用链接服务器和链接服务器存储过程。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,26 +44,27 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @remoteserver = ] 'remoteserver'` 是映射到要从中删除远程登录名的远程服务器的名称。 *remoteserver*是**sysname**，无默认值。 *remoteserver*必须已经存在。  
+`[ @remoteserver = ] 'remoteserver'`远程服务器的名称，该远程服务器映射到要删除的远程登录名。 *remoteserver*的值为**sysname**，无默认值。 *remoteserver*必须已存在。  
   
-`[ @loginame = ] 'login'` 是与远程服务器相关联的本地服务器上的可选登录名。 login 的数据类型为 sysname，默认值为 NULL   。 *登录名*必须已经存在，如果指定。  
+`[ @loginame = ] 'login'`与远程服务器相关联的本地服务器上的可选登录名。 *login*的值为**sysname**，默认值为 NULL。 如果指定，则必须已经存在*登录名*。  
   
-`[ @remotename = ] 'remote_name'` 是映射到的远程登录名的可选名称*登录名*时从远程服务器登录。 *remote_name*是**sysname**，默认值为 NULL。  
+`[ @remotename = ] 'remote_name'`在从远程服务器登录时映射到*登录名*的远程登录名的可选名称。 *remote_name*的默认值为**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="remarks"></a>备注  
- 如果只有*remoteserver*指定，则从本地服务器中删除该远程服务器的所有远程登录。 如果*登录名*也是从指定的所有远程登录名*remoteserver*从本地服务器中删除映射到该特定本地登录名。 如果*remote_name*同时指定，则仅从该远程用户的远程登录名*remoteserver*从本地服务器中删除。  
+ 如果仅指定了*remoteserver* ，则将从本地服务器中删除该远程服务器的所有远程登录名。 如果还指定了*login* ，则从本地服务器中删除映射到该特定本地登录名的*remoteserver*中的所有远程登录名。 如果同时指定了*remote_name* ，则将仅从本地*服务器中删除*该远程用户的远程登录名。  
   
  若要添加本地服务器用户，请使用**sp_addlogin**。 若要删除本地服务器用户，请使用**sp_droplogin**。  
   
- 仅当使用早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时才需要远程登录。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 及更高版本改用链接服务器登录。 使用**sp_addlinkedsrvlogin**并**sp_droplinkedsrvlogin**添加和删除链接的服务器登录名。  
+ 仅当使用早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时才需要远程登录。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 及更高版本改用链接服务器登录。 使用**sp_addlinkedsrvlogin**和**sp_droplinkedsrvlogin**添加和删除链接服务器登录名。  
   
- **sp_dropremotelogin**不能在用户定义的事务内执行。  
+ 不能在用户定义的事务中执行**sp_dropremotelogin** 。  
   
 ## <a name="permissions"></a>权限  
- 要求的成员身份**sysadmin**或**securityadmin**固定服务器角色的成员。  
+ 要求具有**sysadmin**或**securityadmin**固定服务器角色的成员身份。  
   
 ## <a name="examples"></a>示例  
   
@@ -88,15 +89,15 @@ EXEC sp_dropremotelogin 'ACCOUNTS', 'Albert';
 EXEC sp_dropremotelogin 'ACCOUNTS', 'salesmgr', 'Chris';  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
- [sp_addlogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
- [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
- [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
- [sp_droplinkedsrvlogin &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
- [sp_droplogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
- [sp_helpremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [安全存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [sp_addlinkedsrvlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+ [sp_addlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
+ [sp_addremotelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
+ [sp_addserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
+ [sp_droplinkedsrvlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
+ [sp_droplogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
+ [sp_helpremotelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -16,10 +16,10 @@ ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 700878062dc302296dd827fb5e7db9b52c4286f3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73727793"
 ---
 # <a name="versions-master-data-services"></a>版本 (Master Data Services)
@@ -61,34 +61,35 @@ ms.locfileid: "73727793"
 ## <a name="sequential-or-simultaneous-versions"></a>顺序版本或同时版本  
  可以创建模型的顺序版本或同时版本。  
   
--   **顺序版本：** 每次提交版本时，可以创建新的副本并为版本提供下一个序列号。 例如，可以复制 **“版本 7”** 的模型，并将副本命名为 **“版本 8”** 。  
+-   **顺序版本：** 每次提交版本时，可以创建新的副本并为版本提供下一个序列号。 例如，可以复制 **“版本 7”** 的模型，并将副本命名为 **“版本 8”**。  
   
 -   **同时版本：** 要同时使用数据的两个或多个版本时，可以创建模型的同时版本。 如果您的公司存在与正常业务流程相符的重组或合并行为，并且您要确定如何使新的主数据适应现有结构，同时版本将非常有用。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中的设置确定是复制所有版本还是仅复制那些已提交的版本。 若要创建同时版本，必须配置 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 以允许您复制所有版本。 此设置在“系统设置”表中也提供。 有关详细信息，请参阅[系统设置 (Master Data Services)](../master-data-services/system-settings-master-data-services.md)。  
+    >  
+  [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中的设置确定是复制所有版本还是仅复制那些已提交的版本。 若要创建同时版本，必须配置 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 以允许您复制所有版本。 此设置在“系统设置”表中也提供。 有关详细信息，请参阅[系统设置 (Master Data Services)](../master-data-services/system-settings-master-data-services.md)。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|更改现有版本的名称。|[更改版本名称 (Master Data Services)](../master-data-services/change-a-version-name-master-data-services.md)|  
-|锁定版本，以便只有管理员才能编辑其数据。|[锁定版本 (Master Data Services)](../master-data-services/lock-a-version-master-data-services.md)|  
-|取消锁定版本，以便用户可以编辑其数据。|[取消锁定版本 (Master Data Services)](../master-data-services/unlock-a-version-master-data-services.md)|  
-|验证所有数据后，提交版本。|[提交版本 (Master Data Services)](../master-data-services/commit-a-version-master-data-services.md)|  
-|创建新的标志来标记版本。|[创建版本标志 (Master Data Services)](../master-data-services/create-a-version-flag-master-data-services.md)|  
-|更改现有版本标志的名称。|[更改版本标志名称 (Master Data Services)](../master-data-services/change-a-version-flag-name-master-data-services.md)|  
-|将现有标志分配给版本。|[向版本分配标志 (Master Data Services)](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
-|创建现有版本的新副本|[复制版本 (Master Data Services)](../master-data-services/copy-a-version-master-data-services.md)|  
-|删除现有版本。|[删除版本 (Master Data Services)](../master-data-services/delete-a-version-master-data-services.md)|  
-|从版本中清除软删除的成员|[清除版本成员 (Master Data Services)](../master-data-services/purge-version-members-master-data-services.md)|  
+|更改现有版本的名称。|[更改版本名称 &#40;Master Data Services&#41;](../master-data-services/change-a-version-name-master-data-services.md)|  
+|锁定版本，以便只有管理员才能编辑其数据。|[锁定版本 &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)|  
+|取消锁定版本，以便用户可以编辑其数据。|[Master Data Services &#40;解锁版本&#41;](../master-data-services/unlock-a-version-master-data-services.md)|  
+|验证所有数据后，提交版本。|[提交 Master Data Services 版本 &#40;&#41;](../master-data-services/commit-a-version-master-data-services.md)|  
+|创建新的标志来标记版本。|[&#40;Master Data Services 创建版本标志&#41;](../master-data-services/create-a-version-flag-master-data-services.md)|  
+|更改现有版本标志的名称。|[更改版本标志名称 &#40;Master Data Services&#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)|  
+|将现有标志分配给版本。|[将标志分配给版本 &#40;Master Data Services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
+|创建现有版本的新副本|[复制 &#40;Master Data Services 版本&#41;](../master-data-services/copy-a-version-master-data-services.md)|  
+|删除现有版本。|[删除 &#40;Master Data Services 版本&#41;](../master-data-services/delete-a-version-master-data-services.md)|  
+|从版本中清除软删除的成员|[清除版本成员 &#40;Master Data Services&#41;](../master-data-services/purge-version-members-master-data-services.md)|  
   
 ## <a name="related-content"></a>相关内容  
   
--   [撤消事务 (Master Data Services)](../master-data-services/reverse-a-transaction-master-data-services.md)  
+-   [撤消事务 &#40;Master Data Services&#41;](../master-data-services/reverse-a-transaction-master-data-services.md)  
   
--   [通知 (Master Data Services)](../master-data-services/notifications-master-data-services.md)  
+-   [通知 &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  
   
--   [业务规则 (Master Data Services)](../master-data-services/business-rules-master-data-services.md)  
+-   [业务规则 &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
   

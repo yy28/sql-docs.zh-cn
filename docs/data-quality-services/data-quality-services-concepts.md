@@ -10,10 +10,10 @@ ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: a9f1ab0eaca67eb1e5266f11381f316607031635
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251714"
 ---
 # <a name="data-quality-services-concepts"></a>Data Quality Services 概念
@@ -46,7 +46,7 @@ ms.locfileid: "75251714"
 ##  <a name="Projects"></a>数据质量项目概念  
  数据专员在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序中使用数据质量项目来执行数据质量操作（清理和匹配）。  
   
- **数据清理**  
+ **Data Cleansing**  
   
  DQS 中的数据清理需要根据 DQS 知识库中的知识来执行。 DQS 中的数据清理是一个两步过程：  
   
@@ -73,7 +73,7 @@ ms.locfileid: "75251714"
   
  活动监视可显示在数据范围内执行的每个活动的状态，提供每个活动的数据，并使 DQS 管理员能够控制活动。 有关详细信息，请参阅 [Monitor DQS Activities](../data-quality-services/monitor-dqs-activities.md)。  
   
- **Configuration**  
+ **配置**  
   
  配置选项支持您：  
   
@@ -92,6 +92,6 @@ ms.locfileid: "75251714"
  有关 DQS 管理的详细信息，请参阅 [DQS Administration](../data-quality-services/dqs-administration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [Data Quality Services](../data-quality-services/data-quality-services.md)  
+ [“数据库引擎服务”](../data-quality-services/data-quality-services.md)  
   
   

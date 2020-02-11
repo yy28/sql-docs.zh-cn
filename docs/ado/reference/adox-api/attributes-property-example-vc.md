@@ -1,5 +1,5 @@
 ---
-title: Attributes 属性示例 （VC + +） |Microsoft Docs
+title: Attributes 属性示例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1057b57b-5ace-4830-9a20-562e88aeef86
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1a234817f40809185c3c4cdb8fbcd2d10e5833db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 794fcee913b41d98c0703244df86eb90efe3f740
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967090"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76918823"
 ---
 # <a name="attributes-property-example-vc"></a>Attributes 属性示例 (VC++)
-此示例演示[特性](../../../ado/reference/adox-api/attributes-property-adox.md)的属性[列](../../../ado/reference/adox-api/column-object-adox.md)。 将其设置为**adColNullable**允许用户设置的值[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)[字段](../../../ado/reference/ado-api/field-object.md)为空字符串。 在此情况下，用户可以区分无法知道数据的记录和记录数据中不适用。  
+此示例演示[列](../../../ado/reference/adox-api/column-object-adox.md)的 "[特性](../../../ado/reference/adox-api/attributes-property-adox.md)" 属性。 如果将其设置为**adColNullable** ，则允许用户将[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)[字段](../../../ado/reference/ado-api/field-object.md)的值设置为空字符串。 在这种情况下，用户可以区分数据未知的记录和不应用数据的记录。  
   
 ```  
 // Attributes_Property_Sample.cpp  
@@ -179,7 +179,7 @@ int main() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in AttributesX...." << endl;  
+      cout << "Error occurred in AttributesX...." << endl;  
    }  
   
    if (m_pRstEmployees)  
@@ -202,6 +202,6 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [Attributes 属性 (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)   
+## <a name="see-also"></a>另请参阅  
+ [Attributes 属性（ADOX）](../../../ado/reference/adox-api/attributes-property-adox.md)   
  [列对象 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)

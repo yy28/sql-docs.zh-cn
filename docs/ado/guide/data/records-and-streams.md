@@ -15,52 +15,52 @@ ms.assetid: 4d68868e-2611-4b5c-9a89-7caa5f753151
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4636df1451ba946b9a7bfb62e3d6775c35b1d6f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924499"
 ---
 # <a name="records-and-streams"></a>记录和流
-当前提供的 ADO[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象作为访问数据源，如关系数据库中的信息的主要方式。 但是，某些访问接口支持[记录](../../../ado/reference/ado-api/record-object-ado.md)并[Stream](../../../ado/reference/ado-api/stream-object-ado.md)作为替代或补充对象可以与操作提供程序的数据的对象。 有关详细信息**记录**行为，请参阅提供程序的文档。  
+ADO 目前提供[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)对象作为访问数据源中的信息（例如关系数据库）的主要方式。 但是，某些提供程序支持[记录](../../../ado/reference/ado-api/record-object-ado.md)和[流](../../../ado/reference/ado-api/stream-object-ado.md)对象作为替代对象或补充对象，这些对象可用于处理提供程序的数据。 有关**记录**行为的详细信息，请参阅提供程序的文档。  
   
 ## <a name="records"></a>记录  
- **记录**对象实质上是函数为一行**记录集**s。 但是，**记录**具有有限的功能相比**记录集**并且它们具有不同的属性和方法。中的数据源**记录**对象可以是从提供程序返回一个数据行的命令。 使用**记录**对象而非**记录集**对象返回一个数据行的查询从接收结果消除了实例化变得更加复杂的开销**记录集**对象。  
+ **记录**对象实质上是一个行**记录集**。 但是，与记录**集**相比，**记录**的功能有限，它们具有不同的属性和方法。**记录**对象中数据的源可以是一个命令，该命令从提供程序返回一行数据。 使用**记录**对象（而不是**记录集**对象）接收来自返回一行数据的查询的结果，从而消除了实例化更复杂的**Recordset**对象的开销。  
   
- **记录**对象可以用于尤其是对于传统的关系数据库以外的数据源的提供程序的其他用途，如[Microsoft OLE DB 访问接口用于 Internet 发布](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)。 许多必须处理的信息，不作为表在数据库中，而是作为消息中存在电子邮件系统和文件流行文件系统中。 **记录**并**Stream**对象简化访问存储在关系数据库以外的源中的信息。  
+ **记录**对象可用于其他目的，尤其是对于传统关系数据库之外的数据源的提供程序，例如[用于 Internet 发布的 Microsoft OLE DB 提供程序](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)。 必须处理的大多数信息都存在，而不是数据库中的表，而是在电子邮件系统中的消息和新式文件系统中的文件。 **记录**和**流**对象有助于访问存储在关系数据库以外的源中的信息。  
   
- **记录**对象可以表示和管理文件系统或文件夹和消息中的电子邮件系统中的数据，例如目录和文件。 出于这些目的的源**记录**可以是一种开放的当前行**记录集**，绝对 URL 或打开与结合使用的相对 URL[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。  
+ **Record**对象可以表示和管理数据，如文件系统中的目录和文件、电子邮件系统中的文件夹和邮件。 出于这些目的，**记录**源可以是打开的**记录集**的当前行、绝对 url 或与打开的[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象关联的相对 url。  
   
- 通常情况下，**记录集**可以用于表示容器或父文件夹或目录等的层次结构中。 一个**记录**可以用于在父容器，如文件或文档中返回一个节点有关的特定信息。 主要原因**记录**用于表示此类型的信息是异类数据的这些源。 这意味着，每个**记录**可能有不同的一组和字段数。 传统**记录集**包含行从数据库是同构的这意味着每一行都具有相同数量和类型的字段。  
+ 通常，**记录集**可用于表示层次结构（如文件夹或目录）中的容器或父项。 **记录**可用于返回父容器中的一个节点（如文件或文档）的特定信息。 主要原因**记录**用于表示此类信息，这是因为这些数据源是异类数据源。 这意味着每个**记录**可能具有不同的字段集和数量。 包含来自数据库的行的传统**记录集**是同源的，这意味着每一行都具有相同的字段数量和类型。  
   
- 有关使用详细信息**记录**对象来处理此提供程序，如 Internet 发布提供程序中的异构数据，请参阅[用于 Internet 发布使用 ADO](../../../ado/guide/data/using-ado-for-internet-publishing.md)。  
+ 有关使用**Record**对象处理来自 Internet 发布提供程序等提供程序的异类数据的详细信息，请参阅[使用 ADO 进行 internet 发布](../../../ado/guide/data/using-ado-for-internet-publishing.md)。  
   
 ## <a name="streams"></a>流  
- **Stream**对象提供了读取、 写入和管理的字节流的方法。 此字节流可以是文本或二进制文件，并仅受系统资源限制的大小。 通常情况下，ADO **Stream**对象用于以下目的：  
+ **Stream**对象提供读取、写入和管理字节流的方法。 此字节流可以是文本或二进制，并且仅限于系统资源。 通常，ADO**流**对象用于以下目的：  
   
--   若要包含的数据**记录集**以 XML 格式保存。 从这些 XML 流保存**记录集**s 可以用作源，打开一个新时**记录集**。 有关详细信息，请参阅[流和暂留](../../../ado/guide/data/streams-and-persistence.md)。  
+-   包含以 XML 格式保存的**记录集**的数据。 打开新**记录集**时，可以将来自保存的**记录集**的这些 XML 流用作源。 有关详细信息，请参阅[流和暂留](../../../ado/guide/data/streams-and-persistence.md)。  
   
--   若要包含[CommandStreams](../../../ado/reference/ado-api/commandstream-property-ado.md)要作为一种替代方法在提供程序上执行[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)。 例如，XML Updategram 可以用作源对 Microsoft OLE DB 访问接口命令适用于 SQL Server。  
+-   包含要对提供程序执行的[CommandStreams](../../../ado/reference/ado-api/commandstream-property-ado.md)作为[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)的替代项。 例如，XML Updategram 可用作针对 SQL Server 的 Microsoft OLE DB 提供程序的命令源。  
   
--   若要从一种格式中的提供程序而不接收结果**记录集**，例如 Microsoft OLE DB Provider for SQL Server 返回 XML 结果。 有关详细信息，请参阅[检索结果集流到](../../../ado/guide/data/retrieving-resultsets-into-streams.md)。  
+-   表示从不是**记录集**的格式接收来自提供程序的结果，如 Microsoft OLE DB provider for SQL SERVER 的 XML 结果。 有关详细信息，请参阅[检索流中的结果](../../../ado/guide/data/retrieving-resultsets-into-streams.md)集。  
   
--   若要包含的文本或包含的文件或消息，通常用于如 Microsoft OLE DB 访问接口的提供程序，用于 Internet 发布的字节数。 详细了解的这种用法**Stream**对象，请参阅[用于 Internet 发布使用 ADO](../../../ado/guide/data/using-ado-for-internet-publishing.md)。  
+-   若要包含包含文件或消息的文本或字节，通常与提供程序（例如用于 Internet 发布的 Microsoft OLE DB 提供程序）一起使用。 有关**流**对象使用情况的详细信息，请参阅[使用 ADO 进行 Internet 发布](../../../ado/guide/data/using-ado-for-internet-publishing.md)。  
   
- 一个**Stream**上可以打开对象：  
+ **流**对象可以在上打开：  
   
--   使用 URL 指定一个简单的文件。  
+-   使用 URL 指定的简单文件。  
   
--   一个字段**记录**或**记录集**包含**Stream**对象。  
+-   包含**流**对象的**记录**或**记录集**的字段。  
   
--   默认流**记录**或**记录集**对象，表示目录或复合文件。  
+-   表示目录或复合文件的**记录**或**记录集**对象的默认流。  
   
--   资源字段包含一个简单的文件的 URL。  
+-   包含简单文件的 URL 的资源字段。  
   
--   根本没有特定数据源。 在这种情况下， **Stream**在内存中打开对象。 可以向其中写入数据和则保存在另一个**Stream**或文件。  
+-   根本没有特定的源。 在这种情况下，将在内存中打开一个**流**对象。 可以向其中写入数据，然后将其保存在另一个**流**或文件中。  
   
--   中的 BLOB 字段**记录集**。  
+-   **记录集中**的 BLOB 字段。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [流和暂留](../../../ado/guide/data/streams-and-persistence.md)  
   

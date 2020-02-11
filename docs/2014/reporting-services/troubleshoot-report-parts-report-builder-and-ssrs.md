@@ -1,5 +1,5 @@
 ---
-title: 报表部件 （报表生成器和 SSRS） 故障排除 |Microsoft Docs
+title: 报表部件故障排除（报表生成器和 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: df37de909461ace62edbbf3cfe9e7b9dd8448b56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099393"
 ---
 # <a name="troubleshoot-report-parts-report-builder-and-ssrs"></a>报表部件故障排除（报表生成器和 SSRS）
@@ -25,8 +25,8 @@ ms.locfileid: "66099393"
   
  若要查看您和您的同事拥有哪些权限，请咨询报表服务器管理员。  
   
-## <a name="when-i-search-for-report-parts-that-i-uploaded-to-a-sharepoint-server-i-do-not-see-them-why-not"></a>在我搜索已上载到 SharePoint 服务器的报表部件时，我看不到它们。 为什么看不到？  
- 如果报表部件是您手动上载到 SharePoint 文档库中的，而非通过使用报表生成器发布的，则这些报表部件在报表部件库中可能不出现。 用于库搜索的报表服务器可能需要与 SharePoint 文档库的内容保持同步。 有关详细信息，请参阅[激活报表服务器文件同步功能在 SharePoint 管理中心内](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][联机丛书](https://go.microsoft.com/fwlink/?LinkId=154888)msdn.microsoft.com 上。  
+## <a name="when-i-search-for-report-parts-that-i-uploaded-to-a-sharepoint-server-i-do-not-see-them-why-not"></a>在我搜索已上载到 SharePoint 服务器的报表部件时，我看不到它们。 为什么？  
+ 如果报表部件是您手动上载到 SharePoint 文档库中的，而非通过使用报表生成器发布的，则这些报表部件在报表部件库中可能不出现。 用于库搜索的报表服务器可能需要与 SharePoint 文档库的内容保持同步。 有关详细信息，请参阅 msdn.microsoft.com 上[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [联机丛书](https://go.microsoft.com/fwlink/?LinkId=154888)中[的在 SharePoint 管理中心中激活报表服务器文件同步功能](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)。  
   
 ## <a name="why-cant-others-see-the-image-in-their-reports"></a>为何其他人在其报表中看不到图像？  
  如果您发布的报表部件是指向某一图像文件的链接，则该报表部件实际上只是链接。 如果其他人在将图像报表部件添加到其报表后看不到图像，则他们可能对您链接到的图像不具备权限。  
@@ -42,7 +42,7 @@ ms.locfileid: "66099393"
 ## <a name="why-do-i-get-a-circular-reference-error-message-when-i-try-to-publish-my-report-part"></a>在我尝试发布我的报表部件时，为什么系统显示“循环引用”错误消息？  
  如果报表项具有循环引用，则您无法将其作为报表部件发布。 例如，某一报表项指向一个数据集，而该数据集又指向一个参数。 而该参数又指向该数据集。 您将需要首先删除其中一个引用，然后才能发布该报表部件。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [报表部件（报表生成器和 SSRS）](report-parts-report-builder-and-ssrs.md)  
   
   

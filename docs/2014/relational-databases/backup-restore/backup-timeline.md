@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 92cffa7c280aac559433a8fc7ad5a3223c9f6de2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876699"
 ---
 # <a name="backup-timeline"></a>备份时间线
@@ -32,10 +32,10 @@ ms.locfileid: "62876699"
   
  **“特定日期和时间”** 允许您停止在所选的特定日期和时间上的还原。 时间线展现了围绕所选日期和时间的 24 小时中执行的备份操作。  
   
- **日期**  
+ **Date**  
  输入一个日期或者从下拉列表中选择一个日期。  
   
- **Time**  
+ **时间**  
  输入或选择一个日期以便为还原停止指定特定的时间点。  
   
  **时间线间隔**  
@@ -56,7 +56,7 @@ ms.locfileid: "62876699"
  红线  
  只能沿着可能执行还原的时间线定位。 沿时间线移动红线将调整在 **“日期”** 和 **“时间”** 框中显示的日期和时间。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [还原数据库（“常规”页）](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
   

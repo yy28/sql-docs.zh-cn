@@ -1,5 +1,5 @@
 ---
-title: 全文和语义搜索动态管理视图的函数 |Microsoft Docs
+title: 全文搜索和语义搜索动态管理视图-函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ ms.assetid: 199dbd5a-29f6-4ef0-8e65-86e32c0aaa3a
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: ff24122c1a551d6da1ce4ad1ddbb7771e2183c70
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68130772"
 ---
-# <a name="full-text-and-semantic-search-dynamic-management-views---functions"></a>全文和语义搜索动态管理视图的函数
+# <a name="full-text-and-semantic-search-dynamic-management-views---functions"></a>全文搜索和语义搜索动态管理视图-函数
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   本节包含以下与全文搜索和语义搜索相关的动态管理视图和函数。  
@@ -43,7 +43,7 @@ ms.locfileid: "68130772"
  在给定表的全文索引中返回与属性相关的所有内容。 其中包括属于与全文索引关联的搜索属性列表注册的任何属性的所有数据。  
   
  sys.dm_fts_index_keywords_position_by_document  
- 在文档中返回关键字的位置。  
+ 返回文档中关键字的位置。  
   
  [sys.dm_fts_index_population](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)  
  返回有关当前正在进行的全文索引填充的信息。  
@@ -67,8 +67,8 @@ ms.locfileid: "68130772"
  [sys.dm_fts_semantic_similarity_population (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md)  
  为关联有语义索引的每个表中的每个相似性索引返回一行关于文档相似性索引填充状态的信息。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [系统视图&#40;Transact SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [Transact-sql&#41;的系统视图 &#40;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

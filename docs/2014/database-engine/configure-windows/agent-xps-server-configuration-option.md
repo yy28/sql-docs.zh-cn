@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4ed2a24c72765c51e7d05fecaa5ab22c344013b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62789018"
 ---
 # <a name="agent-xps-server-configuration-option"></a>“代理 XP”服务器配置选项
@@ -28,7 +28,7 @@ ms.locfileid: "62789018"
 > [!NOTE]  
 >  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 除非这些扩展存储过程在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务处于任何状态下都启用，否则对象资源管理器不会显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理节点的内容。  
   
- 可能的值有：  
+ 可能的值包括：  
   
 -   **0**，表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理扩展存储过程不可用（默认值）。  
   
@@ -50,8 +50,8 @@ RECONFIGURE
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [自动执行管理任务（SQL Server 代理）](../../ssms/agent/sql-server-agent.md)   
+## <a name="see-also"></a>另请参阅  
+ [自动管理任务 &#40;SQL Server 代理&#41;](../../ssms/agent/sql-server-agent.md)   
  [启动、停止或暂停 SQL Server 代理服务](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  
   
   

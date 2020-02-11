@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 45d4cd390e0369d8289ed9e58de01b7a02f752c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196756"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>主键和外键约束
@@ -27,20 +27,20 @@ ms.locfileid: "68196756"
   
  本主题包含以下各节。  
   
- [主键约束](../tables/primary-and-foreign-key-constraints.md#PKeys)  
+ [Primary Key 约束](../tables/primary-and-foreign-key-constraints.md#PKeys)  
   
- [Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md#FKeys)  
+ [Foreign Key 约束](../tables/primary-and-foreign-key-constraints.md#FKeys)  
   
  [相关任务](../tables/primary-and-foreign-key-constraints.md#Tasks)  
   
-##  <a name="PKeys"></a> 主键约束  
+##  <a name="PKeys"></a>Primary Key 约束  
  表通常具有包含唯一标识表中每一行的值的一列或一组列。 这样的一列或多列称为表的主键 (PK)，用于强制表的实体完整性。 由于主键约束可保证数据的唯一性，因此经常对标识列定义这种约束。  
   
  如果为表指定了主键约束， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将通过为主键列自动创建唯一索引来强制数据的唯一性。 当在查询中使用主键时，此索引还允许对数据进行快速访问。 如果对多列定义了主键约束，则一列中的值可能会重复，但来自主键约束定义中所有列的值的任何组合必须唯一。  
   
- 如下图所示， **Purchasing.ProductVendor** 表中的 **ProductID** 和 **VendorID** 列构成了针对此表的复合主键约束。 这确保了 ProductVendor 表中的每个行都具有 ProductID 和 VendorID 的一个唯一组合    。 这样可以防止插入重复的行。  
+ 如下图所示， **Purchasing.ProductVendor** 表中的 **ProductID** 和 **VendorID** 列构成了针对此表的复合主键约束。 这确保了 ProductVendor 表中的每个行都具有 ProductID 和 VendorID 的一个唯一组合************。 这样可以防止插入重复的行。  
   
- ![组合主键约束](../../database-engine/media/fund04.gif "组合主键约束")  
+ ![组合 PRIMARY KEY 约束](../../database-engine/media/fund04.gif "组合 PRIMARY KEY 约束")  
   
 -   一个表只能包含一个主键约束。  
   
@@ -54,10 +54,12 @@ ms.locfileid: "68196756"
   
 -   如果在 CLR 用户定义类型的列中定义主键，则该类型的实现必须支持二进制排序。  
   
-##  <a name="FKeys"></a> Foreign Key Constraints  
+##  <a name="FKeys"></a>Foreign Key 约束  
  外键 (FK) 是用于在两个表中的数据之间建立和加强链接的一列或多列的组合，可控制可在外键表中存储的数据。 在外键引用中，当包含一个表的主键值的一个或多个列被另一个表中的一个或多个列引用时，就在这两个表之间创建了链接。 这个列就成为第二个表的外键。  
   
- 例如，因为销售订单和销售人员之间存在一种逻辑关系，所以 **Sales.SalesOrderHeader** 表含有一个指向 **Sales.SalesPerson** 表的外键链接。 **SalesOrderHeader** 表中的 **SalesPersonID** 列与 **SalesPerson** 表中的主键列相对应。 **SalesOrderHeader** 表中的 **SalesPersonID** 列是指向 **SalesPerson** 表的外键。 通过创建此外键关系，如果 **SalesPerson** 表中不存在外键关系，则 **SalesPersonID** 的值将无法插入到 **SalesOrderHeader** 表。  
+ 例如，因为销售订单和销售人员之间存在一种逻辑关系，所以 **Sales.SalesOrderHeader** 表含有一个指向 **Sales.SalesPerson** 表的外键链接。 
+  **SalesOrderHeader** 表中的 **SalesPersonID** 列与 **SalesPerson** 表中的主键列相对应。 
+  **SalesOrderHeader** 表中的 **SalesPersonID** 列是指向 **SalesPerson** 表的外键。 通过创建此外键关系，如果 **SalesPerson** 表的主键中不存在 SalesPersonID 的值，则 **SalesPersonID** 的值将无法插入到 **SalesOrderHeader** 表。    
   
 ### <a name="indexes-on-foreign-key-constraints"></a>外键约束的索引  
  与主键约束不同，创建外键约束不会自动创建对应的索引。 但是由于以下原因，对外键手动创建索引通常是有用的：  
@@ -75,7 +77,8 @@ ms.locfileid: "68196756"
  通过使用级联引用完整性约束，您可以定义当用户试图删除或更新现有外键指向的键时， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 执行的操作。 可以定义以下级联操作。  
   
  NO ACTION  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将引发错误，此时将回滚对父表中行的删除或更新操作。  
+ 
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将引发错误，此时将回滚对父表中行的删除或更新操作。  
   
  CASCADE  
  如果在父表中更新或删除了一行，则将在引用表中更新或删除相应的行。 如果 `timestamp` 列是外键或被引用键的一部分，则不能指定 CASCADE。 不能为带有 INSTEAD OF DELETE 触发器的表指定 ON DELETE CASCADE。 对于带有 INSTEAD OF UPDATE 触发器的表，不能指定 ON UPDATE CASCADE。  

@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 19e6683baeb0a82c77a858b04f18695ba7120b15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250127"
 ---
 # <a name="inserting-and-updating-data-in-a-table-tutorial"></a>插入和更新表中的数据（教程）
@@ -29,7 +29,7 @@ ms.locfileid: "63250127"
 |75|Tire Bar||Tool for changing tires.|  
 |3000|3mm Bracket|.52||  
   
- 基本语法为：INSERT、 表名称、 列列表、 值，然后一系列值要插入。 如果某行的前面有两个连字符，则指示该行为注释，编译器将忽略其文本。 在这种情况下，注释说明允许的语法变体。  
+ 基本语法如下：INSERT、表名、列的列表、VALUES，然后是要插入的值的列表。 如果某行的前面有两个连字符，则指示该行为注释，编译器将忽略其文本。 在这种情况下，注释说明允许的语法变体。  
   
 ### <a name="to-insert-data-into-a-table"></a>将数据插入到表  
   
@@ -84,9 +84,9 @@ ms.locfileid: "63250127"
     ```  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [读取表中的数据（教程）](lesson-1-4-reading-the-data-in-a-table.md)  
+ [读取表中的数据 &#40;教程&#41;](lesson-1-4-reading-the-data-in-a-table.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [INSERT (Transact-SQL)](/sql/t-sql/statements/insert-transact-sql)   
  [UPDATE (Transact-SQL)](/sql/t-sql/queries/update-transact-sql)  
   

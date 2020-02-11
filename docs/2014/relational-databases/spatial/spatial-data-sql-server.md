@@ -18,20 +18,21 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 7bd529f67f9184f86d4a9ec704e9cf7af972f3f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014058"
 ---
 # <a name="spatial-data-sql-server"></a>空间数据 (SQL Server)
-  空间数据表示有关几何对象的物理位置和形状的信息。 这些对象可以是点位置或更复杂的对象，例如国家/地区、公路或湖泊。  
+  空间数据表示有关物理位置和几何对象形状的信息。 这些对象可能是点位置或更复杂的对象，例如国家/地区、道路或湖泊。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持两种空间数据类型：`geometry` 数据类型和 `geography` 数据类型。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持两种空间数据类型： `geometry`数据类型和`geography`数据类型。  
   
--   `geometry` 类型表示欧几里得（平面）坐标系中的数据。  
+-   `geometry`类型表示欧氏（平面）坐标系中的数据。  
   
--   `geography` 类型表示圆形地球坐标系中的数据。  
+-   
+  `geography` 类型表示圆形地球坐标系中的数据。  
   
  这两种数据类型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中都是作为 .NET 公共语言运行时 (CLR) 数据类型实现的。  
   
@@ -55,7 +56,7 @@ ms.locfileid: "66014058"
  [空间数据类型概述](spatial-data-types-overview.md)  
  介绍空间数据类型。  
   
--   [点](point.md)  
+-   [Point](point.md)  
   
 -   [LineString](linestring.md)  
   
@@ -63,7 +64,7 @@ ms.locfileid: "66014058"
   
 -   [CompoundCurve](compoundcurve.md)  
   
--   [多边形](polygon.md)  
+-   [Polygon](polygon.md)  
   
 -   [CurvePolygon](curvepolygon.md)  
   

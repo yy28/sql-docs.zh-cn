@@ -2,7 +2,7 @@
 title: 查看 SQL Server 升级的分析报告
 description: 在数据库实验助手中查看分析报表
 ms.custom: seo-lt-2019
-ms.date: 11/22/2019
+ms.date: 02/04/2020
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -12,78 +12,76 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: b72d49e691311104481637ff49d6c1e09ae0c230
-ms.sourcegitcommit: 9e026cfd9f2300f106af929d88a9b43301f5edc2
+ms.openlocfilehash: 2a6d027c1fb1834e4033a11a498bfc8cdad4561f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74317745"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76977562"
 ---
 # <a name="view-analysis-reports-in-database-experimentation-assistant"></a>在数据库实验助手中查看分析报表
 
-使用数据库实验助手（DEA）[创建分析报表](database-experimentation-assistant-create-report.md)后，请使用以下步骤查看基于 A/B 测试的性能见解的报表。
+使用数据库实验助手（DEA）[创建分析报表](database-experimentation-assistant-create-report.md)后，可以根据所执行的 A/B 测试查看报表的性能见解。
 
-## <a name="select-a-server"></a>选择服务器
+## <a name="open-an-existing-analysis-report"></a>打开现有分析报表
 
-在 DEA 中，选择菜单图标。 在展开的菜单中，选择 "清单" 图标旁边的 "**分析报表**" 以打开 "分析报表" 窗口。
+1. 在 DEA 中，选择 "列表" 图标，指定服务器名称和身份验证类型，根据具体情况选择或取消选择 "**加密连接**" 和 "**信任服务器证书**" 复选框，然后选择 "**连接**"。
 
-在 "**分析报表**" 下，输入运行包含分析数据库 SQL Server 的计算机的名称，然后选择 "**连接**"。
+   ![通过报表连接到服务器](./media/database-experimentation-assistant-view-report/dea-connect-to-server-with-report-files.png)
 
-![连接到现有报表](./media/database-experimentation-assistant-view-report/dea-view-report-connect.png)
+2. 在 "**分析报表**" 屏幕的左侧，选择要查看的报表的条目。
 
-如果缺少任何依赖项，则 "**先决条件**" 页将提示你提供用于安装这些依赖项的链接。 如有必要，请安装必备组件，然后选择 "**重试**"。
-
-![必备页](./media/database-experimentation-assistant-view-report/dea-view-report-prereq.png)
-
-## <a name="select-an-analysis-report-to-view"></a>选择要查看的分析报告
-
-在分析报表列表中，双击报表将其打开。
-
-![查看现有报表](./media/database-experimentation-assistant-view-report/dea-view-report-view-existing.png)
-
-您可以深入了解工作负荷的表示方式，如以下示例图表所示：
-
-![工作负荷代表图](./media/database-experimentation-assistant-view-report/dea-view-report-workload-compare.png)
+   ![打开现有报表文件](./media/database-experimentation-assistant-view-report/dea-select-report-to-view.png)
 
 ## <a name="view-and-understand-the-analysis-report"></a>查看和了解分析报告
 
 本部分将指导你完成分析报表。
 
-### <a name="query-categories"></a>查询类别
+在报表的第一页上，将显示有关运行实验的目标服务器的版本和生成信息的信息。 阈值允许调整 A/B 测试分析的灵敏度或容差。 默认情况下，阈值设置为 5%;任何 >= 5% 的性能改进都分类为 "改进的"。  下拉列表允许您评估具有不同性能阈值的报表。
 
-选择左侧饼图的不同切片，以便仅显示属于该类别的查询。
+您可以将报表中的数据导出到 CSV 文件中，选择 "**导出**" 按钮。  在分析报表的任何页上，你可以选择 "**打印**" 来打印当前屏幕上显示的内容。
 
-![报表饼图切片](./media/database-experimentation-assistant-view-report/dea-view-report-pie-slices.png)
+### <a name="query-distribution"></a>查询分发
 
-- **降级的查询**：比 B 中更好地执行的查询。  
-- **错误**：在实例 B 中显示错误但在实例 A 中不存在的查询。  
-- **改进的查询**：在实例 B 中运行得更好的查询，在实例 a 中运行。  
-- 不**确定的查询**：性能更改不确定的查询。  
-- **相同**：在实例 A 和 B 上性能保持相同的查询。
+- 选择饼图的不同切片，以便仅显示属于该类别的查询。
+
+   ![作为饼图切片的报表类别](./media/database-experimentation-assistant-view-report/dea-view-report-pie-slices.png)
+
+  - **降级**：在目标2上执行的比目标1更糟的查询。
+  - **错误**：在至少一个目标上至少出现一次错误的查询。
+  - **改进**：在目标2上更好地执行的查询，而不是在目标1上。
+  - **无法计算**：采样大小太小，无法进行统计分析的查询。 对于 A/B 测试分析，DEA 要求执行相同的查询，才能在每个目标上至少执行15次。
+  - **相同**：目标1和目标2之间没有统计差的查询。
+
+  错误查询（如果有）显示在单独的图表中;条形图按类型和饼图分类错误，并按错误 ID 分类错误。
+
+   ![错误查询图表](./media/database-experimentation-assistant-view-report/dea-error-query-charts.png)
+
+  有四种可能的错误类型：
+
+  - **现有错误**：在目标1和目标2上存在的错误。
+  - **新错误**：目标2上新的错误。
+  - **已解决的错误**：目标1上存在但在目标2上已解决的错误。
+  - **升级**阻止程序：阻止升级到目标服务器的错误。
+
+  单击图表中的任意条形或饼图部分会向下钻取到类别，并显示性能指标，即使对于 "**无法评估**" 类别也是如此。
+
+  此外，仪表板还显示了前5个改进和降级的查询，以提供快速的性能概述。
 
 ### <a name="individual-query-drill-down"></a>单个查询向下钻取
 
-您可以选择 "查询模板" 链接以查看有关特定查询的更多详细信息。
+您可以选择查询模板链接，以获取有关特定查询的更多详细信息。
 
-![查询向下钻取](./media/database-experimentation-assistant-view-report/dea-view-report-drilldown.png)
+![向下钻取到特定查询](./media/database-experimentation-assistant-view-report/dea-query-drill-down-report.png)
 
-选择特定查询以打开查询的比较摘要。
+- 选择特定查询以打开相关的比较摘要。
 
-![比较摘要](./media/database-experimentation-assistant-view-report/dea-view-report-comparison-summary.png)
+   ![比较摘要](./media/database-experimentation-assistant-view-report/dea-view-report-comparison-summary.png)
 
-您可以看到运行查询的 A 和 B 实例。 你还可以查看查询的外观的模板。 表显示特定于实例 A 和 B 的查询信息。
+   您可以找到该查询的摘要统计信息，如执行次数、平均持续时间、平均 CPU、平均读/写和错误计数。  如果查询是错误查询，则 "**错误信息**" 选项卡将显示有关错误的更多详细信息。  在 "**查询计划信息**" 选项卡上，可以找到有关目标1和目标2上的查询所使用的查询计划的信息。
 
-### <a name="error-queries"></a>错误查询
-
-"比较摘要" 报表包含可扩充的**错误信息**和**查询计划信息**部分。 部分显示了两个实例的错误和计划信息。
-
-选择错误（红色）饼图以显示以下类型的错误：
-
-- **现有错误**：中的错误。
-- **新错误**： B 中的错误。
-- **已解决的错误**：在中但不在 B 中的错误。
-
-![错误图表](./media/database-experimentation-assistant-view-report/dea-view-report-error-charts.png)
+   > [!NOTE]
+   > 如果要分析扩展事件（。.XEL）文件，则不会收集查询计划信息，以限制用户计算机上的内存压力。
 
 ## <a name="see-also"></a>另请参阅
 

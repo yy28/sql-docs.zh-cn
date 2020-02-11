@@ -13,22 +13,22 @@ ms.assetid: 574399c3-2bb2-4d19-829c-7c77bd82858d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 87ff006e7bead36c2aa6476b99552d1524c213b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68091712"
 ---
 # <a name="sqlsetpos-cursor-library"></a>SQLSetPos（游标库）
 > [!IMPORTANT]  
->  此功能将 Windows 的未来版本中删除。 避免在新的开发工作中使用此功能并计划修改当前使用此功能的应用程序。 Microsoft 建议使用驱动程序的游标功能。  
+>  此功能将在 Windows 的将来版本中删除。 避免在新的开发工作中使用此功能，并计划修改当前使用此功能的应用程序。 Microsoft 建议使用驱动程序的游标功能。  
   
- 本主题介绍如何使用**SQLSetPos**游标库中的函数。 有关常规信息**SQLSetPos**，请参阅[SQLSetPos 函数](../../../odbc/reference/syntax/sqlsetpos-function.md)。  
+ 本主题讨论如何在游标库中使用**SQLSetPos**函数。 有关**SQLSetPos**的常规信息，请参阅[SQLSetPos 函数](../../../odbc/reference/syntax/sqlsetpos-function.md)。  
   
- 游标库支持 SQL_POSITION 操作仅对*操作*中的参数**SQLSetPos**。 它支持 SQL_LOCK_NO_CHANGE 值仅对于*LockType*参数。  
+ 游标库仅支持**SQLSetPos**中的*操作*参数的 SQL_POSITION 操作。 它仅支持*LockType*参数的 SQL_LOCK_NO_CHANGE 值。  
   
- 如果该驱动程序不支持大容量操作，该游标库将返回 SQLSTATE HYC00 （驱动程序不支持） 时**SQLSetPos**使用调用*RowNumber*等于 0。 不建议此驱动程序行为。  
+ 如果该驱动程序不支持大容量操作，则调用**SQLSetPos**时，游标库会返回 SQLSTATE HYC00 （支持驱动程序），而*RowNumber*等于0。 不建议使用此驱动程序行为。  
   
- 游标库不支持对的调用中的 SQL_UPDATE 和 SQL_DELETE operations **SQLSetPos**。 游标库实现定位的 update 或 delete SQL 语句，通过创建搜索更新或删除语句的 WHERE 子句，枚举存储在其缓存中的每个绑定列的值。 有关详细信息，请参阅[处理定位更新和删除语句](../../../odbc/reference/appendixes/processing-positioned-update-and-delete-statements.md)。  
+ 游标库不支持对**SQLSetPos**的调用中的 SQL_UPDATE 和 SQL_DELETE 操作。 游标库通过创建一个使用 WHERE 子句的搜索的 update 或 delete 语句来实现定位的 update 或 delete 语句，该语句枚举为每个绑定列存储在其缓存中的值。 有关详细信息，请参阅[处理定位的 Update 和 Delete 语句](../../../odbc/reference/appendixes/processing-positioned-update-and-delete-statements.md)。  
   
- 该驱动程序不支持静态游标，如果使用游标库的应用程序应调用**SQLSetPos**提取的行集上仅**SQLExtendedFetch**或**SQLFetchScroll**，而无法由**SQLFetch**。 游标库实现**SQLExtendedFetch**并**SQLFetchScroll**的重复的调用，从而**SQLFetch** （具有 1 行集大小） 驱动程序中。 游标库传递到调用**SQLFetch**，而在其他另一方面，通过向驱动程序。 如果**SQLSetPos**提取的一个多行的行集合上调用**SQLFetch**时，驱动程序不支持静态游标，该调用将失败，因为**SQLSetPos**不起作用与只进游标。 即使应用程序已成功调用这也会出现**SQLSetStmtAttr**以设置 SQL_ATTR_CURSOR_TYPE 为 SQL_CURSOR_STATIC，即使该驱动程序不支持静态游标，游标库支持。
+ 如果驱动程序不支持静态游标，则使用游标库的应用程序只应对由**SQLExtendedFetch**或**SQLFetchScroll**（而不是**SQLFetch**）提取的行集调用**SQLSetPos** 。 游标库通过对驱动程序中的**SQLFetch** （行集大小为1）进行重复调用来实现**SQLExtendedFetch**和**SQLFetchScroll** 。 另一方面，游标库将对**SQLFetch**的调用传递给驱动程序。 如果在驱动程序不支持静态游标的情况下，在**SQLFetch**提取的多行行集上调用**SQLSetPos** ，则调用将失败，因为**SQLSetPos**无法与只进游标一起使用。 即使应用程序已成功调用**SQLSetStmtAttr**以将 SQL_ATTR_CURSOR_TYPE 设置为 SQL_CURSOR_STATIC （即使驱动程序不支持静态游标），也会发生这种情况。

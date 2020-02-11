@@ -14,10 +14,10 @@ ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 473b30d2dcc4809feece4e6a1cc59e38bb82ac2e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244124"
 ---
 # <a name="run-a-matching-project"></a>运行匹配项目
@@ -30,7 +30,7 @@ ms.locfileid: "75244124"
   
  您必须通过创建具有一个或多个匹配规则的匹配策略，然后对示例数据运行该策略，为匹配进行准备。 匹配项目过程独立于匹配策略过程，并且不使用从匹配项目获取的匹配知识填充知识库。 有关创建匹配策略的详细信息，请参阅 [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md)。  
   
-##  <a name="BeforeYouBegin"></a>开始之前  
+##  <a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Prerequisites"></a>先决条件  
   
@@ -38,9 +38,9 @@ ms.locfileid: "75244124"
   
 -   如果要匹配的源数据在 Excel 文件中，则必须在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 计算机上安装 Microsoft Excel。 否则，您在映射阶段中将无法选择 Excel 文件。 由 Microsoft Excel 创建的文件可以具有 .xlsx、.xls 或 .csv 扩展名。 如果使用 64 位版本的 Excel，则仅支持 Excel 2003 文件 (.xls)；而不支持 Excel 2007 或 2010 文件 (.xlsx)。 如果您使用的是 64 位版本的 Excel 2007 或 2010，则将文件另存为 .xls 文件或 .csv 文件，或者改而安装 32 位版本的 Excel。  
   
-###  <a name="Security"></a>安全  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>访问  
+####  <a name="Permissions"></a> 权限  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_administrator 角色，才能运行匹配项目。  
   
 ##  <a name="StartingaMatchingProject"></a>第一步：启动匹配项目  

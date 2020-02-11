@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a943d0ed7cfb0932f7eec757b40fef4d8de6504c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63306004"
 ---
 # <a name="map-many-to-many-relationships-visual-database-tools"></a>映射多对多关系 (Visual Database Tools)
@@ -32,20 +32,20 @@ ms.locfileid: "63306004"
   
 1.  在数据库关系图中，添加要在它们之间创建多对多关系的表。  
   
-2.  右键单击关系图，然后从快捷菜单中选择“新建表”  创建第三个表。 该表将成为联接表。  
+2.  右键单击关系图，然后从快捷菜单中选择“新建表”**** 创建第三个表。 该表将成为联接表。  
   
-3.  在“选择名称”  对话框中，更改系统分配的表名。 例如，`titles` 表和 `authors` 表之间的联接表现在命名为 `titleauthors`。  
+3.  在“选择名称”**** 对话框中，更改系统分配的表名。 例如， `titles` 表和 `authors` 表之间的联接表现在命名为 `titleauthors`。  
   
 4.  将其他两个表中的主键列复制到联接表中。 与任何其他表一样，您可以向此表中添加其他列。  
   
 5.  在联接表中，将主键设置为包含其他两个表中的所有主键列。 有关详细信息，请参阅[Create Primary Keys](../../relational-databases/tables/create-primary-keys.md)。  
   
-6.  分别定义每个主表与联接表之间的一对多关系。 联接表应位于您所创建的这两个关系的“多”方。 有关详细信息，请参阅[Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md)。  
+6.  分别定义每个主表与联接表之间的一对多关系。 联接表应位于您所创建的这两个关系的“多”方。 有关详细信息，请参阅[创建外键关系](../../relational-databases/tables/create-foreign-key-relationships.md)。  
   
     > [!NOTE]  
     >  在数据库关系图中创建联接表并不会将数据从相关表插入联接表中。 有关将数据插入表的信息，请参阅[创建插入结果查询 (Visual Database Tools)](visual-database-tools.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用数据库关系图 (Visual Database Tools)](work-with-database-diagrams-visual-database-tools.md)  
   
   
