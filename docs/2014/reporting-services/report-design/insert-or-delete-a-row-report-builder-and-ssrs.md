@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bd9f92b0128bd6280654885f79f8231570f721de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105633"
 ---
 # <a name="insert-or-delete-a-row-report-builder-and-ssrs"></a>插入或删除行（报表生成器和 SSRS）
@@ -29,7 +29,7 @@ ms.locfileid: "66105633"
   
 -   在“设计”视图中，单击 Tablix 数据区域的左上角，以使数据区域的上方和侧面显示列控点和行控点。  
   
-     有关数据区域的详细信息，请参阅[列出了&#40;报表生成器和 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)。  
+     有关数据区域区域的详细信息，请参阅[列出 &#40;报表生成器和 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)。  
   
 ### <a name="to-insert-a-row-in-a-selected-data-region"></a>在所选数据区域中插入行  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66105633"
   
 -   右键单击要删除的行所在的 Tablix 数据区域的行组区中的行组单元，然后单击“删除行”  。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Tablix 数据区域（报表生成器和 SSRS）](../tablix-data-region-report-builder-and-ssrs.md)   
  [了解组（报表生成器和 SSRS）](understanding-groups-report-builder-and-ssrs.md)   
  [表（报表生成器和 SSRS）](tables-report-builder-and-ssrs.md)   

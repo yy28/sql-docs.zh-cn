@@ -1,5 +1,5 @@
 ---
-title: 使用语句 (ODBC) |Microsoft Docs
+title: 使用语句（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 842e862dff7eca85a05df0222989c6ee6390ab89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200327"
 ---
 # <a name="use-a-statement-odbc"></a>使用语句 (ODBC)
@@ -69,7 +69,7 @@ ms.locfileid: "63200327"
   
 8.  调用 [SQLFreeHandle](../../native-client-odbc-api/sqlfreehandle.md)，同时将 *HandleType* 设置为 SQL_HANDLE_STMT，以释放语句句柄。  
   
-## <a name="see-also"></a>请参阅  
- [执行查询操作指南主题&#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;ODBC&#41;执行查询操作指南主题](executing-queries-how-to-topics-odbc.md)  
   
   

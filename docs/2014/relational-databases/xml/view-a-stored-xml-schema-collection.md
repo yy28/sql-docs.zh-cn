@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8cde5898fc4c9ae8b71452bfb22ff58e0c3c9725
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63233605"
 ---
 # <a name="view-a-stored-xml-schema-collection"></a>查看存储 XML 架构集合
@@ -35,7 +35,7 @@ SELECT xml_schema_namespace(N'Production',N'ProductDescriptionSchemaCollection')
 GO  
 ```  
   
- 如果只需要查看 XML 架构集合中的一个架构，则可以针对由 `xml_schema_namespace` 返回的 `xml` 类型结果指定 XQuery。  
+ 如果只需要查看 XML 架构集合中的一个架构，则可以针对由 `xml` 返回的 `xml_schema_namespace` 类型结果指定 XQuery。  
   
 ```  
 SELECT xml_schema_namespace(N'RelationalSchemaName',N'XmlSchemaCollectionName').query('  
@@ -66,7 +66,7 @@ GO
   
  [sys.xml_schema_collections](/sql/relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql) 目录视图也返回有关 XML 架构集合的信息。 此信息包括集合名称、创建日期和集合的所有者。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [XML 架构集合 (SQL Server)](xml-schema-collections-sql-server.md)  
   
   

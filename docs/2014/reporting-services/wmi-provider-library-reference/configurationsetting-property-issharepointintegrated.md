@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a8f996b0f4a2f7b29647195f64dad3c7558f4d4c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097664"
 ---
 # <a name="issharepointintegrated-property-wmi"></a>IsSharePointIntegrated 属性 (WMI)
@@ -39,9 +39,9 @@ public Boolean IsSharePointIntegrated;
  [MSReportServer_ConfigurationSetting 类](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>要求  
- **命名空间:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](msreportserver-configurationsetting-members.md)  
   
   

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d9c0b0a2c6ca3c12ca020dcc79b5aa4cad46c825
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105820"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>设置图表上数据点的格式（报表生成器和 SSRS）
@@ -43,7 +43,7 @@ ms.locfileid: "66105820"
 ## <a name="positioning-data-point-labels-on-a-chart"></a>在图表上定位数据点标签  
  对于所有图表类型，右键单击图表并选择 **“显示数据标签”** 后可以显示数据点标签。 数据点标签的位置是根据图表类型指定的：  
   
--   在条形图中，可以使用 **BarLabelStyle** 自定义属性重新定位数据点标签。 有四个可能位置：Outside、Left、Center 和 Right。 当条形标签样式设置为“外部”时，只要图表区放得下，标签就将定位到图条的外部。 如果标签在图表区内图条以外的区域放不下，则标签将定位到图条内。  
+-   在条形图中，可以使用 **BarLabelStyle** 自定义属性重新定位数据点标签。 有四个可能位置：外部、左侧、中间和右侧。 当条形标签样式设置为“外部”时，只要图表区放得下，标签就将定位到图条的外部。 如果标签在图表区内图条以外的区域放不下，则标签将定位到图条内。  
   
 -   在饼图中，可以使用 **PieLabelStyle** 自定义属性重新定位数据点标签。 围绕饼图定位数据点标签时应考虑诸多注意事项，包括饼图的大小、饼图及其相应图例之间的可用空间和标签大小。 有关详细信息，请参阅 [在饼图外显示数据点标签（报表生成器和 SSRS）](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)。  
   
@@ -58,21 +58,21 @@ ms.locfileid: "66105820"
 ## <a name="adding-keywords-for-data-point-labels-tooltips-and-legend-text"></a>为数据点标签、工具提示和图例文本添加关键字  
  可以使用区分大小写的特定于图表的关键字来表示图表中的存在项。 这些关键字仅适用于工具提示、自定义图例文本和数据点标签属性。 在多数情况中，图表关键字具有等效的简单表达式，但关键字更快且更容易键入。 下面列出了图表关键字。  
   
-|图表关键字|Description|适用的图表类型|等效的简单表达式的示例|  
+|图表关键字|说明|适用的图表类型|等效的简单表达式的示例|  
 |-------------------|-----------------|------------------------------|------------------------------------------------|  
 |#VALY|数据点的 Y 值。|All|`=Fields!MyDataField.Value`|  
-|#VALY2|数据点的 Y 值 #2。|范围图、气泡图|None|  
-|#VALY3|数据点的 Y 值 #3。|股价图、K 线图|None|  
-|#VALY4|数据点的 Y 值 #4。|股价图、K 线图|None|  
-|#SERIESNAME|序列名称。|All|None|  
-|#LABEL|数据点标签。|All|None|  
+|#VALY2|数据点的 Y 值 #2。|范围图、气泡图|无|  
+|#VALY3|数据点的 Y 值 #3。|股价图、K 线图|无|  
+|#VALY4|数据点的 Y 值 #4。|股价图、K 线图|无|  
+|#SERIESNAME|序列名称。|All|无|  
+|#LABEL|数据点标签。|All|无|  
 |#AXISLABEL|轴数据点标签。|形状|`=Fields!MyDataField.Value`|  
-|#INDEX|数据点索引。|All|None|  
+|#INDEX|数据点索引。|All|无|  
 |#PERCENT|数据点 Y 值的百分比。|All|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
 |#TOTAL|序列中所有 Y 值的总计。|All|`=Sum(Fields!MyDataField.Value)`|  
-|#LEGENDTEXT|对应于图例项文本的文本。|All|None|  
+|#LEGENDTEXT|对应于图例项文本的文本。|All|无|  
 |#AVG|序列中所有 Y 值的平均值。|All|`=Avg(Fields!MyDataField.Value)`|  
-|#MIN|序列中所有 Y 值的最小值。|全部|`=Min(Fields!MyDataField.Value)`|  
+|#MIN|序列中所有 Y 值的最小值。|All|`=Min(Fields!MyDataField.Value)`|  
 |#MAX|序列中所有 Y 值的最大值。|All|`=Max(Fields!MyDataField.Value)`|  
 |#FIRST|序列中所有 Y 值第一个值。|All|`=First(Fields!MyDataField.Value)`|  
   
@@ -95,7 +95,7 @@ ms.locfileid: "66105820"
   
  [在饼图上显示百分比值（报表生成器和 SSRS）](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [设置图表格式（报表生成器和 SSRS）](formatting-a-chart-report-builder-and-ssrs.md)   
  [设置图表上轴标签的格式（报表生成器和 SSRS）](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   

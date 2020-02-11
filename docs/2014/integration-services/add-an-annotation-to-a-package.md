@@ -1,5 +1,5 @@
 ---
-title: 将批注添加到包 |Microsoft Docs
+title: 向包中添加批注 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5c407efc18790b4d8ed8912e47248f4d04de9fca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062094"
 ---
 # <a name="add-an-annotation-to-a-package"></a>将批注添加到包
@@ -47,7 +47,7 @@ ms.locfileid: "66062094"
   
 8.  若要保存更新后的包，请单击 **“文件”** 菜单中的 **“全部保存”** 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在包中使用批注](use-annotations-in-packages.md)  
   
   

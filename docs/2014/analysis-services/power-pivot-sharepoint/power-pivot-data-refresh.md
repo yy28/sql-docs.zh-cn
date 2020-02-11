@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4ab42604fabaa188a74858038e35a8b90a105df8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071222"
 ---
 # <a name="powerpivot-data-refresh"></a>PowerPivot 数据刷新
@@ -26,18 +26,19 @@ ms.locfileid: "66071222"
   
 -   [使用 SharePoint 2010 进行 PowerPivot 数据刷新](../powerpivot-data-refresh-with-sharepoint-2010.md)  
   
--   [配置 PowerPivot 无人参与的数据刷新帐户&#40;PowerPivot for SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)  
+-   [将 PowerPivot 无人参与的数据刷新帐户配置 &#40;PowerPivot for SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)  
   
--   [为 PowerPivot 数据刷新配置存储的凭据&#40;PowerPivot for SharePoint&#41;](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)  
+-   [为 PowerPivot 数据刷新配置存储的凭据 &#40;PowerPivot for SharePoint&#41;](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)  
   
--   [计划数据刷新&#40;PowerPivot for SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md)  
+-   [计划数据刷新 &#40;PowerPivot for SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md)  
   
--   [查看数据刷新历史记录&#40;PowerPivot for SharePoint&#41;](view-data-refresh-history-power-pivot-for-sharepoint.md)  
+-   [查看数据刷新历史记录 &#40;PowerPivot for SharePoint&#41;](view-data-refresh-history-power-pivot-for-sharepoint.md)  
   
 > [!NOTE]
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 SharePoint Server 2013 Excel Services 使用不同的体系结构对 PowerPivot 数据模型进行数据刷新。 SharePoint 2013 支持的体系结构利用 Excel Services 作为主要组件加载 PowerPivot 数据模型。 以前的数据刷新体系结构依赖在 SharePoint 模式下运行 PowerPivot 系统服务和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的服务器来加载数据模型。 有关详细信息，请参见以下内容：  
+>  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 SharePoint Server 2013 Excel Services 使用不同的体系结构对 PowerPivot 数据模型进行数据刷新。 SharePoint 2013 支持的体系结构利用 Excel Services 作为主要组件加载 PowerPivot 数据模型。 以前的数据刷新体系结构依赖在 SharePoint 模式下运行 PowerPivot 系统服务和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的服务器来加载数据模型。 有关详细信息，请参阅以下主题：  
 > 
 >  -   [使用 SharePoint 2013 进行 PowerPivot 数据刷新](power-pivot-data-refresh-with-sharepoint-2013.md)  
-> -   [升级工作簿和计划的数据刷新 (SharePoint 2013)](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
+> -   [&#40;SharePoint 2013&#41;升级工作簿和计划的数据刷新](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
   
   

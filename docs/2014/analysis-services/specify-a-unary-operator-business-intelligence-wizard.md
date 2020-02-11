@@ -1,5 +1,5 @@
 ---
-title: 指定一元运算符 （商业智能向导） |Microsoft Docs
+title: 指定一元运算符（商业智能向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b6343f26e6aa54fa6206c739d3d7b52b632e1519
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068528"
 ---
 # <a name="specify-a-unary-operator-business-intelligence-wizard"></a>指定一元运算符（商业智能向导）
-  可以使用“指定一元运算符”  页指定特定列的父子关系，该列包含一元运算符（用于常规聚合）或表示加权系数的值（用于加权聚合）。有关常规聚合和加权聚合的详细信息，请参阅[聚合和聚合设计](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)。  
+  使用 "**指定一元运算符**" 页可以标识包含一元运算符（用于常规聚合）或表示权重系数（对于加权聚合）的列的父子关系。有关常规聚合和加权聚合的详细信息，请参阅[聚合和聚合设计](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)。  
   
 > [!NOTE]  
 >  如果从维度设计器或者通过在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]的解决方案资源管理器中右键单击维度启动了商业智能向导，则将不会显示此页。  
@@ -35,9 +35,9 @@ ms.locfileid: "66068528"
  **源列**  
  选择包含一元运算符或加权系数的源列。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [商业智能向导的 F1 帮助](business-intelligence-wizard-f1-help.md)   
- [多维数据集设计器&#40;Analysis Services-多维数据&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [维度设计器&#40;Analysis Services-多维数据&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+ [多维数据集设计器 &#40;Analysis Services 多维数据&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [维度设计器 &#40;Analysis Services 多维数据&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

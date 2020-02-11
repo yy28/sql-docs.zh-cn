@@ -1,5 +1,5 @@
 ---
-title: 设置分区切片属性 (Analysis Services) |Microsoft Docs
+title: 设置分区切片属性（Analysis Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/05/2015
 ms.prod: sql-server-2014
@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d9d7b41de3505c3b6e3ccf3886254958ee71e456
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072941"
 ---
 # <a name="set-the-partition-slice-property-analysis-services"></a>设置分区切片属性 (Analysis Services)
   数据切片是一种很重要的优化功能，可以帮助将查询指向相应分区的数据。 通过覆盖为 MOLAP 和 HOLAP 分区生成的默认切片来显式设置 Slice 属性可提高查询性能。 此外，Slice 属性还在处理分区时提供额外的验证检查。  
   
- 创建分区后，但在处理它之前，可以使用 Slice 属性指定一个数据切片。 在“分区”选项卡上，展开一个度量值组，右键单击一个分区，然后选择 **“属性”** 。  
+ 创建分区后，但在处理它之前，可以使用 Slice 属性指定一个数据切片。 在“分区”选项卡上，展开一个度量值组，右键单击一个分区，然后选择“属性”****。  
   
 ## <a name="defining-a-slice"></a>定义切片  
  Slice 属性的有效值是 MDX 成员、集合或元组。 以下示例说明了有效的切片语法：  
@@ -41,11 +41,11 @@ ms.locfileid: "66072941"
 > [!NOTE]  
 >  请注意，动态 MDX 函数（如 [Generate (MDX)](/sql/mdx/generate-mdx) 或 [Except (MDX)](/sql/mdx/except-mdx-function)）在分区的切片属性中不受支持。 你必须通过使用显式元组或成员引用定义切片。  
 >   
->  例如，而不是使用[:&#40;范围&#41; &#40;MDX&#41; ](/sql/mdx/range-mdx)函数来定义一个范围中，你需要枚举分属特定年份的每个成员。  
+>  例如，不是使用[： &#40;范围&#41; &#40;MDX&#41;](/sql/mdx/range-mdx)函数来定义一个范围，你需要按特定年份枚举每个成员。  
 >   
 >  如果需要定义复杂的切片，我们建议使用 XMLA Alter 脚本在切片中定义元组。 然后，你可以使用 ascmd 命令行工具或 SSIS [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) 任务运行该脚本并立即创建指定的成员集，之后再处理分区。  
   
-## <a name="see-also"></a>请参阅  
- [创建和管理本地分区 (Analysis Services)](create-and-manage-a-local-partition-analysis-services.md)  
+## <a name="see-also"></a>另请参阅  
+ [创建和管理本地分区 &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)  
   
   

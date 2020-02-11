@@ -13,34 +13,34 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f966d8aa907c6a92f4ac964fd7d937dab94afa95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63225553"
 ---
-# <a name="obtain-a-fastforward-cursor"></a>获取 FAST_FORWARD 游标
+# <a name="obtain-a-fast_forward-cursor"></a>获取 FAST_FORWARD 游标
   若要获取只进只读游标，请将行集属性 DBPROP_SERVERCURSOR、DBPROP_OTHERINSERT、DBPROP_OTHERUPDATEDELETE、DBPROP_OWNINSERT 和 DBPROP_OWNUPDATEDELETE 设置为 VARIANT_TRUE。  
   
- 本文提供了一个完整示例，说明如何通过设置行集属性来获取 FAST_FORWARD 游标。 设置属性后，执行 SELECT 语句，以检索并显示 AdventureWorks 数据库中 Purchasing.Vendor 表的 Name 列    。  
+ 本文提供了一个完整示例，说明如何通过设置行集属性来获取 FAST_FORWARD 游标。 设置属性后，会执行 SELECT 语句以检索和显示**AdventureWorks**数据库中**采购供应商**表的**名称**列。  
   
 > [!IMPORTANT]  
->  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
+>  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，则应通过[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)对其进行加密。  
   
-### <a name="to-obtain-fastforward-cursor"></a>若要获取 FAST_FORWARD 游标  
+### <a name="to-obtain-fast_forward-cursor"></a>获取 FAST_FORWARD 游标  
   
 1.  建立与数据源的连接。  
   
 2.  将行集属性 DBPROP_SERVERCURSOR、DBPROP_OTHERINSERT、DBPROP_OTHERUPDATEDELETE、DBPROP_OWNINSERT 和 DBPROP_OWNUPDATEDELETE 设置为 VARIANT_TRUE。  
   
-3.  执行命令。  
+3.  执行此命令。  
   
 ## <a name="example"></a>示例  
  以下示例显示如何通过设置行集属性来获取 FAST_FORWARD 游标。 设置完属性后，将执行 SELECT 语句以检索并显示 AdventureWorks 数据库中 Purchasing.Vendor 表的 Name 列。 IA64 平台不支持此示例。  
   
  此示例要求使用 AdventureWorks 示例数据库，其可从 [Microsoft SQL Server 示例和社区项目](https://go.microsoft.com/fwlink/?LinkID=85384)主页下载。  
   
- 使用 ole32.lib 和 oleaut32.lib 编译并执行以下 C++ 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请将连接字符串从 L"(local)" 更改为 L"(local)\\\name"，其中 name 是命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保您的 INCLUDE 环境变量包括含有 sqlncli.h 的目录。  
+ 使用 ole32.lib 和 oleaut32.lib 编译并执行以下 C++ 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请将连接字符串从 L"(local)" 更改为 L"(local)\\\name"，其中 name 是命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保 INCLUDE 环境变量包含包含 sqlncli.msi 的目录。  
   
 ```  
 // compile with: ole32.lib oleaut32.lib  

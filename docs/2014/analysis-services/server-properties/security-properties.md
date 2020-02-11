@@ -20,16 +20,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9316827245adfbcf64bd798869f570dc5f0af14c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068906"
 ---
 # <a name="security-properties"></a>安全属性
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持下表中列出的安全服务器属性。 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]支持下表中列出的安全服务器属性。 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)。  
   
- **适用范围：** 多维和表格服务器模式  
+ **适用于：** 多维和表格服务器模式  
   
 ## <a name="properties"></a>属性  
  `RequireClientAuthentication`  
@@ -59,7 +59,7 @@ ms.locfileid: "66068906"
  `DataProtection\ RequiredProtectionLevel`  
  有符号 32 位整数属性，用于定义所有客户端请求所需的保护级别。 该属性具有下表所列的值之一。  
   
-|ReplTest1|Description|  
+|值|说明|  
 |-----------|-----------------|  
 |*0*|无，允许使用明文。|  
 |*1*|（默认值）需要加密，没有明文日志记录。|  
@@ -68,7 +68,7 @@ ms.locfileid: "66068906"
  `AdministrativeDataProtection\ RequiredProtectionLevel`  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在 Analysis Services 中配置服务器属性](server-properties-in-analysis-services.md)   
  [确定 Analysis Services 实例的服务器模式](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

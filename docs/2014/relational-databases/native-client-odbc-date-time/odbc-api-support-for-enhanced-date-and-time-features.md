@@ -1,5 +1,5 @@
 ---
-title: 增强的日期和时间功能的 ODBC API 支持 |Microsoft Docs
+title: ODBC API 对日期和时间增强功能的支持 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d898406bb78662ea6b56a923307f432dc68a080f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63210149"
 ---
 # <a name="odbc-api-support-for-enhanced-date-and-time-features"></a>ODBC API 对日期和时间增强功能的支持
@@ -68,7 +68,7 @@ ms.locfileid: "63210149"
   
 -   [bcp_setcolfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md)  
   
-## <a name="see-also"></a>请参阅  
- [日期和时间改进&#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
+## <a name="see-also"></a>另请参阅  
+ [ODBC&#41;&#40;的日期和时间改进](date-and-time-improvements-odbc.md)  
   
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 74470d40bace6e1443ef9eb94f9698e225ff2946
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63232850"
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>修改联接运算符 (Visual Database Tools)
@@ -32,9 +32,9 @@ ms.locfileid: "63232850"
   
 3.  在“联接”  对话框中，选择一个新运算符。  
   
-## <a name="see-also"></a>请参阅  
- [自动联接表&#40;可视化数据库工具&#41;](join-tables-automatically-visual-database-tools.md)   
- [手动联接表&#40;可视化数据库工具&#41;](join-tables-manually-visual-database-tools.md)   
+## <a name="see-also"></a>另请参阅  
+ [&#40;Visual Database Tools 自动联接表&#41;](join-tables-automatically-visual-database-tools.md)   
+ [&#40;Visual Database Tools&#41;中手动联接表](join-tables-manually-visual-database-tools.md)   
  [使用联接进行查询 (Visual Database Tools)](query-with-joins-visual-database-tools.md)  
   
   

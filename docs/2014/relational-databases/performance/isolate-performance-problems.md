@@ -19,20 +19,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e700f5178a3520fe83f4d896662a8741aa166b9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150908"
 ---
 # <a name="isolate-performance-problems"></a>隔离性能问题
-  通常同时使用多个 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Microsoft Windows 工具比一次只用一个工具隔离数据库性能问题更有效。 例如，图形执行计划功能（也称为“显示计划”）可以迅速识别单个查询中的死锁。 然而，如果同时使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 的监视功能，将更容易识别某些其他性能问题。  
+  同时使用多个[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Microsoft Windows 工具来隔离数据库性能问题，而不是一次使用一个工具。 例如，图形执行计划功能（也称为“显示计划”）可以迅速识别单个查询中的死锁。 然而，如果同时使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 的监视功能，将更容易识别某些其他性能问题。  
   
- [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 可用来监视和解决 Transact-SQL 问题以及与应用程序有关的问题。 可以使用系统监视器监视硬件问题和其他与系统有关的问题。  
+ [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]可用于监视和解决 Transact-sql 和应用程序相关的问题。 可以使用系统监视器监视硬件问题和其他与系统有关的问题。  
   
  可以监视下列方面以解决问题：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程或用户应用程序提交的批处理 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]存储过程或用户应用[!INCLUDE[tsql](../../includes/tsql-md.md)]程序提交的批处理语句。  
   
 -   用户活动（如阻塞锁或死锁）。  
   
@@ -53,6 +53,6 @@ ms.locfileid: "63150908"
   
  [识别瓶颈](identify-bottlenecks.md)  
   
- [监视内存使用量](../performance-monitor/monitor-memory-usage.md)  
+ [监视内存用量](../performance-monitor/monitor-memory-usage.md)  
   
   

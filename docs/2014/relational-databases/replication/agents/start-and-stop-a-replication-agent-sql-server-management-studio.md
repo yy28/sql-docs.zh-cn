@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66be53c7b4c145f361c49c0e1611fa2942005ae5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192463"
 ---
 # <a name="start-and-stop-a-replication-agent-sql-server-management-studio"></a>启动和停止复制代理 (SQL Server Management Studio)
-  可以从  中的 **“作业”** 和 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] and from “作业” Monitor. 可启动和停止以下代理和作业：  
+  可以从   中的“作业”和“复制”文件夹以及复制监视器启动和停止代理  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]。 可启动和停止以下代理和作业：  
   
 -   快照代理，用于所有发布。  
   
@@ -65,9 +65,9 @@ ms.locfileid: "63192463"
   
 3.  右键单击代理，再单击 **“启动代理”** 或 **“停止代理”** 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [监视复制](../monitoring-replication.md)   
  [复制代理可执行文件概念](../concepts/replication-agent-executables-concepts.md)   
- [Replication Agents Overview](replication-agents-overview.md)  
+ [复制代理概述](replication-agents-overview.md)  
   
   

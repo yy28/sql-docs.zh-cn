@@ -1,5 +1,5 @@
 ---
-title: 构建在 MDX 中的度量值 |Microsoft Docs
+title: 在 MDX 中生成度量值 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7587e3304d1464beb7ef94cd7d3093982f394bcc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074591"
 ---
 # <a name="building-measures-in-mdx"></a>在 MDX 中生成度量值
@@ -42,9 +42,9 @@ from [Model]
 |2003|41993729.72||  
 |2004|25808962.34||  
   
-## <a name="see-also"></a>请参阅  
- [CREATE MEMBER 语句 (MDX)](/sql/mdx/mdx-data-definition-create-member)   
- [MDX 函数引用 (MDX)](/sql/mdx/mdx-function-reference-mdx)   
- [SELECT 语句 (MDX)](/sql/mdx/mdx-data-manipulation-select)  
+## <a name="see-also"></a>另请参阅  
+ [CREATE MEMBER 语句 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)   
+ [Mdx 函数引用 &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
+ [SELECT 语句 &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)  
   
   

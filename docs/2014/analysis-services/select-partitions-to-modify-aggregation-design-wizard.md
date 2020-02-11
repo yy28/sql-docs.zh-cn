@@ -1,5 +1,5 @@
 ---
-title: 选择分区，以修改 （聚合设计向导） |Microsoft Docs
+title: 选择要修改的分区（聚合设计向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f33066c622e3d1d736b1e8b800db96b0e9c35fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069302"
 ---
 # <a name="select-partitions-to-modify-aggregation-design-wizard"></a>选择要修改的分区（聚合设计向导）
   可以使用 **“选择要修改的分区”** 页选择要设计聚合的分区。  
   
 ## <a name="options"></a>选项  
- **(Select)**  
+ **单击**  
  选中列标题中的复选框，可以为度量值组中的所有分区设计聚合。  
   
  选中某个分区的复选框，可以仅为所选分区设计聚合。  
@@ -34,11 +34,11 @@ ms.locfileid: "66069302"
  **数据源**  
  显示用于为分区提供源数据的表或查询。  
   
- **聚合**  
+ **Aggregations**  
  显示用于描述分区所使用的聚合设计的字符串。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [聚合设计向导的 F1 帮助](aggregation-design-wizard-f1-help.md)   
- [Analysis Services 向导&#40;多维数据&#41;](analysis-services-wizards-multidimensional-data.md)  
+ [&#40;多维数据的 Analysis Services 向导&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

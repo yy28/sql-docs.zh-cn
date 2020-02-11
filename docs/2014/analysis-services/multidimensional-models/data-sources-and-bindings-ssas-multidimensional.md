@@ -1,5 +1,5 @@
 ---
-title: 数据源和绑定 (SSAS 多维) |Microsoft Docs
+title: 数据源和绑定（SSAS 多维） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -34,10 +34,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b909423c431507d7709d814bfa4061eaf0a0e342
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076080"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>数据源和绑定（SSAS 多维）
@@ -49,33 +49,35 @@ ms.locfileid: "66076080"
   
  数据源的表示方式因数据源类型而异。 例如，关系数据源是通过连接字符串区分的。 有关数据源的详细信息，请参阅 [Data Sources in Multidimensional Models](data-sources-in-multidimensional-models.md)。  
   
- 无论使用何种数据源，数据源视图 (DSV) 均包含有数据源的元数据。 因此，多维数据集或其他 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象的绑定都表示为到 DSV 的绑定。 这些绑定可包括到逻辑对象的对象例如视图、 计算的列和关系数据源中物理上不存在的绑定。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 要先向 DSV 添加封装表达式的计算列，然后再在 DSV 中将相应的 OLAP 度量值绑定到该计算列。 有关 DSV 的详细信息，请参阅 [Data Source Views in Multidimensional Models](data-source-views-in-multidimensional-models.md)。  
+ 无论使用何种数据源，数据源视图 (DSV) 均包含有数据源的元数据。 因此，多维数据集或其他 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象的绑定都表示为到 DSV 的绑定。 这些绑定可包括到逻辑对象的绑定-对象（如视图、计算列以及不在数据源中实际存在的关系）。 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 要先向 DSV 添加封装表达式的计算列，然后再在 DSV 中将相应的 OLAP 度量值绑定到该计算列。 有关 DSV 的详细信息，请参阅 [Data Source Views in Multidimensional Models](data-source-views-in-multidimensional-models.md)。  
   
  每个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象都有其自己绑定到数据源的方式。 此外，这些对象的数据绑定和数据源的定义既可以以内联方式随数据绑定对象（如维度）的定义一起提供，也可以作为单独的定义集以外部方式提供。  
   
 ## <a name="analysis-services-data-types"></a>Analysis Services 数据类型  
  在绑定中使用的数据类型必须与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]所支持的数据类型匹配。 在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中定义了下列数据类型：  
   
-|Analysis Services 数据类型|Description|  
+|Analysis Services 数据类型|说明|  
 |---------------------------------|-----------------|  
 |BigInt|64 位有符号整数。 此数据类型映射到 Microsoft [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 Int64 数据类型和 OLE DB 中的 DBTYPE_I8 数据类型。|  
-|Bool|一个布尔值。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 Boolean 数据类型和 OLE DB 中的 DBTYPE_BOOL 数据类型。|  
-|Currency|货币值，范围在 -263（或 -922,337,203,685,477.5808）到 263-1（或 +922,337,203,685,477.5807）之间，精确到货币单位的万分之一。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 Decimal 数据类型和 OLE DB 中的 DBTYPE_CY 数据类型。|  
+|Bool|布尔值。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 Boolean 数据类型和 OLE DB 中的 DBTYPE_BOOL 数据类型。|  
+|货币|货币值，范围在 -263（或 -922,337,203,685,477.5808）到 263-1（或 +922,337,203,685,477.5807）之间，精确到货币单位的万分之一。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 Decimal 数据类型和 OLE DB 中的 DBTYPE_CY 数据类型。|  
 |Date|日期数据，以双精度浮点数存储。 整数部分是自 1899 年 12 月 30 日以来的天数，而小数部分是不足一天的部分。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 DateTime 数据类型和 OLE DB 中的 DBTYPE_DATE 数据类型。|  
-|双精度|双精度浮点数，范围在 -1.79E +308 到 1.79E +308 之间。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 Double 数据类型或 OLE DB 中的 DBTYPE_R8 数据类型。|  
+|Double|双精度浮点数，范围在 -1.79E +308 到 1.79E +308 之间。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 Double 数据类型或 OLE DB 中的 DBTYPE_R8 数据类型。|  
 |Integer|32 位有符号整数。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 Int32 数据类型和 OLE DB 中的 DBTYPE_I4 数据类型。|  
 |Single|单精度浮点数，范围在 -3.40E +38 到 3.40E +38 之间。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 Single 数据类型和 OLE DB 中的 DBTYPE_R4 数据类型。|  
 |SmallInt|16 位有符号整数。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 Int16 数据类型和 OLE DB 中的 DBTYPE_I2 数据类型。|  
-|TinyInt|一个 8 位有符号整数。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 SByte 数据类型和 OLE DB 中 DBTYPE_I1 数据类型。<br /><br /> 注意：如果数据源包含字段属于 tinyint 数据类型，并且 AutoIncrement 属性设置为 True，则会将其转换为数据源视图中的整数。|  
+|TinyInt|一个 8 位有符号整数。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 SByte 数据类型和 OLE DB 中 DBTYPE_I1 数据类型。<br /><br /> 注意：如果数据源包含的字段属于 tinyint 数据类型，并且 AutoIncrement 属性设置为 True，则它们会在数据源视图中转换成整数。|  
 |UnsignedBigInt|一个 64 位无符号整数。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 UInt64 数据类型和 OLE DB 中的 DBTYPE_UI8 数据类型。|  
 |UnsignedInt|32 位无符号整数。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 UInt32 数据类型和 OLE DB 中的 DBTYPE_UI4 数据类型。|  
 |UnsignedSmallInt|16 位无符号整数。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 UInt16 数据类型和 OLE DB 中的 DBTYPE_UI2 数据类型。|  
 |WChar|Unicode 字符的以 Null 值结束的流。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 String 数据类型和 OLE DB 中的 DBTYPE_WSTR 数据类型。|  
   
- 从数据源接收的所有数据都转换为绑定中指定的 [!INCLUDE[ssAS](../../includes/ssas-md.md)] 类型（通常在处理过程中）。 如果无法执行转换（例如，从 String 转换到 Int），则会产生错误。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 通常将绑定中的数据类型设置为与数据源中的源类型最匹配的数据类型。 例如，SQL types Date、DateTime、SmallDateTime、DateTime2、DateTimeOffset 映射到 [!INCLUDE[ssAS](../../includes/ssas-md.md)] Date，SQL type Time 映射到 String。  
+ 从数据源接收的所有数据都转换为绑定中指定的 [!INCLUDE[ssAS](../../includes/ssas-md.md)] 类型（通常在处理过程中）。 如果无法执行转换（例如，从 String 转换到 Int），则会产生错误。 
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 通常将绑定中的数据类型设置为与数据源中的源类型最匹配的数据类型。 例如，SQL types Date、DateTime、SmallDateTime、DateTime2、DateTimeOffset 映射到 [!INCLUDE[ssAS](../../includes/ssas-md.md)] Date，SQL type Time 映射到 String。  
   
 ## <a name="bindings-for-dimensions"></a>维度的绑定  
- 维度的每个属性都绑定到 DSV 中的某一列。 虽然一个维度的所有属性必须来自同一个数据源。 但这些属性却可绑定到不同表中的列。 各表之间的关系在 DSV 中定义。 在多个组的关系到同一个表的存在的情况下，可能需要引入数据源视图，使其作为别名表中的命名的查询。 在 DSV 中，可使用命名计算和命名查询来定义表达式和筛选器。  
+ 维度的每个属性都绑定到 DSV 中的某一列。 虽然一个维度的所有属性必须来自同一个数据源。 但这些属性却可绑定到不同表中的列。 各表之间的关系在 DSV 中定义。 如果同一个表存在多个关系集，则可能必须在 DSV 中引入一个命名查询，使其作为 "别名" 表。 在 DSV 中，可使用命名计算和命名查询来定义表达式和筛选器。  
   
 ## <a name="bindings-for-measuregroups-measures-and-partitions"></a>度量值组、度量值和分区的绑定  
  所有度量值组都具有以下默认绑定：  
@@ -84,7 +86,7 @@ ms.locfileid: "66076080"
   
 -   所有度量值都绑定到该表中的列（例如，`Measure.ValueColumn.Source`）。  
   
--   每个度量值组维度都具有一组定义度量值组粒度的“粒度属性”  。 所有这些属性都必须绑定到包含属性键的事实数据表中的列。 （有关粒度属性的详细信息，请参阅本主题后面的“MeasureGroup 粒度属性”。）  
+-   每个度量值组维度都具有一组定义度量值组粒度的“粒度属性” ** 。 所有这些属性都必须绑定到包含属性键的事实数据表中的列。 （有关粒度属性的详细信息，请参阅本主题后面的“MeasureGroup 粒度属性”。）  
   
  对于每个分区，都可以有选择地重写这些默认绑定。 每个分区都可以指定不同的数据源、表、查询名称或筛选表达式。 最常见的分区策略是使用相同的数据源，逐个分区重写表。 其他的方法包括对每个分区应用不同的筛选器或更改数据源。  
   
@@ -168,23 +170,26 @@ ms.locfileid: "66076080"
   
  外部绑定是通过将可选 `Bindings` 集合对象与处理命令包含在一起而指定的。 可选的 `Bindings` 集合包含以下元素。  
   
-|属性|基数|类型|Description|  
+|properties|基数|类型|说明|  
 |--------------|-----------------|----------|-----------------|  
 |`Binding`|0-n|`Binding`|提供新绑定的集合。|  
 |`DataSource`|0-1|`DataSource`|替换服务器中本应使用的 `DataSource`。|  
 |`DataSourceView`|0-1|`DataSourceView`|替换服务器中本应使用 `DataSourceView`<br /><br /> 。|  
   
- 与外部绑定相关的所有元素都是可选的。 对于所有未指定的元素，ASSL 将应用持久化对象的 DDL 中包含的规范。 `DataSource` 命令中的 `DataSourceView` 或 `Process` 的规范是可选的。 如果指定 `DataSource` 或 `DataSourceView`，则将不对它们进行实例化，并且在 `Process` 命令完成后，不会保留它们。  
+ 与外部绑定相关的所有元素都是可选的。 对于所有未指定的元素，ASSL 将应用持久化对象的 DDL 中包含的规范。 
+  `DataSource` 命令中的 `DataSourceView` 或 `Process` 的规范是可选的。 如果指定 `DataSource` 或 `DataSourceView`，则将不对它们进行实例化，并且在 `Process` 命令完成后，不会保留它们。  
   
 ### <a name="definition-of-the-out-of-line-binding-type"></a>外部绑定类型的定义  
- 在外部 `Bindings` 集合内，ASSL 允许将绑定集合用于多个对象，每个对象对应一个 `Binding`。 每个 `Binding` 都有一个扩展的对象引用，该引用与对象引用类似，但它还可以引用次级对象（例如，维度属性和度量值组属性）。 此对象采用的典型平面格式`Object`中的元素`Process`命令，只不过\<*对象*>\< */对象*>标记不存在。  
+ 在外部 `Bindings` 集合内，ASSL 允许将绑定集合用于多个对象，每个对象对应一个 `Binding`。 每个 `Binding` 都有一个扩展的对象引用，该引用与对象引用类似，但它还可以引用次级对象（例如，维度属性和度量值组属性）。 `Object`此对象在命令中`Process`采用元素的典型窗体，只不过\<*对象*>\<*/Object*> 标记不存在。  
   
- 为其指定绑定每个对象由 XML 元素的窗体\<*对象*> ID (例如， `DimensionID`)。 标识完对象后尽可能明确地处理该窗体\<*对象*> ID，就可以标识的元素为其为其指定绑定，这通常是`Source`。 有一个常见情况需要注意，即 `Source` 为 `DataItem` 的属性，这属于属性中的列绑定。 在这种情况下，您不需要指定 `DataItem` 标记，而只需要简单地指定 `Source` 属性，就如同该属性直接位于要绑定的列上一样。  
+ 为其指定绑定的每个对象都由>ID 的 form \<*对象*的 XML 元素标识（例如`DimensionID`）。 在您使用 form \<*对象*>ID 明确地识别出对象之后，就可以确定为其指定绑定的元素，该元素通常`Source`为。 有一个常见情况需要注意，即 `Source` 为 `DataItem` 的属性，这属于属性中的列绑定。 在这种情况下，您不需要指定 `DataItem` 标记，而只需要简单地指定 `Source` 属性，就如同该属性直接位于要绑定的列上一样。  
   
- `KeyColumns` 由它们在 `KeyColumns` 集合内的顺序标识。 无法只指定属性的第一个键列和第三个键列，因为没有办法指示跳过第二个键列。 所有键列都必须存在于维度属性的外部绑定中。  
+ 
+  `KeyColumns` 由它们在 `KeyColumns` 集合内的顺序标识。 无法只指定属性的第一个键列和第三个键列，因为没有办法指示跳过第二个键列。 所有键列都必须存在于维度属性的外部绑定中。  
   
  虽然 `Translations` 没有 ID，但仍可以通过其语言对其进行语义标识。 因此，`Translations` 内的 `Binding` 需要包含其语言标识符。  
   
- `Binding` 内允许使用的另一个元素为 `ParentColumnID`，它不直接存在于 DDL 中，可用于嵌套表的数据挖掘。 在这种情况下，需要标识要为其提供绑定的嵌套表中的父列。  
+ 
+  `Binding` 内允许使用的另一个元素为 `ParentColumnID`，它不直接存在于 DDL 中，可用于嵌套表的数据挖掘。 在这种情况下，需要标识要为其提供绑定的嵌套表中的父列。  
   
   

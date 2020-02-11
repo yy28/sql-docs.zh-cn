@@ -11,18 +11,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6f5f4492dc18a93ab1fea9d34287eb90703bc3d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63149907"
 ---
 # <a name="preprocess-option-distributed-replay-administration-tool"></a>preprocess 选项（分布式重播管理工具）
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理工具， `DReplay.exe`，是一个命令行工具，可用来与分布式的重播控制器进行通信。 本主题介绍 **preprocess** 命令行选项和相应的语法。  
+  Distributed Replay 管理工具`DReplay.exe`是一个命令行工具，可用于与 Distributed Replay 控制器进行通信。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本主题介绍 **preprocess** 命令行选项和相应的语法。  
   
- **preprocess** 选项用于启动预处理阶段。 在此阶段，控制器会准备对针对目标服务器进行重播的输入跟踪数据。  
+ 
+  **preprocess** 选项用于启动预处理阶段。 在此阶段，控制器会准备对针对目标服务器进行重播的输入跟踪数据。  
   
- ![主题连接图标](../../database-engine/media/topic-link.gif "Topic link icon") 有关与此管理工具语法结合使用的语法约定的详细信息，请参阅 [Transact-SQL 语法约定 (Transact-SQL)](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql)。  
+ ![主题链接图标](../../database-engine/media/topic-link.gif "“主题链接”图标")有关与管理工具语法结合使用的语法约定的详细信息，请参阅[Transact-sql 语法约定 &#40;transact-sql&#41;](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,14 +33,15 @@ ms.locfileid: "63149907"
     -dcontroller_working_dir [-cconfig_file] [-fstatus_interval]  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  **-m** *控制器*  
  指定控制器的计算机名称。 可以用“`localhost`”或“`.`”指代本地计算机。  
   
  如果未指定 **-m** 参数，则使用本地计算机。  
   
  **-i** *input_trace_file*  
- 指定控制器上输入跟踪文件的完整路径，例如 `D:\Mytrace.trc`。 **-i** 参数是必需的。  
+ 指定控制器上输入跟踪文件的完整路径，例如 `D:\Mytrace.trc`。 
+  **-i** 参数是必需的。  
   
  如果同一目录中存在滚动更新文件，则会自动加载并使用这些文件。 文件必须遵循文件滚动更新命名约定，例如：`Mytrace.trc`、`Mytrace_1.trc`、`Mytrace_2.trc`、`Mytrace_3.trc`…`Mytrace_n.trc`。  
   
@@ -47,7 +49,8 @@ ms.locfileid: "63149907"
 >  如果要在控制器以外的其他计算机上使用管理工具，则需要将输入跟踪文件复制到控制器上，以便可以对此参数使用本地路径。  
   
  **-d** *controller_working_dir*  
- 指定控制器上用于存储中间文件的目录。 **-d** 参数是必需的。  
+ 指定控制器上用于存储中间文件的目录。 
+  **-d** 参数是必需的。  
   
  需要满足以下要求：  
   
@@ -72,7 +75,8 @@ ms.locfileid: "63149907"
  如果未指定 **-f** ，则默认间隔为 30 秒。  
   
 ## <a name="examples"></a>示例  
- 在本示例中，预处理阶段采用所有默认设置启动。 值 `localhost` 表示控制器服务与管理工具在同一计算机上运行。 *Input_trace_file* 参数指定输入跟踪数据的位置 `c:\mytrace.trc`。 由于不涉及跟踪文件筛选，因此必须指定 **-c** 参数。  
+ 在本示例中，预处理阶段采用所有默认设置启动。 值 `localhost` 表示控制器服务与管理工具在同一计算机上运行。 
+  *Input_trace_file* 参数指定输入跟踪数据的位置 `c:\mytrace.trc`。 由于不涉及跟踪文件筛选，因此必须指定 **-c** 参数。  
   
 ```  
 dreplay preprocess -m localhost -i c:\mytrace.trc -d c:\WorkingDir  
@@ -103,9 +107,9 @@ dreplay preprocess -m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DReplay
   
  有关详细信息，请参阅 [Distributed Replay Security](distributed-replay-security.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [准备输入跟踪数据](prepare-the-input-trace-data.md)   
- [SQL Server 分布式重播](sql-server-distributed-replay.md)   
- [配置 Distributed Replay](configure-distributed-replay.md)  
+ [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
+ [Configure Distributed Replay](configure-distributed-replay.md)  
   
   

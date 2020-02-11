@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: abc5b51acc9c6beef6d3a62b95370f5081d5364d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63181368"
 ---
 # <a name="preparing-to-implement-a-delivery-extension"></a>准备实现传递扩展插件
@@ -37,7 +37,7 @@ ms.locfileid: "63181368"
   
  下表介绍传递扩展插件的可用接口和类。  
   
-|接口或类|Description|  
+|接口或类|说明|  
 |------------------------|-----------------|  
 |<xref:Microsoft.ReportingServices.Interfaces.IExtension> 接口|表示 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的一个扩展插件。|  
 |<xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> 接口|表示 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的一个传递扩展插件。|  
@@ -48,7 +48,7 @@ ms.locfileid: "63181368"
 |<xref:Microsoft.ReportingServices.Interfaces.RenderedOutputFile> 类|表示来自呈现扩展插件的输出。 <xref:Microsoft.ReportingServices.Interfaces.RenderedOutputFile> 对象包含关联的文件名和类型信息，传递扩展插件需要这些信息以处理由呈现扩展插件返回的流。|  
 |<xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> 接口|一个用户控件，表示在报表管理器中从用户检索传递扩展插件特定的订阅信息的方法（例如，电子邮件地址或指向文件共享的路径）。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Reporting Services 扩展插件](../reporting-services-extensions.md)   
  [实现传递扩展插件](implementing-a-delivery-extension.md)   
  [Reporting Services 扩展插件库](../reporting-services-extension-library.md)  

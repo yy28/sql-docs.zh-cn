@@ -1,5 +1,5 @@
 ---
-title: 处理序列聚类分析模型 |Microsoft Docs
+title: 正在处理顺序分析和聚类分析模型 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 63f46f2d548437a707922bb9cf8b58727061253b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188138"
 ---
 # <a name="processing-the-sequence-clustering-model"></a>处理顺序分析和聚类分析模型
@@ -24,24 +24,24 @@ ms.locfileid: "63188138"
   
 ### <a name="to-process-the-mining-structure-and-model"></a>处理挖掘结构和模型  
   
-1.  上**挖掘模型**菜单[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，选择**处理挖掘结构和所有模型**。  
+1.  在的[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]"**挖掘模型**" 菜单上，选择 "**处理挖掘结构和所有模型**"。  
   
-2.  在警告，询问您是否要生成并部署项目，单击**是**。  
+2.  如果出现警告，询问您是否要生成和部署项目，请单击 **"是"**。  
   
-3.  在中**处理挖掘结构-Sequence Clustering with Region**对话框中，单击**运行**。  
+3.  在 "**处理挖掘结构-序列群集和区域**" 对话框中，单击 "**运行**"。  
   
-     **处理进度**对话框将打开以显示有关模型处理的信息。 处理新的结构和模型可能需要一些时间。  
+     "**处理进度**" 对话框将打开以显示有关模型处理的信息。 处理新的结构和模型可能需要一些时间。  
   
-4.  处理完成后，单击**关闭**退出**处理进度**对话框。  
+4.  处理完成后，单击 "**关闭**" 退出 "**处理进度**" 对话框。  
   
-5.  单击**关闭**再次以退出**处理挖掘结构-Sequence Clustering with Region**对话框。  
+5.  再次单击 "**关闭**" 以退出 "**处理挖掘结构-序列聚类分析**" 对话框。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [浏览聚类分析模型的顺序&#40;数据挖掘中级教程&#41;](../../2014/tutorials/exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial.md)  
+ [浏览顺序分析和聚类分析模型 &#40;中级数据挖掘教程&#41;](../../2014/tutorials/exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据挖掘设计器](../../2014/analysis-services/data-mining/data-mining-designer.md)   
- [Microsoft Sequence Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [处理要求和注意事项（数据挖掘）](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Microsoft 顺序分析和聚类分析算法](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [数据挖掘 &#40;处理要求和注意事项&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

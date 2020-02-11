@@ -19,10 +19,10 @@ ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f1a8480b7e512c697f3645006d453866963b81aa
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72289400"
 ---
 # <a name="sysdm_os_latch_stats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
@@ -31,21 +31,21 @@ ms.locfileid: "72289400"
 返回有关按类组织的所有闩锁等待的信息。 
   
 > [!NOTE]  
-> 若要从 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 或 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]中调用此名称，请使用名称**sys.databases. dm_pdw_nodes_os_latch_stats**。  
+> 若要从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]调用此，请使用名称**dm_pdw_nodes_os_latch_stats**。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|latch_class|**nvarchar(120)**|闩锁类的名称。|  
+|latch_class|**nvarchar （120）**|闩锁类的名称。|  
 |waiting_requests_count|**bigint**|此类中的闩锁等待的个数。 此计数器在闩锁等待启动时递增。|  
 |wait_time_ms|**bigint**|此类中闩锁的总计等待时间（毫秒）。<br /><br /> **注意：** 此列每五分钟更新一次，在闩锁等待期间，在闩锁等待结束时进行更新。|  
 |max_wait_time_ms|**bigint**|内存对象已等待此闩锁的最大时间。 如果此值异常高，则可能指示有内部死锁。|  
 |pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
-## <a name="permissions"></a>Permissions  
-在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要数据库中的 `VIEW DATABASE STATE` 权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
+## <a name="permissions"></a>权限  
+在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要权限。   
+在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层上，需要`VIEW DATABASE STATE`具有数据库中的权限。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  通过检查不同闩锁类的相对等待数和等待时间，sys.dm_os_latch_stats 可以用来标识闩锁争用源。 在某些情况中，可能能够解决或减少闩锁争用。 但是，在某些情况下可能需要与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 客户支持服务部门联系。  
   
 按如下所示使用 `DBCC SQLPERF`，可以重置 sys.dm_os_latch_stats 的内容：  
@@ -61,18 +61,18 @@ GO
 >  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新启动，则这些统计信息不会持久化。 自从上次统计信息重置以来，或自从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动以来，所有数据都是累积的。  
   
 ## <a name="latches"></a>栓  
- 闩锁是类似于锁的内部轻型同步对象，由各种 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件使用。 闩锁主要用于在操作（如缓冲区或文件访问）期间同步数据库页。 每个闩锁与单个分配单元关联。 
+ 闩锁是类似于锁的内部轻型同步对象，由各种[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]组件使用。 闩锁主要用于在操作（如缓冲区或文件访问）期间同步数据库页。 每个闩锁与单个分配单元关联。 
   
  由于闩锁由冲突模式中的另一个线程持有，所以当无法立即满足闩锁请求时，就会发生闩锁等待。 与锁不同，在操作之后，甚至在写入操作中，会立即释放闩锁。  
   
  闩锁根据组件和用法划分为不同的类。 特定类的零个或更多个闩锁可以存在于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中的任何时点上。  
   
 > [!NOTE]  
-> `sys.dm_os_latch_stats` 不会跟踪立即授予的闩锁请求，也不会等待失败。  
+> `sys.dm_os_latch_stats` 不跟踪被立即授予的或失败而不等待的闩锁请求。  
   
  下表包含对各种闩锁类的简短说明。  
   
-|闩锁类|描述|  
+|闩锁类|说明|  
 |-----------------|-----------------|  
 |ALLOC_CREATE_RINGBUF|供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部使用，用于初始化对分配环形缓冲区创建过程的同步。|  
 |ALLOC_CREATE_FREESPACE_CACHE|用来初始化对堆的内部可用空间缓存的同步。|  
@@ -171,7 +171,7 @@ GO
 |SERVICE_BROKER_MIRROR_ROUTE|仅限内部使用。|  
 |TRACE_ID|仅限内部使用。|  
 |TRACE_AUDIT_ID|仅限内部使用。|  
-|跟踪|仅限内部使用。|  
+|TRACE|仅限内部使用。|  
 |TRACE_CONTROLLER|仅限内部使用。|  
 |TRACE_EVENT_QUEUE|仅限内部使用。|  
 |TRANSACTION_DISTRIBUTED_MARK|仅限内部使用。|  
@@ -194,6 +194,6 @@ GO
 |KTM_VIRTUAL_CLOCK|仅限内部使用。|  
   
 ## <a name="see-also"></a>另请参阅  
-[DBCC SQLPERF (Transact-SQL)](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)       
-[与操作系统相关的&#40;&#41;动态管理视图 SQL Server transact-sql](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
-[SQL Server - Latches 对象](../../relational-databases/performance-monitor/sql-server-latches-object.md)      
+[DBCC SQLPERF &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)       
+[&#40;Transact-sql 的与操作系统相关的动态管理视图 SQL Server&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
+[SQL Server Latches 对象](../../relational-databases/performance-monitor/sql-server-latches-object.md)      

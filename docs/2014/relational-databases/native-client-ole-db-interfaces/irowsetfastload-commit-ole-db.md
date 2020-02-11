@@ -1,5 +1,5 @@
 ---
-title: 'Irowsetfastload:: Commit (OLE DB) |Microsoft Docs'
+title: IRowsetFastLoad：： Commit （OLE DB） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3e6983eaccf1a934a318c69e72ebdfebf17d2ad9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63224728"
 ---
 # <a name="irowsetfastloadcommit-ole-db"></a>IRowsetFastLoad::Commit (OLE DB)
-  标记一批插入的行的末尾并将这些行写入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表。 有关示例，请参阅[大容量复制数据使用 IRowsetFastLoad &#40;OLE DB&#41; ](irowsetfastload-ole-db.md)并[将 BLOB 数据发送到 SQL SERVER 使用 IROWSETFASTLOAD 和 ISEQUENTIALSTREAM &#40;OLE DB&#41;](../native-client-ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)。  
+  标记一批插入的行的末尾并将这些行写入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表。 有关示例，请参阅[使用 IRowsetFastLoad &#40;批量复制数据 OLE DB&#41;](irowsetfastload-ole-db.md)并[使用 IRowsetFastLoad 和 ISEQUENTIALSTREAM 将 BLOB 数据发送到 SQL SERVER ](../native-client-ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)&#40;OLE DB&#41;。  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,18 +49,20 @@ fDone
  发生了特定于访问接口的错误。 从访问接口检索特定错误文本的错误信息。  
   
  E_UNEXPECTED  
- 对以前被 **IRowsetFastLoad::Commit** 方法作废的大容量复制行集调用了该方法。  
+ 
+  **
+  **对以前被 IRowsetFastLoad::Commit 方法作废的大容量复制行集调用了该方法。  
   
 ## <a name="remarks"></a>备注  
- 一个[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 访问接口大容量复制行集的行为与延迟更新模式的行集相同。 当用户通过行集插入行数据时，对插入行的处理方式与在支持 IRowsetUpdate 的行集上挂起插入相同  。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序大容量复制行集作为延迟更新模式行集的行为。 当用户通过行集插入行数据时，对插入行的处理方式与在支持 IRowsetUpdate 的行集上挂起插入相同****。  
   
- 使用者必须对大容量复制行集调用 Commit 方法，才能以与使用 IRowsetUpdate::Update 方法将挂起行提交到 SQL Server 实例相同的方式将插入行写入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表   。  
+ 使用者必须对大容量复制行集调用 Commit 方法，才能以与使用 IRowsetUpdate::Update 方法将挂起行提交到 SQL Server 实例相同的方式将插入行写入 ** 表**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]****。  
   
- 如果使用者释放其对大容量复制行集的引用，而不调用 Commit 方法，则以前未写入的所有插入行将丢失  。  
+ 如果使用者释放其对大容量复制行集的引用，而不调用 Commit 方法，则以前未写入的所有插入行将丢失****。  
   
- 通过在将 fDone 参数设置为 FALSE 的情况下调用 Commit 方法，使用者可以成批插入行   。 当 fDone 设置为 TRUE 时，行集变为无效  。 无效的大容量复制行集仅支持 ISupportErrorInfo 接口和 IRowsetFastLoad::Release 方法   。  
+ 通过在将 fDone 参数设置为 FALSE 的情况下调用 Commit 方法，使用者可以成批插入行******。 当 fDone 设置为 TRUE 时，行集变为无效**。 无效的大容量复制行集仅支持 ISupportErrorInfo 接口和 IRowsetFastLoad::Release 方法********。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IRowsetFastLoad &#40;OLE DB&#41;](irowsetfastload-ole-db.md)  
   
   

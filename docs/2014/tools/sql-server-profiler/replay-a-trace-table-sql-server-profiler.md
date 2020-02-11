@@ -1,5 +1,5 @@
 ---
-title: 重播跟踪表 (SQL Server Profiler) |Microsoft Docs
+title: 重播跟踪表（SQL Server Profiler） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6e80a18cef595ae3543aba8a656aca9267607e38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63240489"
 ---
 # <a name="replay-a-trace-table-sql-server-profiler"></a>重播跟踪表 (SQL Server Profiler)
@@ -41,7 +41,7 @@ ms.locfileid: "63240489"
   
 5.  选择“按跟踪的顺序重播事件”  或“使用多个线程重播事件”  。 下表列出了这些设置之间的差异。  
   
-    |Option|Description|  
+    |选项|说明|  
     |------------|-----------------|  
     |**按跟踪事件的顺序重播事件**|按记录事件的顺序重播事件。 此选项启用调试。|  
     |**使用多个线程重播事件**|此选项使用多个线程重播各个事件，而不考虑其顺序。 此选项用于优化性能。|  
@@ -58,10 +58,10 @@ ms.locfileid: "63240489"
   
     -   若要控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在重播期间管理进程的方式，请配置 **“Health Monitor 选项”** 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [运行 SQL Server Profiler 所需的权限](sql-server-profiler.md)   
  [重播跟踪](replay-traces.md)   
  [打开跟踪表 (SQL Server Profiler)](open-a-trace-table-sql-server-profiler.md)   
- [SQL Server 事件探查器](sql-server-profiler.md)  
+ [SQL Server Profiler](sql-server-profiler.md)  
   
   

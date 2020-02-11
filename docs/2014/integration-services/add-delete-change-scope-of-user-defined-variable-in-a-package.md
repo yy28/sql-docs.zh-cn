@@ -1,5 +1,5 @@
 ---
-title: 添加、 删除、 更改包中用户定义变量的作用域 |Microsoft Docs
+title: 添加、删除、更改包中用户定义变量的作用域 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,18 +13,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 583e0f92f96c153fdeb0ade57fcdfa1d27578350
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061988"
 ---
 # <a name="add-delete-change-scope-of-user-defined-variable-in-a-package"></a>添加、删除、更改包中用户定义变量的作用域
-  这些过程介绍如何使用“变量”窗口来添加、删除和更改包中用户定义变量的作用域。   
+  这些过程介绍如何使用“变量”窗口来添加、删除和更改包中用户定义变量的作用域。****  
   
  有关变量作用域的详细信息，请参阅 [Integration Services (SSIS) 变量](integration-services-ssis-variables.md)区域之下。  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 还提供了可在运行时提供系统信息的系统变量，这些系统变量可在包和事件处理程序等容器中使用。 您无法删除系统变量。  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 还提供了可在运行时提供系统信息的系统变量，这些系统变量可在包和事件处理程序等容器中使用。 您无法删除系统变量。  
   
 ### <a name="to-add-a-variable"></a>添加变量  
   
@@ -44,7 +45,7 @@ ms.locfileid: "66061988"
   
 5.  在 **“变量”** 窗口中，单击 **“添加变量”** 图标。 新的变量将添加到该列表中。  
   
-6.  也可以单击 **“网格选项”** 图标，选择要在 **“变量网格选项”** 对话框中显示的其他列，然后单击 **“确定”** 。  
+6.  也可以单击 **“网格选项”** 图标，选择要在 **“变量网格选项”** 对话框中显示的其他列，然后单击 **“确定”**。  
   
 7.  或者，设置变量属性。 有关详细信息，请参阅 [设置用户定义变量的属性](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)。  
   
@@ -58,9 +59,9 @@ ms.locfileid: "66061988"
   
 3.  在 **SSIS** 菜单上单击 **“变量”** 。 您可以通过将 View.Variables 命令映射到在 **“选项”** 对话框的 **“键盘”** 页上选择的组合键来显示 **“变量”** 窗口。  
   
-4.  选择要删除的变量，然后单击 **“删除变量”** 。  
+4.  选择要删除的变量，然后单击 **“删除变量”**。  
   
-     如果在“变量”窗口中没有看到该变量，请单击“网格选项”，然后选择“显示所有作用域的变量”   。  
+     如果在“变量”窗口中没有看到该变量，请单击“网格选项”，然后选择“显示所有作用域的变量”********。  
   
 5.  如果 **“确认删除变量”** 对话框打开，请单击 **“是”** 确认删除。  
   
@@ -74,17 +75,17 @@ ms.locfileid: "66061988"
   
 3.  在 **SSIS** 菜单上单击 **“变量”** 。 您可以通过将 View.Variables 命令映射到在 **“选项”** 对话框的 **“键盘”** 页上选择的组合键来显示 **“变量”** 窗口。  
   
-4.  选择该变量，然后单击 **“移动变量”** 。  
+4.  选择该变量，然后单击 **“移动变量”**。  
   
-     如果在“变量”窗口中没有看到该变量，请单击“网格选项”，然后选择“显示所有作用域的变量”   。  
+     如果在“变量”窗口中没有看到该变量，请单击“网格选项”，然后选择“显示所有作用域的变量”********。  
   
 5.  在 **“选择新作用域”** 对话框中，选择包或包中的容器、任务或事件处理程序，以更改变量作用域。  
   
 6.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services (SSIS) 变量](integration-services-ssis-variables.md)   
- [在包中使用变量](../../2014/integration-services/use-variables-in-packages.md)   
+ [使用包中的变量](../../2014/integration-services/use-variables-in-packages.md)   
  [设置用户定义变量的属性](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)   
  [在子包中使用变量和参数的值](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)  
   

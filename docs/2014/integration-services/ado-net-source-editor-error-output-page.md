@@ -1,5 +1,5 @@
 ---
-title: ADO NET 源编辑器 （错误输出页） |Microsoft Docs
+title: ADO NET 源编辑器（"错误输出" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8543f1a7bd14db09873aaefb58b74efae0f3cf34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061639"
 ---
 # <a name="ado-net-source-editor-error-output-page"></a>ADO NET 源编辑器（“错误输出”页）
@@ -28,16 +28,16 @@ ms.locfileid: "66061639"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，打开具有 ADO NET 源的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包。  
   
-2.  在“数据流”  选项卡上，双击 ADO NET 源。  
+2.  在“数据流”**** 选项卡上，双击 ADO NET 源。  
   
-3.  在 **“ADO NET 源编辑器”** 中，单击 **“错误输出”** 。  
+3.  在 **“ADO NET 源编辑器”** 中，单击 **“错误输出”**。  
   
 ## <a name="options"></a>选项  
  **输入/输出**  
  查看数据源的名称。  
   
  **列**  
- 查看在“ADO NET 源编辑器”对话框的“连接管理器”页上选择的外部（源）列   。  
+ 查看在“ADO NET 源编辑器”对话框的“连接管理器”页上选择的外部（源）列********。  
   
  **错误**  
  指定发生错误时应执行的操作：忽略失败、重定向行或使组件失败。  
@@ -53,12 +53,12 @@ ms.locfileid: "66061639"
  **将此值设置到选定的单元格**  
  指定发生错误或截断时应对所有选定单元格执行的操作：忽略失败、重定向行或使组件失败。  
   
- **Apply**  
+ **应用**  
  将错误处理选项应用到选定的单元格。  
   
-## <a name="see-also"></a>请参阅  
- [ADO NET 源编辑器（“连接管理器”页）](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
- [ADO NET 源编辑器（“列”页）](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
+## <a name="see-also"></a>另请参阅  
+ [ADO NET 源编辑器 &#40;连接管理器页&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
+ [ADO NET 源编辑器 &#40;列 "页&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
  [ADO.NET 连接管理器](connection-manager/ado-net-connection-manager.md)  
   
   

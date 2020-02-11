@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f7a06d30f25f5c78236fe30f148b254ee817dfc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63232407"
 ---
 # <a name="use-nested-for-xml-queries"></a>使用嵌套 FOR XML 查询
-  `xml`数据类型和[FOR XML 查询中的 TYPE 指令](type-directive-in-for-xml-queries.md)实现在服务器上以及在客户端上处理由 FOR XML 查询返回的 XML。  
+  `xml`数据类型和[for xml 查询中的 type 指令](type-directive-in-for-xml-queries.md)允许在服务器和客户端上处理由 for XML 查询返回的 xml。  
   
 ## <a name="processing-with-xml-type-variables"></a>使用 xml 类型变量进行处理  
  您可以将 FOR XML 查询结果分配给 `xml` 类型变量，或使用 XQuery 查询结果，将该结果分配给 `xml` 类型变量以进行进一步处理。  
@@ -39,7 +39,7 @@ SELECT @x
 --<row ProductModelID="119" Name="Bike Wash" />  
 ```  
   
- 还可以使用 `xml` 数据类型方法之一，处理在变量 `@x` 中返回的 XML。 例如，可以使用 `ProductModelID` value() 方法 [检索](/sql/t-sql/xml/value-method-xml-data-type)属性值。  
+ 还可以使用 `@x` 数据类型方法之一，处理在变量 `xml` 中返回的 XML。 例如，可以使用 `ProductModelID` value() 方法 [检索](/sql/t-sql/xml/value-method-xml-data-type)属性值。  
   
 ```  
 DECLARE @i int;  
@@ -57,7 +57,7 @@ FOR XML RAW, TYPE,ROOT('myRoot');
   
 ```  
   
- 下面是结果：  
+ 结果如下：  
   
 ```  
 <myRoot>  
@@ -66,7 +66,7 @@ FOR XML RAW, TYPE,ROOT('myRoot');
 </myRoot>  
 ```  
   
- 由于结果为 `xml` 类型，因此可以对此 XML 直接指定 `xml` 数据类型方法之一，如以下查询所示。 在此查询中，[query() 方法（xml 数据类型）](/sql/t-sql/xml/query-method-xml-data-type)用于检索 <`myRoot`> 元素的第一个 <`row`> 子元素。  
+ 由于结果为 `xml` 类型，因此可以对此 XML 直接指定 `xml` 数据类型方法之一，如以下查询所示。 在此查询中，[query() 方法（xml 数据类型）](/sql/t-sql/xml/query-method-xml-data-type)用于检索 <`row`> 元素的第一个 <`myRoot`> 子元素。  
   
 ```  
 SELECT  (SELECT ProductModelID, Name  
@@ -76,7 +76,7 @@ SELECT  (SELECT ProductModelID, Name
   
 ```  
   
- 下面是结果：  
+ 结果如下：  
   
 ```  
 <row ProductModelID="122" Name="All-Purpose Bike Stand" />  

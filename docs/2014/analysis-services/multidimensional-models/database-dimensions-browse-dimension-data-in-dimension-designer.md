@@ -1,5 +1,5 @@
 ---
-title: 浏览维度设计器中的维度数据 |Microsoft Docs
+title: 在维度设计器中浏览维度数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d553f0fbb7e8c4188ff8fec2ac292213547e43b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075992"
 ---
 # <a name="browse-dimension-data-in-dimension-designer"></a>在维度设计器中浏览维度数据
@@ -29,15 +29,15 @@ ms.locfileid: "66075992"
   
 1.  打开您要浏览的维度，然后单击 **“浏览器”** 选项卡。  
   
-2.  在“层次结构”  下拉列表中，选择要浏览其数据的层次结构。  
+2.  在“层次结构”**** 下拉列表中，选择要浏览其数据的层次结构。  
   
-3.  根据情况，如果维度包括翻译，可以在“语言”  下拉列表中选择要用于显示数据的语言。  
+3.  根据情况，如果维度包括翻译，可以在“语言”**** 下拉列表中选择要用于显示数据的语言。  
   
     > [!NOTE]  
     >  该维度中必须有一个以选定的语言定义的翻译。  
   
-## <a name="see-also"></a>请参阅  
- [维度简介（Analysis Services - 多维数据）](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>另请参阅  
+ [Analysis Services 多维数据 &#40;维度简介&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [多维模型中的维度](dimensions-in-multidimensional-models.md)  
   
   

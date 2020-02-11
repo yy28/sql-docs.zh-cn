@@ -14,24 +14,24 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f36cd694756544a44df657d97fd84e1967167b55
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63183005"
 ---
 # <a name="sql-server-sql-errors-object"></a>SQL Server SQL Errors 对象
-  Microsoft **中的** SQLServer:SQL Errors [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象提供了一些计数器，以监视 **SQL Errors**。  
+  Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的**SQLServer： SQL Errors**对象提供了计数器来监视**SQL 错误**。  
   
  下表介绍了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQL Errors** 计数器。  
   
-|SQL Server SQL Errors 计数器|Description|  
+|SQL Server SQL Errors 计数器|说明|  
 |------------------------------------|-----------------|  
-|**Errors/sec**|每秒的错误数。|  
+|**错误数/秒**|每秒的错误数。|  
   
  对象中的每个计数器均包含以下实例：  
   
-|项|定义|  
+|Item|定义|  
 |----------|----------------|  
 |**_Total**|有关所有错误的信息。|  
 |**DB 离线错误**|跟踪导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将当前数据库离线的错误。|  
@@ -39,7 +39,7 @@ ms.locfileid: "63183005"
 |**断开连接错误**|跟踪导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 断开当前连接的错误。|  
 |**用户错误**|有关用户错误的信息。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [监视资源使用情况（系统监视器）](monitor-resource-usage-system-monitor.md)  
   
   

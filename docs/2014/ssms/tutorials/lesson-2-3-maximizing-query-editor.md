@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 54a598ab383773a3ada43f0cc44892f42ac3ba2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63222517"
 ---
 # <a name="maximizing-query-editor"></a>最大化查询编辑器
@@ -36,9 +36,9 @@ ms.locfileid: "63222517"
   
 1.  单击“查询编辑器”窗口中的任意位置。  
   
-2.  在“窗口”  菜单中，单击“自动隐藏全部”  。  
+2.  在“窗口”**** 菜单中，单击“自动隐藏全部”****。  
   
-3.  若要还原工具窗口，请打开每个工具，再单击窗口上的“自动隐藏”  按钮，使此窗口保持打开状态。  
+3.  若要还原工具窗口，请打开每个工具，再单击窗口上的“自动隐藏”**** 按钮，使此窗口保持打开状态。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [使用注释](lesson-2-4-using-comments.md)  

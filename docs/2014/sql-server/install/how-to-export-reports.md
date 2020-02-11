@@ -18,27 +18,27 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e99cbf0f0154a7cda5f237256a8d60cf1ebb085d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094902"
 ---
-# <a name="how-to-export-reports"></a>如何：Export Reports
+# <a name="how-to-export-reports"></a>如何导出报表
   升级顾问报表查看器使您能够导出平面文件版本的报表。 这样便可处理电子表格或文字处理文档中的信息，或者将这些信息用电子邮件发送给其他人。  
   
 ### <a name="to-export-a-report"></a>导出报表  
   
 1.  在此报表查看器中，显示您要导出的报表。 有关说明，请参阅[如何：查看升级顾问报表](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)。  
   
-2.  若要筛选报表，请选择一个介于**按筛选**框。  
+2.  若要筛选报表，请从 "**筛选依据**" 框中选择值。  
   
-3.  单击**将报表导出**。  
+3.  单击 "**导出报表**"。  
   
-4.  在中**导出报表文件**对话框中，键入文件名称，选择一个目标，，然后单击**确定**。 文件以 CSV（逗号分隔的值）格式保存。 可以使用 Microsoft Excel 或类似应用程序打开文件。 如果希望数据为其他格式，则可以将信息从 Excel 复制到 Microsoft Word 或其他应用程序中。  
+4.  在 "**导出报表文件**" 对话框中，键入文件名，选择目标，然后单击 **"确定"**。 文件以 CSV（逗号分隔的值）格式保存。 可以使用 Microsoft Excel 或类似应用程序打开文件。 如果希望数据为其他格式，则可以将信息从 Excel 复制到 Microsoft Word 或其他应用程序中。  
   
-## <a name="see-also"></a>请参阅  
- [如何：启动升级顾问](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)   
+## <a name="see-also"></a>另请参阅  
+ [如何启动升级顾问](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)   
  [如何：运行升级顾问分析向导](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [解决升级问题](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
  [升级顾问操作指南主题](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   

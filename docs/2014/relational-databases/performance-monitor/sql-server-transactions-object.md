@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c7dffaac161a61496c296ec99ec1f9ad2e1951a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63183002"
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server Transactions 对象
@@ -29,12 +29,12 @@ ms.locfileid: "63183002"
   
  下表说明了 **SQLServer:Transactions** 计数器。  
   
-|SQL Server Transactions 计数器|Description|  
+|SQL Server Transactions 计数器|说明|  
 |--------------------------------------|-----------------|  
 |**Free Space in tempdb (KB)**|**tempdb**中的可用空间量 (KB)。 必须具有足够的可用空间以保存快照隔离级别版本存储区和在 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中创建的所有新临时对象。|  
 |**Longest Transaction Running Time**|比任何其他当前事务活动时间都长的事务启动后运行的时间长度（秒）。 在数据库处于读取已提交读快照隔离级别之下时，该计数器只显示活动。 如果数据库处于任何其他隔离级别中，该计数器将不会记录任何活动。|  
 |**NonSnapshot Version Transactions**|未使用快照隔离级别并进行了数据修改（这些修改在 **tempdb** 版本存储区中生成行版本）的当前活动事务的数目。|  
-|**Snapshot Transactions**|使用快照隔离级别的当前活动事务的数目。<br /><br /> 注意：Snapshot Transactions 对象计数器在进行第一次数据访问时响应，而不是在发出 `BEGIN TRANSACTION` 语句时响应  。|  
+|**Snapshot Transactions**|使用快照隔离级别的当前活动事务的数目。<br /><br /> 注意： **Snapshot Transactions** 对象计数器在进行第一次数据访问时响应，而不是在发出 `BEGIN TRANSACTION` 语句时响应。|  
 |**中的**|当前活动的所有类型的事务的数目。|  
 |**Update conflict ratio**|使用快照隔离级别的、在最后一秒内遇到更新冲突的事务的百分比。 更新冲突在以下情况下发生：快照隔离级别事务尝试修改一行，但该行最近一次修改由在快照隔离级别事务启动时未提交的其他事务执行。|  
 |**Update Snapshot Transactions**|使用快照隔离级别并已修改数据的当前活动事务的数目。|  
@@ -45,7 +45,7 @@ ms.locfileid: "63183002"
 |**Version Store unit creation**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例启动后，在快照隔离存储区中创建的分配单元的数目。|  
 |**Version Store unit truncation**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例启动后，从快照隔离存储区中删除的分配单元的数目。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [监视资源使用情况（系统监视器）](monitor-resource-usage-system-monitor.md)  
   
   

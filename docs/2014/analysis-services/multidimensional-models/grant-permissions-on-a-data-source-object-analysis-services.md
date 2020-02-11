@@ -1,5 +1,5 @@
 ---
-title: 授予权限的数据源对象 (Analysis Services) |Microsoft Docs
+title: 授予对数据源对象的权限（Analysis Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4a869d2033adaa57be0ace522787332c03a69bcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075003"
 ---
 # <a name="grant-permissions-on-a-data-source-object-analysis-services"></a>授予数据源对象的权限 (Analysis Services)
@@ -36,9 +36,9 @@ ms.locfileid: "66075003"
 ## <a name="set-read-permissions-to-a-data-source"></a>设置对数据源的读取权限  
  可以使数据库角色无权访问数据源对象，也可以授予其读取权限。  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，在对象资源管理器中展开相应数据库的“角色”，然后单击某个数据库角色（或创建一个新的数据库角色）。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，在对象资源管理器中展开相应数据库的“角色”****，然后单击某个数据库角色（或创建一个新的数据库角色）。  
   
-2.  在“数据源访问”窗格  ，找到“数据源”列表中的数据源对象  ，然后在该数据源的“访问”列表  中选择“读”  。 如果此选项不可用，请检查“常规”  面板，以查看是否已选择“完全控制”。 “完全控制”已在提供权限，你不能覆盖数据源上的权限。  
+2.  在“数据源访问”窗格 **** ，找到“数据源”列表中的数据源对象 **** ，然后在该数据源的“访问”列表 **** 中选择“读” **** 。 如果此选项不可用，请检查“常规” **** 面板，以查看是否已选择“完全控制”。 “完全控制”已在提供权限，你不能覆盖数据源上的权限。  
   
 ## <a name="working-with-the-connection-string-used-by-a-data-source-object"></a>使用数据源对象使用的连接字符串  
  数据源对象包括用于连接到基础数据源的连接字符串。 此连接字符串可以指定以下内容之一：  
@@ -53,12 +53,12 @@ ms.locfileid: "66075003"
   
      如果客户端不允许模拟（通过 OLE DB 和其他客户端组件中的“Impersonation Level”属性），则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将尝试匿名连接到基础数据源（大多数数据源不接受匿名连接）。 糯米连接到远程数据源很少成功，这是因为大多数数据源不接受匿名连接。）  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [多维模型中的数据源](data-sources-in-multidimensional-models.md)   
- [连接字符串属性 (Analysis Services)](../instances/connection-string-properties-analysis-services.md)   
+ [连接字符串属性 &#40;Analysis Services&#41;](../instances/connection-string-properties-analysis-services.md)   
  [Analysis Services 支持的身份验证方法](../instances/authentication-methodologies-supported-by-analysis-services.md)   
- [授予对维度数据的自定义访问权限 (Analysis Services)](grant-custom-access-to-dimension-data-analysis-services.md)   
- [授予多维数据集或模型权限 (Analysis Services)](grant-cube-or-model-permissions-analysis-services.md)   
- [授予单元数据的自定义访问权限 (Analysis Services)](grant-custom-access-to-cell-data-analysis-services.md)  
+ [授予对维度数据的自定义访问 &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
+ [&#40;Analysis Services 授予多维数据集或模型权限&#41;](grant-cube-or-model-permissions-analysis-services.md)   
+ [授予对单元数据的自定义访问权限 &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
   

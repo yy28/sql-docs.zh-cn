@@ -1,5 +1,5 @@
 ---
-title: 替换为使用的 xp_sqlagent_proxy_account 扩展存储的过程与新的存储过程 |Microsoft Docs
+title: 使用新的存储过程替换 xp_sqlagent_proxy_account 扩展存储过程的使用情况 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4faff8420e318f7250cfc67dda173197d8028f0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092762"
 ---
-# <a name="replace-usage-of-the-xpsqlagentproxyaccount-extended-stored-procedure-with-new-stored-procedures"></a>用新存储过程代替使用的 xp_sqlagent_proxy_account 扩展存储过程
+# <a name="replace-usage-of-the-xp_sqlagent_proxy_account-extended-stored-procedure-with-new-stored-procedures"></a>用新存储过程代替使用的 xp_sqlagent_proxy_account 扩展存储过程
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理支持多个代理帐户。 您可使用一组新的存储过程来定义这些代理帐户。 有关新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理存储过程的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的以下主题：  
   
 -   "sp_add_proxy ([!INCLUDE[tsql](../../includes/tsql-md.md)])"  
@@ -45,12 +46,12 @@ ms.locfileid: "66092762"
 -   "sp_update_proxy ([!INCLUDE[tsql](../../includes/tsql-md.md)])"  
   
 > [!NOTE]  
->  升级到之后[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]，使用的任何语句**xp_sqlagent_proxy_account**扩展存储的过程将不起作用。 使用**sp_xp_cmdshell_proxy_account**而不是**xp_sqlagent_proxy_account**设置为代理**xp_cmdshell**。  
+>  升级到[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]之后，使用**xp_sqlagent_proxy_account**扩展存储过程的任何语句都将不起作用。 使用**sp_xp_cmdshell_proxy_account**而不是**xp_sqlagent_proxy_account**来设置**xp_cmdshell**的代理。  
   
 ## <a name="component"></a>组件  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理商  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 代理升级问题](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)  
   
   

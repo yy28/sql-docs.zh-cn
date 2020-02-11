@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2daf8fe7e12cec5317335a0dcce273b16d428bcc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63215789"
 ---
 # <a name="delete-a-workload-group"></a>删除工作负荷组
@@ -39,7 +39,7 @@ ms.locfileid: "63215789"
   
 -   重新启动服务器。 完成重新启动过程后，将不会创建已删除的组，并且已移动的组将使用新分配的资源池。  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 权限  
  删除工作负荷组需要 CONTROL SERVER 权限。  
   
 ##  <a name="DelWGObjEx"></a> 使用对象资源管理器删除工作负荷组  
@@ -91,7 +91,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [资源调控器](resource-governor.md)   
  [创建资源池](create-a-resource-pool.md)   
  [创建工作负荷组](create-a-workload-group.md)   

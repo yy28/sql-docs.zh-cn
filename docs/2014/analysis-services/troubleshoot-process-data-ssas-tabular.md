@@ -1,5 +1,5 @@
 ---
-title: 数据处理 (SSAS 表格) 故障排除 |Microsoft Docs
+title: 处理数据疑难解答（SSAS 表格） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f76d67d5e44fc700d4b889840ef2dcc07a0bfde0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065768"
 ---
 # <a name="troubleshoot-process-data-ssas-tabular"></a>数据处理故障排除（SSAS 表格）
@@ -34,14 +34,14 @@ ms.locfileid: "66065768"
   
 -   [对数据源的更改限制](#bkmk_rest_changes)  
   
-##  <a name="bkmk_how_df_works"></a> 数据处理的工作机制  
+##  <a name="bkmk_how_df_works"></a>数据处理的工作原理  
  处理数据时，模型设计器中的数据将替换为新数据。 不能只导入新数据行或更改的数据。 模型设计器不跟踪之前添加了哪些行。  
   
  数据处理以事务形式执行。 这意味着一旦开始更新数据，整个更新不是失败就是成功；绝不会出现部分数据正确的情况。  
   
  从 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]启动的手动数据处理由 Analysis Services 的本地内存中实例来处理。 因此，数据处理操作会对计算机中其他任务的性能产生影响。 但是，如果你使用脚本在已部署的模型中安排数据的自动处理，该 Analysis Services 实例将管理导入过程及其时间。  
   
-##  <a name="bkmk_impact_of_df"></a> 数据处理的影响  
+##  <a name="bkmk_impact_of_df"></a>数据处理的影响  
  数据的处理通常会触发数据的重新计算。  处理数据意味着从外部源获取最新数据；重新计算意味着更新使用已更改数据的所有公式的结果。 处理操作通常会触发重新计算。  
   
  因此，在更改数据源或处理从数据源中获取的数据之前，您应该始终注意潜在影响，还要考虑以下潜在后果：  
@@ -56,35 +56,35 @@ ms.locfileid: "66065768"
   
 -   更改筛选器时，必须重新计算整个模型。  
   
-##  <a name="bkmk_det_source"></a> 确定数据源  
+##  <a name="bkmk_det_source"></a>确定数据源  
  如果您不确定模型中数据的来源，可以使用 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中的工具获取详细信息，包括源文件的名称和路径。  
   
 #### <a name="to-find-the-source-of-existing-data"></a>查找现有数据的源  
   
 1.  在模型设计器中，选择包含要了解其源的数据的表。  
   
-2.  单击 **“表”** 菜单，然后单击 **“表属性”** 。  
+2.  单击 **“表”** 菜单，然后单击 **“表属性”**。  
   
 3.  在 **“编辑表属性”** 对话框中，记下为 **“连接名称”** 列出的值。  
   
-4.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]的 **“模型”** 菜单上，单击 **“现有连接”** 。  
+4.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]的 **“模型”** 菜单上，单击 **“现有连接”**。  
   
-5.  在 **“现有连接”** 对话框中，选择具有您在步骤 3 中找到的名称的数据源，然后单击 **“编辑”** 。  
+5.  在 **“现有连接”** 对话框中，选择具有您在步骤 3 中找到的名称的数据源，然后单击 **“编辑”**。  
   
 6.  在 **“编辑连接”** 对话框中查看连接信息，如数据库名称、文件路径或报表路径。  
   
-##  <a name="bkmk_det_last_ref"></a> 确定最后刷新数据的时间  
+##  <a name="bkmk_det_last_ref"></a>确定最后刷新数据的时间  
  可以使用“表属性”确定最后刷新数据的时间。  
   
 #### <a name="to-find-the-date-and-time-that-a-table-was-last-processed"></a>查找最后处理表的日期和时间  
   
 1.  在模型设计器中，选择包含要了解其刷新日期的数据的表。  
   
-2.  单击 **“表”** 菜单，然后单击 **“表属性”** 。  
+2.  单击 **“表”** 菜单，然后单击 **“表属性”**。  
   
 3.  在 **“编辑表属性”** 对话框中， **“最后刷新时间”** 显示刷新表的最后日期。  
   
-##  <a name="bkmk_restrictions"></a> 对可刷新数据源的限制  
+##  <a name="bkmk_restrictions"></a>对可刷新数据源的限制  
  对于可从 Analysis Services 实例上已部署的模型进行自动处理的数据源，存在一些限制。 请务必仅选择满足以下条件的那些数据源：  
   
 -   该数据源必须在进行数据处理时可用，并且还必须在规定的位置上可用。 如果原始数据源处于创建此模型的用户的本地磁盘驱动器上，则必须或者从数据处理操作中排除该数据源，或者确定一种方法来将该数据源发布到可通过网络连接访问的位置。 如果您将某一数据源移到一个网络位置，请确保在模型设计器中打开模型并且重复数据检索步骤。 这是重新建立数据源连接属性中存储的连接信息所必需的。  
@@ -97,15 +97,15 @@ ms.locfileid: "66065768"
   
      外部数据源通过您在使用表导入向导将原始数据导入到模型时指定的嵌入连接字符串、URL 或 UNC 路径来访问。 在后续的数据刷新操作中将重用在数据源连接中存储的原始连接信息。 没有专为进行数据处理而创建和管理单独的连接信息；而只使用现有连接信息。  
   
-##  <a name="bkmk_rest_changes"></a> 对数据源的更改限制  
+##  <a name="bkmk_rest_changes"></a>对数据源的更改的限制  
  对于您可以对数据源进行的更改，存在一些限制：  
   
 -   列的数据类型只能更改为兼容的数据类型。 例如，如果列中的数据中包含小数，则您无法将该数据类型更改为整数。 但是，您可以将数字数据更改为文本。 有关数据类型的详细信息，请参阅[支持的数据类型（SSAS 表格）](tabular-models/data-types-supported-ssas-tabular.md)。  
   
 -   不能在不同表中多选列和更改列属性。 您一次只能使用一个表或视图。  
   
-## <a name="see-also"></a>请参阅  
- [手动处理数据（SSAS 表格）](manually-process-data-ssas-tabular.md)   
- [编辑现有数据源连接（SSAS 表格）](edit-an-existing-data-source-connection-ssas-tabular.md)  
+## <a name="see-also"></a>另请参阅  
+ [手动处理 &#40;SSAS 表格&#41;的数据](manually-process-data-ssas-tabular.md)   
+ [编辑现有数据源连接 &#40;SSAS 表格&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)  
   
   

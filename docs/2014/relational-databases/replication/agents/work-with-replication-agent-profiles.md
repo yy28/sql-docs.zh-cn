@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b6f66d1bab70619db1631117268e5d62c24c943f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63157123"
 ---
 # <a name="work-with-replication-agent-profiles"></a>使用复制代理配置文件
@@ -99,7 +99,7 @@ ms.locfileid: "63157123"
   
     -   若要查看代理的所有参数，请清除 **“仅显示此配置文件中使用的参数”** 复选框。 有关代理参数的信息，请参阅本主题末尾处的链接。  
   
-4.  单击 **“关闭”** 。  
+4.  单击“关闭”  。  
   
 ###  <a name="Create_SSMS"></a> 创建用户定义的配置文件  
   
@@ -136,9 +136,9 @@ ms.locfileid: "63157123"
   
 ###  <a name="Create_tsql"></a> 创建一个新的代理配置文件  
   
-1.  在分发服务器上，执行 [sp_add_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql)。 指定 **@name** ，将 **@profile_type** 的值指定为 **@profile_type** ，并为 **@agent_type** 指定下列值之一：  
+1.  在分发服务器上，执行 [sp_add_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql)。 为**@name**指定，值为**1** **@profile_type**，为指定以下值之一**@agent_type**：  
   
-    -   **@profile_type** - [Replication Snapshot Agent](replication-snapshot-agent.md)  
+    -   **\@profile_type** - [Replication Snapshot Agent](replication-snapshot-agent.md)  
   
     -   **2** - [Replication Log Reader Agent](replication-log-reader-agent.md)  
   
@@ -148,15 +148,15 @@ ms.locfileid: "63157123"
   
     -   **9** - [Replication Queue Reader Agent](replication-queue-reader-agent.md)  
   
-     如果此配置文件将成为此复制代理类型的新默认配置文件，请将 **@profile_type** 的值指定为 **@default** 。 使用 **@profile_id** 输出参数可返回新配置文件的标识符。 这将会使用基于给定代理类型的默认配置文件的配置文件参数集创建新的配置文件。  
+     如果此配置文件将成为此复制代理类型的新默认配置文件，请将 **@profile_type** 的值指定为 **@default**。 使用**@profile_id** output 参数返回新配置文件的标识符。 这将会使用基于给定代理类型的默认配置文件的配置文件参数集创建新的配置文件。  
   
 2.  在已创建新配置文件后，可添加、删除或修改默认参数以自定义该配置文件。  
   
 ###  <a name="Modify_tsql"></a> 修改现有代理配置文件  
   
-1.  在分发服务器上，执行 [sp_help_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql)。 为 **@agent_type** 指定下列值之一：  
+1.  在分发服务器上，执行 [sp_help_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql)。 为**@agent_type**指定下列值之一：  
   
-    -   **@profile_type** - [Replication Snapshot Agent](replication-snapshot-agent.md)  
+    -   **\@profile_type** - [Replication Snapshot Agent](replication-snapshot-agent.md)  
   
     -   **2** - [Replication Log Reader Agent](replication-log-reader-agent.md)  
   
@@ -168,26 +168,26 @@ ms.locfileid: "63157123"
   
      这将返回指定类型的代理的所有配置文件。 请记下要更改的配置文件在结果集中的 **profile_id** 值。  
   
-2.  在分发服务器上，执行 [sp_help_agent_parameter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql)。 为 **@profile_id** 。 这将返回该配置文件的所有参数。 请记下要从配置文件中修改或删除的任何参数的名称。  
+2.  在分发服务器上，执行 [sp_help_agent_parameter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql)。 为**@profile_id**指定步骤1中的配置文件标识符。 这将返回该配置文件的所有参数。 请记下要从配置文件中修改或删除的任何参数的名称。  
   
-3.  若要更改配置文件中的参数值，请执行 [sp_change_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql)。 为 **@profile_id** 指定步骤 1 中的配置文件标识符，为 **@property** 指定要更改的参数的名称，并为 **@value** 。  
+3.  若要更改配置文件中的参数值，请执行 [sp_change_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql)。 为**@profile_id**指定步骤1中的配置文件标识符，为指定要更改的**@property**参数的名称，并为的参数指定新值**@value**。  
   
     > [!NOTE]  
     >  您不能将现有的代理配置文件更改为代理的默认配置文件。 相反，您必须创建一个新的配置文件以作为默认配置文件，如前面的过程所示。  
   
-4.  若要从配置文件中删除参数，请执行 [sp_drop_agent_parameter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql)。 为 **@profile_id** 指定步骤 1 中的配置文件标识符并为 **@parameter_name** 。  
+4.  若要从配置文件中删除参数，请执行 [sp_drop_agent_parameter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql)。 为**@profile_id**指定步骤1中的配置文件标识符，并指定要为其删除的**@parameter_name**参数的名称。  
   
 5.  若要向配置文件添加新的参数，必须执行下列操作：  
   
     -   查询分发服务器上的 [MSagentparameterlist &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/msagentparameterlist-transact-sql) 表以确定可为每个代理类型设置哪些配置文件参数。  
   
-    -   在分发服务器上，执行 [sp_add_agent_parameter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql)。 为 **@profile_id** 指定步骤 1 中的配置文件标识符，为 **@parameter_name** 指定要添加的有效参数的名称，并为 **@parameter_value** 。  
+    -   在分发服务器上，执行 [sp_add_agent_parameter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql)。 为**@profile_id**指定步骤1中的配置文件标识符，为指定要添加的**@parameter_name**有效参数的名称，并为指定参数的值**@parameter_value**。  
   
 ###  <a name="Delete_tsql"></a> 删除代理配置文件  
   
-1.  在分发服务器上，执行 [sp_help_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql)。 为 **@agent_type** 指定下列值之一：  
+1.  在分发服务器上，执行 [sp_help_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql)。 为**@agent_type**指定下列值之一：  
   
-    -   **@profile_type** - [Replication Snapshot Agent](replication-snapshot-agent.md)  
+    -   **\@profile_type** - [Replication Snapshot Agent](replication-snapshot-agent.md)  
   
     -   **2** - [Replication Log Reader Agent](replication-log-reader-agent.md)  
   
@@ -199,13 +199,13 @@ ms.locfileid: "63157123"
   
      这将返回指定类型的代理的所有配置文件。 请记下要删除的配置文件在结果集中的 **profile_id** 值。  
   
-2.  在分发服务器上，执行 [sp_drop_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql)。 为 **@profile_id** 。  
+2.  在分发服务器上，执行 [sp_drop_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql)。 为**@profile_id**指定步骤1中的配置文件标识符。  
   
 ###  <a name="Synch_tsql"></a> 在同步期间使用代理配置文件  
   
-1.  在分发服务器上，执行 [sp_help_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql)。 为 **@agent_type** 指定下列值之一：  
+1.  在分发服务器上，执行 [sp_help_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql)。 为**@agent_type**指定下列值之一：  
   
-    -   **@profile_type** - [Replication Snapshot Agent](replication-snapshot-agent.md)  
+    -   **\@profile_type** - [Replication Snapshot Agent](replication-snapshot-agent.md)  
   
     -   **2** - [Replication Log Reader Agent](replication-log-reader-agent.md)  
   
@@ -215,11 +215,11 @@ ms.locfileid: "63157123"
   
     -   **9** - [Replication Queue Reader Agent](replication-queue-reader-agent.md)  
   
-     这将返回指定类型的代理的所有配置文件。 记下的值`profile_name`结果集中要使用的配置文件。  
+     这将返回指定类型的代理的所有配置文件。 请注意要使用`profile_name`的配置文件在结果集中的值。  
   
-2.  如果从代理作业启动代理，则编辑用于启动代理以指定的值的作业步骤`profile_name`后的第 1 步中获得 **-ProfileName**命令行参数。 有关详细信息，请参阅[查看和修改复制代理命令提示符参数 &#40;SQL Server Management Studio&#41;](view-and-modify-replication-agent-command-prompt-parameters.md)。  
+2.  如果代理是从代理作业启动的，则编辑用于启动该代理的作业步骤，以指定在步骤`profile_name` 1 中的**ProfileName**命令行参数之后获取的值。 有关详细信息，请参阅[查看和修改复制代理命令提示符参数 &#40;SQL Server Management Studio&#41;](view-and-modify-replication-agent-command-prompt-parameters.md)。  
   
-3.  如果是从命令提示符处启动代理，指定的值`profile_name`后的第 1 步中获得 **-ProfileName**命令行参数。  
+3.  从命令提示符处启动代理时，请在 **-ProfileName**命令`profile_name`行参数后指定在步骤1中获得的值。  
   
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
  此示例将为名为 **custom_merge**的合并代理创建自定义配置文件，更改 **-UploadReadChangesPerBatch** 参数的值，添加新的 **-ExchangeType** 参数，并返回有关创建的配置文件的信息。  
@@ -232,7 +232,7 @@ ms.locfileid: "63157123"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类的实例创建与分发服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.AgentProfile> 类的实例。  
+2.  创建的 <xref:Microsoft.SqlServer.Replication.AgentProfile> 类的实例。  
   
 3.  设置对象的下列属性：  
   
@@ -244,7 +244,7 @@ ms.locfileid: "63157123"
   
     -   （可选） <xref:Microsoft.SqlServer.Replication.AgentProfile.Description%2A> - 配置文件的说明。  
   
-    -   （可选）<xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A> - 如果默认情况下此 <xref:Microsoft.SqlServer.Replication.AgentType> 的所有新代理作业都将使用此配置文件，则将此属性设置为 `true`。  
+    -   （可选）<xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A> - 如果默认情况下此 `true` 的所有新代理作业都将使用此配置文件，则将此属性设置为 <xref:Microsoft.SqlServer.Replication.AgentType>。  
   
 4.  调用 <xref:Microsoft.SqlServer.Replication.AgentProfile.Create%2A> 方法以在服务器上创建配置文件。  
   
@@ -256,7 +256,7 @@ ms.locfileid: "63157123"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类的实例创建与分发服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的实例。 传递步骤 1 中创建的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象。  
+2.  创建的 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的实例。 传递步骤 1 中创建的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象。  
   
 3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果此方法返回 `false`，请验证分发服务器是否存在。  
   
@@ -276,7 +276,7 @@ ms.locfileid: "63157123"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类的实例创建与分发服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.AgentProfile> 类的实例。 将 <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> 设置为配置文件的名称，将 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 设置为从步骤 1 中获得的 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>。  
+2.  创建的 <xref:Microsoft.SqlServer.Replication.AgentProfile> 类的实例。 将 <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> 设置为配置文件的名称，将 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 设置为从步骤 1 中获得的 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>。  
   
 3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果此方法返回 `false`，则指定的名称不正确或服务器上不存在该配置文件。  
   
@@ -287,12 +287,12 @@ ms.locfileid: "63157123"
 ##  <a name="FollowUp"></a> 跟进：在更改代理参数后  
  对代理参数所做的更改在下次启动代理时生效。 如果代理连续运行，则必须停止该代理，然后重新启动。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [复制代理配置文件](replication-agent-profiles.md)   
- [Replication Snapshot Agent](replication-snapshot-agent.md)   
- [Replication Log Reader Agent](replication-log-reader-agent.md)   
- [Replication Distribution Agent](replication-distribution-agent.md)   
- [Replication Merge Agent](replication-merge-agent.md)   
- [Replication Queue Reader Agent](replication-queue-reader-agent.md)  
+ [复制快照代理](replication-snapshot-agent.md)   
+ [复制日志读取器代理](replication-log-reader-agent.md)   
+ [复制分发代理](replication-distribution-agent.md)   
+ [复制合并代理](replication-merge-agent.md)   
+ [复制队列读取器代理](replication-queue-reader-agent.md)  
   
   

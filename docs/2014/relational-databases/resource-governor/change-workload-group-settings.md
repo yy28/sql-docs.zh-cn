@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e2bcb3cfa20948e6bb0964d29331ca1d426b8916
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63199913"
 ---
 # <a name="change-workload-group-settings"></a>更改工作负荷组设置
@@ -38,7 +38,7 @@ ms.locfileid: "63199913"
   
  允许索引创建操作使用比最初授予的工作区内存多的工作区内存，以便提高性能。 这个特别处理由资源调控器支持，然而，最初授予及任何其他内存授予都受工作负荷组和资源池设置的限制。  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 权限  
  更改工作负荷组设置需要 CONTROL SERVER 权限。  
   
 ##  <a name="ChgWGProp"></a> 使用 SQL Server Management Studio 更改工作负荷组设置  
@@ -72,7 +72,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [资源调控器](resource-governor.md)   
  [创建工作负荷组](create-a-workload-group.md)   
  [创建资源池](create-a-resource-pool.md)   

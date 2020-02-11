@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 59c179c81c1b6b60787603f5953b85e583668c80
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63161722"
 ---
 # <a name="quiesce-a-replication-topology-replication-transact-sql-programming"></a>静止复制拓扑（复制 Transact-SQL 编程）
@@ -79,7 +79,7 @@ ms.locfileid: "63161722"
     > [!NOTE]  
     >  如果同步过程中出现冲突，则运行合并代理两次之后冲突解决所需的更改可能不会传播到所有节点。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [管理对等拓扑（复制 Transact-SQL 编程）](administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [为事务复制测量滞后时间和验证连接](../monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   

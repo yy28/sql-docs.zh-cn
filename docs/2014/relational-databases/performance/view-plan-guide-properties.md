@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b49b24db5dfa3c9b522247024e0cbb8dbd1a81d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151263"
 ---
 # <a name="view-plan-guide-properties"></a>查看计划指南属性
@@ -39,9 +39,9 @@ ms.locfileid: "63151263"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  目录视图中仅显示用户拥有的安全对象的元数据，或用户对其拥有某些权限的安全对象的元数据。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -65,7 +65,7 @@ ms.locfileid: "63151263"
      **名称**  
      显示计划指南的名称。  
   
-     **Parameters**  
+     **参数**  
      当作用域类型为 SQL 或 TEMPLATE 时，显示嵌入在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中的所有参数的名称和数据类型。  
   
      **作用域批处理**  
@@ -80,10 +80,10 @@ ms.locfileid: "63151263"
      **作用域类型**  
      显示其中出现 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的实体的类型。 这便指定了用于将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句与计划指南匹配的上下文。 可能的值为 **OBJECT**、 **SQL**和 **TEMPLATE**。  
   
-     **声明专用纸**  
+     **Statement**  
      显示应用此计划指南的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
   
-4.  单击 **“确定”** 。  
+4.  单击“确定”。   
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

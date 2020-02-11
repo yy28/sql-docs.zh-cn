@@ -1,5 +1,5 @@
 ---
-title: 安装 Distributed 的 Replay |Microsoft Docs
+title: 安装 Distributed Replay |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 037e3c9c61b2c6648ec1194a766256d5e6cae5cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63149344"
 ---
 # <a name="install-distributed-replay"></a>安装 Distributed Replay
@@ -22,9 +22,9 @@ ms.locfileid: "63149344"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|Description|  
+|主题|说明|  
 |-----------|-----------------|  
-|[安装 Distributed 的 Replay&#40;安装程序&#41;](../../sql-server/install/install-distributed-replay-setup.md)|使用安装向导执行典型的 Distributed Replay 安装的过程主题。|  
+|[安装 Distributed Replay &#40;安装程序&#41;](../../sql-server/install/install-distributed-replay-setup.md)|使用安装向导执行典型的 Distributed Replay 安装的过程主题。|  
 |[从命令提示符安装 Distributed Replay](install-distributed-replay-overview.md)|提供运行无人参与安装的示例语法和安装参数的过程主题。|  
 |[使用配置文件安装 Distributed Replay](../../sql-server/install/install-distributed-replay-using-a-configuration-file.md)|提供通过配置文件运行 Distributed Replay 的示例语法和安装参数的过程主题。|  
 |[完成安装后步骤](complete-the-post-installation-steps.md)|完成 Distributed Replay 安装的过程主题。|  

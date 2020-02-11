@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3835f83efff9e720f7f8631d527b9547e3b4239a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245609"
 ---
 # <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>View SQL Server Agent Error Log (SQL Server Management Studio)
@@ -43,9 +43,9 @@ ms.locfileid: "63245609"
 ###  <a name="Restrictions"></a> 限制和局限  
  “对象资源管理器”仅在您拥有使用权限时才显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理节点。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，必须将 **代理配置为使用** sysadmin [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]固定服务器角色的成员帐户的凭据，才能执行其功能。 该帐户必须拥有以下 Windows 权限：  
   
 -   以服务身份登录 (SeServiceLogonRight)  
@@ -56,7 +56,7 @@ ms.locfileid: "63245609"
   
 -   调整进程的内存配额 (SeIncreaseQuotaPrivilege)  
   
- 有关所需的 Windows 权限的详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理服务帐户，请参阅[为 SQL Server 代理服务选择帐户](select-an-account-for-the-sql-server-agent-service.md)和[配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
+ 有关[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理服务帐户所需的 Windows 权限的详细信息，请参阅为[SQL Server 代理服务选择帐户](select-an-account-for-the-sql-server-agent-service.md)和[配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
@@ -64,40 +64,40 @@ ms.locfileid: "63245609"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开包含要查看的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理错误日志的服务器。  
   
-2.  单击加号以展开 **“SQL Server 代理”** 。  
+2.  单击加号以展开 **“SQL Server 代理”**。  
   
 3.  单击加号以展开 **“错误日志”** 文件夹。  
   
-4.  右键单击要查看的错误日志，并选择“查看代理日志”  。  
+4.  右键单击要查看的错误日志，并选择“查看代理日志”****。  
   
-     “日志文件查看器 - server_name”对话框中提供以下选项   ：  
+     "**日志文件查看器-**_server_name_ " 对话框中提供以下选项：  
   
      **加载日志**  
      打开一个对话框，您可以在其中指定要加载的日志文件。  
   
-     **导出**  
-     打开一个对话框，你可以使用该对话框将“日志文件摘要”  网格中显示的信息导入到文本文件中。  
+     **Export**  
+     打开一个对话框，你可以使用该对话框将“日志文件摘要” **** 网格中显示的信息导入到文本文件中。  
   
-     **刷新**  
+     **“刷新”**  
      刷新选定日志的视图。 在应用任何筛选器设置时， **“刷新”** 按钮重新从目标服务器中读取选定的日志。  
   
-     **筛选**  
-     打开一个对话框，你可以使用该对话框指定用于筛选日志文件的设置，例如“连接”  、“日期”  或其他“常规”  筛选条件。  
+     **筛选器**  
+     打开一个对话框，你可以使用该对话框指定用于筛选日志文件的设置，例如“连接” ****、“日期” **** 或其他“常规” **** 筛选条件。  
   
      **搜索**  
      在日志文件中搜索特定文本。 不支持在搜索中使用通配符。  
   
-     **停止**  
+     **Stop**  
      停止加载日志文件条目。 例如，如果远程或脱机日志文件需要较长时间才能加载，并且您只想查看最新的条目，则可以使用此选项。  
   
      **日志文件摘要**  
-     此信息窗格显示日志文件筛选摘要。 如果未对文件进行筛选，您将看到以下文本： **“未应用任何筛选器”** 。 如果对日志应用了筛选器，你将看到以下文本： **“基于以下条件筛选日志条目:**  \<筛选条件>”。  
+     此信息窗格显示日志文件筛选摘要。 如果未对文件进行筛选，您将看到以下文本： **“未应用任何筛选器”**。 如果对日志应用了筛选器，你将看到以下文本：**“基于以下条件筛选日志条目: ** \<筛选条件>”。  
   
      **所选行详细信息**  
      选择一行可以在页面底部显示有关所选事件行的其他详细信息。 在网格中，通过将列拖动到的新位置可以重新排列各列的顺序。 通过将网格标题中的列分隔条向左或向右拖动，可以调列的大小。 双击网格标题中的列分隔条，可以按内容宽度自动调整列的大小。  
   
      **实例**  
-     发生事件的实例的名称。 这显示为：计算机名称\\实例名称   。  
+     发生事件的实例的名称。 此名称显示为*计算机名称*\\*实例名称*。  
   
      **Date**  
      显示事件的日期。  
@@ -105,7 +105,7 @@ ms.locfileid: "63245609"
      **数据源**  
      显示从其创建事件的源功能，例如服务的名称（如 MSSQLSERVER）。 并非对所有日志类型都显示此项。  
   
-     **Message**  
+     **消息**  
      显示与事件相关联的任何消息。  
   
      **日志类型**  

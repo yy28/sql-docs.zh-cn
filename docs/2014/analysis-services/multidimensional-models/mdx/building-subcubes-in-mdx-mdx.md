@@ -1,5 +1,5 @@
 ---
-title: 构建 MDX (MDX) 中的子多维数据集 |Microsoft Docs
+title: 在 MDX 中生成子多维数据（MDX） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 197ee30aa65179e8a434d04d20a5f5b643b42efd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074718"
 ---
 # <a name="building-subcubes-in-mdx-mdx"></a>在 MDX 中生成子多维数据集 (MDX)
@@ -36,7 +36,9 @@ ms.locfileid: "66074718"
 CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression  
 ```  
   
- CREATE SUBCUBE 语法非常简单。 *Subcube_Identifier* 参数标识子多维数据集所基于的多维数据集。 *Subcube_Expression* 参数选择将成为子多维数据集的多维数据集中部分。  
+ CREATE SUBCUBE 语法非常简单。 
+  *Subcube_Identifier* 参数标识子多维数据集所基于的多维数据集。 
+  *Subcube_Expression* 参数选择将成为子多维数据集的多维数据集中部分。  
   
  创建子多维数据集后，该子多维数据集将成为所有 MDX 查询的上下文，直到会话结束或运行 [DROP SUBCUBE](/sql/mdx/mdx-data-definition-drop-subcube) 语句。  
   
@@ -51,9 +53,10 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
   
 -   子多维数据集将始终包含多维数据集的每个 `(All)` 成员。  
   
- 另外，子多维数据集中的聚合数据将进行可视求和。 例如，一个子多维数据集包含 `USA`、 `WA`和 `OR`。 `USA` 的聚合值将是 `{WA,OR}` 的和，因为该子多维数据集只定义了 `WA` 和 `OR` 这两个州。 所有其他州将被忽略。  
+ 另外，子多维数据集中的聚合数据将进行可视求和。 例如，一个子多维数据集包含 `USA`、 `WA`和 `OR`。 
+  `USA` 的聚合值将是 `{WA,OR}` 的和，因为该子多维数据集只定义了 `WA` 和 `OR` 这两个州。 所有其他州将被忽略。  
   
- 另外，显式引用子多维数据集外的单元将返回在整个多维数据集的上下文中计算的单元值。 例如，创建一个限制为本年度的子多维数据集。 然后使用 [ParallelPeriod](/sql/mdx/parallelperiod-mdx) 函数将本年度与去年相比较。 即使上一年的值之外的子多维数据集，将返回值之间的差异。  
+ 另外，显式引用子多维数据集外的单元将返回在整个多维数据集的上下文中计算的单元值。 例如，创建一个限制为本年度的子多维数据集。 然后使用 [ParallelPeriod](/sql/mdx/parallelperiod-mdx) 函数将本年度与去年相比较。 即使上一年的值位于子多维数据集之外，也会返回值的差异。  
   
  最后，如果原始上下文没有被覆盖，在嵌套 select 语句中计算的集函数将在嵌套 select 语句的上下文中计算。 如果上下文被覆盖，集函数将在整个多维数据集的上下文中计算。  
   
@@ -66,8 +69,8 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
   
  `SELECT [Account].[Account].Members ON 0, Measures.Members ON 1 FROM Budget`  
   
-## <a name="see-also"></a>请参阅  
- [在查询中建立多维数据集上下文 (MDX)](establishing-cube-context-in-a-query-mdx.md)   
- [MDX 查询基础知识 (Analysis Services)](mdx-query-fundamentals-analysis-services.md)  
+## <a name="see-also"></a>另请参阅  
+ [在查询 &#40;MDX&#41;中建立多维数据集上下文](establishing-cube-context-in-a-query-mdx.md)   
+ [MDX 查询基础知识 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

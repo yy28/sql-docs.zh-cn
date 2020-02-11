@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 07934e74138f17317eb0258e2b3ad0fa6d26254a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106314"
 ---
 # <a name="add-3d-effects-to-a-chart-report-builder-and-ssrs"></a>将三维效果添加到图表（报表生成器和 SSRS）
@@ -31,13 +31,13 @@ ms.locfileid: "66106314"
   
 3.  （可选）在“三维选项”  中，可以设置各种与三维角度和场景选项相关的属性。 有关这些属性的详细信息，请参阅 [图表中的三维效果、凹凸效果和其他效果（报表生成器和 SSRS）](chart-effects-3d-bevel-and-other-report-builder.md)。  
   
-4.  单击“确定”  。  
+4.  单击“确定”。   
   
 ### <a name="to-apply-3d-effects-to-a-funnel-chart"></a>将三维效果应用于漏斗图  
   
 1.  右键单击图表区域的任意位置，然后选择“三维效果”  。 随即显示“图表区属性”对话框。   
   
-2.  在 **“三维选项”** 中，选择 **“启用三维”** 选项。 单击“确定”  。  
+2.  在 **“三维选项”** 中，选择 **“启用三维”** 选项。 单击“确定”。   
   
 3.  （可选）若要自定义漏斗图视觉外观，可以转到“属性”窗格，更改漏斗图的特定属性。  
   
@@ -55,23 +55,23 @@ ms.locfileid: "66106314"
   
 1.  右键单击图表区的任意位置，然后选择“三维效果”。 随即显示“图表区属性”对话框。   
   
-2.  在 **“三维选项”** 中，选择 **“启用三维”** 选项。 单击“确定”  。  
+2.  在 **“三维选项”** 中，选择 **“启用三维”** 选项。 单击“确定”。   
   
 3.  （可选）在“旋转”中，键入代表饼图水平旋转的整数值  。  
   
 4.  （可选）在“倾角”中，键入代表饼图垂直倾斜旋转的整数值  。  
   
-5.  单击“确定”  。  
+5.  单击“确定”。   
   
 ### <a name="to-apply-3d-effects-to-a-bar-or-column-chart"></a>将三维效果应用于条形图或柱形图  
   
 1.  右键单击图表区域的任意位置，然后选择“三维效果”  。 随即显示“图表区属性”对话框。   
   
-2.  选择 **“启用三维”** 选项。 单击“确定”  。  
+2.  选择 **“启用三维”** 选项。 单击“确定”。   
   
 3.  （可选）选择“启用序列聚类分析”选项  。 如果图表包含多个条形图序列或柱形图序列，此选项会将该序列显示为聚集。 默认情况下，会并行显示多个条序列或列序列。  
   
-4.  单击“确定”  。  
+4.  单击“确定”。   
   
 5.  （可选）若要将圆柱效果添加到条形图或柱形图，请按以下步骤操作：  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66106314"
   
     4.  对于 **DrawingStyle** 属性，指定 **“柱状”** 值。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [图表中的三维效果、凹凸效果和其他效果（报表生成器和 SSRS）](chart-effects-3d-bevel-and-other-report-builder.md)   
  [设置图表格式（报表生成器和 SSRS）](formatting-a-chart-report-builder-and-ssrs.md)   
  [图表&#40;报表生成器和 SSRS&#41;](charts-report-builder-and-ssrs.md)  

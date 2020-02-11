@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 520d6f11e5a472d5337a3747cc73c1d3656171c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075180"
 ---
 # <a name="dimensions-in-multidimensional-models"></a>多维模型中的维度
@@ -35,7 +35,7 @@ ms.locfileid: "66075180"
  创建多维数据集时，还可以将数据库中已存在的任何维度添加到新的多维数据集中。 这些维度可能在先前已针对其他多维数据集定义，或者已由维度向导定义。 定义数据库维度后，您可以在“维度设计器”中修改并配置数据库维度。 您还可以在“多维数据集设计器”中对多维数据集维度进行有限程度的自定义。  
   
 > [!NOTE]  
->  您还可以使用 XMLA 或“分析管理对象”(AMO)，以编程方式来设计并配置维度、属性和层次结构。 有关详细信息，请参阅[Analysis Services 脚本语言&#40;ASSL&#41;引用](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)并[使用分析管理对象开发&#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)。  
+>  您还可以使用 XMLA 或“分析管理对象”(AMO)，以编程方式来设计并配置维度、属性和层次结构。 有关详细信息，请参阅[Analysis Services 脚本语言 &#40;ASSL&#41; 引用](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)并[通过分析管理对象 &#40;AMO&#41;进行开发](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)。  
   
 ## <a name="in-this-section"></a>本节内容  
  下表对本部分的主题进行了说明：  
@@ -49,13 +49,13 @@ ms.locfileid: "66075180"
  [定义属性关系](attribute-relationships-define.md)  
  说明如何使用维度设计器定义、修改和配置属性关系。  
   
- [创建用户定义层次结构](user-defined-hierarchies-create.md)  
+ [创建用户定义的层次结构](user-defined-hierarchies-create.md)  
  说明如何使用“维度设计器”定义、修改和配置维度属性的用户定义层次结构。  
   
  [使用商业智能向导增强维度](../use-the-business-intelligence-wizard-to-enhance-dimensions.md)  
  说明如何使用商业智能向导增强数据库维度。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [多维模型中的多维数据集](cubes-in-multidimensional-models.md)  
   
   

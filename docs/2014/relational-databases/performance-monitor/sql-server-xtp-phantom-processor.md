@@ -11,18 +11,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 14c34bb0d7520b914d8dbfc1cfc8174341722ece
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150979"
 ---
 # <a name="xtp-phantom-processor"></a>XTP 虚拟处理器
   XTP 虚拟处理器性能对象包含与 XTP 引擎的虚拟处理子系统相关的计数器。 此组件用于检测在 SERIALIZABLE 隔离级别运行的事务中的虚拟行。  
   
- 下表介绍**XTP 虚拟处理器**计数器。  
+ 下表介绍了**XTP 虚拟处理器**计数器。  
   
-|计数器|描述|  
+|计数器|说明|  
 |-------------|-----------------|  
 |**灰尘角扫描重试次数/秒（虚拟发出）**|在虚拟处理器发出的灰尘角扫描期间，由于写冲突而进行的每秒扫描重试次数（平均值）。 此为非常低级的计数器，不适合客户使用。|  
 |**删除的虚拟过期行数/秒**|虚拟扫描每秒删除的过期行数（平均值）。|  
@@ -31,7 +31,7 @@ ms.locfileid: "63150979"
 |**接触的虚拟行数/秒**|虚拟扫描每秒接触的行数（平均值）。|  
 |**启动的虚拟扫描数/秒**|每秒启动的虚拟扫描数（平均值）。|  
   
-## <a name="see-also"></a>请参阅  
- [XTP&#40;内存中 OLTP&#41;性能计数器](../../integration-services/performance/performance-counters.md)  
+## <a name="see-also"></a>另请参阅  
+ [XTP &#40;内存中 OLTP&#41; 性能计数器](../../integration-services/performance/performance-counters.md)  
   
   

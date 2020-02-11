@@ -1,5 +1,5 @@
 ---
-title: 规则选项卡 （挖掘模型查看器） |Microsoft Docs
+title: "\"规则\" 选项卡（挖掘模型查看器） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fca78578046122a1598df096e45965367b7880ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070101"
 ---
 # <a name="rules-tab-mining-model-viewer"></a>“规则”选项卡（挖掘模型查看器）
@@ -27,7 +27,7 @@ ms.locfileid: "66070101"
 > [!WARNING]  
 >  默认情况下，查看器中仅显示大于 **“最小概率”** 中定义的概率阈值的规则。 无法使用查看器减小该值，因为规则输出的概率阈值是在创建模型时确定的。 有关详细信息，请参阅 [Microsoft 关联算法技术参考](data-mining/microsoft-association-algorithm-technical-reference.md)。  
   
- **有关详细信息：** [Microsoft 关联算法](data-mining/microsoft-association-algorithm.md)，[使用 Microsoft 关联规则查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ **有关详细信息：** [microsoft 关联算法](data-mining/microsoft-association-algorithm.md)、[使用 Microsoft 关联规则查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
 ## <a name="options"></a>选项  
  **刷新查看器内容**  
@@ -36,16 +36,16 @@ ms.locfileid: "66070101"
  **挖掘模型**  
  选择一个包含在当前挖掘结构中的挖掘模型以进行查看。 挖掘模型将在其关联的查看器中打开。  
   
- **Viewer**  
- 选择用于查看所选挖掘模型的查看器。 可以对每个挖掘模型使用自定义查看器，也可以使用 **“Microsoft 一般内容树查看器”** 。 还可以使用插件查看器（如果有）。  
+ **查看器**  
+ 选择用于查看所选挖掘模型的查看器。 可以对每个挖掘模型使用自定义查看器，也可以使用 **“Microsoft 一般内容树查看器”**。 还可以使用插件查看器（如果有）。  
   
- **最小概率**  
+ **“最小概率”**  
  更改此值可设置在查看器中显示规则所需的最小概率。 增大概率值将减少显示的规则的数目。  
   
  **最低重要性**  
  更改此值可设置在查看器中显示规则所需的最低重要性。 增大重要性的值将减少显示的规则的数目。  
   
- **筛选器规则**  
+ **筛选规则**  
  键入一个字符串值可筛选查看器中显示的规则数。  
   
  还可以键入 .NET 正则表达式作为筛选条件。 例如，下面的表达式将返回其左侧包含“Road Bottle Cage”的所有规则：  
@@ -54,7 +54,7 @@ ms.locfileid: "66070101"
   
  请注意，您可能需要刷新视图以查看筛选条件应用情况。 还可以启用和禁用 **“显示长名称”** 选项以刷新列表。  
   
- 默认情况下，筛选条件应用于属性-值组合的完整名称；因此，如果您只查看属性名称，则可能无法明确知道已正确应用筛选条件。 使用 **“显示”** 下拉列表可选择 **“显示属性名称和值”** ，并验证是否已正确筛选项集的列表。  
+ 默认情况下，筛选条件应用于属性-值组合的完整名称；因此，如果您只查看属性名称，则可能无法明确知道已正确应用筛选条件。 使用 **“显示”** 下拉列表可选择 **“显示属性名称和值”**，并验证是否已正确筛选项集的列表。  
   
  **显示**  
  调整规则在查看器中的显示方式。 可以选择以下三个选项之一：  
@@ -65,13 +65,13 @@ ms.locfileid: "66070101"
   
 -   仅显示属性名称  
   
- **显示长名称**  
+ **“显示长名称”**  
  当规则显示在挖掘模型内容中时显示其全名。  
   
  **最大行数**  
  限制查看器中显示的规则数。  
   
- **概率**  
+ **发生**  
  此列将在图表中显示每个规则的概率。  
   
  可以单击列标题来按概率进行排序。  
@@ -81,14 +81,14 @@ ms.locfileid: "66070101"
   
  可以单击列标题来按重要性进行排序。  
   
- **规则**  
- 此列将在图表中显示每个规则的文本说明，具体取决于使用选项“显示”和“显示长名称”指定的格式   。  
+ **线**  
+ 此列将在图表中显示每个规则的文本说明，具体取决于使用选项“显示”和“显示长名称”指定的格式********。  
   
  可以单击列标题来按规则的文本进行排序。  
   
-## <a name="see-also"></a>请参阅  
- [数据挖掘算法 &#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [挖掘模型查看器（数据挖掘模型设计器）](mining-model-viewers-data-mining-model-designer.md)   
+## <a name="see-also"></a>另请参阅  
+ [数据挖掘算法 &#40;Analysis Services 数据挖掘&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [挖掘模型查看器 &#40;数据挖掘模型设计器&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [数据挖掘模型查看器](data-mining/data-mining-model-viewers.md)  
   
   

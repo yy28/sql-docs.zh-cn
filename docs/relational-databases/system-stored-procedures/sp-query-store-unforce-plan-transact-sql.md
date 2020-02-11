@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9cff3bb0491db53e195a692014b74a08c4fdcdee
-ms.sourcegitcommit: 816ff47eeab157c66e0f75f18897a63dc8033502
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71207710"
 ---
 # <a name="sp_query_store_unforce_plan-transact-sql"></a>sp_query_store_unforce_plan （Transact-sql）
@@ -33,7 +33,7 @@ ms.locfileid: "71207710"
 
   为特定查询启用取消强制执行先前强制计划。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,16 +42,16 @@ sp_query_store_unforce_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @query_id = ] query_id` 是查询的 id。 *query_id*是**bigint**，无默认值。  
+`[ @query_id = ] query_id`查询的 id。 *query_id*是**bigint**，无默认值。  
   
-`[ @plan_id = ] plan_id` 是将不再强制执行的查询计划的 id。 *plan_id*是**bigint**，无默认值。  
+`[ @plan_id = ] plan_id`将不再强制执行的查询计划的 id。 *plan_id*是**bigint**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对数据库具有**ALTER**权限。
   
 ## <a name="examples"></a>示例  
@@ -73,12 +73,12 @@ EXEC sp_query_store_unforce_plan 3, 3;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_query_store_force_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)   
+ [sp_query_store_force_plan &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)   
  [sp_query_store_remove_plan &#40;Transct-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
- [sp_query_store_remove_query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
- [sp_query_store_reset_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
- [sp_query_store_flush_db &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)   
+ [sp_query_store_remove_query &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
+ [sp_query_store_reset_exec_stats &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
+ [sp_query_store_flush_db &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)   
  [查询存储目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
- [使用查询存储    监视性能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
+ [使用查询存储监视性能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
  [Query Store 最佳实践](../../relational-databases/performance/best-practice-with-the-query-store.md#CheckForced)     
   

@@ -1,5 +1,5 @@
 ---
-title: 配置 Power View 报表 (SSAS 表格) 的默认字段集 |Microsoft Docs
+title: 为 Power View 报表配置默认字段集（SSAS 表格） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 37571e141395afe255329edc10edeaeaed121710
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066893"
 ---
 # <a name="configure-default-field-set-for-power-view-reports-ssas-tabular"></a>配置 Power View 报表的默认字段集（SSAS 表格）
@@ -32,7 +32,7 @@ ms.locfileid: "66066893"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，单击要为其配置默认字段列表的表。  
   
-2.  在 **“属性”** 窗口的 **“默认字段集”** 属性中，单击 **“单击可编辑”** 。  
+2.  在 **“属性”** 窗口的 **“默认字段集”** 属性中，单击 **“单击可编辑”**。  
   
 3.  在“默认字段集”对话框中，选择一个或多个字段。 可以选择表中的任何字段，包括度量值。 按住 Shift 键以选择范围，或按住 Ctrl 键以选择单个字段。  
   

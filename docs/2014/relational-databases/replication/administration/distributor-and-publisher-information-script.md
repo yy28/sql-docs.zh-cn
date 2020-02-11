@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 35b7c489b49a4463dc0b12f1469d1310f5d26fef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63186989"
 ---
 # <a name="distributor-and-publisher-information-script"></a>分发服务器和发布服务器信息脚本
@@ -25,7 +25,7 @@ ms.locfileid: "63186989"
   
 -   将 `use AdventureWorks2012` 一行更改为使用您的发布数据库的名称。  
   
--   从 `exec sp_helparticle @publication='<PublicationName>'` 一行中删除注释 (`--`) 并用发布的名称替换 \<PublicationName>。  
+-   从 `--` 一行中删除注释 (`exec sp_helparticle @publication='<PublicationName>'`) 并用发布的名称替换 \<PublicationName>。  
   
 ```  
 --********** Execute at the Distributor in the master database **********--  
@@ -95,7 +95,7 @@ SELECT object_name(object_id) AS tran_published_table, name AS published_column 
 SELECT object_name(object_id) AS merge_published_table, name AS published_column FROM sys.columns WHERE is_merge_published = 1;  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [复制管理员常见问题解答](frequently-asked-questions-for-replication-administrators.md)   
  [sp_get_distributor (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-get-distributor-transact-sql)   
  [sp_helparticle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-helparticle-transact-sql)   

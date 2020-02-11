@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 624681d8f784d3169b1f5e17a34daef99a71459b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105379"
 ---
 # <a name="rendering-behaviors-report-builder--and-ssrs"></a>呈现行为（报表生成器和 SSRS）
@@ -127,7 +127,7 @@ ms.locfileid: "66105379"
   
 -   对表或矩阵单元中的项定义的逻辑分页符将不保留。 此逻辑分页符将不应用于列表中的项。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [以 HTML 格式呈现（报表生成器和 SSRS）](../report-builder/rendering-to-html-report-builder-and-ssrs.md)   
  [页面布局和呈现方式（报表生成器和 SSRS）](page-layout-and-rendering-report-builder-and-ssrs.md)  

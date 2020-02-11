@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14c2fff96c89ee696df1a437f958e4560bfab142
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204541"
 ---
 # <a name="table-valued-object-column-properties-visual-database-tools"></a>表值对象（列）属性 (Visual Database Tools)
@@ -26,7 +26,7 @@ ms.locfileid: "63204541"
 >  本主题中的属性按类别排序，而不是按字母顺序排序。  
   
 > [!NOTE]  
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。  
+>  根据当前设置或版本的不同，所看到的对话框和菜单命令可能与帮助中描述的对话框和菜单命令有所不同。 若要更改设置，请在“工具”  菜单上选择“导入和导出设置”  。  
   
  **标识类别**  
  展开此项可显示“名称”  属性。  
@@ -55,7 +55,7 @@ ms.locfileid: "63204541"
  **精度**  
  显示数值数据类型所允许的最大位数。 对于非数值数据类型，此属性显示 **0** 。  
   
- **小数位数**  
+ **缩放**  
  显示数值数据类型的小数点右侧可显示的最大位数。 此值必须小于或等于精度。 对于非数值数据类型，此属性显示 **0** 。  
   
  **大小**  

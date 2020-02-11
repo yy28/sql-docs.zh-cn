@@ -1,5 +1,5 @@
 ---
-title: 解决 Visio 数据挖掘关系图 （SQL Server 数据挖掘外接程序） 问题 |Microsoft Docs
+title: Visio 数据挖掘关系图（SQL Server 数据挖掘外接程序）疑难解答 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 067d3c3a324922a8c8ef19239771c8a8c2305541
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065720"
 ---
 # <a name="troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins"></a>解决 Visio 数据挖掘关系图问题（SQL Server 数据挖掘外接程序）
@@ -29,13 +29,13 @@ ms.locfileid: "66065720"
   增强关系图  
   调整关系图的大小  
   
-## <a name="common-issues"></a>常见的问题  
+## <a name="common-issues"></a>常见问题  
  无法连接到模型  
   不显示内容  
-  不能查看的详细信息  
+  无法查看详细信息  
   
-## <a name="see-also"></a>请参阅  
- [在 Visio 中查看数据挖掘模型&#40;数据挖掘外接程序&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)   
- [在 Visio 中查看数据挖掘模型&#40;数据挖掘外接程序&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)  
+## <a name="see-also"></a>另请参阅  
+ [查看 Visio &#40;数据挖掘外接程序中的数据挖掘模型&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)   
+ [查看 Visio &#40;数据挖掘外接程序中的数据挖掘模型&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)  
   
   

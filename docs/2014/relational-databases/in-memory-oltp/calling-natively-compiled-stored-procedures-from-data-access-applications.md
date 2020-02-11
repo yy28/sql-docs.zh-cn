@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 09f68c2a8f316189b1b28e9b252950ce6761d19d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63156830"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>从数据访问应用程序调用本机编译的存储过程
@@ -31,12 +31,13 @@ ms.locfileid: "63156830"
   
  SqlClient 不支持检索有关本机编译存储过程返回的结果集的纯架构信息（元数据发现）(CommandType.SchemaOnly)。 请改为使用 [sp_describe_first_result_set (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql)。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client 版本不支持检索有关本机编译存储过程返回的结果集的纯架构信息（元数据发现）。 请改为使用 [sp_describe_first_result_set (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql)。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client{2}  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client 版本不支持检索有关本机编译存储过程返回的结果集的纯架构信息（元数据发现）。 请改为使用 [sp_describe_first_result_set (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql)。  
   
  以下建议适用于在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中使用 ODBC 驱动程序调用本机编译的存储过程。  
   
- 只调用存储过程一次的最高效方式是使用 `SQLExecDirect` 和 ODBC CALL 子句发出直接的 RPC 调用。 不要使用[!INCLUDE[tsql](../../../includes/tsql-md.md)]`EXECUTE`语句。 如需多次调用存储过程，则准备好的执行最为高效。  
+ 只调用存储过程一次的最高效方式是使用 `SQLExecDirect` 和 ODBC CALL 子句发出直接的 RPC 调用。 不要使用[!INCLUDE[tsql](../../../includes/tsql-md.md)] `EXECUTE`语句。 如需多次调用存储过程，则准备好的执行最为高效。  
   
  多次调用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 存储过程的最高效方式是通过准备好的 RPC 过程调用执行。 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中使用 ODBC 驱动程序执行准备好的 RPC 调用的步骤是：  
   
@@ -48,7 +49,8 @@ ms.locfileid: "63156830"
   
 -   使用 `SQLExecute` 多次执行存储过程。  
   
- 下面的代码片段演示了某个向订单添加行项目的存储过程的准备好的执行。 `SQLPrepare` 只调用了一次，而 `SQLExecute` 调用了多次（每次过程执行调用一次）。  
+ 下面的代码片段演示了某个向订单添加行项目的存储过程的准备好的执行。 
+  `SQLPrepare` 只调用了一次，而 `SQLExecute` 调用了多次（每次过程执行调用一次）。  
   
 ```  
 // Bind parameters  
@@ -392,7 +394,7 @@ int _tmain() {
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [本机编译的存储过程](natively-compiled-stored-procedures.md)  
   
   

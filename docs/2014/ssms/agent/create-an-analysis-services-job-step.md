@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 193805128ec3e557d219561bc29a93e9540fd5b1
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798249"
 ---
 # <a name="create-an-analysis-services-job-step"></a>Create an Analysis Services Job Step
@@ -26,9 +26,9 @@ ms.locfileid: "72798249"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
--   **若要使用 Analysis Services 命令和/或查询创建 SQL Server 作业步骤，请使用：**  
+-   **使用 Analysis Services 命令和/或查询创建 SQL Server 作业步骤，使用：**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -42,15 +42,15 @@ ms.locfileid: "72798249"
   
 -   如果作业步骤使用 Analysis Services 命令，则命令语句必须是 XML for Analysis Services **Execute** 方法。 该语句可以不包含完整的简单对象访问协议 (SOAP) 信封和 XML for Analysis **Discover** 方法。 虽然 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 支持完整的 SOAP 信封和 **Discover** 方法，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤却不支持。 有关 XML for Analysis Services 的详细信息，请参阅 [XML for Analysis 概述 (XMLA)](https://msdn.microsoft.com/library/ms187190.aspx)。  
   
--   如果作业步骤使用 Analysis Services 查询，则查询语句必须是多维表达式 (MDX) 查询。 有关 MDX 的详细信息，请参阅[Mdx Query &#40;基础&#41;Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)。  
+-   如果作业步骤使用 Analysis Services 查询，则查询语句必须是多维表达式 (MDX) 查询。 有关 MDX 的详细信息，请参阅[Mdx Query 基础 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)。  
   
 ###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
   
 -   若要运行使用 Analysis Services 子系统的作业步骤，用户必须是 **sysadmin** 固定服务器角色的成员或有权访问为使用该子系统而定义的有效代理帐户。 此外， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户或代理必须是 Analysis Services 管理员或有效的 Windows 域帐户。  
   
--   只有 **sysadmin** 固定服务器角色的成员才可以将作业步骤输出写入到文件中。 如果运行作业步骤的用户是 **msdb** 数据库中 **SQLAgentUserRole** 数据库角色的成员，则输出只能写入表中。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理会将作业步骤输出写入 **msdb** 数据库中的 **sysjobstepslog** 表。  
+-   只有 **sysadmin** 固定服务器角色的成员才可以将作业步骤输出写入到文件中。 如果运行作业步骤的用户是 **msdb** 数据库中 **SQLAgentUserRole** 数据库角色的成员，则输出只能写入表中。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理会将作业步骤输出写入**msdb**数据库中的**sysjobstepslog**表。  
   
 -   有关详细信息，请参阅[实现 SQL Server 代理安全性](implement-sql-server-agent-security.md)。  
   
@@ -58,15 +58,15 @@ ms.locfileid: "72798249"
   
 #### <a name="to-create-an-analysis-services-command-job-step"></a>创建 Analysis Services 命令作业步骤  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
+1.  在**对象资源管理器中，** 连接到的[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例，然后展开该实例。  
   
-2.  展开 **“SQL Server 代理”** ，创建一个新作业或右键单击一个现有作业，再单击 **“属性”** 。 有关创建作业的详细信息，请参阅[创建作业](create-jobs.md)。  
+2.  展开 **“SQL Server 代理”**，创建一个新作业或右键单击一个现有作业，再单击 **“属性”**。 有关创建作业的详细信息，请参阅 [创建作业](create-jobs.md)。  
   
-3.  在 **“作业属性”** 对话框中，单击 **“步骤”** 页面，再单击 **“新建”** 。  
+3.  在 **“作业属性”** 对话框中，单击 **“步骤”** 页面，再单击 **“新建”**。  
   
-4.  在 **“新建作业步骤”** 对话框中，键入作业 **“步骤名称”** 。  
+4.  在 **“新建作业步骤”** 对话框中，键入作业 **“步骤名称”**。  
   
-5.  在 **“类型”** 列表中，单击 **“SQL Server Analysis Services 命令”** 。  
+5.  在 **“类型”** 列表中，单击 **“SQL Server Analysis Services 命令”**。  
   
 6.  在 **“运行身份”** 列表中，选择为使用 Analysis Services 命令子系统而定义的代理。 如果用户是 **sysadmin** 固定服务器角色的成员，还可以选择 **“SQL Agent 服务帐户”** 运行此作业步骤。  
   
@@ -78,15 +78,15 @@ ms.locfileid: "72798249"
   
 #### <a name="to-create-an-analysis-services-query-job-step"></a>创建 Analysis Services 查询作业步骤  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
+1.  在**对象资源管理器中，** 连接到的[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例，然后展开该实例。  
   
-2.  展开 **“SQL Server 代理”** ，创建一个新作业或右键单击一个现有作业，再单击 **“属性”** 。 有关创建作业的详细信息，请参阅[创建作业](create-jobs.md)。  
+2.  展开 **“SQL Server 代理”**，创建一个新作业或右键单击一个现有作业，再单击 **“属性”**。 有关创建作业的详细信息，请参阅 [创建作业](create-jobs.md)。  
   
-3.  在 **“作业属性”** 对话框中，单击 **“步骤”** 页，再单击 **“新建”** 。  
+3.  在 **“作业属性”** 对话框中，单击 **“步骤”** 页，再单击 **“新建”**。  
   
-4.  在 **“新建作业步骤”** 对话框中，键入作业的 **“步骤名称”** 。  
+4.  在 **“新建作业步骤”** 对话框中，键入作业的 **“步骤名称”**。  
   
-5.  在 **“类型”** 列表中，单击 **“SQL Server Analysis Services 查询”** 。  
+5.  在 **“类型”** 列表中，单击 **“SQL Server Analysis Services 查询”**。  
   
 6.  在 **“运行身份”** 列表中，选择为使用 Analysis Services 查询子系统而定义的代理。 如果用户是 **sysadmin** 固定服务器角色的成员，还可以选择 **“SQL Agent 服务帐户”** 运行此作业步骤。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "72798249"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```sql
     -- Creates a job step that uses XMLA to create a relational data source that references the AdventureWorks2012 Microsoft SQL Server database  
@@ -134,7 +134,7 @@ ms.locfileid: "72798249"
     GO  
     ```  
   
- 有关详细信息，请[参阅&#40;sp_add_jobstep transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)。  
+ 有关详细信息，请参阅[&#40;transact-sql&#41;sp_add_jobstep ](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)。  
   
 #### <a name="to-create-an-analysis-services-query-job-step"></a>创建 Analysis Services 查询作业步骤  
   
@@ -142,7 +142,7 @@ ms.locfileid: "72798249"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```sql
     -- Creates a job step that uses MDX to return data  
@@ -161,7 +161,7 @@ ms.locfileid: "72798249"
     GO  
     ```  
   
- 有关详细信息，请[参阅&#40;sp_add_jobstep transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)。  
+ 有关详细信息，请参阅[&#40;transact-sql&#41;sp_add_jobstep ](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)。  
   
 ##  <a name="SMO"></a>使用 SQL Server 管理对象  
  **创建 PowerShell 脚本作业步骤**  

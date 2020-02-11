@@ -1,5 +1,5 @@
 ---
-title: SQLForeignKeys | Microsoft Docs
+title: SQLForeignKeys |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,22 +15,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8481b0f19566ed0e55f31480f9ab8be0c9441c7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184476"
 ---
 # <a name="sqlforeignkeys"></a>SQLForeignKeys
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过外键约束机制支持级联更新和删除操作。 如果在 FOREIGN KEY 约束的 ON UPDATE 和/或 ON DELETE 子句中指定 CASCADE 选项，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将为 UPDATE_RULE 和/或 DELETE_RULE 列返回 SQL_CASCADE。 如果未在 FOREIGN KEY 约束的 ON UPDATE 和/或 ON DELETE 子句中指定 NO ACTION 选项，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 则为 UPDATE_RULE 和/或 DELETE_RULE 列返回 SQL_NO_ACTION。  
   
- 当任何中存在无效值时**SQLForeignKeys**参数， **SQLForeignKeys**上执行都返回 SQL_SUCCESS。 **SQLFetch**这些参数中使用的值无效时返回 SQL_NO_DATA。  
+ 当任何**SQLForeignKeys**参数中存在无效值时， **SQLForeignKeys**将在执行时返回 SQL_SUCCESS。 当在这些参数中使用了无效值时， **SQLFetch**将返回 SQL_NO_DATA。  
   
- **SQLForeignKeys**可以对静态服务器游标执行。 尝试执行**SQLForeignKeys**对可更新的 （动态或键集） 游标将返回 sql_success_with_info 以指示游标类型已更改。  
+ 可以对静态服务器游标执行**SQLForeignKeys** 。 尝试对可更新的（动态或键集）游标执行**SQLForeignKeys**时，将返回 SQL_SUCCESS_WITH_INFO，指示游标类型已更改。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序通过接受由两部分名称来支持链接服务器上的表报告信息*FKCatalogName*并*PKCatalogName*参数：*Linked_Server_Name.Catalog_Name*。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序支持链接服务器上表的报告信息，方法是接受由两部分组成的*FKCatalogName*和*PKCatalogName*参数的名称： *Linked_Server_Name。 Catalog_Name*。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQLForeignKeys 函数](https://go.microsoft.com/fwlink/?LinkId=59344)   
  [ODBC API 实现细节](odbc-api-implementation-details.md)  
   

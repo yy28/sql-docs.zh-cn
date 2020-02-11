@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 927a89c36019ebc7232a110f5a10fcbf2cfa74af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63157983"
 ---
 # <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>创建内存优化表和本机编译的存储过程
@@ -26,7 +26,7 @@ ms.locfileid: "63157983"
   
 -   创建内存优化的表和索引。 有关详细信息，请参阅 [CREATE TABLE (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql)。  
   
--   在创建本机编译存储过程之前，使用解释型 [!INCLUDE[tsql](../../includes/tsql-md.md)]将数据加载到内存优化表中并且更新统计信息。 有关详细信息，请参阅 [Statistics for Memory-Optimized Tables](memory-optimized-tables.md)。  
+-   在创建本机编译存储过程之前，使用解释型 [!INCLUDE[tsql](../../includes/tsql-md.md)]将数据加载到内存优化表中并且更新统计信息。 有关详细信息，请参阅 [内存优化表的统计信息](memory-optimized-tables.md)。  
   
 -   创建本机编译的存储过程以访问内存优化表中的数据。 有关详细信息，请参阅 [CREATE PROCEDURE (Transact-SQL)](/sql/t-sql/statements/create-procedure-transact-sql)。  
   
@@ -232,7 +232,7 @@ ORDER BY so.so_id, sod.lineitem_id
   
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [内存中 OLTP 代码示例](in-memory-oltp-code-samples.md)   
  [迁移计算列](migrating-computed-columns.md)   
  [在内存优化的表中实现 IDENTITY](implementing-identity-in-a-memory-optimized-table.md)  

@@ -33,22 +33,22 @@ ms.assetid: f7da3e92-e407-4f0b-b3a3-f214e442b37d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 4d9eb0f5e08a67036ede2567965e1400494455f5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72907496"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>在 SQL Server 中注册用户定义类型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  若要在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中使用用户定义的类型（UDT），必须注册该类型。 注册一个 UDT 涉及两个步骤：在要使用它的数据库中注册程序集和创建该类型。 UDT 的作用域仅限单个数据库，不能在多个数据库中使用，除非在各个数据库中注册相同的程序集和 UDT。 一旦注册 UDT 程序集并创建了该类型，即可在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和客户端代码中使用 UDT。 有关详细信息，请参阅 [CLR 用户定义类型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)。  
+  若要在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用用户定义的类型（UDT），必须注册该类型。 注册一个 UDT 涉及两个步骤：在要使用它的数据库中注册程序集和创建该类型。 UDT 的作用域仅限单个数据库，不能在多个数据库中使用，除非在各个数据库中注册相同的程序集和 UDT。 一旦注册 UDT 程序集并创建了该类型，即可在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和客户端代码中使用 UDT。 有关详细信息，请参阅 [CLR 用户定义类型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)。  
   
 ## <a name="using-visual-studio-to-deploy-udts"></a>使用 Visual Studio 部署 UDT  
  部署 UDT 的最简单方法是使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio。 不过，对于更为复杂的部署方案，同时为尽量提高灵活性，应使用本主题下文介绍的 [!INCLUDE[tsql](../../includes/tsql-md.md)]。  
   
  遵照以下步骤使用 Visual Studio 创建和部署 UDT：  
   
-1.  在**Visual Basic**或**Visual C#**  language 节点中创建新的**数据库**项目。  
+1.  在**Visual Basic**或**Visual c #** 语言节点中创建新的**数据库**项目。  
   
 2.  向将要包含该 UDT 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库添加引用。  
   
@@ -59,17 +59,18 @@ ms.locfileid: "72907496"
 5.  在 "**生成**" 菜单中，选择 "**部署**"。 这样即可在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中注册该程序集并创建该类型。  
 
 ## <a name="using-transact-sql-to-deploy-udts"></a>使用 Transact-SQL 部署 UDT  
- 使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY 语法可以在您希望使用 UDT 的数据库中注册程序集。 该程序集存储在内部的数据库系统表中，而不是存储在外部的文件系统中。 如果 UDT 依赖于外部程序集，则必须将这些程序集也加载到数据库中。 使用 CREATE TYPE 语句可以在要使用 UDT 的数据库中创建该 UDT。 有关详细信息，请参阅[create &#40;ASSEMBLY transact-sql&#41; ](../../t-sql/statements/create-assembly-transact-sql.md)和[create TYPE &#40;transact-sql&#41;](../../t-sql/statements/create-type-transact-sql.md)。  
+ 使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY 语法可以在您希望使用 UDT 的数据库中注册程序集。 该程序集存储在内部的数据库系统表中，而不是存储在外部的文件系统中。 如果 UDT 依赖于外部程序集，则必须将这些程序集也加载到数据库中。 使用 CREATE TYPE 语句可以在要使用 UDT 的数据库中创建该 UDT。 有关详细信息，请参阅[CREATE ASSEMBLY &#40;transact-sql&#41;](../../t-sql/statements/create-assembly-transact-sql.md)和[Create TYPE &#40;transact-sql&#41;](../../t-sql/statements/create-type-transact-sql.md)。  
   
 ### <a name="using-create-assembly"></a>使用 ASSEMBLY  
  使用 CREATE ASSEMBLY 语法可以在要使用 UDT 的数据库中注册程序集。 经过注册的程序集不具有任何依赖关系。  
   
- 不允许在给定数据库中创建同一程序集的多个版本。 不过，可以基于给定数据库的区域性创建同一程序集的多个版本。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中注册的不同程序集名称来区分程序集的多个区域性版本。 有关详细信息，请参阅 .NET Framework SDK 中的“创建和使用具有强名称的程序集”。  
+ 不允许在给定数据库中创建同一程序集的多个版本。 不过，可以基于给定数据库的区域性创建同一程序集的多个版本。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中注册的不同程序集名称来区分程序集的多个区域性版本。 有关详细信息，请参阅 .NET Framework SDK 中的“创建和使用具有强名称的程序集”。  
   
  在权限集设置为 SAFE 或 EXTERNAL_ACCESS 的情况下执行 CREATE ASSEMBLY 时，将检查程序集，确保其可验证并且是类型安全的。 如果未指定权限集，则假定为 SAFE。 不检查权限集为 UNSAFE 的代码。 有关程序集的权限集的详细信息，请参阅[设计程序集](../../relational-databases/clr-integration/assemblies-designing.md)。  
   
 #### <a name="example"></a>示例  
- 下面的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句用 SAFE 权限集在**AdventureWorks**数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中注册 Point 程序集。 如果省略 WITH PERMISSION_SET 子句，将使用 SAFE 权限集注册该程序集。  
+ 下面[!INCLUDE[tsql](../../includes/tsql-md.md)]的语句在**AdventureWorks**数据库中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用 SAFE 权限集注册 Point 程序集。 如果省略 WITH PERMISSION_SET 子句，将使用 SAFE 权限集注册该程序集。  
   
 ```  
 USE AdventureWorks;  
@@ -78,7 +79,7 @@ FROM '\\ShareName\Projects\Point\bin\Point.dll'
 WITH PERMISSION_SET = SAFE;  
 ```  
   
- 下面的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句使用 FROM 子句中 *< assembly_bits >* 参数注册程序集。 此**varbinary**值将文件表示为字节流。  
+ 以下[!INCLUDE[tsql](../../includes/tsql-md.md)]语句使用 FROM 子句中的 *<assembly_bits>* 参数注册程序集。 此**varbinary**值将文件表示为字节流。  
   
 ```  
 USE AdventureWorks;  
@@ -90,12 +91,12 @@ FROM 0xfeac4 ... 21ac78
  一旦将程序集加载到数据库中，随后即可使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TYPE 语句创建该类型。 这样即可将该类型添加到该数据库的可用类型列表中。 该类型的作用域为数据库，并且只能在创建该类型的数据库中使用。 如果数据库中已存在 UDT，CREATE TYPE 语句将失败，并且生成错误。  
   
 > [!NOTE]  
->  CREATE TYPE 语法还用于创建本机 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 别名数据类型，旨在将**sp_addtype**替换为创建别名数据类型的方法。 CREATE TYPE 语法中的某些可选参数与创建 UDT 有关，不适用于创建别名数据类型（如基类型）。  
+>  CREATE TYPE 语法还用于创建本机[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]别名数据类型，用于将**sp_addtype**替换为创建别名数据类型的方式。 CREATE TYPE 语法中的某些可选参数与创建 UDT 有关，不适用于创建别名数据类型（如基类型）。  
   
- 有关详细信息，请参阅[CREATE &#40;TYPE transact-sql&#41;](../../t-sql/statements/create-type-transact-sql.md)。  
+ 有关详细信息，请参阅[CREATE TYPE &#40;transact-sql&#41;](../../t-sql/statements/create-type-transact-sql.md)。  
   
 #### <a name="example"></a>示例  
- 下面的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句创建**点**类型。 使用*AssemblyName*的由两部分组成的命名语法指定外部名称。*UDTName*。  
+ 下面[!INCLUDE[tsql](../../includes/tsql-md.md)]的语句创建**点**类型。 使用*AssemblyName*的由两部分组成的命名语法指定外部名称。*UDTName*。  
   
 ```  
 CREATE TYPE dbo.Point   
@@ -123,7 +124,7 @@ DROP ASSEMBLY Point;
 ### <a name="finding-udt-dependencies"></a>查找 UDT 依赖关系  
  如果存在依赖对象，如具有 UDT 列定义的表，DROP TYPE 语句将失败。 如果存在在数据库中用 WITH SCHEMABINDING 子句创建的函数、存储过程或触发器，且这些例程使用用户定义类型的变量或参数，该语句也将失败。 在执行 DROP TYPE 语句之前，首先必须删除所有依赖对象。  
   
- 以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询将查找使用**AdventureWorks**数据库中的 UDT 的所有列和参数。  
+ 下面[!INCLUDE[tsql](../../includes/tsql-md.md)]的查询查找使用**AdventureWorks**数据库中的 UDT 的所有列和参数。  
   
 ```  
 USE Adventureworks;  
@@ -147,7 +148,7 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
  尽管可以更改 UDT 所基于的程序集，但是一旦在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中创建了该 UDT 就无法再修改它。 多数情况下，必须使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] DROP TYPE 语句从数据库中删除 UDT、更改基础程序集，然后使用 ALTER ASSEMBLY 语句重新加载它。 随后还需要重新创建该 UDT 和所有依赖对象。  
   
 ### <a name="example"></a>示例  
- 在更改 UDT 程序集中的源代码并且重新编译该程序集后，可以使用 ALTER ASSEMBLY 语句。 该语句将 .dll 文件复制到服务器，并且重新绑定到新程序集。 有关完整的语法，请参阅[ALTER &#40;ASSEMBLY transact-sql&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)。  
+ 在更改 UDT 程序集中的源代码并且重新编译该程序集后，可以使用 ALTER ASSEMBLY 语句。 该语句将 .dll 文件复制到服务器，并且重新绑定到新程序集。 有关完整的语法，请参阅[ALTER ASSEMBLY &#40;transact-sql&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)。  
   
  以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY 语句从指定的磁盘位置重新加载 Point.dll 程序集。  
   
@@ -159,23 +160,23 @@ FROM '\\Projects\Point\bin\Point.dll'
 ### <a name="using-alter-assembly-to-add-source-code"></a>使用 ALTER ASSEMBLY 添加源代码  
  CREATE ASSEMBLY 中不存在 ALTER ASSEMBLY 语法中的 ADD FILE 子句。 您可以使用该子句来添加源代码或与程序集关联的任何其他文件。 这些文件将从其原始位置复制并存储到数据库的系统表中。 如果您需要重新创建或记录 UDT 的当前版本，这样可确保源代码或其他文件随时备用。  
   
- 以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY 语句为**Point** UDT 添加 Point.cs 类源代码。 这会复制 Point.cs 文件中包含的文本并用名称“PointSource”将其存储在数据库中。  
+ 以下[!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY 语句为**Point** UDT 添加了 Point.cs 类源代码。 这会复制 Point.cs 文件中包含的文本并用名称“PointSource”将其存储在数据库中。  
   
 ```  
 ALTER ASSEMBLY Point  
 ADD FILE FROM '\\Projects\Point\Point.cs' AS PointSource;  
 ```  
   
- 程序集信息存储在安装了程序集的数据库的**assembly_files**表中。 **Assembly_files**表包含以下列。  
+ 程序集信息存储在安装了程序集的数据库的**sys.databases. assembly_files**表中。 **Sys. assembly_files**表包含以下列。  
   
  **assembly_id**  
  为程序集定义的标识符。 此编号分配到与同一程序集相关的所有对象。  
   
- **名称**  
+ **路径名**  
  对象的名称。  
   
- file_id  
- 标识每个对象的数字，其中第一个与给定**assembly_id**关联的对象的值为1。 如果有多个对象与同一个**assembly_id**关联，则每个后续**file_id**值将递增1。  
+ file_id   
+ 标识每个对象的数字，其中第一个与给定**assembly_id**关联的对象的值为1。 如果有多个对象与同一个**assembly_id**相关联，则每个后续**file_id**值将递增1。  
   
  **content**  
  程序集或文件的十六进制表示形式。  
@@ -213,7 +214,7 @@ SELECT CAST(content AS varchar(8000))
   
  在上述情况下，自动执行服务器所需的任何转换。 您无法使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST 或 CONVERT 函数显式执行转换。  
   
- 请注意，在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 在**tempdb**系统数据库中创建工作表时，不需要采取任何措施来使用 udt。 这包括处理游标、表变量和用户定义的表值函数，这些函数包含 Udt，并以透明方式利用**tempdb**。 但是，如果在**tempdb**中显式创建了定义 UDT 列的临时表，则必须以与为用户数据库相同的方式在**TEMPDB**中注册 UDT。  
+ 请注意，在[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] **tempdb**系统数据库中创建工作表时，不需要采取任何措施来使用 udt。 这包括处理游标、表变量和用户定义的表值函数，这些函数包含 Udt，并以透明方式利用**tempdb**。 但是，如果在**tempdb**中显式创建了定义 UDT 列的临时表，则必须以与为用户数据库相同的方式在**TEMPDB**中注册 UDT。  
   
 ## <a name="see-also"></a>另请参阅  
  [CLR 用户定义类型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  

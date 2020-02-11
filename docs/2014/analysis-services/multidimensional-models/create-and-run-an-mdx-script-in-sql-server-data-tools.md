@@ -1,5 +1,5 @@
 ---
-title: 创建和运行 MDX 脚本在 SQL Server Data Tools |Microsoft Docs
+title: 在 SQL Server Data Tools 中创建和运行 MDX 脚本 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6451e2a02bbaf7ef8a58b63c75838023433ff563
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076212"
 ---
 # <a name="create-and-run-an-mdx-script-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中创建和运行 MDX 脚本
@@ -26,7 +26,7 @@ ms.locfileid: "66076212"
   
 ### <a name="to-create-a-multidimensional-expressions-mdx-script"></a>创建多维表达式 (MDX) 脚本  
   
-1.  打开要为其创建 MDX 脚本的多维数据集，然后在 **“视图”** 下单击 **“计算”** 。  
+1.  打开要为其创建 MDX 脚本的多维数据集，然后在 **“视图”** 下单击 **“计算”**。  
   
 2.  如果不在 **“脚本视图”** 模式下，则单击 **“脚本视图”** 图标。  
   
@@ -34,9 +34,9 @@ ms.locfileid: "66076212"
   
 4.  若要运行 MDX 脚本，请使用新的 MDX 脚本更改来部署和处理多维数据集。  
   
-## <a name="see-also"></a>请参阅  
- [基本 MDX 脚本 (MDX)](mdx/the-basic-mdx-script-mdx.md)   
- [MDX 脚本编写基础知识 (Analysis Services)](mdx/mdx-scripting-fundamentals-analysis-services.md)   
- [MDX 脚本编写语句 (MDX)](/sql/mdx/mdx-scripting-statements-mdx)  
+## <a name="see-also"></a>另请参阅  
+ [基本 MDX 脚本 &#40;MDX&#41;](mdx/the-basic-mdx-script-mdx.md)   
+ [MDX 脚本编写基础 &#40;Analysis Services&#41;](mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [Mdx 脚本语句 &#40;MDX&#41;](/sql/mdx/mdx-scripting-statements-mdx)  
   
   

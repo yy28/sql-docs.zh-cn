@@ -11,14 +11,15 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 323c98b56e2d77c529fb2adf913b15e51bd77900
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062443"
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Analysis Services 教程方案
-  本教程基于 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]，这是一家虚构的公司。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 是一家大型跨国制造公司，生产金属复合材料的自行车，产品远销北美、欧洲和亚洲市场。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 公司总部设在华盛顿州的伯瑟尔市，雇佣了 500 名工人。 此外，在 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 市场中还活跃着一些地区销售团队。  
+  本教程基于 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]，这是一家虚构的公司。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]是一家大型跨国制造公司，为北美、欧洲和亚洲的商业市场生成并分发金属和组合自行车。 
+  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 公司总部设在华盛顿州的伯瑟尔市，雇佣了 500 名工人。 此外，在 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 市场中还活跃着一些地区销售团队。  
   
  在最近几年中， [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 购买了位于墨西哥的小型生产厂 Importadores Neptuno。 Importadores Neptuno 为 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 产品系列生产多种关键子组件。 这些子组件将被运送到伯瑟尔市进行最后的产品装配。 在 2005 年，Importadores Neptuno 转型成为专注于旅游登山车系列产品的独立制造商和销售商。  
   
@@ -46,7 +47,7 @@ ms.locfileid: "66062443"
 -   信息难以审核。 财务部门当前仅将 **AdventureWorksDW2012** 数据库用作从中进行大容量查询的数据源。 然后，再将数据下载到单个电子表格中，并花费大量时间准备数据和处理电子表格。 因此，很难在整个公司内准备、审核和管理公司财务报表。  
   
 ## <a name="the-solution"></a>解决方案  
- 数据仓库团队最近对当前分析系统执行了设计评审。 评审包括当前问题和未来需求之间的差距分析。 数据仓库团队已确定 **AdventureWorksDW2012** 数据库是一个设计良好的维度数据库，具有相符的维度和代理键。 相符的维度可使某个维度用于多个数据集市中，例如时间维度或产品维度。 代理键是链接维度表和事实数据表的假键，用于确保唯一性并提高性能。 此外，数据仓库团队已确定当前在加载和管理 **AdventureWorksDW2012** 数据库中的基表方面没有重大问题。 因此，该团队已决定使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 来完成下列各项：  
+ 数据仓库团队最近对当前分析系统执行了设计评审。 评审包括当前问题和未来需求之间的差距分析。 数据仓库团队已确定 **AdventureWorksDW2012** 数据库是一个设计良好的维度数据库，具有相符的维度和代理键。 相符的维度可使某个维度用于多个数据集市中，例如时间维度或产品维度。 代理键是链接维度表和事实数据表的假键，用于确保唯一性并提高性能。 此外，数据仓库团队已确定当前在加载和管理 **AdventureWorksDW2012** 数据库中的基表方面没有重大问题。 因此，该团队已决定使用[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]来完成以下操作：  
   
 -   通过一个通用的元数据层提供统一的数据访问以进行分析和报告。  
   
@@ -60,9 +61,9 @@ ms.locfileid: "66062443"
   
 -   为美国以外的业务用户提供本地化体验。  
   
- Analysis Services 教程中的课程提供生成满足上述所有目标的多维数据集数据库的指南。 若要开始，继续阅读第一课：[第 1 课：创建新的表格模型项目](lesson-1-create-a-new-tabular-model-project.md)。  
+ Analysis Services 教程中的课程提供生成满足上述所有目标的多维数据集数据库的指南。 若要开始，请继续第一课： [第 1 课：创建新的表格模型项目](lesson-1-create-a-new-tabular-model-project.md)。  
   
-## <a name="see-also"></a>请参阅  
- [多维建模（Adventure Works 教程）](multidimensional-modeling-adventure-works-tutorial.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;艾德作品的多维建模教程&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

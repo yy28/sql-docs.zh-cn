@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9123bf89f75fce68a6edd8ba1becd141821fe326
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63158752"
 ---
 # <a name="memory-optimized-tables"></a>内存优化表
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存中 OLTP 通过高效的内存优化的数据访问、对业务逻辑的本机编译以及锁和闩锁释放算法帮助改进了 OLTP 应用程序的性能。 内存中 OLTP 功能包括内存优化表和表类型，以及用于高效访问这些表的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程的本机编译。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内存中 OLTP 通过高效的内存优化的数据访问、对业务逻辑的本机编译以及锁和闩锁免费算法，帮助提高 OLTP 应用程序的性能。 内存中 OLTP 功能包括内存优化表和表类型，以及用于高效访问这些表的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程的本机编译。  
   
  有关内存优化表的详细信息，请参阅：  
   
@@ -58,7 +58,7 @@ ms.locfileid: "63158752"
   
      简单介绍针对内存优化表和本机编译的存储过程的查询处理。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [内存中 OLTP（内存中优化）](in-memory-oltp-in-memory-optimization.md)  
   
   

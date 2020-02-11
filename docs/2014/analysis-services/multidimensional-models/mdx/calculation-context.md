@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 847e9da07f8c255af8041071c63254b241490761
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074690"
 ---
 # <a name="calculation-context"></a>计算上下文
@@ -27,10 +27,11 @@ ms.locfileid: "66074690"
   
 1.  FROM 子句（如果适用）- 此子句可指定整个多维数据集，或以 SELECT 语句的形式指定子多维数据集。  
   
-2.  WHERE 子句（如果适用）- 此子句也称为“切片器轴”  ，可在其上指定集、元组或成员以限制查询在列轴或行轴上返回成员。 从概念上来说，未在列轴或行轴上显式指定的每个属性层次结构的默认成员均是切片器轴的一部分。  
+2.  WHERE 子句（如果适用）- 此子句也称为“切片器轴”**，可在其上指定集、元组或成员以限制查询在列轴或行轴上返回成员。 从概念上来说，未在列轴或行轴上显式指定的每个属性层次结构的默认成员均是切片器轴的一部分。  
   
     > [!NOTE]  
-    >  在切片器轴和其他轴上指定特定属性的单元坐标时，函数中指定的坐标可能优先确定轴上的集的成员。 [Filter (MDX)](/sql/mdx/filter-mdx) 和 [Order (MDX)](/sql/mdx/order-mdx) 函数是这类函数的示例 - 你可以按属性成员（通过 WHERE 子句或 FROM 子句中的 SELECT 语句排除在计算上下文之外）对结果进行筛选或排序。  
+    >  在切片器轴和其他轴上指定特定属性的单元坐标时，函数中指定的坐标可能优先确定轴上的集的成员。 
+  [Filter (MDX)](/sql/mdx/filter-mdx) 和 [Order (MDX)](/sql/mdx/order-mdx) 函数是这类函数的示例 - 你可以按属性成员（通过 WHERE 子句或 FROM 子句中的 SELECT 语句排除在计算上下文之外）对结果进行筛选或排序。  
   
 3.  在查询或表达式中定义的命名集和计算成员。  
   
@@ -69,9 +70,9 @@ WHERE (Customer.Country.France,
 > [!IMPORTANT]  
 >  若要提高查询性能，应在解析过程中尽早地消除成员和元组。 通过这种方式，针对最终成员集的复杂查询时间计算涉及的单元最少。  
   
-## <a name="see-also"></a>请参阅  
- [在查询中建立多维数据集上下文 (MDX)](establishing-cube-context-in-a-query-mdx.md)   
- [MDX 查询基础知识 (Analysis Services)](mdx-query-fundamentals-analysis-services.md)   
- [MDX 中的重要概念 (Analysis Services)](../key-concepts-in-mdx-analysis-services.md)  
+## <a name="see-also"></a>另请参阅  
+ [在查询 &#40;MDX&#41;中建立多维数据集上下文](establishing-cube-context-in-a-query-mdx.md)   
+ [MDX 查询基础知识 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
+ [MDX &#40;Analysis Services 中的关键概念&#41;](../key-concepts-in-mdx-analysis-services.md)  
   
   

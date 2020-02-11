@@ -13,22 +13,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f23b0f43b32d737f03cb7c9b00368558e89e9288
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63199992"
 ---
 # <a name="cross-version-compatibility"></a>跨版本兼容性
   如果期望让早于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 客户端或服务器实例处理表值参数，则会发生跨版本冲突。  
   
- 通常，表值参数功能仅对连接到 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]（或更高版本）服务器的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 客户端（使用 SQL Server Native Client 10.0）或更高版本可用。 目录函数结果集中的新列才会显示在连接到[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]（或更高版本） 服务器。  
+ 通常，表值参数功能仅对连接到 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]（或更高版本）服务器的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 客户端（使用 SQL Server Native Client 10.0）或更高版本可用。 仅当连接到[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] （或更高版本）服务器时，才会显示目录函数结果集中的新列。  
   
  如果用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 的更早版本编译的客户端应用程序执行了期望表值参数的语句，则服务器将通过数据转换错误检测到此情况，并且 ODBC 将以 SQLSTATE 07006 和消息“受限制的数据类型属性冲突”返回该错误。  
   
- 如果使用已编译的客户端应用程序[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client 10.0 或更高版本尝试使用表值参数时连接到服务器实例早于[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端将检测到这，和 SQLBindCol，SQLBindParameter、 SQLSetDescFields 和 SQLSetDescRec 调用将失败，SQLSTATE 07006 和消息"受限制的数据类型属性冲突 （为此连接的 SQL Server 的版本不支持表值参数）"。  
+ 如果使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client 10.0 或更高版本编译的客户端应用程序在连接到早于[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]的服务器实例时尝试使用表值参数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则 Native client 将检测到此情况，而 SQLBindCol、SQLBindParameter、SQLSetDescFields 和 SQLSetDescRec 调用将失败，并出现 SQLSTATE 07006 和消息 "受限制的数据类型属性（此连接的 SQL Server 版本不支持表值参数）"。  
   
-## <a name="see-also"></a>请参阅  
- [表值参数&#40;ODBC&#41;](table-valued-parameters-odbc.md)  
+## <a name="see-also"></a>另请参阅  
+ [ODBC&#41;&#40;表值参数](table-valued-parameters-odbc.md)  
   
   

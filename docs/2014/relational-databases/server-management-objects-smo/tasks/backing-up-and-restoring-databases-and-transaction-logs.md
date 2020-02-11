@@ -20,21 +20,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a1d50f31078389cad9fc1e687e67b515c61c89b1
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783053"
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>备份和还原数据库和事务日志
-  在 SMO 中，<xref:Microsoft.SqlServer.Management.Smo.Backup> 类和 <xref:Microsoft.SqlServer.Management.Smo.Restore> 类是为实现特定备份和还原任务提供工具的实用工具类。 @No__t_0 对象表示所需的特定备份任务，而不是服务器实例上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 对象。  
+  在 SMO 中，<xref:Microsoft.SqlServer.Management.Smo.Backup> 类和 <xref:Microsoft.SqlServer.Management.Smo.Restore> 类是为实现特定备份和还原任务提供工具的实用工具类。 <xref:Microsoft.SqlServer.Management.Smo.Backup>对象表示所需的特定备份任务，而不[!INCLUDE[msCoName](../../../includes/msconame-md.md)]是服务器实例上的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]对象。  
   
  如果发生数据丢失或损坏，则必须完全或部分还原备份。 部分还原使用 <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection> 集合将要进行还原的数据分成段。 如果要对事务日志进行备份，则可以使用 <xref:Microsoft.SqlServer.Management.Smo.Restore.ToPointInTime%2A> 对象的 <xref:Microsoft.SqlServer.Management.Smo.Restore> 属性将数据还原到特定时间点。 还可以采用 <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A> 方法来验证数据。 建议采用的备份过程是，通过定期进行还原操作并检查数据库中的数据来检查备份的完整性。  
   
- 与 <xref:Microsoft.SqlServer.Management.Smo.Backup> 对象相同，无需采用 `Create` 方法创建 <xref:Microsoft.SqlServer.Management.Smo.Restore> 对象，因为该对象并不表示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例中的任何对象。 <xref:Microsoft.SqlServer.Management.Smo.Restore> 对象具有还原数据库所需的一组属性和方法。  
+ 与 <xref:Microsoft.SqlServer.Management.Smo.Backup> 对象相同，无需采用 <xref:Microsoft.SqlServer.Management.Smo.Restore> 方法创建 `Create` 对象，因为该对象并不表示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例中的任何对象。 
+  <xref:Microsoft.SqlServer.Management.Smo.Restore> 对象具有还原数据库所需的一组属性和方法。  
   
 ## <a name="examples"></a>示例  
- 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual studio .net 中创建 VISUAL BASIC SMO 项目](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[在 visual Studio&#35; .Net 中创建 visual C SMO 项目](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual studio .net 中创建 VISUAL BASIC SMO 项目](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[在 visual Studio .Net 中创建 VISUAL C&#35; smo 项目](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="backing-up-databases-and-transaction-logs-in-visual-basic"></a>在 Visual Basic 中备份数据库和事务日志  
  此代码示例说明如何将现有数据库备份到某个文件，以及如何还原该数据库。  
@@ -445,10 +446,12 @@ del "C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Backup\Test
 ```  
   
 ## <a name="running-database-integrity-checks-in-visual-basic"></a>在 Visual Basic 中运行数据库完整性检查  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供数据完整性检查。 此代码示例对指定的数据库运行数据库一致性类型检查。 在此示例中，使用了 <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A>，但也可以相似的方式使用 <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>、<xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> 或 <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A>。  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供数据完整性检查。 此代码示例对指定的数据库运行数据库一致性类型检查。 在此示例中，使用了 <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A>，但也可以相似的方式使用 <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>、<xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> 或 <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A>。  
   
 > [!NOTE]  
->  <xref:System.Collections.Specialized.StringCollection> 对象需要使用 `imports System.Collections.Specialized` 语句引用命名空间。  
+>  
+  <xref:System.Collections.Specialized.StringCollection> 对象需要使用 `imports System.Collections.Specialized` 语句引用命名空间。  
   
 ```vb
 Imports Microsoft.SqlServer.Management.Smo  
@@ -475,10 +478,12 @@ End Module
 ```  
   
 ## <a name="running-database-integrity-checks-in-visual-c"></a>在 Visual C# 中运行数据库完整性检查  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供数据完整性检查。 此代码示例对指定的数据库运行数据库一致性类型检查。 在此示例中，使用了 <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A>，但也可以相似的方式使用 <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>、<xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> 或 <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A>。  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供数据完整性检查。 此代码示例对指定的数据库运行数据库一致性类型检查。 在此示例中，使用了 <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A>，但也可以相似的方式使用 <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>、<xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> 或 <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A>。  
   
 > [!NOTE]  
->  <xref:System.Collections.Specialized.StringCollection> 对象需要使用 `imports System.Collections.Specialized` 语句引用命名空间。  
+>  
+  <xref:System.Collections.Specialized.StringCollection> 对象需要使用 `imports System.Collections.Specialized` 语句引用命名空间。  
   
 ```csharp
 using Microsoft.SqlServer.Management.Common;  
@@ -507,10 +512,12 @@ class A {
 ```  
   
 ## <a name="running-database-integrity-checks-in-powershell"></a>在 PowerShell 中运行数据库完整性检查  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供数据完整性检查。 此代码示例对指定的数据库运行数据库一致性类型检查。 在此示例中，使用了 <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A>，但也可以相似的方式使用 <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>、<xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> 或 <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A>。  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供数据完整性检查。 此代码示例对指定的数据库运行数据库一致性类型检查。 在此示例中，使用了 <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A>，但也可以相似的方式使用 <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>、<xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> 或 <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A>。  
   
 > [!NOTE]  
->  <xref:System.Collections.Specialized.StringCollection> 对象需要使用 `imports System.Collections.Specialized` 语句引用命名空间。  
+>  
+  <xref:System.Collections.Specialized.StringCollection> 对象需要使用 `imports System.Collections.Specialized` 语句引用命名空间。  
   
 ```powershell
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  

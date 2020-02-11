@@ -1,5 +1,5 @@
 ---
-title: 运行实用工具和非实用工具收集组的 SQL Server 的同一实例的注意事项 |Microsoft Docs
+title: 在 SQL Server 的同一实例中运行实用工具和非实用工具收集组的注意事项Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5f2e77a1c4be8462fc509b1a2437329f026d5987
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63187170"
 ---
 # <a name="considerations-for-running-utility-and-non-utility-collection-sets-on-the-same-instance-of-sql-server"></a>在 SQL Server 的同一实例中运行实用工具和非实用工具收集组的注意事项
@@ -39,7 +39,7 @@ ms.locfileid: "63187170"
   
 -   您必须为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的托管实例上的所有收集组使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实用工具 UMDW (sysutility_mdw)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 实用工具的功能和任务](sql-server-utility-features-and-tasks.md)   
  [配置实用工具控制点数据仓库（SQL Server 实用工具）](configure-your-utility-control-point-data-warehouse-sql-server-utility.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 执行时数据和 Text、 ntext 或 Image 列 |Microsoft Docs
+title: 执行时数据和 Text、ntext 或 Image 列 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -23,16 +23,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e7c57cf6444e5833b6deee0dcae36d71b7a6430
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63195126"
 ---
 # <a name="data-at-execution-and-text-ntext-or-image-columns"></a>执行时数据和 Text、ntext 或 Image 列
-  使用 ODBC 执行时数据功能，应用程序能够对绑定列或参数使用非常大的数据量。 当检索很大**文本**， **ntext**，或**图像**列，应用程序可能无法简单地分配大型缓冲区，将列绑定到缓冲区，并提取行。 当更新很大**文本**， **ntext**，或**图像**列，该应用程序可能不能简单地分配大型缓冲区，将其绑定到 SQL 中的参数标记语句，然后执行该语句。 在这些情况下，应用程序必须使用[SQLGetData](../native-client-odbc-api/sqlgetdata.md)或[SQLPutData](../native-client-odbc-api/sqlputdata.md)包括其执行时数据选项。  
+  使用 ODBC 执行时数据功能，应用程序能够对绑定列或参数使用非常大的数据量。 检索非常大的**text**、 **ntext**或**image**列时，应用程序可能无法简单地分配大型缓冲区，将列绑定到缓冲区，并提取行。 更新非常大的**text**、 **ntext**或**image**列时，应用程序可能无法简单地分配大型缓冲区，将其绑定到 SQL 语句中的参数标记，然后执行该语句。 在这些情况下，应用程序必须将[SQLGetData](../native-client-odbc-api/sqlgetdata.md)或[SQLPutData](../native-client-odbc-api/sqlputdata.md)与它的执行时数据选项一起使用。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [管理 Text 和 Image 列](managing-text-and-image-columns.md)  
   
   

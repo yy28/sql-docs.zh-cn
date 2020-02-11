@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fcab02cbe7f24da3567fdfa615a6595a268185ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105671"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>将 HTML 导入报表（报表生成器和 SSRS）
@@ -27,7 +27,7 @@ ms.locfileid: "66105671"
 > [!NOTE]  
 >  导入包含 HTML 标记的文本时，文本框必须始终首先分析数据。 由于仅支持 HTML 标记的子集，因此在呈现报表中显示的 HTML 可能不同于您的原始 HTML。  
   
- 若要快速开始，请参阅[教程：设置文本格式（报表生成器）](../tutorial-format-text-report-builder.md)。  
+ 若要快速开始使用，请参阅[教程：设置文本格式（报表生成器）](../tutorial-format-text-report-builder.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -35,7 +35,7 @@ ms.locfileid: "66105671"
 ## <a name="supported-html-tags"></a>支持的 HTML 标记  
  以下是作为占位符文本定义时将呈现为 HTML 标记的完整列表：  
   
--   标头、 样式和块元素：\<H {n} >， \<d i V >， \<s p a N >，\<P >， \<l I >  
+-   标头、样式和块元素\<： H {n} > \<，DIV> \<，SPAN>\<，P> \<，LI>  
   
  在报表处理期间，将忽略任何其他 HTML 标记。 如果占位符文本中表达式所表示的 HTML 格式不正确，则将占位符呈现为纯文本。 所有 HTML 标记都不区分大小写。  
   
@@ -70,11 +70,11 @@ ms.locfileid: "66105671"
   
 -   格式不正确的 CSS 值和 HTML 的忽略方式相同。  
   
--   如果同一标记中存在特性和 CSS 样式特性，则 CSS 属性具有较高优先级。 例如，如果文本为 \<p style="text-align: right" align="left">，则仅应用 text-align 特性，并且文本为右对齐  。  
+-   如果同一标记中存在特性和 CSS 样式特性，则 CSS 属性具有较高优先级。 例如，如果文本为** \<p 样式 = "文本对齐：右" align = "left" >**，则只会应用文本对齐属性并且文本右对齐。  
   
--   对于特性和 CSS 样式，如果多次指定某一属性，则仅应用该属性的最后一个实例。 例如，如果文本为 \<p align="left" align="right">，该文本则为右对齐  。  
+-   对于特性和 CSS 样式，如果多次指定某一属性，则仅应用该属性的最后一个实例。 例如，如果文本为** \<p align = "left" align = "right" >**，则文本将为右对齐。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [以 HTML 格式呈现（报表生成器和 SSRS）](../report-builder/rendering-to-html-report-builder-and-ssrs.md)  
   
   

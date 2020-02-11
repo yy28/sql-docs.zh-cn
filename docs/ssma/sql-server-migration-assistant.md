@@ -10,25 +10,25 @@ ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Jtoland
 ms.author: Jtoland
 ms.openlocfilehash: fa87f4ac6f5a4caf5da8d5b00200b1dd8c92d53a
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72252122"
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server Migration Assistant
 
-Microsoft SQL Server 迁移助手（SSMA）是一种设计用于自动执行数据库迁移以便从 Microsoft Access、DB2、MySQL、Oracle 和 SAP ASE SQL Server 的工具。  
+Microsoft SQL Server 迁移助手 (SSMA) 是一项工具，旨在将数据库从 Microsoft Access、DB2、MySQL、Oracle 和 SAP ASE 自动迁移到 SQL Server。  
   
 ## <a name="migration-sources"></a>迁移源  
   
-- [访问 SQL Server 迁移助手](../ssma/access/sql-server-migration-assistant-for-access-accesstosql.md)  
+- [SQL Server Migration Assistant for Access](../ssma/access/sql-server-migration-assistant-for-access-accesstosql.md)  
   
-- [DB2 的 SQL Server 迁移助手](../ssma/db2/sql-server-migration-assistant-for-db2-db2tosql.md)  
+- [SQL Server Migration Assistant for DB2](../ssma/db2/sql-server-migration-assistant-for-db2-db2tosql.md)  
   
-- [MySQL SQL Server 迁移助手](../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md)  
+- [SQL Server Migration Assistant for MySQL](../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md)  
   
-- [Oracle SQL Server 迁移助手](../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md)  
+- [SQL Server Migration Assistant for Oracle](../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md)  
   
 - [SAP ASE SQL Server 迁移助手](../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md)  
 
@@ -43,18 +43,18 @@ SSMA 支持以下目标版本。
 - SQL Server 2016
 - Windows 和 Linux 上的 SQL Server 2017
 - Windows 和 Linux 上的 SQL Server 2019
-- Azure SQL Database
+- Azure SQL 数据库
 - Azure SQL 数据仓库 * *
 
-\* * 只有 SSMA for Oracle 支持此目标。
+* * 只有 SSMA for Oracle 支持此目标。
 
 ## <a name="downloads"></a>下载
 
-- [适用于 Access 的 SSMA](https://aka.ms/ssmaforaccess)
-- [适用于 DB2 的 SSMA](https://aka.ms/ssmafordb2)
-- [适用于 MySql 的 SSMA](https://aka.ms/ssmaformysql)
-- [适用于 Oracle 的 SSMA](https://aka.ms/ssmafororacle)
-- [适用于 SAP ASE 的 SSMA](https://aka.ms/ssmaforsybase)
+- [SSMA for Access](https://aka.ms/ssmaforaccess)
+- [SSMA for DB2](https://aka.ms/ssmafordb2)
+- [SSMA for MySql](https://aka.ms/ssmaformysql)
+- [SSMA for Oracle](https://aka.ms/ssmafororacle)
+- [SSMA for SAP ASE](https://aka.ms/ssmaforsybase)
  
 ## <a name="getting-ssma-support"></a>获取 SSMA 支持  
 
@@ -68,7 +68,7 @@ SSMA 支持以下目标版本。
   
   - [SQL Server Developer 中心社区](https://go.microsoft.com/fwlink/?LinkId=42456)-对 SQL Server 开发人员有用的新闻组、论坛和其他社区资源  
   
-- **辅助支持**-请跳到[https://support.microsoft.com/assistedsupportproducts](https://support.microsoft.com/assistedsupportproducts) ，搜索 "SQL Server 迁移助手"。  选择你的版本，然后选择 "启动请求"。  SQL Server 迁移助手工具附带了辅助支持。  
+- **辅助支持**-请参阅[https://support.microsoft.com/assistedsupportproducts](https://support.microsoft.com/assistedsupportproducts)并搜索 "SQL Server 迁移助手"。  选择你的版本，然后选择 "启动请求"。  SQL Server 迁移助手工具附带了辅助支持。  
   
 - **顶级支持**-如果你拥有顶级合同，则可以在[premier Online 门户](https://premier.microsoft.com/)上获得顶级支持。  
   
@@ -84,7 +84,7 @@ SSMA 支持以下目标版本。
   
 Microsoft 可能拥有本文档中内容的专利、专利申请、商标、版权或其他知识产权。 除非 Microsoft 提供了明确的书面许可协议，否则提供本文档并不意味着赋予您有关这些专利、商标、版权或其他知识产权的任何许可。  
   
-© 2019 Microsoft Corporation. 保留所有权利。  
+© 2019 Microsoft Corporation。 保留所有权利。  
   
 Microsoft、Windows、Windows NT、Windows Server、Active Directory、ActiveX、BackOffice、bCentral、BizTalk、DirectX、Excel、Hotmail、IntelliSense、J/Direct、Jscript、Microsoft Press、MSDN、MS-DOS、Outlook、PivotChart、PivotTable、PowerPoint、SharePoint、SQL Server、Visual Basic、Visual C#、Visual C++、Visual FoxPro、Visual InterDev、Visual J#、Visual J++、Visual SourceSafe、Visual Studio、Win32、Win32s、Windows Mobile、Windows Server System 和 WinFX 是 Microsoft Corporation 在美国和/或其他国家/地区的注册商标或商标。  
   

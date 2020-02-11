@@ -1,5 +1,5 @@
 ---
-title: 对表 (SSAS 表格) 中的数据进行排序 |Microsoft Docs
+title: 对表中的数据进行排序（SSAS 表格） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc53b6ccc800e2986bf7a6bfdd01c0ef3c3208df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066662"
 ---
 # <a name="sort-data-in-a-table-ssas-tabular"></a>对表中的数据进行排序（SSAS 表格）
@@ -26,9 +26,9 @@ ms.locfileid: "66066662"
   
 2.  在“自动筛选”菜单中，执行以下操作之一：  
   
-    -   若要按字母数字的升序排序，请单击 **“从 A 到 Z 排序”** 。  
+    -   若要按字母数字的升序排序，请单击 **“从 A 到 Z 排序”**。  
   
-    -   若要按字母数字的降序排序，请单击 **“从 Z 到 A 排序”** 。  
+    -   若要按字母数字的降序排序，请单击 **“从 Z 到 A 排序”**。  
   
     > [!NOTE]  
     >  在某些情况下，从其他应用程序导入的数据之前可能插入了前导空格。 您必须删除这些前导空格才能正确对数据进行排序。  
@@ -39,16 +39,16 @@ ms.locfileid: "66066662"
   
 2.  在“自动筛选”菜单中，执行以下操作之一：  
   
-    -   若要从小到大对数字进行排序，请单击 **“从小到大排序”** 。  
+    -   若要从小到大对数字进行排序，请单击 **“从小到大排序”**。  
   
-    -   若要从大到小对数字进行排序，请单击 **“从大到小排序”** 。  
+    -   若要从大到小对数字进行排序，请单击 **“从大到小排序”**。  
   
     > [!NOTE]  
     >  如果得到的并不是期望的结果，列中可能包含存储为文本而不是数字的数字。 例如，从某些会计系统导入的负数或是以 '（撇号）开头的数字均存储为文本。  
   
-## <a name="see-also"></a>请参阅  
- [对数据进行筛选和排序（SSAS 表格）](../filter-and-sort-data-ssas-tabular.md)   
- [透视表（SSAS 表格）](perspectives-ssas-tabular.md)   
- [角色（SSAS 表格）](roles-ssas-tabular.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;SSAS 表格中对数据进行筛选和排序&#41;](../filter-and-sort-data-ssas-tabular.md)   
+ [SSAS 表格&#41;&#40;透视](perspectives-ssas-tabular.md)   
+ [&#40;SSAS 表格&#41;的角色](roles-ssas-tabular.md)  
   
   

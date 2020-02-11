@@ -11,18 +11,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 414d9135989c39ea183d14d2d6f5dfa6e84e6fe6
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797762"
 ---
 # <a name="specify-instances-in-the-sql-server-powershell-provider"></a>在 SQL Server PowerShell 提供程序中指定实例
   为 SQL Server PowerShell 提供程序指定的路径必须标识它运行时所在的 [!INCLUDE[ssDE](../includes/ssde-md.md)] 实例和计算机。 用于指定计算机和实例的语法必须同时符合 SQL Server 标识符和 Windows PowerShell 路径的规则。  
   
-1.  **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions)  
+1.  **开始之前：**  [限制和限制](#LimitationsRestrictions)  
   
-2.  **To specify an instance:**  [Examples](#Examples)  
+2.  **指定实例：**  [示例](#Examples)  
   
 ## <a name="before-you-begin"></a>开始之前  
  SQL Server 提供程序中的 SQLSERVER:\SQL 后的第一个节点是运行 [!INCLUDE[ssDE](../includes/ssde-md.md)]实例的计算机的名称；例如：  
@@ -46,9 +46,10 @@ SQLSERVER:\SQL\MyComputer\MyInstance
   
  Windows PowerShell 通常会将 (local) 中的括号字符作为命令处理。 您必须对这些字符进行编码或转义才能在路径中使用它们，或用双引号将路径引起来。 有关详细信息，请参阅“SQL Server 标识符的编码和解码”。  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供程序要求您始终指定实例名称。 对于默认实例，必须将实例名称指定为 DEFAULT。  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供程序要求您始终指定实例名称。 对于默认实例，必须将实例名称指定为 DEFAULT。  
   
-##  <a name="Examples"></a> 示例：计算机名称和实例名称  
+##  <a name="Examples"></a>示例计算机和实例名称  
  此示例使用 localhost 和 DEFAULT 来指定本地计算机上的默认实例：  
   
 ```powershell
@@ -76,6 +77,6 @@ Set-Location SQLSERVER:\SQL\localhost\DEFAULT
     ```  
   
 ## <a name="see-also"></a>另请参阅  
- [PowerShell 中的 SQL Server 标识符](sql-server-identifiers-in-powershell.md)   
+ [SQL Server PowerShell 中的标识符](sql-server-identifiers-in-powershell.md)   
  [SQL Server PowerShell 提供程序](sql-server-powershell-provider.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  

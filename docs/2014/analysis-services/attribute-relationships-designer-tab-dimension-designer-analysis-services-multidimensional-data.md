@@ -1,5 +1,5 @@
 ---
-title: 属性关系 （属性关系设计器选项卡，维度设计器） (Analysis Services-多维数据) |Microsoft Docs
+title: 属性关系（"属性关系" 设计器选项卡，维度设计器）（Analysis Services 多维数据） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,23 +13,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 110f02a8b3f0d1e8567914901f69d2fea5f09c46
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062265"
 ---
 # <a name="attribute-relationships-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>属性关系（“属性关系”设计器选项卡，维度设计器）（Analysis Services - 多维数据）
   可以使用 **“属性关系”** 列表，查找属性关系图中的特定属性关系以及管理此关系。 此窗格紧位于包含属性关系图的窗格之下。  
   
- **若要查看属性关系窗格**  
+ **查看“属性关系”窗格**  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的解决方案资源管理器中，双击维度以打开维度设计器，然后单击“属性关系”  选项卡。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的解决方案资源管理器中，双击维度以打开维度设计器，然后单击“属性关系”**** 选项卡。  
   
 2.  在工具栏上，单击 **“显示列表视图”** 图标。  
   
 ## <a name="using-the-attribute-relationships-list"></a>使用“属性关系”列表  
- **“属性关系”** 列表显示维度中的所有属性关系。  
+ 
+  **“属性关系”** 列表显示维度中的所有属性关系。  
   
  若要查找属性关系图中的特定属性关系，可在列表中双击该属性。 该属性（又称特性）关系将在属性关系图中突出显示，其属性将显示在“属性”窗口中。  
   
@@ -42,23 +43,23 @@ ms.locfileid: "66062265"
   
 ### <a name="shortcut-menu-options"></a>快捷菜单选项  
  **编辑属性关系**  
- 打开“编辑属性关系”  对话框，可以在其中修改属性关系。  
+ 打开“编辑属性关系”**** 对话框，可以在其中修改属性关系。  
   
  有关详细信息，请参阅[“创建属性关系”和“编辑属性关系”对话框（“属性关系设计器”选项卡，维度设计器）（Analysis Services - 多维数据）](create-edit-attribute-relationships-dialog-boxes-analysis-services-multidimensional-data.md)和[定义属性关系](multidimensional-models/attribute-relationships-define.md)。  
   
  **关系类型**  
- 将关系类型设置为“柔性”  或“刚性”  。 在柔性关系中，成员之间的关系会随时间而变化。 在刚性关系中，成员之间的关系不随时间而变化。  
+ 将关系类型设置为“柔性”**** 或“刚性”****。 在柔性关系中，成员之间的关系会随时间而变化。 在刚性关系中，成员之间的关系不随时间而变化。  
   
  **删除**  
  删除所选属性关系。  
   
  **属性**  
- 在“属性”  窗口中显示特性的属性。  
+ 在“属性”**** 窗口中显示特性的属性。  
   
-## <a name="see-also"></a>请参阅  
- [属性关系&#40;维度设计器&#41; &#40;Analysis Services-多维数据&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)   
- [工具栏&#40;属性关系设计器选项卡，维度设计器&#41; &#40;Analysis Services-多维数据&#41;](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)   
- [属性&#40;属性关系设计器选项卡，维度设计器&#41; &#40;Analysis Services-多维数据&#41;](attributes-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)   
- [属性关系图&#40;属性关系设计器选项卡，维度设计器&#41; &#40;Analysis Services-多维数据&#41;](attribute-relationship-diagram-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#41; &#40;Analysis Services 多维数据 &#40;维度设计器的属性关系&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)   
+ [工具栏 &#40;属性关系设计器选项卡，维度设计器&#41; &#40;Analysis Services 多维数据&#41;](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)   
+ [属性 &#40;属性关系设计器选项卡，维度设计器&#41; &#40;Analysis Services 多维数据&#41;](attributes-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)   
+ [属性关系图 &#40;属性关系设计器选项卡，维度设计器&#41; &#40;Analysis Services 多维数据&#41;](attribute-relationship-diagram-analysis-services-multidimensional-data.md)  
   
   

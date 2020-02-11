@@ -1,5 +1,5 @@
 ---
-title: datetime 数据类型转换 (ODBC) |Microsoft Docs
+title: datetime 数据类型转换（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dcc48b1e545fb58d076074f9b11960227f788321
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63206983"
 ---
 # <a name="datetime-data-type-conversions-odbc"></a>datetime 数据类型转换 (ODBC)
@@ -30,7 +30,7 @@ ms.locfileid: "63206983"
   
 -   日期字符串的格式为 'yyyy-mm-dd'  
   
- 从字符串转换允许更灵活处理空格和字段宽度。 有关详细信息，请参阅"数据格式：字符串和文字"一节[ODBC 日期和时间改进的数据类型支持](data-type-support-for-odbc-date-and-time-improvements.md)。  
+ 从字符串转换允许更灵活处理空格和字段宽度。 有关详细信息，请参阅[针对 ODBC 日期和时间改进的数据类型支持](data-type-support-for-odbc-date-and-time-improvements.md)中的 "数据格式：字符串和文字" 部分。  
   
  下面是一般的转换规则：  
   
@@ -57,7 +57,7 @@ ms.locfileid: "63206983"
  [由 SQL 转换为 C](datetime-data-type-conversions-from-sql-to-c.md)  
  列出了在从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期/时间类型转换到 C 类型时要考虑的问题。  
   
-## <a name="see-also"></a>请参阅  
- [日期和时间改进&#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
+## <a name="see-also"></a>另请参阅  
+ [ODBC&#41;&#40;的日期和时间改进](date-and-time-improvements-odbc.md)  
   
   

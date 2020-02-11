@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 776d5fae1aa295f15238397b439cca1015ebe99c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63180738"
 ---
 # <a name="remove-tables-from-database-diagrams-visual-database-tools"></a>从数据库关系图中移除表 (Visual Database Tools)
@@ -28,7 +28,7 @@ ms.locfileid: "63180738"
   
 1.  在数据库关系图中，选择要移除的表。  
   
-2.  右键单击该表，然后从快捷菜单中选择“从关系图中删除表”  。  
+2.  右键单击该表，然后从快捷菜单中选择“从关系图中删除表”****。  
   
      -或-  
   
@@ -38,8 +38,8 @@ ms.locfileid: "63180738"
   
  此时，已从关系图中移除了该表，但它会继续存在于数据库中。  
   
-## <a name="see-also"></a>请参阅  
- [使用数据库关系图&#40;可视化数据库工具&#41;](visual-database-tools.md)   
- [删除表（数据库引擎）](../../relational-databases/tables/delete-tables-database-engine.md)  
+## <a name="see-also"></a>另请参阅  
+ [使用数据库关系图 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [删除 &#40;数据库引擎的表&#41;](../../relational-databases/tables/delete-tables-database-engine.md)  
   
   

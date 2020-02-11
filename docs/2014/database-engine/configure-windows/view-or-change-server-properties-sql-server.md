@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5c5ff985b62e39287b696e96f10142daf90ae0a3
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783128"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>查看或更改服务器属性 (SQL Server)
@@ -54,18 +54,18 @@ ms.locfileid: "72783128"
   
 -   有些属性页会显示通过 Windows Management Instrumentation (WMI) 获得的信息。 若要显示这些页，WMI 必须安装在运行 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的计算机上。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 权限  
  有关详细信息，请参阅 [服务器级别角色](../../relational-databases/security/authentication-access/server-level-roles.md)。  
   
- 默认情况下，在没有参数或仅使用第一个参数的 `sp_configure` 上执行权限。 若要执行 `sp_configure` 同时使用两个参数来更改配置选项或运行重新配置语句，必须向用户授予 ALTER SETTINGS 服务器级别权限。 ALTER SETTINGS 权限由 **sysadmin** 和 **serveradmin** 固定服务器角色隐式持有。  
+ 默认情况下`sp_configure` ，不带参数的执行权限或仅将第一个参数授予所有用户。 若要`sp_configure`使用这两个参数来更改配置选项或运行重新配置语句，必须向用户授予 ALTER SETTINGS 服务器级别权限。 ALTER SETTINGS 权限由 **sysadmin** 和 **serveradmin** 固定服务器角色隐式持有。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-view-or-change-server-properties"></a>查看或更改服务器属性  
   
-1.  在“对象资源管理器”中，右键单击服务器，再单击“属性”。  
+1.  在“对象资源管理器”中，右键单击服务器，再单击“属性”  。  
   
 2.  在 **“服务器属性”** 对话框中，单击某页以查看或更改有关该页的服务器信息。 某些属性是只读属性。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "72783128"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”。 此示例在 [语句中使用](/sql/t-sql/functions/serverproperty-transact-sql) SERVERPROPERTY `SELECT` 内置函数，以返回有关当前服务器的信息。 如果基于 Windows 的服务器上安装了多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，而且客户端必须打开另一个到当前连接所使用的同一实例连接，则此方案很有用。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例在 [语句中使用](/sql/t-sql/functions/serverproperty-transact-sql) SERVERPROPERTY `SELECT` 内置函数，以返回有关当前服务器的信息。 如果基于 Windows 的服务器上安装了多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，而且客户端必须打开另一个到当前连接所使用的同一实例连接，则此方案很有用。  
   
     ```sql  
     SELECT CONVERT( sysname, SERVERPROPERTY('servername'));  
@@ -90,7 +90,7 @@ ms.locfileid: "72783128"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”。 此示例查询 [sys.servers](/sql/relational-databases/system-catalog-views/sys-servers-transact-sql) 目录视图，以返回当前服务器的名称 (`name`) 和 ID (`server_id`)，以及用于连接到链接服务器的 OLE DB 访问接口 (`provider`) 的名称。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例查询 [sys.servers](/sql/relational-databases/system-catalog-views/sys-servers-transact-sql) 目录视图，以返回当前服务器的名称 (`name`) 和 ID (`server_id`)，以及用于连接到链接服务器的 OLE DB 访问接口 (`provider`) 的名称。  
   
     ```sql  
     USE AdventureWorks2012;   
@@ -106,7 +106,7 @@ ms.locfileid: "72783128"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”。 此示例查询 [sys.configurations](/sql/relational-databases/system-catalog-views/sys-configurations-transact-sql) 目录视图，以返回有关当前服务器上的各个服务器配置选项的信息。 该示例返回选项的名称 (`name`) 和说明 (`description`)，以及该选项是否为高级选项 (`is_advanced`)。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例查询 [sys.configurations](/sql/relational-databases/system-catalog-views/sys-configurations-transact-sql) 目录视图，以返回有关当前服务器上的各个服务器配置选项的信息。 该示例返回选项的名称 (`name`) 和说明 (`description`)，以及该选项是否为高级选项 (`is_advanced`)。  
   
     ```sql
     USE AdventureWorks2012;
@@ -122,7 +122,7 @@ ms.locfileid: "72783128"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”。 此示例显示如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 更改服务器属性。 本示例将 `fill factor` 选项的值更改为 `100`。 必须重新启动服务器，更改才会生效。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例显示如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 更改服务器属性。 本示例将 `fill factor` 选项的值更改为 `100`。 必须重新启动服务器，更改才会生效。  
   
 ```sql  
 Use AdventureWorks2012;  
@@ -137,7 +137,7 @@ RECONFIGURE;
 GO  
 ```  
   
- 有关详细信息，请参阅 [服务器配置选项 (SQL Server)](server-configuration-options-sql-server.md)的计算机上。  
+ 有关详细信息，请参阅 [服务器配置选项 (SQL Server)](server-configuration-options-sql-server.md)版本的组合自动配置的最大工作线程数。  
   
 ##  <a name="PowerShellProcedure"></a> 使用 SQL Server 配置管理器  
  可以通过使用 SQL Server 配置管理器查看或更改某些服务器属性。 例如，您可以查看 SQL Server 实例的版本，或更改存储错误日志文件的位置。 也可以通过查询 [服务器相关的动态管理视图和函数](/sql/relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql)来查看这些属性。  
@@ -148,9 +148,9 @@ GO
   
 2.  在 **“SQL Server 配置管理器”** 中，单击 **“SQL Server 服务”** 。  
   
-3.  在详细信息窗格中，右键单击“SQL Server (**instancename>)”\<** ，然后单击“属性”。  
+3.  在详细信息窗格中，右键单击**SQL Server （\<***instancename***>）**，然后单击 "**属性**"。  
   
-4.  在“SQL Server (**instancename>) 属性”\<** 对话框中，更改“服务”选项卡或“高级”选项卡上的服务器属性，然后单击“确定”。  
+4.  在“SQL Server (**instancename>) 属性”\<******** 对话框中，更改“服务”**** 选项卡或“高级”**** 选项卡上的服务器属性，然后单击“确定”****。  
   
 ##  <a name="FollowUp"></a> 跟进：更改服务器属性之后  
  对于某些属性，可能必须重新启动服务器，才能使更改生效。  

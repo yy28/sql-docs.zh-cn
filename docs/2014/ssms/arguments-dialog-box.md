@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9e671905eaf17c5980f2a89a6a8d1b6056dd6831
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245409"
 ---
 # <a name="arguments-dialog-box"></a>“参数”对话框
@@ -25,14 +25,14 @@ ms.locfileid: "63245409"
   
 ## <a name="options"></a>选项  
  **参数**  
- 列出在“外部工具”  对话框中为该工具指定的当前变量。 有关预定义参数及其定义的完整列表，请参阅[外部工具的参数](menu-help/external-tools.md)。 也可以输入自定义参数。  
+ 列出在“外部工具”  对话框中为该工具指定的当前变量。 有关预定义参数及其定义的完整列表，请参阅 [外部工具的参数](menu-help/external-tools.md)。 也可以输入自定义参数。  
   
- **Command line**  
+ **命令行**  
  显示在“参数”  对话框中指定的参数值。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [外部工具的参数](menu-help/external-tools.md)   
- [外部工具对话框](external-tools-dialog-box.md)   
+ ["外部工具" 对话框](external-tools-dialog-box.md)   
  [常规用户界面元素](general-user-interface-elements.md)  
   
   

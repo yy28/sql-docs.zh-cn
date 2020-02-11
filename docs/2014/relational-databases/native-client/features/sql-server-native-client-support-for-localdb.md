@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3a3f5a8214c2966b1958c3a4ea08edbee5af6a2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63225477"
 ---
 # <a name="sql-server-native-client-support-for-localdb"></a>SQL Server Native Client 对 LocalDB 的支持
@@ -31,7 +31,7 @@ ms.locfileid: "63225477"
   
 -   使用 `sqllocaldb.exe i` 发现默认实例的名称。  
   
--   使用 `AttachDBFilename` 连接字符串关键字指定服务器应附加的数据库文件。 使用时`AttachDBFilename`，如果不指定与数据库的名称**数据库**连接字符串关键字，将从 LocalDB 实例中应用程序关闭时删除数据库。  
+-   使用 `AttachDBFilename` 连接字符串关键字指定服务器应附加的数据库文件。 使用`AttachDBFilename`时，如果未使用**数据库**连接字符串关键字指定数据库的名称，则在应用程序关闭时，将从 LocalDB 实例中删除数据库。  
   
 -   在您的连接字符串中指定 LocalDB 实例：  
   
@@ -39,9 +39,9 @@ ms.locfileid: "63225477"
 SERVER=(localdb)\v11.0  
 ```  
   
- 如果需要，您可以使用 sqllocaldb.exe 创建 LocalDB 实例。 还可以使用 sqlcmd.exe 添加和修改 LocalDB 实例中的数据库。 例如， `sqlcmd -S (localdb)\v11.0` 。  
+ 如果需要，您可以使用 sqllocaldb.exe 创建 LocalDB 实例。 还可以使用 sqlcmd.exe 添加和修改 LocalDB 实例中的数据库。 例如，`sqlcmd -S (localdb)\v11.0` 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server Native Client 功能](sql-server-native-client-features.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 修改数据 (MDX) |Microsoft Docs
+title: 修改数据（MDX） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81d1df159944b96d0945bb45d2c331922d0f46e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074230"
 ---
 # <a name="modifying-data-mdx"></a>修改数据 (MDX)
-  除了使用多维表达式 (MDX) 检索和处理维度数据和多维数据集数据以外，还可以使用 MDX 更新或“写回”  维度数据和多维数据集数据。 这些更新可以是暂时的，例如对于推测分析或“假设”分析；也可以是永久的，例如当必须基于数据分析进行更改时。  
+  除了使用多维表达式 (MDX) 检索和处理维度数据和多维数据集数据以外，还可以使用 MDX 更新或“写回”** 维度数据和多维数据集数据。 这些更新可以是暂时的，例如对于推测分析或“假设”分析；也可以是永久的，例如当必须基于数据分析进行更改时。  
   
  数据的更新可以发生在维度级别或多维数据集级别：  
   
@@ -35,7 +35,7 @@ ms.locfileid: "66074230"
   
  有关详细信息，请参阅[使用多维数据集写回 (MDX)](mdx-data-modification-using-cube-writebacks.md)。  
   
-## <a name="see-also"></a>请参阅  
- [MDX 查询基础知识 (Analysis Services)](mdx-query-fundamentals-analysis-services.md)  
+## <a name="see-also"></a>另请参阅  
+ [MDX 查询基础知识 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Services 行为更改集成的 SQL Server 2014 中的功能 |Microsoft Docs
+title: SQL Server 2014 中 Integration Services 功能的行为更改 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 30e1e0d882d249130cbd72ca62088ba3f7978ad3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061259"
 ---
 # <a name="behavior-changes-to-integration-services-features-in-sql-server-2014"></a>SQL Server 2014 中 Integration Services 功能的行为更改
-  本主题介绍 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中的行为更改。 行为更改的影响功能的工作或交互的当前版本中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]与早期版本相比[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
+  本主题介绍 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中的行为更改。 与早期版本相比，行为更改会影响当前版本中的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]功能的工作或交互方式[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
  SQL Server 2014 中没有针对 Integration Services 功能的行为更改。  
   

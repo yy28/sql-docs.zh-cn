@@ -16,10 +16,10 @@ ms.assetid: ca98a4c3-bea4-4130-88d7-79e0fd1e85f6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5b39a5fa53560abb825b303d37d111bcbd7d0886
-ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72173563"
 ---
 # <a name="sp_setreplfailovermode-transact-sql"></a>sp_setreplfailovermode (Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "72173563"
 
   允许为启用了以排队更新为故障转移的立即更新的订阅设置故障转移操作模式。 此存储过程在订阅服务器的订阅数据库中执行。 有关故障转移模式的详细信息，请参阅[事务复制的可更新订阅](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,31 +41,31 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publisher = ] 'publisher'` 为发布的名称。 *发布*为**sysname**，无默认值。 该发布必须已存在。  
+`[ @publisher = ] 'publisher'`发布的名称。 *发布*为**sysname**，无默认值。 该发布必须已存在。  
   
-`[ @publisher_db = ] 'publisher_db'` 是发布数据库的名称。 *publisher_db* **sysname**，无默认值。  
+`[ @publisher_db = ] 'publisher_db'`发布数据库的名称。 *publisher_db* **sysname**，无默认值。  
   
-`[ @publication = ] 'publication'` 为发布的名称。 *发布*为**sysname**，无默认值。  
+`[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，无默认值。  
   
-`[ @failover_mode = ] 'failover_mode'` 是订阅的故障转移模式。 *failover_mode*为**nvarchar （10）** ，可以是下列值之一。  
+`[ @failover_mode = ] 'failover_mode'`订阅的故障转移模式。 *failover_mode*为**nvarchar （10）** ，可以是下列值之一。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**立即**或**同步**|订阅服务器上的数据修改将被大容量复制到发布服务器。|  
-|**好**|数据修改存储在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 队列中。|  
+|**好**|数据修改存储在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]队列中。|  
   
 > [!NOTE]  
 >  不再推荐使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 消息队列，也不再为其提供支持。  
   
-仅 `[ @override = ] override` 内部使用。  
+`[ @override = ] override`仅限内部使用。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **sp_setreplfailovermode**用于启用了订阅的快照复制或事务复制，可用于将故障转移到立即更新的排队更新，或用于将故障转移到排队更新的立即更新。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_setreplfailovermode**。  
   
 ## <a name="see-also"></a>另请参阅  

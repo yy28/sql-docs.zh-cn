@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 232beed45a62ad9cef9f43b122d23cb4d0728a78
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63191713"
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>使用实用工具资源管理器管理 SQL Server 实用工具
@@ -37,7 +37,7 @@ ms.locfileid: "63191713"
 ### <a name="sql-server-utility-navigation-pane"></a>SQL Server 实用工具导航窗格  
  实用工具资源管理器导航窗格在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中提供对象的树视图，这些对象按实用工具控制点进行分组。 若要展开文件夹，请单击加号 (+) 或在实用工具资源管理器导航窗格中双击 UCP 名称。 右键单击文件夹或对象，以执行常见任务。 树视图中的节点如下所示：  
   
--   树视图中的顶端节点是实用工具控制点 (UCP)。 节点名称的结构为："Utility_Name"(ComputerName\UCP_instance_name)。 如果您没有 UCP，则必须创建一个。 如果您没有连接到某一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具，则必须连接到一个实用工具。 有关详细信息，请参阅 [SQL Server 实用工具功能和任务](sql-server-utility-features-and-tasks.md)。 在树视图中单击该 UCP 名称可以使用面板视图中的数据填充 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具资源管理器内容窗格。 有关详细信息，请参阅[实用工具仪表板（SQL Server 实用工具）](../../database-engine/utility-dashboard-sql-server-utility.md)。  
+-   树视图中的顶端节点是实用工具控制点 (UCP)。 该节点名称的结构为："Utility_Name" (ComputerName\UCP_instance_name)。 如果您没有 UCP，则必须创建一个。 如果您没有连接到某一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具，则必须连接到一个实用工具。 有关详细信息，请参阅 [SQL Server 实用工具功能和任务](sql-server-utility-features-and-tasks.md)。 在树视图中单击该 UCP 名称可以使用面板视图中的数据填充 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具资源管理器内容窗格。 有关详细信息，请参阅[实用工具仪表板（SQL Server 实用工具）](../../database-engine/utility-dashboard-sql-server-utility.md)。  
   
      右键单击 UCP 节点可以刷新面板中的数据。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "63191713"
   
  Powershell 没有 F1 帮助，但包含 **Get-Help** cmdlet，它提供了有关使用 Powershell 的信息。 有关使用 Get-Help 的详细信息，请参阅 [获取 SQL Server PowerShell 帮助](../../database-engine/get-help-sql-server-powershell.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 实用工具的功能和任务](sql-server-utility-features-and-tasks.md)   
  [配置运行状况策略（SQL Server 实用工具）](configure-health-policies-sql-server-utility.md)   
  [对象资源管理器](../../ssms/object/object-explorer.md)  

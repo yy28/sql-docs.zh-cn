@@ -1,5 +1,5 @@
 ---
-title: 选择嵌套的表键列对话框 （挖掘结构视图） |Microsoft Docs
+title: "\"选择嵌套表键列\" 对话框（\"挖掘结构\" 视图） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8edfea95968bee0dc1103f8069ecfe9e0d08e3ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069764"
 ---
 # <a name="select-a-nested-table-key-column-dialog-box-mining-structure-view"></a>“选择嵌套表键列”对话框（“挖掘结构”视图）
-  可以使用 **“选择嵌套表键列”** 对话框，指定将用作新嵌套表的键的列。 在您退出此对话框后，挖掘结构中将添加一个包含指定键列的新表。 通过右键单击结构，再选择“添加列”，可以向嵌套表中添加其他列。  根据使用的是 OLAP 挖掘模型还是关系挖掘模型，该对话框将包含不同的选项。  
+  可以使用 **“选择嵌套表键列”** 对话框，指定将用作新嵌套表的键的列。 在您退出此对话框后，挖掘结构中将添加一个包含指定键列的新表。 通过右键单击结构，再选择“添加列”，可以向嵌套表中添加其他列。**** 根据使用的是 OLAP 挖掘模型还是关系挖掘模型，该对话框将包含不同的选项。  
   
 ## <a name="options"></a>选项  
  **源表**  
@@ -45,7 +45,7 @@ ms.locfileid: "66069764"
   
  此选项仅用于 OLAP 挖掘模型。  
   
-## <a name="see-also"></a>请参阅  
- [挖掘结构视图&#40;数据挖掘模型设计器&#41;](mining-structure-view-data-mining-model-designer.md)  
+## <a name="see-also"></a>另请参阅  
+ [挖掘结构视图 &#40;数据挖掘模型设计器&#41;](mining-structure-view-data-mining-model-designer.md)  
   
   

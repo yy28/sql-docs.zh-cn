@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c0dbc5c5c72b6c69a6d2d390ac6c2c8920a19332
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062190"
 ---
 # <a name="access-to-files-used-by-packages"></a>对包使用的文件的访问
@@ -38,7 +38,8 @@ ms.locfileid: "66062190"
  这些文件必须单独进行保护，尤其是在它们包括敏感的信息时。  
   
 ## <a name="configuration-files"></a>配置文件  
- 如果配置中有敏感的信息，例如登录名和密码信息，则应当考虑将配置保存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，或使用访问控制列表 (ACL) 来限制对存储文件的位置或文件夹的访问，并只允许访问某些帐户。 通常，可以向允许其运行包的帐户以及负责管理包和排除包的故障的帐户授予访问权，这些权限可能包括检查配置、检查点和日志文件的内容。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供了更安全的存储方式，因为它在服务器和数据库级别提供保护。 若要将配置保存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置类型。 若要保存到文件系统，请使用 XML 配置类型。  
+ 如果配置中有敏感的信息，例如登录名和密码信息，则应当考虑将配置保存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，或使用访问控制列表 (ACL) 来限制对存储文件的位置或文件夹的访问，并只允许访问某些帐户。 通常，可以向允许其运行包的帐户以及负责管理包和排除包的故障的帐户授予访问权，这些权限可能包括检查配置、检查点和日志文件的内容。 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供了更安全的存储方式，因为它在服务器和数据库级别提供保护。 若要将配置保存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置类型。 若要保存到文件系统，请使用 XML 配置类型。  
   
  有关详细信息，请参阅 [包配置](../../2014/integration-services/package-configurations.md)、 [创建包配置](../../2014/integration-services/create-package-configurations.md)和 [有关 SQL Server 安装的安全注意事项](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)。  
   

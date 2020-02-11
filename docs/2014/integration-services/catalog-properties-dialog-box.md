@@ -1,5 +1,5 @@
 ---
-title: 目录属性对话框 |Microsoft Docs
+title: "\"目录属性\" 对话框 |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,18 +14,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8d3492cce19906322ef9b420718aae0ae9e0e62d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061104"
 ---
 # <a name="catalog-properties-dialog-box"></a>“目录属性”对话框
-  使用“目录属性”对话框可以配置 SSISDB 目录。 目录属性定义如何对敏感数据进行加密、如何保留操作和项目版本控制数据以及验证操作何时超时。SSISDB 目录是用于 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目、包、参数和环境的中心存储区和管理点。  
+  使用“目录属性”对话框可以配置 SSISDB 目录。 目录属性定义如何对敏感数据进行加密、如何保留操作和项目版本控制数据以及验证操作何时超时。SSISDB 目录是用于[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]项目、包、参数和环境的中心存储和管理点。  
   
  您还可以在 catalog.catalog_property 视图中查看目录属性，并且通过使用 catalog.configure_catalog 存储过程设置属性。 有关详细信息，请参阅 [catalog.catalog_properties（SSISDB 数据库）](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database)和 [catalog.configure_catalog（SSISDB 数据库）](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database)。  
   
- 有关如何创建 SSISDB 目录的信息，请参阅 [创建 SSIS 目录](catalog/ssis-catalog.md)。  
+ 有关如何创建 SSISDB 目录的信息，请参阅[创建 SSIS 目录](catalog/ssis-catalog.md)。  
   
  **您希望做什么？**  
   
@@ -33,20 +33,20 @@ ms.locfileid: "66061104"
   
 -   [配置选项](#options)  
   
-##  <a name="open_dialog"></a> 打开“目录属性”对话框  
+##  <a name="open_dialog"></a>打开 "目录属性" 对话框  
   
 1.  打开 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。  
   
 2.  连接到 Microsoft SQL Server 数据库引擎。  
   
-3.  在对象资源管理器中，展开“Integration Services”  节点，右键单击“SSISDB”  ，然后单击“属性”  。  
+3.  在对象资源管理器中，展开“Integration Services”**** 节点，右键单击“SSISDB”****，然后单击“属性”****。  
   
 ##  <a name="options"></a> 配置选项  
   
 ### <a name="options"></a>选项  
  下表描述该对话框中的某些属性以及 catalog.catalog_property 视图中的相应属性。  
   
-|属性名称（“目录属性”对话框）|属性名称（catalog.catalog_property 视图）|Description|  
+|属性名称（“目录属性”对话框）|属性名称（catalog.catalog_property 视图）|说明|  
 |-----------------------------------------------------|------------------------------------------------------|-----------------|  
 |加密算法名称|ENCRYPTION_CLEANUP_ENABLED|指定用于对于目录中的敏感参数值进行加密的加密类型。 下面是可能的值：<br /><br /> **DES**<br /><br /> **TRIPLE_DES**<br /><br /> **TRIPLE_DES_3KEY**<br /><br /> **DESPX**<br /><br /> **AES_128**<br /><br /> **AES_192**<br /><br /> **AES_256** （默认值）|  
 |验证超时（秒）|VALIDATION_TIMEOUT|指定项目验证或包验证可运行的最大秒数，超过该秒数后运行将停止。 默认值为 300 秒。<br /><br /> 执行验证是一个异步操作。 项目或包越大，验证所用的时间就会越长。<br /><br /> 有关验证项目和包的信息，请参阅 [Integration Services Data Types in Expressions](expressions/integration-services-data-types-in-expressions.md)。|  

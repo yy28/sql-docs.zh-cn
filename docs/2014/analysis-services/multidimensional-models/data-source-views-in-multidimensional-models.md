@@ -1,5 +1,5 @@
 ---
-title: 数据源的多维模型中的视图 |Microsoft Docs
+title: 多维模型中的数据源视图 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 03419c570b4982a19cf1a958ac6e0391de02fef9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076098"
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>多维模型中的数据源视图
@@ -31,32 +31,32 @@ ms.locfileid: "66076098"
  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目或数据库中，可以根据一个或多个数据源生成多个数据源视图，并构造每一个数据源视图以满足不同解决方案的要求。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [定义数据源视图 (Analysis Services)](defining-a-data-source-view-analysis-services.md)  
+ [定义数据源视图 &#40;Analysis Services&#41;](defining-a-data-source-view-analysis-services.md)  
   
- [在数据源视图中添加或删除表或视图 (Analysis Services)](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
+ [在数据源视图中添加或删除表或视图 &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
   
- [在数据源视图中更改属性 (Analysis Services)](change-properties-in-a-data-source-view-analysis-services.md)  
+ [在数据源视图中更改属性 &#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
   
- [在数据源视图中定义逻辑关系 (Analysis Services)](define-logical-relationships-in-a-data-source-view-analysis-services.md)  
+ [在数据源视图中定义逻辑关系 &#40;Analysis Services&#41;](define-logical-relationships-in-a-data-source-view-analysis-services.md)  
   
- [在数据源视图中定义逻辑主键 (Analysis Services)](define-logical-primary-keys-in-a-data-source-view-analysis-services.md)  
+ [在数据源视图中定义逻辑主键 &#40;Analysis Services&#41;](define-logical-primary-keys-in-a-data-source-view-analysis-services.md)  
   
- [在数据源视图中定义命名计算 (Analysis Services)](define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [在数据源视图中定义命名计算 &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
- [在数据源视图中定义命名查询 (Analysis Services)](define-named-queries-in-a-data-source-view-analysis-services.md)  
+ [在数据源视图中定义命名查询 &#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)  
   
- [在数据源视图中替换表或命名查询 (Analysis Services)](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)  
+ [将数据源视图中的表或命名查询替换 &#40;Analysis Services&#41;](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)  
   
- [使用数据源视图设计器中的关系图 (Analysis Services)](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [使用数据源视图设计器中的关系图 &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
- [在数据源视图中浏览数据 (Analysis Services)](explore-data-in-a-data-source-view-analysis-services.md)  
+ [浏览数据源视图中的数据 &#40;Analysis Services&#41;](explore-data-in-a-data-source-view-analysis-services.md)  
   
- [删除数据源视图 (Analysis Services)](delete-a-data-source-view-analysis-services.md)  
+ [&#40;Analysis Services 中删除数据源视图&#41;](delete-a-data-source-view-analysis-services.md)  
   
- [刷新数据源视图中的架构 (Analysis Services)](refresh-the-schema-in-a-data-source-view-analysis-services.md)  
+ [刷新数据源视图中的架构 &#40;Analysis Services&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   
-## <a name="see-also"></a>请参阅  
- [架构生成向导 (Analysis Services)](schema-generation-wizard-analysis-services.md)   
- [支持的数据源&#40;SSAS 多维&#41;](supported-data-sources-ssas-multidimensional.md)  
+## <a name="see-also"></a>另请参阅  
+ [架构生成向导 &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)   
+ [支持 &#40;SSAS 多维&#41;的数据源](supported-data-sources-ssas-multidimensional.md)  
   
   

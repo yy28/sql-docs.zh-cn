@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 77cc99e74a1ee9d5d4be08bf7f9ce8d39288bd5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076341"
 ---
 # <a name="create-a-report-data-source"></a>创建报表数据源
@@ -39,14 +39,14 @@ ms.locfileid: "66076341"
   
 1.  在库功能区上单击 **“文档”** 选项卡。  
   
-2.  单击“新建文档” > “报表数据源”   。  
+2.  单击 "**新建文档** > " "**报表数据源**"。  
   
     > [!NOTE]  
-    >  如果在菜单上没有看到 **“报表数据源”** 项，说明尚未启用此库的报表数据源内容类型。 有关详细信息，请参阅[将报表服务器内容类型添加到库&#40;在 SharePoint 集成模式下的 Reporting Services&#41;](../../reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)。  
+    >  如果在菜单上没有看到 **“报表数据源”** 项，说明尚未启用此库的报表数据源内容类型。 有关详细信息，请参阅[将报表服务器内容类型添加到库 &#40;Reporting Services 在 SharePoint 集成模式下&#41;" ](../../reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)。  
   
 3.  在 **“数据源属性”** 页上，在 **“名称”** 中键入连接 .rsds 文件的名称。  
   
-4.  在 **“数据源类型”** 中，选择 **“Power View 的 Microsoft BI 语义模型”** 。  
+4.  在 **“数据源类型”** 中，选择 **“Power View 的 Microsoft BI 语义模型”**。  
   
 5.  在 **“连接字符串”** 中，指定 Analysis Services 服务器名称、数据库名称、多维数据集名称和所有可选设置。  
   
@@ -57,17 +57,17 @@ ms.locfileid: "66076341"
   
      （可选）多维数据集可以有透视，这些透视为用户提供一个选择视图，其中在客户端上只能看到某些维度和/或度量值组。 若要指定透视，请输入透视名称作为 Cube 属性的值： `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<perspectivename>'`  
   
-     （可选）多维数据集可以具有为模型内各种语言指定的元数据和数据翻译。 为了查看翻译 （数据和元数据） 需要将"区域设置标识符"属性添加到连接字符串： `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'; Locale Identifier=<identifier number>`  
+     （可选）多维数据集可以具有为模型内各种语言指定的元数据和数据翻译。 若要查看翻译（数据和元数据），需要将 "区域设置标识符" 属性添加到连接字符串：`Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'; Locale Identifier=<identifier number>`  
   
 6.  在 **“凭据”** 中，指定报表服务器如何获取访问外部数据源的凭据。  
   
-    -   若要使用打开报表的用户凭据访问数据，请选择“Windows 身份验证(集成)”  。 如果 SharePoint 站点或场使用窗体身份验证或通过可信帐户连接至报表服务器，请不要选择此选项。 若要为此报表计划订阅或数据处理，请不要选择此选项。 如果您的域启用了 Kerberos 身份验证或者数据源与报表服务器位于同一台计算机上，则此选项最为有效。 如果未启用 Kerberos 身份验证，则只能将 Windows 凭据传递到另一台计算机。 也就是说，如果外部数据源位于需要另行连接的其他计算机上，则会出现错误而不会获得期望的数据。  
+    -   若要使用打开报表的用户凭据访问数据，请选择“Windows 身份验证(集成)”****。 如果 SharePoint 站点或场使用窗体身份验证或通过可信帐户连接至报表服务器，请不要选择此选项。 若要为此报表计划订阅或数据处理，请不要选择此选项。 如果您的域启用了 Kerberos 身份验证或者数据源与报表服务器位于同一台计算机上，则此选项最为有效。 如果未启用 Kerberos 身份验证，则只能将 Windows 凭据传递到另一台计算机。 也就是说，如果外部数据源位于需要另行连接的其他计算机上，则会出现错误而不会获得期望的数据。  
   
     -   若要使用户在每次运行报表时都输入其凭据，请选择 **“凭据提示”** 。 若要为此报表计划订阅或数据处理，请不要选择此选项。  
   
     -   若要使用一组凭据访问数据，请选择 **“已存储凭据”** 。 凭据在存储之前是加密的。 您可以选择用于确定如何对已存储凭据进行身份验证的选项。 如果已存储的凭据属于 Windows 用户帐户，请选择“用作 Windows 凭据”。 如果要设置数据库服务器的执行上下文，请选择 **“设置此帐户的执行上下文”** 。  
   
-    -   如果在连接字符串中指定凭据，或者如果要使用最低特权帐户运行报表，请选择“不需要提供凭据”  。  
+    -   如果在连接字符串中指定凭据，或者如果要使用最低特权帐户运行报表，请选择“不需要提供凭据”****。  
   
 7.  单击 **“测试连接”** 以进行验证。  
   

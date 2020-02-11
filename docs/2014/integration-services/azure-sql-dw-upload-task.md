@@ -14,24 +14,24 @@ author: yualan
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d3c310ee1d60648ac4b1eb299a0fd291adb86aea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061285"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW 上传任务
-“Azure SQL DW 上传任务”  使 SSIS 包可将本地数据上传到 Azure SQL 数据仓库 (DW) 中的表。 当前支持的源数据文件格式是采用 UTF8 编码的带分隔符的文本。 上传过程将按照高效的 PolyBase 方法。 具体而言，数据首先将上传到 Azure Blob 存储，然后上传到 Azure SQL DW。 因此，需要 Azure Blob 存储帐户才可使用此任务。
+“Azure SQL DW 上传任务”**** 使 SSIS 包可将本地数据上传到 Azure SQL 数据仓库 (DW) 中的表。 当前支持的源数据文件格式是采用 UTF8 编码的带分隔符的文本。 上传过程遵循有效的 PolyBase 方法。 具体而言，数据首先将上传到 Azure Blob 存储，然后上传到 Azure SQL DW。 因此，需要 Azure Blob 存储帐户才可使用此任务。
 
 若要添加“Azure SQL DW 上传任务”  ，请将其从 SSIS 工具栏拖放到设计器画布中，双击或右键单击它，然后单击“编辑”  ，查看任务编辑器对话框。
 
 在“常规”  页上配置以下属性。
 
-字段|Description
+字段|说明
 -----|-----------
 LocalDirectory|指定包含待上传数据文件的本地目录。
 Recursively|指定是否以递归方式搜索子目录。
-FileName|指定用于选择具有特定名称模式的文件的名称筛选器。 例如 MySheet\*.xls\* 将包含如 MySheet001.xsl 和 MySheetABC.xslx 等文件。
+FileName|指定用于选择具有特定名称模式的文件的名称筛选器。 例如 MySheet*.xls\* 将包含如 MySheet001.xsl 和 MySheetABC.xslx 等文件。
 RowDelimiter|指定标记每一行末尾的字符。
 ColumnDelimiter|指定标记每一列末尾的一个或多个字符。 例如 &#124;（管道）、\t（制表符）、'（单引号），"（双引号）以及 0x5c（反斜杠）。
 IsFirstRowHeader|指定每个数据文件的第一行是否包含列名称，而非实际数据。
@@ -42,11 +42,11 @@ RetainFiles|指定是否保留已上传到 Azure 存储的文件。
 CompressionType|指定将文件上传到 Azure 存储时使用的压缩格式。 本地源不受影响。
 CompressionLevel|指定用于压缩格式的压缩级别。
 AzureDwConnection|指定 Azure SQL DW 的 ADO.NET 连接管理器。
-TableName|指定目标表的名称。 可选择现有的表名称，或通过选择“\<新建表...>”  创建一个新表。
+TableName|指定目标表的名称。 可选择现有的表名称，或通过选择“**新建表...>”\<** 创建一个新表。
 TableDistribution|指定新表的分发方法。 已为 **TableName**指定新的表名称时适用。
 HashColumnName|指定用于哈希表分发的列。 已为 **TableDistribution** 指定 **HASH**时适用。
 
-根据是上传到新表还是现有表，看到的“映射”  页面会有所不同。 如果是前者，请在待创建目标表中配置要映射到的源列及其对应名称。 如果是后者，请配置源和目标列之间的映射关系。
+根据是上传到新表还是现有表，看到的“映射”**** 页面会有所不同。 如果是前者，请在待创建目标表中配置要映射到的源列及其对应名称。 如果是后者，请配置源和目标列之间的映射关系。
 
 在“列”  页上，配置每个源列的数据类型属性。
 

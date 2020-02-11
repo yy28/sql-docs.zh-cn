@@ -1,5 +1,5 @@
 ---
-title: 报表属性对话框，页面设置 |Microsoft Docs
+title: "\"报表属性\" 对话框-\"页面设置\" |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 695515ddefa550d6d20476e681088d6bcd926a3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104379"
 ---
 # <a name="report-properties-dialog-box-page-setup"></a>“报表属性”对话框 ->“页面设置”
-  选择**页面设置**上**报表属性**，对话框可以设置整个报表页选项。  
+  在 "**报表属性**" 对话框中选择 "**页面设置**" 可设置整个报表的页面选项。  
   
 ## <a name="options"></a>选项  
  **英寸**  
@@ -40,24 +40,24 @@ ms.locfileid: "66104379"
  从列表选择大小，该列表将在“宽度”和“高度”控件中自动输入维度。 也可以选择 **“自定义大小”** ，然后更改“宽度”和“高度”控件，以反映希望使用的大小。  
   
  宽度   
- 显示在“纸张类型”  列表中选择的纸张大小的宽度。  
+ 显示在“纸张类型”**** 列表中选择的纸张大小的宽度。  
   
  高度   
- 显示在“纸张类型”  列表中选择的纸张大小的高度。  
+ 显示在“纸张类型”**** 列表中选择的纸张大小的高度。  
   
- **Top**  
+ **返回页首**  
  设置报表顶部与报表第一行顶部之间的距离。  
   
- **底部**  
+ **下**  
  设置报表底部与报表最后一行底部之间的距离。  
   
- **Left**  
+ **左中**  
  设置报表的左边缘与报表行的左边缘之间的距离。  
   
- **Right**  
+ **然后**  
  设置报表的右边缘与报表行的右边缘之间的距离。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Reporting Services 中的分页（报表生成器和 SSRS）](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [报表设计提示（报表生成器和 SSRS）](report-design/report-design-tips-report-builder-and-ssrs.md)  
   

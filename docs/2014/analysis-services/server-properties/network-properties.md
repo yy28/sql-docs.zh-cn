@@ -36,16 +36,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 882b5fc60020423e19f68fda40273b7c944bd4f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068876"
 ---
 # <a name="network-properties"></a>网络属性
+  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持下表中列出的服务器属性。 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)。  
   
- **适用范围：** 多维和表格服务器模式  
+ **适用于：** 多维和表格服务器模式  
   
 ## <a name="general"></a>常规  
  `ListenOnlyOnLocalConnections`  
@@ -55,7 +56,7 @@ ms.locfileid: "66068876"
  `IPV4Support`  
  有符号 32 位整数属性，用于定义 IPv4 协议支持。 此属性具有下表所列的值之一：  
   
-|ReplTest1|Description|  
+|值|说明|  
 |-----------|-----------------|  
 |*0*|禁用 IPv4；客户端无法连接。|  
 |*1*|（默认值）要求使用 IPv4；如果服务器无法侦听 IPv4，则不启动服务器。|  
@@ -64,7 +65,7 @@ ms.locfileid: "66068876"
  `IPV6Support`  
  有符号 32 位整数属性，用于定义 IPv6 协议支持。 此属性具有下表所列的值之一：  
   
-|ReplTest1|Description|  
+|值|说明|  
 |-----------|-----------------|  
 |*0*|禁用 IPv6；客户端无法连接。|  
 |*1*|（默认值）要求使用 IPv6；如果服务器无法侦听 IPv6，则不启动服务器。|  
@@ -82,14 +83,14 @@ ms.locfileid: "66068876"
  `ServerSendTimeout`  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
-## <a name="requests"></a>请求  
+## <a name="requests"></a>Requests  
  `EnableBinaryXML`  
  布尔值属性，指定服务器是否识别二进制 xml 格式请求。  
   
  `EnableCompression`  
  布尔值属性，指定是否对请求启用压缩。  
   
-## <a name="responses"></a>Responses  
+## <a name="responses"></a>响应  
  `CompressionLevel`  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
@@ -142,7 +143,7 @@ ms.locfileid: "66068876"
  `SocketOptions\ SendBufferSize`  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在 Analysis Services 中配置服务器属性](server-properties-in-analysis-services.md)   
  [确定 Analysis Services 实例的服务器模式](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

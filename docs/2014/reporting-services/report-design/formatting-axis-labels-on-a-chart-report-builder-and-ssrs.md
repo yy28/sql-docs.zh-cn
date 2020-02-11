@@ -28,16 +28,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4a98a3496e237de1d4eeb530dfe5e22b70149890
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105846"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>设置图表上轴标签的格式（报表生成器和 SSRS）
   基于坐标的图表类型（柱形图、条形图、面积图、点状图、折线图和范围图）有两个用于分类和显示数据关系的轴。 不同类型的格式设置将应用于每个轴。  
   
- 可以使用 **“轴属性”** 对话框或“属性”窗格来设置轴的格式。 右键单击要设置其格式的轴，然后单击“轴属性”  可以更改轴文本的值，数值格式和日期格式，主要和次要刻度线，标签的自动调整方式以及轴线的粗细、颜色和样式。 若要更改轴标题的值，请右键单击轴标题，然后单击“轴标题属性”  。  
+ 可以使用 **“轴属性”** 对话框或“属性”窗格来设置轴的格式。 右键单击要设置其格式的轴，然后单击“轴属性”**** 可以更改轴文本的值，数值格式和日期格式，主要和次要刻度线，标签的自动调整方式以及轴线的粗细、颜色和样式。 若要更改轴标题的值，请右键单击轴标题，然后单击“轴标题属性”****。  
   
  轴标签标识图表上的主要间隔。 默认情况下，图表使用一种算法来确定标签应如何以最佳方式放置在轴上，以避免文本重叠。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66105846"
 ## <a name="types-of-axes"></a>轴的类型  
  图表有两个主轴：值轴和类别轴。  
   
- ![图表分类和值轴](../media/rsaxes-categorical-vs-value.gif "Chart categorical and value axes")  
+ ![图表分类和值轴](../media/rsaxes-categorical-vs-value.gif "图表分类和值轴")  
   
  当您将一个字段从数据集拖放到图表表面上时，该图表会确定此字段是属于类别轴还是值轴。  
   
@@ -58,9 +58,9 @@ ms.locfileid: "66105846"
   
  轴刻度是由用于定义要沿该轴显示的数据范围的最小值和最大值限定的。 图表将根据结果集中的值计算每个轴上的最小值和最大值。 在值轴上，该刻度始终由值字段中的最小数和最大数确定。 在类别轴上，最小值类型和最大值类型根据类别字段的类型而定。 数据集中的任何字段都可分为三种类别字段类型之一。 下表说明了这三种类型的类别字段。  
   
-|类别字段类型|描述|示例|  
+|类别字段类型|说明|示例|  
 |-------------------------|-----------------|-------------|  
-|数字|按数值顺序沿 x 轴绘制类别。|按雇员标识号排列的销售报表沿 x 轴显示雇员标识号。|  
+|Numeric|按数值顺序沿 x 轴绘制类别。|按雇员标识号排列的销售报表沿 x 轴显示雇员标识号。|  
 |日期/时间|按时间顺序沿 x 轴绘制类别。|月销售报表沿 x 轴显示已格式化的日期。|  
 |字符串|按类别在数据源中首次出现的顺序沿 x 轴绘制类别。|区域销售报表沿 x 轴显示区域名称。|  
   
@@ -117,15 +117,15 @@ ms.locfileid: "66105846"
 ## <a name="in-this-section"></a>本节内容  
  [将轴标签的格式设置为日期或货币（报表生成器和 SSRS）](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)  
   
- [图表中的位置标签（报表生成器和 SSRS）](position-labels-in-a-chart-report-builder-and-ssrs.md)  
+ [图表中的位置标签 &#40;报表生成器和 SSRS&#41;](position-labels-in-a-chart-report-builder-and-ssrs.md)  
   
  [指定轴间隔（报表生成器和 SSRS）](specify-an-axis-interval-report-builder-and-ssrs.md)  
   
- [在图表中添加或删除边距（报表生成器和 SSRS）](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
+ [添加或删除图表 &#40;报表生成器和 SSRS 的边距&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
   
  [指定对数刻度（报表生成器和 SSRS）](specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [设置图表格式（报表生成器和 SSRS）](formatting-a-chart-report-builder-and-ssrs.md)   
  [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   
  [设置图表上数据点的格式（报表生成器和 SSRS）](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  

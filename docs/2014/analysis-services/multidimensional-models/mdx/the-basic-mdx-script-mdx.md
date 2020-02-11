@@ -1,5 +1,5 @@
 ---
-title: 基本 MDX 脚本 (MDX) |Microsoft Docs
+title: 基本 MDX 脚本（MDX） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8793fe2e63d6867e8e5c12fef6ec73a6f7a27882
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073813"
 ---
 # <a name="the-basic-mdx-script-mdx"></a>基本 MDX 脚本 (MDX)
-  多维表达式 (MDX) 脚本定义 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中的多维数据集的计算过程。 有两种类型的 MDX 脚本：  
+  多维表达式（MDX）脚本定义中[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]多维数据集的计算过程。 有两种类型的 MDX 脚本：  
   
  **默认 MDX 脚本**  
  当创建多维数据集时， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 将为该多维数据集创建一个默认的 MDX 脚本。 此脚本定义整个多维数据集的计算过程。  
@@ -36,7 +36,7 @@ ms.locfileid: "66073813"
   
  默认 MDX 脚本还包含用来创建命名集、赋值以及计算成员（在多维数据集设计器中创建）的脚本命令：  
   
--   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 直接将脚本命令添加到默认 MDX 脚本中。  
+-   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]直接将脚本命令添加到默认 MDX 脚本中。  
   
 -   对于多维数据集中的每个命名集，默认 MDX 脚本中都有一个对应的 CREATE SET 语句。  
   
@@ -52,11 +52,11 @@ ms.locfileid: "66073813"
  所有 MDX 脚本语句  
  在 MDX 脚本中，MDX 脚本语句控制计算的上下文和作用域，并管理 MDX 脚本中其他语句的行为。 此类别包括下列语句：  
   
--   [CALCULATE](/sql/mdx/mdx-scripting-calculate)  
+-   [计算](/sql/mdx/mdx-scripting-calculate)  
   
--   [FREEZE](/sql/mdx/mdx-scripting-freeze)  
+-   [&](/sql/mdx/mdx-scripting-freeze)  
   
--   [SCOPE](/sql/mdx/mdx-scripting-scope)  
+-   [内](/sql/mdx/mdx-scripting-scope)  
   
  有关 MDX 脚本编写语句的详细信息，请参阅 [MDX 脚本编写语句](/sql/mdx/mdx-scripting-statements-mdx)。  
   
@@ -89,8 +89,8 @@ ms.locfileid: "66073813"
 <Natural hierarchy member> ::= <Natural hierarchy>.<identifier>[.<identifier>...]  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [MDX 语言参考 (MDX)](/sql/mdx/mdx-language-reference-mdx)   
- [MDX 脚本编写基础知识 (Analysis Services)](mdx-scripting-fundamentals-analysis-services.md)  
+## <a name="see-also"></a>另请参阅  
+ [Mdx 语言参考 &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
+ [MDX 脚本编写基础 &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
   
   

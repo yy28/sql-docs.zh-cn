@@ -1,5 +1,5 @@
 ---
-title: 设置大型数据 (OLE DB) |Microsoft Docs
+title: 设置大型数据（OLE DB） |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 24d05ef704e37af9d0d8c1e2a9e9eefe0b20f1d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63218665"
 ---
 # <a name="set-large-data-ole-db"></a>设置大型数据 (OLE DB)
@@ -27,17 +27,17 @@ ms.locfileid: "63218665"
  此示例要求使用 AdventureWorks 示例数据库，其可从 [Microsoft SQL Server 示例和社区项目](https://go.microsoft.com/fwlink/?LinkID=85384)主页下载。  
   
 > [!IMPORTANT]  
->  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
+>  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，则应通过[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)对其进行加密。  
   
 ## <a name="procedures"></a>过程  
   
 #### <a name="to-set-blob-data"></a>设置 BLOB 数据  
   
-1.  创建一个描述应如何访问 BLOB 列的 DBOBJECT 结构。 设置**dwFlag**元素的 DBOBJECT 结构为 STGM_READ，并且将 iid 元素设置为`IID_ISequentialStream`（要公开的接口）。  
+1.  创建一个描述应如何访问 BLOB 列的 DBOBJECT 结构。 将 DBOBJECT 结构的**dwFlag**元素设置为 STGM_READ，并将 iid 元素设置为`IID_ISequentialStream` （要公开的接口）。  
   
 2.  设置 DBPROPSET_ROWSET 属性组中的属性，以使行集可更新。  
   
-3.  通过使用 DBBINDING 结构数组创建一组绑定（每列一个）。 将 DBBINDING 结构中的 wType 元素设置为 DBTYPE_IUNKNOWN，并将 pObject 元素设置为指向创建的 DBOBJECT 结构   。  
+3.  通过使用 DBBINDING 结构数组创建一组绑定（每列一个）。 将 DBBINDING 结构中的 wType 元素设置为 DBTYPE_IUNKNOWN，并将 pObject 元素设置为指向创建的 DBOBJECT 结构********。  
   
 4.  使用 DBBINDINGS 结构数组中的绑定信息创建取值函数。  
   
@@ -47,8 +47,8 @@ ms.locfileid: "63218665"
   
 ## <a name="example"></a>示例  
   
-### <a name="description"></a>Description  
- 使用 ole32.lib 和 oleaut32.lib 编译并执行以下 C++ 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请将连接字符串从 L"(local)" 更改为 L"(local)\\\name"，其中 name 是命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保您的 INCLUDE 环境变量包括含有 sqlncli.h 的目录。  
+### <a name="description"></a>说明  
+ 使用 ole32.lib 和 oleaut32.lib 编译并执行以下 C++ 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请将连接字符串从 L"(local)" 更改为 L"(local)\\\name"，其中 name 是命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保 INCLUDE 环境变量包含包含 sqlncli.msi 的目录。  
   
 ### <a name="code"></a>代码  
   

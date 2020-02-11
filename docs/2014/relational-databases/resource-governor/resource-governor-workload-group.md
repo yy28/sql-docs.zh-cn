@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: de33dafe9c2274e8e016d619c1e7b5762d73e7aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63209708"
 ---
 # <a name="resource-governor-workload-group"></a>资源调控器工作负荷组
@@ -48,7 +48,7 @@ ms.locfileid: "63209708"
 |说明如何更改工作负荷组设置。|[更改工作负荷组设置](change-workload-group-settings.md)|  
 |说明如何删除工作负荷组。|[删除工作负荷组](delete-a-workload-group.md)|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [资源调控器](resource-governor.md)   
  [启用资源调控器](enable-resource-governor.md)   
  [资源调控器资源池](resource-governor-resource-pool.md)   

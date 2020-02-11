@@ -1,5 +1,5 @@
 ---
-title: 数据源视图浏览对话框 (Analysis Services-多维数据) |Microsoft Docs
+title: "\"浏览数据源视图\" 对话框（Analysis Services 多维数据） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 49a98b2710cf1af3a936ba7fa7fe244bb7675bd9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064463"
 ---
 # <a name="browse-data-source-view-dialog-box-analysis-services---multidimensional-data"></a>“浏览数据源视图”对话框（Analysis Services - 多维数据）
@@ -27,8 +27,8 @@ ms.locfileid: "66064463"
   
  在关系图面上，您可以通过单击选择对象，通过拖动对象来重新定位对象，还可以通过将光标拖过多个对象来选择这些对象。 若要更改关系图中所显示数据源视图的区域，请单击右下角的导航按钮（四向箭头），再将选择窗格拖动到希望显示的区域。  
   
-## <a name="diagram"></a>关系图  
- **缩放**  
+## <a name="diagram"></a>图表  
+ **Zoom**  
  选择缩放比率以调整关系图面上对象的大小。  
   
  **关闭**  

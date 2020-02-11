@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a27720408db760604852410d9733983d7d67f18e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63193339"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>在应用程序代码中使用 FOR XML 结果
@@ -201,7 +201,8 @@ ms.locfileid: "63193339"
   
  在此示例中，以下 Microsoft .NET Framework 托管 API 用于完成返回并呈现 FOR XML 查询结果：  
   
-1.  `SqlConnection` 用于根据指定的连接字符串变量 strConn 的内容连接到 SQL Server。  
+1.  
+  `SqlConnection` 用于根据指定的连接字符串变量 strConn 的内容连接到 SQL Server。  
   
 2.  然后，将 `SqlDataAdapter` 用作数据适配器，它将使用 SQL 连接和指定的 SQL 查询字符串执行 FOR XML 查询。  
   
@@ -290,9 +291,9 @@ SqlConnection closed.
 ```  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml`数据类型支持可以请求返回的 FOR XML 查询的结果将为`xml`数据类型，而不是作为字符串或图像类型的数据，通过指定[TYPE 指令](type-directive-in-for-xml-queries.md)。 在 FOR XML 查询中使用 TYPE 指令时，该指令将提供对 FOR XML 结果（与 [在应用程序中使用 XML 数据](use-xml-data-in-applications.md)中显示的结果类似）的编程访问权限。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml`通过数据类型支持，你可以通过指定[type 指令](type-directive-in-for-xml-queries.md)请求将 FOR XML 查询的结果`xml`作为数据类型返回，而不是作为字符串或图像类型化数据返回。 在 FOR XML 查询中使用 TYPE 指令时，该指令将提供对 FOR XML 结果（与 [在应用程序中使用 XML 数据](use-xml-data-in-applications.md)中显示的结果类似）的编程访问权限。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [FOR XML (SQL Server)](for-xml-sql-server.md)  
   
   

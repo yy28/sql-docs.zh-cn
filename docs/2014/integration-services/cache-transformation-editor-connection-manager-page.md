@@ -1,5 +1,5 @@
 ---
-title: 缓存转换编辑器 （连接管理器页） |Microsoft Docs
+title: 缓存转换编辑器（"连接管理器" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4828d1d3f509dc40e6a8f818f24ba5a7881783e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061073"
 ---
 # <a name="cache-transformation-editor-connection-manager-page"></a>缓存转换编辑器（“连接管理器”页）
@@ -28,7 +28,7 @@ ms.locfileid: "66061073"
   
 ## <a name="options"></a>选项  
  **缓存连接管理器**  
- 使用列表选择现有的缓存连接管理器，或使用“新建”按钮创建新的连接。  
+ 使用列表选择现有的缓存连接管理器，或使用“新建”**** 按钮创建新的连接。  
   
  **新建**  
  使用“缓存连接管理器编辑器”对话框创建新的连接。  
@@ -36,7 +36,7 @@ ms.locfileid: "66061073"
  **编辑**  
  修改现有连接  
   
-## <a name="see-also"></a>请参阅  
- [缓存转换编辑器（“映射”页）](../../2014/integration-services/cache-transformation-editor-mappings-page.md)  
+## <a name="see-also"></a>另请参阅  
+ [缓存转换编辑器 &#40;映射 "页面&#41;](../../2014/integration-services/cache-transformation-editor-mappings-page.md)  
   
   

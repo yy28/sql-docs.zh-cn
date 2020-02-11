@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ccd4469ef7bb52927213e27e72498afa961e81a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63156743"
 ---
 # <a name="sql-server-integration-services-support-for-in-memory-oltp"></a>对内存中 OLTP 的 SQL Server Integration Services 支持
@@ -27,7 +27,7 @@ ms.locfileid: "63156743"
   
  还可以使用 ADO .NET 源和 OLE DB 源来调用本机编译的存储过程，但是我们建议您使用 ODBC 源。 如果您配置 ADO .NET 源以执行本机编译的存储过程，将看到错误消息，因为 ADO .NET 源默认使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) 的数据访问接口不支持执行本机编译的存储过程。 您可以配置 ADO .NET 源以使用 ODBC 数据访问接口、用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 OLE DB 访问接口或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client。 但是，请注意 ODBC 源的性能好于使用 ODBC 数据访问接口的 ADO .NET 源。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 对内存中 OLTP 的支持](sql-server-support-for-in-memory-oltp.md)  
   
   

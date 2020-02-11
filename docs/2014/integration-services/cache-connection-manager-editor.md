@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0802ed589813a43ffac516c05a3a52de382d36c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061076"
 ---
 # <a name="cache-connection-manager-editor"></a>缓存连接管理器编辑器
@@ -27,16 +27,16 @@ ms.locfileid: "66061076"
   
  查找转换在引用数据集上执行查找。  
   
- “缓存连接管理器编辑器”  对话框包含以下选项卡：  
+ “缓存连接管理器编辑器”**** 对话框包含以下选项卡：  
   
--   [常规选项卡](#generaltab)  
+-   [“常规”选项卡](#generaltab)  
   
--   [列选项卡](#columnstab)  
+-   [“列”选项卡](#columnstab)  
   
- 若要了解有关缓存连接管理器的详细信息，请参阅 [Cache Connection Manager](connection-manager/cache-connection-manager.md)。  
+ 若要了解有关缓存连接管理器的详细信息，请参阅[缓存连接管理器](connection-manager/cache-connection-manager.md)。  
   
-##  <a name="generaltab"></a> “常规”选项卡  
- “缓存连接管理器编辑器”对话框的“常规”选项卡用于指示是从文件读取缓存还是将缓存保存到文件   。  
+##  <a name="generaltab"></a>常规选项卡  
+ “缓存连接管理器编辑器”对话框的“常规”选项卡用于指示是从文件读取缓存还是将缓存保存到文件********。  
   
 ### <a name="options"></a>选项  
  **连接管理器名称**  
@@ -49,7 +49,7 @@ ms.locfileid: "66061076"
  指示是否使用缓存文件。  
   
 > [!NOTE]  
->  包的保护级别不适用于缓存文件。 如果缓存文件包含敏感信息，可使用访问控制列表 (ACL) 来限制对存储该文件的位置或文件夹的访问。 应只允许访问某些帐户。 有关详细信息，请参阅 [访问包使用的文件](../../2014/integration-services/access-to-files-used-by-packages.md)。  
+>  包的保护级别不适用于缓存文件。 如果缓存文件包含敏感信息，可使用访问控制列表 (ACL) 来限制对存储该文件的位置或文件夹的访问。 应只允许访问某些帐户。 有关详细信息，请参阅[访问包使用的文件](../../2014/integration-services/access-to-files-used-by-packages.md)。  
   
  如果将缓存连接管理器配置为使用缓存文件，则连接管理器将执行下列操作之一：  
   
@@ -60,14 +60,15 @@ ms.locfileid: "66061076"
  **文件名**  
  键入缓存文件的路径和文件名。  
   
- **浏览**  
+ **“浏览”**  
  定位缓存文件。  
   
  **刷新元数据**  
  删除缓存连接管理器中的列元数据，然后用所选缓存文件中的列元数据重新填充缓存连接管理器。  
   
-##  <a name="columnstab"></a> “列”选项卡  
- **“缓存连接管理器编辑器”** 对话框的 **“列”** 选项卡用于配置缓存中各列的属性。  
+##  <a name="columnstab"></a>列选项卡  
+ 
+  **“缓存连接管理器编辑器”** 对话框的 **“列”** 选项卡用于配置缓存中各列的属性。  
   
 ### <a name="options"></a>选项  
  **列**  
@@ -83,7 +84,7 @@ ms.locfileid: "66061076"
 > [!NOTE]  
 >  当将查找转换配置为使用缓存连接管理器时，则仅引用数据集中的索引列能够映射到输入列。 此外，还必须对所有索引列进行映射。  
   
- **类型**  
+ 类型   
  指定列的数据类型。  
   
  `Length`  
@@ -98,7 +99,7 @@ ms.locfileid: "66061076"
  `Code Page`  
  指定列类型的代码页。 如果适用于该数据类型，则可更新`Code Page`。  
   
-## <a name="see-also"></a>请参阅  
- [Lookup Transformation](data-flow/transformations/lookup-transformation.md)  
+## <a name="see-also"></a>另请参阅  
+ [查找转换](data-flow/transformations/lookup-transformation.md)  
   
   

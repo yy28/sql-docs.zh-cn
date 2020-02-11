@@ -1,5 +1,5 @@
 ---
-title: ADO NET 目标编辑器 （错误输出页） |Microsoft Docs
+title: ADO NET 目标编辑器（"错误输出" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f1a36537f8ca122a6fe9ae9521aa2f0713c94d01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061769"
 ---
 # <a name="ado-net-destination-editor-error-output-page"></a>ADO NET 目标编辑器（“错误输出”页）
@@ -28,9 +28,9 @@ ms.locfileid: "66061769"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，打开具有 ADO NET 目标的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包。  
   
-2.  在“数据流”  选项卡上，双击 ADO NET 目标。  
+2.  在“数据流”**** 选项卡上，双击 ADO NET 目标。  
   
-3.  在 **“ADO NET 目标编辑器”** 中，单击 **“错误输出”** 。  
+3.  在 **“ADO NET 目标编辑器”** 中，单击 **“错误输出”**。  
   
 ## <a name="options"></a>选项  
  **输入或输出**  
@@ -53,11 +53,11 @@ ms.locfileid: "66061769"
  **将此值设置到选定的单元格**  
  指定发生错误或截断时应对所有选定单元格执行的操作：忽略失败、重定向行或使组件失败。  
   
- **Apply**  
+ **应用**  
  将错误处理选项应用到选定的单元格。  
   
-## <a name="see-also"></a>请参阅  
- [ADO NET 目标编辑器（“连接管理器”页）](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
- [ADO NET 目标编辑器（“映射”页）](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)  
+## <a name="see-also"></a>另请参阅  
+ [ADO NET 目标编辑器 &#40;连接管理器页&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
+ [ADO NET 目标编辑器 &#40;映射 "页面&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)  
   
   

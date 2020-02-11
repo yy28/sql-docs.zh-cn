@@ -1,5 +1,5 @@
 ---
-title: 查看事务发布 (SQL Server Management Studio) 的数据冲突 |Microsoft Docs
+title: 查看事务发布的数据冲突（SQL Server Management Studio） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e046351ca3dc7977691fc98e24453ccbf8e6af53
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144402"
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>查看事务发布的数据冲突 (SQL Server Management Studio)
@@ -32,7 +32,7 @@ ms.locfileid: "63144402"
   
     -   为 @conflict_retention sp_addpublication [的](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)参数指定保持值。  
   
-    -   指定的值`'conflict_retention'`有关@property参数，保留期值@value参数[sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)。  
+    -   指定@property参数的值`'conflict_retention'` ，并为[sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)的@value参数指定保持值。  
   
 ### <a name="to-view-conflicts"></a>查看冲突  
   
@@ -56,14 +56,14 @@ ms.locfileid: "63144402"
   
     -   在上部网格中选择一行或多行，再单击 **“删除”**，即从冲突元数据表中删除相应行。  
   
-    -   单击属性按钮 (...) 查看有关冲突所涉及的列的详细信息。  
+    -   单击属性按钮（**...**）可以查看有关冲突中涉及的列的详细信息。  
   
     -   选择 **“记录此冲突的详细信息”** 将冲突数据记录到一个文件中。 若要指定文件的位置，请指向 **“查看”** 菜单，然后单击 **“选项”**。 输入一个值，或单击浏览按钮 (**...**)，然后导航到相应文件。 单击 **“确定”** 关闭 **“选项”** 对话框。  
   
 6.  关闭复制冲突查看器。  
   
-## <a name="see-also"></a>请参阅  
- [对等事务复制](transactional/peer-to-peer-transactional-replication.md)   
+## <a name="see-also"></a>另请参阅  
+ [Peer-to-Peer Transactional Replication](transactional/peer-to-peer-transactional-replication.md)   
  [Queued Updating Conflict Detection and Resolution](transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)  
   
   

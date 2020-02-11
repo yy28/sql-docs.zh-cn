@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f8e6464fee5779e35559b6eca23981aa09312aeb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63193261"
 ---
 # <a name="use-auto-mode-with-for-xml"></a>将 AUTO 模式与 FOR XML 一起使用
@@ -61,7 +61,7 @@ FOR XML AUTO
   
 -   CustomerID 引用 Cust 表。 因此，创建一个 <`Cust`> 元素，CustomerID 作为其属性添加。  
   
--   接下来的三列 OrderHeader.CustomerID、OrderHeader.SaleOrderID 和 OrderHeader.Status 引用 OrderHeader 表。 因此，为 <`Cust`> 元素添加 <`OrderHeader`> 子元素，这三列作为 <`OrderHeader`> 的属性添加。  
+-   接下来的三列 OrderHeader.CustomerID、OrderHeader.SaleOrderID 和 OrderHeader.Status 引用 OrderHeader 表。 因此，为 <`OrderHeader`> 元素添加 <`Cust`> 子元素，这三列作为 <`OrderHeader`> 的属性添加。  
   
 -   接着，Cust.CustomerType 列再次引用 Cust 表，该表已由 Cust.CustomerID 列标识。 因此，不创建新元素， 而是为以前创建的 <`Cust`> 元素添加 CustomerType 属性。  
   
@@ -138,7 +138,7 @@ FOR XML AUTO, ELEMENTS
   
 -   [示例：使用 AUTO 模式](examples-using-auto-mode.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SELECT (Transact-SQL)](/sql/t-sql/queries/select-transact-sql)   
  [FOR XML (SQL Server)](for-xml-sql-server.md)  
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e1a884f7c45accefb248029d148feb8b521e6ff4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63240538"
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>组织跟踪中显示的列 (SQL Server Profiler)
@@ -82,7 +82,7 @@ ms.locfileid: "63240538"
   
 7.  若要使跟踪数据恢复为正常视图，请单击 **“视图”** 菜单上的 **“聚合视图”** 来取消选择。 如果要恢复为聚合视图，请再次单击 **“视图”** 菜单上的 **“聚合视图”** 来重新选择。 请注意，也可以单击 **“视图”** 菜单上的 **“分组视图”** 来显示分组的跟踪事件，而不折叠这些跟踪事件。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建跟踪 (SQL Server Profiler)](create-a-trace-sql-server-profiler.md)   
  [打开跟踪表 (SQL Server Profiler)](open-a-trace-table-sql-server-profiler.md)   
  [打开跟踪文件 (SQL Server Profiler)](open-a-trace-file-sql-server-profiler.md)  

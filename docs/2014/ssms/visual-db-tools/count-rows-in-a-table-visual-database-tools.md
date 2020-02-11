@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 04b836a53b4b9928118221053d1fbc2c3a89dfdd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63217815"
 ---
 # <a name="count-rows-in-a-table-visual-database-tools"></a>计算表中的行数 (Visual Database Tools)
@@ -43,7 +43,7 @@ ms.locfileid: "63217815"
   
 2.  右键单击“关系图”窗格的背景，再从快捷菜单中选择“添加分组依据”  。 [查询和视图设计器](visual-database-tools.md)会在“条件”窗格的网格中添加一个“分组依据”  列。  
   
-3.  选择 **\* （所有列）** 表示表值对象的矩形中。  
+3.  在表示表或表值对象的矩形中，选择** \* "（所有列）** "。  
   
      查询和视图设计器会自动在“条件”窗格的“分组依据”  列中填充 **Count** 一词，并为要汇总的列分配列别名。 您可以用更有意义的名称替换这一自动生成的别名。 有关详细信息，请参阅[创建列别名 (Visual Database Tools)](create-column-aliases-visual-database-tools.md)。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "63217815"
   
 2.  右键单击“关系图”窗格的背景，再从快捷菜单中选择“添加分组依据”  。 查询和视图设计器会在“条件”窗格的网格中添加一个“分组依据”  列。  
   
-3.  选择 **\*（所有列）** 表示表结构对象的矩形中。  
+3.  在表示表或表结构对象的矩形中，选择** \*"（所有列）** "。  
   
      查询和视图设计器会自动在“条件”窗格的“分组依据”  列中填充 **Count** 一词，并为要汇总的列分配列别名。 若要在查询输出中创建更实用的列标题，请参阅[创建列别名 (Visual Database Tools)](create-column-aliases-visual-database-tools.md)。  
   
@@ -86,8 +86,8 @@ ms.locfileid: "63217815"
   
 5.  运行查询。  
   
-## <a name="see-also"></a>请参阅  
- [排序和分组查询结果&#40;可视化数据库工具&#41;](sort-and-group-query-results-visual-database-tools.md)   
+## <a name="see-also"></a>另请参阅  
+ [对查询结果进行排序和分组 &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
  [汇总查询结果 (Visual Database Tools)](summarize-query-results-visual-database-tools.md)  
   
   

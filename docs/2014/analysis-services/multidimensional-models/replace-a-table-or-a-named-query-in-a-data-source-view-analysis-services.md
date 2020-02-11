@@ -1,5 +1,5 @@
 ---
-title: 替换表或命名的查询中的数据源视图 (Analysis Services) |Microsoft Docs
+title: 在数据源视图中替换表或命名查询（Analysis Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b9f1863fc3d707614b7c957dc5ef49561272d6e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073130"
 ---
 # <a name="replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services"></a>在数据源视图中替换表或命名查询 (Analysis Services)
@@ -33,15 +33,15 @@ ms.locfileid: "66073130"
 > [!IMPORTANT]  
 >  如果要重命名数据源中的表，请按以下步骤替换表，并在刷新 DSV 之前，指定重命名后的表作为 DSV 中对应的表的源。 完成替换和重命名处理后，将在 DSV 中保存表、表的引用和表的关系。 否则，在刷新 DSV 时，数据源中重命名后的表将被解释为已删除。 有关详细信息，请参阅[刷新数据源视图中的架构 (Analysis Services)](refresh-the-schema-in-a-data-source-view-analysis-services.md)。  
   
-##  <a name="bkmk_nq"></a> 使用命名查询替换表  
+##  <a name="bkmk_nq"></a>使用命名查询替换表  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开项目或连接到数据库，此项目或数据库包含要在其中替换表或命名查询的数据源视图。  
   
-2.  在解决方案资源管理器中，展开“数据源视图”  文件夹，然后双击数据源视图。  
+2.  在解决方案资源管理器中，展开“数据源视图”**** 文件夹，然后双击数据源视图。  
   
-3.  将打开 **“创建命名查询”** 对话框。 在“表”或“关系图”窗格中，右键单击要替换的表，指向“替换表”，再单击“使用新建命名查询”。      
+3.  将打开 **“创建命名查询”** 对话框。 在“表”或“关系图”窗格中，右键单击要替换的表，指向“替换表”，再单击“使用新建命名查询”。****************  
   
-4.  在 **“创建命名查询”** 对话框中，定义命名查询，再单击 **“确定”** 。  
+4.  在 **“创建命名查询”** 对话框中，定义命名查询，再单击 **“确定”**。  
   
 5.  保存已修改的数据源视图。  
   
@@ -49,21 +49,21 @@ ms.locfileid: "66073130"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开项目或连接到数据库，此项目或数据库包含要在其中替换表或命名查询的数据源视图。  
   
-2.  在解决方案资源管理器中，展开“数据源视图”  文件夹，然后双击数据源视图。  
+2.  在解决方案资源管理器中，展开“数据源视图”**** 文件夹，然后双击数据源视图。  
   
-3.  将打开 **“用其他表替换该表”** 对话框。 在“表”或“关系图”窗格中，右键单击要替换的表或命名查询，指向“替换表”，再单击“使用其他表”。      
+3.  将打开 **“用其他表替换该表”** 对话框。 在“表”或“关系图”窗格中，右键单击要替换的表或命名查询，指向“替换表”，再单击“使用其他表”。****************  
   
 4.  在 **“用其他表替换该表”** 对话框中：  
   
-    1.  在“数据源”下拉列表框中，选择所需数据源   
+    1.  在“数据源”下拉列表框中，选择所需数据源****  
   
     2.  选择要用以替换表或命名查询的表  
   
-5.  单击“确定”  。  
+5.  单击“确定”。   
   
 6.  保存已修改的数据源视图。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [多维模型中的数据源视图](data-source-views-in-multidimensional-models.md)  
   
   

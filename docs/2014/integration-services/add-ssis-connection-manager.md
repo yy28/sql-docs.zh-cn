@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 549ab9aa3a447c13939e352233acc42b974d92af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061821"
 ---
 # <a name="add-ssis-connection-manager"></a>添加 SSIS 连接管理器
@@ -28,12 +28,12 @@ ms.locfileid: "66061821"
   
 ## <a name="options"></a>选项  
  **连接管理器类型**  
- 选择一个连接类型，再单击“添加”，或双击一个连接类型，使用与各连接类型相应的编辑器来指定连接属性。   
+ 选择一个连接类型，再单击“添加”，或双击一个连接类型，使用与各连接类型相应的编辑器来指定连接属性。****  
   
- **“添加”**  
+ **添加**  
  使用与各连接类型相应的编辑器指定连接属性。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [在包中添加、删除或共享连接管理器](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md)  
   

@@ -15,19 +15,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 848081c8a4eac92299a916618aa4cd6289183d0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63238802"
 ---
 # <a name="maintain-publications"></a>维护发布
   在创建发布后，可能需要添加或删除项目或者更改发布和项目属性。 创建发布后，多数更改是允许的，但在某些情况下还需要生成发布的新快照，并且/或者重新初始化对发布的订阅。 有关详细信息，请参阅[更改发布和项目属性](change-publication-and-article-properties.md)和[向现有发布添加项目和从中删除项目](add-articles-to-and-drop-articles-from-existing-publications.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [复制管理常见问题解答](../administration/frequently-asked-questions-for-replication-administrators.md)   
- [Best Practices for Replication Administration](../administration/best-practices-for-replication-administration.md)   
+ [复制管理的最佳做法](../administration/best-practices-for-replication-administration.md)   
  [发布数据和数据库对象](publish-data-and-database-objects.md)   
- [维护 AlwaysOn 发布数据库&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
+ [维护 AlwaysOn 发布数据库 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
   
   

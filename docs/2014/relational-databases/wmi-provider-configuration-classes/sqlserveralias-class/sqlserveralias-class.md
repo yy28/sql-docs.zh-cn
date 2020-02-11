@@ -19,24 +19,24 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0ffbf733db8cbd672f171773e7b44560686e7d1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63223550"
 ---
 # <a name="sqlserveralias-class"></a>SqlServerAlias 类
-  [SqlServerAlias 类](sqlserveralias-class.md)类表示服务器连接别名。  
+  [SqlServerAlias 类](sqlserveralias-class.md)表示服务器连接别名。  
   
  出现以下两种情况时需要服务器连接别名：  
   
--   客户端连接到的实例[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]在不是默认网络传输的网络传输。  
+-   客户端[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]通过网络传输连接到不是默认网络传输的实例。  
   
 -   客户端连接到的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例侦听备用命名管道。  
   
- **注意：** [SqlServerAlias 类](sqlserveralias-class.md)继承`Put`从提供程序类的方法。 但是，与 `Provider::Put` 方法不同，它不会返回任何结果。 有关详细信息，请参阅 WMI 文档。  
+ **注意：**[SqlServerAlias 类](sqlserveralias-class.md)从 Provider 类`Put`继承方法。 但是，与 `Provider::Put` 方法不同，它不会返回任何结果。 有关详细信息，请参阅 WMI 文档。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置客户端协议](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

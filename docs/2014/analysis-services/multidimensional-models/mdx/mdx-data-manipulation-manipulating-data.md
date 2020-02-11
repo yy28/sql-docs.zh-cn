@@ -1,5 +1,5 @@
 ---
-title: 操作数据 (MDX) |Microsoft Docs
+title: 操作数据（MDX） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql-server-2014
@@ -15,23 +15,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 29e569ec781d0015017d3009746c3299f0865c80
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074359"
 ---
 # <a name="manipulating-data-mdx"></a>操作数据 (MDX)
 
-多维表达式 (MDX) 可用于以多种方式处理数据。 一文中列出此文章涵盖的一些更高级概念的 MDX 语言中的数据操作。
+多维表达式 (MDX) 可用于以多种方式处理数据。 本文中列出的文章介绍了 MDX 语言中数据操作的一些更高级的概念。
 
 ## <a name="in-this-section"></a>本节内容
 
-|主题|Description|  
+|主题|说明|  
 |-----------|-----------------|  
-|[使用 DRILLTHROUGH 检索源数据 (MDX)](mdx-data-manipulation-retrieve-source-data-using-drillthrough.md)|介绍如何使用 MDX [DRILLTHROUGH](/sql/mdx/mdx-data-manipulation-drillthrough) 语句检索适用于多维数据源中的某个单元的源数据行集。|  
-|[使用 RollupChildren 函数 (MDX)](mdx-data-manipulation-rollupchildren-function.md)|讨论产生影响的 MDX [RollupChildren](/sql/mdx/rollupchildren-mdx)
-|[理解传递顺序和求解次序 (MDX)](mdx-data-manipulation-understanding-pass-order-and-solve-order.md)|详细说明求解次序的概念，并介绍了此功能如何影响 MDX 表达式、语句和脚本。|  
+|[使用钻取检索源数据 &#40;MDX&#41;](mdx-data-manipulation-retrieve-source-data-using-drillthrough.md)|介绍如何使用 MDX [DRILLTHROUGH](/sql/mdx/mdx-data-manipulation-drillthrough) 语句检索适用于多维数据源中的某个单元的源数据行集。|  
+|[使用 RollupChildren 函数 &#40;MDX&#41;](mdx-data-manipulation-rollupchildren-function.md)|讨论 MDX [RollupChildren](/sql/mdx/rollupchildren-mdx)的影响
+|[了解传递顺序和求解次序 &#40;MDX&#41;](mdx-data-manipulation-understanding-pass-order-and-solve-order.md)|详细说明求解次序的概念，并介绍了此功能如何影响 MDX 表达式、语句和脚本。|  
 
 <!-- ??
 
@@ -43,6 +43,6 @@ Also, I had to add its leading '|' character, for consistency to aid bulk automa
 GeneMi , 2019/01/19
 -->
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [MDX 查询基础知识 (Analysis Services)](mdx-query-fundamentals-analysis-services.md)

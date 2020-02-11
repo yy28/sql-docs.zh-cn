@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aafacefa7a5bab5f8bc828f48384a79e17a13b11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63241200"
 ---
 # <a name="invalid-characters-and-escape-rules"></a>无效字符和转义规则
@@ -65,7 +65,7 @@ ms.locfileid: "63241200"
   
      请注意，建议使用 WITH XMLNAMESPACES 来添加 XML 命名空间。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [FOR XML (SQL Server)](for-xml-sql-server.md)  
   
   

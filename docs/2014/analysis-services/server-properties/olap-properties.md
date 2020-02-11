@@ -96,16 +96,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4b26323f99d0b31cdb31e12b64eabdd2a855d907
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068873"
 ---
 # <a name="olap-properties"></a>OLAP 属性
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持下表中列出的 OLAP 服务器属性。 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]支持下表中列出的 OLAP 服务器属性。 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)。  
   
- **适用范围：** 仅限多维服务器模式  
+ **适用于：** 仅限多维服务器模式  
   
 ## <a name="memory"></a>内存  
  `DefaultPageSizeForData`  
@@ -196,7 +196,7 @@ ms.locfileid: "66068873"
  `PartitionLatencyAccuracy`  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
-## <a name="process"></a>Process  
+## <a name="process"></a>进程  
  `AggregationMemoryLimitMax`  
  一个有符号 64 位双精度浮点数属性，它定义可用于聚合处理的最大内存量（以物理内存的百分比表示）。  
   
@@ -327,7 +327,7 @@ ms.locfileid: "66068873"
   
      请注意，这些缓存使用的内存被认为是不可收缩的，将在考虑 **TotalMemoryLimit**时包括这些内存。  
   
--   影响服务器上的所有数据库。 **DimensionPropertyCachesize** 是服务器范围内的属性。 更改此属性会影响当前实例上运行的所有数据库。  
+-   影响服务器上的所有数据库。 **DimensionPropertyCachesize**是服务器范围的属性。 更改此属性会影响当前实例上运行的所有数据库。  
   
  用于估计维度缓存要求的方法：  
   
@@ -431,7 +431,7 @@ ms.locfileid: "66068873"
  `DataCache\ MemoryModel\ Tax`  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
-## <a name="jobs"></a>中执行计划的管理任务，即“作业”  
+## <a name="jobs"></a>作业  
  `ProcessAggregation\ MemoryModel\ Income`  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
@@ -477,7 +477,7 @@ ms.locfileid: "66068873"
  `ProcessAggregation\ ProcessProperty\ Tax`  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在 Analysis Services 中配置服务器属性](server-properties-in-analysis-services.md)   
  [确定 Analysis Services 实例的服务器模式](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

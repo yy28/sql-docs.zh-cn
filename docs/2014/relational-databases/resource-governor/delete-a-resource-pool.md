@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6e2e9582e8a279be37e05e9ee13a858abb431987
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63205833"
 ---
 # <a name="delete-a-resource-pool"></a>删除资源池
@@ -33,7 +33,7 @@ ms.locfileid: "63205833"
 ###  <a name="LimitationsRestrictions"></a> 限制和局限  
  不能删除资源调控器默认资源池或内部资源池。 如果资源池中包含工作负荷组，则不能删除该池。 有关详细信息，请参阅 [Delete a Workload Group](delete-a-workload-group.md)。  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 权限  
  删除资源池需要 CONTROL SERVER 权限。  
   
 ##  <a name="DelRPSSMS"></a> 使用对象资源管理器删除资源池  
@@ -65,9 +65,9 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [资源调控器](resource-governor.md)   
- [Resource Governor Resource Pool](resource-governor-resource-pool.md)   
+ [资源调控器资源池](resource-governor-resource-pool.md)   
  [创建资源池](create-a-resource-pool.md)   
  [更改资源池设置](change-resource-pool-settings.md)   
  [资源调控器工作负荷组](resource-governor-workload-group.md)   

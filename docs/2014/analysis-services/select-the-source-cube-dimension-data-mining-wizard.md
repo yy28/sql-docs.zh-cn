@@ -1,5 +1,5 @@
 ---
-title: 选择源多维数据集维度 （数据挖掘向导） |Microsoft Docs
+title: 选择源多维数据集维度（数据挖掘向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bdb61763a49bad7eae1a49a01633ec8f45e27642
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069230"
 ---
 # <a name="select-the-source-cube-dimension-data-mining-wizard"></a>选择源多维数据集维度（数据挖掘向导）
   可以使用 **“选择源多维数据集维度”** 页，从包含要分析的事例的多维数据集中选择维度。 例如，如果您在生成一个依据人口统计信息对客户的购买行为进行分析的模型，您会选择 Customer 维度，该维度中通常包含每个客户的唯一记录以及表示人口统计信息（如性别、住址或收入）的各种属性。 在该向导的后面部分，您将可以添加一个与此事例表相关的表：例如，您可能添加一个列出该客户已购买产品的嵌套表。  
   
 > [!NOTE]  
->  只有在向导的“选择定义方法”  页上选择了“从现有多维数据集”  之后，才会显示此页。  
+>  只有在向导的“选择定义方法”**** 页上选择了“从现有多维数据集”**** 之后，才会显示此页。  
   
 ## <a name="options"></a>选项  
  **选择源多维数据集维度**  
@@ -38,9 +38,9 @@ ms.locfileid: "66069230"
   
  如果选择的维度未包含生成数据挖掘模型所需的所有相关属性，则可能需要修改该维度。 有关详细信息，请参阅 [定义数据库维度](multidimensional-models/define-database-dimensions.md)。  
   
-## <a name="see-also"></a>请参阅  
- [数据挖掘向导的 F1 帮助&#40;Analysis Services-数据挖掘&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [创建数据挖掘结构&#40;数据挖掘向导&#41;](create-the-data-mining-structure-data-mining-wizard.md)   
- [选择事例键&#40;数据挖掘向导&#41;](select-the-case-key-data-mining-wizard.md)  
+## <a name="see-also"></a>另请参阅  
+ [数据挖掘向导 F1 帮助 &#40;Analysis Services 数据挖掘&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [&#40;数据挖掘向导创建数据挖掘结构&#41;](create-the-data-mining-structure-data-mining-wizard.md)   
+ [在数据挖掘向导 &#40;选择事例密钥&#41;](select-the-case-key-data-mining-wizard.md)  
   
   

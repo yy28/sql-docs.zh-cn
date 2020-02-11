@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 425f9fc0b7637aab1869130a2830c2f3c134fe7d
-ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72688703"
 ---
 # <a name="use-microsoft-distributed-transaction-coordinator-odbc"></a>使用 Microsoft 分布式事务处理协调器 (ODBC)
@@ -29,7 +29,7 @@ ms.locfileid: "72688703"
   
 3.  调用 MS DTC OLE ITransactionDispenser::BeginTransaction 函数以开始 MS DTC 事务，并获得代表事务的事务对象。  
   
-4.  对于要在 MS DTC 事务中登记的每个 ODBC 连接调用一次或多次 [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md)。 [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) 第二个参数必须是 SQL_ATTR_ENLIST_IN_DTC，并且第三个参数必须是在步骤 3 中获得的 Transaction 对象。  
+4.  对于要在 MS DTC 事务中登记的每个 ODBC 连接调用一次或多次 [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md)。 [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md)第二个参数必须是 SQL_ATTR_ENLIST_IN_DTC，第三个参数必须是 Transaction 对象（在步骤3中获取）。  
   
 5.  对于要更新的每个 SQL Server 调用一次 [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399)。  
   
@@ -45,6 +45,6 @@ ms.locfileid: "72688703"
 >  还可以对每个 SQL Server 轮流调用 [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) 和 [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399)，而不是按照前面步骤 4 和 5 中的建议调用它们。  
   
 ## <a name="see-also"></a>另请参阅  
- [执行事务&#40;ODBC&#41;](../../database-engine/dev-guide/performing-transactions-odbc.md)  
+ [&#40;ODBC&#41;执行事务](../../database-engine/dev-guide/performing-transactions-odbc.md)  
   
   

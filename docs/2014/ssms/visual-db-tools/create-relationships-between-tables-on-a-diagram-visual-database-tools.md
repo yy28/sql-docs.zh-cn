@@ -1,5 +1,5 @@
 ---
-title: 创建关系表间的关系图 (Visual Database Tools) |Microsoft Docs
+title: 在关系图中创建表间的关系（Visual Database Tools） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab36ebfefbfd3d8cee8e6da7caadf86eb4a10032
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184276"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>在关系图中创建表间的关系（可视化数据库工具）
@@ -28,17 +28,17 @@ ms.locfileid: "63184276"
   
 2.  将所选列拖动到相关的表中。  
   
-3.  出现两个对话框：“外键关系”对话框和“表和列”对话框，并且后者显示在前。  
+3.  显示两个对话框：“外键关系”**** 对话框和前景中显示的“表和列”**** 对话框。  
   
-4.  “关系名”使用系统提供的名称，其格式为 FK_*localtable*_*foreigntabl*。 您可以更改此值。  
+4.  **关系名称**具有系统提供的名称，格式为 FK_*localtable*_*foreigntable*。 您可以更改此值。  
   
-5.  验证“主键表”是否指定了正确的表。  
+5.  验证“主键表”**** 是否指定了正确的表。  
   
 6.  网格列出了本地列及与其匹配的外部列。 您可以添加或删除表列或者更改映射。  
   
-7.  选择“确定”。  
+7.  选择“确定”。****  
   
-     此时将出现“外键关系”对话框。 “选定的关系”中显示了已创建的关系。  
+     此时将出现“外键关系”**** 对话框。 **所选关系**显示已创建的关系。  
   
 8.  在网格中更改关系的属性。  
   
@@ -46,9 +46,9 @@ ms.locfileid: "63184276"
   
      数据库设计器将显示所选列之间的关系。  
   
-## <a name="see-also"></a>请参阅  
- [表和列对话框&#40;可视化数据库工具&#41;](visual-database-tools.md)   
- [唯一约束和 Check 约束](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
+## <a name="see-also"></a>另请参阅  
+ [Visual Database Tools &#40;"表和列" 对话框&#41;](visual-database-tools.md)   
+ [Unique 约束和 Check 约束](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
  [使用数据库关系图中的表 (Visual Database Tools)](work-with-tables-in-database-diagram-visual-database-tools.md)  
   
   

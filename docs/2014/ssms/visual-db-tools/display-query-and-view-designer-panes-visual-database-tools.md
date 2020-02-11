@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8116f8a80a1fd614974d79516be2d4cd33eb660a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204977"
 ---
 # <a name="display-query-and-view-designer-panes-visual-database-tools"></a>显示查询和视图设计器窗格 (Visual Database Tools)
@@ -31,10 +31,10 @@ ms.locfileid: "63204977"
   
 1.  打开一个视图或创建一个新查询以打开查询和视图设计器。  
   
-2.  在“查询设计器”  菜单中，指向“窗格”  ，再单击要打开的窗格名称。  
+2.  在“查询设计器”**** 菜单中，指向“窗格”****，再单击要打开的窗格名称。  
   
-## <a name="see-also"></a>请参阅  
- [创建查询&#40;可视化数据库工具&#41;](visual-database-tools.md)   
- [打开查询和视图设计器 (Visual Database Tools)](open-the-query-and-view-designer-visual-database-tools.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;Visual Database Tools 创建查询&#41;](visual-database-tools.md)   
+ [&#40;Visual Database Tools 打开查询和视图设计器&#41;](open-the-query-and-view-designer-visual-database-tools.md)  
   
   

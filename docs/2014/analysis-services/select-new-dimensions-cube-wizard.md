@@ -1,5 +1,5 @@
 ---
-title: 选择新维度 （多维数据集向导） |Microsoft Docs
+title: 选择新维度（多维数据集向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,24 +13,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0362322d63e351ab7547a6bb19511c2c10d1df95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069335"
 ---
 # <a name="select-new-dimensions-cube-wizard"></a>选择新维度（多维数据集向导）
   可以使用 **“选择新维度”** 页选择要创建的新维度。  
   
 ## <a name="options"></a>选项  
- **Dimensions**  
+ **维度**  
  选择要创建的维度。 默认情况下，会选中所有维度。  
   
  树的根节点表示将要创建的新维度。 用于创建维度的相关表显示在维度节点下。  
   
  若要重命名维度，请单击维度名称，然后输入新名称。 您不能重命名表。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [多维模型中的多维数据集](multidimensional-models/cubes-in-multidimensional-models.md)  
   
   

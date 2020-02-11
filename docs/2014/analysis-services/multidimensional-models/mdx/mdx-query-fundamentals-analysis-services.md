@@ -1,5 +1,5 @@
 ---
-title: MDX 查询基础知识 (Analysis Services) |Microsoft Docs
+title: MDX 查询基础知识（Analysis Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 42c4d8581374c9805c28ce577249995427fd5c7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073892"
 ---
 # <a name="mdx-query-fundamentals-analysis-services"></a>MDX 查询基础知识 (Analysis Services)
@@ -31,24 +31,24 @@ ms.locfileid: "66073892"
  下列主题介绍了 MDX 查询及其产生的单元集，还提供了有关基本 MDX 语法的详细信息。  
   
 > [!NOTE]  
->  有关与 MDX 查询和计算相关的性能问题的详细信息，请参阅"编写有效的 MDX"一节中[SQL Server 2005 Analysis Services 性能指南](https://docsbay.net/Microsoft-SQL-Server-2005-Analysis-Services-Performance-Guide)。  
+>  有关与 MDX 查询和计算相关的性能问题的详细信息，请参阅[SQL Server 2005 Analysis Services 性能指南](https://docsbay.net/Microsoft-SQL-Server-2005-Analysis-Services-Performance-Guide)中的 "编写有效的 MDX" 一节。  
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|Description|  
+|主题|说明|  
 |-----------|-----------------|  
-|[基本 MDX 查询 (MDX)](mdx-query-the-basic-query.md)|提供 MDX SELECT 语句的基本语法信息。|  
-|[用查询轴和切片器轴限定查询&#40;MDX&#41;](mdx-query-and-slicer-axes-restricting-the-query.md)|说明什么是查询轴和切片器轴，以及如何指定它们。|  
-|[在查询中建立多维数据集上下文 (MDX)](establishing-cube-context-in-a-query-mdx.md)|介绍 MDX SELECT 语句中的 FROM 子句的用途。|  
-|[在 MDX 中生成命名集 (MDX)](mdx-named-sets-building-named-sets.md)|介绍 MDX 中的命名集的用途，以及在 MDX 查询中创建与使用命名集所需的技术。|  
-|[在 MDX 中生成计算成员 (MDX)](mdx-calculated-members-building-calculated-members.md)|提供有关 MDX 中计算成员的信息，包括在 MDX 表达式中创建和使用计算成员所需的技术。|  
-|[在 MDX 中生成单元格计算 (MDX)](../../multidimensional-models-olap-logical-cube-objects/calculations.md)|详细介绍创建和使用计算单元的过程。|  
-|[创建和使用属性值 (MDX)](../../creating-and-using-property-values-mdx.md)|详细介绍创建和使用维度、级别、成员和单元属性的过程。|  
-|[操作数据 (MDX)](mdx-data-manipulation-manipulating-data.md)|介绍使用钻取和汇总操作数据的基础知识，还介绍了 MDX 中的传递次序和求解次序。|  
-|[修改数据 (MDX)](mdx-data-modification-modifying-data.md)|介绍如何使用写回临时或永久更改多维数据。|  
-|[使用变量和参数 (MDX)](using-variables-and-parameters-mdx.md)|介绍如何在 MDX 查询中使用变量和参数。|  
+|[基本 MDX 查询 &#40;MDX&#41;](mdx-query-the-basic-query.md)|提供 MDX SELECT 语句的基本语法信息。|  
+|[用查询轴和切片器轴限定查询 &#40;MDX&#41;](mdx-query-and-slicer-axes-restricting-the-query.md)|说明什么是查询轴和切片器轴，以及如何指定它们。|  
+|[在查询 &#40;MDX&#41;中建立多维数据集上下文](establishing-cube-context-in-a-query-mdx.md)|介绍 MDX SELECT 语句中的 FROM 子句的用途。|  
+|[在 MDX 中生成命名集 &#40;MDX&#41;](mdx-named-sets-building-named-sets.md)|介绍 MDX 中的命名集的用途，以及在 MDX 查询中创建与使用命名集所需的技术。|  
+|[在 MDX 中生成计算成员 &#40;MDX&#41;](mdx-calculated-members-building-calculated-members.md)|提供有关 MDX 中计算成员的信息，包括在 MDX 表达式中创建和使用计算成员所需的技术。|  
+|[在 MDX 中生成单元计算 &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)|详细介绍创建和使用计算单元的过程。|  
+|[&#40;MDX&#41;创建和使用属性值](../../creating-and-using-property-values-mdx.md)|详细介绍创建和使用维度、级别、成员和单元属性的过程。|  
+|[&#40;MDX&#41;操作数据](mdx-data-manipulation-manipulating-data.md)|介绍使用钻取和汇总操作数据的基础知识，还介绍了 MDX 中的传递次序和求解次序。|  
+|[&#40;MDX&#41;修改数据](mdx-data-modification-modifying-data.md)|介绍如何使用写回临时或永久更改多维数据。|  
+|[使用变量和参数 &#40;MDX&#41;](using-variables-and-parameters-mdx.md)|介绍如何在 MDX 查询中使用变量和参数。|  
   
-## <a name="see-also"></a>请参阅  
- [多维表达式 (MDX) 参考](/sql/mdx/multidimensional-expressions-mdx-reference)  
+## <a name="see-also"></a>另请参阅  
+ [MDX&#41; 引用 &#40;多维表达式](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   

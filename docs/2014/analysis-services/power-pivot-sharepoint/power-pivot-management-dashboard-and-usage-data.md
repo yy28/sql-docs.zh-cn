@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ece3d8a1e9a66ecc6ad05508c975e617c523a9c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071122"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>PowerPivot 管理面板和使用情况数据
@@ -22,23 +22,23 @@ ms.locfileid: "66071122"
   
  [先决条件](#prereq)  
   
- [仪表板的各个部分概述](#items)  
+ [仪表板各部分的概述](#items)  
   
  [打开 PowerPivot 管理面板](#open)  
   
- [在仪表板中的源数据](#sourcedata)  
+ [面板中的源数据](#sourcedata)  
   
  [编辑 PowerPivot 面板](#edit)  
   
  [为 PowerPivot 管理面板创建自定义报表](#reports)  
   
-##  <a name="prereq"></a> 先决条件  
+##  <a name="prereq"></a>先决条件  
  您必须是服务管理员才能为您管理的 PowerPivot 服务应用程序打开 PowerPivot 管理面板。  
   
-##  <a name="items"></a> “面板”各个部分的概述  
+##  <a name="items"></a>仪表板各部分的概述  
  PowerPivot 管理面板包含用于深化到特定信息类别的 Web 部件和嵌入式报表。 下面的列表介绍面板的每个部分：  
   
-|面板|Description|  
+|仪表板|说明|  
 |---------------|-----------------|  
 |基础结构 - 服务器运行状况|显示 CPU 使用情况、内存消耗量和查询响应时间随时间推移而变化的趋势，以便您可以评估系统资源是接近最大容量还是未充分利用。|  
 |操作|包含指向管理中心中其他页的链接，包括当前服务应用程序、服务应用程序的列表和使用情况日志记录。|  
@@ -48,51 +48,51 @@ ms.locfileid: "66071122"
 |数据刷新 - 最近的失败|列出未成功完成数据刷新的 PowerPivot 工作簿。|  
 |报表|包含指向可以在 Excel 中打开的报表的链接。|  
   
-##  <a name="open"></a> 打开 PowerPivot 管理面板  
+##  <a name="open"></a>打开 PowerPivot 管理面板  
  面板中一次显示一个 PowerPivot 服务应用程序的信息。 您可以从两个不同的位置打开管理面板。  
   
 ### <a name="open-the-dashboard-from-general-application-settings"></a>从“常规应用程序设置”打开面板  
   
-1.  在管理中心的 **“常规应用程序设置”** 组中，单击 **“PowerPivot 管理面板”** 。  
+1.  在管理中心的 **“常规应用程序设置”** 组中，单击 **“PowerPivot 管理面板”**。  
   
 2.  在主页上，选择您要查看其操作数据的 PowerPivot 服务应用程序。  
   
 ### <a name="open-the-dashboard-from-a-powerpivot-service-application"></a>从 PowerPivot 服务应用程序中打开该面板  
   
-1.  在管理中心的 **“应用程序管理”** 中，单击 **“管理服务应用程序”** 。  
+1.  在管理中心的 "**应用程序管理**" 中，单击 "**管理服务应用程序**"。  
   
 2.  单击 PowerPivot 服务应用程序的名称。 PowerPivot 管理面板显示当前服务应用程序的操作数据。  
   
 ### <a name="change-the-current-service-application"></a>更改当前服务应用程序。  
  在管理面板中更改当前 PowerPivot 服务应用程序：  
   
-1.  在 PowerPivot 管理面板顶部，记下名称的当前服务应用程序，例如**默认 PowerPivot 服务应用程序**。  
+1.  在 PowerPivot 管理面板顶部，记下当前服务应用程序的名称，例如**默认的 PowerPivot 服务应用**程序。  
   
-2.  在 **“操作”** 面板中单击 **“列出服务应用程序”** 。  
+2.  在 **“操作”** 面板中单击 **“列出服务应用程序”**。  
   
 3.  单击要查看管理面板报表的 PowerPivot 服务应用程序的名称。  
   
-##  <a name="sourcedata"></a> 面板中的源数据  
+##  <a name="sourcedata"></a>面板中的源数据  
  面板、报表和 Web 部件显示的数据来自于一个内部数据模型，而该数据模型则从系统和 PowerPivot 应用程序数据库请求这些数据。 这个内部数据模型嵌入在一个承载于管理中心站点的 PowerPivot 工作簿中。 该数据模型的结构是固定的。 虽然可以使用 PowertPivot 工作簿作为数据源来创建新报表，但您不得以破坏使用该数据源的预定义报表的方式修改结构。  
   
  有关如何收集数据的详细信息，请参阅以下主题：  
   
--   [PowerPivot 使用情况数据集合](power-pivot-usage-data-collection.md)  
+-   [PowerPivot 使用情况数据收集](power-pivot-usage-data-collection.md)  
   
--   [配置使用情况数据收集&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
+-   [为 &#40;配置使用情况数据收集 PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
- 为了捕获有关 PowerPivot 服务器系统的数据，请验证为每个 PowerPivot 服务应用程序启用了事件消息传递、数据刷新历史记录和其他使用情况历史记录。 在服务器正常操作过程中收集的服务器和使用情况数据是最终完成此内部数据模型的源数据。 **注意：** 如果您关闭事件或使用情况历史记录，则组合报表将不完整或出错。  
+ 为了捕获有关 PowerPivot 服务器系统的数据，请验证为每个 PowerPivot 服务应用程序启用了事件消息传递、数据刷新历史记录和其他使用情况历史记录。 在服务器正常操作过程中收集的服务器和使用情况数据是最终完成此内部数据模型的源数据。 **注意：** 如果关闭事件或使用情况历史记录，复合报表将不完整或错误。  
   
-##  <a name="edit"></a> 编辑 PowerPivot 面板  
+##  <a name="edit"></a>编辑 PowerPivot 面板  
  如果您具有面板开发或自定义方面的专业知识，则可以编辑此面板以加入新的 Web 部件。 还可以编辑包含在面板中的 Web 部件属性。  
   
-##  <a name="reports"></a> 为 PowerPivot 管理面板创建自定义报表  
+##  <a name="reports"></a>为 PowerPivot 管理面板创建自定义报表  
  出于报告目的，PowerPivot 使用情况数据和历史记录保留在一个与面板一起创建和配置的内部 PowerPivot 工作簿中。 如果默认报表未提供所需信息，您可以在 Excel 中基于该工作簿创建自定义报表。 如果您以后升级或卸载 PowerPivot 解决方案文件，该工作簿和您创建的任何自定义报表都会保留。 工作簿和报表存储在管理中心站点的 PowerPivot 管理库中。 默认情况下此库不可见，但您可以使用“网站操作”下的“查看所有网站内容”操作来查看此库。  
   
  为帮助开始进行自定义报表制作，PowerPivot 管理面板提供了一个 Office 数据连接 (.odc) 文件连接到源工作簿。 例如，您可以在 Excel 中使用 .odc 文件来创建其他报表。  
   
 > [!NOTE]  
->  编辑文件以尝试使用在 Excel 中的.odc 文件时出现以下错误："数据源初始化失败"。 自动生成的 .odc 文件包含 MSOLAP OLE DB 访问接口不支持的一个参数。 以下说明介绍了用于删除这些参数的办法。  
+>  编辑此文件以避免当尝试在 Excel 中使用 .odc 文件时出现以下错误：“数据源初始化失败”。 自动生成的 .odc 文件包含 MSOLAP OLE DB 访问接口不支持的一个参数。 以下说明介绍了用于删除这些参数的办法。  
   
  您必须是场或服务管理员，才能生成基于管理中心内的 PowerPivot 工作簿的报表。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "66071122"
   
 2.  滚动到页底部的 **“报表”** 部分。  
   
-3.  单击 **“PowerPivot 管理数据”** 。  
+3.  单击 **“PowerPivot 管理数据”**。  
   
 4.  将 .odc 文件保存到本地文件夹。  
   
@@ -112,31 +112,31 @@ ms.locfileid: "66071122"
   
 8.  1.  启动 Excel 2013  
   
-    2.  在 **PowerPivot** 功能区中，单击 **“管理”** 。  
+    2.  在 **PowerPivot** 功能区中，单击 **“管理”**。  
   
-    3.  单击 **“获取外部数据”** ，然后单击 **“现有连接”** 。  
+    3.  单击 **“获取外部数据”** ，然后单击 **“现有连接”**。  
   
     4.  如果看到 .ODC 文件，请单击它。 如果看不到 .ODC 文件，请单击 **“浏览更多”** ，然后在文件路径中指定 .odc 文件。  
   
-    5.  单击 **“打开”** 。  
+    5.  单击**打开**  
   
     6.  单击 **“测试连接”** 以验证连接成功。  
   
-    7.  单击键入连接的名称，然后单击 **“下一步”** 。  
+    7.  单击键入连接的名称，然后单击 **“下一步”**。  
   
-    8.  在指定 MDX 查询中，单击**设计**以打开 MDX 查询设计器以组合您要使用的数据**如果你看到错误消息**"编辑模式的属性名称格式不正确。"，验证你的编辑。ODC 文件。  
+    8.  在 "指定 MDX 查询" 中，单击 "**设计**" 打开 MDX 查询设计器以组合您要使用的数据。**如果您看到错误消息**"编辑模式属性名称格式不正确"，请验证编辑。.ODC 文件。  
   
-    9. 单击 **“确定”** ，然后单击 **“完成”** 。  
+    9. 单击 **"确定"** ，然后单击 "**完成**"。  
   
     10. 创建数据透视表或数据透视图报表以便在 Excel 中直观显示数据。  
   
 9. 1.  启动 Excel 2010。  
   
-    2.  在 PowerPivot 功能区中，单击 **“启动 PowerPivot 窗口”** 。  
+    2.  在 PowerPivot 功能区中，单击 **“启动 PowerPivot 窗口”**。  
   
-    3.  在 PowerPivot 窗口的“设计”功能区中，单击 **“现有连接”** 。  
+    3.  在 PowerPivot 窗口的“设计”功能区中，单击 **“现有连接”**。  
   
-    4.  单击 **“浏览更多”** 。  
+    4.  单击 **“浏览更多”**。  
   
     5.  在文件路径中，指定 .odc 文件。  
   
@@ -144,12 +144,12 @@ ms.locfileid: "66071122"
   
     7.  单击 **“测试连接”** 以确认您具有访问权限。  
   
-    8.  输入连接的友好名称，然后单击 **“下一步”** 。  
+    8.  输入连接的友好名称，然后单击 **“下一步”**。  
   
     9. 在“指定 MDX 查询”中，单击 **“设计”** 打开 MDX 查询设计器以组合您要使用的数据，然后创建数据透视表或数据透视图报表以便在 Excel 中直观显示数据。  
   
-## <a name="see-also"></a>请参阅  
- [使用 SharePoint 2010 的 PowerPivot 数据刷新](../powerpivot-data-refresh-with-sharepoint-2010.md)   
- [配置使用情况数据收集&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
+## <a name="see-also"></a>另请参阅  
+ [通过 SharePoint 2010 进行 PowerPivot 数据刷新](../powerpivot-data-refresh-with-sharepoint-2010.md)   
+ [为 &#40;配置使用情况数据收集 PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
   

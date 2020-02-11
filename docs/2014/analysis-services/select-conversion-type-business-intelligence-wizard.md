@@ -1,5 +1,5 @@
 ---
-title: 选择换算类型 （商业智能向导） |Microsoft Docs
+title: 选择转换类型（商业智能向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ab618eaa2d8d54b08e3d01fa238d19451084eff8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069621"
 ---
 # <a name="select-conversion-type-business-intelligence-wizard"></a>选择换算类型（商业智能向导）
@@ -35,21 +35,21 @@ ms.locfileid: "66069621"
  使用本地货币存储事务。 货币换算功能将此类事务换算成 **“设置货币换算选项”** 页中指定的先导货币。 该先导货币用作唯一指定的报表货币。  
   
 > [!NOTE]  
->  如果选择此选项，则不显示“指定报表货币”  页。  
+>  如果选择此选项，则不显示“指定报表货币”**** 页。  
   
  例如，先导货币可以设置为美元 (USD)，而事实数据表使用欧元 (EUR)、澳大利亚元 (AUD) 和墨西哥比索 (MXN) 来存储交易。 选择此选项可以将这些事务从其指定的本地货币换算成先导货币。 结果是可以使用指定的本地货币存储事务，并使用指定的先导货币来查看事务。  
   
  **一对多**  
- 使用“设置货币换算选项”  页中指定的先导货币存储事务，然后换算成一种或多种其他报表货币。  
+ 使用“设置货币换算选项”**** 页中指定的先导货币存储事务，然后换算成一种或多种其他报表货币。  
   
 > [!NOTE]  
->  如果选择此选项，则不显示“定义本地货币引用”  页。  
+>  如果选择此选项，则不显示“定义本地货币引用”**** 页。  
   
  例如，先导货币可以设置为美元 (USD)，而事实数据表使用 USD 来存储事务。 选择此选项可以将这些事务从先导货币换算成指定的报表货币。 结果是可以使用指定的先导货币存储事务，并使用指定的先导货币或 **“指定报表货币”** 页中指定的任一报表货币来查看事务。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [商业智能向导的 F1 帮助](business-intelligence-wizard-f1-help.md)   
- [多维数据集设计器&#40;Analysis Services-多维数据&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [维度设计器&#40;Analysis Services-多维数据&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+ [多维数据集设计器 &#40;Analysis Services 多维数据&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [维度设计器 &#40;Analysis Services 多维数据&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

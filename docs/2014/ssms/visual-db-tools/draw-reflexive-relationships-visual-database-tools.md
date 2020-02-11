@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c11f414bded0c0b927579eb5dbec4664584a055e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204953"
 ---
 # <a name="draw-reflexive-relationships-visual-database-tools"></a>绘制自反关系 (Visual Database Tools)
@@ -32,15 +32,15 @@ ms.locfileid: "63204953"
   
 2.  将该线条拖回所选的表。  
   
-3.  释放鼠标按钮。 此时，将显示“表和列”对话框。  
+3.  释放鼠标按钮。 此时，将显示“表和列”  对话框。  
   
 4.  选择外键列以及要与之建立关系的主键表和列。  
   
-5.  选择“确定”两次以创建关系。  
+5.  选择“确定”  两次以创建关系。  
   
  如果对表运行查询，则可使用自反关系创建自联接。 有关使用联接查询表的信息，请参阅 [使用联接进行查询 (Visual Database Tools)](visual-database-tools.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用联接进行查询 (Visual Database Tools)](visual-database-tools.md)  
   
   

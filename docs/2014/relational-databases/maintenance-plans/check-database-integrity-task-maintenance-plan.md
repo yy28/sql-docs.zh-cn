@@ -16,38 +16,38 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 42fa69e6456b23f95d6a203062b580bd04f443fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144672"
 ---
 # <a name="check-database-integrity-task-maintenance-plan"></a>“检查数据库完整性”任务（维护计划）
-  通过运行 `DBCC CHECKDB`[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，使用  “检查数据库完整性任务”对话框可以检查数据库中的用户和系统表以及索引的分配和结构完整性。 运行 `DBCC` 确保数据库中的任何完整性问题均能得到报告，以便系统管理员或数据库所有者在以后加以解决。  
+  通过运行`DBCC CHECKDB` [!INCLUDE[tsql](../../includes/tsql-md.md)]语句，使用 "**检查数据库完整性任务**" 对话框检查用户和系统表以及数据库中的索引的分配和结构完整性。 运行 `DBCC` 确保数据库中的任何完整性问题均能得到报告，以便系统管理员或数据库所有者在以后加以解决。  
   
 ## <a name="options"></a>选项  
- **“连接”**  
+ **连接**  
  选择执行此任务时使用的服务器连接。  
   
  **新建**  
  创建一个新的服务器连接，在执行此任务时使用。 下面对 **“新建连接”** 对话框进行了介绍。  
   
- **“数据库”**  
+ **数据库**  
  指定受此任务影响的数据库。  
   
 -   **所有数据库**  
   
-     生成的维护计划将对除 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases except **tempdb**.  
+     生成的维护计划将对除**tempdb**之外的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所有数据库运行维护任务。  
   
 -   **所有系统数据库**  
   
-     生成的维护计划将对除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tempdb **之外的所有**系统数据库运行维护任务。 对用户创建的数据库不运行维护任务。  
+     生成的维护计划将对除**tempdb**之外的每个[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]系统数据库运行维护任务。 对用户创建的数据库不运行维护任务。  
   
 -   **所有用户数据库**  
   
      生成的维护计划将对用户创建的所有数据库运行维护任务。 但不会对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统数据库运行任何维护任务。  
   
--   **特定数据库**  
+-   **这些特定数据库**  
   
      生成的维护计划将只对所选数据库运行维护任务。 如果选择此选项，则必须至少在列表中选择一个数据库。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "63144672"
  **包括索引**  
  检查所有索引页以及表数据页的完整性。  
   
- **查看 T-SQL**  
+ **查看 T-sql**  
  根据所选选项，查看针对此任务的服务器执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
   
 > [!NOTE]  
@@ -70,25 +70,25 @@ ms.locfileid: "63144672"
  **选择或输入服务器名称**  
  选择执行此任务时所要连接的服务器。  
   
- **刷新**  
+ **“刷新”**  
  刷新可用服务器的列表。  
   
- **输入登录服务器所需的信息**  
+ **输入用于登录到服务器的信息**  
  指定如何对服务器进行身份验证。  
   
  **使用 Windows 集成安全性**  
  使用 Windows 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例。  
   
- **使用特定用户名和密码**  
- 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。 此选项不可用。  
+ **使用特定的用户名和密码**  
+ 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。 此选项不可用。  
   
  **用户名**  
  提供一个在进行身份验证时要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 此选项不可用。  
   
- **密码**  
+ **权限**  
  提供一个在进行身份验证时要使用的密码。 此选项不可用。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [DBCC CHECKDB (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)  
   
   

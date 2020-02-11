@@ -29,10 +29,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 683e8044b235828741fe429f133af82d1977031a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150707"
 ---
 # <a name="monitor-and-tune-for-performance"></a>监视和优化性能
@@ -41,7 +41,7 @@ ms.locfileid: "63150707"
  日常数据库性能评估有助于使响应时间最小化并使吞吐量最大化，从而实现最佳性能。 有效网络流量、磁盘 I/O 和 CPU 使用率是实现最佳性能的关键。 您需要透彻地分析应用程序要求，了解数据的逻辑结构和物理结构，评估数据库使用情况，并协商使用 [如联机事务处理 (OLTP) 与决策支持] 冲突之间的平衡措施。  
   
 ## <a name="benefits-of-monitoring-and-tuning-databases-for-performance"></a>监视和优化数据库性能的好处  
- Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Microsoft Windows 操作系统提供实用工具，允许您查看数据库的当前状态并跟踪条件变化时的性能。 可使用多种工具和技术来监视 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 了解如何监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 有助于：  
+ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Microsoft Windows 操作系统提供实用工具，允许您查看数据库的当前状态并跟踪条件变化时的性能。 可以使用多种工具和技术来监视[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 了解如何监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 有助于：  
   
 -   确定是否可以提高性能。 例如，通过监视常用查询的响应时间，可以确定是否需要更改表的查询或索引。  
   
@@ -73,12 +73,12 @@ ms.locfileid: "63150707"
 |[识别瓶颈](identify-bottlenecks.md)|介绍如何监视和跟踪服务器性能，以发现瓶颈。|  
 |[服务器性能和活动监视](server-performance-and-activity-monitoring.md)|介绍如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 性能和活动监视工具。|  
 |[显示和保存执行计划](display-and-save-execution-plans.md)|介绍如何显示执行计划并将其保存到 XML 格式的文件中。|  
-|[使用查询存储来监视性能](monitoring-performance-by-using-the-query-store.md)|查询存储将自动捕获查询、计划和运行时统计信息的历史记录，并保留它们以供查阅。|  
+|[Monitoring Performance By Using the Query Store](monitoring-performance-by-using-the-query-store.md)|查询存储将自动捕获查询、计划和运行时统计信息的历史记录，并保留它们以供查阅。|  
   
-## <a name="see-also"></a>请参阅  
- [企业范围的自动化管理](../../ssms/agent/automated-administration-across-an-enterprise.md)   
+## <a name="see-also"></a>另请参阅  
+ [跨企业的自动化管理](../../ssms/agent/automated-administration-across-an-enterprise.md)   
  [数据库引擎优化顾问](database-engine-tuning-advisor.md)   
  [监视资源使用情况（系统监视器）](../performance-monitor/monitor-resource-usage-system-monitor.md)   
- [SQL Server 事件探查器](../../tools/sql-server-profiler/sql-server-profiler.md)  
+ [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

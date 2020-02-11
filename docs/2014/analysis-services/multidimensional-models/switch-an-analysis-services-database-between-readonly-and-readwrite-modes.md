@@ -1,5 +1,5 @@
 ---
-title: 切换 ReadOnly 和 ReadWrite 模式之间的 Analysis Services 数据库 |Microsoft Docs
+title: 在 ReadOnly 和 ReadWrite 模式之间切换 Analysis Services 数据库 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 790e509dd29e388dfb697ba577958395a4a046ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072889"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>在 ReadOnly 和 ReadWrite 模式之间切换 Analysis Services 数据库
@@ -38,20 +38,20 @@ ms.locfileid: "66072889"
   
 1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的左窗格或右窗格中找到要切换的数据库。  
   
-2.  右键单击该数据库并选择 **“属性”** 。 查找数据库文件夹并记下其位置。 如果数据库存储位置为空，则表明数据库文件夹位于服务器数据文件夹中。  
+2.  右键单击该数据库并选择 **“属性”**。 查找数据库文件夹并记下其位置。 如果数据库存储位置为空，则表明数据库文件夹位于服务器数据文件夹中。  
   
     > [!IMPORTANT]  
     >  在将数据库分离之后， [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 就不能再帮助您获取数据库位置。  
   
-3.  右键单击数据库并选择**分离...**  
+3.  右键单击该数据库并选择 "**分离 ...** "  
   
 4.  为要分离的数据库分配一个密码，然后单击 **“确定”** 执行分离命令。  
   
 5.  在 **的左窗格或右窗格中找到** “数据库” [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]文件夹。  
   
-6.  右键单击**数据库**文件夹，然后选择**附加...**  
+6.  右键单击 "**数据库**" 文件夹，然后选择 "**附加 ...** "  
   
-7.  在 **“文件夹”** 文本框中，键入数据库文件夹的原始位置。 或者，可以使用浏览按钮 ( **...** ) 以查找数据库文件夹。  
+7.  在 **“文件夹”** 文本框中，键入数据库文件夹的原始位置。 或者，您可以使用浏览按钮（**...**）查找数据库文件夹。  
   
 8.  针对该数据库选择读写模式。  
   
@@ -127,7 +127,7 @@ ms.locfileid: "66072889"
   
 1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的左窗格或右窗格中找到要切换的数据库。  
   
-2.  右键单击该数据库并选择 **“属性”** 。 查找数据库文件夹并记下其位置。 如果数据库存储位置为空，则表明数据库文件夹位于服务器数据文件夹中。  
+2.  右键单击该数据库并选择 **“属性”**。 查找数据库文件夹并记下其位置。 如果数据库存储位置为空，则表明数据库文件夹位于服务器数据文件夹中。  
   
     > [!IMPORTANT]  
     >  在将数据库分离之后， [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 就不能再帮助您获取数据库位置。  
@@ -166,12 +166,12 @@ ms.locfileid: "66072889"
   
 2.  执行 XMLA 命令。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [附加和分离 Analysis Services 数据库](attach-and-detach-analysis-services-databases.md)   
  [数据库存储位置](database-storage-location.md)   
- [数据库 ReadWriteMode](database-readwritemodes.md)   
+ [数据库 Readwritemode](database-readwritemodes.md)   
  [附加元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
  [分离元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
  [ReadWriteMode 元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/readwritemode-element)   

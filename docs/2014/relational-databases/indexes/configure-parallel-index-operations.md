@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3a70d58caba2b2a443f0017c52611331e9257972
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63157476"
 ---
 # <a name="configure-parallel-index-operations"></a>配置并行索引操作
@@ -51,7 +51,7 @@ ms.locfileid: "63157476"
   
 -   MAXDOP 索引选项只为指定此选项的查询覆盖 max degree of parallelism 配置选项。 下表列出了可为 max degree of parallelism 配置选项和 MAXDOP 索引选项指定的有效整数值。  
   
-    |ReplTest1|Description|  
+    |值|说明|  
     |-----------|-----------------|  
     |0|指定服务器根据当前系统工作负荷确定所使用的 CPU 数目。 这是默认值，还是推荐设置。|  
     |1|取消生成并行计划。 操作将以串行方式执行。|  
@@ -73,9 +73,9 @@ ms.locfileid: "63157476"
   
 -   如果查询优化器将并行度应用于生成操作，则需要排序的已分区索引操作的内存需求可能会很大。 并行度越高，内存需求就越大。 有关详细信息，请参阅 [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求对表或视图具有 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -90,13 +90,13 @@ ms.locfileid: "63157476"
   
 4.  展开 **“索引”** 文件夹。  
   
-5.  右键单击要为其设置最大并行度的索引，然后选择“属性”  。  
+5.  右键单击要为其设置最大并行度的索引，然后选择“属性”****。  
   
-6.  在 **“选择页”** 下，选择 **“选项”** 。  
+6.  在 **“选择页”** 下，选择 **“选项”**。  
   
-7.  选择 **“最大并行度”** ，然后输入 1 和 64 之间的某个值。  
+7.  选择 **“最大并行度”**，然后输入 1 和 64 之间的某个值。  
   
-8.  单击“确定”  。  
+8.  单击“确定”。   
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -118,7 +118,7 @@ ms.locfileid: "63157476"
     GO  
     ```  
   
- 有关详细信息，请参阅 [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql)。  
+ 有关详细信息，请参阅[ALTER INDEX &#40;transact-sql&#41;](/sql/t-sql/statements/alter-index-transact-sql)。  
   
 #### <a name="set-max-degree-of-parallelism-on-a-new-index"></a>设置新建索引的最大并行度  
   

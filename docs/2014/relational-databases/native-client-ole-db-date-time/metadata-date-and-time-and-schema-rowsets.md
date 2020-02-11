@@ -1,5 +1,5 @@
 ---
-title: 日期和时间以及架构行集 |Microsoft Docs
+title: 日期和时间行集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 710fbfdfd57608c24c56def1f2f9c4ec373f1957
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63238016"
 ---
 # <a name="date-and-time-and-schema-rowsets"></a>日期和时间以及架构行集
@@ -27,12 +27,12 @@ ms.locfileid: "63238016"
   
 |列类型|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
-|date|DBTYPE_DBDATE|Clear|0|  
-|time|DBTYPE_DBTIME2|将|0..7|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|Clear|0|  
-|DATETIME|DBTYPE_DBTIMESTAMP|Clear|3|  
-|datetime2|DBTYPE_DBTIMESTAMP|将|0..7|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|将|0..7|  
+|date|DBTYPE_DBDATE|清除|0|  
+|time|DBTYPE_DBTIME2|设置|0..7|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|清除|0|  
+|datetime|DBTYPE_DBTIMESTAMP|清除|3|  
+|datetime2|DBTYPE_DBTIMESTAMP|设置|0..7|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|设置|0..7|  
   
  在 COLUMN_FLAGS 中，对于日期/时间类型，DBCOLUMNFLAGS_ISFIXEDLENGTH 始终为 True，并且以下标记始终为 False：  
   
@@ -56,41 +56,41 @@ ms.locfileid: "63238016"
   
  仅当连接到 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本服务器时 DBCOLUMNFLAGS_SS_ISVARIABLESCALE 才有效。 连接到下级服务器时，未定义 DBCOLUMNFLAGS_SS_ISFIXEDSCALE。  
   
-## <a name="procedureparameters-rowset"></a>PROCEDURE_PARAMETERS 行集  
+## <a name="procedure_parameters-rowset"></a>PROCEDURE_PARAMETERS 行集  
  DATA_TYPE 包含与 COLUMNS 架构行集相同的值，并且 TYPE_NAME 包含服务器类型。  
   
  已添加新列 SS_DATETIME_PRECISION，以便返回类似于 COLUMNS 行集的 DATETIME_PRECISION 列中的类型精度。  
   
-## <a name="providertypes-rowset"></a>PROVIDER_TYPES 行集  
+## <a name="provider_types-rowset"></a>PROVIDER_TYPES 行集  
  对于日期/时间类型将返回以下行：  
   
-|类型-><br /><br /> “列”|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|类型 -><br /><br /> 列|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_DBDATE|DBTYPE_DBTIME2|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMPOFFSET|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
-|LITERAL_PREFIX|”启用|”启用|”启用|”启用|”启用|”启用|  
-|LITERAL_SUFFIX|”启用|”启用|”启用|”启用|”启用|”启用|  
-|CREATE_PARAMS|NULL|小数位数|NULL|NULL|小数位数|小数位数|  
+|LITERAL_PREFIX|'|'|'|'|'|'|  
+|LITERAL_SUFFIX|'|'|'|'|'|'|  
+|CREATE_PARAMS|Null|scale|Null|Null|scale|scale|  
 |IS_NULLABLE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|  
 |CASE_SENSITIVE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|  
-|UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
+|UNSIGNED_ATTRIBUTE|Null|Null|Null|Null|Null|Null|  
 |FIXED_PREC_SCALE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |AUTO_UNIQUE_VALUE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|LOCAL_TYPE_NAME|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
-|MINIMUM_SCALE|NULL|0|NULL|NULL|0|0|  
-|MAXIMUM_SCALE|NULL|7|NULL|NULL|7|7|  
-|GUID|NULL|NULL|NULL|NULL|NULL|NULL|  
-|TYPELIB|NULL|NULL|NULL|NULL|NULL|NULL|  
-|VERSION|NULL|NULL|NULL|NULL|NULL|NULL|  
+|LOCAL_TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|MINIMUM_SCALE|Null|0|Null|Null|0|0|  
+|MAXIMUM_SCALE|Null|7|Null|Null|7|7|  
+|GUID|Null|Null|Null|Null|Null|Null|  
+|TYPELIB|Null|Null|Null|Null|Null|Null|  
+|VERSION|Null|Null|Null|Null|Null|Null|  
 |IS_LONG|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|BEST_MATCH|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE，除非符合以下某项条件：<br /><br /> -是客户端连接到下级服务器。<br />的数据类型兼容性连接属性指定兼容性级别为 80。|VARIANT_TRUE，除非符合以下某项条件：<br /><br /> -是客户端连接到下级服务器。<br />的数据类型兼容性连接属性指定兼容性级别为 80。|VARIANT_TRUE|  
+|BEST_MATCH|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE，除非符合以下某项条件：<br /><br /> -是连接到下级服务器的客户端。<br />-数据类型兼容性连接属性指定了等于80的兼容级别。|VARIANT_TRUE，除非符合以下某项条件：<br /><br /> -是连接到下级服务器的客户端。<br />-数据类型兼容性连接属性指定了等于80的兼容级别。|VARIANT_TRUE|  
 |IS_FIXEDLENGTH|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|  
   
  对于数字和小数类型，OLE DB 仅定义了 MINIMUM_SCALE 和 MAXIMUM_SCALE，因此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 对 time、datetime2 和 datetimeoffset 使用这些列是非标准行为。  
   
-## <a name="see-also"></a>请参阅  
- [Metadata &#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
+## <a name="see-also"></a>另请参阅  
+ [OLE DB 的元数据 &#40;&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
   
   

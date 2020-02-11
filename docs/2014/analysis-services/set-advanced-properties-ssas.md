@@ -1,5 +1,5 @@
 ---
-title: 设置高级属性 (SSAS) |Microsoft Docs
+title: 设置高级属性（SSAS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,15 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5afadecc745057344fd86df21b4479dabc1f7685
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068827"
 ---
 # <a name="set-advanced-properties-ssas"></a>设置高级属性 (SSAS)
-  **“表导入向导”** 的这一页可用于为数据源连接指定其他属性设置。 若要从 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”** 。  
+  
+  **“表导入向导”** 的这一页可用于为数据源连接指定其他属性设置。 若要从 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”**。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
  **提供程序**  

@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 092d6e9432f22ef43a155d2a7d3ff03299bcd131
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63162310"
 ---
 # <a name="delete-an-index"></a>删除索引
@@ -45,9 +45,9 @@ ms.locfileid: "63162310"
 ###  <a name="Restrictions"></a> 限制和局限  
  不能使用此方法删除作为 PRIMARY KEY 或 UNIQUE 约束的结果而创建的索引。 而必须删除该约束。 若要删除该约束和相应的索引，请在 [中使用带有 DROP CONSTRAINT 子句的](/sql/t-sql/statements/alter-table-transact-sql) ALTER TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)]。 有关详细信息，请参阅 [Delete Primary Keys](../tables/delete-primary-keys.md)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求对表或视图具有 ALTER 权限。 默认情况下，将向 **sysadmin** 固定服务器角色以及 **db_ddladmin** 和 **db_owner** 固定数据库角色授予此权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -80,7 +80,7 @@ ms.locfileid: "63162310"
   
 6.  单击 **“删除”** 。  
   
-7.  单击 **“关闭”** 。  
+7.  单击“关闭”  。  
   
 8.  在“文件”  菜单上，选择“保存”  以保存 _table_name_。  
   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 456b9df06540f3708ea231b872a929007b5af329
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63239028"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>使用 WinForms ReportViewer 控件
@@ -24,29 +24,29 @@ ms.locfileid: "63239028"
   
 ###### <a name="to-add-the-reportviewer-control-to-a-windows-application"></a>将 ReportViewer 控件添加到 Windows 应用程序  
   
-1.  使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 创建新的 Windows 应用程序。  
+1.  使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)]或[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]创建新的 Windows 应用程序。  
   
-     \- 或 -  
+     \-或  
   
      打开一个现有的 Windows 应用程序项目并添加一个新窗体。  
   
-2.  在“工具箱”中找到 ReportViewer 控件。 如果“工具箱”不可见，可以通过从“视图”菜单中选择“工具箱”来进行访问。  
+2.  在“工具箱”中找到 ReportViewer 控件****。 如果“工具箱”不可见，可以通过从“视图”菜单中选择“工具箱”来进行访问************。  
   
-     ![选择 ReportViewer 控件](../../../2014/reporting-services/media/windowsapp-toolboxreportviewer.png "Selecting ReportViewer control")  
+     ![选择 ReportViewer 控件](../../../2014/reporting-services/media/windowsapp-toolboxreportviewer.png "选择 ReportViewer 控件")  
   
 3.  将 ReportViewer 控件拖到 Windows 窗体的设计图面上。  
   
      名为 reportViewer1 的 ReportViewer 控件便会添加到该窗体中。  
   
- 此控件添加到该窗体之后，将出现“ReportViewer 任务”智能标记，并提示你选择一个报表。  
+ 此控件添加到该窗体之后，将出现“ReportViewer 任务”智能标记，并提示你选择一个报表****。  
   
- 如果要查看的报表已部署到报表服务器上，则从“选择报表”下拉列表中选择“\<服务器报表>”选项。 之后**\<服务器报表 >** 选择选项后，出现两个附加的属性：**报表服务器 Url**并**报表路径**。 “报表服务器 URL”是指向相应报表服务器的地址，“报表路径”是指向要呈现的报表的完整路径。  
+ 如果要查看的报表已部署到 Report Server，则从 "**选择报表**" 下拉列表中选择 " ** \<服务器报表>** " 选项。 选择** \<服务器报表>** 选项后，将显示两个附加属性： "**报表服务器 Url** " 和 "**报表路径**"。 “报表服务器 URL”是指向相应报表服务器的地址，“报表路径”是指向要呈现的报表的完整路径********。  
   
- ![选择服务器报表](../../../2014/reporting-services/media/windowsapp-serverreportsettings.png "Select server report")  
+ ![选择服务器报表](../../../2014/reporting-services/media/windowsapp-serverreportsettings.png "选择服务器报表")  
   
- 如果想以本地模式查看报表，请选择“设计新报表”选项来启动报表设计器，或选择一个已是现有项目一部分的报表。  
+ 如果想以本地模式查看报表，请选择“设计新报表”选项来启动报表设计器，或选择一个已是现有项目一部分的报表****。  
   
- ![选择本地报表](../../../2014/reporting-services/media/windowsapp-localreportsettings.png "Select local report")  
+ ![选择本地报表](../../../2014/reporting-services/media/windowsapp-localreportsettings.png "选择本地报表")  
   
 ## <a name="viewing-reports-in-remote-processing-mode"></a>在远程处理模式下查看报表  
  下面的示例演示了如何使用 WinForms ReportViewer 控件呈现已部署到报表服务器的报表。 此示例使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例报表项目随附的 Sales Order Detail 报表。  
@@ -148,30 +148,30 @@ End Class
   
 1.  打开该报表将添加到的 Windows 项目。  
   
-2.  从“项目”菜单中选择“添加现有项”。  
+2.  从“项目”菜单中选择“添加现有项”********。  
   
 3.  浏览到安装 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 报表示例项目的位置。  
   
      请转到 [AdventureWorks 2012 报表示例](https://go.microsoft.com/fwlink/?LinkId=404153)以下载此报表示例  
   
-4.  选择 Sales Order Detail.rdl 文件并单击“添加”按钮。  
+4.  选择 Sales Order Detail.rdl 文件并单击“添加”按钮****。  
   
      Sales Order Detail.rdl 文件现在应是该项目的一部分。  
   
-     ![销售订单详细信息报表](../../../2014/reporting-services/media/windowsapp-salesorderdetailreport.png "Sales Order Detail Report")  
+     ![销售订单详细信息报表](../../../2014/reporting-services/media/windowsapp-salesorderdetailreport.png "销售订单详细信息报表")  
   
-5.  在“解决方案资源管理器”中右键单击 Sales Order Detail.rdl 文件，然后选择“重命名”。 将该报表重命名为“Sales Order Detail.rdlc”，然后按 Enter。  
+5.  在“解决方案资源管理器”中右键单击 Sales Order Detail.rdl 文件，然后选择“重命名”****。 将该报表重命名为“Sales Order Detail.rdlc”，然后按 Enter****。  
   
-     如果“解决方案资源管理器”不可见，可以通过从“视图”菜单中选择“解决方案资源管理器”来将其打开。  
+     如果解决方案资源管理器不可见，则可以通过选择 "**解决方案资源管理器**" 在 "**视图**" 菜单中打开它。  
   
     > [!NOTE]  
     >  将文件扩展名 rdl 重命名为 rdlc 后，便可使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] 的报表设计器编辑该报表。  
   
-6.  对该报表重命名之后，请选择该文件并找到“属性”窗口。 将“复制到输出目录”属性更改为“如果较新则复制”。  
+6.  对该报表重命名之后，请选择该文件并找到“属性”窗口。 将“复制到输出目录”属性更改为“如果较新则复制”********。  
   
-     ![配置复制到输出设置](../../../2014/reporting-services/media/windowsapp-copytooutputsetting.png "Configuring Copy To Output setting")  
+     ![配置复制到输出设置](../../../2014/reporting-services/media/windowsapp-copytooutputsetting.png "配置复制到输出设置")  
   
-     如果“属性”窗口不可见，可以通过从“视图”菜单中选择“属性窗口”来将其打开。  
+     如果“属性”窗口不可见，可以通过从“视图”菜单中选择“属性窗口”来将其打开************。  
   
  以下代码示例将为销售订单数据创建一个数据集，然后以本地模式呈现 Sales Order Detail 报表。  
   
@@ -501,7 +501,7 @@ Public Class Form1
 End Class  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用 ReportViewer 控件集成 Reporting Services](../application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
   
   

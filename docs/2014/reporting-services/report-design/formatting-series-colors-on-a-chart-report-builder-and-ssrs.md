@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 445e6d2ccaba0d03de9f25d770ac22f35b628778
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105771"
 ---
 # <a name="formatting-series-colors-on-a-chart-report-builder-and-ssrs"></a>设置图表上序列颜色的格式（报表生成器和 SSRS）
-  Reporting Services 为图表提供了多种内置调色板，或者您也可以定义自定义调色板。 默认情况下，图表使用内置**BrightPastel**颜色调色板填充每个序列。 这些颜色也会显示在图例中。 向图表添加多个序列时，图表按颜色在调色板中的定义顺序为序列各分配一种颜色。  
+  Reporting Services 为图表提供了多种内置调色板，或者您也可以定义自定义调色板。 默认情况下，图表使用内置**BrightPastel**调色板填充每个序列。 这些颜色也会显示在图例中。 向图表添加多个序列时，图表按颜色在调色板中的定义顺序为序列各分配一种颜色。  
   
  如果序列中的颜色数多于调色板中的颜色，图表将开始重用颜色，因此两个序列可能具有相同的颜色。 如果使用的是形状图，形状图中的每个数据点都分配有调色板中的颜色，因此可能经常发生这种情况。 为避免混淆，请将自定义调色板的颜色数至少定义为图表上的相同序列数。  
   
@@ -54,9 +54,9 @@ ms.locfileid: "66105771"
   
  [通过添加条带线突出显示图表数据（报表生成器和 SSRS）](highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [设置图表格式（报表生成器和 SSRS）](formatting-a-chart-report-builder-and-ssrs.md)   
- [向图表添加凹凸效果、阳文和纹理样式（报表生成器和 SSRS）](chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
+ [向图表添加凹凸效果、浮雕和纹理样式（报表生成器和 SSRS）](chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
  [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   
  [设置图表上图例的格式（报表生成器和 SSRS）](chart-legend-formatting-report-builder.md)  
   

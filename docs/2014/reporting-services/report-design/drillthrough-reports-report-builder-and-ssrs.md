@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 63119bf6d8ba4e9d907b9c6cdfb6bfe0b7765941
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105935"
 ---
 # <a name="drillthrough-reports-report-builder-and-ssrs"></a>钻取报表（报表生成器和 SSRS）
@@ -27,7 +27,7 @@ ms.locfileid: "66105935"
 > [!NOTE]  
 >  当您在报表生成器中工作时，必须连接到报表服务器，才能查看在单击主报表中钻取链接时打开的钻取报表。  
   
- 若要快速开始使用钻取报表，请参阅[教程：生成钻取报表和主报表（报表生成器）](../tutorial-creating-drillthrough-and-main-reports-report-builder.md)。 钻取报表还配备两个商业智能解决方案， [BI 报告：报表和订阅方案](https://technet.microsoft.com/bi/ff769487.aspx)和[公司面板：销售解决方案](https://technet.microsoft.com/bi/ff643005.aspx)  
+ 若要快速开始使用钻取报表，请参阅[教程：创建钻取报表和主报表（报表生成器）](../tutorial-creating-drillthrough-and-main-reports-report-builder.md)。 钻取报表还配备两个商业智能解决方案，即 [BI 报告：报表和订阅方案](https://technet.microsoft.com/bi/ff769487.aspx) 和 [公司面板：销售解决方案](https://technet.microsoft.com/bi/ff643005.aspx)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -50,7 +50,7 @@ ms.locfileid: "66105935"
 ## <a name="viewing-a-drillthrough-report"></a>查看钻取报表  
  若要在带有钻取链接的汇总报表发布后查看它，必须确保钻取报表与汇总报表位于同一报表服务器上。 在所有情况下，用户必须拥有对钻取报表的相关权限才能查看它。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [钻取、深化、子报表和嵌套数据区域（报表生成器和 SSRS）](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a3ea199f6e2e86f5dc2e51199386f31b93e9377
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63194984"
 ---
 # <a name="parameter-queries-visual-database-tools"></a>参数查询 (Visual Database Tools)
@@ -64,9 +64,9 @@ WHERE au_fname = %first name% AND
   
  在查询和视图设计器中运行查询时，将显示 [查询参数对话框](query-parameters-dialog-box-visual-database-tools.md) 和命名参数列表。  
   
-## <a name="see-also"></a>请参阅  
- [使用参数查询&#40;可视化数据库工具&#41;](query-with-parameters-visual-database-tools.md)   
- [支持的查询类型&#40;可视化数据库工具&#41;](supported-query-types-visual-database-tools.md)   
+## <a name="see-also"></a>另请参阅  
+ [用参数查询 &#40;Visual Database Tools&#41;](query-with-parameters-visual-database-tools.md)   
+ [Visual Database Tools &#40;支持的查询类型&#41;](supported-query-types-visual-database-tools.md)   
  [设计查询和视图操作指南主题 (Visual Database Tools)](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

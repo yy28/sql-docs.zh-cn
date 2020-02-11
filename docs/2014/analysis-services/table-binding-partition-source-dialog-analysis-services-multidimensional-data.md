@@ -1,5 +1,5 @@
 ---
-title: 表绑定详细信息 （源分区对话框) (Analysis Services-多维数据) |Microsoft Docs
+title: 表绑定详细信息（"分区源" 对话框）（Analysis Services 多维数据） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7f8ea36c8c3d49d4903379ed4450548fc760937a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067868"
 ---
 # <a name="table-binding-detail-partition-source-dialog-box-analysis-services---multidimensional-data"></a>表绑定详细信息（“分区源”对话框）（Analysis Services - 多维数据）
@@ -29,11 +29,11 @@ ms.locfileid: "66067868"
  **Look in**  
  选择包含此分区的源表的数据源或数据源视图。 默认情况下，将选择所选度量值组使用的数据源视图。  
   
- **筛选器表**  
- 键入字符串，用于按表名对“可用表”  中显示的表进行限制。  
+ **筛选表**  
+ 键入字符串，用于按表名对“可用表”**** 中显示的表进行限制。  
   
  **查找表**  
- 选择此项可以刷新“可用表”  中表的列表，如果在“筛选表”  中指定了字符串，则可以进一步限制该列表。  
+ 选择此项可以刷新“可用表”**** 中表的列表，如果在“筛选表”**** 中指定了字符串，则可以进一步限制该列表。  
   
  **可用表**  
  单击此项可选择要用作分区的源表的表。  
@@ -42,7 +42,7 @@ ms.locfileid: "66067868"
   
  如果 **“筛选表”** 中指定了筛选器，通过将筛选器与符合上述条件的表名进行对比，可以进一步限制列表。 只有那些包含 **“筛选表”** 中指定字符串的表才会显示。  
   
-## <a name="see-also"></a>请参阅  
- [分区源对话框&#40;Analysis Services-多维数据&#41;](partition-source-dialog-box-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>另请参阅  
+ ["分区源" 对话框 &#40;Analysis Services 多维数据&#41;](partition-source-dialog-box-analysis-services-multidimensional-data.md)  
   
   
