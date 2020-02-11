@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7ce00bc87ca17c97996023d7cb9a4745b9882f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076107"
 ---
 # <a name="cubes-in-multidimensional-models"></a>多维模型中的多维数据集
@@ -31,21 +31,21 @@ ms.locfileid: "66076107"
 ## <a name="components-of-cubes"></a>多维数据集的组件  
  一个多维数据集由以下组件构成：  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
 |维度|[多维模型中的维度](dimensions-in-multidimensional-models.md)|  
 |度量值和度量值组|[在多维模型中创建度量值和度量值组](create-measures-and-measure-groups-in-multidimensional-models.md)|  
 |“度量值组”|[多维模型中的分区](partitions-in-multidimensional-models.md)|  
 |透视|[多维模型中的透视](perspectives-in-multidimensional-models.md)|  
-|层次结构|[创建用户定义层次结构](user-defined-hierarchies-create.md)|  
+|层次结构|[创建用户定义的层次结构](user-defined-hierarchies-create.md)|  
 |操作|[多维模型中的操作](actions-in-multidimensional-models.md)|  
-|关键绩效指标 (KPI)|[多维模型中的关键绩效指标 (KPI)](key-performance-indicators-kpis-in-multidimensional-models.md)|  
+|关键绩效指标 (KPI)|[多维模型中的关键绩效指标 &#40;Kpi&#41;](key-performance-indicators-kpis-in-multidimensional-models.md)|  
 |“新建命名集”|[多维模型中的计算](calculations-in-multidimensional-models.md)|  
 |翻译|[多维模型中的翻译](translations-in-multidimensional-models-analysis-services.md)|  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|主题|描述|  
+|主题|说明|  
 |-----------|-----------------|  
 |[使用多维数据集向导创建多维数据集](create-a-cube-using-the-cube-wizard.md)|说明如何使用多维数据集向导定义多维数据集、维度、维度属性以及用户定义层次结构。|  
 |[在多维模型中创建度量值和度量值组](create-measures-and-measure-groups-in-multidimensional-models.md)|介绍如何定义度量值组。|  

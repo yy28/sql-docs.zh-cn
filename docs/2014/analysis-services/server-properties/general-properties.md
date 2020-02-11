@@ -39,16 +39,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6b833fe2710ce04cb4a0c8b08fedc9a882c19add
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069033"
 ---
 # <a name="general-properties"></a>常规属性
+  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持下表中列出的服务器属性。 本主题介绍 msmdsrv.ini 文件中未专门介绍的那些服务器属性，如 Security、Network 或 ThreadPool。 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)。  
   
- **适用范围：** 多维和表格服务器模式下，除非另有说明  
+ **适用于：** 多维和表格服务器模式，除非另有说明  
   
 ## <a name="non-specific-category"></a>非特定类别  
  `AdminTimeout`  
@@ -60,7 +61,7 @@ ms.locfileid: "66069033"
  一个字符串属性，它在分隔的列表中指定在 Analysis Services 对话框中保存、打开和查找文件时可浏览的文件夹。 Analysis Services 服务帐户必须对您添加到该列表的所有文件夹都具有读写权限。  
   
  `BackupDir`  
- 一个字符串属性，事件作为 Backup 命令的一部分未指定路径中标识的默认情况下，存储备份文件的目录名称。  
+ 一个字符串属性，用于标识默认情况下存储备份文件的目录的名称，如果未将路径指定为 Backup 命令的一部分。  
   
  `CollationName`  
  字符串属性，用于标识服务器排序规则。 有关详细信息，请参阅[语言和排序规则 (Analysis Services)](../languages-and-collations-analysis-services.md)。  
@@ -76,12 +77,14 @@ ms.locfileid: "66069033"
  `CoordinatorCancelCount`  
  有符号 32 位整数属性，用于定义服务器应检查是否发生取消事件的频率（基于内部迭代计数）。 如果减小此值，则可加快检查取消事件的频率，同时将降低系统的整体性能。  
   
- `CoordinatorCancelCount` 在表格服务器模式下将被忽略。  
+ 
+  `CoordinatorCancelCount` 在表格服务器模式下将被忽略。  
   
  `CoordinatorExecutionMode`  
  有符号 32 位整数属性，用于定义服务器将尝试的最大并行操作（包括处理操作和查询操作）数。 零 (0) 指示服务器将基于内部算法来决定。 正数指示最大操作总数。 如果是符号相反的负数，则指示每个处理器的最大操作数。  
   
- `CoordinatorExecutionMode` 在表格服务器模式下将被忽略。  
+ 
+  `CoordinatorExecutionMode` 在表格服务器模式下将被忽略。  
   
  此属性的默认值为 -4，指示将服务器限制为每个处理器 4 个并行操作。 有关此属性的详细信息，请参阅 [SQL Server 2008 R2 Analysis Services 操作指南](https://go.microsoft.com/fwlink/?LinkID=225539)。  
   
@@ -95,11 +98,11 @@ ms.locfileid: "66069033"
  字符串属性，用于标识存储数据的目录的名称。  
   
  `DeploymentMode`  
- 确定 Analysis Services 服务器实例的操作上下文。 此属性称为服务器模式对话框、 消息和文档中。 此属性由 SQL Server 安装程序根据安装 Analysis Services 时所选择的服务器模式进行相应配置。 只应考虑在内部使用此属性，并且始终使用安装程序指定的值。  
+ 确定 Analysis Services 服务器实例的操作上下文。 此属性在对话框、消息和文档中称为 "服务器模式"。 此属性由 SQL Server 安装程序根据安装 Analysis Services 时所选择的服务器模式进行相应配置。 只应考虑在内部使用此属性，并且始终使用安装程序指定的值。  
   
  此属性的有效值包括以下项：  
   
-|ReplTest1|Description|  
+|值|说明|  
 |-----------|-----------------|  
 |0|这是默认值。 它指定多维模式，用于支持使用 MOLAP、HOLAP 和 ROLAP 存储以及数据挖掘模型的多维数据库。|  
 |1|指定 Analysis Services 实例已作为 PowerPivot for SharePoint 部署的一部分安装。 不要更改作为 PowerPivot for SharePoint 安装的一部分的 Analysis Services 实例的部署模式属性。 如果您更改该模式，PowerPivot 数据将不再在该服务器上运行。|  
@@ -131,7 +134,8 @@ ms.locfileid: "66069033"
  有关此属性的详细信息，请参阅 [SQL Server 2008 R2 Analysis Services 操作指南](https://go.microsoft.com/fwlink/?LinkID=225539)。  
   
 > [!IMPORTANT]  
->  `ForceCommitTimeout` 适用于多维数据集处理命令和写回操作。  
+>  
+  `ForceCommitTimeout` 适用于多维数据集处理命令和写回操作。  
   
  `IdleConnectionTimeout`  
  一个整数属性，指定处于非活动状态的连接的超时值（秒）。  
@@ -153,7 +157,7 @@ ms.locfileid: "66069033"
  字符串属性，用于标识包含服务器日志的目录的名称。 此属性仅适用于使用磁盘文件进行日志记录的情况，这一点与数据库表相反（默认行为）。  
   
  `MaxIdleSessionTimeout`  
- 一个整数属性，用于定义空闲会话最大超时值（秒）。 默认值为零 (0)，该值指示会话永远不会超时。但是，如果服务器受到资源约束，空闲会话仍将被删除。  
+ 一个整数属性，用于定义空闲会话最大超时值（秒）。 默认值为零（0），指示会话永远不会超时。但是，如果服务器处于资源限制下，则仍将删除空闲会话。  
   
  `MinIdleSessionTimeout`  
  一个整数属性，用于定义空闲会话最小超时值（秒）。 默认值为 2700 秒。 达到此时间后，服务器可以终止空闲会话，但只在需要释放内存时才这样做。  
@@ -161,7 +165,7 @@ ms.locfileid: "66069033"
  `Port`  
  一个整数属性，用于定义服务器侦听客户端连接所在的端口号。 如果未设置，服务器将动态查找第一个未使用的端口。  
   
- 此属性的默认值为零 (0)，指示默认侦听端口 2383。 有关端口配置的详细信息，请参阅 [将 Windows 防火墙配置为允许 Analysis Services 访问](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
+ 此属性的默认值为零 (0)，指示默认侦听端口 2383。 有关端口配置的详细信息，请参阅 [Configure the Windows Firewall to Allow Analysis Services Access](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
  `ServerTimeout`  
  一个整数，用于定义查询的超时值（秒）。 默认值为 3600 秒（或 60 分钟）。 零 (0) 指定任何查询都不会超时。  
@@ -176,7 +180,7 @@ ms.locfileid: "66069033"
  `StatisticsStoreSize`  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在 Analysis Services 中配置服务器属性](server-properties-in-analysis-services.md)   
  [确定 Analysis Services 实例的服务器模式](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 从 SQL Server Data Tools (SSAS 表格) 部署 |Microsoft Docs
+title: 从 SQL Server Data Tools 部署（SSAS 表格） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6429fb7f30c748c7ac0a8ab69bc16c3d63b4d3ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067303"
 ---
 # <a name="deploy-from-sql-server-data-tools-ssas-tabular"></a>从 SQL Server Data Tools 进行部署（SSAS 表格）
@@ -30,38 +30,38 @@ ms.locfileid: "66067303"
   
 -   [部署状态](#bkmk_deploy_status)  
   
-##  <a name="bkmk_deploy"></a> 配置“部署选项”和“部署服务器”属性  
+##  <a name="bkmk_deploy"></a>配置部署选项和部署服务器属性  
  在您部署表格模型解决方案之前，必须首先指定“部署选项”属性和“部署服务器”属性。 有关部署属性和设置的详细信息，请参阅 [表格模型解决方案部署（SSAS 表格）](tabular-model-solution-deployment-ssas-tabular.md)中使用“部署”命令来部署表格模型解决方案。  
   
 #### <a name="to-configure-deployment-options-and-deployment-server-properties"></a>配置“部署选项”和“部署服务器”属性  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中的“解决方案资源管理器”  中，右键单击项目名称，再单击“属性”  。  
+1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中的“解决方案资源管理器”**** 中，右键单击项目名称，再单击“属性”****。  
   
-2.  在中 **\<项目名称 > 属性**对话框中**部署选项**，如果不同于默认设置指定属性设置。  
-  
-    > [!NOTE]  
-    >  对于缓存模式下的模型，“查询模式”  始终为“内存中”  。  
+2.  在 " ** \<项目名称> 属性**" 对话框的 "**部署选项**" 中，指定 "属性设置" （如果不同于默认设置）。  
   
     > [!NOTE]  
-    >  不能为 DirectQuery 模式下的模型指定“模拟设置”  。  
+    >  对于缓存模式下的模型，“查询模式”**** 始终为“内存中”****。  
   
-3.  在“部署服务器”  中，指定“服务器”  （名称）、“版本”  、“数据库”（名称）  和“多维数据集名称”  属性设置（如果这些设置不同于默认设置），然后单击“确定”  。  
+    > [!NOTE]  
+    >  不能为 DirectQuery 模式下的模型指定“模拟设置”****。  
+  
+3.  在“部署服务器”**** 中，指定“服务器”****（名称）、“版本”****、“数据库”（名称）**** 和“多维数据集名称”**** 属性设置（如果这些设置不同于默认设置），然后单击“确定”****。  
   
 > [!NOTE]  
->  还可以指定“默认部署服务器”属性设置，以便您创建的任何新项目将自动部署到指定的服务器。 有关详细信息，请参阅 [配置默认数据建模和部署属性（SSAS 表格）](properties-ssas-tabular.md)中使用“部署”命令来部署表格模型解决方案。  
+>  还可以指定“默认部署服务器”属性设置，以便您创建的任何新项目将自动部署到指定的服务器。 有关详细信息，请参阅[配置默认数据建模和部署属性（SSAS 表格）](properties-ssas-tabular.md)。  
   
-##  <a name="bkmk_deploy_proc"></a> 部署表格模型解决方案  
+##  <a name="bkmk_deploy_proc"></a>部署表格模型解决方案  
   
 #### <a name="to-deploy-a-tabular-model-solution"></a>部署表格模型解决方案  
   
--   在中[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]，然后在**构建**菜单中，单击**部署\<项目名称 >** 。  
+-   在[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的 "**生成**" 菜单上，单击 "**部署\<项目名称>**。  
   
-     “部署”  对话框将出现，并且指示在模型中包括的每个表的元数据部署和处理的状态（除非将“处理选项”属性设置为“不处理”）。 在部署过程完成后，使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 连接到 Analysis Services 实例并且确认已创建新的模型数据库对象或使用客户端报告应用程序连接到已部署的模型。  
+     “部署”**** 对话框将出现，并且指示在模型中包括的每个表的元数据部署和处理的状态（除非将“处理选项”属性设置为“不处理”）。 在部署过程完成后，使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 连接到 Analysis Services 实例并且确认已创建新的模型数据库对象或使用客户端报告应用程序连接到已部署的模型。  
   
-##  <a name="bkmk_deploy_status"></a> 部署状态  
+##  <a name="bkmk_deploy_status"></a>部署状态  
  通过 **“部署”** 对话框，您可以监视“部署”操作的进度。 也可以停止部署操作。  
   
- **“状态”**  
+ **Status**  
  指示部署操作成功与否。  
   
  **详细信息**  
@@ -70,8 +70,8 @@ ms.locfileid: "66067303"
  **停止部署**  
  单击此选项可以暂停部署操作。 如果部署操作用时过长或出现太多错误，则此选项很有用。  
   
-## <a name="see-also"></a>请参阅  
- [表格模型解决方案部署（SSAS 表格）](tabular-model-solution-deployment-ssas-tabular.md)   
- [配置默认数据建模和部署属性（SSAS 表格）](properties-ssas-tabular.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;SSAS 表格部署的表格模型解决方案部署&#41;](tabular-model-solution-deployment-ssas-tabular.md)   
+ [&#40;SSAS 表格&#41;配置默认数据建模和部署属性](properties-ssas-tabular.md)  
   
   

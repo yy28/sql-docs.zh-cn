@@ -1,5 +1,5 @@
 ---
-title: 例如：检索二进制数据 | Microsoft Docs
+title: 示例：检索二进制数据 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c39f508d20e194b0031baecf168851cd300031e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62704847"
 ---
-# <a name="example-retrieving-binary-data"></a>例如：检索二进制数据
+# <a name="example-retrieving-binary-data"></a>示例：检索二进制数据
   下面的查询返回在 `varbinary(max)` 类型列中存储的产品照片。 在此查询中指定了 `BINARY BASE64` 选项，以便以 base64 编码格式返回二进制数据。  
   
 ## <a name="example"></a>示例  
@@ -34,13 +34,13 @@ FOR XML RAW, BINARY BASE64 ;
 GO  
 ```  
   
- 下面是结果：  
+ 结果如下：  
   
 ```  
 <row ProductModelID="1" ThumbNailPhoto="base64 encoded binary data"/>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [将 RAW 模式与 FOR XML 一起使用](use-raw-mode-with-for-xml.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SQL Server 属性 （启动参数选项卡） |Microsoft Docs
+title: SQL Server 属性（"启动参数" 选项卡） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5ab3d9e9e4178b1ee2e10e5be63f0ea9252fd4a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62679156"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>SQL Server 属性（“启动参数”选项卡）
@@ -69,7 +69,7 @@ ms.locfileid: "62679156"
 > [!CAUTION]  
 >  某些可选参数可能会更改服务器行为并且可能会影响性能。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此页的使用被限制为可以在注册表中更改相关条目的用户。 其中包括以下用户。  
   
 -   本地管理员组的成员。  
@@ -77,6 +77,6 @@ ms.locfileid: "62679156"
 -   如果将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]配置为在域帐户下运行，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 使用该域帐户。  
   
 ## <a name="books-online-references"></a>联机丛书参考  
- 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动参数的其他信息，请参阅配置服务器启动选项 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]配置管理器)"中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。  
+ 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动参数的其他信息，请参阅[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“如何配置服务器启动选项（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器）”。  
   
   

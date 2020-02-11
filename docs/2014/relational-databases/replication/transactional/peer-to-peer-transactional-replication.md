@@ -17,14 +17,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 944d18abf073ffc5cb958e7139616e745504ce23
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67793918"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>@loopback_detection
-  对等复制通过在多个服务器实例（又称为“节点”  ）上维护数据副本，提供了一种扩展的高可用性解决方案。 对等复制建立在事务复制的基础之上，以事务方式近乎实时地传播一致的更改。 这样，需要扩展读取操作的应用程序就可以将来自客户端的读取操作分布到多个节点上。 由于对等复制以近乎实时的方式维护节点上的数据，从而提供了数据冗余，提高了数据的可用性。  
+  对等复制通过在多个服务器实例（又称为“节点” **）上维护数据副本，提供了一种扩展的高可用性解决方案。 对等复制建立在事务复制的基础之上，以事务方式近乎实时地传播一致的更改。 这样，需要扩展读取操作的应用程序就可以将来自客户端的读取操作分布到多个节点上。 由于对等复制以近乎实时的方式维护节点上的数据，从而提供了数据冗余，提高了数据的可用性。  
   
  请考虑 Web 应用程序的情况。 它可以通过以下方式从对等复制中获益：  
   
@@ -49,7 +49,7 @@ ms.locfileid: "67793918"
  下列方案说明了对等复制的典型应用。  
   
 ### <a name="topology-that-has-two-participating-databases"></a>包含两个参与数据库的拓扑  
- ![对等复制，两节点](../media/repl-multinode-01.gif "对等复制，两节点")  
+ ![对等复制，双节点](../media/repl-multinode-01.gif "对等复制，双节点")  
   
  上面两张图均显示了两个参与数据库，其中通过应用程序服务器将用户流量定向到数据库。 此配置可用于从网站到工作组应用程序等多种应用程序，并具有下列优点：  
   
@@ -61,7 +61,7 @@ ms.locfileid: "67793918"
   
 -   在左图中，在两台服务器间对更新进行了分区。 例如，如果数据库包含产品目录，则可以令自定义应用程序把对名称以 A-M 开头的产品进行的更新定向到节点 **A** ，把对名称以 N-Z 开头的产品进行的更新定向到节点 **B** 。然后将更新复制到另一个节点。  
   
--   在右侧，所有更新都定向到节点 **B**。从那里，更新被复制到节点 **A**。如果节点 **B** 脱机（例如，进行维护），则应用程序服务器可以将所有活动定向到节点 **A**。当节点 **B** 恢复联机状态后，更新便可流向 B，并且应用程序服务器可以将所有更新移动回节点 **B**，也可以继续将更新定向到节点 **A**。  
+-   在右侧，所有更新都将定向到节点**B**。然后，更新将复制到节点**A**。如果**B**脱机（例如，进行维护），则应用程序服务器**可以将所有**活动定向到。当**B**恢复联机状态时，更新可以流向它，并且应用程序服务器可以将所有更新移动回**B** ，或将其引导**到。**  
   
  对等复制对这两种方法均支持，但右图中的中心更新示例也经常同标准事务复制一起使用。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "67793918"
   
  每个地点都有一台数据库服务器和一台应用程序服务器，供支持工程师在输入和更新客户电话的相关信息时使用。 拓扑按时间进行分区。 因此更新只发生在正在办公的节点，然后更新会流动到其他参与数据库。 此拓扑具有下列优点：  
   
--   独立但不孤立：每个办事处都可以独立插入、更新或删除数据，但还可以共享数据，因为数据会复制到其他所有参与数据库。  
+-   独立但不孤立：每个办事处都可以独立插入、更新或删除数据，但还可以共享数据，因为数据会复制到其他所有的参与数据库。  
   
 -   在出现故障或需要维护一个或多个参与数据库时可提供更高的可用性。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "67793918"
   
     -   对象名称、对象架构和发布名称都应相同。  
   
-    -   发布必须允许复制架构更改。 （这相当于发布属性**replicate_ddl** 设置为 **1**，这是默认设置）。有关详细信息，请参阅[对发布数据库进行架构更改](../publish/make-schema-changes-on-publication-databases.md)。  
+    -   发布必须允许复制架构更改。 （这是**replicate_ddl**的发布**属性的设置**，这是默认设置。）有关详细信息，请参阅对[发布数据库进行架构更改](../publish/make-schema-changes-on-publication-databases.md)。  
   
     -   不支持行筛选和列筛选。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "67793918"
   
 -   必须为对等复制启用发布后，才能创建订阅。  
   
--   必须使用备份或 **replication support only** 选项对订阅进行初始化。 有关详细信息，请参阅[在没有快照的情况下初始化事务订阅](../initialize-a-transactional-subscription-without-a-snapshot.md)。  
+-   必须使用备份或 **replication support only** 选项对订阅进行初始化。 有关详细信息，请参阅 [初始化事务订阅（不使用快照）](../initialize-a-transactional-subscription-without-a-snapshot.md)中手动初始化订阅。  
   
 -   建议不要使用标识列。 使用标识时，必须手动管理所分配的每个参与数据库中表的范围。 有关详细信息，请参阅[复制标识列](../publish/replicate-identity-columns.md)中的“为手动标识范围管理分配范围”部分。  
   
@@ -137,24 +137,24 @@ ms.locfileid: "67793918"
   
 -   分发代理参数 **-SubscriptionStreams** 和日志读取器代理参数 **-MaxCmdsInTran**。  
   
--   项目属性 **\@destination_owner**并 **\@destination_table**。  
+-   项目属性** \@destination_owner**和** \@destination_table**。  
 
 -   对等事务复制不支持创建针对对等发布的单向事务订阅
   
  以下属性具有特殊的注意事项：  
   
--   发布属性 **\@allow_initialize_from_backup**的值需要为`true`。  
+-   发布属性** \@allow_initialize_from_backup**需要值`true`。  
   
--   项目属性 **\@replicate_ddl**的值需要为`true`; **\@identityrangemanagementoption**的值需要为`manual`; 并 **\@状态**需要该选项**24**设置。  
+-   项目属性** \@replicate_ddl**需要值`true`为;identityrangemanagementoption 需要值`manual`为; ** \@** 和** \@状态**要求设置选项**24** 。  
   
--   项目属性的值 **\@ins_cmd**，  **\@del_cmd**，以及 **\@upd_cmd**不能设置为`SQL`。  
+-   项目属性** \@ins_cmd**、 ** \@del_cmd**和** \@upd_cmd**的值不能设置为。 `SQL`  
   
--   订阅属性 **\@sync_type**的值需要为`none`或`automatic`。  
+-   订阅属性** \@sync_type**需要值为`none`或`automatic`。  
   
 ### <a name="maintenance-considerations"></a>维护注意事项  
  下列操作需要让系统静止。 也就是说，停止所有节点上已发布表中的活动，并确保每个节点都已收到来自所有其他节点的更改。  
   
--   添加[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]向现有拓扑的节点  
+-   向现有[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]拓扑添加节点  
   
 -   将项目添加到现有发布  
   
@@ -168,9 +168,9 @@ ms.locfileid: "67793918"
   
 -   无法重新初始化对等拓扑中的订阅。 如果需要确保节点有新的数据副本，请在该节点上还原备份。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [管理对等拓扑（复制 Transact-SQL 编程）](../administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
- [快照复制和事务复制的备份和还原策略](../administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)   
+ [快照和事务复制的备份和还原策略](../administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)   
  [事务复制的发布类型](transactional-replication.md)  
   
   

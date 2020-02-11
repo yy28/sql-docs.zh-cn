@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 97cc4c9955b64583571a63fa72df4663c1acd812
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479155"
 ---
 # <a name="make-an-attribute-group-visible-to-users-master-data-services"></a>使属性组对用户可见 (Master Data Services)
@@ -22,39 +22,39 @@ ms.locfileid: "65479155"
   
  创建属性组时，对除创建者之外的所有用户自动隐藏它。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](administrators-master-data-services.md)。  
   
 -   必须至少存在一个属性组。 有关详细信息，请参阅 [创建属性组 (Master Data Services)](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)。  
   
 ### <a name="to-make-an-attribute-group-visible-to-users"></a>使属性组对用户可见  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”** 。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
   
-2.  上**模型视图**页上，从菜单栏中，依次指向**管理**然后单击**属性组**。  
+2.  在 "**模型视图**" 页上，从菜单栏中指向 "**管理**"，然后单击 "**属性组**"。  
   
 3.  从 **“模型”** 列表中，选择某一模型。  
   
 4.  从 **“实体”** 列表中，选择某一实体。  
   
-5.  单击加号以展开**叶组**，**合并组**，或**集合组**，具体取决于你想要使可见的组的类型。  
+5.  单击加号以展开 "**叶组**"、"**合并组**" 或 "**集合组**"，具体取决于要使其可见的组类型。  
   
 6.  单击加号以便展开要使其可见的组。  
   
-7.  单击任一**用户**或**组**，取决于您要使组对用户或组可见。  
+7.  单击 "**用户**" 或 "**组**"，具体取决于是否要使组对用户或组可见。  
   
-8.  单击**编辑所的选项**。  
+8.  单击 "**编辑所选项**"。  
   
-9. 单击用户或中的组**可用**框，然后单击**添加**箭头。 若要全部添加，请单击 **“全部添加”** 箭头。  
+9. 单击 "**可用**" 框中的 "用户或组"，然后单击 "**添加**" 箭头。 若要全部添加，请单击 **“全部添加”** 箭头。  
   
 10. 单击“保存”  。  
   
-## <a name="see-also"></a>请参阅  
- [属性组 (Master Data Services)](../../2014/master-data-services/attribute-groups-master-data-services.md)   
- [创建属性组 (Master Data Services)](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)  
+## <a name="see-also"></a>另请参阅  
+ [属性组 &#40;Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)   
+ [创建属性组 &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)  
   
   

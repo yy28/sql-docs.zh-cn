@@ -1,5 +1,5 @@
 ---
-title: 重命名表或列 (SSAS 表格) |Microsoft Docs
+title: 重命名表或列（SSAS 表格） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d9d9f11b8713ea26cd79e95b9edc3f36c0bf3564
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066687"
 ---
 # <a name="rename-a-table-or-column-ssas-tabular"></a>重命名表或列（SSAS 表格）
@@ -46,7 +46,7 @@ ms.locfileid: "66066687"
   
 -   控制字符  
   
--   （这不是有效的 Analysis Services 对象名称中的） 的以下字符:。，;': /\\*|?& %$！ + = （) []{}<>  
+-   以下字符（在 Analysis Services 对象的名称中无效）：.，; '：/\\*|?&% $！ + = （） []{}<>  
   
 -   Analysis Services 保留关键字，包括多维表达式 (MDX) 和数据挖掘扩展插件 (DMX) 函数名称和运算符。  
   
@@ -55,9 +55,9 @@ ms.locfileid: "66066687"
   
  此外，使用重命名表的所有计算或者使用来自重命名表的列的所有计算也都必须更新，并且从这些计算派生的数据也必须刷新和重新计算。 根据受到影响的表和计算的数目，上述刷新和重新计算可能需要一些时间才能完成。 因此，重命名表的最佳时机是在导入过程中，或者是在开始生成复杂的关系和计算之前。  
   
-## <a name="see-also"></a>请参阅  
- [表和列（SSAS 表格）](tables-and-columns-ssas-tabular.md)   
- [从 PowerPivot 导入&#40;SSAS 表格&#41;](import-from-power-pivot-ssas-tabular.md)   
- [从 Analysis Services 导入（SSAS 表格）](import-from-analysis-services-ssas-tabular.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;SSAS 表格&#41;的表和列](tables-and-columns-ssas-tabular.md)   
+ [从 PowerPivot &#40;SSAS 表格&#41;导入](import-from-power-pivot-ssas-tabular.md)   
+ [从 SSAS 表格&#41;Analysis Services 导入 &#40;](import-from-analysis-services-ssas-tabular.md)  
   
   

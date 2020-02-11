@@ -1,5 +1,5 @@
 ---
-title: 指定定型数据 （数据挖掘向导） |Microsoft Docs
+title: 指定定型数据（数据挖掘向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c3bbeb708cdb0c2882b85d55081446b3dc12b56b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068069"
 ---
 # <a name="specify-the-training-data-data-mining-wizard"></a>指定定型数据（数据挖掘向导）
@@ -27,13 +27,13 @@ ms.locfileid: "66068069"
 > [!NOTE]  
 >  不同的挖掘算法使用键的方式也不同。 若要了解不同种类的键，请参阅[内容类型（数据挖掘）](data-mining/content-types-data-mining.md)。  
   
- **有关详细信息：** [挖掘结构&#40;Analysis Services-数据挖掘&#41;](data-mining/mining-structures-analysis-services-data-mining.md)，[挖掘模型列](data-mining/mining-model-columns.md)，[数据挖掘向导&#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)， [创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)  
+ **有关详细信息：** [挖掘结构 &#40;Analysis Services 数据挖掘&#41;](data-mining/mining-structures-analysis-services-data-mining.md)、[挖掘模型列](data-mining/mining-model-columns.md)、[数据挖掘向导 &#40;Analysis Services 数据挖掘&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>选项  
  **表/列**  
  显示在向导上一页中选择的表和列。  
   
- **\<复选框 >**  
+ **\<复选框>**  
  选择挖掘结构中要包括的列。  
   
  如果数据源包括嵌套表或多个视图，请展开列列表以查看嵌套的表。  
@@ -56,17 +56,17 @@ ms.locfileid: "66068069"
   
  如果还将某个嵌套表标记为可预测的，则整个嵌套表都可预测。 如果嵌套表中没有标记为输入列或可预测列的列，则嵌套表将显示在挖掘结构中，但在模型中将被忽略。  
   
- **注意** ：只有在创建挖掘结构的同时创建挖掘模型时，此列才可用。  
+ **注意**只有在创建挖掘模型和挖掘结构的同时创建挖掘模型时，此列才可用。  
   
  **建议**  
- 单击此项可打开“提供相关列建议”  对话框，该对话框可根据 entropy 对数据样本进行分析，以标识与所选“可预测”  列最为相关的输入列。 此分析也适用于嵌套表列或基于 OLAP 源的挖掘结构。  
+ 单击此项可打开“提供相关列建议”**** 对话框，该对话框可根据 entropy 对数据样本进行分析，以标识与所选“可预测”**** 列最为相关的输入列。 此分析也适用于嵌套表列或基于 OLAP 源的挖掘结构。  
   
- **注意** ：只有在创建挖掘结构的同时创建挖掘模型时，此列才可用。  
+ **注意**只有在创建挖掘模型和挖掘结构时，此列才可用。  
   
-## <a name="see-also"></a>请参阅  
- [数据挖掘向导的 F1 帮助&#40;Analysis Services-数据挖掘&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [提供相关的列建议&#40;数据挖掘向导&#41;](suggest-related-columns-data-mining-wizard.md)   
- [指定表类型&#40;数据挖掘向导&#41;](specify-table-types-data-mining-wizard.md)   
- [指定列的内容和数据类型&#40;数据挖掘向导&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
+## <a name="see-also"></a>另请参阅  
+ [数据挖掘向导 F1 帮助 &#40;Analysis Services 数据挖掘&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [在数据挖掘向导 &#40;建议相关列&#41;](suggest-related-columns-data-mining-wizard.md)   
+ [在数据挖掘向导 &#40;指定表类型&#41;](specify-table-types-data-mining-wizard.md)   
+ [指定数据挖掘向导 &#40;列的内容和数据类型&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
   
   

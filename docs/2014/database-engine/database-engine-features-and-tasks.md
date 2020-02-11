@@ -14,14 +14,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 43aa8a23a7d9322e6865b83e3aee4d77fa40e49e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064981"
 ---
 # <a name="database-engine-features-and-tasks"></a>数据库引擎功能和任务
-  查找信息的任何人的设计器、 开发人员、 分析人员或管理员的需要来构建[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]数据库。  
+  查找任何人员（设计人员、开发人员、分析人员或管理员）生成[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]数据库所需的信息。  
   
 ## <a name="in-this-section"></a>本节内容  
  [数据库引擎实例 (SQL Server)](configure-windows/database-engine-instances-sql-server.md)  

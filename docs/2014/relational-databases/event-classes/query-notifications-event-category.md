@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c83ebac20a86cd490fbfdf2dbd099e103d404ced
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62650532"
 ---
 # <a name="query-notifications-event-category"></a>Query Notifications 事件类别
@@ -37,7 +37,7 @@ ms.locfileid: "62650532"
  [QN:Template 事件类](qn-template-event-class.md)  
  报告有关查询模板的内部使用情况的信息。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL 跟踪](../sql-trace/sql-trace.md)   
  [SQL Server 事件探查器](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [sp_trace_setevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  

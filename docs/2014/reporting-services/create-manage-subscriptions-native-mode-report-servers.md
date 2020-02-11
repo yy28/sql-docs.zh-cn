@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d6f18ff05cf6283e4358e8f8afd76a5858b0b41a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109601"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>创建和管理本机模式报表服务器的订阅
@@ -32,11 +32,11 @@ ms.locfileid: "66109601"
 -   通过“管理所有订阅”任务，用户可以访问和修改所有订阅。 此任务是创建数据驱动订阅所必需的。 在预定义的角色中，只有“内容管理员”角色包括此任务。  
   
 ## <a name="disabling-subscriptions"></a>禁用订阅  
- 若要阻止用户创建订阅，请从该角色中清除“管理单独的订阅”任务。 删除此任务后，“订阅”页将不可用。 在报表管理器中，“我的订阅”页显示为空（不能将它删除），即便它以前包含订阅也是如此。 删除与订阅相关的任务会使用户无法创建和修改订阅，但这不会删除现有的订阅。 现有订阅将继续执行，直到被删除。 有关删除订阅的详细信息，请参阅[创建、 修改和删除标准订阅&#40;本机模式下的 Reporting Services&#41;](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)。  
+ 若要阻止用户创建订阅，请从该角色中清除“管理单独的订阅”任务。 删除此任务后，“订阅”页将不可用。 在报表管理器中，“我的订阅”页显示为空（不能将它删除），即便它以前包含订阅也是如此。 删除与订阅相关的任务会使用户无法创建和修改订阅，但这不会删除现有的订阅。 现有订阅将继续执行，直到被删除。 有关删除订阅的详细信息，请参阅[创建、修改和删除标准订阅 &#40;在纯模式&#41;中 Reporting Services ](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)。  
   
- 若要禁用订阅处理的报表服务器上，可以设置`ScheduleEventsAndReportDeliveryEnabled`属性设置为`False`中**Reporting Services 的外围应用配置**facet 的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]基于策略的管理。 这样可防止运行所有的计划操作。 您不能只是在报表服务器上关闭订阅处理。  
+ 若要在 Report Server 上禁用订阅处理，可以在基于`ScheduleEventsAndReportDeliveryEnabled` [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]策略的`False`管理的 Reporting Services 方面的**外围应用配置**器中将属性设置为。 这样可防止运行所有的计划操作。 您不能只是在报表服务器上关闭订阅处理。  
   
- 有关如何取消报表服务器处理订阅的说明，请参阅[管理运行中的进程](subscriptions/manage-a-running-process.md)。  
+ 有关如何取消正在 Report Server 上处理的订阅的说明，请参阅[管理运行](subscriptions/manage-a-running-process.md)中的进程。  
   
 ## <a name="disabling-delivery-extensions"></a>禁用传递扩展插件  
  对于有权创建对某个给定报表的订阅的任何用户，可以使用报表服务器上安装的所有传递扩展插件。 可以自动使用并配置下列传递扩展插件：  
@@ -45,13 +45,13 @@ ms.locfileid: "66109601"
   
 -   SharePoint 库（只能从 SharePoint 站点使用，该站点与处于 SharePoint 集成模式的报表服务器集成在一起）  
   
- 电子邮件传递必须进行配置才能使用。 如果未对它进行配置，它将不可用。 有关详细信息，请参阅[为电子邮件传递配置报表服务器&#40;SSRS 配置管理器&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)。  
+ 电子邮件传递必须进行配置才能使用。 如果未对它进行配置，它将不可用。 有关详细信息，请参阅[为电子邮件传递配置报表服务器 &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)。  
   
- 如果要关闭特定的扩展插件，则可以在 RSReportServer.config 文件中删除与该扩展插件相对应的条目。 有关详细信息，请参阅[RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)并[为电子邮件传递配置报表服务器&#40;SSRS 配置管理器&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)。  
+ 如果要关闭特定的扩展插件，则可以在 RSReportServer.config 文件中删除与该扩展插件相对应的条目。 有关详细信息，请参阅[Rsreportserver.config 配置文件](report-server/rsreportserver-config-configuration-file.md)和[配置报表服务器，以便 &#40;SSRS Configuration Manager&#41;的电子邮件传递](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)。  
   
  删除某个传递扩展插件后，该插件在报表管理器或 SharePoint 站点中将不再可用。 删除传递扩展插件可能会使订阅变为非活动状态。 在删除扩展插件之前，请确保删除这些订阅或者将它们配置为使用其他传递扩展插件。  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>在本节中  
  [使用我的订阅](subscriptions/use-my-subscriptions-native-mode-report-server.md)  
  介绍如何使用“我的订阅”页管理所拥有的订阅。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66109601"
  [监视 Reporting Services 订阅](subscriptions/monitor-reporting-services-subscriptions.md)  
  介绍如何确定订阅是成功还是失败以及报表更改对现有订阅的影响。  
   
-## <a name="see-also"></a>请参阅  
- [创建、 修改和删除标准订阅&#40;Reporting Services 本机模式&#41;](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)  
+## <a name="see-also"></a>另请参阅  
+ [在纯模式下创建、修改和删除标准订阅 &#40;Reporting Services&#41;](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)  
   
   

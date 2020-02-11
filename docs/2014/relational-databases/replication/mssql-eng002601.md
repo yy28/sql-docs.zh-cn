@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a3994aa8a442f0ec1522bdf2314e0d6023e94bcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667061"
 ---
-# <a name="mssqleng002601"></a>MSSQL_ENG002601
+# <a name="mssql_eng002601"></a>MSSQL_ENG002601
     
 ## <a name="message-details"></a>消息详细信息  
   
@@ -29,10 +29,10 @@ ms.locfileid: "62667061"
 |事件 ID|2601|  
 |事件源|MSSQLSERVER|  
 |组件|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
-|符号名称|不可用|  
+|符号名称|空值|  
 |消息正文|不能在具有唯一索引 '%.\*ls' 的对象 '%.*ls' 中插入重复键的行。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  这是可能引发的一般错误，不管是否复制数据库，都会引发该错误。 在已复制的数据库中，通常会引发该错误，因为尚未跨拓扑对主键进行适当的管理。 在分布式环境中，确保没有将同一值插入到多个节点上的主键列或任何其他唯一列，这一点很重要。 可能的原因包括：  
   
 -   在多个节点上对行进行了插入和更新。 合并复制和事务性复制的可更新订阅都提供了冲突检测和解决，但是最好还是只在一个节点上插入或更新给定行。 对等事务性复制没有提供冲突检测和解决，它要求对插入和更新进行分区。  
@@ -41,7 +41,7 @@ ms.locfileid: "62667061"
   
 -   使用了具有标识列的表，但是没有对该列进行适当的管理。  
   
--   在合并复制中，此错误也可发生在插入期间系统表**MSmerge_contents**; 所引发的错误是类似于：不能具有唯一索引 ucl1SycContents。 对象 MSmerge_contents 中插入重复键的行  
+-   在合并复制过程中，插入系统表 **MSmerge_contents**时也可发生该错误；所引起的错误类似于：不能在具有唯一索引“ucl1SycContents”的对象“MSmerge_contents”中插入重复键的行。  
   
 ## <a name="user-action"></a>用户操作  
  所需操作取决于引发错误的原因：  
@@ -62,7 +62,7 @@ ms.locfileid: "62667061"
   
      发生此错误的原因是联接筛选器属性 **join_unique_key**的值不正确。 仅当父表中的联接列唯一时，才应将此属性设置为 TRUE。 如果此属性设置为 TRUE，而该列不唯一，则引发此错误。 有关设置此属性的详细信息，请参阅 [定义和修改合并项目间的联接筛选器](publish/define-and-modify-a-join-filter-between-merge-articles.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [错误和事件参考（复制）](errors-and-events-reference-replication.md)  
   
   

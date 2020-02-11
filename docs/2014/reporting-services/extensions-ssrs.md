@@ -1,5 +1,5 @@
 ---
-title: Extensions
+title: 扩展
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ms.openlocfilehash: 2e1f0dadca7a7bdb98f828ce33e617a0cce0e8cf
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67413126"
 ---
 # <a name="extensions-for-sql-server-reporting-services-ssrs"></a>用于 SQL Server Reporting Services 的扩展 (SSRS)
@@ -57,9 +57,9 @@ ms.locfileid: "67413126"
   
 ## <a name="rendering-extensions"></a>呈现扩展插件
 
- 呈现扩展插件将来自报表处理器的数据和布局信息转换为设备特定的格式。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包括七种呈现扩展插件：HTML、 Excel、 CSV、 XML、 图像、 PDF、 和[!INCLUDE[msCoName](../includes/msconame-md.md)]Word。  
+ 呈现扩展插件将来自报表处理器的数据和布局信息转换为设备特定的格式。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包括七种呈现扩展插件：HTML、Excel、CSV、XML、Image、PDF 和 [!INCLUDE[msCoName](../includes/msconame-md.md)] Word。  
   
-- **HTML 呈现扩展插件** 通过 Web 浏览器向报表服务器请求报表时，报表服务器将使用 HTML 呈现扩展插件来呈现报表。 HTML 呈现扩展插件使用 UTF-8 编码生成所有的 HTML。 有关详细信息，请参阅[以 html 格式呈现&#40;报表生成器和 SSRS&#41; ](report-builder/rendering-to-html-report-builder-and-ssrs.md)并[规划 Reporting Services 和 Power View 浏览器支持&#40;Reporting Services 2014&#41; ](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).  
+- **HTML 呈现扩展插件** 通过 Web 浏览器向报表服务器请求报表时，报表服务器将使用 HTML 呈现扩展插件来呈现报表。 HTML 呈现扩展插件使用 UTF-8 编码生成所有的 HTML。 有关详细信息，请参阅 &#40;[报表生成器和 SSRS 的呈现&#41;](report-builder/rendering-to-html-report-builder-and-ssrs.md)和[规划 Reporting Services 和 Power View &#40;Reporting Services&#41;的浏览器2014支持](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)。  
   
 - **Excel 呈现扩展插件** Excel 呈现扩展插件呈现可在 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 97 或更高版本中查看和修改的报表。 此呈现扩展插件会创建二进制交换文件格式 (BIFF) 的文件。 BIFF 是 Excel 数据的本机文件格式。 在 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 中呈现的报表支持适用于任何电子表格的所有功能。 有关详细信息，请参阅 [导出到 Microsoft Excel（报表生成器和 SSRS）](report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)中处理数据。  
   
@@ -67,11 +67,11 @@ ms.locfileid: "67413126"
   
 - **XML 呈现扩展插件** XML 呈现扩展插件以 XML 文件形式呈现报表。 随后可通过其他程序存储或读取这些 XML 文件。 您还可以使用 XSLT 转换将报表转换为另一种 XML 架构，供其他应用程序使用。 XML 呈现扩展插件生成的 XML 文件是 UTF-8 编码文件。 有关详细信息，请参阅 [导出到 XML（报表生成器和 SSRS）](report-builder/exporting-to-xml-report-builder-and-ssrs.md)中处理数据。  
   
--   **图像呈现扩展插件** 图像呈现扩展插件会将报表呈现为位图或图元文件。 扩展插件可以呈现报表中的以下格式：BMP、 EMF、 GIF、 JPEG、 PNG、 TIFF 和 WMF。 默认情况下，将使用 TIFF 格式呈现图像，这种格式的图像可以通过您的操作系统的默认图像查看器（例如，Windows 图片和传真查看器）进行显示。 您可以从查看器中将图像发送到打印机。 使用图像呈现扩展插件呈现报表可确保报表在每个客户端上的显示都相同。 （用户查看 HTML 格式的报表时，该报表的外观会因用户浏览器的版本、用户浏览器设置以及可用字体而异。）图像呈现扩展插件在服务器上呈现报表，因此所有用户看到的都是相同的图像。 由于是在服务器上呈现报表，因此服务器上必须安装了报表中使用的所有字体。 有关详细信息，请参阅 [导出到图像文件（报表生成器和 SSRS）](report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)中处理数据。  
+-   **图像呈现扩展插件** 图像呈现扩展插件会将报表呈现为位图或图元文件。 该扩展插件可使用以下格式呈现报表：BMP、EMF、GIF、JPEG、PNG、TIFF 和 WMF。 默认情况下，将使用 TIFF 格式呈现图像，这种格式的图像可以通过您的操作系统的默认图像查看器（例如，Windows 图片和传真查看器）进行显示。 您可以从查看器中将图像发送到打印机。 使用图像呈现扩展插件呈现报表可确保报表在每个客户端上的显示都相同。 （用户查看 HTML 格式的报表时，该报表的外观会因用户浏览器的版本、用户浏览器设置以及可用字体而异。）图像呈现扩展插件在服务器上呈现报表，因此所有用户看到的都是相同的图像。 由于是在服务器上呈现报表，因此服务器上必须安装了报表中使用的所有字体。 有关详细信息，请参阅 [导出到图像文件（报表生成器和 SSRS）](report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)中处理数据。  
   
 - **PDF 呈现扩展插件** PDF 呈现扩展插件以 PDF 文件形式呈现报表，可以使用 Adobe Acrobat 6.0 或更高版本打开和查看这些文件。 有关详细信息，请参阅 [导出到 PDF 文件（报表生成器和 SSRS）](report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md)中处理数据。  
   
-- **Word 呈现扩展插件**   [!INCLUDE[msCoName](../includes/msconame-md.md)] Word 呈现扩展插件可将报表呈现为与 [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Word 2000 或更高版本兼容的 Word 文档。 有关详细信息，请参阅 [导出到 Microsoft Word（报表生成器和 SSRS）](report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md)中处理数据。  
+- **Word 呈现扩展插件**[!INCLUDE[msCoName](../includes/msconame-md.md)] Word 呈现扩展插件可将报表呈现为与 [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Word 2000 或更高版本兼容的 Word 文档。 有关详细信息，请参阅 [导出到 Microsoft Word（报表生成器和 SSRS）](report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md)中处理数据。  
   
 ## <a name="report-processing-extensions"></a>报表处理扩展插件
 

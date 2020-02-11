@@ -1,5 +1,5 @@
 ---
-title: 架构生成向导 (Analysis Services) |Microsoft Docs
+title: 架构生成向导（Analysis Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2f8757044ba15f7b8c2567dd88e1ef3637d2e3f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073073"
 ---
 # <a name="schema-generation-wizard-analysis-services"></a>架构生成向导 (Analysis Services)
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 项目或数据库中定义 OLAP 对象时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持两种使用关系架构的方法。 通常，在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目或数据库中，将基于在数据源视图中构造的逻辑数据模型来定义 OLAP 对象。 此数据源视图将基于一个或多个关系数据源中的架构元素定义，如在数据源视图中自定义那样。  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]在[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目或数据库中定义 OLAP 对象时，支持两种使用关系架构的方法。 通常，在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目或数据库中，将基于在数据源视图中构造的逻辑数据模型来定义 OLAP 对象。 此数据源视图将基于一个或多个关系数据源中的架构元素定义，如在数据源视图中自定义那样。  
   
  或者，您可以首先定义 OLAP 对象，然后生成数据源视图、数据源和支持这些 OLAP 对象的基础关系数据库架构。 该关系数据库称为主题区域数据库。  
   
@@ -34,18 +34,18 @@ ms.locfileid: "66073073"
   
  作为通用规则，当架构生成向导在以后重新生成对象时，对最初由架构生成向导生成的对象所做的任何更改都要被覆盖。 但是，当您将列添加到架构生成向导生成的表中时，便属于此规则的主要例外情况。 在这种情况下，架构生成向导将保留您添加到表中的列以及这些列中的数据。  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>在本节中  
  下表列出了说明如何使用架构生成向导的其他主题。  
   
-|主题|Description|  
+|主题|说明|  
 |-----------|-----------------|  
-|[使用架构生成向导 (Analysis Services)](schema-generation-wizard-analysis-services.md)|介绍如何为主题区域数据库和临时区域数据库生成架构。|  
+|[使用架构生成向导 &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)|介绍如何为主题区域数据库和临时区域数据库生成架构。|  
 |[了解数据库架构](understanding-the-database-schemas.md)|介绍为主题区域数据库和临时区域数据库生成的架构。|  
 |[了解增量生成](understanding-incremental-generation.md)|介绍架构生成向导的增量式生成功能。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [多维模型中的数据源视图](data-source-views-in-multidimensional-models.md)   
  [多维模型中的数据源](data-sources-in-multidimensional-models.md)   
- [支持的数据源&#40;SSAS 多维&#41;](supported-data-sources-ssas-multidimensional.md)  
+ [支持 &#40;SSAS 多维&#41;的数据源](supported-data-sources-ssas-multidimensional.md)  
   
   

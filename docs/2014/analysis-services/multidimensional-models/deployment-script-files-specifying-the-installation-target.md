@@ -18,14 +18,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f5a46dc4c6130bb49d973ffc0025388c563c080f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075222"
 ---
 # <a name="specifying-the-installation-target"></a>指定安装目标
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署向导读取安装目标信息\<*项目名称*>.deploymenttargets 文件。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 在生成时创建此文件[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 使用的数据库和服务器上指定**部署**页 *\<项目名称 >* **属性页**对话框来创建\<*项目名称*>.targets 文件。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署向导从\<*项目名称*> .deploymenttargets 文件中读取安装目标信息。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]在生成[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目时创建此文件。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]使用在 " * \<项目名称">* "**属性页**" 对话框的 "**部署**" 页上指定的数据库和\<服务器来创建*项目名称*> .targets 文件。  
   
 ## <a name="modifying-the-installation-target-for-deployment"></a>修改部署的安装目标  
  在有些情况下，可能需要将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目部署到与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] “部署” **页上指定的项不同的数据库或** 实例。 例如，可能要在部署之前将项目部署到用于测试的服务器，再在测试完成后将其部署到生产服务器。 此外，还可能需要将已完成且经过测试的项目部署到网络负载平衡群集中的多台生产服务器，或将其部署到临时服务器和生产服务器。  
@@ -42,9 +42,9 @@ ms.locfileid: "66075222"
   
      -或-  
   
--   修改\<*项目名称*>.deploymenttargets 文件使用的任何文本编辑器。  
+-   \<使用任意文本编辑器修改*项目名称*> .deploymenttargets 文件。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [指定分区和角色部署选项](deployment-script-files-partition-and-role-deployment-options.md)   
  [为解决方案部署指定配置设置](deployment-script-files-solution-deployment-config-settings.md)   
  [指定处理选项](deployment-script-files-specifying-processing-options.md)  

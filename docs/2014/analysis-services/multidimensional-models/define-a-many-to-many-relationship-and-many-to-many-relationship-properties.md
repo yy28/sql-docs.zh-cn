@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f679387dd1282dba3a4521f40bd11a2e0ba4b26f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075779"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>定义多对多关系和多对多关系属性
   本主题介绍 Analysis Services 中的多对多维度，包括何时使用它们以及如何创建它们。  
   
-## <a name="introduction"></a>简介  
+## <a name="introduction"></a>介绍  
  Analysis Services 支持多对多维度，并且允许更复杂的分析，从而超越了传统的星型架构所能提供的功能。 在传统的星型架构中，所有维度都具有针对事实表的一对多关系。 每个事实都联接到一个维度成员；单个维度成员与多个事实相关联。  
   
  多对多通过实现了将事实（例如帐户余额）与相同维度的多个成员相关联（联接帐户的余额可能会影响联接帐户的两个或多个所有者），消除了这一模型限制。  
@@ -39,15 +39,15 @@ ms.locfileid: "66075779"
   
  从分析上，多对多关系解决了这样一个问题，即如何精确地表示相对于维度关系的计数或求和（通常通过在为特定维度成员执行计算时消除重复计数）。 我们必须通过一个例子来澄清这一点。 假定某个产品或服务属于多个类别。 如果您在按类别对服务数目进行计数，您可能希望属于两个类别的某一服务分别包括在各类别中。 同时，您不想重复计算您提供的服务数目。 通过指定多对多维度关系，在按类别或按服务进行查询时，您获得正确结果的可能性更大了。 但是，始终需要进行详尽的测试以便确保多对多维度关系适合于这个情形。  
   
- 从结构上来说，创建多对多维度关系的方式类似于在关系数据模型中创建多对多关系。 但关系模型使用“联接表”  存储行关联，而多维模型使用“中间度量值组”  。 中间度量值组是一个术语，用来表示从不同维度映射成员的一种表。  
+ 从结构上来说，创建多对多维度关系的方式类似于在关系数据模型中创建多对多关系。 但关系模型使用“联接表” ** 存储行关联，而多维模型使用“中间度量值组” **。 中间度量值组是一个术语，用来表示从不同维度映射成员的一种表。  
   
  多对多维度关系没有在多维数据集关系图中直观地指示。 而是使用“维度用法”选项卡快速标识某个模型中的任何多对多关系。 多对多关系用以下图标指示。  
   
- ![维度用法中的多对多图标](../media/ssas-m2m-icondimusage.png "多对多维度用法中的图标")  
+ ![维度用法中的多对多图标](../media/ssas-m2m-icondimusage.png "维度用法中的多对多图标")  
   
  单击该按钮可打开“定义关系”对话框，以便验证关系类型是多对多，并且可以查看在关系中使用了哪一中间度量值组。  
   
- ![维度用法中的定义关系按钮](../media/ssas-m2m-btndimusage.png "维度用法中的定义关系按钮")  
+ ![维度用法中的 "定义关系" 按钮](../media/ssas-m2m-btndimusage.png "维度用法中的 "定义关系" 按钮")  
   
  在后面的部分中，您将学习如何设置多对多维度和测试模型行为。 如果要先查看其他信息或试学一下教程，请参阅本文结尾的 **了解详细信息** 。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66075779"
   
  为了阐明在创建多对多关系中使用的步骤，此过程在 Adventure Works 示例多维数据集中重新创建了其中一个多对多关系。 如果您具有在某一关系数据库引擎实例上安装的源数据（即，Adventure Works 示例数据仓库），则可以按照以下步骤执行。  
   
-#### <a name="step-1-verify-dsv-relationships"></a>第 1 步：验证 DSV 关系  
+#### <a name="step-1-verify-dsv-relationships"></a>步骤 1：验证 DSV 关系  
   
 1.  在 SQL Server Data Tools 中，在一个多维项目中创建指向 Adventure Works DW 2012 关系数据仓库的数据源，该数据源在 SQL Server 数据库引擎实例上承载。  
   
@@ -79,17 +79,17 @@ ms.locfileid: "66075779"
   
      下面的示例确认使用主键链接在该过程中使用的表。  
   
-     ![显示相关的表的 DSV](../media/ssas-m2m-dsvpkeys.PNG "显示相关的表的 DSV")  
+     ![显示相关表的 DSV](../media/ssas-m2m-dsvpkeys.PNG "显示相关表的 DSV")  
   
-#### <a name="step-2-create-dimensions-and-measure-groups"></a>第 2 步：创建维度和度量值组  
+#### <a name="step-2-create-dimensions-and-measure-groups"></a>步骤 2：创建维度和度量值组  
   
-1.  在 SQL Server Data Tools 中，在一个多维项目中右键单击“维度”  并选择“新建维度”  。  
+1.  在 SQL Server Data Tools 中，在一个多维项目中右键单击“维度”**** 并选择“新建维度”****。  
   
 2.  在现有表 **DimSalesReason**的基础上新建一个维度。 在指定源时接受所有默认值。  
   
      对于属性，选择“全部”。  
   
-     ![新的维度中属性列表](../media/ssas-m2m-dimsalesreason.PNG "中新的维度属性列表")  
+     ![新维度中的属性列表](../media/ssas-m2m-dimsalesreason.PNG "新维度中的属性列表")  
   
 3.  基于现有表 Fact Internet Sales 创建第二个维度。 尽管这是一个事实表，但它包含销售订单信息。 我们将使用它来生成一个销售订单维度。  
   
@@ -99,13 +99,13 @@ ms.locfileid: "66075779"
   
 5.  在该向导的下一页上，选择属性。 在此示例中，你可以只选择 **SalesOrderNumber**。  
   
-     ![销售订单维度显示属性列表](../media/ssas-m2m-dimsalesorderattrib.PNG "销售订单维度显示属性列表")  
+     ![显示属性列表的销售订单维度](../media/ssas-m2m-dimsalesorderattrib.PNG "显示属性列表的销售订单维度")  
   
 6.  将该维度重命名为 **Dim Sales Orders**，以便保持一致的维度命名约定。  
   
-     ![向导页上显示维度重命名](../media/ssas-m2m-dimsalesorders.PNG "显示维度重命名的向导页")  
+     ![显示维度重命名的向导页](../media/ssas-m2m-dimsalesorders.PNG "显示维度重命名的向导页")  
   
-7.  右键单击“多维数据集”  ，然后选择“新建多维数据集”  。  
+7.  右键单击“多维数据集”****，然后选择“新建多维数据集”****。  
   
 8.  在度量值组表中，选择 **FactInternetSales** 和 **FactInternetSalesReason**。  
   
@@ -119,19 +119,19 @@ ms.locfileid: "66075779"
   
      在“选择新维度”页中，向导会提示你为 **Fact Internet Sales Dimension**新建一个维度。 您不需要此维度，因此可以从列表中清除它。  
   
-11. 命名该多维数据集并且单击 **“完成”** 。  
+11. 命名该多维数据集并且单击 **“完成”**。  
   
 #### <a name="step-3-define-many-to-many-relationship"></a>步骤 3：定义多对多关系  
   
-1.  在多维数据集设计器中，单击“维度用法”选项卡。请注意， **Dim Sales Reason** 和 **Fact Internet Sales**之间已存在多对多关系。 请记住，以下图标指示多对多关系。  
+1.  在多维数据集设计器中，单击 "维度用法" 选项卡。请注意，维度**销售原因**与**事实 Internet 销售**之间已存在多对多的关系。 请记住，以下图标指示多对多关系。  
   
-     ![维度用法中的多对多图标](../media/ssas-m2m-icondimusage.png "多对多维度用法中的图标")  
+     ![维度用法中的多对多图标](../media/ssas-m2m-icondimusage.png "维度用法中的多对多图标")  
   
 2.  单击 **Dim Sales Reason** 和 **Fact Internet Sales**的交集单元格，然后单击按钮打开“定义关系”对话框。  
   
      您可以看到，将使用此对话框指定多对多关系。 如果您过去添加了具有常规关系的维度，则应使用该对话框将其更改为多对多关系。  
   
-     ![维度用法中的定义关系按钮](../media/ssas-m2m-btndimusage.png "维度用法中的定义关系按钮")  
+     ![维度用法中的 "定义关系" 按钮](../media/ssas-m2m-btndimusage.png "维度用法中的 "定义关系" 按钮")  
   
 3.  将该项目部署到 Analysis Services 多维实例。 在下一步中，您将在 Excel 中浏览该多维数据集以便验证其行为。  
   
@@ -142,15 +142,15 @@ ms.locfileid: "66075779"
   
 1.  部署该项目，然后浏览多维数据集以便确认聚合有效。  
   
-2.  在 Excel 中，单击“数据”   | “从其他源”   | “从 Analysis Services”  。 输入服务器的名称，选择数据库和多维数据集。  
+2.  在 Excel 中，单击 "来自**Analysis Services**的**其他源** | 中的**数据** | "。 输入服务器的名称，选择数据库和多维数据集。  
   
 3.  创建一个数据透视表，它使用以下内容：  
   
-    -   作为值的**Sales Amount**  
+    -   **销售额**作为值  
   
     -   列上的**Sales Reason Name**  
   
-    -   行上的 **“销售订单号”**  
+    -   行的**销售订单号**  
   
 4.  分析结果。 因为我们在使用示例数据，所以，最初的印象是所有销售订单都具有完全相同的值。 但是，如果您向下滚动，则会开始看到数据变化。  
   
@@ -164,7 +164,7 @@ ms.locfileid: "66075779"
   
 5.  滚动到工作表的底部。 现在，很容易就可以看出，相对于其他原因以及总计而言，价格是影响客户购买的最重要原因。  
   
-     ![多对多中显示数据的总计的 Excel 工作簿](../media/ssas-m2m-excelgrandtotal.png "多对多中显示数据的总计的 Excel 工作簿")  
+     ![在多对多中显示总计的 Excel 工作簿](../media/ssas-m2m-excelgrandtotal.png "在多对多中显示总计的 Excel 工作簿")  
   
 #### <a name="tips-for-handling-unexpected-query-results"></a>用于处理意外查询结果的技巧  
   
@@ -176,19 +176,19 @@ ms.locfileid: "66075779"
   
 4.  避免在多个多对多关系中使用链接度量值组（尤其是在这些关系处于不同多维数据集中时）。 这样做可能导致不明确的聚合。 有关详细信息，请参阅 [Incorrect Amounts for Linked Measures in Cubes containing Many-to-Many Relationships](https://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx)（包含多对多关系的多维数据集中链接度量值的不正确数量）。  
   
-##  <a name="bkmk_Learn"></a> Learn more  
+##  <a name="bkmk_Learn"></a>了解更多信息  
  使用以下链接可获取帮助您掌握这些概念的其他信息。  
   
  [如何在 Analysis Services 中定义多对多维度](../lesson-5-3-defining-a-many-to-many-relationship.md)  
   
- [多对多变革 2.0](https://go.microsoft.com/fwlink/?LinkId=324760)  
+ [多对多革命2。0](https://go.microsoft.com/fwlink/?LinkId=324760)  
   
- [教程：SQL Server Analysis Services 的多对多维度示例](https://go.microsoft.com/fwlink/?LinkId=324761)  
+ [教程： SQL Server Analysis Services 的多对多维度示例](https://go.microsoft.com/fwlink/?LinkId=324761)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [维度关系](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [安装 Analysis Services 多维建模教程的示例数据和项目](../install-sample-data-and-projects.md)   
- [部署 Analysis Services 项目 (SSDT)](deploy-analysis-services-projects-ssdt.md)   
+ [&#40;SSDT 部署 Analysis Services 项目&#41;](deploy-analysis-services-projects-ssdt.md)   
  [多维模型中的透视](perspectives-in-multidimensional-models.md)  
   
   
