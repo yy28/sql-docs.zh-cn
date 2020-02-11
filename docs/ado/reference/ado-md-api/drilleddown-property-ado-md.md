@@ -1,5 +1,5 @@
 ---
-title: DrilledDown 属性 (ADO MD) |Microsoft Docs
+title: DrilledDown 属性（ADO MD） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,25 +17,25 @@ ms.assetid: bf39dd36-fc7a-4f6e-86c0-fa71430c0d86
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f1175d2a70c376e3da1e079e4a3eb93a39235758
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938461"
 ---
 # <a name="drilleddown-property-ado-md"></a>DrilledDown 属性 (ADO MD)
-指示是否直接子级[成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)在轴上。  
+指示子元素是否紧靠在轴上的[成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)后面。  
   
 ## <a name="return-values"></a>返回值  
- 返回**布尔**值并且是只读的。 **DrilledDown**将返回**True**如果没有在轴上的当前成员的子成员。 **DrilledDown**将返回**False**如果当前成员在轴上具有一个或多个子成员。  
+ 返回**布尔**值并且是只读的。 如果轴上的当前成员没有子成员，则**DrilledDown**将返回**True** 。 如果当前成员在轴上有一个或多个子成员，则**DrilledDown**将返回**False** 。  
   
 ## <a name="remarks"></a>备注  
- 使用**DrilledDown**属性来确定是否存在此成员紧跟此成员在轴上的至少一个子级。 显示成员时，此信息很有用。  
+ 使用**DrilledDown**属性可确定紧靠此成员之后，在轴上是否至少有一个此成员的子级。 显示成员时，此信息很有用。  
   
- 此属性仅支持[成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)属于对象[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)对象。 从引用此属性时出错**成员**属于对象[级别](../../../ado/reference/ado-md-api/level-object-ado-md.md)对象。  
+ 此属性仅在属于某个[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)对象的[成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)对象上受支持。 从属于[Level](../../../ado/reference/ado-md-api/level-object-ado-md.md)对象的**成员**对象引用此属性时，将发生错误。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [成员对象 (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ParentSameAsPrev 属性 (ADO MD)](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)

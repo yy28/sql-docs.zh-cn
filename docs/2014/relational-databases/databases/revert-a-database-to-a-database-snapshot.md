@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 357030c913888d299cbec06c212eb049383b4526
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916705"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>将数据库恢复到数据库快照
@@ -46,7 +46,7 @@ ms.locfileid: "62916705"
   
  在恢复数据库之前，请考虑以下限制：  
   
--   恢复并不适用于介质恢复。 . 数据库快照是不完整的数据库文件副本，因此，如果数据库或数据库快照损坏，则不可能从快照进行恢复。 另外，如果损坏的话，即便可以恢复，也可能无法更正该问题。 因此，定期执行备份并对还原计划进行测试对于保护数据库至关重要。 有关详细信息，请参阅 [Back Up and Restore of SQL Server Databases](../backup-restore/back-up-and-restore-of-sql-server-databases.md)。  
+-   恢复并不适用于介质恢复。 . 数据库快照是不完整的数据库文件副本，因此，如果数据库或数据库快照损坏，则不可能从快照进行恢复。 另外，如果损坏的话，即便可以恢复，也可能无法更正该问题。 因此，定期执行备份并对还原计划进行测试对于保护数据库至关重要。 有关详细信息，请参阅 [SQL Server 数据库的备份和还原](../backup-restore/back-up-and-restore-of-sql-server-databases.md)。  
   
     > [!NOTE]  
     >  如果需要能够将源数据库还原至创建数据库快照的时点，请使用完整恢复模式并实施允许您执行该操作的备份策略。  
@@ -66,7 +66,7 @@ ms.locfileid: "62916705"
   
 -   恢复操作会删除所有的全文目录。  
   
-###  <a name="Prerequisites"></a> 先决条件  
+###  <a name="Prerequisites"></a>先决条件  
  确保源数据库与数据库快照满足以下先决条件：  
   
 -   确认数据库没有损坏。  
@@ -74,13 +74,13 @@ ms.locfileid: "62916705"
     > [!NOTE]  
     >  如果数据库已损坏，您将需要从备份中还原它。 有关详细信息，请参阅[完整数据库还原（简单恢复模式）](../backup-restore/complete-database-restores-simple-recovery-model.md)或[数据库还原（完整恢复模式）](../backup-restore/complete-database-restores-full-recovery-model.md)。  
   
--   标识在发生错误之前新近创建的快照。 有关详细信息，请参阅 [查看数据库快照 (SQL Server)](view-a-database-snapshot-sql-server.md).  
+-   标识在发生错误之前新近创建的快照。 有关详细信息，请参阅 [查看数据库快照 (SQL Server)](view-a-database-snapshot-sql-server.md)中查看数据库快照。  
   
--   删除当前数据库中存在的任何其他快照。 有关详细信息，请参阅 [删除数据库快照 (Transact-SQL)](drop-a-database-snapshot-transact-sql.md).  
+-   删除当前数据库中存在的任何其他快照。 有关详细信息，请参阅 [删除数据库快照 (Transact-SQL)](drop-a-database-snapshot-transact-sql.md)实例。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  任何具有源数据库 RESTORE DATABASE 权限的用户都可以将其恢复至创建数据库快照时的状态。  
   
 ##  <a name="TsqlProcedure"></a> 如何将数据库恢复到数据库快照（使用 Transact-SQL）  
@@ -103,7 +103,7 @@ ms.locfileid: "62916705"
   
      其中， *database_name* 是源数据库的名称， *database_snapshot_name* 是要将数据库恢复到的快照的名称。 注意，必须在此语句中指定快照名称而非备份设备。  
   
-     有关详细信息，请参阅 [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql).  
+     有关详细信息，请参阅 [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)备份。  
   
     > [!NOTE]  
     >  在恢复操作过程中，快照和源数据库都不可用。 源数据库和快照都标记为“还原中”。 如果在恢复操作期间发生错误，则数据库在重新启动后，将尝试完成恢复操作。  
@@ -165,7 +165,7 @@ GO
   
 -   [删除数据库快照 (Transact-SQL)](drop-a-database-snapshot-transact-sql.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库快照 (SQL Server)](database-snapshots-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [sys.databases (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   

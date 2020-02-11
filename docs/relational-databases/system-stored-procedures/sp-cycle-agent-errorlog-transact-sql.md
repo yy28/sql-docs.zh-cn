@@ -1,5 +1,5 @@
 ---
-title: sp_cycle_agent_errorlog (TRANSACT-SQL) |Microsoft Docs
+title: sp_cycle_agent_errorlog （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 8aa96182-60b7-4d7b-b2a7-ccce70378c6e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c95cc2db84bdf059437a45e2719bbc63d6eb6829
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108355"
 ---
-# <a name="spcycleagenterrorlog-transact-sql"></a>sp_cycle_agent_errorlog (Transact-SQL)
+# <a name="sp_cycle_agent_errorlog-transact-sql"></a>sp_cycle_agent_errorlog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   关闭当前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理错误日志文件，并循环 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理错误日志扩展编号（就像重新启动服务器）。 新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理错误日志包含一个表示已创建新日志的行。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,18 +39,18 @@ sp_cycle_agent_errorlog
 ```  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** （成功）或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="remarks"></a>备注  
- 每次[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理已启动，当前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理错误日志重命名为**SQLAgent.1**;**SQLAgent.1**变得**SQLAgent.2**， **SQLAgent.2**变得**SQLAgent.3**，依次类推。 **sp_cycle_agent_errorlog**使您能够循环错误日志文件，而不必停止和启动服务器。  
+ 每次[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]启动代理时，当前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的代理错误日志都会重命名为**SQLAgent**;**SQLAgent**将变为**SQLAgent**， **SQLAgent**将变为**SQLAgent**，依此类推。 **sp_cycle_agent_errorlog**使你能够在不停止和启动服务器的情况下循环错误日志文件。  
   
- 必须从运行此存储的过程**msdb**数据库。  
+ 必须从**msdb**数据库运行此存储过程。  
   
 ## <a name="permissions"></a>权限  
- 执行权限**sp_cycle_agent_errorlog**的成员仅限于**sysadmin**固定的服务器角色。  
+ **Sp_cycle_agent_errorlog**的执行权限仅限于**sysadmin**固定服务器角色的成员。  
   
 ## <a name="examples"></a>示例  
  以下示例将循环 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理错误日志。  
@@ -63,7 +63,7 @@ EXEC dbo.sp_cycle_agent_errorlog ;
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [sp_cycle_errorlog &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cycle-errorlog-transact-sql.md)  
+## <a name="see-also"></a>另请参阅  
+ [sp_cycle_errorlog &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cycle-errorlog-transact-sql.md)  
   
   

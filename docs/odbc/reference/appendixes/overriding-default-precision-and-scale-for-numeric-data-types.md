@@ -1,5 +1,5 @@
 ---
-title: 重写的数值数据类型默认精度和小数位数 |Microsoft Docs
+title: 为数值数据类型重写默认的精度和小数位数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,17 +17,17 @@ ms.assetid: 84292334-0e33-4a1b-84de-8c018dd787f3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 66fc728440808314dbdaa30065c68232f4a89fba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68100615"
 ---
 # <a name="overriding-default-precision-and-scale-for-numeric-data-types"></a>重写数字数据类型的默认精度和小数位数
-如果 ARD 中的 SQL_DESC_TYPE 字段设置为 SQL_C_NUMERIC，通过调用**SQLBindCol**或**SQLSetDescField**中 ARD, SQL_DESC_SCALE 字段设置为 0 并且 SQL_DESC_PRECISION 字段设置为驱动程序定义的默认精度。 这也是如此 APD 中的 SQL_DESC_TYPE 字段设置为 SQL_C_NUMERIC，通过调用时**SQLBindParameter**或**SQLSetDescField**。 这适用于输入、 输入/输出或输出参数。  
+当 ARD 中的 SQL_DESC_TYPE 字段设置为 SQL_C_NUMERIC （通过调用**SQLBindCol**或**SQLSetDescField**）时，ARD 中的 SQL_DESC_SCALE 字段将设置为0，并且 SQL_DESC_PRECISION 字段设置为驱动程序定义的默认精度。 如果 APD 中的 SQL_DESC_TYPE 字段设置为 SQL_C_NUMERIC （通过调用**SQLBindParameter**或**SQLSetDescField**），也会出现这种情况。 这适用于输入、输入/输出或输出参数。  
   
- 如果所述的默认值的任何一个以前不接受的应用程序，该应用程序应通过调用设置 SQL_DESC_SCALE 或 SQL_DESC_PRECISION 字段**SQLSetDescField**或**SQLSetDescRec**.  
+ 如果某个应用程序不接受上述任何一个默认值，则该应用程序应通过调用**SQLSetDescField**或**SQLSetDescRec**来设置 SQL_DESC_SCALE 或 SQL_DESC_PRECISION 字段。  
   
- 如果应用程序调用**SQLGetData**为了将数据返回到 SQL_C_NUMERIC 结构，使用了默认 SQL_DESC_SCALE 和 SQL_DESC_PRECISION 字段。 如果不接受默认设置的应用程序必须调用**SQLSetDescRec**或**SQLSetDescField**若要设置的字段，然后调用**SQLGetData**与*TargetType*的 SQL_ARD_TYPE 若要使用中的描述符字段的值。  
+ 如果应用程序调用**SQLGetData**将数据返回 SQL_C_NUMERIC 结构，则将使用默认的 SQL_DESC_SCALE 和 SQL_DESC_PRECISION 字段。 如果默认值是不可接受的，则应用程序必须调用**SQLSetDescRec**或**SQLSetDescField**来设置字段，然后将**SQLGetData**与 SQL_ARD_TYPE 的*TargetType*一起调用，以使用 "描述符" 字段中的值。  
   
- 当**SQLPutData**是调用，调用使用对应于执行时数据参数或列，描述符记录的 SQL_DESC_SCALE 和 SQL_DESC_PRECISION 字段是对的调用 APD 字段**SQLExecute**或**SQLExecDirect**，或对的调用 ARD 字段**SQLBulkOperations**或**SQLSetPos**。
+ 调用**SQLPutData**时，调用将使用与执行时数据参数或列对应的说明符记录的 SQL_DESC_SCALE 和 SQL_DESC_PRECISION 字段，这是 APD 字段，用于调用**SQLExecute**或**SQLExecDirect**，或用于调用**ARD**或**SQLBulkOperations**的 SQLSetPos 字段。

@@ -1,5 +1,5 @@
 ---
-title: false 函数 (XQuery) |Microsoft Docs
+title: false 函数（XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 577d84c1-9285-4580-b6f5-86fbc4827547
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7a8c013a5fd87058a202e6d24f4b3148947b5319
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68093201"
 ---
 # <a name="boolean-constructor-functions---false-xquery"></a>布尔构造函数 - false (XQuery)
@@ -34,12 +34,12 @@ fn:false() as xs:boolean
 ```  
   
 ## <a name="examples"></a>示例  
- 本主题提供了一些针对 XML 实例存储在各种中的 XQuery 示例**xml**类型列中的 AdventureWorks 数据库。  
+ 本主题提供了对存储在 AdventureWorks 数据库的各种**xml**类型列中的 xml 实例的 XQuery 示例。  
   
 ### <a name="a-using-the-false-xquery-boolean-function"></a>A. 使用 false() XQuery 布尔函数  
- 有关工作示例，请参阅[true 函数&#40;XQuery&#41;](../xquery/boolean-constructor-functions-true-xquery.md)。  
+ 有关工作示例，请参阅[True 函数 &#40;XQuery&#41;](../xquery/boolean-constructor-functions-true-xquery.md)。  
   
-## <a name="see-also"></a>请参阅  
- [布尔构造函数&#40;XQuery&#41;](https://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)  
+## <a name="see-also"></a>另请参阅  
+ [布尔构造函数 &#40;XQuery&#41;](https://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)  
   
   

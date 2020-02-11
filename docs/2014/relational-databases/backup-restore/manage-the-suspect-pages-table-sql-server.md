@@ -19,18 +19,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f6c6afc1822e2f56189aace2836a15486d1b73b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62921950"
 ---
-# <a name="manage-the-suspectpages-table-sql-server"></a>管理 suspect_pages 表 (SQL Server)
+# <a name="manage-the-suspect_pages-table-sql-server"></a>管理 suspect_pages 表 (SQL Server)
   本主题介绍如何使用 **或** 来在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中管理 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] suspect_pages [!INCLUDE[tsql](../../includes/tsql-md.md)]表。 **suspect_pages** 表可用来维护有关可疑页的信息，并且还有助于确定有无必要进行还原。 [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) 表位于 [msdb 数据库](../databases/msdb-database.md)中。  
   
  如果 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 在试图读取某个数据页时遇到下列错误之一，该页面将被视为“可疑”：  
   
--   由操作系统发出的循环冗余检查 (CRC) 导致的 [823 错误](../errors-events/mssqlserver-823-database-engine-error.md) ，如磁盘错误（某些硬件错误）  
+-   由操作系统发出的循环冗余检查（CRC）导致的[823 错误](../errors-events/mssqlserver-823-database-engine-error.md)，如磁盘错误（某些硬件错误）  
   
 -   [824 错误](../errors-events/mssqlserver-824-database-engine-error.md)，如页撕裂（任何逻辑错误）  
   
@@ -115,14 +115,14 @@ ms.locfileid: "62921950"
   
      数据库管理员还可以插入或更新记录。 例如，如果数据库管理员知道某个特定的可疑页实际上没问题但想要暂时保留记录，更新行可能就很有用。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  任何拥有 **msdb** 访问权限的人员都可以读取 **suspect_pages** 表中的数据。 任何拥有 suspect_pages 表的 UPDATE 权限的人员都可以更新它的记录。 **msdb** 上的 **db_owner** 固定数据库角色或 **sysadmin** 固定服务器角色的成员都可以插入、更新和删除记录。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### <a name="to-manage-the-suspectpages-table"></a>管理 suspect_pages 表  
+#### <a name="to-manage-the-suspect_pages-table"></a>管理 suspect_pages 表  
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]的实例，再依次展开该实例、 **“数据库”** 。  
   
@@ -134,7 +134,7 @@ ms.locfileid: "62921950"
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### <a name="to-manage-the-suspectpages-table"></a>管理 suspect_pages 表  
+#### <a name="to-manage-the-suspect_pages-table"></a>管理 suspect_pages 表  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -160,13 +160,13 @@ GO
   
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [DROP DATABASE (Transact SQL)](/sql/t-sql/statements/drop-database-audit-specification-transact-sql)   
- [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)   
+ [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
  [DBCC (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-transact-sql)   
  [还原页 (SQL Server)](restore-pages-sql-server.md)   
- [suspect_pages &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/suspect-pages-transact-sql)   
+ [suspect_pages &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/suspect-pages-transact-sql)   
  [MSSQLSERVER_823](../errors-events/mssqlserver-823-database-engine-error.md)   
  [MSSQLSERVER_824](../errors-events/mssqlserver-824-database-engine-error.md)  
   

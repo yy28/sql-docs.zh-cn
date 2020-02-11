@@ -13,14 +13,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2e2ba7f2874cc35fbd662c8696fa999980b52bb6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62989992"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
-  IBCPSession2::BCPSetBulkMode 提供了一种替代方法[ibcpsession:: Bcpcolfmt &#40;OLE DB&#41; ](ibcpsession-bcpcolfmt-ole-db.md)用于指定列格式。 Ibcpsession:: Bcpcolfmt，这会设置单个列格式属性，与 IBCPSession2::BCPSetBulkMode 设置所有属性。  
+  IBCPSession2：： BCPSetBulkMode 提供了用于指定列格式的[IBCPSession：： BCPColFmt &#40;OLE DB&#41;](ibcpsession-bcpcolfmt-ole-db.md)的替代方法。 不同于 IBCPSession：： BCPColFmt，它设置单个列格式属性，IBCPSession2：： BCPSetBulkMode 设置所有属性。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,7 +36,7 @@ HRESULT BCPSetBulkMode (
 ```  
   
 ## <a name="arguments"></a>参数  
- property   
+ *知识产权*  
  类型为 BYTE 的常量。 相关的常量列表，请参阅“备注”部分中的表。  
   
  *pField*  
@@ -52,35 +52,35 @@ HRESULT BCPSetBulkMode (
  行终止符值的长度（以字节为单位）。  
   
 ## <a name="returns"></a>返回  
- IBCPSession2::BCPSetBulkMode 可以返回以下值之一：  
+ IBCPSession2：： BCPSetBulkMode 可以返回以下内容之一：  
   
 |||  
 |-|-|  
 |`S_OK`|方法成功。|  
 |`E_FAIL`|出现访问接口特定的错误；要获取详细信息，请使用 ISQLServerErrorInfo 接口。|  
-|`E_UNEXPECTED`|意外调用了该方法。 例如，`IBCPSession2::BCPInit`调用 IBCPSession2::BCPSetBulkMode 之前，未调用方法。|  
+|`E_UNEXPECTED`|意外调用了该方法。 例如，在`IBCPSession2::BCPInit`调用 IBCPSession2：： BCPSetBulkMode 之前，未调用方法。|  
 |`E_INVALIDARG`|参数无效。|  
 |`E_OUTOFMEMORY`|内存不足错误。|  
   
 ## <a name="remarks"></a>备注  
- 可以使用 IBCPSession2::BCPSetBulkMode 外的查询或表大容量复制。 使用 IBCPSession2::BCPSetBulkMode 向外大容量复制查询语句时，必须先调用该方法，再调用 `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, ...)` 来指定查询语句。  
+ IBCPSession2：： BCPSetBulkMode 可用于从查询或表中大容量复制。 使用 IBCPSession2::BCPSetBulkMode 向外大容量复制查询语句时，必须先调用该方法，再调用 `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, ...)` 来指定查询语句。  
   
- 应该避免在单个命令文本内将 RPC 调用语法与批查询语法结合使用（例如 `{rpc func};SELECT * from Tbl`）。  这将导致 icommandprepare:: Prepare 方法返回一个错误并阻止您检索元数据。 如果需要在单个命令文本内结合执行存储过程和批查询，请使用 ODBC CALL 语法（例如 `{call func}; SELECT * from Tbl`）。  
+ 应该避免在单个命令文本内将 RPC 调用语法与批查询语法结合使用（例如 `{rpc func};SELECT * from Tbl`）。  这将导致 ICommandPrepare：:P 准备返回错误，并阻止你检索元数据。 如果需要在单个命令文本内结合执行存储过程和批查询，请使用 ODBC CALL 语法（例如 `{call func}; SELECT * from Tbl`）。  
   
- 下表列出了 property 参数的常量  。  
+ 下表列出了 property 参数的常量**。  
   
-|属性|Description|  
+|properties|说明|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|指定字符输出模式。<br /><br /> 对应于 BCP 中的-c 选项。Exe 文件，以及使用 ibcpsession:: Bcpcolfmt *eUserDataType*属性设置为`BCP_TYPE_SQLCHARACTER`。|  
-|BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 输出模式。<br /><br /> 对应于 BCP 中的-w 选项。EXE，然后使用 ibcpsession:: Bcpcolfmt *eUserDataType*属性设置为`BCP_TYPE_SQLNCHAR`。|  
-|BCP_OUT_NATIVE_TEXT_MODE|指定对非字符类型使用本机类型，对字符类型使用 Unicode。<br /><br /> 对应于 BCP 中的-N 选项。EXE，然后使用 ibcpsession:: Bcpcolfmt *eUserDataType*属性设置为`BCP_TYPE_SQLNCHAR`如果列类型是字符串或`BCP_TYPE_DEFAULT`如果不是字符串。|  
-|BCP_OUT_NATIVE_MODE|指定本机数据库类型。<br /><br /> 对应于 BCP 中的-n 选项。EXE，然后使用 ibcpsession:: Bcpcolfmt *eUserDataType*属性设置为`BCP_TYPE_DEFAULT`。|  
+|BCP_OUT_CHARACTER_MODE|指定字符输出模式。<br /><br /> 对应于 BCP 中的-c 选项。EXE，并将*eUserDataType*属性设置为`BCP_TYPE_SQLCHARACTER`IBCPSession：： BCPColFmt。|  
+|BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 输出模式。<br /><br /> 对应于 BCP 中的-w 选项。EXE 和 IBCPSession：： BCPColFmt， *eUserDataType*属性设置为`BCP_TYPE_SQLNCHAR`。|  
+|BCP_OUT_NATIVE_TEXT_MODE|指定对非字符类型使用本机类型，对字符类型使用 Unicode。<br /><br /> 对应于 BCP 中的-N 选项。如果列类型为字符串或`BCP_TYPE_DEFAULT`不是字符串，则`BCP_TYPE_SQLNCHAR`将*EUSERDATATYPE*属性设置为的 EXE 和 IBCPSession：： BCPColFmt。|  
+|BCP_OUT_NATIVE_MODE|指定本机数据库类型。<br /><br /> 对应于 BCP 中的-n 选项。EXE 和 IBCPSession：： BCPColFmt， *eUserDataType*属性设置为`BCP_TYPE_DEFAULT`。|  
   
- 有关使用 IBCPSession2::BCPSetBulkMode 不冲突的 ibcpsession:: Bcpcontrol 选项，可以调用 ibcpsession:: Bcpcontrol 和 IBCPSession2::BCPSetBulkMode。 例如，可以调用使用 ibcpsession:: Bcpcontrol`BCP_OPTION_FIRST`和 IBCPSession2::BCPSetBulkMode。  
+ 对于 IBCPSession：： BCPControl 选项，可以调用 IBCPSession：： BCPControl 和 IBCPSession2：： BCPSetBulkMode，这些选项不会与 IBCPSession2：： BCPSetBulkMode 冲突。 例如，可以调用 IBCPSession：： BCPControl `BCP_OPTION_FIRST`和 IBCPSession2：： BCPSetBulkMode。  
   
- 不能调用使用 ibcpsession:: Bcpcontrol`BCP_OPTION_TEXTFILE`和 IBCPSession2::BCPSetBulkMode。  
+ 不能将 IBCPSession：： BCPControl 与`BCP_OPTION_TEXTFILE`和 IBCPSession2：： BCPSetBulkMode 一起调用。  
   
- 如果你尝试调用的函数调用序列，其中包括 ibcpsession:: Bcpcolfmt、 ibcpsession:: Bcpcontrol 和 ibcpsession:: Bcpreadfmt IBCPSession2::BCPSetBulkMode，其中一个函数调用将返回序列错误。 如果选择更正错误，请调用 IBCPSession::BCPInit 重置设置，然后重新开始。  
+ 如果尝试使用包含 IBCPSession：： BCPColFmt、IBCPSession：： BCPControl 和 IBCPSession：： BCPReadFmt 的函数调用序列来调用 IBCPSession2：： BCPSetBulkMode，则其中一个函数调用将返回序列错误失败。 如果选择更正错误，请调用 IBCPSession::BCPInit 重置设置，然后重新开始。  
   
  下表提供了会造成函数序列错误的函数调用的一些示例：  
   
@@ -360,7 +360,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IBCPSession2 &#40;OLE DB&#41;](ibcpsession2-ole-db.md)  
   
   

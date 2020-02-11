@@ -1,5 +1,5 @@
 ---
-title: 连接属性示例 (VB) |Microsoft Docs
+title: 连接属性示例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,17 +17,17 @@ ms.assetid: 4de7336a-b5ea-43f1-b750-5fa302b5b756
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1d0cd34b13889ed44e32e29a058ca01d48aea1b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933477"
 ---
-# <a name="connectionstring-connectiontimeout-and-state-properties-example-vb"></a>ConnectionString、 ConnectionTimeout 和 State 属性示例 (VB)
-此示例演示使用的不同方式[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)以打开[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。 它还使用[ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)属性来设置连接超时期限，并且[状态](../../../ado/reference/ado-api/state-property-ado.md)属性来检查连接状态。 若要运行此过程需要 GetState 函数。  
+# <a name="connectionstring-connectiontimeout-and-state-properties-example-vb"></a>ConnectionString、ConnectionTimeout 和 State 属性示例（VB）
+此示例演示使用[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)属性打开[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象的不同方法。 它还使用[ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)属性设置连接超时期限，并使用[state](../../../ado/reference/ado-api/state-property-ado.md)属性来检查连接状态。 运行此过程需要 GetState 函数。  
   
 > [!NOTE]
->  如果您要连接到的数据源提供程序支持 Windows 身份验证，则应指定**Trusted_Connection = yes**或**Integrated Security = SSPI**而不是用户 ID 和密码在连接字符串中的信息。  
+>  如果要连接到支持 Windows 身份验证的数据源提供程序，应在连接字符串中指定**Trusted_Connection = yes**或**集成安全性 = SSPI**而不是用户 ID 和密码信息。  
   
 ```  
 'BeginConnectionStringVB  
@@ -126,8 +126,8 @@ End Function
 'EndConnectionStringVB  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [ConnectionString 属性 (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
- [ConnectionTimeout 属性 (ADO)](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)   
+## <a name="see-also"></a>另请参阅  
+ [Connection 对象（ADO）](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [ConnectionString 属性（ADO）](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
+ [ConnectionTimeout 属性（ADO）](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)   
  [State 属性 (ADO)](../../../ado/reference/ado-api/state-property-ado.md)
