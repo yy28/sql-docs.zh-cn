@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4b090e92912c67256034c3c634465fcb99f404f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097081"
 ---
-# <a name="version-property-wmi-msreportserverinstance"></a>Version 属性 (WMI MSReportServer_Instance)
+# <a name="version-property-wmi-msreportserver_instance"></a>Version 属性 (WMI MSReportServer_Instance)
   以格式 Major.Minor.Build.Revision 返回报表服务器的版本。 只读。  
   
 ## <a name="syntax"></a>语法  
@@ -39,9 +39,9 @@ public string Version;
  [MSReportServer_ConfigurationSetting 类](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>要求  
- **命名空间:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **命名空间：**[!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [MSReportServer_Instance 成员](msreportserver-instance-members.md)  
   
   

@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 56a9c380b8cc88202cdcb4c4dca54aab2d1fa4a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102399"
 ---
 # <a name="upload-a-file-or-report-report-manager"></a>上载文件或报表（报表管理器）
@@ -38,20 +38,20 @@ ms.locfileid: "66102399"
   
 2.  在报表管理器中，导航到 **“内容”** 页。 导航到要向其中添加项的文件夹。  
   
-3.  单击 **“上载文件”** 。  
+3.  单击 **“上载文件”**。  
   
 4.  单击 **“浏览”** 以选择要上载的文件。 可以上载报表定义文件、图像、文档或任何要在报表服务器上可用的文件。  
   
-5.  键入新项的名称。 项名称可以包括空格，但不能包括保留字符: ; ? : \@ & = + , $ / * \< > |.  
+5.  键入新项的名称。 项名称可以包括空格，但不能包括保留字符: ; ? ： \@ & = +，$/* \< > |。  
   
-6.  若要用新项替换现有项，请选择 **“如果该项已存在，则覆盖该项”** 。  
+6.  若要用新项替换现有项，请选择 **“如果该项已存在，则覆盖该项”**。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [创建、删除或修改共享数据源（报表管理器）](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [“内容”页（报表管理器）](../contents-page-report-manager.md)   
- [“上传文件”页（报表管理器）](../upload-file-page-report-manager.md)   
+## <a name="see-also"></a>另请参阅  
+ [创建、删除或修改共享数据源 &#40;报表管理器&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ ["内容" 页 &#40;报表管理器&#41;](../contents-page-report-manager.md)   
+ [报表管理器 &#40;上传文件页&#41;](../upload-file-page-report-manager.md)   
  [将文件上载到文件夹](../report-server/upload-files-to-a-folder.md)  
   
   

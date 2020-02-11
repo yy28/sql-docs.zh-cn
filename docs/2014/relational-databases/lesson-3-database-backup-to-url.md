@@ -1,5 +1,5 @@
 ---
-title: 第 4 课：在 Azure 存储中创建数据库 |Microsoft Docs
+title: 第4课：在 Azure 存储中创建数据库 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ee331966984a12d309e71a7040edac6343e296c6
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175626"
 ---
 # <a name="lesson-4-create-a-database-in-azure-storage"></a>第 4 课：在 Azure 存储中创建数据库
-  在本课中, 您将学习如何使用 Azure 中的 SQL Server 数据文件功能创建数据库。 注意，开始学习本课之前，必须先学完第 1、2 和 3 课。 第3课是一个非常重要的步骤, 因为你需要在第4课之前将有关 Azure 存储容器及其关联的策略名称和 SAS 密钥的信息存储在 SQL Server 凭据存储中。  
+  在本课中，您将学习如何使用 Azure 中的 SQL Server 数据文件功能创建数据库。 注意，开始学习本课之前，必须先学完第 1、2 和 3 课。 第3课是一个非常重要的步骤，因为你需要在第4课之前将有关 Azure 存储容器及其关联的策略名称和 SAS 密钥的信息存储在 SQL Server 凭据存储中。  
   
- 对于数据或日志文件使用的每个存储容器，都必须创建一个 SQL Server 凭据，其名称与容器路径相同。 然后, 你可以在 Azure 存储中创建新的数据库  
+ 对于数据或日志文件使用的每个存储容器，都必须创建一个 SQL Server 凭据，其名称与容器路径相同。 然后，你可以在 Azure 存储中创建新的数据库  
   
  本课假定您已完成以下步骤：  
   
@@ -32,7 +32,7 @@ ms.locfileid: "70175626"
   
 -   已在源计算机上创建了 SQL Server 凭据。  
   
- 若要使用 "Azure 存储中的 SQL Server 数据文件" 功能在 Azure 中创建数据库, 请执行以下步骤:  
+ 若要使用 "Azure 存储中的 SQL Server 数据文件" 功能在 Azure 中创建数据库，请执行以下步骤：  
   
 1.  连接到 SQL Server Management Studio。  
   
@@ -71,13 +71,13 @@ ms.locfileid: "70175626"
   
 5.  若要查看本地 SQL Server 上的新 TestDB1，请在对象资源管理器中刷新数据库。  
   
-6.  同样，若要查看在存储帐户中新建的数据库，请通过 SQL Server Management Studio (SSMS) 连接到存储帐户。 有关如何使用 SQL Server Management Studio 连接到 Azure 存储的信息, 请执行以下步骤:  
+6.  同样，若要查看在存储帐户中新建的数据库，请通过 SQL Server Management Studio (SSMS) 连接到存储帐户。 有关如何使用 SQL Server Management Studio 连接到 Azure 存储的信息，请执行以下步骤：  
   
     1.  首先，获取存储帐户信息。 登录到管理门户。 然后，单击 **“存储”** 并选择您的存储帐户。 选择存储帐户后，单击页面底部的 **“管理访问密钥”** 。 此操作将打开一个类似的对话框窗口：  
   
          ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-1.gif "SQL 14 CTP2")  
   
-    2.  将 "**存储帐户名称**" 和 "**主访问密钥**" 值复制到 SSMS 中的 "**连接到 Azure 存储**" 对话框窗口。 然后，单击 **“连接”** 。 此操作将有关存储帐户容器的信息提供给 SSMS，如下面的屏幕快照所示：  
+    2.  将 "**存储帐户名称**" 和 "**主访问密钥**" 值复制到 SSMS 中的 "**连接到 Azure 存储**" 对话框窗口。 然后单击 **“连接”**。 此操作将有关存储帐户容器的信息提供给 SSMS，如下面的屏幕快照所示：  
   
          ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-2.gif "SQL 14 CTP2")  
   
@@ -85,11 +85,11 @@ ms.locfileid: "70175626"
   
  ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-2b.gif "SQL 14 CTP2")  
   
- **注意：** 如果对容器中的数据文件有任何活动引用, 则删除关联 SQL Server 凭据的任何尝试都会失败。 同样，如果在 blob 中的特定数据库文件上已有租约并且要删除它，则需要先中断 blob 上的租约。 若要中断租约，可以使用 [租约 Blob](https://msdn.microsoft.com/library/azure/ee691972.aspx)。  
+ **注意：** 如果对容器中的数据文件有任何活动引用，则删除关联 SQL Server 凭据的任何尝试都会失败。 同样，如果在 blob 中的特定数据库文件上已有租约并且要删除它，则需要先中断 blob 上的租约。 若要中断租约，可以使用 [租约 Blob](https://msdn.microsoft.com/library/azure/ee691972.aspx)。  
   
- 可使用此项新功能配置 SQL Server，以使任何 CREATE DATABASE 语句都默认使用支持云的数据库。 换句话说, 你可以在 SQL Server Management Studio 服务器实例属性中设置默认数据和日志位置, 因此, 在创建数据库时, 所有数据库文件 (.mdf, .ldf) 都作为页 blob 创建在 Azure 存储中。  
+ 可使用此项新功能配置 SQL Server，以使任何 CREATE DATABASE 语句都默认使用支持云的数据库。 换句话说，你可以在 SQL Server Management Studio 服务器实例属性中设置默认数据和日志位置，因此，在创建数据库时，所有数据库文件（.mdf，.ldf）都作为页 blob 创建在 Azure 存储中。  
   
- 若要使用 SQL Server Management Studio 用户界面在 Azure 存储中创建数据库, 请执行以下步骤:  
+ 若要使用 SQL Server Management Studio 用户界面在 Azure 存储中创建数据库，请执行以下步骤：  
   
 1.  在对象资源管理器中，连接到一个 SQL Server 数据库引擎实例，然后展开该实例。  
   
@@ -111,6 +111,6 @@ ms.locfileid: "70175626"
   
  **下一课：**  
   
- [第5课。&#40;可选&#41;使用 TDE 加密数据库](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)  
+ [第5课。&#40;可选&#41; 使用 TDE 加密数据库](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)  
   
   

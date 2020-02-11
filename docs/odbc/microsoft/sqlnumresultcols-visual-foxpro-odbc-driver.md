@@ -13,20 +13,20 @@ ms.assetid: a83d826c-6908-4115-b6e6-4d0615ff1738
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bfd6dcec9295f6d0c0874b60c32e8a552b56c065
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68002269"
 ---
 # <a name="sqlnumresultcols-visual-foxpro-odbc-driver"></a>SQLNumResultCols（Visual FoxPro ODBC 驱动程序）
 > [!NOTE]  
->  本主题包含 Visual FoxPro ODBC 驱动程序特定信息。 有关此函数的常规信息，请参阅下的相应主题[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)。  
+>  本主题包含特定于 Visual FoxPro ODBC 驱动程序的信息。 有关此函数的常规信息，请参阅[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)中的相应主题。  
   
  支持：完全  
   
  ODBC API 一致性：核心级别  
   
- 在结果集游标中返回列的数。  
+ 返回结果集游标中的列数。  
   
- 有关详细信息，请参阅[SQLNumResultCols](../../odbc/reference/syntax/sqlnumresultcols-function.md)中*ODBC 程序员参考*。
+ 有关详细信息，请参阅*ODBC 程序员参考*中的[SQLNumResultCols](../../odbc/reference/syntax/sqlnumresultcols-function.md) 。

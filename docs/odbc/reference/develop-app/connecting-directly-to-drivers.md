@@ -16,20 +16,20 @@ ms.assetid: f86e198f-a088-4401-9106-aa62a0eb8f6e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 44b9de304069849e965fc335e130ae57d9ec8bad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083157"
 ---
 # <a name="connecting-directly-to-drivers"></a>直接连接到驱动程序
-如已中所述[选择数据源或驱动程序](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)前面在本部分中，某些应用程序不希望在所有使用数据源。 相反，他们想要直接连接到驱动程序。 **SQLDriverConnect**为应用程序直接连接到驱动程序而无需指定数据源提供的方法。 从概念上讲，在运行时创建的临时数据源。  
+正如本部分前面所述，[选择数据源或驱动程序](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)中所述，某些应用程序根本不想使用数据源。 相反，他们需要直接连接到驱动程序。 **SQLDriverConnect**为应用程序提供了一种无需指定数据源即可直接连接到驱动程序的方法。 从概念上讲，在运行时创建临时数据源。  
   
- 若要直接连接到驱动程序，该应用程序应指定**驱动程序**而不是在连接字符串中的关键字**DSN**关键字。 值**驱动程序**关键字与返回的驱动程序的说明**SQLDrivers**。 例如，假设驱动程序已说明 Paradox 驱动程序，并需要包含数据文件的目录的名称。 若要连接到此驱动程序，应用程序可以使用以下连接字符串之一：  
+ 若要直接连接到驱动程序，应用程序需在连接字符串中指定**driver**关键字，而不是**DSN**关键字。 **Driver**关键字的值是**SQLDrivers**返回的驱动程序的说明。 例如，假设驱动程序具有说明 Paradox 驱动程序，并且需要包含数据文件的目录的名称。 若要连接到此驱动程序，应用程序可以使用以下任一连接字符串：  
   
 ```  
 DRIVER={Paradox Driver};Directory=C:\PARADOX;  
 DRIVER={Paradox Driver};  
 ```  
   
- 与第一个字符串，该驱动程序不需要任何其他信息。 使用第二个字符串，该驱动程序需要提示输入包含数据文件的目录的名称。
+ 对于第一个字符串，驱动程序不需要任何其他信息。 对于第二个字符串，驱动程序需要提示输入包含数据文件的目录的名称。

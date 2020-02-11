@@ -1,5 +1,5 @@
 ---
-title: 初始化测试用例 (OracleToSQL) |Microsoft Docs
+title: 初始化测试用例（OracleToSQL） |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,31 +11,31 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: ae6a7bbeb70ae53280877a1f88a006743eea0655
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68264372"
 ---
 # <a name="initializing-test-cases-oracletosql"></a>初始化测试用例 (OracleToSQL)
-在此步骤中指定新的测试用例的初始信息。  
+在此步骤中，您将为新的测试用例指定初始信息。  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>parameters  
 **测试用例名称**  
-输入用于标识测试用例的名称。  
+输入名称以标识测试用例。  
   
 **创建日期**  
 今天的当前日期，自动定义。  
   
-**上次修改的日期**  
-填充自动保存功能。不应更改。  
+**上次修改日期**  
+自动填充;不应更改。  
   
-**测试用例说明**  
+**测试用例描述**  
 输入任何其他信息以确定测试用例的用途。  
   
 ## <a name="next-step"></a>下一步  
-[选择并配置测试的对象&#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
+[选择并配置要测试 &#40;OracleToSQL&#41;的对象](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
   
-## <a name="see-also"></a>请参阅  
-[测试迁移的数据库对象&#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+## <a name="see-also"></a>另请参阅  
+[测试迁移的数据库对象 &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

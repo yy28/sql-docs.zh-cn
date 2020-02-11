@@ -15,13 +15,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 63ac5bf29ca441a18be4bc5e46448475b56104bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100301"
 ---
-# <a name="design-view"></a>“设计”视图
+# <a name="design-view"></a>设计视图
   使用“设计”视图可以排列报表中的报表项。 设计视图有时称为设计图面或布局视图。  
   
 ## <a name="report-design-surface"></a>报表设计图面  
@@ -50,7 +50,7 @@ ms.locfileid: "66100301"
 ## <a name="properties-pane"></a>“属性”窗格  
  使用“属性”窗格可以查看设计图面上当前所选的报表项或“分组”窗格中的当前所选组。 另外，也可以右键单击所选报表项或组，然后单击“属性”打开报表项或组的相应“属性”对话框   。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [页眉和页脚（报表生成器和 SSRS）](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [报表设计提示（报表生成器和 SSRS）](../report-design/report-design-tips-report-builder-and-ssrs.md)  
   

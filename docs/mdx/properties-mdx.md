@@ -1,5 +1,5 @@
 ---
-title: 属性 (MDX) |Microsoft Docs
+title: 属性（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 9a9aa2ab3fbfdbe10246e0dcf8758cfcf7732375
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893677"
 ---
 # <a name="properties-mdx"></a>Properties (MDX)
@@ -35,16 +35,16 @@ Member_Expression.Properties(Property_Name [, TYPED])
  成员属性名称的有效字符串表达式。  
   
 ## <a name="remarks"></a>备注  
- **Properties**函数返回指定成员属性的指定成员的值。 成员属性可以是任何内部成员属性, 如**NAME**、 **ID**、 **KEY**或**CAPTION**, 也可以是用户定义的成员属性。 有关详细信息, 请参阅[内部成员&#40;属性&#41; mdx](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties)和[用户定义成员属性&#40;mdx&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties)。  
+ **Properties**函数返回指定成员属性的指定成员的值。 成员属性可以是任何内部成员属性，如**NAME**、 **ID**、 **KEY**或**CAPTION**，也可以是用户定义的成员属性。 有关详细信息，请参阅[&#40;mdx&#41;的内部成员属性](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties)和[用户定义的成员属性 &#40;mdx&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties)。  
   
- 默认情况下，将该值强迫为一个字符串。 如果指定了**类型化**, 则返回值为强类型。  
+ 默认情况下，将该值强迫为一个字符串。 如果指定了**类型化**，则返回值为强类型。  
   
 -   如果属性是内部的，则函数返回成员的原始类型。  
   
--   如果属性类型是用户定义的, 则返回值的类型与**MemberValue**函数的返回值的类型相同。  
+-   如果属性类型是用户定义的，则返回值的类型与**MemberValue**函数的返回值的类型相同。  
   
 > [!NOTE]  
->  Properties ('Key') 返回与 Key0 相同的结果，但组合键除外。 Properties ('Key') 将为组合键返回 null。 将 Key*x*语法用于组合键, 如示例中所示。 Properties('Key0')、Properties('Key1')、Properties('Key2') 等共同构成了组合键。  
+>  Properties ('Key') 返回与 Key0 相同的结果，但组合键除外。 Properties ('Key') 将为组合键返回 null。 将 Key*x*语法用于组合键，如示例中所示。 Properties('Key0')、Properties('Key1')、Properties('Key2') 等共同构成了组合键。  
   
 ## <a name="example"></a>示例  
  下例既返回内部属性也返回用户定义成员属性，并且利用 TYPED 参数返回“星期几”成员属性的强类型值。  
@@ -104,8 +104,8 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>请参阅  
- [使用成员属性 (MDX)](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties)   
- [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;MDX&#41;使用成员属性](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties)   
+ [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

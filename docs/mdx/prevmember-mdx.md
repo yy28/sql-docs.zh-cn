@@ -1,5 +1,5 @@
 ---
-title: PrevMember (MDX) |Microsoft Docs
+title: PrevMember （MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e5aa91ac2ab5b4056a693535c19a9e250a865dd0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68020661"
 ---
 # <a name="prevmember-mdx"></a>PrevMember (MDX)
@@ -32,10 +32,10 @@ Member_Expression.PrevMember
  返回成员的有效多维表达式 (MDX)。  
   
 ## <a name="remarks"></a>备注  
- **PrevMember**函数返回与指定的成员相同的级别上一个成员。  
+ **PrevMember**函数返回与指定成员位于同一级别的上一个成员。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示使用一个简单查询**PrevMember**函数行轴上显示之前的当前成员的成员的名称：  
+ 下面的示例显示一个简单查询，该查询使用**PrevMember**函数来显示紧靠在行轴上的当前成员之前的成员的名称：  
   
  `WITH MEMBER MEASURES.PREVMEMBERDEMO AS`  
   
@@ -47,7 +47,7 @@ Member_Expression.PrevMember
   
  `FROM [Adventure Works]`  
   
- 以下示例返回分销商的销售上一时间段内，根据用户选择了使用聚合函数计算的 State-province 成员值的计数。 **Hierarchize**并**DrillDownLevel**函数用于返回 Product 维度中产品类别的销售额下降值。 **PrevMember**函数用于比较当前的时间段与上一个时期。  
+ 下面的示例根据用 Aggregate 函数计算、用户选择的 State-Province 成员值，返回上一个时期销售额下滑的分销商的计数。 **Hierarchize**和**DrillDownLevel**函数用于为 "产品" 维度中的产品类别的销售额返回值。 **PrevMember**函数用于将当前时间段与上一个时间段进行比较。  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS   
@@ -75,7 +75,7 @@ WHERE ([Geography].[State-Province].x,
     [Measures].[Declining Reseller Sales])  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

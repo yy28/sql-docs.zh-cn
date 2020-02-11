@@ -1,5 +1,5 @@
 ---
-title: SQLTables | Microsoft Docs
+title: SQLTables |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,29 +15,29 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8209bf586e5a0b288b4975869ee8903a73a27f06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188672"
 ---
 # <a name="sqltables"></a>SQLTables
-  SQLTables 可以对静态服务器游标执行。 尝试对可更新的 （动态或键集） 游标执行 SQLTables 将返回 sql_success_with_info 以指示游标类型已更改。  
+  可以对静态服务器游标执行 SQLTables。 尝试对可更新的（动态或键集）游标执行 SQLTables 时，将返回 SQL_SUCCESS_WITH_INFO，指示游标类型已更改。  
   
- SQLTables 报告来自所有表数据库何时*CatalogName*参数为 SQL_ALL_CATALOGS 并且所有其他参数包含默认值 （NULL 指针）。  
+ SQLTables 在*CatalogName*参数 SQL_ALL_CATALOGS 并且所有其他参数都包含默认值（NULL 指针）时，报告所有数据库中的表。  
   
- 若要报告可用目录、 架构和表类型，SQLTables 能够特殊使用空字符串 （长度为零字节的指针）。 空字符串不是默认值（NULL 指针）。  
+ 若要报告可用的目录、架构和表类型，SQLTables 使用空字符串（长度为零字节的指针）。 空字符串不是默认值（NULL 指针）。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序通过接受由两部分名称来支持链接服务器上的表报告信息*CatalogName*参数：*Linked_Server_Name.Catalog_Name*。  
+ Native Client ODBC 驱动程序通过接受由两部分组成的*CatalogName*参数的名称来支持链接服务器上表的报告信息： *Linked_Server_Name。 Catalog_Name。* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
- SQLTables 返回任何信息的表的名称匹配*TableName*和当前用户所拥有的。  
+ SQLTables 返回其名称与*TableName*匹配并且由当前用户拥有的所有表的相关信息。  
   
 ## <a name="sqltables-and-table-valued-parameters"></a>SQLTables 和表值参数  
- 如果语句属性 SQL_SOPT_SS_NAME_SCOPE 具有值 SQL_SS_NAME_SCOPE_TABLE_TYPE，而不是其默认值 SQL_SS_NAME_SCOPE_TABLE，SQLTables 返回有关表类型的信息。 SQLTables 返回的结果集的第 4 列中为表类型返回的 TABLE_TYPE 值是表类型。 有关 SQL_SOPT_SS_NAME_SCOPE 的详细信息，请参阅[SQLSetStmtAttr](sqlsetstmtattr.md)。  
+ 如果语句特性 SQL_SOPT_SS_NAME_SCOPE 的值 SQL_SS_NAME_SCOPE_TABLE_TYPE，而不是其默认值 SQL_SS_NAME_SCOPE_TABLE，则 SQLTables 将返回有关表类型的信息。 SQLTables 返回的结果集的第4列中表类型返回的 TABLE_TYPE 值为表类型。 有关 SQL_SOPT_SS_NAME_SCOPE 的详细信息，请参阅[SQLSetStmtAttr](sqlsetstmtattr.md)。  
   
  表、视图和同义词共享公用的命名空间，该命名空间不同于表类型使用的命名空间。 虽然表和视图不能具有相同的名称，但是在相同目录和架构中的表和表类型可以具有相同的名称。  
   
- 有关表值参数的详细信息，请参阅[表值参数&#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
+ 有关表值参数的详细信息，请参阅[ODBC&#41;&#40;表值参数](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
   
 ## <a name="example"></a>示例  
   
@@ -53,7 +53,7 @@ SQLTables(hstmt, (SQLCHAR*) "%", SQL_NTS, (SQLCHAR*)"", 0, (SQLCHAR*)"",
     0, NULL, 0);  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQLTables 函数](https://go.microsoft.com/fwlink/?LinkId=59374)   
  [ODBC API 实现细节](odbc-api-implementation-details.md)  
   

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 90418193ac869641a20f8b0f684fc43dd46712f8
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175992"
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>使用“添加 Azure 副本向导”(SQL Server)
@@ -28,12 +28,12 @@ ms.locfileid: "70175992"
   
      [安全性](#Security)  
   
--   **要添加副本，请使用：**  [添加 Azure 副本向导 (SQL Server Management Studio)](#SSMSProcedure)  
+-   **若要添加副本，请使用：**  [添加 Azure 副本向导（SQL Server Management Studio）](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
- 如果你从未向可用性组添加过任何可用性副本，请参阅[针对 AlwaysOn 可用性组&#40;SQL Server&#41;的先决条件、限制和建议](prereqs-restrictions-recommendations-always-on-availability.md)中的 "服务器实例" 和 "可用性组和副本" 部分。  
+ 如果你从未向可用性组添加过任何可用性副本，请参阅[针对 AlwaysOn 可用性组 &#40;SQL Server&#41;的先决条件、限制和建议](prereqs-restrictions-recommendations-always-on-availability.md)中的 "服务器实例" 和 "可用性组和副本" 部分。  
   
-###  <a name="Prerequisites"></a> 先决条件  
+###  <a name="Prerequisites"></a>先决条件  
   
 -   您必须连接到承载当前主副本的服务器实例。  
   
@@ -43,16 +43,16 @@ ms.locfileid: "70175992"
   
 -   到可用性组侦听器的客户端必须具有 Internet 连接，才能在可用性组故障转移到 Azure 副本时保持与侦听器的连接。  
   
--   **使用完全初始数据同步的先决条件** 为了使该向导创建并访问备份，需要指定网络共享。 对于主副本，用于启动 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 的帐户必须对网络共享具有读写文件系统权限。 对于辅助副本，该帐户必须具有对网络共享区的读权限。  
+-   **使用完全初始数据同步的先决条件**你需要指定网络共享以便向导创建和访问备份。 对于主副本，用于启动 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 的帐户必须对网络共享具有读写文件系统权限。 对于辅助副本，该帐户必须具有对网络共享区的读权限。  
   
-     如果您无法使用该向导执行完全初始数据同步，则需要手动准备您的辅助数据库。 您可以在运行该向导之前或之后进行准备。 有关详细信息，请参阅[手动为可用性组准备辅助数据库 (SQL Server)](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)。  
+     如果您无法使用该向导执行完全初始数据同步，则需要手动准备您的辅助数据库。 您可以在运行该向导之前或之后进行准备。 有关详细信息，请参阅 [为可用性组手动准备辅助数据库 (SQL Server)](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 权限  
  请参阅 [Security](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md#Security)  
   
-##  <a name="SSMSProcedure"></a> 使用“添加 Azure 副本向导”(SQL Server Management Studio)  
+##  <a name="SSMSProcedure"></a>使用 "添加 Azure 副本向导" （SQL Server Management Studio）  
  可以从 [“指定副本”页](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md)启动“添加 Azure 副本向导”。 有两种方法可以打开此页：  
   
 -   [使用可用性组向导 (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)  
@@ -61,15 +61,15 @@ ms.locfileid: "70175992"
   
  启动“添加 Azure 副本向导”后，按以下步骤操作：  
   
-1.  首先，为你的 Azure 订阅下载管理证书。 单击 **“下载”** 打开登录页面。  
+1.  首先，为你的 Azure 订阅下载管理证书。 单击“下载”**** 打开登录页面。  
   
 2.  在登录页中，登录到 Azure 订阅。 登录后，向导会在您的本地计算机上安装管理证书。 下次使用此向导时会自动加载此管理证书。 如果您下载了多个管理证书，可以单击 **“...”** 按钮选择要使用的证书。  
   
-3.  然后单击 **“连接”** 连接到您的订阅。 连接后，下拉列表用 Azure 参数进行填充，例如“虚拟网络”和“虚拟网络子网”。  
+3.  然后单击 **“连接”** 连接到您的订阅。 连接后，下拉列表用 Azure 参数进行填充，例如“虚拟网络”**** 和“虚拟网络子网”****。  
   
 4.  为将承载新辅助副本的 Azure 虚拟机指定设置：  
   
-     图像  
+     映像  
      要用于 Azure 虚拟机的 SQL Server 映像的名称  
   
      VM 大小  
@@ -96,7 +96,7 @@ ms.locfileid: "70175992"
      域用户名  
      用于将 Azure 虚拟机联接到域的 AD 用户名  
   
-     “密码”  
+     密码  
      用于将 Azure 虚拟机联接到域的密码  
   
 5.  单击 **“确定”** 提交设置并退出“添加 Azure 副本向导”。  
@@ -110,8 +110,8 @@ ms.locfileid: "70175992"
 -   [将辅助副本添加到可用性组 (SQL Server)](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [ &#40;AlwaysOn 可用性组 SQL Server&#41;  概述](overview-of-always-on-availability-groups-sql-server.md)  
- [ &#40;AlwaysOn 可用性组 SQL Server&#41;的先决条件、限制和建议](prereqs-restrictions-recommendations-always-on-availability.md)   
+ [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 可用性组 &#40;SQL Server 的先决条件、限制和建议&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [将辅助副本添加到可用性组 (SQL Server)](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
   

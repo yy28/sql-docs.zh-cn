@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a00800150f5f100f97687df59bc4603f07d0fcc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62679818"
 ---
 # <a name="selective-xml-indexes-sxi"></a>选择性 XML 索引 (SXI)
@@ -123,7 +123,7 @@ FOR
   
 -   对具有二进制 XS 类型的节点建立索引：例如 base64Binary 和 hexBinary。  
   
--   使用在末尾包含通配符 `*` 的 XPath 表达式指定要建立索引的节点：例如，`/a/b/c/*`、`/a//b/*` 或 `/a/b/*:c`。  
+-   使用在末尾包含通配符 `*` 的 XPath 表达式指定要建立索引的节点：例如  `/a/b/c/*`、 `/a//b/*`或 `/a/b/*:c`。  
   
 -   对子级、属性或后代以外的任何轴建立索引。 `//<step>` 的情况允许作为特例。  
   
@@ -133,7 +133,7 @@ FOR
   
 
   
-###  <a name="prereq"></a> 先决条件  
+###  <a name="prereq"></a>先决条件  
  必须首先满足以下先决条件，然后才能对用户表中的 XML 列创建选择性 XML 索引：  
   
 -   聚集索引必须存在于用户表的主键上。  

@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5c2818c322749672c514cd9d392b61b580d40e88
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62869899"
 ---
-# <a name="mssqlserver14420"></a>MSSQLSERVER_14420
+# <a name="mssqlserver_14420"></a>MSSQLSERVER_14420
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62869899"
 |符号名称|SQLErrorNum14420|  
 |消息正文|日志传送主数据库 %s.%s 的备份阈值为 %d 分钟，在过去的 %d 分钟之内未执行备份日志操作。 请查看代理日志和日志传送监视器信息。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  日志传送在超出备份阈值的情况下不同步。 备份阈值是生成警报之前在日志传送备份作业之间允许等待的分钟数。 此消息并不一定表示日志传送存在问题。 相反，此消息可能表示存在以下问题之一：  
   
 -   备份作业未运行。 导致此问题的可能原因包括：主服务器实例上的 SQL Server 代理服务未运行、作业被禁用或作业的计划已更改。  
@@ -57,11 +57,11 @@ ms.locfileid: "62869899"
     > [!NOTE]  
     >  两个服务器实例的时区不同不会引发问题。  
   
-## <a name="see-also"></a>请参阅  
- [log_shipping_monitor_primary &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/log-shipping-monitor-primary-transact-sql)   
+## <a name="see-also"></a>另请参阅  
+ [log_shipping_monitor_primary &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/log-shipping-monitor-primary-transact-sql)   
  [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [sp_help_log_shipping_monitor_primary &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-primary-transact-sql)   
- [sp_refresh_log_shipping_monitor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql)   
+ [sp_help_log_shipping_monitor_primary &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-primary-transact-sql)   
+ [sp_refresh_log_shipping_monitor &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql)   
  [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   
   

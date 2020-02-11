@@ -1,5 +1,5 @@
 ---
-title: sysmail_faileditems (TRANSACT-SQL) |Microsoft Docs
+title: sysmail_faileditems （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,53 +18,53 @@ ms.assetid: a31562c5-358e-4cfc-a72d-b3faccc53851
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 586727c86dca057abeb221c828720ea38e24d7b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68060216"
 ---
-# <a name="sysmailfaileditems-transact-sql"></a>sysmail_faileditems (Transact-SQL)
+# <a name="sysmail_faileditems-transact-sql"></a>sysmail_faileditems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  有关与每个数据库邮件消息中对应一行**失败**状态。 使用该视图可确定未成功发送的消息。  
+  对于状态为 "**失败**" 的每个数据库邮件消息都包含一行。 使用该视图可确定未成功发送的消息。  
   
- 若要查看数据库邮件处理的所有消息，请使用[sysmail_allitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)。 若要仅查看未发送的消息，请使用[sysmail_unsentitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md)。 若要查看已发送的消息，请使用[sysmail_sentitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md)。 若要查看电子邮件附件，请使用[sysmail_mailattachments &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)。  
+ 若要查看数据库邮件处理的所有消息，请使用[sysmail_allitems &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)。 若要仅查看未发送的消息，请使用[&#40;transact-sql&#41;sysmail_unsentitems ](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md)。 若要仅查看已发送的消息，请使用[&#40;transact-sql&#41;sysmail_sentitems ](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md)。 若要查看电子邮件附件，请使用[&#40;transact-sql&#41;sysmail_mailattachments ](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|邮件队列中邮件项的标识符。|  
 |**profile_id**|**int**|提交消息所用配置文件的标识符。|  
-|**收件人**|**varchar(max)**|消息收件人的电子邮件地址。|  
+|**recipients**|**varchar(max)**|消息收件人的电子邮件地址。|  
 |**copy_recipients**|**varchar(max)**|接收消息副本的用户的电子邮件地址。|  
 |**blind_copy_recipients**|**varchar(max)**|接收消息副本但其姓名未出现在消息标头中的用户的电子邮件地址。|  
-|**subject**|**nvarchar(510)**|消息的主题行。|  
-|**正文**|**varchar(max)**|消息的正文。|  
-|**body_format**|**varchar(20)**|消息正文的格式。 可能值为 TEXT 和 HTML。|  
-|**importance**|**varchar(6)**|**重要性**消息参数。|  
-|**敏感度**|**varchar(12)**|**敏感度**消息参数。|  
+|**主题**|**nvarchar （510）**|消息的主题行。|  
+|**大量**|**varchar(max)**|消息正文。|  
+|**body_format**|**varchar （20）**|消息正文的格式。 可能值为 TEXT 和 HTML。|  
+|**仅次于**|**varchar （6）**|消息的**重要性**参数。|  
+|**程度**|**varchar （12）**|消息的**敏感度**参数。|  
 |**file_attachments**|**varchar(max)**|附加到电子邮件中的文件名列表，以分号分隔。|  
-|**Attachment_encoding**|**varchar(20)**|邮件附件的类型。|  
-|**“数据集属性”**|**varchar(max)**|邮件程序所执行的查询。|  
+|**Attachment_encoding**|**varchar （20）**|邮件附件的类型。|  
+|**查询**|**varchar(max)**|邮件程序所执行的查询。|  
 |**execute_query_database**|**sysname**|邮件程序在其中执行查询的数据库上下文。|  
 |**attach_query_result_as_file**|**bit**|如果该值为 0，则查询结果包含在电子邮件的正文中，在正文的内容之后。 如果该值为 1，则结果作为附件返回。|  
-|**query_result_header**|**bit**|如果值为 1，则查询结果包含列标题。 值为 0 时，查询结果并不包括列标题。|  
-|**query_result_width**|**int**|**Query_result_width**消息参数。|  
-|**query_result_separator**|**char(1)**|用于分隔查询输出中的各列的字符。|  
-|**exclude_query_output**|**bit**|**Exclude_query_output**消息参数。 有关详细信息，请参阅[sp_send_dbmail &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md)。|  
-|**append_query_error**|**bit**|**Append_query_error**消息参数。 0 指示如果查询中存在错误，则数据库邮件不应发送电子邮件。|  
+|**query_result_header**|**bit**|如果值为1，则查询结果包含列标题。 如果该值为0，则查询结果不包括列标题。|  
+|**query_result_width**|**int**|消息的**query_result_width**参数。|  
+|**query_result_separator**|**char （1）**|用于分隔查询输出中的各列的字符。|  
+|**exclude_query_output**|**bit**|消息的**exclude_query_output**参数。 有关详细信息，请参阅[&#40;transact-sql&#41;sp_send_dbmail ](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md)。|  
+|**append_query_error**|**bit**|消息的**append_query_error**参数。 0 指示如果查询中存在错误，则数据库邮件不应发送电子邮件。|  
 |**send_request_date**|**datetime**|将消息放在邮件队列中的日期和时间。|  
 |**send_request_user**|**sysname**|提交消息的用户。 这是数据库邮件过程的用户上下文，不是邮件的“发件人:”字段。|  
 |**sent_account_id**|**int**|发送消息所用数据库邮件帐户的标识符。 对于该视图，始终为 NULL。|  
-|**sent_status**|**varchar(8)**|邮件的状态。 始终**失败**此视图。|  
+|**sent_status**|**varchar （8）**|邮件的状态。 此视图始终**失败**。|  
 |**sent_date**|**datetime**|从邮件队列中删除消息的日期和时间。|  
 |**last_mod_date**|**datetime**|上次修改行的日期和时间。|  
 |**last_mod_user**|**sysname**|上次修改行的用户。|  
   
 ## <a name="remarks"></a>备注  
- 使用**sysmail_faileditems**视图，以查看通过数据库邮件未发送的消息。 排除数据库邮件故障时，该视图可以向您显示未发送的消息的属性，从而帮助您确定问题的性质。 若要查看失败的原因，请参阅中的失败消息的条目[sysmail_event_log &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)视图。  
+ 使用 " **sysmail_faileditems** " 视图可以查看数据库邮件未发送哪些消息。 排除数据库邮件故障时，该视图可以向您显示未发送的消息的属性，从而帮助您确定问题的性质。 若要查看失败的原因，请参阅[sysmail_event_log &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)视图中失败消息的条目。  
   
 ## <a name="permissions"></a>权限  
- 授予**sysadmin**固定的服务器角色和**databasemailuserrole**数据库角色。 成员执行时**sysadmin**固定服务器角色，此视图显示所有失败的消息。 所有其他用户仅可查看他们已提交的失败的消息。  
+ 授予**sysadmin**固定服务器角色和**databasemailuserrole**数据库角色。 当由**sysadmin**固定服务器角色的成员执行时，此视图将显示所有失败的消息。 所有其他用户仅可查看他们已提交的失败的消息。  
   
   

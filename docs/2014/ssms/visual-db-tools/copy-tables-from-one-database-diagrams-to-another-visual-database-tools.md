@@ -1,5 +1,5 @@
 ---
-title: 将表从一个数据库关系图复制到另一个 (Visual Database Tools) |Microsoft Docs
+title: 将表从一个数据库关系图复制到另一个数据库关系图（Visual Database Tools） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d1b0d70a5d8121963d424f25eef517af7cde4ba7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62720071"
 ---
 # <a name="copy-tables-from-one-database-diagrams-to-another-visual-database-tools"></a>将表从一个数据库关系图复制到另一个数据库关系图 (Visual Database Tools)
@@ -39,8 +39,8 @@ ms.locfileid: "62720071"
   
  当在任一关系图中编辑该表时，所做更改将同时反映在这两个关系图中。 同样，在任一关系图中保存表之后，在任一关系图中都不再将该表视为“已修改”。  
   
-## <a name="see-also"></a>请参阅  
- [使用数据库关系图&#40;可视化数据库工具&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>另请参阅  
+ [使用数据库关系图 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [向关系图中添加表 (Visual Database Tools)](add-tables-to-diagrams-visual-database-tools.md)  
   
   

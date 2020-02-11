@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e22e47af568ecf723b54a35fb6b83bd5ce74e333
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060772"
 ---
 # <a name="configure-checkpoints-for-restarting-a-failed-package"></a>配置检查点以重新启动失败的包
@@ -28,11 +28,11 @@ ms.locfileid: "66060772"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，打开要配置的包所在的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。  
   
-2.  在“解决方案资源管理器”中，双击该包将其打开。  
+2.  在**解决方案资源管理器**中，双击该包将其打开。  
   
 3.  单击 **“控制流”** 选项卡。  
   
-4.  右键单击控制流设计图面背景中的任意位置，然后单击“属性”。  
+4.  右键单击控制流设计图面背景中的任意位置，然后单击“属性”****。  
   
 5.  将 SaveCheckpoints 属性设置为`True`。  
   
@@ -49,11 +49,11 @@ ms.locfileid: "66060772"
   
 8.  配置包可以从中重新启动的任务和容器。  
   
-    -   右键单击任务或容器，然后单击“属性”。  
+    -   右键单击任务或容器，然后单击“属性”****。  
   
-    -   将 FailPackageOnFailure 属性设置为`True`每个所选任务和容器。  
+    -   将每个所选`True`任务和容器的 FailPackageOnFailure 属性设置为。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [通过使用检查点重新启动包](packages/restart-packages-by-using-checkpoints.md)  
   
   

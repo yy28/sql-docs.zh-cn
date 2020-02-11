@@ -1,5 +1,5 @@
 ---
-title: 序列和 Qname (XQuery) |Microsoft Docs
+title: Sequence 和 QNames （XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,10 +18,10 @@ ms.assetid: 3593ac26-dd78-4bf0-bb87-64fbcac5f026
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: fbb20c9e14c4e76b8862a23e8d758fcbba94da7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946340"
 ---
 # <a name="sequence-and-qnames-xquery"></a>序列和 QName (XQuery)
@@ -52,7 +52,7 @@ WHERE ProductModelID=7;
   
 ```  
   
- 下面是结果：  
+ 结果如下：  
   
 ```  
 <step1> Step 1 description goes here </step1>  
@@ -101,7 +101,7 @@ SELECT @x.query('<x>11</x>, 22');
 ## <a name="qname"></a>QName  
  XQuery 中的每个标识符都是一个 QName。 QName 由一个命名空间前缀和一个本地名称组成。 在这样的实现中，XQuery 中的变量名是 QNames，它们不能带有前缀。  
   
- 请考虑下面的示例指定了一个查询对非类型化**xml**变量：  
+ 请考虑以下示例，其中针对非类型化的**xml**变量指定了查询：  
   
 ```  
 DECLARE @x xml;  
@@ -111,7 +111,7 @@ SELECT @x.query('/Root/a');
   
  在表达式 (`/Root/a`) 中，`Root` 和 `a` 是 QNames。  
   
- 在以下示例中，指定一个查询针对类型化**xml**列。 该查询循环访问所有\<步骤 > 元素的第一个工作中心位置。  
+ 在下面的示例中，对类型化的**xml**列指定了一个查询。 查询将在第一个\<workcenter 位置上循环访问所有步骤> 元素。  
   
 ```  
 SELECT Instructions.query('  
@@ -126,9 +126,12 @@ WHERE ProductModelID=7;
   
  在查询表达式中，注意下列事项：  
   
--   `AWMI root`、`AWMI:Location`、`AWMI:step` 和 `$Step` 都是 QNames。 `AWMI` 是一个前缀，`root`、`Location` 和 `Step` 都是本地名称。  
+-   
+  `AWMI root`、`AWMI:Location`、`AWMI:step` 和 `$Step` 都是 QNames。 
+  `AWMI` 是一个前缀，`root`、`Location` 和 `Step` 都是本地名称。  
   
--   `$step` 变量是一个 QName 并且没有前缀。  
+-   
+  `$step` 变量是一个 QName 并且没有前缀。  
   
  已经预定义了下列命名空间，以便与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 XQuery 支持一起使用。  
   
@@ -143,12 +146,12 @@ WHERE ProductModelID=7;
 |xml|`http://www.w3.org/XML/1998/namespace`|  
 |（无前缀）|`https://schemas.microsoft.com/sqlserver/2004/SOAP`|  
   
- 创建每个数据库有**sys** XML 架构集合。 它包含着这些架构，以便可以从任何用户创建的 XML 架构集合中访问这些架构。  
+ 你创建的每个数据库都有**sys** XML 架构集合。 它包含着这些架构，以便可以从任何用户创建的 XML 架构集合中访问这些架构。  
   
 > [!NOTE]  
->  此实现不支持`local`前缀中的 XQuery 规范中所述 http://www.w3.org/2004/07/xquery-local-functions 。  
+>  此实现不支持`local`前缀，如的 XQuery 规范中http://www.w3.org/2004/07/xquery-local-functions所述。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [XQuery 基础知识](../xquery/xquery-basics.md)  
   
   

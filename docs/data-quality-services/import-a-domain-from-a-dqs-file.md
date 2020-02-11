@@ -10,10 +10,10 @@ ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: f0a79169b3ee192af278aeb4465fb13d7a311783
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251590"
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>从 .dqs 文件导入域
@@ -26,14 +26,14 @@ ms.locfileid: "75251590"
   
  在导入域时，域名称仍保持与最初导出的域的名称相同，除非域名称已经存在，在此情况下 DQS 将在此名称之后追加“_1”。 如果导入的复合域包含与现有域同名的单个域，则上述命名规则也适用。  
   
-##  <a name="BeforeYouBegin"></a>开始之前  
+##  <a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Prerequisites"></a>先决条件  
  若要从 .dqs 文件导入域，必须已将一个单一域或一个复合域（包含多个单一域）导出到 .dqs 文件。 .dqs 文件必须只包含一个域。 您还必须已创建并打开了要将域导入到其中的知识库。  
   
-###  <a name="Security"></a>安全  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>访问  
+####  <a name="Permissions"></a> 权限  
  您必须具有 DQS_MAIN 数据库的 dqs_kb_editor 或 dqs_administrator 角色，才能从 .dqs 数据文件导入域。  
   
 ##  <a name="Import"></a>从 dqs 文件导入域  

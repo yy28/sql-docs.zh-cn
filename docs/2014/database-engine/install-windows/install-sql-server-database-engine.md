@@ -1,5 +1,5 @@
 ---
-title: 有关 SQL Server 数据库引擎 |Microsoft Docs
+title: 关于 SQL Server 数据库引擎 |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -13,18 +13,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6373f67d40b9da97f652f3bcb05b3414deab5c8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779358"
 ---
 # <a name="about-the-sql-server-database-engine"></a>关于 SQL Server 数据库引擎
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件是用于存储、处理数据和保证数据安全的核心服务。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 提供受控的访问和快速事务处理，以满足企业中要求极高、大量使用数据的应用程序的要求。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持在同一台计算机上最多存在 50 个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。 若要创建典型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装，请参阅[从安装向导安装 SQL Server 2014&#40;安装&#41;](install-sql-server-from-the-installation-wizard-setup.md)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持在同一台计算机上最多存在 50 个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。 若要创建典型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装，请参阅安装[向导中的安装 SQL Server 2014 &#40;安装&#41;](install-sql-server-from-the-installation-wizard-setup.md)。  
   
- **重要提示** 对于本地安装，必须以管理员身份运行安装程序。 如果从远程共享安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则必须使用对远程共享具有读取和执行权限的域帐户。  
+ **重要提示**对于本地安装，必须以管理员身份运行安装程序。 如果从远程共享安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则必须使用对远程共享具有读取和执行权限的域帐户。  
   
  在 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导的“要安装的组件”页上选择** 数据库引擎” [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，将安装下列功能：  
   
@@ -58,11 +58,11 @@ ms.locfileid: "62779358"
 > [!NOTE]  
 >  默认情况下，不会将示例数据库和示例代码作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序的一部分进行安装。 若要安装示例数据库和示例代码，请参阅 [CodePlex 网站](https://go.microsoft.com/fwlink/?LinkId=87843)。  
   
-## <a name="see-also"></a>请参阅  
- [SQL Server 2014 的版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
+## <a name="see-also"></a>另请参阅  
+ [SQL Server 2014 的各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [SQL Server 2014 的版本和组件](../../sql-server/editions-and-components-of-sql-server-2016.md)   
  [计划 SQL Server 安装](../../sql-server/install/planning-a-sql-server-installation.md)   
  [高可用性解决方案 (SQL Server)](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   
- [升级到 SQL Server 2014 使用安装向导&#40;安装程序&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)  
+ [使用安装向导 &#40;安装程序升级到 SQL Server 2014&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
   

@@ -14,11 +14,11 @@ ms.assetid: 1c47bfac-7455-4487-b673-6b47d2a2d756
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2e0880e1746b4b65070fb28bf8d83aadec301aa4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138181"
 ---
 # <a name="arithmetic-errors"></a>算术错误
-ODBC 驱动程序评估中的 SELECT 语句的 WHERE 子句，如提取每个行。 如果行包含一个值，将导致算术错误，例如被零除或数值溢出时，驱动程序将返回所有行，但都返回列的算术错误的错误。 当插入或更新，但是，ODBC 驱动程序将停止插入或更新数据时遇到的第一个算术错误。
+ODBC 驱动程序会在 SELECT 语句中的 WHERE 子句提取每一行时对其进行求值。 如果某行包含的值导致算术错误（如被零除或数值溢出），则驱动程序将返回所有行，但对于出现算术错误的列返回错误。 但是，在插入或更新时，ODBC 驱动程序会在遇到第一个算术错误时停止插入或更新数据。

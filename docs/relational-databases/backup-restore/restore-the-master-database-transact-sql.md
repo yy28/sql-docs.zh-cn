@@ -13,10 +13,10 @@ ms.assetid: c83d802c-e84e-4458-b3ca-173d9ba32f73
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6ce115a0df8ca77b37a78234247174ca9f2dd006
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041467"
 ---
 # <a name="restore-the-master-database-transact-sql"></a>还原 master 数据库 (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68041467"
   
 1.  在单用户模式下启动服务器实例。  
   
-     有关如何指定单一用户启动参数 (**-m**) 的信息，请参阅[配置服务器启动选项（SQL Server 配置管理器）](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)。  
+     有关如何指定单一用户启动参数 ( **-m**) 的信息，请参阅[配置服务器启动选项（SQL Server 配置管理器）](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)。  
   
 2.  若要还原 **master**的完整数据库备份，请使用以下 [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句：  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68041467"
  下面的示例将在默认服务器实例上还原 `master` 数据库。 该示例假定服务器实例是在单用户模式下运行。 该示例启动 `sqlcmd` 并执行 `RESTORE DATABASE` 语句，以便从磁盘设备 `master` 还原 `Z:\SQLServerBackups\master.bak`的完整数据库备份。  
   
 > [!NOTE]  
->  对于命名实例，**sqlcmd** 命令必须指定 **-S**_\<ComputerName>_\\*\<InstanceName>* 选项。  
+>  对于命名实例，**sqlcmd** 命令必须指定 **-S** _\<ComputerName>_ \\ *\<InstanceName>* 选项。  
   
 ```  
   

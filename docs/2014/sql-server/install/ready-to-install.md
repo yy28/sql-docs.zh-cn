@@ -1,5 +1,5 @@
 ---
-title: 已准备好安装 |Microsoft Docs
+title: 准备安装 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e2bb9829f49f8ce777e98e3e43191a29466fc8c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093262"
 ---
 # <a name="ready-to-install"></a>准备安装
@@ -28,13 +28,13 @@ ms.locfileid: "66093262"
 ## <a name="options"></a>选项  
  此页上有下列选项：  
   
--   若要继续安装，请单击 **“安装”** 。  
+-   若要继续安装，请单击 **“安装”**。  
   
--   若要更改安装设置，请单击 **“上一步”** 。  
+-   若要更改安装设置，请单击 **“上一步”**。  
   
--   若要退出安装程序，请单击 **“取消”** 。  
+-   若要退出安装程序，请单击 **“取消”**。  
   
-## <a name="see-also"></a>请参阅  
- [查看和阅读 SQL Server 安装程序日志文件](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
+## <a name="see-also"></a>另请参阅  
+ [查看和读取 SQL Server 安装程序日志文件](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

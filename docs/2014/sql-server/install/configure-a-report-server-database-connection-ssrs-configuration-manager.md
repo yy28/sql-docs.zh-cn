@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 8b6f1fa1697898432479b524659383d81fc8836a
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952633"
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>配置报表服务器数据库连接（SSRS 配置管理器）
@@ -42,11 +42,12 @@ ms.locfileid: "71952633"
   
  报表服务器数据库为内部组件，只有报表服务器可以访问。 为报表服务器数据库指定的凭据和连接信息专门由报表服务器使用。 请求报表的用户不需要拥有报表服务器数据库的数据库权限或数据库登录名。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用 `System.Data.SqlClient` 连接到承载报表服务器数据库的[!INCLUDE[ssDE](../../includes/ssde-md.md)]。 如果使用的是 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的本地实例，报表服务器将使用共享内存建立连接。 如果使用的是报表服务器数据库的远程数据库服务器，则可能必须根据所使用的版本启用远程连接。 如果使用的是 Enterprise Edition，则默认情况下会启用 TCP/IP 远程连接。  
+ 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用 `System.Data.SqlClient` 连接到承载报表服务器数据库的[!INCLUDE[ssDE](../../includes/ssde-md.md)]。 如果使用的是 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的本地实例，报表服务器将使用共享内存建立连接。 如果使用的是报表服务器数据库的远程数据库服务器，则可能必须根据所使用的版本启用远程连接。 如果使用的是 Enterprise Edition，则默认情况下会启用 TCP/IP 远程连接。  
   
- 若要验证实例是否接受远程连接，请依次单击“开始”、“所有程序”、 **、“配置工具”、“SQL Server 配置管理器”，然后确认为每个服务启用了 TCP/IP 协议**[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]。  
+ 若要验证实例是否接受远程连接，请依次单击“开始”、“所有程序”、**、“配置工具”、“SQL Server 配置管理器”，然后确认为每个服务启用了 TCP/IP 协议******[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]********。  
   
- 启用远程连接时，也会启用客户端协议和服务器协议。 若要确认协议已启用，请依次单击 **“开始”** 、 **“所有程序”** 、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **“配置工具”** 、 **“SQL Server 配置管理器”** 、 **“SQL Server 网络配置”** ，再单击 **“MSSQLSERVER 协议”** 。 有关详细信息，请参阅 [联机丛书中的](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md) 启用或禁用服务器网络协议 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+ 启用远程连接时，也会启用客户端协议和服务器协议。 若要确认协议已启用，请依次单击 **“开始”**、 **“所有程序”**、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **“配置工具”**、 **“SQL Server 配置管理器”**、 **“SQL Server 网络配置”**，再单击 **“MSSQLSERVER 协议”**。 有关详细信息，请参阅 [联机丛书中的](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md) 启用或禁用服务器网络协议 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="defining-a-report-server-database-connection"></a>定义报表服务器数据库连接  
  若要配置连接，您必须使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器工具或 **rsconfig** 命令行实用工具。 报表服务器需要以下连接信息：  
@@ -62,7 +63,8 @@ ms.locfileid: "71952633"
  必须为所提供的凭据授予访问报表服务器数据库的权限。 如果使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具，则此步骤会自动执行。 有关访问数据库所需权限的详细信息，请参阅本主题中的“数据库权限”一节。  
   
 ### <a name="storing-database-connection-information"></a>存储数据库连接信息  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 在下列 RSreportserver.config 设置中存储和加密连接信息。 必须使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具或 rsconfig 实用工具为这些设置创建加密值。  
+ 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 在下列 RSreportserver.config 设置中存储和加密连接信息。 必须使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具或 rsconfig 实用工具为这些设置创建加密值。  
   
  并非所有的值都针对每一种连接类型进行了设置。 如果使用默认值配置连接（即使用服务帐户进行连接），则 <`LogonUser`>、<`LogonDomain`> 和 <`LogonCred`> 将为空，如下所示：  
   
@@ -83,7 +85,8 @@ ms.locfileid: "71952633"
   
 -   Windows 用户帐户。 如果报表服务器和报表服务器数据库安装在同一台计算机上，则可以使用本地帐户。 否则，必须使用域帐户。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
   
 > [!NOTE]  
 >  不能使用自定义身份验证扩展插件来连接到报表服务器数据库。 自定义身份验证扩展插件只能用来对报表服务器的主体进行身份验证。 它们不会影响报表服务器数据库的连接，也不会影响为报表提供内容的外部数据源的连接。  
@@ -106,9 +109,9 @@ ms.locfileid: "71952633"
 ### <a name="database-permissions"></a>数据库权限  
  用来连接到报表服务器数据库的帐户被授予了以下角色：  
   
--   **ReportServer** 数据库的 **public** 和 **RSExecRole** 角色。  
+-   **ReportServer**数据库的**public**和**RSExecRole**角色。  
   
--   **master** 、 **msdb**和 **ReportServerTempDB**数据库的 **RSExecRole** 角色。  
+-   **Master**、 **msdb**和**ReportServerTempDB**数据库的**RSExecRole**角色。  
   
  使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具创建或修改连接时，将自动授予这些权限。 如果使用 rsconfig 实用工具并且要为该连接指定不同的帐户，则必须为该新帐户更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 可以在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具中创建用来更新报表服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的脚本文件。  
   

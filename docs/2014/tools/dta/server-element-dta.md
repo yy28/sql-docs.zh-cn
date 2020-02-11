@@ -1,5 +1,5 @@
 ---
-title: 服务器元素 (DTA) |Microsoft Docs
+title: Server 元素（DTA） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f6c73db809e81cc9b6d1ee182227078a83688384
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63273432"
 ---
 # <a name="server-element-dta"></a>服务器元素 (DTA)
@@ -36,7 +36,7 @@ ms.locfileid: "63273432"
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|Description|  
+|特征|说明|  
 |--------------------|-----------------|  
 |**数据类型和长度**|无。|  
 |**默认值**|无。|  
@@ -50,7 +50,7 @@ ms.locfileid: "63273432"
 |**子元素**|[服务器的名称元素 (DTA)](name-element-for-server-dta.md)<br /><br /> [服务器的数据库元素 (DTA)](database-element-for-server-dta.md)|  
   
 ## <a name="remarks"></a>备注  
- 您可以指定只有一个`Server`元素`DTAInput`元素。 在 DTA XML 架构中，该元素的名称为 **ServerDetailsTypecomplexType** 。 请不要将此 `Server` 元素与 `Configuration` 元素的子元素混淆。 有关详细信息，请参阅[用于配置的服务器元素 (DTA)](server-element-for-configuration-dta.md)。  
+ 只能为`DTAInput`元素指定一个`Server`元素。 在 DTA XML 架构中，该元素的名称为 **ServerDetailsTypecomplexType** 。 请不要将此 `Server` 元素与 `Configuration` 元素的子元素混淆。 有关详细信息，请参阅[用于配置的服务器元素 (DTA)](server-element-for-configuration-dta.md)。  
   
 ## <a name="example"></a>示例  
  以下示例说明如何在 SERVER001 的 **AdventureWorks** 数据库中指定 **Sales.SalesPerson** 表：  
@@ -70,7 +70,7 @@ ms.locfileid: "63273432"
 </Server  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [XML 输入文件引用（数据库引擎优化顾问）](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

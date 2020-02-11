@@ -15,18 +15,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 34744bedb701155d2695f6efc5aab3c493e6cf48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011262"
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>OLE 自动化返回代码和错误信息
-  OLE 自动化系统存储过程返回一个 `int` 返回代码，该代码是基础 OLE 自动化操作返回的 HRESULT。 HRESULT 为 0 表示成功。 非零的 HRESULT 是 OLE 错误代码为十六进制 0x800*nnnnn*，但是当作为`int`中的存储的过程返回代码的 HRESULT 值具有的形式为 214*nnnnnnn*。  
+  OLE 自动化系统存储过程返回一个 `int` 返回代码，该代码是基础 OLE 自动化操作返回的 HRESULT。 HRESULT 为 0 表示成功。 非零 HRESULT 是十六进制形式 0x800*nnnnn*的 OLE 错误代码，但在存储过程返回代码中`int`作为值返回时，HRESULT 的形式为 214*nnnnnnn*。  
   
- 例如，传递一个无效的对象名 (SQLDMO。Xyzzy) 为 sp_OACreate 将使该过程返回`int`的 2147221005，为 0x800401f3 十六进制的 HRESULT。  
+ 例如，传递无效对象名称（SQLDMO）。Sqldmo.xyzzy）到 sp_OACreate 会导致过程返回2147221005的`int` HRESULT，这是0x800401f3 的十六进制。  
   
- 可以使用 `CONVERT(binary(4), @hresult)` 将 `int` HRESULT 转换为 `binary` 值。 但是，使用 `CONVERT(char(10), CONVERT(binary(4), @hresult))` 将产生一个不可读的字符串，因为 HRESULT 的每个字节都被转换成一个 ASCII 字符。 可以使用以下示例 HexToChar 存储过程来转换`int`HRESULT 转换`char`值，该值包含可读十六进制字符串。  
+ 可以使用 `CONVERT(binary(4), @hresult)` 将 `int` HRESULT 转换为 `binary` 值。 但是，使用 `CONVERT(char(10), CONVERT(binary(4), @hresult))` 将产生一个不可读的字符串，因为 HRESULT 的每个字节都被转换成一个 ASCII 字符。 您可以使用以下示例 HexToChar 存储过程将`int` HRESULT 转换为包含可读`char`十六进制字符串的值。  
   
 ```  
 USE AdventureWorks2012;  

@@ -16,18 +16,18 @@ ms.assetid: c8f6fbcb-6675-4133-b37e-430de43949c1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cdce4c7b08a8b15cdb0a9ee1111a216aeef005bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924435"
 ---
 # <a name="recordset-positioning"></a>记录集定位
-使用**AbsolutePosition**属性将移动到一条记录，基于其序号位置**记录集**对象，或者想要确定当前记录的序号位置。 提供程序必须支持相应的功能，此属性才可用。  
+使用**AbsolutePosition**属性可以根据其在**Recordset**对象中的序号位置移动到记录，或确定当前记录的序号位置。 提供程序必须支持适当的功能，此属性才可用。  
   
- **AbsolutePosition**是基于 1 的和等于 1 时的当前记录中的第一个记录**记录集**。 正如前面提到的可以获取的中的记录总数**记录集**对象从**RecordCount**属性。  
+ **AbsolutePosition**从1开始，在当前记录是**记录集**的第一条记录时等于1。 如前所述，您可以从**RecordCount**属性中获取记录**集**对象中的记录总数。  
   
- 当您将设置**AbsolutePosition**属性，即使它是与当前缓存中的记录 ADO 重新加载缓存，通过从指定的记录的记录的新组。 **CacheSize**属性来确定此组的大小。  
+ 设置**AbsolutePosition**属性时，即使该属性是对当前缓存中的记录的设置，ADO 也将使用您指定的记录开头的一组新记录重新加载缓存。 **CacheSize**属性确定此组的大小。  
   
 > [!NOTE]
->  不应使用**AbsolutePosition**属性作为代理项记录号。 在给定的记录发生更改时删除前一条记录的位置。 此外没有给定的记录将具有相同不保证**AbsolutePosition**如果**记录集**重新查询对象或将其重新打开。 书签是推荐的方法来保留和返回到给定位置而且这是唯一的定位跨所有类型的方法**记录集**对象。
+>  不应将**AbsolutePosition**属性用作代理项记录号。 删除前面的记录后，给定记录的位置会发生更改。 如果重新查询或重新打开**Recordset**对象，则不保证给定记录将具有相同的**AbsolutePosition** 。 建议使用书签保留并返回到给定位置，这是在所有类型的**Recordset**对象中定位的唯一方法。

@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 63c877d9b9275ef482591f6345715569a25c5e2a
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67285015"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>内存使用情况的监视和故障排除
@@ -23,7 +23,7 @@ ms.locfileid: "67285015"
  本主题介绍如何监视 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 内存使用量。  
   
   
-##  <a name="bkmk_CreateDB"></a> 使用内存优化表创建示例数据库  
+##  <a name="bkmk_CreateDB"></a>使用内存优化表创建示例数据库  
  如果您已具有含内存优化表的数据库，则可以跳过此部分。  
   
  以下步骤将创建一个数据库，其中包含您可在本主题的其余部分中使用的三个内存优化表。 在该示例中，我们将该数据库映射到了一个资源池，以便我们可以控制内存优化表可使用的内存量。  
@@ -113,7 +113,7 @@ ms.locfileid: "67285015"
 ##  <a name="monitoring-memory-usage"></a>监视内存使用量  
   
 ###  <a name="using-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]  
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 附随内置的标准报表，以便监视内存中表使用的内存。 您可以使用 [此处](https://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx)所述的对象资源管理器访问这些报表。 还可使用对象资源管理器监视单独的内存优化表占用的内存。  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]附带内置的标准报表，用于监视内存中表使用的内存。 您可以使用 [此处](https://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx)所述的对象资源管理器访问这些报表。 还可使用对象资源管理器监视单独的内存优化表占用的内存。  
   
 #### <a name="consumption-at-the-database-level"></a>数据库级别的内存使用情况  
  您可以按如下所示在数据库级别监视内存使用情况。  
@@ -122,7 +122,7 @@ ms.locfileid: "67285015"
   
 2.  在对象资源管理器中，右键单击您要报告的数据库。  
   
-3.  在上下文菜单中，选择“报表” -> “标准报表” -> “内存优化对象的内存使用情况”  
+3.  在上下文菜单中，选择 "**报告** -> **标准报表** -> " "**内存优化对象的内存使用**情况"  
   
  ![HK_MM_SSMS](../../database-engine/media/hk-mm-ssms-stdrpt-memuse.gif "HK_MM_SSMS")  
   
@@ -157,7 +157,7 @@ NULL       -3          0                             0                       2  
 NULL       -2          192                           25                      16                              16  
 ```  
   
- 有关详细信息，请参阅[sys.dm_db_xtp_table_memory_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql?view=sql-server-2016)。  
+ 有关详细信息，请参阅[sys. dm_db_xtp_table_memory_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql?view=sql-server-2016)。  
   
 #### <a name="memory-consumption-by-internal-system-structures"></a>内部系统结构的内存使用情况  
  系统对象也会使用内存，例如事务结构、针对数据和差异文件的缓冲区以及垃圾回收结构等。 您可以通过按如下所示查询 `sys.dm_xtp_system_memory_consumers` ，查找用于这些系统对象的内存。  
@@ -230,9 +230,9 @@ memory_object_address pages_ in_bytes bytes_used type
 0x00000001F813E040    16842752            NULL       MEMOBJ_XTPBLOCKALLOC  
 ```  
   
- 有关详细信息，请参阅[sys.dm_os_memory_objects (TRANSACT-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql)。  
+ 有关详细信息，请参阅[sys. dm_os_memory_objects （transact-sql）](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql)。  
   
-#### <a name="memory-consumed-by-includehek2includeshek-2-mdmd-engine-across-the-instance"></a>跨实例的 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 引擎使用的内存  
+#### <a name="memory-consumed-by-includehek_2includeshek-2-mdmd-engine-across-the-instance"></a>跨实例的 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 引擎使用的内存  
  管理分配给 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 引擎和内存优化对象的内存的方式与管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例内任何其他内存消耗者的方式完全相同。 MEMORYCLERK_XTP 类型的内存分配器计算分配给 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 引擎的所有内存。 使用下面的查询可查找 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 引擎使用的所有内存。  
   
 ```sql  
@@ -256,7 +256,7 @@ MEMORYCLERK_XTP      DB_ID_5    0              1358
 MEMORYCLERK_XTP      Default    64             0  
 ```  
   
- 有关详细信息，请参阅[sys.dm_os_memory_clerks (TRANSACT-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql)。  
+ 有关详细信息，请参阅[sys. dm_os_memory_clerks （transact-sql）](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql)。  
   
 ##   <a name="managing-memory-consumed-by-memory-optimized-objects"></a>管理内存优化对象使用的内存  
  你可以按主题 [将具有内存优化表的数据库绑定至资源池](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)中所述，通过将内存优化表绑定到一个命名的资源池，控制内存优化表所占用的总内存。  
@@ -270,8 +270,8 @@ MEMORYCLERK_XTP      Default    64             0
   
 3.  可采取相应措施来缓解潜在的内存问题。 有关详细信息，请参阅[解决内存不足问题](resolve-out-of-memory-issues.md)。  
   
-## <a name="see-also"></a>请参阅  
- [将具有内存优化表的数据库绑定至资源池](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
+## <a name="see-also"></a>另请参阅  
+ [数据库与资源池绑定的指南，请参阅主题](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [更改现有池的 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#change-min-memory-percent-and-max-memory-percent-on-an-existing-pool)
   
   

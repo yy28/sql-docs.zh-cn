@@ -1,5 +1,5 @@
 ---
-title: sys.dm_cryptographic_provider_algorithms (TRANSACT-SQL) |Microsoft Docs
+title: sys. dm_cryptographic_provider_algorithms （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,18 +19,18 @@ ms.assetid: 8bcccb37-5cfb-4e1e-a0bb-7ff4c279fe8e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 49748a98ac221af17f7ce5a197bf24a08d1269a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68121015"
 ---
-# <a name="sysdmcryptographicprovideralgorithms-transact-sql"></a>sys.dm_cryptographic_provider_algorithms (Transact-SQL)
+# <a name="sysdm_cryptographic_provider_algorithms-transact-sql"></a>sys.dm_cryptographic_provider_algorithms (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  返回可扩展密钥管理 (EKM) 提供程序支持的算法。  
+  返回可扩展密钥管理（EKM）提供程序支持的算法。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,10 +45,10 @@ sys.dm_cryptographic_provider_algorithms ( provider_id )
   
 ## <a name="tables-returned"></a>返回的表  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |algorithm_id|**int**|算法的标识号。|  
-|algorithm_tag|**nvarchar(60)**|算法的标识标记。|  
+|algorithm_tag|**nvarchar （60）**|算法的标识标记。|  
 |key_type|**nvarchar(128)**|显示密钥类型。 返回 ASYMMETRIC KEY 或 SYMMETRIC KEY。|  
 |key_length|**int**|指示密钥长度（以位为单位）。|  
   
@@ -63,8 +63,8 @@ SELECT * FROM sys.dm_cryptographic_provider_algorithms(1234567);
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [可扩展密钥管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
+## <a name="see-also"></a>另请参阅  
+ [可扩展的密钥管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [与安全性相关的动态管理视图和函数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1589f171fd8d402572408186a10b3e6f4ac97982
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107589"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>共享数据集设计视图（报表生成器）
@@ -22,16 +22,16 @@ ms.locfileid: "66107589"
   
  ![rs_SharedDatasetDesignMode](../media/rs-shareddatasetdesignmode.gif "rs_SharedDatasetDesignMode")  
   
- 有关使用报表中的数据的详细信息，请参阅[向报表添加数据&#40;报表生成器和 SSRS&#41;](../report-data/report-datasets-ssrs.md)。  
+ 有关使用报表中的数据的详细信息，请参阅[将数据添加到报表 &#40;报表生成器和 SSRS&#41;](../report-data/report-datasets-ssrs.md)。  
   
-##  <a name="Ribbon"></a> 功能区  
- 功能区可帮助您快速查找完成任务所需的命令。 命令分为以下逻辑组：连接、 数据集和查询设计器。  
+##  <a name="Ribbon"></a>功能区  
+ 功能区可帮助您快速查找完成任务所需的命令。 命令通过以下逻辑组进行组织：连接、数据集和查询设计器。  
   
 ### <a name="connection"></a>连接  
  在“连接”组中使用 **“选择”** 按钮可以选择报表中的共享数据源，或浏览到报表服务器上的共享数据源。  
   
 > [!NOTE]  
->  共享数据集必须基于共享数据源。 如果您需要的数据源不可用，那么您必须在报表服务器上创建一个数据源。 有关详细信息，请参阅[创建、 删除或修改共享数据源&#40;报表管理器&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md) Reporting Services 文档中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][联机丛书](https://go.microsoft.com/fwlink/?linkid=121312)。  
+>  共享数据集必须基于共享数据源。 如果您需要的数据源不可用，那么您必须在报表服务器上创建一个数据源。 有关详细信息，请参阅[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][联机丛书](https://go.microsoft.com/fwlink/?linkid=121312)中的 Reporting Services 文档中的[创建、删除或修改共享数据源 &#40;报表管理器&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md) 。  
   
  有关详细信息，请参阅 [数据连接、数据源和连接字符串](../data-connections-data-sources-and-connection-strings-in-report-builder.md)。  
   
@@ -52,27 +52,27 @@ ms.locfileid: "66107589"
   
  有关详细信息，请参阅 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
   
- 有关缓存刷新计划的详细信息，请参阅[缓存共享数据集&#40;SSRS&#41; ](../report-server/cache-shared-datasets-ssrs.md) Reporting Services 文档中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][联机丛书](https://go.microsoft.com/fwlink/?linkid=121312)。  
+ 有关缓存刷新计划的详细信息，请参阅[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [联机丛书](https://go.microsoft.com/fwlink/?linkid=121312)中 Reporting Services 文档中的[&#40;SSRS&#41;缓存共享数据集](../report-server/cache-shared-datasets-ssrs.md)。  
   
 ### <a name="query-designer"></a>查询设计器  
  使用查询设计器工具栏可以帮助您生成用于指定要通过数据连接检索的数据的查询。 您看到的工具栏取决于与通过数据连接获得的数据源类型相关联的查询设计器。  
   
- 有关详细信息，请参阅中的数据源类型相对应的主题[从外部数据源中添加数据&#40;SSRS&#41; ](../report-data/add-data-from-external-data-sources-ssrs.md)并[查询设计器&#40;报表生成器&#41;](../query-designers-report-builder.md).  
+ 有关详细信息，请参阅[从外部数据源添加数据 &#40;SSRS&#41;](../report-data/add-data-from-external-data-sources-ssrs.md)和[查询设计器 &#40;报表生成器&#41;](../query-designers-report-builder.md)中对应于数据源类型的主题。  
   
 
   
-##  <a name="DesignSurface"></a> 查询设计器图面  
+##  <a name="DesignSurface"></a>查询设计器图面  
  查询设计器可帮助您使用外部数据源所要求的语法来生成查询。  
   
  有些数据源类型提供了图形查询设计器，您可以使用这些设计器来浏览外部数据源中的元数据。 您还可以通过互动方式将名称从元数据窗格拖动到查询设计图面，或通过互动方式选择要使用的名称。  
   
  有些数据源类型支持基于文本的查询设计器，你可以使用此类查询设计器粘贴已在其他工具（例如 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]）中创建的查询。  
   
- 每种数据源类型都对将针对外部数据源进行的查询有特定的要求。 有关详细信息，请参阅中的数据源类型相对应的主题[从外部数据源中添加数据&#40;SSRS&#41; ](../report-data/add-data-from-external-data-sources-ssrs.md)并[支持的 Reporting Services 数据源&#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) Reporting Services 文档中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][联机丛书](https://go.microsoft.com/fwlink/?linkid=121312)。  
+ 每种数据源类型都对将针对外部数据源进行的查询有特定的要求。 有关详细信息，请参阅[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [联机丛书](https://go.microsoft.com/fwlink/?linkid=121312)中的 "&#41;" 文档中的 "[从外部数据源添加数据" 中 &#40;SSRS&#41;](../report-data/add-data-from-external-data-sources-ssrs.md)和[&#40;Reporting Services 支持的数据源](../create-deploy-and-manage-mobile-and-paginated-reports.md)"中的数据源类型对应的主题。  
   
 
   
-##  <a name="Results"></a> 查看查询结果  
+##  <a name="Results"></a>查看查询结果  
  在共享数据集设计视图中，您要生成一个将在处理报表时通过数据连接检索数据的查询。  
   
  运行此查询可查看通过数据连接获取的示例数据，从而验证该查询是否返回您需要的数据类型。 结果集中的列来自通过数据连接获取的数据架构的元数据。 列名成为数据集字段集合。 您在查询结果集中看到的数据值是设计时数据。 在将共享数据集另存为报表服务器上的共享数据集定义后，仅查询文本得到保存。 查询结果集中的数据不会被保存。  
@@ -86,17 +86,17 @@ ms.locfileid: "66107589"
   
  如果报表中包含参数，则只有在所有参数都具有默认值的情况下，该报表才能自动运行。 如果某个参数没有默认值，当运行报表时，必须为该参数选择一个值，然后在 **“运行”** 选项卡上单击 **“查看报表”** 。  
   
- 有关详细信息，请参阅 [报表参数（报表生成器和报表设计器）](../report-design/report-parameters-report-builder-and-report-designer.md)。  
+ 有关详细信息，请参阅[报表参数 &#40;报表生成器和报表设计器&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)。  
   
 
   
-##  <a name="Save"></a> 保存共享数据集  
- 若要保存生成的查询，请在 **“报表生成器”** 按钮上单击 **“保存”** 或 **“另存为”** 。 导航到报表服务器上的相应文件夹，然后保存共享数据集定义。 在您将共享数据集保存到报表服务器后，其他用户才能使用此共享数据集。  
+##  <a name="Save"></a>保存共享数据集  
+ 若要保存生成的查询，请在 **“报表生成器”** 按钮上单击 **“保存”** 或 **“另存为”**。 导航到报表服务器上的相应文件夹，然后保存共享数据集定义。 在您将共享数据集保存到报表服务器后，其他用户才能使用此共享数据集。  
   
 
   
-## <a name="see-also"></a>请参阅  
- [向报表添加数据&#40;报表生成器和 SSRS&#41;](../report-data/report-datasets-ssrs.md)   
+## <a name="see-also"></a>另请参阅  
+ [将数据添加到报表 &#40;报表生成器和 SSRS&#41;](../report-data/report-datasets-ssrs.md)   
  [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [报表参数（报表生成器和报表设计器）](../report-design/report-parameters-report-builder-and-report-designer.md)  
   

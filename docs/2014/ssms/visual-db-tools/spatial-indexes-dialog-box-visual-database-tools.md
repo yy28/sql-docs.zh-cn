@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 00c5e0017b8d81eaea6960f016e40dbc381e69e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63049131"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>“空间索引”对话框 (Visual Database Tools)
@@ -28,7 +28,7 @@ ms.locfileid: "63049131"
  **所选空间索引**  
  列出现有空间索引。 选择要显示其属性的索引。 如果该列表为空，则表示尚未为该表定义空间索引。  
   
- **“添加”**  
+ **添加**  
  创建一个新的空间索引。  
   
  **删除**  
@@ -66,7 +66,7 @@ ms.locfileid: "63049131"
   
 -   “地理”列的“地理网格”   
   
- **类型**  
+ 类型   
  指示已选择一个空间索引。  
   
  **X 最大值**  
@@ -85,7 +85,7 @@ ms.locfileid: "63049131"
  展开此项可显示“名称”  和“说明”  属性字段。  
   
  **(名称)**  
- 显示空间索引的名称。 在创建一个新索引时，将基于表设计器的活动窗口中的表为其指定一个默认名称。 您可以随时更改该名称。  
+ 显示空间索引的名称。 在创建一个新索引时，将基于表设计器的活动窗口中的表为其指定一个默认名称。 可随时更改名称。  
   
  **说明**  
  说明该索引。 若要编写更详细的说明，请单击“说明”，再单击属性字段右侧显示的省略号按钮 (…)   。 这可以提供一个更大的文本编写区域。  
@@ -115,7 +115,7 @@ ms.locfileid: "63049131"
  **允许行锁定**  
  指定对此索引是否允许行级锁定。 允许或禁用行级锁定会影响数据库性能。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [空间索引概述](../../relational-databases/spatial/spatial-indexes-overview.md)  
   
   

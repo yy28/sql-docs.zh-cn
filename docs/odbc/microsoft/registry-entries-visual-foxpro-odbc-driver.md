@@ -1,5 +1,5 @@
 ---
-title: 注册表项 （Visual FoxPro ODBC 驱动程序） |Microsoft Docs
+title: 注册表项（Visual FoxPro ODBC 驱动程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,44 +16,44 @@ ms.assetid: 1a63d92d-ca3a-46ae-911f-6788292c801e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 00a24ffca764c029b87470b7aa07d15f33b4c673
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67996452"
 ---
 # <a name="registry-entries-visual-foxpro-odbc-driver"></a>注册表项（Visual FoxPro ODBC 驱动程序）
-在安装 Visual FoxPro ODBC 驱动程序时，安装程序更新您的系统注册表中，在注册表项 HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCInst.ini，添加名为 Microsoft Visual FoxPro 驱动程序的新项。 在该注册表项，添加下表中描述的值。  
+安装 Visual FoxPro ODBC 驱动程序时，安装程序会更新系统的注册表，在注册表项 HKEY_LOCAL_MACHINE \SOFTWARE\ODBC\ODBCInst.ini 中，添加一个名为 Microsoft Visual FoxPro 驱动程序的新密钥。 在该注册表项下，将添加下表中描述的值。  
   
-|值名称|值类型|ReplTest1|  
+|值名称|值类型|值|  
 |----------------|----------------|-----------|  
-|APILevel|REG_SZ|"1"|  
+|APILevel|REG_SZ|“1”|  
 |ConnectFunctions|REG_SZ|"YYN"|  
-|驱动程序|REG_SZ|Vfpodbc.dll 文件系统路径|  
+|驱动程序|REG_SZ|Vfpodbc 文件的系统路径|  
 |DriverODBCVer|REG_SZ|"02.50"|  
-|FileExtns|REG_SZ|"*.dbf,\*.cdx,\*.fpt"|  
-|FileUsage|REG_SZ|"1"|  
-|安装|REG_SZ|Vfpodbc.dll 文件系统路径|  
+|FileExtns|REG_SZ|"* .dbf、\*. cdx、\*. fpt"|  
+|FileUsage|REG_SZ|“1”|  
+|安装|REG_SZ|Vfpodbc 文件的系统路径|  
 |SQLLevel|REG_SZ|"0"|  
   
- 安装程序还将添加"Visual FoxPro 文件"，表示默认 Visual FoxPro 驱动程序，到系统的 HKEY_CURRENT_USER\SOFTWARE\ODBC\Odbc.ini 密钥的密钥。 此项下，安装程序将添加下表中描述的值。  
+ 安装程序还会将表示默认 Visual FoxPro 驱动程序的密钥 "视觉 FoxPro 文件" 添加到系统的 HKEY_CURRENT_USER \SOFTWARE\ODBC\Odbc.ini 密钥。 在此项下，安装程序会添加下表中描述的值。  
   
-|值名称|值类型|ReplTest1|  
+|值名称|值类型|值|  
 |----------------|----------------|-----------|  
-|驱动程序|REG_SZ|Vfpodbc.dll 文件系统路径|  
+|驱动程序|REG_SZ|Vfpodbc 文件的系统路径|  
   
- 将 Visual FoxPro ODBC 数据源添加到您的 ODBC 配置，每次添加新的密钥为该数据源名称。 数据源的值中设置的值对应**ODBC Visual FoxPro 设置**对话框，如以下表中列出。  
+ 每次向 ODBC 配置中添加一个 Visual FoxPro ODBC 数据源时，将为该数据源名称添加一个新的键。 数据源的值对应于在 " **ODBC Visual FoxPro 设置**" 对话框中设置的值，如下表所示。  
   
-|值名称 （关键字）|值类型|ReplTest1|  
+|值名称（关键字）|值类型|值|  
 |----------------------------|----------------|-----------|  
-|逐份打印|REG_SQ|任何受支持的排序规则序列|  
-|描述|REG_SZ|数据源的用户说明|  
-|驱动程序||Vfpodbc.dll 文件系统路径|  
+|逐份打印|REG_SQ|任何支持的排序顺序|  
+|说明|REG_SZ|数据源的用户说明|  
+|驱动程序||Vfpodbc 文件的系统路径|  
 |排他||是或否|  
 |BackgroundFetch||是或否|  
-|SourceDB|REG_SZ|路径。DBC 文件|  
-|SourceType|REG_SZ|"DBC"或者"DBF"|  
+|SourceDB|REG_SZ|指向的路径。DBC 文件|  
+|SourceType|REG_SZ|"DBC" 或 "DBF"|  
   
- 不应直接调用访问此信息在添加、 修改或删除数据源时，注册表的任何管理被处理 ODBC 管理器。  
+ 不应直接访问此信息;添加、修改或删除数据源时，ODBC 管理员会处理注册表的任何管理。  
   
- 可以使用其中的某些关键字和值作为中的参数[SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md) ODBC API 函数。
+ 可以在[SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md) ODBC API 函数中将其中一些关键字和值用作参数。

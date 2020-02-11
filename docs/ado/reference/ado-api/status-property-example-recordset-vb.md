@@ -1,5 +1,5 @@
 ---
-title: Status 属性示例 （记录集） (VB) |Microsoft Docs
+title: Status 属性示例（记录集）（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: e37b4d46-380d-4615-b4bb-e1a7b0851771
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f1f418ed4c8ac74a023203606ebf3934129525a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67916796"
 ---
 # <a name="status-property-example-recordset-vb"></a>Status 属性示例（记录集）(VB)
-此示例使用[状态](../../../ado/reference/ado-api/status-property-ado-recordset.md)属性来显示之前发生的批处理更新批处理操作中修改哪些记录。  
+此示例使用[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)属性来显示批处理操作中修改了哪些记录，然后才能进行批处理更新。  
   
 ```  
 'BeginStatusRecordsetVB  
@@ -97,5 +97,5 @@ End Sub
 'EndStatusRecordsetVB  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [Status 属性 （ADO 记录集）](../../../ado/reference/ado-api/status-property-ado-recordset.md)
+## <a name="see-also"></a>另请参阅  
+ [Status 属性（ADO 记录集）](../../../ado/reference/ado-api/status-property-ado-recordset.md)

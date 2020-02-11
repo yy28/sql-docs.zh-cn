@@ -1,5 +1,5 @@
 ---
-title: 未知的服务 （在选项卡上的日志） |Microsoft Docs
+title: 未知服务（"登录" 选项卡） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 686eb039660efb6e3596b9dac88fc0d24deacaee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150530"
 ---
 # <a name="unknown-service-log-on-tab"></a>未知服务（“登录”选项卡）
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器无法识别此服务。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager 无法识别此服务。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器从运行此服务的计算机上的 WMI 提供程序接收服务信息。 读取服务属性时出错，或者服务属性不完整。 若要解决此问题，请尝试关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器并将其重新打开，或者检查运行此服务的计算机上的 WMI 提供程序。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager 从运行该服务的计算机上的 WMI 提供程序接收服务信息。 读取服务属性时出错，或者服务属性不完整。 若要解决此问题，请尝试关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器并将其重新打开，或者检查运行此服务的计算机上的 WMI 提供程序。  
   
- WMI 提供程序是 Windows 组件。 有关如何检查对 WMI 提供程序的权限的信息，请参阅"如何：将 WMI 配置为在 SQL Server 工具中显示服务器状态"SQL Server 联机丛书中。  
+ WMI 提供程序是 Windows 组件。 有关如何检查对 WMI 提供程序的权限的信息，请参阅 SQL Server 联机丛书中的“如何在 SQL Server 工具中将 WMI 配置为显示服务器状态”。  
   
  如果您认为自己查看的服务是正确的，请使用 **“未知服务属性”** 对话框中的 **“登录”** 选项卡，指定此服务使用的帐户，以及启动和停止此服务。  
   
@@ -30,13 +30,13 @@ ms.locfileid: "63150530"
  **本地系统帐户**  
  指定一个不要求输入密码的本地系统帐户。 但是，本地系统帐户可能会阻止该服务与其他服务器进行交互，具体取决于该帐户所拥有的权限。  
   
- **本帐户**  
+ **此帐户**  
  指定一个使用 Windows 身份验证的本地用户帐户或域用户帐户。 建议使用具有最低服务权限的域用户帐户。 有关选择帐户的信息，请参阅 SQL Server 联机丛书中的“设置 Windows 服务帐户”。  
   
  **帐户名**  
  指定本地用户帐户名或域用户帐户名。  
   
- **密码**  
+ **权限**  
  键入帐户的密码。  
   
  **确认密码**  
@@ -45,13 +45,13 @@ ms.locfileid: "63150530"
  **开始**  
  启动服务。  
   
- **停止**  
+ **Stop**  
  停止服务。  
   
- **暂停**  
+ **播放**  
  暂停服务。  
   
- **恢复**  
+ **退出**  
  恢复暂停的服务。  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 例如：设置数据库镜像使用 Windows 身份验证 (Transact SQL) |Microsoft Docs
+title: 示例：使用 Windows 身份验证设置数据库镜像（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,13 +16,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d52e94eb98bfe4e22a2acb879a393d289baf00bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62806822"
 ---
-# <a name="example-setting-up-database-mirroring-using-windows-authentication-transact-sql"></a>例如：设置数据库镜像使用 Windows 身份验证 (Transact SQL)
+# <a name="example-setting-up-database-mirroring-using-windows-authentication-transact-sql"></a>示例：使用 Windows 身份验证设置数据库镜像 (Transact-SQL)
   此示例说明使用 Windows 身份验证来创建带有见证服务器的数据库镜像会话所需的所有阶段。 本主题中的示例使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 注意，可以不使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 步骤，而使用配置数据库镜像安全向导来设置数据库镜像。 有关详细信息，请参阅本主题后面的 [使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](establish-database-mirroring-session-windows-authentication.md)。  
   
 ## <a name="prerequisite"></a>先决条件  
@@ -48,9 +48,9 @@ GO
   
 |初始镜像角色|宿主系统|域用户帐户|  
 |----------------------------|-----------------|-------------------------|  
-|主体|PARTNERHOST1|\<Mydomain>\\<dbousername\> |  
-|镜像|PARTNERHOST5|\<Mydomain>\\<dbousername\> |  
-|Witness|WITNESSHOST4|\<Somedomain>\\<witnessuser\> |  
+|主体|PARTNERHOST1|*\<Mydomain>\\<dbousername\>*|  
+|镜像|PARTNERHOST5|*\<Mydomain>\\<dbousername\>*|  
+|Witness|WITNESSHOST4|*\<Somedomain>\\<witnessuser\>*|  
   
 1.  在主体服务器实例（PARTNERHOST1 中的默认实例）上创建端点。  
   
@@ -115,7 +115,7 @@ GO
     GO  
     ```  
   
-4.  创建镜像数据库。 有关详细信息，请参阅 [为镜像准备镜像数据库 (SQL Server)](prepare-a-mirror-database-for-mirroring-sql-server.md)。  
+4.  创建镜像数据库。 有关详细信息，请参阅 [为镜像准备镜像数据库 (SQL Server)](prepare-a-mirror-database-for-mirroring-sql-server.md)的各版本中均未提供见证服务器实例。  
   
 5.  在 PARTNERHOST5 中的镜像服务器实例上，将 PARTNERHOST1 中的服务器实例设置为伙伴（使它成为初始的主体服务器实例）。  
   
@@ -155,12 +155,12 @@ GO
   
 -   [允许数据库镜像终结点将证书用于入站连接 (Transact-SQL)](database-mirroring-use-certificates-for-inbound-connections.md)  
   
--   [示例：设置数据库镜像使用证书&#40;Transact SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
+-   [示例：使用证书设置数据库镜像 (Transact-SQL)](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
   
-## <a name="see-also"></a>请参阅  
- [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)   
+## <a name="see-also"></a>另请参阅  
+ [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [数据库镜像终结点 (SQL Server)](the-database-mirroring-endpoint-sql-server.md)   
- [传输安全模式的数据库镜像和 AlwaysOn 可用性组&#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
+ [用于数据库镜像和 AlwaysOn 可用性组 &#40;SQL Server 的传输安全&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [当数据库在其他服务器实例上可用时管理元数据 (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [SQL Server 数据库引擎和 Azure SQL Database 的安全中心](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   

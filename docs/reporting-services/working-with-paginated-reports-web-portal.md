@@ -9,10 +9,10 @@ ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0516adde38fc7f6e9cc1b4e20bc9beef76a4df22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68222601"
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>使用分页报表（Web 门户）
@@ -56,7 +56,7 @@ ms.locfileid: "68222601"
     
 ![ssRSWebPortal-report-properties](../reporting-services/media/ssrswebportal-report-properties.png)  
    
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>parameters  
   
 可以修改分页报表的现有参数。 若要添加新参数，必须在报表生成器或 SQL Server Data Tools 中编辑报表。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "68222601"
   
 下列选项用于指定自定义数据源。  
   
-**类型**  
+类型   
   
 指定用于处理数据源中数据的数据处理扩展插件。 有关内置数据扩展插件的列表，请参阅 [Reporting Services 支持的数据源 (SSRS)]。 其他数据处理扩展插件可能由第三方供应商提供。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "68222601"
   
 若要使用此选项，则以前必须为报表服务器配置过无人参与的执行帐户。 当其他凭据源不可用时，可以使用无人参与的执行帐户连接到外部数据源。 如果您指定此选项，但是未配置无人参与的执行帐户，则到报表数据源的连接将失败，而且将不会进行报表处理。 有关此帐户的详细信息，请参阅 [配置无人参与的执行帐户（SSRS 配置管理器）](../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
-## <a name="subscriptions"></a>订阅  
+## <a name="subscriptions"></a>Subscriptions  
 Reporting Services 订阅是一种配置，它在特定时间或为响应某个事件，以指定的文件格式传递报表。 例如，每周三将 MonthlySales.rdl 报表作为 Microsoft Word 文档保存至文件共享。 订阅可以用于对报表的传递（以特定报表参数值集）进行计划并使其自动完成。 有关详细信息，请参阅[使用订阅](working-with-subscriptions-web-portal.md)。
   
 ![ssRSWebPortal-report-subscription1](../reporting-services/media/ssrswebportal-report-subscription1.png)
@@ -179,7 +179,7 @@ Reporting Services 订阅是一种配置，它在特定时间或为响应某个�
   
 您可以通过单击报表历史记录快照来查看它。 报表历史记录中显示的快照只能通过创建的日期和时间来区分。 无法通过直观方式判断出某个快照是为响应计划而生成的还是为响应某个手动操作而生成的。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
 使用“安全属性”页可以查看或修改安全设置，以确定对报表的访问权限。 此页可用于您有权保护的项。  
   
 对项的访问是通过指定某个组或用户可以执行的任务的角色分配来定义的。 角色分配包含一个用户名或组名，以及指定一组任务的一个或多个角色定义。  

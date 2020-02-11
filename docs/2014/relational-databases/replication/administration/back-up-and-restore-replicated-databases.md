@@ -26,10 +26,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: af4229037b9c34bbc9a0316ef073f294209be6d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629649"
 ---
 # <a name="back-up-and-restore-replicated-databases"></a>备份和还原复制的数据库
@@ -61,7 +61,7 @@ ms.locfileid: "62629649"
   
  作为任何恢复策略的一部分，请始终将当前复制设置的脚本保存在安全的位置。 在服务器出现故障或需要设置测试环境时，可以通过更改服务器名称引用来修改脚本，并用该脚本帮助重新创建复制设置。 除了编写当前复制设置的脚本之外，还应编写启用和禁用复制的脚本。 有关编写复制对象脚本的信息，请参阅 [Scripting Replication](../scripting-replication.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 数据库的备份和还原](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Best Practices for Replication Administration](best-practices-for-replication-administration.md)  
   

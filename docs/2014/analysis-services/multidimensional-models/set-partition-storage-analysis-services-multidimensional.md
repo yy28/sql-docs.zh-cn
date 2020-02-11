@@ -1,5 +1,5 @@
 ---
-title: 设置分区存储 (Analysis Services-多维) |Microsoft Docs
+title: 设置分区存储（Analysis Services 多维） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -26,19 +26,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8d86734023080c9b7fc62cff636d4f1952d00d0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072993"
 ---
 # <a name="set-partition-storage-analysis-services---multidimensional"></a>设置分区存储（Analysis Services - 多维）
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 为存储模式和缓存选项提供了几种标准存储配置。 它们为更新通知、滞后时间和重新生成数据提供了常用的配置。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]为存储模式和缓存选项提供了几种标准存储[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]配置。 它们为更新通知、滞后时间和重新生成数据提供了常用的配置。  
   
  您可以在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中多维数据集的“分区”选项卡中或在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的分区属性页面指定分区存储。  
   
 ## <a name="guidelines-for-choosing-a-storage-mode"></a>选择存储模式的准则  
- 对于大型度量值组来说，为不同的分区配置不同的存储是常见的方法。 请考虑以下原则：  
+ 对于大型度量值组来说，为不同的分区配置不同的存储是常见的方法。 遵循以下指南：  
   
 -   为不断发生更新的当前数据使用实时 ROLAP。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66072993"
   
 ## <a name="storage-settings-descriptions"></a>存储设置说明  
   
-|标准存储设置|Description|  
+|标准存储设置|说明|  
 |------------------------------|-----------------|  
 |实时 ROLAP|OLAP 是实时的。 详细信息数据和聚合以关系格式存储。 当数据发生更改且所有查询都反映数据的当前状态时（零滞后时间），服务器侦听通知。<br /><br /> 通常将此设置用于经常不断地发生更新且其用户总是需要最新数据的数据源。 根据客户端应用程序生成的查询的类型，此方法可以保证提供最长的响应时间。|  
 |实时 HOLAP|OLAP 是实时的。 详细信息数据以关系格式存储，而聚合以多维格式存储。 当数据发生更改并根据需要刷新多维 OLAP (MOLAP) 聚合时，服务器侦听通知。 不创建 MOLAP 缓存。 只要数据源发生了更新，服务器就切换到实时关系 OLAP (ROLAP) 直到聚合被刷新。 所有查询都反映数据的当前状态（零滞后时间）。<br /><br /> 通常将此设置用于经常不断地发生更新（但没有对实时 ROLAP 要求的那么频繁）且其用户总是需要最新数据的数据源。 一般情况下，此方法提供的总体性能要高于 ROLAP 存储。 如果数据源足够长时间地保持不变，则使用此设置的用户可以获得 MOLAP 般的性能。|  
@@ -77,7 +77,7 @@ ms.locfileid: "66072993"
   
  如果选中 **“对维度应用设置”** 复选框，则同一存储设置还将应用到与该度量值组相关的维度。 维度值最初与分区值相同。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [多维模型中的分区](partitions-in-multidimensional-models.md)  
   
   

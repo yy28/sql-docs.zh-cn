@@ -1,5 +1,5 @@
 ---
-title: 用于内存优化表上事务重试逻辑的指导原则 |Microsoft Docs
+title: 内存优化表上事务的重试逻辑指南 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 01f719470419940b130967b7c1360c4ae0c281eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779211"
 ---
 # <a name="guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables"></a>内存优化表事务重试逻辑准则
@@ -30,9 +30,9 @@ ms.locfileid: "62779211"
   
  这些错误通常是由并发执行的事务相互干扰而产生的。 常见的纠正措施是重试事务。  
   
- 有关这些错误情况的详细信息，请参阅部分上冲突检测、 验证和提交依赖关系检查中[内存优化表中的事务](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。  
+ 有关这些错误情况的详细信息，请参阅[内存优化表的事务](../relational-databases/in-memory-oltp/memory-optimized-tables.md)中的冲突检测、验证和提交依赖项检查部分。  
   
- 内存优化表不会产生死锁（错误代码为 1205）。 对于内存优化表不使用锁。 但是，如果应用程序已包含死锁重试逻辑，则可能会扩展现有逻辑，以包含新的错误代码。  
+ 内存优化表不会产生死锁（错误代码为 1205）。 内存优化表不使用锁。 但是，如果应用程序已包含死锁重试逻辑，则可能会扩展现有逻辑，以包含新的错误代码。  
   
 ## <a name="considerations-for-retrying"></a>有关重试的注意事项  
  应用程序通常会遭遇事务相互冲突，而需要实现重试逻辑以解决这些冲突。 遭遇冲突的次数取决于若干因素：  
@@ -56,7 +56,7 @@ ms.locfileid: "62779211"
 ### <a name="considerations-for-read-only-transactions-and-cross-container-transactions"></a>有关只读事务和跨容器事务的注意事项  
  如果所有内存优化表都是在 SNAPSHOT 隔离的情况下访问的，则只读跨容器事务（即在本机编译存储过程上下文之外启动的事务）不执行验证。 但是，当在 REPEATABLE READ 或 SERIALIZABLE 隔离下访问内存优化表时，将在提交时间执行验证。 在这种情况下，可能需要重试逻辑。  
   
- 详细信息，请参阅部分中的交叉容器事务[事务隔离级别](../../2014/database-engine/transaction-isolation-levels.md)。  
+ 有关详细信息，请参阅[事务隔离级别](../../2014/database-engine/transaction-isolation-levels.md)中有关跨容器事务的部分。  
   
 ## <a name="implementing-retry-logic"></a>实现重试逻辑  
  就像访问内存优化表的所有事务一样，您需要考虑使用重试逻辑来处理可能出现的失败，例如写入冲突（错误代码 41302）或依赖关系错误（错误代码 41301）。 在大多数应用程序中，失败率很低，但仍有必要通过重试事务来处理失败。 建议通过两种方法实现重试逻辑：  
@@ -71,7 +71,7 @@ ms.locfileid: "62779211"
   
 -   客户端应用程序具有针对其他错误代码的重试逻辑，如 1205，可以加以扩展。  
   
--   冲突不常见，而借助准备好的执行减少端到端延迟很重要。 有关详细信息执行本机编译存储的过程直接，请参阅[Natively Compiled Stored Procedures](../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。  
+-   冲突不常见，而借助准备好的执行减少端到端延迟很重要。 有关直接执行本机编译存储过程的详细信息，请参阅[本机编译的存储过程](../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。  
   
  下面的示例演示解释型 [!INCLUDE[tsql](../includes/tsql-md.md)] 存储过程中的重试逻辑，它包含对本机编译存储过程或跨容器事务的调用。  
   
@@ -125,7 +125,7 @@ BEGIN
 END  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [了解内存优化表上的事务](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
  [内存优化表中的事务](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
  [内存优化表事务隔离级别准则](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)  

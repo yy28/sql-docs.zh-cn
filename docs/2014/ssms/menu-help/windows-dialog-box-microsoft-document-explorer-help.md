@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 169ab149df11de12e5cf5452b0f8176737fb5dba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62510009"
 ---
 # <a name="windows-dialog-box-microsoft-document-explorer-help"></a>Windows 对话框（Microsoft 文档资源管理器的帮助）
@@ -29,7 +29,7 @@ ms.locfileid: "62510009"
  **路径**  
  显示文档的完整路径。 窗口通常没有路径。  
   
- **Activate**  
+ **激活**  
  使所选的文档或工具窗口成为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 文档资源管理器中的活动项。  
   
  **保存**  

@@ -1,5 +1,5 @@
 ---
-title: 父属性 (ADO MD) |Microsoft Docs
+title: Parent 属性（ADO MD） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,23 +17,23 @@ ms.assetid: 32c278c1-d8e1-4bb7-9ecd-2fbfdffee34b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2f6d6e03dd3288a5b0ca71bb9e129e1a57abf7c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949320"
 ---
 # <a name="parent-property-ado-md"></a>Parent 属性 (ADO MD)
-指示是当前父级的成员[成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)层次结构中。  
+指示作为层次结构中当前[成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)的父成员的成员。  
   
 ## <a name="return-values"></a>返回值  
- 返回[成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)对象，并是只读的。  
+ 返回一个[成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)对象，并且是只读的。  
   
 ## <a name="remarks"></a>备注  
- 在层次结构 （根） 的最高级别的成员具有没有父级。 仅对支持此属性**成员**属于对象[级别](../../../ado/reference/ado-md-api/level-object-ado-md.md)对象。 从引用此属性时出错**成员**属于对象[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)对象。  
+ 位于层次结构顶级（根）的成员没有父级。 此属性仅在属于某一[级别](../../../ado/reference/ado-md-api/level-object-ado-md.md)对象的**成员**对象上受支持。 从属于某个[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)对象的**成员**对象引用此属性时，将发生错误。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [成员对象 (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Children 属性 (ADO MD)](../../../ado/reference/ado-md-api/children-property-ado-md.md)

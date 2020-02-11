@@ -1,5 +1,5 @@
 ---
-title: 建立数据库镜像会话使用 Windows 身份验证 (Transact SQL) |Microsoft Docs
+title: 使用 Windows 身份验证建立数据库镜像会话（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c1ea3cd62c97cecd9af0b8b696156b9f2622f5b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755512"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-transact-sql"></a>使用 Windows 身份验证建立数据库镜像会话 (Transact-SQL)
@@ -31,20 +31,20 @@ ms.locfileid: "62755512"
 >  我们建议您在非高峰时段配置数据库镜像，因为配置镜像会影响性能。  
   
 > [!NOTE]  
->  给定的服务器实例可以参与到多个具有相同或不同伙伴的并发数据库镜像会话中。 某个服务器实例可能在某些会话中是伙伴，而在其他会话中则是见证服务器。 镜像服务器实例必须与主体服务器实例运行相同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 并非 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].的每个版本都提供数据库镜像。 有关的各版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 此外，极力建议这些服务器实例在可以处理相同工作负荷的类似系统上运行。  
+>  给定的服务器实例可以参与到多个具有相同或不同伙伴的并发数据库镜像会话中。 某个服务器实例可能在某些会话中是伙伴，而在其他会话中则是见证服务器。 镜像服务器实例必须与主体服务器实例运行相同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 并非 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].的每个版本都提供数据库镜像。 有关各个版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅 SQL Server 2014 的各个[版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 此外，极力建议这些服务器实例在可以处理相同工作负荷的类似系统上运行。  
   
 ### <a name="to-establish-a-database-mirroring-session"></a>建立数据库镜像会话  
   
-1.  创建镜像数据库。 有关详细信息，请参阅 [为镜像准备镜像数据库 (SQL Server)](prepare-a-mirror-database-for-mirroring-sql-server.md).的每个版本都提供数据库镜像。  
+1.  创建镜像数据库。 有关详细信息，请参阅 [为镜像准备镜像数据库 (SQL Server)](prepare-a-mirror-database-for-mirroring-sql-server.md)的各版本中均未提供见证服务器实例。  
   
 2.  在每个服务器实例上设置安全性。  
   
      数据库镜像会话中的每个服务器实例都需要一个数据库镜像端点。 如果端点不存在，则必须先创建。  
   
     > [!NOTE]  
-    >  服务器实例对数据库镜像使用的验证形式是其数据库镜像端点的一种属性。 两种类型的传输安全性可用于数据库镜像：Windows 身份验证或基于证书的身份验证。 有关详细信息，请参阅[针对数据库镜像和 AlwaysOn 可用性组的传输安全性&#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)。  
+    >  服务器实例对数据库镜像使用的验证形式是其数据库镜像端点的一种属性。 数据库镜像可以使用两种类型的传输安全功能：Windows 身份验证或基于证书的身份验证。 有关详细信息，请参阅[数据库镜像的传输安全性和 AlwaysOn 可用性组 &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)。  
   
-     在每台主体服务器和镜像服务器上，请确保存在用于数据库镜像的端点。 无论支持的镜像会话数是多少，服务器实例都只能有一个数据库镜像端点。 如果只将该服务器实例用于数据库镜像会话中的伙伴，你可以为终结点分配伙伴角色 (ROLE **=** PARTNER)。 如果还要将该服务器用于其他数据库镜像会话中的见证服务器，则请将端点的角色分配为 ALL。  
+     在每台主体服务器和镜像服务器上，请确保存在用于数据库镜像的端点。 无论支持的镜像会话数是多少，服务器实例都只能有一个数据库镜像端点。 如果打算将此服务器实例专门用于数据库镜像会话中的合作伙伴，则可以将伙伴的角色分配给终结点（角色**=** 伙伴）。 如果还要将该服务器用于其他数据库镜像会话中的见证服务器，则请将端点的角色分配为 ALL。  
   
      若要执行 SET PARTNER 语句，必须将两个合作伙伴的端点的 STATE 都设置为 STARTED。  
   
@@ -59,21 +59,21 @@ ms.locfileid: "62755512"
   
      如果任一伙伴缺少终结点，请参阅[为 Windows 身份验证创建数据库镜像终结点 (Transact-SQL)](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)。  
   
-3.  如果服务器实例使用不同的域用户帐户运行，则每个实例还需要在其他实例的 **master** 数据库中具有登录名。 如果登录名不存在，则必须先创建。 有关详细信息，请参阅 [允许使用 Windows 身份验证对数据库镜像终结点进行网络访问 (SQL Server)](../database-mirroring-allow-network-access-windows-authentication.md).的每个版本都提供数据库镜像。  
+3.  如果服务器实例使用不同的域用户帐户运行，则每个实例还需要在其他实例的 **master** 数据库中具有登录名。 如果登录名不存在，则必须先创建。 有关详细信息，请参阅 [允许使用 Windows 身份验证对数据库镜像终结点进行网络访问 (SQL Server)](../database-mirroring-allow-network-access-windows-authentication.md)。  
   
 4.  若要将主体服务器设置为镜像数据库中的伙伴，请连接到镜像服务器，然后执行下面的语句：  
   
-     ALTER DATABASE *<database_name>* SET PARTNER **=** _<server_network_address>_  
+     更改数据库 *<database_name>* 设置伙伴**=** _<server_network_address_>  
   
-     其中， *<database_name>* 是要镜像的数据库的名称（此名称在两个伙伴上相同）， *<server_network_address>* 是主体服务器的服务器网络地址。  
+     其中 *<database_name>* 是要镜像的数据库的名称（此名称在两个伙伴上相同）， *<server_network_address>* 是主体服务器的服务器网络地址。  
   
      服务器网络地址的语法如下：  
   
-     TCP<strong>://</strong>\<*system-address>* <strong>:</strong>\<*port>*  
+     TCP：/<strong>/</strong>\<*system-address>* <strong>：</strong>\<*port>*  
   
-     其中，\<system-address>  是明确标识目标计算机系统的字符串，\<port>  是伙伴服务器实例的镜像终结点使用的端口号。 有关详细信息，请参阅 [指定服务器网络地址（数据库镜像）](specify-a-server-network-address-database-mirroring.md)。  
+     其中，\<system-address>** 是明确标识目标计算机系统的字符串，\<port>** 是伙伴服务器实例的镜像终结点使用的端口号。 有关详细信息，请参阅 [指定服务器网络地址（数据库镜像）](specify-a-server-network-address-database-mirroring.md)。  
   
-     例如，在镜像服务器实例中，下面的 ALTER DATABASE 语句将伙伴设置为原始主体服务器实例。 数据库名称为“AdventureWorks”，系统地址为 DBSERVER1（伙伴系统的名称），伙伴数据库镜像终结点使用的端口为 7022  ：  
+     例如，在镜像服务器实例中，下面的 ALTER DATABASE 语句将伙伴设置为原始主体服务器实例。 数据库名称为“AdventureWorks”，系统地址为 DBSERVER1（伙伴系统的名称），伙伴数据库镜像终结点使用的端口为 7022****：  
   
     ```  
     ALTER DATABASE AdventureWorks   
@@ -84,11 +84,11 @@ ms.locfileid: "62755512"
   
 5.  若要将镜像服务器设置为主体数据库中的伙伴，请连接到主体服务器，然后执行下面的语句：  
   
-     ALTER DATABASE *<database_name>* SET PARTNER **=** _<server_network_address>_  
+     更改数据库 *<database_name>* 设置伙伴**=** _<server_network_address_>  
   
      有关详细信息，请参阅步骤 4。  
   
-     例如，在主体服务器实例中，下面的 ALTER DATABASE 语句将伙伴设置为原始镜像服务器实例。 数据库名称为“AdventureWorks”，系统地址为 DBSERVER2（伙伴系统的名称），伙伴数据库镜像终结点使用的端口为 7025  ：  
+     例如，在主体服务器实例中，下面的 ALTER DATABASE 语句将伙伴设置为原始镜像服务器实例。 数据库名称为“AdventureWorks”，系统地址为 DBSERVER2（伙伴系统的名称），伙伴数据库镜像终结点使用的端口为 7025****：  
   
     ```  
     ALTER DATABASE AdventureWorks SET PARTNER = 'TCP://DBSERVER2:7022'  
@@ -209,17 +209,17 @@ ms.locfileid: "62755512"
 > [!NOTE]  
 >  有关显示安全设置、准备镜像数据库、设置伙伴以及添加见证服务器的完整示例的信息，请参阅[设置数据库镜像 (SQL Server)](database-mirroring-sql-server.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [设置数据库镜像 (SQL Server)](database-mirroring-sql-server.md)   
- [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)   
- [允许使用 Windows 身份验证对数据库镜像终结点进行网络访问 (SQL Server)](../database-mirroring-allow-network-access-windows-authentication.md)   
+ [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [允许使用 Windows 身份验证 &#40;SQL Server 对数据库镜像端点进行网络访问&#41;](../database-mirroring-allow-network-access-windows-authentication.md)   
  [为镜像准备镜像数据库 (SQL Server)](prepare-a-mirror-database-for-mirroring-sql-server.md)   
  [为 Windows 身份验证创建数据库镜像终结点 (Transact-SQL)](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
- [数据库镜像和日志传送 (SQL Server)](database-mirroring-and-log-shipping-sql-server.md)   
+ [数据库镜像和日志传送 &#40;SQL Server&#41;](database-mirroring-and-log-shipping-sql-server.md)   
  [数据库镜像 (SQL Server)](database-mirroring-sql-server.md)   
  [数据库镜像和复制 (SQL Server)](database-mirroring-and-replication-sql-server.md)   
  [设置数据库镜像 (SQL Server)](database-mirroring-sql-server.md)   
- [指定服务器网络地址（数据库镜像）](specify-a-server-network-address-database-mirroring.md)   
+ [指定服务器网络地址 &#40;数据库镜像&#41;](specify-a-server-network-address-database-mirroring.md)   
  [数据库镜像运行模式](database-mirroring-operating-modes.md)  
   
   

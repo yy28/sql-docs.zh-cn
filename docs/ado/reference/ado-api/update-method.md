@@ -1,5 +1,5 @@
 ---
-title: 更新方法 |Microsoft Docs
+title: Update 方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6ce247905afd6ed34366424f5f905d57b42d988f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938843"
 ---
 # <a name="update-method"></a>Update 方法
-将保存到的当前行的任何更改[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象，或[字段](../../../ado/reference/ado-api/fields-collection-ado.md)的集合[记录](../../../ado/reference/ado-api/record-object-ado.md)对象。  
+保存对记录[集](../../../ado/reference/ado-api/recordset-object-ado.md)对象的当前行所做的任何更改，或[记录](../../../ado/reference/ado-api/record-object-ado.md)对象的[字段](../../../ado/reference/ado-api/fields-collection-ado.md)集合。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,49 +33,49 @@ recordset.Update Fields, Values
 record.Fields.Update  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *Fields*  
- 可选。 一个**Variant** ，表示单个名称或**变体**数组，它表示名称或序号位置或多个你想要修改的字段。  
+ 可选。 表示单个名称的**变量**，或表示要修改的一个或多个字段的名称或序号位置的**variant**数组。  
   
  *值*  
- 可选。 一个**Variant** ，表示单个值，或**变体**数组，它表示字段或新记录中的字段的值。  
+ 可选。 一个表示单个值的**变量**，或一个表示新记录中的一个或多个字段的值的**变体**数组。  
   
 ## <a name="remarks"></a>备注  
   
 ## <a name="recordset"></a>记录集  
- 使用**更新**方法保存的当前记录的任何更改**记录集**对象调用以来[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)方法或以来更改中的任何字段值现有记录。 **记录集**对象必须支持更新。  
+ 使用**Update**方法保存对**记录集**对象的当前记录所做的任何更改，因为调用了[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)方法或更改了现有记录中的任何字段值。 **Recordset**对象必须支持更新。  
   
- 若要设置字段值，请执行以下操作：  
+ 若要设置字段值，请执行以下操作之一：  
   
--   将值分配给[字段](../../../ado/reference/ado-api/field-object.md)对象的[值](../../../ado/reference/ado-api/value-property-ado.md)属性并调用**更新**方法。  
+-   为[字段](../../../ado/reference/ado-api/field-object.md)对象的[Value](../../../ado/reference/ado-api/value-property-ado.md)属性赋值，并调用**Update**方法。  
   
--   将字段名称和值作为参数传递**更新**调用。  
+-   使用**更新**调用作为参数传递字段名称和值。  
   
--   将字段名称的数组和数组值传递**更新**调用。  
+-   使用**更新**调用传递字段名称和值数组的数组。  
   
- 当您使用的字段和值的数组时，必须有相同数目的两个数组中的元素。 此外，字段名称的顺序必须与匹配的字段值的顺序。 如果不匹配的数量和顺序的字段和值，就会出错。  
+ 使用字段和值的数组时，两个数组中的元素数必须相等。 并且字段名称的顺序必须与字段值的顺序匹配。 如果字段和值的数量和顺序不匹配，将发生错误。  
   
- 如果**记录集**对象支持批量更新，你可以本地直到你调用缓存到一个或多个记录的多个更改[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)方法。 如果正在编辑当前记录或添加新记录，在调用时**UpdateBatch**方法，将自动调用 ADO**更新**方法将任何挂起的更改保存到之前的当前记录传输批的更改为提供程序。  
+ 如果**Recordset**对象支持批处理更新，则可以在调用[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)方法之前，将多个更改缓存到本地一个或多个记录。 如果在调用**UpdateBatch**方法时编辑当前记录或添加新记录，ADO 将自动调用**Update**方法，以便在将批处理更改传输到提供程序之前保存当前记录的所有挂起的更改。  
   
- 如果将从该记录移正在添加或编辑，然后再调**更新**方法，将自动调用 ADO**更新**以保存所做的更改。 必须调用[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)方法如果你想要取消对当前记录所做的任何更改或放弃新添加的记录。  
+ 如果在调用**update**方法之前从要添加或编辑的记录中移动，ADO 将自动调用**update**以保存更改。 如果要取消对当前记录所做的任何更改，或者放弃新添加的记录，则必须调用[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)方法。  
   
- 当前记录保持最新调用后**更新**方法。  
+ 在调用**Update**方法之后，当前记录保持为最新。  
   
-## <a name="record"></a>录制  
- **更新**方法完成添加、 删除和更新中的字段[字段](../../../ado/reference/ado-api/fields-collection-ado.md)的集合**记录**对象。  
+## <a name="record"></a>Record  
+ **Update**方法完成对**Record**对象的[fields](../../../ado/reference/ado-api/fields-collection-ado.md)集合中的字段的添加、删除和更新。  
   
- 例如，使用删除的字段**删除**方法将立即标记为待删除，但保留在集合中。 **更新**必须调用方法来从提供程序的集合中实际删除这些字段。  
+ 例如，**删除方法删除的字段**会立即标记为删除，但仍保留在集合中。 若要实际从提供程序的集合中删除这些字段，必须调用**Update**方法。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
   
 |||  
 |-|-|  
 |[字段集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
-## <a name="see-also"></a>请参阅  
- [Update 和 CancelUpdate 方法示例 (VB)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)   
- [Update 和 CancelUpdate 方法示例 （VC + +）](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vc.md)   
- [AddNew 方法 (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
- [CancelUpdate 方法 (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
+## <a name="see-also"></a>另请参阅  
+ [Update 和 CancelUpdate 方法示例（VB）](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)   
+ [Update 和 CancelUpdate 方法示例（VC + +）](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vc.md)   
+ [AddNew 方法（ADO）](../../../ado/reference/ado-api/addnew-method-ado.md)   
+ [CancelUpdate 方法（ADO）](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
  [EditMode 属性](../../../ado/reference/ado-api/editmode-property.md)   
  [UpdateBatch 方法](../../../ado/reference/ado-api/updatebatch-method.md)

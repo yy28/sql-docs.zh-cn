@@ -1,5 +1,5 @@
 ---
-title: 数据集属性对话框中，筛选器 （报表生成器） |Microsoft Docs
+title: "\"数据集属性\" 对话框-\"筛选器\" （报表生成器） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 01d9c5b6ae0e69febd45008bf0aa7b6c3b5a83d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109381"
 ---
 # <a name="dataset-properties-dialog-box-filters-report-builder"></a>“数据集属性”对话框 -&gt;“筛选器”（报表生成器）
@@ -26,10 +26,10 @@ ms.locfileid: "66109381"
   
  嵌入数据集的筛选器只会影响在其中定义它们的报表。  
   
- 有关详细信息，请参阅[对数据进行筛选、分组和排序（报表生成器和 SSRS）](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)。  
+ 有关详细信息，请参阅 [对数据进行筛选、分组和排序（报表生成器和 SSRS）](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)。  
   
 ## <a name="options"></a>选项  
- **“添加”**  
+ **添加**  
  向列表中添加新的筛选子句。  
   
  **删除**  
@@ -42,25 +42,26 @@ ms.locfileid: "66109381"
  在列表中向下移动所选的筛选器。  
   
  **表达式**  
- 键入或选择要对其应用筛选器的表达式。 单击“表达式”(**fx**) 按钮可编辑表达式。  
+ 键入或选择要对其应用筛选器的表达式。 单击 "表达式" （**fx**）按钮可编辑表达式。  
   
- **Data type**  
- 为“值”  选择数据类型。 如果可能，请选择与 **“表达式”** 的数据类型匹配的数据类型。  
+ **数据类型**  
+ 为“值”**** 选择数据类型。 如果可能，请选择与 **“表达式”** 的数据类型匹配的数据类型。  
   
- **“表达式”** 和 **“值”** 中的值的计算结果必须属于同一数据类型。 例如，如果“表达式”设置为具有数据类型 System.Int32 的字段并且“值”设置为 7，则从下拉列表中选择 **Integer**。    
+ 
+  **“表达式”** 和 **“值”** 中的值的计算结果必须属于同一数据类型。 例如，如果“表达式”设置为具有数据类型 System.Int32 的字段并且“值”设置为 7，则从下拉列表中选择 **Integer**。********  
   
  如果您需要的数据类型选项不在下拉列表中，请编写表达式将该值转换成正确的数据类型。 有关详细信息，请参阅[筛选器公式示例（报表生成器和 SSRS）](report-design/filter-equation-examples-report-builder-and-ssrs.md)。  
   
  **“运算符”**  
  选择要用于比较表达式和值的运算符。  
   
- **ReplTest1**  
- 键入在计算“表达式”  框中所指定的表达式时要使用的表达式或值。 单击“表达式”(**fx**) 按钮可编辑表达式。  
+ **值**  
+ 键入在计算“表达式”**** 框中所指定的表达式时要使用的表达式或值。 单击 "表达式" （**fx**）按钮可编辑表达式。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [报表参数（报表生成器和报表设计器）](report-design/report-parameters-report-builder-and-report-designer.md)   
- [向数据集添加筛选器&#40;报表生成器和 SSRS&#41;](report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)   
+ [向数据集添加筛选器 &#40;报表生成器和 SSRS&#41;](report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)   
  [在报表中使用表达式（报表生成器和 SSRS）](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
   
   

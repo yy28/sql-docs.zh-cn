@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b2f918e611a4bc88c1a77ad7d539a9101f3f8dac
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74095530"
 ---
 # <a name="creating-altering-and-removing-rules"></a>创建、更改和删除规则
@@ -25,15 +25,16 @@ ms.locfileid: "74095530"
 
   在 SMO 中，规则由 <xref:Microsoft.SqlServer.Management.Smo.Rule> 对象表示。 规则是由 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.TextBody%2A> 属性进行定义的，该属性是包含使用运算符或谓词（如，IN、LIKE 或 BETWEEN）的条件表达式的文本字符串。 规则不能引用列或其他数据库对象。 可以包括不引用数据库对象的内置函数。  
   
- <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.TextBody%2A> 属性中的定义必须包含引用输入的数据值的变量。 创建规则时，可以使用任何名称或符号表示值，但第一个字符必须是 \@ 符号。  
+ 
+  <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.TextBody%2A> 属性中的定义必须包含引用输入的数据值的变量。 创建规则时，可以使用任何名称或符号表示值，但第一个字符必须是\@符号。  
   
 ## <a name="example"></a>示例  
- 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual Studio&#35; .Net 中创建 Visual C SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual Studio .net 中创建 Visual C&#35; SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-altering-and-removing-a-rule-in-visual-basic"></a>在 Visual Basic 中创建、更改和删除规则  
  此代码示例说明如何创建规则，将其附加到列，修改 <xref:Microsoft.SqlServer.Management.Smo.Rule> 对象的属性，从列中分离规则，以及删除规则。  
   
- 使用完整的程序集路径指定 <xref:Microsoft.SqlServer.Management.Smo.Rule> 对象的**Dim**语句，以避免对 system.web 程序集中的 <xref:Microsoft.SqlServer.Management.Smo.Rule> 对象产生歧义。  
+ 为**** <xref:Microsoft.SqlServer.Management.Smo.Rule>对象指定 Dim 语句时使用完整的程序集路径，以避免对 system.web 程序<xref:Microsoft.SqlServer.Management.Smo.Rule>集中的对象产生歧义。  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -65,7 +66,7 @@ ru.Drop()
 ## <a name="creating-altering-and-removing-a-rule-in-visual-c"></a>在 Visual C# 中创建、更改和删除规则  
  此代码示例说明如何创建规则，将其附加到列，修改 <xref:Microsoft.SqlServer.Management.Smo.Rule> 对象的属性，从列中分离规则，以及删除规则。  
   
- 使用完整的程序集路径指定 <xref:Microsoft.SqlServer.Management.Smo.Rule> 对象的**Dim**语句，以避免对 system.web 程序集中的 <xref:Microsoft.SqlServer.Management.Smo.Rule> 对象产生歧义。  
+ 为**** <xref:Microsoft.SqlServer.Management.Smo.Rule>对象指定 Dim 语句时使用完整的程序集路径，以避免对 system.web 程序<xref:Microsoft.SqlServer.Management.Smo.Rule>集中的对象产生歧义。  
   
 ```csharp  
 {  
@@ -98,7 +99,7 @@ ru.Drop()
 ## <a name="creating-altering-and-removing-a-rule-in-powershell"></a>在 PowerShell 中创建、更改和删除规则  
  此代码示例说明如何创建规则，将其附加到列，修改 <xref:Microsoft.SqlServer.Management.Smo.Rule> 对象的属性，从列中分离规则，以及删除规则。  
   
- 使用完整的程序集路径指定 <xref:Microsoft.SqlServer.Management.Smo.Rule> 对象的**Dim**语句，以避免对 system.web 程序集中的 <xref:Microsoft.SqlServer.Management.Smo.Rule> 对象产生歧义。  
+ 为**** <xref:Microsoft.SqlServer.Management.Smo.Rule>对象指定 Dim 语句时使用完整的程序集路径，以避免对 system.web 程序<xref:Microsoft.SqlServer.Management.Smo.Rule>集中的对象产生歧义。  
   
 ```powershell   
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  
