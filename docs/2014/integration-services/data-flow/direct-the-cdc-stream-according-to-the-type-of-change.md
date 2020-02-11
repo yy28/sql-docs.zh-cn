@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2ee2b3238a66000546619815a886fc6017c51fe6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827400"
 ---
 # <a name="direct-the-cdc-stream-according-to-the-type-of-change"></a>根据更改的类型定向 CDC 流
@@ -40,7 +40,7 @@ ms.locfileid: "62827400"
   
     -   插入输出：定向 INSERT 更改行的输出。  
   
-    -   更新输出：定向 UPDATE 更改行和 Merge 更改行之前/之后的输出。  
+    -   更新输出：之前/之后 UPDATE 更改行和 Merge 更改行定向的输出。  
   
 7.  或者，您可以使用 **“高级编辑器”** 对话框配置高级属性。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62827400"
   
      有关使用 CDC 拆分器的详细信息，请参阅 Microsoft SQL Server Integration Services 的 CDC 组件。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [CDC 拆分器](cdc-splitter.md)  
   
   

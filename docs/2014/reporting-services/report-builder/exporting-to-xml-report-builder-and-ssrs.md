@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8e8809b53078387fa58a961458693122753698e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107903"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>导出到 XML（报表生成器和 SSRS）
@@ -26,9 +26,9 @@ ms.locfileid: "66107903"
 ##  <a name="ReportItems"></a> 报表项  
  下表对各报表项的呈现形式进行了说明：  
   
-|项|呈现行为|  
+|Item|呈现行为|  
 |----------|------------------------|  
-|报告|呈现为 XML 文档的顶级元素。|  
+|报表|呈现为 XML 文档的顶级元素。|  
 |数据区域|呈现为其容器的元素中的某个元素。 数据区域包括表、矩阵和列表，它们将数据显示为文本和图表、数据条、迷你图、仪表以及形象地展现数据的指示器。|  
 |组和详细信息部分|每个实例呈现为其容器的元素中的某个元素。|  
 |文本框|呈现为其容器中的某个属性或元素。|  
@@ -38,7 +38,7 @@ ms.locfileid: "66107903"
 |图表|呈现为其容器的元素中的某个元素。 序列是图表的子元素，而类别是序列的子元素。 为每个图表值呈现所有图表标签。 标签和值作为属性包括。|  
 |数据条|呈现为其容器的元素中的某个元素，与图表相似。 通常，数据条并不包括层次结构或标签，而只包含值。|  
 |迷你图|呈现为其容器的元素中的某个元素，与图表相似。 通常，迷你图并不包括层次结构或标签，而只包含值。|  
-|测量|呈现为其容器的元素中的某个元素。 作为单个元素呈现，它以刻度的最小值和最大值、范围的起始和终止值以及指针的值作为属性。|  
+|仪表|呈现为其容器的元素中的某个元素。 作为单个元素呈现，它以刻度的最小值和最大值、范围的起始和终止值以及指针的值作为属性。|  
 |指示器|呈现为其容器的元素中的某个元素，与仪表相似。 作为单个元素呈现，它以活动状态名称、可用状态以及数据值作为属性。|  
   
  使用 XML 呈现扩展插件呈现报表时，同样遵偱以下规则：  
@@ -58,17 +58,20 @@ ms.locfileid: "66107903"
   
 |如果所有文本框值都是|分配的数据类型为|  
 |--------------------------------|---------------------------|  
-|`Int16`、`Int32`、`Int64`、`UInt16`、`UInt32`、`UInt64`、`Byte`、`SByte`|**xsd:integer**|  
-|`Decimal`（或 `Decimal` 和任何整数或字节数据类型）|**xsd:decimal**|  
-|`Float`（或 `Decimal` 和任何整数或字节数据类型）|**xsd:float**|  
-|`Double`（或 `Decimal` 和任何整数或字节数据类型）|**xsd:double**|  
-|`DateTime or DateTime Offset`|**xsd:dateTime**|  
-|`Time`|**xsd:string**|  
-|`Boolean`|**xsd:boolean**|  
-|`String`， `Char`|**xsd:string**|  
-|其他|**xsd:string**|  
+|`Int16`, `Int32`, `Int64`, `UInt16`, `UInt32`, `UInt64`, `Byte`, `SByte`|**xsd:integer**|  
+|
+  `Decimal`（或 `Decimal` 和任何整数或字节数据类型）|**xsd:decimal**|  
+|
+  `Float`（或 `Decimal` 和任何整数或字节数据类型）|**xsd:float**|  
+|
+  `Double`（或 `Decimal` 和任何整数或字节数据类型）|**xsd:double**|  
+|`DateTime or DateTime Offset`|**xsd： dateTime**|  
+|`Time`|**xsd： string**|  
+|`Boolean`|**xsd：布尔值**|  
+|`String`, `Char`|**xsd： string**|  
+|其他|**xsd： string**|  
   
-##  <a name="XMLSpecificRenderingRules"></a> 特定于 XML 的呈现规则  
+##  <a name="XMLSpecificRenderingRules"></a>特定于 XML 的呈现规则  
  下面一节将说明 XML 呈现扩展插件是如何解释报表内的报表项的。  
   
 ### <a name="report-body"></a>表体  
@@ -76,13 +79,13 @@ ms.locfileid: "66107903"
   
  在该报表元素中还将包含 XML 命名空间定义和架构引用属性。 变量将以粗体形式注明：  
   
- \<**Report** xmlns="**SchemaName**" xmlns:xsi="<http://www.w3.org/2001/XMLSchema-instance>" xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc%3aSchema=true" Name="ReportName">  
+ \<**报表**xmlns = "**SchemaName**" xmlns： xsi = "<http://www.w3.org/2001/XMLSchema-instance>" xsi：**schemaLocation**= "**SchemaNameReportURL**&amp;rc% 3aSchema = true" Name = "ReportName" >  
   
  变量的值如下所示：  
   
-|“属性”|ReplTest1|  
+|名称|值|  
 |----------|-----------|  
-|报告|Report.DataElementName|  
+|报表|Report.DataElementName|  
 |ReportURL|服务器上该报表的 URL 编码形式的绝对 URL。|  
 |SchemaName|Report.SchemaName。 如果为 Null，则为 Report.Name。 如果使用了 Report.Name，则将首先使用 XmlConvert.EncodeLocalName 对其进行编码。|  
 |ReportName|报表的名称。|  
@@ -148,13 +151,13 @@ ms.locfileid: "66107903"
   
  如果 DataElementOutput 属性的值等于 Output，则重复项的表头将呈现为详细信息元素的子级。  
   
-##  <a name="CustomFormatsXSLTransformations"></a> 自定义格式和 XSL 转换  
+##  <a name="CustomFormatsXSLTransformations"></a>自定义格式和 XSL 转换  
  使用 XSL 转换 (XSLT) 可以将 XML 呈现扩展插件生成的 XML 文件转换为几乎任意格式的文件。 您可以使用此功能来生成现有呈现扩展插件尚不支持的格式的数据。 在尝试创建自己的呈现扩展插件之前，请首先考虑使用 XML 呈现扩展插件和 XSLT。  
   
-##  <a name="DuplicateName"></a> 名称重复  
+##  <a name="DuplicateName"></a>名称重复  
  如果在同一范围内存在重复的数据元素名称，呈现器将显示一个错误消息。  
   
-##  <a name="XSLTTransformations"></a> XSLT 转换  
+##  <a name="XSLTTransformations"></a>XSLT 转换  
  XML 呈现器可将服务器端 XSLT 转换应用到原始 XML 数据。 应用 XSLT 后，呈现器将输出转换后的内容而不是原始 XML 数据。 转换是在服务器而不是客户端上进行的。  
   
  应用到输出的 XSLT 可通过报表的 DataTransform 属性在报表定义文件中定义，或者使用 XSLT *DeviceInfo* 参数进行定义。 如果设置了以上值中的任意一个值，则每次使用 XML 呈现器时都会发生转换。 当使用订阅时，则必须在 RDL DataTransform 属性中定义 XSLT。  
@@ -180,7 +183,7 @@ ms.locfileid: "66107903"
   
  有关详细信息，请参阅 [XML Device Information Settings](../xml-device-information-settings.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Reporting Services 中的分页（报表生成器和 SSRS）](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [呈现行为（报表生成器和 SSRS）](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）](interactive-functionality-different-report-rendering-extensions.md)   
