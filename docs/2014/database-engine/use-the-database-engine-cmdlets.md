@@ -23,22 +23,22 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cd5575c94c9a74623efaa80c9470c54982a41d0d
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783110"
 ---
 # <a name="use-the-database-engine-cmdlets"></a>使用数据库引擎 cmdlet
-  Windows PowerShell cmdlet 是单函数命令，通常采用“动词-名词”形式的命名约定，如 **Get-Help** 或 **Set-MachineName**。 用于 Windows PowerShell 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供程序提供特定于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的 cmdlet。  
+  Windows PowerShell cmdlet 是单函数命令，通常具有 "动词-名词" 命名约定，如**get-help**或**Set-MachineName**。 用于 Windows PowerShell 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供程序提供特定于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的 cmdlet。  
   
 ## <a name="database-engine-cmdlets"></a>数据库引擎 cmdlet  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实现了一小部分用于 [!INCLUDE[ssDE](../includes/ssde-md.md)]的 cmdlet。 这些 cmdlet 主要用于从新的 PowerShell 脚本运行现有的 Transact-SQL 脚本，评估基于策略的管理策略并帮助在 SQL Server 提供程序路径中指定 SQL Server 标识符。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]为实现少量的 cmdlet [!INCLUDE[ssDE](../includes/ssde-md.md)]。 这些 cmdlet 主要用于从新的 PowerShell 脚本运行现有的 Transact-SQL 脚本，评估基于策略的管理策略并帮助在 SQL Server 提供程序路径中指定 SQL Server 标识符。  
   
  用于 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的大多数 Windows PowerShell 脚本通过使用 SQL Server PowerShell 提供程序和 SQL Server 可管理性对象模型。 有关详细信息，请参阅 [SQL Server PowerShell](../powershell/sql-server-powershell.md)。  
   
 ### <a name="get-cmdlet-help"></a>获取 Cmdlet 帮助  
- 在 Windows PowerShell 环境中， **Get-Help** cmdlet 提供了每个 cmdlet 的帮助信息。 **Get-Help** 返回各种信息，如语法、参数定义、输入和输出类型以及 cmdlet 所执行操作的说明。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md)。  
+ 在 Windows PowerShell 环境中， **Get-Help** cmdlet 提供了每个 cmdlet 的帮助信息。 **Get-help**返回各种信息，如语法、参数定义、输入和输出类型以及 cmdlet 所执行操作的说明。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md)。  
   
 ### <a name="partial-parameter-names"></a>部分参数名称  
  不需要指定 cmdlet 参数的完整名称。 您只需指定该名称的一部分，以便能够将其与 cmdlet 支持的其他参数区分开。 例如，这些示例说明指定 **Invoke-Sqlcmd -QueryTimeout** 参数的三种方式：  
@@ -61,6 +61,6 @@ Invoke-Sqlcmd -Query "SELECT @@VERSION;" -QueryT 3
 ## <a name="see-also"></a>另请参阅  
  [SQL Server PowerShell 提供程序](../powershell/sql-server-powershell-provider.md)   
  [SQL Server PowerShell](../powershell/sql-server-powershell.md)   
- [适用于 AlwaysOn 可用性组&#40;SQL Server 的 PowerShell cmdlet 概述&#41;](availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
+ [适用于 AlwaysOn 可用性组 &#40;SQL Server 的 PowerShell Cmdlet 概述&#41;](availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 049296ff601296edbd990fe9ea70aef3efa8c44b
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782858"
 ---
 # <a name="remove-an-availability-group-listener-sql-server"></a>删除可用性组侦听器 (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "72782858"
   
      [安全性](#Security)  
   
--   **删除侦听器，使用：**  
+-   **若要删除侦听器，请使用：**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -42,14 +42,14 @@ ms.locfileid: "72782858"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a> 先决条件  
+###  <a name="Prerequisites"></a>先决条件  
   
 -   您必须连接到承载主副本的服务器实例。  
   
 ###  <a name="Recommendations"></a> 建议  
  在删除可用性组侦听器之前，我们建议您确保没有任何应用程序在使用它。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 权限  
  对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  
@@ -67,12 +67,12 @@ ms.locfileid: "72782858"
   
 5.  这将打开 **“从可用性组中删除侦听器”** 对话框。 有关详细信息，请参阅本主题后面的 [从可用性组中删除侦听器](#AgListenerPropertiesDialog)。  
   
-###  <a name="AgListenerPropertiesDialog"></a> 从可用性组中删除侦听器（对话框）  
+###  <a name="AgListenerPropertiesDialog"></a>从可用性组中删除侦听器（对话框）  
  **名称**  
  要删除的侦听器的名称。  
   
  **结果**  
- 将显示一个链接，提示 **“成功”** 或 **“错误”** ，可单击该链接查看详细信息。  
+ 将显示一个链接，提示 **“成功”** 或 **“错误”**，可单击该链接查看详细信息。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **删除可用性组侦听器**  
@@ -81,7 +81,7 @@ ms.locfileid: "72782858"
   
 2.  按如下所示使用 [ALTER AVAILABILITY GROUP](/sql/t-sql/statements/alter-availability-group-transact-sql) 语句：  
   
-     更改可用性组*group_name*删除侦听器 **" *`dns_name`* "**  
+     更改可用性组*group_name*删除侦听器 **"*`dns_name`*"**  
   
      其中， *group_name* 是可用性组的名称， *dns_name* 是可用性组侦听器的 DNS 名称。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "72782858"
     ALTER AVAILABILITY GROUP AccountsAG REMOVE LISTENER 'AccountsAG_Listener';  
     ```  
   
-##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
+##  <a name="PowerShellProcedure"></a>使用 PowerShell  
  **删除可用性组侦听器**  
   
 1.  将默认的 (`cd`) 设置为承载主副本的服务器实例。  
@@ -112,5 +112,5 @@ ms.locfileid: "72782858"
 -   [查看可用性组侦听程序属性 (SQL Server)](view-availability-group-listener-properties-sql-server.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [ &#40;AlwaysOn 可用性组 SQL Server&#41;  概述](overview-of-always-on-availability-groups-sql-server.md)  
+ [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../listeners-client-connectivity-application-failover.md)  

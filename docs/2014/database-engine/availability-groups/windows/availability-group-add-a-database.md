@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dda5ac5b2f569c8438439ec77da33fde3a385fa0
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782901"
 ---
 # <a name="add-a-database-to-an-availability-group-sql-server"></a>将数据库添加到可用性组 (SQL Server)
@@ -40,13 +40,13 @@ ms.locfileid: "72782901"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a> 先决条件和限制  
+###  <a name="Prerequisites"></a>先决条件和限制  
   
 -   您必须连接到承载主副本的服务器实例。  
   
--   数据库必须位于承载主副本的服务器实例上并符合可用性数据库的先决条件和限制。 有关详细信息，请参阅[针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](prereqs-restrictions-recommendations-always-on-availability.md)。  
+-   数据库必须位于承载主副本的服务器实例上并符合可用性数据库的先决条件和限制。 有关详细信息，请参阅[AlwaysOn 可用性组 &#40;SQL Server&#41;的先决条件、限制和建议](prereqs-restrictions-recommendations-always-on-availability.md)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ###  <a name="Permissions"></a> 权限  
  对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  
@@ -94,7 +94,7 @@ ms.locfileid: "72782901"
   
 3.  在您将数据库添加到可用性组后，需要在承载辅助副本的每个服务器实例上配置相应的辅助数据库。 有关详细信息，请参阅[启动 AlwaysOn 辅助数据库的数据移动 (SQL Server)](start-data-movement-on-an-always-on-secondary-database-sql-server.md)。  
   
-##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
+##  <a name="PowerShellProcedure"></a>使用 PowerShell  
  **将数据库添加到可用性组**  
   
 1.  将目录 (`cd`) 更改为承载主副本的服务器实例。  
@@ -137,7 +137,7 @@ Add-SqlAvailabilityDatabase -Path $MyAgSecondaryPath -Database "MyDatabase"
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ &#40;AlwaysOn 可用性组 SQL Server&#41;  概述](overview-of-always-on-availability-groups-sql-server.md)  
- [创建和配置可用性组 (SQL Server)](creation-and-configuration-of-availability-groups-sql-server.md)   
- [使用 AlwaysOn 仪表板&#40;SQL Server Management Studio&#41; ](use-the-always-on-dashboard-sql-server-management-studio.md)   
+ [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [&#40;SQL Server&#41;创建和配置可用性组](creation-and-configuration-of-availability-groups-sql-server.md)   
+ [使用 AlwaysOn 仪表板 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)   
  [监视可用性组 (Transact-SQL)](monitor-availability-groups-transact-sql.md)  

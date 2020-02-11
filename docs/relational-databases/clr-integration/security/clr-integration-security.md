@@ -15,10 +15,10 @@ ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7cfcc3f4d65901da34152a6fce21b436750c15fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68118514"
 ---
 # <a name="clr-integration-security"></a>CLR 集成安全性
@@ -36,7 +36,8 @@ ms.locfileid: "68118514"
   
 -   用户定义代码不应能通过在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 进程中运行而获得对系统资源的未经授权访问。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 现在集成了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 基于用户的安全模式和 CLR 基于代码访问的安全模式。 本节将讨论此组合安全方法的某些优势。  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 现在集成了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 基于用户的安全模式和 CLR 基于代码访问的安全模式。 本节将讨论此组合安全方法的某些优势。  
   
  下表列出了本节的主题。  
   
@@ -58,7 +59,7 @@ ms.locfileid: "68118514"
  [应用程序域和 CLR 集成安全性](/sql/database-engine/dev-guide/allowing-partially-trusted-callers?view=sql-server-2014)  
  描述如何将程序集加载到应用程序域。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [管理 CLR 集成程序集](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)  
   
   

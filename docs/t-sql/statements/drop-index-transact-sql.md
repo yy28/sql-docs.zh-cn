@@ -33,10 +33,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dbee99748718d88ce678d78cfa64849f8e5bbc5d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982162"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
@@ -49,7 +49,7 @@ ms.locfileid: "73982162"
 > [!IMPORTANT]
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的将来版本将删除在 `<drop_backward_compatible_index>` 中定义的语法。 请避免在新的开发工作中使用该功能，并考虑修改当前使用该功能的应用程序。 请改用在 `<drop_relational_or_xml_index>` 下指定的语法。 使用向后兼容语法无法删除 XML 索引。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -180,7 +180,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
   
  如果使用 MOVE TO 删除了聚集索引，则将重新生成所有对基表的非聚集索引，但这些索引会保留在其原始文件组或分区方案中。 如果基表移动到其他文件组或分区方案中，这些非聚集索引不会通过移动来与基表（堆）的新位置一致。 因此，即使非聚集索引以前与聚集索引对齐，它们也可能不再与堆对齐。 有关已分区索引的详细信息，请参阅[已分区表和已分区索引](../../relational-databases/partitions/partitioned-tables-and-indexes.md)。  
   
- partition_scheme_name ( column_name )      
+ _partition_scheme_name_ **(** _column_name_ **)**  
  **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  指定分区方案作为生成表的位置。 该分区方案必须已通过执行 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) 或 [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md) 创建完毕。 如果未指定位置但表已分区，则表将包含在与现有聚集索引相同的分区方案中。  
@@ -217,7 +217,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
 > [!NOTE]
 >  在此上下文中，default 不是关键字。 它是默认文件组的标识符，必须对其进行分隔，就像在 MOVE TO "default" 或 MOVE TO [default] 中一样     。 如果指定了 "default"，则当前会话的 QUOTED_IDENTIFIER 选项必须为 ON。 这是默认设置。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  删除非聚集索引时，将从元数据中删除索引定义，并从数据库文件中删除索引数据页（B 树）。 删除聚集索引时，将从元数据中删除索引定义，并且存储于聚集索引叶级别的数据行将存储到生成的未排序表（堆）中。 将重新获得以前由索引占有的所有空间。 此后可将该空间用于任何数据库对象。  
   
  如果索引所在的文件组脱机或设置为只读，则不能删除该索引。  

@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6fd005563251ba674449020c7af25ce20ea98b4a
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73532944"
 ---
 # <a name="sysdm_exec_dms_workers-transact-sql"></a>sys.dm_exec_dms_workers (Transact-SQL)
@@ -36,14 +36,14 @@ ms.locfileid: "73532944"
   
  此视图显示最后一个1000请求和活动请求的数据;活动请求始终具有此视图中的数据。  
   
-|Column Name|数据类型|描述|范围|  
+|列名|数据类型|说明|范围|  
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|`nvarchar(32)`|查询此 DMS 工作线程所属的部分。 request_id、step_index 和 dms_step_index 构成此视图的键。||  
-|step_index|`int`|查询步骤此 DMS 辅助角色所属的部分。|请参阅 sys.databases 中的步骤索引[dm_exec_distributed_request_steps &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)。|  
+|step_index|`int`|查询步骤此 DMS 辅助角色所属的部分。|请参阅 sys.databases 中的步骤索引[&#40;transact-sql&#41;dm_exec_distributed_request_steps ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)。|  
 |dms_step_index|`int`|此工作线程正在运行的 DMS 计划中的步骤。|请参阅[sys.databases dm_exec_dms_workers （transact-sql）](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
-|compute_node_id|`int`|正在运行辅助角色的节点。|请参阅[sys.databases. &#40;dm_exec_compute_nodes transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)。|  
+|compute_node_id|`int`|正在运行辅助角色的节点。|请参阅[sys.databases &#40;transact-sql&#41;dm_exec_compute_nodes ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)。|  
 |distribution_id|`int`|||  
-|类型|`nvarcha(32)`|||  
+|type|`nvarcha(32)`|||  
 |status|`nvarchar(32)`|此步骤的状态|"挂起"、"正在运行"、"完成"、"失败"、"UndoFailed"、"PendingCancel"、"已取消"、"撤消"、"已中止"|  
 |bytes_per_sec|`bigint`|||  
 |bytes_processed|`bigint`|||  
@@ -65,6 +65,6 @@ ms.locfileid: "73532944"
 ## <a name="see-also"></a>另请参阅  
  [通过动态管理视图进行 PolyBase 故障排除](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [与数据库相关的动态&#40;管理视图 transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [与数据库相关的动态管理视图 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

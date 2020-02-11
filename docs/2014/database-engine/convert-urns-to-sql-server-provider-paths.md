@@ -11,13 +11,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 77b6031e91f59fc691f0b1c055e90464d660d3a9
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797938"
 ---
 # <a name="convert-urns-to-sql-server-provider-paths"></a>将 URN 转换为 SQL Server 提供程序路径
+  
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理对象模型 (SMO) 为其对象生成统一资源名称 (URN)。 每个 URN 都唯一标识一个 SMO 对象，并且可通过使用 `Convert-UrnToPath` cmdlet 转换为 SQL Server PowerShell 提供程序路径。  
   
 ## <a name="converting-urns-to-paths"></a>将 URN 转换为路径  

@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1982a1ed16479ca1f7891a7b81d761ee7a0b1621
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638739"
 ---
 # <a name="sql-server-extended-events-packages"></a>SQL Server 扩展事件包
@@ -77,9 +77,9 @@ ms.locfileid: "62638739"
 |术语|定义|  
 |----------|----------------|  
 |管理员|管理员事件主要针对的是最终用户、管理员和支持人员。 管理员通道中包含的事件指示定义好的解决方案出现问题，管理员可以对该问题进行处理。 例如，应用程序无法连接到打印机就是一个管理员事件。 这些事件可能在文档中有详细描述，或者有与之关联的消息告诉读者如何纠正这一问题。|  
-|操作|操作事件用于分析和诊断问题或匹配项。 它们可用于基于问题或匹配项来触发工具或任务。 操作事件的一个示例是从系统中添加或删除打印机。|  
+|可运行|操作事件用于分析和诊断问题或匹配项。 它们可用于基于问题或匹配项来触发工具或任务。 操作事件的一个示例是从系统中添加或删除打印机。|  
 |分析|分析事件的发布量是很大的。 它们对程序操作进行说明并且通常用于性能调查。|  
-|调试|调试事件仅由开发人员用来诊断问题以进行调试。<br /><br /> 注意：调试渠道中的事件返回特定于实现的内部状态数据。 这些事件返回的架构和数据可能在 SQL Server 的将来版本中更改或失效。 因此，调试渠道中的事件在 SQL Server 的将来版本中可能更改或删除且不事先通知。|  
+|调试|调试事件仅由开发人员用来诊断问题以进行调试。<br /><br /> 注意：调试通道中的事件返回特定于实现的内部状态数据。 这些事件返回的架构和数据可能在 SQL Server 的将来版本中更改或失效。 因此，调试渠道中的事件在 SQL Server 的将来版本中可能更改或删除且不事先通知。|  
   
  **关键字**  
   
@@ -137,11 +137,11 @@ where name = 'keyword_map'
 ### <a name="types"></a>类型  
  由于数据是排列在一起的字节集合，因此需要使用字节集合的长度和特征来解释这些数据。 该信息将封装在 Type 对象中。 下面是为包对象提供的类型：  
   
--   事件  
+-   event  
   
 -   action  
   
--   target  
+-   目标  
   
 -   pred_source  
   
@@ -213,9 +213,9 @@ where name = 'lock_mode'
   
  以此表为例，假定有一名为模式的列，且其值为 5。 此表指示 5 映射到 X，即表示锁类型为排他。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server Extended Events Sessions](sql-server-extended-events-sessions.md)   
  [SQL Server 扩展事件引擎](sql-server-extended-events-engine.md)   
- [SQL Server Extended Events Targets](../../database-engine/sql-server-extended-events-targets.md)  
+ [SQL Server 扩展事件目标](../../database-engine/sql-server-extended-events-targets.md)  
   
   

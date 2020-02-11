@@ -18,10 +18,10 @@ ms.assetid: cb1d5d00-2805-4d47-bd04-545232067345
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: aff19eabc5738e986fca1bf13f85130daead3217
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72909867"
 ---
 # <a name="sp_delete_log_shipping_primary_database-transact-sql"></a>sp_delete_log_shipping_primary_database (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "72909867"
 
   此存储过程删除主数据库的日志传送，包括备份作业、本地历史记录以及远程历史记录。 仅在使用**sp_delete_log_shipping_primary_secondary**删除辅助数据库后，才使用此存储过程。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,7 +40,7 @@ sp_delete_log_shipping_primary_database
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @database = ] 'database'` 是日志传送主数据库的名称。 *数据库*为**sysname**，无默认值，且不能为 NULL。  
+`[ @database = ] 'database'`日志传送主数据库的名称。 *数据库*为**sysname**，无默认值，且不能为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -48,7 +48,7 @@ sp_delete_log_shipping_primary_database
 ## <a name="result-sets"></a>结果集  
  无。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  必须从主服务器上的**master**数据库运行**sp_delete_log_shipping_primary_database** 。 此存储过程执行以下操作：  
   
 1.  为指定的主数据库删除备份作业。  
@@ -65,7 +65,7 @@ sp_delete_log_shipping_primary_database
   
 7.  调用监视服务器上**sp_delete_log_shipping_alert_job** 。  
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有**sysadmin**固定服务器角色的成员才能运行此过程。  
   
 ## <a name="examples"></a>示例  

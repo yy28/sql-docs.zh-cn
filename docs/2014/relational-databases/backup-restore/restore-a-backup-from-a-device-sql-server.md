@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4834a25b9100a37e027d8174897d86655c3690d1
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70154745"
 ---
 # <a name="restore-a-backup-from-a-device-sql-server"></a>从设备还原备份 (SQL Server)
@@ -42,7 +42,7 @@ ms.locfileid: "70154745"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 权限  
  如果不存在要还原的数据库，则用户必须有 CREATE DATABASE 权限才能执行 RESTORE。 如果数据库存在，则 RESTORE 权限默认授予 **sysadmin** 和 **dbcreator** 固定服务器角色成员以及数据库的所有者 (**dbo**)（对于 FROM DATABASE_SNAPSHOT 选项，数据库始终存在）。  
@@ -53,13 +53,13 @@ ms.locfileid: "70154745"
   
 #### <a name="to-restore-a-backup-from-a-device"></a>从设备还原备份  
   
-1.  连接到相应的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例之后，在对象资源管理器中，单击服务器名称以展开服务器树。  
+1.  连接到相应的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例之后，在“对象资源管理器”中，单击服务器名称以展开服务器树。  
   
 2.  展开 **“数据库”** ，然后根据数据库的不同，选择用户数据库，或展开 **“系统数据库”** ，再选择系统数据库。  
   
-3.  右键单击数据库，指向“任务”，再单击“还原”。  
+3.  右键单击数据库，指向“任务”  ，再单击“还原”  。  
   
-4.  单击所需的还原操作类型（“数据库”、“文件和文件组”或“事务日志”）。 这将打开相应的还原对话框。  
+4.  单击所需的还原操作类型（“数据库”  、“文件和文件组”  或“事务日志”  ）。 这将打开相应的还原对话框。  
   
 5.  在 **“常规”** 页的 **“还原的源”** 部分，单击 **“源设备”** 。  
   
@@ -91,7 +91,7 @@ RESTORE DATABASE AdventureWorks2012
  [RESTORE LABELONLY (Transact-SQL)](/sql/t-sql/statements/restore-statements-labelonly-transact-sql)   
  [RESTORE VERIFYONLY (Transact-SQL)](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql)   
  [在简单恢复模式下还原数据库备份 (Transact-SQL)](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)   
- [还原数据库备份&#40;SQL Server Management Studio&#41; ](restore-a-database-backup-using-ssms.md)   
+ [还原数据库备份 &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)   
  [还原差异数据库备份 (SQL Server)](restore-a-differential-database-backup-sql-server.md)   
  [将数据库还原到新位置 (SQL Server)](restore-a-database-to-a-new-location-sql-server.md)   
  [备份文件和文件组 (SQL Server)](back-up-files-and-filegroups-sql-server.md)   

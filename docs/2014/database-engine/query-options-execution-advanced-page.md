@@ -13,10 +13,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 09/03/2019
 ms.openlocfilehash: 39a43adeb82b154a076fc7bfc24cc56b54cc8640
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71199323"
 ---
 # <a name="query-options-execution-advanced-page"></a>“查询选项”中的“执行”（“高级”页）
@@ -29,7 +29,7 @@ ms.locfileid: "71199323"
 
 **设置 PARSEONLY**检查每个查询的语法，但不运行查询。 默认情况下，此选项处于未选中状态。  
 
-**设置 CONCAT_NULL_YIELDS_NULL**选中此复选框时，将现有值与`NULL`连接的查询将始终`NULL`返回作为结果。 清除此复选框时，对于现有值与 `NULL` 相串联的查询，将返回该现有值。 默认情况下选择此选项。
+**设置 CONCAT_NULL_YIELDS_NULL**选中此复选框时，将现有值与`NULL`连接的查询将始终返回`NULL`作为结果。 清除此复选框时，对于现有值与 `NULL` 相串联的查询，将返回该现有值。 默认情况下选择此选项。
 
 **设置 ARITHABORT**选中此复选框后，当`INSERT`、 `DELETE`或`UPDATE`语句在表达式计算过程中遇到算术错误（溢出、被零除或域错误）时，将终止查询或批处理。 清除此复选框时，会在可能的情况下为该值提供 `NULL`，查询将继续进行，而结果中还会包含一条消息。 有关此行为的详细说明，请参阅联机丛书。 默认情况下选择此选项。
   
@@ -66,4 +66,4 @@ ms.locfileid: "71199323"
 
 有关详细信息，请参阅[具有 secure enclaves](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions)和[secure Enclave 证明](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions#secure-enclave-attestation)的 Always Encrypted。
 
-**重置为默认值** 将此页上的所有值重置为原始默认值。
+**重置为默认值**将此页上的所有值重置为原始默认值。

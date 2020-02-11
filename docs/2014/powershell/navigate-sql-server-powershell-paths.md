@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ce1e3a2088214c222cd2c2e84fc333f4993b7a6b
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797810"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>导航 SQL ServerPowerShell 路径
@@ -23,16 +23,17 @@ ms.locfileid: "72797810"
 ## <a name="before-you-begin"></a>开始之前  
  Windows PowerShell 实现 cmdlet 以便导航表示 PowerShell 提供程序支持的对象层次结构的路径结构。 在您导航到该路径中的节点时，可以使用其他 cmdlet 以便针对当前对象执行基本操作。 由于 cmdlet 会经常用到，因此它们具有简短的规范别名。 还有一组将 cmdlet 映射到类似命令提示符命令的别名，以及另一组用于 UNIX shell 命令的别名。  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供程序实现了提供程序 cmdlets 的一部分，如下表中所示。  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供程序实现了提供程序 cmdlets 的一部分，如下表中所示。  
   
-|cmdlet|规范别名|cmd 别名|UNIX shell 别名|描述|  
+|cmdlet|规范别名|cmd 别名|UNIX shell 别名|说明|  
 |------------|---------------------|---------------|----------------------|-----------------|  
-|**Get-Location**|**gl**|**pwd**|**pwd**|获取当前节点。|  
+|**获取-位置**|**gl**|**pwd**|**pwd**|获取当前节点。|  
 |`Set-Location`|**sl**|**cd、chdir**|**cd、chdir**|更改当前节点。|  
-|**Get-ChildItem**|**gci**|**dir**|**ls**|列出存储在当前节点中的对象。|  
-|**Get-Item**|**gi**|||返回当前项的属性。|  
-|**Rename-Item**|**rni**|**rn**|**ren**|重命名对象。|  
-|**Remove-Item**|**ri**|**del、rd**|**rm、rmdir**|删除对象。|  
+|**Get-childitem**|**gci**|**目录**|**'**|列出存储在当前节点中的对象。|  
+|**获取项**|**gi**|||返回当前项的属性。|  
+|**重命名项**|**rni**|**rn**|**ren**|重命名对象。|  
+|**删除项**|**ri**|**del、rd**|**rm、rmdir**|删除对象。|  
   
 > [!IMPORTANT]  
 >  某些 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 标识符（对象名称）包含 Windows PowerShell 不支持在路径名称中使用的字符。 有关如何使用包含这些字符的名称的详细信息，请参阅 [SQL Server Identifiers in PowerShell](sql-server-identifiers-in-powershell.md)。  
@@ -43,8 +44,8 @@ ms.locfileid: "72797810"
 |路径位置|Get-ChildItem 结果|  
 |-------------------|----------------------------|  
 |SQLSERVER:\SQL|返回本地计算机的名称。 如果在连接到其他计算机上的 [!INCLUDE[ssDE](../includes/ssde-md.md)] 实例时使用的是 SMO 或 WMI，则还将列出这些计算机。|  
-|SQLSERVER:\SQL\\*ComputerName*|计算机上 [!INCLUDE[ssDE](../includes/ssde-md.md)] 实例的列表。|  
-|SQLSERVER:\SQL\\*ComputerName*\\*InstanceName*|实例中顶层对象类型（如 Endpoints、Certificates 和 Databases）的列表。|  
+|SQLSERVER： \ SQL\\*ComputerName*|计算机上 [!INCLUDE[ssDE](../includes/ssde-md.md)] 实例的列表。|  
+|SQLSERVER： \ SQL\\*ComputerName*\\*实例*名称|实例中顶层对象类型（如 Endpoints、Certificates 和 Databases）的列表。|  
 |对象类节点，如 Databases|该类型的对象列表，如数据库列表：master、model、AdventureWorks20008R2。|  
 |对象名称节点，如 AdventureWorks2012|包含在该对象中的对象类型的列表。 例如，数据库将列出表和视图之类的对象类型。|  
   
@@ -132,6 +133,6 @@ Set-Location AWDB:\Tables\Purchasing.Vendor
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server PowerShell 提供程序](sql-server-powershell-provider.md)   
- [使用 SQL ServerPowerShell 路径](work-with-sql-server-powershell-paths.md)   
- [将 URN 转换为 SQL Server 提供程序路径](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
+ [使用 SQL Server PowerShell 路径](work-with-sql-server-powershell-paths.md)   
+ [将 Urn 转换为 SQL Server 提供程序路径](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  

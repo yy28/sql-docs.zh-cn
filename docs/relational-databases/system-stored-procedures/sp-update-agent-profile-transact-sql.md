@@ -16,10 +16,10 @@ ms.assetid: cc81f227-0df3-4151-bb4d-4f45ea997b71
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 730f996a35e7ea2e31518322d710b197cf31f38b
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73632829"
 ---
 # <a name="sp_update_agent_profile-transact-sql"></a>sp_update_agent_profile (Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "73632829"
 
   更新复制代理所用的配置文件。 此存储过程在分发服务器上对分发数据库执行。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,35 +37,35 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @agent_type = ] 'agent_type'` 是代理的类型。 *agent_type*是**int**，没有默认值，可以是下列值之一。  
+`[ @agent_type = ] 'agent_type'`代理的类型。 *agent_type*是**int**，没有默认值，可以是下列值之一。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**1**|快照代理。|  
 |**2**|日志读取器代理。|  
 |**3**|分发代理。|  
 |**4**|合并代理。|  
-|**9**|队列读取器代理。|  
+|**900**|队列读取器代理。|  
   
-`[ @agent_id = ] 'agent_id'` 是代理的 ID。 *agent_id*为**int**，没有默认值。  
+`[ @agent_id = ] 'agent_id'`代理的 ID。 *agent_id*为**int**，没有默认值。  
   
-`[ @profile_id = ] 'profile_id'` 是代理应使用的配置文件的 ID。 *profile_id*为**int**，没有默认值。 若要查看为每个代理定义的配置文件的列表，请使用[sp_help_agent_profile &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)。 有关系统配置文件的详细信息，请参阅[复制代理配置文件](../../relational-databases/replication/agents/replication-agent-profiles.md)。  
+`[ @profile_id = ] 'profile_id'`代理应使用的配置文件的 ID。 *profile_id*为**int**，没有默认值。 若要查看为每个代理定义的配置文件的列表，请使用[&#40;transact-sql&#41;sp_help_agent_profile ](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)。 有关系统配置文件的详细信息，请参阅[复制代理配置文件](../../relational-databases/replication/agents/replication-agent-profiles.md)。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **sp_update_agent_profile**在所有类型的复制中使用。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有**sysadmin**固定服务器角色的成员才能**sp_update_agent_profile**执行。  
   
 ## <a name="see-also"></a>另请参阅  
  [复制代理配置文件](../../relational-databases/replication/agents/replication-agent-profiles.md)   
- [sp_add_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
- [sp_change_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md)   
- [sp_drop_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
- [sp_help_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)   
+ [sp_add_agent_profile &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
+ [sp_change_agent_profile &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md)   
+ [sp_drop_agent_profile &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
+ [sp_help_agent_profile &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

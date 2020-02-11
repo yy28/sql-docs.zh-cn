@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 46f440aa6b40d8a2e0ff48c59818b722073b1628
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62640369"
 ---
 # <a name="remove-a-utility-control-point-sql-server-utility"></a>删除实用工具控制点（SQL Server 实用工具）
@@ -43,9 +43,9 @@ ms.locfileid: "62640369"
   
 -   如果删除了 UCP 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例具有非实用工具数据收集组，则该过程将不删除 UMDW 数据库 (sysutility_mdw)。 在此情况下，必须首先手动删除 UMDW 数据库 (sysutility_mdw)，然后才能再次创建 UCP。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  该过程必须由具有 `sysadmin` 权限的用户运行；创建 UCP 要求同样的权限。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
@@ -62,7 +62,7 @@ ms.locfileid: "62640369"
 EXEC msdb.dbo.sp_sysutility_ucp_remove;  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 实用工具的功能和任务](sql-server-utility-features-and-tasks.md)   
  [使用实用工具资源管理器管理 SQL Server 实用工具](use-utility-explorer-to-manage-the-sql-server-utility.md)   
  [SQL Server 实用工具故障排除](../../database-engine/troubleshoot-the-sql-server-utility.md)  

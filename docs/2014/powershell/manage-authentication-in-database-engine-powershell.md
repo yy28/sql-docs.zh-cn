@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4a04e581758748d55b9defcab3beaa6a86f0eecf
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797795"
 ---
 # <a name="manage-authentication-in-database-engine-powershell"></a>在数据库引擎 PowerShell 中管理身份验证
@@ -22,14 +22,14 @@ ms.locfileid: "72797795"
   
 1.  **开始之前：**  [权限](#Permissions)  
   
-2.  **若要设置身份验证，请使用：** [虚拟驱动器](#SQLAuthVirtDrv)[Invoke-Sqlcmd](#SQLAuthInvSqlCmd)  
+2.  **若要设置身份验证，请使用：**  [虚拟驱动器](#SQLAuthVirtDrv)、 [Invoke](#SQLAuthInvSqlCmd)  
   
 ##  <a name="Permissions"></a> 权限  
  您可以在 [!INCLUDE[ssDE](../includes/ssde-md.md)] 实例中执行的所有操作都受到授予用于连接到该实例的身份验证凭据的权限的控制。 默认情况下， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 和 cmdlet 将使用其运行所基于的 Windows 帐户来建立与 [!INCLUDE[ssDE](../includes/ssde-md.md)]的 Windows 身份验证连接。  
   
- 若要建立 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证连接，您必须提供 SQL Server 身份验证登录 ID 和密码。 使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供程序时，必须将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 登录凭据与虚拟驱动器相关联，然后使用更改目录命令（`cd`）连接到该驱动器。 在 Windows PowerShell 中，安全凭据只能与虚拟驱动器关联。  
+ 若要建立 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证连接，您必须提供 SQL Server 身份验证登录 ID 和密码。 使用该[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]提供程序时，必须将[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]登录凭据与虚拟驱动器相关联，然后使用更改目录命令（`cd`）连接到该驱动器。 在 Windows PowerShell 中，安全凭据只能与虚拟驱动器关联。  
   
-##  <a name="SQLAuthVirtDrv"></a> 使用虚拟驱动器进行 SQL Server 身份验证  
+##  <a name="SQLAuthVirtDrv"></a>使用虚拟驱动器进行 SQL Server 身份验证  
  **创建与 SQL Server 身份验证登录相关联的虚拟驱动器**  
   
 1.  创建一个函数，该函数：  
@@ -47,7 +47,8 @@ ms.locfileid: "72797795"
 ### <a name="example-virtual-drive"></a>示例（虚拟驱动器）  
  此示例创建名为 **sqldrive** 的函数，您可使用该函数来创建与指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证登录名和实例相关联的虚拟驱动器。  
   
- **sqldrive** 函数提示您输入登录名的密码，并在您键入密码时屏蔽密码。 然后，每当你使用更改目录命令（`cd`）来通过使用虚拟驱动器名称连接到路径时，所有操作都将通过使用你在创建驱动器时提供的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证登录凭据来执行。  
+ 
+  **sqldrive** 函数提示您输入登录名的密码，并在您键入密码时屏蔽密码。 然后，每当你使用更改目录命令（`cd`）来通过使用虚拟驱动器名称连接到路径时，所有操作都将通过使用你在创建[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]驱动器时提供的身份验证登录凭据来执行。  
   
 ```powershell
 ## Create a function that specifies the login and prompts for the password.  
@@ -67,7 +68,7 @@ sqldrive SQLAuth
 cd SQLAuth  
 ```  
   
-##  <a name="SQLAuthInvSqlCmd"></a> 使用 Invoke-Sqlcmd 的 SQL Server 身份验证  
+##  <a name="SQLAuthInvSqlCmd"></a>使用 Invoke 进行 SQL Server 身份验证-Sqlcmd  
  **将 Invoke-Sqlcmd 用于 SQL Server 身份验证**  
   
 1.  使用 `-Username` 参数可以指定一个登录 ID，以及用于指定关联密码的 `-Password` 参数。  

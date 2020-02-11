@@ -1,5 +1,5 @@
 ---
-title: SELECT DISTINCT FROM &lt;model &gt; (DMX) |Microsoft Docs
+title: SELECT DISTINCT FROM &lt;model &gt; （DMX） |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,13 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 67ed5236aad0549fa6850114280ee15d8cebcaeb
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892532"
 ---
-# <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM &lt;model &gt; (DMX)
+# <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM &lt;model &gt; （DMX）
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   返回模型中所选列的所有可能状态。 所返回的值会因指定列包含离散值、离散化数值或连续数值而有所变化。  
@@ -41,7 +41,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  *条件列表*  
  一个限制条件，用于限制从列列表返回的值。  
   
- *expression*  
+ *表达式*  
  可选。 一个返回标量值的表达式。  
   
 ## <a name="remarks"></a>备注  
@@ -53,9 +53,9 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 <model>.<table column reference>.<column reference>  
 ```  
   
- **SELECT DISTINCT FROM \<model >** 语句的结果不同, 具体取决于列的类型。 下表说明了所支持的列类型和该语句的输出结果。  
+ **SELECT DISTINCT FROM \<model>** 语句的结果不同，具体取决于列的类型。 下表说明了所支持的列类型和该语句的输出结果。  
   
-|列类型|Output|  
+|列类型|输出|  
 |-----------------|------------|  
 |离散|列中的唯一值。|  
 |离散化|列中每个离散化存储桶的中点。|  
@@ -99,10 +99,10 @@ FROM [TM Decision Tree]
  查询还返回一行表示缺失值的 Null 值。  
   
 ## <a name="discretized-column-example"></a>离散化列示例  
- 下面的代码示例返回算法为 [`Yearly Income]` 列创建的所有存储桶的中点值、最大值和最小值。 若要重新生成此示例的结果，则必须创建一个与 `[Targeted Mailing]` 相同的新挖掘结构。 在向导中, 将`Yearly Income`列的内容类型从**连续**更改为**离散**化。  
+ 下面的代码示例返回算法为 [`Yearly Income]` 列创建的所有存储桶的中点值、最大值和最小值。 若要重新生成此示例的结果，则必须创建一个与 `[Targeted Mailing]` 相同的新挖掘结构。 在向导中，将`Yearly Income`列的内容类型从**连续**更改为**离散**化。  
   
 > [!NOTE]  
->  您还可以更改在基础挖掘教程中创建的挖掘模型，以离散化挖掘结构列 [`Yearly Income]`。 有关如何执行此操作的信息, 请参阅[更改挖掘模型中列的离散](https://docs.microsoft.com/analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model)化。 但是，当您更改列的离散化时，系统会强制要求重新处理挖掘结构，这将会更改您使用该结构生成的其他模型的结果。  
+>  您还可以更改在基础挖掘教程中创建的挖掘模型，以离散化挖掘结构列 [`Yearly Income]`。 有关如何执行此操作的信息，请参阅[更改挖掘模型中列的离散](https://docs.microsoft.com/analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model)化。 但是，当您更改列的离散化时，系统会强制要求重新处理挖掘结构，这将会更改您使用该结构生成的其他模型的结果。  
   
 ```  
 SELECT DISTINCT [Yearly Income] AS [Bucket Average],   
@@ -128,14 +128,14 @@ FROM [TM Decision Tree]
   
  例如，如果您使用决策树查看器浏览模型，并单击包含按收入分组的客户的节点，则在工具提示中将显示以下节点属性：  
   
- Age > = 69, 年收入 < 39221.41  
+ Age >= 69，年收入 < 39221.41  
   
 > [!NOTE]  
 >  最小存储桶的最小值和最大存储桶的最大值为所观察到的最高值和最低值。 任何超出此观察范围的值都假定为属于最小存储桶和最大存储桶。  
   
-## <a name="see-also"></a>请参阅  
- [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
- [数据挖掘扩展&#40;插件&#41; DMX 数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
- [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
+## <a name="see-also"></a>另请参阅  
+ [选择 &#40;DMX&#41;](../dmx/select-dmx.md)   
+ [数据挖掘扩展插件 &#40;DMX&#41; 数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
+ [数据挖掘扩展插件 &#40;DMX&#41; 语句参考](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

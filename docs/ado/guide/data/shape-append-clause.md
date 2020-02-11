@@ -1,5 +1,5 @@
 ---
-title: 形状 APPEND 子句 |Microsoft Docs
+title: Shape APPEND 子句 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e09113b42f655a3b94ab3877ff81f2553a363931
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924184"
 ---
 # <a name="shape-append-clause"></a>Shape APPEND 子句
-形状命令 APPEND 子句将列或列追加**记录集**。 通常情况下，这些列是章节列，请参阅子**记录集**。  
+Shape command APPEND 子句向**记录集**追加一列或多列。 通常，这些列是章节列，它们引用子**记录集**。  
   
 ## <a name="syntax"></a>语法  
   
@@ -30,31 +30,31 @@ ms.locfileid: "67924184"
 SHAPE [parent-command [[AS] parent-alias]] APPEND column-list  
 ```  
   
-## <a name="description"></a>描述  
- 此子句的部分如下所示：  
+## <a name="description"></a>说明  
+ 此子句的组成部分如下所示：  
   
  *parent-command*  
- 零个或以下一项 (可以省略*父命令*完全):  
+ 零或以下值之一（可以完全省略*父命令*）：  
   
--   提供程序命令括在大括号 ("{}")，它返回**记录集**对象。 该命令颁发给基础数据提供程序，且其语法取决于该提供程序的要求。 这通常是 SQL 语言中，虽然 ADO 不需要任何特定的查询语言。  
+-   括在大括号（"{}"）中的提供程序命令，该命令返回**记录集**对象。 将向基础数据提供程序发出命令，其语法取决于提供程序的要求。 这通常是 SQL 语言，尽管 ADO 不需要任何特定的查询语言。  
   
--   另一个形状命令嵌入在括号中。  
+-   嵌入在括号内的另一个 shape 命令。  
   
--   表关键字后, 跟的表中的数据提供程序的名称。  
+-   TABLE 关键字，后跟数据提供程序中表的名称。  
   
- *parent-alias*  
- 指的是父级的可选别名**记录集**。  
+ *父-别名*  
+ 引用父**记录集**的可选别名。  
   
- *column-list*  
- 一个或多个以下：  
+ *列列表*  
+ 以下一项或多项操作：  
   
 -   聚合列。  
   
--   计算的列。  
+-   计算列。  
   
--   通过使用新子句创建的新列。  
+-   使用 NEW 子句创建的新列。  
   
--   章节列。 章节列的定义括在括号 （"（）"）。 请参阅下面的语法。  
+-   章节列。 章节列定义括在括号中（"（）"）。 请参阅以下语法。  
   
 ```  
 SHAPE [parent-command [[AS] parent-alias]]  
@@ -65,52 +65,52 @@ SHAPE [parent-command [[AS] parent-alias]]
 ```  
   
 ## <a name="remarks"></a>备注  
- *child-recordset*  
- -   提供程序命令括在大括号 ("{}")，它返回**记录集**对象。 该命令颁发给基础数据提供程序，且其语法取决于该提供程序的要求。 这通常是 SQL 语言中，虽然 ADO 不需要任何特定的查询语言。  
+ *子记录集*  
+ -   括在大括号（"{}"）中的提供程序命令，该命令返回**记录集**对象。 将向基础数据提供程序发出命令，其语法取决于提供程序的要求。 这通常是 SQL 语言，尽管 ADO 不需要任何特定的查询语言。  
   
--   另一个形状命令嵌入在括号中。  
+-   嵌入在括号内的另一个 shape 命令。  
   
--   现有的形状的名称**记录集**。  
+-   现有整形**记录集**的名称。  
   
--   表关键字后, 跟的表中的数据提供程序的名称。  
+-   TABLE 关键字，后跟数据提供程序中表的名称。  
   
- *child-alias*  
- 引用子级的别名**记录集**。  
+ *子别名*  
+ 引用子**记录集**的别名。  
   
- *parent-column*  
- 中的列**记录集**返回的*父命令。*  
+ *父列*  
+ *父-命令*返回的**记录集中**的列。  
   
- *child-column*  
- 中的列**记录集**返回的*子命令*。  
+ *子列*  
+ *子命令*返回的**记录集中**的列。  
   
- *param-number*  
- 请参阅[操作的参数化命令](../../../ado/guide/data/operation-of-parameterized-commands.md)。  
+ *param-数字*  
+ 请参阅[参数化命令的操作](../../../ado/guide/data/operation-of-parameterized-commands.md)。  
   
- *chapter-alias*  
- 指的是附加到父级的章节列别名。  
-  
-> [!NOTE]
->  *"父列*TO*子列"* 子句实际上是一个列表，其中每个定义的关系用逗号分隔  
+ *章节-别名*  
+ 引用追加到父级的章节列的别名。  
   
 > [!NOTE]
->  子句后追加关键字实际上是一个列表，其中每个子句用逗号分隔，并定义要追加到父级的另一列。  
+>  *"父列*到*子列"* 子句实际上是一个列表，其中定义的每个关系都用逗号分隔  
+  
+> [!NOTE]
+>  追加关键字后面的子句实际上是一个列表，其中每个子句都用逗号分隔，并定义另一个要追加到父级的列。  
   
 ## <a name="remarks"></a>备注  
- 在提供程序命令从用户输入构造形状命令的一部分时，形状会将用户提供的提供程序命令视为不透明的字符串和如实地将其传递给提供程序。 例如，在以下形状命令中，  
+ 当你作为 SHAPE 命令的一部分从用户输入构造提供程序命令时，形状会将用户提供的提供程序命令视为不透明的字符串，并将其切实传递给提供程序。 例如，在下面的 SHAPE 命令中，  
   
 ```  
 SHAPE {select * from t1} APPEND ({select * from t2} RELATE k1 TO k2)  
 ```  
   
- 形状将执行两个命令：`select * from t1`和 (`select * from t2 RELATE k1 TO k2)`。 如果用户提供的复合命令之间用分号分隔的多个提供程序命令组成，形状不能区分不同之处。 因此，在以下形状命令，  
+ 形状将执行两个命令`select * from t1` ：和`select * from t2 RELATE k1 TO k2)`（。 如果用户提供了一个由多个提供程序命令（用分号分隔）组成的复合命令，则形状无法区分差别。 因此，在下面的 SHAPE 命令中，  
   
 ```  
 SHAPE {select * from t1; drop table t1} APPEND ({select * from t2} RELATE k1 TO k2)  
 ```  
   
- 形状将执行`select * from t1; drop table t1`和 (`select * from t2 RELATE k1 TO k2),`并未意识到，`drop table t1`是单独在此示例中为危险的提供程序命令。 应用程序必须始终验证用户输入，以防止发生这种潜在的黑客攻击。  
+ 形状执行`select * from t1; drop table t1`和（`select * from t2 RELATE k1 TO k2),`在此示例`drop table t1`中，不认识到是一个单独的，而是危险的提供程序命令。 应用程序必须始终验证用户输入，以防发生此类潜在的黑客攻击。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [操作非参数化命令](../../../ado/guide/data/operation-of-non-parameterized-commands.md)  
   
@@ -120,7 +120,7 @@ SHAPE {select * from t1; drop table t1} APPEND ({select * from t2} RELATE k1 TO 
   
 -   [中间 Shape COMPUTE 子句](../../../ado/guide/data/intervening-shape-compute-clauses.md)  
   
-## <a name="see-also"></a>请参阅  
- [数据整理示例](../../../ado/guide/data/data-shaping-example.md)   
- [正式 Shape 语法](../../../ado/guide/data/formal-shape-grammar.md)   
+## <a name="see-also"></a>另请参阅  
+ [数据定形示例](../../../ado/guide/data/data-shaping-example.md)   
+ [正式形状语法](../../../ado/guide/data/formal-shape-grammar.md)   
  [常用 Shape 命令](../../../ado/guide/data/shape-commands-in-general.md)
