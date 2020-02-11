@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3975bee14daad82291b5d343999ef4ebca7e6fbc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085083"
 ---
 # <a name="data-mining-architecture"></a>数据挖掘体系结构
@@ -33,17 +33,17 @@ ms.locfileid: "66085083"
  有关如何在您的商业智能解决方案中实施数据挖掘的详细信息，请参阅 MSDN Library 中的“解决方案指南”一节。  
   
 ## <a name="in-this-section"></a>本节内容  
- [逻辑体系结构（Analysis Services - 数据挖掘）](logical-architecture-analysis-services-data-mining.md)  
+ [逻辑体系结构 &#40;Analysis Services 数据挖掘&#41;](logical-architecture-analysis-services-data-mining.md)  
   
- [物理体系结构（Analysis Services - 数据挖掘）](physical-architecture-analysis-services-data-mining.md)  
+ [物理体系结构 &#40;Analysis Services 数据挖掘&#41;](physical-architecture-analysis-services-data-mining.md)  
   
  [数据挖掘服务和数据源](data-mining-services-and-data-sources.md)  
   
  [管理数据挖掘解决方案和对象](management-of-data-mining-solutions-and-objects.md)  
   
- [安全性概述（数据挖掘）](security-overview-data-mining.md)  
+ [安全概述 &#40;数据挖掘&#41;](security-overview-data-mining.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [多维模型编程](../multidimensional-models/multidimensional-model-programming.md)   
  [数据挖掘编程](../dev-guide/data-mining-programming.md)  
   

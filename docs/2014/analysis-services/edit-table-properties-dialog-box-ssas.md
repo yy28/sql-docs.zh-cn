@@ -1,5 +1,5 @@
 ---
-title: 编辑表属性对话框 (SSAS) |Microsoft Docs
+title: "\"编辑表属性\" 对话框（SSAS） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,20 +13,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1fefc72d81129ac4691f35209f25c4f348272c81
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081437"
 ---
 # <a name="edit-table-properties-dialog-box-ssas"></a>“编辑表属性”对话框 (SSAS)
-  **“编辑表属性”** 对话框可用于查看和修改通过使用“表导入向导”导入到模型设计器中的表的属性。 若要访问此对话框，请在模型设计器中选择表，然后在 **“表”** 菜单中单击 **“表属性”** 。  
+  
+  **“编辑表属性”** 对话框可用于查看和修改通过使用“表导入向导”导入到模型设计器中的表的属性。 若要访问此对话框，请在模型设计器中选择表，然后在 **“表”** 菜单中单击 **“表属性”**。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
  根据您最初是通过从列表中选择表还是通过使用 SQL 查询导入数据的，此对话框的选项将有所不同。  
   
 ## <a name="table-preview-mode"></a>表预览模式  
- **表名**  
+ **表名称**  
  显示模型中数据表的名称。  
   
 > [!NOTE]  
@@ -38,16 +39,16 @@ ms.locfileid: "66081437"
  **源名称**  
  显示或更改从中获取数据的表。  
   
- 如果您将源更改为与当前表具有不同列的表，将显示一条消息以警告您列不相同。 然后，您必须选择要放在当前表中的列，并单击 **“保存”** 。 您可以通过选中表左侧的复选框来替换整个表。  
+ 如果您将源更改为与当前表具有不同列的表，将显示一条消息以警告您列不相同。 然后，您必须选择要放在当前表中的列，并单击 **“保存”**。 您可以通过选中表左侧的复选框来替换整个表。  
   
 > [!NOTE]  
 >  当您更改表的数据源时，您实质上是用新源表的内容替换当前表的内容。  
   
- **中的列名称**  
+ **列名来自**  
  |||  
 |-|-|  
 |**数据源**|选择此选项可用来自所选源表的列名替换当前列名。|  
-|**Model**|选择此选项可使用当前列名，因为它们在模型中存在。|  
+|**模式**|选择此选项可使用当前列名，因为它们在模型中存在。|  
   
  **刷新预览**  
  单击以查看当前所选源表中的数据列。  
@@ -61,7 +62,7 @@ ms.locfileid: "66081437"
  **列标题中的复选框**  
  选中该复选框可在数据导入中包括列。 取消选中该复选框则从数据导入中删除列。  
   
- **列标题中的向下箭头按钮**  
+ **列标题中的下箭头按钮**  
  筛选列中的数据。  
   
  **清除行筛选器**  
@@ -71,7 +72,7 @@ ms.locfileid: "66081437"
  单击以应用您所做的所有更改，包括替换列。  
   
 ## <a name="query-design-mode"></a>查询设计模式  
- **表名**  
+ **表名称**  
  显示模型中数据表的名称。  
   
 > [!NOTE]  
@@ -98,7 +99,7 @@ ms.locfileid: "66081437"
  **确定**  
  单击以应用您所做的所有更改，包括替换列。  
   
-## <a name="see-also"></a>请参阅  
- [表和列（SSAS 表格）](tabular-models/tables-and-columns-ssas-tabular.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;SSAS 表格&#41;的表和列](tabular-models/tables-and-columns-ssas-tabular.md)  
   
   

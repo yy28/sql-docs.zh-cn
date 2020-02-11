@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9f3e7c74fcaebb0aaaf246cba94e32c6b602b6e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873582"
 ---
 # <a name="add-a-collection-item-to-a-collection-set-transact-sql"></a>将收集项添加到收集组中 (Transact-SQL)
@@ -97,7 +97,7 @@ ms.locfileid: "62873582"
   
      收集组和它们的收集项都显示在 **“结果”** 选项卡中。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建使用一般 T-SQL 查询收集器类型的自定义收集组 (Transact-SQL)](create-custom-collection-set-generic-t-sql-query-collector-type.md)   
  [数据收集器存储过程 (Transact-SQL)](/sql/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql)  
   

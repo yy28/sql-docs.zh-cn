@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4f8d62a98d39a65db78f79fdfaf3ecdb2921408e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915369"
 ---
-# <a name="mssqlserver17130"></a>MSSQLSERVER_17130
+# <a name="mssqlserver_17130"></a>MSSQLSERVER_17130
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62915369"
 |符号名称|INIT_NOLOCKSPACE|  
 |消息正文|没有足够的内存分配给所配置的锁数。 正尝试以较小的锁哈希表启动，但这可能会影响性能。 请与数据库管理员联系，为数据库引擎的这一实例配置更多内存。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  没有足够的内存来分配所需大小的锁管理器哈希表。  将尝试分配一个较小的哈希表。  
   
 ## <a name="user-action"></a>用户操作  

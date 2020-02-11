@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ed12525e1b27bd45aa1d6313ad6538a7856f17ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083301"
 ---
 # <a name="moving-data-mining-objects"></a>移动数据挖掘对象
@@ -41,17 +41,17 @@ ms.locfileid: "66083301"
   
  下一节更为详细地说明这些选项。  
   
-### <a name="deploying"></a>部署  
+### <a name="deploying"></a>正在部署  
  将解决方案部署到不同的服务器或数据库要求您具有以前通过使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]创建的解决方案文件。  
   
  有关部署 Analysis Services 解决方案的详细信息，请参阅[部署 Analysis Services 项目 (SSDT)](../multidimensional-models/deploy-analysis-services-projects-ssdt.md)。  
   
 ### <a name="scripting"></a>脚本编写  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供了几种语言，可用于撰写对象的脚本。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供了几种可用于编写对象脚本的语言。  
   
--   **XMLA**:您可以通过右键单击对象中的使用 XMLA 对象编写脚本[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 若要执行该脚本，请在目标服务器上的 **“XMLA 查询”** 窗口中打开该脚本。  
+-   **Xmla**：可以通过在中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]右键单击对象，使用 xmla 编写对象脚本。 若要执行该脚本，请在目标服务器上的 **“XMLA 查询”** 窗口中打开该脚本。  
   
--   **DMX**:可以通过使用模板创建脚本或查询生成器之一中提供[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]和[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
+-   **DMX**：您可以通过使用模板或在和[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中提供的查询生成器之一创建脚本。  
   
  但请注意，在您可以使用各脚本撰写语言执行的任务之间存在差异：  
   
@@ -66,23 +66,23 @@ ms.locfileid: "66083301"
  有关详细信息，请参阅[使用 Analysis Services 脚本语言 (ASSL) 开发](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)。  
   
 ### <a name="backup-and-restore"></a>备份和还原  
- 备份和还原整个 Analysis Services 数据库是在数据挖掘解决方案依赖于 OLAP 对象的情况下选择的方法。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供了备份和还原功能，可以更快、更方便地备份数据库。  
+ 备份和还原整个 Analysis Services 数据库是在数据挖掘解决方案依赖于 OLAP 对象的情况下选择的方法。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]提供了备份和还原功能，可以更快、更方便地备份数据库。  
   
  有关备份的详细信息，请参阅 [备份和还原 Analysis Services 数据库](../multidimensional-models/backup-and-restore-of-analysis-services-databases.md)。  
   
 ### <a name="exporting-and-importing"></a>导出和导入  
  导出后再导入挖掘模型和结构（使用 DMX 语句）是最简单的移动或备份各关系数据挖掘对象的方法。 有关这些操作的 DMX 语法的详细信息，请参阅以下主题：  
   
--   [EXPORT (DMX)](/sql/dmx/export-dmx)  
+-   [导出 &#40;DMX&#41;](/sql/dmx/export-dmx)  
   
--   [IMPORT (DMX)](/sql/dmx/import-dmx)  
+-   [导入 &#40;DMX&#41;](/sql/dmx/import-dmx)  
   
- 如果指定 INCLUDE DEPENDENCIES 选项， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 还将导出所有所需数据源视图的定义，并且将在导入模型或结构时在目标服务器上重新创建数据源视图。 完成了模型导入后，请确保对对象设置必需的挖掘权限。  
+ 如果指定 INCLUDE DEPENDENCIES 选项，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 还将导出所有所需数据源视图的定义，并且将在导入模型或结构时在目标服务器上重新创建数据源视图。 完成了模型导入后，请确保对对象设置必需的挖掘权限。  
   
 > [!NOTE]  
 >  您不能使用 DMX 导出和导入 OLAP 模型。 如果挖掘模型基于 OLAP 多维数据集，则必须使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供的功能来备份和还原整个数据库，或者重新部署多维数据集及其模型。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [管理数据挖掘解决方案和对象](management-of-data-mining-solutions-and-objects.md)  
   
   

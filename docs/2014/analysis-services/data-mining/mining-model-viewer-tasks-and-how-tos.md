@@ -18,14 +18,15 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a3c99733ca6853a2e0a5503868e2270fa6585eae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083474"
 ---
 # <a name="mining-model-viewer-tasks-and-how-tos"></a>挖掘模型查看器任务和操作指南
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的数据挖掘设计器包含几种可用于浏览挖掘模型的工具。 下列主题提供了有关如何完成与使用设计器中的“挖掘模型查看器”  选项卡具体相关的任务的分步说明。  
+  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的数据挖掘设计器包含几种可用于浏览挖掘模型的工具。 下列主题提供了有关如何完成与使用设计器中的“挖掘模型查看器”**** 选项卡具体相关的任务的分步说明。  
   
 ## <a name="in-this-section"></a>本节内容  
   
@@ -41,12 +42,12 @@ ms.locfileid: "66083474"
   
 -   [从挖掘模型钻取到事例数据](drill-through-to-case-data-from-a-mining-model.md)  
   
--   [查看时序模型的公式（数据挖掘）](view-the-formula-for-a-time-series-model-data-mining.md)  
+-   [查看时序模型的公式 &#40;数据挖掘&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
   
 -   [更改数据挖掘查看器中使用的颜色](change-the-colors-used-in-the-data-mining-viewer.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据挖掘基础教程](../../tutorials/basic-data-mining-tutorial.md)   
- [挖掘模型查看器（数据挖掘模型设计器）](../mining-model-viewers-data-mining-model-designer.md)  
+ [挖掘模型查看器 &#40;数据挖掘模型设计器&#41;](../mining-model-viewers-data-mining-model-designer.md)  
   
   

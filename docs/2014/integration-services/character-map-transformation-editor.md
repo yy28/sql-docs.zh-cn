@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76f2c5e517ca81ae667df3efa6ccd2f49384f090
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060975"
 ---
 # <a name="character-map-transformation-editor"></a>字符映射表转换编辑器
@@ -36,17 +36,17 @@ ms.locfileid: "66060975"
  **目标**  
  指定是否就地保存字符串运算结果、使用现有列或将已修改的数据作为新列保存。  
   
-|ReplTest1|Description|  
+|值|说明|  
 |-----------|-----------------|  
 |新列|将数据保存在新列中。 在 **“输出别名”** 下分配列名。|  
 |就地更改|将已修改的数据保存在现有的列中。|  
   
- **运算**  
+ **操作**  
  从列表中选择要应用于列数据的字符串函数。  
   
-|ReplTest1|Description|  
+|值|说明|  
 |-----------|-----------------|  
-|Lowercase|转换为小写字母。|  
+|小写|转换为小写字母。|  
 |大写|转换为大写字母。|  
 |Byte reversal|通过反转字节顺序进行转换。|  
 |Hiragana|将日语的片假名字符转换为平假名字符。|  
@@ -57,13 +57,13 @@ ms.locfileid: "66060975"
 |简体中文|将繁体中文字符转换为简体中文字符。|  
 |繁体中文|将简体中文字符转换为繁体中文字符。|  
   
- **“输出别名”**  
+ **输出别名**  
  为每个输出列键入一个别名。 默认为 **Copy of** 后接输入列名。不过，你也可以任选一个唯一的描述性名称。  
   
  **配置错误输出**  
  使用[“配置错误输出” ](../../2014/integration-services/configure-error-output.md) 对话框可以为此转换指定错误处理选项。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

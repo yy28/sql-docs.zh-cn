@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: baf4dc12de2ae07fa1644c022fe41a21ac0c248c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62869761"
 ---
-# <a name="mssqlserver15404"></a>MSSQLSERVER_15404
+# <a name="mssqlserver_15404"></a>MSSQLSERVER_15404
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62869761"
 |符号名称|SEC_NTGRP_ERROR|  
 |消息正文|无法获取有关 Windows NT 组/用户“*user*”的信息，错误代码 *code*。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  在指定无效主体时，15404 用于身份验证。 或者，Windows 帐户的模拟失败，因为在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户和 Windows 帐户的域之间没有完全信任关系。  
   
 ## <a name="user-action"></a>用户操作  

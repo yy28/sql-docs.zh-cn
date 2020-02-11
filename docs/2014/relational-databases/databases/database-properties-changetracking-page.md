@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 926f6227d5a3a2e11dffbf4b9f080b1fc5ec35a2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871850"
 ---
 # <a name="database-properties-changetracking-page"></a>数据库属性（“更改跟踪”页）
@@ -33,7 +33,7 @@ ms.locfileid: "62871850"
  还可以使用 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql)来配置更改跟踪。  
   
  **保持期**  
- 指定在数据库中保留更改跟踪信息的最短期限。 只有当“自动清除”  的值为 **True** 时，才会删除数据。  
+ 指定在数据库中保留更改跟踪信息的最短期限。 只有当“自动清除”**** 的值为 **True** 时，才会删除数据。  
   
  默认值为 2。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "62871850"
   
  启用“自动清除”  会将任何先前自定义的保持期重置为默认保持期（即 2 天）。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)   
  [CREATE DATABASE (SQL Server Transact-SQL)](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   

@@ -1,5 +1,5 @@
 ---
-title: 检索 UDT 数据 |Microsoft Docs
+title: 正在检索 UDT 数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 085b1783214e7f629f1cb91084303edacd151c25
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874646"
 ---
 # <a name="retrieving-udt-data"></a>检索 UDT 数据
@@ -38,7 +38,7 @@ ms.locfileid: "62874646"
  您无需在客户端上复制 UDT 程序集即可检索表中 UDT 列的原始数据。  
   
 > [!NOTE]  
->  **SqlClient**可能无法在 UDT 版本不匹配或其他问题时加载 UDT。 在这种情况下，请使用常规故障排除机制确定调用应用程序无法找到包含 UDT 的程序集的原因。 有关详细信息，请参阅 .NET Framework 文档中的“使用托管调试助手诊断错误”主题。  
+>  当 UDT 版本不匹配或其他问题时， **SqlClient**可能无法加载 udt。 在这种情况下，请使用常规故障排除机制确定调用应用程序无法找到包含 UDT 的程序集的原因。 有关详细信息，请参阅 .NET Framework 文档中的“使用托管调试助手诊断错误”主题。  
   
 ## <a name="accessing-udts-with-a-sqldatareader"></a>通过 SqlDataReader 访问 UDT  
  可以从客户端代码使用 `System.Data.SqlClient.SqlDataReader` 检索包含 UDT 列的结果集，该列作为该对象的实例公开。  
@@ -157,10 +157,10 @@ static void Main()
 ```  
   
 ## <a name="binding-udts-as-bytes"></a>以字节形式绑定 UDT  
- 在某些情况下，您可能希望检索 UDT 列中的原始数据。 本地可能没有可用类型，或者您可能不希望实例化 UDT 实例。 可以将原始字节读取到字节数组使用**GetBytes**方法的`SqlDataReader`。 该方法从指定的列偏移量将字节流作为数组从指定缓冲区偏移量开始读入缓冲区。 另一个选项是使用之一**GetSqlBytes**或**GetSqlBinary**方法并读取所有单个操作中的内容。 无论何种情况，永远不会实例化 UDT 对象，因此，您无需在客户端程序集中设置对 UDT 的引用。  
+ 在某些情况下，您可能希望检索 UDT 列中的原始数据。 本地可能没有可用类型，或者您可能不希望实例化 UDT 实例。 使用的**GetBytes**方法，可以将原始字节读入字节数组`SqlDataReader`。 该方法从指定的列偏移量将字节流作为数组从指定缓冲区偏移量开始读入缓冲区。 另一种方法是使用**GetSqlBytes**或**GetSqlBinary**方法之一，并在一次操作中读取所有内容。 无论何种情况，永远不会实例化 UDT 对象，因此，您无需在客户端程序集中设置对 UDT 的引用。  
   
 ### <a name="example"></a>示例  
- 此示例演示如何检索**点**数据作为字节数组中使用的原始字节`SqlDataReader`。 以下代码使用 `System.Text.StringBuilder` 将原始字节转换为字符串表示形式，以便在控制台窗口中显示。  
+ 此示例演示如何使用将**点**数据作为原始字节检索到字节数组中`SqlDataReader`。 以下代码使用 `System.Text.StringBuilder` 将原始字节转换为字符串表示形式，以便在控制台窗口中显示。  
   
 ```vb  
 Option Explicit On  
@@ -266,7 +266,7 @@ class GetRawBytes
 ```  
   
 ### <a name="example-using-getsqlbytes"></a>使用 GetSqlBytes 的示例  
- 此示例演示如何检索**点**数据作为在单个操作中使用的原始字节**GetSqlBytes**方法。 以下代码使用 `StringBuilder` 将原始字节转换为字符串表示形式，以便在控制台窗口中显示。  
+ 此示例显示了如何使用**GetSqlBytes**方法在一次操作中使用原始字节检索**点**数据。 以下代码使用 `StringBuilder` 将原始字节转换为字符串表示形式，以便在控制台窗口中显示。  
   
 ```vb  
 Option Explicit On  
@@ -374,7 +374,8 @@ class GetRawBytes
  可以在 ADO.NET 代码中将 UDT 作为输入参数和输出参数使用。  
   
 ## <a name="using-udts-in-query-parameters"></a>在查询参数中使用 UDT  
- 设置 `SqlParameter` 对象的 `System.Data.SqlClient.SqlCommand` 时可以将 UDT 用作参数值。 `SqlDbType.Udt` 对象的 `SqlParameter` 枚举用于指示对 `Add` 集合调用 `Parameters` 方法时参数为 UDT。 `UdtTypeName`的属性`SqlCommand`对象用于指定在数据库中使用 UDT 的完全限定的名称*database.schema_name.object_name*语法。 虽然这不是必需的，但使用完全限定名称可以避免代码出现混乱。  
+ 设置 `SqlParameter` 对象的 `System.Data.SqlClient.SqlCommand` 时可以将 UDT 用作参数值。 
+  `SqlDbType.Udt` 对象的 `SqlParameter` 枚举用于指示对 `Add` 集合调用 `Parameters` 方法时参数为 UDT。 `SqlCommand`对象`UdtTypeName`的属性用于指定数据库中使用*schema_name object_name*语法的 UDT 的完全限定名称。 虽然这不是必需的，但使用完全限定名称可以避免代码出现混乱。  
   
 > [!NOTE]  
 >  UDT 程序集的本地副本必须对客户端项目可用。  
@@ -452,7 +453,7 @@ static void Main()
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在 ADO.NET 中访问用户定义类型](accessing-user-defined-types-in-ado-net.md)  
   
   

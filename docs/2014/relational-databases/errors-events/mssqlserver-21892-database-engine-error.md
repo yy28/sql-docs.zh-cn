@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 18916e8287841015727c37ed8833fbc29b1e6ba2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62869144"
 ---
-# <a name="mssqlserver21892"></a>MSSQLSERVER_21892
+# <a name="mssqlserver_21892"></a>MSSQLSERVER_21892
     
 ## <a name="details"></a>详细信息  
   
@@ -32,8 +32,9 @@ ms.locfileid: "62869144"
 |符号名称|SQLErrorNum21892|  
 |消息正文|无法在与虚拟网络名称“%s”相关联的可用性组主副本上查询 sys.availability_replicas 以获取成员副本的服务器名称：错误 = %d，错误消息 = %s。|  
   
-## <a name="explanation"></a>解释  
- `sp_validate_replica_hosts_as_publishers` 查询与重定向的发布服务器相关联的可用性组的当前主副本，以确定承载成员副本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  当查询失败时，将返回错误 21892。  
+## <a name="explanation"></a>说明  
+ 
+  `sp_validate_replica_hosts_as_publishers` 查询与重定向的发布服务器相关联的可用性组的当前主副本，以确定承载成员副本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  当查询失败时，将返回错误 21892。  
   
  首次使用临时链接服务器时，`sp_validate_replica_hosts_as_publishers` 通常为启用状态，因此，如果存在连接问题，这些问题可能首先与 `sp_validate_replica_hosts_as_publishers` 一起显示。 与 `sp_validate_redirected_publisher` 不同，`sp_validate_replica_hosts_as_publishers` 所使用的链接服务器在连接到任意可用性组副本主机时，始终使用调用方的凭据。  
   

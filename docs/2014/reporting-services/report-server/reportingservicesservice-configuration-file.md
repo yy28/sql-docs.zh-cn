@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9fb4893304a17be264a0d5bdcb8add2732c7c271
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103283"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService 配置文件
@@ -30,7 +30,7 @@ ms.locfileid: "66103283"
 ## <a name="editing-guidelines"></a>编辑指南  
  您可以对此文件进行修改，重命名日志文件或提高/降低跟踪级别。 请不要修改任何其他设置。 有关说明，请参阅[修改 Reporting Services 配置文件 (RSreportserver.config)](modify-a-reporting-services-configuration-file-rsreportserver-config.md)。 有关跟踪日志的详细信息，请参阅 [报表服务器服务跟踪日志](report-server-service-trace-log.md)。  
   
-## <a name="example-configuration"></a>配置示例  
+## <a name="example-configuration"></a>示例配置  
  下面的示例显示了 ReportingServicesService.exe.config 文件中的设置和默认值。  
   
 ```  
@@ -71,20 +71,21 @@ ms.locfileid: "66103283"
 ## <a name="configuration-settings"></a>配置设置  
  下表提供了有关具体设置的信息， 将按设置在配置文件中的显示顺序依次列出：  
   
-|设置|Description|  
+|设置|说明|  
 |-------------|-----------------|  
 |**RStrace**|指定用于错误和跟踪的命名空间。|  
 |**DefaultTraceSwitch**|指定向 ReportServerService 跟踪日志报告的信息的级别。 每个级别都包含所有更低级别（用更小的数字表示）报告的信息。 建议您不要禁用跟踪。 有效值包括：<br /><br /> 0= 禁用跟踪<br /><br /> 1= 异常和重新启动<br /><br /> 2= 异常、重新启动、警告<br /><br /> 3= 异常、重新启动、警告、状态消息（默认值）<br /><br /> 4= 详细模式|  
-|**FileName**|指定日志文件名的第一部分。 日志文件名的其余部分由 `Prefix` 指定的值完成。 默认情况下，名称为 ReportServerService_。|  
+|**名字**|指定日志文件名的第一部分。 日志文件名的其余部分由 `Prefix` 指定的值完成。 默认情况下，名称为 ReportServerService_。|  
 |**FileSizeLimitMb**|指定跟踪日志大小的上限。 文件大小的单位为 MB。 有效值介于 0 到最大整数之间。 默认值为 32。|  
 |**KeepFilesForDays**|指定多少天后删除跟踪日志文件。 有效值介于 0 到最大整数之间。 默认值为 14。|  
 |`Prefix`|指定一个生成的值，该值可将日志实例彼此区分开。 默认情况下，跟踪日志文件名后面将附加时间戳值。 此值设置为“ tid, time ”。 请不要修改此设置。|  
-|**TraceListeners**|指定输出跟踪日志内容的目标。 您可以通过使用逗号进行分隔来指定多个目标。 有效值包括：<br /><br /> DebugWindow（默认值）<br /><br /> File（默认值）<br /><br /> StdOut|  
+|**Tracelistener**|指定输出跟踪日志内容的目标。 您可以通过使用逗号进行分隔来指定多个目标。 有效值包括：<br /><br /> DebugWindow（默认值）<br /><br /> File（默认值）<br /><br /> StdOut|  
 |**TraceFileMode**|指定跟踪日志是否包含 24 小时时段内的数据。 每天应当为每个组件设置唯一的跟踪日志。 此值设置为“Unique”（默认值）。 不要修改此值。|  
 |**组件**|指定为其创建跟踪日志的组件。 默认值是 `all`。 此设置的其他有效值包括内部组件名。 不要修改此值。|  
-|**运行时**|指定支持与早期版本的向后兼容性的配置设置。 运行时设置用于将指向早期版本的 Microsoft.ReportingServices.Interfaces 的请求重定向到新版本。<br /><br /> [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 产品文档对本节中的所有配置设置都进行了说明。 有关详细信息，请在 MSDN 网站上或在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 文档中搜索“运行时架构设置”。|  
+|**时会**|指定支持与早期版本的向后兼容性的配置设置。 运行时设置用于将指向早期版本的 Microsoft.ReportingServices.Interfaces 的请求重定向到新版本。<br /><br /> 
+  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 产品文档对本节中的所有配置设置都进行了说明。 有关详细信息，请在 MSDN 网站上或在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 文档中搜索“运行时架构设置”。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Reporting Services 配置文件](reporting-services-configuration-files.md)   
  [报表服务器服务跟踪日志](report-server-service-trace-log.md)  
   

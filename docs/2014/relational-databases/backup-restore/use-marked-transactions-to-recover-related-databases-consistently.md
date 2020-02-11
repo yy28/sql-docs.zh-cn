@@ -1,5 +1,5 @@
 ---
-title: 使用标记的事务一致地恢复相关的数据库 （完整恢复模式） |Microsoft Docs
+title: 使用标记的事务一致地恢复相关数据库（完整恢复模式） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 37b4a53461b2ebd485941ecad89e3672e7c31b62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62877066"
 ---
 # <a name="use-marked-transactions-to-recover-related-databases-consistently-full-recovery-model"></a>使用标记的事务一致地恢复相关的数据库的事务（完全恢复模式）
@@ -173,13 +173,13 @@ GO
 ## <a name="recovering-to-a-marked-transaction"></a>恢复到标记的事务  
  有关如何将包含标记事务的数据库恢复到特定标记或仅恢复到特定标记之前，请参阅 [包含标记事务的相关数据库恢复](recovery-of-related-databases-that-contain-marked-transaction.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)](/sql/t-sql/language-elements/begin-distributed-transaction-transact-sql)   
  [备份和还原系统数据库 (SQL Server)](back-up-and-restore-of-system-databases-sql-server.md)   
  [BEGIN TRANSACTION (Transact-SQL)](/sql/t-sql/language-elements/begin-transaction-transact-sql)   
  [应用事务日志备份 (SQL Server)](transaction-log-backups-sql-server.md)   
  [完整数据库备份 (SQL Server)](full-database-backups-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [包含标记事务的相关数据库恢复](recovery-of-related-databases-that-contain-marked-transaction.md)  
+ [包含标记的事务的相关数据库的恢复](recovery-of-related-databases-that-contain-marked-transaction.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 选项 （环境-键盘页） |Microsoft Docs
+title: 选项（"环境"-"键盘" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,23 +14,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4b65f5a5d337877010c4704b6ac067ced655e99f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62662068"
 ---
-# <a name="options-environment-keyboard-page"></a>选项 （环境-键盘页）
-  使用该“选项”对话框，可以自定义 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的键盘方案。 使用此选项可以选择键盘方案。 若要访问此页，请单击“工具”菜单上的“选项”，选择“环境”文件夹，再单击“键盘”。  
+# <a name="options-environment-keyboard-page"></a>选项（"环境"-"键盘" 页）
+  您可以通过 "**选项**" 对话框自定义的键盘[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]方案。 使用此选项可以选择键盘方案。 若要访问此页，请单击“工具”**** 菜单上的“选项”****，选择“环境”**** 文件夹，再单击“键盘”****。  
   
- “键盘方案”下拉列表提供了可用快捷键的集合。 若要加载特定的方案，请从列表中选择该方案。 在准备离开“选项”对话框时，单击“确定”。 选定的方案将被加载到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中。  
+ “键盘方案”**** 下拉列表提供了可用快捷键的集合。 若要加载特定的方案，请从列表中选择该方案。 在准备离开“选项”**** 对话框时，单击“确定”****。 选定的方案将被加载到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中。  
   
  **Standard**  
- “标准”方案是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的默认设置，与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 快捷键非常相似。  
+ 标准方案是中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的默认设置，与[!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 快捷键非常相似。  
   
- 使用“查询快捷方式”网格可以将存储过程与键盘快捷方式相关联。  
+ 使用“查询快捷方式”**** 网格可以将存储过程与键盘快捷方式相关联。  
   
- **快捷方式**  
+ **键盘**  
  用于执行存储过程的键盘组合键。  
   
  **存储过程**  

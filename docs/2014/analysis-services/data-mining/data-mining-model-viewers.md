@@ -19,14 +19,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 659b8c0afd91a60389a2cacf9a3063ff65164dd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085049"
 ---
 # <a name="data-mining-model-viewers"></a>数据挖掘模型查看器
-  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中对数据挖掘模型进行定型后，可以浏览该模型以查找所关注的趋势。 由于挖掘模型的结果比较复杂并且原始格式的结果难以理解，因此以可视化方式调查数据通常是了解算法在该数据内部发现的规则和关系的最简单方法。  
+  在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]对数据挖掘模型进行定型后，可以浏览该模型以查找有意义的趋势。 由于挖掘模型的结果比较复杂并且原始格式的结果难以理解，因此以可视化方式调查数据通常是了解算法在该数据内部发现的规则和关系的最简单方法。  
   
  用于生成模型的每种算法将返回不同类型的结果。 因此， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 为每种算法提供单独的查看器。 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中浏览挖掘模型时，该模型会使用模型的相应查看器，显示在数据挖掘设计器的 **“挖掘模型查看器”** 选项卡上。  
   
@@ -45,14 +45,14 @@ ms.locfileid: "66085049"
   
      在左图中，一般查看器显示模型中节点的列表。 您可以单击一个节点在右侧窗格中查看其内容。  
   
- ![挖掘模型设计器概述](../media/generic-mining-model-tab1.gif "的挖掘模型设计器概述")  
+ ![挖掘模型设计器概述](../media/generic-mining-model-tab1.gif "挖掘模型设计器概述")  
   
 ## <a name="more-about-the-microsoft-generic-content-tree-viewer"></a>有关 Microsoft 一般内容树查看器的详细信息  
  也可使用 [Microsoft 一般内容树查看器（数据挖掘）](../microsoft-generic-content-tree-viewer-data-mining.md)查看每个模型。 此查看器根据标准的 HTML 表格格式显示挖掘模式的内容。 但是，节点的排列和每个节点的内容将会因生成结果所使用的算法而差别很大。  
   
  自定义查看器是专为浏览和了解模型而设计的，但是如果您已了解模型并希望从特定节点提取统计信息或规则，则一般查看器的作用更大。 例如，当您想要查看有关在分析期间 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 捕获的模式和统计的详细信息（如节点的概率或回归公式）时，应使用一般查看器。  
   
- 还可以使用 DMX 编写“内容查询”  ，以获取从查看器中显示的所有信息。 有关详细信息，请参阅 [内容查询（数据挖掘）](content-queries-data-mining.md)。  
+ 还可以使用 DMX 编写“内容查询” ** ，以获取从查看器中显示的所有信息。 有关详细信息，请参阅 [内容查询（数据挖掘）](content-queries-data-mining.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
  下面的主题详细描述了各个查看器以及如何解释这些查看器中的信息。  
@@ -81,8 +81,8 @@ ms.locfileid: "66085049"
  [使用 Microsoft 一般内容树查看器浏览模型](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)  
  介绍所有数据挖掘模型的一般查看器中提供的详细信息，并举例说明如何解释每个算法的信息。  
   
-## <a name="see-also"></a>请参阅  
- [数据挖掘算法（Analysis Services - 数据挖掘）](data-mining-algorithms-analysis-services-data-mining.md)   
- [数据挖掘设计器](data-mining-designer.md)  
+## <a name="see-also"></a>另请参阅  
+ [数据挖掘算法 &#40;Analysis Services 数据挖掘&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Data Mining Designer](data-mining-designer.md)  
   
   

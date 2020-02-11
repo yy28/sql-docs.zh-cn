@@ -1,5 +1,5 @@
 ---
-title: 完成向导 （维度向导） |Microsoft Docs
+title: 完成向导（维度向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4efca206c40c685f81c2c4629714e285ba6119af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087599"
 ---
 # <a name="completing-the-wizard-dimension-wizard"></a>完成向导（维度向导）
@@ -28,9 +28,9 @@ ms.locfileid: "66087599"
   
 -   如有必要，可生成支持维度所需的架构。  
   
- **若要打开维度向导**  
+ **打开维度向导**  
   
--   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的**解决方案资源管理器**中，右键单击 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目的“维度”文件夹，然后单击“新建维度”   。  
+-   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的**解决方案资源管理器**中，右键单击 ** 项目的“维度”文件夹，然后单击“新建维度”**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]****。  
   
 ## <a name="options"></a>选项  
  **名称**  
@@ -43,11 +43,11 @@ ms.locfileid: "66087599"
  选择此选项可以生成支持维度所需的架构。 选择此选项将打开架构生成向导。  
   
 > [!NOTE]  
->  仅当在“选择创建方法”页选择了“在数据源中生成时间表”或“在数据源中生成非时间表”时，才会出现此选项。    有关详细信息，请参阅[选择创建方法（维度向导）](select-creation-method-dimension-wizard.md)。  
+>  仅当在“选择创建方法”页选择了“在数据源中生成时间表”或“在数据源中生成非时间表”时，才会出现此选项。************ 有关详细信息，请参阅[选择创建方法（维度向导）](select-creation-method-dimension-wizard.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [维度向导的 F1 帮助](dimension-wizard-f1-help.md)   
- [维度&#40;Analysis Services-多维数据&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [Analysis Services 多维数据 &#40;维度&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [多维模型中的维度](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

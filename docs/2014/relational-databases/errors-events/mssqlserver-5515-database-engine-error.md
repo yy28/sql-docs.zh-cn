@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9a646852b60cd1d1f59bd35da1d28769dcef3fb9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62867590"
 ---
-# <a name="mssqlserver5515"></a>MSSQLSERVER_5515
+# <a name="mssqlserver_5515"></a>MSSQLSERVER_5515
     
 ## <a name="details"></a>详细信息  
   
@@ -32,10 +32,10 @@ ms.locfileid: "62867590"
 |符号名称|FS_OPEN_CONTAINER_FAILED|  
 |消息正文|无法打开 FILESTREAM 文件的容器目录“%.*ls”。 操作系统返回 Windows 状态代码 0x%x。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  无法打开为 FILESTREAM 文件指定的容器目录。  
   
 ## <a name="user-action"></a>用户操作  
- 请查看具体的 Windows 状态代码以了解错误原因。 有关详细信息，请参阅[事件和错误消息的支持中心](https://support.microsoft.com/search?query=events%20and%20errors)。  
+ 请查看具体的 Windows 状态代码以了解错误原因。 有关详细信息，请参阅[事件和错误消息支持中心](https://support.microsoft.com/search?query=events%20and%20errors)。  
   
   

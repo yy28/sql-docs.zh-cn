@@ -1,5 +1,5 @@
 ---
-title: 不允许使用 System.Data.dll 中类型和成员 |Microsoft Docs
+title: System.exception 中不允许的类型和成员 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,17 +14,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4233bc1ddd98d6fe678d9d37f1acd7a4b66b687e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874371"
 ---
 # <a name="disallowed-types-and-members-in-systemdatadll"></a>System.Data.dll 中禁用的类型和成员
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公共语言集成 (CLR) 编程不允许使用的类型或成员，具有`HostProtectionAttribute`，它指定`System.Security.Permissions.HostProtectionResource`枚举，其中的值`ExternalProcessMgmt`， `ExternalThreading`， `MayLeakOnAbort`， `SecurityInfrastructure`， `SelfAffectingProcessMgmnt`，`SelfAffectingThreading`， **SharedState**， `Synchronization`，或`UI`。 下表列出了宿主保护属性 (HPA) 值被禁用的 System.Data.dll 程序集的成员和类型。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]公共`HostProtectionAttribute`语言集成（CLR）编程不允许使用具有`System.Security.Permissions.HostProtectionResource` `ExternalProcessMgmt`、 `ExternalThreading` `MayLeakOnAbort` `SecurityInfrastructure` `SelfAffectingProcessMgmnt` `SelfAffectingThreading`、、、、、、 **SharedState**、 `Synchronization`或`UI`的值的类型或成员。 下表列出了宿主保护属性 (HPA) 值被禁用的 System.Data.dll 程序集的成员和类型。  
   
 > [!NOTE]  
->  此列表是通过支持的程序集生成的。 有关详细信息，请参阅[支持的.NET Framework 库](../clr-integration/database-objects/supported-net-framework-libraries.md)。  
+>  此列表是通过支持的程序集生成的。 有关详细信息，请参阅[支持的 .NET Framework 库](../clr-integration/database-objects/supported-net-framework-libraries.md)。  
   
 |类型或成员|HPA 值|  
 |--------------------|--------------------|  
@@ -37,11 +37,11 @@ ms.locfileid: "62874371"
 |System.Data.TypedDataSetGenerator|SharedState, Synchronization|  
 |System.Xml.XmlDataDocument|Synchronization|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [宿主保护属性和 CLR 集成编程](host-protection-attributes-and-clr-integration-programming.md)   
- [Microsoft.VisualBasic.dll 中不允许使用的类型和成员](disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
- [Mscorlib.dll 中不允许使用的类型和成员](disallowed-types-and-members-in-mscorlib-dll.md)   
- [System.dll 中不允许使用的类型和成员](disallowed-types-and-members-in-system-dll.md)   
+ [不允许的类型和成员在](disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
+ [Mscorlib.dll 中禁用的类型和成员](disallowed-types-and-members-in-mscorlib-dll.md)   
+ [系统中不允许的类型和成员](disallowed-types-and-members-in-system-dll.md)   
  [System.Core.dll 中禁用的类型和成员](disallowed-types-and-members-in-system-core-dll.md)  
   
   

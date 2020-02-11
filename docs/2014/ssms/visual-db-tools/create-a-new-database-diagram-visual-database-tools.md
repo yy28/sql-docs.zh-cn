@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7f96156bc22f730a8e550ef6007bb45401284f60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62666683"
 ---
 # <a name="create-a-new-database-diagram-visual-database-tools"></a>创建新的数据库关系图 (Visual Database Tools)
@@ -37,8 +37,8 @@ ms.locfileid: "62666683"
   
  您可以继续添加或删除表，修改现有表或更改表关系，直到新的数据库关系图完成为止。  
   
-## <a name="see-also"></a>请参阅  
- [使用数据库关系图&#40;可视化数据库工具&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>另请参阅  
+ [使用数据库关系图 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [了解数据库关系图所有权 (Visual Database Tools)](understand-database-diagram-ownership-visual-database-tools.md)  
   
   

@@ -16,20 +16,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 962df497e804011e69e2a350c24ce41f4c273b6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076439"
 ---
 # <a name="create-a-dimension-by-generating-a-non-time-table-in-the-data-source"></a>通过在数据源中生成非时间表来创建维度
-  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，可以借助 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的维度向导在不使用现有数据源的情况下创建维度。 在维度向导的“选择创建方法”页上选择“在数据源中生成非时间表”选项可执行此操作   。 若要在基础数据源中创建新维度，必须具有在基础数据源中创建对象的权限。 在不使用预定义数据源视图的情况下定义维度时，可以从头开始定义维度，也可以使用维度模板来定义维度。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，您可以使用中的维度[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]向导在不使用现有数据源的情况下创建维度。 在维度向导的“选择创建方法”页上选择“在数据源中生成非时间表”选项可执行此操作********。 若要在基础数据源中创建新维度，必须具有在基础数据源中创建对象的权限。 在不使用预定义数据源视图的情况下定义维度时，可以从头开始定义维度，也可以使用维度模板来定义维度。  
   
  维度向导提供了示例维度模板，您可以使用这些模板生成常用的维度类型。 可以从下列维度类型中选择：  
   
 -   帐户  
   
--   Customer  
+-   客户  
   
 -   Date  
   
@@ -39,13 +39,13 @@ ms.locfileid: "66076439"
   
 -   Employee  
   
--   Geography  
+-   地理位置  
   
 -   Internet 销售订单详细信息  
   
--   Organization  
+-   组织  
   
--   产品  
+-   Products  
   
 -   Promotion  
   
@@ -59,9 +59,9 @@ ms.locfileid: "66076439"
   
 -   销售汇总订单详细信息  
   
--   销售区域  
+-   Sales Territory  
   
--   应用场景  
+-   场景  
   
 -   源货币  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66076439"
 ## <a name="specify-dimension-type"></a>指定维度类型  
  在维度向导的 **“指定维度类型”** 页上，可以指定维度类型。 如果基于模板生成维度，则维度类型已定义。 在此页上，还可以为指定的维度类型选择标准属性（如果有的话）。  
   
- 如果选择对应于维度类型的模板，则以该维度类型的选项填充此页。 如果不选择模板，或没有相应的维度类型，则默认维度类型是 **“常规”** 。 如果尚未选择维度类型，请为要创建的维度选择最合适的类型。 如果没有为 **“维度类型”** 列出合适的类型，请使用 **“常规”** 。  
+ 如果选择对应于维度类型的模板，则以该维度类型的选项填充此页。 如果不选择模板，或没有相应的维度类型，则默认维度类型是 **“常规”**。 如果尚未选择维度类型，请为要创建的维度选择最合适的类型。 如果没有为 **“维度类型”** 列出合适的类型，请使用 **“常规”**。  
   
  选择维度类型时，向导将在 **“维度属性”** 下列出适用于此维度的属性类型。 若要选择属性类型，请选中属性类型旁边的 **“包含”** 复选框，并在 **“维度属性”** 下面键入属性的名称。 默认名称与 **“属性类型”** 相同。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "66076439"
   
  选中 **“这是变化的维度”** 复选框时，维度向导将定义下表中列出的属性：  
   
-|特性|类型|  
+|Attribute|类型|  
 |---------------|----------|  
 |SCD OriginalID|SCDOriginalID|  
 |SCD End Date|SCDEndDate|  
@@ -103,7 +103,7 @@ ms.locfileid: "66076439"
 ## <a name="completing-the-dimension-wizard"></a>完成维度向导  
  在 **“完成向导”** 页中，键入新维度的名称并查看维度结构。 选中 **“立即生成架构”** 复选框，以在单击 **“完成”** 之后启动架构生成向导。 在大多数情况下，如果计划创建其他对象，则不应选中该复选框。 如果不选中此复选框，则可以随后使用维度设计器生成架构。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [通过生成时间表来创建时间维度](create-a-time-dimension-by-generating-a-time-table.md)   
  [通过生成时间表来创建时间维度](create-a-time-dimension-by-generating-a-time-table.md)  
   

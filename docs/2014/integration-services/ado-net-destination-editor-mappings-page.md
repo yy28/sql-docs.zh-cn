@@ -1,5 +1,5 @@
 ---
-title: ADO NET 目标编辑器 （映射页） |Microsoft Docs
+title: ADO NET 目标编辑器（"映射" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b722be21d3b2e2eb10fbd3cc351553df927dbef9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061746"
 ---
 # <a name="ado-net-destination-editor-mappings-page"></a>ADO NET 目标编辑器（“映射”页）
@@ -28,9 +28,9 @@ ms.locfileid: "66061746"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，打开具有 ADO NET 目标的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包。  
   
-2.  在“数据流”  选项卡上，双击 ADO NET 目标。  
+2.  在“数据流”**** 选项卡上，双击 ADO NET 目标。  
   
-3.  在 **“ADO NET 目标编辑器”** 中，单击 **“映射”** 。  
+3.  在 **“ADO NET 目标编辑器”** 中，单击 **“映射”**。  
   
 ## <a name="options"></a>选项  
  **可用输入列**  
@@ -40,13 +40,13 @@ ms.locfileid: "66061746"
  查看可用目标列的列表。 使用拖放操作可以将表中的可用目标列映射到输入列。  
   
  **输入列**  
- 查看选定的输入列。 可以通过选择“\<忽略>”  以从输出中排除列来移除映射。  
+ 查看选定的输入列。 可以通过选择“**忽略>”\<** 以从输出中排除列来移除映射。  
   
  **目标列**  
  查看每个可用目标列，而不管是否已对其进行映射。  
   
-## <a name="see-also"></a>请参阅  
- [ADO NET 目标编辑器（“连接管理器”页）](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
- [ADO NET 目标编辑器（“错误输出”页）](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)  
+## <a name="see-also"></a>另请参阅  
+ [ADO NET 目标编辑器 &#40;连接管理器页&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
+ [ADO NET 目标编辑器 &#40;错误输出页&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)  
   
   

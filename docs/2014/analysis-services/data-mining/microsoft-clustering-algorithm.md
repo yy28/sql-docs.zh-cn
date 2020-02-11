@@ -21,13 +21,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: da8511361badbdfa1ded7497aaf623fdc35252d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084011"
 ---
 # <a name="microsoft-clustering-algorithm"></a>Microsoft Clustering Algorithm
+  
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供的分段算法。 该算法使用迭代技术将数据集中的事例分组为包含类似特征的分类。 在浏览数据、标识数据中的异常及创建预测时，这些分组十分有用。  
   
  聚类分析模型标识数据集中可能无法通过随意观察在逻辑上得出的关系。 例如，在逻辑上可以得知，骑自行车上下班的人的居住地点通常离其工作地点不远。 但该算法可以找出有关骑自行车上下班人员的其他并不明显的特征。 在下面的关系图中，分类 A 表示有关通常开车上班人员的数据，而分类 B 表示通常骑自行车上班人员的数据。  
@@ -40,9 +41,10 @@ ms.locfileid: "66084011"
  考虑这样一组人员，他们共享类似的人口统计信息并从 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 公司购买类似的产品。 这组人员就表示一个数据分类。 数据库中可能存在多个这样的分类。 通过观察构成分类的各列，可以更清楚地了解数据集中的记录如何相互关联。  
   
 ## <a name="how-the-algorithm-works"></a>算法的原理  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法首先标识数据集中的关系并根据这些关系生成一系列分类。 散点图是一种非常有用的方法，可以直观地表示算法如何对数据进行分组，如下面的关系图所示。 散点图可以表示数据集中的所有事例，在该图中每个事例就是一个点。 分类对该图中的点进行分组并阐释该算法所标识的关系。  
+ 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法首先标识数据集中的关系并根据这些关系生成一系列分类。 散点图是一种非常有用的方法，可以直观地表示算法如何对数据进行分组，如下面的关系图所示。 散点图可以表示数据集中的所有事例，在该图中每个事例就是一个点。 分类对该图中的点进行分组并阐释该算法所标识的关系。  
   
- ![在数据集中的事例的散](../media/clustering-plot.gif "中数据集的事例的散点图")  
+ ![数据集中事例的散点图](../media/clustering-plot.gif "数据集中事例的散点图")  
   
  在最初定义分类后，算法将通过计算确定分类表示点分组情况的适合程度，然后尝试重新定义这些分组以创建可以更好地表示数据的分类。 该算法将循环执行此过程，直到它不能再通过重新定义分类来改进结果为止。  
   
@@ -53,11 +55,11 @@ ms.locfileid: "66084011"
   
  聚类分析模型的要求如下：  
   
--   **单键列** 每个模型都必须包含一个用于唯一标识每条记录的数值列或文本列。 不允许复合键。  
+-   **单个键列**每个模型必须包含一个用于唯一标识每条记录的数值列或文本列。 不允许复合键。  
   
--   **输入列** 每个模型都必须至少包含一个输入列，该输入列包含用于生成此分类的值。 可以根据需要拥有任意多的输入列，但是具体取决于每个列中值的数量，添加额外列会增加定型模型所需的时间。  
+-   **输入列**每个模型必须至少包含一个输入列，该输入列包含用于生成分类的值。 可以根据需要拥有任意多的输入列，但是具体取决于每个列中值的数量，添加额外列会增加定型模型所需的时间。  
   
--   **可选可预测列** 该算法不需要可预测列来生成模型，但是可以添加几乎任意数据类型的可预测列。 可以将可预测列的值视为对聚类分析模型的输入，或者将其指定仅用于预测。 例如，如果需要通过对人口统计信息（如地区或年龄）进行分类来预测客户的收入，则可将收入指定为 `PredictOnly`，然后将所有其他列（如地区和年龄）添加为输入。  
+-   **可选的可预测列**该算法不需要可预测列来生成模型，但是可以添加几乎任意数据类型的可预测列。 可以将可预测列的值视为对聚类分析模型的输入，或者将其指定仅用于预测。 例如，如果需要通过对人口统计信息（如地区或年龄）进行分类来预测客户的收入，则可将收入指定为 `PredictOnly`，然后将所有其他列（如地区和年龄）添加为输入。  
   
  有关聚类分析模型支持的内容类型和数据类型的更多详细信息，请参阅 [Microsoft 聚类分析算法技术参考](microsoft-clustering-algorithm-technical-reference.md)的“要求”部分。  
   
@@ -81,10 +83,10 @@ ms.locfileid: "66084011"
   
 -   支持使用 OLAP 挖掘模型和创建数据挖掘维度。  
   
-## <a name="see-also"></a>请参阅  
- [数据挖掘算法 &#40;Analysis Services-数据挖掘&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+## <a name="see-also"></a>另请参阅  
+ [数据挖掘算法 &#40;Analysis Services 数据挖掘&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
  [Microsoft 聚类分析算法技术参考](microsoft-clustering-algorithm-technical-reference.md)   
- [聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-clustering-models-analysis-services-data-mining.md)   
+ [&#40;Analysis Services 数据挖掘的聚类分析模型的挖掘模型内容&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)   
  [聚类分析模型查询示例](clustering-model-query-examples.md)  
   
   

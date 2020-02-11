@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8cfbe5ab3a255367922195594063a1734b8c66b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62899870"
 ---
 # <a name="union-all-transformation"></a>Union All 转换
@@ -50,6 +50,6 @@ ms.locfileid: "62899870"
 -   [设置数据流组件的属性](../set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [通过使用 Union All 转换来合并数据](union-all-transformation.md)  
+ [使用 Union All 转换来合并数据](union-all-transformation.md)  
   
   

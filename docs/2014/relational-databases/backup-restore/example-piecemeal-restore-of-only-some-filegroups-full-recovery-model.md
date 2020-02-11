@@ -1,5 +1,5 @@
 ---
-title: 例如：仅对某些文件组进行段落还原（完整恢复模式）| Microsoft Docs
+title: 示例：仅对某些文件组进行段落还原（完整恢复模式）| Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a3ea7a4c7d9189ace988ef57f25e99d61a4273dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876157"
 ---
-# <a name="example-piecemeal-restore-of-only-some-filegroups-full-recovery-model"></a>例如：仅对某些文件组进行段落还原（完整恢复模式）
+# <a name="example-piecemeal-restore-of-only-some-filegroups-full-recovery-model"></a>示例：仅对某些文件组进行段落还原（完整恢复模式）
   本主题与完整恢复模式下包含多个文件或文件组的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库相关。  
   
  段落还原顺序将从主文件组和所有读写辅助文件组开始，按文件组级别分阶段还原和恢复数据库。  
@@ -95,7 +95,7 @@ ms.locfileid: "62876157"
   
 -   [示例：只读文件的联机还原（完整恢复模式）](example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
  [联机还原 (SQL Server)](online-restore-sql-server.md)   
  [应用事务日志备份 (SQL Server)](transaction-log-backups-sql-server.md)   

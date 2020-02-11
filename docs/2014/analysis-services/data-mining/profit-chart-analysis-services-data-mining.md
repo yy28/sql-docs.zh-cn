@@ -1,5 +1,5 @@
 ---
-title: 利润图 (Analysis Services-数据挖掘) |Microsoft Docs
+title: 利润图（Analysis Services 数据挖掘） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1a64eacb1219e239ad894d9922db5a5032ed525b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083091"
 ---
 # <a name="profit-chart-analysis-services---data-mining"></a>利润图（Analysis Services - 数据挖掘）
-  利润图显示与使用挖掘模型相关联的估计利润。 例如，假设您的模型预测哪些客户公司应在业务方案中联系。 在该情形下，您要向利润图添加与目标邮递活动的成本有关的信息。 然后，在已完成的利润图中，您可以看到与随机联系客户相比，正确定位客户情况下的估计的利润。  
+  利润图显示与使用挖掘模型相关联的估计利润。 例如，假设您的模型预测公司应在业务方案中联系哪些客户。 在该情形下，您要向利润图添加与目标邮递活动的成本有关的信息。 然后，在已完成的利润图中，您可以看到与随机联系客户相比，正确定位客户情况下的估计的利润。  
   
 ## <a name="build-a-profit-chart"></a>构建利润图  
  利润图类似于提升图。 您从创建一个提升图开始，然后加入成本和利润信息。  
@@ -33,11 +33,11 @@ ms.locfileid: "66083091"
   
  对于此示例，我们使用了 Targeted Mailing 决策树模型。 该模型标识可能要购买自行车的客户。 您可以应用 **“利润图”** 来确定您的目标用户有多少，以便将您的利润最大化。  
   
- 如果您没有示例模型，您可以创建使用其[数据挖掘基础教程](../../tutorials/basic-data-mining-tutorial.md)。  
+ 如果没有示例模型，则可以使用[数据挖掘基础教程](../../tutorials/basic-data-mining-tutorial.md)来创建它。  
   
 1.  打开挖掘准确性图表生成器。  
   
-    -   在 SQL Server Management Studio 中，右键单击该模型，然后选择“查看提升图”  。  
+    -   在 SQL Server Management Studio 中，右键单击该模型，然后选择“查看提升图”****。  
   
     -   在 SQL Server Data Tools 中，打开在其中创建了该模型的项目，然后单击 **“挖掘准确性图表”** 选项卡。  
   
@@ -59,14 +59,14 @@ ms.locfileid: "66083091"
   
      此对话框帮助您指定与目标邮递活动关联的成本和收益。 对于这些示例中所示的图表，我们使用了以下值：  
   
-    |设置|ReplTest1|注释|  
+    |设置|值|注释|  
     |-------------|-----------|--------------|  
     |**人口数**|20,000|设置总目标人数的值<br /><br /> 您的数据库可能包含很多客户，但是为了节省邮递开支，您可能选择仅对最有可能回复的前 20,000 个客户发邮件。 您可以通过运行预测查询并且由预测模型按概率输出排序，获得此列表。|  
     |**固定成本**|500|输入为 20,000 人设置目标邮递活动的一次性成本。 这可能包括印刷成本或者设置电子邮件活动的成本。|  
     |**单项成本**|3|输入目标邮递活动的单位成本。<br /><br /> 该金额将乘以一个等于或小于 20,000 的数，具体数字取决于模型预测的客户中有多少个是合适的潜在客户。|  
-    |**单项收入**|400|输入一个值，该值表示可以从成功结果获得利润或收入的金额。 在这种情况下，我们将假定邮寄目录导致平均的附件或自行车 $400 购买。<br /><br /> 该金额将用于预计与高概率事例关联的总利润。|  
+    |**单项收入**|400|输入一个值，该值表示可以从成功结果获得利润或收入的金额。 在这种情况下，我们假设邮寄目录会导致购买附件或自行车平均 $400。<br /><br /> 该金额将用于预计与高概率事例关联的总利润。|  
   
-7.  在您设置了所需参数后，单击 **“确定”** 。  
+7.  在您设置了所需参数后，单击 **“确定”**。  
   
 8.  该图表将更新以显示利润曲线。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "66083091"
   
  如下所示，可以使用利润图比较多个模型，只要它们都预测同一离散属性。  
   
- ![利润的图表的三个模型比较](../media/dm14-profitchartupdated.gif "利润的图表的三个模型比较")  
+ ![与三种模型对比的利润图](../media/dm14-profitchartupdated.gif "与三种模型对比的利润图")  
   
  请注意图表中的灰色竖线。 在您单击并拖动该竖线时，工具提示将显示在该点的曲线下包括的目标人口的百分比。  
   
@@ -91,13 +91,13 @@ ms.locfileid: "66083091"
   
 |主题|链接|  
 |------------|-----------|  
-|提供如何创建目标邮递模型的提升图的演练。|[数据挖掘基础教程](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [测试提升图的准确性（数据挖掘基础教程）](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
-|说明相关的图表类型。|[提升图（Analysis Services - 数据挖掘）](lift-chart-analysis-services-data-mining.md)<br /><br /> [分类矩阵（Analysis Services - 数据挖掘）](classification-matrix-analysis-services-data-mining.md)<br /><br /> [散点图（Analysis Services - 数据挖掘）](scatter-plot-analysis-services-data-mining.md)|  
-|说明挖掘模型和挖掘结构的交叉验证。|[交叉验证（Analysis Services - 数据挖掘）](cross-validation-analysis-services-data-mining.md)|  
-|说明用于创建提升图和其他准确性图表的步骤。|[测试和验证任务和操作指南（数据挖掘）](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|提供如何创建目标邮递模型的提升图的演练。|[数据挖掘基础教程](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [利用提升图测试准确性 &#40;基本数据挖掘教程&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
+|说明相关的图表类型。|[Analysis Services &#40;提升图表&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [分类矩阵 &#40;Analysis Services 数据挖掘&#41;](classification-matrix-analysis-services-data-mining.md)<br /><br /> [散点图 &#40;Analysis Services 数据挖掘&#41;](scatter-plot-analysis-services-data-mining.md)|  
+|说明挖掘模型和挖掘结构的交叉验证。|[交叉验证 &#40;Analysis Services 数据挖掘&#41;](cross-validation-analysis-services-data-mining.md)|  
+|说明用于创建提升图和其他准确性图表的步骤。|[测试和验证任务以及操作方法 &#40;数据挖掘&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
-## <a name="see-also"></a>请参阅  
- [测试和验证（数据挖掘）](testing-and-validation-data-mining.md)   
- [测试提升图的准确性（数据挖掘基础教程）](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+## <a name="see-also"></a>另请参阅  
+ [测试和验证 &#40;数据挖掘&#41;](testing-and-validation-data-mining.md)   
+ [利用提升图测试准确性 &#40;基本数据挖掘教程&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
   

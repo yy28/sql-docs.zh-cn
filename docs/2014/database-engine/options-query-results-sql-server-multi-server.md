@@ -1,5 +1,5 @@
 ---
-title: 选项 （查询结果-SQL 服务器多服务器） |Microsoft Docs
+title: 选项（查询结果-SQL Server-多服务器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 6019a328463d27b4495ae0db70e844eb4e05d747
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089969"
 ---
 # <a name="options-query-results-sql-server-multi-server"></a>选项（“查询结果”-“SQL Server”-“多服务器”）
@@ -35,8 +35,8 @@ ms.locfileid: "66089969"
  **将登录名添加到结果**  
  选中此复选框可包含一个额外的列，其中提供用于连接到提供每一行的服务器的登录名。  
   
-## <a name="see-also"></a>请参阅  
- [创建中央管理服务器和服务器组&#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-a-central-management-server-and-server-group.md)   
+## <a name="see-also"></a>另请参阅  
+ [创建中央管理服务器和服务器组 &#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-a-central-management-server-and-server-group.md)   
  [同时对多个服务器执行语句 (SQL Server Management Studio)](../ssms/register-servers/execute-statements-against-multiple-servers-simultaneously.md)  
   
   

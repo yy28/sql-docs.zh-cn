@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f197eef6369281001359969bf1d92bd0390bedc8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755059"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>指定服务器网络地址（数据库镜像）
@@ -32,11 +32,11 @@ ms.locfileid: "62755059"
 ##  <a name="Syntax"></a> 服务器网络地址的语法  
  服务器网络地址的语法格式如下：  
   
- TCP<strong>://</strong> *\<system-address>* <strong>:<strong> *\<port>* 
+ TCP：/<strong>/</strong>*\<system-address>* <strong>：<strong>*\<port>* 
   
  其中  
   
--   \<system-address> 是明确标识目标计算机系统的字符串  。 通常，服务器地址是系统名称（如果各系统都在同一个域中）、完全限定域名或 IP 地址：  
+-   *system-address> 是明确标识目标计算机系统的字符串\<* 。 通常，服务器地址是系统名称（如果各系统都在同一个域中）、完全限定域名或 IP 地址：  
   
     -   如果各系统都在同一个域中，则可以使用计算机系统的名称；例如， `SYSTEM46`。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62755059"
   
     -   保证完全限定域名的有效性。 它是在不同位置具有不同形式的本地定义的地址字符串。 通常（但并不总是），完全限定域名是一个复合名称，包含计算机名称和一系列句点分隔的域段，其格式为：  
   
-         _computer_name_ **。** _domain_segment_[... **.** _domain_segment_]  
+         computer_name .   _domain_segment_[... **.** _domain_segment_]  
   
          其中， *computer_name*是运行服务器实例的计算机的网络名称， *domain_segment*[... **.** _domain_segment_] 是服务器的其余域信息；例如： `localinfo.corp.Adventure-Works.com`。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62755059"
         > [!NOTE]  
         >  有关如何查找完全限定域名的信息，请参阅本主题后面的“查找完全限定域名”。  
   
--   \<port> 是合作伙伴服务器实例的镜像终结点所使用的端口号  。 有关指定终结点的信息，请参阅 [为 Windows 身份验证创建数据库镜像终结点 (Transact-SQL)](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)。  
+-   *port> 是合作伙伴服务器实例的镜像终结点所使用的端口号\<* 。 有关指定终结点的信息，请参阅 [为 Windows 身份验证创建数据库镜像终结点 (Transact-SQL)](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)。  
   
      数据库镜像端点可以使用计算机系统上的任意可用端口。 计算机系统上的每个端口号只能与一个端点相关联，而每个端点与一个服务器实例相关联；这样，同一服务器上的不同服务器实例便可使用不同端口来侦听各个端点。 因此，设置数据库镜像会话时在服务器网络地址中指定的端口会始终将会话定向到其端点与该端口关联的服务器实例。  
   
@@ -108,7 +108,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
  若要形成完全限定的域名，请将 *<host_name>* 和 *<Primary_Dns_Suffix>* 的值连接一起，如下所示：  
   
- _<host_name>_ **.** _<Primary_Dns_Suffix>_  
+ <host_name> .   _<Primary_Dns_Suffix>_  
   
  例如，IP 配置  
   
@@ -133,7 +133,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
 -   [为 Windows 身份验证创建数据库镜像终结点 (Transact-SQL)](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库镜像 (SQL Server)](database-mirroring-sql-server.md)   
  [数据库镜像终结点 (SQL Server)](the-database-mirroring-endpoint-sql-server.md)  
   

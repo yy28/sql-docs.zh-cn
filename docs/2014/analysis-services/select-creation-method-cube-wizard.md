@@ -1,5 +1,5 @@
 ---
-title: 选择创建方法 （多维数据集向导） |Microsoft Docs
+title: 选择创建方法（多维数据集向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 793c83dba01be84fb468b0be54bb7d0405e39467
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069630"
 ---
 # <a name="select-creation-method-cube-wizard"></a>选择创建方法（多维数据集向导）
@@ -32,7 +32,7 @@ ms.locfileid: "66069630"
 > [!NOTE]  
 >  仅当您正处理 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目时，此选项才可用；如果您直接连接到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库，此选项将不可用。  
   
- **数据源中生成表**  
+ **在数据源中生成表**  
  选择此选项可以首先创建一个多维数据集，然后可基于多维数据集定义在数据源中生成新表。  
   
 > [!NOTE]  
@@ -40,14 +40,14 @@ ms.locfileid: "66069630"
   
  选择此选项后， **“模板”** 选项将可用。  
   
- **模板**  
+ **模版**  
  选择要用于创建多维数据集的模板。 模板可以提供一组面向特定业务用途的定义。  
   
 > [!NOTE]  
->  仅当选择了“在数据源中生成表”选项时，此选项才可用。  
+>  仅当选择了“在数据源中生成表”**** 选项时，此选项才可用。  
   
-## <a name="see-also"></a>请参阅  
- [多维数据集对象&#40;Analysis Services-多维数据&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>另请参阅  
+ [多维数据集对象 &#40;Analysis Services 多维数据&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [多维模型中的多维数据集](multidimensional-models/cubes-in-multidimensional-models.md)   
  [多维模型中的维度](multidimensional-models/dimensions-in-multidimensional-models.md)  
   

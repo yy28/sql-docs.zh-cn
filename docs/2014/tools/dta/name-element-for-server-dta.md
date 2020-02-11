@@ -1,5 +1,5 @@
 ---
-title: 元素的名称服务器 (DTA) |Microsoft Docs
+title: 服务器的名称元素（DTA） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 750911c19224ff088fee5c27272bf13c14875975
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62657261"
 ---
 # <a name="name-element-for-server-dta"></a>服务器的名称元素 (DTA)
@@ -35,9 +35,10 @@ ms.locfileid: "62657261"
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|Description|  
+|特征|说明|  
 |--------------------|-----------------|  
-|**数据类型和长度**|`string`，介于 1 到 255 个字符之间。|  
+|**数据类型和长度**|
+  `string`，介于 1 到 255 个字符之间。|  
 |**默认值**|无。|  
 |**出现次数**|每个 **服务器** 元素必须出现一次。|  
   
@@ -49,9 +50,9 @@ ms.locfileid: "62657261"
 |**子元素**|无。|  
   
 ## <a name="example"></a>示例  
- 有关如何使用该 **Name** 元素的示例，请参阅[服务器元素 (DTA)](server-element-dta.md)。  
+ 有关如何使用该 **Name** 元素的示例，请参阅 [服务器元素 (DTA)](server-element-dta.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [XML 输入文件引用（数据库引擎优化顾问）](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

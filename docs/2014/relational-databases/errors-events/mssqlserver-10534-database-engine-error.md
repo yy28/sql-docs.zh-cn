@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a9a20d1003e8b87179e2690fa35ad44b50894568
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62870576"
 ---
-# <a name="mssqlserver10534"></a>MSSQLSERVER_10534
+# <a name="mssqlserver_10534"></a>MSSQLSERVER_10534
     
 ## <a name="details"></a>详细信息  
   
@@ -30,17 +30,17 @@ ms.locfileid: "62870576"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|PG_INVALID_PARAMS|  
-|消息正文|无法创建计划指南 ' %。\*ls' 指定的值由于`@params`无效。 请以 *parameter_name parameter_type* 的形式指定该值，或指定 NULL。|  
+|消息正文|无法创建计划指南 '%.\*ls'，因为为 `@params` 指定的值无效。 请以 *parameter_name parameter_type* 的形式指定该值，或指定 NULL。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  为 `@params` 指定的值无效。  
   
 ## <a name="user-action"></a>用户操作  
  请以 *parameter_name parameter_type* 的形式指定该值，或指定 NULL。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [计划指南](../performance/plan-guides.md)   
- [sp_create_plan_guide (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [sp_create_plan_guide &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [sp_create_plan_guide_from_handle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 使用 SQL Server 扩展事件 (XEvents) 监视 Analysis Services |Microsoft Docs
+title: 使用 SQL Server 扩展事件（XEvents）监视 Analysis Services |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d6abfca98386ef691add200d433af827ed44836
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079736"
 ---
 # <a name="use-sql-server-extended-events-xevents-to-monitor-analysis-services"></a>使用 SQL Server 扩展事件 (XEvents) 监视 Analysis Services
-  Analysis Services 提供了通过使用跟踪功能[扩展事件](../../relational-databases/extended-events/extended-events.md)。  
+  Analysis Services 通过[扩展事件](../../relational-databases/extended-events/extended-events.md)的使用来提供跟踪功能。  
   
  扩展事件是针对服务器系统的高度可伸缩和可配置的事件基础结构。 扩展事件是使用非常少的性能资源的轻型性能监视系统。  
   
- 所有 Analysis Services 可以捕获事件和目标中定义特定的使用者[扩展事件](../../relational-databases/extended-events/extended-events.md)，通过 Xevent。  
+ 可以捕获所有 Analysis Services 事件，并将其定位到在[扩展事件](../../relational-databases/extended-events/extended-events.md)中通过 XEvents 定义的特定使用者。  
   
 ## <a name="initiating-extended-events-in-analysis-services"></a>在 Analysis Services 中启动扩展事件  
  通过使用如下的 XMLA 创建对象脚本命令启用扩展事件跟踪：  
@@ -62,8 +62,8 @@ ms.locfileid: "66079736"
  *trace_id*  
  定义用于此跟踪的唯一标识符。  
   
- *跟踪名称*  
- 提供给此跟踪的名称；通常是此跟踪的用户可读定义。 通常使用 trace_id  值作为该名称。  
+ *trace_name*  
+ 提供给此跟踪的名称；通常是此跟踪的用户可读定义。 通常使用 trace_id** 值作为该名称。  
   
  *AS_event*  
  要公开的 Analysis Services 事件。 有关事件名称的详细信息，请参阅 [Analysis Services 跟踪事件](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events) 。  
@@ -98,7 +98,7 @@ ms.locfileid: "66079736"
  *trace_id*  
  为要删除的跟踪定义唯一标识符。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [扩展事件](../../relational-databases/extended-events/extended-events.md)  
   
   

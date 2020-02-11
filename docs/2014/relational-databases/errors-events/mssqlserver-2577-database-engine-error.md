@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ec9a7b6ce05637a35761b40bd039e243fec3e99
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914686"
 ---
-# <a name="mssqlserver2577"></a>MSSQLSERVER_2577
+# <a name="mssqlserver_2577"></a>MSSQLSERVER_2577
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62914686"
 |符号名称|DBCC_IAM_CHAIN_SEQUENCE_OUT_OF_ORDER|  
 |消息正文|在对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID（类型为 TYPE）的索引分配映射 (IAM) 链中，链序列号顺序不对。 序列号为 SEQUENCE1 的页 P_ID1 指向了序列号为 SEQUENCE2 的页 P_ID2。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  每个索引分配映射 (IAM) 页都有一个序列号。 该序列号指示 IAM 页在 IAM 链内的位置。 规则是用该序列号加一来表示每个 IAM 页。 IAM 页 *P_ID2* 具有的序列号未遵循此规则。  
   
 ## <a name="user-action"></a>用户操作  

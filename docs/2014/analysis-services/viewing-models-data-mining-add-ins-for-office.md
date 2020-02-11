@@ -1,5 +1,5 @@
 ---
-title: 查看模型 （Office 数据挖掘外接程序） |Microsoft Docs
+title: 查看模型（Office 数据挖掘外接程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9fbd8b24b490123c337c9f7510899da12bcae749
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065529"
 ---
 # <a name="viewing-models-data-mining-add-ins-for-office"></a>查看模型（Office 数据挖掘外接程序）
@@ -27,17 +27,17 @@ ms.locfileid: "66065529"
   
 -   使用每个向导生成的 Excel 图表。  
   
-     [在 Excel 中浏览模型&#40;SQL Server 数据挖掘外接程序&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
+     [在 Excel 中浏览模型 &#40;SQL Server 数据挖掘外接程序&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
   
 -   使用 Visio 数据挖掘形状创建交互式表示形式。  
   
-     [在 Visio 中查看数据挖掘模型&#40;数据挖掘外接程序&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)  
+     [查看 Visio &#40;数据挖掘外接程序中的数据挖掘模型&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)  
   
 -   使用**文档模型**向导来生成模型的元数据和模型的内容的摘要。  
   
-     [记录挖掘模型&#40;Excel 数据挖掘外接程序&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md)  
+     [记录挖掘模型 &#40;Excel 数据挖掘外接程序&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md)  
   
-## <a name="see-also"></a>请参阅  
- [查询&#40;SQL Server 数据挖掘外接程序&#41;](query-sql-server-data-mining-add-ins.md)  
+## <a name="see-also"></a>另请参阅  
+ [查询 &#40;SQL Server 数据挖掘外接程序&#41;](query-sql-server-data-mining-add-ins.md)  
   
   

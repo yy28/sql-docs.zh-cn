@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ba6f533f2f975a69d0b78d6458a01f64a10595f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62870067"
 ---
-# <a name="mssqlserver14265"></a>MSSQLSERVER_14265
+# <a name="mssqlserver_14265"></a>MSSQLSERVER_14265
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62870067"
 |符号名称|SQLErrorNum14265|  
 |消息正文|MSSQLServer 服务意外终止。 有关可能的原因，请查看 SQL Server 错误日志以及 Windows 系统和应用程序事件日志。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  SQL Server 服务意外终止。  
   
 ## <a name="user-action"></a>用户操作  

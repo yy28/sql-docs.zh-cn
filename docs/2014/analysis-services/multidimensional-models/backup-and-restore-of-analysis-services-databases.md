@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 数据库的备份和还原 |Microsoft Docs
+title: 备份和还原 Analysis Services 数据库 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/25/2019
 ms.prod: sql-server-2014
@@ -22,13 +22,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f591a5a8c8099e496c10958b43694e98ae7a24b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077032"
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>备份和还原 Analysis Services 数据库
+  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包括备份和还原功能，以便您能从特定时间点恢复数据库及其对象。 此外，备份和还原是一项用于将数据库迁移到升级后的服务器、在服务器之间移动数据库或将数据库部署到生产服务器的有效方法。 出于数据恢复目的，如果您还没有制定备份计划并且您的数据十分重要，则应尽快设计和实施备份计划。  
   
  对已部署的 Analysis Services 数据库执行备份和还原命令。 对于 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的项目和解决方案，您应该使用源控制来确保可以还原特定版本的源文件，然后为您所使用的源控制系统的存储库创建数据恢复计划。  
@@ -37,7 +38,7 @@ ms.locfileid: "66077032"
   
  自动备份的一个显著优点是：数据快照将按照自动备份频率所规定的时间或间隔始终保持最新状态。 自动计划程序可确保备份不会被忘记。 此外，还原数据库也可以自动进行，并且是一种复制数据的好方法，但务必要备份所复制实例的加密密钥文件。 同步功能专门用于复制 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库，但仅限过期数据。 此处提及的所有功能都可以通过用户界面、XML/A 命令实现或通过 AMO 以编程方式运行。  
   
- 本主题包含以下各节：  
+ 本主题包含下列部分：  
   
 -   [准备备份](#bkmk_prep)  
   
@@ -45,14 +46,14 @@ ms.locfileid: "66077032"
   
 -   [还原 Analysis Services 数据库](#bkmk_restore)  
   
-##  <a name="bkmk_prereq"></a> 先决条件  
+##  <a name="bkmk_prereq"></a>先决条件  
  您必须对 Analysis Services 实例具有管理权限，或对要备份的数据库拥有完全控制（管理员）权限。  
   
  还原位置所在的 Analysis Services 实例版本必须与执行备份的实例版本相同或比它更高的版本。 尽管你不能将数据库从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例还原到更低版本的 Analysis Services，但是通常可在更高的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例上还原更低版本的数据库（如 SQL Server 2012）。  
   
  还原位置必须是相同的服务器类型。 表格数据库只能还原到在表格模式下运行的 Analysis Services。 多维数据库需要在多维模式下运行的实例。  
   
-##  <a name="bkmk_prep"></a> 准备备份  
+##  <a name="bkmk_prep"></a>准备备份  
  使用以下核对清单来准备备份：  
   
 -   检查要存储备份文件的位置。 如果使用远程位置，您必须将其指定为 UNC 文件夹。 确认您可以访问该 UNC 路径。  
@@ -63,11 +64,12 @@ ms.locfileid: "66077032"
   
 -   检查是否有同名的现有文件。 如果已存在同名文件，则备份将失败，除非您指定用于覆盖此文件的选项。  
   
-##  <a name="bkmk_cube"></a> 备份多维或表格数据库  
+##  <a name="bkmk_cube"></a>备份多维或表格数据库  
  管理员可以将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库备份到单个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 备份文件 (.abf)，这与数据库的大小无关。 有关分步说明，请参阅 [如何备份 Analysis Services 数据库 (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Backup_an_Analysis_Services_Database.html) 和 [自动备份 Analysis Services 数据库 (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Automate_Backup_of_Analysis_Services_Database.html)。  
   
 > [!NOTE]  
->  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]（用于在 SharePoint 环境中加载并查询 PowerPivot 数据模型）从 SharePoint 内容数据库加载其模型。 这些内容数据库是相关的且运行于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库引擎上。 同样，没有针对 PowerPivot 数据模型的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 备份和还原策略。 如果您有针对 SharePoint 内容的灾难恢复计划，则该计划包含存储在内容数据库中的 PowerPivot 数据模型。  
+>  
+  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]（用于在 SharePoint 环境中加载并查询 PowerPivot 数据模型）从 SharePoint 内容数据库加载其模型。 这些内容数据库是相关的且运行于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库引擎上。 同样，没有针对 PowerPivot 数据模型的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 备份和还原策略。 如果您有针对 SharePoint 内容的灾难恢复计划，则该计划包含存储在内容数据库中的 PowerPivot 数据模型。  
   
  **远程分区**  
   
@@ -99,7 +101,7 @@ ms.locfileid: "66077032"
   
  有关备份 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库的详细信息，请参阅 [备份选项](backup-options.md)。  
   
-##  <a name="bkmk_restore"></a> 还原 Analysis Services 数据库  
+##  <a name="bkmk_restore"></a>还原 Analysis Services 数据库  
  管理员可以从一个或多个备份文件中还原 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库。  
   
 > [!NOTE]  
@@ -123,8 +125,8 @@ ms.locfileid: "66077032"
   
  有关还原 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库的详细信息，请参阅 [还原选项](restore-options.md)。  
   
-## <a name="see-also"></a>请参阅  
- [备份、还原和同步数据库 (XMLA)](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)   
+## <a name="see-also"></a>另请参阅  
+ [&#40;XMLA&#41;备份、还原和同步数据库](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)   
  [Analysis Services PowerShell](../analysis-services-powershell.md)  
   
   

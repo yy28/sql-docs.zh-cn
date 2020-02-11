@@ -15,13 +15,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8287572d31dc136f21717ba45b730936b4fb78ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62870454"
 ---
-# <a name="mssqlserver125"></a>MSSQLSERVER_125
+# <a name="mssqlserver_125"></a>MSSQLSERVER_125
     
 ## <a name="details"></a>详细信息  
   
@@ -34,13 +34,13 @@ ms.locfileid: "62870454"
 |符号名称||  
 |消息正文|Case 表达式只能嵌套到 %d 层。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仅允许在 CASE 表达式中嵌套 10 个级别。  
   
 ## <a name="user-action"></a>用户操作  
  将 CASE 语句的级别减少到 10 级或更低的级数。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [CASE (Transact-SQL)](/sql/t-sql/language-elements/case-transact-sql)  
   
   

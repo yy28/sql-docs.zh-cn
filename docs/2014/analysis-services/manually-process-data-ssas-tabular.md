@@ -1,5 +1,5 @@
 ---
-title: 手动处理数据 (SSAS 表格) |Microsoft Docs
+title: 手动处理数据（SSAS 表格） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5de1215bd9646e115c6b2730c4e8a750a3f4040f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077965"
 ---
 # <a name="manually-process-data-ssas-tabular"></a>手动处理数据（SSAS 表格）
@@ -30,27 +30,27 @@ ms.locfileid: "66077965"
   
 -   [数据处理进度](#bkmk_data_process_progress)  
   
-##  <a name="bkmk_mahually_process"></a> 手动处理数据  
+##  <a name="bkmk_mahually_process"></a>手动处理数据  
   
 #### <a name="to-process-data-for-a-single-table-or-all-tables-in-a-model"></a>处理模型中单个表或者所有表的数据  
   
 1.  在模型设计器中，单击要处理的表。  
   
-2.  单击 **“模型”** 菜单，然后单击 **“处理”** ，再单击 **“处理”** 或 **“全部处理”** 。  
+2.  单击 **“模型”** 菜单，然后单击 **“处理”**，再单击 **“处理”** 或 **“全部处理”**。  
   
 #### <a name="to-process-data-for-all-tables-using-the-same-connection"></a>处理使用相同连接的所有表的数据  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，单击 **“模型”** 菜单，然后单击 **“现有连接”** 。  
+1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，单击 **“模型”** 菜单，然后单击 **“现有连接”**。  
   
-2.  在 **“现有连接”** 对话框中，选择某一连接，然后单击 **“处理”** 。  
+2.  在 **“现有连接”** 对话框中，选择某一连接，然后单击 **“处理”**。  
   
 #### <a name="to-process-data-for-one-or-more-partitions"></a>处理一个或多个分区的数据  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，单击 **“模型”** 菜单，然后指向 **“处理”** ，再单击 **“处理分区”** 。  
+1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，单击 **“模型”** 菜单，然后指向 **“处理”**，再单击 **“处理分区”**。  
   
 2.  在 **“处理分区”** 对话框的 **“模式”** 中，选择下列处理模式之一：  
   
-    |“模式”|Description|  
+    |模式|说明|  
     |----------|-----------------|  
     |**处理默认值**|检测分区对象的处理状态，执行必要的处理，将未处理的分区对象或部分处理的分区对象交付为已完全处理的分区对象。 为空表和分区加载数据；生成或重新生成层次结构、计算列和关系。|  
     |**处理全部**|处理分区对象及其包含的所有对象。 对已处理的对象运行“处理全部”时， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将删除该对象中的所有数据，然后再处理该对象。 在对对象进行结构更改后，需要这种类型的处理。|  
@@ -58,12 +58,13 @@ ms.locfileid: "66077965"
     |**处理清除**|删除分区中的所有数据。|  
     |**处理添加**|以增量方式用新数据更新分区。|  
   
-3.  在分区列表中，选择要处理的分区，然后单击 **“确定”** 。  
+3.  在分区列表中，选择要处理的分区，然后单击 **“确定”**。  
   
-##  <a name="bkmk_data_process_progress"></a> 数据处理进度  
- **“数据处理进度”** 对话框可用于监视从外部数据源导入到模型中的数据的处理。 若要访问此对话框，请依次单击 **“模型”** 菜单、 **“处理分区”** 、 **“处理表”** 或 **“全部处理”** 。  
+##  <a name="bkmk_data_process_progress"></a>数据处理进度  
+ 
+  **“数据处理进度”** 对话框可用于监视从外部数据源导入到模型中的数据的处理。 若要访问此对话框，请依次单击 **“模型”** 菜单、 **“处理分区”**、 **“处理表”** 或 **“全部处理”**。  
   
- **“状态”**  
+ **Status**  
  指示处理操作是否成功。  
   
  **详细信息**  
@@ -72,8 +73,8 @@ ms.locfileid: "66077965"
  **停止刷新**  
  单击此选项可以暂停处理操作。 如果操作用时过长或出现太多错误，则此选项很有用。  
   
-## <a name="see-also"></a>请参阅  
- [处理数据（SSAS 表格）](process-data-ssas-tabular.md)   
- [数据处理故障排除（SSAS 表格）](troubleshoot-process-data-ssas-tabular.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;SSAS 表格&#41;处理数据](process-data-ssas-tabular.md)   
+ [诊断 &#40;SSAS 表格&#41;的处理数据](troubleshoot-process-data-ssas-tabular.md)  
   
   

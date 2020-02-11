@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5d5ffe7ba8f0f844b7de626ff6238ebbead91dd7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085209"
 ---
 # <a name="customize-mining-models-and-structure"></a>自定义挖掘模型和结构
@@ -41,9 +41,10 @@ ms.locfileid: "66085209"
  关于要在模型中使用哪些数据列以及如何使用和处理这些数据的所做决策会大大影响分析结果。 以下主题给出的信息有助于理解这些选择。  
   
 ### <a name="using-feature-selection"></a>使用功能选择  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的大多数数据挖掘算法使用名为“  功能选择”的进程只选择对向模型中进行添加最为有用的属性。 减少列和属性的数目可以提高模型的性能和质量。 可用的功能选择方法随所选算法的不同而不同。  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的大多数数据挖掘算法使用名为“ ** 功能选择”的进程只选择对向模型中进行添加最为有用的属性。 减少列和属性的数目可以提高模型的性能和质量。 可用的功能选择方法随所选算法的不同而不同。  
   
- [功能选择（数据挖掘）](feature-selection-data-mining.md)。  
+ [&#40;数据挖掘&#41;的功能选择](feature-selection-data-mining.md)。  
   
 ### <a name="changing-usage"></a>更改用途  
  您可以更改挖掘模型中包含哪些列以及如何使用每个列。 如果未得到预期的结果，应检查作为输入的列并问自己选择这些列是否合适以及有什么方法来改进数据的处理，包括：  
@@ -56,14 +57,14 @@ ms.locfileid: "66085209"
   
 -   删除具有很多唯一值的列，或删除实际是参考数据、对分析没有用（如地址或中间名）的列。  
   
- 您不必实际从挖掘结构中; 删除列您可以只将列标记为**忽略**。 将列从此挖掘模型中删除，但它仍可用于结构内的其他挖掘模型或在钻取查询中引用。  
+ 不需要从挖掘结构中实际删除列;您可以仅将列标记为**Ignore**。 将列从此挖掘模型中删除，但它仍可用于结构内的其他挖掘模型或在钻取查询中引用。  
   
 ### <a name="creating-aliases-for-model-columns"></a>为模型列创建别名  
  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 创建挖掘模型时，它将使用挖掘结构中的列名称。 您可以为挖掘模型中的任何列添加别名。 这样可以使列内容或用法更易于理解，还可以缩短名称从而便于创建查询。 当您要创建列的副本并使用描述性名称时，别名也很有帮助。  
   
- 通过编辑挖掘模型列的 `Name` 属性来创建别名。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 继续使用原始名称键入列和新值的 ID 作为`Name`成为列别名，并显示在网格中的列用法旁边的括号。  
+ 通过编辑挖掘模型列的 `Name` 属性来创建别名。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]继续将原始名称用作列的 ID，为`Name`输入的新值将成为列别名，并显示在网格中的列用法旁边的括号中。  
   
- ![别名在挖掘模型列](../media/modelcolumnalias-income.gif "别名在挖掘模型列")  
+ ![对挖掘模型列使用别名](../media/modelcolumnalias-income.gif "对挖掘模型列使用别名")  
   
  此图形显示具有与收入有关的挖掘结构列的多个副本的相关模型。 结构列的各个副本都已按照不同的方式离散化。 关系图中的各个模型使用的列不同于挖掘结构；但是，为了便于对各个模型中的列进行比较，已将这些列重命名为 [**收入**]。  
   
@@ -77,15 +78,15 @@ ms.locfileid: "66085209"
 ## <a name="changing-the-algorithm"></a>更改算法  
  尽管您添加到挖掘结构的新模型共享相同的数据集，您可以使用不同算法（如果数据支持它）或更改算法参数来获得不同的结果。 还可以设置建模标志。  
   
- 算法选择决定将得到哪些类型的结果。 有关特定算法的工作方式或从使用特定算法中受益的业务方案的一般信息，请参阅[数据挖掘算法（Analysis Services - 数据挖掘）](data-mining-algorithms-analysis-services-data-mining.md)。  
+ 算法选择决定将得到哪些类型的结果。 有关特定算法的工作方式或从使用特定算法中受益的业务方案的一般信息，请参阅 [数据挖掘算法（Analysis Services - 数据挖掘）](data-mining-algorithms-analysis-services-data-mining.md)。  
   
  有关要求和限制的说明以及有关每个算法支持的自定义详细信息，请参阅每个算法的技术参考主题。  
   
 |||  
 |-|-|  
 |[Microsoft 决策树算法](microsoft-decision-trees-algorithm.md)|[Microsoft 时序算法](microsoft-time-series-algorithm.md)|  
-|[Microsoft 聚类分析算法](microsoft-clustering-algorithm.md)|[Microsoft 神经网络算法](microsoft-neural-network-algorithm.md)|  
-|[Microsoft Naive Bayes 算法](microsoft-naive-bayes-algorithm.md)|[Microsoft 逻辑回归算法](microsoft-logistic-regression-algorithm.md)|  
+|[Microsoft Clustering Algorithm](microsoft-clustering-algorithm.md)|[Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)|  
+|[Microsoft Naive Bayes Algorithm](microsoft-naive-bayes-algorithm.md)|[Microsoft 逻辑回归算法](microsoft-logistic-regression-algorithm.md)|  
 |[Microsoft 关联算法](microsoft-association-algorithm.md)|[Microsoft 线性回归算法](microsoft-linear-regression-algorithm.md)|  
 |[Microsoft 顺序分析和聚类分析算法](microsoft-sequence-clustering-algorithm.md)||  
   
@@ -94,46 +95,46 @@ ms.locfileid: "66085209"
   
  每个算法类型的主题还将列出可以与基于该算法的模型一起使用的预测函数。  
   
-|属性名称|适用对象|  
+|属性名称|适用于|  
 |-------------------|----------------|  
-|AUTO_DETECT_PERIODICITY|[Microsoft 时序算法技术参考](microsoft-time-series-algorithm-technical-reference.md)|  
+|AUTO_DETECT_PERIODICITY|[Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|  
 |CLUSTER_COUNT|[Microsoft 聚类分析算法技术参考](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Microsoft 顺序分析和聚类分析算法技术参考](microsoft-sequence-clustering-algorithm-technical-reference.md)|  
 |CLUSTER_SEED|[Microsoft 聚类分析算法技术参考](microsoft-clustering-algorithm-technical-reference.md)|  
 |CLUSTERING_METHOD|[Microsoft 聚类分析算法技术参考](microsoft-clustering-algorithm-technical-reference.md)|  
-|COMPLEXITY_PENALTY|[Microsoft 决策树算法技术参考](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 时序算法技术参考](microsoft-time-series-algorithm-technical-reference.md)|  
-|FORCE_REGRESSOR|[Microsoft 决策树算法技术参考](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 线性回归算法技术参考](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [建模标志（数据挖掘）](modeling-flags-data-mining.md)|  
-|FORECAST_METHOD|[Microsoft 时序算法技术参考](microsoft-time-series-algorithm-technical-reference.md)|  
+|COMPLEXITY_PENALTY|[Microsoft 决策树算法技术参考](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|  
+|FORCE_REGRESSOR|[Microsoft 决策树算法技术参考](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 线性回归算法技术参考](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [建模标志 &#40;数据挖掘&#41;](modeling-flags-data-mining.md)|  
+|FORECAST_METHOD|[Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|  
 |HIDDEN_NODE_RATIO|[Microsoft 神经网络算法技术参考](microsoft-neural-network-algorithm-technical-reference.md)|  
-|HISTORIC_MODEL_COUNT|[Microsoft 时序算法技术参考](microsoft-time-series-algorithm-technical-reference.md)|  
-|HISTORICAL_MODEL_GAP|[Microsoft 时序算法技术参考](microsoft-time-series-algorithm-technical-reference.md)|  
-|HOLDOUT_PERCENTAGE|[Microsoft 逻辑回归算法技术参考](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft 神经网络算法技术参考](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> 注意：此参数是不同于应用到挖掘结构的维持百分比值。|  
-|HOLDOUT_SEED|[Microsoft 逻辑回归算法技术参考](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft 神经网络算法技术参考](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> 注意：此参数是不同于应用到挖掘结构的维持种子值。|  
-|INSTABILITY_SENSITIVITY|[Microsoft 时序算法技术参考](microsoft-time-series-algorithm-technical-reference.md)|  
+|HISTORIC_MODEL_COUNT|[Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|  
+|HISTORICAL_MODEL_GAP|[Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|  
+|HOLDOUT_PERCENTAGE|[Microsoft 逻辑回归算法技术参考](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft 神经网络算法技术参考](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> 注意：此参数不同于应用到挖掘结构中的维持百分比值。|  
+|HOLDOUT_SEED|[Microsoft 逻辑回归算法技术参考](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft 神经网络算法技术参考](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> 注意：此参数不同于应用到挖掘结构中的维持种子值。|  
+|INSTABILITY_SENSITIVITY|[Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|  
 |MAXIMUM_INPUT_ATTRIBUTES|[Microsoft 聚类分析算法技术参考](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Microsoft 决策树算法技术参考](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 线性回归算法技术参考](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft Naive Bayes 算法技术参考](microsoft-naive-bayes-algorithm-technical-reference.md)<br /><br /> [Microsoft 神经网络算法技术参考](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> [Microsoft 逻辑回归算法技术参考](microsoft-logistic-regression-algorithm-technical-reference.md)|  
 |MAXIMUM_ITEMSET_COUNT|[Microsoft 关联算法技术参考](microsoft-association-algorithm-technical-reference.md)|  
 |MAXIMUM_ITEMSET_SIZE|[Microsoft 关联算法技术参考](microsoft-association-algorithm-technical-reference.md)|  
 |MAXIMUM_OUTPUT_ATTRIBUTES|[Microsoft 决策树算法技术参考](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 线性回归算法技术参考](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft 逻辑回归算法技术参考](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft Naive Bayes 算法技术参考](microsoft-naive-bayes-algorithm-technical-reference.md)<br /><br /> [Microsoft 神经网络算法技术参考](microsoft-neural-network-algorithm-technical-reference.md)|  
 |MAXIMUM_SEQUENCE_STATES|[Microsoft 顺序分析和聚类分析算法技术参考](microsoft-sequence-clustering-algorithm-technical-reference.md)|  
-|MAXIMUM_SERIES_VALUE|[Microsoft 时序算法技术参考](microsoft-time-series-algorithm-technical-reference.md)|  
+|MAXIMUM_SERIES_VALUE|[Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|  
 |MAXIMUM_STATES|[Microsoft 聚类分析算法技术参考](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Microsoft 神经网络算法技术参考](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> [Microsoft 顺序分析和聚类分析算法技术参考](microsoft-sequence-clustering-algorithm-technical-reference.md)|  
 |MAXIMUM_SUPPORT|[Microsoft 关联算法技术参考](microsoft-association-algorithm-technical-reference.md)|  
 |MINIMUM_IMPORTANCE|[Microsoft 关联算法技术参考](microsoft-association-algorithm-technical-reference.md)|  
 |MINIMUM_ITEMSET_SIZE|[Microsoft 关联算法技术参考](microsoft-association-algorithm-technical-reference.md)|  
 |MINIMUM_DEPENDENCY_PROBABILITY|[Microsoft Naive Bayes 算法技术参考](microsoft-naive-bayes-algorithm-technical-reference.md)|  
 |MINIMUM_PROBABILITY|[Microsoft 关联算法技术参考](microsoft-association-algorithm-technical-reference.md)|  
-|MINIMUM_SERIES_VALUE|[Microsoft 时序算法技术参考](microsoft-time-series-algorithm-technical-reference.md)|  
-|MINIMUM_SUPPORT|[Microsoft 关联算法技术参考](microsoft-association-algorithm-technical-reference.md)<br /><br /> [Microsoft 聚类分析算法技术参考](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Microsoft 决策树算法技术参考](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 顺序分析和聚类分析算法技术参考](microsoft-sequence-clustering-algorithm-technical-reference.md)<br /><br /> [Microsoft 时序算法技术参考](microsoft-time-series-algorithm-technical-reference.md)|  
-|MISSING_VALUE_SUBSTITUTION|[Microsoft 时序算法技术参考](microsoft-time-series-algorithm-technical-reference.md)|  
+|MINIMUM_SERIES_VALUE|[Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|  
+|MINIMUM_SUPPORT|[Microsoft 关联算法技术参考](microsoft-association-algorithm-technical-reference.md)<br /><br /> [Microsoft 聚类分析算法技术参考](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Microsoft 决策树算法技术参考](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 顺序分析和聚类分析算法技术参考](microsoft-sequence-clustering-algorithm-technical-reference.md)<br /><br /> [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|  
+|MISSING_VALUE_SUBSTITUTION|[Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|  
 |MODELLING_CARDINALITY|[Microsoft 聚类分析算法技术参考](microsoft-clustering-algorithm-technical-reference.md)|  
-|PERIODICITY_HINT|[Microsoft 时序算法技术参考](microsoft-time-series-algorithm-technical-reference.md)|  
-|PREDICTION_SMOOTHING|[Microsoft 时序算法技术参考](microsoft-time-series-algorithm-technical-reference.md)|  
+|PERIODICITY_HINT|[Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|  
+|PREDICTION_SMOOTHING|[Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|  
 |SAMPLE_SIZE|[Microsoft 聚类分析算法技术参考](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Microsoft 逻辑回归算法技术参考](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft 神经网络算法技术参考](microsoft-neural-network-algorithm-technical-reference.md)|  
 |SCORE_METHOD|[Microsoft 决策树算法技术参考](microsoft-decision-trees-algorithm-technical-reference.md)|  
 |SPLIT_METHOD|[Microsoft 决策树算法技术参考](microsoft-decision-trees-algorithm-technical-reference.md)|  
 |STOPPING_TOLERANCE|[Microsoft 聚类分析算法技术参考](microsoft-clustering-algorithm-technical-reference.md)|  
   
-## <a name="see-also"></a>请参阅  
- [数据挖掘算法 &#40;Analysis Services-数据挖掘&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [物理体系结构（Analysis Services - 数据挖掘）](physical-architecture-analysis-services-data-mining.md)  
+## <a name="see-also"></a>另请参阅  
+ [数据挖掘算法 &#40;Analysis Services 数据挖掘&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [物理体系结构 &#40;Analysis Services 数据挖掘&#41;](physical-architecture-analysis-services-data-mining.md)  
   
   

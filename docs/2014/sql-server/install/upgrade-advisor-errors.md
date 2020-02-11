@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f6c9f133af7b8054414f6867f41cee3022d68925
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091679"
 ---
 # <a name="upgrade-advisor-errors"></a>升级顾问错误
@@ -24,7 +24,7 @@ ms.locfileid: "66091679"
   
  可以忽略在报表查看器中列出的链接到本主题的任何问题。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [解决升级问题](../../../2014/sql-server/install/resolving-upgrade-issues.md)  
   
   

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 52eed41a8b44147c13ed8dbc63dbda46ed625f51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62676893"
 ---
 # <a name="security-role-requirements-for-replication"></a>Security Role Requirements for Replication
@@ -49,7 +49,7 @@ ms.locfileid: "62676893"
 |维护复制代理。|相应数据库上的**db_owner** 数据库角色或相应服务器上的 **sysadmin** 服务器角色。<br /><br /> 如果代理是由 **sysadmin** 角色中的用户创建的，并且未给该代理指定代理帐户，则该代理将在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理帐户上下文运行。 在这种情况下， **db_owner** 角色中的用户不能修改与该代理关联的作业。|  
 |启动或停止复制代理。|代理作业的所有者或相应服务器上的 **sysadmin** 服务器角色。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Replication Security Best Practices](replication-security-best-practices.md)   
  [SQL Server 复制安全性](view-and-modify-replication-security-settings.md)  
   

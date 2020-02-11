@@ -1,5 +1,5 @@
 ---
-title: 常规 （还原数据库对话框） (Analysis Services-多维数据) |Microsoft Docs
+title: 常规（"还原数据库" 对话框）（Analysis Services 多维数据） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2ebc1bc72a15545412adcc71d10feb08f3f05b16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080945"
 ---
 # <a name="general-restore-database-dialog-box-analysis-services---multidimensional-data"></a>常规（“还原数据库”对话框）（Analysis Services - 多维数据）
@@ -28,9 +28,9 @@ ms.locfileid: "66080945"
 > [!NOTE]  
 >  还原现有数据库之后，还原了此数据库的用户可能会失去对还原后的数据库的访问权限。 如果在执行备份时用户不是服务器角色成员或者不是拥有完全控制（管理员）权限的数据库角色成员，则会出现这种失去访问权限的情形。  
   
- **若要在还原数据库对话框中显示常规页**  
+ **通过“还原数据库”对话框显示“常规”页**  
   
--   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，右键单击 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例的“数据库”  文件夹，或“对象资源管理器”  中的数据库，单击“还原”  ，然后在“选择页”  下单击“常规”  。  
+-   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，右键单击 ** 实例的“数据库”**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]文件夹，或“对象资源管理器”**** 中的数据库，单击“还原”****，然后在“选择页”**** 下单击“常规”****。  
   
 ## <a name="options"></a>选项  
  **脚本**  
@@ -55,7 +55,7 @@ ms.locfileid: "66080945"
  选择从中还原所选 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库的备份文件。  
   
  **“浏览”**  
- 单击可显示“定位数据库文件”  对话框，并选择要使用的备份文件的路径和文件名。 有关“定位数据库文件”  对话框的详细信息，请参阅[“定位数据库文件”对话框（Analysis Services - 多维数据）](locate-database-files-dialog-box-analysis-services-multidimensional-data.md)。  
+ 单击可显示“定位数据库文件”**** 对话框，并选择要使用的备份文件的路径和文件名。 有关“定位数据库文件”**** 对话框的详细信息，请参阅[“定位数据库文件”对话框（Analysis Services - 多维数据）](locate-database-files-dialog-box-analysis-services-multidimensional-data.md)。  
   
  **允许覆盖数据库**  
  选择此选项允许 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 还原所选备份文件的内容来覆盖所选 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库中的现有对象。  
@@ -63,19 +63,19 @@ ms.locfileid: "66080945"
  **包括安全信息**  
  选择此选项可以将备份文件中存储的所有安全信息复制到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库。  
   
- 如果选择此选项，则可以从通过选择此选项启用的下拉列表中选择安全信息。 可用选项包括：  
+ 如果选择此选项，则可以从通过选择此选项启用的下拉列表中选择安全信息。 提供了以下选项：  
   
-|Option|Description|  
+|选项|说明|  
 |------------|-----------------|  
 |**全部复制**|还原备份文件中包含的数据库角色以及与这些角色关联的用户帐户。|  
 |**跳过成员身份**|还原备份文件中包含的数据库角色，但不还原与这些角色关联的用户帐户。|  
   
- **密码**  
+ **权限**  
  如果对备份文件进行了加密，请键入用于加密备份文件的密码。  
   
-## <a name="see-also"></a>请参阅  
- [“还原数据库”对话框（Analysis Services - 多维数据）](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
- [分区&#40;还原数据库对话框&#41; &#40;Analysis Services-多维数据&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>另请参阅  
+ ["还原数据库" 对话框 &#40;Analysis Services 多维数据&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [分区 &#40;还原数据库 "对话框&#41; &#40;Analysis Services 多维数据&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [备份和还原 Analysis Services 数据库](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   

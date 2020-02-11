@@ -1,5 +1,5 @@
 ---
-title: 步骤 3：测试第 6 课包 |Microsoft Docs
+title: 步骤 3：测试第 6 课包 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c69c75c9dff4bf8d0542dae71cddcf1a431ab063
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62890836"
 ---
-# <a name="step-3-testing-the-lesson-6-package"></a>步骤 3：测试第 6 课包
+# <a name="step-3-testing-the-lesson-6-package"></a>步骤 3：测试 Lesson 6 包
   在运行时，包从 VarFolderName 参数获取 Directory 属性的值。  
   
  若要验证该包在运行时是否使用新值更新了 Directory 属性，只需执行该包。 由于只向新目录中复制了三个示例数据文件，因此该数据流将只运行三次，而不遍历原始文件夹中的 14 个文件。  

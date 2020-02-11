@@ -1,5 +1,5 @@
 ---
-title: 使用 SQL Server Profiler 创建 SQL 跟踪收集组 (SQL Server Management Studio) |Microsoft Docs
+title: 使用 SQL Server Profiler 创建 SQL 跟踪收集组（SQL Server Management Studio） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a9e37fd917dc2716967623648a62057e45df73dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873304"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set-sql-server-management-studio"></a>使用 SQL Server Profiler 创建 SQL 跟踪收集组 (SQL Server Management Studio)
@@ -34,7 +34,7 @@ ms.locfileid: "62873304"
   
 ### <a name="create-and-export-a-sql-server-profiler-trace"></a>创建和导出 SQL Server Profiler 跟踪  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，打开 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。 （在“工具”  菜单上，单击“SQL Server Profiler”  。）  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，打开 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。 （在“工具”  菜单上，单击“SQL Server Profiler”  。）  
   
 2.  在 **“连接到服务器”** 对话框中，单击 **“取消”** 。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62873304"
   
 5.  在 **“连接到服务器”** 对话框中，选择要连接到的服务器，然后单击 **“连接”** 。  
   
-     此时，将显示“跟踪属性”  对话框。  
+     此时，将显示 **“跟踪属性”** 对话框。  
   
 6.  在 **“常规”** 选项卡上，请执行下列操作：  
   
@@ -72,7 +72,7 @@ ms.locfileid: "62873304"
   
     1.  在筛选器列表中，单击 **“持续时间”** 。  
   
-    2.  在布尔运算符窗口中，展开**大于或等于**节点中，键入`80`作为值，然后单击**确定**。  
+    2.  在布尔运算符窗口中，展开 "**大于或等于**" 节点，键入`80`作为值，然后单击 **"确定"**。  
   
 9. 单击 **“运行”** 以启动跟踪。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "62873304"
   
     -   将 **SQLTrace Collection Set Name Here** 替换为要为收集组使用的名称。 在本示例中，将收集组命名为 `SPROC_CollectionSet`。  
   
-    -   将 **SQLTrace Collection Item Name Here** 替换为要为收集项使用的名称。 对于此示例中，命名收集项`SPROC_Collection_Item`。  
+    -   将 **SQLTrace Collection Item Name Here** 替换为要为收集项使用的名称。 对于本示例，请将收集项`SPROC_Collection_Item`命名为。  
   
 4.  单击 **“执行”** 运行查询并创建收集组。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "62873304"
   
     2.  展开 **“管理”** ，然后展开 **“数据收集”** 。  
   
-     `SPROC_CollectionSet`收集组将显示在相同的级别**系统数据收集组**节点。 默认情况下，将禁用该收集组。  
+     `SPROC_CollectionSet`收集组与 "**系统数据收集组**" 节点显示在同一级别。 默认情况下，将禁用该收集组。  
   
 6.  使用对象资源管理器编辑 SPROC_CollectionSet 的属性，如收集模式和上载计划。 按照针对与数据收集器一起提供的系统数据收集组的过程进行操作。  
   

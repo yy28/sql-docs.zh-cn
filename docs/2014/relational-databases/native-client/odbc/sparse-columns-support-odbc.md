@@ -1,5 +1,5 @@
 ---
-title: 稀疏列支持 (ODBC) |Microsoft Docs
+title: 稀疏列支持（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,22 +11,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a6e1583dad869860bdd2f555a354850c7f7a1198
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62691959"
 ---
 # <a name="sparse-columns-support-odbc"></a>稀疏列支持 (ODBC)
-  本主题描述对稀疏列的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 支持。 演示对稀疏列 ODBC 支持的示例，请参阅[对具有稀疏列的表调用 SQLColumns](../../native-client-odbc-how-to/call-sqlcolumns-on-a-table-with-sparse-columns.md)。 有关稀疏列的详细信息，请参阅[SQL Server Native Client 中的稀疏列支持](../features/sparse-columns-support-in-sql-server-native-client.md)。  
+  本主题描述对稀疏列的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 支持。 有关演示 ODBC 对稀疏列的支持的示例，请参阅对[具有稀疏列的表调用 SQLColumns](../../native-client-odbc-how-to/call-sqlcolumns-on-a-table-with-sparse-columns.md)。 有关稀疏列的详细信息，请参阅[SQL Server Native Client 中的稀疏列支持](../features/sparse-columns-support-in-sql-server-native-client.md)。  
   
 ## <a name="statement-metadata"></a>语句元数据  
- 应用程序参数描述符 (APD) 字段和 SQL_SOPT_SS_NAME_SCOPE 语句属性接受新增的值 SQL_SS_NAME_SCOPE_EXTENDED 和 SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET。 这些值指定哪些列包含在返回的结果集[SQLColumns](../../native-client-odbc-api/sqlcolumns.md)。 有关 SQL_SOPT_SS_NAME_SCOPE 的详细信息，请参阅[SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)。  
+ 应用程序参数描述符 (APD) 字段和 SQL_SOPT_SS_NAME_SCOPE 语句属性接受新增的值 SQL_SS_NAME_SCOPE_EXTENDED 和 SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET。 这些值指定由[SQLColumns](../../native-client-odbc-api/sqlcolumns.md)返回的结果集中包含的列。 有关 SQL_SOPT_SS_NAME_SCOPE 的详细信息，请参阅[SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)。  
   
  新的实现行描述符 (IRD) 是称为 SQL_CA_SS_IS_COLUMN_SET 的只读 SQLSMALLINT 字段，它可以用于确定列是否是 XML `column_set` 值。 SQL_CA_SS_IS_COLUMN_SET 接受值 SQL_TRUE 和 SQL_FALSE。  
   
 ## <a name="catalog-metadata"></a>目录元数据  
- 两个[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]特定列 （SS_IS_SPARSE 和 SS_IS_COLUMN_SET） 已添加到结果集中[SQLColumns](../../native-client-odbc-api/sqlcolumns.md)。  
+ 已[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]将两个特定列（SS_IS_SPARSE 和 SS_IS_COLUMN_SET）添加到[SQLColumns](../../native-client-odbc-api/sqlcolumns.md)的结果集中。  
   
 ## <a name="odbc-function-support-for-sparse-columns"></a>对稀疏列的 ODBC 函数支持  
  以下 ODBC 函数已进行更新，以便在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中支持稀疏列：  
@@ -41,7 +41,7 @@ ms.locfileid: "62691959"
   
 -   [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)  
   
-## <a name="see-also"></a>请参阅  
- [SQL Server Native Client (ODBC)](sql-server-native-client-odbc.md)  
+## <a name="see-also"></a>另请参阅  
+ [SQL Server Native Client &#40;ODBC&#41;](sql-server-native-client-odbc.md)  
   
   

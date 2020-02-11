@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6f240973def97dea739c21381f38dc366deb8920
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62691475"
 ---
 # <a name="server-public-permissions"></a>服务器 public 权限
@@ -26,9 +26,9 @@ ms.locfileid: "62691475"
  请勿为服务器 public 角色授予服务器权限。  
   
 > [!IMPORTANT]  
->  安装程序完成后**公共**角色具有`CONNECT`之外的所有端点上的权限**专用管理员连接**。 这很正常，通常不应更改。 （通过使用 `CONNECT SQL` 权限来控制访问，该权限是在创建新登录名时自动授予的。）  
+>  安装完成后，**公共**角色对`CONNECT`所有终结点都有权限，**专用管理员连接**除外。 这很正常，通常不应更改。 （通过使用 `CONNECT SQL` 权限来控制访问，该权限是在创建新登录名时自动授予的。）  
   
-### <a name="for-more-information"></a>有关详细信息，请参阅：  
+### <a name="for-more-information"></a>更多信息  
  [保护 SQL Server](../security/securing-sql-server.md)  
   
   

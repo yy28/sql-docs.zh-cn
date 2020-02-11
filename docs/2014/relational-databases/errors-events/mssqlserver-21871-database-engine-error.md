@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 832ee3caa23a034f1c228d01ff8ec2ceda32de06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915119"
 ---
-# <a name="mssqlserver21871"></a>MSSQLSERVER_21871
+# <a name="mssqlserver_21871"></a>MSSQLSERVER_21871
     
 ## <a name="details"></a>详细信息  
   
@@ -32,10 +32,11 @@ ms.locfileid: "62915119"
 |符号名称|SQLErrorNum21871|  
 |消息正文|发布服务器“%s”（属于数据库“%s”）尚未重定向。|  
   
-## <a name="explanation"></a>解释  
- `sp_validate_replica_hosts_as_publishers` 检查 MSredirected_publishers 表分发数据库中的标识的发布服务器和发布服务器数据库的条目。  如果未找到条目，则 `sp_validate_replica_hosts_as_publishers` 返回错误 21871。  
+## <a name="explanation"></a>说明  
+ `sp_validate_replica_hosts_as_publishers` 在分发数据库中检查 MSredirected_publishers 表，以查看是否存在与标识的发布服务器和发布服务器数据库对应的条目。  如果未找到条目，则 `sp_validate_replica_hosts_as_publishers` 返回错误 21871。  
   
 ## <a name="user-action"></a>用户操作  
- `sp_validate_replica_hosts_as_publishers` 仅与重定向发布服务器有关。 如果发布服务器数据库为可用性组的成员，则使用存储过程 `sp_redirect_publisher` 将发布服务器和发布服务器数据库与可用性组的可用性组侦听器名称关联。  
+ 
+  `sp_validate_replica_hosts_as_publishers` 仅与重定向发布服务器有关。 如果发布服务器数据库为可用性组的成员，则使用存储过程 `sp_redirect_publisher` 将发布服务器和发布服务器数据库与可用性组的可用性组侦听器名称关联。  
   
   

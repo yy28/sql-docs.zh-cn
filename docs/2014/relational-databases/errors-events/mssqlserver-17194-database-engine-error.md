@@ -15,13 +15,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d5425431d465c9bddba23c959aab41cefbfcdd89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915326"
 ---
-# <a name="mssqlserver17194"></a>MSSQLSERVER_17194
+# <a name="mssqlserver_17194"></a>MSSQLSERVER_17194
     
 ## <a name="details"></a>详细信息  
   
@@ -32,9 +32,9 @@ ms.locfileid: "62915326"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称||  
-|消息正文|服务器无法加载登录所需的 SSL 提供程序库；连接已关闭。 可以用 SSL 对登录序列或所有通信进行加密，具体取决于管理员配置服务器的方式。 有关此错误消息的信息，请参阅联机丛书：0xXXXX. [客户端：11.11.11.11]|  
+|消息正文|服务器无法加载登录所需的 SSL 提供程序库；连接已关闭。 可以用 SSL 对登录序列或所有通信进行加密，具体取决于管理员配置服务器的方式。 有关错误消息 0xXXXX 的信息，请参阅联机丛书。 [客户端：11.11.11.11]|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  此错误指示客户端已关闭连接。 因为连接超时时间已到，所以有可能发生此错误。 该错误消息将显示操作系统返回的值，说明错误的根本问题。  
   
 ## <a name="user-action"></a>用户操作  

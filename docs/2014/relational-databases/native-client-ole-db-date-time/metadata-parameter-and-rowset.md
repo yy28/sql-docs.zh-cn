@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2b96876a050f9ba46363792eec22d76640ee6fc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62655623"
 ---
 # <a name="parameter-and-rowset-metadata"></a>参数和行集元数据
@@ -33,16 +33,16 @@ ms.locfileid: "62655623"
 -   `IColumnsInfo::GetColumnInfo`  
   
 ## <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
- 通过 prgParamInfo 在 DBPARAMINFO 结构中返回以下信息  ：  
+ 通过 prgParamInfo 在 DBPARAMINFO 结构中返回以下信息**：  
   
-|参数类型|wType |*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
+|参数类型|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|Clear|  
-|time|DBTYPE_DBTIME2|10|8, 10..16|0..7|将|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
-|datetime2|DBTYPE_DBTIMESTAMP|16|19,21..27|0..7|将|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26,28..34|0..7|将|  
+|date|DBTYPE_DBDATE|6|10|0|清除|  
+|time|DBTYPE_DBTIME2|10|8, 10..16|0..7|设置|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|清除|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|清除|  
+|datetime2|DBTYPE_DBTIMESTAMP|16|19，21. 27|0..7|设置|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26，28. 34|0..7|设置|  
   
  请注意，在某些情况下，值范围不是连续的。 这是因为当小数精度大于零时添加了小数点。  
   
@@ -58,15 +58,15 @@ ms.locfileid: "62655623"
 ||DBTYPE_DBTIME|10|忽略|  
 |time|DBTYPE_DBTIME2|10|0..7|  
 |smalldatetime||16|忽略|  
-|DATETIME||16|忽略|  
+|datetime||16|忽略|  
 |datetime2 或 DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|16|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|0..7|  
   
- *BPrecision*参数将被忽略。  
+ 忽略*bPrecision*参数。  
   
- 向服务器发送数据时将忽略“DBPARAMFLAGS_SS_ISVARIABLESCALE”。 通过使用特定于访问接口的类型名称 "`datetime`”和“`smalldatetime`”，应用程序可以强制使用旧的表格格式数据流 (TDS) 类型。 当连接到[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]（或更高版本） 服务器，"`datetime2`"将使用格式和隐式服务器转换会时发生，如有必要，该类型名称是"`datetime2`"或"DBTYPE_DBTIMESTAMP"。 *bScale*如果提供程序特定于类型名称，则忽略"`datetime`"或"`smalldatetime`"使用。 否则，应用程序必须确保*bScale*已正确设置。 从 MDAC 升级的应用程序和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]使用"DBTYPE_DBTIMESTAMP"，如果它们没有设置将失败*bScale*正确。 当连接到早于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的服务器实例时，采用“DBTYPE_DBTIMESTAMP”且值不为 0 或 3 的 bScale 值不正确，并且将返回 E_FAIL  。  
+ 向服务器发送数据时将忽略“DBPARAMFLAGS_SS_ISVARIABLESCALE”。 通过使用特定于访问接口的类型名称 "`datetime`”和“`smalldatetime`”，应用程序可以强制使用旧的表格格式数据流 (TDS) 类型。 当连接到[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] （或更高版本）服务器`datetime2`时，将使用 "" 格式，并在必要时在类型名称为 "`datetime2`" 或 "DBTYPE_DBTIMESTAMP" 时进行隐式服务器转换。 ** 如果使用提供程序特定的类型名称 "`datetime`" 或 "`smalldatetime`"，则将忽略 bScale。 否则，appications 必须确保正确设置*bScale* 。 从 MDAC 升级[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]的应用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]程序和使用 "DBTYPE_DBTIMESTAMP" 的 Native Client 的应用程序如果未正确设置*bScale* ，则会失败。 当连接到早于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的服务器实例时，采用“DBTYPE_DBTIMESTAMP”且值不为 0 或 3 的 bScale 值不正确，并且将返回 E_FAIL**。  
   
- 不调用 icommandwithparameters:: Setparameterinfo 时，提供程序表示服务器类型 iaccessor:: Createaccessor 中指定的绑定类型，如下所示：  
+ 如果未调用 ICommandWithParameters：： SetParameterInfo，则提供程序将在 IAccessor：： CreateAccessor 中指定的绑定类型中表示服务器类型，如下所示：  
   
 |绑定类型|*pwszDataSourceType*<br /><br /> （特定于访问接口）|  
 |------------------|----------------------------------------------------|  
@@ -78,16 +78,17 @@ ms.locfileid: "62655623"
 |DBTYPE_DBTIMESTAMPOFFSET|datetimeoffset(7)|  
   
 ## <a name="icolumnsrowsetgetcolumnsrowset"></a>IColumnsRowset::GetColumnsRowset  
- `IColumnsRowset::GetColumnsRowset` 返回以下各列：  
+ 
+  `IColumnsRowset::GetColumnsRowset` 返回以下各列：  
   
 |列类型|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE、DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS、DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|Clear|  
-|time|DBTYPE_DBTIME2|10|8, 10..16|0..7|将|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
-|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|将|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|将|  
+|date|DBTYPE_DBDATE|6|10|0|清除|  
+|time|DBTYPE_DBTIME2|10|8, 10..16|0..7|设置|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|清除|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|清除|  
+|datetime2|DBTYPE_DBTIMESTAMP|16|19、21..27|0..7|设置|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26、28..34|0..7|设置|  
   
  在 DBCOLUMN_FLAGS 中，对于日期/时间类型，DBCOLUMNFLAGS_ISFIXEDLENGTH 始终为 True，而下列标志则始终为 False：  
   
@@ -114,16 +115,16 @@ ms.locfileid: "62655623"
 ## <a name="icolumnsinfogetcolumninfo"></a>IColumnsInfo::GetColumnInfo  
  DBCOLUMNINFO 结构返回以下信息：  
   
-|参数类型|wType |*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
+|参数类型|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|Clear|  
-|time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|将|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
-|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|将|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|将|  
+|date|DBTYPE_DBDATE|6|10|0|清除|  
+|time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|设置|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|清除|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|清除|  
+|datetime2|DBTYPE_DBTIMESTAMP|16|19、21..27|0..7|设置|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26、28..34|0..7|设置|  
   
- 在 dwFlags 中，对于日期/时间类型，DBCOLUMNFLAGS_ISFIXEDLENGTH 始终为 True，而下列标志则始终为 False  ：  
+ 在 dwFlags 中，对于日期/时间类型，DBCOLUMNFLAGS_ISFIXEDLENGTH 始终为 True，而下列标志则始终为 False**：  
   
 -   DBCOLUMNFLAGS_CACHEDEFERRED  
   
@@ -139,9 +140,9 @@ ms.locfileid: "62655623"
   
  可以设置其余标志（DBCOLUMNFLAGS_ISNULLABLE、DBCOLUMNFLAGS_MAYBENULL、DBCOLUMNFLAGS_WRITE 和 DBCOLUMNFLAGS_WRITEUNKNOWN）。  
   
- dwFlags 中提供了新的 DBCOLUMNFLAGS_SS_ISVARIABLESCALE 标志，以使应用程序可以确定列的服务器类型，其中 wType 为 DBTYPE_DBTIMESTAMP   。 还必须使用 bScale 来标识服务器类型  。  
+ dwFlags 中提供了新的 DBCOLUMNFLAGS_SS_ISVARIABLESCALE 标志，以使应用程序可以确定列的服务器类型，其中 wType 为 DBTYPE_DBTIMESTAMP****。 *bScale*还必须用于标识服务器类型。  
   
-## <a name="see-also"></a>请参阅  
- [Metadata &#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
+## <a name="see-also"></a>另请参阅  
+ [OLE DB 的元数据 &#40;&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
   
   

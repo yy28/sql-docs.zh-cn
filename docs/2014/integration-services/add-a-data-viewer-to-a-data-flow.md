@@ -1,5 +1,5 @@
 ---
-title: 将数据查看器添加到数据流 |Microsoft Docs
+title: 向数据流添加数据查看器 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cbd45caac75d4fac3b5fffc305a9f359193191a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062085"
 ---
 # <a name="add-a-data-viewer-to-a-data-flow"></a>将数据查看器添加到数据流
@@ -38,9 +38,9 @@ ms.locfileid: "66062085"
   
 4.  单击要将数据查看器附加到其数据流的数据流任务，然后单击 **“数据流”** 选项卡。  
   
-5.  右键单击两个数据流组件之间的路径，然后单击“编辑”。  
+5.  右键单击两个数据流组件之间的路径，然后单击“编辑”。****  
   
-6.  在 **“常规”** 页上，可以查看和编辑路径属性。 例如，从“路径批注”下拉列表中，你可以选择要在路径旁边显示的批注。  
+6.  在 **“常规”** 页上，可以查看和编辑路径属性。 例如，从“路径批注”下拉列表中，你可以选择要在路径旁边显示的批注。****  
   
 7.  在 **“元数据”** 页上，您可以查看列元数据并将元数据复制到剪贴板。  
   
@@ -51,12 +51,12 @@ ms.locfileid: "66062085"
     > [!NOTE]  
     >  在网格中，表示 DT_DATE、DT_DBTIME2、DT_FILETIME、DT_DBTIMESTAMP、DT_DBTIMESTAMP2 和 DT_DBTIMESTAMPOFFSET 数据类型的值显示为 ISO 8601 格式字符串，空间分隔符将替代 `T` 分隔符。 表示 DT_DATE 和 DT_FILETIME 数据类型的值包括七位秒小数。 因为 DT_FILETIME 数据类型仅存储三位秒小数，网格会将其余四位显示为零。 表示 DT_DBTIMESTAMP 数据类型的值包含三位秒小数。 对于表示 DT_DBTIME2、DT_DBTIMESTAMP2 和 DT_DBTIMESTAMPOFFSET 数据类型的值，秒小数的数字位数与为列数据类型指定的小数位数对应。 有关 ISO 8601 格式的详细信息，请参阅 [Date and Time Formats](../../2014/integration-services/date-and-time-formats.md)。 有关数据类型的详细信息，请参阅 [Integration Services Data Types](data-flow/integration-services-data-types.md)。  
   
-10. 单击“确定” 。  
+10. 单击“确定”。   
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 转换](data-flow/transformations/integration-services-transformations.md)   
  [Integration Services 路径](data-flow/integration-services-paths.md)   
- [“数据流”](data-flow/data-flow.md)   
+ [数据流](data-flow/data-flow.md)   
  [调试数据流](troubleshooting/debugging-data-flow.md)  
   
   

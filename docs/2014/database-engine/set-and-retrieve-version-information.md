@@ -20,10 +20,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 68113c6de003aea94924f6e220373664212becf1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62843478"
 ---
 # <a name="set-and-retrieve-version-information"></a>设置和检索版本信息
@@ -55,13 +55,13 @@ ms.locfileid: "62843478"
   
 -   [查看文件历史记录](../../2014/database-engine/view-file-history.md)  
   
--   [查看项目历史记录](../../2014/database-engine/view-project-history.md)  
+-   [查看项目历史](../../2014/database-engine/view-project-history.md)  
   
 -   [查看文件状态](../../2014/database-engine/view-file-status.md)  
   
 -   [检索文件](../../2014/database-engine/retrieve-files.md)  
   
--   [将某个版本指定为最新版本](../../2014/database-engine/specify-a-version-as-the-latest-version.md)  
+-   [将版本指定为最新版本](../../2014/database-engine/specify-a-version-as-the-latest-version.md)  
   
 -   [比较文件](../../2014/database-engine/compare-files.md)  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62843478"
   
 -   [创建历史记录和状态报表](../../2014/database-engine/create-history-and-status-reports.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [源代码管理基础](../../2014/database-engine/source-control-basics.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b25d12646a2662cb5c6ab8f2a9b510aa02d7c49b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106281"
 ---
 # <a name="add-bevel-emboss-and-texture-styles-to-a-chart-report-builder-and-ssrs"></a>向图表添加凹凸效果、阳文和纹理样式（报表生成器和 SSRS）
@@ -42,7 +42,7 @@ ms.locfileid: "66106281"
 > [!NOTE]  
 >  不能在同一个图表上具有三维和凹凸效果或阳文样式。 如果已为图表启用三维样式，将看不到 PieDrawingStyle 属性。  
   
- ![带有凹形绘制样式的饼图](../media/rs-piedrawingeffects-concave.gif "带有凹形绘制样式的饼图")  
+ ![带有凹焊缝绘制样式的饼图](../media/rs-piedrawingeffects-concave.gif "带有凹焊缝绘制样式的饼图")  
   
 ### <a name="to-add-texture-styles-to-a-bar-or-column-chart"></a>向条形图或柱状图中添加纹理样式  
   
@@ -59,10 +59,10 @@ ms.locfileid: "66106281"
   
  ![具有 LightToDark 绘制效果的条形图](../media/rs-bardrawingeffects-lighttodark.gif "具有 LightToDark 绘制效果的条形图")  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [条形图（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   
  [柱形图（报表生成器和 SSRS）](column-charts-report-builder-and-ssrs.md)   
  [饼图（报表生成器和 SSRS）](pie-charts-report-builder-and-ssrs.md)   
- [设置图表格式（报表生成器和 SSRS）](formatting-a-chart-report-builder-and-ssrs.md)  
+ [设置图表格式&#40;报表生成器和 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
   
   

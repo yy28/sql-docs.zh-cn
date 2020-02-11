@@ -1,5 +1,5 @@
 ---
-title: 逻辑体系结构 (Analysis Services-数据挖掘) |Microsoft Docs
+title: 逻辑体系结构（Analysis Services 数据挖掘） |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5702e3e2e5b12edecff4dd6d6f46b632575d211d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084269"
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>逻辑体系结构（Analysis Services - 数据挖掘）
@@ -38,21 +38,22 @@ ms.locfileid: "66084269"
   
 
   
-##  <a name="bkmk_SourceData"></a> 数据挖掘源数据  
+##  <a name="bkmk_SourceData"></a>数据挖掘源数据  
  在数据挖掘中使用的数据并不会存储在数据挖掘解决方案中，而仅存储绑定。 该数据可能驻留在 SQL Server 早期版本创建的数据库、CRM 系统，或者甚至平面文件中。 通过处理定型结构或模型时，将创建数据的统计汇总并在缓存中存储它，这样可以将其持久化以供以后的操作使用它；或者在处理后删除数据的统计汇总。 有关详细信息，请参阅[挖掘结构（Analysis Services - 数据挖掘）](mining-structures-analysis-services-data-mining.md)。  
   
- 在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源视图 (DSV) 对象中组合不同数据，将在你的数据源上提供一个抽象层。 您可以指定表之间的联接，或添加具有多对一关系的表以便创建嵌套表列。 这些对象的定义、数据源和数据源视图存储在解决方案内，文件扩展名为 *.ds 和 \*.dsv。 有关如何创建和使用的详细信息[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据源和数据源视图，请参阅[支持数据源&#40;SSAS 多维&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md)。  
+ 在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源视图 (DSV) 对象中组合不同数据，将在你的数据源上提供一个抽象层。 您可以指定表之间的联接，或添加具有多对一关系的表以便创建嵌套表列。 这些对象的定义、数据源和数据源视图存储在解决方案内，文件扩展名为 *.ds 和 \*.dsv。 有关创建和使用[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据源和数据源视图的详细信息，请参阅[&#40;SSAS 多维&#41;支持的数据源](../multidimensional-models/supported-data-sources-ssas-multidimensional.md)。  
   
  还可以使用 AMO 或 XMLA 定义和更改数据源以及数据源视图。 有关以编程方式使用这些对象的详细信息，请参阅[逻辑体系结构概述（Analysis Services - 多维数据）](../multidimensional-models/olap-logical/logical-architecture-overview-analysis-services-multidimensional-data.md)。  
   
 
   
-##  <a name="bkmk_Structures"></a> Mining Structures  
+##  <a name="bkmk_Structures"></a>挖掘结构  
  数据挖掘结构是一种逻辑数据容器，它定义从中生成挖掘模型的数据域。 单个挖掘结构可以支持多个挖掘模型。  
   
  需要使用数据挖掘解决方案中的数据时，Analysis Services 读取源的数据并生成聚合以及其他信息的缓存。 默认情况下，将此缓存持久化以便可以重用定型数据来支持其他模型。 如果您需要删除此缓存，请将挖掘结构对象的 `CacheMode` 属性更改为值 `ClearAfterProcessing`。 有关详细信息，请参阅 [AMO 数据挖掘类](https://docs.microsoft.com/bi-reference/amo/amo-data-mining-classes)。  
   
- [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 还提供将数据分为定型数据集和测试数据集的功能，这样，您可以针对具有代表性的随机选择的数据集测试您的挖掘模型。 数据实际未单独存储；使用一个属性标记结构缓存中的事例数据，该属性指示特定事例是用于定型还是测试。 如果删除缓存，则无法检索该信息。  
+ 
+  [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 还提供将数据分为定型数据集和测试数据集的功能，这样，您可以针对具有代表性的随机选择的数据集测试您的挖掘模型。 数据实际未单独存储；使用一个属性标记结构缓存中的事例数据，该属性指示特定事例是用于定型还是测试。 如果删除缓存，则无法检索该信息。  
   
  有关详细信息，请参阅[挖掘结构（Analysis Services - 数据挖掘）](mining-structures-analysis-services-data-mining.md)。  
   
@@ -60,18 +61,18 @@ ms.locfileid: "66084269"
   
  
   
-##  <a name="bkmk_Models"></a> Mining Models  
+##  <a name="bkmk_Models"></a>挖掘模型  
  处理前，数据挖掘模型只是元数据属性的组合。 这些属性指定挖掘结构，指定数据挖掘算法，并定义影响如何处理数据的参数和筛选器设置的集合。 有关详细信息，请参阅[挖掘模型（Analysis Services - 数据挖掘）](mining-models-analysis-services-data-mining.md)。  
   
- 处理模型时，存储在挖掘结构缓存中的定型数据用于基于数据的统计属性和算法及其参数定义的试探方法生成模式。 这称为“定型  ”模型。  
+ 处理模型时，存储在挖掘结构缓存中的定型数据用于基于数据的统计属性和算法及其参数定义的试探方法生成模式。 这称为“定型 ** ”模型。  
   
- 定型的结果是一组汇总数据，包含在“模型内容”  中，它描述找到的模式并提供生成预测的规则。 有关详细信息，请参阅[挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)。  
+ 定型的结果是一组汇总数据，包含在“模型内容” ** 中，它描述找到的模式并提供生成预测的规则。 有关详细信息，请参阅[挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)。  
   
  在有限事例中，还可以将模型的逻辑结构导出到一个文件，该文件根据标准格式（预测建模标记语言 PMML）表示模型公式和数据绑定。 可以将此逻辑结构导入其他使用 PMML 的系统，然后所述的模型就可以用于预测了。 有关详细信息，请参阅 [了解 DMX Select 语句](/sql/dmx/understanding-the-dmx-select-statement)。  
   
 
   
-##  <a name="bkmk_CustomObjects"></a> 自定义数据挖掘对象  
+##  <a name="bkmk_CustomObjects"></a>自定义数据挖掘对象  
  可以在数据挖掘项目的上下文中使用的其他对象（如准确性图表或预测查询）不在解决方案内持久化，但是可以使用 ASSL 编写脚本或使用 AMO 生成。  
   
  此外，您可以通过添加这些自定义对象扩展 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上可用的服务和功能：  
@@ -82,18 +83,18 @@ ms.locfileid: "66084269"
  有关详细信息，请参阅 [多维模型程序集管理](../multidimensional-models/multidimensional-model-assemblies-management.md)。  
   
  **自定义存储过程**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据挖掘支持使用存储过程来处理数据挖掘对象。 您可以创建自己的存储过程来扩展功能，以便更方便地使用预测查询和内容查询返回的数据。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据挖掘支持使用存储过程来处理数据挖掘对象。 您可以创建自己的存储过程来扩展功能，以便更方便地使用预测查询和内容查询返回的数据。  
   
  [定义存储过程](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
  支持将下面的存储过程用于交叉验证中。  
   
- [数据挖掘存储过程（Analysis Services - 数据挖掘）](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
+ [数据挖掘存储过程 &#40;Analysis Services 数据挖掘&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
  此外， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包含很多供数据挖掘内部使用的系统存储过程。 尽管系统存储过程供内部使用，但是您可能发现它们是有用的快捷方式。 Microsoft 保留根据需要更改这些存储过程的权利；因此，对于生产而言，我们建议您使用 DMX、AMO 或 XMLA 创建查询。  
   
  **自定义插件算法**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供一种机制，你可以使用它创建自己的算法，然后将这些算法作为新的数据挖掘服务添加到服务器实例。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供了一种机制，用于创建自己的算法，然后将这些算法作为新的数据挖掘服务添加到服务器实例。  
   
  Analysis Services 使用 COM 接口与插件算法进行通信。 若要了解有关如何实现新算法的详细信息，请参阅 [Plugin Algorithms](plugin-algorithms.md)。  
   
@@ -101,8 +102,8 @@ ms.locfileid: "66084269"
   
 
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [多维模型对象处理](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [数据挖掘扩展插件 (DMX) 参考](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [&#40;DMX&#41; 的数据挖掘扩展插件](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

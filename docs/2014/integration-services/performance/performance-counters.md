@@ -17,13 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 79c9e433a6b5bcf9babee0060fdf028775e0e8a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62889830"
 ---
 # <a name="performance-counters"></a>性能计数器
+  
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 安装一组性能计数器，可用于监视数据流引擎的性能。 例如，可以监视 "Buffers spooled" 计数器，以确定在运行包时数据缓冲区是否正在临时写入磁盘。 此交换会降低性能并指示计算机内存不足。  
   
 > [!NOTE]  
@@ -31,7 +32,7 @@ ms.locfileid: "62889830"
   
  下表介绍了这些性能计数器：  
   
-|性能计数器|Description|  
+|性能计数器|说明|  
 |-------------------------|-----------------|  
 |BLOB bytes read|数据流引擎从所有源中读取的二进制大型对象 (BLOB) 数据的字节数。|  
 |BLOB bytes written|数据流引擎已写入所有目标的 BLOB 数据的字节数。|  
@@ -77,7 +78,7 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 -   support.microsoft.com 上的支持文章 [升级到 Windows Server 2008 后性能监视器中不再提供 SSIS 性能计数器](https://go.microsoft.com/fwlink/?LinkId=235319)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [项目和包的执行](../packages/run-integration-services-ssis-packages.md)  
   
   

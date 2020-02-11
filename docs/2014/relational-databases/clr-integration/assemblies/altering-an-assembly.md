@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 780b64f59143d3bf2b8ef99e3da6d32a1fe160cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874111"
 ---
 # <a name="altering-an-assembly"></a>改变程序集
@@ -30,7 +30,7 @@ ALTER ASSEMBLY SQLCLRTest
 FROM 'C:\MyDBApp\SQLCLRTest.dll'  
 ```  
   
- ALTER ASSEMBLY 不中断当前正在运行且正在使用此程序集的进程；这些进程使用未经更改的程序集继续执行。 ALTER ASSEMBLY 不能用于更改公共语言运行时 (CLR) 函数、聚合函数、存储过程和触发器的签名。 只要未更改签名或属性，就可以向程序集添加新的公共方法，以任何方式修改专用方法以及修改公共方法。 不能使用 ALTER ASSEMBLY 更改本机序列化用户定义类型（包含数据成员或基类）内包含的字段。 不支持所有其他更改。 有关详细信息，请参阅[ALTER ASSEMBLY &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-assembly-transact-sql)。  
+ ALTER ASSEMBLY 不中断当前正在运行且正在使用此程序集的进程；这些进程使用未经更改的程序集继续执行。 ALTER ASSEMBLY 不能用于更改公共语言运行时 (CLR) 函数、聚合函数、存储过程和触发器的签名。 只要未更改签名或属性，就可以向程序集添加新的公共方法，以任何方式修改专用方法以及修改公共方法。 不能使用 ALTER ASSEMBLY 更改本机序列化用户定义类型（包含数据成员或基类）内包含的字段。 不支持所有其他更改。 有关详细信息，请参阅[ALTER ASSEMBLY &#40;transact-sql&#41;](/sql/t-sql/statements/alter-assembly-transact-sql)。  
   
 ## <a name="changing-the-permission-set-of-an-assembly"></a>更改程序集的权限集  
  还可以使用 ALTER ASSEMBLY 语句更改程序集的权限集。 以下语句将 SQLCLRTest 程序集的权限集更改为 `EXTERNAL_ACCESS`。  
@@ -51,10 +51,10 @@ WITH PERMISSION_SET = EXTERNAL_ACCESS
   
  `ADD FILE FROM 'C:\Projects\Point\Point.cs' AS PointSource`  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [管理 CLR 集成程序集](managing-clr-integration-assemblies.md)   
  [创建程序集](creating-an-assembly.md)   
  [删除程序集](dropping-an-assembly.md)   
- [ALTER ASSEMBLY (Transact-SQL)](/sql/t-sql/statements/alter-assembly-transact-sql)  
+ [ALTER ASSEMBLY &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-assembly-transact-sql)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 使用行不支持在 CREATE STATISTICS 语句中的兼容性模式为 90 或更高版本 |Microsoft Docs
+title: 在90或更高版本的兼容模式下，CREATE STATISTICS 语句中不支持 WITH ROWS |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e48602f61c09a8de76e2894a4fa808b2f39f4cbe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66090970"
 ---
 # <a name="with-rows-is-not-supported-in-create-statistics-statements-in-the-compatibility-mode-of-90-or-later"></a>在 90 或更高的兼容模式下，CREATE STATISTICS 语句中不支持 WITH ROWS
@@ -26,10 +26,10 @@ ms.locfileid: "66090970"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="corrective-action"></a>纠正措施  
- 修改通过指定 WITH SAMPLE 包含 WITH ROWS 的 CREATE STATISTICS 语句*数*行，或使用有案可稽的语法指定符合其他选项。 有关详细信息，请参阅主题"CREATE STATISTICS (Transact SQL) 中 SQL Server 联机丛书。  
+ 通过指定带有示例*号*行或指定符合记录语法的其他选项，修改包含行的 CREATE STATISTICS 语句。 有关详细信息，请参阅主题 "SQL Server 联机丛书中的 CREATE STATISTICS （Transact-sql）。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库引擎升级问题](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 升级顾问&#91;新&#93;](sql-server-2014-upgrade-advisor.md)  
+ [SQL Server 2014 升级顾问 &#91;新&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

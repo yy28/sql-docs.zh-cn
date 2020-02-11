@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8b80e11ffdf12037b466531b0d5b10a2b9f3a2e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66090959"
 ---
 # <a name="working-with-upgrade-advisor"></a>使用升级顾问
@@ -31,21 +31,21 @@ ms.locfileid: "66090959"
     > [!IMPORTANT]  
     >  不能分析 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的远程实例。  
   
--   查看分析的结果。  
+-   查看分析结果。  
   
- 升级顾问包含一个分析器和一个查看器。 升级顾问分析向导会分析您选择的组件。 然后，分析器生成有关升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之前必须解决的问题的自定义报表。 可以使用升级顾问报表查看器查看自定义报表。 有关升级顾问分析检测到的详细信息，请参阅[解决升级问题](../../../2014/sql-server/install/resolving-upgrade-issues.md)。  
+ 升级顾问包含一个分析器和一个查看器。 升级顾问分析向导会分析您选择的组件。 然后，分析器生成有关升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之前必须解决的问题的自定义报表。 可以使用升级顾问报表查看器查看自定义报表。 有关升级顾问分析检测到的情况的详细信息，请参阅[解决升级问题](../../../2014/sql-server/install/resolving-upgrade-issues.md)。  
   
  本节中的主题提供了升级顾问功能概述以及有关如何使用升级顾问和升级顾问报表的信息。  
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|Description|  
+|主题|说明|  
 |-----------|-----------------|  
 |[升级顾问概述](../../../2014/sql-server/install/overview-of-upgrade-advisor.md)|概要介绍升级过程、升级顾问分析向导以及升级顾问报表查看器。|  
 |[升级顾问操作指南主题](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)|提供执行升级顾问常用步骤的说明。|  
-|[升级顾问用户界面参考](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)|包含按 F1 键或单击出现的主题**帮助**升级顾问分析向导页上。|  
+|[升级顾问用户界面参考](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)|包含按 F1 键或单击升级顾问分析向导页上的 "**帮助**" 时显示的主题。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [安装升级顾问](../../../2014/sql-server/install/installing-upgrade-advisor.md)   
  [解决升级问题](../../../2014/sql-server/install/resolving-upgrade-issues.md)  
   

@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3c9abd1b891d47f1711db21eec017ec755526e02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087349"
 ---
 # <a name="connect-to-a-data-mining-server"></a>连接到数据挖掘服务器
-  ![连接按钮](media/misc-connection.gif "连接按钮")  
+  ![“连接”按钮](media/misc-connection.gif "“连接”按钮")  
   
- 单击**连接**按钮以选择现有连接，或创建新的连接到的实例[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  
+ 单击 "**连接**" 按钮以选择现有连接，或创建到实例的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]新连接。  
   
  **为什么需要连接到服务器？**  
   
@@ -33,11 +33,11 @@ ms.locfileid: "66087349"
   
 ## <a name="how-to-create-a-new-connection"></a>如何创建新连接  
   
-1.  单击**连接**按钮。  
+1.  单击 "**连接**" 按钮。  
   
-2.  在中**Analysis Services 连接**对话框中，单击**新建**。  
+2.  在 " **Analysis Services 连接**" 对话框中，单击 "**新建**"。  
   
-3.  在中**连接到 Analysis Services**对话框框中，键入服务器名称。  
+3.  在 "**连接到 Analysis Services** " 对话框中，键入服务器名称。  
   
 4.  指定身份验证方法。  
   
@@ -50,39 +50,39 @@ ms.locfileid: "66087349"
   
 7.  键入新连接的友好名称。  
   
-8.  单击**测试连接**以验证该服务器是否可用。  
+8.  单击 "**测试连接**" 以验证服务器是否可用。  
   
 ## <a name="troubleshooting-connections"></a>排除连接故障  
  本节回答了有关与 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的连接的一些常见问题。  
   
- **我收到消息，指出"未找到任何连接。"**  
+ **收到一条消息，显示 "找不到连接"。**  
   
- 如果显示该按钮的下半部分中的文本**无连接**，这意味着你尚未创建连接到[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]数据库，或连接失败。 您可以继续处理来自 Access 或其他数据源的 Excel 中的数据，但如果要创建数据挖掘模型或运行预测查询，则必须拥有活动连接。  
+ 如果按钮下半部分的文本显示 "**无连接**"，则表示尚未创建与[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]数据库的连接或连接失败。 您可以继续处理来自 Access 或其他数据源的 Excel 中的数据，但如果要创建数据挖掘模型或运行预测查询，则必须拥有活动连接。  
   
- **假设我没有使用服务器的权限？**  
+ **假设我无权使用该服务器？**  
   
- 如果您不具有足够的权限在服务器上存储挖掘模型或如果你想要试验数据挖掘而无需保存所做的工作，可以使用表分析工具创建临时数据结构和临时模型。 您仍需要能在服务器上存储临时模型。 让管理员允许使用*会话挖掘模型*在服务器上。  
+ 如果您没有足够的权限在服务器上存储挖掘模型，或者您想要试验数据挖掘而不保存您的工作，则可以使用表分析工具创建临时数据结构和临时模型。 您仍需要能在服务器上存储临时模型。 要求管理员在服务器上启用*会话挖掘模型*。  
   
  如果您想确保保存模型，可以禁用使用临时模型的选项，或可以在数据挖掘客户端中使用向导。 这些向导在服务器上存储所有模型。 您将需要对存储模型的数据库具有管理访问权限，所以，我们建议您让管理员创建一个数据库，该数据库专门用于使用外接程序创建挖掘模型。  
   
- **我的连接; 断开未丢失我的所有工作？**  
+ **我的连接断开；是否我会丢失所做的所有工作？**  
   
- 如果终止与服务器的连接，您的结果和数据将不会丢失，因为它们存储在 Excel 中。 但是，如果您创建了一些临时模型，则在一个较短的时间后这些模型将从服务器中删除。 因此如果暂时失去连接，一段时间模型不会被删除。  
+ 如果终止与服务器的连接，您的结果和数据将不会丢失，因为它们存储在 Excel 中。 但是，如果您创建了一些临时模型，则在一个较短的时间后这些模型将从服务器中删除。 如果暂时失去了连接，则在某些情况下，模型将不会被删除。  
   
  生成的任何数据或结果将不丢失，因为所有报表和表存储在 Excel 中。  
   
 > [!NOTE]  
 >  外接程序与 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 服务器进行通信时，不要断开与服务器或网络的连接。 例如，不要在创建模型或处理数据时断开连接。 在某些情况下，可能会损坏您的数据。  
   
- **我无法连接到在模型中使用 Visio 工具**  
+ **我无法使用 Visio 工具连接到模型**  
   
  Visio 数据挖掘模板无法使用临时挖掘结构和模型。 若要创建某个挖掘模型的关系图，该模型必须存储在服务器上。  
   
- **如何监视连接的使用情况？**  
+ **我如何监视连接的使用情况？**  
   
- [Trace &#40;Excel 数据挖掘客户端&#41;](trace-data-mining-client-for-excel.md)工具创建的外接程序和指定的服务器之间的所有活动的日志。  
+ [&#40;Excel&#41;工具的数据挖掘客户端的跟踪](trace-data-mining-client-for-excel.md)将创建外接程序与指定服务器之间的所有活动的日志。  
   
- 若要启用会话模型的监视，请选择**使用会话模型**选项**跟踪**对话框。  
+ 若要启用会话模型监视，请在 "**跟踪**器" 对话框中选择 "**使用会话模型**" 选项。  
   
  通过跟踪，您可以在创建模型和结构时查看生成的 DMX 和 XMLA 命令。 您还可以查看客户端为在 Excel 中生成结果和报告而发送的查询。  
   
@@ -94,27 +94,27 @@ ms.locfileid: "66087349"
   
  在您在 Excel 数据挖掘客户端中完成某一向导后，模型将默认保存到服务器中，但在每个向导的最后一页上，存在用来使用临时模型的选项。 如果选择此选项，则所创建的数据挖掘结构和模型都将存储在一个临时文件中。 只要 Excel 保持打开状态，您就可浏览、管理和修改结构和模型。 但是，关闭 Excel 后，该结构及其相关模型都将被删除。  
   
- 您可以显式创建临时结构或模型使用**数据挖掘高级查询编辑器**并选择 DMX 模板之一。 添加 `USE SESSION MODELS` 子句可指定对象是临时的。   
+ 还可以通过使用 "**数据挖掘高级查询编辑器**"，并选择其中一个 DMX 模板来显式创建临时结构或模型。 添加 `USE SESSION MODELS` 子句可指定对象是临时的。   
   
 ### <a name="creating-backups-of-mining-models-and-structures"></a>创建挖掘模型和结构的备份  
- 若要创建模型或结构的备份，可以导出使用它[管理模型&#40;SQL Server 数据挖掘外接程序&#41;](manage-models-sql-server-data-mining-add-ins.md)，在 Excel 数据挖掘客户端。  
+ 若要创建模型或结构的备份，你可以在 Excel 数据挖掘客户端中使用 "[管理模型" &#40;SQL Server 数据挖掘外接&#41;程序](manage-models-sql-server-data-mining-add-ins.md)"进行导出。  
   
- 如果您创建了一个临时挖掘模型，该模型通常具有难于理解的名称，例如 Table5_593679_TS_62446。 但是，可以使用[Trace &#40;Excel 数据挖掘客户端&#41;](trace-data-mining-client-for-excel.md)工具，用于发现临时结构和模型创建的表分析工具的名称，然后备份它们使用**管理模型**。  
+ 如果您创建了一个临时挖掘模型，该模型通常具有难于理解的名称，例如 Table5_593679_TS_62446。 但是，您可以使用[跟踪 &#40;Excel&#41;工具的数据挖掘客户端](trace-data-mining-client-for-excel.md)来发现由表分析工具创建的临时结构和模型的名称，然后使用 "**管理模型**" 对其进行备份。  
   
 ##### <a name="identify-and-export-a-temporary-model"></a>标识和导出临时模型  
   
-1.  在中**连接**组的数据挖掘客户端 Excel，请单击**跟踪**。  
+1.  在 Excel 数据挖掘客户端的 "**连接**" 组中，单击 "**跟踪**"。  
   
 2.  查看连接活动日志，并且通过查看列和可预测输出定位模型（举例）。  
   
-     高级的用户：如果您熟悉 DMX 或 XMLA，您可以将语句复制到文件以备今后使用。  
+     高级用户：如果您熟悉 DMX 或 XMLA，则可以将语句复制到文件以供以后使用。  
   
-3.  在您找到临时模型和结构的名称，打开**管理模型**和选择的模型。  
+3.  找到临时模型和结构的名称后，打开 "**管理模型**" 并选择模型。  
   
 4.  单击“导出此挖掘模型”以便在您指定的位置中生成一个脚本文件。  
   
-## <a name="see-also"></a>请参阅  
- [连接到源数据&#40;Excel 数据挖掘客户端&#41;](connect-to-source-data-data-mining-client-for-excel.md)   
- [服务器配置实用程序&#40;Excel 数据挖掘外接程序&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
+## <a name="see-also"></a>另请参阅  
+ [连接到源数据 &#40;Excel 数据挖掘客户端&#41;](connect-to-source-data-data-mining-client-for-excel.md)   
+ [用于 Excel 的数据挖掘外接 &#40;的服务器配置实用工具&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
   
   

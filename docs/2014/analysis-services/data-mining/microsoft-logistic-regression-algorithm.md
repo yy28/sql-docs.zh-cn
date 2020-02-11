@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 14e86ac2dd32f2a3e1384e08aca597794ee4bc71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083959"
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Microsoft 逻辑回归算法
@@ -46,11 +46,11 @@ ms.locfileid: "66083959"
   
  逻辑回归模型的要求如下：  
   
- **单键列** 每个模型都必须包含一个用于唯一标识每条记录的数值列或文本列。 不允许复合键。  
+ **单个键列**每个模型必须包含一个用于唯一标识每条记录的数值列或文本列。 不允许复合键。  
   
- **输入列** 每个模型都必须至少包含一个输入列，该输入列包含用作分析因素的值。 可以根据需要拥有任意多的输入列，但是具体取决于每个列中值的数量，添加额外列会增加定型模型所需的时间。  
+ **输入列**每个模型必须至少包含一个输入列，该输入列包含用作分析因素的值。 可以根据需要拥有任意多的输入列，但是具体取决于每个列中值的数量，添加额外列会增加定型模型所需的时间。  
   
- **至少有一个可预测列** 模型必须至少包含一个可预测列，该预测列可以为任意数据类型，包括连续数值数据。 还可以将可预测列的值视为模型的输入，或者将其指定为仅用于预测。 嵌套表不允许用于可预测列，但是可作为输入使用。  
+ **至少一个可预测列**模型必须包含任何数据类型的至少一个可预测列，包括连续数值数据。 还可以将可预测列的值视为模型的输入，或者将其指定为仅用于预测。 嵌套表不允许用于可预测列，但是可作为输入使用。  
   
  有关逻辑回归模型支持的内容类型和数据类型的详细信息，请参阅 [Microsoft 逻辑回归算法技术参考](microsoft-logistic-regression-algorithm-technical-reference.md)的“要求”部分。  
   
@@ -78,8 +78,8 @@ ms.locfileid: "66083959"
   
 -   不支持使用预测模型标记语言 (PMML) 创建挖掘模型。  
   
-## <a name="see-also"></a>请参阅  
- [逻辑回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-logistic-regression-models.md)   
+## <a name="see-also"></a>另请参阅  
+ [&#40;Analysis Services 数据挖掘的逻辑回归模型的挖掘模型内容&#41;](mining-model-content-for-logistic-regression-models.md)   
  [Microsoft 逻辑回归算法技术参考](microsoft-logistic-regression-algorithm-technical-reference.md)   
  [逻辑回归模型查询示例](logistic-regression-model-query-examples.md)  
   

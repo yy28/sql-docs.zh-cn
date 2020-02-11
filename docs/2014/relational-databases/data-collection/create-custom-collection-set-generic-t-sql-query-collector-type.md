@@ -1,5 +1,5 @@
 ---
-title: 创建自定义收集组使用一般 T-SQL 查询收集器类型 (Transact SQL) |Microsoft Docs
+title: 创建使用一般 T-sql 查询收集器类型的自定义收集组（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5c131f413c8b7be0dad8432c5711b19e74253aab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873333"
 ---
 # <a name="create-a-custom-collection-set-that-uses-the-generic-t-sql-query-collector-type-transact-sql"></a>创建使用一般 T-SQL 查询收集器类型的自定义收集组 (Transact-SQL)
@@ -160,7 +160,7 @@ SELECT @collection_item_id;
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据收集器存储过程 (Transact-SQL)](/sql/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql)   
  [管理计划](../../ssms/agent/manage-schedules.md)   
  [启动或停止收集组](start-or-stop-a-collection-set.md)  

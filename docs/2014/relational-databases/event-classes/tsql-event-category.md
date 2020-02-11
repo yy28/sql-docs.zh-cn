@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cfa8ca59787be1fd6d33c392bfa7333075e38936
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62746081"
 ---
 # <a name="tsql-event-category"></a>TSQL 事件类别
@@ -28,7 +28,7 @@ ms.locfileid: "62746081"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|Description|  
+|主题|说明|  
 |-----------|-----------------|  
 |[Exec Prepared SQL 事件类](exec-prepared-sql-event-class.md)|指示 SqlClient、ODBC、OLE DB 或 DB-Library 执行了已准备好的一条或多条 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。|  
 |[Prepare SQL 事件类](prepare-sql-event-class.md)|指示 SqlClient、ODBC、OLE DB 或 DB-Library 已准备好了一条或多条要使用的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。|  
@@ -40,7 +40,7 @@ ms.locfileid: "62746081"
 |[Unprepare SQL 事件类](unprepare-sql-event-class.md)|指示 SqlClient、ODBC、OLE DB 或 DB-Library 删除了已准备好的一条或多条 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。|  
 |[XQuery Static Type 事件类](xquery-static-type-event-class.md)|在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行 XQuery 表达式时出现。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Transact-SQL 引用（数据库引擎）](/sql/t-sql/language-reference)  
   
   

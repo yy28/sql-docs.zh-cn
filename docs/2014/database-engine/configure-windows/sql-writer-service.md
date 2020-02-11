@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7204d2f20c7c299a2bcefcc66409182c8846affc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755431"
 ---
 # <a name="sql-writer-service"></a>SQL 编写器服务
@@ -33,7 +33,7 @@ ms.locfileid: "62755431"
   
  SQL 编写器服务是自动安装的。 在卷影复制服务 (VSS) 应用程序请求备份或还原时，必须运行该服务。 若要配置该服务，请使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 服务小程序。 SQL 编写器服务可安装在所有操作系统上。  
   
-## <a name="purpose"></a>用途  
+## <a name="purpose"></a>目的  
  在运行时， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 会锁定数据文件并具有独占访问权限。 如果 SQL 编写器服务没有运行，Windows 中运行的备份程序将不能访问数据文件，而且必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 才能进行备份。  
   
  使用 SQL 编写器服务，可以使 Windows 备份程序在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 运行时复制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据文件。  

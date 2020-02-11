@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ed3a5a48a4c327decc75e37142c77d7d4ee52f1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914653"
 ---
-# <a name="mssqlserver2534"></a>MSSQLSERVER_2534
+# <a name="mssqlserver_2534"></a>MSSQLSERVER_2534
     
 ## <a name="details"></a>详细信息  
   
@@ -30,9 +30,9 @@ ms.locfileid: "62914653"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC_PAGE_ALLOCATED_TO_OTHER_OBJECT|  
-|消息正文|表错误：页 P_ID 的页头指示它分配给对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID （类型为 TYPE），另一个对象分配。|  
+|消息正文|表错误: 页 P_ID 的页头表明它已分配给对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID（类型为 TYPE），但是实际上分配给了另一对象。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  页头包含分配单元 ID *A_ID*，但该分配单元的索引分配映射 (IAM) 页都未分配该页。 因此，页头包含错误的分配单元 ID，而且该页还将具有一个匹配的 MSSQLServer_2533 错误，对应于实际分配该页的分配单元 ID。  
   
 ## <a name="user-action"></a>用户操作  

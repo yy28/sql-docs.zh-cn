@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bbcea29ad75eb84b9c8099e5998e307ecbd7943c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62895026"
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>使用脚本任务查询 Active Directory
@@ -30,20 +30,20 @@ ms.locfileid: "62895026"
 > [!NOTE]  
 >  如果希望创建可更方便地重用于多个包的任务，请考虑以此脚本任务示例中的代码为基础，创建自定义任务。 有关详细信息，请参阅 [开发自定义任务](../extending-packages-custom-objects/task/developing-a-custom-task.md)。  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>说明  
  下面的示例基于 `email` 变量的值（包含雇员的电子邮件地址），从 Active Directory 检索雇员的姓名、职务和电话号码。 包中的优先约束可使用检索到的信息，例如基于雇员的职务来确定发送具有低优先级的电子邮件消息，还是具有高优先级的页。  
   
 #### <a name="to-configure-this-script-task-example"></a>配置此脚本任务示例  
   
 1.  创建三个字符串变量：`email`、`name` 和 `title`。 输入一个有效的企业电子邮件地址作为 `email` 变量的值。  
   
-2.  上**脚本**页**脚本任务编辑器**，将添加`email`变量`ReadOnlyVariables`属性。  
+2.  在 "**脚本任务编辑器**" 的 "**脚本**" 页中`email` ，将变量`ReadOnlyVariables`添加到属性中。  
   
 3.  将 `name` 和 `title` 变量添加到 `ReadWriteVariables` 属性中。  
   
 4.  在脚本项目中，添加对 `System.DirectoryServices` 命名空间的引用。  
   
-5.  . 在您的代码中，使用 `Imports` 语句导入 `DirectoryServices` 命名空间。  
+5.  。 在您的代码中，使用 `Imports` 语句导入 `DirectoryServices` 命名空间。  
   
 > [!NOTE]  
 >  若要成功运行此脚本，您的企业必须在其网络中使用 Active Directory，并在其中存储此示例使用的雇员信息。  
@@ -110,6 +110,6 @@ public void Main()
   
 -   social.technet.microsoft.com 上的技术文章，[在 SSIS 中处理 Active Directory 信息](https://go.microsoft.com/fwlink/?LinkId=199588)。  
   
-![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![Integration Services 图标（小）](../media/dts-16.gif "集成服务图标（小）")**保持与 Integration Services 最**新  <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
   

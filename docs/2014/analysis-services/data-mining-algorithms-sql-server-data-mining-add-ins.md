@@ -1,5 +1,5 @@
 ---
-title: 数据挖掘算法 （SQL Server 数据挖掘外接程序） |Microsoft Docs
+title: 数据挖掘算法（SQL Server 数据挖掘外接程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6e0bf6c0c1126dff29107636e0956d92d4b314a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086510"
 ---
 # <a name="data-mining-algorithms-sql-server-data-mining-add-ins"></a>数据挖掘算法（SQL Server 数据挖掘外接程序）
@@ -35,7 +35,7 @@ ms.locfileid: "66086510"
   
 ## <a name="algorithms"></a>算法  
   
-|计算机学习方法|工作方式|  
+|计算机学习方法|工作原理|  
 |-----------------------------|------------------|  
 |Microsoft 关联规则算法|了解哪些产品一起被购买或哪些事件一起发生，并使用该模型生成一些建议。<br /><br /> [https://msdn.microsoft.com/library/ms174916.aspx](https://msdn.microsoft.com/library/ms174916.aspx)|  
 |Microsoft 聚类分析算法|定义市场细分，自动将相关客户归入一组，或在数据中查找关系以供进一步挖掘时使用。<br /><br /> [https://msdn.microsoft.com/library/ms174879.aspx](https://msdn.microsoft.com/library/ms174879.aspx)|  
@@ -46,10 +46,10 @@ ms.locfileid: "66086510"
 |Microsoft 神经网络算法|查找多个输入以及甚至多个输出之间隐藏的关系。 用于探索或预测。<br /><br /> [https://msdn.microsoft.com/library/ms174941.aspx](https://msdn.microsoft.com/library/ms174941.aspx)|  
 |Microsoft 时序算法|使用历史数据来预测将来的值。<br /><br /> [https://msdn.microsoft.com/library/ms174923.aspx](https://msdn.microsoft.com/library/ms174923.aspx)|  
   
-## <a name="advanced-options"></a>“高级选项”  
+## <a name="advanced-options"></a>高级选项  
  使用 Excel 数据挖掘客户端时，您可以选择创建自己的数据挖掘结构和模型，或优化算法的参数。  
   
- [算法参数&#40;SQL Server 数据挖掘外接程序&#41;](algorithm-parameters-sql-server-data-mining-add-ins.md)  
+ [SQL Server 数据挖掘外接程序的算法参数 &#40;&#41;](algorithm-parameters-sql-server-data-mining-add-ins.md)  
   
  使用这些高级选项可以两种方式来自定义您的模型：  
   
@@ -57,8 +57,8 @@ ms.locfileid: "66086510"
   
 -   在 **“数据挖掘客户端”** 中，在启动向导后，单击 **“参数”**。  
   
-## <a name="see-also"></a>请参阅  
- [查询&#40;SQL Server 数据挖掘外接程序&#41;](query-sql-server-data-mining-add-ins.md)   
- [高级建模&#40;Excel 数据挖掘外接程序&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)  
+## <a name="see-also"></a>另请参阅  
+ [查询 &#40;SQL Server 数据挖掘外接程序&#41;](query-sql-server-data-mining-add-ins.md)   
+ [&#40;Excel 数据挖掘外接程序的高级建模&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)  
   
   

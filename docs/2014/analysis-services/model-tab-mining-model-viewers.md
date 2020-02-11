@@ -1,5 +1,5 @@
 ---
-title: 模型选项卡 （挖掘模型查看器） |Microsoft Docs
+title: "\"模型\" 选项卡（挖掘模型查看器） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05c0a25ceded07264e4dbe10467e9dc6f093f6c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077623"
 ---
 # <a name="model-tab-mining-model-viewers"></a>“模型”选项卡（挖掘模型查看器）
@@ -24,7 +24,7 @@ ms.locfileid: "66077623"
   
  使用此时序模型视图可提取有关时序分析的有用信息，包括图形的公式、ARIMA 术语和系数。  
   
- **有关详细信息：** [Microsoft 时序算法](data-mining/microsoft-time-series-algorithm.md)，[使用 Microsoft 时序查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)， [Microsoft 时序算法](data-mining/microsoft-time-series-algorithm.md)  
+ **有关详细信息，请查看** [microsoft 时序算法](data-mining/microsoft-time-series-algorithm.md)、[使用 Microsoft 时序查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)、 [microsoft 时序算法](data-mining/microsoft-time-series-algorithm.md)  
   
 ## <a name="options"></a>选项  
  **刷新查看器内容**  
@@ -33,7 +33,7 @@ ms.locfileid: "66077623"
  **挖掘模型**  
  选择要查看的挖掘模型。 挖掘模型将在其关联的查看器中打开。  
   
- **Viewer**  
+ **查看器**  
  选择用于浏览所选挖掘模型的查看器。 可以对此模型类型使用自定义查看器，也可以使用 **“Microsoft 一般内容树查看器”** 。 还可以使用插件查看器（如果有）。  
   
  **放大**  
@@ -69,9 +69,9 @@ ms.locfileid: "66077623"
  **显示级别**  
  更改树中显示的级别数。  
   
-## <a name="see-also"></a>请参阅  
- [数据挖掘算法 &#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [挖掘模型查看器（数据挖掘模型设计器）](mining-model-viewers-data-mining-model-designer.md)   
+## <a name="see-also"></a>另请参阅  
+ [数据挖掘算法 &#40;Analysis Services 数据挖掘&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [挖掘模型查看器 &#40;数据挖掘模型设计器&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [数据挖掘模型查看器](data-mining/data-mining-model-viewers.md)  
   
   

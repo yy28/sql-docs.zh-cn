@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 52781de1cd4b6309f3ebeb9a2c59ae85b0b32dbd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754588"
 ---
 # <a name="pause-or-resume-a-database-mirroring-session-sql-server"></a>暂停或恢复数据库镜像会话 (SQL Server)
@@ -32,13 +32,13 @@ ms.locfileid: "62754588"
   
      [安全性](#Security)  
   
--   **若要替换此文本，请使用：**  
+-   **若要 ReplaceThisText，请使用：**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **跟进：** [暂停或恢复数据库镜像之后](#FollowUp)  
+-   **跟进：**  [暂停或恢复数据库镜像之后](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  您可以随时挂起数据库镜像会话，这可能提高瓶颈期间的性能，之后您可以随时恢复挂起的会话。  
@@ -46,9 +46,9 @@ ms.locfileid: "62754588"
 > [!CAUTION]  
 >  在强制服务后，当原始的主体服务器重新连接时，镜像将挂起。 在这种情况下，恢复镜像可能会导致原始主体服务器上的数据丢失。 有关管理潜在的数据丢失的信息，请参阅[数据库镜像会话期间的角色切换 (SQL Server)](role-switching-during-a-database-mirroring-session-sql-server.md)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要对数据库拥有 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -60,15 +60,15 @@ ms.locfileid: "62754588"
   
 2.  展开 **“数据库”** 并选择数据库。  
   
-3.  右键单击数据库，选择“任务”  ，再单击“镜像”  。 这样便可打开 **“数据库属性”** 对话框的 **“镜像”** 页。  
+3.  右键单击数据库，选择 **“任务”** ，再单击 **“镜像”** 。 这样便可打开 **“数据库属性”** 对话框的 **“镜像”** 页。  
   
-4.  若要暂停会话，请单击 **“暂停”** 。  
+4.  若要暂停会话，请单击 **“暂停”**。  
   
-     此时，将显示一个提示，要求您确认；如果单击 **“是”** ，则会话将暂停，并且该按钮改为 **“恢复”** 。  
+     此时，将显示一个提示，要求您确认；如果单击 **“是”**，则会话将暂停，并且该按钮改为 **“恢复”**。  
   
      有关暂停会话的影响的详细信息，请参阅[暂停和恢复数据库镜像 (SQL Server)](database-mirroring-sql-server.md)。  
   
-5.  若要恢复会话，请单击 **“恢复”** 。  
+5.  若要恢复会话，请单击 **“恢复”**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -108,7 +108,7 @@ ms.locfileid: "62754588"
     ALTER DATABASE AdventureWorks2012 SET PARTNER RESUME;  
     ```  
   
-##  <a name="FollowUp"></a> 跟进：暂停或恢复数据库镜像之后  
+##  <a name="FollowUp"></a>跟进：暂停或恢复数据库镜像之后  
   
 -   **暂停数据库镜像之后**  
   
@@ -122,7 +122,7 @@ ms.locfileid: "62754588"
   
 -   [删除数据库镜像 (SQL Server)](remove-database-mirroring-sql-server.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库镜像 (SQL Server)](database-mirroring-sql-server.md)  
   
   

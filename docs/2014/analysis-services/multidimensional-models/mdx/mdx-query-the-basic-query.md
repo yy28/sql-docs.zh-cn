@@ -1,5 +1,5 @@
 ---
-title: 基本 MDX 查询 (MDX) |Microsoft Docs
+title: 基本 MDX 查询（MDX） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bcd55827377b72040dd142ed1f2fd094c9bd2651
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073878"
 ---
 # <a name="the-basic-mdx-query-mdx"></a>基本 MDX 查询 (MDX)
-  基本的多维表达式 (MDX) 查询是在 MDX 中 SELECT 语句的使用频率最高查询。 通过了解 MDX SELECT 语句如何指定结果集、SELECT 语句的语法是怎样的以及如何使用 SELECT 语句创建简单查询，您将切实理解如何使用 MDX 来查询多维数据。  
+  基本多维表达式（MDX）查询是 SELECT 语句-MDX 中最常用的查询。 通过了解 MDX SELECT 语句如何指定结果集、SELECT 语句的语法是怎样的以及如何使用 SELECT 语句创建简单查询，您将切实理解如何使用 MDX 来查询多维数据。  
   
 ## <a name="specifying-a-result-set"></a>指定结果集  
  在 MDX 中，SELECT 语句可指定一个结果集，其中包含从多维数据集中返回的多维数据子集。 若要指定结果集，MDX 查询必须包含以下信息：  
@@ -65,7 +65,7 @@ FROM <SELECT subcube clause>
 ### <a name="comparing-the-syntax-of-the-mdx-select-statement-to-sql"></a>比较 MDX SELECT 语句的语法与 SQL 语法  
  MDX SELECT 语句所用的语法格式与 SQL 语法相似。 但也有几个基本差异：  
   
--   MDX 语法通过用大括号（{ 和 } 字符）括住元组或成员来区分集。有关成员、元组和集语法的详细信息，请参阅[使用成员、元组和集 (MDX)](working-with-members-tuples-and-sets-mdx.md)。  
+-   MDX 语法通过用大括号（{和} 字符）括住元组或成员来区分集。有关成员、元组和集语法的详细信息，请参阅使用[成员、元组和集 &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)。  
   
 -   MDX 查询在 SELECT 语句中可有 0、1、2 或最多 128 个查询轴。 每个轴具有完全相同的行为方式，这一点与 SQL 不同，后者的查询行为中，行和列之间存在显着的差异。  
   
@@ -108,8 +108,8 @@ WHERE ( [Sales Territory].[Southwest] )
   
  有关更多详细示例，请参阅[指定查询轴的内容 (MDX)](mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md) 和[指定切片器轴的内容 (MDX)](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)。  
   
-## <a name="see-also"></a>请参阅  
- [MDX 中的重要概念 (Analysis Services)](../key-concepts-in-mdx-analysis-services.md)   
- [SELECT 语句 (MDX)](/sql/mdx/mdx-data-manipulation-select)  
+## <a name="see-also"></a>另请参阅  
+ [MDX &#40;Analysis Services 中的关键概念&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [SELECT 语句 &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)  
   
   

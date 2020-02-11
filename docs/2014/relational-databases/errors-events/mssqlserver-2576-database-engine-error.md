@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 26e5e3cbf02191edd84b26505120ee2470e65d24
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62868929"
 ---
-# <a name="mssqlserver2576"></a>MSSQLSERVER_2576
+# <a name="mssqlserver_2576"></a>MSSQLSERVER_2576
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62868929"
 |符号名称|DBCC_IAM_PARENT_PAGE_WAS_NOT_SEEN|  
 |消息正文|位于对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID（类型为 TYPE）中的上一个指针 IAM 页 P_ID2 指向了索引分配映射 (IAM) 页 P_ID1 ，但在扫描过程中检测不到该页。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  找不到索引分配映射 (IAM) 页或元数据条目，尽管对该页的引用作为上一页链接存在于 IAM 链中另一 IAM 页上。 如果 *P_ID1* 页是 (0:0)，则 IAM 页 *P_ID2* 是 IAM 链的开头，而且缺少 IAM 链的元数据条目。  
   
 ## <a name="user-action"></a>用户操作  

@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0259f14bb814fd4157af95e4ce92f462d1fab68a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62877264"
 ---
 # <a name="back-up-and-restore-of-system-databases-sql-server"></a>系统数据库的备份和还原 (SQL Server)
@@ -28,20 +28,20 @@ ms.locfileid: "62877264"
   
  下表概述了所有的系统数据库。  
   
-|系统数据库|Description|是否需要备份？|恢复模式|注释|  
+|系统数据库|说明|是否需要备份？|恢复模式|注释|  
 |---------------------|-----------------|---------------------------|--------------------|--------------|  
-|[master](../databases/master-database.md)|记录 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统的所有系统级信息的数据库。|是|Simple|必须经常备份 **master** ，以便根据业务需要充分保护数据。 建议使用定期备份计划，这样在大量更新之后可以补充更多的备份。|  
-|[model](../databases/model-database.md)|在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上为所有数据库创建的模板。|是|用户可配置<sup>1</sup>|仅在业务需要时备份 **model** ，例如自定义其数据库选项后立即备份。<br /><br /> **最佳做法：** 建议根据需要仅创建“model”的完整数据库备份  。 由于 **model** 较小而且很少更改，因此无需备份日志。|  
+|[master](../databases/master-database.md)|记录 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统的所有系统级信息的数据库。|是|简单|必须经常备份 **master** ，以便根据业务需要充分保护数据。 建议使用定期备份计划，这样在大量更新之后可以补充更多的备份。|  
+|[model](../databases/model-database.md)|在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上为所有数据库创建的模板。|是|用户可配置<sup>1</sup>|仅在业务需要时备份 **model** ，例如自定义其数据库选项后立即备份。<br /><br /> **最佳方法：** 建议您仅根据需要创建 **model**的完整数据库备份。 由于 **model** 较小而且很少更改，因此无需备份日志。|  
 |[msdb](../databases/msdb-database.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理用来安排警报和作业以及记录操作员信息的数据库。 **msdb** 还包含历史记录表，例如备份和还原历史记录表。|是|简单（默认值）|更新时备份 **msdb** 。|  
-|[Resource](../databases/resource-database.md) (RDB)|包含附带的所有系统对象副本的只读数据库 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|否|-|**Resource** 数据库位于 mssqlsystemresource.mdf 文件中，该文件仅包含代码。 因此， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不能备份 **Resource** 数据库。<br /><br /> 注意：可以通过将该文件作为二进制 (.exe) 文件，而不是数据库文件在 mssqlsystemresource.mdf 文件上执行基于文件的备份或基于磁盘的备份。 但是不能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还原这些备份。 只能手动还原 mssqlsystemresource.mdf 的备份副本，并且必须谨慎，不要使用过时版本或可能不安全的版本覆盖当前的 **Resource** 数据库。|  
-|[tempdb](../databases/tempdb-database.md)|用于保存临时或中间结果集的工作空间。 每次启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时都会重新创建此数据库。 服务器实例关闭时，将永久删除 **tempdb** 中的所有数据。|否|Simple|无法备份 **tempdb** 系统数据库。|  
-|[配置分发](../replication/configure-distribution.md)|只有将服务器配置为复制分发服务器时才存在此数据库。 此数据库存储元数据、各种复制的历史记录数据以及用于事务复制的事务。|是|Simple|有关何时备份 **distribution** 数据库的信息，请参阅 [备份和还原复制的数据库](../replication/administration/back-up-and-restore-replicated-databases.md)。|  
+|[Resource](../databases/resource-database.md) (RDB)|包含附带的所有系统对象副本的只读数据库 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|否|-|**Resource** 数据库位于 mssqlsystemresource.mdf 文件中，该文件仅包含代码。 因此， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不能备份 **Resource** 数据库。<br /><br /> 注意：通过将 mssqlsystemresource.mdf 文件作为二进制 (.exe) 文件而不是作为数据库文件处理，可以对该文件执行基于文件的备份或基于磁盘的备份。 但是不能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还原这些备份。 只能手动还原 mssqlsystemresource.mdf 的备份副本，并且必须谨慎，不要使用过时版本或可能不安全的版本覆盖当前的 **Resource** 数据库。|  
+|[tempdb](../databases/tempdb-database.md)|用于保存临时或中间结果集的工作空间。 每次启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时都会重新创建此数据库。 服务器实例关闭时，将永久删除 **tempdb** 中的所有数据。|否|简单|无法备份 **tempdb** 系统数据库。|  
+|[配置分发](../replication/configure-distribution.md)|只有将服务器配置为复制分发服务器时才存在此数据库。 此数据库存储元数据、各种复制的历史记录数据以及用于事务复制的事务。|是|简单|有关何时备份 **distribution** 数据库的信息，请参阅 [备份和还原复制的数据库](../replication/administration/back-up-and-restore-replicated-databases.md)。|  
   
- <sup>1</sup>若要了解模型的当前恢复模式，请参阅[查看或更改数据库的恢复模式&#40;SQL Server&#41; ](view-or-change-the-recovery-model-of-a-database-sql-server.md)或[sys.databases &#40;-&#41; ](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
+ <sup>1</sup>若要了解模型的当前恢复模式，请参阅[查看或更改数据库的恢复模式 &#40;SQL Server&#41;](view-or-change-the-recovery-model-of-a-database-sql-server.md)或[sys.databases &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)。  
   
 ## <a name="limitations-on-restoring-system-databases"></a>对还原系统数据库的限制  
   
--   只能从在服务器实例当前运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本上创建的备份中还原系统数据库。 例如，若要还原系统数据库运行的服务器实例上[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SP1。  
+-   只能从在服务器实例当前运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本上创建的备份中还原系统数据库。 例如，若要还原在[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 上运行的服务器实例上的系统数据库。  
   
 -   若要还原任何数据库，必须运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 只有在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] master **数据库可供访问且至少部分可用时，才能启动** 实例。 如果 **master** 数据库不可用，则可以通过下列两种方式之一将该数据库返回到可用状态：  
   
@@ -70,7 +70,7 @@ ms.locfileid: "62877264"
   
 -   [移动系统数据库](../databases/move-system-databases.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [分发数据库](../../relational-databases/replication/distribution-database.md)   
  [master 数据库](../databases/master-database.md)   
  [msdb 数据库](../databases/msdb-database.md)   

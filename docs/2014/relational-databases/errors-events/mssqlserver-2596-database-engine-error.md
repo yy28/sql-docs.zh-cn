@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 21209de55bc010c2c85285f4cbed7305c6755f4c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914364"
 ---
-# <a name="mssqlserver2596"></a>MSSQLSERVER_2596
+# <a name="mssqlserver_2596"></a>MSSQLSERVER_2596
     
 ## <a name="details"></a>详细信息  
   
@@ -32,13 +32,13 @@ ms.locfileid: "62914364"
 |符号名称|DBCC_DATABASE_IN_READ_ONLY_MODE|  
 |消息正文|未处理修复语句。 该数据库不能处于只读模式。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  此消息指示数据库处于只读模式。 当数据库处于只读模式时不能进行修复。  
   
 ## <a name="user-action"></a>用户操作  
  使用 ALTER DATABASE 设置要读写的数据库，然后重新运行 DBCC 命令。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)  
   
   

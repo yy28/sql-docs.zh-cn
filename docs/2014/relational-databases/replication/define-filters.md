@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7b82b3450727d36a36186453e366625ebecbde2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721390"
 ---
 # <a name="define-filters"></a>定义筛选器
@@ -26,15 +26,15 @@ ms.locfileid: "62721390"
   
 ## <a name="options"></a>选项  
  **“运算符”**  
- 为筛选器选择一个运算符，例如 **“小于或等于”**。  
+ 为筛选器选择一个运算符，例如 **“小于或等于”** 。  
   
- **ReplTest1**  
+ **值**  
  为筛选器输入一个值。 大多数运算符只需要在第一个 **“值”** 列中输入值，但 **“介于”** 和 **“不介于”** 运算符需要在两个 **“值”** 列中都输入值。  
   
  **Clear**  
  单击此按钮可以清除先前定义的所有筛选器。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Microsoft 复制冲突查看器（合并复制）](microsoft-replication-conflict-viewer-merge-replication.md)   
  [Microsoft 复制冲突查看器（事务复制）](microsoft-replication-conflict-viewer-transactional-replication.md)  
   

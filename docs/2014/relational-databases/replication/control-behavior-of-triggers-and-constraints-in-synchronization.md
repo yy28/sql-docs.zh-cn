@@ -1,5 +1,5 @@
 ---
-title: 控制同步 （复制 TRANSACT-SQL 编程） 期间触发器和约束的行为 |Microsoft Docs
+title: 控制同步期间触发器和约束的行为（复制 Transact-sql 编程） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 26d9a2431b91c1dc081345a06e7fe5a7533cbaa2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721517"
 ---
 # <a name="control-the-behavior-of-triggers-and-constraints-during-synchronization-replication-transact-sql-programming"></a>控制同步期间触发器和约束的行为（复制 Transact-SQL 编程）
@@ -40,7 +40,7 @@ ms.locfileid: "62721517"
   
 1.  创建新 CHECK 或 FOREIGN KEY 约束时，请在 [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql) 的约束定义中指定 CHECK NOT FOR REPLICATION 选项。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建表（数据库引擎）](../tables/create-tables-database-engine.md)  
   
   

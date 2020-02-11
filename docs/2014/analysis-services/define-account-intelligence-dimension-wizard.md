@@ -1,5 +1,5 @@
 ---
-title: 定义帐户智能 （维度向导） |Microsoft Docs
+title: 定义帐户智能（维度向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,40 +13,40 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e7bbc2b890c61e2864aa727f42276f01c87e94a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082163"
 ---
 # <a name="define-account-intelligence-dimension-wizard"></a>定义帐户智能（维度向导）
   可以使用 **“定义帐户智能”** 页，将 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例中定义的帐户类型映射到与维度中的 **“帐户类型”** 属性类型关联的维度属性中定义的帐户类型。  
   
 > [!NOTE]  
->  仅当你在“选择维度类型”  页中选择“标准维度”  以及在“指定维度类型”  页上将维度属性映射到“帐户类型”  属性类型时，才会显示此页。  
+>  仅当你在“选择维度类型”**** 页中选择“标准维度”**** 以及在“指定维度类型”**** 页上将维度属性映射到“帐户类型”**** 属性类型时，才会显示此页。  
   
 ## <a name="options"></a>选项  
  **源表帐户类型**  
- 显示分配给“指定维度键和类型”  页中“帐户类型”  属性类型的维度属性中包含的值。  
+ 显示分配给“指定维度键和类型”**** 页中“帐户类型”**** 属性类型的维度属性中包含的值。  
   
  **内置帐户类型**  
  选择在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例中定义的帐户类型，该帐户类型将映射到源表中的帐户类型。  
   
  下表列出了在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例中定义的帐户类型：  
   
-|ReplTest1|Description|  
+|值|说明|  
 |-----------|-----------------|  
 |**资产**|在特定时间拥有的物品的价值。|  
-|**平衡**|在特定时间某物的计数。|  
+|**Balance**|在特定时间某物的计数。|  
 |**费用**|所花费的价值。|  
 |**流**|事物的增量计数。|  
-|**收入**|收到的价值。|  
+|**帐**|收到的价值。|  
 |**负债**|在特定时间所拖欠的价值。|  
 |**统计**|某事物的计算比率，或者未聚合的某事物的计数。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [维度向导的 F1 帮助](dimension-wizard-f1-help.md)   
- [维度&#40;Analysis Services-多维数据&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [Analysis Services 多维数据 &#40;维度&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [多维模型中的维度](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

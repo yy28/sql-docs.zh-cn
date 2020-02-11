@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3bf7682ce42422efb0e47e4272e53933eba92a4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081562"
 ---
 # <a name="dmx-templates"></a>DMX 模板
@@ -22,15 +22,15 @@ ms.locfileid: "66081562"
   
 ## <a name="using-the-templates"></a>使用模板  
   
-1.  数据挖掘 Excel 客户端中，单击**查询**。  
+1.  在 Excel 数据挖掘客户端中，单击 "**查询**"。  
   
-2.  在向导上**启动**页上，单击**下一步**。  
+2.  在向导的 "**开始**" 页上，单击 "**下一步**"。  
   
-3.  在页上，**选择模型**，单击**高级**。  
+3.  在该页上，**选择 "模型**"，然后单击 "**高级**"。  
   
-     **提示：** 如果要针对模型创建预测查询，您可以首先，选择该模型，然后单击**高级**、 预先填充该模板使用的模型名称。  
+     **提示：** 如果要在模型中创建预测查询，则可以先选择该模型，然后单击 "**高级**"，使用模型名称预填充模板。  
   
-4.  在中**数据挖掘高级查询编辑器**，单击**DMX 模板**，然后选择一个模板。  
+4.  在 "**数据挖掘高级查询编辑器**" 中，单击 " **DMX 模板**"，然后选择一个模板。  
   
 5.  按 Enter 将模板加载到“DMX 查询”窗格中。  
   
@@ -38,16 +38,16 @@ ms.locfileid: "66081562"
   
      对于预测查询，请首先选择输入数据集，然后映射列。  
   
-7.  单击**编辑查询**切换到文本编辑器视图并手动更改查询。  
+7.  单击 "**编辑查询**" 以切换到文本编辑器视图，并手动更改查询。  
   
      但要注意，如果在使用查询编辑器时切换视图，则上一视图中的所有信息都将被清除。 更改视图前，请将 DMX 语句复制并粘贴到一个单独的文件中，保存好您的工作结果。  
   
-8.  单击 **“完成”** 。 在中**选择目标**对话框框中，指定要保存的结果。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+8.  单击“完成”  。 在 "**选择目标**" 对话框中，指定要将结果保存到的位置。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 > [!NOTE]  
->  如果已成功执行语句，发送到服务器的 DMX 语句也会记录在**跟踪**窗口。 有关如何使用跟踪功能的详细信息，请参阅[Trace &#40;Excel 数据挖掘客户端&#41;](trace-data-mining-client-for-excel.md)。  
+>  如果成功执行语句，则发送到服务器的 DMX 语句也将记录在**跟踪**窗口中。 有关如何使用跟踪功能的详细信息，请参阅[trace &#40;Excel 数据挖掘客户端&#41;](trace-data-mining-client-for-excel.md)。  
   
- 有关如何使用数据挖掘高级查询编辑器的详细信息，请参阅[查询&#40;SQL Server 数据挖掘外接程序&#41;](query-sql-server-data-mining-add-ins.md)并[高级数据挖掘查询编辑器](advanced-data-mining-query-editor.md)。  
+ 有关如何使用 "数据挖掘高级查询编辑器" 的详细信息，请参阅[查询 &#40;SQL Server 数据挖掘外接程序 "&#41;](query-sql-server-data-mining-add-ins.md)和[高级数据挖掘查询编辑器](advanced-data-mining-query-editor.md)。  
   
 ## <a name="list-of-dmx-templates"></a>DMX 模板的列表  
  以下 DMX 模板包含在 Excel 数据挖掘客户端中。  
@@ -74,7 +74,7 @@ ms.locfileid: "66081562"
   
  **创建**  
   
- 使用这些模板可生成自定义模型或数据结构。 您并不局限于向导支持的模型-可以使用的实例支持的任何数据挖掘算法[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]您连接到，包括插件算法。  
+ 使用这些模板可生成自定义模型或数据结构。 您不仅限于向导支持的模型，您可以使用您连接到[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的实例所支持的任何数据挖掘算法，包括插件算法。  
   
 -   挖掘模型  
   
@@ -125,7 +125,7 @@ ms.locfileid: "66081562"
 ### <a name="requirements"></a>要求  
  根据使用的模板，您可能需要具有管理权限才能访问 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 服务器和执行查询。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建数据挖掘模型](creating-a-data-mining-model.md)  
   
   

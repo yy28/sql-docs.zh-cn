@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4466ebd24647520c7cbba2bf0baa93a0f60a72bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833806"
 ---
 # <a name="flat-file-connection-manager"></a>平面文件连接管理器
@@ -30,18 +30,18 @@ ms.locfileid: "62833806"
  平面文件连接管理器只能访问一个文件。 若要引用多个文件，请使用多平面文件连接管理器，而不用平面文件连接管理器。 有关详细信息，请参阅 [Multiple Flat Files Connection Manager](multiple-flat-files-connection-manager.md)。  
   
 ## <a name="column-length"></a>列长度  
- 默认情况下，平面文件连接管理器会将字符串列的长度设置为 50 个字符。 在 **“平面文件连接管理器编辑器”** 对话框中，可以计算示例数据，并自动调整这些列的长度，以防止发生数据截断或超过列宽的情况。 而且，除非随后在平面文件源或转换中调整列长度，否则字符串列的列长度将在整个数据流中保持不变。 如果这些字符串列映射到更窄的目标列，用户界面中将显示警告。 此外，在运行时，可能由于数据截断而发生错误。 若要避免错误或截断，可以在平面文件连接管理器、平面文件源或转换中调整列的大小，以便与目标列兼容。 若要修改输出列的长度，则设置`Length`上的输出列的属性**输入和输出属性**选项卡中**高级编辑器**对话框。  
+ 默认情况下，平面文件连接管理器会将字符串列的长度设置为 50 个字符。 在 **“平面文件连接管理器编辑器”** 对话框中，可以计算示例数据，并自动调整这些列的长度，以防止发生数据截断或超过列宽的情况。 而且，除非随后在平面文件源或转换中调整列长度，否则字符串列的列长度将在整个数据流中保持不变。 如果这些字符串列映射到更窄的目标列，用户界面中将显示警告。 此外，在运行时，可能由于数据截断而发生错误。 若要避免错误或截断，可以在平面文件连接管理器、平面文件源或转换中调整列的大小，以便与目标列兼容。 若要修改输出列的长度，请在 " `Length` **高级编辑器**" 对话框中的 "**输入和输出属性**" 选项卡上设置输出列的属性。  
   
  在已添加并配置使用连接管理器的平面文件源之后，如果在平面文件连接管理器中更新列长度，则不必在平面文件源中手动调整输出列的大小。 打开 **“平面文件源”** 对话框时，平面文件源将提供同步列元数据的选项。  
   
 ## <a name="configuration-of-the-flat-file-connection-manager"></a>平面文件连接管理器的配置  
- 在将平面文件连接管理器添加到包中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]创建的连接管理器将解析为平面文件连接在运行时，设置平面文件连接属性，并将添加到的平面文件连接管理器`Connections`包的集合。  
+ 将平面文件连接管理器添加到包时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]会创建将在运行时解析为平面文件连接的连接管理器，设置平面文件连接属性，并将平面文件连接管理器添加到包的`Connections`集合。  
   
  该连接管理器的 `ConnectionManagerType` 属性设置为 `FLATFILE`。  
   
  默认情况下，平面文件连接管理器始终检查未被引号引起的数据中的行分隔符，在找到行分隔符时开始一个新行。 这使连接管理器可以正确地分析具有缺少列字段的行的文件。  
   
- 在某些情况下，禁用此功能可以提高包性能。 可以通过设置平面文件连接管理器属性禁用此功能**AlwaysCheckForRowDelimiters**到`False`。  
+ 在某些情况下，禁用此功能可以提高包性能。 通过将平面文件连接管理器属性**AlwaysCheckForRowDelimiters**设置为`False`，可以禁用此功能。  
   
  可以按下列方式配置平面文件连接管理器：  
   
@@ -63,7 +63,7 @@ ms.locfileid: "62833806"
   
 -   使用表达式指定文件时，在 **“平面文件连接管理器编辑器”** 的 **“文件名”** 框中添加文件路径。  
   
--   将平面文件连接管理器的 **“DelayValidation”** 属性设置为 **“True”** 。  
+-   将平面文件连接管理器的 **“DelayValidation”** 属性设置为 **“True”**。  
   
  使用平面文件连接管理器和平面文件目标，您可以在运行时使用表达式创建文件名。  
   
@@ -71,13 +71,13 @@ ms.locfileid: "62833806"
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   
--   [平面文件连接管理器编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)  
+-   [平面文件连接管理器编辑器 &#40;"常规" 页&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [平面文件连接管理器编辑器（“列”页）](../flat-file-connection-manager-editor-columns-page.md)  
+-   [平面文件连接管理器编辑器 &#40;列 "页&#41;](../flat-file-connection-manager-editor-columns-page.md)  
   
--   [平面文件连接管理器编辑器（“高级”页）](../flat-file-connection-manager-editor-advanced-page.md)  
+-   ["平面文件连接管理器编辑器" &#40;"高级" 页&#41;](../flat-file-connection-manager-editor-advanced-page.md)  
   
--   [平面文件连接管理器编辑器（“预览”页）](../flat-file-connection-manager-editor-preview-page.md)  
+-   [平面文件连接管理器编辑器 &#40;预览页面&#41;](../flat-file-connection-manager-editor-preview-page.md)  
   
  有关以编程方式配置连接管理器的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以编程方式添加连接](../building-packages-programmatically/adding-connections-programmatically.md)项目。  
   

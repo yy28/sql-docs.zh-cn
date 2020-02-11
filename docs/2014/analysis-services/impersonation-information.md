@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9314494230469cca5e8db9926ddf71cb790b96ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080646"
 ---
 # <a name="impersonation-information"></a>模拟信息
@@ -27,11 +27,11 @@ ms.locfileid: "66080646"
  **用户名**  
  键入所选 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象将使用的用户帐户的域和名称。 使用以下格式：  
   
- *\<域名 >* **\\** *\<用户帐户名 >*  
+ **\\** * \<域名* *>\<用户帐户名>*  
   
  只有选定了 **“使用特定名称和密码”** ，才启用此选项。  
   
- **密码**  
+ **权限**  
  键入所选 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象将使用的用户帐户的密码。  
   
  只有选定了 **“使用特定名称和密码”** ，才启用此选项。  
@@ -42,11 +42,11 @@ ms.locfileid: "66080646"
  **使用当前用户的凭据**  
  选择此选项将使 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象使用当前用户的安全凭据来处理外部绑定、DMX OPENQUERY、本地多维数据集和挖掘模型。 处理、ROLAP 查询、远程分区、链接对象以及从目标到源的同步不支持此选项。  
   
- **Inherit**  
+ **从此**  
  选择此选项可以使用服务器管理员通过 `DataSourceImpersonation` 数据库属性设置的、在数据库级别定义的模拟行为。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [多维模型中的数据源](multidimensional-models/data-sources-in-multidimensional-models.md)   
- [支持的数据源&#40;SSAS 多维&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
+ [支持 &#40;SSAS 多维&#41;的数据源](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
   

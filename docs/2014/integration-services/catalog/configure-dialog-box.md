@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9361e08722ae832c9e671cd8b83caa51bddaf4f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62836091"
 ---
 # <a name="configure-dialog-box"></a>配置对话框
@@ -59,7 +59,7 @@ ms.locfileid: "62836091"
  **名称**  
  列出参数名称。  
   
- **“值”**  
+ **值**  
  列出参数值。 单击省略号按钮可更改 **“设置参数值”** 对话框中的值。  
   
  以下是 **“连接管理器”** 选项卡中的选项列表。使用此选项卡可以更改连接管理器属性的值。 将在 SSIS 服务器上为这些属性自动生成参数。  
@@ -73,7 +73,7 @@ ms.locfileid: "62836091"
  **属性名称**  
  列出连接管理器属性的名称。  
   
- **ReplTest1**  
+ **值**  
  列出分配给连接管理器属性的值。 单击省略号按钮可更改 **“设置参数值”** 对话框中的值。 您可以输入一个文字值、映射包含您要使用的值的环境变量，或使用包中的默认值。  
   
 ##  <a name="references"></a> 设置“引用”页上的选项  
@@ -90,7 +90,7 @@ ms.locfileid: "62836091"
  **打开**  
  单击可打开“环境属性”对话框。   
   
- **“添加”**  
+ **添加**  
  单击可添加对环境的引用。 在 **“浏览环境”** 对话框中，单击一个环境，然后单击 **“确定”** 。  
   
  您可以选择 **“SSISDB”** 节点下的任何项目文件夹中包含的环境。  

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b70dbab14424335fe210f5a9b1ddbdbda4f90deb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62889295"
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>群集中的 Integration Services (SSIS)
@@ -33,7 +33,7 @@ ms.locfileid: "62889295"
   
 -   在不同于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的资源组中配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服务时，不能使用客户端计算机上的 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 来管理存储在 msdb 数据库中的包。 在这个双跃点方案中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务不能委托凭据。  
   
--   如果群集内有多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源组包括 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务，则故障转移可能会导致意外的结果。 请考虑下面的方案。 组 1 运行于节点 A 上，其中包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务。组 2 运行于节点 B 上，其中也包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务。组 2 故障转移到节点 A。由于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务是单实例服务，因此尝试在节点 A 上启动 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的另一个实例时将失败。 尝试故障转移到节点 A 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务是否也失败取决于组 2 中 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的配置。 如果 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务配置为影响资源组中的其他服务，那么，由于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务失败，因此正在故障转移的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务也将失败。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务配置为不影响资源组中的其他服务，则该服务将能够故障转移到节点 A。除非组 2 中的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务配置为不影响资源组中的其他服务，否则，当正在故障转移的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务失败时，正在故障转移到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务也将失败。  
+-   如果群集内有多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源组包括 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务，则故障转移可能会导致意外的结果。 请考虑以下场景。 组 1 运行于节点 A 上，其中包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务。组 2 运行于节点 B 上，其中也包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务。组 2 故障转移到节点 A。由于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务是单实例服务，因此尝试在节点 A 上启动 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的另一个实例时将失败。 尝试故障转移到节点 A 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务是否也失败取决于组 2 中 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的配置。 如果 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务配置为影响资源组中的其他服务，那么，由于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务失败，因此正在故障转移的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务也将失败。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务配置为不影响资源组中的其他服务，则该服务将能够故障转移到节点 A。除非组 2 中的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务配置为不影响资源组中的其他服务，否则，当正在故障转移的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务失败时，正在故障转移到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务也将失败。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  有关在群集中配置 Integration Services 服务的分步说明，请参阅 [将 Integration Services 服务配置为群集资源](../configure-the-integration-services-service-as-a-cluster-resource.md)。  

@@ -23,10 +23,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 273e0343fc57af419a349725482047df08619cdd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896319"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>为数据流组件开发用户界面
@@ -35,9 +35,10 @@ ms.locfileid: "62896319"
  如果没有为您的组件提供自定义用户界面，用户仍然可以配置该组件及其自定义属性，方法是使用“高级编辑器”。 您可以根据需要使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.TypeConverter%2A> 的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.UITypeEditor%2A> 和 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100> 属性确保高级编辑器允许用户适当地编辑自定义属性值。 有关详细信息，请参阅[数据流组件的设计时方法](design-time-methods-of-a-data-flow-component.md)中的“创建自定义属性”。  
   
 ## <a name="setting-the-uitypename-property"></a>设置 UITypeName 属性  
- 若要提供自定义用户界面，开发人员必须将 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A> 的 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> 属性设置为实现 <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI> 接口的类的名称。 组件设置此属性时，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 会在该组件在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中编辑时加载并调用自定义用户界面。  
+ 若要提供自定义用户界面，开发人员必须将 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A> 的 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> 属性设置为实现 <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI> 接口的类的名称。 当组件设置此属性时， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]会在设计器中[!INCLUDE[ssIS](../../../includes/ssis-md.md)]编辑组件时加载并调用自定义用户界面。  
   
- <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A> 属性是以逗号分隔的用于标识类型的完全限定名称的字符串。 下面的列表按顺序显示标识类型的元素：  
+ 
+  <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A> 属性是以逗号分隔的用于标识类型的完全限定名称的字符串。 下面的列表按顺序显示标识类型的元素：  
   
 -   类型名称  
   
@@ -45,7 +46,7 @@ ms.locfileid: "62896319"
   
 -   文件版本  
   
--   Culture  
+-   环境  
   
 -   公钥标记  
   
@@ -71,25 +72,29 @@ End Class
 ```  
   
 ## <a name="implementing-the-idtscomponentui-interface"></a>实现 IDtsComponentUI 接口  
- <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI> 接口包含在添加、删除和编辑组件时 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器调用的方法。 组件开发人员可以在其对这些方法的实现中提供代码来与组件的用户进行交互。  
+ 
+  <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI> 接口包含在添加、删除和编辑组件时 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器调用的方法。 组件开发人员可以在其对这些方法的实现中提供代码来与组件的用户进行交互。  
   
  此类通常在独立于组件自身的程序集中实现。 虽然不是必须使用单独的程序集，但是这样做可以使开发人员单独生成和部署组件及用户界面，并保持组件的二进制程序文件较小。  
   
  通过实现自定义用户界面，当组件在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中被编辑时，组件开发人员可以对组件实施更多控制。 例如，组件可以将代码添加到在一个组件最初添加到数据流任务时调用的 <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.New%2A> 方法中，并显示一个用于指导用户完成组件初始配置的向导。  
   
- 创建实现 <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI> 接口的类后，必须添加代码以响应用户与组件的交互。 <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> 方法提供组件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 接口，并在调用 <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.New%2A> 和 <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Edit%2A> 方法之前调用。 此引用应存储在私有成员变量中，然后用于修改组件的元数据。  
+ 创建实现 <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI> 接口的类后，必须添加代码以响应用户与组件的交互。 
+  <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> 方法提供组件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 接口，并在调用 <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.New%2A> 和 <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Edit%2A> 方法之前调用。 此引用应存储在私有成员变量中，然后用于修改组件的元数据。  
   
 ## <a name="modifying-a-component-and-persisting-changes"></a>修改组件并使更改持久化  
- <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 接口作为一个参数提供给 <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> 方法。 此引用应由用户界面代码缓存在成员变量中，然后用于修改组件以响应用户与用户界面的交互。  
+ 
+  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 接口作为一个参数提供给 <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> 方法。 此引用应由用户界面代码缓存在成员变量中，然后用于修改组件以响应用户与用户界面的交互。  
   
  虽然可以通过 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 接口直接修改组件，但是最好使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapper> 方法创建一个 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.Instantiate%2A> 实例。 使用该接口直接编辑组件时，将绕过组件的验证保护。 通过 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapper> 使用组件的设计时实例的优点是可以确保组件可以控制对它的更改。  
   
- <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Edit%2A> 方法的返回值确定对组件的更改是持久的还是被放弃。 此方法返回 `false` 时，所有更改都被放弃；返回 `true` 时，将持久化对组件的更改并将包标记为需要保存。  
+ 
+  <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Edit%2A> 方法的返回值确定对组件的更改是持久的还是被放弃。 此方法返回 `false` 时，所有更改都被放弃；返回 `true` 时，将持久化对组件的更改并将包标记为需要保存。  
   
 ### <a name="using-the-services-of-the-ssis-designer"></a>使用 SSIS 设计器的服务  
- 使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> 方法的 `IServiceProvider` 参数可以访问 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器的以下服务：  
+ 使用 `IServiceProvider` 方法的 <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> 参数可以访问 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器的以下服务：  
   
-|服务|Description|  
+|服务|说明|  
 |-------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Design.IDtsClipboardService>|用于确定组件是否是通过复制/粘贴或剪切/粘贴操作生成的。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionService>|用于访问包中的现有连接或在包中创建新连接。|  
@@ -103,7 +108,8 @@ End Class
  下面的代码示例演示如何将实现 <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI> 接口的自定义用户界面类与用作组件编辑器的 Windows 窗体相集成。  
   
 ### <a name="custom-user-interface-class"></a>自定义用户界面类  
- 下面的代码演示实现 <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI> 接口的类。 <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Edit%2A> 方法创建组件编辑器，然后显示该窗体。 窗体的返回值确定对组件的更改是否是持久的。  
+ 下面的代码演示实现 <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI> 接口的类。 
+  <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Edit%2A> 方法创建组件编辑器，然后显示该窗体。 窗体的返回值确定对组件的更改是否是持久的。  
   
 ```csharp  
 using System;  
@@ -281,9 +287,9 @@ Namespace Microsoft.Samples.SqlServer.Dts
 End Namespace  
 ```  
   
-![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![Integration Services 图标（小）](../../media/dts-16.gif "集成服务图标（小）")**保持与 Integration Services 最**新  <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建自定义数据流组件](creating-a-custom-data-flow-component.md)  
   
   

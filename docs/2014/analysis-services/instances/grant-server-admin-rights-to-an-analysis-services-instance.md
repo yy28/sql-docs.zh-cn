@@ -1,5 +1,5 @@
 ---
-title: 授予服务器管理员权限 (Analysis Services) |Microsoft Docs
+title: 授予服务器管理员权限（Analysis Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac145f4f330b530cc47f4f055a49ad3fdc0063b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079979"
 ---
 # <a name="grant-server-administrator-permissions-analysis-services"></a>授予服务器管理员权限 (Analysis Services)
@@ -27,20 +27,20 @@ ms.locfileid: "66079979"
   
 ## <a name="modify-server-role-membership"></a>修改服务器角色成员身份  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，在对象资源管理器中右键单击实例名称，然后单击“属性”  。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，在对象资源管理器中右键单击实例名称，然后单击“属性”****。  
   
 2.  在 **“选择页”** 窗格中单击 **“安全性”** ，然后单击页底部的 **“添加”** 以将一个或多个 Windows 用户或组添加到服务器角色中。  
   
-     ![在 management studio 中的添加用户对话框](../media/ssas-serveradminadd.png "在 management studio 中的添加用户对话框")  
+     ![Management Studio 中的“添加用户”对话框](../media/ssas-serveradminadd.png "Management Studio 中的“添加用户”对话框")  
   
  安装时，SQL Server 安装程序需要您指定至少一个用户帐户为 Analysis Services 系统管理员。  
   
- 默认情况下，还将为本地 Administrators 组的成员授予 Analysis Server 中的管理权限。 虽然未显式授予本地组 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务管理员角色中的成员身份，但是本地管理员可创建数据库、添加用户和权限以及执行系统管理员允许的任何其他任务。 此行为是可配置的。 它由`BuiltinAdminsAreServerAdmins`服务器属性设置为**true**默认情况下。 您可在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中更改此属性。 有关详细信息，请参阅 [Security Properties](../server-properties/security-properties.md)。  
+ 默认情况下，还将为本地 Administrators 组的成员授予 Analysis Server 中的管理权限。 虽然未显式授予本地组 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务管理员角色中的成员身份，但是本地管理员可创建数据库、添加用户和权限以及执行系统管理员允许的任何其他任务。 此行为是可配置的。 它由`BuiltinAdminsAreServerAdmins`服务器属性确定，该属性默认设置为**true** 。 您可在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中更改此属性。 有关详细信息，请参阅 [Security Properties](../server-properties/security-properties.md)。  
   
  您还可以使用分析管理对象 (AMO) 来管理服务器角色。 有关详细信息，请参阅[使用分析管理对象 (AMO) 进行开发](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)。  
   
-## <a name="see-also"></a>请参阅  
- [授予对对象和操作的访问权限 (Analysis Services)](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   
- [安全角色（Analysis Services - 多维数据）](../multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>另请参阅  
+ [授权对对象和操作的访问 &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   
+ [Analysis Services 多维数据 &#40;安全角色&#41;](../multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   
   

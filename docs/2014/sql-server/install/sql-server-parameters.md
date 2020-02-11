@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e528b94e51238a06a9776e58693c3093f4bfb831
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091880"
 ---
 # <a name="sql-server-parameters"></a>SQL Server 参数
@@ -30,28 +30,28 @@ ms.locfileid: "66091880"
   
 ## <a name="options"></a>选项  
  **要分析的数据库**  
- 若要分析的所有数据库，选择**所有数据库**复选框。 若要分析多个数据库，请选中相应的每个数据库旁边的复选框以将其包括在扫描范围内。  
+ 若要分析所有数据库，请选中 "**所有数据库**" 复选框。 若要分析多个数据库，请选中相应的每个数据库旁边的复选框以将其包括在扫描范围内。  
   
  **分析跟踪文件**  
  选中此复选框可分析文件系统中的跟踪文件。  
   
  **跟踪文件的路径**  
- 可分析一个或多个文件。 您可以浏览到的位置并选择多个文件，也可以提供多个文件的名称。 请使用每个文件的完整路径名，将文件名包括在内，并用竖线字符 (|) 分隔各项。  
+ 可分析一个或多个文件。 您可以浏览到某个位置并选择多个文件，也可以提供多个文件名。 请使用每个文件的完整路径名，将文件名包括在内，并用竖线字符 (|) 分隔各项。  
   
- 如果启用**分析跟踪文件**，**下一步**处于禁用状态直到您输入路径名和文件名。  
+ 如果启用 "**分析跟踪文件**"，则在输入路径名称和文件名之前，将禁用 "**下一步**"。  
   
  **分析[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]批处理文件**  
  选中此复选框可分析文件系统中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理文件。  
   
- **路径[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]批处理文件**  
+ **批处理文件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的路径**  
  可分析一个或多个批处理文件。 可先浏览到某个位置然后选择多个文件，或者可提供多个文件名。 请使用每个文件的完整路径名，将文件名包括在内，并用竖线字符 (|) 分隔各项。  
   
- 如果启用**分析 SQL 批处理文件**，则**下一步**按钮处于禁用状态，直到您输入路径名和文件名为止。  
+ 如果启用 "**分析 SQL 批处理文件**"，则在输入路径名称和文件名之前，"**下一步**" 按钮处于禁用状态。  
   
  **SQL 批处理分隔符**  
- 用于分隔成批的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的文本。 默认值是**转**。  
+ 用于分隔成批的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的文本。 默认值为 "**开始**"。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用升级顾问](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
  [升级顾问用户界面参考](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)  
   

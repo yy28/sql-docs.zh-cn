@@ -1,5 +1,5 @@
 ---
-title: 分类矩阵 (Analysis Services-数据挖掘) |Microsoft Docs
+title: 分类矩阵（Analysis Services-数据挖掘） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,16 +19,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 22f8733c816014bbdd29b44c4ed85d5fc3d2127d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085793"
 ---
 # <a name="classification-matrix-analysis-services---data-mining"></a>分类矩阵（Analysis Services - 数据挖掘）
-  “分类矩阵”  通过确定预测值是否与实际值匹配，将模型中的所有事例分为不同的类别。 然后会对每个类别中的所有事例进行计数，并在矩阵中显示总计。 分类矩阵是评估统计模型的标准工具，有时被称为“混淆矩阵”  。  
+  “分类矩阵” ** 通过确定预测值是否与实际值匹配，将模型中的所有事例分为不同的类别。 然后会对每个类别中的所有事例进行计数，并在矩阵中显示总计。 分类矩阵是评估统计模型的标准工具，有时被称为“混淆矩阵” **。  
   
- 在选择 **“分类矩阵”** 选项为每个指定的预测状态将实际值与预测值比较时创建的图表。 矩阵的行表示模型的预测值，而列则表示实际值。 分析中使用的类别为  ,  ,  “假负”和   
+ 在选择 **“分类矩阵”** 选项为每个指定的预测状态将实际值与预测值比较时创建的图表。 矩阵的行表示模型的预测值，而列则表示实际值。 分析中使用的类别为 **, **, **“假负”和 **  
   
  分类矩阵是评估预测结果的重要工具，因为它使得结果更易于理解并说明错误预测的影响。 通过查看此矩阵中每个单元的金额和百分比，可以快速查看模型做出准确预测的频率。  
   
@@ -47,11 +47,11 @@ ms.locfileid: "66085793"
 |0|362|144|  
 |1|121|373|  
   
- 包含值 362 的第一个结果单元格指示值 0 为“  真正”的次数。 因为 0 指示客户未购买自行车，因此该统计信息指出模型在 362 个事例中对非自行车购买者预测出了正确的值。  
+ 包含值 362 的第一个结果单元格指示值 0 为“ ** 真正”的次数。 因为 0 指示客户未购买自行车，因此该统计信息指出模型在 362 个事例中对非自行车购买者预测出了正确的值。  
   
- 直接位于该单元格下方的单元格包含值 121，其指示“  假正”的数目，或者模型预测出某人会购买自行车而实际上该人却未购买的次数。  
+ 直接位于该单元格下方的单元格包含值 121，其指示“ ** 假正”的数目，或者模型预测出某人会购买自行车而实际上该人却未购买的次数。  
   
- 包含值 144 的单元格指示值 1 为“  假正”的次数。 因为 1 表示客户确实购买了自行车，因此该统计信息指出在 144 个事例中，该模型预测出某人不会购买自行车，而实际上却正相反。  
+ 包含值 144 的单元格指示值 1 为“ ** 假正”的次数。 因为 1 表示客户确实购买了自行车，因此该统计信息指出在 144 个事例中，该模型预测出某人不会购买自行车，而实际上却正相反。  
   
  最后，包含值 373 的单元格指示目标值 1 为“真正”的次数。 换言之，在 373 个事例中，该模型正确预测出某人会购买自行车。  
   
@@ -78,12 +78,12 @@ ms.locfileid: "66085793"
   
 |主题|链接|  
 |------------|-----------|  
-|提供如何创建目标邮递模型的提升图的演练。|[数据挖掘基础教程](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [测试提升图的准确性（数据挖掘基础教程）](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
-|说明相关的图表类型。|[提升图（Analysis Services - 数据挖掘）](lift-chart-analysis-services-data-mining.md)<br /><br /> [利润图（Analysis Services - 数据挖掘）](profit-chart-analysis-services-data-mining.md)<br /><br /> [散点图（Analysis Services - 数据挖掘）](scatter-plot-analysis-services-data-mining.md)|  
-|说明如何将交叉验证用于挖掘模型和挖掘结构。|[交叉验证（Analysis Services - 数据挖掘）](cross-validation-analysis-services-data-mining.md)|  
-|说明用于创建提升图和其他准确性图表的步骤。|[测试和验证任务和操作指南（数据挖掘）](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|提供如何创建目标邮递模型的提升图的演练。|[数据挖掘基础教程](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [利用提升图测试准确性 &#40;基本数据挖掘教程&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
+|说明相关的图表类型。|[Analysis Services &#40;提升图表&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [利润图 &#40;Analysis Services 数据挖掘&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [散点图 &#40;Analysis Services 数据挖掘&#41;](scatter-plot-analysis-services-data-mining.md)|  
+|说明如何将交叉验证用于挖掘模型和挖掘结构。|[交叉验证 &#40;Analysis Services 数据挖掘&#41;](cross-validation-analysis-services-data-mining.md)|  
+|说明用于创建提升图和其他准确性图表的步骤。|[测试和验证任务以及操作方法 &#40;数据挖掘&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
-## <a name="see-also"></a>请参阅  
- [测试和验证（数据挖掘）](testing-and-validation-data-mining.md)  
+## <a name="see-also"></a>另请参阅  
+ [测试和验证 &#40;数据挖掘&#41;](testing-and-validation-data-mining.md)  
   
   

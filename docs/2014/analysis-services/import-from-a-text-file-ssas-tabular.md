@@ -1,5 +1,5 @@
 ---
-title: 从文本文件 (SSAS 表格) 导入 |Microsoft Docs
+title: 从文本文件导入（SSAS 表格） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 455d0981a4b81bc81b2dece8cedbd6ea07e66a21
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080539"
 ---
 # <a name="import-from-a-text-file-ssas-tabular"></a>从文本文件导入（SSAS 表格）
@@ -24,14 +24,14 @@ ms.locfileid: "66080539"
   
 ### <a name="to-import-data-from-a-text-file"></a>从文本文件导入数据  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，单击 **“模型”** 菜单，然后单击 **“从数据源导入”** 。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，单击 **“模型”** 菜单，然后单击 **“从数据源导入”**。  
   
-2.  在 **“连接到数据源”** 页的 **“文本文件”** 下，选择 **“Excel 文件”** 或 **“文本文件”** ，然后单击 **“下一步”** 。  
+2.  在 **“连接到数据源”** 页的 **“文本文件”** 下，选择 **“Excel 文件”** 或 **“文本文件”**，然后单击 **“下一步”**。  
   
 3.  执行表导入向导中的步骤。 在后续页上，您可以使用 **“选择表和视图”** 页来选择特定表并应用筛选器。  
   
-## <a name="see-also"></a>请参阅  
- [导入数据（SSAS 表格）](import-data-ssas-tabular.md)   
- [支持的数据源（SSAS 表格）](tabular-models/data-sources-supported-ssas-tabular.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;SSAS 表格&#41;导入数据](import-data-ssas-tabular.md)   
+ [&#40;SSAS 表格&#41;支持的数据源](tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

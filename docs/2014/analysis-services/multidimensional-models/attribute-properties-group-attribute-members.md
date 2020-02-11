@@ -1,5 +1,5 @@
 ---
-title: 对属性成员 （离散化） 进行分组 |Microsoft Docs
+title: 组属性成员（离散化） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -23,18 +23,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3cc874831f9f96c2540d58f2ffe3b89f8c4dc7aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077269"
 ---
 # <a name="group-attribute-members-discretization"></a>对属性成员分组（离散化）
-  成员组是系统生成的连续维度成员的集合。 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，可以通过名为离散化的进程将属性成员分成若干成员组。 层次结构中的级别或者包含成员组，或者包含成员，但是不能同时包含二者。 业务用户浏览包含成员组的级别时，将看见成员组的名称和单元值。 由 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 为了支持成员组而生成的成员称为分组成员，看上去与普通成员相同。  
+  成员组是系统生成的连续维度成员的集合。 在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，可以通过名为离散化的进程将属性的成员分组到多个成员组中。 层次结构中的级别或者包含成员组，或者包含成员，但是不能同时包含二者。 业务用户浏览包含成员组的级别时，将看见成员组的名称和单元值。 由 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 为了支持成员组而生成的成员称为分组成员，看上去与普通成员相同。  
   
  特性的 `DiscretizationMethod` 属性控制成员的分组方式。  
   
-|`DiscretizationMethod` 设置|Description|  
+|`DiscretizationMethod`将|说明|  
 |--------------------------------------|-----------------|  
 |`None`|显示成员。|  
 |`Automatic`|选择最佳数据表示法： `EqualAreas` 方法或 `Clusters` 方法。|  
@@ -52,7 +52,8 @@ ms.locfileid: "66077269"
 ## <a name="naming-template"></a>命名模板  
  当创建成员组时，会自动生成成员组的名称。 除非您指定了一个命名模板，否则使用默认的命名模板。 通过在某个特性的 `Format` 属性的 `NameColumn` 选项中指定命名模板，可以更改此命名方法。 可以针对列绑定（用于特性的 `Translations` 属性）的 `NameColumn` 集合中指定的每种语言重新定义不同的命名模板。  
   
- `Format` 设置使用以下字符串表达式来定义命名模板：  
+ 
+  `Format` 设置使用以下字符串表达式来定义命名模板：  
   
  `<Naming template> ::= <First definition> [;<Intermediate definition>;<Last definition>]`  
   
@@ -62,15 +63,19 @@ ms.locfileid: "66077269"
   
  `<Last definition> ::= <Name expression>`  
   
- `<First definition>` 参数只应用于第一个成员组或由离散化方法生成的成员组。 如果未提供可选参数 `<Intermediate definition>` 和 `<Last definition>` ，则 `<First definition>` 参数将用于为该属性生成的所有度量值组。  
+ 
+  `<First definition>` 参数只应用于第一个成员组或由离散化方法生成的成员组。 如果未提供可选参数 `<Intermediate definition>` 和 `<Last definition>` ，则 `<First definition>` 参数将用于为该属性生成的所有度量值组。  
   
- `<Last definition>` 参数只应用于由离散化方法生成的最后一个成员组。  
+ 
+  `<Last definition>` 参数只应用于由离散化方法生成的最后一个成员组。  
   
- `<Intermediate bucket name>` 参数应用于每个成员组，而不是由离散化方法生成的第一个或最后一个成员组。 如果生成的成员组仅为两个或更少，则忽略此参数。  
+ 
+  `<Intermediate bucket name>` 参数应用于每个成员组，而不是由离散化方法生成的第一个或最后一个成员组。 如果生成的成员组仅为两个或更少，则忽略此参数。  
   
- `<Bucket name>` 参数是一个字符串表达式，可以合并一组变量以将成员或成员组信息表示为成员组名称的一部分：  
+ 
+  `<Bucket name>` 参数是一个字符串表达式，可以合并一组变量以将成员或成员组信息表示为成员组名称的一部分：  
   
-|变量|Description|  
+|变量|说明|  
 |--------------|-----------------|  
 |%{First bucket member}|包含在当前成员组中的第一个成员的名称。|  
 |%{Last bucket member}|包含在当前成员组中的最后一个成员的名称。|  
@@ -109,7 +114,7 @@ ms.locfileid: "66077269"
   
 -   如果成员组所在维度的维度表经过更新，并且该维度随后得到完全处理，则会生成一个新的成员组集。 新成员组的名称和子级可能与旧成员组的不同。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [属性和属性层次结构](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
   
   

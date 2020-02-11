@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 254f1fcb701fd11b22e35def915b09b537c4b33a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62894986"
 ---
 # <a name="sending-an-html-mail-message-with-the-script-task"></a>使用脚本任务发送 HTML 邮件消息
@@ -29,7 +29,7 @@ ms.locfileid: "62894986"
 > [!NOTE]  
 >  如果希望创建可更方便地重用于多个包的任务，请考虑以此脚本任务示例中的代码为基础，创建自定义任务。 有关详细信息，请参阅 [开发自定义任务](../extending-packages-custom-objects/task/developing-a-custom-task.md)。  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>说明  
  下面的示例使用 `System.Net.Mail` 命名空间配置和发送 HTML 邮件消息。 该脚本从包变量获取电子邮件的收件人、发件人、主题和正文，然后使用它们创建新 `MailMessag`e，并将其 `IsBodyHtml` 属性设置为 `True`。 接着，该脚本从另一个包变量获取 SMTP 服务器名称，然后初始化 `System.Net.Mail.SmtpClient` 实例，并调用其 `Send` 方法发送 HTML 消息。 该示例将消息发送功能封装到一个可在其他脚本中重用的子例程中。  
   
 #### <a name="to-configure-this-script-task-example-without-an-smtp-connection-manager"></a>不使用 SMTP 连接管理器配置此脚本任务示例  
@@ -44,7 +44,7 @@ ms.locfileid: "62894986"
   
 3.  创建一个名为 `HtmlEmailServer` 的字符串变量，并向其分配一个可接收匿名传出消息的可用 SMTP 服务器的名称。  
   
-4.  将这五个变量全部分配到新脚本任务的 ReadOnlyVariables 属性。  
+4.  将这五个变量全部分配到新脚本任务的 ReadOnlyVariables 属性  。  
   
 5.  将 `System.Net` 和 `System.Net.Mail` 命名空间导入到代码中。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62894986"
   
 #### <a name="to-configure-this-script-task-example-with-an-smtp-connection-manager"></a>使用 SMTP 连接管理器配置此脚本任务示例  
   
-1.  通过从 ReadOnlyVariables 列表删除 `HtmlEmailServer` 变量修改先前配置的脚本任务。  
+1.  通过从 ReadOnlyVariables 列表删除 `HtmlEmailServer` 变量修改先前配置的脚本任务  。  
   
 2.  将获取服务器名称的代码行：  
   
@@ -150,9 +150,9 @@ public void Main()
         }  
 ```  
   
-![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![Integration Services 图标（小）](../media/dts-16.gif "集成服务图标（小）")**保持与 Integration Services 最**新  <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [发送邮件任务](../control-flow/send-mail-task.md)  
   
   

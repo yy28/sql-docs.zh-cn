@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2b1c972481b7c4cf614cf0a91b29247c643696d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62868919"
 ---
-# <a name="mssqlserver3156"></a>MSSQLSERVER_3156
+# <a name="mssqlserver_3156"></a>MSSQLSERVER_3156
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62868919"
 |符号名称|LDDB_CANT_WRITE|  
 |消息正文|文件 '%ls' 无法还原为 '%ls'。 请使用 WITH MOVE 选项来标识该文件的有效位置。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  此常规消息标识因指定位置错误而无法还原的文件的逻辑文件名或物理文件名。  
   
 ### <a name="possible-causes"></a>可能的原因  
@@ -49,9 +49,9 @@ ms.locfileid: "62868919"
   
  更正指定位置的错误，例如，授予访问权限或使用 RESTORE 语句中的 WITH MOVE 选项重新定位文件。  
   
-## <a name="see-also"></a>请参阅  
- [将数据库还原到新位置 (SQL Server)](../backup-restore/restore-a-database-to-a-new-location-sql-server.md)   
- [文件还原到新位置&#40;SQL Server&#41;](../backup-restore/restore-files-to-a-new-location-sql-server.md)   
+## <a name="see-also"></a>另请参阅  
+ [将数据库还原到新位置 &#40;SQL Server&#41;](../backup-restore/restore-a-database-to-a-new-location-sql-server.md)   
+ [将文件还原到 &#40;SQL Server 的新位置&#41;](../backup-restore/restore-files-to-a-new-location-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
   

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e500eb47af39502e1bcf59f60b3dd24fed0713fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62872124"
 ---
 # <a name="database-mail-log-and-audits"></a>数据库邮件日志和审核
@@ -40,7 +40,7 @@ ms.locfileid: "62872124"
 |清理数据库邮件消息、附件和日志条目|[sysmail_delete_mailitems_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql)<br /><br /> [sysmail_delete_log_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql)|  
 |存档数据库邮件和日志|[创建 SQL Server 代理作业以存档数据库邮件和事件日志](create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [监视资源使用情况（系统监视器）](../performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

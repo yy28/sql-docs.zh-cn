@@ -1,5 +1,5 @@
 ---
-title: 列分布 （数据挖掘） |Microsoft Docs
+title: 列分布（数据挖掘） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,16 +18,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5db71b5a94285f8ae63afeb65bec3f9807f8da27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085708"
 ---
 # <a name="column-distributions-data-mining"></a>列分布（数据挖掘）
-  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，可以定义挖掘结构中的列分布以影响在创建挖掘模型时算法如何处理这些列中的数据。 对于某些算法，如果已知列中包含常用的值分布，则在处理模型之前定义任意连续列的分布将非常有用。 如果不定义分布，则由于算法据以解释数据的信息较少，生成的挖掘模型产生的预测可能不如定义了分布时产生的预测精确。  
+  在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，您可以在挖掘结构中定义列分布，以影响在创建挖掘模型时算法如何处理这些列中的数据。 对于某些算法，如果已知列中包含常用的值分布，则在处理模型之前定义任意连续列的分布将非常有用。 如果不定义分布，则由于算法据以解释数据的信息较少，生成的挖掘模型产生的预测可能不如定义了分布时产生的预测精确。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中可用的算法支持下列分布类型：  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中可用的算法支持下列分布类型：  
   
  `Normal`  
  连续列的值构成一个正态分布直方图。  
@@ -46,11 +47,11 @@ ms.locfileid: "66085708"
   
  有关 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供的算法的详细信息，请参阅[数据挖掘算法（Analysis Services - 数据挖掘）](data-mining-algorithms-analysis-services-data-mining.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [内容类型 &#40;数据挖掘&#41;](content-types-data-mining.md)   
- [挖掘结构（Analysis Services - 数据挖掘）](mining-structures-analysis-services-data-mining.md)   
- [离散化方法（数据挖掘）](discretization-methods-data-mining.md)   
- [分布 (DMX)](/sql/dmx/distributions-dmx)   
+ [挖掘结构 &#40;Analysis Services 数据挖掘&#41;](mining-structures-analysis-services-data-mining.md)   
+ [数据挖掘 &#40;离散化方法&#41;](discretization-methods-data-mining.md)   
+ [DMX&#41;分发 &#40;](/sql/dmx/distributions-dmx)   
  [挖掘结构列](mining-structure-columns.md)  
   
   

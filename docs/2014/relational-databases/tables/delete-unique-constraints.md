@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8225039ece914c461af34f5344350227d6a39cdc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761146"
 ---
 # <a name="delete-unique-constraints"></a>删除唯一约束
@@ -40,9 +40,9 @@ ms.locfileid: "62761146"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要对表的 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -65,7 +65,7 @@ ms.locfileid: "62761146"
   
 4.  单击 **“删除”** 。  
   
-5.  在“文件”  菜单上，单击“保存”  表格名称  。  
+5.  在“文件”菜单上，单击“保存表名称”    。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

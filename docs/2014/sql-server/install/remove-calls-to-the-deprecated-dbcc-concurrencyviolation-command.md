@@ -1,5 +1,5 @@
 ---
-title: 删除对不推荐使用 DBCC CONCURRENCYVIOLATION 命令的调用 |Microsoft Docs
+title: 删除对不推荐使用的 DBCC CONCURRENCYVIOLATION 命令的调用 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0110d4bc138ad0da953eb83d3c81ec265d2fd3ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093209"
 ---
 # <a name="remove-calls-to-the-deprecated-dbcc-concurrencyviolation-command"></a>删除对不推荐使用的 DBCC CONCURRENCYVIOLATION 命令的调用
@@ -23,8 +23,9 @@ ms.locfileid: "66093209"
 ## <a name="component"></a>组件  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>描述  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 没有任何最近版本包括工作负荷调控器；因此该命令已被删除。  
+## <a name="description"></a>说明  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 没有任何最近版本包括工作负荷调控器；因此该命令已被删除。  
   
 ## <a name="corrective-action"></a>纠正措施  
  更新应用程序和脚本以删除对这一不推荐使用的命令的引用。  

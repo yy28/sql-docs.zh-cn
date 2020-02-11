@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 24ccf065a393e9534f3f4a3f830f90e3d1d5e5cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084951"
 ---
 # <a name="data-mining-query-tasks-and-how-tos"></a>数据挖掘查询任务和操作指南
@@ -57,8 +57,8 @@ ms.locfileid: "66084951"
  [使用 XMLA 创建数据挖掘查询](create-a-data-mining-query-by-using-xmla.md)  
  介绍如何通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的 XMLA 模板，创建针对挖掘模型内容的查询。  
   
-## <a name="see-also"></a>请参阅  
- [查询和表达式语言参考 (Analysis Services)](https://msdn.microsoft.com/library/gg492188(SQL.130).aspx)   
- [数据挖掘存储过程（Analysis Services - 数据挖掘）](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
+## <a name="see-also"></a>另请参阅  
+ [查询和表达式语言参考 &#40;Analysis Services&#41;](https://msdn.microsoft.com/library/gg492188(SQL.130).aspx)   
+ [数据挖掘存储过程 &#40;Analysis Services 数据挖掘&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
   

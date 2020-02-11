@@ -11,13 +11,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fdddf626aa081138d58387b9562327964d600074
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62869450"
 ---
-# <a name="mssqlserver1793"></a>MSSQLSERVER_1793
+# <a name="mssqlserver_1793"></a>MSSQLSERVER_1793
     
 ## <a name="details"></a>详细信息  
   
@@ -30,7 +30,7 @@ ms.locfileid: "62869450"
 |符号名称|FILESTREAM_BASEDATA_NEED_SAME_PARTITION|  
 |消息正文|由于没有为 FILESTREAM 数据指定分区方案，因此无法删除索引“%.*ls”。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  当你尝试在包含 FILESTREAM 数据的表上删除聚集索引，并且为基础数据指定了 **MOVE TO** 子句，但没有为 FILESTREAM 数据指定 **FILESTREAM_ON** 子句时，将出现此消息。  
   
 ## <a name="user-action"></a>用户操作  

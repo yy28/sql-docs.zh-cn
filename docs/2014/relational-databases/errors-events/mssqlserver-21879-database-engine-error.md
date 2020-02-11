@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 98bfedce41d05a613fe47941b86cfa3fa176ee5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62869174"
 ---
-# <a name="mssqlserver21879"></a>MSSQLSERVER_21879
+# <a name="mssqlserver_21879"></a>MSSQLSERVER_21879
     
 ## <a name="details"></a>详细信息  
   
@@ -32,8 +32,9 @@ ms.locfileid: "62869174"
 |符号名称|SQLErrorNum21879|  
 |消息正文|无法查询重定向服务器“%s”以找到原始发布服务器“%s”和发布服务器数据库“%s”来确定远程服务器的名称；错误 %d，错误消息“%s”。|  
   
-## <a name="explanation"></a>解释  
- `sp_validate_redirected_publisher` 使用其创建的临时链接服务器连接到重定向发布服务器，以便发现远程服务器的名称。 在链接服务器查询失败时，将返回错误 21879。 对请求远程服务器名称的调用通常是首次使用临时链接服务器，因此如果存在连接问题，则这些问题可能首先会与此调用一起出现。 在远程服务器上，此远程调用只执行选择 `@@servername`。  
+## <a name="explanation"></a>说明  
+ 
+  `sp_validate_redirected_publisher` 使用其创建的临时链接服务器连接到重定向发布服务器，以便发现远程服务器的名称。 在链接服务器查询失败时，将返回错误 21879。 对请求远程服务器名称的调用通常是首次使用临时链接服务器，因此如果存在连接问题，则这些问题可能首先会与此调用一起出现。 在远程服务器上，此远程调用只执行选择 `@@servername`。  
   
  用于查询重定向发布服务器的链接服务器使用在为原始发布服务器调用 `sp_adddistpublisher` 时提供的安全模式、登录名和密码。  
   
@@ -52,10 +53,10 @@ ms.locfileid: "62869174"
   
  如果由非分发服务器的其他节点上运行的复制代理（如在订阅服务器上运行的合并代理）启动的 `sp_get_redirected_publisher` 调用返回了错误 21879，则应注意一些特殊事项。 如果使用 Windows 身份验证连接到重定向发布服务器，则必须将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为使用 Kerberos 身份验证以便成功建立连接。 当使用 Windows 身份验证且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未配置为使用 Kerberos 身份验证时，在订阅服务器上运行的合并代理将收到错误 18456，指示“NT AUTHORITY\ANONYMOUS LOGON”登录名失败。 可以通过三种方式解决此问题：  
   
--   将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为使用 Kerberos 身份验证。 请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的 **Kerberos 身份验证和 SQL Server**。  
+-   将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为使用 Kerberos 身份验证。 请参阅 **联机丛书中的**Kerberos 身份验证和 SQL Server[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
--   使用`sp_changedistpublisher`若要更改与 MSdistpublishers 中的原始发布服务器相关联的安全模式，以及若要指定登录名和密码以连接时使用。  
+-   使用`sp_changedistpublisher`更改与 MSdistpublishers 中的原始发布服务器相关联的安全模式，以及指定用于连接的登录名和密码。  
   
--   指定命令行参数*BypassPublisherValidation*在合并代理命令行以跳过验证时`sp_get_redirected_publisher`在分发服务器时调用。  
+-   指定在合并代理命令行上的命令行参数*BypassPublisherValidation*在分发服务器上`sp_get_redirected_publisher`调用时绕过验证。  
   
   

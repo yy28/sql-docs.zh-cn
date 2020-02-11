@@ -1,5 +1,5 @@
 ---
-title: 数据库 Representation(Tabular) |Microsoft Docs
+title: 数据库表示形式（表格） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 377b85c22d1c6da9f5296d6ad57a86028e022785
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62757808"
 ---
 # <a name="database-representationtabular"></a>数据库表示形式（表格）
@@ -53,7 +53,7 @@ currentCnx.ChangeDatabase("myOtherDatabase");
 ## <a name="database-in-amo"></a>AMO 中的数据库  
  在使用 AMO 管理数据库对象时，请从 <xref:Microsoft.AnalysisServices.Server> 对象开始操作。 然后在数据库集合中搜索您的数据库或通过向集合添加一个数据库来创建新数据库。  
   
- 下面的代码段显示了连接到服务器并创建一个空数据库的步骤，检查完后数据库不存在：  
+ 下面的代码片段演示了在检查数据库不存在后连接到服务器并创建空数据库的步骤：  
   
 ```  
   
@@ -86,6 +86,6 @@ catch (Exception createDBxc)
   
 ```  
   
- 实际了解如何使用 AMO 创建和操作数据库表示形式，请参阅此表格 AMO 2012 示例; 中的源代码具体查看以下源文件：Database.cs。 示例代码仅作为对此处所述逻辑概念的支持提供，不应用于生产环境中。  
+ 为了真正理解如何使用 AMO 创建和操作数据库表示形式，请参阅“表格 AMO 2012”示例中的源代码；具体来讲，请查看以下源文件：Database.cs。 示例代码仅作为对此处所述逻辑概念的支持提供，不应用于生产环境中。  
   
   

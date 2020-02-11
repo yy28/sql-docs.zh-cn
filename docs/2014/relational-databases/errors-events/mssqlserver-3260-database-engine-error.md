@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b409d53b33a7fbe09fb9f74d1a04d3ac38e3b864
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62868693"
 ---
-# <a name="mssqlserver3260"></a>MSSQLSERVER_3260
+# <a name="mssqlserver_3260"></a>MSSQLSERVER_3260
     
 ## <a name="details"></a>详细信息  
   
@@ -32,10 +32,10 @@ ms.locfileid: "62868693"
 |符号名称|DMPIO_BUFFER_OVERFLOW|  
 |消息正文|内部缓冲区已满。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  服务器的内存不足。  
   
 ## <a name="user-action"></a>用户操作  
- 重试该操作。 如果该错误再次出现，请与您的产品支持提供商联系。  
+ 请重试操作即可。 如果该错误再次出现，请与您的产品支持提供商联系。  
   
   
