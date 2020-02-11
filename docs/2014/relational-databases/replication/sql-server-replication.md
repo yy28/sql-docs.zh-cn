@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be03754ea8eeb61d838357667da6e37e1be6bc31
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62626144"
 ---
 # <a name="sql-server-replication"></a>SQL Server 复制
@@ -48,13 +48,13 @@ ms.locfileid: "62626144"
   
 ## <a name="publications-and-articles"></a>发布和项目 
   
--   [Create a Publication](publish/create-a-publication.md)    
+-   [创建发布](publish/create-a-publication.md)    
 -   [定义项目](publish/define-an-article.md)   
 -   [查看和修改发布属性](publish/view-and-modify-publication-properties.md)   
 -   [查看和修改项目属性](publish/view-and-modify-article-properties.md)    
 -   [删除发布](publish/delete-a-publication.md)   
 -   [删除项目](publish/delete-an-article.md)    
--   [从 Oracle 数据库创建发布](publish/create-a-publication-from-an-oracle-database.md)   
+-   [从 Oracle Database 创建发布](publish/create-a-publication-from-an-oracle-database.md)   
 -   [设置订阅的过期期限](publish/set-the-expiration-period-for-subscriptions.md)  
 -   [指定架构选项](publish/specify-schema-options.md)  
 -   [复制架构更改](publish/replicate-schema-changes.md)    
@@ -77,7 +77,7 @@ ms.locfileid: "62626144"
 ### <a name="transactional-replication-options"></a>事务复制选项  
   
 -   [为事务项目的数据更改设置传播方法](publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md)    
--   [对事务发布启用更新订阅](publish/enable-updating-subscriptions-for-transactional-publications.md)  
+-   [为事务发布启用更新订阅](publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
 ### <a name="merge-replication-options"></a>合并复制选项  
   
@@ -95,20 +95,20 @@ ms.locfileid: "62626144"
 -   [查看和修改推送订阅属性](view-and-modify-push-subscription-properties.md)   
 -   [删除推送订阅](delete-a-push-subscription.md)   
 -   [指定同步计划](specify-synchronization-schedules.md)    
--   [创建事务发布的可更新订阅](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
+-   [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
 -   [为非 SQL Server 订阅服务器创建订阅](create-a-subscription-for-a-non-sql-server-subscriber.md)  
   
 ## <a name="synchronize-subscriptions"></a>同步订阅  
   
 -   [创建并应用初始快照](create-and-apply-the-initial-snapshot.md)   
 -   [为包含参数化筛选器的合并发布创建快照](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)    
--   [初始化事务订阅从备份](initialize-a-transactional-subscription-from-a-backup.md)    
+-   [从备份初始化事务订阅](initialize-a-transactional-subscription-from-a-backup.md)    
 -   [手动初始化订阅](initialize-a-subscription-manually.md)    
 -   [同步请求订阅](synchronize-a-pull-subscription.md)    
 -   [同步推送订阅](synchronize-a-push-subscription.md)   
 -   [重新初始化订阅](reinitialize-a-subscription.md)    
--   [同步期间执行脚本](execute-scripts-during-synchronization-replication-transact-sql-programming.md)    
--   [为合并项目实现业务逻辑处理程序](implement-a-business-logic-handler-for-a-merge-article.md)  
+-   [在同步期间执行脚本](execute-scripts-during-synchronization-replication-transact-sql-programming.md)    
+-   [实现合并项目的业务逻辑处理程序](implement-a-business-logic-handler-for-a-merge-article.md)  
 -   [调试业务逻辑处理程序（复制编程）](debug-a-business-logic-handler-replication-programming.md)    
 -   [控制同步期间触发器和约束的行为](control-behavior-of-triggers-and-constraints-in-synchronization.md)    
 -   [为合并项目实现自定义冲突解决程序](implement-a-custom-conflict-resolver-for-a-merge-article.md)  
@@ -118,21 +118,21 @@ ms.locfileid: "62626144"
 -   [处理复制代理配置文件](agents/work-with-replication-agent-profiles.md)   
 -   [在订阅服务器上验证数据](validate-data-at-the-subscriber.md)    
 -   [通过参数化筛选器为合并发布管理分区](publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)    
--   [将数据大容量加载到合并发布中的表](bulk-load-data-into-tables-in-a-merge-publication.md)    
+-   [将数据批量加载到合并发布的表中](bulk-load-data-into-tables-in-a-merge-publication.md)    
 -   [清除合并元数据](administration/clean-up-merge-metadata-replication-transact-sql-programming.md)    
 -   [执行合并项目的虚更新](administration/perform-a-dummy-update-for-a-merge-article-replication-transact-sql-programming.md)    
--   [查看复制的命令和分发数据库中的其他信息](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
--   [为事务复制启用协调的备份](administration/enable-coordinated-backups-for-transactional-replication.md)   
+-   [查看分发数据库中的复制命令和其他信息](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
+-   [为事务复制启用协调备份](administration/enable-coordinated-backups-for-transactional-replication.md)   
 -   [管理对等拓扑](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)    
--   [停止复制拓扑](administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)    
--   [配置 Oracle 发布服务器的事务集作业](administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
+-   [静止复制拓扑](administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)    
+-   [为 Oracle 发布服务器配置事务集作业](administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
 -   [升级复制脚本](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)  
   
-## <a name="monitor"></a>监视器
+## <a name="monitor"></a>监视
   
 -   [允许非管理员使用复制监视器](monitor/allow-non-administrators-to-use-replication-monitor.md)    
 -   [以编程方式监视复制](monitor/programmatically-monitor-replication.md)    
--   [查看复制的命令和分发数据库中的其他信息](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
+-   [查看分发数据库中的复制命令和其他信息](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
 -   [查看合并发布的冲突信息](view-conflict-information-for-merge-publications.md) 
 -   [为事务复制测量滞后时间和验证连接](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4fde67fc6b38e81c7367ee1e298439810b0b35c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754560"
 ---
 # <a name="principal-server-instance-configure-database-mirroring-security-wizard"></a>主体服务器实例（配置数据库镜像安全向导）
@@ -32,7 +32,7 @@ ms.locfileid: "62754560"
  **主体服务器实例**  
  因为 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的数据库镜像总是从主体服务器配置，所以当前的服务器实例总是为主体服务器实例。  
   
- **侦听器端口**  
+ **侦听程序端口**  
  此选项的行为取决于此服务器实例是否存在镜像端点，如下所示：  
   
 -   如果此服务器实例不存在侦听器端口，则端口号 5022 将显示在 **“端口”** 文本框中。 可以使用任何可用的端口号，例如 7022。  
@@ -50,7 +50,7 @@ ms.locfileid: "62754560"
   
  若要禁用加密，请清除此复选框。 若要重新启用加密，请选中此复选框。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库镜像终结点 (SQL Server)](the-database-mirroring-endpoint-sql-server.md)   
  [数据库属性（“镜像”页）](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [为 Windows 身份验证创建数据库镜像终结点 (Transact-SQL)](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   

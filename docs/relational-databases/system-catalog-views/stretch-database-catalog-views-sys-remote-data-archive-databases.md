@@ -1,5 +1,5 @@
 ---
-title: sys.remote_data_archive_databases (Transact SQL) |Microsoft Docs
+title: sys. remote_data_archive_databases （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,24 +19,24 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 339d960a136e9cf939032068c21ec737f4d37ceb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68018205"
 ---
-# <a name="stretch-database-catalog-views---sysremotedataarchivedatabases"></a>Stretch Database 目录视图的 sys.remote_data_archive_databases
+# <a name="stretch-database-catalog-views---sysremote_data_archive_databases"></a>Stretch Database 目录视图-sys. remote_data_archive_databases
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  包含每个远程数据库用于存储从已启用延伸的本地数据库的数据行。  
+  每个从已启用延伸的本地数据库中存储数据的远程数据库占一行。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**remote_database_id**|**int**|自动生成本地标识符的远程数据库。|  
+|**remote_database_id**|**int**|自动生成的远程数据库本地标识符。|  
 |**remote_database_name**|**sysname**|远程数据库的名称。|  
 |**data_source_id**|**int**|用于连接到远程服务器的数据源|  
   
-## <a name="see-also"></a>请参阅  
- [Stretch 数据库](../../sql-server/stretch-database/stretch-database.md)  
+## <a name="see-also"></a>另请参阅  
+ [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
   

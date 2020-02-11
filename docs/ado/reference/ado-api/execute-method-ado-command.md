@@ -1,5 +1,5 @@
 ---
-title: Execute 方法 （ADO 命令） |Microsoft Docs
+title: Execute 方法（ADO 命令） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: f84a5ff3-0528-4ad7-9bea-9a15103378dd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4ef42c04944f39e0b2d1930cc6520df2b6c5fa5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918851"
 ---
 # <a name="execute-method-ado-command"></a>Execute 方法（ADO 命令）
-执行查询、 SQL 语句或存储的过程中指定[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)或[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)属性[命令对象](../../../ado/reference/ado-api/command-object-ado.md)。  
+执行[命令对象](../../../ado/reference/ado-api/command-object-ado.md)的[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)或[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)属性中指定的查询、SQL 语句或存储过程。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,49 +34,49 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
 ```  
   
 ## <a name="return-value"></a>返回值  
- 返回[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象的引用、 流或**Nothing**。  
+ 返回[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象引用、流或不返回**任何内容**。  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *RecordsAffected*  
- 可选。 一个**长**变量向其提供程序返回的操作所影响的记录数。 *RecordsAffected*参数仅适用于操作的查询或存储的过程。 *RecordsAffected*不返回的返回结果的查询或存储的过程返回的记录数。 若要获取此信息，请使用[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)属性。 **Execute**方法不会返回正确的信息与一起使用时**adAsyncExecute**，只需时以异步方式执行命令，因为受影响的记录数可能还不会知道在该方法返回的时间。  
+ 可选。 一个**长整型**变量，提供程序返回操作影响的记录数。 *RecordsAffected*参数仅适用于操作查询或存储过程。 *RecordsAffected*不返回结果返回的查询或存储过程返回的记录数。 若要获取此信息，请使用[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)属性。 在与**adAsyncExecute**一起使用时， **Execute**方法不会返回正确的信息，只是因为异步执行命令时，在该方法返回时，受影响的记录数可能尚未已知。  
   
- *Parameters*  
- 可选。 一个**Variant**结合使用的输入的字符串或流中指定的参数值的数组**CommandText**或**CommandStream**。 （输出参数不会返回此参数中传递时的正确值。）  
+ *参数*  
+ 可选。 与在**CommandText**或**CommandStream**中指定的输入字符串或流结合**使用的参数值数组。** （当传入此参数时，输出参数不会返回正确的值。）  
   
  *选项*  
- 可选。 一个**长**值，该值指示提供程序应该如何评估[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)或[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)属性的[命令](../../../ado/reference/ado-api/command-object-ado.md)对象。 可以为使用所做的位掩码值[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)和/或[ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md)值。 例如，可以使用**adCmdText**并**adExecuteNoRecords**结合，如果你想要具有计算的值的 ADO **CommandText**以文本形式的属性和指示该命令应放弃并返回执行命令文本时可能会生成任何记录。  
+ 可选。 一个**长整型**值，该值指示提供程序应如何计算[命令](../../../ado/reference/ado-api/command-object-ado.md)对象的[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)或[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)属性。 可以是使用[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)和/或[ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md)值进行的位掩码值。 例如，如果想让 ADO 将**CommandText**属性的值作为文本进行计算，则可以结合使用**adCmdText**和**adExecuteNoRecords** ，并指示该命令应丢弃，而不会返回命令文本执行时可能生成的任何记录。  
   
 > [!NOTE]
->  使用**ExecuteOptionEnum**值**adExecuteNoRecords**通过最大程度减少内部处理来提高性能。 如果**adExecuteStream**指定了选项**adAsyncFetch**并**adAsynchFetchNonBlocking**将被忽略。 不要使用**CommandTypeEnum**的值**adCmdFile**或**adCmdTableDirect**与**Execute**。 这些值仅用作选项与[开放](../../../ado/reference/ado-api/open-method-ado-recordset.md)并[再次查询](../../../ado/reference/ado-api/requery-method.md)方法**记录集**。  
+>  使用**ExecuteOptionEnum**值**adExecuteNoRecords** ，通过最大限度地减少内部处理来提高性能。 如果指定了**adExecuteStream** ，则将忽略选项**adAsyncFetch**和**adAsynchFetchNonBlocking** 。 不要将**adCmdFile**或**adCmdTableDirect**的**CommandTypeEnum**值用于**Execute**。 这些值只能用作**记录集**的[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)和重新[查询](../../../ado/reference/ado-api/requery-method.md)方法的选项。  
   
 ## <a name="remarks"></a>备注  
- 使用**Execute**方法**命令**对象执行查询中指定**CommandText**属性或**CommandStream**对象的属性。  
+ 对**命令**对象使用**Execute**方法会执行在对象的**CommandText**属性或**CommandStream**属性中指定的查询。  
   
- 在返回结果**记录集**（默认） 或二进制信息的流。 若要获取的二进制流，请指定**adExecuteStream**中*选项*，然后通过设置提供的流**Command.Properties ("输出 Stream")** 。 ADO **Stream**可以指定对象以接收结果，或者可以指定另一个流对象，例如 IIS 响应对象。 如果没有流已指定，然后再调**Execute**与**adExecuteStream**，出现错误。 在从返回流的当前位置**Execute**是特定提供程序。  
+ 结果在**记录集中**返回（默认情况下）或作为二进制信息的流返回。 若要获取二进制流，请在*选项*中指定**adExecuteStream** ，然后通过设置命令提供流 **。属性（"输出流"）**。 可以指定 ADO**流**对象来接收结果，也可以指定另一个流对象，如 IIS 响应对象。 如果在使用**adExecuteStream**调用**Execute**之前未指定流，则会发生错误。 从**Execute**返回的流的位置是特定于提供程序的。  
   
- 如果该命令不返回结果 （例如，SQL 更新查询） 访问接口将返回**Nothing**只要选项**adExecuteNoRecords**指定; 否则执行返回关闭**记录集**。 某些应用程序语言，可忽略此返回值，如果没有**记录集**所需的。  
+ 如果该命令不是为了返回结果（例如，SQL 更新查询），则只要指定了选项**adExecuteNoRecords** ，提供程序就不会返回**任何内容**;否则 Execute 将返回已关闭的**记录集**。 如果没有所需的**记录集**，某些应用程序语言允许忽略此返回值。  
   
- **执行**如果用户指定的值将引发错误**CommandStream**时**CommandType**是**adCmdStoredProc**， **adCmdTable**，或**adCmdTableDirect**。  
+ 当**CommandType**为**adCmdStoredProc**、 **adCmdTable**或**adCmdTableDirect**时，如果用户为**CommandStream**指定了值，则**执行**将引发错误。  
   
- 如果查询具有参数，当前值为**命令**除非重写它们使用传递的参数值与使用对象的参数**Execute**调用。 您可以通过调用时省略的某些参数的新值替代参数的子集**Execute**方法。 在其中指定的参数的顺序是相同的顺序与方法传递它们。 例如，如果四个 （或多个） 参数，并且你想要传递的只有第一个和第四个参数的新值，将通过`Array(var1,,,var4)`作为*参数*参数。  
-  
-> [!NOTE]
->  输出参数不会返回正确的值时传入*参数*参数。  
-  
- [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)此操作结束时，将发出事件。  
+ 如果查询具有参数，则使用**命令**对象的参数的当前值，除非使用通过**执行**调用传递的参数值重写这些值。 可以通过在调用**Execute**方法时省略某些参数的新值，来重写参数的子集。 指定参数的顺序与方法传递参数的顺序相同。 例如，如果有四个（或多个）参数，而你只希望为第一个和第四个参数传递新值，则`Array(var1,,,var4)`将作为*parameters*参数传递。  
   
 > [!NOTE]
->  在发出包含 Url 的命令，使用 http 方案将自动调用[Microsoft OLE DB 访问接口用于 Internet 发布](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)。 有关详细信息，请参阅[绝对和相对 Url](../../../ado/guide/data/absolute-and-relative-urls.md)。  
+>  当传入*参数*参数时，输出参数不会返回正确的值。  
   
-## <a name="applies-to"></a>适用范围  
+ 此操作结束时，将发出[ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)事件。  
+  
+> [!NOTE]
+>  发出包含 Url 的命令时，使用 http 方案的命令将自动调用[用于 Internet 发布的 Microsoft OLE DB 提供程序](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)。 有关详细信息，请参阅[绝对和相对 url](../../../ado/guide/data/absolute-and-relative-urls.md)。  
+  
+## <a name="applies-to"></a>应用于  
  [命令对象 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## <a name="see-also"></a>请参阅  
- [执行、 再次查询和清除方法示例 (VB)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vb.md)   
- [执行、 再次查询和清除方法示例 (VBScript)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vbscript.md)   
- [执行、 再次查询和清除方法示例 （VC + +）](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vc.md)   
- [CommandStream 属性 (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md)   
- [CommandText 属性 (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
+## <a name="see-also"></a>另请参阅  
+ [执行、再次查询和清除方法示例（VB）](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vb.md)   
+ [执行、再次查询和清除方法示例（VBScript）](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vbscript.md)   
+ [执行、再次查询和清除方法示例（VC + +）](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vc.md)   
+ [CommandStream 属性（ADO）](../../../ado/reference/ado-api/commandstream-property-ado.md)   
+ [CommandText 属性（ADO）](../../../ado/reference/ado-api/commandtext-property-ado.md)   
  [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)   
- [Execute 方法 （ADO 连接）](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
+ [Execute 方法（ADO 连接）](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
  [ExecuteComplete 事件 (ADO)](../../../ado/reference/ado-api/executecomplete-event-ado.md)

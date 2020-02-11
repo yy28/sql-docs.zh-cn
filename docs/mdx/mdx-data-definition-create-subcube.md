@@ -1,5 +1,5 @@
 ---
-title: CREATE 子多维数据集语句 (MDX) |Microsoft Docs
+title: CREATE 子多维数据集语句（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: f137e8c377c94a60fdcfd8f1534069cef4b28f66
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68887436"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>MDX 数据定义 - CREATE SUBCUBE
@@ -35,14 +35,14 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
  *Select_Statement*  
  不包含 WITH、NON EMPTY 或 HAVING 子句并且不要求维度或者单元属性的有效多维表达式 (MDX) SELECT 表达式。  
   
- 有关 select 语句和**非可视**子句的详细语法说明, 请参阅[select 语句&#40;&#41; MDX](../mdx/mdx-data-manipulation-select.md) 。  
+ 有关 Select 语句和**非可视**子句的详细语法说明，请参阅[SELECT 语句 &#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md) 。  
   
 ## <a name="remarks"></a>备注  
  如果将默认成员排除在子多维数据集的定义之外，坐标将会相应更改。 对于可以聚合的属性，默认成员会被移到 [All] 成员中。 对于不可聚合的属性，默认成员会被移到该子多维数据集中存在的某一成员中。 下表包含子多维数据集和默认成员组合的示例。  
   
-|原始默认成员|可以聚合|再|修改后的默认成员|  
+|原始默认成员|可以聚合|嵌套 select|修改后的默认成员|  
 |-----------------------------|-----------------------|---------------|----------------------------|  
-|Time.Year.All|是|{Time.Year.2003}|无更改|  
+|Time.Year.All|是|{Time.Year.2003}|无变化|  
 |Year。[1997]|是|{Time.Year.2003}|Time.Year.All|  
 |Year。[1997]|否|{Time.Year.2003}|Year。[2003]|  
 |Year。[1997]|是|{Time.Year.2003, Time.Year.2004}|Time.Year.All|  
@@ -52,10 +52,10 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
   
  删除子多维数据集时，也会删除在该子多维数据集的上下文中创建的会话对象。  
   
- 有关子多维数据的详细信息, 请参阅[在 mdx &#40;Mdx&#41;中生成子多维数据](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)。  
+ 有关子多维数据的详细信息，请参阅[在 mdx 中生成子多维数据 &#40;mdx&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)。  
   
 ## <a name="example"></a>示例  
- 下例创建了一个子多维数据集，将表观多维数据集空间限制为与加拿大关联的成员。 然后, 它使用**MEMBERS**函数返回 Geography 用户定义的层次结构的国家/地区级别的所有成员-仅返回加拿大国家/地区。  
+ 下例创建了一个子多维数据集，将表观多维数据集空间限制为与加拿大关联的成员。 然后，它使用**MEMBERS**函数返回 Geography 用户定义的层次结构的国家/地区级别的所有成员-仅返回加拿大国家/地区。  
   
 ```  
 CREATE SUBCUBE [Adventure Works] AS  
@@ -92,9 +92,9 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
 |||||  
 |-|-|-|-|  
 ||All Products|Accessories|Clothing|  
-|All Resellers|$2,031,079.39|$506,172.45|$1,524,906.93|  
-|Value Added Reseller|$767,388.52|$175,002.81|$592,385.71|  
-|Warehouse|$1,263,690.86|$331,169.64|$932,521.23|  
+|All Resellers|$2031079.39|$506,172.45|$1,524,906.93|  
+|Value Added Reseller|$767388.52|$175,002.81|$592,385.71|  
+|Warehouse|$1263690.86|$331,169.64|$932,521.23|  
   
  使用 NON VISUAL 子句删除并重新创建子多维数据集将会创建一个子多维数据集，用于保留 Products.Category 和 Resellers.[Business Type] 中所有成员的实际总数，不论他们在子多维数据集中是否可见。  
   
@@ -127,10 +127,10 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
  [All Products] 和 [All Resellers] 分别为列和行，包含所有成员（而不仅是可见成员）的总数。  
   
-## <a name="see-also"></a>请参阅  
- [MDX 中的重要概念 (Analysis Services)](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
- [MDX 脚本语句&#40;mdx&#41;](../mdx/mdx-scripting-statements-mdx.md)   
- [删除子多维&#40;数据集语句 MDX&#41;](../mdx/mdx-data-definition-drop-subcube.md)   
- [SELECT 语句 (MDX)](../mdx/mdx-data-manipulation-select.md)  
+## <a name="see-also"></a>另请参阅  
+ [MDX &#40;Analysis Services 中的关键概念&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
+ [Mdx 脚本语句 &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
+ [&#40;MDX&#41;删除子多维数据集语句](../mdx/mdx-data-definition-drop-subcube.md)   
+ [SELECT 语句 &#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md)  
   
   

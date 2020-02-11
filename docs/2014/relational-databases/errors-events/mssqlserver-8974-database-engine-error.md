@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c46f6bee67aa84bb805709e01ea911722902a3e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762172"
 ---
-# <a name="mssqlserver8974"></a>MSSQLSERVER_8974
+# <a name="mssqlserver_8974"></a>MSSQLSERVER_8974
     
 ## <a name="details"></a>详细信息  
   
@@ -30,9 +30,9 @@ ms.locfileid: "62762172"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC3_OFF_ROW_DATA_NODE_HAS_TWO_PARENTS|  
-|消息正文|表错误：对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID （类型为 TYPE）。 页 P_ID2，槽 S_ID2 和页 P_ID3，槽 P_ID3 都指向了位于页 P_ID1，槽 S_ID1，文本 ID TEXT_ID 的行外数据节点。|  
+|消息正文|表错误: 对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID (类型为 TYPE)。 页 P_ID2，槽 S_ID2 和页 P_ID3，槽 P_ID3 都指向了位于页 P_ID1，槽 S_ID1，文本 ID TEXT_ID 的行外数据节点。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  行外数据节点有两条数据或索引记录将其列为子节点。 一个节点只能有一个父节点。  
   
 ## <a name="user-action"></a>用户操作  

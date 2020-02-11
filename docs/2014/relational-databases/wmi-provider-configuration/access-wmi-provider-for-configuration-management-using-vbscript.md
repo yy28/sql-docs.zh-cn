@@ -1,5 +1,5 @@
 ---
-title: 修改 SQL Server 服务高级属性使用 VBScript |Microsoft Docs
+title: 使用 VBScript 修改 SQL Server 服务高级属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: f3a380f80b4ecc7540e29605543722edd55e226d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62705067"
 ---
 # <a name="modify-sql-server-service-advanced-properties-using-vbscript"></a>使用 VBScript 修改 SQL Server 服务高级属性
-  本部分介绍如何创建 VBScript 程序，以列出已安装实例的版本[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的计算机上运行。  
+  本部分介绍如何创建一个 VBScript 程序，用于列出计算机上运行的已安装[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的版本。  
   
  代码示例列出了运行在计算机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例及其版本。  
   
@@ -38,9 +38,9 @@ ms.locfileid: "62705067"
   
 4.  使用 `ExecQuery` 方法和 WQL 查询检索 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已安装实例的名称和版本。  
   
-5.  保存该文件。  
+5.  保存文件。  
   
-6.  通过键入运行该脚本`cscript test.vbs`在命令提示符处。  
+6.  在命令提示符处键入`cscript test.vbs`以运行脚本。  
   
 ## <a name="example"></a>示例  
   

@@ -15,10 +15,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/14/2017
 ms.openlocfilehash: 7075bf87ed64686750bc4a267af431268987ff35
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71708214"
 ---
 # <a name="import-and-export-bulk-data-by-using-the-bcp-utility-sql-server"></a>使用 bcp 实用工具导入和导出大容量数据 (SQL Server)
@@ -27,11 +27,11 @@ ms.locfileid: "71708214"
   
  bcp 实用工具 (Bcp.exe) 是一个使用大容量复制程序 (BCP) API 的命令行工具。 bcp 实用工具可执行以下任务：  
   
--   将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中的数据大容量导出到数据文件中。  
+-   将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中的数据批量导出到数据文件中。  
   
 -   从查询中批量导出数据。  
   
--   将数据文件中的数据大容量导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中。  
+-   将数据文件中的数据批量导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中。  
   
 -   生成格式化文件。  
   
@@ -50,35 +50,35 @@ ms.locfileid: "71708214"
 
  有关 **bcp** 示例，请参阅：  
   
--   [bcp Utility](../../tools/bcp-utility.md)  
+-   [bcp 实用工具](../../tools/bcp-utility.md)  
   
 -   [创建格式化文件 (SQL Server)](create-a-format-file-sql-server.md)  
   
 -   [批量导入和导出 XML 文档的示例 (SQL Server)](examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
   
--   [批量导入数据时保留标识值 (SQL Server)](keep-identity-values-when-bulk-importing-data-sql-server.md)  
+-   [大容量导入数据时保留标识值 &#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
   
 -   [在批量导入期间保留 Null 或使用默认值 (SQL Server)](keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)  
   
--   [指定字段终止符和行终止符 (SQL Server)](specify-field-and-row-terminators-sql-server.md)  
+-   [指定字段终止符和行终止符 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
   
 -   [使用格式化文件批量导入数据 (SQL Server)](use-a-format-file-to-bulk-import-data-sql-server.md)  
   
--   [使用字符格式导入或导出数据 (SQL Server)](use-character-format-to-import-or-export-data-sql-server.md)  
+-   [使用字符格式导入或导出数据 &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
   
--   [使用本机格式导入或导出数据 (SQL Server)](use-native-format-to-import-or-export-data-sql-server.md)  
+-   [使用本机格式导入或导出数据 &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [使用 Unicode 字符格式导入或导出数据 (SQL Server)](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [使用 Unicode 字符格式导入或导出数据 &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
--   [使用 Unicode 本机格式导入或导出数据 (SQL Server)](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+-   [使用 Unicode 本机格式导入或导出数据 &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
 
 ## <a name="see-also"></a>另请参阅
 
-[INSERT &#40;&#41; transact-sql](/sql/t-sql/statements/insert-transact-sql)
-[SELECT 子句&#40;&#41; transact-sql](/sql/t-sql/queries/select-clause-transact-sql)
-[bcp 实用工具](../../tools/bcp-utility.md)   
-[准备大容量导入&#40;数据&#41; SQL Server](prepare-to-bulk-import-data-sql-server.md)
-[ &#40;BULK INSERT transact-sql&#41; ](/sql/t-sql/statements/bulk-insert-transact-sql)
-[大容量导入和导出数据&#40;SQL Server&#41; ](bulk-import-and-export-of-data-sql-server.md)
-[OPENROWSET &#40;transact-sql&#41; ](/sql/t-sql/functions/openrowset-transact-sql)
-[创建格式化文件&#40;SQL Server&#41; ](create-a-format-file-sql-server.md)
+[INSERT &#40;transact-sql&#41;](/sql/t-sql/statements/insert-transact-sql) 
+ [SELECT 子句 &#40;transact-sql&#41;](/sql/t-sql/queries/select-clause-transact-sql) 
+ [bcp 实用工具](../../tools/bcp-utility.md)   
+[准备大容量导入数据 &#40;SQL Server&#41;](prepare-to-bulk-import-data-sql-server.md) 
+ [BULK INSERT &#40;transact-sql&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) 
+[大容量导入和导出数据 &#40;](bulk-import-and-export-of-data-sql-server.md) 
+SQL Server&#41;[OPENROWSET &#40;transact-sql&#41;](/sql/t-sql/functions/openrowset-transact-sql) 
+[创建格式化文件 &#40;SQL Server](create-a-format-file-sql-server.md)&#41;

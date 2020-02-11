@@ -1,5 +1,5 @@
 ---
-title: 视图集合、 CommandText 属性示例 (VB) |Microsoft Docs
+title: Views 集合，CommandText 属性示例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,10 +16,10 @@ ms.assetid: a05a0190-352d-44ff-9488-0c94e9fb656e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b185bd3c5d42eb6aa9078f842280fe11e1383202
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964767"
 ---
 # <a name="views-collection-commandtext-property-example-vb"></a>视图集合、CommandText 属性示例 (VB)
@@ -76,9 +76,9 @@ End Sub
 ' EndViewsCollectionVB  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [ActiveConnection 属性 (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [目录对象 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Command 属性 (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
- [视图对象 (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
+## <a name="see-also"></a>另请参阅  
+ [ActiveConnection 属性（ADOX）](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
+ [目录对象（ADOX）](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Command 属性（ADOX）](../../../ado/reference/adox-api/command-property-adox.md)   
+ [视图对象（ADOX）](../../../ado/reference/adox-api/view-object-adox.md)   
  [视图集合 (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

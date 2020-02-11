@@ -1,5 +1,5 @@
 ---
-title: FLWOR 语句和迭代 (XQuery) |Microsoft Docs
+title: FLWOR 语句和迭代（XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,10 +24,10 @@ ms.assetid: d7cd0ec9-334a-4564-bda9-83487b6865cb
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9deb87d506e167d3de3439e0a07cfbb8bc040fac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038903"
 ---
 # <a name="flwor-statement-and-iteration-xquery"></a>FLWOR 语句和迭代 (XQuery)
@@ -49,9 +49,11 @@ ms.locfileid: "68038903"
   
 -   可选的 `order by` 子句。  
   
--   `return` 表达式。 `return` 子句中的表达式用于构造 FLWOR 语句的结果。  
+-   
+  `return` 表达式。 
+  `return` 子句中的表达式用于构造 FLWOR 语句的结果。  
   
- 例如，以下查询循环访问 <`Step`> 元素的第一个生产位置，并返回的字符串值 <`Step`> 节点：  
+ 例如，下面的查询将在第一个制造`Step`位置上循环访问 <> 元素，并返回 <`Step`> 节点的字符串值：  
   
 ```sql
 declare @x xml  
@@ -73,13 +75,13 @@ SELECT @x.query('
 ')  
 ```  
   
- 下面是结果：  
+ 结果如下：  
   
 ```  
 Manu step 1 at Loc 1 Manu step 2 at Loc 1 Manu step 3 at Loc 1  
 ```  
   
- 以下查询与上一个查询相似，只不过它是针对 ProductModel 表中的 Instructions 列（类型化的 xml 列）指定的。 该查询循环访问所有生产步骤 <`step`> 元素，在特定产品的第一个生产车间。  
+ 以下查询与上一个查询相似，只不过它是针对 ProductModel 表中的 Instructions 列（类型化的 xml 列）指定的。 该查询将循环访问特定产品第一个生产`step`位置的所有生产步骤，<> 元素。  
   
 ```sql
 SELECT Instructions.query('  
@@ -94,15 +96,16 @@ where ProductModelID=7
   
  请注意上述查询的以下方面：  
   
--   `$Step` 是迭代器变量。  
+-   
+  `$Step` 是迭代器变量。  
   
--   [路径表达式](../xquery/path-expressions-xquery.md)， `//AWMI:root/AWMI:Location[1]/AWMI:step`，生成的输入的序列。 此序列的序列是 <`step`> 元素节点子级的第一个 <`Location`> 元素节点。  
+-   [路径表达式](../xquery/path-expressions-xquery.md) `//AWMI:root/AWMI:Location[1]/AWMI:step`生成输入序列。 此顺序是第一个 <`step` `Location`> 元素节点 <> 元素节点子项的顺序。  
   
 -   不使用可选的谓词子句 `where`。  
   
--   `return`表达式返回一个字符串值从 <`step`> 元素。  
+-   `return`表达式返回 <`step`> 元素的字符串值。  
   
- [String 函数 (XQuery)](../xquery/data-accessor-functions-string-xquery.md)用于检索的字符串值 <`step`> 节点。  
+ [字符串函数（XQuery）](../xquery/data-accessor-functions-string-xquery.md)用于检索 <`step`> 节点的字符串值。  
   
  下面是部分结果：  
   
@@ -141,9 +144,9 @@ SELECT @x.query('
   
  在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，不允许使用异类序列。 尤其不允许使用由原子值和节点混合组成的序列。  
   
- 一起使用频繁地使用迭代[XML 构造](../xquery/xml-construction-xquery.md)中将 XML 转换的语法格式下, 一个查询中所示。  
+ 迭代经常与[Xml 构造](../xquery/xml-construction-xquery.md)语法一起用于转换 xml 格式，如以下查询中所示。  
   
- 在 AdventureWorks 示例数据库中，生产说明存储在**说明**的列**Production.ProductModel**表具有以下形式：  
+ 在 AdventureWorks 示例数据库中， **ProductModel**表的 "**说明**" 列中存储的生产说明具有以下形式：  
   
 ```xml
 <Location LocationID="10" LaborHours="1.2"   
@@ -155,7 +158,7 @@ SELECT @x.query('
 ...  
 ```  
   
- 以下查询将构造新的 XML 具有 <`Location`> 元素所做的工作中心返回作为子元素的位置属性：  
+ 下面的查询将构造新的 XML，该`Location` XML 具有作为子元素返回的工作中心位置属性> 元素 <：  
   
 ```xml
 <Location>  
@@ -187,13 +190,13 @@ where ProductModelID=7
   
  请注意上述查询的以下方面：  
   
--   FLWOR 语句检索一系列 <`Location`> 特定产品的元素。  
+-   FLWOR 语句检索特定产品的 <`Location`> 元素的序列。  
   
--   [数据函数 (XQuery)](../xquery/data-accessor-functions-data-xquery.md)用于提取每个属性的值，因此它们会将其添加到生成的 XML 作为属性而不是文本节点。  
+-   [数据函数（XQuery）](../xquery/data-accessor-functions-data-xquery.md)用于提取每个属性的值，以便将它们作为文本节点（而不是属性）添加到生成的 XML 中。  
   
 -   RETURN 子句中的表达式将构造所需的 XML。  
   
- 这是部分结果：  
+ 下面是部分结果：  
   
 ```xml
 <Location>  
@@ -226,9 +229,9 @@ where ProductModelID=7
 ```  
   
 ## <a name="using-the-where-clause"></a>使用 where 子句  
- 可以使用`where`子句来筛选迭代结果。 下面的示例说明了这一点。  
+ 可以使用`where`子句来筛选迭代的结果。 下面的示例说明了这一点。  
   
- 在生产自行车时，生产过程经过了一系列生产车间。 每个生产车间定义一个生产步骤序列。 以下查询仅检索那些生产某个自行车型号并且生产步骤少于三步的生产车间。 这就是，它们具有三个 <`step`> 元素。  
+ 在生产自行车时，生产过程经过了一系列生产车间。 每个生产车间定义一个生产步骤序列。 以下查询仅检索那些生产某个自行车型号并且生产步骤少于三步的生产车间。 也就是说，它们具有小于三个 <`step`> 元素。  
   
 ```sql
 SELECT Instructions.query('  
@@ -246,17 +249,19 @@ where ProductModelID=7
   
  请注意上述查询的以下方面：  
   
--   `where`关键字使用**count （)** 函数计数的数量 <`step`> 子元素中每个工作中心位置。  
+-   关键字使用**count （）** 函数来计算每个工作中心位置中`step`> 子元素的 <数量。 `where`  
   
--   `return` 表达式将构造您希望从迭代结果生成的 XML。  
+-   
+  `return` 表达式将构造您希望从迭代结果生成的 XML。  
   
- 下面是结果：  
+ 结果如下：  
   
 ```  
 <Location LocationID="30"/>   
 ```  
   
- `where` 子句中的表达式的结果使用下列规则按指定的顺序转换为布尔值。 这些规则与路径表达式中的谓词规则相同，只不过不允许使用整数：  
+ 
+  `where` 子句中的表达式的结果使用下列规则按指定的顺序转换为布尔值。 这些规则与路径表达式中的谓词规则相同，只不过不允许使用整数：  
   
 1.  如果 `where` 表达式返回一个空序列，则其有效的布尔值为 False。  
   
@@ -267,7 +272,7 @@ where ProductModelID=7
 4.  否则，它将出现静态错误。  
   
 ## <a name="multiple-variable-binding-in-flwor"></a>FLWOR 中的多个变量绑定  
- 可以用单个 FLWOR 表达式将多个变量绑定到输入序列。 在下面的示例中，查询针对非类型化的 xml 变量指定。 FLOWR 表达式将返回第一个 <`Step`> 元素子级中每个 <`Location`> 元素。  
+ 可以用单个 FLWOR 表达式将多个变量绑定到输入序列。 在下面的示例中，查询针对非类型化的 xml 变量指定。 FLOWR 表达式返回每个 <`Step` `Location`> 元素中的第一个 <> 元素子级。  
   
 ```sql
 declare @x xml  
@@ -295,20 +300,22 @@ SELECT @x.query('
   
 -   `for`表达式定义`$Loc`和 $`FirstStep`变量。  
   
--   `two` 和 `/ManuInstructions/Location` `$FirstStep in $Loc/Step[1]` 表达式相互关联，`$FirstStep` 的值取决于 `$Loc` 的值。  
+-   
+  `two` 和 `/ManuInstructions/Location``$FirstStep in $Loc/Step[1]` 表达式相互关联，`$FirstStep` 的值取决于 `$Loc` 的值。  
   
--   与关联的表达式`$Loc`生成一系列 <`Location`> 元素。 每个 <`Location`> 元素中，`$FirstStep`生成一个序列 <`Step`> 元素中，单一实例。  
+-   与`$Loc`相关联的表达式将生成 <`Location`> 元素的序列。 对于每个`Location` <> 元素`$FirstStep` ，将生成一个 <`Step`> 元素的序列，即单一实例。  
   
--   `$Loc` 在与 `$FirstStep` 变量相关联的表达式中指定。  
+-   
+  `$Loc` 在与 `$FirstStep` 变量相关联的表达式中指定。  
   
- 下面是结果：  
+ 结果如下：  
   
 ```  
 Manu step 1 at Loc 1   
 Manu step 1 at Loc 2  
 ```  
   
- 下面的查询是类似，只不过它针对类型化的 Instructions 列指定**xml**列的**ProductModel**表。 [XML 构造 (XQuery)](../xquery/xml-construction-xquery.md)用于生成所需的 XML。  
+ 下面的查询是类似的，但它是针对**ProductModel**表的指令列的类型化**xml**列指定的。 [Xml 构造（XQuery）](../xquery/xml-construction-xquery.md)用于生成所需的 xml。  
   
 ```sql
 SELECT Instructions.query('  
@@ -326,11 +333,12 @@ WHERE ProductModelID=7
   
  请注意上述查询的以下方面：  
   
--   `for` 子句定义了两个变量：`$WC` 和 `$S`。 在生产某个自行车产品型号时，与 `$WC` 相关联的表达式将生成一系列生产车间。 分配给 `$S` 变量的路径表达式将为 `$WC` 中的每个生产车间序列生成一个相应的步骤序列。  
+-   
+  `for` 子句定义了两个变量：`$WC` 和 `$S`。 在生产某个自行车产品型号时，与 `$WC` 相关联的表达式将生成一系列生产车间。 分配给 `$S` 变量的路径表达式将为 `$WC` 中的每个生产车间序列生成一个相应的步骤序列。  
   
--   Return 语句构造具有 XML <`Step`> 元素，其中包含的生产步骤和**LocationID**作为其属性。  
+-   Return 语句构造了包含 <`Step`> 元素的 XML，该元素包含生产步骤和**LocationID**作为其属性。  
   
--   **声明默认元素命名空间**XQuery prolog 中使用，以便生成的 XML 中的所有命名空间声明出现在顶级元素。 这使结果的可读性更强。 有关默认命名空间的详细信息，请参阅[处理 XQuery 中的命名空间](../xquery/handling-namespaces-in-xquery.md)。  
+-   **Declare 默认元素命名空间**在 XQuery 序言中使用，因此生成的 XML 中的所有命名空间声明都显示在顶级元素上。 这使结果的可读性更强。 有关默认命名空间的详细信息，请参阅[在 XQuery 中处理命名空间](../xquery/handling-namespaces-in-xquery.md)。  
   
  下面是部分结果：  
   
@@ -352,7 +360,7 @@ WHERE ProductModelID=7
 ```  
   
 ## <a name="using-the-order-by-clause"></a>使用 order by 子句  
- 通过使用 FLWOR 表达式中的 `order by` 子句可在 XQuery 中进行排序。 排序表达式传递给`order by`子句必须返回的值的类型的有效值**gt**运算符。 每个排序表达式必须针对每一项生成一个单独的序列。 默认情况下，按升序进行排序。 您也可以选择为每个排序表达式指定升序或降序顺序。  
+ 通过使用 FLWOR 表达式中的 `order by` 子句可在 XQuery 中进行排序。 传递给`order by`子句的排序表达式必须返回其类型对**gt**运算符有效的值。 每个排序表达式必须针对每一项生成一个单独的序列。 默认情况下，按升序进行排序。 您也可以选择为每个排序表达式指定升序或降序顺序。  
   
 > [!NOTE]  
 >  通过在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中实现 XQuery 进行的字符串值的排序比较始终是使用二进制 Unicode 码位排序规则来执行的。  
@@ -373,13 +381,13 @@ FROM Person.Person
 WHERE BusinessEntityID=291;  
 ```  
   
- 请注意，[原子化 (XQuery)](../xquery/atomization-xquery.md)过程中检索的原子值 <`number`> 元素之前将其传递给`order by`。 可以通过编写表达式**data （)** 函数，但这不是必需。  
+ 请注意，[原子化（XQuery）](../xquery/atomization-xquery.md)进程先检索 <`number`> 元素的原子值，然后再将其`order by`传递给。 您可以通过使用**data （）** 函数来编写表达式，但这不是必需的。  
   
 ```  
 order by data($a/act:number[1]) descending  
 ```  
   
- 下面是结果：  
+ 结果如下：  
   
 ```xml
 <act:telephoneNumber xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
@@ -406,7 +414,7 @@ FROM Person.Person
 WHERE BusinessEntityID=291;  
 ```  
   
- 还可以按属性值进行排序。 例如，以下查询将检索新创建 <`Location`> 具有按 LaborHours 属性以降序顺序排序的 LocationID 和 LaborHours 属性的元素。 结果，将首先返回工时最长的生产车间。  
+ 还可以按属性值进行排序。 例如，下面的查询将检索新创建的 <`Location`> 元素，这些元素的 LocationID 和 LaborHours 属性按降序排序。 结果，将首先返回工时最长的生产车间。  
   
 ```sql
 SELECT Instructions.query('  
@@ -423,7 +431,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7;  
 ```  
   
- 下面是结果：  
+ 结果如下：  
   
 ```  
 <Location LocationID="60" LaborHours="4"/>  
@@ -434,7 +442,7 @@ WHERE ProductModelID=7;
 <Location LocationID="45" LaborHours=".5"/>  
 ```  
   
- 在以下查询中，将按元素名称对结果进行排序。 此查询将从产品目录中检索特定产品的规范。 规范是子级的 <`Specifications`> 元素。  
+ 在以下查询中，将按元素名称对结果进行排序。 此查询将从产品目录中检索特定产品的规范。 规范是 <`Specifications`> 元素的子元素。  
   
 ```sql
 SELECT CatalogDescription.query('  
@@ -450,11 +458,12 @@ where ProductModelID=19;
   
  请注意上述查询的以下方面：  
   
--   `/p1:ProductDescription/p1:Specifications/*`表达式返回的子元素 <`Specifications`>。  
+-   `/p1:ProductDescription/p1:Specifications/*`表达式返回 <`Specifications`> 的元素子级。  
   
--   `order by (local-name($a))` 表达式将按元素名称的本地部分对序列进行排序。  
+-   
+  `order by (local-name($a))` 表达式将按元素名称的本地部分对序列进行排序。  
   
- 下面是结果：  
+ 结果如下：  
   
 ```xml
 <Color>Available in most colors</Color>  
@@ -481,7 +490,7 @@ select @x.query('
 ')  
 ```  
   
- 下面是结果：  
+ 结果如下：  
   
 ```xml
 <Person />  
@@ -489,7 +498,7 @@ select @x.query('
 <Person Name="B" />  
 ```  
   
- 您可以指定多个排序条件，如以下示例中所示。 此示例中的查询进行排序 <`Employee`> 元素先按 Title 再按 Administrator 属性值。  
+ 您可以指定多个排序条件，如以下示例中所示。 本示例中的查询首先按`Employee`标题和管理员属性值对 <> 元素进行排序。  
   
 ```sql
 declare @x xml  
@@ -510,7 +519,7 @@ order by $e/@Title ascending, $e/@Gender descending
 ')  
 ```  
   
- 下面是结果：  
+ 结果如下：  
   
 ```xml
 <Employee ID="8" Title="Administrator" Gender="M" />  
@@ -532,7 +541,7 @@ order by $e/@Title ascending, $e/@Gender descending
   
 -   不支持对 `order by` 使用 empty least、empty greatest 和 collation 关键字  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [XQuery 表达式](../xquery/xquery-expressions.md)  
   
   

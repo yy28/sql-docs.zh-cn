@@ -11,17 +11,17 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 726fb1ffd4175afa0d247d2029db559db2ff3231
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68475975"
 ---
 # <a name="sql-server-index-design-guide"></a>SQL Server 索引设计指南
 
   索引设计不佳和缺少索引是提高数据库和应用程序性能的主要障碍。 设计高效的索引对于获得良好的数据库和应用程序性能极为重要。 本 SQL Server 索引设计指南包含帮助您设计高效索引以满足应用程序需要的信息和最佳实践。  
   
-**适用**于: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]到[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] (除非另有说明)。  
+**适用**于： [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]到[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] （除非另有说明）。  
   
  本指南假定读者对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中提供的索引类型有一般了解。 有关索引类型的一般说明，请参阅 [索引类型](../relational-databases/indexes/indexes.md)。  
   
@@ -41,13 +41,14 @@ ms.locfileid: "68475975"
   
  [其他阅读材料](#Additional_Reading)  
   
-##  <a name="Basics"></a> 索引设计基础知识  
+##  <a name="Basics"></a>索引设计基础知识  
 
  索引是与表或视图关联的磁盘上结构，可以加快从表或视图中检索行的速度。 索引包含由表或视图中的一列或多列生成的键。 这些键存储在一个结构（B 树）中，使 SQL Server 可以快速高效地找到与键值关联的行。  
   
  为数据库及其工作负荷选择正确的索引是一项需要在查询速度与更新所需开销之间取得平衡的复杂任务。 如果索引较窄，或者说索引关键字中只有很少的几列，则需要的磁盘空间和维护开销都较少。 而另一方面，宽索引可覆盖更多的查询。 您可能需要试验若干不同的设计，才能找到最有效的索引。 可以添加、修改和删除索引而不影响数据库架构或应用程序设计。 因此，应试验多个不同的索引而无需犹豫。  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的查询优化器可在大多数情况下可靠地选择最高效的索引。 总体索引设计策略应为查询优化器提供可供选择的多个索引，并依赖查询优化器做出正确的决定。 这在多种情况下可减少分析时间并获得良好的性能。 若要查看查询优化器对特定查询使用的索引，请在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的“查询”菜单上选择“包括实际的执行计划”。  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的查询优化器可在大多数情况下可靠地选择最高效的索引。 总体索引设计策略应为查询优化器提供可供选择的多个索引，并依赖查询优化器做出正确的决定。 这在多种情况下可减少分析时间并获得良好的性能。 若要查看查询优化器对特定查询使用的索引，请在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的“查询”**** 菜单上选择“包括实际的执行计划”****。  
   
  不要总是将索引的使用等同于良好的性能，或者将良好的性能等同于索引的高效使用。 如果只要使用索引就能获得最佳性能，那查询优化器的工作就简单了。 但事实上，不正确的索引选择并不能获得最佳性能。 因此，查询优化器的任务是只在索引或索引组合能提高性能时才选择它，而在索引检索有碍性能时则避免使用它。  
   
@@ -55,7 +56,7 @@ ms.locfileid: "68475975"
 
  建议的索引设计策略包括以下任务：  
   
-1.  了解数据库本身的特征。 例如，它是频繁修改数据的联机事务处理 (OLTP) 数据库，还是主要包含只读数据且必须快速处理大型数据集的决策支持系统 (DSS) 或数据仓库 (OLAP) 数据库？ 在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]中， *xVelocity 内存优化的列存储* 索引尤其适用于典型的数据仓库数据集。 列存储索引可以通过为常见数据仓库查询（如筛选、聚合、分组和星型联接查询）提供更快的性能，以转变用户的数据仓库体验。 有关详细信息, 请参阅[描述的列存储索引](../relational-databases/indexes/columnstore-indexes-described.md)。  
+1.  了解数据库本身的特征。 例如，它是频繁修改数据的联机事务处理 (OLTP) 数据库，还是主要包含只读数据且必须快速处理大型数据集的决策支持系统 (DSS) 或数据仓库 (OLAP) 数据库？ 在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]中， *xVelocity 内存优化的列存储* 索引尤其适用于典型的数据仓库数据集。 列存储索引可以通过为常见数据仓库查询（如筛选、聚合、分组和星型联接查询）提供更快的性能，以转变用户的数据仓库体验。 有关详细信息，请参阅[描述的列存储索引](../relational-databases/indexes/columnstore-indexes-described.md)。  
   
 2.  了解最常用的查询的特征。 例如，了解到最常用的查询联接两个或多个表将有助于决定要使用的最佳索引类型。  
   
@@ -67,7 +68,7 @@ ms.locfileid: "68475975"
   
      或者，聚集索引和非聚集索引也可以使用跨越多个文件组的分区方案。 在维护整个集合的完整性时，使用分区可以快速而有效地访问或管理数据子集，从而使大型表或索引更易于管理。 有关详细信息，请参阅 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)。 在考虑分区时，应确定是否应对齐索引，即，是按实质上与表相同的方式进行分区，还是单独分区。  
   
-##  <a name="General_Design"></a> 常规索引设计指南  
+##  <a name="General_Design"></a>常规索引设计指南  
 
  经验丰富的数据库管理员能够设计出好的索引集，但是，即使对于不特别复杂的数据库和工作负荷来说，这项任务也十分复杂、耗时和易于出错。 了解数据库、查询和数据列的特征可以帮助您设计出最佳索引。  
   
@@ -75,13 +76,13 @@ ms.locfileid: "68475975"
 
  设计索引时，应考虑以下数据库准则：  
   
--   对表编制大量索引会影响 INSERT、UPDATE、DELETE 和 MERGE 语句的性能，因为当表中的数据更改时，所有索引都须进行适当的调整。 例如，如果某个列在几个索引中使用且您执行修改该列数据的 UPDATE 语句，则必须更新包含该列的每个索引以及基础的基表（堆或聚集索引）中的该列。  
+-   一个表中含有大量索引会影响 INSERT、UPDATE、DELETE 和 MERGE 等语句的性能，因为所有索引必须随表格中数据的更改进行适当调整。 例如，如果某个列在几个索引中使用且您执行修改该列数据的 UPDATE 语句，则必须更新包含该列的每个索引以及基础的基表（堆或聚集索引）中的该列。  
   
     -   避免对经常更新的表进行过多的索引，并且索引应保持较窄，就是说，列要尽可能少。  
   
     -   使用多个索引可以提高更新少而数据量大的查询的性能。 大量索引可以提高不修改数据的查询（例如 SELECT 语句）的性能，因为查询优化器有更多的索引可供选择，从而可以确定最快的访问方法。  
   
--   对小表进行索引可能不会产生优化效果，因为查询优化器在遍历用于搜索数据的索引时，花费的时间可能比执行简单的表扫描还长。 因此，小表的索引可能从来不用，但仍必须在表中的数据更改时进行维护。  
+-   为小表格编制索引也许不是最佳方法，因为查询优化器遍历用于搜索数据的索引所耗费的时间比执行简单表扫描的时间更长。 因此，小表格的索引可能从来不用，但仍然须随表格中数据的更改而进行维护。  
   
 -   视图包含聚合、表联接或聚合和联接的组合时，视图的索引可以显著地提升性能。 若要使查询优化器使用视图，并不一定非要在查询中显式引用该视图。  
   
@@ -95,7 +96,7 @@ ms.locfileid: "68475975"
   
 -   涵盖索引可以提高查询性能，因为符合查询要求的全部数据都存在于索引本身中。 也就是说，只需要索引页，而不需要表的数据页或聚集索引来检索所需数据，因此，减少了总体磁盘 I/O。 例如，对某一表（其中对列 **a** 、 **b** 和 **c**创建了组合索引）的列 **a**和 **b** 的查询，仅仅从该索引本身就可以检索指定数据。  
   
--   将插入或修改尽可能多的行的查询写入单个语句内，而不要使用多个查询更新相同的行。 仅使用一个语句，就可以利用优化的索引维护。  
+-   编写在单个语句中插入或修改尽可能多个行的查询，而不要使用多个查询更新相同的行。 仅使用一个语句，就可以利用优化的索引维护。  
   
 -   评估查询类型以及如何在查询中使用列。 例如，在完全匹配查询类型中使用的列就适合用于非聚集索引或聚集索引。  
   
@@ -107,7 +108,8 @@ ms.locfileid: "68475975"
   
 -   不能将 `ntext`、`text`、`image`、`varchar(max)`、`nvarchar(max)` 和 `varbinary(max)` 数据类型的列指定为索引键列。 不过，`varchar(max)`、`nvarchar(max)`、`varbinary(max)` 和 `xml` 数据类型的列可以作为非键索引列参与非聚集索引。 有关详细信息，请参阅本指南中的 [具有包含列的索引](#Included_Columns)。  
   
--   `xml` 数据类型的列只能在 XML 索引中用作键列。 有关详细信息，请参阅 [XML 索引 (SQL Server)](../relational-databases/xml/xml-indexes-sql-server.md)。 SQL Server 2012 SP1 引入了称作选择性 XML 索引的一种新的 XML 索引。 这个新的索引可提高 SQL Server 中针对作为 XML 存储的数据的查询性能，从而通过降低索引本身的存储成本来加快大型 XML 数据工作负荷的索引编制和改进可伸缩性。 有关详细信息，请参阅[选择性 XML 索引 (SXI)](../relational-databases/xml/selective-xml-indexes-sxi.md)。  
+-   
+  `xml` 数据类型的列只能在 XML 索引中用作键列。 有关详细信息，请参阅 [XML 索引 (SQL Server)](../relational-databases/xml/xml-indexes-sql-server.md)。 SQL Server 2012 SP1 引入了称作选择性 XML 索引的一种新的 XML 索引。 这个新的索引可提高 SQL Server 中针对作为 XML 存储的数据的查询性能，从而通过降低索引本身的存储成本来加快大型 XML 数据工作负荷的索引编制和改进可伸缩性。 有关详细信息，请参阅[选择性 XML 索引 (SXI)](../relational-databases/xml/selective-xml-indexes-sxi.md)。  
   
 -   检查列的唯一性。 在同一个列组合的唯一索引而不是非唯一索引提供了有关使索引更有用的查询优化器的附加信息。 有关详细信息，请参阅本指南中的 [唯一索引设计指南](#Unique) 。  
   
@@ -137,7 +139,7 @@ ms.locfileid: "68475975"
   
  您也可以通过设置选项（例如 FILLFACTOR）自定义索引的初始存储特征以优化其性能或维护。 而且，通过使用文件组或分区方案可以确定索引存储位置来优化性能。  
   
-###  <a name="Index_placement"></a> 文件组或分区方案的索引设置  
+###  <a name="Index_placement"></a>文件组或分区方案的索引放置  
 
  开发索引设计策略时，应该考虑在与数据库相关联的文件组上放置索引。 仔细选择文件组或分区方案可以改进查询性能。  
   
@@ -165,7 +167,7 @@ ms.locfileid: "68475975"
   
  有关详细信息，请参阅 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)。  
   
-###  <a name="Sort_Order"></a> 索引排序顺序设计指南  
+###  <a name="Sort_Order"></a>索引排序顺序设计指南  
 
  定义索引时，应该考虑索引键列的数据是按升序还是按降序存储。 升序是默认设置，保持与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]早期版本的兼容性。 CREATE INDEX、CREATE TABLE 和 ALTER TABLE 语句的语法在索引和约束中的各列上支持关键字 ASC（升序）和 DESC（降序）：  
   
@@ -180,7 +182,7 @@ ORDER BY RejectedQty DESC, ProductID ASC;
   
  此查询的下列执行计划显示了查询优化器使用 SORT 运算符按 ORDER BY 子句指定的顺序返回结果集。  
   
- ![执行计划显示使用排序运算符。](media/indexsort1.gif "执行计划显示使用排序运算符。")  
+ ![执行计划显示使用了 SORT 运算符。](media/indexsort1.gif "执行计划显示使用了 SORT 运算符。")  
   
  如果使用与查询的 ORDER BY 子句中的键列匹配的键列创建索引，则无需在查询计划中使用 SORT 运算符，从而使查询计划更有效。  
   
@@ -192,15 +194,17 @@ ON Purchasing.PurchaseOrderDetail
   
  再次执行查询后，下列执行计划显示未使用 SORT 运算符，而使用了新创建的非聚集索引。  
   
- ![执行计划显示未使用排序运算符](media/insertsort2.gif "执行计划显示未使用排序运算符")  
+ ![执行计划显示未使用 SORT 运算符](media/insertsort2.gif "执行计划显示未使用 SORT 运算符")  
   
- [!INCLUDE[ssDE](../includes/ssde-md.md)] 可以在两个方向上同样有效地移动。 对于一个在 ORDER BY 子句中列的排序方向倒排的查询，仍然可以使用定义为 `(RejectedQty DESC, ProductID ASC)` 的索引。 例如，包含 ORDER BY 子句 `ORDER BY RejectedQty ASC, ProductID DESC` 的查询可以使用该索引。  
+ 
+  [!INCLUDE[ssDE](../includes/ssde-md.md)] 可以在两个方向上同样有效地移动。 对于一个在 ORDER BY 子句中列的排序方向倒排的查询，仍然可以使用定义为 `(RejectedQty DESC, ProductID ASC)` 的索引。 例如，包含 ORDER BY 子句 `ORDER BY RejectedQty ASC, ProductID DESC` 的查询可以使用该索引。  
   
- 只可以为键列指定排序顺序。 [sys.index_columns](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) 目录视图和 INDEXKEY_PROPERTY 函数报告索引列是按升序还是降序存储。  
+ 只可以为键列指定排序顺序。 
+  [sys.index_columns](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) 目录视图和 INDEXKEY_PROPERTY 函数报告索引列是按升序还是降序存储。  
   
- ![用于 "返回页首" 链接的箭头图标](media/uparrow16x16.gif "用于 \"返回页首\" 链接的箭头图标")[本指南中](#Top)  
+ [本指南中与 "](#Top) ![返回页首" 链接一起使用的箭头图标](media/uparrow16x16.gif "用于返回页首链接的箭头图标")  
   
-##  <a name="Clustered"></a> 聚集索引设计指南  
+##  <a name="Clustered"></a>聚集索引设计指南  
 
  聚集索引基于数据行的键值在表内排序和存储这些数据行。 每个表只能有一个聚集索引，因为数据行本身只能按一个顺序存储。 每个表几乎都对列定义聚集索引来实现下列功能：  
   
@@ -213,7 +217,7 @@ ON Purchasing.PurchaseOrderDetail
   
 -   可用于范围查询。  
   
- 如果未使用 UNIQUE 属性创建聚集索引, 将[!INCLUDE[ssDE](../includes/ssde-md.md)]向表自动添加一个4字节的 uniquifier> 列。 需要时, [!INCLUDE[ssDE](../includes/ssde-md.md)]会自动将 uniquifier> 值添加到行中, 以使每个键唯一。 此列和列值供内部使用，用户不能查看或访问。  
+ 如果未使用 UNIQUE 属性创建聚集索引，将[!INCLUDE[ssDE](../includes/ssde-md.md)]向表自动添加一个4字节的 uniquifier> 列。 需要时， [!INCLUDE[ssDE](../includes/ssde-md.md)]会自动将 uniquifier> 值添加到行中，以使每个键唯一。 此列和列值供内部使用，用户不能查看或访问。  
   
 ### <a name="clustered-index-architecture"></a>聚集索引体系结构  
 
@@ -233,17 +237,17 @@ ON Purchasing.PurchaseOrderDetail
 
  在创建聚集索引之前，应先了解数据是如何被访问的。 考虑对具有以下特点的查询使用聚集索引：  
   
--   使用运算符（如 BETWEEN、>、>=、< 和 <=）返回一系列值。  
+-   使用诸如 BETWEEN、>、>=、< 和 <= 等运算符返回一定范围的值。  
   
-     使用聚集索引找到包含第一个值的行后，便可以确保包含后续索引值的行物理相邻。 例如，如果某个查询在一系列销售订单号间检索记录， `SalesOrderNumber` 列的聚集索引可快速定位包含起始销售订单号的行，然后检索表中所有连续的行，直到检索到最后的销售订单号。  
+     使用聚集索引查找到第一个值的行后，才能保证包含后续索引值的行物理相邻。 例如，如果某个查询在一系列销售订单号间检索记录， `SalesOrderNumber` 列的聚集索引可快速定位包含起始销售订单号的行，然后检索表中所有连续的行，直到检索到最后的销售订单号。  
   
 -   返回大型结果集。  
   
--   使用 JOIN 子句；一般情况下，使用该子句的是外键列。  
+-   使用 JOIN 子句；通常为外键列。  
   
 -   使用 ORDER BY 或 GROUP BY 子句。  
   
-     在 ORDER BY 或 GROUP BY 子句中指定的列的索引，可以使 [!INCLUDE[ssDE](../includes/ssde-md.md)] 不必对数据进行排序，因为这些行已经排序。 这样可以提高查询性能。  
+     在 ORDER BY 或 GROUP BY 子句中指定的列的索引，可以使 [!INCLUDE[ssDE](../includes/ssde-md.md)] 不必对数据进行排序，因为这些行已经排序。 这会有助于提升查询性能。  
   
 ### <a name="column-considerations"></a>列注意事项  
 
@@ -251,7 +255,8 @@ ON Purchasing.PurchaseOrderDetail
   
 -   唯一或包含许多不重复的值  
   
-     例如，雇员 ID 唯一地标识雇员。 `EmployeeID` 列的聚集索引或 PRIMARY KEY 约束将改善基于雇员 ID 号搜索雇员信息的查询的性能。 另外，可对 `LastName`、 `FirstName`、 `MiddleName` 列创建聚集索引，因为经常以这种方式分组和查询雇员记录，而且这些列的组合还可提供高区分度。  
+     例如，雇员 ID 唯一地标识雇员。 
+  `EmployeeID` 列的聚集索引或 PRIMARY KEY 约束将改善基于雇员 ID 号搜索雇员信息的查询的性能。 另外，可对 `LastName`、 `FirstName`、 `MiddleName` 列创建聚集索引，因为经常以这种方式分组和查询雇员记录，而且这些列的组合还可提供高区分度。  
   
 -   按顺序被访问  
   
@@ -273,9 +278,9 @@ ON Purchasing.PurchaseOrderDetail
   
      宽键是若干列或若干大型列的组合。 所有非聚集索引将聚集索引中的键值用作查找键。 为同一表定义的任何非聚集索引都将增大许多，这是因为非聚集索引项包含聚集键，同时也包含为此非聚集索引定义的键列。  
   
- ![用于 "返回页首" 链接的箭头图标](media/uparrow16x16.gif "用于 \"返回页首\" 链接的箭头图标")[本指南中](#Top)  
+ [本指南中与 "](#Top) ![返回页首" 链接一起使用的箭头图标](media/uparrow16x16.gif "用于返回页首链接的箭头图标")  
   
-##  <a name="Nonclustered"></a> 非聚集索引设计指南  
+##  <a name="Nonclustered"></a>非聚集索引设计指南  
 
  非聚集索引包含索引键值和指向表数据存储位置的行定位器。 可以对表或索引视图创建多个非聚集索引。 通常，设计非聚集索引是为改善经常使用的、没有建立聚集索引的查询的性能。  
   
@@ -295,7 +300,7 @@ ON Purchasing.PurchaseOrderDetail
   
 -   如果表有聚集索引或索引视图上有聚集索引，则行定位器是行的聚集索引键。  
   
- 对于索引使用的每个分区，非聚集索引在 **index_id** >1 的 [sys.partitions](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) 中都有对应的一行。 默认情况下，一个非聚集索引有单个分区。 如果一个非聚集索引有多个分区，则每个分区都有一个包含该特定分区的索引行的 B 树结构。 例如，如果一个非聚集索引有四个分区，那么就有四个 B 树结构，每个分区中一个。  
+ 对于索引使用的每个分区，非聚集索引在 [index_id](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) >1 的 **sys.partitions** 中都有对应的一行。 默认情况下，一个非聚集索引有单个分区。 如果一个非聚集索引有多个分区，则每个分区都有一个包含该特定分区的索引行的 B 树结构。 例如，如果一个非聚集索引有四个分区，那么就有四个 B 树结构，每个分区中一个。  
   
  根据非聚集索引中数据类型的不同，每个非聚集索引结构会有一个或多个分配单元，在其中存储和管理特定分区的数据。 每个非聚集索引至少有一个针对每个分区的 IN_ROW_DATA 分配单元（存储索引 B 树页）。 如果非聚集索引包含大型对象 (LOB) 列，则还有一个针对每个分区的 LOB_DATA 分配单元。 此外，如果非聚集索引包含的可变长度列超过 8,060 字节行大小限制，则还有一个针对每个分区的 ROW_OVERFLOW_DATA 分配单元。  
   
@@ -343,7 +348,7 @@ ON Purchasing.PurchaseOrderDetail
   
      如果只有很少的非重复值，例如仅有 1 和 0，则大多数查询将不使用索引，因为此时表扫描通常更有效。 对于这种类型的数据，应考虑对仅出现在少数行中的非重复值创建筛选索引。 例如，如果大部分值都是 0，则查询优化器可以对包含 1 的数据行使用筛选查询。  
   
-####  <a name="Included_Columns"></a> 使用包含列扩展非聚集索引  
+####  <a name="Included_Columns"></a>使用包含列扩展非聚集索引  
 
  您可以通过将非键列添加到非聚集索引的叶级，扩展非聚集索引的功能。 通过包含非键列，可以创建覆盖更多查询的非聚集索引。 这是因为非键列具有下列优点：  
   
@@ -453,9 +458,9 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  您应该确定修改数据时在查询性能上的提升是否超过了对性能的影响，以及是否需要额外的磁盘空间要求。  
   
- ![用于 "返回页首" 链接的箭头图标](media/uparrow16x16.gif "用于 \"返回页首\" 链接的箭头图标")[本指南中](#Top)  
+ [本指南中与 "](#Top) ![返回页首" 链接一起使用的箭头图标](media/uparrow16x16.gif "用于返回页首链接的箭头图标")  
   
-##  <a name="Unique"></a> 唯一索引设计指南  
+##  <a name="Unique"></a>唯一索引设计指南  
 
  唯一索引能够保证索引键中不包含重复的值，从而使表中的每一行从某种方式上具有唯一性。 只有当唯一性是数据本身的特征时，指定唯一索引才有意义。 例如，如果要确保 `NationalIDNumber` 表中 `HumanResources.Employee` 列的值是唯一的，当主键为 `EmployeeID`时，对 `NationalIDNumber` 列创建 UNIQUE 约束。 如果用户尝试在该列中为多个雇员输入相同的值，将显示错误消息并且不能输入重复的值。  
   
@@ -479,15 +484,15 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
 -   唯一非聚集索引可以包括包含性非键列。 有关详细信息，请参阅 [具有包含列的索引](#Included_Columns)。  
   
- ![用于 "返回页首" 链接的箭头图标](media/uparrow16x16.gif "用于 \"返回页首\" 链接的箭头图标")[本指南中](#Top)  
+ [本指南中与 "](#Top) ![返回页首" 链接一起使用的箭头图标](media/uparrow16x16.gif "用于返回页首链接的箭头图标")  
   
-##  <a name="Filtered"></a> 筛选索引设计指南  
+##  <a name="Filtered"></a>筛选索引设计指南  
 
  筛选索引是一种经过优化的非聚集索引，尤其适用于涵盖从定义完善的数据子集中选择数据的查询。 筛选索引使用筛选谓词对表中的部分行进行索引。 与全表索引相比，设计良好的筛选索引可以提高查询性能、减少索引维护开销并可降低索引存储开销。  
   
 ||  
 |-|  
-|**适用范围**： [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。|  
+|**适用范围**： [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]到[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。|  
   
  筛选索引与全表索引相比具有以下优点：  
   
@@ -495,7 +500,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
      设计良好的筛选索引可以提高查询性能和执行计划质量，因为它比全表非聚集索引小并且具有经过筛选的统计信息。 与全表统计信息相比，经过筛选的统计信息更加准确，因为它们只涵盖筛选索引中的行。  
   
--   **减少了索引维护开销**  
+-   **减少了索引维护成本**  
   
      仅在数据操作语言 (DML) 语句对索引中的数据产生影响时，才对索引进行维护。 与全表非聚集索引相比，筛选索引减少了索引维护开销，因为它更小并且仅在对索引中的数据产生影响时才进行维护。 筛选索引的数量可以非常多，特别是在其中包含很少受影响的数据时。 同样，如果筛选索引只包含频繁受影响的数据，则索引大小较小时可以减少更新统计信息的开销。  
   
@@ -503,7 +508,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
      在没必要创建全表索引时，创建筛选索引可以减少非聚集索引的磁盘存储开销。 可以使用多个筛选索引替换一个全表非聚集索引而不会明显增加存储需求。  
   
- 列中包含查询在 SELECT 语句中引用的定义完善的数据子集时，筛选索引很有用。 以下是一些示例：  
+ 列中包含查询在 SELECT 语句中引用的定义完善的数据子集时，筛选索引很有用。 示例如下：  
   
 -   仅包含少量非 NULL 值的稀疏列。  
   
@@ -525,7 +530,8 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
 
  在列中只有少量相关值需要查询时，可以针对值的子集创建筛选索引。 例如，当列中的值大部分为 NULL 并且查询只从非 NULL 值中进行选择时，可以为非 NULL 数据行创建筛选索引。 由此得到的索引与对相同键列定义的全表非聚集索引相比，前者更小且维护开销更低。  
   
- 例如， `AdventureWorks2012` 数据库中有一个包含了 2679 行的 `Production.BillOfMaterials` 表。 `EndDate` 列只有 199 行包含非 NULL 值，其他的 2480 行均包含 NULL。 下面的筛选索引将涵盖这样的查询：返回在该索引中定义的列的查询，以及只选择 `EndDate`中具有非 NULL 值的行的查询。  
+ 例如， `AdventureWorks2012` 数据库中有一个包含了 2679 行的 `Production.BillOfMaterials` 表。 
+  `EndDate` 列只有 199 行包含非 NULL 值，其他的 2480 行均包含 NULL。 下面的筛选索引将涵盖这样的查询：返回在该索引中定义的列的查询，以及只选择 `EndDate`中具有非 NULL 值的行的查询。  
   
 ```sql
 CREATE NONCLUSTERED INDEX FIBillOfMaterialsWithEndDate  
@@ -569,13 +575,14 @@ FROM Production.Product
 WHERE ProductSubcategoryID = 33 AND ListPrice > 25.00 ;  
 ```  
   
-#### <a name="key-columns"></a>键列  
+#### <a name="key-columns"></a>“键列”  
 
  最好在筛选索引定义中包含少量的键或包含列，并且只包含查询优化器为查询执行计划选择筛选索引所需的列。 无论某一筛选索引是否涵盖了查询，查询优化器都可以为查询选择此筛选索引。 但是，如果某一筛选索引涵盖了查询，则查询优化器更有可能选择此筛选索引。  
   
  在某些情况下，筛选索引涵盖查询，但没有将筛选索引表达式中的列作为键或包含列包括在筛选索引定义中。 以下准则说明了筛选索引表达式中的列何时应为筛选索引定义中的键或包含列。 这些示例引用了此前创建的筛选索引 `FIBillOfMaterialsWithEndDate` 。  
   
- 如果筛选索引表达式等效于查询谓词并且查询并未在查询结果中返回筛选索引表达式中的列，则筛选索引表达式中的列不需要作为筛选索引定义中的键或包含列。 例如， `FIBillOfMaterialsWithEndDate` 涵盖下面的查询，因为查询谓词等效于筛选表达式，并且查询结果中未返回 `EndDate` 。 `FIBillOfMaterialsWithEndDate` 不需要将 `EndDate` 作为筛选索引定义中的键或包含列。  
+ 如果筛选索引表达式等效于查询谓词并且查询并未在查询结果中返回筛选索引表达式中的列，则筛选索引表达式中的列不需要作为筛选索引定义中的键或包含列。 例如， `FIBillOfMaterialsWithEndDate` 涵盖下面的查询，因为查询谓词等效于筛选表达式，并且查询结果中未返回 `EndDate` 。 
+  `FIBillOfMaterialsWithEndDate` 不需要将 `EndDate` 作为筛选索引定义中的键或包含列。  
   
 ```sql
 SELECT ComponentID, StartDate FROM Production.BillOfMaterials  
@@ -626,12 +633,12 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
  将数据转换从比较运算符的左边移动到右边可能会改变转换的含义。 在上例中，将 CONVERT 运算符添加到右边时，相应的比较从整数比较更改为 `varbinary` 比较。  
   
- ![用于 "返回页首" 链接的箭头图标](media/uparrow16x16.gif "用于 \"返回页首\" 链接的箭头图标")[本指南中](#Top)  
+ [本指南中与 "](#Top) ![返回页首" 链接一起使用的箭头图标](media/uparrow16x16.gif "用于返回页首链接的箭头图标")  
   
-##  <a name="Additional_Reading"></a> 其他阅读主题  
+##  <a name="Additional_Reading"></a>其他阅读材料  
 
- [使用 SQL Server 2008 索引视图提高性能](https://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
+ [SQL Server 2008 索引视图提高性能](https://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
   
- [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
+ [已分区表和索引](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   
   

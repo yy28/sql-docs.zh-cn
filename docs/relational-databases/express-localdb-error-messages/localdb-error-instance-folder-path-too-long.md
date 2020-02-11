@@ -10,13 +10,13 @@ ms.assetid: c178a308-8d99-47fc-8a49-5a480dc592f6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3db8328576d69fe32cea28d3596c5f9b1658d7b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67995814"
 ---
-# <a name="localdberrorinstancefolderpathtoolong"></a>LOCALDB_ERROR_INSTANCE_FOLDER_PATH_TOO_LONG
+# <a name="localdb_error_instance_folder_path_too_long"></a>LOCALDB_ERROR_INSTANCE_FOLDER_PATH_TOO_LONG
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="details"></a>详细信息  
@@ -27,9 +27,9 @@ ms.locfileid: "67995814"
 |事件 ID|260|  
 |事件源|SQL Server 本地数据库运行时 12.0|  
 |组件|本地数据库运行时 API|  
-|消息正文|本地数据库实例文件夹的完整路径长度大于 MAX_PATH。 该实例必须存储在文件夹： %%LOCALAPPDATA%%\Microsoft\Microsoft SQL Server 本地 DB\Instances\\< 实例名称\>。|  
+|消息正文|本地数据库实例文件夹的完整路径长度大于 MAX_PATH。 此实例必须存储在以下文件夹中：%% LOCALAPPDATA%% \ Microsoft\Microsoft SQL Server 本地\\ DB\Instances<实例\>名称。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  应在其中存储该实例的路径的长度超过 MAX_PATH。  
   
 ## <a name="user-action"></a>用户操作  

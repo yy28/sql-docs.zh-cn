@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be3d21665d41fe7748e6a3a4d070f4001ca306a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762030"
 ---
-# <a name="mssqlserver7933"></a>MSSQLSERVER_7933
+# <a name="mssqlserver_7933"></a>MSSQLSERVER_7933
     
 ## <a name="details"></a>详细信息  
   
@@ -30,9 +30,9 @@ ms.locfileid: "62762030"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC2_FS_ORPHANED_ROWSET_DIRECTORY|  
-|消息正文|表错误：数据库中不存在的 Filestream 目录 ID F_ID 存在一个分区，但相应的分区。|  
+|消息正文|表错误: 存在分区的 Filestream 目录 ID F_ID，但数据库中不存在相应的分区。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  在执行 DBCC CHECKDB 期间，在 FILESTREAM 数据空间中找到了行集目录；但数据库中缺少与其对应的分区。  
   
 ## <a name="user-action"></a>用户操作  

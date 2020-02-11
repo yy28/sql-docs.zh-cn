@@ -1,5 +1,5 @@
 ---
-title: dbo.sysjobsteps (Transact SQL) |Microsoft Docs
+title: dbo. sysjobsteps （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -20,38 +20,39 @@ ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 13cf57e181c3fbb1371c10b554eb9da344a951d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68004731"
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理要执行的作业中的各个步骤的信息。 此表存储中**msdb**数据库。  
+  包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理要执行的作业中的各个步骤的信息。 该表存储在**msdb**数据库中。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|作业的 ID。|  
 |**step_id**|**int**|作业中步骤的 ID。|  
 |**step_name**|**sysname**|作业步骤的名称。|  
-|**subsystem**|**nvarchar(40)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理用于执行作业步骤的子系统的名称。|  
-|**command**|**nvarchar(max)**|要执行的命令**子系统**。|  
-|**flag**|**int**|保留。|  
+|**适用**|**nvarchar （40）**|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理用于执行作业步骤的子系统的名称。|  
+|**command**|**nvarchar(max)**|要由**子系统**执行的命令。|  
+|**随意**|**int**|保留。|  
 |**additional_parameters**|**ntext**|保留。|  
-|**cmdexec_success_code**|**int**|返回的错误级别值**CmdExec**子系统步骤，以指明成功。|  
+|**cmdexec_success_code**|**int**|**CmdExec**子系统步骤返回的错误级别值指示成功。|  
 |**on_success_action**|**tinyint**|成功执行了某个步骤时将要执行的操作。|  
 |**on_success_step_id**|**int**|成功执行了某个步骤时将要执行的下一个步骤的 ID。|  
 |**on_fail_action**|**tinyint**|未成功执行某个步骤时将要执行的操作。|  
 |**on_fail_step_id**|**int**|未成功执行某个步骤时将要执行的下一个步骤的 ID。|  
-|服务器 |**sysname**|保留。|  
-|**database_name**|**sysname**|在其中的数据库的名称**命令**时执行**子系统**为 TSQL。|  
+|**服务**|**sysname**|保留。|  
+|**database_name**|**sysname**|如果**子系统**为 TSQL，则在其中执行**命令**的数据库的名称。|  
 |**database_user_name**|**sysname**|执行该步骤时使用的帐户所属的数据库用户的名称。|  
 |**retry_attempts**|**int**|步骤失败时的重试次数。|  
 |**retry_interval**|**int**|每次重试间的等待时间。|  
 |**os_run_priority**|**int**|保留。|  
-|**output_file_name**|**nvarchar(200)**|时，保存该步骤的输出文件的名称**子系统**为 TSQL、 PowerShell，或**CmdExec** _。_|  
+|**output_file_name**|**nvarchar （200）**|**子系统**为 TSQL、PowerShell 或**CmdExec**时，在其中保存步骤输出的文件的名称 _。_|  
 |**last_run_outcome**|**int**|前一次执行作业步骤的结果。<br /><br /> **0** = 失败<br /><br /> **1** = 成功<br /><br /> **2** = 重试<br /><br /> **3** = 已取消<br /><br /> **5** = 未知|  
 |**last_run_duration**|**int**|该步骤上次运行时的持续时间 (hhmmss)。|  
 |**last_run_retries**|**int**|上一次执行作业步骤时的重试次数。|  
@@ -60,7 +61,7 @@ ms.locfileid: "68004731"
 |**proxy_id**|**int**|作业步骤的代理。|  
 |**step_uid**|**uniqueidentifier**|作业步骤的标识符。|  
   
-## <a name="see-also"></a>请参阅  
- [SQL Server 代理表&#40;Transact SQL&#41;](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;Transact-sql&#41;的 SQL Server 代理表](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 准备好执行 ODBC |Microsoft Docs
+title: 已准备好执行 ODBC |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ ms.assetid: f08c8a98-31ee-48b2-9dbf-6f31c2166dbb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2107ca1eeecc6fad24311c5bce629784ae4ceff0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68023279"
 ---
 # <a name="prepared-execution-odbc"></a>已准备的执行 ODBC
-准备好的执行是多次执行语句的有效方法。 首次编译该语句，或*准备好，* 到访问计划。 然后执行一个或更多时间在更高版本时，访问计划。 有关访问计划的详细信息，请参阅[处理 SQL 语句](../../../odbc/reference/processing-a-sql-statement.md)。  
+准备好的执行是多次执行语句的有效方法。 首先将语句编译或*准备好*到访问计划。 然后，访问计划稍后会执行一次或多次。 有关访问计划的详细信息，请参阅[处理 SQL 语句](../../../odbc/reference/processing-a-sql-statement.md)。  
   
- 垂直和自定义应用程序通常使用准备好的执行来重复执行相同的参数化 SQL 语句。 例如，下面的代码准备某个语句，若要更新的不同部分的价格。 然后执行每次使用不同的参数值多次的语句。  
+ 已准备好的执行通常由垂直和自定义应用程序用于重复执行相同的参数化 SQL 语句。 例如，下面的代码准备一个语句来更新不同部件的价格。 然后，它每次用不同的参数值多次执行语句。  
   
 ```  
 SQLREAL       Price;  
@@ -47,48 +47,48 @@ while (GetPrice(&PartID, &Price)) {
 }  
 ```  
   
- 主要是因为一次; 编译语句的准备好的执行速度快于直接执行的语句执行一次以上，直接执行的语句是在执行每次编译。 准备好的执行还可以提供网络流量减少由于驱动程序可以访问计划标识符到数据源，每次发送该语句执行，而不是整个 SQL 语句，如果数据源支持访问计划的标识符。  
+ 由于语句仅编译一次，因此已准备好的执行速度比直接执行语句多：直接执行的语句将在每次执行时进行编译。 准备好的执行还可以减少网络流量，因为如果数据源支持访问计划标识符，则每次执行语句时，驱动程序都可以将访问计划标识符发送到数据源，而不是整个 SQL 语句。  
   
- 应用程序中检索结果集准备的语句之后之前执行它, 的元数据。 但是，返回的元数据准备，未执行的语句很高的某些驱动程序，应尽可能避免通过可互操作应用程序。 有关详细信息，请参阅[结果集元数据](../../../odbc/reference/develop-app/result-set-metadata.md)。  
+ 应用程序可以在准备好语句之后、执行语句之前检索结果集的元数据。 但是，对于某些驱动程序，为已准备好的未执行语句返回元数据非常昂贵，并且如果可能，应尽量避免使用可互操作的应用程序。 有关详细信息，请参阅[结果集元数据](../../../odbc/reference/develop-app/result-set-metadata.md)。  
   
- 不应对执行一次的语句使用准备好的执行。 对于此类语句，它是比直接执行稍慢，因为它需要的其他 ODBC 函数调用。  
+ 不应对执行一次的语句使用准备好的执行。 对于此类语句，它比直接执行略慢，因为它需要额外的 ODBC 函数调用。  
   
 > [!IMPORTANT]  
->  提交或回滚事务，通过显式调用**SQLEndTran**或通过在自动提交模式下工作，导致某些数据源，以删除在连接上的所有语句访问计划。 有关详细信息，请参阅中的 SQL_CURSOR_COMMIT_BEHAVIOR 和 SQL_CURSOR_ROLLBACK_BEHAVIOR 选项[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)函数说明。  
+>  通过显式调用**SQLEndTran**或在自动提交模式下工作，提交或回滚事务会导致某些数据源删除连接上所有语句的访问计划。 有关详细信息，请参阅[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)函数说明中的 SQL_CURSOR_COMMIT_BEHAVIOR 和 SQL_CURSOR_ROLLBACK_BEHAVIOR 选项。  
   
- 若要准备和执行语句，该应用程序：  
+ 若要准备和执行语句，应用程序需要：  
   
-1.  调用**SQLPrepare**并将其传递包含 SQL 语句的字符串。  
+1.  调用**SQLPrepare**并向其传递包含 SQL 语句的字符串。  
   
-2.  设置任何参数的值。 之前或之后准备语句，则实际上可以设置参数。 有关详细信息，请参阅[语句参数](../../../odbc/reference/develop-app/statement-parameters.md)，在本部分中更高版本。  
+2.  设置任何参数的值。 参数实际上可以在准备语句之前或之后设置。 有关详细信息，请参阅本部分后面的[语句参数](../../../odbc/reference/develop-app/statement-parameters.md)。  
   
-3.  调用**SQLExecute**并执行所必需的例如提取数据的任何其他处理。  
+3.  调用**SQLExecute** ，并执行所需的任何其他处理，如提取数据。  
   
-4.  根据需要重复步骤 2 和 3。  
+4.  根据需要重复步骤2和3。  
   
-5.  当**SQLPrepare**调用时，该驱动程序：  
+5.  调用**SQLPrepare**时，驱动程序：  
   
-    -   修改 SQL 语句，以使用数据源的 SQL 语法，而不分析该语句。 这包括替换中所述的转义序列[ODBC 中的转义序列](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md)。 应用程序可以通过调用检索 SQL 语句的已修改的窗体**SQLNativeSql**。 如果设置 SQL_ATTR_NOSCAN 语句属性不替换转义序列。  
+    -   修改 SQL 语句以使用数据源的 SQL 语法，而不分析语句。 这包括替换[ODBC 中转义序列](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md)中讨论的转义序列。 应用程序可以通过调用**SQLNativeSql**来检索 SQL 语句的修改形式。 如果设置了 SQL_ATTR_NOSCAN 语句特性，则不会替换转义序列。  
   
-    -   将语句发送到准备的数据源。  
+    -   将语句发送到数据源以准备。  
   
-    -   返回的访问计划将标识符存储于更高版本执行 （如果准备成功） 或返回任何错误 （如果所做的准备失败）。 错误包括语法错误，如 SQLSTATE 42000 （语法错误或访问冲突） 和语义错误，如 SQLSTATE 42S02 （基数为表或视图找不到）。  
+    -   存储返回的访问计划标识符以供以后执行（如果准备成功）或返回任何错误（如果准备失败）。 错误包括语法错误，如 SQLSTATE 42000 （语法错误或访问冲突）和语义错误，如 SQLSTATE 42S02 （找不到基表或视图）。  
   
         > [!NOTE]  
-        >  某些驱动程序执行操作现在返回错误，但改为执行该语句时或调用目录函数时返回它们。 因此， **SQLPrepare**可能看起来已成功时实际上它已失败。  
+        >  某些驱动程序在此时不会返回错误，而是在执行语句或调用目录函数时返回错误。 因此， **SQLPrepare**可能看起来是成功的，但实际上它已失败。  
   
-6.  当**SQLExecute**调用时，该驱动程序：  
+6.  调用**SQLExecute**时，驱动程序：  
   
-    -   检索当前的参数值，并根据需要将其转换。 有关详细信息，请参阅[语句参数](../../../odbc/reference/develop-app/statement-parameters.md)，在本部分中更高版本。  
+    -   检索当前参数值，并根据需要对其进行转换。 有关详细信息，请参阅本部分后面的[语句参数](../../../odbc/reference/develop-app/statement-parameters.md)。  
   
-    -   将访问计划标识符和已转换的参数值发送到数据源。  
+    -   向数据源发送访问计划标识符和已转换的参数值。  
   
-    -   返回的任何错误。 这些是如 SQLSTATE 24000 通常运行时错误 （无效的游标状态）。 但是，某些驱动程序将在这里返回语法和语义错误。  
+    -   返回任何错误。 这些错误通常是运行时错误，例如 SQLSTATE 24000 （无效的游标状态）。 但是，某些驱动程序此时返回语法和语义错误。  
   
- 如果数据源不支持语句准备，该驱动程序必须模拟它的范围内。 例如，驱动程序可能不执行任何操作时**SQLPrepare**调用，然后执行直接执行语句时**SQLExecute**调用。  
+ 如果数据源不支持语句准备，驱动程序必须将其模拟到可能的范围。 例如，在调用**SQLPrepare**时，驱动程序可能不执行任何操作，然后在调用**SQLExecute**时直接执行语句。  
   
- 如果数据源支持语法而无需执行检查，该驱动程序可能会提交的语句的检查时**SQLPrepare**调用并将其提交有关执行语句时**SQLExecute**是调用。  
+ 如果数据源不执行语法检查，则在调用**SQLPrepare**时，驱动程序可能会提交用于检查的语句，并在调用**SQLExecute**时提交要执行的语句。  
   
- 如果该驱动程序不能模拟语句准备，它会将存储该语句时**SQLPrepare**调用，并将其提交执行时**SQLExecute**调用。  
+ 如果驱动程序无法模拟语句准备，则在调用**SQLPrepare**时将存储该语句，并在调用**SQLExecute**时提交该语句以执行。  
   
- 模拟的语句准备并不完美，因为**SQLExecute**可以返回正常返回的任何错误**SQLPrepare**。
+ 由于模拟语句准备并不完美， **SQLExecute**可能会返回**SQLPrepare**正常返回的任何错误。

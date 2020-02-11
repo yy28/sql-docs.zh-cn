@@ -1,5 +1,5 @@
 ---
-title: LOCALDB_ERROR_CANNOT_GET_USER_PROFILE_FOLDER | Microsoft Docs
+title: LOCALDB_ERROR_CANNOT_GET_USER_PROFILE_FOLDER |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 976f672285104b559112d91cf1f83276883cf543
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62519495"
 ---
-# <a name="localdberrorcannotgetuserprofilefolder"></a>LOCALDB_ERROR_CANNOT_GET_USER_PROFILE_FOLDER
+# <a name="localdb_error_cannot_get_user_profile_folder"></a>LOCALDB_ERROR_CANNOT_GET_USER_PROFILE_FOLDER
     
 ## <a name="details"></a>详细信息  
   
@@ -29,7 +29,7 @@ ms.locfileid: "62519495"
 |组件|本地数据库运行时 API|  
 |消息正文|无法访问本地应用程序数据的用户配置文件的文件夹(%%LOCALAPPDATA%%)。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  无法检索用户配置文件。  
   
 ## <a name="user-action"></a>用户操作  

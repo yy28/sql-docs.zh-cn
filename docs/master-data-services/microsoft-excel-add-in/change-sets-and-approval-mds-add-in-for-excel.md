@@ -11,10 +11,10 @@ ms.assetid: 5257e054-be61-4a55-b699-708366a759af
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: cca345024fcf34cee4abd3695621c9548cee6121
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728017"
 ---
 # <a name="change-sets-and-approval-mds-add-in-for-excel"></a>变更集和批准（用于 Excel 的 MDS 外接程序）
@@ -26,6 +26,6 @@ ms.locfileid: "73728017"
  如果实体要求对更改进行审批，必须将挂起的更改保存到变更集并提交以供审批。 有关详细信息，请参阅[需要审批 (Master Data Services)](../../master-data-services/approval-required-master-data-services.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [变更集 (Master Data Services)](../../master-data-services/changesets-master-data-services.md)  
+ [变更集 &#40;Master Data Services&#41;](../../master-data-services/changesets-master-data-services.md)  
   
   

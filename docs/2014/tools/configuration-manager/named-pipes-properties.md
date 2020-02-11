@@ -1,5 +1,5 @@
 ---
-title: 命名管道属性 |Microsoft Docs
+title: Named Pipes 属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,16 +16,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5d8b542e709ed7104d851652e75be41ae4d6afec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62911467"
 ---
 # <a name="named-pipes-properties"></a>Named Pipes 属性
-  在使用 Named Pipes 协议时，可以使用“Named Pipes 属性”  对话框的“协议”  页查看或更改 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]侦听的命名管道。  
+  在使用 Named Pipes 协议时，可以使用“Named Pipes 属性”**** 对话框的“协议”**** 页查看或更改 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]侦听的命名管道。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 才能启用或禁用该协议，或更改命名管道。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]必须重新启动才能启用或禁用该协议，或更改命名管道。  
   
 ## <a name="options"></a>选项  
  **已启用**  
@@ -38,11 +38,11 @@ ms.locfileid: "62911467"
  若要更改命名管道，可以在 **“管道名称”** 框中键入新的管道名称，然后停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，再将其重新启动。 由于 **sql\query** 众所周知是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用的命名管道，更改管道可以有效地降低恶意程序攻击的风险。  
   
 ### <a name="example"></a>示例  
- 键入 **\\\\.\pipe\unit\app** 以侦听 **unit\app** 管道。  
+ ** \\键入\\.\pipe\unit\app**以侦听**unit\app**管道。  
   
- 键入 **\\\\.\pipe\acct** 以侦听 **acct** 管道。  
+ ** \\键入\\.\pipe\acct**以侦听**帐户**管道。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [启用或禁用服务器网络协议](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   
  [选择网络协议](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
  [使用命名管道创建有效的连接字符串](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-named-pipes.md)  

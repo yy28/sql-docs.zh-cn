@@ -1,5 +1,5 @@
 ---
-title: SQLColumnPrivileges | Microsoft Docs
+title: SQLColumnPrivileges |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,20 +15,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 737ace72f201f3abe192393b1a1cc3747f5774e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067753"
 ---
 # <a name="sqlcolumnprivileges"></a>SQLColumnPrivileges
-  **SQLColumnPrivileges**是否存在值都返回 SQL_SUCCESS*CatalogName*， *SchemaName*， *TableName*，或*ColumnName*参数。 **SQLFetch**这些参数中使用的值无效时返回 SQL_NO_DATA。  
+  **SQLColumnPrivileges**返回 SQL_SUCCESS*CatalogName*、 *SchemaName*、 *TableName*或*ColumnName*参数是否存在值。 当在这些参数中使用了无效值时， **SQLFetch**将返回 SQL_NO_DATA。  
   
- **SQLColumnPrivileges**可以对静态服务器游标执行。 尝试执行**SQLColumnPrivileges**对可更新的 （动态或键集） 游标将返回 sql_success_with_info 以指示游标类型已更改。  
+ 可以对静态服务器游标执行**SQLColumnPrivileges** 。 尝试对可更新的（动态或键集）游标执行**SQLColumnPrivileges**时，将返回 SQL_SUCCESS_WITH_INFO，指示游标类型已更改。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序通过接受由两部分名称来支持链接服务器上的表报告信息*CatalogName*参数：*Linked_Server_Name.Catalog_Name*。  
+ Native Client ODBC 驱动程序通过接受由两部分组成的*CatalogName*参数的名称来支持链接服务器上表的报告信息： *Linked_Server_Name。 Catalog_Name。* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQLColumnPrivileges 函数](https://go.microsoft.com/fwlink/?LinkId=59335)   
  [ODBC API 实现细节](odbc-api-implementation-details.md)  
   

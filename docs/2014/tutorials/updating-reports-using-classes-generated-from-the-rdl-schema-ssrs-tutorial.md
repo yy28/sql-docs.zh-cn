@@ -1,5 +1,5 @@
 ---
-title: 使用从 RDL 架构 （SSRS 教程） 生成的类更新报表 |Microsoft Docs
+title: 使用从 RDL 架构生成的类更新报表（SSRS 教程） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,21 +15,21 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 313a5268b754089d4ca8964328d53cb23ec6edd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62746111"
 ---
 # <a name="updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial"></a>使用从 RDL 架构生成的类更新报表（SSRS 教程）
-  本教程说明了如何通过使用 XML 架构定义工具 (Xsd.exe) 生成的类，可用于序列化和反序列化报表定义文件 （.rdl 和.rdlc） [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] <xref:System.Xml.Serialization.XmlSerializer>类。  
+  本教程演示了如何使用 XML 架构定义工具（xsd.exe）生成类，这些类使您可以使用[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] <xref:System.Xml.Serialization.XmlSerializer>类来序列化和反序列化报表定义文件（.rdl 和 .rdlc）。  
   
 ## <a name="what-you-will-learn"></a>学习内容  
  在本教程的课程中，您将完成下列活动：  
   
--   创建应用程序中使用[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vsprvs](../includes/vsprvs-md.md)]控制台应用程序项目模板。  
+-   使用 "控制台应用程序[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] " 项目模板创建应用程序。  
   
--   从报表定义语言 (RDL) 架构中使用生成的类**xsd**工具。  
+-   使用**xsd**工具从报表定义语言（RDL）架构生成类。  
   
 -   连接到报表服务器并检索报表定义。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "62746111"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]。  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)].  
   
 -   拥有足够的权限，能够访问报表服务器所在计算机中的报表服务器 Web 服务并向该服务发布报表。  
   
@@ -58,12 +58,12 @@ ms.locfileid: "62746111"
 > [!NOTE]  
 >  安装过程中不会自动安装示例，但是您可以随时安装这些示例。 有关示例的信息，请参阅[SQL Server 产品示例](https://go.microsoft.com/fwlink/?LinkId=182887)。  
   
- **学完本教程的估计时间：** 30 分钟  
+ **完成本教程的估计时间：** 30 分钟  
   
-## <a name="tasks"></a>“任务”  
+## <a name="tasks"></a>任务  
  [第 1 课：创建 RDL 架构 Visual Studio 项目](../../2014/tutorials/lesson-1-create-the-rdl-schema-visual-studio-project.md)  
   
- [第 2 课：从 RDL 架构使用 xsd 工具生成类](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)  
+ [第 2 课：使用 xsd 工具从 RDL 架构生成类](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)  
   
  [第 3 课：从报表服务器加载报表定义](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md)  
   
@@ -71,9 +71,9 @@ ms.locfileid: "62746111"
   
  [第 5 课：将报表定义发布到报表服务器](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md)  
   
- [第 6 课：运行 RDL 架构应用程序&#40;VB C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md)  
+ [第6课：运行 RDL 架构应用程序 &#40;VB-C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [报表定义语言 (SSRS)](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

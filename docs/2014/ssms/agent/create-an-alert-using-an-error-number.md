@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9f0884a37c443f863cf0c1001bae1242852db3ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63135349"
 ---
 # <a name="create-an-alert-using-an-error-number"></a>使用错误号创建警报
-  本主题介绍如何通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 创建在出现特定编号的错误时在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中引发的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报。  
+  本主题介绍如何在中创建[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理警报，该[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]警报将在使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]的情况下出现特定编号的错误时引发。  
   
  **本主题内容**  
   
@@ -42,13 +42,14 @@ ms.locfileid: "63135349"
   
 ###  <a name="Restrictions"></a> 限制和局限  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了一种易用的图形方式来管理整个警报系统，这也是配置警报基础结构的推荐方式。  
+-   
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了一种易用的图形方式来管理整个警报系统，这也是配置警报基础结构的推荐方式。  
   
 -   用 **xp_logevent** 生成的事件在 master 数据库中发生。 因此，除非警报的 **xp_logevent** 为 **@database_name** 或 NULL，否则 **@database_name** 不触发警报。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  默认情况下，只有 **sysadmin** 固定服务器角色的成员才能执行 **sp_add_alert**。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -57,23 +58,23 @@ ms.locfileid: "63135349"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开要使用错误号创建警报的服务器。  
   
-2.  单击加号以展开 **“SQL Server 代理”** 。  
+2.  单击加号以展开 **“SQL Server 代理”**。  
   
-3.  右键单击“警报”  并选择“新建警报”  。  
+3.  右键单击“警报”**** 并选择“新建警报”****。  
   
 4.  在 **“新建警报”** 对话框的 **“名称”** 框中，输入此警报的名称。  
   
 5.  选中 **“启用”** 复选框将运行警报。 默认情况下， **“启用”** 为选中状态。  
   
-6.  在 **“类型”** 列表中，选择 **“SQL Server 事件警报”** 。  
+6.  在 **“类型”** 列表中，选择 **“SQL Server 事件警报”**。  
   
 7.  在 **“事件警报定义”** 下的 **“数据库名称”** 列表中，选择一个数据库以将警报限制到特定数据库。  
   
-8.  在 **“将根据以下条件触发警报”** 下，单击 **“错误号”** ，然后为警报键入有效的错误号。 或者，单击 **“严重性”** ，然后选择将引发警报的特定严重性。  
+8.  在 **“将根据以下条件触发警报”** 下，单击 **“错误号”**，然后为警报键入有效的错误号。 或者，单击 **“严重性”** ，然后选择将引发警报的特定严重性。  
   
 9. 选中与 **“当消息包含以下内容时触发警报”** 复选框以将警报限制到特定的字符序列，然后在 **“消息正文”** 中输入关键字或字符串。 最大字符数为 100。  
   
-10. 单击“确定”  。  
+10. 单击“确定”。   
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -100,6 +101,6 @@ ms.locfileid: "63135349"
     GO  
     ```  
   
- 有关详细信息，请参阅[sp_add_alert &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-alert-transact-sql)。  
+ 有关详细信息，请参阅[&#40;transact-sql&#41;sp_add_alert ](/sql/relational-databases/system-stored-procedures/sp-add-alert-transact-sql)。  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 全文搜索和语义搜索目录视图 (Transact SQL) |Microsoft Docs
+title: 全文搜索和语义搜索目录视图（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 3c10554183501019f00c4f7877fabc102ee44108
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68016558"
 ---
 # <a name="full-text-search-and-semantic-search-catalog-views-transact-sql"></a>全文搜索和语义搜索目录视图 (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68016558"
  每个全文目录对应一行。  
   
  [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md)  
- 为可用于全文索引操作的每个文档类型返回一行。 每一行代表**IFilter**的 SQL Server 实例中注册的接口。  
+ 为可用于全文索引操作的每个文档类型返回一行。 每行表示在 SQL Server 的实例中注册的**IFilter**接口。  
   
  [sys.fulltext_index_catalog_usages](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)  
  对于全文索引引用的每个全文目录，返回与其对应的一行。  
@@ -48,7 +48,7 @@ ms.locfileid: "68016558"
  表对象的每个全文索引各占一行。  
   
  [sys.fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)  
- 在 SQL Server 中注册了断字符的每种语言各占一行。 每行显示的 LCID 和语言的名称。  
+ 在 SQL Server 中注册了断字符的每种语言各占一行。 每一行都显示了语言的 LCID 和名称。  
   
  [sys.fulltext_stoplists](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)  
  对于数据库中的每个全文非索引字表，均存在对应的一行。  
@@ -72,9 +72,9 @@ ms.locfileid: "68016558"
  [sys.fulltext_semantic_languages (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md)  
  为在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中注册统计模型的每种语言返回一行。 注册语言模型后，则支持对该语言进行语义索引。  
   
-## <a name="see-also"></a>请参阅  
- [系统视图&#40;Transact SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+## <a name="see-also"></a>另请参阅  
+ [Transact-sql&#41;的系统视图 &#40;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [全文搜索和语义搜索动态管理视图和函数&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
+ [全文搜索和语义搜索动态管理视图和函数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
   
   

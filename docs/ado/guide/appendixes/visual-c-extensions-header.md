@@ -1,5 +1,5 @@
 ---
-title: VisualC++扩展标头 |Microsoft Docs
+title: Visual C++ Extension 标头 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: e492d307-24cb-489c-a5b0-99cdc09b07da
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 675a31ab333a6c2d92e6afcd6a461b3baebd5b3c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926380"
 ---
 # <a name="visual-c-extensions-header"></a>Visual C++ 扩展标头
-以下标头**icrsint.h**，详细介绍了允许客户端检索中的字段的界面**记录集**到派生类中定义的变量**CADORecordBinding**. 必须指定想要访问每个字段的 ADO 绑定宏。  
+下面的标头**icrsint**，详细信息允许客户端将字段从**记录集**检索到派生自**CADORecordBinding**的类中定义的变量的接口。 您必须为要访问的每个字段指定一个 ADO 绑定宏。  
   
 ```cpp
 #ifndef _ICRSINT_H_  
@@ -207,6 +207,6 @@ public:
 #endif // !_ICRSINT_H_  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [VisualC++扩展插件示例](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
+## <a name="see-also"></a>另请参阅  
+ [Visual C++ 扩展示例](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
  [使用 Visual C++ 扩展](../../../ado/guide/appendixes/using-visual-c-extensions.md)

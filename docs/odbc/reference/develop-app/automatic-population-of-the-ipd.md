@@ -17,17 +17,17 @@ ms.assetid: 1184a7d8-d557-4140-843b-6633ae6deacc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c1591843667ef01c6c88f5dfafb734f044679b2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67909831"
 ---
 # <a name="automatic-population-of-the-ipd"></a>自动填充 IPD
-某些驱动程序都能参数化的查询已准备好后设置 IPD 的字段。 有关参数，包括数据类型、 精度、 小数位数和其他特征的信息自动填充的描述符字段。 这相当于支持**SQLDescribeParam**。 具有其他方式来发现它，例如使用应用程序不知道的参数执行即席查询的时间时，此信息可以是特别有价值的应用程序。  
+在准备好参数化查询后，某些驱动程序能够设置 IPD 字段。 描述符字段会自动填充有关参数的信息，包括数据类型、精度、小数位数和其他特征。 这等效于支持**SQLDescribeParam**。 当应用程序没有其他方法可发现它时，此信息对应用程序特别有用，例如，使用应用程序不知道的参数执行即席查询时。  
   
- 应用程序确定驱动程序是否支持自动填充通过调用**SQLGetConnectAttr**与*属性*SQL_ATTR_AUTO_IPD。 如果返回 SQL_TRUE，则驱动程序支持它并且应用程序可以通过将 SQL_ATTR_ENABLE_AUTO_IPD 语句属性设置为 SQL_TRUE 启用它。  
+ 应用程序通过使用 SQL_ATTR_AUTO_IPD 的*属性*调用**SQLGetConnectAttr**来确定驱动程序是否支持自动填充。 如果返回 SQL_TRUE，则驱动程序支持该驱动程序，并且应用程序可以通过将 SQL_ATTR_ENABLE_AUTO_IPD 语句特性设置为 SQL_TRUE 来启用它。  
   
- 包含参数标记的 SQL 语句已准备好通过调用后，该驱动程序时支持和启用自动填充，填充 IPD 的字段**SQLPrepare**。 应用程序可以检索此信息通过调用**SQLGetDescField**或**SQLGetDescRec**，或**SQLDescribeParam**。 应用程序可以使用信息，以将为参数最合适的应用程序缓冲区绑定或为其指定的数据转换。  
+ 当支持并启用自动填充时，驱动程序将在包含参数标记的 SQL 语句已通过调用**SQLPrepare**准备好后填充 IPD 的字段。 应用程序可以通过调用**SQLGetDescField**或**SQLGetDescRec**或**SQLDescribeParam**检索此信息。 应用程序可以使用这些信息来绑定参数的最合适应用程序缓冲区，或为其指定数据转换。  
   
- 自动填充 IPD 可能会产生对性能产生负面影响。 应用程序可以将其关闭由正在 SQL_ATTR_ENABLE_AUTO_IPD 语句属性重置为 SQL_FALSE （默认值）。
+ 自动填充 IPD 可能会导致性能下降。 应用程序可以通过将 SQL_ATTR_ENABLE_AUTO_IPD 语句特性重置为 SQL_FALSE （默认值）来关闭它。

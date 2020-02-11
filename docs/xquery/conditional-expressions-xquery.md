@@ -1,5 +1,5 @@
 ---
-title: 条件表达式 (XQuery) |Microsoft Docs
+title: 条件表达式（XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -20,16 +20,16 @@ ms.assetid: b280dd96-c80f-4c51-bc06-a88d42174acb
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f593455269b8c005a3b4d3725f4360db77ea48f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039016"
 ---
 # <a name="conditional-expressions-xquery"></a>条件表达式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  XQuery 支持下列条件 **-if-then-else**语句：  
+  XQuery 支持以下条件**if-else**语句：  
   
 ```  
 if (<expression1>)  
@@ -49,13 +49,13 @@ else
   
 -   否则，将引发静态错误。  
   
- 另请注意下列事项：  
+ 另请注意以下几点：  
   
 -   测试表达式必须用括号括起来。  
   
--   **其他**表达式是必需的。 如果不需要该表达式，可以返回“( )”，如本主题中的示例所示。  
+-   **Else**表达式是必需的。 如果不需要该表达式，可以返回“( )”，如本主题中的示例所示。  
   
- 例如，下面的查询指定针对**xml**类型的变量。 **如果**测试条件的 SQL 变量的值 (@v) 通过使用 XQuery 表达式中[sql:variable() 函数](../xquery/xquery-extension-functions-sql-variable.md)扩展函数。 如果变量的值为"FirstName"，它将返回 <`FirstName`> 元素。 否则，它将返回 <`LastName`> 元素。  
+ 例如，下面的查询是针对**xml**类型变量指定的。 **If**条件使用[sql： variable （）函数](../xquery/xquery-extension-functions-sql-variable.md)扩展函数@v测试 XQuery 表达式内的 sql 变量（）的值。 如果变量值为 "FirstName"，它将返回 <`FirstName`> 元素。 否则，它将返回 <`LastName`> 元素。  
   
 ```  
 declare @x xml  
@@ -74,13 +74,13 @@ if ( sql:variable("@v")="FirstName" ) then
 ')  
 ```  
   
- 下面是结果：  
+ 结果如下：  
   
 ```  
 <FirstName>fname</FirstName>  
 ```  
   
- 以下查询从特定产品样式的产品目录说明中检索前两个功能说明。 如果文档有更多的功能，它将添加 <`there-is-more`> 具有空内容元素。  
+ 以下查询从特定产品样式的产品目录说明中检索前两个功能说明。 如果文档中有多个功能，则会添加一个包含`there-is-more`空内容的 <> 元素。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -104,9 +104,9 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- 在前面的查询中的条件**如果**表达式将检查是否有在两个以上的子元素 <`Features`>。 如果有，则在结果中返回 `\<there-is-more/>` 元素。  
+ 在前面的查询中， **if**表达式中的条件将检查 <`Features`> 中是否存在两个以上的子元素。 如果有，则在结果中返回 `\<there-is-more/>` 元素。  
   
- 下面是结果：  
+ 结果如下：  
   
 ```  
 <Product ProductModelID="19" ProductModelName="Mountain 100">  
@@ -122,7 +122,7 @@ WHERE ProductModelID = 19
 </Product>  
 ```  
   
- 在以下查询中，<`Location`> 如果生产车间不指定安装时间，则返回具有 LocationID 属性元素。  
+ 在下面的查询中，如果`Location`工作中心位置未指定设置时间，则返回具有 LocationID 属性的 <> 元素。  
   
 ```  
 SELECT Instructions.query('  
@@ -141,7 +141,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- 下面是结果：  
+ 结果如下：  
   
 ```  
 <WorkCenterLocation LocationID="30" />  
@@ -149,7 +149,7 @@ where ProductModelID=7
 <WorkCenterLocation LocationID="60" />  
 ```  
   
- 此查询可以进行编写，而无需**如果**子句，如下面的示例中所示：  
+ 此查询可以不带**if**子句编写，如以下示例中所示：  
   
 ```  
 SELECT Instructions.query('  
@@ -164,7 +164,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [XQuery 表达式](../xquery/xquery-expressions.md)  
   
   

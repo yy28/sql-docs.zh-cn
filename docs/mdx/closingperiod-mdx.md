@@ -1,5 +1,5 @@
 ---
-title: ClosingPeriod (MDX) |Microsoft Docs
+title: ClosingPeriod （MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 102485ede0e52389d43bdb64742a2564aaa71419
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68016789"
 ---
 # <a name="closingperiod-mdx"></a>ClosingPeriod (MDX)
@@ -37,18 +37,18 @@ ClosingPeriod( [ Level_Expression [ ,Member_Expression ] ] )
 ## <a name="remarks"></a>备注  
  此函数主要用于具有 Time 类型的维度，但也可用于任何维度。  
   
--   如果指定了级别表达式，则**ClosingPeriod**函数使用包含指定的级别，并返回指定级别上的默认成员的后代的最后一个同级的维度。  
+-   如果指定了级别表达式，则**ClosingPeriod**函数将使用包含指定级别的维度，并返回位于指定级别的默认成员的后代中的最后一个同级。  
   
--   如果指定了级别表达式和成员表达式， **ClosingPeriod**函数将返回指定成员在指定级别的后代的最后一个同级。  
+-   如果同时指定了级别表达式和成员表达式，则**ClosingPeriod**函数返回指定成员在指定级别的后代中的最后一个同级。  
   
--   如果指定了级别表达式既不是成员表达式，则**ClosingPeriod**函数使用的默认级别和维度的成员 （如果有） 中的时间类型的多维数据集。  
+-   如果级别表达式和成员表达式均未指定，则**ClosingPeriod**函数将使用多维数据集中的维度的默认级别和成员（如果有）和时间类型。  
   
- **ClosingPeriod**函数等同于下面的 MDX 语句：  
+ **ClosingPeriod**函数等效于下面的 MDX 语句：  
   
- `Tail(Descendants(Member_Expression, Level_Expression), 1)`。  
+ `Tail(Descendants(Member_Expression, Level_Expression), 1)`.  
   
 > [!NOTE]  
->  [OpeningPeriod](../mdx/openingperiod-mdx.md)函数是类似于**ClosingPeriod**函数，不同之处在于**OpeningPeriod**函数返回的第一个同级而不是最后一个同级。  
+>  [OpeningPeriod](../mdx/openingperiod-mdx.md)函数类似于**ClosingPeriod**函数，不同之处在于**OpeningPeriod**函数返回第一个同级，而不是最后一个同级。  
   
 ## <a name="examples"></a>示例  
  下面的示例返回 Date 维度（具有 Time 语义类型）的“FY2007”成员的默认度量值。 返回此成员是因为：“会计年度”级别是“(全部)”级别的第一个后代；“Fiscal”层次结构是默认层次结构（因为它是层次结构集合中的第一个用户定义的层次结构）；而且“FY 2007”成员是此层次结构在此级别处的最后一个同级成员。  
@@ -79,9 +79,9 @@ SELECT ClosingPeriod ([Date].[Fiscal].[Month],[Date].[Fiscal].[Fiscal Year].&[20
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [OpeningPeriod &#40;MDX&#41;](../mdx/openingperiod-mdx.md)   
- [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)   
+ [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
  [LastSibling &#40;MDX&#41;](../mdx/lastsibling-mdx.md)  
   
   

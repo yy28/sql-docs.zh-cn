@@ -1,5 +1,5 @@
 ---
-title: sysmergearticlecolumns (TRANSACT-SQL) |Microsoft Docs
+title: sysmergearticlecolumns （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,24 +18,24 @@ ms.assetid: 1ad8663f-a624-42a2-8641-fefac3433c97
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2edf9a5656eaf9dd3f18adff28562e279db892e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68029961"
 ---
 # <a name="sysmergearticlecolumns-transact-sql"></a>sysmergearticlecolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **Sysmergearticlecolumns**表包含每个表列的合并发布中发布，并将每个列映射到其合并项目占一行。 该表存储在发布数据库中。  
+  合并发布中发布的每个表列在**sysmergearticlecolumns**表中各占一行，并将每个列映射到其合并项目。 该表存储在发布数据库中。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|标识项目。|  
-|**列 id**|**smallint**|标识项目中的列。|  
+|**colid**|**smallint**|标识项目中的列。|  
   
-## <a name="see-also"></a>请参阅  
- [复制表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

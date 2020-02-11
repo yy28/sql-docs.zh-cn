@@ -1,5 +1,5 @@
 ---
-title: sys.sysaltfiles (Transact SQL) |Microsoft Docs
+title: sys. sys.sysaltfiles （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,10 +21,10 @@ ms.assetid: 698dec23-5336-4108-87a5-f8e407f8da09
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 891e88761cac47be83fb69debbbc5e4cb6c401c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68006973"
 ---
 # <a name="syssysaltfiles-transact-sql"></a>sys.sysaltfiles (Transact-SQL)
@@ -35,21 +35,21 @@ ms.locfileid: "68006973"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**fileid**|**smallint**|文件标识号。 它对每个数据库都是唯一的。|  
 |**groupid**|**smallint**|文件组标识号。|  
-|size |**int**|文件大小（以 8 KB 页为单位）。|  
-|**maxsize**|**int**|最大文件大小（以 8 KB 为单位的页）。<br /><br /> 0 = 无增长。<br /><br /> -1 = 文件将一直增长到磁盘充满为止。<br /><br /> 268435456 = 日志文件将增长到最大大小 2 TB。<br /><br /> 注意:如果升级的无限制的日志文件大小的数据库将报告为-1 日志文件的最大大小。|  
-|**增长**|**int**|数据库的增长大小。<br /><br /> 0 = 无增长。 根据状态的值，可以是页数或文件大小的百分比。 如果**状态**为 0x100000，**增长**所占的百分比文件大小; 否则为，它的页数。|  
-|**status**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**perf**|**int**|保留。|  
+|**规格**|**int**|文件大小（以 8 KB 页为单位）。|  
+|**maxsize**|**int**|最大文件大小（以 8 KB 为单位的页）。<br /><br /> 0 = 无增长。<br /><br /> -1 = 文件将一直增长到磁盘充满为止。<br /><br /> 268435456 = 日志文件将增长到最大大小 2 TB。<br /><br /> 注意：如果使用无限制的日志文件大小升级的数据库，日志文件的最大大小将报告为-1。|  
+|**growth**|**int**|数据库的增长大小。<br /><br /> 0 = 无增长。 根据状态的值，可以是页数或文件大小的百分比。 如果**status**为0x100000，则**增长**是文件大小的百分比;否则，为页数。|  
+|**状态值**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**性能**|**int**|保留。|  
 |**dbid**|**smallint**|该文件所属数据库的数据库标识号。|  
-|**name**|**sysname**|文件的逻辑名称。|  
-|**filename**|nvarchar(260) |物理设备的名称。 这包括文件的完整路径。|  
+|**路径名**|**sysname**|文件的逻辑名称。|  
+|**名字**|**nvarchar(260)**|物理设备的名称。 这包括文件的完整路径。|  
   
-## <a name="see-also"></a>请参阅  
- [系统表映射到系统视图&#40;Transact SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [兼容性视图 (Transact SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+## <a name="see-also"></a>另请参阅  
+ [将系统表映射到系统视图 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [Transact-sql&#41;的兼容性视图 &#40;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 使用 Dataadapter 更新 UDT 列 |Microsoft Docs
+title: 用 Dataadapter 更新 UDT 列 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,18 +23,18 @@ ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 2154f5f81842cf8cefd5eac71f42837cbf33da31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68028386"
 ---
 # <a name="accessing-user-defined-types---updating-udt-columns-with-dataadapters"></a>访问用户定义类型 - 使用 DataAdapter 更新 UDT 列
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  用户定义类型 (Udt) 支持通过使用**System.Data.DataSet**和一个**System.Data.SqlClient.SqlDataAdapter**来检索和修改数据。  
+  使用**SqlClient 和 SqlDataAdapter**检索和修改数据**时，支持**用户定义的类型（udt）和用户定义的类型（udt）。  
   
 ## <a name="populating-a-dataset"></a>填充数据集  
- 您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句选择 UDT 列值，以便利用数据适配器填充数据集。 下面的示例假定**点**表定义为具有以下结构和一些示例数据。 以下[!INCLUDE[tsql](../../includes/tsql-md.md)]语句创建**点**表并插入几行。  
+ 您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句选择 UDT 列值，以便利用数据适配器填充数据集。 下面的示例假定您有一个使用以下结构定义的**点**表和一些示例数据。 以下[!INCLUDE[tsql](../../includes/tsql-md.md)]语句将创建**Points**表并插入一些行。  
   
 ```  
 CREATE TABLE dbo.Points (id int PRIMARY Key, p Point);  
@@ -46,7 +46,7 @@ INSERT INTO dbo.Points VALUES (4, CONVERT(Point, '4,6'));
 GO  
 ```  
   
- 以下 ADO.NET 代码段检索有效的连接字符串，创建一个新**SqlDataAdapter**，并填充**System.Data.DataTable**中的数据的行与**点**表。  
+ 以下 ADO.NET 代码片段检索有效的连接字符串，创建新的**SqlDataAdapter**，并使用**Points**表中的数据行填充**system.string。**  
   
 ```vb  
 Dim da As New SqlDataAdapter( _  
@@ -63,16 +63,16 @@ da.Fill(datTable);
 ```  
   
 ## <a name="updating-udt-data-in-a-dataset"></a>更新数据集中的 UDT 数据  
- 可以使用两种方法来更新中的 UDT 列**数据集**:  
+ 您可以使用两种方法来更新**数据集中**的 UDT 列：  
   
--   提供自定义**InsertCommand**， **UpdateCommand**并**DeleteCommand**对象**SqlDataAdapter**对象。  
+-   为**SqlDataAdapter**对象提供自定义的**InsertCommand**、 **UpdateCommand**和**DeleteCommand**对象。  
   
--   使用命令生成器 (**System.Data.SqlClient.SqlCommandBuilder**) 为你自动创建 INSERT、 UPDATE 和 DELETE 命令。 为启用冲突检测，添加**时间戳**列 (别名**rowversion**) 到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表，其中包含用户定义的类型。 **时间戳**数据类型允许您添加版本戳表中的行和保证可在数据库中唯一。 当更改表中的值时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为受此更改影响的行自动更新八个字节的二进制编号。  
+-   使用命令生成器（**SqlClient. SqlCommandBuilder**）自动为您创建 INSERT、UPDATE 和 DELETE 命令。 若要进行冲突检测，请向包含 UDT 的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表添加**时间戳**列（别名**rowversion**）。 **Timestamp**数据类型允许您对表中的行进行版本标记，并且保证在数据库中是唯一的。 当更改表中的值时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为受此更改影响的行自动更新八个字节的二进制编号。  
   
- 请注意， **SqlCommandBuilder**不会考虑对 UDT 执行冲突检测，除非有**时间戳**基础表中的列。 可以比较 UDT，也可以不比较，因此，当使用“比较原始值”选项生成命令时，不会在 WHERE 子句中包含 UDT。  
+ 请注意，除非基础表中有**timestamp**列，否则**SqlCommandBuilder**不会将 UDT 视为冲突检测。 可以比较 UDT，也可以不比较，因此，当使用“比较原始值”选项生成命令时，不会在 WHERE 子句中包含 UDT。  
   
 ### <a name="example"></a>示例  
- 下面的示例，需要创建的第二个表包含**点**UDT 列以及一个**时间戳**列。 这两个表分别用于演示如何创建自定义命令对象来更新数据，以及如何使用**时间戳**列。 运行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句以便另外创建一个表，并使用示例数据填充该表。  
+ 下面的示例要求创建另一个包含**Point** UDT 列以及**时间戳**列的表。 这两个表用于说明如何创建自定义命令对象来更新数据，以及如何使用**时间戳**列更新。 运行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句以便另外创建一个表，并使用示例数据填充该表。  
   
 ```  
 CREATE TABLE dbo.Points_ts (id int PRIMARY KEY, p Point, ts timestamp);  
@@ -85,9 +85,9 @@ INSERT INTO dbo.Points_ts (id, p) VALUES (4, CONVERT(Point, '4,6'));
   
  以下 ADO.NET 示例具有两个方法：  
   
--   **UserProvidedCommands**，用于演示如何提供**InsertCommand**， **UpdateCommand**，并且**DeleteCommand**对象，以便更新**点**中的 UDT**点**表 (不包含**时间戳**列)。  
+-   **UserProvidedCommands**，它演示了如何提供**InsertCommand**、 **UpdateCommand**和**DeleteCommand**对象，以便更新**Points**表中的**Point** UDT （不包含**时间戳**列）。  
   
--   **CommandBuilder**，用于演示如何使用**SqlCommandBuilder**中**Points_ts**表，该表包含**时间戳**列。  
+-   **CommandBuilder**，它演示如何在包含**timestamp**列的**Points_ts**表中使用**SqlCommandBuilder** 。  
   
 ```vb  
 Imports System  
@@ -369,7 +369,7 @@ static void Main()
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在 ADO.NET 中访问用户定义类型](../../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-in-ado-net.md)  
   
   

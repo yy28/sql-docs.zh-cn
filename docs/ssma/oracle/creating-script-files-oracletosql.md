@@ -1,5 +1,5 @@
 ---
-title: 创建脚本文件 (OracleToSQL) |Microsoft Docs
+title: 创建脚本文件（OracleToSQL） |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,41 +15,41 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: a4ee7047e2c517f05f311bf4e842f8f4c64ca8fe
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68264245"
 ---
 # <a name="creating-script-files-oracletosql"></a>创建脚本文件 (OracleToSQL)
-第一步是启动 SSMA 控制台应用程序创建脚本文件之前，如果需要创建变量值文件和服务器连接文件。  
+启动 SSMA 控制台应用程序之前的第一个步骤是创建脚本文件，并在需要时创建变量值文件和服务器连接文件。  
   
-脚本文件可分为三个部分，报道..,:  
+脚本文件可以分为三个部分，即即：  
   
-1.  **配置：** 使用户能够设置控制台应用程序的配置参数。  
+1.  **config：** 允许用户为控制台应用程序设置配置参数。  
   
-2.  **服务器：** 使用户能够设置源/目标服务器定义。 这也可以是单独的服务器连接文件中。  
+2.  **服务器：** 允许用户设置源/目标服务器定义。 也可以在单独的服务器连接文件中使用。  
   
-3.  **脚本命令：** 使用户能够执行 SSMA 工作流命令。  
+3.  **脚本-命令：** 允许用户执行 SSMA 工作流命令。  
   
 下面将详细介绍每个部分：  
   
 ## <a name="configuring-oracle-console-settings"></a>配置 Oracle 控制台设置  
-脚本的配置将显示在控制台脚本文件。  
+脚本的配置显示在控制台脚本文件中。  
   
-如果配置节点中指定的任何元素，它们设置与全局设置即它们是适用于所有的脚本命令。 这些配置元素也可以设置每个命令中的脚本命令部分中如果用户想要重写全局设置。  
+如果在配置节点中指定了任一元素，则这些元素将设置为全局设置，即它们适用于所有脚本命令。 如果用户想要替代全局设置，还可以在脚本命令部分的每个命令中设置这些配置元素。  
   
-用户可配置选项包括：  
+用户可配置的选项包括：  
   
-1.  **输出窗口提供程序：** 如果禁止显示消息属性设置为 'true'，特定于命令的执行不在控制台上显示消息。 下面给出了属性说明：  
+1.  **输出窗口提供程序：** 如果将 "取消消息" 特性设置为 "true"，则命令特定消息不会显示在控制台上。 属性说明如下所示：  
   
-    -   目标：指定输出是否需要获取打印到文件或 stdout。 这是默认值为 false。  
+    -   destination：指定是否需要将输出打印到文件或 stdout。 默认情况下，此值为 false。  
   
-    -   文件名：（可选） 的文件的路径。  
+    -   文件名：文件的路径（可选）。  
   
-    -   禁止显示消息：禁止显示在控制台上的消息。 这是 'false'，默认情况下。  
+    -   抑制消息：抑制控制台上的消息。 默认情况下，此值为 "false"。  
   
-    **示例：**  
+    **实例**  
   
     ```xml  
     <output-providers>  
@@ -66,7 +66,7 @@ ms.locfileid: "68264245"
   
     </output-providers>  
     ```  
-    *or*  
+    *或*  
   
     ```xml  
     <...All commands...>  
@@ -84,15 +84,15 @@ ms.locfileid: "68264245"
     </...All commands...>  
     ```  
   
-2.  **数据迁移连接提供程序：** 这将指定的源/目标服务器将被视为数据迁移。  源-使用-上次使用指示的最后一个使用的源服务器用于数据迁移。 同样目标-使用-上次使用指示的最后一个使用的目标服务器用于数据迁移。 用户还可以通过使用属性源服务器或目标服务器指定的服务器 （源或目标）。  
+2.  **数据迁移连接提供程序：** 此项指定要将哪个源/目标服务器视为数据迁移。  源-使用情况-上次使用指示上次使用的源服务器用于数据迁移。 类似目标-使用-上次使用指示上次使用的目标服务器用于数据迁移。 用户还可以通过使用属性 "源-服务器" 或 "目标-服务器" 来指定服务器（源或目标）。  
   
-    即使用只有一个或另一个指定的属性：  
+    只能使用一个或另一个指定的属性，例如：  
   
-    -   源-使用-上次使用 ="true"（默认值） 或源服务器 ="source_servername"  
+    -   源-使用-上次使用 = "true" （默认值）或源-服务器 = "source_servername"  
   
-    -   target-use-last-used="true" (default) or target-server="target_servername"  
+    -   目标-使用-上次使用 = "true" （默认值）或目标-服务器 = "target_servername"  
   
-    **示例：**  
+    **实例**  
   
     ```xml  
     <output-providers>  
@@ -103,7 +103,7 @@ ms.locfileid: "68264245"
   
     </output-providers>  
     ```  
-    *or*  
+    *或*  
   
     ```xml  
     <migrate-data>  
@@ -115,19 +115,19 @@ ms.locfileid: "68264245"
     </migrate-data>  
     ```  
   
-3.  **用户输入的弹出窗口：** 这样错误，的处理时从数据库加载对象。 用户提供的输入的模式，并发生错误，在控制台继续按用户指定。  
+3.  **用户输入弹出窗口：** 这允许在从数据库加载对象时处理错误。 用户提供输入模式，并在发生错误时，控制台将在用户指定的情况下继续。  
   
     模式包括：  
   
-    -   **要求-用户-** continue('yes') 或出错 （否） 对用户进行提示。  
+    -   **ask-用户-** 提示用户继续（"是"）或错误（"否"）。  
   
-    -   **错误-** 控制台显示错误并停止执行。  
+    -   **错误-** 控制台将显示错误并停止执行。  
   
     -   **继续-** 控制台将继续执行。  
   
-    默认模式是**错误**。  
+    默认模式为 "**错误**"。  
   
-    **示例：**  
+    **实例**  
   
     ```xml  
     <output-providers>  
@@ -136,7 +136,7 @@ ms.locfileid: "68264245"
   
     </output-providers>  
     ```  
-    *or*  
+    *或*  
   
     ```xml  
     <!-- Connect to target database -->  
@@ -148,17 +148,17 @@ ms.locfileid: "68264245"
     </connect-target-database>  
     ```  
   
-4.  **重新连接提供程序：** 这允许用户设置的重新连接设置由于连接失败。 这可以为源和目标服务器设置。  
+4.  **重新连接提供程序：** 这允许用户设置连接失败的重新连接设置大。 这可为源服务器和目标服务器设置此项。  
   
     重新连接模式如下：  
   
-    -   重新连接到上一次-使用的服务器：如果连接未处于活动状态，它将尝试重新连接到最后一个服务器使用最多 5 次。  
+    -   重新连接到上次使用的-服务器：如果连接未处于活动状态，则它会尝试重新连接到最近5次使用的最后一个服务器。  
   
-    -   生成一个-错误：如果连接未处于活动状态，会生成错误。  
+    -   生成-错误：如果连接未处于活动状态，则会生成错误。  
   
-    默认模式是**生成一个错误**。  
+    默认模式为 "**生成-错误**"。  
   
-    **示例：**  
+    **实例**  
   
     ```xml  
     <output-providers>  
@@ -169,7 +169,7 @@ ms.locfileid: "68264245"
   
     </output-providers>  
     ```  
-    *or*  
+    *或*  
   
     ```xml  
     <!--synchronization-->  
@@ -180,7 +180,7 @@ ms.locfileid: "68264245"
   
     </synchronize-target>  
     ```  
-    *or*  
+    *或*  
   
     ```xml  
     <!--data migration-->  
@@ -196,17 +196,17 @@ ms.locfileid: "68264245"
     </migrate-data>  
     ```  
   
-5.  **转换器覆盖提供程序：** 这使用户能够处理对象已在目标上存在的元数据库。 可能的操作包括：  
+5.  **转换器覆盖提供程序：** 这使用户能够处理目标元数据库上已存在的对象。 可能的操作包括：  
   
-    -   错误：在控制台显示错误并停止执行。  
+    -   错误：控制台显示错误并停止执行。  
   
-    -   覆盖：将覆盖现有对象值。 默认情况下完成此操作。  
+    -   overwrite：覆盖现有对象值。 默认情况下，此操作已完成。  
   
-    -   跳过：在控制台上，对数据库将跳过已存在的对象  
+    -   skip：控制台将跳过数据库中已存在的对象  
   
-    -   询问用户：提示用户输入 (是 / 否)  
+    -   ask-user：提示用户输入（"是"/"否"）  
   
-    **示例：**  
+    **实例**  
   
     ```xml  
     <output-providers>  
@@ -215,7 +215,7 @@ ms.locfileid: "68264245"
   
     </output-providers>  
     ```  
-    *or*  
+    *或*  
   
     ```xml  
     <convert-schema object-name="<object-name>">  
@@ -225,9 +225,9 @@ ms.locfileid: "68264245"
     </convert-schema>  
     ```  
   
-6.  **必备项检查失败的提供程序：** 这使用户能够处理任何处理命令所需的先决条件。 默认情况下，严格模式下为 false。 如果将其设置为 true，异常生成失败，若要满足的先决条件。  
+6.  **必备组件提供程序：** 这使用户能够处理处理命令所需的任何先决条件。 默认情况下，严格模式为 "false"。 如果设置为 "true"，则会生成异常以满足先决条件。  
   
-    **示例：**  
+    **实例**  
   
     ```xml  
     <output-providers>  
@@ -237,25 +237,25 @@ ms.locfileid: "68264245"
     </output-providers>  
     ```  
   
-7.  **停止操作：** 如果用户想要停止此操作，然后在中间操作期间**Ctrl + C**可以使用热键。 SSMA for Oracle 控制台将等待操作完成，并终止控制台执行。  
+7.  **停止操作：** 在中间操作期间，如果用户想要停止操作，则可以使用 **"Ctrl + C"** 热键。 SSMA for Oracle Console 将等待操作完成，并终止控制台执行。  
   
-    如果用户想要执行立即停止，然后**Ctrl + C**热键可以再次按下的 SSMA 控制台应用程序突然终止。  
+    如果用户想立即停止执行，则可以再次按 **"Ctrl + C"** 热键来 SSMA 控制台应用程序的突然终止。  
   
-8.  **正在进行的提供程序：** 通知每个控制台命令的进度。 默认情况下禁用该功能。 包含进度报告属性：  
+8.  **进度提供程序：** 通知每个控制台命令的进度。 此项已默认禁用。 进度报告属性包括：  
   
-    -   off  
+    -   关闭  
   
-    -   每个 1%  
+    -   每隔1%  
   
-    -   每个 2%  
+    -   每隔2%  
   
-    -   每个 5%  
+    -   每5%  
   
-    -   每个 10%  
+    -   每隔10%  
   
-    -   每个 20%  
+    -   每隔20%  
   
-    **示例：**  
+    **实例**  
   
     ```xml  
     <output-providers>  
@@ -268,7 +268,7 @@ ms.locfileid: "68264245"
   
     </output-providers>  
     ```  
-    *or*  
+    *或*  
   
     ```xml  
     <...All commands...>  
@@ -284,24 +284,24 @@ ms.locfileid: "68264245"
     </...All commands...>  
     ```  
   
-9. **记录器详细级别：** 设置日志详细级别。 这相当于在 UI 中的所有类别选项。 默认情况下，日志详细级别为"错误"。  
+9. **记录器详细级别：** 设置日志详细级别。 这对应于 UI 中的 "所有类别" 选项。 默认情况下，日志详细级别为 "错误"。  
   
-    记录器级选项包括：  
+    记录器级别选项包括：  
   
-    -   -错误：记录仅致命错误消息。  
+    -   严重错误：只记录致命错误消息。  
   
-    -   错误：唯一的错误和严重错误消息记录。  
+    -   错误：只记录错误和严重错误消息。  
   
-    -   警告：除了调试和信息消息记录的所有级别。  
+    -   警告：记录除 "调试" 和 "信息" 消息以外的所有级别。  
   
-    -   信息：除了记录调试消息的所有级别。  
+    -   信息：记录除调试消息以外的所有级别。  
   
-    -   调试：所有级别的记录的消息。  
+    -   调试：记录的所有消息级别。  
   
     > [!NOTE]  
-    > 在任何级别上记录必需的消息。  
+    > 必需的消息记录在任何级别。  
   
-    **示例：**  
+    **实例**  
   
     ```xml  
     <output-providers>  
@@ -310,7 +310,7 @@ ms.locfileid: "68264245"
   
     </output-providers>  
     ```  
-    *or*  
+    *或*  
   
     ```xml  
     <...All commands...>  
@@ -320,15 +320,15 @@ ms.locfileid: "68264245"
     </...All commands...>  
     ```  
   
-10. **重写加密的密码：** 如果为 true，明文密码指定服务器连接文件的服务器定义部分中或在脚本文件中，如果在受保护的存储中存储的加密的密码存在的替代。 如果没有密码以明文形式指定，将提示用户输入密码。  
+10. **替代加密密码：** 如果为 "true"，则在服务器连接文件或脚本文件的 "服务器定义" 部分中指定的明文密码将覆盖受保护存储区中存储的加密密码（如果存在）。 如果未指定明文形式的密码，则系统会提示用户输入密码。  
   
-    下面两种情况下出现：  
+    这里出现两种情况：  
   
-    1.  如果重写选项是**false**，搜索的顺序就会是受保护存储&gt;脚本文件-&gt;服务器连接文件-&gt;提示用户。  
+    1.  如果 override 选项为**false**，则搜索顺序为 "受保护的存储&gt;-脚本文件&gt;-服务器连接文件&gt; -提示用户"。  
   
-    2.  如果重写选项是 **，则返回 true**，搜索的顺序将为脚本文件-&gt;服务器连接文件-&gt;提示用户。  
+    2.  如果 override 选项为**true**，则搜索顺序为 "脚本文件-&gt;服务器连接文件-&gt;提示用户"。  
   
-    **示例：**  
+    **实例**  
   
     ```xml  
     <output-providers>  
@@ -338,21 +338,21 @@ ms.locfileid: "68264245"
     </output-providers>  
     ```  
   
-非可配置选项是：  
+不可配置的选项是：  
   
--   **尝试重新连接的最大值：** 已建立的连接超时，或由于网络故障而中断，服务器则需要重新连接。 重新连接尝试的最多允许**5**重试次数后，控制台将自动执行重新连接。 自动重新连接的工具减少了在工作中重新运行该脚本。  
+-   **最大重新连接尝试：** 如果已建立的连接超时或由于网络故障而中断，则需要重新连接服务器。 允许重新连接尝试最多执行**5**次重试，此时，控制台将自动执行重新连接。 自动重新连接的功能可以减少重新运行脚本的工作量。  
   
 ## <a name="server-connection-parameters"></a>服务器连接参数  
-在脚本文件或服务器连接文件中，可以定义服务器连接参数。 请参阅[创建服务器连接文件&#40;OracleToSQL&#41; ](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)部分，了解更多详细信息。  
+服务器连接参数可以在脚本文件中或服务器连接文件中定义。 有关更多详细信息，请参阅[创建服务器连接文件 &#40;OracleToSQL&#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)部分。  
   
 ## <a name="script-commands"></a>脚本命令  
-脚本文件包含一系列以 XML 格式的迁移工作流命令。 SSMA 控制台应用程序处理以使其不显示在脚本文件中的命令顺序迁移。  
+脚本文件包含一系列 XML 格式的迁移工作流命令。 SSMA 控制台应用程序按脚本文件中显示的命令顺序处理迁移。  
   
-例如，Oracle 数据库中的特定表的典型的数据迁移如下所示层次的结构：架构-&gt;表。  
+例如，Oracle 数据库中特定表的典型数据迁移遵循： Schema&gt;表的层次结构。  
   
-当成功执行脚本文件中的所有命令时，SSMA 控制台应用程序退出，并将该控件返回给用户。 脚本文件的内容可能会更多或更少静态变量的信息包含在[创建变量值文件&#40;OracleToSQL&#41; ](../../ssma/oracle/creating-variable-value-files-oracletosql.md)或变量值的脚本文件中的单独部分中。  
+成功执行脚本文件中的所有命令后，SSMA 控制台应用程序将退出并将控件返回给用户。 脚本文件的内容具有更多或更少的静态，其中包含的变量信息包含在[创建变量值文件 &#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)或（在脚本文件的单独节中，用于变量值）。  
   
-**示例：**  
+**实例**  
   
 ```xml  
 <!--Sample of script file commands -->  
@@ -377,28 +377,28 @@ ms.locfileid: "68264245"
   
 </ssma-script-file>  
 ```  
-产品目录的示例控制台脚本文件夹中提供模板变量值文件和服务器连接文件 （用于执行各种方案） 的 3 个脚本文件组成：  
+产品目录的 "示例控制台脚本" 文件夹中提供了包含3个脚本文件（用于执行各种方案）、变量值文件和服务器连接文件的模板：  
   
--   AssessmentReportGenerationSample.xml  
+-   AssessmentReportGenerationSample  
   
--   ConversionAndDataMigrationSample.xml  
+-   ConversionAndDataMigrationSample  
   
--   SqlStatementConversionSample.xml  
+-   SqlStatementConversionSample  
   
--   VariableValueFileSample.xml  
+-   VariableValueFileSample  
   
--   ServersConnectionFileSample.xml  
+-   ServersConnectionFileSample  
   
-更改显示其中的关联性的参数后，可以执行模板 （文件）。  
+更改中显示的用于关联的参数后，可以执行这些模板（文件）。  
   
-脚本命令的完整列表可在[执行 SSMA 控制台&#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
+脚本命令的完整列表，可在[执行 SSMA 控制台 &#40;OracleToSQL](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)中找到&#41;  
   
 ## <a name="script-file-validation"></a>脚本文件验证  
-用户可以轻松地验证他/她脚本文件是否符合架构定义文件**O2SSConsoleScriptSchema.xsd**架构文件夹中可用。  
+用户可以根据 "架构" 文件夹中提供的架构定义文件 **"O2SSConsoleScriptSchema"** 轻松地对其脚本文件进行验证。  
   
 ## <a name="next-step"></a>下一步  
-在操作控制台中的下一步是[创建的变量值文件&#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)。  
+操作控制台的下一步是[&#40;OracleToSQL&#41;创建变量值文件](../../ssma/oracle/creating-variable-value-files-oracletosql.md)。  
   
-## <a name="see-also"></a>请参阅  
-[创建变量值文件&#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
+## <a name="see-also"></a>另请参阅  
+[创建变量值文件 &#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
   

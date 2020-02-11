@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1203872d92c1b9d424cfe457437cbde16b8e2120
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761512"
 ---
 # <a name="create-primary-keys"></a>创建主键
@@ -44,9 +44,9 @@ ms.locfileid: "62761512"
   
 -   在 PRIMARY KEY 约束中定义的所有列都必须定义为 NOT NULL。 如果没有指定为 Null 性，则加入 PRIMARY KEY 约束的所有列的为 Null 性都将设置为 NOT NULL。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  使用主键创建新表需要在数据库中具有 CREATE TABLE 权限，并对在其中创建表的架构具有 ALTER 权限。  
   
  在某一现有表中创建主键需要对该表具有 ALTER 权限。  
@@ -55,11 +55,11 @@ ms.locfileid: "62761512"
   
 #### <a name="to-create-a-primary-key"></a>创建主键  
   
-1.  在对象资源管理器中，右键单击要为其添加唯一约束的表，然后单击“设计”  。  
+1.  在对象资源管理器中，右键单击要向其添加唯一约束的表，然后单击 "**设计**"。  
   
 2.  在 **“表设计器”** 中，单击要定义为主键的数据库列的行选择器。 若要选择多个列，请在单击其他列的行选择器时按住 Ctrl 键。  
   
-3.  右键单击该列的行选择器，然后选择“设置主键”  。  
+3.  右键单击该列的行选择器，然后选择“设置主键”****。  
   
 > [!CAUTION]  
 >  若要重新定义主键，则必须首先删除与现有主键之间的任何关系，然后才能创建新主键。 此时，将显示一条消息警告您：作为该过程的一部分，将自动删除现有关系。  
@@ -95,7 +95,7 @@ ms.locfileid: "62761512"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例将创建一个表并针对 `TransactionID` 列定义一个主键。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例将创建一个表并针对 `TransactionID`列定义一个主键。  
   
     ```  
     USE AdventureWorks2012;  

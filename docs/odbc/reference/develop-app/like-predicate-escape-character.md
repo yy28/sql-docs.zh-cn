@@ -1,5 +1,5 @@
 ---
-title: LIKE 谓词转义字符 |Microsoft Docs
+title: LIKE 谓词转义符 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,22 +14,22 @@ ms.assetid: 185d6109-48cf-4981-bc40-ec2a4a90cafc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 20310c60759aea17d61b9252fd73d226567a7a54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68027228"
 ---
 # <a name="like-predicate-escape-character"></a>LIKE 谓词转义字符
-在中**如**谓词，百分号 （%）匹配零个或多个任意字符和下划线 (_) 匹配的任何一个字符。 若要匹配实际的百分比符号或下划线中**如**谓词，转义符必须在之前的百分比符号或下划线。 定义的转义序列**如**谓词转义符是：  
+在**LIKE**谓词中，百分号（%）匹配零个或多个任意字符，下划线（_）匹配任何一个字符。 若要匹配**LIKE**谓词中的实际百分比符号或下划线，必须在百分号或下划线前面加上转义符。 定义**LIKE**谓词转义符的转义序列是：  
   
- **{转义 '** *转义符* **}**  
+ **{escape \** *转义符* **'}**  
   
- 其中*转义符*是数据源支持的任何字符。  
+ 其中， *escape 字符*是数据源支持的任何字符。  
   
- 详细了解类似转义序列，请参阅[转义序列等](../../../odbc/reference/appendixes/like-escape-sequence.md)附录 c： 驱动器中SQL 语法。  
+ 有关类似转义序列的详细信息，请参阅附录 C： SQL 语法中的[转义序列](../../../odbc/reference/appendixes/like-escape-sequence.md)。  
   
- 例如，以下 SQL 语句创建客户相同的结果的集以字符"%AAA"开头的名称。 第一个语句使用转义序列语法。 第二个语句的本机语法用于 Microsoft® 访问并不是可互操作。 请注意，在每个字符的第二个百分比**如**谓词是匹配零个或多个任意字符的通配符字符。  
+ 例如，以下 SQL 语句将创建以字符 "% AAA" 开头的客户名称相同的结果集。 第一条语句使用转义序列语法。 第二个语句使用本机语法进行 Microsoft®访问，且不可互操作。 请注意，每个**LIKE**谓词中的第二个百分号字符都是与零个或多个字符匹配的通配符。  
   
 ```  
 SELECT Name FROM Customers WHERE Name LIKE '\%AAA%' {escape '\'}  
@@ -37,4 +37,4 @@ SELECT Name FROM Customers WHERE Name LIKE '\%AAA%' {escape '\'}
 SELECT Name FROM Customers WHERE Name LIKE '[%]AAA%'  
 ```  
   
- 若要确定是否**等**谓词转义字符支持的数据源、 应用程序调用**SQLGetInfo** SQL_LIKE_ESCAPE_CLAUSE 选项。
+ 若要确定数据源是否支持**LIKE**谓词转义符，应用程序需要使用 SQL_LIKE_ESCAPE_CLAUSE 选项调用**SQLGetInfo** 。

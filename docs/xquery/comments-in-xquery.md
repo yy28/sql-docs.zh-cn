@@ -1,5 +1,5 @@
 ---
-title: XQuery 中的注释 |Microsoft 文档
+title: XQuery 中的注释 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 4d977268-de9d-4bf0-b310-b63f6a0fb0db
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a2c5adad052a33dc4d8b86b488ca1cc44737790e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039022"
 ---
 # <a name="comments-in-xquery"></a>XQuery 中的注释
@@ -36,7 +36,7 @@ SELECT @x.query('
 ')  
 ```  
   
- 以下是在其中指定了一个查询针对的指令列的另一个示例**xml**类型：  
+ 下面是针对**xml**类型的指令列指定查询的另一个示例：  
   
 ```  
 SELECT Instructions.query('  

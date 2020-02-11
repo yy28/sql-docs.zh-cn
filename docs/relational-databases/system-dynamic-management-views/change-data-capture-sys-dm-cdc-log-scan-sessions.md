@@ -1,5 +1,5 @@
 ---
-title: sys.dm_cdc_log_scan_sessions (TRANSACT-SQL) |Microsoft Docs
+title: sys. dm_cdc_log_scan_sessions （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,38 +20,38 @@ ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 52abdd077d892982c7fb63a34cec8bbdbd973379
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017991"
 ---
-# <a name="change-data-capture---sysdmcdclogscansessions"></a>变更数据捕获-sys.dm_cdc_log_scan_sessions
+# <a name="change-data-capture---sysdm_cdc_log_scan_sessions"></a>Change Data Capture-sys. dm_cdc_log_scan_sessions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   针对当前数据库中的每个日志扫描会话返回一行。 返回的最后一行表示当前会话。 您可以使用此视图返回有关当前日志扫描会话的状态信息，或有关自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上次启动以来所有会话的聚合信息。  
    
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|会话的 ID。<br /><br /> 0 = 此行中返回的数据是自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上次启动以来所有会话的聚合。|  
-|**start_time**|**datetime**|会话的开始时间。<br /><br /> 当**session_id** = 0 时，聚合的数据收集的开始时间的时间。|  
-|**end_time**|**datetime**|会话已结束的时间。<br /><br /> NULL = 会话处于活动状态。<br /><br /> 当**session_id** = 0，最后一个会话已结束的时间。|  
-|**duration**|**bigint**|会话的持续时间（以秒为单位）。<br /><br /> 0 = 会话不包含变更数据捕获事务。<br /><br /> 当**session_id** = 0 时，与变更数据捕获事务的所有会话的持续时间 （以秒为单位） 的总和。|  
-|**scan_phase**|**nvarchar(200)**|会话的当前阶段。 以下是可能的值和及其说明：<br /><br /> 1:正在读取配置<br />2:第一次扫描，生成哈希表<br />3：第二个扫描<br />4：第二个扫描<br />5：第二个扫描<br />6:架构版本控制<br />7:上一次扫描<br />8:完成<br /><br /> 当**session_id** = 0 时，此值始终为"Aggregate"。|  
-|**error_count**|**int**|遇到的错误数。<br /><br /> 当**session_id** = 0 时，在所有会话中的错误总数。|  
-|**start_lsn**|**nvarchar(23)**|会话的起始 LSN。<br /><br /> 当**session_id** = 0 时，为最后一个会话的起始 LSN。|  
-|**current_lsn**|**nvarchar(23)**|当前正在扫描的 LSN。<br /><br /> 当**session_id** = 0 时，当前 LSN 为 0。|  
-|**end_lsn**|**nvarchar(23)**|会话的结束 LSN。<br /><br /> NULL = 会话处于活动状态。<br /><br /> 当**session_id** = 0 时，为最后一个会话的结束 LSN。|  
-|**tran_count**|**bigint**|已处理的变更数据捕获事务数。 此计数器在第 2 阶段中填充。<br /><br /> 当**session_id** = 0 时，在所有会话中处理的事务数。|  
-|**last_commit_lsn**|**nvarchar(23)**|已处理的最后一个提交日志记录的 LSN。<br /><br /> 当**session_id** = 0 时，为任意会话的最后一个提交日志记录 LSN。|  
+|**start_time**|**datetime**|会话的开始时间。<br /><br /> 当**session_id** = 0 时，将开始聚合数据收集时间。|  
+|**end_time**|**datetime**|会话结束的时间。<br /><br /> NULL = 会话处于活动状态。<br /><br /> 当**session_id** = 0 时，为最后一个会话的结束时间。|  
+|**持续时间**|**bigint**|会话的持续时间（以秒为单位）。<br /><br /> 0 = 会话不包含变更数据捕获事务。<br /><br /> 当**session_id** = 0 时，为包含变更数据捕获事务的所有会话的持续时间（以秒为单位）。|  
+|**scan_phase**|**nvarchar （200）**|会话的当前阶段。 下面是可能的值及其说明：<br /><br /> 1：正在读取配置<br />2：首次扫描，生成哈希表<br />3：第二次扫描<br />4：第二次扫描<br />5：第二次扫描<br />6：架构版本控制<br />7：上次扫描<br />8：完成<br /><br /> 当**session_id** = 0 时，此值始终为 "Aggregate"。|  
+|**error_count**|**int**|遇到的错误数。<br /><br /> 当**session_id** = 0 时，为所有会话中的错误总数。|  
+|**start_lsn**|**nvarchar （23）**|会话的起始 LSN。<br /><br /> 当**session_id** = 0 时，为最后一个会话的起始 LSN。|  
+|**current_lsn**|**nvarchar （23）**|当前正在扫描的 LSN。<br /><br /> 当**session_id** = 0 时，当前 LSN 为0。|  
+|**end_lsn**|**nvarchar （23）**|会话的结束 LSN。<br /><br /> NULL = 会话处于活动状态。<br /><br /> 当**session_id** = 0 时，为最后一个会话的结束 LSN。|  
+|**tran_count**|**bigint**|已处理的变更数据捕获事务数。 此计数器在第2阶段中填充。<br /><br /> 当**session_id** = 0 时，为所有会话中已处理的事务数。|  
+|**last_commit_lsn**|**nvarchar （23）**|已处理的最后一个提交日志记录的 LSN。<br /><br /> 当**session_id** = 0 时，为任意会话的最后一个提交日志记录 LSN。|  
 |**last_commit_time**|**datetime**|最后一个提交日志记录的处理时间。<br /><br /> 当**session_id** = 0 时，为任意会话的最后一个提交日志记录的时间。|  
-|**log_record_count**|**bigint**|扫描的日志记录数。<br /><br /> 当**session_id** = 0 时，所有会话的扫描记录数。|  
-|**schema_change_count**|**int**|检测到的数据定义语言 (DDL) 操作数。 此计数器在第 6 阶段填充。<br /><br /> 当**session_id** = 0 时，所有会话中已处理的 DDL 操作的数目。|  
-|**command_count**|**bigint**|已处理的命令数。<br /><br /> 当**session_id** = 0 时，所有会话中处理的命令数。|  
-|**first_begin_cdc_lsn**|**nvarchar(23)**|包含变更数据捕获事务的第一个 LSN。<br /><br /> 当**session_id** = 0 时，包含变更数据捕获事务的第一个 LSN。|  
-|**last_commit_cdc_lsn**|**nvarchar(23)**|包含变更数据捕获事务的最后一个提交日志记录的 LSN。<br /><br /> 当**session_id** = 0，最后一个提交日志记录的 LSN 的任何会话包含变更数据捕获事务|  
-|**last_commit_cdc_time**|**datetime**|包含变更数据捕获事务的最后一个提交日志记录的处理时间。<br /><br /> 当**session_id** = 0，最后一个提交日志记录的任何会话包含变更数据捕获事务的时间。|  
-|**延迟**|**int**|差异，以秒为单位，之间**end_time**并**last_commit_cdc_time**会话中。 此计数器在第 7 阶段的最后填充。<br /><br /> 当**session_id** = 0 时，由某个会话记录的最后一个非零滞后值。|  
+|**log_record_count**|**bigint**|扫描的日志记录数。<br /><br /> 当**session_id** = 0 时，为所有会话扫描的记录数。|  
+|**schema_change_count**|**int**|检测到的数据定义语言 (DDL) 操作数。 此计数器在第 6 阶段填充。<br /><br /> 当**session_id** = 0 时，为所有会话中已处理的 DDL 操作数。|  
+|**command_count**|**bigint**|已处理的命令数。<br /><br /> 当**session_id** = 0 时，为所有会话中已处理的命令数。|  
+|**first_begin_cdc_lsn**|**nvarchar （23）**|包含变更数据捕获事务的第一个 LSN。<br /><br /> 当**session_id** = 0 时，为包含变更数据捕获事务的第一个 LSN。|  
+|**last_commit_cdc_lsn**|**nvarchar （23）**|包含变更数据捕获事务的最后一个提交日志记录的 LSN。<br /><br /> 当**session_id** = 0 时，为包含变更数据捕获事务的任何会话的最后一个提交日志记录 LSN|  
+|**last_commit_cdc_time**|**datetime**|包含变更数据捕获事务的最后一个提交日志记录的处理时间。<br /><br /> 当**session_id** = 0 时，为包含变更数据捕获事务的任何会话的最后一个提交日志记录的时间。|  
+|**延迟**|**int**|会话**end_time**与**last_commit_cdc_time**之间的差异（以秒为单位）。 此计数器在第 7 阶段的最后填充。<br /><br /> 当**session_id** = 0 时，为会话记录的最后一个非零延迟值。|  
 |**empty_scan_count**|**int**|不包含变更数据捕获事务的连续会话数。|  
 |**failed_sessions_count**|**int**|失败的会话数。|  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68017991"
  只要启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，就会重置此动态管理视图中的值。  
   
 ## <a name="permissions"></a>权限  
- 需要 VIEW DATABASE STATE 权限到查询**sys.dm_cdc_log_scan_sessions**动态管理视图。 动态管理视图权限的详细信息，请参阅[动态管理视图和函数&#40;TRANSACT-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。  
+ 需要 VIEW DATABASE STATE 权限才能查询**sys.databases. dm_cdc_log_scan_sessions**动态管理视图。 有关动态管理视图权限的详细信息，请参阅[&#40;transact-sql&#41;中的动态管理视图和函数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。  
   
 ## <a name="examples"></a>示例  
  下例返回最新会话的信息。  
@@ -77,8 +77,8 @@ WHERE session_id = (SELECT MAX(b.session_id) FROM sys.dm_cdc_log_scan_sessions A
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [sys.dm_cdc_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)  
+## <a name="see-also"></a>另请参阅  
+ [sys. dm_cdc_errors &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)  
   
   
 

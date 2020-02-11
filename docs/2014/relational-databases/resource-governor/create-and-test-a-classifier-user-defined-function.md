@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5118ebcb3da31b97859ca0b2b38e3ad552604990
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68212002"
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>创建和测试分类器用户定义函数
@@ -27,7 +27,7 @@ ms.locfileid: "68212002"
   
  下面的过程中显示的示例说明了创建非常复杂的分类器用户定义函数的可能性。  
   
- 在本示例中：  
+ 在示例中：  
   
 -   创建了 pProductionProcessing 资源池和 gProductionProcessing 工作负荷组，用于在指定时间范围内进行生产处理。  
   
@@ -118,7 +118,8 @@ ms.locfileid: "68212002"
 4.  创建分类器函数，它使用时间函数以及可根据查找表中的时间计算的值。 有关在分类器函数中使用查找表的信息，请参阅本主题中的“在分类器函数中使用查找表的最佳做法”。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 引入了一组扩展的日期和时间数据类型和函数。 有关详细信息，请参阅[日期和时间数据类型和功能 (Transact-SQL)](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)。  
+    >  
+  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 引入了一组扩展的日期和时间数据类型和函数。 有关详细信息，请参阅[日期和时间数据类型和功能 (Transact-SQL)](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)。  
   
     ```  
     CREATE FUNCTION fnTimeClassifier()  
@@ -262,17 +263,17 @@ ms.locfileid: "68212002"
         > [!WARNING]  
         >  我们强烈建议遵循如上最佳做法。 如有任何问题妨碍您遵循这些最佳做法，我们建议您与 Microsoft 支持部门联系，以求主动防止未来出现任何问题。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [资源调控器](resource-governor.md)   
  [启用资源调控器](enable-resource-governor.md)   
  [资源调控器资源池](resource-governor-resource-pool.md)   
  [资源调控器工作负荷组](resource-governor-workload-group.md)   
- [使用模板配置资源调控器](configure-resource-governor-using-a-template.md)   
- [查看资源调控器属性](view-resource-governor-properties.md)   
- [ALTER RESOURCE GOVERNOR (Transact-SQL)](/sql/t-sql/statements/alter-resource-governor-transact-sql)   
- [CREATE RESOURCE POOL (Transact-SQL)](/sql/t-sql/statements/create-resource-pool-transact-sql)   
- [CREATE WORKLOAD GROUP (Transact-SQL)](/sql/t-sql/statements/create-workload-group-transact-sql)   
- [CREATE FUNCTION (Transact-SQL)](/sql/t-sql/statements/create-function-transact-sql)   
+ [使用模板配置 Resource Governor](configure-resource-governor-using-a-template.md)   
+ [查看 Resource Governor 属性](view-resource-governor-properties.md)   
+ [ALTER RESOURCE GOVERNOR &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)   
+ [&#40;Transact-sql 创建资源池&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)   
+ [&#40;Transact-sql&#41;创建工作负荷组](/sql/t-sql/statements/create-workload-group-transact-sql)   
+ [CREATE FUNCTION &#40;Transact-sql&#41;](/sql/t-sql/statements/create-function-transact-sql)   
  [ALTER RESOURCE GOVERNOR (Transact-SQL)](/sql/t-sql/statements/alter-resource-governor-transact-sql)  
   
   

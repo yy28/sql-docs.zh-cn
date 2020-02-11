@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b05013b888978d268d30a31dc6375b0f70d625d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762107"
 ---
-# <a name="mssqlserver7931"></a>MSSQLSERVER_7931
+# <a name="mssqlserver_7931"></a>MSSQLSERVER_7931
     
 ## <a name="details"></a>详细信息  
   
@@ -30,9 +30,9 @@ ms.locfileid: "62762107"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC2_FS_DOUBLE_ROWSET_ACTUAL_FACT|  
-|消息正文|数据库错误:两次出现了一个分区的 FileStream 目录 ID F_ID。|  
+|消息正文|数据库错误: 发现存在两个分区 FileStream 目录 ID F_ID。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  在元数据中发现了相同的 Filestream 目录的分区 ID。  
   
 ## <a name="user-action"></a>用户操作  

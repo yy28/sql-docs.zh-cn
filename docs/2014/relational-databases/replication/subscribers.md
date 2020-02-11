@@ -15,18 +15,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 725be263e30687a3f2ded90990e952e1cd97a185
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629390"
 ---
 # <a name="subscribers"></a>订阅服务器
-  指定接收对所选发布的订阅的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定将接收对所[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]选发布的订阅的或非订阅服务器。  
   
 ## <a name="options"></a>选项  
- **订阅服务器**  
- 选中网格中的复选框可以启用相应的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源作为 **“发布”** 页上所选发布的订阅服务器。 如果没有列出订阅服务器，请单击 **“添加订阅服务器”** 或 **“添加 SQL Server 订阅服务器”**。  
+ **“发布服务器属性”**  
+ 选中网格中的复选框，以将相应[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的或非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据源作为订阅服务器上所选发布的订阅服务器**** 启用。 如果没有列出订阅服务器，请单击 **“添加订阅服务器”** 或 **“添加 SQL Server 订阅服务器”**。  
   
  **订阅数据库**  
  此列中显示的信息和其中可用的操作取决于 **“订阅服务器”** 列中所列的订阅服务器的类型：  
@@ -48,9 +48,9 @@ ms.locfileid: "62629390"
   
 -   订阅是推送订阅。  
   
--   所选发布的发布服务器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本。  
+-   所选发布的发布者是[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或更高版本。  
   
- 单击“添加订阅服务器”将显示具有以下两个选项的菜单：“添加 SQL Server 订阅服务器”和“添加非 SQL Server 订阅服务器”。 单击 **“添加非 SQL Server 订阅服务器”** 可以添加 Oracle 或 IBM DB2 订阅服务器。  
+ 单击 **“添加订阅服务器”** 将显示一个菜单，其中包含两个选项： **“添加 SQL Server 订阅服务器”** 和 **“添加非 SQL Server 订阅服务器”**。 单击 **“添加非 SQL Server 订阅服务器”** 可以添加 Oracle 或 IBM DB2 订阅服务器。  
   
  **“添加 SQL Server 订阅服务器”**  
  向可以启用为订阅服务器的服务器列表中添加服务器。 如果以下一个或多个条件为真，则显示此按钮：  
@@ -67,8 +67,8 @@ ms.locfileid: "62629390"
   
     -   发布允许匿名订阅。  
   
-## <a name="see-also"></a>请参阅  
- [创建请求订阅](create-a-pull-subscription.md)   
+## <a name="see-also"></a>另请参阅  
+ [Create a Pull Subscription](create-a-pull-subscription.md)   
  [ssSDSFull](create-a-push-subscription.md)   
  [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)   
  [订阅发布](subscribe-to-publications.md)  

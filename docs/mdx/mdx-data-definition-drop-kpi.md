@@ -1,5 +1,5 @@
 ---
-title: DROP KPI 语句 (MDX) |Microsoft Docs
+title: DROP KPI 语句（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b673f87ffd04a1cf89b063cc129c769c258791ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038232"
 ---
 # <a name="mdx-data-definition---drop-kpi"></a>MDX 数据定义 - DROP KPI
@@ -34,8 +34,8 @@ DROP KPI CURRENTCUBE | Cube_Name.KPI_Name
  *KPI_Name*  
  指定要删除的 KPI 的名称的有效字符串。  
   
-## <a name="see-also"></a>请参阅  
- [CREATE KPI 语句&#40;MDX&#41;](../mdx/mdx-data-definition-create-kpi.md)   
- [MDX 数据定义语句&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;MDX 创建 KPI 语句&#41;](../mdx/mdx-data-definition-create-kpi.md)   
+ [Mdx 数据定义语句 &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

@@ -17,16 +17,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ad86f5989fe9ff90132637d062b708423f23eef1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63131494"
 ---
 # <a name="localdbstartinstance-function"></a>LocalDBStartInstance 函数
   启动指定的 SQL Server Express LocalDB 实例。  
   
- **标头文件：** sqlncli.h  
+ **头文件：** sqlncli.msi  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,7 +39,7 @@ HRESULT LocalDBStartInstance(
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>parameters  
  *pInstanceName*  
  [输入] 要启动的 LocalDB 实例的名称。  
   
@@ -50,7 +50,7 @@ HRESULT LocalDBStartInstance(
  [输出] 要存储 LocalDB 实例的连接字符串的缓冲区。  
   
  *lpcchSqlConnection*  
- [输入/输出]在输入中包含的大小*wszSqlConnection*缓冲区以字符为单位，包括任何尾随空格。 输出时，如果给定的缓冲区太小，则包含所需的缓冲区大小（以字符为单位），包括任何尾随空格。  
+ [输入/输出]输入时包含*wszSqlConnection*缓冲区的大小（包括任何尾随 null）。 输出时，如果给定的缓冲区太小，则包含所需的缓冲区大小（以字符为单位），包括任何尾随空格。  
   
 ## <a name="returns"></a>返回  
  S_OK  
@@ -105,18 +105,18 @@ HRESULT LocalDBStartInstance(
  发生了意外错误。 有关详细信息，请参阅事件日志。  
   
 ## <a name="details"></a>详细信息  
- 连接缓冲区参数 (*wszSqlConnection*) 和连接缓冲区大小参数 (*lpcchSqlConnection*) 都是可选的。 下表显示了为使用这些参数提供的选项及其结果。  
+ 连接缓冲区参数（*wszSqlConnection*）和连接缓冲区大小参数（*lpcchSqlConnection*）都是可选的。 下表显示了为使用这些参数提供的选项及其结果。  
   
-|缓冲区|缓冲区大小|理由|操作|  
+|Buffer|缓冲区大小|理由|操作|  
 |------------|-----------------|---------------|------------|  
-|NULL|NULL|用户想要启动实例，并且不需要管道名称。|启动实例（不返回管道且不要求返回缓冲区大小）。|  
-|NULL|现值|用户要求提供输出缓冲区大小。 （在下一次调用中，用户将可能要求实际启动。)|返回所需的缓冲区大小（不启动且不返回管道）。 结果为 S_OK。|  
-|现值|NULL|不允许；输入不正确。|返回结果为 LOCALDB_ERROR_INVALID_PARAMETER。|  
-|现值|现值|用户想要启动实例，并且在启动后需要管道名称以便连接到此实例。|检查缓冲区大小，启动实例，并在缓冲区中返回管道名称。 <br />缓冲区大小参数返回的长度"server ="不包括终止 null 值的字符串。|  
+|Null|Null|用户想要启动实例，而不需要管道名称。|启动实例（不返回管道且不要求返回缓冲区大小）。|  
+|Null|存在|用户要求提供输出缓冲区大小。 （在下一次调用中，用户将可能要求实际启动。)|返回所需的缓冲区大小（不启动且不返回管道）。 结果为 S_OK。|  
+|存在|Null|不允许；输入不正确。|返回结果为 LOCALDB_ERROR_INVALID_PARAMETER。|  
+|存在|存在|用户想要启动实例，并且在启动后需要管道名称以便连接到此实例。|检查缓冲区大小，启动实例，并在缓冲区中返回管道名称。 <br />Buffer size 参数返回 "server =" 字符串的长度，不包括终止 null。|  
   
- 有关使用 LocalDB API 的代码示例，请参阅[SQL Server Express LocalDB 参考](../sql-server-express-localdb-reference.md)。  
+ 有关使用 LocalDB API 的代码示例，请参阅[SQL Server Express LocalDB 引用](../sql-server-express-localdb-reference.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server Express LocalDB 标头信息和版本信息](sql-server-express-localdb-header-and-version-information.md)  
   
   

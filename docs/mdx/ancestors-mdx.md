@@ -1,5 +1,5 @@
 ---
-title: 上级 (MDX) |Microsoft Docs
+title: 祖先（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8551e6fdac54b3eb4c20f13f6722936df1c92feb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017100"
 ---
 # <a name="ancestors-mdx"></a>Ancestors (MDX)
 
 
-  此函数返回指定成员在指定级别或距离处的所有祖先的集。 与[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，返回的集将始终包含的单个成员[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]不支持多个父级的单个成员。  
+  此函数返回指定成员在指定级别或距离处的所有祖先的集。 对于[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，返回的集始终包含一个成员- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]不支持单个成员的多个父项。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,24 +38,24 @@ Ancestors(Member_Expression, Distance)
  *Level_Expression*  
  返回级别的有效多维表达式 (MDX)。  
   
- *距离*  
+ *长途*  
  指定与指定成员距离的有效数值表达式。  
   
 ## <a name="remarks"></a>备注  
- 与**上级**函数，该函数提供 MDX 成员表达式，然后提供该成员的祖先所在级别的 MDX 表达式，或者表示的级别数的数值表达式该成员之上。 使用此信息，**上级**函数返回在该级别成员 （它将是一个成员的集） 的集合。  
+ 使用**上级**函数时，为函数提供一个 mdx 成员表达式，然后提供一个级别的 mdx 表达式，该表达式是该成员的上级，或是表示该成员之上的级别数的数值表达式。 使用此信息，**上级**函数将在该级别返回一组成员（这是由一个成员组成的集）。  
   
 > [!NOTE]  
->  若要返回祖先成员，而不是祖先集，使用[祖先](../mdx/ancestor-mdx.md)函数。  
+>  若要返回祖先成员而不是祖先集，请使用[祖先](../mdx/ancestor-mdx.md)函数。  
   
- 如果指定了级别表达式，则**上级**函数返回指定成员在指定级别处的所有祖先构成的集。 如果指定的成员不是指定的级别相同的层次结构中，该函数将返回错误。  
+ 如果指定了级别表达式，**上级**函数将返回指定成员在指定级别上的所有祖先的集。 如果指定的成员与指定的级别不在同一层次结构中，则该函数将返回错误。  
   
- 如果指定了距离，则**上级**函数返回的所有成员在层次结构指定成员表达式高出指定步骤数集。 成员可以指定为属性层次结构，用户定义层次结构，或者在某些情况下，父-子层次结构的成员。 数值 1 返回父级别处的成员集，数值 2 返回祖父级别处（如果存在）的成员集。 数值 0 返回仅包含成员本身的集。  
+ 如果指定了距离，**上级**函数将返回所有成员的集合，这些成员是在成员表达式指定的层次结构中指定的步骤数。 成员可以指定为属性层次结构、用户定义的层次结构的成员，也可以指定为父子层次结构。 数值 1 返回父级别处的成员集，数值 2 返回祖父级别处（如果存在）的成员集。 数值 0 返回仅包含成员本身的集。  
   
 > [!NOTE]  
->  使用这种形式的**上级**函数的情况下是未知的或不能为命名的父级别。  
+>  对于父级别未知或无法命名的情况，请使用此窗体的**上级**函数。  
   
 ## <a name="examples"></a>示例  
- 下面的示例使用**上级**函数返回成员、 其父节点和其祖父的 Internet Sales Amount 度量值。 此例使用级别表达式指定要返回的级别。 这些级别与成员表达式中指定的成员在同一个层次结构中。  
+ 下面的示例使用**祖先**函数返回成员、其父项和祖父的 "Internet 销售额" 度量值。 此例使用级别表达式指定要返回的级别。 这些级别与成员表达式中指定的成员在同一个层次结构中。  
   
 ```  
 SELECT {  
@@ -67,7 +67,7 @@ SELECT {
 FROM [Adventure Works]  
 ```  
   
- 下面的示例使用**上级**函数返回成员、 其父节点和其祖父的 Internet Sales Amount 度量值。 此例使用数值表达式指定要返回的级别。 这些级别与成员表达式中指定的成员在同一个层次结构中。  
+ 下面的示例使用**祖先**函数返回成员、其父项和祖父的 "Internet 销售额" 度量值。 此例使用数值表达式指定要返回的级别。 这些级别与成员表达式中指定的成员在同一个层次结构中。  
   
 ```  
 SELECT {  
@@ -85,7 +85,7 @@ SELECT {
 FROM  [Adventure Works]  
 ```  
   
- 下面的示例使用**上级**函数返回的属性层次结构成员的父级的 Internet Sales Amount 度量值。 此示例使用数值表达式指定要返回的级别。 由于成员表达式中的成员是属性层次结构的成员，因此其父成员是“(全部)”级别。  
+ 下面的示例使用**祖先**函数为属性层次结构的成员的父成员返回 "Internet 销售额" 度量值。 此示例使用数值表达式指定要返回的级别。 由于成员表达式中的成员是属性层次结构的成员，因此其父成员是“(全部)”级别。  
   
 ```  
 SELECT {  
@@ -97,7 +97,7 @@ SELECT {
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

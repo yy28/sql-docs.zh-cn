@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47dc8180fd6c8f59050520477724ff8adbc46a6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63061010"
 ---
 # <a name="stored-procedures-event-category"></a>Stored Procedures 事件类别
@@ -28,7 +28,7 @@ ms.locfileid: "63061010"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|Description|  
+|主题|说明|  
 |-----------|-----------------|  
 |[RPC:Completed 事件类](rpc-completed-event-class.md)|指示已完成远程过程调用 (RPC)。|  
 |[PreConnect:Completed 事件类](preconnect-completed-event-class.md)|指示何时资源调控器分类器函数结束执行。|  
@@ -45,7 +45,7 @@ ms.locfileid: "63061010"
 |[SP:StmtCompleted 事件类](sp-stmtcompleted-event-class.md)|指示已完成存储过程中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。|  
 |[SP:StmtStarting 事件类](sp-stmtstarting-event-class.md)|指示已启动存储过程中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [扩展事件](../extended-events/extended-events.md)   
  [sp_trace_setevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   

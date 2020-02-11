@@ -13,20 +13,20 @@ ms.assetid: 8b1c5233-950e-4173-ae15-dfc46be6ed09
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1eec75ec935e8b60fadb540c9bab05fbe2a05fdb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68003386"
 ---
 # <a name="sqlgetcursorname-visual-foxpro-odbc-driver"></a>SQLGetCursorName（Visual FoxPro ODBC 驱动程序）
 > [!NOTE]  
->  本主题包含 Visual FoxPro ODBC 驱动程序特定信息。 有关此函数的常规信息，请参阅下的相应主题[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)。  
+>  本主题包含特定于 Visual FoxPro ODBC 驱动程序的信息。 有关此函数的常规信息，请参阅[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)中的相应主题。  
   
  支持：完全  
   
  ODBC API 一致性：核心级别  
   
- 返回与相关联的游标的名称给定*hstmt*。 **SQLGetCursorName** Visual FoxPro ODBC 驱动程序 API 中包括，因为它是核心级别 API 功能的一部分，因为驱动程序不支持定位的更新不能与其他 API 函数一起使用它。  
+ 返回与给定*hstmt*关联的游标的名称。 **SQLGetCursorName**包含在 VISUAL FoxPro ODBC 驱动程序 API 中，因为它是核心级 API 功能的一部分;它无法与其他 API 函数一起使用，因为该驱动程序不支持定位更新。  
   
- 有关详细信息，请参阅[SQLGetCursorName](../../odbc/reference/syntax/sqlgetcursorname-function.md)中*ODBC 程序员参考*。
+ 有关详细信息，请参阅*ODBC 程序员参考*中的[SQLGetCursorName](../../odbc/reference/syntax/sqlgetcursorname-function.md) 。

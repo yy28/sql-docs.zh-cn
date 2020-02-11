@@ -26,17 +26,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 98cbaa59ea78e0033e9a534915987576347db604
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637615"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>类型化的 XML 与非类型化的 XML 的比较
-  您可以创建 `xml` 类型的变量、参数和列。 您也可以将 XML 架构的集合与 `xml` 类型的变量、参数或列关联起来。 在这种情况下，`xml`数据类型实例称为*键入*。 否则，XML 实例称作“非类型化”  的实例。  
+  您可以创建 `xml` 类型的变量、参数和列。 您也可以将 XML 架构的集合与 `xml` 类型的变量、参数或列关联起来。 在这种情况下`xml` ，数据类型实例称为*类型化*。 否则，XML 实例称作“非类型化”  的实例。  
   
 ## <a name="well-formed-xml-and-the-xml-data-type"></a>格式正确的 XML 和 xml 数据类型  
- `xml` 数据类型可实现 ISO 标准的 `xml` 数据类型。 因此，它可以在非类型化的 XML 列中存储格式正确的 XML 1.0 版的文档以及具有文本节点和任意数量顶级元素的所谓的 XML 内容片段。 系统将检查数据格式是否正确，但不要求将列绑定到 XML 架构，并且拒绝在扩展意义上格式不正确的数据。 对于非类型化的 XML 变量和参数也是如此。  
+ 
+  `xml` 数据类型可实现 ISO 标准的 `xml` 数据类型。 因此，它可以在非类型化的 XML 列中存储格式正确的 XML 1.0 版的文档以及具有文本节点和任意数量顶级元素的所谓的 XML 内容片段。 系统将检查数据格式是否正确，但不要求将列绑定到 XML 架构，并且拒绝在扩展意义上格式不正确的数据。 对于非类型化的 XML 变量和参数也是如此。  
   
 ## <a name="xml-schemas"></a>XML 架构  
  XML 架构提供以下信息：  
@@ -52,7 +53,7 @@ ms.locfileid: "62637615"
   
 -   您有架构，但不希望服务器验证数据。 当应用程序将数据存储到服务器之前会执行客户端验证时，临时存储对该架构而言无效的 XML 数据时，或在服务器上使用不支持的架构组件时，需要如此。  
   
- 使用类型化`xml`在以下情况下的数据类型：  
+ 在以下`xml`情况下使用类型化数据类型：  
   
 -   您有对应于您的 XML 数据的架构，并且希望服务器根据 XML 架构验证您的 XML 数据。  
   
@@ -63,18 +64,18 @@ ms.locfileid: "62637615"
  类型化的 XML 列、参数和变量可以存储 XML 文档或内容。 但是，在声明时必须使用标志指定是存储文档还是存储内容。 此外，必须提供 XML 架构集合。 如果每个 XML 实例都刚好有一个顶级元素，请指定 DOCUMENT。 否则，请使用 CONTENT。 查询编译器在查询编译期间的类型检查过程中使用 DOCUMENT 标志来推断单独的顶级元素。  
   
 ## <a name="creating-typed-xml"></a>创建类型化的 XML  
- 您可以创建类型化之前`xml`变量、 参数或列，您必须先注册使用的 XML 架构集合[CREATE XML SCHEMA COLLECTION &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-xml-schema-collection-transact-sql)。 接下来，您就可以将 XML 架构集合与 `xml` 数据类型的变量、参数或列关联起来。  
+ 创建类型化`xml`变量、参数或列之前，必须先使用[CREATE xml Schema collection &#40;transact-sql&#41;](/sql/t-sql/statements/create-xml-schema-collection-transact-sql)来注册 XML 架构集合。 接下来，您就可以将 XML 架构集合与 `xml` 数据类型的变量、参数或列关联起来。  
   
  在下列示例中，使用由两部分组成的名称命名约定指定 XML 架构集合名称。 第一部分是架构名称，第二部分是 XML 架构集合名称。  
   
-### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>例如：将架构集合与 xml 类型变量关联起来  
- 下面的示例创建`xml`类型变量并将架构集合与之相关联。 该示例中指定的架构集合已导入 **AdventureWorks** 数据库。  
+### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>示例：将架构集合与 xml 类型变量关联起来  
+ 下面的示例创建一个`xml`类型变量并将架构集合与其关联。 该示例中指定的架构集合已导入 **AdventureWorks** 数据库。  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   
 ```  
   
-### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>例如：为 xml 类型列指定架构  
+### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>示例：为 xml 类型列指定架构  
  下面的示例创建一个包含 `xml` 类型列的表，并为该列指定了一个架构：  
   
 ```  
@@ -83,7 +84,7 @@ CREATE TABLE T1(
  Col2 xml (Production.ProductDescriptionSchemaCollection)) ;  
 ```  
   
-### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>例如：将 xml 类型参数传递给存储过程  
+### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>示例：将 xml 类型参数传递给存储过程  
  下面的示例将 `xml` 类型参数传递给存储过程，并为该变量指定一个架构：  
   
 ```  
@@ -105,7 +106,7 @@ AS
   
  在数据类型层次结构中，`xml` 数据类型显示在 `sql_variant` 和用户定义类型之下，但显示在所有内置类型之上。  
   
-### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>例如：指定用于约束类型化的 xml 列的方面  
+### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>示例：指定用于约束类型化的 xml 列的方面  
  对于类型化的 `xml` 列，可以对这样的列实施约束，使之仅允许存储每个实例的单独的顶级元素。 可以在创建了表以后通过指定可选的 `DOCUMENT` 方面来进行此操作，如以下示例中所示：  
   
 ```  
@@ -155,9 +156,9 @@ declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);
   
  请注意，即使 XML 数据类型包含负年份，仍可以使用简单的 SQL SELECT 语句来检索整个 XML 数据类型。 建议您用新的受支持范围内的年份替代负年份，或将相应元素或属性的类型更改为 **xs:string**。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建 XML 数据的实例](create-instances-of-xml-data.md)   
- [XML 数据类型方法](/sql/t-sql/xml/xml-data-type-methods)   
+ [xml 数据类型方法](/sql/t-sql/xml/xml-data-type-methods)   
  [XML 数据修改语言 (XML DML)](/sql/t-sql/xml/xml-data-modification-language-xml-dml)   
  [XML 数据 (SQL Server)](xml-data-sql-server.md)  
   

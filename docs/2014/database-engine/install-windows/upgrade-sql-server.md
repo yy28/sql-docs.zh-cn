@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d47c670088f088260435f9e046e0bbdbf1fb9e4a
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637703"
 ---
 # <a name="upgrade-to-sql-server-2014"></a>升级到 SQL Server 2014
@@ -25,7 +25,7 @@ ms.locfileid: "73637703"
 ## <a name="in-this-section"></a>本节内容  
  本节包含下列主题：  
   
--   [支持的版本和版本升级](supported-version-and-edition-upgrades.md)  
+-   [支持的版本升级](supported-version-and-edition-upgrades.md)  
   
 -   [使用升级顾问来准备升级](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)  
   
@@ -43,23 +43,23 @@ ms.locfileid: "73637703"
   
 -   [升级 PowerPivot for SharePoint](upgrade-power-pivot-for-sharepoint.md)  
   
--   [升级复制的数据库](../../database-engine/install-windows/upgrade-replicated-databases.md)  
+-   [升级复制数据库](../../database-engine/install-windows/upgrade-replicated-databases.md)  
   
--   [升级和迁移 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
+-   [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
   
 -   [升级 SQL Server 管理工具](upgrade-sql-server-management-tools.md)  
   
--   [升级操作说明主题](../../../2014/sql-server/install/upgrade-how-to-topics.md)  
+-   [升级操作指南主题](../../../2014/sql-server/install/upgrade-how-to-topics.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [升级数据库引擎](upgrade-database-engine.md)   
  [升级 Analysis Services](upgrade-analysis-services.md)   
- [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
+ [升级和迁移 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
  [升级 Integration Services](../../integration-services/install-windows/upgrade-integration-services.md)   
  [升级复制的数据库](../../database-engine/install-windows/upgrade-replicated-databases.md)   
  [升级 Master Data Services](upgrade-master-data-services.md)   
  [SQL Server 2005 最佳做法分析器](https://www.microsoft.com/download/details.aspx?id=23864)   
  [SQL Server 2008 R2 最佳做法分析器](https://www.microsoft.com/download/details.aspx?id=15289)   
- [后向兼容性](../../../2014/getting-started/backward-compatibility.md)  
+ [向后兼容性](../../../2014/getting-started/backward-compatibility.md)  
   
   

@@ -21,17 +21,17 @@ ms.assetid: 724c7b86-300a-4fa9-ad96-4afa0fdcb3e9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2f68a87db729df2f4a27e2766a9de60e8c75a71a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036422"
 ---
 # <a name="connection-strings"></a>连接字符串
-连接字符串包含用于建立的连接信息。 完整的连接字符串包含建立连接所需的所有信息。 连接字符串是一系列由分号分隔的关键字/值对。 (连接字符串的完整语法，请参阅[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)函数说明。)通过使用的连接字符串：  
+连接字符串包含用于建立连接的信息。 完整的连接字符串包含建立连接所需的所有信息。 连接字符串是一系列由分号分隔的关键字/值对。 （有关连接字符串的完整语法，请参阅[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)函数说明。）使用连接字符串的方法是：  
   
--   **SQLDriverConnect**，这通过与用户交互来完成的连接字符串。  
+-   **SQLDriverConnect**，它通过与用户交互来完成连接字符串。  
   
--   **SQLBrowseConnect**，这将完成以迭代方式与数据源的连接字符串。  
+-   **SQLBrowseConnect**，它通过数据源迭代完成连接字符串。  
   
- **SQLConnect**不使用连接字符串; 使用**SQLConnect**类似于连接的连接字符串中使用三个关键字/值对 (数据源名称和 （可选） 用户 ID 和密码).
+ **SQLConnect**不使用连接字符串;使用**SQLConnect**类似于使用只包含三个关键字/值对的连接字符串进行连接（适用于数据源名称和（可选）用户 ID 和密码）。

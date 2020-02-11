@@ -1,5 +1,5 @@
 ---
-title: （注释）(MDX) |Microsoft Docs
+title: 条（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 6eb4b54df98cfbf297e6347dac336aa7405d1347
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68006289"
 ---
 # <a name="comment-mdx-double-slash"></a>注释 MDX 双斜杠
@@ -27,7 +27,7 @@ ms.locfileid: "68006289"
 // Comment_Text   
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *Comment_Text*  
  包含注释文本的字符串。  
   
@@ -54,9 +54,9 @@ WHERE
     [Measures].[Gross Profit Margin]  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [注释 (MDX)](../mdx/comment-mdx.md)   
- [--（注释）(MDX)](../mdx/comment-mdx-operator-reference.md)   
- [MDX 运算符参考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;MDX&#41;注释](../mdx/comment-mdx.md)   
+ [--&#40;注释&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)   
+ [Mdx 运算符引用 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

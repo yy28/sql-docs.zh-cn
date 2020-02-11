@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: df28974c9fc6fdf3c9ef974ea5dd868f775af134
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62705202"
 ---
 # <a name="export-as-policy-dialog-box"></a>“导出为策略”对话框
@@ -35,7 +35,7 @@ ms.locfileid: "62705202"
  **到文件**  
  若要将策略保存为 XML 文件，请键入此文件的路径和名称或者使用“浏览”( **...** ) 按钮。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用基于策略的管理来管理服务器](administer-servers-by-using-policy-based-management.md)  
   
   

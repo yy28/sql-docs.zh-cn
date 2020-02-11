@@ -1,5 +1,5 @@
 ---
-title: bcp_exec | Microsoft Docs
+title: bcp_exec |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,13 +19,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d5ce458ea8f5874620ea0561eeea5c6ff8e56bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62689036"
 ---
-# <a name="bcpexec"></a>bcp_exec
+# <a name="bcp_exec"></a>bcp_exec
   执行数据库表和用户文件之间数据的完整大容量复制。  
   
 ## <a name="syntax"></a>语法  
@@ -44,25 +44,25 @@ pnRowsProcessed
   
 ## <a name="arguments"></a>参数  
  *hdbc*  
- 是大容量复制启用 ODBC 连接句柄。  
+ 是启用大容量复制的 ODBC 连接句柄。  
   
  *pnRowsProcessed*  
- 指向 DBINT 的指针。 **Bcp_exec**函数用成功复制的行数填充此 DBINT。 如果*pnRowsProcessed*为 NULL，则忽略了**bcp_exec**。  
+ 指向 DBINT 的指针。 **Bcp_exec**函数用成功复制的行数填充此 DBINT。 如果*pnRowsProcessed*为 NULL，则**bcp_exec**将忽略它。  
   
 ## <a name="returns"></a>返回  
- SUCCEED、SUCCEED_ASYNC 或 FAIL。 **Bcp_exec**函数将返回 SUCCEED，如果复制了所有行。 **bcp_exec**是否仍未完成异步大容量复制操作将返回 SUCCEED_ASYNC。 **bcp_exec**返回，如果发生完全失败，或者生成错误的行数达到为 BCPMAXERRS 使用指定的值失败[bcp_control](bcp-control.md)。 BCPMAXERRS 默认为 10。 BCPMAXERRS 选项只影响从数据文件读取行（并且不是已发送到服务器的行）时提供程序检测到的语法错误。 服务器在检测到某一行有错误时将中止批处理。 检查*pnRowsProcessed*成功复制的行数的参数。  
+ SUCCEED、SUCCEED_ASYNC 或 FAIL。 如果复制所有行， **bcp_exec**函数将返回成功。 如果异步大容量复制操作仍未完成， **bcp_exec**将返回 SUCCEED_ASYNC。 如果发生了完全失败，或者如果生成错误的行数达到使用[bcp_control](bcp-control.md)为 BCPMAXERRS 指定的值，则**bcp_exec**返回失败。 BCPMAXERRS 默认为 10。 BCPMAXERRS 选项只影响从数据文件读取行（并且不是已发送到服务器的行）时提供程序检测到的语法错误。 服务器在检测到某一行有错误时将中止批处理。 检查*pnRowsProcessed*参数是否已成功复制的行数。  
   
 ## <a name="remarks"></a>备注  
- 此函数将从用户文件到数据库表或执行相反，数据复制的值根据*eDirection*中的参数[bcp_init](bcp-init.md)。  
+ 此函数将数据从用户文件复制到数据库表，或从用户文件复制到数据库表，具体取决于[bcp_init](bcp-init.md)中的*eDirection*参数的值。  
   
- 然后再调用**bcp_exec**，调用**bcp_init**具有有效的用户文件名称。 如果没有这样做，会导致错误。  
+ 调用**bcp_exec**之前，请使用有效的用户文件名调用**bcp_init** 。 如果没有这样做，会导致错误。  
   
- **bcp_exec**是唯一大容量复制函数是可能胜任任何时间长度。 因此，它是支持异步模式的唯一大容量复制函数。 若要设置异步模式，请使用[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md)之前，先将 SQL_ATTR_ASYNC_ENABLE 设置为 SQL_ASYNC_ENABLE_ON **bcp_exec**。 若要测试的完成情况，请调用**bcp_exec**使用相同的参数。 如果大容量复制尚未完成， **bcp_exec**返回 SUCCEED_ASYNC。 它还会返回在*pnRowsProcessed*状态计数的已发送到服务器的行数。 发送到服务器的行直到到达批的末尾时才会提交。  
+ **bcp_exec**是在任意时间长度中可能未完成的唯一大容量复制函数。 因此，它是支持异步模式的唯一大容量复制函数。 若要设置异步模式，请在调用**bcp_exec**之前，使用[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md)将 SQL_ATTR_ASYNC_ENABLE 设置为 SQL_ASYNC_ENABLE_ON。 若要测试完成，请调用具有相同参数的**bcp_exec** 。 如果大容量复制尚未完成， **bcp_exec**将返回 SUCCEED_ASYNC。 它还会在*pnRowsProcessed*中返回已发送到服务器的行数的状态计数。 发送到服务器的行直到到达批的末尾时才会提交。  
   
- 信息的重要更改中大容量复制中的开头[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，请参阅[执行大容量复制操作&#40;ODBC&#41;](../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)。  
+ 有关从开始大容量复制的重大更改的信息[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，请参阅[&#40;ODBC&#41;执行大容量复制操作](../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用**bcp_exec**:  
+ 下面的示例演示如何使用**bcp_exec**：  
   
 ```  
 // Variables like henv not specified.  
@@ -113,7 +113,7 @@ printf_s("%ld rows processed.\n", nRowsProcessed);
 // Carry on.  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [大容量复制函数](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0aa54692cf300a8d52d767092881ab30bc62d80f
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70911220"
 ---
 # <a name="using-user-defined-tables"></a>使用用户定义表
@@ -25,16 +25,18 @@ ms.locfileid: "70911220"
 
   用户定义表表示表格信息。 将表格数据传递到存储过程或用户定义函数中时，用户定义表可作为参数使用。 用户定义表不能用于表示数据库表中的列。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Database> 对象具有 <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> 属性，该属性引用 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection> 对象。 该<xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>集合中的每个对象都有一个**Columns**属性，该属性<xref:Microsoft.SqlServer.Management.Smo.Column>引用列出了用户定义的表中的列的对象集合。 使用 Add 方法可向用户定义表添加列。  
+ <xref:Microsoft.SqlServer.Management.Smo.Database>对象具有<xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A>属性，该属性引用<xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection>对象。 该<xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>集合中的每个对象都有一个**Columns**属性，该属性<xref:Microsoft.SqlServer.Management.Smo.Column>引用列出了用户定义的表中的列的对象集合。 使用 Add 方法可向用户定义表添加列。  
   
  使用 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> 对象定义新的用户定义表时，必须提供列和基于其中一列的主键。  
   
- 用户定义表类型在创建之后，将无法更改。 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> 不支持 Alter 方法。 用户定义表类型可以具有检查约束，但因为该类型不可更改，所以某些检查操作将引发异常。  
+ 用户定义表类型在创建之后，将无法更改。 
+  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> 不支持 Alter 方法。 用户定义表类型可以具有检查约束，但因为该类型不可更改，所以某些检查操作将引发异常。  
   
- <xref:Microsoft.SqlServer.Management.Smo.DataType> 类用于指定与列和参数关联的数据类型。 使用此类型可指定用户定义表类型作为用户定义函数和存储过程的参数。  
+ 
+  <xref:Microsoft.SqlServer.Management.Smo.DataType> 类用于指定与列和参数关联的数据类型。 使用此类型可指定用户定义表类型作为用户定义函数和存储过程的参数。  
   
 ## <a name="examples"></a>示例  
-若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual Studio&#35; .Net 中创建 Visual C SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual Studio .net 中创建 Visual C&#35; SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
 
   
 ## <a name="creating-a-user-defined-table-in-visual-basic"></a>在 Visual Basic 中创建用户定义表  
@@ -255,7 +257,7 @@ $udf.TextBody = "BEGIN RETURN (GETDATE());end"
 $udf.Create()           
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.SqlServer.Management.Smo.FileGroup>   
  [数据库文件和文件组](../../../relational-databases/databases/database-files-and-filegroups.md)   
   

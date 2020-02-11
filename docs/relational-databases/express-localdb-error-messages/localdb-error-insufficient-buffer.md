@@ -1,5 +1,5 @@
 ---
-title: LOCALDB_ERROR_INSUFFICIENT_BUFFER | Microsoft Docs
+title: LOCALDB_ERROR_INSUFFICIENT_BUFFER |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.assetid: ff67bda8-7e5c-4b06-8d7b-9985b6059a98
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 372ec1bbee84b90a9a30ec768fd7a35e3f6112d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67995783"
 ---
-# <a name="localdberrorinsufficientbuffer"></a>LOCALDB_ERROR_INSUFFICIENT_BUFFER
+# <a name="localdb_error_insufficient_buffer"></a>LOCALDB_ERROR_INSUFFICIENT_BUFFER
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="details"></a>详细信息  
@@ -29,7 +29,7 @@ ms.locfileid: "67995783"
 |组件|本地数据库运行时 API|  
 |消息正文|传递给本地数据库实例 API 方法的缓冲区太小。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  输入的缓冲区太小，并且没有要求截断。  
   
 ## <a name="user-action"></a>用户操作  

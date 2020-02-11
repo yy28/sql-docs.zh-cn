@@ -19,14 +19,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1d3791cc5250442555dd9b090dda549fe2b9feec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524383"
 ---
 # <a name="delete-an-operator"></a>Delete an Operator
-  本主题介绍了如何通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中删除操作员，使他们不会再收到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报通知。  
+  本主题介绍如何使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]在中删除操作员，使其不再接收代理警报通知。  
   
  **本主题内容**  
   
@@ -47,10 +47,11 @@ ms.locfileid: "62524383"
 ###  <a name="Restrictions"></a> 限制和局限  
  删除操作员时，将同时删除与此操作员关联的所有通知。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
- **sysadmin** 固定服务器角色的成员可以删除操作员。  
+####  <a name="Permissions"></a> 权限  
+ 
+  **sysadmin** 固定服务器角色的成员可以删除操作员。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
@@ -58,13 +59,13 @@ ms.locfileid: "62524383"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开包含要删除的操作员的服务器。  
   
-2.  单击加号以展开 **“SQL Server 代理”** 。  
+2.  单击加号以展开 **“SQL Server 代理”**。  
   
 3.  单击加号以展开 **“操作员”** 文件夹。  
   
-4.  右键单击要删除的操作员，然后选择“删除”  。  
+4.  右键单击要删除的操作员，然后选择“删除”****。  
   
-5.  在 **“删除对象”** 对话框中，确保已选择正确的操作员，然后单击 **“确定”** 。 如果希望其他操作员收到发送给已删除操作员的警报和作业，请选择 **“重新分配给”** ，然后在列表中选择一个操作员。  
+5.  在 **“删除对象”** 对话框中，确保已选择正确的操作员，然后单击 **“确定”**。 如果希望其他操作员收到发送给已删除操作员的警报和作业，请选择 **“重新分配给”** ，然后在列表中选择一个操作员。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -86,6 +87,6 @@ ms.locfileid: "62524383"
     GO  
     ```  
   
- 有关详细信息，请参阅[sp_delete_operator &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-operator-transact-sql)。  
+ 有关详细信息，请参阅[&#40;transact-sql&#41;sp_delete_operator ](/sql/relational-databases/system-stored-procedures/sp-delete-operator-transact-sql)。  
   
   

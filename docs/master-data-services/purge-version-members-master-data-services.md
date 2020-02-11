@@ -11,10 +11,10 @@ ms.assetid: adecce2d-46bb-49ff-8be9-0b31b8dd3cb6
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 94543ada58c5af829da6a7650e21f5f4e2deb9bb
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729006"
 ---
 # <a name="purge-version-members-master-data-services"></a>清除版本成员 (Master Data Services)
@@ -23,7 +23,7 @@ ms.locfileid: "73729006"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，删除成员仅将其停用或软删除。 数据仍驻留在数据库中。 本主题介绍如何在模型版本中清除（永久删除）所有软删除的成员。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  执行此过程。  
   
 -   你必须有权访问“版本管理”功能区域。  
@@ -32,13 +32,13 @@ ms.locfileid: "73729006"
   
 ## <a name="to-purge-soft-deleted-members"></a>清除软删除的成员  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“版本管理”** 。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“版本管理”**。  
   
-2.  在“管理版本” 页上，选择与要清除的版本对应的模型。 随后显示模型版本的列表。  
+2.  在“管理版本” **** 页上，选择与要清除的版本对应的模型。 随后显示模型版本的列表。  
   
 3.  选择与要清除的版本对应的行。  
   
-4.  单击“清除成员”。  
+4.  单击“清除成员” ****。  
   
 5.  在确认提示中单击“确定”。  
   

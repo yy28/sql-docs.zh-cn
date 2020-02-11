@@ -1,5 +1,5 @@
 ---
-title: 项目设置 （类型映射） (SybaseToSQL) |Microsoft Docs
+title: 项目设置（类型映射）（SybaseToSQL） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,136 +10,136 @@ ms.assetid: 2698fb3a-f9e6-4e04-94e0-dad289d7ed0a
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d7b16bdf3717fa14f91af41663cbd65365eac52a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68028658"
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>项目设置（类型映射）(SybaseToSQL)
-类型映射页**项目设置**对话框中包含自定义 SSMA 将 Sybase Adaptive Server Enterprise (ASE) 数据类型的转换设置的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型。  
+"**项目设置**" 对话框的 "类型映射" 页包含用于自定义 SSMA 如何将 Sybase 自适应服务器企业（ASE）数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]类型转换为数据类型的设置。  
   
-类型映射页现已推出**项目设置**并**默认项目设置**对话框。  
+"类型映射" 页在 "**项目设置**" 和 "**默认项目设置**" 对话框中可用。  
   
--   若要指定所有将来的 SSMA 项目的类型映射设置上**工具**菜单中，选择**默认项目设置**，选择为其设置所需查看迁移的项目类型或从更改**迁移目标版本**下拉列表，然后选择**类型映射**在左窗格的底部。  
+-   若要指定所有未来 SSMA 项目的类型映射设置，请在 "**工具**" 菜单上，选择 "**默认项目设置**"，从 "**迁移目标版本**" 下拉菜单中选择需要查看或更改其设置的迁移项目类型，然后选择左窗格底部的 "**类型映射**"。  
   
--   若要在指定的当前项目中，设置**工具**菜单中，选择**项目设置**，然后选择**类型映射**在左窗格的底部。  
+-   若要指定当前项目的设置，请在 "**工具**" 菜单上选择 "**项目设置**"，然后在左窗格底部选择 "**类型映射**"。  
   
 ## <a name="options"></a>选项  
 **源类型**  
 映射的 ASE 数据类型。  
   
 **目标类型**  
-目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定 ASE 数据类型的数据类型。  
+指定 ASE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型的目标数据类型。  
   
-请参阅以下部分的 Sybase 类型映射的默认值 SSMA 中的表。  
+请参阅以下部分中的表，了解用于 Sybase 类型映射的默认 SSMA。  
   
-**“添加”**  
-单击此项可将数据类型添加到映射列表。  
+**添加**  
+单击此可将数据类型添加到 "映射" 列表中。  
   
 **编辑**  
-单击可编辑所选的数据类型映射列表中。  
+单击此项可在 "映射" 列表中编辑所选的数据类型。  
   
 **删除**  
-单击以从映射列表中删除所选的数据类型映射。  
+单击此选项可从 "映射" 列表中删除所选的数据类型映射。  
   
-重置为默认值   
-单击以重置为 SSMA 默认值的类型映射列表。  
+**重置为默认值**  
+单击可将类型映射列表重置为 SSMA 默认值。  
   
 ## <a name="default-type-mapping"></a>默认类型映射  
-下表包含 ASE 之间的默认类型映射和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型。  
+下表包含 ASE 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型之间的默认类型映射。  
   
 |ASE 数据类型|SQL Server 数据类型|  
 |-----------------|------------------------|  
 |**bigint**|**bigint**|  
 |**binary**|**binary**|  
-|**binary[\*..8000]**|**binary[\*]**|  
-|**binary[8001..\*]**|**varbinary(max)**|  
+|**binary [\*.。8000]**|**binary [\*]**|  
+|**binary [8001\*]**|**varbinary(max)**|  
 |**bit**|**bit**|  
 |**char**|**char**|  
-|**char varying**|**varchar**|  
-|**char varying [\*...8000]**|**varchar[\*]**|  
-|**char varying [8001...\*]**|**varchar(max)**|  
-|**char[\*..8000]**|**char[\*]**|  
-|**char[8001..\*;]**|**varchar(max)**|  
-|**character**|**char**|  
-|**不同的字符**|**varchar**|  
-|**不同的字符 [\*...8000]**|**varchar[\*]**|  
-|**不同的字符 [8001...\*]**|**varchar(max)**|  
-|**character[\*..8000]**|**char[\*]**|  
-|**character[8001..\*]**|**varchar(max)**|  
+|**char 可变**|**varchar**|  
+|**char 改变 [\*.。8000]**|**varchar [\*]**|  
+|**char 改变 [8001\*]**|**varchar(max)**|  
+|**char [\*.。8000]**|**char [\*]**|  
+|**char [8001\*]**|**varchar(max)**|  
+|**字符**|**char**|  
+|**字符变化**|**varchar**|  
+|**字符变化 [\*。8000]**|**varchar [\*]**|  
+|**字符变化 [8001\*]**|**varchar(max)**|  
+|**字符 [\*.。8000]**|**char [\*]**|  
+|**字符 [8001\*]**|**varchar(max)**|  
 |**date**|**date**|  
-|**datetime**|**datetime2[3]**|  
-|**dec**|**decimal**|  
-|**dec[\*..\*]**|**decimal[\*]**|  
-|**dec[\*..\*][\*..\*]**|**decimal[\*][\*]**|  
-|**decimal**|**decimal**|  
-|**decimal[\*..\*]**|**decimal[\*]**|  
-|**decimal[\*..\*][\*..\*]**|**decimal[\*][\*]**|  
-|**双精度**|**float[53]**|  
-|**float**|**float[53]**|  
-|**float[\*..15]**|**float[24]**|  
-|**float[16..\*]**|**float[53]**|  
-|**image**|**image**|  
+|**datetime**|**datetime2 [3]**|  
+|**十进制**|**Decimal**|  
+|**dec [\*.。。\*]**|**decimal [\*]**|  
+|**dec [\*.。。\*][\*..\*]**|**decimal [\*] [\*]**|  
+|**Decimal**|**Decimal**|  
+|**decimal [\*.。\*]**|**decimal [\*]**|  
+|**decimal [\*.。\*][\*..\*]**|**decimal [\*] [\*]**|  
+|**双精度**|**float [53]**|  
+|**float**|**float [53]**|  
+|**float [\*.。15**|**float [24]**|  
+|**float [16 ...\*]**|**float [53]**|  
+|**图像**|**图像**|  
 |**int**|**int**|  
-|**integer**|**int**|  
-|**longsysname**|**nvarchar[255]**|  
+|**整数**|**int**|  
+|**longsysname**|**nvarchar [255]**|  
 |**money**|**money**|  
-|**national char**|**nchar**|  
-|**national char [\*...4000]**|**nchar[\*]**|  
-|**national char varying**|**nvarchar**|  
-|**national char varying [\*...4000]**|**nvarchar[\*]**|  
-|**national char varying [4001...\*]**|**nvarchar(max)**|  
-|**national char [4001...\*]**|**nvarchar(max)**|  
-|**区域字符集**|**nchar**|  
-|**区域字符集 [\*...4000]**|**nchar[\*]**|  
-|**区域字符集 [4001...\*]**|**nvarchar(max)**|  
-|**不同的区域字符集**|**nvarchar**|  
-|**不同的区域字符集 [\*...4000]**|**nvarchar[\*]**|  
-|**不同的区域字符集 [4001...\*]**|**nvarchar(max)**|  
-|**国家/地区 varchar**|**nvarchar**|  
-|**国家/地区 varchar [\*...4000]**|**nvarchar[\*]**|  
-|**国家/地区 varchar [4001...\*]**|**nvarchar(max)**|  
+|**国家字符**|**nchar**|  
+|**国家字符 [\*.。4000]**|**nchar [\*]**|  
+|**国家字符不同**|**nvarchar**|  
+|**国家字符变化 [\*。4000]**|**nvarchar [\*]**|  
+|**国家字符变化 [4001 ...\*]**|**nvarchar(max)**|  
+|**国家字符 [4001 ...\*]**|**nvarchar(max)**|  
+|**国家字符**|**nchar**|  
+|**国家字符 [\*.。4000]**|**nchar [\*]**|  
+|**国家字符 [4001 ...\*]**|**nvarchar(max)**|  
+|**国家字符可变**|**nvarchar**|  
+|**国家字符变化 [\*。4000]**|**nvarchar [\*]**|  
+|**国家字符可变 [4001 ...\*]**|**nvarchar(max)**|  
+|**民族 varchar**|**nvarchar**|  
+|**国家 varchar [\*.。4000]**|**nvarchar [\*]**|  
+|**国家 varchar [4001 ...\*]**|**nvarchar(max)**|  
 |**nchar**|**nchar**|  
-|**不同的 nchar**|**nvarchar**|  
-|**不同的 nchar [\*...4000]**|**nvarchar[\*]**|  
-|**nchar varying[4001..\*]**|**nvarchar(max)**|  
-|**nchar[\*..4000]**|**nchar[\*]**|  
-|**nchar[4001..\*]**|**nvarchar(max)**|  
-|**numeric**|**numeric**|  
-|**numeric[\*..\*]**|**numeric[\*]**|  
-|**numeric[\*..\*][\*..\*]**|**numeric[\*][\*]**|  
+|**nchar 不同**|**nvarchar**|  
+|**nchar 不同 [\*。4000]**|**nvarchar [\*]**|  
+|**nchar 不同 [4001 ...\*]**|**nvarchar(max)**|  
+|**nchar [\*.。。4000]**|**nchar [\*]**|  
+|**nchar [4001 ...\*]**|**nvarchar(max)**|  
+|**加法**|**加法**|  
+|**数值 [\*。\*]**|**数值 [\*]**|  
+|**数值 [\*。\*][\*..\*]**|**numeric [\*] [\*]**|  
 |**nvarchar**|**nvarchar**|  
-|**nvarchar[\*..4000]**|**nvarchar[\*]**|  
-|**nvarchar[4001..\*]**|**nvarchar(max)**|  
-|**real**|**float[24]**|  
+|**nvarchar [\*.。4000]**|**nvarchar [\*]**|  
+|**nvarchar [4001 ...\*]**|**nvarchar(max)**|  
+|**实际上**|**float [24]**|  
 |**smalldatetime**|**smalldatetime**|  
 |**smallint**|**smallint**|  
 |**smallmoney**|**smallmoney**|  
-|**sysname**|**nvarchar[128]**|  
-|**sysname[\*..\*]**|**nvarchar[255]**|  
+|**sysname**|**nvarchar [128]**|  
+|**sysname [\*.。\*]**|**nvarchar [255]**|  
 |**text**|**text**|  
-|**time**|**time[3]**|  
-|**timestamp**|**rowversion**|  
+|**time**|**时间 [3]**|  
+|**标志**|**rowversion**|  
 |**tinyint**|**tinyint**|  
 |**unichar**|**nchar**|  
-|**unichar 改变**|**nvarchar**|  
-|**unichar varying[\*..4000]**|**nvarchar[\*]**|  
-|**unichar varying[4001..\*]**|**nvarchar(max)**|  
-|**unichar[\*..4000]**|**nchar[\*]**|  
-|**unichar[4001..\*]**|**nvarchar(max)**|  
+|**unichar**|**nvarchar**|  
+|**\*unichar4000]**|**nvarchar [\*]**|  
+|**unichar 改变 [4001 ...\*]**|**nvarchar(max)**|  
+|**unichar [\*.。4000]**|**nchar [\*]**|  
+|**unichar [4001 ...\*]**|**nvarchar(max)**|  
 |**unitext**|**nvarchar(max)**|  
 |**univarchar**|**nvarchar**|  
-|**univarchar[\*..4000]**|**nvarchar[\*]**|  
-|**univarchar[4001..\*]**|**nvarchar(max)**|  
-|**无符号的 bigint**|**numeric[20][0]**|  
+|**univarchar [\*.。4000]**|**nvarchar [\*]**|  
+|**univarchar [4001 ...\*]**|**nvarchar(max)**|  
+|**无符号 bigint**|**数值 [20] [0]**|  
 |**unsigned int**|**bigint**|  
-|**无符号的 smallint**|**int**|  
-|**无符号的 tinyint**|**tinyint**|  
+|**无符号 smallint**|**int**|  
+|**无符号 tinyint**|**tinyint**|  
 |**varbinary**|**varbinary**|  
-|**varbinary[\*..8000]**|**varbinary[\*]**|  
-|**varbinary[8001..\*]**|**varbinary(max)**|  
+|**varbinary [\*.。8000]**|**varbinary [\*]**|  
+|**varbinary [8001\*]**|**varbinary(max)**|  
 |**varchar**|**varchar**|  
-|**varchar[\*..8000]**|**varchar[\*]**|  
-|**varchar[8001..\*]**|**varchar(max)**|  
+|**varchar [\*.。。8000]**|**varchar [\*]**|  
+|**varchar [8001\*]**|**varchar(max)**|  
   

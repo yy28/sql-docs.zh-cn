@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5dc55cc688f4e40d188492636c3653556f88b1c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68212010"
 ---
 # <a name="view-and-modify-push-subscription-properties"></a>查看和修改推送订阅属性
@@ -40,7 +40,7 @@ ms.locfileid: "68212010"
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  可以从下列位置查看和修改发布服务器的推送订阅属性：  
   
--   **“订阅属性 - \<Publisher>:** \<PublicationDatabase>”对话框，该对话框可从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中找到。  
+-   “订阅属性 - **发布服务器>：\<PublicationDatabase>”对话框，可从 \< 中获取。** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
 -   **“所有订阅”** 选项卡，该选项卡可以从复制监视器中找到。 有关启动复制监视器的信息，请参阅[启动复制监视器](monitor/start-the-replication-monitor.md)。  
   
@@ -69,17 +69,17 @@ ms.locfileid: "68212010"
   
 #### <a name="to-view-the-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>查看快照或事务发布的推送订阅的属性  
   
-1.  在发布服务器上，对发布数据库执行 [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql)。 指定 **@publication** 或复制管理对象 (RMO) 在 **@subscriber** ，并为 **@article** 指定值 **@article** 中获取。  
+1.  在发布服务器上，对发布数据库执行 [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql)。 将**@publication**、 **@subscriber**和的值指定**@article**为**all** 。  
   
-2.  在发布服务器上，对发布数据库执行 [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql)，同时指定 **@subscriber** 中获取。  
+2.  在发布服务器上，对发布数据库执行 [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql)，同时指定 **@subscriber**中获取。  
   
 #### <a name="to-change-the-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>更改快照或事务发布的推送订阅的属性  
   
 1.  在发布服务器上，对发布数据库执行 [sp_changesubscriber](/sql/relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql)，同时指定 **@subscriber** 及任何参数。  
   
-2.  在发布服务器上，对发布数据库执行 [sp_changesubscription](/sql/relational-databases/system-stored-procedures/sp-changesubscription-transact-sql)。 指定 **@publication** 或复制管理对象 (RMO) 在 **@subscriber** 或复制管理对象 (RMO) 在 **@destination_db** ，为 **@article** 指定值 **@article** ，将 **@property** 指定为要更改的订阅属性，并将 **@value** 中获取。 这将更改推送订阅的安全设置。  
+2.  在发布服务器上，对发布数据库执行 [sp_changesubscription](/sql/relational-databases/system-stored-procedures/sp-changesubscription-transact-sql)。 **@publication** **@article** **@property** **@value** **** 将、 **@subscriber**、、的值指定为，将订阅属性更改为，并将新值指定为。 **@destination_db** 这将更改推送订阅的安全设置。  
   
-3.  （可选）若要更改订阅的 Data Transformation Services (DTS) 包属性，请在订阅服务器上，对订阅数据库执行 [sp_changesubscriptiondtsinfo](/sql/relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql) 。 为 **@jobid** 指定分发代理作业的 ID，并指定以下 DTS 包属性：  
+3.  （可选）若要更改订阅的 Data Transformation Services (DTS) 包属性，请在订阅服务器上，对订阅数据库执行 [sp_changesubscriptiondtsinfo](/sql/relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql) 。 为**@jobid**指定分发代理作业的 ID，并指定以下 DTS 包属性：  
   
     -   **@dts_package_name**  
   
@@ -94,13 +94,13 @@ ms.locfileid: "68212010"
   
 #### <a name="to-view-the-properties-of-a-push-subscription-to-a-merge-publication"></a>查看合并发布的推送订阅的属性  
   
-1.  在发布服务器上，对发布数据库执行 [sp_helpmergesubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql)。 指定 **@publication** 和 **@subscriber** 中获取。  
+1.  在发布服务器上，对发布数据库执行 [sp_helpmergesubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql)。 指定**@publication**和**@subscriber**。  
   
-2.  在发布服务器上，执行 [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql)，同时指定 **@subscriber** 中获取。  
+2.  在发布服务器上，执行[sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql)， **@subscriber**并指定。  
   
 #### <a name="to-change-the-properties-of-a-push-subscription-to-a-merge-publication"></a>更改合并发布的推送订阅的属性  
   
-1.  在发布服务器上，对发布数据库执行 [sp_changemergesubscription](/sql/relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql)。 指定 **@publication** 或复制管理对象 (RMO) 在 **@subscriber** 或复制管理对象 (RMO) 在 **@subscriber_db** ，将 **@property** 指定为要更改的订阅属性，并将 **@value** 中获取。  
+1.  在发布服务器上，对发布数据库执行 [sp_changemergesubscription](/sql/relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql)。 指定**@publication**、 **@subscriber**、 **@subscriber_db**、要更改为**@property**的订阅属性，并将新值指定**@value**为。  
   
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
   
@@ -111,7 +111,7 @@ ms.locfileid: "68212010"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与发布服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.TransSubscription> 类的实例。  
+2.  创建的 <xref:Microsoft.SqlServer.Replication.TransSubscription> 类的实例。  
   
 3.  设置 <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>、 <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>、 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>和 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> 属性。  
   
@@ -127,7 +127,7 @@ ms.locfileid: "68212010"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与订阅服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.MergeSubscription> 类的实例。  
+2.  创建的 <xref:Microsoft.SqlServer.Replication.MergeSubscription> 类的实例。  
   
 3.  设置 <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>、 <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>、 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>和 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> 属性。  
   
@@ -139,7 +139,7 @@ ms.locfileid: "68212010"
   
 7.  （可选）若要查看新设置，请调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.Refresh%2A> 方法重新加载此订阅的属性。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用复制监视器查看信息和执行任务](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)   
  [订阅发布](subscribe-to-publications.md)  

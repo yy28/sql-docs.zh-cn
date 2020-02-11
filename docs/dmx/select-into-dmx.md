@@ -1,5 +1,5 @@
 ---
-title: SELECT INTO (DMX) |Microsoft Docs
+title: SELECT INTO （DMX） |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a2e9fb0dfd3607adc1773d4a43561f32ba650ee5
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68887674"
 ---
 # <a name="select-into-dmx"></a>SELECT INTO (DMX)
@@ -39,8 +39,8 @@ FROM <existing model>
  *参数列表*  
  可选。 由提供程序定义的算法所需参数的逗号分隔列表。  
   
- *expression*  
- 计算结果为定型数据的有效筛选条件的表达式。 有关可用作筛选器的表达式的详细信息, 请参阅[挖掘模型&#40;Analysis Services&#41;筛选器的筛选器](https://docs.microsoft.com/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining)。  
+ *表达式*  
+ 计算结果为定型数据的有效筛选条件的表达式。 有关可用作筛选器的表达式的详细信息，请参阅[Analysis Services 数据挖掘&#41;&#40;挖掘模型的筛选器](https://docs.microsoft.com/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining)。  
   
  *现有模型*  
  要复制的现有模型的名称。  
@@ -52,7 +52,7 @@ FROM <existing model>
   
  **WITH 钻取**子句对新挖掘模型启用钻取功能。 只有在创建模型时，才能启用钻取功能。  
   
-## <a name="example-1-altering-the-parameters-of-the-model"></a>示例 1：更改模型的参数  
+## <a name="example-1-altering-the-parameters-of-the-model"></a>示例 1：更改模型参数  
  下面的示例基于您在[数据挖掘基础教程](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)中创建的现有挖掘`TM_Clustering`模型创建新的挖掘模型。 在新模型中，对 CLUSTER_COUNT 参数进行了修改；因而，新模型中的最大分类数为 5。 而现有模型使用的是默认值 10。  
   
 ```  
@@ -61,7 +61,7 @@ USING [Microsoft_Clustering] (CLUSTER_COUNT = 5)
 FROM [TM Clustering]  
 ```  
   
-## <a name="example-2-adding-a-filter-to-the-model"></a>示例 2：向模型添加筛选器  
+## <a name="example-2-adding-a-filter-to-the-model"></a>示例 2：向模型中添加筛选器  
  下面的示例基于现有挖掘模型创建一个新挖掘模型，并向其中添加了一个筛选器。 筛选器将定型数据限制为居住在特定区域的客户。  
   
 ```  
@@ -73,9 +73,9 @@ FROM [TM Clustering]
 > [!NOTE]  
 >  如此示例中所示，可通过使用 SELECT INTO 语句来更改应用于事例表的筛选器；但是，如果原始模型包含嵌套表的筛选器，则就不能使用此语法来更改或删除嵌套表筛选器，但可以从原始模型中原样复制该筛选器。 若要创建具有不同嵌套表筛选器的模型，请使用 ALTER STRTUCTURE...ADD MODEL 语法。  
   
-## <a name="see-also"></a>请参阅  
- [数据挖掘扩展&#40;插件&#41; DMX 数据定义语句](../dmx/dmx-statements-data-definition.md)   
- [数据挖掘扩展&#40;插件&#41; DMX 数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
- [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
+## <a name="see-also"></a>另请参阅  
+ [数据挖掘扩展插件 &#40;DMX&#41; 数据定义语句](../dmx/dmx-statements-data-definition.md)   
+ [数据挖掘扩展插件 &#40;DMX&#41; 数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
+ [数据挖掘扩展插件 &#40;DMX&#41; 语句参考](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 9a329c8786ce580469e4601709509ca8a2de73f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037986"
 ---
 # <a name="using-tuple-functions"></a>使用元组函数
@@ -22,7 +22,7 @@ ms.locfileid: "68037986"
   
  与成员函数和集函数一样，元组函数对协商 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中的多维结构至关重要。  
   
- 在 MDX 中，有三个元组函数[当前&#40;MDX&#41;](../mdx/current-mdx.md)，[项目&#40;元组&#41; &#40;MDX&#41; ](../mdx/item-tuple-mdx.md)并[StrToTuple &#40;&#41;](../mdx/strtotuple-mdx.md). 以下示例查询说明如何使用这三个函数：  
+ MDX 中有三个元组函数，[当前 &#40;mdx&#41;](../mdx/current-mdx.md)， [Item &#40;元组&#41; &#40;Mdx&#41;](../mdx/item-tuple-mdx.md)和[StrToTuple &#40;mdx&#41;](../mdx/strtotuple-mdx.md)。 以下示例查询说明如何使用这三个函数：  
   
  `WITH`  
   
@@ -46,8 +46,8 @@ ms.locfileid: "68037986"
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>请参阅  
- [函数&#40;MDX 语法&#41;](../mdx/functions-mdx-syntax.md)   
+## <a name="see-also"></a>另请参阅  
+ [函数 &#40;MDX 语法&#41;](../mdx/functions-mdx-syntax.md)   
  [使用成员函数](../mdx/using-member-functions.md)   
  [使用集函数](../mdx/using-set-functions.md)  
   

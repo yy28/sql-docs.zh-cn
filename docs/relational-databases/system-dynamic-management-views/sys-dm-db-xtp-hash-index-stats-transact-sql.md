@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_hash_index_stats (TRANSACT-SQL) |Microsoft Docs
+title: sys. dm_db_xtp_hash_index_stats （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f2bbaaaa6770c5644da227c7e64a9ff9e0fc2c13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68026839"
 ---
-# <a name="sysdmdbxtphashindexstats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
+# <a name="sysdm_db_xtp_hash_index_stats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   这些统计信息可用来了解和优化存储桶计数。 它还可用于检测索引键具有许多重复项的情况。  
@@ -41,11 +41,11 @@ ms.locfileid: "68026839"
 链长度较长可能会显著影响针对各单独行的所有 DML 操作的性能，包括 SELECT 和 INSERT。 链长度较短以及空存储桶计数较高指示 bucket_count 过高。 这将降低索引扫描的性能。  
   
 > [!WARNING]
-> **sys.dm_db_xtp_hash_index_stats**扫描整个表。 因此，如果在数据库中，有大型表**sys.dm_db_xtp_hash_index_stats**可能需要很长时间运行。  
+> **sys. dm_db_xtp_hash_index_stats**扫描整个表。 如果数据库中有大型表，则**dm_db_xtp_hash_index_stats**可能需要较长时间才能运行。  
   
 有关详细信息，请参阅[内存优化表的哈希索引](../../relational-databases/sql-server-index-design-guide.md#hash_index)。  
   
-|列名|type|描述|  
+|列名称|类型|说明|  
 |-----------------|----------|-----------------|  
 |object_id|**int**|父表的对象 ID。|  
 |xtp_object_id|**bigint**|内存优化表的 ID。|  
@@ -54,7 +54,7 @@ ms.locfileid: "68026839"
 |empty_bucket_count|**bigint**|索引中空哈希存储桶的数量。|  
 |avg_chain_length|**bigint**|索引中所有哈希存储桶的平均行链长度。|  
 |max_chain_length|**bigint**|哈希存储桶中的最大行链长度。|  
-|xtp_object_id|**bigint**|对应于内存优化表的内存中 OLTP 对象 ID。|  
+|xtp_object_id|**bigint**|与内存优化表对应的内存中 OLTP 对象 ID。|  
   
 ## <a name="permissions"></a>权限  
  要求对服务器具有 VIEW DATABASE STATE 权限。  
@@ -63,7 +63,7 @@ ms.locfileid: "68026839"
   
 ### <a name="a-troubleshooting-hash-index-bucket-count"></a>A. 对哈希索引桶计数进行故障排除
 
-以下查询可以用于对现有表的哈希索引桶计数进行故障排除。 查询将返回用户表有关的空 bucket 和所有哈希索引的链长度的百分比的统计信息。
+以下查询可用于排查现有表的哈希索引桶计数。 查询返回有关用户表中所有哈希索引的空 bucket 和链长百分比的统计信息。
 
 ```sql
   SELECT  
@@ -87,11 +87,11 @@ ms.locfileid: "68026839"
   ORDER BY [table], [index];  
 ``` 
 
-有关如何解释此查询的结果的详细信息，请参阅[故障排除的内存优化表的哈希索引](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)。  
+有关如何解释此查询的结果的详细信息，请参阅对[内存优化表的哈希索引进行故障排除](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)。  
 
 ### <a name="b-hash-index-statistics-for-internal-tables"></a>B. 内部表的哈希索引统计信息
 
-某些功能使用利用哈希索引，例如内存优化表上的列存储索引的内部表。 下面的查询返回对链接到用户表的内部表的哈希索引的统计信息。
+某些功能使用利用哈希索引的内部表，例如内存优化表上的列存储索引。 下面的查询返回链接到用户表的内部表的哈希索引的统计信息。
 
 ```sql
   SELECT  
@@ -112,9 +112,9 @@ ms.locfileid: "68026839"
   ORDER BY [user_table], [internal_table_type], [index]; 
 ```
 
-请注意，不能更改内部表上索引的 BUCKET_COUNT，因此此查询的输出应视为信息性仅。 不需要执行任何操作。  
+请注意，不能更改内部表的索引 BUCKET_COUNT，因此应仅将此查询的输出视为 "信息性"。 不需要执行任何操作。  
 
-此查询不应返回任何行，除非您使用的一项功能，利用内部表的哈希索引。 以下内存优化表包含列存储索引。 创建此表后，你将看到哈希索引有关的内部表。
+此查询不应返回任何行，除非您使用的功能利用了内部表的哈希索引。 以下内存优化表包含列存储索引。 创建此表后，将看到内部表的哈希索引。
 
 ```sql
   CREATE TABLE dbo.table_columnstore
@@ -124,7 +124,7 @@ ms.locfileid: "68026839"
   ) WITH (MEMORY_OPTIMIZED=ON)
 ```
 
-## <a name="see-also"></a>请参阅  
- [内存优化表动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;Transact-sql&#41;的内存优化表动态管理视图](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

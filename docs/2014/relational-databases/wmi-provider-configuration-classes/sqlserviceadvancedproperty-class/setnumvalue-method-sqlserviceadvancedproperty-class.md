@@ -1,5 +1,5 @@
 ---
-title: SetNumValue 方法 （SqlServiceAdvancedProperty 类） |Microsoft Docs
+title: SetNumValue 方法（SqlServiceAdvancedProperty 类） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: f44d3426d7a3f11157167763e047dcb7423a904f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62635076"
 ---
 # <a name="setnumvalue-method-sqlserviceadvancedproperty-class"></a>SetNumValue 方法（SqlServiceAdvancedProperty 类）
@@ -40,12 +40,12 @@ NumValue
 ```  
   
 ## <a name="parts"></a>组成部分  
- *object*  
+ *对象*  
  一个表示高级属性的 [SqlServiceAdvancedProperty 类](sqlserviceadvancedproperty-class.md) 对象。  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
   
-|参数|Description|  
+|参数|说明|  
 |---------------|-----------------|  
 |*NumValue*|一个指定高级属性的值的 `uint32` 值。|  
   
@@ -55,7 +55,7 @@ NumValue
 ## <a name="remarks"></a>备注  
  属性值类型必须为 Numeric，才能将属性设置为数值。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [启动和停止服务](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

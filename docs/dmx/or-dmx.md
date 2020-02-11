@@ -1,5 +1,5 @@
 ---
-title: 或者 (DMX) |Microsoft 文档
+title: 或（DMX） |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 76b1f8ac9a5f7ad584f42110f2c3b22e5c1918ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68008143"
 ---
 # <a name="or-dmx"></a>OR (DMX)
@@ -27,18 +27,18 @@ ms.locfileid: "68008143"
 Expression1 OR Expression2  
 ```  
   
-#### <a name="parameters"></a>Parameters  
- *Expression1*  
+#### <a name="parameters"></a>parameters  
+ Expression1   
  一个返回数值的有效数据挖掘扩展 (DMX) 表达式。  
   
- *Expression2*  
+ Expression2   
  一个返回数值的有效 DMX 表达式。  
   
 ## <a name="return-value"></a>返回值  
  如果任意一个参数或两个参数的计算结果为 TRUE，则返回 TRUE 布尔值；否则将返回 FALSE。  
   
 ## <a name="remarks"></a>备注  
- 在运算符执行逻辑或运算之前，两个参数均被视为布尔值（0 为 FALSE；否则为 TRUE）。 如果任何一个参数或两个参数的计算结果均为 TRUE，则该运算符将返回 TRUE。 如果*Expression1*计算结果为 TRUE 并*Expression2*计算结果为 FALSE，运算符将返回 TRUE。  
+ 在运算符执行逻辑或运算之前，两个参数均被视为布尔值（0 为 FALSE；否则为 TRUE）。 如果任何一个参数或两个参数的计算结果均为 TRUE，则该运算符将返回 TRUE。 如果*表达式*2 的计算结果为 TRUE 并且*表达式*2 的计算结果为 FALSE，则运算符返回 TRUE。  
   
  下表阐释了执行逻辑或运算的方式。  
   
@@ -49,9 +49,9 @@ Expression1 OR Expression2
 |FALSE|TRUE|TRUE|  
 |FALSE|FALSE|FALSE|  
   
-## <a name="see-also"></a>请参阅  
- [数据挖掘扩展插件&#40;DMX&#41;运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [逻辑运算符&#40;DMX&#41;](../dmx/operators-logical.md)   
- [运算符&#40;DMX&#41;](../dmx/operators-dmx.md)  
+## <a name="see-also"></a>另请参阅  
+ [数据挖掘扩展插件 &#40;DMX&#41; 运算符引用](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [逻辑运算符 &#40;DMX&#41;](../dmx/operators-logical.md)   
+ [运算符 &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

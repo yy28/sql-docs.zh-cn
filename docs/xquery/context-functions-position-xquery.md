@@ -1,5 +1,5 @@
 ---
-title: position 函数 (XQuery) |Microsoft Docs
+title: position 函数（XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: f1bab9e4-1715-4c06-9cb0-06c7e0c9c97f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: de9f30c3c63030aa956366c222b7cbda94e2becb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038980"
 ---
 # <a name="context-functions---position-xquery"></a>上下文函数 - position (XQuery)
@@ -35,13 +35,13 @@ fn:position() as xs:integer
 ```  
   
 ## <a name="remarks"></a>备注  
- 在中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]， **fn:position()** 仅可以使用上下文相关的谓词的上下文中。 确切地说，仅可用在方括号 ([ ]) 内。与此函数比较不会在静态类型推导过程中减少基数。  
+ 在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中， **fn： position （）** 只能用于上下文相关的谓词的上下文中。 确切地说，仅可用在方括号 ([ ]) 内。与此函数比较不会在静态类型推导过程中减少基数。  
   
 ## <a name="examples"></a>示例  
- 本主题提供了一些针对 XML 实例存储在各种中的 XQuery 示例**xml**类型列中的[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]数据库。  
+ 本主题提供针对[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]数据库中各种**xml**类型列中存储的 xml 实例的 XQuery 示例。  
   
 ### <a name="a-using-the-position-xquery-function-to-retrieve-the-first-two-product-features"></a>A. 使用 position() XQuery 函数检索前两个产品功能  
- 下面的查询检索前两个功能的前两个子元素 <`Features`> 元素中的，从产品型号目录说明。 如果有更多的功能，它将添加 <`there-is-more/`> 元素的结果。  
+ 下面的查询从产品型号目录说明中检索前两个功能，即 <`Features`> 元素的前两个子元素。 如果有更多功能，则会将 <`there-is-more/`> 元素添加到结果中。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -67,17 +67,17 @@ WHERE CatalogDescription is not null
   
  请注意上述查询的以下方面：  
   
--   **命名空间**中的关键字[XQuery Prolog](../xquery/modules-and-prologs-xquery-prolog.md)定义查询主体中使用的命名空间前缀。  
+-   [XQuery Prolog](../xquery/modules-and-prologs-xquery-prolog.md)中的**namespace**关键字用于定义在查询主体中使用的命名空间前缀。  
   
--   查询主体构造的 XML\<产品 > 具有元素**ProductModelID**并**ProductModelName**属性和作为子元素返回的产品功能。  
+-   查询主体构造具有\<product> 元素的 XML，该元素具有**ProductModelID**和**ProductModelName**属性，并且产品功能作为子元素返回。  
   
--   **Position （)** 函数用于在谓词中确定的位置\<功能 > 上下文中的子元素。 如果是第一个或第二个功能，将返回该子元素。  
+-   **Position （）** 函数用于在上下文中确定\<功能> 子元素的位置。 如果是第一个或第二个功能，将返回该子元素。  
   
--   IF 语句将添加\<此处是更 / > 如果产品目录中有两个以上的功能的结果的元素。  
+-   如果产品目录中有\<两个以上的功能，if 语句会向结果中添加一个包含-> 元素。  
   
 -   由于不是所有产品型号都将其目录说明存储在表中，因此使用 WHERE 子句来放弃 CatalogDescriptions 为 NULL 的行。  
   
- 这是部分结果：  
+ 下面是部分结果：  
   
 ```  
 <Product ProductModelID="19" ProductModelName="Mountain 100">  
@@ -95,7 +95,7 @@ WHERE CatalogDescription is not null
 ...  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [针对 xml 数据类型的 XQuery 函数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

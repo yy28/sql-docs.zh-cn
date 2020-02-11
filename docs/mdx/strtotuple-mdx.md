@@ -1,5 +1,5 @@
 ---
-title: StrToTuple (MDX) |Microsoft Docs
+title: StrToTuple （MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 232d1e94892165430867ec5217f8c87ccd625b48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036712"
 ---
 # <a name="strtotuple-mdx"></a>StrToTuple (MDX)
 
 
-  返回多维表达式 MDX 格式的字符串指定的元组。  
+  返回由多维表达式（MDX）格式的字符串指定的元组。  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,9 +32,9 @@ StrToTuple(Tuple_Specification [,CONSTRAINED] )
  直接或间接指定元组的有效字符串表达式。  
   
 ## <a name="remarks"></a>备注  
- **StrToTuple**函数返回指定的集。 **StrToTuple**函数通常用于用户定义的函数来从外部函数向 MDX 语句返回的元组规范。  
+ **StrToTuple**函数返回指定的集。 **StrToTuple**函数通常与用户定义函数一起使用，以将外部函数中的元组规范返回到 MDX 语句。  
   
--   如果使用 CONSTRAINED 标志，则元组规范必须包含限定或未限定的成员名称。 此标志通过指定字符串可降低注入攻击的风险。 如果提供一个字符串，不是直接解析为限定或非限定成员名称将显示以下错误："CONSTRAINED 所规定的限制违反了 STRTOTUPLE 函数中的标志。"  
+-   如果使用 CONSTRAINED 标志，则元组规范必须包含限定或未限定的成员名称。 此标志通过指定字符串可降低注入攻击的风险。 如果所提供的字符串无法直接解析为限定或未限定的成员名称，将出现以下错误：“违反了 STRTOTUPLE 函数中 CONSTRAINED 标志所规定的限制。”  
   
 -   如果未使用 CONSTRAINED 标志，则指定的元组可以解析为有效的 MDX 表达式以返回元组。  
   
@@ -74,7 +74,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

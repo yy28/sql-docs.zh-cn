@@ -11,10 +11,10 @@ ms.reviewer: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: c7fa36db48a7912951f0232136945798caf6f7f7
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727597"
 ---
 # <a name="loopback-connection-to-sql-server-from-a-python-or-r-script"></a>从 Python 或 R 脚本到 SQL Server 的环回连接
@@ -56,7 +56,7 @@ ms.locfileid: "73727597"
 
 它接受以下参数：
 
-| 参数 | 描述 |
+| 参数 | 说明 |
 |-|-|
 | name_of_database | 要建立连接的数据库的名称 |
 | odbc_driver | odbc 驱动程序的名称 |
@@ -104,7 +104,7 @@ GO
 
 它接受以下参数：
 
-| 参数 | 描述 |
+| 参数 | 说明 |
 |-|-|
 | nameOfDatabase | 要建立连接的数据库的名称 |
 | odbcDriver | odbc 驱动程序的名称 |

@@ -1,5 +1,5 @@
 ---
-title: 例如：查询 XMLType 列 | Microsoft Docs
+title: 示例：查询 XML 类型的列 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d91192a8edd4d4ab93f539b9dc359e1be37eecf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637727"
 ---
-# <a name="example-querying-xmltype-columns"></a>例如：查询 XMLType 列
-  下面的查询包括 `xml` 类型的列。 该查询从 `xml` 类型的 `Instructions` 列的第一个位置检索产品型号 ID、名称和生产步骤。  
+# <a name="example-querying-xmltype-columns"></a>示例：查询 XML 类型的列
+  下面的查询包括 `xml` 类型的列。 该查询从 `Instructions` 类型的 `xml` 列的第一个位置检索产品型号 ID、名称和生产步骤。  
   
 ## <a name="example"></a>示例  
   
@@ -63,7 +63,7 @@ FOR XML RAW ('ProductModelData')
 go  
 ```  
   
- 下面是结果：  
+ 结果如下：  
   
 ```  
 <ProductModelData ProductModelID="5" Name="HL Mountain Frame" />  
@@ -91,7 +91,7 @@ FOR XML RAW ('ProductModelData'), root('MyRoot'), ELEMENTS XSINIL
 go  
 ```  
   
- 下面是结果：  
+ 结果如下：  
   
 ```  
 <MyRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
@@ -113,7 +113,7 @@ go
 </MyRoot>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [将 RAW 模式与 FOR XML 一起使用](use-raw-mode-with-for-xml.md)  
   
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7298f80a7d3f61b5b00692be8fbc480429487454
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892463"
 ---
 # <a name="concatenation-operators"></a>串联运算符
@@ -34,8 +34,8 @@ FROM [Adventure Works]
 ## <a name="language-considerations"></a>语言注意事项  
  当串联中使用的字符串具有相同的排序规则时，生成的串联字符串具有与输入字符串相同的排序规则。 当串联中使用的字符串具有不同的排序规则时，生成的串联字符串的排序规则由排序规则的优先顺序规则确定。 有关详细信息，请参阅[语言和排序规则 (Analysis Services)](https://docs.microsoft.com/analysis-services/languages-and-collations-analysis-services)。  
   
-## <a name="see-also"></a>请参阅  
- [MDX 运算符引用&#40;mdx&#41;](../mdx/mdx-operator-reference-mdx.md)   
- [运算符&#40;MDX 语法&#41;](../mdx/operators-mdx-syntax.md)  
+## <a name="see-also"></a>另请参阅  
+ [Mdx 运算符引用 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [运算符 &#40;MDX 语法&#41;](../mdx/operators-mdx-syntax.md)  
   
   

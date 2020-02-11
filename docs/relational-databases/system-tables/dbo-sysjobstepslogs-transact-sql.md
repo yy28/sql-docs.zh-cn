@@ -1,5 +1,5 @@
 ---
-title: dbo.sysjobstepslogs (Transact SQL) |Microsoft Docs
+title: dbo. sysjobstepslogs （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,28 +20,28 @@ ms.assetid: 128c25db-0b71-449d-bfb2-38b8abcf24a0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fec1b43f3e129a752e79024f3800d6f4fb3fb60a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67984924"
 ---
 # <a name="dbosysjobstepslogs-transact-sql"></a>dbo.sysjobstepslogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  包含所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤的作业步骤日志，这些作业步骤配置为将作业步骤输出写入表中。 此表存储中**msdb**数据库。  
+  包含所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤的作业步骤日志，这些作业步骤配置为将作业步骤输出写入表中。 该表存储在**msdb**数据库中。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**log_id**|**int**|作业步骤日志的 ID。|  
-|**log**|**nvarchar(max)**|作业步骤日志内容。|  
+|**日志**|**nvarchar(max)**|作业步骤日志内容。|  
 |**date_created**|**datetime**|创建作业步骤日志的日期和时间。|  
 |**date_modified**|**datetime**|上次修改作业步骤日志的日期和时间。|  
 |**log_size**|**int**|作业步骤日志的大小（以字节为单位）。|  
 |**step_uid**|**uniqueidentifier**|作业步骤的唯一标识符。|  
   
-## <a name="see-also"></a>请参阅  
- [sp_help_jobsteplog &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobsteplog-transact-sql.md)   
- [sp_delete_jobsteplog &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql.md)  
+## <a name="see-also"></a>另请参阅  
+ [sp_help_jobsteplog &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-jobsteplog-transact-sql.md)   
+ [sp_delete_jobsteplog &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql.md)  
   
   
