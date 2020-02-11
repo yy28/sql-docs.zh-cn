@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f372bd5bcc538d861ddd556b3bb420c181d59717
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104651"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Tablix 数据区域单元、行和列（报表生成器和 SSRS）
-  若要控制 tablix 数据区域的行和列如何在报表中显示数据，必须了解如何为详细信息数据、组数据和标签与总计指定行和列。 在大多数情况下，可以使用表、矩阵或列表的默认结构来显示数据。 有关详细信息，请参阅[表&#40;报表生成器和 SSRS&#41;](tables-report-builder-and-ssrs.md)，[矩阵&#40;报表生成器和 SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)，或者[列出&#40;报表生成器和SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)。  
+  若要控制 tablix 数据区域的行和列如何在报表中显示数据，必须了解如何为详细信息数据、组数据和标签与总计指定行和列。 在大多数情况下，可以使用表、矩阵或列表的默认结构来显示数据。 有关详细信息，请参阅[表 &#40;报表生成器和 ssrs&#41;](tables-report-builder-and-ssrs.md)，[矩阵 &#40;报表生成器和 ssrs&#41;](create-a-matrix-report-builder-and-ssrs.md)，或[列出 &#40;报表生成器和 ssrs&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)。  
   
  tablix 数据区域在详细信息行和详细信息列中显示详细信息数据，在组行和组列中显示分组数据。 向 tablix 数据区域添加行组和列组时，将自动添加显示数据的行和列。 可以手动添加和删除行和列，以便自定义 tablix 数据区域，并控制数据在报表中的显示方式。  
   
@@ -38,15 +38,15 @@ ms.locfileid: "66104651"
 ### <a name="row-and-column-handles"></a>行控点和列控点  
  选择 tablix 数据区域时，行控点和列控点图形指示每个行和列的目的。 控点指示行和列是位于组内还是组外。 下表显示多种控点显示。  
   
-|图标|Description|  
+|图标|说明|  
 |----------|-----------------|  
 |![详细信息行的 3 条平行线的行控点](../media/rs-icontablix-detailsrow.gif "详细信息行的 3 条平行线的行控点")|仅表示行组层次结构中的详细信息组|  
 |![详细信息行和一个外部组的行控点](../media/rs-icontablix-groupwithdetails.gif "详细信息行和一个外部组的行控点")|一个外部组和详细信息子组|  
 |![用于显示嵌套组的两个平行方括号](../media/rs-icontablix-nestedgroupnodetails.gif "用于显示嵌套组的两个平行方括号")|一个外部组和一个内部组；没有任何详细信息组|  
-|![2 个方括号、3 条堆积线表示嵌套的详细信息](../media/rs-icontablix-nestedgroupwithdetails.gif "2 个方括号、3 条堆积线表示嵌套的详细信息")|一个外部组、一个内部组和详细信息子组|  
+|![2个方括号 & 三个用于嵌套 & 详细信息的堆积线条](../media/rs-icontablix-nestedgroupwithdetails.gif "2 个方括号、3 条堆积线表示嵌套的详细信息")|一个外部组、一个内部组和详细信息子组|  
 |![一个带有脚注行的外部组，一个内部组](../media/rs-icontablix-nestedgroupwithparentfooter.gif "一个带有脚注行的外部组，一个内部组")|一个具有表示总计的组尾行的外部组和一个内部组|  
 |![外部组方括号、内部组方括号、详细信息](../media/rs-icontablix-nestedgroupwithdetailsandtotals.gif "外部组方括号、内部组方括号、详细信息")|一个具有表示总计的组尾行的外部组和一个内部组，以及一个详细信息行|  
-|![父级组头和组尾以及子组](../media/rs-icontablix-nestedgroupwithparentheaderandfooter.gif "父级组头和组尾以及子组")|一个具有表示标签的组头和表示总计的组尾的外部组和一个内部组；没有任何详细信息组|  
+|![父标头和表尾以及子组](../media/rs-icontablix-nestedgroupwithparentheaderandfooter.gif "父标头和表尾以及子组")|一个具有表示标签的组头和表示总计的组尾的外部组和一个内部组；没有任何详细信息组|  
   
 ### <a name="group-rows"></a>组行  
  位于组内的行对于每个唯一组值只重复一次，并且通常用于聚合汇总。 位于组外的行对于该组只重复一次，并用于标签或小计。 选择 tablix 单元时，tablix 数据区域内的行控点、列控点和方括号显示该单元所属的组。 下图显示了以下可视化提示：  
@@ -67,14 +67,14 @@ ms.locfileid: "66104651"
 ### <a name="grouping-pane"></a>“分组”窗格  
  “分组”窗格显示设计图面上当前所选 tablix 数据区域的行组和列组。 下图显示了该 tablix 数据区域的“分组”窗格。  
   
- ![嵌套行组和列组的“分组”窗格](../media/rs-basictablixdesigngroupingpanedefaultview.gif "Grouping pane for nested row and column groups")  
+ ![嵌套行和列组的分组窗格](../media/rs-basictablixdesigngroupingpanedefaultview.gif "嵌套行和列组的分组窗格")  
   
  “行组”窗格显示父组 Category 和子组 Subcat。 “列组”窗格显示父组 Geography 和子组 CountryRegion，还显示 Geography 组的相邻组 Year。 在“行组”窗格中选择 Subcat 组时，组图条变为深橙色，并在设计图面上选择相应的行组成员单元。  
   
 ## <a name="displaying-data-on-rows-and-columns"></a>在行和列中显示数据  
  行和行组以及列和列组具有相同关系。 以下讨论介绍如何添加在 tablix 数据区域的行中显示详细信息数据和分组数据的行，但其原理同样适用于添加显示详细信息数据和分组数据的列。  
   
- 对于 tablix 数据区域中的每个行，行位于每个行组内部或外部。 如果行位于行组内部，该行针对组的每个唯一值只重复一次，该值称为“组实例” 。 如果行位于行组外部，该行相对于该组仅重复一次。 所有行组以外的行都是静态行，并且仅针对数据区域重复一次。 例如，表头行或表尾行是静态行。 至少在一个组内重复的行是动态行。  
+ 对于 tablix 数据区域中的每个行，行位于每个行组内部或外部。 如果行位于行组内部，该行针对组的每个唯一值只重复一次，该值称为“组实例” **。 如果行位于行组外部，该行相对于该组仅重复一次。 所有行组以外的行都是静态行，并且仅针对数据区域重复一次。 例如，表头行或表尾行是静态行。 至少在一个组内重复的行是动态行。  
   
  如果具有嵌套组，行可以位于父组的内部，但需要位于子组的外部。 行针对父组中的每个组值重复，但只相对于子组显示一次。 若要显示组的标签或总计，请在该组外部添加一个行。 若要显示随每个组实例更改的数据，请在该组内部添加一个行。  
   
@@ -84,11 +84,11 @@ ms.locfileid: "66104651"
   
  下图显示一个 tablix 数据区域，其中包含嵌套行组和详细信息组。  
   
- ![设计视图，向组和表中添加总计行](../media/rs-basictablegroupstotalscolordesign.gif "Design view, add total rows to group and table")  
+ ![设计视图，向组和表中添加总计行](../media/rs-basictablegroupstotalscolordesign.gif "设计视图，向组和表中添加总计行")  
   
  对于显示详细信息数据的 tablix 数据区域，详细信息组是位于最内部的子组。 在详细信息组中添加的行仅针对链接到该 tablix 数据区域的数据集查询结果集中的每个行重复一次。 下图显示呈现的报表中的最后一页。 在该图中，您可以查看最后一个订单的最后一个详细信息行和小计行。  
   
- ![预览，带有组总计、末行的表](../media/rs-basictablegroupstotalscolorpreviewbottom.gif "Preview, Table with Group Totals, last rows")  
+ ![带有组总计、末行的表预览](../media/rs-basictablegroupstotalscolorpreviewbottom.gif "带有组总计、末行的表预览")  
   
  对于 tablix 数据区域中的每个列，该原理同样适用。 例如，列位于每个列组内部或外部；若要显示总计，请在组的外部添加列。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "66104651"
   
  可以拆分先前合并的单元。 可以跨列水平拆分或沿行垂直拆分单元。 若要将一个单元拆分为单元块，请首先水平拆分单元，然后再根据需要垂直拆分单元。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Tablix 数据区域（报表生成器和 SSRS）](../tablix-data-region-report-builder-and-ssrs.md)  
   
   

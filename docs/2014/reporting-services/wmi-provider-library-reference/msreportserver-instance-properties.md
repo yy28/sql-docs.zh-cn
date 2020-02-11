@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 27719888e994a9cfc9408901a7d89fcf28220c5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097029"
 ---
-# <a name="msreportserverinstance-properties"></a>MSReportServer_Instance 属性
+# <a name="msreportserver_instance-properties"></a>MSReportServer_Instance 属性
   MSReportServer_Instance 类为客户端提供连接到已安装的报表服务器所需的基本信息。  
   
 ## <a name="public-properties"></a>公共属性  
@@ -39,7 +39,7 @@ ms.locfileid: "66097029"
 |[IsSharePointIntegrated](msreportserver-instance-properties-issharepointintegrated.md)|指示是否将报表服务器配置为 SharePoint 集成模式。|  
 |[版本](msreportserver-instance-properties-version.md)|返回报表服务器的版本。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [MSReportServer_Instance 成员](msreportserver-instance-members.md)  
   
   

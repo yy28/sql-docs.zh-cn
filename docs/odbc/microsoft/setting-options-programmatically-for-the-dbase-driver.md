@@ -1,5 +1,5 @@
 ---
-title: 为 dBASE 驱动程序选项以编程方式设置 |Microsoft Docs
+title: 以编程方式为 dBASE 驱动程序设置选项 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,23 +16,23 @@ ms.assetid: 336d0fd4-5448-4d8c-b7d9-49e857228e36
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 27f675cca5115a8336f2be4b7fa96c091aee1b62
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68063564"
 ---
 # <a name="setting-options-programmatically-for-the-dbase-driver"></a>以编程方式为 dBASE 驱动程序设置选项
 
-|Option|描述|方法|  
+|选项|说明|方法|  
 |------------|-----------------|------------|  
-|估计行数|确定是否近似表大小统计信息。 此选项适用于使用 ODBC 驱动程序的所有数据源。|若要动态设置此选项，请使用**统计信息**调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)。|  
-|对序列进行排序|字段的排序顺序的序列。<br /><br /> 序列可以是：ASCII （默认值） 或国际。|若要动态设置此选项，请使用**COLLATINGSEQUENCE**调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)。|  
-|数据源名称|用于标识数据源，例如工资单或人员的名称。|若要动态设置此选项，请使用**DSN**调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)。|  
-|“数据库”|Microsoft Access 数据源可以设置而无需选择或创建数据库。 如果在安装程序时未不提供任何数据库，将提示用户在连接到数据源时选择数据库文件。|若要动态设置此选项，请使用**DBQ**调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)。|  
-|描述|数据源; 中的数据的可选描述例如，"雇佣日期、 发薪记录和当前查看的所有员工。"|若要动态设置此选项，请使用**描述**调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)。|  
-|排他|如果**独占**框处于选中状态，数据库将以独占方式打开，并且一次只能有一个用户可以访问。 它在排他模式下运行时，性能得到了增强。|若要动态设置此选项，请使用**独占**调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)。|  
-|页超时|指定时间，的段中的第二个，在移除之前，在缓冲区中会保留一页 （如果不使用） 的十分之几。 默认值为 600 秒 （60 秒） 的十分之几秒。 此选项适用于使用 ODBC 驱动程序的所有数据源。<br /><br /> 页超时不能为 0，由于固有的延迟。 页超时不能早于固有的延迟，即使页面超时选项设置为低于该值。|若要动态设置此选项，请使用**PAGETIMEOUT**调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)。|  
-|只读|指定数据库为只读的。|若要动态设置此选项，请使用**READONLY**调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)。|  
-|选择目录|显示一个对话框，您可以在其中选择包含想要访问的文件的目录。<br /><br /> 在定义数据源目录时，指定您最常使用的文件所在的目录。 ODBC 驱动程序使用此目录作为默认目录。 如果经常使用，请将其他文件复制到此目录。 或者，可以限定 SELECT 语句中使用的目录名称的文件名称：<br /><br /> 选择\*从 C:\MYDIR\EMP<br /><br /> 或者，你可以通过使用指定新的默认目录**SQLSetConnectOption** SQL_CURRENT_QUALIFIER 选项的函数。|若要动态设置此选项，请使用**DEFAULTDIR**调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)。|  
-|显示已删除的行|指定是否可以检索或位于已标记为已删除的行。 如果未选中状态，不会显示已删除的行;如果选中，将被视为已删除的行与非删除行相同。 默认情况下清除此复选框。|若要动态设置此选项，请使用**DELETED**调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)。|
+|大约行计数|确定表大小统计信息是否近似。 此选项适用于使用 ODBC 驱动程序的所有数据源。|若要动态设置此选项，请在调用[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)时使用**STATISTICS**关键字。|  
+|排序顺序|字段的排序顺序。<br /><br /> 序列可以是： ASCII （默认值）或国际化。|若要动态设置此选项，请在对[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)的调用中使用**COLLATINGSEQUENCE**关键字。|  
+|数据源名称|标识数据源的名称，如工资单或人员。|若要动态设置此选项，请在调用[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)时使用**DSN**关键字。|  
+|数据库|无需选择或创建数据库即可设置 Microsoft Access 数据源。 如果在安装过程中未提供任何数据库，则在用户连接到数据源时，系统将提示用户选择数据库文件。|若要动态设置此选项，请在对[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)的调用中使用**DBQ**关键字。|  
+|说明|数据源中数据的可选说明;例如，"雇用日期、薪金历史记录和所有员工的当前评论"。|若要动态设置此选项，请在对[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)的调用中使用**DESCRIPTION**关键字。|  
+|排他|如果选择了 "**独占**" 框，则数据库将在独占模式下打开，一次只能由一个用户访问。 当在独占模式下运行时，性能会得到增强。|若要动态设置此选项，请在对[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)的调用中使用**EXCLUSIVE**关键字。|  
+|页面超时|指定在删除页面之前，页面（如果未使用）保留在缓冲区中的时间段（以十分之一为一秒）。 默认值为600，即十分之一秒（60秒）。 此选项适用于使用 ODBC 驱动程序的所有数据源。<br /><br /> 由于固有的延迟，页面超时值不能为0。 页面超时值不能小于固有的延迟，即使页面超时选项设置在该值的下面也是如此。|若要动态设置此选项，请在对[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)的调用中使用**PAGETIMEOUT**关键字。|  
+|只读|将数据库指定为只读。|若要动态设置此选项，请在调用[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)时使用**READONLY**关键字。|  
+|选择目录|显示一个对话框，您可以在其中选择包含要访问的文件的目录。<br /><br /> 定义数据源目录时，请指定最常使用的文件所在的目录。 ODBC 驱动程序使用此目录作为默认目录。 如果经常使用其他文件，请将这些文件复制到此目录中。 或者，您可以使用目录名称在 SELECT 语句中限定文件名：<br /><br /> 从\* C:\MYDIR\EMP 中选择<br /><br /> 或者，您可以通过将**SQLSetConnectOption**函数与 SQL_CURRENT_QUALIFIER 选项一起使用来指定新的默认目录。|若要动态设置此选项，请在对[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)的调用中使用**DEFAULTDIR**关键字。|  
+|显示删除的行|指定是否可以检索或定位已标记为已删除的行。 如果清除，则不会显示已删除的行;如果选择此选项，则会将已删除的行视为与非删除行相同。 默认情况下清除此复选框。|若要动态设置此选项，请在对[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)的调用中使用**DELETED**关键字。|

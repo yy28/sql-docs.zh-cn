@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: be4fd9dc72a32c65465e3d226850eb18a494e783
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103059"
 ---
 # <a name="update-a-resource-report-manager"></a>更新资源（报表管理器）
@@ -35,7 +35,7 @@ ms.locfileid: "66103059"
   
 5.  单击 **“替换”** 以打开 **“导入资源”** 页。  
   
-6.  单击 **“浏览”** 。  
+6.  单击“浏览”  。  
   
 7.  选择要用于替换当前资源的文件。 您可以使用资源文件的更新版本，或指定其他名称或其他文件类型的文件。  
   
@@ -43,10 +43,10 @@ ms.locfileid: "66103059"
   
  如果正在更新的资源包含某个报表中所使用的图像，则需要刷新该报表，才可以看到更新后的图像。  
   
-## <a name="see-also"></a>请参阅  
- [“内容”页（报表管理器）](../contents-page-report-manager.md)   
- [“上传文件”页（报表管理器）](../upload-file-page-report-manager.md)   
- [将文件上载到文件夹](upload-files-to-a-folder.md)   
+## <a name="see-also"></a>另请参阅  
+ ["内容" 页 &#40;报表管理器&#41;](../contents-page-report-manager.md)   
+ [报表管理器 &#40;上传文件页&#41;](../upload-file-page-report-manager.md)   
+ [将文件上传到文件夹](upload-files-to-a-folder.md)   
  [报表管理器的 F1 帮助](../report-manager-f1-help.md)  
   
   

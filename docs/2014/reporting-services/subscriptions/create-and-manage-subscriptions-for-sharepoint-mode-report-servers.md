@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b167aaadfbef817608a2b0dc14954ad7f29f9b97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101012"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>创建和管理 SharePoint 模式报表服务器的订阅
@@ -30,11 +30,11 @@ ms.locfileid: "66101012"
   
  创建订阅时，有三种方法可用于指定其传递：  
   
--   **文档库**:可以创建基于原始报表到与原始报表位于同一 SharePoint 站点内的库的文档传递的订阅。 不能将该文档传递到位于相同网站集内的其他服务器或其他站点。 若要传递此文档，您必须对该报表所传递到的库拥有“添加项”权限。  
+-   **文档库**：可以创建将基于原始报表的文档传递到与原始报表位于同一 SharePoint 站点内的库的订阅。 不能将该文档传递到位于相同网站集内的其他服务器或其他站点。 若要传递此文档，您必须对该报表所传递到的库拥有“添加项”权限。  
   
--   **日志文件文件夹：** 你可以提供基于原始报表的共享文件夹到文件系统上的文档。 必须选择可通过网络连接进行访问的现有文件夹。  
+-   **文件夹：** 可以将基于原始报表的文档传递到文件系统上的共享文件夹中。 必须选择可通过网络连接进行访问的现有文件夹。  
   
--   **电子邮件：** 如果报表服务器配置为使用报表服务器电子邮件传递扩展插件，可以创建将报表或导出的报表文件 （以输出格式保存） 发送到箱的订阅。 若要只接收不包含报表或报表 URL 的通知，请清除 **“包含指向报表的链接”** 和 **“在邮件中显示报表”** 复选框。  
+-   **电子邮件：** 如果将报表服务器配置为使用报表服务器电子邮件传递扩展插件，则可以创建一个订阅，将报表或导出的报表文件（以输出格式保存）发送到收件箱。 若要只接收不包含报表或报表 URL 的通知，请清除 **“包含指向报表的链接”** 和 **“在邮件中显示报表”** 复选框。  
   
  **本主题内容：**  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66101012"
   
  在创建订阅时，可以选择输出文件格式。 并不是每个报表在每种格式下都能正常显示。 在订阅中选择格式之前，请打开报表并将其导出为不同格式以验证是否像预期的那样显示。  
   
- 如果用户希望能够创建 **订阅，则他们在 SharePoint 中需要“编辑项”** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 列表权限。 有关详细信息，请参阅 [报表服务器项的 SharePoint 站点和列表权限参考](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
+ 如果用户希望能够创建  **订阅，则他们需要具有在 SharePoint 中“编辑项”列表的权限**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 有关详细信息，请参阅 [报表服务器项的 SharePoint 站点和列表权限参考](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
   
 > [!IMPORTANT]  
 >  用来将报表传递到库或共享文件夹的订阅会创建一个基于原始报表的新静态文件，但它不是在报表查看器 Web 部件中运行的真正报表定义。 如果原始报表具有交互功能（如钻取链接）或动态内容，则这些功能在传递到目标位置的静态文件中将不可用。 如果选择“网页”，则可以保留一些交互功能，但由于该文档不是在报表查看器中运行的 .rdl 文件，因此在报表中单击浏览时将会在浏览器会话中创建一些新页，必须在这些新页中滚动才能返回站点。  
@@ -72,7 +72,7 @@ ms.locfileid: "66101012"
   
 2.  单击该报表旁边的向下箭头，然后选择“管理订阅”  。  
   
-3.  单击 **“添加订阅”** 。  
+3.  单击“添加订阅”  。  
   
 4.  在 **“传递扩展插件”** 中选择 **“SharePoint 文档库”** 。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "66101012"
   
 2.  单击该报表旁边的向下箭头，然后选择“管理订阅”  。  
   
-3.  单击 **“添加订阅”** 。  
+3.  单击“添加订阅”  。  
   
 4.  在 **“传递扩展插件”** 中选择 **“Windows 文件共享”** 。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "66101012"
   
 2.  单击该报表旁边的向下箭头，然后选择“管理订阅”  。  
   
-3.  单击 **“添加订阅”** 。  
+3.  单击“添加订阅”  。  
   
 4.  在“传递扩展插件”中，选择“电子邮件”   。  
   
@@ -156,11 +156,11 @@ ms.locfileid: "66101012"
   
 3.  单击订阅旁的复选框，然后单击 **“删除”** 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [订阅和传递 (Reporting Services)](subscriptions-and-delivery-reporting-services.md)   
  [Reporting Services 中的电子邮件传递](e-mail-delivery-in-reporting-services.md)   
  [Reporting Services 中的文件共享传递](file-share-delivery-in-reporting-services.md)   
  [Reporting Services 中的 SharePoint 库传递](sharepoint-library-delivery-in-reporting-services.md)   
- [为电子邮件传递配置报表服务器&#40;SSRS 配置管理器&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
+ [配置报表服务器，以便 &#40;SSRS Configuration Manager 发送电子邮件&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
   
   

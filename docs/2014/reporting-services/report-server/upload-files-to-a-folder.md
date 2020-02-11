@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5751941cb8912c527798c9aff5aaac1b46767fd8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103081"
 ---
 # <a name="upload-files-to-a-folder"></a>将文件上载到文件夹
@@ -42,7 +42,7 @@ ms.locfileid: "66103081"
  ![报表图标](../media/hlp-16doc.gif "报表图标")  
 报表图标  
   
- ![模型图标](../media/model-icon.gif "Model icon")  
+ ![模型图标](../media/model-icon.gif "模型图标")  
 报表模型图标  
   
  ![通用资源图标](../media/hlp-16file.gif "通用资源图标")  
@@ -52,16 +52,16 @@ ms.locfileid: "66103081"
   
  若要上载文件，请使用报表管理器。 能否将文件上载到报表服务器取决于您的角色分配中包括哪些任务。 如果您使用的是默认安全性，本地管理员可以向报表服务器中添加项。 如果启用了“我的报表”，则拥有“我的报表”文件夹的任何用户都有权将项上载到该文件夹中。 如果您使用自定义角色分配，角色分配必须包括支持管理文件夹的任务。  
   
-|执行的操作|需包含的任务|  
+|要执行此操作|需包含的任务|  
 |----------------|-------------------------|  
 |将 .rdl 文件上载到文件夹中|管理报表|  
 |将任何文件作为二进制对象上载|管理资源|  
 |查看文件夹的内容|查看资源，查看报表|  
   
-## <a name="see-also"></a>请参阅  
- [报表管理器&#40;SSRS 本机模式&#41;].../ 报表的管理器-ssrs-本机-mode.md）   
+## <a name="see-also"></a>另请参阅  
+ [报表管理器 &#40;SSRS 本机模式&#41;] .。。/report-manager-ssrs-native-mode.md）   
  [授予对本机模式报表服务器的权限](../security/granting-permissions-on-a-native-mode-report-server.md)   
  [任务和权限](../security/tasks-and-permissions.md)   
- [上传文件或报表（报表管理器）](../reports/upload-a-file-or-report-report-manager.md)  
+ [报表管理器 &#40;上传文件或报表&#41;](../reports/upload-a-file-or-report-report-manager.md)  
   
   

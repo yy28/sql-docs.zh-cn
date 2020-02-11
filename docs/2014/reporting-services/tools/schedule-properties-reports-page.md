@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 08fc68575e2515907f31e82cf3609d73da1c95d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099788"
 ---
 # <a name="schedule-properties-reports-page"></a>计划属性（“报表”页）
@@ -24,10 +24,10 @@ ms.locfileid: "66099788"
   
  尽管此页显示了所有使用共享计划的报表，但是它并没有说明共享计划在单个报表中的使用次数。 例如，假设 Company Sales 报表的 20 个不同的订阅均使用同一个共享计划来触发订阅处理。 在这种情况下，Company Sales 报表将仅在该列表中出现一次，即使该报表对共享计划引用了 20 次也是如此。  
   
- 若要打开此页上，启动[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，连接到报表服务器，打开**共享计划**文件夹中，右键单击共享的计划，选择**属性**，然后单击**报表**.  
+ 若要打开此页， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]请启动，连接到 Report Server，打开 "**共享**计划" 文件夹，右键单击共享计划，选择 "**属性**"，然后单击 "**报表**"。  
   
 > [!NOTE]  
->  并非在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本中均提供此功能。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2012 各个版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473)。  
+>  并非在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本中均提供此功能。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2012 各个版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473) 。  
   
 ## <a name="options"></a>选项  
  **文件夹**  
@@ -36,11 +36,11 @@ ms.locfileid: "66099788"
  **报告**  
  指定使用该计划的报表的名称。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建、修改和删除计划](../subscriptions/create-modify-and-delete-schedules.md)   
- [计划](../subscriptions/schedules.md)   
+ [“计划”](../subscriptions/schedules.md)   
  [Management Studio 中报表服务器的 F1 帮助](report-server-in-management-studio-f1-help.md)   
  [在 Management Studio 中连接到报表服务器](connect-to-a-report-server-in-management-studio.md)   
- [配置报表的常规属性&#40;报表管理器&#41;](../configure-general-properties-for-a-report-report-manager.md)  
+ [配置报表的常规属性 &#40;报表管理器&#41;](../configure-general-properties-for-a-report-report-manager.md)  
   
   

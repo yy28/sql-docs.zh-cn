@@ -18,55 +18,55 @@ ms.assetid: b537348a-bea0-4bd6-84a4-52a75292957f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3ff069ef0602e419eda93df0ca5a72dbf7c8ef1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68045157"
 ---
 # <a name="microsoft-access-data-types"></a>Microsoft Access 数据类型
-下表显示了 Microsoft Access 数据类型、 用于创建表的数据类型和 ODBC SQL 数据类型。  
+下表显示了 Microsoft Access 数据类型、用于创建表的数据类型以及 ODBC SQL 数据类型。  
   
-|Microsoft Access 数据类型|数据类型 (CREATETABLE)|ODBC SQL 数据类型|  
+|Microsoft Access 数据类型|数据类型（CREATETABLE）|ODBC SQL 数据类型|  
 |--------------------------------|-------------------------------|------------------------|  
 |BIGBINARY [1]|LONGBINARY|SQL_LONGVARBINARY|  
 |BINARY|BINARY|SQL_BINARY|  
 |BIT|BIT|SQL_BIT|  
-|计数器|计数器|SQL_INTEGER|  
+|对抗|对抗|SQL_INTEGER|  
 |货币|货币|SQL_NUMERIC|  
 |日期/时间|DATETIME|SQL_TIMESTAMP|  
 |GUID|GUID|SQL_GUID|  
-|长度的二进制|LONGBINARY|SQL_LONGVARBINARY|  
-|长文本|长文本|SQL_LONGVARCHAR[2] SQL_WLONGVARCHAR[3]|  
-|备注|长文本|SQL_LONGVARCHAR[2] SQL_WLONGVARCHAR[3]|  
-|数字 (字段大小 = 单)|单个|SQL_REAL|  
-|数字 (字段大小 = 双精度型)|DOUBLE|SQL_DOUBLE|  
-|数字 (字段大小 = BYTE)|无符号的字节|SQL_TINYINT|  
-|数字 (字段大小 = 整数)|短|SQL_SMALLINT|  
-|数字 (字段大小 = 长整型)|LONG|SQL_INTEGER|  
+|长整型|LONGBINARY|SQL_LONGVARBINARY|  
+|长文本|LONGTEXT|SQL_LONGVARCHAR [2] SQL_WLONGVARCHAR [3]|  
+|"|LONGTEXT|SQL_LONGVARCHAR [2] SQL_WLONGVARCHAR [3]|  
+|NUMBER （FieldSize = SINGLE）|单个|SQL_REAL|  
+|NUMBER （FieldSize = DOUBLE）|DOUBLE|SQL_DOUBLE|  
+|NUMBER （FieldSize = BYTE）|无符号字节|SQL_TINYINT|  
+|NUMBER （FieldSize = INTEGER）|短暂|SQL_SMALLINT|  
+|NUMBER （FieldSize = LONG INTEGER）|LONG|SQL_INTEGER|  
 |NUMERIC|NUMERIC|SQL_NUMERIC|  
 |OLE|LONGBINARY|SQL_LONGVARBINARY|  
-|TEXT|VARCHAR|SQL_VARCHAR[1] SQL_WVARCHAR[2]|  
+|TEXT|VARCHAR|SQL_VARCHAR [1] SQL_WVARCHAR [2]|  
 |VARBINARY|VARBINARY|SQL_VARBINARY|  
   
- [1] 访问仅限于 4.0 应用程序。 最大长度为 4000 字节。 与 LONGBINARY 相似的行为。  
+ [1] 仅访问4.0 应用程序。 最大长度为4000字节。 类似于 LONGBINARY 的行为。  
   
- [2] ANSI 仅限于应用程序。  
+ 仅限 [2] ANSI 应用程序。  
   
- [Unicode 3] 和访问 4.0 仅限于应用程序。  
+ [3] 仅 Unicode 和 Access 4.0 应用程序。  
   
 > [!NOTE]  
->  **SQLGetTypeInfo**返回的 ODBC 数据类型。 如果多个 Microsoft Access 类型映射到相同的 ODBC SQL 数据类型，它不会返回所有 Microsoft Access 数据类型。 所有转换中的附录 D *ODBC 程序员参考*上表中列出的 SQL 数据类型支持。  
+>  **SQLGetTypeInfo**返回 ODBC 数据类型。 如果有多个 Microsoft 访问类型映射到相同的 ODBC SQL 数据类型，它将不会返回所有 Microsoft Access 数据类型。 对于上表中列出的 SQL 数据类型，支持*ODBC 程序员参考*的附录 D 中的所有转换。  
   
- 下表显示有关 Microsoft Access 数据类型的限制。  
+ 下表显示了对 Microsoft Access 数据类型的限制。  
   
-|数据类型|描述|  
+|数据类型|说明|  
 |---------------|-----------------|  
-|二进制、 VARBINARY 和 VARCHAR|创建 BINARY、 VARBINARY 或 VARCHAR 列的零或未指定的长度实际上返回一个 510 字节的列。|  
-|BYTE|即使 Microsoft 访问号码字段与字段大小等于字节无符号，负号可以插入到的字段中，使用 Microsoft Access 驱动程序时。|  
-|CHAR、 LONGVARCHAR 和 VARCHAR|字符的字符串文本可以包含任何 ANSI 字符 （1-255 十进制）。 使用两个连续单引号 （'） 来表示一个单引号 （'）。<br /><br /> 应使用过程将传递字符数据，在字符数据类型列中使用任何特殊字符时。|  
-|DATE|日期值必须分隔根据 ODBC 规范的日期格式或以日期时间分隔符 （"#"） 分隔。 否则为 Microsoft Access 将值视为算术表达式，并且不会引发警告或错误。<br /><br /> 例如，"1996 年 3 月 5 日"必须表示为日期 {d 1996年-03-05} 或 #03/05/1996年 #;否则，如果仅提交 03/05/1993年，Microsoft Access 计算此为 3 除以 5 除以 1996年。 此值将向上舍入为整数 0，并且由于零天将映射到 1899年-12-31，这是使用的日期。<br /><br /> 竖线字符 (&#124;) 不能使用的日期值中，即使后退用引号引起来。|  
-|GUID|限于 Microsoft 访问 4.0 数据类型。|  
-|NUMERIC|限于 Microsoft 访问 4.0 数据类型。|  
+|BINARY、VARBINARY 和 VARCHAR|创建零或未指定长度的 BINARY、VARBINARY 或 VARCHAR 列实际上将返回510字节的列。|  
+|BYTE|即使 "FieldSize" 等于 "字节" 的 "Microsoft 访问号码" 字段没有符号，也可以在使用 Microsoft Access 驱动程序时，将负数插入该字段。|  
+|CHAR、LONGVARCHAR 和 VARCHAR|字符串文本可包含任何 ANSI 字符（1-255 decimal）。 使用两个连续的单引号（' '）表示一个单引号（'）。<br /><br /> 使用字符数据类型列中的任何特殊字符时，应使用过程来传递字符数据。|  
+|DATE|日期值必须根据 ODBC 规范日期格式或用日期时间分隔符（"#"）分隔。 否则，Microsoft Access 会将该值视为算术表达式，而不会引发警告或错误。<br /><br /> 例如，日期 "3 月5日 1996" 必须表示为 {d ' 1996-03-05 '} 或 #03/05/1996 #;否则，如果仅提交03/05/1993，Microsoft Access 会将此值计算为3除以5除以1996。 此值向上舍入到整数0，并且从零日映射到1899-12-31，这是使用的日期。<br /><br /> 即使用引号引起来，也不能在日期值中使用管道字符（&#124;）。|  
+|GUID|限制为 Microsoft Access 4.0 的数据类型。|  
+|NUMERIC|限制为 Microsoft Access 4.0 的数据类型。|  
   
- 了解更多限制，对数据类型可在[数据类型限制](../../odbc/microsoft/data-type-limitations.md)。
+ [数据类型限制](../../odbc/microsoft/data-type-limitations.md)中可以找到更多有关数据类型的限制。

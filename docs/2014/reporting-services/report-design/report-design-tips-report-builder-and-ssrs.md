@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ba5cdb309d277e751c2de7fcfbce5dfc02174366
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105103"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>报表设计提示（报表生成器和 SSRS）
@@ -37,7 +37,7 @@ ms.locfileid: "66105103"
   
 -   为了减少报表中的混乱，可以考虑对特定报表项使用条件可见性功能，并让用户选择是否显示这些项。 可以基于参数或文本框切换来设置可见性。 可以有条件地添加隐藏文本框以显示中间表达式结果。 当报表显示意外数据时，可以显示这些中间结果以帮助调试表达式。  
   
--   处理 Tablix 单元或矩形中的嵌套项时，可以为容器和包含项设置不同的背景色。 默认情况下，背景色为 **“无颜色”**。 具有特定背景色的项可穿透背景色设置为 **“无颜色”** 的项显示出来。 这一技术可帮助您选择正确的项以设置显示属性，如 Tablix 单元中的边框可见性。  
+-   处理 Tablix 单元或矩形中的嵌套项时，可以为容器和包含项设置不同的背景色。 默认情况下，背景色为 **“无颜色”** 。 具有特定背景色的项可穿透背景色设置为 **“无颜色”** 的项显示出来。 这一技术可帮助您选择正确的项以设置显示属性，如 Tablix 单元中的边框可见性。  
   
  有关设计报表时需考虑的事项的详细信息，请参阅[规划报表（报表生成器）](planning-a-report-report-builder.md)。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "66105103"
   
     -   若要在 Tablix 数据区域中处理行组和列组，请从“分组”窗格中选择所需组。  
   
- 在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的报表设计器中，您可以从“属性”窗格工具栏的对象下拉列表中进行选择，也可以从“文档大纲”窗口的报表项层次结构视图中进行选择。 您可以在此窗格中选择项，然后查看在设计图面上选定了哪个项。 若要打开“文档大纲”窗口，请在 **“视图”** 菜单中指向 **“其他窗口”**，然后单击 **“文档大纲”**。  
+ 在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的报表设计器中，您可以从“属性”窗格工具栏的对象下拉列表中进行选择，也可以从“文档大纲”窗口的报表项层次结构视图中进行选择。 您可以在此窗格中选择项，然后查看在设计图面上选定了哪个项。 若要打开“文档大纲”窗口，请在 **“视图”** 菜单中指向 **“其他窗口”** ，然后单击 **“文档大纲”** 。  
   
 ##  <a name="ReportItems"></a> 使用特定类型的报表项  
   
@@ -141,7 +141,7 @@ ms.locfileid: "66105103"
   
     -   容器将扩展以容纳子项的增长。 对于所选项，在“属性”窗格中，父属性标识该项的容器。 还可以使用“文档大纲”窗格来查看报表项的包含层次结构。  
   
-    -   **“布局”** 工具栏提供了多个按钮，帮助调整报表项的边缘、中心和间距。 若要从 **“视图”** 菜单启用 **“布局”** 工具栏，请指向 **“工具栏”**，然后单击 **“布局”**。  
+    -   **“布局”** 工具栏提供了多个按钮，帮助调整报表项的边缘、中心和间距。 若要从 **“视图”** 菜单启用 **“布局”** 工具栏，请指向 **“工具栏”** ，然后单击 **“布局”** 。  
   
 -   如果计划将报表另存为 .pdf 文件，必须将报表宽度显式设置为某个值，以便获得导出文件格式的预期效果。 例如，将报表页宽度设置为确切等于 7.9375 英寸，并将左边距和右边距设置为 0.5 英寸。  
   
@@ -157,9 +157,9 @@ ms.locfileid: "66105103"
   
  通过将此行为、报表项的宽度和高度属性、表体的大小、页面高度和页面宽度定义、父报表的边距设置、呈现器对于分页的特定支持等组合起来，可共同确定哪些报表项适合一起呈现在页面上。 有关详细信息，请参阅 [Reporting Services 中的分页（报表生成器和 SSRS）](pagination-in-reporting-services-report-builder-and-ssrs.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 2014 中的报表生成器](../report-builder/report-builder-in-sql-server-2016.md)   
  [Reporting Services 教程 (SSRS)](../reporting-services-tutorials-ssrs.md)   
- [教程&#40;报表生成器&#41;](../report-builder-tutorials.md)  
+ [教程 &#40;报表生成器&#41;](../report-builder-tutorials.md)  
   
   

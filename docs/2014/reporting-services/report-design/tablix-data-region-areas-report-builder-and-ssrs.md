@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0f3fb342593e24ce97a550186065a22ec3ee2498
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104714"
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Tablix 数据区域（报表生成器和 SSRS）
@@ -25,15 +25,15 @@ ms.locfileid: "66104714"
   
  在设计图面上，用点线表示选定 Tablix 数据区域中的上述四个区域。 下图显示了 Tablix 区域的相应区域，该 Tablix 区域具有基于 Category 和 Subcategory 的嵌套行组、基于 Geography 和 Country/Region 的嵌套列组，以及基于 Year 的相邻列组。  
   
- ![Tablix data region areas](../media/rs-tablixareas.gif "Tablix data region areas")  
+ ![Tablix 数据区域](../media/rs-tablixareas.gif "Tablix 数据区域")  
   
  下表对各区域进行了说明：  
   
 -   **Tablix 角部区**。 （可选）对于从右到左 (RTL) 的布局，Tablix 角位于左上角或右上角。 向 Tablix 数据区域添加行组和列组时，将自动创建该区域。 您可以在该区域中合并多个单元，并添加标签或嵌入其他报表项。 在该图中，合并后的角单元根据 Area 和 Year 显示标签 Sales。  
   
--   **Tablix 列组区**。 （可选）Tablix 列组位于右上角（对于 RTL 布局，则位于左上角）。 该区域是在添加列组时自动创建的。 该区域中的单元表示列组层次结构的成员，并显示列组实例值。 在该图中，显示 [Geography] 和 [CountryRegion] 的单元为嵌套列组，显示 [Year] 的单元为相邻列组。 [Total] 列显示跨每个行的聚合总计。  
+-   **Tablix 列组区域**。 （可选）Tablix 列组位于右上角（对于 RTL 布局，则位于左上角）。 该区域是在添加列组时自动创建的。 该区域中的单元表示列组层次结构的成员，并显示列组实例值。 在该图中，显示 [Geography] 和 [CountryRegion] 的单元为嵌套列组，显示 [Year] 的单元为相邻列组。 [Total] 列显示跨每个行的聚合总计。  
   
--   **Tablix 行组区**。 （可选）Tablix 行组位于左下角（对于 RTL 布局，则位于右下角）。 该区域是在添加行组时自动创建的。 该区域中的单元表示行组层次结构的成员，并显示行组实例值。 在该图中，显示 [Category] 和 [Subcat] 的单元为嵌套行组。 Subcat 下面的 Total 行重复每个类别组，以便显示每个列的聚合小计。 总计行显示所有类别的总计。  
+-   **Tablix 行组区域**。 （可选）Tablix 行组位于左下角（对于 RTL 布局，则位于右下角）。 该区域是在添加行组时自动创建的。 该区域中的单元表示行组层次结构的成员，并显示行组实例值。 在该图中，显示 [Category] 和 [Subcat] 的单元为嵌套行组。 Subcat 下面的 Total 行重复每个类别组，以便显示每个列的聚合小计。 总计行显示所有类别的总计。  
   
 -   **Tablix 正文区**。 Tablix 正文位于右下角（对于 RTL 布局，则位于左下角）。 Tablix 正文显示详细信息数据和分组数据。 在本示例中，只使用了聚合数据。 表达式的作用域是通过文本框所属的最内部组确定的。 当 Tablix 正文中的单元是详细信息行成员时，该单元显示详细信息数据；当该单元是与组关联的行或组的成员时，则表示聚合数据。 默认情况下，对于组行或组列中包含不含有聚合函数的简单表达式的单元，其计算结果为组中的第一个值。 在该图中，这些单元显示所有销售订单的行总计的聚合总计。  
   
@@ -41,13 +41,13 @@ ms.locfileid: "66104714"
   
  下图在预览中显示 Tablix 数据区域。  
   
- ![预览、Tablix 角、行组和列组、正文](../media/rs-tablixareaspreview.gif "预览、Tablix 角、行组和列组、正文")  
+ ![预览、Tablix 角、行 & 列组、正文](../media/rs-tablixareaspreview.gif "Tablix 角、行组和列组、正文的预览")  
   
  行组区显示 Clothing 和 Components 的两个类别组实例。 列组显示 North America 的地理组实例，其中包括 Canada (CA) 和 United States (US) 两个嵌套国家/地区组实例。 此外，相邻列显示 2003 和 2004 的两个年份组实例。 Total 列显示行总计；总计 (totals) 行重复用于显示子类别总计的类别组，而总计 (grand total) 行对数据区域显示一次类别总计。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [列表（报表生成器和 SSRS）](tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [教程&#40;报表生成器&#41;](../report-builder-tutorials.md)   
+ [教程 &#40;报表生成器&#41;](../report-builder-tutorials.md)   
  [表（报表生成器和 SSRS）](tables-report-builder-and-ssrs.md)   
  [矩阵（报表生成器和 SSRS）](create-a-matrix-report-builder-and-ssrs.md)   
  [列表（报表生成器和 SSRS）](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   

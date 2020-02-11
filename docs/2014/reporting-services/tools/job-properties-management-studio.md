@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f00250011f3c325ca39c3c040e5252b804182d86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100214"
 ---
 # <a name="job-properties-management-studio"></a>作业属性 (Management Studio)
@@ -27,7 +27,7 @@ ms.locfileid: "66100214"
 > [!NOTE]  
 >  在具有高级服务的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 中不支持此功能。 运行 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]时，将不会显示该页。  
   
-## <a name="tasks"></a>“任务”  
+## <a name="tasks"></a>任务  
  必须刷新该页以检索有关报表服务器上当前正在运行的作业的信息，才能查看有关作业的信息：  
   
 1.  打开报表服务器文件夹。  
@@ -67,7 +67,7 @@ ms.locfileid: "66100214"
  **用户名**  
  对于由用户启动的进程，此列显示用户名。 对于系统作业，这是报表服务器的名称。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Management Studio 中报表服务器的 F1 帮助](report-server-in-management-studio-f1-help.md)   
  [在 Management Studio 中连接到报表服务器](connect-to-a-report-server-in-management-studio.md)   
  [管理运行中的进程](../subscriptions/manage-a-running-process.md)  

@@ -15,13 +15,13 @@ ms.assetid: 96ac9859-5976-4b06-ae1f-2fec3231e266
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 97541c9d594b282b871cb7869d0e8c2d2224205d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68076855"
 ---
 # <a name="ddl-statements"></a>DDL 语句
-数据定义语言 (DDL) 语句在 Dbms 之间有很大差异。 ODBC SQL 定义语句的最常见的数据定义操作： 创建和删除表、 索引和视图。更改表;和授予和撤消权限。 所有其他 DDL 语句是特定于源的数据。 因此，可互操作应用程序不能执行一些数据定义操作。 一般情况下，这并不是问题，因为此类操作往往是高度特定于 DBMS 的和最左侧的专有数据库管理软件附带的大多数 Dbms 或安装程序附带的驱动程序。  
+数据定义语言（DDL）语句在 Dbms 上有很大的差别。 ODBC SQL 为最常见的数据定义操作定义语句：创建和删除表、索引和视图;更改表;并授予和撤消权限。 所有其他 DDL 语句都是特定于数据源的。 因此，可互操作的应用程序无法执行某些数据定义操作。 通常，这并不是一个问题，因为此类操作往往是非常具体的 DBMS，并最好留给大多数 Dbms 附带的专有数据库管理软件或驱动程序随附的安装程序。  
   
- 数据定义中的另一个问题是该数据类型名称在 Dbms 之间有很大差异。 而不是定义标准数据类型名称和强制驱动程序，以将其转换为特定于 DBMS 的名称**SQLGetTypeInfo**提供应用程序发现特定于 DBMS 的数据类型名称的方法。 可互操作应用程序应使用这些名称在 SQL 语句中创建和更改的表;中列出的名称[附录 c:SQL 语法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)，和[附录 d:数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)，仅为示例。
+ 数据定义中的另一个问题是，Dbms 中的数据类型名称不同。 **SQLGetTypeInfo**为应用程序提供了一种方法来发现 dbms 特定的数据类型名称，而不是定义标准数据类型名称并强制驱动程序将其转换为 dbms 特定的名称。 可互操作的应用程序应在 SQL 语句中使用这些名称来创建和更改表;[附录 C： SQL 语法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)和[附录 D：数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)中列出的名称只是示例。

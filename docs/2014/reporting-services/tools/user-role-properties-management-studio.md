@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4413b86a9882087c01c785e5f5bfdb596f7be698
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099399"
 ---
 # <a name="user-role-properties-management-studio"></a>用户角色属性 (Management Studio)
@@ -42,7 +42,7 @@ ms.locfileid: "66099399"
  **任务说明**  
  提供每个任务的有关信息。 不能修改任务说明。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [项级任务](../security/tasks-and-permissions-item-level-tasks.md)   
  [角色定义](../security/role-definitions.md)   
  [Management Studio 中报表服务器的 F1 帮助](report-server-in-management-studio-f1-help.md)   

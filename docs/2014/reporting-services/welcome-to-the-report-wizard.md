@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 58643214df2caa53ddf88810e1fe519a243fc739
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098652"
 ---
 # <a name="welcome-to-the-report-wizard"></a>欢迎使用报表向导
@@ -26,7 +26,7 @@ ms.locfileid: "66098652"
  **不再显示此页**  
  选择此选项可以在下次启动向导时跳过此页。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [报表向导帮助](../../2014/reporting-services/report-wizard-help.md)  
   
   

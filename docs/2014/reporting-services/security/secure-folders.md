@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 201facc6500339eb8804f3de22d25337dcc07089
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101706"
 ---
 # <a name="secure-folders"></a>保护文件夹
@@ -36,13 +36,13 @@ ms.locfileid: "66101706"
   
 |选择此任务|授予以下操作权限|  
 |----------------------|---------------------------|  
-|查看文件夹|查看文件夹的层次结构和只读属性（指示文件夹的创建时间与修改时间）。<br /><br /> 用户不能在文件夹中查看项，除非它们分配给角色的还包括以下任务："查看报表、"查看模型"、"查看资源"和"数据源视图"。|  
+|查看文件夹|查看文件夹的层次结构和只读属性（指示文件夹的创建时间与修改时间）。<br /><br /> 除非将用户分配到的角色中还包括“查看报表”、“查看模型”、“查看资源”和“查看数据源”任务，否则用户无法查看文件夹中的项。|  
 |管理文件夹|查看文件夹属性、更改名称或说明，或将文件夹移到另一位置。 此任务允许用户创建文件夹。|  
 |管理报表|将报表从文件系统添加到文件夹，以及将报表从报表设计器发布到报表服务器。|  
 |管理数据源|向文件夹中添加新的共享数据源项，以及更改现有的共享数据源。|  
 |设置项的安全性|创建和修改控制文件夹访问权限的角色分配。 此任务必须与“查看文件夹”或“管理文件夹”任务一起使用。 否则，此任务不会有任何作用，因为用户无法选择项。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [保护报表和资源](secure-reports-and-resources.md)   
  [保护共享数据源项](secure-shared-data-source-items.md)   
  [授予对本机模式报表服务器的权限](granting-permissions-on-a-native-mode-report-server.md)  

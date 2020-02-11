@@ -1,5 +1,5 @@
 ---
-title: SharePoint 站点 (SharePoint 集成模式下的 Reporting Services) 上为报表服务器项设置权限 |Microsoft Docs
+title: 为 SharePoint 站点上的报表服务器项设置权限（SharePoint 集成模式下 Reporting Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9c8c0e8f0714efb337d78d4440938dcb5a332fcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101556"
 ---
 # <a name="set-permissions-for-report-server-items-on-a-sharepoint-site-reporting-services-in-sharepoint-integrated-mode"></a>在 SharePoint 站点上为报表服务器项设置权限（SharePoint 集成模式下的 Reporting Services）
@@ -57,11 +57,11 @@ ms.locfileid: "66101556"
   
 5.  单击 **“操作”** 。  
   
-6.  单击 **“编辑权限”** 。 单击“确定”  。  
+6.  单击 **“编辑权限”** 。 单击“确定”。   
   
 7.  单击 **“新建”** 。  
   
-8.  单击 **“添加用户”** 。  
+8.  单击“添加用户”。   
   
 9. 在“用户/组”中输入用户帐户。  
   
@@ -69,9 +69,9 @@ ms.locfileid: "66101556"
   
 11. 单击 **“完全控制”** 。  
   
-12. 单击“确定”  。 用户具备管理特定模型权限的能力后，便可以打开模型并在模型内编辑权限。  
+12. 单击“确定”。  用户具备管理特定模型权限的能力后，便可以打开模型并在模型内编辑权限。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [将 Windows SharePoint Services 中的内置安全性用于报表服务器项](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)   
  [在 SharePoint Web 应用程序中设置报表服务器操作的权限](set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
  [Reporting Services 中的角色和任务与 SharePoint 组和权限的比较](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   

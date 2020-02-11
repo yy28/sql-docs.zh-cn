@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0cc753f16ca9b70523fe6cb858fd167ef044087b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098728"
 ---
 # <a name="url-access-ssrs"></a>URL 访问 (SSRS)
@@ -101,24 +101,24 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
  **param**  
  参数名称。  
   
- *值*  
+ *value*  
  与要使用的参数值相对应的 URL 文本。  
   
- **注意：** 有关可用 URL 访问参数的列表，请参阅[URL Access Parameter Reference](url-access-parameter-reference.md)。 有关在 URL 中传递报表参数的示例，请参阅 [Pass a Report Parameter Within a URL](pass-a-report-parameter-within-a-url.md)。  
+ **注意：** 有关可用 URL 访问参数的列表，请参阅 [URL Access Parameter Reference](url-access-parameter-reference.md)。 有关在 URL 中传递报表参数的示例，请参阅 [Pass a Report Parameter Within a URL](pass-a-report-parameter-within-a-url.md)。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 |任务说明|链接|  
 |-----------------------|-----------|  
-|访问报表服务器项，例如报表、共享数据源和资源。|[使用 URL 访问报表服务器项](access-report-server-items-using-url-access.md)|  
-|将报表参数传递到报表。|[Pass a Report Parameter Within a URL](pass-a-report-parameter-within-a-url.md)|  
+|访问报表服务器项，例如报表、共享数据源和资源。|[使用 URL 访问来访问报表服务器项](access-report-server-items-using-url-access.md)|  
+|将报表参数传递到报表。|[在 URL 内传递报表参数](pass-a-report-parameter-within-a-url.md)|  
 |设置 URL 访问字符串中报表参数的区域设置，它定义日期、货币等特定于区域设置的解释。|[设置 URL 中的报表语言参数](set-the-language-for-report-parameters-in-a-url.md)|  
 |发送自定义报表呈现方式的报表扩展插件特定的设置。|[在 URL 中指定设备信息设置](specify-device-information-settings-in-a-url.md)|  
 |将报表直接导出到某一文件格式而无需在浏览器中查看它。|[使用 URL 访问导出报表](export-a-report-using-url-access.md)|  
 |打开报表并且直接导航到某一字符串位置。|[使用 URL 访问搜索报表](search-a-report-using-url-access.md)|  
 |呈现特定的报表历史记录快照。|[使用 URL 访问呈现报表历史记录快照](render-a-report-history-snapshot-using-url-access.md)|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Pass a Report Parameter Within a URL](pass-a-report-parameter-within-a-url.md)   
  [URL 访问参数引用](url-access-parameter-reference.md)   
  [使用 URL 访问集成 Reporting Services](application-integration/integrating-reporting-services-using-url-access.md)   

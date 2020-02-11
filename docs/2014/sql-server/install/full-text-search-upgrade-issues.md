@@ -14,16 +14,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d907c9b440053b0c0fc110fa02ca3de4e993905c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66095115"
 ---
 # <a name="full-text-search-upgrade-issues"></a>全文搜索升级问题
-  本部分中的主题介绍了可能会影响您升级的全文搜索问题。 主题介绍可用于缓解对您的环境的这些更改影响的操作。  
+  本部分中的主题介绍了可能会影响您升级的全文搜索问题。 这些主题介绍你可以采取哪些措施来缓解这些更改对环境的影响。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用升级顾问](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
  [解决升级问题](../../../2014/sql-server/install/resolving-upgrade-issues.md)  
   

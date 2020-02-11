@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7602ce0ef0e75c3c2eb1ee5a5a47e3fe56b87f44
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102134"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>在报表服务器上配置自定义身份验证或窗体身份验证
@@ -47,15 +47,15 @@ ms.locfileid: "66102134"
     </Authentication>  
     ```  
   
-4.  将它粘贴到的现有条目 <`Authentication`>。  
+4.  将其粘贴到 <`Authentication`> 的现有条目上。  
   
      请注意，不能将 `Custom` 与其他身份验证类型一起使用。  
   
-5.  保存该文件。  
+5.  保存文件。  
   
 6.  打开报表服务器的 Web.config 文件。 默认情况下，该文件位于 \Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\ReportServer 下。  
   
-7.  查找`authentication mode`并将其设置`Forms`。  
+7.  找到`authentication mode`并设置它`Forms`。  
   
     ```  
     <authentication mode = "Forms" />  
@@ -69,7 +69,7 @@ ms.locfileid: "66102134"
   
 9. 打开报表管理器的 Web.config 文件。 默认情况下，该文件位于 \Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\ReportManager 下。  
   
-10. 查找`authentication mode`并将其设置`Forms`。  
+10. 找到`authentication mode`并设置它`Forms`。  
   
     ```  
     <authentication mode = "Forms" />  
@@ -83,16 +83,16 @@ ms.locfileid: "66102134"
   
 12. 将 `PassThroughCookies` 元素结构添加到配置文件中。 有关详细信息，请参阅 [配置报表管理器以便传递自定义身份验证 Cookie](configure-the-web-portal-to-pass-custom-authentication-cookies.md)。  
   
-13. 保存该文件。  
+13. 保存文件。  
   
 14. 如果配置了扩展部署，请对该部署中的其他报表服务器重复以上所有步骤。  
   
 15. 重新启动报表服务器以清除当前打开的任何会话。  
   
-## <a name="see-also"></a>请参阅  
- [Implementing a Security Extension](../extensions/security-extension/implementing-a-security-extension.md)   
+## <a name="see-also"></a>另请参阅  
+ [实现安全扩展插件](../extensions/security-extension/implementing-a-security-extension.md)   
  [针对报表服务器的身份验证](authentication-with-the-report-server.md)   
- [RSReportServer 配置文件](../report-server/rsreportserver-config-configuration-file.md)   
+ [Rsreportserver.config 配置文件](../report-server/rsreportserver-config-configuration-file.md)   
  [在报表服务器上配置基本身份验证](configure-basic-authentication-on-the-report-server.md)   
  [在报表服务器上配置 Windows 身份验证](configure-windows-authentication-on-the-report-server.md)  
   

@@ -16,16 +16,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d21fb2c577e6419668a619466dd0d2c94b4a3da2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102992"
 ---
 # <a name="report-wizard-help"></a>报表向导帮助
   本部分介绍报表向导的 F1 帮助。 报表向导可自动完成创建表格报表和矩阵报表的过程。 下表对本部分的主题进行了说明：  
   
- 若要打开报表向导，请在 **“项目”** 菜单上单击 **“添加新项”** 。  
+ 若要打开报表向导，请在 **“项目”** 菜单上单击 **“添加新项”**。  
   
 ## <a name="in-this-section"></a>本节内容  
   
@@ -35,11 +35,11 @@ ms.locfileid: "66102992"
   
 -   [设计查询](../../2014/reporting-services/design-the-query.md)  
   
--   [查询生成器&#40;报告向导&#41;](../../2014/reporting-services/query-builder-report-wizard.md)  
+-   [查询生成器 &#40;报表向导&#41;](../../2014/reporting-services/query-builder-report-wizard.md)  
   
 -   [选择报表类型](../../2014/reporting-services/select-the-report-type.md)  
   
--   [设计表&#40;报告向导&#41;](../../2014/reporting-services/design-the-table-report-wizard.md)  
+-   [设计表 &#40;报表向导&#41;](../../2014/reporting-services/design-the-table-report-wizard.md)  
   
 -   [选择表布局](../../2014/reporting-services/choose-the-table-layout.md)  
   

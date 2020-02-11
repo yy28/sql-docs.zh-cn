@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e3c062c241a6949921b550460488316861e54e8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106008"
 ---
 # <a name="display-the-same-data-on-a-matrix-and-a-chart-report-builder"></a>在矩阵和图表上显示相同数据（报表生成器）
@@ -69,7 +69,7 @@ ms.locfileid: "66106008"
   
 14. 单击 **“排序”** 。  
   
-15. 单击 **“添加”** 。 将在排序表达式网格中出现一个新行。  
+15. 单击“添加”  。 将在排序表达式网格中出现一个新行。  
   
 16. 在“排序依据”  中，从下拉列表选择在步骤 9 中选择要按其分组的数据集字段。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "66106008"
   
 21. 单击 **“排序”** 。  
   
-22. 单击 **“添加”** 。 将在排序表达式网格中出现一个新行。  
+22. 单击“添加”  。 将在排序表达式网格中出现一个新行。  
   
 23. 在“排序依据”  中，从下拉列表选择在步骤 16 中选择要按其分组的数据集字段。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "66106008"
   
 25. 预览结果。 矩阵行组和列组将显示与图表序列组和类别组相同的数据。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [将多个数据区域链接到同一数据集（报表生成器和 SSRS）](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [添加数据集筛选器、数据区域筛选器和组筛选器（报表生成器和 SSRS）](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [列表（报表生成器和 SSRS）](tables-matrices-and-lists-report-builder-and-ssrs.md)   

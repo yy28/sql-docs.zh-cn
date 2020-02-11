@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a47169bc3c628e4bf33fb9ed6a19e612320b585c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105269"
 ---
 # <a name="first-function-report-builder-and-ssrs"></a>First 函数（报表生成器和 SSRS）
@@ -30,7 +30,7 @@ ms.locfileid: "66105269"
 First(expression, scope)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *expression*  
  （`Variant` 或 `Binary`）要对其执行聚合的表达式，例如，`=Fields!FieldName.Value`。  
   
@@ -41,9 +41,11 @@ First(expression, scope)
  视表达式的类型而定。  
   
 ## <a name="remarks"></a>备注  
- `First` 函数返回在指定作用域中应用所有排序和筛选后的一组数据的第一个值。  
+ 
+  `First` 函数返回在指定作用域中应用所有排序和筛选后的一组数据的第一个值。  
   
- `First` 函数只能用在当前作用域（默认）相关的组筛选表达式中。  
+ 
+  `First` 函数只能用在当前作用域（默认）相关的组筛选表达式中。  
   
  您还可以在页眉中使用 `First` 函数，返回 `ReportItems` 集合中属于某页面的第一个值，以便在页面中生成显示首项和尾项的字典样式标题。  
   
@@ -55,7 +57,7 @@ First(expression, scope)
   
 -   嵌套聚合的*Scope* 不能为数据集的名称。  
   
--   *表达式*不能包含`First`， `Last`， `Previous`，或`RunningValue`函数。  
+-   *表达式*不能包含`First`、 `Last`、 `Previous`或`RunningValue`函数。  
   
 -   *Expression* 不得包含用于指定 *recursive*的嵌套聚合。  
   
@@ -70,7 +72,7 @@ First(expression, scope)
 =First(Fields!ProductNumber.Value, "Category")  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在报表中使用表达式（报表生成器和 SSRS）](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)   
  [表达式中的数据类型（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)   

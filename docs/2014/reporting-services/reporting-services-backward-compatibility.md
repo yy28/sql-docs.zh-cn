@@ -1,5 +1,5 @@
 ---
-title: Reporting Services 的向后兼容性 |Microsoft Docs
+title: Reporting Services 向后兼容性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,26 +16,26 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7203740ba7f52dfc2cd3793a20fed9fecf5f9468
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102999"
 ---
 # <a name="reporting-services-backward-compatibility"></a>Reporting Services 的向后兼容性
-  本节介绍 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]的不同版本之间在行为方面的更改。 它包括不再可用或计划在将来的版本中删除的功能。 本节还介绍了对产品所做的根本性更改，已知这些更改会使包含 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能的自定义应用程序不能正常工作。  
+  本部分介绍各个版本[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]之间的行为变化。 它包括不再可用或计划在将来的版本中删除的功能。 本节还介绍了对产品所做的根本性更改，已知这些更改会使包含 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能的自定义应用程序不能正常工作。  
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|Description|  
+|主题|说明|  
 |-----------|-----------------|  
-|[SQL Server 2014 的 SQL Server Reporting Services 中已停止使用的功能](discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)|介绍在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的早期版本中存在但在后来的版本中已删除的功能。|  
-|[SQL Server 2014 的 SQL Server Reporting Services 中弃用的功能](deprecated-features-in-sql-server-reporting-services-ssrs.md)|介绍此版本的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中出于向后兼容的目的而存在、但在将来版本的 SQL Server 中将会删除的功能。|  
-|[SQL Server 2014 的 SQL Server Reporting Services 中的中断性变更](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)|介绍升级到 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]时可能遇到的问题。|  
-|[SQL Server 2014 中 SQL Server Reporting Services 的行为变更](behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)|介绍在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中已更改的功能。|  
+|[SQL Server 2014 的 SQL Server Reporting Services 中停止使用的功能](discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)|介绍在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的早期版本中存在但在后来的版本中已删除的功能。|  
+|[SQL Server 2014 的 SQL Server Reporting Services 中不推荐使用的功能](deprecated-features-in-sql-server-reporting-services-ssrs.md)|介绍此版本的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中出于向后兼容的目的而存在、但在将来版本的 SQL Server 中将会删除的功能。|  
+|[SQL Server 2014 的 SQL Server Reporting Services 中的重大更改](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)|介绍升级到 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]时可能遇到的问题。|  
+|[SQL Server 2014 中 SQL Server Reporting Services 的行为更改](behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)|介绍在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中已更改的功能。|  
   
-## <a name="see-also"></a>请参阅  
- [后向兼容性](../../2014/getting-started/backward-compatibility.md)   
- [Analysis Services 后向兼容性](../../2014/analysis-services/analysis-services-backward-compatibility.md)  
+## <a name="see-also"></a>另请参阅  
+ [向后兼容性](../../2014/getting-started/backward-compatibility.md)   
+ [Analysis Services 向后兼容性](../../2014/analysis-services/analysis-services-backward-compatibility.md)  
   
   

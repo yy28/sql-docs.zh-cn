@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3eb00922b4f6e21dd4cfc8a46d8c0c27ed9a5be1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66095479"
 ---
 # <a name="distributed-replay-client-configuration"></a>Distributed Replay 客户端配置
@@ -24,9 +24,9 @@ ms.locfileid: "66095479"
   
 ## <a name="options"></a>选项  
  **控制器名称**  
- 这是一个可选参数，默认值是\<*空白*>。  
+ 这是一个可选参数，默认值为\<*空白*>。  
   
- 输入客户端计算机将与 Distributed Replay 客户端服务进行通信的控制器的名称。 请注意以下事项：  
+ 输入客户端计算机将与 Distributed Replay 客户端服务进行通信的控制器的名称。 注意以下事项：  
   
 -   名称必须为完全限定域名 (FQDN)。 例如，位于 Microsoft 的产品层次结构中名为 server1 的主机必须具有 server1.products.microsoft.com 的 FQDN。  
   
@@ -37,11 +37,11 @@ ms.locfileid: "66095479"
  **工作目录**  
  为 Distributed Replay 客户端服务指定工作目录。  
   
- 默认工作目录为 \<驱动器号>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\WorkingDir\\  。  
+ 默认工作目录为\<*驱动器号*>：\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Program Files \DReplayClient\WorkingDir\\。  
   
- **结果目录**  
+ **默认目录**  
  为 Distributed Replay 客户端服务指定结果目录。  
   
- 默认结果目录为 \<驱动器号>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\ResultDir\\  。  
+ 默认结果目录为\<*驱动器号*>：\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Program Files \DReplayClient\ResultDir\\。  
   
   

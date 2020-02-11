@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c62e2793f11853158b7b31d1e79feb4ae59977de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098297"
 ---
-# <a name="listreportserversindatabase-method-wmi-msreportserverconfigurationsetting"></a>ListReportServersInDatabase 方法 (WMI MSReportServer_ConfigurationSetting)
+# <a name="listreportserversindatabase-method-wmi-msreportserver_configurationsetting"></a>ListReportServersInDatabase 方法 (WMI MSReportServer_ConfigurationSetting)
   返回报表服务器数据库中存在的报表服务器安装列表，无论这些安装是否具有访问安全信息的权限都同样如此。  
   
 ## <a name="syntax"></a>语法  
@@ -44,7 +44,7 @@ public void ListReportServersInDatabase (out string[] MachineNames,
     out string[] ExtendedErrors);  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>parameters  
  *MachineNames[]*  
  [out] 一个数组，包含数据库中存在的各个报表服务器安装的计算机名称。  
   
@@ -54,7 +54,7 @@ public void ListReportServersInDatabase (out string[] MachineNames,
  *InstallationIDs[]*  
  [out] 一个数组，包含数据库中存在的各个报表服务器安装的安装 ID。  
   
- *IsInitialized[]*  
+ *IsInitialized []*  
  [out] 一个数组，包含数据库中存在的各个报表服务器安装的初始化状态。  
   
  *长度*  
@@ -73,9 +73,9 @@ public void ListReportServersInDatabase (out string[] MachineNames,
  ListReportServersInDatabase 用于列出报表服务器数据库中存在的报表服务器安装（无论这些安装是否具有访问安全信息的权限），并返回一组包含每一安装相关信息的匹配数组。  
   
 ## <a name="requirements"></a>要求  
- **命名空间:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](msreportserver-configurationsetting-members.md)  
   
   

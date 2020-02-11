@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4c3e943bcf63f4bcdff22d5425bf474d8aa4d80d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098177"
 ---
-# <a name="removesslcertificatebindings-method-wmi-msreportserverconfigurationsetting"></a>RemoveSSLCertificateBindings 方法 (WMI MSReportServer_ConfigurationSetting)
+# <a name="removesslcertificatebindings-method-wmi-msreportserver_configurationsetting"></a>RemoveSSLCertificateBindings 方法 (WMI MSReportServer_ConfigurationSetting)
   删除 SSL 证书绑定。  
   
 ## <a name="syntax"></a>语法  
@@ -37,8 +37,8 @@ public void RemoveSSLCertificateBindings(string Application,
     out string Error, out Int32 HRESULT);  
 ```  
   
-## <a name="parameters"></a>Parameters  
- *应用程序*  
+## <a name="parameters"></a>parameters  
+ *Application*  
  应为其删除证书绑定的应用程序的名称。  
   
  *CertificateHash*  
@@ -47,7 +47,7 @@ public void RemoveSSLCertificateBindings(string Application,
  *IPAddress*  
  应用程序的 IP 地址。  
   
- *端口*  
+ 端口   
  与该绑定关联的 SSL 端口。  
   
  *lcid*  
@@ -66,9 +66,9 @@ public void RemoveSSLCertificateBindings(string Application,
  此方法可以从 rsreportserver.config 文件中删除特定的绑定，也可以选择从 HTTP.SYS 中删除特定的绑定。  
   
 ## <a name="requirements"></a>要求  
- **命名空间:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](msreportserver-configurationsetting-members.md)  
   
   

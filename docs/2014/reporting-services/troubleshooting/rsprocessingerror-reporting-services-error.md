@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 46b8f7326578b9d8276c164577adf691accdd48e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099134"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Reporting Services 错误
@@ -31,7 +31,7 @@ ms.locfileid: "66099134"
 |组件|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
 |消息正文|处理报表时出错。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  在发布、处理、本地预览、从报表服务器中查看或者为报表创建订阅时，遇到了一个或多个错误。 此错误消息表示至少检测到了一个错误。  
   
 ### <a name="possible-causes"></a>可能的原因  
@@ -53,9 +53,9 @@ ms.locfileid: "66099134"
   
 -   无法加载未正确部署的自定义程序集或 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 程序集。  
   
--   参数可以为 Null 的属性设置为`False`参数中检测到 null 值。  
+-   将可为 Null 的属性设置为`False`的参数在参数中检测到 null 值。  
   
--   数据区域的 Hidden 属性的表达式包含错误：对象引用未设置为某个对象的实例。  
+-   数据区域的 Hidden 属性的表达式包含以下错误：对象引用未设置为某个对象的实例。  
   
 -   表达式包含的函数调用无效或有语法错误。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "66099134"
  多值参数不能为 Null。 有关详细信息，请参阅 [报表参数（报表生成器和报表设计器）](../report-design/report-parameters-report-builder-and-report-designer.md)的详细信息。  
   
 ### <a name="main-report-with-subreport-could-not-be-processed"></a>无法处理包含子报表的主报表  
- 必须使用相同版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表处理器来处理包含子报表的报表。 将报表升级到报表定义架构的当前版本时，可能会同时更新主报表和子报表，也可能不会。 如果版本不兼容报表与其子报表，显示以下消息："无法处理子报表"。  
+ 必须使用相同版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表处理器来处理包含子报表的报表。 将报表升级到报表定义架构的当前版本时，可能会同时更新主报表和子报表，也可能不会。 如果报表与其子报表的版本不兼容，则会显示以下消息：“无法处理子报表”。  
   
  必须更改主报表或子报表，以便使用相同版本的报表处理器来处理所有报表。 有关报表为何无法进行升级的信息，请参阅 [升级报表](../install-windows/upgrade-reports.md)。  
   
@@ -98,11 +98,11 @@ ms.locfileid: "66099134"
 ### <a name="cannot-compare-data-types-for-a-filter"></a>无法比较筛选器的数据类型  
  在筛选器公式中，定义筛选内容的筛选器表达式和筛选器值必须为相同数据类型才能进行比较。 如果出现以下错误之一，请修改字段表达式或筛选器值以使数据类型匹配：  
   
--   无法为 \<report item name> 执行 \<report item type> 的处理   。 无法比较 \<type> 和 \<type> 类型的数据   。 请检查 \<report item name> 返回的数据类型  。  
+-   无法为 *report item name> 执行 \<report item type> 的处理* *\<* 。 无法比较 *type> 和 \<type> 类型的数据* *\<* 。 请检查 *report item name> 返回的数据类型\<* 。  
   
--   无法计算 \<property name>  。  
+-   无法计算 *property name>\<* 。  
   
--   无法计算 \<property name>  。 它引用了一个数据集字段，该字段包含一个错误：\<error string>  。  
+-   无法计算 *property name>\<* 。 它引用了一个数据集字段，该字段包含一个错误：*error string>\<* 。  
   
  有关详细信息，请参阅 [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)。  
   
@@ -111,24 +111,24 @@ ms.locfileid: "66099134"
   
  也可以将特定作用域的名称传递给聚合函数。 作用域可以引用数据集和数据区域的名称，也可以引用位于数据层次结构中较高位置的作用域的名称。 这适用于以下消息：  
   
--   \<report item type>“\<report item name>”具有无效的作用域“\<scope name>”    。 该作用域必须是当前作用域或包含在当前作用域内。  
+-   *report item type>“\<report item name>”具有无效的作用域“* scope name>” *\<* *\<* 。 该作用域必须是当前作用域或包含在当前作用域内。  
   
--   \<report item type>“\<report item name>”的 \<property name> 表达式包含的作用域参数对聚合函数无效    。 作用域参数必须设置为字符串常量，该常量可以等于所包含组的名称、所包含数据区域的名称或数据集的名称。  
+-   *report item type>“\<report item name>”的* property name> 表达式包含的作用域参数对聚合函数无效 *\<* *\<* 。 作用域参数必须设置为字符串常量，该常量可以等于所包含组的名称、所包含数据区域的名称或数据集的名称。  
   
  对于计算运行总计的聚合函数（`Previous`、`RunningValue` 或 `RowNumber`），可以将作用域参数指定为行组名称或列组名称，但不能同时指定二者。 这适用于以下错误消息：  
   
--   `Previous``RunningValue`或`RowNumber`聚合函数的数据单元中所用 *\<类型的报表项 >* ' *\<报表项名称 >* 的分组作用域，请参阅行和列中 *\<类型的报表项 >* 。 所有的作用域参数`Previous`，`RunningValue`和`RowNumber`聚合函数内的 *\<报表项类型 >* 行分组或数据列分组，但不是能二者都可以引用。  
+-   `Previous`， `RunningValue`或`RowNumber`在* \<报表项类型*的数据单元中使用的聚合函数>"*\<报表项名称>*" 引用* \<报表项类型*的列和行中的分组范围>。 报表项类型中的`Previous`所有`RunningValue`函数`RowNumber`和聚合函数的作用域参数>可以引用行分组或数据列分组，但不能同时引用两者。 * \<*  
   
  有关详细信息，请参阅[总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](../report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)和[表达式中的内置集合（报表生成器和 SSRS）](../report-design/built-in-collections-in-expressions-report-builder.md)。  
   
 ### <a name="default-dataset-scope-for-a-top-level-text-box"></a>顶级文本框的默认数据集作用域  
- 如果报表包含多个数据集，请勿使用添加到报表设计图面上的文本框的默认作用域。 应使用一个表达式，其中包含数据集名称（作为作用域）和聚合函数。 例如， `=First(Fields!FieldName.Value, "DataSet2")`。  
+ 如果报表包含多个数据集，请勿使用添加到报表设计图面上的文本框的默认作用域。 应使用一个表达式，其中包含数据集名称（作为作用域）和聚合函数。 例如，`=First(Fields!FieldName.Value, "DataSet2")` 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [表达式（报表生成器和 SSRS）](../report-design/expressions-report-builder-and-ssrs.md)   
  [聚合函数引用（报表生成器和 SSRS）](../report-design/report-builder-functions-aggregate-functions-reference.md)   
  [表达式示例（报表生成器和 SSRS）](../report-design/expression-examples-report-builder-and-ssrs.md)   
- [向报表添加数据&#40;报表生成器和 SSRS&#41;](../report-data/report-datasets-ssrs.md)   
+ [将数据添加到报表 &#40;报表生成器和 SSRS&#41;](../report-data/report-datasets-ssrs.md)   
  [常用筛选器（报表生成器和 SSRS）](../report-design/commonly-used-filters-report-builder-and-ssrs.md)   
  [数据集字段集合（报表生成器和 SSRS）](../report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [报表设计器的表达式中的自定义代码和程序集引用 (SSRS)](../report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   

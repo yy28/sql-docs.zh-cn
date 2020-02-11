@@ -1,5 +1,5 @@
 ---
-title: 目录存储的过程 (Transact SQL) |Microsoft Docs
+title: 目录存储过程（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,16 @@ ms.assetid: 6190b070-a3ba-4925-bbe7-79229205dac7
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 6b9df008c37a6efb645df4ceed46d30e6da452eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68078344"
 ---
 # <a name="catalog-stored-procedures-transact-sql"></a>目录存储过程 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持下列系统存储过程，这些存储过程实现 ODBC 数据字典功能并隔离 ODBC 应用程序使之不受基础系统表更改的影响。  
   
 |||  
@@ -39,7 +40,7 @@ ms.locfileid: "68078344"
 |[sp_pkeys](../../relational-databases/system-stored-procedures/sp-pkeys-transact-sql.md)|[sp_table_privileges](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)|  
 |[sp_server_info](../../relational-databases/system-stored-procedures/sp-server-info-transact-sql.md)|[sp_tables](../../relational-databases/system-stored-procedures/sp-tables-transact-sql.md)|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

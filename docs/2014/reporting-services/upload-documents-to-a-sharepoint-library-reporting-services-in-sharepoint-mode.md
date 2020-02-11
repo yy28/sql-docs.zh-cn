@@ -1,5 +1,5 @@
 ---
-title: 将文档上载到 SharePoint 库 (SharePoint 模式下的 Reporting Services) |Microsoft Docs
+title: 将文档上传到 SharePoint 库（在 SharePoint 模式下 Reporting Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 009d7527f71966003d02e5963de451fda9710ae4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098842"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>将文档上载到 SharePoint 库（SharePoint 模式下的 Reporting Services）
@@ -29,7 +29,7 @@ ms.locfileid: "66098842"
 > [!NOTE]  
 >  报表服务器必须配置为使用 SharePoint 模式，且 SharePoint 产品的实例必须安装了 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 外接程序，此外接程序提供了从 SharePoint 站点中存储和访问报表服务器项的程序文件。  
   
- 若要将文档上载到库中，您必须拥有站点级别的“添加项”权限。 如果您使用的是默认安全设置，将对拥有“完全控制”级别权限的“所有者”  组成员和拥有“参与讨论”级别权限的“成员”  组授予该权限。  
+ 若要将文档上载到库中，您必须拥有站点级别的“添加项”权限。 如果您使用的是默认安全设置，将对拥有“完全控制”级别权限的“所有者” **** 组成员和拥有“参与讨论”级别权限的“成员” **** 组授予该权限。  
   
 ### <a name="to-add-a-report-definition-or-report-model-to-a-library"></a>向库中添加报表定义或报表模型  
   
@@ -37,9 +37,9 @@ ms.locfileid: "66098842"
   
 2.  在 **“上载”** 菜单中，单击 **“上载文档”** 。  
   
-3.  若要上传单个报表或报表模型文件，请选择报表定义 (.rdl) 或报表模型 (.smdl) 文件，然后单击“确定”  。  
+3.  若要上传单个报表或报表模型文件，请选择报表定义 (.rdl) 或报表模型 (.smdl) 文件，然后单击“确定”****。  
   
-     如果报表定义使用共享数据源 (.rsds) 文件存储与外部数据源的连接信息，则可以同时上载 .rdl 和 .rsds 文件。 为此，请单击 **“上载多个文档”** ，指定这两个文件，然后单击 **“确定”** 。  
+     如果报表定义使用共享数据源 (.rsds) 文件存储与外部数据源的连接信息，则可以同时上载 .rdl 和 .rsds 文件。 为此，请单击 **“上载多个文档”**，指定这两个文件，然后单击 **“确定”**。  
   
  如果您上载的报表包含对共享数据源、报表模型或子报表的引用，则文件上载后这些引用将会断开。 有关如何重置引用的详细信息，请参阅[创建和管理共享数据源（SharePoint 集成模式下的 Reporting Services）](../../2014/reporting-services/create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66098842"
   
  报表可以包含参数以便用户能够筛选数据。 您可以将参数配置为使用特定值或更改参数对用户的显示方式。 有关详细信息，请参阅[在已发布报表上设置参数（SharePoint 集成模式下的 Reporting Services）](report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [将报表发布到 SharePoint 库](reports/publish-a-report-to-a-sharepoint-library.md)   
  [将共享数据源发布到 SharePoint 库](reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
  [在 SharePoint 站点上授予对报表服务器项的权限](security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  

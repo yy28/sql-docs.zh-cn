@@ -17,13 +17,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b78691b0300b6098dfa88c35b4b61c7aa63fed4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099820"
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig 实用工具 (SSRS)
+  
   **rsconfig.exe** 实用工具可以在 RSReportServer.config 文件中加密并存储连接和帐户值。 加密值包括用于无人参与报表处理的报表服务器数据库连接信息和帐户值。  
   
 ## <a name="syntax"></a>语法  
@@ -48,14 +49,17 @@ ms.locfileid: "66099820"
 |术语|可选/必需|定义|  
 |----------|------------------------|----------------|  
 |**-?**|可选。|显示 Rsconfig.exe 参数的语法。|  
-|`-c`|如果未使用 `-e` 参数，则为必需项。|指定用于将报表服务器连接到报表服务器数据库的连接字符串、凭据和数据源值。<br /><br /> 此参数不带值。 但是，必须对其指定其他参数以提供所有必需的连接值。<br /><br /> 您可以使用指定的参数`-c`包括`-m`， **-s**， `-i`，`-d`，`-a`，`-u`，`-p`，和`-t`。|  
+|`-c`|如果未使用 `-e` 参数，则为必需项。|指定用于将报表服务器连接到报表服务器数据库的连接字符串、凭据和数据源值。<br /><br /> 此参数不带值。 但是，必须对其指定其他参数以提供所有必需的连接值。<br /><br /> `-c`可以指定的参数包括`-m`、 **-s**、 `-i`、`-d``-a``-u``-p`、、、和。`-t`|  
 |`-e`|如果未使用 `-c` 参数，则为必需项。|指定无人参与报表执行帐户。<br /><br /> 此参数不带值。 但是，您必须在命令行中指定其他参数，以指定配置文件中加密的值。<br /><br /> 可以使用 `-e` 指定的参数包括 `-u` 和 `-p`。 您还可以设置 `-t`。|  
 |`-m`  *computername*|如果要配置远程报表服务器实例，则此参数是必需的。|指定承载报表服务器的计算机的名称。 如果省略该参数，则默认值为 `localhost`。|  
-|**-s**  servername |必需的。|指定承载报表服务器数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。|  
+|**-s**  *servername*|必需。|指定承载报表服务器数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。|  
 |`-i`  *instancename*|如果使用了命名实例，则此参数是必需的。|如果使用了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命名实例承载报表服务器数据库，则此值指定该命名实例。|  
-|`-d`  *databasename*|必需的。|指定报表服务器数据库的名称。|  
-|`-a`  *身份验证方法*|必需的。|指定报表服务器连接到报表服务器数据库时使用的身份验证方法。 有效值是 `Windows` 或 `SQL`（该参数不区分大小写）。<br /><br /> `Windows` 指定报表服务器使用 Windows 身份验证。<br /><br /> `SQL` 指定报表服务器使用 SQL Server 身份验证。|  
-|`-u`  *[domain\\]username*|`-e` 是必需的，`-c` 是可选的。|指定报表服务器数据库连接或无人参与帐户的用户帐户。<br /><br /> 对于 **rsconfig -e**，该参数是必需的。 该帐户必须是域用户帐户。<br /><br /> 有关**rsconfig-c**并`-a SQL`，此参数必须指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名。<br /><br /> 有关**rsconfig-c**和`-a Windows`，此参数可能指定域用户、 内置帐户或服务帐户凭据。 若要指定域帐户，请以“domain\username”  格式指定域  和用户名  。 如果使用了内置帐户，则该参数是可选的。 如果要使用服务帐户凭据，则可省略该参数。|  
+|`-d`  *database*|必需。|指定报表服务器数据库的名称。|  
+|`-a`  *authmethod*|必需。|指定报表服务器连接到报表服务器数据库时使用的身份验证方法。 有效值是 `Windows` 或 `SQL`（该参数不区分大小写）。<br /><br /> 
+  `Windows` 指定报表服务器使用 Windows 身份验证。<br /><br /> 
+  `SQL` 指定报表服务器使用 SQL Server 身份验证。|  
+|`-u`  *[域\\] 用户名*|
+  `-e` 是必需的，`-c` 是可选的。|指定报表服务器数据库连接或无人参与帐户的用户帐户。<br /><br /> 对于 **rsconfig -e**，该参数是必需的。 该帐户必须是域用户帐户。<br /><br /> 对于**rsconfig-c**和`-a SQL`，此参数必须指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名。<br /><br /> 对于**rsconfig**和`-a Windows`，此参数可以指定域用户、内置帐户或服务帐户凭据。 若要指定域帐户，请以“domain\username”** 格式指定域** 和用户名**。 如果使用了内置帐户，则该参数是可选的。 如果要使用服务帐户凭据，则可省略该参数。|  
 |`-p`  *password*|如果指定了 `-u`，则该参数是必需的。|指定与 *username* 参数一起使用的密码。 如果帐户不需要密码，则可将该参数设置为空值。 对于域帐户，此值区分大小写。|  
 |`-t`|可选。|将错误消息输出到跟踪日志。 此参数不带值。 有关详细信息，请参阅 [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md)。|  
   
@@ -94,7 +98,7 @@ rsconfig -c -m <REMOTECOMPUTERNAME> -s <SQLSERVERNAME> -d reportserver -a SQL -u
 ```  
   
 #### <a name="specifying-a-built-in-account"></a>指定内置帐户  
- 此示例显示如何配置报表服务器，以便在连接本地报表服务器数据库时使用内置帐户。 请注意，未使用 `-u` 参数。 支持的内置帐户值包括本地系统的 NT AUTHORITY\SYSTEM 和网络服务的 NT AUTHORITY\NETWORKSERVICE（仅限[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] ）。  
+ 此示例显示如何配置报表服务器，以便在连接本地报表服务器数据库时使用内置帐户。 请注意，未使用 `-u` 参数。 支持的内置帐户值的示例包括用于本地系统的 nt AUTHORITY\SYSTEM 和用于网络服务的 nt AUTHORITY\NETWORKSERVICE[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] （仅限）。  
   
 ```  
 rsconfig -c -s <SQLSERVERNAME> -d reportserver -a Windows "NT AUTHORITY\SYSTEM"  
@@ -121,13 +125,13 @@ rsconfig -e -u <DOMAIN\ACCOUNT> -p <PASSWORD> -t
 rsconfig -e -m <REMOTECOMPUTERNAME> -s <SQLSERVERNAME> -u <DOMAIN\ACCOUNT> -p <PASSWORD> -t  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [配置报表服务器数据库连接（SSRS 配置管理器）](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [配置无人参与的执行帐户（SSRS 配置管理器）](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
- [Reporting Services 报表服务器（本机模式）](../report-server/reporting-services-report-server-native-mode.md)   
- [存储加密的 Report Server 数据（SSRS 配置管理器）](../install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+## <a name="see-also"></a>另请参阅  
+ [&#40;SSRS Configuration Manager 配置报表服务器数据库连接&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [&#40;SSRS Configuration Manager 配置无人参与的执行帐户&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+ [Reporting Services 报表服务器 &#40;本机模式&#41;](../report-server/reporting-services-report-server-native-mode.md)   
+ [将加密的报表服务器数据存储 &#40;SSRS Configuration Manager&#41;](../install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Reporting Services 配置文件](../report-server/reporting-services-configuration-files.md)   
- [报表服务器命令提示实用工具 (SSRS)](report-server-command-prompt-utilities-ssrs.md)   
- [RSReportServer 配置文件](../report-server/rsreportserver-config-configuration-file.md)  
+ [报表服务器命令提示实用工具 &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
+ [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)  
   
   

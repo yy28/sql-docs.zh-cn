@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eb726adbb523f679fd9d59e3e51b2dc1291e6247
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106051"
 ---
 # <a name="display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs"></a>在饼图外显示数据点标签（报表生成器和 SSRS）
@@ -41,7 +41,7 @@ ms.locfileid: "66106051"
   
 5.  将 **PieLabelStyle** 属性设置为 **Outside**。  
   
-6.  设置`PieLineColor`属性设置为**黑色**。 PieLineColor 属性可为每个数据点标签定义标注线条。  
+6.  将`PieLineColor`属性设置为**黑色**。 PieLineColor 属性可为每个数据点标签定义标注线条。  
   
 ### <a name="to-prevent-overlapping-labels-displayed-outside-a-pie-chart"></a>防止在饼图外显示的标签重叠  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66106051"
   
 4.  如果希望图表为标签留出更多空间但仍显示二维效果，则将“旋转”  和“倾角”  属性设置为“0”  。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [饼图（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   
  [收集饼图上的小切片（报表生成器和 SSRS）](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
  [在饼图上显示百分比值（报表生成器和 SSRS）](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)  

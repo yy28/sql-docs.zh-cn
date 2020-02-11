@@ -18,19 +18,20 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dd8ae8bb1080d92bb6a4ad1ba982f1dffc6d51f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093636"
 ---
 # <a name="other-replication-upgrade-issues"></a>其他复制升级问题
   本主题涵盖了许多未由升级顾问报告的升级问题。  
   
 ## <a name="versions-supported"></a>支持的版本  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本升级复制的数据库。 在升级某个节点时，不必停止其他节点的活动。 请务必遵守有关拓扑中支持哪些版本的规则。  
+ 
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本升级复制的数据库。 在升级某个节点时，不必停止其他节点的活动。 请务必遵守有关拓扑中支持哪些版本的规则。  
   
- 当你复制之间或不同版本间[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，通常限于正在使用的最早版本的功能。  
+ 当在不同版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之间进行复制时，通常仅限于所使用的最早版本的功能。  
   
 > [!NOTE]  
 >  由于 64 位和 32 位环境中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 磁盘存储格式相同，因此复制拓扑可以将运行于 32 位环境中的服务器实例与运行于 64 位环境中的服务器实例结合起来。  
@@ -49,11 +50,11 @@ ms.locfileid: "66093636"
   
 -   所有 ActiveX 控件都标记为对脚本编写和初始化不安全。  
   
--   已经删除了快照 ActiveX 控件。 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或者使用复制存储过程以编程方式创建和管理快照。 有关详细信息，请参阅主题"如何：创建并应用初始快照 ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])"和"如何：创建初始快照 （复制 TRANSACT-SQL 编程）"中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。  
+-   已经删除了快照 ActiveX 控件。 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或者使用复制存储过程以编程方式创建和管理快照。 有关详细信息，请参阅 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 联机丛书中的“如何创建和应用初始快照 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])”和“如何创建初始快照（复制 Transact-SQL 编程）”主题。  
   
 -   分发 ActiveX 控件和合并 ActiveX 控件已废止。 对于使用复制管理对象 (RMO) 的托管代码应用程序提供了类似功能。 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“同步订阅（RMO 编程）”。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [复制升级问题](../../../2014/sql-server/install/replication-upgrade-issues.md)  
   
   

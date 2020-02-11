@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 59fc4a9e46e0dbe0f88047a2804330ba1c6ba18d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106083"
 ---
 # <a name="define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs"></a>使用调色板定义图表上的颜色（报表生成器和 SSRS）
@@ -42,7 +42,7 @@ ms.locfileid: "66106083"
   
 2.  在设计图面上，单击该图表。 图表对象的属性将显示在“属性”窗格中。  
   
-3.  在中**图表**部分中，对于`Palette`属性中，选择**自定义**。  
+3.  在 "**图表**" 部分，为`Palette` "属性" 选择 "**自定义**"。  
   
 4.  在 CustomPaletteColors 属性中，单击“编辑集合”(…) 按钮  。 将打开 **“ReportColorExpression 集合编辑器”** 。  
   
@@ -52,11 +52,11 @@ ms.locfileid: "66106083"
   
 6.  单击 **“添加”** 以向调色板添加更多颜色。  
   
-7.  完成后，单击 **“确定”** 。  
+7.  完成后，单击“确定”。   
   
  如果使用自定义调色板，可更改颜色顺序以调整图表中不同序列的颜色。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [设置图表上序列颜色的格式（报表生成器和 SSRS）](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   
  [对多个形状图指定一致的颜色（报表生成器和 SSRS）](shape-charts-report-builder-and-ssrs.md)  

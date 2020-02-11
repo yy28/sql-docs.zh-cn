@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: af1eccd0349d0ed204d595d32fdc35c76c3b2efa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104741"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>表（报表生成器和 SSRS）
@@ -23,14 +23,15 @@ ms.locfileid: "66104741"
 > [!NOTE]  
 >  您可以将表作为报表部件与报表分开发布。  [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- 若要快速开始使用表，请参阅[教程：生成基本表报表（报表生成器）](../tutorial-creating-a-basic-table-report-report-builder.md)或[生成基本表报表（SSRS 教程）](../create-a-basic-table-report-ssrs-tutorial.md)。  
+ 若要快速学会使用表，请参阅[教程：创建基本表报表（报表生成器）](../tutorial-creating-a-basic-table-report-report-builder.md)或[创建基本表报表（SSRS 教程）](../create-a-basic-table-report-ssrs-tutorial.md)。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 示例报表包括若干使用表的报表。 您可以通过以下方式了解有关表的信息：通过在报表生成器或报表设计器中浏览示例报表的报表定义，或通过在报表生成器或报表设计器中预览所呈现的报表。 有关下载示例报表的详细信息，请参阅 [(SSRS) Reporting Services 示例](https://go.microsoft.com/fwlink/?LinkID=198283)。  
+ 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 示例报表包括若干使用表的报表。 您可以通过以下方式了解有关表的信息：通过在报表生成器或报表设计器中浏览示例报表的报表定义，或通过在报表生成器或报表设计器中预览所呈现的报表。 有关下载示例报表的详细信息，请参阅 [(SSRS) Reporting Services 示例](https://go.microsoft.com/fwlink/?LinkID=198283)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="AddingTable"></a> 添加表以显示详细信息数据  
+##  <a name="AddingTable"></a>添加表以显示详细信息数据  
  从功能区上的“插入”选项卡向设计图面添加一个表。 您可以通过使用表或矩阵向导添加表（包括创建数据源连接和数据集以及配置表），或者基于您手动配置的表模板添加表。  
   
 > [!NOTE]  
@@ -40,63 +41,63 @@ ms.locfileid: "66104741"
   
  默认情况下，新表具有固定数量的列以及一个标签的表头行和一个详细信息数据的数据行。 下图显示了添加到设计图面的新表。  
   
- ![表模板](../media/rs-tabletemplatenew.gif "Table template")  
+ ![表模板](../media/rs-tabletemplatenew.gif "表模板")  
   
  选择表时，行控点和列控点将显示在表的外部而且方括号会显示在单元格内。 行控点显示的图形有助于了解每行的用途。 方括号可指明所选单元格的组成员身份。 下图显示了默认表中的所选空单元格。  
   
- ![设计图面上的表模板，选中](../media/rs-tabletemplatenewselected.gif "Table template on design surface, selected")  
+ ![设计图面上的表模板，选中](../media/rs-tabletemplatenewselected.gif "设计图面上的表模板，选中")  
   
- 数据行的行句柄显示详细信息符号（![包含 3 条用于详细信息行的平行线的行句柄](../media/rs-icontablix-detailsrow.gif "Row handle with 3 parallel lines for details row")）。 若要显示这些行中的数据，可将字段从“报表数据”窗格拖到表头行或详细信息行中的表单元格。 两行会同时填充。 若要添加其他列，请将字段拖到表中，直到看到插入点。 在将数据集字段添加到表之后，可以更改日期和货币的默认格式以控制它们在报表中的显示方式。 下图展示了包含下面这些字段的表数据区域：“Date”、“Order”、“Product”、“Qty”和“Line Total”。  
+ 数据行的行控点显示详细信息符号（![包含3个平行线的行控点，详细信息行](../media/rs-icontablix-detailsrow.gif "详细信息行的 3 条平行线的行控点")）。 若要显示这些行中的数据，可将字段从“报表数据”窗格拖到表头行或详细信息行中的表单元格。 两行会同时填充。 若要添加其他列，请将字段拖到表中，直到看到插入点。 在将数据集字段添加到表之后，可以更改日期和货币的默认格式以控制它们在报表中的显示方式。 下面的关系图显示了具有以下字段的表数据区域：Date、Order、Product、Qty 和 Line Total。  
   
- ![设计，具有用粗体显示的列标题的表](../media/rs-basictabledetailsformatteddesign.gif "Design, Table with column headers in Bold")  
+ ![带有粗体显示的列标题的表的设计](../media/rs-basictabledetailsformatteddesign.gif "带有粗体显示的列标题的表的设计")  
   
  通过在预览中查看报表来检查您的设计。 根据需要，表可在页面内向下扩展。 针对数据集查询结果集中的每一行，每个标签行和详细信息行都显示一次。 订单上售出的每个产品都会在单独一行中列出，后跟项的数量和行总计，如下图所示：  
   
- ![具有以粗体显示的列标题的表的预览](../../tutorials/media/rs-basictabledetailsformattedpreview.gif "Preview of table with bold column headers")  
+ ![带有以粗体显示的列标题的表预览](../../tutorials/media/rs-basictabledetailsformattedpreview.gif "带有以粗体显示的列标题的表预览")  
   
  您开始使用的表是基于 Tablix 数据区域的模板。 通过添加基础 Tablix 数据区域支持的功能，可以增强表的设计。 有关详细信息，请参阅 [控制 Tablix 数据区域在报表页上的显示（报表生成器和 SSRS）](controlling-the-tablix-data-region-display-on-a-report-page.md)。 通过添加行组、列组以及添加或删除详细信息组，还可以继续开发表。 有关详细信息，请参阅[利用 Tablix 数据区域的灵活性（报表生成器和 SSRS）](exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)。  
   
 ### <a name="adding-totals-for-detail-data"></a>为详细信息数据添加总计  
  若要添加总计，请选择具有数字数据的单元格，然后使用快捷菜单自动为数值字段的详细信息数据添加标签和总计。 还可以手动指定其他标签和总计。 下图显示了包括自动和手动指定的总计的典型总计行：  
   
- ![添加到表的总计行](../media/rs-basictabledetailstotaldesign.gif "Total row added to table")  
+ ![添加至表中的总计行](../media/rs-basictabledetailstotaldesign.gif "添加至表中的总计行")  
   
  在预览中，报表将针对数据集查询结果集中的每一行显示一次表头行和详细信息行，并且它会显示总计行。 下图显示了包括总计行的表的最后几行。  
   
- ![表和总计行预览](../media/rs-basictabledetailstotalpreview.gif "Preview with table and total row")  
+ ![表和总计行预览](../media/rs-basictabledetailstotalpreview.gif "表和总计行预览")  
   
  有关详细信息，请参阅[向组或 Tablix 数据区域添加总计（报表生成器和 SSRS）](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)。  
   
-##  <a name="AddingRowGroups"></a> 将行组添加到表  
+##  <a name="AddingRowGroups"></a>向表中添加行组  
  正如可以将字段从“报表数据”窗格拖到单元格以显示详细信息数据一样，可以将字段拖到“分组”窗格以添加组。 对于表，可将字段拖到“行组”窗格。 在添加组后，表会自动将单元格添加到其中要显示组值的行组区域的新列中。 有关区域的详细信息，请参阅 [Tablix 数据区域（报表生成器和 SSRS）](tablix-data-region-areas-report-builder-and-ssrs.md)。  
   
  下图显示了“设计”视图中具有两个嵌套行组的表。 这两个行组是通过以下方法创建的：依次将 Order 字段和 Date 字段拖到“行组”窗格并将每个组作为现有组的父组插入。 该图显示了基于日期的父组和基于订单号的子组，以及默认情况下定义的详细信息组。  
   
- ![按照“日期”和“订单”分组的表](../media/rs-basictablegroupsdesign.gif "Table grouped by Date and Order")  
+ ![按照“日期”和“订单”分组的表](../media/rs-basictablegroupsdesign.gif "按照“日期”和“订单”分组的表")  
   
  在预览中，报表会显示首先按日期、然后按订单分组的订单数据，如下图所示。  
   
- ![先按日期后按订单分组的表](../../tutorials/media/rs-basictablegroupspreview.gif "Table grouped by date and then order")  
+ ![先按日期后按订单分组的表](../../tutorials/media/rs-basictablegroupspreview.gif "先按日期后按订单分组的表")  
   
  另一种显示分组数据的方法是：缩进组层次结构以显示组的嵌套关系，而非将每个值都显示在其自己的列中。 此格式设置样式称为递阶报表。 有关如何将组信息格式设置为递阶报表的详细信息，请参阅[创建递阶报表（报表生成器和 SSRS）](create-a-stepped-report-report-builder-and-ssrs.md)。  
   
 ### <a name="adding-totals-to-row-groups"></a>向行组添加总计  
  若要显示某组的总计，可以使用与上下文相关的 **“添加总计”** 命令。 对于某一行组，“添加总计”命令会在该组之外添加一行，以便它相对于该组仅重复一次。 对于嵌套组，子组的总计行位于子组的外部，但在父组的内部。 在这种情况下，为将子组的总计行与详细信息行区分开来，设置子组的总计行的背景色是非常有用的。 也可以使用不同背景色来区分表格的表头行和表尾行。 下图显示了具有为基于订单号的组添加了总计行的表。  
   
- ![设计视图，向组和表中添加总计行](../media/rs-basictablegroupstotalscolordesign.gif "Design view, add total rows to group and table")  
+ ![设计视图，向组和表中添加总计行](../media/rs-basictablegroupstotalscolordesign.gif "设计视图，向组和表中添加总计行")  
   
  查看报表时，显示订单小计的行会针对每个订单号重复一次。 表格表尾显示了所有日期的总计。 在下图中，最后几行显示了最后三个详细信息行、最后一个订单号 SO71952 的小计以及表中的所有日期的总计。  
   
- ![预览，带有组总计、末行的表](../media/rs-basictablegroupstotalscolorpreviewbottom.gif "Preview, Table with Group Totals, last rows")  
+ ![带有组总计、末行的表预览](../media/rs-basictablegroupstotalscolorpreviewbottom.gif "带有组总计、末行的表预览")  
   
  有关详细信息，请参阅[向组或 Tablix 数据区域添加总计（报表生成器和 SSRS）](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)。  
   
-##  <a name="RemovingHidingRows"></a> 删除或隐藏详细信息行  
+##  <a name="RemovingHidingRows"></a>删除或隐藏详细信息行  
  在预览了报表中的表后，您可能会决定删除现有详细信息行。 或者可能决定按默认情况隐藏详细信息行，并允许用户在查看更多或更少详细信息之间切换，就像在明细报表中一样。  
   
  若要从表中删除详细信息行，请使用“分组”窗格。 选择详细信息组，并使用快捷菜单删除显示详细信息数据的组和行。 下图显示了按日期和订单号分组的表的设计视图，但没有详细信息行。 没有向该表添加任何总计行。  
   
- ![设计视图，带有两个组而无详细信息的表](../media/rs-basictablegroupsdrilldownnodetailsdesign.gif "Design view, table with two groups, no details")  
+ ![设计视图，带有两个组而无详细信息的表](../media/rs-basictablegroupsdrilldownnodetailsdesign.gif "设计视图，带有两个组而无详细信息的表")  
   
  在删除详细信息行之后，值的作用域为行组。 详细信息数据将不再显示。  
   
@@ -105,17 +106,17 @@ ms.locfileid: "66104741"
   
  下图在预览中显示此报表。  
   
- ![预览，带有组但无详细信息行的表](../media/rs-basictablegroupsnodetailspreview.gif "Preview, table with groups but no detail rows")  
+ ![预览，带有组而无详细信息行的表](../media/rs-basictablegroupsnodetailspreview.gif "预览，带有组而无详细信息行的表")  
   
  若要在表中添加或删除行，请参阅[插入或删除行（报表生成器和 SSRS）](insert-or-delete-a-row-report-builder-and-ssrs.md)。  
   
  最初查看报表时，还可以隐藏详细信息行。 为此，可以创建明细报表，其中将仅显示父组数据。 对于每个内部组（包括详细信息组），可为包含组的分组单元格添加可见性切换功能。 例如，对于详细信息组，可为显示订单号组值的文本框添加切换功能。 对于订单号组，可为显示日期组值的文本框添加切换功能。 下图显示了 2001 年 9 月 1 日的行，在展开状态下显示了前几个订单。  
   
- ![预览，带有展开的明细节点的表](../media/rs-basictablegroupsdrilldownpreview.gif "Preview, table with expanded drilldown node")  
+ ![预览，带有展开的明细节点的表](../media/rs-basictablegroupsdrilldownpreview.gif "预览，带有展开的明细节点的表")  
   
  有关详细信息，请参阅 [为项添加展开或折叠操作（报表生成器和 SSRS）](add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [对数据进行筛选、分组和排序（报表生成器和 SSRS）](filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [表达式（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)   
  [表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)   

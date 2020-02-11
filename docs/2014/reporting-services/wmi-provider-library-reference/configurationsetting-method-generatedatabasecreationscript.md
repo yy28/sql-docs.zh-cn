@@ -1,5 +1,5 @@
 ---
-title: GenerateDatabaseCreationScript 方法 (WMI MSReportServer_ConfigurationSetting) |Microsoft Docs
+title: GenerateDatabaseCreationScript 方法（WMI MSReportServer_ConfigurationSetting） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cf33e467e54fda5c29d81e3437730f0ce9547cad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098510"
 ---
-# <a name="generatedatabasecreationscript-method-wmi-msreportserverconfigurationsetting"></a>GenerateDatabaseCreationScript 方法 (WMI MSReportServer_ConfigurationSetting)
+# <a name="generatedatabasecreationscript-method-wmi-msreportserver_configurationsetting"></a>GenerateDatabaseCreationScript 方法 (WMI MSReportServer_ConfigurationSetting)
   生成可用于创建报表服务器数据库的 SQL 脚本。  
   
 ## <a name="syntax"></a>语法  
@@ -41,8 +41,8 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
     Boolean IsSharePointMode, out string Script, out Int32 HRESULT);  
 ```  
   
-## <a name="parameters"></a>Parameters  
- *Databasename*  
+## <a name="parameters"></a>parameters  
+ *Database*  
  包含要创建的报表服务器数据库名称的字符串。  
   
  *Lcid*  
@@ -52,7 +52,7 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
  指示是以本机模式还是以 SharePoint 模式创建数据库。  
   
 > [!IMPORTANT]  
->  从开始[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]， *IsSharePointMode* = `True`不支持，因为在 SharePoint 模式下，[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]为 SharePoint 共享服务，且不受 WMI 提供程序。 您应始终将此参数设置为 `False`。  
+>  从开始[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，不支持*IsSharePointMode* = `True` ，因为在 sharepoint 模式下[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，是 sharepoint 共享服务，且不受 WMI 提供程序的控制。 您应始终将此参数设置为 `False`。  
   
  *脚本*  
  [out] 包含所生成的 SQL 脚本的字符串。  
@@ -66,7 +66,7 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
 ## <a name="remarks"></a>备注  
  此方法将生成一个 SQL 脚本，创建适用于当前所连接的报表服务器版本的报表服务器数据库。  
   
- 在 DatabaseName  参数中提供的值必须符合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库命名约定。  
+ 在 DatabaseName** 参数中提供的值必须符合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库命名约定。  
   
  生成脚本时，该方法不会检查该数据库是否存在。  
   
@@ -75,9 +75,9 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
  生成的脚本支持 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 和 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]。  
   
 ## <a name="requirements"></a>要求  
- **命名空间:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](msreportserver-configurationsetting-members.md)  
   
   

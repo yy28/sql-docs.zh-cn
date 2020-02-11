@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 40c623130b02c082b099938823ccc12950333982
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105555"
 ---
 # <a name="multiple-series-on-a-chart-report-builder-and-ssrs"></a>图表中的多个序列（报表生成器和 SSRS）
@@ -29,14 +29,14 @@ ms.locfileid: "66105555"
  堆积图通常用于在一个图表区中显示多个序列。 当尝试显示的数据紧密相关时，请考虑使用堆积图。 在一个堆积图中显示的序列最好不超过四个。 如果要比较每个序列在总体中所占的比例，请使用百分比堆积面积图、条形图或柱形图。 这些图表可计算每个序列在相应类别中所占的相对百分比。 有关详细信息，请参阅[分区图（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)、[条形图（报表生成器和 SSRS）](bar-charts-report-builder-and-ssrs.md)和[柱形图（报表生成器和 SSRS）](column-charts-report-builder-and-ssrs.md)。  
   
 ## <a name="using-the-secondary-axis"></a>使用辅助轴  
- 将新序列添加到图表时，将使用主 x 和 y 轴来绘制该序列。 如果要比较的值采用不同的测量单位，请考虑使用“辅助轴”  ，以便可以在不同的轴上绘制两个序列。 当比较具有不同测量单位的值时，辅助轴将非常有用。 辅助轴是在主轴的另一侧绘制的。 图表仅支持主轴和辅助轴。 辅助轴的属性与主轴相同。 有关详细信息，请参阅[在辅助轴上绘制数据（报表生成器和 SSRS）](plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)。  
+ 将新序列添加到图表时，将使用主 x 和 y 轴来绘制该序列。 如果要比较的值采用不同的测量单位，请考虑使用“辅助轴” ** ，以便可以在不同的轴上绘制两个序列。 当比较具有不同测量单位的值时，辅助轴将非常有用。 辅助轴是在主轴的另一侧绘制的。 图表仅支持主轴和辅助轴。 辅助轴的属性与主轴相同。 有关详细信息，请参阅[在辅助轴上绘制数据（报表生成器和 SSRS）](plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)。  
   
  如果要显示具有不同数据范围的多个序列，请考虑将这些序列放置到不同的图表区。  
   
 ## <a name="using-chart-areas"></a>使用图表区  
  图表为包括外部边框、图表标题和图例的顶级容器。 默认情况下，图表包含一个默认图表区。 图表区在图表图面上不可见，但您可将图表区视为只包含轴标签、轴标题和一个或多个序列的绘图区的容器。 下图说明了单个图表中的图表区的概念。  
   
- ![显示图表区域的图表](../media/chartareasdiagram.gif "Shows a diagram of a chart area")  
+ ![显示图表区关系图](../media/chartareasdiagram.gif "显示图表区关系图")  
   
  使用 **“图表区属性”** 对话框，可以指定图表区包含的所有序列的二维和三维方向，对齐同一图表中的多个图表区，并设置绘图区颜色的格式。 在仅包含一个默认图表区的图表中定义新的图表区时，该图表区的可用空间水平划分为两部分，新图表区位于第一个图表区的下方。  
   
@@ -53,9 +53,9 @@ ms.locfileid: "66105555"
 ## <a name="using-range-charts"></a>使用范围图  
  范围图中的每个数据点都有两个值。 如果图表包含两个共享同一类别 (x) 轴的序列，则可以使用范围图显示这两个序列之间的差异。 范围图最适合显示呈高低或上下变化的信息。 例如，如果第一个序列包含一月中每天的最高销售额，而第二个序列包含一月中每天的最低销售额，则可以使用范围图显示每天的最高销售额和最低销售额之间的差异。 有关详细信息，请参阅[全距图（报表生成器和 SSRS）](range-charts-report-builder-and-ssrs.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   
- [在图表中显示包含多个数据区域的序列（报表生成器和 SSRS）](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)   
+ [在图表上显示具有多个数据区域的序列 &#40;报表生成器和 SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)   
  [图表类型（报表生成器和 SSRS）](chart-types-report-builder-and-ssrs.md)  
   
   

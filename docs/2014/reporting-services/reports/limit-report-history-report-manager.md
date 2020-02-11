@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fd493fae67e3aa47c5c53cd3ad12d018b0b72f70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102643"
 ---
 # <a name="limit-report-history-report-manager"></a>限制报表历史记录（报表管理器）
@@ -34,19 +34,19 @@ ms.locfileid: "66102643"
   
 2.  如果希望无限制地保留所有报表历史记录，请选择 **“不限制报表历史记录中保留的快照数”** 。 否则，请选择 **“限制报表历史记录的副本数”** ，以指定可以为任何给定报表保留的最多快照数。  
   
-3.  单击 **“应用”** 。  
+3.  单击“应用”  。  
   
 ### <a name="to-configure-report-history-for-a-specific-report"></a>为特定的报表配置报表历史记录  
   
 1.  在报表管理器中，导航到要配置历史记录的报表，再单击该报表将其打开。  
   
-2.  单击 **“属性”** 选项卡。  
+2.  单击“属性”  选项卡。  
   
 3.  单击 **“历史记录”** 选项卡。  
   
-4.  为您的报表选择相应选项，再单击 **“应用”** 。 有关每个选项的详细信息，请参阅[“快照选项”属性页（报表管理器）](../snapshot-options-properties-page-report-manager.md)。  
+4.  为您的报表选择相应选项，再单击 **“应用”**。 有关每个选项的详细信息，请参阅[“快照选项”属性页（报表管理器）](../snapshot-options-properties-page-report-manager.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [向报表历史记录添加快照（报表管理器）](../report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)  
   

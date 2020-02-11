@@ -1,5 +1,5 @@
 ---
-title: sp_help_fulltext_tables_cursor (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_fulltext_tables_cursor （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,21 +19,21 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8e4218f6a105f81997c37202421feb689cd3a074
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68054999"
 ---
-# <a name="sphelpfulltexttablescursor-transact-sql"></a>sp_help_fulltext_tables_cursor (Transact-SQL)
+# <a name="sp_help_fulltext_tables_cursor-transact-sql"></a>sp_help_fulltext_tables_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   使用游标返回为全文索引注册的表的列表。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用新**sys.fulltext_indexes**目录视图。 有关详细信息，请参阅[sys.fulltext_indexes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]改为使用新的**sys.databases. fulltext_indexes**目录视图。 有关详细信息，请参阅[sys.databases&#41;fulltext_indexes &#40;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,18 +45,18 @@ sp_help_fulltext_tables_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @cursor_return = ] @cursor_variable OUTPUT` 类型的输出变量**游标**。 游标是只读的可滚动动态游标。  
+`[ @cursor_return = ] @cursor_variable OUTPUT`类型为**cursor**的输出变量。 游标是只读的可滚动动态游标。  
   
-`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` 是全文目录的名称。 *fulltext_catalog_name*是**sysname**，默认值为 NULL。 如果*fulltext_catalog_name*省略或为 NULL，则返回所有与数据库关联的全文索引的表。 如果*fulltext_catalog_name*指定，但*table_name*省略或为 NULL，与此目录相关联的每个全文索引表检索全文索引信息。 如果这两个*fulltext_catalog_name*并*table_name*指定，则返回的行，如果*table_name*关联*fulltext_catalog_name*;否则，将引发错误。  
+`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'`全文目录的名称。 *fulltext_catalog_name*的默认值为**sysname**，默认值为 NULL。 如果省略*fulltext_catalog_name*或为 NULL，则返回与数据库关联的所有全文索引表。 如果指定了*fulltext_catalog_name* ，但省略了*TABLE_NAME*或为 NULL，则将为与此目录关联的每个全文索引表检索全文索引信息。 如果同时指定*fulltext_catalog_name*和*table_name* ，则在*table_name*与*fulltext_catalog_name*关联时返回一行;否则，将引发错误。  
   
-`[ @table_name = ] 'table_name'` 是为其请求全文元数据的一部分或两个表名称。 *table_name*是**nvarchar(517)** ，默认值为 NULL。 如果只有*table_name*指定，则仅与相关行*table_name*返回。  
+`[ @table_name = ] 'table_name'`请求全文元数据的一个或两个部分组成的表名。 *table_name*为**nvarchar （517）**，默认值为 NULL。 如果仅指定*table_name* ，则仅返回与*table_name*相关的行。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**TABLE_OWNER**|**sysname**|表所有者。 这是创建该表的数据库用户的名称。|  
 |**TABLE_NAME**|**sysname**|表名。|  
@@ -66,7 +66,7 @@ sp_help_fulltext_tables_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 |**FULLTEXT_CATALOG_NAME**|**sysname**|全文索引数据所在的全文目录。|  
   
 ## <a name="permissions"></a>权限  
- 执行权限默认授予的成员**公共**角色。  
+ Execute 权限默认授予**public**角色的成员。  
   
 ## <a name="examples"></a>示例  
  以下示例返回与 `Cat_Desc` 全文目录相关联的全文索引表的名称。  
@@ -86,11 +86,11 @@ DEALLOCATE @mycursor;
 GO   
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [INDEXPROPERTY (Transact-SQL)](../../t-sql/functions/indexproperty-transact-sql.md)   
- [OBJECTPROPERTY (Transact-SQL)](../../t-sql/functions/objectproperty-transact-sql.md)   
- [sp_fulltext_table &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-table-transact-sql.md)   
- [sp_help_fulltext_tables &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
+ [OBJECTPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
+ [sp_fulltext_table &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-table-transact-sql.md)   
+ [sp_help_fulltext_tables &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

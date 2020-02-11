@@ -15,14 +15,14 @@ ms.assetid: 886bc9ed-39d4-43d2-82ff-aebc35b14d39
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b783c2fc6766f0e2d2685724169894160c15ffc9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68077190"
 ---
 # <a name="allocating-and-freeing-buffers"></a>分配和释放缓冲区
-所有缓冲区分配和释放应用程序。 如果缓冲区不会被推迟，它需要仅存在对函数调用的持续时间。 例如， **SQLGetInfo**返回通过指向的缓冲区中的特定选项与关联的值*InfoValuePtr*参数。 可以在调用后立即释放此缓冲区**SQLGetInfo**，下面的代码示例中所示：  
+所有缓冲区都由应用程序分配和释放。 如果缓冲区不是延迟的，则只需在调用函数期间存在。 例如， **SQLGetInfo**返回与*InfoValuePtr*参数指向的缓冲区中特定选项相关联的值。 此缓冲区可以在调用**SQLGetInfo**之后立即释放，如下面的代码示例所示：  
   
 ```  
 SQLSMALLINT   InfoValueLen;  
@@ -34,7 +34,7 @@ SQLGetInfo(hdbc, SQL_DBMS_NAME, (SQLPOINTER)InfoValuePtr, 50,
 free(InfoValuePtr);                        // OK to free InfoValuePtr.  
 ```  
   
- 因为延迟的缓冲区是在一个函数中指定，在另一个中使用，它是应用程序编程错误释放延迟的缓冲区，而该驱动程序仍需要它存在。 例如，地址为\* *ValuePtr*缓冲区传递给**SQLBindCol**以更高版本供**SQLFetch**。 不能释放此缓冲区，直到列未绑定，如通过调用**SQLBindCol**或**SQLFreeStmt**如下面的代码示例中所示：  
+ 由于延迟缓冲区是在一个函数中指定并在另一个函数中使用的，因此，当驱动程序仍要求它存在时，它是一个应用程序编程错误，用于释放延迟的缓冲区。 例如， \**将 valueptr*缓冲区的地址将传递到**SQLBindCol** ，以便以后由**SQLFetch**使用。 在取消绑定列之前，无法释放此缓冲区，例如，使用对**SQLBindCol**或**SQLFreeStmt**的调用，如下面的代码示例所示：  
   
 ```  
 SQLRETURN    rc;  
@@ -59,7 +59,7 @@ SQLFreeStmt(hstmt, SQL_UNBIND);
 free(ValuePtr);  
 ```  
   
- 此类错误可轻松地通过声明一个函数; 在本地缓冲区在应用程序退出该函数时，将释放缓冲区。 例如，下面的代码会导致驱动程序中的未定义和可能出现行为：  
+ 此类错误可以通过在函数中本地声明缓冲区来实现;当应用程序离开函数时，将释放缓冲区。 例如，以下代码将导致驱动程序中出现未定义的行为，并且可能会出现严重行为：  
   
 ```  
 SQLRETURN   rc;  

@@ -1,5 +1,5 @@
 ---
-title: 修改使用已废弃的全文搜索的属性的存储的过程 |Microsoft Docs
+title: 修改使用了不再使用的全文搜索属性的存储过程 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5204b27fb4745f8005a328dc62503f7db418387d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093853"
 ---
 # <a name="modify-stored-procedures-that-use-discontinued-full-text-search-properties"></a>修改使用已停用全文搜索属性的存储过程
@@ -26,7 +26,7 @@ ms.locfileid: "66093853"
 ## <a name="component"></a>组件  
  全文搜索  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>说明  
  以下与全文搜索相关的属性和设置已删除。  
   
 -   **DataTimeout**  
@@ -46,7 +46,7 @@ ms.locfileid: "66093853"
 ## <a name="corrective-action"></a>纠正措施  
  修改存储过程以删除这些属性。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用升级顾问](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

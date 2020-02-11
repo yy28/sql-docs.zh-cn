@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dac2694101678f8728de4a4bcdd3db416ad4c17f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104917"
 ---
 # <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>对数据区域中的数据排序（报表生成器和 SSRS）
@@ -41,7 +41,7 @@ ms.locfileid: "66104917"
   
 3.  对于每个排序表达式，请按照下列步骤进行操作：  
   
-    1.  单击 **“添加”** 。  
+    1.  单击“添加”  。  
   
     2.  键入或选择按其对数据进行排序的表达式。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66104917"
   
 4.  对于每个排序表达式，请按照下列步骤进行操作：  
   
-    1.  单击 **“添加”** 。  
+    1.  单击“添加”  。  
   
     2.  键入或选择按其对数据进行排序的表达式。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "66104917"
   
 3.  对于每个排序表达式，请按照下列步骤进行操作：  
   
-    1.  单击 **“添加”** 。  
+    1.  单击“添加”  。  
   
     2.  选择与分组字段匹配的表达式。 通过单击 **“分组”** ，可以验证分组字段的表达式。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66104917"
   
 3.  对于每个排序表达式，请按照下列步骤进行操作：  
   
-    1.  单击 **“添加”** 。  
+    1.  单击“添加”  。  
   
     2.  选择与数据字段匹配的表达式。 在大多数情况下，此为聚合值，例如 `=Sum(Fields!Quantity.Value)`。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "66104917"
   
 7.  对于每个排序表达式，请按照下列步骤进行操作：  
   
-    1.  单击 **“添加”** 。  
+    1.  单击“添加”  。  
   
     2.  选择与分组字段匹配的表达式。 通过单击 **“分组”** ，可以验证分组字段的表达式。  
   
@@ -125,8 +125,8 @@ ms.locfileid: "66104917"
   
  有关如何在仪表中对数据进行分组的详细信息，请参阅[仪表（报表生成器和 SSRS）](gauges-report-builder-and-ssrs.md)。  
   
-## <a name="see-also"></a>请参阅  
- [用于对话框、窗格和向导的报表生成器帮助](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+## <a name="see-also"></a>另请参阅  
+ [报表生成器对话框、窗格和向导的帮助](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   
  [设置图表上轴标签的格式（报表生成器和 SSRS）](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [对多个形状图指定一致的颜色（报表生成器和 SSRS）](shape-charts-report-builder-and-ssrs.md)  

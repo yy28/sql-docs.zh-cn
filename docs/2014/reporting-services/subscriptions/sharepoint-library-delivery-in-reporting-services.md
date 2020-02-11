@@ -15,16 +15,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93a62ec076b9dc61cd01d18796f04bbaa04eb93b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100695"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Reporting Services 中的 SharePoint 库传递
   配置为 SharePoint 集成模式的报表服务器包含可用于向 SharePoint 库中发送报表的传递扩展插件。  
   
- 若要使用 SharePoint 传递扩展插件，必须在 SharePoint 站点上的应用程序页中创建一个订阅，然后选择 **“SharePoint 文档库”** 作为传递类型。 不能为在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或报表管理器中创建的订阅使用 SharePoint 传递扩展插件。  
+ 若要使用 SharePoint 传递扩展插件，必须在 SharePoint 站点上的应用程序页中创建一个订阅，然后选择 **“SharePoint 文档库”** 作为传递类型。 不能将 SharePoint 传递扩展插件用于在或报表管理器中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]创建的订阅。  
   
 > [!NOTE]  
 >  如果报表服务器在本机模式下运行，则传递扩展插件不支持将报表传递到 SharePoint 站点。 如果尝试通过编程方式为本机模式报表服务器调用传递扩展插件，则服务器将返回 `rsDeliveryExtensionNotFound` 错误，并在报表服务器日志文件中记录 `rsOperationNotSupportedSharePointMode` 错误。  
@@ -51,9 +51,9 @@ ms.locfileid: "66100695"
   
 1.  转到从中访问报表的 SharePoint 站点。  
   
-2.  选择报表，单击它旁边的向下箭头，然后选择 **“管理订阅”** 。  
+2.  选择报表，单击它旁边的向下箭头，然后选择 **“管理订阅”**。  
   
-3.  单击 **“创建”** 、 **“编辑”** 或 **“删除”** 。  
+3.  单击 **“创建”**、 **“编辑”** 或 **“删除”**。  
   
  有关“管理订阅”列表的状态消息中显示有关订阅的当前信息，包括订阅是否成功以及上次运行订阅的日期和时间。  
   
@@ -68,13 +68,13 @@ ms.locfileid: "66100695"
  请注意，不能指定仅供内部使用的输出格式，也不能指定在 SharePoint 集成模式下运行的报表服务器不支持的输出格式。 这些格式包括 Null、RGDI 和 HTMLOWC。  
   
  文件名和扩展名  
- 指定要在目标库中为报表显示的文件名和扩展名。 如果不指定文件扩展名，则报表服务器会根据报表输出格式创建一个扩展名。 此值是必需的。 文件名中不得包含下列字符：: \ / * ? " \< > | # { } %  
+ 指定要在目标库中为报表显示的文件名和扩展名。 如果不指定文件扩展名，则报表服务器会根据报表输出格式创建一个扩展名。 此值是必需的。 文件名中不得包含下列字符：: \ / * ? " \< > |# { } %  
   
  标题  
  为目标库中的报表指定可选的 `Title` 属性。 该属性是库中存储的所有项的标准属性。 用户可以指定在 SharePoint 站点上查看库内容时是显示还是隐藏该属性。  
   
  路径  
- 指定一个指向 SharePoint 库的完全限定 URL，包括 SharePoint Web 应用程序和站点。 例如： <http://mySharePointWeb/MySite/MyDocLib>; 其中"<http://mySharePointWeb>"指示 Web 应用程序，"MySite"是 SharePoint 站点，并"MyDocLib"是可传递报表的位置的 SharePoint 库。  
+ 指定一个指向 SharePoint 库的完全限定 URL，包括 SharePoint Web 应用程序和站点。 例如： <http://mySharePointWeb/MySite/MyDocLib>;其中 "<http://mySharePointWeb>" 指示 Web 应用程序，"我的网站" 是 sharepoint 站点，而 "MyDocLib" 是要在其中传递报表的 sharepoint 库。  
   
  不能指定页、站点或列表。 目标容器必须是同一站点上或同一场中的库。  
   
@@ -82,9 +82,9 @@ ms.locfileid: "66100695"
  指定处理订阅时是否使用更新的版本替换具有相同名称和扩展名的文件。 如果希望使用更新的版本替换现有文件，请选择 **“覆盖”** 。 如果不希望订阅替换文件，请选择 **“无”** 。 在这种情况下，如果存在具有目标名称和扩展名的文件，则不进行传递。 如果希望通过在文件名末尾追加数字来添加同一文件的连续版本，请选择 **“Autoincrement”** 。  
   
  自动复制  
- 如果使用自动复制功能将一个文件的最新版本自动复制到多个位置，在启用“覆盖”的情况下则会复制此文件  。 如果您使用了**Autoincrement**或**None**，则传递将失败并`rsDeliveryError`将发生错误。  
+ 如果使用自动复制功能将一个文件的最新版本自动复制到多个位置，在启用“覆盖”的情况下则会复制此文件****。 如果使用了**自动增量**或**None**，则传递将失败， `rsDeliveryError`并且会发生错误。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建和管理 SharePoint 模式报表服务器的订阅](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
  [订阅和传递 (Reporting Services)](subscriptions-and-delivery-reporting-services.md)   
  [为报表数据源指定凭据和连接信息](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  

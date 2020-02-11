@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 99456151a71e74d0e85baec19cc42d8450c00ae4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106169"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>创建文档结构图（报表生成器和 SSRS）
@@ -48,7 +48,7 @@ ms.locfileid: "66106169"
     > [!NOTE]  
     >  若要选择 Tablix 数据区域，请在任意单元内单击以显示行控点和列控点，然后单击角控点。  
   
-2.  在属性窗格中，键入你想要在文档结构图中显示的文本`DocumentMapLabel`属性，或输入表达式的计算结果为标签。 例如，键入 **Sales Chart**。  
+2.  在 "属性" 窗格中，在`DocumentMapLabel`属性中键入要在文档结构图中显示的文本，或输入计算结果为标签的表达式。 例如，键入 **Sales Chart**。  
   
     > [!NOTE]  
     >  如果看不到“属性”窗格，请在 **“视图”** 选项卡的 **“显示/隐藏”** 组中选择 **“属性”** 。  
@@ -66,7 +66,7 @@ ms.locfileid: "66106169"
   
 2.  在“行组”窗格中，右键单击相应的组，然后单击 **“编辑组”** 。 将打开 **“Tablix 组属性”** 对话框的 **“常规”** 页。  
   
-3.  单击 **“高级”** 。  
+3.  单击“高级”。   
   
 4.  在 **“文档结构图”** 列表框中，键入或选择与组表达式匹配的表达式。  
   
@@ -112,13 +112,13 @@ ms.locfileid: "66106169"
 4.  将此 URL 粘贴到报表管理器中，然后按 Enter。 将运行报表，并隐藏文档结构图。  
   
 > [!NOTE]  
->  有关下载示例报表的详细信息，请参阅 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][报表生成器和报表设计器示例报表](https://go.microsoft.com/fwlink/?LinkId=198283)。  
+>  有关下载示例报表的详细信息，请[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]参阅[报表生成器和报表设计器示例报表](https://go.microsoft.com/fwlink/?LinkId=198283)。  
 >   
 >  有关详细信息，请参阅 SQL Server 联机丛书中 [Reporting Services 文档](https://go.microsoft.com/fwlink/?linkid=121312) 中的“URL 访问”。  
   
  
   
-## <a name="see-also"></a>请参阅  
- [查找和查看报表在报表管理器&#40;报表生成器和 SSRS&#41;](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>另请参阅  
+ [在报表管理器 &#40;报表生成器和 SSRS 中查找和查看报表&#41;](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
   
   

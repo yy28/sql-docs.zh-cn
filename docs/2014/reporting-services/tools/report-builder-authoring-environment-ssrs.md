@@ -1,5 +1,5 @@
 ---
-title: 报表生成器 (SSRS) |Microsoft Docs
+title: 报表生成器（SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b431dc6249cfabfb8e943b09304eeb7b10bc7e94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100119"
 ---
 # <a name="report-builder-ssrs"></a>报表生成器 (SSRS)
@@ -41,10 +41,10 @@ ms.locfileid: "66100119"
   
 -   将您的报表和相关项导出到 SharePoint 库、报表服务器或您的本地计算机。  
   
- 报表生成器和报表设计器共享许多功能。 有关报表生成器的详细信息，请参阅[报表生成器文档](https://go.microsoft.com/fwlink/?LinkId=154494)msdn.microsoft.com 上。  
+ 报表生成器和报表设计器共享许多功能。 有关报表生成器的详细信息，请参阅 msdn.microsoft.com 上的[报表生成器文档](https://go.microsoft.com/fwlink/?LinkId=154494)。  
   
-## <a name="see-also"></a>请参阅  
- [配置报表生成器访问权限](../report-server/configure-report-builder-access.md)   
+## <a name="see-also"></a>另请参阅  
+ [配置报表生成器访问](../report-server/configure-report-builder-access.md)   
  [Reporting Services 工具](reporting-services-tools.md)   
  [使用报表设计器设计报表 (SSRS)](design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
   

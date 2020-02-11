@@ -1,5 +1,5 @@
 ---
-title: 删除 UDT&#39;保留的日期和时间数据类型名为 s |Microsoft Docs
+title: 删除以保留日期和时间数据类型命名的 UDT&#39;Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,19 +14,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9692bcc5b3c7685e247730b0f203d273f585f1de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092990"
 ---
-# <a name="remove-udt39s-named-after-the-reserved-date-and-time-data-types"></a>删除 UDT&#39;s 名为保留的日期和时间数据类型
+# <a name="remove-udt39s-named-after-the-reserved-date-and-time-data-types"></a>删除以保留日期和时间数据类型命名的 UDT&#39;
   升级顾问检测到根据为 `date` 或 `time` 数据类型保留的术语命名的用户定义类型 (UDT)。  
   
 ## <a name="component"></a>组件  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>说明  
  用于数据类型的术语不应用作公共语言运行时 (CLR) 或别名 UDT 的名称。  
   
 ## <a name="corrective-action"></a>纠正措施  

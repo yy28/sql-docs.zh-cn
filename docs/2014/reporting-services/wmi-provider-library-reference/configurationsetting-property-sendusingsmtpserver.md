@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: db9ed11f79ccb21a7317b6c1b59c8dc012aed299
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097521"
 ---
-# <a name="sendusingsmtpserver-property-wmi-msreportserverconfigurationsetting"></a>SendUsingSMTPServer 属性 (WMI MSReportServer_ConfigurationSetting)
+# <a name="sendusingsmtpserver-property-wmi-msreportserver_configurationsetting"></a>SendUsingSMTPServer 属性 (WMI MSReportServer_ConfigurationSetting)
   指定报表服务器的电子邮件配置中的 `SendUsing` 元素是否设置为 `true`。  
   
 ## <a name="syntax"></a>语法  
@@ -45,9 +45,9 @@ public Boolean SendUsingSMTPServer;
  [MSReportServer_ConfigurationSetting 类](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>要求  
- **命名空间:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](msreportserver-configurationsetting-members.md)  
   
   

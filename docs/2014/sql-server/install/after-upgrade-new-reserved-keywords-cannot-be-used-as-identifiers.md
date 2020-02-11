@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d187fbe95a75091b0cbcf4bf09225c5f60a9af01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66096893"
 ---
 # <a name="after-upgrade-new-reserved-keywords-cannot-be-used-as-identifiers"></a>升级后，新的保留关键字不能用作标识符
@@ -27,7 +27,7 @@ ms.locfileid: "66096893"
 ## <a name="component"></a>组件  
  数据库引擎  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>说明  
  在兼容级别 90 或更低级别中，以下词不是保留关键字，因此可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本中用作标识符或对象名称。 在兼容级别 100 中，以下词是完全保留的关键字，因此不应用作标识符或对象名称。  
   
 -   EXTERNAL  
@@ -49,14 +49,14 @@ ms.locfileid: "66096893"
   
 -   将数据库兼容级别设置保留为 90 或更低。  
   
--   使用分隔标识符引用对象。 例如，语句`CREATE TABLE [MERGE] ([MERGE] int);`使用方括号来分隔对象名称 MERGE。  
+-   使用分隔标识符引用对象。 例如，语句`CREATE TABLE [MERGE] ([MERGE] int);`使用方括号分隔对象名称合并。  
   
 ## <a name="external-resources"></a>外部资源  
- [保留关键字&#40;Transact SQL&#41;](/sql/t-sql/language-elements/reserved-keywords-transact-sql)  
+ [Transact-sql&#41;&#40;保留关键字](/sql/t-sql/language-elements/reserved-keywords-transact-sql)  
   
  [MERGE (Transact-SQL)](/sql/t-sql/statements/merge-transact-sql)  
   
- [分隔的标识符 （数据库引擎）](https://go.microsoft.com/fwlink/?LinkId=112509)  
+ [分隔标识符（数据库引擎）](https://go.microsoft.com/fwlink/?LinkId=112509)  
   
  [ALTER DATABASE 兼容级别 (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
   

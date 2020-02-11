@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 14d0a9f95ea3abccd2d50f469fe068459baa9364
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101961"
 ---
 # <a name="modify-or-delete-a-role-assignment-report-manager"></a>修改或删除角色分配（报表管理器）
@@ -38,15 +38,15 @@ ms.locfileid: "66101961"
   
 1.  启动 [报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)。  
   
-2.  单击 **“网站设置”** 。  
+2.  单击 **“网站设置”**。  
   
 3.  单击 **“安全性”** 。 将按帐户名列出当前为服务器或扩展部署定义的所有系统级角色分配。  
   
 4.  查找要修改或删除的角色分配。  
   
-5.  若要为特定用户或组添加或删除角色，请单击 **“编辑”** 。  
+5.  若要为特定用户或组添加或删除角色，请单击 **“编辑”**。  
   
-6.  若要删除角色分配，请单击该用户或组名旁边的复选框，再单击 **“删除”** 。  
+6.  若要删除角色分配，请单击该用户或组名旁边的复选框，再单击 **“删除”**。  
   
 ### <a name="to-modify-or-delete-an-item-role-assignment"></a>修改或删除项角色分配  
   
@@ -54,18 +54,18 @@ ms.locfileid: "66101961"
   
 2.  悬停在该项之上，然后单击下拉箭头。  
   
-3.  在下拉菜单中，单击“安全性”  。  
+3.  在下拉菜单中，单击“安全性”****。  
   
 4.  查找要修改或删除的角色分配。  
   
-5.  若要为特定用户或组添加或删除角色，请单击 **“编辑”** 。  
+5.  若要为特定用户或组添加或删除角色，请单击 **“编辑”**。  
   
-6.  若要删除角色分配，请单击该用户或组名旁边的复选框，再单击 **“删除”** 。  
+6.  若要删除角色分配，请单击该用户或组名旁边的复选框，再单击 **“删除”**。  
   
-## <a name="see-also"></a>请参阅  
- (create-and-manage-role-assignments.md)   
+## <a name="see-also"></a>另请参阅  
+ （create-and-manage-role-assignments.md）   
  [角色分配](role-assignments.md)   
- [“站点设置”页（报表管理器）](../site-settings-page-report-manager.md)   
- [新建系统角色分配：编辑系统角色分配页&#40;报表管理器&#41;](../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
+ ["站点设置" 页 &#40;报表管理器&#41;](../site-settings-page-report-manager.md)   
+ [新系统角色分配： "编辑系统角色分配" 页 &#40;报表管理器&#41;](../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
   
   

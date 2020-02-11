@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a575d2e0f366df452d37615c7d3076027f5c400a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102122"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>在报表服务器上配置 Windows 身份验证
@@ -32,9 +32,9 @@ ms.locfileid: "66102122"
     > [!IMPORTANT]  
     >  如果将报表服务器服务配置为在域用户帐户下运行，并且没有为该帐户注册服务主体名称 (SPN)，则使用 `RSWindowsNegotiate` 将产生 Kerberos 身份验证错误。 有关详细信息，请参阅本主题中的 [连接到报表服务器时纠正 Kerberos 身份验证错误](#proxyfirewallRSWindowsNegotiate) 。  
   
--   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 。 默认情况下，报表服务器 Web 服务和报表管理器的 Web.config 文件包括\<身份验证模式 ="Windows"> 设置。 如果将其更改为 \<authentication mode="Forms">，则 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 Windows 身份验证将失败。  
+-   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 。 默认情况下，报表服务器 Web 服务的 web.config 文件和报表管理器包括\<authentication mode = "Windows" > 设置。 如果将其更改为 \<authentication mode="Forms">，则 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 Windows 身份验证将失败。  
   
--   报表服务器 Web 服务的 Web.config 文件和报表管理器必须具有\<identity impersonate ="true"/ >。  
+-   报表服务器 Web 服务和报表管理器的 web.config 文件必须具有\<标识模拟 = "true"/>。  
   
 -   客户端应用程序或浏览器必须支持 Windows 集成安全性。  
   
@@ -45,7 +45,9 @@ ms.locfileid: "66102122"
  以下说明针对本机模式报表服务器。 如果在 SharePoint 集成模式下部署报表服务器，则必须使用指定 Windows 集成安全性的默认身份验证设置。 报表服务器使用默认 Windows 身份验证扩展插件中的内部功能支持 SharePoint 集成模式下的报表服务器。  
   
 ## <a name="extended-protection-for-authentication"></a>身份验证的扩展保护  
- 自 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]开始，提供了对针对验证的扩展保护的支持。 此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能支持使用渠道绑定和服务绑定来加强对身份验证的保护。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能需要用于支持扩展保护的操作系统。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置由 RSReportServer.config 文件中的设置确定。 可以通过编辑此文件或使用 WMI API 来更新此文件。 有关详细信息，请参阅 [Extended Protection for Authentication with Reporting Services](extended-protection-for-authentication-with-reporting-services.md)。  
+ 自 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]开始，提供了对针对验证的扩展保护的支持。 此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能支持使用渠道绑定和服务绑定来加强对身份验证的保护。 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能需要用于支持扩展保护的操作系统。 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置由 RSReportServer.config 文件中的设置确定。 可以通过编辑此文件或使用 WMI API 来更新此文件。 有关详细信息，请参阅[Reporting Services 针对验证的扩展保护](extended-protection-for-authentication-with-reporting-services.md)。  
   
 ### <a name="to-configure-a-report-server-to-use-windows-integrated-security"></a>将报表服务器配置为使用 Windows 集成安全性  
   
@@ -76,7 +78,7 @@ ms.locfileid: "66102122"
           <EnableAuthPersistence>true</EnableAuthPersistence>  
     ```  
   
-     \</身份验证>  
+     \</Authentication>  
   
      第三个 XML 结构指定 Windows 集成安全性中使用的所有安全包：  
   
@@ -96,7 +98,7 @@ ms.locfileid: "66102122"
           </AuthenticationTypes>  
     ```  
   
-4.  将它粘贴到的现有条目 <`Authentication`>。  
+4.  将其粘贴到 <`Authentication`> 的现有条目上。  
   
      注意，不能将 `Custom` 与 `RSWindows` 类型一起使用。  
   
@@ -107,13 +109,13 @@ ms.locfileid: "66102122"
           <RSWindowsExtendedProtectionScenario>Proxy</RSWindowsExtendedProtectionScenario>  
     ```  
   
-6.  保存该文件。  
+6.  保存文件。  
   
 7.  如果配置了扩展部署，请对该部署中的其他报表服务器重复这些步骤。  
   
 8.  重新启动报表服务器以清除当前打开的任何会话。  
   
-##  <a name="proxyfirewallRSWindowsNegotiate"></a> 连接到报表服务器时解决 Kerberos 身份验证错误  
+##  <a name="proxyfirewallRSWindowsNegotiate"></a>在连接到报表服务器时解决 Kerberos 身份验证错误  
  在为 Negotiate 或 Kerberos 身份验证配置的报表服务器上，如果出现 Kerberos 身份验证错误，则客户端与报表服务器的连接将失败。 已知在以下情况下会出现 Kerberos 身份验证错误：  
   
 -   报表服务器服务作为 Windows 域用户帐户运行并且您没有为该帐户注册服务主体名称 (SPN)。  
@@ -124,7 +126,7 @@ ms.locfileid: "66102122"
   
  如果启用了 Kerberos 日志记录，则可以检测到该错误。 另一错误症状是多次提示您输入凭据，然后您看到一个空的浏览器窗口。  
   
- 你可以确认遇到了 Kerberos 身份验证错误通过删除 < `RSWindowsNegotiate` / > 从你的配置文件并重新尝试建立连接。  
+ 你可以通过从配置文件中删除 < `RSWindowsNegotiate` /> 并意义连接来确认你遇到了 Kerberos 身份验证错误。  
   
  确认遇到该问题之后，可以采用下列方法解决它：  
   
@@ -166,7 +168,8 @@ ms.locfileid: "66102122"
     rshost!rshost!e44!01/14/2010-14:43:51:: i INFO: Registered valid SPNs list for endpoint 2: rshost!rshost!e44!01/14/2010-14:43:52:: i INFO: SPN Whitelist Added <Explicit> - <HTTP/sqlpod064-13.w2k3.net>.  
     ```  
   
--   \<Explicit> 之下的值将包含在 Active Directory 中为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务帐户配置的 SPN。  
+-   
+  \<Explicit> 之下的值将包含在 Active Directory 中为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务帐户配置的 SPN。  
   
  如果不希望继续使用扩展保护，则将配置值重新设置为默认值，然后重新启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务帐户。  
   
@@ -175,7 +178,7 @@ ms.locfileid: "66102122"
 <RSWindowsExtendedProtectionScenario>Proxy</RSWindowsExtendedProtectionScenario>  
 ```  
   
- 有关详细信息，请参阅 [Extended Protection for Authentication with Reporting Services](extended-protection-for-authentication-with-reporting-services.md)。  
+ 有关详细信息，请参阅[与 Reporting Services 针对验证的扩展保护](extended-protection-for-authentication-with-reporting-services.md)  
   
 #### <a name="how-the-browser-chooses-negotiated-kerberos-or-negotiated-ntlm"></a>浏览器如何选择协商 Kerberos 或协商 NTLM  
  使用 Internet Explorer 连接到报表服务器时，它将在身份验证标头中指定协商 Kerberos 或 NTLM。 在以下情况下，使用 NTLM 而非 Kerberos：  
@@ -198,18 +201,18 @@ ms.locfileid: "66102122"
 ###### <a name="lan-and-proxy-settings-on-the-client"></a>客户端上的 LAN 和代理设置  
  在 Internet Explorer 中设置的 LAN 和代理设置可以确定是否在 Kerberos 上选择 NTLM。 但是，由于各组织的 LAN 和代理设置会有所不同，因此不可能准确确定造成 Kerberos 身份验证错误的设置。 例如，您的组织可能会强制实施将 URL 从 Intranet URL 转换为通过 Internet 连接解析的完全限定域名 URL 的代理设置。 如果将不同的身份验证提供程序用于不同类型的 URL，则您可能会发现原本预计会失败的某些连接竟然成功了。  
   
- 如果遇到您认为因身份验证失败而引起的连接错误，则可以尝试其他 LAN 与代理设置的组合来隔离该问题。 在 Internet Explorer 中，LAN 和代理设置位于“局域网 (LAN) 设置”  对话框中，可以通过单击“Internet 选项”  的“连接”  选项卡上的“LAN 设置”  打开该对话框。  
+ 如果遇到您认为因身份验证失败而引起的连接错误，则可以尝试其他 LAN 与代理设置的组合来隔离该问题。 在 Internet Explorer 中，LAN 和代理设置位于“局域网 (LAN) 设置”**** 对话框中，可以通过单击“Internet 选项”**** 的“连接”**** 选项卡上的“LAN 设置”**** 打开该对话框。  
   
 ## <a name="external-resources"></a>外部资源  
   
 -   有关 Kerberos 和报表服务器的更多信息，请参阅 [Deploying a Business Intelligence Solution Using SharePoint, Reporting Services, and PerformancePoint Monitoring Server with Kerberos](https://go.microsoft.com/fwlink/?LinkID=177751)（通过 Kerberos 部署使用 SharePoint、Reporting Services 和 PerformancePoint Monitoring Server 的商业智能解决方案）。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [针对报表服务器的身份验证](authentication-with-the-report-server.md)   
  [授予对本机模式报表服务器的权限](granting-permissions-on-a-native-mode-report-server.md)   
- [RSReportServer 配置文件](../report-server/rsreportserver-config-configuration-file.md)   
+ [Rsreportserver.config 配置文件](../report-server/rsreportserver-config-configuration-file.md)   
  [在报表服务器上配置基本身份验证](configure-basic-authentication-on-the-report-server.md)   
  [在报表服务器上配置自定义身份验证或窗体身份验证](configure-custom-or-forms-authentication-on-the-report-server.md)   
- [Extended Protection for Authentication with Reporting Services](extended-protection-for-authentication-with-reporting-services.md)  
+ [Reporting Services 针对验证的扩展保护](extended-protection-for-authentication-with-reporting-services.md)  
   
   

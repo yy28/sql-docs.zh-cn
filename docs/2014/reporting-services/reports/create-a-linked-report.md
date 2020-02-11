@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d0df6a3bdb6f542b02b62ccf4aa6614da290551f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102699"
 ---
 # <a name="create-a-linked-report"></a>创建链接报表
@@ -30,23 +30,23 @@ ms.locfileid: "66102699"
   
 ### <a name="to-create-a-linked-report"></a>创建链接报表  
   
-1.  在报表管理器中，导航到包含想要链接到的报表的文件夹，然后打开选项菜单并单击 **“创建链接报表”** 。  
+1.  在报表管理器中，导航到包含想要链接到的报表的文件夹，然后打开选项菜单并单击 **“创建链接报表”**。  
   
 2.  键入新链接报表的名称。 根据需要，可以键入说明。  
   
-3.  若要为报表选择不同的文件夹，请单击 **“更改位置”** 。 单击要使用的文件夹，或者在 **“位置”** 框中键入文件夹名称。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)] 如果没有选择不同的文件夹，则将在当前文件夹（链接报表所基于的报表的存储位置）中创建链接报表。  
+3.  若要为报表选择不同的文件夹，请单击 **“更改位置”**。 单击要使用的文件夹，或者在 **“位置”** 框中键入文件夹名称。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]如果未选择其他文件夹，则将在当前文件夹中创建链接报表（它所基于的报表将存储在此文件夹中）。  
   
-4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] 将打开链接报表。  
+4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]此时将打开链接报表。  
   
      链接报表的图标与报表服务器管理的其他项不同。 下面的图标表示链接报表：  
   
      ![链接报表图标](../media/hlp-16linked.gif "链接报表图标")  
   
-## <a name="see-also"></a>请参阅  
- [打开和关闭报表（报表管理器）](../reports/open-and-close-a-report-report-manager.md)   
- [“新建链接报表”页（报表管理器）](../new-linked-report-page-report-manager.md)   
- [“选择项位置”页（报表管理器）](../choose-item-location-page-report-manager.md)   
- [报表的“常规”属性页（报表管理器）](../general-properties-page-reports-report-manager.md)   
+## <a name="see-also"></a>另请参阅  
+ [打开并关闭报表 &#40;报表管理器&#41;](../reports/open-and-close-a-report-report-manager.md)   
+ [报表管理器 &#40;的 "新建链接报表" 页&#41;](../new-linked-report-page-report-manager.md)   
+ ["选择项位置" 页 &#40;报表管理器&#41;](../choose-item-location-page-report-manager.md)   
+ [报表 &#40;报表管理器的 "常规属性" 页&#41;](../general-properties-page-reports-report-manager.md)   
  [Reporting Services 概念 (SSRS)](../reporting-services-concepts-ssrs.md)   
  [报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)  
   

@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ff0bd8ce8d5024d0d6e2e624c03bcc675af8fbb8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101671"
 ---
 # <a name="secure-reports-and-resources"></a>保护报表和资源
@@ -61,7 +61,7 @@ ms.locfileid: "66101671"
  若要降低报表中包含无意中运行恶意脚本的链接的风险，请仅将超链接绑定到来自可信来源的数据。 验证查询结果中的数据和将数据绑定到超链接的表达式没有创建可被用来进行攻击的链接。 例如，不要将超链接基于连接多个数据集字段中的数据的表达式。 如有必要，浏览到此报表，然后使用“查看源”以检查可疑脚本和 URL。  
   
 ## <a name="mitigating-sql-injection-attacks-in-a-parameterized-report"></a>减少参数化报表中的 SQL 注入攻击  
- 包含类型参数的任何报表中`String`请务必使用可用值列表 （也称为有效值列表），并确保任何运行该报表的用户具有只需在报告中查看数据的权限。 定义 `String` 类型的参数时，系统将向用户显示一个可以使用任何值的文本框。 可用值列表限制可以输入的值。 如果报表参数与查询参数关联，但您没有使用可用值列表，则报表用户可能会在文本框中键入 SQL 语法，从而导致报表和服务器容易受到 SQL 注入攻击。 如果用户有足够的权限执行新的 SQL 语句，则可能在服务器上产生意外结果。  
+ 在包含类型`String`参数的任何报表中，请务必使用可用值列表（也称为有效值列表），并确保任何运行该报表的用户仅具有查看该报表中数据所需的权限。 定义 `String` 类型的参数时，系统将向用户显示一个可以使用任何值的文本框。 可用值列表限制可以输入的值。 如果报表参数与查询参数关联，但您没有使用可用值列表，则报表用户可能会在文本框中键入 SQL 语法，从而导致报表和服务器容易受到 SQL 注入攻击。 如果用户有足够的权限执行新的 SQL 语句，则可能在服务器上产生意外结果。  
   
  如果报表参数与查询参数无关，并且参数值包含在报表中，则报表用户可以在参数值中键入表达式语法或 URL，并将报表呈现为 Excel 或 HTML 格式。 如果其他用户查看报表并单击呈现的参数内容，则用户可能会无意中执行恶意脚本或链接。  
   
@@ -73,9 +73,9 @@ ms.locfileid: "66101671"
 ## <a name="securing-confidential-reports"></a>保护机密报表  
  对于包含机密信息的报表，应通过要求用户在访问敏感数据时提供凭据，在数据访问级别上保护这些报表。 有关详细信息，请参阅[为报表数据源指定凭据和连接信息](../report-data/specify-credential-and-connection-information-for-report-data-sources.md) 您也可以对文件夹进行保护，以便只有授权用户才能访问文件夹。 有关详细信息，请参阅 [保护文件](secure-folders.md)。  
   
-## <a name="see-also"></a>请参阅  
- (create-and-manage-role-assignments.md)   
- [配置报表生成器访问权限](../report-server/configure-report-builder-access.md)   
+## <a name="see-also"></a>另请参阅  
+ （create-and-manage-role-assignments.md）   
+ [配置报表生成器访问](../report-server/configure-report-builder-access.md)   
  [授予对本机模式报表服务器的权限](granting-permissions-on-a-native-mode-report-server.md)   
  [保护共享数据源项](secure-shared-data-source-items.md)   
  [在 Reporting Services 数据源中存储凭据](../report-data/store-credentials-in-a-reporting-services-data-source.md)  

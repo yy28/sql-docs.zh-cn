@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3e97899fb58049b04860a564b3769feb13217fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101529"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>报表服务器项的 SharePoint 站点和列表权限参考
@@ -39,12 +39,12 @@ ms.locfileid: "66101529"
   
 ||  
 |-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式 &#124; SharePoint 2010 和 SharePoint 2013。|  
+|[!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式 | SharePoint 2010 和 SharePoint 2013。|  
   
 ## <a name="list-permissions"></a>列表权限  
  对包含报表服务器项的库设置的权限将确定用户如何访问这些项。  
   
-|权限|Description|F|C|V|报表服务器操作|  
+|权限|说明|F|C|V|报表服务器操作|  
 |----------------|-----------------|-------|-------|-------|-----------------------------|  
 |管理列表|创建和删除列表，添加或删除列表中的栏，添加或删除列表的公共视图。|X|||在从创作工具执行发布操作期间，在 SharePoint 库中创建文件夹。 管理报表历史记录也需要此权限。|  
 |添加项|向列表中添加项目，向文档库中添加文档，添加 Web 讨论评论。|X|X||将报表、报表模型、共享数据源和资源（外部图像文件）添加到 SharePoint 库中。 创建共享数据源。 从共享数据源生成报表模型。 启动报表生成器并创建新报表，或将模型加载到报表生成器中。|  
@@ -61,7 +61,7 @@ ms.locfileid: "66101529"
 ## <a name="site-permissions"></a>网站权限  
  网站权限决定对与存储在特定库中的项不直接相关的报表服务器操作的访问。 例如，此类操作包括创建和管理共享计划（可由多个库中的项使用）以及配置报表查看器 Web 部件（可在整个网站内使用）。  
   
-|权限|Description|F|C|V|报表服务器操作|  
+|权限|说明|F|C|V|报表服务器操作|  
 |----------------|-----------------|-------|-------|-------|-----------------------------|  
 |管理权限|创建和更改网站上的权限级别，并为用户和组分配权限。|X|||可以更改针对所有报表服务器项和操作的权限。 可以设置模型项安全性。|  
 |管理网站|执行网站的所有管理任务并管理内容。|X|||创建、更改和删除共享计划。|  
@@ -72,7 +72,7 @@ ms.locfileid: "66101529"
 |使用远程接口|使用 SOAP、Web DAV 或 SharePoint Designer 接口访问网站。|X|X|X|用于调用报表服务器的 URL 代理端点。|  
 |打开|打开网站、列表或文件夹以访问相应容器中的项。|X|X|X|读取计划和项属性。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Reporting Services 中的角色和任务与 SharePoint 组和权限的比较](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [在 SharePoint 站点上授予对报表服务器项的权限](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   

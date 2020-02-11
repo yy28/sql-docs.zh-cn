@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e31465f0f1099536e262442db894e5d6bfd6d37e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104002"
 ---
 # <a name="configure-and-administer-a-report-server-ssrs-native-mode"></a>配置和管理报表服务器（SSRS 本机模式）
@@ -49,15 +49,15 @@ ms.locfileid: "66104002"
  [配置报表服务器数据库连接（SSRS 配置管理器）](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
  介绍如何修改报表服务器用于连接到报表服务器数据库的连接字符串。  
   
- [为电子邮件传递配置报表服务器&#40;SSRS 配置管理器&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
+ [配置报表服务器，以便 &#40;SSRS Configuration Manager 发送电子邮件&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
  介绍如何配置报表服务器，以便通过电子邮件来分发报表。  
   
  [配置无人参与的执行帐户（SSRS 配置管理器）](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  
  介绍如何配置用户帐户以便以无人参与的方式处理报表。  
   
-## <a name="see-also"></a>请参阅  
- [配置报表生成器访问权限](configure-report-builder-access.md)   
- [Reporting Services Configuration Files](reporting-services-configuration-files.md)   
+## <a name="see-also"></a>另请参阅  
+ [配置报表生成器访问](configure-report-builder-access.md)   
+ [Reporting Services 配置文件](reporting-services-configuration-files.md)   
  [Reporting Services Configuration Manager（本机模式）](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Reporting Services 安全性和保护](../security/reporting-services-security-and-protection.md)   
  [Reporting Services 报表服务器（本机模式）](reporting-services-report-server-native-mode.md)  

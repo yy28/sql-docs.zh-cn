@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f65926bf982574ee2ae856b5bc4138d065b534bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098324"
 ---
-# <a name="listsslcertificates-method-wmi-msreportserverconfigurationsetting"></a>ListSSLCertificates 方法 (WMI MSReportServer_ConfigurationSetting)
+# <a name="listsslcertificates-method-wmi-msreportserver_configurationsetting"></a>ListSSLCertificates 方法 (WMI MSReportServer_ConfigurationSetting)
   返回报表服务器计算机上证书的列表。  
   
 ## <a name="syntax"></a>语法  
@@ -36,14 +36,14 @@ public void ListSSLCertificates(out string[] CertificateHash,
     out Int32 HRESULT);  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>parameters  
  *CertificateHash[]*  
  [out] 证书哈希。  
   
- *CertName[]*  
+ *CertName []*  
  [out] 证书名称。  
   
- *HostName[]*  
+ *HostName []*  
  [out] 证书的主机名。  
   
  *长度*  
@@ -58,9 +58,9 @@ public void ListSSLCertificates(out string[] CertificateHash,
 ## <a name="remarks"></a>备注  
   
 ## <a name="requirements"></a>要求  
- **命名空间:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](msreportserver-configurationsetting-members.md)  
   
   

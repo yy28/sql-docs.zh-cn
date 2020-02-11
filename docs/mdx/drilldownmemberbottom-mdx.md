@@ -1,5 +1,5 @@
 ---
-title: DrilldownMemberBottom (MDX) |Microsoft Docs
+title: DrilldownMemberBottom （MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 79bea49705c4f2fb66b8c9866be335433cbb783f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68049266"
 ---
 # <a name="drilldownmemberbottom-mdx"></a>DrilldownMemberBottom (MDX)
 
 
-  深化第一个指定集与第二个指定集的交集中的成员，并将结果集的成员数限制为指定数目。 或者，此函数也向下钻取一组元组上通过使用第一个元组层次结构或有选择地指定层次结构。  
+  深化第一个指定集与第二个指定集的交集中的成员，并将结果集的成员数限制为指定数目。 此外，此函数还通过使用第一个元组层次结构或选择性指定的层次结构来深化一组元组。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,29 +40,29 @@ DrillDownMemberBottom(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_
  *Numeric_Expression*  
  返回数字的有效数值表达式，通常为单元坐标的多维表达式 (MDX)。  
   
- *Hierarchy*  
+ *层次结构*  
  返回层次结构的有效多维表达式 (MDX)。  
   
- *递归*  
+ *Recursive*  
  指示集的递归比较的关键字。  
   
  *Include_Calc_Members*  
  用于使计算成员能够包括在深化结果中的关键字。  
   
 ## <a name="remarks"></a>备注  
- 如果指定了数值表达式，则**DrilldownMemberBottom**函数排序，按升序排列，根据数值表达式的值在第一个集中每个成员的子级求得的子组成员。 如果未指定数值表达式，此函数将根据由查询上下文决定的子成员集所表示的单元的值，对第一个集中每个成员的子成员按升序排序。 此行为类似于 BottomCount 和 Tail (MDX) 函数，都以自然顺序返回一组成员，没有任何排序。  
+ 如果指定了数值表达式，则**DrilldownMemberBottom**函数将根据数值表达式的值以升序顺序对第一组中每个成员的子成员进行排序。 如果未指定数值表达式，此函数将根据由查询上下文决定的子成员集所表示的单元的值，对第一个集中每个成员的子成员按升序排序。 此行为类似于 BottomCount 和 Tail (MDX) 函数，都以自然顺序返回一组成员，没有任何排序。  
   
- 排序后， **DrilldownMemberBottom**函数返回包含父成员的子成员中指定数量的集中*计数，* 具有最小值，且同时包含两者设置。  
+ 排序后， **DrilldownMemberBottom**函数将返回一个集，该集包含父成员以及在*Count*中指定的具有最小值的子成员的数量，同时包含这两个集。  
   
- 如果**递归**指定，则该函数对第一个集进行排序，如前面所述，然后以递归方式比较的第一组的成员按层次结构中，针对第二个集。 此函数检索第一个集与第二个集的交集中每个成员的指定数目的最底层子成员。  
+ 如果指定了**RECURSIVE** ，函数将按前面所述对第一个集进行排序，然后以递归方式将第一个集的成员（如层次结构中的组织）与第二个集进行比较。 此函数检索第一个集与第二个集的交集中每个成员的指定数目的最底层子成员。  
   
  第一个集可以包含元组，但不能包含成员。 元组的深化是 OLE DB 的扩展，它返回元组集而非成员集。  
   
- **DrilldownMemberBottom**函数是类似于[DrilldownMember](../mdx/drilldownmember-mdx.md)函数，但而不是包括也是在第一个集中的每个成员的所有子级将呈现在第二个集中， **DrilldownMemberBottom**函数返回的指定数目的每个成员的子成员。  
+ **DrilldownMemberBottom**函数类似于[DrilldownMember](../mdx/drilldownmember-mdx.md)函数，但对于第一个集中还存在于第二个集中的每个成员， **DrilldownMemberBottom**函数将返回最接近每个成员的子成员数。  
   
- 查询 XMLA 属性 MdpropMdxDrillFunctions，您可以验证的服务器为钻取功能; 提供的支持级别请参阅[支持的 XMLA 属性&#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)有关详细信息。  
+ 通过查询 XMLA 属性 MdpropMdxDrillFunctions，可以验证服务器为钻取函数提供的支持级别;有关详细信息，请参阅[&#40;xmla&#41;支持的 Xmla 属性](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)。  
   
-## <a name="see-also"></a>请参阅  
- [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

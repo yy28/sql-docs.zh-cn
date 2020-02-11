@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d4a06a24525b3d9d0c4e4a5f3f0b749a7db70261
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105172"
 ---
 # <a name="rownumber-function-report-builder-and-ssrs"></a>RowNumber 函数（报表生成器和 SSRS）
@@ -30,12 +30,13 @@ ms.locfileid: "66105172"
 RowNumber(scope)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *作用域*  
- (`String`) 数据集、数据区域或组的名称，也可以为 Null（在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中为 `Nothing`），它指定在其中计算行数的上下文。 `Nothing` 指定最外层的上下文，通常为报表数据集。  
+ (`String`) 数据集、数据区域或组的名称，也可以为 Null（在 `Nothing` 中为 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]），它指定在其中计算行数的上下文。 
+  `Nothing` 指定最外层的上下文，通常为报表数据集。  
   
 ## <a name="remarks"></a>备注  
- `RowNumber` 返回指定作用域内的行计数的运行值一样[RunningValue](report-builder-functions-runningvalue-function.md)返回聚合函数的运行值。 指定作用域时，需要指定何时将行计数重新设置为 1。  
+ `RowNumber`返回指定范围内的行数的运行值，正如[RunningValue](report-builder-functions-runningvalue-function.md)返回聚合函数的运行值一样。 指定作用域时，需要指定何时将行计数重新设置为 1。  
   
  *scope* 不能是表达式。 *scope* 必须是包含作用域。 典型的从最外层到最内层包容的作用域是报表数据集、数据区域、行组或列组。  
   
@@ -53,7 +54,7 @@ RowNumber(scope)
 =IIF(RowNumber("GroupbyCategory") Mod 2, "White", "PaleGreen")  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在报表中使用表达式（报表生成器和 SSRS）](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)   
  [表达式中的数据类型（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)   

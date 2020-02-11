@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2e3c7b1ec37eea31aef0d381815e4286f993c827
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101653"
 ---
 # <a name="secure-shared-data-source-items"></a>保护共享数据源项
@@ -39,7 +39,7 @@ ms.locfileid: "66101653"
 |管理数据源|查看用于指定名称、说明和连接信息的属性。 此任务还用于在文件夹层次结构中显示共享数据源项。 如果选择此任务，则可以省略“查看数据源”任务。|  
 |设置项的安全性|创建和修改控制共享数据源访问权限的角色分配。 此任务必须与“查看数据源”或“管理数据源”任务一起使用。 否则，由于用户无法选择项，此任务将不会发挥任何作用。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [管理报表数据源](../report-data/manage-report-data-sources.md)   
  [保护文件夹](secure-folders.md)   
  [保护报表和资源](secure-reports-and-resources.md)   

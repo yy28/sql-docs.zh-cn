@@ -1,5 +1,5 @@
 ---
-title: 快照选项属性页 （报表管理器） |Microsoft Docs
+title: "\"快照选项\" 属性页（报表管理器） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7a73f3be75a7f0cadf633943aeafffb7217d8e29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101163"
 ---
 # <a name="snapshot-options-properties-page-report-manager"></a>“快照选项”属性页（报表管理器）
   使用“快照选项”属性页可以计划将报表快照添加到报表历史记录的时间，以及设置报表历史记录中存储的报表快照的数量限制。  
   
 > [!NOTE]  
->  并非在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的每个版本中均提供此功能。 有关的各版本支持的功能列表[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请参阅[其他数据库服务](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md#Add_DBServices)。  
+>  并非在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的每个版本中均提供此功能。 有关各个版本支持的功能列表[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请参阅[其他数据库服务](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md#Add_DBServices)。  
   
 ## <a name="navigation"></a>导航  
  使用以下过程导航到用户界面 (UI) 中的这一位置。  
@@ -40,13 +40,13 @@ ms.locfileid: "66101163"
  **允许手动创建报表历史记录**  
  选中此复选框可以根据需要将快照添加到报表历史记录中。 选中此复选框后，“历史记录”页上将显示 **“新建快照”** 按钮。  
   
- **在报表历史记录中存储所有报表执行快照**  
+ **将所有报表执行快照存储在报表历史记录中**  
  选中此复选框可以根据报表执行属性将您生成的报表快照添加到报表历史记录中。 您可以设置报表执行属性以便从生成的快照运行报表。 设置此报表历史记录属性后，您可以将一段时间内生成的所有报表快照的副本放置在报表历史记录中，以跟踪这些报表快照。  
   
- **使用以下计划将快照添加到报表历史记录**  
+ **使用下列计划将快照添加到报表历史记录中**  
  选中此复选框可以按计划将快照添加到报表历史记录中。 您可以创建专门用于此用途的计划，也可以选择包含您所需的计划信息的预定义共享计划。  
   
- **选择要保留快照的数**  
+ **选择要保留的快照数**  
  从以下选项中进行选择，以控制保留在报表历史记录中的报表数。 各个报表的报表历史记录设置可以不同。  
   
 -   选择 **“使用默认设置”** 可以保留默认设置。 报表服务器管理员控制报表历史记录存储的主设置。 如果选择此选项，将从该主设置获取保留的快照数。  
@@ -57,10 +57,10 @@ ms.locfileid: "66101163"
   
  报表历史记录存储在报表服务器数据库中。 如果要保留大型报表或许多报表的历史记录，请考虑限制报表历史记录的量，以帮助管理报表服务器数据库的磁盘空间要求。  
   
- **Apply**  
+ **应用**  
  单击此选项可保存所做的更改。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [向报表历史记录添加快照（报表管理器）](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [报表管理器（SSRS 本机模式）](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [创建、修改和删除报表历史记录中的快照](report-server/create-modify-and-delete-snapshots-in-report-history.md)   

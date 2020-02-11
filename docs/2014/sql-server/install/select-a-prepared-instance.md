@@ -11,23 +11,23 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c4df53093cf7d7dff00a8a5e16fb4bef58442213
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092393"
 ---
 # <a name="select-a-prepared-instance"></a>选择已准备实例
   使用 **“选择已准备实例”** 页可以指定要完成的已准备实例。  
   
 ## <a name="options"></a>选项  
- “选择实例 ID”  框列出了你可以完成的已准备实例。 选择要完成的已准备实例。  
+ “选择实例 ID”**** 框列出了你可以完成的已准备实例。 选择要完成的已准备实例。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
- **选择实例 Id**  
+ **选择实例 ID**  
  该列表包括在正在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序的计算机上您可以完成的所有已准备实例。 选择要完成的已准备实例。  
   
- **已安装的实例**  
+ **已安装实例**  
  这包括已安装、已准备和已完成实例。  
   
   

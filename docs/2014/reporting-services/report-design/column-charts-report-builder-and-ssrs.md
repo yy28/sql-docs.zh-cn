@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e8477b4e8e0e6c0fc6e4801a975b11d79dadf83f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106230"
 ---
 # <a name="column-charts-report-builder-and-ssrs"></a>柱形图（报表生成器和 SSRS）
@@ -35,21 +35,21 @@ ms.locfileid: "66106230"
   
 -   **三维圆柱**。 一种图条在三维图表中的形状类似于圆柱的柱形图。  
   
--   `Histogram` 的用户。 一种图表通过计算以使其图条按正态分布进行排列的柱形图。  
+-   `Histogram`. 一种图表通过计算以使其图条按正态分布进行排列的柱形图。  
   
--   `Pareto` 的用户。 一种图条按从最高到最低排列的柱形图。  
+-   `Pareto`. 一种图条按从最高到最低排列的柱形图。  
   
 ## <a name="data-considerations-for-a-column-chart"></a>柱形图在数据方面的注意事项  
   
--   条形图和柱形图最常用于说明各组之间的比较情况。 如果图表中存在三个以上的序列，请考虑使用堆积条形图或柱形图。 如果图表中有多个序列，则还可以将堆积条形图或柱形图收集到多个组中。 有关详细信息，请参阅[条形图&#40;报表生成器和 SSRS&#41; ](charts-report-builder-and-ssrs.md)并*柱形图*。  
+-   条形图和柱形图最常用于说明各组之间的比较情况。 如果图表中存在三个以上的序列，请考虑使用堆积条形图或柱形图。 如果图表中有多个序列，则还可以将堆积条形图或柱形图收集到多个组中。 有关详细信息，请参阅[条形图 &#40;报表生成器和 SSRS&#41;](charts-report-builder-and-ssrs.md)和*柱形图*。  
   
 -   在柱形图中，在以水平方式显示类别轴标签时空间会很局促。 如果类别标签较长，请考虑使用条形图或更改标签的旋转角度。  
   
 -   您可以在柱形图中为单个图条添加特殊的绘制样式以增加其视觉效果。 绘制样式包括楔形、浮雕、圆柱形和由明到暗。 设计这些效果的目的是为了改进二维图表的外观。 即使使用的是三维图表，您仍可应用绘制样式，但效果可能不会相同。 有关如何向条形图添加绘制样式的详细信息，请参阅 [向图表添加凹凸效果、阳文和纹理样式（报表生成器和 SSRS）](chart-effects-add-bevel-emboss-or-texture-report-builder.md)。  
   
--   柱形图的独特功能是将图表显示为直方图或排列图。 若要执行此操作，请将 ShowColumnAs 属性设置为`Histogram`或`Pareto`到属性窗口中`true`。  
+-   柱形图的独特功能是将图表显示为直方图或排列图。 为此，请在属性窗口中将 ShowColumnAs `Histogram`属性`Pareto`设置为或`true`。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   
  [图表类型（报表生成器和 SSRS）](chart-types-report-builder-and-ssrs.md)   
  [条形图（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   

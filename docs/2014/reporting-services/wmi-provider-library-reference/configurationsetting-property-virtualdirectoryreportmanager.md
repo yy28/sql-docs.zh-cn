@@ -1,5 +1,5 @@
 ---
-title: VirtualDirectoryReportManager 属性 (WMI MSReportServer_ConfigurationSetting) |Microsoft Docs
+title: VirtualDirectoryReportManager 属性（WMI MSReportServer_ConfigurationSetting） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 555f3e8d88554737a618b6acea76cc8907474ddf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097379"
 ---
-# <a name="virtualdirectoryreportmanager-property-wmi-msreportserverconfigurationsetting"></a>VirtualDirectoryReportManager 属性 (WMI MSReportServer_ConfigurationSetting)
+# <a name="virtualdirectoryreportmanager-property-wmi-msreportserver_configurationsetting"></a>VirtualDirectoryReportManager 属性 (WMI MSReportServer_ConfigurationSetting)
   返回报表管理器应用程序的虚拟目录。 只读。  
   
 ## <a name="syntax"></a>语法  
@@ -39,9 +39,9 @@ public string VirtualDirectoryReportManager;
  [MSReportServer_ConfigurationSetting 类](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>要求  
- **命名空间:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](msreportserver-configurationsetting-members.md)  
   
   

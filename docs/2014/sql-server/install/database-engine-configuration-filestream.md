@@ -13,14 +13,15 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: aa6f1df8858f5ba9bf302eb6a415182cfa9442c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66095784"
 ---
 # <a name="database-engine-configuration---filestream"></a>数据库引擎配置 - 文件流
-  使用此页可针对此 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]安装启用 FILESTREAM。 FILESTREAM 使[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]使用 NTFS 文件系统通过将存储`varbinary(max)`二进制大型对象 (BLOB) 数据作为文件系统上的文件。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句可插入、更新、查询、搜索和备份 FILESTREAM 数据。 通过 Win32 文件系统接口可以流式方式访问数据。  
+  使用此页可针对此 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]安装启用 FILESTREAM。 FILESTREAM 通过将[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]二进制大型对象（BLOB）数据`varbinary(max)`作为文件存储在文件系统中，将二进制大型对象（BLOB）数据与 NTFS 文件系统集成。 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句可插入、更新、查询、搜索和备份 FILESTREAM 数据。 Win32 文件系统接口提供对数据的流式访问。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
  **针对 Transact-SQL 访问启用 FILESTREAM**  
@@ -35,7 +36,7 @@ ms.locfileid: "66095784"
  **允许远程客户端针对 FILESTREAM 数据启用流访问**  
  选中此控制选项可允许远程客户端访问此服务器上的此 FILESTREAM 数据。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [启用和配置 FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   

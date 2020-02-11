@@ -1,5 +1,5 @@
 ---
-title: 修改应用程序以期望从 sysperfinfo.cntr_value 获取 bigint 值 |Microsoft Docs
+title: 修改应用程序，使其 sysperfinfo 中出现 bigint 值。 cntr_value |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ced1e07b5423dcdc7c13d24e8528a2b6ac240aaa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093961"
 ---
-# <a name="modify-applications-to-expect-bigint-values-from-sysperfinfocntrvalue"></a>修改应用程序以期望从 sysperfinfo.cntr_value 获取 bigint 值
-  sysperfinfo 返回`bigint`cntr_value 列的值。  
+# <a name="modify-applications-to-expect-bigint-values-from-sysperfinfocntr_value"></a>修改应用程序以期望从 sysperfinfo.cntr_value 获取 bigint 值
+  sysperfinfo 为 cntr_value `bigint`列返回值。  
   
 ## <a name="component"></a>组件  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
@@ -32,8 +32,8 @@ ms.locfileid: "66093961"
 > [!NOTE]  
 >  sysperfinfo 是一个兼容性视图。 应改用 sys.dm_os_performance_counter 动态管理视图。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库引擎升级问题](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 升级顾问&#91;新&#93;](sql-server-2014-upgrade-advisor.md)  
+ [SQL Server 2014 升级顾问 &#91;新&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

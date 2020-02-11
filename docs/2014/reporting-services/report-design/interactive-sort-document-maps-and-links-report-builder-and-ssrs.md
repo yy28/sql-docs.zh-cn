@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d2fc1145354b4e14317c7588d75ea904f3fa094d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105636"
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>交互式排序、文档结构图和链接（报表生成器和 SSRS）
@@ -29,7 +29,7 @@ ms.locfileid: "66105636"
 -   **钻取报表链接** 跳至同一报表服务器上的其他报表。 有关详细信息，请参阅[钻取报表（报表生成器和 SSRS）](drillthrough-reports-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
->  绑定到数据集字段的链接容易被篡改。 有关详细信息，请参阅 msdn.microsoft.com 上 [联机丛书](../security/secure-reports-and-resources.md) 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][保护报表和资源](https://go.microsoft.com/fwlink/?LinkId=154888) 。  
+>  绑定到数据集字段的链接容易被篡改。 有关详细信息，请参阅 msdn.microsoft.com 上 [](../security/secure-reports-and-resources.md)联机丛书[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的[保护报表和资源](https://go.microsoft.com/fwlink/?LinkId=154888)。  
   
  您还可以设计包含排序、筛选器和可见性参数引用的表达式，让用户控制报表的显示和内容。 有关详细信息，请参阅[报表参数（报表生成器和报表设计器）](report-parameters-report-builder-and-report-designer.md)、[对数据进行筛选、分组和排序（报表生成器和 SSRS）](filter-group-and-sort-data-report-builder-and-ssrs.md)和[添加数据集筛选器、数据区域筛选器和组筛选器（报表生成器和 SSRS）](add-dataset-filters-data-region-filters-and-group-filters.md)。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66105636"
  [向 URL 添加超链接（报表生成器和 SSRS）](add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)  
  说明如何添加从报表指向 URL 的链接。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [钻取、深化、子报表和嵌套数据区域（报表生成器和 SSRS）](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

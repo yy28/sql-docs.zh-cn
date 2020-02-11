@@ -13,29 +13,29 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce8656df63c9d415ca09b54ecb86b87aba8bd83a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092863"
 ---
 # <a name="rename-user-sys"></a>重命名 sys 用户
-  升级顾问检测到的用户名称**sys**在数据库中。 该名称为保留名称。 在升级之前，请重命名该用户。 如果未重命名该用户，则数据库在升级过程结束之后将处于可疑状态并且将不可用，直至将数据库联机为止。  
+  升级顾问检测到数据库中的用户名为**sys** 。 该名称为保留名称。 在升级之前，请重命名该用户。 如果未重命名该用户，则数据库在升级过程结束之后将处于可疑状态并且将不可用，直至将数据库联机为止。  
   
 ## <a name="component"></a>组件  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Description  
- 用户**sys**被保留。  
+## <a name="description"></a>说明  
+ 已保留用户**sys** 。  
   
 ## <a name="corrective-action"></a>纠正措施  
   
 ### <a name="before-upgrade-procedure"></a>升级前的步骤  
- 在升级每个数据库中包含用户之前**sys**，执行以下操作：  
+ 升级之前，在包含用户**sys**的每个数据库中，执行以下操作：  
   
 1.  创建一个新用户。  
   
-2.  使用以下语句显示由用户授予的所有权限**sys** ，并向用户授予**sys**。  
+2.  使用下列语句显示用户**sys**授予的所有权限，并授予用户**sys**权限。  
   
     ```  
     -- Return permissions granted by user sys.  
@@ -44,16 +44,16 @@ ms.locfileid: "66092863"
     SELECT * FROM sysprotects WHERE uid = USER_ID('sys')  
     ```  
   
-3.  将拥有的所有对象的所有权转让**sys**对新用户来说，使用**sp_changeobjectowner**。  
+3.  若要将**sys**拥有的所有对象的所有权转移给新用户，请使用**sp_changeobjectowner**。  
   
 4.  删除用户**sys**。  
   
-5.  若要还原在步骤 2 中捕获的原始权限，请使用 AS *new_user* GRANT 语句的子句。  
+5.  若要还原在步骤2中捕获的原始权限，请使用 GRANT 语句的 AS *new_user*子句。  
   
 6.  修改脚本以引用新用户。 例如，脚本中包含的 `SELECT * FROM sys.my`_`table` 语句必须更改为 `SELECT * FROM new_user.my_table`。  
   
 ### <a name="after-upgrade-procedure"></a>升级后的步骤  
- 如果用户**sys**已不在升级前重命名，执行以下操作：  
+ 如果在升级之前未重命名用户**sys** ，请执行以下操作：  
   
 1.  执行语句`ALTER DATABASE db_name SET ONLINE`。 数据库将处于 SINGLE_USER 模式。  
   
@@ -61,8 +61,8 @@ ms.locfileid: "66092863"
   
 3.  执行语句`ALTER DATABASE db_name SET MULTI_USER`。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库引擎升级问题](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 升级顾问&#91;新&#93;](sql-server-2014-upgrade-advisor.md)  
+ [SQL Server 2014 升级顾问 &#91;新&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

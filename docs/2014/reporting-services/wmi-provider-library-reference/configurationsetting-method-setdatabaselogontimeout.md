@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 16f84cd5aac210c32f017989bcbae2b036cbb304
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098086"
 ---
-# <a name="setdatabaselogontimeout-method-wmi-msreportserverconfigurationsetting"></a>SetDatabaseLogonTimeout 方法 (WMI MSReportServer_ConfigurationSetting)
+# <a name="setdatabaselogontimeout-method-wmi-msreportserver_configurationsetting"></a>SetDatabaseLogonTimeout 方法 (WMI MSReportServer_ConfigurationSetting)
   为报表服务器数据库连接指定默认超时值。  
   
 ## <a name="syntax"></a>语法  
@@ -40,7 +40,7 @@ public void SetDatabaseLogonTimeout(Int32 LogonTimeout,
     out Int32 HRESULT);  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>parameters  
  *LogonTimeout*  
  报表服务器数据库连接的默认超时值，单位为秒。  
   
@@ -51,9 +51,9 @@ public void SetDatabaseLogonTimeout(Int32 LogonTimeout,
  返回 *HRESULT* ，指示方法调用是成功还是失败。 值 0 指示方法调用已成功。 非零值指示已发生错误。  
   
 ## <a name="requirements"></a>要求  
- **命名空间:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](msreportserver-configurationsetting-members.md)  
   
   

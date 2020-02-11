@@ -17,16 +17,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ec41aae3ada2281fab9b75517ecf75def517e1be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104239"
 ---
 # <a name="cache-a-report-report-manager"></a>如何缓存一个报表（报表管理器）
   提高性能的一种方法是配置报表的缓存属性。 缓存报表后，会在一段时间内保存已呈现报表的副本。 请求该报表的第一个用户必须等到所有处理全部完成后才能查看报表。 以后在缓存期间请求该报表的用户可以立即查看它，因为处理已经完成。  
   
- 可缓存的报表类型存在限制。 例如，如果报表输出随着用户标识的变化而变化，或者使用请求该报表的用户的安全令牌检索数据，则无法缓存此报表。 有关详细信息，请参阅 [缓存报表 (SSRS)](caching-reports-ssrs.md)。  
+ 可缓存的报表类型存在限制。 例如，如果报表输出随着用户标识的变化而变化，或者使用请求该报表的用户的安全令牌检索数据，则无法缓存此报表。 有关详细信息，请参阅 [缓存报表 (SSRS)](caching-reports-ssrs.md)版本中预加载缓存的唯一方法。  
   
 ### <a name="to-schedule-the-expiration-of-a-cached-report"></a>计划缓存报表的过期时间  
   
@@ -42,13 +42,13 @@ ms.locfileid: "66104239"
   
 6.  选择以下两个缓存选项之一，并配置过期时间：  
   
-    -   若要将缓存副本配置为在特定时间段后过期，请单击**缓存报表的临时副本。在数分钟之后使报表副本过期”** 。 键入报表过期所需的分钟数。  
+    -   若要将缓存副本配置为在特定时间段后过期，请单击“缓存报表的临时副本。 **在数分钟之后使报表副本过期**。 键入报表过期所需的分钟数。  
   
-    -   若要将缓存副本配置为按计划过期，请单击“缓存报表的临时副本。  按下列计划使报表副本过期。” 单击 **“配置”** ，或选择一个共享计划以控制报表过期时间。  
+    -   若要将缓存副本配置为按计划过期，请单击“缓存报表的临时副本”。 **按下列计划使报表副本过期。** 单击 **“配置”** ，或选择一个共享计划以控制报表过期时间。  
   
-7.  单击 **“应用”** 。  
+7.  单击“应用”  。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [设置报表处理属性](set-report-processing-properties.md)   
  [缓存报表 (SSRS)](caching-reports-ssrs.md)  
   

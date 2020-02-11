@@ -1,5 +1,5 @@
 ---
-title: SharePoint 集成与 2008年和 2008 R2 报表服务器 |Microsoft Docs
+title: 与2008和 2008 R2 报表服务器集成的 SharePoint |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,20 +11,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d29d41069d5daca25d53477326e864720aa87ca1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101197"
 ---
 # <a name="sharepoint-integration-with-2008-and-2008-r2--report-servers"></a>SharePoint 与 2008 和 2008 R2 报表服务器集成
-  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 版本引入了一种体系结构，在此体系结构中，SharePoint 模式现在基于 SharePoint 共享服务。 在 SharePoint 管理中心中上完成新功能的管理**管理服务**并**管理器服务应用程序**页。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]以前为 SharePoint 集成的体系结构仍支持[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]用于 SharePoint 2010 产品，与以前版本的报表服务器集成 SharePoint 2010 外接程序。  
+  的[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]版本引入了一种体系结构，在该体系结构中，SharePoint 模式现在基于 sharepoint 共享服务。 新功能的管理已在 SharePoint 管理中心的 "**管理服务**和**管理器服务应用程序**" 页上完成。 用于[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sharepoint 2010 的[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]外接程序仍支持早期的 sharepoint 集成体系结构，以便可以将 sharepoint 2010 与 Report Server 的早期版本相集成。  
   
  您将用于管理旧体系结构的“SharePoint 管理中心”页在以下位置提供：  
   
-1.  在 SharePoint 管理中心内单击**常规应用程序设置**。  
+1.  从 SharePoint 管理中心，单击 "**常规应用程序设置**"。  
   
-2.  该组**SQL Server Reporting Services （2008年和 2008 R2）** 包含的链接和较旧的体系结构的管理页面  
+2.  组**SQL Server Reporting Services （2008和 2008 R2）** 包含较旧体系结构的链接和管理页面  
   
 ## <a name="server-integration-architecture"></a>服务器集成体系结构  
  将报表服务器与 SharePoint 产品的实例集成后，项和属性将存储在 SharePoint 内容数据库中。 这在影响内容存储、保护及访问方式的各种服务器技术之间提供了更深层次的集成。  

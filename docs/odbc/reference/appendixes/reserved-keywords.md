@@ -14,19 +14,19 @@ ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a89a24ddbbe14938824819e24fd9112597168507
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68057207"
 ---
 # <a name="reserved-keywords"></a>保留关键字
-保留了下列关键字以用于 ODBC 函数调用。 这些单词不限定最小 SQL 语法;但是，若要确保与支持核心 SQL 语法的驱动程序的兼容性，应用程序应避免使用任何这些关键字。 #**定义**SQL_ODBC_KEYWORDS 值包含逗号分隔这些关键字的列表。  
+保留了下列关键字以用于 ODBC 函数调用。 这些词不会限制最低 SQL 语法;但是，为了确保与支持核心 SQL 语法的驱动程序兼容，应用程序应避免使用这些关键字中的任何一个。 #**Define**值 SQL_ODBC_KEYWORDS 包含这些关键字的以逗号分隔的列表。  
   
 |||  
 |-|-|  
 |ABSOLUTE|IS|  
-|ACTION|ISOLATION|  
+|操作|ISOLATION|  
 |ADA|JOIN|  
 |ADD|KEY|  
 |ALL|LANGUAGE|  
@@ -39,19 +39,19 @@ ms.locfileid: "68057207"
 |ASC|LOWER|  
 |ASSERTION|MATCH|  
 |AT|MAX|  
-|AUTHORIZATION|MIN|  
-|AVG|MINUTE|  
+|AUTHORIZATION|最小值|  
+|平均值|MINUTE|  
 |BEGIN|MODULE|  
-|BETWEEN|MONTH|  
+|BETWEEN|月|  
 |BIT|NAMES|  
 |BIT_LENGTH|NATIONAL|  
 |BOTH|NATURAL|  
 |BY|NCHAR|  
 |CASCADE|NEXT|  
-|CASCADED|是|  
+|CASCADED|否|  
 |CASE|无|  
 |CAST|NOT|  
-|CATALOG|NULL|  
+|CATALOG|Null|  
 |CHAR|NULLIF|  
 |CHAR_LENGTH|NUMERIC|  
 |CHARACTER|OCTET_LENGTH|  
@@ -64,11 +64,11 @@ ms.locfileid: "68057207"
 |COLUMN|ORDER|  
 |COMMIT|OUTER|  
 |CONNECT|OUTPUT|  
-|CONNECTION|重叠|  
+|CONNECTION|与|  
 |CONSTRAINT|PAD|  
 |CONSTRAINTS|PARTIAL|  
-|CONTINUE|帕斯卡命名法|  
-|CONVERT|位置|  
+|CONTINUE|PASCAL|  
+|CONVERT|置于|  
 |CORRESPONDING|PRECISION|  
 |COUNT|PREPARE|  
 |CREATE|PRESERVE|  
@@ -94,12 +94,12 @@ ms.locfileid: "68057207"
 |DESCRIPTOR|SESSION|  
 |DIAGNOSTICS|SESSION_USER|  
 |DISCONNECT|SET|  
-|DISTINCT|SIZE|  
+|DISTINCT|大小|  
 |DOMAIN|SMALLINT|  
 |DOUBLE|SOME|  
 |DROP|SPACE|  
 |ELSE|SQL|  
-|END|SQLCA|  
+|End|SQLCA|  
 |END-EXEC|SQLCODE|  
 |ESCAPE|SQLERROR|  
 |EXCEPT|SQLSTATE|  
@@ -111,7 +111,7 @@ ms.locfileid: "68057207"
 |EXTRACT|TEMPORARY|  
 |FALSE|THEN|  
 |FETCH|TIME|  
-|FIRST|timestamp|  
+|FIRST|TIMESTAMP|  
 |FLOAT|TIMEZONE_HOUR|  
 |FOR|TIMEZONE_MINUTE|  
 |FOREIGN|TO|  
@@ -121,15 +121,15 @@ ms.locfileid: "68057207"
 |FULL|TRANSLATION|  
 |GET|TRIM|  
 |GLOBAL|TRUE|  
-|前往|UNION|  
+|GO|UNION|  
 |GOTO|UNIQUE|  
 |GRANT|UNKNOWN|  
 |GROUP|UPDATE|  
 |HAVING|UPPER|  
 |HOUR|USAGE|  
-|IDENTITY|User|  
+|标识|USER|  
 |IMMEDIATE|USING|  
-|IN|Value|  
+|IN|值|  
 |INCLUDE|VALUES|  
 |INDEX|VARCHAR|  
 |INDICATOR|VARYING|  
@@ -137,9 +137,9 @@ ms.locfileid: "68057207"
 |INNER|WHEN|  
 |INPUT|WHENEVER|  
 |INSENSITIVE|WHERE|  
-|Insert|替换为|  
+|INSERT|WITH|  
 |INT|WORK|  
-|整数|WRITE|  
-|INTERSECT|YEAR|  
+|INTEGER|WRITE|  
+|INTERSECT|年|  
 |INTERVAL|ZONE|  
 |INTO||

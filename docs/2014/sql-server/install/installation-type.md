@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b8812bba6d87e29ed8a4533bb87e645f42120015
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094293"
 ---
 # <a name="installation-type"></a>安装类型
@@ -29,8 +29,8 @@ ms.locfileid: "66094293"
   
      如果选择与向现有实例中添加功能相对应的选项，则使用下拉列表选择要更新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
- 只能添加 SysPrep 支持的功能-[!INCLUDE[ssDE](../../includes/ssde-md.md)]并[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-已准备映像[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 只有在已准备实例完成后，才能添加 SysPrep 不支持的其他功能。  
+ 只能向的[!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已准备映像添加 SysPrep 支持的[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]功能。 只有在已准备实例完成后，才能添加 SysPrep 不支持的其他功能。  
   
- **注意** 安装故障转移群集实例之后，不能再向其中添加功能。 若要向现有故障转移群集中添加 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能，则必须执行全新安装才能安装单独的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。  
+ **注意**安装故障转移群集实例后，不能将其添加到故障转移群集实例。 若要向现有故障转移群集中添加 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能，则必须执行全新安装才能安装单独的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。  
   
   

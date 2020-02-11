@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: da2eb97e5ce57a2e6a82dda3e264b33e1e3a3b11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103791"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>管理 Reporting Services 本机模式报表服务器
@@ -47,7 +47,7 @@ ms.locfileid: "66103791"
  [配置本机模式报表服务器扩展部署（SSRS 配置管理器）](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
  提供配置多个报表服务器以共享报表服务器数据库的步骤。  
   
- [为电子邮件传递配置报表服务器&#40;SSRS 配置管理器&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
+ [配置报表服务器，以便 &#40;SSRS Configuration Manager 发送电子邮件&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
  提供有关配置报表服务器以进行电子邮件分发的步骤。  
   
  [将防火墙配置为允许报表服务器访问](configure-a-firewall-for-report-server-access.md)  
@@ -65,7 +65,7 @@ ms.locfileid: "66103791"
  [启用远程错误 (Reporting Services)](enable-remote-errors-reporting-services.md)  
  说明如何将报表服务器上的服务器属性设置为返回有关出现在远程服务器上的错误条件的其他信息。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置和管理报表服务器（SSRS 本机模式）](configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [配置和管理报表服务器（Reporting Services SharePoint 模式）](../configure-administer-report-server-reporting-services-sharepoint-mode.md)  
   

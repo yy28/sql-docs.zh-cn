@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 649795e5e142563b64014f2ccf970f0df5de134b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103470"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>报告服务器执行日志和 ExecutionLog3 视图
@@ -61,13 +61,13 @@ ms.locfileid: "66103470"
   
 4.  在 **“日志记录”** 部分中选择 **“启用执行日志记录”** 。  
   
-5.  单击“确定”  。  
+5.  单击“确定”。   
   
  **启用详细日志记录：**  
   
  您需要如前面的步骤中所述启用日志记录，然后完成以下内容：  
   
-1.  从 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序的“系统设置”页，找到“用户定义”部分   。  
+1.  从  **服务应用程序的“系统设置”页，找到“用户定义”部分**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  。  
   
 2.  将 **ExecutionLogLevel** 更改为 **verbose**。 该字段是文本输入字段，其两个可能的值是 **verbose** 和 **normal**。  
   
@@ -108,23 +108,23 @@ select * from ExecutionLog3 order by TimeStart DESC
   
  下表描述在报表执行日志中捕获的数据  
   
-|“列”|Description|  
+|列|说明|  
 |------------|-----------------|  
 |InstanceName|处理请求的报表服务器实例的名称。 如果您的环境具有多个报表服务器，则可以对 InstanceName 分布进行分析，以便监视并确定您的网络负载平衡器是否按预期跨多个报表服务器分布请求。|  
 |ItemPath|存储报表或报表项的位置的路径。|  
 |UserName|用户标识符。|  
 |ExecutionID|与请求关联的内部标识符。 同一用户会话的请求共享相同的执行 ID。|  
-|RequestType|可能的值：<br />**Interactive**<br />**订阅**<br /><br /> <br /><br /> 分析按 RequestType=Subscription 筛选的日志数据和按 TimeStart 排序的数据可揭示大量使用订阅的时间段，这样您可能要将某些报表订阅修改为其他时间。|  
+|RequestType|可能的值：<br />**交互**<br />**订阅**<br /><br /> <br /><br /> 分析按 RequestType=Subscription 筛选的日志数据和按 TimeStart 排序的数据可揭示大量使用订阅的时间段，这样您可能要将某些报表订阅修改为其他时间。|  
 |格式|呈现格式。|  
-|Parameters|用于执行报表的参数值。|  
-|ItemAction|可能的值：<br /><br /> **Render**<br /><br /> **Sort**<br /><br /> **BookMarkNavigation**<br /><br /> **DocumentNavigation**<br /><br /> **GetDocumentMap**<br /><br /> **Findstring**<br /><br /> **执行**<br /><br /> **RenderEdit**|  
+|parameters|用于执行报表的参数值。|  
+|ItemAction|可能的值：<br /><br /> **Render**<br /><br /> **排序**<br /><br /> **BookMarkNavigation**<br /><br /> **DocumentNavigation**<br /><br /> **GetDocumentMap**<br /><br /> **Findstring**<br /><br /> **运行**<br /><br /> **RenderEdit**|  
 |TimeStart|指示报表进程的持续时段的开始时间和结束时间。|  
 |TimeEnd||  
 |TimeDataRetrieval|用于检索数据的毫秒数。|  
 |TimeProcessing|用于处理报表的毫秒数。|  
 |TimeRendering|用于呈现报表的毫秒数。|  
-|Source|报表执行的源。 可能的值：<br /><br /> **Live**<br /><br /> **缓存**:指示缓存的执行，例如，数据集查询不实时执行。<br /><br /> **快照**<br /><br /> **历史记录**<br /><br /> **即席**:指示动态生成的报表基于的模型的钻取报表或使用报表服务器进行处理和呈现在客户端上预览的报表生成器报表。<br /><br /> **会话**:指示请求已建立的会话内的跟进。  例如，初始请求为查看第一页，跟进请求为使用当前会话状态导出到 Excel。<br /><br /> **Rdce**:指示报表定义自定义扩展插件。 在执行报表时，RDCE 自定义扩展插件可以在将某一报表定义传递到处理引擎前动态自定义该报表定义。|  
-|“登录属性”|状态（rsSuccess 或错误代码；如果发生多个错误，则只记录第一个）。|  
+|源|报表执行的源。 可能的值：<br /><br /> **实时**<br /><br /> **Cache**：指示缓存的执行，例如，数据集查询不实时执行。<br /><br /> **快照**<br /><br /> **History**<br /><br /> **即席**：指示基于动态生成的报表模型的钻取报表，或使用 Report Server 进行处理和呈现的客户端上预览的报表生成器报表。<br /><br /> **Session**：指示已建立的会话内的跟进请求。  例如，初始请求为查看第一页，跟进请求为使用当前会话状态导出到 Excel。<br /><br /> **Rdce**：指示报表定义自定义扩展插件。 在执行报表时，RDCE 自定义扩展插件可以在将某一报表定义传递到处理引擎前动态自定义该报表定义。|  
+|状态|状态（rsSuccess 或错误代码；如果发生多个错误，则只记录第一个）。|  
 |ByteCount|所呈现的报表的大小（字节）。|  
 |RowCount|查询返回的结果行数。|  
 |AdditionalInfo|包含与执行有关的附加信息的 XML 属性包。 对于每一行，内容可以不同。|  
@@ -222,13 +222,13 @@ select * from ExecutionLog3 order by TimeStart DESC
   
 ```  
   
- 下面介绍的某些属性将在 AdditionalInfo 字段中看到：  
+ 下面介绍你将在 AdditionalInfo 字段中看到的一些属性：  
   
--   **ProcessingEngine**:1=SQL Server 2005，2=新的按需处理引擎。 如果您的大多数报表仍在显示值 1，则可以研究如何对它们进行重新设计，以便利用更新且效率更高的按需处理引擎。  
+-   **ProcessingEngine**： 1 = SQL Server 2005，2 = 新的按需处理引擎。 如果您的大多数报表仍在显示值 1，则可以研究如何对它们进行重新设计，以便利用更新且效率更高的按需处理引擎。  
   
      `<ProcessingEngine>2</ProcessingEngine>`  
   
--   **ScalabilityTime**:在处理引擎中执行与进制相关的运算所用的毫秒数。 值为 0 指示没有额外的时间用于进制运算，值为 0 还指示请求没有处于内存不足的状态。  
+-   **ScalabilityTime**：在处理引擎中执行与缩放相关的操作所用的毫秒数。 值为 0 指示没有额外的时间用于进制运算，值为 0 还指示请求没有处于内存不足的状态。  
   
     ```  
     <ScalabilityTime>  
@@ -236,7 +236,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </ScalabilityTime>  
     ```  
   
--   **EstimatedMemoryUsageKB**:每个组件在特定请求过程中使用的内存峰值的估计值，以 KB 为单位。  
+-   **EstimatedMemoryUsageKB**：特定请求期间每个组件使用的最大内存量（以 kb 为单位）。  
   
     ```  
     <EstimatedMemoryUsageKB>  
@@ -244,7 +244,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </EstimatedMemoryUsageKB>  
     ```  
   
--   **DataExtension**:在报表中使用的数据扩展插件或数据源的类型。 该数目是特定数据源出现的次数。  
+-   **DataExtension**：报表中使用的数据扩展插件或数据源的类型。 该数目是特定数据源出现的次数。  
   
     ```  
     <DataExtension>  
@@ -252,7 +252,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </DataExtension>  
     ```  
   
--   **ExternalImages**的值是以毫秒计。 此数据可用于诊断性能问题。 从外部 Web 服务器检索图像所需的时间可能使总体报表执行速度变慢。 在添加了[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。  
+-   **ExternalImages**值为 (毫秒)。 此数据可用于诊断性能问题。 从外部 Web 服务器检索图像所需的时间可能使总体报表执行速度变慢。 已在[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中添加。  
   
     ```  
     <ExternalImages>  
@@ -262,7 +262,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </ExternalImages>  
     ```  
   
--   **连接**:多级别的结构。 在添加了[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。  
+-   **连接**：多个调配的结构。 已在[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中添加。  
   
     ```  
     <Connections>  
@@ -307,7 +307,7 @@ select * from ExecutionLog2 order by TimeStart DESC
   
  下表描述在报表执行日志中捕获的数据  
   
-|“列”|Description|  
+|列|说明|  
 |------------|-----------------|  
 |InstanceName|处理请求的报表服务器实例的名称。|  
 |ReportPath|报表的路径结构。  例如，在报表管理器的根文件夹中名为“test”的报表将具有“/test”的 ReportPath。<br /><br /> 保存在报表管理器上文件夹“samples”中的名为“test”的报表将具有“/Samples/test/”的 ReportPath|  
@@ -315,15 +315,15 @@ select * from ExecutionLog2 order by TimeStart DESC
 |ExecutionID||  
 |RequestType|请求类型（用户或系统）。|  
 |格式|呈现格式。|  
-|Parameters|用于执行报表的参数值。|  
-|ReportAction|可能的值：呈现，Sort、 BookMarkNavigation、 DocumentNavigation、 GetDocumentMap、 Findstring|  
+|parameters|用于执行报表的参数值。|  
+|ReportAction|可能的值：Render、Sort、BookMarkNavigation、DocumentNavigation、GetDocumentMap、Findstring|  
 |TimeStart|指示报表进程的持续时段的开始时间和结束时间。|  
 |TimeEnd||  
 |TimeDataRetrieval|检索数据、处理报表以及呈现报表所用的毫秒数。|  
 |TimeProcessing||  
 |TimeRendering||  
-|Source|报表执行源（1 = 实时，2 = 缓存，3 = 快照，4 = 历史记录）。|  
-|“登录属性”|状态（rsSuccess 或错误代码；如果发生多个错误，则只记录第一个）。|  
+|源|报表执行源（1 = 实时，2 = 缓存，3 = 快照，4 = 历史记录）。|  
+|状态|状态（rsSuccess 或错误代码；如果发生多个错误，则只记录第一个）。|  
 |ByteCount|所呈现的报表的大小（字节）。|  
 |RowCount|查询返回的结果行数。|  
 |AdditionalInfo|包含与执行有关的附加信息的 XML 属性包。|  
@@ -339,25 +339,25 @@ select * from ExecutionLog order by TimeStart DESC
   
  下表描述在报表执行日志中捕获的数据  
   
-|“列”|Description|  
+|列|说明|  
 |------------|-----------------|  
 |InstanceName|处理请求的报表服务器实例的名称。|  
 |ReportID|报表标识符。|  
 |UserName|用户标识符。|  
 |RequestType|可能的值：<br /><br /> True = 订阅请求<br /><br /> False = 交互请求|  
 |格式|呈现格式。|  
-|Parameters|用于执行报表的参数值。|  
+|parameters|用于执行报表的参数值。|  
 |TimeStart|指示报表进程的持续时段的开始时间和结束时间。|  
 |TimeEnd||  
 |TimeDataRetrieval|检索数据、处理报表以及呈现报表所用的毫秒数。|  
 |TimeProcessing||  
 |TimeRendering||  
-|Source|报表执行的源。 可能的值：(1 = 实时，2 = 缓存，3 = 快照，4 = 历史记录，5 = 特别，6 = 会话，7 = RDCE)。|  
-|“登录属性”|可能的值：rsSuccess、rsProcessingAborted 或错误代码。 如果出现多个错误，则只记录第一个错误。|  
+|源|报表执行的源。 可能的值：（1 = 实时，2 = 缓存，3 = 快照，4 = 历史记录，5 = 特别，6 = 会话，7 = RDCE）。|  
+|状态|可能的值：rsSuccess、rsProcessingAborted 或错误代码。 如果出现多个错误，则只记录第一个错误。|  
 |ByteCount|所呈现的报表的大小（字节）。|  
 |RowCount|查询返回的结果行数。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [为 SharePoint 跟踪日志 (ULS) 启用 Reporting Services 事件](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
  [Reporting Services 日志文件和来源](../report-server/reporting-services-log-files-and-sources.md)   
  [错误和事件参考 (Reporting Services)](../troubleshooting/errors-and-events-reference-reporting-services.md)  

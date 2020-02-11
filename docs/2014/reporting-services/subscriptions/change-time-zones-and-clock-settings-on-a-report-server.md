@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 566e421cd120010ea32f6936853e4319ec2efa11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100999"
 ---
 # <a name="change-time-zones-and-clock-settings-on-a-report-server"></a>更改报表服务器上的时区和时钟设置
@@ -40,7 +40,7 @@ ms.locfileid: "66100999"
 ## <a name="changing-the-clock-settings"></a>更改时钟设置  
  更改计算机时钟对现有时间戳值没有影响（例如，如果您将时钟拨快一小时，报表历史记录快照的时间戳不会改变）。 计划和传递处理器可能需要 10 秒钟的延迟才会使用新的设置。 如果您修改了配置文件中的轮询间隔设置，实际延迟时间可能会有所不同。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [启动和停止报表服务器服务](../report-server/start-and-stop-the-report-server-service.md)   
  [计划](schedules.md)  
   

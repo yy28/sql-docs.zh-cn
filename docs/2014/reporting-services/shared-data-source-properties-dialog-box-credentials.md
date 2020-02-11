@@ -1,5 +1,5 @@
 ---
-title: 共享的数据源属性对话框中，凭据 |Microsoft Docs
+title: "\"共享数据源属性\" 对话框-\"凭据\" |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cf21cc35bb41837b65d2a2b3c2c946ffae34864f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101262"
 ---
 # <a name="shared-data-source-properties-dialog-box-credentials"></a>“共享数据源属性”对话框 -&gt;“凭据”
   在 **“共享数据源属性”** 对话框中选择 **“凭据”** 可以显示和修改凭据以便连接到报表中的共享数据源。 您所提供的凭据用于访问数据源和缓存数据副本以便进行报表预览。 有关如何缓存预览数据的详细信息，请参阅 [预览报表](reports/previewing-reports.md)。 有关凭据的详细信息，请参阅 [指定报表数据源的凭据和连接信息](report-data/specify-credential-and-connection-information-for-report-data-sources.md)。  
   
 ## <a name="options"></a>选项  
- **使用 Windows 身份验证 （集成安全性）**  
+ **使用 Windows 身份验证(集成安全性)**  
  选择此选项可以使用 Windows 身份验证。  
   
  **使用此用户名和密码**  
@@ -32,7 +32,7 @@ ms.locfileid: "66101262"
  **用户名**  
  键入登录数据源时要使用的用户名。  
   
- **密码**  
+ **权限**  
  键入登录数据源时要使用的密码。  
   
  **提示输入凭据**  
@@ -44,9 +44,9 @@ ms.locfileid: "66101262"
  **无凭据**  
  选择此选项可指定不向数据源提供任何凭据。 仅当数据源不接受凭据，或者要通过其他方式传递凭据时，才使用此选项。  
   
-## <a name="see-also"></a>请参阅  
- [数据连接、 数据源和 Reporting Services 中的连接字符串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+## <a name="see-also"></a>另请参阅  
+ [Reporting Services 中的数据连接、数据源和连接字符串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [为报表数据源指定凭据和连接信息](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [“共享数据源属性”对话框 ->“常规”](../../2014/reporting-services/shared-data-source-properties-dialog-box-general.md)  
+ [“共享数据源属性”对话框 -&amp;gt;“常规”](../../2014/reporting-services/shared-data-source-properties-dialog-box-general.md)  
   
   

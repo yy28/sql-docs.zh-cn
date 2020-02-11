@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 10e4a4befd8300863d8637a87e8c9bd03622d0af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104068"
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>配置报表服务器（Reporting Services 本机模式）
@@ -29,7 +29,7 @@ ms.locfileid: "66104068"
   
 -   用于存储应用程序数据、报表和其他项的报表服务器。  
   
- 安装程序将配置的最小设置，如果你选择以下安装选项之一：本机模式默认配置或 SharePoint 集成的模式默认配置。 如果在“仅文件”模式下安装报表服务器（即通过安装向导中的 **“安装但不配置”** 选项），则只需要配置服务帐户。 完成安装之后，必须配置 Web 服务 URL 和报表服务器数据库。  
+ 如果选择了以下安装选项之一：本机模式默认配置或 SharePoint 集成模式默认配置，则安装程序会配置最低设置。 如果在“仅文件”模式下安装报表服务器（即通过安装向导中的 **“安装但不配置”** 选项），则只需要配置服务帐户。 完成安装之后，必须配置 Web 服务 URL 和报表服务器数据库。  
   
  报表管理器是本机模式报表服务器的可选功能，但建议您配置报表管理器，以便授予用户访问报表服务器和管理报表服务器内容的权限。 如果在 SharePoint 集成模式下部署报表服务器，可使用 SharePoint 服务器的 Web 前端授予访问权限。  
   
@@ -58,10 +58,10 @@ ms.locfileid: "66104068"
   
  通过创建文件夹、上载项和运行报表来验证您的安装。 按照 [验证 Reporting Services 安装](../install-windows/verify-a-reporting-services-installation.md) 中的说明来验证安装。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [管理 Reporting Services 本机模式报表服务器](manage-a-reporting-services-native-mode-report-server.md)   
- [Configure a Firewall for Report Server Access](configure-a-firewall-for-report-server-access.md)   
- [配置本机模式报表服务器以进行本地管理 (SSRS)](configure-a-native-mode-report-server-for-local-administration-ssrs.md)   
+ [为报表服务器访问配置防火墙](configure-a-firewall-for-report-server-access.md)   
+ [为本地管理配置本机模式报表服务器 &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md)   
  [配置报表服务器以进行远程管理](configure-a-report-server-for-remote-administration.md)   
  [Reporting Services Configuration Manager（本机模式）](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   

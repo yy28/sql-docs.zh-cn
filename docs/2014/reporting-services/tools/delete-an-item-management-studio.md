@@ -15,14 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a2dd1ecf333c452e2f1e2710a7ad16782a1a3628
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100423"
 ---
 # <a name="delete-an-item-management-studio"></a>删除项 (Management Studio)
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中连接到报表服务器实例时，您可以删除角色定义和共享计划， 但不能删除报表服务器上的报表、模型或其他项。 若要删除报表服务器内容，请改用报表管理器。 或者，如果报表服务器被配置为 SharePoint 集成模式，请使用包含您的内容的 SharePoint 库中的项管理功能。  
+  当连接到中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的 Report Server 实例时，您可以删除角色定义和共享计划。 但不能删除报表服务器上的报表、模型或其他项。 若要删除报表服务器内容，请改用报表管理器。 或者，如果报表服务器被配置为 SharePoint 集成模式，请使用包含您的内容的 SharePoint 库中的项管理功能。  
   
 ### <a name="to-delete-an-item-in-the-report-server-folder-namespace"></a>删除报表服务器文件夹命名空间中的项  
   
@@ -30,13 +30,13 @@ ms.locfileid: "66100423"
   
 2.  展开“Microsoft BizTalk Server 基本 EDI 适配器” 文件夹。  
   
-3.  右键单击该项，然后单击“删除”  。  
+3.  右键单击该项，然后单击“删除”****。  
   
 4.  出现提示时， [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在 Management Studio 中连接到报表服务器](connect-to-a-report-server-in-management-studio.md)   
- [删除目录项 (Management Studio)](delete-catalog-items-management-studio.md)   
- [SQL Server Management Studio 中的 Reporting Services (SSRS)](reporting-services-in-sql-server-management-studio-ssrs.md)  
+ [删除目录项 &#40;Management Studio&#41;](delete-catalog-items-management-studio.md)   
+ [SQL Server Management Studio &#40;SSRS 中的 Reporting Services&#41;](reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   

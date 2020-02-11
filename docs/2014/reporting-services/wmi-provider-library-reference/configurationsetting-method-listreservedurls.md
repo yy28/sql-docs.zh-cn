@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e6d4cf7f550db88a56b7906fb4487b6c33935636
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098269"
 ---
-# <a name="listreservedurls-method-wmi-msreportserverconfigurationsetting"></a>ListReservedURLs 方法 (WMI MSReportServer_ConfigurationSetting)
+# <a name="listreservedurls-method-wmi-msreportserver_configurationsetting"></a>ListReservedURLs 方法 (WMI MSReportServer_ConfigurationSetting)
   列出为报表服务器上所有应用程序保留的 URL。  
   
 ## <a name="syntax"></a>语法  
@@ -36,17 +36,17 @@ public void ListReservedUrls(out string[] Application, out string[] UrlString,
         out int[] Length, out int[] HRESULT);  
 ```  
   
-## <a name="parameters"></a>Parameters  
- *Application[]*  
+## <a name="parameters"></a>parameters  
+ *Application []*  
  [out] 具有 URL 预留的应用程序。  
   
- *UrlString[]*  
+ *UrlString []*  
  [out] 已保留的 URL。  
   
- *Account[]*  
+ *帐户 []*  
  [out] 与 URL 预留的帐户关联的帐户名。  
   
- *AccountSID[]*  
+ *AccountSID []*  
  [out] 与 URL 预留的帐户关联的帐户 SID。  
   
  *长度*  
@@ -61,9 +61,9 @@ public void ListReservedUrls(out string[] Application, out string[] UrlString,
 ## <a name="remarks"></a>备注  
   
 ## <a name="requirements"></a>要求  
- **命名空间:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](msreportserver-configurationsetting-members.md)  
   
   

@@ -20,18 +20,18 @@ ms.assetid: a1983a2e-0edf-422e-bd1b-ec5db40a34bc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9e7b079e2b66f4e1ba7b3233a6aaa20cd9908a67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68061524"
 ---
 # <a name="sqlgetinstalleddrivers-function"></a>SQLGetInstalledDrivers 函数
-**符合性**  
- 版本引入了：ODBC 1.0  
+**度**  
+ 引入的版本： ODBC 1。0  
   
- **摘要**  
- **SQLGetInstalledDrivers**读取系统信息 [ODBC Drivers] 部分，并返回已安装的驱动程序的说明的列表。  
+ **总结**  
+ **SQLGetInstalledDrivers**读取系统信息的 [ODBC 驱动程序] 部分，并返回已安装驱动程序的说明的列表。  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,32 +45,32 @@ BOOL SQLGetInstalledDrivers(
   
 ## <a name="arguments"></a>参数  
  *lpszBuf*  
- [输出]安装驱动程序的说明列表。 列表结构有关的信息，请参阅"注释"。  
+ 输出已安装驱动程序的说明的列表。 有关列表结构的详细信息，请参阅 "注释"。  
   
  *cbBufMax*  
- [输入]长度*lpszBuf*。  
+ 送*LpszBuf*的长度。  
   
  *pcbBufOut*  
- [输出]总字节数 （不包括 null 终止字节） 中返回*lpszBuf*。 可用来返回的字节数是否大于或等于*cbBufMax*，驱动程序中的说明的列表*lpszBuf*将被截断为*cbBufMax*减null 终止字符。 *PcbBufOut*参数可以是 null 指针。  
+ 输出在*lpszBuf*中返回的总字节数（不包括 null 终止字节数）。 如果可返回的字节数大于或等于*cbBufMax*，则*lpszBuf*中的驱动程序说明列表将被截断为*cbBufMax*减 null 终止字符。 *PcbBufOut*参数可以为 null 指针。  
   
 ## <a name="returns"></a>返回  
- 如果成功，则返回 FALSE 出现故障时，该函数返回 TRUE。  
+ 如果此函数成功，则返回 TRUE，否则返回 FALSE。  
   
 ## <a name="diagnostics"></a>诊断  
- 当**SQLGetInstalledDrivers**返回 FALSE，关联 *\*pfErrorCode*可以通过调用获取的值**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以返回的值**SQLInstallerError** ，并解释了此函数的每个上下文中。  
+ 当**SQLGetInstalledDrivers**返回 FALSE 时，可以* \** 通过调用**SQLInstallerError**获取关联的 pfErrorCode 值。 下表列出了可由**SQLInstallerError**返回的* \*pfErrorCode*值，并说明了此函数的上下文中的每个值。  
   
-|*\*pfErrorCode*|Error|描述|  
+|*\*pfErrorCode*|错误|说明|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|常规安装程序错误|出错的其中没有特定的安装程序错误。|  
-|ODBC_ERROR_INVALID_BUFF_LEN|无效缓冲区长度|*LpszBuf*参数为 NULL 或无效，或*cbBufMax*参数为小于或等于 0。|  
-|ODBC_ERROR_COMPONENT_NOT_FOUND|在注册表中找不到组件|安装程序找不到注册表中的 [ODBC Drivers] 部分。|  
-|ODBC_ERROR_OUT_OF_MEM|内存不足|由于内存不足，安装程序无法执行该函数。|  
+|ODBC_ERROR_GENERAL_ERR|常规安装程序错误|出现错误，但没有特定的安装程序错误。|  
+|ODBC_ERROR_INVALID_BUFF_LEN|缓冲区长度无效|*LpszBuf*参数为 NULL 或无效，或者*cbBufMax*参数小于或等于0。|  
+|ODBC_ERROR_COMPONENT_NOT_FOUND|在注册表中找不到组件|安装程序无法在注册表中找到 [ODBC 驱动程序] 部分。|  
+|ODBC_ERROR_OUT_OF_MEM|内存不足|由于内存不足，安装程序无法执行此功能。|  
   
 ## <a name="comments"></a>注释  
- 每个驱动程序的描述终止 null 字节，并且整个列表终止 null 字节。 （也就是说，两个 null 字节标记列表的末尾。）如果分配的缓冲区不足够大以保存整个列表，列表将被截断不会出错。 如果作为传入 null 指针，则返回错误*lpszBuf*。  
+ 每个驱动程序说明都以 null 字节结束，整个列表以 null 字节结束。 （也就是说，两个 null 字节标记列表的末尾。）如果分配的缓冲区不够大，无法保存整个列表，则列表会被截断，并且不会出错。 如果将 null 指针作为*lpszBuf*传入，将返回错误。  
   
 ## <a name="related-functions"></a>相关函数  
   
-|有关信息|请参阅|  
+|有关以下方面的信息|请参阅|  
 |---------------------------|---------|  
 |返回驱动程序说明和属性|[SQLDrivers](../../../odbc/reference/syntax/sqldrivers-function.md)|

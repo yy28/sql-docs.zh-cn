@@ -1,5 +1,5 @@
 ---
-title: sys.fn_cdc_is_bit_set (TRANSACT-SQL) |Microsoft Docs
+title: sys. fn_cdc_is_bit_set （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,18 +21,18 @@ ms.assetid: 792fe7cf-b3b8-4f25-8329-78d63f0e6921
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7d14e4e85d6ee52955ba17f42d288e0c770a183a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046351"
 ---
-# <a name="sysfncdcisbitset-transact-sql"></a>sys.fn_cdc_is_bit_set (Transact-SQL)
+# <a name="sysfn_cdc_is_bit_set-transact-sql"></a>sys.fn_cdc_is_bit_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   指示捕获的列是否已更新，采用的方法是检查是否在提供的位掩码内设置了其序号位置。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,19 +42,19 @@ sys.fn_cdc_is_bit_set ( position , update_mask )
 ```  
   
 ## <a name="arguments"></a>参数  
- *position*  
- 掩码中要检查的序号位置。 *位置*是**int**。  
+ *置于*  
+ 掩码中要检查的序号位置。 *位置*为**int**。  
   
  *update_mask*  
- 标识已更新列的掩码。 *update_mask*是**varbinary(128)** 。  
+ 标识已更新列的掩码。 *update_mask*为**varbinary （128）**。  
   
 ## <a name="return-type"></a>返回类型  
  **bit**  
   
 ## <a name="remarks"></a>备注  
- 此函数通常用在变更数据查询中，指示列是否已更改。 在此方案中，该函数[sys.fn_cdc_get_column_ordinal](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md)之前查询中使用以获取所需的列序号。 **sys.fn_cdc_is_bit_set**然后应用到返回，提供特定于列的信息作为返回的结果集的一部分的变更数据的每一行。  
+ 此函数通常用在变更数据查询中，指示列是否已更改。 在此方案中，函数[fn_cdc_get_column_ordinal sys.databases](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md)在查询之前使用，以获取所需的列序号。 然后，将**fn_cdc_is_bit_set**应用到返回的每行更改数据，并提供特定于列的信息作为返回的结果集的一部分。  
   
- 我们建议使用此函数而不函数[sys.fn_cdc_has_column_changed](../../relational-databases/system-functions/sys-fn-cdc-has-column-changed-transact-sql.md)确定列是否已更改的所有行的返回的结果集时。  
+ 在确定是否为返回的结果集的所有行更改了列时，我们建议使用此函数，而不是函数[sys.databases fn_cdc_has_column_changed。](../../relational-databases/system-functions/sys-fn-cdc-has-column-changed-transact-sql.md)  
   
 ## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
@@ -76,12 +76,12 @@ WHERE __$operation = 4;
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [变更数据捕获函数 (Transact-SQL)](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)   
- [sys.fn_cdc_get_column_ordinal &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md)   
- [sys.fn_cdc_has_column_changed &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-has-column-changed-transact-sql.md)   
- [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
- [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
+ [sys. fn_cdc_get_column_ordinal &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md)   
+ [sys. fn_cdc_has_column_changed &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-has-column-changed-transact-sql.md)   
+ [fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
+ [fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
  [关于变更数据捕获 (SQL Server)](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   
   

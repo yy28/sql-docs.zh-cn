@@ -52,10 +52,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: af164d4db9b6439f0634d113652b95939827b0f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105861"
 ---
 # <a name="formatting-a-chart-report-builder-and-ssrs"></a>设置图表格式（报表生成器和 SSRS）
@@ -87,7 +87,7 @@ ms.locfileid: "66105861"
  [向图表添加边框（报表生成器和 SSRS）](add-a-border-frame-to-a-chart-report-builder-and-ssrs.md)  
  说明如何向图表添加边框。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   
  [向图表添加边框（报表生成器和 SSRS）](add-a-border-frame-to-a-chart-report-builder-and-ssrs.md)   
  [使用调色板定义图表上的颜色（报表生成器和 SSRS）](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   

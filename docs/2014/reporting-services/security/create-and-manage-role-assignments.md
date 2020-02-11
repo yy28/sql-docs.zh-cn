@@ -17,14 +17,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eed9b1a0deb7e88c85283ea3dc7cab9bf893937f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102001"
 ---
 # <a name="create-and-manage-role-assignments"></a>创建和管理角色分配
-  “  角色分配”是确定用户或组是否可以访问特定报表服务器项或执行操作的安全策略。 角色分配由单个用户帐户名或组帐户名以及一个或多个角色定义组成。  
+  “ ** 角色分配”是确定用户或组是否可以访问特定报表服务器项或执行操作的安全策略。 角色分配由单个用户帐户名或组帐户名以及一个或多个角色定义组成。  
   
  角色分配的作用域为“  项级”或“  系统级”。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66102001"
   
  您必须是报表服务器计算机上的本地管理员组的成员，才能创建角色分配。 您可以通过将其他用户分配给  内容管理员角色来委托该责任。  
   
- 有关详细信息，请参阅 [授予用户对报表服务器的访问权限（报表管理器）](grant-user-access-to-a-report-server.md)。  
+ 有关详细信息，请参阅[授予用户对报表服务器的访问权限 &#40;报表管理器&#41;](grant-user-access-to-a-report-server.md)。  
   
 ## <a name="creating-a-system-level-role-assignment"></a>创建系统级角色分配  
  若要创建或管理系统级角色分配，请使用报表管理器，打开“站点设置”页。  
@@ -62,9 +62,9 @@ ms.locfileid: "66102001"
 ## <a name="deleting-a-role-assignment"></a>删除角色分配  
  若要删除角色分配，请选择要删除的每个角色分配旁边的复选框，然后单击 **“删除”** 。 另一种删除角色分配的方法是单击 **“恢复到父级安全设置”** 。 当单击此按钮后，将删除项的现有角色分配，并改用通过父项提供的角色分配。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [授予用户对报表服务器的访问权限（报表管理器）](grant-user-access-to-a-report-server.md)   
- [修改或删除角色分配（报表管理器）](role-assignments-modify-or-delete.md)   
+ [修改或删除角色分配 &#40;报表管理器&#41;](role-assignments-modify-or-delete.md)   
  [角色分配](role-assignments.md)   
  [角色定义](role-definitions.md)   
  [预定义角色](role-definitions-predefined-roles.md)   

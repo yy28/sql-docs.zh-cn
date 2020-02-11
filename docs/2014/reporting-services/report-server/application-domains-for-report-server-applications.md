@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3d7d2545cf22d17e947e29c7fe9963bc8ffa616
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104232"
 ---
 # <a name="application-domains-for-report-server-applications"></a>报表服务器应用程序的应用程序域
@@ -32,18 +32,23 @@ ms.locfileid: "66104232"
   
 -   报表服务器上的配置更改。  
   
--   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 配置更改。  
+-   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]配置更改。  
   
 -   内存分配失败。  
   
  下表总结了为响应这些事件而发生的应用程序域回收行为：  
   
-|Event|事件说明|适用对象|可配置|回收操作说明|  
+|事件|事件说明|适用于|可配置性|回收操作说明|  
 |-----------|-----------------------|----------------|------------------|-----------------------------------|  
-|以预定义的时间间隔执行的计划回收操作|默认情况下，应用程序域每 12 个小时回收一次。<br /><br /> 对于提升了总体进程运行状况的 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 应用程序来说，计划的回收操作是通常的做法。|报表服务器 Web 服务<br /><br /> 报表管理器<br /><br /> 后台处理应用程序|是。 RSReportServer.config 文件中的 `RecycleTime` 配置设置可以确定回收时间间隔。<br /><br /> `MaxAppDomainUnloadTime` 设置了能够在其间完成后台处理的等待时间。|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 管理 Web 服务和报表管理器的回收操作。<br /><br /> 对于后台处理应用程序，报表服务器为那些从计划中启动的新作业创建一个新的应用程序域。 已在进行中的作业将能够在当前的应用程序域中完成，直到等待时间过期。|  
-|报表服务器上的配置更改|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将为了响应 RSReportServer.config 文件中的更改而回收应用程序域。|报表服务器 Web 服务<br /><br /> 报表管理器<br /><br /> 后台处理应用程序|否。|您不能禁止执行回收操作。 但是，为了响应配置更改而执行的回收操作将按照与计划的回收操作相同的方式进行处理。 将为新请求创建新的应用程序域，而当前的请求和作业将在当前的应用程序域中完成。|  
-|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 配置更改|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 会回收应用程序域，前提是对其所监视的文件（例如，machine.config 文件、Web.config 文件和 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 程序文件）进行了更改。|报表服务器 Web 服务<br /><br /> 报表管理器|否。|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 对该操作进行管理。<br /><br /> 由 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 启动的回收操作不会影响后台处理应用程序域。|  
-|内存不足和内存分配失败|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR 将立即回收应用程序域。|报表服务器 Web 服务<br /><br /> 报表管理器<br /><br /> 后台处理应用程序|否。|在内存严重不足时，报表服务器将不接受当前应用程序域中的新请求。 在此期间，服务器将拒绝新请求，并且会出现 HTTP 503 错误。 除非卸载旧应用程序域，否则将不创建新应用程序域。 这意味着，如果您在服务器内存严重不足时对配置文件进行更改，则正在进行的请求和作业可能无法启动或完成。<br /><br /> 如果内存分配失败，则所有的应用程序域将立即重新启动。 正在进行的作业和请求将被放弃。 您必须手动重新启动这些作业和请求。|  
+|以预定义的时间间隔执行的计划回收操作|默认情况下，应用程序域每 12 个小时回收一次。<br /><br /> 对于提升了总体进程运行状况的 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 应用程序来说，计划的回收操作是通常的做法。|报表服务器 Web 服务<br /><br /> 报表管理器<br /><br /> 后台处理应用程序|是的。 RSReportServer.config 文件中的 `RecycleTime` 配置设置可以确定回收时间间隔。<br /><br /> 
+  `MaxAppDomainUnloadTime` 设置了能够在其间完成后台处理的等待时间。|
+  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 管理 Web 服务和报表管理器的回收操作。<br /><br /> 对于后台处理应用程序，报表服务器为那些从计划中启动的新作业创建一个新的应用程序域。 已在进行中的作业将能够在当前的应用程序域中完成，直到等待时间过期。|  
+|报表服务器上的配置更改|
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将为了响应 RSReportServer.config 文件中的更改而回收应用程序域。|报表服务器 Web 服务<br /><br /> 报表管理器<br /><br /> 后台处理应用程序|不是。|您不能禁止执行回收操作。 但是，为了响应配置更改而执行的回收操作将按照与计划的回收操作相同的方式进行处理。 将为新请求创建新的应用程序域，而当前的请求和作业将在当前的应用程序域中完成。|  
+|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]配置更改|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]如果对所监视的文件（例如，machine.config 和 web.config 文件以及[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]程序文件）进行了更改，则将回收应用程序域。|报表服务器 Web 服务<br /><br /> 报表管理器|不是。|
+  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 对该操作进行管理。<br /><br /> 由 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 启动的回收操作不会影响后台处理应用程序域。|  
+|内存不足和内存分配失败|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR 将立即回收应用程序域。|报表服务器 Web 服务<br /><br /> 报表管理器<br /><br /> 后台处理应用程序|不是。|在内存严重不足时，报表服务器将不接受当前应用程序域中的新请求。 在此期间，服务器将拒绝新请求，并且会出现 HTTP 503 错误。 除非卸载旧应用程序域，否则将不创建新应用程序域。 这意味着，如果您在服务器内存严重不足时对配置文件进行更改，则正在进行的请求和作业可能无法启动或完成。<br /><br /> 如果内存分配失败，则所有的应用程序域将立即重新启动。 正在进行的作业和请求将被放弃。 您必须手动重新启动这些作业和请求。|  
   
 ## <a name="planned-and-unplanned-recycle-operations"></a>计划内和计划外回收操作  
  根据导致回收操作的条件，回收操作可以是计划内操作或计划外操作：  
@@ -58,7 +63,8 @@ ms.locfileid: "66104232"
   
  报表服务器 Web 服务、报表管理器和后台处理应用程序的应用程序域可以在一起回收，也可以单独回收，具体取决于导致进行回收的情况：  
   
--   启动的回收操作[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]只会影响[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)][!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]应用程序：报表服务器 Web 服务和报表管理器。 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 将会根据其所监视的文件是否发生了更改来回收应用程序域。 由 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 启动的回收操作通常独立于后台处理应用程序的回收操作。  
+-   由启动的[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]回收操作只[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]会影响应用程序：报表服务器 Web 服务和报表管理器。 
+  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 将会根据其所监视的文件是否发生了更改来回收应用程序域。 由 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 启动的回收操作通常独立于后台处理应用程序的回收操作。  
   
 -   由报表服务器执行的回收操作通常会影响报表服务器 Web 服务、报表管理器和后台处理应用程序。 回收操作是为了响应配置设置更改和服务重新启动而执行的。  
   
@@ -71,7 +77,7 @@ ms.locfileid: "66104232"
   
  下表对这些元素进行了说明。  
   
-|元素|适用对象|定义|  
+|元素|适用于|定义|  
 |-------------|----------------|----------------|  
 |`RecycleTime`|所有三个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序域|指定应用程序域的回收频率。 默认回收计划遵循通常用于 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 应用程序域回收的 12 小时制模式。 在计划的时间，所有的新请求都将转发到新的应用程序域实例。 原始实例中当前正在处理的请求能够完成。 一旦完成所有进程，就会删除原始实例，新的实例将成为唯一的活动应用程序域实例。<br /><br /> 默认值为 720 分钟。|  
 |`MaxAppDomainUnloadTime`|仅限后台处理应用程序域|默认情况下，报表服务器分配的等待时间为 30 分钟，这是在回收操作期间允许应用程序域关闭的时间。 如果在所分配的时间内无法完成当前正在处理的作业（或者某个作业的所用时间比允许的等待时间长），则会立即重新启动应用程序域实例。 所有未完成的作业都将终止。<br /><br /> 有关如何查看状态或取消报表服务器上所运行作业的详细信息，请参阅[取消报表服务器作业 (Management Studio)](../tools/cancel-report-server-jobs-management-studio.md)。|  
@@ -79,9 +85,9 @@ ms.locfileid: "66104232"
 > [!NOTE]  
 >  尽管报表服务器 Web 服务和报表管理器是 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 应用程序，但是，这两个应用程序都不响应可能已在 machine.config 中为 IIS 中所承载的 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 应用程序指定的计划应用程序域回收。  
   
-## <a name="see-also"></a>请参阅  
- [RSReportServer 配置文件](rsreportserver-config-configuration-file.md)   
- [修改 Reporting Services 配置文件 (RSreportserver.config)](modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+## <a name="see-also"></a>另请参阅  
+ [Rsreportserver.config 配置文件](rsreportserver-config-configuration-file.md)   
+ [&#40;Rsreportserver.config 修改 Reporting Services 配置文件&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [为报表服务器应用程序配置可用内存](../report-server/configure-available-memory-for-report-server-applications.md)  
   
   

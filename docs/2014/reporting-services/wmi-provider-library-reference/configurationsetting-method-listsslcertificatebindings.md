@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0a2a33d7aa992fd434b29fd519c805f57b2b46fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098362"
 ---
-# <a name="listsslcertificatebindings-method-wmi-msreportserverconfigurationsetting"></a>ListSSLCertificateBindings 方法 (WMI MSReportServer_ConfigurationSetting)
+# <a name="listsslcertificatebindings-method-wmi-msreportserver_configurationsetting"></a>ListSSLCertificateBindings 方法 (WMI MSReportServer_ConfigurationSetting)
   返回计算机上已安装的 SSL 证书的列表。  
   
 ## <a name="syntax"></a>语法  
@@ -38,23 +38,23 @@ public void ListSSLCertificateBindings(Int32 Lcid, out string[] Application,
     out Int32 length, out Int32 HRESULT);  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>parameters  
  *LCID*  
  用于返回的错误消息的区域设置。  
   
- *Application[]*  
+ *Application []*  
  [out] 具有证书绑定的应用程序。  
   
  *CertificateHash[]*  
  [out] 证书的哈希。  
   
- *IPAddress[]*  
+ *IPAddress []*  
  [out] 应用程序的 IP 地址。  
   
- *Port[]*  
+ *端口 []*  
  [out] 存储在 rsreportserver.config 中的绑定中的端口号。  
   
- *Errors[]*  
+ *错误 []*  
  [out] 发生的错误的说明。  
   
  *长度*  
@@ -69,9 +69,9 @@ public void ListSSLCertificateBindings(Int32 Lcid, out string[] Application,
 ## <a name="remarks"></a>备注  
   
 ## <a name="requirements"></a>要求  
- **命名空间:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](msreportserver-configurationsetting-members.md)  
   
   

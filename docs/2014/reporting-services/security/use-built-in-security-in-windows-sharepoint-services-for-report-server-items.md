@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 622fbdf67d33972500a5047c3886830ba802796a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101449"
 ---
 # <a name="use-built-in-security-in-windows-sharepoint-services-for-report-server-items"></a>将 Windows SharePoint Services 中的内置安全性用于报表服务器项
@@ -27,7 +27,7 @@ ms.locfileid: "66101449"
 ## <a name="securable-items"></a>安全对象  
  对站点或库定义的权限可以用来授予对报表服务器项的访问权限。 但是，如果要确保各项的安全，您可以对以下内容类型设置权限：  
   
-|文件类型|Description|  
+|文件类型|说明|  
 |---------------|-----------------|  
 |.rdl|用来定义报表布局和数据检索命令的报表定义文件。 在处理报表时报表定义使用数据源连接信息来检索数据。 如果报表定义是在报表生成器中创建的特别报告，则该报表将与报表模型 (.smdl) 文件（设置了所呈现报表中的数据浏览的范围）成对使用。|  
 |.smdl|用来描述数据结构以及它们之间如何关联的报表模型文件。 报表模型文件用来创建和运行报表生成器报表。|  
@@ -52,7 +52,7 @@ ms.locfileid: "66101449"
   
  如果没有使用内置组和权限级别，则必须包括特定的权限才能访问 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能。 有关详细信息，请参阅 [在 SharePoint Web 应用程序中设置报表服务器操作的权限](set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在 SharePoint 站点上授予对报表服务器项的权限](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Reporting Services 中的角色和任务与 SharePoint 组和权限的比较](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [在 SharePoint Web 应用程序中设置报表服务器操作的权限](set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   

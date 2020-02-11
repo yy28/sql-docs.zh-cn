@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ec051870966a3a8cf9d2d028d80a2fc36708ba28
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106141"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>创建一个递归层次结构组（报表生成器和 SSRS）
@@ -35,7 +35,7 @@ ms.locfileid: "66106141"
   
 4.  在 **“分组方式”** 列表中，键入或选择要分组的字段。  
   
-5.  单击 **“高级”** 。  
+5.  单击“高级”。   
   
 6.  在 **“递归父级”** 列表中，输入或选择要作为分组依据的字段。  
   
@@ -50,19 +50,19 @@ ms.locfileid: "66106141"
     > [!NOTE]  
     >  如果看不到“属性”窗格，请单击“视图”选项卡上的“属性”。    
   
-2.  在属性窗格中，展开`Padding`节点中，单击**左**，然后从下拉列表中，选择 **\<表达式...>** 。  
+2.  在 "属性" 窗格中， `Padding`展开节点，单击 "**左**"，然后从下拉列表中选择** \<"表达式 ..." >**。  
   
 3.  在“表达式”窗格中，键入以下表达式：  
   
      `=CStr(2 + (Level()*10)) + "pt"`  
   
-     “填充”属性需要  nnyy 格式的字符串，其中  nn 是一个数字，而  yy 是度量单位。 该示例表达式将生成一个字符串，该字符串使用 `Level` 函数根据递归级别增加填充的大小。 例如，级别为 1 的行会产生 (2 + (1\*10))=12pt 的填充，而级别为 3 的行会产生 (2 + (3\*10))=32pt 的填充。 璝惠`Level`函数中，请参阅[级别](report-builder-functions-level-function.md)。  
+     “填充”属性需要  nnyy 格式的字符串，其中  nn 是一个数字，而  yy 是度量单位。 该示例表达式将生成一个字符串，该字符串使用 `Level` 函数根据递归级别增加填充的大小。 例如，级别为 1 的行会产生 (2 + (1\*10))=12pt 的填充，而级别为 3 的行会产生 (2 + (3\*10))=32pt 的填充。 有关`Level`函数的信息，请参阅[Level](report-builder-functions-level-function.md)。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
      运行报表。 该报表将显示分组数据的层次结构视图。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建递归层次结构组（报表生成器和 SSRS）](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
  [对数据进行筛选、分组和排序（报表生成器和 SSRS）](filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [聚合函数引用（报表生成器和 SSRS）](report-builder-functions-aggregate-functions-reference.md)   

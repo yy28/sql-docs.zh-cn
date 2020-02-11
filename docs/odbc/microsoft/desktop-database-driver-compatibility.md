@@ -18,19 +18,19 @@ ms.assetid: dd695638-1a0b-4e27-8a6a-9510ebb5a5ee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 31263162526b6bd2e0a116a473f09f9e2caeba94
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68077286"
 ---
 # <a name="desktop-database-driver-compatibility"></a>桌面数据库驱动程序兼容性
-Unicode 是一种软件字符编码的方法将所有字符视为有两个字节的固定的宽度。 此方法用作到 Windows ANSI 字符编码，即，因为它表示一个字节中的字符超过 256 个字符的替代方法。 Unicode 可表示 65,000 多个字符，因为它可以包括许多语言的字符可能不会以 ANSI 编码。  
+Unicode 是一种软件字符编码方法，将所有字符视为具有两个字节的固定宽度。 此方法用作 Windows ANSI 字符编码的替代方法，因为它表示一个字节中的字符，并且限制为256个字符。 因为 Unicode 可以表示超过65000个字符，所以它可以容纳许多语言，其字符不以 ANSI 编码表示。  
   
- ODBC 3.5 （或更高版本） 驱动程序管理器完全支持 Unicode。 这会影响两个主要领域： 函数调用，并且字符串数据类型。 驱动程序管理器映射函数的字符串参数和所需的应用程序和驱动程序的字符串数据，这两种可以是支持 Unicode 或 ANSI 已启用。  
+ ODBC 3.5 （或更高版本）驱动程序管理器启用了 Unicode。 这会影响两个主要方面：函数调用和字符串数据类型。 驱动程序管理器根据应用程序和驱动程序的需要映射函数字符串参数和字符串数据，两者都可以是启用了 Unicode 的或启用了 ANSI 的。  
   
- ODBC 3.5 （或更高版本） 驱动程序管理器支持 Unicode 驱动程序使用 Unicode 应用程序和 ANSI 应用程序的使用。 它还支持使用 ANSI 应用程序的 ANSI 驱动程序使用。 驱动程序管理器提供了有限的 Unicode 到 ANSI 映射为 Unicode 应用程序使用 ANSI 驱动程序。 这允许访问的 Jet 3.5 数据库和所有现有 ISAM 文件类型的支持。  
+ ODBC 3.5 （或更高版本）驱动程序管理器支持使用 unicode 驱动程序和 Unicode 应用程序。 它还支持将 ANSI 驱动程序与 ANSI 应用程序结合使用。 驱动程序管理器为使用 ANSI 驱动程序的 Unicode 应用程序提供了有限的 Unicode 到 ANSI 的映射。 这允许访问 Jet 3.5 数据库并支持所有现有的 ISAM 文件类型。  
   
- 当 ANSI 应用程序使用 ODBC 桌面数据库驱动程序 4.0 和访问 Microsoft 访问 4.0 或更高版本，该驱动程序的数据类型将作为公开 SQL_CHAR、 SQL_VARCHAR 或 SQL_LONGVARCHAR 即使 Jet 4.0 支持宽版本。 SQL_WCHAR、 SQL_WVARCHAR 和 SQL_WLONGVARCHAR 不支持较旧版本的 Jet。 在与 Jet 4.0 数据库引擎使用旧格式的位置的情况下，此限制也适用。  
+ 当 ANSI 应用程序使用 ODBC 桌面数据库驱动程序4.0 并访问 Microsoft Access 4.0 或更高版本时，驱动程序会将数据类型公开为 SQL_CHAR、SQL_VARCHAR 或 SQL_LONGVARCHAR，即使 Jet 4.0 支持广泛的版本。 旧版 Jet 不支持 SQL_WCHAR、SQL_WVARCHAR 和 SQL_WLONGVARCHAR。 此限制也适用于旧格式与 Jet 4.0 数据库引擎一起使用的情况。  
   
- 有关使用 ODBC Unicode 问题的详细信息，请参阅[Unicode](../../odbc/reference/develop-app/unicode.md)编程注意事项。
+ 有关 ODBC 中的 Unicode 问题的详细信息，请参阅编程注意事项中的[unicode](../../odbc/reference/develop-app/unicode.md) 。

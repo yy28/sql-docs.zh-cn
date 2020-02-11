@@ -13,17 +13,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 32176543c121e2559ab659030714924e7d23e1b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100103"
 ---
 # <a name="report-designer-f1-help"></a>报表设计器的 F1 帮助
-  本节提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表设计器向导、视图和对话框的 F1 帮助。 另外，您也可以在使用对话框时按 F1 或单击对话框中显示的“帮助”按钮来打开 F1 帮助。  
+  本部分提供了有关[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]报表设计器向导、视图和对话框的 F1 帮助。 另外，您也可以在使用对话框时按 F1 或单击对话框中显示的“帮助”按钮来打开 F1 帮助。  
   
-## <a name="see-also"></a>请参阅  
- [功能参考&#40;Reporting Services&#41;](../feature-reference-reporting-services.md)   
+## <a name="see-also"></a>另请参阅  
+ [功能参考 &#40;Reporting Services&#41;](../feature-reference-reporting-services.md)   
  [Reporting Services 报表 (SSRS)](../reports/reporting-services-reports-ssrs.md)  
   
   

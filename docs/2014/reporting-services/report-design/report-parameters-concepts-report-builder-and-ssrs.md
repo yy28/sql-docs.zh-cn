@@ -1,5 +1,5 @@
 ---
-title: 报表参数概念 （报表生成器和 SSRS） |Microsoft Docs
+title: 报表参数概念（报表生成器和 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 70bb740b9f5948d077f0336e7e7bc14ed9902941
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105074"
 ---
 # <a name="report-parameters-concept-report-builder-and-ssrs"></a>报表参数概念（报表生成器和 SSRS）
@@ -31,7 +31,7 @@ ms.locfileid: "66105074"
   
 -   手动方式：当您在“报表数据”窗格中创建报表参数时。 参数是可以在报表的表达式中包含的内置集合之一。 因为使用表达式在整个报表定义中定义值，所以您可以使用参数来控制报表外观或将值传递到相关的子报表或也使用参数的报表。  
   
- 有关详细信息，请参阅 [报表参数（报表生成器和报表设计器）](report-parameters-report-builder-and-report-designer.md)的详细信息。  
+ 有关详细信息，请参阅[报表参数 &#40;报表生成器和报表设计器&#41;](report-parameters-report-builder-and-report-designer.md)。  
   
  经常使用参数在将数据返回到报表之前和之后筛选报表数据。 有关详细信息，请参阅 [对数据进行筛选、分组和排序（报表生成器和 SSRS）](filter-group-and-sort-data-report-builder-and-ssrs.md)。  
   
@@ -43,8 +43,8 @@ ms.locfileid: "66105074"
   
  如果您计划为发布的报表创建报表快照、历史记录或订阅，则必须了解报表参数如何影响报表的设计需求。  
   
-## <a name="see-also"></a>请参阅  
- [报表创作概念（报表生成器和 SSRS）](report-authoring-concepts-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>另请参阅  
+ [报表创作概念 &#40;报表生成器和 SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
  [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [教程：向报表添加参数（报表生成器）](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
   

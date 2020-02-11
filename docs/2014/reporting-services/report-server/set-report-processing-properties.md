@@ -18,16 +18,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a793fa513ef13c9cafc210a411971a0363f5976d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103241"
 ---
 # <a name="set-report-processing-properties"></a>设置报表处理属性
   报表执行属性控制报表的处理方式。 必须为每个报表分别设置执行属性。  
   
- 若要设置报表执行属性，请在报表管理器中打开报表，再导航到“执行”属性页。 此外，还可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]来设置属性。 有关详细信息，请参阅[“处理选项”属性页（报表管理器）](../processing-options-properties-page-report-manager.md)。  
+ 若要设置报表执行属性，请在报表管理器中打开报表，再导航到“执行”属性页。 你还可以使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]来设置属性。 有关详细信息，请参阅[“处理选项”属性页（报表管理器）](../processing-options-properties-page-report-manager.md)。  
   
 ## <a name="report-execution-modes"></a>报表执行模式  
  您既可以按需运行报表，也可以按快照形式运行报表。 以下部分介绍了各种运行方法。  
@@ -55,11 +55,11 @@ ms.locfileid: "66103241"
   
  如果存在以上条件，则报表服务器将在订阅的下次计划运行时间禁用此订阅。 若要重新激活订阅，请打开订阅，再进行保存。 打开订阅后，报表服务器会将订阅参数值更新成为快照指定的参数值。 有关订阅的详细信息，请参阅[订阅和传递 (Reporting Services)](../subscriptions/subscriptions-and-delivery-reporting-services.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [设置处理选项（SharePoint 集成模式下的 Reporting Services）](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
- [配置报表的执行属性（报表管理器）](../reports/configure-execution-properties-for-a-report-report-manager.md)   
+ [配置报表 &#40;的执行属性报表管理器&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
  [Reporting Services 概念 (SSRS)](../reporting-services-concepts-ssrs.md)   
- [如何：向报表历史记录添加快照](add-a-snapshot-to-report-history-report-manager.md)   
+ [如何向报表历史记录添加快照](add-a-snapshot-to-report-history-report-manager.md)   
  [为报表数据源指定凭据和连接信息](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

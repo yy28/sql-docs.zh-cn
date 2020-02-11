@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bdd38b66a62b3d839f89f078904f7a3a9cc82d66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098168"
 ---
-# <a name="removeurl-method-wmi-msreportserverconfigurationsetting"></a>RemoveURL 方法 (WMI MSReportServer_ConfigurationSetting)
+# <a name="removeurl-method-wmi-msreportserver_configurationsetting"></a>RemoveURL 方法 (WMI MSReportServer_ConfigurationSetting)
   删除为报表服务器保留的 URL。 如果需要删除多个 URL，则必须逐个调用此 API 来完成操作。  
   
 ## <a name="syntax"></a>语法  
@@ -35,8 +35,8 @@ public void RemoveURL(string Application, string UrlString, int Lcid,
     out string Error, out int HRESULT);  
 ```  
   
-## <a name="parameters"></a>Parameters  
- *应用程序*  
+## <a name="parameters"></a>parameters  
+ *Application*  
  要为其删除预留的应用程序的名称。  
   
  *URLString*  
@@ -55,7 +55,7 @@ public void RemoveURL(string Application, string UrlString, int Lcid,
  返回 *HRESULT* ，指示方法调用是成功还是失败。 值 0 指示方法调用已成功；错误代码指示调用未成功。  
   
 ## <a name="remarks"></a>备注  
- UrlString 不包括虚拟目录名 - [SetVirtualDirectory 方法 (WMI MSReportServer_ConfigurationSetting)](configurationsetting-method-setvirtualdirectory.md) 是为实现该目的所提供的方法  。  
+ *UrlString*不包括虚拟目录名称-为该目的提供[&#41;方法 &#40;WMI MSReportServer_ConfigurationSetting 的 SetVirtualDirectory 方法](configurationsetting-method-setvirtualdirectory.md)。  
   
  在调用 [ReserveURL](configurationsetting-method-reserveurl.md) 方法之前，必须为 *Application* 参数的 VirtualDirectory 配置属性提供一个值。 使用 [SetVirtualDirectory 方法 (WMI MSReportServer_ConfigurationSetting )](configurationsetting-method-setvirtualdirectory.md) 方法设置 VirtualDirectory 属性。  
   
@@ -64,9 +64,9 @@ public void RemoveURL(string Application, string UrlString, int Lcid,
  此方法会导致所有非配置应用程序域在执行此操作时进行硬回收并停止；应用程序域将在此操作完成后重新启动。  
   
 ## <a name="requirements"></a>要求  
- **命名空间:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](msreportserver-configurationsetting-members.md)  
   
   

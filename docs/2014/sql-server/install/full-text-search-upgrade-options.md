@@ -14,21 +14,21 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 575105d61446f2fd272e4087457e7762c1abb2e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66095088"
 ---
 # <a name="full-text-search-upgrade-options"></a>全文搜索升级选项
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导的“全文搜索升级选项”页选择用于此时要升级的数据库的全文搜索升级选项。  
   
- 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中，每个全文检索都驻留在属于文件组的全文目录中，它们均具有物理路径，并被视为数据库文件。 现在，全文目录是一个逻辑概念的虚拟对象的是指一组全文索引。 因此，新的全文目录不会视为带有物理路径的数据库文件。 但是，在升级包含数据文件的所有全文目录期间，将在相同磁盘上创建新的文件组。 这可以在升级后维护旧磁盘的 I/O 行为。 该目录的所有全文检索均被放置到新的文件组中（如果存在根路径）。 如果旧的全文目录路径无效，该升级则将全文检索保留在与基表相同的文件组中，或者保留在主文件组中（对于分区表）。  
+ 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中，每个全文检索都驻留在属于文件组的全文目录中，它们均具有物理路径，并被视为数据库文件。 现在，全文目录是一个逻辑概念，即一个虚拟对象，引用一组全文索引。 因此，新的全文目录不会视为带有物理路径的数据库文件。 但是，在升级包含数据文件的所有全文目录期间，将在相同磁盘上创建新的文件组。 这可以在升级后维护旧磁盘的 I/O 行为。 该目录的所有全文检索均被放置到新的文件组中（如果存在根路径）。 如果旧的全文目录路径无效，该升级则将全文检索保留在与基表相同的文件组中，或者保留在主文件组中（对于分区表）。  
   
 ## <a name="options"></a>选项  
  升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]时，请选择下列全文升级选项之一。  
   
- **导入**  
+ **Import**  
  导入全文目录。 一般情况下，导入速度比重新生成速度要快很多。 例如，当仅使用一个 CPU 时，导入的运行速度比重新生成要快 10 倍左右。 不过，从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 导入的全文目录不能使用新的和增强的断字符，因此最终可能还是要重新生成全文目录。  
   
 > [!NOTE]  
@@ -38,7 +38,7 @@ ms.locfileid: "66095088"
   
  有关导入全文检索的影响的信息，请参阅本主题后面的“有关选择全文升级选项的注意事项”。  
   
- **Rebuild**  
+ **过程**  
  使用新的和增强的断字符重新生成全文目录。 重新生成索引可能需要许多时间，且升级后可能需要占用大量的 CPU 和内存。  
   
  **重置**  
@@ -51,7 +51,8 @@ ms.locfileid: "66095088"
   
 -   如何使用断字符？  
   
-     [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的全文搜索服务包括断字符和词干分析器。 这可能更改 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中特定文本模式或方案的全文查询结果。 因此，在选择适当的升级选项时，如何使用断字符非常重要：  
+     
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的全文搜索服务包括断字符和词干分析器。 这可能更改 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中特定文本模式或方案的全文查询结果。 因此，在选择适当的升级选项时，如何使用断字符非常重要：  
   
     -   如果使用的全文语言的断字符未发生更改，或者撤回准确性对您来说并不重要，则适合导入。 随后，如果遇到任何撤回问题，您只需通过重新生成全文目录即可升级到新的断字符。  
   

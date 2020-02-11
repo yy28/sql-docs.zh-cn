@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fdbca5818e3430c0445444f3fb98b426e5f8a79c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103213"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>为报表和共享数据集处理设置超时值 (SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "66103213"
   
 -   报表执行超时值，即在停止前报表可持续处理的最大秒数。 此值在系统级定义。 可以针对不同的报表采用不同的设置。  
   
- 大多数超时错误出现在查询处理期间。 如果遇到超时错误，请尝试增大查询超时值。 确保将报表执行超时值调整为比查询超时值更大的值。时间段必须足以完成查询和报表处理。  
+ 大多数超时错误出现在查询处理期间。 如果遇到超时错误，请尝试增大查询超时值。 请确保将报表执行超时值调整为大于查询超时值。时间段应该足以完成查询和报表处理。  
   
 ## <a name="setting-a-query-time-out-for-an-embedded-dataset-in-a-report"></a>为报表中的嵌入数据集设置查询超时值  
  查询超时值是在创作报表过程中在定义嵌入数据集时指定的。 该超时值随报表一起存储，它存储在报表定义的 `Timeout` 元素中。 默认情况下，此值设置为 30 秒。 有关详细信息，请参阅 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
@@ -54,9 +54,9 @@ ms.locfileid: "66103213"
 > [!NOTE]  
 >  可以在 RSReportServer.config 文件中设置 `RunningRequestsDbCycle` 设置，以更改计算正在运行的作业的频率。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [设置处理选项（SharePoint 集成模式下的 Reporting Services）](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
- [Reporting Services 报表服务器（本机模式）](reporting-services-report-server-native-mode.md)   
+ [Reporting Services 报表服务器 &#40;本机模式&#41;](reporting-services-report-server-native-mode.md)   
  [管理运行中的进程](../subscriptions/manage-a-running-process.md)   
  [报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)  
   

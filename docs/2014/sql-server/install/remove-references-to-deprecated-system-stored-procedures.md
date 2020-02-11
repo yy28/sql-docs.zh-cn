@@ -1,5 +1,5 @@
 ---
-title: 删除对不推荐使用的系统存储过程引用 |Microsoft Docs
+title: 删除对不推荐使用的系统存储过程的引用 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2e841956adf08f9ac14a3f1360839e9132bf9cd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093106"
 ---
 # <a name="remove-references-to-deprecated-system-stored-procedures"></a>删除对不推荐使用的系统存储过程的引用
@@ -26,7 +26,7 @@ ms.locfileid: "66093106"
 ## <a name="component"></a>组件  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>说明  
   
 ### <a name="documented-system-stored-procedures"></a>已记录的系统存储过程  
  以下已记录的系统存储过程已被删除：  
@@ -101,8 +101,8 @@ ms.locfileid: "66093106"
 ### <a name="undocmented-system-stored-procedures"></a>Undocmented 系统存储过程  
  可创建具有等效功能的 CLR 存储过程来替换未记录的系统存储过程。 有关详细信息，请参阅 SQL Server 联机丛书中的“CLR 存储过程”。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库引擎升级问题](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 升级顾问&#91;新&#93;](sql-server-2014-upgrade-advisor.md)  
+ [SQL Server 2014 升级顾问 &#91;新&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

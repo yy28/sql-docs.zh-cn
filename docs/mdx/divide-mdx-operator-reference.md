@@ -1,5 +1,5 @@
 ---
-title: （除）(MDX) |Microsoft Docs
+title: 拆分（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,13 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8dd20a0b60e105ac48a54d533055717e3f07a006
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68049326"
 ---
-# <a name="divide---mdx-operator-reference"></a>除-MDX 运算符参考
+# <a name="divide---mdx-operator-reference"></a>除 MDX 运算符引用
 
 
   执行算术运算，将一个数除以另一个数。  
@@ -27,7 +27,7 @@ ms.locfileid: "68049326"
 Dividend / Divisor  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *被除数*  
  返回数值的有效多维表达式 (MDX) 表达式。  
   
@@ -38,9 +38,9 @@ Dividend / Divisor
  具有与优先级较高的参数相同的数据类型的值。  
   
 ## <a name="remarks"></a>备注  
- 返回的实际值 **/ （除）** 运算符所得的第一个表达式除以第二个表达式。  
+ **/（除）** 运算符返回的实际值表示第一个表达式除以第二个表达式所得的商。  
   
- 两个表达式必须具有相同的数据类型，或者其中一个表达式必须能够隐式转换为另一个表达式的数据类型。 如果*除数*计算结果为 null 值，该运算符将会出现错误。 如果这两个*除数*并*被除数*计算结果为 null 的值，该运算符将返回 null 值。  
+ 两个表达式必须具有相同的数据类型，或者其中一个表达式必须能够隐式转换为另一个表达式的数据类型。 如果*除数*的计算结果为 null 值，则该运算符将引发错误。 如果*除数*和被*除数*的计算结果均为 null 值，则该运算符将返回 null 值。  
   
 ## <a name="examples"></a>示例  
  下面的示例演示了此运算符的用法。  
@@ -98,8 +98,8 @@ WHERE
   
  `WHERE([Date].[Calendar].[Calendar Year].&[2001])`  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IIf &#40;MDX&#41;](../mdx/iif-mdx.md)   
- [MDX 运算符参考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [Mdx 运算符引用 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

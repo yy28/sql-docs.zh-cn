@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ecd7088b9fe76b955cc40dd495d508878b9d0d96
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105345"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>呈现报表项（报表生成器和 SSRS）
@@ -79,11 +79,11 @@ ms.locfileid: "66105345"
   
      表头优先于表尾。 内部重复的组优先于外部组。 如果项设置了 `RepeatWith` 属性且距离目标数据区域较近，则这些项优先于距离数据区域较远的项。  
   
--   小型报表项，例如文本框或矩形，其显式 KeepTogether 属性设置为`true`。  
+-   小报表项（例如文本框或矩形），其显式保持的属性设置为`true`。  
   
--   大型报表项，例如子报表或非最内部的 tablix 成员，其显式 KeepTogether 属性设置为`true`。  
+-   大型报表项（例如子报表或非最内部的 tablix 成员），其显式保持的属性设置`true`为。  
   
--   Tablix 数据区域，其显式 KeepTogether 属性设置为`true`。  
+-   Tablix 数据区域，其显式保持和属性均`true`设置为。  
   
 ### <a name="subreports"></a>子报表  
  子报表呈现为一个包含在单独的报表 .rdl 文件中定义的另一报表的矩形。 子报表文件必须先发布到报表服务器，之后才能由父报表进行访问。  
@@ -104,7 +104,7 @@ ms.locfileid: "66105345"
   
  有关子报表的详细信息，请参阅[子报表（报表生成器和 SSRS）](subreports-report-builder-and-ssrs.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Reporting Services 中的分页（报表生成器和 SSRS）](pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [呈现行为（报表生成器和 SSRS）](rendering-behaviors-report-builder-and-ssrs.md)   
  [不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   

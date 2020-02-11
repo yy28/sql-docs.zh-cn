@@ -14,19 +14,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 48dca8e9ce522f2520521441b2e7eea349ff099b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66096439"
 ---
 # <a name="cluster-network-configuration"></a>群集网络配置
   使用 **“群集网络选择”** 页可为故障转移群集实例指定网络资源。  
   
 ## <a name="options"></a>选项  
- **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集网络名称** - 此名称用于在网络上标识你的故障转移群集实例。  
+ **故障转移群集网络名称-这是用于在网络上标识故障转移群集实例的名称。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **  
   
- **网络设置** - 指定故障转移群集实例的 IP 类型和 IP 地址。  
+ **网络设置**-指定故障转移群集实例的 ip 类型和 ip 地址。  
   
  在“添加节点”和“删除节点”操作期间， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集的现有 IP 地址的只读列表。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66096439"
   
     -   如果您要添加一个节点，此节点支持其他网络子网，但不支持由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集中的现有节点支持的子网，则您需要添加其他 IP 地址。 IP 地址资源依赖关系设置为 OR，以反映指定的所有 IP 地址并非在所有群集节点上都有效。  
   
--   高级的安装：在完整安装的步骤中，指定的所有节点的 IP 地址和子网故障转移群集实例。 您可以为一个多子网故障转移群集指定多个 IP 地址，但每个子网只支持一个 IP 地址。 准备好的每个节点应至少是一个 IP 地址的所有者。 如果您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集中有多个子网，系统将提示您将 IP 地址资源依赖关系设置为 OR。删除节点：  
+-   高级安装：在安装过程的“完成”步骤中，为故障转移群集实例的所有节点和子网指定 IP 地址。 您可以为一个多子网故障转移群集指定多个 IP 地址，但每个子网只支持一个 IP 地址。 准备好的每个节点应至少是一个 IP 地址的所有者。 如果您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集中有多个子网，系统将提示您将 IP 地址资源依赖关系设置为 OR。删除节点：  
   
     -   如果在所有剩余节点上都支持剩下的 IP 地址，系统会提示您将 IP 地址资源依赖关系设置为 AND。  
   

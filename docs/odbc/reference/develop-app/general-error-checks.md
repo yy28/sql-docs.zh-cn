@@ -15,11 +15,11 @@ ms.assetid: 0c9a3425-0a7c-48de-9ff6-73601c26283e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f6b7c37febee411571b8ac8316d3800912e35758
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68069917"
 ---
 # <a name="general-error-checks"></a>常规错误检查
-驱动程序管理器检查一个常规错误。 它始终返回 SQL_ERROR 时遇到以下错误：该函数必须由驱动程序支持。
+驱动程序管理器会检查一个常见错误。 它在遇到以下错误时始终返回 SQL_ERROR：驱动程序必须支持此函数。

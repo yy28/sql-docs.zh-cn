@@ -15,26 +15,26 @@ ms.assetid: cf229f21-6c38-4b5b-aca8-f1be0dfeb3d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 17183a7eacdc5348eea0ddcd7aee4cc493249e77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68051123"
 ---
 # <a name="escape-sequences-in-odbc"></a>ODBC 中的转义序列
-通常的 Dbms 实现的语言功能，例如外部联接和标量函数调用数。 但是，这些功能的语法往往是特定于 DBMS 的即使标准语法定义各种标准团体。 因此，ODBC 定义包含以下语言功能的标准语法的转义序列：  
+许多语言功能（例如外部联接和标量函数调用）通常由 Dbms 实现。 不过，这些功能的语法通常是特定于 DBMS 的，即使标准语法由各种标准主体定义也是如此。 因此，ODBC 定义了包含以下语言功能标准语法的转义序列：  
   
--   日期、 时间、 时间戳和日期时间间隔文本  
+-   日期、时间、时间戳和日期时间间隔文本  
   
--   标量函数，例如数字、 字符串和数据类型转换函数  
+-   标量函数，例如数字、字符串和数据类型转换函数  
   
--   喜欢谓词转义字符  
+-   LIKE 谓词转义符  
   
 -   外部联接  
   
 -   过程调用  
   
- 使用 ODBC 的转义序列是按如下所示：  
+ ODBC 使用的转义序列如下所示：  
   
 ```  
   
@@ -43,20 +43,20 @@ ms.locfileid: "68051123"
 ```  
   
 ## <a name="remarks"></a>备注  
- 转义序列进行识别和分析由驱动程序，它的转义序列替换为特定于 DBMS 的语法。 有关转义序列语法的详细信息，请参阅[ODBC 转义序列](../../../odbc/reference/appendixes/odbc-escape-sequences.md)附录 c： 驱动器中SQL 语法。  
+ 驱动程序会识别和分析转义序列，驱动程序将使用特定于 DBMS 的语法替换转义序列。 有关转义序列语法的详细信息，请参阅附录 C： SQL 语法中的[ODBC 转义序列](../../../odbc/reference/appendixes/odbc-escape-sequences.md)。  
   
 > [!NOTE]  
->  在 ODBC 2。*x*，这是标准的转义序列语法： **-(\*供应商 (** _供应商名称_ **)，产品 (** _产品名称_ **)** _扩展_  **\*)-**  
+>  在 ODBC 2 中。*x*，这是转义序列的标准语法： **--（\*供应商（** 供应_商名称_**）、产品（**_产品名称_**）**_扩展_ ** \*）--**  
 >   
->  此语法中，除了速记形式语法定义的窗体： **{** _扩展_ **}**  
+>  除了此语法以外，还定义了简写语法，格式为： **{**_extension_**}**  
 >   
->  在 ODBC 3。*x*、 转义序列的长格式已被弃用，并以独占方式使用的简写形式。  
+>  ODBC 3 中的。*x*，转义序列的长格式已被弃用，并且简写形式仅用于。  
   
- 转义序列映射到特定于 DBMS 的语法的驱动程序，因为应用程序可以使用的转义序列或特定于 DBMS 的语法。 但是，应用程序使用特定于 DBMS 的语法不是可互操作。 当使用转义序列时，应用程序应确保，SQL_ATTR_NOSCAN 语句属性处于关闭状态，它是默认情况下。 否则，转义序列将直接发送到数据源，其中它通常会导致语法错误。  
+ 由于转义序列由驱动程序映射到 DBMS 特定的语法，因此应用程序可以使用转义序列或 DBMS 特定的语法。 但是，使用特定于 DBMS 的语法的应用程序将无法互操作。 使用转义序列时，应用程序应确保已关闭 SQL_ATTR_NOSCAN 语句特性，默认情况下它是如此。 否则，转义序列将直接发送到数据源，这通常会导致语法错误。  
   
- 驱动程序支持仅这些转义序列，它们可以映射到基础语言功能。 例如，如果数据源不支持外部联接，既不将驱动程序。 若要确定支持的转义序列，应用程序调用**SQLGetTypeInfo**并**SQLGetInfo**。 有关详细信息，请参阅下一部分中，[日期、 时间和时间戳文本](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md)。  
+ 驱动程序仅支持可映射到基础语言功能的转义序列。 例如，如果数据源不支持外部联接，则这两个驱动程序都不会。 若要确定支持的转义序列，应用程序将调用**SQLGetTypeInfo**和**SQLGetInfo**。 有关详细信息，请参阅下一节、[日期、时间和时间戳文本](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md)。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [日期、时间和时间戳文本](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md)  
   

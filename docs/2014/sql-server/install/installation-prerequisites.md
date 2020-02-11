@@ -16,25 +16,25 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 98f7dd23615cf86e4c20a84eae6bc39ff6489bc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094347"
 ---
-# <a name="installation-prerequisites"></a>安装必备组件
-  为了成功安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，安装计算机上需要具有下列软件组件。 将由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序安装这些软件组件：  
+# <a name="installation-prerequisites"></a>安装先决条件
+  为了成功安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，安装计算机上需要具有下列软件组件。 将由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序安装这些软件组件：  
   
--   适用于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 所有版本的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 版本 4.0  
+-   适用于 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 所有版本的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本 4.0  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序支持文件  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装程序支持文件  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client{2}  
   
 > [!NOTE]  
 >  如果安装失败或被取消，将不会删除这些组件。 若要删除它们，请使用“控制面板”中的 **“添加或删除程序”** 。  
   
 ## <a name="options"></a>选项  
- 若要安装必备组件文件，请单击 **“安装”** 。 若要退出安装过程，请单击 **“取消”** 。  
+ 若要安装必备组件文件，请单击 **“安装”**。 若要退出安装过程，请单击 **“取消”**。  
   
   

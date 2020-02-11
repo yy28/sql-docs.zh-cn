@@ -1,5 +1,5 @@
 ---
-title: sys.dm_qn_subscriptions (TRANSACT-SQL) |Microsoft Docs
+title: sys. dm_qn_subscriptions （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,32 +19,32 @@ ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e0d725d37470f28847feb296194abd98fce9ae4a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68061923"
 ---
-# <a name="query-notifications---sysdmqnsubscriptions"></a>查询通知-sys.dm_qn_subscriptions
+# <a name="query-notifications---sysdm_qn_subscriptions"></a>查询通知-sys. dm_qn_subscriptions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   返回有关服务器中的活动查询通知订阅的信息。 可以使用此视图检查服务器或指定数据库中的活动订阅，或者检查指定服务器主体。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|订阅的 ID。|  
-|**database_id**|**int**|执行通知查询所在数据库的 ID。 该数据库存储该订阅的相关信息。|  
-|**sid**|**varbinary(85)**|创建并拥有该订阅的服务器主体的安全 ID。|  
+|**识别**|**int**|订阅的 ID。|  
+|database_id |**int**|执行通知查询所在数据库的 ID。 该数据库存储该订阅的相关信息。|  
+|**sid**|**varbinary （85）**|创建并拥有该订阅的服务器主体的安全 ID。|  
 |**object_id**|**int**|存储有关订阅参数信息的内部表的 ID。|  
-|**创建**|**datetime**|日期和时间创建的订阅。|  
-|**timeout**|**int**|订阅超时（以秒为单位）。 在经过这段时间后，通知将标记为激发。<br /><br /> 注意:实际的激发时间可能会大于指定的超时。但是，如果使订阅发生之后指定的超时，但之前激发订阅，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]确保激发在发生在进行了更改的时间。|  
-|**status**|**int**|指示订阅的状态。 有关代码列表，请参阅备注下的表。|  
+|**建立**|**datetime**|创建订阅的日期和时间。|  
+|**timeout**|**int**|订阅超时（以秒为单位）。 在经过这段时间后，通知将标记为激发。<br /><br /> 注意：实际触发时间可能大于指定的超时时间。但是，如果在指定的超时时间之后但在激发订阅之前发生了无效的更改，则[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可确保在发生更改时进行触发。|  
+|**状态值**|**int**|指示订阅的状态。 有关代码列表，请参阅备注下的表。|  
   
 ## <a name="relationship-cardinalities"></a>关系基数  
   
-|From|若要|On|type|  
+|从|目标|启用|类型|  
 |----------|--------|--------|----------|  
-|**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|多对一|  
+|**sys.dm_qn_subscriptions**|**sys.databases**|database_id |多对一|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|多对一|  
   
 ## <a name="remarks"></a>备注  
@@ -52,11 +52,11 @@ ms.locfileid: "68061923"
   
  下面的状态代码指示由于更改而激发了订阅：  
   
-|代码|次要状态|T:System.Diagnostics.Switch|  
+|代码|次要状态|信息|  
 |----------|------------------|----------|  
 |65798|因为更改数据而激发订阅|由插入触发的订阅|  
-|65799|因为更改数据而激发订阅|DELETE|  
-|65800|因为更改数据而激发订阅|Update|  
+|65799|因为更改数据而激发订阅|删除|  
+|65800|因为更改数据而激发订阅|更新|  
 |65801|因为更改数据而激发订阅|合并|  
 |65802|因为更改数据而激发订阅|截断表|  
 |66048|因为超时而激发订阅|未确定的信息模式|  
@@ -69,7 +69,7 @@ ms.locfileid: "68061923"
   
  下面的状态代码指示无法创建订阅：  
   
-|代码|次要状态|T:System.Diagnostics.Switch|  
+|代码|次要状态|信息|  
 |----------|------------------|----------|  
 |132609|因为不支持此语句而导致订阅创建失败|查询过于复杂|  
 |132610|因为不支持此语句而导致订阅创建失败|用于订阅的语句无效|  
@@ -80,7 +80,7 @@ ms.locfileid: "68061923"
   
  下面的状态代码供内部使用，它们归类为检查终止和初始化模式：  
   
-|代码|次要状态|T:System.Diagnostics.Switch|  
+|代码|次要状态|信息|  
 |----------|------------------|----------|  
 |198656|供内部使用：检查终止和初始化模式|未确定的信息模式|  
 |198928|订阅已损坏|因为数据库分离而激发订阅|  
@@ -130,9 +130,9 @@ WHERE it.internal_type_desc = 'QUERY_NOTIFICATION';
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [查询通知相关的动态管理视图&#40;Transact SQL&#41;](https://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
- [KILL QUERY NOTIFICATION SUBSCRIPTION &#40;Transact SQL&#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  
+ [与查询通知相关的动态管理视图 &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
+ [KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL)](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  
   
   

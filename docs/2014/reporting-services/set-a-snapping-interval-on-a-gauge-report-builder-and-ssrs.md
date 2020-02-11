@@ -1,5 +1,5 @@
 ---
-title: 仪表 （报表生成器和 SSRS） 上设置对齐间隔 |Microsoft Docs
+title: 在仪表上设置对齐间隔（报表生成器和 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3e2a35e4d6fefb6830774ffd7b2c3bc13a5e097c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101369"
 ---
 # <a name="set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs"></a>在仪表上设置对齐间隔（报表生成器和 SSRS）
@@ -30,15 +30,15 @@ ms.locfileid: "66101369"
 2.  打开“属性”窗格。  
   
     > [!NOTE]  
-    >  如果没有看到属性窗格中，单击**视图**选项卡，然后选择**属性**复选框。  
+    >  如果看不到 "属性" 窗格，请单击 "**查看**" 选项卡，然后选中 "**属性**" 复选框。  
   
-3.  在中**指针**属性中，单击 （...） 按钮。 此时将打开指针集合编辑器。  
+3.  在 "**指针**" 属性中，单击 "（...）" 按钮。 此时将打开指针集合编辑器。  
   
-4.  设置**SnappingEnabled**属性设置为`True`。  
+4.  将**SnappingEnabled**属性设置为`True`。  
   
-5.  设置**SnappingInterval**表示对齐间隔的值。 指针将与已指定的值的最接近舍入倍数对齐。  
+5.  将**SnappingInterval**设置为一个表示对齐间隔的值。 指针将与已指定的值的最接近舍入倍数对齐。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [设置仪表上刻度的格式（报表生成器和 SSRS）](report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [设置仪表上指针的格式（报表生成器和 SSRS）](report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [仪表（报表生成器和 SSRS）](report-design/gauges-report-builder-and-ssrs.md)  

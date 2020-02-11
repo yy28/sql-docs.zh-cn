@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 918aa5eee3aada465e904cf7f1627f93d1b9bb6b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105372"
 ---
 # <a name="rendering-data-regions-report-builder-and-ssrs"></a>呈现数据区域（报表生成器和 SSRS）
@@ -24,7 +24,7 @@ ms.locfileid: "66105372"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="tablix-data-regions"></a>Tablix 数据区域  
- 利用 Tablix 数据区域可以创建表、矩阵和列表，这种数据区域呈现为由列和行组成的网格。 行和列相交便形成单元。 呈现时，这种单元可以包含数据或其他报表项，如图像、矩形、文本框或子报表。 Tablix 数据区域可以垂直和/或水平增长。 此外，角单元、数据区域标题单元和数据区域正文单元可以根据其内容增长。 如果数据区域跨越多页，则在显示该数据区域的每一页上都会呈现设置为随该数据区域重复的报表项。 有关详细信息，请参阅[列出了&#40;报表生成器和 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)。  
+ 利用 Tablix 数据区域可以创建表、矩阵和列表，这种数据区域呈现为由列和行组成的网格。 行和列相交便形成单元。 呈现时，这种单元可以包含数据或其他报表项，如图像、矩形、文本框或子报表。 Tablix 数据区域可以垂直和/或水平增长。 此外，角单元、数据区域标题单元和数据区域正文单元可以根据其内容增长。 如果数据区域跨越多页，则在显示该数据区域的每一页上都会呈现设置为随该数据区域重复的报表项。 有关详细信息，请参阅[列出 &#40;报表生成器和 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)。  
   
 ### <a name="right-to-left"></a>从右向左  
  当 Tablix 数据区域设置为从右向左显示时，其呈现时的结构就像其从左向右呈现时该数据区域的镜像一样。 数据区域的角显示在右上角。 如果报表中存在动态列，则它们将向左扩展。 从右到左的设置不会影响数据在数据区域中的顺序；只是列的顺序会有所不同。  
@@ -46,7 +46,7 @@ ms.locfileid: "66105372"
 ## <a name="chart-gauge-and-map-data-regions"></a>图表、仪表和映射数据区域  
  图表、仪表和映射数据区域在表体中呈现和显示时其行为与图像的行为类似。 数据区域内的值可以具有关联的操作，例如链接到其他报表或转至书签；并且如果呈现器支持，这些操作也可以呈现出来。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Reporting Services 中的分页（报表生成器和 SSRS）](pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [呈现行为（报表生成器和 SSRS）](rendering-behaviors-report-builder-and-ssrs.md)   
  [不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   

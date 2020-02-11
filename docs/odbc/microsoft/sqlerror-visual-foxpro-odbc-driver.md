@@ -13,29 +13,29 @@ ms.assetid: 8315ec16-1c22-447a-a577-39bd94f61070
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d7e8a60030e9c5c7666ce3b25488cfc6adf00783
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68053862"
 ---
 # <a name="sqlerror-visual-foxpro-odbc-driver"></a>SQLError（Visual FoxPro ODBC 驱动程序）
 > [!NOTE]  
->  本主题包含 Visual FoxPro ODBC 驱动程序特定信息。 有关此函数的常规信息，请参阅下的相应主题[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)。  
+>  本主题包含特定于 Visual FoxPro ODBC 驱动程序的信息。 有关此函数的常规信息，请参阅[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)中的相应主题。  
   
  支持：完全  
   
  ODBC API 一致性：核心级别  
   
- 返回有关最后一个错误的错误或状态信息。 驱动程序保持堆栈或可返回的错误的列表*hstmt*， *hdbc*，并*henv*参数，具体取决于如何在调用**SQLError**进行。 每个语句后刷新错误队列。  
+ 返回有关上一个错误的错误或状态信息。 驱动程序将维护一个堆栈或可为*hstmt*、 *hdbc*和*henv*参数返回的错误列表，具体取决于对**SQLError**的调用的方式。 在每个语句后刷新错误队列。  
   
- 下表描述了**SQLError**参数和返回值由驱动程序。  
+ 下表描述了驱动程序使用的**SQLError**参数和返回值。  
   
 |SQLError 参数|返回值说明|  
 |-----------------------|------------------------------|  
-|*szSQLState*|用于表示错误的 SQLSTATE 值。|  
-|*pfNativeError*|一个非零值指示[Visual FoxPro ODBC 驱动程序本机错误消息](../../odbc/microsoft/visual-foxpro-odbc-driver-native-error-messages.md)。 值为零表示由驱动程序检测到错误并将其映射到适当[ODBC 错误代码](../../odbc/microsoft/odbc-error-codes-visual-foxpro-odbc-driver.md)。|  
-|*szErrorMsg*|本机错误或 ODBC 错误文本。|  
-|*pcbErrorMsg*|消息文本以及标识符的长度的长度。|  
+|*szSQLState*|由错误表示的 SQLSTATE 的值。|  
+|*pfNativeError*|非零值表示[Visual FOXPRO ODBC 驱动程序本机错误消息](../../odbc/microsoft/visual-foxpro-odbc-driver-native-error-messages.md)。 如果值为零，则表示该驱动程序检测到错误并映射到相应的[ODBC 错误代码](../../odbc/microsoft/odbc-error-codes-visual-foxpro-odbc-driver.md)。|  
+|*szErrorMsg*|本机错误或 ODBC 错误的文本。|  
+|*pcbErrorMsg*|消息文本的长度加上标识符的长度。|  
   
- 有关驱动程序错误消息的详细信息，请参阅[错误消息概述](../../odbc/microsoft/error-messages-visual-foxpro-odbc-driver.md)。 有关此函数的详细信息，请参阅[SQLError](../../odbc/reference/syntax/sqlerror-function.md)中*ODBC 程序员参考*。
+ 有关驱动程序错误消息的详细信息，请参阅[错误消息概述](../../odbc/microsoft/error-messages-visual-foxpro-odbc-driver.md)。 有关此函数的详细信息，请参阅*ODBC 程序员参考*中的[SQLError](../../odbc/reference/syntax/sqlerror-function.md) 。

@@ -1,5 +1,5 @@
 ---
-title: 无法升级只读数据库 |Microsoft Docs
+title: 只读数据库无法升级 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 414b26cf860ab32bb11beaa1ccbef3316c68f557
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093373"
 ---
 # <a name="read-only-databases-cannot-be-upgraded"></a>无法升级只读数据库
@@ -25,11 +25,11 @@ ms.locfileid: "66093373"
 ## <a name="component"></a>组件  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>说明  
  已检测到一个只读数据库。 若要升级此数据库，安装程序必须能写入此数据库。  
   
 ## <a name="corrective-action"></a>纠正措施  
- 当没有人使用该数据库时，使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]企业管理器[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，或要更改为读写的数据库的 ALTER DATABASE 语句。 下面的语句可将数据库更改为可读写状态。  
+ 如果没有人在使用数据库，请使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]企业管理器、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]或 ALTER database 语句将数据库更改为读写数据库。 下面的语句可将数据库更改为可读写状态。  
   
 ```  
 USE master;  
@@ -41,8 +41,8 @@ GO
   
  有关 ALTER DATABASE 语句的详细信息，请参阅 [!INCLUDE[tsql](../../includes/tsql-md.md)] 联机丛书中的“ALTER DATABASE ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])”主题。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库引擎升级问题](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 升级顾问&#91;新&#93;](sql-server-2014-upgrade-advisor.md)  
+ [SQL Server 2014 升级顾问 &#91;新&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

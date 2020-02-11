@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 390cd2efde37d5d04b7b7ef3a3799222e024b7e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099281"
 ---
 # <a name="rrrenderingerror---reporting-services-error"></a>rrRenderingError - Reporting Services 错误
@@ -31,7 +31,7 @@ ms.locfileid: "66099281"
 |组件|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
 |消息正文|呈现报表时出错。 (rrRenderingError) %1|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 无法呈现或导出报表时返回此消息。  
   
  当指定的 RDL 页大小无效时，通常会出现此消息，指明不支持该大小。 请指定有效的 RDL 页大小，然后重试。  

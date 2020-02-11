@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aeb149fe1de94e9942352ca620f26311e252b477
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100633"
 ---
 # <a name="tablix-data-region-report-builder-and-ssrs"></a>Tablix 数据区域（报表生成器和 SSRS）
@@ -77,7 +77,7 @@ ms.locfileid: "66100633"
   
  添加总计功能在当前组以外自动创建一个行，用于显示以该组为作用域的值。 还可以手动添加静态和动态行。 可视指示符可帮助您了解哪些行是静态行以及哪些行是动态行。 有关详细信息，请参阅 [Tablix 数据区域单元、行和列（报表生成器和 SSRS）](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [将多个数据区域链接到同一数据集（报表生成器和 SSRS）](report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [控制 Tablix 数据区域在报表页上的显示（报表生成器和 SSRS）](report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)   
  [利用 Tablix 数据区域的灵活性（报表生成器和 SSRS）](report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)   

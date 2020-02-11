@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ad12b85455d65197de81eca820814cb016f28043
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105485"
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>饼图（报表生成器和 SSRS）
@@ -22,7 +22,7 @@ ms.locfileid: "66105485"
   
  下图显示了带有百分比格式的数据标签的三维饼图。  图例位于右侧中间位置。  
   
- ![饼图](../media/piechart.gif "Pie chart")  
+ ![饼图](../media/piechart.gif "饼图")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -37,7 +37,7 @@ ms.locfileid: "66105485"
   
 -   **三维饼图**。 应用了三维样式的饼图。  
   
--   **三维分离型饼图**。 应用了三维样式的分离型饼图。  
+-   **3D 分离型饼图**。 应用了三维样式的分离型饼图。  
   
 ## <a name="data-considerations-for-display-on-a-pie-chart"></a>针对饼图显示的数据注意事项  
   
@@ -58,14 +58,14 @@ ms.locfileid: "66105485"
 ## <a name="applying-drawing-styles-to-a-pie-chart"></a>对饼图应用绘制样式  
  您可以向饼图添加特殊的绘制样式以增强其视觉效果。 绘制样式包括凹凸效果和凹陷效果。 这些效果仅可在二维饼图上使用。 下图显示了饼图上的凹凸绘制样式和凹陷绘制样式示例。  
   
- ![饼图绘制样式](../media/rs-piedrawingeffects-concave2.gif "Pie Drawing Styles")  
+ ![饼图绘制样式](../media/rs-piedrawingeffects-concave2.gif "饼图绘制样式")  
   
  有关详细信息，请参阅[向图表添加凹凸效果、阳文和纹理样式（报表生成器和 SSRS）](chart-effects-add-bevel-emboss-or-texture-report-builder.md)。  
   
 ## <a name="displaying-percentage-values-on-a-pie-chart"></a>在饼图上显示百分比值  
  与其他形状图类似，饼图表示整体的各部分比例。 因此，通常将饼图标签设置为百分比格式。 为与其他图表类型保持一致，默认情况下图表不显示百分比标签。 有关如何在图表上将值显示为百分比的详细信息，请参阅 [在饼图上显示百分比值（报表生成器和 SSRS）](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)。 有关如何在报表中将数字设置为百分比格式的详细信息，请参阅[设置数字和日期格式（报表生成器和 SSRS）](formatting-numbers-and-dates-report-builder-and-ssrs.md)。  
   
- ![将数据点标签显示为百分比的饼图](../media/rs-piechartpercentages.gif "Pie chart with data point labels as percentages")  
+ ![将数据点标签显示为百分比的饼图](../media/rs-piechartpercentages.gif "将数据点标签显示为百分比的饼图")  
   
 ## <a name="preventing-overlapped-labels-on-a-pie-chart"></a>防止饼图上的标签重叠  
  如果饼图上有许多数据点，数据标签将会重叠。 有几种方法可避免标签重叠：  
@@ -85,10 +85,10 @@ ms.locfileid: "66105485"
   
 -   将小切片收集到增补饼图中。 第二个饼图不会显示在设计器中。 而在报表处理期间，图表会基于数据点的值计算是否需要显示第二个饼图。 如果需要显示第二个饼图，则值将会添加到另一个饼图中。  
   
-## <a name="see-also"></a>请参阅  
- [在饼图外显示数据点标签（报表生成器和 SSRS）](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>另请参阅  
+ [在饼图外显示数据点标签 &#40;报表生成器和 SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [收集饼图上的小切片（报表生成器和 SSRS）](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
- [在饼图上显示百分比值（报表生成器和 SSRS）](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
+ [在饼图上显示百分比值 &#40;报表生成器和 SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
  [教程：向报表添加饼图（报表生成器）](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [设置图表上图例的格式（报表生成器和 SSRS）](chart-legend-formatting-report-builder.md)   
  [图表中的空点和 Null 数据点（报表生成器和 SSRS）](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   

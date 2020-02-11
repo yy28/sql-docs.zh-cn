@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eba2db61acb691732f81dcd0fa98b0ba48cf921e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103851"
 ---
 # <a name="enable-and-disable-my-reports"></a>启用和禁用“我的报表”
@@ -50,7 +50,7 @@ ms.locfileid: "66103851"
   
  请注意，如果确实激活了“我的报表”功能，对于单击“我的报表”链接并且具有域帐户的每个用户，即使用户并不希望或不需要“我的报表”文件夹，报表服务器也会为这些用户创建该文件夹。 无法通过系统确定哪些文件夹正在使用。 您必须手动检查各文件夹，确定其中是否包含内容。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [保护我的报表](../security/secure-my-reports.md)   
  [报表服务器内容管理（SSRS 本机模式）](report-server-content-management-ssrs-native-mode.md)  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 84f9b681ee632e922f5ab349bf1a72fbea63f911
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105253"
 ---
 # <a name="inscope-function-report-builder-and-ssrs"></a>InScope 函数（报表生成器和 SSRS）
@@ -29,7 +29,7 @@ ms.locfileid: "66105253"
 InScope(scope)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *作用域*  
  (`String`) 数据集、数据区域或指定某个作用域的组的名称。  
   
@@ -37,11 +37,12 @@ InScope(scope)
  返回 `Boolean`。  
   
 ## <a name="remarks"></a>备注  
- `InScope`函数测试中指定的作用域的成员的当前实例的报表项作用域*作用域*参数。  
+ `InScope`函数测试报表项的当前实例的范围，以查找*scope*参数指定范围内的成员身份。  
   
  *Scope* 不能是表达式。  
   
- `InScope` 函数通常用在具有动态作用域的数据区域中。 例如，`InScope` 可在数据区域单元格的钻取链接中使用，以便提供不同的报表名称和不同的参数集，具体取决于所单击的单元格。 应用示例如下：  
+ 
+  `InScope` 函数通常用在具有动态作用域的数据区域中。 例如，`InScope` 可在数据区域单元格的钻取链接中使用，以便提供不同的报表名称和不同的参数集，具体取决于所单击的单元格。 应用示例如下：  
   
 -   如果单击的单元格位于 `ProductDetail` 组，则以下在钻取链接中用作报表名称的表达式将打开 `Month` 报表；否则将打开 `ProductSummary` 报表。  
   
@@ -49,7 +50,7 @@ InScope(scope)
     =Iif(InScope("Month"), "ProductDetail", "ProductSummary")  
     ```  
   
--   仅当单击的单元位于 `Product` 组时，以下在钻取报表参数的 `Omit` 属性中使用的表达式才会将参数传递到目标报表。  
+-   仅当单击的单元位于 `Omit` 组时，以下在钻取报表参数的 `Product` 属性中使用的表达式才会将参数传递到目标报表。  
   
     ```  
     =Not(InScope("Product"))  
@@ -64,7 +65,7 @@ InScope(scope)
 =InScope("Product")  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在报表中使用表达式（报表生成器和 SSRS）](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)   
  [表达式中的数据类型（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)   

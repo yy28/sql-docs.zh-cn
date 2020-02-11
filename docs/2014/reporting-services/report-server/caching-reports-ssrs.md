@@ -23,10 +23,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 58785d54954278d2dcb839ef3e707859682a9d37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104113"
 ---
 # <a name="caching-reports-ssrs"></a>缓存报表 (SSRS)
@@ -69,13 +69,13 @@ ms.locfileid: "66104113"
   
  如果出于任何原因（例如，如果用户指定的参数值与生成缓存报表所用的参数值不同）无法从缓存实例呈现报表，则报表服务器将重新运行该报表。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [设置处理选项（SharePoint 集成模式下的 Reporting Services）](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [设置报表处理属性](set-report-processing-properties.md)   
  [Reporting Services 概念 (SSRS)](../reporting-services-concepts-ssrs.md)   
- [预加载缓存（报表管理器）](preload-the-cache-report-manager.md)   
+ [报表管理器预加载缓存 &#40;&#41;](preload-the-cache-report-manager.md)   
  [“计划”](../subscriptions/schedules.md)   
- [缓存共享数据集 (SSRS)](cache-shared-datasets-ssrs.md)   
- [缓存刷新选项（报表管理器）](../cache-refresh-options-report-manager.md)  
+ [&#40;SSRS&#41;缓存共享数据集](cache-shared-datasets-ssrs.md)   
+ [缓存刷新选项 &#40;报表管理器&#41;](../cache-refresh-options-report-manager.md)  
   
   

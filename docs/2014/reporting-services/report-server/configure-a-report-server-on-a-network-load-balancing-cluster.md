@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bff66ca0f644f862b7cdcfb534b55c4e8ebdd888
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104093"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>在网络负载平衡群集上配置报表服务器
@@ -33,11 +33,11 @@ ms.locfileid: "66104093"
 ## <a name="steps-for-report-server-deployment-on-an-nlb-cluster"></a>报表服务器在 NLB 群集上的部署步骤  
  可以使用下面的指南来安装和配置部署：  
   
-|步骤|Description|详细信息|  
+|步骤|说明|详细信息|  
 |----------|-----------------|----------------------|  
-|1|在将 Reporting Services 安装在 NLB 群集内的服务器节点上之前，请检查扩展部署的要求。|[配置本机模式报表服务器扩展部署&#40;SSRS 配置管理器&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书|  
+|1|在将 Reporting Services 安装在 NLB 群集内的服务器节点上之前，请检查扩展部署的要求。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [&#40;SSRS Configuration Manager&#41;联机丛书中配置本机模式报表服务器扩展部署](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)|  
 |2|配置 NLB 群集并验证它是否正常工作。<br /><br /> 确保将主机标头名称映射到 NLB 群集的虚拟服务器 IP。 主机标头名称用在报表服务器 URL 中，它比 IP 地址便于记忆和键入。|有关详细信息，请参阅您运行的 Windows 操作系统版本的 Windows Server 产品文档。|  
-|3|将主机标头的 NetBIOS 和完全限定域名 (FQDN) 添加到 Windows 注册表中存储的 **BackConnectionHostNames** 列表中。 使用中的步骤**方法 2:指定主机名**中[KB 896861](https://support.microsoft.com/kb/896861) (https://support.microsoft.com/kb/896861) ，但进行以下调整。 该 KB 文章的**步骤 7** 指出“退出注册表编辑器，然后重新启动 IISAdmin 服务”。 改为重新启动计算机以确保更改生效。<br /><br /> 例如，如果主机标头名称 \<MyServer> 是 Windows 计算机名称“contoso”的虚拟名称，可以将该 FQDN 形式作为“contoso.domain.com”引用。 需要将主机标头名称 (MyServer) 与 FQDN 名称 (contoso.domain.com) 一起添加到 **BackConnectionHostNames**的列表中。|如果您的服务器环境涉及本地计算机上的 NTLM 身份验证并且造成环回连接，则此步骤是必需的。<br /><br /> 如果出现这种情况，将会出现报表管理器和报表服务器之间的请求失败，错误号为 401（未经授权）。|  
+|3|将主机标头的 NetBIOS 和完全限定域名 (FQDN) 添加到 Windows 注册表中存储的 **BackConnectionHostNames** 列表中。 使用 **KB 896861** ([ 的“方法 2：指定主机名”](https://support.microsoft.com/kb/896861)https://support.microsoft.com/kb/896861)中的步骤，但进行以下调整。 KB 文章的**步骤 7**指出 "退出注册表编辑器，然后重新启动 IISAdmin 服务"。 改为重新启动计算机以确保更改生效。<br /><br /> 例如，如果主机标头名称 \<MyServer> 是 Windows 计算机名称“contoso”的虚拟名称，可以将该 FQDN 形式作为“contoso.domain.com”引用。 需要将主机标头名称 (MyServer) 与 FQDN 名称 (contoso.domain.com) 一起添加到 **BackConnectionHostNames**的列表中。|如果您的服务器环境涉及本地计算机上的 NTLM 身份验证并且造成环回连接，则此步骤是必需的。<br /><br /> 如果出现这种情况，将会出现报表管理器和报表服务器之间的请求失败，错误号为 401（未经授权）。|  
 |4|在已是 NLB 群集一部分的节点上以“仅文件”模式安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，并为扩展部署配置报表服务器实例。<br /><br /> 所配置的扩展部署将不响应那些定向到虚拟服务器 IP 的请求。 在配置视图状态验证之后，会在以后的步骤中将扩展部署配置为使用虚拟服务器 IP。|[配置本机模式报表服务器扩展部署（SSRS 配置管理器）](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)|  
 |5|配置视图状态验证。<br /><br /> 为了达到最佳效果，请在配置扩展部署之后、配置报表服务器实例以使用虚拟服务器 IP 之前执行此步骤。 通过先配置视图状态验证，可以避免在用户试图访问交互式报表时出现有关状态验证失败的异常。|本主题中的[如何配置视图状态验证](#ViewState) 。|  
 |6|将 `Hostname` 和 `UrlRoot` 配置为使用 NLB 群集的虚拟服务器 IP。|本主题中的[如何配置 Hostname 和 UrlRoot](#SpecifyingVirtualServerName) 。|  
@@ -50,7 +50,7 @@ ms.locfileid: "66104093"
   
  若要解决此问题，可以生成一个任意验证密钥来支持视图状态验证功能，然后将每个报表服务器节点手动配置为使用同一密钥。 可以使用随机生成的十六进制序列。 十六进制序列的长度由验证算法（如 SHA1）确定。  
   
-1.  通过使用由 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]提供的 autogenerate 功能，生成一个验证密钥和解密密钥。 最后，你必须具有单个 <`machineKey`> 条目，您可以将其粘贴到扩展部署中每个报表管理器实例的 Web.config 文件。  
+1.  通过使用由 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]提供的 autogenerate 功能，生成一个验证密钥和解密密钥。 最后，必须具有单个 <`machineKey`> 条目，你可以将该条目粘贴到扩展部署中每个报表管理器实例的 web.config 文件中。  
   
      下面的示例说明了您必须获得的值。 请不要将该示例复制到配置文件中，其中的密钥值是无效的。  
   
@@ -58,13 +58,13 @@ ms.locfileid: "66104093"
     <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>  
     ```  
   
-2.  打开 Web.config 文件，为报表管理器中，并在 <`system.web`> 部分粘贴 <`machineKey`> 你生成的元素。 默认情况下，报表管理器的 Web.config 文件位于 \Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager\Web.config 中。  
+2.  打开报表管理器的 web.config 文件，并在 "<`system.web`>" 部分粘贴生成的 <`machineKey`> 元素。 默认情况下，报表管理器的 Web.config 文件位于 \Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager\Web.config 中。  
   
-3.  保存该文件。  
+3.  保存文件。  
   
 4.  对扩展部署中的每个报表服务器重复上述步骤。  
   
-5.  验证 services\report Manager 文件夹中的所有 Web.Config 文件都包含相同 <`machineKey`> 中的元素 <`system.web`> 部分。  
+5.  验证 \Reporting Services\Report Manager 文件夹中的所有 web.config 文件是否包含 <`machineKey` `system.web`> 部分中> 元素相同的 <。  
   
 ##  <a name="SpecifyingVirtualServerName"></a> 如何配置 Hostname 和 UrlRoot  
  若要在 NLB 群集上配置报表服务器扩展部署，必须定义单个虚拟服务器名称，以提供服务器群集的单访问点。 然后向您的环境中的域名服务器 (DNS) 注册此虚拟服务器名称。  
@@ -75,28 +75,28 @@ ms.locfileid: "66104093"
   
  此外，配置 `UrlRoot` 属性，以便报表链接处理的是已导出为静态报表的报表（例如 Excel 或 PDF 格式）或由订阅（例如电子邮件订阅）生成的报表。  
   
- 如果将集成[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]与[!INCLUDE[winSPServ](../../includes/winspserv-md.md)]3.0 或[!INCLUDE[offSPServ](../../includes/offspserv-md.md)]2007 中，或托管的报表中的自定义 Web 应用程序，可能需要仅配置`UrlRoot`属性。 在这种情况下，将 `UrlRoot` 属性配置为 SharePoint 站点或 Web 应用程序的 URL。 这会将报表环境的网络流量定位到处理报表的应用程序，而不是报表服务器或 NLB 群集。  
+ 如果将与[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 或[!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 集成，或者在自定义 Web 应用程序中承载报表，则可能需要仅配置`UrlRoot`属性。 在这种情况下，将 `UrlRoot` 属性配置为 SharePoint 站点或 Web 应用程序的 URL。 这会将报表环境的网络流量定位到处理报表的应用程序，而不是报表服务器或 NLB 群集。  
   
- 请不要修改 `ReportServerUrl`。 如果修改了此 URL，那么，在每次处理内部请求时，都将额外引入一个通过虚拟服务器的往返过程。 有关详细信息，请参阅[配置文件中的 URL（SSRS 配置管理器）](../install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)。 有关编辑配置文件的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的[修改 Reporting Services 配置文件 (RSreportserver.config)](modify-a-reporting-services-configuration-file-rsreportserver-config.md)。  
+ 请不要修改 `ReportServerUrl`。 如果修改了此 URL，那么，在每次处理内部请求时，都将额外引入一个通过虚拟服务器的往返过程。 有关详细信息，请参阅[配置文件中的 URL（SSRS 配置管理器）](../install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)。 有关编辑配置文件的详细信息，请参阅 [ 联机丛书中的](modify-a-reporting-services-configuration-file-rsreportserver-config.md)修改 Reporting Services 配置文件 (RSreportserver.config)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 1.  在文本编辑器中打开 RSReportServer.config。  
   
-2.  查找 **\<服务 >** 部分，并将以下信息添加到配置文件中，替换`Hostname`值替换为 NLB 服务器的虚拟服务器名称：  
+2.  找到** \<服务>** 部分，并将以下信息添加到配置文件中，并将`Hostname`值替换为 NLB 服务器的虚拟服务器名称：  
   
     ```  
     <Hostname>virtual_server</Hostname>  
     ```  
   
-3.  查找 `UrlRoot`。 此元素未在配置文件中，但使用的默认值是按以下格式的 URL: http:// 或 https://\<*computername*>/\<*reportserver*>，其中\< *reportserver*> 是报表服务器 Web 服务的虚拟目录名称。  
+3.  查找 `UrlRoot`。 配置文件中未指定元素，但使用的默认值是采用以下格式的 URL： http://或 https://\<*computername*>/\<*reportserver*>，其中\< *reportserver*> 是报表服务器 Web 服务的虚拟目录名称。  
   
-4.  键入的值`UrlRoot`按以下格式包括群集虚拟名称： http:// 或 https://\<*其*>/\<*reportserver*>。  
+4.  为`UrlRoot`此键入一个包含群集虚拟名称的值，其格式为： http://或 https://\<*virtual_server*>/\<*reportserver*>。  
   
-5.  保存该文件。  
+5.  保存文件。  
   
 6.  对于扩展部署中的每个报表服务器，在其相应的 RSReportServer.config 文件中重复上述步骤。  
   
 ##  <a name="Verify"></a> 验证报表服务器访问权限  
- 验证是否可以通过虚拟服务器名称来访问横向扩展部署 (例如， https://MyVirtualServerName/reportserver 和 https://MyVirtualServerName/reports) 。  
+ 验证是否可通过虚拟服务器名称（例如，和https://MyVirtualServerName/reportserver https://MyVirtualServerName/reports)）访问扩展部署。  
   
  通过查看报表服务器日志文件或检查 RS 执行日志（该执行日志表包含的 **InstanceName** 列可以显示处理特定请求的实例名称），可以检查哪个节点实际处理报表。 有关详细信息，请参阅 [联机丛书中的](../report-server/reporting-services-log-files-and-sources.md) Reporting Services 日志文件和源 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
@@ -107,11 +107,11 @@ ms.locfileid: "66104093"
   
 1.  在文本编辑器中打开 RSReportServer.config 文件。  
   
-2.  找到 <`Hostname`>，<`ReportServerUrl`>，并 <`UrlRoot`>，并检查每个设置的主机名。 如果该值不是预期的主机名，请将其替换为正确的主机名。  
+2.  查找 <`Hostname`>、<`ReportServerUrl`> 和 <`UrlRoot`>，并检查每个设置的主机名。 如果该值不是预期的主机名，请将其替换为正确的主机名。  
   
- 如果在进行这些更改后启动 Reporting Services 配置工具，该工具可能会更改 <`ReportServerUrl`> 设置为默认值。 请始终保留一份配置文件的备份副本，以备需要用包含要使用的设置的版本替换该配置文件时使用。  
+ 如果在进行这些更改之后启动 Reporting Services 配置工具，则该工具可能会将 <`ReportServerUrl`> 设置更改为默认值。 请始终保留一份配置文件的备份副本，以备需要用包含要使用的设置的版本替换该配置文件时使用。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Reporting Services Configuration Manager（本机模式）](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [配置 URL（SSRS 配置管理器）](../install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [配置本机模式报表服务器扩展部署（SSRS 配置管理器）](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   

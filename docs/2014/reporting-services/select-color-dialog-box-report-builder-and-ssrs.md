@@ -1,5 +1,5 @@
 ---
-title: 选择颜色对话框 （报表生成器和 SSRS） |Microsoft Docs
+title: "\"选择颜色\" 对话框（报表生成器和 SSRS） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6bcbbe828da811ace5df4feea5cfdf888e1e6ca5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101374"
 ---
 # <a name="select-color-dialog-box-report-builder-and-ssrs"></a>“选择颜色”对话框（报表生成器和 SSRS）
@@ -29,11 +29,11 @@ ms.locfileid: "66101374"
  **颜色选择器**  
  从三个用于指定颜色选择方式的选项中进行选择：  
   
--   **选取器 - 色环** 使用“色调/饱和度/亮度”(HSB) 颜色值选择颜色。  
+-   **选取器-彩色圆圈**使用色相/饱和度/亮度（HSB）颜色值选择颜色。  
   
--   **选取器 - 色块** 使用“红/绿/蓝”(RGB) 颜色值选择颜色。  
+-   **选取器-颜色正方形**使用 "红/绿/蓝" （RGB）颜色值选择颜色。  
   
--   **调色板 - 标准颜色** 从预定义的颜色值列表中选择颜色。  
+-   **调色板-标准颜色**从预定义的颜色值列表中选择一种颜色。  
   
  **色环**  
  用于 HSB 颜色，因为 HSB 值映射到柱面坐标系。 色调是实际的颜色，饱和度是颜色纯度，亮度是相对的明暗。  
@@ -46,7 +46,7 @@ ms.locfileid: "66101374"
  当您选取一个颜色时，方块的中心决定了颜色。 使用颜色滑块可更改所选颜色的范围。 x 和 y 坐标代表其他两种颜色。 例如，如果您选择绿色，滑块将显示绿色值的范围，x 和 y 坐标则分别代表红色和蓝色值。  
   
  **标准调色板颜色**  
- 用于中的命名颜色[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]`KnownColor`枚举。  
+ 用于[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] `KnownColor`枚举中的命名颜色。  
   
  **颜色系统**  
  指定 RGB 或 HSB 颜色。 该选项用于更改显示器以显示 RGB 或 HSB 值，当您使用 **“颜色选择器”** 的色环或色块时，这些值将以交互方式更新。  
@@ -65,7 +65,7 @@ ms.locfileid: "66101374"
  **Alpha**  
  代表颜色中 Alpha 或透明度部分的十进制值。 启用该值后，您可使用滑块开关调整至所需的透明度。  
   
- **色调**  
+ **Hue**  
  代表 HSB 颜色色调的十进制值。 使用数字调整框可更改值或键入一个介于 0 到 255 之间的值。  
   
  **饱和度**  
@@ -77,7 +77,7 @@ ms.locfileid: "66101374"
  **颜色示例**  
  在窗格的左半部分显示当前颜色，并在窗格的右半部分以交互方式显示您所选择的新颜色。 如果没有默认颜色，窗格的左半部分为白色。 绝大多数 RDL 属性没有默认颜色。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [设置报表项的格式（报表生成器和 SSRS）](report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [设置文本和占位符的格式（报表生成器和 SSRS）](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
   

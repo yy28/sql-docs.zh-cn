@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d4cb556e127fa23f5b16506abdcc8e04ed433878
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098129"
 ---
-# <a name="restoreencryptionkey-method-wmi-msreportserverconfigurationsetting"></a>RestoreEncryptionKey 方法 (WMI MSReportServer_ConfigurationSetting)
+# <a name="restoreencryptionkey-method-wmi-msreportserver_configurationsetting"></a>RestoreEncryptionKey 方法 (WMI MSReportServer_ConfigurationSetting)
   将指定的加密密钥重新应用于报表服务器数据库。  
   
 ## <a name="syntax"></a>语法  
@@ -41,14 +41,14 @@ public void RestoreEncryptionKey(out Byte[] KeyFile, out Int32 Length,
             string Password, out Int32 HRESULT, out string[] ExtendedErrors);  
 ```  
   
-## <a name="parameters"></a>Parameters  
- *KeyFile[]*  
+## <a name="parameters"></a>parameters  
+ *KeyFile []*  
  [out] 包含已加密的加密密钥的数组。  
   
  *长度*  
  [out] 该方法返回的数组长度。  
   
- *密码*  
+ *权限*  
  用于对加密密钥进行加密的字符串。  
   
  *HRESULT*  
@@ -66,9 +66,9 @@ public void RestoreEncryptionKey(out Byte[] KeyFile, out Int32 Length,
  在调用清除加密密钥列表的 [DeleteEncryptionKey](configurationsetting-method-deleteencryptionkey.md) 方法之后调用该方法最有效。  
   
 ## <a name="requirements"></a>要求  
- **命名空间:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](msreportserver-configurationsetting-members.md)  
   
   

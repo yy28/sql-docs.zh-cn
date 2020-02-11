@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bacb9387a4026fbf6a41f0b5d9cdd0b77594da97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100389"
 ---
 # <a name="delete-catalog-items-management-studio"></a>删除目录项 (Management Studio)
@@ -32,19 +32,19 @@ ms.locfileid: "66100389"
  **名称**  
  指定要删除的项的名称。  
   
- **类型**  
+ 类型   
  显示要删除的项的类型。  
   
  **所有者**  
  显示所有者的名称。 在大多数情况下，此名称为 System。  
   
- **“状态”**  
+ **Status**  
  显示删除操作的进度信息。  
   
  **错误**  
  如果在删除项的过程中出现错误，则显示错误代码。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [删除项 (Management Studio)](delete-an-item-management-studio.md)   
  [Management Studio 中报表服务器的 F1 帮助](report-server-in-management-studio-f1-help.md)   
  [创建、修改和删除计划](../subscriptions/create-modify-and-delete-schedules.md)  

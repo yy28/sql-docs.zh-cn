@@ -20,13 +20,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2a7956d71bf9cf477049864c5f4eb341fd276a48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097341"
 ---
-# <a name="msreportserverconfigurationsetting-class"></a>MSReportServer_ConfigurationSetting 类
+# <a name="msreportserver_configurationsetting-class"></a>MSReportServer_ConfigurationSetting 类
   表示报表服务器实例的安装和运行时参数。 这些参数存储在报表服务器的配置文件中。  
   
  有关此类型所有成员的列表，请参阅 [MSReportServer_ConfigurationSetting 成员](msreportserver-configurationsetting-members.md)。  
@@ -45,7 +45,7 @@ public class MSReportServer_ConfigurationSetting
  此类型的任何公共静态（**中的** Shared [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]）成员在多线程操作中是安全的。 不能保证任何实例成员都是线程安全的。  
   
 ## <a name="example"></a>示例  
- 若要运行下面的代码，请添加服务器名称来取代每个 \<servername  >。 如果不是默认位置，请将路径更新为指向安装位置的路径。 下面的代码示例会遍历 [MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md) 类的每个属性，并向控制台输出每个属性的名称及其属性值。  
+ 若要运行下面的代码，请添加服务器名称来取代每个 \<servername**>。 如果不是默认位置，请将路径更新为指向安装位置的路径。 下面的代码示例会遍历 [MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md) 类的每个属性，并向控制台输出每个属性的名称及其属性值。  
   
 ```vb  
 Imports System  
@@ -170,11 +170,11 @@ class Class1
 ```  
   
 ## <a name="requirements"></a>要求  
- **命名空间:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
- **平台:** [!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
+ **平台：**[!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](msreportserver-configurationsetting-members.md)  
   
   

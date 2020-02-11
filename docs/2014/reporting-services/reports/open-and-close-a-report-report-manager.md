@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7a1c799ec4fc37fa5cdbd6f3bcc72fad7f4c45ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102593"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>打开和关闭报表（报表管理器）
@@ -36,13 +36,13 @@ ms.locfileid: "66102593"
   
      某些报表需要您提供用户名和密码，或者需要您提供参数值。  
   
-4.  若要关闭报表，请关闭报表管理器，或浏览到另一页或文件夹（例如，通过单击“返回”  按钮，或单击页面顶部的文件夹链接）。  
+4.  若要关闭报表，请关闭报表管理器，或浏览到另一页或文件夹（例如，通过单击“返回”**** 按钮，或单击页面顶部的文件夹链接）。  
   
      关闭报表并不会将其从浏览器缓存中删除。 必须关闭浏览器才能断开报表连接。  
   
-## <a name="see-also"></a>请参阅  
- [搜索报表和其他项（报表生成器和 SSRS）](../report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
- [“内容”页（报表管理器）](../contents-page-report-manager.md)   
+## <a name="see-also"></a>另请参阅  
+ [搜索报表和其他项 &#40;报表生成器和 SSRS&#41;](../report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
+ ["内容" 页 &#40;报表管理器&#41;](../contents-page-report-manager.md)   
  [查找、查看和管理报表（报表生成器和 SSRS）](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [报表服务器内容管理（SSRS 本机模式）](../report-server/report-server-content-management-ssrs-native-mode.md)  
   

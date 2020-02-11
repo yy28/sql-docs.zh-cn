@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: df28762c61f548b47c4da4a31fe1d1fd42fbf65a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105513"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>页面布局和呈现方式（报表生成器和 SSRS）
@@ -31,7 +31,7 @@ ms.locfileid: "66105513"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="PageLayout"></a> 页面布局和报表项  
+##  <a name="PageLayout"></a>页面布局和报表项  
  报表项是与不同类型的报表数据关联的布局元素。 表、矩阵、列表、图表和仪表都是分别链接到一个报表数据集的数据区域报表项。 处理报表时，数据区域会在报表页内横向和向下扩展，以便显示数据。 其他报表项则链接到单个项并显示单个项。 **“图像”** 报表项可链接到图片。 **“文本框”** 报表项包含简单文本（如标题）或表达式（可以包含对内置字段、报表参数或数据集字段的引用）。 **“线条”** 和 **“矩形”** 报表项可向报表页提供简单图形元素。 **“矩形”** 还可以是其他报表项的容器。 报表可以包含子报表。  
   
  使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，可以在设计图面的任意位置放置报表项。 可以使用对齐线和尺寸调整控点以交互方式定位、扩展和指定报表项的初始形状。 您可以并行放置具有不同数据集的数据区域，甚至是具有不同格式的同一数据的数据区域。 在设计图面上放置报表项时，报表项便会具有默认的大小、形状以及与所有其他报表项的初始关系。 您可以彼此放置许多报表项，以便创建更复杂的报表设计。 例如，图表或图像位于表单元中、表位于表单元中并且多个图像位于一个矩形中。 除了提供您在报表中所需的组织形式和外观外，将报表项置于矩形之类的容器中还帮助您控制报表项在报表页上显示的方式。  
@@ -48,16 +48,16 @@ ms.locfileid: "66105513"
 ##  <a name="RenderingExtensions"></a> 呈现器  
  Reporting Services 包括一组呈现器，也称为呈现扩展插件，可用来将报表导出为其他格式。 有三种类型的呈现器：  
   
--   **数据呈现器** ：数据呈现器会去除报表中的所有格式设置和布局信息而仅显示数据。 可使用所产生的文件将原始报表数据导入为其他文件类型，如 Excel、其他数据库、XML 数据消息或自定义应用程序。 可用的数据呈现器为：CSV 和 XML。  
+-   **数据呈现器** ：数据呈现器会去除报表中的所有格式设置和布局信息而仅显示数据。 可使用所产生的文件将原始报表数据导入为其他文件类型，如 Excel、其他数据库、XML 数据消息或自定义应用程序。 可用的数据呈现器为 CSV 和 XML。  
   
     > [!NOTE]  
     >  尽管它没有提供直接导出到其他格式的功能，但 Atom 呈现从报表中生成数据文件。  
   
--   **软分页呈现器** ：软分页呈现器保留报表的布局和格式设置。 对所产生的文件进行优化，以便满足基于屏幕的查看和传递（例如在网页上）的需要。 可用的软分页符呈现器有：[!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word、 Web 存档 (MHTML) 和 HTML。  
+-   **软分页呈现器** ：软分页呈现器保留报表的布局和格式设置。 对所产生的文件进行优化，以便满足基于屏幕的查看和传递（例如在网页上）的需要。 可用的软分页呈现器有： [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word、Web 存档 (MHTML) 和 HTML。  
   
--   **硬分页呈现器** ：硬分页呈现器保留报表的布局和格式设置。 对所产生的文件进行了优化，以便提供一致的打印体验或以书本格式联机查看报表。 支持可用硬分页呈现器：TIFF 和 PDF。  
+-   **硬分页呈现器** ：硬分页呈现器保留报表的布局和格式设置。 对所产生的文件进行了优化，以便提供一致的打印体验或以书本格式联机查看报表。 支持的可用硬分页呈现器：TIFF 和 PDF。  
   
- 当您在报表生成器或报表设计器中预览报表时，或者在报表管理器中运行报表时，报表总是首先以 HTML 格式呈现。 在运行报表后，您可以将其导出为不同的文件格式。 有关详细信息，请参阅[导出报表&#40;报表生成器和 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)。  
+ 当您在报表生成器或报表设计器中预览报表时，或者在报表管理器中运行报表时，报表总是首先以 HTML 格式呈现。 在运行报表后，您可以将其导出为不同的文件格式。 有关详细信息，请参阅[导出报表 &#40;报表生成器和 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)。  
   
   
   
@@ -83,7 +83,7 @@ ms.locfileid: "66105513"
 ##  <a name="Pagination"></a> 分页  
  分页方式指的是报表内的页数以及报表项在这些页上的排列方式。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的分页方式因您用来查看和传递报表的呈现扩展插件以及您配置报表使用的分页符和哪些项目放在同一页的选项不同而异。  
   
- 若要成功设计一个对用户而言易于阅读、对您准备用于传递报表的呈现器而言最优的报表，您需要了解在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中用于控制分页的规则。 使用数据和软分页呈现扩展插件导出的报表通常不受分页影响。 当您使用数据呈现扩展插件时，报表将呈现为 XML 或 CSV 格式的表格行集。 为了确保导出的报表数据有用，应了解所应用的规则从报表呈现了一个平展的表格行集。  
+ 若要成功设计一个对用户而言易于阅读、对准备用于传递报表的呈现器而言最优的报表，需要了解在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中用于控制分页的规则。 使用数据和软分页呈现扩展插件导出的报表通常不受分页影响。 当您使用数据呈现扩展插件时，报表将呈现为 XML 或 CSV 格式的表格行集。 为了确保导出的报表数据有用，应了解所应用的规则从报表呈现了一个平展的表格行集。  
   
  当您使用软分页呈现扩展插件（如 HTML 呈现扩展插件）时，您可能想知道报表打印后的外观以及使用硬分页呈现器（如 PDF）呈现此报表时可以达到哪种理想效果。 在创建或更新报表时，您可以在报表生成器和报表设计器中预览和导出此报表。  
   
@@ -119,8 +119,8 @@ ms.locfileid: "66105513"
   
   
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [导出报表&#40;报表生成器和 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
+ [导出报表 &#40;报表生成器和 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 查看或删除报表历史记录 （报表管理器） |Microsoft Docs
+title: 查看或删除报表历史记录（报表管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -26,10 +26,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a05c9dccabcf9b937ebd67fb264022761b1ca249
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098710"
 ---
 # <a name="view-or-delete-report-history-report-manager"></a>查看或删除报表历史记录（报表管理器）
@@ -41,7 +41,7 @@ ms.locfileid: "66098710"
   
 2.  在报表管理器中，导航到 **“内容”** 页。 导航到要创建或查看其历史记录快照的报表，单击该报表以打开它。  
   
-3.  单击 **“历史记录”** 选项卡。历史记录快照显示在**时运行**列。  
+3.  单击 "**历史记录**" 选项卡。历史记录快照在 "**运行时间**" 列中显示。  
   
 4.  若要查看历史记录快照，请单击相应的快照。  
   
@@ -49,13 +49,13 @@ ms.locfileid: "66098710"
   
 1.  在报表管理器中，导航到 **“内容”** 页。 导航到要删除其历史记录快照的报表，再单击该报表以打开它。  
   
-2.  单击 **“历史记录”** 选项卡。历史记录快照显示在**时运行**列。  
+2.  单击 "**历史记录**" 选项卡。历史记录快照在 "**运行时间**" 列中显示。  
   
-3.  选择你想要删除，然后单击历史记录快照旁边的复选框**删除**。  
+3.  选择要删除的历史快照旁边的复选框，然后单击 "**删除**"。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [向报表历史记录添加快照（报表管理器）](report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [报表历史记录页&#40;报表管理器&#41;](../../2014/reporting-services/report-history-page-report-manager.md)   
+ [报表历史记录页 &#40;报表管理器&#41;](../../2014/reporting-services/report-history-page-report-manager.md)   
  [设置报表处理属性](report-server/set-report-processing-properties.md)   
  [报表管理器（SSRS 本机模式）](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [创建、修改和删除报表历史记录中的快照](report-server/create-modify-and-delete-snapshots-in-report-history.md)  

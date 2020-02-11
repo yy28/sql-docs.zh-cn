@@ -1,5 +1,5 @@
 ---
-title: 在 SharePoint 模式下 (SSRS) 报表服务器上的已发布的报表项的 URL 示例 |Microsoft Docs
+title: SharePoint 模式下的报表服务器上已发布报表项的 URL 示例（SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a7cbf3b3e6e378f27e5c56de6b043c95c56774f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099448"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>用于 SharePoint 模式下在报表服务器上已发布的报表项的 URL 示例 (SSRS)
@@ -31,12 +31,12 @@ ms.locfileid: "66099448"
   
  以下 Web 层次结构元素可用于访问和保护报表服务器内容。 其他对象（如列表和页）不用于访问报表服务器内容，因此未在下表中进行说明。  
   
-|Object|Description|  
+|Object|说明|  
 |------------|-----------------|  
-|SharePoint Web 应用程序|SharePoint Web 应用程序可以作为独立的服务器安装，也可以在包含许多虚拟服务器的场中安装。 Web 应用程序具有 URL（例如，http: *//servername*）并且可以包含多个站点。|  
+|SharePoint Web 应用程序|SharePoint Web 应用程序可以作为独立的服务器安装，也可以在包含许多虚拟服务器的场中安装。 Web 应用程序具有 URL（例如，http:*//servername*）并且可以包含多个站点。|  
 |站点|站点为 Web 应用程序的父站点或子站点。|  
 |SharePoint 库|库包含文档或文件夹。 库或库中的文件夹是仅有的可用来存储报表、报表模型、共享数据源和外部图像的站点对象。|  
-|项|可以在 URL 中引用的报表服务器项包括报表或子报表的报表定义、报表模型、共享数据源或外部图像。|  
+|Item|可以在 URL 中引用的报表服务器项包括报表或子报表的报表定义、报表模型、共享数据源或外部图像。|  
   
 ## <a name="url-syntax-and-rules"></a>URL 语法和规则  
  库中每个报表服务器项都由完全限定的 URL 进行标识，该 URL 包括协议前缀、服务器名、站点、库、文件名和文件类型的文件扩展名。  
@@ -44,23 +44,23 @@ ms.locfileid: "66099448"
 ### <a name="url-for-a-sharepoint-server"></a>SharePoint 服务器的 URL  
  从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 向报表服务器部署报表服务器或报表模型项目时，必须使用 SharePoint 服务器的 URL。  
   
- 若要找到要使用的服务器的名称，请打开一个浏览器并找到要发布报表的 SharePoint 库。 服务器名称紧接在协议前缀之后，例如 http: *//servername*。  
+ 若要找到要使用的服务器的名称，请打开一个浏览器并找到要发布报表的 SharePoint 库。 服务器名称紧接在协议前缀之后，例如 http:*//servername*。  
   
- 不支持使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 代理端点。 代理端点包含一个端口号，例如 http: *//servername:8080/reportserver*。  
+ 不支持使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 代理端点。 代理端点包含一个端口号，例如 http:*//servername:8080/reportserver*。  
   
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>SharePoint 服务器站点或子站点的 URL  
  部署报表或报表数据源时，必须使用 SharePoint 站点和子站点的 URL（如果有）。 在该 URL 中，站点名紧接在服务器名之后，例如 http://*servername/site* 或 http://*servername/site/subsite*。  
   
- 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Web 应用程序中，站点和子站点经常对应于主站点上的选项卡。 若要找到站点名或子站点名，请单击 **“主文件夹”** ，然后单击 **“所有网站内容”** 。 滚动到底部并查找 **“站点和工作区”** 。 站点列表将显示在此部分中。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)]在2007或[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Web 应用程序中，站点和子站点经常对应于主站点上的选项卡。 若要找到站点名或子站点名，请单击 **“主文件夹”**，然后单击 **“所有网站内容”**。 滚动到底部并查找 **“站点和工作区”**。 站点列表将显示在此部分中。  
   
 ### <a name="url-for-a-sharepoint-library"></a>SharePoint 库的 URL  
  向 SharePoint 库中部署报表或相关项时，必须使用 SharePoint 库的 URL。 要用于库的 URL 根据所使用的 SharePoint 版本而不同。  
   
  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 或 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]上，库显示在服务器名称之后，例如 http://*servername/* Shared Documents。  
   
- 在 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]中，库显示在站点和子站点之后。 例如， http://*servername/site/* Documents。  
+ 在 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]中，库显示在站点和子站点之后。 例如，http://*servername/site/* Documents。  
   
- 若要查找新的 SharePoint 库或某个不熟悉站点的路径信息，请打开浏览器，然后找到要发布报表的 SharePoint 库。 如果该库为空，则上载任意文件。 右键单击该文件，然后选择“属性”以打开“属性”窗口   。 文件地址中包含发布操作所需的 URL 值。  
+ 若要查找新的 SharePoint 库或某个不熟悉站点的路径信息，请打开浏览器，然后找到要发布报表的 SharePoint 库。 如果该库为空，则上载任意文件。 右键单击该文件，然后选择“属性”以打开“属性”窗口********。 文件地址中包含发布操作所需的 URL 值。  
   
 ### <a name="fully-qualified-urls-for-items-on-a-sharepoint-site"></a>SharePoint 站点上的项的完全限定 URL  
  始终通过完全限定的 URL 对存储在 SharePoint 库中的项进行寻址，这种完全限定的 URL 以 Web 应用程序开头 (http://*server*) 作为根节点，并以所引用的文件名结束。  
@@ -98,11 +98,16 @@ ms.locfileid: "66099448"
 |------------|-----------------|  
 |SharePoint 服务器。|http://TestServer|  
 |SharePoint 服务器站点或子站点。|http://TestServer/toplevelsite/subsite|  
-| 或 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 部署的 Shared Documents [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 中的 Company Sales 示例报表。|http://TestServer/TestSite/Shared%20Documents/Company%20Sales.rdl|  
-|**或** 实例的 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] Documents/Doc [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 文件夹中的 Company Sales 示例报表。|http://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl|  
-| 或 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 实例的“报表中心” [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 中的 Company Sales 示例报表。|http://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl|  
+|
+  **
+  ** 或 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 部署的 Shared Documents [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 中的 Company Sales 示例报表。|http://TestServer/TestSite/Shared%20Documents/Company%20Sales.rdl|  
+|
+  **或** 实例的 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] Documents/Doc [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 文件夹中的 Company Sales 示例报表。|http://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl|  
+|
+  **
+  ** 或 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 实例的“报表中心” [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 中的 Company Sales 示例报表。|http://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl|  
   
-##  <a name="publishingToDocLib"></a> 从创作工具发布到 SharePoint 库  
+##  <a name="publishingToDocLib"></a>从创作工具发布到 SharePoint 库  
  使用报表创作工具向库中发布报表和相关文件时，在添加文件之前会对文件进行验证。 如果通过使用 SharePoint 库的 **“上载”** 操作来上载报表和相关文件，则不进行验证检查。 直到通过管理、编辑和运行报表来访问时，您才会知道文件是否有效。  
   
 > [!NOTE]  
@@ -119,7 +124,7 @@ ms.locfileid: "66099448"
 ### <a name="file-names"></a>文件名  
  URL 中的报表项文件名必须包含文件扩展名。 文件扩展名决定文件类型。 从报表创作工具发布报表项时，会自动包含文件扩展名。 如果将报表项上载到 SharePoint 库，则必须包含文件扩展名。  
   
- 如果不为上载到 SharePoint 站点的项指定文件扩展名，则会发生 `rsInvalidDataSourceReference` 错误。 文件名不可以包括 SharePoint 应用程序无法识别为有效文件名字符的字符。 不能包含以下字符: # %& *: \< >？ / { | }.  
+ 如果不为上载到 SharePoint 站点的项指定文件扩展名，则会发生 `rsInvalidDataSourceReference` 错误。 文件名不可以包括 SharePoint 应用程序无法识别为有效文件名字符的字符。 请勿包含以下字符： #% & *： \< >？ / { | }.  
   
 ## <a name="differences-between-uploading-and-publishing"></a>上载与发布之间的差异  
  使用报表设计器或报表生成器将报表和相关文件发布到库时，会在添加文件前对文件进行验证。 如果通过使用 SharePoint 库的 **“上载”** 操作来上载报表和相关文件，则不进行验证检查。 直到通过管理、编辑和运行报表来访问时，您才会知道文件是否有效。  
@@ -134,7 +139,7 @@ ms.locfileid: "66099448"
   
  报表服务器在 SharePoint 集成模式下运行时，资源理念的定义就会更窄。 报表服务器使用资源理念来存储引用外部图像的报表。 这适用于报表作为内部使用的快照或副本的情况。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [将报表发布到 SharePoint 库](../reports/publish-a-report-to-a-sharepoint-library.md)   
  [将共享数据源发布到 SharePoint 库](../reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
  [“项目属性页”对话框](project-property-pages-dialog-box.md)  

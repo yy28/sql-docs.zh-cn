@@ -14,16 +14,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 14fc5556e430cf364b004cd02ebd0278da650867
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104972"
 ---
 # <a name="specify-a-chart-area-for-a-series-report-builder-and-ssrs"></a>指定序列的图表区（报表生成器和 SSRS）
   图表为包括外部边框、图表标题和图例的顶级容器。 默认情况下，图表包含一个默认图表区。 图表区在图表表面上不可见，但您可将图表区当作只包含轴标签、轴标题和一个或多个序列的绘图区的容器。 下图说明了单个图表中的图表区的概念。  
   
- ![显示图表区域的图表](../media/chartareasdiagram.gif "Shows a diagram of a chart area")  
+ ![显示图表区关系图](../media/chartareasdiagram.gif "显示图表区关系图")  
   
  默认情况下，所有序列都将添加到默认图表区。 使用面积图、柱形图、折线图和散点图时，这些序列的任何组合均可显示在同一图表区上。 如果您在同一图表区拥有多个序列，则图表的可读性将会下降。 最好将图表类型分为多个图表区。 使用多个图表区将提高可读性以更易于进行比较。 例如，价量股票图表通常具有不同范围的值，但可以在同一时期在价格和数量数据之间进行比较。  
   
@@ -34,20 +34,20 @@ ms.locfileid: "66104972"
   
 ### <a name="to-associate-a-series-with-a-new-chart-area"></a>将序列与新的图表区相关联  
   
-1.  右键单击图表上的任意位置并选择“添加新图表区域”  。 图表上将出现一个新的空白图表区。  
+1.  右键单击图表上的任意位置并选择“添加新图表区域”****。 图表上将出现一个新的空白图表区。  
   
-2.  右键单击图表上的序列或右键单击“图表数据”窗格中的相应区域中的序列或数据字段，然后单击“序列属性”  。  
+2.  右键单击图表上的序列或右键单击“图表数据”窗格中的相应区域中的序列或数据字段，然后单击“序列属性”****。  
   
 3.  在 **“轴和图表区”** 中，选择要在其中显示序列的图表区。  
   
-4.  （可选）将图表区垂直对齐。 若要执行此操作，请右键单击图表并选择“图表区域属性”  。 在 **“对齐”** 中，选择要将选中的图表区与其对齐的另一图表区。  
+4.  （可选）将图表区垂直对齐。 若要执行此操作，请右键单击图表并选择“图表区域属性”****。 在 **“对齐”** 中，选择要将选中的图表区与其对齐的另一图表区。  
   
-## <a name="see-also"></a>请参阅  
- [图表中的多个序列（报表生成器和 SSRS）](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>另请参阅  
+ [图表上的多个序列 &#40;报表生成器和 SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
  [设置图表上数据点的格式（报表生成器和 SSRS）](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [使用调色板定义图表上的颜色（报表生成器和 SSRS）](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
- [极坐标图（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   
+ [极坐标图 &#40;报表生成器和 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [形状图（报表生成器和 SSRS）](shape-charts-report-builder-and-ssrs.md)   
- [饼图（报表生成器和 SSRS）](pie-charts-report-builder-and-ssrs.md)  
+ [饼图&#40;报表生成器和 SSRS&#41;](pie-charts-report-builder-and-ssrs.md)  
   
   

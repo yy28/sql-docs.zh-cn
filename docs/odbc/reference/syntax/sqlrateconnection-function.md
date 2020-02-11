@@ -13,18 +13,18 @@ ms.assetid: e8da2ffb-d6ef-4ca7-824f-57afd29585d8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 74d7e2c52167682f0993006db3a1125ca741cf35
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68053642"
 ---
 # <a name="sqlrateconnection-function"></a>SQLRateConnection 函数
-**符合性**  
- 版本引入了：ODBC 3.81 标准符合性：ODBC  
+**度**  
+ 引入的版本： ODBC 3.81 标准符合性： ODBC  
   
- **摘要**  
- **SQLRateConnection**确定驱动程序可以重用连接池中的现有连接。  
+ **总结**  
+ **SQLRateConnection**确定驱动程序是否可以重复使用连接池中的现有连接。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,50 +40,50 @@ SQLRETURN  SQLRateConnection(
   
 ## <a name="arguments"></a>参数  
  *hRequest*  
- [输入]一个表示新的应用程序连接请求令牌的句柄。  
+ 送表示新应用程序连接请求的标记句柄。  
   
  *hCandidateConnection*  
- [输入]中的连接池的现有连接。 该连接必须处于打开状态。  
+ 送连接池中的现有连接。 连接必须处于打开状态。  
   
  *fRequiredTransactionEnlistment*  
- [输入]如果为 TRUE，重复使用现有连接*hCandidateConnection*新的连接请求 (*hRequest*) 需要更多的登记。  
+ 送如果为 TRUE，则为新的连接请求重复使用现有连接的*hCandidateConnection* （*hRequest*）需要额外的登记。  
   
  *transId*  
- [输入]如果*fRequiredTransactionEnlistment*为 TRUE， *transId*表示该请求将登记 DTC 事务。 如果*fRequiredTransactionEnlistment*为 FALSE 时， *transId*将被忽略。  
+ 送如果*fRequiredTransactionEnlistment*为 TRUE，则*transId*表示请求将登记的 DTC 事务。 如果*fRequiredTransactionEnlistment*为 FALSE，则将忽略*transId* 。  
   
  *pRating*  
- [输出]*hCandidateConnection*的重用级别对于*hRequest*。 此分级将是 0 到 100 之间 （含） 之间。  
+ 输出*hCandidateConnection*对*hRequest*的重复使用评级。 此级别将介于0和100（含）之间。  
   
 ## <a name="returns"></a>返回  
- SQL_SUCCESS、 SQL_ERROR 或 SQL_INVALID_HANDLE。  
+ SQL_SUCCESS、SQL_ERROR 或 SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>诊断  
- 驱动程序管理器不会处理从该函数返回的诊断信息。  
+ 驱动程序管理器不会处理从此函数返回的诊断信息。  
   
 ## <a name="remarks"></a>备注  
- **SQLRateConnection**生成介于 0 和 100 之间 （含），该值指示现有连接与请求的匹配程度之间的分数。  
+ **SQLRateConnection**生成一个介于0和100（含）之间的分数，指示现有连接与请求的匹配程度。  
   
-|分数|含义 （时，将返回 SQL_SUCCESS）|  
+|得分|含义（返回 SQL_SUCCESS 时）|  
 |-----------|-----------------------------------------------|  
-|0|*hCandidateConnection*不能将重复使用的*hRequest*。|  
-|介于 1 和 98 （含） 之间的任何值|分数越高，越接近， *hCandidateConnection*与匹配*hRequest*。|  
-|99|无意义的属性中有仅不匹配。  驱动程序管理器应停止分级循环。|  
-|100|完美匹配。  驱动程序管理器应停止分级循环。|  
-|大于 100 的任何其他值|*hCandidateConnection*标记为停用以及它将不能重复使用甚至在将来连接请求。|  
+|0|*hRequest*不能重复使用*hCandidateConnection* 。|  
+|1到98（含）之间的任何值|分数越高， *hCandidateConnection*与*hRequest*匹配越接近。|  
+|99|只有无意义的属性中存在不匹配的情况。  驱动程序管理器应停止评级循环。|  
+|100|完全匹配。  驱动程序管理器应停止评级循环。|  
+|任何其他大于100的值|*hCandidateConnection*被标记为 "死"，即使在未来的连接请求中也不会重复使用。|  
   
- 如果返回代码 （包括 SQL_SUCCESS_WITH_INFO） SQL_SUCCESS 以外的内容或分级大于 100，驱动程序管理器会将标记为不活动的连接。 死连接不会 （甚至在将来的连接请求） 重复使用，并最终将在之后 CPTimeout 传递已超时。 驱动程序管理器将继续查找从池到速率的另一个连接。  
+ 如果返回代码为除 SQL_SUCCESS （包括 SQL_SUCCESS_WITH_INFO）或分级大于100以外的任何值，则驱动程序管理器会将连接标记为 "死"。 不会重复使用该死连接（即使在未来的连接请求中），并且在 CPTimeout 通过后，最终将超时。 驱动程序管理器将继续从池中找到另一个连接以进行评级。  
   
- 如果驱动程序管理器重复使用其分数是严格小于 100 （包括 99） 的连接，驱动程序管理器将调用 SQLSetConnectAttr(SQL_ATTR_DBC_INFO_TOKEN) 重置该连接返回到应用程序请求的状态。 该驱动程序不应重置此函数调用中的连接。  
+ 如果驱动程序管理器使用的连接的分数严格小于100（包括99），驱动程序管理器将调用 SQLSetConnectAttr （SQL_ATTR_DBC_INFO_TOKEN）将连接重置回应用程序所请求的状态。 在此函数调用中，驱动程序不应重置连接。  
   
- 如果*fRequiredTransactionEnlistment*为 TRUE，那么重用*hCandidateConnection*需要的额外登记 (*transId* ！ = NULL) 或征用 (*transId* = = NULL)。 这表示的重复使用的连接和驱动程序是否应登记 / 取消登记连接，如果要重复使用连接的成本。 如果*fRequireTransactionEnlistment*为 FALSE 时，驱动程序应忽略的值*transId*。  
+ 如果*fRequiredTransactionEnlistment*为 TRUE，则重复使用*hCandidateConnection*需要额外的登记（*transId* ！ = null）或 unenlistment （*transId* = = null）。 这表示重新使用连接的成本，以及驱动程序是否应在该连接再次使用连接的情况下登记或取消登记连接。 如果*fRequireTransactionEnlistment*为 FALSE，则驱动程序应忽略*transId*的值。  
   
- 驱动程序管理器可保证 HENV 处理的父*hRequest*并*hCandidateConnection*相同。 驱动程序管理器可保证与关联的池 ID *hRequest*并*hCandidateConnection*相同。  
+ 驱动程序管理器保证*hRequest*和*HCANDIDATECONNECTION*的父 HENV 句柄相同。 驱动程序管理器保证与*hRequest*和*hCandidateConnection*相关联的池 ID 是相同的。  
   
- 应用程序不应直接调用此函数。 支持识别驱动程序的连接池的 ODBC 驱动程序必须实现此函数。  
+ 应用程序不应直接调用此函数。 支持驱动程序感知连接池的 ODBC 驱动程序必须实现此功能。  
   
- 包括 sqlspi.h 的 ODBC 驱动程序开发。  
+ 包括用于 ODBC 驱动程序开发的 sqlspi。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [开发 ODBC 驱动程序](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [识别驱动程序的连接池](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [在 ODBC 驱动程序中开发连接池感知](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7ae056d72d3966a9787ac2d52f89689ae9f6a799
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106299"
 ---
 # <a name="3d-bevel-and-other-effects-in-a-chart-report-builder-and-ssrs"></a>图表中的三维效果、凹凸效果和其他效果（报表生成器和 SSRS）
@@ -59,7 +59,7 @@ ms.locfileid: "66106299"
 ## <a name="highlighting-3d-effects"></a>突出显示三维效果  
  选择图表区时，您可以通过在“属性”窗格中 Area3Dstyle 下出现的 **“明暗度”** 属性，为三维图表添加突出显示样式。 简单的照明样式会对图表区元素应用相同的色调。 真实样式会根据指定的照明角度，更改图表区元素的色调。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [设置图表上轴标签的格式（报表生成器和 SSRS）](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [设置图表格式（报表生成器和 SSRS）](formatting-a-chart-report-builder-and-ssrs.md)   
  [向图表添加三维效果（报表生成器和 SSRS）](chart-effects-add-3d-effects-report-builder.md)  

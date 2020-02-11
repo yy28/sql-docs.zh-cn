@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0f6380144faaa138e558d0118b6620aa22a095e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105579"
 ---
 # <a name="line-charts-report-builder-and-ssrs"></a>折线图（报表生成器和 SSRS）
@@ -22,7 +22,7 @@ ms.locfileid: "66105579"
   
  下图显示了一个包含三个序列的折线图。  
   
- ![折线图](../media/rs-linechart.gif "Line chart")  
+ ![折线图](../media/rs-linechart.gif "折线图")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -45,7 +45,7 @@ ms.locfileid: "66105579"
   
 -   绘制成线条的序列并不会在图表区占太大空间。  因此，折线图经常与其他图表类型（如柱形图）结合使用。 但是，折线图不能与条形图、极坐标图、饼图或形状图等图表类型结合使用。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [条形图（报表生成器和 SSRS）](bar-charts-report-builder-and-ssrs.md)   
  [柱形图（报表生成器和 SSRS）](column-charts-report-builder-and-ssrs.md)   
  [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   

@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 747a811d1d355bd182b18f4c29f2d1bf9354fa55
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103029"
 ---
 # <a name="windows-application-log"></a>Windows 应用程序日志
@@ -39,7 +39,7 @@ ms.locfileid: "66103029"
   
  下表对报表服务器写入应用程序事件日志的事件类型进行了说明：  
   
-|事件类型|Description|  
+|事件类型|说明|  
 |----------------|-----------------|  
 |信息|描述成功操作的事件（例如，报表服务器服务的启动时间）。|  
 |警告|指示潜在问题的事件（如磁盘空间不足）。|  
@@ -47,7 +47,7 @@ ms.locfileid: "66103029"
 |审核成功|描述成功登录的安全性事件。|  
 |审核失败|登录失败时记录的事件。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Reporting Services 日志文件和来源](../report-server/reporting-services-log-files-and-sources.md)   
  [错误和事件参考 (Reporting Services)](../troubleshooting/errors-and-events-reference-reporting-services.md)  
   

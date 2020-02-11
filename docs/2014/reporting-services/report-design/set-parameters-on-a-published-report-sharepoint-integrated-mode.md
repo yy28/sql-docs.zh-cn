@@ -1,5 +1,5 @@
 ---
-title: 设置已发布的报表 (Reporting Services SharePoint 集成模式下) 的参数 |Microsoft Docs
+title: 在已发布报表上设置参数（SharePoint 集成模式下 Reporting Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: da71b511a65758483a9bf207dbe54a484f4f1b26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105018"
 ---
 # <a name="set-parameters-on-a-published-report-reporting-services-in-sharepoint-integrated-mode"></a>设置已发布报表的参数（SharePoint 集成模式下的 Reporting Services）
@@ -49,7 +49,7 @@ ms.locfileid: "66105018"
   
      指定的值组合可能无法让您获得所需的结果。 如果您无法获得所需信息，则报表作者可能需要修改报表。  
   
-5.  单击“确定”  。  
+5.  单击“确定”。   
   
 ### <a name="to-set-parameter-properties"></a>设置参数属性  
   
@@ -79,9 +79,9 @@ ms.locfileid: "66105018"
   
     3.  如果使用默认值且不希望在参数区域中或订阅页上显示参数，请选择 **“内部”** 。  
   
-7.  单击 **“应用”** 。  
+7.  单击“应用”  。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [报表服务器项的 SharePoint 站点和列表权限参考](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
   
   
