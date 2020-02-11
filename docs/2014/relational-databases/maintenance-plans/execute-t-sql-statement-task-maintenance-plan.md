@@ -15,17 +15,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: aac0c6b837fcd25b0e1f06344a2745c68b05dea3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206031"
 ---
 # <a name="execute-t-sql-statement-task-maintenance-plan"></a>“执行 T-SQL 语句”任务（维护计划）
-  使用“执行 T-SQL 语句任务”  对话框，可以通过向此维护计划添加所选择的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句来自定义维护计划。  
+  使用 "**执行 T-sql 语句任务**" 对话框，可以通过向此维护计划添加[!INCLUDE[tsql](../../includes/tsql-md.md)]所选的语句来自定义维护计划。  
   
 ## <a name="options"></a>选项  
- **“连接”**  
+ **连接**  
  选择执行此任务时使用的服务器连接。  
   
  **新建**  
@@ -34,10 +34,10 @@ ms.locfileid: "68206031"
  **执行超时值**  
  超时（终止任务）前等待任务完成的时间（秒）。  
   
- **T-SQL 语句**  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 要执行的语句。  
+ **T-sql 语句**  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)]要执行的语句。  
   
- **查看 T-SQL**  
+ **查看 T-sql**  
  根据所选选项，查看针对此任务的服务器执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
   
 > [!NOTE]  
@@ -50,22 +50,22 @@ ms.locfileid: "68206031"
  **选择或输入服务器名称**  
  选择执行此任务时所要连接的服务器。  
   
- **刷新**  
+ **“刷新”**  
  刷新可用服务器的列表。  
   
- **输入登录服务器所需的信息**  
+ **输入用于登录到服务器的信息**  
  指定如何对服务器进行身份验证。  
   
  **使用 Windows 集成安全性**  
- 使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 的实例。  
+ 使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 身份验证连接到[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例。  
   
- **使用特定用户名和密码**  
+ **使用特定的用户名和密码**  
  使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。 此选项不可用。  
   
  **用户名**  
  提供一个在进行身份验证时要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 此选项不可用。  
   
- **密码**  
+ **权限**  
  提供一个在进行身份验证时要使用的密码。 此选项不可用。  
   
   

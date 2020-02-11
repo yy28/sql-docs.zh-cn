@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7bb7aebed25c571108e4b0d7e7366fc52c45e3c1
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73882307"
 ---
 # <a name="define-and-modify-a-static-row-filter"></a>定义和修改静态行筛选器
@@ -48,14 +48,14 @@ ms.locfileid: "73882307"
   
 ###  <a name="Recommendations"></a> 建议  
   
--   由于这些筛选器是静态的，因此所有订阅服务器都将接收到相同的数据子集。 如果您需要在属于合并发布的表项目中动态筛选行，以使每一订阅服务器都能接收到不同的数据分区，请参阅 [Define and Modify a Parameterized Row Filter for a Merge Article](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。 您还可使用合并复制基于现有的行筛选器筛选相关的行。 有关详细信息，请参阅 [定义和修改合并项目间的联接筛选器](define-and-modify-a-join-filter-between-merge-articles.md)。  
+-   由于这些筛选器是静态的，因此所有订阅服务器都将接收到相同的数据子集。 如果您需要在属于合并发布的表项目中动态筛选行，以使每一订阅服务器都能接收到不同的数据分区，请参阅 [定义和修改合并项目的参数化行筛选器](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。 您还可使用合并复制基于现有的行筛选器筛选相关的行。 有关详细信息，请参阅 [定义和修改合并项目间的联接筛选器](define-and-modify-a-join-filter-between-merge-articles.md)。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 可在新建发布向导的“筛选表行”页或“发布属性 - **发布>”对话框的“筛选行”页上定义、修改和删除静态行筛选器。** **\<** 有关使用该向导和访问该对话框的详细信息，请参阅[创建发布](create-a-publication.md)以及[查看和修改发布属性](view-and-modify-publication-properties.md)。  
+ 可在新建发布向导的“筛选表行”页或“发布属性 - **发布>”对话框的“筛选行”页上定义、修改和删除静态行筛选器。**  **\<** 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](create-a-publication.md)和[查看和修改发布属性](view-and-modify-publication-properties.md)。  
   
 #### <a name="to-define-a-static-row-filter"></a>定义静态行筛选器  
   
-1.  在新建发布向导的“筛选表行”页或“发布属性 - **发布>”对话框的“筛选行”** **\<** 页上，你执行的操作取决于发布类型：  
+1.  在新建发布向导的“筛选表行”页或“发布属性 - **发布>”对话框的“筛选行”**  **\<** 页上，你执行的操作取决于发布类型：  
   
     -   对于快照发布或事务发布，请单击 **“添加”** 。  
   
@@ -88,11 +88,11 @@ ms.locfileid: "73882307"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  如果处于“发布属性 - **发布>”\<** 对话框中，请单击“确定”以保存并关闭该对话框。  
+5.  如果处于“发布属性 - **发布>”对话框中，请单击“确定”以保存并关闭该对话框。\<**   
   
 #### <a name="to-modify-a-static-row-filter"></a>修改静态行筛选器  
   
-1.  在新建发布向导的“筛选表行”页或“发布属性 - **发布>”对话框的“筛选行”页上，在“筛选的表”窗格中选择筛选器，然后单击“编辑”。** **\<**  
+1.  在新建发布向导的“筛选表行”页或“发布属性 - **发布>”对话框的“筛选行”页上，在“筛选的表”窗格中选择筛选器，然后单击“编辑”。**  **\<**    
   
 2.  在 **“编辑筛选器”** 对话框中，修改筛选器。  
   
@@ -100,14 +100,14 @@ ms.locfileid: "73882307"
   
 #### <a name="to-delete-a-static-row-filter"></a>删除静态行筛选器  
   
-1.  在新建发布向导的“筛选表行”页或“发布属性 - **发布>”对话框的“筛选行”页上，在“筛选的表”窗格中选择筛选器，然后单击“删除”。** **\<**  
+1.  在新建发布向导的“筛选表行”页或“发布属性 - **发布>”对话框的“筛选行”页上，在“筛选的表”窗格中选择筛选器，然后单击“删除”。**  **\<**    
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  在创建表项目时，可以定义 WHERE 子句以筛选项目中的行。 定义行筛选器后，还可以对其进行更改。 可使用复制存储过程以编程的方式创建和修改静态行筛选器。  
   
 #### <a name="to-define-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>为快照发布或事务发布定义静态行筛选器  
   
-1.  定义要筛选的项目。 有关详细信息，请参阅 [Define an Article](define-an-article.md)。  
+1.  定义要筛选的项目。 有关详细信息，请参阅 [定义项目](define-an-article.md)。  
   
 2.  在发布服务器上，对发布数据库执行 [sp_articlefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql)。 为 **article 指定项目的名称，为 \@publication 指定发布的名称，为** filter_name 指定筛选器的名称，并为 **filter_clause 指定筛选子句（不包括 \@）** **\@** **\@** `WHERE`。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "73882307"
   
 2.  在发布服务器上，对发布数据库执行 [sp_articleview &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql)。 为 **publication 指定发布名称，为 \@article 指定筛选项目的名称，为** filter_clause 指定步骤 1 中指定的筛选子句 **\@** **\@** 。 这将重新创建定义筛选项目的视图。  
   
-3.  对发布重新运行快照代理作业以生成更新的快照。 有关详细信息，请参阅 [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md)。  
+3.  对发布重新运行快照代理作业以生成更新的快照。 有关详细信息，请参阅 [创建并应用初始快照](../create-and-apply-the-initial-snapshot.md)。  
   
 4.  重新初始化订阅。 有关详细信息，请参阅 [重新初始化订阅](../reinitialize-subscriptions.md)。  
   
@@ -127,21 +127,21 @@ ms.locfileid: "73882307"
   
 1.  在发布服务器上，对发布数据库执行 [sp_articlefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql)。 为 **article 指定项目的名称，为 \@publication 指定发布的名称，将** filter_name 的值指定为 NULL，并将 **filter_clause 的值指定为 NULL\@** **\@** **\@** 。 由于此更改将使现有订阅中的数据失效，因此请将 **force_reinit_subscription 的值指定为 1** **\@** 。  
   
-2.  对发布重新运行快照代理作业以生成更新的快照。 有关详细信息，请参阅 [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md)。  
+2.  对发布重新运行快照代理作业以生成更新的快照。 有关详细信息，请参阅 [创建并应用初始快照](../create-and-apply-the-initial-snapshot.md)。  
   
 3.  重新初始化订阅。 有关详细信息，请参阅 [重新初始化订阅](../reinitialize-subscriptions.md)。  
   
 #### <a name="to-define-a-static-row-filter-for-a-merge-publication"></a>为合并发布定义静态行筛选器  
   
-1.  在发布服务器上，对发布数据库执行 [sp_addmergearticle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)。 为 **subset_filterclause 指定筛选子句（不包括 \@）** `WHERE`。 有关详细信息，请参阅 [Define an Article](define-an-article.md)。  
+1.  在发布服务器上，对发布数据库执行 [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)。 为 **subset_filterclause 指定筛选子句（不包括 \@）** `WHERE`。 有关详细信息，请参阅 [定义项目](define-an-article.md)。  
   
 2.  如果还必须定义列筛选器，请参阅 [定义和修改列筛选器](define-and-modify-a-column-filter.md)。  
   
 #### <a name="to-modify-a-static-row-filter-for-a-merge-publication"></a>为合并发布修改静态行筛选器  
   
-1.  在发布服务器上，对发布数据库执行 [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 为 **publication 指定发布名称，为 \@article 指定筛选项目的名称，为** property 指定 subset_filterclause 值，并为 **value 指定新筛选子句（不包括 \@）** **\@** **\@** `WHERE`。 由于此更改将使现有订阅中的数据失效，因此请将 **force_reinit_subscription 的值指定为 1\@** 。  
+1.  在发布服务器上，对发布数据库执行 [sp_changemergearticle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 为 **publication 指定发布名称，为 \@article 指定筛选项目的名称，为** property 指定 subset_filterclause 值，并为 **value 指定新筛选子句（不包括 \@）**  **\@** **\@** `WHERE`。 由于此更改将使现有订阅中的数据失效，因此请将 **force_reinit_subscription 的值指定为 1\@** 。  
   
-2.  对发布重新运行快照代理作业以生成更新的快照。 有关详细信息，请参阅 [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md)。  
+2.  对发布重新运行快照代理作业以生成更新的快照。 有关详细信息，请参阅 [创建并应用初始快照](../create-and-apply-the-initial-snapshot.md)。  
   
 3.  重新初始化订阅。 有关详细信息，请参阅 [重新初始化订阅](../reinitialize-subscriptions.md)。  
   

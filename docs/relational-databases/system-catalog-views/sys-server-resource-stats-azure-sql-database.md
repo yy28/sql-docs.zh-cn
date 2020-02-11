@@ -1,5 +1,5 @@
 ---
-title: sys.server_resource_stats （Azure SQL 数据库） |Microsoft Docs
+title: sys. server_resource_stats （Azure SQL Database） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2018
 ms.service: sql-database
@@ -20,47 +20,47 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
 ms.openlocfilehash: 72e363b05e8f14dda535abd70e4218c949c42c91
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68133074"
 ---
-# <a name="sysserverresourcestats-azure-sql-database"></a>sys.server_resource_stats （Azure SQL 数据库）
+# <a name="sysserver_resource_stats-azure-sql-database"></a>sys. server_resource_stats （Azure SQL Database）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-返回 Azure SQL 托管实例 CPU 使用情况、 IO 和存储数据。 在五分钟的间隔内收集和聚合数据。 报告每隔 15 秒都占一行。 返回的数据包括 CPU 使用率、 存储大小、 IO 利用率和托管的实例 SKU。 历史数据保留大约 14 天。
+返回 Azure SQL 托管实例的 CPU 使用情况、IO 和存储数据。 在五分钟的间隔内收集和聚合数据。 每15秒报告一次。 返回的数据包括 CPU 使用率、存储大小、IO 利用率和托管实例 SKU。 历史数据保留大约 14 天。
 
-**Sys.server_resource_stats**视图具有不同的定义，具体取决于数据库关联的 Azure SQL 托管实例的版本。 在升级到新的服务器版本时，请考虑这些不同之处和应用程序所需的任何修改。
+**Sys. server_resource_stats**视图的定义不同，具体取决于与数据库关联的 Azure SQL 托管实例的版本。 在升级到新的服务器版本时，请考虑这些不同之处和应用程序所需的任何修改。
  
   
  下表介绍 v12 服务器中可用的列：  
   
-|“列”|数据类型|描述|  
+|列|数据类型|说明|  
 |----------------------------|---------------|-----------------|  
-|start_time|**datetime2**|指示 15 秒的报告间隔的起始的 UTC 时间|  
-|end_time|**datetime**|指示 15 秒的报告间隔结束的 UTC 时间|
-|resource_type|Nvarchar(128)|为其提供指标的资源类型|
+|start_time|**datetime2**|指示15秒报表间隔开始时间的 UTC 时间|  
+|end_time|**datetime**|指示15秒报表间隔结束的 UTC 时间|
+|resource_type|Nvarchar （128）|为其提供指标的资源的类型|
 |resource_name|nvarchar(128)|资源的名称。|
-|sku|nvarchar(128)|托管实例的实例的服务层。 下面是可能的值： <br><ul><li>常规用途</li></ul><ul><li>业务关键型</li></ul>|
-|hardware_generation|nvarchar(128)|硬件生成标识符： 例如，第 4 代或第 5 代|
-|virtual_core_count|INT|表示每个实例 （8、 16 或 24 日在公共预览版） 的虚拟内核数|
-|avg_cpu_percent|decimal(5,2)|使用过度的实例的托管实例服务层限制的百分比形式表示的平均计算使用率。 它是计算为该实例中的所有数据库的所有资源池的 CPU 时间的总和并除以该层在给定时间间隔内的可用 CPU 时间。|
-|reserved_storage_mb|BIGINT|保留每个实例存储 （该客户购买的托管实例的空间量存储）|
-|storage_space_used_mb|decimal(18,2)|存储使用的所有托管的实例数据库文件 （包括用户和系统数据库）|
-|io_request|BIGINT|I/o 间隔内的物理操作的总数|
-|io_bytes_read|BIGINT|物理读取的字节数在时间间隔内|
-|io_bytes_written|BIGINT|物理写入的字节数在时间间隔内|
+|sku|nvarchar(128)|托管实例实例的服务层。 下面是可能的值： <br><ul><li>常规用途</li></ul><ul><li>业务关键</li></ul>|
+|hardware_generation|nvarchar(128)|硬件生成标识符：例如 Gen 4 或 Gen 5|
+|virtual_core_count|int|表示每个实例的虚拟核心数（公共预览版中为8、16或24）|
+|avg_cpu_percent|decimal （5，2）|平均计算使用率（以该实例使用托管实例服务层限制的百分比表示）。 它计算为实例中所有数据库的所有资源池的 CPU 时间的总和，并在给定的时间间隔内除以该层的可用 CPU 时间。|
+|reserved_storage_mb|bigint|每个实例保留的存储（客户为托管实例购买的存储空间量）|
+|storage_space_used_mb|decimal （18，2）|所有托管实例数据库文件使用的存储（包括用户数据库和系统数据库）|
+|io_request|bigint|间隔内的 i/o 物理操作数总数|
+|io_bytes_read|bigint|在时间间隔内读取的物理字节数|
+|io_bytes_written|bigint|在间隔中写入的物理字节数|
 
  
 > [!TIP]  
->  有关这些限制和服务层的更多上下文，请参阅主题[托管实例服务层](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)。  
+>  有关这些限制和服务层的详细信息，请参阅主题[托管实例的服务层](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)。  
     
 ## <a name="permissions"></a>权限  
- 此视图可供有权连接到的所有用户角色**主**数据库。  
+ 此视图可用于具有连接到**master**数据库的权限的所有用户角色。  
   
 ## <a name="remarks"></a>备注  
- 返回的数据**sys.server_resource_stats**表示为字节或兆字节 （列名称中所述） 中使用的总以外 avg_cpu，表示为百分比的最大允许服务的限制正在运行的层/性能级别。  
+ **Sys. server_resource_stats**返回的数据表示为除 avg_cpu 之外的字节或兆字节（在列名中指定）中使用的总大小，这表示为运行的服务层/性能级别所允许的最大限制的百分比。  
  
 ## <a name="examples"></a>示例  
  以下示例返回与上周相比平均参与至少 80% 的计算使用率的所有数据库。  
@@ -77,5 +77,5 @@ GROUP BY resource_name
 HAVING AVG(avg_cpu_percent) >= 80  
 ```  
     
-## <a name="see-also"></a>请参阅  
- [托管实例服务层](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)
+## <a name="see-also"></a>另请参阅  
+ [托管实例的服务层](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)

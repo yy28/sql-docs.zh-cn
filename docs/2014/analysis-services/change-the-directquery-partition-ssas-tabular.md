@@ -1,5 +1,5 @@
 ---
-title: 更改 DirectQuery 分区 (SSAS 表格) |Microsoft Docs
+title: 更改 DirectQuery 分区（SSAS 表格） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1eb0b6349eac28bbd2abc22b9483ef74edf1bf33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088184"
 ---
 # <a name="change-the-directquery-partition-ssas-tabular"></a>更改 DirectQuery 分区（SSAS 表格）
@@ -26,7 +26,7 @@ ms.locfileid: "66088184"
   
 2.  单击 **“表”** 菜单，然后单击 **“分区”**。  
   
-3.  在“分区管理器”中，作为当前直接查询分区的分区由分区名称上的前缀 **(DirectQuery)** 指示。  
+3.  在“分区管理器”中，作为当前直接查询分区的分区由分区名称上的前缀 **(DirectQuery)** 指示。****  
   
      从 **“分区”** 列表中选择一个不同的分区，然后单击 **“设置为 DirectQuery”**。 在选择当前 DirectQuery 分区时 **“设置为 DirectQuery”** 按钮未启用，并且在尚未为直接查询模式启用模型时不可见。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66088184"
   
 1.  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]的对象资源管理器中，打开模型数据库。  
   
-2.  展开“表”节点，右键单击已分区表，然后选择“分区”。  
+2.  展开“表”节点，右键单击已分区表，然后选择“分区”。********  
   
      为用于 DirectQuery 模式而指定的分区在分区名称上具有前缀 (DirectQuery)。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66088184"
   
 4.  从 **“分区名称”** 下拉列表中选择一个不同的分区，然后根据需要更改该分区上的处理选项。  
   
-## <a name="see-also"></a>请参阅  
- [分区（SSAS 表格）](tabular-models/partitions-ssas-tabular.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;SSAS 表格&#41;分区](tabular-models/partitions-ssas-tabular.md)  
   
   

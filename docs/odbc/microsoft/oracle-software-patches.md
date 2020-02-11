@@ -14,32 +14,32 @@ ms.assetid: 1275157b-f4e1-4c24-b273-c02555e261c2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fce38aabddfc3891314940d4b7cb21f02965c083
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68100769"
 ---
 # <a name="oracle-software-patches"></a>Oracle 软件修补程序
 > [!IMPORTANT]  
->  此功能将 Windows 的未来版本中删除。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 相反，使用提供的 Oracle 的 ODBC 驱动程序。  
+>  此功能将在 Windows 的将来版本中删除。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 请改用 Oracle 提供的 ODBC 驱动程序。  
   
- 在 Oracle 服务器产品和其客户端组件的修补程序所需的正常运行的多个 Microsoft 产品和技术，包括 Microsoft ODBC Driver for Oracle，Microsoft OLE DB Provider for Oracle，Internet 信息服务 (IIS) 组件服务 （或 Microsoft Transaction Server，如果您使用的 Windows NT） 中，依次类推。  
-  
-> [!NOTE]  
->  因为 Oracle FTP 站点可能会发生更改，可能不完全准确的以下说明进行操作。  
-  
-### <a name="to-download-the-oracle-software-patches"></a>若要下载的 Oracle 软件修补程序  
-  
-1.  连接到 oracle ftp.oracle.com 在公共 FTP 站点。 用户 ID 为"anonymous"和密码是你的电子邮件地址。  
-  
-2.  导航到以下目录： /server/wgt_tech/server/windowsNT。  
-  
-3.  若要下载 Windows 95、 Windows 98 和 Windows NT/Windows 2000 的最相关的修补程序，导航到你的 Oracle-7.3 或 8.0 版本的子目录。 两个子目录为 /73patchsets 和 /80patchsets。  
-  
-4.  若要下载修补程序用于 Oracle 的网络技术，任一 SQL * Net 或 Net8，导航到以下目录: / 网络。  
-  
- 从 Web 浏览器访问此 FTP 站点可能无法工作。 如果遇到问题，请尝试使用传统的 FTP 客户端或使用 DOS 命令提示符。  
+ 对于多个 Microsoft 产品和技术（包括用于 Oracle 的 Microsoft ODBC 驱动程序、Oracle 的 Microsoft OLE DB 提供程序、Internet 信息），Oracle 服务器产品及其客户端组件的修补程序是必需的。服务（IIS）、组件服务（或 Microsoft 事务服务器，如果使用的是 Windows NT）等。  
   
 > [!NOTE]  
->  因为 Oracle 在当前版本中修复了 bug，然后将它们 retrofits 到早期版本使用的软件修补程序，建议您下载提供的最新修补程序。 这是 Oracle 服务器客户端组件的尤其如此。 如果您有关于安装这些修补程序问题，请联系 Oracle 支持。
+>  以下说明可能不完全准确，因为 Oracle FTP 站点可能会发生更改。  
+  
+### <a name="to-download-the-oracle-software-patches"></a>下载 Oracle 软件修补程序  
+  
+1.  在 oracle-ftp.oracle.com 连接到公共 FTP 站点。 用户 ID 为 "匿名"，密码为你的电子邮件地址。  
+  
+2.  导航到以下目录：/server/wgt_tech/server/windowsNT。  
+  
+3.  若要下载与 Windows 95、Windows 98 和 Windows NT/Windows 2000 最相关的修补程序，请导航到你的 Oracle 版本的的子目录-7.3 或8.0。 这两个子目录是/73patchsets 和/80patchsets。  
+  
+4.  若要下载 Oracle 网络技术修补程序（SQL * Net 或 Net8），请导航到以下目录：/network。  
+  
+ 从 Web 浏览器访问此 FTP 站点可能不起作用。 如果遇到问题，请尝试使用 "传统" FTP 客户端或使用 DOS 命令提示符。  
+  
+> [!NOTE]  
+>  由于 Oracle 在当前版本中修复了 bug，然后使用软件修补程序将其 retrofits 到早期版本，因此建议下载最新的可用修补程序。 对于 Oracle 服务器客户端组件尤其如此。 如果你对安装这些修补程序有疑问，请联系 Oracle 支持部门。

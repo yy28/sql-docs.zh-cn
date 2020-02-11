@@ -11,14 +11,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 169c35d89075646aa3f4964d0e9d6eda92bc13a2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62901052"
 ---
 # <a name="sap-bw-source"></a>SAP BW 源
-  SAP BW 源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的源组件。 因此，SAP BW 源从 SAP Netweaver BW 版本 7 系统提取数据，并将这些数据提供给 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中的数据流。  
+  SAP BW 源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的源组件。 因此，SAP BW 源从 SAP Netweaver BW 版本7系统提取数据，并使此数据可用于[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]包中的数据流。  
   
  此源具有一个输出和一个错误输出。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "62901052"
   
 -   [配置 SAP BW 源](#bkmk_Configure_Source)  
   
-##  <a name="bkmk_Prepare_Objects"></a> 准备源所需的 SAP Netweaver BW 对象  
+##  <a name="bkmk_Prepare_Objects"></a>准备源所需的 SAP Netweaver BW 对象  
  SAP BW 源要求 SAP Netweaver BW 系统中存在某些对象才能正常工作。 如果这些对象还不存在，必须按照下列步骤在 SAP Netweaver BW 系统中创建并配置这些对象。  
   
 > [!NOTE]  
@@ -44,19 +44,19 @@ ms.locfileid: "62901052"
   
 1.  通过 SAP GUI 登录 SAP Netweaver BW，输入事务代码 SM59，创建一个 RFC 目标：  
   
-    1.  对于“连接类型”，选择“TCP/IP”。  
+    1.  对于“连接类型”，选择“TCP/IP”********。  
   
     2.  对于 **“激活类型”**，选择 **“注册服务器程序”**。  
   
-    3.  对于“与目标系统的通信类型”，选择“非 Unicode (非活动 MDMP 设置)”。  
+    3.  对于“与目标系统的通信类型”  ，选择“非 Unicode (非活动 MDMP 设置)”  。  
   
     4.  分配适当的程序 ID。  
   
 2.  创建 Open Hub 目标：  
   
-    1.  转到 Administrator Workbench（事务代码 RSA1），在左窗格中选择“Open Hub 目标”。  
+    1.  转到 Administrator Workbench（事务代码 RSA1），在左窗格中选择****“Open Hub 目标”。  
   
-    2.  在中间窗格中，右键单击 InfoArea，然后选择“创建 Open Hub 目标”。  
+    2.  在中间窗格中，右键单击 InfoArea，然后选择****“创建 Open Hub 目标”。  
   
     3.  对于 **“目标类型”**，选择 **“第三方工具”**，然后输入之前创建的 RFC 目标。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62901052"
   
 3.  创建数据传输进程 (DTP)：  
   
-    1.  在 InfoArea 的中间窗格中，右键单击之前创建的目标，然后选择“创建数据传输进程”。  
+    1.  在 InfoArea 的中间窗格中，右键单击之前创建的目标，然后选择****“创建数据传输进程”。  
   
     2.  配置、保存并激活 DTP。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62901052"
   
  有关 SAP BW 连接管理器的详细信息，请参阅 [SAP BW Connection Manager](../connection-manager/sap-bw-connection-manager.md)。  
   
-##  <a name="bkmk_Configure_Source"></a> 配置 SAP BW 源  
+##  <a name="bkmk_Configure_Source"></a>配置 SAP BW 源  
  可以按下列方式配置 SAP BW 源：  
   
 -   查找并选择用来提取数据的 Open Hub Service (OHS) 目标。  
@@ -100,11 +100,11 @@ ms.locfileid: "62901052"
   
 -   根据所选择的数据提取方法，提供以下额外信息：  
   
-    -   对于“P - 触发进程链”选项，提供网关主机名称、网关服务名称、RFC 目标的程序 ID 和进程链的名称。  
+    -   对于****“P - 触发进程链”选项，提供网关主机名称、网关服务名称、RFC 目标的程序 ID 和进程链的名称。  
   
-    -   对于“W - 等待通知”选项，提供网关主机名称、网关服务器名称和 RFC 目标的程序 ID。 还可以指定超时时间（以秒为单位）。 超时是源收到通知前的最长等待时间。  
+    -   对于****“W - 等待通知”选项，提供网关主机名称、网关服务器名称和 RFC 目标的程序 ID。 还可以指定超时时间（以秒为单位）。 超时是源收到通知前的最长等待时间。  
   
-    -   对于“E - 仅提取”选项，提供请求 ID。  
+    -   对于“E - 仅提取”**** 选项，提供请求 ID。  
   
 -   指定字符串转换规则。 （例如，根据 SAP Netweaver BW 是否为 Unicode 转换所有字符串，或者将所有字符串转换为 `varchar` 或 `nvarchar`）。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "62901052"
   
 -   [预览](preview.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Microsoft Connector 1.1 for SAP BW 组件](../microsoft-connector-for-sap-bw-components.md)  
   
   

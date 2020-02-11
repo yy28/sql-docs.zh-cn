@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: abc14f78a969abd4adbbb2dcf12b4ee316614d23
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69634552"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>升级 SQL Server 实例中的机器学习（R 和 Python）组件
@@ -194,7 +194,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 1. 下载 .cab 文件。 以下链接适用于 9.3 版本。 如果需要早期版本，可以在 [R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows-offline#download-required-components) 中找到其他链接。 请记住，Python/Anaconda 只能添加到 SQL Server 机器学习服务实例中。 预定型模型适用于 R 和 Python；.cab 以正在使用的语言提供模型。
 
-    | 功能 | 下载 |
+    | Feature | 下载 |
     |---------|----------|
     | R       | [SRO_3.4.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=867186&clcid=1033) |
     | Python  | [SPO_9.3.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=859054) | 
@@ -250,7 +250,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 2. 安装程序将标识要取消绑定的本地实例。
 3. 取消选中要还原为原始配置的实例旁边的复选框。
 4. 接受许可协议。 即使在安装时也必须表明你已接受许可条款。
-5. 单击 **“完成”** 。 此过程需要花费一点时间。
+5. 单击“完成”  。 此过程需要花费一点时间。
 
 #### <a name="bkmk_cmdunbind"></a> 使用命令行取消绑定
 
@@ -278,13 +278,13 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 ## <a name="sqlbindrexe-command-syntax"></a>SqlBindR.exe 命令语法
 
-### <a name="usage"></a>用法
+### <a name="usage"></a>使用情况
 
 `sqlbindr [/list] [/bind <SQL_instance_ID>] [/unbind <SQL_instance_ID>]`
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>parameters
 
-|“属性”|描述|
+|名称|说明|
 |------|------|
 |*list*| 显示当前计算机上所有 SQL 数据库实例 ID 的列表|
 |*bind*| 将指定的 SQL 数据库实例升级至 R Server 最新版本，并确保实例会自动获取 R Server 的未来升级|

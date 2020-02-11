@@ -13,16 +13,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7b2614d090bce0ecf0c61db5c9a5222ec6b10951
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110169"
 ---
 # <a name="populating-a-table-with-existing-hierarchical-data"></a>使用现有层次结构数据填充表
-  此任务将创建新表，然后使用 **EmployeeDemo** 表中的数据填充该表。 此任务包含以下步骤：  
+  此任务创建一个新表，并使用**EmployeeDemo**表中的数据填充该表。 此任务包含以下步骤：  
   
--   创建一个包含 `hierarchyid` 列的新表。 此列可替换现有的 **EmployeeID** 和 **ManagerID** 列。 但是，您将保留这些列。 这是因为现有应用程序可能会引用这些列，而且它们还有助于您了解传输后的数据。 表定义将 **OrgNode** 指定为主键，这就要求该列包含唯一值。 **OrgNode** 列的聚集索引将使用 **OrgNode** 序列存储日期。  
+-   创建一个包含 `hierarchyid` 列的新表。 此列可替换现有的 **EmployeeID** 和 **ManagerID** 列。 但是，您将保留这些列。 这是因为现有应用程序可能会引用这些列，而且它们还有助于您了解传输后的数据。 表定义将 **OrgNode** 指定为主键，这就要求该列包含唯一值。 
+  **OrgNode** 列的聚集索引将使用 **OrgNode** 序列存储日期。  
   
 -   创建一个用于跟踪直接向每个经理报告的雇员人数的临时表。  
   
@@ -113,7 +114,7 @@ ms.locfileid: "66110169"
   
      `10        4         2`  
   
-3.  填充 **NewOrg** 表。 使用 GetRoot 和 ToString 方法要串联**Num**值到`hierarchyid`格式，然后再**OrgNode**使用生成的层次结构值的列：  
+3.  填充**NewOrg**表。 使用 GetRoot 和 ToString 方法将**Num**值连接到`hierarchyid`格式，然后使用生成的分层值更新**OrgNode**列：  
   
     ```  
     WITH paths(path, EmployeeID)   
@@ -151,7 +152,7 @@ ms.locfileid: "66110169"
   
     ```  
   
-     **LogicalNode**列转换为`hierarchyid`列转换的更具可读性的文本形式表示层次结构。 在其余的任务中，您将使用 `ToString()` 方法显示 `hierarchyid` 列的逻辑格式。  
+     **LogicalNode**列将`hierarchyid`该列转换为表示层次结构的更易读的文本形式。 在其余的任务中，您将使用 `ToString()` 方法显示 `hierarchyid` 列的逻辑格式。  
   
 5.  删除不再需要的临时表：  
   

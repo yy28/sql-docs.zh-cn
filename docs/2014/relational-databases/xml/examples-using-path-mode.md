@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c5a566d9684341b7aa20342147aab950ebd4047c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287775"
 ---
 # <a name="examples-using-path-mode"></a>示例：使用 PATH 模式
@@ -111,7 +111,7 @@ FOR XML PATH ('');
 GO  
 ```  
   
- 下面是结果：  
+ 结果如下：  
   
  `<ProductModelID>122</ProductModelID>`  
   
@@ -135,7 +135,7 @@ FOR XML PATH ('ProductModelData');
 GO  
 ```  
   
- 下面是结果：  
+ 结果如下：  
   
  `< ProductModelData id="122">`  
   
@@ -200,7 +200,7 @@ FOR XML PATH ('ProductModelData'), root ('Root');
 GO  
 ```  
   
- 下面是部分结果： 返回的 XML 查询指定 ManuInstr 作为列名，因为`query()`方法包装在 <`ManuInstr`> 标记中，如下所示：  
+ 下面是部分结果： 因为该查询指定 ManuInstr 作为列名，所以该`query()`方法返回的 XML 包装在 <`ManuInstr`> 标记中，如下所示：  
   
  `<Root>`  
   
@@ -244,7 +244,7 @@ FOR XML PATH ('ns2:ProductInfo'), root('ns1:root');
 GO  
 ```  
   
- 请注意，在 `MI` 中也定义了 `WITH XMLNAMESPACES`前缀。 因此，所指定的 `query()` 类型的 `xml` 方法没有在查询 prolog 中定义此前缀。 下面是结果：  
+ 请注意，在 `MI` 中也定义了 `WITH XMLNAMESPACES`前缀。 因此，所指定的 `query()` 类型的 `xml` 方法没有在查询 prolog 中定义此前缀。 结果如下：  
   
  `<ns1:root xmlns:MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" xmlns="uri2" xmlns:ns2="uri2" xmlns:ns1="uri1">`  
   
@@ -393,9 +393,9 @@ FOR XML PATH ('Translation')
 GO  
 ```  
   
- 添加到 <`English`> 元素的 `@xml:lang` 属性在预定义的 xml 命名空间中定义。  
+ 添加到 <`@xml:lang`> 元素的 `English` 属性在预定义的 xml 命名空间中定义。  
   
- 下面是结果：  
+ 结果如下：  
   
  `<Translation>`  
   
@@ -432,7 +432,7 @@ WHERE ProductModelID= 7 OR ProductModelID=9
 FOR XML PATH('ProductModelData'), root('root');  
 ```  
   
- 下面是结果：  
+ 结果如下：  
   
  `<root xmlns="uri2" xmlns:ns1="uri1">`  
   
@@ -464,7 +464,7 @@ FOR XML PATH('ProductModelData'), root('root');
   
  `</root>`  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [将 PATH 模式与 FOR XML 一起使用](use-path-mode-with-for-xml.md)  
   
   

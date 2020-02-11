@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: facde89ad6b476fa01b34badce10dd3cae52ecac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68186130"
 ---
 # <a name="start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler"></a>连接到服务器后自动启动跟踪 (SQL Server Profiler)
@@ -33,7 +33,7 @@ ms.locfileid: "68186130"
 > [!NOTE]  
 >  如果选择“建立连接后立即开始跟踪”  ，则不会显示“跟踪属性”  对话框，而是开始跟踪。 若要编辑跟踪属性，必须先关闭此设置。  
   
-## <a name="see-also"></a>请参阅  
- [SQL Server 事件探查器](sql-server-profiler.md)  
+## <a name="see-also"></a>另请参阅  
+ [SQL Server Profiler](sql-server-profiler.md)  
   
   

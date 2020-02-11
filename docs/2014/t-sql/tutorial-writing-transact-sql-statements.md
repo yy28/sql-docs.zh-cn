@@ -15,10 +15,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 67e09713fdec72313bde6ba81e1cc169467fda0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211190"
 ---
 # <a name="tutorial-writing-transact-sql-statements"></a>教程：编写 Transact-SQL 语句
@@ -51,11 +51,12 @@ ms.locfileid: "68211190"
   
 -   任何版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 或 Management Studio Express。  
+-   
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 或 Management Studio Express。  
   
 -   Internet Explorer 6 或更高版本。  
   
 > [!NOTE]  
->  时查看教程，我们建议您将添加**下一步**并**上一步**到文档查看器工具栏按钮。  
+>  查看教程时，建议您将 "**下一个**" 和 "**上一个**" 按钮添加到文档查看器工具栏。  
   
   

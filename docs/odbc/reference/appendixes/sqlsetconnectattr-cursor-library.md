@@ -13,20 +13,20 @@ ms.assetid: 6f70bbd0-a057-49ef-8b05-4c80b58fc6e6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 73d1369a2bce0327ac3367d33f0894bdcfab8205
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68125584"
 ---
 # <a name="sqlsetconnectattr-cursor-library"></a>SQLSetConnectAttr（游标库）
 > [!IMPORTANT]  
->  此功能将 Windows 的未来版本中删除。 避免在新的开发工作中使用此功能并计划修改当前使用此功能的应用程序。 Microsoft 建议使用驱动程序的游标功能。  
+>  此功能将在 Windows 的将来版本中删除。 避免在新的开发工作中使用此功能，并计划修改当前使用此功能的应用程序。 Microsoft 建议使用驱动程序的游标功能。  
   
- 本主题介绍如何使用**SQLSetConnectAttr**游标库中的函数。 有关常规信息**SQLSetConnectAttr**，请参阅[SQLSetConnectAttr 函数](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)。  
+ 本主题讨论如何在游标库中使用**SQLSetConnectAttr**函数。 有关**SQLSetConnectAttr**的常规信息，请参阅[SQLSetConnectAttr 函数](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)。  
   
- 应用程序调用**SQLSetConnectAttr**与 SQL_ATTR_ODBC_CURSORS 属性来指定游标库是始终使用、 驱动程序不支持可滚动游标，如果使用或从未使用过。 游标库假设使用驱动程序支持可滚动游标，如果它返回 SQL_STATIC_CURSOR_ATTRIBUTES1 信息类型 SQL_CA1_RELATIVE **SQLGetInfo**。  
+ 应用程序调用带有 SQL_ATTR_ODBC_CURSORS 特性的**SQLSetConnectAttr** ，以指定是否始终使用游标库，如果驱动程序不支持可滚动的游标，则使用此函数，或者从未使用过。 游标库假设当驱动程序返回**SQLGetInfo**中 SQL_STATIC_CURSOR_ATTRIBUTES1 信息类型 SQL_CA1_RELATIVE 时，该驱动程序支持可滚动的游标。  
   
- 应用程序必须调用**SQLSetConnectAttr**来指定游标库使用情况之后它将调用, **SQLAllocHandle**与*HandleType*设为 SQL_HANDLE_DBC 以分配连接和之后才会连接到数据源。 如果应用程序调用**SQLSetConnectAttr** SQL_ATTR_ODBC_CURSORS 属性与连接时仍处于活动状态，该游标库将返回错误。  
+ 应用程序必须调用**SQLSetConnectAttr**来指定游标库的使用情况，然后再**调用具有 SQL_HANDLE_DBC**的*HandleType* ，以分配连接并连接到数据源。 如果在连接仍处于活动状态时，应用程序使用 SQL_ATTR_ODBC_CURSORS 特性调用**SQLSetConnectAttr** ，则游标库将返回错误。  
   
- 若要设置的游标库与连接关联的所有语句的支持的语句属性，应用程序必须调用**SQLSetConnectAttr**后它连接到数据源和之前该语句属性打开游标。 如果应用程序调用**SQLSetConnectAttr**属性和游标是打开与连接关联的语句上使用语句、 语句属性将不会应用于该语句之前关闭游标和重新打开。
+ 若要为与连接相关联的所有语句设置游标库支持的语句属性，应用程序必须在连接到数据源之后以及在打开游标之前为该语句特性调用**SQLSetConnectAttr** 。 如果应用程序使用语句特性调用**SQLSetConnectAttr** ，并在与该连接关联的语句上打开了游标，则在关闭并重新打开该游标之前，语句属性将不会应用于该语句。

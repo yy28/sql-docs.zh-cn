@@ -1,5 +1,5 @@
 ---
-title: 使用 WQL 和脚本语言的配置管理的 WMI 提供程序 |Microsoft Docs
+title: 通过用于配置管理的 WMI 提供程序使用 WQL 和脚本语言 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: cc9994d4429e82f2bdd4f40797df1c5f628c6500
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68195824"
 ---
 # <a name="using-wql-and-scripting-languages-with-the-wmi-provider-for-configuration-management"></a>将 WQL 和脚本语言用于配置管理的 WMI 提供程序
@@ -32,12 +32,12 @@ ms.locfileid: "68195824"
   
 -   使用某一脚本语言，例如 VBScript。  
   
- 或者，可以使用 SMO 中的 WMI 托管对象以编程方式管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务和网络设置。 有关托管对象的有关对 WMI 进行编程的详细信息，请参阅[管理服务和通过使用 WMI 提供程序的网络设置](../server-management-objects-smo/tasks/managing-services-and-network-settings-by-using-wmi-provider.md)。  
+ 或者，可以使用 SMO 中的 WMI 托管对象以编程方式管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务和网络设置。 有关 WMI 托管对象编程的详细信息，请参阅[使用 Wmi 提供程序管理服务和网络设置](../server-management-objects-smo/tasks/managing-services-and-network-settings-by-using-wmi-provider.md)。  
   
- 可通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台访问用于配置管理的 WMI 提供程序。 有关从用户界面访问 WMI 提供程序的详细信息，请参阅[管理服务操作指南主题&#40;SQL Server 配置管理器&#41;](../../database-engine/managing-services-how-to-topics-sql-server-configuration-manager.md)。  
+ 可通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台访问用于配置管理的 WMI 提供程序。 有关从用户界面访问 WMI 提供程序的详细信息，请参阅[管理服务操作指南主题 &#40;SQL Server 配置管理器&#41;](../../database-engine/managing-services-how-to-topics-sql-server-configuration-manager.md)。  
   
-## <a name="see-also"></a>请参阅  
- [用于配置管理使用 WQL 访问 WMI 提供程序](access-wmi-provider-for-configuration-management-using-wql.md)   
+## <a name="see-also"></a>另请参阅  
+ [使用 WQL 访问用于配置管理的 WMI 提供程序](access-wmi-provider-for-configuration-management-using-wql.md)   
  [使用 VBScript 修改 SQL Server 服务高级属性](access-wmi-provider-for-configuration-management-using-vbscript.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 第 3 课：写入 Azure Blob 存储服务的完整数据库备份 |Microsoft Docs
+title: 第3课：将完整数据库备份写入到 Azure Blob 存储服务 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 1d5a749c61a3bc97de841e1149dd1539cbc990f2
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70153468"
 ---
 # <a name="lesson-3-write-a-full-database-backup-to-the-azure-blob-storage-service"></a>第 3 课：将完整数据库备份写入到 Azure Blob 存储服务
@@ -27,9 +27,9 @@ ms.locfileid: "70153468"
   
 2.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]的实例。  
   
-3.  在标准菜单栏上，单击 **“新建查询”** 。  
+3.  在标准菜单栏上，单击 **“新建查询”**。  
   
-4.  将以下示例复制并粘贴到查询窗口中，根据需要进行修改，然后单击 **“执行”** 。  
+4.  将以下示例复制并粘贴到查询窗口中，根据需要进行修改，然后单击 **“执行”**。  
   
     ```  
     BACKUP DATABASE[AdventureWorks2012]   
@@ -44,6 +44,6 @@ ms.locfileid: "70153468"
 5.  在对象资源管理器中，连接到 Azure 存储。 通过浏览找到容器和新创建的备份文件。  
   
 ## <a name="next-lesson"></a>下一课  
- [第 4 课：从完整数据库备份](../../2014/tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md)执行还原。  
+ [第4课：从完整数据库备份执行还原](../../2014/tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md)。  
   
   

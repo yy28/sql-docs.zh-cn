@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9106ff624c9a8e50bd292166690fc220eaea527e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108570"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
@@ -42,7 +42,7 @@ ms.locfileid: "66108570"
   
 2.  验证是否已经安装了 **“SQL Server Reporting Services 服务”** 且该服务处于 **“运行”** 状态。  
   
-     如果您在列表中看不到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务，则验证是否已安装该服务。 有关详细信息，请参阅的"安装并启动 Reporting Services SharePoint 服务"部分[安装 Reporting Services SharePoint 模式适用于 SharePoint 2010](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)。  
+     如果您在列表中看不到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务，则验证是否已安装该服务。 有关详细信息，请参阅[安装用于 sharepoint 2010 Reporting Services Sharepoint 模式](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)的 "安装并启动 Reporting Services sharepoint 服务" 部分。  
   
 #### <a name="to-verify-the-service-application"></a>验证服务应用程序  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66108570"
   
 #### <a name="to-verify-reporting-server-content-types"></a>验证报表服务器内容类型  
   
-1.  若要验证或添加[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]报表服务器内容类型，请参阅[将报表服务器内容类型添加到库&#40;SharePoint 集成模式下的 Reporting Services&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md)。  
+1.  若要验证或[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]添加 Report Server 内容类型，请参阅[将报表服务器内容类型添加到 Reporting Services SharePoint 集成模式下的库 &#40;&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md)。  
   
 #### <a name="to-verify-you-can-launch-report-builder"></a>验证是否可以启动报表生成器  
   
@@ -74,7 +74,7 @@ ms.locfileid: "66108570"
   
 1.  在 SharePoint 文档库中，创建一个仅包含文本框的基本 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表，例如标题。 该报表不包含任何数据源或数据集。 目的是验证能否打开报表生成器和预览基本报表。  
   
-2.  将报表保存到文档库并从库中运行该报表。 有关使用报表生成器创建报表的详细信息，请参阅 [启动报表生成器（报表生成器）](https://technet.microsoft.com/library/ms159221.aspx)。  
+2.  将报表保存到文档库并从库中运行该报表。 有关使用报表生成器创建报表的详细信息，请参阅 [启动报表生成器 (Report Builder)](https://technet.microsoft.com/library/ms159221.aspx)。  
   
 #### <a name="reporting-services-samples"></a>Reporting Services 示例  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66108570"
   
 2.  打开“服务”控制台应用程序并验证报表服务器服务是否正在运行。 若要查看报表服务器服务的状态，请单击“开始”，指向“控制面板”，双击“管理工具”，再双击“服务”     。 出现服务列表后，滚动到“报表服务器 (MSSQLSERVER)”  。 该服务的状态应为 **“已启动”** 。  
   
-3.  打开浏览器，在地址栏中键入报表服务器的 URL。 该地址由安装过程中为报表服务器指定的服务器名称和虚拟目录名组成。 默认情况下，报表服务器虚拟目录的名称为 **ReportServer**。 可以使用以下 URL 验证报表服务器安装： http://\<计算机名称>/ReportServer\<_实例名称>   。 如果将报表服务器安装为命名实例，URL 将有所不同。 有关 URL 格式的详细信息，请参阅[配置报表服务器 URL（SSRS 配置管理器）](configure-report-server-urls-ssrs-configuration-manager.md)。 如果你在 Windows Vista 或 Windows Server 2008 上是本地管理员，请参阅[为本地管理配置本机模式报表服务器 (SSRS)](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
+3.  打开浏览器，在地址栏中键入报表服务器的 URL。 该地址由安装过程中为报表服务器指定的服务器名称和虚拟目录名组成。 默认情况下，报表服务器虚拟目录的名称为 **ReportServer**。 你可以使用以下 URL 来验证 Report Server 安装： http://*\<计算机名称>*/ReportServer*\<_instance 名称>*。 如果将报表服务器安装为命名实例，URL 将有所不同。 有关 URL 格式的详细信息，请参阅[配置报表服务器 URL（SSRS 配置管理器）](configure-report-server-urls-ssrs-configuration-manager.md)。 如果你在 Windows Vista 或 Windows Server 2008 上是本地管理员，请参阅[为本地管理配置本机模式报表服务器 (SSRS)](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
   
 4.  运行报表以测试报表服务器的操作。 对于此步骤，您可以从教程创建一个示例报表。 有关详细信息，请参阅[创建基本表报表（SSRS 教程）](../create-a-basic-table-report-ssrs-tutorial.md)。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "66108570"
   
 1.  打开浏览器，在地址栏中键入报表服务器的 URL。 该地址由您在安装过程中或在 Reporting Services 配置工具的“报表管理器 URL”页中为报表管理器指定的服务器名称和虚拟目录名称组成。 默认情况下，报表管理器虚拟目录的名称为 **Reports**。 可以使用以下 URL 验证报表管理器安装：  
   
-     http://\<计算机名称>/Reports\<_实例名称>   。  
+     http://*\<计算机名称>*/Reports*\<_instance 名称>*。  
   
 2.  使用报表管理器创建新文件夹或上载文件，以测试定义是否传回报表服务器数据库。 如果上述操作成功，则表明连接正常。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "66108570"
   
 2.  如果安装了报表示例，请打开示例报表项目文件并将报表发布到报表服务器。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [排除 Reporting Services 安装故障](troubleshoot-a-reporting-services-installation.md)   
  [Reporting Services 错误的原因和解决方法](../troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
   

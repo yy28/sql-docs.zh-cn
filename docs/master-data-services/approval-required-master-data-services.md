@@ -11,10 +11,10 @@ ms.assetid: b475a53d-269d-49f3-bb42-965c555f80be
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 61d03410e5217175335caf0ca37241b28c887989
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729755"
 ---
 # <a name="approval-required-master-data-services"></a>需要审批 (Master Data Services)
@@ -30,26 +30,26 @@ ms.locfileid: "73729755"
 >   
 >  由业务规则所做的更改不需要进行审批。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  
   
 -   你必须有权访问“系统管理”功能区域  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)  
   
--   实体必须存在。 有关详细信息，请参阅[创建实体 (Master Data Services)](../master-data-services/create-an-entity-master-data-services.md)  
+-   实体必须存在。 有关详细信息，请参阅[Create a Entity &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)  
   
 ## <a name="to-enable-approval-required-for-an-entity"></a>为实体启用“需要审批”  
   
-1.  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，单击 **“系统管理”** 。  
+1.  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，单击 **“系统管理”**。  
   
-2.  在“管理模型” 页上，从网格中选择一个模型，然后单击“实体”。  
+2.  在 "**管理模型**" 页上，从网格中选择一个模型，然后单击 "**实体**"。  
   
-3.  在“管理实体” 页上，从网格中选择要为其启用“需要审批” 的实体所在的行。  
+3.  在“管理实体” **** 页上，从网格中选择要为其启用“需要审批”  **** 的实体所在的行。  
   
-4.  单击“编辑”，选择“需要审批”，然后单击“保存”。  
+4.  单击“编辑” ****，选择“需要审批” ****，然后单击“保存” ****。  
   
 ## <a name="see-also"></a>另请参阅  
- [变更集 (Master Data Services)](../master-data-services/changesets-master-data-services.md)  
+ [变更集 &#40;Master Data Services&#41;](../master-data-services/changesets-master-data-services.md)  
   
   
