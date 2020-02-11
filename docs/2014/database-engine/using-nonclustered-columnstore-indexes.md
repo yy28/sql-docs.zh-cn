@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e97aed3a5a4f5b49e482479b58928d2092a314f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773781"
 ---
 # <a name="using-nonclustered-columnstore-indexes"></a>使用非聚集列存储索引
@@ -30,12 +30,12 @@ ms.locfileid: "62773781"
   
 -   [更改非聚集列存储索引中的数据](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#change)  
   
-##  <a name="load"></a> 创建非聚集列存储索引  
- 将数据加载到聚集列存储索引，第一个将数据加载到传统行存储表存储为堆或聚集索引，以及如何将[创建列存储索引&#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql)若要创建列存储索引。  
+##  <a name="load"></a>创建非聚集列存储索引  
+ 若要将数据加载到非聚集列存储索引中，请首先将数据加载到作为堆或聚集索引存储的传统行存储表中，然后使用[CREATE 列存储索引 &#40;transact-sql&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)创建列存储索引。  
   
- ![数据加载到列存储索引](../../2014/database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "数据加载到列存储索引")  
+ ![将数据加载到列存储索引中](../../2014/database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "将数据加载到列存储索引中")  
   
-##  <a name="change"></a> 更改非聚集列存储索引中的数据  
+##  <a name="change"></a>更改非聚集列存储索引中的数据  
  在您在表上创建非聚集列存储索引后，不能直接在该表中修改数据。 具有 INSERT、UPDATE、DELETE 或 MERGE 的查询将失败并且返回错误消息。 若要添加或修改表中的数据，可以执行以下操作之一：  
   
 -   禁用列存储索引。 然后可以更新表中的数据。 如果禁用列存储索引，则可以在完成数据更新后重新生成列存储索引。 例如：  
@@ -46,7 +46,7 @@ ms.locfileid: "62773781"
     ALTER INDEX mycolumnstoreindex on mytable REBUILD  
     ```  
   
--   删除列存储索引，更新表，然后重新创建列存储索引，创建列存储索引。 例如：  
+-   删除列存储索引，更新表，然后重新创建包含 CREATE 列存储索引的列存储索引。 例如：  
   
     ```  
     DROP INDEX mycolumnstoreindex ON mytable  

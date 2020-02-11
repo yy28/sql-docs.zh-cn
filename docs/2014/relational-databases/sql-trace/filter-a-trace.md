@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 381007cb26f74cdf945900436d8a9fcea5a4ef39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62714714"
 ---
 # <a name="filter-a-trace"></a>筛选跟踪
@@ -60,9 +60,9 @@ ms.locfileid: "62714714"
   
  筛选器可用性取决于数据列。 某些数据列无法筛选。 可筛选的数据列只能使用部分关系运算符进行筛选，如下表所示。  
   
-|关系运算符|运算符|Description|  
+|关系运算符|运算符|说明|  
 |-------------------------|---------------------|-----------------|  
-|Like|Like|指定跟踪事件数据必须类似于输入文本。 允许使用多个值。|  
+|Like|LIKE|指定跟踪事件数据必须类似于输入文本。 允许使用多个值。|  
 |不类似于|不类似于|指定跟踪事件数据不能与输入文本类似。 允许使用多个值。|  
 |等于|=|指定跟踪事件数据必须等于输入的值。 允许使用多个值。|  
 |不等于|<>|指定跟踪事件数据不能等于输入的值。 允许使用多个值。|  
@@ -75,13 +75,13 @@ ms.locfileid: "62714714"
   
 |数据列|关系运算符|  
 |------------------|--------------------------|  
-|**ApplicationName**|LIKE、NOT LIKE|  
+|ApplicationName |LIKE、NOT LIKE|  
 |**BigintData1**|=, <>, >=, <=|  
 |**BigintData2**|=, <>, >=, <=|  
 |**BinaryData**|使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 筛选此数据列中的事件。 有关详细信息，请参阅 [使用 SQL Server Profiler 筛选跟踪](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)。|  
 |**ClientProcessID**|=, <>, >=, <=|  
 |**ColumnPermissions**|=, <>, >=, <=|  
-|**CPU**|=, <>, >=, <=|  
+|CPU |=, <>, >=, <=|  
 |**DatabaseID**|=, <>, >=, <=|  
 |**DatabaseName**|LIKE、NOT LIKE|  
 |**DBUserName**|LIKE、NOT LIKE|  
@@ -121,23 +121,23 @@ ms.locfileid: "62714714"
 |**RoleName**|LIKE、NOT LIKE|  
 |**RowCounts**|=, <>, >=, <=|  
 |**SessionLoginName**|LIKE、NOT LIKE|  
-|**Severity**|=, <>, >=, <=|  
+|**严重性**|=, <>, >=, <=|  
 |**SourceDatabaseID**|=, <>, >=, <=|  
 |**SPID**|=, <>, >=, \<=|  
 |**SqlHandle**|使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 筛选此数据列中的事件。 有关详细信息，请参阅 [使用 SQL Server Profiler 筛选跟踪](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)。|  
 |**StartTime**|>=, <=|  
-|**状态**|=, <>, >=, <=|  
-|**成功**|=, <>, >=, <=|  
+|**State**|=, <>, >=, <=|  
+|**Success**|=, <>, >=, <=|  
 |**TargetLoginName**|LIKE、NOT LIKE|  
 |**TargetLoginSid**|使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 筛选此数据列中的事件。 有关详细信息，请参阅 [使用 SQL Server Profiler 筛选跟踪](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)。|  
 |**TargetUserName**|LIKE、NOT LIKE|  
 |**TextData** <sup>1</sup>|LIKE、NOT LIKE|  
 |**TransactionID**|=, <>, >=, <=|  
-|**类型**|=, <>, >=, <=|  
+|类型 |=, <>, >=, <=|  
 |**Writes**|=, <>, >=, <=|  
 |**XactSequence**|=, <>, >=, <=|  
   
- <sup>1</sup>如果跟踪中的事件**osql**实用程序或**sqlcmd**实用程序，始终追加 **%** 上的筛选器到**TextData**数据列。  
+ <sup>1</sup>如果从**osql**实用工具或**sqlcmd**实用工具跟踪事件，则始终将追加**%** 到**TextData**数据列上的筛选器。  
   
  SQL 跟踪作为一种安全预防措施，会自动从跟踪中省略任何影响密码的、与安全相关的存储过程。 此安全机制不可配置，并且始终有效。 此机制阻止有权跟踪 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上的所有活动的用户捕获密码。  
   

@@ -1,5 +1,5 @@
 ---
-title: 维度处理目标编辑器 （高级页） |Microsoft Docs
+title: 维度处理目标编辑器（"高级" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 07a04fe26bbd47463d0564f7799698ab282a9979
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059489"
 ---
 # <a name="dimension-processing-destination-editor-advanced-page"></a>维度处理目标编辑器（“高级”页）
@@ -27,13 +27,13 @@ ms.locfileid: "66059489"
  若要了解有关维度处理目标的详细信息，请参阅 [Dimension Processing Destination](data-flow/dimension-processing-destination.md)。  
   
 ## <a name="options"></a>选项  
- **使用默认错误配置**  
- 指定是否使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的默认错误处理方式。 默认情况下，此值为 `True`。  
+ **使用默认错误配置。**  
+ 指定是否使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的默认错误处理方式。 此值默认为 `True`。  
   
  **键错误操作**  
  指定如何处理包含不可接受的键值的记录。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**ConvertToUnknown**|将不适用的键值转换为 `UnknownMember` 值。|  
 |**DiscardRecord**|放弃记录。|  
@@ -45,12 +45,12 @@ ms.locfileid: "66059489"
  指定在出现错误时应停止处理。  
   
  **错误数**  
- 指定应停止处理的错误阈值（如果选择了“出错时停止”  ）。  
+ 指定应停止处理的错误阈值（如果选择了“出错时停止”****）。  
   
- **出错时要执行的操作**  
- 指定在达到错误阈值时执行的操作（如果选择了“出错时停止”  ）。  
+ **出错时操作**  
+ 指定在达到错误阈值时执行的操作（如果选择了“出错时停止”****）。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**StopProcessing**|停止处理。|  
 |**StopLogging**|停止记录错误。|  
@@ -58,7 +58,7 @@ ms.locfileid: "66059489"
  **找不到键**  
  指定在出现“找不到键”错误时执行的操作。 默认情况下，此值为 **ReportAndContinue**。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**IgnoreError**|忽略错误并继续处理。|  
 |**ReportAndContinue**|报告错误并继续处理。|  
@@ -67,7 +67,7 @@ ms.locfileid: "66059489"
  **重复键**  
  指定在出现“重复键”错误时执行的操作。 默认情况下，此值为 **IgnoreError**。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**IgnoreError**|忽略错误并继续处理。|  
 |**ReportAndContinue**|报告错误并继续处理。|  
@@ -76,7 +76,7 @@ ms.locfileid: "66059489"
  **空键转换为未知键**  
  指定在将空键转换为 `UnknownMember` 值后所采取的操作。 默认情况下，此值为 **IgnoreError**。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**IgnoreError**|忽略错误并继续处理。|  
 |**ReportAndContinue**|报告错误并继续处理。|  
@@ -85,21 +85,21 @@ ms.locfileid: "66059489"
  **不允许空键**  
  指定在不允许空键而又遇到空键时执行的操作。 默认情况下，此值为 **ReportAndContinue**。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**IgnoreError**|忽略错误并继续处理。|  
 |**ReportAndContinue**|报告错误并继续处理。|  
 |**ReportAndStop**|报告错误并停止处理。|  
   
  **错误日志路径**  
- 键入错误日志的路径，或单击浏览 (...) 按钮以选择目标  。  
+ 键入错误日志的路径，或单击浏览 (...) 按钮以选择目标****。  
   
- **浏览(...)**  
+ **Browse （...）**  
  选择错误日志的路径。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [维度处理目标编辑器（“连接管理器”页）](../../2014/integration-services/dimension-processing-destination-editor-connection-manager-page.md)   
- [维度处理目标编辑器（“映射”页）](../../2014/integration-services/dimension-processing-destination-editor-mappings-page.md)  
+ [维度处理目标编辑器 &#40;连接管理器页&#41;](../../2014/integration-services/dimension-processing-destination-editor-connection-manager-page.md)   
+ [维度处理目标编辑器 &#40;映射 "页面&#41;](../../2014/integration-services/dimension-processing-destination-editor-mappings-page.md)  
   
   

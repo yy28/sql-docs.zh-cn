@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 77f98e86a5ac4b03d4a21b0242a2324c61b2081a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768813"
 ---
 # <a name="operator-precedence-and-associativity"></a>运算符优先级和结合性
@@ -41,7 +41,7 @@ ms.locfileid: "62768813"
 |&#124;&#124;|逻辑或|从左到右|  
 |? 解码的字符：|条件表达式|从右到左|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [运算符（SSIS 表达式）](operators-ssis-expression.md)  
   
   

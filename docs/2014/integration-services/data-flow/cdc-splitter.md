@@ -13,22 +13,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 551e5bfdba63ca09388db5260adb5accafe2a78a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62828233"
 ---
 # <a name="cdc-splitter"></a>CDC 拆分器
   CDC 拆分器将更改行的单个流从 CDC 源数据流拆分到多个不同的数据流中以便用于插入、更新和删除操作。 基于必需的列 `__$operation` 及其在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更改表中的标准值来拆分数据流。  
   
-|操作的值|“输出”|Description|  
+|操作的值|输出|说明|  
 |------------------------|------------|-----------------|  
-|1|DELETE|删除的行|  
-|2|Insert|插入的行（使用“净值且具有合并”CDC 模式时不可用）|  
-|3|Update|更新前的行（仅在使用“全部且具有旧值”CDC 模式时可用）|  
-|4|Update|更新后的行（与更新前相同）|  
-|5|Update|合并行（仅在使用“净值且具有合并”CDC 模式时可用）|  
+|1|删除|删除的行|  
+|2|Insert|插入的行（使用“净值且具有合并”  CDC 模式时不可用）|  
+|3|更新|更新前的行（仅在使用“全部且具有旧值”  CDC 模式时可用）|  
+|4|更新|更新后的行（与更新前相同）|  
+|5|更新|合并行（仅在使用“净值且具有合并”  CDC 模式时可用）|  
 |其他|错误||  
   
  您可以使用拆分器连接到预定义的 INSERT、DELETE 和 UPDATE 输出以便进行进一步的处理。  
@@ -55,9 +55,9 @@ ms.locfileid: "62828233"
   
  打开 **“高级编辑器”** 对话框：  
   
--   在您的 **项目的** “数据流” [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 屏幕上，右键单击 CDC 拆分器，然后选择 **“显示高级编辑器”**。  
+-   在您的 **项目的** “数据流” [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 屏幕上，右键单击 CDC 拆分器，然后选择 **“显示高级编辑器”** 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [根据更改的类型定向 CDC 流](direct-the-cdc-stream-according-to-the-type-of-change.md)  
   
   

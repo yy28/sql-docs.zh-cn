@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 102b3defa150707412012d506e0e9e542d80b9a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62813240"
 ---
 # <a name="view-availability-group-properties-sql-server"></a>查看可用性组属性 (SQL Server)
@@ -31,9 +31,9 @@ ms.locfileid: "62813240"
   
 2.  依次展开 **“AlwaysOn 高可用性”** 节点和 **“可用性组”** 节点。  
   
-3.  右键单击要查看其属性的可用性组，然后选择“属性”命令。  
+3.  右键单击要查看其属性的可用性组，然后选择“属性”  命令。  
   
-4.  在 **“可用性组属性”** 对话框中，使用 **“常规”** 和 **“备份首选项”** 页查看所选可用性组的属性，在某些情况下，还可以更改这些属性。 有关详细信息，请参阅[可用性组属性和新的可用性组&#40;常规页&#41;](availability-group-properties-new-availability-group-general-page.md)并[可用性组属性：新建可用性组（“备份首选项”页）](availability-group-properties-new-availability-group-backup-preferences-page.md)。  
+4.  在 **“可用性组属性”** 对话框中，使用 **“常规”** 和 **“备份首选项”** 页查看所选可用性组的属性，在某些情况下，还可以更改这些属性。 有关详细信息，请参阅[可用性组属性和新建可用性组（“常规”页）](availability-group-properties-new-availability-group-general-page.md)和[可用性组属性：新建可用性组（“备份首选项”页）](availability-group-properties-new-availability-group-backup-preferences-page.md)。  
   
      使用 **“权限”** 页可以查看当前登录名、角色以及与可用性组关联的显式权限。 有关详细信息，请参阅 [Permissions or Securables Page](../../../relational-databases/security/permissions-or-securables-page.md)。  
   
@@ -68,9 +68,9 @@ ms.locfileid: "62813240"
   
 -   [查看可用性组侦听程序属性 (SQL Server)](view-availability-group-listener-properties-sql-server.md)  
   
--   [针对 AlwaysOn 可用性组运行问题的 AlwaysOn 策略&#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)
+-   [AlwaysOn 可用性组 &#40;SQL Server 的操作问题的 AlwaysOn 策略&#41;](always-on-policies-for-operational-issues-always-on-availability.md)
   
--   [使用 AlwaysOn 面板 (SQL Server Management Studio)](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [使用 AlwaysOn 仪表板 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 -   [监视可用性组 (Transact-SQL)](monitor-availability-groups-transact-sql.md)  
   
@@ -100,7 +100,7 @@ ms.locfileid: "62813240"
   
 
   
-## <a name="see-also"></a>请参阅  
- [AlwaysOn 可用性组概述&#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md) [监视可用性组&#40;TRANSACT-SQL&#41; ](monitor-availability-groups-transact-sql.md) [针对运行问题的 AlwaysOn 的 AlwaysOn 策略可用性组&#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md) 
+## <a name="see-also"></a>另请参阅  
+ [AlwaysOn 可用性组 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md) [监视可用性组的概述 &#40;Transact-sql&#41;](monitor-availability-groups-transact-sql.md) [AlwaysOn 策略 AlwaysOn 可用性组的操作问题](always-on-policies-for-operational-issues-always-on-availability.md)&#40;SQL Server&#41; 
   
   

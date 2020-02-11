@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 44b583c062280cb080228d7db3bd24a312a350fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768533"
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>在自定义任务中添加对调试的支持
@@ -87,7 +87,8 @@ End Function
 ```  
   
 ## <a name="idtssuspend-interface"></a>IDTSSuspend 接口  
- <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> 接口定义了运行时引擎在暂停或继续执行任务时调用的方法。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> 接口是由 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> 接口实现的，其 `Suspend` 和 `ResumeExecution` 方法通常由自定义任务重写。 当运行时引擎收到任务的 `OnBreakpointHit` 事件时，它会调用每个正在运行的任务的 `Suspend` 方法，通知任务暂停执行。 当客户端继续执行时，运行时引擎会调用挂起的任务的 `ResumeExecution` 方法。  
+ <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> 接口定义了运行时引擎在暂停或继续执行任务时调用的方法。 
+  <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> 接口是由 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> 接口实现的，其 `Suspend` 和 `ResumeExecution` 方法通常由自定义任务重写。 当运行时引擎收到任务的 `OnBreakpointHit` 事件时，它会调用每个正在运行的任务的 `Suspend` 方法，通知任务暂停执行。 当客户端继续执行时，运行时引擎会调用挂起的任务的 `ResumeExecution` 方法。  
   
  挂起和继续执行任务涉及暂停和继续任务的执行线程。 在托管代码中，您可以使用 .NET Framework 的 `ManualResetEvent` 命名空间中的 `System.Threading` 类来实现。  
   
@@ -340,9 +341,9 @@ Public Sub Suspend()
 End Sub  
 ```  
   
-![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![Integration Services 图标（小）](../../media/dts-16.gif "集成服务图标（小）")**保持与 Integration Services 最**新  <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [调试控制流](../../troubleshooting/debugging-control-flow.md)  
   
   

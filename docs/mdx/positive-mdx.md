@@ -1,5 +1,5 @@
 ---
-title: + （正）(MDX) |Microsoft Docs
+title: + 测量（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7b97ebb64b5287249c39797629ff32a221380858
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68055610"
 ---
 # <a name="-positive-mdx"></a>+（正值）(MDX)
@@ -27,14 +27,14 @@ ms.locfileid: "68055610"
 + Numeric_Expression  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *Numeric_Expression*  
  返回数值的有效多维表达式 (MDX) 表达式。  
   
 ## <a name="return-value"></a>返回值  
  一个具有指定参数的数据类型的正值。  
   
-## <a name="see-also"></a>请参阅  
- [MDX 运算符参考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [Mdx 运算符引用 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

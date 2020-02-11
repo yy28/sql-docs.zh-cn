@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bac8c34542f6c398541e69b690c11d364d37096d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761762"
 ---
-# <a name="mssqlserver7986"></a>MSSQLSERVER_7986
+# <a name="mssqlserver_7986"></a>MSSQLSERVER_7986
     
 ## <a name="details"></a>详细信息  
   
@@ -30,9 +30,9 @@ ms.locfileid: "62761762"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC2_PRE_CHECKS_CROSS_OBJECT_LINKAGE|  
-|消息正文|系统表预检查:对象 ID O_ID 具有跨对象链链接。 页 P_ID1 指向分配单元 ID A_ID1 中的 P_ID2（应为 A_ID2）。 由于不可修复的错误，CHECK 语句已终止。|  
+|消息正文|系统表预检查：对象 ID O_ID 具有跨对象的链链接。 页 P_ID1 指向分配单元 ID A_ID1 中的 P_ID2（应为 A_ID2）。 由于不可修复的错误，CHECK 语句已终止。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  DBCC CHECKDB 的第一个阶段用于对关键系统表的数据页进行简单检查。 如果找到任何错误，则无法修复它们；因此，DBCC CHECKDB 立即终止。 指定对象的数据级别中页 *P_ID1* 的下一页指针指向其他对象中的页 *P_ID2*。  
   
 ## <a name="user-action"></a>用户操作  

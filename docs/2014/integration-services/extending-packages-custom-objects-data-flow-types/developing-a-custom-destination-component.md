@@ -21,14 +21,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f090cd6dbfaa0194bc02af581fc4765fca9eac0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768973"
 ---
 # <a name="developing-a-custom-destination-component"></a>开发自定义目标组件
-  开发人员可以通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 编写可连接到任意自定义数据源并在其中存储数据的自定义目标组件。 自定义目标组件在您需要连接到无法通过使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中包含的现有源组件来访问的数据源时非常有用。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使开发人员能够编写可连接到任何自定义数据源并在其中存储数据的自定义目标[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]组件。 自定义目标组件在您需要连接到无法通过使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中包含的现有源组件来访问的数据源时非常有用。  
   
  目标组件有一个或多个输入，没有输出。 在设计时，目标组件创建和配置连接并从外部数据源读取列元数据。 在执行过程中，它们连接到外部数据源并将从数据流上游组件收到的行添加到外部数据源中。 如果外部数据源在组件执行之前就存在，则目标组件还必须确保组件收到的列的数据类型与外部数据源中列的数据类型相匹配。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62768973"
  实现目标组件的设计时功能包括指定与外部数据源的连接以及验证该组件已经正确配置。 根据定义，目标组件有一个输入，可能有一个错误输出。  
   
 ### <a name="creating-the-component"></a>创建组件  
- 目标组件使用包中定义的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 对象连接到外部数据源。 目标组件通过将元素添加到 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 集合，向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器和组件用户指明自己需要连接管理器。 此集合有两个用途：首先，告知 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器它需要连接管理器；然后，在用户选择或创建完连接管理器后，保存对组件正在使用的包中的连接管理器的引用。 将 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> 添加到该集合后，“高级编辑器”  将显示“连接属性”  选项卡，以提示用户在包中选择或创建连接以供组件使用。  
+ 目标组件使用包中定义的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 对象连接到外部数据源。 目标组件通过将元素添加到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 集合，向 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 设计器和组件用户指明自己需要连接管理器。 此集合有两个用途：首先，告知 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器它需要连接管理器；然后，在用户选择或创建完连接管理器后，保存对组件正在使用的包中的连接管理器的引用。 将 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> 添加到该集合后，“高级编辑器”**** 将显示“连接属性”**** 选项卡，以提示用户在包中选择或创建连接以供组件使用。  
   
  下面的代码示例演示 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> 的实现，该实现添加一个输入，然后将 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> 对象添加到 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>。  
   
@@ -101,7 +101,8 @@ End Namespace
 ```  
   
 ### <a name="connecting-to-an-external-data-source"></a>连接外部数据源  
- 将连接添加到 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 后，请重写 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A> 方法以建立与外部数据源的连接。 此方法在设计时和运行时调用。 组件应先建立与连接管理器（由运行时连接指定）的连接，再建立与外部数据源的连接。 连接建立后，组件就应在内部缓存该连接并在调用 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReleaseConnections%2A> 时释放该连接。 开发人员可重写此方法，释放在 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A> 过程中由组件建立的连接。 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReleaseConnections%2A> 和 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A> 方法都在设计时和运行时调用。  
+ 将连接添加到 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 后，请重写 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A> 方法以建立与外部数据源的连接。 此方法在设计时和运行时调用。 组件应先建立与连接管理器（由运行时连接指定）的连接，再建立与外部数据源的连接。 连接建立后，组件就应在内部缓存该连接并在调用 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReleaseConnections%2A> 时释放该连接。 开发人员可重写此方法，释放在 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A> 过程中由组件建立的连接。 
+  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReleaseConnections%2A> 和 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A> 方法都在设计时和运行时调用。  
   
  下面的代码示例演示在 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A> 方法中连接到 ADO.NET 连接，然后在 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReleaseConnections%2A> 中关闭该连接的组件。  
   
@@ -481,9 +482,9 @@ Namespace BlobDst
 End Namespace  
 ```  
   
-![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![Integration Services 图标（小）](../media/dts-16.gif "集成服务图标（小）")**保持与 Integration Services 最**新  <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [开发自定义源组件](../extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)   
  [使用脚本组件创建目标](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
   

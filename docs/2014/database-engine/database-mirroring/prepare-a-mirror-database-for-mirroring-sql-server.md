@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 844879c0e1b02bc9b6fd88ab153cb2a5dbd6ebe6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754777"
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>为镜像准备镜像数据库 (SQL Server)
@@ -29,11 +29,11 @@ ms.locfileid: "62754777"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Requirements"></a> 要求  
+###  <a name="Requirements"></a>要求  
   
 -   主体服务器和镜像服务器实例必须运行在相同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上。 尽管镜像服务器可以具有更高版本的 SQL Server，但仅在仔细计划的升级过程中建议此配置。 在此类配置中，会面临自动故障转移的风险，数据移动在其中会被自动挂起，因为数据不能移到更低版本的 SQL Server。 有关详细信息，请参阅 [Minimize Downtime for Mirrored Databases When Upgrading Server Instances](upgrading-mirrored-instances.md)。  
   
--   主体服务器和镜像服务器实例必须运行在相同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。 有关 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中数据库镜像支持的详细信息，请参阅 [SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+-   主体服务器和镜像服务器实例必须运行在相同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上。 有关 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中数据库镜像支持的详细信息，请参阅 [SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 -   数据库必须使用完整恢复模式。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62754777"
   
 -   不能镜像 **master**、 **msdb**、 **temp**或 **model** 系统数据库。  
   
--   不能镜像属于的数据库[AlwaysOn 可用性组 (SQL Server)](../availability-groups/windows/always-on-availability-groups-sql-server.md)。  
+-   不能镜像属于[AlwaysOn 可用性组（SQL Server）](../availability-groups/windows/always-on-availability-groups-sql-server.md)的数据库。  
   
 ###  <a name="Recommendations"></a> 建议  
   
@@ -68,22 +68,22 @@ ms.locfileid: "62754777"
   
 -   对于生产数据库，始终备份到单独的设备。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  备份数据库时，TRUSTWORTHY 设置为 OFF。 因此，在新的镜像数据库中，TRUSTWORTHY 始终为 OFF。 如果数据库在故障转移之后需要得到信任，则必须执行其他设置步骤。 有关详细信息，请参阅 [将镜像数据库设置为使用 Trustworthy 属性 (Transact-SQL)](set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)中准备镜像数据库。  
   
  有关启用镜像数据库主秘钥自动加密的详细信息，请参阅 [设置加密的镜像数据库](set-up-an-encrypted-mirror-database.md)。  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  数据库所有者或系统管理员。  
   
-##  <a name="PrepareToRestartMirroring"></a> 准备现有镜像数据库以重新启动镜像  
+##  <a name="PrepareToRestartMirroring"></a>准备现有镜像数据库以重新启动镜像  
  如果已删除镜像，并且该镜像数据库仍处于 RECOVERING 状态，则可以重新启动镜像。  
   
-1.  至少进行主体数据库的一个日志备份。 有关详细信息，请参阅 [备份事务日志 (SQL Server)](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)中准备镜像数据库。  
+1.  至少进行主体数据库的一个日志备份。 有关详细信息，请参阅 [备份事务日志 (SQL Server)](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)），然后才能还原数据库。  
   
 2.  在镜像数据库中，使用 RESTORE WITH NORECOVERY 还原删除镜像后在主体数据库中执行的所有日志备份。 有关详细信息，请参阅 [还原事务日志备份 (SQL Server)](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)中准备镜像数据库。  
   
-##  <a name="CombinedProcedure"></a> 准备新的镜像数据库  
+##  <a name="CombinedProcedure"></a>准备新的镜像数据库  
  **准备镜像数据库**  
   
 > [!NOTE]  
@@ -95,7 +95,7 @@ ms.locfileid: "62754777"
   
     -   [创建完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   
-    -   [创建差异数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)。  
+    -   [SQL Server&#41;中创建差异数据库备份 &#40;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)。  
   
 3.  一般您需要至少进行主体数据库的一个日志备份。 但是，如果数据库刚刚创建而尚未进行日志备份，或者如果恢复模式刚刚从 SIMPLE 更改为 FULL，则不必进行日志备份。  
   
@@ -110,9 +110,9 @@ ms.locfileid: "62754777"
     > [!NOTE]  
     >  如果要逐个文件组地还原数据库，则要确保还原整个数据库。  
   
-    -   [还原数据库备份&#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
+    -   [还原数据库备份 &#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
-    -   [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql) 和 [RESTORE 参数 (Transact-SQL)](/sql/t-sql/statements/restore-statements-arguments-transact-sql)中准备镜像数据库。  
+    -   [Restore &#40;transact-sql&#41;](/sql/t-sql/statements/restore-statements-transact-sql)和[Restore 参数 &#40;transact-sql&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)。  
   
 7.  使用 RESTORE WITH NORECOVERY，将所有未完成的日志备份应用到镜像数据库。  
   
@@ -218,7 +218,7 @@ ms.locfileid: "62754777"
   
  有关设置数据库镜像、显示安全设置、准备镜像数据库、设置合作伙伴以及添加见证服务器的完整示例的信息，请参阅 [设置数据库镜像 (SQL Server)](database-mirroring-sql-server.md)中准备镜像数据库。  
   
-##  <a name="FollowUp"></a> 跟进：准备镜像数据库之后  
+##  <a name="FollowUp"></a>跟进：在准备镜像数据库之后  
   
 1.  如果在最近的 RESTORE LOG 操作之后已执行了任何其他日志备份，则还必须使用 RESTORE WITH NORECOVERY 手动应用其他每个日志备份。  
   
@@ -242,12 +242,12 @@ ms.locfileid: "62754777"
   
 -   [将镜像数据库设置为使用 Trustworthy 属性 (Transact-SQL)](set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库镜像 (SQL Server)](database-mirroring-sql-server.md)   
- [传输安全模式的数据库镜像和 AlwaysOn 可用性组&#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
+ [用于数据库镜像和 AlwaysOn 可用性组 &#40;SQL Server 的传输安全&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [设置数据库镜像 (SQL Server)](database-mirroring-sql-server.md)   
  [备份和还原全文目录和索引](../../relational-databases/indexes/indexes.md)   
- [数据库镜像和全文目录 (SQL Server)](database-mirroring-and-full-text-catalogs-sql-server.md)   
+ [数据库镜像和全文目录 &#40;SQL Server&#41;](database-mirroring-and-full-text-catalogs-sql-server.md)   
  [数据库镜像和复制 (SQL Server)](database-mirroring-and-replication-sql-server.md)   
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   

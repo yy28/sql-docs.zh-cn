@@ -23,13 +23,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bf284ffce044e0efa1f855e0e504a1f92dc7e3da
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175984"
 ---
-# <a name="backup-overview-sql-server"></a>备份概述 (SQL Server)
+# <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
   本主题介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份组件。 备份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库对于保护您的数据至关重要。 本讨论涵盖了备份类型和备份限制。 该主题还介绍了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份设备和备份介质。  
   
  **本主题内容：**  
@@ -38,11 +38,11 @@ ms.locfileid: "70175984"
   
 -   [备份压缩](#BackupCompression)  
   
--   [SQL Server 中的备份操作的限制](#Restrictions)  
+-   [SQL Server 中备份操作的限制](#Restrictions)  
   
 -   [相关任务](#RelatedTasks)  
   
-##  <a name="TermsAndDefinitions"></a> 组件和概念  
+##  <a name="TermsAndDefinitions"></a>组件和概念  
  备份 [动词] (back up)  
  从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库或其事务日志中将数据或日志记录复制到备份设备（如磁盘），以创建数据备份或日志备份。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "70175984"
  [恢复模式](recovery-models-sql-server.md)  
  用于控制数据库上的事务日志维护的数据库属性。 有三种恢复模式：简单恢复模式、完整恢复模式和大容量日志恢复模式。 数据库的恢复模式确定其备份和还原要求。  
   
- [还原 (restore)](restore-and-recovery-overview-sql-server.md)  
+ [restore](restore-and-recovery-overview-sql-server.md)  
  一种包括多个阶段的过程，用于将指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份中的所有数据和日志页复制到指定数据库，然后通过应用记录的更改使该数据在时间上向前移动，以前滚备份中记录的所有事务。  
   
  **备份类型**  
@@ -63,48 +63,49 @@ ms.locfileid: "70175984"
  数据备份 (data backup)  
  完整数据库的数据备份（数据库备份）、部分数据库的数据备份（部分备份）或一组数据文件或文件组的数据备份（文件备份）。  
   
- [数据库备份 (database backup)](full-database-backups-sql-server.md)  
+ [数据库备份](full-database-backups-sql-server.md)  
  数据库的备份。 完整数据库备份表示备份完成时的整个数据库。 差异数据库备份只包含自最近完整备份以来对数据库所做的更改。  
   
- [差异备份 (differential backup)](full-database-backups-sql-server.md)  
- 基于完整数据库或部分数据库以及一组数据文件或文件组的最新完整备份的数据备份（差异基准），仅包含自差异基准以来发生了更改的数据区。  
+ [差异备份](full-database-backups-sql-server.md)  
+ 基于完整数据库或部分数据库以及一组数据文件或文件组的最新完整备份的数据备份（** 差异基准），仅包含自差异基准以来发生了更改的数据区。  
   
  部分差异备份仅记录自上一次部分备份（称为“差异基准”）以来文件组中发生更改的数据区。  
   
  完整备份 (full backup)  
  一种数据备份，包含特定数据库或者一组特定的文件组或文件中的所有数据，以及可以恢复这些数据的足够的日志。  
   
- [日志备份 (log backup)](transaction-log-backups-sql-server.md)  
+ [日志备份](transaction-log-backups-sql-server.md)  
  包括以前日志备份中未备份的所有日志记录的事务日志备份。 （完整恢复模式）  
   
  [文件备份](full-file-backups-sql-server.md)  
  一个或多个数据库文件或文件组的备份。  
   
- [部分备份](partial-backups-sql-server.md)  
+ [部分备份 (partial backup)](partial-backups-sql-server.md)  
  仅包含数据库中部分文件组的数据（包含主要文件组、每个读/写文件组以及任何可选指定的只读文件中的数据）。  
   
- **备份媒体术语和定义**  
+ **备份介质术语和定义**  
   
  [备份设备](backup-devices-sql-server.md)  
- 要将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份写入其中以及可从其中还原的磁盘或磁带设备。 SQL Server 备份也可以写入 Azure Blob 存储服务，并且使用 URL 格式来指定备份文件的目标和名称。 有关详细信息，请参阅[SQL Server 与 Azure Blob 存储服务进行备份和还原](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
+ 要将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份写入其中以及可从其中还原的磁盘或磁带设备。 SQL Server 备份也可以写入 Azure Blob 存储服务，并且使用 URL**** 格式来指定备份文件的目标和名称。 有关详细信息，请参阅[使用 Azure Blob 存储服务执行 SQL Server 备份和还原](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
- [备份介质](media-sets-media-families-and-backup-sets-sql-server.md)  
+ [备份媒体](media-sets-media-families-and-backup-sets-sql-server.md)  
  已写入一个或多个备份的一个或多个磁带或磁盘文件。  
   
- [备份集 (backup set)](media-sets-media-families-and-backup-sets-sql-server.md)  
+ [备份集](media-sets-media-families-and-backup-sets-sql-server.md)  
  通过成功的备份操作添加到介质组的备份内容。  
   
- [介质簇 (media family)](media-sets-media-families-and-backup-sets-sql-server.md)  
+ [媒体家族](media-sets-media-families-and-backup-sets-sql-server.md)  
  在介质集中的单个非镜像设备或一组镜像设备上创建的备份。  
   
- [介质集 (media set)](media-sets-media-families-and-backup-sets-sql-server.md)  
+ [介质集](media-sets-media-families-and-backup-sets-sql-server.md)  
  备份介质（磁带或磁盘文件）的有序集合，使用固定类型和数量的备份设备向其写入了一个或多个备份操作。  
   
- [镜像介质集](mirrored-backup-media-sets-sql-server.md)  
+ [镜像介质集 (mirrored media set)](mirrored-backup-media-sets-sql-server.md)  
  介质集的多个副本（镜像）。  
   
 ##  <a name="BackupCompression"></a>备份压缩  
- [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 及更高版本支持压缩备份，并且 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本可以还原压缩后的备份。 有关详细信息，请参阅[备份压缩 (SQL Server)](backup-compression-sql-server.md)。  
+ 
+  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 及更高版本支持压缩备份，并且 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本可以还原压缩后的备份。 有关详细信息，请参阅[备份压缩 (SQL Server)](backup-compression-sql-server.md)。  
   
 ##  <a name="Restrictions"></a>SQL Server 中的备份操作的限制  
  可以在数据库在线并且正在使用时进行备份。 但是，存在下列限制。  
@@ -123,7 +124,8 @@ ms.locfileid: "70175984"
  通常，即使一个或多个数据文件不可用，日志备份也会成功。 但如果某个文件包含大容量日志恢复模式下所做的大容量日志更改，则所有文件都必须都处于联机状态才能成功备份。  
   
 ### <a name="concurrency-restrictions-during-backup"></a>备份过程中的并发限制  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以使用联机备份过程来备份数据库。 在备份过程中，可以进行多个操作；例如：在执行备份操作期间允许使用 INSERT、UPDATE 或 DELETE 语句。 但是，如果在正在创建或删除数据库文件时尝试启动备份操作，则备份操作将等待，直到创建或删除操作完成或者备份超时。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以使用联机备份过程来备份数据库。 在备份过程中，可以进行多个操作；例如：在执行备份操作期间允许使用 INSERT、UPDATE 或 DELETE 语句。 但是，如果在正在创建或删除数据库文件时尝试启动备份操作，则备份操作将等待，直到创建或删除操作完成或者备份超时。  
   
  在数据库备份或事务日志备份的过程中无法执行的操作包括：  
   
@@ -142,21 +144,21 @@ ms.locfileid: "70175984"
   
 -   [为磁带驱动器定义逻辑备份设备 (SQL Server)](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
--   [将磁盘或磁带指定为备份目标 (SQL Server)](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
+-   [将磁盘或磁带指定为备份目标 &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
   
--   [删除备份设备 (SQL Server)](delete-a-backup-device-sql-server.md)  
+-   [删除备份设备 &#40;SQL Server&#41;](delete-a-backup-device-sql-server.md)  
   
--   [设置备份的过期日期 (SQL Server)](set-the-expiration-date-on-a-backup-sql-server.md)  
+-   [设置备份 &#40;SQL Server 上的过期日期&#41;](set-the-expiration-date-on-a-backup-sql-server.md)  
   
 -   [查看备份磁带或文件的内容 (SQL Server)](view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
--   [查看备份集中的数据文件和日志文件 (SQL Server)](view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
+-   [查看备份集中的数据和日志文件 &#40;SQL Server&#41;](view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
   
 -   [查看逻辑备份设备的属性和内容 (SQL Server)](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
--   [从设备还原备份 (SQL Server)](restore-a-backup-from-a-device-sql-server.md)  
+-   [从设备还原备份 &#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)  
   
--   [教程： SQL Server 备份和还原到 Azure Blob 存储服务](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [教程：将 SQL Server 备份和还原到 Azure Blob 存储服务](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
  **创建备份**  
   
@@ -179,7 +181,7 @@ ms.locfileid: "70175984"
   
 -   [使用资源调控器限制备份压缩的 CPU 使用量 (Transact-SQL)](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
--   [教程： SQL Server 备份和还原到 Azure Blob 存储服务](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [教程：将 SQL Server 备份和还原到 Azure Blob 存储服务](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 数据库的备份和还原](back-up-and-restore-of-sql-server-databases.md)   

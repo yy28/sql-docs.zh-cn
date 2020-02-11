@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d480fe510b6d2e252faefaae13d7dd3776c8ec5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774881"
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>监视日志传送 (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "62774881"
   
  可以查询这些表，以监视日志传送会话的状态。 例如，了解日志传送的状态，查看备份作业、复制作业和还原作业的状态和历史记录。 通过查询下列监视表，可以查看特定的日志传送历史记录和错误详细信息。  
   
-|表|Description|  
+|表|说明|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](/sql/relational-databases/system-tables/log-shipping-monitor-alert-transact-sql)|存储警报作业 ID。|  
 |[log_shipping_monitor_error_detail](/sql/relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql)|存储日志传送作业的错误详细信息。 可以查询此表来查看某个代理会话的错误。 还可以按每个错误的记录日期和时间对错误进行排序。 每个错误都记录为一个异常序列，多个错误（序列）可以形成一个代理会话。|  
@@ -49,7 +49,7 @@ ms.locfileid: "62774881"
 ## <a name="stored-procedures-for-monitoring-log-shipping"></a>监视日志传送的存储过程  
  监视和历史记录信息存储在 **msdb**的表中，可以通过日志传送存储过程来访问它。 请在下表中指定的服务器上运行下列存储过程。  
   
-|存储过程|Description|运行存储过程的服务器|  
+|存储过程|说明|运行存储过程的服务器|  
 |----------------------|-----------------|---------------------------|  
 |[sp_help_log_shipping_monitor_primary](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-primary-transact-sql)|从 **log_shipping_monitor_primary** 表中返回指定的主数据库的监视记录。|监视服务器或主服务器|  
 |[sp_help_log_shipping_monitor_secondary](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-secondary-transact-sql)|从 **log_shipping_monitor_secondary** 表中返回指定的辅助数据库的监视记录。|监视服务器或辅助服务器|  
@@ -59,7 +59,7 @@ ms.locfileid: "62774881"
 |[sp_help_log_shipping_secondary_database](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql)|从 **log_shipping_secondary**、 **log_shipping_secondary_databases** 和 **log_shipping_monitor_secondary** 表中检索辅助数据库设置。|辅助服务器|  
 |[sp_help_log_shipping_secondary_primary (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql)|此存储过程将在辅助服务器上检索给定的主数据库的设置。|辅助服务器|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [查看日志传送报告 (SQL Server Management Studio)](view-the-log-shipping-report-sql-server-management-studio.md)   
  [日志传送存储过程和表](log-shipping-tables-and-stored-procedures.md)  
   

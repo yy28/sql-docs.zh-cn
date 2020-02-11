@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b038c1132cf8c1ccd31da2a5a1e2a600f2505624
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011961"
 ---
 # <a name="humanresourcesmyteam-sample-table-sql-server"></a>HumanResources.myTeam 示例表 (SQL Server)
@@ -27,13 +27,14 @@ ms.locfileid: "66011961"
 > [!NOTE]  
 >  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中的一个示例数据库。  
   
- **myTeam** 表包含以下几列。  
+ 
+  **myTeam** 表包含以下几列。  
   
-|“列”|数据类型|可空性|Description|  
+|列|数据类型|可空性|说明|  
 |------------|---------------|-----------------|-----------------|  
 |**EmployeeID**|`smallint`|非空|行的主键。 我的工作组中成员的雇员 ID。|  
 |**名称**|`nvarchar(50)`|非空|我的工作组中成员的名称。|  
-|**标题**|`nvarchar(50)`|可以为 Null|我的工作组中雇员的职位。|  
+|**标题**|`nvarchar(50)`|Nullable|我的工作组中雇员的职位。|  
 |**背景**|`nvarchar(50)`|非空|上次更新行的日期和时间。 （默认值）|  
   
  **创建 HumanResources.myTeam**  
@@ -71,7 +72,7 @@ ms.locfileid: "66011961"
     > [!NOTE]  
     >  这些语句跳过第四列，即 `Background`列。 这样会有默认值。 跳过该列使 `INSERT` 语句将该列保留为空。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [批量导入和导出数据 (SQL Server)](bulk-import-and-export-of-data-sql-server.md)  
   
   

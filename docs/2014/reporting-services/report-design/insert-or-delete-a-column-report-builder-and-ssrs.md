@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e1d5f5d846a690676942e0d4ffcba0475a35595a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105674"
 ---
 # <a name="insert-or-delete-a-column-report-builder-and-ssrs"></a>插入或删除列（报表生成器和 SSRS）
@@ -29,13 +29,13 @@ ms.locfileid: "66105674"
   
 -   在“设计”视图中，单击 Tablix 数据区域的左上角，以使数据区域的上方和旁边显示列控点和行控点。  
   
-     有关数据区域的详细信息，请参阅[列出了&#40;报表生成器和 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)。  
+     有关数据区域区域的详细信息，请参阅[列出 &#40;报表生成器和 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)。  
   
 ### <a name="to-insert-a-column-in-a-selected-data-region"></a>在所选数据区域中插入列  
   
 -   右键单击要插入列的位置对应的列图柄，再单击“插入列”  ，然后单击“左侧”  或“右侧”  。  
   
-     --或者--  
+     \- 或 -  
   
 -   右键单击要插入行的数据区域中的单元，再单击“插入列”  ，然后单击“左侧”  或“右侧”  。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66105674"
   
 -   选择要删除的列，右键单击任一所选列的图柄，然后单击“删除列”  。  
   
-     --或者--  
+     \- 或 -  
   
 -   右键单击要删除的列所在的数据区域中的单元，然后单击“删除列”  。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66105674"
   
 -   右键单击要删除的列所在的 Tablix 数据区域的列组区域中的列组单元，然后单击“删除列”  。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [了解组（报表生成器和 SSRS）](understanding-groups-report-builder-and-ssrs.md)   
  [Tablix 数据区域（报表生成器和 SSRS）](../tablix-data-region-report-builder-and-ssrs.md)   
  [表（报表生成器和 SSRS）](tables-report-builder-and-ssrs.md)   

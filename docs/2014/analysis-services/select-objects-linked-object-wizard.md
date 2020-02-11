@@ -1,5 +1,5 @@
 ---
-title: 选择对象 （链接的对象向导） |Microsoft Docs
+title: 选择对象（链接对象向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6825417c53e0b0f9eb79e42e1a38737f6a60ce63
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069319"
 ---
 # <a name="select-objects-linked-object-wizard"></a>选择对象（链接对象向导）
@@ -26,7 +26,7 @@ ms.locfileid: "66069319"
 >  对于维度和度量值组（包括关联的度量值）为链接。 对于操作、关键绩效指标 (KPI) 和计算为导入。  
   
 ## <a name="options"></a>选项  
- **可用对象**  
+ **Available objects**  
  选择要链接或导入的对象。  
   
 > [!NOTE]  

@@ -1,5 +1,5 @@
 ---
-title: ODBC 源编辑器 （错误输出页） |Microsoft Docs
+title: ODBC 源编辑器（"错误输出" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b19a94e71eaef45184c1777ce299809b2b2d7f8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057130"
 ---
 # <a name="odbc-source-editor-error-output-page"></a>ODBC 源编辑器（“错误输出”页）
@@ -38,7 +38,7 @@ ms.locfileid: "66057130"
 ### <a name="inputoutput"></a>输入/输出  
  查看数据源的名称。  
   
-### <a name="column"></a>“列”  
+### <a name="column"></a>列  
  未使用。  
   
 ### <a name="error"></a>错误  
@@ -47,7 +47,7 @@ ms.locfileid: "66057130"
 ### <a name="truncation"></a>截断  
  选择 ODBC 源应该如何处理流中的截断：忽略失败、重定向行或使组件失败。  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>说明  
  未使用。  
   
 ### <a name="set-this-value-to-selected-cells"></a>将此值设置到选定的单元格  
@@ -60,7 +60,7 @@ ms.locfileid: "66057130"
  使用下列选项来配置 ODBC 源处理错误和截断的方式。  
   
 ### <a name="fail-component"></a>组件失败  
- 发生错误或截断时数据流任务失败。 这是默认行为。  
+ 发生错误或截断时数据流任务失败。 此选项为默认行为。  
   
 ### <a name="ignore-failure"></a>忽略失败  
  忽略错误或截断。  
@@ -68,7 +68,7 @@ ms.locfileid: "66057130"
 ### <a name="redirect-flow"></a>重定向流  
  将引起错误或截断的行定向到 ODBC 源的错误输出。 有关详细信息，请参阅 [ODBC Source](data-flow/odbc-source.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ODBC 源编辑器（“连接管理器”页）](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
  [ODBC 源编辑器（“列”页）](../../2014/integration-services/odbc-source-editor-columns-page.md)  
   

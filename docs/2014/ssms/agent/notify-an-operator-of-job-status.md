@@ -18,20 +18,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ff9340d7c9fb768f9e057d00868a9e238421a5f4
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798200"
 ---
 # <a name="notify-an-operator-of-job-status"></a>Notify an Operator of Job Status
-  本主题介绍如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]中设置通知选项，以便 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可向操作员发送与作业相关的通知。  
+  本[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]主题说明如何通过使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]或 SQL Server 管理对象在中设置通知选项，以便[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理可向操作员发送有关作业的通知。  
   
  **本主题内容**  
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要向操作员通知作业状态，可使用：**  
   
@@ -50,35 +50,35 @@ ms.locfileid: "72798200"
   
 #### <a name="to-notify-an-operator-of-job-status"></a>向操作员通知作业状态  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
+1.  在**对象资源管理器中，** 连接到的[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例，然后展开该实例。  
   
-2.  展开“SQL Server 代理”，展开“作业”，右键单击要编辑的作业，再选择“属性”。  
+2.  展开“SQL Server 代理”****，展开“作业”****，右键单击要编辑的作业，再选择“属性”****。  
   
 3.  在 **“作业属性”** 对话框中，选择 **“通知”** 页。  
   
-4.  如果想通过电子邮件通知操作员，请选中“电子邮件”，再从列表中选择操作员，然后选择下列选项之一：  
+4.  如果想通过电子邮件通知操作员，请选中“电子邮件”****，再从列表中选择操作员，然后选择下列选项之一：  
   
-    -   **当作业成功时** - 在作业成功完成后通知操作员。  
+    -   **当**作业成功时，如果作业成功完成，则通知操作员。  
   
-    -   **“当作业失败时”** - 在作业未成功完成时通知该操作员。  
+    -   **当作业失败**时，如果作业未能成功完成，则通知操作员。  
   
-    -   **当作业完成时** ，无论完成情况如何，都通知该操作员。  
+    -   **当作业完成时**，无论完成状态如何，都将通知操作员。  
   
-5.  如果您想通过寻呼程序来通知操作员，请选中 **“寻呼程序”** ，再从列表中选择操作员，然后选择下列选项之一：  
+5.  如果您想通过寻呼程序来通知操作员，请选中 **“寻呼程序”**，再从列表中选择操作员，然后选择下列选项之一：  
   
-    -   **当作业成功时** - 在作业成功完成后通知操作员。  
+    -   **当**作业成功时，如果作业成功完成，则通知操作员。  
   
-    -   **“当作业失败时”** - 在作业未成功完成时通知该操作员。  
+    -   **当作业失败**时，如果作业未能成功完成，则通知操作员。  
   
-    -   **当作业完成时** ，无论完成情况如何，都通知该操作员。  
+    -   **当作业完成时**，无论完成状态如何，都将通知操作员。  
   
 6.  如果想通过 net send 通知操作员，请选中 **Net send**，再从列表中选择操作员，然后选择下列选项之一：  
   
-    -   **当作业成功时** - 在作业成功完成后通知操作员。  
+    -   **当**作业成功时，如果作业成功完成，则通知操作员。  
   
-    -   **“当作业失败时”** - 在作业未成功完成时通知该操作员。  
+    -   **当作业失败**时，如果作业未能成功完成，则通知操作员。  
   
-    -   **当作业完成时** ，无论完成情况如何，都通知该操作员。  
+    -   **当作业完成时**，无论完成状态如何，都将通知操作员。  
   
 ##  <a name="TSQL"></a> 使用 Transact-SQL  
   
@@ -88,7 +88,7 @@ ms.locfileid: "72798200"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```sql
     -- adds an e-mail notification for the specified alert (Test Alert).  
@@ -102,7 +102,7 @@ ms.locfileid: "72798200"
     GO  
     ```  
   
- 有关详细信息，请[参阅&#40;sp_add_notification transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)。  
+ 有关详细信息，请参阅[&#40;transact-sql&#41;sp_add_notification ](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)。  
   
 ##  <a name="SMO"></a>使用 SQL Server 管理对象  
  **向操作员通知作业状态**  

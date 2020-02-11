@@ -1,5 +1,5 @@
 ---
-title: 选择列对话框 （挖掘结构视图） |Microsoft Docs
+title: "\"选择列\" 对话框（\"挖掘结构\" 视图） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7ee69724fbcacad78c6053c1bbdf9c3465482665
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069919"
 ---
 # <a name="select-a-column-dialog-box-mining-structure-view"></a>“选择列”对话框（“挖掘结构”视图）
@@ -40,13 +40,13 @@ ms.locfileid: "66069919"
   
  此选项仅用于关系挖掘模型。  
   
- **相关的属性和度量值**  
+ **相关属性和度量值**  
  可以向挖掘结构添加的所有可用度量值和属性的列表。  
   
  此选项仅用于 OLAP 挖掘模型。  
   
-## <a name="see-also"></a>请参阅  
- [挖掘结构视图&#40;数据挖掘模型设计器&#41;](mining-structure-view-data-mining-model-designer.md)   
+## <a name="see-also"></a>另请参阅  
+ [挖掘结构视图 &#40;数据挖掘模型设计器&#41;](mining-structure-view-data-mining-model-designer.md)   
  [向挖掘结构中添加列](data-mining/add-columns-to-a-mining-structure.md)  
   
   

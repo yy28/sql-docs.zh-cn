@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 43ae01b9173693370d5e422d4f26b6175101ff12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721045"
 ---
 # <a name="recompile-a-stored-procedure"></a>重新编译存储过程
-  本主题介绍如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]重新编译存储过程。 有三种方法来执行此操作：`WITH RECOMPILE`选项在过程定义中或当调用过程时，`RECOMPILE`各个语句上或通过使用查询提示`sp_recompile`系统存储过程。 本主题介绍在创建过程定义或执行现有过程时使用 WITH RECOMPILE 选项。 它还描述如何使用 sp_recompile 系统存储过程重新编译现有过程。  
+  本主题介绍如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]重新编译存储过程。 有三种方法可以执行此操作`WITH RECOMPILE` ：过程定义中的选项或过程的调用时间、单个`RECOMPILE`语句的查询提示或使用`sp_recompile`系统存储过程。 本主题介绍在创建过程定义或执行现有过程时使用 WITH RECOMPILE 选项。 它还描述如何使用 sp_recompile 系统存储过程重新编译现有过程。  
   
  **本主题内容**  
   
@@ -51,18 +51,18 @@ ms.locfileid: "62721045"
   
 -   如果过程的中某些查询定期使用非典型值或临时值，则可通过使用这些查询中的 RECOMPILE 查询提示来改善过程性能。 由于仅使用此查询提示的查询将进行重新编译，而不是整个过程进行重新编译，因此将模仿 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]语句级重新编译行为。 但除了使用过程的当前参数值外，RECOMPILE 查询提示还在编译该语句时使用存储过程中本地变量的值。 有关详细信息，请参阅 [查询提示 (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-query)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
- `WITH RECOMPILE` 选项  
+####  <a name="Permissions"></a> 权限  
+ `WITH RECOMPILE`选  
  如果在创建过程定义时使用此选项，则要求数据库中的 CREATE PROCEDURE 权限，还必须具有对架构（在其下创建过程）的 ALTER 权限。  
   
  如果在 EXECUTE 语句中使用此选项，则需要对该过程的 EXECUTE 权限。 需要对 EXECUTE 语句本身的权限，而无需对 EXECUTE 语句中引用的过程的执行权限。 有关详细信息，请参阅 [EXECUTE (Transact-SQL)](/sql/t-sql/language-elements/execute-transact-sql)。  
   
- `RECOMPILE` 查询提示  
+ `RECOMPILE`查询提示  
  创建过程时使用该功能，并且此提示包含在该过程中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中。 因此，它需要在数据库中有 CREATE PROCEDURE 权限，对在其中创建过程的架构有 ALTER 权限。  
   
- `sp_recompile` 系统存储过程  
+ `sp_recompile`系统存储过程  
  需要具有对指定过程的 ALTER 权限。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
@@ -103,7 +103,7 @@ AS
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 该示例将创建一个简单过程，该过程将从视图中返回所有雇员（提供姓和名）、职务以及部门名称。  
   
-     然后，将第二个代码示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。 此操作将执行该过程，并重新编译过程的查询计划。  
+     然后，将第二个代码示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 此操作将执行该过程，并重新编译过程的查询计划。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -113,7 +113,7 @@ GO
   
 ```  
   
-#### <a name="to-recompile-a-stored-procedure-by-using-sprecompile"></a>使用 sp_recompile 重新编译存储过程  
+#### <a name="to-recompile-a-stored-procedure-by-using-sp_recompile"></a>使用 sp_recompile 重新编译存储过程  
   
 1.  连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]。  
   
@@ -121,7 +121,7 @@ GO
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 该示例将创建一个简单过程，该过程将从视图中返回所有雇员（提供姓和名）、职务以及部门名称。  
   
-     然后，将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。 这将不执行过程，但将该过程标记为重新编译，以便在下次执行该过程时更新其查询计划。  
+     然后，将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 这将不执行过程，但将该过程标记为重新编译，以便在下次执行该过程时更新其查询计划。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -131,7 +131,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建存储过程](../stored-procedures/create-a-stored-procedure.md)   
  [修改存储过程](../stored-procedures/modify-a-stored-procedure.md)   
  [重命名存储过程](rename-a-stored-procedure.md)   

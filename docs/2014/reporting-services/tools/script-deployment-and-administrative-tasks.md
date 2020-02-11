@@ -23,13 +23,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d0ea3b81f69b46fbb829879f9976cb45a11ab803
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783346"
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>为部署和管理任务编写脚本
+  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支持使用脚本来自动执行日常安装、部署任务和管理任务。 部署报表服务器的过程包括多个步骤。 必须使用多个工具和过程来配置部署；没有任何单个程序或方法可用于自动执行所有任务。  
   
  并非每个步骤都应自动执行。 在某些情况下，手动或通过图形工具执行步骤是最简单且最有效的方法。 例如，如果要部署大量报表和模型，最好复制报表服务器数据库，而不是编写用于重新创建报表服务器环境的代码。  
@@ -52,8 +53,8 @@ ms.locfileid: "72783346"
 |配置报表服务器数据库连接。|如果要更改连接字符串、帐户、密码或身份验证类型，请通过运行 **rsconfig** 实用工具来配置连接。 有关详细信息，请参阅[配置报表服务器数据库连接（SSRS 配置管理器）](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)和 [rsconfig 实用工具 (SSRS)](rsconfig-utility-ssrs.md)。<br /><br /> 不能使用 rsconfig.exe 来创建或升级数据库。 数据库和 RSExecRole 必须已经存在。|  
 |配置扩展部署。|从以下用于自动执行扩展部署的方法中进行选择：<br /><br /> 运行 rskeymgmt.exe 实用工具以将报表服务器实例联接到现有安装。 有关详细信息，请参阅[添加和删除扩展部署的加密密钥（SSRS 配置管理器）](../install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)。<br /><br /> 编写针对报表服务器 WMI 提供程序运行的自定义代码。|  
 |备份加密密钥。|从以下用于自动备份加密密钥的方法中进行选择：<br /><br /> 运行 rskeymgmt.exe 实用工具以备份密钥。 有关详细信息，请参阅 [Back Up and Restore Reporting Services Encryption Keys](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)。<br /><br /> 编写针对报表服务器 WMI 提供程序运行的自定义代码。|  
-|配置报表服务器电子邮件。|编写针对 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 提供程序运行的自定义代码。 该提供程序支持部分电子邮件配置设置。<br /><br /> 虽然 RSReportServer.config 文件包含所有设置，但是不要以自动执行的方式使用该文件。 具体来说，不要使用批处理文件将该文件复制到另一个报表服务器。 每个配置文件都包含特定于当前实例的值。 这些值对于其他报表服务器实例将是无效的。<br /><br /> 有关这些设置的详细信息，请参阅[配置报表服务器以进行电子&#40;邮件传递&#41;SSRS Configuration Manager](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)。|  
-|配置无人参与的执行帐户。|从以下用于自动配置无人参与处理帐户的方法中进行选择：<br /><br /> 运行 rsconfig.exe 实用工具以配置帐户。 有关详细信息，请参阅[配置无人参与的执行帐户（SSRS 配置管理器）](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。<br /><br /> 编写用于对报表服务器 WMI 提供程序进行调用的自定义代码。|  
+|配置报表服务器电子邮件。|编写针对 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 提供程序运行的自定义代码。 该提供程序支持部分电子邮件配置设置。<br /><br /> 虽然 RSReportServer.config 文件包含所有设置，但是不要以自动执行的方式使用该文件。 具体来说，不要使用批处理文件将该文件复制到另一个报表服务器。 每个配置文件都包含特定于当前实例的值。 这些值对于其他报表服务器实例将是无效的。<br /><br /> 有关这些设置的详细信息，请参阅[为电子邮件传递配置报表服务器 &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)。|  
+|配置无人参与的执行帐户。|从以下用于自动配置无人参与处理帐户的方法中进行选择：<br /><br /> 运行 rsconfig.exe 实用工具以配置帐户。 有关详细信息，请参阅[Configuration Manager&#41;&#40;SSRS 配置无人参与的执行帐户](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。<br /><br /> 编写用于对报表服务器 WMI 提供程序进行调用的自定义代码。|  
 |将现有的内容（包括文件夹层次结构、角色分配、报表、订阅、计划、数据源和资源）部署到另一台报表服务器上。|重新创建现有报表服务器环境的最佳方式是将报表服务器数据库复制到新的报表服务器实例中。<br /><br /> 替代方法是编写自定义代码，以编程方式重新创建现有的报表服务器内容。 但应注意，订阅、报表快照和报表历史记录无法以编程方式重新创建。<br /><br /> 某些部署受益于以上两项技术的结合使用（也就是说，还原报表服务器数据库，然后运行自定义代码以便为特定安装修改报表服务器数据库）。<br /><br /> 有关详细示例，请参阅 [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。<br /><br /> 有关重新定位报表服务器数据库的详细信息，请参阅[将报表服务器数据库移至其他计算机（SSRS 本机模式）](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)。 有关以编程方式创建报表服务器环境的详细信息，请参阅本主题中的“使用脚本迁移报表服务器内容和文件夹”一节。|  
   
 ## <a name="tools-and-technologies-for-automating-server-deployment"></a>用于自动执行服务器部署的工具和技术  
@@ -61,15 +62,18 @@ ms.locfileid: "72783346"
   
 -   可以在无人参与模式下运行安装程序，以安装和配置（有时）报表服务器组件。 必须使用“仅文件”安装选项，才能让安装程序配置报表服务器实例。  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 提供程序和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 命令行实用工具可用于本地和远程服务器配置。  
+-   
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 提供程序和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 命令行实用工具可用于本地和远程服务器配置。  
   
-     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 提供程序公开了用于对 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装的各个方面（包括指定服务帐户、配置 URL、创建和配置报表服务器数据库或者为电子邮件传递配置报表服务器）进行配置的类、属性和方法。 必须编写自定义代码或脚本，才能使用 WMI 提供程序。 有关详细信息，请参阅 [访问 Reporting Services WMI 提供程序](access-the-reporting-services-wmi-provider.md)。  
+     
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 提供程序公开了用于对 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装的各个方面（包括指定服务帐户、配置 URL、创建和配置报表服务器数据库或者为电子邮件传递配置报表服务器）进行配置的类、属性和方法。 必须编写自定义代码或脚本，才能使用 WMI 提供程序。 有关详细信息，请参阅 [访问 Reporting Services WMI 提供程序](access-the-reporting-services-wmi-provider.md)。  
   
      除了编写代码以外，还可以使用命令行实用工具（rsconfig.exe 和 rskeymgmt.exe）。 可以编写运行实用工具的批处理文件。 可以使用实用工具来自动执行某些但不是所有配置任务。  
   
--   报表服务器脚本主机工具 (rs.exe) 可以运行为了重新创建现有内容或将现有内容从一个报表服务器移至另一个报表服务器而编写的自定义 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 代码。 使用此方法，可以在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]中编写脚本，将其另存为 .rss 文件，并使用 rs.exe 在目标报表服务器上运行该脚本。 所编写的脚本可以调用 SOAP 接口，以访问报表服务器 Web 服务。 应使用此方法编写部署脚本，因为通过此方法可以重新创建报表服务器文件夹命名空间和内容，以及重新创建基于角色的安全性。  
+-   Report Server 脚本主机工具（rs-232c）可以运行自定义[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]代码，你可能会编写这些代码，以便重新创建现有内容或将现有内容从一个 Report Server 移到另一个。 使用此方法，可以在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]中编写脚本，将其另存为 .rss 文件，并使用 rs.exe 在目标报表服务器上运行该脚本。 所编写的脚本可以调用 SOAP 接口，以访问报表服务器 Web 服务。 应使用此方法编写部署脚本，因为通过此方法可以重新创建报表服务器文件夹命名空间和内容，以及重新创建基于角色的安全性。  
   
--   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本引入了用于 SharePoint 集成模式的 PowerShell cmdlet。 您可以使用 PowerShell 配置和管理 SharePoint 集成。  有关详细信息，请参阅 [用于 Reporting Services SharePoint 模式的 PowerShell cmdlet](../powershell-cmdlets-for-reporting-services-sharepoint-mode.md)。  
+-   
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本引入了用于 SharePoint 集成模式的 PowerShell cmdlet。 您可以使用 PowerShell 配置和管理 SharePoint 集成。  有关详细信息，请参阅 [用于 Reporting Services SharePoint 模式的 PowerShell cmdlet](../powershell-cmdlets-for-reporting-services-sharepoint-mode.md)。  
   
 ## <a name="use-scripts-to-migrate-report-server-content-and-folders"></a>使用脚本迁移报表服务器内容和文件夹  
  可以编写用于在其他报表服务器实例中复制报表服务器环境的脚本。 通常会使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 编写部署脚本，然后使用报表服务器脚本主机实用工具处理这些脚本。  
@@ -121,12 +125,12 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [GenerateDatabaseCreationScript 方法 (WMI MSReportServer_ConfigurationSetting)](../wmi-provider-library-reference/configurationsetting-method-generatedatabasecreationscript.md)   
- [GenerateDatabaseRightsScript 方法 (WMI MSReportServer_ConfigurationSetting)](../wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md)   
- [GenerateDatabaseUpgradeScript 方法 (WMI MSReportServer_ConfigurationSetting)](../wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)   
+ [&#40;WMI MSReportServer_ConfigurationSetting 的 GenerateDatabaseCreationScript 方法&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabasecreationscript.md)   
+ [&#40;WMI MSReportServer_ConfigurationSetting 的 GenerateDatabaseRightsScript 方法&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md)   
+ [&#40;WMI MSReportServer_ConfigurationSetting 的 GenerateDatabaseUpgradeScript 方法&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)   
  [从命令提示符安装 SQL Server 2014](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
  [安装 Reporting Services 本机模式报表服务器](../install-windows/install-reporting-services-native-mode-report-server.md)   
- [Reporting Services 报表服务器（本机模式）](../report-server/reporting-services-report-server-native-mode.md)   
- [报表服务器命令提示实用工具 (SSRS)](report-server-command-prompt-utilities-ssrs.md)   
- [规划 Reporting Services 和 Power View 浏览器支持&#40;Reporting Services 2014&#41; ](../browser-support-for-reporting-services-and-power-view.md)   
+ [Reporting Services 报表服务器 &#40;本机模式&#41;](../report-server/reporting-services-report-server-native-mode.md)   
+ [报表服务器命令提示实用工具 &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
+ [规划 Reporting Services 和 Power View 浏览器支持 &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
  [Reporting Services 工具](reporting-services-tools.md)  

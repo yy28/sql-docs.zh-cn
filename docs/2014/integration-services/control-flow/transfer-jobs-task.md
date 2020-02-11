@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 03913242246fcdaf11e9272e827cd8e06951a108
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829893"
 ---
 # <a name="transfer-jobs-task"></a>传输作业任务
@@ -54,7 +54,7 @@ ms.locfileid: "62829893"
   
  此外，还有 `OnInformation` 事件的日志项（报告已传输的作业数），以及 `OnWarning` 事件的日志项（是为目标服务器上每个被覆盖的作业写入的）。  
   
-## <a name="security-and-permissions"></a>安全性和权限  
+## <a name="security-and-permissions"></a>安全和权限  
  若要传输作业，用户必须是 sysadmin 固定服务器角色的成员，或者是同时位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的源实例和目标实例上的 msdb 数据库的固定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理固定数据库角色的成员。  
   
 ## <a name="configuration-of-the-transfer-jobs-task"></a>传输作业任务的配置  
@@ -64,7 +64,7 @@ ms.locfileid: "62829893"
   
 -   [传输作业任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)  
   
--   [传输作业任务编辑器（“作业”页）](../transfer-jobs-task-editor-jobs-page.md)  
+-   [传输作业任务编辑器 &#40;作业 "页面&#41;](../transfer-jobs-task-editor-jobs-page.md)  
   
 -   [“表达式”页](../expressions/expressions-page.md)  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62829893"
   
 -   [设置任务或容器的属性](../set-the-properties-of-a-task-or-container.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 任务](integration-services-tasks.md)   
  [控制流](control-flow.md)  
   

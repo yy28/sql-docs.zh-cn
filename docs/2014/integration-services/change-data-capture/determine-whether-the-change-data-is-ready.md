@@ -13,17 +13,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b4aa1420edc1cb627940aca6c6c2aed9d18a390
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771413"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>确定变更数据是否已准备就绪
   在用于执行变更数据的增量加载的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的控制流中，第二个任务是确保所选间隔的变更数据已准备就绪。 此步骤是必需的，因为异步捕获进程可能尚未处理完到达所选端点的所有更改。  
   
 > [!NOTE]  
->  控制流的第一个任务是计算更改间隔的端点。 有关此任务的详细信息，请参阅[指定变更数据的间隔](specify-an-interval-of-change-data.md)。 有关设计控制流的总体过程的说明，请参阅[变更数据捕获 (SSIS)](change-data-capture-ssis.md)。  
+>  控制流的第一个任务是计算更改间隔的端点。 有关此任务的详细信息，请参阅 [指定变更数据的间隔](specify-an-interval-of-change-data.md)。 有关设计控制流的总体过程的说明，请参阅[变更数据捕获 (SSIS)](change-data-capture-ssis.md)。  
   
 ## <a name="understanding-the-components-of-the-solution"></a>了解解决方案的组件  
  本主题中介绍的解决方案使用以下 4 个 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件：  
@@ -197,7 +197,8 @@ ms.locfileid: "62771413"
         ```  
   
         > [!NOTE]  
-        >  `Thread.Sleep` 方法要求指定参数时以毫秒为单位。  
+        >  
+  `Thread.Sleep` 方法要求指定参数时以毫秒为单位。  
   
 7.  保留从脚本执行过程返回 `DtsExecResult.Success` 的默认代码行。  
   

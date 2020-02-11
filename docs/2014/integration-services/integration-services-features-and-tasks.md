@@ -14,17 +14,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 64b1945ba990278241d38cebb029feab86d6d7bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058032"
 ---
 # <a name="integration-services-features-and-tasks"></a>Integration Services 功能和任务
-  查找信息的任何人的设计器、 开发人员、 分析人员或管理员-创建和开发[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]包。 然后，了解如何将这些包合并到您的应用程序和网站中。  
+  查找任何人员（设计人员、开发人员、分析人员或管理员）创建和开发[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]包所需的信息。 然后，了解如何将这些包合并到您的应用程序和网站中。  
   
 ## <a name="in-this-section"></a>本节内容  
- [Integration Services &#40;SSIS&#41;和 Studio 环境](integration-services-ssis-development-and-management-tools.md)  
+ [Integration Services &#40;SSIS&#41; 和工作室环境](integration-services-ssis-development-and-management-tools.md)  
   
  [Integration Services (SSIS) 包](../../2014/integration-services/integration-services-ssis-packages.md)  
   
@@ -32,11 +32,11 @@ ms.locfileid: "66058032"
   
  [Integration Services (SSIS) 项目](integration-services-ssis-projects-and-solutions.md)  
   
- [Integration Services &#40;SSIS&#41;参数](integration-services-ssis-package-and-project-parameters.md)  
+ [&#40;SSIS&#41; 参数 Integration Services](integration-services-ssis-package-and-project-parameters.md)  
   
- [Integration Services &#40;SSIS&#41;查询](integration-services-ssis-queries.md)  
+ [Integration Services &#40;SSIS&#41; 查询](integration-services-ssis-queries.md)  
   
- [Integration Services &#40;SSIS&#41; 表达式](expressions/integration-services-ssis-expressions.md)  
+ [Integration Services (SSIS) 表达式](expressions/integration-services-ssis-expressions.md)  
   
  [Integration Services (SSIS) 变量](integration-services-ssis-variables.md)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66058032"
   
  [Integration Services 服务（SSIS 服务）](service/integration-services-service-ssis-service.md)  
   
- [Integration Services &#40;SSIS&#41;服务器](catalog/integration-services-ssis-server-and-catalog.md)  
+ [Integration Services (SSIS) 服务器](catalog/integration-services-ssis-server-and-catalog.md)  
   
  [项目和包的部署](packages/deploy-integration-services-ssis-projects-and-packages.md)  
   

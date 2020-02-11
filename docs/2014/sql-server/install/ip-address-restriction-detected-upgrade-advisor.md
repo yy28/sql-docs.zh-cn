@@ -13,29 +13,30 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 487ced9f103fd10a581841595111f01a5710bd15
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952084"
 ---
 # <a name="ip-address-restriction-detected-upgrade-advisor"></a>检测到 IP 地址限制（升级顾问）
-  升级顾问已检测到承载报表服务器或报表管理器虚拟目录的 IIS 网站上存在一个或多个 IP 地址限制。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不为 IP 地址限制提供本机支持。  
+  升级顾问已检测到承载报表服务器或报表管理器虚拟目录的 IIS 网站上存在一个或多个 IP 地址限制。 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不为 IP 地址限制提供本机支持。  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机。|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]本机.|  
   
 ## <a name="component"></a>组件  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-## <a name="description"></a>描述  
+## <a name="description"></a>说明  
  安装程序不能针对升级后的报表服务器创建的 URL 定义 IP 地址限制。 升级可以继续，但不会针对 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 定义 IP 地址限制。  
   
 ## <a name="corrective-action"></a>纠正措施  
  升级后，使用 ISA Server、防火墙软件或其他解决方案允许或排除从特定 IP 地址到报表服务器的请求。  
   
-## <a name="see-also"></a>请参阅  
- [Reporting Services 升级问题&#40;升级顾问&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
+## <a name="see-also"></a>另请参阅  
+ [升级顾问 &#40;Reporting Services 升级问题&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
   

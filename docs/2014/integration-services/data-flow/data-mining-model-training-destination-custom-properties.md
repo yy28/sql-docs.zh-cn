@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f70d32549bb99458b06b835240e826d15967d9b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827817"
 ---
 # <a name="data-mining-model-training-destination-custom-properties"></a>数据挖掘模型定型目标自定义属性
@@ -22,7 +22,7 @@ ms.locfileid: "62827817"
   
  下表介绍了数据挖掘模型定型目标的自定义属性。 所有属性均可读/写。  
   
-|属性|数据类型|Description|  
+|properties|数据类型|说明|  
 |--------------|---------------|-----------------|  
 |ASConnectionId|String|连接管理器的唯一标识符。|  
 |ASConnectionString|String|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的实例或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的连接字符串。|  
@@ -32,7 +32,7 @@ ms.locfileid: "62827817"
   
  有关详细信息，请参阅 [Data Mining Model Training Destination](data-mining-model-training-destination.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Common Properties](../common-properties.md)  
   
   

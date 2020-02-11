@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 03dae95f44b4166947da4ef7bd88b532db00dd03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667233"
 ---
 # <a name="refresh-data-in-replication-monitor"></a>刷新复制监视器中的数据
@@ -26,7 +26,7 @@ ms.locfileid: "62667233"
   
 ### <a name="to-set-refresh-options-for-replication-monitor"></a>设置复制监视器的刷新选项  
   
-1.  右键单击复制监视器左窗格中的发布服务器，然后单击 **“发布服务器设置”**。  
+1.  右键单击复制监视器左窗格中的发布服务器，然后单击 **“发布服务器设置”** 。  
   
 2.  在 **“发布服务器设置”** 对话框中，设置 **“自动刷新”** 和 **“刷新速率”** 选项。 **“自动刷新”** 设置会影响复制监视器的主窗口。 **“刷新速率”** 设置也会影响任何设置为自动刷新的详细信息窗口，对该设置的更改仅影响以后打开的详细信息窗口。  
   
@@ -40,11 +40,11 @@ ms.locfileid: "62667233"
   
     2.  单击 **“所有订阅”** 选项卡。  
   
-    3.  右键单击订阅，然后单击 **“查看详细信息”**。  
+    3.  右键单击订阅，然后单击 **“查看详细信息”** 。  
   
-2.  在“订阅 \<SubscriptionName>”详细信息窗口中，单击“操作”，然后单击“自动刷新”。 刷新速率由 **“发布服务器设置”** 对话框中的 **“刷新速率”** 设置决定。  
+2.  在“订阅 **SubscriptionName>”\<** 详细信息窗口中，单击“操作”  ，然后单击“自动刷新”  。 刷新速率由 **“发布服务器设置”** 对话框中的 **“刷新速率”** 设置决定。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [监视复制](../monitoring-replication.md)  
   
   

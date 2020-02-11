@@ -1,5 +1,5 @@
 ---
-title: SQL 目标编辑器 （映射页） |Microsoft Docs
+title: SQL 目标编辑器（"映射" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1c687b82433a8491fbdd1b54b9f92d9de62ad418
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055474"
 ---
 # <a name="sql-destination-editor-mappings-page"></a>SQL 目标编辑器（“映射”页）
@@ -39,10 +39,10 @@ ms.locfileid: "66055474"
  **目标列**  
  查看每个可用的目标列，包括已映射或未映射的目标列。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [SQL 目标编辑器（“连接管理器”页）](../../2014/integration-services/sql-destination-editor-connection-manager-page.md)   
- [SQL 目标编辑器（“高级”页）](../../2014/integration-services/sql-destination-editor-advanced-page.md)   
+ [SQL 目标编辑器 &#40;连接管理器页&#41;](../../2014/integration-services/sql-destination-editor-connection-manager-page.md)   
+ [SQL 目标编辑器 &#40;高级页面&#41;](../../2014/integration-services/sql-destination-editor-advanced-page.md)   
  [使用 SQL Server 目标大容量加载数据](data-flow/bulk-load-data-by-using-the-sql-server-destination.md)  
   
   

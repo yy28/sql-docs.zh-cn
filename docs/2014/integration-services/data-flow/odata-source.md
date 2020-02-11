@@ -13,17 +13,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4b6b4aeb4059ba659a3188712b1ce76f10efd030
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771033"
 ---
 # <a name="odata-source"></a>OData 源
   可在 SSIS 包中使用 OData 源组件，以使用来自开放式数据协议 (OData) 服务的数据。 该组件支持 OData v2 和 v3 协议以及 ATOM 和 JSON 数据格式。  
   
 > [!NOTE]  
->  OData 源可用于从 SharePoint 列表读取。 若要查看您的 SharePoint 服务器上的所有列表，请使用以下 URL: http://\<服务器 > / /_vti_bin/listdata.svc。 有关 SharePoint URL 约定的详细信息，请参阅 [SharePoint Foundation REST 接口](https://msdn.microsoft.com/library/ff521587.aspx)。  
+>  OData 源可用于从 SharePoint 列表读取。 若要查看 SharePoint 服务器上的所有列表，请使用以下 URL：\<http://server>/_vti_bin/listdata.svc。 有关 SharePoint URL 约定的详细信息，请参阅 [SharePoint Foundation REST 接口](https://msdn.microsoft.com/library/ff521587.aspx)。  
   
 ## <a name="odata-format"></a>OData 格式  
  大多数 OData 服务采用多种格式返回结果。 可以使用 $format 查询选项指定结果集的格式。 传输大量数据时，JSON 和 JSON 轻型这类格式比 ATOM/XML 更高效，可以提供更佳性能。 下表提供来自示例测试的结果。 可以看到，从 ATOM 切换为 JSON 时，性能提高 30-53%，从 ATOM 切换为新的 JSON 轻型格式（WCF Data Services 5.1 中提供）时，性能提高 67%。  
@@ -41,19 +41,19 @@ ms.locfileid: "62771033"
   
 -   [安装和卸载 OData 源组件](../install-and-uninstall-odata-source-component.md)  
   
--   [教程：使用 OData 源&#91;SSIS&#93;](tutorial-using-the-odata-source.md)  
+-   [教程：使用 OData 源 &#91;SSIS&#93;](tutorial-using-the-odata-source.md)  
   
 -   [在运行时修改 OData 源查询](modify-odata-source-query-at-runtime.md)  
   
--   [OData 源编辑器（“连接”页）](../odata-source-editor-connection-page.md)  
+-   [OData 源编辑器 &#40;连接页&#41;](../odata-source-editor-connection-page.md)  
   
--   [OData 源编辑器（“列”页）](../odata-source-editor-columns-page.md)  
+-   [OData 源编辑器 &#40;列 "页&#41;](../odata-source-editor-columns-page.md)  
   
--   [OData 源编辑器（“错误输出”页）](../odata-source-editor-error-output-page.md)  
+-   [OData 源编辑器 &#40;错误输出页&#41;](../odata-source-editor-error-output-page.md)  
   
 -   [OData 源属性](odata-source-properties.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [OData 连接管理器](../connection-manager/odata-connection-manager.md)  
   
   

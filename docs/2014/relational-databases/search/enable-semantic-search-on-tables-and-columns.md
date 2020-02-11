@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2cd0ea9764007784fb6f999c3115e0a2997d8e2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011381"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>对表和列启用语义搜索
@@ -24,9 +24,9 @@ ms.locfileid: "66011381"
   
  统计语义搜索使用全文搜索创建的索引并创建其他索引。 作为全文搜索上的此依赖关系的结果，您可在定义新的全文索引或更改现有全文索引时创建一个新的语义索引。 可以按本主题中所述使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的全文索引向导和其他对话框创建新的语义索引。  
   
-##  <a name="BasicEnabling"></a> 创建语义索引  
+##  <a name="BasicEnabling"></a>创建语义索引  
   
-###  <a name="reqenable"></a> 创建语义索引的要求和限制  
+###  <a name="reqenable"></a>创建语义索引的要求和限制  
   
 -   可以对任何支持全文索引的数据库对象创建索引，包括表和索引视图。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66011381"
   
 -   可以对具有任何支持全文索引的数据类型的列创建语义索引。 有关详细信息，请参阅 [创建和管理全文索引](create-and-manage-full-text-indexes.md)。  
   
--   您可为 `varbinary(max)` 列指定支持全文索引的任何文档类型。 有关详细信息，请参阅本主题中的[如何确定可对哪些文档类型编制索引](#doctypes)。  
+-   您可为 `varbinary(max)` 列指定支持全文索引的任何文档类型。 有关详细信息，请参阅本主题中的 [如何确定可对哪些文档类型编制索引](#doctypes) 。  
   
 -   语义索引为你选择的列创建两种类型的索引：关键短语索引和文档相似性索引。 启用语义索引时，您无法只选择其中一种索引类型。 但是，您可以单独查询这两种索引。 有关详细信息，请参阅 [使用语义搜索在文档中查找关键短语](find-key-phrases-in-documents-with-semantic-search.md) 和 [使用语义搜索查找相似和相关文档](find-similar-and-related-documents-with-semantic-search.md)。  
   
@@ -50,15 +50,15 @@ ms.locfileid: "66011381"
   
 -   如果为缺少语言模型的列指定语言，创建索引将失败并返回错误消息。  
   
-###  <a name="HowToEnableCreate"></a> 如何：在没有全文索引时创建语义索引  
+###  <a name="HowToEnableCreate"></a>如何：在没有全文索引时创建语义索引  
  使用 **CREATE FULLTEXT INDEX** 语句创建新的全文索引时，可以通过指定关键字 **STATISTICAL_SEMANTICS** 作为列定义的一部分在列级别启用语义索引。 还可以在使用全文索引向导创建新的全文索引时启用语义索引。  
   
- **使用 TRANSACT-SQL 创建新的语义索引**  
+ **使用 Transact-SQL 创建新的语义索引**  
  为要创建语义索引的每个列调用 **CREATE FULLTEXT INDEX** 语句并指定 **STATISTICAL_SEMANTICS**。 有关此语句的所有选项的详细信息，请参阅 [CREATE FULLTEXT INDEX (Transact-SQL)](/sql/t-sql/statements/create-fulltext-index-transact-sql)。  
   
  **示例 1：创建一个唯一索引、全文索引和语义索引**  
   
- 以下示例创建一个默认全文目录 **ft**。然后，该示例对 AdventureWorks2012 示例数据库的 **HumanResources.JobCandidate** 表的 **JobCandidateID** 列创建一个唯一索引。 需要将此唯一索引用作全文索引的键列。 然后，该示例在 **Resume** 列上创建一个全文索引和语义索引。  
+ 以下示例创建一个默认全文目录 **ft**.。然后，该示例对 AdventureWorks2012 示例数据库的 **HumanResources.JobCandidate** 表的 **JobCandidateID** 列创建一个唯一索引。 需要将此唯一索引用作全文索引的键列。 然后，该示例在 **Resume** 列上创建一个全文索引和语义索引。  
   
 ```sql  
 CREATE FULLTEXT CATALOG ft AS DEFAULT  
@@ -115,10 +115,10 @@ GO
  **使用 SQL Server Management Studio 创建新的语义索引**  
  运行全文索引向导并在“选择表列”  页为每个要创建语义索引的列启用“统计语义”  。 有关详细信息，包括有关如何启动全文索引向导的信息，请参阅 [使用全文索引向导](use-the-full-text-indexing-wizard.md)。  
   
-###  <a name="HowToEnableAlter"></a> 如何：现有全文索引时创建语义索引  
+###  <a name="HowToEnableAlter"></a>如何：在存在现有全文索引时创建语义索引  
  在使用 **ALTER FULLTEXT INDEX** 语句更改现有全文索引时，可以添加语义索引。 您还可在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中使用各种对话框添加语义索引。  
   
- **使用 TRANSACT-SQL 添加语义索引**  
+ **使用 Transact-SQL 添加语义索引**  
  为每个要添加语义索引的列使用以下所述的选项调用 **ALTER FULLTEXT INDEX** 语句。 有关此语句的所有选项的详细信息，请参阅 [ ALTER FULLTEXT INDEX (Transact-SQL)](/sql/t-sql/statements/alter-fulltext-index-transact-sql)。  
   
  除非你特别指定，否则在调用 **ALTER** 后，将重新填充全文索引和语义索引。  
@@ -144,19 +144,19 @@ GO
  **使用 SQL Server Management Studio 添加语义索引**  
  可以在“全文索引属性”  对话框的“全文索引列”  页上更改启用语义索引和全文索引的列。 有关详细信息，请参阅 [管理全文索引](../../database-engine/manage-full-text-indexes.md)。  
   
-###  <a name="addreq"></a> 更改现有索引的要求和限制  
+###  <a name="addreq"></a>更改现有索引的要求和限制  
   
 -   正在填充索引时，不能更改现有索引。 有关监视索引填充进度的详细信息，请参阅 [管理和监视语义搜索](manage-and-monitor-semantic-search.md)。  
   
 -   在 **ALTER FULLTEXT INDEX** 语句的单次调用中，不能将索引添加到列以及更改或删除同一列的索引。  
   
-##  <a name="dropping"></a> 删除语义索引  
+##  <a name="dropping"></a>删除语义索引  
   
-###  <a name="drophow"></a> 如何：删除语义索引  
+###  <a name="drophow"></a>如何：删除语义索引  
  在使用 **ALTER FULLTEXT INDEX** 语句更改现有全文索引时，可以删除语义索引。 您还可在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中使用各种对话框删除语义索引。  
   
- **使用 TRANSACT-SQL 删除语义索引**  
- -   要仅从一个或多个列删除语义索引，请使用 ALTER COLUMNcolumn_nameDROP STATISTICAL_SEMANTICS 选项调用 ALTER FULLTEXT INDEX 语句  **** 。 可以在单个 **ALTER** 语句中从多个列删除索引。  
+ **使用 Transact-SQL 删除语义索引**  
+ -   若要仅从一个或多个列删除语义索引，请使用**ALTER column***column_name***drop STATISTICAL_SEMANTICS**选项来调用**alter 全文 INDEX**语句。 可以在单个 **ALTER** 语句中从多个列删除索引。  
   
     ```sql  
     USE database_name  
@@ -168,7 +168,7 @@ GO
     GO  
     ```  
   
--   要从一列同时删除全文索引和语义索引，请使用 ALTER COLUMNcolumn_nameDROP 选项调用 ALTER FULLTEXT INDEX 语句  **** 。  
+-   若要从一列中删除全文索引和语义索引，请使用**ALTER column***column_name***Drop**选项调用**alter full INDEX**语句。  
   
     ```sql  
     USE database_name  
@@ -183,7 +183,7 @@ GO
  **使用 SQL Server Management Studio 删除语义索引**  
  可以在“全文索引属性”  对话框的“全文索引列”  页上更改启用语义索引和全文索引的列。 有关详细信息，请参阅 [管理全文索引](../../database-engine/manage-full-text-indexes.md)。  
   
-###  <a name="dropreq"></a> 删除语义索引的要求和限制  
+###  <a name="dropreq"></a>删除语义索引的要求和限制  
   
 -   保留语义索引时不能从列删除全文索引。 对于文档相似性结果，语义索引依赖于全文索引。  
   
@@ -191,9 +191,9 @@ GO
   
 ## <a name="checking-whether-semantic-search-is-enabled-on-database-objects"></a>检查是否在数据库对象上启用了语义搜索  
   
-###  <a name="HowToCheckEnabled"></a> 如何：检查是否对数据库对象启用了语义搜索  
- **为数据库是否启用语义搜索？**  
- 查询 [DATABASEPROPERTYEX (Transact-SQL)](/sql/t-sql/functions/databasepropertyex-transact-sql) 元数据函数的 **IsFullTextEnabled** 属性。  
+###  <a name="HowToCheckEnabled"></a>如何：检查是否在数据库对象上启用了语义搜索  
+ **是否为数据库启用了语义搜索？**  
+ 查询 **DATABASEPROPERTYEX (Transact-SQL)** 元数据函数的 [IsFullTextEnabled](/sql/t-sql/functions/databasepropertyex-transact-sql) 属性。  
   
  返回值 1 表示为数据库启用了全文搜索和语义搜索；返回值 0 表示未启用它们。  
   
@@ -202,8 +202,8 @@ SELECT DATABASEPROPERTYEX('database_name', 'IsFullTextEnabled')
 GO  
 ```  
   
- **为表启用语义搜索？**  
- 查询 [OBJECTPROPERTYEX (Transact-SQL)](/sql/t-sql/functions/objectproperty-transact-sql) 元数据函数的 **TableFullTextSemanticExtraction** 属性。  
+ **是否为表启用了语义搜索？**  
+ 查询 **OBJECTPROPERTYEX (Transact-SQL)** 元数据函数的 [TableFullTextSemanticExtraction](/sql/t-sql/functions/objectproperty-transact-sql) 属性。  
   
  返回值 1 表示为表启用了语义搜索；返回值 0 表示未启用它。  
   
@@ -212,10 +212,10 @@ SELECT OBJECTPROPERTYEX(OBJECT_ID('table_name'), 'TableFullTextSemanticExtractio
 GO  
 ```  
   
- **为列启用语义搜索？**  
+ **是否为列启用了语义搜索？**  
  若要确定是否为特定列启用了语义搜索：  
   
--   查询 [COLUMNPROPERTY (Transact-SQL)](/sql/t-sql/functions/columnproperty-transact-sql) 元数据函数的 **StatisticalSemantics** 属性。  
+-   查询 **COLUMNPROPERTY (Transact-SQL)** 元数据函数的 [StatisticalSemantics](/sql/t-sql/functions/columnproperty-transact-sql) 属性。  
   
      返回值 1 表示为列启用了语义搜索；返回值 0 表示未启用它。  
   
@@ -239,7 +239,7 @@ GO
   
 ## <a name="determining-what-can-be-indexed-for-semantic-search"></a>确定可对哪些内容编制索引以进行语义搜索  
   
-###  <a name="HowToCheckLanguages"></a> 如何：检查哪些语言支持的语义搜索  
+###  <a name="HowToCheckLanguages"></a>如何：检查语义搜索支持的语言  
   
 > [!IMPORTANT]  
 >  语义索引比全文索引支持的语言少。 因此，您可以对某些列编制索引以进行全文搜索，但不能进行语义搜索。  
@@ -256,26 +256,26 @@ GO
 |语言|LCID|  
 |--------------|----------|  
 |德语|1031|  
-|英语（美国）|2052|  
+|英语(美国)|1033|  
 |法语|1036|  
 |意大利语|1040|  
 |葡萄牙语（巴西）|1046|  
 |俄语|1049|  
 |瑞典语|1053|  
-|英国（英语）|2057|  
-|葡萄牙语（葡萄牙）|2070|  
+|英语(英国)|2057|  
+|葡萄牙语(葡萄牙)|2070|  
 |西班牙语|3082|  
   
-###  <a name="doctypes"></a> 如何：确定可以对哪些文档类型编制索引  
+###  <a name="doctypes"></a>如何：确定可以为哪些文档类型编制索引  
  查询目录视图 [sys.fulltext_document_types (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql)。  
   
  如果您要为其编制索引的文档类型不在所支持类型的列表中，则可能必须查找、下载和安装其他筛选器。 有关详细信息，请参阅 [查看或更改注册的筛选器和断字符](view-or-change-registered-filters-and-word-breakers.md)。  
   
-##  <a name="BestPracticeFilegroup"></a> 最佳做法：请考虑为全文索引和语义索引创建单独的文件组  
+##  <a name="BestPracticeFilegroup"></a>最佳做法：考虑为全文索引和语义索引创建单独的文件组  
  如果磁盘空间分配成问题，请考虑为全文索引和语义索引创建单独的文件组。 在全文索引所在的文件组中创建语义索引。 完全填充的语义索引可能包含大量数据。  
   
 ##  <a name="BestPracticeUnderstand"></a>   
-##  <a name="IssueNoResults"></a> 问题：搜索特定列返回任何结果  
+##  <a name="IssueNoResults"></a>问题：搜索特定列时未返回结果  
  **是否为 Unicode 语言指定了非 Unicode LCID？**  
  可能对非 Unicode 列类型启用了语义索引，而该列的 LCID 用于只有 Unicode 词的语言，如用于俄语的 LCID 1049。 在这种情况下，将不从此列的语义索引返回结果。  
   

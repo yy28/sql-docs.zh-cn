@@ -1,5 +1,5 @@
 ---
-title: sysmail_mailattachments (TRANSACT-SQL) |Microsoft Docs
+title: sysmail_mailattachments （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,40 +18,40 @@ ms.assetid: aee87059-a4c1-459a-a95c-641b4e3f0e73
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3bdcea5da463e2501954c4bf96ca58bac216eb58
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68060204"
 ---
-# <a name="sysmailmailattachments-transact-sql"></a>sysmail_mailattachments (Transact-SQL)
+# <a name="sysmail_mailattachments-transact-sql"></a>sysmail_mailattachments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  提交到数据库邮件的每个附件都在视图中占一行。 如果需要有关数据库附件的信息，则请使用该视图。 若要查看通过数据库邮件使用处理的所有电子邮件[sysmail_allitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)。  
+  提交到数据库邮件的每个附件都在视图中占一行。 如果需要有关数据库附件的信息，则请使用该视图。 若要查看处理的所有电子邮件数据库邮件使用[sysmail_allitems &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**attachment_id**|**int**|附件的标识符。|  
 |**mailitem_id**|**int**|包含附件的邮件项的标识符。|  
-|**filename**|**nvarchar(520)**|附件的文件名。 当**attach_query_result**为 1 并**query_attachment_filename**为 NULL，数据库邮件会创建任意文件名。|  
+|**名字**|**nvarchar （520）**|附件的文件名。 如果**attach_query_result**为1且**query_attachment_filename**为 NULL，数据库邮件将创建任意文件名。|  
 |**filesize**|**int**|附件的大小（字节）。|  
-|**附件**|**varbinary(max)**|附件的内容。|  
+|**attachment**|**varbinary(max)**|附件内容。|  
 |**last_mod_date**|**datetime**|上次修改行的日期和时间。|  
 |**last_mod_user**|**sysname**|上次修改行的用户。|  
   
 ## <a name="remarks"></a>备注  
  排除数据库邮件故障时，请使用该视图来查看附件的属性。  
   
- 附件存储在系统表中可能会导致**msdb**数据库增长。 使用**sysmail_delete_mailitems_sp**若要删除邮件项及其关联的附件。 有关详细信息，请参阅[创建 SQL Server 代理作业以存档数据库邮件和事件日志](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)。  
+ 存储在系统表中的附件可能会导致**msdb**数据库增长。 使用**sysmail_delete_mailitems_sp**删除邮件项及其关联的附件。 有关详细信息，请参阅[创建 SQL Server 代理作业来存档数据库邮件消息和事件日志](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)。  
   
 ## <a name="permissions"></a>权限  
- 授予**sysadmin**固定的服务器角色和**DatabaseMailUserRole**数据库角色。 成员执行时**sysadmin**固定服务器角色，此视图显示所有附件。 所有其他用户仅可查看他们已提交的消息的附件。  
+ 授予**sysadmin**固定服务器角色和**DatabaseMailUserRole**数据库角色。 当由**sysadmin**固定服务器角色的成员执行时，此视图将显示所有附件。 所有其他用户仅可查看他们已提交的消息的附件。  
   
-## <a name="see-also"></a>请参阅  
- [sysmail_allitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
- [sysmail_faileditems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)   
- [sysmail_sentitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md)   
- [sysmail_unsentitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [sysmail_allitems &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
+ [sysmail_faileditems &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)   
+ [sysmail_sentitems &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md)   
+ [sysmail_unsentitems &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md)   
  [sysmail_event_log (Transact-SQL)](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 托管实例详细信息 （SQL Server 实用工具） |Microsoft Docs
+title: 托管实例详细信息（SQL Server 实用工具） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,38 +11,38 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d2b01eceff763d554644065fdb5137695bd82f69
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774339"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>托管实例详细信息（SQL Server 实用工具）
   实用工具资源管理器的“托管实例”视图中的信息为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的单独实例提供使用率数据、CPU 使用率历史记录、文件级别的存储使用率详细信息，并且提供查看和更新策略阈值的能力。 对于计算机，可以在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例级别控制策略阈值；对于数据库文件和日志文件，可以在存储卷的级别控制策略阈值。 您还可以查看 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的各个托管实例的属性详细信息。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
- 列表视图  
+ “列表”视图  
  顶部窗格中的列表视图可以显示行中按 ComputerName\InstanceName 列出的各 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例的有关数据。  
   
  运行状态图标按使用率类别为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的各实例提供摘要状态：  
   
 -   绿色的选中标记 - ![](../../2014/database-engine/media/well-utilized.gif "Well_utilized") - 没有违反资源使用策略的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 托管实例的数目。 资源得到很好地利用。  
   
--   绿色向下箭头 - ![](../../2014/database-engine/media/utility-down-arrow.gif "Utility_down_arrow") - 资源未充分利用。  
+-   绿色向下箭头 - ![](../../2014/database-engine/media/utility-down-arrow.gif "Utility_down_arrow") - 资源使用不足。  
   
--   红色向上箭头 - ![](../../2014/database-engine/media/utility-up-arrow.gif "Utility_up_arrow") - 资源过度利用。  
+-   红色向上箭头 - ![](../../2014/database-engine/media/utility-up-arrow.gif "Utility_up_arrow") - 资源使用过度。  
   
  可以通过将列表视图中的列向左或向右拖动，更改这些列在列表视图中的顺序。 可通过右键单击列标题并选择或取消选择列，添加或删除列表视图中的列。 右键单击菜单还提供了排序选项。 还可以通过单击列名称的顶部激活排序。  
   
- 若要访问实用工具列表视图的筛选器选项，请右键单击实用工具资源管理器导航窗格中的“托管实例”  节点，然后选择“筛选器”  。 在实现了筛选器设置后，实用工具资源管理器中的“托管实例”  节点将标有“托管实例(已筛选)”  。 有关详细信息，请参阅[筛选设置（对象资源管理器和实用工具资源管理器）](../ssms/object/filter-settings-object-explorer-and-utility-explorer.md)。  
+ 若要访问实用工具列表视图的筛选器选项，请右键单击实用工具资源管理器导航窗格中的“托管实例”**** 节点，然后选择“筛选器”****。 在实现了筛选器设置后，实用工具资源管理器中的“托管实例”**** 节点将标有“托管实例(已筛选)”****。 有关详细信息，请参阅[筛选设置（对象资源管理器和实用工具资源管理器）](../ssms/object/filter-settings-object-explorer-and-utility-explorer.md)。  
   
  默认情况下，下面的列将显示与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的每个托管实例有关的运行状态信息。  
   
--   实例 CPU - 显示分配给此 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例的处理器使用率的运行状态。 根据为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例设置的 CPU 使用策略以及易失性资源评估策略的配置设置，确定此参数的运行状态。 有关详细信息，请参阅[减少 CPU 使用策略中的干扰（SQL Server 实用工具）](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)。  
+-   实例 CPU - 显示分配给此 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例的处理器使用率的运行状态。 根据为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例设置的 CPU 使用策略以及易失性资源评估策略的配置设置，确定此参数的运行状态。 有关详细信息，请参阅[减少 CPU 使用策略中的干扰 &#40;SQL Server 实用工具&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)。  
   
      若要查看此 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例的处理器使用率历史记录，或者查看或更改策略限制，请单击 **“CPU 使用率”** 选项卡。  
   
--   计算机 CPU - 显示计算机处理器使用率的运行状态。 根据为计算机设置的 CPU 使用策略以及易失性资源评估策略的配置设置，确定此参数的运行状态。 有关详细信息，请参阅[减少 CPU 使用策略中的干扰（SQL Server 实用工具）](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)。  
+-   计算机 CPU - 显示计算机处理器使用率的运行状态。 根据为计算机设置的 CPU 使用策略以及易失性资源评估策略的配置设置，确定此参数的运行状态。 有关详细信息，请参阅[减少 CPU 使用策略中的干扰 &#40;SQL Server 实用工具&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)。  
   
      若要查看此 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例的处理器使用率历史记录，或者查看或更改策略限制，请单击 **“CPU 使用率”** 选项卡。  
   
@@ -68,17 +68,17 @@ ms.locfileid: "62774339"
   
 -   SQL Server 发行版：  
   
--   群集：（true 或 False）  
+-   群集：（True 或 False）  
   
 -   备份目录：  
   
 -   排序规则：  
   
--   区分大小写：（true 或 False）  
+-   区分大小写：（True 或 False）  
   
--   语言:  
+-   Language：  
   
--   上次报告的时间：此列显示 UCP 本地日期和时间使用 datetime 数据类型。 有关详细信息，请参阅 SQL Server 联机丛书中的 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 主题。 在使用实用工具对象模型时，请注意 SSMS 使用 datetimeoffset 数据类型。 有关详细信息，请参阅 SQL Server 联机丛书中的 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 主题。  
+-   上次报告的时间：此列使用 datetime 数据类型显示 UCP 本地日期和时间。 有关详细信息，请参阅 SQL Server 联机丛书中的 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 主题。 在使用实用工具对象模型时，请注意 SSMS 使用 datetimeoffset 数据类型。 有关详细信息，请参阅 SQL Server 联机丛书中的 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 主题。  
   
  “CPU 使用率”选项卡  
  “CPU 使用率”选项卡为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例和计算机 CPU 使用率显示历史数据的并排图形。  
@@ -144,7 +144,7 @@ ms.locfileid: "62774339"
   
  可为数据文件和日志文件配置存储使用率策略。 若要查看或更改文件的存储使用率策略阈值，请单击“存储使用率”窗格底部的 **“文件策略”** 链接。 若要查看或更改存储卷的存储使用率策略阈值，请单击“存储使用率”窗格底部的 **“卷策略”** 链接。  
   
- 若要覆盖默认策略阈值，请单击单选按钮 **“覆盖默认策略”** ，指定上限和下限值，然后单击 **“确定”** 。  
+ 若要覆盖默认策略阈值，请单击单选按钮 **“覆盖默认策略”**，指定上限和下限值，然后单击 **“确定”**。  
   
  有关更改违反策略容限的详细信息，请参阅[减少 CPU 使用策略中的干扰（SQL Server 实用工具）](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)。  
   
@@ -165,19 +165,19 @@ ms.locfileid: "62774339"
   
 -   SQL Server 发行版：  
   
--   群集：（true 或 False）  
+-   群集：（True 或 False）  
   
 -   备份目录：  
   
 -   排序规则：  
   
--   区分大小写：（true 或 False）  
+-   区分大小写：（True 或 False）  
   
--   语言:  
+-   Language：  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [已部署的数据层应用程序详细信息（SQL Server 实用工具）](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
- [实用工具仪表板&#40;SQL Server 实用工具&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
+ [实用工具仪表板 &#40;SQL Server 实用工具&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
  [在 SQL Server 实用工具中监视 SQL Server 的实例](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
  [SQL Server 实用工具的功能和任务](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [SQL Server 实用工具故障排除](../../2014/database-engine/troubleshoot-the-sql-server-utility.md)  

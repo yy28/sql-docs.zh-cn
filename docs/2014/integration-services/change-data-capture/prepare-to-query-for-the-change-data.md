@@ -13,17 +13,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 559af9cdd7e7014e114b431dddf25b09dd18dc81
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771263"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>准备查询变更数据
   在用于执行变更数据增量加载的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的控制流中，第三个任务（即最后一个任务）是准备查询变更数据和添加数据流任务。  
   
 > [!NOTE]  
->  控制流的第二个任务是确保所选间隔的变更数据已准备就绪。 有关此任务的详细信息，请参阅[确定变更数据是否已准备就绪](determine-whether-the-change-data-is-ready.md)。 有关设计控制流的总体过程的说明，请参阅[变更数据捕获 (SSIS)](change-data-capture-ssis.md)。  
+>  控制流的第二个任务是确保所选间隔的变更数据已准备就绪。 有关此任务的详细信息，请参阅 [确定变更数据是否已准备就绪](determine-whether-the-change-data-is-ready.md)。 有关设计控制流的总体过程的说明，请参阅[变更数据捕获 (SSIS)](change-data-capture-ssis.md)。  
   
 ## <a name="design-considerations"></a>设计注意事项  
  为了检索变更数据，您将调用 Transact-SQL 表值函数，该函数将间隔的端点接受为输入参数并返回指定间隔的变更数据。 数据流中的源组件调用此函数。 有关此源组件的信息，请参阅 [检索和了解变更数据](retrieve-and-understand-the-change-data.md)。  

@@ -1,5 +1,5 @@
 ---
-title: 选择初始数据同步页 （AlwaysOn 可用性组向导） |Microsoft Docs
+title: "\"选择初始数据同步\" 页（AlwaysOn 可用性组向导） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 329bc7fb351406f0c53c69e4addb4513dca1c556
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62789465"
 ---
 # <a name="select-initial-data-synchronization-page-alwayson-availability-group-wizards"></a>“选择初始数据同步”页（AlwaysOn 可用性组向导）
   使用 AlwaysOn **“选择初始数据同步”** 页可为新的辅助数据库的初始数据同步指示您的首选项。 此页为三个向导所共有：[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]、[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] 和 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]。  
   
- 可能的选项包括 **“完全”** 、 **“仅加入”** 或 **“跳过初始数据同步”** 。 选择 **“完全”** 或 **“仅加入”** 之前，确保您的环境符合先决条件。  
+ 可能的选项包括 **“完全”**、 **“仅加入”** 或 **“跳过初始数据同步”**。 选择 **“完全”** 或 **“仅加入”** 之前，确保您的环境符合先决条件。  
   
 
   
@@ -38,7 +38,7 @@ ms.locfileid: "62789465"
   
      如果必须高度保护您的备份操作和还原操作，建议您选择 **“仅加入”** 或 **“跳过初始数据同步”** 选项。  
   
-##  <a name="Full"></a> “完全”  
+##  <a name="Full"></a>达到  
  对于每个主数据库， **“完全”** 选项将在一个工作流中执行以下若干操作：创建主数据库的完整备份和日志备份、通过在承载辅助副本的每个服务器实例上还原这些备份来创建对应的辅助数据库，以及将每个辅助数据库联接到可用性组。  
   
  仅当您的环境符合使用完全初始数据同步的以下先决条件且您希望该向导自动启动数据同步时，才选择此选项。  
@@ -65,16 +65,16 @@ ms.locfileid: "62789465"
   
  如果完全满足这些先决条件并且您想要向导执行完全初始数据同步，请选择 **“完全”** 选项并指定网络共享。 这将导致向导创建每个所选数据库的完整的数据库和日志备份，并将这些备份放置于您指定的网络共享上。 然后，在承载新的辅助副本之一的每个服务器实例上，该向导将通过使用 RESTORE WITH NORECOVERY 还原备份以创建辅助数据库。 创建每个辅助数据库之后，该向导将新的辅助数据库加入可用性组中。 加入辅助数据库后，将在该数据库上启动数据同步。  
   
- **指定所有副本可访问的共享网络位置**  
+ **指定可由所有副本访问的共享网络位置**  
  若要创建和还原备份，该向导要求您指定一个网络共享。 用于在承载可用性副本的每个服务器实例上启动 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 的帐户必须对网络共享具有读写文件系统权限。  
   
 > [!IMPORTANT]  
 >  日志备份将是您的日志备份链的一部分。 适当地存储其备份文件。  
   
-##  <a name="Joinonly"></a> “仅加入”  
+##  <a name="Joinonly"></a>仅联接  
  仅当每个承载可用性组的辅助副本的服务器实例上已存在新的辅助数据库时，才选择此选项。 有关准备辅助数据库的信息，请参阅本主题后面的 [手动准备辅助数据库](#PrepareSecondaryDbs)。  
   
- 如果您选择 **“仅加入”** ，则该向导将尝试将每个现有辅助数据库加入可用性组中。  
+ 如果您选择 **“仅加入”**，则该向导将尝试将每个现有辅助数据库加入可用性组中。  
   
 ## <a name="skip-initial-data-synchronization"></a>“跳过初始数据同步”  
  如果您希望自行执行每个主数据库的数据库备份和日志备份，并将它们还原到每个承载辅助副本的服务器实例，则选择此选项。 退出向导后，您需要加入每个辅助副本上的每个辅助数据库。  
@@ -82,7 +82,7 @@ ms.locfileid: "62789465"
 > [!NOTE]  
 >  有关详细信息，请参阅[启动 AlwaysOn 辅助数据库的数据移动 (SQL Server)](start-data-movement-on-an-always-on-secondary-database-sql-server.md)。  
   
-##  <a name="PrepareSecondaryDbs"></a> 手动准备辅助数据库  
+##  <a name="PrepareSecondaryDbs"></a>手动准备辅助数据库  
  若要独立于任何 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 向导准备辅助数据库，可以使用下列方法之一：  
   
 -   使用 RESTORE WITH NORECOVERY 手动还原主数据库的最新数据库备份，然后使用 RESTORE WITH NORECOVERY 还原各个后续日志备份。 如果主数据库和辅助数据库具有不同的文件路径，则必须使用 WITH MOVE 选项。 在每个承载可用性组的辅助副本的服务器实例上执行此还原序列。  您可以使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 执行这些备份和还原操作。  
@@ -91,14 +91,14 @@ ms.locfileid: "62789465"
   
      [为可用性组手动准备辅助数据库 (SQL Server)](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
--   如果您在将一个或多个日志传送主数据库添加到可用性组，则可能能够将一个或多个相应的辅助数据库从日志传送迁移到 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。 有关详细信息，请参阅[到 AlwaysOn 可用性组从日志传送先决条件迁移&#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)。  
+-   如果您在将一个或多个日志传送主数据库添加到可用性组，则可能能够将一个或多个相应的辅助数据库从日志传送迁移到 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。 有关详细信息，请参阅[从日志传送迁移到 AlwaysOn 可用性组 &#40;SQL Server&#41;的先决条件](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)。  
   
     > [!NOTE]  
     >  在您为可用性组创建了所有辅助数据库后，如果您想要在辅助副本上执行备份，将需要重新配置该可用性组的自动备份首选项。  
   
      **详细信息：**  
   
-     [从迁移的先决条件日志传送到 AlwaysOn 可用性组&#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
+     [从日志传送迁移到 AlwaysOn 可用性组 &#40;SQL Server 的先决条件&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
      [配置可用性副本备份 (SQL Server)](configure-backup-on-availability-replicas-sql-server.md)  
   
@@ -116,13 +116,13 @@ ms.locfileid: "62789465"
   
 -   [使用故障转移可用性组向导 (SQL Server Management Studio)](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
--   [启动 AlwaysOn 辅助数据库的数据移动&#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md)  
+-   [启动 AlwaysOn 辅助数据库的数据移动 &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md)  
   
 -   [将辅助数据库联接到可用性组 (SQL Server)](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
 -   [使用“新建可用性组”对话框 (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>请参阅  
- [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+## <a name="see-also"></a>另请参阅  
+ [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

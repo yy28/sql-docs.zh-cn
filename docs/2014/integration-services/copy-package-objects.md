@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9fa5ac78eec56c665f05c1624c8555042433731d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832038"
 ---
 # <a name="copy-package-objects"></a>复制包对象
@@ -61,9 +61,9 @@ ms.locfileid: "62832038"
   
 6.  右键单击“连接管理器”  区域，并单击“粘贴”  。  
   
-## <a name="see-also"></a>请参阅  
- [“控制流”](control-flow/control-flow.md)   
- [“数据流”](data-flow/data-flow.md)   
+## <a name="see-also"></a>另请参阅  
+ [控制流](control-flow/control-flow.md)   
+ [数据流](data-flow/data-flow.md)   
  [Integration Services (SSIS) 连接](connection-manager/integration-services-ssis-connections.md)   
  [复制项目项](../../2014/integration-services/copy-project-items.md)  
   

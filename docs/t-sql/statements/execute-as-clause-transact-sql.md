@@ -26,10 +26,10 @@ ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2dfba9eef86ab77ec114bc74712d9573fb5e4c48
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70155061"
 ---
 # <a name="execute-as-clause-transact-sql"></a>EXECUTE AS 子句 (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "70155061"
   
  通过指定执行模块的上下文，可以控制 [!INCLUDE[ssDE](../../includes/ssde-md.md)]使用哪一个用户帐户来验证对模块引用的对象的权限。 这有助于人们更灵活、有力地管理用户定义的模块及其所引用对象所形成的对象链中的权限。 必须而且只需授予用户对模块自身的权限，而无需授予用户对被引用对象的显式权限。 只有运行模块的用户必须对模块访问的对象拥有权限。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -93,19 +93,19 @@ DDL Triggers with Database Scope
 > [!IMPORTANT]  
 >  OWNER 必须映射到单一实例帐户，并且不能是角色或组。  
   
- ' user_name '     
+ **'** *user_name* **'**  
  指定模块内的语句在 user_name 指定的用户的上下文中执行  。 将根据 user_name 来验证对模块内任意对象的权限  。 不能为具有服务器作用域的 DDL 触发器或登录触发器指定 user_name  。 请改用 login_name  。  
   
  user_name 必须存在于当前数据库中，并且必须是单一实例帐户  。 user_name 不能为组、角色、证书、密钥或内置帐户，如 NT AUTHORITY\LocalService、NT AUTHORITY\NetworkService 或 NT AUTHORITY\LocalSystem  。  
   
  执行上下文的用户 ID 存储在元数据中，可以在 sys.sql_modules 或 sys.assembly_modules 目录视图的 execute_as_principal_id 列查看    。  
   
- ' login_name '     
+ **'** *login_name* **'**  
  指定模块内的语句在 login_name 指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录的上下文中执行  。 将根据 login_name 来验证对模块内任意对象的权限  。 只能为具有服务器作用域的 DDL 触发器或登录触发器指定 login_name  。  
   
  login_name 不能为组、角色、证书、密钥或内置帐户，如 NT AUTHORITY\LocalService、NT AUTHORITY\NetworkService 或 NT AUTHORITY\LocalSystem  。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]对模块所引用对象的权限进行评估的方式取决于调用对象和被引用对象之间存在的所有权链。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本中，所有权链是可以避免授权调用用户访问所有被引用对象权限的唯一方式。  
   
  所有权链具有以下限制：  
@@ -184,7 +184,7 @@ GO
   
  若要查看具有指定执行上下文的模块的定义，请使用 [sys.sql_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) 目录视图。  
   
-## <a name="best-practice"></a>最佳实践  
+## <a name="best-practice"></a>最佳做法  
  指定拥有执行模块中定义的操作所需的最低权限的登录或用户。 例如，如果不需要相应的权限，则不要指定数据库所有者帐户。  
   
 ## <a name="permissions"></a>权限  

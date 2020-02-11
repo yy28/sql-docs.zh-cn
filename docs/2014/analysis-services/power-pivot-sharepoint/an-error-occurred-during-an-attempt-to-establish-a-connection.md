@@ -1,5 +1,5 @@
 ---
-title: 在尝试建立与外部数据源的连接的过程中出现错误。 以下连接无法刷新：PowerPivot Data | Microsoft Docs
+title: 在尝试建立与外部数据源的连接的过程中出现错误。 以下连接无法刷新： PowerPivot 数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c09c8984e964b4bdfa93b0fcebae2e613d484892
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071945"
 ---
 # <a name="an-error-occurred-during-an-attempt-to-establish-a-connection-to-the-external-data-source-the-following-connections-failed-to-refresh-powerpivot-data"></a>在尝试建立与外部数据源的连接的过程中出现错误。 以下连接无法刷新：PowerPivot 数据
@@ -24,12 +24,12 @@ ms.locfileid: "66071945"
   
 |||  
 |-|-|  
-|适用对象|PowerPivot for SharePoint|  
-|产品版本|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|适用于|PowerPivot for SharePoint|  
+|产品版本|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |原因|数据连接失败。|  
 |消息正文|在尝试建立与外部数据源的连接的过程中出现错误。 以下连接无法刷新：PowerPivot 数据|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  当您在发布到 SharePoint 的 Excel 工作簿中查询 PowerPivot 数据时，如果 SharePoint 环境不具有 PowerPivot for SharePoint 服务器，或者 SQL Server Analysis Services (PowerPivot) 服务停止运行，Excel Services 将返回此错误。  
   
  在您切分或筛选 PowerPivot 数据时，如果查询引擎不可用，则会发生此错误。  
@@ -41,7 +41,7 @@ ms.locfileid: "66071945"
   
  对于在 SQL Server 2008 R2 版本的 PowerPivot for Excel 中创建的 PowerPivot 工作簿，必须安装 SQL Server 2008 R2 版本的 Analysis Services OLE DB 访问接口。 如果您安装了该访问接口，但未注册 Microsoft.AnalysisServices.ChannelTransport.dll 文件，则将出现此错误。 有关文件注册的详细信息，请参阅 [在 SharePoint 服务器上安装 Analysis Services OLE DB 提供程序](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)。  
   
-## <a name="see-also"></a>请参阅  
- [数据连接使用 Windows 身份验证并且无法对用户凭据进行委托。以下连接无法刷新：PowerPivot Data](the-data-connection-user-could-not-be-delegated.md)  
+## <a name="see-also"></a>另请参阅  
+ [数据连接使用 Windows 身份验证，因此无法委托用户凭据。以下连接无法刷新： PowerPivot 数据](the-data-connection-user-could-not-be-delegated.md)  
   
   

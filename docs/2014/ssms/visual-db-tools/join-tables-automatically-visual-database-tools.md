@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bab311878966087ef9b6c3f05bb3023d02fdeb20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62711064"
 ---
 # <a name="join-tables-automatically-visual-database-tools"></a>自动联接表 (Visual Database Tools)
@@ -39,9 +39,9 @@ ms.locfileid: "62711064"
   
  如果查询和视图设计器在查询中没有自动联接表，您可以自己创建联接。 有关详细信息，请参阅[手动联接表 (Visual Database Tools)](join-tables-manually-visual-database-tools.md)。  
   
-## <a name="see-also"></a>请参阅  
- [查询和视图设计器如何表示联接&#40;可视化数据库工具&#41;](how-the-query-and-view-designer-represents-joins-visual-database-tools.md)   
- [设计查询和视图操作指南主题&#40;可视化数据库工具&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+## <a name="see-also"></a>另请参阅  
+ [查询和视图设计器如何表示 &#40;Visual Database Tools 的联接&#41;](how-the-query-and-view-designer-represents-joins-visual-database-tools.md)   
+ [&#40;Visual Database Tools 的设计查询和视图操作指南主题&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [使用联接进行查询 (Visual Database Tools)](query-with-joins-visual-database-tools.md)  
   
   

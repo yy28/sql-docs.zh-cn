@@ -17,14 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7c710065bf0a87b5ec3850010344f2ef5114022e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830558"
 ---
 # <a name="script-task"></a>脚本任务
-  脚本任务提供代码来执行内置任务中没有的函数以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的转换。 脚本任务还可将函数组合到一个脚本中，而不必使用多个任务和转换。 脚本任务用于执行必须在包中一次完成（或每个枚举对象一次完成）、而不是每个数据行一次完成的工作。  
+  脚本任务提供代码来执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 内置任务和转换中不可用的函数。 脚本任务还可将函数组合到一个脚本中，而不必使用多个任务和转换。 脚本任务用于执行必须在包中一次完成（或每个枚举对象一次完成）、而不是每个数据行一次完成的工作。  
   
  可以将脚本任务用于下列目的：  
   
@@ -64,9 +64,9 @@ ms.locfileid: "62830558"
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置这些属性。  
   
 ### <a name="configuring-the-script-task-in-the-designer"></a>在设计器中配置脚本任务  
- 下表描述可以为脚本任务进行记录的 `ScriptTaskLogEntry` 事件。 `ScriptTaskLogEntry`为日志记录选择事件**详细信息**选项卡**配置 SSIS 日志**对话框。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../performance/integration-services-ssis-logging.md)和[日志记录的自定义消息](../custom-messages-for-logging.md)。  
+ 下表描述可以为脚本任务进行记录的 `ScriptTaskLogEntry` 事件。 已`ScriptTaskLogEntry`在 "**配置 SSIS 日志**" 对话框的 "**详细信息**" 选项卡上选择要记录的事件。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../performance/integration-services-ssis-logging.md)和[日志记录的自定义消息](../custom-messages-for-logging.md)。  
   
-|日志项|Description|  
+|日志项|说明|  
 |---------------|-----------------|  
 |`ScriptTaskLogEntry`|报告在脚本中实现日志记录的结果。 该任务在每次调用 `Log` 对象的 `Dts` 方法时都编写一个日志条目。 然后，在运行代码时编写这些条目。 有关详细信息，请参阅 [Logging in the Script Task](../extending-packages-scripting/task/logging-in-the-script-task.md)。|  
   
@@ -89,6 +89,6 @@ ms.locfileid: "62830558"
   
 ## <a name="related-content"></a>相关内容  
   
--   shareourideas.com 上的技术文章 [How to send email with delivery notification in C#](https://go.microsoft.com/fwlink/?LinkId=237625)（如何在 C# 中发送具有传递通知的电子邮件）  
+-   shareourideas.com 上的技术文章 [如何在 C# 中发送具有传递通知的电子邮件](https://go.microsoft.com/fwlink/?LinkId=237625)（如何在 C# 中发送具有传递通知的电子邮件）  
   
   

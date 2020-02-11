@@ -1,5 +1,5 @@
 ---
-title: 服务器对象 (Analysis Services-多维数据) |Microsoft Docs
+title: 服务器对象（Analysis Services 多维数据） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5c70c0ba8e402f41a7936c4d70bd3d5ac9a51ad7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62699327"
 ---
 # <a name="server-objects-analysis-services---multidimensional-data"></a>服务器对象（Analysis Services - 多维数据）
     
 ## <a name="introducing-server-objects"></a>服务器对象简介  
- <xref:Microsoft.AnalysisServices.Server>对象表示在服务器和实例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]想要使用。  
+ <xref:Microsoft.AnalysisServices.Server>对象表示要使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]的服务器和实例。  
   
  连接到 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的实例后，您可马上看到：  
   

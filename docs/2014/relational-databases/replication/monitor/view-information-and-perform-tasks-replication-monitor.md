@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 400db44d053caf131ef13947adbd0154875995cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667123"
 ---
 # <a name="view-information-and-perform-tasks-using-replication-monitor"></a>使用复制监视器查看信息和执行任务
@@ -30,7 +30,7 @@ ms.locfileid: "62667123"
 
   复制监视器提供下列选项卡，其中包括有关选定发布的信息：  
   
--   **所有订阅**-此选项卡显示对所选发布的所有订阅有关的信息。  
+-   **所有订阅**-此选项卡显示有关所选发布的所有订阅的信息。  
   
 -   **代理**-此选项卡显示有关发布使用的所有代理的信息：  
   
@@ -38,10 +38,10 @@ ms.locfileid: "62667123"
     -   日志读取器代理，用于所有事务发布。    
     -   队列读取器代理，用于具有排队更新订阅的事务发布。  
   
--   **警告** （对于运行 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 和更高版本的分发服务器）   
+-   **警告**（适用于运行[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]和更高版本的分发服务器）   
     -   此选项卡允许您为代理指定警告和警报。  
   
--   **跟踪令牌** （仅限事务复制，对于运行 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 和更高版本的分发服务器）  
+-   **跟踪令牌**（仅适用于事务复制，适用[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]于运行和更高版本的分发服务器）  
   
      可以使用此选项卡衡量滞后时间，滞后时间是指从事务在发布服务器上提交到相应的事务在订阅服务器上提交之间间隔的时间。  
   
@@ -50,23 +50,23 @@ ms.locfileid: "62667123"
 ### <a name="perform-tasks"></a>执行任务
   
 1.  在左窗格中展开发布服务器组，再展开其中的一个发布服务器，然后单击其中的一个发布。    
-2.  若要查看和修改发布属性，请右键单击该发布，然后单击 **“属性”** 。    
+2.  若要查看和修改发布属性，请右键单击该发布，然后单击 **“属性”**。    
 3.  若要查看有关订阅的信息，请单击 **“所有订阅”** 选项卡。  
   
-     若要查看和修改订阅属性，请右键单击该订阅，然后单击 **“属性”** 。 您还可以通过该选项卡访问更详细的信息和执行任务。有关详细信息，请参阅[使用复制监视器查看信息和执行任务](view-information-and-perform-tasks-replication-monitor.md)。  
+     若要查看和修改订阅属性，请右键单击该订阅，然后单击 **“属性”** 。 你还可以在此选项卡上访问更详细的信息和执行任务。有关详细信息，请参阅[使用复制监视器查看信息和执行任务](view-information-and-perform-tasks-replication-monitor.md)。  
   
-4.  若要查看有关代理的信息，请单击 **“代理”** 选项卡。您还可以通过该选项卡访问更详细的信息和执行任务。有关详细信息，请参阅[使用复制监视器查看信息和执行任务](view-information-and-perform-tasks-replication-monitor.md)。    
-5.  若要查看代理警告和阈值的相关信息，请单击 **“警告”** 选项卡。有关详细信息，请参阅 [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md)。   
-6.  若要查看有关跟踪令牌的信息，请单击 **“跟踪令牌”** 选项卡。有关如何使用跟踪令牌的详细信息，请参阅 [为事务复制测量滞后时间和验证连接](measure-latency-and-validate-connections-for-transactional-replication.md)。  
+4.  若要查看有关代理的信息，请单击 "**代理**" 选项卡。你还可以在此选项卡上访问更详细的信息和执行任务。有关详细信息，请参阅[使用复制监视器查看信息和执行任务](view-information-and-perform-tasks-replication-monitor.md)。    
+5.  若要查看代理警告和阈值的相关信息，请单击 "**警告**" 选项卡。有关详细信息，请参阅[在复制监视器中设置阈值和警告](set-thresholds-and-warnings-in-replication-monitor.md)。   
+6.  若要查看有关跟踪令牌的信息，请单击 "**跟踪令牌**" 选项卡。有关如何使用跟踪令牌的详细信息，请参阅为[事务复制测量滞后时间和验证连接](measure-latency-and-validate-connections-for-transactional-replication.md)。  
   
 ## <a name="for-a-publisher"></a>针对发布服务器
   复制监视器提供了下列选项卡，以显示有关选定发布服务器的信息：  
   
--   **发布**-此选项卡显示所选发布服务器上所有发布的相关信息。  
+-   **发布**-此选项卡显示有关所选发布服务器上的所有发布的信息。  
   
--   **订阅监视列表**-此选项卡用于在所选发布服务器上具有错误、 警告或性能最差的显示有关所有可用发布中的订阅的信息。 对于运行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]以前版本的分发服务器，不显示此选项卡。  
+-   **订阅监视列表**-此选项卡用于显示所选发布服务器上所有可用发布的订阅的相关信息，这些发布具有错误、警告或性能最差性能。 对于运行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以前版本的分发服务器，不显示此选项卡。  
   
--   **代理**选项卡-此选项卡显示有关代理和作业的使用详细的信息的所有类型的复制。 使用该选项卡，还可以启动和停止每个代理和作业。  
+-   "**代理**" 选项卡-此选项卡显示有关所有复制类型使用的代理和作业的详细信息。 使用该选项卡，还可以启动和停止每个代理和作业。  
   
  若要查看每个选项卡上各个选项的详细信息，请在右窗格中单击该选项卡，再单击菜单栏上的 **“帮助”** 。 有关启动复制监视器的信息，请参阅[启动复制监视器](start-the-replication-monitor.md)。  
   
@@ -90,28 +90,28 @@ ms.locfileid: "62667123"
 
   复制监视器提供下列包含订阅相关信息的选项卡：  
   
--   **所有订阅**-此选项卡显示对所选发布的所有订阅有关的信息。  
+-   **所有订阅**-此选项卡显示有关所选发布的所有订阅的信息。  
   
--   **订阅监视列表**-此选项卡用于在所选发布服务器上具有错误、 警告或性能最差的显示有关所有可用发布中的订阅的信息。 对于运行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]以前版本的分发服务器，不显示此选项卡。  
+-   **订阅监视列表**-此选项卡用于显示所选发布服务器上所有可用发布的订阅的相关信息，这些发布具有错误、警告或性能最差性能。 对于运行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以前版本的分发服务器，不显示此选项卡。  
   
  有关每个选项卡上各选项的详细信息，请在右窗格中单击相应选项卡，然后在菜单栏上单击 **“帮助”** 。 有关启动复制监视器的信息，请参阅[启动复制监视器](start-the-replication-monitor.md)。  
   
-### <a name="all-subscriptions-tab"></a>所有订阅选项卡  
+### <a name="all-subscriptions-tab"></a>"所有订阅" 选项卡  
   
 1.  在左窗格中展开发布服务器组，再展开其中的一个发布服务器，然后单击其中的一个发布。   
 2.  若要查看有关订阅的信息，请单击 **“所有订阅”** 选项卡。若要只查看处于给定状态（如同步）的订阅，请从 **“显示”** 下拉列表中选择一个选项。   
-3.  若要查看和修改订阅属性，请右键单击该订阅，然后单击 **“属性”** 。 您还可以通过该选项卡访问更详细的信息和执行任务。有关详细信息，请参阅[使用复制监视器查看信息和执行任务](view-information-and-perform-tasks-replication-monitor.md)。  
+3.  若要查看和修改订阅属性，请右键单击该订阅，然后单击 **“属性”** 。 你还可以在此选项卡上访问更详细的信息和执行任务。有关详细信息，请参阅[使用复制监视器查看信息和执行任务](view-information-and-perform-tasks-replication-monitor.md)。  
   
 ### <a name="subscription-watch-list-tab"></a>“订阅监视列表”选项卡  
   
 1.  在左窗格中，展开发布服务器组，然后单击一个发布服务器。   
 2.  若要查看有关订阅的信息，请单击 **“订阅监视列表”** 选项卡。  
 3.  从“显示 \<订阅类型> 订阅”  下拉列表中选择要显示的订阅类型。 若要只查看处于给定状态（如同步）的订阅，请从 **“显示”** 下拉列表中选择一个选项。    
-4.  若要查看和修改订阅属性，请右键单击该订阅，然后单击 **“属性”** 。 您还可以通过该选项卡访问更详细的信息和执行任务。有关详细信息，请参阅[使用复制监视器查看信息和执行任务](view-information-and-perform-tasks-replication-monitor.md)。  
+4.  若要查看和修改订阅属性，请右键单击该订阅，然后单击 **“属性”** 。 你还可以在此选项卡上访问更详细的信息和执行任务。有关详细信息，请参阅[使用复制监视器查看信息和执行任务](view-information-and-perform-tasks-replication-monitor.md)。  
 
 ## <a name="for-publication-agents"></a>针对发布代理
 
-  复制监视器提供了 **“代理”** 选项卡，其中包含与所选发布关联的代理的相关信息。 分发代理和合并代理与订阅相关联;有关详细信息，请参阅[查看信息和执行其任务使用复制监视器](view-information-and-perform-tasks-replication-monitor.md)。  
+  复制监视器提供了 **“代理”** 选项卡，其中包含与所选发布关联的代理的相关信息。 分发代理和合并代理与订阅相关联;有关详细信息，请参阅[使用复制监视器查看信息和执行任务](view-information-and-perform-tasks-replication-monitor.md)。  
   
  此选项卡显示有关下列代理的信息：    
 -   快照代理，用于所有发布。    
@@ -136,9 +136,9 @@ ms.locfileid: "62667123"
 ### <a name="view-information-and-perform-tasks"></a>查看信息并执行任务
   复制监视器提供了两个选项卡，可用于访问与订阅相关联的代理的相关信息：  
   
--   **所有订阅**-此选项卡显示对所选发布的所有订阅有关的信息。  
+-   **所有订阅**-此选项卡显示有关所选发布的所有订阅的信息。  
   
--   **订阅监视列表**-此选项卡用于在所选发布服务器上具有错误、 警告或性能最差的显示有关所有可用发布中的订阅的信息。 对于运行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]以前版本的分发服务器，不显示此选项卡。  
+-   **订阅监视列表**-此选项卡用于显示所选发布服务器上所有可用发布的订阅的相关信息，这些发布具有错误、警告或性能最差性能。 对于运行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以前版本的分发服务器，不显示此选项卡。  
   
  有关每个选项卡上各选项的详细信息，请在右窗格中单击相应选项卡，然后在菜单栏上单击 **“帮助”** 。 有关启动复制监视器的信息，请参阅[启动复制监视器](start-the-replication-monitor.md)。  
   
@@ -166,7 +166,7 @@ ms.locfileid: "62667123"
     -   若要管理代理的配置文件，请右键单击代理，然后单击 **“代理配置文件”** 。 有关详细信息，请参阅[处理复制代理配置文件](../agents/replication-agent-profiles.md)。  
   
 
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [查看和修改发布属性](../publish/view-and-modify-publication-properties.md)   
  [监视复制](../monitoring-replication.md)  
   

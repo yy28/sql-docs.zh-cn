@@ -1,5 +1,5 @@
 ---
-title: 作业属性： 新建作业 （步骤页） |Microsoft Docs
+title: 作业属性：新建作业（"步骤" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c9b7941f7d85404f56d24252534c518037d30a17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62695661"
 ---
 # <a name="job-propertiesnew-job-steps-page"></a>作业属性：新建作业（“步骤”页）
-  使用此页可以查看和组织 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业的作业步骤。  
+  使用此页可以查看和组织[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理作业的作业步骤。  
   
 ## <a name="options"></a>选项  
  **作业步骤列表**  
@@ -35,7 +35,7 @@ ms.locfileid: "62695661"
  **新建**  
  在所选作业步骤下创建新的作业步骤。  
   
- **Insert**  
+ **&**  
  在所选作业步骤上方创建新的作业步骤。  
   
  **编辑**  
@@ -44,7 +44,7 @@ ms.locfileid: "62695661"
  **删除**  
  删除所选作业步骤。 删除作业步骤时，将自动删除其输出日志。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [执行作业](implement-jobs.md)  
   
   

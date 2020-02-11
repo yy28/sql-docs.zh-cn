@@ -14,18 +14,18 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 1be02aa5a19e49788aafdfdb9b6f818a66968283
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68054841"
 ---
-# <a name="spspecialcolumns100-sql-data-warehouse"></a>sp_special_columns_100 （SQL 数据仓库）
+# <a name="sp_special_columns_100-sql-data-warehouse"></a>sp_special_columns_100 （SQL 数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   返回一组唯一标识表中某个行的最优列。 如果事务更新了行中的某个值，则还将返回自动更新的列。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,44 +43,45 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @table_name=] '*table_name*'  
- 用于返回目录信息的表的名称。 *名称*是**sysname**，无默认值。 不支持通配符模式匹配。  
+ [ @table_name=]"*table_name*"  
+ 用于返回目录信息的表的名称。 *名称*为**sysname**，无默认值。 不支持通配符模式匹配。  
   
- [ @table_owner=] '*table_owner*'  
- 是用来返回目录信息的表所有者。 *所有者*是**sysname**，默认值为 NULL。 不支持通配符模式匹配。 如果*所有者*未指定，则遵循基础 dbms 的默认表可见性规则将应用。  
+ [ @table_owner=]"*table_owner*"  
+ 用于返回目录信息的表的表所有者。 *所有者*为**sysname**，默认值为 NULL。 不支持通配符模式匹配。 如果未指定*owner* ，则应用基础 DBMS 的默认表可见性规则。  
   
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果当前用户拥有一个具有指定名称的表，则返回该表的列。 如果*所有者*未指定当前用户不拥有指定的表和*名称*，此过程的指定的表查找*名称*拥有的数据库所有者。 如果存在该表，则返回该表的列。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果当前用户拥有一个具有指定名称的表，则返回该表的列。 如果未指定*owner* ，并且当前用户没有具有指定*名称*的表，则此过程将查找由数据库所有者拥有的指定*名称*的表。 如果存在该表，则返回该表的列。  
   
- [ @qualifier=] '*qualifier*'  
- 表限定符的名称。 *限定符*是**sysname**，默认值为 NULL。 多种 DBMS 产品支持表的三部分命名 (*qualifier.owner.name*)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列表示数据库名称。 在某些产品中，它表示表所在数据库环境的服务器名称。  
+ [ @qualifier=]"*限定符*"  
+ 表限定符的名称。 *限定符*的值为**sysname**，默认值为 NULL。 各种 DBMS 产品支持表的三部分命名（*qualifier.owner.name*）。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，此列表示数据库名称。 在某些产品中，它表示表所在数据库环境的服务器名称。  
   
- [ @col_type=] '*col_type*'  
- 是列类型。 *col_type*是**char (** 1 **)** ，默认值为。 键入 R 返回最优列集，该对象通过检索的列，允许中指定的任意一行要进行唯一标识表。 列可以是为此目的专门设计的伪列，也可以是表的某个唯一索引的一个或多个列。 如果列类型为 V，则返回指定表中的列（如果有）。如果有事务更新了行中的某个值，则数据源将自动更新返回的列。  
+ [ @col_type=]"*col_type*"  
+ 列类型。 *col_type*的数据类型为**char （** 1 **）**，默认值为 r。 type r 返回的最佳列或列集通过检索列中的值，可以唯一标识指定表中的任何行。 列可以是为此目的专门设计的伪列，也可以是表的某个唯一索引的一个或多个列。 如果列类型为 V，则返回指定表中的列（如果有）。如果有事务更新了行中的某个值，则数据源将自动更新返回的列。  
   
- [ @scope=] '*scope*'  
- ROWID 要求的最小作用域。 *作用域*是**char (** 1 **)** ，默认值为 t。 作用域为 C 指定 ROWID 只有位于该行上时才有效。 如果作用域为 T，则指定 ROWID 对该事务有效。  
+ [ @scope=]"*scope*"  
+ ROWID 要求的最小作用域。 *作用域*为**char （** 1 **）**，默认值为 T。作用域 C 指定 ROWID 仅在定位在该行上时才有效。 如果作用域为 T，则指定 ROWID 对该事务有效。  
   
- [ @nullable=] '*nullable*'  
- 指示特殊列能否接受 Null 值。 *可以为 null*是**char (** 1 **)** ，默认值为 u。 O 指定特殊列不允许 null 值。 如果值为 U，则指定列可以部分为 Null 值。  
+ [ @nullable=]"*nullable*"  
+ 指示特殊列能否接受 Null 值。 *可以为 null*的数据类型为**char （** 1 **）**，默认值为 U。 O 指定不允许空值的特殊列。 如果值为 U，则指定列可以部分为 Null 值。  
   
- [ @ODBCVer=] '*ODBCVer*'  
- 所使用的 ODBC 版本。 *ODBCVer*是**int (** 4 **)** ，默认值为 2。 这指示 ODBC 版本 2.0。 有关 ODBC 2.0 版和 ODBC 3.0 版之间差别的详细信息，请参阅 ODBC 3.0 版的 ODBC SQLSpecialColumns 规范。  
+ [ @ODBCVer=]'*ODBCVer*'  
+ 所使用的 ODBC 版本。 *ODBCVer*的值为**int （** 4 **）**，默认值为2。 这指示 ODBC 版本 2.0。 有关 ODBC 2.0 版和 ODBC 3.0 版之间的差别的详细信息，请参阅 ODBC 3.0 版的 ODBC SQLSpecialColumns 规范。  
   
 ## <a name="return-code-values"></a>返回代码值  
- None  
+ 无  
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|SCOPE|**smallint**|行 ID 的实际作用域。 可以为 0、1 或 2。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 始终返回 0。 此字段始终返回值。<br /><br /> 0 = SQL_SCOPE_CURROW。 行 ID 只有位于该行上时才能保证有效。 如果另一个事务更新或删除了该行，则以后使用该行 ID 重新选择时，可能无法返回一个行。<br /><br /> 1 = SQL_SCOPE_TRANSACTION。 行 ID 在当前事务期间保证有效。<br /><br /> 2 = SQL_SCOPE_SESSION。 行 ID 在会话（跨事务边界）期间保证有效。|  
-|COLUMN_NAME|**sysname**|每个列的列名*表*返回。 此字段始终返回值。|  
+|SCOPE|**smallint**|行 ID 的实际作用域。 可以为 0、1 或 2。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]始终返回0。 此字段始终返回值。<br /><br /> 0 = SQL_SCOPE_CURROW。 行 ID 只有位于该行上时才能保证有效。 如果另一个事务更新或删除了该行，则以后使用该行 ID 重新选择时，可能无法返回一个行。<br /><br /> 1 = SQL_SCOPE_TRANSACTION。 行 ID 在当前事务期间保证有效。<br /><br /> 2 = SQL_SCOPE_SESSION。 行 ID 在会话（跨事务边界）期间保证有效。|  
+|COLUMN_NAME|**sysname**|返回的*表*中每列的列名。 此字段始终返回值。|  
 |DATA_TYPE|**smallint**|ODBC SQL 数据类型。|  
-|TYPE_NAME|**sysname**|数据源相关的数据类型名称;例如， **char**， **varchar**， **money**，或者**文本**。|  
-|PRECISION|**Int**|数据源中的列的精度。 此字段始终返回值。|  
-|LENGTH|**Int**|长度 （字节），所需的数据源中二进制格式中的数据类型，如为 10 个**char (** 10 **)** 4 中，为**整数**，，2 表示**smallint**.|  
+|TYPE_NAME|**sysname**|依赖于数据源的数据类型名称;例如， **char**、 **varchar**、 **money**或**text**。|  
+|PRECISION|**整形**|数据源中的列的精度。 此字段始终返回值。|  
+|LENGTH|**整形**|数据源的二进制格式的数据类型所需的长度（以字节为单位），例如，对于**char （** 10 **）**，为10，对于**整数**，则为 2; 对于**smallint**，则为2。|  
 |SCALE|**smallint**|数据源中列的小数位数。 对于不适用小数位数的数据类型，返回 NULL。|  
-|PSEUDO_COLUMN|**smallint**|指示列是否为伪列。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 始终返回 1：<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
+|PSEUDO_COLUMN|**smallint**|指示列是否为伪列。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 始终返回 1：<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
   
 ## <a name="remarks"></a>备注  
  sp_special_columns 与 ODBC 中的 SQLSpecialColumns 等效。 返回的结果按 SCOPE 排序。  
@@ -97,8 +98,8 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 EXEC sp_special_columns_100 @table_name = 'FactFinance';  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [SQL 数据仓库存储的过程](../../relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md)  
+## <a name="see-also"></a>另请参阅  
+ [SQL 数据仓库存储过程](../../relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md)  
   
   
 

@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 175c1f5b1f507078f461a07e30c62fb68f7cfb02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62678991"
 ---
 # <a name="advanced-save-options"></a>高级保存选项
-  使用此对话框可以选择语言编码方案，并指定要在每一行的末尾插入的字符。 访问**高级保存选项**对话框中，在**文件**菜单中，单击**保存**\<查询名称 >**作为.sql**到打开**将文件另存为**对话框中，单击在上的向下箭头**保存**按钮，然后依次**编码保存**。  
+  使用此对话框可以选择语言编码方案，并指定要在每一行的末尾插入的字符。 若要访问 **"高级保存选项**" 对话框，请在 "**文件**" 菜单上，单击 "将查询名称**保存** \<>**.sql** " 以打开 "**将文件另**存为" 对话框，单击 "**保存**" 按钮上的向下箭头，然后单击 "**使用编码保存**"。  
   
 ## <a name="options"></a>选项  
  **编码**  

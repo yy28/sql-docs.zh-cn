@@ -1,5 +1,5 @@
 ---
-title: 数据挖掘模型定型编辑器 （列选项卡） |Microsoft Docs
+title: 数据挖掘模型定型编辑器（"列" 选项卡） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9c081064f3a0bcb2733f58df7e1b5550bf135c2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059893"
 ---
 # <a name="data-mining-model-training-editor-columns-tab"></a>数据挖掘模型定型编辑器（“列”选项卡）
@@ -39,8 +39,8 @@ ms.locfileid: "66059893"
  **挖掘结构列**  
  查看每个可用的目标列，包括已映射或未映射的目标列。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [数据挖掘模型定型编辑器（“连接”选项卡）](../../2014/integration-services/data-mining-model-training-editor-connection-tab.md)  
+ [数据挖掘模型定型编辑器 &#40;连接 "选项卡&#41;](../../2014/integration-services/data-mining-model-training-editor-connection-tab.md)  
   
   

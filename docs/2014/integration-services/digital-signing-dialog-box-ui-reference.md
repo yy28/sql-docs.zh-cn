@@ -1,5 +1,5 @@
 ---
-title: 数字签名对话框 UI 参考 |Microsoft Docs
+title: "\"数字签名\" 对话框 UI 参考 |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7e676368ccdd28a195f3a50208e3ca1c0703214
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059451"
 ---
 # <a name="digital-signing-dialog-box-ui-reference"></a>“数字签名”对话框 UI 参考
@@ -27,13 +27,13 @@ ms.locfileid: "66059451"
  有关详细信息，请参阅 [使用数字签名标识包的源](security/identify-the-source-of-packages-with-digital-signatures.md) 和 [使用数字证书对包签名](../../2014/integration-services/sign-a-package-by-using-a-digital-certificate.md)。  
   
 ## <a name="options"></a>选项  
- **签名**  
- 单击此项将打开“选择证书”  对话框，在其中可选择要使用的证书。  
+ **表明**  
+ 单击此项将打开“选择证书”**** 对话框，在其中可选择要使用的证书。  
   
  **删除**  
  单击此项将删除数字签名。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [安全性概述 (Integration Services)](security/security-overview-integration-services.md)  
   
   

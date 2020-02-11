@@ -1,6 +1,6 @@
 ---
-title: 检索使用 SQL_NUMERIC_STRUCT 数值数据 |Microsoft Docs
-description: C /C++使用 ODBC 检索使用 SQL_NUMERIC_STRUCT，与 SQL_C_NUMERIC 相关的 SQL Server 数值数据类型。
+title: 用 SQL_NUMERIC_STRUCT 检索数字数据 |Microsoft Docs
+description: C/c + + 使用 ODBC 通过使用与 SQL_C_NUMERIC 相关的 SQL_NUMERIC_STRUCT 来检索 SQL Server 数字数据类型。
 editor: ''
 ms.prod: sql
 ms.technology: ''
@@ -11,27 +11,27 @@ ms.date: 07/13/2017
 ms.author: genemi
 author: MightyPen
 ms.openlocfilehash: 296a6bd9b5e0ab64fe7ecc7d78924a02e5fda9cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68057196"
 ---
-# <a name="retrieve-numeric-data-with-sqlnumericstruct"></a>检索数字数据的 SQL\_数值\_结构
+# <a name="retrieve-numeric-data-with-sql_numeric_struct"></a>用 SQL\_数值\_结构检索数字数据
 
-本文介绍如何将数值数据从 SQL Server ODBC 驱动程序检索到的数值的结构。 它还介绍了如何获取正确的值使用特定的精度和缩放值。
+本文介绍如何将 SQL Server ODBC 驱动程序中的数字数据检索到数字结构中。 还介绍了如何使用特定的精度和小数位数值获取正确的值。
 
-此数据类型允许应用程序直接处理数值数据。 2003 年，围绕 ODBC 3.0 引入了新的 ODBC C 数据类型，由标识**SQL\_C\_数值**。 此数据类型是截至 2017年仍适用。
+此数据类型允许应用程序直接处理数值数据。 在2003年，ODBC 3.0 引入了一个新的 odbc c 数据类型，由**SQL\_C\_数字**标识。 此数据类型仍与2017相关。
 
-使用 C 缓冲区的类型定义的**SQL\_数值\_结构**。 此结构具有用于存储精度、 小数位数、 登录和的数值数据值的字段。 本身的值存储为最左侧的位置中的最低有效字节开始使用带尺度整数。 
+使用的 C 缓冲区具有**\_SQL 数值\_结构**的类型定义。 此结构具有用于存储数值数据的精度、小数位数、签名和值的字段。 值本身存储为缩放的整数，其最小有效字节始于最左端的位置。 
 
-文章[C 数据类型](c-data-types.md)提供了有关格式和用法的详细信息\_数值\_结构。 通常[附录 D](appendix-d-data-types.md) ODBC 3.0 程序员的引用的讨论了数据类型。
-
-
-## <a name="sqlnumericstruct-overview"></a>SQL\_数值\_结构概述
+[C 数据类型](c-data-types.md)一文提供了有关 SQL\_数值\_结构的格式和使用的详细信息。 通常，ODBC 3.0 程序员参考的[附录 D](appendix-d-data-types.md)讨论了数据类型。
 
 
-SQL\_数值\_结构定义 sqltypes.h 头文件中，如下所示：
+## <a name="sql_numeric_struct-overview"></a>SQL\_数字\_结构概述
+
+
+SQL\_数值\_结构在 sqltypes 头文件中定义，如下所示：
 
 
 ```c
@@ -46,22 +46,22 @@ typedef struct tagSQL_NUMERIC_STRUCT
 ```
 
             
-数值结构的精度和小数位数字段永远不会用于从仅用于输出从驱动程序到应用程序的应用程序的输入。
+数字结构的精度和小数位数字段从不用于从应用程序进行输入，而仅用于从驱动程序到应用程序的输出。
 
-驱动程序使用的默认精度 （驱动程序定义） 和默认小数位数 (0) 时将数据返回到应用程序。 应用程序将指定值的精度和小数位数，除非驱动程序假定默认值，将截断数值数据的小数部分。
+在将数据返回到应用程序时，驱动程序将使用默认精度（驱动程序定义）和默认的小数位数（0）。 除非应用程序指定精度和小数位数的值，否则，驱动程序将采用默认值并截断数值数据的小数部分。
 
-## <a name="sqlnumericstruct-code-sample"></a>SQL\_数值\_结构的代码示例
+## <a name="sql_numeric_struct-code-sample"></a>SQL\_数值\_结构代码示例
 
-此代码示例演示了如何为：
+此代码示例演示如何执行以下操作：
 
 - 设置精度。
-- 设置的小数位数。
+- 设置小数位数。
 - 检索正确的值。 
 
 > [!Note]
-> 任何使用您在本文中提供是代码的您自己承担。 
+> 本文中提供的代码的任何使用都是您自己的风险。 
 >
-> Microsoft 提供的这些代码示例"按原样"没有任何种类的担保，任何明示或暗示的保证，包括但不是限于对适销性和/或适用于某种特定用途的默示保证。
+> Microsoft 提供这些代码示例 "按原样"，没有任何明示或默示保证，包括但不限于适销性和/或适用于特定用途的默示保证。
 
 ```c
 #include <stdio.h>
@@ -213,7 +213,7 @@ while((retcode =SQLFetch(hstmt1)) != SQL_NO_DATA)
 ```
 
 
-### <a name="interim-results"></a>临时结果：
+### <a name="interim-results"></a>过渡结果：
 
 
 ```console
@@ -226,17 +226,17 @@ while((retcode =SQLFetch(hstmt1)) != SQL_NO_DATA)
 ```
 
 
-在数值结构 val 字段是 16 个元素的字符数组。 例如，25.212 缩放为 25212，小数位数为 3。 此数量将以十六进制格式是 627 c。
+在数字结构中，val 字段是16个元素的字符数组。 例如，25.212 缩放为25212，小数位数为3。 在十六进制格式中，此数字应为627C。
 
-驱动程序将返回以下各项：
+驱动程序返回以下项：
 
-- 为 7 C，这是等效的字符 |（通过管道传递） 中的字符数组的第一个元素。
-- 等效 62，这是 b 中的第二个元素。
-- 数组元素的余数包含零，因此，在缓冲区中包含 | 变形 b\0。
+- 7C 的等效字符，即 "|"字符数组的第一个元素中的（管道）。
+- 等效于62，后者为第二个元素中的 "b"。
+- 数组元素的余数包含零，因此缓冲区包含 "| b\0"。
 
-现在面临的挑战是构造的缩放的整数超出此字符串数组。 在字符串中的每个字符对应两个十六进制数字，例如最小有效位 (LSD) 和最高有效位 (MSD)。 缩放后的整数值可以与 16，从 1 开始的多个生成乘以每个数字 (LSD & MSD)。
+现在，问题在于构造此字符串数组中的已缩放整数。 字符串中的每个字符都对应于两个十六进制数字，如最小有效数字（LSD）和最有效的数字（MSD）。 可以通过将每个数字（LSD & MSD）与16的倍数相乘（从1开始）来生成缩放的整数值。
 
-实现从小 endian 模式转换为缩放后的整数代码。 它是由应用程序开发人员实现此功能。 下面的代码示例是只是许多可能的方式之一。
+实现从 little endian 模式到缩放整数的转换的代码。 应用程序开发人员可以实现此功能。 下面的代码示例只是其中一种可能的方法。
 
 
 ```c
@@ -265,19 +265,19 @@ long strtohextoval()
 ### <a name="applies-to-versions"></a>适用于版本
 
 
-有关 SQL 的上述信息\_数值\_结构适用于以下的产品版本：
+有关 SQL\_数值\_结构的上述信息适用于以下产品版本：
 
-- Microsoft ODBC Driver for Microsoft SQL Server 3.7
-- Microsoft 数据访问组件 2.1
-- Microsoft 数据访问组件 2.5
-- Microsoft 数据访问组件 2.6
-- Microsoft 数据访问组件 2.7
-
-
-## <a name="sqlcnumeric-overview"></a>SQL\_C\_数值概述
+- 用于 Microsoft SQL Server 3.7 的 Microsoft ODBC 驱动程序
+- Microsoft 数据访问组件2。1
+- Microsoft 数据访问组件2。5
+- Microsoft 数据访问组件2。6
+- Microsoft 数据访问组件2。7
 
 
-下面的示例程序演示如何使用 SQL\_C\_数值，通过将 123.45 插入到表。 在表中，列定义为 numeric 或 decimal，精度为 5，和带有小数位 2。
+## <a name="sql_c_numeric-overview"></a>SQL\_C\_数字概述
+
+
+下面的示例程序通过在表中插入\_123.45\_，阐释了 SQL C 数字的用法。 在表中，列定义为数值或小数点，精度为5，小数位数为2。
 
 用于运行此程序的 ODBC 驱动程序必须支持 ODBC 3.0 功能。
 

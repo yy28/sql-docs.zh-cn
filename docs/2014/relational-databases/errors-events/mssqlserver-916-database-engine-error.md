@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: aeeda48970696fa3d2f1da22f9aa318910bd53dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761755"
 ---
-# <a name="mssqlserver916"></a>MSSQLSERVER_916
+# <a name="mssqlserver_916"></a>MSSQLSERVER_916
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62761755"
 |符号名称|NOTUSER|  
 |消息正文|服务器主体 "%.*ls" 无法在当前安全上下文下访问数据库 "%.\*ls"。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  该登录名没有足够的权限，无法连接到命名的数据库。 可以连接到此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例但在数据库中没有特定权限的登录名将获得 guest 用户的权限。 这是一项安全举措，为了防止一个数据库中的用户连接到他们没有权限的其他数据库。 当 guest 用户没有 CONNECT 权限而无法连接到命名数据库并且未设置可信属性时，会出现此错误消息。 当 guest 用户没有 CONNECT 权限而无法连接到命名数据库时，会出现此错误消息。  
   
  当对 msdb 数据库的 CONNECT 权限被拒绝或撤消时，如果对象资源管理器尝试显示每个数据库的“基于策略的管理”状态，则 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可能收到此错误。 对象资源管理器使用当前登录名的权限查询 msdb 数据库以获取此信息，这会导致错误。 还会出现以下错误信息：  
@@ -50,7 +50,7 @@ ms.locfileid: "62761755"
   
      USE msdb ;  
   
-     前往  
+     GO  
   
      GRANT CONNECT TO [Adventure-Works\Larry] ;  
   
@@ -58,7 +58,7 @@ ms.locfileid: "62761755"
   
      USE msdb ;  
   
-     前往  
+     GO  
   
      GRANT CONNECT TO guest ;  
   

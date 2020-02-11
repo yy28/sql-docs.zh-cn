@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: da0f932acb2ab97204aeb27c9e077c7fae154987
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057401"
 ---
 # <a name="multiple-transactions"></a>多个事务
@@ -36,7 +36,7 @@ ms.locfileid: "66057401"
   
  下面的关系图显示了包中的五个不相关的事务。 一个事务是由序列容器启动的，其余四个事务是由执行 SQL 任务启动的。  
   
- ![多个事务的实现](media/mw-dts-trans2.gif "Implementation of multiple transactions")  
+ ![多个事务的实现](media/mw-dts-trans2.gif "多个事务的实现")  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [将包配置为使用事务](../relational-databases/native-client-ole-db-transactions/transactions.md)  

@@ -1,5 +1,5 @@
 ---
-title: sys.trusted_assemblies (TRANSACT-SQL) |Microsoft Docs
+title: sys. trusted_assemblies （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql
@@ -19,35 +19,35 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9682535c82f8a579259993e82560dfe6bc930f93
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68061365"
 ---
-# <a name="systrustedassemblies-transact-sql"></a>sys.trusted_assemblies (Transact-SQL)  
+# <a name="systrusted_assemblies-transact-sql"></a>sys.trusted_assemblies (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-每个受信任程序集的服务器占一行。
+服务器的每个受信任程序集均包含一行。
 
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 
-|列名 |数据类型 |描述 |
+|列名称 |数据类型 |说明 |
 |--- |--- |--- |
-|密切相关的文章 |varbinary(8000) |SHA2_512 哈希值的程序集内容。 |
-|description |nvarchar(4000) |程序集的可选用户定义说明。 Microsoft 建议使用简单名称、 版本号、 区域性、 公钥，以及要信任的程序集的体系结构进行编码的规范名称。 此值唯一标识公共语言运行时 (CLR) 端上的程序集，并在 sys.assemblies clr_name 值相同。 |
-|create_date |datetime2 |程序集添加到受信任的程序集列表的日期。 |
-|created_by |nvarchar(128) |程序集添加到列表的主体的登录名。 |
+|hash |varbinary(8000) |SHA2_512 程序集内容的哈希。 |
+|description |nvarchar(4000) |程序集的可选用户定义说明。 Microsoft 建议使用规范名称对要信任的程序集的简单名称、版本号、区域性、公钥和体系结构进行编码。 此值在公共语言运行时（CLR）端唯一标识程序集，与 sys.databases 中的 clr_name 值相同。 |
+|create_date |datetime2 |将程序集添加到受信任程序集列表的日期。 |
+|created_by |nvarchar(128) |向列表中添加程序集的主体的登录名。 |
 | | | |
 
 
 ## <a name="remarks"></a>备注  
 
-使用**需要添加 sp_add_trusted_assembly**并**需要添加 sys.trusted_assemblies**添加或删除程序集从`sys.trusted_assemblies`。
+使用 "**需要添加 sp_add_trusted_assembly** ，并**需要添加 trusted_assemblies**添加或删除程序集`sys.trusted_assemblies`。
 
-## <a name="see-also"></a>请参阅  
-  [sys.sp_add_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md) [sys.sp_drop_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) [DROP ASSEMBLY &#40;TRANSACT-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)  
+## <a name="see-also"></a>另请参阅  
+  [](../../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md) [sp_drop_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) [drop assembly &#40;transact-sql&#41;](../../t-sql/statements/drop-assembly-transact-sql.md) sp_add_trusted_assembly  
   [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)  
   [sys.dm_clr_loaded_assemblies](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)  
 

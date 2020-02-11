@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9e046aef7cd5fb4049b4bfb92c99272f625224c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62670470"
 ---
 # <a name="delete-queries-visual-database-tools"></a>删除查询 (Visual Database Tools)
@@ -38,10 +38,10 @@ ms.locfileid: "62670470"
 > [!NOTE]  
 >  如果希望从项目中移除查询而不删除它，请单击“移除”  。 可以在以后右键单击查询文件夹然后选择“添加项”  来查找并重新添加该查询。  
   
-## <a name="see-also"></a>请参阅  
- [清除查询结果&#40;可视化数据库工具&#41;](visual-database-tools.md)   
- [放弃对查询所做的更改&#40;可视化数据库工具&#41;](discard-changes-made-to-queries-visual-database-tools.md)   
- [设计查询和视图操作指南主题&#40;可视化数据库工具&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+## <a name="see-also"></a>另请参阅  
+ [&#40;Visual Database Tools&#41;中清除查询结果](visual-database-tools.md)   
+ [放弃对 &#40;Visual Database Tools&#41;的查询所做的更改](discard-changes-made-to-queries-visual-database-tools.md)   
+ [&#40;Visual Database Tools 的设计查询和视图操作指南主题&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [执行基本的查询操作 (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

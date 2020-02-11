@@ -1,5 +1,5 @@
 ---
-title: 用于 AlwaysOn 可用性组 (SQL Server) 的 PowerShell Cmdlet 概述 |Microsoft Docs
+title: AlwaysOn 可用性组（SQL Server）的 PowerShell Cmdlet 概述 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4996a1026b4c85b105efc09b8381913f7a47942a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62789454"
 ---
 # <a name="overview-of-powershell-cmdlets-for-alwayson-availability-groups-sql-server"></a>AlwaysOn 可用性组的 PowerShell Cmdlet 概述 (SQL Server)
@@ -41,32 +41,32 @@ ms.locfileid: "62789454"
   
 -   [添加和管理可用性数据库](#DeployManageDbs)  
   
--   [监视可用性组的运行状况](#MonitorTblshtAGs)  
+-   [监视可用性组运行状况](#MonitorTblshtAGs)  
   
 > [!NOTE]  
->  有关中的主题列表[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]联机丛书介绍如何使用 cmdlet 来执行[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]任务，请参阅"相关任务"一节[AlwaysOn 可用性组的概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)。  
+>  有关描述如何使用 cmdlet 来[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]执行[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]任务的联机丛书中的主题的列表，请参阅[AlwaysOn 可用性组 &#40;&#41;SQL Server 概述的](overview-of-always-on-availability-groups-sql-server.md)"相关任务" 一节。  
   
-##  <a name="ConfiguringServerInstance"></a> 为 AlwaysOn 可用性组配置服务器实例  
+##  <a name="ConfiguringServerInstance"></a>为 AlwaysOn 可用性组配置服务器实例  
   
-|Cmdlet|Description|支持平台|  
+|Cmdlet|说明|支持平台|  
 |-------------|-----------------|------------------|  
 |`Disable-SqlAlwaysOn`|禁用服务器实例上的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能。|由 `Path`、`InputObject` 或 `Name` 参数指定的服务器实例。 （必须为支持 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]版本。)|  
-|`Enable-SqlAlwaysOn`|在支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 实例上启用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 。 有关支持的信息[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，请参阅[先决条件、 限制和建议为 AlwaysOn 可用性组&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)。|任何支持 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]版本。|  
+|`Enable-SqlAlwaysOn`|在支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 实例上启用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 。 有关支持的[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]信息，请参阅[AlwaysOn 可用性组 &#40;SQL Server&#41;的先决条件、限制和建议](prereqs-restrictions-recommendations-always-on-availability.md)。|任何支持 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]版本。|  
 |`New-SqlHadrEndPoint`|在服务器实例上创建新的数据库镜像端点。 在主数据库和辅数据库之间移动数据时需要此端点。|任何 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |`Set-SqlHadrEndpoint`|更改现有数据库镜像端点的属性，如名称、状态或身份验证属性。|支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 并缺少数据库镜像端点的服务器实例|  
   
 ##  <a name="BnRcmdlets"></a> 备份和还原数据库和事务日志  
   
-|Cmdlet|Description|支持平台|  
+|Cmdlet|说明|支持平台|  
 |-------------|-----------------|------------------|  
 |`Backup-SqlDatabase`|创建数据或日志备份。|任何联机数据库（对于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，则为承载主副本的服务器实例上的数据库）|  
-|`Restore-SqlDatabase`|还原备份。|任何 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例（对于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，则为承载辅助副本的服务器实例）<br /><br /> **&#42;&#42;重要&#42; &#42;** 准备辅助数据库时，必须使用`-NoRecovery`参数中的每个`Restore-SqlDatabase`命令。|  
+|`Restore-SqlDatabase`|还原备份。|任何 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例（对于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，则为承载辅助副本的服务器实例）<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 准备辅助数据库时，必须在每个`-NoRecovery` `Restore-SqlDatabase`命令中都使用参数。|  
   
  有关使用这些 cmdlet 来准备辅助数据库的信息，请参阅[为可用性组手动准备辅助数据库 (SQL Server)](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)。  
   
 ##  <a name="DeployManageAGs"></a> 创建和管理可用性组  
   
-|Cmdlet|Description|支持平台|  
+|Cmdlet|说明|支持平台|  
 |-------------|-----------------|------------------|  
 |`New-SqlAvailabilityGroup`|创建新的可用性组。|承载主副本的服务器实例|  
 |`Remove-SqlAvailabilityGroup`|删除可用性组。|启用 HADR 的服务器实例|  
@@ -75,7 +75,7 @@ ms.locfileid: "62789454"
   
 ##  <a name="AGlisteners"></a> 创建和管理可用性组侦听器  
   
-|Cmdlet|Description|支持平台|  
+|Cmdlet|说明|支持平台|  
 |------------|-----------------|------------------|  
 |`New-SqlAvailabilityGroupListener`|创建一个新的可用性组侦听器，并将其附加到一个现有可用性组。|承载主副本的服务器实例|  
 |`Set-SqlAvailabilityGroupListener`|修改现有可用性组侦听器的端口设置。|承载主副本的服务器实例|  
@@ -83,7 +83,7 @@ ms.locfileid: "62789454"
   
 ##  <a name="DeployManageARs"></a> 创建和管理可用性副本  
   
-|Cmdlet|Description|支持平台|  
+|Cmdlet|说明|支持平台|  
 |-------------|-----------------|------------------|  
 |**New-SqlAvailabilityReplica**|创建新的可用性副本。 您可以使用 `-AsTemplate` 参数为每个新的可用性副本创建内存中的可用性副本对象。|承载主副本的服务器实例|  
 |`Join-SqlAvailabilityGroup`|将辅助副本联接到该可用性组。|承载辅助副本的服务器实例|  
@@ -92,7 +92,7 @@ ms.locfileid: "62789454"
   
 ##  <a name="DeployManageDbs"></a> 添加和管理可用性数据库  
   
-|Cmdlet|Description|支持平台|  
+|Cmdlet|说明|支持平台|  
 |-------------|-----------------|------------------|  
 |**Add-SqlAvailabilityDatabase**|在主副本上，将数据库添加到可用性组。<br /><br /> 在辅助副本上，将辅助数据库联接到可用性组。|承载可用性副本的任何服务器实例（主副本与辅助副本的行为不同）|  
 |**Remove-SqlAvailabilityDatabase**|在主副本上，从可用性组中删除数据库。<br /><br /> 在辅助副本上，从本地辅助副本中删除本地辅助数据库。|承载可用性副本的任何服务器实例（主副本与辅助副本的行为不同）|  
@@ -105,7 +105,7 @@ ms.locfileid: "62789454"
 > [!IMPORTANT]  
 >  您必须具有 CONNECT、VIEW SERVER STATE 和 VIEW ANY DEFINITION 权限才能执行这些 cmdlet。  
   
-|Cmdlet|Description|支持平台|  
+|Cmdlet|说明|支持平台|  
 |------------|-----------------|------------------|  
 |`Test-SqlAvailabilityGroup`|通过评估 SQL Server 基于策略的管理 (PBM) 策略来评估可用性组的运行状况。|承载可用性副本的任何服务器实例。*|  
 |`Test-SqlAvailabilityReplica`|通过评估 SQL Server 基于策略的管理 (PBM) 策略来评估可用性副本的运行状况。|承载可用性副本的任何服务器实例。*|  
@@ -113,10 +113,10 @@ ms.locfileid: "62789454"
   
  *若要查看有关可用性组中所有可用性副本的信息，请使用承载主副本的服务器实例。  
   
- 有关详细信息，请参阅[使用 AlwaysOn 策略查看可用性组的运行状况&#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)。  
+ 有关详细信息，请参阅[使用 AlwaysOn 策略查看可用性组的运行状况 &#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)。  
   
-## <a name="see-also"></a>请参阅  
- [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>另请参阅  
+ [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
   

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a9597686f4c9ca5a90a8344b425b6808cd96477a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060573"
 ---
 # <a name="configure-the-integration-services-service-as-a-cluster-resource"></a>将 Integration Services 服务配置为群集资源
@@ -78,15 +78,15 @@ ms.locfileid: "66060573"
   
 4.  在 **“文件”** 菜单上，指向 **“新建”** ，再单击 **“资源”** 。  
   
-5.  在“资源向导”的“新资源”页上，键入名称并选择“一般服务”作为“服务类型”    。 不要更改 **“组”** 的值。 单击“下一步”  。  
+5.  在“资源向导”的“新资源”页上，键入名称并选择“一般服务”作为“服务类型”    。 不要更改 **“组”** 的值。 单击“下一步”。   
   
-6.  在 **“可能的所有者”** 页上，将群集的节点作为可能的资源所有者来添加或删除。 单击“下一步”  。  
+6.  在 **“可能的所有者”** 页上，将群集的节点作为可能的资源所有者来添加或删除。 单击“下一步”。   
   
 7.  若要添加依赖关系，请在 **“依赖关系”** 页上的 **“可用资源”** 下选择一项资源，然后单击 **“添加”** 。 对于故障转移情况， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和用来存储 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包的共享磁盘应在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 联机前重新联机。 在选择依赖关系之后，单击 **“下一步”** 。  
   
      有关详细信息，请参阅 [Add Dependencies to a SQL Server Resource](../sql-server/failover-clusters/windows/add-dependencies-to-a-sql-server-resource.md)。  
   
-8.  在“一般服务参数”  页上，输入 **MsDtsServer** 作为服务名。 单击“下一步”  。  
+8.  在“一般服务参数”  页上，输入 **MsDtsServer** 作为服务名。 单击“下一步”。   
   
 9. 在 **“注册表复制”** 页上单击 **“添加”** ，以添加用来标识 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务的配置文件位置的注册表项。 此文件必须位于 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务所在资源组中的共享磁盘上。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "66060573"
   
 3.  在共享磁盘上，用文本编辑器或 XML 编辑器打开配置文件。 将 `ServerName` 元素的值更改为同一资源组中虚拟 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的名称。  
   
-4.  更改的值`StorePath`元素的完全限定路径**包**在上一步中在共享磁盘上创建文件夹。  
+4.  将`StorePath`元素的值更改为在上一步骤中在共享磁盘上创建的 "**包**" 文件夹的完全限定路径。  
   
 5.  将注册表中的 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile** 值更新为共享磁盘上服务配置文件的完全限定路径和文件名。  
   

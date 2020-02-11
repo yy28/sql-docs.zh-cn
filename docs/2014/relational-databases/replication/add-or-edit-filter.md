@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fa12421f39119fbbb5e40c8c2b6dc7f103cd9a45
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62676879"
 ---
 # <a name="add-or-edit-filter"></a>添加或编辑筛选器
-  使用 **“添加筛选器”** 和 **“编辑筛选器”** 对话框，可以添加和编辑静态行筛选器和参数化行筛选器。  
+  "**添加筛选**器" 和 "**编辑筛选器**" 对话框允许您添加和编辑静态行筛选器和参数化行筛选器。  
   
 > [!NOTE]  
 >  编辑现有发布中的筛选器需要为该发布创建新的快照。 如果发布有订阅，则必须重新初始化这些订阅。 有关属性更改的详细信息，请参阅[更改发布和项目属性](publish/change-publication-and-article-properties.md)。  
@@ -38,13 +38,15 @@ ms.locfileid: "62676879"
   
     1.  在 **“添加筛选器”** 对话框上单击 **“取消”** 。  
   
-    2.  在 **“筛选表行”** 页上选择筛选器窗格中的表，再单击 **“编辑”** 。  
+    2.  在 **“筛选表行”** 页上选择筛选器窗格中的表，再单击 **“编辑”**。  
   
     3.  在 **“编辑筛选器”** 对话框中编辑现有筛选器。  
   
 2.  **完成筛选语句以标识订阅服务器所要接收的表行**  
   
-     定义新的筛选语句或编辑现有的筛选语句。 **“列”** 列表框列出了要从 **“选择要筛选的表”** 中选择的表中发布的所有列。 **“筛选语句”** 文本区域包括默认的文本，其格式为：  
+     定义新的筛选语句或编辑现有的筛选语句。 
+  **“列”** 列表框列出了要从 **“选择要筛选的表”** 中选择的表中发布的所有列。 
+  **“筛选语句”** 文本区域包括默认的文本，其格式为：  
   
      `SELECT <published_columns> FROM [schema].[tablename] WHERE`  
   
@@ -55,11 +57,11 @@ ms.locfileid: "62676879"
   
 3.  **指定将从此表接收数据的订阅数**  
   
-     仅[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本适用；仅限合并复制。 通过合并复制，可以指定最适合您的数据和应用程序的分区类型。 如果选择 **“此表中的行将仅转到一个订阅”** ，则合并复制将设置不重叠分区选项。 不重叠分区与预计算分区协同工作以提高性能，使用不重叠分区可以将与预计算分区相关联的上载开销降至最低。 使用的参数化筛选器和联接筛选器越复杂，不重叠分区的性能优势就越明显。 如果选择此选项，则必须确保对数据分区时不能将行复制到多个订阅服务器。 有关详细信息，请参阅主题 [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)中的“设置‘分区选项’”部分。  
+     [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]仅限和更高版本;仅限合并复制。 通过合并复制，可以指定最适合您的数据和应用程序的分区类型。 如果选择 **“此表中的行将仅转到一个订阅”**，则合并复制将设置不重叠分区选项。 不重叠分区与预计算分区协同工作以提高性能，使用不重叠分区可以将与预计算分区相关联的上载开销降至最低。 使用的参数化筛选器和联接筛选器越复杂，不重叠分区的性能优势就越明显。 如果选择此选项，则必须确保对数据分区时不能将行复制到多个订阅服务器。 有关详细信息，请参阅主题 [参数化行筛选器](merge/parameterized-filters-parameterized-row-filters.md)中的“设置‘分区选项’”部分。  
   
  在添加或编辑完筛选器后，请单击 **“确定”** 以保存更改并关闭该对话框。 将对照 SELECT 子句中的表分析并运行指定的筛选器。 如果筛选语句有语法错误或其他问题，将会通知您编辑该筛选语句。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Create a Publication](publish/create-a-publication.md)   
  [查看和修改发布属性](publish/view-and-modify-publication-properties.md)   
  [筛选已发布数据](publish/filter-published-data.md)   

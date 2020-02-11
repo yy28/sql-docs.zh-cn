@@ -1,5 +1,5 @@
 ---
-title: 第 3 课：重命名列 |Microsoft Docs
+title: 第3课：重命名列 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,35 +11,35 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80d9cae6deae4059327084f531f6a6d958a39ec6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070321"
 ---
-# <a name="lesson-3-rename-columns"></a>第 3 课：对列重命名
+# <a name="lesson-3-rename-columns"></a>第 3 课：重命名列
   在本课中，您将重命名您导入的每个表中的很多列。 通过重命名，您可以更易于识别列，且更易于在模型设计器中以及通过用户在客户端应用程序中选择字段来进行导航列。 若要了解详细信息，请参阅[重命名表或列（SSAS 表格）](tabular-models/rename-a-table-or-column-ssas-tabular.md)。  
   
 > [!IMPORTANT]  
 >  重命名列对于完成本教程不是必需的；但剩下的课程（尤其是包含使用 DAX 公式来创建关系、创建计算列和度量值的课程）将引用在本课中介绍的列友好名称。 如果您选择不重命名列，则必须编辑第 5、6 和 7 课中的 DAX 公式，以便使用本课中提供的原始源列名称。  
   
- 估计的时间才能完成本课程中：**20 分钟**  
+ 本课预计完成时间：**20 分钟**  
   
-## <a name="prerequisites"></a>先决条件  
- 本主题是表格建模教程的一部分，该教程应按顺序学习。 执行任务之前在本课程中，您应当已完成上一课：[第 2 课：将数据添加](lesson-2-add-data.md)。  
+## <a name="prerequisites"></a>必备条件  
+ 本主题是表格建模教程的一部分，应当按顺序完成。 执行本课中的任务之前，须已完成上一课： [第 2 课：添加数据](lesson-2-add-data.md)。  
   
 ## <a name="rename-columns"></a>对列重命名  
   
 #### <a name="to-rename-columns"></a>对列进行重命名  
   
-1.  在模型设计器中，单击“Customer”  表（选项卡）。  
+1.  在模型设计器中，单击“Customer”**** 表（选项卡）。  
   
      单击某个选项卡时，该表将在模型设计器窗口中变为活动状态。  
   
-2.  双击**CustomerKey**列的名称，然后键入`Customer  Id`，然后按 ENTER。  
+2.  双击 " **CustomerKey** " 列名称，然后键入`Customer  Id`，然后按 enter。  
   
     > [!TIP]  
-    >  此外可以重命名中的列**列名**属性中的列**属性**窗口中，或在关系图视图中。  
+    >  您还可以在列的 "**属性**" 窗口或关系图视图中重命名列**名称**属性中的列。  
   
 3.  重命名 **Customer** 表中的其余列以及其余表中的列，用友好名称替换源名称：  
   
@@ -49,13 +49,13 @@ ms.locfileid: "66070321"
     |-----------------|-------------------|  
     |GeographyKey|Geography Id|  
     |CustomerAlternateKey|Customer Alternate Id|  
-    |FirstName|First Name|  
+    |FirstName|名字|  
     |MiddleName|Middle Name|  
-    |LastName|Last Name|  
+    |LastName|姓氏|  
     |NameStyle|Name Style|  
     |BirthDate|Birth Date|  
     |MaritalStatus|婚姻状况|  
-    |EmailAddress|Email Address|  
+    |EmailAddress|电子邮件地址|  
     |YearlyIncome|Yearly Income|  
     |TotalChildren|Total Children|  
     |NumberChildrenAtHome|Number of Children At Home|  
@@ -65,7 +65,7 @@ ms.locfileid: "66070321"
     |NumberCarsOwned|Number of Cars Owned|  
     |AddressLine1|Address Line 1|  
     |AddressLine2|Address Line 2|  
-    |Phone|Phone Number|  
+    |电话|电话号码|  
     |DateFirstPurchase|Date of First Purchase|  
     |CommuteDistance|上下班路程|  
   
@@ -80,7 +80,7 @@ ms.locfileid: "66070321"
     |DayNumberOfYear|Day of Year|  
     |WeekNumberOfYear|Week Number of Year|  
     |EnglishMonthName|Month Name|  
-    |MonthNumberOfYear|Month|  
+    |MonthNumberOfYear|月份|  
     |CalendarQuarter|Calendar Quarter|  
     |CalendarYear|Calendar Year|  
     |CalendarSemester|Calendar Semester|  
@@ -88,7 +88,7 @@ ms.locfileid: "66070321"
     |FiscalYear|Fiscal Year|  
     |FiscalSemester|Fiscal Semester|  
   
-     **地域**  
+     **Geography**  
   
     |源名称|友好名称|  
     |-----------------|-------------------|  
@@ -97,10 +97,10 @@ ms.locfileid: "66070321"
     |StateProvinceName|State Province Name|  
     |CountryRegionCode|Country Region Code|  
     |EnglishCountryRegionName|Country Region Name|  
-    |PostalCode|Postal Code|  
+    |PostalCode|邮政编码|  
     |SalesTerritoryKey|Sales Territory Id|  
   
-     **Product**  
+     **Products**  
   
     |源名称|友好名称|  
     |-----------------|-------------------|  
@@ -119,12 +119,12 @@ ms.locfileid: "66070321"
     |DaysToManufacture|Days to Manufacture|  
     |ProductLine|Product Line|  
     |经销价格|经销价格|  
-    |ModelName|Model Name|  
+    |ModelName|模型名称|  
     |LargePhoto|Large Photo|  
-    |EnglishDescription|Description|  
+    |EnglishDescription|说明|  
     |StartDate|Product Start Date|  
     |EndDate|Product End Date|  
-    |“登录属性”|Product Status|  
+    |状态|Product Status|  
   
      **产品类别**  
   
@@ -134,7 +134,7 @@ ms.locfileid: "66070321"
     |ProductCategoryAlternateKey|Product Category Alternate Id|  
     |EnglishProductCategoryName|Product Category Name|  
   
-     **产品子类别**  
+     **Product Subcategory**  
   
     |源名称|友好名称|  
     |-----------------|-------------------|  
@@ -171,6 +171,6 @@ ms.locfileid: "66070321"
     |ShipDate|Ship Date|  
   
 ## <a name="next-step"></a>下一步  
- 若要继续学习本教程，请转到下一课：[第 4 课：标记为日期表](lesson-3-mark-as-date-table.md)。  
+ 若要继续学习本教程，请转到下一课： [第 4 课：标记为日期表](lesson-3-mark-as-date-table.md)。  
   
   

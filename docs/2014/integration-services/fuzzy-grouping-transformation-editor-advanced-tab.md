@@ -1,5 +1,5 @@
 ---
-title: 模糊分组转换编辑器 （高级选项卡） |Microsoft Docs
+title: 模糊分组转换编辑器（"高级" 选项卡） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,26 +15,28 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dcebe499eb80fbe01b9aa36a4e07785846eaf621
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058370"
 ---
 # <a name="fuzzy-grouping-transformation-editor-advanced-tab"></a>模糊分组转换编辑器（“高级”选项卡）
   可以使用 **“模糊分组转换编辑器”** 对话框的 **“高级”** 选项卡，指定输入和输出列，设置相似性阈值以及定义分隔符。  
   
 > [!NOTE]  
->  `Exhaustive`并`MaxMemoryUsage`模糊分组转换的属性中没有**模糊分组转换编辑器**，但可以通过使用设置**高级编辑器**. 有关这些属性的详细信息，请参阅 [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)的“模糊分组转换”部分。  
+>  模糊`Exhaustive`分组转换`MaxMemoryUsage`的和属性在 "**模糊分组转换编辑器**" 中不可用，但可以使用 "**高级编辑器**" 进行设置。 有关这些属性的详细信息，请参阅 [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)的“模糊分组转换”部分。  
   
  若要了解有关模糊分组转换的详细信息，请参阅 [Fuzzy Grouping Transformation](data-flow/transformations/fuzzy-grouping-transformation.md)。  
   
 ## <a name="options"></a>选项  
  **输入键列名**  
- 指定包含每个输入行的唯一表示符的输出列名称。 `_key_in` 列包含的值可唯一标识每个行。  
+ 指定包含每个输入行的唯一表示符的输出列名称。 
+  `_key_in` 列包含的值可唯一标识每个行。  
   
  **输出键列名**  
- 对于一组重复的行，指定包含其规范行的唯一标识符的输出列名称。 `_key_out` 列对应于规范数据行的 `_key_in` 值。  
+ 对于一组重复的行，指定包含其规范行的唯一标识符的输出列名称。 
+  `_key_out` 列对应于规范数据行的 `_key_in` 值。  
   
  **相似性计分列名**  
  指定包含相似性得分的列的名称。 相似性得分是介于 0 和 1 之间的值，用于指示输入行与规范行的相似性。 得分越接近 1，行与规范行的匹配程度越高。  
@@ -45,7 +47,7 @@ ms.locfileid: "66058370"
  **标记分隔符**  
  转换提供了一组默认的分隔符用于对数据进行词汇切分，但是您可以根据需要通过编辑列表来添加或删除分隔符。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [使用模糊分组转换标识相似数据行](data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   

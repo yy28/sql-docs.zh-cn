@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eaa81c35dc13c60a06196d1c61ab4dce9106f9b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62711117"
 ---
 # <a name="copy-items-in-a-solution"></a>复制解决方案中的项
@@ -28,16 +28,16 @@ ms.locfileid: "62711117"
   
 1.  在解决方案资源管理器中，选择想要复制的项。  
   
-2.  在“编辑”菜单上，单击“复制”。  
+2.  在“编辑”  菜单上，单击“复制”  。  
   
 3.  在解决方案资源管理器中，选择目标项目。  
   
-4.  在“编辑” 菜单上，单击“粘贴”。  
+4.  在“编辑”  菜单上，单击“粘贴”  。  
   
 > [!NOTE]  
 >  不能在项目之间复制连接。 将具有关联连接的查询复制到另一个项目时，其关联的连接不会复制到目标项目中。 必须在目标项目中手动创建连接。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [解决方案资源管理器](solution-explorer.md)   
  [在解决方案中移动项](move-items-in-a-solution.md)  
   

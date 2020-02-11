@@ -1,5 +1,5 @@
 ---
-title: sp_dropdynamicsnapshot_job (TRANSACT-SQL) |Microsoft Docs
+title: sp_dropdynamicsnapshot_job （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ ms.assetid: 128e428a-01b3-4062-8c6e-d22d5fa268a9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5994201f7e6b2b859ef85a7a24e0c0465f59ec31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68056494"
 ---
-# <a name="spdropdynamicsnapshotjob-transact-sql"></a>sp_dropdynamicsnapshot_job (Transact-SQL)
+# <a name="sp_dropdynamicsnapshot_job-transact-sql"></a>sp_dropdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  为具有参数化行筛选器的发布删除筛选的数据快照作业。 在发布服务器上对发布数据库执行此存储的过程。 删除作业时，所有相关数据将被删除从[MSdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md)系统表。  
+  为具有参数化行筛选器的发布删除筛选的数据快照作业。 此存储过程在发布服务器上对发布数据库执行。 删除该作业后，将从[MSdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md)系统表中删除所有相关数据。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,27 +40,27 @@ sp_dropdynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publication = ] 'publication'` 是从中删除筛选的数据快照作业的名称。 *发布*是**sysname**，无默认值。  
+`[ @publication = ] 'publication'`要从中删除筛选数据快照作业的发布的名称。 *发布*为**sysname**，无默认值。  
   
-`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` 正在删除的已筛选的数据快照作业的名称。 *dynamic_snapshot_jobname*数据类型为 sysname，并提供的默认设置，如果任意作业名称与相关联*dynamic_snapshot_jobid*。  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'`要删除的筛选数据快照作业的名称。 *dynamic_snapshot_jobname*为 sysname，如果未提供它，则默认为与*dynamic_snapshot_jobid*关联的任何作业名称。  
   
-`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` 正在删除筛选的数据快照作业的标识符。 *dynamic_snapshot_jobid*是**uniqueidentifier**，默认值为 NULL。  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'`是要删除的筛选数据快照作业的标识符。 *dynamic_snapshot_jobid*为**uniqueidentifier**，默认值为 NULL。  
   
 > [!IMPORTANT]  
->  仅*dynamic_snapshot_jobid*或*dynamic_snapshot_jobname*可以指定。 如果值未提供*dynamic_snapshot_jobid*或*dynamic_snapshot_jobname*，删除发布的所有动态快照作业。  
+>  只能指定*dynamic_snapshot_jobid*或*dynamic_snapshot_jobname* 。 如果没有为*dynamic_snapshot_jobid*或*dynamic_snapshot_jobname*提供值，则会删除发布的所有动态快照作业。  
   
-`[ @ignore_distributor = ] ignore_distributor` *ignore_distributor*是**位**，默认值为**0**。 该参数可用于删除动态快照作业但不清除分发服务器上的任务。  
+`[ @ignore_distributor = ] ignore_distributor`*ignore_distributor*为**bit**，默认值为**0**。 该参数可用于删除动态快照作业但不清除分发服务器上的任务。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** （成功）或**1** （失败）  
   
 ## <a name="remarks"></a>备注  
- **sp_dropdynamicsnapshot**合并复制中使用。  
+ **sp_dropdynamicsnapshot**用于合并复制。  
   
 ## <a name="permissions"></a>权限  
- 只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_dropdynamicsnapshot**。  
+ 只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_dropdynamicsnapshot**。  
   
-## <a name="see-also"></a>请参阅  
- [sp_adddynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddynamicsnapshot-job-transact-sql.md)  
+## <a name="see-also"></a>另请参阅  
+ [sp_adddynamicsnapshot_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddynamicsnapshot-job-transact-sql.md)  
   
   

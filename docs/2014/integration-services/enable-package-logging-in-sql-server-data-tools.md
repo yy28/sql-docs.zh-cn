@@ -1,5 +1,5 @@
 ---
-title: 启用包日志记录在 SQL Server 数据工具 |Microsoft Docs
+title: 在 SQL Server Data Tools 中启用包日志记录 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8ef64ee84a90a74d2206fa8cc766e45b1a691566
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059281"
 ---
 # <a name="enable-package-logging-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中启用包日志记录
@@ -33,9 +33,9 @@ ms.locfileid: "66059281"
   
 2.  在 **SSIS** 菜单上，单击 **“日志记录”** 。  
   
-3.  在 **“提供程序类型”** 列表中，选择一个日志提供程序，然后单击 **“添加”** 。  
+3.  在 **“提供程序类型”** 列表中，选择一个日志提供程序，然后单击 **“添加”**。  
   
-4.  在“配置”列中，选择连接管理器或单击“\<新建连接>”以为日志提供程序新建一个适当类型的连接管理器   。 根据所选提供程序的不同，可以使用下列某个连接管理器：  
+4.  在“配置”列中，选择连接管理器或单击“**新建连接>”以为日志提供程序新建一个适当类型的连接管理器****\<**。 根据所选提供程序的不同，可以使用下列某个连接管理器：  
   
     -   对于文本文件，请使用文件连接管理器。 有关详细信息，请参阅 [File Connection Manager](connection-manager/file-connection-manager.md)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66059281"
   
     -   对于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请使用 OLE DB 连接管理器。 有关详细信息，请参阅 [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md)。  
   
-    -   对于 Windows 事件日志，无需执行任何操作。 [!INCLUDE[ssIS](../includes/ssis-md.md)] 会自动创建日志。  
+    -   对于 Windows 事件日志，无需执行任何操作。 [!INCLUDE[ssIS](../includes/ssis-md.md)]自动创建日志。  
   
     -   对于 XML 文件，请使用文件连接管理器。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "66059281"
     > [!NOTE]  
     >  一个包可以使用多个同一类型的日志。  
   
-6.  还可以选中包级复选框，选择要用于包级日志记录的日志，然后单击“详细信息”  选项卡。  
+6.  还可以选中包级复选框，选择要用于包级日志记录的日志，然后单击“详细信息”**** 选项卡。  
   
 7.  在 **“详细信息”** 选项卡上，选择 **“事件”** 将记录所有日志项，清除 **“事件”** 可以选择单个事件。  
   
@@ -61,14 +61,14 @@ ms.locfileid: "66059281"
     > [!NOTE]  
     >  默认情况下会记录所有信息。  
   
-9. 在“详细信息”  选项卡上，单击“保存”  。 将显示 **“另存为”** 对话框。 找到要将日志记录配置保存到的文件夹，为新的日志配置键入文件名，然后单击 **“保存”** 。  
+9. 在“详细信息”**** 选项卡上，单击“保存”****。 将显示 **“另存为”** 对话框。 找到要将日志记录配置保存到的文件夹，为新的日志配置键入文件名，然后单击 **“保存”**。  
   
-10. 单击“确定”  。  
+10. 单击“确定”。   
   
 11. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
-## <a name="see-also"></a>请参阅  
- [Integration Services (SSIS) 日志记录](performance/integration-services-ssis-logging.md)   
+## <a name="see-also"></a>另请参阅  
+ [Integration Services &#40;SSIS&#41; 日志记录](performance/integration-services-ssis-logging.md)   
  [Integration Services (SSIS) 日志记录](performance/integration-services-ssis-logging.md)  
   
   

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7533eb253ba32dd8ef2d57c3182096b36a6e47b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774581"
 ---
 # <a name="configure-log-shipping-sql-server"></a>配置日志传送 (SQL Server)
@@ -44,15 +44,15 @@ ms.locfileid: "62774581"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a> 先决条件  
+###  <a name="Prerequisites"></a>先决条件  
   
 -   主数据库必须使用完整恢复模式或大容量日志恢复模式，将数据库切换为简单恢复模式会导致日志传送停止工作。  
   
 -   在配置日志传送之前，您必须创建共享，以便辅助服务器可以访问事务日志备份。 这是对生成事务日志备份的目录的共享。 例如，如果将事务日志备份到目录 C:\data\tlogs\\，则可以对该目录创建 \\\\*primaryserver*\tlogs 共享。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  日志传送存储过程要求 **sysadmin** 固定服务器角色中的成员身份。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -78,9 +78,9 @@ ms.locfileid: "62774581"
   
 8.  请注意 **“备份作业”** 下的 **“计划”** 框中列出的备份计划。 如果想要为安装自定义计划，则单击 **“计划”** 并根据需要调整 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理计划。  
   
-9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持 [备份压缩](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 创建日志传送配置时，可以通过选择以下选项之一来控制日志备份的备份压缩行为：“使用默认服务器设置”、“压缩备份”或“不压缩备份”    。 有关详细信息，请参阅 [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md)。  
+9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持 [备份压缩](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 创建日志传送配置时，可以通过选择以下选项之一来控制日志备份的备份压缩行为： **“使用默认服务器设置”** 、 **“压缩备份”** 或 **“不压缩备份”** 。 有关详细信息，请参阅 [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md)。  
   
-10. 单击 **“确定”** 中配置日志传送。  
+10. 单击“确定”。   
   
 11. 在 **“辅助服务器实例和数据库”** 下，单击 **“添加”** 。  
   
@@ -107,9 +107,9 @@ ms.locfileid: "62774581"
   
 21. 请注意 **“还原作业”** 下 **“计划”** 框中列出的还原计划。 如果要自定义安装计划，请单击 **“计划”** ，然后根据需要调整 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理计划。 此计划应为大致的备份计划。  
   
-22. 单击 **“确定”** 中配置日志传送。  
+22. 单击“确定”。   
   
-23. 在 **“监视服务器实例”** 下，选中 **“使用监视服务器实例”** 复选框，然后单击 **“设置”** 。  
+23. 在 **“监视服务器实例”** 下，选中 **“使用监视服务器实例”** 复选框，然后单击 **“设置”**。  
   
     > [!IMPORTANT]  
     >  若要监视此日志传送配置，必须现在添加监视服务器。 若要以后添加监视服务器，则需要先删除此日志传送配置，然后将其替换为包含监视服务器的新配置。  
@@ -120,7 +120,7 @@ ms.locfileid: "62774581"
   
 26. 在 **“历史记录保持期”** 下，选择想要保留日志传送历史记录的时间长度。  
   
-27. 单击“确定”  。  
+27. 单击“确定”。   
   
 28. 在 **“数据库属性”** 对话框中，单击 **“确定”** 开始配置进程。  
   
@@ -150,7 +150,7 @@ ms.locfileid: "62774581"
   
 ##  <a name="RelatedTasks"></a> 相关任务  
   
--   [日志传送升级到 SQL Server 2014 &#40;Transact SQL&#41;](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
+-   [将日志传送升级到 SQL Server 2014 &#40;Transact-sql&#41;](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   
 -   [向日志传送配置添加辅助数据库 (SQL Server)](add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md)  
   
@@ -164,7 +164,7 @@ ms.locfileid: "62774581"
   
 -   [故障转移到日志传送辅助服务器 (SQL Server)](fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [关于日志传送 (SQL Server)](about-log-shipping-sql-server.md)   
  [日志传送表和存储过程](log-shipping-tables-and-stored-procedures.md)  
   

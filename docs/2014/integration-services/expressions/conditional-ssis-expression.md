@@ -1,5 +1,5 @@
 ---
-title: '? 解码的字符：（条件）（SSIS 表达式）| Microsoft Docs'
+title: '? :（条件）（SSIS 表达式）| Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: baf066638eb8c42dbf4ba7f488c9b0c1ca9acdb2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769394"
 ---
-# <a name="--conditional-ssis-expression"></a>? 解码的字符：（条件）（SSIS 表达式）
+# <a name="--conditional-ssis-expression"></a>? :（条件）（SSIS 表达式）
   根据布尔表达式的计算结果，返回两个表达式之一。 如果布尔表达式的计算结果为 TRUE，则计算第一个表达式，结果为该表达式的结果。 如果布尔表达式的计算结果为 FALSE，则计算第二个表达式，结果为该表达式的结果。  
   
 ## <a name="syntax"></a>语法  
@@ -36,10 +36,10 @@ boolean_expression?expression1:expression2
  计算结果为 TRUE、FALSE 或 NULL 的任意有效表达式。  
   
  *expression1*  
- 为任意有效的表达式。  
+ 为任何有效的表达式。  
   
  *expression2*  
- 为任意有效的表达式。  
+ 为任何有效的表达式。  
   
 ## <a name="result-types"></a>结果类型  
  *expression1* 或 *expression2*的数据类型。  
@@ -55,11 +55,11 @@ boolean_expression?expression1:expression2
   
  表达式集（ *expression1* 和 *expression2*）的计算结果必须为有效的数据类型而且必须遵循下列规则之一：  
   
--   **Numeric**   *expression1* 和 *expression2* 必须为数值数据类型。 数据类型的交集必须为数值数据类型，该类型在表达式计算器执行隐式数值转换的规则中指定。 两个数值数据类型的交集不能为空。 有关详细信息，请参阅 [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md)。  
+-   **Numeric***expression1* 和 *expression2* 必须为数值数据类型。 数据类型的交集必须为数值数据类型，该类型在表达式计算器执行隐式数值转换的规则中指定。 两个数值数据类型的交集不能为空。 有关详细信息，请参阅 [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md)。  
   
--   **字符串**：expression1  和 expression2  必须为字符串数据类型：DT_STR 或 DT_WSTR。 两个表达式的计算结果可以为不同的字符串数据类型。 结果为 DT_WSTR 数据类型，其长度为较长参数的长度。  
+-   **字符串***expression1* 和 *expression2* 必须为字符串数据类型：DT_STR 或 DT_WSTR。 两个表达式的计算结果可以为不同的字符串数据类型。 结果为 DT_WSTR 数据类型，其长度为较长参数的长度。  
   
--   **“日期”、“时间”或“日期/时间”** ：expression1  和 expression2  的计算结果必须为下面的数据类型之一：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
+-   **Date、Time 或 Date/Time***expression1* 和 *expression2* 的计算结果必须为下列数据类型之一：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
   
     > [!NOTE]  
     >  系统不支持对计算结果为时间数据类型的表达式和计算结果为日期或日期/时间数据类型的表达式进行比较。 否则系统会生成错误。  
@@ -97,7 +97,7 @@ boolean_expression?expression1:expression2
 ListPrice < 350.00 ? ListPrice * .2 : ListPrice * .1  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [运算符优先级和结合性](operator-precedence-and-associativity.md)   
  [运算符（SSIS 表达式）](operators-ssis-expression.md)  
   

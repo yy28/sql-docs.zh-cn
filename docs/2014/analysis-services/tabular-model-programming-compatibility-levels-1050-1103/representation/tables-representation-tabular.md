@@ -1,5 +1,5 @@
 ---
-title: 表表示形式 （表格） |Microsoft Docs
+title: 表表示形式（表格） |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c733fbf1e8a075d0d240f5cb69d888310fc6009f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62757703"
 ---
 # <a name="tables-representation-tabular"></a>表表示形式（表格）
@@ -27,7 +27,7 @@ ms.locfileid: "62757703"
   
  从过程角度来看，需要在定义任何其他对象之前先创建数据源视图。 数据源视图对象包含数据源中所有相关对象的映射。 关系模型的映射作为 .Net DataSet 对象嵌入数据源视图并存储在 DSV 的 Schema 属性中。  
   
- 下面的代码段假定您具有 SQL 客户端的连接字符串，将映射到要在您的表格模型和数据的名称与变量 newDataSourceViewName 表示关系模型中的所有表的 Select 语句的字典源视图 （通常在关系数据库的名称）。  
+ 下面的代码段假设你有一个 SQL 客户端连接字符串、一个 Select 语句字典，这些语句映射到你打算在表格模型中表示的关系模型中的所有表，并具有数据名称的变量 newDataSourceViewName源视图（通常为关系数据库的名称）。  
   
 ```  
   

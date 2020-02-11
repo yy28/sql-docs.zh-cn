@@ -1,5 +1,5 @@
 ---
-title: 防止自动启动实例的 SQL Server （SQL Server 配置管理器） |Microsoft Docs
+title: 防止自动启动 SQL Server 实例（SQL Server 配置管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6af4597a4ddf802c80bc98cb38363d59348fa0bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62810043"
 ---
 # <a name="prevent-automatic-startup-of-an-instance-of-sql-server-sql-server-configuration-manager"></a>防止 SQL Server 实例自动启动（SQL Server 配置管理器）
@@ -31,17 +31,17 @@ ms.locfileid: "62810043"
   
 #### <a name="to-prevent-automatic-startup-of-an-instance-of-sql-server"></a>防止自动启动 SQL Server 实例  
   
-1.  在 **“开始”** 菜单中，依次指向 **“所有程序”**、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **“配置工具”**，然后单击 **“SQL Server 配置管理器”**。  
+1.  在 **“开始”** 菜单中，依次指向 **“所有程序”** 、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **“配置工具”** ，然后单击 **“SQL Server 配置管理器”** 。  
   
-2.  在 SQL Server 配置管理器中，展开 **“服务”**，再单击 **SQL Server**。  
+2.  在 SQL Server 配置管理器中，展开 **“服务”** ，再单击 **SQL Server**。  
   
-3.  在“详细信息”窗格中，右键单击“” ，再单击“属性”   
+3.  在“详细信息”窗格中，右键单击“”  ，再单击“属性”   
   
-4.  在“属性”框的“SQL Server \<实例名> 属性”对话框中，将“启动模式”的值设置为“手动”。  
+4.  在“属性”框的“SQL Server **实例名> 属性”对话框中，将“启动模式”的值设置为“手动”\<**__****************。  
   
-5.  单击“确定”关闭“SQL Server \<实例名> 属性”对话框，然后再关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。  
+5.  单击“确定”关闭“SQL Server **实例名> 属性”对话框，然后再关闭**  配置管理器 **\<**   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](start-stop-pause-resume-restart-sql-server-services.md)  
   
   

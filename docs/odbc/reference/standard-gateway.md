@@ -18,13 +18,13 @@ ms.assetid: b8341492-2141-4bab-80bd-f2752223079e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8120f3cda584240b0b58ed5d6758621b18fe44d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68070481"
 ---
 # <a name="standard-gateway"></a>标准网关
-一个*网关*是一种软件会导致一个 DBMS 与另一个类似的形式。 也就是说，网关接受编程接口，SQL 语法和数据流协议的单个 dbms 和将其转换到的编程接口，SQL 语法并数据流协议隐藏 DBMS。 例如，应用程序编写为使用 Microsoft® SQL Server™ 还可以访问 DB2 数据通过 Micro Decisionware DB2 网关;此产品将导致 DB2 看起来像 SQL Server。 当使用网关时，必须为每个目标数据库编写不同的网关。  
+*网关*是一种软件，它使一个 DBMS 看上去像另一个 DBMS。 也就是说，网关接受单个 DBMS 的编程接口、SQL 语法和数据流协议，并将其转换为隐藏 DBMS 的编程接口、SQL 语法和数据流协议。 例如，使用 Microsoft® SQL Server™编写的应用程序还可以通过微 Decisionware DB2 网关访问 DB2 数据;此产品会使 DB2 看起来像 SQL Server。 使用网关时，必须为每个目标数据库写入不同的网关。  
   
- 尽管网关都受 Dbms 之间的体系结构差异，但它们是标准化的良好候选项。 但是，如果所有的 Dbms 的编程接口上实现标准化，SQL 语法和数据格式数据流协议的 DBMS 是被选为标准的单一 dbms？ 当然没有商业 DBMS 供应商很可能同意在竞争对手的产品上实现标准化。 而开发的标准编程接口、 SQL 语法和数据流协议，如果需要没有网关。
+ 虽然网关受 Dbms 之间的体系结构差异的限制，但它们非常适合用于标准化。 但是，如果所有 Dbms 都要标准化单个 DBMS 的编程接口、SQL 语法和数据流协议，而其 DBMS 被选为标准， 当然，没有任何商业 DBMS 供应商可能同意在竞争对手的产品上实现标准化。 如果开发了标准编程接口、SQL 语法和数据流协议，则不需要网关。

@@ -14,23 +14,23 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f880dcacbd4571c188d0368a0378a89c45787af2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011716"
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>使用格式化文件跳过数据字段 (SQL Server)
   数据文件所包含的字段数可能大于表中的列数。 本主题说明了通过修改非 XML 和 XML 格式化文件，将表中的列映射到相应的数据字段并忽略额外字段，从而能够使用具有较多字段的数据文件。  
   
 > [!NOTE]  
->  可以使用非 XML 或 XML 格式化文件将数据文件批量导入表中，方法是使用 **bcp** 命令、BULK INSERT 语句或 INSERT ...SELECT * FROM OPENROWSET(BULK...) 语句。 有关详细信息，请参阅[使用格式化文件批量导入数据 (SQL Server)](use-a-format-file-to-bulk-import-data-sql-server.md)。  
+>  可以使用非 XML 或 XML 格式化文件将数据文件大容量导入表中，方法是使用**bcp**命令、BULK INSERT 语句或 INSERT .。。SELECT * FROM OPENROWSET （BULK ...）语句。 有关详细信息，请参阅[使用格式化文件批量导入数据 (SQL Server)](use-a-format-file-to-bulk-import-data-sql-server.md)。  
   
 ## <a name="sample-data-file-and-table"></a>示例数据文件和表  
  本主题中修改的格式化文件示例基于下面的表和数据文件。  
   
 ### <a name="sample-table"></a>示例表  
- 这些示例要求在 `myTestSkipField` 示例数据库中的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 架构下创建名为 `dbo` 的表。 若要创建此表，请在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查询编辑器中运行以下代码：  
+ 这些示例要求在 `myTestSkipField` 示例数据库中的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 架构下创建名为 `dbo` 的表。 若要创建此表， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]请在查询编辑器中运行以下代码：  
   
 ```  
 USE AdventureWorks2012;  
@@ -66,7 +66,8 @@ GO
 ## <a name="non-xml-format-file-for-more-data-fields"></a>针对较多数据字段的非 XML 格式化文件  
  以下格式化文件 `myTestSkipField.fmt` 将 `myTestSkipField-c.dat` 中的字段映射至 `myTestSkipField` 表的列。 该格式化文件使用字符数据格式。 跳过列映射需要将列顺序值更改为 0，如格式化文件中 `ExtraField` 列所示。  
   
- `myTestSkipField.fmt` 格式化文件包含以下信息：  
+ 
+  `myTestSkipField.fmt` 格式化文件包含以下信息：  
   
 ```  
 9.0  
@@ -102,7 +103,8 @@ GO
   
  以下格式化文件 `myTestSkipField.xml` 将 `myTestSkipField-c.dat` 中的字段映射至 `myTestSkipField` 表的列。 该格式化文件使用字符数据格式。  
   
- `myTestSkipField.xml` 格式化文件包含以下信息：  
+ 
+  `myTestSkipField.xml` 格式化文件包含以下信息：  
   
 ```  
 <?xml version="1.0"?>  
@@ -141,11 +143,11 @@ GO
 > [!NOTE]  
 >  有关 XML 架构语法和 XML 格式化文件的其他示例的信息，请参阅 [XML 格式化文件 (SQL Server)](xml-format-files-sql-server.md)。  
   
-## <a name="see-also"></a>请参阅  
- [bcp Utility](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>另请参阅  
+ [bcp 实用工具](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)   
- [使用格式化文件跳过表列 (SQL Server)](use-a-format-file-to-skip-a-table-column-sql-server.md)   
+ [使用格式化文件跳过表列 &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)   
  [使用格式化文件将表列映射到数据文件字段 (SQL Server)](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
   

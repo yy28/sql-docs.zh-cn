@@ -1,5 +1,5 @@
 ---
-title: 指定位置路径 (SQLXML 4.0) |Microsoft Docs
+title: 指定位置路径（SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 795e27c020c9ea4c80c858da734ebd315d56615c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012659"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>指定位置路径 (SQLXML 4.0)
@@ -35,38 +35,38 @@ ms.locfileid: "66012659"
   
 -   **相对位置路径**  
   
-     相对位置路径以文档中的上下文节点为起点。 位置路径由包含一个或多个位置步骤的序列组成，位置步骤间以斜杠标记 (/) 分隔。 每个步骤选择相对于上下文节点的一组节点。 初始步骤序列选择相对于某个上下文节点的一组节点。 该组节点中的每个节点都用作下一个步骤的上下文节点。 由该步骤表示的节点集将联接起来。 例如， **child:: order/child:: orderdetail**选择 **\<OrderDetail >** 元素子级 **\<顺序 >** 元素上下文节点的子级。  
+     相对位置路径以文档中的上下文节点为起点。 位置路径由包含一个或多个位置步骤的序列组成，位置步骤间以斜杠标记 (/) 分隔。 每个步骤选择相对于上下文节点的一组节点。 初始步骤序列选择相对于某个上下文节点的一组节点。 该组节点中的每个节点都用作下一个步骤的上下文节点。 由该步骤表示的节点集将联接起来。 例如， **child：： Order/child：： OrderDetail**选择** \<** 上下文节点的** \<Order>** 元素子级的 Order>元素子级。  
   
     > [!NOTE]  
-    >  在 XPath 的 SQLXML 4.0 实现中，每个 XPath 查询都从根上下文开始，即使 XPath 并非显式绝对路径也不例外。 例如，以“Customer”开始的 XPath 查询被视为“/Customer”。 在 XPath 查询**Customer [Order]** ，客户根上下文开始，但顺序 Customer 上下文开始。 有关详细信息，请参阅[使用 XPath 查询简介&#40;SQLXML 4.0&#41;](../introduction-to-using-xpath-queries-sqlxml-4-0.md)。  
+    >  在 XPath 的 SQLXML 4.0 实现中，每个 XPath 查询都从根上下文开始，即使 XPath 并非显式绝对路径也不例外。 例如，以“Customer”开始的 XPath 查询被视为“/Customer”。 在 XPath 查询**customer [订单]** 中，客户从根上下文开始，但从客户上下文开始排序。 有关详细信息，请参阅[&#40;SQLXML 4.0&#41;使用 XPath 查询简介](../introduction-to-using-xpath-queries-sqlxml-4-0.md)。  
   
 ## <a name="location-steps"></a>位置步骤  
  位置路径（绝对或相对）由位置步骤组成，而位置步骤包含三个部分：  
   
--   **Axis**  
+-   **轴**  
   
      轴指定根据位置步骤和上下文节点选择的节点之间的树关系。 支持 `parent`、`child`、`attribute` 和 `self` 轴。 如果在位置路径中指定 `child` 轴，则由查询选择的所有节点均为上下文节点的子级。 如果指定 `parent` 轴，则所选节点为上下文节点的父节点。 如果指定 `attribute` 轴，则所选节点为上下文节点的属性。  
   
 -   **节点测试**  
   
-     节点测试指定根据位置步骤选择的节点类型。 每个轴（`child`、`parent`、`attribute` 和 `self`）都具有主要节点类型。 有关`attribute`轴，主要节点类型是 **\<属性 >** 。 有关`parent`， `child`，并`self`轴，主要节点类型是 **\<元素 >** 。  
+     节点测试指定根据位置步骤选择的节点类型。 每个轴（`child`、`parent`、`attribute` 和 `self`）都具有主要节点类型。 对于`attribute`轴，主体节点类型为** \<attribute>**。 对于`parent`、 `child`和`self`轴，主体节点类型为** \<元素>**。  
   
-     例如，如果位置路径指定**child:: customer**，则 **\<客户 >** 将选择上下文节点的元素子级。 因为`child`轴具有 **\<元素 >** 作为其主要节点类型，节点测试 Customer 为 TRUE，如果客户 **\<元素 >** 节点。  
+     例如，如果 location 路径指定了**child：： customer**，则会选择该上下文节点的** \<Customer>** 元素子级。 由于`child`轴的** \<元素>** 为其主体节点类型，因此，如果 Customer 是>节点的** \<元素**，则节点测试，Customer 为 TRUE。  
   
--   **选择谓词 （零个或多个）**  
+-   **选择谓词（零个或多个）**  
   
      谓词针对轴筛选节点集。 在 XPath 表达式中指定选择谓词类似于在 SELECT 语句中指定 WHERE 子句。 在方括号之间指定谓词。 应用在选择谓词中指定的测试可以筛选由节点测试返回的节点。 对于要筛选的节点集中的每个节点，将使用该节点作为上下文节点并使用节点集中的节点数作为上下文大小来对谓词表达式求值。 如果对于该节点谓词表达式求值为 TRUE，则该节点将包含在结果节点集中。  
   
-     位置步骤的语法为轴名称和节点测试（用双冒号 (::) 分隔），后跟零或多个表达式，每个表达式都位于方括号中。 例如，XPath 表达式 （位置路径） **child:: customer [@CustomerID= ALFKI]** 选择所有 **\<客户 >** 上下文节点的子元素。 然后在谓词中的测试应用到节点组中，它将仅返回 **\<客户 >** 元素节点具有属性值 ALFKI 其**CustomerID**属性。  
+     位置步骤的语法为轴名称和节点测试（用双冒号 (::) 分隔），后跟零或多个表达式，每个表达式都位于方括号中。 例如，XPath 表达式（位置路径） **child：： Customer@CustomerID[= ' ALFKI ']** 选择上下文节点的所有** \<Customer>** 元素子级。 然后，谓词中的测试应用于节点集，该节点集仅返回** \<客户>** 元素节点的属性值为 "ALFKI" 的**CustomerID**属性。  
   
 ## <a name="in-this-section"></a>本节内容  
- [指定轴&#40;SQLXML 4.0&#41;](specifying-an-axis-sqlxml-4-0.md)  
+ [&#40;SQLXML 4.0&#41;指定轴](specifying-an-axis-sqlxml-4-0.md)  
  提供用于指定轴的示例。  
   
- [在位置路径中指定节点测试&#40;SQLXML 4.0&#41;](specifying-a-node-test-in-the-location-path-sqlxml-4-0.md)  
+ [在位置路径中指定节点测试 &#40;SQLXML 4.0&#41;](specifying-a-node-test-in-the-location-path-sqlxml-4-0.md)  
  提供用于指定节点测试的示例。  
   
- [位置路径中指定选择谓词&#40;SQLXML 4.0&#41;](specifying-selection-predicates-in-the-location-path-sqlxml-4-0.md)  
+ [在位置路径中指定选择谓词 &#40;SQLXML 4.0&#41;](specifying-selection-predicates-in-the-location-path-sqlxml-4-0.md)  
  提供用于指定选择谓词的示例。  
   
   

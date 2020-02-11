@@ -18,10 +18,10 @@ ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ad69cc6933b4f3d51d3b9ec11fad4edd6d555abe
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70846637"
 ---
 # <a name="sysmail_delete_mailitems_sp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "70846637"
 
   从数据库邮件内部表中永久删除电子邮件。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,19 +40,19 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ \@sent_before = ] 'sent_before'` 将删除*sent_before*参数提供的日期和时间之前的电子邮件。 *sent_before*为**datetime** ，默认值为 NULL。 NULL 指示所有日期。  
+`[ \@sent_before = ] 'sent_before'`删除直到作为*sent_before*参数提供的日期和时间的电子邮件。 *sent_before*为**datetime** ，默认值为 NULL。 NULL 指示所有日期。  
   
-`[ \@sent_status = ] 'sent_status'` 删除*sent_status*指定的类型的电子邮件。 *sent_status*为**varchar （8）** ，无默认值。 有效条目为**发送**、未**发送**、**重试**和**失败**。 NULL 指示所有状态。  
+`[ \@sent_status = ] 'sent_status'`删除*sent_status*指定的类型的电子邮件。 *sent_status*为**varchar （8）** ，无默认值。 有效条目为**发送**、未**发送**、**重试**和**失败**。 NULL 指示所有状态。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  
   
-## <a name="remarks"></a>Remarks  
- 数据库邮件消息及其附件都存储在**msdb**数据库中。 应定期删除消息，以防**msdb**增长超过预期，并符合组织的文档保留计划。 使用**sysmail_delete_mailitems_sp**存储过程从数据库邮件表中永久删除电子邮件。 某个可选参数通过提供日期和时间，允许您仅删除较早的电子邮件。 早于该参数的电子邮件将被删除。 另一个可选参数允许您仅删除特定类型的电子邮件（指定为**sent_status**参数）。 您必须为 **\@sent_before**或 **\@sent_status**提供参数。 若要删除所有消息，请使用 **\@sent_before = getdate （）** 。  
+## <a name="remarks"></a>备注  
+ 数据库邮件消息及其附件都存储在**msdb**数据库中。 应定期删除消息，以防**msdb**增长超过预期，并符合组织的文档保留计划。 使用**sysmail_delete_mailitems_sp**存储过程从数据库邮件表中永久删除电子邮件。 某个可选参数通过提供日期和时间，允许您仅删除较早的电子邮件。 早于该参数的电子邮件将被删除。 另一个可选参数允许您仅删除特定类型的电子邮件（指定为**sent_status**参数）。 您必须为** \@sent_before**或** \@sent_status**提供参数。 若要删除所有消息，请使用** \@sent_before = getdate （）**。  
   
  删除电子邮件也会删除与这些邮件相关的附件。 删除电子邮件不会删除**sysmail_event_log**中的相应条目。 使用[sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md)从日志中删除项目。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  默认情况下，此存储过程被授予对**sysadmin**固定服务器角色和**DatabaseMailUserRole**成员执行的执行权限。 **Sysadmin**固定服务器角色的成员可以执行此过程来删除所有用户发送的电子邮件。 **DatabaseMailUserRole**的成员只能删除该用户发送的电子邮件。  
   
 ## <a name="examples"></a>示例  
@@ -86,9 +86,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sysmail_allitems &#40;transact-sql&#41; ](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
- [sysmail_event_log &#40;transact-sql&#41; ](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
- [sysmail_mailattachments &#40;transact-sql&#41; ](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)   
+ [sysmail_allitems &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
+ [sysmail_event_log &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
+ [sysmail_mailattachments &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)   
  [创建 SQL Server 代理作业以存档数据库邮件和事件日志](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)  
   
   

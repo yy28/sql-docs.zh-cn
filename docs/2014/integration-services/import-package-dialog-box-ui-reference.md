@@ -1,5 +1,5 @@
 ---
-title: 导入包对话框 UI 参考 |Microsoft Docs
+title: "\"导入包\" 对话框 UI 参考 |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3e36fae15f6f4220565bcc3d14c0e125ca6818f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058080"
 ---
 # <a name="import-package-dialog-box-ui-reference"></a>“导入包”对话框 UI 参考
@@ -26,7 +26,7 @@ ms.locfileid: "66058080"
   
 ## <a name="options"></a>选项  
  **包位置**  
- 选择要向其中导入包的存储位置的类型。 可用选项包括：  
+ 选择要向其中导入包的存储位置的类型。 提供了以下选项：  
   
  **SQL Server**  
   
@@ -49,22 +49,22 @@ ms.locfileid: "66058080"
  **用户名**  
  如果使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证，请提供用户名。  
   
- **密码**  
+ **权限**  
  如果使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证，请提供密码。  
   
  **包路径**  
- 键入包的路径，或单击浏览按钮 (…) 并查找包  。  
+ 键入包的路径，或单击浏览按钮 (…) 并查找包****。  
   
  **包名称**  
  可以根据需要对包进行重命名。 默认名称是要导入的包的名称。  
   
  **保护级别**  
- 单击浏览按钮 (…)，然后在“包保护级别”对话框中更新保护级别   。 有关详细信息，请参阅 [“包和项目保护级别”对话框](../../2014/integration-services/package-and-project-protection-level-dialog-box.md)。  
+ 单击浏览按钮 (…)，然后在“包保护级别”对话框中更新保护级别********。 有关详细信息，请参阅[“包和项目保护级别”对话框](../../2014/integration-services/package-and-project-protection-level-dialog-box.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [保存包的副本](../../2014/integration-services/save-copy-of-package.md)   
- [“导出包”对话框 UI 参考](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
+ ["导出包" 对话框 UI 参考](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
  [保存包](save-packages.md)   
- [导入和导出包（SSIS 服务）](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
+ [&#40;SSIS 服务导入和导出包&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
   
   

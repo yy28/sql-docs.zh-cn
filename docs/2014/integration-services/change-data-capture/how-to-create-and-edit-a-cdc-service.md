@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 525e60450e1cae635cd3a825108dc5a68f80fe42
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771283"
 ---
 # <a name="how-to-create-and-edit-a-cdc-service"></a>如何创建和编辑 CDC 服务
@@ -60,8 +60,8 @@ ms.locfileid: "62771283"
   
 5.  在“连接到 Oracle”对话框中单击 **“确定”** 。 这两个对话框将关闭，并且将更新并注册该服务。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Change Data Capture Designer for Oracle by Attunity](change-data-capture-designer-for-oracle-by-attunity.md)   
- [Create and Edit an Oracle CDC Service](create-and-edit-an-oracle-cdc-service.md)  
+ [创建和编辑 Oracle CDC 服务](create-and-edit-an-oracle-cdc-service.md)  
   
   

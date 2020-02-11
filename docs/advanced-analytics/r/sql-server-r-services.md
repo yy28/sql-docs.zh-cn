@@ -10,10 +10,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 99aba9748e7ee6d53aabb18919324243740d996a
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71149932"
 ---
 # <a name="what-is-sql-server-2016-r-services"></a>什么是 SQL Server 2016 R Services？
@@ -62,7 +62,7 @@ R Services 使用扩展性框架在 SQL Server 中运行 R 脚本。 详细了�
 
 除了 Microsoft 的企业包外，还可以使用开源包和框架。 大多数常见的开源 R 包已预先安装在 R Services 中。 还包括 Microsoft 提供的以下 R 包：
 
-| “包” | 描述 |
+| 程序包 | 说明 |
 |-|-|
 | [RevoScaleR](../r/ref-r-revoscaler.md) | 用于可缩放 R 的主包。数据转换和操作、统计摘要、可视化和多种形式的建模。 此外，此包中的函数会自动在可用内核之间分配工作负载以进行并行处理。 |
 | [MicrosoftML (R)](../r/ref-r-microsoftml.md) | 添加机器学习算法，以便为文本分析、图像分析和情绪分析创建自定义模型。 |
@@ -74,7 +74,7 @@ R Services 使用扩展性框架在 SQL Server 中运行 R 脚本。 详细了�
 
 1. [安装 SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 
-1. 配置开发工具。 可以执行以下操作：
+1. 配置开发工具。 可用工具如下：
 
     + 使用 [Azure Data Studio](../../azure-data-studio/what-is.md) 或 [SQL Server Management Studio (SSMS)](../../ssms/sql-server-management-studio-ssms.md) 以采用 T-SQL 和存储过程 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 来执行 R 脚本。
     + 使用开发便携式计算机或工作站上的 R 来执行脚本。 可以在本地拉取数据，也可以使用 [RevoScaleR](../r/ref-r-revoscaler.md) 将执行远程推送到 SQL Server。 有关详细信息，请参阅如何[设置数据科学客户端 R 开发](../r/set-up-a-data-science-client.md)。

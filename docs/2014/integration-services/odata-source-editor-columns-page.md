@@ -1,5 +1,5 @@
 ---
-title: OData 源编辑器 （列页） |Microsoft Docs
+title: OData 源编辑器（"列" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f6677fad3df1d1f99e2f78257ea85551f8ae8db3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057342"
 ---
 # <a name="odata-source-editor-columns-page"></a>OData 源编辑器（“列”页）
-  使用“OData 源编辑器”  对话框的“列”  页可选择要包含在输出中的外部（源）列并将它们映射到输出列。  
+  使用“OData 源编辑器”**** 对话框的“列”**** 页可选择要包含在输出中的外部（源）列并将它们映射到输出列。  
   
 ## <a name="options"></a>选项  
  **可用外部列**  
@@ -32,9 +32,9 @@ ms.locfileid: "66057342"
  **输出列**  
  为每个输出列提供唯一的名称。 默认值为所选外部（源）列的名称；不过，您也可以任选一个唯一的描述性名称。  
   
-## <a name="see-also"></a>请参阅  
- [OData 源编辑器（“连接”页）](../../2014/integration-services/odata-source-editor-connection-page.md)   
- [OData 源编辑器（“错误输出”页）](../../2014/integration-services/odata-source-editor-error-output-page.md)   
+## <a name="see-also"></a>另请参阅  
+ [OData 源编辑器 &#40;连接页&#41;](../../2014/integration-services/odata-source-editor-connection-page.md)   
+ [OData 源编辑器 &#40;错误输出页&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
  [OData 源](data-flow/odata-source.md)   
  [OData 连接管理器](connection-manager/odata-connection-manager.md)  
   

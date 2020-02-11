@@ -1,5 +1,5 @@
 ---
-title: 设计聚合 (Analysis Services-多维) |Microsoft Docs
+title: 设计聚合（Analysis Services 多维） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 307d2ff0419cf5def9f422f08daf349b80bcad2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075211"
 ---
 # <a name="designing-aggregations-analysis-services---multidimensional"></a>设计聚合（Analysis Services - 多维）
@@ -41,7 +41,7 @@ ms.locfileid: "66075211"
   
  向导的最后一步允许处理或推迟处理。 处理创建使用向导设计的聚合，而推迟处理则保存所设计的聚合以供将来进行处理，从而使设计活动不必处理就可以继续。 根据分区大小的不同，处理过程可能会需要相当长的一段时间。 根据您的选择，可以中断对分区的处理。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [聚合和聚合设计](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)  
   
   

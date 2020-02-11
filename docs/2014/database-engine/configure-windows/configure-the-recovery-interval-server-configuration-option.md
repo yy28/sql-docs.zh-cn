@@ -20,14 +20,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 89449cbc31e1ec36fa37a5bb36b1f505cdd2e14d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62787098"
 ---
 # <a name="configure-the-recovery-interval-server-configuration-option"></a>配置恢复间隔服务器配置选项
-  本主题说明了如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] “恢复间隔” [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **“恢复间隔”** 选项定义恢复某一数据库所需时间的上限。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 使用为该选项指定的值确定 [自动检查点](../../relational-databases/logs/database-checkpoints-sql-server.md) 对给定数据库发出自动检查点的大致频率。  
+  本主题说明了如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] “恢复间隔” [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **“恢复间隔”** 选项定义恢复某一数据库所需时间的上限。 
+  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 使用为该选项指定的值确定 [自动检查点](../../relational-databases/logs/database-checkpoints-sql-server.md) 对给定数据库发出自动检查点的大致频率。  
   
  默认恢复间隔值为 0，这将允许 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 自动配置恢复间隔。 通常，对于活动数据库，该默认恢复间隔将导致大约一分钟执行一次自动检查点检查，并且导致不到一分钟的恢复时间。 较高的值表示近似的最大恢复时间，以分钟为单位。 例如，将恢复间隔设置为 3 指示最大恢复时间大约为 3 分钟。  
   
@@ -63,9 +64,9 @@ ms.locfileid: "62787098"
   
 -   如果您使用 **sp_configure** 将 **“恢复间隔”** 选项的值更改为超过 60（分钟），则指定 RECONFIGURE WITH OVERRIDE。 WITH OVERRIDE 将禁用配置值检查（检查无效的值或并非推荐的值）。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  默认情况下，所有用户都具备不带参数或仅带第一个参数的 **sp_configure** 的执行权限。 若要执行带两个参数的 **sp_configure** 以更改配置选项或运行 RECONFIGURE 语句，则用户必须具备 ALTER SETTINGS 服务器级别的权限。 ALTER SETTINGS 权限由 **sysadmin** 和 **serveradmin** 固定服务器角色隐式持有。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -106,7 +107,7 @@ GO
 ##  <a name="FollowUp"></a> 跟进：在配置恢复间隔选项之后  
  该设置将立即生效，无需重新启动服务器。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [更改数据库的目标恢复时间 (SQL Server)](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md)   
  [数据库检查点 (SQL Server)](../../relational-databases/logs/database-checkpoints-sql-server.md)   
  [服务器配置选项 (SQL Server)](server-configuration-options-sql-server.md)   

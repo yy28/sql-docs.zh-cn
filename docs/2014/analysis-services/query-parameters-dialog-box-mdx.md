@@ -1,5 +1,5 @@
 ---
-title: 查询 (MDX) 参数对话框 |Microsoft Docs
+title: "\"查询参数\" 对话框（MDX） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7ad326f5205aa7efc3be9aee79af3671d892130
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070531"
 ---
 # <a name="query-parameters-dialog-box-mdx"></a>“查询参数”对话框 (MDX)
@@ -26,14 +26,14 @@ ms.locfileid: "66070531"
  **参数**  
  键入一个参数名称以便开始创建新参数，或者编辑现有参数的名称。  
   
- **Dimension**  
+ **维度**  
  从列表中选择现有维度。  
   
- **Hierarchy**  
+ **层次结构**  
  如果参数应用于某一特定的层次结构，则从列表中选择一个层次结构。  
   
  **多个值**  
- 描述  
+ 说明  
   
  **默认**  
  指示参数的默认值（如果有）。 默认情况下，不分配任何值。  

@@ -1,5 +1,5 @@
 ---
-title: SetDefaults 方法 （SInstance 类） |Microsoft Docs
+title: SetDefaults 方法（SInstance 类） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ad13821341291a91a989297f29e1459a40de5afe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62720945"
 ---
 # <a name="setdefaults-method-sinstance-class"></a>SetDefaults 方法（SInstance 类）
-  设置实例的所有默认值[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]覆盖现有数据的选项。  
+  设置实例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的所有默认值，并提供覆盖现有数据的选项。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,12 +40,12 @@ OverwriteAll
 ```  
   
 ## <a name="parts"></a>组成部分  
- *object*  
- [SInstance 类](sinstance-class.md)对象，表示服务器实例。  
+ *对象*  
+ 一个表示服务器实例的[SInstance 类](sinstance-class.md)对象。  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
   
-|参数|Description|  
+|参数|说明|  
 |---------------|-----------------|  
 |*OverwriteAll*|一个指定是否覆盖 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 客户端实例的现有值的布尔值：若要覆盖现有值，则为 `true`；如果不希望覆盖现有值，则为 `false`。|  
   
@@ -54,7 +54,7 @@ OverwriteAll
   
 ## <a name="remarks"></a>备注  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置服务器网络协议和网络库](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

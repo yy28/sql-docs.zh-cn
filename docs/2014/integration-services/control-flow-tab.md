@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dd46efd60d81134f04a6bbc44e47c1fe8b5f342e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060355"
 ---
 # <a name="control-flow-tab"></a>“控制流”选项卡
@@ -40,7 +40,7 @@ ms.locfileid: "66060355"
   
  若要在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中为单个任务或容器添加这些功能，请在设计图面上右键单击相应的对象，再选择该选项。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [优先约束](control-flow/precedence-constraints.md)   
  [SSIS 设计器](ssis-designer.md)   
  [控制流](control-flow/control-flow.md)  

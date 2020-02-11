@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3a8ffc33de161c71c6f72eebf8616d1e814fb994
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770383"
 ---
 # <a name="ole-db-command-transformation"></a>OLE DB 命令转换
@@ -49,7 +49,7 @@ ms.locfileid: "62770383"
 ## <a name="related-tasks"></a>Related Tasks  
  可通过使用 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或对象模型配置转换。 有关使用 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器配置转换的详细信息，请参阅  [配置 OLE DB 命令转换](../../configure-the-ole-db-command-transformation.md)。 有关以编程方式配置此转换的详细信息，请参阅开发人员指南。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据流](../data-flow.md)   
  [Integration Services 转换](integration-services-transformations.md)  
   

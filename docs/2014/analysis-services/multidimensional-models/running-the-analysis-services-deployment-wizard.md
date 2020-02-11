@@ -13,21 +13,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d8fd34a7e614c1c1bb247f84846e090d22ea053e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073041"
 ---
 # <a name="running-the-analysis-services-deployment-wizard"></a>运行 Analysis Services 部署向导
-  在使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导部署 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目时，可以按照以下方法运行该向导：  
+  使用[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署向导部署[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目时，可以通过以下方式运行向导：  
   
--   **交互式** 进行交互式运行时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导根据输入文件生成一个 XML 部署脚本，并根据用户的输入进行交互式更改。 此向导将任何用户的更改仅应用于部署脚本。 向导不会更改输入文件。 有关输入文件的详细信息，请参阅 [了解用于创建部署脚本的输入文件](deployment-script-files-input-used-to-create-deployment-script.md)。  
+-   **交互式**以交互方式运行时[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，部署向导基于输入文件生成一个 XML 部署脚本，这些脚本由用户输入以交互方式进行修改。 此向导将任何用户的更改仅应用于部署脚本。 向导不会更改输入文件。 有关输入文件的详细信息，请参阅 [了解用于创建部署脚本的输入文件](deployment-script-files-input-used-to-create-deployment-script.md)。  
   
--   **从命令提示符**在命令提示符处，运行时[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署向导生成的 XML for Analysis (XMLA) 部署脚本基于用于运行该向导的开关。 该向导可以指导进行下面的任何一项操作：提示用户输入并基于输入更改输入文件；按原样使用输入文件以静默、无人参与模式运行部署；或创建一个以后可能使用的部署脚本。  
+-   **从命令提示符**在命令提示符下运行时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署向导基于用于运行向导的开关生成 XML FOR ANALYSIS （XMLA）部署脚本。 该向导可以指导进行下面的任何一项操作：提示用户输入并基于输入更改输入文件；按原样使用输入文件以静默、无人参与模式运行部署；或创建一个以后可能使用的部署脚本。  
   
 ## <a name="running-the-analysis-services-deployment-wizard-interactively"></a>交互式运行 Analysis Services 部署向导  
- 进行交互式运行时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导读取输入文件中的值并向您显示该信息。 您可以修改这些输入值如作为部署目标、 配置设置、 部署选项和连接字符串密码-或原样保留它们。 如果更改任何输入值，在生成 XMLA 部署脚本时向导将使用这些更改。 但是，向导不会更改输入文件中的任何值。  
+ 进行交互式运行时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导读取输入文件中的值并向您显示该信息。 您可以修改这些输入值-例如部署目标、配置设置、部署选项和连接字符串密码，或将其保留原样。 如果更改任何输入值，在生成 XMLA 部署脚本时向导将使用这些更改。 但是，向导不会更改输入文件中的任何值。  
   
 > [!NOTE]  
 >  如果使 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导更改输入值，那么可以在命令提示符处运行向导并将向导设置为以应答文件模式运行。  
@@ -40,23 +40,24 @@ ms.locfileid: "66073041"
   
      -或-  
   
--   在中**项目**的文件夹[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目中，双击*\<项目名称 >*.asdatabase 文件。  
+-   在[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目的 "**项目**" 文件夹中，双击* \<项目名称>*".asdatabase" 文件。  
   
     > [!NOTE]  
-    >  如果找不到*\<项目名称 >*.asdatabase 文件，请尝试使用搜索，并指定 *.asdatabase。  
+    >  如果找不到* \<项目名称>*.asdatabase 文件，请尝试使用 "搜索"，并指定 .asdatabase。  
   
 ## <a name="running-the-analysis-services-deployment-wizard-at-the-command-prompt"></a>在命令提示符下运行 Analysis Services 部署向导  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导也可以在命令提示符下运行。 在命令提示符下运行该向导时，应提供 .asdatabase 文件的完整路径，并使用下列模式之一运行该向导：  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导也可以在命令提示符下运行。 在命令提示符下运行该向导时，应提供 .asdatabase 文件的完整路径，并使用下列模式之一运行该向导：  
   
  **应答文件模式**  
  使用应答文件模式，在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中生成 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]项目时，向导允许你交互式更改最初生成的输入文件。 并且该向导在生成 XMLA 部署脚本之前保存更改过的这些输入文件。 这些更改过的输入文件便成为向导下次运行时的新起点。  
   
- 若要以应答文件模式运行向导，请使用 **/a**切换。  
+ 若要以应答文件模式运行向导，请使用 **/a**开关。  
   
  **静默模式**  
  使用静默模式，向导基于输入文件中的信息以静默、无人参与的模式运行部署。  
   
- 若要以无提示模式运行向导，请使用 **/s**切换。 如果以静默模式运行向导，则消息将输出至控制台或日志文件（如果有）。  
+ 若要以静默模式运行向导，请使用 **/s**开关。 如果以静默模式运行向导，则消息将输出至控制台或日志文件（如果有）。  
   
  **输出模式**  
  使用输出模式，向导将基于输入文件生成 XMLA 部署脚本供以后执行。  
@@ -73,7 +74,7 @@ ms.locfileid: "66073041"
   
 2.  键入 **Microsoft.AnalysisServices.Deployment.exe** ，后跟与要使用的向导运行模式相对应的开关。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [了解 Analysis Services 部署脚本](understanding-the-analysis-services-deployment-script.md)   
  [使用部署向导部署模型解决方案](deploy-model-solutions-using-the-deployment-wizard.md)  
   

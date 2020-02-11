@@ -1,5 +1,5 @@
 ---
-title: OData 源编辑器 （连接页） |Microsoft Docs
+title: OData 源编辑器（"连接" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0e36c0a3449566db9a2acee360243c77ee548f92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057319"
 ---
 # <a name="odata-source-editor-connection-page"></a>OData 源编辑器（“连接”页）
@@ -24,15 +24,15 @@ ms.locfileid: "66057319"
   
 ## <a name="static-options"></a>静态选项  
  **OData 连接管理器**  
- 从列表中选择一个现有连接管理器，或通过单击“新建”  创建一个新连接。  
+ 从列表中选择一个现有连接管理器，或通过单击“新建”**** 创建一个新连接。  
   
  **新建**  
- 通过使用“OData 连接管理器编辑器”  对话框创建新的连接管理器。  
+ 通过使用“OData 连接管理器编辑器”**** 对话框创建新的连接管理器。  
   
  **使用集合或资源路径**  
  指定从源选择数据的方法。  
   
-|Option|Description|  
+|选项|说明|  
 |------------|-----------------|  
 |集合|使用集合名称查询从 OData 源检索数据。|  
 |资源路径|使用资源路径查询从 OData 源检索数据。|  
@@ -40,11 +40,11 @@ ms.locfileid: "66057319"
  **查询选项**  
  为查询指定选项。  例如：$top=5。  
   
- **馈送 url**  
+ **Feed url**  
  基于在此对话框中选择的选项显示只读馈送 URL。  
   
  **预览**  
- 通过使用“预览”  对话框预览结果。 **“预览”** 最多可以显示 20 行。  
+ 通过使用“预览”**** 对话框预览结果。 **预览**最多可以显示20行。  
   
 ## <a name="dynamic-options"></a>动态选项  
   
@@ -53,12 +53,12 @@ ms.locfileid: "66057319"
  从下拉列表中选择集合。  
   
 ### <a name="use-collection-or-resource-path--resource-path"></a>使用集合或资源路径 = 资源路径  
- **Resource path**  
+ **资源路径**  
  键入资源路径。 例如：Employees  
   
-## <a name="see-also"></a>请参阅  
- [OData 源编辑器（“列”页）](../../2014/integration-services/odata-source-editor-columns-page.md)   
- [OData 源编辑器（“错误输出”页）](../../2014/integration-services/odata-source-editor-error-output-page.md)   
- [OData Connection Manager](connection-manager/odata-connection-manager.md)  
+## <a name="see-also"></a>另请参阅  
+ [OData 源编辑器 &#40;列 "页&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
+ [OData 源编辑器 &#40;错误输出页&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
+ [OData 连接管理器](connection-manager/odata-connection-manager.md)  
   
   

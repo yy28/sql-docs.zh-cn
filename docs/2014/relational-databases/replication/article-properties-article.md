@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2903eef63152af9b2e9af1434ba12ea91b4058fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721779"
 ---
 # <a name="article-properties---ltarticlegt"></a>项目属性 - &lt;项目&gt;
@@ -53,7 +53,7 @@ ms.locfileid: "62721779"
   
 -   对于每一个架构，都向订阅数据库添加一个与架构同名的用户。  
   
- **“将 XML 转换为 NTEXT”**、 **“将 MAX 数据类型转换为 NTEXT 和 IMAGE”**、 **“将新的 datetime 转换为 NVARCHAR”**、 **“将文件流转换为 MAX 数据类型”**、 **“将大型 CLR 转换为 MAX 数据类型”**、 **“将 hierarchyId 转换为 MAX 数据类型”** 以及 **“将 spatial 转换为 MAX 数据类型”**。  
+ **“将 XML 转换为 NTEXT”** 、 **“将 MAX 数据类型转换为 NTEXT 和 IMAGE”** 、 **“将新的 datetime 转换为 NVARCHAR”** 、 **“将文件流转换为 MAX 数据类型”** 、 **“将大型 CLR 转换为 MAX 数据类型”** 、 **“将 hierarchyId 转换为 MAX 数据类型”** 以及 **“将 spatial 转换为 MAX 数据类型”** 。  
  确定是否按规定转换数据类型和属性。 如果要将这些数据类型复制到较低版本的 **中，则将此选项值指定为** “True” [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]， 从而确保它们可以在订阅服务器得到正确处理。  
   
  **目标对象名称**  
@@ -88,7 +88,7 @@ ms.locfileid: "62721779"
  此选项仅适用于存储过程。 它将确定是否复制存储过程的定义（CREATE PROCEDURE 语句）或其执行代码。 如果复制存储过程的执行代码，则在初始化订阅时，会将过程定义复制到订阅服务器；当在发布服务器上执行该过程时，复制功能将在订阅服务器上执行相应的过程。 对于执行较大的批处理操作的情况，这样可以显著地提高性能。 有关详细信息，请参阅 [Publishing Stored Procedure Execution in Transactional Replication](transactional/publishing-stored-procedure-execution-in-transactional-replication.md)。  
   
 ## <a name="options-for-merge-publications"></a>用于合并发布的选项  
- 合并发布的“项目属性”对话框有两个选项卡：“属性”和“解决程序”。  
+ 合并发布的 **“项目属性”** 对话框有以下两个选项卡： **“属性”** 和 **“冲突解决程序”** 。  
   
 ### <a name="properties-tab"></a>“属性”选项卡  
  **同步方向**  
@@ -121,10 +121,10 @@ ms.locfileid: "62721779"
   
 ### <a name="resolver-tab"></a>“冲突解决程序”选项卡  
  **使用默认冲突解决程序**  
- 如果选择默认冲突解决程序，则解决冲突时会基于分配给每个订阅服务器的优先级，或基于写入到发布服务器的更改的先后次序，具体取决于所使用的订阅类型。 有关详细信息，请参阅[检测并解决合并复制冲突](merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
+ 如果选择默认冲突解决程序，则解决冲突时会基于分配给每个订阅服务器的优先级，或基于写入到发布服务器的更改的先后次序，具体取决于所使用的订阅类型。 有关详细信息，请参阅 [检测并解决合并复制冲突](merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
   
  **使用自定义冲突解决程序(已在分发服务器上注册)**  
- 如果选择使用项目冲突解决程序（ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 提供的冲突解决程序或您编写的冲突解决程序），则必须从该列表框中选择相应的冲突解决程序。 有关详细信息，请参阅 [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
+ 如果选择使用项目冲突解决程序（ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 提供的冲突解决程序或您编写的冲突解决程序），则必须从该列表框中选择相应的冲突解决程序。 有关详细信息，请参阅 [高级合并复制冲突的检测和解决](merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
   
  如果冲突解决程序需要任何输入信息，请在 **“输入冲突解决程序所需的信息”** 文本框中指定该信息。 有关 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 自定义冲突解决程序所需输入内容的详细信息，请参阅 [Microsoft COM-Based Resolvers](merge/advanced-merge-replication-conflict-com-based-resolvers.md)。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "62721779"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 提供的所有基于 COM 的冲突解决程序均已签名。 选择此选项可以在进行同步时验证冲突解决程序是否有效。  
   
 ## <a name="options-for-oracle-publications"></a>用于 Oracle 发布的选项  
- Oracle 发布的“项目属性”对话框有两个选项卡：“属性”和“数据映射”。 Oracle 发布并不能支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布所支持的所有属性。 有关详细信息，请参阅 [Design Considerations and Limitations for Oracle Publishers](non-sql/design-considerations-and-limitations-for-oracle-publishers.md)。  
+ Oracle 发布的 **“项目属性”** 对话框有以下两个选项卡： **“属性”** 和 **“数据映射”** 。 Oracle 发布并不能支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布所支持的所有属性。 有关详细信息，请参阅 [Design Considerations and Limitations for Oracle Publishers](non-sql/design-considerations-and-limitations-for-oracle-publishers.md)。  
   
 ### <a name="properties-tab"></a>“属性”选项卡  
  **复制 INSERT、UPDATE 和 DELETE 存储过程**  
@@ -172,7 +172,7 @@ ms.locfileid: "62721779"
   
 -   对于某些数据类型，有多种可供选择的映射类型。 除非您的应用程序需要使用其他映射，否则[!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议使用默认映射。 有关详细信息，请参阅 [Data Type Mapping for Oracle Publishers](non-sql/data-type-mapping-for-oracle-publishers.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Create a Publication](publish/create-a-publication.md)   
  [查看和修改发布属性](publish/view-and-modify-publication-properties.md)   
  [创建并应用初始快照](create-and-apply-the-initial-snapshot.md)   

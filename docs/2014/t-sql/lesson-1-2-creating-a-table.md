@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2d4b110446ae27335f65e83958a1a153350ccbcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62704560"
 ---
 # <a name="creating-a-table-tutorial"></a>创建表（教程）
@@ -27,7 +27,7 @@ ms.locfileid: "62704560"
  有关数据类型的列表以及每种数据类型的说明链接，请参阅[数据类型 (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql)。  
   
 > [!NOTE]  
->  [!INCLUDE[ssDE](../includes/ssde-md.md)]可安装为区分大小写或不区分大小写。 如果 [!INCLUDE[ssDE](../includes/ssde-md.md)] 区分大小写进行安装，则对象名必须始终具有相同的大小写。 例如，名为 OrderData 的表与名为 ORDERDATA 的表是不同的表。 如果 [!INCLUDE[ssDE](../includes/ssde-md.md)] 按不区分大小写进行安装，则这两个表名被视为同一个表，而且该名称只能使用一次。  
+>  [!INCLUDE[ssDE](../includes/ssde-md.md)] 可安装为区分大小写或不区分大小写。 如果 [!INCLUDE[ssDE](../includes/ssde-md.md)] 区分大小写进行安装，则对象名必须始终具有相同的大小写。 例如，名为 OrderData 的表与名为 ORDERDATA 的表是不同的表。 如果 [!INCLUDE[ssDE](../includes/ssde-md.md)] 按不区分大小写进行安装，则这两个表名被视为同一个表，而且该名称只能使用一次。  
   
 ### <a name="to-create-a-database-to-contain-the-new-table"></a>创建数据库以包含新表  
   
@@ -71,9 +71,9 @@ ms.locfileid: "62704560"
     ```  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [插入和更新表中的数据（教程）](../t-sql/lesson-1-3-inserting-and-updating-data-in-a-table.md)  
+ [插入和更新表中的数据 &#40;教程&#41;](../t-sql/lesson-1-3-inserting-and-updating-data-in-a-table.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [CREATE TABLE (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql)  
   
   

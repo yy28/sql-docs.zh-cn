@@ -14,18 +14,20 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: cb99c2ff07f30d268980c5c1c4d43a34904cdec9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014311"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>创建、构造和查询几何图形实例
   平面空间数据类型 `geometry` 表示欧几里得（平面）坐标系中的数据。 此类型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中作为公共语言运行时 (CLR) 数据类型实现。  
   
- `geometry` 类型已进行预定义，可在每个数据库中使用。 您可以创建 `geometry` 类型的表列并对 `geometry` 数据进行操作，就像使用其他 CLR 类型一样。  
+ 
+  `geometry` 类型已进行预定义，可在每个数据库中使用。 您可以创建 `geometry` 类型的表列并对 `geometry` 数据进行操作，就像使用其他 CLR 类型一样。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的 `geometry` 数据类型（平面）符合开放地理空间联盟 (OGC) 的 SQL 简单特征规范 1.1.0 版。  
+ 
+  `geometry` 支持的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型（平面）符合开放地理空间联盟 (OGC) 的 SQL 简单特征规范 1.1.0 版。  
   
  有关 OGC 规范的详细信息，请参阅以下内容：  
   
@@ -38,7 +40,8 @@ ms.locfileid: "66014311"
 ##  <a name="creating"></a> 创建或构建新的几何图形实例  
   
 ###  <a name="existing"></a> 从现有实例创建新的几何图形实例  
- `geometry` 数据类型提供了许多内置方法，您可以使用这些方法基于现有实例创建新的 `geometry` 实例。  
+ 
+  `geometry` 数据类型提供了许多内置方法，您可以使用这些方法基于现有实例创建新的 `geometry` 实例。  
   
  **在几何图形周围创建缓冲区**  
  [STBuffer（geometry 数据类型）](/sql/t-sql/spatial-geometry/stbuffer-geometry-data-type)  
@@ -69,7 +72,8 @@ ms.locfileid: "66014311"
   
   
 ###  <a name="wkt"></a> 从熟知文本输入构造几何图形实例  
- `geometry` 数据类型提供了若干种用开放地理空间联盟 (OGC) WKT 表示形式生成几何图形的内置方法。 WKT 标准是一种允许几何图形数据以文本形式交换的文本字符串。  
+ 
+  `geometry` 数据类型提供了若干种用开放地理空间联盟 (OGC) WKT 表示形式生成几何图形的内置方法。 WKT 标准是一种允许几何图形数据以文本形式交换的文本字符串。  
   
  **用 WKT 输入构造任意类型的几何图形实例**  
  [STGeomFromText（geometry 数据类型）](/sql/t-sql/spatial-geometry/stgeomfromtext-geometry-data-type)  
@@ -129,7 +133,7 @@ ms.locfileid: "66014311"
   
   
 ###  <a name="gml"></a> 用 GML 文本输入构造几何图形实例  
- `geometry`数据类型提供了生成的方法`geometry`gml 的 XML 表示形式的几何对象的实例。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持部分 GML。  
+ `geometry`数据类型提供了一个方法，该方法`geometry`从 GML （几何对象的 XML 表示形式）生成实例。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持部分 GML。  
   
  **用 GML 输入构造任意类型的几何图形实例**  
  [GeomFromGml（geometry 数据类型）](/sql/t-sql/spatial-geometry/geomfromgml-geometry-data-type)  
@@ -156,7 +160,7 @@ ms.locfileid: "66014311"
   
   
 ##  <a name="querying"></a> 查询几何图形实例的属性和行为  
- 所有`geometry`实例都有多个可通过方法检索的属性的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供。 下列主题定义了几何图形类型的属性和行为，并为查询每种图形定义了方法。  
+ 所有`geometry`实例都具有多个可通过[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供的方法进行检索的属性。 下列主题定义了几何图形类型的属性和行为，并为查询每种图形定义了方法。  
   
 ###  <a name="valid"></a> 有效性、实例类型和 GeometryCollection 信息  
  构造 `geometry` 实例后，就可以使用以下方法确定其格式是否正确、返回实例类型，或者，如果它是集合实例，则返回特定的 `geometry` 实例。  
@@ -182,7 +186,8 @@ ms.locfileid: "66014311"
   
   
 ###  <a name="number"></a> 点数  
- 所有非空`geometry`实例由组成*点*。 这些点表示在其上绘制几何图形的面的 X 和 Y 坐标。 `geometry` 提供许多用于查询实例的点的内置方法。  
+ 所有非`geometry`空实例都由*点*组成。 这些点表示在其上绘制几何图形的面的 X 和 Y 坐标。 
+  `geometry` 提供许多用于查询实例的点的内置方法。  
   
  **返回构成实例的点数。**  
  [STNumPoints（geometry 数据类型）](/sql/t-sql/spatial-geometry/stnumpoints-geometry-data-type)  
@@ -233,7 +238,7 @@ ms.locfileid: "66014311"
   
   
 ###  <a name="simple"></a> Simple  
- 有关`geometry`的实例才是*简单*，它必须满足这两项要求：  
+ `geometry`为了使实例的*简单*，它必须满足这两个要求：  
   
 -   实例的每个图形不能与自身相交，但其终点除外。  
   
@@ -248,13 +253,15 @@ ms.locfileid: "66014311"
   
   
 ###  <a name="boundary"></a> 边界、内部和外部  
- *内部*的`geometry`实例是指由实例占用的空间并*外部*是指未占用空间它。  
+ 实例的内部是实例占用的空间，而*外部*是指未占用的空间。 ** `geometry`  
   
  “边界”  由 OGC 定义，如下所示：  
   
--   `Point` 和 `MultiPoint` 实例没有边界。  
+-   
+  `Point` 和 `MultiPoint` 实例没有边界。  
   
--   `LineString` 和 `MultiLineString` 边界由起始点和终点形成，并删除那些出现次数为偶数的点。  
+-   
+  `LineString` 和 `MultiLineString` 边界由起始点和终点形成，并删除那些出现次数为偶数的点。  
   
 ```  
 DECLARE @g geometry;  
@@ -262,7 +269,8 @@ SET @g = geometry::Parse('MULTILINESTRING((0 1, 0 0, 1 0, 0 1), (1 1, 1 0))');
 SELECT @g.STBoundary().ToString();  
 ```  
   
- `Polygon` 或 `MultiPolygon` 实例的边界是其环的集合。  
+ 
+  `Polygon` 或 `MultiPolygon` 实例的边界是其环的集合。  
   
 ```  
 DECLARE @g geometry;  
@@ -276,7 +284,7 @@ SELECT @g.STBoundary().ToString();
   
   
 ###  <a name="envelope"></a> 包络线  
- *信封*的`geometry`实例，也称为*边界框*、 按最小值形成的轴对齐矩形和最大 （X，Y） 坐标的实例。  
+ 实例的信封也称为 "*边界框*"，它是由实例的最小和最大坐标（X，Y）组成的轴对齐矩形。 ** `geometry`  
   
  **返回实例的包络线**  
  [STEnvelope](/sql/t-sql/spatial-geometry/stenvelope-geometry-data-type)  
@@ -284,7 +292,9 @@ SELECT @g.STBoundary().ToString();
   
   
 ###  <a name="closure"></a> 闭合  
- 一个*关闭*`geometry`实例是指起始点和终点相同。 `Polygon` 实例被视为闭合的。 `Point` 实例不是闭合的。  
+ *闭合*`geometry`的实例是一个图形，其起点和终点是相同的。 
+  `Polygon` 实例被视为闭合的。 
+  `Point` 实例不是闭合的。  
   
  环是一个简单、闭合的 `LineString` 实例。  
   
@@ -316,7 +326,8 @@ SELECT @g.STBoundary().ToString();
   
   
 ##  <a name="rel"></a> 确定几何图形实例之间的关系  
- `geometry` 数据类型提供了许多内置方法，您可以使用这些方法确定两个 `geometry` 实例之间的关系。  
+ 
+  `geometry` 数据类型提供了许多内置方法，您可以使用这些方法确定两个 `geometry` 实例之间的关系。  
   
  **确定两个实例是否包含相同的点集**  
  [STEquals](/sql/t-sql/spatial-geometry/stequals-geometry-data-type)  
@@ -354,7 +365,8 @@ SELECT @g.STBoundary().ToString();
   
   
 ##  <a name="defaultsrid"></a> 几何图形实例默认 SRID 为零  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中 `geometry` 实例的默认 SRID 为 0。 利用 `geometry` 空间数据，执行计算是不需要空间实例的指定 SRID 的；因此，实例可驻留在未定义的平面空间。 若要在 `geometry` 数据类型方法的计算中指明未定义的平面空间，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 使用 SRID 0。  
+ 
+  `geometry` 中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的默认 SRID 为 0。 利用 `geometry` 空间数据，执行计算是不需要空间实例的指定 SRID 的；因此，实例可驻留在未定义的平面空间。 若要在 `geometry` 数据类型方法的计算中指明未定义的平面空间，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 使用 SRID 0。  
   
 ##  <a name="examples"></a> 示例  
  以下两个示例显示了如何添加和查询几何图形数据。  
@@ -395,7 +407,7 @@ SELECT @g.STBoundary().ToString();
   
   
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [空间数据 (SQL Server)](spatial-data-sql-server.md)  
   
   

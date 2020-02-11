@@ -1,5 +1,5 @@
 ---
-title: Count （集） (MDX) |Microsoft Docs
+title: Count （集）（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: aac2f72cc8cd91e1964fd7734b858be8215cfdd8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68047291"
 ---
 # <a name="count-set-mdx"></a>Count（集）(MDX)
@@ -36,12 +36,12 @@ Set_Expression.Count
  返回集的有效多维表达式 (MDX)。  
   
 ## <a name="remarks"></a>备注  
- **Count （集）** 函数包括还是排除空单元格，具体取决于所使用的语法。 如果使用标准语法时，可以排除或者通过使用包含空单元格**EXCLUDEEMPTY**或**INCLUDEEMPTY**标记，分别。 如果使用备用语法，则函数始终包括空单元。  
+ **计数（Set）** 函数包括或排除空单元，具体取决于所使用的语法。 如果使用标准语法，则可以分别使用**EXCLUDEEMPTY**或**INCLUDEEMPTY**标志排除或包含空单元。 如果使用备用语法，则函数始终包括空单元。  
   
- 若要排除的一组计数中的空单元，请使用标准语法和可选**EXCLUDEEMPTY**标志。  
+ 若要在集的计数中排除空单元，请使用标准语法和可选的**EXCLUDEEMPTY**标志。  
   
 > [!NOTE]  
->  **Count （集）** 函数对空单元格默认情况下进行计数。 与此相反，**计数**OLE DB，用于计算一组中的函数默认情况下排除空单元格。  
+>  默认情况下， **Count （Set）** 函数对空单元进行计数。 相反，默认情况下，计算集数的 OLE DB 中的**Count**函数不包括空单元。  
   
 ## <a name="examples"></a>示例  
  下例统计成员集中单元的数目，该成员集由“产品”维度中“型号名称”属性层次结构的子级构成。  
@@ -53,14 +53,14 @@ SELECT Measures.X ON 0
 FROM [Adventure Works]  
 ```  
   
- 下面的示例通过使用计算的 Product 维度中的产品数量**DrilldownLevel**函数结合**计数**函数。  
+ 下面的示例通过将**DrilldownLevel**函数与**Count**函数结合使用来计算 Product 维度中的产品数。  
   
 ```  
 Count(DrilldownLevel (   
    [Product].[Product].[Product]))  
 ```  
   
- 下面的示例返回通过使用到上一日历季度相比销售额有所下降的分销商**计数**函数结合**筛选器**函数和许多其他函数。 此查询使用**聚合**函数即可选择多个地域成员，例如对客户端应用程序中的下拉列表中进行选择。  
+ 下面的示例通过将**Count**函数与**Filter**函数以及其他许多函数结合使用，返回与前一个日历季度相比的销售额被下降的分销商。 此查询使用**聚合**函数来支持从客户端应用程序的下拉列表中选择多个地理成员（例如）。  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS  
@@ -90,17 +90,17 @@ WHERE ([Geography].[State-Province].x,
   
 ```  
   
-## <a name="see-also"></a>请参阅  
- [计数&#40;维度&#41; &#40;MDX&#41;](../mdx/count-dimension-mdx.md)   
- [计数&#40;层次结构级别&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)   
- [计数&#40;元组&#41; &#40;MDX&#41;](../mdx/count-tuple-mdx.md)   
- [DrilldownLevel (MDX)](../mdx/drilldownlevel-mdx.md)   
- [AddCalculatedMembers (MDX)](../mdx/addcalculatedmembers-mdx.md)   
- [Hierarchize (MDX)](../mdx/hierarchize-mdx.md)   
- [属性 (MDX)](../mdx/properties-mdx.md)   
- [Aggregate (MDX)](../mdx/aggregate-mdx.md)   
- [Filter (MDX)](../mdx/filter-mdx.md)   
- [PrevMember (MDX)](../mdx/prevmember-mdx.md)   
- [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#41; &#40;MDX&#41;&#40;维度计数](../mdx/count-dimension-mdx.md)   
+ [&#41; &#40;MDX&#41;&#40;层次结构级别](../mdx/count-hierarchy-levels-mdx.md)   
+ [&#41; &#40;MDX &#40;元组计数&#41;](../mdx/count-tuple-mdx.md)   
+ [DrilldownLevel &#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)   
+ [AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)   
+ [Hierarchize &#40;MDX&#41;](../mdx/hierarchize-mdx.md)   
+ [MDX&#41;&#40;属性](../mdx/properties-mdx.md)   
+ [聚合 &#40;MDX&#41;](../mdx/aggregate-mdx.md)   
+ [筛选 &#40;MDX&#41;](../mdx/filter-mdx.md)   
+ [PrevMember &#40;MDX&#41;](../mdx/prevmember-mdx.md)   
+ [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -13,10 +13,10 @@ ms.assetid: cca96a8f-7737-42d2-bbcc-03d5f858dcc1
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 7883a99a223af67f536a0991bb0ba48f30211bc6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071357"
 ---
 # <a name="alter-index-selective-xml-indexes"></a>ALTER INDEX（选择性 XML 索引）
@@ -32,7 +32,7 @@ ms.locfileid: "68071357"
   
  您不能更改辅助选择性 XML 索引。 有关详细信息，请参阅[创建、更改和删除辅助选择性 XML 索引](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md)。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -124,25 +124,25 @@ identifier
   
 -   `table_name`  
   
- [WITH XMLNAMESPACES ( \<xmlnamespace_list> )]    
+ [WITH XMLNAMESPACES **(** \<xmlnamespace_list> **)** ]  
  要建立索引的路径使用的命名空间的列表。 有关 WITH XMLNAMESPACES 子句的语法的信息，请参阅 [WITH XMLNAMESPACES (Transact-SQL)](../../t-sql/xml/with-xmlnamespaces.md)。  
   
- FOR ( \<promoted_node_path_action_list> )    
+ FOR **(** \<promoted_node_path_action_list> **)**  
  要添加或删除的已建立索引的路径的列表。  
   
 -   使用 ADD 语句添加路径  。 添加路径时，您使用的语法与使用 CREATE SELECTIVE XML INDEX 语句创建路径所用的语法相同。 有关可以在 CREATE 或 ALTER 语句中指定的路径的信息，请参阅[为选择性 XML 索引指定路径和优化提示](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)。  
   
 -   使用 REMOVE 语句删除路径  。 删除路径时，请提供创建路径时的路径名。  
   
- [WITH ( \<index_options> )]    
+ [WITH **(** \<index_options> **)** ]  
  使用不包含 FOR 子句的 ALTER INDEX 时只能指定 \<index_options>。 在您使用 ALTER INDEX 添加或删除索引中的路径时，索引选项将不是有效的参数。 有关索引选项的信息，请参阅 [CREATE XML INDEX（选择性 XML 索引）](../../t-sql/statements/create-xml-index-selective-xml-indexes.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 > [!IMPORTANT]  
 >  在您运行 ALTER INDEX 语句时，始终重新生成选择性 XML 索引。 请务必考虑此过程对服务器资源的影响。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>权限  
  若要运行 ALTER INDEX，需要对表或视图拥有 ALTER 权限。  

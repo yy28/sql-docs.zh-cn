@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1f9eb6860a40f6c47e65beb3fe109255d333d628
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058193"
 ---
 # <a name="implementation-of-child-packages"></a>子包的实现
@@ -32,7 +32,7 @@ ms.locfileid: "66058193"
   
  设计子包时，包的设计不受限制，并且可以添加任何希望的功能。 但是，如果包要访问数据，则必须确保运行包的服务器能够访问该数据。  
   
- 若要标识执行子包的父包，请在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的“解决方案资源管理器”中右键单击该包，然后单击“入口点包”。  
+ 若要标识执行子包的父包，请在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的解决方案资源管理器中右键单击该包，然后单击 **“入口点包”**。  
   
  设计完子包之后，下一个步骤是将它们部署在远程服务器上。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66058193"
   
 -   通过使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]将包导出。  
   
--   先为包含要部署的包的项目生成部署实用工具，然后运行包安装向导将包安装到文件系统或 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例，从而达到部署包的目的。 有关详细信息，请参阅[包部署&#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)。  
+-   先为包含要部署的包的项目生成部署实用工具，然后运行包安装向导将包安装到文件系统或 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例，从而达到部署包的目的。 有关详细信息，请参阅[包部署 &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)。  
   
  必须重复部署到希望使用的每个远程服务器。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66058193"
 ## <a name="debugging-the-sql-server-agent-jobs-and-child-packages"></a>调试 SQL Server 代理作业和子包  
  通过使用下列方法之一，可以测试 SQL Server 代理作业及其子包：  
   
--   通过单击“调试” / “开始执行(不调试)”在 SSIS 设计器中运行每个子包。  
+-   在 SSIS 设计器中运行每个子包，方法是单击 "**调试** / **开始" （不调试**）。  
   
 -   通过使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]在远程计算机上运行单个 SQL Server 代理作业，以确保包运行。  
   
@@ -67,8 +67,8 @@ ms.locfileid: "66058193"
   
 ## <a name="related-content"></a>相关内容  
   
--   博客文章[SSIS:访问父包中的变量](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/)，andyleonard.blog 上。  
+-   Andyleonard 上的博客文章[SSIS：访问父包中的变量](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/)。  
   
--   文章中，[执行包任务](../integration-services/control-flow/execute-package-task.md)。  
+-   文章：[执行包任务](../integration-services/control-flow/execute-package-task.md)。  
   
   

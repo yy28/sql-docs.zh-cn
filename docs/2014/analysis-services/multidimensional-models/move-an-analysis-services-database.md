@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 02d084aea4491982d560f1cf0b8dc449b8502f09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073601"
 ---
 # <a name="move-an-analysis-services-database"></a>移动 Analysis Services 数据库
@@ -43,7 +43,7 @@ ms.locfileid: "66073601"
   
 1.  在 SSMS 的左窗格或右窗格中找到要移动的数据库。  
   
-2.  右键单击数据库并选择**分离...**  
+2.  右键单击该数据库并选择 "**分离 ...** "  
   
 3.  为要分离的数据库分配一个密码，然后单击 **“确定”** 执行分离命令。  
   
@@ -51,11 +51,11 @@ ms.locfileid: "66073601"
   
 5.  在 SSMS 的左窗格或右窗格中找到 **“数据库”** 文件夹。  
   
-6.  右键单击**数据库**文件夹，然后选择**附加...**  
+6.  右键单击 "**数据库**" 文件夹，然后选择 "**附加 ...** "  
   
-7.  在 **“文件夹”** 文本框中，键入数据库文件夹的新位置。 或者，可以使用浏览按钮 ( **...** ) 以查找数据库文件夹。  
+7.  在 **“文件夹”** 文本框中，键入数据库文件夹的新位置。 或者，您可以使用浏览按钮（**...**）查找数据库文件夹。  
   
-8.  选择`ReadWrite`数据库模式。  
+8.  选择数据库`ReadWrite`的模式。  
   
 9. 键入步骤 3 中使用的密码，然后单击 **“确定”** 执行附加命令。  
   
@@ -139,12 +139,12 @@ ms.locfileid: "66073601"
   
 2.  执行 XMLA 命令。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [附加和分离 Analysis Services 数据库](attach-and-detach-analysis-services-databases.md)   
  [数据库存储位置](database-storage-location.md)   
- [数据库 ReadWriteMode](database-readwritemodes.md)   
+ [数据库 Readwritemode](database-readwritemodes.md)   
  [附加元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
  [分离元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
  [ReadWriteMode 元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/readwritemode-element)   

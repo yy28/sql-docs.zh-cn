@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5dfc0aa145f106fc57c25a6249b928ee27ab4b87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62757196"
 ---
 # <a name="view-or-configure-remote-server-connection-options-sql-server"></a>查看或配置远程服务器连接选项 (SQL Server)
@@ -40,9 +40,9 @@ ms.locfileid: "62757196"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  执行 **sp_serveroption** 要求服务器上的 ALTER ANY LINKED SERVER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -51,7 +51,7 @@ ms.locfileid: "62757196"
   
 1.  在“对象资源管理器”中，右键单击服务器，再单击“属性”  。  
   
-2.  在“SQL Server 属性 - \<server_name>” **** 对话框中，单击“连接”  。  
+2.  在“SQL Server 属性 - **server_name\<”******>** 对话框中，单击“连接”****。  
   
 3.  在 **“连接”** 页上，查看 **“远程服务器连接”** 设置，并根据需要进行修改。  
   
@@ -89,7 +89,7 @@ EXEC sp_serveroption 'SEATTLE3', 'collation compatible', 'true';
 ##  <a name="FollowUp"></a> 跟进：在配置远程服务器连接选项之后  
  必须停止后再重新启动远程服务器，设置才会生效。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [服务器配置选项 (SQL Server)](server-configuration-options-sql-server.md)   
  [远程服务器](remote-servers.md)   
  [链接服务器（数据库引擎）](../../relational-databases/linked-servers/linked-servers-database-engine.md)   

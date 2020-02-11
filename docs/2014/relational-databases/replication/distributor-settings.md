@@ -1,5 +1,5 @@
 ---
-title: 分发服务器设置对话框 |Microsoft Docs
+title: "\"分发服务器设置\" 对话框 |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,20 +15,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d910cdb4baf1d65f67ece14c20a1f384af2a843b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721347"
 ---
-# <a name="sql-server-replication-distributor-settings-dialog-box"></a>SQL Server 复制分发服务器设置对话框
+# <a name="sql-server-replication-distributor-settings-dialog-box"></a>SQL Server 复制 "分发服务器设置" 对话框
   使用 **“分发服务器设置”** 对话框，可以更改已添加到复制监视器左窗格中的分发服务器的设置。  
   
 ## <a name="options"></a>选项  
  **复制监视器启动时自动连接**  
  选择此选项可以允许复制监视器连接到分发服务器并检索状态信息。  
   
- **“连接”**  
+ **Connection**  
  单击此选项可以显示 **“连接到服务器”** 对话框。 通过该对话框可以查看和更改复制监视器用来连接分发服务器的连接属性和凭据。  
   
  **自动刷新此分发服务器及其发布的状态**  
@@ -43,7 +43,7 @@ ms.locfileid: "62721347"
  **新建组**  
  单击此项可创建新的发布服务器组。 发布服务器组提供了在复制监视器内组织发布服务器的简便方法。 组既不影响数据的复制，也不影响复制拓扑中服务器之间的关系。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [启动复制监视器](monitor/start-the-replication-monitor.md)   
  [监视复制](monitoring-replication.md)  
   

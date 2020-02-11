@@ -18,10 +18,10 @@ ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 42e3cd2c0431a1d23f3d67f7f1e983421b9b1e9a
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72278330"
 ---
 # <a name="getfilenamespacepath-transact-sql"></a>GetFileNamespacePath (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "72278330"
 ```  
   
 ## <a name="arguments"></a>参数  
- *column-name*  
+ *列名*  
  FileTable 中的 VARBINARY （MAX） **file_stream**列的列名。  
   
  *列名*的值必须是有效的列名称。 它不能是表达式，也不能是从其他数据类型的列转换或强制转换的值。  
@@ -45,15 +45,15 @@ ms.locfileid: "72278330"
  *is_full_path*  
  整数表达式，指定是返回相对路径还是绝对路径。 *is_full_path*可以具有以下值之一：  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
-|**0**|返回数据库级目录内的相对路径。<br /><br /> 此为默认值。|  
+|**0**|返回数据库级目录内的相对路径。<br /><br /> 此为默认值|  
 |**1**|返回以 `\\computer_name` 开头的完整 UNC 路径。|  
   
- *\@选项*  
- 一个整数表达式，定义路径的服务器组件应如何进行格式化。 *\@选项*可以具有以下值之一：  
+ *\@选*  
+ 一个整数表达式，定义路径的服务器组件应如何进行格式化。 选项可以具有以下值之一： * \@*  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**0**|返回转换为 NetBIOS 格式的服务器名称，例如：<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> 这是默认值。|  
 |**1**|返回未经转换的服务器名称，例如：<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
@@ -86,7 +86,7 @@ SELECT @fullPath = @root + file_stream.GetFileNamespacePath() FROM DocumentStore
 WHERE Name = N'document.docx';  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 ## <a name="examples"></a>示例  
  下面的示例演示如何调用**GetFileNamespacePath**函数以获取 FileTable 中文件或目录的 UNC 路径。  

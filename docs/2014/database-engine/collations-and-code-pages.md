@@ -11,13 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1969a3e30b31a21c380559a3e8898f87eb8848b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62786732"
 ---
 # <a name="collations-and-code-pages"></a>排序规则和代码页
+  
   [!INCLUDE[hek_2](../includes/hek-2-md.md)] 对于内存优化表中的 (var)char 列的支持代码页，以及在索引和本机编译存储过程中使用的支持的排序规则方面存在限制。  
   
  (var)char 值的代码页决定着字符与存储在表中的字节表示之间的映射。 例如，使用 Windows Latin 1 代码页（1252；[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的默认代码页）时，字符 'a' 对应字节 0x61。  
@@ -82,7 +83,7 @@ GO
   
 -   本机编译存储过程中的所有表达式和排序操作都必须使用 BIN2 排序规则。 也就是说，所有比较和排序操作都基于字符（二进制表）的 Unicode 码位。 例如，所有排序操作均区分大小写（“Z”位于“a”之前）。 如有必要，可使用解释的 [!INCLUDE[tsql](../includes/tsql-md.md)] 进行不区分大小写的排序和比较。  
   
--   本机编译的存储过程内部不支持 UTF-16 数据截断。 这意味着该 n (var) char (*n*) 的值无法转换为类型 n (var) char (*我*)，如果*我* < *n*，如果排序规则具有 _SC 属性。 例如，不支持以下操作：  
+-   本机编译的存储过程内部不支持 UTF-16 数据截断。 这 < *意味着，如果*排序规则有 _SC 属性 *，则 n*（var） char （*n*）值不能转换为类型 n （var） char （*i*）。 例如，不支持以下操作：  
   
     ```sql  
     -- column definition using an _SC collation  
@@ -96,7 +97,7 @@ GO
   
      使用足够大的类型声明变量以避免截断。  
   
- 下面的示例演示了内存中 OLTP 中排序规则限制的一些影响和解决方法。 该示例使用上面指定的 Employees 表。 此示例列出所有雇员。 注意，对于 LastName，出于二进制排序规则的原因，大写名称将排在小写名称之前。 因此，'Thomas' 排在 'nolan' 之前（因为大写字符的码位在前）。 FirstName 拥有不区分大小写的排序规则。 因此，字符以其在字母表中的位置而非该字符的码位进行排序。  
+ 下面的示例演示了内存中 OLTP 中排序规则限制的一些影响和解决方法。 该示例使用上面指定的 Employees 表。 此示例列出所有员工。 注意，对于 LastName，出于二进制排序规则的原因，大写名称将排在小写名称之前。 因此，'Thomas' 排在 'nolan' 之前（因为大写字符的码位在前）。 FirstName 拥有不区分大小写的排序规则。 因此，字符以其在字母表中的位置而非该字符的码位进行排序。  
   
 ```sql  
 -- insert a number of values  
@@ -142,7 +143,7 @@ EXEC usp_EmployeeByName 'thomas', 'John'
 EXEC usp_EmployeeByName 'thomas', 'john'  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [内存中 OLTP（内存中优化）](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

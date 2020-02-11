@@ -14,21 +14,21 @@ ms.assetid: 832dcda1-e452-48e6-8adb-7fb33c4fb4ff
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0ddb695d996cdd40b7fde4087799e5c1ec84224c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68081934"
 ---
 # <a name="create-index-statement-limitations"></a>CREATE INDEX 语句限制
-Microsoft Excel 或文本文件驱动程序不支持 CREATE INDEX 语句。  
+Microsoft Excel 或文本驱动程序不支持 CREATE INDEX 语句。  
   
- 可以在最多 10 个列上定义索引。 如果在 CREATE INDEX 语句中包含 10 个以上的列，将不会识别索引和表将被视为与不创建任何索引。  
+ 最多可以定义10个列的索引。 如果 CREATE INDEX 语句中包含10个以上的列，则将不会识别索引，并且该表将被视为未创建索引。  
   
- DBASE 驱动程序不能逻辑列创建索引。  
+ DBASE 驱动程序无法对逻辑列创建索引。  
   
- 当使用 dBASE 驱动程序时，可通过在 SELECT 语句的 WHERE 子句中指定的列 （字段） 上构建.mdx （或.ndx） 索引提高大型文件上的响应时间。 现有.mdx 索引将自动应用对于 =，>， \<，> =、 = <，并在 WHERE 子句和 LIKE 谓词，以及联接谓词中运算符之间。  
+ 使用 dBASE 驱动程序时，可以通过在 SELECT 语句的 WHERE 子句中指定的列（字段）上生成一个或多个 mdx （或 ndx）索引，来改进大型文件的响应时间。 现有的. 将在 WHERE 子句中的 =、>、 \<、>=、=< 和运算符之间自动应用 mdx 索引，并在联接谓词中应用。  
   
- 当使用 dBASE 驱动程序时，CREATE UNIQUE INDEX 语句创建的索引会实际上不唯一，并重复的值可以插入到索引的列。 从具有相同键值的一组只有一条记录可添加到索引。  
+ 使用 dBASE 驱动程序时，CREATE UNIQUE INDEX 语句创建的索引实际上是不唯一的，并且可以在索引列中插入重复值。 只能将具有相同键值的集中的一条记录添加到索引中。  
   
- 当使用 Paradox 驱动程序时，必须在连续中包括的第一列的表的列的子集时定义唯一索引。 如果未对表或 Paradox 驱动程序使用而无需 borland 公司数据库引擎的实现时定义唯一索引，则不能通过 Paradox 驱动程序更新的表。
+ 使用 Paradox 驱动程序时，必须在表中的列的连续子集上定义唯一索引，包括第一列。 如果表上未定义唯一索引，或在未实现 Borland 数据库引擎的情况下使用 Paradox 驱动程序，则 Paradox 驱动程序无法更新表。

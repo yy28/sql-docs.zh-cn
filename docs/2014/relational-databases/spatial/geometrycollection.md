@@ -13,14 +13,16 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 5aceabe5a263cfa53572be6f818ddc905f9742a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014233"
 ---
 # <a name="geometrycollection"></a>GeometryCollection
-  `GeometryCollection` 是零个或更多个 `geometry` 或 `geography` 实例的集合。 `GeometryCollection` 可以为空。  
+  
+  `GeometryCollection` 是零个或更多个 `geometry` 或 `geography` 实例的集合。 
+  `GeometryCollection` 可以为空。  
   
 ## <a name="geometrycollection-instances"></a>GeometryCollection 实例  
   
@@ -50,7 +52,8 @@ DECLARE @g4 geometry = 'GEOMETRYCOLLECTION(LINESTRING(1 1, 3 5),POLYGON((-1 -1, 
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();  
 ```  
   
- `@g4` 无效，因为 `Polygon` 实例中的 `GeometryCollection` 实例无效。  
+ 
+  `@g4` 无效，因为 `Polygon` 实例中的 `GeometryCollection` 实例无效。  
   
  有关接受的和有效的实例的详细信息，请参阅 [Point](point.md)、 [MultiPoint](multipoint.md)、 [LineString](linestring.md)、 [MultiLineString](multilinestring.md)、 [Polygon](polygon.md)和 [MultiPolygon](multipolygon.md)。  
   
@@ -62,7 +65,7 @@ DECLARE @g geometry;
 SET @g = geometry::STGeomCollFromText('GEOMETRYCOLLECTION(POINT(3 3 1), POLYGON((0 0 2, 1 10 3, 1 0 4, 0 0 2)))', 1);  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [空间数据 (SQL Server)](spatial-data-sql-server.md)  
   
   

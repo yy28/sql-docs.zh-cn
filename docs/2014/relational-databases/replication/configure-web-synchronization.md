@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 341066defb122e33e82cfde87a561bc9df1ed762
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721649"
 ---
 # <a name="configure-web-synchronization"></a>Configure Web Synchronization
@@ -101,7 +101,8 @@ ms.locfileid: "62721649"
   
  如果您是首次使用发布服务器，还必须配置分发服务器和快照共享。 每台订阅服务器中的合并代理都必须对快照共享具有读取权限。 有关详细信息，请参阅[配置分发](configure-distribution.md)和[保护快照文件夹的安全](security/secure-the-snapshot-folder.md)。  
   
- `gen` 是 websync xml 文件中的一个保留字。 不要尝试发布包含名为 `gen` 的列的表。  
+ 
+  `gen` 是 websync xml 文件中的一个保留字。 不要尝试发布包含名为 `gen` 的列的表。  
   
 ## <a name="configuring-the-subscription"></a>配置订阅  
  启用发布并配置 IIS 后，创建请求订阅并指定该请求订阅应通过使用 IIS 进行同步。 （仅请求订阅支持 Web 同步。）  
@@ -124,7 +125,7 @@ ms.locfileid: "62721649"
   
 -   如果要复制大量数据，则可能必须调整合并代理的批大小。  
   
- 合并复制的批大小是用“  代”度量的，代是指每个项目的变更集。 使用指定的批处理中的生成数的-`DownloadGenerationsPerBatch`和-`UploadGenerationsPerBatch`的合并代理参数。 有关详细信息，请参阅 [Replication Merge Agent](agents/replication-merge-agent.md)。  
+ 合并复制的批大小是用“  代”度量的，代是指每个项目的变更集。 批处理中的代数通过使用合并代理的-`DownloadGenerationsPerBatch`和`UploadGenerationsPerBatch`参数来指定。 有关详细信息，请参阅 [Replication Merge Agent](agents/replication-merge-agent.md)。  
   
  对于大量数据，请为每个批次参数指定一个较小的数字。 我们建议您从值 10 开始，然后基于应用程序需要和性能进行调整。 通常，这些参数在代理配置文件中指定。 有关配置文件的详细信息，请参阅 [Replication Agent Profiles](agents/replication-agent-profiles.md)。  
   
@@ -144,7 +145,7 @@ ms.locfileid: "62721649"
   
      有关代理所需权限的详细信息，请参阅 [Replication Agent Security Model](security/replication-agent-security-model.md)。  
   
--   指定与合并代理在执行任务（在新建订阅向导的 **“Web 服务器信息”** 页中指定帐户和密码，或指定 **@internet_url** 和 **@internet_login** 和 [@internet_login](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)。 此帐户必须具有对快照共享的读取权限。  
+-   指定与在新建订阅向导的 " **Web 服务器信息**" 页中指定帐户和密码时使用的域帐户相同的域帐户，或者指定**@internet_url** **@internet_login** [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)的和参数的值时所使用的域合并代理帐户。 此帐户必须具有对快照共享的读取权限。  
   
 -   每个发布都应对 IIS 使用一个单独的虚拟目录。  
   
@@ -163,7 +164,7 @@ ms.locfileid: "62721649"
 > [!IMPORTANT]  
 >  打开防火墙的端口可能会使服务器受到恶意攻击。 请确保在打开端口之前了解防火墙系统。 有关详细信息，请参阅 [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [合并复制的 Web 同步](web-synchronization-for-merge-replication.md)  
   
   

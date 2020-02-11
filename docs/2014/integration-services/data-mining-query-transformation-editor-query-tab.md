@@ -1,5 +1,5 @@
 ---
-title: 数据挖掘查询转换编辑器 （查询选项卡） |Microsoft Docs
+title: 数据挖掘查询转换编辑器（"查询" 选项卡） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 431e01df40ab3a531af21977b85253d84768118f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059744"
 ---
 # <a name="data-mining-query-transformation-editor-query-tab"></a>数据挖掘查询转换编辑器（“查询”选项卡）
@@ -31,10 +31,10 @@ ms.locfileid: "66059744"
  将数据挖掘扩展插件 (DMX) 查询直接键入文本框中。  
   
  **生成新查询**  
- 单击“生成新查询”可以通过使用图形查询生成器来创建数据挖掘扩展插件 (DMX) 查询。  
+ 单击****“生成新查询”可以通过使用图形查询生成器来创建数据挖掘扩展插件 (DMX) 查询。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [数据挖掘查询转换编辑器（“挖掘模型”选项卡）](../../2014/integration-services/data-mining-query-transformation-editor-mining-model-tab.md)  
+ [数据挖掘查询转换编辑器 &#40;挖掘模型 "选项卡&#41;](../../2014/integration-services/data-mining-query-transformation-editor-mining-model-tab.md)  
   
   

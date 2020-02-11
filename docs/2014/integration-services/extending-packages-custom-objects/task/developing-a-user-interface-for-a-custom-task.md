@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6268fe16c31c931dc71ad1a62bd72e08b1ecb537
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768898"
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>为自定义任务开发用户界面
@@ -33,14 +33,14 @@ ms.locfileid: "62768898"
   
  为任务开发自定义用户界面包括使用两个重要的类。 下表介绍了这两个类。  
   
-|类|Description|  
+|类|说明|  
 |-----------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|标识托管任务的特性，该特性通过其属性提供设计时信息以控制 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器显示对象和与对象交互的方式。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI>|任务所用的接口，用来将任务与其自定义用户界面相关联。|  
   
  本节介绍为自定义任务开发用户界面时，<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 特性和 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI> 接口的角色，并提供有关如何在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中创建、集成、部署和调试任务的详细信息。  
   
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器为任务提供用户界面的多个入口点：用户可以从快捷菜单中选择“编辑”，双击任务，或者单击属性表底部的“显示编辑器”链接。 当用户访问其中一个入口点时，[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 编辑器会定位并加载包含该任务的用户界面的程序集。 任务的用户界面负责创建在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中向用户显示的属性对话框。  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器为任务提供用户界面的多个入口点：用户可以从快捷菜单中选择“编辑”  ，双击任务，或者单击属性表底部的“显示编辑器”  链接。 当用户访问其中一个入口点时，[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 编辑器会定位并加载包含该任务的用户界面的程序集。 任务的用户界面负责创建在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中向用户显示的属性对话框。  
   
  任务及其用户界面是不同的实体。 应该在不同的程序集中实现它们，以减少本地化、部署和维护的工作。 除了在任务中编码的 <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 特性值中包含的信息外，任务 DLL 不会加载、调用或通常的包含其用户界面的任何知识。 此信息是任务与其用户界面相关联的唯一方式。  
   
@@ -49,12 +49,12 @@ ms.locfileid: "62768898"
   
  下表介绍了 <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 特性的各属性。  
   
-|属性|Description|  
+|properties|说明|  
 |--------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.DisplayName%2A>|在“控制流”工具箱中显示任务名称。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.Description%2A>|任务说明（继承自 <xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute>）。 此属性显示在工具提示中。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.IconResource%2A>|显示在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中的图标。|  
-|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.RequiredProductLevel%2A>|如果使用，请将其设置为 <xref:Microsoft.SqlServer.Dts.Runtime.DTSProductLevel> 枚举中的一个值。 例如， `RequiredProductLevel = DTSProductLevel.None` 。|  
+|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.RequiredProductLevel%2A>|如果使用，请将其设置为 <xref:Microsoft.SqlServer.Dts.Runtime.DTSProductLevel> 枚举中的一个值。 例如，`RequiredProductLevel = DTSProductLevel.None` 。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskContact%2A>|保存联系信息，以备任务需要技术支持。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskType%2A>|为任务分配类型。|  
 |Attribute.TypeId|在派生类中实现时，获取此特性的唯一标识符。 有关详细信息，请参阅 .NET Framework 类库中的 `Attribute.TypeID` 属性。|  
@@ -197,9 +197,9 @@ Public Class HelloWorldTaskUI
 End Class  
 ```  
   
-![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![Integration Services 图标（小）](../../media/dts-16.gif "集成服务图标（小）")**保持与 Integration Services 最**新  <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建自定义任务](creating-a-custom-task.md)   
  [编写自定义任务代码](coding-a-custom-task.md)   
  [为自定义任务开发用户界面](developing-a-user-interface-for-a-custom-task.md)  

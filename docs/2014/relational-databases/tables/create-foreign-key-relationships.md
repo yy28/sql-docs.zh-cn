@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8b5789a277eac84d9753a180b418c05c5fd71d09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761617"
 ---
 # <a name="create-foreign-key-relationships"></a>创建外键关系
@@ -30,7 +30,7 @@ ms.locfileid: "62761617"
   
      [安全性](#Security)  
   
--   **为创建外键关系，使用：**  
+-   **创建外键关系，使用：**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -60,9 +60,9 @@ ms.locfileid: "62761617"
   
 -   仅当 FOREIGN KEY 约束引用的主键也定义为类型 `varchar(max)` 时，才能在此约束中使用类型为 `varchar(max)` 的列。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  使用外键创建新表需要在数据库中具有 CREATE TABLE 权限，并对在其中创建表的架构具有 ALTER 权限。  
   
  在某一现有表中创建外键需要对该表具有 ALTER 权限。  
@@ -71,25 +71,25 @@ ms.locfileid: "62761617"
   
 #### <a name="to-create-a-foreign-key-relationship-in-table-designer"></a>在表设计器中创建外键关系  
   
-1.  在对象资源管理器中，右键单击将位于关系的外键方的表，再单击“设计”  。  
+1.  在对象资源管理器中，右键单击将位于关系的外键方的表，再单击“设计”****。  
   
-     此时，将在 **表设计器**中打开该表。  
+     此时，将在**表设计器**中打开该表。  
   
-2.  在 **表设计器** 菜单上，单击 **“关系”** 。  
+2.  在 **表设计器** 菜单上，单击 **“关系”**。  
   
-3.  在“外键关系”  对话框中，单击“添加”  。  
+3.  在“外键关系”**** 对话框中，单击“添加”****。  
   
-     “选定的关系”  列表中将以系统提供的名称显示关系，格式为 FK_\<*tablename*>_\<*tablename*>，其中 *tablename* 是外键表的名称。  
+     关系显示在**所选关系**列表中，其格式为系统提供的名称，格式\<为 FK_*tablename*>_\<*tablename*>，其中*tablename*是外键表的名称。  
   
 4.  在 **“选定的关系”** 列表中单击该关系。  
   
-5.  单击右侧网格中的“表和列规范”，再单击该属性右侧的省略号 (…)   。  
+5.  单击右侧网格中的“表和列规范”，再单击该属性右侧的省略号 (…)********。  
   
-6.  在“表和列”  对话框中，从“主键”  下拉列表中选择要位于关系主键方的表。  
+6.  在“表和列”**** 对话框中，从“主键”**** 下拉列表中选择要位于关系主键方的表。  
   
 7.  在下方的网格中，选择要分配给表的主键的列。 在每列左侧的相临网格单元格中，选择外键表的相应外键列。  
   
-     **表设计器** 将为此关系提供一个建议名称。 若要更改此名称，请编辑 **“关系名”** 文本框的内容。  
+     **表设计器**建议关系的名称。 若要更改此名称，请编辑 **“关系名”** 文本框的内容。  
   
 8.  选择 **“确定”** 以创建该关系。  
   

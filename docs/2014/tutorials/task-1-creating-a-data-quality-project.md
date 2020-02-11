@@ -1,5 +1,5 @@
 ---
-title: 任务 1：创建数据质量项目 |Microsoft Docs
+title: 任务1：创建数据质量项目 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,26 +11,26 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 14f45ed2a07ddbc6f4fe7c227e29f34f6ea272ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484903"
 ---
 # <a name="task-1-creating-a-data-quality-project"></a>任务 1：创建数据质量项目
   在本任务中，您将创建一个数据质量项目，以便对照您在本教程前面创建的 Suppliers 知识库清理 Excel 文件中的供应商数据。  
   
-1.  在中**数据质量项目**窗格在主页上，单击**新建数据质量项目**。  
+1.  在主页上的 "**数据质量项目**" 窗格中，单击 "**新建数据质量项目**"。  
   
-     ![新建数据质量项目按钮主要页面](../../2014/tutorials/media/et-creatingadataqualityproject-01.jpg "主页上的新数据质量项目按钮页")  
+     ![主页上的“新建数据质量项目”按钮](../../2014/tutorials/media/et-creatingadataqualityproject-01.jpg "主页上的“新建数据质量项目”按钮")  
   
-2.  类型**Cleanse Supplier List**有关**名称**的项目。  
+2.  键入 "**清理供应商列表**" 作为项目**名称**。  
   
-3.  选择**供应商**有关**使用知识库**字段。 您将利用您在本教程前面创建的 Suppliers 知识库来清理输入供应商数据。  
+3.  为 "**使用知识库**" 字段选择 "**供应商**"。 您将利用您在本教程前面创建的 Suppliers 知识库来清理输入供应商数据。  
   
-4.  絋粄**清理**选为**活动**右窗格中，单击底部**下一步**。  
+4.  确保在右窗格底部选择 "**清理**" 作为**活动**，然后单击 "**下一步**"。  
   
-     ![新的数据质量项目页-清理所选](../../2014/tutorials/media/et-creatingadataqualityproject-02.jpg "选择新的数据质量项目页-清理")  
+     ![“新建数据质量项目”页 - 已选择清理](../../2014/tutorials/media/et-creatingadataqualityproject-02.jpg "“新建数据质量项目”页 - 已选择清理")  
   
 ## <a name="next-step"></a>下一步  
  [任务 2：将 Excel 列映射到 DQS 域](../../2014/tutorials/task-2-mapping-excel-columns-to-dqs-domains.md)  

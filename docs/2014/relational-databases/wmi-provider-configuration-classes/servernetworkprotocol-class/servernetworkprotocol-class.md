@@ -19,16 +19,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b40f40cea8e4f9c36b74ea87b22c5c2a6633e077
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62659939"
 ---
 # <a name="servernetworkprotocol-class"></a>ServerNetworkProtocol 类
-  [ServerNetworkProtocol 类] servernetworkprotocol class.md) 表示的实例上安装的网络协议[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，使通过网络与客户端通信。  
+  [ServerNetworkProtocol Class] ServerNetworkProtocol-class.md）表示在[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的实例上安装的网络协议，该协议允许通过网络与客户端进行通信。  
   
- 使用方法是 [ServerNetworkProtocol 类] servernetworkprotocol-class.md)，你可以：  
+ 利用 [ServerNetworkProtocol Class] ServerNetworkProtocol-class.md），可以：  
   
 -   检查属性的名称、版本、.dll 文件、数量以及所引用服务器网络协议的显示名称。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "62659939"
   
 -   启用和禁用服务器网络协议。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置服务器网络协议和网络库](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

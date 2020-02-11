@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 936f037852f39f24690e1cb9af3f63a2cfa2a613
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72781833"
 ---
 # <a name="using-table-and-index-partitioning"></a>使用表和索引分区
@@ -28,12 +28,13 @@ ms.locfileid: "72781833"
 ## <a name="index-and-table-partitioning"></a>索引和表分区  
  通过该功能可以将索引和表数据分散到各个分区中的多个文件组。 分区函数定义如何根据某些列（称为分区依据列）中的值将表或索引的行映射到一组分区。 分区方案将分区函数指定的每个分区映射到一个文件组。 这样，您便可以制定相应存档策略，用以将表扩展到多个文件组，因而也可扩展到多个物理设备。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Database> 对象包含表示已实现的分区函数的 <xref:Microsoft.SqlServer.Management.Smo.PartitionFunction> 对象的集合，以及描述如何将数据映射到文件组的 <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> 对象的集合。  
+ 
+  <xref:Microsoft.SqlServer.Management.Smo.Database> 对象包含表示已实现的分区函数的 <xref:Microsoft.SqlServer.Management.Smo.PartitionFunction> 对象的集合，以及描述如何将数据映射到文件组的 <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> 对象的集合。  
   
  每个 <xref:Microsoft.SqlServer.Management.Smo.Table> 和 <xref:Microsoft.SqlServer.Management.Smo.Index> 对象在 <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> 属性中指定其使用的分区方案，并在 <xref:Microsoft.SqlServer.Management.Smo.PartitionSchemeParameterCollection> 中指定列。  
   
 ## <a name="example"></a>示例  
- 对于下面的代码示例，您必须选择编程环境、编程模板和编程语言才能创建应用程序。 有关详细信息，请参阅[在 Visual studio .net 中创建 VISUAL BASIC SMO 项目](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)和[在 visual Studio&#35; .Net 中创建 visual C SMO 项目](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 对于下面的代码示例，您必须选择编程环境、编程模板和编程语言才能创建应用程序。 有关详细信息，请参阅[在 Visual studio .net 中创建 VISUAL BASIC SMO 项目](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)和[在 visual Studio .Net 中创建 VISUAL C&#35; smo 项目](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-visual-basic"></a>在 Visual Basic 中为表设置分区方案  
  此代码示例说明如何为 `TransactionHistory` 示例数据库中的 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 表创建分区函数和分区方案。 这些分区是按日期划分的，这样做的目的是将以前的记录分离出来，放入 `TransactionHistoryArchive` 表中。  
@@ -135,4 +136,4 @@ $ps.Create()
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md)  
+ [已分区表和索引](../../partitions/partitioned-tables-and-indexes.md)  

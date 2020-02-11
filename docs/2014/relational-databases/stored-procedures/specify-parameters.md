@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f936853c284196b05b6da6369f4410bed2297d4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62736360"
 ---
 # <a name="specify-parameters"></a>指定参数
@@ -60,13 +60,13 @@ GO
 ## <a name="specifying-parameter-names"></a>指定参数名称  
  创建过程并声明参数名时，参数名必须以一个 \@ 字符开头，并且必须在过程范围内是唯一的。  
   
- 显式命名参数并将相应的值赋给过程调用中的每个参数允许按任意顺序提供参数。 例如，如果过程 my_proc 需要使用三个参数，分别名为 \@first、\@second和 \@third，可以将传递到此过程的值赋给参数名，如：`EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
+ 显式命名参数并将相应的值赋给过程调用中的每个参数允许按任意顺序提供参数。 例如，如果过程 my_proc**** 需要使用三个参数，分别名为 **first\@**、**second\@** 和 **third\@**，可以将传递到此过程的值赋给参数名，如：`EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
   
 > [!NOTE]
->  如果以 **\@parameter =**_value_ 格式提供参数值，必须按此格式提供所有后续参数。 如果未按格式 **\@parameter =**_value_ 传递参数值，必须按 CREATE PROCEDURE 语句中所列参数顺序（从左到右）提供值。  
+>  如果在形式** \@参数 =**_值_中提供了一个参数值，则必须以这种方式提供所有后续参数。 如果参数值不是以 " ** \@参数 =**_值_" 形式传递的，则必须按 CREATE PROCEDURE 语句中列出的参数的顺序（从左到右）提供值。  
 > 
 > [!WARNING]
->  任何采用 **\@parameter =**_value_ 格式传入的参数如果拼写错误，就会导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成错误，并阻止过程执行。  
+>  使用参数的形式参数** \@=**_值_格式的任何参数都将导致[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]生成错误并阻止过程执行。  
   
 ## <a name="specifying-parameter-data-types"></a>指定参数数据类型  
  在 CREATE PROCEDURE 语句中声明时，必须使用数据类型定义参数。 参数的数据类型确定了在调用过程时该参数所接受值的类型和范围。 例如，如果用 `tinyint` 数据类型定义参数，则在传入该参数时只接受 0 到 255 之间的数值。 如果用与数据类型不兼容的值执行过程，将返回一个错误。  
@@ -126,7 +126,7 @@ EXEC Sales.usp_GetSalesYTD N'Blythe';
 GO  
 ```  
   
- 虽然可以省略已提供默认值的参数，但只能截断参数列表。 例如，如果过程有 5 个参数，可以省略第 4 个和第 5 个参数。 不过，只要有第 5 个参数，就不能跳过第 4 个参数，除非采用 **\@parameter =**_value_ 格式提供参数。  
+ 虽然可以省略已提供默认值的参数，但只能截断参数列表。 例如，如果过程有 5 个参数，可以省略第 4 个和第 5 个参数。 但是，只要包含第五个参数，就不能跳过第四个参数，除非以** \@参数 =**_值_的形式提供参数。  
   
 ## <a name="specifying-parameter-direction"></a>指定参数方向  
  参数的方向可以为输入（表明将值传递给过程的主体），也可以为输出（表明过程将值返回给调用程序）。 默认为输入参数。  
@@ -164,10 +164,10 @@ GO
   
 ```  
   
- 执行 `usp_GetList` 以返回价格低于 $700 的 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 产品（自行车）的列表。 输出参数 \@cost 和 \@compareprices 用于控制流语言，以便在“消息”窗口中返回消息。  
+ 执行 `usp_GetList` 以返回价格低于 $700 的 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 产品（自行车）的列表。 OUTPUT 参数** \@cost**和** \@compareprices**用于流控制语言，以便在 "**消息**" 窗口中返回消息。  
   
 > [!NOTE]  
->  OUTPUT 变量必须在过程创建和变量使用期间进行定义。 参数名称和变量名称不一定要匹配。 不过，数据类型和参数定位必须匹配（除非使用的是 \@listprice= variable）。  
+>  OUTPUT 变量必须在过程创建和变量使用期间进行定义。 参数名称和变量名称不一定要匹配。 但是，数据类型和参数定位必须匹配（除非** \@使用 listprice =** _variable_ ）。  
   
 ```  
 DECLARE @ComparePrice money, @Cost money ;  
@@ -202,7 +202,7 @@ Road-750 Black, 52                                 539.99
 These items can be purchased for less than $700.00.  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [CREATE PROCEDURE (Transact-SQL)](/sql/t-sql/statements/create-procedure-transact-sql)  
   
   

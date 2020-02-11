@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 37aa64129658128bd7297f147f317166917e05a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781066"
 ---
 # <a name="links-in-clr-integration-security"></a>CLR 集成安全性中的链接
@@ -31,8 +31,8 @@ ms.locfileid: "62781066"
 ## <a name="table-access-links"></a>表访问链接  
  表访问链接对应于在表、视图或表值函数中检索或修改值。 它们类似于调用链接，但它们在 SELECT、INSERT、UPDATE 和 DELETE 权限方面有较粗粒度的访问控制权。  
   
-## <a name="gated-links"></a>门的链接  
- 门链接意味着，在执行期间，一旦已建立对象关系，则不跨越该对象关系检查权限。 在两个对象之间有门的链接时 (例如，对象**x**和对象**y**)，对象的权限**y**和其他对象从对象访问**y**仅在对象的创建时间检查**x**。 在对象的创建时间**x**，`REFERENCE`权限检查**y**针对的所有者**x**。 在执行时 (例如，当某人调用对象时，才**x**)，没有权限进行比照**y**或它静态引用其他对象。 在执行时，将根据对象检查了适当的权限**x**本身。  
+## <a name="gated-links"></a>封闭链接  
+ 门链接意味着，在执行期间，一旦已建立对象关系，则不跨越该对象关系检查权限。 如果两个对象（例如，对象**x**和对象**y**）之间有一个封闭链接，则仅在创建对象**x**时检查对象**y**上和从对象**y**访问的其他对象的权限。 在创建对象**x**时， `REFERENCE`将根据**x**的所有者对**y**检查权限。 执行时（例如，当某人调用 object **x**）时，不会针对其静态引用的**y**或其他对象检查权限。 执行时，将对照对象**x**本身来检查适当的权限。  
   
  门链接始终与两个对象之间的元数据依赖性配合使用。 该元数据依赖性是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目录中建立的关系，它使得只要另一个对象依赖于某个对象则无法删除该对象。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62781066"
   
 4.  系统根据当前执行上下文检查此权限。 可以用不同于调用方的执行上下文创建过程和函数。 程序集始终以根据它定义的过程、函数或触发器的执行上下文来创建。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [CLR 集成安全性](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   
   

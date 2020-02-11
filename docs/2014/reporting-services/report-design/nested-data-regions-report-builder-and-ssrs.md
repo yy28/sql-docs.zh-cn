@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 293bfe1f270d32bc64d4344c5363a0be2cd74b84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105523"
 ---
 # <a name="nested-data-regions-report-builder-and-ssrs"></a>嵌套数据区域（报表生成器和 SSRS）
   可以在一个数据区域（如矩阵）内嵌套另一个数据区域（如图表），通常用于简明显示数据摘要或提供可视显示和表或矩阵显示。  
   
- 例如，对于包含在行中按商店分组和在列中按季度分组的销售订单的矩阵（也称为 Tablix  ），可以向角单元添加表或图表以汇总所有商店的销售额，或者向矩阵列标题添加图表以显示该列中的销售额数据在所有销售额中所占的百分比。  
+ 例如，对于包含在行中按商店分组和在列中按季度分组的销售订单的矩阵（也称为 Tablix**），可以向角单元添加表或图表以汇总所有商店的销售额，或者向矩阵列标题添加图表以显示该列中的销售额数据在所有销售额中所占的百分比。  
   
  ![rs_NestedDataRegion](../media/rs-nesteddataregion.gif "rs_NestedDataRegion")  
   
@@ -36,13 +36,13 @@ ms.locfileid: "66105523"
   
  以下列表说明了以下 Tablix 区域中的单元的作用域：  
   
--   **Tablix 角** 作用域是在应用数据集和外部 Tablix 的筛选器和排序表达式之后链接到 Tablix 数据区域的数据区域中的数据。  
+-   **Tablix 角**作用域是在应用数据集和外部 tablix 的筛选器和排序表达式之后链接到 tablix 数据区域的数据区域中的数据。  
   
--   **Tablix 列组** 在应用数据集、外部 Tablix 和列组的筛选器和排序表达式之后，最内部列组中的数据。  
+-   **Tablix 列组**在应用数据集、外部 tablix 和列组的筛选器和排序表达式之后，最内层列组中的数据。  
   
--   **Tablix 行组** 在应用数据集、外部 Tablix 和行组的筛选器和排序表达式之后，最内部行组中的数据。  
+-   **Tablix 行组**在应用数据集、外部 tablix 和行组的筛选器和排序表达式之后，最内部行组中的数据。  
   
--   **Tablix 正文** 在应用数据集、外部 Tablix 以及行组和列组的筛选器和排序表达式之后，由行组和列组的交集表示的最内部组中的数据。  
+-   **Tablix 正文**在应用数据集、外部 tablix 以及行组和列组的筛选器和排序表达式之后，由行组和列组的交集表示的最内部组中的数据。  
   
  有关详细信息，请参阅 [Tablix 数据区域（报表生成器和 SSRS）](tablix-data-region-areas-report-builder-and-ssrs.md)。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66105523"
   
  必须设置仪表刻度上将显示的最小值和最大值。 若要指定仪表的最大值，可以使用表达式，例如 `=Max!MyField.Value`。 但是，由于此表达式仅在单元数据的作用域内计算，因此，Tablix 中所有行的各仪表的最大值将各不相同。 这样，可能很难理解对 Tablix 中各仪表之间的比较。 或者，还可以为最大值指定静态值。 Tablix 中的所有行均将显示具有此最大值的仪表。 有关详细信息，请参阅[设置仪表的最小值或最大值（报表生成器和 SSRS）](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)。  
   
- 如果仪表上的数据太大，请考虑使用刻度乘数减少显示的数字量。 若要指定乘数，可以右键单击刻度并选择“刻度属性”  。 打开 **“刻度属性”** 对话框时，指定 **“乘数”** 的值。  
+ 如果仪表上的数据太大，请考虑使用刻度乘数减少显示的数字量。 若要指定乘数，可以右键单击刻度并选择“刻度属性”****。 打开 **“刻度属性”** 对话框时，指定 **“乘数”** 的值。  
   
 ## <a name="nesting-a-table-or-matrix-and-a-chart-in-a-list"></a>在列表中嵌套表/矩阵和图表  
  若要在列表中嵌套多个数据区域，请首先添加一个矩形，然后将数据区域添加到该矩形中。  
@@ -82,7 +82,7 @@ ms.locfileid: "66105523"
   
  有关详细信息，请参阅[了解组（报表生成器和 SSRS）](understanding-groups-report-builder-and-ssrs.md)和[添加、移动或删除表、矩阵或列表（报表生成器和 SSRS）](add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [对数据进行筛选、分组和排序（报表生成器和 SSRS）](filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [列表（报表生成器和 SSRS）](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   

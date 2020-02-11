@@ -1,5 +1,5 @@
 ---
-title: 执行 SQL 任务编辑器 （参数映射页） |Microsoft Docs
+title: 执行 SQL 任务编辑器（"参数映射" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7508324be0bef23ba0590bb181135512d75701e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059043"
 ---
 # <a name="execute-sql-task-editor-parameter-mapping-page"></a>执行 SQL 任务编辑器（“参数映射”页）
@@ -27,12 +27,12 @@ ms.locfileid: "66059043"
  若要了解此任务，请参阅 [执行 SQL 任务](control-flow/execute-sql-task.md) 和 [执行 SQL 任务中的参数和返回代码](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)。  
   
 ## <a name="options"></a>选项  
- **“变量名称”**  
- 通过单击“添加”添加了参数映射之后，请从列表中选择系统变量或用户定义的变量，或单击“\<新建变量...>”以使用“添加变量”对话框添加新变量    。  
+ **变量名称**  
+ 通过单击“添加”添加了参数映射之后，请从列表中选择系统变量或用户定义的变量，或单击“**新建变量...>”以使用“添加变量”对话框添加新变量**\<********。  
   
- **相关主题：** [Integration Services (SSIS) 变量](integration-services-ssis-variables.md)  
+ **相关主题：** [Integration Services &#40;SSIS&#41; 变量](integration-services-ssis-variables.md)  
   
- **方向**  
+ **方向键**  
  选择参数的方向。 将每个变量映射到输入参数、输出参数或返回代码。  
   
  **数据类型**  
@@ -50,16 +50,16 @@ ms.locfileid: "66059043"
   
  此设置可确保访问接口为长度可变的参数值分配足够的空间。  
   
- **“添加”**  
+ **添加**  
  单击此项可添加参数映射。  
   
  **删除**  
- 选择列表中的参数映射，再单击“删除”  。  
+ 选择列表中的参数映射，再单击“删除”****。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [执行 SQL 任务编辑器&#40;常规页&#41;](general-page-of-integration-services-designers-options.md)   
- [执行 SQL 任务编辑器&#40;结果集页&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)   
+ [&#40;"常规" 页上执行 SQL 任务编辑器&#41;](general-page-of-integration-services-designers-options.md)   
+ [&#40;"结果集" 页上执行 SQL 任务编辑器&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)   
  [Transact-SQL 引用（数据库引擎）](/sql/t-sql/language-reference)  
   
   

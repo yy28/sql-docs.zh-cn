@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 73a67105a8b70b1b55b15d894ebc13c90417d8e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769493"
 ---
 # <a name="-bitwise-not-ssis-expression"></a>~ （位非）（SSIS 表达式）
@@ -39,7 +39,7 @@ ms.locfileid: "62769493"
  返回 integer_expression  数据类型。  
   
 ## <a name="remarks"></a>备注  
- None  
+ 无  
   
 ## <a name="expression-examples"></a>表达式示例  
  以下示例对数值 170 (0000 0000 1010 1010) 执行位 ~（非）运算。 该数值是一个有符号整数。  
@@ -57,7 +57,7 @@ ms.locfileid: "62769493"
   
  1111111101010101  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [运算符优先级和结合性](operator-precedence-and-associativity.md)   
  [运算符（SSIS 表达式）](operators-ssis-expression.md)  
   

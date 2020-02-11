@@ -1,5 +1,5 @@
 ---
-title: 数据流路径编辑器 （常规页） |Microsoft Docs
+title: 数据流路径编辑器（"常规" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e044d001c88edef9d1e8d4ab453b85853994cf7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059957"
 ---
 # <a name="data-flow-path-editor-general-page"></a>数据流路径编辑器（“常规”页）
@@ -30,8 +30,8 @@ ms.locfileid: "66059957"
  **名称**  
  为路径提供唯一的名称。  
   
- **ID**  
- 路径的沿袭标识符。 该属性为只读。  
+ **识别**  
+ 路径的沿袭标识符。 此属性为只读。  
   
  **IdentificationString**  
  用于标识路径的字符串。 从上面输入的名称自动生成。  
@@ -48,9 +48,9 @@ ms.locfileid: "66059957"
  **SourceName**  
  显示作为路径开头的输出。  
   
-## <a name="see-also"></a>请参阅  
- [数据流路径编辑器&#40;元数据页&#41;](../../2014/integration-services/data-flow-path-editor-metadata-page.md)   
- [数据流路径编辑器&#40;数据查看器页&#41;](../../2014/integration-services/data-flow-path-editor-data-viewers-page.md)   
+## <a name="see-also"></a>另请参阅  
+ [数据流路径编辑器 &#40;元数据页&#41;](../../2014/integration-services/data-flow-path-editor-metadata-page.md)   
+ [数据流路径编辑器 &#40;数据查看器页&#41;](../../2014/integration-services/data-flow-path-editor-data-viewers-page.md)   
  [数据流](data-flow/data-flow.md)   
  [在包中使用批注](use-annotations-in-packages.md)  
   

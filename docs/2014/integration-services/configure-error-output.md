@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 18318775c63cd7126686154dec2ee1f02733763f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060639"
 ---
 # <a name="configure-error-output"></a>配置错误输出
@@ -47,10 +47,10 @@ ms.locfileid: "66060639"
  **将此值设置到选定的单元格**  
  指定发生错误或截断时应对所有选定单元格执行的操作：忽略失败、重定向行或使组件失败。  
   
- **Apply**  
+ **应用**  
  将错误处理选项应用到选定的单元格。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

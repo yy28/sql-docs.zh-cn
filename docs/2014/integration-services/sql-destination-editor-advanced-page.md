@@ -1,5 +1,5 @@
 ---
-title: SQL 目标编辑器 （高级页） |Microsoft Docs
+title: SQL 目标编辑器（"高级" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 087f32510b65d7ea505bc4bf816a5ca9edcfe82d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055461"
 ---
 # <a name="sql-destination-editor-advanced-page"></a>SQL 目标编辑器（“高级”页）
@@ -66,10 +66,10 @@ ms.locfileid: "66055461"
  **设置列顺序**  
  键入排序列的名称。 每一列都可以按升序或降序排序。 如果您使用多个排序列，请用逗号分隔列表。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [SQL 目标编辑器（“连接管理器”页）](../../2014/integration-services/sql-destination-editor-connection-manager-page.md)   
- [SQL 目标编辑器（“映射”页）](../../2014/integration-services/sql-destination-editor-mappings-page.md)   
+ [SQL 目标编辑器 &#40;连接管理器页&#41;](../../2014/integration-services/sql-destination-editor-connection-manager-page.md)   
+ [SQL 目标编辑器 &#40;映射 "页面&#41;](../../2014/integration-services/sql-destination-editor-mappings-page.md)   
  [使用 SQL Server 目标大容量加载数据](data-flow/bulk-load-data-by-using-the-sql-server-destination.md)  
   
   

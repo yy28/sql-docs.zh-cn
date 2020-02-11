@@ -1,5 +1,5 @@
 ---
-title: CLR 集成自定义属性的概述 |Microsoft Docs
+title: CLR 集成自定义属性概述 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,16 +17,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8df7881dd5f38935628cb6653d57763a8846e60f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781102"
 ---
 # <a name="overview-of-clr-integration-custom-attributes"></a>CLR 集成自定义属性的概览
+  
   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的公共语言运行时 (CLR) 允许使用称为属性的描述性关键字。 这些属性为许多元素（如方法和类）提供附加信息。 这些属性与对象的元数据一同保存在程序集中，并且可用于向其他开发工具描述您的代码，或者可用于影响 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内的运行时行为。  
   
- 向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 注册 CLR 例程时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将派生有关该例程的一组属性。 这些例程属性确定该例程的功能，包括是否可以对该例程编制索引。 例如，如果将 `DataAccess` 属性设置为 `DataAccessKind.Read`，您将能够访问 CLR 函数内的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户表中的数据。 下面的示例演示一个简单的示例中这`DataAccess`属性设置为了便于用户表中的数据访问**table1**。  
+ 向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 注册 CLR 例程时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将派生有关该例程的一组属性。 这些例程属性确定该例程的功能，包括是否可以对该例程编制索引。 例如，如果将 `DataAccess` 属性设置为 `DataAccessKind.Read`，您将能够访问 CLR 函数内的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户表中的数据。 下面的示例演示一个简单的情况，在`DataAccess`此情况下，属性设置为便于从用户表**table1**进行数据访问。  
   
 ```csharp  
 using System;  
@@ -88,7 +89,7 @@ End Class
   
  在 `Microsoft.SqlServer.Server` 命名空间中定义 CLR 例程、用户定义类型和聚合所需的自定义属性。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [CLR 例程的自定义属性](../../relational-databases/clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md)  
   
   

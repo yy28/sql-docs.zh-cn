@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9fb4014688f1899e813d1df3e677caf9ad7bfbf1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770295"
 ---
 # <a name="transform-data-with-transformations"></a>使用转换对数据进行转换
@@ -26,7 +26,7 @@ ms.locfileid: "62770295"
   
  下列关系图显示具有一个源、两个转换和一个目标的简单数据流。  
   
- ![Data flow](../../media/mw-dts-08.gif "Data flow")  
+ ![数据流](../../media/mw-dts-08.gif "数据流")  
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 转换提供下列功能：  
   
@@ -58,7 +58,7 @@ ms.locfileid: "62770295"
   
 -   [设置数据流组件的属性](../set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据流任务](../../control-flow/data-flow-task.md)   
  [数据流](../data-flow.md)   
  [使用路径连接组件](../../connect-components-with-paths.md)   

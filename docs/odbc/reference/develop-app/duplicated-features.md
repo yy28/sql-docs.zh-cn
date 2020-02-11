@@ -17,20 +17,20 @@ ms.assetid: 641b16bc-f791-46d8-b093-31736473fe3d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ca73b5b9b41c99bd6db8e6181fa3582cae47c1d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046901"
 ---
 # <a name="duplicated-features"></a>重复的功能
-以下 ODBC *2.x* odbc 复制了函数*3.x*函数。 因此，ODBC *2.x*函数在 ODBC 中已弃用*3.x*。 ODBC *3.x*函数称为替换函数。  
+以下 ODBC 2.x*函数已被 odbc* *1.x 函数重复*。 因此 *，odbc 2.x 函数在*odbc 2.x 中已*弃用。* ODBC 1.x 函数称为*替换函数。*  
   
- 当应用程序使用不推荐使用的 ODBC *2.x*函数和基础驱动程序是一个 ODBC *3.x*驱动程序，驱动程序管理器将映射到相应的替换函数的函数调用。 此规则的唯一例外是**SQLExtendedFetch**。 （请参阅下表末尾的脚注。）有关这些映射的详细信息，请参阅[映射已弃用函数](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)中附录 g:为了向后兼容的驱动程序指南。  
+ 当应用程序使用已弃用的 ODBC *2.x 函数，* 并且基础驱动程序是 odbc 1.x*驱动程序*时，驱动程序管理器会将函数调用映射到相应的替换函数。 此规则的唯一例外是**SQLExtendedFetch**。 （请参见下表末尾的脚注。）有关这些映射的详细信息，请参阅附录 G：驱动程序准则中的[映射弃用的函数](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)，以实现向后兼容性。  
   
- 当应用程序使用替换函数和基础驱动程序是一个 ODBC *2.x*驱动程序，驱动程序管理器将映射到相应的已弃用函数的函数调用。  
+ 当应用程序使用替代函数，而基础*驱动程序是 ODBC 2.x*驱动程序时，驱动程序管理器会将函数调用映射到相应的不推荐使用的函数。  
   
-|ODBC *2.x*函数|ODBC *3.x*函数|  
+|ODBC *2.x*函数|ODBC *2.x*函数|  
 |-------------------------|-------------------------|  
 |**SQLAllocConnect**|**SQLAllocHandle**|  
 |**SQLAllocEnv**|**SQLAllocHandle**|  
@@ -42,13 +42,13 @@ ms.locfileid: "68046901"
 |**SQLFreeEnv**|**SQLFreeHandle**|  
 |**SQLGetConnectOption**|**SQLGetConnectAttr**|  
 |**SQLGetStmtOption**|**SQLGetStmtAttr**|  
-|**SQLParamOptions**|**SQLSetStmtAttr**， **SQLGetStmtAttr**|  
+|**SQLParamOptions**|**SQLSetStmtAttr**、 **SQLGetStmtAttr**|  
 |**SQLSetConnectOption**|**SQLSetConnectAttr**|  
 |**SQLSetParam**|**SQLBindParameter**|  
 |**SQLSetStmtOption**|**SQLSetStmtAttr**|  
 |**SQLTransact**|**SQLEndTran**|  
   
- [1] 函数**SQLExtendedFetch**是重复的功能;**SQLFetchScroll**提供的 ODBC 中的功能相同*3.x*。 但是，驱动程序管理器不映射**SQLExtendedFetch**到**SQLFetchScroll**时针对 ODBC *3.x*驱动程序。 有关详细信息，请参阅[驱动程序管理器的用途](../../../odbc/reference/appendixes/what-the-driver-manager-does.md)中附录 g:为了向后兼容的驱动程序指南。 驱动程序管理器映射**SQLFetchScroll**到**SQLExtendedFetch**时针对 ODBC *2.x*驱动程序。  
+ [1] 函数**SQLExtendedFetch**是重复的功能;**SQLFetchScroll** *在 ODBC 1.x*中提供了相同的功能。 但是，在 SQLExtendedFetch *ODBC 1.x*驱动程序时，驱动程序管理器不会将**** 映射到**SQLFetchScroll** 。 有关详细信息，请参阅附录 G：用于向后兼容的驱动程序准则中[的驱动程序管理器的](../../../odbc/reference/appendixes/what-the-driver-manager-does.md)作用。 当*使用 ODBC 2.x*驱动程序时，驱动程序管理器会将**SQLFetchScroll**映射到**SQLExtendedFetch** 。  
   
 > [!NOTE]
->  该函数**SQLBindParam**是一种特殊情况。 **SQLBindParam**是重复的功能。 这不是 ODBC *2.x*函数，但存在 Open Group 和 ISO 标准中的函数。 此函数提供的功能完全包含的**SQLBindParameter**。 因此，驱动程序管理器将映射到调用**SQLBindParam**到**SQLBindParameter**基础驱动程序时 ODBC *3.x*驱动程序。 但是，当基础驱动程序是一个 ODBC *2.x*驱动程序，驱动程序管理器不会执行此映射。
+>  函数**SQLBindParam**是一种特殊情况。 **SQLBindParam**是重复功能。 这不是 ODBC 2.x 函数，而是开放组和 ISO 标准中存在*的函数。* 此函数提供的功能完全由**SQLBindParameter**的归入。 因此，当基础*驱动程序为 ODBC 3.x*驱动程序时，驱动程序管理器会将对**SQLBindParam**的调用映射到**SQLBindParameter** 。 但是，当基础*驱动程序是 ODBC 2.x*驱动程序时，驱动程序管理器不会执行此映射。

@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: daa416ccdbe6edceadce4f972b3abf7faafb18f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807581"
 ---
 # <a name="configure-health-policies-sql-server-utility"></a>配置运行状况策略（SQL Server 实用工具）
@@ -57,8 +57,8 @@ ms.locfileid: "62807581"
   
  有关查看或更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的单独托管实例的全局监视策略的详细信息，请参阅[托管实例详细信息（SQL Server 实用工具）](../../database-engine/managed-instance-details-sql-server-utility.md)。  
   
-## <a name="see-also"></a>请参阅  
- [SQL Server 实用工具功能和任务](sql-server-utility-features-and-tasks.md)   
+## <a name="see-also"></a>另请参阅  
+ [SQL Server 实用工具的功能和任务](sql-server-utility-features-and-tasks.md)   
  [减少 CPU 使用策略中的干扰（SQL Server 实用工具）](reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)  
   
   

@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5ca7d915b940296e6de6689e666401b0c3534c9d
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782731"
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>使用 SQL ServerPowerShell 路径
@@ -22,7 +22,7 @@ ms.locfileid: "72782731"
   
 1.  [开始之前](#BeforeYouBegin)  
   
-2.  **To work on a path node:**  [Listing Methods and Properties](#ListPropMeth), [Using Methods and Properties](#UsePropMeth)  
+2.  使用**路径节点：**[列出方法和属性](#ListPropMeth)，[使用方法和属性](#UsePropMeth)    
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  在导航到 [!INCLUDE[ssDE](../includes/ssde-md.md)] 提供程序路径中的节点之后，可以执行两种类型的操作：  
@@ -31,9 +31,10 @@ ms.locfileid: "72782731"
   
 -   可以调用相关联的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理对象模型中的方法，如 SMO。 例如，如果你导航到路径中的 Databases 节点，则可以使用 <xref:Microsoft.SqlServer.Management.Smo.Database> 类的方法和属性。  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供程序用于管理 [!INCLUDE[ssDE](../includes/ssde-md.md)]实例中的对象， 而不能用于处理数据库中的数据。 如果您已经导航到表或视图，则不能使用该提供程序选择、插入、更新或删除数据。 可以使用 **Invoke-Sqlcmd** cmdlet 来查询或更改 Windows PowerShell 环境内表和视图中的数据。 有关详细信息，请参阅 [Invoke-Sqlcmd cmdlet](../database-engine/invoke-sqlcmd-cmdlet.md)。  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供程序用于管理 [!INCLUDE[ssDE](../includes/ssde-md.md)]实例中的对象， 而不能用于处理数据库中的数据。 如果您已经导航到表或视图，则不能使用该提供程序选择、插入、更新或删除数据。 可以使用 **Invoke-Sqlcmd** cmdlet 来查询或更改 Windows PowerShell 环境内表和视图中的数据。 有关详细信息，请参阅 [Invoke-Sqlcmd cmdlet](../database-engine/invoke-sqlcmd-cmdlet.md)。  
   
-##  <a name="ListPropMeth"></a> 列出方法和属性
+##  <a name="ListPropMeth"></a>列出方法和属性
   
  若要查看可供特定对象或对象类使用的方法和属性，请使用 **Get-Member** cmdlet。  
   
@@ -74,7 +75,7 @@ Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Table
 Get-ChildItem | Where {$_.Schema -eq "Sales"}  
 ```  
   
- 此示例使用 SMO**脚本**方法生成一个脚本，该脚本包含在 AdventureWorks2012 中重新创建视图时必须具有的 `CREATE VIEW` 语句：  
+ 此示例使用 SMO **script**方法生成一个包含`CREATE VIEW`语句的脚本，您必须在 AdventureWorks2012 中重新创建视图：  
   
 ```powershell
 Remove-Item C:\PowerShell\CreateViews.sql  
@@ -95,8 +96,8 @@ $MyDBVar.State
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server PowerShell 提供程序](sql-server-powershell-provider.md)   
- [导航 SQL ServerPowerShell 路径](navigate-sql-server-powershell-paths.md)   
- [将 URN 转换为 SQL Server 提供程序路径](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
+ [导航 SQL Server PowerShell 路径](navigate-sql-server-powershell-paths.md)   
+ [将 Urn 转换为 SQL Server 提供程序路径](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  
   
   

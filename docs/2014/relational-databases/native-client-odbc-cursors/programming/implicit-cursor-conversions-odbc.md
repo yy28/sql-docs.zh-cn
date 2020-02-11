@@ -1,5 +1,5 @@
 ---
-title: 隐式游标转换 (ODBC) |Microsoft Docs
+title: 隐式游标转换（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,23 +15,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 300ce02538a59ef043424d866ad4ce49267fcfa4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62711565"
 ---
 # <a name="implicit-cursor-conversions-odbc"></a>隐式游标转换 (ODBC)
-  应用程序可以请求通过游标类型[SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) ，然后执行请求的类型的服务器游标不支持的 SQL 语句。 调用**SQLExecute**或**SQLExecDirect**返回 SQL_SUCCESS_WITH_INFO 和**SQLGetDiagRec**返回：  
+  应用程序可以通过[SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)请求游标类型，然后执行所请求类型的服务器游标不支持的 SQL 语句。 对**SQLExecute**或**SQLExecDirect**的调用将返回 SQL_SUCCESS_WITH_INFO 和**SQLGetDiagRec**返回：  
   
 ```  
 szSqlState = "01S02", *pfNativeError = 0,  
 szErrorMsg="[Microsoft][SQL Server Native Client] Cursor type changed"  
 ```  
   
- 应用程序可以确定的游标类型现在正在使用通过调用**SQLGetStmtOption**设置为 SQL_CURSOR_TYPE。 游标类型转换仅适用于一个语句。 下一步**SQLExecDirect**或**SQLExecute**都使用原始的语句游标设置。  
+ 应用程序可以通过调用**SQLGetStmtOption**设置为 SQL_CURSOR_TYPE 来确定目前正在使用的游标类型。 游标类型转换仅适用于一个语句。 下一个**SQLExecDirect**或**SQLExecute**将使用原始语句游标设置完成。  
   
-## <a name="see-also"></a>请参阅  
- [游标编程详细信息&#40;ODBC&#41;](cursor-programming-details-odbc.md)  
+## <a name="see-also"></a>另请参阅  
+ [ODBC&#41;的游标编程详细信息 &#40;](cursor-programming-details-odbc.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SupportAlias 属性 （ClientNetworkProtocol 类） |Microsoft Docs
+title: SupportAlias 属性（ClientNetworkProtocol 类） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d28ec166f8954b874f98b7f9f441280ab9064f1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62826753"
 ---
 # <a name="supportalias-property-clientnetworkprotocol-class"></a>SupportAlias 属性（ClientNetworkProtocol Class）
-  获取指定当前网络是否指定协议的布尔属性[SetOrderValue 方法 （ClientNetworkProtocol 类）](clientnetworkprotocol-class.md)支持别名。  
+  获取一个布尔属性，该属性指定由[SetOrderValue 方法（ClientNetworkProtocol 类）](clientnetworkprotocol-class.md)指定的当前网络协议是否支持别名。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>组成部分  
- *object*  
+ *对象*  
  一个表示 [客户端使用的网络协议的](clientnetworkprotocol-class.md) ClientNetworkProtocol 类 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
@@ -49,7 +49,7 @@ object
   
 ## <a name="remarks"></a>备注  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置客户端协议](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

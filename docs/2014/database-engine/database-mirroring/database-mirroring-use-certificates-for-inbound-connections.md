@@ -1,5 +1,5 @@
 ---
-title: 允许数据库镜像终结点使用证书进行入站连接 (TRANSACT-SQL) |Microsoft Docs
+title: 允许数据库镜像终结点使用证书进行入站连接（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3f70ddfc241a902a59dff989323a75b17f7af55e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807555"
 ---
 # <a name="allow-a-database-mirroring-endpoint-to-use-certificates-for-inbound-connections-transact-sql"></a>允许数据库镜像端点将证书用于入站连接 (Transact-SQL)
-  本主题说明配置服务器实例以使用证书对数据库镜像的入站连接进行身份验证的步骤。 在可以建立入站连接之前，必须在每个服务器实例上配置出站连接。 有关详细信息，请参阅[允许数据库镜像终结点使用证书进行出站连接 (Transact-SQL)](database-mirroring-use-certificates-for-outbound-connections.md)。  
+  本主题说明配置服务器实例以使用证书对数据库镜像的入站连接进行身份验证的步骤。 在可以建立入站连接之前，必须在每个服务器实例上配置出站连接。 有关详细信息，请参阅 [允许数据库镜像终结点使用证书进行出站连接 (Transact-SQL)](database-mirroring-use-certificates-for-outbound-connections.md)。  
   
  配置入站连接的过程通常有以下几个步骤：  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62807555"
   
  下面的过程详细说明了这些步骤。 对于每个步骤，该过程都提供了一个在名为 HOST_A 的系统上配置服务器实例的示例。 伴随的示例部分说明了在名为 HOST_B 的系统上配置另一服务器实例的步骤（步骤相同）。  
   
-### <a name="to-configure-server-instances-for-inbound-mirroring-connections-on-hosta"></a>为入站镜像连接配置服务器实例（在 HOST_A 上）  
+### <a name="to-configure-server-instances-for-inbound-mirroring-connections-on-host_a"></a>为入站镜像连接配置服务器实例（在 HOST_A 上）  
   
 1.  为其他系统创建登录名。  
   
@@ -157,13 +157,13 @@ GO
   
  有关创建镜像数据库（包括 Transact-SQL 示例）的详细信息，请参阅[为镜像准备镜像数据库 (SQL Server)](prepare-a-mirror-database-for-mirroring-sql-server.md)。  
   
- 有关建立高性能模式会话的 TRANSACT-SQL 示例，请参阅[示例：设置数据库镜像使用证书&#40;TRANSACT-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)。  
+ 有关建立高性能模式会话的 Transact-SQL 示例，请参阅 [示例：使用证书设置数据库镜像 (Transact-SQL)](example-setting-up-database-mirroring-using-certificates-transact-sql.md)。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  将证书复制到其他系统时，请使用安全的复制方法。 必须格外小心地保证所有证书的安全。  
   
-## <a name="see-also"></a>请参阅  
- [传输安全模式的数据库镜像和 AlwaysOn 可用性组&#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
+## <a name="see-also"></a>另请参阅  
+ [用于数据库镜像和 AlwaysOn 可用性组 &#40;SQL Server 的传输安全&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [GRANT 终结点权限 (Transact-SQL)](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)   
  [设置加密的镜像数据库](set-up-an-encrypted-mirror-database.md)   
  [数据库镜像终结点 (SQL Server)](the-database-mirroring-endpoint-sql-server.md)   

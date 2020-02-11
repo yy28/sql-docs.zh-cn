@@ -1,5 +1,5 @@
 ---
-title: 管理登录名和作业的数据库的可用性组 (SQL Server) |Microsoft Docs
+title: 管理可用性组数据库的登录名和作业（SQL Server） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a19d5d39a3133ffc664f5ea7050645e2a28a8a20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774279"
 ---
 # <a name="management-of-logins-and-jobs-for-the-databases-of-an-availability-group-sql-server"></a>管理可用性组中数据库的登录名和作业 (SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "62774279"
   
      承载可用性组的可用性副本的服务器实例的配置可能有所不同，如具有不同的磁带机号等。 每个可用性副本的作业必须允许可能存在的此类差异。  
   
-     请注意，备份作业可以使用 [sys.fn_hadr_is_preferred_backup_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) 函数根据可用性组备份首选项，标识本地副本是否为用于备份的首选副本。 使用 [维护计划向导](../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) 创建的备份作业默认使用此函数。 对于其他备份作业，我们建议您将此函数用作您的备份作业中的一个条件，以便仅在首选副本上执行它们。 有关详细信息，请参阅[活动次要副本：在辅助副本 （AlwaysOn 可用性组） 上备份](availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
+     请注意，备份作业可以使用 [sys.fn_hadr_is_preferred_backup_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) 函数根据可用性组备份首选项，标识本地副本是否为用于备份的首选副本。 使用 [维护计划向导](../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) 创建的备份作业默认使用此函数。 对于其他备份作业，我们建议您将此函数用作您的备份作业中的一个条件，以便仅在首选副本上执行它们。 有关详细信息，请参阅[活动辅助副本：辅助副本备份（AlwaysOn 可用性组）](availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
   
 -   **登录名**  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62774279"
   
 ##  <a name="RelatedTasks"></a> 相关任务  
   
--   [创建一个登录名](../relational-databases/security/authentication-access/create-a-login.md)  
+-   [创建登录名](../relational-databases/security/authentication-access/create-a-login.md)  
   
 -   [Create a Database User](../relational-databases/security/authentication-access/create-a-database-user.md)。  
   
@@ -65,8 +65,8 @@ ms.locfileid: "62774279"
   
 -   [当数据库在其他服务器实例上可用时管理元数据 (SQL Server)](../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)  
   
-## <a name="see-also"></a>请参阅  
- [AlwaysOn 可用性组概述&#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>另请参阅  
+ [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [包含的数据库](../relational-databases/databases/contained-databases.md)   
  [创建作业](../ssms/agent/create-jobs.md)  
   

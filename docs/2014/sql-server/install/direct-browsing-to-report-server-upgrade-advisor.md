@@ -11,29 +11,29 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 6945828b2eba829c32d717c13393c9fbda4fc43e
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952214"
 ---
 # <a name="direct-browsing-to-report-server-upgrade-advisor"></a>直接浏览到报表服务器（升级顾问）
-  升级顾问检测到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 的当前安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 正在直接浏览到 Report Server 虚拟目录。  
+  升级顾问检测到您的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]当前安装正在直接浏览到 Report Server 虚拟目录。  
   
 ||  
 |-|  
-|SharePoint 模式[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **[!INCLUDE[applies](../../includes/applies-md.md)]** 。|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]SharePoint 模式。|  
   
 ## <a name="component"></a>组件  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-## <a name="description"></a>描述  
- 升级顾问检测到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 的当前安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 正在直接浏览到 Report Server 虚拟目录，例如**http://\<server name >/ReportServer**。 在当前版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中不支持它。  
+## <a name="description"></a>说明  
+ 升级顾问检测到您的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]当前安装正在直接浏览到 Report Server 虚拟目录，例如**http://\<server name>/reportserver**。 在当前版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中不支持它。  
   
 > [!NOTE]  
 >  此规则是一则警告，将不阻止升级。  
   
 ## <a name="corrective-action"></a>纠正措施  
- 浏览使用用于文档库的 SharePoint 用户界面，或使用**http://\<server name >/sharepoint site >/_vti_bin/reportserver**。  
+ 浏览使用用于文档库的 SharePoint 用户界面，或**使用\<http://server name>/sharepoint site>/_vti_bin/reportserver**。  
   
   

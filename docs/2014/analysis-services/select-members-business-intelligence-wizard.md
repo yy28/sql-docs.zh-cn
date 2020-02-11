@@ -1,5 +1,5 @@
 ---
-title: 选择成员 （商业智能向导） |Microsoft Docs
+title: 选择成员（商业智能向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7cc66896eb1735d09991644dd49c03b5a94c208d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069431"
 ---
 # <a name="select-members-business-intelligence-wizard"></a>选择成员（商业智能向导）
@@ -31,34 +31,34 @@ ms.locfileid: "66069431"
   
  如果选择此选项，网格中将显示下表中所列出的选项：  
   
-|Option|Description|  
+|选项|说明|  
 |------------|-----------------|  
 |**内置度量值类型**|选择此选项可为指定的度量值包括货币换算功能。|  
-|**度量值**|从包含汇率的比率度量值组中，选择在换算从“内置度量值类型”  中选择的度量值时要使用的度量值。|  
+|**度量值组**|从包含汇率的比率度量值组中，选择在换算从“内置度量值类型”**** 中选择的度量值时要使用的度量值。|  
   
  **帐户层次结构**  
- 选择此选项可以对多维数据集中所包括帐户维度的帐户层次结构中的一个或多个成员应用货币换算功能。 帐户层次结构是在维度的帐户中的层次结构`Type`属性设置为*帐户*。  
+ 选择此选项可以对多维数据集中所包括帐户维度的帐户层次结构中的一个或多个成员应用货币换算功能。 帐户层次结构是帐户维度中的层次结构， `Type`其属性设置为 "*帐户*"。  
   
  如果选择此选项，网格中将显示下表中所列出的选项：  
   
-|Option|Description|  
+|选项|说明|  
 |------------|-----------------|  
 |**帐户成员**|选择此选项可为帐户层次结构中指定的成员包括货币换算功能。|  
-|**度量值**|从包含汇率的比率度量值组中，选择在换算 **“帐户成员”** 中所选成员的度量值时要使用的度量值。|  
+|**度量值组**|从包含汇率的比率度量值组中，选择在换算 **“帐户成员”** 中所选成员的度量值时要使用的度量值。|  
   
  **基于类型的帐户层次结构**  
  选择此选项可以向以下成员应用货币换算功能：帐户层次结构中 `Type` 属性设置为指定帐户类型的特性的所有成员。  
   
  如果选择此选项，网格中将显示下表中所列出的选项：  
   
-|Option|Description|  
+|选项|说明|  
 |------------|-----------------|  
 |**帐户类型**|选择此选项可为指定的帐户类型包括货币换算功能。|  
-|**度量值**|对于使用 **“帐户类型”** 中所选择的帐户类型的属性，从包含汇率的比率度量值组中，选择在换算这些属性的成员的度量值时要使用的度量值。|  
+|**度量值组**|对于使用 **“帐户类型”** 中所选择的帐户类型的属性，从包含汇率的比率度量值组中，选择在换算这些属性的成员的度量值时要使用的度量值。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [商业智能向导的 F1 帮助](business-intelligence-wizard-f1-help.md)   
- [多维数据集设计器&#40;Analysis Services-多维数据&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [维度设计器&#40;Analysis Services-多维数据&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+ [多维数据集设计器 &#40;Analysis Services 多维数据&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [维度设计器 &#40;Analysis Services 多维数据&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

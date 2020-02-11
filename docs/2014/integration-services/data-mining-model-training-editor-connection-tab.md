@@ -1,5 +1,5 @@
 ---
-title: 数据挖掘模型定型编辑器 （连接选项卡） |Microsoft Docs
+title: 数据挖掘模型定型编辑器（"连接" 选项卡） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 64b31656796c1875d11c6ab1aa9524f4b149d7ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059879"
 ---
 # <a name="data-mining-model-training-editor-connection-tab"></a>数据挖掘模型定型编辑器（“连接”选项卡）
@@ -28,13 +28,13 @@ ms.locfileid: "66059879"
   
 ## <a name="options"></a>选项  
  **“ODBC 目标编辑器”**  
- 从现有 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 连接的列表中进行选择，或者通过使用下面介绍的“新建”按钮创建新的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 连接。  
+ 从现有 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 连接的列表中进行选择，或者通过使用下面介绍的“新建”[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]**按钮创建新的 ** 连接。  
   
  **新建**  
- 通过使用“添加 Analysis Services 连接管理器”对话框创建一个新连接。  
+ 通过使用“添加 Analysis Services 连接管理器”**** 对话框创建一个新连接。  
   
  **挖掘结构**  
- 从可用挖掘结构的列表中进行选择，或者通过单击“新建”创建新的挖掘结构。  
+ 从可用挖掘结构的列表中进行选择，或者通过单击“新建”**** 创建新的挖掘结构。  
   
  **新建**  
  通过使用 **数据挖掘向导**创建新的挖掘结构和挖掘模型。  
@@ -42,8 +42,8 @@ ms.locfileid: "66059879"
  **挖掘模型**  
  查看与所选挖掘结构相关联的挖掘模型的列表。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [数据挖掘模型定型编辑器（“列”选项卡）](../../2014/integration-services/data-mining-model-training-editor-columns-tab.md)  
+ [数据挖掘模型定型编辑器 &#40;列 "选项卡&#41;](../../2014/integration-services/data-mining-model-training-editor-columns-tab.md)  
   
   

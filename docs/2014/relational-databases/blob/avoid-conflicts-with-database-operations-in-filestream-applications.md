@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fafb116e1e5c02d27ad3242edd27064ffae6e401
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010371"
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>避免与 FILESTREAM 应用程序中的数据库操作冲突
@@ -26,9 +26,9 @@ ms.locfileid: "66010371"
   
 |Transact-SQL 语句|打开以进行读取|打开以进行写入|  
 |------------------------------|---------------------|----------------------|  
-|处理数据库元数据的 DDL 语句，例如 CREATE TABLE、CREATE INDEX、DROP TABLE 和 ALTER TABLE。|Allowed|被阻止，并因超时而失败。|  
-|处理存储在数据库中的数据的 DML 语句，例如 UPDATE、DELETE 和 INSERT。|Allowed|拒绝|  
-|SELECT|Allowed|Allowed|  
+|处理数据库元数据的 DDL 语句，例如 CREATE TABLE、CREATE INDEX、DROP TABLE 和 ALTER TABLE。|允许|被阻止，并因超时而失败。|  
+|处理存储在数据库中的数据的 DML 语句，例如 UPDATE、DELETE 和 INSERT。|允许|拒绝|  
+|SELECT|允许|允许|  
 |COMMIT TRANSACTION|拒绝*|拒绝*|  
 |SAVE TRANSACTION|拒绝*|拒绝*|  
 |ROLLBACK|允许*|允许*|  
@@ -140,7 +140,7 @@ HANDLE srcHandle =  OpenSqlFilestream(srcFilePath,
 //cursor is still open.  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用 OpenSqlFilestream 访问 FILESTREAM 数据](access-filestream-data-with-opensqlfilestream.md)   
  [使用多个活动的结果集 (MARS)](../native-client/features/using-multiple-active-result-sets-mars.md)  
   

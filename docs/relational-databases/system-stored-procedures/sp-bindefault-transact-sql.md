@@ -1,5 +1,5 @@
 ---
-title: sp_bindefault (TRANSACT-SQL) |Microsoft Docs
+title: sp_bindefault （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/25/2015
 ms.prod: sql
@@ -19,21 +19,21 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 918f545dd0ea0ca30524a307f1ae6d30c3fafb61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046056"
 ---
-# <a name="spbindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
+# <a name="sp_bindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   将默认值绑定到列或绑定到别名数据类型。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 我们建议使用的 DEFAULT 关键字创建 default 定义[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)或[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)语句相反。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]建议改为使用[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)或[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)语句的 default 关键字来创建默认定义。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,29 +45,29 @@ sp_bindefault [ @defname = ] 'default' ,
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @defname = ] 'default'` 是由 CREATE DEFAULT 创建的默认值的名称。 *默认值*是**nvarchar(776)** ，无默认值。  
+`[ @defname = ] 'default'`由 CREATE DEFAULT 创建的默认值的名称。 *默认值*为**nvarchar （776）**，无默认值。  
   
-`[ @objname = ] 'object_name'` 是的表和列或别名数据类型默认值是要绑定的名称。 *object_name*是**nvarchar(776)** ，无默认值。 *object_name*不能使用定义**varchar （max)** ， **nvarchar （max)** ， **varbinary （max)** ， **xml**，或 CLR用户定义类型。  
+`[ @objname = ] 'object_name'`要绑定默认值的表和列的名称或别名数据类型。 *object_name*为**nvarchar （776）** ，无默认值。 不能将*object_name*定义为**varchar （max）**、 **nvarchar （max）**、 **VARBINARY （max）**、 **xml**或 CLR 用户定义类型。  
   
- 如果*object_name*是名称的一部分，则按别名数据类型进行解析。 如果是由两个或三部分名称，首先解析为表和列;并且，如果此解析失败，则将它解析为别名数据类型。 默认情况下，别名数据类型的现有列继承*默认*，除非默认值已经直接绑定到列。 默认值不能绑定到**文本**， **ntext**，**图像**， **varchar （max)** ， **nvarchar （max)** ，**varbinary （max)** ， **xml**，**时间戳**，或 CLR 用户定义类型列、 具有 IDENTITY 属性的列、 计算的列，已具有 DEFAULT 约束。  
+ 如果*object_name*是由一个部分组成的名称，则将其解析为别名数据类型。 如果它是由两部分或三部分组成的名称，则首先将它解析为表和列;如果此分辨率失败，则将其解析为别名数据类型。 默认情况下，别名数据类型的现有列将继承*默认值*，除非已将默认值直接绑定到列。 不能将默认值绑定到**text**、 **ntext**、 **image**、 **varchar （max**）、 **nvarchar （max）**、 **varbinary （max）**、 **xml**、 **timestamp**或 CLR 用户定义类型列、具有 IDENTITY 属性的列、计算列或已具有默认约束的列。  
   
 > [!NOTE]  
 >  *object_name*可以包含方括号 **[]** 作为分隔标识符。 有关详细信息，请参阅 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)。  
   
-`[ @futureonly = ] 'futureonly_flag'` 仅当将默认值绑定到别名数据类型时使用。 *futureonly_flag*是**varchar(15)** 默认值为 NULL。 如果此参数设置为**futureonly**，该数据类型的现有列不能继承新默认值。 将默认值绑定到列时，从不使用此参数。 如果*futureonly_flag*为 NULL，将新的默认值绑定到别名数据类型的任何列的当前没有默认值或使用别名数据类型的现有默认值的。  
+`[ @futureonly = ] 'futureonly_flag'`仅在将默认值绑定到别名数据类型时使用。 *futureonly_flag*的值为**varchar （15）** ，默认值为 NULL。 当此参数设置为**futureonly**时，该数据类型的现有列无法继承新的默认值。 将默认值绑定到列时，从不使用此参数。 如果*futureonly_flag*为 NULL，则新的默认值将绑定到当前没有默认值或使用别名数据类型的现有默认值的别名数据类型的任何列。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="remarks"></a>备注  
- 可以使用**sp_bindefault**新默认值为列，尽管使用默认约束是首选方法，或绑定到别名数据类型不取消绑定现有默认值。 原有默认值将被覆盖。 不能将默认值绑定到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统数据类型或 CLR 用户定义类型。 如果默认值和要绑定到的列不兼容，那么在试图插入默认值时（不是在绑定时），[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 将返回错误消息。  
+ 您可以使用**sp_bindefault**将新的默认值绑定到列，但最好使用默认约束，或将其绑定到别名数据类型，而不解除现有默认值的绑定。 原有默认值将被覆盖。 不能将默认值绑定到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统数据类型或 CLR 用户定义类型。 如果默认值和要绑定到的列不兼容，那么在试图插入默认值时（不是在绑定时），[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 将返回错误消息。  
   
- 别名数据类型的现有列继承新默认值，除非将默认值直接绑定到它们或*futureonly_flag*指定为**futureonly**。 别名数据类型的新列始终继承默认值。  
+ 别名数据类型的现有列将继承新的默认值，除非默认值直接绑定到这些列，否则将*futureonly_flag*指定为**futureonly**。 别名数据类型的新列始终继承默认值。  
   
- 当默认值绑定到列时，相关的信息添加到**sys.columns**目录视图。 默认值绑定到别名数据类型时，相关的信息添加到**sys.types**目录视图。  
+ 将默认值绑定到列时，相关信息将添加到**sys.databases**目录视图中。 将默认值绑定到别名数据类型时，相关信息将添加到**sys.databases**目录视图中。  
   
 ## <a name="permissions"></a>权限  
- 用户必须拥有表，或者是的成员**sysadmin**固定服务器角色或**db_owner**并**db_ddladmin**固定数据库角色的成员。  
+ 用户必须是表的成员，或者是**sysadmin**固定服务器角色的成员，或者是**db_owner**和**db_ddladmin**固定数据库角色的成员。  
   
 ## <a name="examples"></a>示例  
   
@@ -81,7 +81,7 @@ EXEC sp_bindefault 'today', 'HumanResources.Employee.HireDate';
 ```  
   
 ### <a name="b-binding-a-default-to-an-alias-data-type"></a>B. 将默认值绑定到别名数据类型  
- 已经存在名为 `def_ssn` 的默认值和名为 `ssn` 的别名数据类型。 以下示例将默认值 `def_ssn` 绑定到 `ssn`。 创建表时，被赋予别名数据类型 `ssn` 的所有列都将继承此默认值。 类型的现有列**ssn**也继承默认值**def_ssn**，除非**futureonly**指定为*futureonly_flag*值，或者，除非该列具有直接绑定默认值。 绑定到列的默认值始终优先于绑定到数据类型的默认值。  
+ 已经存在名为 `def_ssn` 的默认值和名为 `ssn` 的别名数据类型。 以下示例将默认值 `def_ssn` 绑定到 `ssn`。 创建表时，被赋予别名数据类型 `ssn` 的所有列都将继承此默认值。 类型为**ssn**的现有列还继承默认**def_ssn**，除非为*futureonly_flag*值指定**futureonly** ，否则，除非该列有直接绑定到它的默认值。 绑定到列的默认值始终优先于绑定到数据类型的默认值。  
   
 ```  
 USE master;  
@@ -89,8 +89,8 @@ GO
 EXEC sp_bindefault 'def_ssn', 'ssn';  
 ```  
   
-### <a name="c-using-the-futureonlyflag"></a>C. 使用 futureonly_flag  
- 以下示例将默认值 `def_ssn` 绑定到别名数据类型 `ssn`。 因为**futureonly**指定类型的任何现有列`ssn`会受到影响。  
+### <a name="c-using-the-futureonly_flag"></a>C. 使用 futureonly_flag  
+ 以下示例将默认值 `def_ssn` 绑定到别名数据类型 `ssn`。 由于指定了**futureonly** ，因此不会影响类型`ssn`为的现有列。  
   
 ```  
 USE master;  
@@ -98,8 +98,8 @@ GO
 EXEC sp_bindefault 'def_ssn', 'ssn', 'futureonly';  
 ```  
   
-### <a name="d-using-delimited-identifiers"></a>D. 使用分隔的标识符  
- 下面的示例演示使用分隔的标识符`[t.1]`，请在*object_name*。  
+### <a name="d-using-delimited-identifiers"></a>D. 使用分隔标识符  
+ 下面的示例演示如何在*object_name*中`[t.1]`使用分隔标识符。  
   
 ```  
 USE master;  
@@ -112,11 +112,11 @@ EXEC sp_bindefault 'default1', '[t.1].c1' ;
 -- and the second distinguishes the table name from the column name.  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [CREATE DEFAULT (Transact-SQL)](../../t-sql/statements/create-default-transact-sql.md)   
- [DROP DEFAULT (Transact-SQL)](../../t-sql/statements/drop-default-transact-sql.md)   
- [sp_unbindefault &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [数据库引擎存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [CREATE DEFAULT &#40;Transact-sql&#41;](../../t-sql/statements/create-default-transact-sql.md)   
+ [DROP DEFAULT &#40;Transact-sql&#41;](../../t-sql/statements/drop-default-transact-sql.md)   
+ [sp_unbindefault &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

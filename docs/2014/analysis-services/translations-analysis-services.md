@@ -1,5 +1,5 @@
 ---
-title: 翻译 (Analysis Services) |Microsoft Docs
+title: 翻译（Analysis Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,14 +18,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e97c9ba15aab664e9f0c77f9eb84152f75c3e3d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065881"
 ---
 # <a name="translations-analysis-services"></a>翻译 (Analysis Services)
-  **[!INCLUDE[applies](../includes/applies-md.md)]**  多维  
+  **[!INCLUDE[applies](../includes/applies-md.md)]** 仅多维  
   
  在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维数据模型中，可以嵌入一个标题的多个翻译，以基于 LCID 提供特定于区域设置的字符串。 可为数据库名称、多维数据集对象和数据库维度对象添加翻译。  
   
@@ -45,15 +45,15 @@ ms.locfileid: "66065881"
   
 1.  在设计器中打开 Adventure Works 多维模型。  
   
-2.  在解决方案资源管理器中打开数据源视图，然后双击 Adventure Works DW\<版本 >.dsv。  
+2.  在解决方案资源管理器中，打开 "数据源视图"，然后双击 "\<艾德作品 DW 版本">。  
   
 3.  找到 dimDate、dimProduct、dimProductCategory 或 dimProductSubcateogry。 所有这些维度均包含月份、每周天数、产品名称、类别名称等已翻译成员的属性。  
   
-4.  右键单击任一字段并选择“浏览数据”  。 你将看到每个成员的英语、西班牙语和法语翻译。  
+4.  右键单击任一字段并选择“浏览数据” ****。 你将看到每个成员的英语、西班牙语和法语翻译。  
   
  日期、时间和货币的格式不通过翻译实现。 若要根据客户端的区域设置动态提供区域特定的格式，请使用货币换算向导和 `FormatString` 属性。 有关详细信息，请参阅 [货币换算 (Analysis Services)](currency-conversions-analysis-services.md) 和 [FormatString 元素 (ASSL)](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl)。  
   
- [第 9 课：定义透视和翻译](lesson-9-defining-perspectives-and-translations.md)Analysis Services 教程中将引导你完成创建和测试翻译的步骤。  
+ 第[9 课：在 Analysis Services 中定义透视和翻译](lesson-9-defining-perspectives-and-translations.md)教程将引导你完成创建和测试翻译的步骤。  
   
 ## <a name="defining-translations"></a>定义翻译  
  定义翻译将创建一个 `Translation` 对象，作为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库、维度或多维数据集对象的子对象。 使用 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] 打开解决方案和定义翻译。  
@@ -63,7 +63,7 @@ ms.locfileid: "66065881"
   
 1.  在解决方案资源管理器中，双击多维数据集名称，以打开多维数据集设计器。  
   
-2.  单击 **“翻译”** 选项卡。此页中列出了支持翻译的所有对象。  
+2.  单击 "**翻译**" 选项卡。此页中列出了支持翻译的所有对象。  
   
 3.  为每个对象指定目标语言（内部解析为 LCID）、已翻译的标题和已翻译的说明。 无论是在 Management Studio 中设置服务器语言，还是在单个属性上添加翻译覆盖，语言列表在整个 Analysis Service 中都是一致的。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "66065881"
   
 4.  生成和部署项目。  
   
-5.  使用客户端应用程序（如 Excel）连接到数据库，修改连接字符串以使用区域设置标识符。 有关详细信息，请参阅 [全球化提示和最佳实践 (Analysis Services)](globalization-tips-and-best-practices-analysis-services.md) 。  
+5.  使用客户端应用程序（如 Excel）连接到数据库，修改连接字符串以使用区域设置标识符。 有关详细信息，请参阅 [Globalization Tips and Best Practices &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) 。  
   
 ### <a name="add-translations-to-a-dimension-and-attributes"></a>向维度和属性添加翻译  
  你可以将翻译添加到数据库维度、属性、层次结构和层次结构内的各级别。  
@@ -82,15 +82,15 @@ ms.locfileid: "66065881"
   
 1.  在解决方案资源管理器中，双击维度名称，以打开维度设计器。  
   
-2.  单击 **“翻译”** 选项卡。此页中列出了支持翻译的所有维度对象。  
+2.  单击 "**翻译**" 选项卡。此页中列出了支持翻译的所有维度对象。  
   
      为每个对象指定目标语言（解析为 LCID）、已翻译的标题和已翻译的说明。 无论是在 Management Studio 中设置服务器语言，还是在单个属性上添加翻译覆盖，语言列表在整个 Analysis Service 中都是一致的。  
   
 3.  要将属性绑定到提供已翻译值的列：  
   
-    1.  仍然是在维度设计器 |“翻译”  ，添加一个新翻译。 选择语言。 页面上将出现新的一列来接受已翻译的值。  
+    1.  仍然是在维度设计器 |“翻译” ****，添加一个新翻译。 选择语言。 页面上将出现新的一列来接受已翻译的值。  
   
-    2.  将光标置于与其中一个属性相邻的空单元格中。 该属性不能为密钥，但所有其他属性均可选。 你会看到一个内含一个点的小按钮。 单击该按钮以打开“翻译属性数据对话框”  。  
+    2.  将光标置于与其中一个属性相邻的空单元格中。 该属性不能为密钥，但所有其他属性均可选。 你会看到一个内含一个点的小按钮。 单击该按钮以打开“翻译属性数据对话框” ****。  
   
     3.  为标题输入一个翻译。 这在目标语言中用作数据标签，例如，在 PivotTable 字段列表中用作字段名。  
   
@@ -100,12 +100,12 @@ ms.locfileid: "66065881"
   
 4.  生成和部署项目。  
   
-5.  使用客户端应用程序（如 Excel）连接到数据库，修改连接字符串以使用区域设置标识符。 有关详细信息，请参阅[全球化提示和最佳实践 (Analysis Services)](globalization-tips-and-best-practices-analysis-services.md)。  
+5.  使用客户端应用程序（如 Excel）连接到数据库，修改连接字符串以使用区域设置标识符。 有关详细信息，请参阅 [Globalization Tips and Best Practices &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) 。  
   
 ### <a name="add-a-translation-of-the-database-name"></a>添加数据库名称的一个翻译  
  你可以在数据库级别为数据库名称和说明添加翻译。 已翻译的数据库名称可能在指定语言的 LCID 的客户端连接上可见，但这取决于工具。 例如，在 Management Studio 中查看数据库将不会显示已翻译的名称，即使你在连接上指定了区域设置标识符。 Management Studio 用以连接 Analysis Services 的 API 不会读取 `Language` 属性。  
   
-1.  在解决方案资源管理器中，右键单击项目名称 |“编辑数据库”  ，以打开数据库设计器。  
+1.  在解决方案资源管理器中，右键单击项目名称 |“编辑数据库” **** ，以打开数据库设计器。  
   
 2.  在翻译中指定目标语言（解析为 LCID）、已翻译的标题和已翻译的说明。 无论是在 Management Studio 中设置服务器语言，还是在单个属性上添加翻译覆盖，语言列表在整个 Analysis Service 中都是一致的。  
   
@@ -116,10 +116,10 @@ ms.locfileid: "66065881"
 ## <a name="resolving-translations"></a>解析翻译  
  如果客户端应用程序要求区域设置标识符， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例会尝试将 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象的数据和元数据解析为最匹配的 LCID。 如果客户端应用程序未指定默认语言，或指定了非特定区域设置标识符 (0) 或进程默认语言标识符 (1024)，那么， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将使用实例的默认语言来返回 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象的数据和元数据。  
   
-## <a name="see-also"></a>请参阅  
- [Analysis Services Multiidimensional 的全球化方案](globalization-scenarios-for-analysis-services-multiidimensional.md)   
- [语言和排序规则 (Analysis Services)](languages-and-collations-analysis-services.md)   
+## <a name="see-also"></a>另请参阅  
+ [Analysis Services Multidimensional 的全球化方案](globalization-scenarios-for-analysis-services-multiidimensional.md)   
+ [语言和排序规则 &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)   
  [设置或更改列排序规则](../relational-databases/collations/set-or-change-the-column-collation.md)   
- [全球化提示和最佳实践 (Analysis Services)](globalization-tips-and-best-practices-analysis-services.md)  
+ [全球化提示和最佳做法 &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)  
   
   

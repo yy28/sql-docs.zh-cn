@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f3b2c9137f34a76ec77f179eb329042d92be5cd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769097"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>表达式中的 Integration Services 数据类型
@@ -38,7 +38,7 @@ ms.locfileid: "62769097"
   
  以下关系图显示了 BINARY 运算的隐式转换的结果类型。 该表中列和行的交集为二元运算的结果类型，该运算中操作数的类型为左 (From) 和右 (To)。  
   
- ![数据类型之间的隐式数据类型转换](../media/mw-dts-impl-conver-02.gif "Implicit data type conversion between data types")  
+ ![数据类型之间的隐式数据类型转换](../media/mw-dts-impl-conver-02.gif "数据类型之间的隐式数据类型转换")  
   
  有符号整数和无符号整数的交集是可能大于这两者中任何一个的有符号整数。  
   
@@ -47,15 +47,16 @@ ms.locfileid: "62769097"
 > [!NOTE]  
 >  布尔值是逻辑值而非数字。 虽然布尔值在某些环境中可能显示为数字，但它们并非以数字形式存储，而且不同的编程语言以不同的数值表示布尔值，.NET Framework 方法也是如此。  
 >   
->  例如，Visual Basic 中可用的转换函数将 `True` 转换为 -1；但是 .NET Framework 中的 `System.Convert.ToInt32` 方法将 `True` 转换为 +1。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 表达式语言将 `True` 转换为 -1。  
+>  例如，Visual Basic 中可用的转换函数将 `True` 转换为 -1；但是 .NET Framework 中的 `System.Convert.ToInt32` 方法将 `True` 转换为 +1。 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 表达式语言将 `True` 转换为 -1。  
 >   
 >  若要避免错误或意外结果，不应编写依赖 `True` 和 `False` 为特定数值的代码。 如果可能，应将布尔变量的使用限制为与其设计意图对应的逻辑值。  
   
- 有关详细信息，请参阅下列主题：  
+ 有关详情，请参阅以下主题：  
   
--   [== &#40;等于&#41; &#40;SSIS 表达式&#41;](equal-ssis-expression.md)  
+-   [==（等于）（SSIS 表达式）](equal-ssis-expression.md)  
   
--   [!= &#40;不等于&#41; &#40;SSIS 表达式&#41;](unequal-ssis-expression.md)  
+-   [\!=（不等于）（SSIS 表达式）](unequal-ssis-expression.md)  
   
 -   [>（大于）（SSIS 表达式）](greater-than-ssis-expression.md)  
   
@@ -63,7 +64,7 @@ ms.locfileid: "62769097"
   
 -   [>=（大于或等于）（SSIS 表达式）](greater-than-or-equal-to-ssis-expression.md)  
   
--   [&#60;= &#40;小于或等于&#41; &#40;SSIS 表达式&#41;](less-than-or-equal-to-ssis-expression.md)  
+-   [<=（小于或等于）（SSIS 表达式）](less-than-or-equal-to-ssis-expression.md)  
   
  使用单个参数的函数将返回与参数具有相同数据类型的结果，但下列情况除外：  
   
@@ -78,9 +79,11 @@ ms.locfileid: "62769097"
 ## <a name="requirements-for-data-used-in-expressions"></a>表达式中的数据使用要求  
  表达式计算器支持所有的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 数据类型。 但是，根据运算或函数的不同，操作数和参数需要特定的数据类型。 表达式计算器对表达式中使用的数据规定了下列数据类型要求：  
   
--   **“逻辑”** 运算中所用操作数的取值必须为布尔值。 例如，ColumnA > 1&&ColumnB < 2。  
+-   
+  **“逻辑”** 运算中所用操作数的取值必须为布尔值。 例如，ColumnA > 1&&ColumnB < 2。  
   
--   **“数学”** 运算中所用操作数的取值必须为数值。 例如，23.75 * 4。  
+-   
+  **“数学”** 运算中所用操作数的取值必须为数值。 例如，23.75 * 4。  
   
 -   用在比较运算（如逻辑运算和相等运算）中的操作数的计算结果必须为兼容的数据类型。  
   

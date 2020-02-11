@@ -15,18 +15,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3e604ee6aac125f366ac2fca6444527340213019
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721490"
 ---
 # <a name="distribution-agent-security"></a>分发代理安全性
-  使用 **“分发代理安全性”** 对话框可以指定用于运行分发代理的 Windows 帐户。 对于推送订阅，分发代理在分发服务器上运行；对于请求订阅，分发代理在订阅服务器上运行。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户也称为“进程帐户  ”，因为代理进程是在此帐户下运行。 该对话框中可用的其他选项取决于访问对话框的方式：  
+  "**分发代理安全**" 对话框允许您指定运行分发代理所用的 Windows 帐户。 对于推送订阅，分发代理在分发服务器上运行；对于请求订阅，分发代理在订阅服务器上运行。 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户也称为“进程帐户 **”，因为代理进程是在此帐户下运行。 该对话框中可用的其他选项取决于访问对话框的方式：  
   
--   如果从新建订阅向导访问该对话框，您还可以指定分发代理在建立与订阅服务器（对于推送订阅）或分发服务器（对于请求订阅）的连接时所使用的上下文。 可以通过模拟 Windows 帐户，或在指定的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帐户的上下文中建立连接。  
+-   如果从新建订阅向导访问该对话框，您还可以指定分发代理在建立与订阅服务器（对于推送订阅）或分发服务器（对于请求订阅）的连接时所使用的上下文。 可以通过模拟 Windows 帐户或指定的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]帐户的上下文来建立连接。  
   
--   如果从 **“订阅属性”** 对话框访问该对话框，可通过单击该对话框的 **“订阅服务器连接”** 或 **“分发服务器连接”** 行中的属性按钮 ( **...** ) 来指定分发代理建立连接时所使用的上下文。 有关访问“订阅属性”对话框的详细信息，请参阅[查看和修改推送订阅属性](view-and-modify-push-subscription-properties.md)和如何：  [查看和修改请求订阅属性](view-and-modify-pull-subscription-properties.md)。  
+-   如果从 **“订阅属性”** 对话框访问该对话框，可通过单击该对话框的 **“订阅服务器连接”** 或 **“分发服务器连接”** 行中的属性按钮 ( **...** ) 来指定分发代理建立连接时所使用的上下文。 有关访问“订阅属性”**** 对话框的详细信息，请参阅[查看和修改推送订阅属性](view-and-modify-push-subscription-properties.md)和如何[查看和修改请求订阅属性](view-and-modify-pull-subscription-properties.md)。  
   
  所有帐户必须是有效的，并且为每个帐户指定了正确的密码。 在运行代理之前不会对帐户和密码进行验证。  
   
@@ -36,7 +37,7 @@ ms.locfileid: "62721490"
   
 -   对于推送订阅，该帐户必须：  
   
-    -   至少是分发数据库中的 **db_owner** 固定数据库角色的成员。  
+    -   至少是分发数据库中**db_owner**固定数据库角色的成员。  
   
     -   是发布访问列表 (PAL) 的成员。  
   
@@ -48,12 +49,12 @@ ms.locfileid: "62721490"
   
  如果在建立连接时模拟进程帐户，则还需要其他权限。 请参阅下面的 **“连接到分发服务器”** 和 **“连接到订阅服务器”** 部分。  
   
- 由于分发代理没有运行在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 实例上，因此不能为对 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的请求订阅指定 **“进程帐户”** 。  
+ 不能为[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]对的请求订阅指定[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]**进程帐户**，因为分发代理不会在的实例上运行。  
   
- **“密码”** 和 **“确认密码”**  
+ **密码**和**确认密码**  
  输入 Windows 帐户的密码。  
   
- **“连接到分发服务器”**  
+ **连接到分发服务器**  
  对于推送订阅，始终通过模拟 **“进程帐户”** 文本框中指定的帐户来建立与分发服务器的连接。  
   
  对于请求订阅，请选择分发代理是通过模拟在 **“进程帐户”** 文本框中指定的帐户，还是通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帐户来建立与分发服务器的连接。 如果选择使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帐户，请输入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和密码。  
@@ -67,7 +68,7 @@ ms.locfileid: "62721490"
   
 -   对快照共享拥有读取权限。  
   
- **“连接到订阅服务器”**  
+ **连接到订阅服务器**  
  对于请求订阅，始终通过模拟 **“进程帐户”** 文本框中指定的帐户来建立与订阅服务器的连接。  
   
  对于推送订阅， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器和非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器的选项是不同的：  
@@ -91,9 +92,9 @@ Default Schema=MY_SCHEMA;Process Binary as Character=False;Units of Work=RUW;DBM
 Persist Security Info=False;Connection Pooling=True;  
 ```  
   
- 字符串中的大多数选项都特定于正在配置的 DB2 服务器，但是应始终将“将二进制数作为字符处理”  选项设置为 **False**。 需要为“初始目录”  选项指定一个值以标识订阅数据库。 有关详细信息，请参阅 [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md)。  
+ 字符串中的大多数选项都特定于正在配置的 DB2 服务器，但是应始终将“将二进制数作为字符处理” **** 选项设置为 **False**。 需要为“初始目录” **** 选项指定一个值以标识订阅数据库。 有关详细信息，请参阅 [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [管理复制中的登录名和密码](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [复制代理安全模式](security/replication-agent-security-model.md)   
  [复制代理概述](agents/replication-agents-overview.md)   

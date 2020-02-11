@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 95692fd0ecf365f1fb54c8c1c3a090227b0d9a38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721749"
 ---
 # <a name="replication-agent-profiles"></a>复制代理配置文件
@@ -44,7 +44,7 @@ ms.locfileid: "62721749"
 ## <a name="snapshot-agent-profiles"></a>快照代理配置文件  
  下表显示了快照代理的默认配置文件中定义的参数。 有关这些参数的详细信息，请参阅 [Replication Snapshot Agent](replication-snapshot-agent.md)。  
   
-||默认值|  
+||default|  
 |-|-------------|  
 |**-BcpBatchSize**|100000|  
 |**-HistoryVerboseLevel**|2|  
@@ -54,7 +54,7 @@ ms.locfileid: "62721749"
 ## <a name="log-reader-agent-profiles"></a>日志读取器代理配置文件  
  下表显示了日志读取器代理的配置文件中定义的参数。 表中的每一列都表示一个已命名的配置文件。 有关这些参数的详细信息，请参阅 [Replication Log Reader Agent](replication-log-reader-agent.md)。  
   
-||默认值|详细历史记录|  
+||default|详细历史记录|  
 |-|-------------|---------------------|  
 |**-HistoryVerboseLevel**|1|2|  
 |**-LoginTimeout**|15|15|  
@@ -66,7 +66,7 @@ ms.locfileid: "62721749"
 ## <a name="distribution-agent-profiles"></a>分发代理配置文件  
  下表显示了分发代理的配置文件中定义的参数。 表中的每一列都表示一个已命名的配置文件。 有关这些参数的详细信息，请参阅 [Replication Distribution Agent](replication-distribution-agent.md)。  
   
-||默认值|详细历史记录|Windows 同步管理器|出现数据一致性错误时继续|OLEDB 流的分发配置文件|  
+||default|详细历史记录|Windows 同步管理器|出现数据一致性错误时继续|OLEDB 流的分发配置文件|  
 |-|-------------|---------------------|-------------------------------------|-----------------------------------------|----------------------------------------------|  
 |**-BcpBatchSize**|100000|100000|1000|100000|2147473647|  
 |**-CommitBatchSize**|100|100|100|100|100|  
@@ -76,18 +76,18 @@ ms.locfileid: "62721749"
 |**-LoginTimeout**|15|15|15|15|15|  
 |**-MaxBcpThreads**|1|1|1|1|1|  
 |**-MaxDeliveredTransactions**|0|0|0|0|0|  
-|**-OledbStreamThreshold**|NULL|NULL|NULL|NULL|32768|  
-|**-PacketSize**|NULL|NULL|NULL|NULL|32768|  
+|**-OledbStreamThreshold**|Null|Null|Null|Null|32768|  
+|**-PacketSize**|Null|Null|Null|Null|32768|  
 |**-PollingInterval**|5|5|5|5|5|  
 |**-QueryTimeout**|1800|1800|1800|1800|1800|  
-|**-SkipErrors**|NULL|NULL|NULL|**-SkipErrors** 2601:2627:20598|NULL|  
+|**-SkipErrors**|Null|Null|Null|**-SkipErrors** 2601:2627:20598|Null|  
 |**-TransactionsPerHistory**|100|100|100|100|100|  
-|**-UseOledbStreaming**|NULL|NULL|NULL|NULL|**-UseOledbStreaming**|  
+|**-UseOledbStreaming**|Null|Null|Null|Null|**-UseOledbStreaming**|  
   
 ## <a name="merge-agent-profiles"></a>合并代理配置文件  
  下表显示了合并代理的配置文件中定义的参数。 表中的每一列都表示一个已命名的配置文件。 有关这些参数的详细信息，请参阅 [Replication Merge Agent](replication-merge-agent.md)。  
   
-||默认值|详细历史记录|Windows 同步管理器|行计数验证|行计数和校验和验证|慢速链接|高卷服务器对服务器|  
+||default|详细历史记录|Windows 同步管理器|行计数验证|行计数和校验和验证|慢速链接|高卷服务器对服务器|  
 |-|-------------|---------------------|-------------------------------------|-------------------------|--------------------------------------|---------------|------------------------------------|  
 |**-BcpBatchSize**|100000|100000|1000|100000|100000|100000|100000|  
 |**-ChangesPerHistory**|100|50|50|100|100|100|1000|  
@@ -103,10 +103,10 @@ ms.locfileid: "62721749"
 |**-MaxUploadChanges**|0|0|0|0|0|0|0|  
 |**-MetadataRetentionCleanup**|1|1|1|1|1|1|1|  
 |**-NumDeadlockRetries**|5|5|5|5|5|5|5|  
-|**-ParallelUploadDownload**|NULL|NULL|NULL|NULL|NULL|NULL|1|  
+|**-ParallelUploadDownload**|Null|Null|Null|Null|Null|Null|1|  
 |**-PollingInterval**|60|60|60|60|60|60|60|  
 |**-QueryTimeout**|300|300|300|300|300|300|600|  
-|**-QueueSizeMultiplier**|NULL|NULL|NULL|NULL|NULL|NULL|5|  
+|**-QueueSizeMultiplier**|Null|Null|Null|Null|Null|Null|5|  
 |**-SrcThreads**|2|2|2|2|2|1|3|  
 |**-StartQueueTimeout**|0|0|0|0|0|0|0|  
 |**-UploadGenerationsPerBatch**|50|50|50|50|50|1|500|  
@@ -118,14 +118,14 @@ ms.locfileid: "62721749"
 ## <a name="queue-reader-agent-profiles"></a>队列读取器代理配置文件  
  下表显示了队列读取器代理的默认配置文件中定义的参数。 有关这些参数的详细信息，请参阅 [Replication Queue Reader Agent](replication-queue-reader-agent.md)。  
   
-||默认值|  
+||default|  
 |-|-------------|  
 |**-HistoryVerboseLevel**|1|  
 |**-LoginTimeout**|15|  
 |**-PollingInterval**|5|  
 |**-QueryTimeout**|1800|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [复制代理管理](replication-agent-administration.md)   
  [查看和修改复制代理命令提示符参数 (SQL Server Management Studio)](view-and-modify-replication-agent-command-prompt-parameters.md)   
  [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)  

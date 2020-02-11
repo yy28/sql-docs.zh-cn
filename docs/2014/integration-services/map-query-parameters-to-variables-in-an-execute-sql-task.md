@@ -1,5 +1,5 @@
 ---
-title: 将查询参数映射到变量中执行 SQL 任务 |Microsoft Docs
+title: 在执行 SQL 任务中将查询参数映射到变量 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8863de6fc0418dbf502492ac20f7c5c846696aea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057799"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>在执行 SQL 任务中将查询参数映射到变量
@@ -38,7 +38,7 @@ ms.locfileid: "66057799"
   
 3.  单击 **“控制流”** 选项卡。  
   
-4.  如果该包尚未包括执行 SQL 任务，则向该包的控制流中添加一个此类任务。 有关详细信息，请参阅[添加或删除任务或容器中控制流](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+4.  如果该包尚未包括执行 SQL 任务，则向该包的控制流中添加一个此类任务。 有关详细信息，请参阅[在控制流中添加或删除任务或容器](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   .  
   
 5.  双击执行 SQL 任务。  
@@ -47,7 +47,7 @@ ms.locfileid: "66057799"
   
     -   在 SQLStatement 属性中使用直接输入并键入 SQL 命令。  
   
-    -   使用直接输入，单击 **“生成查询”** ，然后使用查询生成器提供的图形工具创建 SQL 命令。  
+    -   使用直接输入，单击 **“生成查询”**，然后使用查询生成器提供的图形工具创建 SQL 命令。  
   
     -   使用文件连接，然后引用包含该 SQL 命令的文件。  
   
@@ -70,17 +70,17 @@ ms.locfileid: "66057799"
     |ADO|`SELECT* FROM Production.Product WHERE ProductId > ? AND ProductID < ?`|  
     |[!INCLUDE[vstecado](../includes/vstecado-md.md)]|`SELECT* FROM Production.Product WHERE ProductId > @parmMinProductID AND ProductID < @parmMaxProductID`|  
   
-     有关在存储过程中使用参数的示例，请参阅 [执行 SQL 任务中的参数和返回代码](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)。  
+     有关在存储过程中使用参数的示例，请参阅 [Parameters and Return Codes in the Execute SQL Task](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)。  
   
-7.  单击 **“参数映射”** 。  
+7.  单击 **“参数映射”**。  
   
-8.  若要添加参数映射，请单击 **“添加”** 。  
+8.  若要添加参数映射，请单击 **“添加”**。  
   
 9. 在 **“参数名称”** 框中提供名称。  
   
      所使用的参数名称取决于执行 SQL 任务所使用的连接类型。  
   
-    |连接类型|“参数名称”|  
+    |连接类型|参数名称|  
     |---------------------|--------------------|  
     |ADO|Param1, Param2, …|  
     |ADO.NET 和 SQLMOBILE|@\<参数名称>|  
@@ -101,11 +101,11 @@ ms.locfileid: "66057799"
     > [!IMPORTANT]  
     >  参数映射的顺序必须与参数在 SQL 语句中出现的顺序相同。  
   
-14. 单击“确定”  。  
+14. 单击“确定”。   
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [执行 SQL 任务](control-flow/execute-sql-task.md)   
- [参数和返回代码中执行 SQL 任务](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)   
+ [执行 SQL 任务中的参数和返回代码](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)   
  [Integration Services (SSIS) 变量](integration-services-ssis-variables.md)  
   
   

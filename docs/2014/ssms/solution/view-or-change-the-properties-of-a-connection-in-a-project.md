@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 636fe00c73e508363eaab385f6acd9909374166c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62704725"
 ---
 # <a name="view-or-change-the-properties-of-a-connection-in-a-project"></a>查看或更改项目中的连接属性
@@ -32,9 +32,9 @@ ms.locfileid: "62704725"
   
 2.  在“属性”窗口中查看连接属性。 可以更改“执行超时值”  、“数据库”  和“登录超时值”  属性。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [解决方案资源管理器](solution-explorer.md)   
- [将查询与项目中的连接相关联](associate-a-query-with-a-connection-in-a-project.md)   
+ [将查询与项目中的连接关联](associate-a-query-with-a-connection-in-a-project.md)   
  [更改与查询关联的连接](change-the-connection-associated-with-a-query.md)  
   
   

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d5e85a3685804fa834c9a92887a46c72b7cb69a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62811311"
 ---
 # <a name="default-trace-enabled-server-configuration-option"></a>default trace enabled 服务器配置选项
@@ -27,7 +27,7 @@ ms.locfileid: "62811311"
 > [!WARNING]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 请改用扩展事件。  
   
-## <a name="purpose"></a>用途  
+## <a name="purpose"></a>目的  
  默认跟踪可确保数据库管理员在问题首次出现时即具有诊断该问题所需的日志数据，从而为数据库管理员提供了故障排除帮助。  
   
 ## <a name="viewing"></a>查看  
@@ -35,7 +35,7 @@ ms.locfileid: "62811311"
   
  有关使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件探查器查看此跟踪文件的详细信息，请参阅[打开跟踪文件 (SQL Server Profiler)](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)。  
   
-### <a name="example"></a>例如：  
+### <a name="example"></a>示例：  
  以下语句将打开默认位置中的默认跟踪日志：  
   
 ```  
@@ -51,7 +51,7 @@ GO
   
  **default trace enabled** 选项是一个高级选项。 如果使用 **sp_configure** 系统存储过程来更改该设置，则仅当 **show advanced options** 设置为 1 时才能更改 **default trace enabled** 选项。 该设置将立即生效，无需重新启动服务器。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [RECONFIGURE (Transact-SQL)](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [服务器配置选项 (SQL Server)](server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  

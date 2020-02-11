@@ -13,10 +13,10 @@ ms.assetid: cb076fda-6488-4959-a6a4-7adaccf3f25c
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: fa57b82d0e3f18e4ee1c3d0147935fa00cd5c06a
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874852"
 ---
 # <a name="transaction-lifetimes"></a>事务生存期
@@ -31,7 +31,7 @@ ms.locfileid: "70874852"
   
 -   如果尝试回滚不是在同一过程中启动的事务，则会导致事务停止响应（防止任何其他副作用的操作发生）。 事务将断开连接，直到 CLR 代码离开作用域。 请注意当您在过程内检测到错误并想确保终止整个事务时，这可能很有用。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [CLR 集成和事务](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
   
   

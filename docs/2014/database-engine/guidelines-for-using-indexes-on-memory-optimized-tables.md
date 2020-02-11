@@ -1,5 +1,5 @@
 ---
-title: 内存优化表上使用索引的指导原则 |Microsoft Docs
+title: 在内存优化表上使用索引的准则 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 71d26e3f46034019d51bd69b86686f40eb9ce63e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779221"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>在内存优化表上使用索引的指导原则
@@ -28,9 +28,9 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
  如果 c1 列上没有索引，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 需要扫描整个表 t，然后筛选满足条件 c1=1 的行。 但是，如果 t 在 c1 列上具有索引，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以直接查找值 1 并对行进行检索。  
   
- 针对表中一列或多列搜索具有特定值或值范围的记录时，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以使用这些列上的索引来快速找到对应记录。 基于磁盘的表和内存优化表都会受益于索引。 但是，在使用内存优化的表时，需要考虑索引结构之间的一些区别。 （内存优化表的索引称为内存优化的索引。）一些主要区别如下：  
+ 针对表中一列或多列搜索具有特定值或值范围的记录时，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以使用这些列上的索引来快速找到对应记录。 基于磁盘的表和内存优化表都会受益于索引。 但是，在使用内存优化的表时，需要考虑索引结构之间的一些区别。 （内存优化表上的索引称为内存优化索引。）一些主要的区别是：  
   
--   必须使用创建内存优化的索引[CREATE TABLE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)。 基于磁盘上的索引可以使用 `CREATE TABLE` 和 `CREATE INDEX` 创建。  
+-   必须[CREATE TABLE &#40;transact-sql&#41;](/sql/t-sql/statements/create-table-transact-sql)创建内存优化索引。 基于磁盘上的索引可以使用 `CREATE TABLE` 和 `CREATE INDEX` 创建。  
   
 -   内存优化索引仅存在于内存中。 索引结构在磁盘中不持久化，并且不在事务日志中记录索引操作。 CREATE TABLE 过程中以及数据库启动过程中，在内存中创建内存优化的表时，将创建索引结构。  
   
@@ -50,7 +50,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
  每个索引都会占用内存。 哈希索引的内存用量固定不变，是存储桶数量的函数。 对于非聚集索引，内存用量是行数和索引键列大小的函数，还有一些其他开销取决于工作负荷。 内存优化的索引所用的内存不计入用于在内存优化的表中存储行的内存，并区别于此类内存。  
   
- 重复键值始终共享同一哈希桶。 如果一个哈希索引包含了多个重复键值，那么产生的长哈希链会损坏性能。 发生在任何哈希索引中的哈希冲突将会进一步减弱此方案中的性能。 出于此原因，如果唯一索引键的数目是至少小 100 倍行计数，则可以降低哈希冲突的风险通过让桶计数更大 (至少为八个次唯一索引键的数目; 请参阅[确定哈希索引的正确 Bucket 计数](../../2014/database-engine/determining-the-correct-bucket-count-for-hash-indexes.md)有关详细信息) 或可以通过使用非聚集索引来完全消除哈希冲突。  
+ 重复键值始终共享同一哈希桶。 如果一个哈希索引包含了多个重复键值，那么产生的长哈希链会损坏性能。 发生在任何哈希索引中的哈希冲突将会进一步减弱此方案中的性能。 出于此原因，如果唯一索引键的数目至少为100倍于行计数，则可以通过使 bucket 计数更大（至少8倍唯一索引键的数目，请参阅[确定哈希索引的正确存储桶计数](../../2014/database-engine/determining-the-correct-bucket-count-for-hash-indexes.md)），或者通过使用非聚集索引来完全消除哈希冲突。  
   
 ## <a name="determining-which-indexes-to-use-for-a-memory-optimized-table"></a>确定要用于内存优化表的索引  
  每个内存优化的表都必须具有至少一个索引。 请注意，每个 PRIMARY KEY 约束都会隐式创建一个索引。 因此，如果表中包含主键，则该表具有索引。 主键是对持久内存优化表的要求。  
@@ -61,23 +61,23 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
  在用不等谓词查询内存优化的表时，非聚集索引的性能将高于非聚集哈希索引。  
   
- 哈希索引需要键（哈希）才能仔细查找索引。 如果索引键由两列组成，但仅提供第一列，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 没有完整的键可进行哈希运算。 这将产生索引扫描查询计划。 由用法决定应编制哪些列的索引。  
+ 哈希索引需要键（哈希）才能仔细查找索引。 如果索引键由两列组成，但仅提供第一列，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 没有完整的键可进行哈希运算。  这将产生索引扫描查询计划。 由用法决定应编制哪些列的索引。  
   
  当非聚集索引中的列在许多行中的值相同（索引键列有许多重复值）时，更新、插入和删除的性能会降低。  在这种情况下提高性能的一种方法是向非聚集索引添加另一列。  
   
 ### <a name="operations-on-memory-optimized-and-disk-based-indexes"></a>针对内存优化表和基于磁盘的表的操作。  
   
-|操作|内存优化、非聚集哈希索引|内存优化的非聚集索引|基于磁盘的索引|  
+|Operation|内存优化、非聚集哈希索引|内存优化的非聚集索引|基于磁盘的索引|  
 |---------------|-------------------------------------------------|------------------------------------------|-----------------------|  
 |索引扫描，检索所有表行。|是|是|是|  
 |采用相等谓词 (=) 的索引查找。|是<br /><br /> （需要完整的键。）|是 <sup>1</sup>|是|  
-|不等谓词的索引查找 (>，<， \<=、 > =、 BETWEEN)。|否（索引扫描中的结果）|是 <sup>1</sup>|是|  
+|对不相等谓词（>、<、 \<=、>=、BETWEEN）的索引查找。|否（索引扫描中的结果）|是 <sup>1</sup>|是|  
 |按与索引定义匹配的排序顺序检索行。|否|是|是|  
 |按与索引定义相反的排序顺序检索行。|否|否|是|  
   
  在表格中，“是”意味着索引能充分地服务需求，而“否”则意味着索引不能用来成功地满足需求。  
   
- <sup>1</sup>完整的键不为非聚集内存优化索引中，需要执行索引查找。 即便如此，给定索引键的列顺序后，如果缺少的列后面出现列值，则进行扫描。  
+ <sup>1</sup>对于非聚集内存优化索引，不需要完整的键即可执行索引查找。 即便如此，给定索引键的列顺序后，如果缺少的列后面出现列值，则进行扫描。  
   
 ## <a name="index-count"></a>索引计数  
  内存优化表可以具有多达 8 个索引，包括通过主键创建的索引。  
@@ -90,7 +90,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
      如果表上的所有索引都经常使用，则垃圾收集效果最好。 很少使用的索引可能会导致垃圾收集系统对于旧的版本无法以最佳方式执行。  
   
-## <a name="creating-a-memory-optimized-index-code-samples"></a>创建内存优化索引：示例代码  
+## <a name="creating-a-memory-optimized-index-code-samples"></a>创建内存优化的索引：代码示例  
  列级别哈希索引：  
   
 ```sql  
@@ -172,7 +172,7 @@ create table t (
 go  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [内存优化表的索引](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
  [确定哈希索引的正确存储桶计数](../../2014/database-engine/determining-the-correct-bucket-count-for-hash-indexes.md)   
  [哈希索引](hash-indexes.md)  

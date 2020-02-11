@@ -1,5 +1,5 @@
 ---
-title: 源对话框 (Analysis Services-多维数据) 进行分区 |Microsoft Docs
+title: "\"分区源\" 对话框（Analysis Services 多维数据） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2102d28a61a99ed9ed6786dd8f2dee196066045c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072146"
 ---
 # <a name="partition-source-dialog-box-analysis-services---multidimensional-data"></a>“分区源”对话框（Analysis Services - 多维数据）
@@ -28,13 +28,13 @@ ms.locfileid: "66072146"
   
 ## <a name="options"></a>选项  
   
-|Option|定义|  
+|选项|定义|  
 |------------|----------------|  
-|**绑定类型**|选择用于指定分区的源的绑定类型。 可用选项包括：<br /><br /> **表绑定**：选择此选项可以显示“表绑定详细信息”窗格并指示分区绑定到数据源或数据源视图中表的内容。  有关“表绑定详细信息”  窗格的详细信息，请参阅[表绑定详细信息（“分区源”对话框）（Analysis Services - 多维数据）](table-binding-partition-source-dialog-analysis-services-multidimensional-data.md)。<br /><br /> **详细信息**：选择此选项可以显示“查询绑定详细信息”窗格并指示分区绑定到对数据源所执行的查询的内容。  有关“查询绑定详细信息”  窗格的详细信息，请参阅[查询绑定详细信息（“分区源”对话框）（Analysis Services - 多维数据）](query-binding-partition-source-dialog-analysis-services-multidimensional-data.md)。|  
-|Detail |根据 **“绑定类型”** 选项的值的不同，显示 **“表绑定详细信息”** 对话框，或显示 **“查询绑定详细信息”** 对话框。|  
+|**绑定类型**|选择用于指定分区的源的绑定类型。 提供了以下选项：<br /><br /> **表绑定**：选择此项可显示 "**表绑定详细信息**" 窗格并指示分区绑定到数据源或数据源视图中表的内容。 有关“表绑定详细信息”**** 窗格的详细信息，请参阅[表绑定详细信息（“分区源”对话框）（Analysis Services - 多维数据）](table-binding-partition-source-dialog-analysis-services-multidimensional-data.md)。<br /><br /> **详细信息**：选择此选择可以显示 "**查询绑定详细信息**" 窗格并指示分区绑定到对数据源执行的查询的内容。 有关“查询绑定详细信息”**** 窗格的详细信息，请参阅[查询绑定详细信息（“分区源”对话框）（Analysis Services - 多维数据）](query-binding-partition-source-dialog-analysis-services-multidimensional-data.md)。|  
+|**仔细**|根据 **“绑定类型”** 选项的值的不同，显示 **“表绑定详细信息”** 对话框，或显示 **“查询绑定详细信息”** 对话框。|  
   
-## <a name="see-also"></a>请参阅  
- [分区&#40;多维数据集设计器&#41; &#40;Analysis Services-多维数据&#41;](partitions-cube-designer-analysis-services-multidimensional-data.md)   
- [Analysis Services 设计器和对话框&#40;多维数据&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;多维数据集设计器&#41; &#40;Analysis Services 多维数据的分区&#41;](partitions-cube-designer-analysis-services-multidimensional-data.md)   
+ [&#40;多维数据的 Analysis Services 设计器和对话框&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

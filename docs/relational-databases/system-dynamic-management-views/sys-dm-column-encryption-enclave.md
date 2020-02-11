@@ -10,20 +10,20 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: d10bef0df04501c177086b6c89b3f67dec3bab10
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73599240"
 ---
-# <a name="sysdm_column_encryption_enclave-transact-sql"></a>sys. dm_column_encryption_enclave （Transact-sql）
+# <a name="sysdm_column_encryption_enclave-transact-sql"></a>sys.dm_column_encryption_enclave (Transact-SQL)
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
 返回 Always Encrypted 安全 enclave 的性能计数器。 有关详细信息，请参阅[具有安全 enclave 的 Always Encrypted](../security/encryption/always-encrypted-enclaves.md)。
 
-如果已配置 enclave 并已在上一次重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]后正确初始化，则该视图将只包含一行。 如果 enclave 未配置或未正确初始化，则视图不会返回任何行。 
+如果已配置 enclave 并已在上一次重新启动后正确初始化[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则该视图将只包含一行。 如果 enclave 未配置或未正确初始化，则视图不会返回任何行。 
 
-|列名|数据类型|说明|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |current_enclave_session_count|**int**|当前使用 enclave 的客户端会话数。|  
 |current_column_encryption_key_count|**int**|Enclave 当前包含的列加密密钥的计数。|  
@@ -41,6 +41,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [为 Always Encrypted 服务器配置选项配置 enclave 类型](../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)
+ [配置 Always Encrypted 的 enclave 类型服务器配置选项](../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)
   
   

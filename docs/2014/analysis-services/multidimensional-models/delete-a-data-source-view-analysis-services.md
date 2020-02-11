@@ -1,5 +1,5 @@
 ---
-title: 删除数据源视图 (Analysis Services) |Microsoft Docs
+title: 删除数据源视图（Analysis Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9750751a23e4322a4a48ec0c1c227cf2df16f1c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075429"
 ---
 # <a name="delete-a-data-source-view-analysis-services"></a>删除数据源视图 (Analysis Services)
-  如果不再在 OLAP 项目中使用数据源视图 (DSV)，则可以从 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 的项目中删除它。  
+  如果不再在 OLAP 项目中使用数据源视图 (DSV)，则可以从 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]的项目中删除它。  
   
  删除 DSV 的操作是永久性的。 无法将删除的 DSV 还原到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目或数据库中。  
   
@@ -30,10 +30,10 @@ ms.locfileid: "66075429"
   
  删除某一 DSV 将使依赖它的其他 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象失效，因此，在您删除该 DSV 之前，将看到在删除 DSV 后将失效的对象的列表。 请仔细查看此列表，确保它不包含您预期仍要使用的对象。  
   
- ![删除对象对话框](../media/ssas-olapdsv-deleteobjects.gif "删除对象对话框")  
+ ![“删除对象”对话框](../media/ssas-olapdsv-deleteobjects.gif "“删除对象”对话框")  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [多维模型中的数据源视图](data-source-views-in-multidimensional-models.md)   
- [在数据源视图中更改属性 (Analysis Services)](change-properties-in-a-data-source-view-analysis-services.md)  
+ [在数据源视图中更改属性 &#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
   
   

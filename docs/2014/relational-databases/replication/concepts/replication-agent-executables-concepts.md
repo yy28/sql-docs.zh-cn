@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 451b7ca4cc06269f116c62be2ef7f01f0e33abd2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721882"
 ---
 # <a name="replication-agent-executables-concepts"></a>复制代理可执行文件概念
@@ -34,7 +34,7 @@ ms.locfileid: "62721882"
   
  可使用可执行文件运行下列复制代理的实例。  
   
--   [复制分发代理](../agents/replication-distribution-agent.md)  
+-   [Replication Distribution Agent](../agents/replication-distribution-agent.md)  
   
 -   [复制日志读取器代理](../agents/replication-log-reader-agent.md)  
   

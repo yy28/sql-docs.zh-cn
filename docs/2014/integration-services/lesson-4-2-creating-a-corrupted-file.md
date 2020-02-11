@@ -1,5 +1,5 @@
 ---
-title: 第 2 步：创建损坏的文件 |Microsoft Docs
+title: 步骤 2：创建损坏的文件 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa1bb23843447cc77276a34d5466d417f2a87a05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767379"
 ---
-# <a name="step-2-creating-a-corrupted-file"></a>第 2 步：创建损坏的文件
+# <a name="step-2-creating-a-corrupted-file"></a>步骤 2：创建损坏的文件
   为阐释如何配置和处理转换错误，必须创建一个在处理时导致组件失败的示例平面文件。  
   
  在本任务中，将创建现有示例平面文件的一个副本。 然后，用记事本打开该文件，编辑 **CurrencyID** 列，以确保该列在转换查找期间无法生成匹配项。 处理新文件时，查找失败将导致 Currency Key 查找转换失败，因此，包的剩余部分将失败。 创建了损坏的示例文件后，将运行包以查看包失败的情况。  
@@ -34,12 +34,12 @@ ms.locfileid: "62767379"
   
     3.  单击 SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip 文件。  
   
-2.  使用文本编辑器的查找和替换功能，查找的所有实例`VEB`并将其替换为`BAD`。  
+2.  使用文本编辑器的查找和替换功能可查找的`VEB`所有实例，并将其替换`BAD`为。  
   
-3.  在其他示例数据文件所在的文件夹，将保存已修改的文件作为`Currency_BAD.txt`。  
+3.  在与其他示例数据文件相同的文件夹中，将修改后的文件`Currency_BAD.txt`另存为。  
   
     > [!IMPORTANT]  
-    >  请确保`Currency_BAD.txt`与其他示例数据文件保存在同一文件夹。  
+    >  请确保`Currency_BAD.txt`与其他示例数据文件保存在同一文件夹中。  
   
 4.  关闭文本编辑器。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "62767379"
   
 2.  在 **“调试”** 菜单中，单击 **“停止调试”** 。  
   
-3.  在设计图面上，单击“执行结果”  选项卡。  
+3.  在设计图面上，单击“执行结果”**** 选项卡。  
   
 4.  浏览日志，确认是否发生了以下未处理的错误：  
   

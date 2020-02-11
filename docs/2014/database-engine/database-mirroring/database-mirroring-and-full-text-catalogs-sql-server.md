@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e90e2386fcd6c6d2f71e1cea31f253f8baac9195
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807291"
 ---
 # <a name="database-mirroring-and-full-text-catalogs-sql-server"></a>数据库镜像和全文目录 (SQL Server)
@@ -55,7 +55,7 @@ ms.locfileid: "62807291"
 ## <a name="after-forcing-service"></a>强制服务后  
  对镜像服务器强制运行服务后（可能造成数据丢失），启动完全爬网。 启动完全爬网的方法取决于是否对全文索引启动了更改跟踪。 有关详细信息，请参阅本主题前面的“故障转移后的全文索引”。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ALTER FULLTEXT INDEX (Transact-SQL)](/sql/t-sql/statements/alter-fulltext-index-transact-sql)   
  [CREATE FULLTEXT INDEX (Transact-SQL)](/sql/t-sql/statements/create-fulltext-index-transact-sql)   
  [DROP FULLTEXT INDEX (Transact-SQL)](/sql/t-sql/statements/drop-fulltext-index-transact-sql)   

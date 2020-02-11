@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 51784663fdfec66f851bed479184ae21170a3681
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62664003"
 ---
 # <a name="brokerforwarded-message-sent-event-class"></a>Broker:Forwarded Message Sent 事件类
@@ -26,7 +26,7 @@ ms.locfileid: "62664003"
   
 ## <a name="brokerforwarded-message-sent-event-class-data-columns"></a>Broker:Forwarded Message Sent 事件类的数据列  
   
-|数据列|类型|Description|列号|可筛选|  
+|数据列|类型|说明|列号|可筛选|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |ApplicationName|`nvarchar`|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |BigintData1|`bigint`|消息序列号。|52|否|  
@@ -47,11 +47,12 @@ ms.locfileid: "62664003"
 |ObjectId|`int`|转发消息后转发的消息的生存时间值。|22|否|  
 |ObjectName|`nvarchar`|所转发消息的消息 ID。|34|否|  
 |OwnerName|`nvarchar`|消息要定向到的 Broker 标识符。|37|否|  
-|RoleName|`nvarchar`|会话句柄的角色。 可为下列值之一：<br /><br /> Initiator。 此 Broker 发起了该会话。<br /><br /> Target。 此 Broker 是会话的目标。|38|否|  
+|RoleName|`nvarchar`|会话句柄的角色。 可取值为：<br /><br /> Initiator。 此 Broker 发起了该会话。<br /><br /> Target。 此 Broker 是会话的目标。|38|否|  
 |ServerName|`nvarchar`|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|否|  
-|SPID|`int`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为客户端所关联的进程分配的服务器进程 ID。|12|是|  
+|SPID|`int`|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为客户端所关联的进程分配的服务器进程 ID。|12|是|  
 |StartTime|`datetime`|事件（如果有）的开始时间。|14|是|  
-|成功|`int`|转发过程所用的时间。|23|否|  
+|Success|`int`|转发过程所用的时间。|23|否|  
 |TargetLoginName|`nvarchar`|此实例将消息发送到的网络地址。 注意，这可能与消息的最终目的地不同。|42|否|  
 |TargetUserName|`nvarchar`|启动消息的服务的名称。|39|否|  
 |TransactionID|`bigint`|系统为事务分配的 ID。|4|否|  

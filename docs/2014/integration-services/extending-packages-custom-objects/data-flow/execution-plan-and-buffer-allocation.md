@@ -21,21 +21,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a9a300ce29141ed0a065b4186b737c4d8c294820
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768886"
 ---
 # <a name="execution-plan-and-buffer-allocation"></a>执行计划和缓冲区分配
   在执行之前，数据流任务会先检查其组件，并为每一个组件序列生成一个执行计划。 本节提供有关执行计划、如何查看执行计划以及如何基于执行计划分配输入和输出缓冲区的详细信息。  
   
 ## <a name="understanding-the-execution-plan"></a>了解执行计划  
- 执行计划包含源线程和工作线程，每个线程均包含指定源线程的输出工作列表或指定工作线程的输入和输出工作列表的工作列表。 执行计划中的源线程表示数据流中的源组件，并在执行计划中由 SourceThread**n 标识，其中 n 为从零开始的源线程编号   。  
+ 执行计划包含源线程和工作线程，每个线程均包含指定源线程的输出工作列表或指定工作线程的输入和输出工作列表的工作列表。 执行计划中的源线程表示数据流中的源组件，并在执行计划中由*SourceThread * * n*标识，其中*n*是源线程的从零开始的编号。  
   
  每个源线程都会创建一个缓冲区，设置一个侦听器，并对源组件调用 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> 方法。 执行从源线程开始，数据也从这里开始出现，因为源组件开始向数据流任务为其提供的输出缓冲区中添加行。 源线程开始运行之后，会在工作线程之间平衡分配工作量。  
   
- 工作线程可能同时包含输入工作列表和输出工作列表，并在执行计划中被标识为 WorkThread**n，其中 n 为从零开始的工作线程编号   。 当图形中包含具有异步输出的组件时，这些线程将包含输出工作列表。  
+ 工作线程可能同时包含输入工作列表和输出工作列表，并在执行计划中标识为*WorkThread * * n*，其中*n*是从零开始的工作线程编号。 当图形中包含具有异步输出的组件时，这些线程将包含输出工作列表。  
   
  下面的示例执行计划表示了一个数据流，该数据流包含一个源组件、一个具有异步输出的转换和一个目标组件，它们依次连接。 在此示例中，WorkThread0 包含一个输出工作列表，因为转换组件有一个异步输出。  
   
@@ -84,6 +84,6 @@ End WorkThread1
   
  由于提供给组件的缓冲区所包含的列数可能大于组件的输入或输出列集合中的列数，因此，组件开发人员可通过调用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSBufferManager100.FindColumnByLineageID%2A> 方法并指定列的 `LineageID`，在缓冲区中查找列。  
   
-![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![Integration Services 图标（小）](../../media/dts-16.gif "集成服务图标（小）")**保持与 Integration Services 最**新  <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
   

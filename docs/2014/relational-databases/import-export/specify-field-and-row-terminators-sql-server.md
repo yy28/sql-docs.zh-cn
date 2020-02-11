@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5f00a8330673dc15eed57f770635a251d5aa97e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011846"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>指定字段终止符和行终止符 (SQL Server)
@@ -34,17 +34,17 @@ ms.locfileid: "66011846"
   
 |终止字符|表示方法|  
 |---------------------------|------------------|  
-|Tab|\t<br /><br /> 这是默认的字段终止符。|  
+|选项卡|\t<br /><br /> 这是默认的字段终止符。|  
 |换行符|\n<br /><br /> 这是默认的行终止符。|  
 |回车符/换行符|\r|  
 |反斜杠<sup>1</sup>|\\\|  
-|空终止符 （不可见终止符）<sup>2</sup>|\0|  
+|空终止符（不可见终止符）<sup>2</sup>|\0|  
 |任何可打印的字符（控制字符是不可打印的，除空值、制表符、换行符和回车之外）|（*、A、t、l 等）|  
 |最长可达 10 个可打印字符的字符串，包括上面列出的部分或全部终止符|（**\t\*\*、end、!!!!!!!!!!、\t-\n 等）|  
   
- <sup>1</sup> t、 n、 r、 0 和 \0 字符一起使用反斜杠转义字符，以生成控制符。  
+ <sup>1</sup>只有 t、n、r、0和 ' \ 0 ' 字符与反斜杠转义字符一起使用才能生成控制字符。  
   
- <sup>2</sup>即使时空控制字符 (\0) 不是打印时可见的它是一个独特的字符数据文件中。 这表示使用空控制字符作为字段终止符或行终止符与根本没有字段终止符或行终止符是不同的。  
+ <sup>2</sup>即使在打印时 null 控制字符（\ 0）不可见，它也是数据文件中的非重复字符。 这表示使用空控制字符作为字段终止符或行终止符与根本没有字段终止符或行终止符是不同的。  
   
 > [!IMPORTANT]  
 >  如果数据中出现终止符字符，则它被视为终止符（而非数据），并且该字符后的数据被视为属于下一个字段或记录。 因此，请仔细选择您的终止符，以确保它们从未出现在您的数据中。 例如，如果数据中包含某个低代理项，则低代理项字段终止符并不是一个好的选择。  
@@ -56,7 +56,7 @@ ms.locfileid: "66011846"
 >  交互使用 **bcp** 并指定 \n（换行符）作为行终止符时， **bcp** 将自动以 \r（回车符）作为前缀，从而形成行终止符 \r\n。  
   
 ## <a name="specifying-terminators-for-bulk-export"></a>指定大容量导出的终止符  
- 大容量导出`char`或`nchar`数据，并且希望使用非默认终止符时，您必须指定到终止符**bcp**命令。 可以用下列任一方式指定终止符：  
+ 大容量导出`char`或`nchar`数据，并且希望使用非默认终止符时，必须为**bcp**命令指定终止符。 可以用下列任一方式指定终止符：  
   
 -   使用格式化文件逐个字段指定终止符。  
   
@@ -95,12 +95,13 @@ ms.locfileid: "66011846"
 ### <a name="examples"></a>示例  
  此示例使用字符格式将 `AdventureWorks``HumanResources.Department` 表中的数据批量导出至 `Department-c-t.txt` 数据文件，其中将逗号用作字段终止符，将换行符 (\n) 用作行终止符。  
   
- **bcp** 命令包含以下开关。  
+ 
+  **bcp** 命令包含以下开关。  
   
-|开关|Description|  
+|开关|说明|  
 |------------|-----------------|  
 |**-c**|指定将数据字段作为字符数据加载。|  
-|**-t** `,`|指定逗号 (,) 作为字段终止符。|  
+|**-t**`,`|指定逗号 (,) 作为字段终止符。|  
 |**-r** \n|指定行终止符作为换行符。 这是默认的行终止符，因此将其指定为可选。|  
 |**-T**|指定 **bcp** 实用工具通过使用集成安全性的受信任连接连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果未指定 **-T** ，则需要指定 **-U** 和 **-P** 才能成功登录。|  
   
@@ -125,10 +126,10 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
      使用下表中列出的限定符可以为格式化文件中的各个字段或为整个数据文件指定终止符。  
   
-    |Qualifier|Description|  
+    |Qualifier|说明|  
     |---------------|-----------------|  
-    |FIELDTERMINATOR **=' *`field_terminator`* '**|指定用于字符和 Unicode 字符数据文件的字段终止符。<br /><br /> 默认的字段终止符是 \t（制表符）。|  
-    |ROWTERMINATOR **=' *`row_terminator`* '**|指定用于字符和 Unicode 字符数据文件的行终止符。<br /><br /> 默认的行终止符是 \n（换行符）。|  
+    |FIELDTERMINATOR **='*`field_terminator`*'**|指定用于字符和 Unicode 字符数据文件的字段终止符。<br /><br /> 默认的字段终止符是 \t（制表符）。|  
+    |ROWTERMINATOR **='*`row_terminator`*'**|指定用于字符和 Unicode 字符数据文件的行终止符。<br /><br /> 默认的行终止符是 \n（换行符）。|  
   
      有关详细信息，请参阅 [BULK INSERT (Transact SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)。  
   
@@ -167,11 +168,11 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
 #### <a name="b-using-bulk-insert-to-interactively-specify-terminators"></a>B. 使用 BULK INSERT 交互指定终止符  
  以下示例使用 `Department-c-t.txt` 语句大容量导入 `BULK INSERT` 数据文件，该语句使用了下表中所示的限定符。  
   
-|Option|特性|  
+|选项|Attribute|  
 |------------|---------------|  
-|DATAFILETYPE **='`char`'**|指定将数据字段作为字符数据加载。|  
-|FIELDTERMINATOR **='** `,` **'**|将逗号 (`,`) 指定为字段终止符。|  
-|ROWTERMINATOR **='** `\n` **'**|指定行终止符作为换行符。|  
+|DATAFILETYPE **= '`char`'**|指定将数据字段作为字符数据加载。|  
+|FIELDTERMINATOR **= '**`,`**'**|将逗号 (`,`) 指定为字段终止符。|  
+|ROWTERMINATOR **= '**`\n`**'**|指定行终止符作为换行符。|  
   
  在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 查询编辑器中，执行以下代码：  
   
@@ -187,12 +188,12 @@ BULK INSERT myDepartment FROM 'C:\myDepartment-c-t.txt'
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [bcp Utility](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>另请参阅  
+ [bcp 实用工具](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)   
- [使用 bcp 指定字段长度 (SQL Server)](specify-field-length-by-using-bcp-sql-server.md)   
- [使用 bcp 指定数据文件中的前缀长度 (SQL Server)](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)   
- [使用 bcp 指定文件存储类型 (SQL Server)](specify-file-storage-type-by-using-bcp-sql-server.md)  
+ [使用 bcp &#40;SQL Server 指定字段长度&#41;](specify-field-length-by-using-bcp-sql-server.md)   
+ [使用 bcp &#40;SQL Server 指定数据文件中的前缀长度&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)   
+ [使用 bcp &#40;SQL Server 指定文件存储类型&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
   
   

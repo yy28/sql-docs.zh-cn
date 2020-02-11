@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8a99a98fd0d471e8cb0f8ab880ae1a6c55e1b121
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62655502"
 ---
 # <a name="regenerate-custom-transactional-procedures-to-reflect-schema-changes"></a>重新生成自定义事务过程以反映架构更改
@@ -28,21 +28,21 @@ ms.locfileid: "62655502"
   
 -   第一种选择是使用自定义脚本过程替换复制使用的默认过程：  
   
-    1.  执行 [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 时，请确保 **@schema_option** 0x02 位为 **true**。  
+    1.  在执行[&#40;transact-sql&#41;sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)时，请确保**@schema_option** 0x02 位为**true**。  
   
-    2.  执行 [sp_register_custom_scripting &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql)，并为参数 **@type** 指定“insert”、“update”或“delete”中的一个值，为参数 **@value** 指定自定义脚本过程的名称。  
+    2.  执行[sp_register_custom_scripting &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql) ，并为参数指定值 "insert"、"update" 或 "delete"， **@type**并为参数**@value**指定自定义脚本过程的名称。  
   
      下次进行架构更改时，复制会调用此存储过程为新用户定义的自定义存储过程编写定义脚本，然后将此过程传播到每个订阅服务器。  
   
 -   第二种选择是使用包含新自定义过程定义的脚本：  
   
-    1.  执行 [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 时，请将 **@schema_option** 0x02 位设置为 **false**，以便复制不会自动在订阅服务器上生成自定义过程。  
+    1.  当执行[sp_addarticle &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)时，将**@schema_option** 0x02 位设置为**false** ，以便复制不会自动在订阅服务器上生成自定义过程。  
   
-    2.  每次更改架构前，请执行 [sp_register_custom_scripting &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql) 来创建新脚本文件并注册具有复制的脚本。 将参数 **@type** 指定为“custom_script”值，并将参数 **@value** 。  
+    2.  每次更改架构前，请执行 [sp_register_custom_scripting &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql) 来创建新脚本文件并注册具有复制的脚本。 将参数**@type**的值指定为 "custom_script"，并为参数**@value**指定发布服务器上脚本的路径。  
   
      下次进行相关的架构更改时，此脚本会在每个订阅服务器上、在 DDL 命令所在的事务内执行。 更改架构后，此脚本将撤消注册。 在后续架构更改后必须重新注册此脚本，使其执行。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [指定如何传播事务项目的更改](transactional-articles-specify-how-changes-are-propagated.md)   
  [对发布数据库进行架构更改](../publish/make-schema-changes-on-publication-databases.md)  
   

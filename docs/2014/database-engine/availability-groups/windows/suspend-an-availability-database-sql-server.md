@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c428d9141acfaca3e8ec7876e62b733c30ec161
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797959"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>挂起可用性数据库 (SQL Server)
@@ -31,7 +31,7 @@ ms.locfileid: "72797959"
   
 |挂起的数据库|挂起命令的效果|  
 |------------------------|-------------------------------|  
-|辅助数据库|仅挂起本地辅助数据库，并且其同步状态变为 NOT SYNCHRONIZING。 其他辅助数据库不受影响。 挂起的数据库将停止接收和应用数据（日志记录），并且开始落在主数据库的后面。 可读辅助副本上的现有连接会保持可用状态。 可读辅助副本上挂起数据库的新连接在数据移动恢复之前一直处于禁用状态。<br /><br /> 主数据库仍然可用。 如果您挂起相应的每个辅助数据库，则主数据库将公开运行。<br /><br /> **\*\* 重要提示 \*\*** 当挂起辅助数据库时，对应主数据库的发送队列将累积未发送的事务日志记录。 与辅助副本的连接将返回在数据移动挂起时可用的数据。|  
+|辅助数据库|仅挂起本地辅助数据库，并且其同步状态变为 NOT SYNCHRONIZING。 其他辅助数据库不受影响。 挂起的数据库将停止接收和应用数据（日志记录），并且开始落在主数据库的后面。 可读辅助副本上的现有连接会保持可用状态。 可读辅助副本上挂起数据库的新连接在数据移动恢复之前一直处于禁用状态。<br /><br /> 主数据库仍然可用。 如果您挂起相应的每个辅助数据库，则主数据库将公开运行。<br /><br /> ** \* \*重要\*提示**当辅助数据库挂起时，对应主数据库的发送队列将累积未发送的事务日志记录。 与辅助副本的连接将返回在数据移动挂起时可用的数据。|  
 |主数据库|主数据库将停止数据移动到每个连接的辅助数据库。 主数据库将继续在公开模式下运行。 主数据库仍然保持对客户端可用，可读取辅助数据库上的现有连接保持可用并且可以建立新连接。|  
   
 > [!NOTE]  
@@ -55,7 +55,7 @@ ms.locfileid: "72797959"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **跟进：** [避免出现已满事务日志](#FollowUp)  
+-   **跟进：** [避免事务日志已满](#FollowUp)  
   
 -   [相关任务](#RelatedTasks)  
   
@@ -64,13 +64,13 @@ ms.locfileid: "72797959"
 ###  <a name="Restrictions"></a> 限制和局限  
  SUSPEND 命令只要被承载目标数据库的副本接受后就返回，但是实际上挂起数据库以异步方式发生。  
   
-###  <a name="Prerequisites"></a> 先决条件  
+###  <a name="Prerequisites"></a>先决条件  
  您必须连接到承载要挂起的数据库的服务器实例。 若要挂起主数据库和相应的辅助数据库，请连接到承载主副本的服务器实例。 若要挂起辅助数据库但保持主数据库可用，请连接到辅助副本。  
   
 ###  <a name="Recommendations"></a> 建议  
  出现瓶颈时，短暂挂起一个或多个辅助数据库可能有助于暂时提高主副本的性能。 只要有一个辅助数据库仍挂起，就无法截断相应的主数据库的事务日志。 这将导致日志记录在主数据库上累积。 因此，我们建议您快速恢复或删除挂起的辅助数据库。 有关详细信息，请参阅本主题后面的 [跟进：避免出现已满事务日志](#FollowUp)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 权限  
  需要对数据库拥有 ALTER 权限。  
@@ -86,9 +86,9 @@ ms.locfileid: "72797959"
   
 3.  展开该可用性组。  
   
-4.  展开“可用性数据库”节点，右键单击该数据库，然后单击“挂起数据移动”。  
+4.  展开“可用性数据库”**** 节点，右键单击该数据库，然后单击“挂起数据移动”****。  
   
-5.  在 **“挂起数据移动”** 对话框中，单击 **“确定”** 。  
+5.  在 **“挂起数据移动”** 对话框中，单击 **“确定”**。  
   
      对象资源管理器通过更改数据库图标以显示一个暂停指示符，来指示已挂起该数据库。  
   
@@ -102,9 +102,9 @@ ms.locfileid: "72797959"
   
 2.  通过使用以下 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-hadr)语句，挂起数据库：  
   
-     ALTER DATABASE *database_name* SET HADR SUSPEND  
+     更改数据库*database_name*设置 HADR 挂起  
   
-##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
+##  <a name="PowerShellProcedure"></a>使用 PowerShell  
  **挂起数据库**  
   
 1.  将目录 (`cd`) 改为承载要挂起数据库的副本的服务器实例。 有关详细信息，请参阅本主题前面的 [先决条件](#Prerequisites)。  
@@ -120,11 +120,11 @@ ms.locfileid: "72797959"
     > [!NOTE]  
     >  若要查看 cmdlet 的语法，请在 `Get-Help` PowerShell 环境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
- **设置和使用 SQL Server PowerShell 提供程序**  
+ **设置并使用 SQL Server PowerShell 提供程序**  
   
--   [SQL Server PowerShell 提供程序](../../../powershell/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Follow Up: Avoiding a Full Transaction Log  
+##  <a name="FollowUp"></a>跟进：避免事务日志已满  
  通常，在数据库上执行自动检查点操作时，事务日志将在下一个日志备份后截断到该检查点。 但是，当挂起辅助数据库时，当前的所有日志记录在主数据库上都保持活动状态。 如果填满该事务日志（因为它达到其最大大小或服务器实例耗尽空间），则数据库将无法再执行任何更新。  
   
  若要避免此问题，应执行以下操作之一：  
@@ -135,7 +135,7 @@ ms.locfileid: "72797959"
   
 -   删除辅助数据库。 有关详细信息，请参阅[从可用性组中删除辅助数据库 (SQL Server)](remove-a-secondary-database-from-an-availability-group-sql-server.md)。  
   
- **解决事务日志已满的问题**  
+ **排查事务日志已满的问题**  
   
 -   [解决事务日志已满的问题（SQL Server 错误 9002）](../../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
@@ -144,5 +144,5 @@ ms.locfileid: "72797959"
 -   [恢复可用性数据库 (SQL Server)](resume-an-availability-database-sql-server.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [ &#40;AlwaysOn 可用性组 SQL Server&#41;  概述](overview-of-always-on-availability-groups-sql-server.md)  
+ [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [恢复可用性数据库 (SQL Server)](resume-an-availability-database-sql-server.md)  

@@ -1,5 +1,5 @@
 ---
-title: 删除数据源在解决方案资源管理器 (SSAS 多维) |Microsoft Docs
+title: 删除解决方案资源管理器中的数据源（SSAS 多维） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1e3b6dc676c11444c8dd45d1874f77942316a462
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075501"
 ---
 # <a name="delete-a-data-source-in-solution-explorer-ssas-multidimensional"></a>在解决方案资源管理器中删除数据源（SSAS 多维）
@@ -37,14 +37,15 @@ ms.locfileid: "66075501"
   
 2.  在 **“解决方案资源管理器”** 中，展开 **“数据源”** 文件夹。  
   
-3.  右键单击数据源，然后单击“删除”。 **“删除对象”**  对话框将出现，其中显示您删除数据源后将失效的对象。 在单击 **“确定”** 以便删除数据源之前请仔细查看此列表。  
+3.  右键单击数据源，然后单击“删除”****。 
+  **“删除对象”**  对话框将出现，其中显示您删除数据源后将失效的对象。 在单击 **“确定”** 以便删除数据源之前请仔细查看此列表。  
   
 4.  保存项目。  
   
      在从 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目中删除数据源后，必须保存已修改的项目，否则下次打开此项目时将会收到错误，因为当项目尝试加载已删除的数据源时，此数据源的基础 XML 文件将会丢失。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [多维模型中的数据源](data-sources-in-multidimensional-models.md)   
- [支持的数据源&#40;SSAS 多维&#41;](supported-data-sources-ssas-multidimensional.md)  
+ [支持 &#40;SSAS 多维&#41;的数据源](supported-data-sources-ssas-multidimensional.md)  
   
   
