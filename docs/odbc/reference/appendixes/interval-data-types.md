@@ -26,38 +26,38 @@ ms.assetid: fba93f65-c1db-44f4-91ba-532f87241cf7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a42c8767228c75d3b7b0da308d739516875cf966
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67947558"
 ---
 # <a name="interval-data-types"></a>间隔数据类型
-一个时间间隔被指两个日期和时间之间的差异。 在两种不同方式之一表示时间间隔。 一个是*年-月*表示年和整月数方面的时间间隔的间隔。 另一个是*日期时间*表达方面天、 分钟和秒的时间间隔的间隔。 这两种类型的间隔不同，并且不能混用，因为几个月可以具有不同数量的天。  
+间隔定义为两个日期和时间之间的差值。 间隔用两种不同的方式表示。 一个*月*时间间隔表示年和整数个月的时间间隔。 另一种是*日期时间*间隔，以天、分钟和秒为单位表达时间间隔。 这两种间隔是不同的，并且不能混合，因为月份的天数可能不同。  
   
- 一个时间间隔包含的一组字段。 没有在字段之间的隐式排序。 例如，年-月间隔年在前后, 跟每月。 同样，在一天分钟间隔中，字段都在订单日期、 小时和分钟。 间隔类型的第一个字段称为*前导*字段中，或*高序位*字段。 最后一个字段称为*尾随*字段。  
+ 间隔由一组字段组成。 字段中有隐含的排序。 例如，在年到月的间隔中，年份首先出现，然后是月份。 同样，在日常间隔中，字段的顺序为 day、hour 和 minute。 间隔类型中的第一个字段称为 "*前导*字段" 或 "*高顺序*" 字段。 最后一个字段称为*结尾*字段。  
   
- 在所有时间间隔中的前导字段不受公历日历以来的规则。 例如，小时分钟间隔的小时字段是不受限制必须介于 0 到 23 之间 （含），因为它通常是。 前导字段之后的尾随字段按照常用公历的约束。 有关详细信息，请参阅[公历的约束](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md)、 本附录中更高版本。  
+ 在所有间隔中，前导字段不受公历规则的约束。 例如，在一个小时到分钟的时间间隔内，小时字段不会被限制为介于0到23（含）之间，因为它通常为。 前导字段后面的尾随字段遵循公历的常用约束。 有关详细信息，请参阅本附录后面的["公历限制"](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md)。  
   
- 有 13 间隔 SQL 数据类型和 13 间隔 C 数据类型。 每个间隔 C 数据类型使用相同的结构，SQL_INTERVAL_STRUCT，以包含数据间隔。 (有关详细信息，请参阅下一部分中， [C 间隔结构](../../../odbc/reference/appendixes/c-interval-structure.md)。)SQL 数据类型的详细信息，请参阅[SQL 数据类型](../../../odbc/reference/appendixes/sql-data-types.md); 有关 C 数据类型的详细信息，请参阅[C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)。  
+ 有13个间隔 SQL 数据类型和13个间隔 C 数据类型。 每个时间间隔 C 数据类型都使用相同的结构 SQL_INTERVAL_STRUCT，以包含时间间隔数据。 （有关详细信息，请参阅下一节[C 间隔结构](../../../odbc/reference/appendixes/c-interval-structure.md)。）有关 SQL 数据类型的详细信息，请参阅[Sql 数据类型](../../../odbc/reference/appendixes/sql-data-types.md);有关 C 数据类型的详细信息，请参阅[c 数据类型](../../../odbc/reference/appendixes/c-data-types.md)。  
   
-|类型标识符|类|描述|  
+|类型标识符|类|说明|  
 |---------------------|-----------|-----------------|  
-|MONTH|年月|两个日期之间的月数。|  
-|YEAR|年月|两个日期之间的年数。|  
-|YEAR_TO_MONTH|年月|年和两个日期之间的月数。|  
-|DAY|日期时间|两个日期之间天数。|  
-|HOUR|日期时间|两个之间的小时数的日期/时间。|  
-|MINUTE|日期时间|两个之间的分钟数的日期/时间。|  
-|SECOND|日期时间|两个之间的秒数的日期/时间。|  
-|DAY_TO_HOUR|日期时间|天/之间的小时数两个日期/时间。|  
-|DAY_TO_MINUTE|日期时间|天/小时/之间的分钟数两个日期/时间。|  
-|DAY_TO_SECOND|日期时间|天/小时/分钟/之间的秒数两个日期/时间。|  
-|HOUR_TO_MINUTE|日期时间|小时/之间的分钟数两个日期/时间。|  
-|HOUR_TO_SECOND|日期时间|小时/分钟/之间的秒数两个日期/时间。|  
-|MINUTE_TO_SECOND|日期时间|分钟/之间的秒数两个日期/时间。|  
+|月|年-月|两个日期之间的月数。|  
+|年|年-月|两个日期之间的年数。|  
+|YEAR_TO_MONTH|年-月|两个日期之间的年和月数。|  
+|DAY|日期/时间|两个日期之间的天数。|  
+|HOUR|日期/时间|两个日期/时间间隔的小时数。|  
+|MINUTE|日期/时间|两个日期/时间间隔的分钟数。|  
+|SECOND|日期/时间|两个日期/时间之间的秒数。|  
+|DAY_TO_HOUR|日期/时间|两个日期/时间之间的天数/小时数。|  
+|DAY_TO_MINUTE|日期/时间|两个日期/时间之间的天数/小时/分钟数。|  
+|DAY_TO_SECOND|日期/时间|两个日期/时间之间的天数/小时/分钟/秒。|  
+|HOUR_TO_MINUTE|日期/时间|两个日期/时间之间的小时数/分钟数。|  
+|HOUR_TO_SECOND|日期/时间|两个日期/时间之间的小时/分钟数/秒。|  
+|MINUTE_TO_SECOND|日期/时间|两个日期/时间之间的分钟数/秒。|  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [C 间隔结构](../../../odbc/reference/appendixes/c-interval-structure.md)  
   

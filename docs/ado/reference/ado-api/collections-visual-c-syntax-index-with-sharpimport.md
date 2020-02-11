@@ -1,5 +1,5 @@
 ---
-title: '集合 (VisualC++使用 #import 语法索引) |Microsoft Docs'
+title: '集合（Visual C++ 语法索引与 #import） |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -19,18 +19,18 @@ ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 77a45203c50555168d2cd163c8b97406b8377694
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919898"
 ---
-# <a name="collections-visual-c-syntax-index-with-import"></a>集合 (VisualC++使用 #import 语法索引)
-它可用于了解集合继承某些常见的方法和属性。  
+# <a name="collections-visual-c-syntax-index-with-import"></a>集合（#import Visual C++ 语法索引）
+了解集合继承某些常用方法和属性很有用。  
   
- 所有集合都继承**计数**属性和**刷新**方法，并且所有集合添加**项**属性。 **错误**集合添加**清除**方法。 **参数**集合继承**追加**并**删除**方法，而**字段**集合添加**追加**，**删除**，并**更新**方法。  
+ 所有集合都继承**Count**属性和**Refresh**方法，所有集合都添加了**Item**属性。 **Errors**集合添加**Clear**方法。 **Parameters**集合继承了**append**和**delete**方法，而**字段**集合添加了**append**、 **delete**和**Update**方法。  
   
-## <a name="properties-collection"></a>属性集合  
+## <a name="properties-collection"></a>Properties 集合  
   
 ### <a name="methods"></a>方法  
   
@@ -38,7 +38,7 @@ ms.locfileid: "67919898"
 HRESULT Refresh( );  
 ```  
   
-### <a name="properties"></a>properties  
+### <a name="properties"></a>属性  
   
 ```  
 long GetCount( ); __declspec(property(get=GetCount)) long Count;  
@@ -54,7 +54,7 @@ HRESULT Clear( );
 HRESULT Refresh( );  
 ```  
   
-### <a name="properties"></a>properties  
+### <a name="properties"></a>属性  
   
 ```  
 long GetCount( ); __declspec(property(get=GetCount)) long Count;  
@@ -71,7 +71,7 @@ HRESULT Delete( const _variant_t & Index );
 HRESULT Refresh( );  
 ```  
   
-### <a name="properties"></a>properties  
+### <a name="properties"></a>属性  
   
 ```  
 long GetCount( ); __declspec(property(get=GetCount)) long Count;  
@@ -89,15 +89,15 @@ HRESULT Refresh( );
 HRESULT Update( );  
 ```  
   
-### <a name="properties"></a>properties  
+### <a name="properties"></a>属性  
   
 ```  
 long GetCount( ); __declspec(property(get=GetCount)) long Count;  
 PropertyPtr GetItem( const _variant_t & Index ); __declspec(property(get=GetItem)) PropertyPtr Item[];  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [错误集合 (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [字段集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [参数集合 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
+## <a name="see-also"></a>另请参阅  
+ [Errors 集合（ADO）](../../../ado/reference/ado-api/errors-collection-ado.md)   
+ [Fields 集合（ADO）](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Parameters 集合（ADO）](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [属性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

@@ -14,10 +14,10 @@ ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 065a8869eff0e88cee5bf0bb110a948f709743d7
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251671"
 ---
 # <a name="dqs-administration"></a>dqs 管理
@@ -77,17 +77,17 @@ ms.locfileid: "75251671"
 |任务说明|主题|  
 |----------------------|-----------|  
 |说明如何在 DQS 中监视活动。|[监视 DQS 活动](../data-quality-services/monitor-dqs-activities.md)|  
-|说明如何在 DQS 中配置引用数据设置。|[配置 DQS 以使用引用数据](../data-quality-services/configure-dqs-to-use-reference-data.md)|  
-|说明如何配置清理和匹配活动的阈值。|[配置清理和匹配的阈值](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)|  
+|说明如何在 DQS 中配置引用数据设置。|[将 DQS 配置为使用引用数据](../data-quality-services/configure-dqs-to-use-reference-data.md)|  
+|说明如何配置清理和匹配活动的阈值。|[配置清理和匹配活动的阈值](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)|  
 |说明如何在 DQS 中启用或禁用通知。|[在 DQS 中启用或禁用事件探查通知](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md)|  
 |说明如何基于事件的严重级别配置 DQS 日志记录。|[为 DQS 日志文件配置严重级别](../data-quality-services/configure-severity-levels-for-dqs-log-files.md)|  
-|说明如何配置 DQS 日志记录的高级设置。|[为 DQS 日志文件配置高级设置](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)|  
+|说明如何配置 DQS 日志记录的高级设置。|[Configure Advanced Settings for DQS Log Files](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)|  
 |说明如何备份和还原 DQS 数据库。|[备份和还原 DQS 数据库](../data-quality-services/backing-up-and-restoring-dqs-databases.md)|  
-|介绍如何分离和附加 DQS 数据库。|[分离和附加 DQS 数据库](../data-quality-services/detaching-and-attaching-dqs-databases.md)|  
+|介绍如何分离和附加 DQS 数据库。|[分离数据库和附加 DQS 数据库](../data-quality-services/detaching-and-attaching-dqs-databases.md)|  
   
 ## <a name="see-also"></a>另请参阅  
  [DQS 中的引用数据服务](../data-quality-services/reference-data-services-in-dqs.md)   
  [管理 DQS 日志文件](../data-quality-services/manage-dqs-log-files.md)   
- [管理 DQS 数据库](../data-quality-services/manage-dqs-databases.md)  
+ [Manage DQS Databases](../data-quality-services/manage-dqs-databases.md)  
   
   

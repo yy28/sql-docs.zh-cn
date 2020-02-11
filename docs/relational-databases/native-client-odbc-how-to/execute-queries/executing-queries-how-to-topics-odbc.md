@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 15ef01785355baa21dc2516168d13fbd886abe27
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73781354"
 ---
 # <a name="executing-queries-how-to-topics-odbc"></a>执行查询操作指南主题 (ODBC)
@@ -27,13 +27,13 @@ ms.locfileid: "73781354"
   
 ## <a name="in-this-section"></a>本节内容  
   
--   [使用语句&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/use-a-statement-odbc.md)  
+-   [使用语句 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/use-a-statement-odbc.md)  
   
--   [设置游标选项&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/set-cursor-options-odbc.md)  
+-   [&#40;ODBC&#41;设置游标选项](../../../relational-databases/native-client-odbc-how-to/execute-queries/set-cursor-options-odbc.md)  
   
--   [直接&#40;执行语句 ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/execute-a-statement-directly-odbc.md)  
+-   [直接执行语句 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/execute-a-statement-directly-odbc.md)  
   
--   [准备和执行语句&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/prepare-and-execute-a-statement-odbc.md)  
+-   [&#40;ODBC&#41;准备并执行语句](../../../relational-databases/native-client-odbc-how-to/execute-queries/prepare-and-execute-a-statement-odbc.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [ODBC 操作指南主题](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  

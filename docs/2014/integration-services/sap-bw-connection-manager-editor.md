@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0da11d8f49c1de88297a9bf8876588c8b5aeb81b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056283"
 ---
 # <a name="sap-bw-connection-manager-editor"></a>SAP BW 连接管理器编辑器
@@ -35,14 +35,14 @@ ms.locfileid: "66056283"
   
          -或-  
   
-    -   右键单击 SAP BW 连接管理器，然后选择“编辑”。  
+    -   右键单击 SAP BW 连接管理器，然后选择“编辑”。****  
   
 ## <a name="options"></a>选项  
   
 > [!NOTE]  
 >  如果您不知道配置连接管理器所需的所有值，可能需要询问您的 SAP 管理员。  
   
- **客户端**  
+ **Client**  
  指定系统的客户端编号。  
   
  **语言**  
@@ -51,25 +51,25 @@ ms.locfileid: "66056283"
  **用户名**  
  指定将用于连接到系统的用户名。  
   
- **密码**  
+ **权限**  
  指定将与该用户名一起使用的密码。  
   
  **使用单一应用程序服务器**  
  连接到单一应用程序服务器。  
   
- 若要连接到一组负载平衡的服务器，请改用“使用负载平衡”选项。  
+ 若要连接到一组负载平衡的服务器，请改用“使用负载平衡”**** 选项。  
   
  **主机**  
  如果连接到单一应用程序服务器，请指定主机名。  
   
 > [!NOTE]  
->  只有在已选择“使用单一应用程序服务器”选项的情况下，此选项才可用。  
+>  只有在已选择“使用单一应用程序服务器”**** 选项的情况下，此选项才可用。  
   
  **系统编号**  
  如果连接到单一应用程序服务器，请指定系统编号。  
   
 > [!NOTE]  
->  只有在已选择“使用单一应用程序服务器”选项的情况下，此选项才可用。  
+>  只有在已选择“使用单一应用程序服务器”**** 选项的情况下，此选项才可用。  
   
  **使用负载平衡**  
  连接到一组负载平衡的服务器。  
@@ -80,19 +80,19 @@ ms.locfileid: "66056283"
  要连接一组负载平衡的服务器，请指定消息服务器的名称。  
   
 > [!NOTE]  
->  只有在已选择“使用负载平衡”选项的情况下，此选项才可用。  
+>  只有在已选择“使用负载平衡”选项的情况下，此选项才可用。****  
   
- **分组**  
+ **组**  
  要连接一组负载平衡的服务器，请指定服务器组名称。  
   
 > [!NOTE]  
->  只有在已选择“使用负载平衡”选项的情况下，此选项才可用。  
+>  只有在已选择“使用负载平衡”选项的情况下，此选项才可用。****  
   
  **SID**  
  要连接一组负载平衡的服务器，请指定连接的“系统 ID”。  
   
 > [!NOTE]  
->  只有在已选择“使用负载平衡”选项的情况下，此选项才可用。  
+>  只有在已选择“使用负载平衡”选项的情况下，此选项才可用。****  
   
  **日志目录**  
  启用 [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW 组件的日志记录。  
@@ -112,7 +112,7 @@ ms.locfileid: "66056283"
  **测试连接**  
  使用您提供的值来测试连接。 单击 **“测试连接”** 后，将显示一个消息框，指示连接成功还是失败。  
   
-## <a name="see-also"></a>请参阅  
- [Microsoft Connector 1.1 for SAP BW 的 F1 帮助](microsoft-connector-for-sap-bw-f1-help.md)  
+## <a name="see-also"></a>另请参阅  
+ [Microsoft Connector 1.1 for SAP BW F1 帮助](microsoft-connector-for-sap-bw-f1-help.md)  
   
   

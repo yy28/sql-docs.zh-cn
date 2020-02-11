@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6deb484f6e213e7089c3aef272ebaebeba13a913
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832061"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>数据事件探查任务编辑器（“配置文件请求”页）
@@ -64,7 +64,7 @@ ms.locfileid: "62832061"
  **“配置文件类型”**  
  从下面的选项选择一个数据配置文件：  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**候选键配置文件请求**|计算候选键项配置文件。<br /><br /> 此配置文件报告某个列或列集是选定表的键还是近似键。 此配置文件还可以帮助您识别数据中的问题，如可能的键列中的重复值。|  
 |**列长度分布配置文件请求**|计算列长度分布配置文件。<br /><br /> 列长度分布配置文件报告选定列中字符串值的所有不同长度以及每个长度所表示的表中的行的百分比。 此配置文件可以帮助您识别数据中的问题，例如值无效。 例如，在对以两个字符表示的美国州代码列进行事件探查，发现存在超过两个字符的值。|  
@@ -82,14 +82,14 @@ ms.locfileid: "62832061"
  **连接管理器**  
  显示连接到源数据库的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器。  
   
- **“请求 ID”**  
+ **请求 ID**  
  显示请求的标识符。 通常无需更改自动生成的值。  
   
 #### <a name="columns-common-to-the-five-individual-column-profiles"></a>对五个单个列配置文件都通用的列  
  **“表或视图”**  
  显示包含所选列的表或视图。  
   
- **“列”**  
+ **列**  
  显示要进行分析的列。  
   
 #### <a name="columns-specific-to-the-candidate-key-profile"></a>特定于候选键配置文件的列  
@@ -146,7 +146,7 @@ ms.locfileid: "62832061"
   
 -   [值包含配置文件请求选项（数据事件探查任务）](value-inclusion-profile-request-options-data-profiling-task.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据事件探查任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)   
  [单个表快速配置文件窗体（数据事件探查任务）](single-table-quick-profile-form-data-profiling-task.md)  
   

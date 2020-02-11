@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47b8e4b87ab3150ae7bf67d3c3a2f9c5e0732294
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015569"
 ---
 # <a name="grant-permissions-on-a-stored-procedure"></a>授予对存储过程的权限
@@ -42,9 +42,9 @@ ms.locfileid: "63015569"
   
 -   不能使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 授予对系统过程或系统函数的权限。 改为使用 [GRANT 对象权限](/sql/t-sql/statements/grant-object-permissions-transact-sql) 。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  授权者（或用 AS 选项指定的主体）必须具有带 GRANT OPTION 的相同权限，或具有隐含所授予权限的更高权限。 需要拥有对该过程所属架构的 ALTER 权限，或对该过程的 CONTROL 权限。 有关详细信息，请参阅 [GRANT 对象权限 (Transact-SQL)](/sql/t-sql/statements/grant-object-permissions-transact-sql)授予对存储过程的权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -53,13 +53,13 @@ ms.locfileid: "63015569"
   
 1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
-2.  展开 **“数据库”**、过程所属的数据库以及 **“可编程性”**。  
+2.  展开 **“数据库”** 、过程所属的数据库以及 **“可编程性”** 。  
   
-3.  展开“存储过程”，右键单击要针对其授予权限的过程，再单击“属性”。  
+3.  展开“存储过程”  ，右键单击要针对其授予权限的过程，再单击“属性”  。  
   
 4.  在 **“存储过程属性”** 中，选择 **“权限”** 页。  
   
-5.  若要为用户、数据库角色或应用程序角色授予权限，请单击 **“搜索”**。  
+5.  若要为用户、数据库角色或应用程序角色授予权限，请单击 **“搜索”** 。  
   
 6.  在 **“选择用户或角色”** 中，单击 **“对象类型”** 以添加或清除所需的用户和角色。  
   
@@ -75,9 +75,9 @@ ms.locfileid: "63015569"
   
 1.  连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 该示例授予名为 `EXECUTE` 的应用程序角色对存储过程 `HumanResources.uspUpdateEmployeeHireInfo` 的 `Recruiting11`权限。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 该示例授予名为 `EXECUTE` 的应用程序角色对存储过程 `HumanResources.uspUpdateEmployeeHireInfo` 的 `Recruiting11`权限。  
   
 ```sql  
 USE AdventureWorks2012;   
@@ -86,7 +86,7 @@ GRANT EXECUTE ON OBJECT::HumanResources.uspUpdateEmployeeHireInfo
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [sys.fn_builtin_permissions (Transact-SQL)](/sql/relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql)   
  [GRANT 对象权限 (Transact-SQL)](/sql/t-sql/statements/grant-object-permissions-transact-sql)   
  [创建存储过程](../stored-procedures/create-a-stored-procedure.md)   

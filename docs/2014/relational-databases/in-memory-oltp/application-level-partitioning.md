@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3b1bc12baf31a0e1d5edb344c538341cf2ad1be0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62468333"
 ---
 # <a name="application-level-partitioning"></a>应用程序级分区
@@ -219,8 +219,8 @@ SELECT * FROM [dbo].[SalesOrders_cold] ORDER BY so_date DESC
   
 ```  
   
-## <a name="see-also"></a>请参阅  
- [内存中 OLTP（内存中优化）](in-memory-oltp-in-memory-optimization.md)   
+## <a name="see-also"></a>另请参阅  
+ [内存中 OLTP &#40;内存中优化&#41;](in-memory-oltp-in-memory-optimization.md)   
  [内存中 OLTP 代码示例](in-memory-oltp-code-samples.md)  
   
   

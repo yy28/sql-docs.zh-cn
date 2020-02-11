@@ -1,5 +1,5 @@
 ---
-title: Excel 源编辑器 （列页） |Microsoft Docs
+title: Excel 源编辑器（"列" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dba56ee39e710adc3973a00a0d84b1823ee74f1b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059204"
 ---
 # <a name="excel-source-editor-columns-page"></a>Excel 源编辑器（“列”页）
-  可以使用“Excel 源编辑器”对话框的“列”页，将输出列映射到每个外部（源）列   。  
+  可以使用“Excel 源编辑器”对话框的“列”页，将输出列映射到每个外部（源）列********。  
   
  若要了解有关 Excel 源的详细信息，请参阅 [Excel Source](data-flow/excel-source.md)。  
   
@@ -36,11 +36,11 @@ ms.locfileid: "66059204"
  **输出列**  
  为每个输出列提供唯一的名称。 默认值为所选外部（源）列的名称；不过，您也可以任选一个唯一的描述性名称。 所提供的名称将在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中显示。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Excel 源编辑器（“连接管理器”页）](../../2014/integration-services/excel-source-editor-connection-manager-page.md)   
- [Excel 源编辑器（“错误输出”页）](../../2014/integration-services/excel-source-editor-error-output-page.md)   
+ [Excel 源编辑器 &#40;连接管理器页&#41;](../../2014/integration-services/excel-source-editor-connection-manager-page.md)   
+ [Excel 源编辑器 &#40;错误输出页&#41;](../../2014/integration-services/excel-source-editor-error-output-page.md)   
  [Excel 连接管理器](connection-manager/excel-connection-manager.md)   
- [使用 Foreach 循环容器循环遍历 Excel 文件和表](control-flow/foreach-loop-container.md)  
+ [使用 Foreach 循环容器，循环遍历 Excel 文件和表](control-flow/foreach-loop-container.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 影响分析对话框 (Analysis Services-多维数据) |Microsoft Docs
+title: "\"影响分析\" 对话框（Analysis Services 多维数据） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0c08690cd2f5b77471392cab3aad1587b4cb0f9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080744"
 ---
 # <a name="impact-analysis-dialog-box-analysis-services---multidimensional-data"></a>“影响分析”对话框（Analysis Services - 多维数据）
@@ -32,11 +32,11 @@ ms.locfileid: "66080744"
  **Object Name**  
  显示可能需要处理的依赖对象的名称。 名称左侧的图标指示对象类型。  
   
- **类型**  
+ 类型   
  显示可能需要处理的依赖对象的类型。  
   
  **影响类型**  
- 显示处理“处理”  对话框中的对象对依赖对象的影响。 下表列出了处理的可能影响，并说明每种影响将导致警告还是错误：  
+ 显示处理“处理”**** 对话框中的对象对依赖对象的影响。 下表列出了处理的可能影响，并说明每种影响将导致警告还是错误：  
   
 |影响|消息|  
 |------------|-------------|  
@@ -47,11 +47,11 @@ ms.locfileid: "66080744"
 |将删除索引|警告|  
 |将处理非子对象|警告|  
   
- **进程对象**  
+ **处理对象**  
  选择要使用处理操作处理的依赖对象。 必须在处理操作完成后处理未选中的依赖对象。 否则，将无法使用这些对象。  
   
-## <a name="see-also"></a>请参阅  
- [Analysis Services 设计器和对话框&#40;多维数据&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [进程对话框&#40;Analysis Services-多维数据&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;多维数据的 Analysis Services 设计器和对话框&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ ["处理" 对话框 &#40;Analysis Services 多维数据&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
   
   

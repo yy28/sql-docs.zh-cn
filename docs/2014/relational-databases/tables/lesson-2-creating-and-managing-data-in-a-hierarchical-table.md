@@ -1,5 +1,5 @@
 ---
-title: 第 2 课：创建和管理层次结构表中的数据 |Microsoft Docs
+title: 第 2 课：创建和管理层次结构表中的数据 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4553d98faf18c00fff6ad90a09d0ee9071a71d32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62659929"
 ---
 # <a name="lesson-2-creating-and-managing-data-in-a-hierarchical-table"></a>第 2 课：创建和管理层次结构表中的数据
@@ -37,7 +37,7 @@ ms.locfileid: "62659929"
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [使用 hierarchyid 数据类型创建表](lesson-2-1-creating-a-table-using-the-hierarchyid-data-type.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [第 1 课：将表转换为层次结构](lesson-1-converting-a-table-to-a-hierarchical-structure.md)  
   
   

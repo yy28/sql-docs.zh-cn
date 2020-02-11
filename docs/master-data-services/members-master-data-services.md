@@ -18,10 +18,10 @@ ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: d6e663ef23c472b2a78ec71c58086824adae185e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728004"
 ---
 # <a name="members-master-data-services"></a>成员 (Master Data Services)
@@ -60,32 +60,32 @@ ms.locfileid: "73728004"
   
  ![自行车产品实体表](../master-data-services/media/mds-conc-entity-table-w-data.gif "自行车产品实体表")  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|创建新的叶成员。|[创建叶成员 (Master Data Services)](../master-data-services/create-a-leaf-member-master-data-services.md)|  
-|创建新的合并成员。|[创建合并成员 (Master Data Services)](../master-data-services/create-a-consolidated-member-master-data-services.md)|  
-|删除现有成员或集合。|[删除成员或集合 (Master Data Services)](../master-data-services/delete-a-member-or-collection-master-data-services.md)|  
-|重新激活已删除的成员或集合。|[重新激活成员或集合 (Master Data Services)](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)|  
-|更新成员的属性值。|[更改属性类型（用于 Excel 的 MDS 外接程序）](../master-data-services/microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|  
+|创建新的叶成员。|[&#40;Master Data Services 创建叶成员&#41;](../master-data-services/create-a-leaf-member-master-data-services.md)|  
+|创建新的合并成员。|[Master Data Services 创建合并成员 &#40;&#41;](../master-data-services/create-a-consolidated-member-master-data-services.md)|  
+|删除现有成员或集合。|[&#40;Master Data Services 中删除成员或集合&#41;](../master-data-services/delete-a-member-or-collection-master-data-services.md)|  
+|重新激活已删除的成员或集合。|[重新激活成员或集合 &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)|  
+|更新成员的属性值。|[更改属性类型 &#40;MDS Add-in for Excel&#41;](../master-data-services/microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|  
 
   
 ## <a name="related-content"></a>相关内容  
   
--   [Master Data Services 概述 (MDS)](../master-data-services/master-data-services-overview-mds.md)  
+-   [MDS &#40;Master Data Services 概述&#41;](../master-data-services/master-data-services-overview-mds.md)  
   
--   [实体 (Master Data Services)](../master-data-services/entities-master-data-services.md)  
+-   [实体 &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
   
--   [属性 (Master Data Services)](../master-data-services/attributes-master-data-services.md)  
+-   [属性 &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  
   
--   [层次结构 (Master Data Services)](../master-data-services/hierarchies-master-data-services.md)  
+-   [层次结构 &#40;Master Data Services&#41;](../master-data-services/hierarchies-master-data-services.md)  
   
--   [集合 (Master Data Services)](../master-data-services/collections-master-data-services.md)  
+-   [集合 &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
   
--   [叶权限 (Master Data Services)](../master-data-services/leaf-permissions-master-data-services.md)  
+-   [叶权限 &#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md)  
   
  
--   [Filter 运算符 (Master Data Services)](../master-data-services/filter-operators-master-data-services.md)  
+-   [筛选器运算符 &#40;Master Data Services&#41;](../master-data-services/filter-operators-master-data-services.md)  
   
   

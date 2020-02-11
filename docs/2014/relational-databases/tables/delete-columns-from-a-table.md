@@ -16,17 +16,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 718aeca12c90435b68fd6cedde150dfbdeb3c063
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761656"
 ---
 # <a name="delete-columns-from-a-table"></a>从表中删除列
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中删除表列。  
   
 > [!CAUTION]  
->  删除表中的某一列后，该列及其包含的所有数据都将从数据库中删除。 无法撤消此操作。  
+>  删除表中的某一列后，该列及其包含的所有数据都将从数据库中删除。 此操作不可撤消。  
   
  **本主题内容**  
   
@@ -49,9 +49,9 @@ ms.locfileid: "62761656"
   
  不能删除具有 PRIMARY KEY 或 FOREIGN KEY 约束或者其他依赖关系的列，但在使用表设计器时例外。 在使用对象资源管理器或 [!INCLUDE[tsql](../../includes/tsql-md.md)]时，必须首先删除该列上的所有依赖关系。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要对表的 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -60,19 +60,19 @@ ms.locfileid: "62761656"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在“对象资源管理器”中，右键单击要从其中删除列的表，然后选择“删除”。  
+2.  在“对象资源管理器”**** 中，右键单击要从其中删除列的表，然后选择“删除”****。  
   
-3.  在 **“删除对象”** 对话框中，单击 **“确定”**。  
+3.  在 **“删除对象”** 对话框中，单击 **“确定”** 。  
   
  如果该列包含约束或其他依赖关系，则在 **“删除对象”** 对话框中将显示一条错误消息。 通过删除引用的约束解决该错误。  
   
 #### <a name="to-delete-columns-by-using-table-designer"></a>通过使用表设计器删除列  
   
-1.  在“对象资源管理器”中，右键单击要从其中删除列的表，然后选择“设计”。  
+1.  在“对象资源管理器”  中，右键单击要从其中删除列的表，然后选择“设计”  。  
   
-2.  右键单击要删除的列，然后从快捷菜单上选择“删除列”。  
+2.  右键单击要删除的列，然后从快捷菜单上选择“删除列”  。  
   
-3.  如果该列参与了关系（FOREIGN KEY 或 PRIMARY KEY），则将显示一条消息，提示您确认删除所选列及其关系。 选择 **“是”**。  
+3.  如果该列参与了关系（FOREIGN KEY 或 PRIMARY KEY），则将显示一条消息，提示您确认删除所选列及其关系。 选择“是”  。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -80,9 +80,9 @@ ms.locfileid: "62761656"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;  

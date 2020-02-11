@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 818f78cd0b38aba0a7201eb28f49eb573ba32672
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770665"
 ---
 # <a name="sql-server-destination"></a>SQL Server 目标
@@ -32,7 +32,7 @@ ms.locfileid: "62770665"
  如果用户所执行的包中包括 SQL Server 目标，则用户需要“创建全局对象”权限。 通过使用从 **“管理工具”** 菜单打开的本地安全策略工具，可以将此权限授予用户。 如果在执行使用 SQL Server 目标的包时收到错误消息，请确保运行包的帐户拥有“创建全局对象”权限。  
   
 ## <a name="bulk-inserts"></a>大容量插入  
- 如果尝试使用 SQL Server 目标向远程 SQL Server 数据库中大容量加载数据，可能会看到如下错误消息：“已获得 OLE DB 记录。 源:“Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client”结果:0x80040E14 说明:“由于无法打开 SSIS 文件映射对象‘Global\DTSQLIMPORT’，无法进行大容量加载。 操作系统错误代码为 2 （系统找不到指定的文件。）。 请确保您是通过 Windows 安全性访问本地服务器的。”  
+ 如果尝试使用 SQL Server 目标向远程 SQL Server 数据库中大容量加载数据，您将看到如下错误消息：已获得 OLE DB 记录。 源: “Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client” Hresult: 0x80040E14 说明:“由于无法打开 SSIS 文件映射对象 ‘Global\DTSQLIMPORT’，无法进行大容量加载。 操作系统错误代码为 2 （系统找不到指定的文件。）。 请确保您是通过 Windows 安全性访问本地服务器的。”  
   
  此 SQL Server 目标将数据插入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的速度与使用“大容量插入”任务时一样快；但使用 SQL Server 目标可以在数据加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中之前，对列数据应用转换。  
   
@@ -91,11 +91,11 @@ ms.locfileid: "62770665"
   
  有关在 **“SQL Server 目标编辑器”** 对话框中可以设置的属性的详细信息，请单击下列主题之一：  
   
--   [SQL 目标编辑器（“连接管理器”页）](../sql-destination-editor-connection-manager-page.md)  
+-   [SQL 目标编辑器 &#40;连接管理器页&#41;](../sql-destination-editor-connection-manager-page.md)  
   
--   [SQL 目标编辑器（“映射”页）](../sql-destination-editor-mappings-page.md)  
+-   [SQL 目标编辑器 &#40;映射 "页面&#41;](../sql-destination-editor-mappings-page.md)  
   
--   [SQL 目标编辑器（“高级”页）](../sql-destination-editor-advanced-page.md)  
+-   [SQL 目标编辑器 &#40;高级页面&#41;](../sql-destination-editor-advanced-page.md)  
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
@@ -123,7 +123,7 @@ ms.locfileid: "62770665"
   
 -   simple-talk.com 上的技术文章 [使用 SQL Server Integration Services 大容量加载数据](https://go.microsoft.com/fwlink/?LinkId=233701)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据流](data-flow.md)  
   
   

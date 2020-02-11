@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f45fe94756ffa30a458aabbb078f6b01c9821918
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62921038"
 ---
 # <a name="restore-pages-sql-server"></a>还原页 (SQL Server)
@@ -62,7 +62,7 @@ ms.locfileid: "62921038"
   
     -   事务日志  
   
-    -   分配页：全局分配映射 (GAM) 页、 共享全局分配映射 (SGAM) 页和页可用空间 (PFS) 页。  
+    -   分配页：全局分配映射 (GAM) 页、共享全局分配映射 (SGAM) 页和页可用空间 (PFS) 页。  
   
     -   所有数据文件的页 0（文件引导页）  
   
@@ -88,18 +88,18 @@ ms.locfileid: "62921038"
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有版本都支持在数据库脱机时还原页面。 在脱机还原页过程中，还原损坏的页时数据库处于脱机状态。 还原顺序结束时，数据库将联机。  
   
      联机页面还原  
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 支持联机页面还原，但它们在数据库当前处于脱机状态时将使用脱机还原。 在大多数情况下，可以在数据库（包括页面要还原到的文件组）保持联机状态时还原损坏的页。 在主文件组处于联机状态时，即使有一个或多个辅助文件组处于脱机状态，页面还原也通常联机执行。 但有时候，损坏的页可能需要脱机还原。 例如，某些重要的页发生损坏可能会使数据库无法启动。  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 支持联机页面还原，但它们在数据库当前处于脱机状态时将使用脱机还原。 {1}在大多数情况下，可以在数据库（包括页面要还原到的文件组）保持联机状态时还原损坏的页。{2} 在主文件组处于联机状态时，即使有一个或多个辅助文件组处于脱机状态，页面还原也通常联机执行。 但有时候，损坏的页可能需要脱机还原。 例如，某些重要的页发生损坏可能会使数据库无法启动。  
   
     > [!WARNING]  
     >  如果损坏的页存储了重要的数据库元数据，则在联机页面还原尝试过程中对元数据的必需的更新可能失败。 在此情况下，你可以执行脱机页面还原，但首先，你必须创建一个 [结尾日志备份](tail-log-backups-sql-server.md) （通过使用 RESTORE WITH NORECOVERY 备份事务日志）。  
   
--   页面还原利用了改进的页级错误报告（包含页校验和）和跟踪。 通过校验和或残缺写操作检测为已损坏的页（“损坏页”） 可以通过页还原操作进行还原。 仅还原显式指定的页。 每个指定页都被来自指定数据备份的页的副本替换。  
+-   页面还原利用了改进的页级错误报告（包含页校验和）和跟踪。 通过校验和或残缺写操作检测为已损坏的页（“损坏页”）  可以通过页还原操作进行还原。 仅还原显式指定的页。 每个指定页都被来自指定数据备份的页的副本替换。  
   
      在您还原随后的日志备份时，它们将仅适用于包含要还原的至少一页的数据库文件。 必须将不中断的日志备份链应用于最后一次完整或差异还原，以便让包含该页的文件组前进到当前的日志文件。 与文件还原中一样，每次传递日志重做，前滚集都会前进一步。 为了成功还原页，已还原的页必须恢复到与数据库一致的状态。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  如果不存在要还原的数据库，则用户必须有 CREATE DATABASE 权限才能执行 RESTORE。 如果数据库存在，则 RESTORE 权限默认授予 **sysadmin** 和 **dbcreator** 固定服务器角色成员以及数据库的所有者 (**dbo**)（对于 FROM DATABASE_SNAPSHOT 选项，数据库始终存在）。  
   
  RESTORE 权限被授予那些成员身份信息始终可由服务器使用的角色。 因为只有在固定数据库可以访问且没有损坏时（在执行 RESTORE 时并不会总是这样）才能检查固定数据库角色成员身份，所以 **db_owner** 固定数据库角色成员没有 RESTORE 权限。  
@@ -111,14 +111,14 @@ ms.locfileid: "62921038"
   
 1.  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]连接到相应的 实例，在对象资源管理器中，单击服务器名称以展开服务器树。  
   
-2.  展开 **“数据库”**。 根据具体的数据库，选择一个用户数据库，或展开“系统数据库”并选择一个系统数据库。  
+2.  展开 **“数据库”** 。  根据具体的数据库，选择一个用户数据库，或展开“系统数据库”并选择一个系统数据库。  
   
-3.  右键单击该数据库，指向 **“任务”**，再指向 **“还原”**，然后单击 **“页”** ，这将打开“还原页”对话框。  
+3.   右键单击该数据库，指向 **“任务”** ，再指向 **“还原”** ，然后单击 **“页”** ，这将打开“还原页”对话框。  
   
      **还原**  
-     此部分执行的功能与 [还原数据库（常规页）](../../integration-services/general-page-of-integration-services-designers-options.md) 上的 **“还原到”** 的功能相同。  
+     此部分执行的功能与 **还原数据库（常规页）** 上的 [“还原到”](../../integration-services/general-page-of-integration-services-designers-options.md) 的功能相同。  
   
-     **“数据库”**  
+     **Database**  
      指定要还原的数据库。 您可以输入新的数据库，也可以从下拉列表中选择现有的数据库。  该列表包含了服务器上除系统数据库 **master** 和 tempdb 之外的所有数据库。  
   
     > [!WARNING]  
@@ -130,13 +130,13 @@ ms.locfileid: "62921038"
      **备份集**  
      此部分显示参与还原的备份集。  
   
-    |Header|值|  
+    |标头|值|  
     |------------|------------|  
     |**名称**|备份集的名称。|  
-    |**组件**|备份的组件：“数据库”、“文件”或“\<空白>”（对于事务日志）。|  
-    |**类型**|执行的备份类型：“完整”、“差异”或“事务日志”。|  
+    |组件 |已备份的组件：**数据库**、**文件**或 **\<blank>** （用于事务日志）。|  
+    |类型 |执行的备份类型有： **“完整”** 、 **“差异”** 或 **“事务日志”** 。|  
     |**Server**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 执行备份操作的实例的名称。|  
-    |**“数据库”**|备份操作中涉及的数据库的名称。|  
+    |**Database**|备份操作中涉及的数据库的名称。|  
     |**位置**|备份集在卷中的位置。|  
     |**第一个 LSN**|备份集中第一个事务的日志序列号 (LSN)。 对于文件备份为空。|  
     |**最后一个 LSN**|备份集中最后一个事务的日志序列号 (LSN)。 对于文件备份为空。|  
@@ -145,7 +145,7 @@ ms.locfileid: "62921038"
     |**开始日期**|备份操作开始的日期和时间，按客户端的区域设置显示。|  
     |**完成日期**|备份操作完成的日期和时间，按客户端的区域设置显示。|  
     |**大小**|备份集的大小（字节）。|  
-    |**用户名**|执行备份操作的用户的名称。|  
+    |**用户名**|{1}执行备份操作的用户的名称。{2}|  
     |**过期日期**|备份集的过期日期和时间。|  
   
       单击“验证”以检查执行页还原操作所需的备份文件的完整性。  
@@ -161,10 +161,10 @@ ms.locfileid: "62921038"
   
      **页**  
   
-7.  若要还原在页网格中列出的页，请单击“确定”。  
+7.   若要还原在页网格中列出的页，请单击“确定”。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
- 若要在 RESTORE DATABASE 语句中指定一页，需要知道该页所在文件的文件 ID 和该页的页 ID。 所需语法如下：  
+ {1}若要在 RESTORE DATABASE 语句中指定一页，需要知道该页所在文件的文件 ID 和该页的页 ID。{2} {1}所需语法如下：{2}  
   
  `RESTORE DATABASE <database_name>`  
   
@@ -184,11 +184,11 @@ ms.locfileid: "62921038"
     |-----------------------|-----------|  
     |**msdb..suspect_pages**|[管理 suspect_pages 表 (SQL Server)](manage-the-suspect-pages-table-sql-server.md)|  
     |错误日志|[查看 SQL Server 错误日志 (SQL Server Management Studio)](../../ssms/sql-server-management-studio-ssms.md)|  
-    |事件跟踪|[监视事件和响应事件](../../ssms/agent/monitor-and-respond-to-events.md)|  
+    |{1}事件跟踪{2}|[监视事件和响应事件](../../ssms/agent/monitor-and-respond-to-events.md)|  
     |DBCC|[DBCC (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-transact-sql)|  
-    |WMI 提供程序|[WMI Provider for Server Events 的概念](../wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)|  
+    |{1}WMI 提供程序{2}|[WMI Provider for Server Events 的概念](../wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)|  
   
-2.  从包含页的完整数据库备份、文件备份或文件组备份开始进行页面还原。 在 RESTORE DATABASE 语句中，使用 PAGE 子句列出所有要还原的页的页 ID。  
+2.  {1}从包含页的完整数据库备份、文件备份或文件组备份开始进行页面还原。{2} 在 RESTORE DATABASE 语句中，使用 PAGE 子句列出所有要还原的页的页 ID。  
   
 3.  应用最近的差异。  
   
@@ -196,7 +196,7 @@ ms.locfileid: "62921038"
   
 5.  创建新的数据库日志备份，使其包含已还原页的最终 LSN，即最后还原的页脱机的时间点。 设置为顺序中首先还原的最终 LSN 是重做目标 LSN。 包含该页的文件的联机前滚可以在重做目标 LSN 处停止。 若要了解文件的当前重做目标 LSN，请查看 **sys.master_files** 的 **redo_target_lsn** 列。 有关详细信息，请参阅 [sys.master_files (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)。  
   
-6.  还原新的日志备份。 应用这个新的日志备份后，就完成了页面还原，可以开始使用页了。  
+6.  {1}还原新的日志备份。{2} 应用这个新的日志备份后，就完成了页面还原，可以开始使用页了。  
   
     > [!NOTE]  
     >  此顺序与文件还原顺序类似。 事实上，页面还原和文件还原都可以在相同的顺序中执行。  
@@ -217,8 +217,8 @@ RESTORE LOG <database> FROM <new_log_backup> WITH RECOVERY;
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)   
+## <a name="see-also"></a>另请参阅  
+ [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [应用事务日志备份 (SQL Server)](transaction-log-backups-sql-server.md)   
  [管理 suspect_pages 表 (SQL Server)](manage-the-suspect-pages-table-sql-server.md)   
  [SQL Server 数据库的备份和还原](back-up-and-restore-of-sql-server-databases.md)  

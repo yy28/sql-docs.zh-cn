@@ -19,23 +19,24 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b2c6a19eb44b1d53fe87bef0183bdafbb3ec105b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060845"
 ---
 # <a name="configure-a-windows-firewall-for-access-to-the-ssis-service"></a>为访问 SSIS 服务配置 Windows 防火墙
     
 > [!IMPORTANT]  
->  本主题论述 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务，该服务是用于管理 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包的一种 Windows 服务。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 支持该服务以便与 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的早期版本向后兼容。 从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]开始，您可以在 Integration Services 服务器上管理诸如包之类的对象。  
+>  本主题论述 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务，该服务是用于管理 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包的一种 Windows 服务。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]支持服务以便与的早期版本向后兼容[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。 从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]开始，您可以在 Integration Services 服务器上管理诸如包之类的对象。  
   
  Windows 防火墙系统可帮助防止通过网络连接对计算机资源进行未经授权的访问。 若要通过此防火墙访问 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ，您必须将该防火墙配置为允许访问。  
   
 > [!IMPORTANT]  
->  若要管理存储在某远程服务器上的包，您不必连接到该远程服务器上 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务的实例。 只需编辑 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务的配置文件，以便 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 显示存储在远程服务器上的包。 有关详细信息，请参阅 [配置 Integration Services 服务（SSIS 服务）](configuring-the-integration-services-service-ssis-service.md)的早期版本向后兼容。  
+>  若要管理存储在某远程服务器上的包，您不必连接到该远程服务器上 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务的实例。 只需编辑 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务的配置文件，以便 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 显示存储在远程服务器上的包。 有关详细信息，请参阅[配置 Integration Services 服务（SSIS 服务）](configuring-the-integration-services-service-ssis-service.md)。  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务使用 DCOM 协议。 有关 DCOM 协议通过防火墙的工作原理的详细信息，请参阅本文中，"[与防火墙配合使用分布式 COM](https://manualzz.com/doc/19762578/using-distributed-com-with-firewalls-by-michael-nelson-in...)"。  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务使用 DCOM 协议。 有关 DCOM 协议如何通过防火墙工作的详细信息，请参阅 "[使用分布式 COM With 防火墙](https://manualzz.com/doc/19762578/using-distributed-com-with-firewalls-by-michael-nelson-in...)" 一文。  
   
  有很多可用的防火墙系统。 如果您运行的防火墙不是 Windows 防火墙，请查阅您的防火墙文档来获取特定于您所使用的系统的信息。  
   
@@ -52,9 +53,9 @@ ms.locfileid: "66060845"
   
 #### <a name="to-configure-a-windowsfirewall-using-the-command-prompt-window"></a>使用命令提示符窗口配置 Windows 防火墙  
   
-1.  运行命令： `netsh firewall add portopening protocol=TCP port=135 name="RPC (TCP/135)" mode=ENABLE scope=SUBNET`  
+1.  运行命令 `netsh firewall add portopening protocol=TCP port=135 name="RPC (TCP/135)" mode=ENABLE scope=SUBNET`  
   
-2.  运行命令： `netsh firewall add allowedprogram program="%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn\MsDtsSrvr.exe" name="SSIS Service" scope=SUBNET`  
+2.  运行命令 `netsh firewall add allowedprogram program="%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn\MsDtsSrvr.exe" name="SSIS Service" scope=SUBNET`  
   
     > [!NOTE]  
     >  若要打开所有计算机的防火墙，同时打开 Internet 上的计算机的防火墙，请用 scope=ALL 代替 scope=SUBNET。  
@@ -63,32 +64,33 @@ ms.locfileid: "66060845"
   
 #### <a name="to-configure-a-firewall-using-the-windowsfirewall-dialog-box"></a>使用“Windows 防火墙”对话框配置防火墙  
   
-1.  在“控制面板”中，双击“Windows 防火墙”  。  
+1.  在“控制面板”中，双击“Windows 防火墙”****。  
   
-2.  在 **“Windows 防火墙”** 对话框中，单击 **“例外”** 选项卡，再单击 **“添加程序”** 。  
+2.  在 **“Windows 防火墙”** 对话框中，单击 **“例外”** 选项卡，再单击 **“添加程序”**。  
   
-3.  在“添加程序”  对话框中单击“浏览”  ，导航到 Program Files\Microsoft SQL Server\100\DTS\Binn 文件夹，单击 MsDtsSrvr.exe，然后单击“打开”  。 单击 **“确定”** 关闭 **“添加程序”** 对话框。  
+3.  在“添加程序”**** 对话框中单击“浏览”****，导航到 Program Files\Microsoft SQL Server\100\DTS\Binn 文件夹，单击 MsDtsSrvr.exe，然后单击“打开”****。 单击 **“确定”** 关闭 **“添加程序”** 对话框。  
   
-4.  在 **“例外”** 选项卡上，单击 **“添加端口”** 。  
+4.  在 **“例外”** 选项卡上，单击 **“添加端口”**。  
   
-5.  在“添加端口”  对话框中，键入 **RPC(TCP/135)** 或在“名称”  框中键入另一个描述性名称，在“端口号”  框中键入 **135**，然后选择“TCP”  。  
+5.  在“添加端口”**** 对话框中，键入 **RPC(TCP/135)** 或在“名称”**** 框中键入另一个描述性名称，在“端口号”**** 框中键入 **135**，然后选择“TCP”****。  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务始终使用端口 135。 您不能指定其他端口。  
+    >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]服务始终使用端口135。 您不能指定其他端口。  
   
 6.  在 **“添加端口”** 对话框中，可以选择单击 **“更改范围”** 来修改默认的作用范围。  
   
-7.  在“更改范围”  对话框中，选择“我的网络（仅子网）”  或键入自定义列表，然后单击“确定”  。  
+7.  在“更改范围”**** 对话框中，选择“我的网络（仅子网）”**** 或键入自定义列表，然后单击“确定”****。  
   
-8.  若要关闭 **“添加端口”** 对话框，请单击 **“确定”** 。  
+8.  若要关闭 **“添加端口”** 对话框，请单击 **“确定”**。  
   
-9. 若要关闭 **“Windows 防火墙”** 对话框，请单击 **“确定”** 。  
+9. 若要关闭 **“Windows 防火墙”** 对话框，请单击 **“确定”**。  
   
     > [!NOTE]  
-    >  为了配置 Windows 防火墙，此过程使用“控制面板”中的 **“Windows 防火墙”** 项。 **“Windows 防火墙”** 项仅可为当前网络位置配置文件配置防火墙。 但你也可使用 **netsh** 命令行工具或名为高级安全 Windows 防火墙的 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理控制台 (MMC) 管理单元来配置 Windows 防火墙。 有关这些工具的详细信息，请参阅 [配置 Windows 防火墙以允许 SQL Server 访问](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
+    >  为了配置 Windows 防火墙，此过程使用“控制面板”中的 **“Windows 防火墙”** 项。 
+  **“Windows 防火墙”** 项仅可为当前网络位置配置文件配置防火墙。 但你也可使用 **netsh** 命令行工具或名为高级安全 Windows 防火墙的 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理控制台 (MMC) 管理单元来配置 Windows 防火墙。 有关这些工具的详细信息，请参阅 [配置 Windows 防火墙以允许 SQL Server 访问](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
   
-## <a name="see-also"></a>请参阅  
- [配置 Integration Services 服务（SSIS 服务）](service/integration-services-service-ssis-service.md)   
+## <a name="see-also"></a>另请参阅  
+ [&#40;SSIS 服务配置 Integration Services 服务&#41;](service/integration-services-service-ssis-service.md)   
  [Integration Services 服务（SSIS 服务）](service/integration-services-service-ssis-service.md)  
   
   

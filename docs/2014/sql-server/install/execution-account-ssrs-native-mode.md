@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 0eff6dca788744b93d2d6d4a0a7175764e263f71
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952537"
 ---
 # <a name="execution-account-ssrs-native-mode"></a>执行帐户（SSRS 本机模式）
@@ -26,7 +26,7 @@ ms.locfileid: "71952537"
   
 -   当报表服务器连接到其他服务器以检索报表中所引用的外部图像文件或其他资源时。  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式。  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]本机模式。  
   
  设置此帐户是可选的，但如果不设置此帐户，则将限制您使用外部图像以及与一些数据源的连接。 在检索外部图像文件时，报表服务器将检查是否可以建立匿名连接。 如果连接受密码保护，报表服务器将使用无人参与的报表处理帐户来连接到远程服务器。 在为报表检索数据时，报表服务器或者模拟当前用户、提示用户提供凭据或使用存储的凭据，或者（如果数据源连接指定 **“无”** 作为凭证类型）使用无人参与的处理帐户。 在连接到其他计算机时，报表服务器不允许对其服务帐户凭据进行委托或模拟，因此，如果不能使用其他凭据，报表服务器就必须使用无人参与的处理帐户。  
   
@@ -35,26 +35,26 @@ ms.locfileid: "71952537"
  您可以使用任何一个 Windows 用户帐户。 为获得最佳结果，请选择拥有读取权限和网络登录权限的帐户，以支持与其他计算机的连接。 对于您希望在报表中使用的任何外部图像或数据文件，它必须拥有对这些文件的读取权限。 切勿指定本地帐户，除非所有报表数据源和外部图像均存储在报表服务器计算机中。 只可将该帐户用于无人参与报表处理。  
   
 > [!NOTE]  
->  如果使用的是带高级服务的 [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)]，则仅当在报表中引用外部图像并且访问该图像文件需要相应权限时才需要配置此帐户。 SQL Server Express 不支持到远程服务器的数据源连接。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2012 各个版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473)。  
+>  如果使用的是带高级服务的 [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)]，则仅当在报表中引用外部图像并且访问该图像文件需要相应权限时才需要配置此帐户。 SQL Server Express 不支持到远程服务器的数据源连接。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2012 各个版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473)。  
   
  若要打开此页，请启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器，并在导航窗格中选择 **“执行帐户”** 。 有关详细信息，请参阅 [Reporting Services Configuration Manager（本机模式）](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **指定执行帐户**  
  选择此选项可指定一个帐户。  
   
- **帐户**  
- 输入一个 Windows 域用户帐户。 使用如下格式：*domain>\<<user account\\\>* 。  
+ **账号**  
+ 输入一个 Windows 域用户帐户。 使用以下格式： * \<域>\\<用户帐户\>*。  
   
- **密码**  
+ **权限**  
  键入密码。  
   
  **确认密码**  
  重新键入密码。  
   
 ## <a name="see-also"></a>另请参阅  
- [Reporting Services 配置管理器 F1 帮助主题&#40;SSRS 本机模式&#41; ](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
- [存储加密的 Report Server 数据（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [Reporting Services 配置管理器的 F1 帮助主题 &#40;SSRS 本机模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+ [将加密的报表服务器数据存储 &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [配置无人参与的执行帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  
   
   

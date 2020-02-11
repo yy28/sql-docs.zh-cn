@@ -1,5 +1,5 @@
 ---
-title: 添加数据集筛选器、 数据区域筛选器和组筛选器 （报表生成器和 SSRS） |Microsoft Docs
+title: 添加数据集筛选器、数据区域筛选器和组筛选器（报表生成器和 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0baf05aa9c38882aea1423fa56c2d7eb0ea940be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106633"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters-report-builder-and-ssrs"></a>添加数据集筛选器、数据区域筛选器和组筛选器（报表生成器和 SSRS）
@@ -47,21 +47,21 @@ ms.locfileid: "66106633"
   
 -   **对图表数据区域中的序列组或类别组** ：如果希望组表达式包含或排除某些值以控制图表中出现的值，则可对序列组或类别组设置筛选器。  
   
-##  <a name="FilterEquations"></a> 了解筛选器公式  
+##  <a name="FilterEquations"></a>了解筛选器公式  
  在运行时，报表处理器会将值转换为指定数据类型，然后使用指定运算符来比较表达式和值。 下面列出筛选器公式的每个部分：  
   
--   **表达式** ：定义对其进行筛选的内容。 通常为数据集字段。  
+-   **表达式**定义要筛选的内容。 通常为数据集字段。  
   
--   **数据类型** ：指定在运行时报表处理器计算筛选器公式时所用的数据类型。 您所选择的数据类型必须是报表定义架构支持的数据类型之一。  
+-   **数据类型**指定报表处理器在运行时计算筛选器公式时使用的数据类型。 您所选择的数据类型必须是报表定义架构支持的数据类型之一。  
   
--   **运算符** ：定义如何比较筛选器公式的两个部分。  
+-   **运算符**定义如何比较筛选器公式的两个部分。  
   
--   `Value` 定义要在比较中使用的表达式。  
+-   `Value`定义要在比较中使用的表达式。  
   
  以下部分介绍筛选器公式的每个部分。  
   
 ### <a name="expression"></a>表达式  
- 当运行时报表处理器计算筛选器公式时，表达式和值的数据类型必须相同。 为 **“表达式”** 所选的字段的数据类型由从数据源检索数据时所用的数据处理扩展插件或数据访问接口确定。 您输入的表达式的数据类型`Value`由[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]默认值。 所选数据类型由报表定义支持的数据类型确定。 来自数据库的值可能由数据访问接口转换为 CLR 类型。  
+ 当运行时报表处理器计算筛选器公式时，表达式和值的数据类型必须相同。 为 **“表达式”** 所选的字段的数据类型由从数据源检索数据时所用的数据处理扩展插件或数据访问接口确定。 为`Value`输入的表达式的数据类型由[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]默认值确定。 所选数据类型由报表定义支持的数据类型确定。 来自数据库的值可能由数据访问接口转换为 CLR 类型。  
   
 ### <a name="data-type"></a>数据类型  
  为使报表处理器能比较两个值，值的数据类型必须相同。 下表列出了 CLR 数据类型和报表定义数据类型之间的映射。 从数据源中检索的数据可能转换为与作为报表数据时不同的数据类型。  
@@ -69,23 +69,23 @@ ms.locfileid: "66106633"
 |**报表定义架构数据类型**|**CLR 类型**|  
 |--------------------------------------------|-----------------------|  
 |`Boolean`|`Boolean`|  
-|`DateTime`|`DateTime`， `DateTimeOffset`|  
+|`DateTime`|`DateTime`, `DateTimeOffset`|  
 |`Integer`|`Int16`, `Int32`, `UInt16`, `Byte`, `SByte`|  
 |`Float`|`Single`, `Double`, `Decimal`|  
 |`Text`|`String`, `Char`, `GUID`, `Timespan`|  
   
  必须指定数据类型时，你可以在表达式的 Value 部分指定你自己的转换。  
   
-### <a name="operator"></a>运算符  
+### <a name="operator"></a>操作员  
  下表列出了可在筛选器公式中使用的运算符，以及报表处理器用于计算筛选器公式的内容。  
   
-|运算符|操作|  
+|操作员|操作|  
 |--------------|------------|  
 |**Equal、Like、NotEqual、GreaterThan、GreaterThanOrEqual、LessThan、LessThanOrEqual**|将表达式与一个值进行比较。|  
 |**TopN、BottomN**|将表达式与一个 `Integer` 值进行比较。|  
 |**TopPercent、BottomPercent**|将表达式与一个 `Integer` 或 `Float` 值进行比较。|  
 |**Between**|测试表达式是否在两个值之间（含这两个值）。|  
-|**In**|测试表达式是否包含在一组值中。|  
+|**中**|测试表达式是否包含在一组值中。|  
   
 ### <a name="value"></a>值  
  Value 表达式指定筛选器公式的最后一部分。 报表处理器会将计算后的表达式转换为指定的数据类型，然后计算整个筛选器公式以确定表达式中指定的数据是否通过了筛选器的筛选。  
@@ -94,7 +94,7 @@ ms.locfileid: "66106633"
   
  此值还可以包括参数引用，以允许用户以交互方式选择作为筛选依据的值。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在报表中使用表达式（报表生成器和 SSRS）](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [报表参数（报表生成器和报表设计器）](report-parameters-report-builder-and-report-designer.md)  
   

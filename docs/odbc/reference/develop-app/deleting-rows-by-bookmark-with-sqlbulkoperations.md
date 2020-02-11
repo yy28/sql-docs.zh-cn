@@ -1,5 +1,5 @@
 ---
-title: 删除使用 SQLBulkOperations 按书签的行 |Microsoft Docs
+title: 使用 SQLBulkOperations 按书签删除行 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,19 +15,19 @@ ms.assetid: 46139ec9-7095-481a-bf45-20200a2fdc03
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a34f96dd7f5c2f0e2ac4bbb3feae06ea4856a248
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68076807"
 ---
 # <a name="deleting-rows-by-bookmark-with-sqlbulkoperations"></a>使用 SQLBulkOperations 按书签删除行
-书签，通过删除行时**SQLBulkOperations**使数据源中删除一个或多个所选的表的行。 通过绑定的书签列中的书签标识行。  
+在按书签删除行时， **SQLBulkOperations**会使数据源删除表中的一个或多个选定行。 行由绑定书签列中的书签标识。  
   
- 若要删除的行具有书签**SQLBulkOperations**，应用程序执行以下：  
+ 若要使用**SQLBulkOperations**按书签删除行，应用程序需要执行以下操作：  
   
-1.  检索并缓存所有要删除的行的书签。 如果存在多个书签，并且使用按列绑定，书签将存储在数组中;如果存在多个书签，并且使用按行绑定，书签存储数组中的行结构。  
+1.  检索并缓存要删除的所有行的书签。 如果使用多个书签和逐列绑定，则书签存储在数组中;如果使用多个书签和按行绑定，书签将存储在行结构的数组中。  
   
-2.  将 SQL_ATTR_ROW_ARRAY_SIZE 语句属性设置为书签数并将绑定包含书签值或书签，到第 0 列的数组的缓冲区。  
+2.  将 SQL_ATTR_ROW_ARRAY_SIZE 语句特性设置为书签的数目，并将包含书签值的缓冲区和书签的数组绑定到列0。  
   
-3.  调用**SQLBulkOperations**与*操作*设置为 SQL_DELETE_BY_BOOKMARK。
+3.  调用**SQLBulkOperations** ，并将*操作*设置为 SQL_DELETE_BY_BOOKMARK。

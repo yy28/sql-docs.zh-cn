@@ -1,5 +1,5 @@
 ---
-title: OpenSchema 方法示例 (VB) |Microsoft Docs
+title: OpenSchema 方法示例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 455a02f0-8143-4562-8648-8fb45ffd334c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a16979e7993fd1ac86679d054508b837a0a08c68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931895"
 ---
 # <a name="openschema-method-example-vb"></a>OpenSchema 方法示例 (VB)
-此示例使用[OpenSchema](../../../ado/reference/ado-api/openschema-method.md)方法的名称和类型的每个表中显示***Pubs***数据库。  
+此示例使用[OpenSchema](../../../ado/reference/ado-api/openschema-method.md)方法来显示***Pubs***数据库中每个表的名称和类型。  
   
 ```  
 'BeginOpenSchemaVB  
@@ -78,12 +78,12 @@ End Sub
 'EndOpenSchemaVB  
 ```  
   
- 此示例指定中的 TABLE_TYPE 查询约束**OpenSchema**方法***条件***参数。 仅架构信息视图中指定的结果， ***Pubs***返回数据库。 然后，此示例显示的名称和每个表的类型。  
+ 此示例在**OpenSchema**方法***条件***参数中指定 TABLE_TYPE 查询约束。 因此，只返回***Pubs***数据库中指定的视图的架构信息。 然后，该示例显示每个表的名称和类型。  
   
 ```  
 Attribute VB_Name = "OpenSchema"  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [OpenSchema 方法](../../../ado/reference/ado-api/openschema-method.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

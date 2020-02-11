@@ -1,5 +1,5 @@
 ---
-title: 维度对象 (Analysis Services-多维数据) |Microsoft Docs
+title: 维度对象（Analysis Services 多维数据） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c0c64f95b0c366453e1099c80d8e40b217fb7801
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62702463"
 ---
 # <a name="dimension-objects-analysis-services---multidimensional-data"></a>维度对象（Analysis Services - 多维数据）
@@ -25,10 +25,10 @@ ms.locfileid: "62702463"
 ## <a name="in-this-section"></a>本节内容  
  下列主题提供有关如何设计和实现维度对象的详细信息。  
   
-|主题|Description|  
+|主题|说明|  
 |-----------|-----------------|  
-|[维度（Analysis Services - 多维数据）](dimensions-analysis-services-multidimensional-data.md)|在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，维度是多维数据集的一个基本组件。 维度可将和相关领域（如客户、商店或雇员）关联的数据与用户组织起来。|  
+|[Analysis Services 多维数据 &#40;维度&#41;](dimensions-analysis-services-multidimensional-data.md)|在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，维度是多维数据集的基本组件。 维度可将和相关领域（如客户、商店或雇员）关联的数据与用户组织起来。|  
 |[属性和属性层次结构](attributes-and-attribute-hierarchies.md)|维度是属性的集合，这些属性绑定到数据源视图的表或视图中的一列或多列。|  
-|[属性关系](attribute-relationships.md)|在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，维度内的属性始终直接或间接与相关的键属性。 当您基于星型架构（在该架构中，所有维度属性都派生自同一关系表）定义维度时，维度的键属性和每个非键属性之间会自动定义属性关系。 当您基于雪花架构（在该架构中，维度属性派生自多个相关的表）定义维度时，会自动按如下方式定义属性关系：<br /><br /> -之间的键属性和每个非键属性绑定到主维度表中的列。<br />的键属性和绑定到辅助表中的外键属性之间的链接基础维度表。<br />的间属性绑定到外键中的辅助表和每个非键属性绑定到列从辅助表。|  
+|[的维度设计器中，可以在“维度结构”视图的](attribute-relationships.md)|在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，维度中的属性始终直接或间接与键属性相关。 当您基于星型架构（在该架构中，所有维度属性都派生自同一关系表）定义维度时，维度的键属性和每个非键属性之间会自动定义属性关系。 当您基于雪花架构（在该架构中，维度属性派生自多个相关的表）定义维度时，会自动按如下方式定义属性关系：<br /><br /> -在键属性与绑定到主维度表中的列的每个非键属性之间。<br />-在键属性与绑定到辅助表中链接基础维度表的外键的属性之间。<br />-在绑定到辅助表中的外键的属性与绑定到辅助表中的列的每个非键属性之间。|  
   
   

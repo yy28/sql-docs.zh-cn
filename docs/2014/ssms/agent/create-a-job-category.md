@@ -15,23 +15,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 07b942ad64043f93f014a54246b42ef5375ade97
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798284"
 ---
 # <a name="create-a-job-category"></a>创建作业类别
   本主题介绍如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 管理对象在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建作业类别。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理提供了内置作业类别，可以向这些类别分配作业，也可以创建作业类别并对其分配作业。 作业类别有助于您组织作业，从而更容易筛选和分组。 例如，可以将所有数据库备份作业组织到“数据库维护”类别中。 此外，还可以创建自己的作业类别。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理提供可将作业分配到的内置作业类别，也可以创建作业类别并向其分配作业。 作业类别有助于您组织作业，从而更容易筛选和分组。 例如，可以将所有数据库备份作业组织到“数据库维护”类别中。 此外，还可以创建自己的作业类别。  
   
  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Restrictions"></a> 限制和局限  
- 多服务器类别仅存在于主服务器上。 主服务器上仅提供了一个默认作业类别：“[未分类(多服务器)]”。 下载多服务器作业后，其类别将在目标服务器上更改为“来自 MSX 的作业” 。  
+ 多服务器类别仅存在于主服务器上。 主服务器上仅提供了一个默认作业类别：“[未分类(多服务器)]”****。 下载多服务器作业后，其类别将在目标服务器上更改为“来自 MSX 的作业” **** 。  
   
 ###  <a name="Security"></a> Security  
  有关详细信息，请参阅[实现 SQL Server 代理安全性](implement-sql-server-agent-security.md)。  
@@ -42,19 +42,19 @@ ms.locfileid: "72798284"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开您想要在其中创建作业类别的服务器。  
   
-2.  单击加号以展开 **“SQL Server 代理”** 。  
+2.  单击加号以展开 **“SQL Server 代理”**。  
   
-3.  右键单击 **“作业”** 文件夹，然后选择 **“管理作业类别”** 。  
+3.  右键单击 **“作业”** 文件夹，然后选择 **“管理作业类别”**。  
   
-4.  在“管理作业类别”_server_name_ 对话框中，单击“添加”。  
+4.  在 "**管理作业类别**_server_name_ " 对话框中，单击 "**添加**"。  
   
 5.  在新对话框的 **“名称”** 框中，输入新作业类别的名称。  
   
 6.  选中 **“显示所有作业”** 复选框。 通过选中作业对应的框来为新类别选择一个或多个作业。  
   
-7.  单击 **“确定”** 中创建非聚集索引。  
+7.  单击“确定”。   
   
-8.  在“管理作业类别”_server_name_ 对话框中，单击“刷新” 以确保新的作业类别处于活动状态。 如果一切都与预期情况相同，则关闭此对话框。  
+8.  在 "**管理作业类别**_server_name_ " 对话框中，单击 "**刷新**" 以确保新的作业类别处于活动状态。 如果一切都与预期情况相同，则关闭此对话框。  
   
  有关这些对话框的详细信息，请参阅[作业类别：管理作业类别](job-categories-manage-job-categories.md)和[作业类别属性和新作业类别](job-categories-properties-new-job-category.md)。  
 
@@ -66,7 +66,7 @@ ms.locfileid: "72798284"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```sql
     -- creates a local job category named AdminJobs   
@@ -79,7 +79,7 @@ ms.locfileid: "72798284"
     GO  
     ```  
   
- 有关详细信息，请[参阅&#40;sp_add_category transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-category-transact-sql)。  
+ 有关详细信息，请参阅[&#40;transact-sql&#41;sp_add_category ](/sql/relational-databases/system-stored-procedures/sp-add-category-transact-sql)。  
 
 ##  <a name="SMO"></a>使用 SQL Server 管理对象  
  **创建作业类别**  

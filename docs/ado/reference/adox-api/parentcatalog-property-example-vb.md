@@ -1,5 +1,5 @@
 ---
-title: ParentCatalog 属性示例 (VB) |Microsoft Docs
+title: ParentCatalog 属性示例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 448bc850-7584-4c5f-89f3-5f4fee88b259
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f87a092d20fb15a23e21a7ef9f0094e40eedeb57
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965593"
 ---
 # <a name="parentcatalog-property-example-vb"></a>ParentCatalog 属性示例 (VB)
-下面的代码演示如何使用[ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)属性来访问特定于提供程序的属性，然后将一个表追加到一个目录。 该属性是**AutoIncrement**，Microsoft Jet 数据库中创建一个自动递增字段。  
+下面的代码演示了如何在将表追加到目录之前，使用[ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)属性访问特定于提供程序的属性。 属性为**自动增量**，这会在 Microsoft Jet 数据库中创建自动增量字段。  
   
 ```  
 ' BeginCreateAutoIncrColumnVB  
@@ -83,13 +83,13 @@ End Sub
 ' EndCreateAutoIncrColumnVB  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [Append 方法 （ADOX 列）](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append 方法 （ADOX 表）](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [目录对象 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [列对象 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [列集合 (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Name 属性 (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   
- [ParentCatalog 属性 (ADOX)](../../../ado/reference/adox-api/parentcatalog-property-adox.md)   
- [表对象 (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
+## <a name="see-also"></a>另请参阅  
+ [Append 方法（ADOX 列）](../../../ado/reference/adox-api/append-method-adox-columns.md)   
+ [Append 方法（ADOX 表）](../../../ado/reference/adox-api/append-method-adox-tables.md)   
+ [目录对象（ADOX）](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [列对象（ADOX）](../../../ado/reference/adox-api/column-object-adox.md)   
+ [列集合（ADOX）](../../../ado/reference/adox-api/columns-collection-adox.md)   
+ [Name 属性（ADOX）](../../../ado/reference/adox-api/name-property-adox.md)   
+ [ParentCatalog 属性（ADOX）](../../../ado/reference/adox-api/parentcatalog-property-adox.md)   
+ [Table 对象（ADOX）](../../../ado/reference/adox-api/table-object-adox.md)   
  [Type 属性（列）(ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)

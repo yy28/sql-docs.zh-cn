@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b0db2a84b4be80fffec0f05aed11f39a3bcea7db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287361"
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>使用嵌套 AUTO 模式查询生成同级
@@ -66,7 +66,7 @@ FOR XML AUTO, TYPE
   
 -   查询在 `SalesOrder` 子句中指定的行集 `FROM`。 结果是包含一个或多个 <`SalesOrder`> 元素的 XML。  
   
--   指定 `AUTO` 模式和 `TYPE` 指令。 `AUTO` 模式将查询结果转换为 XML，并`TYPE`指令将返回结果作为`xml`类型。  
+-   指定 `AUTO` 模式和 `TYPE` 指令。 `AUTO`模式将查询结果转换为 XML， `TYPE`指令将结果作为`xml`类型返回。  
   
 -   包括两个以逗号分隔的嵌套 `SELECT` 语句。 第一个嵌套 `SELECT` 语句检索销售订单信息、表头和详细信息，第二个嵌套 `SELECT` 语句检索销售人员信息。  
   
@@ -124,7 +124,7 @@ WHERE SalesOrderID=43659 or SalesOrderID=43660
 FOR XML AUTO, TYPE  
 ```  
   
- 下面是结果：  
+ 结果如下：  
   
 ```  
 <Sales.SalesOrderHeader SalesOrderID="43659" SalesPersonID="279" CustomerID="676">  
@@ -144,7 +144,8 @@ FOR XML AUTO, TYPE
   
 -   将先前的查询添加到 `FROM` 子句。 查询结果返回为表。 注意添加的 `XmlCol` 别名。  
   
--   `SELECT` 子句对 `XmlCol` 子句中返回的 `FROM` 指定 XQuery。 `query()` 数据类型的 `xml` 方法用于指定 XQuery。 有关详细信息，请参阅 [query() 方法（xml 数据类型）](/sql/t-sql/xml/query-method-xml-data-type)。  
+-   `SELECT` 子句对 `XmlCol` 子句中返回的 `FROM` 指定 XQuery。 
+  `query()` 数据类型的 `xml` 方法用于指定 XQuery。 有关详细信息，请参阅 [query() 方法（xml 数据类型）](/sql/t-sql/xml/query-method-xml-data-type)。  
   
     ```  
     SELECT XmlCol.query('<Root> { /* } </Root>')  
@@ -165,7 +166,7 @@ FOR XML AUTO, TYPE
     FOR XML AUTO, TYPE ) as T(XmlCol)  
     ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用嵌套 FOR XML 查询](use-nested-for-xml-queries.md)  
   
   

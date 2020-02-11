@@ -1,5 +1,5 @@
 ---
-title: LOCALDB_ERROR_INVALID_INSTANCE_NAME | Microsoft Docs
+title: LOCALDB_ERROR_INVALID_INSTANCE_NAME |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: adbdae062c0c69816cf57a7c7a6d73906fbd8d7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62990472"
 ---
-# <a name="localdberrorinvalidinstancename"></a>LOCALDB_ERROR_INVALID_INSTANCE_NAME
+# <a name="localdb_error_invalid_instance_name"></a>LOCALDB_ERROR_INVALID_INSTANCE_NAME
     
 ## <a name="details"></a>详细信息  
   
@@ -29,7 +29,7 @@ ms.locfileid: "62990472"
 |组件|本地数据库运行时 API|  
 |消息正文|实例名称包含无效字符或太长。 请参阅 API 文档。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  实例名称包含无效字符或太长。  
   
 ## <a name="user-action"></a>用户操作  

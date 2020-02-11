@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3009eb9a341cb0881cdade4f927955d953c6fcfb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105288"
 ---
 # <a name="count-function-report-builder-and-ssrs"></a>Count 函数（报表生成器和 SSRS）
@@ -30,7 +30,7 @@ ms.locfileid: "66105288"
 Count(expression, scope, recursive)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *expression*  
  （`Variant` 或 `Binary`）要对其执行聚合的表达式，例如，`=Fields!FieldName.Value`。  
   
@@ -38,10 +38,11 @@ Count(expression, scope, recursive)
  (`String`) 包含要对其应用聚合函数的报表项的数据集、组或数据区域的名称。 如果未指定 *scope* ，则使用当前作用域。  
   
  *递归*  
- (**Enumerated Type**) 可选。 `Simple`（默认值）或 `RdlRecursive`。 指定是否以递归方式执行聚合。  
+ (**Enumerated Type**) 可选。 
+  `Simple`（默认值）或 `RdlRecursive`。 指定是否以递归方式执行聚合。  
   
 ## <a name="return-type"></a>返回类型  
- 返回`Integer`。  
+ 返回 `Integer`。  
   
 ## <a name="remarks"></a>备注  
  *scope* 的值必须是字符串常量，不能是表达式。 对于外部聚合或未指定其他聚合的聚合， *scope* 必须引用当前作用域或包含作用域。 对于聚合的聚合，嵌套聚合可以指定子作用域。  
@@ -52,7 +53,7 @@ Count(expression, scope, recursive)
   
 -   嵌套聚合的*Scope* 不能为数据集的名称。  
   
--   *表达式*不能包含`First`， `Last`， `Previous`，或`RunningValue`函数。  
+-   *表达式*不能包含`First`、 `Last`、 `Previous`或`RunningValue`函数。  
   
 -   *Expression* 不得包含用于指定 *recursive*的嵌套聚合。  
   
@@ -62,7 +63,7 @@ Count(expression, scope, recursive)
   
  示例  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>说明  
  下面的代码示例显示一个表达式，该表达式为默认作用域和父组作用域计算 `Size` 的非 Null 值数。 该表达式将添加至属于子组 `GroupbySubcategory`的行的某个单元格中。 父组是 `GroupbyCategory`。 该表达式显示 `GroupbySubcategory` （默认作用域）和 `GroupbyCategory` （父组作用域）的结果。  
   
 > [!NOTE]  
@@ -75,7 +76,7 @@ Count(expression, scope, recursive)
 "Count (Category): " & Count(Fields!Size.Value,"GroupbyCategory")  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在报表中使用表达式（报表生成器和 SSRS）](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)   
  [表达式中的数据类型（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)   

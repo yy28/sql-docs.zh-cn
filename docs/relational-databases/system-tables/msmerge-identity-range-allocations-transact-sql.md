@@ -1,5 +1,5 @@
 ---
-title: MSmerge_identity_range_allocations (Transact SQL) |Microsoft Docs
+title: MSmerge_identity_range_allocations （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -18,36 +18,36 @@ ms.assetid: 6362e35e-0ab3-4638-855b-1ce013f5fd6d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: de0325925bb1ad1626987361435056ff21a26be6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68072648"
 ---
-# <a name="msmergeidentityrangeallocations-transact-sql"></a>MSmerge_identity_range_allocations (Transact-SQL)
+# <a name="msmerge_identity_range_allocations-transact-sql"></a>MSmerge_identity_range_allocations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSmerge_identity_range_allocations**表用于跟踪的标识范围分配，对发布服务器和订阅服务器，已发布项目的历史记录。 此表存储在分发数据库中。  
+  " **MSmerge_identity_range_allocations** " 表用于跟踪已发布项目的标识范围分配的历史记录，以及对发布服务器和订阅服务器的标识范围分配。 此表存储在分发数据库中。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|发布服务器的 ID。|  
 |**publisher_db**|**nvarchar(128)**|发布数据库的名称。|  
-|**publication**|**nvarchar(128)**|发布的名称。|  
-|**article**|**nvarchar(128)**|项目的名称。|  
+|**发布**|**nvarchar(128)**|发布的名称。|  
+|**下文**|**nvarchar(128)**|项目的名称。|  
 |**订阅服务器**|**nvarchar(128)**|订阅服务器的名称。|  
 |**subscriber_db**|**nvarchar(128)**|订阅数据库的名称。|  
 |**is_pub_range**|**bit**|列出是否将标识范围分配给发布服务器。|  
 |**ranges_allocated**|**tinyint**|已分配的标识范围数。|  
-|**range_begin**|**numeric(38)**|范围的起始值。|  
-|**range_end**|**numeric(38)**|范围中的最后一个值。|  
-|**next_range_begin**|**numeric(38)**|要分配的下一个范围的起始值。|  
-|**next_range_end**|**numeric(38)**|要分配的下一个范围中的最后一个值。|  
-|**max_used**|**numeric(38)**|所使用的最大标识值。|  
+|**range_begin**|**numeric （38）**|范围的起始值。|  
+|**range_end**|**numeric （38）**|范围中的最后一个值。|  
+|**next_range_begin**|**numeric （38）**|要分配的下一个范围的起始值。|  
+|**next_range_end**|**numeric （38）**|要分配的下一个范围中的最后一个值。|  
+|**max_used**|**numeric （38）**|所使用的最大标识值。|  
 |**time_of_allocation**|**datetime**|执行分配的时间。|  
   
-## <a name="see-also"></a>请参阅  
- [复制表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

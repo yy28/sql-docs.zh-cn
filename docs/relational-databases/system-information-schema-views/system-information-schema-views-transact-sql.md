@@ -1,5 +1,5 @@
 ---
-title: 系统信息架构视图 (Transact-sql) |Microsoft Docs
+title: 系统信息架构视图（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2019
 ms.prod: sql
@@ -19,17 +19,18 @@ ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 9767c68f80c133a31c5ca33053731a399f1048db
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68670564"
 ---
-# <a name="system-information-schema-views-transact-sql"></a>系统信息架构视图 (Transact-sql)
+# <a name="system-information-schema-views-transact-sql"></a>系统信息架构视图（Transact-sql）
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-信息架构视图是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供的几种获取元数据的方法之一。 信息架构视图提供独立于系统表的内部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元数据视图。 尽管已经对基础系统表进行了重要的修改，信息架构视图仍然可使应用程序正常工作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中包含的信息架构视图符合 ISO 标准中的信息架构定义。
+信息架构视图是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供的几种获取元数据的方法之一。 信息架构视图提供独立于系统表的内部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元数据视图。 尽管已经对基础系统表进行了重要的修改，信息架构视图仍然可使应用程序正常工作。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中包含的信息架构视图符合 ISO 标准中的信息架构定义。
 
 > [!IMPORTANT]
 > 已对信息架构视图进行了一些更改，这可能会中断向后兼容性。 特定视图的主题中介绍了这些更改。
@@ -38,10 +39,10 @@ ms.locfileid: "68670564"
 
 |SQL Server 名称|对应的 SQL 标准等价名称|
 |---------------------|-----------------------------------------------|
-|“数据库”|目录|
+|数据库|目录|
 |架构|架构|
 |Object|Object|
-|用户定义的数据类型|Domain|
+|用户定义的数据类型|域|
 
 上述名称映射约定适用于以下与 ISO 兼容的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 视图。
 
@@ -68,8 +69,8 @@ FROM AdventureWorks2012.INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_NAME = N'Product';
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [系统视图&#40;transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)
+- [Transact-sql&#41;的系统视图 &#40;](../../relational-databases/system-views/replication-views-transact-sql.md)
 - [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
 - [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md) 

@@ -1,5 +1,5 @@
 ---
-title: 字词提取转换编辑器 （字词提取选项卡） |Microsoft Docs
+title: 字词提取转换编辑器（"字词提取" 选项卡） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 37d09aa75c3f6c5dd61b257056127ca76b410487
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055139"
 ---
 # <a name="term-extraction-transformation-editor-term-extraction-tab"></a>字词提取转换编辑器（“字词提取”选项卡）
@@ -33,16 +33,16 @@ ms.locfileid: "66055139"
  **术语**  
  为将包含所提取的字词的输出列提供名称。  
   
- **分数**  
+ **分值**  
  为将包含每个所提取字词的分数的输出列提供名称。  
   
  **配置错误输出**  
  使用[“配置错误输出” ](../../2014/integration-services/configure-error-output.md) 对话框可以为导致错误的行指定错误处理方式。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [字词提取转换编辑器（“排除”选项卡）](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
- [字词提取转换编辑器（“高级”选项卡）](../../2014/integration-services/term-extraction-transformation-editor-advanced-tab.md)   
+ [字词提取转换编辑器 &#40;排除选项卡&#41;](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
+ [字词提取转换编辑器 &#40;高级 "选项卡&#41;](../../2014/integration-services/term-extraction-transformation-editor-advanced-tab.md)   
  [字词查找转换](data-flow/transformations/lookup-transformation.md)  
   
   

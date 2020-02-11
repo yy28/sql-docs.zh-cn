@@ -1,5 +1,5 @@
 ---
-title: sp_attach_single_file_db (TRANSACT-SQL) |Microsoft Docs
+title: sp_attach_single_file_db （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,24 +18,24 @@ ms.assetid: 13bd1044-9497-4293-8390-1f12e6b8e952
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b285b5032c1ccde03ef8bd3f287d6b7f60eb0ffc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046169"
 ---
-# <a name="spattachsinglefiledb-transact-sql"></a>sp_attach_single_file_db (Transact-SQL)
+# <a name="sp_attach_single_file_db-transact-sql"></a>sp_attach_single_file_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   将只有一个数据文件的数据库附加到当前服务器。 **sp_attach_single_file_db**不能用于多个数据文件。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 我们建议您改用 CREATE DATABASE *database_name* FOR ATTACH 相反。 有关详细信息，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)。 不要针对复制数据库使用此过程。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]建议改为使用 CREATE DATABASE *database_name*作为附加。 有关详细信息，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)。 不要针对复制数据库使用此过程。  
   
 > [!IMPORTANT]  
->  建议您不要附加或还原来自未知或不可信源的数据库。 此类数据库可能包含恶意代码，这些代码可能会执行非预期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码，或者通过修改架构或物理数据库结构导致错误。 使用来自未知源或不可信源的数据库前，请在非生产服务器上针对数据库运行 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) ，然后检查数据库中的代码，例如存储过程或其他用户定义代码。  
+>  建议您不要附加或还原来自未知或不可信源的数据库。 此类数据库可能包含恶意代码，这些代码可能会执行非预期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码，或者通过修改架构或物理数据库结构导致错误。 使用未知或不受信任的源中的数据库之前，请在非生产服务器上的数据库上运行[DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) ，并检查数据库中的代码，例如存储过程或其他用户定义的代码。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,9 +46,9 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @dbname = ] 'dbname'` 是要连接到服务器的名称。 该名称必须是唯一的。 *dbname*是**sysname**，默认值为 NULL。  
+`[ @dbname = ] 'dbname'`要附加到服务器的数据库的名称。 该名称必须是唯一的。 *dbname*的值为**sysname**，默认值为 NULL。  
   
-`[ @physname = ] 'physical_name'` 是物理名称，包括数据库文件的路径。 *physical_name*是**nvarchar(260)** ，默认值为 NULL。  
+`[ @physname = ] 'physical_name'`是数据库文件的物理名称，包括路径。 *physical_name*的默认值为**nvarchar （260）**，默认值为 NULL。  
   
 > [!NOTE]  
 >  此参数映射到 CREATE DATABASE 语句的 FILENAME 参数。 有关详细信息，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
@@ -62,9 +62,9 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
  无  
   
 ## <a name="remarks"></a>备注  
- 使用**sp_attach_single_file_db**仅在数据库以前使用显式分离从服务器上**sp_detach_db**操作或复制的数据库。  
+ 仅在以前从服务器分离的数据库上，使用显式**sp_detach_db**操作或在复制的数据库上使用**sp_attach_single_file_db** 。  
   
- **sp_attach_single_file_db**仅适用于具有单个日志文件的数据库。 当**sp_attach_single_file_db**的数据库附加到服务器，它会生成一个新的日志文件。 如果该数据库是只读数据库，则会在日志文件的先前位置生成日志文件。  
+ **sp_attach_single_file_db**仅适用于具有单个日志文件的数据库。 当**sp_attach_single_file_db**将数据库附加到服务器时，它将生成新的日志文件。 如果该数据库是只读数据库，则会在日志文件的先前位置生成日志文件。  
   
 > [!NOTE]  
 >  不能分离或附加数据库快照。  
@@ -72,7 +72,7 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
  不要针对复制数据库使用此过程。  
   
 ## <a name="permissions"></a>权限  
- 有关附加数据库时如何处理权限的信息，请参阅[CREATE DATABASE &#40;SQL Server TRANSACT-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
+ 有关附加数据库时如何处理权限的信息，请参阅[CREATE database &#40;SQL Server transact-sql&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
   
 ## <a name="examples"></a>示例  
  以下示例分离 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]，然后将 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 中的一个文件附加到当前服务器。  
@@ -86,10 +86,10 @@ EXEC sp_attach_single_file_db @dbname = 'AdventureWorks2012',
 N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\AdventureWorks2012_Data.mdf';  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [数据库分离和附加 (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [sp_detach_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
- [sp_helpfile (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [数据库分离和附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
+ [sp_detach_db &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
+ [sp_helpfile &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

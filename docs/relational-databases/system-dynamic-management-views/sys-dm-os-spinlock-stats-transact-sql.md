@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_spinlock_stats (TRANSACT-SQL) |Microsoft Docs
+title: sys. dm_os_spinlock_stats （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2019
 ms.prod: sql-non-specified
@@ -23,38 +23,38 @@ ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
 ms.openlocfilehash: eae0057441fe6bc356c7cea6c1e6ded829bbb9e6
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68265691"
 ---
-# <a name="sysdmosspinlockstats-transact-sql"></a>sys.dm_os_spinlock_stats (Transact SQL)
+# <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys.dm_os_spinlock_stats (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返回有关所有按类型整理的旋转锁等待的信息。  
+返回有关按类型组织的所有旋转锁等待的信息。  
   
 
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(256)**|旋转锁类型的名称。|  
-|冲突|**bigint**|一个线程尝试获取调节锁并被阻止，因为另一个在当前线程的次数保存自旋锁。|  
-|旋转|**bigint**|一个线程的次数尝试获得旋转锁时执行一个循环。|  
-|spins_per_collision|**real**|每个冲突的数量的比率。|  
-|sleep_time|**bigint**|以毫秒为单位，线程处于休眠状态发生退避算法时所用的时间量。|  
-|几率|**int**|时间"旋转"一个线程获取调节锁将失败并产生了计划程序数。|  
+|冲突|**bigint**|由于另一个线程当前包含旋转锁，线程尝试获取旋转锁并被阻止的次数。|  
+|旋转|**bigint**|线程在尝试获取旋转锁时执行循环的次数。|  
+|spins_per_collision|**实际上**|每个冲突的旋转比例。|  
+|sleep_time|**bigint**|发生回退事件时线程所用的时间（以毫秒为单位）。|  
+|几率|**int**|"旋转" 线程无法获取旋转锁并生成计划程序的次数。|  
 
 
 ## <a name="permissions"></a>权限  
-上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
-上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层，需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准版和基本层，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。    
+在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要权限。   
+在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层上，需要`VIEW DATABASE STATE`具有数据库中的权限。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。    
   
 ## <a name="remarks"></a>备注  
  
- sys.dm_os_spinlock_stats 可以用于标识的旋转锁争用源。 在某些情况下，您可能能够解决或减少旋转锁争用。 但是，在某些情况下可能需要与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 客户支持服务部门联系。  
+ sys. dm_os_spinlock_stats 可用于标识旋转锁争用的源。 在某些情况下，您可能能够解决或减少旋转锁的争用情况。 但是，在某些情况下可能需要与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 客户支持服务部门联系。  
   
- 您可以使用重置的 sys.dm_os_spinlock_stats 内容`DBCC SQLPERF`，如下所示：  
+ 你可以使用`DBCC SQLPERF`重置 dm_os_spinlock_stats sys.databases 的内容，如下所示：  
   
 ```  
 DBCC SQLPERF ('sys.dm_os_spinlock_stats', CLEAR);  
@@ -67,11 +67,11 @@ GO
 >  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新启动，则这些统计信息不会持久化。 自从上次统计信息重置以来，或自从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动以来，所有数据都是累积的。  
   
 ## <a name="spinlocks"></a>自旋锁  
- 自旋锁是时间的轻量同步对象用于序列化对短时间通常拥有该数据结构的访问。 当一个线程尝试访问受另一个线程拥有该旋转锁的资源时，线程将执行一个循环，或"旋转"并再次尝试访问资源，而不立即使用闩锁或其他资源在生成计划程序请等待。 该线程将继续的旋转直到资源可用，或在循环完成，此时该线程将生成计划程序，并返回到可运行队列。 这种做法有助于减少过多的线程上下文切换，但如果旋转锁争用较高，可能会观察到大量的 CPU 使用率。
+ 旋转锁是一种轻型同步对象，用于序列化对通常长时间保存的数据结构的访问。 当某个线程尝试访问由另一个线程所持有的旋转锁保护的资源时，该线程将执行循环或 "自旋"，并再次尝试访问该资源，而不是像使用闩锁或其他资源立即生成计划程序一样再. 线程将继续旋转，直到资源可用或循环完成，此时线程将生成计划程序并返回到可运行队列。 这种做法有助于减少过度线程上下文切换，但当旋转锁的争用较高时，可能会发现大量的 CPU 利用率。
    
- 下表包含一些最常见的旋转锁类型的简短说明。  
+ 下表包含一些最常见的旋转锁类型的简要说明。  
   
-|旋转锁类型|描述|  
+|旋转锁类型|说明|  
 |-----------------|-----------------|  
 |ABR|仅限内部使用。|
 |ADB_CACHE|仅限内部使用。|
@@ -84,7 +84,7 @@ GO
 |ASYNC_OP_ADMIN_CLIENT_REGISTRATION_LIST|仅限内部使用。|
 |ASYNC_OP_ADMIN_WORK_REGISTRATION_HASH_TABLE|仅限内部使用。|
 |ASYNCSTATSLIST|仅限内部使用。|
-|BACKUP|仅限内部使用。|
+|备份|仅限内部使用。|
 |BACKUP_COPY_CONTEXT|仅限内部使用。|
 |BACKUP_CTX|仅限内部使用。|
 |BASE_XACT_HASH|仅限内部使用。|
@@ -105,10 +105,10 @@ GO
 |COLUMNSTORE_HASHTABLE|仅限内部使用。|
 |COLUMNSTOREBUILDSTATE_LIST|仅限内部使用。|
 |COM_INIT|仅限内部使用。|
-|可提交|仅限内部使用。|
+|提交|仅限内部使用。|
 |COMPPLAN_SKELETON|仅限内部使用。|
 |CONNECTION_MANAGER|仅限内部使用。|
-|连接|仅限内部使用。|
+|连线|仅限内部使用。|
 |CSIBUILDMEM|仅限内部使用。|
 |CURSOR|仅限内部使用。|
 |CURSQL|仅限内部使用。|
@@ -120,7 +120,7 @@ GO
 |DBSEEDING_OPERATION|仅限内部使用。|
 |DBT_HASH|仅限内部使用。|
 |DBT_IO_LIST|仅限内部使用。|
-|将数据库表|控制对包含该数据库的属性的 SQL Server 中的每个数据库的内存中数据结构的访问。 请参阅[这篇文章](https://techcommunity.microsoft.com/t5/SQL-Server/Improving-Concurrency-Scalability-of-SQL-Server-workload-by/ba-p/384789)有关详细信息。 |
+|DBTABLE|控制对包含该数据库的属性的 SQL Server 中的每个数据库的内存中数据结构的访问。 有关详细信息，请参阅[此文](https://techcommunity.microsoft.com/t5/SQL-Server/Improving-Concurrency-Scalability-of-SQL-Server-workload-by/ba-p/384789)。 |
 |DEFERRED_WF_EXT_DROP|仅限内部使用。|
 |DEK_INSTANCE|仅限内部使用。|
 |DELAYED_PARTITIONED_STACK|仅限内部使用。|
@@ -130,7 +130,7 @@ GO
 |DIGEST_CACHE|仅限内部使用。|
 |DINPBUF|仅限内部使用。|
 |DIRECTLOGCONSUMER|仅限内部使用。|
-|DP_LIST|控制对具有启用了间接检查点的数据库的脏页列表的访问。 请参阅[这篇文章](https://techcommunity.microsoft.com/t5/SQL-Server/Indirect-Checkpoint-and-tempdb-8211-the-good-the-bad-and-the-non/ba-p/385510)有关详细信息。|
+|DP_LIST|控制对打开了间接检查点的数据库的脏页列表的访问。 有关详细信息，请参阅[此文](https://techcommunity.microsoft.com/t5/SQL-Server/Indirect-Checkpoint-and-tempdb-8211-the-good-the-bad-and-the-non/ba-p/385510)。|
 |DROP|仅限内部使用。|
 |DROP_TEMPO|仅限内部使用。|
 |DROPPED_ALLOC_UNIT|仅限内部使用。|
@@ -177,7 +177,7 @@ GO
 |HTTP|仅限内部使用。|
 |HTTP_CONNCACHE|仅限内部使用。|
 |HTTP_ENDPOINT|仅限内部使用。|
-|IDENTITY|仅限内部使用。|
+|标识|仅限内部使用。|
 |INDEX_CREATE|仅限内部使用。|
 |IO_DISPENSER_PAUSE|仅限内部使用。|
 |IO_RG_VOLUME_HASHTABLE|仅限内部使用。|
@@ -187,7 +187,7 @@ GO
 |LANG_RES_LOAD|仅限内部使用。|
 |LIVE_TARGET_TVF|仅限内部使用。|
 |LOCK_FREE_LIST|仅限内部使用。|
-|LOCK_HASH|保护对将被持有的锁有关的信息存储在数据库中的锁管理器哈希表的访问。 请参阅[这篇文章](https://support.microsoft.com/kb/2926217)有关详细信息。|
+|LOCK_HASH|保护对锁定管理器哈希表的访问，该表存储有关在数据库中持有的锁的信息。 有关详细信息，请参阅[此文](https://support.microsoft.com/kb/2926217)。|
 |LOCK_NOTIFICATION|仅限内部使用。|
 |LOCK_RESOURCE_ID|仅限内部使用。|
 |LOCK_RW_ABTX_HASH_SET|仅限内部使用。|
@@ -288,7 +288,7 @@ GO
 |SBS_SERVER_XACT_TASK_PROXY|仅限内部使用。|
 |SBS_TRANSPORT|仅限内部使用。|
 |SBS_UCS_DISPATCH|仅限内部使用。|
-|安全|仅限内部使用。|
+|安全性|仅限内部使用。|
 |SECURITY_CACHE|仅限内部使用。|
 |SECURITY_FEDAUTH_AAD_BECWSCONNS|仅限内部使用。|
 |SEMANTIC_TICACHE|仅限内部使用。|
@@ -307,7 +307,7 @@ GO
 |SOS_ACTIVEDESCRIPTOR|仅限内部使用。|
 |SOS_BLOCKALLOCPARTIALLIST|仅限内部使用。|
 |SOS_BLOCKDESCRIPTORBUCKET|仅限内部使用。|
-|SOS_CACHESTORE|同步对 SQL Server 中计划缓存或临时表缓存等的各种内存中缓存的访问。 此旋转锁类型上的大量争用可能意味着许多不同的事物，具体取决于特定缓存争用情况。 请联系[!INCLUDE[msCoName](../../includes/msconame-md.md)]客户支持服务，以帮助解决此旋转锁类型。 |
+|SOS_CACHESTORE|同步对 SQL Server （如计划缓存或临时表缓存）中各种内存中缓存的访问。 此旋转锁类型上的繁重争用可能意味着许多不同的因素，具体取决于争用中的特定缓存。 请[!INCLUDE[msCoName](../../includes/msconame-md.md)]与客户支持服务部门联系，以帮助解决此旋转锁类型问题。 |
 |SOS_CACHESTORE_CLOCK|仅限内部使用。|
 |SOS_CLOCKALG_INTERNODE_SYNC|仅限内部使用。|
 |SOS_DEBUG_HOOK|仅限内部使用。|
@@ -404,13 +404,13 @@ GO
  
 
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  
- [DBCC SQLPERF (Transact-SQL)](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
+ [DBCC SQLPERF &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
  
- [与 SQL Server 操作系统相关的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [&#40;Transact-sql 的与操作系统相关的动态管理视图 SQL Server&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
 
- [何时 SQL Server 中的较高的驱动程序的 CPU 使用率是旋转锁？](https://techcommunity.microsoft.com/t5/SQL-Server-Support/When-is-Spinlock-a-Significant-Driver-of-CPU-utilization-in-SQL/ba-p/530142)
+ [何时旋转锁 SQL Server 中 CPU 使用率的重要驱动程序？](https://techcommunity.microsoft.com/t5/SQL-Server-Support/When-is-Spinlock-a-Significant-Driver-of-CPU-utilization-in-SQL/ba-p/530142)
 
  [诊断和解决 SQL Server 上的旋转锁争用](https://www.microsoft.com/download/details.aspx?id=26666)
   

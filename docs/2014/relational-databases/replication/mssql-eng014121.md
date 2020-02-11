@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 996b93f04d9e9fc063bbacbb5f4a7588794ad208
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63191521"
 ---
-# <a name="mssqleng014121"></a>MSSQL_ENG014121
+# <a name="mssql_eng014121"></a>MSSQL_ENG014121
     
 ## <a name="message-details"></a>消息详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "63191521"
 |符号名称||  
 |消息正文|无法删除分发服务器 '%s'。 此分发服务器与分发数据库相关联。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  配置为分发服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例无法从分发服务器的角色中删除，因为存在与此实例相关联的分发数据库。 如果试图删除与一个或多个发布服务器相关联的分发数据库，将发生此错误。  
   
 ## <a name="user-action"></a>用户操作  
@@ -40,7 +40,7 @@ ms.locfileid: "63191521"
   
  对与此分发服务器关联的任何分发数据库，执行 [sp_dropdistributiondb (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql)。 删除所有分发数据库关联后，才可以禁用分发。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [错误和事件参考（复制）](errors-and-events-reference-replication.md)   
  [配置分发](configure-distribution.md)  
   

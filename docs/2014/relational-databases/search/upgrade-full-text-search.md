@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 43ef487dc2049d3ca95f4cddff72a005c98a5d19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010963"
 ---
 # <a name="upgrade-full-text-search"></a>升级全文搜索
@@ -32,15 +32,15 @@ ms.locfileid: "66010963"
   
 -   [全文升级选项](#FT_Upgrade_Options)  
   
--   [有关选择全文升级注意事项选项](#Choosing_Upgade_Option)  
+-   [选择全文升级选项的注意事项](#Choosing_Upgade_Option)  
   
 -   [将数据库升级到 SQL Server 2014 时迁移全文检索](#Upgrade_Db)  
   
--   [有关 SQL Server 2005 全文目录还原到 SQL Server 2014 的注意事项](#Considerations_for_Restore)  
+-   [有关将 SQL Server 2005 全文目录还原到 SQL Server 2014 的注意事项](#Considerations_for_Restore)  
   
 -   [将 SQL Server 2005 数据库附加到 SQL Server 2014](#Attaching_2005_ft_catalogs)  
   
-##  <a name="Upgrade_Server"></a> 升级服务器实例  
+##  <a name="Upgrade_Server"></a>升级服务器实例  
  对于就地升级， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例将与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的旧版本并行安装，且数据将被迁移。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的旧版本安装了全文搜索，则将自动安装新版本的全文搜索。 并行安装表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例级存在下列每个组件。  
   
  断字符、词干分析器和筛选器  
@@ -50,17 +50,18 @@ ms.locfileid: "66010963"
  全文筛选器后台程序宿主进程可以安全地加载和驱动用于索引和查询的可扩展外部组件（例如断字符、词干分析器和筛选器），而不会损害全文引擎的完整性。 服务器实例对所有多线程筛选器使用多线程进程，并对所有单线程筛选器使用单线程进程。  
   
 > [!NOTE]  
->  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 引入了 FDHOST Launcher 服务 (MSSQLFDLauncher) 的服务帐户。 该服务将服务帐户信息传播到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]特定实例的筛选器后台程序宿主进程。 有关设置服务帐户的信息，请参阅 [设置用于全文筛选器后台程序启动器的服务帐户](set-the-service-account-for-the-full-text-filter-daemon-launcher.md)。  
+>  
+  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 引入了 FDHOST Launcher 服务 (MSSQLFDLauncher) 的服务帐户。 该服务将服务帐户信息传播到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]特定实例的筛选器后台程序宿主进程。 有关设置服务帐户的信息，请参阅 [设置用于全文筛选器后台程序启动器的服务帐户](set-the-service-account-for-the-full-text-filter-daemon-launcher.md)。  
   
  在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中，每个全文检索都驻留在属于文件组的全文目录中，它们均具有物理路径，并被视为数据库文件。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本中，全文目录是一个包含一组全文检索的逻辑对象或虚拟对象。 因此，新的全文目录不会视为带有物理路径的数据库文件。 但是，在升级包含数据文件的所有全文目录期间，将在相同磁盘上创建新的文件组。 这可以在升级后维护旧磁盘的 I/O 行为。 该目录的所有全文检索均被放置到新的文件组中（如果存在根路径）。 如果旧的全文目录路径无效，升级过程将全文检索保留在与基表相同的文件组中，或者对于分区表，则保留在主文件组中。  
   
 > [!NOTE]  
->  指定全文目录的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL 语句可继续正常运行。  
+>  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)]指定全文目录的 DDL 语句可继续正常工作。  
   
-##  <a name="FT_Upgrade_Options"></a> 全文升级选项  
+##  <a name="FT_Upgrade_Options"></a>全文升级选项  
  将服务器实例升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]时，您可以通过用户界面选择以下全文升级选项之一。  
   
- 导入  
+ Import  
  导入全文目录。 一般情况下，导入速度比重新生成速度要快很多。 例如，当仅使用一个 CPU 时，导入的运行速度比重新生成要快 10 倍左右。 不过，导入的全文目录不能使用随 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的最新版本安装的新断字符。 若要确保查询结果的一致性，必须重新生成全文目录。  
   
 > [!NOTE]  
@@ -70,18 +71,19 @@ ms.locfileid: "66010963"
   
  有关导入全文检索的影响的信息，请参阅本主题后面的“有关选择全文升级选项的注意事项”。  
   
- Rebuild  
+ 重新生成  
  使用新的和增强的断字符重新生成全文目录。 重新生成索引可能需要一些时间，且升级后可能需要占用大量的 CPU 和内存。  
   
  重置  
  重置全文目录。 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]升级时，将删除全文目录文件，但会保留全文目录和全文检索的元数据。 在进行升级后，所有全文检索将禁用更改跟踪，并且不会自动启动爬网。 在升级完成后，目录将保留为空，直至手动执行完全填充。  
   
-##  <a name="Choosing_Upgade_Option"></a> 有关选择全文升级注意事项选项  
+##  <a name="Choosing_Upgade_Option"></a>选择全文升级选项的注意事项  
  为升级选择升级选项时，请考虑以下几点：  
   
 -   需要查询结果的一致性吗？  
   
-     [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 将安装新的断字符以供全文和语义搜索使用。 在建立索引时和查询时均使用断字符。 如果您没有重新生成全文目录，搜索结果可能不一致。 如果您发出查找某一短语的全文查询和当前断字符，该短语是由以前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中的断字符以不同方式进行断字的，则可能不会检索包含该短语的文档或行。 其原因在于，建立了索引的短语是使用与正使用的查询不同的逻辑进行断字的。 解决方法是使用新的断字符来重新填充（重新生成）全文目录，以便索引时行为和查询时行为完全相同。 可以选择“重新生成”选项来完成此操作，也可以在选择“导入”选项后手动重新生成。  
+     
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 将安装新的断字符以供全文和语义搜索使用。 在建立索引时和查询时均使用断字符。 如果您没有重新生成全文目录，搜索结果可能不一致。 如果您发出查找某一短语的全文查询和当前断字符，该短语是由以前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中的断字符以不同方式进行断字的，则可能不会检索包含该短语的文档或行。 其原因在于，建立了索引的短语是使用与正使用的查询不同的逻辑进行断字的。 解决方法是使用新的断字符来重新填充（重新生成）全文目录，以便索引时行为和查询时行为完全相同。 可以选择“重新生成”选项来完成此操作，也可以在选择“导入”选项后手动重新生成。  
   
 -   是否基于整数全文键列生成了任何全文检索？  
   
@@ -104,7 +106,8 @@ ms.locfileid: "66010963"
  有关断字符的详细信息，请参阅 [配置和管理断字符和词干分析器以便搜索](configure-and-manage-word-breakers-and-stemmers-for-search.md)。  
   
 ## <a name="upgrading-noise-word-files-to-stoplists"></a>将干扰词文件升级到非索引字表  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 干扰词已替换为 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本中的非索引字。 将数据库从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 升级到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]后，将不再使用干扰词文件。 然而，旧的干扰词文件存储在 FTDATA\ FTNoiseThesaurusBak 文件夹中，您可以稍后在更新或生成相应的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 非索引字表时使用它们。  
+ 
+  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 干扰词已替换为 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本中的非索引字。 将数据库从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 升级到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]后，将不再使用干扰词文件。 然而，旧的干扰词文件存储在 FTDATA\ FTNoiseThesaurusBak 文件夹中，您可以稍后在更新或生成相应的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 非索引字表时使用它们。  
   
  从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]升级后：  
   
@@ -128,18 +131,20 @@ ms.locfileid: "66010963"
   
  对于从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]导入的全文目录，该全文目录在其自己的文件组中仍然是数据库文件。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中除不存在 MSFTESQL 服务以外，全文目录的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]备份进程仍然适用。 有关 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 进程的信息，请参阅 SQL Server 2005 联机丛书中的 [备份和还原全文目录](https://go.microsoft.com/fwlink/?LinkId=209154) 。  
   
-##  <a name="Upgrade_Db"></a> 升级到数据库时迁移全文索引 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
- 使用附加、还原或复制数据库向导可以将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本中的数据库文件和全文目录升级到现有 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 服务器实例。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 导入、重置或重新生成全文检索（如果有）。 **upgrade_option** 服务器属性控制在升级这些数据库期间服务器实例使用哪个全文升级选项。  
+##  <a name="Upgrade_Db"></a>将数据库升级到时迁移全文索引[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ 使用附加、还原或复制数据库向导可以将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本中的数据库文件和全文目录升级到现有 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 服务器实例。 
+  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 导入、重置或重新生成全文检索（如果有）。 
+  **upgrade_option** 服务器属性控制在升级这些数据库期间服务器实例使用哪个全文升级选项。  
   
  将任何 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库附加、还原或复制到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]后，该数据库将立即变为可用，然后自动进行升级。 导入可能需要数小时，而重新生成所需的时间最多时可能十倍于此，具体取决于要编制索引的数据量。 另请注意，将升级选项设置为“导入”时，如果全文目录不可用，则会重新生成关联的全文检索。  
   
  **更改服务器实例的全文升级行为**  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]：使用 [sp\_fulltext\_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql) 的 upgrade\_option 操作   
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]：使用[sp\_全文\_服务](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)的**升级\_选项**操作  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **：** 使用“服务器属性”对话框的“全文升级选项”   。 有关详细信息，请参阅 [管理和监视服务器实例的全文搜索](manage-and-monitor-full-text-search-for-a-server-instance.md)。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**:** 使用 "**服务器属性**" 对话框的 "**全文升级" 选项**。 有关详细信息，请参阅 [管理和监视服务器实例的全文搜索](manage-and-monitor-full-text-search-for-a-server-instance.md)。  
   
-##  <a name="Considerations_for_Restore"></a> 有关将 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 全文目录还原到 的注意事项 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+##  <a name="Considerations_for_Restore"></a>将[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]全文目录还原到的注意事项[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  将全文数据从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的其中一种方法是将完整数据库备份还原到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  导入 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 全文目录时，您可以备份和还原数据库和目录文件。 其行为与 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中相同：  
@@ -150,7 +155,7 @@ ms.locfileid: "66010963"
   
  有关备份和还原 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 全文目录的详细信息，请参阅 联机丛书中的 [备份和还原全文目录](https://go.microsoft.com/fwlink/?LinkId=121052) 和 [文件备份和还原和全文目录](https://go.microsoft.com/fwlink/?LinkId=121053)[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。  
   
- 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]上还原数据库时，将为全文目录创建新的数据库文件。 该文件的默认名称是 ftrow_*catalog-name*.ndf。 例如，如果 *catalog-name* 是 `cat1`， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库文件的默认名称则为 `ftrow_cat1.ndf`。 但是，如果目标目录中已使用该默认名称，新数据库文件则命名为 `ftrow_`*catalog-name*`{`*GUID*`}.ndf`，其中 *GUID* 是新文件的全局唯一标识符。  
+ 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]上还原数据库时，将为全文目录创建新的数据库文件。 该文件的默认名称是 ftrow_*catalog-name*.ndf。 例如，如果 *catalog-name* 是 `cat1`， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库文件的默认名称则为 `ftrow_cat1.ndf`。 但是，如果目标目录中已使用了默认名称，则新的数据库文件将命名为`ftrow_`*目录名称*`{`*guid*`}.ndf`，其中*GUID*是新文件的全局唯一标识符。  
   
  导入目录后， **sys.database_files** 和 **sys.master_files**经过更新以删除目录项且 **sys.fulltext_catalogs** 中的 **path** 列设置为 NULL。  
   
@@ -158,7 +163,7 @@ ms.locfileid: "66010963"
   
 -   [完整数据库备份 (SQL Server)](../backup-restore/full-database-backups-sql-server.md)  
   
--   [事务日志备份 (SQL Server)](../backup-restore/transaction-log-backups-sql-server.md)。（仅限于完整恢复模式）  
+-   [&#40;SQL Server&#41;的事务日志备份](../backup-restore/transaction-log-backups-sql-server.md)（仅限完整恢复模式）  
   
  **还原数据库备份**  
   
@@ -167,11 +172,12 @@ ms.locfileid: "66010963"
 -   [完整数据库还原（完整恢复模式）](../backup-restore/complete-database-restores-full-recovery-model.md)  
   
 ### <a name="example"></a>示例  
- 以下示例在 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) 语句中使用 MOVE 子句，还原名为 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 的 `ftdb1`数据库。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库、日志和目录文件将被移动到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 服务器实例上的新位置，如下所示：  
+ 以下示例在 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) 语句中使用 MOVE 子句，还原名为 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 的 `ftdb1`数据库。 
+  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库、日志和目录文件将被移动到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 服务器实例上的新位置，如下所示：  
   
 -   数据库文件 `ftdb1.mdf`移动到 `C:\Program Files\Microsoft SQL Server\MSSQL.1MSSQL12.MSSQLSERVER\MSSQL\DATA\ftdb1.mdf`。  
   
--   日志文件 `ftdb1_log.ldf`移动到日志磁盘驱动器上的日志目录 *log_drive*`:\`*log_directory*`\ftdb1_log.ldf`中。  
+-   `ftdb1_log.ldf`日志文件移动到日志磁盘驱动器上的日志目录中， *log_drive*`:\`*log_directory*`\ftdb1_log.ldf`。  
   
 -   与 `sysft_cat90` 目录对应的目录文件移动到 `C:\temp`。 导入全文索引后，它们将自动放置在数据库文件 C:\ftrow_sysft_cat90.ndf 中，并删除 C:\temp。  
   
@@ -182,16 +188,17 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
     MOVE N'sysft_cat90' TO N'C:\temp';  
 ```  
   
-##  <a name="Attaching_2005_ft_catalogs"></a> 附加到 SQL Server 2005 数据库 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+##  <a name="Attaching_2005_ft_catalogs"></a>将 SQL Server 2005 数据库附加到[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本中，全文目录是表示一组全文检索的逻辑概念。 全文目录是虚拟对象，不属于任何文件组。 但是，将包含全文目录文件的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库附加到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 服务器实例时，会将目录文件从其先前位置与其他数据库文件一起附加，这与 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中相同。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中附加的每个全文目录的状态与从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]分离数据库时相同。 如果分离操作挂起任意全文检索填充，该填充将在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]上恢复，全文检索随后即可用于全文搜索。  
+ 
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中附加的每个全文目录的状态与从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]分离数据库时相同。 如果分离操作挂起任意全文检索填充，该填充将在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]上恢复，全文检索随后即可用于全文搜索。  
   
- 如果 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 找不到全文目录文件，或者在未指定新位置的情况下在附加操作期间移动全文文件，行为则取决于选择的全文升级选项。 如果全文升级选项为“导入”  或“重新生成”  ，则重新生成附加的全文目录。 如果全文升级选项为“重置”  ，则重置附加的全文目录。  
+ 如果 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 找不到全文目录文件，或者在未指定新位置的情况下在附加操作期间移动全文文件，行为则取决于选择的全文升级选项。 如果全文升级选项为“导入”**** 或“重新生成”****，则重新生成附加的全文目录。 如果全文升级选项为“重置”****，则重置附加的全文目录。  
   
  有关分离和附加数据库的详细信息，请参阅[数据库分离和附加 (SQL Server)](../databases/database-detach-and-attach-sql-server.md)、[CREATE DATABASE (SQL Server Transact-SQL)](/sql/t-sql/statements/create-database-sql-server-transact-sql)、[sp_attach_db](/sql/relational-databases/system-stored-procedures/sp-attach-db-transact-sql) 和 [sp_detach_db (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [全文搜索入门](get-started-with-full-text-search.md)   
  [配置和管理断字符和词干分析器以便搜索](configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [配置和管理搜索筛选器](configure-and-manage-filters-for-search.md)  

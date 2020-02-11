@@ -1,5 +1,5 @@
 ---
-title: 连接到 DB2 数据库 (SSAS) |Microsoft Docs
+title: 连接到 DB2 数据库（SSAS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 50818393a81cf3c6db1b54a0752e6fa098277709
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087375"
 ---
 # <a name="connect-to-a-db2-database-ssas"></a>连接到 DB2 数据库 (SSAS)
+  
   **“表导入向导”** 的这一页可用于指定用于连接到 DB2 数据库的设置。 若要从 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”**。  
   
  若要连接到数据源，必须在计算机上安装适当的访问接口。  
@@ -39,11 +40,11 @@ ms.locfileid: "66087375"
   
  在为数据源构造连接字符串时，将使用该用户名。 在“表格属性”窗口和“导入向导”中预览和筛选数据时，也使用这些凭据。 这些凭据不用于导入或刷新数据；而是使用在“模拟信息”页中指定的 Windows 凭据。  
   
- **密码**  
+ **权限**  
  为数据库连接指定密码。  
   
  **保存我的密码**  
- 指定是否存储已在“密码”框中输入的密码。  
+ 指定是否存储已在“密码”**** 框中输入的密码。  
   
  **数据库名称**  
  从数据库列表中选择数据库。  
@@ -55,7 +56,7 @@ ms.locfileid: "66087375"
  为所选数据库指定默认架构的名称。  
   
  **高级**  
- 通过使用“设置高级属性”对话框设置附加的连接属性。  
+ 使用 "**设置高级属性**" 对话框设置附加的连接属性。  
   
  **测试连接**  
  使用当前设置尝试建立与数据源的连接。 将显示一个消息，指示连接是否成功。  

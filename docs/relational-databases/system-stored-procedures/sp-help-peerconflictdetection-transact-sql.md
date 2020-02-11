@@ -1,5 +1,5 @@
 ---
-title: sp_help_peerconflictdetection (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_peerconflictdetection （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ ms.assetid: 59e04107-5eaa-44a1-beb6-ac4f2dbbcb28
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b08e3312f34fcc26d6effff92e09b3739508171e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085296"
 ---
-# <a name="sphelppeerconflictdetection-transact-sql"></a>sp_help_peerconflictdetection (Transact-SQL)
+# <a name="sp_help_peerconflictdetection-transact-sql"></a>sp_help_peerconflictdetection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   返回对等事务复制拓扑中包含的发布的冲突检测设置信息。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,11 +38,11 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @publication= ] '*publication*'  
- 要返回信息的发布的名称。 *发布*是**sysname**，无默认值。  
+ [ @publication= ]"*发布*"  
+ 要返回信息的发布的名称。 *发布*为**sysname**，无默认值。  
   
- [ @timeout= ] *timeout*  
- 以秒为单位指定一段时间，经过这段时间后，等待拓扑中各个节点响应的该过程将超时。 如果拓扑中有一个只读订阅服务器，则指定的超时值无效。 只读订阅服务器从不响应来自该过程的调用， *超时*是**int**，默认值为 60。  
+ [ @timeout= ]*超时*  
+ 以秒为单位指定一段时间，经过这段时间后，等待拓扑中各个节点响应的该过程将超时。 如果拓扑中有一个只读订阅服务器，则指定的超时值无效。 只读订阅服务器从不响应来自该过程的调用， *超时*值为**int**，默认值为60。  
   
 ## <a name="result-sets"></a>结果集  
  sp_help_peerconflictdetection 返回三个结果集。 以下主题说明了这些结果：  
@@ -54,7 +54,7 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
 -   [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md)  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** （成功）或**1** （失败）  
   
 ## <a name="remarks"></a>备注  
  sp_help_peerconflictdetection 用于对等事务复制。  
@@ -62,7 +62,7 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
 ## <a name="permissions"></a>权限  
  要求具有 sysadmin 固定服务器角色或 db_owner 固定数据库角色的成员身份。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [对等复制中的冲突检测](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
  [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

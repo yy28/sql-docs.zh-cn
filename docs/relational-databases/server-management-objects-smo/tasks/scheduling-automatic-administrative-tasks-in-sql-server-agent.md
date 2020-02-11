@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e2c852cd3f64e603f6eeab2f48a688dc733b4719
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74094388"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>在 SQL Server 代理中计划自动管理任务
@@ -27,20 +27,25 @@ ms.locfileid: "74094388"
 
   在 SMO 中，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理由下列对象表示：  
   
--   <xref:Microsoft.SqlServer.Management.Smo.Agent.JobServer> 对象具有作业、警报和操作员三个集合。  
+-   
+  <xref:Microsoft.SqlServer.Management.Smo.Agent.JobServer> 对象具有作业、警报和操作员三个集合。  
   
--   <xref:Microsoft.SqlServer.Management.Smo.Agent.OperatorCollection> 对象表示可由 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理自动向其发送事件通知的寻呼程序、电子邮件地址和 net send 操作员列表。  
+-   
+  <xref:Microsoft.SqlServer.Management.Smo.Agent.OperatorCollection> 对象表示可由 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理自动向其发送事件通知的寻呼程序、电子邮件地址和 net send 操作员列表。  
   
--   <xref:Microsoft.SqlServer.Management.Smo.Agent.AlertCollection> 对象表示由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 监视的系统事件或性能条件等情况的列表。  
+-   
+  <xref:Microsoft.SqlServer.Management.Smo.Agent.AlertCollection> 对象表示由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 监视的系统事件或性能条件等情况的列表。  
   
--   <xref:Microsoft.SqlServer.Management.Smo.Agent.JobCollection> 对象稍微复杂一些。 它表示按指定计划运行的多步骤任务列表。 步骤和计划信息存储在 <xref:Microsoft.SqlServer.Management.Smo.Agent.JobStep> 和 <xref:Microsoft.SqlServer.Management.Smo.Agent.JobSchedule> 对象中。  
+-   
+  <xref:Microsoft.SqlServer.Management.Smo.Agent.JobCollection> 对象稍微复杂一些。 它表示按指定计划运行的多步骤任务列表。 步骤和计划信息存储在 <xref:Microsoft.SqlServer.Management.Smo.Agent.JobStep> 和 <xref:Microsoft.SqlServer.Management.Smo.Agent.JobSchedule> 对象中。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理对象位于 <xref:Microsoft.SqlServer.Management.Smo.Agent> 命名空间中。  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理对象位于 <xref:Microsoft.SqlServer.Management.Smo.Agent> 命名空间中。  
   
 ## <a name="examples"></a>示例  
- 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual Studio&#35; .Net 中创建 Visual C SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual Studio .net 中创建 Visual C&#35; SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
-对于使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理的程序，必须包括**using**语句以限定代理命名空间。 在应用程序中的任何声明之前，将语句插入到其他**using**语句之后，例如：
+对于使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]代理的程序，必须包括**using**语句以限定代理命名空间。 在应用程序中的任何声明之前，将语句插入到其他**using**语句之后，例如：
   
  ```
 using Microsoft.SqlServer.Management.Smo;
@@ -168,7 +173,7 @@ $jbsch.Create();
   
  **ObjectName |CounterName |实例 |ComparisionOp |CompValue**  
   
- 对于警报通知，操作员是必需的。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 类型需要方括号，因为**运算符**是 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 关键字。  
+ 对于警报通知，操作员是必需的。 类型需要方括号，因为**运算符**是一个[!INCLUDE[csprcs](../../../includes/csprcs-md.md)]关键字。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>  
   
 ```csharp  
 {  
@@ -201,7 +206,7 @@ $jbsch.Create();
   
  **ObjectName |CounterName |实例 |ComparisionOp |CompValue**  
   
- 对于警报通知，操作员是必需的。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 类型需要方括号，因为**运算符**是 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 关键字。  
+ 对于警报通知，操作员是必需的。 类型需要方括号，因为**运算符**是一个[!INCLUDE[csprcs](../../../includes/csprcs-md.md)]关键字。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>  
   
 ```powershell  
 #Get a server object which corresponds to the default instance  

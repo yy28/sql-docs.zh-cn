@@ -1,5 +1,5 @@
 ---
-title: Stream 对象属性、 方法和事件 |Microsoft Docs
+title: 流对象属性、方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,21 +13,21 @@ ms.assetid: 9b0eed90-c38c-4aa6-9040-5827f8c46b94
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 326019b8e870739954c059475d851dbac62e0b57
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930670"
 ---
-# <a name="stream-object-properties-methods-and-events"></a>Stream 对象属性、 方法和事件
-## <a name="properties"></a>properties  
- [Charset 属性](../../../ado/reference/ado-api/charset-property-ado.md)  
+# <a name="stream-object-properties-methods-and-events"></a>流对象属性、方法和事件
+## <a name="properties"></a>属性  
+ [字符集属性](../../../ado/reference/ado-api/charset-property-ado.md)  
   
  [EOS 属性](../../../ado/reference/ado-api/eos-property.md)  
   
  [LineSeparator 属性](../../../ado/reference/ado-api/lineseparator-property-ado.md)  
   
- [模式属性](../../../ado/reference/ado-api/mode-property-ado.md)  
+ [Mode 属性](../../../ado/reference/ado-api/mode-property-ado.md)  
   
  [Position 属性](../../../ado/reference/ado-api/position-property-ado.md)  
   
@@ -66,8 +66,8 @@ ms.locfileid: "67930670"
   
  [WriteText 方法](../../../ado/reference/ado-api/writetext-method.md)  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>事件  
  无。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [流对象 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

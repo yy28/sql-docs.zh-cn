@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_table_memory_stats (TRANSACT-SQL) |Microsoft Docs
+title: sys. dm_db_xtp_table_memory_stats （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -22,20 +22,20 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d04238e0f476f39b0158fad4aa3350875d471ecc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097943"
 ---
-# <a name="sysdmdbxtptablememorystats-transact-sql"></a>sys.dm_db_xtp_table_memory_stats (Transact-SQL)
+# <a name="sysdm_db_xtp_table_memory_stats-transact-sql"></a>sys.dm_db_xtp_table_memory_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   返回当前数据库中每个 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 表（用户和系统）的内存使用情况统计信息。 系统表具有负的对象 ID，并且用于为 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎存储运行时信息。 与用户对象不同，系统表是内部的，并且只存在于内存中，因此，通过目录视图看不到它们。 系统表用于存储信息，例如存储中所有数据/差异文件的元数据、合并请求、要筛选行的差异文件的水印、已删除表以及用于恢复和备份的相关信息。 假定 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎可具有最多 8,192 个数据和差异文件对，则对于大型内存中数据库，系统表占用的内存可能是几 MB。  
   
  有关详细信息，请参阅[内存中 OLTP&#40;内存中优化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|表的对象 ID。 对于内存中 OLTP 系统表，为 NULL。|  
 |memory_allocated_for_table_kb|**bigint**|为此表分配的内存。|  
@@ -212,7 +212,7 @@ used_memory_mb       target_memory_mb
 1356                 3845  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [内存优化表动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;Transact-sql&#41;的内存优化表动态管理视图](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

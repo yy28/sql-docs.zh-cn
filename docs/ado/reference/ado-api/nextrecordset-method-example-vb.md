@@ -1,5 +1,5 @@
 ---
-title: NextRecordset 方法示例 (VB) |Microsoft Docs
+title: NextRecordset 方法示例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: b14806da-80d9-4da4-bb87-f558b36a6ac0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 28a16d531cceb7147c5d4971d662797cb57242e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918008"
 ---
 # <a name="nextrecordset-method-example-vb"></a>NextRecordset 方法示例 (VB)
-此示例使用[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)方法，以查看数据集中使用复合命令语句组成的三个单独的记录**选择**语句。  
+此示例使用[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)方法查看记录集中的数据，该记录集使用由三个单独的**SELECT**语句组成的复合命令语句。  
   
 ```  
 'BeginNextRecordsetVB  
@@ -94,6 +94,6 @@ End Sub
 'EndNextRecordsetVB  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [NextRecordset 方法 (ADO)](../../../ado/reference/ado-api/nextrecordset-method-ado.md)   
+## <a name="see-also"></a>另请参阅  
+ [NextRecordset 方法（ADO）](../../../ado/reference/ado-api/nextrecordset-method-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

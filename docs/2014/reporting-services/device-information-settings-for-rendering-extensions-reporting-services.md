@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8866b6b8193ec61e08d20868ed88a21211fa2a32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109257"
 ---
 # <a name="device-information-settings-for-rendering-extensions-reporting-services"></a>呈现扩展插件的设备信息设置 (Reporting Services)
@@ -22,7 +22,7 @@ ms.locfileid: "66109257"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|Description|  
+|主题|说明|  
 |-----------|-----------------|  
 |[ATOM 设备信息设置](../../2014/reporting-services/atom-device-information-settings.md)|介绍与 Atom 兼容的呈现输出相关的设备信息设置。|  
 |[CSV 设备信息设置](csv-device-information-settings.md)|介绍与 CSV 呈现输出相关的设备信息设置。|  
@@ -35,7 +35,7 @@ ms.locfileid: "66109257"
 |[XML 设备信息设置](xml-device-information-settings.md)|介绍与 XML 呈现输出关联的设备信息设置。|  
 |[RGDI 设备信息设置](rgdi-device-information-settings.md)|介绍与 RGDI 呈现输出关联的设备信息设置。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在 RSReportServer.Config 中自定义呈现扩展插件参数](customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
   

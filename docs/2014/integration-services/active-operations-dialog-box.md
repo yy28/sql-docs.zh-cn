@@ -1,5 +1,5 @@
 ---
-title: 活动操作对话框 |Microsoft Docs
+title: "\"活动操作\" 对话框 |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f930a2e6f3ce84c330a4b7292ebaaba3b2ab871e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062223"
 ---
 # <a name="active-operations-dialog-box"></a>“活动操作”对话框
@@ -27,7 +27,7 @@ ms.locfileid: "66062223"
   
  **您希望做什么？**  
   
-1.  [打开“活动操作”对话框](#open_dialog)  
+1.  [打开 "活动操作" 对话框](#open_dialog)  
   
 2.  [配置选项](#options)  
   
@@ -42,8 +42,8 @@ ms.locfileid: "66062223"
 ##  <a name="options"></a> 配置选项  
   
 ### <a name="options"></a>选项  
- **类型**  
- 指定操作的类型。 以下是可能的值为**类型**字段与 TRANSACT-SQL 的 operations_type 列中的对应值`catalog.operations`视图。  
+ 类型   
+ 指定操作的类型。 下面是 "**类型**" 字段的可能值以及 transact-sql `catalog.operations`视图的 "operations_type" 列中的相应值。  
   
 |||  
 |-|-|  
@@ -58,7 +58,7 @@ ms.locfileid: "66062223"
 |验证包|301|  
 |配置目录|1000|  
   
- **停止**  
+ **Stop**  
  单击以停止当前正在运行的操作。  
   
   

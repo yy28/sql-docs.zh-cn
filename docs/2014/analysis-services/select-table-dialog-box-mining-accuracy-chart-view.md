@@ -1,5 +1,5 @@
 ---
-title: 选择表对话框 （挖掘准确性图表视图） |Microsoft Docs
+title: "\"选择表\" 对话框（\"挖掘准确性图表\" 视图） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 242c6451cc6dc018e4972be7a16305b676845687
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069268"
 ---
 # <a name="select-table-dialog-box-mining-accuracy-chart-view"></a>“选择表”对话框（“挖掘准确性图表”视图）
@@ -31,9 +31,9 @@ ms.locfileid: "66069268"
  **表/视图名称**  
  选择当前选定数据源中可用的表或视图。  
   
-## <a name="see-also"></a>请参阅  
- [挖掘准确性图表设计器&#40;数据挖掘&#41;](mining-accuracy-chart-designer-data-mining.md)   
- [测试和验证任务和操作指南&#40;数据挖掘&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [测试和验证（数据挖掘）](data-mining/testing-and-validation-data-mining.md)  
+## <a name="see-also"></a>另请参阅  
+ [挖掘准确性图表设计器 &#40;数据挖掘&#41;](mining-accuracy-chart-designer-data-mining.md)   
+ [测试和验证任务以及操作方法 &#40;数据挖掘&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
+ [测试和验证 &#40;数据挖掘&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

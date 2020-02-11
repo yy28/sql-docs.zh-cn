@@ -18,14 +18,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 55407c52c5fb7bf0c9537eaf8fb7a7d31d2675e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250524"
 ---
 # <a name="scripting-replication"></a>编写复制脚本
-  制订灾难恢复计划时，应要求对拓扑中的所有复制组件编写脚本，另外，脚本还可以用来自动处理重复性的任务。 脚本包含为实现要为其编写脚本的复制组件所需的 Transact-SQL 系统存储过程，如发布或订阅。 创建完组件后，可以在向导（如新建发布向导）或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中创建脚本。 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 **sqlcmd**查看、修改和运行脚本。 脚本可以与备份文件存储在一起，以便在必须重新配置复制拓扑时使用。  
+  制订灾难恢复计划时，应要求对拓扑中的所有复制组件编写脚本，另外，脚本还可以用来自动处理重复性的任务。 脚本包含为实现要为其编写脚本的复制组件所需的 Transact-SQL 系统存储过程，如发布或订阅。 可以在向导（如新建发布向导）中或创建组件后在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]创建脚本。 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 **sqlcmd**查看、修改和运行脚本。 脚本可以与备份文件存储在一起，以便在必须重新配置复制拓扑时使用。  
   
  如果更改了属性，便需要为组件重新编写脚本。 如果对事务复制使用自定义存储过程，则应与脚本一起存储每个过程的副本。如果过程发生更改，应更新相应的副本（通常会由于架构更改或应用程序要求的更改而更新过程）。 有关自定义过程的详细信息，请参阅[指定如何传播事务项目的更改](transactional/transactional-articles-specify-how-changes-are-propagated.md)。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "63250524"
 5.  在多个订阅服务器上运行脚本，以生成所需的请求订阅。  
   
 ## <a name="script-replication-objects"></a>脚本复制对象  
- 从复制向导或  的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 如果从向导编写脚本，则可以选择创建对象并为其编写脚本，也可以选择仅编写脚本。  
+ 从复制向导或 **** 的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 如果从向导编写脚本，则可以选择创建对象并为其编写脚本，也可以选择仅编写脚本。  
   
 > [!IMPORTANT]  
 >  所有密码的脚本被编写为 NULL。 如果可能，请在运行时提示用户输入安全凭据。 如果将凭据存储在脚本文件中，则必须确保文件的安全以防受到未经授权的访问。  
@@ -54,7 +54,7 @@ ms.locfileid: "63250524"
   
 -   [配置发布和分发](configure-publishing-and-distribution.md)  
   
--   [Create a Publication](publish/create-a-publication.md)  
+-   [创建发布](publish/create-a-publication.md)  
   
 -   [创建推送订阅](create-a-push-subscription.md)  
   
@@ -72,7 +72,7 @@ ms.locfileid: "63250524"
   
 2.  在 **“脚本文件属性”** 页上指定选项。  
   
-3.  完成向导。  
+3.  完成该向导。  
   
 #### <a name="to-script-an-object-from-management-studio"></a>从 Management Studio 编写对象脚本  
   
@@ -80,28 +80,28 @@ ms.locfileid: "63250524"
   
 2.  展开 **“复制”** 文件夹，再展开 **“本地发布”** 文件夹或 **“本地订阅”** 文件夹。  
   
-3.  右键单击某个发布或订阅，然后单击 **“生成脚本”** 。  
+3.  右键单击某个发布或订阅，然后单击 **“生成脚本”**。  
   
-4.  在“生成 SQL 脚本 - \<复制对象>”  对话框中指定选项。  
+4.  在“生成 SQL 脚本 - **复制对象>”\<** 对话框中指定选项。  
   
-5.  单击 **“将脚本保存到文件”** 。  
+5.  单击 **“将脚本保存到文件”**。  
   
-6.  在 **“脚本文件位置”** 对话框中输入文件名，然后单击 **“保存”** 。 将显示状态消息。  
+6.  在 **“脚本文件位置”** 对话框中输入文件名，然后单击 **“保存”**。 将显示状态消息。  
   
-7.  单击 **“确定”** ，再单击 **“关闭”** 。  
+7.  单击 **"确定"**，然后单击 "**关闭**"。  
   
 #### <a name="to-script-multiple-objects-from-management-studio"></a>从 Management Studio 编写多个对象的脚本  
   
 1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中，连接到分发服务器、发布服务器或订阅服务器，然后展开服务器节点。  
   
-2.  右键单击 **“复制”** 文件夹，然后单击 **“生成脚本”** 。  
+2.  右键单击 **“复制”** 文件夹，然后单击 **“生成脚本”**。  
   
 3.  在 **“生成 SQL 脚本”** 对话框中指定选项。  
   
-4.  单击 **“将脚本保存到文件”** 。  
+4.  单击 **“将脚本保存到文件”**。  
   
-5.  在 **“脚本文件位置”** 对话框中输入文件名，然后单击 **“保存”** 。 将显示状态消息。  
+5.  在 **“脚本文件位置”** 对话框中输入文件名，然后单击 **“保存”**。 将显示状态消息。  
   
-6.  单击 **“确定”** ，再单击 **“关闭”** 。  
+6.  单击 **“确定”** ，再单击 **“关闭”**。  
   
   

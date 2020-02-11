@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7fe9955ba4f20c4a20e24d99924adce7ff0d992a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62828140"
 ---
 # <a name="comparing-string-data"></a>比较字符串数据
@@ -33,7 +33,7 @@ ms.locfileid: "62828140"
   
 -   有条件拆分转换可以在表达式中使用字符串比较，以确定将数据行发送到哪个输出。 有关详细信息，请参阅 [Conditional Split Transformation](transformations/conditional-split-transformation.md)。  
   
--   派生列转换可以在表达式中使用字符串比较，以生成新的列值。 有关详细信息，请参阅 [Derived Column Transformation](transformations/derived-column-transformation.md)。  
+-   派生列转换可以在表达式中使用字符串比较，以生成新的列值。 有关详细信息，请参阅 [派生列转换](transformations/derived-column-transformation.md)。  
   
  变量、变量映射和优先约束也使用可以包含字符串比较的表达式。 有关表达式的详细信息，请参阅 [Integration Services (SSIS) 表达式](../expressions/integration-services-ssis-expressions.md)。  
   
@@ -63,11 +63,11 @@ ms.locfileid: "62828140"
  还可以为平面文件连接管理器和多平面文件连接管理器指定区域设置。  
   
 ## <a name="setting-comparison-options"></a>设置比较选项  
- 区域设置提供了比较字符串数据的基本规则。 例如，区域设置指定了字母表中每个字母的排序位置。 但是，当执行某些转换的比较时，这些规则可能还不够，不过， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支持一组比区域设置比较规则更详尽的高级比较选项。 这些比较选项在列级设置。 例如，利用这些比较选项之一，您可以忽略非空格字符。 此选项的作用是忽略标注字符，例如，不区分重音，这样可使"å"相同"a"和进行对比。  
+ 区域设置提供了比较字符串数据的基本规则。 例如，区域设置指定了字母表中每个字母的排序位置。 但是，当执行某些转换的比较时，这些规则可能还不够，不过， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支持一组比区域设置比较规则更详尽的高级比较选项。 这些比较选项在列级设置。 例如，利用这些比较选项之一，您可以忽略非空格字符。 此选项的作用是忽略重音，如强调，这会使 "a" 和 "时" 与比较目的相同。  
   
  下表介绍比较选项和排序样式。  
   
-|比较选项|Description|  
+|比较选项|说明|  
 |-----------------------|-----------------|  
 |忽略大小写|指定比较是否区分大小写字母。 如果设置了此选项，字符串比较会忽略大小写。 例如，"ABC" 和 "abc" 没有区别。|  
 |忽略假名类型|指定比较是否区分日语的两种假名字符类型：平假名和片假名。 如果设置了此选项，字符串比较会忽略假名类型。|  
@@ -80,7 +80,7 @@ ms.locfileid: "62828140"
   
  **FullySensitive** 比较标志显示在模糊分组和模糊查找转换的 **“高级编辑器”** 对话框中。 选择 **FullySensitive** 比较标志意味着应用所有比较选项。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 数据类型](integration-services-data-types.md)   
  [快速分析](../fast-parse.md)   
  [标准分析](../standard-parse.md)  

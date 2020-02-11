@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 20f25474b15ecf58c45383a8290bb13f956a5db8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073455"
 ---
 # <a name="custom-rollup-operators-in-parent-child-dimensions"></a>父子维度中的自定义汇总运算符
@@ -33,7 +33,7 @@ ms.locfileid: "66073455"
 ## <a name="custom-rollup-precedence"></a>自定义汇总优先级  
  在优先级方面，层次结构中某个级别的源属性的自定义汇总运算符将覆盖上一级的自定义成员公式。 而上一级的自定义成员公式将覆盖下一级的自定义汇总运算符。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [定义自定义成员公式](attribute-properties-define-custom-member-formulas.md)   
  [父子维度中的一元运算符](parent-child-dimension-attributes-unary-operators.md)  
   

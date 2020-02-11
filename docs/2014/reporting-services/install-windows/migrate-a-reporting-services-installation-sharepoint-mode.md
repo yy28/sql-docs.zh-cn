@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c1f23dad22e1d748f39b1dd390b5874806193276
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75253190"
 ---
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>迁移 Reporting Services 安装（SharePoint 模式）
@@ -70,11 +70,11 @@ ms.locfileid: "75253190"
   
  ![SSRS SharePoint 迁移的基本关系图](../../../2014/sql-server/install/media/rs-sharepoint-migration.gif "SSRS SharePoint 迁移的基本关系图")  
   
-||对象|方法|注释|  
+||对象|方法|说明|  
 |-|-------------|------------|-----------|  
-|**2**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]加密密钥。|**Rskeymgmt**或[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager。 请参阅 [备份和还原 Reporting Services 加密密钥](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)。|指出的工具可用于备份操作；但对于还原操作，您将使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序管理页或 PowerShell。|  
-|**pps-2**|SharePoint 内容数据库。||备份数据库和分离数据库。<br /><br /> 请参阅[确定升级方法（SharePoint Server 2010）（https://technet.microsoft.com/library/cc263447.aspx)）](https://technet.microsoft.com/library/cc263447.aspx)中的 "数据库附加升级" 部分。|  
-|**三维空间**|作为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]目录数据库的 SQL Server 数据库。|SQL Server 数据库备份和还原<br /><br /> 或<br /><br /> SQL Server 数据库分离和附加。||  
+|**1**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]加密密钥。|**Rskeymgmt**或[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager。 请参阅 [备份和还原 Reporting Services 加密密钥](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)。|指出的工具可用于备份操作；但对于还原操作，您将使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序管理页或 PowerShell。|  
+|**2**|SharePoint 内容数据库。||备份数据库和分离数据库。<br /><br /> 请参阅[确定升级方法（SharePoint Server 2010）（https://technet.microsoft.com/library/cc263447.aspx)）](https://technet.microsoft.com/library/cc263447.aspx)中的 "数据库附加升级" 部分。|  
+|**3**|作为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]目录数据库的 SQL Server 数据库。|SQL Server 数据库备份和还原<br /><br /> 或<br /><br /> SQL Server 数据库分离和附加。||  
 |**4**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置文件。|简单文件复制。|如果您对文件进行了自定义，则仅需复制 rsreportserver.config。 文件默认位置的示例：C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting<br /><br /> RSReportServer.config<br /><br /> Rssvrpolicy.config<br /><br /> 针对报表服务器 ASP.NET 应用程序的 Web.config。<br /><br /> 针对 ASP.NET 的 Machine.config|  
   
 ####  <a name="bkmk_restore_operations"></a>还原操作  
@@ -82,11 +82,11 @@ ms.locfileid: "75253190"
   
  在完成还原步骤前，需要安装和配置新的 SharePoint 场和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式。 有关[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sharepoint 模式的基本安装的详细信息，请参阅 sharepoint [2010 和 sharepoint 2013&#41;&#40;Reporting Services sharepoint 模式安装](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)。  
   
-||对象|方法|注释|  
+||对象|方法|说明|  
 |-|-------------|------------|-----------|  
-|**2**|将 SharePoint 内容数据库还原到新的场。|SharePoint“数据库附加升级”方法。|基本步骤：<br /><br /> 1) 在新的服务器上还原数据库。<br /><br /> 2) 通过指示 URL 将内容数据库附加到 Web 应用程序。<br /><br /> 3) Get-SPWebapplication 将列出所有 Web 应用程序和 URL。<br /><br /> 请参阅[确定升级方法（SharePoint server 2010）https://technet.microsoft.com/library/cc263447.aspx)](https://technet.microsoft.com/library/cc263447.aspx)中的 "数据库附加升级" 部分（以及[附加数据库和升级到 SharePoint server 2010https://technet.microsoft.com/library/cc263299.aspx)（](https://technet.microsoft.com/library/cc263299.aspx)）。|  
-|**pps-2**|还原作为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 目录数据库 (ReportServer) 的 SQL 数据库。|SQL Database 库备份和还原。<br /><br /> **或**<br /><br /> SQL Server 数据库分离和附加。|首次使用数据库时， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将根据需要更新数据库架构，以便数据库可用于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 环境。|  
-|**三维空间**|创建新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序。|SharePoint 管理中心。|在您创建新的服务应用程序时，将其配置为使用您复制到的报表服务器数据库。<br /><br /> 有关使用 SharePoint 管理中心的详细信息，请参阅[安装 sharepoint 2013 Reporting Services Sharepoint 模式](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md)中的 "步骤3：创建 Reporting Services 服务应用程序" 一节。<br /><br /> 有关使用 PowerShell 的示例，请参阅 [Reporting Services SharePoint 服务和服务应用程序](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)中的“使用 PowerShell 创建 Reporting Services 服务应用程序”一节。|  
+|**1**|将 SharePoint 内容数据库还原到新的场。|SharePoint“数据库附加升级”方法。|基本步骤：<br /><br /> 1) 在新的服务器上还原数据库。<br /><br /> 2) 通过指示 URL 将内容数据库附加到 Web 应用程序。<br /><br /> 3) Get-SPWebapplication 将列出所有 Web 应用程序和 URL。<br /><br /> 请参阅[确定升级方法（SharePoint server 2010）https://technet.microsoft.com/library/cc263447.aspx)](https://technet.microsoft.com/library/cc263447.aspx)中的 "数据库附加升级" 部分（以及[附加数据库和升级到 SharePoint server 2010https://technet.microsoft.com/library/cc263299.aspx)（](https://technet.microsoft.com/library/cc263299.aspx)）。|  
+|**2**|还原作为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 目录数据库 (ReportServer) 的 SQL 数据库。|SQL Database 库备份和还原。<br /><br /> **或**<br /><br /> SQL Server 数据库分离和附加。|首次使用数据库时， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将根据需要更新数据库架构，以便数据库可用于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 环境。|  
+|**3**|创建新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序。|SharePoint 管理中心。|在您创建新的服务应用程序时，将其配置为使用您复制到的报表服务器数据库。<br /><br /> 有关使用 SharePoint 管理中心的详细信息，请参阅[安装 sharepoint 2013 Reporting Services Sharepoint 模式](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md)中的 "步骤3：创建 Reporting Services 服务应用程序" 一节。<br /><br /> 有关使用 PowerShell 的示例，请参阅 [Reporting Services SharePoint 服务和服务应用程序](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)中的“使用 PowerShell 创建 Reporting Services 服务应用程序”一节。|  
 |**4**|还原 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置文件。|简单文件复制。|文件默认位置的示例：C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting。|  
 |**5**|还原 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 加密密钥。|使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序“SystemSettings”页还原密钥备份文件。<br /><br /> **或**<br /><br /> PowerShell。|请参阅[管理 Reporting Services SharePoint 服务应用程序](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)主题中的“密钥管理”部分。|  
   

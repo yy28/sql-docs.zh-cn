@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a01524acf4fc72cb50732650f1f2e6f58b4ff74d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771523"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity"></a>Change Data Capture Service for Oracle by Attunity
@@ -25,7 +25,7 @@ ms.locfileid: "62771523"
   
  用于 Oracle 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 服务的安装会将服务配置 UI 和服务程序放置于所选位置中。 使用 Oracle CDC 服务配置控制台单独配置 Oracle CDC 服务。 有关配置 Oracle CDC 服务的详细信息，请参阅 [Change Data Capture Service for Oracle by Attunity F1 帮助](change-data-capture-service-for-oracle-by-attunity-f1-help.md)。  
   
- 若要安装 Oracle CDC 服务，请从 SQL Server 安装介质手动运行 **AttunityOracleCdcService.msi** 。 用于 x86 和 x64 安装包位于 **.\Tools\AttunityCDCOracle\\**  SQL Server 安装介质上。  
+ 若要安装 Oracle CDC 服务，请从 SQL Server 安装媒体中手动运行**attunityoraclecdcservice.msi** 。 适用于 x86 和 x64 的安装包位于 SQL Server 安装媒体上的 **.\Tools\AttunityCDCOracle\\ **中。  
   
  Oracle CDC 服务可以安装在安装了 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Native Client 的任何支持的 Windows 计算机上；它无需安装在安装有目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的那一台计算机上。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62771523"
 -   Oracle 数据库 10x，任意版本  
   
 ### <a name="target-sql-server-database"></a>目标 SQL Server 数据库  
- 有关的各版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+ 有关各个版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅 SQL Server 2014 的各个[版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 ## <a name="running-the-installation-program"></a>运行安装程序  
  若要安装 Oracle CDC 服务，请打开针对您正使用的 Windows 平台（32/64 位）的安装向导，并且按照屏幕上的指示执行。  
@@ -84,7 +84,7 @@ ms.locfileid: "62771523"
   
 -   [Change Data Capture Service for Oracle by Attunity 操作指南](change-data-capture-service-for-oracle-by-attunity-how-to-guide.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用 Oracle CDC 服务](working-with-the-oracle-cdc-service.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 执行合并项目 （复制 TRANSACT-SQL 编程） 的虚更新 |Microsoft Docs
+title: 执行合并项目的虚更新（复制 Transact-sql 编程） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 691988cd229f9b0c9ab81f31713a2b2e46806bdb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63162006"
 ---
 # <a name="perform-a-dummy-update-for-a-merge-article-replication-transact-sql-programming"></a>执行合并项目的虚更新（复制 Transact-SQL 编程）
@@ -29,7 +29,7 @@ ms.locfileid: "63162006"
   
 1.  请对需要虚更新的合并发布表中的行执行操作（例如，UPDATETEXT）。  
   
-2.  在服务器（发布服务器或订阅服务器）的进行了更改的数据库中，执行 [sp_mergedummyupdate (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-mergedummyupdate-transact-sql)。 为 **@source_object** 指定进行了更改的表，并为 **@rowguid** 。  
+2.  在服务器（发布服务器或订阅服务器）的进行了更改的数据库中，执行 [sp_mergedummyupdate (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-mergedummyupdate-transact-sql)。 指定对其进行更改的表**@source_object**，并指定的已更改行的唯一标识符。 **@rowguid**  
   
 3.  同步此订阅以复制更改行。  
   

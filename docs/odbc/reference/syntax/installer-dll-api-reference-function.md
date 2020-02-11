@@ -1,5 +1,5 @@
 ---
-title: 安装程序 DLL API 参考函数 |Microsoft Docs
+title: 安装程序 DLL API 引用函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ ms.assetid: 47fcadc3-f102-4989-9ee7-a1c65233142a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4478595fe34e81919a67c37a7f0a714329a5ea44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67906215"
 ---
 # <a name="installer-dll-api-reference-function"></a>安装程序 DLL API 参考函数
-本部分介绍在安装程序 DLL API 函数的语法。 安装程序 DLL API 由 20 功能组成。 这些函数的三个**SQLGetTranslator**， **SQLRemoveDSNFromIni**，并**SQLWriteDSNToIni**，只能由安装程序 Dll 调用。 安装和管理程序通过调用其他函数。  
+本部分介绍了安装程序 DLL API 中函数的语法。 安装程序 DLL API 包含20个函数。 其中三个函数**SQLGetTranslator**、 **SQLRemoveDSNFromIni**和**SQLWriteDSNToIni**只能由安装程序 dll 调用。 其他函数由 "安装" 和 "管理" 程序调用。  
   
- 每个函数都标有 ODBC 中引入的版本。  
+ 每个函数都带有引入该函数的 ODBC 版本进行标记。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
--   [SQLConfigDataSource 函数](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)  
+-   [SQLConfigDataSource Function](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)  
   
 -   [SQLConfigDriver 函数](../../../odbc/reference/syntax/sqlconfigdriver-function.md)  
   

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f80eb2cc31d58c231645c8fcbe9a745feb2d2382
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250679"
 ---
 # <a name="sql-server-cursor-manager-total-object"></a>SQL Server Cursor Manager Total 对象
@@ -25,13 +25,13 @@ ms.locfileid: "63250679"
   
  此表介绍了 SQL Server **Cursor Manager Total** 计数器。  
   
-|Cursor Manager Total 计数器|Description|  
+|Cursor Manager Total 计数器|说明|  
 |-----------------------------------|-----------------|  
 |**Async population count**|异步填充的游标数。|  
 |**Cursor conversion rate**|游标每秒转换的次数。|  
 |**Cursor flushes**|游标重新创建的运行时语句的总数。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [监视资源使用情况（系统监视器）](monitor-resource-usage-system-monitor.md)  
   
   

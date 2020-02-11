@@ -1,5 +1,5 @@
 ---
-title: CreateRecordset 方法 (RDS) |Microsoft Docs
+title: CreateRecordset 方法（RDS） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -20,17 +20,17 @@ ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3c65f7d415864b169b683e0c9ab858506d31783b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964514"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset 方法 (RDS)
-创建一个空断开[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
+创建一个空的、断开连接的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
   
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,54 +39,54 @@ ms.locfileid: "67964514"
 object.CreateRecordset(ColumnInfos)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *Object*  
- 表示的对象变量[提高](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)或[rds。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象。  
+ 一个对象变量，它表示[RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)或[RDS。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象。  
   
  *ColumnsInfos*  
- 一个**Variant**的定义中的每列的属性数组**记录集**创建。 每个列定义中包含的四个必需的属性和一个可选属性的数组。  
+ 特性的一个**变量**数组，用于定义创建的**记录集中**的每一列。 每个列定义都包含一个包含四个必需属性和一个可选属性的数组。  
   
-|特性|描述|  
+|Attribute|说明|  
 |---------------|-----------------|  
 |名称|列标题的名称。|  
-|type|数据类型的整数。|  
-|Size|以字符为单位，而不考虑数据类型为宽度的整数。|  
+|类型|数据类型的整数。|  
+|大小|字符宽度的整数，与数据类型无关。|  
 |可空性|布尔值。|  
-|规模 （可选）|此可选属性定义的数值字段的小数位数。 如果未指定此值，数值将被截断为 3 的小数位数。 精度不受影响，但将为三个截断小数点后面的数字个数。|  
+|Scale （可选）|此可选特性定义数值字段的小数位数。 如果未指定此值，数值将被截断为三个小数位数。 精度不受影响，但小数点后的位数将被截断为三。|  
   
- 列数组集然后分组到一个数组，它定义**记录集**。  
+ 然后，将列数组集分组到一个数组中，该数组定义**记录集**。  
   
 ## <a name="remarks"></a>备注  
- 服务器端业务对象可以填充得到**记录集**从非 OLE DB 数据访问接口的数据，如操作系统文件包含股票报价。  
+ 服务器端业务对象可以使用非 OLE DB 的数据访问接口中的数据（例如包含股票行情的操作系统文件）来填充生成的**记录集**。  
   
- 下表列出[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)支持的值为**CreateRecordset**方法。 列出的电话号码是用于定义字段的参考编号。  
+ 下表列出了**CreateRecordset**方法支持的[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)值。 列出的数字是用于定义字段的引用编号。  
   
- 每种数据类型是固定的长度或可变长度。 固定长度的类型应定义大小为-1，因为大小是预先确定，仍然需要的大小定义。 长度可变的数据类型允许从 1 到 32767 之间的大小。  
+ 每个数据类型均为固定长度或可变长度。 应将固定长度类型定义为-1，因为大小是预先确定的，并且仍需要大小定义。 可变长度数据类型允许从1到32767的大小。  
   
- 对于某些变量的数据类型，该类型可强制转换为替换列中记下的类型。 你将看不到之前的替换之后**记录集**创建并填充。 然后您可以检查实际的数据类型，如有必要。  
+ 对于某些可变数据类型，可以将类型强制转换为替换列中所述的类型。 在创建并填充**记录集**之前，你将看不到替换项。 如果需要，可以检查实际数据类型。  
   
-|长度|常量|Number|Substitution|  
+|长度|一直|Number|替换字符|  
 |------------|--------------|------------|------------------|  
-|固定|**adTinyInt**|16||  
-|固定|**adSmallInt**|2||  
-|固定|**adInteger**|3||  
-|固定|**adBigInt**|20||  
-|固定|**adUnsignedTinyInt**|17||  
-|固定|**adUnsignedSmallInt**|18||  
-|固定|**adUnsignedInt**|19||  
-|固定|**adUnsignedBigInt**|21||  
-|固定|**adSingle**|4||  
-|固定|**adDouble**|5||  
-|固定|**adCurrency**|6||  
-|固定|**adDecimal**|14||  
-|固定|**adNumeric**|131||  
-|固定|**adBoolean**|11||  
-|固定|**adError**|10||  
-|固定|**adGuid**|72||  
-|固定|**adDate**|7||  
-|固定|**adDBDate**|133||  
-|固定|**adDBTime**|134||  
-|固定|**adDBTimestamp**|135|7|  
+|已修复|**adTinyInt**|16||  
+|已修复|**adSmallInt**|2||  
+|已修复|**adInteger**|3||  
+|已修复|**adBigInt**|20||  
+|已修复|**adUnsignedTinyInt**|17||  
+|已修复|**adUnsignedSmallInt**|18||  
+|已修复|**adUnsignedInt**|19||  
+|已修复|**adUnsignedBigInt**|21||  
+|已修复|**adSingle**|4||  
+|已修复|**adDouble**|5||  
+|已修复|**adCurrency**|6||  
+|已修复|**adDecimal**|14||  
+|已修复|**adNumeric**|131||  
+|已修复|**adBoolean**|11||  
+|已修复|**adError**|10||  
+|已修复|**adGuid**|72||  
+|已修复|**adDate**|7||  
+|已修复|**adDBDate**|133||  
+|已修复|**adDBTime**|134||  
+|已修复|**adDBTimestamp**|135|7|  
 |变量|**adBSTR**|8|130|  
 |变量|**adChar**|129|200|  
 |变量|**adVarChar**|200||  
@@ -98,15 +98,15 @@ object.CreateRecordset(ColumnInfos)
 |变量|**adVarBinary**|204||  
 |变量|**adLongVarBinary**|205|204|  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
   
 |||  
 |-|-|  
 |[DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[DataFactory 对象 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|  
   
-## <a name="see-also"></a>请参阅  
- [CreateRecordset 方法示例 (VB)](../../../ado/reference/ado-api/createrecordset-method-example-vb.md)   
- [CreateRecordset 方法示例 (VBScript)](../../../ado/reference/rds-api/createrecordset-method-example-vbscript.md)   
+## <a name="see-also"></a>另请参阅  
+ [CreateRecordset 方法示例（VB）](../../../ado/reference/ado-api/createrecordset-method-example-vb.md)   
+ [CreateRecordset 方法示例（VBScript）](../../../ado/reference/rds-api/createrecordset-method-example-vbscript.md)   
  [CreateObject 方法 (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)
 
 

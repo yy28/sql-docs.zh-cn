@@ -1,5 +1,5 @@
 ---
-title: IDBProperties (OLE DB) |Microsoft Docs
+title: IDBProperties （OLE DB） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3b6dada26e15fc83d890b270ad553eb051bb08fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62692181"
 ---
 # <a name="idbproperties-ole-db"></a>IDBProperties (OLE DB)
-  OLE DB 标准规范允许提供程序为 `DBPROPINFO::vValues` 指定 VT_EMPTY。 但是， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 调用时始终返回 VT_EMPTY`IDBProperties::GetPropertyInfo`与`DBPROPSET_ROWSETALL`来检索行集属性。  
+  OLE DB 标准规范允许提供程序为 `DBPROPINFO::vValues` 指定 VT_EMPTY。 但是， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在调用`IDBProperties::GetPropertyInfo` `DBPROPSET_ROWSETALL`以检索行集属性时，Native Client OLE DB 始终返回 VT_EMPTY。  
   
-## <a name="see-also"></a>请参阅  
- [接口&#40;OLE DB&#41;](../../database-engine/dev-guide/interfaces-ole-db.md)  
+## <a name="see-also"></a>另请参阅  
+ [接口 &#40;OLE DB&#41;](../../database-engine/dev-guide/interfaces-ole-db.md)  
   
   

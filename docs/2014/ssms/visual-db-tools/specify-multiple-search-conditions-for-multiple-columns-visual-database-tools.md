@@ -1,5 +1,5 @@
 ---
-title: 指定多个搜索条件的多个列 (Visual Database Tools) |Microsoft Docs
+title: 为多个列指定多个搜索条件（Visual Database Tools） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3580f6365866ce752191e285b14f7d793be0cad0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204944"
 ---
 # <a name="specify-multiple-search-conditions-for-multiple-columns-visual-database-tools"></a>为多个列指定多个搜索条件 (Visual Database Tools)
@@ -37,11 +37,11 @@ ms.locfileid: "63204944"
   
 #### <a name="to-specify-an-or-condition-for-two-different-columns"></a>为两个不同的列指定 OR 条件  
   
-1.  在[“条件”窗格](visual-database-tools.md)中，添加要搜索的列。  
+1.  在 [“条件”窗格](visual-database-tools.md)中，添加要搜索的列。  
   
-2.  在要搜索的第一个列的“筛选器”  列中，指定第一个条件。  
+2.  在要搜索的第一个列的“筛选器”**** 列中，指定第一个条件。  
   
-3.  在要搜索的第二个数据列的 **Or...** 列中，指定第二个条件，将“筛选器”  列保留为空白。  
+3.  在要搜索的第二个数据列的 **Or...** 列中，指定第二个条件，将“筛选器”**** 列保留为空白。  
   
      查询和视图设计器将创建包含 OR 条件的 WHERE 子句，如下所示：  
   
@@ -55,15 +55,15 @@ ms.locfileid: "63204944"
 4.  对每个要添加的其他条件重复第 2 和第 3 步。 对每个新条件使用不同的 **Or...** 列。  
   
 ## <a name="specifying-an-and-condition"></a>指定 AND 条件  
- 若要使用由 AND 链接的条件搜索不同的数据列，请将所有条件都放在网格的“筛选器”  列中。  
+ 若要使用由 AND 链接的条件搜索不同的数据列，请将所有条件都放在网格的“筛选器”**** 列中。  
   
 #### <a name="to-specify-an-and-condition-for-two-different-columns"></a>为两个不同的列指定 AND 条件  
   
 1.  在 [“条件”窗格](visual-database-tools.md)中，添加要搜索的列。  
   
-2.  在要搜索的第一个数据列的“筛选器”  列中，指定第一个条件。  
+2.  在要搜索的第一个数据列的“筛选器”**** 列中，指定第一个条件。  
   
-3.  在第二个数据列的“筛选器”  列中，指定第二个条件。  
+3.  在第二个数据列的“筛选器”**** 列中，指定第二个条件。  
   
      查询和视图设计器将创建包含 AND 条件的 WHERE 子句，如下所示：  
   
@@ -75,10 +75,10 @@ ms.locfileid: "63204944"
   
 4.  对每个要添加的其他条件重复第 2 和第 3 步。  
   
-## <a name="see-also"></a>请参阅  
- [AND 时组合条件具有优先级&#40;可视化数据库工具&#41;](combine-conditions-when-and-has-precedence-visual-database-tools.md)   
- [OR 时组合条件具有优先级&#40;可视化数据库工具&#41;](combine-conditions-when-or-has-precedence-visual-database-tools.md)   
- [组合的约定条件窗格中的搜索条件&#40;可视化数据库工具&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
+## <a name="see-also"></a>另请参阅  
+ [当和具有优先 &#40;Visual Database Tools&#41;时组合条件](combine-conditions-when-and-has-precedence-visual-database-tools.md)   
+ [在或具有优先 &#40;Visual Database Tools&#41;时组合条件](combine-conditions-when-or-has-precedence-visual-database-tools.md)   
+ [在 "条件" 窗格中组合搜索条件的约定 &#40;Visual Database Tools&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
  [指定搜索条件 (Visual Database Tools)](specify-search-criteria-visual-database-tools.md)  
   
   

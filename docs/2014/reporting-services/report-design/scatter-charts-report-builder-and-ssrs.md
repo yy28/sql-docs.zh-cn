@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dde53428c738fc30595d17b62175b50835fe7ec2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105042"
 ---
 # <a name="scatter-charts-report-builder-and-ssrs"></a>散点图（报表生成器和 SSRS）
@@ -22,16 +22,16 @@ ms.locfileid: "66105042"
   
  下图显示的是散点图示例。  
   
- ![散点图](../media/rs-scatterchart.gif "Scatter chart")  
+ ![散点图](../media/rs-scatterchart.gif "散点图")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="variations"></a>变体  
   
--   **气泡图。** 气泡图根据气泡的大小来显示数据点的两个值之间的差。 气泡越大，两个值之间的差就越大。  
+-   **气泡.** 气泡图根据气泡的大小来显示数据点的两个值之间的差。 气泡越大，两个值之间的差就越大。  
   
--   **三维气泡图**。 以三维形式显示的气泡图。  
+-   三维**气泡图**。 以三维形式显示的气泡图。  
   
 ## <a name="data-considerations-for-a-scatter-chart"></a>散点图的数据注意事项  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66105042"
   
 -   默认情况下，散点图以圆圈显示数据点。 如果在散点图中有多个序列，请考虑将每个点的标记形状更改为方形、三角形、菱形或其他形状。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   
  [图表类型（报表生成器和 SSRS）](chart-types-report-builder-and-ssrs.md)   
  [设置图表格式（报表生成器和 SSRS）](formatting-a-chart-report-builder-and-ssrs.md)   

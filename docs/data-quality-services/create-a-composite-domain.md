@@ -13,10 +13,10 @@ ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 89c71bd3864fcaa682d3587a54fc2b32c26e5659
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75255592"
 ---
 # <a name="create-a-composite-domain"></a>创建复合域
@@ -29,14 +29,14 @@ ms.locfileid: "75255592"
   
  在创建复合域后，您可以更改复合域的属性，将引用数据服务添加到域中，创建跨域规则，或创建值关系。 为此，在 **“域管理”** 页的 **“域”** 列表中选择复合域，然后选择适当的选项卡。  
   
-##  <a name="BeforeYouBegin"></a>开始之前  
+##  <a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Prerequisites"></a>先决条件  
  为了创建复合域，您必须已创建并打开了一个知识库，而且至少创建了两个要添加到复合域中的单一域。  
   
-###  <a name="Security"></a>安全  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>访问  
+####  <a name="Permissions"></a> 权限  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_administrator 角色，才能创建复合域。  
   
 ##  <a name="ParsingKnowledgeDiscoveryActivity"></a>在知识发现活动中创建复合域  
@@ -69,7 +69,7 @@ ms.locfileid: "75255592"
   
 6.  在 **“域列表”** 中，选择将成为复合域一部分的域，然后单击右箭头将它们移至 **“复合域中的域”** 表中。  
   
-7.  单击“确定”****。  
+7.  单击“确定”。   
   
 ##  <a name="CompositeDomainProperties"></a>设置复合域属性  
   
@@ -77,7 +77,7 @@ ms.locfileid: "75255592"
   
 2.  在 **“域列表”** 中，选择将成为复合域一部分的域，然后单击右箭头将它们移至 **“复合域中的域”** 表中。 这是可添加到您创建的复合域中的单一域列表。 只能使用已创建但尚未添加到现有复合域中的那些单一域。 无法将单一域添加到知识库中的多个复合域，并且一个复合域无法添加到另一个复合域中。  
   
-3.  单击 **“高级”**。  
+3.  单击“高级”。   
   
 4.  请为 **“分析方法”** 选择下列选项之一：  
   

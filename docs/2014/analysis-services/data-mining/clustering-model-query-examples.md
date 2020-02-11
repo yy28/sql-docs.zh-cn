@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4996ba378319e442df07a4ff09af3404034474d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085722"
 ---
 # <a name="clustering-model-query-examples"></a>聚类分析模型查询示例
@@ -32,30 +32,30 @@ ms.locfileid: "66085722"
   
  [从架构行集中检索模型元数据](#bkmk_Query2)  
   
- [返回分类或分类列表](#bkmk_Query3)  
+ [返回群集或群集列表](#bkmk_Query3)  
   
- [返回分类的属性](#bkmk_Query4)  
+ [返回群集的属性](#bkmk_Query4)  
   
- [使用系统存储过程返回分类配置文件](#bkmk_Query5)  
+ [使用系统存储过程返回群集配置文件](#bkmk_Query5)  
   
- [查找分类的对比因子](#bkmk_Query6)  
+ [查找群集的对比因素](#bkmk_Query6)  
   
  [返回属于分类的事例](#bkmk_Query7)  
   
  **预测查询**  
   
- [从聚类分析模型中预测结果](#bkmk_Query8)  
+ [预测聚类分析模型的结果](#bkmk_Query8)  
   
- [确定分类成员身份](#bkmk_Query9)  
+ [确定群集成员身份](#bkmk_Query9)  
   
  [返回具有概率和距离的所有可能分类](#bkmk_Query10)  
   
-##  <a name="bkmk_top2"></a> 查找有关模型的信息  
+##  <a name="bkmk_top2"></a>查找有关模型的信息  
  所有挖掘模型都公开算法根据标准化架构（即挖掘模型架构行集）学习的内容。 可以使用数据挖掘扩展插件 (DMX) 语句来针对挖掘模型架构行集创建查询。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，还可以直接将架构行集作为系统表来查询。  
   
  [返回页首](#bkmk_top2)  
   
-###  <a name="bkmk_Query1"></a> 示例查询 1:使用 DMX 获取模型元数据  
+###  <a name="bkmk_Query1"></a>示例查询1：使用 DMX 获取模型元数据  
  下面的查询返回您在基本数据挖掘教程中创建的聚类分析模型 `TM_Clustering`的基本元数据。 聚类分析模型的父节点中可用的元数据包括模型的名称、存储模型的数据库以及模型中的子节点数目。 此查询使用 DMX 内容查询从模型的父节点中检索元数据：  
   
 ```  
@@ -74,7 +74,7 @@ WHERE NODE_TYPE = 1
 |-|-|  
 |MODEL_CATALOG|TM_Clustering|  
 |MODEL_NAME|Adventure Works DW|  
-|NODE_CAPTION|Cluster Model|  
+|NODE_CAPTION|群集模型|  
 |NODE_SUPPORT|12939|  
 |CHILDREN_CARDINALITY|10|  
 |NODE_DESCRIPTION|All|  
@@ -83,7 +83,7 @@ WHERE NODE_TYPE = 1
   
  [返回页首](#bkmk_top2)  
   
-###  <a name="bkmk_Query2"></a> 示例查询 2:从架构行集中检索模型元数据  
+###  <a name="bkmk_Query2"></a>示例查询2：从架构行集中检索模型元数据  
  通过查询数据挖掘架构行集，可以找到在 DMX 内容查询中返回的相同信息。 但是，架构行集还提供一些额外的列。 这包括创建模型时使用的参数、上次处理模型的日期和时间以及模型的所有者。  
   
  下面的示例返回创建、修改和上次处理模型的日期，以及用于生成模型的聚类分析参数和定型集的大小。 这些信息对于模型的归档或者确定使用了哪些聚类分析选项来创建现有模型很有用。  
@@ -109,7 +109,7 @@ WHERE MODEL_NAME = 'TM_Clustering'
 ## <a name="finding-information-about-clusters"></a>查找有关分类的信息  
  聚类分析模型中最有用的内容查询通常返回与使用 **“分类查看器”** 可浏览的信息同类的信息。 这包括分类配置文件、分类特征以及分类对比。 本节提供检索这些信息的查询示例。  
   
-###  <a name="bkmk_Query3"></a> 示例查询 3:返回分类列表  
+###  <a name="bkmk_Query3"></a>示例查询3：返回群集或群集列表  
  因为所有分类的节点类型都为 5，所以通过仅仅查询该类型的节点的模型内容可轻松地检索分类的列表。 您还可以筛选按概率或支持所返回的节点，如下例所示。  
   
 ```  
@@ -131,11 +131,11 @@ WHERE NODE_TYPE = 5 AND NODE_SUPPORT > 1000
   
 -   NODE_DESCRIPTION 列包含逗号分隔的属性列表。 请注意，为便于显示，可能对属性列表进行了缩略。  
   
--   NODE_DISTRIBUTION 列中的嵌套表包含分类的属性的完整列表。 如果您的客户端不支持分层行集，可以通过在 SELECT 列列表前添加 FLATTENED 关键字来返回嵌套表。 有关 FLATTENED 关键字的使用的详细信息，请参阅 [SELECT FROM &#60;model&#62;.CONTENT &#40;DMX&#41;](/sql/dmx/select-from-model-dimension-content-dmx)。  
+-   NODE_DISTRIBUTION 列中的嵌套表包含分类的属性的完整列表。 如果您的客户端不支持分层行集，可以通过在 SELECT 列列表前添加 FLATTENED 关键字来返回嵌套表。 有关 FLATTENED 关键字的使用的详细信息，请参阅 [SELECT FROM <model>.CONTENT (DMX)](/sql/dmx/select-from-model-dimension-content-dmx)。  
   
  [返回页首](#bkmk_top2)  
   
-###  <a name="bkmk_Query4"></a> 示例查询 4:返回分类的属性  
+###  <a name="bkmk_Query4"></a>示例查询4：返回群集的属性  
  对于每个分类， **“分类查看器”** 都显示列出属性及其值的配置文件。 此查看器还显示一个直方图，以显示当模型中完全填充了事例时值的分布。 如果您是在查看器中浏览模型，则可以轻松地将直方图从挖掘图例复制并粘贴到 Excel 或 Word 文档。 您还可以使用查看器的“分类特征”窗格以图形方式比较不同分类的属性。  
   
  但是，如果您必须一次获取多个分类的值，则查询模型更容易。 例如，浏览模型时，您可能注意到最上面的两个分类在属性 `Number Cars Owned`上存在不同。 因此，您需要提取每个分类的值。  
@@ -177,7 +177,7 @@ WHERE NODE_TYPE = 5
   
  [返回页首](#bkmk_top2)  
   
-###  <a name="bkmk_Query5"></a> 示例查询 5:返回分类配置文件使用系统存储过程  
+###  <a name="bkmk_Query5"></a>示例查询5：使用系统存储过程返回群集配置文件  
  作为一种快捷方式，您还可以调用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 用来处理分类的系统存储过程，而不是使用 DMX 编写自己的查询。 下面的示例说明如何使用内部存储过程来返回 ID 为 002 的分类的配置文件。  
   
 ```  
@@ -192,10 +192,10 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterCh
   
  示例结果：  
   
-|特性|值|频率|支持|  
+|属性|值|频率|支持|  
 |----------------|------------|---------------|-------------|  
 |Number Children at Home|0|0.999999829076798|899|  
-|地区|North America|0.999852875241508|899|  
+|区域|北美|0.999852875241508|899|  
 |Total Children|0|0.993860958572323|893|  
   
 > [!NOTE]  
@@ -203,8 +203,8 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterCh
   
  [返回页首](#bkmk_top2)  
   
-###  <a name="bkmk_Query6"></a> 示例查询 6:查找分类的对比因子  
- 使用**分类查看器**的“分类对比”  选项卡，可以轻松地将一个分类与另一个分类进行比较，或者将一个分类与其余所有事例（分类的补充）进行比较。  
+###  <a name="bkmk_Query6"></a>示例查询6：查找群集的对比因素  
+ 使用**分类查看器**的“分类对比”**** 选项卡，可以轻松地将一个分类与另一个分类进行比较，或者将一个分类与其余所有事例（分类的补充）进行比较。  
   
  但是，创建查询来返回这些信息很复杂，您可能需要在客户端上进行一些额外的处理来存储临时结果并比较两个或更多查询的结果。 作为一种快捷方式，可以使用系统存储过程。  
   
@@ -216,12 +216,12 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDi
   
  示例结果：  
   
-|特性|值|分数|  
+|属性|值|得分|  
 |----------------|------------|-----------|  
-|地区|North America|100|  
+|区域|北美|100|  
 |English Occupation|技术工人|94.9003803898654|  
-|地区|Europe|-72.5041051379789|  
-|English Occupation|Manual|-69.6503163202722|  
+|区域|欧洲|-72.5041051379789|  
+|English Occupation|手动|-69.6503163202722|  
   
  这与当你从第一个下拉列表中选择分类 9，从第二个下拉列表中选择分类 7 时， **分类对比** 查看器的图中所显示的信息相同。 若要将分类 9 与其补数进行比较，应在第二个参数中使用空字符串，如下面的示例所示：  
   
@@ -234,7 +234,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDi
   
  [返回页首](#bkmk_top2)  
   
-###  <a name="bkmk_Query7"></a> 示例查询 7:返回属于分类的事例  
+###  <a name="bkmk_Query7"></a>示例查询7：返回属于分类的事例  
  如果对挖掘模型启用了钻取，则可以创建查询来返回有关在模型中使用的事例的详细信息。 此外，如果对挖掘结构启用了钻取，则可以通过使用 [StructureColumn （DMX）](/sql/dmx/structurecolumn-dmx) 函数来包括基础结构中的列。  
   
  下面的示例返回模型中使用的两列 Age 和 Region，以及模型中未使用的一列 First Name。 此查询仅仅返回归为分类 1 的事例。  
@@ -256,10 +256,10 @@ WHERE IsInNode('001')
   
  [返回页首](#bkmk_top2)  
   
-###  <a name="bkmk_Query8"></a> 示例查询 8:从聚类分析模型中预测结果  
+###  <a name="bkmk_Query8"></a>示例查询8：从聚类分析模型中预测结果  
  如果您创建的聚类分析模型包含可预测的属性，则可以使用该模型来对结果进行预测。 但是，根据您将可预测列设置为 `Predict` 还是 `PredictOnly`，模型处理该可预测属性的方式也不同。 如果您将列的用法设置为 `Predict`，则该属性的值会添加到聚类分析模型，并在完成的模型中显示为属性。 但是，如果将列的用法设置为 `PredictOnly`，则值不会用于创建分类。 模型完成后，聚类分析算法会基于每个事例所属的分类为 `PredictOnly` 属性创建新的值。  
   
- 下面的查询向模型提供一个新事例，在该模型中，有关该事例的唯一信息是年龄和性别。 SELECT 语句指定你关注的可预测属性/值对，而 [PredictProbability (DMX)](/sql/dmx/predictprobability-dmx) 函数则指出具有这些属性的事例具有目标结果的概率。  
+ 下面的查询向模型提供一个新事例，在该模型中，有关该事例的唯一信息是年龄和性别。 SELECT 语句指定你关注的可预测属性/值对，而 [PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx) 函数则指出具有这些属性的事例具有目标结果的概率。  
   
 ```  
 SELECT  
@@ -309,8 +309,8 @@ NATURAL PREDICTION JOIN
   
  [返回页首](#bkmk_top2)  
   
-###  <a name="bkmk_Query9"></a> 示例查询 9:确定分类成员身份  
- 本示例使用 [分类 (DMX)](/sql/dmx/cluster-dmx) 函数来返回新事例最有可能属于的分类，并使用 [ClusterProbability (DMX)](/sql/dmx/clusterprobability-dmx) 函数来返回该分类中的成员身份的概率。  
+###  <a name="bkmk_Query9"></a>示例查询9：确定群集成员身份  
+ 本示例使用 [Cluster &#40;DMX&#41;](/sql/dmx/cluster-dmx) 函数来返回新事例最有可能属于的分类，并使用 [ClusterProbability &#40;DMX&#41;](/sql/dmx/clusterprobability-dmx) 函数来返回该分类中的成员身份的概率。  
   
 ```  
 SELECT Cluster(), ClusterProbability()  
@@ -328,11 +328,11 @@ NATURAL PREDICTION JOIN
 |--------------|----------------|  
 |Cluster 2|0.397918596951617|  
   
- **请注意**默认情况下，`ClusterProbability`函数将返回最可能分类的概率。 但是，您可以通过使用语法 `ClusterProbability('cluster name')`来指定另一分类。 如果这样做，请注意每个预测函数的结果都独立于其他结果。 因此，第二列中的概率分数可能引用另一个分类，而不是第一列中所指定的分类。  
+ **注意**默认情况下， `ClusterProbability`函数返回最可能分类的概率。 但是，您可以通过使用语法 `ClusterProbability('cluster name')`来指定另一分类。 如果这样做，请注意每个预测函数的结果都独立于其他结果。 因此，第二列中的概率分数可能引用另一个分类，而不是第一列中所指定的分类。  
   
  [返回页首](#bkmk_top2)  
   
-###  <a name="bkmk_Query10"></a> 示例查询 10:返回具有概率和距离的所有可能分类  
+###  <a name="bkmk_Query10"></a>示例查询10：返回具有概率和距离的所有可能分类  
  在上一个示例中，概率分数不是非常高。 若要确定是否存在更好的分类，可以将 [PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx) 函数与 [Cluster &#40;DMX&#41;](/sql/dmx/cluster-dmx) 函数一起使用，以返回包括所有可能的分类以及新事例属于每个分类的概率的嵌套表。 FLATTENED 关键字用于将分层行集改为平面表，以便于查看。  
   
 ```  
@@ -356,11 +356,11 @@ NATURAL PREDICTION JOIN
 |分类 7|0.979081275926724|0.0209187240732763|  
 |分类 1|0.999169044818624|0.000830955181376364|  
 |分类 9|0.999831227795894|0.000168772204105754|  
-|分类 8|1|0|  
+|群集 8|1|0|  
   
  默认情况下，结果按概率进行排序。 结果指出，尽管分类 2 的概率非常低，分类 2 仍然最适合于新数据点。  
   
- **注意** 额外的一列 `$DISTANCE`表示从数据点到分类的距离。 默认情况下， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法使用可缩放的 EM 聚类分析，此类分析为每个数据点分配多个分类，并对可能的分类进行排序。  但是，如果您使用 K-means 算法来创建聚类分析模型，则只能为每个数据点分配一个分类，并且此查询仅仅返回一行。 了解这些区别对于解释 [PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx) 函数来包括基础结构中的列。 有关 EM 与 K-means 聚类分析之间的区别的详细信息，请参阅 [Microsoft 聚类分析算法技术参考](microsoft-clustering-algorithm-technical-reference.md)。  
+ **注意**其他列`$DISTANCE`表示从数据点到分类的距离。 默认情况下， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法使用可缩放的 EM 聚类分析，此类分析为每个数据点分配多个分类，并对可能的分类进行排序。  但是，如果您使用 K-means 算法来创建聚类分析模型，则只能为每个数据点分配一个分类，并且此查询仅仅返回一行。 了解这些区别对于解释 [PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx) 函数来包括基础结构中的列。 有关 EM 与 K-means 聚类分析之间的区别的详细信息，请参阅 [Microsoft 聚类分析算法技术参考](microsoft-clustering-algorithm-technical-reference.md)。  
   
  [返回页首](#bkmk_top2)  
   
@@ -369,27 +369,27 @@ NATURAL PREDICTION JOIN
   
 |||  
 |-|-|  
-|预测函数|用法|  
-|[分类 (DMX)](/sql/dmx/cluster-dmx)|返回最可能包含输入事例的分类。|  
-|[ClusterDistance (DMX)](/sql/dmx/clusterdistance-dmx)|返回输入事例与指定分类之间的距离；如果未指定分类，则返回输入事例与可能性最大的分类之间的距离。<br /><br /> 返回输入事例属于指定分类的概率。|  
-|[ClusterProbability (DMX)](/sql/dmx/clusterprobability-dmx)|返回输入事例属于指定分类的概率。|  
-|[IsDescendant (DMX)](/sql/dmx/isdescendant-dmx)|确定一个节点是否是模型中另一个节点的子节点。|  
-|[IsInNode (DMX)](/sql/dmx/isinnode-dmx)|指示指定的节点是否包含当前事例。|  
-|[PredictAdjustedProbability (DMX)](/sql/dmx/predictadjustedprobability-dmx)|返回加权的概率。|  
-|[PredictAssociation (DMX)](/sql/dmx/predictassociation-dmx)|预测关联数据集中的成员身份。|  
-|[PredictCaseLikelihood (DMX)](/sql/dmx/predictcaselikelihood-dmx)|返回输入事例适合现有模型的可能性。|  
-|[PredictHistogram (DMX)](/sql/dmx/predicthistogram-dmx)|返回与当前预测值相关的值的表。|  
-|[PredictNodeId (DMX)](/sql/dmx/predictnodeid-dmx)|返回每个事例的 Node_ID。|  
-|[PredictProbability (DMX)](/sql/dmx/predictprobability-dmx)|返回预测值的概率。|  
-|[PredictStdev (DMX)](/sql/dmx/predictstdev-dmx)|返回指定列的预测标准偏差。|  
-|[PredictSupport (DMX)](/sql/dmx/predictsupport-dmx)|返回指定状态的支持值。|  
-|[PredictVariance (DMX)](/sql/dmx/predictvariance-dmx)|返回指定列的方差。|  
+|预测函数|使用情况|  
+|[群集 &#40;DMX&#41;](/sql/dmx/cluster-dmx)|返回最可能包含输入事例的分类。|  
+|[ClusterDistance &#40;DMX&#41;](/sql/dmx/clusterdistance-dmx)|返回输入事例与指定分类之间的距离；如果未指定分类，则返回输入事例与可能性最大的分类之间的距离。<br /><br /> 返回输入事例属于指定分类的概率。|  
+|[ClusterProbability &#40;DMX&#41;](/sql/dmx/clusterprobability-dmx)|返回输入事例属于指定分类的概率。|  
+|[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|确定一个节点是否是模型中另一个节点的子节点。|  
+|[IsInNode &#40;DMX&#41;](/sql/dmx/isinnode-dmx)|指示指定的节点是否包含当前事例。|  
+|[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|返回加权的概率。|  
+|[PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)|预测关联数据集中的成员身份。|  
+|[PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx)|返回输入事例适合现有模型的可能性。|  
+|[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|返回与当前预测值相关的值的表。|  
+|[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|返回每个事例的 Node_ID。|  
+|[PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|返回预测值的概率。|  
+|[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|返回指定列的预测标准偏差。|  
+|[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|返回指定状态的支持值。|  
+|[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|返回指定列的方差。|  
   
  有关特定函数的语法，请参阅[数据挖掘扩展插件 (DMX) 函数引用](/sql/dmx/data-mining-extensions-dmx-function-reference)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据挖掘查询](data-mining-queries.md)   
  [Microsoft 聚类分析算法技术参考](microsoft-clustering-algorithm-technical-reference.md)   
- [Microsoft 聚类分析算法](microsoft-clustering-algorithm.md)  
+ [Microsoft Clustering Algorithm](microsoft-clustering-algorithm.md)  
   
   

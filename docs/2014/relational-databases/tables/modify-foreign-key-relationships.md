@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 116a41ac2eca1f69a98391c9018b8623a10f6047
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196842"
 ---
 # <a name="modify-foreign-key-relationships"></a>修改外键关系
@@ -45,15 +45,17 @@ ms.locfileid: "68196842"
 ###  <a name="Restrictions"></a> 限制和局限  
  新的外键列必须与和其相关的主键列的数据类型和大小相匹配，但以下情况例外：  
   
--   `char` 列或 `sysname` 列可以与 `varchar` 列相关。  
+-   
+  `char` 列或 `sysname` 列可以与 `varchar` 列相关。  
   
--   `binary` 列可以与 `varbinary` 列相关。  
+-   
+  `binary` 列可以与 `varbinary` 列相关。  
   
 -   别名数据类型可以与其基类型相关。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要对表的 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -69,7 +71,7 @@ ms.locfileid: "68196842"
      **选定的关系**  
      列出现有的关系。 选择一个关系将在右侧的网格中显示其属性。 如果该列表为空，则表示尚未为该表定义关系。  
   
-     **“添加”**  
+     **添加**  
      创建新关系。 必须先设置 **“表和列规范”** ，之后该关系才会生效。  
   
      **删除**  
@@ -100,7 +102,7 @@ ms.locfileid: "68196842"
      展开此项可显示“名称”  和“说明”  的属性字段。  
   
      **名称**  
-     显示关系的名称。 在创建新关系时，将基于 **表设计器**的活动窗口中的表为其指定默认名称。 您可以随时更改该名称。  
+     显示关系的名称。 在创建新关系时，将基于 **表设计器**的活动窗口中的表为其指定默认名称。 可随时更改名称。  
   
      **说明**  
      描述该关系。 若要编写更详细的说明，请单击“说明”  ，再单击属性字段右侧显示的省略号 **(...)** 。 这可以提供一个更大的文本编写区域。  

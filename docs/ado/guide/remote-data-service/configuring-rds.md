@@ -13,17 +13,17 @@ ms.assetid: 5dd48483-858a-48c2-98ce-f2359abe1f59
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c99b9281071bc608f46edb9ace3c374c1fa60564
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922840"
 ---
 # <a name="configuring-rds"></a>配置 RDS
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 若要有效地实现 RDS，请确保已熟悉向你提供的各种配置。 本部分包括有关安全性和可伸缩性的重要信息在实现中的 rds。 请参阅以下主题，了解如何配置计算机以使用 rds。  
+ 若要高效地实现 RDS，请确保熟悉可用的各种配置。 本部分包含有关实现 RDS 的安全性和可伸缩性的重要信息。 有关将计算机配置为使用 RDS 的信息，请参阅以下主题。  
   
 -   [授予 Web 服务器计算机来宾特权](../../../ado/guide/remote-data-service/granting-guest-privileges-to-a-web-server-computer.md)  
   
@@ -43,8 +43,8 @@ ms.locfileid: "67922840"
   
 -   [配置用于安全或不受限制模式的 DataFactory](../../../ado/guide/remote-data-service/configuring-datafactory-for-safe-or-unrestricted-modes.md)  
   
-## <a name="see-also"></a>请参阅  
- [对 RDS 使用相关的技术](../../../ado/guide/remote-data-service/using-related-technologies-with-rds.md)   
+## <a name="see-also"></a>另请参阅  
+ [使用 RDS 的相关技术](../../../ado/guide/remote-data-service/using-related-technologies-with-rds.md)   
  [自定义 DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [RDS 故障排除](../../../ado/guide/remote-data-service/troubleshooting-rds.md)
 

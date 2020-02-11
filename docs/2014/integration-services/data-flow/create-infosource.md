@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eba2d2d28c06a60cc8269a349996646726f59142
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827945"
 ---
 # <a name="create-infosource"></a>“创建 InfoSource”
@@ -29,11 +29,11 @@ ms.locfileid: "62827945"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含 SAP BW 目标的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。  
   
-2.  在“数据流”选项卡上，双击 SAP BW 目标。  
+2.  在“数据流”  选项卡上，双击 SAP BW 目标。  
   
 3.  在 **“SAP BW 目标编辑器”** 中单击 **“连接管理器”** ，以打开编辑器的 **“连接管理器”** 页。  
   
-4.  在 **“连接管理器”** 页的 **“创建 SAP BW 对象”** 组框中，选择 **“InfoSource”**，然后单击 **“创建”**。  
+4.  在 **“连接管理器”** 页的 **“创建 SAP BW 对象”** 组框中，选择 **“InfoSource”** ，然后单击 **“创建”** 。  
   
 ## <a name="options"></a>选项  
  **事务数据**  
@@ -46,7 +46,7 @@ ms.locfileid: "62827945"
   
  如果您选择此选项，将打开 **“创建主数据的 InfoSource”** 对话框。 您可使用 **“创建主数据的 InfoSource”** 对话框来创建新的 InfoSource。 有关此对话框的详细信息，请参阅 [Create InfoSource for Master Data](create-infosource-for-master-data.md)。  
   
-## <a name="see-also"></a>请参阅  
- [Microsoft Connector 1.1 for SAP BW 的 F1 帮助](../microsoft-connector-for-sap-bw-f1-help.md)  
+## <a name="see-also"></a>另请参阅  
+ [Microsoft Connector 1.1 for SAP BW F1 帮助](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

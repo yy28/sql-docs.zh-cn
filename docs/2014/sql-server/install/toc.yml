@@ -27,17 +27,17 @@
 - name: 升级顾问操作指南主题
   href: upgrade-advisor-how-to-topics.md
   items:
-    - name: 如何：安装升级顾问
+    - name: 如何安装升级顾问
       href: how-to-install-upgrade-advisor.md
-    - name: 如何：启动升级顾问
+    - name: 如何启动升级顾问
       href: how-to-launch-upgrade-advisor.md
-    - name: 如何：运行升级顾问分析向导
+    - name: 如何运行升级顾问分析向导
       href: how-to-run-the-upgrade-advisor-analysis-wizard.md
-    - name: 如何：查看升级顾问报表
+    - name: 如何查看升级顾问报表
       href: how-to-view-an-upgrade-advisor-report.md
-    - name: 如何：筛选报表
+    - name: 如何筛选报表
       href: how-to-filter-reports.md
-    - name: 如何：Export Reports
+    - name: 如何导出报表
       href: how-to-export-reports.md
 - name: 用户界面参考
   href: upgrade-advisor-user-interface-reference.md
@@ -349,13 +349,13 @@
       href: full-text-search-upgrade-options.md
     - name: 完成 - 安装
       href: complete-installation.md
-    - name: 安装必备组件
+    - name: 安装先决条件
       href: installation-prerequisites.md
     - name: 安装进度
       href: installation-progress.md
     - name: 安装类型
       href: installation-type.md
-    - name: 实例配置
+    - name: Instance Configuration
       href: instance-configuration.md
     - name: 实例选择（卸载）
       href: instance-selection-uninstall.md
@@ -424,11 +424,11 @@
   items:
     - name: 从命令提示符安装更新
       href: ../../database-engine/install-windows/installing-updates-from-the-command-prompt.md
-    - name: 如何：验证 SQL Server 更新的安装是否成功
+    - name: 如何验证 SQL Server 更新的安装是否成功
       href: how-to-validate-successful-installation-of-a-sql-server-update.md
     - name: SQL Server 服务安装概述
       href: overview-of-sql-server-servicing-installation.md
-    - name: 欢迎
+    - name: 欢迎使用
       href: welcome.md
     - name: 许可条款
       href: license-terms.md
@@ -440,5 +440,5 @@
       href: ready-to-update.md
     - name: 更新进度
       href: update-progress.md
-    - name: “完成”
+    - name: 完成
       href: complete.md

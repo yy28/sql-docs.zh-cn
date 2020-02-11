@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 83ef7565cec4b1e9cf0ceafeeb539d5ba31b6952
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097565"
 ---
-# <a name="pathname-property-wmi-msreportserverconfigurationsetting"></a>PathName 属性 (WMI MSReportServer_ConfigurationSetting)
+# <a name="pathname-property-wmi-msreportserver_configurationsetting"></a>PathName 属性 (WMI MSReportServer_ConfigurationSetting)
   指定报表服务器实例的安装路径。 只读。  
   
 ## <a name="syntax"></a>语法  
@@ -45,9 +45,9 @@ public string PathName;
  [MSReportServer_ConfigurationSetting 类](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>要求  
- **命名空间:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](msreportserver-configurationsetting-members.md)  
   
   

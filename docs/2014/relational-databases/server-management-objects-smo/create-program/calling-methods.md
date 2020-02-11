@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5c3a004d30a5edb20da77e6f93bf51a94472419b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192167"
 ---
 # <a name="calling-methods"></a>调用方法
-  方法执行特定任务相关的对象，例如颁发`Checkpoint`对数据库或请求的登录的实例的枚举的列表[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+  方法执行与对象相关的特定任务，如`Checkpoint`在数据库上发出或请求实例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的已枚举登录列表。  
   
  方法针对对象执行操作。 方法可以使用参数并通常具有返回值。 返回值可以是简单数据类型、复杂对象或包含很多成员的结构。  
   
@@ -55,7 +55,8 @@ db.Create();
  }  
   
 ## <a name="using-an-smo-method-with-a-parameter-in-visual-basic"></a>在 Visual Basic 中使用带参数的 SMO 方法  
- <xref:Microsoft.SqlServer.Management.Smo.Table> 对象具有名为 <xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A> 的方法。 此方法需要指定 `FillFactor`的数字参数。  
+ 
+  <xref:Microsoft.SqlServer.Management.Smo.Table> 对象具有名为 <xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A> 的方法。 此方法需要指定 `FillFactor`的数字参数。  
   
 ```  
 Dim srv As Server  
@@ -66,7 +67,8 @@ tb.RebuildIndexes(70)
 ```  
   
 ## <a name="using-an-smo-method-with-a-parameter-in-visual-c"></a>在 Visual C# 中使用带参数的 SMO 方法  
- <xref:Microsoft.SqlServer.Management.Smo.Table> 对象具有名为 <xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A> 的方法。 此方法需要指定 `FillFactor`的数字参数。  
+ 
+  <xref:Microsoft.SqlServer.Management.Smo.Table> 对象具有名为 <xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A> 的方法。 此方法需要指定 `FillFactor`的数字参数。  
   
 ```  
 {   
@@ -81,7 +83,8 @@ tb.RebuildIndexes(70);
 ## <a name="using-an-enumeration-method-that-returns-a-datatable-object-in-visual-basic"></a>在 Visual Basic 中使用返回 DataTable 对象的枚举方法  
  本节说明如何调用枚举方法以及如何处理返回的 <xref:System.Data.DataTable> 对象中的数据。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> 方法返回 <xref:System.Data.DataTable> 对象，该对象需要进一步导航以访问有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的所有可用排序规则信息。  
+ 
+  <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> 方法返回 <xref:System.Data.DataTable> 对象，该对象需要进一步导航以访问有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的所有可用排序规则信息。  
   
 ```  
 'Connect to the local, default instance of SQL Server.  
@@ -105,7 +108,9 @@ Next
 ## <a name="using-an-enumeration-method-that-returns-a-datatable-object-in-visual-c"></a>在 Visual C# 中使用返回 DataTable 对象的枚举方法  
  本节说明如何调用枚举方法以及如何处理返回的 <xref:System.Data.DataTable> 对象中的数据。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> 方法返回系统 <xref:System.Data.DataTable> 对象。 <xref:System.Data.DataTable> 对象需要进一步导航以访问有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的所有可用排序规则信息。  
+ 
+  <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> 方法返回系统 <xref:System.Data.DataTable> 对象。 
+  <xref:System.Data.DataTable> 对象需要进一步导航以访问有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的所有可用排序规则信息。  
   
 ```  
 //Connect to the local, default instance of SQL Server.   
@@ -156,12 +161,14 @@ Console.WriteLine(d.Name);
 ```  
   
 ## <a name="copying-an-smo-object-in-visual-basic"></a>在 Visual Basic 中复制 SMO 对象  
- 此代码示例使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> 方法来创建 <xref:Microsoft.SqlServer.Management.Smo.Server> 对象的副本。 <xref:Microsoft.SqlServer.Management.Smo.Server> 对象表示与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的一个连接。  
+ 此代码示例使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> 方法来创建 <xref:Microsoft.SqlServer.Management.Smo.Server> 对象的副本。 
+  <xref:Microsoft.SqlServer.Management.Smo.Server> 对象表示与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的一个连接。  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VCMethods6](SMO How to#SMO_VCMethods6)]  -->  
   
 ## <a name="copying-an-smo-object-in-visual-c"></a>在 Visual C# 中复制 SMO 对象  
- 此代码示例使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> 方法来创建 <xref:Microsoft.SqlServer.Management.Smo.Server> 对象的副本。 <xref:Microsoft.SqlServer.Management.Smo.Server> 对象表示与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的一个连接。  
+ 此代码示例使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> 方法来创建 <xref:Microsoft.SqlServer.Management.Smo.Server> 对象的副本。 
+  <xref:Microsoft.SqlServer.Management.Smo.Server> 对象表示与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的一个连接。  
   
 ```  
 {   
@@ -207,7 +214,7 @@ foreach ( r in d.Rows) {
 }   
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.SqlServer.Management.Smo.Server>   
  <xref:Microsoft.SqlServer.Management.Common.ServerConnection>  
   

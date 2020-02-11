@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 784c08ea9a251587d156de9f2d209308c6fda5e7
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73781687"
 ---
 # <a name="configuring-the-sql-server-odbc-driver---add-a-data-source"></a>配置 SQL Server ODBC 驱动程序 - 添加数据源
@@ -29,7 +29,7 @@ ms.locfileid: "73781687"
   
 ### <a name="to-add-a-data-source-by-using-odbc-administrator"></a>使用 ODBC 管理器添加数据源  
   
-1.  从 "**控制面板**" 中，访问 "**管理工具**"，然后访问 " **odbc 数据源（64位）** " 或 " **odbc 数据源（32位）** "。 或者，可以调用 odbcad32.exe。  
+1.  从 "**控制面板**" 中，访问 "**管理工具**"，然后访问 " **odbc 数据源（64位）** " 或 " **odbc 数据源（32位）**"。 或者，可以调用 odbcad32.exe。  
   
 2.  单击 "**用户 dsn**"、"**系统 dsn**" 或 "**文件 dsn** " 选项卡，然后单击 "**添加**"。  
   
@@ -46,6 +46,6 @@ ms.locfileid: "73781687"
 1.  使用连接字符串中的 SAVEFILE = file_name 参数调用[SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) 。 如果连接成功，则 ODBC 驱动程序将使用 SAVEFILE 参数指向的位置中的连接参数创建一个文件数据源。  
   
 ## <a name="see-also"></a>另请参阅  
-[删除数据源&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-delete-a-data-source.md)    
+[&#40;ODBC&#41;删除数据源](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-delete-a-data-source.md)    
   
   

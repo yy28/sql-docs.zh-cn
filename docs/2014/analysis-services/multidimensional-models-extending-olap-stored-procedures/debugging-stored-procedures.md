@@ -1,5 +1,5 @@
 ---
-title: 调试存储的过程 |Microsoft Docs
+title: 调试存储过程 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 90b72b0e60550b0b6bdf89e0ba39e6089c5d8de2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62727743"
 ---
 # <a name="debugging-stored-procedures"></a>调试存储过程
@@ -37,21 +37,21 @@ ms.locfileid: "62727743"
   
 6.  在 Visual Studio 中，附加到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 进程 (Msmdsrv.exe)。  
   
-    1.  从**调试**菜单中，选择**附加 toProcess**。  
+    1.  从 "**调试**" 菜单中，选择 "**附加 toProcess**"。  
   
-    2.  在中**附加 toProcess**对话框中，选择**显示所有用户的进程**。  
+    2.  在 "**附加 toProcess** " 对话框中，选择 "**显示所有用户的进程**"。  
   
-    3.  在中**可用进程**列表中，在**进程**列中，单击**Msmdsrv.exe**。 如果服务器上运行多个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，则需要通过要使用的实例的 ID 标识进程。  
+    3.  在 "**可用进程**" 列表的 "**处理**" 列中，单击 " **msmdsrv.ini**"。 如果服务器上运行多个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，则需要通过要使用的实例的 ID 标识进程。  
   
-    4.  在中**将附加到**文字框中，请确保选择适当的程序类型。 对于 CLR DLL，单击**选择**，然后单击**调试这些代码类型**，然后单击**托管**，然后单击**确定**。 对于 COM DLL，单击**选择**，然后单击**调试这些代码类型**，然后单击**本机**，然后单击**确定**。  
+    4.  在 "**附加到**" 文本框中，确保选择了适当的程序类型。 对于 CLR DLL，依次单击 "**选择**"、"**调试以下代码类型**" 和 "**托管**"，然后单击 **"确定"**。 对于 COM DLL，单击 "**选择**"，单击 "**调试以下代码类型**"，单击 "**本机**"，然后单击 **"确定"**。  
   
-    5.  单击**附加**。  
+    5.  单击 "**附加**"。  
   
 7.  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中，调用程序或 MDX 脚本（用于调用存储过程）。 当调试程序到达包含断点的某行时，便会中断。 您可以在监视窗口中计算变量，查看局部变量并逐句检查代码。  
   
  如果在调试库时出现问题，则确保已将对应的程序数据库 (PDB) 文件复制到服务器中的部署位置。 如果在注册或部署过程中没有复制该文件，则必须手动将其复制到 DLL 所在的位置。 对于本机代码 (COM DLL)，PDB 文件驻留在 \debug 子目录中。 对于托管代码 (CLR DLL)，该文件驻留在 \WINDEBUG 子目录中。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [多维模型程序集管理](../multidimensional-models/multidimensional-model-assemblies-management.md)   
  [定义存储过程](defining-stored-procedures.md)  
   

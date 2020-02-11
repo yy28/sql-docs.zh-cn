@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 882ce47467a38ab4a891f632c9598070e13494e3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727536"
 ---
 # <a name="convert-r-code-for-execution-in-sql-server-in-database-instances"></a>转换 R 代码以在 SQL Server（数据库内）实例中执行
@@ -31,7 +31,7 @@ ms.locfileid: "73727536"
 + 最初的解决方案包含多个在生产环境单独执行时效率可能更高的步骤，如数据准备、特征工程与模型定型、评分或报告。
 + 想要通过更改库、使用并行执行或将某些处理任务卸载到 SQL Server 来提高和优化性能。 
 
-## <a name="step-1-plan-requirements-and-resources"></a>步骤 1. 规划要求和资源
+## <a name="step-1-plan-requirements-and-resources"></a>步骤 1。 规划要求和资源
 
 **包**
 

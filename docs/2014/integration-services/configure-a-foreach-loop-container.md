@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 461a652999e97907962486cfc05e5b6668f5590d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060878"
 ---
 # <a name="configure-a-foreach-loop-container"></a>配置 Foreach 循环容器
@@ -27,7 +27,7 @@ ms.locfileid: "66060878"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。  
   
-2.  单击“控制流”  选项卡，然后双击 Foreach 循环。  
+2.  单击“控制流”**** 选项卡，然后双击 Foreach 循环。  
   
 3.  在 **“Foreach 循环编辑器”** 对话框中，单击 **“常规”** ，并且，根据需要还可以修改 Foreach 循环的名称和说明。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66060878"
   
     -   若要使用 Foreach 文件枚举器，请提供包含要枚举的文件的文件夹，指定文件名和文件类型筛选器，并指定是否返回完全合格的文件名。 另外，还请指定是否包含子文件夹，以枚举更多文件。  
   
-    -   若要使用 Foreach 项枚举器，请单击 **“列”** ，然后在 **“For Each Item 列”** 对话框中，单击 **“添加”** 来添加列。 在 **“数据类型”** 列表中为每个列选择一个数据类型，然后单击 **“确定”** 。  
+    -   若要使用 Foreach 项枚举器，请单击 **“列”**，然后在 **“For Each Item 列”** 对话框中，单击 **“添加”** 来添加列。 在 **“数据类型”** 列表中为每个列选择一个数据类型，然后单击 **“确定”**。  
   
          在列中键入值或从列表中选择值。  
   
@@ -53,28 +53,28 @@ ms.locfileid: "66060878"
   
     -   若要使用 Foreach ADO.NET 架构行集枚举器，请选择一个现有的 ADO.NET 连接，或在 **“连接”** 列表中，单击 **“新建连接”** ，然后选择一个架构。  
   
-         也可以单击 **“设置限制”** ，选择架构限制，选择包含限制值的变量，或键入限制值，然后单击 **“确定”** 。  
+         也可以单击 **“设置限制”** ，选择架构限制，选择包含限制值的变量，或键入限制值，然后单击 **“确定”**。  
   
     -   若要使用 Foreach 源变量枚举器，请在 **“变量”** 列表中选择变量。  
   
-    -   若要使用 Foreach NodeList 枚举器，请单击 DocumentSourceType 并从列表中选择源类型，然后单击 DocumentSource。 根据为 DocumentSourceType 选择的值，请从列表中选择变量或文件连接，或创建新变量或文件连接，或在“文档源编辑器”  中键入 XML 源代码。  
+    -   若要使用 Foreach NodeList 枚举器，请单击 DocumentSourceType 并从列表中选择源类型，然后单击 DocumentSource。 根据为 DocumentSourceType 选择的值，请从列表中选择变量或文件连接，或创建新变量或文件连接，或在“文档源编辑器”**** 中键入 XML 源代码。  
   
          接下来，单击 EnumerationType 并从列表中选择枚举类型。 如果 EnumerationType 是 **Navigator、Node 或 NodeText**，则单击 OuterXPathStringSourceType 并选择源类型，然后单击 OuterXPathString。 根据为 OuterXPathStringSourceType 设置的值，请从列表中选择变量或文件连接，或创建新的变量或文件连接，或键入外部 XML 路径语言 (XPath) 表达式的字符串。  
   
          如果 EnumerationType 是 **ElementCollection**，则按上文所述设置 OuterXPathStringSourceType 和 OuterXPathString。 然后，单击 InnerElementType 并选择内部元素的枚举类型，然后单击 InnerXPathStringSourceType。 根据为 InnerXPathStringSourceType 设置的值，请选择变量或文件连接，创建新的变量或文件连接，或键入内部 XPath 表达式的字符串。  
   
-    -   若要使用 Foreach SMO 枚举器，请选择一个现有的 ADO.NET 连接，或在 **“连接”** 列表中，单击 **“新建连接”** ，然后键入需要的字符串或单击 **“浏览”** 。 如果选择单击 **“浏览”** ，则请在 **“选择 SMO 枚举”** 对话框中，选择要枚举的对象类型和枚举类型，然后单击 **“确定”** 。  
+    -   若要使用 Foreach SMO 枚举器，请选择一个现有的 ADO.NET 连接，或在 **“连接”** 列表中，单击 **“新建连接”** ，然后键入需要的字符串或单击 **“浏览”**。 如果选择单击 **“浏览”**，则请在 **“选择 SMO 枚举”** 对话框中，选择要枚举的对象类型和枚举类型，然后单击 **“确定”**。  
   
-6.  也可单击“集合”页上的“表达式”文本框中的浏览按钮 (…) 来创建可用于更新属性值的表达式    。 有关详细信息，请参阅 [添加或更改属性表达式](expressions/add-or-change-a-property-expression.md)。  
+6.  也可单击“集合”页上的“表达式”文本框中的浏览按钮 (…) 来创建可用于更新属性值的表达式************。 有关详细信息，请参阅 [添加或更改属性表达式](expressions/add-or-change-a-property-expression.md)。  
   
     > [!NOTE]  
-    >  在“属性”  列表中列出的属性因枚举器而异。  
+    >  在“属性”**** 列表中列出的属性因枚举器而异。  
   
 7.  也可以单击 **“变量映射”** ，将对象属性映射到集合值，然后进行下列操作：  
   
-    1.  在“变量”  列表中选择变量，或单击 \<“新建变量”>  创建新的变量。  
+    1.  在“变量”**** 列表中选择变量，或单击 **“新建变量”>\<** 创建新的变量。  
   
-    2.  如果要添加新变量，那么请在 **“添加变量”** 对话框中设置该变量的属性，然后单击 **“确定”** 。  
+    2.  如果要添加新变量，那么请在 **“添加变量”** 对话框中设置该变量的属性，然后单击 **“确定”**。  
   
     3.  如果使用 For Each Item 枚举器，可以在 **“索引”** 列表中来更新索引值。  
   
@@ -83,9 +83,9 @@ ms.locfileid: "66060878"
   
 8.  也可以单击 **“表达式”** ，然后在 **“表达式”** 页上，为 Foreach 循环容器的属性创建属性表达式。 有关详细信息，请参阅 [添加或更改属性表达式](expressions/add-or-change-a-property-expression.md)。  
   
-9. 单击 **“确定”** 。  
+9. 单击“确定”。   
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Foreach 循环容器](control-flow/foreach-loop-container.md)  
   
   

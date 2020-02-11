@@ -1,5 +1,5 @@
 ---
-title: dbo.sysoperators (Transact SQL) |Microsoft Docs
+title: dbo. sysoperators （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,10 +20,10 @@ ms.assetid: c2afa20c-b15f-46ca-ae74-2eb65909409e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e4336fdeeb0867018e9a2a630f2212cc06259482
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67984907"
 ---
 # <a name="dbosysoperators-transact-sql"></a>dbo.sysoperators (Transact-SQL)
@@ -31,15 +31,15 @@ ms.locfileid: "67984907"
 
   对每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理操作员包含一行。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|操作员 ID。|  
-|**name**|**sysname**|操作员名称。|  
-|**enabled**|**tinyint**|警报通知的状态 (Boolean)。 如果**1**，发生警报时，此运算符可接收通知。|  
-|**email_address**|**nvarchar(100)**|该操作员的电子邮件地址。|  
+|**识别**|**int**|操作员 ID。|  
+|**路径名**|**sysname**|操作员的名称。|  
+|**能够**|**tinyint**|警报通知的状态 (Boolean)。 如果为**1**，则在发生警报时，此操作员可以接收通知。|  
+|**email_address**|**nvarchar （100）**|该操作员的电子邮件地址。|  
 |**last_email_date**|**int**|该操作员上次接收电子邮件警报通知的日期。|  
 |**last_email_time**|**int**|该操作员上次接收电子邮件警报通知的时间。|  
-|**pager_address**|**nvarchar(100)**|该操作员的寻呼地址。|  
+|**pager_address**|**nvarchar （100）**|该操作员的寻呼地址。|  
 |**last_pager_date**|**int**|该操作员上次接收寻呼警报通知的日期。|  
 |**last_pager_time**|**int**|该操作员上次接收寻呼警报通知的时间。|  
 |**weekday_pager_start_time**|**int**|工作日（从星期一到星期五）中的某一时间，该操作员在该时间后可以接收寻呼警报通知。|  
@@ -49,12 +49,12 @@ ms.locfileid: "67984907"
 |**sunday_pager_start_time**|**int**|星期日当天的某一时间，该操作员在该时间后可以接收寻呼警报通知。|  
 |**sunday_pager_end_time**|**int**|星期日当天的某一时间，该操作员在该时间后不能接收寻呼警报通知。|  
 |**pager_days**|**tinyint**|表示一周中某几天的位掩码，该操作员在这几天内可以接收寻呼警报通知。|  
-|**netsend_address**|**nvarchar(100)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**netsend_address**|**nvarchar （100）**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**last_netsend_date**|**int**|上次将最近网络消息发送到指定操作员 ID 的日期。|  
 |**last_netsend_time**|**int**|上次将最新网络消息发送到指定操作员 ID 的时间。|  
 |**category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
-## <a name="see-also"></a>请参阅  
- [SQL Server 代理表&#40;Transact SQL&#41;](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;Transact-sql&#41;的 SQL Server 代理表](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  
   
   

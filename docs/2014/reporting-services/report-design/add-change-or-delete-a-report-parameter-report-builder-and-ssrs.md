@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ebf333b49c20c7eadef4fdbcd54834c450d274c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106689"
 ---
 # <a name="add-change-or-delete-a-report-parameter-report-builder-and-ssrs"></a>添加、更改或删除报表参数（报表生成器和 SSRS）
@@ -53,19 +53,19 @@ ms.locfileid: "66106689"
   
 ### <a name="to-delete-a-report-parameter"></a>删除报表参数  
   
-1.  在 **“报表数据”** 窗格中，展开 **“参数”** 节点。  
+1.  在 "**报表数据**" 窗格中，展开 "**参数**" 节点。  
   
 2.  右键单击报表参数，然后单击 **“删除”**。  
   
-## <a name="see-also"></a>请参阅  
- [为报表参数添加、更改或删除可用值（报表生成器和 SSRS）](add-change-or-delete-available-values-for-a-report-parameter.md)   
- [为报表参数添加、更改或删除默认值（报表生成器和 SSRS）](add-change-or-delete-default-values-for-a-report-parameter.md)   
+## <a name="see-also"></a>另请参阅  
+ [添加、更改或删除报表参数的可用值 &#40;报表生成器和 SSRS&#41;](add-change-or-delete-available-values-for-a-report-parameter.md)   
+ [添加、更改或删除报表参数 &#40;报表生成器和 SSRS 的默认值&#41;](add-change-or-delete-default-values-for-a-report-parameter.md)   
  [更改报表参数的顺序（报表生成器和 SSRS）](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
  [报表参数（报表生成器和报表设计器）](report-parameters-report-builder-and-report-designer.md)   
- [用于对话框、窗格和向导的报表生成器帮助](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+ [报表生成器对话框、窗格和向导的帮助](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [向报表添加级联参数（报表生成器和 SSRS）](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
  [教程：向报表添加参数（报表生成器）](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
- [教程&#40;报表生成器&#41;](../report-builder-tutorials.md)   
+ [教程 &#40;报表生成器&#41;](../report-builder-tutorials.md)   
  [添加数据集筛选器、数据区域筛选器和组筛选器（报表生成器和 SSRS）](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [参数集合引用（报表生成器和 SSRS）](built-in-collections-parameters-collection-references-report-builder.md)   
  [将多值参数添加到报表](add-a-multi-value-parameter-to-a-report.md)  

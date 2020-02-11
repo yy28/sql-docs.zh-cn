@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5c176536675af707ec2e16fde80028beba8a019a
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73779991"
 ---
 # <a name="allocating-a-statement-handle"></a>分配语句句柄
@@ -39,11 +39,11 @@ ms.locfileid: "73779991"
   
  调用**SQLSetStmtAttr**并将*fOption*设置为 SQL_ATTR_QUERY_TIMEOUT 会设置查询超时间隔，以帮助保护服务器和用户的长时间运行的查询。  
   
- 如果调用**SQLSetStmtAttr**并将*fOption*设置为 SQL_ATTR_MAX_LENGTH 会限制单个语句可以检索的**文本**和**图像**数据量。 如果调用**SQLSetStmtAttr** ，并将*fOption*设置为 SQL_ATTR_MAX_ROWS 也会将行集限制为前*n*行（如果这是所有应用程序都需要）。 请注意，设置 SQL_ATTR_MAX_ROWS 会导致驱动程序向服务器发出 SET ROWCOUNT 语句。 这会影响所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语句，包括触发器和更新。  
+ 如果调用**SQLSetStmtAttr**并将*fOption*设置为 SQL_ATTR_MAX_LENGTH 会限制单个语句可以检索的**文本**和**图像**数据量。 如果调用**SQLSetStmtAttr** ，并将*fOption*设置为 SQL_ATTR_MAX_ROWS 也会将行集限制为前*n*行（如果这是所有应用程序都需要）。 请注意，设置 SQL_ATTR_MAX_ROWS 会导致驱动程序向服务器发出 SET ROWCOUNT 语句。 这会影响[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所有语句，包括触发器和更新。  
   
  当您设置这些选项时，请务必小心。 最好是连接句柄中的所有语句句柄对于 SQL_ATTR_MAX_LENGTH 和 SQL_ATTR_MAX_ROWS 都具有相同的设置。 如果驱动程序从一个语句句柄切换到另一个对于这些选项具有不同值的语句句柄，则驱动程序必须生成适当的 SET TEXTSIZE 和 SET ROWCOUNT 语句以更改这些设置。 驱动程序无法将这些语句与用户 SQL 语句放在相同的批中，因为用户 SQL 语句可能包含必须为批中第一条语句的语句。 驱动程序必须在单独的批中发送 SET TEXTSIZE 和 SET ROWCOUNT 语句，这会自动生成到服务器的一次附加往返。  
   
 ## <a name="see-also"></a>另请参阅  
- [执行查询&#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
+ [&#40;ODBC&#41;执行查询](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

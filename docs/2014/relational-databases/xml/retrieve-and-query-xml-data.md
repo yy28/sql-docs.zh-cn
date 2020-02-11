@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0f556bfccdd117b23db36bb9551e885f4c38614e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63241208"
 ---
 # <a name="retrieve-and-query-xml-data"></a>检索和查询 XML 数据
@@ -40,7 +40,7 @@ FROM T1
   
  结果为 `<doc/>`。  
   
- 当在 `xml` 数据类型实例中存储 XML 数据时，不会保留 XML 声明（如 `<?xml version='1.0'?>`）。 这是设计的结果。 XML 声明 （） 及其属性 (版本/编码/stand-alone) 后，将和丢失数据被转换为键入`xml`。 XML 声明被视为对 XML 分析器的指令。 XML 数据在内部存储为 ucs-2。 XML 实例中所有其他 PI 均被保留。  
+ 当在 `<?xml version='1.0'?>` 数据类型实例中存储 XML 数据时，不会保留 XML 声明（如 `xml`）。 这是设计的结果。 在将数据转换为类型`xml`后，XML 声明（）及其属性（版本/编码/独立）将丢失。 XML 声明被视为对 XML 分析器的指令。 XML 数据在内部存储为 ucs-2。 XML 实例中所有其他 PI 均被保留。  
   
   
 ### <a name="order-of-attributes"></a>属性的顺序  
@@ -87,7 +87,7 @@ GO
   
   
 ##  <a name="query"></a> 设置所需的查询选项  
- 查询时`xml`类型列或变量使用`xml`数据类型方法，下列选项必须按照所示进行设置。  
+ 使用`xml`数据`xml`类型方法查询类型列或变量时，必须按所示设置以下选项。  
   
 |SET 选项|所需值|  
 |-----------------|---------------------|  
@@ -99,10 +99,10 @@ GO
 |NUMERIC_ROUNDABORT|OFF|  
 |QUOTED_IDENTIFIER|ON|  
   
- 如果未设置选项，如所示，查询和修改在`xml`数据类型方法将失败。  
+ 如果未按所示方式设置这些选项，则对`xml`数据类型方法的查询和修改将失败。  
   
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建 XML 数据的实例](create-instances-of-xml-data.md)  
   
   

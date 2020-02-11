@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef00476e7c469a98532e58302c560c805669421d
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74683590"
 ---
 # <a name="powerpivot-for-sharepoint-ssas"></a>PowerPivot for SharePoint (SSAS)
@@ -53,12 +53,12 @@ ms.locfileid: "74683590"
   
  SharePoint 集成模式下的 Analysis Service 服务器实例完成该部署。 它加载、查询和卸载数据。 如果工作簿配置用于 PowerPivot 数据刷新，它还可以处理数据。  每个实例都与属于同一安装的本地 PowerPivot 系统服务紧密结合。  
   
-##  <a name="bkmk_RelatedContent"></a>本节内容  
+##  <a name="bkmk_RelatedContent"></a> 本节内容  
  [在管理中心中管理和配置 PowerPivot 服务器](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
- [使用 Windows PowerShell 的 PowerPivot 配置](power-pivot-configuration-using-windows-powershell.md)  
+ [使用 Windows PowerShell 配置 PowerPivot](power-pivot-configuration-using-windows-powershell.md)  
   
- [PowerPivot 配置工具](power-pivot-configuration-tools.md)  
+ [PowerPivot Configuration Tools](power-pivot-configuration-tools.md)  
   
  [PowerPivot 身份验证和授权](power-pivot-authentication-and-authorization.md)  
   

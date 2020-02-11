@@ -11,93 +11,93 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.openlocfilehash: 7c3da2af72743cc8f89273bfce24fe74fc7e4dc1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68104288"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>WideWorldImportersDW 数据库目录
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
-架构、 表和 WideWorldImportersDW 数据库中的存储的过程的说明。 
+WideWorldImportersDW 数据库中的架构、表和存储过程的说明。 
 
-WideWorldImportersDW 数据库用于数据仓库和分析处理。 在 WideWorldImporters 数据库中，生成有关销售和采购的事务数据并将其加载到 WideWorldImportersDW 数据库使用**日常 ETL 处理过程**。
+WideWorldImportersDW 数据库用于数据仓库和分析处理。 有关销售和采购的事务数据在 WideWorldImporters 数据库中生成，并使用**每日 ETL 过程**加载到 WideWorldImportersDW 数据库中。
 
-WideWorldImportersDW 中的数据从而镜像 WideWorldImporters 中的数据，但这些表组织以不同的方式。 尽管 WideWorldImporters 具有传统的规范化的架构，但是，使用 WideWorldImportersDW[星型架构](https://wikipedia.org/wiki/Star_schema)其表设计的方法。 事实数据表和维度表中，除了数据库 ETL 过程中包括所用的临时表的数。
+因此 WideWorldImportersDW 中的数据将反映 WideWorldImporters 中的数据，但表的组织方式有所不同。 尽管 WideWorldImporters 具有传统的规范化架构，但 WideWorldImportersDW 使用[星型架构](https://wikipedia.org/wiki/Star_schema)方法进行表设计。 除了事实数据表和维度表，数据库还包含一些用于 ETL 进程的临时表。
 
 ## <a name="schemas"></a>架构
 
-三个架构进行组织不同类型的表。
+不同类型的表在三个架构中进行组织。
 
-|架构|描述|
+|架构|说明|
 |-----------------------------|---------------------|
 |维度|维度表。|
-|事实|事实数据表。|  
-|集成|临时表和所需的 ETL 其他对象。|  
+|Fact|事实数据表。|  
+|集成|ETL 需要临时表和其他对象。|  
 
 ## <a name="tables"></a>表
 
-下面列出了维度和事实数据表。 集成架构中的表仅用于 ETL 进程，进程和未列出。
+下面列出了维度表和事实数据表。 集成架构中的表仅用于 ETL 进程，未列出。
 
 ### <a name="dimension-tables"></a>维度表
 
-WideWorldImportersDW 具有以下维度表。 说明内容包括 WideWorldImporters 数据库中与源数据表的关系。
+WideWorldImportersDW 具有以下维度表。 说明包括与 WideWorldImporters 数据库中的源表之间的关系。
 
 |表|源表|
 |-----------------------------|---------------------|
-|City|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
-|Customer|`Sales.Customers`, `Sales.BuyingGroups`, `Sales.CustomerCategories`.|
-|Date|包含有关日期，包括财务年度的信息的新表 (基于 11 月 1 日开始财政年)。|
-|Employee|`Application.People`。|
+|城市|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
+|客户|`Sales.Customers`, `Sales.BuyingGroups`, `Sales.CustomerCategories`.|
+|Date|新表，其中包含有关日期的信息，包括财政年度（基于财政年度的11月1日开始）。|
+|Employee|`Application.People`.|
 |StockItem|`Warehouse.StockItems`, `Warehouse.Colors`, `Warehouse.PackageType`.|
 |供应商|`Purchasing.Suppliers`, `Purchasing.SupplierCategories`.|
-|PaymentMethod|`Application.PaymentMethods`。|
-|TransactionType|`Application.TransactionTypes`。|
+|PaymentMethod|`Application.PaymentMethods`.|
+|TransactionType|`Application.TransactionTypes`.|
 
 ### <a name="fact-tables"></a>事实数据表
 
-WideWorldImportersDW 具有以下事实数据表。 说明内容包括在 WideWorldImporters 数据库，以及每个事实数据表通常与一起使用的分析报告的查询的类与源数据表的关系。
+WideWorldImportersDW 具有以下事实数据表。 说明包括与 WideWorldImporters 数据库中的源表的关系，以及每个事实数据表通常用于的分析/报告查询的类。
 
 |表|源表|示例分析|
 |-----------------------------|---------------------|---------------------|
-|订单|`Sales.Orders` 和 `Sales.OrderLines`|销售人员选取器/packer 工作效率和上的时间选择订单。 此外，较低的股票的情况下导致要延期交货。|
-|销售|`Sales.Invoices` 和 `Sales.InvoiceLines`|销售日期、 交付日期、 随时间推移的盈利能力、 销售人员的盈利率。|
-|购买|`Purchasing.PurchaseOrderLines`|预期的与实际前置时间|
-|事务|`Sales.CustomerTransactions` 和 `Purchasing.SupplierTransactions`|测量问题日期 vs 终止日期和数量。|
-|移动|`Warehouse.StockTransactions`|随着时间的推移的动作。|
-|股|`Warehouse.StockItemHoldings`|有关现有库存级别和值。|
+|订单|`Sales.Orders` 和 `Sales.OrderLines`|销售人员、选择器/packer 生产力，以及在何时选择订单。 此外，还会出现低库存情况，从而导致订单后退。|
+|Sale|`Sales.Invoices` 和 `Sales.InvoiceLines`|销售日期、交付日期、随时间推移而盈利率，按销售人员盈利。|
+|购买|`Purchasing.PurchaseOrderLines`|预期与实际提前期|
+|事务|`Sales.CustomerTransactions` 和 `Purchasing.SupplierTransactions`|衡量问题日期与终止日期和金额。|
+|搬家|`Warehouse.StockTransactions`|随着时间的推移而移动。|
+|股票控股|`Warehouse.StockItemHoldings`|现有库存水平和值。|
 
 ## <a name="stored-procedures"></a>存储过程
 
-主要用于 ETL 进程和出于配置目的使用存储的过程。
+存储过程主要用于 ETL 过程和配置目的。
 
-该示例的任何扩展且建议使用`Reports`Reporting Services 报表的架构和`PowerBI`Power BI 访问权限的架构。
+鼓励使用此示例的任何扩展，以便将`Reports`架构用于 Reporting Services 报表和 Power BI `PowerBI`访问的架构。
 
 ### <a name="application-schema"></a>应用程序架构
 
-使用这些过程来配置示例。 它们用于将企业版功能应用到标准版版本的示例中，添加 PolyBase，和重设种子 ETL。
+这些过程用于配置示例。 它们用于将企业版功能应用到示例的 standard edition 版本、添加 PolyBase，并为 ETL 添加种子。
 
-|过程|用途|
+|过程|目的|
 |-----------------------------|---------------------|
-|Configuration_ApplyPartitionedColumnstoreIndexing|适用于事实表的分区和列存储索引。|
-|Configuration_ConfigureForEnterpriseEdition|将应用分区列存储索引和内存中。|
-|Configuration_EnableInMemory|将集成临时表替换为 SCHEMA_ONLY 的内存优化表，以提高 ETL 性能。|
-|Configuration_ApplyPolyBase|配置外部数据源、 文件格式和表。|
-|Configuration_PopulateLargeSaleTable|Enterprise edition 更改应用，然后将更多的数据填充为其他历史记录 2012年日历年。|
-|Configuration_ReseedETL|删除现有数据并重新启动 ETL 种子。 这允许重新填充 OLAP 数据库以匹配在 OLTP 数据库中已更新的行。|
+|Configuration_ApplyPartitionedColumnstoreIndexing|对事实数据表应用分区索引和列存储索引。|
+|Configuration_ConfigureForEnterpriseEdition|应用分区、列存储索引和内存中的。|
+|Configuration_EnableInMemory|将集成临时表替换为 SCHEMA_ONLY 内存优化表，以提高 ETL 性能。|
+|Configuration_ApplyPolyBase|配置外部数据源、文件格式和表。|
+|Configuration_PopulateLargeSaleTable|应用企业版更改，然后为2012日历年填充更多的数据作为附加历史记录。|
+|Configuration_ReseedETL|删除现有数据并重新启动 ETL 种子。 这允许重新填充 OLAP 数据库，以匹配 OLTP 数据库中更新的行。|
 
 ### <a name="integration-schema"></a>集成架构
 
-在 ETL 过程中使用的过程分为以下类别：
-- ETL 包的所有 Get * 过程的帮助器过程。
-- ETL 包用于迁移的过程装载到数据仓库表的所有迁移 * 过程的数据。
-- `PopulateDateDimensionForYear` -采用一年，并可确保在中填充该年的所有日期`Dimension.Date`表。
+ETL 过程中使用的过程分为以下几类：
+- ETL 包的帮助程序过程-所有 Get * 过程。
+- ETL 包用于将暂存数据迁移到 DW 表中的过程-所有迁移 * 过程。
+- `PopulateDateDimensionForYear`-使用年份，并确保在`Dimension.Date`表中填充该年份的所有日期。
 
 ### <a name="sequences-schema"></a>序列架构
 
-若要配置数据库中的序列的过程。
+用于在数据库中配置序列的过程。
 
-|过程|用途|
+|过程|目的|
 |-----------------------------|---------------------|
-|ReseedAllSequences|调用过程`ReseedSequenceBeyondTableValue`的所有序列。|
-|ReseedSequenceBeyondTableValue|用于在任何表，它使用相同的序列中重新定位值之外的下一个序列值。 (如`DBCC CHECKIDENT`的序列，但可能多个表之间的标识列等效项。)|
+|ReseedAllSequences|为所有序列`ReseedSequenceBeyondTableValue`调用过程。|
+|ReseedSequenceBeyondTableValue|用于将下一个序列值重定位到任何使用同一序列的表中的值之外。 （例如`DBCC CHECKIDENT`适用于序列但可能跨多个表的标识列。）|

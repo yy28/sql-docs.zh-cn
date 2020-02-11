@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 43974e2ae8becb5ad24daf0c52246a71c890bce2
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74822162"
 ---
 # <a name="syspdw_table_distribution_properties-transact-sql"></a>sys. pdw_table_distribution_properties （Transact-sql）
@@ -26,7 +26,7 @@ ms.locfileid: "74822162"
   
 |列名|数据类型|说明|范围|  
 |-----------------|---------------|-----------------|-----------|  
-|**object_id**|**整形**|为其指定三个属性的表的 ID。||  
+|**object_id**|**int**|为其指定三个属性的表的 ID。||  
 |**distribution_policy**|**tinyint**|0 = 未定义<br /><br /> 1 = 无<br /><br /> 2 = 哈希<br /><br /> 3 = 复制<br /><br /> 4 = ROUND_ROBIN||  
 |**distribution_policy_desc**|**nvarchar （60）**|未定义、无、哈希、复制、ROUND_ROBIN|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]返回 HASH、ROUND_ROBIN 或复制。|  
   

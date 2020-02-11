@@ -1,5 +1,5 @@
 ---
-title: ConnectionString 属性 (ADO) |Microsoft Docs
+title: ConnectionString 属性（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,55 +16,55 @@ ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e391ad7c61bd6c303b0558892435af344a2768fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933491"
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString 属性 (ADO)
-指示用来建立与数据源的连接的信息。  
+指示用于建立与数据源的连接的信息。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
- 设置或返回**字符串**值。  
+ 设置或返回一个**字符串**值。  
   
 ## <a name="remarks"></a>备注  
- 使用**ConnectionString**属性来通过传递包含一系列的详细的连接字符串指定数据源*自变量* *= value*语句分隔分号。  
+ 使用**ConnectionString**属性来指定数据源，方法是传递包含一系列由分号分隔的*参数* *= 值*语句的详细连接字符串。  
   
- ADO 支持五个参数为**ConnectionString**属性; 而无需任何处理通过 ADO 提供程序直接与任何其他参数传递。 参数 ADO 支持如下所示。  
+ ADO 支持**ConnectionString**属性的五个参数;任何其他参数将直接传递给提供程序，而无需 ADO 处理。 ADO 支持的参数如下所示。  
   
-|参数|描述|  
+|参数|说明|  
 |--------------|-----------------|  
-|*Provider=*|指定要用于连接的提供程序的名称。|  
-|*文件名称 =*|指定的特定于提供程序的文件 （例如，持久化的数据源对象） 包含预设的连接信息的名称。|  
-|*远程提供程序 =*|指定要打开客户端连接时使用的提供程序的名称。 （仅在远程数据服务中。）|  
-|*Remote Server=*|指定要打开客户端连接时使用的服务器的路径名称。 （仅在远程数据服务中。）|  
-|*URL=*|连接字符串指定为标识资源，例如文件或目录的绝对 URL。|  
+|*Provider =*|指定要用于连接的访问接口的名称。|  
+|*文件名 =*|指定包含预设连接信息的特定于提供程序的文件的名称（例如，持久化数据源对象）。|  
+|*远程提供程序 =*|指定打开客户端连接时要使用的提供程序的名称。 （仅限远程数据服务。）|  
+|*远程服务器 =*|指定打开客户端连接时要使用的服务器的路径名称。 （仅限远程数据服务。）|  
+|*URL =*|将连接字符串指定为标识资源的绝对 URL，如文件或目录。|  
   
- 在设置后**ConnectionString**属性并打开[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象，该提供程序可能会通过将映射到 ADO 定义自变量名称等更改属性的内容及其特定提供程序的等效项。  
+ 设置**ConnectionString**属性并打开[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象后，提供程序可以更改属性的内容，例如，通过将 ADO 定义的参数名称映射到特定提供程序的等效项。  
   
- **ConnectionString**属性将自动继承值，该值用于*ConnectionString*自变量[打开](../../../ado/reference/ado-api/open-method-ado-connection.md)方法，因此您可以重写当前**ConnectionString**属性期间**打开**方法调用。  
+ **ConnectionString**属性会自动继承用于[Open](../../../ado/reference/ado-api/open-method-ado-connection.md)方法的*connectionstring*参数的值，因此，您可以在**打开**方法调用过程中重写当前的**ConnectionString**属性。  
   
- 因为*文件名*参数会使 ADO 来加载相关联的提供程序，则不能通过这两*提供程序*并*文件名*参数。  
+ 由于*文件名*参数会使 ADO 加载关联的提供程序，因此不能同时传递*Provider*和*File Name*参数。  
   
- **ConnectionString**时该连接已关闭，只读方式打开时，属性为读/写。  
+ 连接关闭时， **ConnectionString**属性是可读/写的，当连接处于打开状态时为只读。  
   
- 中的自变量的副本**ConnectionString**属性将被忽略。 使用任何参数的最后一个实例。  
+ **ConnectionString**属性中参数的重复项将被忽略。 使用任何自变量的最后一个实例。  
   
 > [!NOTE]
->  **远程数据服务使用情况**客户端上使用时**连接**对象， **ConnectionString**属性只能包含*远程提供程序*并*远程服务器*参数。  
+>  **远程数据服务使用情况**当用于客户端**连接**对象时， **ConnectionString**属性只能包括*远程提供程序*和*远程服务器*参数。  
   
  下表列出了每个 Windows 操作系统的默认 ADO 提供程序：  
   
 |默认 ADO 提供程序|Windows 操作系统|  
 |--------------------------|------------------------------|  
-|MSDASQL<br /><br /> （若要提高源代码的可读性，显式指定的提供程序名称的连接字符串中。）|Windows 2000 （32 位）<br /><br /> Windows XP （32 位）<br /><br /> Windows 2003 Server （32 位）<br /><br /> Windows Vista （32 位）<br /><br /> Windows Vista Service Pack 1 或更高版本 （32 位和 64 位）<br /><br /> Windows Vista （32 位和 64 位） 之后的 Windows 版本|  
-|无默认值。<br /><br /> 当 ADO 应用程序在以下操作系统上运行，且未显式指定提供程序时，ADO 将返回以下错误："ADODB。连接： 未指定提供程序和没有指定的默认提供程序"|Windows 2000 （64 位）<br /><br /> Windows XP （64 位）<br /><br /> Windows 2003 Server （64 位）<br /><br /> Windows Vista （64 位）|  
+|MSDASQL<br /><br /> （为了提高源代码的可读性，请在连接字符串中显式指定提供程序名称。）|Windows 2000 （32）<br /><br /> Windows XP （32位）<br /><br /> Windows 2003 服务器（32位）<br /><br /> Windows Vista （32位）<br /><br /> Windows Vista Service Pack 1 或更高版本（32位和64位）<br /><br /> Windows Vista 之后的 windows 版本（32位和64位）|  
+|无默认设置。<br /><br /> 当 ADO 应用程序在以下操作系统上运行且未显式指定提供程序时，ADO 将返回以下错误： "ADODB.RECORDSET"。连接：未指定提供程序，并且没有指定的默认提供程序|Windows 2000 （64）<br /><br /> Windows XP（64 位）<br /><br /> Windows 2003 服务器（64位）<br /><br /> Windows Vista（64 位）|  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>请参阅  
- [ConnectionString、 ConnectionTimeout 和 State 属性示例 (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
- [ConnectionString、 ConnectionTimeout 和 State 属性示例 （VC + +）](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
+## <a name="see-also"></a>另请参阅  
+ [ConnectionString、ConnectionTimeout 和 State 属性示例（VB）](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
+ [ConnectionString、ConnectionTimeout 和 State 属性示例（VC + +）](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
  [附录 A：提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)

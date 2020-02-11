@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 595da161660b60845c02d71e22411a2a4eba009c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192102"
 ---
 # <a name="handling-smo-exceptions"></a>处理 SMO 异常
@@ -33,14 +33,14 @@ ms.locfileid: "63192102"
  异常可能是常规异常，也可能是特定异常。 常规异常包含一组特定异常。 可使用几条 `Catch` 语句处理预计可能出现的错误，并使用常规异常处理代码处理其余错误。 通常，异常按照级联顺序发生。 很多情况下，SMO 异常可能是由 SQL 异常导致的。 检测是否为这种情况的方法便是连续使用 `InnerException` 属性确定导致最终顶级异常的原始异常。  
   
 > [!NOTE]  
->  `SQLException`中声明异常**System.Data.SqlClient**命名空间。  
+>  此`SQLException`异常在**SqlClient**命名空间中声明。  
   
- ![显示从其级别的关系图关系](../../../database-engine/dev-guide/media/exception-flow.gif "图显示了从其级别的关系")  
+ ![显示级别的关系图](../../../database-engine/dev-guide/media/exception-flow.gif "显示级别的关系图")  
   
  此图显示了异常通过各应用程序层的流程。  
   
 ## <a name="example"></a>示例  
- 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)或[在 Visual Studio.NET 中创建 Visual Basic SMO 项目](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)。  
+ 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual studio .net 中创建 Visual C&#35; SMO 项目](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)或[在 visual Studio .net 中创建 Visual Basic SMO 项目](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="catching-an-exception-in-visual-basic"></a>在 Visual Basic 中捕获异常  
  此代码示例演示如何使用 `Try...Catch...Finally`[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 语句捕获 SMO 异常。 所有 SMO 异常的类型均为 SmoException，并且均列出在 SMO 引用中。 显示内部异常的顺序的目的在于揭示错误的根源。 有关详细信息，请参阅 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET 文档。  

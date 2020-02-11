@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cab89537d9ac0894407d5c79e460bd3d2bd24403
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62869470"
 ---
-# <a name="mssqlserver17809"></a>MSSQLSERVER_17809
+# <a name="mssqlserver_17809"></a>MSSQLSERVER_17809
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62869470"
 |符号名称|SRV_NOFREESRVPROC|  
 |消息正文|由于 '%ld' 用户连接数已达到最大值，因此无法连接。 系统管理员可以使用 sp_configure 来提高最大值。 该连接已关闭。%.*ls|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  这是一条浅显易懂的消息。  
   
 ## <a name="user-action"></a>用户操作  

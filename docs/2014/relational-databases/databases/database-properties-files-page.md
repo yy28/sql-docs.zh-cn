@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 36b0d8b5d91b18ad4b97ac873ad3073ca97b133e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871983"
 ---
 # <a name="database-properties-files-page"></a>数据库属性（“文件”页）
@@ -74,7 +74,7 @@ ms.locfileid: "62871983"
   
  此字段对于 FILESTREAM 文件（包括内存优化文件组中的文件）无效。  
   
- **“添加”**  
+ **添加**  
  将新文件添加到数据库。  
   
  **删除**  
@@ -82,7 +82,7 @@ ms.locfileid: "62871983"
   
  有关文件的信息，请参阅 [Database Files and Filegroups](database-files-and-filegroups.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)   
  [sys.databases (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 26420df466860677f22d39d57133568a2f02bc68
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952010"
 ---
 # <a name="virtual-directory-has-unsupported-authentication-method-upgrade-advisor"></a>虚拟目录包含不支持的身份验证方法（升级顾问）
@@ -24,17 +24,17 @@ ms.locfileid: "71952010"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式。|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]本机模式。|  
   
 ## <a name="component"></a>组件  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-## <a name="description"></a>描述  
+## <a name="description"></a>说明  
  安装程序不能升级使用以下身份验证方法之一的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 系统  
   
 -   匿名  
   
--   摘要  
+-   Digest  
   
 -   .NET Passport  
   
@@ -43,7 +43,7 @@ ms.locfileid: "71952010"
 ## <a name="corrective-action"></a>纠正措施  
  若要继续升级，请在 IIS 中修改 ReportServer 和 Reports 虚拟目录的身份验证方法。 有关在 IIS 中修改身份验证方法的详细信息，请参阅 IIS 文档。 在修改 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 虚拟目录的身份验证方法之后，请重新运行升级顾问以确认没有其他升级问题。  
   
-## <a name="see-also"></a>请参阅  
- [Reporting Services 升级问题&#40;升级顾问&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
+## <a name="see-also"></a>另请参阅  
+ [升级顾问 &#40;Reporting Services 升级问题&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
   

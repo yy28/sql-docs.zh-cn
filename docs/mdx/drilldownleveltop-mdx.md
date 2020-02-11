@@ -1,5 +1,5 @@
 ---
-title: DrilldownLevelTop (MDX) |Microsoft Docs
+title: DrilldownLevelTop （MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 461c91d7261b42b5828e2c515a89e8203f40e357
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68049275"
 ---
 # <a name="drilldownleveltop-mdx"></a>DrilldownLevelTop (MDX)
@@ -45,13 +45,13 @@ DrilldownLevelTop(<Set_Expression>, <Count> [,[<Level_Expression>] [,[<Numeric_E
  用于将计算成员添加到深化结果的关键字。  
   
 ## <a name="remarks"></a>备注  
- 如果指定了数值表达式，则**DrilldownLevelTop**函数排序，计算出的子降序排序，根据数值表达式的值指定的集中每个成员的子级成员。 如果未指定数值表达式，则此函数根据由查询上下文确定的子成员集所表示的单元值，对指定集中每个成员的子成员按降序排序。  
+ 如果指定了数值表达式，则**DrilldownLevelTop**函数将根据数值表达式的值以降序顺序对指定集内每个成员的子成员进行排序。 如果未指定数值表达式，则此函数根据由查询上下文确定的子成员集所表示的单元值，对指定集中每个成员的子成员按降序排序。  
   
- 排序后， **DrilldownLevelTop**函数返回包含父成员的子成员中指定数量的集中*计数，* 最高值。  
+ 排序后， **DrilldownLevelTop**函数将返回一个集，该集包含父成员以及在*Count*中指定的具有最高值的子成员数。  
   
- **DrilldownLevelTop**函数是类似于[DrilldownLevel](../mdx/drilldownlevel-mdx.md)函数，而不是包括指定级别处每个成员的所有子级，但**DrilldownLevelTop**函数返回的最顶层子成员数。  
+ **DrilldownLevelTop**函数类似于[DrilldownLevel](../mdx/drilldownlevel-mdx.md)函数，但**DrilldownLevelTop**函数将返回最顶层的子成员数，而不是将每个成员的所有子级都包含在指定级别。  
   
- 查询 XMLA 属性 MdpropMdxDrillFunctions，您可以验证的服务器为钻取功能; 提供的支持级别请参阅[支持的 XMLA 属性&#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)有关详细信息。  
+ 通过查询 XMLA 属性 MdpropMdxDrillFunctions，可以验证服务器为钻取函数提供的支持级别;有关详细信息，请参阅[&#40;xmla&#41;支持的 Xmla 属性](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)。  
   
 ## <a name="examples"></a>示例  
  下面的示例根据默认度量值返回产品类别级别的前三个子成员。 在 Adventure Works 示例多维数据集中，Accessories 的前三个子成员是Bike Racks、Bike Stands 和 Bottles and Cages。 在 Management Studio 的 MDX 查询窗口中，你可导航到“产品 | 产品类别 | 成员 | 所有产品 | 附件”查看完整的列表。 你可增加计数参数以返回更多成员。  
@@ -65,7 +65,7 @@ SELECT DrilldownLevelTop
    FROM [Adventure Works]  
 ```  
   
- 下一步的示例演示如何使用**include_calc_members**标志，用于在深化级别包括计算的成员。 度量值 [Reseller Order Count] 包含在**DrilldownLevelTop**语句以确保返回的值将按该度量值。  
+ 下一个示例演示如何使用**include_calc_members**标志，该标志用于在深化级别包含计算成员。 **DrilldownLevelTop**语句中包含度量值 [分销商订单计数]，以确保返回值按该度量值排序。  
   
 ```  
 WITH MEMBER   
@@ -82,8 +82,8 @@ DRILLDOWNLEVELTOP(
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [DrilldownLevel (MDX)](../mdx/drilldownlevel-mdx.md)   
- [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [DrilldownLevel &#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)   
+ [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

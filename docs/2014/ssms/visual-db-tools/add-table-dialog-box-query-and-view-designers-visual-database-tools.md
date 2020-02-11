@@ -1,5 +1,5 @@
 ---
-title: 添加表对话框 （查询和视图设计器） (Visual Database Tools) |Microsoft Docs
+title: "\"添加表\" 对话框（查询和视图设计器）（Visual Database Tools） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 374014ee4ccdd783cee3eeb7bad5c5e728906299
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63460163"
 ---
 # <a name="add-table-dialog-box-query-and-view-designers-visual-database-tools"></a>“添加表”对话框（查询和视图设计器）(Visual Database Tools)
@@ -28,24 +28,24 @@ ms.locfileid: "63460163"
   
 ## <a name="options"></a>选项  
  **表**  
- 列出可以向“关系图”  窗格中添加的表。 若要添加某个表，请选择该表，再单击“添加”  。 若要同时添加多个表，请选中这些表，再单击“添加”  。  
+ 列出可以向“关系图”**** 窗格中添加的表。 若要添加某个表，请选择该表，再单击“添加”****。 若要同时添加多个表，请选中这些表，再单击“添加”****。  
   
  **视图**  
- 列出可以向“关系图”  窗格中添加的视图。 若要添加某个视图，请选择该视图，再单击“添加”  。 若要同时添加多个视图，请选中这些视图，再单击“添加”  。  
+ 列出可以添加到 "**关系图**" 窗格中的视图。 若要添加某个视图，请选择该视图，再单击“添加”****。 若要同时添加多个视图，请选中这些视图，再单击“添加”****。  
   
  **函数**  
- 列出可以向“关系图”  窗格中添加的用户定义函数。 若要添加某个函数，请选择该函数，再单击“添加”  。 若要同时添加多个函数，请选中这些函数，再单击“添加”  。  
+ 列出可以向“关系图”**** 窗格中添加的用户定义函数。 若要添加某个函数，请选择该函数，再单击“添加”****。 若要同时添加多个函数，请选中这些函数，再单击“添加”****。  
   
  **同义词**  
- 列出可以向“关系图”  窗格中添加的同义词。 若要添加某个同义词，请选择该同义词，再单击“添加”  。 若要同时添加多个同义词，请选中这些同义词，再单击“添加”  。  
+ 列出可以向“关系图”**** 窗格中添加的同义词。 若要添加某个同义词，请选择该同义词，再单击“添加”****。 若要同时添加多个同义词，请选中这些同义词，再单击“添加”****。  
   
- **刷新**  
+ **“刷新”**  
  更新该列表以包含自上次检索该列表以来对数据库做出的所有更改。  
   
- **“添加”**  
+ **添加**  
  添加所选的一项或多项。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [设计查询和视图操作指南主题 (Visual Database Tools)](visual-database-tools.md)  
   
   

@@ -11,18 +11,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96d60ae8fc176fc1fc108d907f33f01877795955
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151118"
 ---
 # <a name="xtp-transactions"></a>XTP 事务
   XTP 事务性能对象包含与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 XTP 引擎事务相关的计数器。  
   
- 下表介绍**XTP 事务**计数器。  
+ 下表说明了**XTP 事务**计数器。  
   
-|计数器|Description|  
+|计数器|说明|  
 |-------------|-----------------|  
 |**级联中止数/秒**|由于提交依赖关系回滚而每秒回滚的事务数（平均值）。|  
 |**采用的提交依赖关系数/秒**|事务每秒采用的提交依赖关系数（平均值）。|  
@@ -35,7 +35,7 @@ ms.locfileid: "63151118"
 |**中止的事务数/秒**|（用户和系统）每秒中止的事务数（平均值）。|  
 |**创建的事务数/秒**|系统中每秒创建的事务数（平均值）。<br /><br /> 对 XTP 事务的计数方式不同于基于磁盘的事务（反映在“数据库:事务数/秒”中）。 例如，“创建的事务数/秒”对只读事务进行计数，而“数据库:事务数/秒”则不然。|  
   
-## <a name="see-also"></a>请参阅  
- [XTP&#40;内存中 OLTP&#41;性能计数器](../../integration-services/performance/performance-counters.md)  
+## <a name="see-also"></a>另请参阅  
+ [XTP &#40;内存中 OLTP&#41; 性能计数器](../../integration-services/performance/performance-counters.md)  
   
   

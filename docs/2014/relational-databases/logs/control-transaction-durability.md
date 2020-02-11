@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a90d40b158acf786ccb5bcdf962c2d6077c59dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62743163"
 ---
 # <a name="control-transaction-durability"></a>控制事务持续性
@@ -42,7 +42,7 @@ ms.locfileid: "62743163"
   
  **完全事务持续性保证**  
   
--   事务提交成功后，该事务所做的更改就对系统中的其他事务可见。 请参阅主题[事务隔离级别](../../database-engine/transaction-isolation-levels.md)有关详细信息。  
+-   事务提交成功后，该事务所做的更改就对系统中的其他事务可见。 有关详细信息，请参阅主题[事务隔离级别](../../database-engine/transaction-isolation-levels.md)。  
   
 -   提交并不保证持续性。 在事务提交成功并将控制权归还给客户端之前，对应的日志记录会保存到磁盘。  
   
@@ -56,17 +56,17 @@ ms.locfileid: "62743163"
     > [!NOTE]  
     >  如果并发度很高，特别是如果填充日志缓冲区的速度比刷新缓冲区的速度快，仍然可能发生日志 I/O 争用。  
   
- **何时使用延迟的事务持续性**  
+ **何时使用延迟事务持续性**  
   
  适合使用延迟事务持续性的部分情况如下：  
   
- **可以容忍丢失部分数据。**  
+ **可容忍丢失部分数据。**   
  如果可以容忍一定的数据丢失，例如只要有大部分数据即可，个别记录不是非常重要，就值得考虑延迟持续性。 如果无法容忍任何数据丢失，则不要使用延迟事务持续性。  
   
- **在事务日志写入时遭遇瓶颈。**  
+ **在事务日志写入时遭遇瓶颈。**   
  如果性能问题是由于事务日志写入延迟造成的，则应用程序可能适合使用延迟事务持续性。  
   
- **你的工作负荷具有大量争用率。**  
+ **工作负荷的争用率很高。**   
  如果系统工作负载争用级别很高，则会花费大量时间等待锁释放。 延迟事务持续性会缩短提交时间，因此能够更快地释放锁，从而实现更大的吞吐量。  
   
  **延迟事务持续性保证**  
@@ -77,7 +77,7 @@ ms.locfileid: "62743163"
   
     -   同一个数据库中完全持久的事务在数据库中做出更改并成功提交。  
   
-    -   用户成功执行系统存储过程 `sp_flush_log`。  
+    -   用户成功执行系统存储过程 `sp_flush_log` 。  
   
     -   内存中事务日志缓冲区填充并自动刷新到磁盘。  
   
@@ -98,12 +98,12 @@ ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }
  [默认] 使用此设置时，不管提交级别设置如何 (DELAYED_DURABILITY=[ON | OFF])，对数据库提交的所有事务都是完全持久事务。 无需更改和重新编译存储过程。 这样能确保任何数据都不会因延迟持续性面临风险。  
   
  `ALLOWED`  
- 使用此设置时，每个事务的持续性都在事务级别确定 - DELAYED_DURABILITY = { OFF | ON }。 请参阅[原子块级别控制-本机编译存储过程](#atomic-block-level-control---natively-compiled-stored-procedures)并[提交级别控制-Transact SQL](#commit-level-control---t-sql)有关详细信息。  
+ 使用此设置时，每个事务的持续性都在事务级别确定 - DELAYED_DURABILITY = { OFF | ON }  。 有关详细信息，请参阅[原子块级别控制-本机编译存储过程](#atomic-block-level-control---natively-compiled-stored-procedures)和[提交级别控制-transact-sql](#commit-level-control---t-sql) 。  
   
  `FORCED`  
  使用此设置，对数据库提交的每个事务都是延迟持久事务。 无论事务指定完全持久 (DELAYED_DURABILITY = OFF) 还是不进行任何指定，事务都是延迟持久事务。 当数据库适合使用延迟事务持续性，并且您不希望更改任何应用程序代码时，此设置很有用。  
   
-### <a name="atomic-block-level-control---natively-compiled-stored-procedures"></a>原子块级别控制-本机编译存储过程  
+### <a name="atomic-block-level-control---natively-compiled-stored-procedures"></a> 原子块级别控制 - 本机编译存储过程  
  下面的代码面向原子块内部。  
   
 ```sql  
@@ -131,14 +131,14 @@ AS BEGIN ATOMIC WITH
 END  
 ```  
   
-### <a name="table-1-durability-in-atomic-blocks"></a>表 1:原子块中的持续性  
+### <a name="table-1-durability-in-atomic-blocks"></a>表 1：原子块中的持续性  
   
 |原子块持续性选项|没有现有事务|事务正在进行（完全或延迟持久）|  
 |------------------------------------|-----------------------------|---------------------------------------------------------|  
 |`DELAYED_DURABILITY = OFF`|原子块启动新的完全持久事务。|原子块在现有事务中创建一个保存点，然后开始新事务。|  
 |`DELAYED_DURABILITY = ON`|原子块启动新的延迟持久事务。|原子块在现有事务中创建一个保存点，然后开始新事务。|  
   
-### <a name="commit-level-control---t-sql"></a>提交级别控制-(T-SQL)
+### <a name="commit-level-control---t-sql"></a>提交级别控制-（T-sql）
  COMMIT 语法已扩展，您可以强制实施延迟事务持续性。 如果 DELAYED_DURABILITY 在数据库级别设置为 DISABLED 或 FORCED（请参阅上文），则忽略此 COMMIT 选项。  
   
 ```sql  
@@ -157,10 +157,14 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
   
 |提交设置/数据库设置|DELAYED_DURABILITY = DISABLED|DELAYED_DURABILITY = ALLOWED|DELAYED_DURABILITY = FORCED|  
 |--------------------------------------|-------------------------------------|------------------------------------|-----------------------------------|  
-|`DELAYED_DURABILITY = OFF` 数据库级事务。|事务是完全持久事务。|事务是完全持久事务。|事务是延迟持久事务。|  
-|`DELAYED_DURABILITY = ON` 数据库级事务。|事务是完全持久事务。|事务是延迟持久事务。|事务是延迟持久事务。|  
-|`DELAYED_DURABILITY = OFF` 跨数据库或分布式事务。|事务是完全持久事务。|事务是完全持久事务。|事务是完全持久事务。|  
-|`DELAYED_DURABILITY = ON` 跨数据库或分布式事务。|事务是完全持久事务。|事务是完全持久事务。|事务是完全持久事务。|  
+|
+  `DELAYED_DURABILITY = OFF` 数据库级事务。|事务是完全持久事务。|事务是完全持久事务。|事务是延迟持久事务。|  
+|
+  `DELAYED_DURABILITY = ON` 数据库级事务。|事务是完全持久事务。|事务是延迟持久事务。|事务是延迟持久事务。|  
+|
+  `DELAYED_DURABILITY = OFF` 跨数据库或分布式事务。|事务是完全持久事务。|事务是完全持久事务。|事务是完全持久事务。|  
+|
+  `DELAYED_DURABILITY = ON` 跨数据库或分布式事务。|事务是完全持久事务。|事务是完全持久事务。|事务是完全持久事务。|  
   
 ## <a name="how-to-force-a-transaction-log-flush"></a>如何强制执行事务日志刷新  
  有两种方法可以强制将事务日志刷新到磁盘。  
@@ -179,7 +183,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  **跨数据库和 DTC**  
  如果事务跨数据库或是分布式事务，则无论数据库或事务提交设置如何，它都是完全持久事务。  
   
- **Alwayson 可用性组和镜像**  
+ **AlwaysOn 可用性组和镜像**  
  延迟持久事务并不能保证主数据库或任何辅助数据库的持续性。 此外，它们也不保证了解辅助数据库的事务。 提交后，在从同步辅助数据接收到任何确认之前，控制权就会归还客户端。  
   
  **故障转移群集**  
@@ -200,10 +204,10 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
 ### <a name="catastrophic-events"></a>灾难性事件  
  发生灾难性事件（如服务器崩溃）时，将丢失已提交但未保存到磁盘的所有事务的数据。 根据数据库中的任何表（持久内存优化或基于磁盘）执行完全持久的事务时，或调用 `sp_flush_log` 时，延迟的持久事务保存到磁盘。 如果你在使用延迟的持久事务，那么你可能想要在数据库中创建一个小型表，你可定期更新该表或调用 `sp_flush_log` ，以保存所有未完成的已提交事务。 事务日志还会在变满时刷新，但这难以预测，也无法进行控制。  
   
-### <a name="sql-server-shutdown-and-restart"></a>SQL Server 关闭和重新启动  
+### <a name="sql-server-shutdown-and-restart"></a>SQL Server 关闭并重新启动  
  对于延迟的持久性， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的意外关闭和预期关闭/重新启动没有区别。 与灾难性事件类似，应制定针对数据丢失的计划。 在进行计划的关闭/重新启动时，一些尚未写入磁盘的事务可能会首先保存到磁盘，但不应对其进行计划。 虽然计划了关闭/重启，但无论是否计划，都会像灾难性事件一样丢失数据。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [事务隔离级别](../../database-engine/transaction-isolation-levels.md)   
  [内存优化表事务隔离级别准则](../in-memory-oltp/memory-optimized-tables.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: IsSibling (MDX) |Microsoft Docs
+title: IsSibling （MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 15c80cec67b0a40c8ac4c436a45a4551132858f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68105351"
 ---
 # <a name="issibling-mdx"></a>IsSibling (MDX)
@@ -35,7 +35,7 @@ IsSibling(Member_Expression1, Member_Expression2)
  返回成员的有效多维表达式 (MDX)。  
   
 ## <a name="remarks"></a>备注  
- **IsSibling**函数将返回**true**如果指定的第一个成员是第二个指定成员的同级成员。 否则，该函数返回**false**。  
+ 如果第一个指定的成员是第二个指定成员的同级，则**IsSibling**函数返回**true** 。 否则，该函数返回**false**。  
   
 ## <a name="example"></a>示例  
  如果 Date 维度的 Fiscal 层次结构上的当前成员是 2002 年 7 月的同级，则下面的示例将返回 TRUE：  
@@ -50,7 +50,7 @@ IsSibling(Member_Expression1, Member_Expression2)
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>请参阅  
- [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

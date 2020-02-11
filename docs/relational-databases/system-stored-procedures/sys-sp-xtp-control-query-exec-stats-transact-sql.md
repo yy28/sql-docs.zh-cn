@@ -1,5 +1,5 @@
 ---
-title: sys.sp_xtp_control_query_exec_stats (Transact SQL) |Microsoft Docs
+title: sys. sp_xtp_control_query_exec_stats （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 10/13/2015
 ms.prod: sql
@@ -18,20 +18,20 @@ ms.assetid: 4838125d-ad1e-479e-b7d2-42655e8f4f02
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cd8ee38dc4ac1a8fd3a729d94744d3fd98f78875
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017847"
 ---
-# <a name="sysspxtpcontrolqueryexecstats-transact-sql"></a>sys.sp_xtp_control_query_exec_stats (Transact-SQL)
+# <a name="syssp_xtp_control_query_exec_stats-transact-sql"></a>sys.sp_xtp_control_query_exec_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   对实例的所有本机编译存储过程或特定的本机编译存储过程启用按查询的统计信息收集。  
   
  启用统计信息收集时性能下降。 如果只需要对一个或几个本机编译存储过程进行故障排除，则可仅对这些本机编译存储过程启用统计信息收集。  
   
- 若要启用所有本机编译存储过程在过程级别统计信息收集，请参阅[sys.sp_xtp_control_proc_exec_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)。  
+ 若要对所有本机编译的存储过程在过程级别启用统计信息收集，请参阅[transact-sql&#41;&#40;sp_xtp_control_proc_exec_stats ](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,17 +43,17 @@ sp_xtp_control_query_exec_stats [ [ @new_collection_value = ] collection_value ]
 ```  
   
 ## <a name="arguments"></a>参数  
- @new_collection_value =*值*  
+ @new_collection_value=*值*  
  决定打开 (1) 还是关闭 (0) 过程级统计信息收集。  
   
- @new_collection_value 设置为零[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]启动。  
+ @new_collection_value当启动时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，设置为零。  
   
- @database_id = = *database_id*， @xtp_object_id = *procedure_id*  
- 本机编译存储过程的数据库 ID 和对象 ID。 如果为实例启用了统计信息收集 ([sys.sp_xtp_control_proc_exec_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md))，则收集对本机编译的存储过程的统计信息。 对实例关闭统计信息收集不会关闭对个别本机编译存储过程的统计信息收集。  
+ @database_id= = *database_id*， @xtp_object_id = *procedure_id*  
+ 本机编译存储过程的数据库 ID 和对象 ID。 如果为实例启用了统计信息收集（[sp_xtp_control_proc_exec_stats &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)），则将收集本机编译的存储过程的统计信息。 对实例关闭统计信息收集不会关闭对个别本机编译存储过程的统计信息收集。  
   
- 使用[sys.databases &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)， [sys.procedures &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)， [DB_ID &#40;-&#41;](../../t-sql/functions/db-id-transact-sql.md)，或[OBJECT_ID &#40;TRANSACT-SQL&#41; ](../../t-sql/functions/object-id-transact-sql.md)若要获取的数据库和存储的过程的 Id。  
+ 使用[sys. database &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)， [sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)， [DB_ID &#40;transact-sql&#41;](../../t-sql/functions/db-id-transact-sql.md)，或 OBJECT_ID &#40;[transact-sql&#41;](../../t-sql/functions/object-id-transact-sql.md)获取数据库和存储过程的 id。  
   
- @old_collection_value =*值*  
+ @old_collection_value=*值*  
  返回当前状态。  
   
 ## <a name="return-code"></a>返回代码  
@@ -82,7 +82,7 @@ EXEC sp_xtp_control_query_exec_stats @database_id = 5,
 SELECT @c AS 'collection status';  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [内存中 OLTP（内存中优化）](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

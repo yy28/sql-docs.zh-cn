@@ -16,22 +16,22 @@ ms.assetid: 81ba9453-c085-47c0-b411-90ca6a5ee428
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 232d2e9b7e9eb695a40058075ea511392e464a32
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68064401"
 ---
 # <a name="catalog-functions"></a>目录函数
-所有数据库都有一个结构，其中概述了如何将数据库中存储数据。 例如，简单的销售订单数据库可能具有在下图中，ID 列使用链接的表中所示的结构。  
+所有数据库都具有一个结构，该结构概述了如何将数据存储在数据库中。 例如，一个简单的销售订单数据库可能具有下图所示的结构，其中的 ID 列用于链接表。  
   
- ![显示了一个简单的数据库的结构](../../../odbc/reference/develop-app/media/pr19.gif "pr19")  
+ ![显示简单数据库的结构](../../../odbc/reference/develop-app/media/pr19.gif "pr19")  
   
- 此结构，以及其他信息的权限，例如存储在名为数据库的系统表的一组*目录，* 也称为*数据字典*。  
+ 此结构和其他信息（如特权）存储在一组称为数据库*目录（* 也称为*数据字典*）的系统表中。  
   
- 应用程序可以发现此结构通过调用*目录函数*。 目录函数返回结果集和进行中的信息通常通过实现**选择**目录中的表的语句。 例如，应用程序可以请求包含系统上所有表的相关信息的结果集或包含特定表中的所有列的相关信息的结果集。  
+ 应用程序可以通过调用*目录函数*来发现此结构。 目录函数返回结果集中的信息，通常通过对目录中的表执行**SELECT**语句来实现。 例如，应用程序可以请求包含系统上所有表的相关信息的结果集或包含特定表中的所有列的相关信息的结果集。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [目录数据的用法](../../../odbc/reference/develop-app/uses-of-catalog-data.md)  
   
