@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: e81bf59912499310fc95afd29758d5be5f691118
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056358"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>使用格式化文件批量导入数据 (SQL Server)
@@ -37,8 +37,8 @@ ms.locfileid: "74056358"
   * SQLNCHAR 或 SQLNVARCHAR（以 Unicode 格式发送数据）
   * SQLBINARY 或 SQLVARYBIN（不经任何转换即发送数据）。
 * Azure SQL 数据库和 Azure SQL 数据仓库仅支持 [bcp](../../tools/bcp-utility.md)。  有关其他信息，请参阅：
-  * [将数据加载到 Azure SQL 数据仓库中](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-load/)
-  * [将数据从 SQL Server 加载到 Azure SQL 数据仓库中（平面文件）](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-load-from-sql-server-with-bcp/)
+  * [将数据载入 Azure SQL 数据仓库](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-load/)
+  * [将数据从 SQL Server 载入 Azure SQL 数据仓库（平面文件）](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-load-from-sql-server-with-bcp/)
   * [迁移数据](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-migrate-data/)
 
 ## 示例测试条件<a name="etc"></a>  

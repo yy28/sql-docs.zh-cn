@@ -18,10 +18,10 @@ ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2719e330ec2fde61b91ca11ef93784983c6c418c
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74165910"
 ---
 # <a name="sp_cursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "74165910"
 
   将游标语句或批处理编译成执行计划，但并不创建游标。 编译的语句以后可供 sp_cursorexecute 使用。 此过程与 sp_cursorexecute 结合在一起具有与 sp_cursoropen 相同的功能，但拆分为两个阶段。 通过在表格格式数据流（TDS）包中指定 ID = 3 来调用 sp_cursorprepare。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,7 +46,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 > [!NOTE]  
 >  *prepared_handle*随后提供给 sp_cursorexecute 过程，以打开游标。 一旦创建了句柄，它就一直存在，直到您注销或通过 sp_cursorunprepare 过程显式删除它。  
   
- *params*  
+ *化*  
  标识参数化语句。 变量的参数定义将替换为语句*中的参数*标记。 *params*是调用**ntext**、 **nchar**或**nvarchar**输入值的必需参数。 如果语句未参数化，则输入一个 NULL 值。  
   
 > [!NOTE]  
@@ -61,14 +61,14 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
  *选项*  
  一个可选参数，它返回游标结果集列的说明。 *选项*需要以下**int**输入值。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
  滚动选项。 *scrollopt*是一个可选参数，它需要以下**整数**输入值之一。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -90,7 +90,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
  *ccopt*  
  并发控制选项。 *ccopt*是一个可选参数，它需要以下**整数**输入值之一。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS（以前称为 LOCKCC）|  
@@ -104,14 +104,14 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 |0x40000|OPTIMISTIC_ACCEPTABLE|  
 |0x80000|OPTIMISITC_ACCEPTABLE|  
   
- 与*scrollpt*一样，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以从请求的值分配不同的值。  
+ 与*scrollpt*一样， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以从所请求的值分配不同的值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  RPC 状态参数为以下值之一：  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
-|0|成功|  
+|0|Success|  
 |0x0001|失败|  
 |1FF6|无法返回元数据。<br /><br /> 注意：此操作的原因是语句不生成结果集;例如，它是 INSERT 或 DDL 语句。|  
   
@@ -144,12 +144,12 @@ exec sp_cursorclose @p2
  
  如果对*stmt*进行参数化，并且*scrollopt* PARAMETERIZED_STMT 值为 ON，则字符串的格式如下所示：  
   
- { *\<本地变量的名称 > \*\*\<数据类型 >* } [，...*n* ]  
+ { * \<局部变量名称> * *\<数据类型>* }[ ,...*n* ]  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_cursorexecute &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
- [sp_cursoropen &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
- [sp_cursorunprepare &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-cursorunprepare-transact-sql.md)   
+ [sp_cursorexecute &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
+ [sp_cursoropen &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
+ [sp_cursorunprepare &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursorunprepare-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

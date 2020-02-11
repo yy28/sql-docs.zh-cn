@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 4d380954be720a6cb839b0c4259a408733f8e176
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056328"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>使用字符格式导入或导出数据 (SQL Server)
@@ -54,16 +54,16 @@ ms.locfileid: "74056328"
   
 -   为避免在转换期间丢失扩展字符，请使用 Unicode 字符格式或指定代码页。  
   
--   存储在字符格式文件中的所有 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 数据都是在不包括元数据的情况下进行存储的。 每个数据值都将按照隐式数据转换规则转换为 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) 格式。 当数据导入到 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 列中时，该数据是以 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md)格式导入的。 而导入到数据类型不是 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 的列中时，数据将通过隐式转换从 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) 格式转换为其他格式。 有关数据转换的详细信息，请参阅[数据类型转换（数据库引擎）](../../t-sql/data-types/data-type-conversion-database-engine.md)。  
+-   存储在字符格式文件中的所有 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 数据都是在不包括元数据的情况下进行存储的。 每个数据值都将按照隐式数据转换规则转换为 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) 格式。 当数据导入到 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 列中时，该数据是以 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md)格式导入的。 而导入到数据类型不是 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md)的列中时，数据将通过隐式转换从 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) 格式转换为其他格式。 有关数据转换的详细信息，请参阅[数据类型转换（数据库引擎）](../../t-sql/data-types/data-type-conversion-database-engine.md)。  
   
--   [bcp 实用工具](../../tools/bcp-utility.md)将 [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) 值作为字符格式数据文件导出时，该数据文件小数点后保留四位数字且不带诸如逗号分隔符之类的任何数字分组符号。 例如，包含值 1,234,567.123456 的 [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) 列将以字符串 1234567.1235 的形式批量导出到数据文件中。  
+-   [bcp 实用工具](../../tools/bcp-utility.md) 将 [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) 值作为字符格式数据文件导出时，该数据文件小数点后保留四位数字且不带诸如逗号分隔符之类的任何数字分组符号。 例如，包含值 1,234,567.123456 的 [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) 列将以字符串 1234567.1235 的形式批量导出到数据文件中。  
   
 ## 字符格式的命令选项<a name="command_options"></a>  
 可以使用 [bcp](../../tools/bcp-utility.md)、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 或 [INSERT ... 将字符格式数据导入表中SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md)。对于 [bcp](../../tools/bcp-utility.md) 命令或 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 语句，你可以在语句中指定数据格式。  对于 [INSERT ...SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 语句，必须在格式化文件中指定数据格式。  
   
 下列命令选项支持字符格式：  
   
-|Command|选项|描述|  
+|Command|选项|说明|  
 |-------------|------------|-----------------|  
 |bcp|**-c**|让 bcp 实用工具使用字符数据。\*|  
 |BULK INSERT|DATAFILETYPE **='char'**|在批量导入数据时使用字符格式。|  
@@ -219,7 +219,7 @@ SELECT * FROM TestDatabase.dbo.myChar;
 -   [使用 Unicode 本机格式导入或导出数据 (SQL Server)](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp 实用工具](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)   
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   

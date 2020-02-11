@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: d016e4f45a91a61c5918a4bfdfb9dd1073521c02
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056314"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>使用 Unicode 字符格式导入或导出数据 (SQL Server)
@@ -41,7 +41,7 @@ ms.locfileid: "74056314"
 ## 使用 Unicode 字符格式的注意事项<a name="considerations"></a>
 使用 Unicode 字符格式时，请考虑下列事项：  
 
-* 默认情况下，[bcp 实用工具](../../tools/bcp-utility.md)使用制表符分隔字符数据字段，并用换行符终止记录。  有关如何指定替换终止符的详细信息，请参阅[指定字段终止符和行终止符 (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。
+* 默认情况下， [bcp 实用工具](../../tools/bcp-utility.md) 使用制表符分隔字符数据字段，并用换行符终止记录。  有关如何指定替换终止符的详细信息，请参阅[指定字段终止符和行终止符 (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。
 
 * Unicode 字符格式数据文件中存储的 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 数据的操作方式与字符格式数据文件中的同类数据的操作方式相同，唯一的不同是该数据存储为 [nchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 数据而不是 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) 数据。 有关字符格式的详细信息，请参阅 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
 
@@ -82,7 +82,7 @@ Error = [Microsoft][ODBC Driver 13 for SQL Server]Invalid character value for ca
   
 下列命令选项支持 Unicode 字符格式：  
   
-|Command|选项|描述|  
+|Command|选项|说明|  
 |-------------|------------|-----------------|  
 |bcp|**-w**|使用 Unicode 字符格式。|  
 |BULK INSERT|DATAFILETYPE **='widechar'**|批量导入数据时使用 Unicode 字符格式。|  
@@ -238,10 +238,10 @@ SELECT * FROM TestDatabase.dbo.myWidechar;
 -   [使用 Unicode 本机格式导入或导出数据 (SQL Server)](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp 实用工具](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)   
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)  
+ [排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   

@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: a3c8b1fbe01bf97eeba11d57ae2d7ee9095c3964
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056344"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>使用格式化文件将表列映射到数据文件字段 (SQL Server)
@@ -69,7 +69,7 @@ CREATE TABLE myRemap
 用于创建格式化文件的最简单方法是使用 [bcp 实用工具](../../tools/bcp-utility.md)。  首先，从现有表创建基本格式化文件。  其次，修改基本格式化文件以反映实际数据文件。
 
 ### 创建非 XML 格式化文件<a name="nonxml_format_file"></a>
-有关详细信息，请查看 [非 XML 格式化文件 (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 。 下面的命令使用 [bcp 实用工具](../../tools/bcp-utility.md) 基于 `myRemap.fmt`的架构生成非 xml 格式化文件 `myRemap`。  此外，限定符 `c` 用于指定字符数据， `t,` 用于将逗号指定为字段终止符，而 `T` 用于指定使用集成安全性的信任连接。  在命令提示符处输入以下命令：
+有关详细信息，请查看 [非 XML 格式化文件 (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 。 下面的命令基于 [的架构使用](../../tools/bcp-utility.md) bcp 实用工具 `myRemap.fmt`生成非 XML 格式化文件 `myRemap`。  此外，限定符 `c` 用于指定字符数据， `t,` 用于将逗号指定为字段终止符，而 `T` 用于指定使用集成安全性的信任连接。  在命令提示符处输入以下命令：
 ```
 bcp TestDatabase.dbo.myRemap format nul -c -f D:\BCP\myRemap.fmt -t, -T
 ```
@@ -80,7 +80,7 @@ bcp TestDatabase.dbo.myRemap format nul -c -f D:\BCP\myRemap.fmt -t, -T
 3.  确保最后一个格式化文件行后面有一个回车符。
 
 比较更改：     
-**早于**
+**之前**
 ```
 13.0
 4
@@ -90,7 +90,7 @@ bcp TestDatabase.dbo.myRemap format nul -c -f D:\BCP\myRemap.fmt -t, -T
 4       SQLCHAR 0       1       "\r\n"   4     Gender                 SQL_Latin1_General_CP1_CI_AS
 
 ```
-**After**
+**之后**
 ```
 13.0
 4
@@ -118,7 +118,7 @@ bcp TestDatabase.dbo.myRemap format nul -c -x -f D:\BCP\myRemap.xml -t, -T
 3. \<ROW> 元素中 \<COLUMN> 元素的顺序定义了其在批量操作中返回的顺序。  XML 格式化文件为每个 \<COLUMN> 元素分配了一个本地名称，该名称与批量导入操作的目标表中的列没有关系。  \<COLUMN> 元素的顺序与 \<RECORD> 定义中的 \<FIELD> 元素的顺序无关。  每个 \<COLUMN> 元素对应一个 \<FIELD> 元素（其 ID 在 \<COLUMN> 元素的 SOURCE 属性中指定）。  因此，\<COLUMN> SOURCE 的值是需要修订的唯一属性。  颠倒 \<COLUMN> SOURCE 属性 2 和 3 的顺序。
 
 比较更改  
-**早于**
+**之前**
 ```
 \<?xml version="1.0"?>
 \<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -136,7 +136,7 @@ bcp TestDatabase.dbo.myRemap format nul -c -x -f D:\BCP\myRemap.xml -t, -T
  </ROW>
 </BCPFORMAT>
 ```
-**After**
+**之后**
 ```
 \<?xml version="1.0"?>
 \<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -249,7 +249,7 @@ SELECT * FROM TestDatabase.dbo.myRemap;
 
   
 ## <a name="see-also"></a>另请参阅  
-[bcp Utility](../../tools/bcp-utility.md)   
+[bcp 实用工具](../../tools/bcp-utility.md)   
  [使用格式化文件跳过表列 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)   
  [使用格式化文件跳过数据字段 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
