@@ -13,19 +13,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 479cc0e650c598e0a253caca796b854dc4eb69cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62892665"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>选择源表和源视图（SQL Server 导入和导出向导）
-  使用**选择源表和视图**页后，可以指定的表和视图以从数据源复制到目标。  
+  使用 "**选择源表和视图**" 页可以指定要从数据源复制到目标的表和视图。  
   
 > [!NOTE]  
->  如果选中了“表复制”选项，则不必复制表中的所有列。 选择目标表后, 单击编辑映射以显示**列映射**对话框。 选择**\<忽略 >** 中**目标**列**列映射**你想要跳过的列对话框。  
+>  如果选中了“表复制”选项，则不必复制表中的所有列。 选择目标表后，请单击 "编辑映射" 以显示 "**列映射**" 对话框。 对于要跳过的**** 列，请选择** \<** "**列映射**" 对话框的 "目标" 列中的 "忽略>。  
   
- 若要了解有关此向导的详细信息，请参阅[SQL Server 导入和导出向导](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。 若要了解有关用于启动向导，选项以及已成功运行该向导所需的权限，请参阅[运行 SQL Server 导入和导出向导](start-the-sql-server-import-and-export-wizard.md)。  
+ 若要了解有关此向导的详细信息，请参阅[SQL Server 导入和导出向导](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。 若要了解启动向导的选项以及成功运行向导所需的权限，请参阅[运行 SQL Server 导入和导出向导](start-the-sql-server-import-and-export-wizard.md)。  
   
  SQL Server 导入和导出向导的作用是将数据从源复制到目标。 该向导还可以为您创建目标数据库和目标表。 但是，如果必须复制多个数据库或表，或者必须复制其他类型的数据库对象，则应改用复制数据库向导。 有关详细信息，请参阅 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)。  
   
@@ -39,14 +39,14 @@ ms.locfileid: "62892665"
  从列表中为每个源表选择一个目标表。  
   
 > [!NOTE]  
->  如果此时在向导中暂停操作，并使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或其他工具在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中创建目标表，新表不会立即出现在可用目标表的列表中。 若要刷新目标表的列表，请倒退两页回到**选择目标**页上，重新选择目标数据库，然后再次前进到**选择源表和视图**。  
+>  如果此时在向导中暂停操作，并使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或其他工具在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中创建目标表，新表不会立即出现在可用目标表的列表中。 若要刷新目标表的列表，请将两页返回到 "**选择目标**" 页，重新选择目标数据库，然后再次前进到 "**选择源表和视图**"。  
   
 ### <a name="other-options"></a>其他选项  
  **编辑映射**  
- 使用**列映射**对话框中，指定要接收源数据的目标列。 可以通过选择复制列的子集\<忽略 > 中**目标**的列**列映射**你想要跳过的列对话框。  
+ 使用 "**列映射**" 对话框可以指定要接收源数据的目标列。 对于要跳过的列，您可以通过\<在 "**列映射**" 对话框的 "**目标**" 列中选择 "忽略> 来只复制列的子集。  
   
  **预览**  
- 预览中的源数据**预览数据**对话框验证之前执行导入或导出。 **预览数据**对话框显示最多 200 行数据。  
+ 在执行导入或导出之前，在 "**预览数据**" 对话框中预览源数据以对其进行验证。 "**预览数据**" 对话框最多可显示200行数据。  
   
  预览数据后，可能需要更改为数据源和目标选定的选项。 若要进行这些更改，请在 **“选择源表和源视图”** 页，单击 **“后退”** 返回到可以更改选项的上一页。  
   

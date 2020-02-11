@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: bc4da6702716e845121d2081a166254d4be9449f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62468323"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>使用内存优化表备份数据库
@@ -28,18 +28,18 @@ ms.locfileid: "62468323"
 ## <a name="full-database-backup"></a>完整数据库备份  
  此讨论侧重于只有持久内存优化表的数据库的数据库备份，因为基于磁盘的表的备份过程相同。 内存优化文件组中的检查点文件对可能处于各种状态。 下表介绍备份的文件部分。  
   
-|检查点文件对状态|Backup|  
+|检查点文件对状态|备份|  
 |--------------------------------|------------|  
 |PRECREATED|仅文件元数据|  
 |UNDER CONSTRUCTION|仅文件元数据|  
-|在职|文件元数据加上使用的字节|  
+|活动|文件元数据加上使用的字节|  
 |合并源|文件元数据加上使用的字节|  
 |合并目标|仅文件元数据|  
 |REQUIRED FOR BACKUP/HA|文件元数据加上使用的字节|  
 |IN TRANSITION TO TOMBSTONE|仅文件元数据|  
 |TOMBSTONE|仅文件元数据|  
   
- 具有一个或多个内存优化表的数据库备份的大小通常大于其在内存中的大小，但小于磁盘上存储。 额外大小取决于删除的行数以及处于状态“合并源”和 REQUIRED FOR BACKUP/HA 下的检查点文件对数，从而间接取决于工作负荷。 有关检查点文件对状态的说明，请参阅[sys.dm_db_xtp_checkpoint_files &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)。  
+ 具有一个或多个内存优化表的数据库备份的大小通常大于其在内存中的大小，但小于磁盘上存储。 额外大小取决于删除的行数以及处于状态“合并源”和 REQUIRED FOR BACKUP/HA 下的检查点文件对数，从而间接取决于工作负荷。 有关检查点文件对状态的说明，请参阅[transact-sql&#41;&#40;dm_db_xtp_checkpoint_files ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)。  
   
 ### <a name="estimating-size-of-full-database-backup"></a>估计完整数据库备份的大小  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62468323"
   
  第一个工作负荷方案适用于（主要）插入。 在此方案中，大多数数据文件处于“活动”状态、完全加载，删除的行非常少。 数据库备份的大小接近于内存中的数据大小。  
   
- 第二个的工作负荷方案适用于频繁的插入、 删除和更新操作：在最坏的情况下，考虑已删除的行后，每个检查点文件对都已加载 50%。 因此数据库备份的大小至少是内存中的数据大小的 2 倍。 此外，将添加到数据库备份大小的、处于状态“合并源”和“需要备份/高可用性”下的检查点文件对很少。  
+ 第二个工作负荷方案适用于频繁的插入、删除和更新操作：在更糟糕的情况下，每个检查点文件对在考虑删除的行之后，加载 50%。 因此数据库备份的大小至少是内存中的数据大小的 2 倍。 此外，将添加到数据库备份大小的、处于状态“合并源”和“需要备份/高可用性”下的检查点文件对很少。  
   
 ## <a name="differential-backups-of-databases-with-memory-optimized-tables"></a>具有内存优化表的数据库的差异备份  
  如 [内存优化表的持久性](memory-optimized-tables.md)中所述，针对内存优化表的存储由数据和差异文件构成。 具有内存优化表的数据库的差异备份包含下列数据：  
@@ -67,7 +67,7 @@ ms.locfileid: "62468323"
   
  对于典型 OLTP 工作负荷，差异备份显著小于完整数据库备份。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [内存优化表的备份、还原和恢复](restore-and-recovery-of-memory-optimized-tables.md)  
   
   

@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d40ee92b98999cd6b88a469a02f290e68ca06559
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915015"
 ---
-# <a name="mssqlserver21899"></a>MSSQLSERVER_21899
+# <a name="mssqlserver_21899"></a>MSSQLSERVER_21899
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62915015"
 |符号名称|SQLErrorNum21899|  
 |消息正文|重定向发布服务器“%s”中的查询失败，该查询用于确定原始发布服务器“%s”的订阅服务器是否存在 sysserver 条目，失败时错误为“%d”，错误消息为“%s”。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  在远程服务器上，`sp_validate_redirected_publisher` 查询发布服务器数据库的订阅元数据表以确定其关联的订阅服务器。 当该查询失败时，会返回错误 21899。 验证查询要求对重定向发布服务器上的发布数据库具有访问权限。 如果在对原始发布服务器调用 `sp_adddistpublisher` 时指定的登录名无权访问发布的数据库，则会返回错误 21899。  
   
 ## <a name="user-action"></a>用户操作  

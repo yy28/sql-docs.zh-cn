@@ -14,14 +14,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 106f4ca8951200110349809065b35ba65a7f8411
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62811331"
 ---
 # <a name="configure-the-remote-proc-trans-server-configuration-option"></a>配置远程过程事务服务器配置选项
-  本主题说明了如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] remote proc trans [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **remote proc trans** 选项可通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分布式事务处理协调器 (MS DTC) 事务，帮助保护服务器到服务器过程的操作。  
+  本主题说明了如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] remote proc trans [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 
+  **remote proc trans** 选项可通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分布式事务处理协调器 (MS DTC) 事务，帮助保护服务器到服务器过程的操作。  
   
  将 **remote proc trans** 的值设置为 1 以提供一个由 MS DTC 协调的分布式事务，该事务保护事务的 ACID（原子、一致、隔离和持久）属性。 该选项设置为 1 后开始的会话将继承该配置设置并将其作为默认值。  
   
@@ -38,27 +39,27 @@ ms.locfileid: "62811331"
   
      [安全性](#Security)  
   
--   **若要配置 remote proc trans 选项，请使用：**  
+-   **配置远程过程事务选项，使用：**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **跟进：** [在配置远程过程事务选项之后](#FollowUp)  
+-   **跟进：**  [在配置远程过程事务选项之后](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a> 先决条件  
+###  <a name="Prerequisites"></a>先决条件  
   
 -   在设定此值前，必须允许远程服务器连接。  
   
 ###  <a name="Recommendations"></a> 建议  
   
--   提供该选项是为了与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本兼容，以支持使用远程存储过程的应用程序。 不发出远程存储过程调用，而是使用引用链接服务器的分布式查询，这些服务器是使用 [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)定义的。  
+-   提供此选项是为了与使用远程存储过程[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的应用程序的早期版本兼容。 不发出远程存储过程调用，而是使用引用链接服务器的分布式查询，这些服务器是使用 [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)定义的。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  默认情况下，所有用户都具备不带参数或仅带第一个参数的 **sp_configure** 的执行权限。 若要执行带两个参数的 **sp_configure** 以更改配置选项或运行 RECONFIGURE 语句，则用户必须具备 ALTER SETTINGS 服务器级别的权限。 ALTER SETTINGS 权限由 **sysadmin** 和 **serveradmin** 固定服务器角色隐式持有。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -93,10 +94,10 @@ GO
   
  有关详细信息，请参阅 [服务器配置选项 (SQL Server)](server-configuration-options-sql-server.md)版本的组合自动配置的最大工作线程数。  
   
-##  <a name="FollowUp"></a> 跟进：在配置远程过程事务选项之后  
+##  <a name="FollowUp"></a>跟进：在配置远程过程事务选项之后  
  该设置将立即生效，无需重新启动服务器。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [RECONFIGURE (Transact-SQL)](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [服务器配置选项 (SQL Server)](server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  

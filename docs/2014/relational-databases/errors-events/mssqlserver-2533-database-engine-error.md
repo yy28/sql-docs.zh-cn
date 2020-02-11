@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0b1882c04d4aacd76b59cb952781205edac84012
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914802"
 ---
-# <a name="mssqlserver2533"></a>MSSQLSERVER_2533
+# <a name="mssqlserver_2533"></a>MSSQLSERVER_2533
     
 ## <a name="details"></a>详细信息  
   
@@ -30,9 +30,9 @@ ms.locfileid: "62914802"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC_PAGE_WAS_NOT_SEEN|  
-|消息正文|表错误：页 P_ID 已分配给对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID （类型为 TYPE） 未发现。 该页可能无效，或者页头中可能包含错误的分配单元 ID。|  
+|消息正文|表错误: 看不到分配给对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID（类型为 TYPE）的页 P_ID。 该页可能无效，或者页头中可能包含错误的分配单元 ID。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  页已分配给分配单元 ID *A_ID*，但此分配单元 ID 不在页头中。 页头具有其他的分配单元 ID。 如果页头中的分配单元 ID 用于有效的对象，则该页可能具有匹配的 MSSQLEngine_2534 错误。  
   
 ## <a name="user-action"></a>用户操作  
@@ -61,7 +61,7 @@ ms.locfileid: "62914802"
 > [!CAUTION]  
 >  此修复可能会导致数据丢失。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [MSSQLSERVER_2534](mssqlserver-2534-database-engine-error.md)  
   
   

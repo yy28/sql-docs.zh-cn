@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 01b985a1bb818e7b3d3612596bb4e2b7fa6fd393
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829463"
 ---
 # <a name="transfer-sql-server-objects-task"></a>传输 SQL Server 对象任务
@@ -32,7 +32,7 @@ ms.locfileid: "62829463"
 |Object|  
 |------------|  
 |表|  
-|Views|  
+|视图|  
 |存储过程|  
 |用户定义函数|  
 |默认值|  
@@ -52,7 +52,7 @@ ms.locfileid: "62829463"
   
 -   索引  
   
--   Triggers  
+-   触发器  
   
 -   全文索引  
   
@@ -90,7 +90,7 @@ ms.locfileid: "62829463"
   
  此外，`OnInformation` 事件的日志项报告属于为传输所选的对象类型的对象数、已经传输的对象数以及随表传输数据时截断表这样的操作。 当覆盖目标上的每个对象时，都会写入 `OnWarning` 事件的日志项。  
   
-## <a name="security-and-permissions"></a>安全性和权限  
+## <a name="security-and-permissions"></a>安全和权限  
  用户必须具有浏览源服务器上的对象的权限，同时必须具有在目标服务器上删除和创建对象的权限，此外用户还必须具有访问指定数据库和数据库对象的权限。  
   
 ## <a name="configuration-of-the-transfer-sql-server-objects-task"></a>配置传输 SQL Server 对象任务  
@@ -106,7 +106,7 @@ ms.locfileid: "62829463"
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   
--   [传输 SQL Server 对象任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)  
+-   [&#40;常规页传输 SQL Server 对象任务编辑器&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [传输 SQL Server 对象任务编辑器（“对象”页）](../transfer-sql-server-objects-task-editor-objects-page.md)  
   

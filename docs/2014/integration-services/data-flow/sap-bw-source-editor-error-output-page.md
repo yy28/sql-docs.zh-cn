@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8eb25ae1083e05ccb85dda6d07d391ca58d7951a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770657"
 ---
 # <a name="sap-bw-source-editor-error-output-page"></a>SAP BW 源编辑器（“错误输出”页）
@@ -59,13 +59,13 @@ ms.locfileid: "62770657"
  **将此值设置到选定的单元格**  
  指定发生错误或截断时 SAP BW 源组件应对所有选定单元格执行的操作：忽略错误、重定向行或使组件失败。  
   
- **Apply**  
+ **应用**  
  将错误处理选项应用到选定的单元格。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SAP BW 源编辑器（“连接管理器”页）](sap-bw-source-editor-connection-manager-page.md)   
  [SAP BW 源编辑器（“列”页）](sap-bw-source-editor-columns-page.md)   
  [SAP BW 源编辑器（“高级”页）](sap-bw-source-editor-advanced-page.md)   
- [Microsoft Connector 1.1 for SAP BW 的 F1 帮助](../microsoft-connector-for-sap-bw-f1-help.md)  
+ [Microsoft Connector 1.1 for SAP BW F1 帮助](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

@@ -13,14 +13,14 @@ ms.assetid: 9bb84114-a1df-4122-a1b8-ad98dcd85cc3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2c357384a3de683c05b2922149e2b61630881922
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926204"
 ---
 # <a name="ado-run-time-errors"></a>ADO 运行时错误
-ADO 错误报告到你的程序为运行时错误。 您的编程语言的错误捕获机制可用于捕获并处理它们。 例如，在 Visual Basic 中，使用**On Error**语句。 视觉对象中C++，这取决于您用来访问 ADO 库的方法。 借助 #import，使用**try catch**块。 否则为C++程序员需要显式检索错误对象通过调用**GetErrorInfo**。 下面的 Visual Basic sub 过程演示了捕获 ADO 错误：
+ADO 错误作为运行时错误报告给你的程序。 您可以使用编程语言的错误捕获机制来捕获和处理它们。 例如，在 Visual Basic 中，使用**On Error**语句。 在 Visual C++ 中，它取决于用于访问 ADO 库的方法。 使用 #import 时，请使用**try-catch**块。 否则，c + + 程序员需要通过调用**GetErrorInfo**显式检索 error 对象。 以下 Visual Basic sub 过程演示捕获 ADO 错误：
 
 ```
 ' BeginErrorHandlingVB01
@@ -78,7 +78,7 @@ End Sub
 ' EndErrorHandlingVB01
 ```
 
- 这**Form_Load**事件过程有意创建一条错误通过尝试打开相同**连接**两次对象。 第二次**打开**方法调用时，会激活错误处理程序。 在这种情况下错误属于类型**adErrObjectOpen**，因此恢复程序执行之前，错误处理程序将显示以下消息：
+ 此**Form_Load**事件过程有意通过尝试打开相同的**连接**对象来创建一个错误。 第二次调用**Open**方法时，将激活错误处理程序。 在这种情况下，错误的类型为**adErrObjectOpen**，因此，在恢复程序执行之前，错误处理程序会显示以下消息：
 
 ```
 Error #3705: Operation is not allowed when the object is open.
@@ -86,15 +86,15 @@ Error reported by: ADODB.Connection
 Help File: E:\WINNT\HELP\ADO260.CHM Topic ID: 1003705
 ```
 
- 错误消息中包含每条信息提供的 Visual Basic **Err**对象除**调用**值，该值在此处不适用。 错误编号会通知你哪些错误。 该说明仅在其中不想要自己处理错误的情况下很有用。 只需，可以将其传递到用户。 尽管通常需要使用自定义应用程序的消息，不能预测每个错误;说明提供有关发生的问题的一些线索。 在示例代码中，通过报告了错误**连接**对象。 你将看到该对象的类型或此处的编程 ID 不是变量的名称。
+ 此错误消息包含 Visual Basic **Err**对象提供的每条信息，但**LastDLLError**值除外，此处不适用。 错误号告诉你发生了哪个错误。 如果你不想自行处理错误，则说明非常有用。 您可以直接将它传递给用户。 尽管通常需要使用为应用程序自定义的消息，但不能预见每个错误;说明提供了一些有关错误的提示。 在示例代码中，此错误是由**连接**对象报告的。 你将在此处看到对象的类型或编程 ID-不是变量名。
 
 > [!NOTE]
->  Visual Basic **Err**对象仅包含有关最新的错误的信息。 ADO**错误**系列**连接**对象都包含一个**错误**引发的最新的 ADO 操作每个错误的对象。 使用**错误**集合而不是**Err**对象以处理多个错误。 有关详细信息**错误**集合，请参阅[提供程序错误](../../../ado/guide/data/provider-errors.md)。 但是，如果没有有效**连接**对象， **Err**对象是 ADO 错误的信息的唯一源。
+>  Visual Basic **Err**对象只包含有关最新错误的信息。 对于最新的 ADO 操作引发的每个错误，**连接**对象的 ADO **Errors**集合都包含一个**error**对象。 使用**errors**集合而不是**Err**对象处理多个错误。 有关**错误**集合的详细信息，请参阅[提供程序错误](../../../ado/guide/data/provider-errors.md)。 但是，如果没有有效的**连接**对象，则**Err**对象是有关 ADO 错误的唯一信息来源。
 
- 哪些类型的操作有可能导致 ADO 错误？ 常见的 ADO 错误可能涉及到如打开对象**连接**或**记录集**、 尝试更新数据，或调用方法或您的提供程序不支持的属性。
+ 哪些类型的操作可能会导致 ADO 错误？ 常见 ADO 错误可以涉及打开对象（如**连接**或**记录集**、尝试更新数据或调用提供程序不支持的方法或属性）。
 
- OLE DB 错误也可以传递到您的应用程序中的运行时错误**错误**集合。
+ 还可以将 OLE DB 错误作为**错误**集合中的运行时错误传递给应用程序。
 
- 以下主题提供 ADO 错误详细信息。
+ 以下主题提供了有关 ADO 错误的详细信息。
 
 -   [ADO 错误参考](../../../ado/guide/data/ado-error-reference.md)

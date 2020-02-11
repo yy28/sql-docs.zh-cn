@@ -1,5 +1,5 @@
 ---
-title: 查看或更改数据和日志文件 (SQL Server Management Studio) 的默认位置 |Microsoft Docs
+title: 查看或更改数据文件和日志文件的默认位置（SQL Server Management Studio） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 06d17a4feaec0db614f61fb7761b37ea415efc24
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62808705"
 ---
 # <a name="view-or-change-the-default-locations-for-data-and-log-files-sql-server-management-studio"></a>查看或更改数据文件和日志文件的默认位置 (SQL Server Management Studio)
@@ -29,35 +29,35 @@ ms.locfileid: "62808705"
   
      [建议](#Recommendations)  
   
--   **若要查看或更改的数据和日志文件默认位置，使用：**  
+-   **查看或更改数据文件和日志文件的默认位置，使用：**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
--   **跟进：**[更改默认位置](#FollowUp)  
+-   **跟进：**  [更改默认位置](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Recommendations"></a> 建议  
  保护数据文件和日志文件的最佳做法是确保它们受访问控制列表 (ACL) 保护。 ACL 应设置在创建这些文件的根目录下。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-view-or-change-the-default-locations-for-database-files"></a>查看或更改数据库文件的默认位置  
   
-1.  在对象资源浏览器中，右键单击某个服务器，然后单击“属性”。  
+1.  在对象资源浏览器中，右键单击某个服务器，然后单击 **“属性”**。  
   
 2.  在左窗格中，单击 **“数据库设置”** 页。  
   
 3.  在 **“数据库默认位置”** 中，查看新的数据文件和日志文件的当前默认位置。 若要更改默认位置，请在 **“数据”** 或 **“日志”** 字段中输入新的默认路径名，或者单击浏览按钮找到并选择路径名。  
   
-##  <a name="FollowUp"></a> 跟进：更改默认位置之后  
+##  <a name="FollowUp"></a>跟进：在更改默认位置之后  
  必须停止并重新启动 SQL Server 服务以完成更改。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [CREATE DATABASE (SQL Server Transact-SQL)](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [创建数据库](../../relational-databases/databases/create-a-database.md)  
   

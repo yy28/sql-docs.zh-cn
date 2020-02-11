@@ -10,10 +10,10 @@ ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 1fda81ac39233435dbcd0546e452878cc6767b33
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75247152"
 ---
 # <a name="manage-a-knowledge-base"></a>管理知识库
@@ -22,14 +22,14 @@ ms.locfileid: "75247152"
 
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中对知识库执行管理功能。 您可以删除知识库、对知识库进行解锁、放弃对知识库所做的工作、重命名知识库以及显示其属性。  
   
-##  <a name="BeforeYouBegin"></a>开始之前  
+##  <a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Prerequisites"></a>先决条件  
  若要管理知识库，该知识库必须已创建，并且已发布（如果另一个人创建了此知识库）或已关闭（如果您创建了该知识库）。  
   
-###  <a name="Security"></a>安全  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>访问  
+####  <a name="Permissions"></a> 权限  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_administrator 角色，才能打开知识库。  
   
 ##  <a name="Manage"></a>管理知识库  
@@ -54,7 +54,7 @@ ms.locfileid: "75247152"
   
     6.  **属性**：单击此项可在只读显示中显示数据库的属性。  
   
-        1.  **源知识库**：此数据库所基于的知识库。 这是可选的。  
+        1.  **源知识库**：此数据库所基于的知识库。 此为可选项。  
   
         2.  **状态**：指示知识库是否处于**工作**状态，以及它是否处于特定的知识管理活动中，这取决于上次关闭的时间。 该状态可以是 **“工作中”**，在此情况下，知识库在某一知识管理会话中打开，但未处于特定的活动中；也可以是 **“工作中”** 加上知识管理活动，在此情况下，知识库在某一知识管理会话中打开，并且处于特定的活动中。  
   

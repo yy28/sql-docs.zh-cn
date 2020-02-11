@@ -1,5 +1,5 @@
 ---
-title: ADO 事件模型示例 （VC + +） |Microsoft Docs
+title: ADO 事件模型示例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,38 +15,38 @@ ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1af45d9ac4674af98097083e2da89a217f17a58f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921016"
 ---
 # <a name="ado-events-model-example-vc"></a>ADO 事件模型示例 (VC++)
-视觉对象C++一节[ADO 事件实例化的语言](../../../ado/guide/data/ado-event-instantiation-by-language.md)提供了如何实例化 ADO 事件模型的一般说明。 以下是实例化创建的环境中的事件模型的特定示例 **#import**指令。  
+[Ado 事件实例化](../../../ado/guide/data/ado-event-instantiation-by-language.md)的 Visual C++ 部分通过语言提供有关如何实例化 ADO 事件模型的一般说明。 下面是在由 **#import**指令创建的环境中实例化事件模型的特定示例。  
   
- 使用一般的说明**adoint.h**作为方法签名的引用。 但是，在一般的说明中的一些详细信息作为使用略微 **#import**指令：  
+ 一般说明使用**adoint**作为方法签名的参考。 但是，一般说明中的一些详细信息会因使用 **#import**指令而略有不同：  
   
--   **#Import**指令解析**typedef**的方法签名的数据类型，并向其基本窗体的修饰符。  
+-   **#Import**指令可将**typedef**、方法签名数据类型和修饰符解析为其基本格式。  
   
--   必须覆盖的纯虚方法以前缀"**raw_** "。  
+-   必须覆盖的纯虚方法全部以 "**raw_**" 为前缀。  
   
- 某些代码只是反映编码样式。  
+ 一些代码只是反映编码样式。  
   
--   指向指针**IUnknown**由**Advise**方法显式获取通过调用**QueryInterface**。  
+-   使用对**QueryInterface**的调用，显式获取了由**Advise**方法使用的**IUnknown**的指针。  
   
--   不需要进行显式编码中的类定义的析构函数。  
+-   不需要在类定义中显式编写析构函数的代码。  
   
--   您可能想要代码更强大的 QueryInterface、 AddRef 和 Release 的实现。  
+-   你可能想要对 QueryInterface、AddRef 和 Release 的更可靠的实现进行编码。  
   
--   **__Uuidof()** 指令广泛使用，以获取接口 Id。  
+-   **__Uuidof （）** 指令广泛用于获取接口 id。  
   
  最后，该示例包含一些工作代码。  
   
 -   该示例编写为控制台应用程序。  
   
--   应插入你自己的代码注释，在"`// Do some work`"。  
+-   你应在注释 "`// Do some work`" 下插入你自己的代码。  
   
--   所有事件处理程序的默认不执行任何操作，并取消进一步的通知。 应插入相应的代码使应用程序，并根据需要允许通知。  
+-   所有事件处理程序都默认为不执行任何操作，并取消进一步的通知。 应为应用程序插入适当的代码，并根据需要允许通知。  
   
 ```  
 // ADO_Events_Model_Example.cpp  

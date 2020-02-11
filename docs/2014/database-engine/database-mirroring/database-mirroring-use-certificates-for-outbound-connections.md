@@ -1,5 +1,5 @@
 ---
-title: 允许数据库镜像终结点使用证书进行出站连接 (TRANSACT-SQL) |Microsoft Docs
+title: 允许数据库镜像终结点使用证书进行出站连接（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 43a55174bae1bb03034ea005749055701884848f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62806870"
 ---
 # <a name="allow-a-database-mirroring-endpoint-to-use-certificates-for-outbound-connections-transact-sql"></a>允许数据库镜像端点使用证书进行出站连接 (Transact-SQL)
@@ -43,7 +43,7 @@ ms.locfileid: "62806870"
   
 ## <a name="procedure"></a>过程  
   
-#### <a name="to-configure-server-instances-for-outbound-mirroring-connections-on-hosta"></a>配置用于出站镜像连接的服务器实例（在 HOST_A 上）  
+#### <a name="to-configure-server-instances-for-outbound-mirroring-connections-on-host_a"></a>配置用于出站镜像连接的服务器实例（在 HOST_A 上）  
   
 1.  在 **master** 数据库上，创建数据库主密钥（如果不存在）。 若要查看数据库的现有密钥，请使用 [sys.symmetric_keys](/sql/relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql) 目录视图。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "62806870"
     GO  
     ```  
   
-     有关详细信息，请参阅 [CREATE ENDPOINT (Transact-SQL)](/sql/t-sql/statements/create-endpoint-transact-sql)。  
+     有关详细信息，请参阅 [CREATE ENDPOINT (Transact-SQL)](/sql/t-sql/statements/create-endpoint-transact-sql)的信息。  
   
 4.  备份证书并将其复制到其他系统。 若要在其他系统上配置入站连接，此步骤是必需的。  
   
@@ -164,18 +164,18 @@ GO
  使用您选择的任何安全方法将证书复制到其他系统。 必须格外小心地保证所有证书的安全。  
   
 > [!IMPORTANT]  
->  在建立出站连接之后，必须在每个服务器实例上为其他服务器实例配置入站连接。 有关详细信息，请参阅[允许数据库镜像终结点使用证书进行入站连接 (Transact-SQL)](database-mirroring-use-certificates-for-inbound-connections.md)。  
+>  在建立出站连接之后，必须在每个服务器实例上为其他服务器实例配置入站连接。 有关详细信息，请参阅 [允许数据库镜像终结点将证书用于入站连接 (Transact-SQL)](database-mirroring-use-certificates-for-inbound-connections.md)。  
   
  有关创建镜像数据库（包括 Transact-SQL 示例）的详细信息，请参阅[为镜像准备镜像数据库 (SQL Server)](prepare-a-mirror-database-for-mirroring-sql-server.md)。  
   
- 有关建立高性能模式会话的 Transact-SQL 示例，请参阅[示例：使用证书设置数据库镜像 (Transact-SQL)](example-setting-up-database-mirroring-using-certificates-transact-sql.md)。  
+ 有关建立高性能模式会话的 Transact-SQL 示例，请参阅 [示例：使用证书设置数据库镜像 (Transact-SQL)](example-setting-up-database-mirroring-using-certificates-transact-sql.md)。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  建议您对数据库镜像连接进行加密，除非您能够保证网络的安全。  
   
  将证书复制到其他系统时，请使用安全的复制方法。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [选择加密算法](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [为镜像准备镜像数据库 (SQL Server)](prepare-a-mirror-database-for-mirroring-sql-server.md)   
  [ALTER ENDPOINT (Transact-SQL)](/sql/t-sql/statements/alter-endpoint-transact-sql)   

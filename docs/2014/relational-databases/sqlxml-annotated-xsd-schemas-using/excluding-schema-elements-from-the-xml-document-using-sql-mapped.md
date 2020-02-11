@@ -1,5 +1,5 @@
 ---
-title: 从生成 XML 文档中使用 sql 中排除架构元素： 映射 (SQLXML 4.0) |Microsoft Docs
+title: 使用 sql：映射从生成的 XML 文档中排除架构元素（SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -23,28 +23,30 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 865a9af892f948e77aa593d3713766e7860349b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013863"
 ---
 # <a name="excluding-schema-elements-from-the-resulting-xml-document-using-sqlmapped-sqlxml-40"></a>使用 sql:mapped 从生成的 XML 文档中排除架构元素 (SQLXML 4.0)
   由于是默认映射，XSD 架构中的每个元素和属性都映射到数据库表/视图和列。 如果要在 XSD 架构中创建不映射到任何数据库表（视图）或列并且不在 XML 中显示的元素，可以指定 `sql:mapped` 批注。  
   
- 如果架构不能修改或者架构用于验证来自其他源的 XML，并且架构还包含尚未存储在数据库中的数据，则 `sql:mapped` 批注尤为有用。 `sql:mapped` 批注不同于 `sql:is-constant`，因为未映射的元素和属性不出现在 XML 文档中。  
+ 如果架构不能修改或者架构用于验证来自其他源的 XML，并且架构还包含尚未存储在数据库中的数据，则 `sql:mapped` 批注尤为有用。 
+  `sql:mapped` 批注不同于 `sql:is-constant`，因为未映射的元素和属性不出现在 XML 文档中。  
   
- `sql:mapped` 批注接受布尔值（0 = false，1 = true）。 可接受的值为 0、1、true 和 false。  
+ 
+  `sql:mapped` 批注接受布尔值（0 = false，1 = true）。 可接受的值为 0、1、true 和 false。  
   
 ## <a name="examples"></a>示例  
  若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-the-sqlmapped-annotation"></a>A. 指定 sql:mapped 批注  
- 假定您有来自其他源的 XSD 架构。 此 XSD 架构组成 **\<Person.Contact >** 具有元素**ContactID**， **FirstName**， **LastName**，和**HomeAddress**属性。  
+ 假定您有来自其他源的 XSD 架构。 此 XSD 架构由一个** \<人员组成。请联系>** 元素与**ContactID**、 **FirstName**、 **LastName**和**HomeAddress**属性。  
   
- 在将此 XSD 架构映射到 AdventureWorks 数据库中的 Person.Contact 表`sql:mapped`上指定**HomeAddress**属性，因为 Employees 表不存储雇员的家庭地址。 因此，在针对映射架构指定 XPath 查询时，此属性不会映射到数据库，并且不会在生成的 XML 文档中返回此属性。  
+ 将此 XSD 架构映射到 AdventureWorks 数据库中的 Contact 表时，将在`sql:mapped` **HomeAddress**特性上指定，因为 employees 表不会存储员工的家庭地址。 因此，在针对映射架构指定 XPath 查询时，此属性不会映射到数据库，并且不会在生成的 XML 文档中返回此属性。  
   
- 为架构的其余部分进行默认映射。 **\<Person.Contact >** 元素映射到 Person.Contact 表中，而所有属性都映射到 Person.Contact 表中的相同名称的列。  
+ 为架构的其余部分进行默认映射。 Person>元素映射到 person 表，所有属性都映射到 person 表中具有相同名称的列。 ** \<**  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -61,7 +63,7 @@ ms.locfileid: "66013863"
 </xsd:schema>  
 ```  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>若要测试示例 XPath 查询根据架构  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>针对架构测试示例 XPath 查询  
   
 1.  复制上面的架构代码，并将它粘贴到文本文件中。 将文件另存为 sql-mapped.xml。  
   
@@ -85,7 +87,7 @@ ms.locfileid: "66013863"
   
      有关详细信息，请参阅[使用 ADO 执行 SQLXML 查询](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
- 下面是结果集：  
+ 结果集如下：  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -103,7 +105,7 @@ ms.locfileid: "66013863"
   
  请注意，结果中包含 ContactID、FirstName 和 LastName 但不包含 HomeAddress，因为映射架构为 `sql:mapped` 属性指定了值 0。  
   
-## <a name="see-also"></a>请参阅  
- [XSD 元素和属性到表和列的默认映射&#40;SQLXML 4.0&#41;](default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
+## <a name="see-also"></a>另请参阅  
+ [XSD 元素和属性到表和列的默认映射 &#40;SQLXML 4.0&#41;](default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
   
   

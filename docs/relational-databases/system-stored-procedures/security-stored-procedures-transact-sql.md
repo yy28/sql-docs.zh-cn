@@ -1,5 +1,5 @@
 ---
-title: 安全性存储过程 (TRANSACT-SQL) |Microsoft Docs
+title: 安全存储过程（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -17,33 +17,34 @@ ms.assetid: 62b72907-7e95-4c97-9891-0c45d5b678ce
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 94fdd6946cbc2800a8f0f16e706e784ff0933f73
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 05131814c390373261ae492235f36a7841d2f5f3
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941850"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76315627"
 ---
 # <a name="security-stored-procedures-transact-sql"></a>安全存储过程 (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持下列系统存储过程用来管理安全性。 这些存储过程的一些不推荐使用，但仍是可用于支持向后兼容性。 不推荐使用的存储过程的主题将列出用于替换它们的存储过程。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持用于管理安全性的下列系统存储过程。 其中一些存储过程已不推荐使用，但为了支持向后兼容性而仍然继续提供。  不推荐使用的存储过程的主题将列出用于替换它们的存储过程。  
 
 |||  
 |-|-|  
-|[sys.sp_add_trusted_assembly]( sys-sp-add-trusted-assembly-transact-sql.md) |[sp_addapprole](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md) （已弃用）|
+|[sys. sp_add_trusted_assembly]( sys-sp-add-trusted-assembly-transact-sql.md) |[sp_addapprole](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md) （已弃用）|
 |[sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)|[sp_addlinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)
 |[sp_addlogin](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md) （已弃用） |[sp_addremotelogin](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md) （已弃用）
 |[sp_addrole](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md) （已弃用） |[sp_addrolemember](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) （已弃用）
 |[sp_addserver](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md) （已弃用） |[sp_addsrvrolemember](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md) （已弃用）
 |[sp_adduser](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md) （已弃用） |[sp_approlepassword](../../relational-databases/system-stored-procedures/sp-approlepassword-transact-sql.md) （已弃用）
 |[sp_audit_write](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md) |[sp_change_users_login](../../relational-databases/system-stored-procedures/sp-change-users-login-transact-sql.md)
-|[sp_changedbowner](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md) |[sp_changeobjectowner](../../relational-databases/system-stored-procedures/sp-changeobjectowner-transact-sql.md) （已弃用）
+|[sp_changedbowner](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md) （已弃用） 
+|[sp_changeobjectowner](../../relational-databases/system-stored-procedures/sp-changeobjectowner-transact-sql.md) （已弃用）
 |[sp_control_dbmasterkey_password](../../relational-databases/system-stored-procedures/sp-control-dbmasterkey-password-transact-sql.md) |[sp_dbfixedrolepermission](../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md) （已弃用）
 |[sp_defaultdb](../../relational-databases/system-stored-procedures/sp-defaultdb-transact-sql.md) （已弃用） |[sp_defaultlanguage](../../relational-databases/system-stored-procedures/sp-defaultlanguage-transact-sql.md) （已弃用）
 |[sp_denylogin](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md) （已弃用） |[sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)
-|[sp_dropalias](../../relational-databases/system-stored-procedures/sp-dropalias-transact-sql.md) （已弃用） |[sys.sp_drop_trusted_assembly]( sys-sp-drop-trusted-assembly-transact-sql.md) |
+|[sp_dropalias](../../relational-databases/system-stored-procedures/sp-dropalias-transact-sql.md) （已弃用） |[sys. sp_drop_trusted_assembly]( sys-sp-drop-trusted-assembly-transact-sql.md) |
 |[sp_dropapprole](../../relational-databases/system-stored-procedures/sp-dropapprole-transact-sql.md) （已弃用） |[sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) |
 |[sp_droplogin](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md) （已弃用） |[sp_dropremotelogin](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md) （已弃用） |
 |[sp_droprole](../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md) （已弃用） |[sp_droprolemember](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) （已弃用） |
@@ -65,7 +66,7 @@ ms.locfileid: "67941850"
 
  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [安全函数 (Transact-SQL)](../../t-sql/functions/security-functions-transact-sql.md)  
   

@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ddcdec0f624c1d6f70c57e593eaf9da66cbe0419
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63065525"
 ---
 # <a name="checkpoint-operation-for-memory-optimized-tables"></a>内存优化表的检查点操作
@@ -28,9 +28,9 @@ ms.locfileid: "63065525"
   
  对于基于磁盘的表，将基于恢复间隔配置选项执行自动检查点（有关详细信息，请参阅[更改数据库的目标恢复时间 (SQL Server)](../logs/change-the-target-recovery-time-of-a-database-sql-server.md)）。  
   
- 对于内存优化表，事务日志文件在上次检查点变得大于 512 MB 时执行自动检查点。 512 MB 包括表基于磁盘和内存优化表的事务日志记录。  
+ 对于内存优化表，在上次检查点后事务日志文件变得大于 512 MB 时，会执行自动检查点。 512 MB 包括基于磁盘的表和内存优化表的事务日志记录。  
   
-## <a name="see-also"></a>请参阅  
- [创建和管理用于内存优化的对象的存储](creating-and-managing-storage-for-memory-optimized-objects.md)  
+## <a name="see-also"></a>另请参阅  
+ [创建和管理用于内存优化对象的存储](creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

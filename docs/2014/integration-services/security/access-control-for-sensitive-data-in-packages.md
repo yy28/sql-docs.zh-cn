@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2d59a42fa7b77e6800218f1eeca4986320c1dcef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62766771"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>对包中敏感数据的访问控制
@@ -32,7 +32,7 @@ ms.locfileid: "62766771"
 >  除了本主题中所述的保护级别外，还可以使用固定数据库级角色保护保存到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的包。  
   
 ## <a name="definition-of-sensitive-information"></a>定义敏感信息  
- 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中，下列信息定义为“敏感”  信息：  
+ 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中，下列信息定义为“敏感” ** 信息：  
   
 -   连接字符串的密码部分。 但是，如果选择加密所有数据的选项，则整个连接字符串都将被视为敏感信息。  
   
@@ -40,7 +40,8 @@ ms.locfileid: "62766771"
   
 -   标记为敏感的所有变量。 标记的变量由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]控制。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 认为属性是否敏感，主要取决于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件（连接管理器或任务）的开发人员是否将该属性指定为敏感。 用户不能向被视为敏感的属性列表添加属性，也不能从该列表删除属性。  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 认为属性是否敏感，主要取决于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件（连接管理器或任务）的开发人员是否将该属性指定为敏感。 用户不能向被视为敏感的属性列表添加属性，也不能从该列表删除属性。  
   
 ## <a name="encryption"></a>加密  
  加密（包保护级别所使用的加密）是通过使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 数据保护 API (DPAPI) 来执行的，DPAPI 是 Cryptography API (CryptoAPI) 的一部分。  
@@ -52,22 +53,22 @@ ms.locfileid: "62766771"
 ## <a name="protection-levels"></a>保护级别  
  下表介绍 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的保护级别。 括号中的值是来自 <xref:Microsoft.SqlServer.Dts.Runtime.DTSProtectionLevel> 枚举的值。 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中处理包时，这些值出现在用来配置包属性的“属性”窗口中。  
   
-|保护级别|Description|  
+|保护级别|说明|  
 |----------------------|-----------------|  
 |不保存敏感数据 (`DontSaveSensitive`)|保存包时不保存包中敏感属性的值。 这种保护级别不进行加密，但它防止标记为敏感的属性随包一起保存，因此其他用户将无法使用这些敏感数据。 如果其他用户打开该包，敏感信息将被替换为空白，用户必须提供这些敏感信息。<br /><br /> 当与 **dtutil** 实用工具 (dtutil.exe) 一起使用时，此保护级别对应的值为 0。|  
 |使用密码加密所有数据 (`EncryptAllWithPassword`)|使用密码加密整个包。 使用用户在创建包或导出包时提供的密码加密包。 用户必须提供包密码，才能在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中打开包，或使用 **dtexec** 命令提示符实用工具运行包。 如果没有密码，用户将无法访问或运行包。<br /><br /> 当与 **dtutil** 实用工具一起使用时，此保护级别对应的值为 3。|  
-|使用用户密钥加密所有数据 (`EncryptAllWithUserKey`)|使用基于当前用户配置文件的密钥加密整个包。 只有创建或导出了包的用户才能在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中打开包，或使用 **dtexec** 命令提示符实用工具运行包。<br /><br /> 当与 **dtutil** 实用工具一起使用时，此保护级别对应的值为 4。<br /><br /> 注意：对于使用用户密钥的保护级别，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用 DPAPI 标准。 有关 DPAPI 的详细信息，请参阅 MSDN Library [https://msdn.microsoft.com/library](https://go.microsoft.com/fwlink/?LinkId=15408)。|  
+|使用用户密钥加密所有数据 (`EncryptAllWithUserKey`)|使用基于当前用户配置文件的密钥加密整个包。 只有创建或导出了包的用户才能在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中打开包，或使用 **dtexec** 命令提示符实用工具运行包。<br /><br /> 当与 **dtutil** 实用工具一起使用时，此保护级别对应的值为 4。<br /><br /> 注意：对于使用用户密钥的保护级别， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用 DPAPI 标准。 有关 DPAPI 的详细信息，请参阅上[https://msdn.microsoft.com/library](https://go.microsoft.com/fwlink/?LinkId=15408)的 MSDN library。|  
 |使用密码加密敏感数据 (`EncryptSensitiveWithPassword`)|使用密码只加密包中敏感属性的值。 DPAPI 用于此加密。 敏感数据作为包的一部分保存，但数据是使用当前用户在创建包或导出包时提供的密码加密的。 若要在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中打开包，用户必须提供包密码。 如果不提供该密码，则包虽然可以打开但其中不包含敏感数据，当前用户必须为敏感数据提供新值。 如果用户试图在不提供密码的情况下执行包，则包执行将会失败。 有关密码和命令行执行的详细信息，请参阅 [dtexec Utility](../packages/dtexec-utility.md)。<br /><br /> 当与 **dtutil** 实用工具一起使用时，此保护级别对应的值为 2。|  
-|使用用户密钥加密敏感数据 (`EncryptSensitiveWithUserKey`)|使用基于当前用户配置文件的密钥只加密包中敏感属性的值。 只有使用同一配置文件的同一个用户才能加载此包。 如果其他用户打开该包，敏感信息将被替换为空白，当前用户必须为敏感数据提供新值。 如果用户试图执行该包，则包执行将会失败。 DPAPI 用于此加密。<br /><br /> 当与 **dtutil** 实用工具一起使用时，此保护级别对应的值为 1。<br /><br /> 注意：对于使用用户密钥的保护级别，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用 DPAPI 标准。 有关 DPAPI 的详细信息，请参阅 MSDN Library [https://msdn.microsoft.com/library](https://go.microsoft.com/fwlink/?LinkId=15408)。|  
+|使用用户密钥加密敏感数据 (`EncryptSensitiveWithUserKey`)|使用基于当前用户配置文件的密钥只加密包中敏感属性的值。 只有使用同一配置文件的同一个用户才能加载此包。 如果其他用户打开该包，敏感信息将被替换为空白，当前用户必须为敏感数据提供新值。 如果用户试图执行该包，则包执行将会失败。 DPAPI 用于此加密。<br /><br /> 当与 **dtutil** 实用工具一起使用时，此保护级别对应的值为 1。<br /><br /> 注意：对于使用用户密钥的保护级别， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用 DPAPI 标准。 有关 DPAPI 的详细信息，请参阅上[https://msdn.microsoft.com/library](https://go.microsoft.com/fwlink/?LinkId=15408)的 MSDN library。|  
 |依靠服务器存储进行加密 (`ServerStorage`)|使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库角色保护整个包。 将包保存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb 数据库后，支持此选项。 此外，SSISDB 目录使用 `ServerStorage` 保护级别。<br /><br /> 在将包从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]保存到文件系统时，不支持此选项。|  
   
 ## <a name="protection-level-setting-and-the-ssisdb-catalog"></a>保护级别设置和 SSISDB 目录  
  SSISDB 目录使用 `ServerStorage` 保护级别。 在向 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器部署 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目时，该目录会自动对包数据和敏感值加密。 该目录还会在检索数据时自动解密数据。  
   
- 若将项目（.ispac 文件）从 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器导出到文件系统，该系统会将保护级别自动更改为 `EncryptSensitiveWithUserKey`。 如果使用导入项目**Integration Services 导入项目向导**中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，则**ProtectionLevel**中的属性**属性**窗口显示的值的`EncryptSensitiveWithUserKey`。  
+ 若将项目（.ispac 文件）从 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器导出到文件系统，该系统会将保护级别自动更改为 `EncryptSensitiveWithUserKey`。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]如果使用中的 " **Integration Services 导入项目向导**" 导入项目，"**属性**" 窗口中的**ProtectionLevel**属性将显示`EncryptSensitiveWithUserKey`值。  
   
 ## <a name="protection-level-setting-based-on-package-life-cycle"></a>基于包的生命周期设置保护级别  
- 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中初次开发 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包时，可以设置该包的保护级别。 以后当部署包时，在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中将包导入 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或从中导出包时，或者在将包从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区或文件系统时，都可以更新包的保护级别。 例如，如果在计算机上使用某个用户密钥保护级别选项创建并保存包，则在将包提供给其他用户时，很可能需要更改保护级别，否则，他们将无法打开该包。  
+ 首次在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]进行开发时，可设置包的保护级别。 以后当部署包时，在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中将包导入 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或从中导出包时，或者在将包从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区或文件系统时，都可以更新包的保护级别。 例如，如果在计算机上使用某个用户密钥保护级别选项创建并保存包，则在将包提供给其他用户时，很可能需要更改保护级别，否则，他们将无法打开该包。  
   
  通常，您可以按下面列出的步骤更改保护级别：  
   
@@ -81,8 +82,8 @@ ms.locfileid: "62766771"
   
 -   [设置或更改包的保护级别](../set-or-change-the-protection-level-of-packages.md)  
   
-## <a name="see-also"></a>请参阅  
- [导入和导出包（SSIS 服务）](../import-and-export-packages-ssis-service.md)   
+## <a name="see-also"></a>另请参阅  
+ [&#40;SSIS 服务导入和导出包&#41;](../import-and-export-packages-ssis-service.md)   
  [Integration Services (SSIS) 包](../integration-services-ssis-packages.md)   
  [安全性概述 (Integration Services)](security-overview-integration-services.md)  
   

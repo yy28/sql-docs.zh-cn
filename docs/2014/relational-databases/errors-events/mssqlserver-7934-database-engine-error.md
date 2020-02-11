@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1306c4463544d2aee882645a2f0a9401a8fb3a60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913169"
 ---
-# <a name="mssqlserver7934"></a>MSSQLSERVER_7934
+# <a name="mssqlserver_7934"></a>MSSQLSERVER_7934
     
 ## <a name="details"></a>详细信息  
   
@@ -30,9 +30,9 @@ ms.locfileid: "62913169"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC2_FS_MISSING_ROWSET_DIRECTORY|  
-|消息正文|表错误：对象 ID O_ID 的 Filestream 目录 ID F_ID，找不到索引 ID I_ID，分区 ID PN_ID。|  
+|消息正文|表错误: 找不到对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID 的 Filestream 目录 ID F_ID。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  在运行 DBCC CHECKDB 期间，找到一个分区；但在 FILESTREAM 数据空间中却找不到与其对应的 FILESTREAM 行集目录。  
   
 ## <a name="user-action"></a>用户操作  
@@ -50,7 +50,7 @@ ms.locfileid: "62913169"
 ### <a name="run-dbcc-checkdb"></a>运行 DBCC CHECKDB  
  不适用。 此错误无法自动修复。 如果无法从备份还原数据库，请与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 客户服务与支持部门 (CSS) 联系。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [DBCC CHECKDB (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)  
   
   

@@ -15,20 +15,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 40e1fea04c0f864d871c01e9087ca9d346475c18
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242082"
 ---
 # <a name="insert-transact-sql-snippets"></a>插入 Transact-SQL 代码段
-  
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码段是一个模板，您可将其作为在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询编辑器中编写新 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 语句的起点。  
   
 ## <a name="inserting-snippets"></a>插入代码段  
  可以使用 **“插入代码段”** 菜单打开可供选择的代码段的分类列表。  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)]代码段包含替换点：建议与该点相关的语法的文本。 例如，CREATE TABLE 代码段包含元素（如表名称、列名称和列数据类型）的替换点。 插入代码段后，必须更改替换文本，以形成有效的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 有关详细信息，请参阅 [完成 Transact-SQL 代码段](complete-transact-sql-snippets.md)。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码段包含替换点：建议与该点相关的语法的文本。 例如，CREATE TABLE 代码段包含元素（如表名称、列名称和列数据类型）的替换点。 插入代码段后，必须更改替换文本，以形成有效的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 有关详细信息，请参阅 [完成 Transact-SQL 代码段](complete-transact-sql-snippets.md)。  
   
 #### <a name="inserting-a-snippet-by-using-the-insert-snippet-menu"></a>通过使用“插入代码段”菜单插入代码段  
   
@@ -38,13 +37,13 @@ ms.locfileid: "75242082"
   
     -   按 Ctrl + K、Ctrl + X。  
   
-    -   在 **“编辑”** 菜单上，指向 **“IntelliSense”**，然后单击 **“插入代码段”**。  
+    -   在 **“编辑”** 菜单上，指向 **“IntelliSense”** ，然后单击 **“插入代码段”** 。  
   
-    -   单击鼠标右键，然后从快捷菜单中选择“插入代码段”**** 命令。  
+    -   单击鼠标右键，然后从快捷菜单中选择“插入代码段”  命令。  
   
 3.  双击代码段，或从代码段选择器中选择代码段，然后按 Tab 或 Enter。  
   
 ## <a name="see-also"></a>另请参阅  
- [插入外侧 Transact-sql 代码段](insert-surround-with-transact-sql-snippets.md)  
+ [插入外侧 Transact-SQL 代码片段](insert-surround-with-transact-sql-snippets.md)  
   
   

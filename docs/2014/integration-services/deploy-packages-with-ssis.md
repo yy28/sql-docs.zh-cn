@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89db7def474b26ffd25da1495e3efaf0e1af43dd
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232694"
 ---
 # <a name="ssis-tutorial-deploying-packages"></a>SSIS 教程：部署包
@@ -75,13 +75,13 @@ ms.locfileid: "75232694"
  **完成本教程的估计时间：** 2 小时  
   
 ## <a name="lessons-in-this-tutorial"></a>本教程中的课程  
- [第1课：准备创建部署捆绑](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)  
+ [第 1 课：准备创建部署捆绑](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)  
  在本课中，将通过创建新的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目再将包和其他所需文件添加到该项目，为部署 ETL 解决方案做好准备。  
   
- [第2课：创建部署捆绑](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
+ [第 2 课：创建部署捆绑](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
  在本课中，将生成部署实用工具，并验证部署捆绑是否包括所需的文件。  
   
- [第3课：安装包](../integration-services/lesson-3-install-ssis-package.md)  
+ [第 3 课：安装包](../integration-services/lesson-3-install-ssis-package.md)  
  在本课中，将部署捆绑复制到目标计算机，安装包，再运行包。  
   
 ![Integration Services 图标（小）](media/dts-16.gif "集成服务图标（小）")**保持与 Integration Services 最**新  <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  

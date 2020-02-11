@@ -19,16 +19,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: c48db11ae347d1fb1c2a393e440aebb0c80def54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62912118"
 ---
 # <a name="sqlservice-class"></a>SqlService 类
-  [SqlService 类](sqlservice-class.md)表示的实例[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服务。  
+  [SqlService 类](sqlservice-class.md)表示[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服务的实例。  
   
- [SqlService 类](sqlservice-class.md)用来以编程方式管理[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服务。 与[SqlService 类](sqlservice-class.md)对象，你可以执行以下任务：  
+ [SqlService 类](sqlservice-class.md)用于以编程方式管理[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服务。 通过[SqlService 类](sqlservice-class.md)对象，您可以执行以下任务：  
   
 -   连接到服务。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62912118"
   
 -   检查服务的属性。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [启动和停止服务](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

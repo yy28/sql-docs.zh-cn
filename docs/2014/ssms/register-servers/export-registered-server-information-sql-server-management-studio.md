@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: 2d5dcbaf6f478d3cb637c72ada8bee2bb2a088d2
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244600"
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>导出已注册服务器信息 (SQL Server Management Studio)
@@ -35,7 +35,7 @@ ms.locfileid: "75244600"
   
 #### <a name="to-export-registered-server-information"></a>导出已注册服务器信息  
   
-1.  在已注册的服务器上，右键单击服务器组，再单击“导出”****。  
+1.  在已注册的服务器上，右键单击服务器组，再单击“导出”  。  
   
     > [!NOTE]  
     >  您可以导出单个服务器、所有已注册服务器树或已注册服务器树的子集。  
@@ -48,9 +48,9 @@ ms.locfileid: "75244600"
      服务器组仅显示当前已注册服务器树的服务器组。  
   
      **导出文件**  
-     在文本框中键入导出文件的名称，或使用“浏览”按钮 (**...**) 定位到客户端计算机上的导出文件。 如果选择现有文件，则已注册服务器的信息将追加到文件末尾。 并使用 .regsrvr 扩展名。 如果希望其他用户或另一台计算机也可以使用已注册服务器信息，可以将文件保存在网络中。 其他用户就可以访问该文件并导入部分或全部已注册服务器信息。 如果选择现有文件作为导出文件，该文件的内容将被服务器注册信息覆盖。  
+     在文本框中键入导出文件的名称，或使用“浏览”按钮 ( **...** ) 定位到客户端计算机上的导出文件。 如果选择现有文件，则已注册服务器的信息将追加到文件末尾。 并使用 .regsrvr 扩展名。 如果希望其他用户或另一台计算机也可以使用已注册服务器信息，可以将文件保存在网络中。 其他用户就可以访问该文件并导入部分或全部已注册服务器信息。 如果选择现有文件作为导出文件，该文件的内容将被服务器注册信息覆盖。  
   
-     **不要在导出文件中包括用户名和密码**  
+     **不在导出文件中包括用户名和密码**  
      在导出文件时不包括用户名。  
   
     > [!IMPORTANT]  

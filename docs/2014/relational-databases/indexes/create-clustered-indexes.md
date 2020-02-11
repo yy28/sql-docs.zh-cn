@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3cea4731ee665e401429679d764832247b2a2242
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63155378"
 ---
 # <a name="create-clustered-indexes"></a>创建聚集索引
@@ -69,9 +69,9 @@ ms.locfileid: "63155378"
   
 -   聚集索引的索引键不能包含在 ROW_OVERFLOW_DATA 分配单元中具有现有数据的 `varchar` 列。 如果对 `varchar` 列创建了聚集索引，并且在 IN_ROW_DATA 分配单元中存在现有数据，则对该列执行的将数据推送到行外的后续插入或更新操作将会失败。 若要获得有关可能包含行溢出数据的表的信息，请使用 [sys.dm_db_index_physical_stats (Transact-SQL) ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql) 动态管理函数。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求对表或视图具有 ALTER 权限。 用户必须是 **sysadmin** 固定服务器角色的成员，或者是 **db_ddladmin** 和 **db_owner** 固定数据库角色的成员。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -86,9 +86,9 @@ ms.locfileid: "63155378"
   
 4.  在“索引键列”下，单击“添加…”   。  
   
-5.  在“从表格名称中选择列”对话框中，选中要添加到聚集索引的表列的复选框   。  
+5.  在 "**从**_Table_name_中选择列" 对话框中，选中要添加到聚集索引的表列的复选框。  
   
-6.  单击“确定”  。  
+6.  单击“确定”。   
   
 7.  在 **“新建索引”** 对话框中，单击 **“确定”** 。  
   
@@ -110,9 +110,9 @@ ms.locfileid: "63155378"
   
 8.  在网格中，选择“创建为聚集”  ，然后从该属性右侧的下拉列表中选择“是”  。  
   
-9. 单击 **“关闭”** 。  
+9. 单击“关闭”  。  
   
-10. 在“文件”  菜单上，单击“保存”  以保存 _table_name_。  
+10. 在 "**文件**" 菜单上，单击 "**保存**_table_name_。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -142,7 +142,7 @@ ms.locfileid: "63155378"
   
  有关详细信息，请参阅 [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建主键](../tables/create-primary-keys.md)   
  [创建唯一约束](../tables/create-unique-constraints.md)  
   

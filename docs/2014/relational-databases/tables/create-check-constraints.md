@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a27b4bf288d6b1e436ba43fc9c1002d03cd9eaf4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62736197"
 ---
 # <a name="create-check-constraints"></a>创建 CHECK 约束
@@ -40,9 +40,9 @@ ms.locfileid: "62736197"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要具有表的 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -68,19 +68,19 @@ ms.locfileid: "62736197"
     > [!NOTE]  
     >  确保将任何非数字约束值包含在单引号 (') 中。  
   
-4.  单击“确定”  。  
+4.  单击“确定”。   
   
 5.  在  “标识”类别中，您可以更改 CHECK 约束的名称并且为该约束添加说明（扩展属性）。  
   
 6.  在 **“表设计器”** 类别中，您可以设置何时强制约束。  
   
-    |**若要：**|**在以下字段中选择“是”：**|  
+    |**发件人：**|**在以下字段中选择“是”：**|  
     |-------------|---------------------------------------------|  
     |对在创建约束前存在的数据测试约束|**在创建或启用时检查现有数据**|  
     |在此表上发生复制操作时强制约束|**强制用于复制**|  
     |在此表中插入或更新行时强制约束|**强制用于 INSERT 和 UPDATE**|  
   
-7.  单击 **“关闭”** 。  
+7.  单击“关闭”  。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

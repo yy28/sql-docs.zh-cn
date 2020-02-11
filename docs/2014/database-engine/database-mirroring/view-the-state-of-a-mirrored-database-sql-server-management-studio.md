@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f5e61bd8ef63baa9a087bcae912b04f653f63b54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62753879"
 ---
 # <a name="view-the-state-of-a-mirrored-database-sql-server-management-studio"></a>查看镜像数据库的状态 (SQL Server Management Studio)
@@ -33,7 +33,7 @@ ms.locfileid: "62753879"
   
 4.  镜像开始后， **“状态”** 窗格将显示您选择 **“镜像”** 页或单击 **“刷新”** 按钮时的数据库镜像会话的状态。 可能的状态如下：  
   
-    |状态|解释|  
+    |States|说明|  
     |------------|-----------------|  
     |\<blank>|不存在数据库镜像会话，并且没有要在 **“镜像”** 页上报告的活动。|  
     |已暂停|主体数据库正在运行，但没有向镜像服务器发送任何日志。 数据库的镜像副本不可用。|  
@@ -42,7 +42,7 @@ ms.locfileid: "62753879"
     |故障转移|在主体服务器实例上，手动故障转移（角色切换）已经开始，但镜像服务器实例尚未接受。|  
     |已同步|镜像数据库包含的数据与主体数据库相同。 只有在同步状态下，才能进行手动和自动故障转移。 |  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [镜像状态 (SQL Server)](mirroring-states-sql-server.md)  
   
   

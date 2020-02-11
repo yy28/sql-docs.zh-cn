@@ -13,17 +13,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 24ab4d509638b3195c7105602c663c04fb47a411
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771123"
 ---
 # <a name="process-inserts-updates-and-deletes"></a>处理插入、更新和删除
   在用于执行变更数据的增量加载的 Integration Services 包的数据流中，第二个任务是分隔插入、更新和删除操作。 然后，可以使用相应的命令将它们应用到目标。  
   
 > [!NOTE]  
->  为执行变更数据增量加载的包设计数据流的过程中，第一个任务是配置用于运行查询以检索变更数据的源组件。 有关此组件的详细信息，请参阅[检索和了解变更数据](retrieve-and-understand-the-change-data.md)。 有关创建用于执行变更数据增量加载的包的完整过程的说明，请参阅[变更数据捕获 (SSIS)](change-data-capture-ssis.md)。  
+>  为执行变更数据增量加载的包设计数据流的过程中，第一个任务是配置用于运行查询以检索变更数据的源组件。 有关此组件的详细信息，请参阅 [检索和了解变更数据](retrieve-and-understand-the-change-data.md)。 有关创建用于执行变更数据增量加载的包的完整过程的说明，请参阅[变更数据捕获 (SSIS)](change-data-capture-ssis.md)。  
   
 ## <a name="associating-friendly-values-to-separate-inserts-updates-and-deletes"></a>关联友好值以分隔插入、更新和删除操作  
  在检索变更数据的示例查询中，**cdc.fn_cdc_get_net_changes_<capture_instance>** 函数仅返回名为 **__$operation** 的元数据列。 此元数据列包含一个序号值，该值指示哪个操作导致更改。  
@@ -69,8 +69,8 @@ select
   
  **下一个主题：** [将变更应用到目标](apply-the-changes-to-the-destination.md)  
   
-## <a name="see-also"></a>请参阅  
- [有条件拆分转换](../data-flow/transformations/conditional-split-transformation.md)   
+## <a name="see-also"></a>另请参阅  
+ [Conditional Split Transformation](../data-flow/transformations/conditional-split-transformation.md)   
  [使用有条件拆分转换拆分数据集](../data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   
   

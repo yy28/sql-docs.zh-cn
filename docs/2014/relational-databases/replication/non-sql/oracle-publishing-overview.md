@@ -17,14 +17,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 558ee09eeb4419bc354ff3ade9d6586877246b33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022260"
 ---
 # <a name="oracle-publishing-overview"></a>Oracle Publishing Overview
-  从 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]开始，可以在复制拓扑中加入 Oracle 发布服务器（自 Oracle 9i 版起）。 可在支持 Oracle 的任何硬件和操作系统上部署发布服务器。 该功能建立在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 快照复制和事务性复制的坚实基础上，提供了相似的性能和可用性。  
+  从 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 开始，可以在复制拓扑中加入 Oracle 发布服务器（自 Oracle 9i 版起）。 可在支持 Oracle 的任何硬件和操作系统上部署发布服务器。 该功能建立在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 快照复制和事务性复制的坚实基础上，提供了相似的性能和可用性。  
   
  不推荐使用 Oracle 发布。 不推荐异类复制到非 SQL Server 订阅服务器。 若要移动数据，请创建使用变更数据捕获和 [!INCLUDE[ssIS](../../../includes/ssis-md.md)]的解决方案。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "63022260"
   
  创建 Oracle 发布时，将为 Oracle 数据库中所有已发布的表创建触发器和跟踪表。 对发布的表进行数据更改时，将激发这些表的数据库触发器，并在复制跟踪表中为修改的每一行插入信息。 然后， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器上的日志读取器代理将数据更改信息从跟踪表移动到分发服务器上的分发数据库中。 最后，与在标准事务复制中一样，分发代理将更改从分发服务器移动到订阅服务器。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置 Oracle 发布服务器](configure-an-oracle-publisher.md)   
  [有关 Oracle 发布的术语词汇表](glossary-of-terms-for-oracle-publishing.md)   
  [异类数据库复制](heterogeneous-database-replication.md)  

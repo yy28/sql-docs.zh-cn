@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 7e9c170a187fc3ccf28301a2ee1c9ee7b626169f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196441"
 ---
 # <a name="execute-user-defined-functions"></a>执行用户定义函数
@@ -38,16 +38,16 @@ ms.locfileid: "68196441"
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Restrictions"></a> 限制和局限  
- 在 Transact-SQL 中，可通过使用 *value* 或使用 @*parameter_name*=*value*来提供参数。 来提供参数。参数不是事务的一部分；因此，如果在以后回退的事务中更改了参数，则此参数的值不会恢复为以前的值。 返回给调用方的值总是模块返回时的值。  
+ 在 Transact-SQL 中，可通过使用 *value* 或使用 @*parameter_name*=*value* 来提供参数。 来提供参数。参数不是事务的一部分；因此，如果在以后回退的事务中更改了参数，则此参数的值不会恢复为以前的值。 返回给调用方的值总是模块返回时的值。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
- 运行 EXECUTE 语句无需权限。 但是，需要对 EXECUTE 字符串内引用的安全对象具有权限。 例如，如果字符串包含 INSERT 语句，则 EXECUTE 语句的调用方对目标表必须具有 INSERT 权限。 在遇到 EXECUTE 语句时，即使 EXECUTE 语句包含于模块内，也将检查权限。 有关详细信息，请参阅 [EXECUTE (Transact-SQL)](/sql/t-sql/language-elements/execute-transact-sql)  
+####  <a name="Permissions"></a> 权限  
+ 运行 EXECUTE 语句无需权限。 但是，需要对 EXECUTE 字符串内引用的安全对象具有权限。 例如，如果字符串包含 INSERT 语句，则 EXECUTE 语句的调用方对目标表必须具有 INSERT 权限。 在遇到 EXECUTE 语句时，即使 EXECUTE 语句包含于模块内，也将检查权限。 有关详细信息，请参阅[EXECUTE &#40;transact-sql&#41;](/sql/t-sql/language-elements/execute-transact-sql)  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### <a name="to-execute-a-user-defined-function"></a>若要执行的用户定义函数  
+#### <a name="to-execute-a-user-defined-function"></a>执行用户定义函数  
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   

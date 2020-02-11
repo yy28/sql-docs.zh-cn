@@ -1,5 +1,5 @@
 ---
-title: Create a Cross-Domain Rule
+title: 创建跨域规则
 ms.date: 11/22/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -13,13 +13,13 @@ ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 070ef5db87ac28b59f01e3927f876f9c757e6caa
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245474"
 ---
-# <a name="create-a-cross-domain-rule"></a>Create a Cross-Domain Rule
+# <a name="create-a-cross-domain-rule"></a>创建跨域规则
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -33,14 +33,14 @@ ms.locfileid: "75245474"
   
  应首先考虑仅影响单一域的所有简单规则，之后才考虑跨域规则。 只有在某个值通过单一域规则（如果它们存在）之后，才会应用跨域规则。 对其运行某个规则的复合域和单一域必须全都定义后，才能执行该规则。  
   
-##  <a name="BeforeYouBegin"></a>开始之前  
+##  <a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Prerequisites"></a>先决条件  
  若要创建一个跨域规则，必须已创建并打开了一个复合域。  
   
-###  <a name="Security"></a>安全  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>访问  
+####  <a name="Permissions"></a> 权限  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_administrator 角色，才能创建跨域规则。  
   
 ##  <a name="Create"></a>创建跨域规则  

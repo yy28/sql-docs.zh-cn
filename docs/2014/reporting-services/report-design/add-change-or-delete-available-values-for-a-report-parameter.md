@@ -1,5 +1,5 @@
 ---
-title: 添加、 更改或删除可用值为报表参数 （报表生成器和 SSRS） |Microsoft Docs
+title: 添加、更改或删除报表参数的可用值（报表生成器和 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e9944e437be03dd7cfac3cbe6bad7c5224f3b462
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106680"
 ---
 # <a name="add-change-or-delete-available-values-for-a-report-parameter-report-builder-and-ssrs"></a>为报表参数添加、更改或删除可用值（报表生成器和 SSRS）
@@ -75,7 +75,7 @@ ms.locfileid: "66106680"
   
      预览该报表时，将不再显示参数的可用值下拉列表。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [更改报表参数的顺序（报表生成器和 SSRS）](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
  [添加、更改或删除报表参数（报表生成器和 SSRS）](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
  [向报表添加级联参数（报表生成器和 SSRS）](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   

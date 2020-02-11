@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c4b1706f81808d90e02df32df7e56828b054bd05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638102"
 ---
 # <a name="drop-xml-indexes"></a>删除 XML 索引
@@ -26,7 +26,7 @@ ms.locfileid: "62638102"
   
  以后将逐步停止使用带有 *TableName.IndexName* 的 DROP 语法，并且 XML 索引不支持该语法。  
   
-## <a name="example-creating-and-dropping-a-primary-xml-index"></a>例如：创建和删除主 XML 索引  
+## <a name="example-creating-and-dropping-a-primary-xml-index"></a>示例：创建和删除主 XML 索引  
  在以下示例中，XML 索引是对 `xml` 类型列创建的。  
   
 ```  
@@ -68,7 +68,7 @@ ON TestTable(Col2)
 GO  
 ```  
   
-## <a name="example-creating-an-xml-index-by-using-the-dropexisting-index-option"></a>例如：使用 DROP_EXISTING 索引选项创建 XML 索引  
+## <a name="example-creating-an-xml-index-by-using-the-drop_existing-index-option"></a>示例：使用 DROP_EXISTING 索引选项创建 XML 索引  
  在以下示例中，XML 索引是针对列 (`XmlColx`) 创建的。 然后，针对不同的列 (`XmlColy`) 创建同名的另一个 XML 索引。 由于指定了 `DROP_EXISTING` 选项，因此将删除 (`XmlColx)` 现有的 XML 索引并为 (`XmlColy`) 创建新的 XML 索引。  
   
 ```  
@@ -96,7 +96,7 @@ AND    si.object_id=object_id('T')
   
  此查询返回对其创建指定的 XML 索引的列的名称。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [XML 索引 (SQL Server)](xml-indexes-sql-server.md)  
   
   

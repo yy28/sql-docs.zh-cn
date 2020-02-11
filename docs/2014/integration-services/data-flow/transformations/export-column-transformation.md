@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ecb72ee0cb9d6e94a672f46ed523096ac4cc096e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900153"
 ---
 # <a name="export-column-transformation"></a>导出列转换
@@ -32,7 +32,7 @@ ms.locfileid: "62900153"
 ## <a name="append-and-truncate-options"></a>追加和截断选项  
  下表说明了追加和截断选项的设置如何影响结果。  
   
-|追加|截断|文件存在|结果|  
+|附加|Truncate|文件存在|结果|  
 |------------|--------------|-----------------|-------------|  
 |False|False|否|该转换将创建一个新文件并将数据写入到该文件中。|  
 |True|False|否|该转换将创建一个新文件并将数据写入到该文件中。|  
@@ -55,17 +55,17 @@ ms.locfileid: "62900153"
     > [!NOTE]  
     >  仅在不将数据追加到现有文件且数据具有 DT_NTEXT 数据类型时写入 BOM。  
   
- 转换使用输入列对：一列包含文件名，另一列包含数据。 数据集中的每一行都可指定一个不同的文件。 转换在处理行时，数据将插入到指定的文件中。 在运行时，如果这些文件不存在，转换将创建这些文件，然后将数据写入到文件中。 要写入的数据必须具有 DT_TEXT、DT_NTEXT 或 DT_IMAGE 数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../integration-services-data-types.md)。  
+ 此转换使用成对的输入列：一列包含文件名，另一列包含数据。 数据集中的每一行都可指定一个不同的文件。 转换在处理行时，数据将插入到指定的文件中。 在运行时，如果这些文件不存在，转换将创建这些文件，然后将数据写入到文件中。 要写入的数据必须具有 DT_TEXT、DT_NTEXT 或 DT_IMAGE 数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../integration-services-data-types.md)。  
   
  此转换有一个输入、一个输出和一个错误输出。  
   
  可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
- 有关可以在“导出列转换编辑器”  对话框中设置的属性的详细信息，请参阅[导出列转换编辑器（“列”页）](../../export-column-transformation-editor-columns-page.md)。  
+ 有关可以在“导出列转换编辑器”**** 对话框中设置的属性的详细信息，请参阅[导出列转换编辑器（“列”页）](../../export-column-transformation-editor-columns-page.md)。  
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [通用属性](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [转换自定义属性](transformation-custom-properties.md)  
   

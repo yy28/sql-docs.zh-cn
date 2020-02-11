@@ -1,27 +1,28 @@
 ---
-title: 创建跟踪 (SQL Server Profiler) |Microsoft Docs
-ms.custom: ''
-ms.date: 08/01/2016
+title: 创建跟踪
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- traces [SQL Server], creating
 ms.assetid: 0302fa6d-d2b5-43fe-ad70-7a337575b112
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cb6a3f10f93d7bba147dca0cc9f7bbb879a82d68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 08/01/2016
+ms.openlocfilehash: 5a5c004bbc7e93720f18df998b989c46ced0188e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930175"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307334"
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>创建跟踪 (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主题介绍如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 来创建跟踪。  
+
+本主题介绍如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 来创建跟踪。  
   
 ### <a name="to-create-a-trace"></a>创建跟踪  
   
@@ -29,7 +30,7 @@ ms.locfileid: "67930175"
   
      此时，将显示 **“跟踪属性”** 对话框。  
   
-    > **注意：** 如果选中“建立连接后立即开始跟踪”，就不会显示“跟踪属性”对话框，而是直接开始跟踪。   要关闭此设置，请在“工具”菜单上，单击“选项”，再清除“建立连接后立即开始跟踪”复选框   。  
+    > **注意：** 如果选中 “建立连接后立即开始跟踪” ，就不会显示 **“跟踪属性”** 对话框，而是直接开始跟踪。 要关闭此设置，请在“工具”菜单上，单击“选项”，再清除“建立连接后立即开始跟踪”复选框   。  
   
 2.  在 **“跟踪名称”** 框中，键入跟踪的名称。  
   

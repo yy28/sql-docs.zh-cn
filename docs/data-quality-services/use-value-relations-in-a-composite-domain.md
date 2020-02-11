@@ -12,10 +12,10 @@ ms.assetid: 5ee468f0-8538-4620-90e8-63f466c9000e
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 90937a98bb409c6f17bc542183cd024f408d71f2
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257765"
 ---
 # <a name="use-value-relations-in-a-composite-domain"></a>在复合域中使用值关系
@@ -24,14 +24,14 @@ ms.locfileid: "75257765"
 
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 知识发现过程中查看为复合域找到的值组合。 此页显示值组合的出现次数。 复合域不支持值管理，因此，您无法对这些值执行任何操作。  
   
-##  <a name="BeforeYouBegin"></a>开始之前  
+##  <a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Prerequisites"></a>先决条件  
  若要查看值关系，您必须创建并打开了一个复合域。  
   
-###  <a name="Security"></a>安全  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>访问  
+####  <a name="Permissions"></a> 权限  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_administrator 角色，才能在复合域中查看值关系。  
   
 ##  <a name="Use"></a>查看值关系  

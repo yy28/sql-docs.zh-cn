@@ -1,5 +1,5 @@
 ---
-title: 开发、 测试和生产数据库 (Visual Database Tools) |Microsoft Docs
+title: 开发、测试和生产数据库（Visual Database Tools） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 13ec879395358536485fb0d80e7ab1a2a19d4823
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63316468"
 ---
 # <a name="development-test-and-production-databases-visual-database-tools"></a>开发、测试和生产数据库 (Visual Database Tools)
@@ -26,7 +26,7 @@ ms.locfileid: "63316468"
   
  为此，需要在单个会话中完成对开发数据库的所有修改，并创建该会话的更改脚本，在以后对测试数据库运行该脚本。  
   
-## <a name="see-also"></a>请参阅  
- [多用户环境 (Visual Database Tools)](visual-database-tools.md)  
+## <a name="see-also"></a>另请参阅  
+ [多用户环境 &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

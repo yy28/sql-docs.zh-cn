@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 209bc81c63998cea299d2c377175955ee99470c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875710"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>包含标记事务的相关数据库恢复
@@ -54,18 +54,19 @@ ms.locfileid: "62875710"
 BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'    
 ```  
   
- 事务日志记录了标记名（事务名）、说明、数据库、用户、`datetime` 信息和日志序列号 (LSN)。 `datetime` 信息与标记名一起用于唯一地标识标记。  
+ 事务日志记录了标记名（事务名）、说明、数据库、用户、`datetime` 信息和日志序列号 (LSN)。 
+  `datetime` 信息与标记名一起用于唯一地标识标记。  
   
  有关如何将标记插入跨多个数据库的事务的信息，请参阅 [使用标记的事务一致地恢复相关的数据库的事务（完全恢复模式）](use-marked-transactions-to-recover-related-databases-consistently.md)。  
   
 ## <a name="transact-sql-syntax-for-recovering-to-a-mark"></a>恢复到某个标记的 Transact-SQL 语法  
  使用[RESTORE LOG](/sql/t-sql/statements/restore-statements-transact-sql)语句将某个标记的事务作为目标时，可以使用以下子句之一在标记处或在紧邻其之前的位置处停止：  
   
--   使用 WITH STOPATMARK = **' *`<mark_name>`* **子句来指定标记的事务是恢复点。  
+-   使用 WITH STOPATMARK = **'*`<mark_name>`*'** 子句将标记事务指定为恢复点。  
   
      STOPATMARK 前滚到标记处，并在前滚中包含标记的事务。  
   
--   使用 WITH STOPBEFOREMARK = **' *`<mark_name>`* **子句指定的日志记录将标记为恢复点之前。  
+-   使用 WITH STOPBEFOREMARK = **'*`<mark_name>`*'** 子句来指定紧靠在标记之前的日志记录是恢复点。  
   
      STOPBEFOREMARK 前滚到标记处，但在前滚中不包含标记的事务。  
   
@@ -110,7 +111,7 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
   
 6.  恢复每个数据库。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [BEGIN TRANSACTION (Transact-SQL)](/sql/t-sql/language-elements/begin-transaction-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [应用事务日志备份 (SQL Server)](transaction-log-backups-sql-server.md)   

@@ -1,5 +1,5 @@
 ---
-title: Create a Domain Rule
+title: 创建域规则
 ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -13,26 +13,26 @@ ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: c6a73d3f0dca65d0feb74cf572754351ccf86c7a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245484"
 ---
-# <a name="create-a-domain-rule"></a>Create a Domain Rule
+# <a name="create-a-domain-rule"></a>创建域规则
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中创建域规则。 域规则是用于验证、更正和标准化域值的条件。 域规则必须在域中保持正确，这样才能认为域值是准确的并且符合业务要求。 域规则可以包含用于验证域值、但不用于更正数据质量项目中的数据的验证规则。 规则还包含应用于有效数据并用于数据更正的标准化规则。  
   
-##  <a name="BeforeYouBegin"></a>开始之前  
+##  <a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Prerequisites"></a>先决条件  
  若要创建一个域规则，您必须具有知识库以及在域管理活动中打开的域。  
   
-###  <a name="Security"></a>安全  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>访问  
+####  <a name="Permissions"></a> 权限  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_administrator 角色，才能创建域规则。  
   
 ##  <a name="Build"></a>生成域规则  

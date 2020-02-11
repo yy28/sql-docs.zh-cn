@@ -15,10 +15,10 @@ ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: df671e83d80175f154a4008270c3b68dc2581b59
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75557912"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data---data-quality-services-dqs"></a>将域或复合域附加到引用数据-Data Quality Services （DQS）
@@ -42,7 +42,7 @@ ms.locfileid: "75557912"
 ###  <a name="Prerequisites"></a>先决条件  
  您必须配置了 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 后才能使用引用数据服务。 请参阅[将 DQS 配置为使用引用数据](../data-quality-services/configure-dqs-to-use-reference-data.md)。  
   
-###  <a name="Security"></a>安全  
+###  <a name="Security"></a> Security  
   
 #### <a name="permissions"></a>权限  
  您必须具有针对 DQS_MAIN 数据库的 dqs_kb_editor 角色才能将域映射到引用数据。  
@@ -57,7 +57,7 @@ ms.locfileid: "75557912"
   
 4.  在 **“域管理”** 屏幕中，单击 **“创建域”** 图标以创建一个域。 创建下列四个域： **Address Line**、 **City**、 **State**和 **Zip**。  
   
-5.  单击 **“创建复合域”** 图标以便创建一个复合域。 在 **“创建复合域”** 对话框中，在 **“复合域名称”** 框中键入 **Address Verification** ，并且在该复合域中包括在步骤 3 中创建的所有域。 单击“确定”****。  
+5.  单击 **“创建复合域”** 图标以便创建一个复合域。 在 **“创建复合域”** 对话框中，在 **“复合域名称”** 框中键入 **Address Verification** ，并且在该复合域中包括在步骤 3 中创建的所有域。 单击“确定”。   
   
 6.  在左侧的 **“域”** 窗格中，通过单击 **Address Verification**选择该复合域，然后单击右侧的 **“引用数据”** 选项卡。  
   
@@ -93,6 +93,6 @@ ms.locfileid: "75557912"
   
 ## <a name="see-also"></a>另请参阅  
  [DQS 中的引用数据服务](../data-quality-services/reference-data-services-in-dqs.md)   
- [数据清理](../data-quality-services/data-cleansing.md)  
+ [Data Cleansing](../data-quality-services/data-cleansing.md)  
   
   

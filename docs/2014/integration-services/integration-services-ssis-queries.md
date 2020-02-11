@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b4323715155ddb433012624f9d7a5df9bb0a29c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767656"
 ---
 # <a name="integration-services-ssis-queries"></a>Integration Services (SSIS) 查询
@@ -55,9 +55,9 @@ ms.locfileid: "62767656"
  有关详细信息，请参阅 [Query Builder](../../2014/integration-services/query-builder.md)。  
   
 ## <a name="sql-in-files"></a>文件形式的 SQL  
- 执行 SQL 任务的 SQL 语句还可以驻留在单独的文件中。 例如，您可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的查询编辑器等工具来编写查询，将查询保存到文件，然后在运行包时从该文件读取查询。 该文件可以只包含要运行的 SQL 语句以及注释。 若要使用存储在文件中的 SQL 语句，您必须提供指定文件名和位置的文件连接。 有关详细信息，请参阅 [File Connection Manager](connection-manager/file-connection-manager.md)。  
+ 执行 SQL 任务的 SQL 语句还可以驻留在单独的文件中。 例如，您可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的查询编辑器等工具来编写查询，将查询保存到文件，然后在运行包时从该文件读取查询。 该文件可以只包含要运行的 SQL 语句以及注释。 若要使用存储在文件中的 SQL 语句，您必须提供指定文件名和位置的文件连接。 有关详细信息，请参阅[文件连接管理器](connection-manager/file-connection-manager.md)。  
   
 ## <a name="sql-in-variables"></a>变量形式的 SQL  
- 如果执行 SQL 任务中 SQL 语句的源是一个变量，您需要提供包含该查询的变量的名称。 该变量的 Value 属性包含查询文本。 可以将该变量的 ValueType 属性设置为字符串数据类型，然后键入 SQL 语句或将该语句复制到 Value 属性中。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](integration-services-ssis-variables.md)和[在包中使用变量](../../2014/integration-services/use-variables-in-packages.md)。  
+ 如果执行 SQL 任务中 SQL 语句的源是一个变量，您需要提供包含该查询的变量的名称。 该变量的 Value 属性包含查询文本。 可以将该变量的 ValueType 属性设置为字符串数据类型，然后键入 SQL 语句或将该语句复制到 Value 属性中。 有关详细信息，请参阅[Integration Services &#40;SSIS&#41; 变量](integration-services-ssis-variables.md)和[在包中使用变量](../../2014/integration-services/use-variables-in-packages.md)。  
   
   

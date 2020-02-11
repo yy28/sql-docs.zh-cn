@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 23c8c3c76b881f342f56490e5722a0ae641464ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755367"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>监视数据库镜像 (SQL Server)
@@ -82,7 +82,7 @@ ms.locfileid: "62755367"
   
      下表介绍了管理和使用数据库镜像监视的存储过程，它们独立于数据库镜像监视器工作。  
   
-    |过程|Description|  
+    |过程|说明|  
     |---------------|-----------------|  
     |[sp_dbmmonitoraddmonitoring](/sql/relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql)|创建定期更新服务器实例上每个镜像数据库的状态信息的作业。|  
     |[sp_dbmmonitorchangemonitoring](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql)|更改数据库镜像监视参数的值。|  
@@ -129,8 +129,8 @@ ms.locfileid: "62755367"
   
      系统管理员可以使用 **sp_dbmmonitorresults** 系统存储过程查看状态表，如果此状态表在前 15 秒内没有更新，则还可以选择对其进行更新。 此过程将调用 **sp_dbmmonitorupdate** 过程并返回一个或多个历史记录行，具体取决于过程调用中的请求量。 有关其结果集中状态的信息，请参阅 [sp_dbmmonitorresults (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql)。  
   
-#### <a name="monitoring-database-mirroring-status-by-dbmmonitor-members"></a>监视数据库镜像状态（由 dbm_monitor 成员执行）  
- 如上所述，当 **sp_dbmmonitorupdate** 首次运行时，便会在 **msdb** 数据库中创建 **dbm_monitor** 固定数据库角色。 **dbm_monitor** 固定数据库角色成员可以使用数据库镜像监视器或 **sp_dbmmonitorresults** 存储过程查看现有的镜像状态。 但是这些用户不能更新状态表。 若要了解所显示的状态的保留时间，用户可以在“状态”  页上的“主体日志 (\<时间>)” **** 和“镜像日志 (\<时间>)” **** 标签上查看时间。  
+#### <a name="monitoring-database-mirroring-status-by-dbm_monitor-members"></a>监视数据库镜像状态（由 dbm_monitor 成员执行）  
+ 如上所述，当 **sp_dbmmonitorupdate** 首次运行时，便会在 **msdb** 数据库中创建 **dbm_monitor** 固定数据库角色。 **dbm_monitor** 固定数据库角色成员可以使用数据库镜像监视器或 **sp_dbmmonitorresults** 存储过程查看现有的镜像状态。 但是这些用户不能更新状态表。 若要了解所显示的状态的保留时间，用户可以在“状态”*****页上的“主体日志 (\<时间>)”**********和“镜像日志 (\<时间>)”********* 标签上查看时间。  
   
  **dbm_monitor** 固定数据库角色成员使用  “数据库镜像监视器作业”定期更新状态表。 如果作业不存在，或者 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理已停止，则状态便会迅速变旧，并且不再反映镜像会话的配置。 例如，在一次故障转移之后，伙伴可能会分享相同的角色（主体或镜像）。或者，当前主体服务器可能显示为镜像，而当前的镜像服务器显示为主体。  
   
@@ -145,7 +145,7 @@ ms.locfileid: "62755367"
   
  下面将介绍上述各内容的概要。  
   
-#### <a name="partners"></a>伙伴  
+#### <a name="partners"></a>合作伙伴  
  **“状态”** 页显示每个伙伴的下列信息：  
   
 -   服务器实例  
@@ -164,13 +164,13 @@ ms.locfileid: "62755367"
   
      可能的状态包括：  
   
-    -   Unknown  
+    -   未知  
   
     -   正在同步  
   
     -   已同步  
   
-    -   挂起  
+    -   Suspended  
   
     -   已断开连接  
   
@@ -178,9 +178,9 @@ ms.locfileid: "62755367"
   
      见证服务器的连接状态。 可能的状态包括：  
   
-    -   Unknown  
+    -   未知  
   
-    -   已连接  
+    -   连续  
   
     -   已断开连接。  
   
@@ -329,7 +329,7 @@ ms.locfileid: "62755367"
   
 -   [sp_dbmmonitorupdate (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库镜像 (SQL Server)](database-mirroring-sql-server.md)   
  [WMI Provider for Server Events 的概念](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   

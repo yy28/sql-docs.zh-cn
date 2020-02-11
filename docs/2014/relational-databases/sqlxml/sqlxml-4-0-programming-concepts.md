@@ -14,16 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 03d6069358c1591233aa892a723b7367a21be569
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012226"
 ---
 # <a name="sqlxml-40-programming-concepts"></a>SQLXML 4.0 编程概念
   SQLXML 3.0 作为 Web 版本提供，以提供附加客户端 XML 功能和现有功能的增强功能，例如带批注的 XSD 架构、XML 大容量加载、Web 服务 (SOAP) 支持和 updategram。  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 引入了 SQLXML 4.0，它继续提供与 SQLXML 3.0 相同的功能，另外还提供附加的更新以接纳随 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 引入的新功能。  
+ 
+  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 引入了 SQLXML 4.0，它继续提供与 SQLXML 3.0 相同的功能，另外还提供附加的更新以接纳随 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 引入的新功能。  
   
  本部分提供有关 SQLXML 4.0 的信息。  
   
@@ -42,7 +43,7 @@ ms.locfileid: "66012226"
  [运行 SQLXML 示例的要求](requirements-for-running-sqlxml-examples.md)  
  介绍从所提供的 SQLXML 示例创建工作示例的要求。  
   
- [客户端和服务器端格式设置&#40;SQLXML 4.0&#41;](formatting/client-side-and-server-side-formatting-sqlxml-4-0.md)  
+ [&#40;SQLXML 4.0&#41;的客户端和服务器端格式设置](formatting/client-side-and-server-side-formatting-sqlxml-4-0.md)  
  提供有关客户端和服务器端格式设置的信息以及二者的比较，包括用于构造 XML 文档的 FOR XML 命令。  
   
  [SQLXML 4.0 中的带批注的 XSD 架构](annotated-xsd-schemas/annotated-xsd-schemas-in-sqlxml-4-0.md)  
@@ -54,7 +55,7 @@ ms.locfileid: "66012226"
  [使用 Updategram 修改 SQLXML 4.0 中的数据](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
  提供有关 updategram 的信息，它通过处理由带批注的 XSD（或 XDR）架构提供的 XML 视图来修改数据库中的数据。  
   
- [执行大容量加载 XML 数据的&#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [&#40;SQLXML 4.0&#41;执行 XML 数据的大容量加载](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
  介绍如何在 SQLXML 4.0 中大容量加载 XML。  
   
  [SQLXML 4.0 数据访问组件](../sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md)  
@@ -63,7 +64,7 @@ ms.locfileid: "66012226"
  [SQLXML 4.0 .NET Framework 支持](../../database-engine/dev-guide/sqlxml-4-0-net-framework-support.md)  
  介绍 SQLXML 4.0 对 .NET Framework 的支持。  
   
- [缓存模板、 XSL 和架构&#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/caching-templates-xsl-and-schemas-sqlxml-4-0.md)  
+ [&#40;SQLXML 4.0&#41;缓存模板、XSL 和架构](../sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/caching-templates-xsl-and-schemas-sqlxml-4-0.md)  
  介绍在 SQLXML 中提供的用于提高性能的缓存功能。  
   
  [SQLXML 4.0 安全注意事项](../sqlxml-annotated-xsd-schemas-xpath-queries/security/sqlxml-4-0-security-considerations.md)  
@@ -72,7 +73,7 @@ ms.locfileid: "66012226"
  [SQLXML 4.0 的准则和限制](../sqlxml-annotated-xsd-schemas-xpath-queries/guidelines-and-limitations-of-sqlxml-4-0.md)  
  列出使用 SQLXML 4.0 时要记住的问题。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [XML 数据 (SQL Server)](../xml/xml-data-sql-server.md)  
   
   

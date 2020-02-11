@@ -1,5 +1,5 @@
 ---
-title: sp_dropmessage (TRANSACT-SQL) |Microsoft Docs
+title: sp_dropmessage （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a8e6a8187936e7a2f824315123937cf9c7eca9c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933867"
 ---
-# <a name="spdropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
+# <a name="sp_dropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  从 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例中删除指定的用户定义的错误消息。 可以使用查看用户定义的消息**sys.messages**目录视图。  
+  从 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例中删除指定的用户定义的错误消息。 可以使用**sys.databases**目录视图查看用户定义的消息。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,9 +40,9 @@ sp_dropmessage [ @msgnum = ] message_number
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @msgnum = ] message_number` 若要删除的消息号。 *message_number*必须是一个消息号大于 50000 的用户定义的消息。 *message_number*是**int**，默认值为 NULL。  
+`[ @msgnum = ] message_number`要删除的消息号。 *message_number*必须是消息编号大于50000的用户定义消息。 *message_number*的值为**int**，默认值为 NULL。  
   
-`[ @lang = ] 'language'` 是要删除的语言。 如果**所有**指定的所有语言版本*message_number*将被删除。 *语言*是**sysname**，默认值为 NULL。  
+`[ @lang = ] 'language'`要删除的消息的语言。 如果指定**all** ，则删除*message_number*的所有语言版本。 *language*的值为**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -51,15 +51,15 @@ sp_dropmessage [ @msgnum = ] message_number
  无。  
   
 ## <a name="permissions"></a>权限  
- 要求的成员身份**sysadmin**并**serveradmin**固定服务器角色的成员。  
+ 要求具有**sysadmin**和**serveradmin**固定服务器角色的成员身份。  
   
 ## <a name="remarks"></a>备注  
- 除非**所有**为指定*语言*、 所有本地化美国之前必须删除一条消息的版本可以删除消息的英文版本。  
+ 除非为*语言*指定**all** ，否则必须先删除消息的所有本地化版本，然后才能删除该消息的美国英语版本。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-dropping-a-user-defined-message"></a>A. 删除用户定义的消息  
- 以下示例将删除的用户定义的消息，数字`50001`，从**sys.messages**。  
+ 下面的示例从**sys.databases**中删除用户定义的消息`50001`number。  
   
 ```  
 USE master;  
@@ -130,11 +130,11 @@ EXEC sp_dropmessage
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)   
- [sp_addmessage (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
- [sp_altermessage &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
- [FORMATMESSAGE (Transact-SQL)](../../t-sql/functions/formatmessage-transact-sql.md)   
+ [sp_addmessage &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
+ [sp_altermessage &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
+ [FORMATMESSAGE &#40;Transact-sql&#41;](../../t-sql/functions/formatmessage-transact-sql.md)   
  [sys.messages (Transact-SQL)](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

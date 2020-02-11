@@ -1,5 +1,5 @@
 ---
-title: 启动配置数据库镜像安全向导 (SQL Server Management Studio) |Microsoft Docs
+title: 启动配置数据库镜像安全向导（SQL Server Management Studio） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b9f9d698496c05ca28d0d2a8b8341007bca13e8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754446"
 ---
 # <a name="start-the-configuring-database-mirroring-security-wizard-sql-server-management-studio"></a>启动配置数据库镜像安全向导 (SQL Server Management Studio)
@@ -27,13 +27,13 @@ ms.locfileid: "62754446"
   
 1.  连接到主体服务器实例之后，在对象资源管理器中，单击服务器名称以展开服务器树。  
   
-2.  展开 **“数据库”**，再选择要镜像的数据库。  
+2.  展开 **“数据库”** ，再选择要镜像的数据库。  
   
-3.  右键单击数据库，选择 **“任务”**，再单击 **“镜像”**。 这样便可打开 [“数据库属性”](../../relational-databases/databases/database-properties-mirroring-page.md) 对话框的 **“镜像”页** 。  
+3.  右键单击数据库，选择 **“任务”** ，再单击 **“镜像”** 。 这样便可打开 [“数据库属性”](../../relational-databases/databases/database-properties-mirroring-page.md) 对话框的 **“镜像”页** 。  
   
-4.  单击 **“配置安全性”**。  
+4.  单击 **“配置安全性”** 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库镜像 (SQL Server)](database-mirroring-sql-server.md)   
  [数据库属性（“镜像”页）](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](establish-database-mirroring-session-windows-authentication.md)  

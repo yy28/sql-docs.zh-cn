@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b1258797d76df49a2622335ee798120632706c78
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62772216"
 ---
 # <a name="adding-connections-programmatically"></a>以编程方式添加连接
@@ -37,11 +37,11 @@ ms.locfileid: "62772216"
  <xref:Microsoft.SqlServer.Dts.Runtime.Connections> 类是一个已添加到该包并且可在运行时使用的连接管理器的集合。 可以使用该集合的 <xref:Microsoft.SqlServer.Dts.Runtime.Connections.Add%2A> 方法，并提供一个用于指示连接管理器类型的字符串，以向该集合添加更多的连接管理器。 <xref:Microsoft.SqlServer.Dts.Runtime.Connections.Add%2A> 方法返回已添加到该包的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 实例。  
   
 ## <a name="intrinsic-properties"></a>内部属性  
- <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 类公开一组所有连接通用的属性。 但是，有时您需要访问特定连接类型特有的属性。 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Properties%2A> 类的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 集合提供对这些属性的访问。 可以使用索引器或属性名称以及 GetValue 方法从集合检索这些属性，并使用 SetValue 方法设置属性的值。 设置基础连接对象属性的属性的另一种方法是：获取该对象的实际实例并直接设置其属性。 若要获取基础连接，请使用连接管理器的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.InnerObject%2A> 属性。 下面的代码行显示了一行 C# 代码，该代码行创建一个具有基础类 <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.ConnectionManagerAdoNetClass> 的 ADO.NET 连接管理器。  
+ <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 类公开一组所有连接通用的属性。 但是，有时您需要访问特定连接类型特有的属性。 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Properties%2A> 类的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 集合提供对这些属性的访问。 可以使用索引器或属性名称以及 GetValue 方法从集合检索这些属性，并使用 SetValue 方法设置属性的值   。 设置基础连接对象属性的属性的另一种方法是：获取该对象的实际实例并直接设置其属性。 若要获取基础连接，请使用连接管理器的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.InnerObject%2A> 属性。 下面的代码行显示了一行 C# 代码，该代码行创建一个具有基础类 <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.ConnectionManagerAdoNetClass> 的 ADO.NET 连接管理器。  
   
  `ConnectionManagerAdoNetClass cmado = cm.InnerObject as ConnectionManagerAdoNet;`  
   
- 这可将托管连接管理器对象转换为其基础连接对象。 如果您使用的是 C++，则需要调用 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 对象的 `QueryInterface` 方法，并请求基础连接对象的接口。  
+ 这可将托管连接管理器对象转换为其基础连接对象。 如果您使用的是 C++，则需要调用 `QueryInterface` 对象的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 方法，并请求基础连接对象的接口。  
   
  下表列出了随 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的连接管理器。 此外，还有 `package.Connections.Add("xxx")` 语句中使用的字符串。 若要获取所有连接管理器的列表，请参阅 [Integration Services (SSIS) 连接](../connection-manager/integration-services-ssis-connections.md)。  
   
@@ -209,10 +209,10 @@ End Class
 ## <a name="external-resources"></a>外部资源  
  carlprothman.net 上的技术文章 [Connection Strings](https://go.microsoft.com/fwlink/?LinkId=220743)（连接字符串）。  
   
-![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![Integration Services 图标（小）](../media/dts-16.gif "集成服务图标（小）")**保持与 Integration Services 最**新  <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
-## <a name="see-also"></a>请参阅  
- [Integration Services (SSIS) 连接](../connection-manager/integration-services-ssis-connections.md)   
+## <a name="see-also"></a>另请参阅  
+ [Integration Services &#40;SSIS&#41; 连接](../connection-manager/integration-services-ssis-connections.md)   
  [创建连接管理器](../create-connection-managers.md)  
   
   

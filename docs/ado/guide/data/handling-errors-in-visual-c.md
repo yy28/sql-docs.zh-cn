@@ -1,5 +1,5 @@
 ---
-title: 视觉对象中的错误处理C++|Microsoft Docs
+title: 处理 Visual C++ 中的错误 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,15 +16,15 @@ ms.assetid: b7576f07-020a-45f7-9e79-b5756f33f7ab
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fb9eb29a78c3ec5f47e3ff09641ba04ca01d204a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925129"
 ---
 # <a name="handling-errors-in-visual-c"></a>处理 Visual C++ 中的错误
-在 COM 中，大多数操作返回一个 HRESULT 返回代码，指示函数是否已成功完成。 #Import 指令生成每个"原始"方法或属性周围的包装器代码，并检查返回的 HRESULT。 如果 HRESULT 表示失败，包装器代码将 COM 错误的 HRESULT 返回代码的调用 _com_issue_errorex() 引发作为参数。 COM 错误对象可以陷入**try catch**块。 （为提高效率的起见，捕获 _com_error 对象的引用。）  
+在 COM 中，大多数操作都返回一个 HRESULT 返回代码，该代码指示函数是否已成功完成。 #Import 指令围绕每个 "原始" 方法或属性生成包装代码，并检查返回的 HRESULT。 如果 HRESULT 指示失败，则包装代码通过调用 _com_issue_errorex （），并将 HRESULT 返回代码作为参数来引发 COM 错误。 COM 错误对象可以在**try-catch**块中捕获。 （为提高效率，请捕获对 _com_error 对象的引用。）  
   
- 请记住，这些是 ADO 错误： 可疑 ADO 操作失败。 基础提供程序返回的错误显示为**错误**中的对象**连接**对象的**错误**集合。  
+ 请记住，这些是 ADO 错误：它们是由于 ADO 操作失败导致的。 基础提供程序返回的错误在**连接**对象的**错误**集合中显示为**错误**对象。  
   
- #Import 指令仅创建于方法和属性在 ADO.dll 中声明的错误处理例程。 但是，您可以通过编写自己的错误检查宏或内联函数来充分利用此相同的错误处理机制。 请参阅示例的主题 Visual C++® 扩展。
+ #Import 指令只为在 ADO 中声明的方法和属性创建错误处理例程。 但是，您可以通过编写自己的错误检查宏或内联函数来利用这一相同的错误处理机制。 有关示例，请参阅主题 Visual C++®扩展。

@@ -1,5 +1,5 @@
 ---
-title: 选择目标表的插入值对话框 (Visual Database Tools) |Microsoft Docs
+title: "\"选择插入值的目标表\" 对话框（Visual Database Tools） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7dc613dd6dcb7e639fff247a84a73812d023fb5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63255753"
 ---
 # <a name="choose-target-table-for-insert-values-dialog-box-visual-database-tools"></a>“选择插入值的目标表”对话框 (Visual Database Tools)
@@ -25,7 +25,7 @@ ms.locfileid: "63255753"
   
  选择要向其中添加数据的表，再单击“确定”  。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建“插入值”查询 (Visual Database Tools)](visual-database-tools.md)  
   
   

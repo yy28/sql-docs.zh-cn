@@ -18,10 +18,10 @@ ms.assetid: 1df24fe2-0873-4cd1-9151-2306d08418bc
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e3dabb640d17d7d9b81273ce37382799a7d84389
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660573"
 ---
 # <a name="ipaddressname-property-servernetworkprotocolipaddress-class"></a>IpAddressName 属性（ServerNetworkProtocolIPAddress 类）
@@ -36,8 +36,8 @@ object.IpAddressName [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
- 一个表示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例上的网络协议 IP 地址的[ServerNetworkProtocolIPAdress 类](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md)对象。  
+ *对象*  
+ 一个表示实例上的网络协议 IP 地址的[ServerNetworkProtocolIPAdress 类](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md)对象[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个指定 IP 地址名称的字符串值。  

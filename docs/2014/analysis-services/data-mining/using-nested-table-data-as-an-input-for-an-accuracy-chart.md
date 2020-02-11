@@ -1,5 +1,5 @@
 ---
-title: 嵌套的表数据作为输入用于准确性图表 |Microsoft Docs
+title: 使用嵌套表数据作为准确性图表的输入 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a6e6d0ade60dbb42fca9bda9ee78f4dbb50064a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082732"
 ---
 # <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>使用嵌套表数据作为准确性图表的输入
@@ -39,21 +39,21 @@ ms.locfileid: "66082732"
   
 1.  双击挖掘结构以在数据挖掘设计器中将其打开。  
   
-2.  选择“挖掘准确性图表”  选项卡，然后选择“输入选择”  选项卡。  
+2.  选择“挖掘准确性图表” **** 选项卡，然后选择“输入选择” **** 选项卡。  
   
 3.  在 **“选择要用于准确性图表的数据集”** 中，选择 **“指定其他数据集”** 选项。  
   
-4.  单击浏览按钮 **（...）** 若要从当前服务器上的数据源视图的列表中选择外部数据集。  
+4.  单击浏览按钮 **（...）** ，从当前服务器上的数据源视图列表中选择外部数据集。  
   
-5.  单击“选择事例表”  。 在 **“选择表”** 对话框中，从包含事例数据的数据源视图中选择事例表，然后单击 **“确定”** 。  
+5.  单击“选择事例表” ****。 在 **“选择表”** 对话框中，从包含事例数据的数据源视图中选择事例表，然后单击 **“确定”**。  
   
-6.  单击 **“选择嵌套表”** 。 在 **“选择表”** 对话框中，选择包含嵌套数据的表，然后单击 **“确定”** 。  
+6.  单击 **“选择嵌套表”**。 在 **“选择表”** 对话框中，选择包含嵌套数据的表，然后单击 **“确定”**。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
      如果需要修改嵌套表与事例表之间的关系，请单击 **“修改联接”** 以打开 **“创建关系”** 对话框。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [选择和映射模型测试数据](choose-and-map-model-testing-data.md)   
  [将筛选器应用于模型测试数据](apply-filters-to-model-testing-data.md)  
   

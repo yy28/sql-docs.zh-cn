@@ -1,5 +1,5 @@
 ---
-title: Handler 属性示例 （VC + +） |Microsoft Docs
+title: 处理程序属性示例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,19 +15,19 @@ ms.assetid: d046d89c-622b-48bc-9d30-f454c3e13595
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 15bbdd0b1e3627453a3ea10a4ea6207f446988f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964079"
 ---
 # <a name="handler-property-example-vc"></a>Handler 属性示例 (VC++)
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 此示例演示[RDS DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象[处理程序](../../../ado/reference/rds-api/handler-property-rds.md)属性。 (请参阅[自定义 DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)的更多详细信息。)  
+ 此示例演示了[RDS DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象[处理程序](../../../ado/reference/rds-api/handler-property-rds.md)属性。 （有关详细信息，请参阅[DataFactory 自定义](../../../ado/guide/remote-data-service/datafactory-customization.md)。）  
   
- 假定位于服务器上的参数文件 Msdfmap.ini 中的以下部分：  
+ 假设位于服务器上的参数文件 Msdfmap 中的以下部分：  
   
 ```  
 [connect AuthorDataBase]  
@@ -37,7 +37,7 @@ Connect="DSN=Pubs"
 SQL="SELECT * FROM Authors WHERE au_id = ?"  
 ```  
   
- 你的代码看起来如下所示。 分配给该命令[SQL](../../../ado/reference/rds-api/sql-property.md)属性将匹配***AuthorById***标识符，将检索作者 Michael O'Leary 的行。 尽管[Connect](../../../ado/reference/rds-api/connect-property-rds.md)在代码中的属性指定 Northwind 数据源，该数据源将被覆盖 Msdfmap.ini*连接*部分。 **DataControl**对象[记录集](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)属性分配到已断开连接[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)单纯用作为了方便编码对象。  
+ 你的代码如下所示。 分配给[SQL](../../../ado/reference/rds-api/sql-property.md)属性的命令将与***AuthorById***标识符匹配，并将为作者 Michael O'Leary 检索行。 尽管代码中的[Connect](../../../ado/reference/rds-api/connect-property-rds.md)属性指定 Northwind 数据源，但该数据源会被 Msdfmap *Connect*节覆盖。 将**DataControl**对象[记录集](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)属性分配给完全作为编码便利的断开连接的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。  
   
 ```  
 // BeginHandlerCpp.cpp  
@@ -128,8 +128,8 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
+## <a name="see-also"></a>另请参阅  
+ [DataControl 对象（RDS）](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Handler 属性 (RDS)](../../../ado/reference/rds-api/handler-property-rds.md)
 
 

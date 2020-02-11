@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2e040fb9c05683be9d737ea134710c03d36317cd
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229012"
 ---
 # <a name="always-on-availability-groups-sql-server"></a>AlwaysOn 可用性组 (SQL Server)
@@ -31,7 +31,7 @@ ms.locfileid: "75229012"
  可用性组在可用性副本级别进行故障转移。 故障转移不是由诸如因数据文件丢失而使数据库成为可疑数据库、删除数据库或事务日志损坏等此类数据库问题导致的。  
   
   
-##  <a name="Benefits"></a>便利  
+##  <a name="Benefits"></a> 优势  
  
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 提供了一组丰富的选项来提高数据库的可用性并改进资源使用情况。 主要组件如下：  
   
@@ -141,9 +141,9 @@ ms.locfileid: "75229012"
   
 -   [日志传送](../../log-shipping/about-log-shipping-sql-server.md)  
   
--   [远程 Blob 存储区（RBS）](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md)  
+-   [远程 Blob 存储区 (RBS)](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md)  
   
--   [副本](../../install-windows/install-sql-server-replication.md)  
+-   [复制](../../install-windows/install-sql-server-replication.md)  
   
 -   [Service Broker](../../configure-windows/sql-server-service-broker.md)  
   
@@ -154,11 +154,11 @@ ms.locfileid: "75229012"
 > [!WARNING]  
 >  有关使用的其他功能的限制和限制的信息[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，请参阅[Always On 可用性组：互操作性;SQL Server;](always-on-availability-groups-interoperability-sql-server.md)。  
   
-##  <a name="RelatedTasks"></a>相关任务  
+##  <a name="RelatedTasks"></a> 相关任务  
   
 -   [Always On 可用性组的入门;SQL Server;](getting-started-with-always-on-availability-groups-sql-server.md)  
   
-##  <a name="RelatedContent"></a>相关内容  
+##  <a name="RelatedContent"></a> 相关内容  
   
 -   **博客**  
   
@@ -174,7 +174,7 @@ ms.locfileid: "75229012"
   
 -   **白皮书**  
   
-     [针对高可用性和灾难恢复 Microsoft SQL Server Always On 解决方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
+     [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
   
   

@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2db2ac49f1caa455c8c05529437a385d360ecaf6
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242995"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>IntelliSense 支持的 Transact-SQL 语法
@@ -32,8 +32,7 @@ ms.locfileid: "75242995"
 >  IntelliSense 不能用于加密的数据库对象，例如加密的存储过程或用户定义函数。 参数帮助和快速信息不能用于扩展存储过程和 CLR 集成用户定义类型的参数。  
   
 ### <a name="select-statement"></a>SELECT 语句  
- 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器为 SELECT 语句中的以下语法元素提供 IntelliSense 支持：  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器为 SELECT 语句中的以下语法元素提供 IntelliSense 支持：  
   
 |||  
 |-|-|  
@@ -44,22 +43,21 @@ ms.locfileid: "75242995"
 |返回页首|OPTION（提示）|  
   
 ### <a name="additional-transact-sql-statements-that-are-supported"></a>支持的其他 Transact-SQL 语句  
- 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器还为下表中列出的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句提供 IntelliSense 支持。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器还为下表中列出的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句提供 IntelliSense 支持。  
   
 |Transact-SQL 语句|支持的语法|  
 |-----------------------------|----------------------|  
 |[INSERT](/sql/t-sql/statements/insert-transact-sql)|所有语法， *execute_statement* 子句除外。|  
-|[时更新](/sql/t-sql/queries/update-transact-sql)|所有语法。|  
+|[UPDATE](/sql/t-sql/queries/update-transact-sql)|所有语法。|  
 |[DELETE](/sql/t-sql/statements/delete-transact-sql)|所有语法。|  
 |[把@local_variable](/sql/t-sql/language-elements/declare-local-variable-transact-sql)|所有语法。|  
-|[字符集@local_variable](/sql/t-sql/language-elements/set-local-variable-transact-sql)|所有语法。|  
-|[运行](/sql/t-sql/language-elements/execute-transact-sql)|执行用户定义的存储过程、系统存储过程、用户定义函数和系统函数。|  
+|[SET @local_variable](/sql/t-sql/language-elements/set-local-variable-transact-sql)|所有语法。|  
+|[在运行 CREATE 语句前执行](/sql/t-sql/language-elements/execute-transact-sql)|执行用户定义的存储过程、系统存储过程、用户定义函数和系统函数。|  
 |[CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql)|所有语法。|  
-|[创建视图](/sql/t-sql/statements/create-view-transact-sql)|所有语法。|  
-|[创建过程](/sql/t-sql/statements/create-procedure-transact-sql)|所有语法，以下情况除外：<br /><br /> 对 EXTERNAL NAME 子句不提供 IntelliSense 支持。<br /><br /> 在 AS 子句中，IntelliSense 仅支持本主题中列出的语句和语法。|  
+|[CREATE VIEW](/sql/t-sql/statements/create-view-transact-sql)|所有语法。|  
+|[CREATE PROCEDURE](/sql/t-sql/statements/create-procedure-transact-sql)|所有语法，以下情况除外：<br /><br /> 对 EXTERNAL NAME 子句不提供 IntelliSense 支持。<br /><br /> 在 AS 子句中，IntelliSense 仅支持本主题中列出的语句和语法。|  
 |[ALTER PROCEDURE](/sql/t-sql/statements/alter-procedure-transact-sql)|所有语法，以下情况除外：<br /><br /> 对 EXTERNAL NAME 子句不提供 IntelliSense 支持。<br /><br /> 在 AS 子句中，IntelliSense 仅支持本主题中列出的语句和语法。|  
-|[用法](/sql/t-sql/language-elements/use-transact-sql)|所有语法。|  
+|[USE](/sql/t-sql/language-elements/use-transact-sql)|所有语法。|  
   
 ## <a name="intellisense-in-supported-statements"></a>IntelliSense 在支持的语句中  
  当以下语法元素用于受支持的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 语句之一时， [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询编辑器中的 IntelliSense 提供支持：  

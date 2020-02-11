@@ -1,5 +1,5 @@
 ---
-title: 步骤 3：添加和配置 OLE DB 连接管理器 |Microsoft Docs
+title: 步骤 3：添加和配置 OLE DB 连接管理器 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c22c9ca183a5975b762fd166ee434f305422e6ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62891716"
 ---
 # <a name="step-3-adding-and-configuring-an-ole-db-connection-manager"></a>步骤 3：添加并配置 OLE DB 连接管理器
@@ -24,32 +24,32 @@ ms.locfileid: "62891716"
   
 ### <a name="to-add-and-configure-an-ole-db-connection-manager-to-the-ssis-package"></a>向 SSIS 包中添加 OLE DB 连接管理器并对其进行配置  
   
-1.  右键单击“连接管理器”  区域中的任意位置，再单击“新建 OLE DB 连接”  。  
+1.  右键单击“连接管理器”**** 区域中的任意位置，再单击“新建 OLE DB 连接”****。  
   
-2.  在 **“配置 OLE DB 连接管理器”** 对话框中，单击 **“新建”** 。  
+2.  在 **“配置 OLE DB 连接管理器”** 对话框中，单击 **“新建”**。  
   
-3.  在“服务器名称”  中，输入 **localhost**。  
+3.  在“服务器名称”**** 中，输入 **localhost**。  
   
      将 localhost 指定为服务器名称时，连接管理器将连接到本地计算机上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的默认实例。 若要使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的远程实例，请将 localhost 替换为要连接到的服务器的名称。  
   
-4.  在“登录到服务器”  组中，确认选择了“使用 Windows 身份验证”  。  
+4.  在“登录到服务器”**** 组中，确认选择了“使用 Windows 身份验证”****。  
   
-5.  在中**连接到数据库**组中，在**选择或输入数据库名称**框中，键入或选择`AdventureWorksDW2012`。  
+5.  在 "**连接到数据库**" 组的 "**选择或输入数据库名称**" 框中，键入或选择`AdventureWorksDW2012`。  
   
-6.  单击“测试连接”  ，验证指定的连接设置是否有效。  
+6.  单击“测试连接”****，验证指定的连接设置是否有效。  
   
-7.  单击“确定”  。  
+7.  单击“确定”。   
   
-8.  单击“确定”  。  
+8.  单击“确定”。   
   
-9. 在“配置 OLE DB 连接管理器”  对话框的“数据连接”  窗格中，确认选择了“localhost.AdventureWorksDW2012”  。  
+9. 在“配置 OLE DB 连接管理器”**** 对话框的“数据连接”**** 窗格中，确认选择了“localhost.AdventureWorksDW2012”****。  
   
-10. 单击“确定”  。  
+10. 单击“确定”。   
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [步骤 4：向包添加数据流任务](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
+ [步骤 4：将数据流任务添加到包](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [OLE DB 连接管理器](connection-manager/ole-db-connection-manager.md)  
   
   

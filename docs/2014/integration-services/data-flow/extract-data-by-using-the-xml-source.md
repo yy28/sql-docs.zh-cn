@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3c7a9b107a05b0645f2286f534f457d46a1b6f11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771093"
 ---
 # <a name="extract-data-by-using-the-xml-source"></a>使用 XML 源提取数据
@@ -38,9 +38,9 @@ ms.locfileid: "62771093"
   
     -   对于 **“XML 文件位置”** 访问模式，单击 **“浏览”** 找到包含该 XML 文件的文件夹。  
   
-    -   对于“来自变量的 XML 文件”访问模式，选择包含 XML 文件路径的用户定义变量。  
+    -   对于“来自变量的 XML 文件”访问模式，选择包含 XML 文件路径的用户定义变量。   
   
-    -   对于“来自变量的 XML 数据”访问模式，选择包含 XML 数据的用户定义变量。  
+    -   对于“来自变量的 XML 数据”访问模式，选择包含 XML 数据的用户定义变量。   
   
     > [!NOTE]  
     >  这些变量必须在包含该 XML 源的数据流任务的作用域内定义，或者在包的作用域内定义；此外，变量的数据类型必须为字符串。  
@@ -55,13 +55,13 @@ ms.locfileid: "62771093"
   
 8.  若要更新输出列的名称，请单击 **“列”** 并在 **“输出列”** 列表中编辑这些值。  
   
-9. 若要配置错误输出，请单击 **“错误输出”**。 有关详细信息，请参阅 [在数据流组件中配置错误输出](../configure-an-error-output-in-a-data-flow-component.md)。  
+9. 若要配置错误输出，请单击 **“错误输出”** 。 有关详细信息，请参阅 [在数据流组件中配置错误输出](../configure-an-error-output-in-a-data-flow-component.md)。  
   
-10. 单击“确定” 。  
+10. 单击“确定”。   
   
 11. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [XML 源](xml-source.md)   
  [Integration Services 转换](transformations/integration-services-transformations.md)   
  [Integration Services 路径](integration-services-paths.md)   

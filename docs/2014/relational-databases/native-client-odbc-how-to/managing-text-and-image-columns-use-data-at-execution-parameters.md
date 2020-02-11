@@ -1,5 +1,5 @@
 ---
-title: 使用执行时数据参数 (ODBC) |Microsoft Docs
+title: 使用执行时数据参数（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d69ec20d919110ce241aa38bcfb22069a20d53a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206801"
 ---
 # <a name="use-data-at-execution-parameters-odbc"></a>使用执行时数据参数 (ODBC)
@@ -25,7 +25,7 @@ ms.locfileid: "68206801"
   
 1.  调用 [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) 以将程序缓冲区绑定到语句参数时：  
   
-    -   对于最后一个参数，请使用 SQL_LEN_DATA_AT_EXEC (*长度*) 其中*长度*的总长度`text`， `ntext`，或`image`以字节为单位的参数数据。  
+    -   对于最后一个参数，请使用 SQL_LEN_DATA_AT_EXEC （*length*），其中*length*是以字节表示`text`的`ntext`、或`image`参数数据的总长度。  
   
     -   使用程序定义参数标识符的 `rgbValue`（第 8 个参数）。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68206801"
 ## <a name="example"></a>示例  
  此示例显示如何使用 SQLParamData 和 SQLPutData 读取 SQL_LONG 变量字符数据。 IA64 平台不支持此示例。  
   
- 需要一个名为 AdventureWorks 的 ODBC 数据源，其默认数据库是 AdventureWorks 示例数据库。 （可以从 [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384)（Microsoft SQL Server 示例和社区项目）主页下载 AdventureWorks 示例数据库。）此数据源必须基于操作系统提供的 ODBC 驱动程序（该驱动程序的名称为“SQL Server”）。 如果您要将此示例构建为在 64 位操作系统上运行的 32 位应用程序并运行该示例，则必须使用 %windir%\SysWOW64\odbcad32.exe 中的 ODBC 管理器创建 ODBC 数据源。  
+ 需要一个名为 AdventureWorks 的 ODBC 数据源，其默认数据库是 AdventureWorks 示例数据库。 （您可以从 " [Microsoft SQL Server 示例和社区项目](https://go.microsoft.com/fwlink/?LinkID=85384)" 主页下载 AdventureWorks 示例数据库。）此数据源必须基于操作系统提供的 ODBC 驱动程序（驱动程序名称为 "SQL Server"）。 如果您要将此示例构建为在 64 位操作系统上运行的 32 位应用程序并运行该示例，则必须使用 %windir%\SysWOW64\odbcad32.exe 中的 ODBC 管理器创建 ODBC 数据源。  
   
  此示例连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 若要连接到命名实例，请更改 ODBC 数据源的定义以使用以下格式指定实例：server\namedinstance。 默认情况下，[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 将安装在命名实例中。  
   
@@ -221,7 +221,7 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'emp4')
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [管理 text 和 image 列操作指南主题&#40;ODBC&#41;](../../database-engine/dev-guide/managing-text-and-image-columns-how-to-topics-odbc.md)  
+## <a name="see-also"></a>另请参阅  
+ [管理文本和图像列操作指南主题 &#40;ODBC&#41;](../../database-engine/dev-guide/managing-text-and-image-columns-how-to-topics-odbc.md)  
   
   

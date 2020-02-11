@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e1e4988bea932b8279a1d5b754ef3d0271e3aa1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915517"
 ---
-# <a name="mssqlserver15599"></a>MSSQLSERVER_15599
+# <a name="mssqlserver_15599"></a>MSSQLSERVER_15599
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62915517"
 |符号名称|SEC_LOCAL_TEMP_AUDIT_PERMISSIONS|  
 |消息正文|不能对本地临时对象设置审核和权限。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  为本地或全局临时对象设置审核和权限不起作用。 这些语句不会导致错误（操作将返回成功消息），但是不起作用。  
   
  此行为尚未更改，但是从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，会显示此信息性消息提醒用户。  

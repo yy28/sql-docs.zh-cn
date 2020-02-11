@@ -17,16 +17,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec38404a32751330d7fefd974fafe3d571d3b11b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074780"
 ---
 # <a name="linked-measure-groups"></a>链接度量值组
   链接度量值组基于同一数据库内不同多维数据集中的另一度量值组，或基于一个不同的 Analysis Services 数据库。 如果要在多个多维数据集中重用一组度量值以及对应的数据值，可能使用链接度量值组。  
   
- Microsoft 建议原始和链接度量值组驻留于在同一台服务器上运行的解决方案中。 链接到远程服务器上的度量值组计划为在将来的版本中不推荐使用 (请参阅[SQL Server 2014 中不推荐使用 Analysis Services 功能](../deprecated-analysis-services-features-in-sql-server-2014.md))。  
+ Microsoft 建议原始和链接度量值组驻留于在同一台服务器上运行的解决方案中。 在将来的版本中，链接到远程服务器上的度量值组的功能已计划为弃用（请参阅[SQL Server 2014 中不推荐使用的 Analysis Services 功能](../deprecated-analysis-services-features-in-sql-server-2014.md)）。  
   
 > [!IMPORTANT]  
 >  链接度量值组为只读的。 要获得最新更改，您必须基于已修改的源对象删除并重新创建所有链接度量值组。 因此，在以后需要修改度量值组时，应考虑是否可以采用在两个项目间复制和粘贴度量值组这个替代方法。  
@@ -57,7 +57,7 @@ ms.locfileid: "66074780"
   
 2.  在解决方案资源管理器中，双击要向其添加链接度量值组的多维数据集。 此步骤在多维数据集设计器中打开多维数据集。  
   
-3.  在多维数据集设计器中的“度量值”窗格或“维度”窗格上，右键单击任一窗格中的任何位置，然后选择“新建链接对象”  。 这会启动链接对象向导。  
+3.  在多维数据集设计器中的“度量值”窗格或“维度”窗格上，右键单击任一窗格中的任何位置，然后选择“新建链接对象”****。 这会启动链接对象向导。  
   
 4.  在第一页上，指定数据源。 此步骤建立原始度量值组的位置。 默认值是当前数据库中的当前多维数据集，不过也可以选择其他 Analysis Services 数据库。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66074780"
   
  为了定义或使用链接度量值组，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的 Windows 服务帐户必须属于在源 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上对源多维数据集和度量值组具有 `ReadDefinition` 和 `Read` 访问权的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库角色，或必须属于源 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Administrators 角色。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [定义链接维度](define-linked-dimensions.md)  
   
   

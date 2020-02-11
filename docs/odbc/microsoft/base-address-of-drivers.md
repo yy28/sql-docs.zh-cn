@@ -1,5 +1,5 @@
 ---
-title: 基址的驱动程序 |Microsoft Docs
+title: 驱动程序的基址 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,11 +16,11 @@ ms.assetid: 3601c0c7-18ad-4b41-b80b-5839276d0cba
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5026f4a8ece213d4d784e1c62ca6e3e2bfee72ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138141"
 ---
 # <a name="base-address-of-drivers"></a>驱动程序的基址
-每个 ODBC 桌面数据库驱动程序已链接 0x04c0000 一个基址。
+每个 ODBC 桌面数据库驱动程序都已与基址0x04c0000。

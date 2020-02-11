@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dc207c4c1bc7ddc2c7c4f590622e04a0f7739375
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62698759"
 ---
 # <a name="get-information-about-dml-triggers"></a>获取有关 DML 触发器的信息
@@ -41,9 +41,9 @@ ms.locfileid: "62698759"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  **sys.sql.modules**, **sys.object**, **sys.triggers**, **sys.events**, **sys.trigger_events**  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../security/metadata-visibility-configuration.md)。  
   
@@ -71,9 +71,9 @@ ms.locfileid: "62698759"
   
 3.  展开“触发器”  ，右键单击需要的触发器，然后单击“查看依赖关系”  。  
   
-4.  在“对象依赖关系”  窗口中，若要查看依赖于 DML 触发器的对象，请选择“依赖于 \<DML 触发器名称> 的对象”  。 将在 **“依赖关系”** 区域显示这些对象。  
+4.  在“对象依赖关系”  窗口中，若要查看依赖于 DML 触发器的对象，请选择“依赖于 **DML 触发器名称> 的对象”\<** 。 将在 **“依赖关系”** 区域显示这些对象。  
   
-     若要查看 DML 所依赖的对象，请选择“\<DML 触发器名称> 所依赖的对象”  。 将在 **“依赖关系”** 区域显示这些对象。 展开每个节点以查看所有对象。  
+     若要查看 DML 所依赖的对象，请选择“**DML 触发器名称> 所依赖的对象”\<** 。 将在 **“依赖关系”** 区域显示这些对象。 展开每个节点以查看所有对象。  
   
 5.  若要获取有关 **“依赖关系”** 区域中显示的对象的信息，请单击该对象。 在 **“所选对象”** 字段中，在 **“名称”** 、 **“类型”** 和 **“依赖关系类型”** 框中提供信息。  
   
@@ -202,7 +202,7 @@ WHERE object_id = OBJECT_ID('Person.iuPerson');
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [CREATE TRIGGER (Transact-SQL)](/sql/t-sql/statements/create-trigger-transact-sql)   
  [DROP TRIGGER (Transact-SQL)](/sql/t-sql/statements/drop-trigger-transact-sql)   
  [ENABLE TRIGGER (Transact-SQL)](/sql/t-sql/statements/enable-trigger-transact-sql)   

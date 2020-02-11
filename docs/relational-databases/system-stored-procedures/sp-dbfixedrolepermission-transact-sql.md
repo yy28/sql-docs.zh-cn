@@ -1,5 +1,5 @@
 ---
-title: sp_dbfixedrolepermission (TRANSACT-SQL) |Microsoft Docs
+title: sp_dbfixedrolepermission （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,21 +18,21 @@ ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 91a7278230a0e7201e78354a38af58f417ac26ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108158"
 ---
-# <a name="spdbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-SQL)
+# <a name="sp_dbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  显示固定数据库角色的权限。 **sp_dbfixedrolepermission**返回的正确信息[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]。 该输出不反映对 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中实现的权限层次结构的更改。 有关详细信息，请参阅[权限&#40;数据库引擎&#41;](../../relational-databases/security/permissions-database-engine.md)。  
+  显示固定数据库角色的权限。 **sp_dbfixedrolepermission**将在中返回[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]正确的信息。 该输出不反映对 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中实现的权限层次结构的更改。 有关详细信息，请参阅[&#40;数据库引擎&#41;的权限](../../relational-databases/security/permissions-database-engine.md)。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,22 +42,22 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @rolename = ] 'role'` 是有效的名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]固定的数据库角色。 *角色* 是 **sysname** ，默认值为 NULL。 如果*角色*未指定，则显示所有固定的数据库角色的权限。  
+`[ @rolename = ] 'role'`有效[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的固定数据库角色的名称。 *role*的值为**sysname**，默认值为 NULL。 如果未指定*role* ，将显示所有固定数据库角色的权限。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**DbFixedRole**|**sysname**|固定数据库角色的名称|  
-|**权限**|**nvarchar(70)**|与关联的权限**DbFixedRole**|  
+|**权限**|**nvarchar （70）**|与**DbFixedRole**关联的权限|  
   
 ## <a name="remarks"></a>备注  
- 若要显示固定的数据库角色的列表，请执行**sp_helpdbfixedrole**。 下表显示了固定数据库角色。  
+ 若要显示固定数据库角色的列表，请执行**sp_helpdbfixedrole**。 下表显示了固定数据库角色。  
   
-|固定数据库角色|描述|  
+|固定数据库角色|说明|  
 |-------------------------|-----------------|  
 |**db_owner**|数据库所有者|  
 |**db_accessadmin**|数据库访问管理员|  
@@ -69,7 +69,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 |**db_denydatareader**|数据库拒绝数据读取者|  
 |**db_denydatawriter**|数据库拒绝数据写入者|  
   
- 成员**db_owner**固定的数据库角色具有所有其他固定的数据库角色的权限。 若要显示固定的服务器角色的权限，请执行**sp_srvrolepermission**。  
+ **Db_owner**固定数据库角色的成员拥有所有其他固定数据库角色的权限。 若要显示固定服务器角色的权限，请执行**sp_srvrolepermission**。  
   
  结果集包括可执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和该数据库角色的成员可执行的其他特殊操作。  
   
@@ -84,12 +84,12 @@ EXEC sp_dbfixedrolepermission;
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [安全存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrolemember (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
- [sp_droprolemember &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
- [sp_helpdbfixedrole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql.md)   
- [sp_srvrolepermission &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-srvrolepermission-transact-sql.md)   
+ [sp_droprolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
+ [sp_helpdbfixedrole &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql.md)   
+ [sp_srvrolepermission &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-srvrolepermission-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

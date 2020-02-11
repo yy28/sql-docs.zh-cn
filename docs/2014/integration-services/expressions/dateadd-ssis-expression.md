@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3c744d3f28bc27373f3dc9798ba591848d4b720e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769344"
 ---
 # <a name="dateadd-ssis-expression"></a>DATEADD（SSIS 表达式）
@@ -35,7 +35,7 @@ DATEADD(datepart, number, date)
  *datepart*  
  指定要与数值相加的日期部分的参数。  
   
- *number*  
+ *数字*  
  用于与 datepart  相加的值。 该值必须是分析表达式时已知的整数值。  
   
  *date*  
@@ -49,16 +49,16 @@ DATEADD(datepart, number, date)
   
 |datepart|缩写形式|  
 |--------------|-------------------|  
-|Year|yy、yyyy|  
+|年龄|yy、yyyy|  
 |季度|qq、q|  
-|Month|mm、m|  
+|月份|mm、m|  
 |Dayofyear|dy、y|  
-|Day|dd、d|  
+|日期|dd、d|  
 |Week|wk、ww|  
-|Weekday|dw、w|  
+|星期|dw、w|  
 |Hour|Hh|  
 |Minute|mi、n|  
-|第二个|ss、s|  
+|秒|ss、s|  
 |Millisecond|Ms|  
   
  分拆表达式时必须提供 *number* 参数。 该参数可以是常量，也可以是变量。 由于分析表达式时列值是未知的，因此不能使用列值。  
@@ -90,7 +90,7 @@ DATEADD("day", 21, ModifiedDate)
 DATEADD("yyyy", 2, (DT_DBTIMESTAMP)"8/6/2003")  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [DATEDIFF（SSIS 表达式）](datediff-ssis-expression.md)   
  [DATEPART（SSIS 表达式）](datepart-ssis-expression.md)   
  [DAY（SSIS 表达式）](day-ssis-expression.md)   

@@ -1,5 +1,5 @@
 ---
-title: 删除扩展存储过程从 SQL Server |Microsoft Docs
+title: 从 SQL Server 中删除扩展存储过程 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,26 +16,26 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: bcb58ac180861641803147d1dfea621bd52df9a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62512022"
 ---
 # <a name="removing-an-extended-stored-procedure-from-sql-server"></a>从 SQL Server 中删除扩展存储过程
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 请改用 CLR 集成。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]请改用 CLR 集成。  
   
- 若要在用户定义的扩展存储过程 DLL，删除每个扩展存储的过程函数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]系统管理员必须运行**sp_dropextendedproc**系统存储过程中，指定的名称函数，并在其中该函数的 DLL 的名称。 例如，此命令将删除该函数**xp_hello**，从名为 xp_hello.dll 的 DLL 中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+ 若要删除用户定义的扩展存储过程 DLL 中的每个扩展存储过程函数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，系统管理员必须运行**sp_dropextendedproc**系统存储过程，并指定函数的名称和该函数所驻留的 DLL 的名称。 例如，此命令将从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中删除名为 XP_HELLO 的 dll 中的函数**xp_hello**：  
   
 ```  
 sp_dropextendedproc 'xp_hello'  
 ```  
   
- 开头[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]， **sp_dropextendedproc**不会删除系统扩展存储的过程。 相反，系统管理员应拒绝针对扩展存储过程的 EXECUTE 权限**公共**角色。  
+ 从开始[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]， **sp_dropextendedproc**不删除系统扩展存储过程。 相反，系统管理员应对**公共**角色拒绝对扩展存储过程的 EXECUTE 权限。  
   
-## <a name="see-also"></a>请参阅  
- [sp_dropextendedproc (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql)  
+## <a name="see-also"></a>另请参阅  
+ [sp_dropextendedproc &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql)  
   
   

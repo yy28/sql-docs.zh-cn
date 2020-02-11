@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 96604a09811626a304502dc05ef4f7e9edcd0359
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771225"
 ---
 # <a name="how-to-edit-the-cdc-instance-properties"></a>如何编辑 CDC 实例属性
@@ -34,7 +34,7 @@ ms.locfileid: "62771225"
   
 5.  在属性编辑器中，在以下选项卡中编辑属性：  
   
-    -   **Oracle**：使用属性编辑器中的“Oracle”  选项卡可对在新建实例向导的“创建 CDC 数据库”页中提供的说明进行更改，以及对 Oracle 日志挖掘数据库连接信息进行更改。  
+    -   **Oracle**：使用属性编辑器中的 **“Oracle”** 选项卡可对在新建实例向导的“创建 CDC 数据库”页中提供的说明进行更改，以及对 Oracle 日志挖掘数据库连接信息进行更改。  
   
          有关可在此选项卡中编辑的内容的信息，请参阅 [Edit the Oracle Database Properties](edit-the-oracle-database-properties.md)。  
   

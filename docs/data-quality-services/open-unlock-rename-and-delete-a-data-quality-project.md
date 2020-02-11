@@ -19,10 +19,10 @@ ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 666e7fdbc080af3ed259dae978bd782e437eae2e
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75557798"
 ---
 # <a name="open-unlock-rename-and-delete-a-data-quality-project---data-quality-services-dqs"></a>打开、解锁、重命名和删除数据质量项目-Data Quality Services （DQS）
@@ -31,9 +31,9 @@ ms.locfileid: "75557798"
 
   本主题介绍如何使用 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 管理数据质量项目，如打开、解锁、重命名和删除数据质量项目。  
   
-##  <a name="BeforeYouBegin"></a>开始之前  
+##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="LimitationsRestrictions"></a>限制和限制  
+###  <a name="LimitationsRestrictions"></a> 限制和局限  
   
 -   您不能打开其他用户创建的锁定项目。  
   
@@ -46,9 +46,9 @@ ms.locfileid: "75557798"
 ###  <a name="Prerequisites"></a>先决条件  
  您必须至少具有一个数据质量项目才能进行管理。  
   
-###  <a name="Security"></a>安全  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>访问  
+####  <a name="Permissions"></a> 权限  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_kb_operator 角色才能管理数据质量项目。  
   
 ##  <a name="Open"></a>打开数据质量项目  
@@ -94,6 +94,6 @@ ms.locfileid: "75557798"
   
 3.  在 **“打开项目”** 屏幕中，右键单击您创建的未锁定的数据质量项目，再单击快捷菜单中的 **“删除”** 。  
   
-4.  此时会显示确认消息。 单击“是”****。  
+4.  此时会显示确认消息。 单击 **“是”** 。  
   
   

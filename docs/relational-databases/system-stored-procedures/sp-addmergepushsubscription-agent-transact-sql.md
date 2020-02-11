@@ -1,5 +1,5 @@
 ---
-title: sp_addmergepushsubscription_agent (Transact-sql) |Microsoft Docs
+title: sp_addmergepushsubscription_agent （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,21 +16,21 @@ ms.assetid: 808a1925-be46-4999-8d69-b3a83010ec81
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fb74cc0887d68ea01fabe7f6168c0d23275d8f4e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68769163"
 ---
-# <a name="spaddmergepushsubscriptionagent-transact-sql"></a>sp_addmergepushsubscription_agent (Transact-SQL)
+# <a name="sp_addmergepushsubscription_agent-transact-sql"></a>sp_addmergepushsubscription_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   添加新的代理作业，用于制定合并发布推送订阅的同步计划。 此存储过程在发布服务器上对发布数据库执行。  
   
 > [!IMPORTANT]  
->  使用远程分发服务器配置发布服务器时，为所有参数提供的值（包括 *job_login* 和 *job_password*）都会以纯文本方式发送到该分发服务器。 在执行此存储过程之前，应该对发布服务器及其远程分发服务器之间的连接进行加密。 有关详细信息，请参阅[启用数据库引擎的加密连接（SQL Server 配置管理器）](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
+>  使用远程分发服务器配置发布服务器时，为所有参数提供的值（包括 *job_login* 和 *job_password*）都会以纯文本方式发送到该分发服务器。 在执行此存储过程之前，应该对发布服务器及其远程分发服务器之间的连接进行加密。 有关详细信息，请参阅[启用到数据库引擎 &#40;的加密连接 SQL Server 配置管理器&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -62,46 +62,46 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**, 无默认值。  
+`[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，无默认值。  
   
-`[ @subscriber = ] 'subscriber'`订阅服务器的名称。 *订阅服务器*的值为**sysname**, 默认值为 NULL。  
+`[ @subscriber = ] 'subscriber'`订阅服务器的名称。 *订阅服务器*的值为**sysname**，默认值为 NULL。  
   
-`[ @subscriber_db = ] 'subscriber_db'`订阅数据库的名称。 *subscriber_db*的值为**sysname**, 默认值为 NULL。  
+`[ @subscriber_db = ] 'subscriber_db'`订阅数据库的名称。 *subscriber_db*的默认值为**sysname**，默认值为 NULL。  
   
-`[ @subscriber_security_mode = ] subscriber_security_mode`同步时连接到订阅服务器时使用的安全模式。 *subscriber_security_mode*的值为**int**, 默认值为1。 如果为**0**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]则指定身份验证。 如果为**1**, 则指定 Windows 身份验证。  
+`[ @subscriber_security_mode = ] subscriber_security_mode`同步时连接到订阅服务器时使用的安全模式。 *subscriber_security_mode*的值为**int**，默认值为1。 如果为**0**， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]则指定身份验证。 如果为**1**，则指定 Windows 身份验证。  
   
-`[ @subscriber_login = ] 'subscriber_login'`同步时连接到订阅服务器时要使用的订阅服务器登录名。 如果*subscriber_security_mode*设置为**0**, 则*subscriber_login*是必需的。 *subscriber_login*的值为**sysname**, 默认值为 NULL。  
+`[ @subscriber_login = ] 'subscriber_login'`同步时连接到订阅服务器时要使用的订阅服务器登录名。 如果*subscriber_security_mode*设置为**0**，则*subscriber_login*是必需的。 *subscriber_login*的默认值为**sysname**，默认值为 NULL。  
   
-`[ @subscriber_password = ] 'subscriber_password'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证的订阅服务器密码。 如果*subscriber_security_mode*设置为**0**, 则*subscriber_password*是必需的。 *subscriber_password*的值为**sysname**, 默认值为 NULL。 如果使用订阅服务器密码，将自动对密码进行加密。  
-  
-> [!IMPORTANT]  
->  如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
-  
-`[ @publisher_security_mode = ] publisher_security_mode`同步时连接到发布服务器时使用的安全模式。 *publisher_security_mode*的值为**int**, 默认值为1。 如果为**0**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]则指定身份验证。 如果为**1**, 则指定 Windows 身份验证。  
-  
-`[ @publisher_login = ] 'publisher_login'`同步时连接到发布服务器时使用的登录名。 *publisher_login*的值为**sysname**, 默认值为 NULL。  
-  
-`[ @publisher_password = ] 'publisher_password'`连接到发布服务器时使用的密码。 *publisher_password*的值为**sysname**, 默认值为 NULL。  
+`[ @subscriber_password = ] 'subscriber_password'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证的订阅服务器密码。 如果*subscriber_security_mode*设置为**0**，则*subscriber_password*是必需的。 *subscriber_password*的默认值为**sysname**，默认值为 NULL。 如果使用订阅服务器密码，将自动对密码进行加密。  
   
 > [!IMPORTANT]  
 >  如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
   
-`[ @job_login = ] 'job_login'`用于运行代理的 Windows 帐户的登录名。 *job_login*的值为**nvarchar (257)** , 默认值为 NULL。 此 Windows 帐户始终用于到分发服务器的代理连接，以及在使用 Windows 集成身份验证时用于到订阅服务器和发布服务器的连接。  
+`[ @publisher_security_mode = ] publisher_security_mode`同步时连接到发布服务器时使用的安全模式。 *publisher_security_mode*的值为**int**，默认值为1。 如果为**0**， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]则指定身份验证。 如果为**1**，则指定 Windows 身份验证。  
   
-`[ @job_password = ] 'job_password'`运行代理所用的 Windows 帐户的密码。 *job_password*的值为**sysname**, 无默认值。  
+`[ @publisher_login = ] 'publisher_login'`同步时连接到发布服务器时使用的登录名。 *publisher_login*的默认值为**sysname**，默认值为 NULL。  
+  
+`[ @publisher_password = ] 'publisher_password'`连接到发布服务器时使用的密码。 *publisher_password*的默认值为**sysname**，默认值为 NULL。  
   
 > [!IMPORTANT]  
 >  如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
   
-`[ @job_name = ] 'job_name'`现有代理作业的名称。 *job_name*的值为**sysname**, 默认值为 NULL。 仅当使用现有作业而不是（默认的）新创建的作业同步订阅时，才指定此参数。 如果您不是**sysadmin**固定服务器角色的成员, 则在指定*job_name*时必须指定*job_login*和*job_password* 。  
+`[ @job_login = ] 'job_login'`用于运行代理的 Windows 帐户的登录名。 *job_login*为**nvarchar （257）**，默认值为 NULL。 此 Windows 帐户始终用于到分发服务器的代理连接，以及在使用 Windows 集成身份验证时用于到订阅服务器和发布服务器的连接。  
   
-`[ @frequency_type = ] frequency_type`用于计划合并代理的频率。 *frequency_type*的数据值为**int**, 可以是下列值之一。  
+`[ @job_password = ] 'job_password'`运行代理所用的 Windows 帐户的密码。 *job_password* **sysname**，无默认值。  
   
-|ReplTest1|Description|  
+> [!IMPORTANT]  
+>  如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
+  
+`[ @job_name = ] 'job_name'`现有代理作业的名称。 *job_name*的值为**sysname**，默认值为 NULL。 仅当使用现有作业而不是（默认的）新创建的作业同步订阅时，才指定此参数。 如果您不是**sysadmin**固定服务器角色的成员，则在指定*job_name*时必须指定*job_login*和*job_password* 。  
+  
+`[ @frequency_type = ] frequency_type`用于计划合并代理的频率。 *frequency_type*为**int**，可以是下列值之一。  
+  
+|值|说明|  
 |-----------|-----------------|  
-|**1**|一次|  
+|**1**|一次性|  
 |**2**|按需|  
-|**4**|每天|  
+|**4**|每天一次|  
 |**8**|每周|  
 |**16**|每月|  
 |**32**|与“每月”选项相关|  
@@ -112,9 +112,9 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 > [!NOTE]  
 >  指定值**64**将导致合并代理在连续模式下运行。 这对应于为代理设置 **-连续**参数。 有关详细信息，请参阅 [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)。  
   
-`[ @frequency_interval = ] frequency_interval`合并代理运行的日期。 *frequency_interval*的数据值为**int**, 可以是下列值之一。  
+`[ @frequency_interval = ] frequency_interval`合并代理运行的日期。 *frequency_interval*为**int**，可以是下列值之一。  
   
-|值|Description|  
+|值|说明|  
 |-----------|-----------------|  
 |**1**|星期日|  
 |**2**|星期一|  
@@ -123,51 +123,51 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 |**5**|星期四|  
 |**6**|星期五|  
 |**7**|星期六|  
-|**8**|Day|  
-|**9**|工作日|  
-|**10**|周末|  
+|**8**|日期|  
+|**900**|工作日|  
+|**万**|周末|  
 |NULL（默认值）||  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval`合并代理的日期。 当*frequency_type*设置为**32** (每月相对) 时, 使用此参数。 *frequency_relative_interval*的数据值为**int**, 可以是下列值之一。  
+`[ @frequency_relative_interval = ] frequency_relative_interval`合并代理的日期。 如果*frequency_type*设置为**32** （每月相对），则使用此参数。 *frequency_relative_interval*为**int**，可以是下列值之一。  
   
-|ReplTest1|Description|  
+|值|说明|  
 |-----------|-----------------|  
 |**1**|第一个|  
-|**2**|第二个|  
+|**2**|秒|  
 |**4**|第三个|  
 |**8**|第四个|  
-|**16**|上一次|  
+|**16**|最后一个|  
 |NULL（默认值）||  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*使用的重复因子。 *frequency_recurrence_factor*的值为**int**, 默认值为 NULL。  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*使用的重复因子。 *frequency_recurrence_factor*的值为**int**，默认值为 NULL。  
   
-`[ @frequency_subday = ] frequency_subday`在定义的时间段内重新计划的频率。 *frequency_subday*的数据值为**int**, 可以是下列值之一。  
+`[ @frequency_subday = ] frequency_subday`在定义的时间段内重新计划的频率。 *frequency_subday*为**int**，可以是下列值之一。  
   
-|ReplTest1|Description|  
+|值|说明|  
 |-----------|-----------------|  
 |**1**|一次|  
-|**2**|第二个|  
-|**4**|Minute|  
+|**2**|秒|  
+|**4**|分钟|  
 |**8**|Hour|  
 |NULL（默认值）||  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*的间隔。 *frequency_subday_interval*的值为**int**, 默认值为 NULL。  
+`[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*的间隔。 *frequency_subday_interval*的值为**int**，默认值为 NULL。  
   
-`[ @active_start_time_of_day = ] active_start_time_of_day`第一次计划合并代理的时间, 格式为 HHMMSS。 *active_start_time_of_day* 是 **int**，默认值为 NULL。  
+`[ @active_start_time_of_day = ] active_start_time_of_day`第一次计划合并代理的时间，格式为 HHMMSS。 *active_start_time_of_day*的值为**int**，默认值为 NULL。  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day`停止计划合并代理的时间, 格式为 HHMMSS。 *active_end_time_of_day*的值为**int**, 默认值为 NULL。  
+`[ @active_end_time_of_day = ] active_end_time_of_day`停止计划合并代理的时间，格式为 HHMMSS。 *active_end_time_of_day*的值为**int**，默认值为 NULL。  
   
-`[ @active_start_date = ] active_start_date`第一次计划合并代理的日期, 格式为 YYYYMMDD。 *active_start_date*的值为**int**, 默认值为 NULL。  
+`[ @active_start_date = ] active_start_date`第一次计划合并代理的日期，格式为 YYYYMMDD。 *active_start_date*的值为**int**，默认值为 NULL。  
   
-`[ @active_end_date = ] active_end_date`停止计划合并代理的日期, 格式为 YYYYMMDD。 *active_end_date*的值为**int**, 默认值为 NULL。  
+`[ @active_end_date = ] active_end_date`停止计划合并代理的日期，格式为 YYYYMMDD。 *active_end_date*的值为**int**，默认值为 NULL。  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`指定是否可以通过 Windows 同步管理器同步订阅。 *enabled_for_syncmgr* 是 **nvarchar(5)** ，默认值为 FALSE。 如果**为 false**, 则不向同步管理器注册订阅。 如果**为 true**, 则会向同步管理器注册订阅, 并在不[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]启动的情况下同步订阅。  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`指定是否可以通过 Windows 同步管理器同步订阅。 *enabled_for_syncmgr*为**nvarchar （5）**，默认值为 FALSE。 如果**为 false**，则不向同步管理器注册订阅。 如果**为 true**，则会向同步管理器注册订阅，并在不[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]启动的情况下同步订阅。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="remarks"></a>备注  
- **sp_addmergepushsubscription_agent**用于合并复制, 并使用与[sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)相似的功能。  
+ **sp_addmergepushsubscription_agent**用于合并复制，并使用与[sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)相似的功能。  
   
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergepushsubscript_1.sql)]  
@@ -175,12 +175,12 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 ## <a name="permissions"></a>权限  
  只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_addmergepushsubscription_agent**。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
- [订阅发布](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_addmergesubscription &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
- [sp_changemergesubscription &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
- [sp_dropmergesubscription &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
- [sp_helpmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
+ [sp_addmergesubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
+ [sp_changemergesubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
+ [sp_dropmergesubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
+ [sp_helpmergesubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
   
   

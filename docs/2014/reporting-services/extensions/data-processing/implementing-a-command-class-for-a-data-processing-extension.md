@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f07b9beb798b1cd33ec2fee6af890a09a516b2f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63163984"
 ---
 # <a name="implementing-a-command-class-for-a-data-processing-extension"></a>为数据处理扩展插件实现 Command 类
@@ -33,7 +33,7 @@ ms.locfileid: "63163984"
   
  有关 Command 类实现的示例，请参阅 [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)  （SQL Server Reporting Services 产品示例）。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Reporting Services 扩展插件](../reporting-services-extensions.md)   
  [实现数据处理扩展插件](implementing-a-data-processing-extension.md)   
  [Reporting Services 扩展插件库](../reporting-services-extension-library.md)  

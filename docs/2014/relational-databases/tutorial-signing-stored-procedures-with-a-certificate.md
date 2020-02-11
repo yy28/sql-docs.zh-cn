@@ -1,5 +1,5 @@
 ---
-title: 教程：使用证书为存储的过程签名 |Microsoft Docs
+title: 教程：使用证书为存储过程签名 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: daf80492cd6a0d8040d1497e71600c798e7ef96c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524090"
 ---
 # <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>教程：使用证书为存储过程签名
   本教程说明了如何使用由 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]生成的证书对存储过程进行签名。  
   
 > [!NOTE]  
->  若要运行本教程中的代码，您必须已配置混合模式安全性并且已安装 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 数据库。 应用场景  
+>  若要运行本教程中的代码，您必须已配置混合模式安全性并且已安装 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 数据库。 场景  
   
  如果要求对于存储过程的权限但又不希望显式授予用户那些权限，此时使用证书对存储过程进行签名是很有效的方法。 虽然可以通过其他方法完成此任务，如使用 EXECUTE AS 语句，但使用证书可以使用跟踪来查找存储过程的原始调用方。 这样可提供一种高级审核，尤其是在进行安全操作或数据定义语言 (DDL) 操作时。  
   
@@ -192,7 +192,7 @@ GO
   
  有关 REVERT 语句的详细信息，请参阅 [REVERT (Transact-SQL)](/sql/t-sql/statements/revert-transact-sql)。  
   
-##  <a name="CompleteExample"></a> 完整示例  
+##  <a name="CompleteExample"></a>完整示例  
  本部分显示完整的示例代码。  
   
 ```  
@@ -288,7 +288,7 @@ DROP CERTIFICATE TestCreditRatingCer;
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 数据库引擎和 Azure SQL Database 的安全中心](security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

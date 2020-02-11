@@ -26,10 +26,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd16879f512bf1529bec8dab6679880cd0a6b8dd
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243327"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>查询和文本编辑器 (SQL Server Management Studio)
@@ -64,10 +64,10 @@ ms.locfileid: "75243327"
 ## <a name="code-editor-components"></a>代码编辑器组件  
  除了与文本和 XML 编辑器共享的功能之外，代码编辑器还包含以下功能：  
   
- **后果**  
+ **结果**  
  此窗口用于查看查询结果。 该窗口可以在网格或文本中显示结果，或者可将结果定向到某个文件。 结果网格能以单独的选项卡式窗口的形式显示。  
   
- **智能**  
+ **IntelliSense**  
  在编辑器的“编辑”**** 菜单上，指向“IntelliSense”****，以查看 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 选项。  
   
  **颜色编码**  
@@ -79,7 +79,7 @@ ms.locfileid: "75243327"
  **模版**  
  模板是包含创建数据库对象所需的语句基本结构的文件。 它们可以用于加快脚本编写速度。  
   
- **讯息**  
+ **消息**  
  显示脚本运行时由服务器返回的错误、警告和信息性消息。 只有再次运行脚本时，消息列表才会发生变化。  
   
  **状态栏**  
@@ -110,7 +110,7 @@ ms.locfileid: "75243327"
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|介绍如何查看和使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器的基本功能。|[数据库引擎查询编辑器 &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)|  
+|介绍如何查看和使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器的基本功能。|[数据库引擎查询编辑器 (SQL Server Management Studio)](database-engine-query-editor-sql-server-management-studio.md)|  
 |介绍如何查看和使用 MDX 查询编辑器的基本功能。|[MDX 查询编辑器 &#40;Analysis Services 多维数据&#41;](../../analysis-services/mdx-query-editor-analysis-services-multidimensional-data.md)|  
 |介绍如何查看和使用 DMX 查询编辑器的基本功能。|[DMX 查询编辑器 &#40;Analysis Services 数据挖掘&#41;](../../analysis-services/dmx-query-editor-analysis-services-data-mining.md)|  
 |介绍如何查看和使用 XML/A 编辑器的基本功能。|[XML 编辑器 &#40;SQL Server Management Studio&#41;](xml-editor-sql-server-management-studio.md)|  
@@ -125,11 +125,11 @@ ms.locfileid: "75243327"
 |介绍如何执行全局搜索和替换，例如在更改列名称时所要用到的全局搜索和替换。|[搜索和替换](search-and-replace.md)|  
 |介绍如何设置书签，以便更容易地查找重要代码片段。|[管理书签](../native-client-ole-db-rowsets/bookmarks.md)|  
 |介绍如何打印窗口或网格中的脚本或结果。|[打印代码和结果](print-code-and-results.md)|  
-|介绍如何使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器中的 sqlcmd 功能。|[在查询编辑器中编辑 SQLCMD 脚本](edit-sqlcmd-scripts-with-query-editor.md)|  
+|介绍如何使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器中的 sqlcmd 功能。|[使用查询编辑器编辑 SQLCMD 脚本](edit-sqlcmd-scripts-with-query-editor.md)|  
 |介绍如何使用 IntelliSense 功能，如在键入对象时自动完成对象名称或确保断点置于有效位置上。|[IntelliSense &#40;SQL Server Management Studio&#41;](intellisense-sql-server-management-studio.md)|  
-|介绍如何使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器中的代码段。 代码段是常用语句或语句块的模板，可以自定义或扩展以包含特定站点代码段。|[Transact-sql 代码片段](transact-sql-code-snippets.md)|  
-|介绍如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器逐句运行代码，并查看诸如变量和参数中的值之类的调试信息。|[Transact-sql 调试器](transact-sql-debugger.md)|  
+|介绍如何使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器中的代码段。 代码段是常用语句或语句块的模板，可以自定义或扩展以包含特定站点代码段。|[Transact-SQL 代码段](transact-sql-code-snippets.md)|  
+|介绍如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器逐句运行代码，并查看诸如变量和参数中的值之类的调试信息。|[Transact-SQL 调试器](transact-sql-debugger.md)|  
 |介绍如何为不同 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例设置自定义颜色，并将这些颜色设置为 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口中状态栏的背景。|[数据库引擎查询编辑器 &#40;状态栏&#41;](status-bar-database-engine-query-editor.md)|  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server Management Studio 键盘快捷方式](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
+ [SQL Server Management Studio 键盘快捷键](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

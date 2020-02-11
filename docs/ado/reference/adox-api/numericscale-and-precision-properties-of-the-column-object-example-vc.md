@@ -1,5 +1,5 @@
 ---
-title: NumericScale 和 Precision 属性的列的示例 （VC + +） |Microsoft Docs
+title: Column 的 NumericScale 和 Precision 属性示例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 69653366-ebd7-4ff6-a654-761772223b0c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 828f4ed0336ef7994346af3ad673de2107bd3ef5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cc6dac85217a3f815511fa94e19a9adccc1f2ba1
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67965752"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76918412"
 ---
 # <a name="numericscale-and-precision-properties-of-the-column-object-example-vc"></a>列对象的 NumericScale 和 Precision 属性示例 (VC++)
-此示例演示[NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md)并[精度](../../../ado/reference/adox-api/precision-property-adox.md)的属性[列](../../../ado/reference/adox-api/column-object-adox.md)对象。 此代码将显示其值**订单详细信息**表的*Northwind*数据库。  
+此示例演示[列](../../../ado/reference/adox-api/column-object-adox.md)对象的[NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md)和[Precision](../../../ado/reference/adox-api/precision-property-adox.md)属性。 此代码显示*Northwind*数据库的 "**订单详细信息**" 表的值。  
   
 ```  
 // BeginNumericScalePrecCpp.cpp  
@@ -86,7 +86,7 @@ int main() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in NumericScalePrecX...." << endl;  
+      cout << "Error occurred in NumericScalePrecX...." << endl;  
    }  
    ::CoUninitialize();  
 }  

@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5e65a05d590ca3492d1330d66fbc6bdfda8324b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915083"
 ---
-# <a name="mssqlserver18752"></a>MSSQLSERVER_18752
+# <a name="mssqlserver_18752"></a>MSSQLSERVER_18752
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62915083"
 |符号名称|REPL_INUSE|  
 |消息正文|一次只能有一个日志读取器代理或日志相关过程(sp_repldone、sp_replcmds 和 sp_replshowcmds)连接到某个数据库。 如果执行了一个日志相关过程，那么在启动日志读取器代理或者执行另一个日志相关过程之前，请删除执行第一个过程时所用的连接，或者在该连接上执行 sp_replflush。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  一次只能有一个日志读取器代理或日志相关过程连接到某个数据库。  
   
 ## <a name="user-action"></a>用户操作  

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3fc1a9beb0468f50291854d8eb5cd0e3bf9ba8d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768803"
 ---
 # <a name="-parentheses-ssis-expression"></a>()（括号）（SSIS 表达式）
@@ -36,7 +36,7 @@ ms.locfileid: "62768803"
   
 ## <a name="arguments"></a>参数  
  *expression*  
- 为任意有效的表达式。  
+ 为任何有效的表达式。  
   
 ## <a name="result-types"></a>结果类型  
  *expression*的数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../data-flow/integration-services-data-types.md)。  
@@ -50,7 +50,7 @@ ms.locfileid: "62768803"
   
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [运算符优先级和结合性](operator-precedence-and-associativity.md)   
  [运算符（SSIS 表达式）](operators-ssis-expression.md)  
   

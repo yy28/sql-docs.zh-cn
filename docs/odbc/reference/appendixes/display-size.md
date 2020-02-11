@@ -16,31 +16,31 @@ ms.assetid: 9f7f766f-2492-463c-aab7-f2476e222042
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 61afd5c9932f58c49e54b4aff8b053d0a25a6e3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68130022"
 ---
 # <a name="display-size"></a>显示大小
-列的显示大小是最大字符窗体中显示数据所需的字符数。 下表定义每个 ODBC SQL 数据类型的显示大小。  
+列的显示大小是以字符形式显示数据所需的最大字符数。 下表定义了每个 ODBC SQL 数据类型的显示大小。  
   
 |SQL 类型标识符|显示大小|  
 |-------------------------|------------------|  
-|所有字符类型 [a]|定义 （适用于固定类型） 或 （对于变量类型） 最大字符窗体中显示数据所需的字符数。|  
-|SQL_DECIMAL SQL_NUMERIC|列加上 2 的精度 (a 的登录，*精度*数字和小数点)。 例如，定义为 NUMERIC(10,3) 的列的显示大小为 12。|  
-|SQL_BIT|1 （1 个数字）。|  
-|SQL_TINYINT|如果签名 （以符号和 3 位数字） 4 或 3 无符号 （3 位数字）。|  
-|SQL_SMALLINT|如果签名 （以符号和 5 位数字） 的 6 或 5 无符号 （5 位数）。|  
-|SQL_INTEGER|如果签名 （以符号和数字） 的 11 或 10 无符号 （10 个数字）。|  
-|SQL_BIGINT|20 （以符号和 19 个数字，如果签名或 20 位数字，如果无符号）。|  
-|SQL_REAL|14 (登录、 7 位、 小数点、 以字母*E*，号和 2 位数)。|  
-|SQL_FLOAT SQL_DOUBLE|24 (一个符号，15 位、 小数点、 字母*E*，一个符号和 3 位数字)。|  
-|所有二进制类型 [a]|定义或最大 （适用于变量类型） 的列的长度乘以 2。 （每个二进制字节表示的 2 位十六进制数中）。|  
-|SQL_TYPE_DATE|10 (日期格式的日期*年-月-日*)。|  
-|SQL_TYPE_TIME|8 (格式的时间*hh: mm:* )<br /><br /> - 或 -<br /><br /> 9 + *s* (格式的时间*hh: mm:* [....fff]，其中*s*秒的小数部分精度)。|  
-|SQL_TYPE_TIMESTAMP|19 (对于中的时间戳*年-月-日 hh: mm:* 格式)<br /><br /> - 或 -<br /><br /> 20 + *s* (对于中的时间戳*年-月-日： 分： 秒*[.fff...] 格式，其中*s*秒的小数部分精度)。|  
-|所有时间间隔数据类型|请参阅[间隔数据类型长度](../../../odbc/reference/appendixes/interval-data-type-length.md)。|  
-|SQL_GUID|36 (中的字符数*aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee*格式|  
+|所有字符类型 [a]|定义的（用于固定类型）或最大值（对于变量类型），以字符形式显示数据所需的字符数。|  
+|SQL_DECIMAL SQL_NUMERIC|列的精度加2（符号、*精度*数字和小数点）。 例如，定义为数值（10，3）的列的显示大小为12。|  
+|SQL_BIT|1（1位数）。|  
+|SQL_TINYINT|如果符号为（符号和3位），则为 4; 如果无符号（3位数），则为3。|  
+|SQL_SMALLINT|如果签名（符号和5位数字），则为 6; 如果未签名（5位数字），则为5。|  
+|SQL_INTEGER|11如果有符号（符号和10位数字）或10（如果无符号，则为10个数字）。|  
+|SQL_BIGINT|20（符号和19位数字，如果有符号，则为20位）。|  
+|SQL_REAL|14（符号、7位数、小数点、字母*E*、正负号和2位数字）。|  
+|SQL_FLOAT SQL_DOUBLE|24（符号、15位数、小数点、字母*E*、正负号和3位数字）。|  
+|所有二进制类型 [a]|列乘2的定义的或最大值（对于变量类型）。 （每个二进制字节由2位十六进制数字表示。）|  
+|SQL_TYPE_DATE|10（格式为*yyyy-mm-dd*的日期）。|  
+|SQL_TYPE_TIME|8（格式为*hh： mm： ss*）<br /><br /> - 或 -<br /><br /> 9 + *s* （格式为*hh： mm： ss*[. fff ...]，其中*s*为秒的小数部分精度）。|  
+|SQL_TYPE_TIMESTAMP|19（对于*yyyy-mm-dd hh： mm： ss*格式的时间戳）<br /><br /> - 或 -<br /><br /> 20 +*秒*（对于*yyyy-mm-dd hh： mm： ss*[. fff ...] 格式的时间戳，其中*s*为秒的小数部分精度）。|  
+|所有间隔数据类型|请参阅[间隔数据类型长度](../../../odbc/reference/appendixes/interval-data-type-length.md)。|  
+|SQL_GUID|36（ *aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee*格式的字符数|  
   
- [a] 如果驱动程序无法确定变量类型的列或参数的长度，它将返回 SQL_NO_TOTAL。
+ [a] 如果驱动程序无法确定变量类型的列或参数长度，它将返回 SQL_NO_TOTAL。

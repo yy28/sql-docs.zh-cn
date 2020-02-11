@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1f41ed858bedd18ec68794d5e7d1c13100af5254
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767029"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>通过使用检查点重新启动包
@@ -53,30 +53,30 @@ ms.locfileid: "62767029"
   
  下表列出了可设置为实现检查点的包属性。  
   
-|属性|Description|  
+|properties|说明|  
 |--------------|-----------------|  
 |CheckpointFileName|指定检查点文件的名称。|  
 |CheckpointUsage|指定是否使用检查点。|  
 |SaveCheckpoints|指示包是否保存检查点。 此属性必须设置为 True，才能从失败点重新启动包。|  
   
- 此外，必须将 FailPackageOnFailure 属性设置为`true`对于你想要识别的包中的所有容器为重新启动点。  
+ 此外，对于包中要标识为重新`true`启动点的所有容器，必须将 FailPackageOnFailure 属性设置为。  
   
  可以使用 ForceExecutionResult 属性测试包中检查点的使用情况。 通过将容器或任务的 ForceExecutionResult 设置为 Failure，可以模拟实时的失败。 当重新运行包时，将重新运行失败的任务和容器。  
   
 ### <a name="checkpoint-usage"></a>检查点用法  
  CheckpointUsage 属性可设置为下列值：  
   
-|ReplTest1|Description|  
+|值|说明|  
 |-----------|-----------------|  
 |`Never`|指定不使用检查点文件，包从包工作流的起点开始运行。|  
 |`Always`|指定始终使用检查点文件，包从上一次执行失败的点重新启动。 如果找不到检查点文件，则包失败。|  
 |`IfExists`|指定如果存在检查点文件则使用该文件。 如果检查点文件存在，则包从上一次执行失败的点重新启动；如果检查点文件不存在，则包从包工作流的起点开始运行。|  
   
 > [!NOTE]  
->  **上的 /CheckPointing** dtexec 选项等效于设置`SaveCheckpoints`包的属性`True`，和`CheckpointUsage`属性为始终。 有关详细信息，请参阅 [dtexec Utility](dtexec-utility.md)。  
+>  Dtexec 的 **/checkpointing on on**选项等效于将包的`SaveCheckpoints`属性设置为`True`，并将属性设置为`CheckpointUsage` "始终"。 有关详细信息，请参阅 [dtexec Utility](dtexec-utility.md)。  
   
 ## <a name="securing-checkpoint-files"></a>保护检查点文件  
- 包级别的保护不包括保护检查点文件，必须单独保护这些文件。 检查点数据只能存储在文件系统中，应当使用操作系统访问控制列表 (ACL) 来保护用于存储该文件的位置或文件夹。 重要的是务必保护检查点文件，因为它们包含了有关包状态的信息，包括变量的当前值。 例如，变量可能包含由很多行私人数据（如电话号码）组成的记录集。 有关详细信息，请参阅 [访问包使用的文件](../access-to-files-used-by-packages.md)。  
+ 包级别的保护不包括保护检查点文件，必须单独保护这些文件。 检查点数据只能存储在文件系统中，应当使用操作系统访问控制列表 (ACL) 来保护用于存储该文件的位置或文件夹。 重要的是务必保护检查点文件，因为它们包含了有关包状态的信息，包括变量的当前值。 例如，变量可能包含由很多行私人数据（如电话号码）组成的记录集。 有关详细信息，请参阅[访问包使用的文件](../access-to-files-used-by-packages.md)。  
   
 ### <a name="to-configure-the-checkpoint-properties"></a>配置检查点属性  
   
@@ -88,7 +88,7 @@ ms.locfileid: "62767029"
   
 -   support.microsoft.com 上的支持文章： [不为 For 循环和 Foreach 循环容器项采用 SSIS 检查点](https://go.microsoft.com/fwlink/?LinkId=241633)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server Integration Services](../sql-server-integration-services.md)  
   
   

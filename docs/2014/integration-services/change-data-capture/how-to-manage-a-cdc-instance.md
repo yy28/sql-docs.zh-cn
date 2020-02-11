@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fd64fe5cad5f85c41830d25dce279ba09915626b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771165"
 ---
 # <a name="how-to-manage-a-cdc-instance"></a>How to Manage a CDC Instance
@@ -36,7 +36,7 @@ ms.locfileid: "62771165"
   
     -   **开始**：开始捕获更改。  
   
-    -   **停止**：停止捕获更改  
+    -   **停止**：停止捕获更改。  
   
     -   **重置**：单击“重置”  可将 CDC 实例重置为其初始（空）状态。 此选项在 CDC 实例停止后可用。 更改表中的所有更改以及 CDC 实例内部状态将被删除。 当 CDC 实例在以后启动时，变更捕获将从该时间点开始，并且仅包含在 CDC 实例启动后开始的事务。  
   

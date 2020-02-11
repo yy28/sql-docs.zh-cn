@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: 32ef669c238c52ec5e5e20804c896b4364c8bc85
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75241354"
 ---
 # <a name="import-registered-server-information-sql-server-management-studio"></a>导入已注册服务器信息 (SQL Server Management Studio)
@@ -35,12 +35,12 @@ ms.locfileid: "75241354"
   
 1.  在已注册的服务器中，单击“已注册的服务器”工具栏上的服务器类型。 服务器类型必须与已注册的服务器的导出文件类型一样。 例如，如果您已经导出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已注册服务器信息，则必须在“已注册的服务器”工具栏上单击 **“SQL Server”** 。  
   
-2.  右键单击服务器组，再选择“导入”****。  
+2.  右键单击服务器组，再选择“导入”  。  
   
-3.  在 **“导入已注册的服务器”** 对话框中，选择要导入的已注册的服务器文件，再单击 **“确定”**。  
+3.  在 **“导入已注册的服务器”** 对话框中，选择要导入的已注册的服务器文件，再单击 **“确定”** 。  
   
      **导入文件**  
-     在文本框中键入导入文件的名称，或单击“浏览”按钮 (**...**) 定位到客户端计算机上的导入文件。 如果选择现有文件，则已注册服务器的信息将追加到文件末尾。 导入文件只能是以前导出的已注册服务器的文件。 已注册服务器的文件的扩展名为 .regsrvr。  
+     在文本框中键入导入文件的名称，或单击“浏览”按钮 ( **...** ) 定位到客户端计算机上的导入文件。 如果选择现有文件，则已注册服务器的信息将追加到文件末尾。 导入文件只能是以前导出的已注册服务器的文件。 已注册服务器的文件的扩展名为 .regsrvr。  
   
      **选择要导入到的服务器组**  
      选择要将文件中的已注册的服务器条目导入到的根节点或特定服务器组。 您可以将所有已注册的服务器、特定服务器组中已注册的服务器或单个已注册的服务器导入到导出文件中。 导入功能是递归的；例如，如果服务器组 A 包含服务器组 B，而服务器组 B 包含服务器组 C 和 D，则导入服务器组 A 会导出 A、B、C 和 D 中的所有条目。  
@@ -53,6 +53,6 @@ ms.locfileid: "75241354"
   
 ## <a name="see-also"></a>另请参阅  
  [更改服务器的注册 &#40;SQL Server Management Studio&#41;将](change-a-server-s-registration-sql-server-management-studio.md)[注册的服务器信息导出 &#40;SQL Server Management Studio&#41;](export-registered-server-information-sql-server-management-studio.md)   
- [SQL Server Management Studio 创建新的已注册服务器 &#40;&#41;](create-a-new-registered-server-sql-server-management-studio.md)  
+ [创建新的已注册的服务器 (SQL Server Management Studio)](create-a-new-registered-server-sql-server-management-studio.md)  
   
   

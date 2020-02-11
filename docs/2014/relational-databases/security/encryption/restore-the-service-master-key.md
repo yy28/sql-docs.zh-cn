@@ -14,10 +14,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 21abdf4e5781f179c8168ff02aa611bd7dffd39f
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957155"
 ---
 # <a name="restore-the-service-master-key"></a>还原服务主密钥
@@ -26,19 +26,19 @@ ms.locfileid: "74957155"
 > [!WARNING]  
 >  您可能永远也不需要还原服务主密钥。 但如果进行此操作，应当格外谨慎。 有关详细信息，请参阅 [Back Up the Service Master Key](service-master-key.md)。  
   
- **本主题中的**  
+ **本主题内容**  
   
 -   **开始之前：**  
   
-     [限制和限制](#Restrictions)  
+     [限制和局限](#Restrictions)  
   
-     [安全](#Security)  
+     [安全性](#Security)  
   
 -   [使用 Transact-SQL 还原服务主密钥](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a>开始之前  
+##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a>限制和限制  
+###  <a name="Restrictions"></a> 限制和局限  
   
 -   当还原服务主密钥时， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将对所有已使用当前服务主密钥加密的密钥和机密内容进行解密，然后使用从备份文件中加载的服务主密钥对这些密钥和机密内容进行加密。  
   
@@ -49,12 +49,12 @@ ms.locfileid: "74957155"
 > [!CAUTION]  
 >  服务主密钥为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密层次结构的根。 服务主密钥直接或间接地保护树中的所有其他密钥。 如果在强制的还原过程中不能对某个相关密钥进行解密，则由该密钥所保护的数据便会丢失。  
   
-###  <a name="Security"></a>安全  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>访问  
+####  <a name="Permissions"></a> 权限  
  需要对服务器的 CONTROL SERVER 权限。  
   
-##  <a name="SSMSProcedure"></a>使用 Transact-sql  
+##  <a name="SSMSProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-restore-the-service-master-key"></a>还原服务主密钥  
   
@@ -62,9 +62,9 @@ ms.locfileid: "74957155"
   
 2.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
-3.  在“标准”  菜单栏上，单击“新建查询” ****。  
+3.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-4.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” ****。  
+4.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- Restores the service master key from a backup file.  

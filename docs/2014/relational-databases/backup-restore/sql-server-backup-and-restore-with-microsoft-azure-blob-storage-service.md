@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 38c92e397c971f6e9976bb857c63410fa60b7e85
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232434"
 ---
 # <a name="sql-server-backup-and-restore-with-azure-blob-storage-service"></a>使用 Azure Blob 存储服务进行 SQL Server 备份和还原
@@ -54,7 +54,7 @@ ms.locfileid: "75232434"
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 备份到 URL 最佳做法和故障排除](sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
- [&#40;SQL Server&#41;的系统数据库的备份和还原](back-up-and-restore-of-system-databases-sql-server.md)   
+ [备份和还原系统数据库 (SQL Server)](back-up-and-restore-of-system-databases-sql-server.md)   
  [教程： SQL Server 备份和还原到 Azure Blob 存储服务](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)   
- [SQL Server 备份到 URL](sql-server-backup-to-url.md)  
+ [SQL Server 的 URL 备份](sql-server-backup-to-url.md)  
   

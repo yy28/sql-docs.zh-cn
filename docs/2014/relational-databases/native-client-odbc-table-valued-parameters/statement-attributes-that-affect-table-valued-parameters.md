@@ -1,5 +1,5 @@
 ---
-title: 影响表值参数的语句属性 |Microsoft Docs
+title: 影响表值参数的语句特性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,21 +14,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 19a757f82c2fa2ff2e78453ddf0fea1fbebda3c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62626212"
 ---
 # <a name="statement-attributes-that-affect-table-valued-parameters"></a>影响表值参数的语句属性
   下表说明了描述符字段中的属性。  
   
-|属性名称|类型|Description|  
+|属性名称|类型|说明|  
 |--------------------|----------|-----------------|  
 |SQL_SOPT_SS_PARAM_FOCUS|SQLUINTEGER|有关 SQL_SS_PARAM_FOCUS 的详细信息，请参阅[SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)。|  
 |SQL_SOPT_SS_NAME_SCOPE|SQLUINTEGER|有关 SQL_SS_NAME_SCOPE 的详细信息，请参阅[SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)。|  
   
-## <a name="see-also"></a>请参阅  
- [表值参数&#40;ODBC&#41;](table-valued-parameters-odbc.md)  
+## <a name="see-also"></a>另请参阅  
+ [ODBC&#41;&#40;表值参数](table-valued-parameters-odbc.md)  
   
   

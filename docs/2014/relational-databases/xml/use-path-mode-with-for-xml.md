@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3e7dba8ee18697f2c8940eab2ea6489e6eec687c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63231242"
 ---
 # <a name="use-path-mode-with-for-xml"></a>将 PATH 模式与 FOR XML 一起使用
@@ -50,7 +50,7 @@ ms.locfileid: "63231242"
   
 -   [示例：使用 PATH 模式](examples-using-path-mode.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用 WITH XMLNAMESPACES 将命名空间添加到查询](add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [SELECT (Transact-SQL)](/sql/t-sql/queries/select-transact-sql)   
  [FOR XML (SQL Server)](for-xml-sql-server.md)  

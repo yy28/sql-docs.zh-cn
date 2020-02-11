@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f336c64ffc0d044fa0f7282f3c87451483353879
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914948"
 ---
-# <a name="mssqlserver21862"></a>MSSQLSERVER_21862
+# <a name="mssqlserver_21862"></a>MSSQLSERVER_21862
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62914948"
 |符号名称|SQLErrorNum21862|  
 |消息正文|无法使用同步方法 'database snapshot' 或 'database snapshot character' 在发布中发布 FILESTREAM 列。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  由于无法通过数据库快照访问 FILESTREAM 数据，因此，为发布的同步方法指定 *database snapshot* 或 *database_snapshot_character* 参数时，快照代理将无法读取 FILESTREAM 数据。  
   
 ## <a name="user-action"></a>用户操作  

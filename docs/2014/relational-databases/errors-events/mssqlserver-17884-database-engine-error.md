@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e31c7a78b74a307bc4c57216ef6c87e989493519
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915129"
 ---
-# <a name="mssqlserver17884"></a>MSSQLSERVER_17884
+# <a name="mssqlserver_17884"></a>MSSQLSERVER_17884
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62915129"
 |符号名称|SRV_SCHEDULER_DEADLOCK|  
 |消息正文|在最后 %d 秒内，没有一个工作线程拾取了分配给节点 %d 上的进程的新查询。 查询被阻塞或长时间运行可能导致出现此情况，并且可能会延长客户端响应时间。 请使用 "最大工作线程数(max worker threads)" 配置选项增加允许的线程数，或者优化当前正运行的查询。  SQL 进程使用率: %d%%。 系统空闲率：%d%%。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  每个计划程序都没有向前运行的迹象，这可能是由死锁造成的：每个线程都无法向前运行和/或无法提取并处理新的工作。 如果进程使用率较低，计算机上的其他进程可能导致服务器进程 CPU 不足。  
   
 ## <a name="user-action"></a>用户操作  

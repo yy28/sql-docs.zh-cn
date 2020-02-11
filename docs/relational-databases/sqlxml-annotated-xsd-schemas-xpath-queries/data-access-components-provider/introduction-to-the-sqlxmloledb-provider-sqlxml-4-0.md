@@ -16,10 +16,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7f94cf5002f0f587332df9ccc9a77e24010b8824
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75246675"
 ---
 # <a name="introduction-to-the-sqlxmloledb-provider-sqlxml-40"></a>SQLXMLOLEDB 访问接口简介 (SQLXML 4.0)
@@ -39,13 +39,13 @@ oTestCommand.Execute , , adExecuteStream
 ## <a name="sqlxmloledb-provider-specific-properties"></a>特定于访问接口的 SQLXMLOLEDB 属性  
  SQLXMLOLEDB 访问接口公开下列特定于访问接口的连接属性。  
   
-|连接<br /><br /> 属性|默认值<br /><br /> （如果有）|说明|  
+|连接<br /><br /> 属性|默认<br /><br /> （如果有）|说明|  
 |-----------------------------|----------------------------|-----------------|  
 |数据访问接口||提供 SQLXMLOLEDB 执行命令所使用的 OLE DB 访问接口的 PROGID。 从 SQLXML 4.0 和 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 开始，此访问接口包含在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中；因此，此属性值限制为“SQLNCLI11”。 有关详细信息，请参阅 [SQL Server Native Client 编程](../../../relational-databases/native-client/sql-server-native-client-programming.md)。|  
   
  SQLXMLOLEDB 访问接口公开下列特定于访问接口的命令属性。  
   
-|Command<br /><br /> 属性|默认值<br /><br /> （如果有）|说明|  
+|Command<br /><br /> 属性|默认<br /><br /> （如果有）|说明|  
 |--------------------------|----------------------------|-----------------|  
 |基路径|""|指定基本文件路径。 基本文件路径用于指定 XML 样式表语言 (XSL) 或映射架构文件的位置。 基文件路径还用于解析 xsl 或映射架构文件的相对路径，该路径已在 XSL 或 Mapping 架构属性中指定。<br /><br /> 有关使用此属性的示例，请参阅[&#40;SQLXMLOLEDB Provider&#41;执行 XPath 查询](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md)。|  
 |ClientSideXML|False|如果希望在客户端上执行行集到 XML 的转换过程，而不是在服务器上执行，请将此属性设置为 True。 在希望将性能负载移到中间层时，此操作很有用。<br /><br /> 有关使用此属性的示例，请参阅[&#40;SQLXMLOLEDB 提供程序中执行 Sql 查询&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md)或[执行包含 &#40;SQLXMLOLEDB PROVIDER&#41;的 Sql 查询的模板](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md)。|  

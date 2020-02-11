@@ -14,28 +14,28 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 19ce2c6ca7b36a5d2147e7efda657fb2433aef25
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63062519"
 ---
 # <a name="session-properties"></a>会话属性
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口将按如下所示解释 OLE DB 会话属性。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序按如下方式解释 OLE DB 的会话属性。  
   
-|属性 ID|Description|  
+|属性 ID|说明|  
 |-----------------|-----------------|  
-|DBPROP_SESS_AUTOCOMMITISOLEVELS|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口支持所有自动提交事务隔离级别，混沌级别 DBPROPVAL_TI_CHAOS 除外。|  
+|DBPROP_SESS_AUTOCOMMITISOLEVELS|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序支持所有的自动提交事务隔离级别，但 DBPROPVAL_TI_CHAOS 的混乱级别除外。|  
   
- 在特定于提供程序的属性集 DBPROPSET_SQLSERVERSESSION 中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口定义以下附加的会话属性。  
+ 在特定于访问接口的属性集中 DBPROPSET_SQLSERVERSESSION， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序定义以下附加的会话属性。  
   
-|属性 ID|Description|  
+|属性 ID|说明|  
 |-----------------|-----------------|  
-|SSPROP_QUOTEDCATALOGNAMES|键入：VT_BOOL<br /><br /> R/W:读/写<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明:带引号的标识符允许在 CATALOG 限制中。<br /><br /> VARIANT_TRUE:提供分布式的查询支持的架构行集的目录限制识别带引号的标识符。<br /><br /> VARIANT_FALSE:无法提供分布式的查询支持的架构行集的目录限制识别带引号的标识符。<br /><br /> 有关提供分布式查询支持的架构行集的详细信息，请参阅[架构行集中的分布式查询支持](../native-client/ole-db/schema-rowsets-distributed-query-support.md)。|  
-|SSPROP_ALLOWNATIVEVARIANT|键入：VT_BOOL<br /><br /> R/W:读/写<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明:确定在提取的数据是作为 DBTYPE_VARIANT 还是作为 DBTYPE_SQLVARIANT。<br /><br /> VARIANT_TRUE:作为 dbtype_sqlvariant 时，在这种情况下缓冲区将保留 SSVARIANT 结构返回列类型。<br /><br /> VARIANT_FALSE:列类型作为 DBTYPE_VARIANT 返回，并将缓冲区将具有 VARIANT 结构。|  
+|SSPROP_QUOTEDCATALOGNAMES|类型：VT_BOOL<br /><br /> R/W：读/写<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明：在 CATALOG 限制中允许带引号的标识符。<br /><br /> VARIANT_TRUE：对提供分布式查询支持的架构行集的目录限制识别带引号的标识符。<br /><br /> VARIANT_FALSE：对提供分布式查询支持的架构行集的目录限制不识别带引号的标识符。<br /><br /> 有关提供分布式查询支持的架构行集的详细信息，请参阅[架构行集中的分布式查询支持](../native-client/ole-db/schema-rowsets-distributed-query-support.md)。|  
+|SSPROP_ALLOWNATIVEVARIANT|类型：VT_BOOL<br /><br /> R/W：读/写<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明：确定提取的数据是作为 DBTYPE_VARIANT 还是作为 DBTYPE_SQLVARIANT。<br /><br /> VARIANT_TRUE：列类型作为 DBTYPE_SQLVARIANT 返回，这种情况下缓冲区将保留 SSVARIANT 结构。<br /><br /> VARIANT_FALSE：列类型作为 DBTYPE_VARIANT 返回，且缓冲区将具有 VARIANT 结构。|  
 |SSPROP_ASYNCH_BULKCOPY|若要使用异步模式，请在调用 BCPExec 方法之前，将特定于提供程序的会话属性 SSPROP_ASYNCH_BULKCOPY 设置为 VARIANT_TRUE。 此属性位于 DBPROPSET_SQLSERVERSESSION 属性集中。|  
   
-## <a name="see-also"></a>请参阅  
- [数据源对象&#40;OLE DB&#41;](data-source-objects-ole-db.md)  
+## <a name="see-also"></a>另请参阅  
+ [数据源对象 &#40;OLE DB&#41;](data-source-objects-ole-db.md)  
   
   

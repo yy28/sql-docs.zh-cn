@@ -14,63 +14,63 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d85fc4c21f200bcdc5a489cfcee6b50bc9f4b98e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479917"
 ---
 # <a name="create-an-entity-master-data-services"></a>创建实体 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，创建一个实体以便包含成员及其属性。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](administrators-master-data-services.md)。  
   
 -   模型必须存在。 有关详细信息，请参阅[创建模型 (Master Data Services)](../../2014/master-data-services/create-a-model-master-data-services.md)。  
   
 ### <a name="to-create-an-entity"></a>创建实体  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”** 。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
   
-2.  在 **“模型视图”** 页上，从菜单栏中，指向 **“管理”** ，然后单击 **“实体”** 。  
+2.  在 **“模型视图”** 页上，从菜单栏中，指向 **“管理”** ，然后单击 **“实体”**。  
   
 3.  在 **“实体维护”** 页上，从 **“模型”** 列表中，选择某一模型。  
   
-4.  单击**将实体添加**。  
+4.  单击 "**添加实体**"。  
   
-5.  在中**实体名称**框中，键入实体的名称。  
+5.  在 "**实体名称**" 框中，键入实体的名称。  
   
-6.  在中**临时表的名称**框中，键入临时表的名称。  
+6.  在 "**临时表的名称**" 框中，键入临时表的名称。  
   
     > [!TIP]  
-    >  使用模型名称作为临时表名称的一部分，例如 Modelname_Entityname  。 这便于在数据库中查找表。 有关临时表的详细信息，请参阅[数据导入&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)。  
+    >  使用模型名称作为临时表名称的一部分，例如 Modelname_Entityname**。 这便于在数据库中查找表。 有关临时表的详细信息，请参阅[数据导入 &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)。  
   
 7.  可选。 选中 **“自动创建代码值”** 复选框。 有关详细信息，请参阅[自动创建代码 (Master Data Services)](../../2014/master-data-services/automatic-code-creation-master-data-services.md)。  
   
-8.  从**启用显式层次结构和集合**列表中，选择下列选项之一：  
+8.  从 "**启用显式层次结构和集合**" 列表中，选择下列选项之一：  
   
-    -   **不**。 如果您无需为显式层次结构和集合启用实体，则选择此选项。 您可以根据需要在以后更改此项。  
+    -   **否**。 如果您无需为显式层次结构和集合启用实体，则选择此选项。 您可以根据需要在以后更改此项。  
   
-    -   **是**。 如果您想要为显式层次结构和集合启用实体，则选择此选项。 在中**显式层次结构名称**框中，键入一个名称。 （可选） 选择**强制的层次结构 (所有叶成员都都包含**以使该显式层次结构成为强制层次结构。  
+    -   **是**。 如果您想要为显式层次结构和集合启用实体，则选择此选项。 在 "**显式层次结构名称**" 框中，键入名称。 还可以选择 "**强制层次结构" （包括所有叶成员**，使显式层次结构成为强制层次结构。  
   
-9. 单击**保存实体**。  
+9. 单击 "**保存实体**"。  
   
 ## <a name="next-steps"></a>后续步骤  
   
--   [创建文本属性 (Master Data Services)](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)  
+-   [Master Data Services 创建文本属性 &#40;&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)  
   
--   [创建基于域的属性 (Master Data Services)](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)  
+-   [创建基于域的属性 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)  
   
--   [创建文件属性 (Master Data Services)](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)  
+-   [创建文件属性 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)  
   
-## <a name="see-also"></a>请参阅  
- [实体 (Master Data Services)](../../2014/master-data-services/entities-master-data-services.md)   
- [显式层次结构 (Master Data Services)](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)   
- [更改实体名称&#40;Master Data Services&#41;](edit-an-entity-master-data-services.md)   
- [删除实体 (Master Data Services)](../../2014/master-data-services/delete-an-entity-master-data-services.md)  
+## <a name="see-also"></a>另请参阅  
+ [实体 &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)   
+ [显式层次结构 &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)   
+ [更改实体名称 &#40;Master Data Services&#41;](edit-an-entity-master-data-services.md)   
+ [删除实体 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-entity-master-data-services.md)  
   
   

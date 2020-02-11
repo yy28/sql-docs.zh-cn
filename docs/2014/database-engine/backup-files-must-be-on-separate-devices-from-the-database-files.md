@@ -1,5 +1,5 @@
 ---
-title: 备份文件必须位于与数据库文件分开的设备 |Microsoft Docs
+title: 备份文件必须位于独立于数据库文件的设备上 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 09c54c8229351cf27e0f42c8895f2633b8aa7ccb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812621"
 ---
 # <a name="backup-files-must-be-on-separate-devices-from-the-database-files"></a>备份文件必须位于与数据库文件分开的设备上
@@ -33,7 +33,7 @@ ms.locfileid: "62812621"
   
  [SQL Server 数据库的备份和还原](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   
-## <a name="see-also"></a>请参阅  
- [使用基于策略的管理来监视和强制执行最佳实践](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
+## <a name="see-also"></a>另请参阅  
+ [使用基于策略的管理来监视和强制执行最佳做法](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

@@ -11,16 +11,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 87aca78d68921b2f90cde68d52eff06df7044a4c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832889"
 ---
 # <a name="cdc-control-task-custom-properties"></a>CDC 控制任务自定义属性
   下表描述了 CDC 控制任务的自定义属性。 所有属性均可读/写。  
   
-|属性名称|数据类型|Description|  
+|属性名称|数据类型|说明|  
 |-------------------|---------------|-----------------|  
 |连接|ADO.NET 连接|与 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC 数据库的 ADO.NET 连接，用于访问更改表和 CDC 状态（如果存储于相同数据库中）。<br /><br /> 该连接必须是指向为 CDC 启用的并且所选更改表位于其中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的连接。|  
 |TaskOperation|Integer（枚举）|CDC 控制任务的所选操作。 可能值为 **“标记初始加载开始”** 、 **“标记初始加载结束”** 、 **“标记 CDC 状态”** 、 **“获取正在处理范围”** 、 **“标记已处理范围”** 和 **“重置 CDC 状态”** 。<br /><br /> 如果在 **CDC（即，不是 Oracle）上工作时选择**MarkCdcStart **、** MarkInitialLoadStart **或** MarkInitialLoadEnd [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则在连接管理器中指定的用户必须是  **db_owner** 或 **sysadmin**。<br /><br /> 有关这些操作的详细信息，请参阅 [CDC Control Task Editor](../cdc-control-task-editor.md) 和 [CDC Control Task](cdc-control-task.md)。|  
@@ -32,8 +32,8 @@ ms.locfileid: "62832889"
 |StateTable|String|指定存储 CDC 上下文状态的表的名称。 使用为此组件配置的连接必须可以访问此表。 此表必须包含名为 **name** 和 **state**的 varchar 列。 （ **状态** 列必须具有至少 256 个字符）。<br /><br /> 此属性仅在 **AutomaticStatePersistence** 设置为 **true**时适用。|  
 |CommandTimeout|integer|该值指定在与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库通信时要使用的超时值（秒）。 在来自数据库的响应时间非常慢并且默认值（30 秒）不足够时使用该值。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [CDC Control Task](cdc-control-task.md)   
- [CDC Control Task Editor](../cdc-control-task-editor.md)  
+ [CDC 控制任务编辑器](../cdc-control-task-editor.md)  
   
   

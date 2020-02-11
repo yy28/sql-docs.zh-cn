@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 49c5b559d675ec29ab85a68b9ac31a619e2538ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830280"
 ---
 # <a name="select-variables-page"></a>“选择变量”页
@@ -34,10 +34,10 @@ ms.locfileid: "62830280"
  **名称**  
  指定变量的名称。  
   
- **类型**  
+ 类型   
  指定变量的数据类型。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [脚本任务编辑器（“脚本”页）](../script-task-editor-script-page.md)  
   
   

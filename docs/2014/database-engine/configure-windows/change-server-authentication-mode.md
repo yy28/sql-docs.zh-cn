@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 43919e335700a23a4174eb1bdf42c36c0c08fe2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812293"
 ---
 # <a name="change-server-authentication-mode"></a>更改服务器身份验证模式
@@ -41,7 +41,7 @@ ms.locfileid: "62812293"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  sa 帐户是一个广为人知的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帐户，并且经常成为恶意用户的攻击目标。 除非您的应用程序需要使用 sa 帐户，否则请不要启用它。 为 sa 登录名使用一个强密码非常重要。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -54,11 +54,11 @@ ms.locfileid: "62812293"
   
 3.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对话框中，单击 **“确定”** 以确认需要重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-4.  在对象资源管理器中，右键单击你的服务器，再单击“重启”  。 如果运行有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理，则也必须重新启动该代理。  
+4.  在“对象资源管理器”中，右键单击服务器，并单击“重新启动”。  如果运行有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理，则也必须重新启动该代理。  
   
 #### <a name="to-enable-the-sa-login"></a>启用 sa 登录名  
   
-1.  在对象资源管理器，展开**安全**，展开登录名，右键单击`sa`，然后单击**属性**。  
+1.  在对象资源管理器中，展开 "**安全性**"，展开 "登录`sa`名"，右键单击，然后单击 "**属性**"。  
   
 2.  在 **“常规”** 页上，您可能需要为登录名创建密码并确认该密码。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "62812293"
   
     ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [强密码](../../relational-databases/security/strong-passwords.md)   
  [安装 SQL Server 的安全注意事项](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql)   

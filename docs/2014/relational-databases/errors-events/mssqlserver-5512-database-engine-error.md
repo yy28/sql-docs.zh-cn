@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fb94a88d749b7d850eee9eff96cd78ef8cf9e08d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913618"
 ---
-# <a name="mssqlserver5512"></a>MSSQLSERVER_5512
+# <a name="mssqlserver_5512"></a>MSSQLSERVER_5512
     
 ## <a name="details"></a>详细信息  
   
@@ -32,10 +32,10 @@ ms.locfileid: "62913618"
 |符号名称|FS_TRUNCATEDIR_FAILED|  
 |消息正文|截断目录“%.*ls”时遇到错误 0x%x (%ls)。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  截断操作失败。  
   
 ## <a name="user-action"></a>用户操作  
- 请查看具体的 Windows 状态代码以了解出错原因。 有关此状态代码的详细信息，请参阅[事件和错误消息通过 Microsoft 支持](https://support.microsoft.com/search?query=events%20and%20error%20messages)。  
+ 请查看具体的 Windows 状态代码以了解出错原因。 有关此状态代码的详细信息，请参阅[Microsoft 支持部门上的事件和错误消息](https://support.microsoft.com/search?query=events%20and%20error%20messages)。  
   
   

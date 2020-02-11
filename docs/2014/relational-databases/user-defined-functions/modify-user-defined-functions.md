@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 77fbdc3bf2f579d585a802d5ed137cfe2a149c2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196447"
 ---
 # <a name="modify-user-defined-functions"></a>修改用户定义函数
@@ -45,9 +45,9 @@ ms.locfileid: "68196447"
   
 -   将 Transact-SQL 函数更改为 CLR 函数，反之亦然。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要对函数或架构具有 ALTER 权限。 如果函数指定用户定义类型，则需要对该类型具有 EXECUTE 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  

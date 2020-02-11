@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 651b13121653f5627f59bc6a8a11f1e2e49c43b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211846"
 ---
 # <a name="modify-check-constraints"></a>修改 CHECK 约束
@@ -39,9 +39,9 @@ ms.locfileid: "68211846"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要对表的 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -56,7 +56,7 @@ ms.locfileid: "68211846"
   
 4.  完成下表中的相应操作：  
   
-    |若要|需要遵循的步骤|  
+    |目标|需要遵循的步骤|  
     |--------|------------------------|  
     |编辑约束表达式|在 **“表达式”** 字段中键入新的表达式。|  
     |重命名约束|在 **“名称”** 字段中键入新的名称。|  
@@ -67,7 +67,7 @@ ms.locfileid: "68211846"
     > [!NOTE]  
     >  对于 CHECK 约束，有些数据库具有不同的功能。  
   
-5.  单击 **“关闭”** 。  
+5.  单击“关闭”  。  
   
 6.  在“文件”  菜单上，单击“保存”  以保存表名  。  
   

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e6deba09d2804903e8353d4648a2775d18c8c392
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62897685"
 ---
 # <a name="left-ssis-expression"></a>LEFT（SSIS 表达式）
@@ -31,7 +31,7 @@ LEFT(character_expression,number)
  *character_expression*  
  是从中提取字符的字符表达式。  
   
- *number*  
+ *数字*  
  指示要返回的字符数的整数表达式。  
   
 ## <a name="result-types"></a>结果类型  
@@ -57,7 +57,7 @@ LEFT(character_expression,number)
 LEFT("Mountain Bike", 8)  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [RIGHT（SSIS 表达式）](right-ssis-expression.md)   
  [函数（SSIS 表达式）](functions-ssis-expression.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 快捷键 (Sybase To SQL) |Microsoft Docs
+title: 快捷键（Sybase 到 SQL） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.assetid: 2dd0d404-383d-4e7e-a492-3eab5ab501d6
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 933563a35d86e51afc34ae19bdd356e43b472227
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67944613"
 ---
 # <a name="shortcut-keyssybase-to-sql"></a>快捷键 (Sybase To SQL)
-可以使用键盘快捷方式来浏览 SSMA 应用程序。 有关详细信息，请参阅以下主题。  
+可以使用键盘快捷方式在 SSMA 应用程序中导航。 有关详细信息，请参阅以下主题。  
   
--   [菜单命令和其他键盘快捷方式&#40;Sybase To SQL&#41;](../../ssma/sybase/menu-commands-and-other-shortcut-keys-sybase-to-sql.md)  
+-   [菜单命令和其他快捷键 &#40;Sybase 到 SQL&#41;](../../ssma/sybase/menu-commands-and-other-shortcut-keys-sybase-to-sql.md)  
   
-## <a name="see-also"></a>请参阅  
-[开始使用 SSMA for Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)  
+## <a name="see-also"></a>另请参阅  
+[入门用于 Sybase &#40;SybaseToSQL 的 SSMA&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)  
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ccc7b96f4275b09b90b8120813b93f860ec07b9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871055"
 ---
 # <a name="view-or-change-the-compatibility-level-of-a-database"></a>查看或更改数据库的兼容级别
@@ -38,9 +38,9 @@ ms.locfileid: "62871055"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要对数据库拥有 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -49,13 +49,13 @@ ms.locfileid: "62871055"
   
 1.  连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的相应实例之后，在对象资源管理器中，单击服务器名称。  
   
-2.  展开 **“数据库”**，然后根据数据库的不同，选择用户数据库，或展开 **“系统数据库”** ，再选择系统数据库。  
+2.  展开 **“数据库”** ，然后根据数据库的不同，选择用户数据库，或展开 **“系统数据库”** ，再选择系统数据库。  
   
-3.  右键单击数据库，再单击“属性”。  
+3.  右键单击数据库，再单击“属性”  。  
   
      **“数据库属性”** 对话框将打开。  
   
-4.  在 **“选择页”** 窗格中，单击 **“选项”**。  
+4.  在 **“选择页”** 窗格中，单击 **“选项”** 。  
   
      当前兼容级别显示在 **“兼容级别”** 列表框中。  
   
@@ -67,9 +67,9 @@ ms.locfileid: "62871055"
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例将返回 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的兼容级别。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例将返回 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的兼容级别。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -84,9 +84,9 @@ GO
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例中的兼容性级别更改[!INCLUDE[ssSampleDBobject](../../includes/sssql14-md.md)]。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例更改的兼容级别[!INCLUDE[ssSampleDBobject](../../includes/sssql14-md.md)]。  
   
 ```sql  
 ALTER DATABASE AdventureWorks2012  

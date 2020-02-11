@@ -1,5 +1,5 @@
 ---
-title: MaxRecords 属性 (ADO) |Microsoft Docs
+title: MaxRecords 属性（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,26 +16,26 @@ ms.assetid: 20c76571-8c9a-482c-a99e-726ab1d93f8b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5acd8997af6993a49ac4cbcca6e3b4c8bd26acfd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932233"
 ---
 # <a name="maxrecords-property-ado"></a>MaxRecords 属性 (ADO)
-指示要返回到的记录的最大数[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)从查询。  
+指示要从查询返回到[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的最大记录数。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
- 设置或返回**长**值，该值指示要返回的记录的最大数。 默认值为零 (**0**)，这意味着没有限制。  
+ 设置或返回一个**长整型**值，该值指示要返回的最大记录数。 默认值为零（**0**），表示没有限制。  
   
 ## <a name="remarks"></a>备注  
- 使用**MaxRecords**属性来限制从数据源的提供程序返回的记录数。 此属性的默认设置为零，这意味着访问接口将返回所有请求的记录。  
+ 使用**MaxRecords**属性可限制访问接口从数据源返回的记录数。 此属性的默认设置为零，表示提供程序返回所有请求的记录。  
   
- **MaxRecords**属性为读/写时**记录集**打开时为已关闭，只读的。  
+ 当**记录集**关闭时， **MaxRecords**属性是可读/写的。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>请参阅  
- [MaxRecords 属性示例 (VB)](../../../ado/reference/ado-api/maxrecords-property-example-vb.md)   
+## <a name="see-also"></a>另请参阅  
+ [MaxRecords 属性示例（VB）](../../../ado/reference/ado-api/maxrecords-property-example-vb.md)   
  [MaxRecords 属性示例 (VC++)](../../../ado/reference/ado-api/maxrecords-property-example-vc.md)   

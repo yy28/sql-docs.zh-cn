@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 050220781f484b4a9e595551496d7e58c06f954c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871952"
 ---
 # <a name="detach-a-database"></a>分离数据库
@@ -44,9 +44,9 @@ ms.locfileid: "62871952"
 ###  <a name="Restrictions"></a> 限制和局限  
  有关限制和局限的列表，请参阅 [数据库分离和附加 (SQL Server)](database-detach-and-attach-sql-server.md)中分离数据库。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求具有 db_owner 固定数据库角色中的成员资格。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -77,22 +77,22 @@ ms.locfileid: "62871952"
      **保留全文目录**  
      默认情况下，分离操作保留所有与数据库关联的全文目录。 若要删除全文目录，请清除 **“保留全文目录”** 复选框。 只有从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]升级数据库时，才会显示此选项。  
   
-     **“状态”**  
-     将显示以下状态之一：“就绪”或“未就绪”   。  
+     **Status**  
+     显示以下状态之一： **“就绪”** 或 **“未就绪”** 。  
   
-     **Message**  
+     **消息**  
      **“消息”** 列可显示关于数据库的如下信息：  
   
     -   当数据库进行了复制操作，则 **“状态”** 为 **“未就绪”** ， **“消息”** 列将显示 **“已复制数据库”** 。  
   
-    -   当数据库有一个或多个活动连接，**状态**是**未就绪**并**消息**列将显示 _< number_of_active_connections>_ **个活动连接**-例如：“1 个活动连接”  。 在分离数据库之前，需要通过选择 **“删除连接”** 断开所有活动连接。  
+    -   如果数据库有一个或多个活动连接，则“状态”为“未就绪”，“消息”列显示“<number_of_active_connections> 个活动连接”，例如：“1 个活动连接”       。 在分离数据库之前，需要通过选择 **“删除连接”** 断开所有活动连接。  
   
      若要获取有关消息的详细信息，请单击相应的超链接文本打开活动监视器。  
   
 4.  分离数据库准备就绪后，请单击 **“确定”** 。  
   
 > [!NOTE]  
->  新分离的数据库将一直显示在对象资源管理器的 **“数据库”** 节点中，直到刷新该视图。 你可以刷新在任何时间视图：单击对象资源管理器窗格中，然后从菜单栏中选择**视图**，然后**刷新**。  
+>  新分离的数据库将一直显示在对象资源管理器的 **“数据库”** 节点中，直到刷新该视图。 可以随时刷新视图：单击对象资源管理器窗格，然后从菜单栏依次选择 **“视图”** 和 **“刷新”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -108,7 +108,7 @@ ms.locfileid: "62871952"
 EXEC sp_detach_db 'AdventureWorks2012', 'true';  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库分离和附加 (SQL Server)](database-detach-and-attach-sql-server.md)   
  [sp_detach_db (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql)  
   

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: cec604ff1a93213fc6308455cadda90e6efa2d61
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401427"
 ---
 # <a name="appliance-monitoring-for-analytics-platform-system"></a>分析平台系统的设备监视
@@ -38,7 +38,7 @@ ms.locfileid: "74401427"
 有多种工具可用于监视设备。  
   
 管理控制台  
-SQL Server PDW 具有管理控制台。 这是一种基于 web 的工具，用于显示有关查询、加载、备份和还原、锁、会话、警报和设备状态的信息。 管理控制台在设备上运行;用户通过 Internet Explorer 连接到管理控制台。 有关更多信息，请参阅：  
+SQL Server PDW 具有管理控制台。 这是一种基于 web 的工具，用于显示有关查询、加载、备份和还原、锁、会话、警报和设备状态的信息。 管理控制台在设备上运行;用户通过 Internet Explorer 连接到管理控制台。 有关详细信息，请参阅：  
   
 -   [使用管理控制台 &#40;分析平台系统来监视设备&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f16133abfa0d16e4b5614bdfefa5cf7c163516e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62470004"
 ---
 # <a name="customize-toolbars-page"></a>自定义（“工具栏”页）
@@ -32,7 +32,7 @@ ms.locfileid: "62470004"
  **新建**  
  显示“新建工具栏”  对话框，使用该对话框，可以创建和命名自定义工具栏。  
   
- **Rename**  
+ **重命名**  
  显示“重命名工具栏”  对话框，使用该对话框，只能更改自定义工具栏的名称。  
   
  **删除**  

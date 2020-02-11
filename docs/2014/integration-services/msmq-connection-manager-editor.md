@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 91b448a87408a830464b50f641e6eefa8cf3f12c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057634"
 ---
 # <a name="msmq-connection-manager-editor"></a>MSMQ 连接管理器编辑器
-  可以使用“MSMQ 连接管理器”对话框指定“消息队列”（也称为 MSMQ）消息队列的路径。   
+  可以使用“MSMQ 连接管理器”对话框指定“消息队列”（也称为 MSMQ）消息队列的路径。****  
   
  若要了解有关 MSMQ 连接管理器的详细信息，请参阅 [MSMQ Connection Manager](connection-manager/msmq-connection-manager.md)。  
   
@@ -36,20 +36,22 @@ ms.locfileid: "66057634"
  **说明**  
  描述连接管理器。 最好按照连接管理器的用途对其进行说明，使包的说明一目了然，且更便于维护。  
   
- **路径**  
+ **通道**  
  键入消息队列的完整路径。 路径的格式取决于队列的类型。  
   
 |队列类型|示例路径|  
 |----------------|-----------------|  
-|公共|\<computer name>\\<queue name\>|  
-|Private|\<computer name>\Private$\\<queue name\>|  
+|公共|
+  \<computer name>\\<queue name\>|  
+|Private|
+  \<computer name>\Private$\\<queue name\>|  
   
  可以用“.”代表本地计算机。  
   
- **测试**  
- 在配置 MSMQ 连接管理器之后，单击“测试”确定该连接是否可用。   
+ **考试**  
+ 在配置 MSMQ 连接管理器之后，单击“测试”确定该连接是否可用。****  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

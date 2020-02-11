@@ -19,16 +19,16 @@ ms.assetid: c99a8159-7693-4f97-8dcf-401336550e77
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3bd3a44fe4f0466dfcf11a72fa0377564c1cf02f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68077215"
 ---
 # <a name="allocating-a-connection-handle-odbc"></a>分配连接句柄 ODBC
-应用程序可以连接到数据源或驱动程序之前，必须分配连接句柄，按如下所示：  
+在应用程序可以连接到数据源或驱动程序之前，必须分配连接句柄，如下所示：  
   
-1.  应用程序声明类型 SQLHDBC 的变量。 然后，它调用**SQLAllocHandle** ，并将传递此变量，用来将该连接和 SQL_HANDLE_DBC 选项分配环境句柄的地址。 例如：  
+1.  应用程序声明类型为 SQLHDBC 的变量。 然后，它调用**SQLAllocHandle**并传递此变量的地址、要在其中分配连接的环境的句柄和 SQL_HANDLE_DBC 选项。 例如：  
   
     ```  
     SQLHDBC hdbc1;  
@@ -36,10 +36,10 @@ ms.locfileid: "68077215"
     SQLAllocHandle(SQL_HANDLE_DBC, henv1, &hdbc1);  
     ```  
   
-2.  驱动程序管理器分配要在其中存储有关语句的信息的结构，并在变量中返回的连接句柄。  
+2.  驱动程序管理器分配一个结构，在该结构中存储有关语句的信息并返回变量中的连接句柄。  
   
- 驱动程序管理器不会调用**SQLAllocHandle**此驱动程序中的时间，因为它不知道要调用的驱动程序。 它会调用延迟**SQLAllocHandle**驱动程序直到应用程序调用一个函数来连接到数据源中。 有关详细信息，请参阅[的连接过程中的驱动程序管理器角色](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)稍后在本部分中。  
+ 目前，驱动程序管理器不会调用驱动程序中的**SQLAllocHandle** ，因为它不知道要调用哪个驱动程序。 在应用程序调用函数以连接到数据源之前，它会延迟在驱动程序中调用**SQLAllocHandle** 。 有关详细信息，请参阅本部分后面的[连接过程中的驱动程序管理器角色](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)。  
   
- 请务必注意，分配连接句柄并不相同加载驱动程序。 连接函数调用之前，未加载该驱动程序。 因此后分配连接句柄, 并连接到的驱动程序或数据源之前，应用程序可以调用与连接句柄的唯一函数是**SQLSetConnectAttr**， **SQLGetConnectAttr**，或**SQLGetInfo** SQL_ODBC_VER 选项。 调用其他函数与连接句柄，例如**SQLEndTran**，返回的 SQLSTATE 08003 （连接未打开）。 有关完整详细信息，请参阅[附录 b:状态转换表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)。  
+ 需要特别注意的是，分配连接句柄不同于加载驱动程序。 在调用连接函数之前，不会加载驱动程序。 因此，在分配连接句柄之后，在连接到驱动程序或数据源之前，应用程序可以使用连接句柄调用的唯一函数是**SQLSetConnectAttr**、 **SQLGetConnectAttr**或**SQLGetInfo**与 SQL_ODBC_VER 选项。 调用具有连接句柄的其他函数（如**SQLEndTran**）将返回 SQLSTATE 08003 （"连接未打开"）。 有关完整的详细信息，请参阅[附录 B： ODBC 状态转换表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)。  
   
  有关连接句柄的详细信息，请参阅[连接句柄](../../../odbc/reference/develop-app/connection-handles.md)。

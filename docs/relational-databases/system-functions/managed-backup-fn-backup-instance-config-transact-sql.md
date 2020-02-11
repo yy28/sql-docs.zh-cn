@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_backup_instance_config (TRANSACT-SQL) |Microsoft Docs
+title: managed_backup fn_backup_instance_config （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.assetid: 2382a547-c0c9-4e1d-87c9-d8526192eb5a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 41c689d03ebae3afe16dc51d8a47c54e923d3a82
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68067764"
 ---
-# <a name="managedbackupfnbackupinstanceconfig-transact-sql"></a>managed_backup.fn_backup_instance_config (Transact SQL)
+# <a name="managed_backupfn_backup_instance_config-transact-sql"></a>managed_backup fn_backup_instance_config （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   返回 1 行，其中是 SQL Server 实例的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 默认配置设置。  
@@ -35,7 +35,7 @@ ms.locfileid: "68067764"
  使用此存储过程检查或确定 SQL Server 实例的当前 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 默认配置设置。  
   
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,24 +44,25 @@ managed_backup.fn_backup_db_config ()
 ```  
   
 ##  <a name="Arguments"></a> 参数  
- None  
+ 无  
   
 ## <a name="table-returned"></a>返回的表  
   
-|列名|数据类型|描述|  
+|列名|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|is_smart_backup_enabled|INT|[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 启用时显示 1，[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 禁用时显示 0。|  
+|is_smart_backup_enabled|INT|
+  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 启用时显示 1，[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 禁用时显示 0。|  
 |credential_name|SYSNAME|用于向存储进行身份验证的默认 SQL 凭据。|  
 |retention_days|INT|在实例级别设置的默认保持期。|  
-|storage_url|NVARCHAR(1024)|在实例级别设置的默认存储帐户 URL。|  
+|storage_url|NVARCHAR （1024）|在实例级别设置的默认存储帐户 URL。|  
 |encryption_algorithm|SYSNAME|加密算法的名称。 如果未指定加密，则设置为 NULL。|  
-|encryptor_type|NVARCHAR （32)|使用的加密程序的类型：证书或非对称密钥。 如果未指定加密程序，则设置为 NULL。|  
+|encryptor_type|NVARCHAR （32）|使用的加密程序的类型：证书或非对称密钥。 如果未指定加密程序，则设置为 NULL。|  
 |encryptor_name|SYSNAME|证书或非对称密钥的名称。 如果未指定名称，则设置为 NULL|  
   
 ## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>权限  
- 要求的成员身份**db_backupoperator**拥有数据库角色**ALTER ANY CREDENTIAL**权限。 用户应被拒绝**VIEW ANY DEFINITION**权限。  
+ 要求具有**ALTER ANY CREDENTIAL**权限的**db_backupoperator**数据库角色的成员身份。 不应拒绝用户**查看任何定义**权限。  
   
 ## <a name="examples"></a>示例  
  下例返回所在实例上的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的默认配置设置：  

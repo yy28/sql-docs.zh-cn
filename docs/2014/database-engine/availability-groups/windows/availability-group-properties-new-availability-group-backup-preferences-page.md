@@ -1,5 +1,5 @@
 ---
-title: 可用性组属性：新的可用性组 （备份首选项页） |Microsoft Docs
+title: 可用性组属性：新建可用性组（"备份首选项" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8c60a2de7c36eef7f01338e2b8ea8abe29093490
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62790216"
 ---
 # <a name="availability-group-properties-new-availability-group-backup-preferences-page"></a>可用性组属性：新建可用性组（“备份首选项”页）
@@ -28,7 +28,7 @@ ms.locfileid: "62790216"
   
 -   [查看可用性组属性 (SQL Server)](view-availability-group-properties-sql-server.md)  
   
--   [使用 AlwaysOn 面板 (SQL Server Management Studio)](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [使用 AlwaysOn 仪表板 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 ## <a name="where-should-backups-occur"></a>应在何处进行备份？  
  **优先辅助**  
@@ -37,14 +37,14 @@ ms.locfileid: "62790216"
  **仅辅助**  
  指定备份应该永远不会在主副本上执行。 如果主副本是唯一的联机副本，则备份应不会发生。  
   
- **主**  
+ **主要节点**  
  指定备份应该始终在主副本上发生。 如果您需要在对辅助副本运行备份时不支持的备份功能，例如创建差异备份，此选项将很有用。  
   
  **任何副本**  
  指定您希望在选择要执行备份的副本时备份作业将忽略可用性副本的角色。 请注意，备份作业可能评估其他因素，例如每个可用性副本的备份优先级及其操作状态和已连接状态。  
   
 > [!IMPORTANT]  
->  没有实施备份首选项设置。 对此首选项的解释依赖于您为给定可用性组中的数据库撰写作业脚本的逻辑（如果有）。 有关详细信息，请参阅[活动次要副本：在辅助副本 （AlwaysOn 可用性组） 上备份](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
+>  没有实施备份首选项设置。 对此首选项的解释依赖于您为给定可用性组中的数据库撰写作业脚本的逻辑（如果有）。 有关详细信息，请参阅[活动辅助副本：辅助副本备份（AlwaysOn 可用性组）](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
   
 ## <a name="replica-backup-priorities"></a>副本备份优先级  
  此网格将显示每个承载可用性组的副本的服务器实例的当前备份优先级。 使用此网格可以更改一个或多个可用性副本的备份优先级。  
@@ -58,8 +58,8 @@ ms.locfileid: "62790216"
  **排除副本**  
  如果从不希望选择此可用性副本来执行备份，请选择此选项。 例如，这对于您永远不希望备份故障转移到的远程可用性副本十分有用。  
   
-## <a name="see-also"></a>请参阅  
- [活动次要副本：在辅助副本 （AlwaysOn 可用性组） 上的备份](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
+## <a name="see-also"></a>另请参阅  
+ [活动辅助副本：辅助副本备份（AlwaysOn 可用性组）](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
  [ALTER AVAILABILITY GROUP (Transact-SQL)](/sql/t-sql/statements/alter-availability-group-transact-sql)  
   
   

@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 2fef7b88514357deb6cf0a009d12272cc3cf79a2
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.openlocfilehash: 089b76d7167b8561c93b01837dc2189c833362fd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74401403"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76761901"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>在分析平台系统中配置 Windows Server Update Services （WSUS）
 这些说明将指导你完成使用 Windows Server Update Services （WSUS）配置向导为 Analytics 平台系统配置 WSUS 的步骤。 你需要配置 WSUS，然后才能将软件更新应用于设备。 WSUS 已安装在设备的 VMM 虚拟机上。  
@@ -83,7 +83,7 @@ ms.locfileid: "74401403"
   
     #### <a name="to-update-by-using-microsoft-update"></a>使用 Microsoft 更新更新  
   
-    1.  如果选择与 Microsoft 更新同步，则不需要对 "**选择上游服务器**" 页进行任何更改。 单击 **“下一步”**。  
+    1.  如果选择与 Microsoft 更新同步，则不需要对 "**选择上游服务器**" 页进行任何更改。 单击“下一步”。   
   
         ![WSUS 上游服务器同步](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
   
@@ -138,11 +138,14 @@ ms.locfileid: "74401403"
 8.  选择 "产品"。  
   
     > [!NOTE]  
-    > 如果使用的是上游服务器，则可能无法选择 "产品"。 如果此选项不可用，请跳过此步骤。  
+    > 如果使用的是上游服务器，则可能无法选择 "产品"。 如果此选项不可用，请跳过此步骤。
+
+    > [!WARNING]  
+    > 请排除任何 SQL Server 2016 更新。
   
     取消选择所有选定的更新。  
   
-    选择 " **Windows Server 2012 r2**和**System Center 2012 R2-Virtual Machine Manager**"，然后单击 "**下一步**"。  
+    选择**SQL Server 2012**、 **SQL Server 2014**、 **Windows Server 2012 2012 r2** **Virtual Machine Manager**，然后单击 "**下一步**"。  
   
 9. 选择 "分类"。  
   
@@ -167,7 +170,7 @@ ms.locfileid: "74401403"
   
 12. 完毕.  
   
-    单击 **“完成”**。  
+    单击“完成”  。  
   
 ## <a name="bkmk_WSUSGroup"></a>在 WSUS 中将设备服务器分组  
 配置 WSUS for Analytics 平台系统后，下一步是对设备服务器进行分组。 通过将所有设备服务器添加到组中，WSUS 将能够将软件更新应用于设备中的所有服务器。  

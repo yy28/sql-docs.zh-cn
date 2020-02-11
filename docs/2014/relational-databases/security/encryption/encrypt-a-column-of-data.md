@@ -14,28 +14,28 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: bd0b5824abfc36923909ce37866b221c0bc830d5
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957195"
 ---
 # <a name="encrypt-a-column-of-data"></a>加密数据列
   本主题介绍如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中通过对称加密对数据列进行加密。  
   
- **本主题中的**  
+ **本主题内容**  
   
 -   **开始之前：**  
   
-     [安全](#Security)  
+     [安全性](#Security)  
   
 -   [使用 Transact-sql 对数据列进行加密](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a>开始之前  
+##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a>安全  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>访问  
+####  <a name="Permissions"></a> 权限  
  下面的权限是执行以下步骤所必需的：  
   
 -   针对数据库的 CONTROL 权限。  
@@ -46,15 +46,15 @@ ms.locfileid: "74957195"
   
 -   针对密钥的某些权限，并且必须未被拒绝授予 VIEW DEFINITION 权限。  
   
-##  <a name="TsqlProcedure"></a>使用 Transact-sql  
+##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>使用简单对称加密对数据列进行加密  
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
-2.  在“标准”  菜单栏上，单击“新建查询” ****。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” ****。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;  
@@ -115,9 +115,9 @@ ms.locfileid: "74957195"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
-2.  在“标准”  菜单栏上，单击“新建查询” ****。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” ****。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;  
@@ -176,12 +176,12 @@ ms.locfileid: "74957195"
   
  有关详细信息，请参阅以下主题：  
   
--   [&#40;Transact-sql&#41;创建证书](/sql/t-sql/statements/create-certificate-transact-sql)  
+-   [CREATE CERTIFICATE (Transact-SQL)](/sql/t-sql/statements/create-certificate-transact-sql)  
   
--   [&#40;Transact-sql&#41;创建对称密钥](/sql/t-sql/statements/create-symmetric-key-transact-sql)  
+-   [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)  
   
--   [ALTER TABLE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)  
+-   [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql)  
   
--   [开放式对称密钥 &#40;Transact-sql&#41;](/sql/t-sql/statements/open-symmetric-key-transact-sql)  
+-   [OPEN SYMMETRIC KEY (Transact-SQL)](/sql/t-sql/statements/open-symmetric-key-transact-sql)  
   
   

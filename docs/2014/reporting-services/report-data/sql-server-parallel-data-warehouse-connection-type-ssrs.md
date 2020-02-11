@@ -11,26 +11,26 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b0c8ada8e10ef0f1bc47e1655521acced6f0aa41
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106969"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>SQL Server Parallel Data Warehouse 连接类型 (SSRS)
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] 是一种可扩展的数据仓库工具，可以通过大规模并行处理提供高性能和可扩展性。 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 数据库进行分布式处理和数据存储。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)]是一个可扩展的数据仓库设备，可通过大规模并行处理提供性能和可扩展性。 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]使用[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]数据库进行分布式处理和数据存储。  
   
  该工具可跨多个物理节点对大型数据库表进行分区，每个节点运行自己的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]实例。 当报表连接到 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 以检索报表数据时，它将连接到 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 工具中的控制节点，该节点负责管理查询处理。 建立连接后，无论是使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 环境内部还是外部的 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 实例，都没有任何区别。  
   
- 若要在报表中包含来自 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 的数据，您必须拥有一个基于类型为 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 并行数据仓库的报表数据源的数据集。 此内置数据源类型基于 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 并行数据仓库数据扩展插件。 使用此数据源类型可连接到 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]并从中检索数据。  
+ 若要在报表[!INCLUDE[ssDW](../../../includes/ssdw-md.md)]中包括来自的数据，您必须具有一个基于类型[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]为并行数据仓库的报表数据源的数据集。 此内置数据源类型基于[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]并行数据仓库数据扩展插件。 使用此数据源类型可连接到 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]并从中检索数据。  
   
  此数据扩展插件支持多值参数、服务器聚合以及与连接字符串分开管理的凭据。  
   
  有关详细信息，请参阅网站 [SQL Server 2008 R2 Parallel Data Warehouse](https://go.microsoft.com/fwlink/?LinkId=150895)。  
   
- 使用本主题中的信息来生成一个数据源。 有关分步说明，请参阅[添加和验证数据连接或数据源&#40;报表生成器和 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
+ 使用本主题中的信息来生成一个数据源。 有关分步说明，请参阅[添加和验证数据连接或数据源 &#40;报表生成器和 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
   
-##  <a name="Connection"></a> 连接字符串  
+##  <a name="Connection"></a>连接字符串  
  连接到 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]时，也会连接到 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 工具中的数据库对象。 可在查询设计器中指定要使用的数据库对象。 如果未在连接字符串中指定数据库，则将连接到管理员为您分配的默认数据库。 请联系数据库管理员，获取连接信息以及用于连接到数据源的凭据。 下面的连接字符串示例指定 **工具中的**CustomerSales [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 示例数据库：  
   
 ```  
@@ -41,8 +41,9 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
  有关连接字符串示例的详细信息，请参阅 [报表生成器中的数据连接、数据源和连接字符串](../data-connections-data-sources-and-connection-strings-in-report-builder.md)。  
   
-##  <a name="Credentials"></a> 凭据  
- [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 提供其自己的安全技术，以实现和存储用户名和密码。 不能使用 Windows 身份验证。 如果试图使用 Windows 身份验证连接到 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] ，则会发生错误。  
+##  <a name="Credentials"></a>凭据  
+ 
+  [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 提供其自己的安全技术，以实现和存储用户名和密码。 不能使用 Windows 身份验证。 如果试图使用 Windows 身份验证连接到 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] ，则会发生错误。  
   
  凭据必须具有足够的权限访问数据库。 根据要执行的查询，您可能需要具有其他权限，例如访问表和视图的足够权限。 外部数据源的所有者必须配置相应的凭据，使这些凭据足以提供对所需数据库对象的只读访问。  
   
@@ -50,11 +51,11 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
 -   使用存储的用户名和密码。 若要协商当包含报表数据的数据库与报表服务器不同时产生的双跃点，请选择使用凭据作为 Windows 凭据的选项。 也可以选择在连接到数据源后模拟经过身份验证的用户。  
   
--   不需要提供任何凭据。 若要使用此选项，您必须具有为报表服务器配置的无人参与的执行帐户。 有关详细信息，请参阅 msdn.microsoft.com 上 [Reporting Services 文档](https://go.microsoft.com/fwlink/?linkid=121312)中的[配置无人参与的执行帐户（SSRS 配置管理器）](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
+-   不需要提供任何凭据。 若要使用此选项，您必须具有为报表服务器配置的无人参与的执行帐户。 有关详细信息，请参阅 msdn.microsoft.com 上 [Reporting Services 文档](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)中的[配置无人参与的执行帐户（SSRS 配置管理器）](https://go.microsoft.com/fwlink/?linkid=121312)。  
   
- 有关详细信息，请参阅[数据连接、 数据源和 Reporting Services 中的连接字符串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)或[在报表生成器中指定凭据](../specify-credentials-in-report-builder.md)。  
+ 有关详细信息，请参阅[Reporting Services 中的数据连接、数据源和连接字符串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)或[在报表生成器中指定凭据](../specify-credentials-in-report-builder.md)。  
 
-##  <a name="Query"></a> 查询  
+##  <a name="Query"></a>请求  
  查询指定了要为报表数据集检索哪些数据。  
   
  查询的结果集中的列填充数据集的字段集合。 如果查询返回多个结果集，则报表仅处理查询所检索的第一个结果集。 默认情况下，如果您创建一个新查询，或者打开一个可在图形查询设计器中显示的现有查询，则可以使用关系查询设计器。 可以通过下列方式指定查询：  
@@ -75,13 +76,16 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
  如果不对数据进行聚合和汇总以减少查询返回的行数，从大型数据库（包括 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]等数据仓库）检索报表数据的查询所生成的结果集就可能会包含大量的行。 您可以使用图形查询设计器或基于文本的查询设计器，编写包括聚合和分组的查询。  
   
- [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] 支持查询设计器提供的用于汇总数据的子句、关键字和聚合。  
+ 
+  [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] 支持查询设计器提供的用于汇总数据的子句、关键字和聚合。  
   
- [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 使用的图形查询设计器提供对分组和聚合的内置支持，有助于编写仅检索摘要数据的查询。 [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] 语言功能包括：GROUP BY 子句、DISTINCT 关键字以及 SUM 和 COUNT 等聚合。 基于文本的查询设计器提供对 [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] 语言的完全支持，包括分组和聚合。  
+ 
+  [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 使用的图形查询设计器提供对分组和聚合的内置支持，有助于编写仅检索摘要数据的查询。 
+  [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] 语言功能包括：GROUP BY 子句、DISTINCT 关键字以及 SUM 和 COUNT 等聚合。 基于文本的查询设计器提供对 [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] 语言的完全支持，包括分组和聚合。  
   
- 有关 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 的详细信息，请参阅 msdn.microsoft.com 上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [联机丛书](https://go.microsoft.com/fwlink/?LinkId=141687)中的 [Transact-SQL 引用（数据库引擎）](/sql/t-sql/language-reference)。  
+ 有关 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 的详细信息，请参阅 msdn.microsoft.com 上 [](/sql/t-sql/language-reference)联机丛书中的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [Transact-SQL 引用（数据库引擎）](https://go.microsoft.com/fwlink/?LinkId=141687)。  
   
-###  <a name="QueryText"></a> 使用 Text 查询类型  
+###  <a name="QueryText"></a>使用查询类型文本  
  在基于文本的查询设计器中，可以键入 [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] 命令来定义数据集中的数据。 用于从 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 检索数据的查询与用于从不在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 应用程序中运行的 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 实例检索数据的查询是相同的。 例如，下面的 [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] 查询选择职位为销售助理的所有雇员的姓名：  
   
 ```  
@@ -97,7 +101,7 @@ FROM
 WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'   
 ```  
   
- 单击工具栏上的 **“运行”** 按钮 ( **!** ) 可以运行查询并显示结果集。  
+ 单击工具栏上的 **“运行”** 按钮 (**!**) 可以运行查询并显示结果集。  
   
  若要参数化此查询，请添加一个查询参数。 例如，将 WHERE 子句更改为下面的内容：  
   
@@ -116,26 +120,26 @@ SELECT FirstName, LastName FROM HumanResources.Employee E INNER JOIN
 WHERE EmployeeID = (@EmpID)  
 ```  
   
- 默认情况下，各个报表参数的数据类型均为“Text”，并具有自动创建的数据集，以提供可用值的下拉列表。 创建报表参数后，您可能需要更改默认值。 有关详细信息，请参阅 [报表参数（报表生成器和报表设计器）](../report-design/report-parameters-report-builder-and-report-designer.md)的详细信息。  
+ 默认情况下，各个报表参数的数据类型均为“Text”，并具有自动创建的数据集，以提供可用值的下拉列表。 创建报表参数后，您可能需要更改默认值。 有关详细信息，请参阅[报表参数 &#40;报表生成器和报表设计器&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)。  
 
-##  <a name="Remarks"></a> 注释  
+##  <a name="Remarks"></a> 备注  
   
 ###### <a name="platform-and-version-information"></a>平台和版本信息  
- 有关平台和版本支持的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][联机丛书](https://go.microsoft.com/fwlink/?linkid=121312)的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 文档中的 [Reporting Services 支持的数据源 (SSRS)](../create-deploy-and-manage-mobile-and-paginated-reports.md)。  
+ 有关平台和版本支持的详细信息，请参阅 [](../create-deploy-and-manage-mobile-and-paginated-reports.md)联机丛书[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]的  文档中的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [Reporting Services 支持的数据源 (SSRS)](https://go.microsoft.com/fwlink/?linkid=121312)。  
 
 ##  <a name="HowTo"></a> 操作指南主题  
  本节包含使用数据连接、数据源和数据集的分步说明。  
   
- [添加和验证数据连接或数据源&#40;报表生成器和 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [添加和验证数据连接或数据源 &#40;报表生成器和 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
- [创建共享数据集或嵌入数据集（报表生成器和 SSRS）](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
+ [创建共享数据集或嵌入数据集 &#40;报表生成器和 SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
- [向数据集添加筛选器（报表生成器和 SSRS）](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
+ [向数据集添加筛选器 &#40;报表生成器和 SSRS&#41;](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
 
-##  <a name="Related"></a> 相关章节  
+##  <a name="Related"></a>相关章节  
  文档中的这些章节提供有关报表数据的深入概念性信息，以及有关如何定义、自定义和使用与数据相关的报表部件的步骤信息。  
   
- [向报表添加数据&#40;报表生成器和 SSRS&#41;](report-datasets-ssrs.md)  
+ [将数据添加到报表 &#40;报表生成器和 SSRS&#41;](report-datasets-ssrs.md)  
  提供访问报表数据的概述。  
   
  [报表生成器中的数据连接、数据源和连接字符串](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
@@ -147,10 +151,10 @@ WHERE EmployeeID = (@EmpID)
  [数据集字段集合（报表生成器和 SSRS）](dataset-fields-collection-report-builder-and-ssrs.md)  
  提供有关查询生成的数据集字段集合的信息。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [联机丛书](https://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 文档中的 [Reporting Services 支持的数据源 (SSRS) ](../create-deploy-and-manage-mobile-and-paginated-reports.md)。  
+ 在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [联机丛书](https://go.microsoft.com/fwlink/?linkid=121312)的文档中， [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] [Reporting Services &#40;SSRS&#41;支持的数据源](../create-deploy-and-manage-mobile-and-paginated-reports.md)。  
  提供有关每个数据扩展插件的平台和版本支持的详细信息。  
 
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [报表参数（报表生成器和报表设计器）](../report-design/report-parameters-report-builder-and-report-designer.md)   
  [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [表达式（报表生成器和 SSRS）](../report-design/expressions-report-builder-and-ssrs.md)  

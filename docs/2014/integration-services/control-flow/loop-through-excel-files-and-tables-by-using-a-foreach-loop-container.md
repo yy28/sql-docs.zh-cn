@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 979a0e0a1e8a05b676d4de7ccda0c5876943d587
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830578"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>使用 Foreach 循环容器，循环遍历 Excel 文件和表
@@ -32,13 +32,13 @@ ms.locfileid: "62830578"
   
      如果您未使用扩展属性参数的变量，必须手动将它添加到包含连接字符串的表达式。  
   
-3.  将 Foreach 循环容器添加到 **“控制流”** 选项卡。有关如何配置 Foreach 循环容器的信息，请参阅[配置 Foreach 循环容器](foreach-loop-container.md)。  
+3.  将 Foreach 循环容器添加到 "**控制流**" 选项卡中。有关如何配置 Foreach 循环容器的信息，请参阅[配置 Foreach 循环容器](foreach-loop-container.md)。  
   
-4.  在“Foreach 循环编辑器”  的“集合”  页上，选择“Foreach 文件”枚举器，并指定 Excel 工作簿所在的文件夹，然后指定文件筛选器（通常是 *.xls）。  
+4.  在“Foreach 循环编辑器”**** 的“集合”**** 页上，选择“Foreach 文件”枚举器，并指定 Excel 工作簿所在的文件夹，然后指定文件筛选器（通常是 *.xls）。  
   
-5.  在“变量映射”  页中，将索引 0 映射到用户定义字符串变量，该变量将在每个循环迭代中接收当前 Excel 路径和文件名。 （本过程后面显示的示例表达式将使用变量名 `ExcelFile`。）  
+5.  在“变量映射”**** 页中，将索引 0 映射到用户定义字符串变量，该变量将在每个循环迭代中接收当前 Excel 路径和文件名。 （本过程后面显示的示例表达式将使用变量名 `ExcelFile`。）  
   
-6.  关闭 **“Foreach 循环编辑器”** 。  
+6.  关闭 **“Foreach 循环编辑器”**。  
   
 7.  按照 [在包中添加、删除或共享连接管理器](../add-delete-or-share-a-connection-manager-in-a-package.md)中所述，将 Excel 连接管理器添加到包。 为连接选择一个现有 Excel 工作簿文件以避免出现验证错误。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62830578"
   
 8.  选择新的 Excel 连接管理器，并在“属性”窗口中单击 **“表达式”** 属性，然后单击省略号。  
   
-9. 在中**属性表达式编辑器**，选择`ConnectionString`属性，然后单击省略号。  
+9. 在 "**属性表达式编辑器**" 中， `ConnectionString`选择属性，然后单击省略号。  
   
 10. 在表达式生成器中，输入以下表达式：  
   
@@ -69,11 +69,11 @@ ms.locfileid: "62830578"
   
 ### <a name="to-loop-through-excel-tables-by-using-the-foreach-adonet-schema-rowset-enumerator"></a>使用 Foreach ADO.NET 架构行集枚举器循环遍历 Excel 表  
   
-1.  创建使用 Microsoft Jet OLE DB 访问接口连接 Excel 工作簿的 ADO.NET 连接管理器。 在 **“连接管理器”** 对话框的“所有”页上，确保输入 Excel 8.0 作为“扩展属性”的值。 有关详细信息，请参阅 [添加、 删除或共享连接管理器在包中](../add-delete-or-share-a-connection-manager-in-a-package.md)。  
+1.  创建使用 Microsoft Jet OLE DB 访问接口连接 Excel 工作簿的 ADO.NET 连接管理器。 在 **“连接管理器”** 对话框的“所有”页上，确保输入 Excel 8.0 作为“扩展属性”的值。 有关详细信息，请参阅 [在包中添加、删除或共享连接管理器](../add-delete-or-share-a-connection-manager-in-a-package.md)。  
   
 2.  创建一个字符串变量，用于在每次循环迭代中接收当前表的名称。  
   
-3.  将 Foreach 循环容器添加到 **“控制流”** 选项卡。有关如何配置 Foreach 循环容器的信息，请参阅 [配置 Foreach 循环容器](foreach-loop-container.md)。  
+3.  将 Foreach 循环容器添加到 "**控制流**" 选项卡中。有关如何配置 Foreach 循环容器的信息，请参阅[配置 Foreach 循环容器](foreach-loop-container.md)。  
   
 4.  在 **“Foreach 循环编辑器”** 的 **“集合”** 页上，选择 Foreach ADO.NET 架构行级枚举器。  
   
@@ -86,12 +86,12 @@ ms.locfileid: "62830578"
   
 7.  在 **“变量映射”** 页上，将索引 2 映射到以前创建的字符串变量，以存放当前表的名称。  
   
-8.  关闭 **“Foreach 循环编辑器”** 。  
+8.  关闭 **“Foreach 循环编辑器”**。  
   
 9. 在 Foreach 循环容器中创建任务，这些任务使用 Excel 连接管理器对指定工作簿中的每个 Excel 表执行相同的操作。 如果你使用脚本任务来检查枚举表名或处理每个表，请记住将字符串变量添加到脚本任务的 ReadOnlyVariables 属性。  
   
-## <a name="see-also"></a>请参阅  
- [从 Excel 导入数据或将数据导出到 Excel 与 SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md) [配置 Foreach 循环容器](foreach-loop-container.md)   
+## <a name="see-also"></a>另请参阅  
+ [使用 SQL Server Integration Services （SSIS）从 Excel 导入数据或将数据导出到 Excel，并](../load-data-to-from-excel-with-ssis.md)[配置 Foreach 循环容器](foreach-loop-container.md)   
  [添加或更改属性表达式](../expressions/add-or-change-a-property-expression.md)   
  [Excel 连接管理器](../connection-manager/excel-connection-manager.md)   
  [Excel 源](../data-flow/excel-source.md)   

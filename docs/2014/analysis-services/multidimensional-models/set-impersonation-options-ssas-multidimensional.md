@@ -1,5 +1,5 @@
 ---
-title: 设置模拟选项 (SSAS-多维) |Microsoft Docs
+title: 设置模拟选项（SSAS-多维） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a3bd6de297f4b5b677db10861e594afc36f74bb5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072962"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>设置模拟选项（SSAS - 多维）
@@ -37,19 +37,19 @@ ms.locfileid: "66072962"
 3.  选择本主题的 [模拟选项](#bkmk_options) 中所述的一个选项。  
   
 ## <a name="set-impersonation-options-in-management-studio"></a>在 Management Studio 中设置模拟选项  
- 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，通过针对这些对话框的以下属性单击省略号 ( **...** ) 按钮，打开“模拟信息”  对话框：  
+ 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，通过针对这些对话框的以下属性单击省略号 (**...**) 按钮，打开“模拟信息”**** 对话框：  
   
--   **“数据库属性”** 对话框（通过“数据源模拟信息”属性）。  
+-   "**数据库属性**" 对话框（通过 "数据源模拟信息" 属性）。  
   
--   **“数据源属性”** 对话框（通过“模拟信息”属性）。  
+-   "**数据源属性**" 对话框（通过 "模拟信息" 属性）。  
   
--   **“程序集属性”** 对话框（通过“模拟信息”属性）。  
+-   "**程序集属性**" 对话框（通过 "模拟信息" 属性）。  
   
-##  <a name="bkmk_options"></a> 模拟选项  
+##  <a name="bkmk_options"></a>模拟选项  
  对话框中的所有选项都可用，但并非所有选项都适合每种情况。 使用以下信息来确定最适合于您的情况的选项。  
   
- **使用特定用户名和密码**  
- 选择此选项将使[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]对象使用按以下格式指定的 Windows 用户帐户的安全凭据： *\<域名 >***\\***\<用户帐户名 >* 。  
+ **使用特定的用户名和密码**  
+ 选择此选项[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]以使对象使用按以下格式指定的 Windows 用户帐户的安全凭据： * \<域名>***\\*** \<用户帐户名>*。  
   
  选择此选项可使用一个专用的最小权限的 Windows 用户标识，该用户标识是您为数据访问目的而专门创建的。 例如，如果您定期创建用于检索在报表中使用的数据的通用帐户，则可以在此处指定该帐户。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "66072962"
  对于 DMX OPENQUERY 语句、本地多维数据集和挖掘模型，即使您选择服务帐户选项，也将使用当前用户的凭据。 外部绑定不支持此服务帐户选项。  
   
 > [!NOTE]  
->  如果服务帐户不具有对 Analysis Services 实例的管理员权限，在处理多维数据集的数据挖掘模型时会出错。 有关详细信息，请参阅[挖掘结构：数据源 OLAP 多维数据集的处理问题](https://go.microsoft.com/fwlink/?LinkId=251610)。  
+>  如果服务帐户不具有对 Analysis Services 实例的管理员权限，在处理多维数据集的数据挖掘模型时会出错。 有关详细信息，请参阅 [挖掘结构：数据源是 OLAP 多维数据集时的处理问题](https://go.microsoft.com/fwlink/?LinkId=251610)。  
   
  **使用当前用户的凭据**  
  选择此选项将使 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象使用当前用户的安全凭据来处理外部绑定、DMX OPENQUERY、本地多维数据集和挖掘模型。  
@@ -83,32 +83,32 @@ ms.locfileid: "66072962"
   
  使用外部绑定的本地多维数据集和处理除外，多维数据库不支持此选项。  
   
- “默认值”  或“继承”   
- 此对话框对于在数据库级别设置的模拟选项使用“默认值”  ；而对于在数据源级别设置的模拟选项使用“继承”  。  
+ **默认值**或**继承**  
+ 此对话框对于在数据库级别设置的模拟选项使用“默认值”****；而对于在数据源级别设置的模拟选项使用“继承”****。  
   
- **数据源-继承选项**  
+ **数据源-Inherit 选项**  
   
  在数据源级别， **“继承”** 指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 应使用父对象的模拟选项。 在多维模型中，父对象是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库。 通过选择 **“继承”** 选项，您可为此数据源以及属于同一个数据库的其他数据源集中管理模拟设置。 为使此选项有意义，请在数据库级别选择一个特定的 Windows 用户名和密码。 否则，结合对数据源使用 **“继承”** 以及对数据库使用 **“默认值”** 等效于使用服务帐户选项。  
   
  要在数据库级别指定 Windows 用户名和密码，请执行以下操作：  
   
-1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中右键单击该数据库并选择“属性”  。  
+1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中右键单击该数据库并选择“属性”****。  
   
 2.  在 **“数据源模拟信息”** 中，指定 Windows 用户名和密码。  
   
-3.  右键单击每个数据源并查看其属性，以便确保每个数据源都在使用“继承”选项  。  
+3.  右键单击每个数据源并查看其属性，以便确保每个数据源都在使用“继承”选项****。  
   
  有关数据库级别的默认设置的详细信息，请参阅[设置多维数据库属性 (Analysis Services)](set-multidimensional-database-properties-analysis-services.md)。  
   
- **数据库的默认选项**  
+ **数据库-默认选项**  
   
  对于表格数据库， **“默认值”** 意味着使用服务帐户。  
   
  对于多维数据库， **“默认值”** 意味着使用服务帐户，并将当前用户用于数据挖掘操作。  
   
-## <a name="see-also"></a>请参阅  
- [创建数据源（SSAS 多维）](create-a-data-source-ssas-multidimensional.md)   
- [设置数据源属性&#40;SSAS 多维&#41;](set-data-source-properties-ssas-multidimensional.md)   
- [DirectQuery 部署方案&#40;SSAS 表格&#41;](../directquery-deployment-scenarios-ssas-tabular.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;SSAS 多维&#41;创建数据源](create-a-data-source-ssas-multidimensional.md)   
+ [设置数据源属性 &#40;SSAS 多维&#41;](set-data-source-properties-ssas-multidimensional.md)   
+ [DirectQuery 部署方案 &#40;SSAS 表格&#41;](../directquery-deployment-scenarios-ssas-tabular.md)  
   
   

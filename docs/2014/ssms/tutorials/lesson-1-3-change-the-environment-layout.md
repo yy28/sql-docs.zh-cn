@@ -11,28 +11,29 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7a45ff3544fa85f1bfe9cbe7bdd00968c004a3b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62634265"
 ---
 # <a name="change-the-environment-layout"></a>更改环境布局
+  
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的组件会争夺屏幕空间。 为了腾出更多空间，可以关闭、隐藏或移动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 组件。 本页的做法是将组件移动到不同的位置。  
   
 ## <a name="closing-and-hiding-components"></a>关闭和隐藏组件  
   
 #### <a name="to-practice-closing-hiding-and-reopening-component-windows"></a>练习关闭、隐藏以及重新打开组件窗口  
   
-1.  单击已注册的服务器右上角的“x”  ，将其隐藏。 已注册的服务器随即关闭。  
+1.  单击已注册的服务器右上角的“x”****，将其隐藏。 已注册的服务器随即关闭。  
   
-2.  在“对象资源管理器”中，单击带有“自动隐藏”  工具提示的图钉按钮。 对象资源管理器将被最小化到屏幕的左侧。  
+2.  在“对象资源管理器”中，单击带有“自动隐藏”**** 工具提示的图钉按钮。 对象资源管理器将被最小化到屏幕的左侧。  
   
 3.  在对象资源管理器标题栏上移动鼠标， 对象资源管理器将重新打开。  
   
 4.  再次单击图钉按钮，使对象资源管理器驻留在打开的位置。  
   
-5.  在“视图”  菜单上，单击“已注册的服务器”  ，对其进行还原。  
+5.  在“视图”**** 菜单上，单击“已注册的服务器”****，对其进行还原。  
   
 ## <a name="moving-components"></a>移动组件  
  承载 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的环境允许您移动组件并将它们停靠在各种配置中。  
@@ -50,7 +51,7 @@ ms.locfileid: "62634265"
   
 1.  右键单击对象资源管理器的标题栏，并注意下列菜单选项：  
   
-    -   float  
+    -   Float  
   
     -   停靠  
   
@@ -60,7 +61,7 @@ ms.locfileid: "62634265"
   
     -   隐藏  
   
-     也可通过“窗口”  菜单或者工具栏中的向下箭头键使用这些选项。  
+     也可通过“窗口”**** 菜单或者工具栏中的向下箭头键使用这些选项。  
   
 2.  双击对象资源管理器的标题栏，取消它的停靠。  
   
@@ -70,13 +71,13 @@ ms.locfileid: "62634265"
   
 5.  也可将对象资源管理器移到 Management Studio 的顶部或底部。 将对象资源管理器拖放回左侧窗口的原始位置中的菱形引导标记。  
   
-6.  右键单击“对象资源管理器”的标题栏，再单击“隐藏”  。  
+6.  右键单击“对象资源管理器”的标题栏，再单击“隐藏”****。  
   
-7.  在“视图”  菜单上，单击“对象资源管理器”  ，将窗口还原。  
+7.  在“视图”**** 菜单上，单击“对象资源管理器”****，将窗口还原。  
   
-8.  右键单击“对象资源管理器”的标题栏，然后单击“浮动”  ，取消停靠“对象资源管理器”。  
+8.  右键单击“对象资源管理器”的标题栏，然后单击“浮动”****，取消停靠“对象资源管理器”。  
   
-9. 若要还原默认配置，请在“窗口”  菜单上，单击“重置窗口布局”  。  
+9. 若要还原默认配置，请在“窗口”**** 菜单上，单击“重置窗口布局”****。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [显示查询窗口](lesson-1-4-display-the-query-window.md)  

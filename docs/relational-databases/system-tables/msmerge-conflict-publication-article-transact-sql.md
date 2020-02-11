@@ -19,10 +19,10 @@ ms.assetid: dc4490b4-02d8-4dfc-98f5-0cf8de8e11be
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8d2c324f032f9cdd3206f6f2bed77fba74c2c0f5
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75322108"
 ---
 # <a name="msmerge_conflict_publication_article-transact-sql"></a>MSmerge_conflict_publication_article （Transact-sql）
@@ -34,11 +34,11 @@ ms.locfileid: "75322108"
 |-----------------|---------------|-----------------|  
 |**_文章\_列\_名称_**|**各种**|表示复制表中的一列。 在该系统表中，表项目中的每列对应一列。|  
 |**rowguid**|**uniqueidentifier**|冲突行的行标识符。|  
-|**ModifiedDate**|**型**|发生冲突的时间。|  
+|**ModifiedDate**|**datetime**|发生冲突的时间。|  
 |**源\_数据\_源 id**|**uniqueidentifier**|为其撤销行更改或失去冲突的订阅。|  
   
 ## <a name="see-also"></a>另请参阅  
  [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Transact-sql&#41;&#40;复制视图](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

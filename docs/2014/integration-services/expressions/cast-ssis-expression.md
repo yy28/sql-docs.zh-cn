@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6549e2ad8faca23e32621e1cc871a62870c9effb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62899035"
 ---
 # <a name="cast-ssis-expression"></a>Cast（SSIS 表达式）
@@ -38,11 +38,12 @@ ms.locfileid: "62899035"
  *type_spec*  
  是有效的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 数据类型。  
   
- *expression*  
+ *表达式*  
  有效的表达式。  
   
 ## <a name="result-types"></a>结果类型  
- *type_spec*数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../data-flow/integration-services-data-types.md)。  
+ 
+  *type_spec*数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../data-flow/integration-services-data-types.md)。  
   
 ## <a name="remarks"></a>备注  
  以下关系图显示了合法的转换运算。  
@@ -53,12 +54,12 @@ ms.locfileid: "62899035"
   
 |数据类型|参数|示例|  
 |---------------|---------------|-------------|  
-|DT_STR|*charcount*<br /><br /> *codepage*|(DT_STR,30,1252) 将 30 个字节（即 30 个单字符）转换为使用 1252 代码页的 DT_STR 数据类型。|  
-|DT_WSTR|*Charcount*|(DT_WSTR,20) 将 20 个字节对（即 20 个 Unicode 字符）转换为 DT_WSTR 数据类型。|  
+|DT_STR|*charcount*<br /><br /> *ansi*|(DT_STR,30,1252) 将 30 个字节（即 30 个单字符）转换为使用 1252 代码页的 DT_STR 数据类型。|  
+|DT_WSTR|*charcount*|(DT_WSTR,20) 将 20 个字节对（即 20 个 Unicode 字符）转换为 DT_WSTR 数据类型。|  
 |DT_BYTES|*Bytecount*|(DT_BYTES,50) 将 50 个字节的数据转换为 DT_BYTES 数据类型。|  
-|DT_DECIMAL|*小数位数*|(DT_DECIMAL,2) 将数值转换为带 2 位小数的 DT_DECIMAL 数据类型。|  
-|DT_NUMERIC|*精度*<br /><br /> *小数位数*|(DT_NUMERIC,10,3) 将数值转换为带 3 位小数且精度为 10 的 DT_NUMERIC 数据类型。|  
-|DT_TEXT|*Codepage*|(DT_TEXT,1252) 将值转换为使用 1252 代码页的 DT_TEXT 数据类型。|  
+|DT_DECIMAL|*缩放*|(DT_DECIMAL,2) 将数值转换为带 2 位小数的 DT_DECIMAL 数据类型。|  
+|DT_NUMERIC|*Precision*<br /><br /> *缩放*|(DT_NUMERIC,10,3) 将数值转换为带 3 位小数且精度为 10 的 DT_NUMERIC 数据类型。|  
+|DT_TEXT|*Ansi*|(DT_TEXT,1252) 将值转换为使用 1252 代码页的 DT_TEXT 数据类型。|  
   
  字符串和 DT_DATE 间相互转换时，将使用转换的区域设置。 但是，无论区域设置首选项是否使用 YYYY-MM-DD 这一 ISO 格式，日期均采用该 ISO 格式。  
   
@@ -142,7 +143,7 @@ ms.locfileid: "62899035"
 (DT_DBTIMESTAMPOFFSET, 7) "1999-10-11 16:34:52.1234567 + 5:35"  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [运算符优先级和结合性](operator-precedence-and-associativity.md)   
  [运算符（SSIS 表达式）](operators-ssis-expression.md)   
  [Integration Services (SSIS) 表达式](integration-services-ssis-expressions.md)   
