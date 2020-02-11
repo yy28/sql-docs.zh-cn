@@ -10,10 +10,10 @@ ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 841e2991e672aa9c8a8ab74437fcd12fecdfaa2f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251681"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>分离数据库和附加 DQS 数据库
@@ -22,9 +22,9 @@ ms.locfileid: "75251681"
 
   本主题介绍如何分离和附加 DQS 数据库。  
   
-##  <a name="BeforeYouBegin"></a>开始之前  
+##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Limitations"></a>限制和限制  
+###  <a name="Limitations"></a> 限制和局限  
  有关限制和局限的列表，请参阅 [数据库分离和附加 (SQL Server)](../relational-databases/databases/database-detach-and-attach-sql-server.md)中分离数据库。  
   
 ###  <a name="Prerequisites"></a>先决条件  
@@ -33,9 +33,9 @@ ms.locfileid: "75251681"
   
 -   确保没有用户已登录 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]。  
   
-###  <a name="Security"></a>安全  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>访问  
+####  <a name="Permissions"></a> 权限  
   
 -   您的 Windows 用户帐户必须是 SQL Server 实例中 db_owner 固定服务器角色的成员，才能分离 DQS 数据库。  
   
@@ -104,6 +104,6 @@ ms.locfileid: "75251681"
  您还可以使用 Transact-SQL 语句附加 DQS 数据库。 有关使用 Transact-SQL 语句附加数据库的详细信息，请参阅 [Using Transact-SQL](../relational-databases/databases/attach-a-database.md#TsqlProcedure) 中的 [Attach a Database](../relational-databases/databases/attach-a-database.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [管理 DQS 数据库](../data-quality-services/manage-dqs-databases.md)  
+ [Manage DQS Databases](../data-quality-services/manage-dqs-databases.md)  
   
   

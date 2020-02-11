@@ -11,10 +11,10 @@ ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: d8768fec2f96c725a9ba4bbf91996e95de4c800a
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056305"
 ---
 # <a name="wideworldimportersdw-installation-and-configuration"></a>WideWorldImportersDW 安装和配置
@@ -28,15 +28,15 @@ WideWorldImportersDW 数据库的安装和配置说明。
 
 该示例的最新版本：
 
-[wide-world-importers-release](https://go.microsoft.com/fwlink/?LinkID=800630)
+[宽世界-导入程序-版本](https://go.microsoft.com/fwlink/?LinkID=800630)
 
 下载与 SQL Server 或 Azure SQL 数据库的版本对应的示例 WideWorldImportersDW 数据库备份/bacpac。
 
 可从以下位置获取用于重新创建示例数据库的源代码。 请注意，数据填充基于 OLTP 数据库中的 ETL （WideWorldImporters）：
 
-[wide-world-importers-source](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-dw-database-scripts)
+[宽世界导入程序-源](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-dw-database-scripts)
 
-## <a name="install"></a>Install
+## <a name="install"></a>安装
 
 
 ### <a name="sql-server"></a>SQL Server
@@ -46,11 +46,11 @@ WideWorldImportersDW 数据库的安装和配置说明。
 1. 打开 SQL Server Management Studio，然后连接到目标 SQL Server 实例。
 2. 右键单击 "**数据库**" 节点，然后选择 "**还原数据库**"。
 3. 选择 "**设备**"，并单击按钮 **...**
-4. 在对话框中**选择 "备份设备**"，单击 "**添加**"，导航到服务器文件系统中的数据库备份，并选择备份。 单击“确定”。
+4. 在对话框中**选择 "备份设备**"，单击 "**添加**"，导航到服务器文件系统中的数据库备份，并选择备份。 单击“确定”。 
 5. 如果需要，在 "**文件**" 窗格中更改数据文件和日志文件的目标位置。 请注意，最佳做法是将数据和日志文件放在不同的驱动器上。
-6. 单击“确定”。 这将启动数据库还原。 完成后，会在 SQL Server 实例上安装数据库 WideWorldImporters。
+6. 单击“确定”。  这将启动数据库还原。 完成后，会在 SQL Server 实例上安装数据库 WideWorldImporters。
 
-### <a name="azure-sql-database"></a>Azure SQL Database
+### <a name="azure-sql-database"></a>Azure SQL 数据库
 
 若要将 bacpac 导入新的 SQL 数据库，可以使用 Management Studio。
 
@@ -60,7 +60,7 @@ WideWorldImportersDW 数据库的安装和配置说明。
 3. 右键单击 "**数据库**" 节点，然后选择 "**导入数据层应用程序**"。
 4. 在 "**导入设置**" 中，选择 "**从本地磁盘导入**"，然后从文件系统中选择示例数据库的 bacpac。
 5. 在 "**数据库设置**" 下，将 "数据库名称" 更改为*WideWorldImportersDW* ，并选择要使用的目标版本和服务目标。
-6. 单击 "**下一步**"，然后单击 "**完成**" 开始部署。 完成此工作需要几分钟时间。 如果指定的服务目标低于 S2，可能需要更长时间。
+6. 单击 "**下一步**"，然后单击 "**完成**" 开始部署。 完成此部署可能需要几分钟时间。 如果指定的服务目标低于 S2，可能需要更长时间。
 
 ## <a name="configuration"></a>配置
 

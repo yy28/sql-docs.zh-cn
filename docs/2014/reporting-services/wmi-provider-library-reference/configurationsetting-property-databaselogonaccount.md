@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cfcfde7491252568ac8dc89b9ceb1da64c6497dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097886"
 ---
-# <a name="databaselogonaccount-property-wmi-msreportserverconfigurationsetting"></a>DatabaseLogonAccount 属性 (WMI MSReportServer_ConfigurationSetting)
+# <a name="databaselogonaccount-property-wmi-msreportserver_configurationsetting"></a>DatabaseLogonAccount 属性 (WMI MSReportServer_ConfigurationSetting)
   指定报表服务器连接到报表服务器数据库时使用的登录帐户。 只读。  
   
 ## <a name="syntax"></a>语法  
@@ -47,12 +47,12 @@ public string DatabaseLogonAccount;
 ## <a name="remarks"></a>备注  
  此属性的有效值将因 [DatabaseLogonType](configurationsetting-property-databaselogontype.md) 属性的值而异。  
   
- 如果忽略此属性[DatabaseLogonType](configurationsetting-property-databaselogontype.md)属性设置为`2 (Service)`。  
+ 如果[DatabaseLogonType](configurationsetting-property-databaselogontype.md)属性设置为`2 (Service)`，则忽略此属性。  
   
 ## <a name="requirements"></a>要求  
- **命名空间:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](msreportserver-configurationsetting-members.md)  
   
   

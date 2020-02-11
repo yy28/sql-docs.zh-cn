@@ -1,5 +1,5 @@
 ---
-title: 选项 （查询结果和依赖关系服务页） |Microsoft Docs
+title: 选项（"查询结果" 和 "依赖关系服务" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,26 +13,26 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b9200880a9581b3903985c16fc2af129d19aceec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65481204"
 ---
 # <a name="options-query-results-and-dependency-services-page"></a>选项（“查询结果”和“依赖关系服务”页）
-  使用此页可为依赖关系服务指定要连接的服务器。 通过依赖关系服务，您可以提取与在不同服务器上存储的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对象之间的依赖关系有关的信息。 通过查看对象依赖关系**对象依赖关系**对话框中的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。  
+  使用此页可为依赖关系服务指定要连接的服务器。 通过依赖关系服务，您可以提取与在不同服务器上存储的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对象之间的依赖关系有关的信息。 您可以使用中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]的 "**对象依赖关系**" 对话框查看对象依赖关系。  
   
  **您希望做什么？**  
   
-1.  [打开选项 （查询结果/依赖关系服务页） 对话框](#open_dialog)  
+1.  [打开“选项”（“查询结果”/“依赖关系服务”页）对话框](#open_dialog)  
   
 2.  [配置选项](#options)  
   
-##  <a name="open_dialog"></a> 打开选项 （查询结果/依赖关系服务页） 对话框  
+##  <a name="open_dialog"></a>打开 "选项" （"查询结果/依赖关系服务" 页）对话框  
   
-1.  在中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]，单击**选项**上**工具**菜单。  
+1.  在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]中，单击 "**工具**" 菜单上的 "**选项**"。  
   
-2.  展开  “查询结果”，然后单击  “依赖关系服务”。  
+2.  展开****“查询结果”，然后单击****“依赖关系服务”。  
   
 ##  <a name="options"></a> 配置选项  
   
@@ -48,8 +48,8 @@ ms.locfileid: "65481204"
  **用户名**  
  如果使用 SQL Server 身份验证，请提供用户名。  
   
- **密码**  
+ **权限**  
  如果使用 SQL Server 身份验证，请提供密码。  
   
- **测试**  
+ **考试**  
  单击此选项可对连接进行测试。

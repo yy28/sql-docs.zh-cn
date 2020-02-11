@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a7c1f4792d97ae82561f0d05fe9754daae0a2bf3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62890152"
 ---
 # <a name="load-balancing-packages-on-remote-servers-by-using-sql-server-agent"></a>使用 SQL Server 代理在远程服务器上平衡包的负载
-  在必须运行很多包时，方便的做法是使用其他可用的服务器。 这种当所有包都处于一个父包控制下时使用其他服务器来运行这些包的方法称为负载平衡。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，负载平衡是必须由包的所有者构建的手动过程。 服务器不自动执行负载平衡。 而且，在远程服务器上运行的包必须是整个包，而不能是其他包中的单个任务。  
+  在必须运行很多包时，方便的做法是使用其他可用的服务器。 这种当所有包都处于一个父包控制下时使用其他服务器来运行这些包的方法称为负载平衡。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，负载平衡是必须由包的所有者构建的手动过程。 服务器不自动执行负载平衡。 而且，在远程服务器上运行的包必须是整个包，而不能是其他包中的单个任务。  
   
  负载平衡在以下情形下是有用的：  
   
@@ -35,7 +35,7 @@ ms.locfileid: "62890152"
 ## <a name="illustration-of-load-balancing"></a>负载平衡的图例  
  以下关系图显示了服务器上的父包。 父包包含多个“执行 SQL 作业代理”任务。 父包中的每项任务都会调用远程服务器上的 SQL Server 代理。 这些远程服务器包含 SQL Server 代理作业，而作业中包括调用该服务器上的包的步骤。  
   
- ![SSIS 负载平衡体系结构概览](../media/loadbalancingoverview.gif "Overview of SSIS load balancing architecture")  
+ ![SSIS 负载平衡体系结构概览](../media/loadbalancingoverview.gif "SSIS 负载平衡体系结构概览")  
   
  在此体系结构中的负载平衡所需的步骤不是新的概念。 实际上，负载平衡是通过一种新的方式使用现有概念和通用 SSIS 对象实现的。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62890152"
   
  下表提供的链接所指向的主题可引导您完成此过程。  
   
-|主题|Description|  
+|主题|说明|  
 |-----------|-----------------|  
 |[子包的实现](../implementation-of-child-packages.md)|介绍包的安装以及将要运行这些包的 SQL Server 代理作业的创建。|  
 |[父包的实现](../implementation-of-the-parent-package.md)|介绍如何创建包含很多“执行 SQL Server 代理作业”任务的父包。 每个任务各自运行一个子包。|  

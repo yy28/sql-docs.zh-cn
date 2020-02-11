@@ -15,10 +15,10 @@ author: HJToland3
 ms.author: jtoland
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 368372ab7324b11e9f7fdaa6af94d5ba2c0534ad
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056483"
 ---
 # <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>将 SQL Server 登录名迁移数据迁移助手
@@ -52,8 +52,8 @@ ms.locfileid: "74056483"
 
 - 建议查看迁移结果，了解登录迁移的总体状态和任何建议的迁移后操作。
 
-## <a name="resources"></a>Resources
+## <a name="resources"></a>资源
 
-[数据迁移助手（DMA）](../dma/dma-overview.md)
+[数据迁移助手 (DMA)](../dma/dma-overview.md)
 
 [数据迁移助手：配置设置](../dma/dma-configurationsettings.md)

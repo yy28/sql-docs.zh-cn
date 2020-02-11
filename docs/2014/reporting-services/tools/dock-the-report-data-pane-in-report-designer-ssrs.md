@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 669983c17792d555a1310e2248c4fb98cee16f9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100343"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>在报表设计器中停靠“报表数据”窗格 (SSRS)
@@ -34,16 +34,16 @@ ms.locfileid: "66100343"
   
 ### <a name="to-change-the-report-data-pane-from-a-docked-window-to-a-tabbed-window"></a>将“报表数据”窗格从停靠窗口更改为选项卡式窗口  
   
--   右键单击报表数据窗格的标题栏，然后单击**选项卡式文档**。  
+-   右键单击 "报表数据" 窗格的标题栏，然后单击 "**选项卡式文档**"。  
   
 ### <a name="to-change-the-report-data-pane-from-a-tabbed-window-to-a-docked-window"></a>将“报表数据”窗格从选项卡式窗口更改为停靠窗口  
   
--   右键单击报表数据选项卡，然后单击**可停靠**。  
+-   右键单击 "报表数据" 选项卡，然后单击 "可**停靠**的"。  
   
      若要在两种显示状态之间切换，请双击“报表数据”窗格的标题栏。  
   
-## <a name="see-also"></a>请参阅  
- [“报表数据”窗格](../report-data/report-data-pane.md)   
- [报表生成器中的数据连接、数据源和连接字符串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
+## <a name="see-also"></a>另请参阅  
+ [报表数据窗格](../report-data/report-data-pane.md)   
+ [Data Connections, Data Sources, and Connection Strings in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   
   

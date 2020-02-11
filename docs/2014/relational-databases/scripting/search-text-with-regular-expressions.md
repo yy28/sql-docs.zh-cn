@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0d7554953c430ae58ead88aa77cb0865f74f7a12
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243315"
 ---
 # <a name="search-text-with-regular-expressions"></a>使用正则表达式搜索文本
@@ -137,4 +137,4 @@ ms.locfileid: "75243315"
   
 ## <a name="see-also"></a>另请参阅  
  [搜索和替换](search-and-replace.md)   
- [用通配符搜索文本](search-text-with-wildcards.md)  
+ [使用通配符搜索文本](search-text-with-wildcards.md)  

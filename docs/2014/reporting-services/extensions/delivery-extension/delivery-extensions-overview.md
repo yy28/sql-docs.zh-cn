@@ -14,23 +14,23 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5bbc5e58b95ffb4eebc5dfa0400a566868ae5cba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63165210"
 ---
 # <a name="delivery-extensions-overview"></a>传递扩展插件概述
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使得用户能够创建和发布报表，一旦创建和发布，就可以将报表传递到不同位置。 此外，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包括多个传递扩展插件和一个传递 API，它们使得开发人员能够创建其他传递扩展插件，以便在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中进一步扩展传递的功能。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]使用户能够创建和发布报表，一旦创建和发布，就可以将其传递到各种位置。 此外，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包括多个传递扩展插件和一个传递 API，它们使得开发人员能够创建其他传递扩展插件，以便在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中进一步扩展传递的功能。  
   
  下表列出 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 随附的传递扩展插件。  
   
-|传递扩展插件|Description|  
+|传递扩展插件|说明|  
 |------------------------|-----------------|  
 |报表服务器电子邮件|使用 SMTP 服务器通过电子邮件将报表发送到单独用户或组。|  
 |报表服务器文件共享|用于将组织内的报表分发到网络文件共享。 提供了按指定的计划自动将报表复制到文件共享的功能。|  
   
- ![Reporting Services 传递扩展体系结构](../../media/bk-reportservicedelivery.gif "Reporting Services 传递扩展体系结构")  
+ ![Reporting Services 传递扩展插件体系结构](../../media/bk-reportservicedelivery.gif "Reporting Services 传递扩展插件体系结构")  
 Reporting Services 传递扩展插件体系结构  
   
  传递扩展插件可以与订阅配对。 创建订阅后，用户可以选择可用的传递扩展插件之一来确定传递报表的方式。 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中，订阅位于报表服务器数据库中。 发生事件时，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 根据报表服务器数据库中包含的订阅匹配事件。 对于与此事件关联的每个订阅，报表服务器都将创建一个通知。 对于数据驱动订阅，将为每个收件人创建一个通知。 一旦创建了通知，报表服务器就调用特定的传递扩展插件，并为在通知中指定的扩展插件设置传递值。 此传递扩展插件按照所选传递扩展插件指定的方式将通知发送给用户。  
@@ -47,15 +47,15 @@ Reporting Services 传递扩展插件体系结构
   
 -   一台安装了报表服务器的部署计算机。  
   
--   一台安装了 [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)] 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 软件开发包 (SDK) 的开发计算机。  
+-   安装了[!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)]或[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]软件开发工具包（SDK）的开发计算机。  
   
 -   深入了解 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 特性和功能，尤其是订阅和传递。  
   
 -   深入了解 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 和 Web 控件（如果您计划为报表管理器实现您自己的订阅用户界面）。  
   
--   使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 语言（例如，[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET）进行开发的经验。  
+-   [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]语言（ [!INCLUDE[msCoName](../../../includes/msconame-md.md)]如 Visual c # 或[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .net）的开发体验。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [实现传递扩展插件](../delivery-extension/implementing-a-delivery-extension.md)   
  [Reporting Services 扩展插件库](../reporting-services-extension-library.md)  
   

@@ -10,17 +10,17 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 302291ae42fa5fbb2f7dea94ccdb9f659379f5bc
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74165824"
 ---
 # <a name="syssp_cleanup_temporal_history-transact-sql"></a>sys. sp_cleanup_temporal_history （Transact-sql）
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 删除临时历史记录表中的所有行，这些行与单个事务中的配置 HISTORY_RETENTION 时间段匹配。
 
@@ -40,18 +40,18 @@ sp_cleanup_temporal_history [@schema_name = ] schema_name, [@table_name = ] tabl
 
 当前时态表所属的架构的名称
 
-*row_count_var* [OUTPUT]
+*row_count_var* [输出]
 
 返回已删除的行数的输出参数。 如果历史记录表中包含聚集列存储索引，则此参数将始终返回0。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 此存储过程只能与指定了有限保留期的临时表一起使用。
 仅当需要立即清除历史记录表中的所有过期行时，才使用此存储过程。 您应该知道，它会对数据库日志和 i/o 子系统产生重大影响，因为它会删除同一事务中所有符合条件的行。
 
 始终建议依赖于清理的内部后台任务，以删除过期的行，对常规工作负荷和数据库的影响最小。
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
 需要 db_owner 权限。
 

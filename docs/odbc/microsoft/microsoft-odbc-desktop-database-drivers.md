@@ -18,16 +18,16 @@ ms.assetid: 4e505c65-a8dd-4283-ae28-313d8a3aa046
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8ee91a2e544babdd02a22bcbe426a7fb0d770f66
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68109686"
 ---
 # <a name="microsoft-odbc-desktop-database-drivers"></a>Microsoft ODBC 桌面数据库驱动程序
-ODBC 是作为数据库访问语言使用结构化查询语言 (SQL) 的 API。 具有相同的 ODBC 源代码即可直接集成到应用程序的源代码，可以访问各种数据库管理系统 (Dbms)。 与 Microsoft ODBC 桌面数据库驱动程序支持 ODBC 的应用程序的用户可以打开，查询，并更新通过 ODBC 接口的桌面数据库。  
+ODBC 是一个 API，它使用结构化查询语言（SQL）作为数据库访问语言。 你可以使用直接合并到应用程序源代码中的相同 ODBC 源代码访问各种数据库管理系统（Dbms）。 使用 Microsoft ODBC 桌面数据库驱动程序，启用了 ODBC 的应用程序的用户可以通过 ODBC 接口打开、查询和更新桌面数据库。  
   
- Microsoft ODBC 桌面数据库驱动程序是 Microsoft 基于 Jet 的 ODBC 驱动程序组。 Microsoft ODBC 桌面数据库驱动程序 2.0 包含 16 位和 32 位驱动程序，而版本 3.0 以及更高版本包括运行 Windows 95 上或更高版本，Windows NT 工作站或服务器版本 4.0 中，Windows 2000 Professional 或 Windows 2000 的仅 32 位驱动程序服务器。 这些驱动程序提供对以下类型的数据源的访问：  
+ Microsoft ODBC 桌面数据库驱动程序是基于 Microsoft Jet 的 ODBC 驱动程序集。 Microsoft ODBC Desktop Database 驱动程序2.0 同时包含16位和32位驱动程序，版本3.0 及更高版本仅包含在 Windows 95 或更高版本、Windows NT 工作站或服务器版本4.0、Windows 2000 Professional 或 Windows 2000 上运行的32位驱动程序服务. 这些驱动程序提供对以下类型的数据源的访问权限：  
   
 -   Microsoft Access  
   
@@ -37,14 +37,14 @@ ODBC 是作为数据库访问语言使用结构化查询语言 (SQL) 的 API。 
   
 -   dBASE  
   
--   Text  
+-   文本  
   
- 请参阅[Visual FoxPro ODBC 驱动程序](../../odbc/microsoft/visual-foxpro-odbc-driver.md)有关 Microsoft Visual FoxPro® ODBC 驱动程序的详细文档。  
+ 有关 Microsoft Visual FoxPro® ODBC 驱动程序的详细文档，请参阅[Visual FOXPRO ODBC 驱动程序](../../odbc/microsoft/visual-foxpro-odbc-driver.md)。  
   
 > [!NOTE]  
->  可安装 ISAM (IISAM) 驱动程序启用到其他数据源，例如 Lotus 1-2-3、 Microsoft Exchange 和 HTML 的访问。 有关这些驱动程序的详细信息，请参阅"访问外部数据"中*Microsoft Jet 数据库引擎程序员参考*。 ODBC 桌面数据库驱动程序 4.0 不支持 Btrieve 和 EMS 数据格式。  
+>  可安装的 ISAM （IISAM）驱动程序启用对其他数据源（如 Lotus 1-2-3、Microsoft Exchange 和 HTML）的访问。 有关这些驱动程序的详细信息，请参阅*Microsoft Jet 数据库引擎程序员参考*中的 "访问外部数据"。 ODBC 桌面数据库驱动程序4.0 不支持 Btrieve 和 EMS 数据格式。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [桌面数据库驱动程序体系结构](../../odbc/microsoft/desktop-database-drivers-architecture.md)  
   

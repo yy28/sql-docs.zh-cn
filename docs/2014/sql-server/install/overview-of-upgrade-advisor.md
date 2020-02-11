@@ -1,5 +1,5 @@
 ---
-title: 升级顾问的概述 |Microsoft Docs
+title: 升级顾问概述 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 95d1ca08bcc92a8eeeebfcfbd1f8646cf5add4c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093542"
 ---
 # <a name="overview-of-upgrade-advisor"></a>升级顾问概述
@@ -25,16 +25,16 @@ ms.locfileid: "66093542"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|Description|  
+|主题|说明|  
 |-----------|-----------------|  
 |[升级过程概述](../../../2014/sql-server/install/upgrade-process-overview.md)|介绍了升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的推荐过程。|  
 |[升级顾问概述](../../../2014/sql-server/install/upgrade-advisor-overview.md)|概述了 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 命名升级顾问中的新工具。|  
-|[运行升级顾问&#40;用户界面&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)|介绍如何启动和运行升级顾问分析向导和升级顾问报表查看器。|  
+|[&#40;用户界面运行升级顾问&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)|介绍如何启动和运行升级顾问分析向导和升级顾问报表查看器。|  
 |[使用报表](../../../2014/sql-server/install/using-reports.md)|介绍如何查看和分析由升级顾问报表查看器生成的报表。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [升级顾问操作指南主题](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
  [升级顾问用户界面参考](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)   
- [运行升级顾问&#40;命令提示符&#41;](../../../2014/sql-server/install/running-upgrade-advisor-command-prompt.md)  
+ [&#40;命令提示符下运行升级顾问&#41;](../../../2014/sql-server/install/running-upgrade-advisor-command-prompt.md)  
   
   

@@ -13,18 +13,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a80526b0f4a1b9f122ff79bbbb5a5a8ac08a2d07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62893103"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>创建数据库（SQL Server 导入和导出向导）
-  使用**Create Database**页后，可以定义为目标文件新的数据库。  
+  使用 "**创建数据库**" 页可以为目标文件定义一个新数据库。  
   
- 此页提供了一部分可用于创建新数据库的选项。 若要查看所有选项，请使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
+ 此页提供了一部分可用于创建新数据库的选项。 若要查看所有选项，请[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]使用。  
   
- 若要了解有关此向导的详细信息，请参阅[SQL Server 导入和导出向导](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。 若要了解有关用于启动向导，选项以及已成功运行该向导所需的权限，请参阅[运行 SQL Server 导入和导出向导](start-the-sql-server-import-and-export-wizard.md)。  
+ 若要了解有关此向导的详细信息，请参阅[SQL Server 导入和导出向导](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。 若要了解启动向导的选项以及成功运行向导所需的权限，请参阅[运行 SQL Server 导入和导出向导](start-the-sql-server-import-and-export-wizard.md)。  
   
  SQL Server 导入和导出向导的作用是将数据从源复制到目标。 该向导还可以为您创建目标数据库和目标表。 但是，如果必须复制多个数据库或表，或者必须复制其他类型的数据库对象，则应改用复制数据库向导。 有关详细信息，请参阅 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)。  
   
@@ -32,34 +32,34 @@ ms.locfileid: "62893103"
  **名称**  
  为目标 SQL Server 数据库提供唯一的名称。 请确保对此数据库命名时遵循 SQL Server 约定。  
   
- **数据文件的名称**  
+ **数据文件名**  
  查看数据文件的名称。 它是由以前提供的数据库名称派生而来的。  
   
  **日志文件名称**  
  查看日志文件的名称。 它是由以前提供的数据库名称派生而来的。  
   
- **初始大小 （数据文件）**  
+ **初始大小（数据文件）**  
  指定数据文件的初始大小 (MB)。  
   
- **不允许增长 （数据文件）**  
+ **不允许增长（数据文件）**  
  指示数据文件是否可以增长以超出指定的初始大小。  
   
- **增长百分比 （数据文件）**  
+ **增长百分比（数据文件）**  
  指定数据文件可以增长的百分比。  
   
- **增长规模 （数据文件）**  
+ **增长规模（数据文件）**  
  指定数据文件可以增长的大小 (MB)。  
   
- **初始大小 （日志文件）**  
+ **初始大小（日志文件）**  
  指定日志文件的初始大小 (MB)。  
   
- **不允许增长 （日志文件）**  
+ **不允许增长（日志文件）**  
  指示日志文件是否可以增长以超出指定的初始大小。  
   
- **增长百分比 （日志文件）**  
+ **增长百分比（日志文件）**  
  指定日志文件可以增长的百分比。  
   
- **增长规模 （日志文件）**  
+ **增长规模（日志文件）**  
  指定日志文件可以增长的大小 (MB)。  
   
   

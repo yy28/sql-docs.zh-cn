@@ -10,17 +10,17 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f3652b767f4628b61f5dd363999838418ff933aa
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401075"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>为分析平台系统安装 SQL Server Operations Manager （SCOM）管理包
 按照以下步骤下载并安装适用于 SQL Server PDW 的 System Center Operations Manager （SCOM）管理包。 从 SCOM 监视 SQL Server PDW 需要管理包。  
   
 ## <a name="BeforeBegin"></a>开始之前  
-**必备条件**  
+**先决条件**  
   
 必须安装并运行 System Center Operations Manager。 SQL Server PDW 2012 需要 System Center Operations Manager 2007 R2、System Center Operations Manager 2012 或 System Center Operations Manager 2012 Service Pack 1。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "74401075"
   
     ![确认安装](./media/install-the-scom-management-packs/SCOM_licnse_agrmt3.png "SCOM_licnse_agrmt3")  
   
-5.  单击 **“关闭”**。  
+5.  单击“关闭”  。  
   
     ![单击 "关闭"](./media/install-the-scom-management-packs/SCOM_licnse_agrmt4.png "SCOM_licnse_agrmt4")  
   
@@ -71,11 +71,11 @@ ms.locfileid: "74401075"
   
     ![确认安装](./media/install-the-scom-management-packs/SCOM_licnse_agmtB2.png "SCOM_licnse_agmtB2")  
   
-5.  单击 **“关闭”**。  
+5.  单击“关闭”  。  
   
     ![安装完成](./media/install-the-scom-management-packs/SCOM_licnse_agmtB3.png "SCOM_licnse_agmtB3")  
   
-## <a name="next-step"></a>后续步骤  
+## <a name="next-step"></a>下一步  
 安装管理包后，请继续执行下一步：[导入用于 PDW 的 SCOM 管理包 &#40;分析平台系统&#41;](import-the-scom-management-pack-for-pdw.md)。  
   
 <!-- MISSING LINKS ## See Also  

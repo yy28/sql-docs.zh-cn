@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 46dbdded5adf41a847f017cf4ee203597df13962
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401346"
 ---
 # <a name="backup-server-capacity-planning-worksheet---parallel-data-warehouse"></a>备份服务器容量规划工作表-并行数据仓库
@@ -23,7 +23,7 @@ ms.locfileid: "74401346"
   
 ## <a name="capacity-planning-worksheet-for-backup-servers"></a>备份服务器的容量规划工作表  
 
-### <a name="notes"></a>注释  
+### <a name="notes"></a>说明  
   
 1.  此工作表适用于将对 PDW 数据库执行备份和还原操作的服务器。  
   

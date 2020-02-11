@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6d122881f5283da86f66494ee2f049756d151551
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400455"
 ---
 # <a name="restore-the-master-database-in-analytics-platform-system-aps"></a>在分析平台系统（AP）中还原 master 数据库
@@ -32,7 +32,7 @@ ms.locfileid: "74400455"
   
 3.  选择要还原的主备份。  
   
-4.  单击 **“应用”**。  
+4.  单击“应用”  。  
   
 5.  若要执行还原，SQL Server PDW 会关闭所有设备服务并断开所有用户的连接。 还原完成后，SQL Server PDW 将重新启动设备服务。  
   

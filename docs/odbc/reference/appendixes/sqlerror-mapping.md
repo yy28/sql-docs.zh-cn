@@ -14,14 +14,14 @@ ms.assetid: 802ac711-7e5d-4152-9698-db0cafcf6047
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f24a305c2f22ef4cfacbbe4bcbcf498eab648f1c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68064468"
 ---
 # <a name="sqlerror-mapping"></a>SQLError 映射
-当应用程序调用**SQLError**通过 ODBC *3.x*驱动程序，将会调用  
+当应用程序*通过 ODBC 1.x*驱动程序调用**SQLError**时，调用  
   
 ```  
 SQLError(henv, hdbc, hstmt, szSqlState, pfNativeError, szErrorMsg, cbErrorMsgMax, pcbErrorMsg)   
@@ -33,4 +33,4 @@ SQLError(henv, hdbc, hstmt, szSqlState, pfNativeError, szErrorMsg, cbErrorMsgMax
 SQLGetDiagRec(HandleType, Handle, RecNumber, szSqlstate, pfNativeErrorPtr, szErrorMsg, cbErrorMsgMax, pcbErrorMsg)  
 ```  
   
- 与*HandleType*参数设置为值 SQL_HANDLE_ENV、 SQL_HANDLE_DBC 或 SQL_HANDLE_STMT，根据需要，并*处理*参数设置中的值为*henv*， *hdbc*，或*hstmt*根据。 *RecNumber*参数确定由驱动程序管理器。
+ 根据需要，将*HandleType*参数设置为值 SQL_HANDLE_ENV、SQL_HANDLE_DBC 或 SQL_HANDLE_STMT，并根据需要将*HANDLE*参数设置为*henv*、 *hdbc*或*hstmt*中的值。 *RecNumber*参数由驱动程序管理器决定。

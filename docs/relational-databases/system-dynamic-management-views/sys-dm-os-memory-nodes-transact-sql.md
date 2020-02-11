@@ -21,49 +21,50 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6f68524b2713b9d662c9e9ed0950334ea0a94ece
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73983132"
 ---
 # <a name="sysdm_os_memory_nodes-transact-sql"></a>sys.dm_os_memory_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内部分配使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存管理器。 跟踪进程内存计数器与**sys. dm_os_process_memory**和内部计数器之间的差异可以指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存空间中的外部组件的内存使用情况。  
+  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内部分配使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存管理器。 跟踪进程内存计数器与**sys. dm_os_process_memory**和内部计数器之间的差异可以指示内存空间中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的外部组件的内存使用情况。  
   
  针对每个物理 NUMA 内存节点都创建了节点。 它们可能与**sys. dm_os_nodes**中的 CPU 节点不同。  
   
  对于直接通过 Windows 内存分配例程进行的分配不会进行跟踪。 下表提供了仅通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存管理器接口进行的内存分配的相关信息。  
   
 > [!NOTE]  
->  若要从 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 或 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]中调用此名称，请使用名称**sys.databases. dm_pdw_nodes_os_memory_nodes**。  
+>  若要从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]调用此，请使用名称**dm_pdw_nodes_os_memory_nodes**。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**memory_node_id**|**int**|指定内存节点的 ID。 与 dm_os_memory_clerks **memory_node_id**相关。 不可为 Null。|  
+|**memory_node_id**|**smallint**|指定内存节点的 ID。 与 dm_os_memory_clerks **memory_node_id**相关****。 不可为 Null。|  
 |**virtual_address_space_reserved_kb**|**bigint**|指示既未提交也未映射到物理页的预留虚拟地址数量（以 KB 为单位）。 不可为 Null。|  
 |**virtual_address_space_committed_kb**|**bigint**|指定已提交或映射到物理页的虚拟地址数量（以 KB 为单位）。 不可为 Null。|  
 |**locked_page_allocations_kb**|**bigint**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁定的物理内存数量（以 KB 为单位）。 不可为 Null。|  
-|**single_pages_kb**|**bigint**|**适用于**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。<br /><br /> 通过使用单页分配器并按此节点上运行的线程分配的已提交内存量（以 KB 为单位）。 该内存是从缓冲池分配的。 该值指示的是发生分配请求的节点，而不是满足分配请求的物理位置。|  
+|**single_pages_kb**|**bigint**|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]到[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。<br /><br /> 通过使用单页分配器并按此节点上运行的线程分配的已提交内存量（以 KB 为单位）。 该内存是从缓冲池分配的。 该值指示的是发生分配请求的节点，而不是满足分配请求的物理位置。|  
 |**pages_kb**|**bigint**|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 指定已提交的内存数量（以 KB 为单位），这是由内存管理器页面分配器从此 NUMA 节点分配的。 不可为 Null。|  
-|**multi_pages_kb**|**bigint**|**适用于**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。<br /><br /> 通过使用多页分配器并按此节点上运行的线程分配的已提交内存量（以 KB 为单位）。 该内存是从缓冲池之外分配的。 此值指示发生分配请求的节点，而不是满足分配请求的物理位置。|  
+|**multi_pages_kb**|**bigint**|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]到[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。<br /><br /> 通过使用多页分配器并按此节点上运行的线程分配的已提交内存量（以 KB 为单位）。 该内存是从缓冲池之外分配的。 此值指示发生分配请求的节点，而不是满足分配请求的物理位置。|  
 |**shared_memory_reserved_kb**|**bigint**|指定从此节点中保留的共享内存数量（以 KB 为单位）。 不可为 Null。|  
 |**shared_memory_committed_kb**|**bigint**|指定在此节点上提交的共享内存数量（以 KB 为单位）。 不可为 Null。|  
 |**cpu_affinity_mask**|**bigint**|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 仅限内部使用。 不可为 Null。|  
 |**online_scheduler_mask**|**bigint**|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 仅限内部使用。 不可为 Null。|  
-|**processor_group**|**int**|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 仅限内部使用。 不可为 Null。|  
+|**processor_group**|**smallint**|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 仅限内部使用。 不可为 Null。|  
 |**foreign_committed_kb**|**bigint**|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 指定从其他内存节点中提交的内存数量（以 KB 为单位）。 不可为 Null。|  
-|**target_kb** |**bigint** |**适用**于： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 和更高版本，[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 指定内存节点的内存目标（KB）。 |   
-|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|**target_kb** |**bigint** |**适用**于： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]和更高[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]版本。<br /><br /> 指定内存节点的内存目标（KB）。 |   
+|pdw_node_id |**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
-在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要数据库中的 `VIEW DATABASE STATE` 权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
+在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要权限。   
+在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层上，需要`VIEW DATABASE STATE`具有数据库中的权限。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
 
 ## <a name="see-also"></a>另请参阅  
-  [与操作系统相关的动态管理视图&#40;SQL Server transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+  [&#40;Transact-sql 的与操作系统相关的动态管理视图 SQL Server&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

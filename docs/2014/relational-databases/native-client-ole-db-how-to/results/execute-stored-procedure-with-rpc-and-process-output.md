@@ -1,5 +1,5 @@
 ---
-title: 执行存储的过程 （使用 RPC 语法） 以及处理返回代码和输出参数 (OLE DB) |Microsoft Docs
+title: 执行存储过程（使用 RPC 语法）以及处理返回代码和输出参数（OLE DB） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e00adccfa6e75434fe398e21faafccc22f99914e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206677"
 ---
 # <a name="execute-a-stored-procedure-using-rpc-syntax-and-process-return-codes-and-output-parameters-ole-db"></a>执行存储过程（使用 RPC 语法）以及处理返回代码和输出参数 (OLE DB)
+  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 存储过程可具有整数返回代码和输出参数。 返回代码和输出参数位于从服务器发送的最后一个数据包中，因此直到行集完全释放时它们才可供应用程序使用。 如果命令返回多个结果，则输出参数数据在 `IMultipleResults::GetResult` 返回 DB_S_NORESULT 时或 `IMultipleResults` 接口完全释放时（以二者中先发生的为准）可用。  
   
 > [!IMPORTANT]  
@@ -34,7 +35,8 @@ ms.locfileid: "68206677"
   
 3.  通过使用 DBBINDING 结构数组创建一组绑定（每个参数创建者一个）。  
   
-4.  通过使用 `IAccessor::CreateAccessor` 方法为定义的参数创建取值函数。 `CreateAccessor` 将从一组绑定创建取值函数。  
+4.  通过使用 `IAccessor::CreateAccessor` 方法为定义的参数创建取值函数。 
+  `CreateAccessor` 将从一组绑定创建取值函数。  
   
 5.  填写 DBPARAMS 结构。  
   
@@ -51,7 +53,7 @@ ms.locfileid: "68206677"
   
  执行第一个 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 代码列表，以创建该应用程序要使用的存储过程。  
   
- 使用 ole32.lib 和 oleaut32.lib 编译并执行第二个 (C++) 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请将连接字符串从 L"(local)" 更改为 L"(local)\\\name"，其中 name 是命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保您的 INCLUDE 环境变量包括含有 sqlncli.h 的目录。  
+ 使用 ole32.lib 和 oleaut32.lib 编译并执行第二个 (C++) 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请将连接字符串从 L"(local)" 更改为 L"(local)\\\name"，其中 name 是命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保 INCLUDE 环境变量包含包含 sqlncli.msi 的目录。  
   
  执行第三个 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 代码列表，以删除该应用程序使用的存储过程。  
   
@@ -393,7 +395,7 @@ DROP PROCEDURE myProc
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [处理结果操作指南主题 (OLE DB)](processing-results-how-to-topics-ole-db.md)  
+## <a name="see-also"></a>另请参阅  
+ [处理结果操作指南主题 &#40;OLE DB&#41;](processing-results-how-to-topics-ole-db.md)  
   
   

@@ -14,38 +14,38 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 748ad4cfe0e399062fd1b13bcf3a05169ef94b1c
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957162"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>将受 TDE 保护的数据库移到其他 SQL Server
   本主题介绍如何使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 通过透明数据加密 (TDE) 来保护数据库，然后再将数据库移动到 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 的其他实例。 TDE 针对数据和日志文件执行实时 I/O 加密和解密。 加密使用数据库加密密钥 (DEK)，它存储在数据库引导记录中，可在恢复时使用。 DEK 是使用存储在服务器的 `master` 数据库中的证书保护的对称密钥，或者是由 EKM 模块保护的非对称密钥。  
   
- **本主题中的**  
+ **本主题内容**  
   
 -   **开始之前：**  
   
-     [限制和限制](#Restrictions)  
+     [限制和局限](#Restrictions)  
   
-     [安全](#Security)  
+     [安全性](#Security)  
   
 -   **若要创建由透明数据加密保护的数据库，请使用：**  
   
      [SQL Server Management Studio](#SSMSCreate)  
   
-     [Transact-sql](#TsqlCreate)  
+     [Transact-SQL](#TsqlCreate)  
   
 -   **若要移动数据库，请使用：**  
   
      [SQL Server Management Studio](#SSMSMove)  
   
-     [Transact-sql](#TsqlMove)  
+     [Transact-SQL](#TsqlMove)  
   
-##  <a name="BeforeYouBegin"></a>开始之前  
+##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a>限制和限制  
+###  <a name="Restrictions"></a> 限制和局限  
   
 -   在移动 TDE 保护的数据库时，您还必须移动用于打开 DEK 的证书或非对称密钥。 证书或非对称密钥必须安装在目标服务器`master`的数据库中，以便[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]可以访问数据库文件。 有关详细信息，请参阅[透明数据加密 (TDE)](transparent-data-encryption.md)。  
   
@@ -53,9 +53,9 @@ ms.locfileid: "74957162"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]将此处创建的文件存储在**C:\Program FILES\MICROSOFT SQL Server\MSSQL12. 中。** 默认情况下，MSSQLSERVER\MSSQL\DATA。 您的文件名和位置可能会有所不同。  
   
-###  <a name="Security"></a>安全  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>访问  
+####  <a name="Permissions"></a> 权限  
   
 -   需要`CONTROL DATABASE`对`master`数据库拥有权限才能创建数据库主密钥。  
   
@@ -65,11 +65,11 @@ ms.locfileid: "74957162"
   
 ##  <a name="SSMSProcedure"></a>创建由透明数据加密保护的数据库  
   
-###  <a name="SSMSCreate"></a>使用 SQL Server Management Studio  
+###  <a name="SSMSCreate"></a> 使用 SQL Server Management Studio  
   
 1.  在`master`数据库中创建数据库主密钥和证书。 有关详细信息，请参阅下面的 **“使用 Transact-SQL”** 。  
   
-2.  在`master`数据库中创建服务器证书的备份。 有关详细信息，请参阅下面的 **使用 Transact-SQL** 。  
+2.  在`master`数据库中创建服务器证书的备份。 有关详细信息，请参阅下面的 **“使用 Transact-SQL”** 。  
   
 3.  在对象资源管理器中，右键单击 **“数据库”** 文件夹，并选择 **“新建数据库”**。  
   
@@ -97,15 +97,15 @@ ms.locfileid: "74957162"
      **设置数据库加密**  
      将数据库更改为打开（选中）或关闭（取消选中）TDE。  
   
-8.  完成后，单击“确定”****。  
+8.  完成后，单击 **“确定”** 。  
   
-###  <a name="TsqlCreate"></a>使用 Transact-sql  
+###  <a name="TsqlCreate"></a> 使用 Transact-SQL  
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
-2.  在“标准”  菜单栏上，单击“新建查询” ****。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” ****。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- Create a database master key and a certificate in the master database.  
@@ -145,23 +145,23 @@ ms.locfileid: "74957162"
     GO  
     ```  
   
- 有关更多信息，请参阅：  
+ 有关详细信息，请参阅：  
   
--   [CREATE MASTER KEY &#40;Transact-sql&#41;](/sql/t-sql/statements/create-master-key-transact-sql)  
+-   [CREATE MASTER KEY (Transact-SQL)](/sql/t-sql/statements/create-master-key-transact-sql)  
   
--   [&#40;Transact-sql&#41;创建证书](/sql/t-sql/statements/create-certificate-transact-sql)  
+-   [CREATE CERTIFICATE (Transact-SQL)](/sql/t-sql/statements/create-certificate-transact-sql)  
   
--   [BACKUP CERTIFICATE &#40;Transact-sql&#41;](/sql/t-sql/statements/backup-certificate-transact-sql)  
+-   [BACKUP CERTIFICATE (Transact-SQL)](/sql/t-sql/statements/backup-certificate-transact-sql)  
   
--   [SQL Server Transact-sql 创建数据库 &#40;&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
+-   [CREATE DATABASE (SQL Server Transact-SQL)](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   
--   [&#40;Transact-sql&#41;创建数据库加密密钥](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
+-   [CREATE DATABASE ENCRYPTION KEY (Transact-SQL)](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
   
--   [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
+-   [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)  
   
 ##  <a name="TsqlProcedure"></a>移动数据库  
   
-###  <a name="SSMSMove"></a>使用 SQL Server Management Studio  
+###  <a name="SSMSMove"></a> 使用 SQL Server Management Studio  
   
 1.  在对象资源管理器中，右键单击在前面已进行加密的数据库，指向“任务”，然后选择“分离…”********。  
   
@@ -185,7 +185,7 @@ ms.locfileid: "74957162"
      **保留全文目录**  
      默认情况下，分离操作保留所有与数据库关联的全文目录。 若要删除全文目录，请清除 **“保留全文目录”** 复选框。 只有从 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]升级数据库时，才会显示此选项。  
   
-     **状态值**  
+     **Status**  
      显示以下状态之一： **“就绪”** 或 **“未就绪”**。  
   
      **消息**  
@@ -198,7 +198,7 @@ ms.locfileid: "74957162"
   
      若要获取有关消息的详细信息，请单击相应的超链接文本打开活动监视器。  
   
-2.  单击“确定”****。  
+2.  单击“确定”。   
   
 3.  使用 Window 资源管理器，将数据库文件从源服务器移动到或复制到目标服务器上的相同位置。  
   
@@ -232,10 +232,10 @@ ms.locfileid: "74957162"
      **附加为**  
      根据需要，可以指定要附加数据库的其他名称。  
   
-     **Owner**  
+     **所有者**  
      提供数据库可能所有者的下拉列表，您可以根据需要从其中选择其他所有者。  
   
-     **状态值**  
+     **Status**  
      显示下表中相应的数据库状态。  
   
     |图标|状态文本|说明|  
@@ -250,10 +250,10 @@ ms.locfileid: "74957162"
      **消息**  
      显示空消息或“找不到文件”超链接。  
   
-     **把**  
+     **添加**  
      查找必需的主数据库文件。 当用户选择 .mdf 文件时，就会在 **“要附加的数据库”** 网格的相应字段中自动填充合适的信息。  
   
-     **取消**  
+     **删除**  
      从 **“要附加的数据库”** 网格中删除选定文件。  
   
      **"** _<database_name>_ **" 数据库详细信息**  
@@ -274,13 +274,13 @@ ms.locfileid: "74957162"
      **消息**  
      显示空消息或 **“找不到文件”** 超链接。  
   
-###  <a name="TsqlMove"></a>使用 Transact-sql  
+###  <a name="TsqlMove"></a> 使用 Transact-SQL  
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
-2.  在“标准”  菜单栏上，单击“新建查询” ****。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” ****。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- Detach the TDE protected database from the source server.   
@@ -315,17 +315,17 @@ ms.locfileid: "74957162"
     GO  
     ```  
   
- 有关更多信息，请参阅：  
+ 有关详细信息，请参阅：  
   
--   [sp_detach_db &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql)  
+-   [sp_detach_db (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql)  
   
--   [CREATE MASTER KEY &#40;Transact-sql&#41;](/sql/t-sql/statements/create-master-key-transact-sql)  
+-   [CREATE MASTER KEY (Transact-SQL)](/sql/t-sql/statements/create-master-key-transact-sql)  
   
--   [&#40;Transact-sql&#41;创建证书](/sql/t-sql/statements/create-certificate-transact-sql)  
+-   [CREATE CERTIFICATE (Transact-SQL)](/sql/t-sql/statements/create-certificate-transact-sql)  
   
--   [SQL Server Transact-sql 创建数据库 &#40;&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
+-   [CREATE DATABASE (SQL Server Transact-SQL)](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   
 ## <a name="see-also"></a>另请参阅  
- [数据库分离和附加 &#40;SQL Server&#41;](../../databases/database-detach-and-attach-sql-server.md)  
+ [数据库分离和附加 (SQL Server)](../../databases/database-detach-and-attach-sql-server.md)  
   
   

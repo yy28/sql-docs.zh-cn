@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f8f6b7efd8d97f63e93061cbef1a54e1df3146d2
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243790"
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>将应用程序从 MDAC 更新到 SQL Server Native Client
@@ -108,9 +108,9 @@ ms.locfileid: "75243790"
   
     |SQL Server 2005 类型|SQL Server 2000 类型|  
     |--------------------------|--------------------------|  
-    |**varchar （max）**|**全文**|  
-    |**nvarchar （max）**|**ntext**|  
-    |**varbinary （max）**|**影像**|  
+    |**varchar(max)**|**text**|  
+    |**nvarchar(max)**|**ntext**|  
+    |**varbinary(max)**|**图像**|  
     |**udt**|**varbinary**|  
     |**xml**|**ntext**|  
   
@@ -129,6 +129,6 @@ ms.locfileid: "75243790"
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 和 MDAC 都支持使用行版本控制的已提交读事务隔离，但只有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 支持快照事务隔离。 （就编程而言，使用行版本控制的已提交读事务隔离等同于已提交读事务。）  
   
 ## <a name="see-also"></a>另请参阅  
- [构建具有 SQL Server Native Client 的应用程序](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
+ [使用 SQL Server Native Client 生成应用程序](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 模式属性 (ADO) |Microsoft Docs
+title: Mode 属性（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,34 +18,34 @@ ms.assetid: 808661eb-0d7c-4e6d-8e40-9dc3bef3d77a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bc5b2e2bce410309656bad5591a3df90781cc8bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932226"
 ---
 # <a name="mode-property-ado"></a>Mode 属性 (ADO)
-指示在中修改数据的可用权限[连接](../../../ado/reference/ado-api/connection-object-ado.md)，[记录](../../../ado/reference/ado-api/record-object-ado.md)，或[Stream](../../../ado/reference/ado-api/stream-object-ado.md)对象。  
+指示用于修改[连接](../../../ado/reference/ado-api/connection-object-ado.md)、[记录](../../../ado/reference/ado-api/record-object-ado.md)或[流](../../../ado/reference/ado-api/stream-object-ado.md)对象中的数据的可用权限。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
- 设置或返回[ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md)值。 默认值为**连接**是**adModeUnknown**。 默认值为**记录**对象是**adModeRead**。 默认值为**Stream**与基础源相关联 (使用 URL 作为源，或为默认打开**Stream**的**记录**) 是**adModeRead**。 默认值为**Stream**未关联与基础源 （在内存中实例化） 是**adModeUnknown**。  
+ 设置或返回一个[ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md)值。 **连接**的默认值为**adModeUnknown**。 **记录**对象的默认值为**adModeRead**。 与基础源关联的**流**的默认值（使用 URL 作为源，或者作为**记录**的默认**流**打开）是**adModeRead**。 不与基础源（在内存中实例化）关联的**流**的默认值为**adModeUnknown**。  
   
 ## <a name="remarks"></a>备注  
- 使用**模式下**属性来设置或返回提供程序在当前连接上使用的访问权限。 可以设置**模式下**属性时，才**连接**对象已关闭。  
+ 使用**Mode**属性可以设置或返回当前连接上的提供程序所使用的访问权限。 仅当关闭**连接**对象时，才可以设置**Mode**属性。  
   
- 有关**Stream**对象，如果未指定访问模式，它从用于打开的源继承**Stream**对象。 例如，如果**Stream**从打开**记录**对象，默认情况下与相同的模式中打开**记录**。  
+ 对于**流**对象，如果未指定访问模式，则从用于打开**流**对象的源继承。 例如，如果从**记录**对象打开流，则默认情况下，将以与**记录**相同的模式打开**流**。  
   
- 此属性是读/写，而该对象已关闭，只读的该对象处于打开状态时。  
+ 当对象处于关闭状态时，此属性是可读/写的，当对象处于打开状态时，此属性为只读。  
   
 > [!NOTE]
->  **远程数据服务使用情况**客户端上使用时**连接**对象，**模式**属性只能设置为**adModeUnknown**。  
+>  **远程数据服务使用情况**当在客户端**连接**对象上使用时，**模式**属性只能设置为**adModeUnknown**。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
   
 ||||  
 |-|-|-|  
 |[连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[记录对象 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|[流对象 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
   
-## <a name="see-also"></a>请参阅  
- [IsolationLevel 和 Mode 属性示例 (VB)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vb.md)   
- [IsolationLevel 和 Mode 属性示例 （VC + +）](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vc.md)   
+## <a name="see-also"></a>另请参阅  
+ [IsolationLevel 和 Mode 属性示例（VB）](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vb.md)   
+ [IsolationLevel 和 Mode 属性示例（VC + +）](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vc.md)   

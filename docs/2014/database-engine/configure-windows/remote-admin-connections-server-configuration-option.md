@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4e4894fa7e05c863095fdca7b26f448efe176216
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781455"
 ---
 # <a name="remote-admin-connections-server-configuration-option"></a>remote admin connections 服务器配置选项
@@ -30,7 +30,7 @@ ms.locfileid: "62781455"
   
  下表将列出远程管理连接选项的可能值。  
   
-|ReplTest1|Description|  
+|值|说明|  
 |-----------|-----------------|  
 |0|指明仅允许本地连接使用 DAC。|  
 |1|指明允许远程连接使用 DAC。|  
@@ -45,7 +45,7 @@ RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [用于数据库管理员的诊断连接](diagnostic-connection-for-database-administrators.md)  
   
   

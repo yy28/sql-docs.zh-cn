@@ -19,10 +19,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
 ms.openlocfilehash: 9318a34b4853937983b107491c9210de80e5506c
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056404"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH （Transact-sql）
@@ -30,7 +30,7 @@ ms.locfileid: "74056404"
 
   指定关系图的搜索条件，该搜索条件是以递归方式或重复方式搜索的。 可以在 SELECT 语句中与 graph 节点和边缘表匹配中使用 SHORTEST_PATH。 
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="shortest-path"></a>最短路径
 SHORTEST_PATH 函数允许你查找：    
@@ -48,8 +48,8 @@ SHORTEST_PATH 函数允许你查找：
 ## <a name="arbitrary-length-pattern"></a>任意长度模式
 此模式包括节点和边缘，必须反复遍历这些节点和边缘，直到达到所需的节点或达到模式中指定的最大迭代数。 每次执行查询时，执行此模式的结果将是从开始节点到结束节点的路径遍历的节点和边缘的有序集合。 这是正则表达式样式语法模式，支持以下两种模式限定符：
 
-* **"+"** ：重复模式1次或多次。 找到最短路径后立即终止。
-* **{1，n}** ：重复模式1到 "n" 次。 找到最短的时立即终止。
+* **"+"**：重复模式1次或多次。 找到最短路径后立即终止。
+* **{1，n}**：重复模式1到 "n" 次。 找到最短的时立即终止。
 
 ## <a name="last_node"></a>LAST_NODE
 LAST_NODE （）函数允许链接两个任意长度的遍历模式。 它可用于以下情况：    
@@ -85,29 +85,29 @@ STRING_AGG 函数采用表达式和分隔符作为输入并返回一个字符串
 ### <a name="last_value"></a>LAST_VALUE
 若要从遍历的路径的最后一个节点投影属性，可以使用 LAST_VALUE 聚合函数。 将边缘表别名作为此函数的输入提供是错误的，只能使用节点表名称或别名。
 
-**最后一个节点**：最后一个节点引用在遍历的路径中最后显示的节点，而不考虑匹配谓词中的箭头方向。 例如： `MATCH(SHORTEST_PATH(n(-(e)->p)+) )`。 此处，路径中的最后一个节点将是最后访问的 P 节点。 
+**最后一个节点**：最后一个节点引用在遍历的路径中最后显示的节点，而不考虑匹配谓词中的箭头方向。 例如： `MATCH(SHORTEST_PATH(n(-(e)->p)+) )` 。 此处，路径中的最后一个节点将是最后访问的 P 节点。 
 
-相反，最后一个节点是此模式的输出关系图路径中的最后一个 n 节点： `MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
+相反，最后一个节点是此模式的输出关系图路径中的最后一个第 n 个节点：`MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
 
 ### <a name="sum"></a>SUM
 此函数返回在遍历路径中显示的已提供节点/边缘属性值或表达式的总和。
 
 ### <a name="count"></a>COUNT
-此函数返回路径中所需节点/边缘属性的非 null 值的数量。 COUNT 函数支持带有节点或边界表别名的 "\*" 运算符。 如果没有节点或边缘表别名，则 \* 的使用不明确，将导致错误。
+此函数返回路径中所需节点/边缘属性的非 null 值的数量。 COUNT 函数支持带有节点或\*边界表别名的 "" 运算符。 如果没有节点或边缘表别名，则的使用\*不明确，将导致错误。
 
     {  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
 
 
-### <a name="avg"></a>AVG
+### <a name="avg"></a>平均值
 返回在所遍历的路径中出现的所提供的节点/边缘属性值或表达式的平均值。
 
-### <a name="min"></a>MIN
+### <a name="min"></a>最小值
 返回所提供的节点/边缘属性值或所遍历路径中出现的表达式的最小值。
 
 ### <a name="max"></a>MAX
 返回所提供的节点/边缘属性值或所遍历路径中出现的表达式的最大值。
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 shortest_path 函数只能在 MATCH 内使用。     
 仅 shortest_path 支持 LAST_NODE。     
 如果查找加权最短路径，则不支持所有路径或所有最短路径。         
@@ -209,8 +209,8 @@ WHERE Q.levels = 2
 ```
 
 ## <a name="see-also"></a>另请参阅  
- [MATCH （SQL Graph）](../../t-sql/queries/match-sql-graph.md)    
+ [MATCH （SQL 图形）](../../t-sql/queries/match-sql-graph.md)    
  [CREATE TABLE &#40;SQL Graph&#41;](../../t-sql/statements/create-table-sql-graph.md)   
- [INSERT（SQL 图形）](../../t-sql/statements/insert-sql-graph.md)]  
+ [INSERT （SQL 图形）](../../t-sql/statements/insert-sql-graph.md)]  
  [使用 SQL Server 2017 进行图形处理](../../relational-databases/graphs/sql-graph-overview.md)     
  

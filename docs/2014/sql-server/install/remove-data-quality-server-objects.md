@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f273823825cf94da6269a58389f04207ad1c2707
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68190669"
 ---
 # <a name="remove-data-quality-server-objects"></a>删除数据质量服务器对象
@@ -36,13 +36,13 @@ ms.locfileid: "68190669"
  你可以通过右键单击对象，然后在快捷菜单中单击“删除”  ，在 SQL Server Management Studio 中删除这些对象。  
   
 > [!IMPORTANT]  
->  如果通过命令提示符使用 `-uninstall` 命令行参数从 SQL Server 实例中仅卸载 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]，则在卸载过程中将删除所有 DQS 对象。 您不必在卸载 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]之后手动删除它们。 若要从命令提示符处卸载 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] ，请在命令提示符处键入以下命令，然后按 ENTER：   
+>  如果通过命令提示符使用 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 命令行参数从 SQL Server 实例中仅卸载 `-uninstall` ，则在卸载过程中将删除所有 DQS 对象。 您不必在卸载 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]之后手动删除它们。 若要从命令提示符处卸载 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] ，请在命令提示符处键入以下命令，然后按 ENTER：   
 > `dqsinstaller.exe -uninstall`  
   
 ## <a name="uninstall-sql-server-instance-containing-data-quality-server"></a>卸载包含数据质量服务器的 SQL Server 实例  
- 如果您在完全卸载具有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 实例，则在卸载过程完成后，您必须手动从计算机上删除 DQS_MAIN、DQS_PROJECTS 和 DQS_STAGING_DATA 数据库。 对于默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装，DQS_MAIN、DQS_PROJECTS 和 DQS_STAGING_DATA 数据库文件在 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA 处提供。  
+ 如果您在完全卸载具有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]实例，则在卸载过程完成后，您必须手动从计算机上删除 DQS_MAIN、DQS_PROJECTS 和 DQS_STAGING_DATA 数据库。 对于默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装，DQS_MAIN、DQS_PROJECTS 和 DQS_STAGING_DATA 数据库文件在 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA 处提供。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [卸载现有 SQL Server 实例（安装程序）](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)   
  [卸载 SQL Server 2014](uninstall-sql-server.md)  
   

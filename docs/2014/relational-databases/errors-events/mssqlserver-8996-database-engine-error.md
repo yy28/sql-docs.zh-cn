@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 41f92430eecb0eb06fbca18bbb552a2e85ce6069
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761831"
 ---
-# <a name="mssqlserver8996"></a>MSSQLSERVER_8996
+# <a name="mssqlserver_8996"></a>MSSQLSERVER_8996
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62761831"
 |符号名称|DBCC3_IAM_PAGE_RANGE_IN_WRONG_FILEGROUP|  
 |消息正文|对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID（类型为 TYPE）的 IAM 页 P_ID 控制着文件组 FG_ID1 中的页，这些页应该在文件组 FG_ID2 中。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  文件组 *FG_ID1* 中的索引分配映射 (IAM) 页 *P_ID* 错误地包括了文件组 *FG_ID2* 的区数。 IAM 页的所有区都应该在与 IAM 页本身相同的文件组中。  
   
 ## <a name="user-action"></a>用户操作  

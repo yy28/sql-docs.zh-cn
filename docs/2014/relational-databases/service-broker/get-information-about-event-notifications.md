@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9786faaf44724b1a2452bd5304b63deb2c9ea54e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015309"
 ---
 # <a name="get-information-about-event-notifications"></a>获取有关事件通知的信息
@@ -29,14 +29,14 @@ ms.locfileid: "63015309"
 -   [sys.event_notifications (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-event-notifications-transact-sql)  
   
 > [!NOTE]  
->  若要查看有关中的任何事件通知的元数据**sys.event_notifications**数据库级别创建，最小值必须具备以下条件：控制、 ALTER、 TAKE OWNERSHIP 或 VIEW DEFINITION 权限对数据库中，是事件通知的所有者或具有 ALTER ANY DATABASE EVENT NOTIFICATION 权限。 对于对特定队列创建的事件通知，最小值您必须具有：控制、 ALTER、 TAKE OWNERSHIP 或 VIEW DEFINITION 权限的对象上，是事件通知的所有者或具有 ALTER ANY DATABASE EVENT NOTIFICATION 权限。  
+>  若要查看 **sys.event_notifications** 中在数据库级别创建的任意事件通知的元数据，至少必须满足下列条件：对数据库具有 CONTROL、ALTER、TAKE OWNERSHIP 或 VIEW DEFINITION 权限，是事件通知的所有者，或者具有 ALTER ANY DATABASE EVENT NOTIFICATION 权限。 对于对特定队列创建的事件通知，至少必须满足下列条件：对对象具有 CONTROL、ALTER、TAKE OWNERSHIP 或 VIEW DEFINITION 权限，是事件通知的所有者，或者具有 ALTER ANY DATABASE EVENT NOTIFICATION 权限。  
   
  **获取有关服务器级别事件通知的信息**  
   
 -   [sys.server_event_notifications (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql)  
   
 > [!NOTE]  
->  最小值，必须具备以下各项：控制或 VIEW ANY DEFINITION 权限在服务器上，为登录或事件通知的所有者或者具有 ALTER ANY EVENT NOTIFICATION 权限以查看有关中的任何事件通知的元数据**sys.server_event_notifications**.  
+>  至少必须满足下列条件：对服务器具有 CONTROL 或 VIEW ANY DEFINITION 权限，是事件通知的登录者或所有者，或者具有查看 **sys.server_event_notifications**中的任何事件通知的元数据的 ALTER ANY EVENT NOTIFICATION 权限。  
   
  **获取有关可以激发事件通知的所有事件的信息**  
   
@@ -45,7 +45,7 @@ ms.locfileid: "63015309"
 > [!NOTE]  
 >  此目录视图不返回事件组。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [事件通知](event-notifications.md)  
   
   

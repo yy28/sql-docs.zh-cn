@@ -16,10 +16,10 @@ ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fe8cf327ff3db175c57382201ca3918a86770433
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72251243"
 ---
 # <a name="sp_check_for_sync_trigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "72251243"
 
   确定是否正在用于立即更新订阅的复制触发器的上下文中调用用户定义的触发器或存储过程。 该存储过程在发布服务器的发布数据库中或在订阅服务器的订阅数据库中执行。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,25 +39,25 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@tabid =** ] '*tabid*'  
+ [**@tabid =** ]'*tabid*'  
  正对检查即时更新触发器的表的对象 ID。 *tabid*的值为**int** ，无默认值。  
   
- [ **@trigger_op =** ] '*trigger_output_parameters*' OUTPUT  
+ [**@trigger_op =** ]"*trigger_output_parameters*" 输出  
  指定输出参数是否返回正在调用它的触发器的类型。 *trigger_output_parameters*为**char （10）** ，可以是下列值之一。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**插件**|INSERT 触发器|  
 |**Upd**|UPDATE 触发器|  
 |**Del**|DELETE 触发器|  
 |NULL（默认值）||  
   
-`[ @fonpublisher = ] fonpublisher` 指定执行存储过程的位置。 *fonpublisher*的值为**bit**，默认值为0。 如果为 0，则在订阅服务器上执行；如果为 1，则在发布服务器上执行。  
+`[ @fonpublisher = ] fonpublisher`指定执行存储过程的位置。 *fonpublisher*的值为**bit**，默认值为0。 如果为 0，则在订阅服务器上执行；如果为 1，则在发布服务器上执行。  
   
 ## <a name="return-code-values"></a>返回代码值  
- 0 指示在即时更新触发器的上下文中未调用此存储过程。 1指示正在即时更新触发器的上下文中调用该触发器，它是 *\@trigger_op*中返回的触发器的类型。  
+ 0 指示在即时更新触发器的上下文中未调用此存储过程。 1指示正在即时更新触发器的上下文中调用该触发器，它是* \@trigger_op*中返回的触发器的类型。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **sp_check_for_sync_trigger**用于快照复制和事务复制。  
   
  **sp_check_for_sync_trigger**用于在复制和用户定义的触发器之间进行协调。 此存储过程确定它是否正在复制触发器的上下文中被调用。 例如，可以在用户定义的触发器体中调用过程**sp_check_for_sync_trigger** 。 如果**sp_check_for_sync_trigger**返回**0**，则用户定义的触发器将继续进行处理。 如果**sp_check_for_sync_trigger**返回**1**，则用户定义的触发器将退出。 这将确保当复制触发器更新表时不会激发用户定义触发器。  
@@ -85,10 +85,10 @@ IF @retcode = 1
 RETURN  
 ```  
   
-## <a name="permissions"></a>Permissions  
- **sys.objects** 系统视图中具有 SELECT 权限的任何用户都可以执行[sp_check_for_sync_trigger](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)存储过程。  
+## <a name="permissions"></a>权限  
+ 在[sys.databases](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)系统视图中具有 SELECT 权限的任何用户都可以执行**sp_check_for_sync_trigger**存储过程。  
   
 ## <a name="see-also"></a>另请参阅  
- [事务复制的可更新订阅](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
+ [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

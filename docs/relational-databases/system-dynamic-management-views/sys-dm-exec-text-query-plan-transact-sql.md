@@ -21,24 +21,24 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6d23813078c2a90b18af0a1df48079b571e77a13
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73983144"
 ---
 # <a name="sysdm_exec_text_query_plan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理或批处理中的特定语句返回文本格式的显示计划。 计划句柄指定的查询计划可以缓存或当前正在执行。 此表值函数与[sys. dm_exec_query_plan &#40;&#41;transact-sql](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)类似，但具有以下不同之处：  
+为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理或批处理中的特定语句返回文本格式的显示计划。 执行计划句柄指定的查询计划可处于缓存状态或正在执行状态。 此表值函数与[sys. dm_exec_query_plan &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)相似，但存在以下差异：  
   
 -   查询计划的输出以文本格式返回。  
 -   查询计划的输出无大小限制。  
 -   可以指定批处理内的单个语句。  
   
-**适用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本），[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+**适用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]）、。
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -53,21 +53,21 @@ sys.dm_exec_text_query_plan
   
 ## <a name="arguments"></a>参数  
 *plan_handle*  
-是一个标记，用于唯一标识已执行并且其计划驻留在计划缓存中或当前正在执行的批处理的查询执行计划。 *plan_handle*为**varbinary （64）** 。   
+是一个标记，用于唯一标识已执行并且其计划驻留在计划缓存中或当前正在执行的批处理的查询执行计划。 *plan_handle*为**varbinary （64）**。   
 
 可以从以下动态管理对象中获取*plan_handle* ： 
   
--   [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
+-   [sys.dm_exec_cached_plans (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
 -   [sys.dm_exec_query_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
   
--   [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+-   [sys. dm_exec_requests &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
 
--   [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+-   [sys. dm_exec_procedure_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
 
--   [sys. dm_exec_trigger_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
+-   [sys. dm_exec_trigger_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
   
-*statement_start_offset* | 0 | DEFAULT  
+*statement_start_offset* |0 |缺省值  
 指示行所说明的查询在其批处理或持久性对象文本中的起始位置（字节）。 *statement_start_offset*是**int**。值0指示批处理的开头。 默认值为 0。  
   
 可以从下列动态管理对象中获得语句起始偏移量：  
@@ -76,7 +76,7 @@ sys.dm_exec_text_query_plan
   
 -  [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
-*statement_end_offset* | -1 | DEFAULT  
+*statement_end_offset* |-1 |缺省值  
 指示行所说明的查询在其批处理或持久性对象文本中的结束位置（字节）。  
   
 *statement_start_offset*是**int**。  
@@ -85,27 +85,27 @@ sys.dm_exec_text_query_plan
   
 ## <a name="table-returned"></a>返回的表  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**dbid**|**int**|在编译对应于此计划的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句时有效的上下文数据库的 ID。 对于临时和预定义 SQL 语句，指编译这些语句时所在的数据库的 ID。<br /><br /> 此列可为空值。|  
-|**objectid**|**int**|此查询计划的对象（如存储过程或用户定义函数）的 ID。 对于即席和已准备批处理，此列为**null**。<br /><br /> 此列可为空值。|  
-|**number**|**int**|为存储过程编号的整数。 例如， **orders**应用程序的一组过程可命名为**orderproc; 1**、 **orderproc; 2**，等等。 对于即席和已准备批处理，此列为**null**。<br /><br /> 此列可为空值。|  
+|**dbid**|**smallint**|在编译对应于此计划的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句时有效的上下文数据库的 ID。 对于临时和预定义 SQL 语句，指编译这些语句时所在的数据库的 ID。<br /><br /> 此列可为空值。|  
+|**objectid**|**int**|此查询计划的对象（如存储过程或用户定义函数）的 ID。 对于即席批处理和已准备好的批处理，此列为 **null**。<br /><br /> 此列可为空值。|  
+|**数字**|**smallint**|为存储过程编号的整数。 例如，用于 **orders** 应用程序的一组过程可命名为 **orderproc;1**、**orderproc;2** 等等。 对于即席批处理和已准备好的批处理，此列为 **null**。<br /><br /> 此列可为空值。|  
 |**过**|**bit**|指示对应的存储过程是否已加密。<br /><br /> 0 = 未加密<br /><br /> 1 = 已加密<br /><br /> 此列不可为空值。|  
 |**query_plan**|**nvarchar(max)**|包含与*plan_handle*一起指定的查询执行计划的编译时显示计划表示形式。 显示计划采用文本格式。 为包含即席 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、存储过程调用以及用户定义函数调用等内容的每个批查询生成一个计划。<br /><br /> 此列可为空值。|  
   
-## <a name="remarks"></a>Remarks  
- 在以下情况下，系统将不会在返回的表的**计划**列中返回**dm_exec_text_query_plan**的显示计划输出：  
+## <a name="remarks"></a>备注  
+ 在以下条件下，不会在 **sys.dm_exec_text_query_plan** 返回的表的 **plan** 列中返回显示计划输出：  
   
--   如果使用*plan_handle*指定的查询计划已从计划缓存中逐出，则返回的表的**query_plan**列将为 null。 例如，如果在计划句柄被捕获后与**sys. dm_exec_text_query_plan**一起使用，则可能会出现这种情况。  
+-   如果使用*plan_handle*指定的查询计划已从计划缓存中逐出，则返回的表的**query_plan**列将为 null。 例如，如果在捕获计划句柄的时间与将其用于 **sys.dm_exec_text_query_plan** 的时间之间存在时间延迟，则可能会出现该情况。  
   
--   有些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句未放入缓存，如大容量操作语句或包含大于 8 KB 的字符串文字的语句。 不能**dm_exec_text_query_plan**使用显示计划检索此类语句的，因为它们不存在于缓存中。  
+-   有些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句未放入缓存，如大容量操作语句或包含大于 8 KB 的字符串文字的语句。 由于这些语句不在缓存中，因此无法使用 **sys.dm_exec_text_query_plan** 来检索这些语句的显示计划。  
   
--   如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理或存储过程包含对用户定义函数的调用或对动态 SQL 的调用（例如，使用 EXEC （*string*）），则用户定义函数的编译的 XML 显示计划不包含在由**dm_exec_text_query_plan sys.databases**或存储过程返回的表中。 相反，必须为与用户定义函数对应的*plan_handle*单独调用**dm_exec_text_query_plan** 。  
+-   如果某个[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理或存储过程包含对用户定义函数的调用或对动态 SQL 的调用（例如，使用 EXEC （*string*）），则用户定义函数的编译的 XML 显示计划不包含在由 sys.databases 或存储过程返回的表中 **。 dm_exec_text_query_plan** 。 相反，必须为与用户定义函数对应的*plan_handle*单独调用**dm_exec_text_query_plan** 。  
   
-当即席查询使用[简单](../../relational-databases/query-processing-architecture-guide.md#SimpleParam)参数化或[强制参数](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)化时， **query_plan**列将仅包含语句文本，而非实际查询计划。 若要返回查询计划，请为已准备好的参数化查询的计划句柄调用**dm_exec_text_query_plan** 。 您可以通过引用 [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) 视图的**sql**列或动态管理视图的 text [dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)列来确定查询是否已参数化。  
+当即席查询使用[简单](../../relational-databases/query-processing-architecture-guide.md#SimpleParam)参数化或[强制参数](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)化时， **query_plan**列将仅包含语句文本，而非实际查询计划。 若要返回查询计划，则应为已准备好的参数化查询的计划句柄调用 **sys.dm_exec_text_query_plan**。 可以通过引用 [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) 视图的 **sql** 列或 [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) 动态管理视图的文本列来确定查询是否已参数化。  
   
-## <a name="permissions"></a>Permissions  
- 若要执行**dm_exec_text_query_plan**，用户必须是**sysadmin**固定服务器角色的成员或具有服务器上的 VIEW server STATE 权限。  
+## <a name="permissions"></a>权限  
+ 若要执行 **sys.dm_exec_text_query_plan**，用户必须是 **sysadmin** 固定服务器角色的成员或具有服务器的 VIEW SERVER STATE 权限。  
   
 ## <a name="examples"></a>示例  
   
@@ -134,7 +134,7 @@ WHERE session_id = 54;
 GO  
 ```  
   
- **Sys. dm_exec_requests**返回的表指示 `0x06000100A27E7C1FA821B10600`运行缓慢的查询或批处理的计划句柄。 以下示例返回指定计划句柄的查询计划，并使用默认值 0 和 -1 返回查询或批处理中的所有语句。  
+ 由 **sys.dm_exec_requests** 返回的表指示缓慢运行的查询或批处理的计划句柄为 `0x06000100A27E7C1FA821B10600`。 以下示例返回指定计划句柄的查询计划，并使用默认值 0 和 -1 返回查询或批处理中的所有语句。  
   
 ```sql  
 USE master;  
@@ -145,7 +145,7 @@ GO
 ```  
   
 ### <a name="b-retrieving-every-query-plan-from-the-plan-cache"></a>B. 从计划缓存中检索每个查询计划  
- 若要检索驻留在计划缓存中的所有查询计划的快照，请通过查询 `sys.dm_exec_cached_plans` 动态管理视图来检索缓存中所有查询计划的计划句柄。 计划句柄存储在 `plan_handle` 的 `sys.dm_exec_cached_plans` 列中。 然后，使用 CROSS APPLY 运算符将计划句柄传递给 `sys.dm_exec_text_query_plan`，如下所示。 当前位于计划缓存中的每个计划的显示计划输出位于返回的表的 `query_plan` 列中。  
+ 若要检索驻留在计划缓存中的所有查询计划的快照，请通过查询 `sys.dm_exec_cached_plans` 动态管理视图来检索缓存中所有查询计划的计划句柄。 计划句柄存储在 `plan_handle` 的 `sys.dm_exec_cached_plans` 列中。 然后，使用 CROSS APPLY 运算符将计划句柄传递给 `sys.dm_exec_text_query_plan`，如下所示。 当前位于计划缓存中的每个计划的显示计划输出位于`query_plan`返回的表的列中。  
   
 ```sql  
 USE master;  
@@ -168,7 +168,8 @@ GO
 ```  
   
 ### <a name="d-retrieving-information-about-the-top-five-queries-by-average-cpu-time"></a>D. 按平均 CPU 时间检索有关前五个查询的信息  
- 以下示例返回前五个查询的查询计划和平均 CPU 时间。 **Sys. dm_exec_text_query_plan**函数指定默认值0和-1，以返回查询计划中批处理中的所有语句。  
+ 以下示例返回前五个查询的查询计划和平均 CPU 时间。 
+  **sys.dm_exec_text_query_plan** 函数指定默认值 0 和 -1 以返回查询计划中批处理的所有语句。  
   
 ```sql  
 SELECT TOP 5 total_worker_time/execution_count AS [Avg CPU Time],  
@@ -180,4 +181,4 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
+ [sys. dm_exec_query_plan &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  

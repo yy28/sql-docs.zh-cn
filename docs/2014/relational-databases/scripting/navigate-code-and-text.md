@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b44319856c2604791290768516ab1eb4c190a66b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242004"
 ---
 # <a name="navigate-code-and-text"></a>代码和文本定位
@@ -37,8 +37,7 @@ ms.locfileid: "75242004"
   
 -   鼠标和导航键。  
   
--   
-  **Go To** 命令。  
+-   **Go To** 命令。  
   
 > [!NOTE]  
 >  有关键盘快捷键的完整列表，请参阅 [SQL Server Management Studio 键盘快捷键](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)。  
@@ -65,7 +64,7 @@ ms.locfileid: "75242004"
 -   使用 Ctrl+向上键和 Ctrl+向下键可以滚动视图而不移动插入点。  
   
 ## <a name="go-to-command"></a>Go To 命令  
- 使用 **GoTo** 命令可以转到特定的行号。 若要显示编号，请在 **“选项”** 对话框中依次单击 **“文本编辑器”**、 **“所有语言”** 和 **“常规”**，然后选择 **“行号”**。  
+ 使用 **GoTo** 命令可以转到特定的行号。 若要显示编号，请在 **“选项”** 对话框中依次单击 **“文本编辑器”** 、 **“所有语言”** 和 **“常规”** ，然后选择 **“行号”** 。  
   
  **转到特定行号**  
   

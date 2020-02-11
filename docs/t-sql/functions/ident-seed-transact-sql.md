@@ -20,10 +20,10 @@ ms.assetid: e4cb8eb8-affb-4810-a8a9-0110af3c247a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 9685c68127b5370d007981a2f01e67f8d22df5da
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843693"
 ---
 # <a name="ident_seed-transact-sql"></a>IDENT_SEED (Transact-SQL)
@@ -40,13 +40,13 @@ IDENT_SEED ( 'table_or_view' )
 ```  
   
 ## <a name="arguments"></a>参数  
- 'table_or_view'     
+ **'** *table_or_view* **'**  
  指定表或视图以检查标识种子值的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 table_or_view 可以是带有引号的字符串常量，也可以是变量、函数或列名  。 table_or_view 的数据类型为 char、nchar、varchar 或 nvarchar      。  
   
 ## <a name="return-types"></a>返回类型  
 numeric  ([@@MAXPRECISION](../../t-sql/functions/max-precision-transact-sql.md),0))  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  出现错误时或调用方没有查看对象的权限时将返回 NULL。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，用户只能查看用户拥有或被授予权限的安全对象的元数据。 这种安全性意味着，如果用户对该对象没有任何权限，则某些会产生元数据的内置函数（如 IDENT_SEED）可能返回 NULL。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

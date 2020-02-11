@@ -1,5 +1,5 @@
 ---
-title: 数据源属性对话框，常规 （报表生成器） |Microsoft Docs
+title: "\"数据源属性\" 对话框-\"常规\" （报表生成器） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7bedf016dce02928bbd47dbfce60943ec667a824
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109473"
 ---
 # <a name="data-source-properties-dialog-box-general-report-builder"></a>“数据源属性”对话框 -&gt;“常规”（报表生成器）
@@ -43,7 +43,7 @@ ms.locfileid: "66109473"
  **名称**  
  键入数据源的名称。 数据源名称在报表中必须是唯一的。 默认情况下，会为数据源分配一个常规名称，如 DataSource1 或 DataSource2。  
   
- **使用共享的连接**  
+ **使用共享连接**  
  选择此选项可浏览已发布到报表服务器的共享数据源。  
   
  从报表服务器选择数据源后，报表生成器会保持到此报表服务器的连接。  
@@ -51,11 +51,11 @@ ms.locfileid: "66109473"
  **使用我的报表中嵌入的连接**  
  选择此选项可创建仅供此报表使用的数据源。  
   
- **类型**  
+ 类型   
  选择数据处理扩展插件。 该列表显示所有已注册的扩展插件。  
   
  **连接字符串**  
- 输入数据源的连接字符串。 单击 **“生成”** 可使用 **“连接属性”** 对话框生成连接字符串。 单击“表达式”  (*fx*) 按钮可编辑表达式。  
+ 输入数据源的连接字符串。 单击 **“生成”** 可使用 **“连接属性”** 对话框生成连接字符串。 单击“表达式”**** (*fx*) 按钮可编辑表达式。  
   
  **处理查询时使用单个事务**  
  选择此选项可指示使用此数据源的数据集在针对数据库的单个事务中运行。 若要将使用同一数据源的子报表的事务包括在内，请选择该子报表，然后在“属性”窗格中，将 **MergeTransactions** 设置为 **True**。  
@@ -63,11 +63,11 @@ ms.locfileid: "66109473"
  **测试连接**  
  单击以使用指定的凭据验证数据源连接是否正常工作。 如果不能建立连接，则需要验证您的凭据和服务器可用性。 可以为嵌入数据源和共享数据源测试数据源连接。  
   
-## <a name="see-also"></a>请参阅  
- [向报表添加数据&#40;报表生成器和 SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [添加和验证数据连接或数据源&#40;报表生成器和 SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>另请参阅  
+ [将数据添加到报表 &#40;报表生成器和 SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [添加和验证数据连接或数据源 &#40;报表生成器和 SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
  [报表生成器中的数据连接、数据源和连接字符串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
- [数据源凭据-属性对话框&#40;报表生成器&#41;](../../2014/reporting-services/data-source-properties-dialog-box-credentials-report-builder.md)   
- [用于对话框、窗格和向导的报表生成器帮助](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ ["数据源属性" 对话框-"凭据 &#40;报表生成器&#41;](../../2014/reporting-services/data-source-properties-dialog-box-credentials-report-builder.md)   
+ [报表生成器对话框、窗格和向导的帮助](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

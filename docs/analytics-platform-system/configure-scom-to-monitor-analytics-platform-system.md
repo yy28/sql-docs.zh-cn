@@ -10,17 +10,17 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 67029d235a1bc65b5ee0ab6f01f51dea42ebcc8b
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401301"
 ---
 # <a name="configure-system-center-operations-manager-scom-to-monitor-analytics-platform-system"></a>配置 System Center Operations Manager （SCOM）以监视分析平台系统
 按照以下步骤配置用于分析平台系统的 System Center Operations Manager （SCOM）管理包。 管理包是从 SCOM 监视分析平台系统所需的。  
   
 ## <a name="BeforeBegin"></a>开始之前  
-**必备条件**  
+**先决条件**  
   
 必须安装并运行 System Center Operations Manager 2007 R2。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "74401301"
   
         ![RunAsProfileWizardAdd2](./media/configure-scom-to-monitor-analytics-platform-system/RunAsProfileWizardAdd2.png "RunAsProfileWizardAdd2")  
   
-## <a name="next-step"></a>后续步骤  
+## <a name="next-step"></a>下一步  
 配置管理包后，便可以开始监视设备了。 有关详细信息，请参阅[使用 &#40;分析平台系统&#41;监视设备 System Center Operations Manager ](monitor-the-appliance-by-using-system-center-operations-manager.md)。  
   
 <!-- MISSING LINKS ## See Also  

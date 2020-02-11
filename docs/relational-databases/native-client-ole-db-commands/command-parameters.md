@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6a0fe1fa812f42ad29b6cc9780acd896ff44bc8a
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73758291"
 ---
 # <a name="command-parameters"></a>命令参数
@@ -33,9 +33,9 @@ ms.locfileid: "73758291"
 {call SalesByCategory('Produce', ?)}  
 ```  
   
- 为了通过减少网络流量提高性能，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序不会自动派生参数信息，除非**ICommandWithParameters：： GetParameterInfo**或**ICommandPrepare：:P 准备**是在执行命令前调用。 这意味着 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序不会自动执行以下操作：  
+ 为了通过减少网络流量提高性能，除非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在执行命令之前调用**ICommandWithParameters：： GetParameterInfo**或**ICommandPrepare：:P 准备**，否则 Native Client OLE DB 提供程序不会自动派生参数信息。 这意味着[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序不会自动执行以下操作：  
   
--   验证使用 ICommandWithParameters::SetParameterInfo 指定的数据类型的正确性。  
+-   验证使用 ICommandWithParameters::SetParameterInfo 指定的数据类型的正确性****。  
   
 -   将取值函数绑定信息中指定的 DBTYPE 映射到参数的正确 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型。  
   
@@ -43,23 +43,23 @@ ms.locfileid: "73758291"
   
  若要确保不发生这种情况，应用程序应当：  
   
--   如果硬编码 ICommandWithParameters::SetParameterInfo，则应确保 pwszDataSourceType 与参数的  *数据类型匹配*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+-   如果硬编码 ICommandWithParameters::SetParameterInfo，则应确保 pwszDataSourceType 与参数的 * 数据类型匹配*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]****。  
   
 -   如果硬编码取值函数，则应确保绑定到参数的 DBTYPE 值与参数的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型具有相同类型。  
   
--   对应用程序进行编码以调用 ICommandWithParameters::GetParameterInfo，以便访问接口可以动态获取参数的  **数据类型**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 请注意，这会导致与服务器之间额外的网络往返。  
+-   对应用程序进行编码以调用 ICommandWithParameters::GetParameterInfo，以便访问接口可以动态获取参数的 ** 数据类型**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 请注意，这会导致与服务器之间额外的网络往返。  
   
 > [!NOTE]  
->  对于包含 FROM 子句的任意  **UPDATE 或 DELETE 语句，对于依赖于包含参数的子查询的任意 SQL 语句，对于在比较和类似表达式中包含参数标记或包含限定谓词的 SQL 语句，或其参数之一为函数参数的查询，访问接口不支持调用 ICommandWithParameters::GetParameterInfo**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 在对 SQL 语句进行批处理时，对于批处理中第一个语句后的语句中的参数标记，访问接口也不支持调用 ICommandWithParameters::GetParameterInfo。 在 \* 命令中不允许使用注释 (/* [!INCLUDE[tsql](../../includes/tsql-md.md)]/)。  
+>  对于包含 FROM 子句的任意 ** UPDATE 或 DELETE 语句，对于依赖于包含参数的子查询的任意 SQL 语句，对于在比较和类似表达式中包含参数标记或包含限定谓词的 SQL 语句，或其参数之一为函数参数的查询，访问接口不支持调用 ICommandWithParameters::GetParameterInfo**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 在对 SQL 语句进行批处理时，对于批处理中第一个语句后的语句中的参数标记，访问接口也不支持调用 ICommandWithParameters::GetParameterInfo****。 在 \* 命令中不允许使用注释 (/* [!INCLUDE[tsql](../../includes/tsql-md.md)]/)。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序支持 SQL 语句命令中的输入参数。 在过程调用命令中，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序支持输入参数、输出参数和输入/输出参数。 输出参数值在运行时（仅当没有行集返回时）或当应用程序用尽返回的所有行集时，返回到应用程序。 若要确保返回值有效，可使用 IMultipleResults 强制使用行集。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序支持 SQL 语句命令中的输入参数。 在过程调用命令中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序支持输入参数、输出参数和输入/输出参数。 输出参数值在运行时（仅当没有行集返回时）或当应用程序用尽返回的所有行集时，返回到应用程序。 若要确保返回值有效，可使用 IMultipleResults 强制使用行集****。  
   
- 在 DBPARAMBINDINFO 结构中无需指定存储过程参数的名称。 使用 NULL 作为*pwszName*成员的值，以指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序应忽略参数名，并且仅使用 ICommandWithParameters：：的*rgParamOrdinals*成员中指定的序号**SetParameterInfo**。 如果命令文本中既包含命名参数又包含未命名参数，则必须在所有命名参数之前指定所有未命名参数。  
+ 在 DBPARAMBINDINFO 结构中无需指定存储过程参数的名称。 使用 NULL 作为*pwszName*成员的值，以指示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序应忽略参数名，并且仅使用**ICommandWithParameters：： SetParameterInfo**的*rgParamOrdinals*成员中指定的序号。 如果命令文本中既包含命名参数又包含未命名参数，则必须在所有命名参数之前指定所有未命名参数。  
   
- 如果指定了存储过程参数的名称，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序将检查该名称，以确保该名称有效。 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序收到来自使用者的错误参数名称时，将返回错误。  
+ 如果指定了存储过程参数的名称，则[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序将检查该名称，以确保该名称有效。 当[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序从使用者接收到错误的参数名称时，它将返回错误。  
   
 > [!NOTE]  
->  若要公开对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML 和用户定义类型（UDT）的支持，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序实现新的[ISSCommandWithParameters](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)接口。  
+>  若要公开对[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML 和用户定义类型（UDT）的支持， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序实现新的[ISSCommandWithParameters](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)接口。  
   
 ## <a name="see-also"></a>另请参阅  
  [命令](../../relational-databases/native-client-ole-db-commands/commands.md)  

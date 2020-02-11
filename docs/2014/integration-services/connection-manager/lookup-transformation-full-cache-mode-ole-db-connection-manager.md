@@ -1,5 +1,5 @@
 ---
-title: 在完全缓存模式下使用 OLE DB 连接管理器实现查找转换 |Microsoft Docs
+title: 使用 OLE DB 连接管理器在完全缓存模式下实现查找转换 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a11eb545aa4d9beefc0852bb68ed18a84ffe3256
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833671"
 ---
 # <a name="implement-a-lookup-transformation-in-full-cache-mode-using-the-ole-db-connection-manager"></a>在完全缓存模式下使用 OLE DB 连接管理器来实现查找转换
@@ -81,7 +81,7 @@ ms.locfileid: "62833671"
   
 13. 单击 **“确定”** 以保存对查找转换的更改，然后运行包。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在完全缓存模式下使用缓存连接管理器实现查找转换](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
  [在不缓存模式或部分缓存模式下实现查找](../data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Integration Services 转换](../data-flow/transformations/integration-services-transformations.md)  

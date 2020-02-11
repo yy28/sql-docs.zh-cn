@@ -16,10 +16,10 @@ ms.assetid: 26499530-d93b-452b-bbe4-217ef1d11e68
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 53ade765b0f6b6710a12da06ae0b7470b55d9400
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73658944"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-wql"></a>使用 WQL 访问用于配置管理的 WMI 提供程序
@@ -32,11 +32,11 @@ ms.locfileid: "73658944"
   
 1.  从 "**开始**" 菜单中，单击 "**运行**"，然后输入**WBEMtest**。  
   
-2.  将出现 WBEMtest.exe 对话框。 单击 **“连接”** 。  
+2.  将出现 WBEMtest.exe 对话框。 单击“连接”  。  
   
-3.  在第一个文本字段中，键入计算机管理命名空间的 WMI 提供程序：root\Microsoft\SqlServer\ComputerManagement11。 单击 **“连接”** 。  
+3.  在第一个文本字段中，键入计算机管理命名空间的 WMI 提供程序：root\Microsoft\SqlServer\ComputerManagement11。 单击“连接”  。  
   
-4.  单击 "**查询**"。 键入返回当前在本地计算机上运行的服务的查询：**从 SqlService 中选择 \*。** 单击 **“应用”** 。  
+4.  单击 **“查询”**。 键入返回本地计算机上运行的当前服务的查询：**从 SqlService 中\*选择。** 单击“应用”  。  
   
 5.  通过添加**ServiceName = "MSSQLSERVER"，** 进一步细化查询。  
   

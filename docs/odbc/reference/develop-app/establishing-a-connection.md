@@ -1,5 +1,5 @@
 ---
-title: 建立的连接 |Microsoft Docs
+title: 建立连接 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -9,31 +9,31 @@ ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], connection functions
-- SQLBrowseConnect function [ODBC], establising a connection
+- SQLBrowseConnect function [ODBC], establishing a connection
 - functions [ODBC], data source or driver connections
 - connecting to data source [ODBC], functions
 - connecting to driver [ODBC], functions
 - connection functions [ODBC]
-- SQLConnect function [ODBC], establising a connection
+- SQLConnect function [ODBC], establishing a connection
 - SQLDriverConnect function [ODBC], making a connection
 - ODBC drivers [ODBC], connection functions
 ms.assetid: 8e3c717e-35e3-47ef-b5d3-3a96eeb7b869
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6fd8d7a68e993aa6b35897ca14a7a87c08fc8763
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7ef6f3d50382d810dd9df246c4d857d9467674f2
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901362"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76941028"
 ---
 # <a name="establishing-a-connection"></a>建立连接
-后分配环境和连接句柄并设置连接属性，该应用程序已准备好连接到数据源或驱动程序。 有三个不同的函数应用程序可用于执行此操作：**SQLConnect** （核心接口一致性级别）， **SQLDriverConnect** (Core) 和**SQLBrowseConnect** (级别 1)。 这三个用于在不同的方案中使用。 在连接时之前，应用程序可以确定这这些函数使用受支持**ConnectFunctions**返回的关键字**SQLDrivers**。  
+分配环境和连接句柄并设置任何连接属性后，应用程序就可以连接到数据源或驱动程序了。 应用程序可以使用三种不同的函数来执行此操作： **SQLConnect** （核心接口一致性级别）、 **SQLDriverConnect** （core）和**SQLBrowseConnect** （级别1）。 这三种方案中的每一个都设计为在不同的方案中使用。 在连接之前，应用程序可以通过**SQLDrivers**返回的**ConnectFunctions**关键字来确定支持这些函数中的哪一个。  
   
 > [!NOTE]  
->  某些驱动程序限制它们支持的活动连接数。 应用程序调用**SQLGetInfo** SQL_MAX_DRIVER_CONNECTIONS 选项以确定如何多个活动连接的特定驱动程序支持。  
+>  某些驱动程序会限制它们支持的活动连接数。 应用程序使用 SQL_MAX_DRIVER_CONNECTIONS 选项调用**SQLGetInfo** ，以确定特定驱动程序支持的活动连接数。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [默认数据源](../../../odbc/reference/develop-app/default-data-source.md)  
   

@@ -13,43 +13,43 @@ ms.assetid: 54fd857e-d2cb-467d-bb72-121e67a8e88d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f85512a1686df26cad739dc906e49cc5499f62e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67912305"
 ---
 # <a name="procedure-parameters"></a>过程参数
-参数在过程调用中的可以输入、 输入/输出或输出参数。 这是从所有其他 SQL 语句，并且始终包含输入的参数中的参数不同。  
+过程调用中的参数可以是输入、输入/输出或输出参数。 这不同于所有其他 SQL 语句中的参数，这些语句始终是输入参数。  
   
- 输入的参数用于将值发送到该过程。 例如，假设在部件表有 PartID、 描述和价格的列。 InsertPart 过程可能具有表中的每个列的输入的参数。 例如：  
+ 输入参数用于将值发送到过程。 例如，假设 Parts 表中包含 PartID、Description 和 Price 列。 InsertPart 过程可能会为表中的每个列提供一个输入参数。 例如：  
   
 ```  
 {call InsertPart(?, ?, ?)}  
 ```  
   
- 驱动程序不应修改前的输入缓冲区的内容**SQLExecDirect**或**SQLExecute**返回 SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_ERROR、 SQL_INVALID_HANDLE 或 sql_no_data 为止。 不应修改输入缓冲区的内容时**SQLExecDirect**或**SQLExecute**返回 SQL_NEED_DATA 或 SQL_STILL_EXECUTING。  
+ 在**SQLExecDirect**或**SQLExecute**返回 SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、SQL_INVALID_HANDLE 或 SQL_NO_DATA 之前，驱动程序不能修改输入缓冲区的内容。 当**SQLExecDirect**或**SQLExecute**返回 SQL_NEED_DATA 或 SQL_STILL_EXECUTING 时，不应修改输入缓冲区的内容。  
   
- 使用输入/输出参数来将值发送到过程和检索过程中的值。 使用相同的参数作为输入和输出参数往往是令人困惑，应当避免。 例如，假设过程接受一个订单 ID 并返回客户的 ID。 这可以用单个输入/输出参数进行定义：  
+ 输入/输出参数用于将值发送到过程，并从过程检索值。 同时使用与 input 和 output 参数相同的参数会造成混淆，应避免这样做。 例如，假设某一过程接受订单 ID 并返回该客户的 ID。 可以使用单个输入/输出参数定义此参数：  
   
 ```  
 {call GetCustID(?)}  
 ```  
   
- 可能会更好的做法使用两个参数： 订单 ID 的输出或客户 ID 的输入/输出参数的输入的参数：  
+ 使用两个参数可能更好：订单 ID 的输入参数以及客户 ID 的输出或输入/输出参数：  
   
 ```  
 {call GetCustID(?, ?)}  
 ```  
   
- 检索过程返回值并检索其值的过程参数，则使用输出参数返回值的过程有时称为*函数*。 例如，假设**GetCustID**刚刚提到的过程将返回一个值，指示它是否能够找到顺序。 在以下调用中，第一个参数是用于检索过程返回值的输出参数，第二个参数是输入的参数用于指定订单 ID，第三个参数是一个用于检索客户 ID 的输出参数：  
+ Output 参数用于检索过程的返回值，并从过程参数中检索值;返回值的过程有时称为*函数*。 例如，假设刚才提到的**GetCustID**过程返回一个值，该值指示它是否能够查找顺序。 在下面的调用中，第一个参数是一个输出参数，用于检索过程返回值，第二个参数是用于指定顺序 ID 的输入参数，第三个参数是用于检索客户 ID 的输出参数：  
   
 ```  
 {? = call GetCustID(?, ?)}  
 ```  
   
- 驱动程序处理的输入值和输入/输出过程中的参数不方式不同于其他 SQL 语句中的输入参数。 该语句执行时，它们检索变量的值绑定到这些参数并将其发送到数据源。  
+ 驱动程序在过程中处理输入和输入/输出参数的值，而不是其他 SQL 语句中的输入参数。 执行语句时，它们会检索绑定到这些参数的变量的值，并将它们发送到数据源。  
   
- 执行该语句后，驱动程序绑定到这些参数的变量中存储返回的值的输入/输出和输出参数。 这些返回值没有保证之后已提取的过程返回的所有结果之前设置并**SQLMoreResults**已返回 sql_no_data 为止。 如果执行该语句会导致出现错误，则输入/输出参数缓冲区或输出参数缓冲区的内容不确定。  
+ 执行语句之后，驱动程序将输入/输出和输出参数的返回值存储在绑定到这些参数的变量中。 在提取了过程返回的所有结果并将**SQLMoreResults**返回 SQL_NO_DATA 之前，不一定要设置这些返回值。 如果执行语句导致错误，则输入/输出参数缓冲区或输出参数缓冲区的内容不确定。  
   
- 应用程序调用**SQLProcedure**以确定是否一个过程的返回值。 它将调用**SQLProcedureColumns**来确定每个过程参数的类型 （返回值，输入、 输入/输出或输出）。
+ 应用程序调用**SQLProcedure**来确定过程是否具有返回值。 它调用**SQLProcedureColumns**来确定每个过程参数的类型（返回值、输入、输入/输出或输出）。

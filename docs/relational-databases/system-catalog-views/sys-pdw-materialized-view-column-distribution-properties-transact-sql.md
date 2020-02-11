@@ -13,10 +13,10 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 934b1ed84aa7391ad8cf47e463dd38b37408ec00
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401666"
 ---
 # <a name="syspdw_materialized_view_column_distribution_properties-transact-sql"></a>sys. pdw_materialized_view_column_distribution_properties （Transact-sql） 
@@ -27,8 +27,8 @@ ms.locfileid: "74401666"
   
 |列名|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|object_id|**整形**|列所属对象的 ID。 |  
-|column_id|**整形**|列的 ID。|  
+|object_id|**int**|列所属对象的 ID。 |  
+|column_id|**int**|列的 ID。|  
 |distribution_ordinal|**tinyint**|0 = 不是分布列。</br> 1 = SQL 数据仓库使用此列来分配具体化视图。|
  
 ## <a name="permissions"></a>权限 

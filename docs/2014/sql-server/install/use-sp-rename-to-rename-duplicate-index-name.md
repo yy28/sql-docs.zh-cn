@@ -17,13 +17,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3ca4efb2a16f615af57e89fa56a4dcb8bdb3bf5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091361"
 ---
-# <a name="use-sprename-to-rename-duplicate-index-name"></a>使用 sp_rename 重命名重复的索引名称
+# <a name="use-sp_rename-to-rename-duplicate-index-name"></a>使用 sp_rename 重命名重复的索引名称
   升级顾问检测到重复的表或视图索引名称。 请先重命名重复的索引以消除重复，然后再升级。  
   
 ## <a name="component"></a>组件  
@@ -58,10 +58,10 @@ ms.locfileid: "66091361"
     WHERE i.id = OBJECT_ID('table_or_view_name')  
     ```  
   
-4.  如有必要，使用**sp_rename**再次以更正索引名称。  
+4.  如有必要，请再次使用**sp_rename**来更正索引名称。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库引擎升级问题](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 升级顾问&#91;新&#93;](sql-server-2014-upgrade-advisor.md)  
+ [SQL Server 2014 升级顾问 &#91;新&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

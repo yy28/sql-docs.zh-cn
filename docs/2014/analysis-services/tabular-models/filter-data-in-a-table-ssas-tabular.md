@@ -1,5 +1,5 @@
 ---
-title: 筛选表 (SSAS 表格) 中的数据 |Microsoft Docs
+title: 筛选表中的数据（SSAS 表格） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 869185e56db9a4ffb07282d3ce51ced191a6bac8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067131"
 ---
 # <a name="filter-data-in-a-table-ssas-tabular"></a>筛选表中的数据（SSAS 表格）
@@ -33,27 +33,27 @@ ms.locfileid: "66067131"
   
 2.  在“自动筛选”菜单中，执行以下操作之一：  
   
-    -   在列值的列表中，选择或清除作为筛选依据的一个或多个值，然后单击 **“确定”** 。  
+    -   在列值的列表中，选择或清除一个或多个要按其进行筛选的值，然后单击 **"确定"**。  
   
          如果值的数目极多，则可能无法在列表中显示各个项。 此时您将看到消息“项过多，无法显示。”  
   
-    -   单击“数字筛选器”  或“文本筛选器”  （根据列类型），然后单击比较运算符命令（如“等于”  ），或单击“自定义筛选器”  。 在 **“自定义筛选器”** 对话框中，创建筛选器，然后单击 **“确定”** 。  
+    -   单击 "**数字筛选器**" 或 "**文本筛选器**" （具体取决于列的类型），然后单击比较运算符命令（如**Equals**），或单击 "**自定义筛选器**"。 在 **“自定义筛选器”** 对话框中，创建筛选器，然后单击 **“确定”**。  
   
 ### <a name="to-clear-a-filter-for-a-column"></a>清除列筛选器  
   
 1.  单击您要清除其筛选器的列的标题中的箭头。  
   
-2.  单击**清除筛选器从\<列名 >** 。  
+2.  单击 "**从列名\<中清除筛选器">**。  
   
 ### <a name="to-clear-all-filters-for-a-table"></a>清除表的所有筛选器  
   
 1.  在模型设计器中，选择您要为其清除筛选器的表。  
   
-2.  单击 **“列”** 菜单，然后单击 **“清除所有筛选器”** 。  
+2.  单击 **“列”** 菜单，然后单击 **“清除所有筛选器”**。  
   
-## <a name="see-also"></a>请参阅  
- [对数据进行筛选和排序（SSAS 表格）](../filter-and-sort-data-ssas-tabular.md)   
- [透视表（SSAS 表格）](perspectives-ssas-tabular.md)   
- [角色（SSAS 表格）](roles-ssas-tabular.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;SSAS 表格中对数据进行筛选和排序&#41;](../filter-and-sort-data-ssas-tabular.md)   
+ [SSAS 表格&#41;&#40;透视](perspectives-ssas-tabular.md)   
+ [&#40;SSAS 表格&#41;的角色](roles-ssas-tabular.md)  
   
   

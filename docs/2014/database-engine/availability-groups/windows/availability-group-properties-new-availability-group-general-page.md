@@ -1,5 +1,5 @@
 ---
-title: 可用性组属性和新建可用性组 （常规页） |Microsoft Docs
+title: 可用性组属性和新建可用性组（"常规" 页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,30 +13,32 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 248ffe57906052c0d7dafcd187bb1b2b34cd6e64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62815650"
 ---
 # <a name="availability-group-properties-and-new-availability-group-general-page"></a>可用性组属性和新建可用性组（“常规”页）
-  本主题同时适用于 **“新建可用性组”** 对话框和 **“可用性组属性”** 对话框的 **“常规”** 选项卡。  **“新建可用性组”** 对话框支持您无需使用 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]即创建新的可用性组。 **“可用性组属性”** 对话框支持您查看和修改现有的可用性组的配置。  
+  本主题适用于 "**新建可用性组**" 对话框和 "**可用性组属性**" 对话框的 "**常规**" 选项卡。  
+  **“新建可用性组”** 对话框支持您无需使用 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]即创建新的可用性组。 
+  **“可用性组属性”** 对话框支持您查看和修改现有的可用性组的配置。  
   
  **查看可用性组属性**  
   
 -   [查看可用性组属性 (SQL Server)](view-availability-group-properties-sql-server.md)  
   
--   [使用 AlwaysOn 面板 (SQL Server Management Studio)](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [使用 AlwaysOn 仪表板 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 ## <a name="uielement-list"></a>UIElement 列表  
  **可用性组名称**  
  可用性组的名称。 这是在 Windows Server 故障转移群集 (WSFC) 内必须唯一的用户指定的名称。  
   
 ## <a name="availability-databases"></a>可用性数据库  
- **Database Name**  
+ **数据库名称**  
  已添加到可用性组中的数据库的名称。  
   
- **“添加”**  
+ **添加**  
  单击此选项可将数据库添加到可用性组。  
   
  **删除**  
@@ -46,14 +48,14 @@ ms.locfileid: "62815650"
  **服务器实例**  
  承载此副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的服务器名称；对于非默认实例，则为其实例名称。  
   
- **角色**  
- **主**  
+ **职位**  
+ **主要节点**  
  当前主副本。  
   
  **辅助副本**  
  当前辅助副本。  
   
- **正在解析**  
+ **从而**  
  当前该副本角色处于正在解析为主角色或辅助角色的进程中。  
   
  **可用性模式**  
@@ -65,7 +67,7 @@ ms.locfileid: "62815650"
  **同步提交**  
  主副本等待提交给定的事务，直到辅助副本将事务写入磁盘。  
   
- 有关详细信息，请参阅[可用性模式 （AlwaysOn 可用性组）](availability-modes-always-on-availability-groups.md)。  
+ 有关详细信息，请参阅[可用性模式（AlwaysOn 可用性组）](availability-modes-always-on-availability-groups.md)。  
   
  **故障转移模式**  
  副本的故障转移模式，可为下列值之一：  
@@ -73,7 +75,7 @@ ms.locfileid: "62815650"
  **自动**  
  自动故障转移。 副本为自动故障转移的目标。 仅当可用性模式设置为同步提交时，才选择此选项。  
   
- **Manual**  
+ **手动**  
  手动故障转移。 副本仅能由数据库管理员手动进行故障转移。  
   
  **主角色中的连接**  
@@ -83,9 +85,9 @@ ms.locfileid: "62815650"
  主副本中的数据库允许所有连接。 这是默认设置。  
   
  **允许读/写连接**  
- 不允许 Application Intent 连接属性设置为 **ReadOnly** 的连接。 在 Application Intent 属性设置为 **ReadWrite** 或者未设置 Application Intent 连接属性时，将允许连接。 有关 Application Intent 连接属性的详细信息，请参阅 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
+ 不允许 Application Intent 连接属性设置为 **ReadOnly** 的连接。 当应用程序意向属性设置为**ReadWrite**或未设置 application 意向连接属性时，将允许连接。 有关 Application Intent 连接属性的详细信息，请参阅 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
   
- **可读取辅助角色**  
+ **可读辅助**  
  正在履行辅助角色的可用性副本（也就是辅助副本）是否可以接受来自客户端的连接，可为下列值之一：  
   
  **是**  
@@ -100,16 +102,16 @@ ms.locfileid: "62815650"
  **会话超时（秒）**  
  此副本上会话超时期限的秒数。  
   
- **端点 URL**  
+ **终结点 URL**  
  端点的 URL。 有关这些 URL 格式的信息，请参阅[在添加或修改可用性副本时指定终结点 URL (SQL Server)](specify-endpoint-url-adding-or-modifying-availability-replica.md)。  
   
- **“添加”**  
+ **添加**  
  单击此选项可将辅助副本添加到可用性组。  
   
  **删除**  
  单击此选项可从可用性组中删除辅助副本。  
   
-## <a name="see-also"></a>请参阅  
- [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+## <a name="see-also"></a>另请参阅  
+ [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

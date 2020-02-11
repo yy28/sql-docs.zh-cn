@@ -16,10 +16,10 @@ ms.author: genemi
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a1d02ef5827ff9d121c19dd055f97feea5184758
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74095359"
 ---
 # <a name="conversions-ole-db"></a>转换 (OLE DB)
@@ -31,18 +31,19 @@ ms.locfileid: "74095359"
   
 -   **Datetime**和**datetimeoffset**字符串的格式为：  
   
-     yyyy-mm-dd[ hh:mm:ss[.9999999][ ± hh:mm]]  
+     *yyyy*-** mm-*dd*[ *hh*：*mm*：*ss*[。*9999999*] [± *hh*：*mm*]]  
   
--   时间字符串的格式为：  
+-   时间字符串的格式为****：  
   
-     hh:mm:ss[.9999999]  
+     *hh*：*mm*：*ss*[。*9999999*]  
   
 -   **日期**字符串的格式为：  
   
-     yyyy*mm*dd--  
+     *yyyy*-** mm-*dd*  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 和 SQLOLEDB 的早期版本实现了 OLE 转换，以防标准转换失败。 因此，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 和更高版本执行的某些转换不同于 OLE DB 规范。  
+>  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 和 SQLOLEDB 的早期版本实现了 OLE 转换，以防标准转换失败。 因此，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 和更高版本执行的某些转换不同于 OLE DB 规范。  
   
  从字符串转换允许更灵活处理空格和字段宽度。 有关详细信息，请参阅[数据类型支持 OLE DB 日期和时间改进](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)中的 "数据格式：字符串和文字" 部分。  
   
@@ -72,6 +73,6 @@ ms.locfileid: "74095359"
  说明在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]（或更高版本）与使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 编写的客户端应用程序之间执行的日期/时间转换。  
   
 ## <a name="see-also"></a>另请参阅  
- [日期和时间改进 (OLE DB)](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [OLE DB &#40;的日期和时间改进&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

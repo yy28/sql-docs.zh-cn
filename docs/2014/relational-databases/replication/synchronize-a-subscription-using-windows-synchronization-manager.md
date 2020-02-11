@@ -1,5 +1,5 @@
 ---
-title: 同步订阅使用 Windows 同步管理器 （Windows 同步管理器） |Microsoft Docs
+title: 使用 Windows 同步管理器同步订阅（Windows 同步管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 04b1c5322408f66ab2a4023e3d215cc7e669eab6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62745756"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager-windows-synchronization-manager"></a>使用 Windows 同步管理器同步订阅（Windows 同步管理器）
   如果[!INCLUDE[msCoName](../../includes/msconame-md.md)] 与同步管理器在同一台计算机上运行，那么只能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 同步管理器同步对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布的订阅（也可用来同步脱机文件和网页）。 若要使用同步管理器：  
   
-1.  在“订阅属性 - \<Subscriber>:\<SubscriptionDatabase>”对话框**中启用“使用 Windows 同步管理器对请求订阅进行同步”： 有关访问此对话框的详细信息，请参阅[查看和修改请求订阅属性](view-and-modify-pull-subscription-properties.md)。  
+1.  在“订阅属性 - **订阅服务器>: \<订阅数据库>”\<** 对话框中，启用使用 Windows 同步管理器对请求订阅进行同步的选项。 有关访问此对话框的详细信息，请参阅[查看和修改请求订阅属性](view-and-modify-pull-subscription-properties.md)。  
   
 2.  通过 Windows 的 **“开始”** 菜单访问同步管理器。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62745756"
   
 ### <a name="to-enable-the-synchronization-of-pull-subscriptions-with-windows-synchronization-manager"></a>启用使用 Windows 同步管理器对请求订阅进行同步的选项  
   
-1.  在“订阅属性 - \<Subscriber>:  **\<SubscriptionDatabase>”对话框的“常规”页面上，对于“使用 Windows 同步管理器”选项，选择值“启用”   。  
+1.  在“订阅属性 - **订阅服务器>:** 订阅数据库>” **\<对话框的“常规”\<** 页上，针对“使用 Windows 同步管理器”  选项选择值“启用”  。  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62745756"
   
     -   单击 **“开始”** ，指向 **“程序”** 或 **“所有程序”** ，然后指向 **“附件”** ，再单击 **“同步”** 。  
   
-    -   单击 **“开始”** ，再单击 **“运行”** 在中**运行**对话框中，键入`mobsync.exe`中**打开**字段，，然后单击**确定**。  
+    -   单击 **“开始”** ，再单击 **“运行”** 在 "**运行**" 对话框中， `mobsync.exe`在 "**打开**" 字段中键入，然后单击 **"确定"**。  
   
 2.  在 **“要同步的项”** 对话框中，选择要同步的订阅。 将在计算机上安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例下列出订阅。  
   
@@ -116,6 +116,6 @@ ms.locfileid: "62745756"
 > [!NOTE]  
 >  所做的编辑只有在属于为解决冲突而选择的行时才生效。 例如，如果在 **“发布服务器”** 下进行编辑，然后单击 **“接受订阅服务器”** ，那么所做的编辑将被忽略。  
   
-## <a name="see-also"></a>请参阅  
- [交互式冲突解决方法](merge/advanced-merge-replication-conflict-interactive-resolution.md)  
+## <a name="see-also"></a>另请参阅  
+ [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md)  
   

@@ -11,10 +11,10 @@ ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 3ae40a50eb9866b452efb8d387df62f8bed8fa24
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728308"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>使用 MDSModelDeploy 部署模型部署包
@@ -32,16 +32,16 @@ ms.locfileid: "73728308"
 > [!IMPORTANT]  
 >  包只能部署到创建它们的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本中。 这意味着在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中创建的包不能部署到 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 或更高版本。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  
   
 -   您必须有权访问目标 **环境中的** “系统管理” [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 功能区域。  
   
--   模型部署包必须存在。 有关详细信息，请参阅  [Create a Model Deployment Package by Using MDSModelDeploy](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)。  
+-   模型部署包必须存在。 有关详细信息，请参阅[使用向导创建模型部署包](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)。  
   
 -   您必须是部署模型的环境中的管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
--   如果正在更新包含数据的模型，则不能“锁定”或“提交”正在部署到的版本。  
+-   如果正在更新包含数据的模型，则不能“锁定”或“提交”正在部署到的版本********。  
   
 ### <a name="to-deploy-a-model-deployment-package"></a>部署模型部署包  
   
@@ -57,7 +57,7 @@ ms.locfileid: "73728308"
   
     -   若要显示所有可用选项，请键入 `MDSModelDeploy` ，然后按 Enter 键。  
   
-    -   若要显示某个选项的帮助，请键入以下命令，其中 OptionName 是该选项的名称：`MDSModelDeploy help OptionName`。  
+    -   若要显示某个选项的帮助，请键入以下命令，其中 OptionName** 是该选项的名称：`MDSModelDeploy help OptionName`。  
   
 4.  可选。 如果您有多个 Web 应用程序，通过键入下面的命令并按 Enter 键，确定您要部署到的服务的名称：  
   
@@ -90,11 +90,11 @@ ms.locfileid: "73728308"
     > [!IMPORTANT]  
     >  如果使用 MDSModelDeploy 工具更新现有模型及其数据，并且该包不包含目标模型中存在的实体、属性或成员，则 MDSModelDeploy 不会从模型中删除此实体、属性或成员。  
   
-     其中，PackageName 是包文件 (.pkg) 的名称，ModelName 是新模型的名称，VersionName 是版本的名称，ServiceName 是上一步中返回的服务的名称。 确保模型名称和版本名称完全匹配区分大小写的名称。  
+     其中，PackageName** 是包文件 (.pkg) 的名称，ModelName** 是新模型的名称，VersionName** 是版本的名称，ServiceName** 是上一步中返回的服务的名称。 确保模型名称和版本名称完全匹配区分大小写的名称。  
   
 6.  成功部署包后，将显示一条消息“MDSModelDeploy 操作已成功完成”。  
   
- **注意：**  
+ **本票**  
   
 -   如果包中的订阅视图与现有模型中的订阅视图同名，则显示此警告： **Deployer 订阅视图已重命名** ，且视图创建为 *modelname.subscriptionviewname*。 如果此名称已使用，则不会创建订阅视图。  
   
@@ -115,9 +115,9 @@ ms.locfileid: "73728308"
 ## <a name="next-steps"></a>后续步骤  
  模型部署包中不包括文件属性以及用户和组权限。 在您部署模型后，必须手动更新这些内容。 有关详细信息，请参阅：  
   
--   [分配模型对象权限 (Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)  
+-   [&#40;Master Data Services 分配模型对象权限&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [部署模型 (Master Data Services)](../master-data-services/deploying-models-master-data-services.md)  
+ [&#40;Master Data Services 部署模型&#41;](../master-data-services/deploying-models-master-data-services.md)  
   
   

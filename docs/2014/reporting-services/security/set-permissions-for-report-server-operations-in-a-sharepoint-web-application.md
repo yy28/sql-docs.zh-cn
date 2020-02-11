@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cb19f95d2dc5de8f461285d84776b80e3f9fb778
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101551"
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>在 SharePoint Web 应用程序中设置报表服务器操作的权限
@@ -51,7 +51,7 @@ ms.locfileid: "66101551"
   
  如果使用的是预定义权限级别，则无需执行任何操作，因为上述权限已经包含在“完全控制”、“设计”、“参与讨论”、“读取”和“有限访问”中。 但是，如果使用自定义权限级别或对分配给特定用户或组的权限进行编辑，则必须手动添加此权限。  
   
- 利用“浏览用户信息”权限，报表服务器可以返回有关项目创建者和最后修改项目的用户的信息。 如果无此权限，报表服务器将返回以下错误。 对于浏览操作，错误为："报表服务器遇到 SharePoint 错误。 ---> System.UnauthorizedAccessException:访问被拒绝。" 对于发布操作，错误为："向用户授予权限\<域 >\\< 用户\>不足，无法执行此操作。"  
+ 利用“浏览用户信息”权限，报表服务器可以返回有关项目创建者和最后修改项目的用户的信息。 如果无此权限，报表服务器将返回以下错误。 对于浏览操作，错误为：“报表服务器遇到 SharePoint 错误。 ---> System.UnauthorizedAccessException：拒绝访问。” 对于发布操作，错误为“为用户‘\<domain>\\<user\>’授予的权限不足，无法执行此操作。”  
   
 ##  <a name="permissionReports"></a> 查看和管理报表的权限  
  报表定义权限是通过包含报表的库的列表权限来定义的，但如果要限制访问，则可以对单个报表设置权限。 下表提供了任务列表以及支持每个任务的权限列表。  
@@ -81,7 +81,7 @@ ms.locfileid: "66101551"
   
 |任务|权限|  
 |----------|----------------|  
-|启动报表生成器。|没有显式用来控制对报表生成器的使用的权限。 如果配置了报表服务器集成并拥有将项添加到库的权限，则可以使用报表生成器。 若要从库的 **“新建”** 菜单中启动报表生成器，则必须注册报表生成器内容类型。 有关详细信息，请参阅[将报表服务器内容类型添加到库&#40;在 SharePoint 集成模式下的 Reporting Services&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md)。|  
+|启动报表生成器。|没有显式用来控制对报表生成器的使用的权限。 如果配置了报表服务器集成并拥有将项添加到库的权限，则可以使用报表生成器。 若要从库的 **“新建”** 菜单中启动报表生成器，则必须注册报表生成器内容类型。 有关详细信息，请参阅[将报表服务器内容类型添加到库 &#40;Reporting Services 在 SharePoint 集成模式下&#41;" ](../add-reporting-services-content-types-to-a-sharepoint-library.md)。|  
 |上载模型或共享数据源。|对将要包含文件的库拥有“添加项”  权限。|  
 |查看模型或依赖的共享数据源。|对包含文件的库拥有“查看项”  权限。<br /><br /> 如果模型包含模型项安全设置，则用户还必须拥有该模型的“枚举权限”。 |  
 |从共享数据源中生成模型。|对包含共享数据源 (.rsds) 文件（从中生成模型）的库拥有“添加项”  权限。|  
@@ -118,9 +118,9 @@ ms.locfileid: "66101551"
   
  可以设置共享数据源的属性，这些属性可决定各个用户是否可以查看或管理共享数据源。 查看或管理共享数据源的权限与报表查看权限不同；您可以在对 .rsds 文件本身没有查看权限的情况下查看使用 .rsds 文件的报表。  
   
-|“任务”|权限|  
+|任务|权限|  
 |-----------|----------------|  
-|创建共享数据源。|对包含共享数据源的库拥有“添加项”  权限。 可以从库中的“新建”菜单创建新共享数据源。 为此，必须在库中注册报表数据源内容类型。 有关详细信息，请参阅[将报表服务器内容类型添加到库&#40;在 SharePoint 集成模式下的 Reporting Services&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md)。|  
+|创建共享数据源。|对包含共享数据源的库拥有“添加项”  权限。 可以从库中的“新建”菜单创建新共享数据源。 为此，必须在库中注册报表数据源内容类型。 有关详细信息，请参阅[将报表服务器内容类型添加到库 &#40;Reporting Services 在 SharePoint 集成模式下&#41;" ](../add-reporting-services-content-types-to-a-sharepoint-library.md)。|  
 |编辑共享数据源。|对包含共享数据源的库或对共享数据源本身拥有“编辑项”  权限。|  
 |删除共享数据源。|对包含共享数据源的库或对共享数据源本身拥有“删除项”  权限。|  
 |将共享数据源 (.rsds) 用于报表。|对报表或包含报表的库拥有“编辑项”  权限。 在报表上设置数据源属性包括选择共享数据源。|  
@@ -131,7 +131,7 @@ ms.locfileid: "66101551"
 > [!NOTE]  
 >  没有编辑报表模型的权限。 尽管可以生成或删除报表模型，但不能在 SharePoint 站点内编辑这些报表模型。 编辑报表模型要求使用模型设计器，这是一种不受 SharePoint 中所设置的权限影响的客户端创作工具。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在 SharePoint 站点上授予对报表服务器项的权限](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Reporting Services 中的角色和任务与 SharePoint 组和权限的比较](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [在 SharePoint 站点上授予对报表服务器项的权限](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   

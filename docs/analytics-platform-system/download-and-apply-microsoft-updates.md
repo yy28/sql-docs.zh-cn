@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 2b24d55720d6db5997bfa85c2621f0e8d58c5f95
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401195"
 ---
 # <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>下载并应用 Microsoft 更新以进行分析平台系统
@@ -65,7 +65,7 @@ ms.locfileid: "74401195"
   
 1.  在 WSUS 控制台的左窗格中，单击 "**所有更新**"。  
   
-2.  在 "**所有更新**" 窗格中，单击 "**审批**" 下拉菜单，将 "**批准**" 设置为 "已**拒绝**"。 单击 "**状态**" 下拉菜单，将 "**状态**" 设置为 "**任何**"。 单击 "**刷新**"。  
+2.  在 "**所有更新**" 窗格中，单击 "**审批**" 下拉菜单，将 "**批准**" 设置为 "已**拒绝**"。 单击 "**状态**" 下拉菜单，将 "**状态**" 设置为 "**任何**"。 单击“刷新”。   
   
     右键单击 "**标题**" 列，然后选择 "**文件状态**" 以在下载完成后验证文件状态。  
   
@@ -129,7 +129,7 @@ ms.locfileid: "74401195"
   
 8.  在 "**所有更新**" 窗口中，将 "**状态**" 设置为 "**失败或需要**"。  
   
-9. 单击“刷新”。****  
+9. 单击“刷新”。   
   
 10. 如果**需要的更新**大于零，请联系支持人员以获得帮助。  
   

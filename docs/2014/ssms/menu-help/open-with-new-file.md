@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 92d0b5adcdb6b5c482b2a0abcf4ca00f83674df9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63240133"
 ---
 # <a name="open-with-new-file"></a>打开方式（新建文件）
@@ -29,17 +29,17 @@ ms.locfileid: "63240133"
  **打开**  
  单击“打开”  可在所选编辑器中打开文档。  
   
- **“添加”**  
+ **添加**  
  单击此按钮可向“选择要打开的程序”  下的列表中添加程序。 可以在“程序名”  字段中键入该程序的文件路径，也可以通过单击“浏览”  定位到该程序所在的位置。 在“友好名称”  中，输入要在“选择要打开的程序”  下的列表中显示的程序名。  
   
  **删除**  
  若要删除某个程序，请选择该程序，再单击“删除”  。  
   
  **设为默认值**  
- 若要为所选文件类型指定默认编辑器以及语言编码选项（如适用），请从“选择要打开的程序”  下的列表中选择一个程序，再单击“设为默认值”  。 下次在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中打开这种类型的文件时，文档将在新的默认编辑器中打开。  
+ 若要为所选文件类型指定默认编辑器以及语言编码选项（如适用），请从“选择要打开的程序”  下的列表中选择一个程序，再单击“设为默认值”  。 下次在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中打开这种类型的文件时，文档将在新的默认编辑器中打开。  
   
 > [!NOTE]  
 >  在“选择要打开的程序”  下的程序列表中，所选文件类型的默认编辑器名称后面带有“(默认值)”字样  。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [将文件扩展名与代码编辑器关联](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  

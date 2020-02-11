@@ -1,5 +1,5 @@
 ---
-title: 群集节点配置 （完成） |Microsoft Docs
+title: 群集节点配置（完成） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 223940bda5cf30098d431cfcc3ded53a867a92b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66096444"
 ---
 # <a name="cluster-node-configuration-complete"></a>群集节点配置(完成)
@@ -23,10 +23,10 @@ ms.locfileid: "66096444"
 ## <a name="options"></a>选项  
  下拉框中有以下选项：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称-选择的实例名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]故障转移群集。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例名称-选择[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]故障转移群集的实例名称。  
   
--   此节点的此字段的名称是使用计算机名称预填充其中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]运行安装程序。  
+-   此节点的名称-此字段预填充了运行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装程序的计算机名称。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集网络名称-此字段不是预先填充的。 为新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例指定网络名称， 该名称用来在网络上标识故障转移群集实例。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]故障转移群集网络名称-未预填充此字段。 为新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例指定网络名称， 该名称用来在网络上标识故障转移群集实例。  
   
   

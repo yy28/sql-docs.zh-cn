@@ -1,5 +1,5 @@
 ---
-title: 连接 (ADO for VisualC++语法) |Microsoft Docs
+title: 连接（ADO for Visual C++ 语法） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,10 +16,10 @@ ms.assetid: cb5e1e15-c5b4-44ab-892f-bf1ae601d0a5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fe4c9a57dd8023561ea3d6d93bce424133a0d5dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919544"
 ---
 # <a name="connection-ado-for-visual-c-syntax"></a>连接（ADO for Visual C++ 语法）
@@ -36,7 +36,7 @@ Open(BSTR ConnectionString, BSTR UserID, BSTR Password, long Options)
 OpenSchema(SchemaEnum Schema, VARIANT Restrictions, VARIANT SchemaID, _ADORecordset **pprset)  
 ```  
   
-## <a name="properties"></a>properties  
+## <a name="properties"></a>属性  
   
 ```  
 get_Attributes(long *plAttr)  
@@ -62,7 +62,7 @@ get_Version(BSTR *pbstr)
 get_Errors(ADOErrors **ppvObject)  
 ```  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>事件  
   
 ```  
 BeginTransComplete(LONG TransactionLevel, ADOError *pError, EventStatusEnum *adStatus, _ADOConnection *pConnection)  
@@ -76,5 +76,5 @@ WillConnect(BSTR *ConnectionString, BSTR *UserID, BSTR *Password, long *Options,
 WillExecute(BSTR *Source, CursorTypeEnum *CursorType, LockTypeEnum *LockType, long *Options, EventStatusEnum *adStatus, _ADOCommand *pCommand, _ADORecordset *pRecordset, _ADOConnection *pConnection)  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

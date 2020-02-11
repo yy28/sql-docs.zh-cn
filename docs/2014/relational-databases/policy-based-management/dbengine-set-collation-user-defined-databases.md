@@ -1,5 +1,5 @@
 ---
-title: 将匹配与 master 和 model 数据库排序规则的用户定义数据库设置 |Microsoft Docs
+title: 将用户定义数据库的排序规则设置为与 master 和 model 数据库的排序规则 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,11 +10,11 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f0ef68b1e36ca96af1a817aa8880f2e82ee4ac50
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62705162"
 ---
 # <a name="set-the-collation-of-user-defined-databases-to-match-those-of-the-master-and-model-databases"></a>将用户定义的数据库排序规则设置为与 master 和 model 数据库的排序规则一致
-请参阅[将匹配与 master 和 model 数据库排序规则的用户定义数据库设置为](../../database-engine/set-collation-user-defined-databases-match-master-model-databases.md)。
+请参阅[设置用户定义数据库的排序规则，使其与 master 和 Model 数据库的排序规则匹配](../../database-engine/set-collation-user-defined-databases-match-master-model-databases.md)。

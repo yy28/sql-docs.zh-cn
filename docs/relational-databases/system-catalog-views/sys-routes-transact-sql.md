@@ -1,5 +1,5 @@
 ---
-title: sys.routes (Transact SQL) |Microsoft Docs
+title: sys.databases （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 09/07/2018
 ms.prod: sql
@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: bfdd322107da1a08edb3933aee9d5b79b6c2b47a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67904439"
 ---
 # <a name="sysroutes-transact-sql"></a>sys.routes (Transact-SQL)
@@ -32,16 +32,16 @@ ms.locfileid: "67904439"
 
   在目录视图中，每个路由对应一行。 Service Broker 使用路由定位服务的网络地址。   
 
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|路由名称，在数据库中唯一。 不可为 NULL。|  
+|**路径名**|**sysname**|路由名称，在数据库中唯一。 不可为 NULL。|  
 |**route_id**|**int**|路由的标识符。 不可为 NULL。|  
-|**principal_id**|**int**|拥有路由的数据库主体的标识符。 可以为 NULL。|  
-|**remote_service_name**|**nvarchar(256)**|远程服务的名称。 可以为 NULL。|  
-|**broker_instance**|**nvarchar(128)**|承载远程服务的 Broker 的标识符。 可以为 NULL。|  
-|**lifetime**|**datetime**|日期和路由的过期的时间。 注意，该值不使用本地时区， 而是显示 UTC 的过期时间。 可以为 NULL。|  
-|**address**|**nvarchar(256)**|Service Broker 将远程服务的消息发送到的网络地址。 可以为 NULL。 对于 SQL 数据库托管实例，必须是本地地址。|  
-|**mirror_address**|**nvarchar(256)**|在地址中指定的服务器镜像伙伴的网络地址。 可以为 NULL。|  
+|**principal_id**|**int**|拥有路由的数据库主体的标识符。 可以为 null.|  
+|**remote_service_name**|**nvarchar(256)**|远程服务的名称。 可以为 null.|  
+|**broker_instance**|**nvarchar(128)**|承载远程服务的 Broker 的标识符。 可以为 null.|  
+|**生存期**|**datetime**|路由过期的日期和时间。 注意，该值不使用本地时区， 而是显示 UTC 的过期时间。 可以为 null.|  
+|**地址**|**nvarchar(256)**|Service Broker 将远程服务的消息发送到的网络地址。 可以为 null. 对于 SQL 数据库托管实例，地址必须是本地的。|  
+|**mirror_address**|**nvarchar(256)**|在地址中指定的服务器镜像伙伴的网络地址。 可以为 null.|  
   
 ## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

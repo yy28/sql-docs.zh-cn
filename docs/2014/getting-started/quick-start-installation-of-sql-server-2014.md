@@ -15,15 +15,15 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8bd173abbb6ee355429d891a49f672bb0ac818d2
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74683616"
 ---
 # <a name="quick-start-installation-of-sql-server-2014"></a>SQL Server 2014 安装快速入门
     
-## <a name="introduction"></a>简介  
+## <a name="introduction"></a>介绍  
  
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安装向导基于 Windows Installer。 它提供了一个功能树以用来安装以下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 组件：  
   
@@ -61,7 +61,7 @@ ms.locfileid: "74683616"
   
      有关通过配置文件运行安装程序的示例语法和安装参数，请参阅[使用配置文件安装 SQL Server 2014](../database-engine/install-windows/install-sql-server-using-a-configuration-file.md) 。  
   
--   **Sysprep.inf**  
+-   **SysPrep**  
   
      有关使用 SysPrep 安装[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的过程信息，请参阅[使用 sysprep 安装 SQL Server 2014](../database-engine/install-windows/install-sql-server-using-sysprep.md) 。  
   
@@ -99,11 +99,11 @@ ms.locfileid: "74683616"
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|查看硬件和软件要求、操作系统支持、网络和 Internet 注意事项以及硬盘空间要求。|[安装必备组件](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)|  
+|查看硬件和软件要求、操作系统支持、网络和 Internet 注意事项以及硬盘空间要求。|[安装先决条件](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)|  
 |查看[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]安装的安全注意事项。|[安全注意事项](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)|  
 |查看不同版本的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 所支持的功能的详细信息。|[功能和版本](features-supported-by-the-editions-of-sql-server-2014.md)|  
 |从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 所提供的版本和组件中确定最佳选择。|[SQL Server 2014 的版本和组件](../sql-server/editions-and-components-of-sql-server-2016.md)|  
-|查看硬件配置并了解如何准备 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 故障转移群集安装。|[安装故障转移群集之前](../sql-server/failover-clusters/install/before-installing-failover-clustering.md)|  
+|查看硬件配置并了解如何准备 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 故障转移群集安装。|[安装故障转移群集前的准备工作](../sql-server/failover-clusters/install/before-installing-failover-clustering.md)|  
   
 ###  <a name="BKMK_Upgrading"></a>升级到[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
  您可以将 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 的现有实例升级到 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。 有关详细信息，请参阅[升级到 SQL Server 2014](../database-engine/install-windows/upgrade-sql-server.md)。 在运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安装程序以升级到 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 之前，请先查看以下有关升级过程的主题：  
@@ -126,8 +126,8 @@ ms.locfileid: "74683616"
 |提供的链接指向用于安装 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的不同组件的主题和用于安装 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的过程主题。|[安装 SQL Server 2014](../database-engine/install-windows/install-sql-server.md)|  
 |查看该主题可了解如何在 Windows Server Core 上安装 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 。|[在 Server Core 上安装 SQL Server 2014](../database-engine/install-windows/install-sql-server-on-server-core.md)|  
 |查看该主题可向 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的现有实例中添加单独的功能。|[将功能添加到 SQL Server 2014 &#40;安装程序的实例&#41;](../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md)|  
-|查看此主题以创建新的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 故障转移群集实例。|[&#40;安装程序创建新的 SQL Server 故障转移群集&#41;](../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
-|使用此主题可管理现有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 故障转移群集实例中的节点。|[在 SQL Server 故障转移群集中添加或删除节点 &#40;安装程序&#41;](../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
+|查看此主题以创建新的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 故障转移群集实例。|[创建新的 SQL Server 故障转移群集（安装程序）](../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
+|使用此主题可管理现有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 故障转移群集实例中的节点。|[在 SQL Server 故障转移群集中添加或删除节点（安装程序）](../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
 |使用该主题可在故障转移群集上安装 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 客户端工具。|[在 SQL Server 故障转移群集上安装客户端工具](../sql-server/failover-clusters/install/install-client-tools-on-a-sql-server-failover-cluster.md)|  
 |查看 SQL 发现报告的用法，以便确认 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的版本以及在计算机上安装的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 功能。|[验证 SQL Server 安装](../database-engine/install-windows/validate-a-sql-server-installation.md)|  
 |提供 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的各种安装方法的过程主题链接，这些方法包括使用安装向导、命令提示符、配置文件或 SysPrep。|[安装操作指南主题](../../2014/sql-server/install/installation-how-to-topics.md)|  
@@ -140,9 +140,9 @@ ms.locfileid: "74683616"
   
 |说明|主题|  
 |-----------------|-----------|  
-|使用本主题中的信息可以确定您是否需要在防火墙中取消阻止端口，以便允许对 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 或 PowerPivot for SharePoint 的访问。 可以按照本主题中提供的步骤配置端口和防火墙设置。|[将 Windows 防火墙配置为允许 Analysis Services 访问](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|  
-|本主题概述了防火墙配置并汇总了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理员所需的信息。|[将 Windows 防火墙配置为允许 SQL Server 访问](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
-|本主题介绍如何在多宿主环境中对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和高级安全 Windows 防火墙进行配置，以便为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例提供多个网络连接。|[为 SQL Server 访问配置多宿主计算机](../../2014/sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|  
+|使用本主题中的信息可以确定您是否需要在防火墙中取消阻止端口，以便允许对 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 或 PowerPivot for SharePoint 的访问。 可以按照本主题中提供的步骤配置端口和防火墙设置。|[配置 Windows 防火墙以允许 Analysis Services 访问](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|  
+|本主题概述了防火墙配置并汇总了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理员所需的信息。|[配置 Windows 防火墙以允许 SQL Server 访问](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
+|本主题介绍如何在多宿主环境中对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和高级安全 Windows 防火墙进行配置，以便为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例提供多个网络连接。|[将多宿主计算机配置为允许 SQL Server 访问](../../2014/sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|  
   
 ###  <a name="BKMK_Uninstalling"></a>拆除[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
  下面的主题介绍如何手动卸载 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的独立实例和故障转移群集实例。  
@@ -150,7 +150,7 @@ ms.locfileid: "74683616"
 |说明|主题|  
 |-----------------|-----------|  
 |本主题介绍如何手动卸载 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的独立实例。|[卸载 SQL Server 2014](../sql-server/install/uninstall-sql-server.md)|  
-|本主题介绍如何卸载 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 故障转移群集实例。|[&#40;安装程序中删除 SQL Server 故障转移群集实例&#41;](../sql-server/failover-clusters/install/remove-a-sql-server-failover-cluster-instance-setup.md)|  
+|本主题介绍如何卸载 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 故障转移群集实例。|[删除 SQL Server 故障转移群集实例（安装程序）](../sql-server/failover-clusters/install/remove-a-sql-server-failover-cluster-instance-setup.md)|  
 |本主题介绍在卸载 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 后或者仅卸载 DQS 服务器后如何手动删除 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (DQS) 对象的信息。|[删除数据质量服务器对象](../../2014/sql-server/install/remove-data-quality-server-objects.md)|  
   
 ## <a name="see-also"></a>另请参阅  

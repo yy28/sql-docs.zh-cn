@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 716b11a8c09f49deb0179f1a1b9c4a4f0a1dfe06
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74683578"
 ---
 # <a name="documentation-for-sql-server-2014-tools-and-add-in-components"></a>针对 SQL Server 2014 工具和外接程序组件的文档
@@ -24,7 +24,7 @@ ms.locfileid: "74683578"
   
 |||  
 |-|-|  
-|**工具栏**|**说明**|  
+|**工具**|**说明**|  
 |[SQL Server 2014 的报表生成器帮助](https://go.microsoft.com/fwlink/?LinkId=299171)|报表生成器是针对企业用户的报表创作环境。|  
 |[配置管理器](../relational-databases/sql-server-configuration-manager.md)|配置管理器是一种工具，用于管理与 SQL Server 相关联的服务、配置 SQL Server 使用的网络协议以及从 SQL Server 客户端计算机管理网络连接配置。|  
 |[SQL Server 2014 安装程序](https://go.microsoft.com/fwlink/?LinkId=299175)|用于协助安装程序的 SQL Server 2014 安装文档。|  
@@ -34,10 +34,10 @@ ms.locfileid: "74683578"
 |[SQL Server Office 2013 数据挖掘外接程序](https://go.microsoft.com/fwlink/?LinkId=299178)|Office 数据挖掘外接程序是用于预测分析的一组轻型工具，允许您使用 Excel 中的数据生成分析模型来用于预测、建议或浏览。|  
 |[Change Data Capture Designer for Oracle](https://go.microsoft.com/fwlink/?LinkId=299179)|Change Data Capture Designer for Oracle 用于开发和维护 Oracle CDC 实例。|  
 |[Change Data Capture Service for Oracle](https://go.microsoft.com/fwlink/?LinkId=299180)|Change Data Capture Service for Oracle 是一种 Windows 服务，该服务将扫描 Oracle 事务日志并将对有关 Oracle 表的更改捕获到 SQL Server 更改表中。|  
-|[用于 SAP BW 的 Microsoft Connector 1。1](https://go.microsoft.com/fwlink/?LinkId=299181)|Microsoft Connector 1.1 for SAP BW 由一组三个组件构成，可用于从 SAP Netweaver BW 版本 7 系统中提取数据以及向该系统中加载数据。|  
+|[Microsoft Connector 1.1 for SAP BW](https://go.microsoft.com/fwlink/?LinkId=299181)|Microsoft Connector 1.1 for SAP BW 由一组三个组件构成，可用于从 SAP Netweaver BW 版本 7 系统中提取数据以及向该系统中加载数据。|  
 |[Playback Capture for Upgrade Assistant](https://go.microsoft.com/fwlink/?LinkId=299182)|升级助手中的捕获播放工作流自动化要用于在以后重播的工作负荷跟踪捕获流程。|  
 |[Microsoft ODBC Driver 11 for SQL Server（Windows 平台）](https://go.microsoft.com/fwlink/?LinkId=299183)|Microsoft ODBC Driver 11 for Windows 是一个独立的驱动程序，它提供一个应用程序编程接口 (API)，可实现针对 Microsoft Windows 的标准 ODBC 接口。|  
-|[SharePoint Power Pivot](https://go.microsoft.com/fwlink/?LinkId=299184)|Power Pivot for SharePoint 是一个在 SharePoint 模式下运行的 Analysis Services 服务器。|  
+|[Power Pivot for SharePoint](https://go.microsoft.com/fwlink/?LinkId=299184)|Power Pivot for SharePoint 是一个在 SharePoint 模式下运行的 Analysis Services 服务器。|  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 2014 资源](../2014-toc/index.yml)  

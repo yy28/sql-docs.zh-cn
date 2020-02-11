@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c1c89ff79ee0fcac37f7b6e231e957e051c9db2e
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: de3cbb6582ae4fad74bb2440791e51203140796b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72289282"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "75656594"
 ---
 # <a name="sqlbindcol-function"></a>SQLBindCol 函数
 **度**  
  引入的版本： ODBC 1.0 标准符合性： ISO 92  
   
- **摘要**  
+ **总结**  
  **SQLBindCol**将应用程序数据缓冲区绑定到结果集中的列。  
   
 ## <a name="syntax"></a>语法  
@@ -55,7 +55,7 @@ SQLRETURN SQLBindCol(
  送要绑定的结果集列的编号。 列按递增的列顺序编号，从0开始，其中列0是书签列。 如果未使用书签（即，SQL_ATTR_USE_BOOKMARKS 语句特性设置为 SQL_UB_OFF，则列号从1开始。  
   
  *TargetType*  
- 送 \**TargetValuePtr* 缓冲区的 C 数据类型的标识符。 当从具有**SQLFetch**、 **SQLFetchScroll**、 **SQLBulkOperations**或**SQLSetPos**的数据源检索数据时，驱动程序会将数据转换为此类型;当它通过**SQLBulkOperations**或**SQLSetPos**将数据发送到数据源时，驱动程序将转换此类型的数据。 有关有效 C 数据类型和类型标识符的列表，请参阅附录 D：数据类型中的[C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)部分。  
+ 送\* *TargetValuePtr*缓冲区的 C 数据类型的标识符。 当从具有**SQLFetch**、 **SQLFetchScroll**、 **SQLBulkOperations**或**SQLSetPos**的数据源检索数据时，驱动程序会将数据转换为此类型;当它通过**SQLBulkOperations**或**SQLSetPos**将数据发送到数据源时，驱动程序将转换此类型的数据。 有关有效 C 数据类型和类型标识符的列表，请参阅附录 D：数据类型中的[C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)部分。  
   
  如果*TargetType*参数是 interval 数据类型，则默认间隔的默认间隔（2）和默认间隔秒精度（6），分别在 ARD 的 SQL_DESC_DATETIME_INTERVAL_PRECISION 和 SQL_DESC_PRECISION 字段中进行设置，用于数据。 如果使用了*TargetType*参数 SQL_C_NUMERIC，则将使用在 ARD 的 SQL_DESC_PRECISION 和 SQL_DESC_SCALE 字段中设置的默认精度（驱动程序定义）和默认刻度（0）作为数据。 如果任何默认的精度或小数位数不合适，则应用程序应通过调用**SQLSetDescField**或**SQLSetDescRec**显式设置相应的描述符字段。  
   
@@ -64,12 +64,12 @@ SQLRETURN SQLBindCol(
  *TargetValuePtr*  
  [延迟的输入/输出]指向要绑定到列的数据缓冲区的指针。 **SQLFetch**和**SQLFetchScroll**返回此缓冲区中的数据。 当 SQL_FETCH_BY_BOOKMARK*操作*时， **SQLBulkOperations**将返回此缓冲区中的数据;当*操作*SQL_ADD 或 SQL_UPDATE_BY_BOOKMARK 时，它将从此缓冲区检索数据。 当 SQL_REFRESH*操作*时， **SQLSetPos**将返回此缓冲区中的数据;当 SQL_UPDATE*操作*时，它将从该缓冲区检索数据。  
   
- 如果 *TargetValuePtr* 为 null 指针，则驱动程序将为列解除数据缓冲区的绑定。 应用程序可以通过使用 SQL_UNBIND 选项调用**SQLFreeStmt**来解除所有列的绑定。 如果对*SQLBindCol*的调用中的 **TargetValuePtr** 参数为 Null 指针，但*StrLen_or_IndPtr*参数是有效的，则应用程序可以解除列的数据缓冲区的绑定，但仍具有绑定到列的长度/指示器缓冲区负值.  
+ 如果*TargetValuePtr*为 null 指针，则驱动程序将为列解除数据缓冲区的绑定。 应用程序可以通过使用 SQL_UNBIND 选项调用**SQLFreeStmt**来解除所有列的绑定。 如果对**SQLBindCol**的调用中的*TargetValuePtr*参数为 null 指针，但*StrLen_or_IndPtr*参数是有效的值，则应用程序可以解除列的数据缓冲区的绑定，但仍具有绑定到列的长度/指示器缓冲区。  
   
  *BufferLength*  
- 送 \*TargetValuePtr* 缓冲区的长度（以字节为单位）。  
+ 送\* *TargetValuePtr*缓冲区的长度（以字节为单位）。  
   
- 当驱动程序返回长度可变的数据（如字符或二进制数据）时，驱动程序使用*BufferLength*来避免写入超过 \**TargetValuePtr*缓冲区的末尾。 请注意，当驱动程序将字符数据返回到 \**TargetValuePtr*时，驱动程序会对 null 终止字符进行计数。 \**TargetValuePtr*因此必须包含空间的 null 终止字符或驱动程序将截断数据。  
+ 当驱动程序返回长度可变的数据（如字符或二进制数据）时，驱动程序使用*BufferLength*来避免写入超过\* *TargetValuePtr*缓冲区的末尾。 请注意，在将字符数据返回到\* *TargetValuePtr*时，驱动程序会对 null 终止字符进行计数。 \*因此， *TargetValuePtr*必须包含 null 终止字符的空间，否则，驱动程序会截断数据。  
   
  当驱动程序返回固定长度的数据（如整数或日期结构）时，驱动程序将忽略*BufferLength* ，并假定缓冲区足以容纳数据。 因此，应用程序必须为固定长度的数据分配足够大的缓冲区，否则驱动程序将写入超过缓冲区的末尾。  
   
@@ -114,12 +114,12 @@ SQLRETURN SQLBindCol(
 ## <a name="diagnostics"></a>诊断  
  当**SQLBindCol**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 时，可以通过使用*HandleType*的 SQL_HANDLE_STMT 和*StatementHandle*的*句柄*调用**SQLGetDiagRec**来获取关联的 SQLSTATE 值。 下表列出了通常由**SQLBindCol**返回的 SQLSTATE 值，并对该函数的上下文中的每个值进行了说明："（DM）" 表示法位于驱动程序管理器返回的 SQLSTATEs 的说明之前。 除非另有说明，否则与每个 SQLSTATE 值相关联的返回代码将 SQL_ERROR。  
   
-|SQLSTATE|Error|描述|  
+|SQLSTATE|错误|说明|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|驱动程序特定的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |07006|受限制的数据类型属性冲突|（DM） *ColumnNumber*参数为0，但*TargetType*参数不是 SQL_C_BOOKMARK 或 SQL_C_VARBOOKMARK。|  
 |07009|描述符索引无效|为参数*ColumnNumber*指定的值超出了结果集中的最大列数。|  
-|HY000|一般错误|发生了一个错误，该错误没有特定的 SQLSTATE，没有为其定义实现特定的 SQLSTATE。 *\*MessageText*缓冲区中的**SQLGetDiagRec**返回的错误消息描述了错误及其原因。|  
+|HY000|常规错误|发生了一个错误，该错误没有特定的 SQLSTATE，没有为其定义实现特定的 SQLSTATE。 MessageText 缓冲区中的**SQLGetDiagRec**返回的错误消息描述了错误及其原因。 * \**|  
 |HY001|内存分配错误|驱动程序无法分配支持执行或完成此函数所需的内存。|  
 |HY003|应用程序缓冲区类型无效|参数*TargetType*既不是有效的数据类型，也不是 SQL_C_DEFAULT。|  
 |HY010|函数序列错误|（DM）为与*StatementHandle*关联的连接句柄调用了异步执行的函数。 调用**SQLBindCol**时仍在执行此异步函数。<br /><br /> 为*StatementHandle*调用了**SQLExecute**、 **SQLExecDirect**或**SQLMoreResults** ，并返回 SQL_PARAM_DATA_AVAILABLE。 在检索所有流式处理参数的数据之前调用此函数。<br /><br /> （DM）为*StatementHandle*调用了异步执行的函数，并且在调用此函数时仍在执行该函数。<br /><br /> （DM） **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**或**SQLSetPos**调用了*StatementHandle*并返回 SQL_NEED_DATA。 在为所有执行时数据参数或列发送数据之前，将调用此函数。|  
@@ -230,17 +230,17 @@ SQLRETURN SQLBindCol(
  有关如何使用此信息的详细信息，请参阅本部分后面的 "缓冲区地址"。 有关按列绑定的详细信息，请参阅按[行绑定](../../../odbc/reference/develop-app/row-wise-binding.md)。  
   
 ## <a name="buffer-addresses"></a>缓冲区地址  
- *缓冲区地址*是数据或长度/指示器缓冲区的实际地址。 驱动程序在写入缓冲区之前（例如在提取时）计算缓冲区地址。 它是通过下面的公式计算的，它使用 *TargetValuePtr* 和*StrLen_or_IndPtr*参数中指定的地址、绑定偏移量和行号：  
+ *缓冲区地址*是数据或长度/指示器缓冲区的实际地址。 驱动程序在写入缓冲区之前（例如在提取时）计算缓冲区地址。 它是通过下面的公式计算的，它使用在*TargetValuePtr*和*StrLen_or_IndPtr*参数中指定的地址、绑定偏移量和行号：  
   
- 绑定*地址* + *绑定偏移量*+ （（*行号*-1） x*元素大小*）  
+ *绑定地址* + *绑定偏移量*+ （（*行号*-1） x*元素大小*）  
   
  公式变量的定义位置如下表中所述。  
   
-|变量|描述|  
+|变量|说明|  
 |--------------|-----------------|  
-|*绑定地址*|对于数据缓冲区，为*SQLBindCol*中的 **TargetValuePtr** 参数指定的地址。<br /><br /> 对于长度/指示器缓冲区，为**SQLBindCol**中的*StrLen_or_IndPtr*参数指定的地址。 有关详细信息，请参阅 "描述符和 SQLBindCol" 部分中的 "其他注释"。<br /><br /> 如果绑定地址是0，则不会返回任何数据值，即使之前公式计算的地址不为零。|  
+|*绑定地址*|对于数据缓冲区，为**SQLBindCol**中的*TargetValuePtr*参数指定的地址。<br /><br /> 对于长度/指示器缓冲区，为**SQLBindCol**中的*StrLen_or_IndPtr*参数指定的地址。 有关详细信息，请参阅 "描述符和 SQLBindCol" 部分中的 "其他注释"。<br /><br /> 如果绑定地址是0，则不会返回任何数据值，即使之前公式计算的地址不为零。|  
 |*绑定偏移量*|如果使用按行绑定，则使用 SQL_ATTR_ROW_BIND_OFFSET_PTR 语句特性指定的地址上存储的值。<br /><br /> 如果使用按列绑定或 SQL_ATTR_ROW_BIND_OFFSET_PTR 语句特性的值为 null 指针，则*绑定偏移量*为0。|  
-|*行号*|行集中从1开始的行号。 对于单行读取（默认值），此值为1。|  
+|*Row Number*|行集中从1开始的行号。 对于单行读取（默认值），此值为1。|  
 |*元素大小*|绑定数组中元素的大小。<br /><br /> 如果使用按列绑定，则为长度/指示器缓冲区的**sizeof （SQLINTEGER）** 。 对于数据缓冲区，如果数据类型为可变长度，则为*BufferLength*参数的值 **; 如果数据**类型为固定长度，则为数据类型的大小。<br /><br /> 如果使用按行绑定，则这是数据和长度/指示器缓冲区的 SQL_ATTR_ROW_BIND_TYPE 语句特性的值。|  
   
 ## <a name="descriptors-and-sqlbindcol"></a>描述符和 SQLBindCol  
@@ -295,7 +295,7 @@ SQLRETURN SQLBindCol(
 #include <sqlext.h>  
   
 #define NAME_LEN 50  
-#define PHONE_LEN 20  
+#define PHONE_LEN 60
   
 void show_error() {  
    printf("error\n");  
@@ -335,17 +335,24 @@ int main() {
                if (retcode == SQL_SUCCESS || retcode == SQL_SUCCESS_WITH_INFO) {  
   
                   // Bind columns 1, 2, and 3  
-                  retcode = SQLBindCol(hstmt, 1, SQL_C_CHAR, &sCustID, 100, &cbCustID);  
-                  retcode = SQLBindCol(hstmt, 2, SQL_C_CHAR, szName, NAME_LEN, &cbName);  
-                  retcode = SQLBindCol(hstmt, 3, SQL_C_CHAR, szPhone, PHONE_LEN, &cbPhone);   
+                  retcode = SQLBindCol(hstmt, 1, SQL_C_WCHAR, &sCustID, 100, &cbCustID);  
+                  retcode = SQLBindCol(hstmt, 2, SQL_C_WCHAR, szName, NAME_LEN, &cbName);  
+                  retcode = SQLBindCol(hstmt, 3, SQL_C_WCHAR, szPhone, PHONE_LEN, &cbPhone);   
   
                   // Fetch and print each row of data. On an error, display a message and exit.  
-                  for (i ; ; i++) {  
+                  for (int i=0 ; ; i++) {  
                      retcode = SQLFetch(hstmt);  
                      if (retcode == SQL_ERROR || retcode == SQL_SUCCESS_WITH_INFO)  
                         show_error();  
                      if (retcode == SQL_SUCCESS || retcode == SQL_SUCCESS_WITH_INFO)  
-                        wprintf(L"%d: %S %S %S\n", i + 1, sCustID, szName, szPhone);  
+                     {
+                        //replace wprintf with printf
+                        //%S with %ls
+                        //warning C4477: 'wprintf' : format string '%S' requires an argument of type 'char *'
+                        //but variadic argument 2 has type 'SQLWCHAR *'
+                        //wprintf(L"%d: %S %S %S\n", i + 1, sCustID, szName, szPhone);  
+                        printf("%d: %ls %ls %ls\n", i + 1, sCustID, szName, szPhone);  
+                    }    
                      else  
                         break;  
                   }  
@@ -372,10 +379,10 @@ int main() {
   
 ## <a name="related-functions"></a>相关函数  
   
-|有关信息|请参阅|  
+|有关以下方面的信息|请参阅|  
 |---------------------------|---------|  
 |返回有关结果集中的列的信息|[SQLDescribeCol 函数](../../../odbc/reference/syntax/sqldescribecol-function.md)|  
-|提取数据块或滚动结果集|[SQLFetchScroll 函数](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
+|提取数据块或滚动结果集|[SQLFetchScroll Function（SQLFetchScroll 函数）](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
 |提取多行数据|[SQLFetch 函数](../../../odbc/reference/syntax/sqlfetch-function.md)|  
 |释放语句上的列缓冲区|[SQLFreeStmt 函数](../../../odbc/reference/syntax/sqlfreestmt-function.md)|  
 |提取部分或全部数据列|[SQLGetData 函数](../../../odbc/reference/syntax/sqlgetdata-function.md)|  

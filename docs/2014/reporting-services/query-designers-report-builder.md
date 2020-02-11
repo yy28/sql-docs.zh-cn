@@ -1,5 +1,5 @@
 ---
-title: 查询设计器 （报表生成器） |Microsoft Docs
+title: 查询设计器（报表生成器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 58a7e1a9d5ae71d659cfd214b46f3a004ea71101
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108012"
 ---
 # <a name="query-designers-report-builder"></a>查询设计器（报表生成器）
@@ -26,17 +26,17 @@ ms.locfileid: "66108012"
   
 ## <a name="in-this-section"></a>本节内容  
   
--   [Analysis Services MDX 查询设计器用户界面&#40;报表生成器&#41;](../../2014/reporting-services/analysis-services-mdx-query-designer-user-interface-report-builder.md)  
+-   [Analysis Services MDX 查询设计器用户界面 &#40;报表生成器&#41;](../../2014/reporting-services/analysis-services-mdx-query-designer-user-interface-report-builder.md)  
   
--   [基于文本的查询设计器用户界面&#40;报表生成器&#41;](report-data/text-based-query-designer-user-interface-report-builder.md)  
+-   [基于文本的查询设计器用户界面 &#40;报表生成器&#41;](report-data/text-based-query-designer-user-interface-report-builder.md)  
   
--   [关系查询设计器用户界面&#40;报表生成器&#41;](report-data/relational-query-designer-user-interface-report-builder.md)  
+-   [关系查询设计器用户界面 &#40;报表生成器&#41;](report-data/relational-query-designer-user-interface-report-builder.md)  
   
--   [SAP NetWeaver BI 查询设计器用户界面&#40;报表生成器&#41;](../../2014/reporting-services/sap-netweaver-bi-query-designer-user-interface-report-builder.md)  
+-   [SAP NetWeaver BI 查询设计器用户界面 &#40;报表生成器&#41;](../../2014/reporting-services/sap-netweaver-bi-query-designer-user-interface-report-builder.md)  
   
--   [Hyperion Essbase 查询设计器用户界面&#40;报表生成器&#41;](../../2014/reporting-services/hyperion-essbase-query-designer-user-interface-report-builder.md)  
+-   [Hyperion Essbase 查询设计器用户界面 &#40;报表生成器&#41;](../../2014/reporting-services/hyperion-essbase-query-designer-user-interface-report-builder.md)  
   
-## <a name="see-also"></a>请参阅  
- [向报表添加数据&#40;报表生成器和 SSRS&#41;](report-data/report-datasets-ssrs.md)  
+## <a name="see-also"></a>另请参阅  
+ [将数据添加到报表 &#40;报表生成器和 SSRS&#41;](report-data/report-datasets-ssrs.md)  
   
   

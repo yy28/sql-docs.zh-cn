@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7d18661fadb12167fd0a443758cced1188401750
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727336"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>进行 SQL Server 配置以供 R 使用
@@ -46,7 +46,7 @@ ms.locfileid: "73727336"
 
 ### <a name="power-options"></a>电源选项
 
-在 Windows 操作系统中，应使用“高性能”电源选项。 使用不同的电源设置会导致使用 SQL Server 时性能下降或不一致。
+在 Windows 操作系统中，应使用“高性能”电源选项  。 使用不同的电源设置会导致使用 SQL Server 时性能下降或不一致。
 
 ### <a name="disk-io"></a>磁盘 IO
 
@@ -88,7 +88,7 @@ Windows 操作系统使用分页文件来管理故障转储和存储虚拟内存
 
 有关详细信息，请参阅以下文档：
 
-+ [数据压缩](../../relational-databases/data-compression/data-compression.md)
++ [Data compression](../../relational-databases/data-compression/data-compression.md)（数据压缩）
 
 + [对表或索引启用压缩](../../relational-databases/data-compression/enable-compression-on-a-table-or-index.md)
 
@@ -120,7 +120,7 @@ SQL Server 可通过使用计算机上的可用核心并行执行任务；可用
 
 外部脚本的内存消耗默认值限制为 SQL Server 本身可用的总内存的 20%。 默认情况下应用此限制，以确保长期运行的 R 作业不会严重影响所有依赖数据库服务器的任务。 但是，数据库管理员可以更改这些限制。 在许多情况下，20% 的限制不足以支持大量机器学习工作负载。
 
-支持的配置选项为“MAX_CPU_PERCENT”、“MAX_MEMORY_PERCENT”和“MAX_PROCESSES”。 若要查看当前设置，请使用以下语句：`SELECT * FROM sys.resource_governor_external_resource_pools`
+支持的配置选项为“MAX_CPU_PERCENT”、“MAX_MEMORY_PERCENT”和“MAX_PROCESSES”    。 若要查看当前设置，请使用以下语句：`SELECT * FROM sys.resource_governor_external_resource_pools`
 
 -  如果服务器主要用于 R Services，则将 MAX_CPU_PERCENT 提高到 40% 或 60% 可能会有所帮助。
 
@@ -151,7 +151,7 @@ FROM sys.dm_os_memory_clerks
 
 如果计算机有多个处理器，但没有硬件 NUMA，则还可以使用 [Soft-NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server) 将 CPU 细分为更小的组。  在 SQL Server 2016 和 SQL Server 2017 中，启动 SQL Server 服务时会自动启用 Soft-NUMA 功能。
 
-启用 Soft-NUMA 后，SQL Server 会自动管理节点；但是，若要针对特定工作负载进行优化，可以禁用软关联并手动配置 soft NUMA 节点的 CPU 相关性。 这样，就可以更好地控制将哪些工作负载分配给哪些节点，尤其是在使用支持资源调控的 SQL Server 版本时。 通过指定 CPU 相关性并使资源池与 CPU 组对齐，可以减少延迟，并确保相关进程在同一 NUMA 节点内执行。
+启用 Soft-NUMA 后，SQL Server 会自动管理节点；但是，若要针对特定工作负载进行优化，可以禁用软关联并手动配置 soft NUMA 节点的 CPU 相关性  。 这样，就可以更好地控制将哪些工作负载分配给哪些节点，尤其是在使用支持资源调控的 SQL Server 版本时。 通过指定 CPU 相关性并使资源池与 CPU 组对齐，可以减少延迟，并确保相关进程在同一 NUMA 节点内执行。
 
 配置 Soft-NUMA 和 CPU 相关性以支持 R 工作负载的整个过程如下所示：
 
@@ -162,7 +162,7 @@ FROM sys.dm_os_memory_clerks
 
 有关详细信息（包括示例代码），请参阅此教程：[SQL 优化提示和技巧 (Ke Huang)](https://gallery.cortanaintelligence.com/Tutorial/SQL-Server-Optimization-Tips-and-Tricks-for-Analytics-Services)
 
-其他资源：
+其他资源： 
 
 + [SQL Server 中的 Soft-NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
     
@@ -172,7 +172,7 @@ FROM sys.dm_os_memory_clerks
 
 本节总结了在这些案例研究和其他测试中采用的用于优化特定机器学习工作负载的方法。 常见的工作负载包括模型定型、特征提取和特征工程，以及用于评分的各种方案：单行、小型批和大型批。
 
-### <a name="feature-engineering"></a>特征工程
+### <a name="feature-engineering"></a>特性工程
 
 R 的一个难点是它通常在单个 CPU 上进行处理。 这是许多任务（尤其是特征工程）的主要性能瓶颈。 在恢复匹配解决方案中，仅特征工程任务一项就创建了 2,500 个必须与原始的 100 个特征相结合的跨产品特征。 如果所有内容都在单个 CPU 上完成，则此任务将花费大量时间。
 
@@ -223,7 +223,7 @@ SQL Server 的优势之一是它能够并行处理大量的行。 此优势在�
 > [!TIP]
 > 在 SQL Server 2017 中，即使服务器上未安装 R，也可以使用 PREDICT 函数执行评分。 RevoScaleR 包支持的模型类型有限。
 
-但是，根据所使用的算法，某些模型可能会非常大，尤其是在对大型数据集进行定型时。 例如，lm 或 glm 等算法会生成大量汇总数据和规则。 由于可以存储在 varbinary 列中的模型大小受限，因此，建议在将模型存储到数据库中进行生产之前，请删除模型中不必要的项目。
+但是，根据所使用的算法，某些模型可能会非常大，尤其是在对大型数据集进行定型时。 例如，lm 或 glm 等算法会生成大量汇总数据和规则   。 由于可以存储在 varbinary 列中的模型大小受限，因此，建议在将模型存储到数据库中进行生产之前，请删除模型中不必要的项目。
 
 ## <a name="articles-in-this-series"></a>本系列文章
 

@@ -1,7 +1,7 @@
 ---
-title: 安装 SQL Server 的硬件和软件要求 | Microsoft Docs
-ms.custom: sqlfreshmay19
-ms.date: 07/24/2019
+title: 硬件和软件要求
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -44,12 +44,12 @@ helpviewer_keywords:
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 553c01ea02c83a57370e596d67ad077b43328d9b
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 25f925b53f93a1d03282a7113ce6946679283c2b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056805"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75657019"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>安装 SQL Server 的硬件和软件要求
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -88,11 +88,11 @@ ms.locfileid: "74056805"
   
 |组件|要求|  
 |---------------|-----------------|  
-|.NET Framework|[!INCLUDE[sql2016](../../includes/sssql15-md.md)] RC1 和更高版本需要 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 才能运行数据库引擎、Master Data Services 或复制。 SQL Server 安装程序自动安装 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]。 还可以从[适用于 Windows 的 Microsoft .NET Framework 4.6（Web 安装程序）](https://support.microsoft.com/kb/3045560)手动安装 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]。<br/><br/>[!INCLUDE[sql2019](../../includes/sssqlv15-md.md)] 需要安装 .NET Framework 4.6.2。 可从[下载中心](https://www.microsoft.com/download/details.aspx?id=53344)获取<br/><br/> 有关 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 的详细信息、建议和指南，请参阅 [面向开发人员的 .NET Framework 部署指南](https://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx)。<br/><br/>在安装 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 之前，[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)] 和 [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] 需要 [KB2919355](https://support.microsoft.com/kb/2919355)。|  
+|.NET Framework|[!INCLUDE[sql2016](../../includes/sssql15-md.md)] RC1 和更高版本需要 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 才能运行数据库引擎、Master Data Services 或复制。 SQL Server 安装程序自动安装 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]。 还可以从[适用于 Windows 的 Microsoft .NET Framework 4.6（Web 安装程序）](https://support.microsoft.com/kb/3045560)手动安装 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]。<br/><br/> 有关 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 的详细信息、建议和指南，请参阅 [面向开发人员的 .NET Framework 部署指南](https://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx)。<br/><br/>在安装 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 之前，[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)] 和 [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] 需要 [KB2919355](https://support.microsoft.com/kb/2919355)。|  
 |网络软件|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 支持的操作系统具有内置网络软件。 独立安装项的命名实例和默认实例支持以下网络协议：共享内存、命名管道、TCP/IP 和 VIA。<br/><br/> **注意：** 故障转移群集不支持 VIA 协议。 与 SQL Server 实例在同一故障转移群集节点上运行的客户端或应用程序可以使用 Shared Memory 协议，通过其本地管道地址连接到 SQL Server。 不过，这种连接无法感知群集，因此会在实例故障转移后无法连接。 因此，不建议使用这种连接，只能用于极个别的方案。<br/><br/> **重要提示：** 不推荐使用 VIA 协议。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br/><br/> 有关网络协议和网络库的详细信息，请参阅 [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md)。|  
 |硬盘|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 要求最少 6 GB 的可用硬盘空间。<br/><br/> 磁盘空间要求将随所安装的 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 组件不同而发生变化。 有关详细信息，请参阅本文后面部分的[硬盘空间要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) 。 有关支持的数据文件存储类型的信息，请参阅 [Storage Types for Data Files](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes)。|  
 |驱动器|从磁盘进行安装时需要相应的 DVD 驱动器。|  
-|监视器|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 要求有 Super-VGA (800x600) 或更高分辨率的显示器。|  
+|监视|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 要求有 Super-VGA (800x600) 或更高分辨率的显示器。|  
 |Internet|使用 Internet 功能需要连接 Internet（可能需要付费）。|  
   
 > [!NOTE]
@@ -106,8 +106,8 @@ ms.locfileid: "74056805"
   
 |组件|要求|  
 |---------------|-----------------|  
-|内存\*|**最低要求：**<br/><br/> Express Edition：512 MB<br/><br/> 所有其他版本：1 GB<br/><br/> **建议：**<br/><br/> Express Edition：1 GB<br/><br/> 所有其他版本：至少 4 GB，并且应随着数据库大小的增加而增加来确保最佳性能。|  
-|处理器速度|最低要求：x64 处理器：  1.4 GHz<br/><br/> **建议：** 2.0 GHz 或更快|  
+|内存\*|**最低要求：**<br/><br/> Express Edition：512 MB<br/><br/> 所有其他版本：1 GB<br/><br/> **推荐：**<br/><br/> Express Edition：1 GB<br/><br/> 所有其他版本：至少 4 GB，并且应随着数据库大小的增加而增加来确保最佳性能。|  
+|处理器速度|最低要求：x64 处理器：  1.4 GHz<br/><br/> **推荐：** 2.0 GHz 或更快|  
 |处理器类型|x64 处理器：AMD Opteron、AMD Athlon 64、支持 Intel EM64T 的 Intel Xeon，以及支持 EM64T 的 Intel Pentium IV|  
   
 > [!NOTE]  
@@ -122,19 +122,6 @@ ms.locfileid: "74056805"
 
 **Server Core 支持：**
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
-
-以下 Windows Server 版本支持在 Server Core 模式上安装 SQL Server 2019：
-
-|                              |                                |
-| :------------------------    | :------------------------------|
-| Windows Server 2019 Standard | Windows Server 2019 Datacenter |
-| Windows Server 2016 Standard | Windows Server 2016 Datacenter |
-   | &nbsp; | &nbsp; |
-
-::: moniker-end
-
-::: moniker range=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
 
 以下 Windows Server 版本支持在 Server Core 模式上安装 SQL Server 2016 和 2017：
 
@@ -145,7 +132,6 @@ ms.locfileid: "74056805"
 | Windows Server 2012 R2 Standard | Windows Server 2012 R2 Datacenter|
 | Windows Server 2012 Standard | Windows Server 2012 Datacenter |
 | &nbsp; | &nbsp; |
-::: moniker-end
 
 有关如何在 Server Core 上安装 SQL Server 的详细信息，请参阅[在 Server Core 上安装 SQL Server](../../database-engine/install-windows/install-sql-server-on-server-core.md)。  
 
@@ -168,26 +154,10 @@ ms.locfileid: "74056805"
   
 ###  <a name="TOP_Principal"></a> OS 兼容性   
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
-下表显示了与各版本的 Windows 兼容的 SQL Server 2019 版本：  
-  
-
-| SQL Server 版本：               | Enterprise | Developer | Standard | Web | Express |  
-| :------------------------         | :--------- | :-------- | :------- | :-- | :------ | 
-| Windows Server 2019 Datacenter    |    是     |    是    |    是   | 是 |   是   |
-| Windows Server 2019 Standard      |    是     |    是    |    是   | 是 |   是   |
-| Windows Server 2019 Essentials    |    是     |    是    |    是   | 是 |   是   |
-| Windows Server 2016 Datacenter    |    是     |    是    |    是   | 是 |   是   |
-| Windows Server 2016 Standard      |    是     |    是    |    是   | 是 |   是   |
-| Windows Server 2016 Essentials    |    是     |    是    |    是   | 是 |   是   |
-| &nbsp; | &nbsp; |
-::: moniker-end
-
-::: moniker range=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
 
 下表显示了与各版本的 Windows 兼容的 SQL Server 2016 和 2017 版本：  
   
-| SQL Server 版本：               | Enterprise | Developer | Standard | Web | Express |  
+| SQL Server 版本：               | Enterprise | 开发人员 | Standard | Web | Express |  
 | :------------------------         | :--------- | :-------- | :------- | :-- | :------ | 
 | Windows Server 2019 Datacenter    |    是     |    是    |    是   | 是 |   是   |
 | Windows Server 2019 Standard      |    是     |    是    |    是   | 是 |   是   |
@@ -218,7 +188,6 @@ ms.locfileid: "74056805"
 >  
 >-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - SharePoint  
 >-   用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序  
-::: moniker-end
 
 
   

@@ -1,5 +1,5 @@
 ---
-title: FILESTREAM 支持 (ODBC) |Microsoft Docs
+title: FILESTREAM 支持（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -14,27 +14,28 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0e48619daa350fd5b7a7dc47a9762459fbddc7d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206593"
 ---
 # <a name="filestream-support-odbc"></a>FILESTREAM 支持 (ODBC)
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中的 ODBC 支持增强的 FILESTREAM 功能。 有关此功能的详细信息，请参阅[FILESTREAM 支持](../features/filestream-support.md)。 演示对 FILESTREAM 的 ODB 支持的示例，请参阅[发送和接收数据以增量方式与 FILESTREAM &#40;ODBC&#41;](../../native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md)。  
   
- 若要发送和接收`varbinary(max)`值大于 2 GB，应用程序必须绑定参数，通过使用与 SQLBindParameter *ColumnSize*设置为`SQL_SS_LENGTH_UNLIMITED`，并设置的内容*StrLen_or_IndPtr*到`SQL_DATA_AT_EXEC`SQLExecDirect 或 SQLExecute 之前。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中的 ODBC 支持增强的 FILESTREAM 功能。 有关此功能的详细信息，请参阅[FILESTREAM 支持](../features/filestream-support.md)。 有关演示对 FILESTREAM 的 ODB 支持的示例，请参阅[使用 Filestream 以增量方式发送和接收数据 &#40;ODBC&#41;](../../native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md)。  
   
- 作为使用任何执行时数据参数，数据将提供使用 SQLParamData 和 SQLPutData。  
+ 若要发送和`varbinary(max)`接收大于 2 GB 的值，应用程序必须使用 SQLBindParameter （ *ColumnSize*设置为`SQL_SS_LENGTH_UNLIMITED`）绑定参数，并将*StrLen_or_IndPtr*的内容设置`SQL_DATA_AT_EXEC`为之前 SQLExecDirect 或 SQLExecute。  
   
- 您可以调用 SQLGetData 以提取 FILESTREAM 列的区块中的数据，如果使用 SQLBindCol 未绑定列。  
+ 与任何执行时数据参数一样，数据将与 SQLParamData 和 SQLPutData 一起提供。  
   
- 如果使用 SQLBindCol 绑定，可以更新 FILESTREAM 数据。  
+ 如果某个 FILESTREAM 列未绑定到 SQLBindCol，则可以调用 SQLGetData 来获取该文件的块区中的数据。  
   
- 如果对绑定列调用 SQLFetch，你将收到"数据被截断"警告，如果缓冲区足以容纳整个值。 忽略此警告，并使用 SQLParamData 和 SQLPutData 调用更新此绑定的列中的数据。 可以使用 SQLBindCol 绑定的情况使用 SQLSetPos 更新 FILESTREAM 数据。  
+ 如果 FILESTREAM 数据与 SQLBindCol 绑定，则可以更新该数据。  
+  
+ 如果对绑定列调用 SQLFetch，则会在缓冲区的大小不足以容纳整个值时收到 "已截断数据" 警告。 忽略此警告，并将此绑定列中的数据更新为 SQLParamData 和 SQLPutData 调用。 如果使用 SQLSetPos 与 SQLBindCol 绑定，则可以更新 FILESTREAM 数据。  
   
 ## <a name="example"></a>示例  
- FILESTREAM 列的行为与 `varbinary(max)` 列完全相似，但没有大小限制。 它们被绑定为 SQL_VARBINARY。 （SQL_LONGVARBINARY 用于图像列，并且对该类型有限制。 例如，SQL_LONGVARBINARY 不能用作输出参数。)以下示例演示对 FILESTREAM 列的直接 NTFS 访问。 这些示例假定已在数据库中执行以下 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 代码：  
+ FILESTREAM 列的行为与 `varbinary(max)` 列完全相似，但没有大小限制。 它们被绑定为 SQL_VARBINARY。 （SQL_LONGVARBINARY 用于图像列，并且对该类型有限制。 例如，SQL_LONGVARBINARY connot 用作输出参数。）以下示例显示了对 FILESTREAM 列的直接 NTFS 访问。 这些示例假定已在数据库中执行以下 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 代码：  
   
 ```  
 CREATE TABLE fileStreamDocs(  
@@ -264,7 +265,7 @@ return r;
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server Native Client 编程](../sql-server-native-client-programming.md)  
   
   

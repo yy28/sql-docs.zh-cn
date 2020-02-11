@@ -1,5 +1,5 @@
 ---
-title: 开始使用数据挖掘 （Excel 数据挖掘外接程序） |Microsoft Docs
+title: 入门数据挖掘（Excel 数据挖掘外接程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e5a24a158681c3f596355b1b9abca6ada990531
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080939"
 ---
 # <a name="getting-started-with-data-mining-data-mining-add-ins-for-excel"></a>数据挖掘入门（Excel 数据挖掘外接程序）
   数据挖掘是在数据中发现有意义的模式的过程。 数据挖掘是通过传统的商业智能来浏览和理解数据的过程的自然而然的补充。 计算机算法可以处理大量数据，并发现以其他方式可能发现不了的模式和趋势。  
   
- 若要执行数据挖掘，应收集相关数据的特定问题，例如"是我的客户？" 或者"购买了哪些产品？" 然后应用一种算法来查找数据中的统计关联。 通过分析找到的模式和趋势存储为挖掘模型。 然后可以将挖掘模型应用于业务方案（如以下方案）中的新数据：  
+ 若要进行数据挖掘，需要收集与特定问题相关的数据，例如 "谁是我的客户？" 或者 "购买了哪些产品？" 然后应用一种算法来查找数据中的统计相关性。 通过分析找到的模式和趋势存储为挖掘模型。 然后可以将挖掘模型应用于业务方案（如以下方案）中的新数据：  
   
 -   使用过去的趋势预测下个季度的销售额、库存要求或客户满意度。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "66080939"
   
  您选择的分析方法取决于您的目标。 数据挖掘外接程序支持以下类型的分析：  
   
--   监督的学习和无人监督的学习  
+-   监督式和非监督式学习  
   
 -   聚类分析（分段）  
   
@@ -51,19 +51,19 @@ ms.locfileid: "66080939"
 ## <a name="define-your-goal"></a>定义您的目标  
  在开始之前，请用一点时间来考虑实际需要回答的问题。 探索本身固然很好，但如果您要将找到的内容应用于新数据，则应该能够明确指出您预期模型要达到什么效果，以及如何衡量模型是否实现您的目标。  
   
- 例如，而不是"找到新客户"的目标，阐明您的目标为更具体一点，如"标识可能购买我们的产品，概率至少 65%的客户的人口统计信息"的内容。  
+ 例如，不是 "查找新客户" 的目标，而是将目标阐明为更具体的内容，如 "确定可能购买产品的客户的人口统计信息，概率至少为 65%"。  
   
--   你的数据集应包含至少一个可用于训练和预测的"结果"属性。 如果没有此类属性，可以手动标记一些定型数据，也可以使用其他列创建针对该结果的替代数据。  
+-   您的数据集应包含至少一个可用于定型和预测的 "result" 属性。 如果没有此类属性，可以手动标记一些定型数据，也可以使用其他列创建针对该结果的替代数据。  
   
-     例如，如果你想要预测"最佳潜在客户"，应某种业务规则事先应用标记现有客户，以便数据挖掘可以从你提供的示例中学习。  
+     例如，如果要预测 "最佳潜在客户"，应事先应用某种业务规则来标记现有客户，以便数据挖掘可以从您提供的示例中学习。  
   
 -   如果要处理随时间变化的值，并预测将来的趋势，应考虑所需结果的粒度。 您是否想要按月、天或年进行预测？ 必须使用相同单位对您要预测的数据进行分析。  
   
-     对于周期模式，如果没有获得与每日数据很好的结果，试用不同时间段，或尝试使用每周天数、 月或甚至节假日。  
+     使用循环模式时，如果不能使用每日数据获得良好的结果，请尝试使用不同的时间段，或尝试使用工作日、月甚至假期。  
   
 -   在启动向导以便在您的数据中找到新关联之前，再看一下您的数据并且考虑在数据集中可能存在何种现有关系。 是否有令人混淆的变量？ 是否有重复项或代理？  
   
--   将按其评估模型的成功指标有哪些？ 您如何知道模型已经"足够好"？  
+-   将通过哪些指标计算模型的成功？ 您如何知道该模型 "足够好" 呢？  
   
 -   您要通过数据挖掘模型进行预测，还是仅仅查找关注的模式和关联？  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66080939"
   
  花点时间查看值的分布，并且确定缺少值或占位符之类的潜在问题。  
   
- 如果想要执行数据挖掘对很多或复杂，您无法对其进行分析与其他方法的数据集，请考虑采样或数据精简。  
+ 如果您计划针对某个数据集执行数据挖掘，而该数据集很大或很复杂，并且您无法使用其他方法对其进行分析，请考虑采样或数据缩减。  
   
 -   数据是如何分布的？  
   
@@ -86,12 +86,12 @@ ms.locfileid: "66080939"
   
  在完成您的模型之后，应花一些时间来查看结果并且确定修改数据或者获得更好结果的方法。 您的第一个模型就能够解决所有问题的情形十分罕见。 数据挖掘通常是一个迭代的过程。  
   
- 当你尝试装箱你的数据不同的方式，或添加新列，请务必使用**文档模型**向导捕获每个模型的元数据和结果的快照。 具有记录将会更便于跟踪探索进度。  
+ 尝试以不同方式装箱数据或添加新列时，请记住使用**文档模型**向导捕获每个模型的元数据和结果的快照。 具有记录将会更便于跟踪探索进度。  
   
  [浏览和清除数据](exploring-and-cleaning-data.md)  
   
 ## <a name="validate-your-model"></a>验证您的模型  
- 在您运行每个向导或工具时，算法会分析数据内容并且确定在统计上有效的模式是否存在。 如果算法找不到有效模式，您将获得一条错误消息。 但是，即使已成功创建一个模型，您将想要测试的模型以查看它是否验证了您的假设。 您可以使用工具，如[准确性图表&#40;SQL Server 数据挖掘外接程序&#41;](accuracy-chart-sql-server-data-mining-add-ins.md)或[交叉验证&#40;SQL Server 数据挖掘外接程序&#41;](cross-validation-sql-server-data-mining-add-ins.md)以生成统计模型质量的度量值。  
+ 在您运行每个向导或工具时，算法会分析数据内容并且确定在统计上有效的模式是否存在。 如果算法找不到有效模式，你将收到一条错误消息。 但是，即使已成功创建模型，你也需要测试模型，以确定它是否验证了假设。 您可以使用 "[准确性图表" &#40;SQL Server 数据挖掘外接程序&#41;](accuracy-chart-sql-server-data-mining-add-ins.md)或[交叉验证 &#40;SQL Server 数据挖掘外](cross-validation-sql-server-data-mining-add-ins.md)接程序&#41;生成模型质量的统计度量值。  
   
  在评估您的首个模型的效果时，向自己提出如下问题：  
   
@@ -105,7 +105,7 @@ ms.locfileid: "66080939"
   
  [Excel 表分析工具](table-analysis-tools-for-excel.md)  
   
- [Excel 数据挖掘客户端&#40;SQL Server 数据挖掘外接程序&#41;](data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
+ [Excel 数据挖掘客户端 &#40;SQL Server 数据挖掘外接程序&#41;](data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
   
  [选择模型](choosing-a-model.md)  
   
@@ -122,12 +122,12 @@ ms.locfileid: "66080939"
   
  数据挖掘模型的一个重要用途是创建预测和建议。 Excel 数据挖掘外接程序包括一些工具，这些工具使得用户可以轻松生成很复杂的预测查询，以将发现的模式转换为可操作的结果。 所有这些工具都可以与 Excel 完全集成。  
   
- [查看模型&#40;Office 数据挖掘外接程序&#41;](viewing-models-data-mining-add-ins-for-office.md)  
+ [查看模型 &#40;Office 数据挖掘外接程序&#41;](viewing-models-data-mining-add-ins-for-office.md)  
   
- [验证模型和使用模型进行预测&#40;Excel 数据挖掘外接程序&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
+ [验证模型和使用模型进行预测 &#40;Excel 数据挖掘外接程序&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
   
-## <a name="see-also"></a>请参阅  
- [中包含的功能将数据挖掘外接 office](what-s-included-in-the-data-mining-add-ins-for-office.md)   
- [技术参考&#40;Excel 数据挖掘外接程序&#41;](technical-reference-data-mining-add-ins-for-excel.md)  
+## <a name="see-also"></a>另请参阅  
+ [Office 数据挖掘外接程序中包含的内容](what-s-included-in-the-data-mining-add-ins-for-office.md)   
+ [用于 Excel 的数据挖掘外接程序的技术参考 &#40;&#41;](technical-reference-data-mining-add-ins-for-excel.md)  
   
   

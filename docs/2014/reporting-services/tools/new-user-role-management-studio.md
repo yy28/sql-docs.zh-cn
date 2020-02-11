@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4b40fa294cb682746fe1b69a5fb03bf841d8e334
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100124"
 ---
 # <a name="new-user-role-management-studio"></a>新建用户角色 (Management Studio)
@@ -31,7 +31,7 @@ ms.locfileid: "66100124"
  **名称**  
  键入角色定义的名称。 角色定义名称在报表服务器命名空间中必须是唯一的。 名称必须至少包含一个字母数字字符。 还可以包含空格和某些符号。 在指定名称时请不要使用以下字符：  
   
- ; ? : \@ & = + , $ / * \< >  
+ ; ? ： \@ & = +，$/*\< >  
   
  " /  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66100124"
  **任务说明**  
  显示任务说明，其中枚举了任务所支持的操作或权限。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Management Studio 中报表服务器的 F1 帮助](report-server-in-management-studio-f1-help.md)   
  [角色定义](../security/role-definitions.md)  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2dd881c13b2398f3a1783f53190097653d04d78a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106462"
 ---
 # <a name="browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs"></a>浏览查找报表部件和设置默认文件夹（报表生成器和 SSRS）
@@ -62,11 +62,11 @@ ms.locfileid: "66106462"
   
  不需要重新启动报表生成器，此设置就能生效。  
   
-## <a name="see-also"></a>请参阅  
- [检查更新或关闭更新&#40;报表生成器和 SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>另请参阅  
+ [检查更新或关闭更新 &#40;报表生成器和 SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
  [报表部件（报表生成器和 SSRS）](../report-parts-report-builder-and-ssrs.md)   
  [报表生成器中的报表部件和数据集](../report-data/report-parts-and-datasets-in-report-builder.md)   
- [报表部件故障排除&#40;报表生成器和 SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
+ [&#40;报表生成器和 SSRS 的报表部件疑难解答&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [发布和重新发布报表部件（报表生成器和 SSRS）](publish-and-republish-report-parts-report-builder-and-ssrs.md)  
   
   

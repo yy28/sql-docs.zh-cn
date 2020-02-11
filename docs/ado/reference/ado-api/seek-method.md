@@ -17,14 +17,14 @@ ms.assetid: 129293d2-19d3-4940-bf64-483ee72fb4a1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3e2ee81ac2ede53eb4fdbcfe8d3b5987db96f1ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917017"
 ---
 # <a name="seek-method"></a>Seek 方法
-搜索的索引[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)快速找到匹配指定的值，并将更改为该行的当前行位置的行。  
+搜索[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的索引以快速找到与指定值匹配的行，并将当前行的位置更改为该行。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,27 +33,27 @@ ms.locfileid: "67917017"
 recordset.Seek KeyValues, SeekOption  
 ```  
   
-#### <a name="parameters"></a>Parameters  
- *KeyValues*  
- 一个数组**变体**值。 索引的一个或多个列组成，该数组包含要与每个对应列进行比较的值。  
+#### <a name="parameters"></a>parameters  
+ *架构*  
+ **变量**值的数组。 索引由一个或多个列组成，数组包含一个要与每个对应列进行比较的值。  
   
  *SeekOption*  
- 一个[SeekEnum](../../../ado/reference/ado-api/seekenum.md)值，该值指定要进行索引的列与相应之间的比较类型*架构*。  
+ 一个[SeekEnum](../../../ado/reference/ado-api/seekenum.md)值，指定要在索引的列和对应的*架构*之间进行的比较的类型。  
   
 ## <a name="remarks"></a>备注  
- 使用**Seek**方法一起[索引](../../../ado/reference/ado-api/index-property.md)如果基础提供程序上支持索引属性**记录集**对象。 使用[支持](../../../ado/reference/ado-api/supports-method.md) **(adSeek)** 方法，以确定基础提供程序是否支持**搜寻**，以及**Supports(adIndex)** 若要确定该提供程序是否支持索引的方法。 (例如， [OLE DB Provider for Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)支持**Seek**并**索引**。)  
+ 如果基础提供程序支持**Recordset**对象上的索引，则将**Seek**方法与[Index](../../../ado/reference/ado-api/index-property.md)属性结合使用。 使用[支持](../../../ado/reference/ado-api/supports-method.md)**（adSeek）** 方法来确定基础提供程序是否支持**查找**，并使用**支持（a）** 方法来确定提供程序是否支持索引。 （例如， [Microsoft Jet 的 OLE DB 提供程序](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)支持**查找**和**索引**。）  
   
- 如果**Seek**不找到所需的行中，没有错误发生，而且行位于末尾处**记录集**。 设置**索引**之前执行此方法所需索引的属性。  
+ 如果查找找不到所需的行 **，则不**会出现错误，并且行位于**记录集**的末尾。 执行此方法之前，请将**index**属性设置为所需的索引。  
   
- 使用服务器端游标仅支持此方法。 查找时不支持**记录集**对象的[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性值是**adUseClient**。  
+ 只有服务器端游标才支持此方法。 当**记录集**对象的[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性值为**adUseClient**时，不支持查找。  
   
- 此方法仅可使用时**记录集**以打开对象[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)的值**adCmdTableDirect**。  
+ 仅当使用[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)值**adCmdTableDirect**打开**Recordset**对象时，才能使用此方法。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>请参阅  
- [Seek 方法和 Index 属性示例 (VB)](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)   
- [Seek 方法和 Index 属性示例 （VC + +）](../../../ado/reference/ado-api/seek-method-and-index-property-example-vc.md)   
- [Find 方法 (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
+## <a name="see-also"></a>另请参阅  
+ [Seek 方法和 Index 属性示例（VB）](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)   
+ [Seek 方法和 Index 属性示例（VC + +）](../../../ado/reference/ado-api/seek-method-and-index-property-example-vc.md)   
+ [Find 方法（ADO）](../../../ado/reference/ado-api/find-method-ado.md)   
  [Index 属性](../../../ado/reference/ado-api/index-property.md)

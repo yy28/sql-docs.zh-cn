@@ -11,13 +11,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: fbe773b8b8115cafc20bb60e962bfb42c9821636
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75253501"
 ---
-# <a name="lesson-1-create-azure-storage-account-and-container"></a>第1课：创建 Azure 存储帐户和容器
+# <a name="lesson-1-create-azure-storage-account-and-container"></a>第 1 课：创建 Azure 存储帐户和容器
   必须先创建 Azure 存储帐户和 blob 容器以及共享访问签名，然后才能开始将 SQL Server 数据文件存储在 Azure 存储中。 第1课逐步讲解登录到 Azure 管理门户、创建存储帐户、blob 容器和共享访问签名的步骤。  
   
  默认情况下，只有存储帐户的所有者可访问该帐户中的 Blob、表和队列。 若要能够使用此项新的 SQL Server 增强在不共享存储帐户访问密钥的情况下访问这些资源，必须执行以下操作：  

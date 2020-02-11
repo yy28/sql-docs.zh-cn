@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: b0bcb5cfe1ec4111aaea7153f35bca084df62b76
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401015"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>将 Integration Services 中的数据加载到并行数据仓库
@@ -56,12 +56,12 @@ PDW 目标适配器是 Integration Services 组件，可让你使用 Integration
 ### <a name="run-from-powershell"></a>从 PowerShell 运行  
 若要从 Windows PowerShell 使用**dtexec**实用工具运行包，请执行以下操作：`dtexec /FILE <packagePath>`  
   
-例如，`dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
+例如： `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ### <a name="run-from-a-windows-command-prompt"></a>从 Windows 命令提示符运行 
 若要从 Windows 命令提示符运行包，请使用**dtexec**实用工具：`dtexec /FILE <packagePath>`  
   
-例如：`dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
+例如： `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ## <a name="DataTypes"></a>数据类型  
 使用 Integration Services 将数据从数据源加载到 SQL Server PDW 数据库时，会首先将数据从源数据映射到 Integration Services 数据类型。 这允许来自多个数据源的数据映射到一组通用的数据类型。  
@@ -84,7 +84,7 @@ PDW 目标适配器是 Integration Services 组件，可让你使用 Integration
 |NCHAR|DT_WSTR|  
 |NUMERIC|DT_DECIMAL、DT_I1、DT_I2、DT_I4、DT_I8、DT_NUMERIC、DT_UI1、DT_UI2、DT_UI4、DT_UI8|  
 |NVARCHAR|DT_WSTR、DT_STR|  
-|REAL|DT_R4|  
+|real|DT_R4|  
 |SMALLDATETIME|DT_DBTIMESTAMP2|  
 |SMALLINT|DT_I1、DT_I2、DT_UI1|  
 |SMALLMONEY|DT_R4|  
@@ -129,7 +129,7 @@ SQL Server PDW 不支持以下 Integration Services 数据类型：
 ## <a name="GenRemarks"></a>一般备注  
 如果 Integration Services 包具有多个正在运行的 SQL Server PDW 目标，其中一个连接被终止，Integration Services 将停止向所有 SQL Server PDW 目标推送数据。  
   
-## <a name="Limits"></a>局限和限制  
+## <a name="Limits"></a>限制和限制  
 对于 Integration Services 包，相同数据源的 SQL Server PDW 目标数受最大活动负载的数目的限制。 该最大值是预先配置的，用户不可配置。 
 
 <!-- MISSING LINKS
@@ -216,7 +216,7 @@ id,city,lastUpdateDate,orderDate
   
 4.  选择 "**创建新连接**"。  
   
-5.  为服务器、用户、密码和目标数据库填写信息，其中包含特定于设备的信息。 （示例如下所示）。 然后单击 **“确定”**。  
+5.  为服务器、用户、密码和目标数据库填写信息，其中包含特定于设备的信息。 （示例如下所示）。 然后单击“确定”  。  
   
     对于 "未实现连接"，**服务器名称**：输入 <设备名称>-SQLCTL01、17001。  
   

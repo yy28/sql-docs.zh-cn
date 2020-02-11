@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 583d7617c0620d5d1ec24d60fbf10435a547616d
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401295"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>为分析平台系统配置无线网络适配器
@@ -98,7 +98,7 @@ ms.locfileid: "74401295"
   
 ## <a name="Sec2"></a>步骤2：在客户端服务器上配置不工作网络适配器设置  
 
-### <a name="notes"></a>注释  
+### <a name="notes"></a>说明  
   
 -   以下步骤说明如何向 AP DNS 服务器注册服务器。  
   

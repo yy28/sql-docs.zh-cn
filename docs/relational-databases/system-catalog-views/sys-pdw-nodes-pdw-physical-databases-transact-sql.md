@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 48f2a2d485f99b91b0f30a6a707a900ccbbeea96
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399910"
 ---
 # <a name="syspdw_nodes_pdw_physical_databases-transact-sql"></a>sys. pdw_nodes_pdw_physical_databases （Transact-sql）
@@ -26,9 +26,9 @@ ms.locfileid: "74399910"
   
 |列名|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|database_id|**整形**|数据库的对象 ID。 请注意，此值与[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)视图中的 database_id 不相同。|  
+|database_id|**int**|数据库的对象 ID。 请注意，此值与[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)视图中的 database_id 不相同。|  
 |physical_name|**sysname**|Shell/计算节点上数据库的物理名称。 此值与[pdw_database_mappings sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)视图中 physical_name 列的值相同。|  
-|pdw_node_id|**整形**|与节点关联的唯一数字 id。|  
+|pdw_node_id|**int**|与节点关联的唯一数字 id。|  
   
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   

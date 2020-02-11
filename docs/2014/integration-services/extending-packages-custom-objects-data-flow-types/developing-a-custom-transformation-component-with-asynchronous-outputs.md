@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5bb52fc5c8a3789cc945a2ea850d0849335917e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896628"
 ---
 # <a name="developing-a-custom-transformation-component-with-asynchronous-outputs"></a>开发具有异步输出的自定义转换组件
@@ -37,14 +37,15 @@ ms.locfileid: "62896628"
   
  对于具有同步输出的组件，如果来自其上游组件的列可用于该组件，则对于该组件下游的组件，这些列是自动可用的。 因此，具有同步输出的组件不一定要定义输出列，以便为下一组件提供列和行。 而具有异步输出的组件则必须定义输出列并向下游组件提供行。 因此，具有异步输出的组件在设计时和执行时要执行更多的任务，而组件开发人员要实现更多的代码。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含多个具有异步输出的转换。 例如，排序转换需要收到所有行才能对这些行进行排序，这是通过异步输出完成的。 该转换收到所有行之后，对这些行进行排序，然后将这些行添加到其输出。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]包含多个具有异步输出的转换。 例如，排序转换需要收到所有行才能对这些行进行排序，这是通过异步输出完成的。 该转换收到所有行之后，对这些行进行排序，然后将这些行添加到其输出。  
   
  本节详细说明如何开发具有异步输出的转换。 有关源组件开发的详细信息，请参阅[开发自定义源组件](../extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)。  
   
 ## <a name="design-time"></a>设计时  
   
 ### <a name="creating-the-component"></a>创建组件  
- <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.SynchronousInputID%2A> 对象的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> 属性标识输出是同步的还是异步的。 若要创建异步输出，请将该输出添加到组件，然后将 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.SynchronousInputID%2A> 设置为零。 设置此属性还可以确定数据流任务是为组件的输入和输出都分配 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> 对象，还是只分配一个缓冲区由两个对象共享。  
+ 
+  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.SynchronousInputID%2A> 对象的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> 属性标识输出是同步的还是异步的。 若要创建异步输出，请将该输出添加到组件，然后将 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.SynchronousInputID%2A> 设置为零。 设置此属性还可以确定数据流任务是为组件的输入和输出都分配 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> 对象，还是只分配一个缓冲区由两个对象共享。  
   
  下面的示例代码演示在其 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> 实现中创建异步输出的组件。  
   
@@ -161,7 +162,8 @@ End Sub
 #### <a name="adding-output-rows"></a>添加输出行  
  无论是在接收行的同时将行添加到输出缓冲区中还是在接收所有行之后再将其添加到输出缓冲区中，您都可以通过对输出缓冲区调用 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.AddRow%2A> 方法来实现。 添加行之后，您可以在新行中设置每列的值。  
   
- 由于有时输出缓冲区中的列多于组件输出列集合中的列，因此您必须先找到相应列在缓冲区中的索引，然后才能设置其值。 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSBufferManager100.FindColumnByLineageID%2A> 属性的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferManager%2A> 方法返回缓冲区行中具有指定沿袭 ID 的列的索引，该索引随后用于给该缓冲区列赋值。  
+ 由于有时输出缓冲区中的列多于组件输出列集合中的列，因此您必须先找到相应列在缓冲区中的索引，然后才能设置其值。 
+  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSBufferManager100.FindColumnByLineageID%2A> 属性的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferManager%2A> 方法返回缓冲区行中具有指定沿袭 ID 的列的索引，该索引随后用于给该缓冲区列赋值。  
   
  在调用 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PreExecute%2A> 方法或 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> 方法之前调用的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 方法是可使用 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferManager%2A> 属性的第一个方法，并且是可以在输入和输出缓冲区中查找列索引的第一个机会。  
   
@@ -318,9 +320,9 @@ Namespace Microsoft.Samples.SqlServer.Dts
 End Namespace  
 ```  
   
-![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![Integration Services 图标（小）](../media/dts-16.gif "集成服务图标（小）")**保持与 Integration Services 最**新  <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [开发具有同步输出的自定义转换组件](../extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)   
  [了解同步和异步转换](../understanding-synchronous-and-asynchronous-transformations.md)   
  [使用脚本组件创建异步转换](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)  

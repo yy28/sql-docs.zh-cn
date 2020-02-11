@@ -11,10 +11,10 @@ author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d774df3329c6c9e49e9e1bd9a86dbeaf30ac5765
-ms.sourcegitcommit: 9e026cfd9f2300f106af929d88a9b43301f5edc2
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74317958"
 ---
 # <a name="plan-for-host-guardian-service-attestation"></a>规划主机保护者服务证明
@@ -66,7 +66,7 @@ HGS 支持对 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] �
 
 通常，我们提供以下建议：
 
-- **对于物理生产服务器**，我们建议使用 TPM 证明来实现它所提供的其他保证。
+- 对于物理生产服务器，我们建议使用 TPM 证明来实现它所提供的其他保证  。
 - 对于虚拟生产服务器，我们建议使用主机密钥证明，因为大多数虚拟机都没有虚拟 TPM 或安全启动  。 如果你使用的是安全增强型 VM（例如，[本地防护型 VM](https://aka.ms/shieldedvms)），则可以选择使用 TPM 模式。 在所有虚拟化部署中，证明过程仅分析 VM 环境，而不分析 VM 所在的虚拟化平台。
 - **对于开发/测试方案**，我们建议使用主机密钥证明，因为它更易于设置。
 

@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: fc78354e3b422342e376bd7ebe75233dcd3ffaee
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056533"
 ---
 # <a name="upgrade-sql-server-using-the-data-migration-assistant"></a>使用数据迁移助手 SQL Server 升级
@@ -27,13 +27,13 @@ ms.locfileid: "74056533"
 
 本文提供了有关将 SQL Server 本地升级到更高版本 SQL Server 或使用数据迁移助手在 Azure Vm 上 SQL Server 的分步说明。
 
-## <a name="create-a-new-migration-project"></a>创建新的迁移项目
+## <a name="create-a-new-migration-project"></a>创建新迁移项目
 
 1. 在左侧窗格中，选择 "**新建**（+）"，然后选择 "**迁移**" 项目类型。
 
 2. 如果要将本地 SQL Server 升级到本地 SQL Server 的更高版本，请将源和目标服务器类型设置为**SQL Server** 。
 
-3. 选择“创建”。
+3. 选择“创建”  。
 
    ![创建迁移项目](../dma/media/NewCreate.png)
 
@@ -49,7 +49,7 @@ ms.locfileid: "74056533"
 
 5. 建议你通过在 "**连接属性**" 部分中选择 "**加密连接**" 来加密连接。
 
-6. 系统提示您启用数据连接时单击 **“下一步”** 。
+6. 单击“下一步”。 
 
    ![指定源和目标页](../dma/media/SourceTarget.png)
 
@@ -64,7 +64,7 @@ ms.locfileid: "74056533"
    > [!NOTE]
    > 通过在左窗格中选择服务器，可以将迁移设置应用于要迁移的所有数据库。 还可以通过在左窗格中选择数据库，使用特定的设置来配置单个数据库。
 
-    A. 指定**用于备份操作的源和目标 SQL 服务器可访问的共享位置**。 请确保运行源 SQL Server 实例的服务帐户对共享位置具有写入权限，并且目标服务帐户对共享位置具有读取权限。
+    a. 指定**用于备份操作的源和目标 SQL 服务器可访问的共享位置**。 请确保运行源 SQL Server 实例的服务帐户对共享位置具有写入权限，并且目标服务帐户对共享位置具有读取权限。
 
     b. 指定要在目标服务器上还原数据和事务日志文件的位置。
 
@@ -78,7 +78,7 @@ ms.locfileid: "74056533"
 
    ![将数据库备份复制到不同位置的选项](../dma/media/CopyDatabaseDifferentLocation.png)
 
-5. 选择“**下一步**”。
+5. 选择“**下一页**”。
 
 数据迁移助手对备份文件夹、数据和日志文件位置执行验证。 如果任何验证失败，请修复这些选项，然后选择 "**下一步**"。
 
@@ -109,6 +109,6 @@ ms.locfileid: "74056533"
 
 ## <a name="see-also"></a>另请参阅
 
-- [数据迁移助手（DMA）](../dma/dma-overview.md)
+- [数据迁移助手 (DMA)](../dma/dma-overview.md)
 - [数据迁移助手：配置设置](../dma/dma-configurationsettings.md)
 - [数据迁移助手：最佳实践](../dma/dma-bestpractices.md)

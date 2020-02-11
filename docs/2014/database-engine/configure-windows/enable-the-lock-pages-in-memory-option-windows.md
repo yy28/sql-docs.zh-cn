@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f6e938e3212e519ab51be1faf3f18e28957ef3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62782275"
 ---
 # <a name="enable-the-lock-pages-in-memory-option-windows"></a>启用“锁定内存页”选项 (Windows)
@@ -29,7 +29,7 @@ ms.locfileid: "62782275"
   
 ### <a name="to-enable-the-lock-pages-in-memory-option"></a>启用“锁定内存页”选项  
   
-1.  在 **“开始”** 菜单上，单击 **“运行”** 。 在中**开放**框中，键入`gpedit.msc`。  
+1.  在 **“开始”** 菜单上，单击 **“运行”** 。 在 "**打开**" 框中`gpedit.msc`，键入。  
   
 2.  在 **“本地组策略编辑器”** 控制台上，展开 **“计算机配置”** ，再展开 **“Windows 设置”** 。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "62782275"
   
 8.  注销后重新登录，此更改才生效。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [“服务器内存”服务器配置选项](server-memory-server-configuration-options.md)  
   
   

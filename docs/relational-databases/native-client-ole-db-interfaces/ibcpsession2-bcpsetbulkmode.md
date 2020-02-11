@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 932bb271d7d38a1dfec411dca4ed5b1696ab924f
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73763205"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  IBCPSession2：： BCPSetBulkMode 提供了用于指定列格式的[IBCPSession &#40;：&#41; ： BCPColFmt OLE DB](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md)的替代方法。 不同于 IBCPSession：： BCPColFmt，它设置单个列格式属性，IBCPSession2：： BCPSetBulkMode 设置所有属性。  
+  IBCPSession2：： BCPSetBulkMode 提供了用于指定列格式的[IBCPSession：： BCPColFmt &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md)的替代方法。 不同于 IBCPSession：： BCPColFmt，它设置单个列格式属性，IBCPSession2：： BCPSetBulkMode 设置所有属性。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,10 +39,10 @@ HRESULT BCPSetBulkMode (
 ```  
   
 ## <a name="arguments"></a>参数  
- property  
+ *知识产权*  
  类型为 BYTE 的常量。 相关的常量列表，请参阅“备注”部分中的表。  
   
- pField  
+ *pField*  
  指向字段终止符值的指针。  
   
  cbField  
@@ -65,14 +65,14 @@ HRESULT BCPSetBulkMode (
 |**E_INVALIDARG**|参数无效。|  
 |**E_OUTOFMEMORY**|内存不足错误。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
  IBCPSession2：： BCPSetBulkMode 可用于从查询或表中大容量复制。 使用 IBCPSession2::BCPSetBulkMode 向外大容量复制查询语句时，必须先调用该方法，再调用 `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, ...)` 来指定查询语句。  
   
  应该避免在单个命令文本内将 RPC 调用语法与批查询语法结合使用（例如 `{rpc func};SELECT * from Tbl`）。  这将导致 ICommandPrepare：:P 准备返回错误，并阻止你检索元数据。 如果需要在单个命令文本内结合执行存储过程和批查询，请使用 ODBC CALL 语法（例如 `{call func}; SELECT * from Tbl`）。  
   
- 下表列出了 property 参数的常量。  
+ 下表列出了 property 参数的常量**。  
   
-|属性|说明|  
+|properties|说明|  
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|指定字符输出模式。<br /><br /> 对应于 BCP 中的-c 选项。EXE，并设置为 IBCPSession：： BCPColFmt，并将*eUserDataType*属性设置为**BCP_TYPE_SQLCHARACTER**。|  
 |BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 输出模式。<br /><br /> 对应于 BCP 中的-w 选项。EXE 和 IBCPSession：： BCPColFmt， *eUserDataType*属性设置为**BCP_TYPE_SQLNCHAR**。|  

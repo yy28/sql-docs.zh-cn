@@ -20,24 +20,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 523891f2f0005c7f6e6752e5d16d3680f680fdfa
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73882338"
 ---
-# <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>在现有发布中添加和删除项目
+# <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>向现有发布添加项目和从中删除项目
   在创建发布后，可以添加和删除项目。 可以随时添加项目，但删除项目所需的操作取决于复制的类型和删除项目的时间。  
   
 ## <a name="adding-articles"></a>添加项目  
  添加项目涉及的操作有：将项目添加到发布、为发布创建新的快照、同步订阅以应用新项目的架构和数据。  
   
 > [!NOTE]
->  如果向合并发布中添加一个项目和一个依赖于此新项目的现有项目，则必须使用 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 和 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) 的 \@processing_order 参数指定两个项目的处理顺序。 请考虑以下情况：您要发布一个表，但不发布该表引用的函数。 如果不发布该函数，则无法在订阅服务器中创建相应的表。 将此函数添加到发布时：为 sp_addmergearticle 的 **processing_order\@** 参数指定值 1；为 sp_changemergearticle 的 **processing_order\@** 参数指定值 2，为参数 **article\@** 指定表名称。 此处理顺序可确保在创建依赖于某函数的表之前在订阅服务器上创建该函数。 每个项目可以使用不同的数字，只要函数的数字小于表的数字即可。  
+>  如果向合并发布中添加项目，而现有项目依赖于新项目，必须使用[sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)和[sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)的** \@processing_order**参数指定两个项目的处理顺序。 请考虑以下情况：您要发布一个表，但不发布该表引用的函数。 如果不发布该函数，则无法在订阅服务器中创建相应的表。 将此函数添加到发布时：为 sp_addmergearticle**** 的 **processing_order\@** 参数指定值 1****；为 sp_changemergearticle**** 的 **processing_order\@** 参数指定值 2****，为参数 **article\@** 指定表名称。 此处理顺序可确保在创建依赖于某函数的表之前在订阅服务器上创建该函数。 每个项目可以使用不同的数字，只要函数的数字小于表的数字即可。  
   
 1.  用以下方法之一添加一个或多个项目：  
   
-    -   [在发布中添加和删除项目 &#40;SQL Server Management Studio&#41;](add-articles-to-and-drop-articles-from-a-publication.md)  
+    -   [将项目添加到发布中，以及从发布中删除项目 &#40;SQL Server Management Studio&#41;](add-articles-to-and-drop-articles-from-a-publication.md)  
   
     -   [定义项目](define-an-article.md)  
   
@@ -66,7 +66,7 @@ ms.locfileid: "73882338"
   
 -   对于兼容级别低于 90RTM 的合并发布，可以在初始同步订阅之前删除项目，而无需特别考虑。 如果在同步一个或多个订阅之后删除项目，则必须删除、重新创建和同步订阅。  
   
--   对于快照发布或事务发布，可以在创建订阅之前删除项目，而无需特别考虑。 如果在创建一个或多个订阅之后删除项目，则必须删除、重新创建和同步订阅。 有关删除订阅的详细信息，请参阅[订阅发布](../subscribe-to-publications.md)和 [sp_dropsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql)。 使用**sp_dropsubscription** 可以删除订阅中的单个项目，而不是删除整个订阅。  
+-   对于快照发布或事务发布，可以在创建订阅之前删除项目，而无需特别考虑。 如果在创建一个或多个订阅之后删除项目，则必须删除、重新创建和同步订阅。 有关删除订阅的详细信息，请参阅[订阅发布](../subscribe-to-publications.md)和 [sp_dropsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql)。 **sp_dropsubscription**允许从订阅中删除单个项目而不是整个订阅。  
   
 1.  从发布中删除项目涉及的操作有：删除项目并为发布创建新的快照。 删除项目会使当前快照失效，因此必须创建新的快照。  
   

@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d2752a1708c5727567de470b49d4cbcc63f90923
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782653"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
@@ -43,57 +43,57 @@ RETCODE bcp_gettypename (
  *令牌*  
  指示 BCP 类型标记的值。  
   
- field  
+ *定义域*  
  指示请求的标记是否为 max 类型。  
   
 ## <a name="returns"></a>返回  
  一个字符串，其中包含与 BCP 类型对应的 SQL 类型名称。 如果指定了无效的 BCP 类型，则返回空字符串。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
  BCP 类型标记在 sqlncli.h 头文件和 sqlncli11.lib 库中定义。  
   
  下表指定了可能的 BCP 类型、这些类型是否是 max 类型以及预期的输出。  
   
 |BCP 类型名称|MaxType|输出|  
 |-------------------|-------------|------------|  
-|**SQLDECIMAL**|之前或之后|**decimal**|  
-|**SQLNUMERIC**|之前或之后|**numeric**|  
-|**SQLINT1**|之前或之后|**tinyint**|  
-|**SQLINT2**|之前或之后|**int**|  
-|**SQLINT4**|之前或之后|**int**|  
-|**SQLMONEY**|之前或之后|**money**|  
-|**SQLFLT8**|之前或之后|**float**|  
-|**SQLDATETIME**|之前或之后|**datetime**|  
-|**SQLBITN**|之前或之后|**位-null**|  
-|**SQLBIT**|之前或之后|**bit**|  
-|**SQLBIGCHAR**|“否”|**char**|  
-|**SQLCHARACTER**|“否”|**char**|  
-|**SQLBIGVARCHAR**|“否”|**varchar**|  
-|**SQLVARCHAR**|“否”|**varchar**|  
-|**SQLTEXT**|之前或之后|**text**|  
-|**SQLBIGBINARY**|“否”|**binary**|  
-|**SQLBINARY**|“否”|**二进制**|  
-|**SQLBIGVARBINARY**|“否”|**Varbinary**|  
-|**SQLVARBINARY**|“否”|**Varbinary**|  
-|**SQLIMAGE**|之前或之后|**图像**|  
-|**SQLINTN**|之前或之后|**int-null**|  
-|**SQLDATETIMN**|之前或之后|**datetime-null**|  
-|**SQLMONEYN**|之前或之后|**money-null**|  
-|**SQLFLTN**|之前或之后|**float-null**|  
-|**SQLAOPSUM**|之前或之后|**Sum**|  
-|**SQLAOPAVG**|之前或之后|**Avg**|  
-|**SQLAOPCNT**|之前或之后|**Count**|  
-|**SQLAOPMIN**|之前或之后|**Min**|  
-|**SQLAOPMAX**|之前或之后|**Max**|  
-|**SQLDATETIM4**|之前或之后|**smalldatetime**|  
-|**SQLMONEY4**|之前或之后|**Smallmoney**|  
-|**SQLFLT4**|之前或之后|**实际上**|  
-|**SQLUNIQUEID**|之前或之后|**uniqueidentifier**|  
-|**SQLNCHAR**|“否”|**Nchar**|  
-|**SQLNVARCHAR**|“否”|**Nvarchar**|  
-|**SQLNTEXT**|之前或之后|**Ntext**|  
-|**SQLVARIANT**|之前或之后|**sql_variant**|  
-|**SQLINT8**|之前或之后|**Bigint**|  
+|**SQLDECIMAL**|任一个|**Decimal**|  
+|**SQLNUMERIC**|任一个|**加法**|  
+|**SQLINT1**|任一个|**tinyint**|  
+|**SQLINT2**|任一个|**smallint**|  
+|**SQLINT4**|任一个|**int**|  
+|**SQLMONEY**|任一个|**money**|  
+|**SQLFLT8**|任一个|**float**|  
+|**SQLDATETIME**|任一个|**datetime**|  
+|**SQLBITN**|任一个|**bit-null**|  
+|**SQLBIT**|任一个|**bit**|  
+|**SQLBIGCHAR**|否|**char**|  
+|**SQLCHARACTER**|否|**char**|  
+|**SQLBIGVARCHAR**|否|**varchar**|  
+|**SQLVARCHAR**|否|**varchar**|  
+|**SQLTEXT**|任一个|**text**|  
+|**SQLBIGBINARY**|否|**binary**|  
+|**SQLBINARY**|否|**二进制**|  
+|**SQLBIGVARBINARY**|否|**Varbinary**|  
+|**SQLVARBINARY**|否|**Varbinary**|  
+|**SQLIMAGE**|任一个|**图像**|  
+|**SQLINTN**|任一个|**int-null**|  
+|**SQLDATETIMN**|任一个|**datetime-null**|  
+|**SQLMONEYN**|任一个|**money-null**|  
+|**SQLFLTN**|任一个|**float-null**|  
+|**SQLAOPSUM**|任一个|**Sum**|  
+|**SQLAOPAVG**|任一个|**Avg**|  
+|**SQLAOPCNT**|任一个|**Count**|  
+|**SQLAOPMIN**|任一个|**Min**|  
+|**SQLAOPMAX**|任一个|**数量**|  
+|**SQLDATETIM4**|任一个|**smalldatetime**|  
+|**SQLMONEY4**|任一个|**Smallmoney**|  
+|**SQLFLT4**|任一个|**实际上**|  
+|**SQLUNIQUEID**|任一个|**uniqueidentifier**|  
+|**SQLNCHAR**|否|**Nchar**|  
+|**SQLNVARCHAR**|否|**Nvarchar**|  
+|**SQLNTEXT**|任一个|**Ntext**|  
+|**SQLVARIANT**|任一个|**sql_variant**|  
+|**SQLINT8**|任一个|**Bigint**|  
 |**SQLCHARACTER**|是|**varchar(max)**|  
 |**SQLBIGCHAR**|是|**varchar(max)**|  
 |**SQLBIGVARCHAR**|是|**varchar(max)**|  
@@ -105,12 +105,12 @@ RETCODE bcp_gettypename (
 |**SQLNCHAR**|是|**nvarchar(max)**|  
 |**SQLNVARCHAR**|是|**nvarchar(max)**|  
 |**SQLXML**|是|**Xml**|  
-|**SQLUDT**|之前或之后|**Udt**|  
+|**SQLUDT**|任一个|**Udt**|  
   
 ## <a name="bcp_gettypename-support-for-enhanced-date-and-time-features"></a>bcp_gettypename 对日期和时间增强功能的支持  
- OLE DB 对于日期/时间类型的令牌参数值，请参阅 sqlncli.msi 中的 "键入的" 列中的 "键入"。 [ &#40;&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md) 返回值位于“文件存储类型”列的对应行中。  
+ 有关日期/时间类型的令牌参数值，请参阅 sqlncli.msi [OLE DB 和 ODBC&#41;的增强日期和时间 &#40;类型的大容量复制更改](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)中表的 "Type in" 列。 返回值位于“文件存储类型”列的对应行中。  
   
- 有关详细信息，请参阅[日期和时间&#40;改进&#41;ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+ 有关详细信息，请参阅[ODBC&#41;&#40;日期和时间改进](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [大容量复制函数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

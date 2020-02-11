@@ -15,17 +15,17 @@ author: HJToland3
 ms.author: rajpo
 ms.custom: seo-lt-2019
 ms.openlocfilehash: ec8ededac012ccb2b3d4b62fc40d84132a6fb882
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056651"
 ---
-# <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>评估企业并使用 DMA 合并评估报告
+# <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>使用 DMA 评估企业和合并评估报告
 
 以下分步说明可帮助你使用数据迁移助手来执行用于升级本地 SQL Server 或 SQL Server 在 Azure Vm 上运行或迁移到 Azure SQL 数据库的已成功缩放评估。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必备条件
 
 - 指定网络上的工具计算机，DMA 将从该计算机启动。 确保此计算机已连接到 SQL Server 目标。
 - 下载并安装：
@@ -58,7 +58,7 @@ ms.locfileid: "74056651"
    > 它包含的文件夹和 hbase-runner.psm1 文件必须具有相同的名称。
 
    > [!IMPORTANT]
-   > 将 PowerShell 文件保存到 WindowsPowerShell 目录后，可能需要取消阻止 PowerShell 文件，以确保正确加载这些模块。 若要取消阻止 PowerShell 文件，请右键单击该文件，选择 "**属性**"，选择 "**取消阻止**" 文本框，然后选择 **"确定"** 。
+   > 将 PowerShell 文件保存到 WindowsPowerShell 目录后，可能需要取消阻止 PowerShell 文件，以确保正确加载这些模块。 若要取消阻止 PowerShell 文件，请右键单击该文件，选择 "**属性**"，选择 "**取消阻止**" 文本框，然后选择 **"确定"**。
 
    ![hbase-runner.psm1 文件属性](../dma/media//dma-consolidatereports/dma-psm1-file-properties.png)
 
@@ -113,12 +113,12 @@ ms.locfileid: "74056651"
 
 下表描述了与 dmaDataCollector 函数关联的参数。
 
-|参数  |描述 |
+|参数  |说明 |
 |---------|---------|
 |**getServerListFrom** | 你的清单。 可能的值为**SqlServer**和**CSV**。<br/>有关详细信息，请参阅[创建 SQL server 清点](#create-inventory)。 |
 |**csvPath** | CSV 清单文件的路径。  仅当**getServerListFrom**设置为**CSV**时使用。 |
-|**serverName** | 在**getServerListFrom**参数中使用**SqlServer**时清单的 SQL Server 实例名称。 |
-|**databaseName** | 承载库存表的数据库。 |
+|**服务器** | 在**getServerListFrom**参数中使用**SqlServer**时清单的 SQL Server 实例名称。 |
+|**Database** | 承载库存表的数据库。 |
 |**AssessmentName** | DMA 评估的名称。 |
 |**TargetPlatform** | 要执行的评估目标类型。  可能的值包括**AzureSQLDatabase**、 **SQLServer2012**、 **2014**、 **sqlserver2016-ssei-expr**、 **SQLServerLinux2017**、 **SQLServerWindows2017**和**ManagedSqlServer**。 |
 |**AuthenticationMethod** | 用于连接到要评估的 SQL Server 目标的身份验证方法。 可能的值为**和 sqlauth**和**WindowsAuth**。 |
@@ -136,13 +136,13 @@ ms.locfileid: "74056651"
 
 下表描述了与 dmaProcessor 函数关联的参数。
 
-|参数  |描述 |
+|参数  |说明 |
 |---------|---------|
 |**processTo** | 将处理 JSON 文件的位置。 可能的值为**SQLServer**和**AzureSQLDatabase**。 |
-|**serverName** | 数据将处理到的 SQL Server 实例。  如果为**processTo**参数指定**AzureSQLDatabase** ，则仅包含 SQL Server 名称（不包括. database.windows.net）。 面向 Azure SQL 数据库时，系统将提示你提供两个登录名;第一种是 Azure 租户凭据，第二种是 Azure SQL Server 的管理员登录名。 |
+|**服务器** | 数据将处理到的 SQL Server 实例。  如果为**processTo**参数指定**AzureSQLDatabase** ，则仅包含 SQL Server 名称（不包括. database.windows.net）。 面向 Azure SQL 数据库时，系统将提示你提供两个登录名;第一种是 Azure 租户凭据，第二种是 Azure SQL Server 的管理员登录名。 |
 |**CreateDMAReporting** | 要创建的用于处理 JSON 文件的临时数据库。  如果指定的数据库已经存在，并且将此参数设置为1，则不会创建对象。  此参数可用于重新创建已删除的单个对象。 |
 |**CreateDataWarehouse** | 创建 Power BI 报表将使用的数据仓库。 |
-|**databaseName** | DMAReporting 数据库的名称。 |
+|**Database** | DMAReporting 数据库的名称。 |
 |**warehouseName** | 数据仓库数据库的名称。 |
 |**jsonDirectory** | 包含 JSON 评估文件的目录。  如果目录中有多个 JSON 文件，则逐个处理它们。 |
 
@@ -187,8 +187,8 @@ DmaProcessor 完成对评估文件的处理后，数据将加载到 ReportData �
 若要使用 DMA 报表，请使用书签和切片器进行筛选：
 
 - 评估类型（Azure SQL DB、Azure SQL MI、SQL 内部部署） 
-- 实例名
-- “数据库名称”
+- Instance Name
+- 数据库名称
 - 团队名称
 
 若要访问 "书签和筛选器" 边栏选项卡，请在主报表页上选择 "筛选器" 书签：

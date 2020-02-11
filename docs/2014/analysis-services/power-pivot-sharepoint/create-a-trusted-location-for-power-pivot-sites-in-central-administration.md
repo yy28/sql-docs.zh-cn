@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c5dd66b72ff280431d29ae292af8fa1402095dc
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74684085"
 ---
 # <a name="create-a-trusted-location-for-powerpivot-sites-in-central-administration"></a>Create a trusted location for PowerPivot sites in Central Administration
@@ -59,7 +59,7 @@ ms.locfileid: "74684085"
   
 10. 还在“外部数据”中，对于“刷新时警告”，取消选中 **“启用刷新警告”** 的复选框。 取消选中该复选框将允许 PowerPivot 库跳过例行的警告消息，而显示工作簿的预览图像。  
   
-11. 单击“确定”****。  
+11. 单击“确定”。   
   
 ## <a name="see-also"></a>另请参阅  
  [PowerPivot 库](../../2014-toc/index.yml)  

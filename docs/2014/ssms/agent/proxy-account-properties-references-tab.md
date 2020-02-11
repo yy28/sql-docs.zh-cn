@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 475acd590d8bbdf43acb1f1a99781b82b475f0aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62714556"
 ---
 # <a name="proxy-account-properties-references-tab"></a>代理帐户属性（“引用”选项卡）
-  此只读页列出了引用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的代理帐户的作业步骤。  
+  此只读页列出了引用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理的代理帐户的作业步骤。  
   
 ## <a name="options"></a>选项  
  **作业名称**  
@@ -32,7 +32,7 @@ ms.locfileid: "62714556"
  **子系统**  
  此代理帐户使用的子系统。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建 SQL Server 代理的代理帐户](create-a-sql-server-agent-proxy.md)  
   
   

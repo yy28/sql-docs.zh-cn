@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7e531a2d916cfc464c18aab931c268197fbf5982
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915024"
 ---
-# <a name="mssqlserver2515"></a>MSSQLSERVER_2515
+# <a name="mssqlserver_2515"></a>MSSQLSERVER_2515
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62915024"
 |符号名称|DBCC_DIFF_MAP_OUT_OF_SYNC|  
 |消息正文|页 P_ID、对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID（类型为 TYPE）已修改，但在差异备份位图中未标记为已修改。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  指定的页具有的日志序列号 (LSN) 大于数据库的 BackupManager 中的差异引用 LSN 或该文件的文件控制块中的差异基准 LSN（以更晚者为准）。 但是，页在差异备份位图中未标记为已更改。  
   
  每个数据库将仅报告一页，因为仅当已知差异位图没有错误时才执行此检查。  
@@ -60,8 +60,8 @@ ms.locfileid: "62915024"
 ### <a name="results-of-running-repair-options"></a>运行 REPAIR 选项的结果  
  运行 REPAIR 将使差异位图无效。 在执行完整数据库备份之前，不能执行差异备份。 完整数据库备份为要重新生成的差异位图提供了基准。  
   
-## <a name="see-also"></a>请参阅  
- [创建完整数据库备份 (SQL Server)](../backup-restore/create-a-full-database-backup-sql-server.md)   
+## <a name="see-also"></a>另请参阅  
+ [&#40;SQL Server 创建完整数据库备份&#41;](../backup-restore/create-a-full-database-backup-sql-server.md)   
  [MSSQLSERVER_2516](mssqlserver-2516-database-engine-error.md)  
   
   

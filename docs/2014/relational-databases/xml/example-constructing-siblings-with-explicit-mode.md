@@ -1,5 +1,5 @@
 ---
-title: 例如：使用 EXPLICIT 模式构造同级 | Microsoft Docs
+title: 示例：使用 EXPLICIT 模式构造同级 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4f5ff9f8c153ab80adf5bc19fa5f78f58ddb58b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62704728"
 ---
-# <a name="example-constructing-siblings-with-explicit-mode"></a>例如：使用 EXPLICIT 模式构造同级
+# <a name="example-constructing-siblings-with-explicit-mode"></a>示例：使用 EXPLICIT 模式构造同级
   假定您要构造提供销售订单信息的 XML。 请注意，<`SalesPerson`> 和 <`OrderDetail`> 元素是同级。 每个订单都有一个 <`OrderHeader`> 元素、一个 <`SalesPerson`> 元素和一个或多个 <`OrderDetail`> 元素。  
   
 ```  
@@ -32,7 +32,7 @@ ms.locfileid: "62704728"
 <OrderHeader ...</OrderHeader>  
 ```  
   
- 以下 EXPLICIT 模式查询将构造此 XML。 请注意，查询将 <`OrderHeader`> 元素的 `Tag` 值指定为 1，将 <`SalesPerson`> 元素的此值指定为 2，将 <`OrderDetail`> 元素的此值指定为 3。 因为 <`SalesPerson`> 和 <`OrderDetail`> 是同级，所以该查询将 `Parent` 标记值都指定为 1，从而标识 <`OrderHeader`> 元素。  
+ 以下 EXPLICIT 模式查询将构造此 XML。 请注意，查询将 <`Tag`> 元素的 `OrderHeader` 值指定为 1，将 <`SalesPerson`> 元素的此值指定为 2，将 <`OrderDetail`> 元素的此值指定为 3。 因为 <`SalesPerson`> 和 <`OrderDetail`> 是同级，所以该查询将 `Parent` 标记值都指定为 1，从而标识 <`OrderHeader`> 元素。  
   
 ```  
 USE AdventureWorks2012;  
@@ -109,7 +109,7 @@ FOR XML EXPLICIT;
   
  `</OrderHeader>`  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [将 EXPLICIT 模式与 FOR XML 一起使用](use-explicit-mode-with-for-xml.md)  
   
   

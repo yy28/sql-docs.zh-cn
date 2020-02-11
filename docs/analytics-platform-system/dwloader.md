@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 8ea941e45f5125beed0820c5d5242b0f86073f76
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401169"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>并行数据仓库的 dwloader 命令行加载器
@@ -559,9 +559,9 @@ For the maximum number of loads per appliance, see [Minimum and Maximum Values](
 |堆|否|是|否|轻微|  
 |堆|否|否|否|轻微|  
 |Cl|是|是|否|轻微|  
-|Cl|是|否|是|完整|  
+|Cl|是|否|是|完全|  
 |Cl|否|是|否|轻微|  
-|Cl|否|否|是|完整|  
+|Cl|否|否|是|完全|  
   
 上表显示了使用追加模式加载到堆或聚集索引（CI）表中的**dwloader** ，其中包含或不包含多事务性标志，并且加载到空表或非空表中。 表中显示了每个这种负载组合的锁定和日志记录行为。 例如，如果在没有多事务性模式的情况下将 "追加" 模式加载到聚集索引中，并将其加载到空表中，则会在表中创建一个排他锁，并且日志记录是最少的。 这意味着，客户将无法加载（第二）阶段并同时查询到空表中。 但是，在非空表中加载具有相同配置的时，PDW 不会对表发出排他锁，并且可能会发生并发。 遗憾的是，发生了完整的日志记录，从而降低了处理速度。  
   

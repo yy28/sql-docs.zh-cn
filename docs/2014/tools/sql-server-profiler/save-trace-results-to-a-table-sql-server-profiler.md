@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8571f7273cc2667040ffffc8ffbfb0df4e2a6ef6
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67792691"
 ---
 # <a name="save-trace-results-to-a-table-sql-server-profiler"></a>将跟踪结果保存到表 (SQL Server Profiler)
@@ -42,9 +42,9 @@ ms.locfileid: "67792691"
   
 6.  在 **“表”** 列表中，键入或选择跟踪结果的表名。 单击“确定” **。**  
   
-7.  在中**跟踪属性**对话框中，选择**设置最大行数 （以千为单位）** 复选框以指定要保存的行的最大数。  
+7.  在 "**跟踪属性**" 对话框中，选中 "**设置最大行数（以千为单位）** " 复选框，以指定要保存的最大行数。  
   
-## <a name="see-also"></a>请参阅  
- [SQL Server 事件探查器](sql-server-profiler.md)  
+## <a name="see-also"></a>另请参阅  
+ [SQL Server Profiler](sql-server-profiler.md)  
   
   

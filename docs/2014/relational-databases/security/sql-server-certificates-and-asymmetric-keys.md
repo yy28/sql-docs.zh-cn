@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ddb7e84f69f501a7857b0d55b1b8a14d11a85694
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244512"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server 证书和非对称密钥
@@ -49,9 +49,9 @@ ms.locfileid: "75244512"
   
 |主题|说明|  
 |-----------|-----------------|  
-|[&#40;Transact-sql&#41;创建证书](/sql/t-sql/statements/create-certificate-transact-sql)|介绍用于创建证书的命令。|  
-|[标识带有数字签名的包的源](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)|显示有关如何使用证书为软件包签名的信息。|  
-|[将证书用于数据库镜像端点 &#40;Transact-sql&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|提供有关如何将证书用于数据库镜像的信息。|  
+|[CREATE CERTIFICATE (Transact-SQL)](/sql/t-sql/statements/create-certificate-transact-sql)|介绍用于创建证书的命令。|  
+|[使用数字签名标识包的源](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)|显示有关如何使用证书为软件包签名的信息。|  
+|[使用数据库镜像终结点证书 (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|提供有关如何将证书用于数据库镜像的信息。|  
   
 ## <a name="asymmetric-keys"></a>非对称密钥  
  非对称密钥用于确保对称密钥的安全性。 它们还可用于有限数据加密以及对数据库对象进行数字签名。 非对称密钥由私钥和对应的公钥组成。 有关非对称密钥的详细信息，请参阅 [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)的公钥（还可以选择包含私钥）。  
@@ -63,8 +63,8 @@ ms.locfileid: "75244512"
   
 |主题|说明|  
 |-----------|-----------------|  
-|[创建非对称密钥 &#40;Transact-sql&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|介绍用于创建非对称密钥的命令。|  
-|[SIGNBYASYMKEY &#40;Transact-sql&#41;](/sql/t-sql/functions/signbyasymkey-transact-sql)|显示用于为对象签名的选项。|  
+|[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|介绍用于创建非对称密钥的命令。|  
+|[SIGNBYASYMKEY (Transact-SQL)](/sql/t-sql/functions/signbyasymkey-transact-sql)|显示用于为对象签名的选项。|  
   
 ## <a name="tools"></a>工具  
  
@@ -79,11 +79,11 @@ ms.locfileid: "75244512"
 ## <a name="related-tasks"></a>Related Tasks  
  [选择加密算法](encryption/choose-an-encryption-algorithm.md)  
   
- [&#40;Transact-sql&#41;创建对称密钥](/sql/t-sql/statements/create-symmetric-key-transact-sql)  
+ [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)  
   
- [&#40;Transact-sql&#41;创建证书](/sql/t-sql/statements/create-certificate-transact-sql)  
+ [CREATE CERTIFICATE (Transact-SQL)](/sql/t-sql/statements/create-certificate-transact-sql)  
   
 ## <a name="see-also"></a>另请参阅  
  [sys.databases &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)   
- [透明数据加密 &#40;TDE&#41;](encryption/transparent-data-encryption.md)  
+ [透明数据加密 (TDE)](encryption/transparent-data-encryption.md)  
   

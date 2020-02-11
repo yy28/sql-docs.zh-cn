@@ -19,25 +19,25 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d4b6aabb1f44c2a25704b7079074a5600c4d52d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833125"
 ---
 # <a name="back-up-database-task"></a>“备份数据库”任务
-  “备份数据库”任务可执行不同类型的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库备份。 有关详细信息，请参阅 [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)。  
+  “备份数据库”任务可执行不同类型的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库备份。 有关详细信息，请参阅 [SQL Server 数据库的备份和还原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)。  
   
  通过使用“备份数据库”任务，包可以备份单个数据库或多个数据库。 如果此任务仅备份单个数据库，则可以选择备份组件：数据库或者其文件和文件组。  
   
 ## <a name="supported-recover-models-and-backup-types"></a>支持的恢复模式和备份类型  
  下表列出了“备份数据库”任务支持的恢复模式和备份类型。  
   
-|恢复模式|“数据库”|数据库差异|事务日志|文件或文件差异|  
+|恢复模式|数据库|数据库差异|事务日志|文件或文件差异|  
 |--------------------|--------------|---------------------------|---------------------|-------------------------------|  
-|Simple|Required|可选|不支持|不支持|  
-|完全|Required|可选|Required|可选|  
-|大容量日志|Required|可选|Required|可选|  
+|简单|必选|可选|不支持|不支持|  
+|完全|必选|可选|必选|可选|  
+|大容量日志|必选|可选|必选|可选|  
   
  “备份数据库”任务封装 Transact-SQL BACKUP 语句。 有关详细信息，请参阅 [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)。  
   

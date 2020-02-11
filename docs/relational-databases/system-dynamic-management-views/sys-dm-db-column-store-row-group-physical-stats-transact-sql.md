@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c676f82f3bf424638fcb6a2705853a5ff482921c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75254474"
 ---
 # <a name="sysdm_db_column_store_row_group_physical_stats-transact-sql"></a>sys. dm_db_column_store_row_group_physical_stats （Transact-sql）
@@ -37,10 +37,10 @@ ms.locfileid: "75254474"
 
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**整形**|基础表的 ID。|  
-|**index_id**|**整形**|此列存储索引*object_id*表的 ID。|  
-|**partition_number**|**整形**|保存*row_group_id*的表分区的 ID。 您可以使用 partition_number 将此 DMV 联接到 sys.partitions。|  
-|**row_group_id**|**整形**|此行组的 ID。 对于已分区表，值在分区中是唯一的。<br /><br /> 对于内存尾，为-1。|  
+|**object_id**|**int**|基础表的 ID。|  
+|**index_id**|**int**|此列存储索引*object_id*表的 ID。|  
+|**partition_number**|**int**|保存*row_group_id*的表分区的 ID。 您可以使用 partition_number 将此 DMV 联接到 sys.partitions。|  
+|**row_group_id**|**int**|此行组的 ID。 对于已分区表，值在分区中是唯一的。<br /><br /> 对于内存尾，为-1。|  
 |**delta_store_hobt_id**|**bigint**|增量存储中行组的 hobt_id。<br /><br /> 如果行组不在增量存储中，则为 NULL。<br /><br /> 对于内存中表尾，为 NULL。|  
 |**状态**|**tinyint**|与*state_description*关联的 ID 号。<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED<br /><br /> 4 = 逻辑删除<br /><br /> 压缩是适用于内存中表的唯一状态。|  
 |**state_desc**|**nvarchar （60）**|行组状态的说明：<br /><br /> 不可见-正在生成的行组。 例如： <br />压缩数据时，列存储中的行组是不可见的。 压缩完成后，元数据开关会将列存储行组的状态从不可见改为已压缩，并将增量存储行组的状态从 "已关闭" 更改为 "逻辑删除"。<br /><br /> OPEN-正在接受新行的增量存储行组。 开放的行组仍采用行存储格式，并且尚未压缩成列存储格式。<br /><br /> 已关闭-增量存储中的行组，其中包含最大行数，正在等待元组移动进程将其压缩到列存储中。<br /><br /> 压缩-使用列存储压缩进行压缩并存储在列存储中的行组。<br /><br /> TOMBSTONE-某个行组，它以前在增量存储中，不再使用。|  
@@ -51,7 +51,7 @@ ms.locfileid: "75254474"
 |**trim_reason_desc**|**nvarchar （60）**|*Trim_reason*的说明。<br /><br /> 0-UNKNOWN_UPGRADED_FROM_PREVIOUS_VERSION：从的以前版本升级时出现[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。<br /><br /> 1-NO_TRIM：未剪裁行组。 行组已压缩，最多包含1048476行。  如果在增量行组关闭后删除了行的子集，则行数可能会减少<br /><br /> BULKLOAD：大容量加载批大小限制的行数。<br /><br /> 3-REORG：作为 REORG 命令的一部分的强制压缩。<br /><br /> 4-DICTIONARY_SIZE：字典大小增长太大，无法同时压缩所有行。<br /><br /> 5-MEMORY_LIMITATION：没有足够的可用内存来压缩所有行。<br /><br /> 6-RESIDUAL_ROW_GROUP：在索引生成操作期间作为 < 1000000 行的最后一个行组的一部分关闭<br /><br /> STATS_MISMATCH：仅适用于内存中表上的列存储。 如果统计错误地指明了尾部 >= 1000000 限定行，但找到的行数较少，则压缩行组将具有 < 1000000 行<br /><br /> 溢出：仅适用于内存中表的列存储。 如果 tail 具有 > 1000000 个限定行，则在计数介于10万到1000000|  
 |**transition_to_compressed_state**|tinyint|显示此行组如何从增量存储移到列存储中的压缩状态。<br /><br /> 1-NOT_APPLICABLE<br /><br /> 2-INDEX_BUILD<br /><br /> 3-TUPLE_MOVER<br /><br /> 4-REORG_NORMAL<br /><br /> 5-REORG_FORCED<br /><br /> 6-BULKLOAD<br /><br /> 7-合并|  
 |**transition_to_compressed_state_desc**|nvarchar(60)|NOT_APPLICABLE-操作不适用于增量存储。 或者，行组在升级到[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]之前已经过压缩，这种情况下不会保留历史记录。<br /><br /> INDEX_BUILD-索引创建或索引重新生成压缩行组。<br /><br /> TUPLE_MOVER-在后台压缩行组的元组移动器。 当行组将状态从 "已关闭" 更改<br /><br /> REORG_NORMAL-重组操作，更改索引 .。。REORG，将关闭的行组从增量存储移到列存储中。 发生此错误之前，元组移动器有时间移动行组。<br /><br /> REORG_FORCED-此行组在增量存储中处于打开状态，并且已强制转换为列存储，然后才会有完整的行数。<br /><br /> BULKLOAD-大容量加载操作直接压缩行组而不使用增量存储。<br /><br /> 合并-合并操作合并了一个或多个行组到此行组，然后执行了列存储压缩。|  
-|**has_vertipaq_optimization**|bit|VertiPaq 优化通过对行组中的行顺序重新排列，以实现更高的压缩，从而提高列存储压缩。 大多数情况下，此优化会自动进行。 在以下两种情况下不使用 VertiPaq 优化：<br/>  a.在“解决方案资源管理器”中，右键单击项目文件夹下的“引用”文件夹，然后单击“添加引用”。 当增量行组移到列存储中，并且列存储索引上有一个或多个非聚集索引时-在此情况下，将跳过 VertiPaq 优化，以最大程度地减少对映射索引的更改;<br/> b. 用于内存优化表上的列存储索引。 <br /><br /> 0 = 否<br /><br /> 1 = 是|  
+|**has_vertipaq_optimization**|bit|VertiPaq 优化通过对行组中的行顺序重新排列，以实现更高的压缩，从而提高列存储压缩。 大多数情况下，此优化会自动进行。 在以下两种情况下不使用 VertiPaq 优化：<br/>  a. 当增量行组移到列存储中，并且列存储索引上有一个或多个非聚集索引时-在此情况下，将跳过 VertiPaq 优化，以最大程度地减少对映射索引的更改;<br/> b. 用于内存优化表上的列存储索引。 <br /><br /> 0 = 否<br /><br /> 1 = 是|  
 |**产生**|bigint|与此行组关联的行组生成。|  
 |**created_time**|datetime2|此行组的创建时间。<br /><br /> NULL-内存中表上的列存储索引。|  
 |**closed_time**|datetime2|此行组的关闭时间的时钟时间。<br /><br /> NULL-内存中表上的列存储索引。|  
@@ -87,7 +87,7 @@ ORDER BY object_name(i.object_id), i.name, row_group_id;
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;Transact-sql&#41;的对象目录视图](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)      
+ [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)      
  [列存储索引体系结构](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)         
  [查询 SQL Server 系统目录常见问题](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 75399480879623a39da542c68f036389c645f6ab
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401352"
 ---
 # <a name="backup-and-restore"></a>备份和还原
@@ -82,7 +82,7 @@ PDW 使用 SQL Server 备份技术来备份和还原设备数据库。 SQL Serve
   
     -   只能将备份还原到具有相等或更多计算节点的 PDW 设备。  
   
-    -   在执行还原之前，无法更改备份的名称。 备份目录的名称必须与该备份的原始名称的名称匹配。 备份的原始名称位于 backup 目录中的 backup .xml 文件中。 若要将数据库还原为其他名称，可以在 restore 命令中指定新名称。 例如：`RESTORE DATABASE MyDB1 FROM DISK = ꞌ\\10.192.10.10\backups\MyDB2ꞌ`。  
+    -   在执行还原之前，无法更改备份的名称。 备份目录的名称必须与该备份的原始名称的名称匹配。 备份的原始名称位于 backup 目录中的 backup .xml 文件中。 若要将数据库还原为其他名称，可以在 restore 命令中指定新名称。 例如： `RESTORE DATABASE MyDB1 FROM DISK = ꞌ\\10.192.10.10\backups\MyDB2ꞌ` 。  
   
 ## <a name="RestoreModes"></a>数据库还原模式
 

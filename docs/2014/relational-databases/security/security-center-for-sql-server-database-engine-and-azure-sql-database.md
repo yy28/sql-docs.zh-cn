@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: fc99b725f4c5895306d544df14bf2a9390189066
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244527"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server 数据库引擎和 Azure SQL Database 的安全中心
@@ -55,7 +55,7 @@ ms.locfileid: "75244527"
   
  **使用其他标识**  
   
--   [凭据 &#40;数据库引擎&#41;](authentication-access/credentials-database-engine.md)  
+-   [凭据（数据库引擎）](authentication-access/credentials-database-engine.md)  
   
 -   [作为另一个登录名执行](/sql/t-sql/statements/execute-as-transact-sql)  
   
@@ -91,9 +91,9 @@ ms.locfileid: "75244527"
  ![小文件文件夹图标](../../integration-services/media/filefolder-small.gif "小文件文件夹图标")**授权：你可以做什么？**  
  **授予、撤消和拒绝权限**  
   
--   [权限层次结构 &#40;数据库引擎&#41;](permissions-hierarchy-database-engine.md)  
+-   [权限层次结构（数据库引擎）](permissions-hierarchy-database-engine.md)  
   
--   [访问](permissions-database-engine.md)  
+-   [权限](permissions-database-engine.md)  
   
 -   [安全对象](securables.md)  
   
@@ -107,9 +107,9 @@ ms.locfileid: "75244527"
   
 -   使用 [视图](../views/views.md) 和 [过程](../stored-procedures/stored-procedures-database-engine.md)限制数据访问  
   
--   [行级别安全性](https://msdn.microsoft.com/library/azure/dn765131.aspx)  
+-   [行级安全性](https://msdn.microsoft.com/library/azure/dn765131.aspx)  
   
--   [动态数据掩码](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
+-   [动态数据屏蔽](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
   
 -   [签名对象](/sql/t-sql/statements/add-signature-transact-sql)  
   
@@ -131,7 +131,7 @@ ms.locfileid: "75244527"
  ![小文件文件夹图标](../../integration-services/media/filefolder-small.gif "小文件文件夹图标")**审核：记录访问**  
  **自动审核**  
   
--   [SQL Server 审核 &#40;数据库引擎&#41;](auditing/sql-server-audit-database-engine.md)  
+-   [SQL Server Audit（数据库引擎）](auditing/sql-server-audit-database-engine.md)  
   
 -   [SQL 数据库审核](https://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)  
   
@@ -150,12 +150,12 @@ ms.locfileid: "75244527"
   
 ## <a name="see-also"></a>另请参阅  
  [保护 SQL Server](securing-sql-server.md)   
- [主体 &#40;数据库引擎&#41;](authentication-access/principals-database-engine.md)   
+ [主体（数据库引擎）](authentication-access/principals-database-engine.md)   
  [SQL Server 证书和非对称密钥](sql-server-certificates-and-asymmetric-keys.md)   
  [SQL Server 加密](encryption/sql-server-encryption.md)   
  [外围应用配置](surface-area-configuration.md)   
  [强密码](strong-passwords.md)   
- [可信数据库属性](trustworthy-database-property.md)   
+ [TRUSTWORTHY 数据库属性](trustworthy-database-property.md)   
  [数据库引擎功能和任务](../../database-engine/database-engine-features-and-tasks.md)  
   
   

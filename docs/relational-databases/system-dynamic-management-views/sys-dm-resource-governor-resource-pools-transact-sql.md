@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c39c32a907cecd8f670875fffba9f21995f2ccee
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73982300"
 ---
 # <a name="sysdm_resource_governor_resource_pools-transact-sql"></a>sys.dm_resource_governor_resource_pools (Transact-SQL)
@@ -33,12 +33,12 @@ ms.locfileid: "73982300"
   返回有关当前资源池状态、资源池的当前配置以及资源池统计信息的信息。  
   
 > [!NOTE]  
->  若要从 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 或 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]中调用此名称，请使用名称**sys.databases. dm_pdw_nodes_resource_governor_resource_pools**。  
+>  若要从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]调用此，请使用名称**dm_pdw_nodes_resource_governor_resource_pools**。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |pool_id|**int**|资源池的 ID。 不可为 null。|  
-|NAME|**sysname**|资源池的名称。 不可为 null。|  
+|name|**sysname**|资源池的名称。 不可为 null。|  
 |statistics_start_time|**datetime**|为该池重置统计信息的时间。 不可为 null。|  
 |total_cpu_usage_ms|**bigint**|自重置资源调控器统计信息以来的累计 CPU 使用量（毫秒）。 不可为 null。|  
 |cache_memory_kb|**bigint**|当前的缓存内存总用量（以 KB 为单位）。 不可为 null。|  
@@ -78,18 +78,18 @@ ms.locfileid: "73982300"
 |io_issue_delay_total_ms|**bigint**|**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。<br /><br /> 预定发出 IO 和实际发出 IO 之间的总时间（毫秒）。 可以为 Null。 如果没有为 IO 调控资源池，则为 null。 也就是说，资源池 MIN_IOPS_PER_VOLUME 和 MAX_IOPS_PER_VOLUME 设置是0。|  
 |pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  资源调控器工作负荷组和资源调控器资源池具有多对一映射关系。 因此，许多资源池统计信息都是派生自工作负荷组统计信息。  
   
  此动态管理视图显示了内存中配置。 若要查看存储的配置元数据，请使用 sys. resource_governor_resource_pools 目录视图。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 VIEW SERVER STATE 权限。  
   
 ## <a name="see-also"></a>另请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [sys.dm_resource_governor_workload_groups (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
- [sys. resource_governor_resource_pools &#40;transact-sql&#41; ](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   
+ [sys. dm_resource_governor_workload_groups &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
+ [sys. resource_governor_resource_pools &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR (Transact-SQL)](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   

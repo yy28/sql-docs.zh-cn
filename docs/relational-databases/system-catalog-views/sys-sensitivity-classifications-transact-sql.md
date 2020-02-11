@@ -24,10 +24,10 @@ helpviewer_keywords:
 - rank
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 376438a45d6b104cbf4e66dbdf8e5542cf3fd2c2
-ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74542055"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
@@ -37,15 +37,15 @@ ms.locfileid: "74542055"
 
 |列名称|数据类型|说明|
 |-----------------|---------------|-----------------|  
-|**班级**|**整形**|标识存在分类的项的类。 始终具有值1（表示列）|  
+|**班级**|**int**|标识存在分类的项的类。 始终具有值1（表示列）|  
 |**class_desc**|**varchar （16）**|存在分类的项的类的说明。 始终具有值*OBJECT_OR_COLUMN*|  
-|**major_id**|**整形**|表示包含已分类列的表的 ID，该 ID 与 all_objects 相对应。 object_id|  
-|**minor_id**|**整形**|表示存在分类的列的 ID，与 sys. all_columns 相对应 column_id|   
-|**标识**|**sysname**|为敏感度分类分配的标签（可读）|  
+|**major_id**|**int**|表示包含已分类列的表的 ID，该 ID 与 all_objects 相对应。 object_id|  
+|**minor_id**|**int**|表示存在分类的列的 ID，与 sys. all_columns 相对应 column_id|   
+|label |**sysname**|为敏感度分类分配的标签（可读）|  
 |**label_id**|**sysname**|与标签关联的 ID，可由信息保护系统（如 Azure 信息保护（AIP））使用|  
 |**information_type**|**sysname**|为敏感度分类分配的信息类型（可人工读取）|  
 |**information_type_id**|**sysname**|与信息保护系统（如 Azure 信息保护（AIP））关联的信息类型的 ID|  
-|**rank**|**整形**|排名的数值： <br><br>0表示无<br>10表示低<br>20个用于中型<br>高30<br>40对于严重| 
+|**级别**|**int**|排名的数值： <br><br>0表示无<br>10表示低<br>20个用于中型<br>高30<br>40对于严重| 
 |**rank_desc**|**sysname**|排名的文本表示形式：  <br><br>无、低、中、高、严重|  
 | &nbsp; | &nbsp; | &nbsp; |
 
@@ -78,7 +78,7 @@ left join sys.all_columns on sys.sensitivity_classifications.major_id = sys.all_
 ## <a name="permissions"></a>权限  
  需要 "**查看任何敏感度分类**" 权限。 
  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]有关详细信息，请参阅[元数据可见性配置](../../relational-databases/security/metadata-visibility-configuration.md)。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
 
 ## <a name="see-also"></a>另请参阅  
 

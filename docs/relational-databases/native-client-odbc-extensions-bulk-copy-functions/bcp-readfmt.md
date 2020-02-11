@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6e0277959c1776dfbe9bd088c639f243ad6a2f7d
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782518"
 ---
 # <a name="bcp_readfmt"></a>bcp_readfmt
@@ -43,18 +43,18 @@ RETCODE bcp_readfmt (
  *hdbc*  
  是启用大容量复制的 ODBC 连接句柄。  
   
- *Szformatfile 所*  
+ *szFormatFile*  
  包含数据文件的格式值的文件的路径和文件名。  
   
 ## <a name="returns"></a>返回  
  SUCCEED 或 FAIL。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
  **Bcp_readfmt**读取格式值后，它将对[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)和[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)进行适当的调用。 您无需分析格式文件和进行这些调用。  
   
  若要保存格式化文件，请调用[bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md)。 对**bcp_readfmt**的调用可以引用保存的格式。 有关详细信息，请参阅[bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)。  
   
- 或者，大容量复制实用工具（**bcp**）可以将用户定义的数据格式保存在可由**bcp_readfmt**引用的文件中。 有关**bcp**实用工具和**bcp**数据格式文件的结构的详细信息，请参阅[批量导入和导出数据&#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)。  
+ 或者，大容量复制实用工具（**bcp**）可以将用户定义的数据格式保存在可由**bcp_readfmt**引用的文件中。 有关**bcp**实用工具和**bcp**数据格式文件的结构的详细信息，请参阅[批量导入和导出数据 &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)。  
   
  [Bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)的*EOption*参数的**BCPDELAYREADFMT**值会修改 bcp_readfmt 的行为。  
   

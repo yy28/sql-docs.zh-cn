@@ -20,14 +20,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1703d70b7760cad2198b3565ce3fc47d44cac409
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768933"
 ---
 # <a name="creating-a-custom-data-flow-component"></a>创建自定义数据流组件
-  在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中，数据流任务公开一个对象模型，该对象模型允许开发人员使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 和托管代码创建自定义数据流组件：源、转换和目标。  
+  在[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]中，数据流任务公开一个对象模型，该对象模型允许开发人员使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]和托管代码创建自定义数据流组件（源、转换和目标）。  
   
  数据流任务由包含 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 接口和 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> 对象集合的组件组成，这些对象定义组件之间的数据移动。  
   
@@ -40,13 +40,14 @@ ms.locfileid: "62768933"
  在执行时，数据流任务将检查一系列组件、准备执行计划以及管理执行工作计划的工作线程池。 虽然每个工作线程都执行数据流任务的一些内部工作，但工作线程的主要任务是通过运行时 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeComponent100> 接口调用组件的方法。  
   
 ## <a name="creating-a-component"></a>创建组件  
- 若要创建数据流组件，可从 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> 基类派生类，再应用 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> 类，然后重写适当的基类方法。 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> 实现 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSDesigntimeComponent100> 和 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeComponent100> 接口，并公开这些接口的方法，供您在组件中重写。  
+ 若要创建数据流组件，可从 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> 基类派生类，再应用 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> 类，然后重写适当的基类方法。 
+  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> 实现 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSDesigntimeComponent100> 和 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeComponent100> 接口，并公开这些接口的方法，供您在组件中重写。  
   
  根据您的组件所使用的对象，您的项目将需要引用以下部分或全部程序集：  
   
-|功能|要引用的程序集|要导入的命名空间|  
+|Feature|要引用的程序集|要导入的命名空间|  
 |-------------|---------------------------|-------------------------|  
-|设计器中|Microsoft.SqlServer.PipelineHost|<xref:Microsoft.SqlServer.Dts.Pipeline>|  
+|数据流|Microsoft.SqlServer.PipelineHost|<xref:Microsoft.SqlServer.Dts.Pipeline>|  
 |数据流包装|Microsoft.SqlServer.DTSPipelineWrap|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper>|  
 |运行时|Microsoft.SQLServer.ManagedDTS|<xref:Microsoft.SqlServer.Dts.Runtime>|  
 |运行时包装|Microsoft.SqlServer.DTSRuntimeWrap|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper>|  
@@ -82,9 +83,9 @@ Public Class BasicComponent
 End Class  
 ```  
   
-![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![Integration Services 图标（小）](../../media/dts-16.gif "集成服务图标（小）")**保持与 Integration Services 最**新  <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [为数据流组件开发用户界面](developing-a-user-interface-for-a-data-flow-component.md)  
   
   

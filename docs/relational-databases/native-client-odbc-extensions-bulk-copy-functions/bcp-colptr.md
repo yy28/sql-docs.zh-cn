@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0bb4e1011448ef4ea98179c3de49c43e66b811e3
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73783010"
 ---
 # <a name="bcp_colptr"></a>bcp_colptr
@@ -49,7 +49,7 @@ RETCODE bcp_colptr (
   
  如果将*pData*设置为 NULL，并且与绑定字段对应的列不是大值类型， **bcp_colptr**会失败。  
   
- 有关大值类型的详细信息，请参阅[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) **。**  
+ 有关大值类型的详细信息，请参阅[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)**。**  
   
  *idxServerCol*  
  数据复制的目标数据库表中的列的序号位置。 表中的第一列为列 1。 列的序号位置由[SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md)报告。  
@@ -57,7 +57,7 @@ RETCODE bcp_colptr (
 ## <a name="returns"></a>返回  
  SUCCEED 或 FAIL。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
  使用**bcp_colptr**函数，可以在将数据复制 SQL Server 到[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)时，更改特定列的源数据地址。  
   
  最初，指向用户数据的指针通过调用**bcp_bind**设置。 如果程序变量数据地址在对**bcp_sendrow**的调用之间发生更改，则可以调用**bcp_colptr**来重置指向数据的指针。 对的下一次调用**bcp_sendrow**会将通过调用来寻址的数据发送到**bcp_colptr**。  

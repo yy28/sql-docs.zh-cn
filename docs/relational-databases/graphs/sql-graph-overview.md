@@ -16,38 +16,38 @@ ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3ca26af4738de25937b71e0c97c6272414a0957a
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74096089"
 ---
-# <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>用 SQL Server 和 Azure SQL Database 处理图形
+# <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server 和 Azure SQL 数据库中的图形处理
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了图形数据库功能来为多对多关系建模。 Graph 关系集成到 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 中，并获得使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作为基础数据库管理系统的好处。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供图形数据库功能，以便为多对多关系建模。 Graph 关系集成到中[!INCLUDE[tsql-md](../../includes/tsql-md.md)] ，并获得了使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]作为基础数据库管理系统的好处。
 
 
 ## <a name="what-is-a-graph-database"></a>什么是图形数据库？  
-图数据库是节点（或顶点）和边缘（或关系）的集合。 节点表示实体（例如，个人或组织），边缘表示其连接的两个节点（例如，赞或朋友）之间的关系。 节点和边缘都可能具有与其相关联的属性。 下面是一些使图形数据库独一无二的功能：  
--   边缘或关系是图形数据库中的第一个类实体，可以具有与之关联的属性或属性。 
+图数据库是节点（或顶点）和边缘（或关系）的集合。 节点表示实体（例如，某个人或组织），边缘表示该实体连接的两个节点之间的关系（例如，爱好或朋友）。 节点和边缘都可能具有与其相关联的属性。 下面是使图形数据库独一无二的某些功能：  
+-   边缘或关系是图形数据库中的第一类实体，可以带有关联的特性或属性。 
 -   单个边缘可以灵活连接图形数据库中的多个节点。
--   您可以轻松表达模式匹配和多跃点导航查询。
--   可以轻松表达传递的关闭和多态查询。
+-   可以轻松表达模式匹配和多跃点导航查询。
+-   可以轻松表达传递闭包和多态查询。
 
 ## <a name="when-to-use-a-graph-database"></a>何时使用图形数据库
 
-图形数据库无法实现，无法使用关系数据库实现。 但是，图形数据库可以简化特定类型的查询。 此外，通过特定的优化，某些查询的性能可能更好。 选择其中一个可以根据以下因素决定：  
+不能使用关系数据库实现的目的也不能使用图形数据库来实现。 但是，图形数据库可以简化特定类型的查询。 此外，通过特定的优化，某些查询的性能可能更好。 可根据以下因素来确定是要选择图形数据库还是关系数据库：  
 -   您的应用程序具有分层数据。 HierarchyID 数据类型可用于实现层次结构，但有一些限制。 例如，它不允许存储节点的多个父项。
 -   您的应用程序具有复杂的多对多关系;随着应用程序的发展，会添加新的关系。
--   需要分析互连数据和关系。
+-   需要分析互联的数据和关系。
 
-## <a name="graph-features-introduced-in-includesssqlv14includessssqlv14-mdmd"></a>中引入的图形功能 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
+## <a name="graph-features-introduced-in-includesssqlv14includessssqlv14-mdmd"></a>图形功能在中引入[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
 我们开始将图形扩展添加到 SQL Server，以便更轻松地存储和查询图形数据。 第一版中引入了以下功能。 
 
 
 ### <a name="create-graph-objects"></a>创建图形对象
-[!INCLUDE[tsql-md](../../includes/tsql-md.md)] 扩展将允许用户创建节点或边界表。 节点和边缘都可以有与之关联的属性。 由于，节点和边缘以表的形式存储，因此在节点或边界表上支持对关系表支持的所有操作。 以下是示例：  
+[!INCLUDE[tsql-md](../../includes/tsql-md.md)]扩展将允许用户创建节点或边界表。 节点和边缘都可以有与之关联的属性。 由于，节点和边缘以表的形式存储，因此在节点或边界表上支持对关系表支持的所有操作。 下面是一个示例：  
 
 ```   
 CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE;
@@ -58,7 +58,7 @@ CREATE TABLE friends (StartDate date) AS EDGE;
 节点和边缘作为表存储  
 
 ### <a name="query-language-extensions"></a>查询语言扩展  
-引入了新的 `MATCH` 子句来支持模式匹配和通过图形的多跳点导航。 `MATCH` 函数使用 ASCII 艺术样式语法来实现模式匹配。 例如：  
+引入`MATCH` New 子句是为了支持模式匹配和通过图形的多跳点导航。 `MATCH`函数使用 ASCII 艺术样式语法进行模式匹配。 例如：  
 
 ```   
 -- Find friends of John
@@ -68,12 +68,12 @@ WHERE MATCH(Person1-(Friends)->Person2)
 AND Person1.Name = 'John';
 ```   
  
-### <a name="fully-integrated-in-includessnoversionincludesssnoversion-mdmd-engine"></a>完全集成在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 引擎中 
-图形扩展在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 引擎中完全集成。 使用相同的存储引擎、元数据、查询处理器等来存储和查询图形数据。 在单个查询中跨关系图和关系数据进行查询。 结合了图形功能和列存储、HA、R services 等其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 技术。SQL graph 数据库还支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供的所有安全性和符合性功能。
+### <a name="fully-integrated-in-includessnoversionincludesssnoversion-mdmd-engine"></a>完全集成在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]引擎中 
+图扩展已完全集成到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]引擎中。 使用相同的存储引擎、元数据、查询处理器等来存储和查询图形数据。 在单个查询中跨关系图和关系数据进行查询。 结合了图形功能和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]列存储、HA、R services 等其他技术。SQL graph 数据库还支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中提供的所有安全性和符合性功能。
  
 ### <a name="tooling-and-ecosystem"></a>工具和生态系统
 
-从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供的现有工具和生态系统中获益。 诸如备份和还原、导入和导出等工具，BCP 只需使用即可。 其他工具或服务（如 SSIS、SSRS 或 Power BI）将使用图形表，就像它们处理关系表一样。
+受益于现有的工具和提供[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的生态系统。 诸如备份和还原、导入和导出等工具，BCP 只需使用即可。 其他工具或服务（如 SSIS、SSRS 或 Power BI）将使用图形表，就像它们处理关系表一样。
 
 ## <a name="edge-constraints"></a>边缘约束
 边缘约束在图形边缘表中定义，并且是给定边缘类型可以连接的一对节点表。 这样，用户便可以更好地控制其图形架构。 使用边缘约束的帮助，用户可以限制允许给定边缘连接的节点类型。 

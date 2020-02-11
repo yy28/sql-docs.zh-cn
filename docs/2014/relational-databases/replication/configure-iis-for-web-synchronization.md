@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a5c3b456fa650cff94d0b5809c37f7ceca8b1b71
-ms.sourcegitcommit: 961c56bb78ff46ae6eb1a2cc5d2b1262ddf7a4fa
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74706666"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>配置 IIS 以实现 Web 同步
@@ -80,7 +80,7 @@ ms.locfileid: "74706666"
   
     4.  完成 Web 服务器证书向导。  
   
-4.  单击“确定”****。  
+4.  单击“确定”。   
   
  如果无法从 CA 获得服务器证书，则可指定进行测试所需的证书。 若要为测试配置 IIS 6.0，请使用 SelfSSL 实用工具安装证书。 可从 IIS 6.0 资源工具包中获得该实用工具。 您可以从 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=5135)下载这些工具。 对于 IIS 5.0，请转到 [Microsoft 帮助和支持](https://go.microsoft.com/fwlink/?LinkId=46229)。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "74706666"
   
     1.  在 **“别名”** 框中输入虚拟目录别名。  
   
-    2.  在 **“路径”** 框中输入虚拟目录的路径。 例如，如果在 "**别名**" 框中输入`C:\Inetpub\wwwroot\websync1` `websync1` ，则在 "**路径**" 框中输入。 单击 **“下一步”**。  
+    2.  在 **“路径”** 框中输入虚拟目录的路径。 例如，如果在 "**别名**" 框中输入`C:\Inetpub\wwwroot\websync1` `websync1` ，则在 "**路径**" 框中输入。 单击“下一步”。   
   
     3.  在两个对话框中，单击 **“是”**。 这指定您要创建一个新文件夹并复制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Internet Server API (ISAPI) DLL。 .  
   
@@ -271,7 +271,7 @@ ms.locfileid: "74706666"
   
     6.  选择所有不需要访问该目录的用户或组，然后单击 **“删除”**。  
   
-    7.  单击“确定”****。  
+    7.  单击“确定”。   
   
 4.  在 **“Internet 信息服务(IIS)管理器”** 中创建应用程序池：  
   
@@ -295,7 +295,7 @@ ms.locfileid: "74706666"
   
     4.  在 **“用户名”** 和 **“密码”** 字段中，输入在步骤 1 中创建的帐户和密码。  
   
-    5.  单击“确定”****。  
+    5.  单击“确定”。   
   
 6.  将应用程序池与用于 Web 同步的虚拟目录关联：  
   
@@ -305,7 +305,7 @@ ms.locfileid: "74706666"
   
     3.  在“**VirtualDirectoryName> 属性”对话框的“虚拟目录”选项卡上，从“应用程序池”下拉列表中选择在步骤 5 中创建的应用程序池。****\<******  
   
-    4.  单击“确定”****。  
+    4.  单击“确定”。   
   
 ## <a name="testing-the-connection-to-replisapidll"></a>测试到 replisapi.dll 的连接  
  在诊断模式下运行 Web 同步，以便测试与正在运行 IIS 的计算机的连接，并确保已正确安装安全套接字层 (SSL) 证书。 若要在诊断模式下运行 Web 同步，您必须是运行 IIS 的计算机中的管理员。  
@@ -322,9 +322,9 @@ ms.locfileid: "74706666"
   
     4.  如果使用了代理服务器，请选择 **“为 LAN 使用代理服务器”** 和 **“对于本地地址不使用代理服务器”**。  
   
-    5.  单击“确定”****。  
+    5.  单击“确定”。   
   
-2.  在订阅服务器上的 Internet Explorer 中，用向 replisapi.dll 的地址追加 `?diag` 的方法以诊断模式连接到服务器。 例如：https://server.domain.com/directory/replisapi.dll?diag。  
+2.  在订阅服务器上的 Internet Explorer 中，用向 replisapi.dll 的地址追加 `?diag` 的方法以诊断模式连接到服务器。 例如： https://server.domain.com/directory/replisapi.dll?diag 。  
   
 3.  如果 Windows 操作系统不能识别您为 IIS 指定的证书，则会显示 **“安全警报”** 对话框。 如果该证书是测试证书或是由 Windows 不能识别的证书颁发机构 (CA) 颁发的证书，便会显示该警报。  
   

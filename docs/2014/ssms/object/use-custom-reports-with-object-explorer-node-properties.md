@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5941b15c0aea7319d132e05b902133d3d8b986fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62823694"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>将自定义报表与对象资源管理器节点属性一起使用
@@ -43,11 +43,11 @@ ms.locfileid: "62823694"
   
 2.  将此报表文件复制到您在数据库服务器上为自定义报表创建的文件夹中。  
   
-3.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，右键单击对象资源管理器中的节点，指向“报表”  ，再单击“自定义报表”。 在“打开文件”  对话框中，找到自定义报表文件夹并选择此报表文件，再单击“打开”  。  
+3.  在[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中，右键单击对象资源管理器中的节点，指向 "**报表**"，然后单击 "自定义报表"。 在“打开文件”**** 对话框中，找到自定义报表文件夹并选择此报表文件，再单击“打开”****。  
   
      第一次从对象资源管理器节点打开新的自定义报表时，该报表将添加到该节点的快捷菜单上“自定义报表”  下最近使用的文件列表中。 第一次打开标准报表时，该报表也将出现在“自定义报表”  下最近使用的文件列表中。 如果某个自定义报表文件已删除，则下一次选择该项时，系统将提示您从最近使用的文件列表中删除该项。  
   
-    1.  若要更改最近使用的文件列表中所显示的文件个数，请在“工具”  菜单上单击“选项”  ，展开“环境”  文件夹，再单击“常规”  。  
+    1.  若要更改最近使用的文件列表中所显示的文件个数，请在“工具”**** 菜单上单击“选项”****，展开“环境”**** 文件夹，再单击“常规”****。  
   
     2.  调整“显示最近使用列表中的文件”  的数量。  
   
@@ -998,9 +998,9 @@ ms.locfileid: "62823694"
   
  `</Report>`  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Management Studio 中的自定义报表](custom-reports-in-management-studio.md)   
- [向 Management Studio 添加自定义报表](add-a-custom-report-to-management-studio.md)   
+ [将自定义报表添加到 Management Studio](add-a-custom-report-to-management-studio.md)   
  [启用运行自定义报告警告](unsuppress-run-custom-report-warnings.md)  
   
   

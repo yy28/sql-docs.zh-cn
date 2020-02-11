@@ -14,10 +14,10 @@ ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 1c66914b4b661ea3485ae0354c267e7682f5a6a2
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728693"
 ---
 # <a name="business-rules-master-data-services"></a>业务规则 (Master Data Services)
@@ -69,31 +69,32 @@ ms.locfileid: "73728693"
 -   一个业务规则不能包含多个 **“启动工作流”** 操作。  
   
 ## <a name="system-settings"></a>系统设置  
- [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中有两个会影响业务规则的设置。 可以在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中或直接在“系统设置”表中调整这些设置。 有关详细信息，请参阅[系统设置 (Master Data Services)](../master-data-services/system-settings-master-data-services.md)。  
+ 
+  [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中有两个会影响业务规则的设置。 可以在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中或直接在“系统设置”表中调整这些设置。 有关详细信息，请参阅[系统设置 (Master Data Services)](../master-data-services/system-settings-master-data-services.md)。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|创建和发布新的业务规则。|[创建和发布业务规则 (Master Data Services)](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)|  
+|创建和发布新的业务规则。|[创建和发布业务规则 &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)|  
 |向业务规则添加多个条件。|[向业务规则添加多个条件 &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)|  
-|创建业务规则来要求属性具有值。|[要求属性值 &#40;Master Data Services&#41;](../master-data-services/require-attribute-values-master-data-services.md)|  
-|创建业务规则以便基于对属性值的更改执行操作。|[基于属性值更改启动操作 (Master Data Services)](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
+|创建业务规则来要求属性具有值。|[需要 &#40;Master Data Services 的属性值&#41;](../master-data-services/require-attribute-values-master-data-services.md)|  
+|创建业务规则以便基于对属性值的更改执行操作。|[基于属性值更改启动操作 &#40;Master Data Services&#41;](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
 |创建业务规则，将用户定义脚本用作条件|[业务规则扩展 &#40;Master Data Services&#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
 |创建业务规则，将用户定义脚本用作操作|[业务规则扩展 &#40;Master Data Services&#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
 |更改现有业务规则的名称。|[更改业务规则名称 &#40;Master Data Services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)|  
-|将 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 配置为在应用业务规则时发送通知。|[配置业务规则以发送通知 (Master Data Services)](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
-|将业务规则应用于特定成员。|[针对业务规则验证特定成员 (Master Data Services)](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
+|将 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 配置为在应用业务规则时发送通知。|[配置业务规则以发送通知 &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
+|将业务规则应用于特定成员。|[根据业务规则验证特定成员 &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
 |排除业务规则以便不使用该规则。|[排除业务规则 &#40;Master Data Services&#41;](../master-data-services/exclude-a-business-rule-master-data-services.md)|  
 |删除现有业务规则。|[删除业务规则 &#40;Master Data Services&#41;](../master-data-services/delete-a-business-rule-master-data-services.md)|  
   
 ## <a name="related-content"></a>相关内容  
   
--   [Master Data Services 概述 (MDS)](../master-data-services/master-data-services-overview-mds.md)  
+-   [MDS &#40;Master Data Services 概述&#41;](../master-data-services/master-data-services-overview-mds.md)  
   
--   [版本 (Master Data Services)](../master-data-services/versions-master-data-services.md)  
+-   [版本 &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   
--   [验证 (Master Data Services)](../master-data-services/validation-master-data-services.md)  
+-   [验证 &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md)  
   
 -   [更改跟踪 &#40;Master Data Services&#41;](../master-data-services/change-tracking-master-data-services.md)  
   

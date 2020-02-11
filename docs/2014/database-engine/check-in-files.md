@@ -15,24 +15,24 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5debb7c80e7365e67d8661709b09b16f5d25b7b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812581"
 ---
 # <a name="check-in-files"></a>签入文件
   若要将已修改的源代码管理文件用于其他用户，必须将这些文件签入到源代码管理中。 签入文件时，所签入的版本将写入源代码管理提供程序，并成为文件的最新版本。  
   
- 可以使用**签入**命令签入文件。 如果使用该命令签入解决方案或项目，将同时签入该解决方案或项目中的所有文件。 但是，签入单个源代码文件则不会将其所属的项目或解决方案一起签入。  
+ 您可以使用 "**签入**" 命令签入文件。 如果使用该命令签入解决方案或项目，将同时签入该解决方案或项目中的所有文件。 但是，签入单个源代码文件则不会将其所属的项目或解决方案一起签入。  
   
-### <a name="to-check-in-a-file"></a>若要签入文件  
+### <a name="to-check-in-a-file"></a>签入文件  
   
-1.  在解决方案资源管理器中右键单击要在中，检查的文件，然后单击**签入**。  
+1.  在解决方案资源管理器中，右键单击要签入的文件，然后单击 "**签入**"。  
   
-2.  如果**签入**出现对话框，请选择相应的选项，，然后单击**确定**。  
+2.  如果出现 "**签入**" 对话框，请选择相应的选项，然后单击 **"确定"**。  
   
-     **Check In**  
+     **登记**  
      签入所有选定项。  
   
      **“列”**  
@@ -41,7 +41,7 @@ ms.locfileid: "62812581"
      **注释**  
      为签入操作添加相关注释。  
   
-     **不检查在对话框中显示签入项时**  
+     **签入项时不显示“签入”对话框**  
      在签入操作过程中取消该对话框。  
   
      **平面视图**  
@@ -53,7 +53,7 @@ ms.locfileid: "62812581"
      **选项**  
      单击按钮右侧的箭头时，显示源代码管理插件特定的签入选项。  
   
-     **Sort**  
+     **排序**  
      对显示列进行排序。  
   
      **树视图**  
@@ -61,8 +61,8 @@ ms.locfileid: "62812581"
   
  如果已签入的文件不是以共享方式签出的文件的一部分，则 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 环境将立即签入该文件。 否则，它可能提示您将您的版本与其他用户创建的版本合并。  
   
-## <a name="see-also"></a>请参阅  
- [查看已修改的文件列表](../../2014/database-engine/view-a-list-of-modified-files.md)   
+## <a name="see-also"></a>另请参阅  
+ [查看已修改文件的列表](../../2014/database-engine/view-a-list-of-modified-files.md)   
  [管理签入](../../2014/database-engine/manage-checkins.md)  
   
   

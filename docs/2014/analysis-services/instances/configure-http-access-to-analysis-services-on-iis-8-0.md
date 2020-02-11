@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f4f911ebf60852fd4ab11c5813fc567deb2d0c87
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75225402"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问
@@ -38,9 +38,9 @@ ms.locfileid: "75225402"
   
  本主题包含下列部分：  
   
--   [叙述](#bkmk_overview)  
+-   [概述](#bkmk_overview)  
   
--   [必备条件](#bkmk_prereq)  
+-   [先决条件](#bkmk_prereq)  
   
 -   [将 MSMDPUMP.dll 复制到 Web 服务器上的某个文件夹](#bkmk_copy)  
   
@@ -65,7 +65,7 @@ ms.locfileid: "75225402"
   
  下表列出您为不同情形启用 HTTP 访问时需要注意的其他事项。  
   
-|方案|配置|  
+|场景|配置|  
 |--------------|-------------------|  
 |IIS 和 Analysis Services 位于同一台计算机上|这是最简单的配置，因为它允许您使用默认配置（其中，服务器名称为 localhost）、本地 Analysis Services OLE DB 访问接口以及与 NTLM 的 Windows 集成安全性。 假定客户端也在同一域中，用户意识不到身份验证的存在，并且您不需要做其他工作。|  
 |IIS 和 Analysis Services 位于不同计算机上|对于此拓扑，您必须将 Analysis Services OLE DB 访问接口安装在 Web 服务器上。 您还必须编辑 msmdpump.ini 文件，以便指定 Analysis Services 实例在远程计算机上的位置。<br /><br /> 此拓扑添加了双跃点身份验证步骤，其中，凭据必须从客户端流到 Web 服务器，然后流到后端 Analysis Services 服务器上。 如果您在使用 Windows 凭据和 NTLM，系统将会显示错误消息，因为 NTLM 不允许将客户端凭据委托给第二个服务器。 最常见的解决方案是将基本身份验证用于安全套接字层 (SSL)，但是，这就要求用户在访问 MSMDPUMP 虚拟目录时提供用户名和密码。 一个更为直接的方法可能是启用 Kerberos 并且配置 Analysis Services 约束委派，以便用户能够以透明的方式访问 Analysis Services。 有关详细信息，请参阅 [Configure Analysis Services for Kerberos constrained delegation](configure-analysis-services-for-kerberos-constrained-delegation.md) 。<br /><br /> 考虑要在 Windows 防火墙中取消阻止的端口。 您将需要取消阻止这两台服务器上的端口，以便允许访问 IIS 上的 Web 应用程序以及远程服务器上的 Analysis Services。|  
@@ -157,7 +157,7 @@ ms.locfileid: "75225402"
   
      ![“添加应用程序”对话框](../media/ssas-httpaccess-convertedapp.png "“添加应用程序”对话框")  
   
-4.  单击“确定”****。 刷新网站，请注意默认网站下 OLAP 文件夹现在是一个应用程序。 MSMDPUMP 文件的虚拟路径现已创建。  
+4.  单击“确定”。  刷新网站，请注意默认网站下 OLAP 文件夹现在是一个应用程序。 MSMDPUMP 文件的虚拟路径现已创建。  
   
      ![应用程序转换后的 OLAP 文件夹](../media/ssas-httpaccess-convertfolderafter.png "应用程序转换后的 OLAP 文件夹")  
   

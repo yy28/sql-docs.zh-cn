@@ -1,5 +1,5 @@
 ---
-title: 若要返回记录集的 JScript 代码示例 |Microsoft Docs
+title: 返回记录集的 JScript 代码示例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 74aad8a6-06cc-4a2c-811a-d78f9b741d84
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1c195b3f9897d0bc71ab9e03e69153a66cdd80ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924922"
 ---
 # <a name="jscript-code-example-to-return-a-recordset"></a>用于返回记录集的 JScript 代码示例
-## <a name="jscript-code-rsjs"></a>JScript 代码 (rs.js)  
+## <a name="jscript-code-rsjs"></a>JScript 代码（rs-232c）  
   
 ```  
 main();  
@@ -79,10 +79,10 @@ function alert(str)
 }  
 ```  
   
-#### <a name="try-it"></a>试试看 ！  
+#### <a name="try-it"></a>试试看！  
   
-1.  将上面的代码保存到文本文件。 将文件另存 rs.js。  
+1.  将上面的代码保存到一个文本文件中。 将该文件另存为 rs。  
   
-2.  打开命令提示符并键入 cd 转到 JScript 文件 (rs.js) 保存的目录。  
+2.  打开一个命令提示符，然后将 cd 保存到保存 JScript 文件的目录（rs-232c）。  
   
-3.  类型`CScript rs.js`从命令提示符。
+3.  在`CScript rs.js`命令提示符下键入。

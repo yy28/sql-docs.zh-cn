@@ -10,10 +10,10 @@ author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 6a4b56a31ede0d8e011c1a2244f5d014e185e7e5
-ms.sourcegitcommit: 9e026cfd9f2300f106af929d88a9b43301f5edc2
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74318994"
 ---
 # <a name="adventureworks-installation-and-configuration"></a>AdventureWorks 安装和配置
@@ -67,9 +67,9 @@ AdventureWorks 下载链接和安装说明。
 1. 打开 SQL Server Management Studio，然后连接到目标 SQL Server 实例。
 2. 右键单击 "**数据库**" 节点，然后选择 "**还原数据库**"。
 3. 选择 "**设备**"，然后单击省略号（**...**）
-4. 在对话框中**选择 "备份设备**"，单击 "**添加**"，导航到服务器文件系统中的数据库备份，并选择备份。 单击“确定”****。
+4. 在对话框中**选择 "备份设备**"，单击 "**添加**"，导航到服务器文件系统中的数据库备份，并选择备份。 单击“确定”。 
 5. 如果需要，在 "**文件**" 窗格中更改数据文件和日志文件的目标位置。 请注意，最佳做法是将数据和日志文件放在不同的驱动器上。
-6. 单击“确定”****。 这将启动数据库还原。 完成后，会在 SQL Server 实例上安装 AdventureWorks 数据库。
+6. 单击“确定”。  这将启动数据库还原。 完成后，会在 SQL Server 实例上安装 AdventureWorks 数据库。
 
 有关还原 SQL Server 数据库的详细信息，请参阅[使用 SSMS 还原数据库备份](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)。
 

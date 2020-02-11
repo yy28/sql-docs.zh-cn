@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 79c9fc7c9c15d83dafc8d117e142fc06741c11ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62912492"
 ---
-# <a name="mssqlserver8710"></a>MSSQLSERVER_8710
+# <a name="mssqlserver_8710"></a>MSSQLSERVER_8710
     
 ## <a name="details"></a>详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62912492"
 |符号名称|QUERY2_CUBE_ILLEGAL_AGG_FUNC|  
 |消息正文|必须提供与 CUBE、ROLLUP 或 GROUPING SET 查询一起使用的聚合函数，才能合并子聚合。 若要修复此问题，请删除该聚合函数或在 GROUP BY 子句基础上使用 UNION ALL 编写查询。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  CUBE、ROLLUP 或 GROUPING SETS 不提供合并子聚合的方法，而将它们与聚合函数一起使用即可合并子聚合。  
   
 ## <a name="user-action"></a>用户操作  

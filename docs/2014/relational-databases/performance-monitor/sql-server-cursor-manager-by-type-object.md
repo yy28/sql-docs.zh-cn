@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 35fa15dc6651d8bfd9b6d32cafd00cd47698560b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206970"
 ---
 # <a name="sql-server-cursor-manager-by-type-object"></a>SQL Server Cursor Manager by Type 对象
@@ -25,7 +25,7 @@ ms.locfileid: "68206970"
   
  此表介绍了 SQL Server **Cursor Manager by Type** 计数器。  
   
-|Cursor Manager by Type 计数器|描述|  
+|Cursor Manager by Type 计数器|说明|  
 |-------------------------------------|-----------------|  
 |**Active cursors**|活动游标数。|  
 |**Cache Hit Ratio**|高速缓存命中次数和查找次数的比率。|  
@@ -38,14 +38,14 @@ ms.locfileid: "68206970"
   
  对象中的每个计数器均包含以下实例：  
   
-|Cursor Manager 实例|描述|  
+|Cursor Manager 实例|说明|  
 |-----------------------------|-----------------|  
 |**_Total**|所有游标的信息。|  
 |**API 游标**|仅 API 游标信息。|  
 |**TSQL 全局游标**|仅 [!INCLUDE[tsql](../../includes/tsql-md.md)] 全局游标信息。|  
 |**TSQL 局部游标**|仅 [!INCLUDE[tsql](../../includes/tsql-md.md)] 局部游标信息。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [监视资源使用情况（系统监视器）](monitor-resource-usage-system-monitor.md)  
   
   
