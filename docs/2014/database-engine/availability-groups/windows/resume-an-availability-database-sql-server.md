@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5e6a5792c7e18013dba5cc4c0963dc6d045410f0
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782923"
 ---
 # <a name="resume-an-availability-database-sql-server"></a>恢复可用性数据库 (SQL Server)
@@ -36,7 +36,7 @@ ms.locfileid: "72782923"
   
      [先决条件](#Prerequisites)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要恢复辅助数据库，请使用：**  
   
@@ -53,7 +53,7 @@ ms.locfileid: "72782923"
 ###  <a name="Restrictions"></a> 限制和局限  
  RESUME 命令只要被承载目标数据库的副本接受后就返回，但是实际上继续数据库以异步方式发生。  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+###  <a name="Prerequisites"></a>先决条件  
   
 -   您必须连接到承载要恢复的数据库的服务器实例。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "72782923"
   
 ###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要对数据库拥有 ALTER 权限。  
   
  对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  
@@ -77,9 +77,9 @@ ms.locfileid: "72782923"
   
 3.  展开该可用性组。  
   
-4.  展开“可用性数据库”节点，右键单击该数据库，然后单击“恢复数据移动”。  
+4.  展开“可用性数据库”**** 节点，右键单击该数据库，然后单击“恢复数据移动”****。  
   
-5.  在 **“恢复数据移动”** 对话框中，单击 **“确定”** 。  
+5.  在 **“恢复数据移动”** 对话框中，单击 **“确定”**。  
   
 > [!NOTE]  
 >  若要恢复此副本位置上的其他数据库，请对每个数据库重复执行步骤 4 和 5。  
@@ -91,9 +91,9 @@ ms.locfileid: "72782923"
   
 2.  通过使用下面的 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-hadr)语句恢复辅助数据库：  
   
-     ALTER DATABASE *database_name* SET HADR RESUME  
+     更改数据库*database_name*设置 HADR 简历  
   
-##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
+##  <a name="PowerShellProcedure"></a>使用 PowerShell  
 
 ### <a name="to-resume-a-secondary-database"></a>恢复辅助数据库
   
@@ -110,13 +110,13 @@ ms.locfileid: "72782923"
     > [!NOTE]  
     >  若要查看 cmdlet 的语法，请在 `Get-Help` PowerShell 环境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
- **设置和使用 SQL Server PowerShell 提供程序**  
+ **设置并使用 SQL Server PowerShell 提供程序**  
   
--   [SQL Server PowerShell 提供程序](../../../powershell/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="RelatedTasks"></a>相关任务  
+##  <a name="RelatedTasks"></a> 相关任务  
   
 -   [挂起可用性数据库 (SQL Server)](suspend-an-availability-database-sql-server.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [AlwaysOn 可用性组&#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+ [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)  

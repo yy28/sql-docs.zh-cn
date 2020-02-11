@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f29ddee8456149ca16dd886935138b0cc915f42d
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229294"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>创建和自定义 PowerPivot 库
@@ -22,9 +22,9 @@ ms.locfileid: "75229294"
   
 ##  <a name="bkmk_top"></a>本主题中的  
   
--   [必备条件](#prereq)  
+-   [先决条件](#prereq)  
   
--   [叙述](#overview)  
+-   [概述](#overview)  
   
 -   [创建 PowerPivot 库](#createlib)  
   

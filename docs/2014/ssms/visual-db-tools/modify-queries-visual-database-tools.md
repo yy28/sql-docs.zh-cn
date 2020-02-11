@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f88c78aa67d65eb84bfaa282fe46a122dd2a382a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63306029"
 ---
 # <a name="modify-queries-visual-database-tools"></a>修改查询 (Visual Database Tools)
@@ -33,9 +33,9 @@ ms.locfileid: "63306029"
   
  查询设计器随即打开，您便可以进行修改了。  
   
-## <a name="see-also"></a>请参阅  
- [运行查询&#40;可视化数据库工具&#41;](visual-database-tools.md)   
- [使用结果窗格中的数据&#40;可视化数据库工具&#41;](results-pane-visual-database-tools.md)   
+## <a name="see-also"></a>另请参阅  
+ [&#40;Visual Database Tools 运行查询&#41;](visual-database-tools.md)   
+ [使用 Visual Database Tools &#40;的 "结果" 窗格中的数据&#41;](results-pane-visual-database-tools.md)   
  [执行基本的查询操作 (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

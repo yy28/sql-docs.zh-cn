@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e348ace954e19c3e213c7de1779cbfbcb1768887
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63316085"
 ---
 # <a name="design-database-diagrams-visual-database-tools"></a>设计数据库关系图 (Visual Database Tools)
@@ -37,39 +37,39 @@ ms.locfileid: "63316085"
 ## <a name="tables-and-columns-in-a-database-diagram"></a>数据库关系图中的表和列  
  在数据库关系图中，每个表都可以带有三种不同的功能：标题栏、行选择器和一组属性列。  
   
- **标题栏** 标题栏显示表的名称  
+ **标题栏**标题栏显示表的名称  
   
  如果修改了某个表，但尚未保存该表，则表名末尾将显示一个星号 (*)，表示未保存更改。 有关保存修改后的表和关系图的详细信息，请参阅 [使用数据库关系图 (Visual Database Tools)](visual-database-tools.md)  
   
- **行选择器** 可以通过单击行选择器来选择表中的数据库列。 如何该列是表的主键，则行选择器将显示一个键符号。 有关主键的信息，请参阅[主键和外键约束](../../relational-databases/tables/primary-and-foreign-key-constraints.md)。  
+ **行选择器**您可以单击行选择器来选择表中的数据库列。 如何该列是表的主键，则行选择器将显示一个键符号。 有关主键的信息，请参阅[primary 和 Foreign Key 约束](../../relational-databases/tables/primary-and-foreign-key-constraints.md)。  
   
- **属性列** 属性列组仅在表的某些视图中可见。 您可以在五个不同视图中的任何一个视图中查看表，以帮助您管理关系图的大小和布局。  
+ **属性列**属性列集仅在表的某些视图中可见。 您可以在五个不同视图中的任何一个视图中查看表，以帮助您管理关系图的大小和布局。  
   
  有关表视图的详细信息，请参阅[自定义关系图中显示的信息量 (Visual Database Tools)](customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools.md)。  
   
 ## <a name="relationships-in-a-database-diagram"></a>数据库关系图中的关系  
  在数据库关系图中，每个关系都可以带有三种不同的功能：终结点、线型和相关表。  
   
- **终结点** 线的终结点表示关系是一对一还是一对多关系。 如果某个关系在一个终结点处有键，在另一个终结点处有无穷符号，则该关系是一对多关系。 如果某个关系在每个终结点处都有键，则该关系是一对一关系。  
+ **终结点**行的终结点指示关系是一对一还是一对多关系的。 如果某个关系在一个终结点处有键，在另一个终结点处有无穷符号，则该关系是一对多关系。 如果某个关系在每个终结点处都有键，则该关系是一对一关系。  
   
- **线型** 线本身（非其终结点）表示当向外键表添加新数据时，数据库管理系统 (DBMS) 是否强制关系的引用完整性。 如果为实线，则在外键表中添加或修改行时，DBMS 将强制关系的引用完整性。 如果为点线，则在外键表中添加或修改行时，DBMS 不强制关系的引用完整性。  
+ **线条样式**行本身（非其终结点）表示当向外键表添加新数据时，数据库管理系统（DBMS）是否强制关系的引用完整性。 如果为实线，则在外键表中添加或修改行时，DBMS 将强制关系的引用完整性。 如果为点线，则在外键表中添加或修改行时，DBMS 不强制关系的引用完整性。  
   
- **相关表** 关系线表示两个表之间存在外键关系。 对于一对多关系，外键表是靠近线的无穷符号的那个表。 如果线的两个终结点连接到同一个表，则该关系是自反关系。 有关详细信息，请参阅[绘制自反关系 (Visual Database Tools)](draw-reflexive-relationships-visual-database-tools.md)。  
+ **相关表**关系线指示一个表与另一个表之间存在外键关系。 对于一对多关系，外键表是靠近线的无穷符号的那个表。 如果线的两个终结点连接到同一个表，则该关系是自反关系。 有关详细信息，请参阅[绘制自反关系 (Visual Database Tools)](draw-reflexive-relationships-visual-database-tools.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [了解数据库关系图所有权 (Visual Database Tools)](understand-database-diagram-ownership-visual-database-tools.md)  
   
- [在数据库关系图设计器中导航 (Visual Database Tools)](navigate-in-database-diagram-designer-visual-database-tools.md)  
+ [在数据库关系图设计器中导航 &#40;Visual Database Tools&#41;](navigate-in-database-diagram-designer-visual-database-tools.md)  
   
- [设置数据库关系图设计器 (Visual Database Tools)](set-up-database-diagram-designer-visual-database-tools.md)  
+ [&#40;Visual Database Tools 设置数据库关系图设计器&#41;](set-up-database-diagram-designer-visual-database-tools.md)  
   
  [从以前的版本升级数据库关系图 (Visual Database Tools)](upgrade-database-diagrams-from-previous-editions-visual-database-tools.md)  
   
- [打开数据库关系图设计器 (Visual Database Tools)](open-database-diagram-designer-visual-database-tools.md)  
+ [Visual Database Tools &#40;的 "打开数据库关系图设计器"&#41;](open-database-diagram-designer-visual-database-tools.md)  
   
-## <a name="see-also"></a>请参阅  
- [使用数据库关系图&#40;可视化数据库工具&#41;](visual-database-tools.md)   
- [使用数据库关系图中的表&#40;可视化数据库工具&#41;](work-with-tables-in-database-diagram-visual-database-tools.md)   
+## <a name="see-also"></a>另请参阅  
+ [使用数据库关系图 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [使用 Visual Database Tools &#40;数据库关系图中的表&#41;](work-with-tables-in-database-diagram-visual-database-tools.md)   
  [使用关系图布局 (Visual Database Tools)](work-with-diagram-layout-visual-database-tools.md)  
   
   

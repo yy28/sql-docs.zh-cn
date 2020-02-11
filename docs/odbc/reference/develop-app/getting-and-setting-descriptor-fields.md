@@ -13,16 +13,16 @@ ms.assetid: 394fe500-803d-463f-ae95-f8eb87b66bc8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 930a062477fa1459413ea98073d3ca13a574a82e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139064"
 ---
 # <a name="getting-and-setting-descriptor-fields"></a>获取和设置描述符字段
-本部分介绍应用程序可以使用以检索或设置描述符字段中的值的方法。  
+本部分介绍应用程序可用于检索或设置描述符字段中的值的方法。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [获取描述符句柄](../../../odbc/reference/develop-app/obtaining-descriptor-handles.md)  
   

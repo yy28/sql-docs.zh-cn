@@ -1,5 +1,5 @@
 ---
-title: 显式数据类型转换函数的 |Microsoft Docs
+title: 显式数据类型转换函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,22 +15,22 @@ ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6982f7b7caa71abc08c5b84ef1bb6211dcadaecd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67913611"
 ---
 # <a name="explicit-data-type-conversion-function"></a>显式数据类型转换函数
-根据 SQL 数据类型定义指定显式数据类型转换。  
+显式数据类型转换是根据 SQL 数据类型定义进行指定的。  
   
- 显式数据类型转换函数的 ODBC 语法不限制转换。 一种数据类型到另一种数据类型的特定转换的有效性取决于每个特定于驱动程序的实现。 该驱动程序将它将 ODBC 语法转换为本机语法，如拒绝，尽管法律在 ODBC 语法中，不支持数据源的这些转换。 ODBC 函数**SQLGetInfo**，进行转换选项 （如 SQL_CONVERT_BIGINT、 SQL_CONVERT_BINARY、 SQL_CONVERT_INTERVAL_YEAR_MONTH，等等），提供了一种方法来查询有关所支持的数据源转换.  
+ 显式数据类型转换函数的 ODBC 语法不限制转换。 将一种数据类型转换为另一种数据类型的特定转换的有效性取决于每个特定于驱动程序的实现。 驱动程序将将 ODBC 语法转换为本机语法，并拒绝那些虽然数据源不支持在 ODBC 语法中合法的转换。 ODBC 函数**SQLGetInfo**具有转换选项（如 SQL_CONVERT_BIGINT、SQL_CONVERT_BINARY、SQL_CONVERT_INTERVAL_YEAR_MONTH 等），提供了一种方法来查询数据源所支持的转换。  
   
- 格式**转换**函数是：  
+ **CONVERT**函数的格式为：  
   
- **CONVERT(** _value_exp_, _data_type_ **)**  
+ **CONVERT （** _value_exp_， _data_type_**）**  
   
- 该函数返回指定的值*value_exp*转换为指定*data_type*，其中*data_type*是以下关键字之一：  
+ 函数返回由*value_exp*转换为指定的*data_type*指定的值，其中*data_type*是以下关键字之一：  
   
 |||  
 |-|-|  
@@ -54,59 +54,59 @@ ms.locfileid: "67913611"
 |SQL_INTERVAL_DAY_TO_MINUTE||  
 |SQL_INTERVAL_DAY_TO_SECOND||  
   
- 显式数据类型转换函数的 ODBC 语法不支持转换格式规范。 如果基础数据源支持的显式格式规范，则驱动程序必须指定默认值或实现格式规范。  
+ 显式数据类型转换函数的 ODBC 语法不支持转换格式的规范。 如果基础数据源支持显式格式规范，则驱动程序必须指定默认值或实现格式规范。  
   
- 自变量*value_exp*可以是列名称、 另一个标量函数或数值的结果或字符串文字。 例如：  
+ 参数*value_exp*可以是列名称、其他标量函数的结果，也可以是数字或字符串。 例如：  
   
 ```  
 { fn CONVERT( { fn CURDATE() }, SQL_CHAR ) }  
 ```  
   
- 将 CURDATE 标量函数的输出转换为字符字符串。  
+ 将 CURDATE 标量函数的输出转换为字符串。  
   
- 由于 ODBC 不强制要求来自的返回值的数据类型标量函数 （因为函数通常是数据源特定），应用程序应使用 CONVERT 标量函数，只要有可能以强制数据类型转换。  
+ 由于 ODBC 不会对标量函数的返回值强制使用数据类型（因为函数通常是特定于数据源的），因此应用程序应尽可能使用 CONVERT 标量函数来强制进行数据类型转换。  
   
- 以下两个示例说明如何使用**转换**函数。 这些示例假定名员工，为与类型 SQL_SMALLINT EMPNO 列和类型 SQL_CHAR EMPNAME 列的表存在。  
+ 下面两个示例说明了**CONVERT**函数的用法。 这些示例假定存在名为 EMPLOYEES 的表，其中 EMPNO 类型为的列 SQL_SMALLINT 和类型 SQL_CHAR 的 EMPNAME 列。  
   
- 如果应用程序指定以下 SQL 语句：  
+ 如果应用程序指定了以下 SQL 语句：  
   
 ```  
 SELECT EMPNO FROM EMPLOYEES WHERE {fn CONVERT(EMPNO,SQL_CHAR)} LIKE '1%'  
 ```  
   
--   用于 ORACLE 的驱动程序将转换到的 SQL 语句：  
+-   ORACLE 驱动程序将 SQL 语句转换为：  
   
     ```  
     SELECT EMPNO FROM EMPLOYEES WHERE to_char(EMPNO) LIKE '1%'  
     ```  
   
--   适用于 SQL Server 驱动程序将转换到的 SQL 语句：  
+-   SQL Server 的驱动程序将 SQL 语句转换为：  
   
     ```  
     SELECT EMPNO FROM EMPLOYEES WHERE convert(char,EMPNO) LIKE '1%'  
     ```  
   
- 如果应用程序指定以下 SQL 语句：  
+ 如果应用程序指定了以下 SQL 语句：  
   
 ```  
 SELECT {fn ABS(EMPNO)}, {fn CONVERT(EMPNAME,SQL_SMALLINT)}  
    FROM EMPLOYEES WHERE EMPNO <> 0  
 ```  
   
--   用于 ORACLE 的驱动程序将转换到的 SQL 语句：  
+-   ORACLE 驱动程序将 SQL 语句转换为：  
   
     ```  
     SELECT abs(EMPNO), to_number(EMPNAME) FROM EMPLOYEES WHERE EMPNO <> 0  
     ```  
   
--   适用于 SQL Server 驱动程序将转换到的 SQL 语句：  
+-   SQL Server 的驱动程序将 SQL 语句转换为：  
   
     ```  
     SELECT abs(EMPNO), convert(smallint, EMPNAME) FROM EMPLOYEES  
        WHERE EMPNO <> 0  
     ```  
   
--   Ingres 的驱动程序将转换到的 SQL 语句：  
+-   Ingres 的驱动程序将 SQL 语句转换为：  
   
     ```  
     SELECT abs(EMPNO), int2(EMPNAME) FROM EMPLOYEES WHERE EMPNO <> 0  

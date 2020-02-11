@@ -11,10 +11,10 @@ ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 7c5adbd91f713fabe1e185c51adb28350035bb20
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728886"
 ---
 # <a name="subscription-view-formats-master-data-services"></a>订阅视图格式 (Master Data Services)
@@ -25,7 +25,7 @@ ms.locfileid: "73728886"
   
 ## <a name="subscription-view-formats"></a>订阅视图格式  
   
-|NAME|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |**叶成员**|包含叶成员及其关联的属性值。|  
 |**叶成员历史记录**|包含叶成员历史数据及关联的属性值。 视图格式是缓慢更改维度类型 4 样式。|  
@@ -43,7 +43,7 @@ ms.locfileid: "73728886"
 |**派生级别（派生层次结构视图）**|包含派生层次结构，以级别格式显示。|  
   
 ## <a name="see-also"></a>另请参阅  
- [概述：导出数据 (Master Data Services)](../master-data-services/overview-exporting-data-master-data-services.md)   
- [创建订阅视图以导出数据 (Master Data Services)](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  
+ [概述：将数据导出 &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
+ [创建订阅视图以导出数据 &#40;Master Data Services&#41;](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  
   
   

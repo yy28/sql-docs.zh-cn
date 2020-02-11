@@ -1,5 +1,5 @@
 ---
-title: BOF、 EOF 属性 (ADO) |Microsoft Docs
+title: BOF、EOF 属性（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,56 +18,56 @@ ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4932d3349c2d4e2948ddd28d9df3a30424064dcb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920384"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF、EOF 属性 (ADO)
--   **BOF**指示当前记录的位置是在中的第一个记录之前[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。  
+-   **BOF**指示当前记录位置位于[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象中的第一条记录之前。  
   
--   **EOF**指示当前记录位于中的最后一个记录后**记录集**对象。  
+-   **EOF**指示当前记录位置在**Recordset**对象的最后一条记录之后。  
   
 ## <a name="return-value"></a>返回值  
- **BOF**并**EOF**属性返回**布尔**值。  
+ **BOF**和**EOF**属性返回**布尔**值。  
   
 ## <a name="remarks"></a>备注  
- 使用**BOF**并**EOF**的属性以确定是否**记录集**对象包含的记录或者是否已超出限制的**记录集**对象时将记录到记录。  
+ 使用**BOF**和**EOF**属性来确定**recordset**对象是否包含记录，或者在从记录移到记录时是否超出**recordset**对象的限制。  
   
- **BOF**属性将返回**True** -(1) 如果当前记录的位置之前的第一个记录并**False** (0)，如果当前记录的位置或第一个之后记录。  
+ 如果当前记录位置在第一条记录之前，则**BOF**属性返回**True** （-1），如果当前记录位置位于第一条记录的前面或后面，则返回**False** （0）。  
   
- **EOF**属性将返回**True**记录当前位置是否在最后一条记录后， **False**如果当前记录的位置或之前的最后一个记录。  
+ 如果当前记录位置晚于最后一条记录，则**EOF**属性返回**True** ; 如果当前记录位置位于最后一条记录之前，则返回**False** 。  
   
- 如果任一**BOF**或**EOF**属性是**True**，没有当前记录。  
+ 如果**BOF**或**EOF**属性为**True**，则没有当前记录。  
   
- 如果您打开**记录集**对象，其中包含任何记录， **BOF**并**EOF**属性设置为**True** (请参阅[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)属性以获取有关此状态的详细信息**记录集**)。 当打开**记录集**对象，其中包含至少一个记录，第一条记录是当前记录和**BOF**并**EOF**属性是**False**.  
+ 如果打开的**记录集**对象不包含任何记录，则**BOF**和**EOF**属性将设置为**True** （有关**记录集**的此状态的详细信息，请参阅[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)属性）。 如果打开的**记录集**对象至少包含一条记录，则第一条记录为当前记录， **BOF**和**EOF**属性为**False**。  
   
- 如果删除中的最后一个剩余记录**记录集**对象， **BOF**并**EOF**属性可能会保持**False**直到若要重新定位当前记录的尝试。  
+ 如果您删除**记录集**对象中的最后一个记录，则**BOF**和**EOF**属性可能会保持**为假**，直到您尝试重新定位当前记录为止。  
   
- 此表显示了哪些**移动**方法允许使用的不同组合**BOF**并**EOF**属性。  
+ 此表显示了允许使用不同的**BOF**和**EOF**属性组合的**移动**方法。  
   
-||MoveFirst、<br /><br /> MoveLast|MovePrevious，<br /><br /> 移动 < 0|移动 0|MoveNext，<br /><br /> 移动 > 0|  
+||MoveFirst<br /><br /> MoveLast|MovePrevious<br /><br /> 移动 < 0|移动0|MoveNext<br /><br /> 移动 > 0|  
 |------|-----------------------------|---------------------------------|------------|-----------------------------|  
-|**BOF**=**True**， **EOF**=**False**|Allowed|Error|Error|Allowed|  
-|**BOF**=**False**， **EOF**= **，则返回 True**|Allowed|Allowed|Error|Error|  
-|同时 **，则返回 True**|Error|Error|Error|Error|  
-|同时**False**|Allowed|Allowed|Allowed|Allowed|  
+|**BOF**=**True**， **EOF**=**False**|允许|错误|错误|允许|  
+|**BOF**=**False**， **EOF**=**True**|允许|允许|错误|错误|  
+|均**为 True**|错误|错误|错误|错误|  
+|均**为 False**|允许|允许|允许|允许|  
   
- 允许**移动**方法并不保证该方法将成功定位到一条记录; 而只是意味着，调用指定**移动**方法将不会生成错误。  
+ 允许**Move**方法并不保证该方法能够成功定位记录;这只意味着调用指定的**Move**方法不会生成错误。  
   
- 下表显示了会发生什么情况**BOF**并**EOF**属性设置时调用各种**移动**方法但不能成功地定位到一条记录。  
+ 下表显示了在调用各种**Move**方法但无法成功定位记录时， **BOF**和**EOF**属性设置会发生什么情况。  
   
 ||BOF|EOF|  
 |------|---------|---------|  
-|**MoveFirst**， **MoveLast**|设置为 **，则返回 True**|设置为 **，则返回 True**|  
-|**移动**0|无更改|无更改|  
-|**MovePrevious**，**移动**< 0|设置为 **，则返回 True**|无更改|  
-|**MoveNext**，**移动**> 0|无更改|设置为 **，则返回 True**|  
+|**MoveFirst**、 **MoveLast**|设置为**True**|设置为**True**|  
+|**移动**0|无变化|无变化|  
+|**MovePrevious**、 **Move** < 0|设置为**True**|无变化|  
+|**MoveNext**，**移动**> 0|无变化|设置为**True**|  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>请参阅  
- [BOF、 EOF 和 Bookmark 属性示例 (VB)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)   
- [BOF、 EOF 和 Bookmark 属性示例 （VC + +）](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)   
+## <a name="see-also"></a>另请参阅  
+ [BOF、EOF 和 Bookmark 属性示例（VB）](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)   
+ [BOF、EOF 和 Bookmark 属性示例（VC + +）](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)   

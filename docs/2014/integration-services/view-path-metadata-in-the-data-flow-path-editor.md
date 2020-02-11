@@ -1,5 +1,5 @@
 ---
-title: 查看路径元数据在数据流路径编辑器 |Microsoft Docs
+title: 在数据流路径编辑器中查看路径元数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d01cf5aa2a57ace05cdf7d6da02f1f082d77b0bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054489"
 ---
 # <a name="view-path-metadata-in-the-data-flow-path-editor"></a>在数据流路径编辑器中查看路径元数据
@@ -29,17 +29,17 @@ ms.locfileid: "66054489"
   
 2.  在解决方案资源管理器中，双击该包将其打开。  
   
-3.  单击“数据流”  选项卡，并双击路径。  
+3.  单击“数据流”**** 选项卡，并双击路径。  
   
-4.  在 **“数据流路径编辑器”** 对话框中，单击 **“元数据”** 。  
+4.  在 **“数据流路径编辑器”** 对话框中，单击 **“元数据”**。  
   
 5.  查看路径元数据，包括列名称、数据类型、精度、小数位、长度、代码页和每列源组件的名称。  
   
-6.  若要复制元数据，请单击 **“复制到剪贴板”** 。  
+6.  若要复制元数据，请单击 **“复制到剪贴板”**。  
   
-7.  单击“确定”  。  
+7.  单击“确定”。   
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 路径](data-flow/integration-services-paths.md)   
  [数据流](data-flow/data-flow.md)  
   

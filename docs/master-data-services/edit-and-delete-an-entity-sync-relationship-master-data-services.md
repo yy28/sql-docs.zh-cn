@@ -11,10 +11,10 @@ ms.assetid: 9a5e37f3-352e-45a6-b4a0-6f98f83b4bd8
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 4d8f95671bebf3d67368a35ab61f3c24392186fa
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728234"
 ---
 # <a name="edit-and-delete-an-entity-sync-relationship-master-data-services"></a>编辑和删除实体同步关系 (Master Data Services)
@@ -23,20 +23,20 @@ ms.locfileid: "73728234"
 
   实体同步是实体版本间的单向可重复同步。 它提供了一种在不同模型间共享实体数据的方法。 可以编辑和删除自己创建的同步关系。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必备条件  
  编辑实体同步关系的先决条件。  
   
--   你必须有权访问“系统管理”功能区域。 有关详细信息，请参阅[功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)。  
+-   你必须有权访问“系统管理”功能区域。 有关详细信息，请参阅[功能区域权限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
--   你必须是目标模型的模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   你必须是目标模型的模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
 -   至少需要拥有对源实体及其所有属性和成员的读取访问权限。  
   
  删除实体同步关系的先决条件。  
   
--   你必须有权访问“系统管理”功能区域。 有关详细信息，请参阅[功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)。  
+-   你必须有权访问“系统管理”功能区域。 有关详细信息，请参阅[功能区域权限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
--   你必须是目标模型的模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   你必须是目标模型的模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
  在编辑实体同步关系时，请注意以下事项。  
   
@@ -60,32 +60,32 @@ ms.locfileid: "73728234"
   
  **编辑实体同步关系**  
   
-1.  在“主数据管理器”中，单击“系统管理”。  
+1.  在主数据管理器中，单击“系统管理” ****。  
   
-2.  在“模型视图” 页上，从菜单栏中指向“管理” ，然后单击“实体同步”。  
+2.  在“模型视图” **** 页上，从菜单栏中指向“管理” **** ，然后单击“实体同步” ****。  
   
-3.  在“实体同步维护” 页上，选择网格中的同步关系。  
+3.  在“实体同步维护” **** 页上，选择网格中的同步关系。  
   
-4.  单击 **“编辑”** 。 右侧将显示一个面板。  
+4.  单击 **“编辑”**。 右侧将显示一个面板。  
   
-5.  请更改“频率”。 选择“按需同步”，或选择“自动同步” 并设置频率。  
+5.  请更改 ****“频率”。 选择“按需同步” ****，或选择“自动同步” **** 并设置频率。  
   
-6.  单击 **“保存”** 。  
+6.  单击“保存”  。  
   
  **删除实体同步关系**  
   
-1.  在“主数据管理器”中，单击“系统管理”。  
+1.  在主数据管理器中，单击“系统管理” ****。  
   
-2.  在“模型视图” 页上，从菜单栏中指向“管理” ，然后单击“实体同步”。  
+2.  在“模型视图” **** 页上，从菜单栏中指向“管理” **** ，然后单击“实体同步” ****。  
   
-3.  在“实体同步维护” 页上，选择网格中的同步关系。  
+3.  在“实体同步维护” **** 页上，选择网格中的同步关系。  
   
 4.  单击 **“删除”** 。  
   
-5.  在确认对话框中，单击“确定”。  
+5.  在确认对话框中，单击“确定” ****。  
   
 ## <a name="see-also"></a>另请参阅  
- [创建和执行实体同步关系 (Master Data Services)](../master-data-services/create-and-execute-an-entity-sync-relationship-master-data-services.md)   
- [实体同步关系 (Master Data Services)](../master-data-services/entity-sync-relationship-master-data-services.md)  
+ [&#40;Master Data Services 创建和执行实体同步关系&#41;](../master-data-services/create-and-execute-an-entity-sync-relationship-master-data-services.md)   
+ [实体同步关系 &#40;Master Data Services&#41;](../master-data-services/entity-sync-relationship-master-data-services.md)  
   
   

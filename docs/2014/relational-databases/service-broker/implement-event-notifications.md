@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8c5b17b45b50634806c60e5064efc6ebd9d03f8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68197747"
 ---
 # <a name="implement-event-notifications"></a>实现事件通知
@@ -86,7 +86,7 @@ TO SERVICE 'NotifyService', '8140a771-3c4b-4479-8ac0-81008ab17984' ;
 >   
 >  `CREATE TABLE t1 (col1 int)`  
 >   
->  在这种情况下，事件通知将引发两次：CREATE_SCHEMA 事件发生时，一次和 CREATE_TABLE 事件发生时再次。 建议您避免针对 CREATE_SCHEMA 事件和任何相应 CREATE SCHEMA 定义的 <schema_element> 文本创建事件通知，也不要将逻辑置入应用程序中以免捕获不需要的事件数据。  
+>  在此情况下，事件通知会引发两次：一次是在 CREATE_SCHEMA 事件发生时，另一次是在 CREATE_TABLE 事件发生时。 建议您避免针对 CREATE_SCHEMA 事件和任何相应 CREATE SCHEMA 定义的 <schema_element> 文本创建事件通知，也不要将逻辑置入应用程序中以免捕获不需要的事件数据。  
   
  **创建事件通知**  
   
@@ -96,7 +96,7 @@ TO SERVICE 'NotifyService', '8140a771-3c4b-4479-8ac0-81008ab17984' ;
   
 -   [DROP EVENT NOTIFICATION (Transact-SQL)](/sql/t-sql/statements/drop-event-notification-transact-sql)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [获取有关事件通知的信息](event-notifications.md)   
  [EVENTDATA (Transact-SQL)](/sql/t-sql/functions/eventdata-transact-sql)  
   

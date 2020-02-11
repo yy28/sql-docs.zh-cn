@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3c1785e927bf2d2b90322c90f2adace4555047af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101535"
 ---
 # <a name="system-level-tasks"></a>系统级任务
@@ -40,7 +40,7 @@ ms.locfileid: "66101535"
 |查看报表服务器属性|读取系统属性|  
 |查看共享计划|读取计划|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [授予对本机模式报表服务器的权限](granting-permissions-on-a-native-mode-report-server.md)  
   
   

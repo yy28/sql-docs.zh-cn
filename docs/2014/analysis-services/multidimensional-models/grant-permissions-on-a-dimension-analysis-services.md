@@ -1,5 +1,5 @@
 ---
-title: 授予权限的维度 (Analysis Services) |Microsoft Docs
+title: 授予对维度的权限（Analysis Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3efce85f27db9d0695ea56e9940ab563ed40537a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074959"
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>授予维度的权限 (Analysis Services)
@@ -40,38 +40,38 @@ ms.locfileid: "66074959"
  在为维度定义角色时，可用维度根据对象是否为（位于数据库内部但在多维数据集外部的）独立数据库维度还是为多维数据集维度而变化。  
   
 > [!NOTE]  
->  默认情况下，数据库维度的权限由多维数据集维度继承。 例如，如果启用“客户”数据库维度上的“读/写”权限，则“客户”多维数据集继承当前角色上下文的“读/写”权限   。 如果要覆盖权限设置，则可以清除继承的权限。  
+>  默认情况下，数据库维度的权限由多维数据集维度继承。 例如，如果启用“客户”数据库维度上的“读/写”权限，则“客户”多维数据集继承当前角色上下文的“读/写”权限********。 如果要覆盖权限设置，则可以清除继承的权限。  
   
 ## <a name="set-permissions-on-a-database-dimension"></a>设置数据库维度权限  
  数据库维度是数据库内的独立对象，允许在相同模型内重复使用维度。 请考虑在模型中多次使用的“日期”数据库维度，如 Order Date、Ship Date 和 Due Date 多维数据集维度。 因为多维数据集维度和数据库维度为数据库中的同等对象，所以可以独立设置每个对象的处理权限。  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，在对象资源管理器中展开相应数据库的“角色”  ，然后单击某个数据库角色（或创建一个新的数据库角色）。  
+1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接到实例[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，在对象资源管理器中展开相应数据库的 "**角色**"，然后单击某个数据库角色（或创建一个新的数据库角色）。  
   
-2.  在“维度”  窗格中，维度集应该设置为“所有数据库维度”  。  
+2.  在“维度” **** 窗格中，维度集应该设置为“所有数据库维度” ****。  
   
-     默认情况下，权限设置为“读取”  。  
+     默认情况下，权限设置为“读取” ****。  
   
-     尽管“读/写”  权限可用，但我们推荐不要使用此权限。 “读/写”  用于维度写回情形下，而这已不推荐使用。 请参阅[SQL Server 2014 中不推荐使用的 Analysis Services 功能](../deprecated-analysis-services-features-in-sql-server-2014.md)。  
+     尽管“读/写”**** 权限可用，但我们推荐不要使用此权限。 **读/写**用于已弃用的维度写回方案。 请参阅[SQL Server 2014 中不推荐使用的 Analysis Services 功能](../deprecated-analysis-services-features-in-sql-server-2014.md)。  
   
-     此外，还可以对单独的维度对象设置“读取定义”  和“处理”  权限，前提是这些权限还未在数据库级别进行设置。 请参阅[授予处理权限 (Analysis Services)](grant-process-permissions-analysis-services.md) 和[授予对象元数据的读取定义权限 (Analysis Services)](grant-read-definition-permissions-on-object-metadata-analysis-services.md) 获取详细信息。  
+     此外，还可以对单独的维度对象设置“读取定义” **** 和“处理” **** 权限，前提是这些权限还未在数据库级别进行设置。 请参阅[授予处理权限 (Analysis Services)](grant-process-permissions-analysis-services.md) 和[授予对象元数据的读取定义权限 (Analysis Services)](grant-read-definition-permissions-on-object-metadata-analysis-services.md) 获取详细信息。  
   
 ## <a name="set-permissions-on-a-cube-dimension"></a>设置多维数据集维度权限  
  多维数据集维度是已添加到多维数据集的数据库维度。 因此，其在结构上依赖于关联的度量值组。 虽然可以在授权方面自动处理这些对象，但将多维数据集和多维数据集维度作为一个整体才有意义。  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，在对象资源管理器中展开相应数据库的“角色”  ，然后单击某个数据库角色（或创建一个新的数据库角色）。  
+1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接到实例[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，在对象资源管理器中展开相应数据库的 "**角色**"，然后单击某个数据库角色（或创建一个新的数据库角色）。  
   
-2.  在中**维度**窗格中，维度集更改为\<多维数据集名称 >**多维数据集维度**。  
+2.  在 "**维度**" 窗格中，将维度集\<更改为 cube-name>**多维数据集维度**。  
   
-     默认情况下，权限继承自相应的数据库维度。 清除“继承”复选框，将权限从“读取”更改为“读/写”    。 在使用“读/写”权限之前  ，请务必阅读上一节中的备注。  
+     默认情况下，权限继承自相应的数据库维度。 清除“继承”复选框，将权限从“读取”更改为“读/写”************。 在使用“读/写”权限之前****，请务必阅读上一节中的备注。  
   
 > [!IMPORTANT]  
 >  如果使用分析管理对象 (AMO) 配置数据库角色权限，那么，任何对多维数据集的 DimensionPermission 属性中多维数据集维度的引用都将切断对数据库的 DimensionPermission 属性的权限继承。 有关 AMO 的详细信息，请参阅[使用分析管理对象 (AMO) 进行开发](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)。  
   
-## <a name="see-also"></a>请参阅  
- [角色和权限 (Analysis Services)](roles-and-permissions-analysis-services.md)   
- [授予多维数据集或模型权限 (Analysis Services)](grant-cube-or-model-permissions-analysis-services.md)   
- [授予数据挖掘结构和模型的权限 (Analysis Services)](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [授予对维度数据的自定义访问权限 (Analysis Services)](grant-custom-access-to-dimension-data-analysis-services.md)   
- [授予单元数据的自定义访问权限 (Analysis Services)](grant-custom-access-to-cell-data-analysis-services.md)  
+## <a name="see-also"></a>另请参阅  
+ [角色和权限 &#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)   
+ [&#40;Analysis Services 授予多维数据集或模型权限&#41;](grant-cube-or-model-permissions-analysis-services.md)   
+ [授予对数据挖掘结构和模型的权限 &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [授予对维度数据的自定义访问 &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
+ [授予对单元数据的自定义访问权限 &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
   

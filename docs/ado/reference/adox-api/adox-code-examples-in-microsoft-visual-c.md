@@ -1,5 +1,5 @@
 ---
-title: Microsoft 的视觉对象中的 ADOX 代码示例C++|Microsoft Docs
+title: Microsoft Visual C++ 中的 ADOX 代码示例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,17 +15,17 @@ ms.assetid: b63ec31e-488c-4677-ab58-01371015e692
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d8ee6ac768cc7cb0225f78602754c64e0363786f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67952121"
 ---
 # <a name="adox-code-examples-in-microsoft-visual-c"></a>Microsoft Visual C++ 中的 ADOX 代码示例
-这些主题提供示例代码，以帮助你了解如何使用 ADOX。 使用 Microsoft Visual 中编写所有代码示例C++。  
+这些主题提供了可帮助你了解如何使用 ADOX 的示例代码。 使用 Microsoft Visual C++ 编写所有代码示例。  
   
 > [!NOTE]
->  将粘贴整个代码示例中的，从开头到末尾到代码编辑器。 如果使用完整的示例或段落格式设置都将丢失，该示例可能无法正确运行。  
+>  从开头到末尾将整个代码示例粘贴到代码编辑器中。 如果使用了部分示例或段落格式丢失，则示例可能无法正常运行。  
   
 ## <a name="methods"></a>方法  
   
@@ -43,9 +43,9 @@ ms.locfileid: "67952121"
   
 -   [索引 Append 方法示例 (VC++)](../../../ado/reference/adox-api/indexes-append-method-example-vc.md)  
   
--   [项 Append 方法、 密钥类型、 RelatedColumn、 RelatedTable 和 UpdateRule 属性示例 （VC + +）](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md)  
+-   [键 Append 方法、Key Type、RelatedColumn、RelatedTable 和 UpdateRule 属性示例（VC + +）](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md)  
   
-## <a name="properties"></a>properties  
+## <a name="properties"></a>属性  
   
 -   [Attributes 属性示例 (VC++)](../../../ado/reference/adox-api/attributes-property-example-vc.md)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "67952121"
   
 -   [Command 和 CommandText 属性示例 (VC++)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vc.md)  
   
--   [Command 属性，参数集合示例 （VC + +）](../../../ado/reference/adox-api/parameters-collection-command-property-example-vc.md)  
+-   [Command 属性，Parameters Collection Example （VC + +）](../../../ado/reference/adox-api/parameters-collection-command-property-example-vc.md)  
   
 -   [DateCreated 和 DateModified 属性示例 (VC++)](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vc.md)  
   
@@ -65,9 +65,9 @@ ms.locfileid: "67952121"
   
 -   [IndexNulls 属性示例 (VC++)](../../../ado/reference/adox-api/indexnulls-property-example-vc.md)  
   
--   [密钥类型、 RelatedColumn、 RelatedTable、 UpdateRule 属性、 键 Append 方法示例 （VC + +）](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md)  
+-   [键类型、RelatedColumn、RelatedTable、UpdateRule 属性、键 Append 方法示例（VC + +）](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md)  
   
--   [Name 属性、 列和表 Append 方法示例 （VC + +）](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vc.md)  
+-   [Name 属性，列和表 Append 方法示例（VC + +）](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vc.md)  
   
 -   [NumericScale 和 Precision 属性示例 (VC++)](../../../ado/reference/adox-api/numericscale-and-precision-properties-of-the-column-object-example-vc.md)  
   
@@ -75,7 +75,7 @@ ms.locfileid: "67952121"
   
 -   [PrimaryKey 和 Unique 属性示例 (VC++)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vc.md)  
   
--   [表类型属性中，连接关闭方法示例 （VC + +）](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vc.md)  
+-   [表类型属性，连接关闭方法示例（VC + +）](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vc.md)  
   
 ## <a name="collections"></a>集合  
   

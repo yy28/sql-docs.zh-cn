@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9f0c4b1dbdaa7a2b4a15dd8e28586b182d93374a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63241157"
 ---
 # <a name="save-dialog-box-visual-database-tools"></a>“保存”对话框 (Visual Database Tools)
@@ -33,7 +33,7 @@ ms.locfileid: "63241157"
  **保存文本文件**  
  显示“另存为”  对话框，提示你指定用于保存列出受影响表的文本文件的位置。 此文件包含受您所做更改影响的表的列表。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [设计表 (Visual Database Tools)](visual-database-tools.md)  
   
   

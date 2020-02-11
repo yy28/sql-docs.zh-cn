@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e8d826201f44bb666050f5229b4824b5c2198dc0
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228996"
 ---
 # <a name="administration-of-an-availability-group-sql-server"></a>管理可用性组 (SQL Server)
@@ -43,85 +43,85 @@ ms.locfileid: "75228996"
 -   针对操作系统升级的 AlwaysOn 可用性组的跨群集迁移  
   
   
-##  <a name="RelatedTasks"></a>相关任务  
+##  <a name="RelatedTasks"></a> 相关任务  
  **配置现有的可用性组**  
   
--   [将辅助副本添加到可用性组 &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
+-   [将辅助副本添加到可用性组 (SQL Server)](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
--   [从可用性组中删除辅助副本 &#40;SQL Server&#41;](remove-a-secondary-replica-from-an-availability-group-sql-server.md)  
+-   [将次要副本从可用性组删除 (SQL Server)](remove-a-secondary-replica-from-an-availability-group-sql-server.md)  
   
--   [将数据库添加到可用性组 &#40;SQL Server&#41;](availability-group-add-a-database.md)  
+-   [将数据库添加到可用性组 (SQL Server)](availability-group-add-a-database.md)  
   
--   [从可用性组中删除辅助数据库 &#40;SQL Server&#41;](remove-a-secondary-database-from-an-availability-group-sql-server.md)  
+-   [将辅助数据库从可用性组删除 (SQL Server)](remove-a-secondary-database-from-an-availability-group-sql-server.md)  
   
--   [从可用性组中删除主数据库 &#40;SQL Server&#41;](remove-a-primary-database-from-an-availability-group-sql-server.md)  
+-   [将主数据库从可用性组删除 (SQL Server)](remove-a-primary-database-from-an-availability-group-sql-server.md)  
   
 -   [配置灵活的故障转移策略以控制自动故障转移的条件 &#40;AlwaysOn 可用性组&#41;](configure-flexible-automatic-failover-policy.md)  
   
  **管理可用性组**  
   
--   [在可用性副本上配置备份 &#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)  
+-   [配置可用性副本备份 (SQL Server)](configure-backup-on-availability-replicas-sql-server.md)  
   
--   [执行可用性组的计划手动故障转移 &#40;SQL Server&#41;](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)  
+-   [执行可用性组的计划手动故障转移 (SQL Server)](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)  
   
--   [执行可用性组的强制手动故障转移 &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
+-   [执行可用性组的强制手动故障转移 (SQL Server)](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
   
--   [删除可用性组 &#40;SQL Server&#41;](remove-an-availability-group-sql-server.md)  
+-   [删除可用性组 (SQL Server)](remove-an-availability-group-sql-server.md)  
   
  **管理可用性副本**  
   
--   [将辅助副本添加到可用性组 &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
+-   [将辅助副本添加到可用性组 (SQL Server)](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
--   [将辅助副本联接到可用性组 &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
+-   [将辅助副本联接到可用性组 (SQL Server)](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
--   [从可用性组中删除辅助副本 &#40;SQL Server&#41;](remove-a-secondary-replica-from-an-availability-group-sql-server.md)  
+-   [将次要副本从可用性组删除 (SQL Server)](remove-a-secondary-replica-from-an-availability-group-sql-server.md)  
   
--   [更改可用性副本的可用性模式 &#40;SQL Server&#41;](change-the-availability-mode-of-an-availability-replica-sql-server.md)  
+-   [更改可用性副本的可用性模式 (SQL Server)](change-the-availability-mode-of-an-availability-replica-sql-server.md)  
   
--   [更改可用性副本的故障转移模式 &#40;SQL Server&#41;](change-the-failover-mode-of-an-availability-replica-sql-server.md)  
+-   [更改可用性副本的故障转移模式 (SQL Server)](change-the-failover-mode-of-an-availability-replica-sql-server.md)  
   
--   [在可用性副本上配置备份 &#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)  
+-   [配置可用性副本备份 (SQL Server)](configure-backup-on-availability-replicas-sql-server.md)  
   
--   [配置对可用性副本的只读访问 &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md)  
+-   [配置对可用性副本的只读访问 (SQL Server)](configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
--   [为可用性组 &#40;SQL Server 配置只读路由&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md)  
+-   [为可用性组配置只读路由 (SQL Server)](configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
--   [更改可用性副本的会话超时期限 &#40;SQL Server&#41;](change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
+-   [更改可用性副本的会话超时期限 (SQL Server)](change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
   
  **管理可用性数据库**  
   
--   [将数据库添加到可用性组 &#40;SQL Server&#41;](availability-group-add-a-database.md)  
+-   [将数据库添加到可用性组 (SQL Server)](availability-group-add-a-database.md)  
   
--   [将辅助数据库联接到可用性组 &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)  
+-   [将辅助数据库联接到可用性组 (SQL Server)](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
--   [从可用性组中删除主数据库 &#40;SQL Server&#41;](remove-a-primary-database-from-an-availability-group-sql-server.md)  
+-   [将主数据库从可用性组删除 (SQL Server)](remove-a-primary-database-from-an-availability-group-sql-server.md)  
   
--   [从可用性组中删除辅助数据库 &#40;SQL Server&#41;](remove-a-secondary-database-from-an-availability-group-sql-server.md)  
+-   [将辅助数据库从可用性组删除 (SQL Server)](remove-a-secondary-database-from-an-availability-group-sql-server.md)  
   
--   [挂起可用性数据库 &#40;SQL Server&#41;](suspend-an-availability-database-sql-server.md)  
+-   [挂起可用性数据库 (SQL Server)](suspend-an-availability-database-sql-server.md)  
   
--   [恢复可用性数据库 &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)  
+-   [恢复可用性数据库 (SQL Server)](resume-an-availability-database-sql-server.md)  
   
  **监视可用性组**  
   
--   [监视可用性组 &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)  
+-   [监视可用性组 (SQL Server)](monitoring-of-availability-groups-sql-server.md)  
   
  **支持将可用性组迁移到新的 WSFC 群集（跨群集迁移）**  
   
--   [更改服务器实例 &#40;SQL Server 的 HADR 群集上下文&#41;](change-the-hadr-cluster-context-of-server-instance-sql-server.md)  
+-   [更改服务器实例的 HADR 群集上下文 (SQL Server)](change-the-hadr-cluster-context-of-server-instance-sql-server.md)  
   
--   [使可用性组脱机 &#40;SQL Server&#41;](../../take-an-availability-group-offline-sql-server.md)  
+-   [使可用性组脱机 (SQL Server)](../../take-an-availability-group-offline-sql-server.md)  
   
   
-##  <a name="RelatedContent"></a>相关内容  
+##  <a name="RelatedContent"></a> 相关内容  
   
--   **博客**  
+-   **博客：**  
   
      [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.com/b/sqlalwayson/)  
   
      [CSS SQL Server 工程师博客](https://blogs.msdn.com/b/psssql/)  
   
--   **视频**  
+-   **视频：**  
   
      [Microsoft SQL Server Code-Named "Denali" AlwaysOn 系列，第一部分：介绍下一代高可用性解决方案](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
@@ -138,12 +138,12 @@ ms.locfileid: "75228996"
  [AlwaysOn 可用性组 &#40;SQL Server&#41;](always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [配置 AlwaysOn 可用性组 &#40;SQL Server 的服务器实例&#41;](configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md)  
- [&#40;SQL Server&#41;创建和配置可用性组](creation-and-configuration-of-availability-groups-sql-server.md)   
+ [创建和配置可用性组 (SQL Server)](creation-and-configuration-of-availability-groups-sql-server.md)   
  [活动辅助副本：可读辅助副本 &#40;AlwaysOn 可用性组&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [活动辅助副本：辅助副本上的备份 &#40;AlwaysOn 可用性组&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
- [可用性组侦听器、客户端连接和应用程序故障转移 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [可用性组侦听程序、客户端连接和应用程序故障转移 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [AlwaysOn 可用性组 &#40;SQL Server 的操作问题的 AlwaysOn 策略&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
- [监视可用性组 &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   
+ [监视可用性组 (SQL Server)](monitoring-of-availability-groups-sql-server.md)   
  [AlwaysOn 可用性组：互操作性 &#40;SQL Server&#41;](always-on-availability-groups-interoperability-sql-server.md)   
  [AlwaysOn 可用性组 &#40;SQL Server 的 Transact-sql 语句概述&#41;](transact-sql-statements-for-always-on-availability-groups.md)   
  [适用于 AlwaysOn 可用性组 &#40;SQL Server 的 PowerShell Cmdlet 概述&#41;](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  

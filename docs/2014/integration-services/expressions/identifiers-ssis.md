@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a7913d82b471b50605c51fbfb61b3782cf135382
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62898855"
 ---
 # <a name="identifiers-ssis"></a>标识符 (SSIS)
@@ -85,7 +85,7 @@ ms.locfileid: "62898855"
 >  如果点分表示法中的两个元素括在一对方括号中，则表达式计算器会将此元素对解释为单个标识符，而不是源-列组合。  
   
 ## <a name="variables-in-expressions"></a>表达式中的变量  
- 表达式中引用的变量必须包含 \@ 前缀。 例如，使用 \@Counter 引用 Counter  变量。 \@ 字符不属于变量名，仅向表达式计算器指明标识符是变量。 如果使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器提供的对话框生成表达式，\@ 字符会自动添加到变量名中。 在 \@ 字符和变量名之间添加的空格无效。  
+ 表达式中引用的变量必须包含 \@ 前缀。 例如，使用 **Counter 引用 Counter**\@ 变量。 \@ 字符不属于变量名，仅向表达式计算器指明标识符是变量。 如果使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器提供的对话框生成表达式，\@ 字符会自动添加到变量名中。 在 \@ 字符和变量名之间添加的空格无效。  
   
  变量名和其他常规标识符遵循同样的规则：  
   
@@ -112,9 +112,9 @@ ms.locfileid: "62898855"
 > [!IMPORTANT]  
 >  必须将命名空间与限定的变量名二者的组合放在方括号中，表达式计算器才能识别该变量。  
   
- 如果的值**计数**中**用户**命名空间是 10，而值**计数**中**MyNamespace**为 2，该表达式的计算结果为`true`因为表达式计算器将它们识别两个不同的变量。  
+ 如果**用户**命名空间中的**计数**值为10，并且 MyNamespace 中的**count**值**** 为2，则表达式的计算结果`true`为，因为表达式计算器识别了两个不同的变量。  
   
- 如果变量名不唯一，将不会发生错误。 相反，表达式计算器将仅使用变量的一个实例来计算表达式并返回错误的结果。 例如，以下表达式原来是为了比较两个单独的值 （10 和 2）**计数**变量，但该表达式的计算结果为`false`因为表达式计算器使用的同一个实例**计数**变量两次。  
+ 如果变量名不唯一，将不会发生错误。 相反，表达式计算器将仅使用变量的一个实例来计算表达式并返回错误的结果。 例如，下面的表达式用于比较两个单独**Count**变量的值（10和2），但表达式的计算结果为， `false`因为表达式计算器两次使用同一个**Count**变量实例。  
   
 ```  
 @Count > @Count  

@@ -1,5 +1,5 @@
 ---
-title: AllMembers (MDX) |Microsoft Docs
+title: AllMembers （MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 770d66941af9b42be3c7b26f7e04a60d2a95cac2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017149"
 ---
 # <a name="allmembers-mdx"></a>AllMembers (MDX)
@@ -39,16 +39,16 @@ Level_Expression.AllMembers
  返回级别的有效多维表达式 (MDX)。  
   
 ## <a name="remarks"></a>备注  
- **AllMembers**函数将返回一组包含所有成员，其中包括计算的成员中指定的层次结构或级别。 **AllMembers**函数返回计算的成员，即使指定的层次结构或级别不包含任何可见的成员。  
+ **AllMembers**函数返回一个集，该集包含指定层次结构或级别中的所有成员，包括计算成员。 即使指定的层次结构或级别不包含可见成员， **AllMembers**函数也会返回计算成员。  
   
 > [!IMPORTANT]  
 >  如果维度仅包含单个可见层次结构，由于在此情况下维度名称将解析为其唯一可见的层次结构，所以既可以通过维度名称也可以通过层次结构名称来引用该层次。 例如，`Measures.AllMembers` 是一个有效的 MDX 表达式，这是因为它会解析为 Measures 维度中唯一的层次结构。  
   
 > [!NOTE]  
->  **AllMembers**函数在语义上类似于[AddCalculatedMembers (MDX)](../mdx/addcalculatedmembers-mdx.md)函数。  
+>  **AllMembers**函数在语义上类似于[AddCalculatedMembers （MDX）](../mdx/addcalculatedmembers-mdx.md)函数。  
   
 ## <a name="examples"></a>示例  
- 下面的示例返回中的所有成员 [`Date].[Calendar Year]`列轴上的属性层次结构，这包括计算的成员、 和的所有子级集`[Product].[Model Name]`属性层次结构从在行轴上的**Adventure工作原理**多维数据集。  
+ 下面的示例返回列轴上 [`Date].[Calendar Year]`属性层次结构中的所有成员，这包括计算成员，以及来自**艾德工作**多维数据集的`[Product].[Model Name]`行轴上属性层次结构的所有子级的集合。  
   
 ```  
 SELECT  
@@ -58,7 +58,7 @@ FROM
    [Adventure Works]  
 ```  
   
- 下面的示例返回中的所有成员**度量值**维度在列轴上这包括所有计算的成员、 和的所有子级集`[Product].[Model Name]`属性层次结构行轴上的，从**Adventure Works**多维数据集。  
+ 下面的示例返回列轴上的**度量值**维度中的所有成员，其中包括所有计算成员，以及来自**艾德公司**的行轴`[Product].[Model Name]`上属性层次结构的所有子级集。  
   
 ```  
 SELECT  
@@ -68,9 +68,9 @@ FROM
     [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [AddCalculatedMembers (MDX)](../mdx/addcalculatedmembers-mdx.md)   
- [Children (MDX)](../mdx/children-mdx.md)   
- [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)   
+ [子 &#40;MDX&#41;](../mdx/children-mdx.md)   
+ [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

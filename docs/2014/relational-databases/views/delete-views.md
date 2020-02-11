@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b7e727451fb0f9dc7a3d0726a2cb0fa2d6adf997
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196404"
 ---
 # <a name="delete-views"></a>删除视图
@@ -35,9 +35,9 @@ ms.locfileid: "68196404"
   
 -   使用 `DROP TABLE` 删除的表上的任何视图都必须使用 `DROP VIEW`显式删除。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要对 SCHEMA 的 ALTER 权限或对 OBJECT 的 CONTROL 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -51,7 +51,7 @@ ms.locfileid: "68196404"
 3.  在 **“删除对象”** 对话框中，单击 **“确定”** 。  
   
     > [!IMPORTANT]  
-    >  单击“删除对象”  对话框中的“显示依赖关系”  ，打开  “view_name 依赖关系”  对话框。 这将显示依赖于该视图的所有对象和该视图依赖的所有对象。  
+    >  单击 "**删除对象**" 对话框中的 "**显示依赖关系**"，打开 " _view_name_**依赖**关系" 对话框。 这将显示依赖于该视图的所有对象和该视图依赖的所有对象。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

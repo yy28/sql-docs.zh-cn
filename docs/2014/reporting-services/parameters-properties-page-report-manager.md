@@ -1,5 +1,5 @@
 ---
-title: 参数属性页 （报表管理器） |Microsoft Docs
+title: "\"参数\" 属性页（报表管理器） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 866fe023ff6ca2fe83264d65319618c5def0749a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108122"
 ---
 # <a name="parameters-properties-page-report-manager"></a>“参数”属性页（报表管理器）
@@ -33,7 +33,7 @@ ms.locfileid: "66108122"
   
 3.  在下拉菜单中，单击 **“管理”** 。 这会打开该报表的“常规”属性页。  
   
-4.  选择 **“参数”** 选项卡。如果 **“参数”** 选项卡不可见，则该报表不包含参数。  
+4.  选择 "**参数**" 选项卡。如果 "**参数**" 选项卡不可见，则该报表不包含参数。  
   
 ## <a name="options"></a>选项  
  **参数名称**  
@@ -42,11 +42,11 @@ ms.locfileid: "66108122"
  **数据类型**  
  指定参数的数据类型。  
   
- **默认值**  
- 选中此复选框可以指定参数是否具有默认值。 选中此复选框会启用 **“默认值”** 。 如果报表参数接受 Null 值，则还会启用 **Null** 。 如果 **“具有默认值”** 处于未选中状态，则运行报表时必须隐藏默认值或者提示用户提供一个值。  
+ **具有默认值**  
+ 选中此复选框可以指定参数是否具有默认值。 选中此复选框会启用 **“默认值”**。 如果报表参数接受 Null 值，则还会启用 **Null** 。 如果 **“具有默认值”** 处于未选中状态，则运行报表时必须隐藏默认值或者提示用户提供一个值。  
   
  **默认值**  
- 指定参数的值。 若要指定默认值，则必须选中 **“具有默认值”** ，而不能选中 **Null** 。 可以通过报表定义提供默认值。 如果 **“默认值”** 由一个或多个静态值填充，则这些值都源自报表。 如果 **“默认值”** 为 **“基于查询”** ，则参数值由报表中定义的查询决定。  
+ 指定参数的值。 若要指定默认值，则必须选中 **“具有默认值”** ，而不能选中 **Null** 。 可以通过报表定义提供默认值。 如果 **“默认值”** 由一个或多个静态值填充，则这些值都源自报表。 如果 **“默认值”** 为 **“基于查询”**，则参数值由报表中定义的查询决定。  
   
  如果 **“默认值”** 接受值，则可以键入对于报表使用的数据处理扩展插件有效的常量或语法。 例如，如果数据处理扩展插件的查询语言支持通配符，就可以指定通配符作为默认值。  
   
@@ -68,8 +68,8 @@ ms.locfileid: "66108122"
  **显示文本**  
  提供显示在参数文本框旁边的文本字符串。 此字符串提供标签或说明性文字。 字符串长度没有限制。 较长的文本字符串在所提供的空间中会换行显示。  
   
-## <a name="see-also"></a>请参阅  
- [报表的“常规”属性页（报表管理器）](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
+## <a name="see-also"></a>另请参阅  
+ [报表 &#40;报表管理器的 "常规属性" 页&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f2660582b03a121a81976d6bbc12afc1213877c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107089"
 ---
 # <a name="set-a-no-data-message-for-a-data-region-report-builder-and-ssrs"></a>为数据区域设置“无数据”消息（报表生成器和 SSRS）
@@ -27,7 +27,7 @@ ms.locfileid: "66107089"
   
 1.  在“设计”视图中，单击设计图面上的表、矩阵或列表数据区域或子报表以将其选中。 “属性”窗格将显示选定项的属性。  
   
-2.  在属性窗格中，键入你想要显示为消息中的文本`NoRowsMessage`属性字段。  
+2.  在 "属性" 窗格中，在 "属性" 字段中`NoRowsMessage`键入要显示为消息的文本。  
   
      此外，也可以在下拉列表中单击“表达式”以打开“表达式”对话框并创建表达式   。  
   
@@ -35,9 +35,9 @@ ms.locfileid: "66107089"
   
 1.  在“设计”视图中，单击并选中设计图面上的图表。 “属性”窗格将显示选定项的属性。  
   
-2.  在属性窗格中，展开节点`NoDataMessage`。  
+2.  在 "属性" 窗格中，展开的`NoDataMessage`节点。  
   
-3.  在中**标题**，键入你想要显示为消息中的文本`NoDataMessage`属性字段。  
+3.  在 "**标题**" 中，在 "属性" 字段中`NoDataMessage`键入要显示为消息的文本。  
   
      此外，也可以在下拉列表中单击“表达式”以打开“表达式”对话框并创建表达式   。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66107089"
   
 1.  在“设计”视图中，单击并选中设计图面上的子报表。 “属性”窗格将显示选定项的属性。  
   
-2.  在属性窗格中，键入你想要显示为消息中的文本`NoRowsMessage`属性字段。  
+2.  在 "属性" 窗格中，在 "属性" 字段中`NoRowsMessage`键入要显示为消息的文本。  
   
      此外，也可以在下拉列表中单击“表达式”以打开“表达式”对话框并创建表达式   。  
   
@@ -53,11 +53,11 @@ ms.locfileid: "66107089"
   
 1.  在“设计”视图中，单击地图上的色阶以将其选中。 “属性”窗格将显示选定项的属性。  
   
-2.  在属性窗格中`NoDataText`，键入你想要显示为无数据值的颜色的标签的文本。  
+2.  在的 "属性" 窗格`NoDataText`中，键入要显示为没有数据值的颜色的标签的文本。  
   
      此外，也可以在下拉列表中单击“表达式”以打开“表达式”对话框并创建表达式   。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [子报表（报表生成器和 SSRS）](../report-design/subreports-report-builder-and-ssrs.md)   
  [表、矩阵和列表（报表生成器和 SSRS）](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [图表（报表生成器和 SSRS）](../report-design/charts-report-builder-and-ssrs.md)   

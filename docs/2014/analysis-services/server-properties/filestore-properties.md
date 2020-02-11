@@ -1,5 +1,5 @@
 ---
-title: Filestore 属性 |Microsoft Docs
+title: "\"%0\" 属性 |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -25,16 +25,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fe11b7a9cda6b3e75cb97faa17a381e2b0ea1afe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069088"
 ---
 # <a name="filestore-properties"></a>FileStore 属性
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持下列各表中列出的文件存储服务器属性。 这些属性都是高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改这些属性。 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]支持下表中列出的 "服务器间服务器" 属性。 这些属性都是高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改这些属性。 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)。  
   
- **适用范围：** 多维和表格服务器模式  
+ **适用于：** 多维和表格服务器模式  
   
 ## <a name="properties"></a>属性  
  `MemoryLimit`  
@@ -54,7 +54,7 @@ ms.locfileid: "66069088"
   
  在高端系统上，特别是在具有大型内存资源和多个 NUMA 节点的系统上，使用随机文件访问可能会给您带来好处。 在随机访问模式中，Windows 会绕过将数据从磁盘读入系统文件缓存的页映射操作，因此会降低对缓存的争用。  
   
- 您将需要执行比较测试，以便确定查询性能是否由于更改此属性而得到改善。 有关执行比较测试的最佳做法，包括清除缓存和避免常见错误，请参阅 [SQL Server 2008 R2 Analysis Services 操作指南](https://go.microsoft.com/fwlink/?LinkID=225539)。 有关权衡使用此属性的其他信息，请参阅[ https://support.microsoft.com/kb/2549369 ](https://support.microsoft.com/kb/2549369)。  
+ 您将需要执行比较测试，以便确定查询性能是否由于更改此属性而得到改善。 有关执行比较测试的最佳做法，包括清除缓存和避免常见错误，请参阅 [SQL Server 2008 R2 Analysis Services 操作指南](https://go.microsoft.com/fwlink/?LinkID=225539)。 有关使用此属性的折衷的其他信息，请参阅[https://support.microsoft.com/kb/2549369](https://support.microsoft.com/kb/2549369)。  
   
  若要在 Management Studio 中查看或修改此属性，请在服务器属性页中启用高级属性列表。 您也可以在 msmdsrv.ini 文件中更改该属性。 建议在设置该属性后重新启动服务器；否则，将会继续在之前的模式下访问已打开的文件。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "66069088"
  `MemoryModel\InitialBonus`  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在 Analysis Services 中配置服务器属性](server-properties-in-analysis-services.md)   
  [确定 Analysis Services 实例的服务器模式](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

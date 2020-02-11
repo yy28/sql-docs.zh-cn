@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: cafef8a5b702b6df4475d34e9395bb12bc9461fb
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400979"
 ---
 # <a name="master-database---parallel-data-warehouse"></a>Master 数据库-并行数据仓库
@@ -44,7 +44,7 @@ SQL Server PDW master 数据库存储设备级登录信息和数据库目录。 
   
 |任务|说明|  
 |--------|---------------|  
-|创建 master 的完整备份。|例如：<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />有关详细信息，请参阅[BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)。|  
+|创建 master 的完整备份。|示例：<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />有关详细信息，请参阅[BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)。|  
 |还原 master 数据库|若要还原 master 数据库，请使用 Configuration Manager 工具中的 "[还原 Master 数据库](restore-the-master-database.md)" 页。|  
 |查看数据库目录信息。|`SELECT * FROM master.sys.databases;`|  
 |查看系统范围的登录名和权限信息。|`SELECT * FROM master.sys.server_permissions;`<br /><br />`SELECT * FROM master.sys.server_principals;`<br /><br />`SELECT * FROM master.sys.sql_logins;`|  

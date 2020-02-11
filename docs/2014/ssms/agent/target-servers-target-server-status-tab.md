@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0fc22cd7489294e8623596c1ce1e4f38c90706aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245715"
 ---
 # <a name="target-servers-target-server-status-tab"></a>目标服务器（“目标服务器状态”选项卡）
@@ -35,7 +35,7 @@ ms.locfileid: "63245715"
  **未读指令**  
  查看目标服务器尚未收到的指令数。  
   
- **“状态”**  
+ **Status**  
  查看目标服务器的状态。  
   
  **强制轮询**  
@@ -53,7 +53,7 @@ ms.locfileid: "63245715"
  **刷新间隔**  
  指定刷新此页上信息的频率。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [企业范围的自动化管理](automated-administration-across-an-enterprise.md)  
   
   

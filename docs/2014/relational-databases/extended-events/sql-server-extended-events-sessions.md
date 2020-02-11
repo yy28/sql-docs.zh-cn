@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6e589ccad75cea729913b10b6232f61693446595
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62705734"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server Extended Events Sessions
@@ -35,12 +35,12 @@ ms.locfileid: "62705734"
   
  对照前面的图，可以注意到在对事件会话发出不同的 DDL 命令时会话状态将发生更改。 下表说明了这些状态更改。  
   
-|图例标签|DDL 语句|Description|  
+|图例标签|DDL 语句|说明|  
 |------------------------|-------------------|-----------------|  
 |创建|CREATE EVENT SESSION|主机进程将创建一个会话对象，其中包含由 CREATE EVENT SESSION 提供的元数据。 主机进程将验证会话定义和用户权限级别，并将元数据存储在 master 数据库中。 此时该会话处于不活动状态。|  
-|Alter|ALTER EVENT SESSION, STATE=START|主机进程启动会话。 主机进程将读取存储的元数据、验证会话定义、验证用户权限级别并创建会话。 此操作还将载入会话对象（例如事件和目标），此时事件处理即处于活动状态。|  
-|Alter|ALTER EVENT SESSION, STATE=STOP|主机进程将停止活动会话，但会保留元数据。|  
-|Drop|删除事件会话|此“删除”(DROP SESSION) 操作将删除元数据并关闭活动会话，或仅删除会话元数据；具体取决于会话是否处于活动状态。|  
+|更改|ALTER EVENT SESSION, STATE=START|主机进程启动会话。 主机进程将读取存储的元数据、验证会话定义、验证用户权限级别并创建会话。 此操作还将载入会话对象（例如事件和目标），此时事件处理即处于活动状态。|  
+|更改|ALTER EVENT SESSION, STATE=STOP|主机进程将停止活动会话，但会保留元数据。|  
+|丢弃|删除事件会话|此“删除”(DROP SESSION) 操作将删除元数据并关闭活动会话，或仅删除会话元数据；具体取决于会话是否处于活动状态。|  
   
 > [!NOTE]  
 >  ALTER EVENT SESSION 和 DROP EVENT SESSION 均可应用于元数据或者应用于活动会话与元数据。  
@@ -74,7 +74,7 @@ ms.locfileid: "62705734"
   
  扩展事件体系结构提供了一个灵活的系统，允许同时使用多个对象以解决特定的问题。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [扩展事件](extended-events.md)  
   
   

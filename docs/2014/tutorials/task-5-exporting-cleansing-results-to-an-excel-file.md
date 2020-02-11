@@ -1,5 +1,5 @@
 ---
-title: 任务 5：导出清理结果保存到 Excel 文件 |Microsoft Docs
+title: 任务5：将清理结果导出到 Excel 文件 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,42 +11,42 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3c690becefb71b71c154131b6957c1063872b540
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489123"
 ---
 # <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>任务 5：将清理结果导出到 Excel 文件
-  在本任务中，您将清理活动的结果导出到 Excel 文件。 请参阅[导出阶段](https://msdn.microsoft.com/library/hh213061.aspx#Export)主题的更多详细信息。  
+  在本任务中，您将清理活动的结果导出到 Excel 文件。 有关更多详细信息，请参阅[导出阶段](https://msdn.microsoft.com/library/hh213061.aspx#Export)主题。  
   
-1.  在右窗格中，选择**Excel**有关**目标类型**。  
+1.  在右侧窗格中，选择 " **Excel** " 作为**目标类型**。  
   
-2.  单击**浏览**，指定输出文件的名称作为**Cleansed Supplier List.xls**，然后单击**打开**。  
+2.  单击 "**浏览**"，将输出文件名指定为**清理供应商列表 .xls**，然后单击 "**打开**"。  
   
-3.  选择**Data Only**有关**输出**格式导出已清理的数据。 第二个选项，**数据和清理信息**，你可以将导出清理活动详细信息，以及已清理的数据。 **标准化格式**选项可将应用到该域的值在域定义的任何输出格式。 在本教程中，您尚未在任何域上定义输出格式。  
+3.  仅选择 "要导出的**数据**" 作为**输出**格式，以便只导出清理的数据。 第二个选项 "**数据和清理信息**" 允许您导出清理活动详细信息以及清理数据。 使用 "**标准化格式**" 选项，您可以将域中定义的任何输出格式应用于该域的值。 在本教程中，您尚未在任何域上定义输出格式。  
   
-     ![导出清理结果页面](../../2014/tutorials/media/et-exportingcleansingresultstoanexcelfile.jpg "导出清理结果页")  
+     ![“导出清理结果”页](../../2014/tutorials/media/et-exportingcleansingresultstoanexcelfile.jpg "“导出清理结果”页")  
   
-4.  单击**导出**导出的数据。 不要单击**完成**尚未。  
+4.  单击 "**导出**" 以导出数据。 不要单击 "**完成**"。  
   
-5.  单击**关闭**上**导出**对话框。  
+5.  单击 "**导出**" 对话框中的 "**关闭**"。  
   
-6.  单击**完成**以完成活动。 如果您忘记了导出结果，再单击**完成**，单击**打开数据质量项目**中的主页**DQS 客户端**，选择**清理供应商列表**从列表中的项目，然后单击**下一步**屏幕中获取到底部**导出**阶段的试清理过程。 此外可以切换到**管理和查看结果**通过单击选项卡**回**按钮。  
+6.  单击 "**完成**" 完成活动。 如果您在单击 "**完成**" 之前忘了导出结果，请在 " **DQS 客户端**" 的主页中单击 "**打开数据质量项目**"，从项目列表中选择 "**清理供应商列表**"，然后单击屏幕底部的 "**下一步**" 以再次转到清理过程的**导出**阶段。 还可以通过单击 "**后退**" 按钮切换到 "**管理和查看结果**" 选项卡。  
   
-7.  打开**Cleansed Supplier List.xls**并执行以下操作：  
+7.  打开**清理供应商列表 .xls**并执行以下操作：  
   
-    1.  确保没有电子邮件地址以 adventure-work.com 结尾 (没有字符的) 通过搜索 adventure-work.com 工作表中。  
+    1.  通过在工作表中搜索 adventure-work.com，确保不存在以 adventure-work.com （不含字符 '）结尾的电子邮件地址。  
   
-    2.  查看任何**USA**中的值**国家/地区**列。  
+    2.  请注意，"**国家/地区**" 列中没有任何**USA**值。  
   
-    3.  搜索**Los Angeles**看到**状态**设置为**CA**。  
+    3.  搜索洛杉矶 **，并看到**"**状态**" 设置为 " **CA**"。  
   
-    4.  确认没有术语**Co.** ， **Corp.** ，并**Inc.** 。  
+    4.  确认没有术语 " **Co**"、" **Corp**" 和 " **inc.**"。  
   
-    5.  删除**地址验证**列从电子表格并保存 excel 文件。 此额外列对应于“地址验证”复合域。  
+    5.  从电子表格中删除**地址验证**列，并保存该 excel 文件。 此额外列对应于“地址验证”复合域。  
   
 ## <a name="next-step"></a>下一步  
- [任务 6:导入值从 Cleanse Supplier List 项目](../../2014/tutorials/task-6-importing-values-from-the-cleanse-supplier-list-project.md)  
+ [任务 6：从 Cleanse Supplier List 项目导入值](../../2014/tutorials/task-6-importing-values-from-the-cleanse-supplier-list-project.md)  
   
   

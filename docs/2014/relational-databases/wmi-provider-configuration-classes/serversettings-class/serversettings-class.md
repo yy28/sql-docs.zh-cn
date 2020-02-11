@@ -19,16 +19,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: cc1ee935e19c4f44dc1c350355edd08371ea6485
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63137312"
 ---
 # <a name="serversettings-class"></a>ServerSettings 类
-  [ServerSettings 类] serversettings class.md) 表示的实例上的服务器设置[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+  [ServerSettings Class] ServerSettings-class.md）表示实例上的[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服务器设置。  
   
- [ServerSettings 类] serversettings class.md) 可以执行以下任务：  
+ [ServerSettings Class] ServerSettings-class.md）允许您执行以下任务：  
   
 -   访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的常规标志设置。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "63137312"
   
 -   设置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的安全证书。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置服务器网络协议和网络库](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

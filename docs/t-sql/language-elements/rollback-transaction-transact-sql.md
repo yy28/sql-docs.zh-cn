@@ -26,10 +26,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cfd14c6cd0147d9e4c163a4802f060ecc4374754
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121824"
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68121824"
   将显式事务或隐性事务回滚到事务的起点或事务内的某个保存点。 可以使用 ROLLBACK TRANSACTION 清除自事务的起点或到某个保存点所做的所有数据修改。 它还释放由事务控制的资源。  
   
 
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -53,13 +53,13 @@ ROLLBACK { TRAN | TRANSACTION }
  transaction_name   
  是为 BEGIN TRANSACTION 上的事务分配的名称。 transaction_name 必须符合标识符规则，但只使用事务名称的前 32 个字符  。 嵌套事务时，transaction_name 必须是最外面的 BEGIN TRANSACTION 语句中的名称  。 transaction_name 始终区分大小写，即使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例不区分大小写也是如此  。  
   
- @ tran_name_variable    
+ **@** *tran_name_variable*  
  用户定义的、含有有效事务名称的变量的名称。 必须使用 char、varchar、nchar 或 nvarchar 数据类型声明该变量     。  
   
  savepoint_name   
  SAVE TRANSACTION 语句中的 savepoint_name  。 savepoint_name 必须遵守标识符规则  。 当条件回滚应只影响事务的一部分时，可使用 savepoint_name  。  
   
- @ savepoint_variable    
+ **@** *savepoint_variable*  
  是用户定义的、包含有效保存点名称的变量的名称。 必须使用 char、varchar、nchar 或 nvarchar 数据类型声明该变量     。  
   
 ## <a name="error-handling"></a>错误处理  

@@ -1,5 +1,5 @@
 ---
-title: 自定义调用顺序 (OracleToSQL) |Microsoft Docs
+title: 自定义调用顺序（OracleToSQL） |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,21 +13,21 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 77586a09172fa0f737c7efb0f54fdc98fcb858da
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68266100"
 ---
 # <a name="customizing-calls-order-oracletosql"></a>自定义调用顺序 (OracleToSQL)
-在此步骤中您选择将在其中调用要测试的对象的顺序。  
+在此步骤中，您将选择要调用的对象的排序顺序。  
   
 ## <a name="customizing-order"></a>自定义顺序  
-使用这些按钮顶部使用的对象放置在正确的顺序中的对象的列表在网格放置。 或者，可以使用按钮显示将成为在适当时选择的行。  
+使用置于网格顶部的按钮以及对象列表，按正确的顺序放置对象。 或者，您可以使用在该行变为选中状态时显示在右侧的按钮。  
   
 ## <a name="next-step"></a>下一步  
-[完成测试用例准备&#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
+[完成测试用例准备 &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
   
-## <a name="see-also"></a>请参阅  
-[测试迁移的数据库对象&#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+## <a name="see-also"></a>另请参阅  
+[测试迁移的数据库对象 &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

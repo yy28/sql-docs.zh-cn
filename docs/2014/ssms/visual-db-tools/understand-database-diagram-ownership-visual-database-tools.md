@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6056a5136d8aceab338a18b32ecfac35a1af0364
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204711"
 ---
 # <a name="understand-database-diagram-ownership-visual-database-tools"></a>了解数据库关系图所有权 (Visual Database Tools)
-  若要使用数据库关系图设计器，必须先由 db_owne 角色（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的一个角色）的成员对其进行设置，以控制对关系图的访问。 每个关系图都有一个而且只有一个所有者，即创建该关系图的用户。 有关设置关系图的详细信息请参阅[设置数据库关系图设计器&#40;Visual Database Tools&#41;](visual-database-tools.md)。  
+  若要使用数据库关系图设计器，必须先由 db_owne 角色（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的一个角色）的成员对其进行设置，以控制对关系图的访问。 每个关系图都有一个而且只有一个所有者，即创建该关系图的用户。 有关设置关系图的详细信息，请参阅[设置数据库关系图设计器 &#40;Visual Database Tools&#41;](visual-database-tools.md)。  
   
  关于关系图所有权，需要记住以下几点：  
   
@@ -34,8 +34,8 @@ ms.locfileid: "63204711"
   
 -   如果关系图的拥有者已从数据库中移除，该关系图将一直保留在数据库中，直到 db_owner 角色的成员试图打开该关系图。 此时，db_owner 成员可以选择接管关系图的所有权。  
   
-## <a name="see-also"></a>请参阅  
- [使用数据库关系图&#40;可视化数据库工具&#41;](work-with-database-diagrams-visual-database-tools.md)   
- [设置数据库关系图设计器 (Visual Database Tools)](visual-database-tools.md)  
+## <a name="see-also"></a>另请参阅  
+ [使用数据库关系图 &#40;Visual Database Tools&#41;](work-with-database-diagrams-visual-database-tools.md)   
+ [&#40;Visual Database Tools 设置数据库关系图设计器&#41;](visual-database-tools.md)  
   
   

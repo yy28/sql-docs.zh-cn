@@ -1,5 +1,5 @@
 ---
-title: Value 属性 (ADO) |Microsoft Docs
+title: Value 属性（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,38 +17,38 @@ ms.assetid: 48919c74-86d4-462e-99b9-8854ceb8d683
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e35dd93e6d90a81934d8f272ea79c5eb7c8a97c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67913925"
 ---
 # <a name="value-property-ado"></a>Value 属性 (ADO)
 
-指示分配给的值[字段](../../../ado/reference/ado-api/field-object.md)，[参数](../../../ado/reference/ado-api/parameter-object.md)，或[属性](../../../ado/reference/ado-api/property-object-ado.md)对象。
+指示赋给[字段](../../../ado/reference/ado-api/field-object.md)、[参数](../../../ado/reference/ado-api/parameter-object.md)或[属性](../../../ado/reference/ado-api/property-object-ado.md)对象的值。
   
 ## <a name="settings-and-return-values"></a>设置和返回值
 
-设置或返回**变体**值，该值指示对象的值。 默认值取决于[类型](../../../ado/reference/ado-api/type-property-ado.md)属性。
+设置或返回一个表示对象的值的**变量**值。 默认值取决于[Type](../../../ado/reference/ado-api/type-property-ado.md)属性。
   
 ## <a name="remarks"></a>备注
 
-使用**值**属性来设置或返回数据自**字段**对象，若要设置或返回参数值替换**参数**对象，或者要设置或返回与属性设置**属性**对象。 是否**值**属性为读/写或只读取决于多种因素。 请参阅各自的对象主题以了解更多信息。
+使用**Value**属性可以设置或返回**字段**对象中的数据，使用**参数**对象设置或返回参数值，或者使用**属性**对象设置或返回属性设置。 **Value**属性是可读/写还是只读取决于许多因素。 有关详细信息，请参阅各自的对象主题。
 
-ADO 允许设置和返回长度的二进制数据与**值**属性。
+ADO 允许设置和返回带有**Value**属性的长二进制数据。
   
 > [!NOTE]
-> 有关**参数**对象，ADO 读取**值**属性一次只能从提供程序。 如果某个命令包含**参数**其**值**属性为空，并且创建[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)命令，请确保先关闭**记录集**检索之前**值**属性。 否则为对于某些提供程序**值**属性可能为空，并且不会包含正确的值。
+> 对于**参数**对象，ADO 仅从提供程序读取一次**值**属性。 如果命令包含的**参数**的**值**属性为空，并且您从命令创建[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，请确保先关闭**记录集**，然后再检索**值**属性。 否则，对于某些访问接口，**值**属性可能为空，并且不包含正确的值。
 > 
-> 对新**字段**已追加到的对象[字段](../../../ado/reference/ado-api/fields-collection-ado.md)的集合[记录](../../../ado/reference/ado-api/record-object-ado.md)对象，**值**属性必须设置在任何其他前**字段**可以指定属性。 首先，为特定值**值**属性必须具有已分配和[更新](../../../ado/reference/ado-api/update-method.md)上**字段**名集合。 然后，其他属性，如[类型](../../../ado/reference/ado-api/type-property-ado.md)或[属性](../../../ado/reference/ado-api/attributes-property-ado.md)可访问。
+> 对于附加到[Record](../../../ado/reference/ado-api/record-object-ado.md)对象的[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)集合的新**字段**对象，必须先设置**Value**属性，然后才能指定任何其他**字段**属性。 首先，必须在名为的**字段**集合上分配和[更新](../../../ado/reference/ado-api/update-method.md)**值**属性的特定值。 然后，可以访问其他属性，例如[类型](../../../ado/reference/ado-api/type-property-ado.md)或[属性](../../../ado/reference/ado-api/attributes-property-ado.md)。
   
-## <a name="applies-to"></a>适用范围
+## <a name="applies-to"></a>应用于
   
 ||||  
 |-|-|-|  
-|[字段对象](../../../ado/reference/ado-api/field-object.md)|[参数对象](../../../ado/reference/ado-api/parameter-object.md)|[属性对象 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|
+|[字段对象](../../../ado/reference/ado-api/field-object.md)|[Parameter 对象](../../../ado/reference/ado-api/parameter-object.md)|[属性对象 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[值属性示例 (VB)](../../../ado/reference/ado-api/value-property-example-vb.md)
-[值属性示例 （VC + +）](../../../ado/reference/ado-api/value-property-example-vc.md) 
+[Value 属性示例（VB）](../../../ado/reference/ado-api/value-property-example-vb.md)
+[value 属性示例（VC + +）](../../../ado/reference/ado-api/value-property-example-vc.md) 

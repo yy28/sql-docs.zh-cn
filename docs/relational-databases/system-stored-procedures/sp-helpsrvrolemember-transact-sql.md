@@ -1,5 +1,5 @@
 ---
-title: sp_helpsrvrolemember (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpsrvrolemember （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: d0714913-8d6b-4de3-b042-3ae9934f839d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ba1cbbfb95dafaa99a33d95b1d92a9e6e5f4e9a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68010761"
 ---
-# <a name="sphelpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember (Transact-SQL)
+# <a name="sp_helpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   返回有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固定服务器角色成员的信息。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,11 +39,11 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @srvrolename = ] 'role'` 是固定的服务器角色的名称。 *角色* 是 **sysname** ，默认值为 NULL。 如果*角色*未指定，则结果集包含有关所有固定的服务器角色的信息。  
+`[ @srvrolename = ] 'role'`固定服务器角色的名称。 *role*的值为**sysname**，默认值为 NULL。 如果未指定*role*，则结果集将包括所有固定服务器角色的相关信息。  
   
- *角色*可以是以下值之一。  
+ *role*可以是以下任一值。  
   
-|固定的服务器角色|描述|  
+|固定服务器角色|说明|  
 |-----------------------|-----------------|  
 |sysadmin|系统管理员|  
 |securityadmin|安全管理员|  
@@ -59,20 +59,20 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |ServerRole|**sysname**|服务器角色的名称|  
-|MemberName|**sysname**|服务器角色的成员的名称|  
-|MemberSID|**varbinary(85)**|安全标识符的成员名称|  
+|MemberName|**sysname**|ServerRole 成员的名称|  
+|MemberSID|**varbinary （85）**|MemberName 的安全标识符|  
   
 ## <a name="remarks"></a>备注  
- Sp_helprolemember 用于显示数据库角色的成员。  
+ 可以使用 sp_helprolemember 显示数据库角色的成员。  
   
- 所有登录名都的公共成员。 sp_helpsrvrolemember 无法识别的公共角色，因为在内部，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不实现公共作为角色。  
+ 所有登录名都是 public 的成员。 sp_helpsrvrolemember 无法识别公共角色，因为在内部， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不会将公共作为角色实现。  
   
- 若要添加或删除的成员，从服务器角色，请参阅[ALTER SERVER ROLE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)。  
+ 若要在服务器角色中添加或删除成员，请参阅[ALTER SERVER ROLE &#40;transact-sql&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)。  
   
- sp_helpsrvrolemember 才会作为自变量的用户定义服务器角色。 若要确定用户定义的服务器角色的成员，请参阅中的示例[ALTER SERVER ROLE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)。  
+ sp_helpsrvrolemember 不会将用户定义的服务器角色当作参数使用。 若要确定用户定义的服务器角色的成员，请参阅[ALTER SERVER role &#40;transact-sql&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)中的示例。  
   
 ## <a name="permissions"></a>权限  
  要求具有 public 角色的成员身份。  
@@ -84,11 +84,11 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 EXEC sp_helpsrvrolemember 'sysadmin';  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [sp_helprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
- [sp_helprolemember &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [sp_helprole &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
+ [sp_helprolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [安全存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [安全函数 (Transact-SQL)](../../t-sql/functions/security-functions-transact-sql.md)  
   
   

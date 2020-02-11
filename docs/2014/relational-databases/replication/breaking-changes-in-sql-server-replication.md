@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cd0b8c5e1957a6cf803fbb741d6b9bad5bbb9613
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721769"
 ---
 # <a name="breaking-changes-in-sql-server-replication"></a>SQL Server 复制中的重大更改
@@ -26,7 +26,7 @@ ms.locfileid: "62721769"
 ## <a name="breaking-changes-made-in-sql-server-2014"></a>SQL Server 2014 中所作的重大更改  
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 不支持面向或源自 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或 [!INCLUDE[ssEW](../../includes/ssew-md.md)]的复制。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [复制的向后兼容性](replication-backward-compatibility.md)  
   
   

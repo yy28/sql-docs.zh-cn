@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 10b14aa8a1f68b32c00ecb321c1af36fb15b868e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900930"
 ---
 # <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>使用聚合转换来聚合数据集中的值
@@ -54,7 +54,7 @@ ms.locfileid: "62900930"
     > [!NOTE]  
     >  由于转换可以为它的工作预先分配合适的内存数量，因此可通过提供不同值的个数（准确或近似）来优化性能。  
   
-12. 或者，单击 **“高级”** 并更新聚合转换输出的名称。 如果聚合包含`Group By`操作，可以选择分组键值的近似计数**键范围**列或指定分组键值的准确数目**密钥**列。  
+12. 或者，单击 **“高级”** 并更新聚合转换输出的名称。 如果聚合包含`Group By`操作，则可以在 "**键范围**" 列中选择分组键值的近似计数，或者在 "**键**" 列中指定精确的分组键值。  
   
     > [!NOTE]  
     >  由于转换可以为它的工作预先分配合适的内存数量，因此可通过提供不同值的个数（准确或近似）来优化性能。  
@@ -64,11 +64,11 @@ ms.locfileid: "62900930"
   
 13. 或者，单击 **“高级”** 选项卡并设置应用于优化聚合转换所执行的所有操作的属性。  
   
-14. 单击“确定”  。  
+14. 单击“确定”。   
   
 15. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [聚合转换](aggregate-transformation.md)   
  [Integration Services 转换](integration-services-transformations.md)   
  [Integration Services 路径](../integration-services-paths.md)   

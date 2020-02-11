@@ -1,5 +1,5 @@
 ---
-title: string-length 函数 (XQuery) |Microsoft Docs
+title: 字符串长度函数（XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 7cd69c8b-cf2c-478c-b9a3-e0e14e1aa8aa
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 12ae1efbf900a505a5f257f9684842a0ad9ff21f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68004651"
 ---
 # <a name="functions-on-string-values---string-length"></a>基于字符串值的函数 - string-length
@@ -40,13 +40,13 @@ fn:string-length($arg as xs:string?) as xs:integer
  要计算其长度的源字符串。  
   
 ## <a name="remarks"></a>备注  
- 如果的值 *$arg*是一个空序列**xs: integer**返回值为 0。  
+ 如果 *$arg*的值是空序列，则返回**xs： integer**值0。  
   
- XQuery 函数中代理对的行为依赖于数据库兼容级别。 如果该兼容级别为 110 或更高，则每个代理对都作为单个字符计数。 对于更低的兼容级别，它们会作为两个字符计数。 有关详细信息，请参阅[ALTER DATABASE 兼容性级别&#40;TRANSACT-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)并[排序规则和 Unicode 支持](../relational-databases/collations/collation-and-unicode-support.md)。  
+ XQuery 函数中代理对的行为依赖于数据库兼容级别。 如果该兼容级别为 110 或更高，则每个代理对都作为单个字符计数。 对于更低的兼容级别，它们会作为两个字符计数。 有关详细信息，请参阅[ALTER DATABASE 兼容级别 &#40;transact-sql&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)和[排序规则和 Unicode 支持](../relational-databases/collations/collation-and-unicode-support.md)。  
   
  如果该值包含由两个代理项字符表示的 4 字节 Unicode 字符，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将单独对代理项字符计数。  
   
- **String-length （)** 没有参数只能在谓词内。 例如，下面的查询返回 <`ROOT`> 元素：  
+ 不带参数的**字符串长度（）** 只能在谓词内使用。 例如，下面的查询将返回 <`ROOT`> 元素：  
   
 ```  
 DECLARE @x xml;  
@@ -55,13 +55,13 @@ SELECT @x.query('/ROOT[string-length()=5]');
 ```  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>补充字符（代理项对）  
- XQuery 函数中代理对的行为依赖于数据库兼容级别，并且在某些情况下，还依赖于函数的默认命名空间 URI。 有关详细信息，请参阅主题中的"XQuery 函数可识别代理"部分[SQL Server 2016 中数据库引擎功能的重大更改](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)。 另请参阅[ALTER DATABASE 兼容性级别&#40;TRANSACT-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)并[排序规则和 Unicode 支持](../relational-databases/collations/collation-and-unicode-support.md)。  
+ XQuery 函数中代理对的行为依赖于数据库兼容级别，并且在某些情况下，还依赖于函数的默认命名空间 URI。 有关详细信息，请参阅[SQL Server 2016 中数据库引擎功能的重大更改](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)主题中的 "XQuery 函数是代理感知" 部分。 另请参阅[ALTER DATABASE 兼容级别 &#40;transact-sql&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)和[排序规则和 Unicode 支持](../relational-databases/collations/collation-and-unicode-support.md)。  
   
 ## <a name="examples"></a>示例  
- 本主题提供了一些针对 XML 实例存储在各种 XQuery 示例**xml**类型列中的 AdventureWorks 数据库。  
+ 本主题提供了针对 AdventureWorks 数据库中各种**xml**类型列中存储的 xml 实例的 XQuery 示例。  
   
 ### <a name="a-using-the-string-length-xquery-function-to-retrieve-products-with-long-summary-descriptions"></a>A. 使用 string-length() XQuery 函数检索带有较长摘要说明的产品  
- 对于其摘要说明大于 50 个字符的产品，下面的查询检索产品 ID 的长度的摘要说明，以及摘要本身，<`Summary`> 元素。  
+ 对于摘要说明超过50个字符的产品，下面的查询将检索产品 ID、摘要说明的长度以及摘要本身、<`Summary`> 元素。  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' as pd)  
@@ -79,11 +79,11 @@ WHERE CatalogDescription.value('string-length( string( (/pd:ProductDescription/p
   
  请注意上述查询的以下方面：  
   
--   WHERE 子句的条件只检索在 XML 文档中存储的摘要说明大于 200 个字符的行。 它使用[value （） 方法 （XML 数据类型）](../t-sql/xml/value-method-xml-data-type.md)。  
+-   WHERE 子句的条件只检索在 XML 文档中存储的摘要说明大于 200 个字符的行。 它使用[value （）方法（XML 数据类型）](../t-sql/xml/value-method-xml-data-type.md)。  
   
--   SELECT 子句仅构造您想要的 XML。 它使用[query （） 方法 （XML 数据类型）](../t-sql/xml/query-method-xml-data-type.md)构造 XML，并指定必需的 XQuery 表达式，以从 XML 文档中检索数据。  
+-   SELECT 子句仅构造您想要的 XML。 它使用[query （）方法（xml 数据类型）](../t-sql/xml/query-method-xml-data-type.md)构造 xml，并指定必要的 XQuery 表达式来从 XML 文档中检索数据。  
   
- 这是部分结果：  
+ 下面是部分结果：  
   
 ```  
 Result  
@@ -99,9 +99,9 @@ Result
 ```  
   
 ### <a name="b-using-the-string-length-xquery-function-to-retrieve-products-whose-warranty-descriptions-are-short"></a>B. 使用 string-length() XQuery 函数检索保修说明较短的产品  
- 对于保修说明较长时间不超过 20 个字符的产品，下面的查询检索产品 ID、 长度、 保修说明的 XML 和 <`Warranty`> 元素本身。  
+ 对于其保修说明长度少于20个字符的产品，下面的查询将检索包含产品 ID、长度、保修说明和 <`Warranty`> 元素本身的 XML。  
   
- 保修是厂商为产品提供的服务之一。 可选的 <`Warranty`> 子元素如下所示之后 <`Features`> 元素。  
+ 保修是厂商为产品提供的服务之一。 在 <`Features`> `Warranty`元素之后> 子元素的可选 <。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -127,9 +127,9 @@ WHERE CatalogDescription.exist('/pd:ProductDescription')=1;
   
  请注意上述查询的以下方面：  
   
--   **pd**并**wm**是此查询中使用的命名空间前缀。 它们标识正在查询的文档中使用的相同命名空间。  
+-   **pd**和**wm**是在此查询中使用的命名空间前缀。 它们标识正在查询的文档中使用的相同命名空间。  
   
--   XQuery 指定嵌套 FOR 循环。 外部 FOR 循环是必需的因为您想要检索**ProductModelID**的属性 <`ProductDescription`> 元素。 内部 FOR 循环也是必需的，因为您只需检索那些保修功能说明少于 20 个字符的产品。  
+-   XQuery 指定嵌套 FOR 循环。 需要外部 FOR 循环，因为要检索 <`ProductDescription`> 元素的**ProductModelID**属性。 内部 FOR 循环也是必需的，因为您只需检索那些保修功能说明少于 20 个字符的产品。  
   
  下面是部分结果：  
   
@@ -148,7 +148,7 @@ Result
 ...  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [针对 xml 数据类型的 XQuery 函数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

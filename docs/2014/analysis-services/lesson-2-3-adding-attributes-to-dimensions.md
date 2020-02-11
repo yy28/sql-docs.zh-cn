@@ -1,5 +1,5 @@
 ---
-title: 向维度添加属性 |Microsoft Docs
+title: 将属性添加到维度 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7a30424ce322ed356870465422c4f82fb8d7d88d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079024"
 ---
 # <a name="adding-attributes-to-dimensions"></a>向维度添加属性
@@ -26,13 +26,13 @@ ms.locfileid: "66079024"
   
 #### <a name="to-add-attributes"></a>添加属性  
   
-1.  打开“客户”维度的维度设计器。 为此，请在解决方案资源管理器的“维度”  节点中双击“客户”  维度。  
+1.  打开“客户”维度的维度设计器。 为此，请在解决方案资源管理器的“维度”**** 节点中双击“客户”**** 维度。  
   
-2.  在“属性”  窗格中，请注意多维数据集向导已经创建的“客户关键字”和“地域关键字”属性。  
+2.  在“属性”**** 窗格中，请注意多维数据集向导已经创建的“客户关键字”和“地域关键字”属性。  
   
-3.  在“维度结构”  选项卡的工具栏上，确保用于在“数据源视图”  窗格中查看表的“缩放”图标设置为 100%。  
+3.  在“维度结构”**** 选项卡的工具栏上，确保用于在“数据源视图”**** 窗格中查看表的“缩放”图标设置为 100%。  
   
-4.  在“数据源视图”  窗格中，将“Customer”  表的以下各列拖到“属性”  窗格中：  
+4.  在“数据源视图”**** 窗格中，将“Customer”**** 表的以下各列拖到“属性”**** 窗格中：  
   
     -   **BirthDate**  
   
@@ -56,15 +56,15 @@ ms.locfileid: "66079024"
   
     -   **NumberCarsOwned**  
   
-    -   **Phone**  
+    -   **移动**  
   
     -   **DateFirstPurchase**  
   
     -   **CommuteDistance**  
   
-5.  将“数据源视图”  窗格内“Geography”  表中的以下各列拖到“属性”  窗格中：  
+5.  将“数据源视图”**** 窗格内“Geography”**** 表中的以下各列拖到“属性”**** 窗格中：  
   
-    -   **City**  
+    -   **城市**  
   
     -   **StateProvinceName**  
   
@@ -78,17 +78,17 @@ ms.locfileid: "66079024"
   
 #### <a name="to-add-attributes"></a>添加属性  
   
-1.  打开“产品”维度的维度设计器。 在解决方案资源管理器中，双击“产品”  维度。  
+1.  打开“产品”维度的维度设计器。 在解决方案资源管理器中，双击“产品”**** 维度。  
   
-2.  在“属性”  窗格中，请注意多维数据集向导创建的“产品密钥”属性。  
+2.  在“属性”**** 窗格中，请注意多维数据集向导创建的“产品密钥”属性。  
   
-3.  在“维度结构”  选项卡的工具栏上，确保用于在“数据源视图”  窗格中查看表的“缩放”图标设置为 100%。  
+3.  在“维度结构”**** 选项卡的工具栏上，确保用于在“数据源视图”**** 窗格中查看表的“缩放”图标设置为 100%。  
   
-4.  将“数据源视图”  窗格内“Product”  表中的以下各列拖到“属性”  窗格中：  
+4.  将“数据源视图”**** 窗格内“Product”**** 表中的以下各列拖到“属性”**** 窗格中：  
   
     -   **StandardCost**  
   
-    -   **Color**  
+    -   **彩色**  
   
     -   **SafetyStockLevel**  
   
@@ -100,7 +100,7 @@ ms.locfileid: "66079024"
   
     -   **SizeRange**  
   
-    -   **Weight**  
+    -   **重现**  
   
     -   **DaysToManufacture**  
   
@@ -118,14 +118,14 @@ ms.locfileid: "66079024"
   
     -   **EndDate**  
   
-    -   **“状态”**  
+    -   **Status**  
   
 5.  在“文件”菜单上，单击“全部保存”  。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [检查多维数据集和维度属性](lesson-2-4-reviewing-cube-and-dimension-properties.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [维度特性属性参考](multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Supports 方法示例 （VC + +） |Microsoft Docs
+title: 支持方法示例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 6e174179-9d95-41b9-b72b-6cdbdca6e255
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8eb0aa12a31337340854f941237d673abd1c601c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67936716"
 ---
 # <a name="supports-method-example-vc"></a>Supports 方法示例 (VC++)
-此示例使用[支持](../../../ado/reference/ado-api/supports-method.md)方法来显示数据集支持的选项，打开不同的游标类型。 若要运行此示例需要 DisplaySupport 函数。  
+此示例使用[支持](../../../ado/reference/ado-api/supports-method.md)方法显示使用不同游标类型打开的记录集支持的选项。 运行此示例需要 DisplaySupport 函数。  
   
 ```  
 // SupportsMethodExample.cpp  
@@ -225,6 +225,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+## <a name="see-also"></a>另请参阅  
+ [Recordset 对象（ADO）](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Supports 方法](../../../ado/reference/ado-api/supports-method.md)

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f21a5f938b2dcd7b90fa71ab946d2986b0633987
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829403"
 ---
 # <a name="web-service-task"></a>Web 服务任务
@@ -53,7 +53,7 @@ ms.locfileid: "62829403"
 ## <a name="custom-logging-messages-available-on-the-web-service-task"></a>Web 服务任务可用的自定义日志记录消息  
  下表列出了可以为 Web 服务任务启用的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../performance/integration-services-ssis-logging.md)和[日志记录的自定义消息](../custom-messages-for-logging.md)。  
   
-|日志项|Description|  
+|日志项|说明|  
 |---------------|-----------------|  
 |`WSTaskBegin`|任务已开始访问 Web 服务。|  
 |`WSTaskEnd`|任务已完成 Web 服务方法。|  
@@ -64,11 +64,11 @@ ms.locfileid: "62829403"
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   
--   [Web 服务任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)  
+-   [Web 服务任务编辑器 &#40;常规 "页面&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Web 服务任务编辑器（“输入”页）](../web-service-task-editor-input-page.md)  
+-   [Web 服务任务编辑器 &#40;输入页&#41;](../web-service-task-editor-input-page.md)  
   
--   [Web 服务任务编辑器（“输出”页）](../web-service-task-editor-output-page.md)  
+-   [Web 服务任务编辑器 &#40;输出页&#41;](../web-service-task-editor-output-page.md)  
   
 -   [“表达式”页](../expressions/expressions-page.md)  
   
@@ -82,8 +82,8 @@ ms.locfileid: "62829403"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WebServiceTask.WebServiceTask>  
   
 ## <a name="related-content"></a>相关内容  
- MSDN 库中的视频[操作说明：使用 Web 服务任务调用 Web 服务（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkId=259642)。  
+ technet.microsoft.com 上的视频 [如何：使用 Web 服务任务调用 Web 服务（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkId=259642)。  
   
- [如何使用 Web 服务通过 SSIS 包](https://www.c-sharpcorner.com/article/how-to-consume-web-service-through-ssis-package/)。  
+ [如何通过 SSIS 包使用 Web 服务](https://www.c-sharpcorner.com/article/how-to-consume-web-service-through-ssis-package/)。  
   
   

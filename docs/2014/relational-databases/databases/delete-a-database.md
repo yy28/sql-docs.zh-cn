@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ffda3be2194b26b46f9633c3bdf76d60d36ce73c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871909"
 ---
 # <a name="delete-a-database"></a>删除数据库
@@ -45,7 +45,7 @@ ms.locfileid: "62871909"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **跟进：** [删除某个数据库之后](#FollowUp)  
+-   **跟进：** [在删除数据库之后](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -53,9 +53,9 @@ ms.locfileid: "62871909"
   
 -   不能删除系统数据库。  
   
-###  <a name="Prerequisites"></a> 先决条件  
+###  <a name="Prerequisites"></a>先决条件  
   
--   删除数据库中的所有数据库快照。 有关详细信息，请参阅[删除数据库快照 (Transact SQL)](drop-a-database-snapshot-transact-sql.md)。  
+-   删除数据库中的所有数据库快照。 有关详细信息，请参阅 [删除数据库快照 (Transact-SQL)](drop-a-database-snapshot-transact-sql.md)实例。  
   
 -   如果日志传送涉及数据库，请删除日志传送。  
   
@@ -65,9 +65,9 @@ ms.locfileid: "62871909"
   
 -   考虑对数据库进行完整备份。 只有通过还原备份才能重新创建已删除的数据库。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  若要执行 DROP DATABASE 操作，用户必须至少对数据库具有 CONTROL 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -97,10 +97,10 @@ DROP DATABASE Sales, NewSales ;
 GO  
 ```  
   
-##  <a name="FollowUp"></a> 跟进：删除某个数据库之后  
+##  <a name="FollowUp"></a> 跟进：在删除数据库之后  
  备份 **master** 数据库。 如果必须还原 **master** ，则自上次备份 **master** 之后删除的所有数据库都将仍在系统目录视图中具有引用，并且可能会导致出现错误消息。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [CREATE DATABASE (SQL Server Transact-SQL)](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)  
   

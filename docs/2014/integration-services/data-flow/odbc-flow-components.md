@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e42099ede229ef7d0b10cf8d88b4ac92c60d3370
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62901427"
 ---
 # <a name="odbc-flow-components"></a>ODBC 流组件
@@ -24,7 +24,7 @@ ms.locfileid: "62901427"
   
  ODBC 连接器设计为在将数据加载到 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]的上下文中支持 ODBC 的数据库中或者从支持 ODBC 的数据库卸载数据时获得最佳性能。  
   
-## <a name="benefits"></a>优势  
+## <a name="benefits"></a>优点  
  用于 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 的 ODBC 源和 ODBC 目标在处理从支持 ODBC 的数据库加载数据或卸载数据方面为项目中的 SSIS 提供竞争力。  
   
  ODBC 源和 ODBC 目标实现了与支持 ODBC 的数据库的高性能数据集成。 这两个组件都可以配置为使用按行参数数组绑定来用于支持此模式的绑定的高性能 ODBC 访问接口，以及使用单行参数绑定来用于低性能的 ODBC 访问接口。  
@@ -110,8 +110,8 @@ ms.locfileid: "62901427"
 |SQL_DOUBLE|DT_R8|  
 |SQL_FLOAT|DT_R8|  
 |SQL_REAL|DT_R4|  
-|SQL_NUMERIC (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|数值数据类型将映射到 DT_NUMERIC 时 P 是大于或等于 38 并且 S 大于或等于 0 且 S 小于或等于 p。当至少一个以下为 true 时，数值数据类型将映射到 DT_R8:<br /><br />精度大于 38<br /><br />刻度小于零<br /><br />刻度大于 38<br /><br />刻度大于精度<br /><br /><br /><br />请注意当它被声明为 money 数据类型的数值数据类型将映射到 DT_CY。|  
-|SQL_DECIMAL (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|在 P 大于或等于 38 并且 S 大于或等于 0 且 S 小于或等于 p 时，decimal 数据类型将映射到 DT_NUMERIC当至少一个以下为 true 时，decimal 数据类型将映射到 DT_R8:<br /><br />精度大于 38<br /><br />刻度小于零<br /><br />刻度大于 38<br /><br />刻度大于精度<br /><br />请注意当它被声明为 money 数据类型为 decimal 数据类型将映射到 DT_CY。|  
+|SQL_NUMERIC (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|当 P 大于或等于38并且 S 大于或等于0且 S 小于或等于 P 时，数字数据类型将映射到 DT_NUMERIC。当至少满足以下条件之一时，数值数据类型将映射到 DT_R8：<br /><br />精度大于 38<br /><br />刻度小于零<br /><br />刻度大于 38<br /><br />刻度大于精度<br /><br /><br /><br />请注意，在将数值数据类型声明为 money 数据类型时，该数据类型将映射到 DT_CY。|  
+|SQL_DECIMAL (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|当 P 大于或等于38并且 S 大于或等于0且 S 小于或等于 P 时，decimal 数据类型将映射到 DT_NUMERIC。如果至少满足以下条件之一，则 decimal 数据类型将映射到 DT_R8：<br /><br />精度大于 38<br /><br />刻度小于零<br /><br />刻度大于 38<br /><br />刻度大于精度<br /><br />请注意，decimal 数据类型在声明为 money 数据类型时将映射到 DT_CY。|  
 |SQL_DATE<br /><br />SQL_TYPE_DATE|DT_DBDATE|  
 |SQL_TIME<br /><br />SQL_TYPE_TIME|DT_DBTIME|  
 |SQL_TIMESTAMP<br /><br />SQL_TYPE_TIMESTAMP|DT_DBTIMESTAMP<br /><br />DT_DBTIMESTAMP2|如果小数位数大于 3，则 SQL_TIMESTAMP 数据类型将映射到 DT_DBTIMESTAMP2。 在所有其他情况下，它们将映射到 DT_DBTIMESTAMP。|  

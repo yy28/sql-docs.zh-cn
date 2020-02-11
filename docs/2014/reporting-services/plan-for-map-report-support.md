@@ -11,19 +11,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: df796e2dd4e132164f00716a9cb12f7b498d8984
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108080"
 ---
 # <a name="plan-for-map-report-support"></a>计划地图报表支持
-  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 支持使用空间数据源的地图报表。 空间数据可来自 SQL Server 数据库或 ESRI 形状文件，或者来自随 Reporting Services 或报表生成器一起安装的地图库。 地图还可以显示 Bing 地图图块的背景。 报表作者可以创建空间数据或 Bing 地图图块指定为动态和在运行时检索到或为静态的嵌入报表定义中的报表。  
+  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]支持使用空间数据源的地图报表。 空间数据可来自 SQL Server 数据库或 ESRI 形状文件，或者来自随 Reporting Services 或报表生成器一起安装的地图库。 地图还可以显示 Bing 地图图块的背景。 报表作者可以创建一个报表，该报表可以将空间数据或 Bing 地图图块指定为动态的和在运行时检索的，也可以指定为静态的和嵌入在报表定义中的。  
   
 ## <a name="support-for-bing-maps"></a>支持 Bing 地图  
  地图可以包括显示 Bing 地图图块的背景层。 若要查看具有地图图块层的已发布报表，报表服务器必须配置为从 Bing 地图 Web 服务检索图块。 有关详细信息，请参阅 [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)。  
   
- 在各报表中，报表作者可以指定是否使用安全套接字层 (SSL) 连接从图块服务器中检索图块。 为此，请在图块层属性窗格中，它们必须设置的布尔属性 usesecureconnection 设置到`true`。  
+ 在各报表中，报表作者可以指定是否使用安全套接字层 (SSL) 连接从图块服务器中检索图块。 为此，必须在图块层的属性窗格中将布尔属性 UseSecureConnection 设置为`true`。  
   
 > [!NOTE]  
 >  有关在报表中使用 Bing 地图图块的详细信息，请参阅 [其他使用条款](https://go.microsoft.com/fwlink/?LinkId=151371) 和 [隐私声明](https://go.microsoft.com/fwlink/?LinkId=151372)。  
@@ -41,15 +41,15 @@ ms.locfileid: "66108080"
   
  为了有助于减少具有地图的报表定义的大小，报表作者可以使用以下选项中的一个或多个：  
   
--   从报表设计器中[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，添加到报表服务器项目作为 ESRI 形状文件的空间数据源。 在您部署该项目时，这些 ESRI 形状文件将发布到报表服务器以及报表上。 在报表作者运行地图向导时，他们可以从 Report Server 项目指定空间数据源，并且地图元素默认情况下不嵌入在报表定义中。  
+-   从报表设计器的[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，将 ESRI 形状文件的空间数据源添加到 Report Server 项目。 在您部署该项目时，这些 ESRI 形状文件将发布到报表服务器以及报表上。 在报表作者运行地图向导时，他们可以从 Report Server 项目指定空间数据源，并且地图元素默认情况下不嵌入在报表定义中。  
   
--   从报表生成器中，添加作为 ESRI 形状文件，通过从报表服务器中选择形状文件的空间数据源。 在报表作者运行地图向导时，他们可以从报表服务器中浏览并选择一个空间数据源，并且地图元素默认情况下不嵌入在报表定义中。  
+-   从报表生成器中，通过从 Report Server 中选择 "形状文件" 来添加 ESRI 形状文件的空间数据源。 在报表作者运行地图向导时，他们可以从报表服务器中浏览并选择一个空间数据源，并且地图元素默认情况下不嵌入在报表定义中。  
   
 -   在地图数据必须嵌入地图数据时，调整视区中心和缩放级别以便只包括报表所需的地图数据。  
   
- 有关详细信息[映射&#40;报表生成器和 SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)。  
+ 有关详细信息，请[&#40;报表生成器和 SSRS&#41;的映射](report-design/maps-report-builder-and-ssrs.md)。  
   
-## <a name="see-also"></a>请参阅  
- [报表故障排除：地图报表（报表生成器和 SSRS）](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>另请参阅  
+ [报表故障排除：地图报表 &#40;报表生成器和 SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

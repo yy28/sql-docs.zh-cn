@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a11983c6fc9e1ca2e8917fd2efdaa5c90b4d3c30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62828592"
 ---
 # <a name="cdc-flow-components"></a>CDC 流组件
@@ -62,14 +62,14 @@ ms.locfileid: "62828592"
 ### <a name="restart-ssis"></a>重新启动 SSIS  
  安装 CDC 组件后，必须重新启动 SSIS 服务，以确保在 SQL [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 中开发包时，这些组件能够正常运行。  
   
- 安装这些组件后将显示一条消息。 在系统提示时单击 **“是”** 。  
+ 安装这些组件后将显示一条消息。 出现提示时单击 **"是"** 。  
   
 ### <a name="uninstalling-the-microsoft-cdc-components"></a>卸载 Microsoft CDC 组件  
  可以使用卸载向导卸载 CDC 源、CDC 拆分器或 CDC 控制任务。 卸载组件之前必须确保以下事项：  
   
  如果你要使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 进行包开发，请务必在运行卸载向导前关闭 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 。  
   
-## <a name="benefits"></a>优势  
+## <a name="benefits"></a>优点  
  借助用于 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 组件的 CDC 组件，SSIS 开发者可以轻松生成 SSIS 包来处理变更数据。 这些组件增强了 SSIS 开发人员处理 CDC 的能力并降低了 CDC 包的复杂性。  
   
  使用 SSIS CDC 提供的更改数据更易于进一步处理，从而便于复制、加载数据仓库、更新 OLAP 的渐变维度、审核更改，或方便应用于其他可能的用途。 所使用的进一步处理的类型由 SSIS 开发人员确定。  
@@ -79,21 +79,21 @@ ms.locfileid: "62828592"
 ## <a name="getting-started-with-the-change-data-capture-components"></a>Change Data Capture 组件入门  
  典型的 CDC 包处理针对一组表的更改。 下图显示了此类 CDC 包的基本控制流部分。 此包被称为滴送处理包。  
   
- ![滴送处理包控制流](../media/tricklefeedprocessing.gif "Trickle Feed Processing Package Control Flow")  
+ ![滴送处理包控制流](../media/tricklefeedprocessing.gif "滴送处理包控制流")  
   
- 这一 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 控制流包含两个 CDC 控制任务以及一个数据流任务。 第一个任务称为“获取 CDC 处理范围”，此任务为在称为“处理更改”的数据流任务中处理的更改建立 LSN 范围。 基于上一包运行期间处理的已保存在持久存储区中的更改建立此范围。  
+ 这一 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 控制流包含两个 CDC 控制任务以及一个数据流任务。 第一个任务称为“获取 CDC 处理范围”，此任务为在称为“处理更改”的数据流任务中处理的更改建立 LSN 范围。******** 基于上一包运行期间处理的已保存在持久存储区中的更改建立此范围。  
   
  有关使用 CDC 控制任务的详细信息，请参阅 [CDC Control Task](../control-flow/cdc-control-task.md) 和 [CDC Control Task Editor](../cdc-control-task-editor.md)。  
   
  下图显示了 **“处理更改”** 数据流，该数据流在概念上演示了如何处理更改。  
   
- ![处理变化数据流](../media/processchangesdataflow.gif "Process Changes Data Flow")  
+ ![处理变化数据流](../media/processchangesdataflow.gif "处理变化数据流")  
   
  此图中演示了以下步骤：  
   
--   **“针对表 X 的更改”** 是一种 CDC 源，用来读取在父控制流中确定的 CDC 处理范围中对表 X 所做的更改。  
+-   **表 x 的更改**是一个 CDC 源，用于读取在父控制流中确定的 cdc 处理范围中对表 X 所做的更改。  
   
--   **“CDC 拆分器 X”** 用于将更改拆分为插入、更新和删除等操作。 在此情况下，假定 CDC 源被配置为生成净更改，以便并行处理不同的更改类型。  
+-   **CDC 拆分器 X**用于将更改拆分为插入、删除和更新。 在此情况下，假定 CDC 源被配置为生成净更改，以便并行处理不同的更改类型。  
   
 -   然后在下游进一步处理特定的更改。 在此演示中，使用多个 ODBC 目标将更改插入表，但实际情况下处理方式可能有所不同。  
   
@@ -123,11 +123,11 @@ ms.locfileid: "62828592"
   
  下图显示了可处理前两种方案的 SSIS 包：  
   
- ![处理前两个方案的 SSIS 包](../media/scenarioonetwo.gif "SSIS package handling first two scenarios")  
+ ![处理前两个方案的 SSIS 包](../media/scenarioonetwo.gif "处理前两个方案的 SSIS 包")  
   
  下图显示了可处理第三种方案的 SSIS 包：  
   
- ![处理第三个方案的 SSIS 包](../media/scenario3.gif "处理第三个方案的 SSIS 包")  
+ ![处理第三方案的 SSIS 包](../media/scenario3.gif "处理第三方案的 SSIS 包")  
   
  在初始加载包之后，会根据计划反复运行滴送更新包，以便一出现可使用的更改就送交处理。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "62828592"
   
  CDC 状态变量的值需要在持久存储中维护，应该在启动 CDC 处理之前读取该值，并应在处理完成后与当前状态一同保存。 加载和存储 CDC 状态的任务可由 SSIS 开发人员处理，但是 CDC 控制组件可以通过在数据库表中维护 CDC 状态值来自动处理此任务。  
   
-## <a name="security-considerations"></a>需要考虑的安全性因素  
+## <a name="security-considerations"></a>安全注意事项  
  本节列出了与在 SSIS 中使用 CDC 组件相关的一些安全注意事项。  
   
 ### <a name="access-authorization-to-change-data"></a>针对更改数据的访问授权  
@@ -171,12 +171,12 @@ ms.locfileid: "62828592"
 ## <a name="cdc-state"></a>CDC 状态  
  每个 CDC 组都关联有某种状态，该状态表示为具有特定格式的字符串。 有关详细信息，请参阅 [CDC Control Task](../control-flow/cdc-control-task.md)。 下表列出了可能的 CDC 状态值。  
   
-|State|Description|  
+|状态|说明|  
 |-----------|-----------------|  
 |0-(INITIAL)|对当前 CDC 组运行任何包之前存在的状态。 这也是 CDC 状态为空时的状态。<br /><br /> 有关 CDC 控制任务操作的详细信息，请参阅 [CDC Control Task](../control-flow/cdc-control-task.md)。|  
 |1-ILSTART（初始-加载-已启动）|这是在初始加载包启动时存在的状态。 在 **MarkInitialLoadStart** 操作调用 CDC 控制任务后就会出现该状态。<br /><br /> 有关 CDC 控制任务操作的详细信息，请参阅 [CDC Control Task](../control-flow/cdc-control-task.md)。|  
 |2- ILEND（初始-加载-已结束）|这是在初始加载包成功结束时存在的状态。 在 MarkInitialLoadEnd 操作调用 CDC 控制任务后就会出现该状态。<br /><br /> 有关 CDC 控制任务操作的详细信息，请参阅 [CDC Control Task](../control-flow/cdc-control-task.md)。|  
-|3-ILUPDATE（初始加载更新）|在初始加载后仍在处理初始处理范围期间，首次运行更新包之后，就会出现该状态。 在 **GetProcessingRange** 操作调用 CDC 控制任务后就会出现该状态。<br /><br /> 如果使用 **_$reprocessing** 列，该列设置为 1，指示该包可能在重新处理目标上已存在的行。<br /><br /> 有关 CDC 控制任务操作的详细信息，请参阅 [CDC Control Task](../control-flow/cdc-control-task.md)。|  
+|3-ILUPDATE（初始加载更新）|在初始加载后仍在处理初始处理范围期间，首次运行更新包之后，就会出现该状态。 在 **GetProcessingRange** 操作调用 CDC 控制任务后就会出现该状态。<br /><br /> 如果使用 **_ $** 重新处理列，则将其设置为1，以指示包可能会重新处理目标上已存在的行。<br /><br /> 有关 CDC 控制任务操作的详细信息，请参阅 [CDC Control Task](../control-flow/cdc-control-task.md)。|  
 |4-TFEND（滴送-更新-已结束）|这是常规 CDC 运行应该出现的状态。 它指示前一次运行已成功完成，可以开始具有新的处理范围的新一轮运行。|  
 |5-TFSTART（滴送-更新-已启动）|这是在 **GetProcessingRange** 操作调用 CDC 控制任务后，后续运行的更新包存在的状态。<br /><br /> 这指示已启动常规 CDC 运行，但运行未完成或未完全结束 (**MarkProcessedRange**)。<br /><br /> 有关 CDC 控制任务操作的详细信息，请参阅 [CDC Control Task](../control-flow/cdc-control-task.md)。|  
 |6-TFREDO（重新处理-滴送-更新)|这是在 TFSTART 之后执行 **GetProcessingRange** 时出现的状态。 这指示上次运行未成功完成。<br /><br /> 如果使用 _$reprocessing 列，该列设置为 1，指示该包可能在重新处理目标上已存在的行。|  
@@ -186,7 +186,7 @@ ms.locfileid: "62828592"
   
  例如，在初始加载包的末尾，当试图将状态设置为 ILEND 时，如果该状态为 TFSTART，则 CDC 组将处于错误状态，滴送更新包不会运行（但初始加载包会运行）。  
   
- ![状态图](../media/statediagram.gif "State Diagram")  
+ ![状态图](../media/statediagram.gif "状态图")  
   
  一旦初始加载包成功运行，滴送更新包就会根据预先确定的计划反复运行，以处理针对源表的更改。 滴送更新包的每次运行都是一次 CDC 运行。  
   
@@ -216,7 +216,7 @@ ms.locfileid: "62828592"
   
 -   technet.microsoft.com 上的视频 [使用 SQL Server Integration Services 2012 时 Oracle 数据库的 CDC（SQL Server 视频）](https://technet.microsoft.com/sqlserver/jj218898)。  
   
-## <a name="see-also"></a>请参阅  
- [CDC 控制任务](../control-flow/cdc-control-task.md)  
+## <a name="see-also"></a>另请参阅  
+ [CDC Control Task](../control-flow/cdc-control-task.md)  
   
   

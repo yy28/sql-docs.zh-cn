@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4a2239e07cc24842c5cbdf44c8743ea2d79ea7cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107403"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>创建、修改和删除共享数据源 (SSRS)
@@ -32,13 +32,13 @@ ms.locfileid: "66107403"
   
  共享数据源由以下几个部分组成：  
   
-|组成部分|Description|  
+|部分|说明|  
 |----------|-----------------|  
-|“属性”|名称用于在报表服务器文件夹层次结构中标识该项。|  
-|Description|说明在您查看文件夹的内容时在报表管理器中与该项一起出现。|  
+|名称|名称用于在报表服务器文件夹层次结构中标识该项。|  
+|说明|说明在您查看文件夹的内容时在报表管理器中与该项一起出现。|  
 |连接类型|与数据源一起使用的数据处理扩展插件。 您只能使用部署在报表服务器上的数据处理扩展插件。 有关 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 附带的数据处理扩展插件的详细信息，请参阅 [Reporting Services 支持的数据源 (SSRS)](../create-deploy-and-manage-mobile-and-paginated-reports.md)。|  
-|连接字符串|数据库的连接字符串。 有关详细信息并查看常用的数据源的连接字符串示例，请参阅[数据连接、 数据源和 Reporting Services 中的连接字符串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)。|  
-|凭据类型|指定如何为连接获取凭据以及在建立连接后是否使用这些凭据。 有关详细信息，请参阅[为报表数据源指定凭据和连接信息](../../integration-services/connection-manager/data-sources.md).|  
+|连接字符串|数据库的连接字符串。 有关详细信息以及如何查看经常使用的数据源的连接字符串示例，请参阅[Reporting Services 中的数据连接、数据源和连接字符串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)。|  
+|凭据类型|指定如何为连接获取凭据以及在建立连接后是否使用这些凭据。 有关详细信息，请参阅[为报表数据源指定凭据和连接信息](../../integration-services/connection-manager/data-sources.md)|  
   
  共享数据源不包含用于检索数据的查询信息。 查询始终保存在报表定义中。  
   
@@ -47,16 +47,16 @@ ms.locfileid: "66107403"
   
  有关创建共享数据源的详细信息，请参阅：  
   
--   [创建嵌入数据源或共享数据源 (SSRS)](../create-an-embedded-or-shared-data-source-ssrs.md)  
+-   [&#40;SSRS 创建嵌入数据源或共享数据源&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)  
   
--   [创建和管理共享数据源（SharePoint 集成模式下的 Reporting Services）](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)  
+-   [在 SharePoint 集成模式下创建和管理共享数据源 &#40;Reporting Services&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)  
   
  在报表服务器上创建共享数据源后，可通过创建角色分配来控制对该共享数据源的访问、将该共享数据源移到其他位置、对其重命名，或使之脱机以防止在对外部数据源执行维护操作时处理报表。 如果您在报表服务器文件夹层次结构中对共享数据源项重命名，或将其移到其他位置，则引用该共享数据源的所有报表或订阅中的路径信息都会相应更新。 如果使共享数据源脱机，则直到您重新启用该数据源后所有报表、模型和订阅才会运行。  
   
  有关如何控制对报表服务器文件夹层次结构中的共享数据源的访问的详细信息，请参阅 [保护共享数据源项](../security/secure-shared-data-source-items.md)。  
   
-## <a name="deleting-a-shared-data-source"></a>删除共享的数据源  
- 可使用与从报表服务器删除任何项完全相同的方式来删除共享数据源。 在报表管理器中，您在详细信息视图中打开文件夹，选择该项，然后单击**删除**。 在 SharePoint 站点上的应用程序页上，打开 SharePoint 库、 选择项，然后单击**删除**。  
+## <a name="deleting-a-shared-data-source"></a>删除共享数据源  
+ 可使用与从报表服务器删除任何项完全相同的方式来删除共享数据源。 在报表管理器中，在 "详细信息视图" 中打开该文件夹，选择该项，然后单击 "**删除**"。 在 SharePoint 站点上的应用程序页中，打开 SharePoint 库，选择该项，然后单击 "**删除**"。  
   
  删除共享数据源将停用所有使用该共享数据源的报表、模型或数据驱动订阅。 在没有数据源连接信息的情况下，这些项将不再运行。 若要激活这些项，必须打开每一项并执行以下操作：  
   
@@ -68,14 +68,14 @@ ms.locfileid: "66107403"
   
  删除共享数据源后没有“撤消”操作可用。 不过，如果您意外删除了一个共享数据源，则可以使用与删除的共享数据源相同的属性值来创建一个新的共享数据源。 您必须打开每个报表、模型和数据驱动订阅才能将该共享数据源重新绑定到使用该共享数据源的项，但是只要这些数据源属性和以前的数据源属性相同，这些报表、模型和订阅便可像以前一样正常使用。  
   
-## <a name="see-also"></a>请参阅  
- [创建和管理共享数据源（SharePoint 集成模式下的 Reporting Services）](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)   
- [数据连接、 数据源和 Reporting Services 中的连接字符串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+## <a name="see-also"></a>另请参阅  
+ [在 SharePoint 集成模式下创建和管理共享数据源 &#40;Reporting Services&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)   
+ [Reporting Services 中的数据连接、数据源和连接字符串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [管理报表数据源](manage-report-data-sources.md)   
  [报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)   
- [嵌入和共享的数据连接或数据源（报表生成器和 SSRS）](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
- [“数据源”属性页（报表管理器）](../data-sources-properties-page-report-manager.md)   
- [创建、删除或修改共享数据源（报表管理器）](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [配置报表的数据源属性（报表管理器）](configure-data-source-properties-for-a-report-report-manager.md)  
+ [嵌入和共享的数据连接或数据源 &#40;报表生成器和 SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ ["数据源" 属性页 &#40;报表管理器&#41;](../data-sources-properties-page-report-manager.md)   
+ [创建、删除或修改共享数据源 &#40;报表管理器&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [配置报表的数据源属性 &#40;报表管理器&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
   
   

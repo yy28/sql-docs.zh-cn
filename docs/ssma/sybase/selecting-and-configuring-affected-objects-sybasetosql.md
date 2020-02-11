@@ -1,5 +1,5 @@
 ---
-title: 选择并配置受影响的对象 (SybaseToSQL) |Microsoft Docs
+title: 选择并配置受影响的对象（SybaseToSQL） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,30 +12,30 @@ ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3aa7ccc8d559f7017fd2a9bf0bc20bc7ae191c46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68020987"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>选择并配置受影响的对象 (SybaseToSQL)
-在此页可以选择表和外键，在其中更改应进行比较时 SSMA 验证在上一步中选择的对象的执行结果。 此外，还可以自定义验证参数。  
+在此页上，您可以选择表和外键，在 SSMA 验证在上一步中选择的对象的执行结果时应比较的更改。 此外，还可以自定义验证参数。  
   
-## <a name="selection-of-affected-objects"></a>选择的受影响的对象  
-在位于左侧和右侧的窗口上 Sybase 对象树中，检查表和外键，在其中更改应进行比较以相同。  
+## <a name="selection-of-affected-objects"></a>选择受影响的对象  
+在位于窗口左侧的 Sybase 对象树中，检查表和外键，其中应比较的更改是否相同。  
   
-SSMA 测试人员无法验证任何这些对象，如果你将看到标记为链接**有些选定的对象包含错误**在对象树。 单击此链接可查看这些对象为何不能进行比较的原因，从而清除所选的错误的对象。  
+如果 SSMA 测试人员无法验证这些对象中的任何一个，你将看到标记为**某些选定对象**的链接在对象树下包含错误。 单击此链接可查看无法比较这些对象的原因，以及清除错误对象的选择。  
   
 ## <a name="table"></a>表  
-表选项卡包含选定的表的网格视图。 该网格包含有关所选表的以下信息：  
+"表" 选项卡包含所选表的网格视图。 该网格包含有关所选表的下列信息：  
   
 -   列名  
   
 -   数据类型  
   
--   精度  
+-   Precision  
   
--   小数位数  
+-   缩放  
   
 -   规则  
   
@@ -43,81 +43,81 @@ SSMA 测试人员无法验证任何这些对象，如果你将看到标记为链
   
 -   标识  
   
--   可以为 Null  
+-   Nullable  
   
 ## <a name="sql"></a>Sql  
-SQL 选项卡包含"创建表"选定的表的 SQL。  
+SQL 选项卡包含所选表的 "创建表" SQL。  
   
-## <a name="data"></a>Data  
-数据选项卡显示所选择的表中的数据。  
+## <a name="data"></a>data  
+"数据" 选项卡显示所选表中的数据。  
   
-## <a name="properties"></a>properties  
-属性选项卡显示所选表的属性。 以下字段是属性选项卡下存在：  
+## <a name="properties"></a>属性  
+"属性" 选项卡显示所选表的属性。 "属性" 选项卡下提供以下字段：  
   
--   创建或上次修改时间  
+-   已创建或上次修改  
   
--   Object Name  
+-   对象名称  
   
 ## <a name="table-comparison-settings"></a>表比较设置  
-在建立表的比较规则**表比较**页。 可以进行以下设置。  
+为**表比较**页面上的表建立比较规则。 可以进行以下设置。  
   
 ### <a name="comparison-mode"></a>比较模式  
-在定义的表内容，这将是执行比较。  
+定义将对其执行比较的表内容。  
   
--   如果选择**仅更改**，将执行的表行的完整比较。  
+-   如果只选择 "**更改**"，则将执行表行的完全比较。  
   
--   如果选择**完整**，将执行行所做的更改比较。  
+-   如果选择 "**完全**"，则只会执行已更改的行的比较。  
   
 ## <a name="column-comparison-settings"></a>列比较设置  
-建立在上表中的列的比较规则**列比较**页。 可以进行以下设置。  
+在**列比较**页面上为表列建立比较规则。 可以进行以下设置。  
   
-### <a name="use-during-test-comparisons"></a>比较测试期间使用  
-确定此列将参与测试结果验证。  
+### <a name="use-during-test-comparisons"></a>在测试比较期间使用  
+确定此列是否将参与测试结果验证。  
   
--   如果愿意 **，则返回 True**，SSMA 在 Sybase 上执行测试，并显示在 SQL Server 中列的内容后将比较此列的内容。
+-   如果选择 " **True**"，则 SSMA 将在 Sybase 上执行测试后将此列的内容与 SQL Server 中列的内容进行比较。
   
--   如果愿意**False**，将从结果验证中排除列。  
+-   如果选择 " **False**"，则将从结果验证中排除列。  
   
 ### <a name="use-custom-scale"></a>使用自定义缩放  
-对于数值数据类型的列，可以设置用于比较的自定义规模。  
+对于数值数据类型的列，可以设置比较的自定义刻度。  
   
--   如果愿意 **，则返回 True**，将根据舍入数字值**比较规模**值之前对它们进行比较。  
+-   如果选择 " **True**"，则在比较小数位数之前，将根据**比较比例**值对数值进行舍入。  
   
--   如果愿意**False**，数值比较将是准确。  
+-   如果选择**False**，则数字比较将是精确的。  
   
-### <a name="comparing-scale"></a>比较规模  
+### <a name="comparing-scale"></a>比较刻度  
   
--   才可用**使用自定义比例**选项设置为**True**。 这是数值比较的精度。  
+-   仅当 "**使用自定义缩放**" 选项设置为**True**时可用。 这是数值比较的精度。  
   
-### <a name="date-time-comparing"></a>日期时间比较  
-定义日期/时间值进行比较。  
+### <a name="date-time-comparing"></a>比较日期时间  
+定义日期/时间值的比较方式。  
   
--   如果选择**比较整个日期**，将执行完整比较这两个平台中的值。  
+-   如果选择 "**比较整个日期**"，则将执行两个平台中的值的完全比较。  
   
--   如果选择**比较仅日期**，将忽略部分的时间。  
+-   如果选择 "**仅比较日期**"，则将忽略时间部分。  
   
--   如果选择**比较仅限时间**、 将忽略部分日期。  
+-   如果选择 "**仅比较时间**"，则将忽略日期部分。  
   
--   如果选择**忽略毫秒**，最多秒将比较结果。  
+-   如果选择 "**忽略毫秒**"，则会将结果与秒进行比较。  
   
--   如果选择**忽略日期和毫秒**，结果将是比较仅由时间部分与忽略的一秒的小数部分。  
+-   如果选择 "**忽略日期和毫秒**"，则结果将只按时间部分进行比较，而忽略秒的小数部分。  
   
 ### <a name="ignore-strings-case"></a>忽略字符串大小写  
 控制比较的区分大小写。  
   
--   如果愿意 **，则返回 True**，比较将为不区分大小写。  
+-   如果选择 " **True**"，则比较不区分大小写。  
   
--   如果愿意**False**，比较将考虑字母大小写。  
+-   如果选择 " **False**"，则比较会考虑字母大小写。  
   
 ## <a name="comparing-sql"></a>比较 SQL  
-您可以查看在生成的 SSMA 测试人员的选择语句**比较 SQL**页。 测试人员将比较行的行按这些语句的结果集。 Sybase 结果集的每个下一步行应等于中生成的结果集的下一行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+您可以在 "**比较 SQL** " 页上查看 SSMA 测试器生成的 SELECT 语句。 测试人员将逐行比较这些语句的结果集。 Sybase 结果集的每个后续行应等于中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]生成的结果集的下一行。  
   
-您可以编辑这些 SELECT 语句，以提供自定义验证。 若要保存的更改在 Sybase 中并在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]语句，使用**应用**按钮下的源和目标 SQL，相应地。  
+您可以编辑这些 SELECT 语句以提供自定义验证。 若要保存 Sybase 和 in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]语句中的更改，请相应地使用 source 和 target SQL 下的 "**应用**" 按钮。  
   
 ## <a name="next-step"></a>下一步  
-[自定义调用顺序&#40;SybaseToSQL&#41;](../../ssma/sybase/customizing-calls-order-sybasetosql.md)  
+[自定义调用顺序 &#40;SybaseToSQL&#41;](../../ssma/sybase/customizing-calls-order-sybasetosql.md)  
   
-## <a name="see-also"></a>请参阅  
-[运行测试用例&#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
-[测试迁移的数据库对象&#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+## <a name="see-also"></a>另请参阅  
+[&#40;SybaseToSQL&#41;运行测试用例](../../ssma/sybase/running-test-cases-sybasetosql.md)  
+[测试迁移的数据库对象 &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

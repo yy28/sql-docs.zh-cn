@@ -19,16 +19,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b3d3840a5cf4e9e7c89ba91905937f774bb58f6f
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782823"
 ---
 # <a name="bcp_done"></a>bcp_done
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  结束从程序变量大容量复制到使用[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+  结束从程序变量进行大容量复制[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，以使用[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)执行。  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,7 +45,7 @@ DBINT bcp_done (
 ## <a name="returns"></a>返回  
  在最后一次调用[bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)后永久保存的行数; 如果出现错误，则为-1。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
  调用[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)或[bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)最后一次调用后**bcp_done** 。 复制所有数据后，未能调用**bcp_done**会导致错误。  
   
 ## <a name="see-also"></a>另请参阅  

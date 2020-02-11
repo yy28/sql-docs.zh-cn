@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bc83e1b636aa03e37717ac62de1a44e9c6f1cfd2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055743"
 ---
 # <a name="set-the-properties-of-a-precedence-constraint"></a>设置优先约束的属性
@@ -39,20 +39,21 @@ ms.locfileid: "66055743"
   
 4.  双击优先约束。  
   
-     **“优先约束编辑器”** 将打开。  
+     
+  **“优先约束编辑器”** 将打开。  
   
-5.  在“求值运算”下拉列表中，选择求值运算。   
+5.  在“求值运算”下拉列表中，选择求值运算。****  
   
 6.  在`Value`下拉列表中，选择优先可执行文件的执行结果。  
   
-7.  如果求值运算使用表达式，在`Expression`框中，键入一个表达式，然后单击**测试**计算表达式的值。  
+7.  如果求值运算使用表达式，请在`Expression`框中键入表达式，然后单击 "**测试**" 以计算表达式。  
   
     > [!NOTE]  
     >  变量名称区分大小写。  
   
-8.  如果多个任务或容器连接到受约束的可执行文件中，选择**逻辑和**若要指定所有前面的可执行文件的执行结果必须为`true`。 选择**逻辑或**以指定只有一个执行结果必须为`true`。  
+8.  如果多个任务或容器连接到受约束的可执行文件，请选择 "**逻辑与**" 以指定所有前面的可执行`true`文件的执行结果必须计算为。 选择 "**逻辑或**" 以指定只有一个执行结果的计算`true`结果为。  
   
-9. 单击 **“确定”** ，关闭 **“优先约束编辑器”** 。  
+9. 单击 **“确定”** ，关闭 **“优先约束编辑器”**。  
   
 10. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
@@ -62,25 +63,25 @@ ms.locfileid: "66055743"
   
 2.  在解决方案资源管理器中，双击该包将其打开。  
   
-3.  单击 **“控制流”** 选项卡。在“控制流”选项卡的设计图面上，右键单击优先约束，再单击“属性”。   在“属性”窗口中修改属性值。  
+3.  单击 "**控制流**" 选项卡。在 "**控制流**" 选项卡的设计图面上，右键单击优先约束，然后单击 "**属性**"。 在“属性”窗口中修改属性值。  
   
-4.  在“属性”窗口中，设置优先约束的下列读/写属性：   
+4.  在“属性”窗口中，设置优先约束的下列读/写属性：****  
   
     |读/写属性|配置操作|  
     |--------------------------|--------------------------|  
-    |Description|提供说明。|  
-    |EvalOp|选择一个求值运算。 如果`Expression`， **ExpressionAndConstant**，或**ExpressionOrConstant**选择操作，可以指定一个表达式。|  
+    |说明|提供说明。|  
+    |EvalOp|选择一个求值运算。 如果选择`Expression`了、 **ExpressionAndConstant**或**expressionorconstant 运算**操作，则可以指定一个表达式。|  
     |表达式|如果求值运算包含 and 表达式，则请提供一个表达式。 表达式的计算结果必须为布尔值。 有关表达式语言的详细信息，请参阅 [Integration Services (SSIS) 表达式](expressions/integration-services-ssis-expressions.md)。|  
-    |LogicalAnd|设置`LogicalAnd`可以指定多个可执行文件前加上并链接到受约束的可执行文件时是否在与其他优先约束，计算优先约束|  
-    |“属性”|更新优先约束的名称。|  
+    |LogicalAnd|设置`LogicalAnd`此项可指定在多个可执行文件位于或链接到受约束的可执行文件时，优先约束与其他优先约束一起计算|  
+    |名称|更新优先约束的名称。|  
     |ShowAnnotation|指定要使用的批注类型。 选择 **Never** 可以禁用批注；选择 **AsNeeded** 可以启用按需批注；选择 **ConstraintName** 可以使用 Name 属性的值自动进行批注；选择 **ConstraintDescription** 可以使用 Description 属性的值自动进行批注；选择 **ConstraintOptions** 可以使用 Value 和 Expression 属性的值自动进行批注。|  
-    |ReplTest1|如果在 EvalOP 属性中指定的求值运算包含约束，请选择受约束的可执行文件的执行结果。|  
+    |值|如果在 EvalOP 属性中指定的求值运算包含约束，请选择受约束的可执行文件的执行结果。|  
   
 5.  关闭“属性”窗口。  
   
 6.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [优先约束](control-flow/precedence-constraints.md)   
  [使用默认优先约束来连接任务和容器](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
  [使用快捷菜单设置优先约束的值](../../2014/integration-services/set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)   

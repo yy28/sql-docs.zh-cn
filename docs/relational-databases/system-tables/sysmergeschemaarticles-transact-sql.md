@@ -1,5 +1,5 @@
 ---
-title: sysmergeschemaarticles (TRANSACT-SQL) |Microsoft Docs
+title: sysmergeschemaarticles （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -18,34 +18,34 @@ ms.assetid: b5085979-2f76-48e1-bf3b-765a84003dd9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9446d03db98d7fa5181fb0217814cdd86c55de1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68029810"
 ---
 # <a name="sysmergeschemaarticles-transact-sql"></a>sysmergeschemaarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  跟踪合并复制的仅限架构的项目。 此表存储在发布和订阅数据库中。  
+  跟踪合并复制的仅限架构的项目。 该表存储在发布数据库和订阅数据库中。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|合并复制中仅限架构的项目的名称。|  
-|**type**|**tinyint**|指示仅限架构的项目的类型，可以是以下类型之一：<br /><br /> **0x20** = 存储过程仅限架构的项目。<br /><br /> **0x40** = 视图仅限架构的项目或索引的视图仅限架构的项目。|  
+|**路径名**|**sysname**|合并复制中仅限架构的项目的名称。|  
+|type |**tinyint**|指示仅限架构的项目的类型，可以是以下类型之一：<br /><br /> **0x20** = 存储过程仅限架构的项目。<br /><br /> **0x40** = 查看仅限架构的项目或索引视图仅限架构的项目。|  
 |**objid**|**int**|项目基对象的对象标识符。 可以是过程、视图、索引视图或用户定义函数的对象标识符。|  
-|**artid**|**uniqueidentifier**|文章 id。|  
-|**description**|**nvarchar(255)**|项目的说明。|  
-|**pre_creation_command**|**tinyint**|在订阅数据库中创建项目时采取的默认操作：<br /><br /> **0 =** 无-如果表已存在于订阅服务器中，不执行任何操作。<br /><br /> **1** = 删除-删除该表，然后重新创建它。<br /><br /> **2** = 删除-发出基于子集筛选器中的 WHERE 子句的 delete 命令。<br /><br /> **3** = 截断-与相同**2**，但会删除页而非行。 不过，不要使用 WHERE 子句。|  
+|**artid**|**uniqueidentifier**|文章 ID。|  
+|**2008**|**nvarchar(255)**|项目的说明。|  
+|**pre_creation_command**|**tinyint**|在订阅数据库中创建项目时采取的默认操作：<br /><br /> **0 =** 无-如果表已存在于订阅服务器上，则不执行任何操作。<br /><br /> **1** = 删除表，然后重新创建它。<br /><br /> **2** = 删除-基于子集筛选器中的 WHERE 子句发出删除。<br /><br /> **3** = 截断-与**2**相同，但不删除行。 不过，不要使用 WHERE 子句。|  
 |**pubid**|**uniqueidentifier**|发布的唯一标识符。|  
-|**status**|**tinyint**|指示仅限架构的项目的状态，可以是以下状态之一：<br /><br /> **1** = Unsynced-用于发布的表运行在下次运行快照代理时的初始处理脚本。<br /><br /> **2** = 活动-用于发布表的初始处理脚本已运行。<br /><br /> **5** = new_inactive-内容待定要添加。<br /><br /> **6** = new_active-内容待定要添加。|  
+|**状态值**|**tinyint**|指示仅限架构的项目的状态，可以是以下状态之一：<br /><br /> **1** = 未同步-用于发布表的初始处理脚本在下一次运行快照代理时运行。<br /><br /> **2** = 活动-已运行发布表的初始处理脚本。<br /><br /> **5** = 要添加 New_inactive。<br /><br /> **6** = New_active。|  
 |**creation_script**|**nvarchar(255)**|用于创建目标表的可选项目架构预创建脚本的路径和名称。|  
-|**schema_option**|**binary(8)**|给定的仅限架构的项目的架构生成选项的位图，它可以是以下一个或多个值的按位逻辑或结果：<br /><br /> **0x00** = 禁用快照代理编写脚本，并使用提供的 CreationScript。<br /><br /> **0x01** = 生成对象创建 （CREATE TABLE、 CREATE PROCEDURE 等）。<br /><br /> **0x10** = 生成相应的聚集索引。<br /><br /> **0x20** = convert 用户定义数据类型转换为基本数据类型。<br /><br /> **0x40** = 生成相应的非聚集索引。<br /><br /> **0x80** = 包括声明引用完整性在主键上。<br /><br /> **0x100** = 如果已定义的表项目，复制用户触发器。<br /><br /> **0x200** = 复制外键约束。 如果被所引用的表不是发布的一部分，则不会复制已发布表的任何外键约束。<br /><br /> **0x400** = 复制检查约束。<br /><br /> **0x800** = 复制默认值。<br /><br /> **0x1000** = 复制列级排序规则。<br /><br /> **0x2000** = 复制与已发布的项目源对象关联的扩展属性。<br /><br /> **0x4000** = 复制唯一键，如果对表项目定义。<br /><br /> **0x8000** = 的复制 primary key 和上一个表的唯一键作为约束使用 ALTER TABLE 语句的文章。<br /><br /> 有关详细信息的可能值为**schema_option**，请参阅[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。|  
+|**schema_option**|**binary （8）**|给定的仅限架构的项目的架构生成选项的位图，它可以是以下一个或多个值的按位逻辑或结果：<br /><br /> **0x00** = 快照代理禁用脚本，并使用提供的 CreationScript。<br /><br /> **0x01** = 生成对象创建（CREATE TABLE、创建过程等）。<br /><br /> **0x10** = 生成相应的聚集索引。<br /><br /> **0x20** = 将用户定义数据类型转换为基本数据类型。<br /><br /> **0x40** = 生成相应的非聚集索引。<br /><br /> **0x80** = 在主键上包含已声明的引用完整性。<br /><br /> **0x100** = 如果已定义，则复制表项目的用户触发器。<br /><br /> **0x200** = 复制 foreign key 约束。 如果被所引用的表不是发布的一部分，则不会复制已发布表的任何外键约束。<br /><br /> **0x400** = 复制 check 约束。<br /><br /> **0x800** = 复制默认值。<br /><br /> **0x1000** = 复制列级排序规则。<br /><br /> **0x2000** = 复制与已发布项目源对象关联的扩展属性。<br /><br /> **0x4000** = 复制表项目中定义的唯一键。<br /><br /> **0x8000** = 使用 ALTER table 语句将表项目上的主键和唯一键作为约束复制。<br /><br /> 有关**schema_option**的可能值的详细信息，请参阅[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。|  
 |**destination_object**|**sysname**|订阅数据库中的目标对象名称。 该值仅应用于仅限架构的项目，例如，存储过程、视图和 UDF。|  
-|**destination_owner**|**sysname**|如果不是订阅数据库中对象的所有者**dbo**。|  
+|**destination_owner**|**sysname**|订阅数据库中对象的所有者（如果不是**dbo**）。|  
   
-## <a name="see-also"></a>请参阅  
- [复制表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

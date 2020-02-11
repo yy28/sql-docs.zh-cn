@@ -1,5 +1,5 @@
 ---
-title: 允许部分受信任调用方 |Microsoft Docs
+title: 允许部分受信任的调用方 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bed854ba13bec4206f3ee869795af91c4da4f525
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754195"
 ---
 # <a name="allowing-partially-trusted-callers"></a>允许部分可信任的调用方
@@ -39,13 +39,13 @@ IPermission permThatFailed) at
 Microsoft.Samples.SqlServer.TestResultSet.Test()  
 ```  
   
- 建议所有在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中注册的程序集（添加到全局程序集缓存中的那些程序集除外）使用 `AllowPartiallyTrustedCallers` 属性进行标记，以便由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 加载的程序集可以相互访问。 应当首先彻底检查要加载到全局程序集缓存中的程序集的安全性，然后再添加 `AllowPartiallyTrustedCallers` 属性，因为之后该程序集将可用于来自意外上下文的部分可信任的调用方。 程序集不应注册为完全可信任（在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中使用 `UNSAFE` 权限集注册）。  
+ 建议所有在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中注册的程序集（添加到全局程序集缓存中的那些程序集除外）使用 `AllowPartiallyTrustedCallers` 属性进行标记，以便由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 加载的程序集可以相互访问。 应当首先彻底检查要加载到全局程序集缓存中的程序集的安全性，然后再添加 `AllowPartiallyTrustedCallers` 属性，因为之后该程序集将可用于来自意外上下文的部分可信任的调用方。 程序集不应注册为完全可信任（在 `UNSAFE` 中使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 权限集注册）。  
   
  有关详细信息，请参阅 .NET Framework 软件开发包中的“通过部分可信任的代码使用库”部分。  
   
 ## <a name="example"></a>示例  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>说明  
  假设有一个实用工具类对许多服务器端 CLR 集成应用程序都非常有用。 例如，它可能是一个表示查询调用结果的类。 若要启用对此组件的共享，请将此实用工具类置于单独的程序集中。 然后，即可从包含 CLR 集成对象的各种其他程序集引用该程序集。 因为此实用工具类可用于多个不同的服务器应用程序，所以应仔细检查并解决任何安全问题。 然后，将 `AllowPartiallyTrustedCallers` 属性应用于包含此实用工具类的程序集，以便通过 `SAFE` 或 `EXTERNAL_ACCESS` 权限集标记的程序集中包含的 CLR 集成对象可以使用此实用工具类和方法，即使此实用工具类和方法位于单独的程序集中。  
   
  有时，在通读查询结果时能够执行命令（而不需要打开新的连接并将所有结果读入内存）很有用。 ADO.NET 2.0 中的多个活动的结果集 (MARS) 功能就是一种能够帮助您实现以上操作的技术。 目前，用于服务器端编程的进程内的提供程序不能实现 MARS。 若要消除此限制，可以使用服务器端游标。 此示例说明如何使用服务器端游标解决对服务器端编程缺少 MARS 支持的问题。  
@@ -60,7 +60,7 @@ Microsoft.Samples.SqlServer.TestResultSet.Test()
   
  此示例还说明如何使用“允许部分受信任的调用方”属性来指示结果集程序集是可以安全地从其他程序集进行调用的库。 与使用不安全的权限注册调用程序集相比，此方法稍微复杂一些，但要安全许多。 该方法更安全的原因是：它将调用程序集注册为安全的程序集，调用程序集将限制相关资源脱离服务器并防止对服务器的完整性造成损害。  
   
- 此示例的生成说明假定源代码文件位于名为 c:\samples 的目录中。  如果您使用另一个目录，则必须修改 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。 [!INCLUDE[tsql](../../includes/tsql-md.md)]脚本还需要 AdventureWorks 数据库。 您可以下载的 AdventureWorks 示例数据库[Microsoft SQL Server 示例和社区项目](https://go.microsoft.com/fwlink/?LinkID=85384)主页。  
+ 此示例的生成说明假定源代码文件位于名为 c:\samples 的目录中。  如果您使用另一个目录，则必须修改 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。 [!INCLUDE[tsql](../../includes/tsql-md.md)]脚本还需要 AdventureWorks 数据库。 可以从 " [Microsoft SQL Server 示例和社区项目](https://go.microsoft.com/fwlink/?LinkID=85384)" 主页下载 AdventureWorks 示例数据库。  
   
  若要生成和运行该示例，将第一个代码列表粘贴到名为 ResultSet.cs 的文件中，并使用 csc /target:library ResultSet.cs 进行编译。  
   
@@ -1098,7 +1098,7 @@ DROP ASSEMBLY ResultSet;
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [CLR 集成安全性](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   
   

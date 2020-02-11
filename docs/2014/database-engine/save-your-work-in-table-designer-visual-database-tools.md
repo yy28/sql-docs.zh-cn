@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1b6b705f887e0df06684d33fc7be26aa73ff4048
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773685"
 ---
 # <a name="save-your-work-in-table-designer-visual-database-tools"></a>在表设计器中保存您的工作 (Visual Database Tools)
@@ -28,20 +28,20 @@ ms.locfileid: "62773685"
   
 1.  单击表设计器中的任意位置。  
   
-2.  从“文件”  菜单中，选择“保存 tablename”   。  
+2.  从“文件”**** 菜单中，选择“保存 tablename”****__。  
   
-3.  在“保存”  对话框中，单击“是”  以更新数据库。  
+3.  在“保存”**** 对话框中，单击“是”**** 以更新数据库。  
   
 > [!NOTE]  
 >  如果所保存的更改不影响其他表，则不会显示此对话框。  
   
 > [!NOTE]  
->  “保存”  对话框中的表列表可能包含未修改的表。 例如，如果更改了某列的数据类型，而该列参与了与另一个表的关系，那么这两个表都将包括在此列表中。  
+>  “保存”**** 对话框中的表列表可能包含未修改的表。 例如，如果更改了某列的数据类型，而该列参与了与另一个表的关系，那么这两个表都将包括在此列表中。  
   
 > [!NOTE]  
->  若要保存对所有打开的项（如表、视图、存储过程）的更改，请在“文件”  菜单中，选择“全部保存”  。  
+>  若要保存对所有打开的项（如表、视图、存储过程）的更改，请在“文件”**** 菜单中，选择“全部保存”****。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [表属性 (Visual Database Tools)](../ssms/visual-db-tools/visual-database-tools.md)  
   
   

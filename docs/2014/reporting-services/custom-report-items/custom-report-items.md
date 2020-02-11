@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 39860a2b147a2db392219552ebfd18cbbf7b7992
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63264777"
 ---
 # <a name="custom-report-items"></a>自定义报表项
@@ -44,13 +44,13 @@ ms.locfileid: "63264777"
  [创建自定义报表项设计时组件](creating-a-custom-report-item-design-time-component.md)  
  描述如何创建自定义报表项设计时组件。  
   
- [如何：部署自定义报表项](how-to-deploy-a-custom-report-item.md)  
+ [如何部署自定义报表项](how-to-deploy-a-custom-report-item.md)  
  描述如何部署自定义报表项。  
   
  [自定义报表项类库](custom-report-item-class-libraries.md)  
  描述 `Microsoft.ReportDesigner` 命名空间中的自定义报表项基础结构类和托管包装类。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [技术参考 (SSRS)](../technical-reference-ssrs.md)  
   
   

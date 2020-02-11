@@ -1,5 +1,5 @@
 ---
-title: 在 SharePoint 站点上的报表查看器 Web 部件 |Microsoft Docs
+title: SharePoint 站点上的报表查看器 Web 部件 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ba8b23c800718d289b2a7a633d5244261b5ab8a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103048"
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site"></a>在 SharePoint 站点上的报表查看器 Web 部件
-  报表查看器 Web 部件是由用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 外接程序安装的自定义 Web 部件。 您可以使用该 Web 部件查看、导航、打印和导出配置为在 SharePoint 集成模式下运行的报表服务器上的报表。 报表查看器 Web 部件与由 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器处理的报表定义 (.rdl) 文件关联。 不能将该部件与在其他软件产品中创建的其他报表文档一起使用。  
+  报表查看器 Web 部件是由用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 外接程序安装的自定义 Web 部件。 您可以使用该 Web 部件查看、导航、打印和导出配置为在 SharePoint 集成模式下运行的报表服务器上的报表。 报表查看器 Web 部件与[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Report Server 处理的报表定义（.rdl）文件相关联。 不能将该部件与在其他软件产品中创建的其他报表文档一起使用。  
   
  若要安装该 Web 部件，必须运行 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 外接程序的安装程序。 您不应单独安装或卸载该 Web 部件。 它是外接程序的一部分，只能通过外接程序安装包进行安装。 报表查看器 Web 部件文件名为 ReportViewer.dwp。 该文件位于 Program Files\Common Files\Microsoft Shared\web server extensions\12\template\features\reportserver 文件夹，并且不应移到其他文件夹中。  
   
@@ -40,19 +40,19 @@ ms.locfileid: "66103048"
 ## <a name="web-part-components"></a>Web 部件组件  
  视图区域以 HTML 格式显示报表。 根据 Web 部件的配置方式，视图区域可能会最大化以整页模式显示报表，或者可能与相邻窗格和工具栏共享可用空间。  
   
- 工具栏提供页面导航、搜索、缩放和导出功能，以便您能以其他应用程序格式查看报表。 它还提供可选的打印功能，可为 HTML 报表提供分页打印输出并能更改页面布局和边距设置。 工具栏上的 **“操作”** , **“使用报表生成器打开”** 、“订阅”、 **“导出”** 和 **“打印”** 。 页面导航和缩放控件直接位于工具栏上。  
+ 工具栏提供页面导航、搜索、缩放和导出功能，以便您能以其他应用程序格式查看报表。 它还提供可选的打印功能，可为 HTML 报表提供分页打印输出并能更改页面布局和边距设置。 在工具栏上的 "**操作**" 菜单中提供了 "**打开方式" 报表生成器、"订阅**"、"**导出**" 和 "**打印**"。 页面导航和缩放控件直接位于工具栏上。  
   
 > [!NOTE]  
 >  您不能自定义工具栏，除非编写代码来执行此操作，但可以设置属性以全部或部分隐藏工具栏的控件。  
   
 ### <a name="export-action-on-the-report-toolbar"></a>报表工具栏上的导出操作  
- **“操作”** 菜单上的 **“导出”** 显示与报表服务器上所部署的呈现扩展插件相关联的应用程序格式。 若要确定特定格式的可用性，可以在报表服务器上添加或删除呈现扩展插件，也可以修改配置设置以删除列表中的特定导出格式。 还可以在报表服务器上指定配置设置以控制哪些格式可用。 通过添加和修改某一特定呈现扩展插件的配置设置，可以修改相应格式的默认行为。  
+ "**操作**" 菜单上的 "**导出**" 显示与 Report Server 上部署的呈现扩展插件相关联的应用程序格式。 若要确定特定格式的可用性，可以在报表服务器上添加或删除呈现扩展插件，也可以修改配置设置以删除列表中的特定导出格式。 还可以在报表服务器上指定配置设置以控制哪些格式可用。 通过添加和修改某一特定呈现扩展插件的配置设置，可以修改相应格式的默认行为。  
   
 ### <a name="print-action-on-the-report-toolbar"></a>报表工具栏上的打印操作  
- **“操作”** 菜单上的 **“打印”** 是通过 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]提供的自定义打印功能。 当您单击**打印**，ActiveX 客户端打印控件将下载到客户端计算机。 大多数情况下，单击 **“打印”** 的用户必须拥有本地计算机的管理员权限。 常见的做法是仅允许拥有管理员权限的用户下载 ActiveX 控件。 可以使用 SharePoint 管理中心内启用或禁用客户端打印控件下载。  
+ "**操作**" 菜单上的 " [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]**打印**" 是通过提供的自定义打印功能。 单击 "**打印**" 时，将向客户端计算机下载 ActiveX 客户端打印控件。 大多数情况下，单击 **“打印”** 的用户必须拥有本地计算机的管理员权限。 常见的做法是仅允许拥有管理员权限的用户下载 ActiveX 控件。 您可以使用 SharePoint 管理中心启用或禁用客户端打印控件的下载。  
   
 ### <a name="find-action-on-the-report-toolbar"></a>报表工具栏上的查找操作  
- **“操作”** 菜单上的 **“查找”** 提供移动到报表中的目标位置的方法。 可以通过键入要查找的词或短语搜索报表内容。 搜索项的最大值为 256 个字符。 搜索在报表中查找匹配值时，焦点将移动到包含该值的报表部分。  
+ "**操作**" 菜单上的 "**查找**" 提供移动到报表中的目标位置的方法。 可以通过键入要查找的词或短语搜索报表内容。 搜索项的最大值为 256 个字符。 搜索在报表中查找匹配值时，焦点将移动到包含该值的报表部分。  
   
  输入要搜索的值时，键入您预计显示在报表中的值。 请不要提出“这个月的平均利润是多少”之类的问题，除非您预计该句中的每个词都显示在报表中。  
   
@@ -61,15 +61,15 @@ ms.locfileid: "66103048"
  限制访问报表数据的数据库和模型安全设置将应用于搜索操作。 如果您要在将模型作为数据源的点击链接型报表中搜索值，并且您没有对模型部分的访问权限，则由模型部分表示的数据将从搜索中排除。  
   
 ### <a name="panes-for-specifying-credentials-and-parameters"></a>用于指定凭据和参数的窗格  
- **“凭据”** 和 **“参数”** 窗格显示在视图区域旁边。 将报表的数据源连接配置为提示用户输入有权访问数据源的帐户和密码时将显示 **“凭据”** 。 报表接受报表中所定义参数的用户输入时将显示 **“参数”** 。  
+ **凭据**和**参数**是显示在视图区域旁边的窗格。 当报表的数据源连接配置为提示用户输入有权访问数据源的帐户和密码时，将显示**凭据**。 当报表接受报表中所定义参数的用户输入时，将显示**参数**。  
   
 ### <a name="setting-properties-on-the-report-viewer-web-part"></a>设置报表查看器 Web 部件的属性  
  Web 部件的属性包括特定于报表查看器的自定义属性以及可以为任何 Web 部件设置的常规属性。 有关详细信息，请参阅 [自定义报表查看器 Web 部件](../../2014/reporting-services/customize-the-report-viewer-web-part.md)。  
   
  默认情况下，报表以整页模式打开。 整页模式将显示可提供页面导航、搜索以及其他功能的工具栏。 您可以自定义 Web 部件来更改外观或默认行为。  
   
-## <a name="see-also"></a>请参阅  
- [安装或卸载 Reporting Services 外接程序的 SharePoint &#40;SharePoint 2010 和 SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
+## <a name="see-also"></a>另请参阅  
+ [安装或卸载用于 SharePoint 的 Reporting Services 外接程序 &#40;SharePoint 2010 和 SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
  [将报表查看器 Web 部件添加到网页（SharePoint 集成模式下的 Reporting Services）](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
   

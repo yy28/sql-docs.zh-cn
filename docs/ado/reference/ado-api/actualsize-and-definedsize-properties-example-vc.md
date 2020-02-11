@@ -1,5 +1,5 @@
 ---
-title: ActualSize 和 DefinedSize 属性示例 （VC + +） |Microsoft Docs
+title: ActualSize 和 DefinedSize 属性示例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 05f7cc97-b806-41d2-939d-a955d10844c4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 340f471215e9f8ec8bf4f0feaabec5cce559a9a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921475"
 ---
-# <a name="actualsize-and-definedsize-properties-example-vc"></a>ActualSize 和 DefinedSize 属性示例 （VC + +）
-此示例使用[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)并[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)要显示的定义的大小和实际大小字段的属性。  
+# <a name="actualsize-and-definedsize-properties-example-vc"></a>ActualSize 和 DefinedSize 属性示例（VC + +）
+此示例使用[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)和[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)属性来显示字段的定义大小和实际大小。  
   
 ## <a name="example"></a>示例  
   
@@ -128,24 +128,24 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
- **存储区名称：Eric 读取丛书**  
+ **商店名称： Eric 阅读书籍**  
 **定义的大小：40**  
 **实际大小：19**  
-**存储区名称：Barnum 的**  
+**存储名称： Barnum**  
 **定义的大小：40**  
 **实际大小：8**  
-**存储区名称：新闻和啤酒**  
+**商店名称： News & Brews**  
 **定义的大小：40**  
 **实际大小：12**  
-**存储区名称：文档-U-操作：质量洗衣房和书籍**  
+**商店名称：文档-U 形：质量总和书籍**  
 **定义的大小：40**  
 **实际大小：36**  
-**存储区名称：音符书店**  
+**存储名称： Fricative Bookshop**  
 **定义的大小：40**  
 **实际大小：18**  
-**存储区名称：Bookbeat**  
+**存储名称： Bookbeat**  
 **定义的大小：40**  
 **实际大小：8**   
-## <a name="see-also"></a>请参阅  
- [ActualSize 属性 (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)   
+## <a name="see-also"></a>另请参阅  
+ [ActualSize 属性（ADO）](../../../ado/reference/ado-api/actualsize-property-ado.md)   
  [DefinedSize 属性](../../../ado/reference/ado-api/definedsize-property.md)

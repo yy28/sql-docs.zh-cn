@@ -11,16 +11,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f3f3967b31331471d1ad0a886cc9eda853a25931
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771073"
 ---
 # <a name="the-oracle-cdc-service"></a>Oracle CDC 服务
   Oracle CDC 服务是运行 xdbcdcsvc.exe 程序的一种 Windows 服务。 Oracle CDC 服务可配置为在同一台计算机上运行多个 Windows 服务，每个服务都使用不同的 Windows 服务名称。 在单个计算机上创建多个 Oracle CDC Windows 服务通常是为了在它们之间或在每个服务需要使用不同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时实现更好的隔离。  
   
- Oracle CDC 服务是使用 Oracle CDC 服务配置控制台创建的，或者是通过内置于 xdbcdcsvc.exe 程序中的命令行接口定义的。 在这两种情况下，创建每个 Oracle CDC 服务都与一个相关联[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例 (这可能会被群集或与镜像**AlwaysOn**安装程序) 和连接信息 （连接字符串和访问凭据） 是服务配置的一部分。  
+ Oracle CDC 服务是使用 Oracle CDC 服务配置控制台创建的，或者是通过内置于 xdbcdcsvc.exe 程序中的命令行接口定义的。 在这两种情况下，创建的每个 Oracle CDC 服务[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]都与单个实例相关联（可能使用**AlwaysOn**安装程序进行群集或镜像），并且连接信息（连接字符串和访问凭据）是服务配置的一部分。  
   
  在某一 Oracle CDC 服务启动时，它将尝试连接到其关联的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，获取它需要处理的 Oracle CDC 实例的列表，并且执行初始环境验证。 服务启动期间出现的错误以及任何开始/停止信息始终写入 Windows 应用程序事件日志。 在建立与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的连接时，所有错误和信息消息都写入 **实例的 MSXDBCDC 数据库的** dbo.xdbcdc_trace [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中。 在启动期间执行的检查之一是验证没有具有相同名称的其他 Oracle CDC 服务当前正在工作。 如果具有相同名称的某一服务当前与其他计算机连接，则 Oracle CDC 服务将进入一个等待循环，并且等待其他服务断开连接，之后继续处理 Oracle CDC 工作。  
   
@@ -43,7 +43,7 @@ GO
   
  Oracle CDC 实例配置保存在 **cdc.xdbcdc_config** 表中，该表是 Oracle CDC 设计器控制台使用的表。 因为在目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例和 CDC 数据库中找到了某一 Oracle CDC 实例的整个配置，所以，可以为该 Oracle CDC 实例创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 部署脚本。 这是使用 Oracle CDC 服务配置和 Oracle CDC 设计器控制台实现的。  
   
-## <a name="security-considerations"></a>需要考虑的安全性因素  
+## <a name="security-considerations"></a>安全注意事项  
  下面介绍使用 Oracle CDC 服务时需遵守的安全要求。  
   
 ### <a name="protection-of-source-oracle-data"></a>源 Oracle 数据的保护  
@@ -88,11 +88,11 @@ CREATE ASYMMETRIC KEY xdbcdc_asym_key
   
 -   [针对 CDC 服务的 SQL Server 连接所需权限](sql-server-connection-required-permissions-for-the-cdc-service.md)  
   
--   [适用于 Oracle 的 Attunity 更改数据捕获服务的用户角色](user-roles.md)  
+-   [使用 Change Data Capture Service for Oracle by Attunity 的角色](user-roles.md)  
   
 -   [使用 Oracle CDC 服务](the-oracle-cdc-service.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [如何管理本地 CDC 服务](how-to-manage-a-local-cdc-service.md)   
  [管理 Oracle CDC 服务](manage-an-oracle-cdc-service.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 类型的游标 (ADO) |Microsoft Docs
+title: 游标类型（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,28 +13,28 @@ ms.assetid: 7cc01544-e814-403b-bbfe-a2750bf921bd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 00c89272d121898b6ac5af75022344acf1dceb28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923858"
 ---
 # <a name="types-of-cursors-ado"></a>游标类型 (ADO)
-作为一般规则，你的应用程序应使用的最简单的游标的提供所需的数据访问。 每个只进、 只读、 静态、 滚动 （无缓冲） 的基础知识以外的其他游标特征具有价格-在客户端内存、 网络负载或性能。 在许多情况下，默认游标选项生成更复杂的游标不是应用程序实际需要。  
+通常，应用程序应使用提供所需数据访问的最简单的游标。 除基础知识（只进、只读、静态、滚动、无缓冲）之外的每个附加游标特征都具有客户端内存、网络负载或性能方面的价格。 在许多情况下，默认游标选项生成的游标比应用程序实际需要的更复杂。  
   
- 所选的游标类型取决于你的应用程序如何使用结果集和也几个设计注意事项，包括大小的结果集，可能会使用的数据的百分比、 数据更改和应用程序性能的敏感度系统要求。  
+ 游标类型的选择取决于应用程序使用结果集的方式，还取决于多个设计注意事项，包括结果集的大小、可能使用的数据百分比、数据更改的敏感度和应用程序性能要求.  
   
- 最起码，光标选择取决于您是否需要更改或只需查看的数据：  
+ 光标的最基本选择取决于你是需要更改数据还是仅查看数据：  
   
--   如果只需要滚动浏览一系列的结果，但不是更改数据，使用[只进](../../../ado/guide/data/forward-only-cursors.md)或[静态](../../../ado/guide/data/static-cursors.md)游标。  
+-   如果只需滚动一组结果而不是更改数据，请使用[只进](../../../ado/guide/data/forward-only-cursors.md)或[静态](../../../ado/guide/data/static-cursors.md)游标。  
   
--   如果你有较大的结果集并且需要选择只需几行，使用[由键集](../../../ado/guide/data/keyset-cursors.md)游标。  
+-   如果有一个较大的结果集，只需选择几行，请使用[键集](../../../ado/guide/data/keyset-cursors.md)游标。  
   
--   如果你想要同步的结果集与最新添加、 更改，并删除所有的并发用户，请使用[动态](../../../ado/guide/data/dynamic-cursors.md)游标。  
+-   如果要将结果集与所有并发用户的最近添加、更改和删除同步，请使用[动态](../../../ado/guide/data/dynamic-cursors.md)游标。  
   
- 尽管每种游标类型看起来不同，但请注意，这些游标类型不是这么多不同类型作为只是重叠的特征和选项的结果。  
+ 尽管每个游标类型看起来都是不同的，但请记住，这些游标类型的不同之处不只是重叠特性和选项的结果。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [只进游标](../../../ado/guide/data/forward-only-cursors.md)  
   
@@ -44,8 +44,8 @@ ms.locfileid: "67923858"
   
 -   [动态游标](../../../ado/guide/data/dynamic-cursors.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [只进游标](../../../ado/guide/data/forward-only-cursors.md)   
  [静态游标](../../../ado/guide/data/static-cursors.md)   
- [由键集游标](../../../ado/guide/data/keyset-cursors.md)   
+ [键集游标](../../../ado/guide/data/keyset-cursors.md)   
  [动态游标](../../../ado/guide/data/dynamic-cursors.md)

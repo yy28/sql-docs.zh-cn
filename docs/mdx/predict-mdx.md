@@ -1,5 +1,5 @@
 ---
-title: 预测 (MDX) |Microsoft Docs
+title: 预测（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 165d03b886ad8e9beeb09bf5a835c879cc23a2a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68055584"
 ---
 # <a name="predict-mdx"></a>Predict (MDX)
@@ -41,7 +41,7 @@ Predict(Mining_Model_Name,String_Expression)
  计算结果为指定挖掘模型的有效 DMX 表达式的有效字符串表达式。  
   
 ## <a name="remarks"></a>备注  
- **Predict**函数计算指定的挖掘模型的上下文中指定的字符串表达式的值。  
+ **Predict**函数计算指定挖掘模型上下文中指定字符串表达式的值。  
   
  在数据挖掘表达式 (DMX) 参考中提供了数据挖掘语法和函数。  
   
@@ -58,7 +58,7 @@ FROM [Adventure Works]
 WHERE([Customer].[Customer Geography].[Customer].&[12012])  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

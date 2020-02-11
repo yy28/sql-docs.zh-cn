@@ -1,5 +1,5 @@
 ---
-title: 调用带有命令的存储的过程 |Microsoft Docs
+title: 使用命令调用存储过程 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 685f7652-2271-4ede-b552-2eeb8c756b4c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 32f1013ef0aa9c8f02e19ec98234418480bc5f22
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925866"
 ---
 # <a name="calling-a-stored-procedure-with-a-command"></a>使用命令调用存储过程
-命令可用于调用存储的过程。 在本主题末尾的代码示例引用名为 CustOrdersOrders，按如下所示定义 Northwind 示例数据库中的存储过程。  
+您可以使用命令来调用存储过程。 本主题末尾的代码示例引用 Northwind 示例数据库中名为 CustOrdersOrders 的存储过程，该存储过程按如下方式定义。  
   
 ```  
 CREATE PROCEDURE CustOrdersOrders @CustomerID nchar(5) AS  
@@ -32,15 +32,15 @@ WHERE CustomerID = @CustomerID
 ORDER BY OrderID  
 ```  
   
- 请参阅 SQL Server 文档中的详细了解如何定义和调用存储过程。  
+ 有关如何定义和调用存储过程的详细信息，请参阅您的 SQL Server 文档。  
   
- 此存储的过程是类似于在所使用的命令[命令对象参数](../../../ado/guide/data/command-object-parameters.md)。 它获取客户 ID 参数并返回有关该客户的订单信息。 下面的代码示例使用此存储的过程作为源 ADO**记录集**。  
+ 此存储过程类似于[命令对象参数](../../../ado/guide/data/command-object-parameters.md)中使用的命令。 它采用客户 ID 参数并返回有关该客户的订单的信息。 下面的代码示例使用此存储过程作为 ADO**记录集**的源。  
   
- 使用存储的过程可访问的 ADO 另一个功能：**参数**集合**刷新**方法。 通过使用此方法，ADO 可以自动填充该命令在运行时所需的参数有关的所有信息。 存在使用此技术，是对性能产生负面影响，因为 ADO 必须查询的参数信息的数据源。  
+ 使用存储过程可以访问 ADO 的另一功能： **Parameters**收集**Refresh**方法。 通过使用此方法，ADO 可以自动填写有关运行时命令所需的参数的所有信息。 使用此方法会对性能产生负面影响，因为 ADO 必须查询数据源以获取有关参数的信息。  
   
- 下面的代码示例和中的代码之间存在其他重要的区别[命令对象参数](../../../ado/guide/data/command-object-parameters.md)，后者手动输入参数。 首先，此代码不会设置**已准备**属性设置为**True**因为它是 SQL Server 存储过程，通过定义预编译。 第二个， **CommandType**的属性**命令**对象更改为**adCmdStoredProc**在第二个示例中，以通知 ADO 命令已存储的过程。  
+ 下面的代码示例与[命令对象参数](../../../ado/guide/data/command-object-parameters.md)中的代码之间存在其他重要差异，其中的参数是手动输入的。 首先，此代码不会将**准备好**的属性设置为**True** ，因为它是 SQL Server 的存储过程，并按定义进行预编译。 其次，在第二个示例中，**命令**对象的**CommandType**属性更改为**adCmdStoredProc** ，以通知 ADO 该命令为存储过程。  
   
- 最后，在第二个示例中该参数必须引用按索引时设置值，因为可能不知道在设计时的参数的名称。 如果您知道参数的名称，则可以设置新[NamedParameters](../../../ado/reference/ado-api/namedparameters-property-ado.md)的属性**命令**对象为 True，并引用该属性的名称。 您可能想知道为什么的第一个参数的位置所述的存储过程 (@CustomerID) 为 1 而不是 0 (`objCmd(1) = "ALFKI"`)。 这是因为参数 0 包含的 SQL Server 存储过程的返回值。  
+ 最后，在第二个示例中设置值时，必须通过索引引用参数，因为在设计时可能不知道参数的名称。 如果知道参数的名称，则可以将**Command**对象的 new [NamedParameters](../../../ado/reference/ado-api/namedparameters-property-ado.md)属性设置为 True，并引用该属性的名称。 您可能想知道存储过程（@CustomerID）中提到的第一个参数的位置是1而不是0（`objCmd(1) = "ALFKI"`）。 这是因为参数0包含 SQL Server 存储过程的返回值。  
   
 ```  
 'BeginAutoParamCmd  
@@ -132,5 +132,5 @@ End Function
 'EndNewConnection  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [知识库文章 117500](https://go.microsoft.com/fwlink/?LinkId=117500)
+## <a name="see-also"></a>另请参阅  
+ [知识库文章117500](https://go.microsoft.com/fwlink/?LinkId=117500)

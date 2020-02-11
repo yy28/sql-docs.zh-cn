@@ -1,5 +1,5 @@
 ---
-title: 获取对话框 （源代码管理） |Microsoft Docs
+title: "\"获取\" 对话框（源代码管理） |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,32 +15,32 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 051e3b93761511db07a2f381be5c94ea3247e76a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779004"
 ---
 # <a name="get-dialog-box-source-control"></a>“获取”对话框（源代码管理）
   将所选项的只读副本从源代码管理数据库提取到您的工作文件夹或者指定的其他文件夹。  
   
 ## <a name="dialog-box-access"></a>对话框访问  
- 在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，请在解决方案资源管理器中选择一项。 上**文件**菜单上，单击**源代码管理**然后单击**获取**。  
+ 在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，请在解决方案资源管理器中选择一项。 在 "**文件**" 菜单上，单击 "**源代码管理"，** 然后单击 "**获取**"。  
   
 > [!NOTE]  
 >  也可以右键单击解决方案资源管理器中的项来访问此对话框。  
   
 ## <a name="options"></a>选项  
- **操作**  
+ **Action**  
  指定对要提取的项执行的操作。  
   
  **“列”**  
- 标识列显示以及所显示的顺序。  
+ 标识要显示的列以及显示它们的顺序。  
   
  **平面视图**  
  将提取的文件在其源代码管理连接下显示为平面列表。  
   
- **修改的时间**  
+ **修改时间**  
  显示项的上次修改时间。  
   
  **名称**  
@@ -49,13 +49,13 @@ ms.locfileid: "62779004"
  **选项**  
  在单击该按钮右侧的箭头时显示 Source Safe 插件特定的获取选项。  
   
- **Sort**  
+ **排序**  
  对显示的列进行排序。  
   
  **树视图**  
  显示所提取项的文件夹和文件层次结构。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [检索文件](../../2014/database-engine/retrieve-files.md)   
  [解决方案资源管理器源代码管理](../../2014/database-engine/solution-explorer-source-control.md)  
   

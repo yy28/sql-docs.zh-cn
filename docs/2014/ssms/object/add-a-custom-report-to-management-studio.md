@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a860db611154f9f7a130ee6be90dd43a96b50af5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62510379"
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>向 Management Studio 添加自定义报表
@@ -27,7 +27,7 @@ ms.locfileid: "62510379"
   
 1.  单击“开始”  ，依次指向“程序”  和 “Microsoft SQL Server”  ，然后单击“SQL Server Data Tools”  。  
   
-2.  在 “文件”  菜单上，指向 “新建”  ，然后单击 “项目”  。  
+2.  在 **“文件”** 菜单上，指向 **“新建”** ，再单击 **“项目”** 。  
   
 3.  在 **“项目类型”** 列表中，单击 **“商业智能项目”** 。  
   
@@ -67,10 +67,10 @@ ms.locfileid: "62510379"
   
     2.  调整“显示最近使用列表中的文件”  的数量。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Management Studio 中的自定义报表](custom-reports-in-management-studio.md)   
- [与对象资源管理器节点属性一起使用的自定义报表](use-custom-reports-with-object-explorer-node-properties.md)   
- [启用运行自定义报表警告](unsuppress-run-custom-report-warnings.md)   
+ [将自定义报表与对象资源管理器节点属性一起使用](use-custom-reports-with-object-explorer-node-properties.md)   
+ [取消运行自定义报表警告](unsuppress-run-custom-report-warnings.md)   
  [Reporting Services (SSRS)](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

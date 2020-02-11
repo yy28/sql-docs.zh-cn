@@ -13,13 +13,14 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: ccb2689b24914a0a953c1b9f7325cd5aa9c75d0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014123"
 ---
 # <a name="multipolygon"></a>MultiPolygon
+  
   `MultiPolygon` 实例是零个或更多个 `Polygon` 实例的集合。  
   
 ## <a name="polygon-instances"></a>Polygon 实例  
@@ -29,7 +30,7 @@ ms.locfileid: "66014123"
   
  如图中所示：  
   
--   图 1 是一个包含两个 `Polygon` 元素的 `MultiPolygon` 实例。 边界由两个外环和三个内环界定。  
+-   图 1 是一个包含两个 `MultiPolygon` 元素的 `Polygon` 实例。 边界由两个外环和三个内环界定。  
   
 -   图 2 是一个包含两个 `MultiPolygon` 元素的 `Polygon` 实例。 边界由两个外环和三个内环界定。 这两个 `Polygon` 元素在切点处相交。  
   
@@ -38,9 +39,9 @@ ms.locfileid: "66014123"
   
 -   它是空的 `MultiPolygon` 实例。  
   
--   组成 `MultiPolygon` 实例的所有实例是接受的 `Polygon` 实例。 有关详细信息接受`Polygon`实例，请参阅[多边形](../spatial/polygon.md)。  
+-   组成 `MultiPolygon` 实例的所有实例是接受的 `Polygon` 实例。 有关接受`Polygon`的实例的详细信息，请参阅[多边形](../spatial/polygon.md)。  
   
- 以下示例显示接受`MultiPolygon`实例。  
+ 下面的示例显示接受`MultiPolygon`的实例。  
   
 ```  
 DECLARE @g1 geometry = 'MULTIPOLYGON EMPTY';  
@@ -59,7 +60,7 @@ DECLARE @g geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 
 ### <a name="valid-instances"></a>有效实例  
  如果 `MultiPolygon` 实例是空的 `MultiPolygon` 实例或者它满足以下条件，则前者有效。  
   
-1.  组成 `MultiPolygon` 实例的所有实例是有效的 `Polygon` 实例。 有关有效`Polygon`实例，请参阅[多边形](../spatial/polygon.md)。  
+1.  组成 `MultiPolygon` 实例的所有实例是有效的 `Polygon` 实例。 有关有效`Polygon`的实例，请参阅[多边形](../spatial/polygon.md)。  
   
 2.  组成 `Polygon` 实例的所有 `MultiPolygon` 实例都不会重叠。  
   
@@ -72,7 +73,9 @@ DECLARE @g3 geometry = 'MULTIPOLYGON(((2 2, 2 -2, -2 -2, -2 2, 2 2)),((1 1, 3 1,
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g2` 之所以有效，原因在于两个 `Polygon` 实例仅在切点接触。 `@g3` 之所以无效，原因在于这两个  `Polygon` 实例的内部相互重叠。  
+ 
+  `@g2` 之所以有效，原因在于两个 `Polygon` 实例仅在切点接触。 
+  `@g3` 之所以无效，原因在于这两个  `Polygon` 实例的内部相互重叠。  
   
 ## <a name="examples"></a>示例  
  下面的示例演示如何创建 `geometry``MultiPolygon` 实例，并返回第二个组件的熟知文本 (WKT)。  
@@ -90,7 +93,7 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('MULTIPOLYGON EMPTY');  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Polygon](../spatial/polygon.md)   
  [STArea（geometry 数据类型）](/sql/t-sql/spatial-geometry/starea-geometry-data-type)   
  [STCentroid（geometry 数据类型）](/sql/t-sql/spatial-geometry/stcentroid-geometry-data-type)   

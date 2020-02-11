@@ -13,14 +13,14 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 9244f32b2ee9921d1caaa63b5d6aae9c324049ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014211"
 ---
 # <a name="multilinestring"></a>MultiLineString
-  一个`MultiLineString`是零个或多集合`geometry`或**geographyLineString**实例。  
+  `MultiLineString`是零个或多个`geometry`实例或**geographyLineString**实例的集合。  
   
 ## <a name="multilinestring-instances"></a>MultiLineString 实例  
  下图显示了 `MultiLineString` 实例的示例。  
@@ -29,7 +29,7 @@ ms.locfileid: "66014211"
   
  如图中所示：  
   
--   图 1 是一个简单`MultiLineString`实例，其边界是其两个四个端点`LineString`元素。  
+-   图1是一个简单`MultiLineString`的实例，其边界是其两个`LineString`元素的四个终结点。  
   
 -   图 2 显示的是一个简单的 `MultiLineString` 实例，因为只有 `LineString` 元素的端点相交。 边界是两个不重叠的端点。  
   
@@ -37,12 +37,12 @@ ms.locfileid: "66014211"
   
 -   图 4 显示的是一个不简单、非闭合的 `MultiLineString` 实例。  
   
--   图 5 显示的是一个简单、非闭合的 `MultiLineString`。 它没有闭合是因为其`LineStrings`元素没有闭合。 而其简单的原因在于，其任何 `LineStrings` 实例的内部都没有出现相交。  
+-   图 5 显示的是一个简单、非闭合的 `MultiLineString`。 它不会关闭，因为`LineStrings`它的元素未关闭。 而其简单的原因在于，其任何 `LineStrings` 实例的内部都没有出现相交。  
   
 -   图 6 显示的是一个简单、闭合的 `MultiLineString` 实例。 它为闭合的是因为它的所有元素都是闭合的。 而其简单的原因在于，其所有元素都没有出现内部相交现象。  
   
 ### <a name="accepted-instances"></a>接受的实例  
- 为使 `MultiLineString` 实例可接受，它必须或者为空，或者仅由接受的 `LineString` 实例组成。 有关详细信息接受`LineString`实例，请参阅[LineString](../spatial/linestring.md)。 下面的示例显示接受的 `MultiLineString` 实例。  
+ 为使 `MultiLineString` 实例可接受，它必须或者为空，或者仅由接受的 `LineString` 实例组成。 有关接受`LineString`的实例的详细信息，请参阅[LineString](../spatial/linestring.md)。 下面的示例显示接受的 `MultiLineString` 实例。  
   
 ```  
 DECLARE @g1 geometry = 'MULTILINESTRING EMPTY';  
@@ -62,7 +62,8 @@ DECLARE @g geometry = 'MULTILINESTRING((1 1, 3 5),(-5 3))';
   
 1.  组成 `MultiLineString` 实例的所有实例必须是有效的 `LineString` 实例。  
   
-2.  组成 `LineString` 实例的任何两个 `MultiLineString` 实例在某个间隔内都不会重叠。 `LineString` 实例只能与其自身或其他 `LineString` 实例在有限数量的点相交或接触。  
+2.  组成 `LineString` 实例的任何两个 `MultiLineString` 实例在某个间隔内都不会重叠。 
+  `LineString` 实例只能与其自身或其他 `LineString` 实例在有限数量的点相交或接触。  
   
  以下示例显示三个有效的 `MultiLineString` 实例和一个无效的 `MultiLineString` 实例。  
   
@@ -74,7 +75,8 @@ DECLARE @g4 geometry = 'MULTILINESTRING((1 1, 3 3, 5 5),(3 3, 5 5, 7 7))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();  
 ```  
   
- `@g4` 无效，因为第二个 `LineString` 实例与第一个 `LineString` 实例在某个间隔重叠。 它们在无限数量的点处接触。  
+ 
+  `@g4` 无效，因为第二个 `LineString` 实例与第一个 `LineString` 实例在某个间隔重叠。 它们在无限数量的点处接触。  
   
 ## <a name="examples"></a>示例  
  下面的示例创建了一个包含两个 `geometry``MultiLineString` 元素且 SRID 为 0 的简单 `LineString` 实例。  
@@ -92,7 +94,7 @@ SET @g = geometry::Parse('MULTILINESTRING((0 2, 1 1), (1 0, 1 1))');
 SET @g.STSrid = 13;  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [STLength（geometry 数据类型）](/sql/t-sql/spatial-geometry/stlength-geometry-data-type)   
  [STIsClosed（geometry 数据类型）](/sql/t-sql/spatial-geometry/stisclosed-geometry-data-type)   
  [LineString](../spatial/linestring.md)   

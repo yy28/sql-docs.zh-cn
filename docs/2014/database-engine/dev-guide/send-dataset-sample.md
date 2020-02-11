@@ -11,21 +11,24 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7b622de076f9040fdedaa487baa8f1ec0f759c88
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637733"
 ---
 # <a name="send-dataset-sample"></a>发送数据集示例
-  发送 `DataSet` 示例说明如何在服务器端基于公共语言运行时 (CLR) 的存储过程中将基于 ADO.NET 的 `DataSet` 作为结果集返回到客户端。 例如，当此类存储过程使用查询结果填充 `DataSet`，然后操作该 `DataSet` 中包含的数据时，此操作很有用。 另外，在存储过程从头创建并填充 `DataSet` 时，此操作也很有用。该示例由 `DataSetUtilities` 和 `TestSendDataSet` 这两个类构成。 针对 `SendDataSet` 类的方法 `DataSetUtilities` 实现了将 `DataSet` 实例的内容传输到客户端的通用方式。 对 `DoTest` 类定义的 `TestSendDataSet` 方法通过创建 `SendDataSet` 并用 `DataSet` Transact-SQL 存储过程中的数据进行填充来验证 `uspGetTwoBOMTestData` 方法是否起作用。 `uspGetTwoBOMTestData` 两次运行 Transact-SQL 存储过程 `uspGetBillOfMaterials`，以通过递归方式查询两种产品的物料清单，这两种产品已被指定为 `usp_GetTwoBOMTestData` 存储过程的参数。 通常在填充数据集后，在调用 `SendDataSet` 前会对数据进行修改，然后才将数据集中的数据作为结果集传输到客户端。 简单地说，此示例返回的数据未经修改。  
+  发送 `DataSet` 示例说明如何在服务器端基于公共语言运行时 (CLR) 的存储过程中将基于 ADO.NET 的 `DataSet` 作为结果集返回到客户端。 例如，当此类存储过程使用查询结果填充 `DataSet`，然后操作该 `DataSet` 中包含的数据时，此操作很有用。 另外，在存储过程从头创建并填充 `DataSet` 时，此操作也很有用。该示例由 `DataSetUtilities` 和 `TestSendDataSet` 这两个类构成。 针对 `SendDataSet` 类的方法 `DataSetUtilities` 实现了将 `DataSet` 实例的内容传输到客户端的通用方式。 对 `DoTest` 类定义的 `TestSendDataSet` 方法通过创建 `SendDataSet` 并用 `DataSet` Transact-SQL 存储过程中的数据进行填充来验证 `uspGetTwoBOMTestData` 方法是否起作用。 
+  `uspGetTwoBOMTestData` 两次运行 Transact-SQL 存储过程 `uspGetBillOfMaterials`，以通过递归方式查询两种产品的物料清单，这两种产品已被指定为 `usp_GetTwoBOMTestData` 存储过程的参数。 通常在填充数据集后，在调用 `SendDataSet` 前会对数据进行修改，然后才将数据集中的数据作为结果集传输到客户端。 简单地说，此示例返回的数据未经修改。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要创建和运行此项目，必须安装下列软件：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]网站[免费获取 ](https://www.microsoft.com/sql-server/sql-server-editions-express) Express  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]网站[免费获取 ](https://www.microsoft.com/sql-server/sql-server-editions-express) Express  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开发人员[网站](https://go.microsoft.com/fwlink/?linkid=62796)提供的 AdventureWorks 数据库  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开发人员[网站](https://go.microsoft.com/fwlink/?linkid=62796)提供的 AdventureWorks 数据库  
   
 -   .NET Framework SDK 2.0 或更高版本，或 Microsoft Visual Studio 2005 或更高版本。 您可以免费获取 .NET Framework SDK。  
   
@@ -88,7 +91,7 @@ ms.locfileid: "73637733"
   
     -   `sqlcmd -E -I -i cleanup.sql`  
   
-## <a name="sample-code"></a>示例代码  
+## <a name="sample-code"></a>代码示例  
  下面是此示例的代码列表。  
   
  C#  
@@ -594,6 +597,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [公共语言运行时 (CLR) 集成的使用方案和示例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+ [公共语言运行时 &#40;CLR&#41; 集成的使用方案和示例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

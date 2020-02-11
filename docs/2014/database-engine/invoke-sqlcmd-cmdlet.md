@@ -15,18 +15,19 @@ ms.assetid: 0c74d21b-84a5-4fa4-be51-90f0f7230044
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c6aff97c8bee8fe8ccc469c2ee57bc94466e1e31
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: beee2fa576387eadb75ee5ab1bfefcb66453acc0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72797857"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76928025"
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Invoke-Sqlcmd cmdlet
-  **Invoke-Sqlcmd** 是一个运行脚本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cmdlet，其所运行的脚本中包含 [!INCLUDE[tsql](../includes/tsql-md.md)]sqlcmd **实用工具**所支持的语言（和XQuery）和命令中的语句。  
+  **Invoke-Sqlcmd**是一个[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cmdlet，它运行的脚本包含来自各种语言（[!INCLUDE[tsql](../includes/tsql-md.md)]和 XQuery）和**Sqlcmd**实用工具所支持的命令的语句。  
   
 ## <a name="using-invoke-sqlcmd"></a>使用 Invoke-Sqlcmd  
- **Invoke-Sqlcmd** cmdlet 可使你在 Windows PowerShell 环境中运行 **sqlcmd** 。 用 **sqlcmd** 执行的大部分操作也可以通过使用 **Invoke-sqlcmd**来完成。  
+ 
+  **Invoke-Sqlcmd** cmdlet 可使你在 Windows PowerShell 环境中运行 **sqlcmd** 。 用 **sqlcmd** 执行的大部分操作也可以通过使用 **Invoke-sqlcmd**来完成。  
   
  下面的示例说明如何通过调用 Invoke-Sqlcmd 来执行简单查询，这与指定带有 **-Q** 和 **-S** 选项的 **sqlcmd** 相似：  
   
@@ -89,37 +90,38 @@ Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"
  当 Invoke-Sqlcmd 使用路径数据库上下文时，它会提供一条警告。 可以使用 -SuppressProviderContextWarning 参数来关闭该警告消息。 可以使用 -IgnoreProviderContext 参数来通知 Invoke-Sqlcmd 始终使用登录帐户的默认数据库。  
   
 ## <a name="comparing-invoke-sqlcmd-and-the-sqlcmd-utility"></a>Invoke-Sqlcmd 和 sqlcmd 实用工具的比较  
- **Invoke-Sqlcmd** 可用来运行许多可借助于 **sqlcmd** 实用工具运行的脚本。 但是，用来运行 **Invoke-Sqlcmd** 的 Windows PowerShell 环境不同于用来运行 **sqlcmd** 的命令提示环境。 为了使 **Invoke-Sqlcmd** 在 Windows PowerShell 环境中有效，已对其行为进行了修改。  
+ **Invoke-Sqlcmd**可用于运行多个可以使用**Sqlcmd**实用程序运行的脚本。 但是，用来运行 **Invoke-Sqlcmd** 的 Windows PowerShell 环境不同于用来运行 **sqlcmd** 的命令提示环境。 为了使 **Invoke-Sqlcmd** 在 Windows PowerShell 环境中有效，已对其行为进行了修改。  
   
- 并非所有的 **sqlcmd** 命令都已在 **Invoke-Sqlcmd** 中实现。 未实现的命令包括： **:!!** 、 **:connect**、 **:error** **:out**、 **:ed**、 **:list**、 **:listvar**、 **:reset**、 **:perftrace** 和 **:serverlist**。  
+ 并非所有的 **sqlcmd** 命令都已在 **Invoke-Sqlcmd**中实现。 未实现的命令包括：**:!!**、**:connect**、**:error****:out**、**:ed**、**:list**、**:listvar**、**:reset**、**:perftrace** 和 **:serverlist**。  
   
- **Invoke-Sqlcmd** 无法初始化 **sqlcmd** 环境变量或脚本变量，如 SQLCMDDBNAME 或 SQLCMDWORKSTATION。  
+ **Invoke-sqlcmd**不会初始化**Sqlcmd**环境或脚本变量，如 SQLCMDDBNAME 或 SQLCMDWORKSTATION。  
   
- 除非指定了 Windows PowerShell**Invoke-Sqlcmd** 公共参数，否则 **Invoke-Sqlcmd** 不显示消息（如 PRINT 语句的输出）。 例如：  
+ **调用-Sqlcmd**不显示消息（如 PRINT 语句的输出），除非指定 Windows PowerShell **-Verbose**通用参数。 例如：  
   
 ```powershell
 Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose  
 ```  
   
- 并非所有的 **sqlcmd** 参数都需要在 PowerShell 环境中使用。 例如，Windows PowerShell 设置所有 cmdlet 输出的格式，因此，指定格式选项的 **sqlcmd** 参数将不能在 **Invoke-Sqlcmd**中实现。 下表说明了 **Invoke-Sqlcmd** 参数和 **sqlcmd** 选项之间的关系：  
+ 并非所有的 **sqlcmd** 参数都需要在 PowerShell 环境中使用。 例如，Windows PowerShell 设置所有 cmdlet 输出的格式，因此，指定格式选项的 **sqlcmd** 参数将不能在 **Invoke-Sqlcmd**中实现。 下表显示了**Invoke-Sqlcmd**参数和**Sqlcmd**选项之间的关系：  
   
-|描述|sqlcmd 选项|Invoke-Sqlcmd 参数|  
+|说明|sqlcmd 选项|Invoke-Sqlcmd 参数|  
 |-----------------|-------------------|------------------------------|  
-|服务器名称和实例名称|sqlcmd|-ServerInstance|  
+|服务器名称和实例名称|-S|-ServerInstance|  
 |要使用的初始数据库|-d|-Database|  
 |运行指定的查询并退出|-S|-Query|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证登录 ID|-U|-Username|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证密码|-P|-Password|  
+|
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证登录 ID|-U|-Username|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]身份验证密码。|-P|-Password|  
 |变量定义|-v|-Variable|  
 |查询超时间隔|-t|-QueryTimeout|  
 |在遇到错误时停止运行|-b|-AbortOnError|  
-|专用管理员连接|-a|-DedicatedAdministratorConnection|  
-|禁用交互式命令、启动脚本和环境变量|-X|-DisableCommands|  
-|禁用变量替换|-X|-DisableVariables|  
+|专用管理员连接|-A|-DedicatedAdministratorConnection|  
+|禁用交互式命令、启动脚本和环境变量|-x|-DisableCommands|  
+|禁用变量替换|-x|-DisableVariables|  
 |要报告的最小严重级别|-v|-SeverityLevel|  
-|要报告的最小错误级别|-m|-ErrorLevel|  
+|要报告的最小错误级别|-M|-ErrorLevel|  
 |登录超时间隔|-l|-ConnectionTimeout|  
-|主机名|-H|-HostName|  
+|主机名|-h|-HostName|  
 |更改密码并退出|-Z|-NewPassword|  
 |包含查询的输入文件|-i|-InputFile|  
 |字符输出的最大长度|-w|-MaxCharLength|  
@@ -127,24 +129,24 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |使用 SSL 加密机制进行连接|无参数|-EncryptConnection|  
 |显示错误|无参数|-OutputSqlErrors|  
 |将消息输出到 stderr|-r|无参数|  
-|使用客户端的区域设置|-r|无参数|  
+|使用客户端的区域设置|-R|无参数|  
 |运行指定的查询并保持运行状态|-q|无参数|  
 |要用于输出数据的代码页|-f|无参数|  
 |更改密码并保持运行状态|-Z|无参数|  
 |数据包大小|-a|无参数|  
 |列分隔符|-s|无参数|  
-|控制输出标头|-H|无参数|  
+|控制输出标头|-h|无参数|  
 |指定控制字符|-k|无参数|  
-|长度固定的显示宽度|-Y|无参数|  
-|长度可变的显示宽度|-Y|无参数|  
-|回显输入|-e|无参数|  
-|允许使用带引号的标识符|-o|无参数|  
-|删除尾随空格|-w|无参数|  
-|列出实例|-L|无参数|  
+|长度固定的显示宽度|-y|无参数|  
+|长度可变的显示宽度|-y|无参数|  
+|回显输入|-E|无参数|  
+|允许使用带引号的标识符|-I|无参数|  
+|删除尾随空格|-W|无参数|  
+|列出实例|-l|无参数|  
 |将输出格式化为 Unicode|-u|无参数|  
-|打印统计信息|-P|无参数|  
+|打印统计信息|-p|无参数|  
 |结束命令|-c|无参数|  
-|使用 Windows 身份验证进行连接|-E|无参数|  
+|使用 Windows 身份验证进行连接|-e|无参数|  
   
 ## <a name="see-also"></a>另请参阅  
  [使用数据库引擎 cmdlet](../../2014/database-engine/use-the-database-engine-cmdlets.md)   

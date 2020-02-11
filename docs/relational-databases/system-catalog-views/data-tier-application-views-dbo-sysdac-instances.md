@@ -1,5 +1,5 @@
 ---
-title: dbo.sysdac_instances (TRANSACT-SQL) |Microsoft Docs
+title: dbo. sysdac_instances （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -21,25 +21,25 @@ ms.assetid: 28285f3d-3889-439f-8b24-3bdef08e46b4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b1530e58597947a7e19f4ca264808fbfefd164ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68033126"
 ---
-# <a name="data-tier-application-views---dbosysdacinstances"></a>数据层应用程序视图-dbo.sysdac_instances
+# <a name="data-tier-application-views---dbosysdac_instances"></a>数据层应用程序视图-dbo. sysdac_instances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  为部署到[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的每个数据层应用程序 (DAC) 实例显示一行。 sysdac_instances 属于 msdb 数据库中的 dbo 架构。 下表介绍 sysdac_instances 视图中的列。  
+  为部署到[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的每个数据层应用程序 (DAC) 实例显示一行。 sysdac_instances 属于 msdb 数据库中的 dbo 架构。 下表描述了 sysdac_instances 视图中的列。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |instance_id|**uniqueidentifier**|DAC 实例的标识符。|  
 |instance_name|**sysname**|在部署 DAC 时指定的 DAC 实例的名称。|  
 |type_name|**sysname**|在创建 DAC 包时指定的 DAC 的名称。|  
-|type_version|**nvarchar(64)**|在创建 DAC 包时指定的 DAC 的版本。|  
+|type_version|**nvarchar （64）**|在创建 DAC 包时指定的 DAC 的版本。|  
 |description|**nvarchar(4000)**|在创建 DAC 包时写入的 DAC 的说明。|  
-|type_stream|**varbinary(max)**|包含的逻辑对象，如表和视图，在该 DAC 中包含的编码表示形式的位流。|  
+|type_stream|**varbinary(max)**|包含 DAC 中包含的逻辑对象（如表和视图）的已编码表示形式的位流。|  
 |date_created|**datetime**|DAC 实例的创建日期和时间。|  
 |created_by|**sysname**|创建 DAC 实例的登录名。|  
 |database_name|**sysname**|为 DAC 实例创建的数据库的名称。|  
@@ -50,8 +50,8 @@ ms.locfileid: "68033126"
 ## <a name="permissions"></a>权限  
  要求具有 sysadmin 固定服务器角色的成员身份以便查看所有列。 公共角色的成员可以查看 instance_name、description 和 type_version 列。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据层应用程序](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [数据层应用程序视图&#40;Transact SQL&#41;](https://msdn.microsoft.com/library/0de01328-d7a6-4677-b7a0-dcd3098c23d4)  
+ [数据层应用程序视图 &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/0de01328-d7a6-4677-b7a0-dcd3098c23d4)  
   
   

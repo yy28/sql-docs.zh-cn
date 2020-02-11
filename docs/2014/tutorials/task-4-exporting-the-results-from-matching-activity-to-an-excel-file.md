@@ -1,5 +1,5 @@
 ---
-title: 任务 4：将结果导出匹配到 Excel 文件的活动 |Microsoft Docs
+title: 任务4：将匹配活动的结果导出到 Excel 文件 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,40 +11,40 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 74164c6f6178acbcfe4784dac855c7c0485fc3b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489442"
 ---
 # <a name="task-4-exporting-the-results-from-matching-activity-to-an-excel-file"></a>任务 4：将匹配活动的结果导出到 Excel 文件
   在本任务中，您将匹配活动的结果导出到 Excel 文件。  
   
-1.  在中**导出**页上，选择**Excel 文件**有关**目标类型**。  
+1.  在 "**导出**" 页中，选择 " **Excel 文件**" 作为**目标类型**。  
   
-2.  选择**存活结果**选项。 在存活过程中，DQS 确定基于每个群集的存活记录**存活规则**所选。  
+2.  选择**存活结果**选项。 在存活过程中，DQS 根据所选的**存活规则**确定每个群集的存活记录。  
   
-3.  单击**浏览**并导航到要存储输出文件的文件夹。  
+3.  单击 "**浏览**" 并导航到要在其中存储输出文件的文件夹。  
   
-4.  类型**Cleansed and Matched Suppliers.xls**的名称，然后单击**打开**。  
+4.  键入 "**清理"，并**将 "名称" 与 "名称" 匹配，并单击 "**打开**"。  
   
-5.  确认**透视记录**选择了**存活规则**。 当您选择此选项时，为分类的输出选择每个分类的透视记录。 存留规则的其他选项有：  
+5.  确认为**存活规则**选择了 "**透视记录**"。 当您选择此选项时，为分类的输出选择每个分类的透视记录。 存留规则的其他选项有：  
   
-    1.  **最完整记录：** 存活记录是具有最大填充字段数。  
+    1.  **最完整记录：** 存活记录是具有最大填充字段数的记录。  
   
-    2.  **最长记录：** 存活记录是具有源字段中的词的最大数目。  
+    2.  **最长记录：** 存活记录是源字段中具有最大字词数的记录。  
   
-    3.  **最完整且最长记录：** 存活记录是具有的最大填充字段数且在每个字段中具有的词的最大数目。  
+    3.  **最完整且最长的记录：** 存活记录是具有最大填充字段数的记录，每个字段中的字词数最多。  
   
-     ![从匹配页导出结果](../../2014/tutorials/media/et-exportingtheresultsfrommatoanexcelfile.jpg "从匹配页导出结果")  
+     ![从“匹配”页导出结果](../../2014/tutorials/media/et-exportingtheresultsfrommatoanexcelfile.jpg "从“匹配”页导出结果")  
   
-6.  单击**导出**将结果导出到 Excel 文件。  
+6.  单击 "**导出**" 将结果导出到 Excel 文件中。  
   
-7.  单击**关闭**以关闭**匹配的导出**对话框。  
+7.  单击 "**关闭**" 以关闭 "**匹配导出**" 对话框。  
   
-8.  单击**完成**以完成匹配活动。  
+8.  单击 "**完成**" 以完成匹配活动。  
   
-9. 打开**Cleansed and Matched Suppliers.xlsx**文件并确认未看到任何重复项 (SupplierID)。  
+9. 打开**清理和匹配的供应商 .xlsx**文件，并确认看不到任何重复项（供应商）。  
   
  现在，您的供应商数据已经过清理和匹配，删除了重复项。  
   

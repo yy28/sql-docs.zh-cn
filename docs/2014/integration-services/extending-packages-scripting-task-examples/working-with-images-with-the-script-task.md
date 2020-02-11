@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b27b5bbc77d1d48e3697893e2e21dcf7d8a6c570
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768443"
 ---
 # <a name="working-with-images-with-the-script-task"></a>使用脚本任务处理图像
@@ -47,7 +47,7 @@ ms.locfileid: "62768443"
   
 1.  创建一个名为 `CurrentImageFile` 的字符串变量，并将其值设置为一个现有图像文件的路径和名称。  
   
-2.  上**脚本**页**脚本任务编辑器**，将添加`CurrentImageFile`变量`ReadOnlyVariables`属性。  
+2.  在 "**脚本任务编辑器**" 的 "**脚本**" 页中`CurrentImageFile` ，将变量`ReadOnlyVariables`添加到属性中。  
   
 3.  在脚本项目中，设置一个对 `System.Drawing` 命名空间的引用。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "62768443"
   
 2.  在“Foreach 循环编辑器”的“集合”页中，选择“Foreach 文件枚举器”作为枚举器，并指定源文件的路径和文件掩码，如“*.bmp”    。  
   
-3.  在“变量映射”页中，将 `CurrentImageFile` 变量映射到索引 0  。 此变量在枚举器的每次迭代中将当前文件名传递给脚本任务。  
+3.  在“变量映射”页中，将  **变量映射到索引 0**`CurrentImageFile`。 此变量在枚举器的每次迭代中将当前文件名传递给脚本任务。  
   
     > [!NOTE]  
     >  这些步骤是在执行用于单个图像文件配置过程中列出的步骤之外还要执行的步骤。  
@@ -158,7 +158,7 @@ End Function
   
 2.  再创建整数变量 `MaxThumbSize`，并赋值（单位为像素），例如 100。  
   
-3.  上**脚本**页**脚本任务编辑器**，将添加到这两个变量`ReadOnlyVariables`属性。  
+3.  在 "**脚本任务编辑器**" 的 "**脚本**" 页上，将两`ReadOnlyVariables`个变量添加到属性中。  
   
 4.  在脚本项目中，设置一个对 `System.Drawing` 命名空间的引用。  
   
@@ -170,7 +170,7 @@ End Function
   
 2.  在“Foreach 循环编辑器”的“集合”页中，选择“Foreach 文件枚举器”作为“枚举器”，并指定源文件的路径和文件掩码，如“*.jpg”     。  
   
-3.  在“变量映射”页中，将 `CurrentImageFile` 变量映射到索引 0  。 此变量在枚举器的每次迭代中将当前文件名传递给脚本任务。  
+3.  在“变量映射”页中，将  **变量映射到索引 0**`CurrentImageFile`。 此变量在枚举器的每次迭代中将当前文件名传递给脚本任务。  
   
     > [!NOTE]  
     >  这些步骤是在执行用于单个图像文件配置过程中列出的步骤之外还要执行的步骤。  
@@ -289,6 +289,6 @@ bool ThumbnailCallback()
   
 ```  
   
-![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![Integration Services 图标（小）](../media/dts-16.gif "集成服务图标（小）")**保持与 Integration Services 最**新  <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
   

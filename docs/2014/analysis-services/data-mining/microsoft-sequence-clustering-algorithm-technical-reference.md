@@ -1,5 +1,5 @@
 ---
-title: Microsoft 序列聚类分析算法技术参考 |Microsoft Docs
+title: Microsoft 顺序分析和聚类分析算法技术参考 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6ae48fe00fb9c24e2d6d0ddde61302cff3ceba0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083839"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Microsoft 顺序分析和聚类分析算法技术参考
@@ -41,7 +41,7 @@ ms.locfileid: "66083839"
   
  Microsoft 顺序分析和聚类分析算法支持在模型中使用其他非序列属性。 这意味着将会将这些非序列属性与序列属性组合起来，创建具有相似属性的事例分类，就像典型的聚类分析模型中一样。  
   
- 与典型的聚类分析模型相比，顺序分析和聚类分析模型通常会创建更多的分类。 因此，Microsoft 顺序分析和聚类分析算法会执行“群集分解” ，以基于序列属性和其他属性分离群集。  
+ 与典型的聚类分析模型相比，顺序分析和聚类分析模型通常会创建更多的分类。 因此，Microsoft 顺序分析和聚类分析算法会执行“群集分解” **，以基于序列属性和其他属性分离群集。  
   
 ### <a name="feature-selection-in-a-sequence-clustering-model"></a>顺序分析和聚类分析模型中的功能选择  
  生成序列时不会调用功能选择，但会在聚类分析阶段应用功能选择。  
@@ -49,7 +49,7 @@ ms.locfileid: "66083839"
 |模型类型|功能选择方法|注释|  
 |----------------|------------------------------|--------------|  
 |顺序分析和聚类分析|未使用|不调用功能选择；但可以通过设置参数 MINIMUM_SUPPORT 和 MINIMUM_PROBABILIITY 的值来控制算法的行为。|  
-|群集|兴趣性分数|尽管聚类分析算法可能使用离散算法或离散化算法，但每个属性的分数仍将作为间距进行计算，并且是连续的，因此使用兴趣性分数。|  
+|群集功能|兴趣性分数|尽管聚类分析算法可能使用离散算法或离散化算法，但每个属性的分数仍将作为间距进行计算，并且是连续的，因此使用兴趣性分数。|  
   
  有关详细信息，请参阅 [Feature Selection](../../sql-server/install/feature-selection.md)。  
   
@@ -73,7 +73,8 @@ ms.locfileid: "66083839"
  有关这些方法的深入探讨不属于本主题的讨论范围。  
   
 ## <a name="customizing-the-sequence-clustering-algorithm"></a>自定义顺序分析和聚类分析算法  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法支持多个参数，这些参数可影响所生成的挖掘模型的行为、性能和准确性。 您还可以通过设置用于控制算法的定型数据处理方式的建模标志来修改已完成模型的行为。  
+ 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法支持多个参数，这些参数可影响所生成的挖掘模型的行为、性能和准确性。 您还可以通过设置用于控制算法的定型数据处理方式的建模标志来修改已完成模型的行为。  
   
 ### <a name="setting-algorithm-parameters"></a>设置算法参数  
  下表介绍可用于 Microsoft 顺序分析和聚类分析算法的参数。  
@@ -99,7 +100,7 @@ ms.locfileid: "66083839"
  默认值为 64。  
   
  MAXIMUM_STATES  
- 指定算法支持的非序列属性的最大状态数。 如果非序列属性的状态数大于最大状态数，算法将使用该属性的最常见状态并将剩余状态视为`Missing`。  
+ 指定算法支持的非序列属性的最大状态数。 如果非序列属性的状态数大于最大状态数，则算法将使用属性的最常用状态，并将剩余状态视为`Missing`。  
   
  默认值为 100。  
   
@@ -121,30 +122,34 @@ ms.locfileid: "66083839"
 ## <a name="requirements"></a>要求  
  事例表必须具有事例 ID 列。 此外，事例表还可以包含其他存储事例属性的列。  
   
- Microsoft 顺序分析和聚类分析算法要求序列信息以嵌套表的形式存储。 该嵌套表必须包含一个 Key Sequence 列。 `Key Sequence` 列可包含可以存储的任何类型的数据（包括字符串数据类型），还必须包含每个事例的唯一值。 而且，在处理模型之前，您必须确保事例表和嵌套表要按与其相关的键的升序存储。  
+ Microsoft 顺序分析和聚类分析算法要求序列信息以嵌套表的形式存储。 该嵌套表必须包含一个 Key Sequence 列。 
+  `Key Sequence` 列可包含可以存储的任何类型的数据（包括字符串数据类型），还必须包含每个事例的唯一值。 而且，在处理模型之前，您必须确保事例表和嵌套表要按与其相关的键的升序存储。  
   
 > [!NOTE]  
 >  如果创建使用 Microsoft 顺序分析算法、但却不使用序列的模型，则生成的模型将不包含任何序列，而仅会基于模型中包含的其他属性对事例进行分类。  
   
 ### <a name="input-and-predictable-columns"></a>输入列和可预测列  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法支持下表中列出的特定输入列和可预测列。 有关内容类型在用于挖掘模型中时的含义的详细信息，请参阅[内容类型（数据挖掘）](content-types-data-mining.md)。  
+ 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法支持下表中列出的特定输入列和可预测列。 有关内容类型在用于挖掘模型中时的含义的详细信息，请参阅[内容类型（数据挖掘）](content-types-data-mining.md)。  
   
-|“列”|内容类型|  
+|列|内容类型|  
 |------------|-------------------|  
 |输入属性|Continuous、Cyclical、Discrete、Discretized、Key、Key Sequence、Table 和 Ordered|  
 |可预测属性|Continuous、Cyclical、Discrete、Discretized、Table 和 Ordered|  
   
 ## <a name="remarks"></a>备注  
   
--   将 [PredictSequence (DMX)](/sql/dmx/predictsequence-dmx) 函数用于序列预测。 有关版本的详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的支持序列预测，请参阅[SQL Server 2012 各个版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473)(https://go.microsoft.com/fwlink/?linkid=232473)。  
+-   将 [PredictSequence (DMX)](/sql/dmx/predictsequence-dmx) 函数用于序列预测。 有关支持序列预测的版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的详细信息，请参阅 SQL Server 2012 的各个[版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473)（。https://go.microsoft.com/fwlink/?linkid=232473)  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法不支持使用预测性模型标记语言 (PMML) 来创建挖掘模型。  
+-   
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法不支持使用预测性模型标记语言 (PMML) 来创建挖掘模型。  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法支持钻取，支持使用 OLAP 挖掘模型和数据挖掘维度。  
+-   
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法支持钻取，支持使用 OLAP 挖掘模型和数据挖掘维度。  
   
-## <a name="see-also"></a>请参阅  
- [Microsoft Sequence Clustering Algorithm](microsoft-sequence-clustering-algorithm.md)   
+## <a name="see-also"></a>另请参阅  
+ [Microsoft 顺序分析和聚类分析算法](microsoft-sequence-clustering-algorithm.md)   
  [顺序分析和聚类分析模型查询示例](clustering-model-query-examples.md)   
- [顺序分析和聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-sequence-clustering-models.md)  
+ [&#40;Analysis Services 的顺序分析和聚类分析模型的挖掘模型内容&#41;](mining-model-content-for-sequence-clustering-models.md)  
   
   

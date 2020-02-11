@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a9b2b248207d19f99aae3b07837d624fb9bb9cf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079338"
 ---
 # <a name="defining-a-data-source"></a>定义数据源
@@ -24,37 +24,37 @@ ms.locfileid: "66079338"
   
 ### <a name="to-define-a-new-data-source"></a>定义新的数据源  
   
-1.  在解决方案资源管理器中（在 Microsoft Visual Studio 窗口的右侧），右键单击“数据源”，然后单击“新建数据源”。  
+1.  在解决方案资源管理器中（在 Microsoft Visual Studio 窗口的右侧），右键单击“数据源”****，然后单击“新建数据源”****。  
   
-2.  上**欢迎使用数据源向导**页**数据源向导**，单击**下一步**以打开**选择如何定义连接**页。  
+2.  在 "**数据源向导**" 的 "**欢迎使用数据源向导**" 页上，单击 "**下一步**" 打开 "**选择如何定义连接"** 页。  
   
-3.  在“选择如何定义连接”页上，可以基于新连接、现有连接或以前定义的数据源对象来定义数据源。 在本教程中，基于新连接定义数据源。 确保已选中“基于现有连接或新连接创建数据源”，再单击“新建”。  
+3.  在“选择如何定义连接”**** 页上，可以基于新连接、现有连接或以前定义的数据源对象来定义数据源。 在本教程中，基于新连接定义数据源。 确保已选中“基于现有连接或新连接创建数据源”****，再单击“新建”****。  
   
-4.  在“连接管理器”对话框中，为数据源定义连接属性。 在“提供程序”列表框中，确保已选中“本机 OLE DB\SQL Server Native Client 11.0”。  
+4.  在“连接管理器”**** 对话框中，为数据源定义连接属性。 在“提供程序”**** 列表框中，确保已选中“本机 OLE DB\SQL Server Native Client 11.0”****。  
   
-     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 此外支持其他提供程序，将显示在**提供程序**列表。  
+     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]还支持其他提供程序，这些提供程序显示在**提供程序**列表中。  
   
-5.  在中**服务器名称**文本框中，键入`localhost`。  
+5.  在 "**服务器名称**" 文本框中， `localhost`键入。  
   
-     若要连接到本地计算机上的命名实例，请键入**localhost\\< 实例名称\>**。 若要连接到特定的计算机而不是本地计算机，请键入该计算机名称或 IP 地址。  
+     若要连接到本地计算机上的命名实例，请**键入\\ localhost<实例\>名称**。 若要连接到特定的计算机而不是本地计算机，请键入该计算机名称或 IP 地址。  
   
-6.  确保已选中“使用 Windows 身份验证”。 在“选择或输入数据库名称”列表中，选择 **AdventureWorksDW2012**。  
+6.  确保已选中“使用 Windows 身份验证”****。 在“选择或输入数据库名称”**** 列表中，选择 **AdventureWorksDW2012**。  
   
-7.  单击“测试连接”以测试与数据库的连接。  
+7.  单击“测试连接”**** 以测试与数据库的连接。  
   
-8.  单击“确定”，然后单击“下一步”。  
+8.  单击 **“确定”**，然后单击 **“下一步”**。  
   
-9. 在该向导的“模拟信息”页上，可以定义 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 用于连接数据源的安全凭据。 在选中“Windows 身份验证”时，模拟会影响用于连接数据源的 Windows 帐户。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 不支持模拟来处理 OLAP 对象。 选择“使用服务帐户”，然后单击“下一步”。  
+9. 在该向导的“模拟信息”**** 页上，可以定义 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 用于连接数据源的安全凭据。 在选中“Windows 身份验证”时，模拟会影响用于连接数据源的 Windows 帐户。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]不支持模拟来处理 OLAP 对象。 选择“使用服务帐户”****，然后单击“下一步”****。  
   
-10. 在“完成向导”页上，接受默认名称 **Adventure Works DW 2012**，然后单击“完成”以创建新数据源。  
+10. 在“完成向导”**** 页上，接受默认名称 **Adventure Works DW 2012**，然后单击“完成”**** 以创建新数据源。  
   
 > [!NOTE]  
->  若要在创建数据源之后修改其属性，请在“数据源”文件夹中双击该数据源，以在“数据源设计器”中显示数据源属性。  
+>  若要在创建数据源之后修改其属性，请在“数据源”**** 文件夹中双击该数据源，以在“数据源设计器”**** 中显示数据源属性。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [定义数据源视图](lesson-1-3-defining-a-data-source-view.md)  
   
-## <a name="see-also"></a>请参阅  
- [创建数据源（SSAS 多维）](multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;SSAS 多维&#41;创建数据源](multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 创建使用 CreateObject (VBScript) 提高对象 |Microsoft Docs
+title: 使用 CreateObject 创建 DataFactory 对象（VBScript） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,17 +17,17 @@ ms.assetid: b4e2844a-120a-4513-860b-f1b6e4b5dda4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 909406b39a8acdd5e598b56b300124abf7bb1170
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964367"
 ---
 # <a name="datafactory-object-query-method-and-createobject-method-example-vbscript"></a>DataFactory 对象、Query 方法和 CreateObject 方法示例 (VBScript)
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 此示例将创建[提高](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)对象使用[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)方法[rds。数据空间](../../../ado/reference/rds-api/dataspace-object-rds.md)对象。 若要测试此示例中，代码剪切并粘贴此之间\<正文 > 和\</b o d > 标记中普通的 HTML 文档并将其命名**DataFactoryVBS.asp**。 ASP 脚本将识别您的服务器。  
+ 此示例使用 RDS 的[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)方法创建[DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)对象[。空间](../../../ado/reference/rds-api/dataspace-object-rds.md)对象。 若要测试此示例，请将此代码剪切并\<粘贴到常规\<HTML 文档中的 Body> 和/Body> 标记之间，并将其命名为**DataFactoryVBS**。 ASP 脚本将标识您的服务器。  
   
 ```  
 <!-- BeginDataFactoryVBS -->  
@@ -136,10 +136,10 @@ to bring back a Recordset. </H4>
 <!-- EndDataFactoryVBS -->  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [CreateObject 方法 (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)   
- [DataFactory 对象 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
- [DataSpace 对象 (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
+## <a name="see-also"></a>另请参阅  
+ [CreateObject 方法（RDS）](../../../ado/reference/rds-api/createobject-method-rds.md)   
+ [DataFactory 对象（RDSServer）](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
+ [空间对象（RDS）](../../../ado/reference/rds-api/dataspace-object-rds.md)   
  [Query 方法 (RDS)](../../../ado/reference/rds-api/query-method-rds.md)
 
 

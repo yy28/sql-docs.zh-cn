@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c254e5c9cefa8a7e65b18fa25cc597ab3afc642
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835739"
 ---
 # <a name="manage-a-cdc-service"></a>管理 CDC 服务
@@ -42,9 +42,9 @@ ms.locfileid: "62835739"
   
  单击 **“停止所有实例”** 可停止服务中所有实例的变更数据捕获。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [如何创建 SQL Server 更改数据库实例](how-to-create-the-sql-server-change-database-instance.md)   
  [如何从 CDC 设计器控制台管理 CDC 服务](how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)   
- [Use the New Instance Wizard](use-the-new-instance-wizard.md)  
+ [使用新建实例向导](use-the-new-instance-wizard.md)  
   
   

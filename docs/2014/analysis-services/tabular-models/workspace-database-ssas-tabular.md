@@ -1,5 +1,5 @@
 ---
-title: 工作区数据库 (SSAS 表格) |Microsoft Docs
+title: 工作区数据库（SSAS 表格） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8708bd3f4375179638ce5e86a0619a1e1ccf4d77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066261"
 ---
 # <a name="workspace-database-ssas-tabular"></a>工作区数据库（SSAS 表格）
   当您在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中创建新的表格模型项目时，将创建在模型创作期间使用的表格模型工作区数据库。 该工作区数据库驻留在以表格模式运行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的内存中；通常是 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 所在的计算机上。  
   
- 本主题包含以下各节：  
+ 本主题包含下列部分：  
   
 -   [工作区数据库概述](#bkmk_overview)  
   
@@ -30,7 +30,7 @@ ms.locfileid: "66066261"
   
 -   [相关任务](#bkmk_related_tasks)  
   
-##  <a name="bkmk_overview"></a> 工作区数据库概述  
+##  <a name="bkmk_overview"></a>工作区数据库概述  
  当您在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中使用某个表格模型项目模板创建新的 Business Intelligence 项目时，在“工作区服务器”属性中所指定的 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]实例上创建工作区数据库。 每个表格模型项目将有自己的工作区数据库。 可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查看 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器上的工作区数据库。 工作区数据库名称包含项目名称，后跟下划线和用户名、然后是下划线和 GUID。  
   
  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中打开表格模型项目时，工作区数据库驻留在内存中。 关闭项目时，工作区数据库可能保存在内存中、存储到磁盘并从内存中删除（默认值）或从内存中删除且不存储到磁盘，这由“工作区保持期”属性决定。 有关“工作区保持期”属性的详细信息，请参阅本主题后面的 [工作区数据库属性](#bkmk_ws_prop) 。  
@@ -51,23 +51,23 @@ ms.locfileid: "66066261"
   
 -   查询时可能滞后。  
   
--   “数据备份”属性不能设置为 **“备份到磁盘”** 。  
+-   “数据备份”属性不能设置为 **“备份到磁盘”**。  
   
 -   在使用“从 PowerPivot 导入”项目模板创建新的表格模型项目时，不能从 PowerPivot 工作簿导入数据。  
   
-##  <a name="bkmk_ws_prop"></a> 工作区数据库属性  
+##  <a name="bkmk_ws_prop"></a>工作区数据库属性  
  工作区数据库属性包含在模型属性中。 若要查看模型属性，请在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的 **“解决方案资源管理器”** 中，单击 **Model.bim** 文件。 可以使用 **“属性”** 窗口配置模型属性。 工作区数据库特定属性包括：  
   
 > [!NOTE]  
->  在创建新模型项目时， **“工作区服务器”** , **“工作区保持期”** 和 **“数据备份”** 属性将应用默认设置。 可以在“数据建模”  页上（位于“工具\选项”对话框的“分析服务器”  设置中）更改新模型项目的默认设置。 可以在 **“属性”** 窗口中为每个模型项目设置这些属性以及其他属性。 更改默认设置不会应用到已创建的模型项目。 有关详细信息，请参阅 [配置默认数据建模和部署属性（SSAS 表格）](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)。  
+>  在创建新的模型项目时，**工作区服务器**、**工作区保持期**和**数据备份**属性将应用默认设置。 可以在“数据建模”**** 页上（位于“工具\选项”对话框的“分析服务器”**** 设置中）更改新模型项目的默认设置。 可以在 **“属性”** 窗口中为每个模型项目设置这些属性以及其他属性。 更改默认设置不会应用到已创建的模型项目。 有关详细信息，请参阅[配置默认数据建模和部署属性（SSAS 表格）](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)。  
   
-|属性|默认设置|Description|  
+|properties|默认设置|说明|  
 |--------------|---------------------|-----------------|  
 |**工作区数据库**|项目名称，后跟下划线和用户名、然后是下划线和 GUID。|用于存储和编辑内存中模型项目的工作区数据库的名称。 在创建表格模型项目后，此数据库将显示在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] “工作区服务器” **属性所指定的** 实例中。 不能在“属性”窗口中设置此属性。|  
-|**工作区保持期**|从内存中卸载|指定在关闭某一模型项目后将如何保留工作区数据库。 工作区数据库将包含模型元数据和导入的数据。 在某些情况下，工作区数据库可能会非常大并且占用大量内存。 默认情况下，关闭 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中的模型项目时，将从内存中卸载工作区数据库。 在更改此设置时，一定要考虑您的可用内存资源以及计划处理该模型项目的频繁程度。 此属性设置具有以下选项：<br /><br /> **保留在内存中** - 指定在关闭模型项目后将工作区数据库保留在内存中。 此选项将会占用较多内存；但在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中打开某一模型项目时，将会占用较少的资源并且工作区数据库将更快加载。<br /><br /> **从内存中卸载** - 指定将工作区数据库保留在磁盘上，但在关闭模型项目后将不再保留在内存中。 此选项将会占用较少内存；但在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中打开某一模型项目时，必须重新附加工作区数据库；这样会占用更多资源，并且与工作区数据库保留在内存中相比，模型项目的加载速度将更慢。 在内存中资源受到限制或在处理远程工作区数据库时，将使用此选项。<br /><br /> **删除工作区** - 指定从内存中删除工作区数据库，在关闭模型项目后不将工作区数据库保留在磁盘上。 此选项将会占用较少内存和存储空间；但在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中打开某一模型项目时，将会占用附加的资源，并且与工作区数据库保留在内存中或磁盘上相比，模型项目的加载速度将更慢。 只有在偶尔处理模型项目时，才使用此选项。<br /><br /> <br /><br /> 可以在“数据建模”  页上（位于“工具\选项”对话框的“分析服务器”  设置中）更改此属性的默认设置。|  
-|**工作区服务器**|localhost|此属性指定在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中创作模型项目时将用于承载工作区数据库的默认服务器。 在本地计算机上运行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的所有可用实例都将包括在列表框中。<br /><br /> 若要指定其他 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器（在表格模式下运行），请键入服务器名称。 登录的用户必须是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器上的管理员。<br /><br /> 请注意，建议指定本地[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]工作区服务器所在的服务器。 对于远程服务器上的工作区数据库，不支持从 PowerPivot 进行导入，数据不能在本地备份，并且在查询过程中用户界面可能会遇到滞后的情况。<br /><br /> 另请注意，可以在的数据建模页上更改此属性的默认设置[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]工具 \ 选项对话框中的设置。|  
+|**工作区保持期**|从内存中卸载|指定在关闭某一模型项目后将如何保留工作区数据库。 工作区数据库将包含模型元数据和导入的数据。 在某些情况下，工作区数据库可能会非常大并且占用大量内存。 默认情况下，关闭 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中的模型项目时，将从内存中卸载工作区数据库。 在更改此设置时，一定要考虑您的可用内存资源以及计划处理该模型项目的频繁程度。 此属性设置具有以下选项：<br /><br /> **保留在内存中**-指定在关闭模型项目后将工作区数据库保留在内存中。 此选项将会占用较多内存；但在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中打开某一模型项目时，将会占用较少的资源并且工作区数据库将更快加载。<br /><br /> **从内存中卸载**-指定将工作区数据库保留在磁盘上，但在关闭模型项目后将不再保留在内存中。 此选项将会占用较少内存；但在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中打开某一模型项目时，必须重新附加工作区数据库；这样会占用更多资源，并且与工作区数据库保留在内存中相比，模型项目的加载速度将更慢。 在内存中资源受到限制或在处理远程工作区数据库时，将使用此选项。<br /><br /> **删除工作区**-指定从内存中删除工作区数据库，在关闭模型项目后不将工作区数据库保留在磁盘上。 此选项将会占用较少内存和存储空间；但在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中打开某一模型项目时，将会占用附加的资源，并且与工作区数据库保留在内存中或磁盘上相比，模型项目的加载速度将更慢。 只有在偶尔处理模型项目时，才使用此选项。<br /><br /> <br /><br /> 可以在 "位于对话框" 对话框中**Analysis Server**设置 "的"**数据建模**"页上更改此属性的默认设置。|  
+|**工作区服务器**|localhost|此属性指定在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中创作模型项目时将用于承载工作区数据库的默认服务器。 在本地计算机上运行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的所有可用实例都将包括在列表框中。<br /><br /> 若要指定其他 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器（在表格模式下运行），请键入服务器名称。 登录的用户必须是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器上的管理员。<br /><br /> 请注意，建议你将本地[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]服务器指定为工作区服务器。 对于远程服务器上的工作区数据库，不支持从 PowerPivot 进行导入，数据不能在本地备份，并且在查询过程中用户界面可能会遇到滞后的情况。<br /><br /> 另请注意，可以在 "位于对话框" 对话框的 "设置" 中[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的 "数据建模" 页上更改此属性的默认设置。|  
   
-##  <a name="bkmk_use_ssms"></a> 使用 SSMS 管理工作区数据库  
+##  <a name="bkmk_use_ssms"></a>使用 SSMS 管理工作区数据库  
  可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 连接到承载工作区数据库的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器。 通常，无需对工作区数据库进行管理；例外的情况是分离或删除工作区数据库，这必须从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]执行。  
   
 > [!WARNING]  
@@ -75,12 +75,12 @@ ms.locfileid: "66066261"
   
 ##  <a name="bkmk_related_tasks"></a> 相关任务  
   
-|主题|Description|  
+|主题|说明|  
 |-----------|-----------------|  
-|[模型属性（SSAS 表格）](model-properties-ssas-tabular.md)|提供说明和配置步骤的模型工作区数据库属性。|  
+|[&#40;SSAS 表格&#41;的模型属性](model-properties-ssas-tabular.md)|提供模型的工作区数据库属性的说明和配置步骤。|  
   
-## <a name="see-also"></a>请参阅  
- [配置默认数据建模和部署属性（SSAS 表格）](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
- [项目属性（SSAS 表格）](properties-ssas-tabular.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;SSAS 表格&#41;配置默认数据建模和部署属性](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
+ [&#40;SSAS 表格&#41;的项目属性](properties-ssas-tabular.md)  
   
   

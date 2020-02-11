@@ -21,18 +21,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fb26ce238953f9bf4a3472385de6dd1bf5c167d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106251"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>图表（报表生成器和 SSRS）
-  如果要以可视格式汇总数据，请使用图表数据区域。 使用图表，您可以一眼就能看到大量的聚合信息。 创建图表前需仔细准备和了解数据，这一点很重要，因为这样做有助于您快速高效地设计图表。 有关详细信息，请参阅[向报表添加图表（报表生成器和 SSRS）](add-a-chart-to-a-report-report-builder-and-ssrs.md)。 若要开始立即使用图表，请参阅栏、 列、 迷你图和饼图中的教程[教程&#40;报表生成器&#41;](../report-builder-tutorials.md)或条形图和饼图教程中的[ &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)。  
+  如果要以可视格式汇总数据，请使用图表数据区域。 使用图表，您可以一眼就能看到大量的聚合信息。 创建图表前需仔细准备和了解数据，这一点很重要，因为这样做有助于您快速高效地设计图表。 有关详细信息，请参阅[向报表添加图表（报表生成器和 SSRS）](add-a-chart-to-a-report-report-builder-and-ssrs.md)。 若要立即开始使用图表，请参阅教程中的条形图、柱形图、迷你图和饼图教程[&#40;报表生成器&#41;](../report-builder-tutorials.md)或[REPORTING SERVICES 教程 &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)中的条形图和饼图教程。  
   
  下图显示了图表中使用的多种不同元素。  
   
- ![图表元素关系图](../media/rs-chartelementsc.gif "Chart elements diagram")  
+ ![图表元素关系图](../media/rs-chartelementsc.gif "图表元素关系图")  
   
  您可以将图表作为报表部件与报表分开发布。 [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66106251"
   
   
   
-##  <a name="SimilarMatrix"></a> 与矩阵的相似之处  
+##  <a name="SimilarMatrix"></a>与矩阵的相似之处  
  考虑图表的工作方式的方法之一就是将图表与矩阵进行比较。  
   
  ![从工具箱添加的新矩阵，选中](../media/rs-matrixtemplatenewselected.gif "从工具箱添加的新矩阵，选中")  
@@ -123,7 +123,7 @@ ms.locfileid: "66106251"
  [图表类型（报表生成器和 SSRS）](chart-types-report-builder-and-ssrs.md)  
  介绍 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]中可用的所有图表类型和子类型，包括使用各种图表类型的注意事项和最佳做法。  
   
- [设置图表格式（报表生成器和 SSRS）](formatting-a-chart-report-builder-and-ssrs.md)  
+ [设置图表格式&#40;报表生成器和 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
  使用格式设置可以改进整体外观，并突出显示您的图表的关键数据点。  
   
  [图表中的空白和 Null 数据点（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)  
@@ -147,7 +147,7 @@ ms.locfileid: "66106251"
  [图表故障排除（报表生成器和 SSRS）](troubleshoot-charts-report-builder-and-ssrs.md)  
  介绍用于处理图表的技巧。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [图像、文本框、矩形和线条（报表生成器和 SSRS）](rectangles-and-lines-report-builder-and-ssrs.md)   
  [交互式排序、文档结构图和链接（报表生成器和 SSRS）](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [嵌套数据区域（报表生成器和 SSRS）](nested-data-regions-report-builder-and-ssrs.md)   

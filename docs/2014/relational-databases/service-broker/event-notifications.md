@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1d7c74ee9963d93d289f589115712614a745dad1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68197768"
 ---
 # <a name="event-notifications"></a>事件通知
@@ -51,15 +51,15 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 ## <a name="event-notifications-concepts"></a>事件通知概念  
  创建事件通知时，将会在 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 实例和指定的目标服务之间打开一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会话。 通常会话保持为打开状态，只要事件通知作为一个对象存在于服务器实例中。 在某些出错情况下，会话可以在删除事件通知之前关闭。 这些会话从不在事件通知之间共享。 每个事件通知都有自己的排他会话。 显式结束会话将阻止目标服务接收更多消息，下一次事件通知激发时，会话将不会重新打开。  
   
- 事件信息作为 `xml` 类型的变量传递给 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服务，它提供了有关事件的发生时间、受影响的数据库对象、涉及的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理语句的信息以及其他信息。 有关事件通知生成的 XML 架构的详细信息，请参阅 [EVENTDATA (Transact-SQL)](/sql/t-sql/functions/eventdata-transact-sql)。  
+ 事件信息作为 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 类型的变量传递给 `xml` 服务，它提供了有关事件的发生时间、受影响的数据库对象、涉及的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理语句的信息以及其他信息。 有关事件通知生成的 XML 架构的详细信息，请参阅 [EVENTDATA (Transact-SQL)](/sql/t-sql/functions/eventdata-transact-sql)。  
   
-### <a name="event-notifications-vs-triggers"></a>事件通知与Triggers  
+### <a name="event-notifications-vs-triggers"></a>事件通知与触发器  
  下表对触发器和事件通知进行了比较。  
   
 |触发器|事件通知|  
 |--------------|-------------------------|  
 |DML 触发器响应数据操作语言 (DML) 事件。 DDL 触发器响应数据定义语言 (DDL) 事件。|事件通知响应 DDL 事件和部分 SQL 跟踪事件。|  
-|触发器可以运行 Transact-SQL 或公共语言运行时 (CLR) 托管代码。|事件通知不运行代码， 相反，他们发送`xml`到 Service Broker 服务的消息。|  
+|触发器可以运行 Transact-SQL 或公共语言运行时 (CLR) 托管代码。|事件通知不运行代码， 而是会将`xml`消息发送到 Service Broker 服务。|  
 |触发器在导致其激发的事务的作用域内同步处理。|事件通知可以异步处理，并且不在导致其激发的事务的作用域内运行。|  
 |触发器的使用者与导致触发器激发的事件紧密结合。|事件通知的使用者与导致事件通知激发的事件相分离。|  
 |触发器必须在本地服务器上处理。|事件通知可以在远程服务器上处理。|  
@@ -67,7 +67,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |DML 触发器名称的架构范围。 DDL 触发器名称是数据库范围或服务器范围的。|事件通知的名称由服务器或数据库限定范围。 QUEUE_ACTIVATION 事件的事件通知限定于一个特定的队列。|  
 |DML 触发器与其应用的表属于相同的所有者。|队列上的事件通知的所有者可以与所应用对象的所有者不同。|  
 |触发器支持 EXECUTE AS 子句。|事件通知不支持 EXECUTE AS 子句。|  
-|可以使用 EVENTDATA 函数，返回捕获 DDL 触发器事件信息`xml`数据类型。|事件通知将发送`xml`事件信息写入 Service Broker 服务。 该信息被格式化为与 EVENTDATA 函数的架构相同的架构。|  
+|可以使用 EVENTDATA 函数（该函数返回一个`xml`数据类型）捕获 DDL 触发器事件信息。|事件通知将`xml`事件信息发送到 Service Broker 服务。 该信息被格式化为与 EVENTDATA 函数的架构相同的架构。|  
 |有关触发器的元数据可在 **sys.triggers** 和 **sys.server_triggers** 目录视图中找到。|有关事件通知的元数据可在 **sys.event_notifications** 和 **sys.server_event_notifications** 目录视图中找到。|  
   
 ### <a name="event-notifications-vs-sql-trace"></a>事件通知与SQL 跟踪  
@@ -95,7 +95,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |介绍如何为发送消息到远程服务器中 Service Broker 的事件通知配置 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 对话安全模式。|[配置事件通知的对话安全模式](configure-dialog-security-for-event-notifications.md)|  
 |介绍如何返回有关事件通知的信息。|[获取有关事件通知的信息](get-information-about-event-notifications.md)|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [DDL 触发器](../triggers/ddl-triggers.md)   
  [DML 触发器](../triggers/dml-triggers.md)   
  [SQL 跟踪](../sql-trace/sql-trace.md)  

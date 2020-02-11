@@ -18,10 +18,10 @@ ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c312f8798ba4ad42eed327123c9adc5feacba8a8
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74412853"
 ---
 # <a name="sp_add_jobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "74412853"
 
   将步骤（操作）添加到 SQL 代理作业。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [transact-sql 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
   > [!IMPORTANT]  
   > 在[Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)上，大多数（但不是所有） SQL Server 代理作业类型都受支持。 有关详细信息，请参阅[Azure SQL 数据库托管实例与 SQL Server 的 t-sql 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
@@ -113,8 +113,8 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |值|说明（操作）|  
 |-----------|----------------------------|  
 |**1** （默认值）|成功后退出|  
-|**pps-2**|失败后退出|  
-|**三维空间**|转到下一步|  
+|**2**|失败后退出|  
+|**3**|转到下一步|  
 |**4**|中转到步骤*on_success_step_id*|  
   
 `[ @on_success_step_id = ] success_step_id`如果步骤成功并且*success_action*为**4**，则该作业中要执行的步骤的 ID。 *success_step_id*的值为**int**，默认值为**0**。  
@@ -123,9 +123,9 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 |值|说明（操作）|  
 |-----------|----------------------------|  
-|**2**|成功后退出|  
+|**1**|成功后退出|  
 |**2** （默认值）|失败后退出|  
-|**三维空间**|转到下一步|  
+|**3**|转到下一步|  
 |**4**|中转到步骤*on_fail_step_id*|  
   
 `[ @on_fail_step_id = ] fail_step_id`如果步骤失败并且*fail_action*为**4**，则该作业中要执行的步骤的 ID。 *fail_step_id*的值为**int**，默认值为**0**。  
@@ -149,7 +149,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |值|说明|  
 |-----------|-----------------|  
 |**0** （默认值）|覆盖输出文件|  
-|**pps-2**|追加到输出文件|  
+|**2**|追加到输出文件|  
 |**4**|将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作业步骤输出写入步骤历史记录|  
 |**8**|将日志写入表（覆盖现有的历史记录）|  
 |**16**|将日志写入表（追加到现有的历史记录）|  
@@ -215,6 +215,6 @@ GO
  [sp_help_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
  [sp_help_jobstep &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
  [sp_update_jobstep &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
- [&#40;Transact-sql&#41;系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

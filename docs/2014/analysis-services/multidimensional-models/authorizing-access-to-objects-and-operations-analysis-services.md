@@ -1,5 +1,5 @@
 ---
-title: 授权访问权限的对象和操作 (Analysis Services) |Microsoft Docs
+title: 授予对对象和操作的访问权限（Analysis Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,24 +20,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d6962452b5615b9b2607007ed86c09eed495f6f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077015"
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>授予对对象和操作的访问权限 (Analysis Services)
-  非管理用户对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库内的多维数据集、维度和挖掘模型的访问权限可通过一个或多个数据库角色的成员身份获得。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理员创建这些数据库角色，从而授予对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象的读取或读/写权限，然后向每个角色分配 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用户和组。  
+  非管理用户对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库内的多维数据集、维度和挖掘模型的访问权限可通过一个或多个数据库角色的成员身份获得。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]管理员创建这些数据库角色，授予对[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]对象的读取或读/写权限，然后将[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用户和组分配给每个角色。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 通过将与用户或组所属的每个数据库角色关联的权限组合起来，以此确定特定 Windows 用户或组的有效权限。 因此，如果一个数据库角色没有授予用户或组对维度、度量值或属性的查看权限，但另一个数据库角色授予了该用户或组此项权限，则该用户或组将有权查看对象。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]通过将与用户或组所属的每个数据库角色关联的权限相结合，确定特定 Windows 用户或组的有效权限。 因此，如果一个数据库角色没有授予用户或组对维度、度量值或属性的查看权限，但另一个数据库角色授予了该用户或组此项权限，则该用户或组将有权查看对象。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器管理员角色的成员和具有“完全控制”（管理员）权限的数据库角色成员可以访问数据库中的所有数据和元数据，并且查看特定对象时无需额外权限。 而且，不能拒绝 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器角色的成员访问任何数据库中任何对象，也不能拒绝在数据库中具有“完全控制”（管理员）权限的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库角色的成员访问该数据库中的任何对象。 可通过具有较少权限的单独角色对专门的管理操作（如处理）进行授权。 有关详细信息，请参阅[授予处理权限 (Analysis Services)](grant-process-permissions-analysis-services.md)。  
+>  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器管理员角色的成员和具有“完全控制”（管理员）权限的数据库角色成员可以访问数据库中的所有数据和元数据，并且查看特定对象时无需额外权限。 而且，不能拒绝 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器角色的成员访问任何数据库中任何对象，也不能拒绝在数据库中具有“完全控制”（管理员）权限的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库角色的成员访问该数据库中的任何对象。 可通过具有较少权限的单独角色对专门的管理操作（如处理）进行授权。 有关详细信息，请参阅[授予处理权限 (Analysis Services)](grant-process-permissions-analysis-services.md)。  
   
 ## <a name="list-roles-defined-for-your-database"></a>列出为你的数据库所定义的角色  
  管理员可以在 SQL Server Management Studio 中运行一个简单的 DMV 查询，获取在服务器上定义的全部角色的列表。  
   
-1.  在 SSMS 中，右键单击某个数据库，然后选择**新查询** | **MDX**。  
+1.  在 SSMS 中，右键单击数据库，然后选择 "**新建查询** | **MDX**"。  
   
 2.  键入以下查询并按下 F5 执行：  
   
@@ -52,13 +53,13 @@ ms.locfileid: "66077015"
   
  **步骤 1：服务器管理**  
   
- 作为第一步，请决定谁将具有服务器级别的管理员权限。 安装过程中，安装 SQL Server 的本地管理员根据要求需指定一个或多个 Windows 账户作为 Analysis Services 服务器管理员。 服务器管理员具有对服务器的全部可能的权限，包括查看、修改和删除服务器上的任何对象，或查看关联数据的权限。 安装完成后，服务器管理员可以添加或删除账户以更改此角色的成员身份。 请参阅[授予服务器管理员权限&#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)有关此权限级别的详细信息。  
+ 作为第一步，请决定谁将具有服务器级别的管理员权限。 安装过程中，安装 SQL Server 的本地管理员根据要求需指定一个或多个 Windows 账户作为 Analysis Services 服务器管理员。 服务器管理员具有对服务器的全部可能的权限，包括查看、修改和删除服务器上的任何对象，或查看关联数据的权限。 安装完成后，服务器管理员可以添加或删除账户以更改此角色的成员身份。 有关此权限级别的详细信息，请参阅[授予服务器管理员权限 &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) 。  
   
- **步骤 2：数据库管理**  
+ **步骤2：数据库管理**  
   
  接下来，创建了表格或多维解决方案后，将其作为数据库部署至服务器。 服务器管理员可以通过定义具有对所讨论数据库的完全控制权限的角色来委托数据库管理任务。 此角色的成员可以处理或查询该数据库中的对象，以及创建其他角色以访问数据库自身内的多维数据集、维度和其他对象。 有关详细信息，请参阅[授予数据库权限 (Analysis Services)](grant-database-permissions-analysis-services.md)。  
   
- **步骤 3：启用多维数据集或模型访问以查询和处理工作负荷**  
+ **步骤 3：启用多维数据集或模型访问以查询和处理工作负载**  
   
  默认情况下，仅服务器和数据库管理员拥有对多维数据集或表格模型的访问权限。 将这些数据结构提供给组织中的其他人员需要能够将 Windows 用户和组帐户映射到多维数据集或模型的其他角色分配以及可以指定 `Read` 特权的权限。 有关详细信息，请参阅[授予多维数据集或模型权限 (Analysis Services)](grant-cube-or-model-permissions-analysis-services.md)。  
   
@@ -67,9 +68,10 @@ ms.locfileid: "66077015"
 > [!NOTE]  
 >  用户不需要对基础关系数据库（ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 从该数据库加载其数据）中的关系表的任何权限，也不需要对运行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的计算机的任何文件级别权限。  
   
- **步骤 4 （可选）：允许或拒绝访问内部多维数据集对象**  
+ **步骤 4（可选）：允许或拒绝访问内部多维数据集对象**  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 为设置单个对象的权限提供了安全设置，其中包括数据模型中的维度成员和单元。 有关详细信息，请参阅[授予对维度数据的自定义访问权限 (Analysis Services)](grant-custom-access-to-dimension-data-analysis-services.md) 和[授予单元格数据的自定义访问权限 (Analysis Services)](grant-custom-access-to-cell-data-analysis-services.md)。  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 为设置单个对象的权限提供了安全设置，其中包括数据模型中的维度成员和单元。 有关详细信息，请参阅[授予对维度数据的自定义访问权限 (Analysis Services)](grant-custom-access-to-dimension-data-analysis-services.md) 和[授予单元格数据的自定义访问权限 (Analysis Services)](grant-custom-access-to-cell-data-analysis-services.md)。  
   
  你还可以根据用户标识更改权限。 通常这称为动态安全，可使用 [UserName (MDX)](/sql/mdx/username-mdx) 函数实现  
   
@@ -90,9 +92,9 @@ ms.locfileid: "66077015"
   
  使用与此类似的方法最大限度减少改动模型中的角色定义和角色成员身份，使角色分配可视化，从而轻松实现和维护多维数据集权限。  
   
-## <a name="see-also"></a>请参阅  
- [授予服务器管理员权限&#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
- [角色和权限 (Analysis Services)](roles-and-permissions-analysis-services.md)   
+## <a name="see-also"></a>另请参阅  
+ [&#40;Analysis Services 授予服务器管理员权限&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
+ [角色和权限 &#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)   
  [Analysis Services 支持的身份验证方法](../instances/authentication-methodologies-supported-by-analysis-services.md)  
   
   

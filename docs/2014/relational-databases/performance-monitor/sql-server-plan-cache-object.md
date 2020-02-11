@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ff1acb1fb3af2708b14b31eeb82aa0989685630c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68210814"
 ---
 # <a name="sql-server-plan-cache-object"></a>SQL Server Plan Cache 对象
@@ -25,7 +25,7 @@ ms.locfileid: "68210814"
   
  下表介绍了 **SQLServer:Plan Cache**计数器。  
   
-|SQL Server Plan Cache 计数器|描述|  
+|SQL Server Plan Cache 计数器|说明|  
 |------------------------------------|-----------------|  
 |**Cache Hit Ratio**|高速缓存命中次数和查找次数的比率。|  
 |**Cache Object Counts**|高速缓存中高速缓存的对象数。|  
@@ -34,7 +34,7 @@ ms.locfileid: "68210814"
   
  对象中的每个计数器均包含以下实例：  
   
-|Plan Cache 实例|描述|  
+|Plan Cache 实例|说明|  
 |-------------------------|-----------------|  
 |**_Total**|所有类型的缓存实例的信息。|  
 |**Sql 计划**|由一个临时的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询（包括自动参数化查询）生成的查询计划，或使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] sp_prepare **或** sp_cursorprepare **预备的**语句生成的查询计划。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将临时的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的计划存入缓存，以便将来需要执行相同的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句时再次使用。 用户参数化的查询（即使未显式准备）也作为准备好的 SQL 计划监视。|  
@@ -43,7 +43,7 @@ ms.locfileid: "68210814"
 |**扩展存储过程**|扩展存储过程的目录信息。|  
 |**临时表和表变量**|与临时表和表变量相关的缓存信息。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [“服务器内存”服务器配置选项](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
  [SQL Server Buffer Manager 对象](sql-server-buffer-manager-object.md)   
  [监视资源使用情况（系统监视器）](monitor-resource-usage-system-monitor.md)  

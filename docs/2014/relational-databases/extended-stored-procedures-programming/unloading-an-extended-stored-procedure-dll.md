@@ -14,24 +14,24 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2772c8d6470f9ad6eb5e8b7cadb6dedd136bd48b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63137586"
 ---
 # <a name="unloading-an-extended-stored-procedure-dll"></a>卸载扩展存储过程 DLL
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 请改用 CLR 集成。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]请改用 CLR 集成。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 立即加载到该 DLL 的函数之一进行调用扩展存储的过程 DLL。 该 DLL 会始终保持加载状态，直到服务器关闭或者系统管理员使用 DBCC 语句将其卸载。 例如，此命令将卸载**xp_hello.dll**，允许系统管理员联系，以将此文件的较新版本复制到目录，而无需关闭服务器：  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]调用 dll 的一项函数后，立即加载扩展存储过程 DLL。 该 DLL 会始终保持加载状态，直到服务器关闭或者系统管理员使用 DBCC 语句将其卸载。 例如，此命令卸载**xp_hello**，允许系统管理员将此文件的较新版本复制到目录而不关闭服务器：  
   
 ```  
 DBCC xp_hello(FREE)  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [DBCC dllname &#40;FREE&#41; &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-dllname-free-transact-sql)  
+## <a name="see-also"></a>另请参阅  
+ [DBCC dllname &#40;免费&#41; &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-dllname-free-transact-sql)  
   
   

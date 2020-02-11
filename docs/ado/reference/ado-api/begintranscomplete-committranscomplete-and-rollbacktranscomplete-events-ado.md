@@ -1,5 +1,5 @@
 ---
-title: BeginTrans、 CommitTrans RollbackTrans 事件 (ADO) |Microsoft Docs
+title: BeginTrans、CommitTrans、RollbackTrans 事件（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -23,20 +23,20 @@ ms.assetid: ec4e4b38-e9c6-4757-b2ef-4e468ae5f1d8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 750e89e97eb916c7db23e71475b753a57a4d90e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920449"
 ---
-# <a name="begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado"></a>BeginTransComplete、 CommitTransComplete 和 RollbackTransComplete 事件 (ADO)
-将对关联的操作之后调用这些事件[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象完成执行。  
+# <a name="begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado"></a>BeginTransComplete、CommitTransComplete 和 RollbackTransComplete 事件（ADO）
+当[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象上的关联操作完成执行后，将调用这些事件。  
   
--   **BeginTransComplete**后，会调用[BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)操作。  
+-   **BeginTransComplete**在[BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)操作后调用。  
   
--   **CommitTransComplete**后，会调用[CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)操作。  
+-   **CommitTransComplete**在[CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)操作后调用。  
   
--   **RollbackTransComplete**后，会调用[RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)操作。  
+-   **RollbackTransComplete**在[RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)操作后调用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,28 +47,28 @@ CommitTransComplete pError, adStatus, pConnection
 RollbackTransComplete pError, adStatus, pConnection  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *TransactionLevel*  
- 一个**长**值，该值包含的新事务级别**BeginTrans**导致此事件。  
+ 一个**长整型**值，该值包含引发此事件的**BeginTrans**的新事务级别。  
   
  *pError*  
- [错误](../../../ado/reference/ado-api/error-object.md)对象。 它描述的错误的发生 EventStatusEnum 值是否**adStatusErrorsOccurred**; 不会设置。  
+ 一个[错误](../../../ado/reference/ado-api/error-object.md)对象。 它描述了 EventStatusEnum 的值为**adStatusErrorsOccurred**时所发生的错误;否则，不会设置。  
   
  *adStatus*  
- [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)状态值。 当调用其中的任何事件时，此参数设置为**adStatusOK**引发该事件的操作是否成功，或向**adStatusErrorsOccurred**如果操作失败。  
+ [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)状态值。 当调用这些事件中的任何一个时，如果导致事件的操作成功，则将此参数设置为**adStatusOK** ; 如果操作失败，则设置为**adStatusErrorsOccurred** 。  
   
- 这些事件可以通过将此参数设置为阻止后续通知**adStatusUnwantedEvent**事件返回之前。  
+ 这些事件可以通过在事件返回之前将此参数设置为**adStatusUnwantedEvent**来阻止后续通知。  
   
  *pConnection*  
- **连接**发生此事件的对象。  
+ 发生此事件的**连接**对象。  
   
 ## <a name="remarks"></a>备注  
- 视觉对象中C++，则多**连接**可以共享同一个事件处理方法。 该方法使用返回**连接**对象，以确定哪个对象引发事件的原因。  
+ 在 Visual C++ 中，多个**连接**可以共享同一事件处理方法。 方法使用返回的**连接**对象来确定导致事件的对象。  
   
- 如果[特性](../../../ado/reference/ado-api/attributes-property-ado.md)属性设置为**adXactCommitRetaining**或**adXactAbortRetaining**，提交或回滚事务后启动新事务。 使用**BeginTransComplete**要忽略所有事件，但第一个事务开始事件。  
+ 如果 "[属性](../../../ado/reference/ado-api/attributes-property-ado.md)" 属性设置为**adXactCommitRetaining**或**adXactAbortRetaining**，则在提交或回滚事务后将启动新事务。 使用**BeginTransComplete**事件可忽略第一个事务开始事件之外的所有事件。  
   
-## <a name="see-also"></a>请参阅  
- [ADO 事件模型示例 （VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [BeginTrans、 CommitTrans 和 RollbackTrans 方法示例 (VB)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
+## <a name="see-also"></a>另请参阅  
+ [ADO 事件模型示例（VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+ [BeginTrans、CommitTrans 和 RollbackTrans 方法示例（VB）](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
  [ADO 事件处理程序摘要](../../../ado/guide/data/ado-event-handler-summary.md)   
  [BeginTrans、CommitTrans 和 RollbackTrans 方法 (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)

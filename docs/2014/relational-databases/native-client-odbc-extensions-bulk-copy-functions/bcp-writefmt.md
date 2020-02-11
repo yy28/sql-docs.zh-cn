@@ -1,5 +1,5 @@
 ---
-title: bcp_writefmt | Microsoft Docs
+title: bcp_writefmt |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,13 +19,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d4a5067598b475ed8fe103606088d0e4d6d0554
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62689410"
 ---
-# <a name="bcpwritefmt"></a>bcp_writefmt
+# <a name="bcp_writefmt"></a>bcp_writefmt
   创建一个格式化文件，它包含对当前大容量复制数据文件的格式的说明。  
   
 ## <a name="syntax"></a>语法  
@@ -44,7 +44,7 @@ szFormatFile
   
 ## <a name="arguments"></a>参数  
  *hdbc*  
- 是大容量复制启用 ODBC 连接句柄。  
+ 是启用大容量复制的 ODBC 连接句柄。  
   
  *szFormatFile*  
  接收数据文件格式值的用户文件的路径和文件名。  
@@ -53,14 +53,14 @@ szFormatFile
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>备注  
- 格式化文件指定大容量复制所创建的数据文件的数据格式。 调用[bcp_columns](bcp-columns.md)并[bcp_colfmt](bcp-colfmt.md)定义数据文件的格式。 **bcp_writefmt**引用的文件中保存此定义*szFormatFile*。 有关详细信息，请参阅[bcp_init](bcp-init.md)。  
+ 格式化文件指定大容量复制所创建的数据文件的数据格式。 对[bcp_columns](bcp-columns.md)和[bcp_colfmt](bcp-colfmt.md)的调用定义数据文件的格式。 **bcp_writefmt**在*szformatfile 所*引用的文件中保存此定义。 有关详细信息，请参阅[bcp_init](bcp-init.md)。  
   
- 有关结构的详细信息**bcp**数据格式文件，请参阅[导入和导出大容量数据使用 bcp 实用工具&#40;SQL Server&#41;](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)。  
+ 有关**bcp**数据格式文件的结构的详细信息，请参阅[使用 Bcp 实用工具导入和导出大容量数据 &#40;SQL Server&#41;](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)。  
   
  若要加载已保存的格式化文件，请使用[bcp_readfmt](bcp-readfmt.md)。  
   
 > [!NOTE]  
->  生成格式化文件**bcp_writefmt**仅受新版**bcp**实用程序一起分发[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]7.0 和更高版本。  
+>  仅在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本7.0 和更高版本分发的**bcp**实用工具版本中支持**bcp_writefmt**生成的格式化文件。  
   
 ## <a name="example"></a>示例  
   
@@ -117,7 +117,7 @@ if (bcp_exec(hdbc, &nRowsProcessed) == SUCCEED)
 // Carry on.  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [大容量复制函数](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

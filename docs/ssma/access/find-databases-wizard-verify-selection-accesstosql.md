@@ -1,5 +1,5 @@
 ---
-title: 查找数据库向导 （验证所选内容） (AccessToSQL) |Microsoft Docs
+title: 查找数据库向导（验证所选内容）（AccessToSQL） |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,27 +12,27 @@ ms.assetid: 62e20e03-50cc-4ac8-8072-524d194d2ec3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2edf02c31b8b52d6743113e6c6c5878bf5180a83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68024741"
 ---
-# <a name="find-databases-wizard-verify-selection-accesstosql"></a>查找数据库向导 （验证所选内容） (AccessToSQL)
-查找数据库向导的验证所选内容页上列出的文件添加到 SSMA。 如果不正确的文件列表，请单击**回**修改的列表。 否则，请单击**完成**若要添加的文件。  
+# <a name="find-databases-wizard-verify-selection-accesstosql"></a>查找数据库向导（验证所选内容）（AccessToSQL）
+"查找数据库" 向导的 "验证选择" 页列出了要添加到 SSMA 中的文件。 如果文件列表不正确，请单击 "**上一步**" 修改列表。 否则，单击 "**完成**" 以添加文件。  
   
-若要查找数据库向导中，打开在**文件**菜单上，单击**查找数据库**。  
+若要打开 "查找数据库向导"，请在 "**文件**" 菜单上单击 "**查找数据库**"。  
   
 ## <a name="options"></a>选项  
 **文件名**  
-显示要添加到 SSMA 访问数据库文件的名称。  
+显示要添加到 SSMA 的 Access 数据库文件的名称。  
   
 **文件路径**  
-显示 Access 数据库文件的路径。  
+显示访问数据库文件的路径。  
   
-**“所有者”**  
+**所有者**  
 显示文件的所有者。  
   
-## <a name="see-also"></a>请参阅  
-[用户界面 Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+## <a name="see-also"></a>另请参阅  
+[用户界面参考（访问）](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

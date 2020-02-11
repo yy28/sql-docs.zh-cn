@@ -1,5 +1,5 @@
 ---
-title: sys.fn_listextendedproperty (TRANSACT-SQL) |Microsoft Docs
+title: sys. fn_listextendedproperty （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -27,19 +27,19 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9a2516d24b65e509ffc04c0f9979721ad6eefa22
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68082699"
 ---
-# <a name="sysfnlistextendedproperty-transact-sql"></a>sys.fn_listextendedproperty (Transact-SQL)
+# <a name="sysfn_listextendedproperty-transact-sql"></a>sys.fn_listextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   返回数据库对象的扩展属性值。  
  
  
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -57,53 +57,53 @@ fn_listextendedproperty (
 ```  
   
 ## <a name="arguments"></a>参数  
- {默认 |'*property_name*|NULL}  
- 是该属性的名称。 *property_name*是**sysname**。 有效输入包括默认值 NULL 或属性名。  
+ {默认值 |"*property_name*" |无效  
+ 属性的名称。 *property_name* **sysname**。 有效输入包括默认值 NULL 或属性名。  
   
- {默认 |'*level0_object_type*|NULL}  
- 用户或用户定义类型。 *level0_object_type*是**varchar （128)** ，默认值为 NULL。 有效输入包括 ASSEMBLY、CONTRACT、EVENT NOTIFICATION、FILEGROUP、MESSAGE TYPE、PARTITION FUNCTION、PARTITION SCHEME、REMOTE SERVICE BINDING、ROUTE、SCHEMA、SERVICE、TRIGGER、TYPE、USER 和 NULL。  
+ {默认值 |"*level0_object_type*" |无效  
+ 用户或用户定义类型。 *level0_object_type*的值为**varchar （128）**，默认值为 NULL。 有效输入包括 ASSEMBLY、CONTRACT、EVENT NOTIFICATION、FILEGROUP、MESSAGE TYPE、PARTITION FUNCTION、PARTITION SCHEME、REMOTE SERVICE BINDING、ROUTE、SCHEMA、SERVICE、TRIGGER、TYPE、USER 和 NULL。  
   
 > [!IMPORTANT]  
 >  作为级别 0 类型的 USER 和 TYPE 将在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中删除。 请避免在新的开发工作中使用这些功能，并考虑修改当前使用这些功能的应用程序。 改用 SCHEMA 替代 USER 作为级别 0 类型。 对于 TYPE，请使用 SCHEMA 作为级别 0 类型，使用 TYPE 作为级别 1 类型。  
   
- {默认 |'*level0_object_name*|NULL}  
- 所指定的级别 0 对象类型的名称。 *level0_object_name*是**sysname**默认值为 NULL。 有效输入包括默认值 NULL 或对象名称。  
+ {默认值 |"*level0_object_name*" |无效  
+ 所指定的级别 0 对象类型的名称。 *level0_object_name*的值为**sysname** ，默认值为 NULL。 有效输入包括默认值 NULL 或对象名称。  
   
- {默认 |'*level1_object_type*|NULL}  
- 级别 1 对象的类型。 *level1_object_type*是**varchar （128)** 默认值为 NULL。 有效的输入包括：AGGREGATE、DEFAULT、FUNCTION、LOGICAL FILE NAME、PROCEDURE、QUEUE、RULE、SYNONYM、TABLE、TYPE、VIEW、XML SCHEMA COLLECTION 和 NULL。  
+ {默认值 |"*level1_object_type*" |无效  
+ 级别 1 对象的类型。 *level1_object_type*的值为**varchar （128）** ，默认值为 NULL。 有效的输入包括：AGGREGATE、DEFAULT、FUNCTION、LOGICAL FILE NAME、PROCEDURE、QUEUE、RULE、SYNONYM、TABLE、TYPE、VIEW、XML SCHEMA COLLECTION 和 NULL。  
   
 > [!NOTE]  
 >  默认值映射到 NULL，而“default”映射到对象类型 DEFAULT。  
   
- {默认 |'*level1_object_name*|NULL}  
- 所指定的级别 1 对象类型的名称。 *level1_object_name*是**sysname**默认值为 NULL。 有效输入包括默认值 NULL 或对象名称。  
+ {默认值 |"*level1_object_name*" |无效  
+ 所指定的级别 1 对象类型的名称。 *level1_object_name*的值为**sysname** ，默认值为 NULL。 有效输入包括默认值 NULL 或对象名称。  
   
- {默认 |'*level2_object_type*|NULL}  
- 级别 2 对象的类型。 *level2_object_type*是**varchar （128)** 默认值为 NULL。 有效输入包括 DEFAULT、默认值（映射到 NULL）和 NULL。 有效的输入*level2_object_type*是列、 约束、 事件通知、 索引、 参数、 触发器和 NULL。  
+ {默认值 |"*level2_object_type*" |无效  
+ 级别 2 对象的类型。 *level2_object_type*的值为**varchar （128）** ，默认值为 NULL。 有效输入包括 DEFAULT、默认值（映射到 NULL）和 NULL。 *Level2_object_type*的有效输入为 COLUMN、CONSTRAINT、EVENT NOTIFICATION、INDEX、PARAMETER、TRIGGER 和 NULL。  
   
- {默认 |'*level2_object_name*|NULL}  
- 所指定的级别 2 对象类型的名称。 *level2_object_name*是**sysname**默认值为 NULL。 有效输入包括默认值 NULL 或对象名称。  
+ {默认值 |"*level2_object_name*" |无效  
+ 所指定的级别 2 对象类型的名称。 *level2_object_name*的值为**sysname** ，默认值为 NULL。 有效输入包括默认值 NULL 或对象名称。  
   
 ## <a name="tables-returned"></a>返回的表  
  下面是 fn_listextendedproperty 返回的表的格式。  
   
-|列名|数据类型|  
+|列名称|数据类型|  
 |-----------------|---------------|  
 |objtype|**sysname**|  
 |objname|**sysname**|  
 |name|**sysname**|  
-|value|**sql_variant**|  
+|值|**sql_variant**|  
   
  如果返回的表为空，可能对象没有扩展属性或用户不具有列出对象扩展属性的权限。 当返回数据库本身的扩展属性时，objtype 和 objname 列将为 NULL。  
   
 ## <a name="remarks"></a>备注  
- 如果为值*property_name*为 NULL 或默认值，则 fn_listextendedproperty 将返回指定的对象的所有属性。  
+ 如果*property_name*的值为 NULL 或默认值，则 fn_listextendedproperty 返回指定对象的所有属性。  
   
  如果指定了对象类型，并且对应的对象名的值为 NULL 或默认值，则 fn_listextendedproperty 将返回指定类型的所有对象的所有扩展属性。  
   
  对象是按级别区分的，级别 0 为最高，级别 2 为最低。 如果指定了较低级别的对象（级别 1 或级别 2）的类型和名称，则父对象类型和名称应当为 NULL 或默认值以外的给定值。 否则，此函数返回空结果集。  
   
- **objname**固定为 Latin1_General_CI_AI。 但是即可解决此问题通过重写中比较的排序规则。  
+ **objname**已固定为 Latin1_General_CI_AI。 不过，可以通过在比较中覆盖排序规则来解决此问题。  
   
 ```  
 SELECT o.[object_id] AS 'table_id', o.[name] 'table_name',  
@@ -142,7 +142,7 @@ GO
  `(1 row(s) affected)`  
   
 ### <a name="b-displaying-extended-properties-on-all-columns-in-a-table"></a>B. 显示表中所有列的扩展属性  
- 以下示例列出了中的列的扩展的属性`ScrapReason`表。 这包含在架构 `Production` 中。  
+ 下面的示例列出了`ScrapReason`表中的列的扩展属性。 这包含在架构 `Production` 中。  
   
 ```  
 USE AdventureWorks2012;  
@@ -167,7 +167,7 @@ GO
  `(3 row(s) affected)`  
   
 ### <a name="c-displaying-extended-properties-on-all-tables-in-a-schema"></a>C. 显示架构中所有表的扩展属性  
- 以下示例列出了中包含的所有表的扩展的属性`Sales`架构。  
+ 下面的示例列出了包含在`Sales`架构中的所有表的扩展属性。  
   
 ```  
 USE AdventureWorks2012;  
@@ -177,10 +177,10 @@ FROM fn_listextendedproperty (NULL, 'schema', 'Sales', 'table', default, NULL, N
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [sp_addextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
- [sp_dropextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
- [sp_updateextendedproperty &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   
- [sys.extended_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
+## <a name="see-also"></a>另请参阅  
+ [sp_addextendedproperty &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
+ [sp_dropextendedproperty &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
+ [sp_updateextendedproperty &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   
+ [sys. extended_properties &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
   
   

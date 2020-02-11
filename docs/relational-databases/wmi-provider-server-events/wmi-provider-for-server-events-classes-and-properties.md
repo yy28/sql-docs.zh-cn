@@ -15,10 +15,10 @@ ms.assetid: e2916cd7-a3ed-41e6-97b4-2ee060754cbe
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 08b18a3a5805b37a371d6fa17850584d6f4953fd
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74164908"
 ---
 # <a name="wmi-provider-for-server-events-classes-and-properties"></a>WMI Provider for Server Events 类和属性
@@ -27,7 +27,7 @@ ms.locfileid: "74164908"
   
  若要了解可以通过事件或事件组查询的属性，请参考事件架构。 默认情况下，事件架构安装在以下目录中：[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd。  
   
- 或者，你可以参考[https://schemas.microsoft.com/sqlserver](https://go.microsoft.com/fwlink/?linkid=43100)上发布的事件架构。  
+ 或者，您可以引用在处[https://schemas.microsoft.com/sqlserver](https://go.microsoft.com/fwlink/?linkid=43100)发布的事件架构。  
   
  例如，通过引用 ALTER_DATABASE 事件，您将了解其父事件 DDL_SERVER_LEVEL_EVENTS，其属性为**TSQLCommand**和**DatabaseName**。 此事件还继承属性**SQLInstance**、 **PostTime**、 **ComputerName**、 **SPID**和**LoginName**。 该事件没有子事件。  
   
@@ -36,14 +36,14 @@ ms.locfileid: "74164908"
   
  **数据定义语言事件和事件组**  
   
- ![用于服务器事件的 WMI 提供程序事件树](../../relational-databases/wmi-provider-server-events/media/sql-wmi-ddl-events-ktm.gif "用于服务器事件的 WMI 提供程序事件树")  
+ ![WMI Provider for Server Events 事件树](../../relational-databases/wmi-provider-server-events/media/sql-wmi-ddl-events-ktm.gif "WMI Provider for Server Events 事件树")  
   
  **跟踪事件和事件组**  
   
  ![跟踪事件和事件组](../../relational-databases/wmi-provider-server-events/media/sql-wmi-trc-all-events.gif "跟踪事件和事件组")  
   
 ## <a name="see-also"></a>另请参阅  
- [WMI Provider For Server Events 的概念](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)   
+ [WMI Provider for Server Events 的概念](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)   
  [将 WQL 与 WMI Provider for Server Events 结合使用](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)  
   
   

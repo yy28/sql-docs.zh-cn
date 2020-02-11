@@ -14,10 +14,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: 83009008745a696919aa5ae5795d60ddfe9ba80b
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73632881"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>数据迁移助手的新增功能
@@ -31,7 +31,7 @@ ms.locfileid: "73632881"
 - 适用于 Windows 的 SQL Server 2019 和 SQL Server 2019 （适用于 Linux）作为目标以便进行评估和升级。
 - 保存和加载评估，包括对保存和加载在数据迁移助手早期版本中创建的评估的支持。
 - 评估托管在 SSISDB 和包存储区中的 SSIS 包中的 SQL Server Integration Services （SSIS）项目。 数据库迁移助手检测在源包中使用的不受支持、部分支持或弃用的功能和兼容性问题，并提供有助于解决这些问题的建议。
-- 从外部应用程序（例如，源代码中的C# sql 查询）评估 sql 查询。 用户可以使用数据访问迁移工具包为源代码中C#使用的 SQL 查询生成完整的 JSON 报表，然后将报表上传到数据迁移助手。
+- 从外部应用程序评估 SQL 查询，例如 c # 源代码中的 SQL 查询。 用户可以使用数据访问迁移工具包为 c # 源代码中使用的 SQL 查询生成完整的 JSON 报表，然后将报表上传到数据迁移助手。
 
 此外，此版本的数据迁移助手提供附加的增强功能和 bug 修复，并且该工具已更新为 .Net 4.7.2。
 
@@ -90,7 +90,7 @@ ms.locfileid: "73632881"
 
 ## <a name="data-migration-assistant-v36"></a>数据迁移助手3。6
 
-3\.6 版数据迁移助手为受最常见的迁移阻止程序影响的架构对象引入 "自动修复"。
+3.6 版数据迁移助手为受最常见的迁移阻止程序影响的架构对象引入 "自动修复"。
 
 此版本为以下迁移阻止程序和行为更改问题提供了 autofix：
 
@@ -181,7 +181,7 @@ Linux 和 Windows 使用不同的路径格式。 因此，迁移到 Linux 上的
 - 发现目标 SQL Server 平台中的新功能，数据库在升级后可从中受益。 任何发现均被描述为功能建议，并分为以下几个方面：
   - 性能
   - 安全性
-  - 存储器
+  - 存储
 - 执行评估的新式用户体验。
 
 ## <a name="see-also"></a>另请参阅

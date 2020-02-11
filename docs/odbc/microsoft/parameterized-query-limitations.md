@@ -14,11 +14,11 @@ ms.assetid: 4edc0566-bba8-42b2-ab0e-60dfb67b5e7b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bc7d6a88cca932187d0b8ce5e09c82cb8420a63d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68043699"
 ---
 # <a name="parameterized-query-limitations"></a>参数化查询限制
-使用 Microsoft Access 驱动程序时，可以使用以下语法调用参数化的查询：调用*查询名称*[(*参数*[，*参数*]...)]。
+使用 Microsoft Access 驱动程序时，可以使用以下语法调用参数化查询：调用*查询名称*[（*参数*[，*参数*] ...）]。

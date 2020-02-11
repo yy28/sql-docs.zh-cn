@@ -1,5 +1,5 @@
 ---
-title: 'Stream (VisualC++使用 #import 语法索引) |Microsoft Docs'
+title: 'Stream （Visual C++ 语法索引与 #import） |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,13 +16,13 @@ ms.assetid: e59d0687-1f5a-45c5-9d0a-c1f27079495d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bdbd75a8b89ffdc6c100d3d124329c8212c4bdc3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930682"
 ---
-# <a name="stream-visual-c-syntax-index-with-import"></a>Stream (VisualC++使用 #import 语法索引)
+# <a name="stream-visual-c-syntax-index-with-import"></a>Stream （#import Visual C++ 语法索引）
 ## <a name="methods"></a>方法  
   
 ```  
@@ -57,7 +57,7 @@ HRESULT WriteText( _bstr_t Data, enum StreamWriteEnum
     Options );  
 ```  
   
-## <a name="properties"></a>properties  
+## <a name="properties"></a>属性  
   
 ```  
 _bstr_t GetCharset( );  
@@ -91,5 +91,5 @@ void PutType( enum StreamTypeEnum ptype );
 __declspec(property(get=GetType,put=PutType)) enum StreamTypeEnum Type;  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [流对象 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

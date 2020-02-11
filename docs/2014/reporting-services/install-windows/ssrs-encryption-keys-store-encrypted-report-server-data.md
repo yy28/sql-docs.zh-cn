@@ -18,21 +18,21 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8156e3d62e8aac027499ad1e267e1f6e14f5ef9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108691"
 ---
 # <a name="store-encrypted-report-server-data-ssrs-configuration-manager"></a>存储加密的报表服务器数据（SSRS 配置管理器）
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将加密值存储在报表服务器数据库和配置文件中。 大多数加密值都是用于访问向报表提供数据的外部数据源的凭据。 本主题介绍对哪些值进行了加密、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中使用的加密功能以及您应当了解的其他类型的已存储机密数据。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]将加密值存储在 Report Server 数据库和配置文件中。 大多数加密值都是用于访问向报表提供数据的外部数据源的凭据。 本主题介绍对哪些值进行了加密、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中使用的加密功能以及您应当了解的其他类型的已存储机密数据。  
   
 ## <a name="encrypted-values"></a>加密值  
  下面列出了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装中所存储的值。  
   
 -   报表服务器用于连接到报表服务器数据库（存储内部服务器数据）的连接信息和凭据。  
   
-     这些值是在安装过程中或报表服务器配置期间指定和加密的。 您可以在任何时候使用 Reporting Services 配置工具或 **rsconfig** 实用工具更新连接信息。 对配置设置的加密则是使用对所有用户都可用的本地计算机的计算机级密钥来执行的。 加密的报表服务器连接信息存储在 rsreportserver.config 文件中（其他任何配置文件都不会包含加密设置）。 有关详细信息，请参阅 [配置报表服务器数据库连接（SSRS 配置管理器）](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)中支持的版本。  
+     这些值是在安装过程中或报表服务器配置期间指定和加密的。 您可以在任何时候使用 Reporting Services 配置工具或 **rsconfig** 实用工具更新连接信息。 对配置设置的加密则是使用对所有用户都可用的本地计算机的计算机级密钥来执行的。 加密的报表服务器连接信息存储在 rsreportserver.config 文件中（其他任何配置文件都不会包含加密设置）。 有关详细信息，请参阅[配置报表服务器数据库连接 &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  
   
 -   报表服务器用于连接到向报表提供数据的外部数据源的存储凭据。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66108691"
      此值是在安装过程中或服务器配置期间创建的，随后会以加密值的形式存储在报表服务器数据库中。 报表服务器 Windows 服务使用此密钥对存储在报表服务器数据库中的数据进行加密和解密。  
   
 ## <a name="encryption-functionality-in-reporting-services"></a>Reporting Services 中的加密功能  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用 Windows 操作系统提供的加密功能。 包括对称加密和非对称加密。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]使用 Windows 操作系统中的加密函数。 包括对称加密和非对称加密。  
   
  报表服务器数据库中的数据使用对称密钥进行加密。 每个报表服务器数据库只有一个对称密钥。 此对称密钥使用 Windows 生成的非对称密钥对的公钥进行自加密。 私钥由 Report Server Windows 服务帐户持有。  
   
@@ -62,9 +62,10 @@ ms.locfileid: "66108691"
  报表服务器中还存储有其他可能包含需保护的敏感信息的未加密数据。 具体来说，报表历史记录快照和报表执行快照包含的查询结果可能包括仅供授权用户使用的数据。 因此，对包含机密数据的报表使用快照功能时，需要注意，有权打开报表服务器数据库中的表的用户也能通过检查表的内容来查看所存储报表的部分内容。  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 对于所用参数基于用户安全标识的报表，不支持缓存或报表历史记录。  
+>  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 对于所用参数基于用户安全标识的报表，不支持缓存或报表历史记录。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置和管理加密密钥（SSRS 配置管理器）](ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

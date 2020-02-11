@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0c914c31f760021a10c4f26a85bcd1d995f3ef07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106475"
 ---
 # <a name="area-charts-report-builder-and-ssrs"></a>面积图（报表生成器和 SSRS）
@@ -33,7 +33,7 @@ ms.locfileid: "66106475"
   
 -   **百分比堆积面积图**。 一种多个序列垂直堆积以占满整个图表区的面积图。 如果图表中只有一个序列，则这种堆积面积图将与一般面积图的显示相同。  
   
--   **平滑面积图**。 一种由平滑线而非规则线连接数据点的面积图。 如果您更加关注显示走向而非显示各个数据点的值，则应使用平滑面积图而非一般的面积图。  
+-   **平滑区域**。 一种由平滑线而非规则线连接数据点的面积图。 如果您更加关注显示走向而非显示各个数据点的值，则应使用平滑面积图而非一般的面积图。  
   
 ## <a name="data-considerations-for-area-charts"></a>面积图的数据注意事项  
   
@@ -45,15 +45,15 @@ ms.locfileid: "66106475"
   
 -   在一般的面积图中，如果多个序列中的值相似，则面积可能会发生重叠，从而遮挡了重要的数据点值。 可以通过将图表类型更改为堆积面积图来解决此问题，堆积面积图的设计目的就是为了在面积图上显示多个序列。  
   
--   如果堆积面积图中含有间隙，可能是因为数据集包含空值，空值在堆积面积图上将显示为空白区域。 如果数据集包含空值，请考虑在图表中插入空点。 如果添加空点，则会用一种不同的颜色填充图表上的空白区域以指示 Null 或零值。 有关详细信息，请参阅[向图表添加空点&#40;报表生成器和 SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)。  
+-   如果堆积面积图中含有间隙，可能是因为数据集包含空值，空值在堆积面积图上将显示为空白区域。 如果数据集包含空值，请考虑在图表中插入空点。 如果添加空点，则会用一种不同的颜色填充图表上的空白区域以指示 Null 或零值。 有关详细信息，请参阅[向图表添加空点 &#40;报表生成器和 SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)。  
   
 -   面积图类型在行为上与柱形图和折线图非常相似。 如果要在多个序列之间进行比较，请考虑改用柱形图。 如果要分析在一段时间内的走向，请考虑使用折线图。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   
  [图表类型（报表生成器和 SSRS）](chart-types-report-builder-and-ssrs.md)   
- [折线图（报表生成器和 SSRS）](line-charts-report-builder-and-ssrs.md)   
- [更改图表类型（报表生成器和 SSRS）](change-a-chart-type-report-builder-and-ssrs.md)   
+ [折线图 &#40;报表生成器和 SSRS&#41;](line-charts-report-builder-and-ssrs.md)   
+ [更改图表类型 &#40;报表生成器和 SSRS&#41;](change-a-chart-type-report-builder-and-ssrs.md)   
  [图表中的空白和 Null 数据点（报表生成器和 SSRS）](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
   
   

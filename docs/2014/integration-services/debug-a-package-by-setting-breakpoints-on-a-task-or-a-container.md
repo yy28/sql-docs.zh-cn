@@ -1,5 +1,5 @@
 ---
-title: 通过在任务或容器上设置断点调试包 |Microsoft Docs
+title: 通过在任务或容器中设置断点来调试包 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 907caaa37c429dd2f788d0123f7f8ee0bbf8a27a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059661"
 ---
 # <a name="debug-a-package-by-setting-breakpoints-on-a-task-or-a-container"></a>通过在任务或容器上设置断点调试包
@@ -32,19 +32,19 @@ ms.locfileid: "66059661"
   
 3.  在 SSIS 设计器中，执行下列操作：  
   
-    -   若要在包对象中设置断点，请单击“控制流”选项卡，将光标置于设计图面背景的任意位置，右键单击，再单击“编辑断点”   。  
+    -   若要在包对象中设置断点，请单击“控制流”选项卡，将光标置于设计图面背景的任意位置，右键单击，再单击“编辑断点”********。  
   
-    -   若要在包控制流中设置断点，请单击“控制流”选项卡，右键单击任务、For 循环容器、Foreach 循环容器或序列容器，再单击“编辑断点”   。  
+    -   若要在包控制流中设置断点，请单击“控制流”选项卡，右键单击任务、For 循环容器、Foreach 循环容器或序列容器，再单击“编辑断点”********。  
   
-    -   若要在事件处理程序中设置断点，请单击“事件处理程序”选项卡，右键单击任务、For 循环容器、Foreach 循环容器或序列容器，再单击“编辑断点”   。  
+    -   若要在事件处理程序中设置断点，请单击“事件处理程序”选项卡，右键单击任务、For 循环容器、Foreach 循环容器或序列容器，再单击“编辑断点”********。  
   
-4.  在“设置断点 \<容器名称>”  对话框中，选择要启用的断点。  
+4.  在“设置断点 **容器名称>”\<** 对话框中，选择要启用的断点。  
   
 5.  还可以修改每个断点的命中计数类型和命中计数数量。  
   
 6.  若要保存包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [包开发的故障排除工具](troubleshooting/troubleshooting-tools-for-package-development.md)   
  [通过在脚本任务和脚本组件中设置断点来调试脚本](data-flow/transformations/script-component.md)   
  [脚本任务的编码和调试](control-flow/script-task.md)   

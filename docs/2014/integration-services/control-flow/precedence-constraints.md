@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: da27e10af2a5483583976a13e54bf9087c20e9b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831693"
 ---
 # <a name="precedence-constraints"></a>优先约束
@@ -29,13 +29,14 @@ ms.locfileid: "62831693"
   
  优先约束链接两个可执行文件：优先可执行文件和受约束的可执行文件。 优先可执行文件先于受约束的可执行文件运行，而优先可执行文件的执行结果可能决定受约束的可执行文件是否运行。 下列关系图显示由优先约束链接的两个可执行文件。  
   
- ![由优先约束连接的可执行文件](../media/ssis-pcsimple.gif "Executables connected by a precedence constraint")  
+ ![由优先约束连接的可执行文件](../media/ssis-pcsimple.gif "由优先约束连接的可执行文件")  
   
  在线性控制流（即不分支的控制流）中，优先约束独自控制任务运行的顺序。 如果控制流有分支，则由 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 运行时引擎决定紧随分支之后的任务和容器的执行顺序。 运行时引擎还决定着控制流中未连接的工作流的执行顺序。  
   
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 的嵌套容器体系结构使得所有容器（除仅封装单个任务的任务宿主容器之外）均可包含其他容器，且每个容器都有自己的控制流。 For 循环容器、Foreach 循环容器和序列容器可以包含多个任务和其他容器，而这些任务和容器又可以包含多个任务和容器，如此逐层嵌套。 例如，带有脚本任务和序列容器的包具有链接该脚本任务和序列容器的优先约束。 序列容器包含三个脚本任务，且容器的优先约束将此三个脚本任务链接为控制流。 下列关系图显示包中带有两级嵌套的优先约束。  
+ 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 的嵌套容器体系结构使得所有容器（除仅封装单个任务的任务宿主容器之外）均可包含其他容器，且每个容器都有自己的控制流。 For 循环容器、Foreach 循环容器和序列容器可以包含多个任务和其他容器，而这些任务和容器又可以包含多个任务和容器，如此逐层嵌套。 例如，带有脚本任务和序列容器的包具有链接该脚本任务和序列容器的优先约束。 序列容器包含三个脚本任务，且容器的优先约束将此三个脚本任务链接为控制流。 下列关系图显示包中带有两级嵌套的优先约束。  
   
- ![包中的优先约束](../media/mw-dts-12.gif "Precedence contraints in a package")  
+ ![包中的优先约束](../media/mw-dts-12.gif "包中的优先约束")  
   
  由于包位于 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 容器层次结构的顶部，因此优先约束不能链接多个包；但是可以向包添加执行包任务并间接地将其他包链接到控制流中。  
   
@@ -50,7 +51,7 @@ ms.locfileid: "62831693"
 -   指定优先约束是单独计算还是与应用于受约束可执行文件的其他约束一起计算。  
   
 ## <a name="evaluation-operations"></a>求值运算  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供下列求值运算：  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]提供以下计算操作：  
   
 -   仅使用优先可执行文件的执行结果来决定受约束的可执行文件是否运行的约束。 优先可执行文件的执行结果可以为完成、成功或失败。 这是默认操作。  
   
@@ -60,7 +61,7 @@ ms.locfileid: "62831693"
   
 -   使用优先可执行文件执行结果或使用计算表达式返回结果的表达式或约束。  
   
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器用颜色标识优先约束的类型。 “成功”约束为绿色，“失败”约束为红色，而“完成”约束为蓝色。 若要在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中显示表明约束类型的文本标签，则必须配置 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器的可访问性功能。  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)]设计器使用颜色来标识优先约束的类型。 “成功”约束为绿色，“失败”约束为红色，而“完成”约束为蓝色。 若要在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中显示表明约束类型的文本标签，则必须配置 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器的可访问性功能。  
   
  表达式必须是有效的 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 表达式，且可以包含函数、运算符以及系统和自定义变量。 有关详细信息，请参阅 [Integration Services (SSIS) 表达式](../expressions/integration-services-ssis-expressions.md)和 [Integration Services (SSIS) 变量](../integration-services-ssis-variables.md)。  
   
@@ -97,7 +98,7 @@ ms.locfileid: "62831693"
 ## <a name="related-content"></a>相关内容  
  social.technet.microsoft.com 上的技术文章 [SSIS 表达式示例](https://go.microsoft.com/fwlink/?LinkId=220761)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [将表达式添加到优先约束](../add-expressions-to-precedence-constraints.md)   
  [多个优先约束](../multiple-precedence-constraints.md)  
   

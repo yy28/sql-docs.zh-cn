@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 639e31d8ec9282a948a7eda9050cc1a2025ac65e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060134"
 ---
 # <a name="create-parameters"></a>Create Parameters
@@ -29,22 +29,22 @@ ms.locfileid: "66060134"
   
 1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中打开包，然后在 SSIS 设计器中单击 **“参数”** 选项卡。  
   
-     ![包参数选项卡](media/denali-package-parameters.gif "Package Parameters Tab")  
+     ![包参数选项卡](media/denali-package-parameters.gif "包参数选项卡")  
   
 2.  单击工具栏上的 **“添加参数”** 按钮。  
   
-     ![添加工具栏按钮](media/denali-parameter-add.gif "Add Toolbar Button")  
+     ![添加工具栏按钮](media/denali-parameter-add.gif "添加工具栏按钮")  
   
 3.  为列表自身中或 **“属性”** 窗口中的 **“名称”**、 **“数据类型”**、 **“值”**、 **“敏感”** 和 **“必需”** 属性输入值。 下表对这些属性进行了说明：  
   
-    |属性|Description|  
+    |properties|说明|  
     |--------------|-----------------|  
-    |“属性”|参数名。|  
-    |“名称”|参数的数据类型。|  
+    |名称|参数的名称。|  
+    |数据类型|参数的数据类型。|  
     |默认值|在设计时分配的参数的默认值。 这也称为设计默认值。|  
-    |区分|敏感参数值在目录中加密，并且在使用 Transact-SQL 或 SQL Server Management Studio 查看时以 NULL 值的形式出现。|  
-    |Required|需要首先指定并非设计默认值的值，包才能执行。|  
-    |Description|出于可维护性目的而提供的参数的说明。 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，当在适用的参数窗口中选择参数时，在“Visual Studio 属性”窗口中设置参数说明。|  
+    |敏感|敏感参数值在目录中加密，并且在使用 Transact-SQL 或 SQL Server Management Studio 查看时以 NULL 值的形式出现。|  
+    |必选|需要首先指定并非设计默认值的值，包才能执行。|  
+    |说明|出于可维护性目的而提供的参数的说明。 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，当在适用的参数窗口中选择参数时，在“Visual Studio 属性”窗口中设置参数说明。|  
   
     > [!NOTE]  
     >  在您向目录部署某一项目时，还有几个属性将与该项目相关联。 若要查看目录中所有参数的全部属性，请使用 [catalog.object_parameters（SSISDB 数据库）](/sql/integration-services/system-views/catalog-object-parameters-ssisdb-database)视图。  
@@ -52,40 +52,40 @@ ms.locfileid: "66060134"
 4.  保存项目以保存对参数所做的更改。 参数值将存储在项目文件中。  
   
     > [!WARNING]  
-    >  可以直接在列表中编辑，也可以使用“属性”窗口来修改参数属性的值。 可以使用“删除 (X)”工具栏按钮来删除参数。 使用最后一个工具栏按钮，可以为仅在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中执行包时使用的参数指定值。  
+    >  可以直接在列表中编辑，也可以使用“属性”窗口来修改参数属性的值。**** 可以使用“删除 (X)”工具栏按钮来删除参数。**** 使用最后一个工具栏按钮，可以为仅在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中执行包时使用的参数指定值。  
   
     > [!NOTE]  
-    >  如果未在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中打开项目便重新打开包文件，则“参数”选项卡将为空且被禁用。  
+    >  如果未在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中打开项目便重新打开包文件，则“参数”选项卡将为空且被禁用。****  
   
 ### <a name="to-create-project-parameters"></a>创建项目参数  
   
 1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中打开该项目。  
   
-2.  在解决方案资源管理器中右键单击“Project.params”，然后单击“打开”，或者双击“Project.params”将其打开。  
+2.  在解决方案资源管理器中右键单击“Project.params”，然后单击“打开”，或者双击“Project.params”将其打开。************  
   
-     ![项目参数窗口](media/denali-project-parameters.gif "Project Parameters Window")  
+     ![项目参数窗口](media/denali-project-parameters.gif "项目参数窗口")  
   
 3.  单击工具栏上的 **“添加参数”** 按钮。  
   
-     ![添加工具栏按钮](media/denali-parameter-add.gif "Add Toolbar Button")  
+     ![添加工具栏按钮](media/denali-parameter-add.gif "添加工具栏按钮")  
   
 4.  为 **“名称”**、 **“数据类型”**、 **“值”**、 **“敏感”** 和 **“必需”** 属性输入值。  
   
-    |属性|Description|  
+    |properties|说明|  
     |--------------|-----------------|  
-    |“属性”|参数名。|  
-    |“名称”|参数的数据类型。|  
+    |名称|参数的名称。|  
+    |数据类型|参数的数据类型。|  
     |默认值|在设计时分配的参数的默认值。 这也称为设计默认值。|  
-    |区分|敏感参数值在目录中加密，并且在使用 Transact-SQL 或 SQL Server Management Studio 查看时以 NULL 值的形式出现。|  
-    |Required|需要首先指定并非设计默认值的值，包才能执行。|  
-    |Description|出于可维护性目的而提供的参数的说明。 在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，当在适用的参数窗口中选择参数时，在“Visual Studio 属性”窗口中设置参数说明。|  
+    |敏感|敏感参数值在目录中加密，并且在使用 Transact-SQL 或 SQL Server Management Studio 查看时以 NULL 值的形式出现。|  
+    |必选|需要首先指定并非设计默认值的值，包才能执行。|  
+    |说明|出于可维护性目的而提供的参数的说明。 在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，当在适用的参数窗口中选择参数时，在“Visual Studio 属性”窗口中设置参数说明。|  
   
 5.  保存项目以保存对参数所做的更改。 参数值将存储在项目文件的配置中。 保存项目文件以将对参数值的所有更改提交到磁盘。  
   
     > [!WARNING]  
-    >  可以直接在列表中编辑，也可以使用“属性”窗口来修改参数属性的值。 可以使用“删除 (X)”工具栏按钮来删除参数。 使用最后一个工具栏按钮打开 **“管理参数值”** 对话框，您可以为仅在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中执行包时使用的参数指定值。  
+    >  可以直接在列表中编辑，也可以使用“属性”窗口来修改参数属性的值。**** 可以使用“删除 (X)”工具栏按钮来删除参数。**** 使用最后一个工具栏按钮打开 **“管理参数值”** 对话框，您可以为仅在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中执行包时使用的参数指定值。  
   
-## <a name="see-also"></a>请参阅  
- [Integration Services &#40;SSIS&#41;参数](integration-services-ssis-package-and-project-parameters.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;SSIS&#41; 参数 Integration Services](integration-services-ssis-package-and-project-parameters.md)  
   
   

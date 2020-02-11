@@ -13,14 +13,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 870243a5ee69f6058fdc34597ccd4a78b93859e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63252859"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>角色切换后登录名和作业的管理 (SQL Server)
-  在为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库部署高可用性或灾难恢复解决方案时，重新生成为 **master** 或 **msdb** 数据库中的数据库存储的相关信息十分重要。 通常，相关信息包括主/主体数据库的作业以及连接到数据库所需的用户或进程的登录名。 您应该在承载辅助/镜像数据库的任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上复制此信息。 如果可能，角色切换后最好在新的主/主体数据库中以编程方式重新生成此信息。  
+  在为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库部署高可用性或灾难恢复解决方案时，必须重现为**master**或**msdb**数据库中的数据库存储的相关信息。 通常，相关信息包括主/主体数据库的作业以及连接到数据库所需的用户或进程的登录名。 您应该在承载辅助/镜像数据库的任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上复制此信息。 如果可能，角色切换后最好在新的主/主体数据库中以编程方式重新生成此信息。  
   
 ## <a name="logins"></a>登录名  
  在承载数据库副本的每个服务器实例上，您都应该重新生成有权访问主体数据库的登录名。 当主/主体角色切换时，只有其登录名在新的主/主体服务器实例上存在的用户才可以访问新的主/主体数据库。 其登录名未在新的主/主体服务器实例上定义的用户是孤立用户，并且无法访问该数据库。  
@@ -37,15 +37,16 @@ ms.locfileid: "63252859"
   
  有关详细信息，请参阅 [与数据库镜像和日志传送有关的孤立用户](https://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) （数据库引擎博客）。  
   
-## <a name="jobs"></a>中执行计划的管理任务，即“作业”  
+## <a name="jobs"></a>作业  
  作业（如备份作业）需要特殊考虑。 通常，在角色切换后，数据库所有者或系统管理员必须为新的主/主体数据库重新创建作业。  
   
  如果以前的主/主体服务器实例可用，则应该在该 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上删除原始作业。 请注意，当前镜像数据库上的作业失败，因为它处于 RESTORING 状态，以致不可用。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的不同实例的配置可能不同，如具有不同的驱动器号等。 每个伙伴的作业必须允许任何这类不同的配置。  
+>  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的不同实例的配置可能不同，如具有不同的驱动器号等。 每个伙伴的作业必须允许任何这类不同的配置。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [当数据库在其他服务器实例上可用时管理元数据 (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [孤立用户故障排除 (SQL Server)](troubleshoot-orphaned-users-sql-server.md)  
   

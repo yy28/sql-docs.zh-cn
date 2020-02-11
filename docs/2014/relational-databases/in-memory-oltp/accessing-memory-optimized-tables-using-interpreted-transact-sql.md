@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c81ac6c0c8dcf7e24c80b426654164c668fcf3a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62468604"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>使用解释型 Transact-SQL 访问内存优化表
@@ -53,12 +53,12 @@ ms.locfileid: "62468604"
 |READUNCOMMITTED|ROWLOCK|SPATIAL_WINDOW_MAX_CELLS = *integer*|TABLOCK|  
 |TABLOCKXX|UPDLOCK|XLOCK||  
   
- 当使用解释型 [!INCLUDE[tsql](../../includes/tsql-md.md)] 从显式或隐式事务访问内存优化表时，必须包含隔离级别表提示（如 SNAPSHOT、REPEATABLEREAD 或 SERIALIZABLE），也可以使用 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT。 有关详细信息，请参阅[具有内存优化表的事务隔离级别准则](memory-optimized-tables.md)并[ALTER DATABASE SET 选项&#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)。  
+ 当使用解释型 [!INCLUDE[tsql](../../includes/tsql-md.md)] 从显式或隐式事务访问内存优化表时，必须包含隔离级别表提示（如 SNAPSHOT、REPEATABLEREAD 或 SERIALIZABLE），也可以使用 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT。 有关详细信息，请参阅[带有内存优化表的事务隔离级别的准则](memory-optimized-tables.md)和[ALTER database SET 选项 &#40;transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)。  
   
 > [!NOTE]  
 >  由在自动提交模式下运行的查询访问的内存优化表不需要隔离级别表提示。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [对内存中 OLTP 的 Transact-SQL 支持](transact-sql-support-for-in-memory-oltp.md)   
  [迁移到内存中 OLTP](migrating-to-in-memory-oltp.md)  
   

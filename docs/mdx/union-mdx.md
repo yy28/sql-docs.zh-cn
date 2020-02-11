@@ -1,5 +1,5 @@
 ---
-title: 并集 (MDX) |Microsoft Docs
+title: 联合（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,13 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 170e3764795e1bb6db3fc9589ecf1fe486078633
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097303"
 ---
-# <a name="union--mdx"></a>并集 (MDX)
+# <a name="union--mdx"></a>联合（MDX）
 
 
   返回两个集的并集，并且可以选择保留重复成员。  
@@ -35,17 +35,17 @@ Alternate syntax 2
 ```  
   
 ## <a name="arguments"></a>参数  
- *集表达式 1*  
+ *集表达式1*  
  返回集的有效多维表达式 (MDX)。  
   
- *集表达式 2*  
+ *集表达式2*  
  返回集的有效多维表达式 (MDX)。  
   
 ## <a name="remarks"></a>备注  
- 此函数返回的并集的两个或多个指定的集。 使用标准语法和替代语法 1，默认情况下消除重复项。 使用标准语法中，使用**所有**标志可以集中保留重复项。 从该集的尾部删除重复项。 使用替代语法 2 时始终会保留重复项。  
+ 此函数返回两个或更多个指定集的并集。 对于标准语法和替代语法1，默认情况下将消除重复项。 使用标准语法，使用**ALL**标志可在联接集内保留重复项。 从该集的尾部删除重复项。 使用替代语法 2 时始终会保留重复项。  
   
 ## <a name="examples"></a>示例  
- 下面的示例演示的行为**Union**函数使用每种语法。  
+ 下面的示例演示了使用每个语法的**联合**函数的行为。  
   
 ### <a name="standard-syntax-duplicates-eliminated"></a>标准语法，消除重复项  
   
@@ -94,8 +94,8 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>请参阅  
- [+ &#40;Union&#41; &#40;MDX&#41;](../mdx/union-mdx-operator-reference.md)   
- [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [+ &#40;联合&#41; &#40;MDX&#41;](../mdx/union-mdx-operator-reference.md)   
+ [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

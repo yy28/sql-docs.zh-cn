@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6bbe78979c393490a52e1051fe158ae138f93dcc
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401153"
 ---
 # <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>为并行数据仓库授予 T-sql 权限
@@ -248,5 +248,5 @@ GO
 ## <a name="see-also"></a>另请参阅
 [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)  
 [创建用户](../t-sql/statements/create-user-transact-sql.md)  
-[创建角色](../t-sql/statements/create-role-transact-sql.md)  
+[CREATE ROLE](../t-sql/statements/create-role-transact-sql.md)  
 [加载](load-overview.md)  

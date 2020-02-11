@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8ca32cdc72bb5c062be4c3745d3f742f39753afa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830401"
 ---
 # <a name="select-objects-to-transfer"></a>选择要传输的对象
@@ -26,7 +26,7 @@ ms.locfileid: "62830401"
   
  若要选择特定的传输对象，请选中网格中该对象所在行的第一列中的复选框。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../integration-services-error-and-message-reference.md)   
  [传输作业任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)   
  [传输登录名任务编辑器（“登录名”页）](../transfer-logins-task-editor-logins-page.md)   

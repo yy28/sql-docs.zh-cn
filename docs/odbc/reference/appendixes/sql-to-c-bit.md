@@ -1,5 +1,5 @@
 ---
-title: 从 SQL 到 C：位 |Microsoft Docs
+title: SQL 到 C：位 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,28 +15,28 @@ ms.assetid: 0eeaab8b-ad82-4a36-b464-9a1211d5f72c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8d00a3c26d842b196e20861da6d8ae3e818d4cbe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68056901"
 ---
-# <a name="sql-to-c-bit"></a>从 SQL 到 C：bit
-对于 ODBC SQL 数据类型是的位标识符：  
+# <a name="sql-to-c-bit"></a>从 SQL 到 C：位
+位 ODBC SQL 数据类型的标识符是：  
   
  SQL_BIT  
   
- 下表显示 ODBC C 数据类型位的 SQL 数据可能会转换为。 列和表中的条款的说明，请参阅[从 SQL 到 C 数据类型的转换的数据](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)。  
+ 下表显示了可将位 SQL 数据转换到的 ODBC C 数据类型。 有关表中的列和字词的说明，请参阅将[数据从 SQL 转换为 C 数据类型](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)。  
   
 |C 类型标识符|测试|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR<br /><br /> SQL_C_WCHAR|*BufferLength* > 1<br /><br /> *BufferLength* < = 1|Data<br /><br /> 未定义|1<br /><br /> 未定义|不适用<br /><br /> 22003|  
-|SQL_C_STINYINT<br /><br /> SQL_C_UTINYINT<br /><br /> SQL_C_TINYINT<br /><br /> SQL_C_SBIGINT<br /><br /> SQL_C_UBIGINT<br /><br /> SQL_C_SSHORT<br /><br /> SQL_C_USHORT<br /><br /> SQL_C_SHORT<br /><br /> SQL_C_SLONG<br /><br /> SQL_C_ULONG<br /><br /> SQL_C_LONG<br /><br /> SQL_C_FLOAT<br /><br /> SQL_C_DOUBLE<br /><br /> SQL_C_NUMERIC|无 [a]|Data|C 数据类型的大小|不适用|  
-|SQL_C_BIT|无 [a]|Data|1[b]|不适用|  
-|SQL_C_BINARY|*BufferLength* > = 1<br /><br /> *BufferLength* < 1|Data<br /><br /> 未定义|1<br /><br /> 未定义|不适用<br /><br /> 22003|  
+|SQL_C_CHAR<br /><br /> SQL_C_WCHAR|*BufferLength* > 1<br /><br /> *BufferLength* <= 1|data<br /><br /> 未定义|1<br /><br /> 未定义|不适用<br /><br /> 22003|  
+|SQL_C_STINYINT<br /><br /> SQL_C_UTINYINT<br /><br /> SQL_C_TINYINT<br /><br /> SQL_C_SBIGINT<br /><br /> SQL_C_UBIGINT<br /><br /> SQL_C_SSHORT<br /><br /> SQL_C_USHORT<br /><br /> SQL_C_SHORT<br /><br /> SQL_C_SLONG<br /><br /> SQL_C_ULONG<br /><br /> SQL_C_LONG<br /><br /> SQL_C_FLOAT<br /><br /> SQL_C_DOUBLE<br /><br /> SQL_C_NUMERIC|None [a]|data|C 数据类型的大小|不适用|  
+|SQL_C_BIT|None [a]|data|1 [b]|不适用|  
+|SQL_C_BINARY|*BufferLength* >= 1<br /><br /> *BufferLength* < 1|data<br /><br /> 未定义|1<br /><br /> 未定义|不适用<br /><br /> 22003|  
   
- [a] 的值*BufferLength*忽略此转换。 驱动程序假定的大小 **TargetValuePtr*是 C 数据类型的大小。  
+ [a] 此转换将忽略*BufferLength*的值。 驱动程序假设大小 **TargetValuePtr*是 C 数据类型的大小。  
   
- [b] 这是相应的 C 数据类型的大小。  
+ [b] 这是对应的 C 数据类型的大小。  
   
- 当位 SQL 数据转换为 C 字符数据时，可能的值为"0"和"1"。
+ 将位 SQL 数据转换为字符 C 数据时，可能的值为 "0" 和 "1"。

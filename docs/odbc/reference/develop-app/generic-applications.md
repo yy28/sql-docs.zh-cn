@@ -15,13 +15,13 @@ ms.assetid: dda2a3c4-76ef-40a6-b3a1-9e95bed61618
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f6b1544f5562468db03a649c263993039a722a3c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139295"
 ---
 # <a name="generic-applications"></a>泛型应用程序
-通用应用程序有时会执行硬编码任务，如从数据库检索数据电子表格。 它们还可能执行的各种用户定义的任务，例如允许用户输入和执行 SQL 语句的一般查询应用程序。 通用应用程序具有的共同点是它们必须适用于各种不同的 Dbms 和，开发人员不会预先不知道这些 Dbms 是怎样的。  
+一般的应用程序有时会执行硬编码任务，如电子表格从数据库检索数据。 它们还可能执行各种用户定义的任务，例如一般查询应用程序，允许用户输入和执行 SQL 语句。 常见的一般应用程序是，它们必须使用各种不同的 Dbms，开发人员不知道这些 Dbms 将是什么。  
   
- 因此，需要高度可互操作泛型应用程序。 开发人员必须做出很多选择，来换取的互操作性功能，并且必须编写代码所需驱动程序以支持范围广泛的功能。 尽管通用应用程序可能会经过调整，以使用受欢迎的 Dbms，但很少包含特定于驱动程序或特定于 DBMS 的代码。
+ 因此，一般的应用程序需要高度可互操作。 开发人员必须做出很多选择，权衡功能的互操作性，并且必须编写需要驱动程序支持各种功能的代码。 尽管一般的应用程序可能会进行优化，以便与流行的 Dbms 一起使用，但它们极少包含驱动程序特定或 DBMS 特定的代码。

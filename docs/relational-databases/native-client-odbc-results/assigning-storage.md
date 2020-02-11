@@ -23,10 +23,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d9afee1aa24f5f3cd15791038d12f5ac0bc842fe
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73779362"
 ---
 # <a name="assigning-storage"></a>分配存储区
@@ -52,7 +52,7 @@ ms.locfileid: "73779362"
   
 -   当每个列绑定到自身的变量数组时，将完成按列绑定。  
   
-     通过调用 SQL_ATTR_ROW_BIND_TYPE [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) *，并将* *将 valueptr*设置为 SQL_BIND_BY_COLUMN 来指定按列绑定。 所有数组的元素个数必须相同。  
+     通过调用 SQL_ATTR_ROW_BIND_TYPE [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) *，并将**将 valueptr*设置为 SQL_BIND_BY_COLUMN 来指定按列绑定。 所有数组的元素个数必须相同。  
   
 -   当 SQL 语句中的所有参数作为一个单元绑定到包含这些参数中各个变量的结构数组时，将完成按行绑定。  
   
@@ -61,6 +61,6 @@ ms.locfileid: "73779362"
  应用程序还将 SQL_ATTR_ROW_ARRAY_SIZE 设置为列或行数组中的元素个数，并设置 SQL_ATTR_ROW_STATUS_PTR 和 SQL_ATTR_ROWS_FETCHED_PTR。  
   
 ## <a name="see-also"></a>另请参阅  
- [处理结果&#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+ [&#40;ODBC&#41;处理结果](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

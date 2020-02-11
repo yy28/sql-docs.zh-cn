@@ -1,5 +1,5 @@
 ---
-title: 对游标和预定义的语句的事务影响 |Microsoft Docs
+title: 事务对游标和预定义语句的影响 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,43 +18,43 @@ ms.assetid: 523e22a2-7b53-4c25-97c1-ef0284aec76e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 83b693922d08f7298d0c5282fe2c7d1c20149d5b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046879"
 ---
 # <a name="effect-of-transactions-on-cursors-and-prepared-statements"></a>对游标和已准备语句的事务影响
-提交或回滚事务会有以下影响游标和访问计划：  
+提交或回滚事务会对游标和访问计划产生以下影响：  
   
--   所有游标都将都关闭，并删除该连接上的预定义语句访问计划。  
+-   所有游标都将关闭，并且将删除该连接上的预定义语句的访问计划。  
   
--   所有游标都将都关闭，并访问该连接上预定义语句的计划将保持不变。  
+-   所有游标都处于关闭状态，并且该连接上的预定义语句的访问计划仍保持不变。  
   
--   所有游标都保持打开状态，并访问该连接上预定义语句的计划将都保持不变。  
+-   所有游标都保持打开状态，并且该连接上的预定义语句的访问计划仍保持不变。  
   
- 例如，假设数据源将展示在此列表中，这些行为最具限制性的第一行为。 现在假设应用程序执行以下操作：  
+ 例如，假设数据源出现在此列表中的第一个行为，这是这些行为的最严格限制。 现在假设某个应用程序执行以下操作：  
   
 1.  将提交模式设置为手动提交。  
   
-2.  对 1 的语句创建销售订单的结果集。  
+2.  在语句1上创建销售订单的结果集。  
   
-3.  当用户将突出显示该顺序语句 2，销售订单中创建结果集的行。  
+3.  当用户突出显示订单时，将在报表2的销售订单中创建行的结果集。  
   
-4.  调用**SQLExecute**时要执行已准备好的定位的更新语句语句 3，用户更新行。  
+4.  当用户更新行时，调用**SQLExecute**以执行已准备就绪的已定位 update 语句。  
   
-5.  调用**SQLEndTran**提交定位的 update 语句。  
+5.  调用**SQLEndTran**以提交定位的 update 语句。  
   
- 由于数据源的行为，调用**SQLEndTran**在步骤 5 会导致它以关闭游标语句 1 和 2 并删除所有语句上的访问计划。 应用程序必须重新执行语句 1 和 2 来重新创建结果集和 reprepare 语句 3 中的语句。  
+ 由于数据源的行为，对步骤5中的**SQLEndTran**的调用会使其关闭语句1和2上的游标，并删除所有语句的访问计划。 应用程序必须重新创建语句1和2，才能重新创建结果集并 reprepare 语句3上的语句。  
   
- 在自动提交模式下，函数以外**SQLEndTran**提交事务：  
+ 在自动提交模式下， **SQLEndTran**提交事务以外的其他函数：  
   
--   **SQLExecute**或**SQLExecDirect**在前面的示例中，调用**SQLExecute**在步骤 4 提交事务。 这会导致要关闭的游标语句 1 和 2，并删除该连接上的所有语句上的访问计划的数据源。  
+-   **SQLExecute**或**SQLExecDirect**在前面的示例中，在步骤4中对**SQLExecute**的调用将提交事务。 这会导致数据源关闭语句1和2上的游标，并删除该连接上所有语句上的访问计划。  
   
--   **SQLBulkOperations**或**SQLSetPos**在前面的示例，假设，在步骤 4 中在应用程序调用**SQLSetPos**带有 SQL_UPDATE 选项语句 2，而不是执行语句 3 上定位的 update 语句。 此提交事务和数据源将关闭游标语句 1 和 2，并放弃在该连接上的所有访问计划。  
+-   前面的示例中的**SQLBulkOperations**或**SQLSetPos**假设在步骤4中，应用程序使用语句2上的 SQL_UPDATE 选项调用**SQLSetPos** ，而不是在语句3上执行定位的 UPDATE 语句。 这会提交一个事务，并导致数据源关闭语句1和2上的游标，并放弃该连接上的所有访问计划。  
   
--   **SQLCloseCursor**在前面的示例，假设用户突出显示了不同的销售订单时，调用应用程序**SQLCloseCursor**上语句 2，然后才能创建新的销售的行的结果顺序。 在调用**SQLCloseCursor**提交**选择**创建行的结果集和数据源将关闭游标语句 1，然后放弃上的所有访问计划的语句连接。  
+-   **SQLCloseCursor**在前面的示例中，假设当用户突出显示不同的销售订单时，应用程序会在为新销售订单创建行的结果之前，在语句2上调用**SQLCloseCursor** 。 对**SQLCloseCursor**的调用将提交创建行结果集的**SELECT**语句，并导致数据源在语句1上关闭游标，然后放弃该连接上的所有访问计划。  
   
- 应用程序，尤其是基于屏幕的应用程序在其中在用户滚动的结果集和更新或删除行，必须小心针对此行为进行编码。  
+ 应用程序（尤其是基于屏幕的应用程序，用户在其中滚动结果集并更新或删除行）必须小心地围绕此行为编写代码。  
   
- 若要确定数据源时提交或回滚事务的行为，应用程序调用**SQLGetInfo** SQL_CURSOR_COMMIT_BEHAVIOR 和 SQL_CURSOR_ROLLBACK_BEHAVIOR 选项。
+ 若要确定提交或回滚事务时数据源的行为方式，应用程序需要使用 SQL_CURSOR_COMMIT_BEHAVIOR 和 SQL_CURSOR_ROLLBACK_BEHAVIOR 选项调用**SQLGetInfo** 。

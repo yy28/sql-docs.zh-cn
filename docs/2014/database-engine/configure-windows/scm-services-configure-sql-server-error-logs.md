@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 60d38caf365d6db54ea0abe688a3fc2979fdab82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809680"
 ---
 # <a name="configure-sql-server-error-logs"></a>配置 SQL Server 错误日志
@@ -24,7 +24,7 @@ ms.locfileid: "62809680"
   
 ## <a name="to-open-the-configure-sql-server-error-logs-dialog-box"></a>打开“配置 SQL Server 错误日志”对话框  
   
-1.  在对象资源管理器中，展开 SQL Server 的实例，展开“管理”，右键单击“SQL Server 日志”，再单击“配置”。  
+1.  在对象资源管理器中，展开 SQL Server 的实例，展开  “管理”，右键单击  “SQL Server 日志”，再单击  “配置”。  
   
 2.  在 **“配置 SQL Server 错误日志”** 对话框中，从以下选项中进行选择。  
   

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c8030a0005f0f5b949a3eecd12d73f3a3aa709c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876860"
 ---
 # <a name="back-up-database-backup-options-page"></a>备份数据库（“备份选项”页）
@@ -33,7 +33,7 @@ ms.locfileid: "62876860"
 >  可以定义用于创建数据库备份的数据库维护计划。 有关详细信息，请参阅[维护计划](../maintenance-plans/maintenance-plans.md)和[使用维护计划向导](../maintenance-plans/use-the-maintenance-plan-wizard.md)。  
   
 > [!NOTE]  
->  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定备份任务时，可以通过单击“脚本”按钮，再为脚本选择一个目标，生成对应的 [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) 脚本。  
+>  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定备份任务时，可以通过单击“脚本”[!INCLUDE[tsql](../../includes/tsql-md.md)][按钮，再为脚本选择一个目标，生成对应的 ](/sql/t-sql/statements/backup-transact-sql)**BACKUP** 脚本。  
   
 ## <a name="options"></a>选项  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62876860"
   
 |||  
 |-|-|  
-|**After**|指定在多少天后此备份集才会过期，从而可被覆盖。 此值范围为 0 到 99999 天；0 天表示备份集将永不过期。<br /><br /> 备份过期时间的默认值是在“默认备份介质保持期(天)”选项中设置的值。 若要访问此选项，请在对象资源管理器中右键单击服务器名称，再选择“属性”；然后，单击“服务器属性”对话框的“数据库设置”页。|  
+|**之后**|指定在多少天后此备份集才会过期，从而可被覆盖。 此值范围为 0 到 99999 天；0 天表示备份集将永不过期。<br /><br /> 备份过期时间的默认值是在“默认备份介质保持期(天)”  选项中设置的值。 若要访问此选项，请在对象资源管理器中右键单击服务器名称，再选择  “属性”；然后，单击  “服务器属性”对话框的  “数据库设置”页。|  
 |**On**|指定备份集过期从而可被覆盖的具体日期。|  
   
 ### <a name="compression"></a>压缩  
@@ -77,7 +77,7 @@ ms.locfileid: "62876860"
   
 -   AES 256  
   
--   Triple DES  
+-   三重 DES  
   
 > [!TIP]  
 >  如果您选择了追加到现有备份集，则禁用加密选项。  
@@ -86,7 +86,7 @@ ms.locfileid: "62876860"
 >   
 >  仅支持位于可扩展密钥管理 (EKM) 中的密钥。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
  [备份事务日志 (SQL Server)](back-up-a-transaction-log-sql-server.md)   
  [备份文件和文件组 (SQL Server)](back-up-files-and-filegroups-sql-server.md)   

@@ -24,30 +24,31 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 03deab738f374716002c4d78e07078e90fb41822
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68189021"
 ---
 # <a name="operators"></a>运算符
-  操作员是在完成作业或出现警报时可以接收电子通知的人员或组的别名。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务支持通过操作员通知管理员的功能。 运算员可以通知和监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的功能。  
+  操作员是在完成作业或出现警报时可以接收电子通知的人员或组的别名。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务支持通过操作员通知管理员的功能。 运算员可以通知和监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的功能。  
   
 ## <a name="operator-attributes-and-concepts"></a>运算符属性和概念  
  操作员的主要属性如下：  
   
 -   操作员名称  
   
--   联系人信息  
+-   联系信息  
   
 ### <a name="naming-an-operator"></a>命名操作员  
  每个操作员都必须有一个名称。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中，操作员名称必须是唯一的，并且长度不得超过 **128** 个字符。  
   
-### <a name="contact-information"></a>联系人信息  
+### <a name="contact-information"></a>联系信息  
  操作员的联系信息决定了通知该操作员的方式。 可以通过电子邮件、寻呼程序或 **net send** ：  
   
 > [!IMPORTANT]  
->  在 **的未来版本中，将从** 代理中删除寻呼程序和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] net send [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]选项。 请避免在新的开发工作中使用这些功能，并考虑修改当前使用这些功能的应用程序。  
+>  在未来版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，将从代理中删除寻呼程序和**net send**选项。 请避免在新的开发工作中使用这些功能，并考虑修改当前使用这些功能的应用程序。  
   
 -   **电子邮件通知**  
   
@@ -75,7 +76,7 @@ ms.locfileid: "68189021"
   
          **抄送**：  
   
-         **收件人**：  
+         **到**：  
   
     > [!NOTE]  
     >  如果使用的是一个小容量的字母数字寻呼系统，则可以通过从寻呼通知中排除错误文本，缩短发送文本的长度。 每页限制在 64 个字符内就是一个小容量的字母数字寻呼系统。  
@@ -85,7 +86,8 @@ ms.locfileid: "68189021"
      此方式通过 **net send** 命令向操作员发送消息。 对于 **net send**，需要指定网络消息的收件人（计算机或用户）。  
   
     > [!NOTE]  
-    >  **net send** 命令使用 Microsoft Windows Messenger。 若要成功发送警报，此服务必须同时在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机和操作员使用的计算机上运行。  
+    >  
+  **net send** 命令使用 Microsoft Windows Messenger。 若要成功发送警报，此服务必须同时在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机和操作员使用的计算机上运行。  
   
 ## <a name="alerting-and-fail-safe-operators"></a>警报和防故障操作员  
  可以选择在发生警报时要通知的操作员。 例如，可以通过计划警报来指定操作员轮流接收通知， 如果星期一、星期三和星期五出现警报，则通知操作员 A；如果星期二、星期四和星期六出现警报，则通知操作员 B；  
@@ -98,9 +100,10 @@ ms.locfileid: "68189021"
   
      无法到达主要操作员的原因包括寻呼地址错误和操作员不在岗位。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理无法访问 **msdb** 数据库中的系统表。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理无法访问**msdb**数据库中的系统表。  
   
-     **sysnotifications** 系统表可指定负责警报的操作员。  
+     
+  **sysnotifications** 系统表可指定负责警报的操作员。  
   
  防故障操作员是一种安全性能。 在未将防故障职责重新分配给其他操作员或未完全删除防故障分配的情况下，无法删除已分配防故障职责的操作员。  
   
@@ -118,10 +121,10 @@ ms.locfileid: "68189021"
 |||  
 |-|-|  
 |**任务**|**主题**|  
-|与创建操作员相关的任务|[创建操作员](create-an-operator.md)<br /><br /> [Designate a Fail-Safe Operator](designate-a-fail-safe-operator.md)|  
-|与分配警报相关的任务|[向操作员分配警报](assign-alerts-to-an-operator.md)<br /><br /> [定义对警报的响应 (SQL Server Management Studio)](define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br /> [sp_add_notification &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)<br /><br /> [向操作员分配警报](assign-alerts-to-an-operator.md)|  
+|与创建操作员相关的任务|[创建操作员](create-an-operator.md)<br /><br /> [指定防故障操作员](designate-a-fail-safe-operator.md)|  
+|与分配警报相关的任务|[向操作员分配警报](assign-alerts-to-an-operator.md)<br /><br /> [定义对警报 &#40;SQL Server Management Studio 的响应&#41;](define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br /> [sp_add_notification &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)<br /><br /> [向操作员分配警报](assign-alerts-to-an-operator.md)|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库邮件](../../relational-databases/database-mail/database-mail.md)  
   
   

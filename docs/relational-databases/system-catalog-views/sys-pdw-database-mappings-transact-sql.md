@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_database_mappings (TRANSACT-SQL) |Microsoft Docs
+title: sys. pdw_database_mappings （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 10/17/2017
 ms.prod: sql
@@ -13,24 +13,24 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 46474439474f8a38ba016b16e323b0cb92afe39e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139935"
 ---
-# <a name="syspdwdatabasemappings-transact-sql"></a>sys.pdw_database_mappings (Transact SQL)
+# <a name="syspdw_database_mappings-transact-sql"></a>sys. pdw_database_mappings （Transact-sql）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  地图**database_id**的数据库的物理名称到计算节点上使用，并提供了**主体 id**的系统上的数据库所有者。 加入**sys.pdw_database_mappings**到**sys.databases**并**sys.pdw_nodes_pdw_physical_databases**。  
+  将数据库的**database_id**映射到计算节点上使用的物理名称，并提供系统上数据库所有者的**主体 id** 。 将**sys. pdw_database_mappings**连接到**sys.databases**和**pdw_nodes_pdw_physical_databases**。  
   
-|列名|数据类型|描述|范围|  
+|列名|数据类型|说明|范围|  
 |-----------------|---------------|-----------------|-----------|  
-|physical_name|**nvarchar(36)**|计算节点上数据库的物理名称。<br /><br /> **physical_name**并**database_id**构成此视图的键。||  
-|database_id|**int**|数据库的对象 ID。 请参阅[sys.databases &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。<br /><br /> **physical_name**并**database_id**构成此视图的键。||  
+|physical_name|**nvarchar （36）**|计算节点上数据库的物理名称。<br /><br /> **physical_name**和**database_id**构成此视图的键。||  
+|database_id|**int**|数据库的对象 ID。 请参阅[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。<br /><br /> **physical_name**和**database_id**构成此视图的键。||  
   
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下面的示例联接到其他系统表以显示如何将数据库映射 sys.pdw_database_mappings。  
+ 下面的示例将 pdw_database_mappings sys.databases 联接到其他系统表，以显示数据库的映射方式。  
   
 ```  
 SELECT DB.database_id, DB.name, Map.*, Phys.*   
@@ -42,11 +42,11 @@ JOIN sys.pdw_nodes_pdw_physical_databases AS Phys
 ORDER BY DB.database_id, Phys.pdw_node_id;  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL 数据仓库和并行数据仓库目录视图](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
- [sys.pdw_index_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-index-mappings-transact-sql.md)   
- [sys.pdw_table_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md)   
- [sys.pdw_nodes_pdw_physical_databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-pdw-physical-databases-transact-sql.md)  
+ [sys. pdw_index_mappings &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-index-mappings-transact-sql.md)   
+ [sys. pdw_table_mappings &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md)   
+ [sys. pdw_nodes_pdw_physical_databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-pdw-physical-databases-transact-sql.md)  
   
   
 

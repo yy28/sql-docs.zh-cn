@@ -1,5 +1,5 @@
 ---
-title: 新度量值组对话框 （多维数据集设计器） |Microsoft Docs
+title: "\"新建度量值组\" 对话框（多维数据集设计器） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 760a02da5fd98e558c6463d428d5018ccf65a5fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072266"
 ---
 # <a name="new-measure-group-dialog-box-cube-designer"></a>“新建度量值组”对话框（多维数据集设计器）
@@ -26,14 +26,14 @@ ms.locfileid: "66072266"
   
 -   在多维数据集设计器中的 **“多维数据集结构”** 选项卡上，单击 **“工具栏”** 窗格中的 **“新建度量值组”** 。  
   
--   在多维数据集设计器中的“多维数据集结构”选项卡上，右键单击“度量值”窗格中的度量值组或度量值，再从上下文菜单中选择“新建度量值组”。     
+-   在多维数据集设计器中的“多维数据集结构”选项卡上，右键单击“度量值”窗格中的度量值组或度量值，再从上下文菜单中选择“新建度量值组”。************  
   
 ## <a name="options"></a>选项  
- **从数据源视图选择一个表**  
+ **从数据源视图中选择一个表**  
  为新度量值组选择事实数据表。 在同一多维数据集中不可以将表多次用作事实数据表。  
   
-## <a name="see-also"></a>请参阅  
- [多维数据集结构&#40;多维数据集设计器&#41; &#40;Analysis Services-多维数据&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
- [Analysis Services 设计器和对话框&#40;多维数据&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+## <a name="see-also"></a>另请参阅  
+ [多维数据集设计器的多维数据集结构 &#40;&#41; &#40;Analysis Services 多维数据&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
+ [&#40;多维数据的 Analysis Services 设计器和对话框&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

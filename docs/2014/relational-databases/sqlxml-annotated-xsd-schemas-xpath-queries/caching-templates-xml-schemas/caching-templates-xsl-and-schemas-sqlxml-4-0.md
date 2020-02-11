@@ -1,5 +1,5 @@
 ---
-title: 缓存模板、 XSL 和架构 (SQLXML 4.0) |Microsoft Docs
+title: 缓存模板、XSL 和架构（SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 82b943a170c42010b650033841f6612338d99119
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013248"
 ---
 # <a name="caching-templates-xsl-and-schemas-sqlxml-40"></a>缓存模板、XSL 和架构 (SQLXML 4.0)
@@ -29,13 +29,13 @@ ms.locfileid: "66013248"
  本节中的主题提供有关缓存的详细信息。  
   
 ## <a name="in-this-section"></a>本节内容  
- [模板缓存&#40;SQLXML 4.0&#41;](template-caching-sqlxml-4-0.md)  
+ [SQLXML 4.0 &#40;模板缓存&#41;](template-caching-sqlxml-4-0.md)  
  介绍模板缓存并且提供一个用于模板缓存的注册表项。  
   
- [XSL 缓存&#40;SQLXML 4.0&#41;](xsl-caching-sqlxml-4-0.md)  
+ [XSL 缓存 &#40;SQLXML 4.0&#41;](xsl-caching-sqlxml-4-0.md)  
  介绍 XSL 缓存并且提供一个用于 XSL 缓存的注册表项。  
   
- [架构缓存&#40;SQLXML 4.0&#41;](schema-caching-sqlxml-4-0.md)  
+ [&#40;SQLXML 4.0&#41;的架构缓存](schema-caching-sqlxml-4-0.md)  
  讨论与架构缓存相关的 SQLXML 并行安装问题，并且提供用于架构缓存的注册表项。  
   
   

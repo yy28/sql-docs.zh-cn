@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bd614cc08e22b936c0f5f5468ded70d2adb9726f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62663202"
 ---
 # <a name="cursors-event-category"></a>Cursors 事件类别
@@ -28,7 +28,7 @@ ms.locfileid: "62663202"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|Description|  
+|主题|说明|  
 |-----------|-----------------|  
 |[CursorClose 事件类](cursorclose-event-class.md)|说明应用程序编程接口 (API) 游标中发生的游标关闭事件。|  
 |[CursorExecute 事件类](cursorexecute-event-class.md)|说明 API 游标中发生的游标执行事件。|  
@@ -38,7 +38,7 @@ ms.locfileid: "62663202"
 |[CursorRecompile 事件类](cursorrecompile-event-class.md)|说明 API 游标中发生的游标重新编写事件。|  
 |[CursorUnprepare 事件类](cursorunprepare-event-class.md)|说明 API 游标中发生的游标未准备事件。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [扩展事件](../extended-events/extended-events.md)  
   
   

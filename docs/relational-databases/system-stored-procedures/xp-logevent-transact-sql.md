@@ -1,5 +1,5 @@
 ---
-title: xp_logevent (TRANSACT-SQL) |Microsoft Docs
+title: xp_logevent （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 7b379ad0-5b12-4d2e-9c52-62465df1fdbd
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 77275ee539a6367d7e2e04d03354155a5eff721d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68116641"
 ---
-# <a name="xplogevent-transact-sql"></a>xp_logevent (Transact-SQL)
+# <a name="xp_logevent-transact-sql"></a>xp_logevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  登录的用户定义的消息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日志文件和 Windows 事件查看器中。 可以使用 xp_logevent 发送警报，而无需向客户端发送一条消息。  
+  将用户定义的消息记录到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日志文件和 Windows 事件查看器中。 xp_logevent 可用于发送警报，而无需向客户端发送消息。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,11 +42,11 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
  *error_number*  
  用户定义错误号，该值大于 50,000。 最大值为 2147483647 (2^31 - 1)。  
   
- **'** *消息*   
+ **"** *message* **"**  
  最多 2048 个字符的字符串。  
   
- **'** *严重性*   
- 是以下三个字符串之一：信息、 警告或错误。 *严重性*是可选的默认值为 INFORMATIONAL。  
+ **"** *严重性* **"**  
+ 以下三个字符串之一：INFORMATIONAL、WARNING 或 ERROR。 *严重性*为可选，默认值为 "信息"。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -57,7 +57,7 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
  `The command(s) completed successfully.`  
   
 ## <a name="remarks"></a>备注  
- 当发送邮件[!INCLUDE[tsql](../../includes/tsql-md.md)]过程、 触发器、 批处理等，而不是 xp_logevent 使用 RAISERROR 语句。 xp_logevent 不调用客户端的消息处理程序也不设置@ERROR。 若要将消息写入 Windows 事件查看器以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志文件中，请执行 RAISERROR 语句。  
+ 从[!INCLUDE[tsql](../../includes/tsql-md.md)]过程、触发器、批处理等发送消息时，请使用 RAISERROR 语句而不是 xp_logevent。 xp_logevent 不会调用客户端的消息处理程序，也不@ERROR设置 @。 若要将消息写入 Windows 事件查看器以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志文件中，请执行 RAISERROR 语句。  
   
 ## <a name="permissions"></a>权限  
  需要 master 数据库中的 db_owner 固定数据库角色的成员身份，或者 sysadmin 固定服务器角色的成员身份。  
@@ -76,10 +76,10 @@ USE master;
 EXEC xp_logevent 60000, @@MESSAGE, informational;  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [PRINT (Transact-SQL)](../../t-sql/language-elements/print-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [&#40;Transact-sql&#41;打印](../../t-sql/language-elements/print-transact-sql.md)   
  [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [常规扩展存储的过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
+ [&#40;Transact-sql&#41;的常规扩展存储过程](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
   
   

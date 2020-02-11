@@ -1,5 +1,5 @@
 ---
-title: 查看已修改的文件的列表 |Microsoft Docs
+title: 查看已修改文件的列表 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,35 +17,35 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c35062e6dfa339d0cd37f3905dc801f0f47becba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773423"
 ---
 # <a name="view-a-list-of-modified-files"></a>查看已修改的文件列表
-  可以使用**挂起的签入**窗口随时显示时间在当前解决方案中，签出文件的列表和签入这些文件一次按钮单击。  
+  您可以使用 "**挂起签入**" 窗口显示当前解决方案中的已签出文件的列表，并通过单击一次按钮签入这些文件。  
   
-### <a name="to-view-a-list-of-modified-files"></a>若要查看的已修改的文件列表  
+### <a name="to-view-a-list-of-modified-files"></a>查看已修改文件的列表  
   
-1.  上**视图**菜单上，单击**挂起的签入**。  
+1.  在 "**视图**" 菜单上，单击 "**挂起签入**"。  
   
-2.  若要检查所选文件中，单击**签入**。 或者，可以停靠**挂起的签入**窗口的右侧[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]环境，以便您可以签入文件时已完成工作。  
+2.  若要签入选定的文件，请单击 "**签入**"。 或者，您可以将**挂起的签入**窗口停靠在[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]环境的右侧，以便您可以在完成工作时签入文件。  
   
-     **Check In**  
+     **登记**  
      签入解决方案。  
   
      **注释**  
      将纯文本注释与挂起的签入相关联。 对于项目的每一个版本，都会创建一个与之关联的注释，该注释存储在源代码管理数据库中。  
   
      **选项**  
-     指定当您单击时，应执行源代码管理操作**签入**按钮。  
+     指定在单击 "**签入**" 按钮时源控件应执行的操作。  
   
     -   **保持所有签出**  
   
          指定应将所做的更改写入源代码管理提供程序，但是这些文件应保持签出状态。  
   
-     **Sort**  
+     **排序**  
      指定“项”列表中所显示的列的排序顺序。  
   
      **“列”**  
@@ -55,18 +55,18 @@ ms.locfileid: "62773423"
      显示要签入的解决方案或项目的文件夹和文件层次结构。  
   
      **平面视图**  
-     正在签入的文件显示为其源代码管理连接下的平面列表。  
+     在其源代码管理连接下显示要签入的文件。  
   
-     **比较版本**  
-     打开 Visual SourceSafe**差异选项**对话框中，该比较所选的任何其他文件在开发环境项目中所选的文件，并显示不同的内容，如果有的话。  
+     **版本比较**  
+     打开 "Visual SourceSafe**差异选项**" 对话框，该对话框将您的开发环境项目中的选定文件与任何其他所选文件进行比较，并显示差异（如果有）。  
   
      **撤消签出**  
-     反转对选择中的所有项的签出**挂起的签入**窗口。  
+     反转 "**挂起签入**" 窗口中选定的所有项的签出。  
   
      **名称**  
      显示可签入的项的列表。 这些项旁边所显示的复选框将处于选中状态。 如果您不希望签入特定项，请清除其旁边的复选框。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [管理签入](../../2014/database-engine/manage-checkins.md)   
  [管理签出](../../2014/database-engine/manage-checkouts.md)  
   

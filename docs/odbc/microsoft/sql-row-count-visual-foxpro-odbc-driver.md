@@ -1,5 +1,5 @@
 ---
-title: SQL 行计数 （Visual FoxPro ODBC 驱动程序） |Microsoft Docs
+title: SQL 行计数（Visual FoxPro ODBC 驱动程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ ms.assetid: 9d851f8d-94ca-47ae-a4ad-53863be2d404
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ddfa668a95345117aee3abfec638d50f49f2575b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68063344"
 ---
 # <a name="sql-row-count-visual-foxpro-odbc-driver"></a>SQL 行计数（Visual FoxPro ODBC 驱动程序）
 > [!NOTE]  
->  本主题包含 Visual FoxPro ODBC 驱动程序特定信息。 有关此函数的常规信息，请参阅下的相应主题[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)。  
+>  本主题包含特定于 Visual FoxPro ODBC 驱动程序的信息。 有关此函数的常规信息，请参阅[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)中的相应主题。  
   
  支持：完全  
   
  ODBC API 一致性：核心级别  
   
- 返回由最后一个受影响的行数[更新](../../odbc/microsoft/update-sql-command.md)，[插入](../../odbc/microsoft/insert-sql-command.md)，或[删除](../../odbc/microsoft/delete-sql-command.md)语句。  
+ 返回受上一个[UPDATE](../../odbc/microsoft/update-sql-command.md)、 [INSERT](../../odbc/microsoft/insert-sql-command.md)或[DELETE](../../odbc/microsoft/delete-sql-command.md)语句影响的行数。  
   
- 有关详细信息，请参阅[SQLRowCount](../../odbc/reference/syntax/sqlrowcount-function.md)中*ODBC 程序员参考*。
+ 有关详细信息，请参阅*ODBC 程序员参考*中的[SQLRowCount](../../odbc/reference/syntax/sqlrowcount-function.md) 。

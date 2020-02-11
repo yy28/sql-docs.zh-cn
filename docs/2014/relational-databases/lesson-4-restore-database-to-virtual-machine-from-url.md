@@ -11,14 +11,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fb9eaf62514b76e35b73ea87b7820751f670a90f
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175574"
 ---
 # <a name="lesson-5-optional-encrypt-your-database-using-tde"></a>第 5 课。 （可选）使用 TDE 加密数据库
-  作为一个可选步骤，可加密新创建的数据库。 “透明数据加密”(TDE) 可对数据和日志文件执行实时 I/O 加密和解密。 这种加密使用数据库加密密钥 (DEK)，该密钥存储在数据库引导记录中以供恢复时使用。 有关详细信息, 请[参阅&#40;透明数据加密&#41; TDE](security/encryption/transparent-data-encryption.md)和[将受 TDE 保护的数据库移到另一个 SQL Server](security/encryption/move-a-tde-protected-database-to-another-sql-server.md)。  
+  作为一个可选步骤，可加密新创建的数据库。 “透明数据加密”(TDE) 可对数据和日志文件执行实时 I/O 加密和解密。 这种加密使用数据库加密密钥 (DEK)，该密钥存储在数据库引导记录中以供恢复时使用。 有关详细信息，请参阅[透明数据加密 &#40;TDE&#41;](security/encryption/transparent-data-encryption.md) ，并[将受 TDE 保护的数据库移到另一个 SQL Server](security/encryption/move-a-tde-protected-database-to-another-sql-server.md)。  
   
  本课假定您已完成以下步骤：  
   
@@ -87,10 +87,10 @@ GO
   
 ```  
   
- 有关本课中使用的 transact-sql 语句的详细信息, 请参阅[CREATE &#40;database SQL Server transact-sql&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql), [ALTER DATABASE &#40;transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql), [CREATE MASTER KEY &#40;Transact-sql&#41;](/sql/t-sql/statements/create-master-key-transact-sql)、 [CREATE CERTIFICATE &#40;transact-sql&#41;](/sql/t-sql/statements/create-certificate-transact-sql)和[sys. dm _database_encryption_keys &#40;transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)。  
+ 有关在本课中使用的 Transact-sql 语句的详细信息，请参阅[CREATE database &#40;SQL Server transact-sql&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)， [ALTER database &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)， [create MASTER KEY &#40;transact-sql&#41;](/sql/t-sql/statements/create-master-key-transact-sql)， [create CERTIFICATE &#40;transact-sql ](/sql/t-sql/statements/create-certificate-transact-sql)&#41;，dm_database_encryption_keys [&#40;transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)。  
   
  **下一课：**  
   
- [第 6 课：将数据库从本地源计算机迁移到 Azure 中的目标计算机](lesson-5-backup-database-using-file-snapshot-backup.md)  
+ [第 6 课：将数据库从本地源计算机迁移至 Azure 中的目标计算机](lesson-5-backup-database-using-file-snapshot-backup.md)  
   
   

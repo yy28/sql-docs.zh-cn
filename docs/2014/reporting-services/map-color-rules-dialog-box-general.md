@@ -1,5 +1,5 @@
 ---
-title: 地图颜色规则对话框，常规 |Microsoft Docs
+title: "\"地图颜色规则\" 对话框-\"常规\" |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e97de85cdd57fdb21aa82379243eb6954358ea38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108323"
 ---
 # <a name="map-color-rules-dialog-box-general"></a>“地图颜色规则”对话框 -&gt;“常规”
@@ -29,13 +29,13 @@ ms.locfileid: "66108323"
  **应用模板样式**  
  选择此选项可以基于主题使用颜色，该主题在向导中选择或在“多边形”、“线条”或“点”层属性中设置。 主题为地图的颜色、字体和边框设置默认选项。 对于此选项，不应用任何规则来将颜色分配给每个地图元素。  
   
- **使用调色板实现数据可视化效果**  
+ **使用调色板实现数据的可视化效果**  
  选择此选项可以使用特定调色板中的颜色来将分析数据可视化。  
   
- **通过使用颜色范围实现数据可视化**  
+ **使用颜色范围实现数据的可视化效果**  
  选择此选项可以使用每个地图元素的颜色范围来将分析数据可视化。 例如，当您指定“红”作为开始颜色、“黄”作为中间颜色以及“绿”作为结束颜色时，在低范围中的值将为“红”，在中间范围中的值将为“黄”，在高范围中的值将为“绿”。  
   
- **通过使用自定义颜色实现可视化数据**  
+ **使用自定义颜色实现数据的可视化效果**  
  选择此选项可以通过指定您自己的颜色列表来将分析数据可视化。  
   
  **数据字段**  
@@ -43,7 +43,7 @@ ms.locfileid: "66108323"
   
  从下拉列表中选择要使用的分析数据字段。 根据空间数据的来源不同，该列表显示来自空间数据源的字段或具有空间数据和分析数据之间的某一对应关系的报表数据集的字段。 若要创建这样的关系，请在所选地图层的“分析数据”页上设置数据选项。  
   
- **Palette**  
+ **调板**  
  键入或选择调色板的名称。  
   
  **开始颜色**  
@@ -55,10 +55,10 @@ ms.locfileid: "66108323"
  **结束颜色**  
  指定处于数据范围高端的数据要使用的颜色。  
   
- **“添加”**  
+ **添加**  
  单击 **“添加”** 可以为颜色规则指定您自己的颜色。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [地图（报表生成器和 SSRS）](report-design/maps-report-builder-and-ssrs.md)   
  [更改地图图例、色阶和关联的规则（报表生成器和 SSRS）](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
