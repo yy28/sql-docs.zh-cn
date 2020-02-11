@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c9a2244c5e6cddbc53ccd3aaec7faaaa3836a923
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831742"
 ---
 # <a name="file-system-task"></a>文件系统任务
@@ -31,7 +31,7 @@ ms.locfileid: "62831742"
 ## <a name="predefined-file-system-operations"></a>预定义的文件系统操作  
  文件系统任务包含一组预定义的操作。 下表介绍了这些运算。  
   
-|操作|描述|  
+|Operation|说明|  
 |---------------|-----------------|  
 |复制目录|将文件夹从一个位置复制到另一个位置。|  
 |复制文件|将文件从一个位置复制到另一个位置。|  
@@ -53,7 +53,7 @@ ms.locfileid: "62831742"
 ## <a name="custom-log-entries-available-on-the-file-system-task"></a>文件系统任务可用的自定义日志项  
  下表介绍了文件系统任务的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../performance/integration-services-ssis-logging.md)和[日志记录的自定义消息](../custom-messages-for-logging.md)。  
   
-|日志项|描述|  
+|日志项|说明|  
 |---------------|-----------------|  
 |`FileSystemOperation`|报告任务所执行的操作。 在文件系统操作开始时写入日志项，日志项包括有关源和目标的信息。|  
   
@@ -62,7 +62,7 @@ ms.locfileid: "62831742"
   
  有关可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请参阅以下主题：  
   
--   [文件系统任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)  
+-   [文件系统任务编辑器 &#40;常规 "页面&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [“表达式”页](../expressions/expressions-page.md)  
   
@@ -75,9 +75,9 @@ ms.locfileid: "62831742"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask>  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括一个可下载和上载数据文件以及管理服务器上目录的任务。 有关详细信息，请参阅 [FTP Task](ftp-task.md)。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]包括用于下载和上传数据文件以及管理服务器上目录的任务。 有关详细信息，请参阅 [FTP Task](ftp-task.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 任务](integration-services-tasks.md)   
  [控制流](control-flow.md)  
   

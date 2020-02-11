@@ -1,7 +1,6 @@
 ---
-title: 状态栏（数据库引擎查询编辑器）| Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: 状态栏（数据库引擎查询编辑器）
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ''
@@ -9,31 +8,39 @@ ms.topic: conceptual
 ms.assetid: e7f2d6f4-bb94-4cf5-a096-c34397e679af
 author: markingmyname
 ms.author: maghan
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 736b16b01a2a0bbba98233400fdad82a08990c58
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: a579eeeb12795c76bbe585a982a159d6e069813d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262840"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243449"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>状态栏（数据库引擎查询编辑器）
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口的状态栏可进行颜色编码，以便指示每个窗口连接到的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。  
-  
-1.  **开始之前：** [状态栏颜色](#StatusBarColors)  
-  
-2.  **在以下位置设置服务器状态颜色的具体步骤：** [对象资源管理器](#SetOEServerColor)、[注册服务器](#SetRegServerColor)  
-  
-3.  **使用状态颜色的具体步骤：** [使用服务器颜色打开查询编辑器](#OpenServerColor)、[打开指定状态颜色的查询编辑器](#OpenSpecColor)  
-  
-##  <a name="StatusBarColors"></a> 状态栏颜色  
- 您可以在 **“对象资源管理器”** 或 **“已注册服务器”** 中将状态栏颜色与特定的服务器节点相关联。 只能为连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的服务器节点指定颜色，不能为针对其他 SQL Server 技术的服务器节点指定颜色。 您还可以在每次将新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例时，指定自定义状态栏颜色。 然后，您可以使用为服务器节点定义的状态颜色打开查询编辑器窗口，或者为该编辑器窗口指定唯一颜色。  
-  
- 在对象资源管理器中为服务器节点设置自定义的状态栏颜色必须在进行连接时完成。 若要更改与某一现有服务器节点相关联的颜色，您必须首先断开连接，然后重新连接并且指定新颜色。  
-  
-##  <a name="SetOEServerColor"></a> 在对象资源管理器中为服务器设置状态颜色  
- **在对象资源管理器中设置服务器状态颜色**  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口的状态栏可进行颜色编码，以便指示每个窗口连接到的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。
+
+1. **开始之前：** [状态栏颜色](#StatusBarColors)  
+
+2. **在以下位置设置服务器状态颜色的具体步骤：** [对象资源管理器](#SetOEServerColor)、[注册服务器](#SetRegServerColor)  
+
+3. **使用状态颜色的具体步骤：** [使用服务器颜色打开查询编辑器](#OpenServerColor)、[打开指定状态颜色的查询编辑器](#OpenSpecColor)  
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
+##  <a name="StatusBarColors"></a> 状态栏颜色
+
+您可以在 **“对象资源管理器”** 或 **“已注册服务器”** 中将状态栏颜色与特定的服务器节点相关联。 只能为连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的服务器节点指定颜色，不能为针对其他 SQL Server 技术的服务器节点指定颜色。 您还可以在每次将新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例时，指定自定义状态栏颜色。 然后，您可以使用为服务器节点定义的状态颜色打开查询编辑器窗口，或者为该编辑器窗口指定唯一颜色。  
+
+在对象资源管理器中为服务器节点设置自定义的状态栏颜色必须在进行连接时完成。 若要更改与某一现有服务器节点相关联的颜色，您必须首先断开连接，然后重新连接并且指定新颜色。  
+
+##  <a name="SetOEServerColor"></a> 在对象资源管理器中为服务器设置状态颜色
+
+**在对象资源管理器中设置服务器状态颜色**  
   
 1.  在“对象资源管理器”中，选择“连接”按钮，然后选择“数据库引擎…”    。  
   

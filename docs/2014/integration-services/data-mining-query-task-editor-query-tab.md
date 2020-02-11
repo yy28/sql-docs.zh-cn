@@ -1,5 +1,5 @@
 ---
-title: 数据挖掘查询任务编辑器 ("查询" 选项卡) |Microsoft Docs
+title: 数据挖掘查询任务编辑器（"查询" 选项卡） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0354c73a14b249065b69f41d5f7534fd97de5081
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68890713"
 ---
 # <a name="data-mining-query-task-editor-query-tab"></a>数据挖掘查询任务编辑器（“查询”选项卡）
@@ -40,7 +40,7 @@ ms.locfileid: "68890713"
  **数据挖掘查询**  
  键入数据挖掘查询。  
   
- **相关主题：** [数据挖掘扩展插件 (DMX) 参考](/sql/dmx/data-mining-extensions-dmx-reference)  
+ **相关主题：**  [数据挖掘扩展插件 &#40;DMX&#41; 参考](/sql/dmx/data-mining-extensions-dmx-reference)  
   
  **生成新查询**  
  使用图形工具创建数据挖掘查询。  
@@ -51,14 +51,14 @@ ms.locfileid: "68890713"
  **参数名称**  
  根据需要更新参数名称。 通过在 **“变量名称”** 列表中选择变量，将参数映射到变量。  
   
- **“变量名称”**  
+ **变量名称**  
  在列表中选择变量以将其映射到参数。  
   
- **“添加”**  
+ **添加**  
  将参数添加到列表。  
   
  **删除**  
- 选择一个参数，再单击“删除”。  
+ 选择一个参数，再单击“删除”****。  
   
 ## <a name="result-set-tab-options"></a>“结果集”选项卡选项  
  **结果名称**  
@@ -66,22 +66,22 @@ ms.locfileid: "68890713"
   
  通过单击 **“添加”** 添加结果之后，为该结果提供唯一的名称。  
   
- **“变量名称”**  
+ **变量名称**  
  在列表中选择变量以将其映射到结果集。  
   
  **结果类型**  
  指示是返回单行还是返回完整结果集。  
   
- **“添加”**  
+ **添加**  
  向列表中添加结果集。  
   
  **删除**  
- 选择一个结果，再单击“删除”。  
+ 选择一个结果，再单击“删除”****。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [数据挖掘查询任务编辑器（“挖掘模型”选项卡）](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
- [数据挖掘查询任务编辑器（“输出”选项卡）](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
- [数据挖掘设计器](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
+ [数据挖掘查询任务编辑器 &#40;挖掘模型 "选项卡&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
+ [数据挖掘查询任务编辑器 &#40;输出 "选项卡&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
+ [Data Mining Designer](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
   
   

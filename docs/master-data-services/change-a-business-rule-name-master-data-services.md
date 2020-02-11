@@ -13,10 +13,10 @@ ms.assetid: cffcae43-a208-443f-9f43-a0ec9e05f79c
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 2794b4c7dc7d8196845a83509accca085f23f396
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728670"
 ---
 # <a name="change-a-business-rule-name-master-data-services"></a>更改业务规则名称 (Master Data Services)
@@ -25,7 +25,7 @@ ms.locfileid: "73728670"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当分配的业务规则名称不能满足您的业务需要时，可以更改此名称。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
@@ -36,27 +36,27 @@ ms.locfileid: "73728670"
   
 ### <a name="to-change-the-name-of-a-business-rule"></a>更改业务规则的名称  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”** 。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
   
-2.  从菜单栏中，指向 **“管理”** ，然后单击 **“业务规则”** 。  
+2.  从菜单栏中，指向 **“管理”** ，然后单击 **“业务规则”**。  
   
-3.  在“业务规则” 页上，从“模型” 下拉列表中选择一个模型。  
+3.  在“业务规则” **** 页上，从“模型” **** 下拉列表中选择一个模型。  
   
-4.  从“实体”下拉列表中选择一个实体。  
+4.  从“实体”**** 下拉列表中选择一个实体。  
   
-5.  从“成员类型”列表中选择一个成员类型。  
+5.  从“成员类型”**** 列表中选择一个成员类型。  
   
-6.  在网格中，选择要更改名称的业务规则所对应的行并单击“编辑”。  
+6.  在网格中，选择要更改名称的业务规则所对应的行并单击“编辑” ****。  
   
 7.  为业务规则键入新名称。  
   
-8.  单击 **“保存”** 。  
+8.  单击“保存”  。  
   
-9. 单击“全部发布”。  
+9. 单击“全部发布” ****。  
   
-10. 在确认对话框中，单击 **“确定”** 。 “业务规则状态”列中的值为“有效”。  
+10. 在确认对话框中，单击 **“确定”**。 “业务规则状态” **** 列中的值为“有效” ****。  
   
 ## <a name="see-also"></a>另请参阅  
- [业务规则 (Master Data Services)](../master-data-services/business-rules-master-data-services.md)  
+ [业务规则 &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
   

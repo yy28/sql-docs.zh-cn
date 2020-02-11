@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b9f58e472b0b6e6d164e45c2d1136c81bc4a46d6
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811227"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>复制到内存优化表订阅服务器
@@ -50,7 +50,7 @@ ms.locfileid: "68811227"
     GO  
     ```  
   
- **生成快照并调整架构**  
+ **生成快照和调整架构**  
   
 1.  创建一个快照作业并生成快照。  
   
@@ -59,9 +59,9 @@ ms.locfileid: "68811227"
     EXEC sp_startpublication_snapshot @publication = N'Publication1';  
     ```  
   
-2.  导航到快照文件夹。 默认位置是 "C:\Program Files\Microsoft SQL Server\MSSQL12。实例 > \MSSQL\repldata\unc\XXX\YYYYMMDDHHMMSS\\"。 \<  
+2.  导航到快照文件夹。 默认位置是 "C:\Program Files\Microsoft SQL Server\MSSQL12。\<实例> \mssql\repldata\unc\xxx\yyyymmddhhmmss\\"。  
   
-3.  找到 **。SCH-M**文件, 并在 Management Studio 中打开该表。 按如下所示更改表架构并且更新存储过程。  
+3.  找到 **。SCH-M**文件，并在 Management Studio 中打开该表。 按如下所示更改表架构并且更新存储过程。  
   
      对在 IDX 文件中定义的索引进行求值。 修改 `CREATE TABLE` 以指定所需索引、约束、主键和内存优化语法。 对于内存优化表，索引列应为 NOT NULL，而字符类型的索引列必须为 Unicode 并且使用 BIN2 排序规则。 请参阅下面的示例：  
   
@@ -226,7 +226,7 @@ ms.locfileid: "68811227"
     go  
     ```  
   
-5.  使用 "**提升为快照隔离**" 选项创建订阅服务器数据库, 并在使用非 Unicode 字符数据类型的情况下将默认排序规则设置为 Latin1_General_CS_AS_KS_WS。  
+5.  使用 "**提升为快照隔离**" 选项创建订阅服务器数据库，并在使用非 Unicode 字符数据类型的情况下将默认排序规则设置为 Latin1_General_CS_AS_KS_WS。  
   
     ```  
     CREATE DATABASE [Sub]   
@@ -241,7 +241,7 @@ ms.locfileid: "68811227"
     GO  
     ```  
   
-6.  将架构应用于订阅服务器的数据库, 并保存架构以供将来使用。  
+6.  将架构应用于订阅服务器的数据库，并保存架构以供将来使用。  
   
 7.  加载发布服务器（源）数据写入订阅服务器。 在您添加订阅前，不应在发布服务器上更改数据。  可按如下所示使用 BCP：  
   
@@ -263,7 +263,7 @@ ms.locfileid: "68811227"
     GO  
     ```  
   
- **不添加同步订阅**  
+ **添加非同步订阅**  
   
  添加非同步订阅。  
   
@@ -293,17 +293,17 @@ GO
   
  在订阅服务器上，在事务复制中涉及的表可以配置为内存优化表，但订阅服务器上的表必须满足针对内存优化表的要求。 这要求以下限制。  
   
--   若要在事务复制订阅服务器上创建内存优化表，必须手动修改用于创建内存优化表的快照架构文件。 有关详细信息, 请参阅[修改架构文件](#Schema)。  
+-   若要在事务复制订阅服务器上创建内存优化表，必须手动修改用于创建内存优化表的快照架构文件。 有关详细信息，请参阅[修改架构文件](#Schema)。  
   
 -   根据内存优化表的行限制，复制到订阅服务器上的内存优化表的表限制为 8060 字节。  
   
--   复制到订阅服务器上的内存优化表的表限制为内存优化表允许的数据类型。 有关详细信息, 请参阅[支持的数据类型](../in-memory-oltp/supported-data-types-for-in-memory-oltp.md)。  
+-   复制到订阅服务器上的内存优化表的表限制为内存优化表允许的数据类型。 有关详细信息，请参阅[支持的数据类型](../in-memory-oltp/supported-data-types-for-in-memory-oltp.md)。  
   
--   对于更新要复制到订阅服务器上内存优化表的表的主键，存在一些限制。 有关详细信息, 请参阅[将更改复制到主键](#PrimaryKey)。  
+-   对于更新要复制到订阅服务器上内存优化表的表的主键，存在一些限制。 有关详细信息，请参阅[将更改复制到主键](#PrimaryKey)。  
   
--   在内存优化表中不支持外键、唯一约束、触发器、架构修改、ROWGUIDCOL、计算列、数据压缩、别名数据类型、版本化和锁。 有关信息，请参阅 [内存中 OLTP 不支持的 T-SQL 构造](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) 。  
+-   在内存优化表中不支持外键、唯一约束、触发器、架构修改、ROWGUIDCOL、计算列、数据压缩、别名数据类型、版本化和锁。 有关信息，请参阅 [Transact-SQL Constructs Not Supported by In-Memory OLTP](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) 。  
   
-##  <a name="Schema"></a> 修改架构文件  
+##  <a name="Schema"></a>修改架构文件  
   
 -   不支持聚集索引。 将所有聚集索引更改为非聚集索引。  
   
@@ -316,7 +316,7 @@ GO
 ##  <a name="PrimaryKey"></a>将更改复制到主键  
  内存优化表的主键无法更新。 若要复制订阅服务器上的主键更新，请修改更新存储过程以便将该更新作为删除和插入对提供。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 复制](sql-server-replication.md)  
   
   

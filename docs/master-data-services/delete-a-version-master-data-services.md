@@ -14,10 +14,10 @@ ms.assetid: 2a4eeffe-8379-4744-ad44-c27d8c8ac9a8
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 8ac756143790e8d6c9494489438157ee44c02d06
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728348"
 ---
 # <a name="delete-a-version-master-data-services"></a>删除版本 (Master Data Services)
@@ -29,7 +29,7 @@ ms.locfileid: "73728348"
 > [!WARNING]  
 >  如果模型只有一个版本而您删除它，则模型将变得不可用。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  
   
 -   您必须具有查看 mdm.viw_SYSTEM_SCHEMA_VERSION 视图的权限和在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中执行 mds.udpVersionDelete 存储过程的权限。 有关详细信息，请参阅[数据库对象安全性 (Master Data Services)](../master-data-services/database-object-security-master-data-services.md)。  
@@ -56,7 +56,7 @@ ms.locfileid: "73728348"
     >  您可能必须等待几分钟，然后 Web 应用程序才能反映此更改。  
   
 ## <a name="see-also"></a>另请参阅  
- [版本 (Master Data Services)](../master-data-services/versions-master-data-services.md)   
- [复制版本 (Master Data Services)](../master-data-services/copy-a-version-master-data-services.md)  
+ [版本 &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   
+ [复制 &#40;Master Data Services 版本&#41;](../master-data-services/copy-a-version-master-data-services.md)  
   
   

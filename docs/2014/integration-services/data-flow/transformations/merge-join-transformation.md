@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0ef70f4f9d28fc23c0ac0a168447cc1b8867cd27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900163"
 ---
 # <a name="merge-join-transformation"></a>Merge Join Transformation
@@ -61,7 +61,7 @@ ms.locfileid: "62900163"
   
 -   [为合并转换和合并联接转换排序数据](sort-data-for-the-merge-and-merge-join-transformations.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [合并联接转换编辑器](../../merge-join-transformation-editor.md)   
  [合并转换](merge-transformation.md)   
  [Union All 转换](union-all-transformation.md)   

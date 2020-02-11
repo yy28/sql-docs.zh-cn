@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b9461a26140215f2c72d9cf9113877a85767bd77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62864967"
 ---
-# <a name="mssqleng014164"></a>MSSQL_ENG014164
+# <a name="mssql_eng014164"></a>MSSQL_ENG014164
     
 ## <a name="message-details"></a>消息详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62864967"
 |符号名称||  
 |消息正文|已设置发布 [%s] 的阈值 [%s:%s]。 请确保合并代理正在运行且符合要求。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  使用复制可以对一些情况启用警告。 这包括在合并发布服务器和订阅服务器之间同步更改时处理大量行失败的情况。 可以为 LAN 连接和拨号连接指定不同的连接次数。  
   
  使用复制监视器或 [sp_replmonitorchangepublicationthreshold](/sql/relational-databases/system-stored-procedures/sp-replmonitorchangepublicationthreshold-transact-sql)启用警告时，请指定阈值以确定何时触发警告。 达到或超过该阈值时，复制监视器中将显示警告，并且将一个事件写入 Windows 事件日志。 达到阈值还会触发 SQL Server 代理警报。 有关详细信息，请参阅[在复制监视器中设置阈值和警告](monitor/set-thresholds-and-warnings-in-replication-monitor.md)和[以编程方式监视复制](monitoring-replication.md)。  
@@ -44,7 +44,7 @@ ms.locfileid: "62864967"
   
 -   [用复制监视器监视性能](monitor/monitor-performance-with-replication-monitor.md)（特别是“查看合并复制的详细同步性能”一节）  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [错误和事件参考（复制）](errors-and-events-reference-replication.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 使用 SSMA for Oracle 控制台 (OracleToSQL) |Microsoft Docs
+title: 使用适用于 Oracle 控制台的 SSMA （OracleToSQL） |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,33 +11,33 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 855f84253db65da29bc871fa3b37dd9780a5cab8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68256653"
 ---
 # <a name="working-with-ssma-for-oracle-console-oracletosql"></a>使用 SSMA for Oracle 控制台 (OracleToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 适用于 Oracle 的迁移助手 (SSMA) 版本现已可通过在命令行控制台应用程序访问。 脚本文件窗体应用程序以执行命令的输入。 作为控制台应用程序，SSMA 使脚本级别进行连接，可减少迁移周期，并可缩放的迁移工作。  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Oracle 的迁移助手（SSMA）版本现在可通过命令行中的控制台应用程序进行访问。 脚本文件构成应用程序的输入，用于执行命令。 作为控制台应用程序，SSMA 启用了脚本级交互，减少了迁移循环，并扩展了迁移工作量。  
   
-本部分介绍将 Oracle 数据库使用 SSMA 控制台应用程序迁移的过程。  
+本部分介绍使用 SSMA 控制台应用程序迁移 Oracle 数据库的过程。  
   
-在本部分中的主题包括：  
+本部分中涵盖的主题包括：  
   
 |||  
 |-|-|  
-|**主题**|**说明**|  
-|[开始使用 SSMA for Oracle 控制台&#40;OracleToSQL&#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-console-oracletosql.md)|说明要执行的控制台应用程序的过程。|  
-|[SSMA 控制台中的命令行选项&#40;OracleToSQL&#41;](../../ssma/oracle/command-line-options-in-ssma-console-oracletosql.md)|介绍运行 SSMA 控制台应用程序的命令行选项和参数。|  
-|[创建脚本文件&#40;OracleToSQL&#41;](../../ssma/oracle/creating-script-files-oracletosql.md)|介绍如何创建脚本文件。|  
-|[创建变量值文件&#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)|介绍如何创建变量值文件。|  
-|[创建服务器连接文件&#40;OracleToSQL&#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)|说明如何创建服务器连接文件。|  
-|[执行 SSMA 控制台&#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)|介绍运行 SSMA 控制台应用程序的脚本文件命令。|  
-|[使用示例控制台脚本文件&#40;OracleToSQL&#41;](../../ssma/oracle/working-with-the-sample-console-script-files-oracletosql.md)|介绍的方法轻松地自定义的乘积以及示例文件中提供的脚本|  
-|[管理密码&#40;OracleToSQL&#41;](../../ssma/oracle/managing-passwords-oracletosql.md)|介绍密码加密和解密，并导入 / 导出密码信息。|  
-|[生成报告&#40;OracleToSQL&#41;](../../ssma/oracle/generating-reports-oracletosql.md)|列出的命令来生成报告。|  
-|[故障排除&#40;OracleToSQL&#41;](../../ssma/oracle/troubleshooting-oracletosql.md)|提供了关于解决迁移问题的信息摘要。|  
+|**本节**|**说明**|  
+|[SSMA for Oracle Console &#40;OracleToSQL&#41;入门](../../ssma/oracle/getting-started-with-ssma-for-oracle-console-oracletosql.md)|说明执行控制台应用程序的过程。|  
+|[SSMA 控制台中的命令行选项 &#40;OracleToSQL&#41;](../../ssma/oracle/command-line-options-in-ssma-console-oracletosql.md)|描述用于操作 SSMA 控制台应用程序的命令行选项和参数。|  
+|[&#40;OracleToSQL&#41;创建脚本文件](../../ssma/oracle/creating-script-files-oracletosql.md)|说明如何创建脚本文件。|  
+|[创建变量值文件 &#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)|说明如何创建变量值文件。|  
+|[&#40;OracleToSQL 创建服务器连接文件&#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)|说明如何创建服务器连接文件。|  
+|[执行 SSMA 控制台 &#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)|介绍用于运行 SSMA 控制台应用程序的脚本文件命令。|  
+|[使用示例控制台脚本文件 &#40;OracleToSQL&#41;](../../ssma/oracle/working-with-the-sample-console-script-files-oracletosql.md)|介绍如何轻松自定义示例文件和产品中提供的脚本|  
+|[&#40;OracleToSQL&#41;管理密码](../../ssma/oracle/managing-passwords-oracletosql.md)|介绍密码加密和解密以及导入/导出密码信息。|  
+|[&#40;OracleToSQL 生成报告&#41;](../../ssma/oracle/generating-reports-oracletosql.md)|列出用于生成报表的命令。|  
+|[&#40;OracleToSQL 的疑难解答&#41;](../../ssma/oracle/troubleshooting-oracletosql.md)|提供有关修复迁移问题的简要信息。|  
   
-## <a name="see-also"></a>请参阅  
-[开始使用 SSMA for Oracle 控制台](getting-started-with-ssma-for-oracle-console-oracletosql.md)  
+## <a name="see-also"></a>另请参阅  
+[与 SSMA for Oracle 控制台入门](getting-started-with-ssma-for-oracle-console-oracletosql.md)  
   
