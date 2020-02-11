@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d1dcc44c8d9892bb6dee31b5cebd4be73037cf0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093302"
 ---
 # <a name="ready-to-repair"></a>准备修复
@@ -27,9 +27,9 @@ ms.locfileid: "66093302"
   
 -   若要更改安装设置，请单击 **“上一步”**。  
   
--   若要退出安装程序，请单击 **“取消”**。  
+-   若要退出安装程序，请单击 "**取消**"  
   
-## <a name="see-also"></a>请参阅  
- [查看和阅读 SQL Server 安装程序日志文件](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
+## <a name="see-also"></a>另请参阅  
+ [查看和读取 SQL Server 安装程序日志文件](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

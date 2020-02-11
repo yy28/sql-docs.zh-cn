@@ -1,5 +1,5 @@
 ---
-title: syscollector_collection_sets (TRANSACT-SQL) |Microsoft Docs
+title: syscollector_collection_sets （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,23 +19,23 @@ ms.assetid: db0def92-f25b-45da-9709-eab972b33800
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a001a6a2da2532ac6d0e2a00079c8bd7c7036b66
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68060386"
 ---
-# <a name="syscollectorcollectionsets-transact-sql"></a>syscollector_collection_sets (Transact-SQL)
+# <a name="syscollector_collection_sets-transact-sql"></a>syscollector_collection_sets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   提供有关收集组的信息，包括计划、收集模式及其状态。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |collection_set_id|**int**|收集组的本地标识符。 不可为 null。|  
 |collection_set_uid|**uniqueidentifier**|收集组的全局唯一标识符。 不可为 null。|  
 |name|**nvarchar(4000)**|收集组的名称。 可以为 Null。|  
-|target|**nvarchar(max)**|标识收集组的目标。 可以为 Null。|  
+|目标|**nvarchar(max)**|标识收集组的目标。 可以为 Null。|  
 |is_system|**bit**|打开 (1) 或关闭 (0) 时可指示收集组是随数据收集器一起提供的还是由 dc_admin 在后来添加的。 这可以是内部开发的或由第三方开发的自定义收集组。 不可为 null。|  
 |is_running|**bit**|指示收集组是否正在运行。 不可为 null。|  
 |collection_mode|**smallint**|指定收集组的收集模式。 不可为 null。<br /><br /> 收集模式可为以下模式之一：<br /><br /> 0 - 缓存模式。 数据收集和上载分别位于各自的计划中。<br /><br /> 1 - 非缓存模式。 数据收集和上载处于同一个计划中。|  
@@ -46,7 +46,7 @@ ms.locfileid: "68060386"
 |logging_level|**smallint**|指定日志记录级别（0、1 或 2）。 不可为 null。|  
 |days_until_expiration|**smallint**|收集的数据保存在管理数据仓库中的天数。 不可为 null。|  
 |description|**nvarchar(4000)**|描述收集组。 可以为 Null。|  
-|dump_on_any_error|**bit**|打开 (1) 还是 off (0) 以指示是否创建[!INCLUDE[ssIS](../../includes/ssis-md.md)]任何错误时转储文件。 不可为 null。|  
+|dump_on_any_error|**bit**|打开（1）或关闭（0），指示是否在出现任何错误[!INCLUDE[ssIS](../../includes/ssis-md.md)]时创建转储文件。 不可为 null。|  
 |dump_on_codes|**nvarchar(max)**|包含用于触发转储文件的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 错误代码的列表。 可以为 Null。|  
   
 ## <a name="permissions"></a>权限  
@@ -55,9 +55,9 @@ ms.locfileid: "68060386"
 ## <a name="remarks"></a>备注  
  数据收集器 API 只允许您更改或删除您所创建的收集组。 不能修改或删除随系统提供的收集组。 不过，您仍可以启用或禁用系统收集组，还可以更改其配置。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据收集器存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [数据收集器视图 (Transact-SQL)](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
- [“数据收集”](../../relational-databases/data-collection/data-collection.md)  
+ [&#40;Transact-sql&#41;的数据收集器视图](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
+ [数据收集](../../relational-databases/data-collection/data-collection.md)  
   
   

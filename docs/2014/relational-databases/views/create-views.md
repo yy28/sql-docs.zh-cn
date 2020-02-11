@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 27748ee6f4c70ebbcb4d1d28738130ddea07232b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211666"
 ---
 # <a name="create-views"></a>创建视图
@@ -49,9 +49,9 @@ ms.locfileid: "68211666"
   
  视图最多可以包含 1,024 列。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求在数据库中具有 CREATE VIEW 权限，并具有在其中创建视图的架构的 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -62,7 +62,7 @@ ms.locfileid: "68211666"
   
 2.  右键单击“视图”文件夹，然后单击“新建视图...”   。  
   
-3.  在“添加表”对话框中，从以下选项卡之一选择要在新视图中包含的元素：  “表”、“视图”、“函数”和“同义词”。  
+3.  在 **“添加表”** 对话框中，从以下选项卡之一选择要在新视图中包含的元素：“表”、“视图”、“函数”和“同义词”。  
   
 4.  单击 **“添加”** ，再单击 **“关闭”** 。  
   

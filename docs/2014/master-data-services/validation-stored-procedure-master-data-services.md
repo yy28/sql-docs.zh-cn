@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 89e0b57501eb948d0c67a6dc0a055051b7d19b18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65481333"
 ---
 # <a name="validation-stored-procedure-master-data-services"></a>验证存储过程 (Master Data Services)
@@ -48,17 +48,17 @@ EXECUTE mdm.udpValidateModel @User_ID, @Model_ID, @Version_ID, 1
   
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>parameters  
  此过程的参数如下所示：  
   
-|参数|Description|  
+|参数|说明|  
 |---------------|-----------------|  
 |UserID|用户 ID。|  
 |Model_ID|模型 ID。|  
 |Version_ID|版本 ID。|  
   
-## <a name="see-also"></a>请参阅  
- [数据导入&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)   
- [针对业务规则验证版本 (Master Data Services)](validate-a-version-against-business-rules-master-data-services.md)  
+## <a name="see-also"></a>另请参阅  
+ [数据导入 &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)   
+ [针对业务规则验证版本 &#40;Master Data Services&#41;](validate-a-version-against-business-rules-master-data-services.md)  
   
   

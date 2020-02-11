@@ -15,25 +15,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14f380f510070da1b8fa77f7f5440640ce37452b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62856502"
 ---
 # <a name="view-the-dependencies-of-a-stored-procedure"></a>查看存储过程的依赖关系
     
-##  <a name="Top"></a> 本主题介绍如何查看存储的过程中的依赖关系[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]通过使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]。  
+##  
+  <a name="Top"></a>本主题介绍了如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中查看存储过程依赖关系。  
   
--   **开始之前：** [安全性](#Security)  
+-   **开始之前：**  [安全性](#Security)  
   
--   **若要查看依赖关系的过程中，使用：** [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
+-   要查看过程的依赖关系，请使用：  [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  系统函数：`sys.dm_sql_referencing_entities`  
  要求对被引用的实体拥有 CONTROL 权限，并且对 sys.dm_sql_referencing_entities 拥有 SELECT 权限。 当被引用的实体是分区函数时，要求对数据库拥有 CONTROL 权限。 默认情况下，SELECT 权限授予 public。  
   
@@ -43,7 +44,7 @@ ms.locfileid: "62856502"
  对象目录视图：`sys.sql_expression_dependencies`  
  要求对数据库具有 VIEW DEFINITION 权限，并对数据库的 sys.sql_expression_dependencies 具有 SELECT 权限。 默认情况下，SELECT 权限仅授予 db_owner 固定数据库角色的成员。 将 SELECT 和 VIEW DEFINITION 权限授予其他用户时，被授权者可以查看数据库中的所有依赖关系。  
   
-##  <a name="Procedures"></a> 如何查看存储过程的依赖关系  
+##  <a name="Procedures"></a>如何查看存储过程的依赖关系  
  您可以使用以下项之一：  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
@@ -57,13 +58,13 @@ ms.locfileid: "62856502"
   
 2.  展开 **“数据库”** 、过程所属的数据库以及 **“可编程性”** 。  
   
-3.  展开  “存储过程”，右键单击此过程，再单击  “查看依赖关系”。  
+3.  展开****“存储过程”，右键单击此过程，再单击****“查看依赖关系”。  
   
 4.  查看依赖于过程的对象的列表。  
   
 5.  查看过程所依赖的对象的列表。  
   
-6.  单击“确定”  。  
+6.  单击“确定”。   
   
 ###  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **在查询编辑器中查看过程的依赖关系**  
@@ -73,7 +74,7 @@ ms.locfileid: "62856502"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
-2.  展开 **“数据库”** ，然后展开过程所属的数据库。  
+2.  展开 **“数据库”**，然后展开过程所属的数据库。  
   
 3.  在 **“文件”** 菜单下，单击 **“新建查询”** 。  
   
@@ -97,7 +98,7 @@ ms.locfileid: "62856502"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
-2.  展开 **“数据库”** ，然后展开过程所属的数据库。  
+2.  展开 **“数据库”**，然后展开过程所属的数据库。  
   
 3.  在 **“文件”** 菜单下，单击 **“新建查询”** 。  
   
@@ -123,7 +124,7 @@ ms.locfileid: "62856502"
  显示依赖于过程的对象。  
  1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
-2.  展开 **“数据库”** ，然后展开过程所属的数据库。  
+2.  展开 **“数据库”**，然后展开过程所属的数据库。  
   
 3.  在 **“文件”** 菜单下，单击 **“新建查询”** 。  
   
@@ -154,7 +155,7 @@ ms.locfileid: "62856502"
  显示过程所依赖的对象。  
  1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
-2.  展开 **“数据库”** ，然后展开过程所属的数据库。  
+2.  展开 **“数据库”**，然后展开过程所属的数据库。  
   
 3.  在 **“文件”** 菜单下，单击 **“新建查询”** 。  
   
@@ -181,10 +182,10 @@ ms.locfileid: "62856502"
     GO  
     ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [重命名存储过程](rename-a-stored-procedure.md)   
- [sys.dm_sql_referencing_entities (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql)   
- [sys.dm_sql_referenced_entities (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql)   
+ [sys. dm_sql_referencing_entities &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql)   
+ [sys. dm_sql_referenced_entities &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql)   
  [sys.sql_expression_dependencies (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql)  
   
   

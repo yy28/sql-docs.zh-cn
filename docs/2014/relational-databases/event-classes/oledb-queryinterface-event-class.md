@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b420e0b4b9c9531209f3d3227f534116e26dd206
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63032428"
 ---
 # <a name="oledb-queryinterface-event-class"></a>OLEDB QueryInterface 事件类
@@ -28,15 +28,15 @@ ms.locfileid: "63032428"
   
 ## <a name="oledb-queryinterface-event-class-data-columns"></a>OLEDB QueryInterface 事件类的数据列  
   
-|数据列名称|数据类型|Description|列 ID|可筛选|  
+|数据列名称|数据类型|说明|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|`nvarchar`|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |ClientProcessID|`int`|主机为运行该客户端应用程序的进程分配的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|9|是|  
-|DatabaseID|`int`|由 USE *database* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database* 语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 数据列而且服务器可用，则 **ServerName** 将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
+|DatabaseID|`int`|由 USE *database* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database* 语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]如果在跟踪中捕获到**ServerName**数据列并且服务器可用，则将显示数据库的名称。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
 |DatabaseName|`nvarchar`|正在其中运行用户语句的数据库的名称。|35|是|  
 |Duration|`bigint`|完成 OLE DB QueryInterface 事件所需的时间。|13|否|  
 |EndTime|`datetime`|事件结束的时间。|15|是|  
-|错误|`int`|给定事件的错误号。 通常是 **sys.messages** 目录视图中存储的错误号。|31|是|  
+|错误|`int`|给定事件的错误号。 通常，这是存储在**sys.databases**目录视图中的错误号。|31|是|  
 |EventClass|`int`|事件类型 = 120。|27|否|  
 |EventSequence|`int`|OLE DB 事件类在批处理中的顺序。|51|否|  
 |EventSubClass|`int`|0 = 正在启动<br /><br /> 1 = 已完成|21|否|  
@@ -57,7 +57,7 @@ ms.locfileid: "63032428"
 |TextData|`nvarchar`|在 OLE DB 调用中发送和接收的参数。|1|否|  
 |TransactionID|`bigint`|系统分配的事务 ID。|4|是|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [扩展事件](../extended-events/extended-events.md)   
  [sp_trace_setevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Transact-SQL 中的 OLE 自动化对象](../stored-procedures/ole-automation-objects-in-transact-sql.md)  
