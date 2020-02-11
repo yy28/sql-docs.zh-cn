@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bef23ec8291be1a1eeab8796a00e45487b82f60c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103169"
 ---
 # <a name="start-and-stop-the-report-server-service"></a>启动和停止报表服务器服务
@@ -37,11 +37,11 @@ ms.locfileid: "66103169"
   
 1.  启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具并连接到报表服务器。  
   
-2.  在“报表服务器状态”页上，单击 **“停止”** 或 **“启动”** 。  
+2.  在“报表服务器状态”页上，单击 **“停止”** 或 **“启动”**。  
   
 ### <a name="to-start-or-stop-the-service-using-services-in-administrative-tools"></a>使用管理工具中的服务启动或停止服务  
   
--   在“管理工具”中，打开“服务”，右键单击 **SQL Server Reporting Services (MSSQLSERVER)** ，再单击 **“停止”** 或 **“重新启动”** 。  
+-   在“管理工具”中，打开“服务”，右键单击 **SQL Server Reporting Services (MSSQLSERVER)**，再单击 **“停止”** 或 **“重新启动”**。  
   
  如果正在运行多个实例或报表服务器正在作为命名实例运行，请验证圆括号中的实例名称是否对应于您希望停止或重新启动的报表服务器实例。  
   
@@ -49,9 +49,9 @@ ms.locfileid: "66103169"
   
 1.  启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。  
   
-2.  选择 SQL Server 服务，右键单击 **“SQL Server Reporting Services”** ，再单击 **“停止”** 或 **“重新启动”** 。  
+2.  选择 SQL Server 服务，右键单击 **“SQL Server Reporting Services”**，再单击 **“停止”** 或 **“重新启动”**。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Reporting Services Configuration Manager（本机模式）](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
   

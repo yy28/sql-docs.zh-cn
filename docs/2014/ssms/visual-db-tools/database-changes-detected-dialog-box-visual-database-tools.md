@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0d5850ce71e483ea33bb99972c243140a63da5f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63270535"
 ---
 # <a name="database-changes-detected-dialog-box-visual-database-tools"></a>“检测到数据库更改”对话框 (Visual Database Tools)
@@ -34,7 +34,7 @@ ms.locfileid: "63270535"
  **是**  
  用列表中显示的所有更改更新数据库。  
   
- **“否”**  
+ **是**  
  取消保存操作。  
   
 > [!NOTE]  
@@ -43,8 +43,8 @@ ms.locfileid: "63270535"
  **保存文本文件**  
  显示“另存为”  对话框，用于为包含数据库更改列表的文本文件指定位置。  
   
-## <a name="see-also"></a>请参阅  
- [协调数据库关系图与已修改的数据库&#40;可视化数据库工具&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>另请参阅  
+ [将数据库关系图与已修改的数据库进行协调 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [多用户环境 (Visual Database Tools)](multiuser-environments-visual-database-tools.md)  
   
   

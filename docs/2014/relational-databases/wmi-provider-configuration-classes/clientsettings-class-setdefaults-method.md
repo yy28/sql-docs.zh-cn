@@ -1,5 +1,5 @@
 ---
-title: SetDefaults 方法 （ClientSettings 类） |Microsoft Docs
+title: SetDefaults 方法（ClientSettings 类） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ce71d591dc8f72e6826f7bcd96628fb1898fd7bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63242943"
 ---
 # <a name="setdefaults-method-clientsettings-class"></a>SetDefaults 方法（ClientSettings 类）
-  设置实例的所有默认值[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]选择覆盖现有数据的客户端。  
+  设置[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端实例的所有默认值，并提供覆盖现有数据的选项。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,12 +40,12 @@ OverwriteAll
 ```  
   
 ## <a name="parts"></a>组成部分  
- *object*  
- 一个表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端实例的 `ClientSettings` 对象。  
+ *对象*  
+ 一个表示 `ClientSettings` 客户端实例的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象。  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
   
-|参数|Description|  
+|参数|说明|  
 |---------------|-----------------|  
 |*OverwriteAll*|一个指定是否覆盖 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端实例的现有值的布尔值。 若要覆盖现有数据，则为 `true`；如果不希望覆盖现有数据，则为 `false`。|  
   

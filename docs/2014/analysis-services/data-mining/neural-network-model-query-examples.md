@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a249a83aba62c7881be024caa3931cb5ad07204
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083286"
 ---
 # <a name="neural-network-model-query-examples"></a>神经网络模型查询示例
@@ -32,9 +32,9 @@ ms.locfileid: "66083286"
   
  [从架构行集中检索模型元数据](#bkmk_Query2)  
   
- [示例查询 3：检索模型的输入属性](#bkmk_Query3)  
+ [正在检索模型的输入属性](#bkmk_Query3)  
   
- [示例查询 4：从隐藏层中检索权重](#bkmk_Query4)  
+ [从隐藏层中检索权重](#bkmk_Query4)  
   
  **预测查询**  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66083286"
 ## <a name="finding-information-about-a-neural-network-model"></a>查找有关 Naive Bayes 模型的信息  
  所有挖掘模型都公开算法根据标准化架构（即挖掘模型架构行集）学习的内容。 此信息提供有关模型的详细信息并包含基本元数据、分析中发现的结构以及处理时所使用的参数。 可以使用数据挖掘扩展插件 (DMX) 语句来创建针对该模型内容的查询。  
   
-###  <a name="bkmk_Query1"></a> 示例查询 1:使用 DMX 获取模型元数据  
+###  <a name="bkmk_Query1"></a>示例查询1：使用 DMX 获取模型元数据  
  下面的查询返回与使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法生成的模型有关的一些基本元数据。 在神经网络模型中，模型的父节点仅包含模型的名称、存储模型的数据库的名称以及子节点的数目。 但是，边际统计信息节点 (NODE_TYPE = 24) 会提供这些基本元数据以及与模型中使用的输入列有关的一些派生统计信息。  
   
  以下示例查询基于您在 [数据挖掘中级教程](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)中创建的、名为 `Call Center Default NN`的挖掘模型。 该模型使用来自呼叫中心的数据来探查人员配备、呼叫次数、订单与问题数之间可能的相关性。 该 DMX 语句检索神经网络模型的边际统计信息节点的数据。 该查询包含 FLATTENED 关键字，因为相关的输入属性统计信息存储在嵌套表 NODE_DISTRIBUTION 中。 但是，如果您的查询访问接口支持分层行集，则无需使用 FLATTENED 关键字。  
@@ -63,14 +63,14 @@ WHERE NODE_TYPE = 24
   
  示例结果：  
   
-|MODEL_CATALOG|MODEL_NAME|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
+|MODEL_CATALOG|MODEL_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
 |--------------------|-----------------|-----------------------|------------------------|---------------|-------------------|-----------------|  
 |Adventure Works DW Multidimensional 2012|Call Center NN|Average Time Per Issue|Missing|0|0|1|  
 |Adventure Works DW Multidimensional 2012|Call Center NN|Average Time Per Issue|< 64.7094100096|11|0.407407407|5|  
   
  有关架构行集中的列在神经网络模型的上下文中的含义的定义，请参阅 [神经网络模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)的挖掘模型。  
   
-###  <a name="bkmk_Query2"></a> 示例查询 2:从架构行集中检索模型元数据  
+###  <a name="bkmk_Query2"></a>示例查询2：从架构行集中检索模型元数据  
  通过查询数据挖掘架构行集，可以找到在 DMX 内容查询中返回的相同信息。 但是，架构行集还提供一些额外的列。 下面的示例查询返回模型的创建日期、修改日期以及上次处理模型日期。 该查询还返回可预测列（这从模型内容中并不能轻易获得）以及用于生成该模型的参数。 此信息对于模型的归档很有用。  
   
 ```  
@@ -89,7 +89,7 @@ WHERE MODEL_NAME = 'Call Center Default NN'
 |PREDICTION_ENTITY|Average Time Per Issue,<br /><br /> Grade Of Service,<br /><br /> Number Of Orders|  
 |MINING_PARAMETERS|HOLDOUT_PERCENTAGE=30, HOLDOUT_SEED=0,<br /><br /> MAXIMUM_INPUT_ATTRIBUTES=255, MAXIMUM_OUTPUT_ATTRIBUTES=255,<br /><br /> MAXIMUM_STATES=100, SAMPLE_SIZE=10000, HIDDEN_NODE_RATIO=4|  
   
-###  <a name="bkmk_Query3"></a> 示例查询 3:示例查询 3：检索模型的输入属性  
+###  <a name="bkmk_Query3"></a>示例查询3：检索模型的输入属性  
  通过查询输入层 (NODE_TYPE = 18) 的子节点 (NODE_TYPE = 20) 可以检索用于创建模型的输入属性值对。 下面的查询从节点说明返回输入属性列表。  
   
 ```  
@@ -124,7 +124,7 @@ WHERE NODE_TYPE = 21
   
  示例结果：  
   
-|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|  
+|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|  
 |-----------------------|------------------------|  
 |Average Time Per Issue|64.7094100096 - 77.4002099712|  
 |Day Of Week|Fri.|  
@@ -139,7 +139,7 @@ WHERE NODE_TYPE = 21
 </NormContinuous>    
 ```  
   
-###  <a name="bkmk_Query4"></a> 示例查询 4:示例查询 4：从隐藏层中检索权重  
+###  <a name="bkmk_Query4"></a>示例查询4：从隐藏层中检索权重  
  神经网络模型的模型内容采用特定的结构，以便轻松检索网络中的任何节点的详细信息。 此外，节点的 ID 号提供了有助于您标识节点类型之间关系的信息。  
   
  下面的查询演示了如何检索隐藏层特定节点下存储的系数。 该隐藏层包含一个组织程序节点 (NODE_TYPE = 19) 和多个子节点 (NODE_TYPE = 22)，组织程序节点仅包含元数据，子节点包含属性和值的各种组合的系数。 此查询仅返回系数节点。  
@@ -155,7 +155,7 @@ AND [PARENT_UNIQUE_NAME] = '40000000200000000' FROM [Call Center Default NN].CON
   
  示例结果：  
   
-|NODE_UNIQUE_NAME|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.VALUETYPE|  
+|NODE_UNIQUE_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.VALUETYPE|  
 |------------------------|-----------------------|------------------------|-----------------|  
 |70000000200000000|6000000000000000a|-0.178616518|7|  
 |70000000200000000|6000000000000000b|-0.267561918|7|  
@@ -176,12 +176,13 @@ AND [PARENT_UNIQUE_NAME] = '40000000200000000' FROM [Call Center Default NN].CON
  同样，如果您查询输出层 (NODE_TYPE = 23) 中各节点的 NODE_DISTRIBUTION 表，则会看到每个输出值的系数。 但是，在输出层中，指针将回指隐藏层的节点。 有关详细信息，请参阅 [神经网络模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)的挖掘模型。  
   
 ## <a name="using-a-neural-network-model-to-make-predictions"></a>使用神经网络模型进行预测  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法支持分类和回归。 您可以对这些模型使用预测函数来提供新数据并创建单独预测或批预测。  
+ 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法支持分类和回归。 您可以对这些模型使用预测函数来提供新数据并创建单独预测或批预测。  
   
-###  <a name="bkmk_Query5"></a> 示例查询 5:创建单独预测  
+###  <a name="bkmk_Query5"></a>示例查询5：创建单独预测  
  对神经网络模型生成预测查询的最简单方法是使用预测查询生成器，在 **和** 的数据挖掘设计器的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] “挖掘预测” [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]选项卡中都提供了该生成器。 您可以在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络查看器中浏览模型来筛选感兴趣的属性并查看趋势，然后切换到 **“挖掘预测”** 选项卡来创建一个查询并预测那些趋势的新值。  
   
- 例如，您可以浏览呼叫中心模型来查看订单量和其他属性之间的相关性。 若要执行此操作，打开该模型在查看器中，并为**输入**，选择 **\<所有 >** 。  接下来，为 **“输出”** 选择 **“订单数”** 。 对于 **“值 1”** ，请选择表示最多订单的范围，对于 **“值 2”** ，请选择表示最少订单的范围。 然后您将对模型将其与订单量关联的所有属性一目了然。  
+ 例如，您可以浏览呼叫中心模型来查看订单量和其他属性之间的相关性。 为此，请在查看器中打开模型，然后为 "**输入**" 选择** \<"所有>**"。  接下来，为 **“输出”** 选择 **“订单数”**。 对于 **“值 1”**，请选择表示最多订单的范围，对于 **“值 2”**，请选择表示最少订单的范围。 然后您将对模型将其与订单量关联的所有属性一目了然。  
   
  通过浏览查看器中的结果，您将发现一周中的某些天订单量较少，而操作员数的增加似乎与较高的销售额相关联。 然后您可以使用针对模型的预测查询来测试假设情况，询问在订单量少的日子增加级别 2 操作员的人数是否能增加订单量。 为此，请创建如下所示的查询：  
   
@@ -198,7 +199,7 @@ NATURAL PREDICTION JOIN
   
 |Predicted Orders|概率|  
 |----------------------|-----------------|  
-|364|0.9532...|  
+|364|0.9532 .。。|  
   
  预测的周二销售量高于当前销售范围，并且该预测的概率非常高。 但是，您可能要使用批处理创建多个预测来测试对模型的各种假设。  
   
@@ -210,21 +211,21 @@ NATURAL PREDICTION JOIN
   
 |||  
 |-|-|  
-|预测函数|用法|  
-|[IsDescendant (DMX)](/sql/dmx/isdescendant-dmx)|确定一个节点是否是神经网络图中另一个节点的子节点。|  
-|[PredictAdjustedProbability (DMX)](/sql/dmx/predictadjustedprobability-dmx)|返回加权的概率。|  
-|[PredictHistogram (DMX)](/sql/dmx/predicthistogram-dmx)|返回与当前预测值相关的值的表。|  
-|[PredictVariance (DMX)](/sql/dmx/predictvariance-dmx)|返回预测值的方差。|  
-|[PredictProbability (DMX)](/sql/dmx/predictprobability-dmx)|返回预测值的概率。|  
-|[PredictStdev (DMX)](/sql/dmx/predictstdev-dmx)|返回预测值的标准偏差。|  
-|[PredictSupport (DMX)](/sql/dmx/predictsupport-dmx)|对于神经网络模型和逻辑回归模型，该函数将返回表示整个模型的定型集大小的单个值。|  
+|预测函数|使用情况|  
+|[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|确定一个节点是否是神经网络图中另一个节点的子节点。|  
+|[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|返回加权的概率。|  
+|[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|返回与当前预测值相关的值的表。|  
+|[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|返回预测值的方差。|  
+|[PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|返回预测值的概率。|  
+|[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|返回预测值的标准偏差。|  
+|[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|对于神经网络模型和逻辑回归模型，该函数将返回表示整个模型的定型集大小的单个值。|  
   
  有关特定函数的语法，请参阅[数据挖掘扩展插件 (DMX) 函数引用](/sql/dmx/data-mining-extensions-dmx-function-reference)。  
   
-## <a name="see-also"></a>请参阅  
- [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)   
+## <a name="see-also"></a>另请参阅  
+ [Microsoft 神经网络算法](microsoft-neural-network-algorithm.md)   
  [Microsoft 神经网络算法技术参考](microsoft-neural-network-algorithm-technical-reference.md)   
- [神经网络模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [第 5 课：生成神经网络模型和逻辑回归模型&#40;数据挖掘中级教程&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [&#40;Analysis Services 数据挖掘的神经网络模型的挖掘模型内容&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [第5课：生成神经网络和逻辑回归模型 &#40;中级数据挖掘教程&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
   

@@ -14,39 +14,43 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: edf6d73edb8c4409f82302c2cdf013f18037e4bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478535"
 ---
 # <a name="validate-specific-members-against-business-rules-master-data-services"></a>针对业务规则验证特定成员 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，在您想要根据业务规则更新或验证成员的子级时，可以有选择地应用业务规则。  
   
 > [!NOTE]  
->  如果想要将业务规则应用于某个模型版本中的所有成员，请参阅[针对业务规则验证版本 (Master Data Services)](validate-a-version-against-business-rules-master-data-services.md)。  
+>  如果想要将业务规则应用于某个模型版本中的所有成员，请参阅 [针对业务规则验证版本 (Master Data Services)](validate-a-version-against-business-rules-master-data-services.md)。  
   
-## <a name="prerequisites"></a>系统必备  
+## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  
   
--    您必须有权访问“资源管理器”功能区域。  
+-   您必须有权访问 "**资源管理器**" 功能区域。  
   
 -   对于您要将业务规则应用于的模型对象，您必须至少具有 **“更新”** 权限。  
   
 ### <a name="to-apply-business-rules-selectively"></a>有选择地应用业务规则  
   
-1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 在  主页上，从“模型”列表中，选择模型。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页上，从“模型” **** 列表中选择模型。  
   
-2.   从“版本”列表中，选择某一版本。  
+2.  
+  **
+  ** 从“版本”列表中，选择某一版本。  
   
-3.  单击 **“资源管理器”** 。  
+3.  
+  **
+  **单击“资源管理器”。  
   
 4.  从菜单栏中指向 **“实体”** ，然后单击包含要将规则应用于的成员的实体名称。  
   
-5.  单击“应用业务规则”  。 业务规则仅应用于在网格中显示的成员。  
+5.  单击“应用业务规则”****。 业务规则仅应用于在网格中显示的成员。  
   
-## <a name="see-also"></a>请参阅  
- [针对业务规则验证版本 (Master Data Services)](validate-a-version-against-business-rules-master-data-services.md)   
- [业务规则 (Master Data Services)](../../2014/master-data-services/business-rules-master-data-services.md)  
+## <a name="see-also"></a>另请参阅  
+ [针对业务规则验证版本 &#40;Master Data Services&#41;](validate-a-version-against-business-rules-master-data-services.md)   
+ [业务规则 &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
   

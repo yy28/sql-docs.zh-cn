@@ -1,5 +1,5 @@
 ---
-title: 升级数据库关系图从以前的版本 (Visual Database Tools) |Microsoft Docs
+title: 从以前的版本升级数据库关系图（Visual Database Tools） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,14 +19,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 311285545abae9ae9f80b264204b88485aac71aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63205705"
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>从以前的版本升级数据库关系图 (Visual Database Tools)
-  如果对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 设置了数据库关系图创建功能，则对以前版本的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]数据库创建的数据库关系图将自动升级。 有关设置关系图，请参阅的详细步骤[设置数据库关系图设计器&#40;Visual Database Tools&#41;](visual-database-tools.md)。  
+  如果对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 设置了数据库关系图创建功能，则对以前版本的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]数据库创建的数据库关系图将自动升级。 有关设置关系图的详细步骤，请参阅[设置数据库关系图设计器 &#40;Visual Database Tools&#41;](visual-database-tools.md)。  
   
 ### <a name="to-upgrade-legacy-database-diagrams"></a>升级旧的数据库关系图  
   
@@ -38,8 +38,8 @@ ms.locfileid: "63205705"
   
      这将升级存储在数据库中的关系图。  
   
-## <a name="see-also"></a>请参阅  
- [了解数据库关系图所有权&#40;可视化数据库工具&#41;](understand-database-diagram-ownership-visual-database-tools.md)   
- [设置数据库关系图设计器 (Visual Database Tools)](visual-database-tools.md)  
+## <a name="see-also"></a>另请参阅  
+ [了解数据库关系图所有权 &#40;Visual Database Tools&#41;](understand-database-diagram-ownership-visual-database-tools.md)   
+ [&#40;Visual Database Tools 设置数据库关系图设计器&#41;](visual-database-tools.md)  
   
   

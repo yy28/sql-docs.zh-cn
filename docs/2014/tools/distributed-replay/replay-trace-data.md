@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: efb54bb64481dc29c50976cb58df813bad411f9c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63149899"
 ---
 # <a name="replay-trace-data"></a>重播跟踪数据
-  准备好输入跟踪数据之后，您可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分布式重播功能启动分布式重播。 有关详细信息，请参阅 [准备输入跟踪数据](prepare-the-input-trace-data.md)。  
+  准备好输入跟踪数据后，可以[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用 Distributed Replay 功能启动分布式重播。 有关详细信息，请参阅 [准备输入跟踪数据](prepare-the-input-trace-data.md)。  
   
  使用管理工具 **replay** 选项启动分布式重播的事件重播阶段。 此阶段包含两个部分：跟踪数据调度和分布式重播的启动与同步。  
   
@@ -31,17 +31,17 @@ ms.locfileid: "63149899"
   
 ### <a name="to-replay-the-trace"></a>重播跟踪  
   
-1.  **（可选）修改重播配置设置**:如果你想要修改重播配置设置，例如，顺序模式和各种缩放值，则必须修改`<ReplayOptions>`基于 XML 的重播配置文件元素`DReplay.exe.replay.config`。 还可以修改 `<OutputOptions>` 元素以指定输出设置，例如是否记录行计数。 如果要修改重播配置文件，建议您修改副本而非原始版本。 若要修改设置，请执行以下步骤：  
+1.  **（可选）修改重播配置设置**：若要修改重播配置设置（如顺序模式和各种缩放值），必须修改基于 XML 的重播配置文件`<ReplayOptions>` `DReplay.exe.replay.config`的元素。 还可以修改 `<OutputOptions>` 元素以指定输出设置，例如是否记录行计数。 如果要修改重播配置文件，建议您修改副本而非原始版本。 若要修改设置，请执行以下步骤：  
   
     1.  制作默认重播配置文件 `DReplay.exe.replay.config`的副本并重命名此新文件。 默认重播配置文件位于管理工具安装文件夹中。  
   
     2.  在新的配置文件中修改重播配置设置。  
   
-    3.  启动事件重播阶段（下一步）时，使用“重播”  选项的 *config_file* 参数指定修改后的配置文件的位置。  
+    3.  启动事件重播阶段（下一步）时，使用“重播”** 选项的 **config_file** 参数指定修改后的配置文件的位置。  
   
      有关重播配置文件的详细信息，请参阅 [配置分布式重播](configure-distributed-replay.md)。  
   
-2.  **启动事件重播阶段**:若要启动分布式的重播，必须运行管理工具**重播**选项。 有关详细信息，请参阅[重播选项（分布式重播管理工具）](replay-option-distributed-replay-administration-tool.md)。  
+2.  **启动事件重播阶段**：若要启动分布式重播，必须通过**重播**选项运行管理工具。 有关详细信息，请参阅[重播选项（分布式重播管理工具）](replay-option-distributed-replay-administration-tool.md)。  
   
     1.  打开 Windows 命令提示符实用工具 (`CMD.exe`)，然后导航到分布式重播管理工具 (`DReplay.exe`) 的安装位置。  
   
@@ -65,9 +65,9 @@ ms.locfileid: "63149899"
   
 3.  完成分布式重播时，管理工具将返回摘要信息。 如果指定 **-o** 选项，则重播活动已保存在每个客户端上的结果跟踪文件中。 有关结果跟踪文件的详细信息，请参阅 [查看重播结果](review-the-replay-results.md)。  
   
-## <a name="see-also"></a>请参阅  
- [Distributed Replay Requirements](distributed-replay-requirements.md)   
- [管理工具命令行选项（Distributed Replay 实用工具）](administration-tool-command-line-options-distributed-replay-utility.md)   
- [配置分布式重播](configure-distributed-replay.md)  
+## <a name="see-also"></a>另请参阅  
+ [Distributed Replay 要求](distributed-replay-requirements.md)   
+ [管理工具命令行选项 &#40;Distributed Replay 实用工具&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Configure Distributed Replay](configure-distributed-replay.md)  
   
   

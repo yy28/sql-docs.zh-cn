@@ -11,18 +11,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b591aa8e89200ca863b1e8196c383c506401fc3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151062"
 ---
 # <a name="xtp-cursors"></a>XTP 游标
   XTP 游标性能对象包含与内部 XTP 引擎游标相关的计数器。 游标是 XTP 引擎用于处理 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询的低级构建基块。 因此，您通常不能直接控制游标。  
   
- 下表介绍**XTP 游标**计数器。  
+ 下表介绍了**XTP 游标**计数器。  
   
-|计数器|Description|  
+|计数器|说明|  
 |-------------|-----------------|  
 |**游标删除数/秒**|每秒游标删除数（平均值）。|  
 |**游标插入数/秒**|每秒游标插入数（平均值）。|  
@@ -37,7 +37,7 @@ ms.locfileid: "63151062"
 |**接触的行数/秒**|游标每秒接触的行数（平均值）。|  
 |**接触的临时删除行数/秒**|游标每秒接触的即将到期的行数（平均值）。 如果删除行的事务仍处于活动状态（即尚未提交或中止），则此行即将到期。|  
   
-## <a name="see-also"></a>请参阅  
- [XTP&#40;内存中 OLTP&#41;性能计数器](../../integration-services/performance/performance-counters.md)  
+## <a name="see-also"></a>另请参阅  
+ [XTP &#40;内存中 OLTP&#41; 性能计数器](../../integration-services/performance/performance-counters.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 处理结果 (ODBC) |Microsoft Docs
+title: 处理结果（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21474aed83aac1fe86e2242b1238affa11ae64a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200313"
 ---
 # <a name="process-results-odbc"></a>处理结果 (ODBC)
@@ -33,7 +33,7 @@ ms.locfileid: "63200313"
   
     -   如果使用绑定列，则在绑定列缓冲区使用现在可用的数据。  
   
-    -   如果使用绑定列，在最后一个绑定列后一次或多次调用 [SQLGetData](../native-client-odbc-api/sqlgetdata.md) 以获取未绑定列的数据。 调用`SQLGetData`应该以递增顺序的列号。  
+    -   如果使用绑定列，在最后一个绑定列后一次或多次调用 [SQLGetData](../native-client-odbc-api/sqlgetdata.md) 以获取未绑定列的数据。 对`SQLGetData`的调用应按列号递增顺序排列。  
   
     -   多次调用 `SQLGetData` 以从 text 或 image 列获取数据。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "63200313"
   
     -   如果返回 SQL_SUCCESS_WITH_INFO 或 SQL_ERROR，则调用 [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) 以确定来自 PRINT 或 RAISERROR 语句的输出是否可用。  
   
-         如果将绑定语句参数用于某一存储过程的输出参数或返回值，则使用在绑定参数缓冲区中当前提供的数据。 此外，在使用绑定参数时，对 [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) 或 [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) 的每个调用都将执行 *S* 次 SQL 语句，其中，*S* 是绑定参数数组中元素的数目。 这意味着，将存在 *S* 组要处理的结果，而其中每组结果都由所有结果集、输出参数以及 SQL 语句的单次执行通常返回的返回代码构成。  
+         如果将绑定语句参数用于某一存储过程的输出参数或返回值，则使用在绑定参数缓冲区中当前提供的数据。 此外，在使用绑定参数时，对 [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) 或 [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) 的每个调用都将执行 *S* 次 SQL 语句，其中，*S* 是绑定参数数组中元素的数目。 这意味着，将存在*S*组要处理的结果，其中每组结果都由所有结果集、输出参数以及 SQL 语句的单次执行通常返回的返回代码构成。  
   
     > [!NOTE]  
     >  在某一结果集包含计算行时，每个计算行都可作为单独的结果集提供。 这些计算结果集混杂在普通行内，并且将普通行分为多个结果集。  
@@ -57,7 +57,7 @@ ms.locfileid: "63200313"
 > [!NOTE]  
 >  若要在 [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) 返回 SQL_NO_DATA 之前取消处理结果集，请调用 [SQLCloseCursor](../native-client-odbc-api/sqlclosecursor.md)。  
   
-## <a name="see-also"></a>请参阅  
- [处理结果操作指南主题&#40;ODBC&#41;](../../database-engine/dev-guide/processing-results-how-to-topics-odbc.md)  
+## <a name="see-also"></a>另请参阅  
+ [处理结果操作指南主题 &#40;ODBC&#41;](../../database-engine/dev-guide/processing-results-how-to-topics-odbc.md)  
   
   

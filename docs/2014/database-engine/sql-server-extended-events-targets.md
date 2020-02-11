@@ -14,13 +14,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7be4c1cc392516ffaf6d1e36fc10b93b517d772
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088872"
 ---
-# <a name="sql-server-extended-events-targets"></a>SQL Server Extended Events Targets
+# <a name="sql-server-extended-events-targets"></a>SQL Server 扩展事件目标
+  
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 扩展事件目标是事件使用者。 目标可以写入文件、在内存缓冲区中存储事件数据或聚合事件数据。 目标可以同步或异步处理数据。  
   
  扩展事件的设计确保了对于每个会话都保证目标收到并仅收到一次事件。  
@@ -39,11 +40,11 @@ ms.locfileid: "66088872"
   
      许多类型的事件是成对发生的，例如锁获取和锁释放。 用于确定指定的成对的事件何时未成对发生。 此目标是异步目标。  
   
--   [Windows (ETW) 事件跟踪](../relational-databases/extended-events/event-tracing-for-windows-target.md)  
+-   [Windows 事件跟踪 (ETW)](../relational-databases/extended-events/event-tracing-for-windows-target.md)  
   
      用于将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 事件与 Windows 操作系统或应用程序事件数据相关联。 此目标是同步目标。  
   
--   [直方图](../../2014/database-engine/histogram-target.md)  
+-   [而言](../../2014/database-engine/histogram-target.md)  
   
      用于基于指定的事件列或操作，对指定事件发生的次数进行计数。 此目标是异步目标。  
   
@@ -51,10 +52,10 @@ ms.locfileid: "66088872"
   
      用于在先进先出 (FIFO) 的基础上或按事件 FIFO 的基础上将事件数据保存在内存中。 此目标是异步目标。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [扩展事件](../relational-databases/extended-events/extended-events.md)   
  [SQL Server 扩展事件包](../relational-databases/extended-events/sql-server-extended-events-packages.md)   
- [SQL Server Extended Events Sessions](../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
+ [SQL Server 扩展事件会话](../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
  [SQL Server 扩展事件引擎](../relational-databases/extended-events/sql-server-extended-events-engine.md)  
   
   

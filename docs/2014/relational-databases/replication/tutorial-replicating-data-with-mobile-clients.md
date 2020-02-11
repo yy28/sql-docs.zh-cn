@@ -1,5 +1,5 @@
 ---
-title: 教程：使用移动客户端复制数据 |Microsoft Docs
+title: 教程：使用移动客户端复制数据 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c36eae0ca3d9613dfdaf13bce3a5e748f91b123f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63255401"
 ---
 # <a name="tutorial-replicating-data-with-mobile-clients"></a>教程：使用移动客户端复制数据
@@ -34,11 +34,12 @@ ms.locfileid: "63255401"
   
     -   任意版本的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，但 Express ([!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]) 或 [!INCLUDE[ssEW](../../includes/ssew-md.md)]除外。 这些版本不能充当复制发布服务器。  
   
-    -   [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库。 为了增强安全性，默认情况下不会安装示例数据库。  
+    -   
+  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库。 为了增强安全性，默认情况下不会安装示例数据库。  
   
 -   订阅服务器（目标）：  
   
-    -   任意版本的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，但 [!INCLUDE[ssEW](../../includes/ssew-md.md)]除外。 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 本教程中创建的发布不支持。  
+    -   任意版本的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，但 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 除外。 [!INCLUDE[ssEW](../../includes/ssew-md.md)]本教程中创建的发布不支持。  
   
     > [!NOTE]  
     >  默认情况下，不在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]上安装复制。  
@@ -46,17 +47,17 @@ ms.locfileid: "63255401"
 > [!NOTE]  
 >  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，必须使用属于 sysadmin 固定服务器角色成员的登录名连接到发布服务器和订阅服务器。  
   
- **学完本教程的估计时间：30 分钟。**  
+ **本教程的估计完成时间：30分钟。**  
   
 ## <a name="lessons-in-this-tutorial"></a>本教程中的课程  
   
 -   [第 1 课：使用合并复制发布数据](lesson-1-publishing-data-using-merge-replication.md)  
   
--   [第 2 课：创建对合并发布的订阅](lesson-2-creating-a-subscription-to-the-merge-publication.md)  
+-   [第2课：创建合并发布的订阅](lesson-2-creating-a-subscription-to-the-merge-publication.md)  
   
- [开始教程](merge/merge-replication.md)  
+ [启动教程](merge/merge-replication.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [复制编程概念](concepts/replication-programming-concepts.md)  
   
   

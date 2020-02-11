@@ -1,5 +1,5 @@
 ---
-title: 数据浏览选项对话框 (Analysis Services-数据挖掘) |Microsoft Docs
+title: "\"数据浏览选项\" 对话框（Analysis Services-数据挖掘） |Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b327a0a350e88fd197a52c710f8a991c892a0aea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086538"
 ---
 # <a name="data-exploration-options-dialog-box-analysis-services---data-mining"></a>“数据浏览选项”对话框（Analysis Services - 数据挖掘）
@@ -30,7 +30,7 @@ ms.locfileid: "66086538"
 |----------|----------------|  
 |**靠前计数**|选择此项将从最顶层检索 **“抽样计数”** 中指定为示例数据的行数。|  
 |**随机抽样**|选择此项将随机抽样和检索 **“抽样计数”** 中指定为示例数据的行数。|  
-|**样本数**|选择要作为示例数据返回的行的数量。|  
-|**每个图表的状态**|选择要在 **“浏览数据”** 对话框的 **“图表”** 选项卡中显示的离散状态数。|  
+|**“抽样计数”**|选择要作为示例数据返回的行的数量。|  
+|**每个图表的状态数**|选择要在 **“浏览数据”** 对话框的 **“图表”** 选项卡中显示的离散状态数。|  
   
   

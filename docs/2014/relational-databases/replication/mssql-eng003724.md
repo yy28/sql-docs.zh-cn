@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f3ea7c8720d43fdba53821091c0664bfe375a57b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63191448"
 ---
-# <a name="mssqleng003724"></a>MSSQL_ENG003724
+# <a name="mssql_eng003724"></a>MSSQL_ENG003724
     
 ## <a name="message-details"></a>消息详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "63191448"
 |符号名称||  
 |消息正文|无法对 %S_MSG '%.*ls' 执行 %S_MSG，因为它正用于复制。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  数据库中的对象经复制后，通常会在系统表 **sysarticles** （用于快照和事务发布）或 **sysmergearticles** （用于合并发布）中标记为已复制。 尝试删除复制的对象时，会引发此错误。  
   
 ## <a name="user-action"></a>用户操作  
@@ -44,7 +44,7 @@ ms.locfileid: "63191448"
   
  如果此错误发生在未复制的数据库中，请执行 [sp_removedbreplication (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql)，以确保此数据库中的对象不会标记为已复制。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [错误和事件参考（复制）](errors-and-events-reference-replication.md)  
   
   

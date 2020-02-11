@@ -16,16 +16,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9ea811d8fcc598342781111aa559795888a889b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250765"
 ---
 # <a name="sql-server-database-replica"></a>SQL Server，数据库副本
+  
   **SQLServer:Database Replica** 性能对象包含的性能计数器报告有关 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中 AlwaysOn 可用性组的辅助数据库的信息。 此对象仅在承载辅助副本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上有效。  
   
-|计数器名称|Description|有关视图…|  
+|计数器名称|说明|有关视图…|  
 |------------------|-----------------|--------------|  
 |**File Bytes Received/sec**|辅助副本在最后一秒为辅助数据库接收的 FILESTREAM 数据量。|辅助副本|  
 |**Log Bytes Received/sec**|辅助副本在最后一秒为数据库接收的日志记录量。|辅助副本|  
@@ -39,7 +40,7 @@ ms.locfileid: "63250765"
 |**Total Log requiring undo**|必须撤消的日志总字节数 (KB)。|辅助副本|  
 |**Transaction Delay**|等待未终止的提交确认的延迟时间（毫秒）。|主副本|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [监视资源使用情况（系统监视器）](monitor-resource-usage-system-monitor.md)   
  [SQL Server，可用性副本](sql-server-availability-replica.md)   
  [SQL Server，Databases 对象](sql-server-databases-object.md)   

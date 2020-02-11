@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9f5b5c233a482672a0cc225364dbf1e4f3b4b645
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63185404"
 ---
 # <a name="database-element-for-workload-dta"></a>工作负荷的数据库元素 (DTA)
@@ -36,7 +36,7 @@ ms.locfileid: "63185404"
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|描述|  
+|特征|说明|  
 |--------------------|-----------------|  
 |**数据类型和长度**|无。|  
 |**默认值**|无。|  
@@ -53,9 +53,9 @@ ms.locfileid: "63185404"
  在数据库引擎优化顾问 XML 架构中，此元素的名称为 **DatabaseDetailsTypecomplexType** 。 请不要将此 `Database` 元素与根级父元素为 `Configuration` 元素的元素相混淆。 （请参阅[用于配置的数据库元素 (DTA)](database-element-for-configuration-dta.md)。）  
   
 ## <a name="example"></a>示例  
- 有关用法示例的这`Database`元素，请参阅中的代码示例[工作负荷元素&#40;DTA&#41;](workload-element-dta.md)。  
+ 有关此`Database`元素的用法示例，请参阅工作负荷元素中的代码示例[&#40;DTA&#41;](workload-element-dta.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [XML 输入文件引用（数据库引擎优化顾问）](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3eb41d807a1b4678882c791a7bdeb7693de7b08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107914"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>导出到 PDF 文件（报表生成器和 SSRS）
   PDF 呈现扩展插件可将报表呈现为特定格式的文件，以便在 Adobe Acrobat 和其他支持 PDF 1.3 的第三方 PDF 查看器中打开。 尽管 PDF 1.3 与 Adobe Acrobat 4.0 及更高版本兼容，但 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支持 Adobe Acrobat 6 或更高版本。 呈现扩展插件不需要使用 Adobe 软件呈现报表。 不过，该插件需要使用 PDF 查看器（例如 Adobe Acrobat）才可查看或打印 PDF 格式的报表。  
   
- PDF 呈现扩展插件支持 ANSI 字符，并且可以从日语、朝鲜语、繁体中文、简体中文、西里尔语、希伯来语和阿拉伯语转换 Unicode 字符，但存在一些限制。 有关限制的详细信息，请参阅[导出报表&#40;报表生成器和 SSRS&#41;](export-reports-report-builder-and-ssrs.md)。  
+ PDF 呈现扩展插件支持 ANSI 字符，并且可以从日语、朝鲜语、繁体中文、简体中文、西里尔语、希伯来语和阿拉伯语转换 Unicode 字符，但存在一些限制。 有关限制的详细信息，请参阅[导出报表 &#40;报表生成器和 SSRS&#41;](export-reports-report-builder-and-ssrs.md)。  
   
  PDF 呈现器是一个物理页呈现器，因此其分页行为与诸如 HTML 和 Excel 等其他呈现器不同。 本主题提供了特定于 PDF 呈现器的信息并说明了呈现规则的例外情况。  
   
@@ -62,10 +62,13 @@ ms.locfileid: "66107914"
   
 |PDF 属性|创建自|  
 |------------------|------------------|  
-|`Title`|`Name` RDL 元素的 `Report` 属性。|  
-|`Author`|`Author` RDL 元素。|  
-|`Subject`|`Description` RDL 元素。|  
-|`Creator`|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 产品的名称和版本。|  
+|`Title`|
+  `Name` RDL 元素的 `Report` 属性。|  
+|`Author`|
+  `Author` RDL 元素。|  
+|`Subject`|
+  `Description` RDL 元素。|  
+|`Creator`|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]产品名称和版本。|  
 |`Producer`|呈现扩展插件的名称和版本。|  
 |`CreationDate`|报表执行时间，以 PDF `datetime` 格式表示。|  
   
@@ -80,7 +83,7 @@ ms.locfileid: "66107914"
 ### <a name="document-map"></a>文档结构图  
  如果报表中存在任何文档结构图标签，则会将文档大纲添加到 PDF 文件。 每个文档结构图标签在文档大纲中显示为一个条目，显示顺序与其在报表中的显示顺序相同。 在 Acrobat 中，仅当目标书签所在的页呈现出来时，才会将该标签添加到文档大纲中。  
   
- 如果仅呈现单个页，则不添加文档大纲。 文档结构图是分层排列的，以反映报表中的嵌套级别。 文档大纲可通过 Acrobat 中的“书签”选项卡进行访问。如果单击文档大纲内的条目，则会使文档转至标有书签的位置。  
+ 如果仅呈现单个页，则不添加文档大纲。 文档结构图是分层排列的，以反映报表中的嵌套级别。 文档大纲在 Acrobat 中的 "书签" 选项卡下是可访问的。单击文档大纲内的条目将导致文档进入带有书签的位置。  
   
 ### <a name="bookmarks"></a>书签  
  PDF 呈现不支持书签。  
@@ -93,7 +96,7 @@ ms.locfileid: "66107914"
   
   
   
-##  <a name="Compression"></a> 压缩  
+##  <a name="Compression"></a>折叠  
  图像压缩基于图像的原始文件类型。 默认情况下，PDF 呈现扩展插件会压缩 PDF 文件。  
   
  为了尽可能保留 PDF 文件中所包含图像的任何压缩状态，JPEG 图像存储为 JPEG，所有其他图像类型都存储为 BMP。  
@@ -108,7 +111,7 @@ ms.locfileid: "66107914"
   
   
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Reporting Services 中的分页（报表生成器和 SSRS）](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [呈现行为（报表生成器和 SSRS）](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）](interactive-functionality-different-report-rendering-extensions.md)   

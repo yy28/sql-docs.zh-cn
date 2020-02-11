@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 846e7960e9aca4bfb5deea8f50eae3c8a2f58c70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184435"
 ---
 # <a name="sequence-properties-general-page"></a>序列属性（“常规”页）
@@ -35,7 +35,7 @@ ms.locfileid: "63184435"
  **序列架构**  
  指定将拥有此序列的架构。  
   
- **数据类型**  
+ **Data type**  
  序列可定义为任何整数类型。 这包括：  
   
 |数据类型|范围|  
@@ -45,15 +45,17 @@ ms.locfileid: "63184435"
 |`int`|-2,147,483,648 到 2,147,483,647|  
 |`bigint`|-9,223,372,036,854,775,808 到 9,223,372,036,854,775,807|  
   
--   `decimal` 或 `numeric`，小数位数为 0。  
+-   
+  `decimal` 或 `numeric`，小数位数为 0。  
   
 -   基于这些类型之一的任何用户定义数据类型（别名类型）。  
   
- **精度**  
+ **Precision**  
  对于 `decimal` 或 `numeric` 数据类型，指定精度。 （小数位数始终为 0。）  
   
  **起始值**  
- 将由序列对象返回的第一个值。 **START** 值必须是小于或等于序列对象的最大值并大于或等于其最小值的值。 新序列对象的默认起始值是升序序列对象的最小值和降序序列对象的最大值。  
+ 将由序列对象返回的第一个值。 
+  **START** 值必须是小于或等于序列对象的最大值并大于或等于其最小值的值。 新序列对象的默认起始值是升序序列对象的最小值和降序序列对象的最大值。  
   
  **增量**  
  用于在每次调用 **NEXT VALUE FOR** 函数时递增（如果为负数，则为递减）序列对象的值的值。 如果增量是负值，则序列对象为降序，否则为升序。 增量不能为 0。  
@@ -70,14 +72,14 @@ ms.locfileid: "63184435"
 > [!NOTE]  
 >  循环不从起始值重新开始，而是从最小值/最大值重新开始。  
   
- **高速缓存选项**  
+ **缓存选项**  
  创建序列值的缓存可以通过最大限度地减少创建序列号所需的磁盘 IO 数来提高使用序列对象的应用程序性能。  
   
--   默认缓存大小 - [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将选择一个大小，然而，用户不应依赖于所选择的大小来确保一致。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 可能会更改计算缓存大小的方法而不另行通知。  
+-   默认缓存大小 - [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将选择一个大小，然而，用户不应依赖于所选择的大小来确保一致。 [!INCLUDE[msCoName](../../includes/msconame-md.md)]可能会更改计算缓存大小的方法而不另行通知。  
   
 -   无缓存 - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将不缓存序列号。  
   
--   缓存大小 - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将缓存序列值。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将保持跟踪当前值和缓存中留下的值数量。 因此，存储缓存所需的内存量始终为序列对象的数据类型的两个实例。  
+-   缓存大小 - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将缓存序列值。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]跟踪当前值和缓存中留下的值数。 因此，存储缓存所需的内存量始终为序列对象的数据类型的两个实例。  
   
  当使用 CACHE 选项创建时，意外关机（如电源故障）可能导致缓存中的序列号丢失。  
   
@@ -86,7 +88,7 @@ ms.locfileid: "63184435"
 ## <a name="permissions"></a>权限  
  要求对 SCHEMA 拥有 **CREATE SEQUENCE**、 **ALTER**或 **CONTROL** 权限。  
   
-## <a name="see-also"></a>请参阅  
- [sys.sequences (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-sequences-transact-sql)  
+## <a name="see-also"></a>另请参阅  
+ [sys.databases &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-sequences-transact-sql)  
   
   

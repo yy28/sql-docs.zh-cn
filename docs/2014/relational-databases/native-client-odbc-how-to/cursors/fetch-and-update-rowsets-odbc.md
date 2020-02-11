@@ -1,5 +1,5 @@
 ---
-title: 提取和更新行集 (ODBC) |Microsoft Docs
+title: 提取和更新行集（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,37 +13,37 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f04184e968b60a58c4adfa067d516b58b0a43292
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200449"
 ---
 # <a name="fetch-and-update-rowsets-odbc"></a>提取和更新行集 (ODBC)
     
 ### <a name="to-fetch-and-update-rowsets"></a>提取和更新行集  
   
-1.  （可选） 调用[SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)使用 SQL_ROW_ARRAY_SIZE 若要更改的行集中的行 (R) 数。  
+1.  （可选）通过 SQL_ROW_ARRAY_SIZE 调用[SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)来更改行集中的行数（R）。  
   
 2.  调用[SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401)或[SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md)获取行集。  
   
 3.  如果使用绑定列，则在行集的绑定列缓冲区中现在可以使用数据值和数据长度。  
   
-     如果使用未绑定的列，为每个行调用[SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407)使用 SQL_POSITION 设置游标位置，然后，为每个未绑定列：  
+     如果使用未绑定的列，则对于每个行调用 SQL_POSITION [SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407) ，以设置游标位置;然后，对于每个未绑定列：  
   
-    -   调用[SQLGetData](../../native-client-odbc-api/sqlgetdata.md)最后一个绑定列的行集后，若要获取的数据的一个或多个时间未绑定列。 调用[SQLGetData](../../native-client-odbc-api/sqlgetdata.md)应按列号递增的顺序。  
+    -   调用[SQLGetData](../../native-client-odbc-api/sqlgetdata.md)一次或多次，以便在行集的最后一个绑定列后获取未绑定列的数据。 对[SQLGetData](../../native-client-odbc-api/sqlgetdata.md)的调用应按照递增的列号顺序排列。  
   
     -   多次调用 [SQLGetData](../../native-client-odbc-api/sqlgetdata.md) 以从 text 或 image 列获取数据。  
   
 4.  设置任意执行时数据 text 或 image 列。  
   
-5.  调用[SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407)或[SQLBulkOperations](https://go.microsoft.com/fwlink/?LinkId=58398)若要设置光标位置，刷新、 更新、 删除或添加该行集内的行。  
+5.  调用[SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407)或[SQLBulkOperations](https://go.microsoft.com/fwlink/?LinkId=58398)以设置游标位置、刷新、更新、删除或添加行集中的行。  
   
      如果执行时数据 text 或 image 列用于某个更新或添加操作，则处理它们。  
   
-6.  （可选） 执行定位的 UPDATE 或 DELETE 语句时，指定游标名称 (可从[SQLGetCursorName](../../native-client-odbc-api/sqlgetcursorname.md)) 和同一连接上使用不同的语句句柄。  
+6.  （可选）执行定位的 UPDATE 或 DELETE 语句，指定游标名称（可从[SQLGetCursorName](../../native-client-odbc-api/sqlgetcursorname.md)获取）并在同一连接上使用不同的语句句柄。  
   
-## <a name="see-also"></a>请参阅  
- [使用游标操作指南主题&#40;ODBC&#41;](using-cursors-how-to-topics-odbc.md)  
+## <a name="see-also"></a>另请参阅  
+ [使用游标操作指南主题 &#40;ODBC&#41;](using-cursors-how-to-topics-odbc.md)  
   
   

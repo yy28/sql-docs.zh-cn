@@ -15,18 +15,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 35d4720a8fe8b8c1b404a97e27b36896f36dd5f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63209684"
 ---
 # <a name="view-resource-governor-properties"></a>查看资源调控器属性
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的“资源调控器属性”页创建或配置资源调控器实体（如资源池和工作负荷组）。  
   
-1.  **开始之前：** [权限](#Permissions)  
+1.  **开始之前：**  [权限](#Permissions)  
   
-2.  **若要查看资源调控器属性，请使用：** [资源调控器属性页](#ViewRGProp)  
+2.  **若要查看 Resource Governor 属性，请使用：**  [Resource Governor 属性页](#ViewRGProp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  除了查看资源调控器实体的属性外，还可以使用 **“资源调控器属性”** 页执行多个配置任务。 有关详细信息，请参阅以下主题：  
@@ -51,10 +51,10 @@ ms.locfileid: "63209684"
   
  可以通过查询 [sys.dm_resource_governor_configuration](/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql) 动态管理视图来获取 is_configuration_pending 的当前状态以确定是否存在配置挂起。  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 权限  
  查看资源调控器属性需要 VIEW SERVER STATER 权限。 资源调控器配置任务需要 CONTROL SERVER 权限。  
   
-##  <a name="ViewRGProp"></a> 查看资源调控器属性页  
+##  <a name="ViewRGProp"></a>查看 Resource Governor 属性页  
  **若要查看资源调控器属性，请使用资源调控器属性页 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中打开对象资源管理器，并依次逐步展开 **“管理”** 节点直至 **“资源调控器”** 。  
@@ -65,7 +65,7 @@ ms.locfileid: "63209684"
   
 4.  若要保存任何更改，请单击 **“确定”** 。  
   
-##  <a name="RGProp"></a> 资源调控器属性  
+##  <a name="RGProp"></a>Resource Governor 属性  
  **分类器函数名称**  
  通过从列表中选择来指定分类器函数。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "63209684"
  **最高内存 %**  
  指定此资源池中的请求可使用的总服务器内存。 范围从 0 到 100。 默认设置为 100。  
   
- 有关详细信息，请参阅[创建资源池&#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)。  
+ 有关详细信息，请参阅[CREATE RESOURCE POOL &#40;transact-sql&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)。  
   
  **资源池的工作负荷组**  
  通过使用提供的网格创建或更改工作负荷组配置。 此网格使用预定义的内部和默认组的信息进行填充。 通过单击池中某行的第一列来选择要处理的组。 若要创建新的工作组，请单击带星号 (&#42;) 前缀的行  。  
@@ -118,14 +118,14 @@ ms.locfileid: "63209684"
   
  有关详细信息，请参阅 [CREATE WORKLOAD GROUP (Transact-SQL)](/sql/t-sql/statements/create-workload-group-transact-sql)。  
   
-## <a name="view-resource-governor-properties-by-using-transact-sql"></a>通过使用 TRANSACT-SQL 查看资源调控器属性  
+## <a name="view-resource-governor-properties-by-using-transact-sql"></a>使用 Transact-sql 查看 Resource Governor 属性  
  **使用 Transact-SQL 查看资源调控器属性**  
   
 1.  若要查看资源调控器实体的定义，请使用[资源调控器目录视图 (Transact-SQL)](/sql/relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql)。  
   
 2.  若要查看资源调控器实体的当前配置，请使用[与资源调控器相关的动态管理视图 (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [资源调控器](resource-governor.md)   
  [启用资源调控器](enable-resource-governor.md)   
  [资源调控器资源池](resource-governor-resource-pool.md)   

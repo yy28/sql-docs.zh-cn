@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 21be7e81440fe6eb9573ecd100a459d70319ccea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63191268"
 ---
-# <a name="views"></a>Views
+# <a name="views"></a>视图
   视图是一个虚拟表，其内容由查询定义。 同表一样，视图包含一系列带有名称的列和行数据。 视图在数据库中并不是以数据值存储集形式存在，除非是索引视图。 行和列数据来自由定义视图的查询所引用的表，并且在引用视图时动态生成。  
   
  对其中所引用的基础表来说，视图的作用类似于筛选。 定义视图的筛选可以来自当前或其他数据库的一个或多个表，或者其他视图。 分布式查询也可用于定义使用多个异类源数据的视图。 例如，如果有多台不同的服务器分别存储您的单位在不同地区的数据，而您需要将这些服务器上结构相似的数据组合起来，这种方式就很有用。  
@@ -51,7 +51,7 @@ ms.locfileid: "63191268"
 |介绍如何返回与视图有关的信息，例如视图定义。|[获取有关视图的信息](../views/get-information-about-a-view.md)|  
 |介绍如何重命名视图。|[重命名视图](../views/rename-views.md)|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [基于 XML 列创建视图](../xml/create-views-over-xml-columns.md)   
  [CREATE VIEW (Transact-SQL)](/sql/t-sql/statements/create-view-transact-sql)  
   

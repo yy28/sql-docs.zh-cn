@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3d5465ab5157af0c0a6f1bd4a0566d49e45cd55c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482683"
 ---
 # <a name="delete-a-row-mds-add-in-for-excel"></a>删除行（用于 Excel 的 MDS 外接程序）
@@ -23,7 +23,7 @@ ms.locfileid: "65482683"
 > [!NOTE]  
 >  管理员可以重新激活已删除的成员。 有关详细信息，请参阅[重新激活成员或集合 (Master Data Services)](../reactivate-a-member-or-collection-master-data-services.md)。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“资源管理器”** 功能区域。  
@@ -34,11 +34,11 @@ ms.locfileid: "65482683"
   
 1.  通过单击行标题来选择要删除的一整行。  
   
-2.  在 **“发布并验证”** 组中，单击 **“删除”** 。  
+2.  在 **“发布并验证”** 组中，单击 **“删除”**。  
   
-3.  在确认对话框中，单击 **“是”** 。  
+3.  在确认对话框中，单击 **“是”**。  
   
-## <a name="see-also"></a>请参阅  
- [发布数据&#40;MDS add-in for Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+## <a name="see-also"></a>另请参阅  
+ [MDS Add-in for Excel&#41;发布数据 &#40;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

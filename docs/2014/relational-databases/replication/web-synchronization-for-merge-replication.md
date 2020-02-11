@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a3dfc7b81bf6f6a3ef0b9b74a2d1a78f3e3e1db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200093"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>合并复制的 Web 同步
@@ -29,9 +29,10 @@ ms.locfileid: "63200093"
   
 -   通过 Internet 同步移动用户数据。  
   
--   穿过企业防火墙在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库之间同步数据。  
+-   跨企业防火墙[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在数据库之间同步数据。  
   
- 例如，正在出差的销售代表可以使用 Web 同步。 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]公司的销售代表们要去所在区域的不同商店和供应商那里出差。 如果出差时间较长，销售代表们会住在宾馆里，这就需要一种方便的方法，能够在每天结束时上载销售数据，下载产品更新信息。  
+ 例如，正在出差的销售代表可以使用 Web 同步。 
+  [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]公司的销售代表们要去所在区域的不同商店和供应商那里出差。 如果出差时间较长，销售代表们会住在宾馆里，这就需要一种方便的方法，能够在每天结束时上载销售数据，下载产品更新信息。  
   
  因此， [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 的 IT 部门为每台便携式计算机配置了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并启用了合并复制以便使用 Web 同步。 每台便携式计算机上的合并代理都有一个 Internet URL，它指向运行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet 信息服务 (IIS) 的计算机上所安装的复制组件。 这些组件用于使订阅服务器与发布服务器同步。 现在，每个代表能够通过任何可用的 Internet 连接进行连接而无须使用远程拨号，能够上载和下载合适的数据。 Internet 连接使用安全套接字层 (SSL)，所以不需要虚拟专用网络 (VPN)。  
   
@@ -47,11 +48,12 @@ ms.locfileid: "63200093"
   
  ![Web 同步组件和数据流](media/web-sync01.gif "Web 同步组件和数据流")  
   
- Web 同步选项仅适用于请求订阅；所以，合并代理始终在订阅服务器上运行。 此合并代理可以是标准合并代理、合并代理 ActiveX 控件或者通过复制管理对象 (RMO) 提供同步的应用程序。 若要指定运行 IIS 的计算机的位置，请对合并代理使用 -InternetUrl 参数  。  
+ Web 同步选项仅适用于请求订阅；所以，合并代理始终在订阅服务器上运行。 此合并代理可以是标准合并代理、合并代理 ActiveX 控件或者通过复制管理对象 (RMO) 提供同步的应用程序。 若要指定运行 IIS 的计算机的位置，请对合并代理使用 -InternetUrl 参数****。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制侦听器 (Replisapi.dll) 在运行 IIS 的计算机上配置，负责处理从发布服务器和订阅服务器发送给服务器的消息。 拓扑中的每个节点都使用合并复制协调器 (Replrec.dll) 处理 XML 数据流。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制侦听器 (Replisapi.dll) 在运行 IIS 的计算机上配置，负责处理从发布服务器和订阅服务器发送给服务器的消息。 拓扑中的每个节点都使用合并复制协调器 (Replrec.dll) 处理 XML 数据流。  
   
- 对于所有参与 Web 同步的计算机，均需要[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]对于所有参与 Web 同步的计算机，需要或更高版本。  
   
 ### <a name="synchronization-process"></a>同步过程  
  同步过程包括以下步骤：  
@@ -80,8 +82,8 @@ ms.locfileid: "63200093"
   
 3.  然后，订阅服务器上的合并代理将接受 HTTPS 响应，并将下载更改应用于订阅数据库。  
   
-## <a name="see-also"></a>请参阅  
- [Configure Web Synchronization](configure-web-synchronization.md)   
- [Topologies for Web Synchronization](topologies-for-web-synchronization.md)  
+## <a name="see-also"></a>另请参阅  
+ [配置 Web 同步](configure-web-synchronization.md)   
+ [Web 同步的拓扑](topologies-for-web-synchronization.md)  
   
   

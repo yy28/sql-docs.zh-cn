@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4e47a8c6f5b0da31aea9168bbbc56bd9b28afb96
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63155788"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>内存优化表的统计信息
@@ -24,13 +24,13 @@ ms.locfileid: "63155788"
   
  随着行的插入、更新和删除，表数据通常在一段时间后发生变化。 这意味着需要定期更新统计信息。 默认情况下，在优化器确定基于磁盘的表的统计信息可能过期时，自动更新它们。  
   
- 默认情况下，不更新针对内存优化表的统计信息。 您需要手动更新它们。 使用[更新统计信息&#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/update-statistics-transact-sql)的单个列、 索引或表。 使用[sp_updatestats &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)若要更新的所有用户和数据库中的内部表的统计信息。  
+ 默认情况下，不更新针对内存优化表的统计信息。 您需要手动更新它们。 对单个列、索引或表使用[UPDATE STATISTICS &#40;transact-sql&#41;](/sql/t-sql/statements/update-statistics-transact-sql) 。 使用[sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)为数据库中的所有用户和内部表更新统计信息。  
   
- 使用时[CREATE STATISTICS &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-statistics-transact-sql)或[更新统计信息&#40;-&#41;](/sql/t-sql/statements/update-statistics-transact-sql)，必须指定`NORECOMPUTE`若要禁用自动统计信息内存优化表的更新。 对于基于磁盘的表， [sp_updatestats &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)仅更新统计信息，如果已自上次修改表[sp_updatestats &#40;-&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)。 对于内存优化表， [sp_updatestats &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)始终生成更新的统计信息。 [sp_updatestats &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)是一个不错的选择为内存优化的表; 否则您需要知道哪些表具有显著更改，以便您可以单独更新统计信息。  
+ 当使用[CREATE STATISTICS &#40;transact-sql&#41;](/sql/t-sql/statements/create-statistics-transact-sql)或[&#40;TRANSACT-SQL&#41;更新统计信息](/sql/t-sql/statements/update-statistics-transact-sql)时，必须指定`NORECOMPUTE`禁用内存优化表的自动统计信息更新。 对于基于磁盘的表， [sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)仅在自上次[sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)后修改了统计信息时才更新统计信息。 对于内存优化表， [sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)始终会生成更新的统计信息。 对于内存优化的表， [sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)是一个不错的选择;否则，您需要了解哪些表有重大更改，以便您可以单独更新统计信息。  
   
- 可以通过数据抽样或执行完全扫描生成统计信息。 抽样的统计信息只使用表数据的样本来估计数据分布情况。 完全扫描统计信息扫描整个表以确定数据分布情况。 完全扫描统计信息通常更为准确，但计算时间较长。 抽样的统计信息收集得更快。  
+ 可以通过对数据进行采样或执行完全扫描来生成统计信息。 抽样的统计信息只使用表数据的样本来估计数据分布情况。 完全扫描统计信息扫描整个表以确定数据分布情况。 完全扫描统计信息通常更为准确，但计算时间较长。 抽样的统计信息收集得更快。  
   
- 默认情况下，基于磁盘的表使用抽样的统计信息。 内存优化的表仅支持完全扫描统计信息。 使用时[创建统计信息&#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-statistics-transact-sql)或[更新统计信息&#40;-&#41;](/sql/t-sql/statements/update-statistics-transact-sql)，必须指定`FULLSCAN`选项用于内存优化表。  
+ 默认情况下，基于磁盘的表使用抽样的统计信息。 内存优化的表仅支持完全扫描统计信息。 当使用[CREATE STATISTICS &#40;transact-sql&#41;](/sql/t-sql/statements/create-statistics-transact-sql)或[&#40;TRANSACT-SQL&#41;更新统计信息](/sql/t-sql/statements/update-statistics-transact-sql)时，必须为内存优化表指定`FULLSCAN`选项。  
   
  对于内存优化表的统计信息还有其他注意事项：  
   
@@ -64,11 +64,11 @@ ms.locfileid: "63155788"
   
  要更新统计信息：  
   
--   使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]到[创建维护计划](../maintenance-plans/create-a-maintenance-plan.md)与[更新统计信息任务](../maintenance-plans/update-statistics-task-maintenance-plan.md)  
+-   用于[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]创建具有[更新统计信息任务](../maintenance-plans/update-statistics-task-maintenance-plan.md)的[维护计划](../maintenance-plans/create-a-maintenance-plan.md)  
   
 -   或如下所述通过 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本更新统计信息。  
   
- 若要更新单个内存优化表的统计信息 (*myschema*。 *Mytable*)，运行以下脚本：  
+ 更新单个内存优化表的统计信息（*myschema.xml*）。 *Mytable*），请运行以下脚本：  
   
 ```  
 UPDATE STATISTICS myschema.Mytable WITH FULLSCAN, NORECOMPUTE  
@@ -86,7 +86,7 @@ FROM sys.tables WHERE is_memory_optimized=1
 EXEC sp_executesql @sql  
 ```  
   
- 若要更新数据库中的所有表的统计信息，请运行[sp_updatestats &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)。  
+ 若要更新数据库中所有表的统计信息，请运行[&#40;transact-sql&#41;sp_updatestats ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)。  
   
  下面的示例报告有关内存优化表的统计信息上次是在何时更新的。 此信息可帮助您决定是否需要更新统计信息。  
   
@@ -96,7 +96,7 @@ from sys.tables t join sys.stats s on t.object_id=s.object_id cross apply sys.dm
 where t.is_memory_optimized=1  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [内存优化表](memory-optimized-tables.md)  
+## <a name="see-also"></a>另请参阅  
+ [Memory-Optimized Tables](memory-optimized-tables.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 使用游标 (ODBC) |Microsoft Docs
+title: 使用游标（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fb3662bbd1bff6c7c7deb3a8eac61108ea93074a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200483"
 ---
 # <a name="use-cursors-odbc"></a>使用游标 (ODBC)
@@ -37,7 +37,7 @@ ms.locfileid: "63200483"
   
 4.  执行 SQL 语句。  
   
-5.  或者，如果将通过使用 WHERE CURRENT OF 子句完成定位更新并且游标名称没有在第 3 步中随 [SQLSetCursorName](https://go.microsoft.com/fwlink/?LinkId=58406) 提供，则调用 [SQLGetCursorName](../../native-client-odbc-api/sqlgetcursorname.md) 以获取游标名称。  
+5.  或者，如果将通过使用 WHERE CURRENT OF 子句完成定位更新并且游标名称没有在第 3 步中随 [SQLSetCursorName](../../native-client-odbc-api/sqlgetcursorname.md) 提供，则调用 [SQLGetCursorName](https://go.microsoft.com/fwlink/?LinkId=58406) 以获取游标名称。  
   
 6.  调用 [SQLNumResultCols](../../native-client-odbc-api/sqlnumresultcols.md) 以获取行集中的列数 (C)。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "63200483"
   
      通过设置 SQL_ATTR_CURSOR_TYPE 和 SQL_ATTR_CONCURRENCY，或通过设置 SQL_ATTR_CURSOR_SENSITIVITY 和 SQL_ATTR_CURSOR_SCROLLABLE，可以控制所使用的游标类型。 不应将指定游标行为的两种方法混用。  
   
-## <a name="see-also"></a>请参阅  
- [使用游标操作指南主题&#40;ODBC&#41;](using-cursors-how-to-topics-odbc.md)  
+## <a name="see-also"></a>另请参阅  
+ [使用游标操作指南主题 &#40;ODBC&#41;](using-cursors-how-to-topics-odbc.md)  
   
   

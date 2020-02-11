@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: aeb073b7e44060c0382d3d641aa196b93fbb402d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150587"
 ---
 # <a name="start-system-monitor-windows"></a>启动系统监视器 (Windows)
@@ -26,9 +26,9 @@ ms.locfileid: "63150587"
   
 ### <a name="to-start-system-monitor-in-windows"></a>在 Windows 中启动系统监视器  
   
-1.  在 **“开始”** 菜单上，指向 **“运行”** ，在“运行”对话框中键入 **perfmon** ，然后单击 **“确定”** 。  
+1.  在 **“开始”** 菜单上，指向 **“运行”**，在“运行”对话框中键入 **perfmon** ，然后单击 **“确定”**。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [运行系统监视器](../performance-monitor/run-system-monitor.md)  
   
   

@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cf786e48e6e76ca6a16a0a50a954a2a07d3f7a66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63162350"
 ---
 # <a name="create-unique-indexes"></a>创建唯一索引
@@ -89,9 +89,9 @@ ms.locfileid: "63162350"
   
 -   唯一非聚集索引可以包括包含性非键列。 有关详细信息，请参阅 [Create Indexes with Included Columns](create-indexes-with-included-columns.md)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求对表或视图具有 ALTER 权限。 用户必须是 **sysadmin** 固定服务器角色的成员，或者是 **db_ddladmin** 和 **db_owner** 固定数据库角色的成员。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -120,11 +120,11 @@ ms.locfileid: "63162350"
   
 11. 在主网格中，在“(常规)”  下，选择“是唯一的”  ，然后从列表中选择“是”  。  
   
-12. 可选：在主网格中下,**表设计器**，选择**忽略重复键**，然后选择**是**从列表中。 如果要忽略尝试添加导致唯一索引中有重复键的数据，请这样做。  
+12. 可选：在主网格中，在 **“表设计器”** 下，选择 **“忽略重复键”** ，然后从列表中选择 **“是”** 。 如果要忽略尝试添加导致唯一索引中有重复键的数据，请这样做。  
   
-13. 单击 **“关闭”** 。  
+13. 单击“关闭”  。  
   
-14. 在“文件”  菜单上，单击“保存”  以保存 _table_name_。  
+14. 在 "**文件**" 菜单上，单击 "**保存**_table_name_。  
   
 #### <a name="create-a-unique-index-by-using-object-explorer"></a>使用对象资源管理器创建唯一索引  
   
@@ -142,9 +142,9 @@ ms.locfileid: "63162350"
   
 7.  在“索引键列”下，单击“添加…”   。  
   
-8.  在“从 table_name  选择列”  对话框中，选中要添加到唯一索引的一个或多个表列的复选框。  
+8.  在 "**从**_Table_name_中选择列" 对话框中，选中要添加到唯一索引的一个或多个表列的复选框。  
   
-9. 单击“确定”  。  
+9. 单击“确定”。   
   
 10. 在 **“新建索引”** 对话框中，单击 **“确定”** 。  
   

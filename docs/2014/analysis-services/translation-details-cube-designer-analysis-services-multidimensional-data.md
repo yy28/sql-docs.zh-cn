@@ -1,5 +1,5 @@
 ---
-title: 翻译详细信息 （翻译选项卡，多维数据集设计器） (Analysis Services-多维数据) |Microsoft Docs
+title: 翻译详细信息（"翻译" 选项卡，多维数据集设计器）（Analysis Services 多维数据） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8905a7fbb075826f37b9d362fe82def3e9664109
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065861"
 ---
 # <a name="translation-details-translations-tab-cube-designer-analysis-services---multidimensional-data"></a>翻译详细信息（“翻译”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
@@ -31,41 +31,43 @@ ms.locfileid: "66065861"
   
 -   度量值组  
   
-     `Caption` 属性  
+     `Caption`知识产权  
   
--   度量值  
+-   度量  
   
-     `Caption` 和 `DisplayFolder` 属性  
+     
+  `Caption` 和 `DisplayFolder` 属性  
   
 -   维度  
   
-     `Caption` 属性  
+     `Caption`知识产权  
   
--   Perspective  
+-   透视  
   
-     `Caption` 属性  
+     `Caption`知识产权  
   
 -   关键绩效指标 (KPI)  
   
-     `Caption`、`Description` 和 `DisplayFolder` 属性  
+     
+  `Caption`、`Description` 和 `DisplayFolder` 属性  
   
 -   操作  
   
-     `Caption` 属性  
+     `Caption`知识产权  
   
 -   命名集  
   
-     `Caption` 属性  
+     `Caption`知识产权  
   
--   “计算成员”  
+-   计算成员  
   
-     `Caption` 属性  
+     `Caption`知识产权  
   
- **\<Language>**  
+ **\<语言>**  
  以所选语言键入多维数据集对象的属性值。  
   
 ## <a name="context-menu"></a>上下文菜单  
- 右键单击“翻译详细信息”  窗格中的翻译后，可以从所显示的上下文菜单中访问以下选项：  
+ 右键单击“翻译详细信息”**** 窗格中的翻译后，可以从所显示的上下文菜单中访问以下选项：  
   
 |术语|定义|  
 |----------|----------------|  

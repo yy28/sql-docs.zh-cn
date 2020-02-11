@@ -13,28 +13,28 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ef6334f6fe4671f2563add857f6dd58ce67a2840
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63237849"
 ---
 # <a name="ole-db-api-support-for-date-and-time-enhancements"></a>OLE DB API 对日期和时间增强功能的支持
   以下 OLE DB API 支持日期/时间增强功能。  
   
-|函数|Description|  
+|函数|说明|  
 |--------------|-----------------|  
 |IAccessor::CreateAccessor|DBBINDING 结构中添加了一个标志，用于支持应用程序区分 `datetime`、`datetime2` 和 `smalldatetime` 的值。 有关详细信息，请参阅[参数和行集元数据](metadata-parameter-and-rowset.md)。|  
-|IBCPSession::BCPColFmt|有关详细信息，请参阅[大容量复制更改的增强的日期和时间类型&#40;OLE DB 和 ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)。|  
+|IBCPSession::BCPColFmt|有关详细信息，请参阅[&#40;OLE DB 和 ODBC&#41;的增强日期和时间类型的大容量复制更改](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)。|  
 |ICommandWithParameters::GetParameterInfo|有关详细信息，请参阅[参数和行集元数据](metadata-parameter-and-rowset.md)。|  
 |ICommandWithParameters::SetParameterinfo|有关详细信息，请参阅[参数和行集元数据](metadata-parameter-and-rowset.md)。|  
 |IColumnsRowset::GetColumnsRowset|有关详细信息，请参阅[参数和行集元数据](metadata-parameter-and-rowset.md)。|  
 |IColumnsInfo::GetColumnInfo|有关详细信息，请参阅[参数和行集元数据](metadata-parameter-and-rowset.md)。|  
 |IDBSchemaRowset::GetRowset|有关受影响的架构行集的详细信息，请参阅[日期和时间以及架构行集](../native-client-ole-db-rowsets/rowsets.md)。|  
 |IRowsetFastLoad|此接口支持新的日期/时间类型，但对其接口没有任何更改。|  
-|ITableDefinition::CreateTable|有关详细信息，请参阅[OLE DB 日期和时间改进的数据类型支持](data-type-support-for-ole-db-date-and-time-improvements.md)。|  
+|ITableDefinition::CreateTable|有关详细信息，请参阅[对 OLE DB 日期和时间改进的数据类型支持](data-type-support-for-ole-db-date-and-time-improvements.md)。|  
   
-## <a name="see-also"></a>请参阅  
- [日期和时间改进 (OLE DB)](date-and-time-improvements-ole-db.md)  
+## <a name="see-also"></a>另请参阅  
+ [OLE DB &#40;的日期和时间改进&#41;](date-and-time-improvements-ole-db.md)  
   
   

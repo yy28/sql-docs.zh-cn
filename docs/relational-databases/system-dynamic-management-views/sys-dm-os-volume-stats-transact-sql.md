@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_volume_stats (TRANSACT-SQL) |Microsoft Docs
+title: sys. dm_os_volume_stats （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/06/2019
 ms.prod: sql
@@ -19,18 +19,18 @@ ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e7ec8171b569adbf887c1e153fb2b41619778f48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67899721"
 ---
-# <a name="sysdmosvolumestats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
+# <a name="sysdm_os_volume_stats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2008R2SP1-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-2008R2sp1-xxxx-xxxx-xxx-md.md)]
 
   返回有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 中存储指定数据库和文件的操作系统卷（目录）的信息。 通过使用此动态管理函数，可以检查物理磁盘驱动器的属性，或返回有关目录的可用空间的信息。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,19 +39,19 @@ sys.dm_os_volume_stats (database_id, file_id)
 ```  
   
 ##  <a name="Arguments"></a> 参数  
- *database_id*  
- 数据库 ID。 database_id 的数据类型为 int，无默认值   。 不能为 NULL。  
+ database_id   
+ 数据库 ID。 *database_id*为**int**，没有默认值。 不能为 NULL。  
   
- *file_id*  
- 文件的 ID。 *file_id*是**int**，无默认值。 不能为 NULL。  
+ file_id   
+ 文件的 ID。 *file_id*为**int**，没有默认值。 不能为 NULL。  
   
 ## <a name="table-returned"></a>返回的表  
   
 ||||  
 |-|-|-|  
-|**列**|**Data type**|**说明**|  
-|**database_id**|**int**|数据库 ID。 不可为 null。|  
-|**file_id**|**int**|文件的 ID。 不可为 null。|  
+|**列**|**数据类型**|**说明**|  
+|database_id |**int**|数据库 ID。 不可为 null。|  
+|file_id |**int**|文件的 ID。 不可为 null。|  
 |**volume_mount_point**|**nvarchar(512)**|根卷上的装入点。 可返回空字符串。|  
 |**volume_id**|**nvarchar(512)**|操作系统卷 ID。 可以返回空字符串|  
 |**logical_volume_name**|**nvarchar(512)**|逻辑卷名称。 可以返回空字符串|  
@@ -89,8 +89,8 @@ FROM sys.database_files AS f
 CROSS APPLY sys.dm_os_volume_stats(DB_ID(f.name), f.file_id);  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [sys. master_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  
   
   

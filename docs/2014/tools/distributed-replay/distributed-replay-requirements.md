@@ -1,5 +1,5 @@
 ---
-title: 分布式重播要求 |Microsoft Docs
+title: Distributed Replay 要求 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0e7a87ad14dbe1b12abb4ca4fe0af6b0a439c57b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63149771"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay 要求
@@ -44,7 +44,8 @@ ms.locfileid: "63149771"
 -   一组遵循文件滚动更新命名约定（例如：`<TraceFile>.trc`、`<TraceFile>_1.trc`、`<TraceFile>_2.trc`、`<TraceFile>_3.trc`…`<TraceFile>_n.trc`）的滚动更新跟踪文件。  
   
 ### <a name="input-trace-events-and-columns"></a>输入跟踪事件和列  
- 输入跟踪数据必须包含特定的事件和列才能由 Distributed Replay 进行重播。 **中的** TSQL_Replay [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 模板包含所有必需的事件和列以及其他信息。 有关该模板的详细信息，请参阅 [Replay Requirements](../sql-server-profiler/replay-requirements.md)。  
+ 输入跟踪数据必须包含特定的事件和列才能由 Distributed Replay 进行重播。 
+  **中的** TSQL_Replay [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 模板包含所有必需的事件和列以及其他信息。 有关该模板的详细信息，请参阅 [Replay Requirements](../sql-server-profiler/replay-requirements.md)。  
   
 > [!WARNING]  
 >  如果你没有使用 **TSQL_Replay** 模板来捕获输入跟踪数据，或者未满足输入跟踪要求，则可能会收到意外的重播结果。  
@@ -103,11 +104,11 @@ ms.locfileid: "63149771"
   
 -   HostName  
   
--   Binary Data  
+-   二进制数据  
   
 -   SPID  
   
--   Start Time  
+-   开始时间  
   
 -   EndTime  
   
@@ -118,14 +119,14 @@ ms.locfileid: "63149771"
   
 |输入跟踪数据的版本|目标服务器实例支持的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本|  
 |---------------------------------|------------------------------------------------------------------------------------|  
-|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
-|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
   
 ## <a name="operating-system-requirements"></a>操作系统要求  
- 支持运行管理工具、控制器和客户端服务的操作系统与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例所要求的操作系统相同。 有关哪些操作系统支持的详细信息您[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例，请参阅[硬件和软件要求安装 SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。  
+ 支持运行管理工具、控制器和客户端服务的操作系统与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例所要求的操作系统相同。 有关[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例支持的操作系统的详细信息，请参阅[安装 SQL Server 2014 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。  
   
  Distributed Replay 功能在基于 x86 和基于 x64 的操作系统上均受支持。 对于基于 x64 的操作系统，仅支持 Windows on Windows (WOW) 模式。  
   
@@ -134,9 +135,10 @@ ms.locfileid: "63149771"
   
 |Distributed Replay 功能|每个重播环境的最大安装数|  
 |--------------------------------|--------------------------------------------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 控制器服务|1|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 客户端服务|16（物理或虚拟计算机）|  
-|管理工具|无限制|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Distributed Replay 控制器服务|1|  
+|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 客户端服务|16（物理或虚拟计算机）|  
+|管理工具|不受限制|  
   
 > [!NOTE]  
 >  虽然一台计算机上只能安装一个管理工具实例，但是您可以启动管理工具的多个实例。 多个管理工具发出的命令按照接收命令的顺序进行解析。  
@@ -157,8 +159,8 @@ ms.locfileid: "63149771"
   
  重播与不存在的或不正确的登录名相关的事件会导致重播错误，但重播操作会继续。  
   
-## <a name="see-also"></a>请参阅  
- [SQL Server 分布式重播](sql-server-distributed-replay.md)   
+## <a name="see-also"></a>另请参阅  
+ [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
  [Distributed Replay 安全性](distributed-replay-security.md)   
  [安装 Distributed Replay](install-distributed-replay-overview.md)  
   

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 959645223eacec6c000ddbfa23615b7949d10d5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077422"
 ---
 # <a name="define-a-default-member"></a>定义默认成员
@@ -33,17 +33,17 @@ ms.locfileid: "66077422"
  如果没有为特性层次结构指定任何默认成员，并且特性层次结构是可聚合的（特性的 `IsAggregatable` 属性设置为 `True`），则“(全部)”成员将作为默认成员。 如果未指定任何默认成员并且特性是不可聚合的（特性的 `IsAggregatable` 属性设置为 `False`），则将从特性层次结构顶层中选择默认成员。  
   
 ## <a name="specifying-the-default-member"></a>指定默认成员  
- 在维度中的每个属性[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]有一个默认成员，可以通过使用指定`DefaultMember`属性的属性。 如果属性没有包含在查询中，则使用该设置计算表达式。 如果查询在维度中指定了层次结构，则忽略层次结构中属性的默认成员。 如果查询没有在维度中，指定层次结构`DefaultMember`维度属性的设置才会生效。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]维度中的每个属性都具有一个默认成员，可以使用特性的`DefaultMember`属性指定该成员。 如果属性没有包含在查询中，则使用该设置计算表达式。 如果查询在维度中指定了层次结构，则忽略层次结构中属性的默认成员。 如果查询未在维度中指定层次结构，则维度属性`DefaultMember`的设置将生效。  
   
- 如果`DefaultMember`设置属性为空并且其`IsAggregatable`属性设置为`True`，则默认成员是全部成员。 如果`IsAggregatable`属性设置为`False`，则默认成员是第一个可见级别的第一个成员。  
+ 如果特性`DefaultMember`的设置为空，并且其`IsAggregatable`属性设置为`True`，则默认成员为 "全部" 成员。 如果将`IsAggregatable`属性设置为`False`，则默认成员为第一个可见级别的第一个成员。  
   
- `DefaultMember`设置特性应用于该属性所参与的每个层次结构。 您不能在一个维度中针对不同的层次结构使用不同的设置。 例如，如果 [1998] 成员是“[年]”属性的默认成员，则该设置应用于维度中的每个层次结构。 `DefaultMember`设置这种情况下不能为 [1998] 在一个层次结构和 [1997] 中的不同层次结构中。  
+ 特性`DefaultMember`的设置适用于该属性所参与的每个层次结构。 您不能在一个维度中针对不同的层次结构使用不同的设置。 例如，如果 [1998] 成员是“[年]”属性的默认成员，则该设置应用于维度中的每个层次结构。 这`DefaultMember`种情况下的设置不能在一个层次结构中为 [1998]，而在另一个层次结构中为 [1997]。  
   
- 如果您为不自然聚合的层次结构中特定级别定义默认成员，则必须定义在层次结构中位于该级别之上的所有级别的默认成员。 例如，在层次结构中所有国家/地区气候，不能定义的默认成员的气候除非定义国家/地区的默认成员。 执行此操作失败会导致查询时错误。  
+ 如果您为不自然聚合的层次结构中特定级别定义默认成员，则必须定义在层次结构中位于该级别之上的所有级别的默认成员。 例如，在层次结构的所有国家/地区中，除非定义了国家/地区的默认成员，否则不能为气候定义默认成员。 执行此操作失败会导致查询时错误。  
   
- 当层次结构中的各级别自然聚合时，您可以为层次结构中的任意属性定义默认成员，而不考虑该层次结构中的其他属性。 例如，在层次结构的国家/地区-省-城市，可以定义城市如 [City] 默认成员。[蒙特利尔] 而无需定义默认成员，状态或国家/地区。  
+ 当层次结构中的各级别自然聚合时，您可以为层次结构中的任意属性定义默认成员，而不考虑该层次结构中的其他属性。 例如，在层次结构的国家/地区-市/县中，可以定义 "城市" 的默认成员，如 [City]。[蒙特利尔]，而不是为州或国家/地区定义默认成员。  
   
-## <a name="see-also"></a>请参阅  
- [配置属性层次结构的“(全部)”级别](database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+## <a name="see-also"></a>另请参阅  
+ [为属性层次结构配置 &#40;所有&#41; 级别](database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a57aff903d41e8bcddef25e21def39a45e33d23f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080335"
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Analysis Services 支持的身份验证方法
@@ -34,7 +34,7 @@ ms.locfileid: "66080335"
   
  有关 BI 和 Analysis Services 身份验证流的详细信息，请参阅 [Microsoft BI 身份验证和标识委托](https://go.microsoft.com/fwlink/?LinkID=286576)。  
   
-##  <a name="bkmk_auth"></a> 了解您的身份验证选择  
+##  <a name="bkmk_auth"></a>了解身份验证备用方案  
  连接到 Analysis Services 数据库需要 Windows 用户或组标识和关联的权限。 该标识可能是需要查看报表的任何人使用的常规用途登录名，但是更可能包含单个用户的标识。  
   
  通常，表格或多维模型基于发出请求的用户将具有不同的数据访问级别（按对象或在数据本身内）。 为满足此要求，您可以使用 NTLM、Kerberos、EffectiveUserName 或基本身份验证。 所有这些技术都提供了使用每个连接传递不同用户标识的方法。 但是，这些选项的大部分受单跃点的限制。 只有具有委托的 Kerberos 允许原始用户标识跨多个计算机连接流到远程服务器上的后端数据存储区。  
@@ -70,19 +70,19 @@ ms.locfileid: "66080335"
   
  对于匿名身份验证，您可以将匿名用户标识设置为某一特定的 Windows 用户帐户（默认为 IUSR_GUEST）或者某一应用程序池标识。 该匿名用户帐户将用于 Analysis Services 连接，并且必须对 Analysis Services 实例具有数据访问权限。 使用此方法时，在连接上只使用与匿名帐户关联的用户标识。 如果您的应用程序要求额外标识管理，您需要选择其他方法或使用您提供的标识管理解决方案进行补充。  
   
- 只有在针对 HTTP 访问配置 Analysis Services，使用 IIS 和 msmdpump.dll 建立连接后，基本身份验证和匿名用户才可用。 有关详细信息，请参阅 [在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问](configure-http-access-to-analysis-services-on-iis-8-0.md)。  
+ 只有在针对 HTTP 访问配置 Analysis Services，使用 IIS 和 msmdpump.dll 建立连接后，基本身份验证和匿名用户才可用。 有关详细信息，请参阅[在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问](configure-http-access-to-analysis-services-on-iis-8-0.md)。  
   
- **Stored Credentials**  
+ **存储的凭据**  
   
  大多数中间层应用程序服务包括存储用户名和密码的功能以便以后从下级数据存储区检索数据，例如 Analysis Services 或 SQL Server 关系引擎。 这样，存储的凭据就提供了检索数据的第五种方法。 此方法的不足之处在于引入了与保持用户名和密码最新关联的维护开销以及在连接上使用单个标识。 如果您的解决方案需要原始调用方的标识，存储的凭据将无法满足要求。  
   
  有关存储的凭据的详细信息，请参阅[创建、修改和删除共享数据源 (SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) 和[将 Excel Services 与 SharePoint Server 2013 中的 Secure Store Service 一起使用](https://go.microsoft.com/fwlink/?LinkID=309869)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [将模拟用于传输安全](https://go.microsoft.com/fwlink/?LinkId=311727)   
- [在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问](configure-http-access-to-analysis-services-on-iis-8-0.md)   
- [Kerberos 约束委派配置 Analysis Services](configure-analysis-services-for-kerberos-constrained-delegation.md)   
- [针对 Analysis Services 实例的 SPN 注册](spn-registration-for-an-analysis-services-instance.md)   
+ [配置 HTTP 访问 Internet Information Services &#40;IIS 上的 Analysis Services&#41; 8。0](configure-http-access-to-analysis-services-on-iis-8-0.md)   
+ [为 Kerberos 约束委派配置 Analysis Services](configure-analysis-services-for-kerberos-constrained-delegation.md)   
+ [Analysis Services 实例的 SPN 注册](spn-registration-for-an-analysis-services-instance.md)   
  [连接到 Analysis Services](connect-to-analysis-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: DTAInput 元素 (DTA) |Microsoft Docs
+title: DTAInput 元素（DTA） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e1861b6ef4ab3617b5f12e7711fa2b895edaa55a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188114"
 ---
 # <a name="dtainput-element-dta"></a>DTAInput 元素 (DTA)
@@ -36,7 +36,7 @@ ms.locfileid: "63188114"
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|Description|  
+|特征|说明|  
 |---------------------|-----------------|  
 |**数据类型和长度**|无。|  
 |**默认值**|无。|  
@@ -55,7 +55,7 @@ ms.locfileid: "63188114"
 ## <a name="example"></a>示例  
  有关 **DTAInput** 元素的使用示例，请参阅[简单 XML 输入文件示例 (DTA)](simple-xml-input-file-sample-dta.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [XML 输入文件引用（数据库引擎优化顾问）](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

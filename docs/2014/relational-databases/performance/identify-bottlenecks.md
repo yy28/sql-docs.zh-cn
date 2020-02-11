@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: be8b05a3dc706d23f0e1328f4e8bdd38ed368ede
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150902"
 ---
 # <a name="identify-bottlenecks"></a>识别瓶颈
@@ -54,17 +54,17 @@ ms.locfileid: "63150902"
   
 |可能的瓶颈方面|对服务器的影响|  
 |------------------------------|---------------------------|  
-|内存使用量|分配的内存不足或可由 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的内存不足导致性能下降。 数据必须从磁盘读取而非直接从数据缓存读取。 当需要页时，Microsoft Windows 操作系统将通过与磁盘交换数据来执行大量分页操作。|  
+|内存使用率|分配的内存不足或可由 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的内存不足导致性能下降。 数据必须从磁盘读取而非直接从数据缓存读取。 当需要页时，Microsoft Windows 操作系统将通过与磁盘交换数据来执行大量分页操作。|  
 |CPU 使用率|长期的高 CPU 使用率可能表明 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询需要优化或 CPU 需要升级。|  
 |磁盘输入/输出 (I/O)|[!INCLUDE[tsql](../../includes/tsql-md.md)] 可以优化查询以减少不必要的 I/O（例如，使用索引）。|  
 |用户连接|可能有太多用户同时访问服务器，从而导致性能下降。|  
 |阻塞锁|应用程序设计不合理可能导致锁定或妨碍并发，因而导致更长的响应时间和更低的事务吞吐速度。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [监视 CPU 使用率](../performance-monitor/monitor-cpu-usage.md)   
  [监视磁盘使用情况](../performance-monitor/monitor-disk-usage.md)   
  [监视内存使用量](../performance-monitor/monitor-memory-usage.md)   
  [SQL Server General Statistics 对象](../performance-monitor/sql-server-general-statistics-object.md)   
- [SQL Server Locks 对象](../performance-monitor/sql-server-locks-object.md)  
+ [SQL Server - Locks 对象](../performance-monitor/sql-server-locks-object.md)  
   
   

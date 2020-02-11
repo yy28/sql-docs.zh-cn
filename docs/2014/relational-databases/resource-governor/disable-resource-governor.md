@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 75feaf114355c3a23abad6ec23be9011e0de5e06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63209715"
 ---
 # <a name="disable-resource-governor"></a>禁用资源调控器
@@ -46,7 +46,7 @@ ms.locfileid: "63209715"
 ###  <a name="LimitationsRestrictions"></a> 限制和局限  
  在用户事务中时，您不能使用 `ALTER RESOURCE GOVERNOR` 语句禁用资源调控器。  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 权限  
  禁用资源调控器需要 CONTROL SERVER 权限。  
   
 ##  <a name="RGOffObjEx"></a> 使用对象资源管理器禁用资源调控器  
@@ -78,7 +78,7 @@ ALTER RESOURCE GOVERNOR DISABLE;
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [资源调控器](resource-governor.md)   
  [启用资源调控器](enable-resource-governor.md)   
  [资源调控器资源池](resource-governor-resource-pool.md)   

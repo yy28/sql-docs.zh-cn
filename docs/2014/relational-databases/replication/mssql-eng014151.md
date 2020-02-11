@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1f292841c227db26f1c518b2eaef896f7ce3570c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63191457"
 ---
-# <a name="mssqleng014151"></a>MSSQL_ENG014151
+# <a name="mssql_eng014151"></a>MSSQL_ENG014151
     
 ## <a name="message-details"></a>消息详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "63191457"
 |符号名称||  
 |消息正文|复制 - %s: 代理 %s 失败。 %s|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  此错误可由任何复制代理失败引发。 消息结尾的文本取决于失败的上下文。  
   
 ## <a name="user-action"></a>用户操作  
@@ -48,13 +48,13 @@ ms.locfileid: "63191457"
   
 -   如果错误继续出现，请增加代理的日志记录并指定日志的输出文件。 此操作可能会提供找到该错误和/或其他错误消息的步骤，具体取决于错误的上下文。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [复制代理管理](agents/replication-agent-administration.md)   
  [错误和事件参考（复制）](errors-and-events-reference-replication.md)   
- [复制分发代理](agents/replication-distribution-agent.md)   
- [复制日志读取器代理](agents/replication-log-reader-agent.md)   
- [复制合并代理](agents/replication-merge-agent.md)   
+ [Replication Distribution Agent](agents/replication-distribution-agent.md)   
+ [Replication Log Reader Agent](agents/replication-log-reader-agent.md)   
+ [Replication Merge Agent](agents/replication-merge-agent.md)   
  [复制队列读取器代理](agents/replication-queue-reader-agent.md)   
- [复制快照代理](agents/replication-snapshot-agent.md)  
+ [Replication Snapshot Agent](agents/replication-snapshot-agent.md)  
   
   

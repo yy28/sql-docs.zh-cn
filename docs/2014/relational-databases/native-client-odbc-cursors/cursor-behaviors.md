@@ -21,14 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6c5ded9f42da267cfd137f0adfd4465d965d9a06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188571"
 ---
 # <a name="cursor-behaviors"></a>游标行为
-  ODBC 支持通过指定游标的可滚动性和敏感性来指定其行为的 ISO 选项。 设置在调用 SQL_ATTR_CURSOR_SCROLLABLE 和 SQL_ATTR_CURSOR_SENSITIVITY 选项来指定这些行为[SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序通过请求具有以下特征的服务器游标来实现这些选项。  
+  ODBC 支持通过指定游标的可滚动性和敏感性来指定其行为的 ISO 选项。 这些行为是通过在对[SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)的调用上设置 SQL_ATTR_CURSOR_SCROLLABLE 和 SQL_ATTR_CURSOR_SENSITIVITY 选项来指定的。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序通过请求具有以下特征的服务器游标来实现这些选项。  
   
 |游标行为设置|请求的服务器游标的特征|  
 |------------------------------|---------------------------------------------|  
@@ -39,15 +40,15 @@ ms.locfileid: "63188571"
 |SQL_NONSCROLLABLE 和 SQL_INSENSITIVE|默认结果集（只进，只读）|  
 |SQL_NONSCROLLABLE 和 SQL_UNSPECIFIED|默认结果集（只进，只读）|  
   
- 基于版本的乐观并发要求**时间戳**基础表中的列。 如果没有对表请求基于版本的乐观并发控制**时间戳**列中，服务器使用基于值的开放式并发。  
+ 基于版本的乐观并发要求基础表中有一个**时间戳**列。 如果对没有**时间戳**列的表请求基于版本的乐观并发控制，则服务器将使用基于值的乐观并发。  
   
 ## <a name="scrollability"></a>可滚动性  
- 当 SQL_ATTR_CURSOR_SCROLLABLE 设置为 SQL_SCROLLABLE 时，游标支持的所有不同的值*FetchOrientation*的参数[SQLFetchScroll](../native-client-odbc-api/sqlfetchscroll.md)。 当 SQL_ATTR_CURSOR_SCROLLABLE 设置为 SQL_NONSCROLLABLE 时，仅支持游标*FetchOrientation* SQL_FETCH_NEXT 的值。  
+ 当 SQL_ATTR_CURSOR_SCROLLABLE 设置为 SQL_SCROLLABLE 时，游标支持[SQLFetchScroll](../native-client-odbc-api/sqlfetchscroll.md)的*FetchOrientation*参数的所有不同值。 当 SQL_ATTR_CURSOR_SCROLLABLE 设置为 SQL_NONSCROLLABLE 时，游标仅支持 SQL_FETCH_NEXT 的*FetchOrientation*值。  
   
 ## <a name="sensitivity"></a>敏感性  
  将 SQL_ATTR_CURSOR_SENSITIVITY 设置为 SQL_SENSITIVE 时，游标可以反映由当前用户所做的或由其他用户提交的数据修改。 将 SQL_ATTR_CURSOR_SENSITIVITY 设置为 SQL_INSENSITIVE 时，游标不能反映数据修改。  
   
-## <a name="see-also"></a>请参阅  
- [使用游标&#40;ODBC&#41;](using-cursors-odbc.md)  
+## <a name="see-also"></a>另请参阅  
+ [使用游标 &#40;ODBC&#41;](using-cursors-odbc.md)  
   
   

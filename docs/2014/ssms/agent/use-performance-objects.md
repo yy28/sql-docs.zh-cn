@@ -21,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2ccba43aa28cadef1995fab001f66e1f4bebacde
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245853"
 ---
 # <a name="use-performance-objects"></a>使用性能对象
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理包括用于监视服务执行情况的性能对象和计数器。 这些性能对象使您可以使用性能监视器（一个 Windows 工具）来识别 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务在后台的运行情况。 例如，您可以通过识别 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务当前运行的活动作业数量来找出那些锁定的作业。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理包括用于监视服务执行情况的性能对象和计数器。 这些性能对象使您可以使用性能监视器（一个 Windows 工具）来识别 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务在后台的运行情况。 例如，您可以通过识别 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务当前运行的活动作业数量来找出那些锁定的作业。  
   
  计算机上安装的每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例都拥有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务性能对象和计数器。 性能对象是根据每个对象所代表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例来命名的。  
   
@@ -36,20 +36,20 @@ ms.locfileid: "63245853"
   
 |实例类型|对象名称|  
 |-------------------|-----------------|  
-|默认|**SQLAgent:** *对象*:*计数器*|  
-|已命名|**SQLAgent$**<br /> ***instance_name* :** *object*:*counter*|  
+|默认|**SQLAgent：** *object*：*counter*|  
+|名为|**SQLAgent$**<br /> ***instance_name* ：** *对象*：*计数器*|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的下列性能对象。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]包括[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理的下列性能对象。  
   
-|对象名称|Description|  
+|对象名称|说明|  
 |-----------------|-----------------|  
-|[SQLAgent:Jobs](../../relational-databases/performance-monitor/sql-server-agent-jobs-object.md)|已启动作业的相关性能信息、成功率和当前状态|  
+|[SQLAgent：作业](../../relational-databases/performance-monitor/sql-server-agent-jobs-object.md)|已启动作业的相关性能信息、成功率和当前状态|  
 |[SQLAgent:JobSteps](../../relational-databases/performance-monitor/sql-server-agent-jobsteps-object.md)|作业步骤的相关状态信息|  
 |[SQLAgent:Alerts](../../relational-databases/performance-monitor/sql-server-agent-alerts-object.md)|警报和通知数的相关信息|  
 |[SQLAgent:Statistics](../../relational-databases/performance-monitor/sql-server-agent-statistics-object.md)|常规性能信息|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [监视和优化性能](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
- [启动系统监视器 (Windows)](../../relational-databases/performance/start-system-monitor-windows.md)  
+ [启动系统监视器 &#40;Windows&#41;](../../relational-databases/performance/start-system-monitor-windows.md)  
   
   

@@ -11,18 +11,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f6d9aa28d4a6879f3077b137880aae54b9a0c434
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63149877"
 ---
 # <a name="cancel-option-distributed-replay-administration-tool"></a>Cancel 选项（分布式重播管理工具）
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理工具， `DReplay.exe`，是一个命令行工具，可用来与分布式的重播控制器进行通信。 本主题介绍 **cancel** 命令行选项和相应的语法。  
+  Distributed Replay 管理工具`DReplay.exe`是一个命令行工具，可用于与 Distributed Replay 控制器进行通信。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本主题介绍 **cancel** 命令行选项和相应的语法。  
   
- **cancel** 选项取消控制器上运行的当前操作。  
+ 
+  **cancel** 选项取消控制器上运行的当前操作。  
   
- ![主题连接图标](../../database-engine/media/topic-link.gif "Topic link icon") 有关与此管理工具语法结合使用的语法约定的详细信息，请参阅 [Transact-SQL 语法约定 (Transact-SQL)](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql)。  
+ ![主题链接图标](../../database-engine/media/topic-link.gif "“主题链接”图标")有关与管理工具语法结合使用的语法约定的详细信息，请参阅[Transact-sql 语法约定 &#40;transact-sql&#41;](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -31,7 +32,7 @@ ms.locfileid: "63149877"
 dreplay cancel [-mcontroller] [-q]   
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  **-m** *控制器*  
  控制器的计算机名称。 可以用“`localhost`”或“`.`”指代本地计算机。  
   
@@ -40,7 +41,8 @@ dreplay cancel [-mcontroller] [-q]
  **-q**  
  静默模式。 不提示进行确认。  
   
- **-q** 参数是可选的。  
+ 
+  **-q** 参数是可选的。  
   
 ## <a name="examples"></a>示例  
  在下面的示例中，在静默模式下提交一个取消请求。 值 `localhost` 表示控制器服务与管理工具在同一计算机上运行。  
@@ -54,7 +56,7 @@ dreplay cancel -m localhost -q
   
  有关详细信息，请参阅 [Distributed Replay Security](distributed-replay-security.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 分布式重播](sql-server-distributed-replay.md)  
   
   

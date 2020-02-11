@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2401fab80c6210e3061e9cb949f1c92bab456525
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63187926"
 ---
 # <a name="metadata-visibility-configuration"></a>元数据可见性配置
@@ -43,7 +43,7 @@ GO
   
 |||  
 |-|-|  
-|目录视图|[!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** 存储过程|  
+|目录视图|[!INCLUDE[ssDE](../../includes/ssde-md.md)]**sp_help**存储过程|  
 |公开元数据的内置函数|信息架构视图|  
 |兼容性视图|扩展属性|  
   
@@ -51,7 +51,8 @@ GO
   
 |||  
 |-|-|  
-|日志传送系统表|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理系统表|  
+|日志传送系统表|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理系统表|  
 |数据库维护计划系统表|备份系统表|  
 |复制系统表|复制及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理 **sp_help** 存储过程|  
   
@@ -63,7 +64,9 @@ GO
   
 -   元数据生成的内置函数（如 OBJECTPROPERTYEX）可能返回 NULL。  
   
--   [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** 存储过程可能只返回行子集或 NULL。  
+-   
+  
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** 存储过程可能只返回行子集或 NULL。  
   
  SQL 模块（如存储过程和触发器）在调用方的安全上下文中运行，因此，它们只有有限的元数据访问性。 例如，在以下代码中，当存储过程尝试访问表 `myTable` （调用方对该表没有权限）的元数据时，返回空的结果集。 在早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，返回一行。  
   
@@ -77,7 +80,7 @@ END;
 GO  
 ```  
   
- 若要允许调用方查看元数据，可在适当的作用域（对象级、数据库级或服务器级）中授予调用方 VIEW DEFINITION 权限。 因此，在以上示例中，如果调用方对 `myTable` 具有 VIEW DEFINITION 权限，则存储过程返回一行。 有关详细信息，请参阅 [GRANT (Transact SQL)](/sql/t-sql/statements/grant-transact-sql) 和[授予数据库权限 (Transact SQL)](/sql/t-sql/statements/grant-database-permissions-transact-sql)。  
+ 若要允许调用方查看元数据，可在适当的作用域（对象级、数据库级或服务器级）中授予调用方 VIEW DEFINITION 权限。 因此，在以上示例中，如果调用方对 `myTable`具有 VIEW DEFINITION 权限，则存储过程返回一行。 有关详细信息，请参阅 [GRANT (Transact SQL)](/sql/t-sql/statements/grant-transact-sql) 和[授予数据库权限 (Transact SQL)](/sql/t-sql/statements/grant-database-permissions-transact-sql)。  
   
  也可以将存储过程修改为使用所有者凭据执行。 当过程所有者和表所有者相同时，便会应用所有权链，并且过程所有者的安全上下文便会启用对 `myTable`元数据的访问。 在这种情况下，以下代码会向调用方返回一行元数据。  
   
@@ -102,7 +105,7 @@ GO
 ## <a name="benefits-and-limits-of-metadata-visibility-configuration"></a>元数据可见性配置的优点和限制  
  元数据可见性配置在整个安全计划中发挥着重要作用。 但在有些情况下，有经验的用户和已确定的用户可以强制公开某些元数据。 建议将元数据权限部署为多种深层防御中的一种。  
   
- 理论上可以通过控制查询中的谓词评估顺序，强制在错误消息中显示元数据。 此类“试错攻击”  的威胁并非是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 专有的。 它由关系代数中允许的关联转换和交换转换表示。 可以通过限制错误消息中返回的信息来降低此风险。 为了以此方式进一步限制元数据的可见性，可以使用跟踪标志 3625 启动服务器。 此跟踪标志限制错误消息中显示的信息量。 进一步有助于防止强制泄漏。 需要在错误消息的简洁性和用于调试的难易程度之间进行权衡。 有关详细信息，请参阅[数据库引擎服务启动选项](../../database-engine/configure-windows/database-engine-service-startup-options.md)和[跟踪标志 (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)。  
+ 理论上可以通过控制查询中的谓词评估顺序，强制在错误消息中显示元数据。 此类“试错攻击”** 的威胁并非是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 专有的。 它由关系代数中允许的关联转换和交换转换表示。 可以通过限制错误消息中返回的信息来降低此风险。 为了以此方式进一步限制元数据的可见性，可以使用跟踪标志 3625 启动服务器。 此跟踪标志限制错误消息中显示的信息量。 进一步有助于防止强制泄漏。 需要在错误消息的简洁性和用于调试的难易程度之间进行权衡。 有关详细信息，请参阅[数据库引擎服务启动选项](../../database-engine/configure-windows/database-engine-service-startup-options.md)和[跟踪标志 (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)。  
   
  下列元数据无法强制公开：  
   
@@ -123,9 +126,11 @@ GO
     |**sys.default_constraints**|**sys.computed_columns**|  
     |**sys.numbered_procedures**||  
   
--   **syscomments** 兼容视图中的 **ctext** 列。  
+-   
+  **syscomments** 兼容视图中的 **ctext** 列。  
   
--   **sp_helptext** 过程的输出。  
+-   
+  **sp_helptext** 过程的输出。  
   
 -   信息架构视图中的以下列：  
   
@@ -182,17 +187,17 @@ GO
 |**sys.partition_schemes**|**sys.data_spaces**|  
 |**sys.filegroups**|**sys.destination_data_spaces**|  
 |**sys.database_files**|**sys.allocation_units**|  
-|**sys.partitions**|**sys.messages**|  
-|**sys.schemas**|**sys.configurations**|  
+|**sys.partitions**|**sys. 消息**|  
+|**sys.databases**|**sys.configurations**|  
 |**sys.sql_dependencies**|**sys.type_assembly_usages**|  
 |**sys.parameter_type_usages**|**sys.column_type_usages**|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [GRANT (Transact-SQL)](/sql/t-sql/statements/grant-transact-sql)   
- [DENY (Transact-SQL)](/sql/t-sql/statements/deny-transact-sql)   
- [REVOKE (Transact-SQL)](/sql/t-sql/statements/revoke-transact-sql)   
- [EXECUTE AS 子句 (Transact-SQL)](/sql/t-sql/statements/execute-as-clause-transact-sql)   
+ [DENY &#40;Transact-sql&#41;](/sql/t-sql/statements/deny-transact-sql)   
+ [REVOKE &#40;Transact-sql&#41;](/sql/t-sql/statements/revoke-transact-sql)   
+ [Transact-sql&#41;的 EXECUTE AS 子句 &#40;](/sql/t-sql/statements/execute-as-clause-transact-sql)   
  [目录视图 (Transact-SQL)](/sql/relational-databases/system-catalog-views/catalog-views-transact-sql)   
- [兼容性视图 (Transact SQL)](/sql/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql)  
+ [Transact-sql&#41;的兼容性视图 &#40;](/sql/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql)  
   
   

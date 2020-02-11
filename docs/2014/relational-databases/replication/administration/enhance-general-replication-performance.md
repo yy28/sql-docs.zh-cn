@@ -22,10 +22,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ebe4126d0fb64cceea5bc0c9dbfd5be83f9fc165
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63187102"
 ---
 # <a name="enhance-general-replication-performance"></a>增强常规复制性能
@@ -33,7 +33,7 @@ ms.locfileid: "63187102"
   
 ## <a name="server-and-network"></a>服务器和网络  
   
--   设置分配给 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]的最小和最大内存量。  
+-   设置分配给[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]的最小和最大内存量。  
   
      默认情况下， [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 根据可用的系统资源动态改变它的内存要求。 为避免在复制活动期间出现低内存可用性的问题，请使用 **min server memory** 选项设置最小可用内存。 为避免将操作系统页写入磁盘以节省内存，也可以使用 **max server memory** 选项设置最大内存量。 有关详细信息，请参阅[服务器内存服务器配置选项](../../../database-engine/configure-windows/server-memory-server-configuration-options.md)。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "63187102"
   
      LOB 比其他列数据类型需要更多的存储空间和处理。 除非应用程序需要，否则不要在项目中包括这些列。 不推荐使用数据类型 `text`、`ntext` 和 `image`。 如果确实要包括 LOB，建议分别使用数据类型 `varchar(max)`、`nvarchar(max)` 和 `varbinary(max)`。  
   
-     对于事务复制，请考虑使用名为“用于 OLEDB 流式处理的分发配置文件” 的分发代理配置文件。 有关详细信息，请参阅 [Replication Agent Profiles](../agents/replication-agent-profiles.md)。  
+     对于事务复制，请考虑使用名为“用于 OLEDB 流式处理的分发配置文件” **** 的分发代理配置文件。 有关详细信息，请参阅 [Replication Agent Profiles](../agents/replication-agent-profiles.md)。  
   
 ## <a name="publication-design"></a>发布设计  
   
@@ -152,11 +152,11 @@ ms.locfileid: "63187102"
   
 -   降低复制代理的详细级别，在初始测试、监视或调试期间除外。  
   
-     降低分发代理或合并代理的 –HistoryVerboseLevel 参数和 –OutputVerboseLevel 参数。 这样可以减少为跟踪代理历史记录和输出而插入的新行数。 相反，具有相同状态的以前的历史记录消息将更新为新的历史记录信息。 提高测试、监视和调试的详细级别，这样就可以获得有关代理活动的尽可能多的信息。  
+     降低分发代理或合并代理的 –HistoryVerboseLevel 参数和 –OutputVerboseLevel 参数********。 这样可以减少为跟踪代理历史记录和输出而插入的新行数。 相反，具有相同状态的以前的历史记录消息将更新为新的历史记录信息。 提高测试、监视和调试的详细级别，这样就可以获得有关代理活动的尽可能多的信息。  
   
--   使用快照代理、合并代理和分发代理的 –MaxBCPThreads 参数（指定的线程数不应超过计算机上的处理器数）。 此参数指定创建和应用快照时可以并行执行的大容量复制操作的数目。  
+-   使用快照代理、合并代理和分发代理的 –MaxBCPThreads 参数（指定的线程数不应超过计算机上的处理器数）****。 此参数指定创建和应用快照时可以并行执行的大容量复制操作的数目。  
   
--   使用分发代理和合并代理的 –UseInprocLoader 参数（如果已发布表中包含 XML 列，则无法使用此参数）。 此参数使代理在应用快照时使用 BULK INSERT 命令。  
+-   使用分发代理和合并代理的 –UseInprocLoader 参数（如果已发布表中包含 XML 列，则无法使用此参数）****。 此参数使代理在应用快照时使用 BULK INSERT 命令。  
   
  代理参数可以在代理配置文件和命令行中指定。 有关详细信息，请参阅：  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 38d400b85e8c6f4523bcd20807310912100e587d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106851"
 ---
 # <a name="add-a-filter-report-builder-and-ssrs"></a>添加筛选器（报表生成器和 SSRS）
@@ -33,14 +33,14 @@ ms.locfileid: "66106851"
   
 1.  在 **“设计”** 视图中打开报表。  
   
-2.  在设计图面上选择数据区域，然后右键单击“\<data region>属性”   。 对于仪表，选择 **“仪表面板属性”** 。 此时将打开“\<data region>属性”   对话框。  
+2.  在设计图面上选择数据区域，然后右键单击“_data region>属性”\<_  。 对于仪表，选择 **“仪表面板属性”** 。 此时将打开“_data region>属性”\<_  对话框。  
   
     > [!NOTE]  
     >  在 Tablix 数据区域上，右键单击角部单元格或行或列的控点，然后单击“Tablix 属性”  。  
   
 3.  单击 **“筛选器”** 。 此时将显示当前筛选器公式的列表。 默认情况下，此列表是空的。  
   
-4.  单击 **“添加”** 。 此时将显示一个新的空白筛选器公式。  
+4.  单击“添加”  。 此时将显示一个新的空白筛选器公式。  
   
 5.  在 **“表达式”** 中，键入或选择要筛选的字段的表达式。 若要编辑该表达式，请单击表达式 (*fx*) 按钮。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66106851"
   
 4.  单击 **“筛选器”** 。 此时将显示当前筛选器公式的列表。 默认情况下，此列表是空的。  
   
-5.  单击 **“添加”** 。 此时将显示一个新的空白筛选器公式。  
+5.  单击“添加”  。 此时将显示一个新的空白筛选器公式。  
   
 6.  在 **“表达式”** 中，键入或选择要筛选的字段的表达式。 若要编辑该表达式，请单击表达式 (*fx*) 按钮。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66106851"
   
 4.  单击 **“筛选器”** 。 此时将显示当前筛选器公式的列表。 默认情况下，此列表是空的。  
   
-5.  单击 **“添加”** 。 此时将显示一个新的空白筛选器公式。  
+5.  单击“添加”  。 此时将显示一个新的空白筛选器公式。  
   
 6.  在 **“表达式”** 中，键入或选择要筛选的字段的表达式。 若要编辑该表达式，请单击表达式 (*fx*) 按钮。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "66106851"
   
 4.  单击 **“筛选器”** 。 此时将显示当前筛选器公式的列表。 默认情况下，此列表是空的。  
   
-5.  单击 **“添加”** 。 此时将显示一个新的空白筛选器公式。  
+5.  单击“添加”  。 此时将显示一个新的空白筛选器公式。  
   
 6.  在 **“表达式”** 中，键入或选择要筛选的字段的表达式。 若要编辑该表达式，请单击表达式 (*fx*) 按钮。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "66106851"
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [添加数据集筛选器、数据区域筛选器和组筛选器（报表生成器和 SSRS）](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)   
  [仪表（报表生成器和 SSRS）](gauges-report-builder-and-ssrs.md)   

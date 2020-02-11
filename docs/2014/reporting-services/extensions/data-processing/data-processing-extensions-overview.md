@@ -13,18 +13,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ad425c954526fabd6b9b1cf83b42fe5667979c3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63165410"
 ---
 # <a name="data-processing-extensions-overview"></a>数据处理扩展插件概述
-  借助于 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的数据处理扩展插件，您可以连接到数据源并检索数据。 它们还可以充当数据源和数据集之间的桥梁。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据处理扩展插件是模仿 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 数据提供程序接口的子集创建的。  
+  借助于 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的数据处理扩展插件，您可以连接到数据源并检索数据。 它们还可以充当数据源和数据集之间的桥梁。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]数据处理扩展插件在[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]数据访问接口的子集后建模。  
   
  下表列出 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 随附的数据处理扩展插件。  
   
-|数据处理扩展插件|Description|  
+|数据处理扩展插件|说明|  
 |-------------------------------|-----------------|  
 |用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的数据处理扩展插件|使用用于 SQL Server 的 .NET Framework 数据提供程序可以连接到 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 和从其检索数据。|  
 |用于 OLE DB 的数据处理扩展插件|使用用于 OLE DB 的 .NET Framework 数据提供程序。 使用此扩展插件，报表服务器可以查询具有 OLE DB 访问接口的任何数据源。|  
@@ -34,13 +34,14 @@ ms.locfileid: "63165410"
  可以使用 [!INCLUDE[ssRS](../../../includes/ssrs.md)] 数据处理 API 向您的报表服务器添加自定义数据处理。  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 具有对 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中的数据访问接口的固有支持。 如果您已实现了完整的数据访问接口，则无需实现 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据处理扩展插件。 不过，您应该考虑扩展数据访问接口，以便包括特定于 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2005 的功能，这包括安全连接凭据和服务器端聚合。  
+>  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 具有对 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中的数据访问接口的固有支持。 如果您已实现了完整的数据访问接口，则无需实现 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据处理扩展插件。 不过，您应该考虑扩展数据访问接口，以便包括特定于 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2005 的功能，这包括安全连接凭据和服务器端聚合。  
   
  在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中包括的每个数据处理扩展插件都使用一组通用的接口。 这确保每个扩展插件都实现类似的功能。  
   
  您可为自己的数据源开发数据处理扩展插件，或者可以使用接口向公共数据库基础结构添加用于数据处理的附加层。 您可以部署自定义数据处理扩展插件，实现数据与组织中的现有报表服务器的无缝集成。 还可以将它们用作提供给您的使用者的自定义报表套件的一部分。  
   
- ![数据处理扩展插件体系结构](../../media/bk-dataprocess-extensions.gif "Data processing extension architecture")  
+ ![数据处理扩展插件体系结构](../../media/bk-dataprocess-extensions.gif "数据处理扩展插件体系结构")  
 Reporting Services 数据处理扩展插件体系结构  
   
  实现自定义 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据处理扩展插件的好处包括：  
@@ -54,7 +55,7 @@ Reporting Services 数据处理扩展插件体系结构
 ## <a name="data-extension-process-flow"></a>数据扩展插件处理流程  
  在开发自定义数据扩展插件前，您应该理解报表服务器是如何使用数据扩展插件处理数据的。 还应理解报表服务器调用的构造函数和方法。  
   
- ![数据处理扩展插件的处理流程](../../media/bk-ext-01.gif "Process flow for data processing extension")  
+ ![数据处理扩展插件的处理流程](../../media/bk-ext-01.gif "数据处理扩展插件的处理流程")  
 报表服务器调用的数据扩展插件的分步处理流程  
   
  该图说明下列事件序列：  
@@ -70,15 +71,15 @@ Reporting Services 数据处理扩展插件体系结构
   
 -   一台安装了报表设计器或报表服务器的部署计算机。  
   
--   一台安装了 [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] 或更高版本或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 软件开发包 (SDK) 的开发计算机。  
+-   安装了[!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)]或更高版本或[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]软件开发工具包（SDK）的开发计算机。  
   
 -   深入理解 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 功能。  
   
--   深入了解 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 体系结构、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 数据提供程序、ADO.NET DataSet 对象和常用的 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 接口。  
+-   深入了解[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]体系结构、 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]数据提供程序、ADO.NET 数据集对象和公共[!INCLUDE[vstecado](../../../includes/vstecado-md.md)]接口。  
   
--   使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 语言（例如，[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET）进行开发的经验。  
+-   [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]语言（ [!INCLUDE[msCoName](../../../includes/msconame-md.md)]如 Visual c # 或[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .net）的开发体验。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Reporting Services 扩展插件](../reporting-services-extensions.md)   
  [Reporting Services 扩展插件库](../reporting-services-extension-library.md)  
   

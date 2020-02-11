@@ -11,18 +11,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5796cc1184e862b4e8afe42b4fa5f5babe8358dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151035"
 ---
 # <a name="xtp-garbage-collection"></a>XTP 垃圾收集
   XTP 垃圾收集性能对象包含与 XTP 引擎的垃圾收集器相关的计数器。  
   
- 下表介绍**XTP 垃圾收集**计数器。  
+ 下表介绍了**XTP 垃圾回收**计数器。  
   
-|计数器|Description|  
+|计数器|说明|  
 |-------------|-----------------|  
 |**灰尘角扫描重试次数/秒（垃圾收集器发出）**|在垃圾收集器发出的灰尘角扫描期间，由于写冲突而进行的每秒扫描重试次数（平均值）。 此为非常低级的计数器，不适合客户使用。|  
 |**主垃圾收集器工作项数/秒**|主垃圾收集器线程处理的工作项数。|  
@@ -38,7 +38,7 @@ ms.locfileid: "63151035"
 |**扫描中接触的行数/秒**|灰尘角扫描期间每秒接触的行数（平均值）。|  
 |**启动的扫描数/秒**|每秒启动的灰尘角扫描数（平均值）。|  
   
-## <a name="see-also"></a>请参阅  
- [XTP&#40;内存中 OLTP&#41;性能计数器](../../integration-services/performance/performance-counters.md)  
+## <a name="see-also"></a>另请参阅  
+ [XTP &#40;内存中 OLTP&#41; 性能计数器](../../integration-services/performance/performance-counters.md)  
   
   

@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e56a15d10bc267e6613d24ff934daf4561831c1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63254462"
 ---
 # <a name="navigate-in-database-diagram-designer-visual-database-tools"></a>在数据库关系图设计器中导航 (Visual Database Tools)
   可以在数据库关系图设计器中使用键盘和鼠标来执行操作。 有关数据库关系图设计器中使用的特定方法，请参阅下表：  
   
-|**若要**|**请按**|  
+|**收件人**|**请按**|  
 |------------|---------------|  
 |访问“数据库关系图”菜单|Alt+M|  
 |在表和关系（如果可用）之间移动|Tab 或 Shift+Tab|  
@@ -34,10 +34,10 @@ ms.locfileid: "63254462"
 |在关系图面上移动表|Ctrl+向上键或 Ctrl+向下键|  
 |向右/左和向上/下滚动|Page Up/Down 用于垂直滚动，Ctrl+Page Up/Down 用于水平滚动|  
 |调整表和批注的大小|Shift+箭头键|  
-|更改表中显示的信息量|Ctrl+T|  
-|缩放|Ctrl+加号键或减号键|  
+|更改表中显示的信息量|CTRL+T|  
+|Zoom|Ctrl+加号键或减号键|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [设计数据库关系图 (Visual Database Tools)](visual-database-tools.md)  
   
   

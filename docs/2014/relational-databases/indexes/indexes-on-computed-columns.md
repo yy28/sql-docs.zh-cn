@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c5aa2bd118d99afea6a1ee6ea8f41c646146c32f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63162445"
 ---
 # <a name="indexes-on-computed-columns"></a>计算列上的索引
@@ -36,11 +36,11 @@ ms.locfileid: "63162445"
   
 -   SET 选项要求  
   
- **Ownership Requirements**  
+ **所有权要求**  
   
  计算列中的所有函数引用必须与表具有相同的所有者。  
   
- **Determinism Requirements**  
+ **确定性要求**  
   
 > [!IMPORTANT]  
 >  如果对于一组指定的输入表达式始终返回相同的结果，则说明表达式具有确定性。 **COLUMNPROPERTY** 函数的 [IsDeterministic](/sql/t-sql/functions/columnproperty-transact-sql) 属性报告 *computed_column_expression* 是否具有确定性。  
@@ -58,13 +58,13 @@ ms.locfileid: "63162445"
  任何包含公共语言运行时 (CLR) 表达式的计算列都必须具有确定性并标记为 PERSISTED，这样才能为该列创建索引。 允许在计算列定义中使用 CLR 用户定义类型的表达式。 类型为 CLR 用户定义类型的计算列只要其类型是可比较的，就可以在该列上创建索引。 有关详细信息，请参阅 [CLR 用户定义类型](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)。  
   
 > [!NOTE]  
->  如果您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内的索引计算列中引用 date 数据类型的字符串文字，则建议使用确定性日期格式样式将该文字显式转换为所需的日期类型。 有关确定性日期格式样式的列表，请参阅 [CAST and CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)。 除非数据库兼容级别设置为 80 或更低，否则涉及字符串到 date 数据类型的隐式转换的表达式将被视为具有不确定性。 这是因为结果取决于服务器会话的 [LANGUAGE](/sql/t-sql/statements/set-language-transact-sql) 和 [DATEFORMAT](/sql/t-sql/statements/set-dateformat-transact-sql) 设置。 例如，表达式 `CONVERT (datetime, '30 listopad 1996', 113)` 的结果取决于 LANGUAGE 设置，因为字符串`30 listopad 1996`在不同语言中表示不同的月份。 同样，在表达式 `DATEADD(mm,3,'2000-12-01')`中， [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 基于 DATEFORMAT 设置解释字符串 `'2000-12-01'` 。  
+>  如果您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内的索引计算列中引用 date 数据类型的字符串文字，则建议使用确定性日期格式样式将该文字显式转换为所需的日期类型。 有关确定性日期格式样式的列表，请参阅 [CAST and CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)。 除非数据库兼容级别设置为 80 或更低，否则涉及字符串到 date 数据类型的隐式转换的表达式将被视为具有不确定性。 这是因为结果取决于服务器会话的[LANGUAGE](/sql/t-sql/statements/set-language-transact-sql)和[DATEFORMAT](/sql/t-sql/statements/set-dateformat-transact-sql)设置。 例如，表达式 `CONVERT (datetime, '30 listopad 1996', 113)` 的结果取决于 LANGUAGE 设置，因为字符串`30 listopad 1996`在不同语言中表示不同的月份。 同样，在表达式 `DATEADD(mm,3,'2000-12-01')`中， [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 基于 DATEFORMAT 设置解释字符串 `'2000-12-01'` 。  
 >   
 >  非 Unicode 字符数据在排序规则间的隐式转换也被视为具有不确定性，除非兼容级别设置为 80 或更低。  
 >   
 >  当数据库兼容级别设置为 90 时，不能对包含这些表达式的计算列创建索引。 但在已升级的数据库中，包含这些表达式的现有计算列是可以维护的。 如果使用包含字符串到日期的隐式转换的索引计算列，则为了避免损坏索引，请确保数据库和应用程序中的 LANGUAGE 和 DATEFORMAT 设置一致。  
   
- **Precision Requirements**  
+ **精度要求**  
   
  *computed_column_expression* 必须精确。 如果下列一项或多项为真，则 *computed_column_expression* 是精确的：  
   
@@ -86,15 +86,15 @@ ms.locfileid: "63162445"
   
  COLUMNPROPERTY 函数的 **IsPrecise** 属性报告 *computed_column_expression* 是否精确。  
   
- **Data Type Requirements**  
+ **数据类型要求**  
   
--   *Computed_column_expression*为计算的列的值不能为定义`text`， `ntext`，或`image`数据类型。  
+-   为计算列定义的*computed_column_expression*的计算结果不能`text`为`ntext`、或`image`数据类型。  
   
 -   只要计算列的数据类型可以作为索引键列，从 `image`、`ntext`、`text`、`varchar(max)`、`nvarchar(max)`、`varbinary(max)` 和 `xml` 数据类型派生的计算列上就可以创建索引。  
   
 -   只要计算列的数据类型可以作为非键索引列，从 `image`、`ntext` 和 `text` 数据类型派生的计算列就可以作为非聚集索引中的非键（包含性）列。  
   
- **SET Option Requirements**  
+ **设置选项要求**  
   
 -   执行定义计算列的 CREATE TABLE 或 ALTER TABLE 语句时，必须将 ANSI_NULLS 连接级选项设置为 ON。 [OBJECTPROPERTY](/sql/t-sql/functions/objectpropertyex-transact-sql) 函数通过 **IsAnsiNullsOn** 属性报告此选项是否设置为 ON。  
   
@@ -117,7 +117,7 @@ ms.locfileid: "63162445"
      当数据库兼容级别设置为 90 或更高时，如果将 ANSI_WARNINGS 设置为 ON，则将使 ARITHABORT 隐式设置为 ON。  
   
 ##  <a name="BKMK_persisted"></a> 对持久化计算列创建索引  
- 如果计算列使用确定性但不精确的表达式定义，但在 CREATE TABLE 或 ALTER TABLE 语句中标记为 PERSISTED，则可以在该列上创建索引。 这意味着，[!INCLUDE[ssDE](../../../includes/ssde-md.md)]对列创建索引时和在查询中引用的索引时使用这些持久的值。 此选项可以对计算列创建索引时[!INCLUDE[ssDE](../../../includes/dnprdnshort-md.md)]，是具有确定性并精确。  
+ 如果计算列使用确定性但不精确的表达式定义，但在 CREATE TABLE 或 ALTER TABLE 语句中标记为 PERSISTED，则可以在该列上创建索引。 这意味着，在[!INCLUDE[ssDE](../../../includes/ssde-md.md)]对列创建索引时，以及在查询中引用该索引时，将使用这些持久值。 使用此选项可以在时[!INCLUDE[ssDE](../../../includes/dnprdnshort-md.md)]对计算列创建索引，但这既是确定性的，也是精确的。  
   
 ## <a name="related-content"></a>相关内容  
  [COLUMNPROPERTY (Transact-SQL)](/sql/t-sql/functions/columnproperty-transact-sql)  

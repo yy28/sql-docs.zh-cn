@@ -1,5 +1,5 @@
 ---
-title: 连接到 Microsoft SQL Server Analysis Services (SSAS) |Microsoft Docs
+title: 连接到 Microsoft SQL Server Analysis Services （SSAS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fe8eee02d019b5cf68e257b3fac4266a18ead795
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087028"
 ---
 # <a name="connect-to-microsoft-sql-server-analysis-services-ssas"></a>连接到 Microsoft SQL Server Analysis Services (SSAS)
-  此页**表导入向导**使您能够指定用于从 Microsoft SQL Server Analysis Services 多维数据集或者 SharePoint 承载的 PowerPivot 工作簿导入数据的设置。 若要从 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”**。  
+  "**表导入向导**" 的这一页可用于指定设置以从 Microsoft SQL Server Analysis Services 多维数据集或在 SharePoint 上承载的 PowerPivot 工作簿导入数据。 若要从 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”**。  
   
  若要连接到数据源，必须在计算机上安装适当的访问接口。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66087028"
   
 -   键入发布到 SharePoint 的 PowerPivot 工作簿的 URL。  
   
- **Use Windows Authentication**  
+ **使用 Windows 身份验证**  
  指定是否使用 Windows 身份验证来连接到 SQL Server Analysis Services server。  
   
  Windows 身份验证模式允许用户通过 Windows 用户帐户进行连接。 请尽可能使用 Windows 身份验证。  
@@ -57,17 +57,17 @@ ms.locfileid: "66087028"
  **用户名**  
  为数据库连接指定用户名。 只有在已选择使用 Windows 身份验证进行连接的情况下，此选项才可用。  
   
- **密码**  
+ **权限**  
  为数据库连接指定密码。 只有在已选择使用 SQL Server 身份验证进行连接的情况下，此选项才是可编辑的。  
   
  **保存我的密码**  
- 指定是否存储已在“密码”框中输入的密码。 只有在已选择使用 SQL Server 身份验证进行连接的情况下，此选项才可用。  
+ 指定是否存储已在“密码”**** 框中输入的密码。 只有在已选择使用 SQL Server 身份验证进行连接的情况下，此选项才可用。  
   
  **数据库名称**  
  从数据库列表中选择数据库。  
   
  **高级**  
- 通过使用“设置高级属性”对话框设置附加的连接属性。 有关详细信息，请参阅[设置高级属性 (SSAS)](set-advanced-properties-ssas.md)。  
+ 通过使用“设置高级属性”**** 对话框设置附加的连接属性。 有关详细信息，请参阅[设置高级属性 (SSAS)](set-advanced-properties-ssas.md)。  
   
  **测试连接**  
  使用当前设置尝试建立与数据源的连接。 将显示一个消息，指示连接是否成功。  

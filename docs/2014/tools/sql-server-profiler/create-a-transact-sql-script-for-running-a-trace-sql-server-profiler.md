@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 948ef7eb5fdfeabdbb2ba3829e172f7c9f4028da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63255804"
 ---
 # <a name="create-a-transact-sql-script-for-running-a-trace-sql-server-profiler"></a>创建 Transact-SQL 脚本来运行跟踪 (SQL Server Profiler)
@@ -31,8 +31,8 @@ ms.locfileid: "63255804"
   
 3.  在 **“另存为”** 对话框中，输入脚本文件名称，然后单击 **“保存”** 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server Profiler 模板和权限](sql-server-profiler-templates-and-permissions.md)   
- [SQL Server 事件探查器](sql-server-profiler.md)  
+ [SQL Server Profiler](sql-server-profiler.md)  
   
   

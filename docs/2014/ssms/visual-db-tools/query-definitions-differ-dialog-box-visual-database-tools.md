@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 781963ddd2011c9e16cf67fdcd878039527546cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63294463"
 ---
 # <a name="query-definitions-differ-dialog-box-visual-database-tools"></a>“查询定义不同”对话框 (Visual Database Tools)
@@ -50,7 +50,7 @@ ms.locfileid: "63294463"
 > [!NOTE]  
 >  如果语句正确但不支持以图形形式在查询和视图设计器中显示，那么即使语句不能在“关系图”窗格和“条件”窗格中显示，您也可以执行它。 例如，如果输入联合查询，该语句可以执行，但不能在其他窗格中显示。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [查询和视图设计器工具 (Visual Database Tools)](visual-database-tools.md)  
   
   

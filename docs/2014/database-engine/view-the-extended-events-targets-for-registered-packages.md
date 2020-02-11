@@ -1,5 +1,5 @@
 ---
-title: 查看已注册包的扩展的事件目标 |Microsoft Docs
+title: 查看已注册包的扩展事件目标 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ae927a281db54697bbda49e28a58ea4c6e60326a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088732"
 ---
 # <a name="view-the-extended-events-targets-for-registered-packages"></a>查看已注册包的扩展事件目标
@@ -43,9 +43,9 @@ ms.locfileid: "66088732"
     WHERE o.object_type = 'target'  
     ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 扩展事件目标](../../2014/database-engine/sql-server-extended-events-targets.md)   
- [sys.dm_xe_objects (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql)   
+ [sys. dm_xe_objects &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql)   
  [sys.dm_xe_packages (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-packages-transact-sql)  
   
   

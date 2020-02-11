@@ -1,5 +1,5 @@
 ---
-title: 跟踪文件属性 （常规选项卡） |Microsoft Docs
+title: 跟踪文件属性（"常规" 选项卡） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf665b0ea1cae89257d6368af9b307845a2cb3c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089606"
 ---
 # <a name="trace-file-properties-general-tab"></a>跟踪文件属性（“常规”选项卡）
@@ -36,10 +36,10 @@ ms.locfileid: "66089606"
  **跟踪提供程序类型**  
  显示提供跟踪的服务器类型。  
   
- **version**  
+ **版本**  
  显示提供跟踪的服务器的版本。  
   
- **文件大小(KB)**  
+ **文件大小（KB）**  
  跟踪文件的大小 (KB)。  
   
  **创建时间**  
@@ -48,7 +48,7 @@ ms.locfileid: "66089606"
  **修改时间**  
  修改跟踪文件的日期和时间。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [打开跟踪文件 (SQL Server Profiler)](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
  [SQL Server 事件探查器](../tools/sql-server-profiler/sql-server-profiler.md)   
  [SQL Server Profiler 模板和权限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  

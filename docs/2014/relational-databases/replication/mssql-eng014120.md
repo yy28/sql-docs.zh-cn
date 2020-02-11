@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7472ab39376b84b515ee5b57033a0eda6521ab27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63191487"
 ---
-# <a name="mssqleng014120"></a>MSSQL_ENG014120
+# <a name="mssql_eng014120"></a>MSSQL_ENG014120
     
 ## <a name="message-details"></a>消息详细信息  
   
@@ -32,13 +32,13 @@ ms.locfileid: "63191487"
 |符号名称||  
 |消息正文|无法删除分发数据库 '%s'。 此分发服务器数据库与发布服务器相关联。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  分发数据库存储事务性复制的所有复制和事务类型的元数据和历史记录数据。 如果试图删除与一个或多个发布服务器相关联的分发数据库，将发生此错误。  
   
 ## <a name="user-action"></a>用户操作  
- 若要删除分发数据库，必须先删除分发服务器与发布服务器之间的关联。 有关详细信息，请参阅 [sp_dropdistpublisher (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql)。  
+ 若要删除分发数据库，必须先删除分发服务器与发布服务器之间的关联。 有关详细信息，请参阅 [sp_dropdistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [错误和事件参考（复制）](errors-and-events-reference-replication.md)   
  [配置分发](configure-distribution.md)  
   

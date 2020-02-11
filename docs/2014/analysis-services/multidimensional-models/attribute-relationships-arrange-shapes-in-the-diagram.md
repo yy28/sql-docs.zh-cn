@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac7fe46583c579c861de7b639fe72e58801f2e5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077141"
 ---
 # <a name="arrange-shapes-in-the-attribute-relationship-diagram"></a>排列属性关系图中的形状
@@ -30,8 +30,8 @@ ms.locfileid: "66077141"
   
      还可以单击 **“排列形状”** 来根据维度设计器使用的布局算法自动排列所有形状。  
   
-## <a name="see-also"></a>请参阅  
- [的维度设计器中，可以在“维度结构”视图的](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   
+## <a name="see-also"></a>另请参阅  
+ [属性关系](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   
  [定义属性关系](attribute-relationships-define.md)  
   
   

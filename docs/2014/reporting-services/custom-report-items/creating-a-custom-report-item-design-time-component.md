@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1a57fe5449deeb4445dff3853335b19a62dbc589
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63265134"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>创建自定义报表项设计时组件
@@ -86,9 +86,9 @@ public override void InitializeNewComponent()
 ```  
   
 ### <a name="modifying-component-properties"></a>修改组件属性  
- 可以通过多种方式在设计环境下修改 `CustomData` 属性。 可以使用 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 属性浏览器修改任何由设计时组件公开且以 <xref:System.ComponentModel.BrowsableAttribute> 属性标记的特性。 另外，还可通过以下方式修改属性：将相应项拖动到自定义报表项的设计图面，或者在设计环境下右键单击该控件，然后在快捷菜单上选择“属性”以显示自定义属性窗口。  
+ 可以通过多种方式在设计环境下修改 `CustomData` 属性。 可以使用 <xref:System.ComponentModel.BrowsableAttribute> 属性浏览器修改任何由设计时组件公开且以 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 属性标记的特性。 另外，还可通过以下方式修改属性：将相应项拖动到自定义报表项的设计图面，或者在设计环境下右键单击该控件，然后在快捷菜单上选择“属性”以显示自定义属性窗口****。  
   
- 以下代码示例显示的是已应用 <xref:System.ComponentModel.BrowsableAttribute> 属性的 `Microsoft.ReportDesigner.CustomReportItemDesigner.CustomData` 特性：  
+ 以下代码示例显示的是已应用 `Microsoft.ReportDesigner.CustomReportItemDesigner.CustomData` 属性的 <xref:System.ComponentModel.BrowsableAttribute> 特性：  
   
 ```csharp  
 [Browsable(true), Category("Data")]  
@@ -184,20 +184,21 @@ private void OnProportionalScaling(object sender, EventArgs e)
 ```  
   
 ### <a name="using-adornments"></a>使用修饰  
- 自定义报表项类还可实现 `Microsoft.ReportDesigner.Design.Adornment` 类。 使用修饰后，自定义报表项控件可提供设计图面主矩形之外的区域。 这些区域可用来处理用户界面事件，如鼠标单击和拖放操作。 `Adornment`中定义的类[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]`Microsoft.ReportDesigner`命名空间是传递实现<xref:System.Windows.Forms.Design.Behavior.Adorner>类在 Windows 窗体中找到。 有关完整文档`Adorner`类，请参阅[行为服务概述](https://go.microsoft.com/fwlink/?LinkId=116673)MSDN 库中。 有关实现的示例代码`Microsoft.ReportDesigner.Design.Adornment`类，请参阅[SQL Server Reporting Services 产品示例](https://go.microsoft.com/fwlink/?LinkId=177889)。  
+ 自定义报表项类还可实现 `Microsoft.ReportDesigner.Design.Adornment` 类。 使用修饰后，自定义报表项控件可提供设计图面主矩形之外的区域。 这些区域可用来处理用户界面事件，如鼠标单击和拖放操作。 命名空间中`Adornment` [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]定义的类是在 Windows 窗体中找到的<xref:System.Windows.Forms.Design.Behavior.Adorner>类的传递实现。 `Microsoft.ReportDesigner` 有关`Adorner`类的完整文档，请参阅 MSDN library 中的[行为服务概述](https://go.microsoft.com/fwlink/?LinkId=116673)。 有关实现`Microsoft.ReportDesigner.Design.Adornment`类的示例代码，请参阅[SQL Server Reporting Services 产品示例](https://go.microsoft.com/fwlink/?LinkId=177889)。  
   
  有关在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中如何对 Windows 窗体进行编程和使用 Windows 窗体的详细信息，请参见 MSDN Library 中的以下主题：  
   
 -   Design-Time Attributes for Components（组件的设计时属性）  
   
--   [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中的组件  
+-   
+  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中的组件  
   
--   演练：Walkthrough: Creating a Windows Forms Control that Takes Advantage of Visual Studio Design-Time Features（创建一个利用 Visual Studio 设计时功能的 Windows 窗体控件）  
+-   Walkthrough: Creating a Windows Forms Control that Takes Advantage of Visual Studio Design-Time Features（演练：创建一个利用 Visual Studio 设计时功能的 Windows 窗体控件）  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [自定义报表项体系结构](custom-report-item-architecture.md)   
  [创建自定义报表项运行时组件](creating-a-custom-report-item-run-time-component.md)   
  [自定义报表项类库](custom-report-item-class-libraries.md)   
- [如何：部署自定义报表项](how-to-deploy-a-custom-report-item.md)  
+ [如何部署自定义报表项](how-to-deploy-a-custom-report-item.md)  
   
   

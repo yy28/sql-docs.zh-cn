@@ -11,18 +11,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a709d4badbd270d9ddffedd62ff040e8ca6c628
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63149474"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>重播选项（分布式重播管理工具）
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 管理工具， `DReplay.exe`，是一个命令行工具，可用来与分布式的重播控制器进行通信。 本主题介绍 **replay** 命令行选项和相应的语法。  
+  Distributed Replay 管理工具`DReplay.exe`是一个命令行工具，可用于与 Distributed Replay 控制器进行通信。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 本主题介绍 **replay** 命令行选项和相应的语法。  
   
- **replay** 选项启动事件重播阶段，在该阶段中，控制器将重播数据调度到指定客户端，启动分布式重播并同步客户端。 每个参与重播的客户端可以选择记录重播活动并在本地保存结果跟踪文件。  
+ 
+  **replay** 选项启动事件重播阶段，在该阶段中，控制器将重播数据调度到指定客户端，启动分布式重播并同步客户端。 每个参与重播的客户端可以选择记录重播活动并在本地保存结果跟踪文件。  
   
- ![主题连接图标](../../database-engine/media/topic-link.gif "Topic link icon") 有关与此管理工具语法结合使用的语法约定的详细信息，请参阅 [Transact-SQL 语法约定 (Transact-SQL)](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql)。  
+ ![主题链接图标](../../database-engine/media/topic-link.gif "“主题链接”图标")有关与管理工具语法结合使用的语法约定的详细信息，请参阅[Transact-sql 语法约定 &#40;transact-sql&#41;](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,14 +34,15 @@ ms.locfileid: "63149474"
     [-fstatus_interval]  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  **-m** *控制器*  
  指定控制器的计算机名称。 可以用“`localhost`”或“`.`”指代本地计算机。  
   
  如果未指定 **-m** 参数，则使用本地计算机。  
   
  **-d** *controller_working_dir*  
- 指定控制器上用于存储中间文件的目录。 **-d** 参数是必需的。  
+ 指定控制器上用于存储中间文件的目录。 
+  **-d** 参数是必需的。  
   
  需要满足以下要求：  
   
@@ -55,7 +57,7 @@ ms.locfileid: "63149474"
  **-o**  
  捕获客户端的重播活动，并将其保存到一个结果跟踪文件中，该文件的路径由客户端配置文件 `<ResultDirectory>` 的 `DReplayClient.xml`元素指定。  
   
- 如果 -o  参数未指定，结果跟踪文件就不会生成。 在重播结束时，控制台输出将返回摘要信息，但不提供其他重播统计信息。  
+ 如果 -o**** 参数未指定，结果跟踪文件就不会生成。 在重播结束时，控制台输出将返回摘要信息，但不提供其他重播统计信息。  
   
  **-s** *target_server*  
  指定应针对其重播分布式工作负荷的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的目标实例。 必须以 **server_name[\instance name]** 格式指定此参数。  
@@ -66,7 +68,7 @@ ms.locfileid: "63149474"
   
  如果使用 **-s** 参数，则将忽略重播配置文件 `<Server>` 部分中的 `<ReplayOptions>` 元素。  
   
- **-w** *clients*  
+ **-w 个***客户端*  
  此必需的参数是一个逗号分隔列表 （不含空格），用来指定应参与分布式重播的客户端的计算机名称。 不允许使用 IP 地址。 注意，客户端必须已向控制器注册。  
   
 > [!NOTE]  
@@ -85,15 +87,20 @@ ms.locfileid: "63149474"
 ## <a name="examples"></a>示例  
  在本例中，分布式重播从修改的重播配置文件 `DReplay.exe.replay.config`派生其大部分行为。  
   
--   **-m** 参数指定名为 `controller1` 的计算机充当控制器。 当控制器服务在另一台计算机上运行时，必须指定计算机名称。  
+-   
+  **-m** 参数指定名为 `controller1` 的计算机充当控制器。 当控制器服务在另一台计算机上运行时，必须指定计算机名称。  
   
--   **-d** 参数指定中间文件在控制器上的位置 `c:\WorkingDir`。  
+-   
+  **-d** 参数指定中间文件在控制器上的位置 `c:\WorkingDir`。  
   
--   **-o** 参数指定每个指定的客户端捕获重播活动并将其保存到结果跟踪文件中。 注意：可使用配置文件中的 `<ResultTrace>` 元素指定是否记录行计数和结果集。  
+-   
+  **-o** 参数指定每个指定的客户端捕获重播活动并将其保存到结果跟踪文件中。 注意：可使用配置文件中的 `<ResultTrace>` 元素指定是否记录行计数和结果集。  
   
--   **-w** 参数指定计算机 `client1` 到 `client4` 作为客户端参与分布式重播。  
+-   
+  **-w** 参数指定计算机 `client1` 到 `client4` 作为客户端参与分布式重播。  
   
--   **-c** 参数用来指向修改过的配置文件 `DReplay.exe.replay.config`。  
+-   
+  **-c** 参数用来指向修改过的配置文件 `DReplay.exe.replay.config`。  
   
 -   因为重播配置文件 **的** 元素中指定了 `<Server>` 元素，所以不需要 `<ReplayOptions>` -s `DReplay.exe.replay.config`参数。  
   
@@ -126,7 +133,8 @@ dreplay replay -m controller1 -d c:\WorkingDir -o -w client1,client2,client3,cli
 </Options>  
 ```  
   
- 若要指定压力顺序模式，应将 `<SequencingMode>` 文件的 `DReplay.exe.replay.config` 元素设置为与 `stress`值相等。 `<ConnectTimeScale>` 和 `<ThinkTimeScale>` 元素设置为值 `50` （以指定 50%）。 有关连接时间和思考时间的详细信息，请参阅 [Configure Distributed Replay](configure-distributed-replay.md)。 以下 XML 示例显示了这些更改：  
+ 若要指定压力顺序模式，应将 `<SequencingMode>` 文件的 `DReplay.exe.replay.config` 元素设置为与 `stress`值相等。 
+  `<ConnectTimeScale>` 和 `<ThinkTimeScale>` 元素设置为值 `50` （以指定 50%）。 有关连接时间和思考时间的详细信息，请参阅 [Configure Distributed Replay](configure-distributed-replay.md)。 以下 XML 示例显示了这些更改：  
   
 ```  
 <?xml version='1.0'?>  
@@ -154,13 +162,13 @@ dreplay replay -m controller1 -d c:\WorkingDir -o -w client1,client2,client3,cli
   
  有关详细信息，请参阅 [Distributed Replay Security](distributed-replay-security.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [重播跟踪数据](replay-trace-data.md)   
  [查看重播结果](review-the-replay-results.md)   
- [SQL Server 分布式重播](sql-server-distributed-replay.md)   
- [Configure Distributed Replay](configure-distributed-replay.md)   
- [SQL Server 分布式重播论坛](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
- [使用 Distributed Replay 对 SQL Server 进行负载测试 - 第 2 部分](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
- [使用 Distributed Replay 对 SQL Server 进行负载测试 – 第 1 部分](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
+ [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
+ [配置 Distributed Replay](configure-distributed-replay.md)   
+ [SQL Server Distributed Replay 论坛](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
+ [使用 Distributed Replay 负载测试 SQL Server-第2部分](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
+ [使用 Distributed Replay 对 SQL Server 进行负载测试-第1部分](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
   
   

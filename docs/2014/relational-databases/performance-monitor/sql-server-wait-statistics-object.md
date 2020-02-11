@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 28e7ee81273d47e285b9903575bdc40ccededbb5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151022"
 ---
 # <a name="sql-server-wait-statistics-object"></a>SQL Server Wait Statistics 对象
@@ -25,7 +25,7 @@ ms.locfileid: "63151022"
   
  下表列出了 Wait Statistics 对象包含的计数器。  
   
-|SQL Server Wait Statistics 计数器|Description|  
+|SQL Server Wait Statistics 计数器|说明|  
 |-----------------------------------------|-----------------|  
 |**Lock waits**|等待锁的进程的统计信息。|  
 |**Log buffer waits**|等待日志缓冲区可用的进程的统计信息。|  
@@ -42,14 +42,14 @@ ms.locfileid: "63151022"
   
  对象中的每个计数器均包含以下实例：  
   
-|项|Description|  
+|Item|说明|  
 |----------|-----------------|  
 |**平均等待时间(ms)**|所选类型等待的平均等待时间。|  
 |**每秒的累积等待时间(ms)**|所选类型等待的每秒累积等待时间。|  
 |**正在进行的等待数**|当前正在等待的以下类型的进程数。|  
 |**每秒启动的等待数**|每秒启动的所选类型等待的等待数。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [监视资源使用情况（系统监视器）](monitor-resource-usage-system-monitor.md)  
   
   

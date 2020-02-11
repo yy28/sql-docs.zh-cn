@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3fbb7cbdda657ef59491cfbb2c1651b969d04428
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287720"
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>使用 WITH XMLNAMESPACES 将命名空间添加到查询
@@ -45,7 +45,7 @@ WHERE  ProductID=316 or ProductID=317
 FOR XML RAW  
 ```  
   
- 下面是结果：  
+ 结果如下：  
   
 ```  
 <row ProductID="316" Name="Blade" />  
@@ -192,7 +192,7 @@ go
   
  @xml:lang 属性使用预定义的 xml 命名空间。 由于 1.0 版的 XML 不需要显式声明 xml 命名空间绑定，因此结果中将不包命名空间绑定的显式声明。  
   
- 下面是结果：  
+ 结果如下：  
   
 ```  
 <Translation>  
@@ -218,7 +218,7 @@ WHERE CatalogDescription.exist('
     ) = 1  
 ```  
   
- 在前一个查询中，**query()** 和 **exist()** 方法在它们的 prolog 中声明了相同的命名空间。 例如：  
+ 在前一个查询中， **query()** 和 **exist()** 方法在它们的 prolog 中声明了相同的命名空间。 例如：  
   
 ```  
 declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
@@ -242,7 +242,7 @@ Go
   
  请注意，XQuery prolog 中的显式声明可覆盖在 WITH 子句中定义的命名空间前缀和默认的元素命名空间。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [xml 数据类型方法](/sql/t-sql/xml/xml-data-type-methods)   
  [XQuery 语言参考 (SQL Server)](/sql/xquery/xquery-language-reference-sql-server)   
  [WITH XMLNAMESPACES (Transact-SQL)](/sql/t-sql/xml/with-xmlnamespaces)   

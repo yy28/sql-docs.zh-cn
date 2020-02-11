@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 15a48d24af5b8781f1ffe8af9a8cca434699f76a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106721"
 ---
 # <a name="add-and-modify-a-line-report-builder-and-ssrs"></a>添加和修改线条（报表生成器和 SSRS）
@@ -34,9 +34,9 @@ ms.locfileid: "66106721"
 3.  若要更改线条属性，请在设计图面上选择线条，然后在 **“主文件夹”** 选项卡的 **“边框”** 部分编辑该线条的属性。  
   
     > [!NOTE]  
-    >  如果将线条样式设置为**Double**和线条宽度为 1 1/2 pt 或更窄，行可能不会显示为双时在报表生成器、 报表设计器或报表管理器中运行报表。 将报表导出为其他格式（例如 Microsoft Word 和 Acrobat PDF）后，线条会显示为双线。  
+    >  如果将线条样式设置为 "**双**线" 并且线条宽度为 1 1/2 磅或更窄，则在报表生成器、报表设计器或报表管理器中运行报表时，线条可能不会显示为双线。 将报表导出为其他格式（例如 Microsoft Word 和 Acrobat PDF）后，线条会显示为双线。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [矩形和线条（报表生成器和 SSRS）](rectangles-and-lines-report-builder-and-ssrs.md)  
   
   

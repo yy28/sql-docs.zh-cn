@@ -19,16 +19,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: f5d0ddc957cfca8e122920321acc7ccebb70ef72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63270773"
 ---
 # <a name="securitycertificate-class"></a>SecurityCertificate 类
-  [SecurityCertificate 类] securitycertificate class.md) 表示安全证书。 证书是一个数字签名的语句，将公钥的值绑定到的实例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，用于保存相应的私钥。 证书是由证书颁发机构颁发的。  
+  [SecurityCertificate Class] SecurityCertificate-class.md）表示安全证书。 证书是一个数字签名语句[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，它将公钥的值绑定到的实例，该语句保存相应的私钥。 证书是由证书颁发机构颁发的。  
   
- 使用方法是 [SecurityCertificate 类] securitycertificate-class.md)，可以执行以下任务：  
+ 利用 [SecurityCertificate Class] SecurityCertificate-class.md），您可以执行以下任务：  
   
 -   查看安全证书的属性。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "63270773"
   
 -   验证指定的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的 SHA 指纹。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [加密层次结构](../../security/encryption/encryption-hierarchy.md)  
   
   

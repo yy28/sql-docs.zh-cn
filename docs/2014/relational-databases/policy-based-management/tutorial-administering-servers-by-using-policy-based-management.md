@@ -1,5 +1,5 @@
 ---
-title: 教程：使用基于策略的管理来管理服务器 |Microsoft Docs
+title: 教程：使用基于策略的管理来管理服务器 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 58757aa0de2b13c68926cf596a8da702b972edf3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63256057"
 ---
 # <a name="tutorial-administering-servers-by-using-policy-based-management"></a>教程：使用基于策略的管理来管理服务器
@@ -35,14 +35,14 @@ ms.locfileid: "63256057"
  该课程创建一个策略，用于定义并强制执行表命名标准。  
   
 ## <a name="requirements"></a>要求  
- 本课程要求您了解数据库和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的基础知识。  
+ 本课程要求您了解数据库和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的基础知识。  
   
  若要使用本教程，您的系统必须安装了 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
   
 ## <a name="start-the-tutorial"></a>开始教程  
  [第 1 课：创建并应用 Off By Default 策略](lesson-1-create-and-apply-an-off-by-default-policy.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用基于策略的管理来管理服务器](administer-servers-by-using-policy-based-management.md)  
   
   

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 11e875d5b171194c3ac8ba4ad33fad51cacacffe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482661"
 ---
 # <a name="shortcut-query-files-mds-add-in-for-excel"></a>快捷查询文件（用于 Excel 的 MDS 外接程序）
@@ -35,9 +35,9 @@ ms.locfileid: "65482661"
 ## <a name="queryopener-application"></a>QueryOpener 应用程序  
  安装了 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 的所有用户都装有名为 QueryOpener 的应用程序。 此应用程序用于在 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中打开快捷查询文件。 如果双击快捷查询文件，将自动使用此应用程序在该外接程序中打开该文件。  
   
- 使用此应用程序打开快捷查询文件时，系统会提示将该连接视为“安全”连接，这意味着你信任此位置的内容。 每次将某个连接标记为安全连接后，该连接都会添加到列表中。 如果要清空该列表，请打开 **“设置”** 对话框，然后在 **“添加到安全列表的服务器”** 部分中，单击 **“全部清除”** 。  
+ 使用此应用程序打开快捷查询文件时，系统会提示将该连接视为“安全”连接，这意味着你信任此位置的内容。 每次将某个连接标记为安全连接后，该连接都会添加到列表中。 如果要清空该列表，请打开 **“设置”** 对话框，然后在 **“添加到安全列表的服务器”** 部分中，单击 **“全部清除”**。  
   
- 应用程序的默认位置是*驱动器*: \Program Files\Microsoft SQL Server\120\Master Data Services\Excel Add-In\Microsoft.MasterDataServices.QueryOpener.exe。  
+ 应用程序的默认位置是*drive*： \PROGRAM Files\Microsoft SQL Server\120\Master Data Services\Excel add-in\microsoft.masterdataservices.queryopener.exe。  
   
  有两种方式可以打开快捷查询文件：可以导入这些文件，或通过双击自动打开这些文件。  
   
@@ -45,15 +45,15 @@ ms.locfileid: "65482661"
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|将活动工作表的内容另存为一个快捷查询文件。|[保存快捷查询文件（用于 Excel 的 MDS 外接程序）](save-a-shortcut-query-file-mds-add-in-for-excel.md)|  
-|通过电子邮件发送表示活动工作表内容的快捷查询文件。|[以电子邮件形式发送快捷查询文件（用于 Excel 的 MDS 外接程序）](email-a-shortcut-query-file-mds-add-in-for-excel.md)|  
+|将活动工作表的内容另存为一个快捷查询文件。|[保存快捷查询文件 &#40;MDS Add-in for Excel&#41;](save-a-shortcut-query-file-mds-add-in-for-excel.md)|  
+|通过电子邮件发送表示活动工作表内容的快捷查询文件。|[通过电子邮件发送快捷查询文件 &#40;MDS Add-in for Excel&#41;](email-a-shortcut-query-file-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>相关内容  
   
--   [连接（用于 Excel 的 MDS 外接程序）](connections-mds-add-in-for-excel.md)  
+-   [连接 &#40;MDS Add-in for Excel&#41;](connections-mds-add-in-for-excel.md)  
   
--   [用于 Microsoft Excel 的 Master Data Services 外接程序](master-data-services-add-in-for-microsoft-excel.md)  
+-   [Master Data Services Add-in for Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
   
--   [安全性 (Master Data Services)](../security-master-data-services.md)  
+-   [安全 &#40;Master Data Services&#41;](../security-master-data-services.md)  
   
   

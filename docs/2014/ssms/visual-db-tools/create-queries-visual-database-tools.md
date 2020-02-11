@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7140e3b4511417952246093e5ed82da9f2c099b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184319"
 ---
 # <a name="create-queries-visual-database-tools"></a>创建查询 (Visual Database Tools)
@@ -43,11 +43,11 @@ ms.locfileid: "63184319"
   
  若要进一步改进查询，可以在“SQL”  窗格中更改 SQL 代码，或者在“条件”  窗格中选择排序顺序和列别名等选项。  
   
-## <a name="see-also"></a>请参阅  
- [保存查询&#40;可视化数据库工具&#41;](save-queries-visual-database-tools.md)   
- [类型的查询&#40;可视化数据库工具&#41;](types-of-queries-visual-database-tools.md)   
- [指定搜索条件&#40;可视化数据库工具&#41;](specify-search-criteria-visual-database-tools.md)   
- [汇总查询结果&#40;可视化数据库工具&#41;](summarize-query-results-visual-database-tools.md)   
+## <a name="see-also"></a>另请参阅  
+ [&#40;Visual Database Tools 保存查询&#41;](save-queries-visual-database-tools.md)   
+ [Visual Database Tools &#40;查询类型&#41;](types-of-queries-visual-database-tools.md)   
+ [指定 Visual Database Tools &#40;搜索条件&#41;](specify-search-criteria-visual-database-tools.md)   
+ [&#40;Visual Database Tools&#41;汇总查询结果](summarize-query-results-visual-database-tools.md)   
  [执行基本的查询操作 (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

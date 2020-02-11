@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: a28f2401f11f20f8891dbe71537ce2240a570ed8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63158245"
 ---
 # <a name="in-memory-oltp-garbage-collection"></a>内存中 OLTP 垃圾回收
@@ -42,7 +42,7 @@ ms.locfileid: "63158245"
   
  在用户事务提交后，它识别与它在其上运行的计划程序相关联的所有排队项，然后释放内存。 如果计划程序上的垃圾收集队列为空，则它会搜索当前 NUMA 节点中的任何非空队列。 如果存在较少事务活动或者有内存压力，则主垃圾收集线程可访问任何队列的垃圾收集行。 如果在删除大量行后（举例）没有事务活动并且没有内存压力，则在事务活动恢复或有内存压力之前，不会对删除的行进行垃圾收集。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [管理内存中 OLTP 的内存](../../database-engine/managing-memory-for-in-memory-oltp.md)  
   
   

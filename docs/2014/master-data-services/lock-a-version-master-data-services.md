@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e38a4c75ad6cf8c65d7120e0eb98163f7ee0fccc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482874"
 ---
 # <a name="lock-a-version-master-data-services"></a>锁定版本 (Master Data Services)
@@ -26,33 +26,33 @@ ms.locfileid: "65482874"
 > [!NOTE]  
 >  在锁定某一版本后，模型管理员可以继续添加、编辑和删除成员。 对模型具有权限的其他用户只能查看成员。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“版本管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](administrators-master-data-services.md)。  
   
--   版本的状态必须是 **“打开”** 。  
+-   版本的状态必须是 **“打开”**。  
   
 ### <a name="to-lock-a-version"></a>锁定版本  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“版本管理”** 。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“版本管理”**。  
   
 2.  在 **“管理版本”** 页上，选择要锁定的版本对应的行。  
   
-3.  单击 **“锁定”** 。  
+3.  单击“锁定”****。  
   
-4.  在确认对话框中，单击 **“确定”** 。  
+4.  在确认对话框中，单击 **“确定”**。  
   
 ## <a name="next-steps"></a>后续步骤  
   
--   [针对业务规则验证版本 (Master Data Services)](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+-   [针对业务规则验证版本 &#40;Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
--   [提交版本 (Master Data Services)](../../2014/master-data-services/commit-a-version-master-data-services.md)  
+-   [提交 Master Data Services 版本 &#40;&#41;](../../2014/master-data-services/commit-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>请参阅  
- [版本 (Master Data Services)](../../2014/master-data-services/versions-master-data-services.md)   
- [取消锁定版本 (Master Data Services)](../../2014/master-data-services/unlock-a-version-master-data-services.md)  
+## <a name="see-also"></a>另请参阅  
+ [版本 &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)   
+ [Master Data Services &#40;解锁版本&#41;](../../2014/master-data-services/unlock-a-version-master-data-services.md)  
   
   

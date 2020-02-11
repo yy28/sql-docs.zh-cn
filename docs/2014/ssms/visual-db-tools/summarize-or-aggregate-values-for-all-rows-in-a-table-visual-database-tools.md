@@ -1,5 +1,5 @@
 ---
-title: 汇总或聚合值的所有行中的表 (Visual Database Tools) |Microsoft Docs
+title: 汇总或聚合表中所有行的值（Visual Database Tools） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 33d44b48571839d9695893021f6cdc1c8bb63f06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204608"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>汇总或聚合表中所有行的值 (Visual Database Tools)
@@ -57,7 +57,7 @@ FROM titles
   
      查询及视图设计器将自动为要汇总的列分配列别名。 您可以用更有意义的名称替换此别名。 有关详细信息，请参阅[创建列别名 (Visual Database Tools)](create-column-aliases-visual-database-tools.md)。  
   
-4.  在“分组依据”  网格列中，选择适当的聚合函数，例如：Sum、Avg、Min、Max 和 Count      。 如果只希望聚合结果集中的唯一行，请选择带 DISTINCT 选项的聚合函数，如 **Min Distinct**。 不要选择 **Group By**、 **Expression**或 **Where**，因为这些选项不适用于聚合所有行。  
+4.  在“分组依据”  网格列中，选择适当的聚合函数，例如：**Sum**、**Avg**、**Min**、**Max** 和 **Count**。 如果只希望聚合结果集中的唯一行，请选择带 DISTINCT 选项的聚合函数，如 **Min Distinct**。 不要选择 **Group By**、 **Expression**或 **Where**，因为这些选项不适用于聚合所有行。  
   
      查询和视图设计器将用指定的聚合函数替换 [“SQL”窗格](sql-pane-visual-database-tools.md) 内语句中的列名。 例如，SQL 语句可能类似以下形式：  
   
@@ -77,8 +77,8 @@ FROM titles
 > [!NOTE]  
 >  查询和视图设计器将聚合函数一直作为 SQL 窗格中 SQL 语句的一部分进行维护，直到您显式关闭“分组依据”模式为止。 因此，如果您通过更改查询类型或更改“关系图”窗格中显示的表或表值对象来修改查询，那么所生成的查询可能包含无效的聚合函数。  
   
-## <a name="see-also"></a>请参阅  
- [排序和分组查询结果&#40;可视化数据库工具&#41;](sort-and-group-query-results-visual-database-tools.md)   
+## <a name="see-also"></a>另请参阅  
+ [对查询结果进行排序和分组 &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
  [汇总查询结果 (Visual Database Tools)](summarize-query-results-visual-database-tools.md)  
   
   

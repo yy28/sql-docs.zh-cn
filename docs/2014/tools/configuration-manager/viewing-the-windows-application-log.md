@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 654d4adbd2e4baa97b16e83261089d8d78289af6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150762"
 ---
 # <a name="viewing-the-windows-application-log"></a>查看 Windows 应用程序日志
@@ -33,7 +33,7 @@ ms.locfileid: "63150762"
   
  可以使用事件查看器查看三种日志。  
   
-|Windows 日志类型|Description|  
+|Windows 日志类型|说明|  
 |----------------------|-----------------|  
 |系统日志|记录由 Windows 操作系统组件记录的事件。 例如，如果启动时驱动程序或其他系统组件加载失败，该信息将记录在系统日志中。|  
 |安全日志|记录安全性事件，例如登录尝试失败。 这可以帮助跟踪对安全系统的更改，发现对安全的可能的破坏。 例如，对系统的登录尝试可能记录在安全日志中，具体情况取决于用户管理器中的审核设置。<br /><br /> 只有 **sysadmin** 固定服务器角色成员可以查看安全日志。|  

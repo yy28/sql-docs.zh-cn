@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0b24a9c02e38ba8165e015cdf8d1b107e64cbaf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63193074"
 ---
 # <a name="values-for-ltxsdsimpletypegt-declarations"></a>&lt;xsd:simpleType&gt; 声明的值
@@ -26,9 +26,9 @@ ms.locfileid: "63193074"
   
 |简单类型|限制|  
 |-----------------|----------------|  
-|`duration`|年份部分必须在-2 的范围内<sup>^</sup>31 到 2<sup>^</sup>31-1。 月、日、小时、分钟和秒都必须在 0 到 9999 范围内。 秒部分在小数点右侧有额外的三位精度。|  
-|`dateTime`|时区子字段中的小时部分必须在 -14 到 +14 的可接受范围内。 年份部分必须在 1 到 9999 范围内。 月部分必须在 1 到 12 范围内。 日部分必须在 1 到 31 范围内且必须为有效的日历日期。 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可检测出无效日期（如 1974-02-31，因为二月份没有 31 天），并返回错误。<br /><br /> 秒部分支持 100 纳秒的精度。 时区指示是可选的。<br /><br /> SQL Server 2005 支持的年范围是 -9999 到 9999。 现在，SQL Server 支持的年范围具有更强的限制性。 有关详细信息，请参阅 [类型化的 XML 与非类型化的 XML 的比较](compare-typed-xml-to-untyped-xml.md)。|  
-|`date`|年份部分必须在 1 到 9999 范围内。 月部分必须在 1 到 12 范围内。 日部分必须在 1 到 31 范围内且必须为有效的日历日期。 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可检测出无效日期（如 1974-02-31，因为二月份没有 31 天），并返回错误。<br /><br /> SQL Server 2005 支持的年范围是 -9999 到 9999。 现在，SQL Server 支持的年范围具有更强的限制性。 有关详细信息，请参阅 [类型化的 XML 与非类型化的 XML 的比较](compare-typed-xml-to-untyped-xml.md)。|  
+|`duration`|年份部分必须在-2<sup>^</sup>31 到 2<sup>^</sup>31-1 的范围内。 月、日、小时、分钟和秒都必须在 0 到 9999 范围内。 秒部分在小数点右侧有额外的三位精度。|  
+|`dateTime`|时区子字段中的小时部分必须在 -14 到 +14 的可接受范围内。 年份部分必须在 1 到 9999 范围内。 月部分必须在 1 到 12 范围内。 日部分必须在 1 到 31 范围内且必须为有效的日历日期。 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可检测出无效日期（如 1974-02-31，因为二月份没有 31 天），并返回错误。<br /><br /> 秒部分支持 100 纳秒的精度。 时区指示是可选的。<br /><br /> SQL Server 2005 支持的年范围是 -9999 到 9999。 现在，SQL Server 支持的年范围具有更强的限制性。 有关详细信息，请参阅[将类型化的 xml 与非类型化的 Xml 比较](compare-typed-xml-to-untyped-xml.md)。|  
+|`date`|年份部分必须在 1 到 9999 范围内。 月部分必须在 1 到 12 范围内。 日部分必须在 1 到 31 范围内且必须为有效的日历日期。 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可检测出无效日期（如 1974-02-31，因为二月份没有 31 天），并返回错误。<br /><br /> SQL Server 2005 支持的年范围是 -9999 到 9999。 现在，SQL Server 支持的年范围具有更强的限制性。 有关详细信息，请参阅[将类型化的 xml 与非类型化的 Xml 比较](compare-typed-xml-to-untyped-xml.md)。|  
 |`gYearMonth`|年份部分必须在 -9999 到 9999 范围内。|  
 |`gYear`|年份部分必须在 -9999 到 9999 范围内。|  
 |`gMonthDay`|月部分必须在 1 到 12 范围内。 日部分必须在 1 到 31 范围内。|  
@@ -40,7 +40,7 @@ ms.locfileid: "63193074"
 |`string`|此类型的值必须符合 SQL `nvarchar(max)` 类型的格式。|  
 |`anyURI`|此类型的值的长度不能多于 4000 个 Unicode 字符。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在服务器上使用 XML 架构集合的要求和限制](requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

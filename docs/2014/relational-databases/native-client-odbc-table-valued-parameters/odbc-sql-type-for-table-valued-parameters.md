@@ -1,5 +1,5 @@
 ---
-title: 表值参数的 ODBC SQL 类型 |Microsoft Docs
+title: 用于表值参数的 ODBC SQL 类型 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 90857b24fb467df0292beeb88fb9751e68204d12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63199986"
 ---
 # <a name="odbc-sql-type-for-table-valued-parameters"></a>表值参数的 ODBC SQL 类型
@@ -25,21 +25,21 @@ ms.locfileid: "63199986"
 ## <a name="remarks"></a>备注  
  不能将 SQL_SS_TABLE 转换为任何其他 ODBC 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型。  
   
- 如果 SQL_SS_TABLE 用作中的 C 数据类型*ValueType* SQLBindParameter 或尝试的参数进行为 SQL_SS_TABLE 应用程序参数描述符 (APD) 记录中的 SQL_DESC_TYPE 设置，则返回 SQL_ERROR 并诊断记录生成具有 SQLSTATE = HY003，"应用程序缓冲区类型无效"。  
+ 如果 SQL_SS_TABLE 在 SQLBindParameter 的*ValueType*参数中用作 C 数据类型，或者尝试将应用程序参数描述符（APD）记录中的 SQL_DESC_TYPE 设置为 SQL_SS_TABLE，则返回 SQL_ERROR 并使用 SQLSTATE = HY003、"应用程序缓冲区类型无效" 生成诊断记录。  
   
- 如果在 IPD 记录中将 SQL_DESC_TYPE 设置为 SQL_SS_TABLE，并且对应的应用程序参数描述符记录不为 SQL_C_DEFAULT，则会返回 SQL_ERROR，并生成带有 SQLSTATE=HY003 的诊断记录“应用程序缓冲区类型无效”。 这可能会出现*ParameterType* SQLSetDescField、 SQLSetDescRec 或 SQLBindParameter。  
+ 如果在 IPD 记录中将 SQL_DESC_TYPE 设置为 SQL_SS_TABLE，并且对应的应用程序参数描述符记录不为 SQL_C_DEFAULT，则会返回 SQL_ERROR，并生成带有 SQLSTATE=HY003 的诊断记录“应用程序缓冲区类型无效”。 SQLSetDescField、SQLSetDescRec 或 SQLBindParameter 的*ParameterType*可能会发生这种情况。  
   
- 如果*TargetType*时调用 SQLGetData，参数为 SQL_SS_TABLE，则返回 SQL_ERROR 并诊断记录生成带有 SQLSTATE = HY003，"应用程序缓冲区类型无效"。  
+ 如果在调用 SQLGetData 时 SQL_SS_TABLE 了*TargetType*参数，则返回 SQL_ERROR，并生成包含 SQLSTATE = HY003，"应用程序缓冲区类型无效" 的诊断记录。  
   
- 不能将表值参数列作为 SQL_SS_TABLE 类型绑定。 如果`SQLBindParameter`使用调用*ParameterType*设置为 SQL_SS_TABLE，则返回 SQL_ERROR 并的诊断记录生成带有 SQLSTATE = HY004，"SQL 数据类型无效"。 SQLSetDescField 和 SQLSetDescRec，这也会发生。  
+ 不能将表值参数列作为 SQL_SS_TABLE 类型绑定。 如果`SQLBindParameter`在将*ParameterType*设置为 SQL_SS_TABLE 的情况下调用，将返回 SQL_ERROR，并生成包含 SQLSTATE = HY004 "SQL 数据类型无效" 的诊断记录。 SQLSetDescField 和 SQLSetDescRec 也会出现这种情况。  
   
  表值参数列值与参数和结果列具有相同的数据转换选项。  
   
- 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本中只能将表值参数用作输入参数。 如果尝试将 SQL_DESC_PARAMETER_TYPE 设置为通过 SQLBindParameter 或 SQLSetDescField SQL_PARAM_INPUT 以外的值，则返回 SQL_ERROR，并的诊断记录添加到语句具有 SQLSTATE = HY105 和消息"参数无效类型"。  
+ 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本中只能将表值参数用作输入参数。 如果尝试通过 SQLBindParameter 或 SQLSetDescField 将 SQL_DESC_PARAMETER_TYPE 设置为 SQL_PARAM_INPUT 以外的值，则返回 SQL_ERROR，并将诊断记录添加到 SQLSTATE = HY105 和消息 "参数无效键入 "。  
   
- 表值参数列不能使用在 SQL_DEFAULT_PARAM *StrLen_or_IndPtr*，因为与表值参数不支持按行默认值。 应用程序可以改为将 SQL_CA_SS_COL_HAS_DEFAULT_VALUE 列属性设置为 1。 这表示该列的所有行均具有默认值。 如果*StrLen_or_IndPtr*设置为 SQL_DEFAULT_PARAM，SQLExecute 或 SQLExecDirect 将返回 SQL_ERROR，且的诊断记录将添加到语句具有 SQLSTATE = HY090 和消息"字符串或缓冲区长度无效"。  
+ 表值参数列无法在*StrLen_or_IndPtr*中使用 SQL_DEFAULT_PARAM，因为表值参数不支持每行的默认值。 应用程序可以改为将 SQL_CA_SS_COL_HAS_DEFAULT_VALUE 列属性设置为 1。 这表示该列的所有行均具有默认值。 如果*StrLen_or_IndPtr*设置为 SQL_DEFAULT_PARAM，则 SQLExecute 或 SQLExecDirect 将返回 SQL_ERROR，并且将使用 SQLSTATE = HY090 和消息 "字符串或缓冲区长度无效" 将诊断记录添加到语句中。  
   
-## <a name="see-also"></a>请参阅  
- [表值参数&#40;ODBC&#41;](table-valued-parameters-odbc.md)  
+## <a name="see-also"></a>另请参阅  
+ [ODBC&#41;&#40;表值参数](table-valued-parameters-odbc.md)  
   
   

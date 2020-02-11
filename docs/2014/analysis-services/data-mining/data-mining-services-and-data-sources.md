@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 048f737266e815a02058a51ebebce0b0f1ff46af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084919"
 ---
 # <a name="data-mining-services-and-data-sources"></a>数据挖掘服务和数据源
@@ -23,7 +23,7 @@ ms.locfileid: "66084919"
  本主题提供了在连接到 SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例以创建、处理、部署或查询数据挖掘模型时需要了解的信息。  
   
 ## <a name="data-mining-services"></a>数据挖掘服务  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的服务器组件是应用程序 msmdsrv.exe，该程序通常作为一项 Windows 服务来运行。 该应用程序包含安全组件、一个 XML for Analysis (XMLA) 侦听器组件、一个查询处理器组件以及执行下列功能的多个其他内部组件：  
+ 的服务器组件[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]是 msmdsrv.ini 应用程序，通常以 Windows 服务的形式运行。 该应用程序包含安全组件、一个 XML for Analysis (XMLA) 侦听器组件、一个查询处理器组件以及执行下列功能的多个其他内部组件：  
   
 -   分析从客户端接收的语句  
   
@@ -44,13 +44,13 @@ ms.locfileid: "66084919"
 -   管理服务器资源  
   
 ### <a name="xmla-listener"></a>XMLA 侦听器  
- XMLA 侦听器组件处理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 与其客户端之间的所有 XMLA 通信。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] `Port` Msmdsrv.ini 文件中的配置设置可用于在其上指定端口[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例所侦听。 此文件中的值 0 指示 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 侦听默认端口。 除非另有指定，否则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用下列默认的 TCP 端口：  
+ XMLA 侦听器组件处理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 与其客户端之间的所有 XMLA 通信。 Msmdsrv.ini [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] `Port`文件中的配置设置可用于指定[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例侦听的端口。 此文件中的值 0 指示 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 侦听默认端口。 除非另有指定，否则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用下列默认的 TCP 端口：  
   
-|Port|Description|  
+|端口|说明|  
 |----------|-----------------|  
-|2383|默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例。|  
-|2382|其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例的重定向程序。|  
-|在服务器启动时动态分配|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的命名实例。|  
+|2383|的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]默认实例。|  
+|2382|其他实例的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]重定向程序。|  
+|在服务器启动时动态分配|的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]命名实例。|  
   
  有关控制此服务所用端口的详细信息，请参阅 [将 Windows 防火墙配置为允许 Analysis Services 访问](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
@@ -61,47 +61,47 @@ ms.locfileid: "66084919"
   
 -   因为数据挖掘是由服务器提供的服务，所以必须为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例提供对数据源的访问权限。  访问权限包含两个方面：位置和标识。  
   
-     **位置** 意味着，如果使用仅存储在计算机上的数据生成一个模型，然后将该模型部署到服务器，则该模型会因找不到数据源而无法处理。 若要解决此问题，您可能需要将数据传入运行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的同一 SQL Server 实例，或将文件移至共享位置。  
+     **位置**意味着，如果使用仅存储在计算机上的数据生成一个模型，然后将该模型部署到服务器，则该模型将无法处理，因为找不到该数据源。 若要解决此问题，您可能需要将数据传入运行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的同一 SQL Server 实例，或将文件移至共享位置。  
   
-     **标识** 表示 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 上的服务必须能使用相应的凭据打开数据文件或数据源。 例如，在生成模型时，您可能已具有查看数据的不受限权限，而正在处理和更新服务器上的模型的用户可能具有对数据的受限访问权限或不具有对数据的访问权限，这会导致无法处理或影响模型内容。 用于连接到远程数据源的帐户必须至少具有对数据的读取权限。  
+     **标识**表示上[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的服务必须能够用适当的凭据打开数据文件或数据源。 例如，在生成模型时，您可能已具有查看数据的不受限权限，而正在处理和更新服务器上的模型的用户可能具有对数据的受限访问权限或不具有对数据的访问权限，这会导致无法处理或影响模型内容。 用于连接到远程数据源的帐户必须至少具有对数据的读取权限。  
   
 -   移动模型时，上述要求将适用：您必须设置对旧数据源的位置的适当访问权、复制数据源或配置新数据源。 此外，您必须传输登录名和角色，或设置权限以允许在新位置处理和更新数据挖掘对象。  
   
 ## <a name="configuring-permissions-and-server-properties"></a>配置权限和服务器属性  
  数据挖掘需要对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库具有其他权限。 可以使用[“Analysis Server 属性”对话框 (Analysis Services)](../analysis-server-properties-dialog-box-analysis-services.md) 设置大多数数据挖掘属性。  
   
- 有关可以配置的属性的详细信息，请参阅[Configure Server Properties in Analysis Services](../server-properties/server-properties-in-analysis-services.md)。  
+ 有关可以配置的属性的详细信息，请参阅[在 Analysis Services 中配置服务器属性](../server-properties/server-properties-in-analysis-services.md)。  
   
  下面的服务器属性与数据挖掘有特殊关系：  
   
--   `AllowAdHocOpenRowsetQueries` 控制对 OLE DB 访问接口、 直接加载到服务器内存空间即席访问。  
+-   `AllowAdHocOpenRowsetQueries`控制对直接加载到服务器内存空间的 OLE DB 提供程序的即席访问。  
   
     > [!IMPORTANT]  
-    >  为了提高安全性，建议您将此属性设置为 `false`。 默认值为 `false`。 但是，即使此属性设置为 `false`，用户仍可以继续创建单独查询，并且可以对允许的数据源使用 OPENQUERY。  
+    >  为了提高安全性，建议您将此属性设置为 `false`。 默认值是 `false`。 但是，即使此属性设置为 `false`，用户仍可以继续创建单独查询，并且可以对允许的数据源使用 OPENQUERY。  
   
--   **AllowedProvidersInOpenRowset** 指定启用即席访问时的访问接口。 通过输入一个以逗号分隔的 ProgID 列表，您可以指定多个访问接口。  
+-   **AllowedProvidersInOpenRowset**如果启用了即席访问，则指定提供程序。 通过输入一个以逗号分隔的 ProgID 列表，您可以指定多个访问接口。  
   
--   **MaxConcurrentPredictionQueries** 控制服务器上由预测引起的负载。 默认值 0 允许对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 执行不受限制的查询，对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard 最多执行五次并发查询。 超出限制的查询将被序列化，并且可能超时。  
+-   **MaxConcurrentPredictionQueries**控制由预测导致的服务器上的负载。 默认值 0 允许对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 执行不受限制的查询，对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard 最多执行五次并发查询。 超出限制的查询将被序列化，并且可能超时。  
   
  服务器还提供了控制可使用哪些数据挖掘算法（包括对算法的所有限制）以及所有数据挖掘服务的默认值的其他属性。 但是，没有任何设置可以专门控制对数据挖掘存储过程的访问。 有关详细信息，请参阅 [Data Mining Properties](../server-properties/data-mining-properties.md)。  
   
  还可以设置允许用户优化服务器并控制客户端使用的安全性的属性。 有关详细信息，请参阅 [Feature Properties](../server-properties/feature-properties.md)。  
   
 > [!NOTE]  
->  有关支持的各个版本的插件算法的详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[SQL Server 2012 各个版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473)(https://go.microsoft.com/fwlink/?linkid=232473) 。  
+>  有关各个版本对插件算法的支持的详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅 SQL Server 2012 的各个[版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473)（。https://go.microsoft.com/fwlink/?linkid=232473)  
   
 ## <a name="programmatic-access-to-data-mining-objects"></a>对数据挖掘对象的编程访问  
  您可以使用下列对象模型创建与 Analysis Services 数据库的连接和处理数据挖掘对象：  
   
- **ADO** 使用 OLE DB 连接到 Analysis Services 服务器。 使用 ADO 时，客户端仅限于架构行集查询和 DMX 语句。  
+ **ADO**使用 OLE DB 连接到 Analysis Services 服务器。 使用 ADO 时，客户端仅限于架构行集查询和 DMX 语句。  
   
- **ADO.NET** 与其他访问接口相比，可以更好地与 SQL Server 访问接口进行交互。 使用数据适配器存储动态行集。 使用数据集对象，该数据集对象是作为数据表存储的服务器数据的缓存，可将该服务器数据更新或另存为 XML 格式。  
+ **ADO.NET**与 SQL Server 提供程序的交互比其他提供程序更好。 使用数据适配器存储动态行集。 使用数据集对象，该数据集对象是作为数据表存储的服务器数据的缓存，可将该服务器数据更新或另存为 XML 格式。  
   
- **ADOMD.NET** 为处理数据挖掘和 OLAP 而优化的托管数据访问接口。 ADOMD.NET 速度比 ADO.NET 更快，并且更能有效地利用内存。 您还可以通过 ADOMD.NET 检索有关服务器对象的元数据。 建议用于客户端应用程序，除非 .NET 不可用。  
+ **ADOMD.NET**为处理数据挖掘和 OLAP 而优化的托管数据访问接口。 ADOMD.NET 速度比 ADO.NET 更快，并且更能有效地利用内存。 您还可以通过 ADOMD.NET 检索有关服务器对象的元数据。 建议用于客户端应用程序，除非 .NET 不可用。  
   
- **Server ADOMD** 用于在服务器上直接访问 Analysis Services 对象的对象模型。 供 Analysis Services 存储过程使用；不能用于客户端。  
+ **服务器 ADOMD**直接在服务器上访问 Analysis Services 对象的对象模型。 供 Analysis Services 存储过程使用；不能用于客户端。  
   
- 替换决策支持对象 (DSO) 的 Analysis Services 的**AMO** 管理接口。 与使用其他接口相比，在使用 AMO 时，循环访问对象等操作需要更高的权限。 这是因为 AMO 直接访问元数据，而 ADOMD.NET 和其他接口仅访问数据库架构。  
+ **AMO**替换决策支持对象（DSO）的 Analysis Services 的管理界面。 与使用其他接口相比，在使用 AMO 时，循环访问对象等操作需要更高的权限。 这是因为 AMO 直接访问元数据，而 ADOMD.NET 和其他接口仅访问数据库架构。  
   
 ### <a name="browse-and-query-access-to-servers"></a>对服务器的浏览和查询访问权限  
  可通过在 OLAP/数据挖掘模式下使用 Analysis Service 实例来执行所有类型的预测，但具有下列限制：  
@@ -122,9 +122,9 @@ ms.locfileid: "66084919"
 > [!NOTE]  
 >  存储过程不能用于更改数据服务器对象的安全性。 执行存储过程时，将使用用户的当前上下文来确定对所有服务器对象的访问权限。 因此，对于访问的任何数据库对象，用户必须拥有相应权限。  
   
-## <a name="see-also"></a>请参阅  
- [物理体系结构（Analysis Services - 多维数据）](../multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
- [物理体系结构（Analysis Services - 数据挖掘）](physical-architecture-analysis-services-data-mining.md)   
+## <a name="see-also"></a>另请参阅  
+ [物理体系结构 &#40;Analysis Services 多维数据&#41;](../multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
+ [物理体系结构 &#40;Analysis Services 数据挖掘&#41;](physical-architecture-analysis-services-data-mining.md)   
  [管理数据挖掘解决方案和对象](management-of-data-mining-solutions-and-objects.md)  
   
   

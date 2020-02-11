@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d08e9900453fe259d727e202489d728e0dce47e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097879"
 ---
-# <a name="setwindowsserviceidentity-method-wmi-msreportserverconfigurationsetting"></a>SetWindowsServiceIdentity 方法 (WMI MSReportServer_ConfigurationSetting)
+# <a name="setwindowsserviceidentity-method-wmi-msreportserver_configurationsetting"></a>SetWindowsServiceIdentity 方法 (WMI MSReportServer_ConfigurationSetting)
   将报表服务器 Windows 服务作为指定的 Windows 用户运行，并授予此帐户足够的文件系统权限以允许操作报表服务器。  
   
 ## <a name="syntax"></a>语法  
@@ -40,14 +40,14 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
     string Account, string Password, out Int32 HRESULT);  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>parameters  
  *UseBuiltInAccount*  
  指示指定的帐户是否是内置 Windows 帐户。  
   
- *帐户*  
+ *账号*  
  要用于运行 Windows 服务的 Windows 帐户，格式为“DOMAIN\alias”。  
   
- *密码*  
+ *权限*  
  帐户的密码。  
   
  *HRESULT*  
@@ -57,18 +57,18 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
  返回 *HRESULT* ，指示方法调用是成功还是失败。 值 0 指示方法调用已成功。 非零值指示已发生错误。  
   
 ## <a name="remarks"></a>备注  
- 当*UseBuiltInAccount*参数设置为`true`并且报表服务器正在运行 microsoft[!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)]或 Windows XP，则*名称*，*域*，并*密码*参数将被忽略，并使用本地系统帐户。  
+ 当*UseBuiltInAccount*参数设置为`true`并且 Report Server 在 Microsoft [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)]或 Windows XP 上运行时，将忽略*Name*、 *Domain*和*Password*参数的值，并使用本地系统帐户。  
   
- 当*UseBuiltInAccount*参数设置为`true`并且报表服务器正在运行 Windows Server 2003 上*域*并*密码*属性被忽略，并且名称字段必须包含"Builtin\NetworkService"或"Builtin\System"或"Builtin\LocalService"。  
+ 如果将*UseBuiltInAccount*参数设置为`true`并且 Report Server 在 Windows server 2003 上运行，则将忽略*Domain*和*Password*属性，并且名称字段必须包含 "Builtin\system" 或 "Builtin\System" 或 "Builtin\LocalService"。  
   
  SetWindowsServiceIdentity 方法可对报表服务器安装目录中的文件和文件夹设置文件权限。  
   
- 中指定的帐户*帐户*参数需要`LogonAsService`Windows 中的权限。 该方法可将此权限授予指定的帐户。  
+ *帐户*参数中指定的帐户需要`LogonAsService` Windows 中的权限。 该方法可将此权限授予指定的帐户。  
   
 ## <a name="requirements"></a>要求  
- **命名空间:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](msreportserver-configurationsetting-members.md)  
   
   

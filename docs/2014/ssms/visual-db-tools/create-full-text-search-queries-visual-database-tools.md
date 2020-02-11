@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1f3ab74c6dd095fd92e0f9d20ba622be70a37ef9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184344"
 ---
 # <a name="create-full-text-search-queries-visual-database-tools"></a>创建全文搜索查询 (Visual Database Tools)
-  全文搜索使用 CONTAINS 谓词来查找在给定列中包含指定文本的行。 全文搜索仅适用于具有活动的全文索引的列。 如果试图将 CONTAINS 子句用于不具有当前活动的全文索引的列，则将收到错误。 有关全文索引和 CONTAINS 子句的详细信息，请参阅[全文搜索](../../relational-databases/search/full-text-search.md)并[CONTAINS &#40;TRANSACT-SQL&#41;](/sql/t-sql/queries/contains-transact-sql)。  
+  全文搜索使用 CONTAINS 谓词来查找在给定列中包含指定文本的行。 全文搜索仅适用于具有活动的全文索引的列。 如果试图将 CONTAINS 子句用于不具有当前活动的全文索引的列，则将收到错误。 有关全文索引和 CONTAINS 子句的详细信息，请参阅[全文搜索](../../relational-databases/search/full-text-search.md)和[包含 &#40;transact-sql&#41;](/sql/t-sql/queries/contains-transact-sql)。  
   
 ### <a name="to-create-a-full-text-search-query"></a>创建全文搜索查询  
   
@@ -30,9 +30,9 @@ ms.locfileid: "63184344"
   
 2.  在该查询的 WHERE 子句中，用 CONTAINS 函数来搜索全文本列。  
   
-## <a name="see-also"></a>请参阅  
- [支持的查询类型&#40;可视化数据库工具&#41;](visual-database-tools.md)   
- [设计查询和视图操作指南主题&#40;可视化数据库工具&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+## <a name="see-also"></a>另请参阅  
+ [Visual Database Tools &#40;支持的查询类型&#41;](visual-database-tools.md)   
+ [&#40;Visual Database Tools 的设计查询和视图操作指南主题&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [执行基本的查询操作 (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

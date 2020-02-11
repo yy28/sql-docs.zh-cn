@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2371109c8fa28c579cd90735a51a4ad3a790385
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63255065"
 ---
 # <a name="manage-schedules"></a>管理计划
-  允许查看和更改 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业计划的属性。  
+  允许您查看和更改代理作业计划[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的属性。  
   
 ## <a name="options"></a>选项  
  **可用计划**  
@@ -47,7 +47,7 @@ ms.locfileid: "63255065"
  **属性**  
  单击此按钮可更改所选计划的属性。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建计划并将计划附加到作业](create-and-attach-schedules-to-jobs.md)  
   
   

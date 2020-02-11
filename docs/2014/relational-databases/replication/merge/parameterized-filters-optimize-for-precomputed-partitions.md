@@ -15,18 +15,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8f80afa10c1dbd067648db26c2bed0f423f371b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250551"
 ---
 # <a name="optimize-parameterized-filter-performance-with-precomputed-partitions"></a>使用预计算分区优化参数化筛选器的性能
   预计算分区是一种性能优化方法，可用于已筛选的合并发布。 预计算分区也是在已筛选的发布上使用逻辑记录的一项要求。 有关逻辑记录的详细信息，请参阅[通过逻辑记录对相关行的更改进行分组](group-changes-to-related-rows-with-logical-records.md)。  
   
- 订阅服务器与发布服务器同步时，发布服务器必须计算订阅服务器的筛选器，以确定哪些行属于该订阅服务器的分区或数据集。 我们将为接收已筛选数据集的每个订阅服务器确定发布服务器上的更改的分区成员身份这一过程称为“分区计算”  。 如果没有预计算分区，那么，自上次为特定订阅服务器运行合并代理之后，对发布服务器上已筛选列每进行一次更改都必须执行分区计算，而且对与该发布服务器同步的每个订阅服务器都要重复这一过程。  
+ 订阅服务器与发布服务器同步时，发布服务器必须计算订阅服务器的筛选器，以确定哪些行属于该订阅服务器的分区或数据集。 我们将为接收已筛选数据集的每个订阅服务器确定发布服务器上的更改的分区成员身份这一过程称为“分区计算” **。 如果没有预计算分区，那么，自上次为特定订阅服务器运行合并代理之后，对发布服务器上已筛选列每进行一次更改都必须执行分区计算，而且对与该发布服务器同步的每个订阅服务器都要重复这一过程。  
   
- 但是，如果发布服务器和订阅服务器在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更高版本上运行并且您使用了预计算分区，那么发布服务器上所有更改的分区成员身份在进行更改时即已预计算并持久化。 因此，当订阅服务器与发布服务器同步时，它可以立即开始下载与其分区相关的更改，而不必执行分区计算过程。 当发布中有大量更改、订阅服务器或项目时，这样可以显著提高性能。  
+ 但是，如果发布服务器和订阅服务器在或[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]更高版本上运行，并且您使用的是预计算分区，则在发布服务器上进行的所有更改的分区成员身份在进行更改时将预计算并持久保存。 因此，当订阅服务器与发布服务器同步时，它可以立即开始下载与其分区相关的更改，而不必执行分区计算过程。 当发布中有大量更改、订阅服务器或项目时，这样可以显著提高性能。  
   
  除了使用预计算分区外，预先生成快照和/或允许订阅服务器在第一次同步时还请求生成快照和应用快照。 使用以上选项中的一个或两个可以为使用参数化筛选器的发布提供快照。 如果未指定任一选项，将使用一系列的 SELECT 和 INSERT 语句初始化订阅，而不是使用 **bcp** 实用工具；此过程的速度将更慢。 有关详细信息，请参阅 [Snapshots for Merge Publications with Parameterized Filters](../snapshots-for-merge-publications-with-parameterized-filters.md)。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "63250551"
   
 ### <a name="database-collation"></a>数据库排序规则  
   
--   如果使用了预计算分区，进行比较时始终使用数据库的排序规则，而不使用表或列的排序规则。 请考虑下列方案：  
+-   如果使用了预计算分区，进行比较时始终使用数据库的排序规则，而不使用表或列的排序规则。 请考虑以下方案：  
   
     -   具有区分大小写排序规则的数据库包含一个具有不区分大小写排序规则的表。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "63250551"
 ## <a name="performance-of-precomputed-partitions"></a>预计算分区的性能  
  在将更改从订阅服务器上载到发布服务器时，尽管使用预计算分区会产生少量的性能开销，但大部分合并处理时间用于计算分区以及将更改从发布服务器下载到订阅服务器上，所以净的性能收益仍然很显著。 根据并发同步的订阅服务器的数目以及将行从一个分区移动到另一分区的每个同步的更新数目的不同，性能收益也会有所不同。  
   
-## <a name="see-also"></a>请参阅  
- [参数化行筛选器](parameterized-filters-parameterized-row-filters.md)  
+## <a name="see-also"></a>另请参阅  
+ [Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md)  
   
   

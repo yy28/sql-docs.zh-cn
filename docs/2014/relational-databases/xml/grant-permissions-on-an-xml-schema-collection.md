@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e009f0fe22156f9a652dd19fceddf02bbc48c247
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63288759"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>授予对 XML 架构集合的权限
@@ -502,7 +502,7 @@ SELECT XML_SCHEMA_NAMESPACE(N'dbo',N'MySC')
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [XML 数据 (SQL Server)](xml-data-sql-server.md)   
  [类型化的 XML 与非类型化的 XML 的比较](compare-typed-xml-to-untyped-xml.md)   
  [XML 架构集合 (SQL Server)](xml-schema-collections-sql-server.md)   

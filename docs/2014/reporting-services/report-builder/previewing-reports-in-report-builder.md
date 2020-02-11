@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cdb19ba96bc6c324614b7b24ccd77d66213fed3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107789"
 ---
 # <a name="previewing-reports-in-report-builder"></a>在报表生成器中预览报表
@@ -75,8 +75,8 @@ ms.locfileid: "66107789"
   
  如果在创建编辑会话之后更改报表使用的子报表，报表将不呈现在预览中。 若要成功预览报表，应保存该报表并单击 **“刷新”** 以获取新数据。  
   
-## <a name="see-also"></a>请参阅  
- [向报表添加数据&#40;报表生成器和 SSRS&#41;](../report-data/report-datasets-ssrs.md)   
+## <a name="see-also"></a>另请参阅  
+ [将数据添加到报表 &#40;报表生成器和 SSRS&#41;](../report-data/report-datasets-ssrs.md)   
  [设置报表项的格式（报表生成器和 SSRS）](../report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [表、矩阵和列表（报表生成器和 SSRS）](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [图表（报表生成器和 SSRS）](../report-design/charts-report-builder-and-ssrs.md)   

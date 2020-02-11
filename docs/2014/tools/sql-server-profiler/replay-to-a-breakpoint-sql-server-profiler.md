@@ -1,5 +1,5 @@
 ---
-title: 重播到断点 (SQL Server Profiler) |Microsoft Docs
+title: 重播到断点（SQL Server Profiler） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 33860d4e84e828b404236527dbe3c8c8cf6becc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63183516"
 ---
 # <a name="replay-to-a-breakpoint-sql-server-profiler"></a>重播到断点 (SQL Server Profiler)
@@ -51,9 +51,9 @@ ms.locfileid: "63183516"
   
 6.  重复步骤 5 到跟踪的末尾。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [重播至光标处 (SQL Server Profiler)](replay-to-a-cursor-sql-server-profiler.md)   
  [重播跟踪](replay-traces.md)   
- [SQL Server 事件探查器](sql-server-profiler.md)  
+ [SQL Server Profiler](sql-server-profiler.md)  
   
   

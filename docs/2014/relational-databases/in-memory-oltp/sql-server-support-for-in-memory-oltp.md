@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 470b3edf0435099b2a9fd17b14ac299299274a71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63181241"
 ---
 # <a name="sql-server-support-for-in-memory-oltp"></a>SQL Server 对内存中 OLTP 的支持
@@ -28,7 +28,7 @@ ms.locfileid: "63181241"
   
 -   [对内存中 OLTP 的 SQL Server Management Studio 支持](sql-server-management-studio-support-for-in-memory-oltp.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [内存中 OLTP（内存中优化）](in-memory-oltp-in-memory-optimization.md)  
   
   

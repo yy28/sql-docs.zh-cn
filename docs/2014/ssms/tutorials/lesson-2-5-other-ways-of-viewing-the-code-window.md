@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 537d7e48440e3c68639438068d7b3ff8bd7e9634
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63252677"
 ---
 # <a name="other-ways-of-viewing-the-code-window"></a>查看代码窗口的其他方式
@@ -24,13 +24,13 @@ ms.locfileid: "63252677"
   
 #### <a name="to-view-and-manipulate-multiple-code-windows-at-once"></a>同时查看和操作多个代码窗口  
   
-1.  在“SQL 编辑器”  工具栏中，单击“新建查询”  打开第二个查询编辑器窗口。  
+1.  在“SQL 编辑器”**** 工具栏中，单击“新建查询”**** 打开第二个查询编辑器窗口。  
   
-2.  若要同时查看两个代码窗口，请右键单击查询编辑器的标题栏，然后选择“新建水平选项卡组”  。 此时将在水平窗格中显示两个查询窗口。  
+2.  若要同时查看两个代码窗口，请右键单击查询编辑器的标题栏，然后选择“新建水平选项卡组”****。 此时将在水平窗格中显示两个查询窗口。  
   
-3.  单击上面的查询编辑器窗口将其激活，再单击“新建查询”  打开第三个查询窗口。 该窗口将显示为上面窗口中的一个选项卡。  
+3.  单击上面的查询编辑器窗口将其激活，再单击“新建查询”**** 打开第三个查询窗口。 该窗口将显示为上面窗口中的一个选项卡。  
   
-4.  在“窗口”  菜单中，单击“移动到下一个选项卡组”  。 第三个窗口将移动到下面的选项卡组中。 使用这些选项，可以用多种方式配置窗口。  
+4.  在“窗口”**** 菜单中，单击“移动到下一个选项卡组”****。 第三个窗口将移动到下面的选项卡组中。 使用这些选项，可以用多种方式配置窗口。  
   
 5.  关闭第二个和第三个查询窗口。  
   

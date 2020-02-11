@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7b330b5aedaeff4cf73ad6dca3e88860dde0f90b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106062"
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>与组一起显示组头和组尾（报表生成器和 SSRS）
@@ -68,9 +68,9 @@ ms.locfileid: "66106062"
   
 5.  （可选）预览报表。 如果可能，报表呈现器使该成员与指定列组成员一起显示。  
   
-## <a name="see-also"></a>请参阅  
- [Tablix 数据区域单元、 行和列&#40;报表生成器&#41;和 SSRS](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
- [Tablix 数据区域&#40;报表生成器和 SSRS&#41;](tablix-data-region-areas-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>另请参阅  
+ [Tablix 数据区域单元、行和列 &#40;报表生成器&#41; 和 SSRS](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
+ [Tablix 数据区域区 &#40;报表生成器和 SSRS&#41;](tablix-data-region-areas-report-builder-and-ssrs.md)   
  [Tablix 数据区域（报表生成器和 SSRS）](../tablix-data-region-report-builder-and-ssrs.md)   
  [表（报表生成器和 SSRS）](tables-report-builder-and-ssrs.md)   
  [矩阵（报表生成器和 SSRS）](create-a-matrix-report-builder-and-ssrs.md)   

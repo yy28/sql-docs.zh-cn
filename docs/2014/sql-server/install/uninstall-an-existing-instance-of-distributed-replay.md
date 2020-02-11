@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 45fddb470ce7bee4dd84cbcc3c656e33d30e3166
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091769"
 ---
 # <a name="uninstall-an-existing-instance-of-distributed-replay"></a>卸载 Distributed Replay 的现有实例
@@ -28,11 +28,11 @@ ms.locfileid: "66091769"
   
 ### <a name="to-uninstall-an-instance-of-distributed-replay"></a>卸载 Distributed Replay 的实例  
   
-1.  从**启动**菜单上，单击**控制面板**，然后双击**添加或删除程序**。  
+1.  从 "**开始**" 菜单中，单击 "**控制面板**"，然后双击 "**添加或删除程序**"。  
   
-     选择[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中**卸载或更改程序**窗口中，然后在[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]对话框中，单击**删除**。  
+     在[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] "**卸载或更改程序**" 窗口中选择，然后在[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]对话框中单击 "**删除**"。  
   
-2.  按照中的步骤[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]向导中，然后在**选择功能**页上，选择你想要删除，然后单击 Distributed Replay 组件**下一步。** 。  
+2.  按照[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]向导中的步骤操作，然后在 "**选择功能**" 页上，选择要删除的 Distributed Replay 组件，然后单击 "**下一步"。**  
   
 3.  完成 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装向导以卸载选定的 Distributed Replay 功能。  
   

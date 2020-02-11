@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8bcadc041fd1f2c4fd708fbc79ab52d0c0472956
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479569"
 ---
 # <a name="delete-an-entity-master-data-services"></a>删除实体 (Master Data Services)
@@ -26,31 +26,31 @@ ms.locfileid: "65479569"
 > [!NOTE]  
 >  该实体的来自所有版本的成员都将永久删除。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](administrators-master-data-services.md)。  
   
 ### <a name="to-delete-an-entity"></a>删除实体  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”** 。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
   
-2.  在 **“模型视图”** 页上，从菜单栏中，指向 **“管理”** ，然后单击 **“实体”** 。  
+2.  在 **“模型视图”** 页上，从菜单栏中，指向 **“管理”** ，然后单击 **“实体”**。  
   
 3.  在 **“实体维护”** 页上，从 **“模型”** 列表中，选择某一模型。  
   
 4.  为您要删除的实体选择行。  
   
-5.  单击**删除所选的实体**。  
+5.  单击 "**删除所选实体**"。  
   
-6.  在确认对话框中，单击 **“确定”** 。  
+6.  在确认对话框中，单击 **“确定”**。  
   
-7.  在附加确认对话框中，单击 **“确定”** 。  
+7.  在附加确认对话框中，单击 **“确定”**。  
   
-## <a name="see-also"></a>请参阅  
- [实体 (Master Data Services)](../../2014/master-data-services/entities-master-data-services.md)   
- [创建实体 (Master Data Services)](../../2014/master-data-services/create-an-entity-master-data-services.md)  
+## <a name="see-also"></a>另请参阅  
+ [实体 &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)   
+ [创建实体 &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md)  
   
   

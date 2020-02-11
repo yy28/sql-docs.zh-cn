@@ -1,5 +1,5 @@
 ---
-title: 配置维度属性 （商业智能向导） |Microsoft Docs
+title: 配置维度属性（商业智能向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5fe43b53878744586c3d0d8ec5719d6241b0a302
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087449"
 ---
 # <a name="configure-dimension-attributes-business-intelligence-wizard"></a>配置维度属性（商业智能向导）
@@ -27,12 +27,12 @@ ms.locfileid: "66087449"
  显示所选维度类型。  
   
 > [!NOTE]  
->  此选项将不可用因为`Type`维度的属性不能更改为值以外*帐户*帐户维度的。  
+>  此选项不可用，因为维度`Type`的属性不能更改为帐户维度的*帐户*之外的值。  
   
  **维度属性**  
  显示可以映射到维度中现有维度属性的有效属性类型。  
   
- **Include**  
+ **包括**  
  选中复选框，将维度中相应的属性类型包括在内。  
   
  **属性类型**  
@@ -41,15 +41,15 @@ ms.locfileid: "66087449"
  **维度属性**  
  选择应该映射到相应属性类型的维度属性。  
   
- **度量值设置为半累加性基于帐户类型**  
+ **基于帐户类型将度量值设置为半累加性**  
  选中此选项，可以将与此维度相关联的每个度量值更改为按帐户类型聚合。  
   
 > [!NOTE]  
 >  如果从维度设计器或者通过在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]的解决方案资源管理器中右键单击维度启动了商业智能向导，则将不会显示此选项。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [商业智能向导的 F1 帮助](business-intelligence-wizard-f1-help.md)   
- [多维数据集设计器&#40;Analysis Services-多维数据&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [维度设计器&#40;Analysis Services-多维数据&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+ [多维数据集设计器 &#40;Analysis Services 多维数据&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [维度设计器 &#40;Analysis Services 多维数据&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

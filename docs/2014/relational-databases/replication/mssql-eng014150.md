@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fc4e2ecd81b6bf0a6c24aff8e89dc31c95e04625
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63191438"
 ---
-# <a name="mssqleng014150"></a>MSSQL_ENG014150
+# <a name="mssql_eng014150"></a>MSSQL_ENG014150
     
 ## <a name="message-details"></a>消息详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "63191438"
 |符号名称||  
 |消息正文|复制 - %s：代理 %s 成功。 %s|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  此消息指出复制代理已成功完成运行。 复制使用下列代理：  
   
 -   快照代理。 该代理由所有发布使用。  
@@ -50,13 +50,13 @@ ms.locfileid: "63191438"
 ## <a name="user-action"></a>用户操作  
  日志读取器代理、队列读取器代理和分发代理通常连续运行，而其他代理通常则按需要或按计划运行。 如果认为某个代理无法完成运行，请检查该代理的状态。 有关详细信息，请参阅 [Monitor Replication Agents](agents/replication-agents-overview.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [复制代理管理](agents/replication-agent-administration.md)   
  [错误和事件参考（复制）](errors-and-events-reference-replication.md)   
- [复制分发代理](agents/replication-distribution-agent.md)   
- [复制日志读取器代理](agents/replication-log-reader-agent.md)   
- [复制合并代理](agents/replication-merge-agent.md)   
+ [Replication Distribution Agent](agents/replication-distribution-agent.md)   
+ [Replication Log Reader Agent](agents/replication-log-reader-agent.md)   
+ [Replication Merge Agent](agents/replication-merge-agent.md)   
  [复制队列读取器代理](agents/replication-queue-reader-agent.md)   
- [复制快照代理](agents/replication-snapshot-agent.md)  
+ [Replication Snapshot Agent](agents/replication-snapshot-agent.md)  
   
   

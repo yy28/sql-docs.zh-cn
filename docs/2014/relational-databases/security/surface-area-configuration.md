@@ -18,13 +18,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 811db11aecb5e6c0f4c68d272040aea3f8e38ca4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184536"
 ---
-# <a name="surface-area-configuration"></a>外围应用配置器
+# <a name="surface-area-configuration"></a>Surface Area Configuration
   在新安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的默认配置中，许多功能并未启用。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只是有选择地安装和启动关键服务和功能，以最大限度地减少可能受到恶意用户攻击的功能数。 系统管理员可以在安装时更改这些设置，也可以有选择地启用或禁用运行中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的功能。 此外，如果从其他计算机进行连接，则在配置协议之前某些组件可能不可用。  
   
 > [!NOTE]  
@@ -48,7 +48,7 @@ ms.locfileid: "63184536"
   
 #### <a name="to-configure-surface-area-using-facets"></a>使用方面配置外围应用  
   
-1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的组件。  
+1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的组件。  
   
 2.  在对象资源管理器中，右键单击服务器，然后单击“方面”  。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "63184536"
   
  若要定期检查某个方面的配置，请使用基于策略的管理。 有关基于策略的管理的详细信息，请参阅 [使用基于策略的管理来管理服务器](../policy-based-management/administer-servers-by-using-policy-based-management.md)。  
   
- 也可以使用 `sp_configure` 存储过程来设置[!INCLUDE[ssDE](../../includes/ssde-md.md)]选项。 有关详细信息，请参阅 [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)版本的组合自动配置的最大工作线程数。  
+ 也可以使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 存储过程来设置`sp_configure`选项。 有关详细信息，请参阅 [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)版本的组合自动配置的最大工作线程数。  
   
  若要更改 **的** EnableIntegrated Security [!INCLUDE[ssRS](../../includes/ssrs.md)]属性，请使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的属性设置。 若要更改“预定事件和报表传递”  属性和“Web 服务和 HTTP 访问”  属性，请编辑 **RSReportServer.config** 配置文件。  
   

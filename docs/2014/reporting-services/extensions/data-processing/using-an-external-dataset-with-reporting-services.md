@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c912d6ac343bbcb3f908596a8ea804ad8f21dd82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63164038"
 ---
 # <a name="using-an-external-dataset-with-reporting-services"></a>将外部数据集用于 Reporting Services
-  DataSet 对象是支持具有 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 的断开连接的、分布式数据方案的核心  。 DataSet 对象是数据的驻留内存表示形式，提供与数据源无关的一致的关系编程模型  。 它可用于具有 XML 数据的多种不同的数据源，或者用于管理应用程序的本地数据。 DataSet 对象表示完整的数据集合，包括相关表、约束以及表之间的关系  。 由于 DataSet 对象既存储数据、又公开数据，因此，数据可能会经常被处理并转换为 DataSet，然后发生针对这些数据的报告   。  
+  DataSet 对象是支持具有  **的断开连接的、分布式数据方案的核心**[!INCLUDE[vstecado](../../../includes/vstecado-md.md)]。 DataSet 对象是数据的驻留内存表示形式，提供与数据源无关的一致的关系编程模型  。 它可用于具有 XML 数据的多种不同的数据源，或者用于管理应用程序的本地数据。 DataSet 对象表示完整的数据集合，包括相关表、约束以及表之间的关系  。 由于 DataSet 对象既存储数据、又公开数据，因此，数据可能会经常被处理并转换为 DataSet，然后发生针对这些数据的报告   。  
   
  使用 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据处理扩展插件，可以集成外部应用程序创建的任何自定义 DataSet 对象  。 为此，在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中创建一个自定义数据处理扩展插件，充当 DataSet 对象和报表服务器之间的桥梁  。 用于处理此 DataSet 对象的大多数代码包含在所创建的 DataReader 类中   。  
   
@@ -162,7 +162,7 @@ public int GetOrdinal(string name)
   
  一旦创建或检索数据集后，就可以在实现 DataReader 类的 Read、GetValue、GetName、GetOrdinal、GetFieldType 和 FieldCount 成员时使用 DataSet 对象         。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Reporting Services 扩展插件](../reporting-services-extensions.md)   
  [实现数据处理扩展插件](implementing-a-data-processing-extension.md)   
  [Reporting Services 扩展插件库](../reporting-services-extension-library.md)  

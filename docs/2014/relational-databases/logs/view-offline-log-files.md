@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5547d5fb1c2b083a51837df5d9cacb1be393f555
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144593"
 ---
 # <a name="view-offline-log-files"></a>查看脱机日志文件
@@ -45,14 +45,14 @@ ms.locfileid: "63144593"
   
 -   [SqlErrorLogFile 类](../wmi-provider-configuration-classes/sqlerrorlogfile-class.md) （本主题显示如何检索有关指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日志文件的信息。）  
   
-##  <a name="BeforeYouBegin"></a> Permissions  
+##  <a name="BeforeYouBegin"></a> 权限  
  若要连接到脱机日志文件，您必须在本地和远程计算机上同时具有以下权限：  
   
 -   针对 **Root\Microsoft\SqlServer\ComputerManagement12** WMI 命名空间的读取访问权限。 默认情况下，每个人都可以通过“启用帐户”权限获得读取权限。 有关详细信息，请参阅本节后面的“验证 WMI 权限”过程。  
   
 -   对包含错误日志文件的文件夹的读取权限。 默认情况下，错误日志文件位于下面的路径中（其中 \<*Drive>* 表示安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的驱动器，\<*InstanceName*> 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称）：  
   
-     **\<驱动器 >: \Program Files\Microsoft SQL Server\MSSQL12。\<实例名 > \MSSQL\Log**  
+     **\<驱动器>： \Program Files\Microsoft SQL Server\MSSQL12。\<InstanceName> \mssql\log**  
   
  若要验证 WMI 命名空间安全设置，您可以使用 WMI 控制管理单元。  
   
@@ -60,9 +60,9 @@ ms.locfileid: "63144593"
   
 1.  打开 WMI 控制管理单元。 为此，请根据所用操作系统执行以下操作之一：  
   
-    -   单击**启动**，类型`wmimgmt.msc`中**开始搜索**框中，，然后按 ENTER。  
+    -   单击 "**开始**" `wmimgmt.msc` ，在 "**开始搜索**" 框中键入，然后按 enter。  
   
-    -   单击**启动**，单击**运行**，类型`wmimgmt.msc`，然后按 ENTER。  
+    -   依次单击 "**开始**"、" `wmimgmt.msc`**运行**"，键入，然后按 enter。  
   
 2.  默认情况下，WMI 控制管理单元管理本地计算机。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "63144593"
   
     3.  输入远程计算机名称，然后单击 **“确定”** 。  
   
-3.  右键单击“WMI 控制(本地)”或“WMI 控制(RemoteComputerName)”，然后单击“属性”  ****  。  
+3.  右键单击 " **Wmi 控制（本地）** " 或 " **Wmi 控制（***RemoteComputerName***）**"，然后单击 "**属性**"。  
   
 4.  在 **“WMI 控制属性”** 对话框中，单击 **“安全”** 选项卡。  
   
@@ -93,13 +93,13 @@ ms.locfileid: "63144593"
   
 ##### <a name="to-view-log-files-for-instances-that-are-offline"></a>查看脱机实例的日志文件  
   
-1.  如果您要查看本地实例的脱机日志文件，请确保使用提升的权限启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 若要这样做，请在启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 时，右键单击“SQL Server Management Studio”，然后单击“以管理员身份运行”   。  
+1.  如果您要查看本地实例的脱机日志文件，请确保使用提升的权限启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。 若要这样做，请在启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 时，右键单击“SQL Server Management Studio”，然后单击“以管理员身份运行”   。  
   
 2.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的 **“视图”** 菜单上，单击 **“已注册的服务器”** 。  
   
 3.  在控制台树中，找到您想要在其上查看脱机文件的实例。  
   
-4.  执行以下操作之一：  
+4.  执行下列操作之一：  
   
     -   如果实例位于“本地服务器组”下，则展开“本地服务器组”，展开服务器组（如果实例是组的成员），右键单击该实例，然后单击“查看 SQL Server 日志”    。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "63144593"
     > [!NOTE]  
     >  如果日志文件加载时间过长，你可以单击日志文件查看器工具栏上的“停止”  。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [日志文件查看器](log-file-viewer.md)  
   
   

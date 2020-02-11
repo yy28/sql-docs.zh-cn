@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3cccb676574fe4b767d567fbe48cdb887baddf8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63205047"
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>FOR XML 查询与嵌套 FOR XML 查询的比较
@@ -90,7 +90,7 @@ ORDER BY ProductCategoryID
 FOR XML AUTO, TYPE  
 ```  
   
- 下面是结果：  
+ 结果如下：  
   
 ```  
 < ProdCat ProductCategoryID="1" CategoryName="Bikes" />  
@@ -200,7 +200,7 @@ FOR XML AUTO, TYPE
   
  如果从生成产品子类别的嵌套 `ELEMENTS` 查询中删除 `FOR XML` 指令，则整个结果均以属性为中心。 然后便可以编写没有嵌套的查询。 添加 `ELEMENTS` 会使 XML 部分以属性为中心、部分以元素为中心。 此结果无法通过单一级别的 FOR XML 查询生成。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用嵌套 FOR XML 查询](use-nested-for-xml-queries.md)  
   
   

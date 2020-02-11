@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d64b5bf6b60f37bf386840031c304dd5b13faaeb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63158809"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>将具有内存优化表的数据库绑定至资源池
@@ -41,10 +41,10 @@ ALTER DATABASE IMOLTP_DB ADD FILE( NAME = 'IMOLTP_DB_fg' , FILENAME = 'c:\data\I
 GO  
 ```  
   
-### <a name="determine-the-minimum-value-for-minmemorypercent-and-maxmemorypercent"></a>确定 MIN_MEMORY_PERCENT 的 MAX_MEMORY_PERCENT 的最小值  
+### <a name="determine-the-minimum-value-for-min_memory_percent-and-max_memory_percent"></a>确定 MIN_MEMORY_PERCENT 的 MAX_MEMORY_PERCENT 的最小值  
  在确定了内存优化表所需的内存后，确定所需的可用内存的百分比，并且将内存百分比设置为该值或更高值。  
   
- **例如：**    
+ **示例：**    
 对于此示例，我们将假定根据您的计算，确定了您的内存优化表和索引需要 16 GB 的内存。 假定您已提交了 32 GB 的内存供您使用。  
   
  乍看起来，可能需要将 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 设置为 50（16 是 32 的 50%）。  但是，这不会向您的内存优化表提供足够的内存。 通过查看下表（[可用于内存优化表和索引的内存百分比](#percent-of-memory-available-for-memory-optimized-tables-and-indexes)），我们可以看到，如果有 32 GB 的已提交内存，则只有该内存量的 80% 可用于内存优化表和索引。  因此，我们基于可用内存量而不是已提交内存来计算最小和最大百分比。  
@@ -63,7 +63,7 @@ GO
 ### <a name="create-a-resource-pool-and-configure-memory"></a>创建一个资源池并配置内存  
  为内存优化表配置内存时，应基于 MIN_MEMORY_PERCENT 而非 MAX_MEMORY_PERCENT 完成容量规划。  有关 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的信息，请参阅 [ALTER RESOURCE POOL (Transact-SQL)](/sql/t-sql/statements/alter-resource-pool-transact-sql)。 对于内存优化表，这将提高内存可用性的可预测性，因为 MIN_MEMORY_PERCENT 会对其他资源池带来内存压力以确保其得到遵守。 为确保内存可用并帮助避免内存不足情况，MIN_MEMORY_PERCENT 与 MAX_MEMORY_PERCENT 的值应相同。 请参阅下面的 [可用于内存优化表和索引的内存百分比](#percent-of-memory-available-for-memory-optimized-tables-and-indexes) ，以了解基于已提交内存量的可用于内存优化表的内存百分比。  
   
- 请参阅[最佳做法：在虚拟机环境中使用内存中 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)时在虚拟机环境中工作的详细信息。  
+ 有关在虚拟机环境下工作时的详细信息，请参阅 [最佳做法：在虚拟机环境中使用内存中 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) 。  
   
  下面的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码创建一个名为 Pool_IMOLTP 且可使用一半内存的资源池。  创建该池后，资源调控器重新配置为包括 Pool_IMOLTP。  
   
@@ -118,8 +118,8 @@ GO
   
  现在数据库已绑定至资源池。  
   
-## <a name="change-min-memory-percent-and-max-memory-percent-on-an-existing-pool"></a>更改最小内存百分比和对现有池的最大内存百分比  
- 如果您将附加内存添加到服务器，或者添加内存优化表更改所需的内存量，则可能需要更改 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值。 以下步骤演示了如何更改资源池的 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值。 有关要用于 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值的指导信息，请参阅下面的部分。  请参阅主题[最佳实践：在虚拟机环境中使用内存中 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)有关详细信息。  
+## <a name="change-min-memory-percent-and-max-memory-percent-on-an-existing-pool"></a>更改现有池的最小内存百分比和最大内存百分比  
+ 如果您将附加内存添加到服务器，或者添加内存优化表更改所需的内存量，则可能需要更改 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值。 以下步骤演示了如何更改资源池的 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值。 有关要用于 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值的指导信息，请参阅下面的部分。  有关详细信息，请参阅主题 [最佳做法：在 VM 环境下使用内存中 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) 。  
   
 1.  使用 `ALTER RESOURCE POOL` 可更改 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值。  
   
@@ -184,11 +184,11 @@ pool_id     Name        min_memory_percent max_memory_percent max_memory_mb used
   
  如果未将数据库绑定到某一命名资源池，则它将绑定到“默认”池。 由于对于大多数其他分配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用默认资源池，因此，对于感兴趣的数据库，您将不能使用 DMV sys.dm_resource_governor_resource_pools 精确监视内存优化表使用的内存。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [sys.sp_xtp_bind_db_resource_pool (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql)   
  [sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql)   
  [资源调控器](../resource-governor/resource-governor.md)   
- [Resource Governor Resource Pool](../resource-governor/resource-governor-resource-pool.md)   
+ [资源调控器资源池](../resource-governor/resource-governor-resource-pool.md)   
  [创建资源池](../resource-governor/create-a-resource-pool.md)   
  [更改资源池设置](../resource-governor/change-resource-pool-settings.md)   
  [删除资源池](../resource-governor/delete-a-resource-pool.md)  

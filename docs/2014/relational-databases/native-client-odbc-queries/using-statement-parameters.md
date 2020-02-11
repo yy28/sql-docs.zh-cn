@@ -1,5 +1,5 @@
 ---
-title: 使用语句参数 |Microsoft Docs
+title: Using 语句参数 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a16f070623503dcb17788bc75bd5695bc1584d7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200244"
 ---
 # <a name="using-statement-parameters"></a>使用语句参数
@@ -32,9 +32,9 @@ ms.locfileid: "63200244"
   
 -   在构造查询条件时增强用户交互。  
   
--   管理**文本**， **ntext**，并**图像**数据和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-特定的 C 数据类型。  
+-   管理**text**、 **ntext**和**image**数据以及[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]特定于数据的 C 数据类型。  
   
- 例如，**部件**表中包含名为的列**PartID**，**说明**，以及**价格**。 若要添加不带参数的部分，需要构造 SQL 语句，例如：  
+ 例如， **part**表包含名为**PartID**、 **Description**和**Price**的列。 若要添加不带参数的部分，需要构造 SQL 语句，例如：  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (2100, 'Drive shaft', 50.00)  
@@ -54,7 +54,7 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
   
 -   [绑定参数](using-statement-parameters-binding-parameters.md)  
   
-## <a name="see-also"></a>请参阅  
- [执行查询&#40;ODBC&#41;](executing-queries-odbc.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;ODBC&#41;执行查询](executing-queries-odbc.md)  
   
   

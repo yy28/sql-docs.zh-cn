@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c38d70d73cfd80e15d8418f763f702e6a6eacf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080583"
 ---
 # <a name="import-analysis-services-database-wizard-f1-help"></a>导入 Analysis Services 数据库向导的 F1 帮助
-  可以使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的导入 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 9.0 数据库向导，通过现有 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库生成 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目。  
+  使用[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]中[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]的 "导入9.0 数据库向导" [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]可从现有[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]数据库生成项目。  
   
  导入 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 9.0 数据库向导可引导您完成以下步骤：  
   

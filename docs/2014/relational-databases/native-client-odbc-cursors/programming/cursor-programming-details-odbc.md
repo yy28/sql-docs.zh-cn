@@ -1,5 +1,5 @@
 ---
-title: 游标编程详细信息 (ODBC) |Microsoft Docs
+title: 游标编程详细信息（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9138b9abc8b75107061e794f44341f628e58ac67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63207266"
 ---
 # <a name="cursor-programming-details-odbc"></a>游标编程详细信息 (ODBC)
@@ -27,13 +27,13 @@ ms.locfileid: "63207266"
   
 ## <a name="in-this-section"></a>本节内容  
   
--   [隐式游标转换&#40;ODBC&#41;](implicit-cursor-conversions-odbc.md)  
+-   [ODBC&#41;的隐式游标转换 &#40;](implicit-cursor-conversions-odbc.md)  
   
 -   [通过 ODBC 游标使用自动提取](using-autofetch-with-odbc-cursors.md)  
   
--   [快速只进游标&#40;ODBC&#41;](fast-forward-only-cursors-odbc.md)  
+-   [ODBC&#41;&#40;快速只进游标](fast-forward-only-cursors-odbc.md)  
   
-## <a name="see-also"></a>请参阅  
- [使用游标&#40;ODBC&#41;](../using-cursors-odbc.md)  
+## <a name="see-also"></a>另请参阅  
+ [使用游标 &#40;ODBC&#41;](../using-cursors-odbc.md)  
   
   

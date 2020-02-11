@@ -1,5 +1,5 @@
 ---
-title: 将数据库关系图复制到剪贴板 (Visual Database Tools) |Microsoft Docs
+title: 将数据库关系图的图像复制到剪贴板（Visual Database Tools） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e011d1dc3f4690f78821a2bd47aced8e06b8e768
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63225852"
 ---
 # <a name="copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools"></a>将数据库关系图复制到剪贴板 (Visual Database Tools)
@@ -34,7 +34,7 @@ ms.locfileid: "63225852"
   
      现在，整个数据库关系图的图像便已复制到系统剪贴板中。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用数据库关系图 (Visual Database Tools)](visual-database-tools.md)  
   
   

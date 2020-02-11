@@ -1,5 +1,5 @@
 ---
-title: NumberOfFlags 属性 （ClientNetworkProtocol 类） |Microsoft Docs
+title: NumberOfFlags 属性（ClientNetworkProtocol 类） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9a47f6e17a85fdf9cec169a611b9fe205ba02543
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192043"
 ---
 # <a name="numberofflags-property-clientnetworkprotocol-class"></a>NumberOfFlags 属性（ClientNetworkProtocol 类）
-  获取由指定的客户端网络协议所需的标志选项数[SetOrderValue 方法 （ClientNetworkProtocol 类）](clientnetworkprotocol-class.md)。  
+  获取由[SetOrderValue 方法（ClientNetworkProtocol 类）](clientnetworkprotocol-class.md)指定的客户端网络协议所需的标志选项的数目。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>组成部分  
- *object*  
+ *对象*  
  一个表示 [客户端使用的网络协议的](clientnetworkprotocol-class.md) ClientNetworkProtocol 类 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
@@ -45,7 +45,7 @@ object
   
 ## <a name="remarks"></a>备注  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置客户端协议](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

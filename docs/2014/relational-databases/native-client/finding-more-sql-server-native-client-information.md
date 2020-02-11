@@ -1,5 +1,5 @@
 ---
-title: 查找 SQL Server 本机客户端的详细信息 |Microsoft Docs
+title: 查找更多 SQL Server Native Client 信息 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 639796b9abcf95c9f701d3ed88fbb5e71078eb8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63205849"
 ---
 # <a name="finding-more-sql-server-native-client-information"></a>查找更多 SQL Server Native Client 信息
@@ -34,9 +34,9 @@ ms.locfileid: "63205849"
   
  Windows DAC SDK 包括 ActiveX 数据对象 (ADO)、OLE DB 和开放式数据库连接 (ODBC) 的文档。  
   
- 有关其他信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端可以通过搜索找到[Microsoft 支持部门](https://support.microsoft.com)。  
+ 有关[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 的其他信息，请参阅[Microsoft 支持部门](https://support.microsoft.com)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server Native Client 编程](sql-server-native-client-programming.md)  
   
   

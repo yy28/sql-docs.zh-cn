@@ -1,5 +1,5 @@
 ---
-title: 获取 Kerberos 相互身份验证 |Microsoft Docs
+title: 获取相互的 Kerberos 身份验证 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9158544f40a18ff6dce97483be57e645e15a57d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200420"
 ---
 # <a name="get-mutual-kerberos-authentication"></a>获取 Kerberos 相互身份验证
@@ -22,7 +22,7 @@ ms.locfileid: "63200420"
   
  此示例不适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前的任何 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本。  
   
- 有关详细信息，请参阅[服务主体名称&#40;SPN&#41;中的客户端连接支持](../native-client/features/service-principal-name-spn-support-in-client-connections.md)。  
+ 有关详细信息，请参阅[客户端连接中的服务主体名称 &#40;SPN&#41; 支持](../native-client/features/service-principal-name-spn-support-in-client-connections.md)。  
   
 ## <a name="example"></a>示例  
  如果您要将此示例构建为在 64 位操作系统上运行的 32 位应用程序并运行该示例，则必须使用 %windir%\SysWOW64\odbcad32.exe 中的 ODBC 管理器创建 ODBC 数据源。  
@@ -33,7 +33,7 @@ ms.locfileid: "63200420"
   
  此外，还必须指定一个客户提供的 SPN。 将“CP_SPN”更改为客户提供的 SPN。  
   
- 使用 /EHsc、/D "_UNICODE"、/D "UNICODE" 和 odbc32.lib 进行编译。 请确保您的 INCLUDE 环境变量包括含有 sqlncli.h 的目录。  
+ 使用 /EHsc、/D "_UNICODE"、/D "UNICODE" 和 odbc32.lib 进行编译。 请确保 INCLUDE 环境变量包含包含 sqlncli.msi 的目录。  
   
 ```  
 // compile with: /EHsc /D "_UNICODE" /D "UNICODE" odbc32.lib  

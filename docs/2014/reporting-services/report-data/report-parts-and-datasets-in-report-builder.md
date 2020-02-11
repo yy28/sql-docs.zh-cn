@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e5f77df0a2e5322687f5724e7921932a551d07ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107171"
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>报表生成器中的报表部件和数据集
@@ -59,7 +59,7 @@ ms.locfileid: "66107171"
 >  为了确保您和他人能够继续成功地使用来自共享数据集的数据，您必须理解确保报表项的安全所基于的原理。 有关详细信息，请参阅 [保护共享数据集项](../security/secure-shared-dataset-items.md)。  
   
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [报表设计视图（报表生成器）](../report-builder/report-design-view-report-builder.md)   
  [安全性（报表生成器）](../report-builder/security-report-builder.md)   
  [报表部件（报表生成器和 SSRS）](../report-parts-report-builder-and-ssrs.md)   

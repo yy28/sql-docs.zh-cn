@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9c0534bf3a12aa81a9fc84d0e2c4f82a189748a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150753"
 ---
 # <a name="monitor-sql-server-components"></a>监视 SQL Server 组件
@@ -82,9 +82,10 @@ ms.locfileid: "63150753"
   
 -   分布式重播实用工具  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 活动监视器  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]活动监视器  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 图形显示计划  
+-   
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 图形显示计划  
   
 -   存储过程  
   
@@ -120,11 +121,13 @@ ms.locfileid: "63150753"
   
 3.  保存捕获的事件数据。  
   
-     保存捕获的事件数据使您可以在以后对其进行分析，甚至使用分布式重播实用工具或 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]重播该数据。 捕获的事件数据将保存到文件，该文件可以加载回最初创建它的工具中以进行分析。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 允许将事件数据保存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表。 保存捕获的事件数据对创建性能基线非常重要。 在比较最近捕获的事件数据来确定是否已获得最佳性能时，将保存并使用性能基线数据。 有关详细信息，请参阅 [SQL Server Profiler 模板和权限](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)。  
+     保存捕获的事件数据使您可以在以后对其进行分析，甚至使用分布式重播实用工具或 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]重播该数据。 捕获的事件数据将保存到文件，该文件可以加载回最初创建它的工具中以进行分析。 
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 允许将事件数据保存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表。 保存捕获的事件数据对创建性能基线非常重要。 在比较最近捕获的事件数据来确定是否已获得最佳性能时，将保存并使用性能基线数据。 有关详细信息，请参阅 [SQL Server Profiler 模板和权限](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)。  
   
 4.  创建包含为捕获事件所指定设置的跟踪模板。  
   
-     跟踪模板包括有关事件本身、事件数据和用于捕获数据的筛选器的规范。 这些模板可用于以后监视特定事件集，而无需重新定义事件、事件数据和筛选器。 例如，若要频繁监视死锁数以及那些死锁所涉及的用户，您可以创建一个模板来定义那些事件、事件数据和事件筛选器；保存此模板；并在下次监视死锁时重新应用此筛选器。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 使用跟踪模板。 有关详细信息，请参阅[设置跟踪定义默认值 (SQL Server Profiler)](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md) 和[创建跟踪模板 (SQL Server Profiler)](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)。  
+     跟踪模板包括有关事件本身、事件数据和用于捕获数据的筛选器的规范。 这些模板可用于以后监视特定事件集，而无需重新定义事件、事件数据和筛选器。 例如，若要频繁监视死锁数以及那些死锁所涉及的用户，您可以创建一个模板来定义那些事件、事件数据和事件筛选器；保存此模板；并在下次监视死锁时重新应用此筛选器。 
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 使用跟踪模板。 有关详细信息，请参阅[设置跟踪定义默认值 (SQL Server Profiler)](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md) 和[创建跟踪模板 (SQL Server Profiler)](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)。  
   
 5.  分析捕获的事件数据。  
   

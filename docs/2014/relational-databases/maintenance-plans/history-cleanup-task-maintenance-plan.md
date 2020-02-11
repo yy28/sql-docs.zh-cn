@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a2b398a9910926ca2ced339395feaf938c31d519
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67412708"
 ---
 # <a name="history-cleanup-task-maintenance-plan"></a>“清除历史记录”任务（维护计划）
@@ -28,7 +28,7 @@ ms.locfileid: "67412708"
  此语句使用 **sp_purge_jobhistory** 和 **sp_delete_backuphistory** 语句。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
- **连接**  
+ **Connection**  
  选择执行此任务时使用的服务器连接。  
   
  **新建**  
@@ -59,7 +59,7 @@ ms.locfileid: "67412708"
  **选择或输入服务器名称**  
  选择执行此任务时所要连接的服务器。  
   
- **刷新**  
+ **“刷新”**  
  刷新可用服务器的列表。  
   
  **输入登录服务器所需的信息**  
@@ -77,7 +77,7 @@ ms.locfileid: "67412708"
  **密码**  
  提供一个在进行身份验证时要使用的密码。 此选项不可用。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [sp_purge_jobhistory (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql)   
  [sp_delete_backuphistory (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql)  
   

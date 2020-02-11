@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c6ae92a6abd5c25b9ab1236a2b5b11429d210cba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63283913"
 ---
 # <a name="subscription-and-delivery-methods"></a>订阅和传递方法
@@ -38,7 +38,7 @@ ms.locfileid: "63283913"
 |<xref:ReportService2010.ReportingService2010.SetDataDrivenSubscriptionProperties%2A>|设置数据驱动订阅的属性的值。|  
 |<xref:ReportService2010.ReportingService2010.SetSubscriptionProperties%2A>|设置订阅的属性的值。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用 Web 服务和 .NET Framework 生成应用程序](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [报表服务器 Web 服务](../report-server-web-service.md)   
  [报表服务器 Web 服务方法](report-server-web-service-methods.md)   

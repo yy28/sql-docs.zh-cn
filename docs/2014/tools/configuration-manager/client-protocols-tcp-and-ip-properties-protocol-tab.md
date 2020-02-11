@@ -1,5 +1,5 @@
 ---
-title: 客户端协议-TCP 和 IP 属性 （协议选项卡） |Microsoft Docs
+title: 客户端协议-TCP 和 IP 属性（"协议" 选项卡） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: ec3c433c1ce16e35f064910083e7ab9959e4c3bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63253786"
 ---
 # <a name="client-protocols---tcp-and-ip-properties-protocol-tab"></a>客户端协议 - TCP 和 IP 属性（“协议”选项卡）
@@ -40,9 +40,9 @@ ms.locfileid: "63253786"
  **保持活动状态的间隔**  
  此参数（毫秒）确定重新传输 **KEEPALIVE** 直到接收到响应的间隔。 默认值为 1000 毫秒。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [选择网络协议](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
- [新建别名（“别名”选项卡）](../../../2014/tools/configuration-manager/new-alias-alias-tab.md)   
+ [新别名 &#40;别名选项卡&#41;](../../../2014/tools/configuration-manager/new-alias-alias-tab.md)   
  [<别名>属性（“别名”选项卡）](../../../2014/tools/configuration-manager/alias-properties-alias-tab.md)  
   
   

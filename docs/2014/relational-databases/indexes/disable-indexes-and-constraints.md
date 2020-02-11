@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 047fffdc729b276979720e9d245862a692a86be0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63162401"
 ---
 # <a name="disable-indexes-and-constraints"></a>禁用索引和约束
@@ -85,9 +85,9 @@ ms.locfileid: "63162401"
   
 -   创建一个新的聚集索引将启用以前禁用的非聚集索引。 有关详细信息，请参阅 [Enable Indexes and Constraints](enable-indexes-and-constraints.md)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  若要执行 ALTER INDEX，至少需要对表或视图具有 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -127,9 +127,9 @@ ms.locfileid: "63162401"
  显示创建索引的表或视图的名称。  
   
  **索引类型**  
- 显示索引的类型：**聚集**，**非聚集**，**空间**，或**XML**。  
+ 显示索引的类型：  “聚集”、  “非聚集”、  “空间”或  ”XML”。  
   
- **“状态”**  
+ **Status**  
  显示禁用操作的状态。 执行之后可能的值包括：  
   
 -   空白  
@@ -140,7 +140,7 @@ ms.locfileid: "63162401"
   
      禁用索引操作已启动，但尚未完成。  
   
--   **成功**  
+-   **Success**  
   
      禁用操作已成功完成。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "63162401"
   
      用户已停止禁用索引操作，该操作未成功完成。  
   
- **Message**  
+ **消息**  
  禁用操作期间提供错误消息文本。 执行过程中，错误显示为超链接。 超链接的文本描述错误的正文。 **“消息”** 列宽度一般不够，无法阅读完整的消息文本。 获取完整文本的方法有两种：  
   
 -   将鼠标指针移到消息单元上以显示包含错误文本的工具提示。  

@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 脚本项目在 SQL Server Management Studio |Microsoft Docs
+title: SQL Server Management Studio 中的 Analysis Services 脚本项目 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c0bcc06655333dfef073757218d9a740c1dfb0dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080359"
 ---
 # <a name="analysis-services-scripts-project-in-sql-server-management-studio"></a>SQL Server Management Studio 中的 Analysis Services 脚本项目
@@ -29,24 +29,26 @@ ms.locfileid: "66080359"
   
  您可以使用以下基本步骤在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中创建分析服务器脚本项目：  
   
-1.  在“文件”菜单上，指向 **“新建”**，然后单击 **“项目”**。  
+1.  在 “文件” 菜单上，指向 **“新建”** ，再单击 **“项目”** 。  
   
      选择 **“分析服务器脚本”** 项目模板，然后为新项目指定名称和位置。  
   
-2.  右键单击“连接”，在解决方案资源管理器中的分析服务器脚本项目的“连接”文件夹中新建一个连接。  
+2.  右键单击“连接”****，在解决方案资源管理器中的分析服务器脚本项目的“连接”文件夹中新建一个连接。  
   
      此文件夹包含指向 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例（分析服务器脚本项目所包含的脚本可以针对其执行）的连接字符串。 一个分析服务器脚本项目中可以有多个连接，您可以在执行时选择项目包含的脚本针对其运行的连接。  
   
-3.  右键单击“查询”可以在解决方案资源管理器的分析服务器脚本项目的“脚本”文件夹中创建多维表达式 (MDX)、数据挖掘扩展插件 (DMX) 和 XML for Analysis (XMLA) 脚本。 有关详细信息，请参阅 [Script Administrative Tasks in Analysis Services](../script-administrative-tasks-in-analysis-services.md)。  
+3.  右键单击“查询”**** 可以在解决方案资源管理器的分析服务器脚本项目的“脚本”文件夹中创建多维表达式 (MDX)、数据挖掘扩展插件 (DMX) 和 XML for Analysis (XMLA) 脚本。 有关详细信息，请参阅 [Script Administrative Tasks in Analysis Services](../script-administrative-tasks-in-analysis-services.md)。  
   
-4.  右键单击该项目，指向“添加”，然后选择“现有项”，将杂项文件（如包含项目注释的文本文件）添加到解决方案资源管理器的分析服务器脚本项目的“杂项”文件夹中。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]将忽略这些文件。  
+4.  右键单击该项目，指向“添加”，然后选择“现有项”，将杂项文件（如包含项目注释的文本文件）添加到解决方案资源管理器的分析服务器脚本项目的“杂项”文件夹中。************ 
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]将忽略这些文件。  
   
 ## <a name="file-types"></a>文件类型  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 解决方案可以包含多种文件类型，具体取决于解决方案中包括的项目以及解决方案的各个项目中包括的项。 有关 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中解决方案文件类型的详细信息，请参阅 [用于管理解决方案和项目的文件](../../ssms/solution/files-that-manage-solutions-and-projects.md)。 通常， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 解决方案中各项目的文件都存储在解决方案文件夹中，每个项目各有单独的文件夹。  
+ 
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 解决方案可以包含多种文件类型，具体取决于解决方案中包括的项目以及解决方案的各个项目中包括的项。 有关 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中解决方案文件类型的详细信息，请参阅 [用于管理解决方案和项目的文件](../../ssms/solution/files-that-manage-solutions-and-projects.md)。 通常， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 解决方案中各项目的文件都存储在解决方案文件夹中，每个项目各有单独的文件夹。  
   
  分析服务器脚本项目的项目文件夹可包含下表中列出的文件类型。  
   
-|文件类型|描述|  
+|文件类型|说明|  
 |---------------|-----------------|  
 |分析服务器脚本项目定义文件 (.ssmsasproj)|包含显示在解决方案资源管理器中的文件夹的元数据，以及指示哪些文件夹应显示项目中包含的文件的信息。<br /><br /> 项目定义文件还包含项目中包含的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接的元数据，以及将这些连接与项目中所包含的脚本文件相关联的元数据。|  
 |DMX 脚本文件 (.dmx)|包含一个包括在项目中的 DMX 脚本。|  
@@ -54,13 +56,13 @@ ms.locfileid: "66080359"
 |XMLA 脚本文件 (.xmla)|包含一个包括在项目中的 XMLA 脚本。|  
   
 ## <a name="analysis-services-templates"></a>Analysis Services 模板  
- 向分析服务器脚本项目添加新的 MDX、DMX 或 XMLA 脚本时，您可以选择使用模板资源管理器来查找 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 模板，这些模板是演示如何执行指定操作的预定义脚本或语句的集合。 模板资源管理器在 **“视图”** 菜单上提供，并且包括用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]和 [!INCLUDE[ssEW](../../includes/ssew-md.md)]的模板。 有关详细信息，请参阅 [Use Analysis Services Templates in SQL Server Management Studio](use-analysis-services-templates-in-sql-server-management-studio.md)。  
+ 向分析服务器脚本项目添加新的 MDX、DMX 或 XMLA 脚本时，您可以选择使用模板资源管理器来查找 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 模板，这些模板是演示如何执行指定操作的预定义脚本或语句的集合。 模板资源管理器在 "**视图**" 菜单上提供， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]并且[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]包括、 [!INCLUDE[ssEW](../../includes/ssew-md.md)]和模板。 有关详细信息，请参阅 [Use Analysis Services Templates in SQL Server Management Studio](use-analysis-services-templates-in-sql-server-management-studio.md)。  
   
-## <a name="see-also"></a>请参阅  
- [使用 SQL Server Data Tools 创建多维模型 (SSDT)](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [多维表达式 (MDX) 参考](/sql/mdx/multidimensional-expressions-mdx-reference)   
- [数据挖掘扩展插件 (DMX) 参考](/sql/dmx/data-mining-extensions-dmx-reference)   
- [Analysis Services 脚本语言&#40;ASSL&#41;引用](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
- [Analysis Services 脚本语言&#40;ASSL&#41;引用](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  
+## <a name="see-also"></a>另请参阅  
+ [使用 SQL Server Data Tools &#40;SSDT 创建多维模型&#41;](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
+ [MDX&#41; 引用 &#40;多维表达式](/sql/mdx/multidimensional-expressions-mdx-reference)   
+ [&#40;DMX&#41; 的数据挖掘扩展插件](/sql/dmx/data-mining-extensions-dmx-reference)   
+ [Analysis Services 脚本语言 &#40;ASSL&#41; 参考](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [Analysis Services 脚本语言 &#40;ASSL&#41; 参考](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  
   
   

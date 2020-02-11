@@ -1,5 +1,5 @@
 ---
-title: 数据导入 (Master Data Services) |Microsoft Docs
+title: 数据导入（Master Data Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7f5f5e7d6c4706dee09c90237c2363f6cbf46b02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478999"
 ---
 # <a name="data-import-master-data-services"></a>数据导入 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中为数据创建模型后，你可以开始添加数据并在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中对数据进行更改。   你使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 临时表、存储过程和主数据管理器。  
   
- 此外可以使用[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]，以将数据添加到 MDS 存储库 ([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]数据库)。 有关详细信息，请参阅[发布的数据&#40;MDS 外接程序 excel&#41;](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)。  
+ 你还[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]可以使用来向 MDS 存储库（[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]数据库）添加数据。 有关详细信息，请参阅[发布数据 &#40;MDS Add-in for Excel&#41;](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)。  
   
  在添加和更新数据时，你可以执行以下操作。  
   
@@ -43,10 +43,10 @@ ms.locfileid: "65478999"
      你使用临时存储过程或 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 来加载数据。  
   
 > [!NOTE]  
->  在 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]中，弃用对 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 临时过程的支持。  
+>  在 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]中，已停止提供对 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 临时过程的支持。  
   
 ## <a name="deactivating-and-deleting-members"></a>停用和删除成员  
- 停用意味着可以重新激活成员。 如果您重新激活某成员，可还原成员的属性以及成员在层次结构和集合中的成员身份。 以前的所有事务都将保持不变。 管理员可以在主数据管理器的“版本管理”  功能区域中查看停用事务。  
+ 停用意味着可以重新激活成员。 如果您重新激活某成员，可还原成员的属性以及成员在层次结构和集合中的成员身份。 以前的所有事务都将保持不变。 管理员可以在主数据管理器的“版本管理” **** 功能区域中查看停用事务。  
   
  删除意味着从系统中永久清除成员。 将永久删除该成员的所有事务、所有关系和所有属性。  
   
@@ -67,21 +67,23 @@ ms.locfileid: "65478999"
 -   作为叶成员或合并成员的同级的合并成员。  
   
 ## <a name="staging-tables-and-stored-procedures"></a>临时表和存储过程  
- [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库包含以下类型的临时表，你可以使用你的数据填充它们。  
+ 
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库包含以下类型的临时表，你可以使用你的数据填充它们。  
   
--   [叶成员临时表 (Master Data Services)](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)  
+-   [叶成员临时表 &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)  
   
--   [合并成员临时表 (Master Data Services)](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)  
+-   [合并成员临时表 &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)  
   
--   [关系临时表 (Master Data Services)](../../2014/master-data-services/relationship-staging-table-master-data-services.md)  
+-   [关系临时表 &#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)  
   
  模型中的每个实体都有一个临时表。 表名称指示相应的实体以及实体类型，如叶成员。 下图显示货币、客户和产品实体的临时表。  
   
- ![MDS 数据库中的临时表](../../2014/master-data-services/media/mds-stagingtables.png "Staging Tables in MDS database")  
+ ![MDS 数据库中的临时表](../../2014/master-data-services/media/mds-stagingtables.png "MDS 数据库中的临时表")  
   
  该表的名称在创建实体时指定，且不可更改。 如果临时表的名称包含 _1 或其他数字，则在创建实体时已存在带此名称的其他表。  
   
- [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 包括以下类型的临时存储过程。  
+ 
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 包括以下类型的临时存储过程。  
   
 -   stg.udp_\<name>_Leaf  
   
@@ -102,8 +104,8 @@ ms.locfileid: "65478999"
   
 ## <a name="related-content"></a>相关内容  
   
--   [验证 (Master Data Services)](../../2014/master-data-services/validation-master-data-services.md)  
+-   [验证 &#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)  
   
--   [业务规则 (Master Data Services)](../../2014/master-data-services/business-rules-master-data-services.md)  
+-   [业务规则 &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
   

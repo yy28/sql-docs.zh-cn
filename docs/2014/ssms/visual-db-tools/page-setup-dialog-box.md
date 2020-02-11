@@ -13,23 +13,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cf05de13f0aada12da055f2e9c1e5a3a0db1d1df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63195016"
 ---
 # <a name="page-setup-dialog-box"></a>“页面设置”对话框
   可通过选择“页面设置”  对话框中的选项来自定义页面设计。 某些选项的可用性取决于安装的语言和为进行编辑所启用的语言。  
   
-## <a name="paper"></a>纸张  
+## <a name="paper"></a>论文  
  **大小**  
  从列表中选择大小。  
   
  **数据源**  
  指定要使用的纸张。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 列出了可用于所选打印机的纸张来源。  
   
-## <a name="orientation"></a>Orientation  
+## <a name="orientation"></a>方向  
  **纵向**  
  以纸张的短边缘作为页面顶部打印文档。  
   

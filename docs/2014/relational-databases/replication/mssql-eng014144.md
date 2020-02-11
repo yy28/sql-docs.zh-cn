@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f85903658025f3ea1e5df805bb0593da9d840f25
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192438"
 ---
-# <a name="mssqleng014144"></a>MSSQL_ENG014144
+# <a name="mssql_eng014144"></a>MSSQL_ENG014144
     
 ## <a name="message-details"></a>消息详细信息  
   
@@ -32,7 +32,7 @@ ms.locfileid: "63192438"
 |符号名称||  
 |消息正文|无法删除订阅服务器 '%s'。 在发布数据库 '%s' 中已有此服务器的订阅。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  配置为订阅服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例在存在有为其配置的活动订阅时无法从订阅服务器的角色中删除。  
   
 ## <a name="user-action"></a>用户操作  
@@ -42,7 +42,7 @@ ms.locfileid: "63192438"
   
 2.  在发布数据库中执行 [sp_dropsubscription (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql)，以删除订阅。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [错误和事件参考（复制）](errors-and-events-reference-replication.md)   
  [订阅发布](subscribe-to-publications.md)  
   

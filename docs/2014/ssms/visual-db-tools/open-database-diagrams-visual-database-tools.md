@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: da26fc9274e68cd5233766af7e7c15550412db38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63254467"
 ---
 # <a name="open-database-diagrams-visual-database-tools"></a>打开数据库关系图 (Visual Database Tools)
@@ -26,21 +26,21 @@ ms.locfileid: "63254467"
   
 ### <a name="to-open-a-database-diagram"></a>打开数据库关系图  
   
-1.  在对象资源管理器中，展开“数据库关系图”文件夹。  
+1.  在对象资源管理器中，展开“数据库关系图”  文件夹。  
   
 2.  双击要打开的数据库关系图的名称。  
   
      -或-  
   
-     右键单击要打开的数据库关系图的名称，然后选择“设计数据库关系图”。  
+     右键单击要打开的数据库关系图的名称，然后选择“设计数据库关系图”  。  
   
  此时，将在数据库关系图设计器中打开该数据库关系图，您可以在其中编辑关系图。  
   
 > [!NOTE]  
 >  只有数据库关系图的所有者或数据库的 db_owner 角色成员才能打开关系图。  
   
-## <a name="see-also"></a>请参阅  
- [使用数据库关系图&#40;可视化数据库工具&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>另请参阅  
+ [使用数据库关系图 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [了解数据库关系图所有权 (Visual Database Tools)](understand-database-diagram-ownership-visual-database-tools.md)  
   
   

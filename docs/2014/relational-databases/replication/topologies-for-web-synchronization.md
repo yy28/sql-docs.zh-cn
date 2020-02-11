@@ -14,16 +14,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 62fd4cd78beaeff479fc7cc9ec3abbd79e227e04
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63273567"
 ---
 # <a name="topologies-for-web-synchronization"></a>Topologies for Web Synchronization
-  可以从多种 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web 同步复制拓扑中进行选择。 配置 Web 同步的常用方法包括：  
+  可以从多种[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web 同步复制拓扑中进行选择。 配置 Web 同步的常用方法包括：  
   
--   单台服务器  
+-   单个服务器  
   
 -   两台服务器  
   
@@ -56,7 +56,7 @@ ms.locfileid: "63273567"
   
  ![使用重新发布的 Web 同步](media/web-sync05.gif "使用重新发布的 Web 同步")  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置 Web 同步](configure-web-synchronization.md)   
  [合并复制的 Web 同步](web-synchronization-for-merge-replication.md)  
   

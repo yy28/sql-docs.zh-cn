@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 920cc72a9d99da61575249559661c01826b0e89b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088961"
 ---
 # <a name="ring-buffer-target"></a>环形缓冲区目标
@@ -25,15 +25,15 @@ ms.locfileid: "66088961"
   
 -   第一种模式是严格的先进先出模式 (FIFO)，在这种模式下，当分配给目标的所有内存都用尽时，将放弃最旧的事件。 在这种模式下（默认模式），occurrence_number 选项设为 0。  
   
--   第二种模式是按事件 FIFO，在这种模式下，每种类型将保留指定数量的事件。 在此模式下，每种类型的最早的事件时，放弃使用分配给目标的所有内存。 您可以配置 occurrence_number 选项来指定要保留的每种类型的事件数。  
+-   第二种模式是按事件 FIFO，在这种模式下，每种类型将保留指定数量的事件。 在此模式下，当使用分配给目标的所有内存时，将放弃每种类型的最旧事件。 您可以配置 occurrence_number 选项来指定要保留的每种类型的事件数。  
   
  下表描述了配置环形缓冲区目标时可用的选项。  
   
-|Option|允许的值|描述|  
+|选项|允许的值|说明|  
 |------------|--------------------|-----------------|  
-|max_memory|任何 32 位的整数。 该值是可选的。|要使用的最大内存量 (KB)。 将基于首先到达的限制删除现有事件：max_event_limit 或 max_memory。 最大值为 4194303 KB。 环形缓冲区大小设置为 GB 范围中的限制，因为它可能会影响其他 SQL Server 中的内存使用者前应仔细考虑|  
-|max_event_limit|任何 32 位的整数。 该值是可选的。|保留在 ring_buffer 中的事件的最大数量。 将基于首先到达的限制删除现有事件：max_event_limit 或 max_memory。 默认值 = 1000。|  
-|occurrence_number|可以是以下值之一：<br /><br /> 0（默认值）= 当分配给目标的所有内存都用尽时，将放弃最旧的事件。<br /><br /> 任何 32 位整数 = 按事件 FIFO 的基础，在放弃之前保留每种类型的事件数。<br /><br /> <br /><br /> 该值是可选的。|FIFO 模式使用，如果设为大于 0 的值，则为要保留在缓冲区中的每种类型的首选事件数。|
+|max_memory|任何32位整数。 此值是可选的。|要使用的最大内存量 (KB)。 将基于首先到达的限制删除现有事件：max_event_limit 或 max_memory。 最大值为 4194303 KB。 在将环形缓冲区大小设置为 GB 范围限制之前应仔细考虑，因为它可能会影响 SQL Server 中的其他内存使用者|  
+|max_event_limit|任何32位整数。 此值是可选的。|保留在 ring_buffer 中的事件的最大数量。 将基于首先到达的限制删除现有事件：max_event_limit 或 max_memory。 默认值 = 1000。|  
+|occurrence_number|以下值之一：<br /><br /> 0（默认值）= 当分配给目标的所有内存都用尽时，将放弃最旧的事件。<br /><br /> 任何32位整数 = 在每次事件 FIFO 上丢弃之前，要保留的每种类型的事件数。<br /><br /> <br /><br /> 此值是可选的。|FIFO 模式使用，如果设为大于 0 的值，则为要保留在缓冲区中的每种类型的首选事件数。|
 | &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="adding-the-target-to-a-session"></a>将目标添加到会话  
@@ -74,7 +74,7 @@ WHERE xe.name = 'session_name'
 ```
 
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [SQL Server 扩展事件目标](../../2014/database-engine/sql-server-extended-events-targets.md)
 - [sys.dm_xe_session_targets (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql?view=sql-server-2016)

@@ -23,36 +23,36 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 752467d058a6618ccfa44d7e2f75ac33b632878e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204646"
 ---
 # <a name="supported-query-types-visual-database-tools"></a>支持的查询类型 (Visual Database Tools)
-  可以在 [查询和视图设计器](visual-database-tools.md)的“关系图”窗格和“条件”窗格（图形化窗格）中创建以下类型的查询：  
+  您可以在 "关系图" 窗格和 "[视图设计器](visual-database-tools.md)" 的 "关系图" 窗格中创建以下类型的查询：  
   
--   **“选择”查询** 从一个或多个表或视图中检索数据。 此类型的查询将创建一个 SQL SELECT 语句。  
+-   **选择查询**检索一个或多个表或视图中的数据。 此类型的查询将创建一个 SQL SELECT 语句。  
   
--   **插入结果** 通过将现有行作为新行从一个表复制到另一个表或同一个表中，从而创建新行。 此类型的查询将创建一个 SQL INSERT INTO...SELECT 语句。  
+-   **插入结果**通过将现有行从一个表复制到另一个表，或复制到与新行相同的表来创建新行。 此类型的查询将创建一个 SQL INSERT INTO...SELECT 语句。  
   
--   **插入值** 创建新行并将值插入指定列。 此类型的查询将创建一个 SQL INSERT INTO...VALUES 语句。  
+-   **插入值**创建新行并将值插入指定列中。 此类型的查询将创建一个 SQL INSERT INTO...VALUES 语句。  
   
--   **“更新”查询** 更改表中一个或多个现有行中单个列的值。 此类型的查询将创建一个 SQL UPDATE...SET 语句。  
+-   **更新查询**更改表中一个或多个现有行中单个列的值。 此类型的查询将创建一个 SQL UPDATE...SET 语句。  
   
--   **“删除”查询** 从表中移除一行或多行。 此类型的查询将创建一个 SQL DELETE 语句。  
+-   **删除查询**从表中删除一行或多行。 此类型的查询将创建一个 SQL DELETE 语句。  
   
     > [!NOTE]  
     >  “删除”查询会从表中移除整行。 如果想删除单个数据列中的值，请使用“更新”查询。  
   
--   **“生成表”查询** 创建新表，并通过将查询结果复制到该表在表中创建行。 此类型的查询将创建一个 SQL SELECT...INTO 语句。  
+-   **生成表查询**创建新表，并通过将查询结果复制到该表中来创建行。 此类型的查询将创建一个 SQL SELECT...INTO 语句。  
   
  除了可以使用图形化窗格创建的查询之外，还可以向 SQL 窗格中输入任何 SQL 语句，例如“联合”查询。  
   
  在使用 SQL 语句创建无法在图形化窗格中显示的查询时，查询和视图设计器会将这些图形化窗格显示为灰色，以表示它们不再反映正在创建的查询。 不过，变成灰色的窗格仍然是活动的，而且在许多情况下，仍可以在这些窗格中对查询进行修改。 如果所做的更改产生的查询可以在图形化窗格中显示，则这些窗格将不再显示为灰色。  
   
-## <a name="see-also"></a>请参阅  
- [设计查询和视图操作指南主题&#40;可视化数据库工具&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+## <a name="see-also"></a>另请参阅  
+ [&#40;Visual Database Tools 的设计查询和视图操作指南主题&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [查询类型 (Visual Database Tools)](types-of-queries-visual-database-tools.md)  
   
   

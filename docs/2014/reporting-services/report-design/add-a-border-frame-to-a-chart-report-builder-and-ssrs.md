@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b6b354cbb09a61e5fdd2444afaff0e6c8e0bb5b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106913"
 ---
 # <a name="add-a-border-frame-to-a-chart-report-builder-and-ssrs"></a>向图表添加边框（报表生成器和 SSRS）
@@ -25,19 +25,19 @@ ms.locfileid: "66106913"
   
 ### <a name="to-apply-a-border-to-a-chart"></a>向图表应用边框  
   
-1.  右键单击图表上的任意位置并选择“图表属性”。  
+1.  右键单击图表上的任意位置并选择“图表属性”  。  
   
     > [!NOTE]  
-    >  如果看不到“图表属性”，请在快捷菜单中指向“图表”，然后选择“图表属性”。  
+    >  如果看不到“图表属性”，请在快捷菜单中指向“图表”，然后选择“图表属性”    。  
   
-2.  选择 **“边框”**，然后单击要应用于图表的边框类型。  
+2.  选择 **“边框”** ，然后单击要应用于图表的边框类型。  
   
 3.  （可选）选择一个值或键入一个表示边框样式的表达式。  
   
 4.  （可选）指定将绘制在图表周围作为边框的线条的颜色。  
   
     > [!NOTE]  
-    >  **“线条颜色”** 列表中包括常用颜色。 若要在更多颜色列表中进行选择，请在列表中单击“更多颜色”，或单击列表旁的表达式 (fx) 按钮以打开“表达式”编辑器。  
+    >  **“线条颜色”** 列表中包括常用颜色。 若要在更多颜色列表中进行选择，请在列表中单击“更多颜色”，或单击列表旁的表达式 (fx) 按钮以打开“表达式”编辑器    。  
   
 5.  （可选）指定边框的宽度。 有效值介于 0.25pt 到 20pt 之间。 可以考虑将边框的大小保持在 1pt 到 3pt 之间，以获得最佳视觉效果。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66106913"
   
 7.  （可选）如果选择“框架”类型，则可为该框架指定样式和颜色。 **“框架填充颜色”** 列表中包括常用颜色。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   
  [设置图表格式（报表生成器和 SSRS）](formatting-a-chart-report-builder-and-ssrs.md)   
  [向图表添加凹凸效果、阳文和纹理样式（报表生成器和 SSRS）](chart-effects-add-bevel-emboss-or-texture-report-builder.md)  

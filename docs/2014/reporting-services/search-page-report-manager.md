@@ -1,5 +1,5 @@
 ---
-title: 搜索页 （报表管理器） |Microsoft Docs
+title: 搜索页（报表管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 12413c103230d8c085a9701e3fb83db15135895a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102261"
 ---
 # <a name="search-page-report-manager"></a>“搜索”页（报表管理器）
@@ -40,20 +40,20 @@ ms.locfileid: "66102261"
 > [!NOTE]  
 >  此按钮仅在 **“详细信息视图”** 中可用。 然而，您可以将鼠标悬停在某个项之上，然后使用菜单来访问 **“详细信息视图”** 或 **“列表视图”** 中的删除功能。  
   
- **“移动”**  
+ **移动**  
  单击此选项可重定位项。 这将打开“移动项”页，在此页上可选择其他文件夹位置。  
   
 > [!NOTE]  
 >  此按钮仅在 **“详细信息视图”** 中可用。 然而，您可以将鼠标悬停在某个项之上，然后使用菜单来访问 **“详细信息视图”** 或 **“列表视图”** 中的移动功能。  
   
- “搜索”框  
+ 搜索框  
  键入希望查找的项的全名或部分名称，再单击 **“转到”** 以启动搜索。 可以搜索的字符串最长为 128 个字符。  
   
  搜索结果将列出在文本值中任意位置包含整个搜索字符串的项名称或说明。  
   
  不支持布尔运算符，例如加号字符 (+)。  
   
- **详细信息视图**  
+ **“详细信息视图”**  
  单击以在一个列表中显示“搜索结果”页，其中包含有关各项的附加信息，如项类型、名称、说明、项所在的文件夹以及上次运行该项的时间。 在 **“详细信息视图”** 中，可以使用 **“删除”** 和 **“移动”** 按钮删除和重新定位文件夹中的项。  
   
  悬停在某个项之上，单击下拉箭头以打开下拉菜单，从中可以访问和配置所选项的属性。  
@@ -63,7 +63,7 @@ ms.locfileid: "66102261"
   
  悬停在某个项之上，单击下拉箭头以打开下拉菜单，从中可以访问和配置所选项的属性。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [报表管理器（SSRS 本机模式）](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)  
   

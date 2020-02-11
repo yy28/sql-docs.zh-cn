@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f3414498d0ce399607ab0faa1a438dad88efc35c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105281"
 ---
 # <a name="countrows-function-report-builder-and-ssrs"></a>CountRows 函数（报表生成器和 SSRS）
@@ -30,18 +30,20 @@ ms.locfileid: "66105281"
 CountRows(scope, recursive)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *作用域*  
  (`String`) 包含要计数报表项的数据集、数据区域或组的名称。  
   
  *递归*  
- (**Enumerated Type**) 可选。 `Simple`（默认值）或 `RdlRecursive`。 指定是否以递归方式执行聚合。  
+ (**Enumerated Type**) 可选。 
+  `Simple`（默认值）或 `RdlRecursive`。 指定是否以递归方式执行聚合。  
   
 ## <a name="return-type"></a>返回类型  
- 返回`Integer`。  
+ 返回 `Integer`。  
   
 ## <a name="remarks"></a>备注  
- `CountRows` 计数指定作用域内的所有行，其中包括具有 Null 值的行。  
+ 
+  `CountRows` 计数指定作用域内的所有行，其中包括具有 Null 值的行。  
   
  *scope* 的值不能是表达式，并且必须引用当前作用域或包含作用域。  
   
@@ -56,7 +58,7 @@ CountRows(scope, recursive)
 ="Number of rows: " & CountRows("GroupbyCategory")  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在报表中使用表达式（报表生成器和 SSRS）](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)   
  [表达式中的数据类型（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)   

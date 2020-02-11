@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 20ea97f50592c6d8abc51e64acb4a164ad0b95b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192980"
 ---
 # <a name="xml-system-stored-procedures"></a>XML 系统存储过程
@@ -37,7 +37,7 @@ ms.locfileid: "63192980"
   
  通过调用 **sp_xml_removedocument** 系统存储过程可以从内存中删除 XML 文档的内部表示形式。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [OPENXML (Transact-SQL)](/sql/t-sql/functions/openxml-transact-sql)   
  [OPENXML (SQL Server)](../xml/openxml-sql-server.md)  
   

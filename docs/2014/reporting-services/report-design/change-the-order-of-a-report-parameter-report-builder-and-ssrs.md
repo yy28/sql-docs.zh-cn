@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7a1d9413332ed19bd4db94fc60beecff85f02ac7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106333"
 ---
 # <a name="change-the-order-of-a-report-parameter-report-builder-and-ssrs"></a>更改报表参数的顺序（报表生成器和 SSRS）
@@ -31,11 +31,11 @@ ms.locfileid: "66106333"
   
 2.  单击参数，然后使用“报表数据”窗格工具栏上的向上和向下箭头按钮在列表中上下移动该参数。 下图显示报表生成器中的“报表数据”窗格。  
   
-     ![报表数据窗格](../media/reportdatapane.png "报表数据窗格")  
+     ![“报表数据”窗格](../media/reportdatapane.png "“报表数据”窗格")  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [报表参数（报表生成器和报表设计器）](report-parameters-report-builder-and-report-designer.md)   
- [用于对话框、窗格和向导的报表生成器帮助](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+ [报表生成器对话框、窗格和向导的帮助](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [向报表添加级联参数（报表生成器和 SSRS）](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
  [教程：向报表添加参数（报表生成器）](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [添加数据集筛选器、数据区域筛选器和组筛选器（报表生成器和 SSRS）](add-dataset-filters-data-region-filters-and-group-filters.md)   

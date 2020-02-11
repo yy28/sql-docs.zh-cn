@@ -13,26 +13,28 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 66a7b7cd9328f70e5b5ca374a04ad5e9dd6e079a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245783"
 ---
 # <a name="sql-server-agent-properties-general-page"></a>SQL Server 代理属性（“常规”页）
-  使用此页可以查看和修改 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务的常规属性。  
+  使用此页可以查看和修改[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理服务的常规属性。  
   
 ## <a name="options"></a>选项  
  **服务状态**  
  显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务的当前状态。  
   
- **SQL Server 意外停止时自动重新启动**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 意外停止，代理将重启 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+ **如果意外停止，自动重新启动 SQL Server**  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 意外停止，代理将重启 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
- **SQL Server 代理意外停止时自动重新启动**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理意外停止，将重启 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理。  
+ **如果意外停止，自动重新启动 SQL Server 代理**  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理意外停止，将重启 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理。  
   
- **Filename**  
+ **名字**  
  指定错误日志的文件名。  
   
  **...**  
@@ -47,7 +49,7 @@ ms.locfileid: "63245783"
  **Net send 收件人**  
  键入操作员的名称，该操作员负责接收针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理写入日志文件的消息的 net send 通知。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [运算符](operators.md)   
  [SQL Server 代理错误日志](sql-server-agent-error-log.md)  
   

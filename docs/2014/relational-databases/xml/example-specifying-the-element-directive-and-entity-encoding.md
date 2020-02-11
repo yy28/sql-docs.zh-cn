@@ -1,5 +1,5 @@
 ---
-title: 例如：指定 ELEMENT 指令和实体编码 | Microsoft Docs
+title: 示例：指定 ELEMENT 指令和实体编码 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 28e0e9f808820acc1959ccc11266174e5610600c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287242"
 ---
-# <a name="example-specifying-the-element-directive-and-entity-encoding"></a>例如：指定 ELEMENT 指令和实体编码
+# <a name="example-specifying-the-element-directive-and-entity-encoding"></a>示例：指定 ELEMENT 指令和实体编码
   下面的这个示例说明了 **ELEMENT** 和 **XML** 指令之间的差异。 **ELEMENT** 指令会实体化数据，但 **XML** 指令则不会。 在查询中向 \<Summary> 元素分配了 XML `<Summary>This is summary description</Summary>`。  
   
  请看下面的查询：  
@@ -92,7 +92,7 @@ ORDER BY [ProductModel!1!ProdModelID],Tag
 FOR XML EXPLICIT  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [将 EXPLICIT 模式与 FOR XML 一起使用](use-explicit-mode-with-for-xml.md)  
   
   

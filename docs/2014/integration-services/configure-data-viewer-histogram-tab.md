@@ -1,5 +1,5 @@
 ---
-title: 配置数据查看器 （直方图选项卡） |Microsoft Docs
+title: 配置数据查看器（"直方图" 选项卡） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3df1a27d94c3da63e1760e890654dba4045b2f94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060711"
 ---
 # <a name="configure-data-viewer-histogram-tab"></a>配置数据查看器（“直方图”选项卡）
@@ -28,11 +28,11 @@ ms.locfileid: "66060711"
  **可视化的列**  
  选择要以直方图形式显示的列。  
   
-## <a name="see-also"></a>请参阅  
- [配置数据查看器&#40;常规选项卡&#41;](../../2014/integration-services/configure-data-viewer-general-tab.md)   
- [配置数据查看器&#40;列图表选项卡&#41;](../../2014/integration-services/configure-data-viewer-column-chart-tab.md)   
- [配置数据查看器&#40;网格选项卡&#41;](../../2014/integration-services/configure-data-viewer-grid-tab.md)   
- [配置数据查看器&#40;绘图选项卡上的散点图&#41;](../../2014/integration-services/configure-data-viewer-scatter-plot-tab.md)   
+## <a name="see-also"></a>另请参阅  
+ [配置数据查看器 &#40;常规 "选项卡&#41;](../../2014/integration-services/configure-data-viewer-general-tab.md)   
+ [配置数据查看器 &#40;柱形图 "选项卡&#41;](../../2014/integration-services/configure-data-viewer-column-chart-tab.md)   
+ [配置数据查看器 &#40;网格选项卡&#41;](../../2014/integration-services/configure-data-viewer-grid-tab.md)   
+ [配置数据查看器 &#40;散点图选项卡&#41;](../../2014/integration-services/configure-data-viewer-scatter-plot-tab.md)   
  [数据流](data-flow/data-flow.md)   
  [调试数据流](troubleshooting/debugging-data-flow.md)  
   

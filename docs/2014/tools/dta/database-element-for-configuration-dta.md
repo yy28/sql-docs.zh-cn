@@ -1,5 +1,5 @@
 ---
-title: 配置 (DTA) 数据库元素 |Microsoft Docs
+title: 用于配置的数据库元素（DTA） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fbca62a5d32ed6b7ec30eb5d6dba6a82a2b80c64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63298344"
 ---
 # <a name="database-element-for-configuration-dta"></a>用于配置的数据库元素 (DTA)
@@ -35,7 +35,7 @@ ms.locfileid: "63298344"
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|Description|  
+|特征|说明|  
 |--------------------|-----------------|  
 |**数据类型和长度**|无。|  
 |**默认值**|无。|  
@@ -52,9 +52,9 @@ ms.locfileid: "63298344"
  在数据库引擎优化顾问 XML 架构中，此元素的名称为 **DatabaseTypecomplexType** 。 不要将此 `Database` 元素与其根父为 `Server` 元素的元素（出现在 XML 输入文件的顶部）混淆。 有关详细信息，请参阅[服务器的数据库元素 (DTA)](database-element-for-server-dta.md)。  
   
 ## <a name="example"></a>示例  
- 有关用法示例的这`Database`元素，请参阅[XML 输入文件示例使用用户指定配置&#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md)。  
+ 有关此`Database`元素的用法示例，请参阅[使用用户指定的配置 &#40;DTA&#41;的 XML 输入文件示例](xml-input-file-sample-with-user-specified-configuration-dta.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [XML 输入文件引用（数据库引擎优化顾问）](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

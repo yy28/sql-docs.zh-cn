@@ -23,43 +23,43 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5182ab1a72caac4181e50df2199f3e0457d3aaac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200220"
 ---
 # <a name="autotranslation-of-character-data"></a>字符数据的自动转换
-  字符数据，例如 ANSI 字符 SQL_C_CHAR 用声明的变量或数据存储在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用**char**， **varchar**，或**文本**数据类型，可以表示只有有限的数量的字符。 对于每个字符使用一个字节进行存储的字符数据，它只能表示 256 个字符。 使用客户端计算机的 ANSI 代码页 (ACP) 解释存储在 SQL_C_CHAR 变量中的值。 使用存储的值**char**， **varchar**，或**文本**服务器上的数据类型使用服务器的 ACP 进行评估。  
+  字符数据（如使用 SQL_C_CHAR 或使用**CHAR**、 **varchar**或**text**数据类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]存储在中的数据）声明的字符数据只能表示有限数量的字符。 对于每个字符使用一个字节进行存储的字符数据，它只能表示 256 个字符。 使用客户端计算机的 ANSI 代码页 (ACP) 解释存储在 SQL_C_CHAR 变量中的值。 使用服务器上的**char**、 **varchar**或**text**数据类型存储的值将使用服务器的 ACP 进行计算。  
   
- 如果在服务器和客户端使用相同的 ACP，则它们不会出现问题在解释存储在 SQL_C_CHAR、 的值**char**， **varchar**，或**文本**对象。 如果服务器和客户端具有不同的 Acp，则可能会从客户端 SQL_C_CHAR 数据解释为在服务器上不同的字符，如果在使用**char**， **varchar**，或**文本**列、 变量或参数。 例如，包含值 0xA5 字符字节被解释为字符?? 在计算机使用代码页 437 上并被解释为日元运行代码页 1252年的计算机上注册 （？）。  
+ 如果服务器和客户端具有相同的 ACP，则在解释 SQL_C_CHAR、 **CHAR**、 **varchar**或**text**对象中存储的值时，它们没有任何问题。 如果服务器和客户端具有不同的 Acp，则从客户端 SQL_C_CHAR 的数据可能会在服务器上解释为不同的字符（如果在**CHAR**、 **varchar**或**text**列、变量或参数中使用）。 例如，包含值0xA5 的字符字节被解释为字符？？。 在使用代码页437的计算机上，并在运行代码页1252的计算机上解释为日元符号（？？）。  
   
  Unicode 数据在存储时每个字符使用两个字节。 Unicode 规范涵盖所有扩展字符，因此每一 Unicode 字符都会在所有计算机上解释为相同的字符。  
   
- AutoTranslate 功能[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序将尝试最大程度减少具有不同的代码页中客户端和服务器之间移动字符数据的问题。 可以在的连接字符串中设置 AutoTranslate [SQLDriverConnect](../native-client-odbc-api/sqldriverconnect.md)中的配置字符串[SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)，或配置适用于数据源时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC使用 ODBC 管理器的驱动程序。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE client ODBC 驱动程序的 AutoTranslate 功能尝试最大程度地减少在客户端和具有不同代码页的服务器之间移动字符数据的问题。 可以在[SQLDriverConnect](../native-client-odbc-api/sqldriverconnect.md)的连接字符串中设置 AutoTranslate，也可以在[SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)的配置字符串中设置，也可以在使用 ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理器为 Native Client ODBC 驱动程序配置数据源时设置。  
   
- 如果 AutoTranslate 设置为"no"，客户端上的 SQL_C_CHAR 变量之间移动数据会进行任何转换并**char**， **varchar**，或**文本**列、 变量，中的参数或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。 如果数据包含扩展字符并且客户端和服务器计算机使用不同的代码页，则位模式在这两台计算机上会得到不同的解释。 如果这两台计算机使用相同的代码页，则数据将得到相同的解释。  
+ 如果将 AutoTranslate 设置为 "no"，则不会对客户端上的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL_C_CHAR 变量和数据库中的**CHAR**、 **varchar**或**text**列、变量或参数之间移动的数据进行转换。 如果数据包含扩展字符并且客户端和服务器计算机使用不同的代码页，则位模式在这两台计算机上会得到不同的解释。 如果这两台计算机使用相同的代码页，则数据将得到相同的解释。  
   
- 如果 AutoTranslate 设置为"yes"， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序使用 Unicode 转换在客户端上的 SQL_C_CHAR 变量之间移动数据和**char**， **varchar**，或**文本**列、 变量或参数中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库：  
+ 当 AutoTranslate 设置为 "yes" 时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序使用 Unicode 来转换客户端上 SQL_C_CHAR 变量和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库中的**CHAR**、 **varchar**或**text**列、变量或参数之间移动的数据：  
   
--   当数据发送到客户端上的 SQL_C_CHAR 变量从**char**， **varchar**，或**文本**列、 变量或参数中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库，ODBC驱动程序首先转换为从 sql_c_char 转换使用的客户端，然后从 Unicode 字符使用服务器的 ACP 回 ACP Unicode。  
+-   将数据从客户端上的 SQL_C_CHAR [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]变量发送到数据库中的**CHAR**、 **varchar**或**text**列、变量或参数时，ODBC 驱动程序将首先使用客户端的 ACP 从 SQL_C_CHAR 转换为 Unicode，然后使用服务器的 ACP 将 unicode 转换回字符。  
   
--   从发送数据**char**， **varchar**，或**文本**列、 变量或参数中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库添加到客户端上的SQL_C_CHAR变量[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序首先转换为从字符 Unicode 使用的服务器，然后从 Unicode 回 SQL_C_CHAR 使用客户端的 ACP ACP。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将数据从数据库中的**char**、 **varchar**或**text**列、变量或参数发送到客户端上的 SQL_C_CHAR 变量时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client ODBC 驱动程序首先使用服务器的 ACP 将字符转换为 Unicode，然后使用客户端的 ACP 将 Unicode 转换回 SQL_C_CHAR。  
   
- 因为所有这些转换由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序执行客户端，服务器 ACP 必须是一个客户端计算机上安装的代码页。  
+ 由于所有这些转换都是通过在客户[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]端上执行的 NATIVE Client ODBC 驱动程序来完成的，因此服务器 ACP 必须是客户端计算机上安装的代码页之一。  
   
- 通过 Unicode 对字符进行转换可确保存在于两个代码页中的所有字符都能得到正确的转换。 但是，如果存在于其中一个代码页的某个字符在另一个代码页中不存在，则该字符在目标代码页中将无法表示。 例如，代码页 1252年具有的注册的商标符号 （？），而代码页 437 则不。  
+ 通过 Unicode 对字符进行转换可确保存在于两个代码页中的所有字符都能得到正确的转换。 但是，如果存在于其中一个代码页的某个字符在另一个代码页中不存在，则该字符在目标代码页中将无法表示。 例如，代码页1252具有注册商标符号（？？），而代码页437则没有。  
   
  AutoTranslate 设置对以下转换没有任何影响：  
   
--   字符 SQL_C_CHAR 客户端变量和 Unicode 之间移动数据**nchar**， **nvarchar**，或**ntext**列、 变量或参数中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。  
+-   在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]字符 SQL_C_CHAR 客户端变量和 Unicode **nchar**、 **nvarchar**或**ntext**列、变量或参数之间移动数据。  
   
--   Unicode SQL_C_WCHAR 客户端变量和字符之间移动数据**char**， **varchar**，或**文本**列、 变量或参数中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。  
+-   SQL_C_WCHAR 客户端变量和数据库中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的字符**char**、 **varchar**或**text**列、变量或参数之间移动数据。  
   
  在数据从字符移动到 Unicode 时，始终必须对其进行转换。  
   
-## <a name="see-also"></a>请参阅  
- [处理结果&#40;ODBC&#41;](processing-results-odbc.md)   
+## <a name="see-also"></a>另请参阅  
+ [&#40;ODBC&#41;处理结果](processing-results-odbc.md)   
  [排序规则和 Unicode 支持](../collations/collation-and-unicode-support.md)  
   
   

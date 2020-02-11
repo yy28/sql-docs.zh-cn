@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7e7172a7b9b17dfa4553d3179d8cc1a880040f13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63306528"
 ---
 # <a name="create-table-aliases-visual-database-tools"></a>创建表别名 (Visual Database Tools)
@@ -39,10 +39,10 @@ ms.locfileid: "63306528"
   
 3.  在“属性”  窗口的“别名”  字段中输入别名。  
   
-## <a name="see-also"></a>请参阅  
- [向查询添加表&#40;可视化数据库工具&#41;](add-tables-to-queries-visual-database-tools.md)   
- [排序和分组查询结果&#40;可视化数据库工具&#41;](sort-and-group-query-results-visual-database-tools.md)   
- [汇总查询结果&#40;可视化数据库工具&#41;](summarize-query-results-visual-database-tools.md)   
+## <a name="see-also"></a>另请参阅  
+ [在 Visual Database Tools &#40;向查询中添加表&#41;](add-tables-to-queries-visual-database-tools.md)   
+ [对查询结果进行排序和分组 &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
+ [&#40;Visual Database Tools&#41;汇总查询结果](summarize-query-results-visual-database-tools.md)   
  [执行基本的查询操作 (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

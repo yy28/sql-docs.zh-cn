@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 591d86011ee769d054c069db98a40e2765b1ec27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63157816"
 ---
 # <a name="implementing-identity-in-a-memory-optimized-table"></a>在内存优化的表中实现 IDENTITY
-  内存优化表支持 IDENTITY(1, 1)。 但是，内存优化表不支持使用 IDENTITY(x, y)（其中 x != 1 或 y != 1 ）定义的标识列。 标识值的解决方法使用 SEQUENCE 对象 ([序列号](../sequence-numbers/sequence-numbers.md))。  
+  内存优化表支持 IDENTITY(1, 1)。 但是，内存优化表不支持使用 IDENTITY(x, y)（其中 x != 1 或 y != 1 ）定义的标识列。 标识值的解决方法使用序列对象（[序列号](../sequence-numbers/sequence-numbers.md)）。  
   
  从要转换到内存中 OLTP 的表首先删除 IDENTITY 属性。 然后，为表中的列定义新的 SEQUENCE 对象。 作为标识列的 SEQUENCE 对象依赖为列创建 DEFAULT 值的能力，这些列使用 NEXT VALUE FOR 语法获取新的标识值。 因为在内存中 OLTP 中不支持 DEFAULT，您需要将新生成的 SEQUENCE 值传给 INSERT 语句或执行插入的本机编译存储过程。 下面的示例对此模式进行了演示。  
   
@@ -51,7 +51,7 @@ insert into T1 values (@c1, 'test', getdate())
   
  在执行几次插入后，您看到在列 [c1] 中单调增加的有效值。 此结果集是使用不带 `ORDER BY` 的表扫描和哈希索引生成的，因此行未排序。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [迁移到内存中 OLTP](migrating-to-in-memory-oltp.md)  
   
   

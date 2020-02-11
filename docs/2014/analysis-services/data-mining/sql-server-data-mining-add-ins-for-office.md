@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 10015ac40948c95f8c912ba6fdb71147e50bb880
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082893"
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>SQL Server Office 数据挖掘外接程序
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Office 数据挖掘外接程序是用于预测分析的一组轻型工具，允许您使用 Excel 中的数据生成分析模型来用于预测、建议或浏览。  
+  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Office 数据挖掘外接程序是用于预测分析的一组轻型工具，利用该工具，您可以使用 Excel 中的数据为预测、建议或浏览生成分析模型。  
   
  该外接程序中的向导和数据管理工具为以下这些常用的数据挖掘任务提供了分步说明：  
   
@@ -40,13 +40,13 @@ ms.locfileid: "66082893"
   
      如果您不熟悉数据挖掘，则可以使用 **“查询”** 向导帮助生成预测查询。  
   
-     高级用户可通过拖放“高级查询编辑器”生成自定义 DMX 查询，或使用 Excel VBA 自动进行预测。  
+     高级用户可通过拖放“高级查询编辑器”生成自定义 DMX 查询，或使用 Excel VBA 自动进行预测。****  
   
--   **记载和管理。** 创建数据集并生成了一些模型后，通过生成的数据和模型参数的统计摘要记录你的工作和你的见解。  
+-   **记载和管理。** 创建了数据集并生成了一些模型后，通过生成数据和模型参数的统计摘要来记录您的工作和见解。  
   
--   **浏览和展现。** 数据挖掘不是完全自动执行的活动-需要探索并理解结果才能采取有意义的操作。 该外接程序帮助您探索各种内容，其中在 Excel、Visio 模板中提供交互式查看器，使您可自定义模型关系图，还可将图表和表导出到 Excel 供进一步筛选或修改。  
+-   **浏览和展现。** 数据挖掘不是可完全自动进行的活动-需要探索并理解结果才能采取有意义的操作。 该外接程序帮助您探索各种内容，其中在 Excel、Visio 模板中提供交互式查看器，使您可自定义模型关系图，还可将图表和表导出到 Excel 供进一步筛选或修改。  
   
--   **部署和集成。** 创建有用的模型，将您的模型投入生产，通过使用管理工具以模型从试验服务器导出到另一个实例后[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  
+-   **部署和集成。** 创建有用的模型后，通过使用管理工具将模型从试验服务器导出到另一个实例，使模型进入生产环境中[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  
   
      您还可以将模型保留在服务器上创建它时的位置，但使用 Integration Services 或 DMX 脚本刷新定型数据并运行预测。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66082893"
 ## <a name="getting-started"></a>入门  
  若要了解这些工具和进行设置，请参阅以下这些主题：  
   
--   [Excel 数据挖掘客户端&#40;SQL Server 数据挖掘外接程序&#41;](../data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
+-   [Excel 数据挖掘客户端 &#40;SQL Server 数据挖掘外接程序&#41;](../data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
   
 -   [Excel 表分析工具](../table-analysis-tools-for-excel.md)  
   
@@ -77,12 +77,12 @@ ms.locfileid: "66082893"
   
 -   Enterprise  
   
--   Business Intelligence  
+-   商业智能  
   
--   标准  
+-   Standard  
   
- 根据所连接的 SQL Server Analysis Services 版本，某些高级算法可能不可用。 有关信息，请参阅[SQL Server 2014 各个版本支持的功能](https://msdn.microsoft.com/library/cc645993.aspx)。  
+ 根据所连接的 SQL Server Analysis Services 版本，某些高级算法可能不可用。 有关信息，请参阅[SQL Server 2014 的各个版本支持的功能](https://msdn.microsoft.com/library/cc645993.aspx)。  
   
- 有关安装的其他帮助，请参见此下载中心提供的： [https://www.microsoft.com/download/details.aspx?id=29061](https://www.microsoft.com/download/details.aspx?id=29061)  
+ 有关安装的其他帮助，请参阅下载中心上的此页：[https://www.microsoft.com/download/details.aspx?id=29061](https://www.microsoft.com/download/details.aspx?id=29061)  
   
   

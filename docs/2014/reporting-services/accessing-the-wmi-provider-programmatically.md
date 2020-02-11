@@ -11,17 +11,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 84c8d4f9ed6eccbf7e58be46a9b84c53559a317d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63232413"
 ---
 # <a name="accessing-the-wmi-provider-programmatically"></a>以编程方式访问 WMI 提供程序
   本主题尚未完成。  
   
 ## <a name="wmi-provider-overview"></a>WMI 提供程序概述  
- 用于获取本主题中所示代码示例中的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的相关信息的命名空间为 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 中的 System.Management 命名空间  。 System.Management 命名空间提供一组托管代码类，[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 应用程序可通过这些类访问和操作管理信息  。 有关使用采用 System.Management 命名空间的 Reporting Services WMI 类的详细信息，请参阅 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK 中的“使用 System.Managment 访问管理信息”  。  
+ 用于获取本主题中所示代码示例中的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的相关信息的命名空间为 **** 中的 System.Management 命名空间[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]。 System.Management 命名空间提供一组托管代码类，** 应用程序可通过这些类访问和操作管理信息**[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]。 有关使用采用 System.Management 命名空间的 Reporting Services WMI 类的详细信息，请参阅 **** SDK 中的“使用 System.Managment 访问管理信息”[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]。  
   
 ## <a name="finding-a-report-server-instance"></a>查找报表服务器实例  
  查找与您的报表服务器安装有关的信息的首选方式是枚举 WMI 实例集合。 下面的示例说明如何通过创建某一集合并循环遍历该集合以显示属性，查找每个报表服务器实例上的属性。  
@@ -126,8 +126,8 @@ class Class1
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [访问 Reporting Services WMI 提供程序](tools/access-the-reporting-services-wmi-provider.md)   
- [RSReportServer 配置文件](report-server/rsreportserver-config-configuration-file.md)  
+ [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)  
   
   

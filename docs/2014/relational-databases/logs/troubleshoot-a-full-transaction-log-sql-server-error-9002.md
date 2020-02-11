@@ -19,20 +19,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2c0dc1566693ad8d8c86d7efe47403248788b076
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144725"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>解决事务日志已满的问题（SQL Server 错误 9002）
-  本主题讨论对已满事务日志可以采取的几种应对措施，并就以后如何避免出现已满事务日志给出建议。 如果事务日志已满，则 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 会发出 9002 错误。 当数据库联机或恢复时，日志可能会满。 如果数据库联机时日志已满，则数据库保持联机状态，但是只能进行读取而不能更新。 如果恢复过程中日志已满，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将数据库标记为 RESOURCE PENDING。 不管哪种情况，都需要用户执行操作才能使日志空间可用。  
+  本主题讨论对已满事务日志可以采取的几种应对措施，并就以后如何避免出现已满事务日志给出建议。 如果事务日志已满，则 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 会发出 9002 错误。 当数据库联机或恢复时，日志可能会满。 如果日志在数据库处于联机状态时已满，则该数据库仍会保持联机状态，但只能读取，不能更新。 如果恢复过程中日志已满，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将数据库标记为 RESOURCE PENDING。 不管哪种情况，都需要用户执行操作才能使日志空间可用。  
   
 ## <a name="responding-to-a-full-transaction-log"></a>应对已满事务日志  
  正确响应已满事务日志在某种程度上取决于导致日志已满的情况。 若要在给定情况下查找阻止日志截断的原因，请使用 **sys.database** 目录视图的 **log_reuse_wait** 列和 **log_reuse_wait_desc** 列。 有关详细信息，请参阅 [sys.databases (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)。 有关延迟日志截断的因素的说明，请参阅[事务日志 (SQL Server)](the-transaction-log-sql-server.md)。  
   
 > [!IMPORTANT]  
->  如果数据库在恢复过程中出现 9002 错误，在解决问题后恢复数据库使用 ALTER DATABASE *database_name*将设置为联机。  
+>  如果数据库在恢复过程中出现 9002 错误，则在解决此问题后，可使用 ALTER DATABASE *database_name* SET ONLINE 恢复数据库。  
   
  响应已满事务日志的备选方法包括：  
   
@@ -71,14 +71,14 @@ ms.locfileid: "63144725"
 > [!IMPORTANT]  
 >  日志文件决不要放在压缩文件系统中。  
   
- **若要移动日志文件**  
+ **移动日志文件**  
   
 -   [移动数据库文件](../databases/move-database-files.md)  
   
 ### <a name="increasing-the-size-of-a-log-file"></a>增加日志文件的大小  
  如果日志磁盘上具有可用空间，则可以增加日志文件的大小。 日志文件的最大大小是每个日志文件 2 TB。  
   
- **若要增加文件大小**  
+ **增加文件大小**  
   
  如果禁用自动增长，数据库处于联机状态，并且磁盘上有足够的可用空间，则可采用以下方法之一：  
   
@@ -96,10 +96,10 @@ ms.locfileid: "63144725"
   
 -   [向数据库中添加数据文件或日志文件](../databases/add-data-or-log-files-to-a-database.md)  
   
-## <a name="see-also"></a>请参阅  
- [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)   
+## <a name="see-also"></a>另请参阅  
+ [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [管理事务日志文件的大小](manage-the-size-of-the-transaction-log-file.md)   
- [事务日志备份 (SQL Server)](../backup-restore/transaction-log-backups-sql-server.md)   
- [sp_add_log_file_recover_suspect_db (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql)  
+ [事务日志备份 &#40;SQL Server&#41;](../backup-restore/transaction-log-backups-sql-server.md)   
+ [sp_add_log_file_recover_suspect_db &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 安装 Reporting Services 和 Internet 信息服务的并行 （SSRS 本机模式） |Microsoft Docs
+title: 并行安装 Reporting Services 和 Internet Information Services （SSRS 本机模式） |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -13,20 +13,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 514774acc7255f2f499bfe7fdd6e731944ab67fe
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67285039"
 ---
 # <a name="install-reporting-services-and-internet-information-services-side-by-side-ssrs-native-mode"></a>并行安装 Reporting Services 和 Internet Information Services（SSRS 本机模式）
-  可以在同一台计算机上安装和运行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) 和 Internet Information Services (IIS)。 所用 IIS 的版本确定了必须解决的互操作性问题。  
+  您可以在同一台[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]计算机上安装和运行（SSRS）和 Internet Information Services （IIS）。 所用 IIS 的版本确定了必须解决的互操作性问题。  
   
 ||  
 |-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式|  
+|[!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]本机模式|  
   
-|IIS 版本|问题|Description|  
+|IIS 版本|问题|说明|  
 |-----------------|------------|-----------------|  
 |IIS 6.0、7.0、8.0、8.5|一个应用程序收到发往另一个应用程序的请求。<br /><br /> HTTP.SYS 强制实施了 URL 预留的优先规则。 在向多个具有相同虚拟目录名称且共同监视端口 80 的应用程序发出请求时，如果目标应用程序的 URL 预留相对于另一个应用程序的 URL 预留较弱，则这些请求可能无法到达预期的目标。|在某些情况下，取代 URL 预留方案中另一个 URL 端点的已注册端点可能会收到发往其他应用程序的 HTTP 请求。<br /><br /> 报表服务器 Web 服务和报表管理器使用唯一的虚拟目录名有助于避免发生这种冲突。<br /><br /> 本主题中提供了有关此方案的详细信息。|  
   
@@ -43,21 +43,21 @@ ms.locfileid: "67285039"
   
 |示例|请求|  
 |-------------|-------------|  
-|http:\//123.234.345.456:80/reports|接收的所有请求发送到 http:\//123.234.345.456/reports 或 http://\<计算机名 > / 报表如果域名服务可以将 IP 地址解析为相应主机名。|  
+|http：\//123.234.345.456： 80/reports|如果域名服务可以将 IP 地址解析为\/该主机名\<，则将接收发送到 http：/123.234.345.456/reports 或 http://computername>/reports 的所有请求。|  
 |http://+:80/reports|只要 URL 包含“reports”虚拟目录名，就将接收发送到对于该计算机有效的任何 IP 地址或主机名的任何请求。|  
-|http:\//123.234.345.456:80|接收的任何请求都指定 http:\//123.234.345.456 或 http://\<计算机名 > 如果域名服务可以将 IP 地址解析为相应主机名。|  
+|http：\//123.234.345.456：80|如果域名服务可以将 IP 地址\/解析为该主机\<名，则接收任何指定 http：/123.234.345.456 或 http://computername> 的请求。|  
 |http://+:80|对于映射到 **“所有已分配的”** 的任何应用程序端点，接收尚未由其他应用程序接收的请求。|  
 |http://*:80|对于映射到 **“所有未分配的”** 的应用程序端点，接收尚未由其他应用程序接收的请求。|  
   
- 端口发生冲突的一个迹象是，将看到以下错误消息：System.IO.FileLoadException:进程无法访问该文件，因为它正由另一个进程。 (异常来自 HRESULT:0x80070020)。  
+ 端口冲突的一个迹象是看到以下错误消息：“System.IO.FileLoadException: 进程无法访问该文件，因为它正在被其他进程使用。 (HRESULT 异常: 0x80070020)”。  
   
 ## <a name="url-reservations-for-iis-60-70-80-85-with-includesssql14includessssql14-mdmd-reporting-services"></a>用于带 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Reporting Services 的 IIS 6.0、7.0、8.0、8.5 的 URL 预留  
  使用上一节中概述的优先规则，即可以开始了解为 Reporting Services 和 IIS 定义的 URL 预留是如何提高互操作性的。 Reporting Services 接收为其应用程序明确指定了虚拟目录名的请求；IIS 接收所有的剩余请求，这些请求随后可定向到运行于 IIS 进程模型中的应用程序。  
   
-|应用程序|URL 预留|Description|请求接收情况|  
+|Application|URL 预留|说明|请求接收情况|  
 |-----------------|---------------------|-----------------|---------------------|  
 |报表服务器|http://+:80/ReportServer|针对端口 80 使用强通配符，带有报表服务器虚拟目录。|接收端口 80 上指定了报表服务器虚拟目录的所有请求。 报表服务器 Web 服务接收针对 http://\<computername>/reportserver 的所有请求。|  
-|报表管理器|http://+:80/Reports|针对端口 80 使用强通配符，带有 Reports 虚拟目录。|接收端口 80 上指定了 reports 虚拟目录的所有请求。 报表管理器接收所有请求 http://\<计算机名 > / 报告。|  
+|报表管理器|http://+:80/Reports|针对端口 80 使用强通配符，带有 Reports 虚拟目录。|接收端口 80 上指定了 reports 虚拟目录的所有请求。 报表管理器接收到 http://\<computername>/reports。的所有请求|  
 |IIS|http://*:80/|针对端口 80 使用弱通配符。|接收端口 80 上尚未由其他应用程序接收的所有剩余请求。|  
   
 ## <a name="side-by-side-deployments-of-includesscurrentincludessscurrent-mdmd-and-sql-server-2005-reporting-services-on-iis-60-70-80-85"></a>在 IIS 6.0、7.0、8.0、8.5 上并行部署 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 SQL Server 2005 Reporting Services  
@@ -65,19 +65,19 @@ ms.locfileid: "67285039"
   
 -   IIS 中一个分配到端口 80 的网站，以及名为“Reports”的虚拟目录。  
   
--   一个[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]报表服务器实例安装在默认配置，其中 URL 保留还指定了端口 80 和报表管理器应用程序还使用"Reports"作为虚拟目录名称。  
+-   在[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]默认配置中安装的 Report Server 实例，其中 URL 保留还指定端口80，报表管理器应用程序还使用 "Reports" 作为虚拟目录名。  
   
- 在这种配置，请求发送到 http://\<计算机名 >: 80/reports 将接收由报表管理器。 在安装了 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 报表服务器实例之后，通过 IIS 中的 Reports 虚拟目录访问的应用程序将不再接收请求。  
+ 对于此配置，将报表管理器接收发送到 http://\<computername>： 80/reports 的请求。 在安装了 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 报表服务器实例之后，通过 IIS 中的 Reports 虚拟目录访问的应用程序将不再接收请求。  
   
  如果您并行运行所部署的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的新旧版本，则有可能会遇到上面描述的路由问题。 这是由于所有版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 都使用“ReportServer”作为报表服务器的虚拟目录名，并使用“Reports”作为报表管理器应用程序的虚拟目录名，从而增加了在 IIS 中拥有“reports”和“reportserver”虚拟目录的可能性。  
   
  为了确保所有的应用程序都能收到请求，请遵循下面的准则：  
   
--   对于 Reporting Services 安装，请使用 Reporting Services 所在端口上的 IIS 网站尚未使用的虚拟目录名。 如果存在冲突，请在“仅文件”模式（使用“安装”，但是不在安装向导中配置服务器选项）下安装 Reporting Services，以便可以在安装完成后配置虚拟目录。 你的配置存在冲突的一个迹象是您将看到错误消息：System.IO.FileLoadException:进程无法访问该文件，因为它正由另一个进程。 (异常来自 HRESULT:0x80070020)。  
+-   对于 Reporting Services 安装，请使用 Reporting Services 所在端口上的 IIS 网站尚未使用的虚拟目录名。 如果存在冲突，请在“仅文件”模式（使用“安装”，但是不在安装向导中配置服务器选项）下安装 Reporting Services，以便可以在安装完成后配置虚拟目录。 您的配置存在冲突的一个迹象是看到以下错误消息：“System.IO.FileLoadException: 进程无法访问该文件，因为它正在被其他进程使用。 (HRESULT 异常: 0x80070020)”。  
   
 -   对于手动配置的安装，请在所配置的 URL 中使用默认的命名约定。 如果以命名实例形式安装 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] ，请在创建虚拟目录时包括实例名称。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置报表服务器 URL（SSRS 配置管理器）](configure-report-server-urls-ssrs-configuration-manager.md)   
  [配置 URL（SSRS 配置管理器）](configure-a-url-ssrs-configuration-manager.md)   
  [安装 Reporting Services 本机模式报表服务器](install-reporting-services-native-mode-report-server.md)  

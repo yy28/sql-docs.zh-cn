@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f72f8e40374198a5230e32b8ec5b3974fdb6b971
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144646"
 ---
 # <a name="log-file-viewer"></a>日志文件查看器
@@ -27,7 +27,7 @@ ms.locfileid: "63144646"
   
 -   审核集合  
   
--   “数据收集”  
+-   数据收集  
   
 -   数据库邮件  
   
@@ -51,7 +51,7 @@ ms.locfileid: "63144646"
 |介绍如何通过注册的服务器来查看脱机日志文件以及如何验证 WMI 权限。|[查看脱机日志文件](view-offline-log-files.md)|  
 |提供日志文件查看器的 F1 帮助。|[日志文件查看器 F1 帮助](log-file-viewer-f1-help.md)|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server Audit（数据库引擎）](../security/auditing/sql-server-audit-database-engine.md)   
  [SQL Server 代理错误日志](../../ssms/agent/sql-server-agent-error-log.md)  
   

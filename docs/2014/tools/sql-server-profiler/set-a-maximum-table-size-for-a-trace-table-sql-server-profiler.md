@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 15ef5e8621a5edd216b300a8a96f3a9656b55b12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63267149"
 ---
 # <a name="set-a-maximum-table-size-for-a-trace-table-sql-server-profiler"></a>设置跟踪表的最大表大小 (SQL Server Profiler)
@@ -51,8 +51,8 @@ ms.locfileid: "63267149"
     > [!NOTE]  
     >  表中的行数超过指定的最大值时，将不再记录跟踪事件。 但是，仍继续跟踪。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 事件探查器](sql-server-profiler.md)   
- [SQL Server 事件探查器](sql-server-profiler.md)  
+ [SQL Server Profiler](sql-server-profiler.md)  
   
   

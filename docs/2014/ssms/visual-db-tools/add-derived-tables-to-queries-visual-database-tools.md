@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6f1898dce975655758c52068590dd4c0720c9f67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63311942"
 ---
 # <a name="add-derived-tables-to-queries-visual-database-tools"></a>向查询中添加派生表 (Visual Database Tools)
@@ -33,10 +33,10 @@ ms.locfileid: "63311942"
   
      将添加一个名为 derivedtbl_N  的新表，派生表的 SELECT 语句会添加到查询的 FROM 子句。  
   
-## <a name="see-also"></a>请参阅  
- [执行基本的查询操作&#40;可视化数据库工具&#41;](visual-database-tools.md)   
- [创建查询&#40;可视化数据库工具&#41;](create-queries-visual-database-tools.md)   
- [打开查询&#40;可视化数据库工具&#41;](open-queries-visual-database-tools.md)   
+## <a name="see-also"></a>另请参阅  
+ [在 Visual Database Tools &#40;执行基本的查询操作&#41;](visual-database-tools.md)   
+ [&#40;Visual Database Tools 创建查询&#41;](create-queries-visual-database-tools.md)   
+ [&#40;Visual Database Tools 打开查询&#41;](open-queries-visual-database-tools.md)   
  [SELECT (Transact-SQL)](/sql/t-sql/queries/select-transact-sql)  
   
   

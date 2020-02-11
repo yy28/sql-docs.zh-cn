@@ -17,10 +17,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: c83d92da6708c8c63e1ba4c2cea60b1497a54883
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63284549"
 ---
 # <a name="permissions-or-securables-page"></a>“权限”或“安全对象”页
@@ -37,13 +37,13 @@ ms.locfileid: "63284549"
  **名称**  
  添加到网格中的每个主体或安全对象的名称。  
   
- **类型**  
+ 类型   
  描述每个项目的类型。  
   
 ## <a name="explicit-tab"></a>“显式”选项卡  
  **“显式”** 选项卡列出了上部网格中所选安全对象的可能权限。 若要配置权限，请选中或清除“授予”（或“允许”）、“具有授予权限”和“拒绝”复选框     。 对于所有显式权限，全部选项均不可用。  
   
- **“权限”**  
+ **权限**  
  权限的名称。  
   
  **授权者**  
@@ -70,7 +70,7 @@ ms.locfileid: "63284549"
  **列**  
  受到该权限影响的列的名称。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库级别的角色](authentication-access/database-level-roles.md)   
  [SQL Server 数据库引擎和 Azure SQL Database 的安全中心](security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   

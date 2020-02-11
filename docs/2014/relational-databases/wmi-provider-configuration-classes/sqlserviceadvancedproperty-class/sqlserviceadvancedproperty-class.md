@@ -19,20 +19,20 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 903c33c2679d4869bd26e95392e6eb5dcd2f9fb2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188584"
 ---
 # <a name="sqlserviceadvancedproperty-class"></a>SqlServiceAdvancedProperty 类
-  [SqlServiceAdvancedProperty 类](sqlserviceadvancedproperty-class.md)表示引用的服务的高级的属性[SqlService 类](../sqlservice-class/sqlservice-class.md)对象。  
+  [SqlServiceAdvancedProperty 类](sqlserviceadvancedproperty-class.md)表示[SqlService 类](../sqlservice-class/sqlservice-class.md)对象引用的服务的高级属性。  
   
- [AdvancedProperties 属性 （SqlService 类）](../sqlservice-class/advancedproperties-property-sqlservice-class.md)引用的数组[SqlServiceAdvancedProperty 类](sqlserviceadvancedproperty-class.md)对象。  
+ [AdvancedProperties 属性（SqlService 类）](../sqlservice-class/advancedproperties-property-sqlservice-class.md)引用[SqlServiceAdvancedProperty 类](sqlserviceadvancedproperty-class.md)对象的数组。  
   
- [启动和停止服务](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)类表示服务所特有的属性。 这些属性不在与之关联的属性列表[SqlService 类](https://technet.microsoft.com/library/ms186497.aspx)类。 [SqlServiceAdvancedProperty 类](https://technet.microsoft.com/library/ms182447.aspx)允许字符串、 数值或布尔值属性的表示形式。 可以使用此类查看指定服务的唯一属性。  
+ [启动和停止服务](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)类表示服务的唯一属性。 这些属性不在与[SqlService 类](https://technet.microsoft.com/library/ms186497.aspx)关联的属性列表中。 [SqlServiceAdvancedProperty 类](https://technet.microsoft.com/library/ms182447.aspx)允许字符串、数值或布尔值属性的表示形式。 可以使用此类查看指定服务的唯一属性。  
   
-## <a name="see-also"></a>请参阅  
- [启动、 停止和暂停服务](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+## <a name="see-also"></a>另请参阅  
+ [启动、停止和暂停服务](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

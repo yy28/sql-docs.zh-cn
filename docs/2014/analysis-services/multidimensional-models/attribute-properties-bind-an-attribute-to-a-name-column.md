@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d0a08c191bfd8ec00a4e0181ad3960bf7644f93e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077398"
 ---
 # <a name="bind-an-attribute-to-a-name-column"></a>将属性绑定到名称列
@@ -28,9 +28,9 @@ ms.locfileid: "66077398"
   
 1.  在维度设计器中，打开要在其中创建属性的维度。  
   
-2.  在“维度结构”选项卡的“属性”窗格中，右键单击要配置的特性，然后单击“属性”。  
+2.  在“维度结构”选项卡的“属性”窗格中，右键单击要配置的特性，然后单击“属性”************。  
   
-3.  在“属性”窗口中，找到 **NameColumn** 属性，然后选择“(新建)”。  
+3.  在“属性”**** 窗口中，找到 **NameColumn** 属性，然后选择“(新建)”****。  
   
 4.  在 **“对象绑定”** 对话框中，为 **“绑定类型”** 选择 **“列绑定”**。  
   

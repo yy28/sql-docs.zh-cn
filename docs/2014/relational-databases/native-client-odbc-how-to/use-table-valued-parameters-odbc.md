@@ -1,5 +1,5 @@
 ---
-title: 使用表值参数 (ODBC) |Microsoft Docs
+title: 使用表值参数（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ec4d66af36ff74b5b0a9160529990c9fc52fc961
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200276"
 ---
 # <a name="use-table-valued-parameters-odbc"></a>使用表值参数 (ODBC)
   此示例演示了如何使用表值参数通过调用一次服务器插入多个行和多个列。  
   
- 有关表值参数的详细信息，请参阅[表值参数&#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。 使用表值参数的更多示例，请参阅[ODBC Table-Valued 参数编程示例](../../database-engine/dev-guide/odbc-table-valued-parameter-programming-examples.md)。  
+ 有关表值参数的详细信息，请参阅[ODBC&#41;&#40;表值参数](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。 有关使用表值参数的更多示例，请参阅[ODBC 表值参数编程示例](../../database-engine/dev-guide/odbc-table-valued-parameter-programming-examples.md)。  
   
 ## <a name="example"></a>示例  
  您将需要名为 TVPDemo 的 ODBC 数据源。 TVPDemo 的默认数据库可以是您计算机上的任何测试数据库。 此数据源必须基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 的 ODBC 驱动程序。  
@@ -29,7 +29,7 @@ ms.locfileid: "63200276"
   
  此示例连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 若要连接到命名实例，请更改 ODBC 数据源的定义以使用以下格式指定实例：server\namedinstance。 默认情况下，[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 将安装在命名实例中。  
   
- 使用 odbc32.lib 和 user32.lib 编译 (C++) 代码列表。 请确保您的 INCLUDE 环境变量包括含有 sqlncli.h 的目录。  
+ 使用 odbc32.lib 和 user32.lib 编译 (C++) 代码列表。 请确保 INCLUDE 环境变量包含包含 sqlncli.msi 的目录。  
   
 ```  
 // compile with: odbc32.lib user32.lib  

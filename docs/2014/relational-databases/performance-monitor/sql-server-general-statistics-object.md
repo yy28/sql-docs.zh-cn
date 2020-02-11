@@ -14,24 +14,24 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a8b2131e4c3c2070bb03018c48294543b9baef02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250642"
 ---
 # <a name="sql-server-general-statistics-object"></a>SQL Server General Statistics 对象
-  **中的** SQLServer:General Statistics [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象提供计数器，用于监视服务器范围内的常规活动，例如，当前的连接数和每秒与运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的计算机连接和断开的用户数。 这在大型联机事务处理 (OLTP) 类型系统（这种系统中有很多客户端与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例连接和断开连接）上工作时会非常有用。  
+  中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQLServer： General Statistics**对象提供计数器，用于监视服务器范围内的常规活动，例如当前连接数以及每秒从运行实例的计算机连接和断开的用户数。 这在大型联机事务处理 (OLTP) 类型系统（这种系统中有很多客户端与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例连接和断开连接）上工作时会非常有用。  
   
  下表介绍了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **General Statistics** 计数器。  
   
-|SQL Server General Statistics 计数器|Description|  
+|SQL Server General Statistics 计数器|说明|  
 |--------------------------------------------|-----------------|  
-|**Active Temp Tables**|正在使用的临时表/表变量的数目。|  
+|**活动临时表**|正在使用的临时表/表变量的数目。|  
 |**Connection resets/sec**|从连接池启动的登录总次数。|  
 |**Event Notifications Delayed Drop**|等待被某个系统线程删除的事件通知数。|  
 |**HTTP Authenticated Requests**|每秒启动的验证过的 HTTP 请求数。|  
-|**Logical Connections**|与系统建立的逻辑连接数。<br /><br /> 逻辑连接数的主要用途是支持多个活动结果集 (MARS) 请求。 对于 MARS 请求，每次应用程序与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]进行连接时，都可能有多个与一个物理连接相对应的逻辑连接。<br /><br /> 在未使用 MARS 时，物理连接和逻辑连接之间的比率是 1:1。 因此，每次应用程序与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]进行连接时，逻辑连接都将以 1 为增量增加。|  
+|**Logical Connections**|与系统建立的逻辑连接数。<br /><br /> 逻辑连接数的主要用途是支持多个活动结果集 (MARS) 请求。 对于 MARS 请求，每次应用程序与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]进行连接时，都可能有多个与一个物理连接相对应的逻辑连接。<br /><br /> 在未使用 MARS 时，物理连接和逻辑连接之间的比率是 1:1。 因此，每次应用程序与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进行连接时，逻辑连接都将以 1 为增量增加。|  
 |**Logins/sec**|每秒启动的登录总数。 这不包括已入池连接。|  
 |**Logouts/sec**|每秒启动的注销操作总数。|  
 |**Mars Deadlocks**|检测到的 MARS 死锁数。|  
@@ -46,10 +46,10 @@ ms.locfileid: "63250642"
 |**Temp Tables Creation Rate**|每秒创建的临时表/表变量的数目。|  
 |**Temp Tables For Destruction**|等待被清除系统线程破坏的临时表/表变量数。|  
 |**Trace Event Notifications Queue**|在内部队列中等待通过 Service Broker 发送的跟踪事件通知实例数。|  
-|**事务**|事务登记（本地、DTC 和绑定的事务）的数目。|  
+|**中的**|事务登记（本地、DTC 和绑定的事务）的数目。|  
 |**用户连接**|当前与 SQL Server 连接的用户数。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [监视资源使用情况（系统监视器）](monitor-resource-usage-system-monitor.md)  
   
   

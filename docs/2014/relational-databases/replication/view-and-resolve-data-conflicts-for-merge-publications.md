@@ -1,5 +1,5 @@
 ---
-title: 查看和解决数据冲突的合并发布 (SQL Server Management Studio) |Microsoft Docs
+title: 查看和解决合并发布的数据冲突（SQL Server Management Studio） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8810377a7e676d4376fca3cc52e73d6c507dbd21
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63255430"
 ---
 # <a name="view-and-resolve-data-conflicts-for-merge-publications-sql-server-management-studio"></a>查看和解决合并发布的数据冲突 (SQL Server Management Studio)
@@ -26,9 +26,9 @@ ms.locfileid: "63255430"
   
  在冲突保持期的指定时间（默认值为 14 天）内，可以在复制冲突查看器中查看冲突数据。 若要设置冲突保持期，请执行以下任一操作：  
   
--   为 [sp_addmergepublication (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql) 的 **@conflict_retention** 参数指定保持值。  
+-   为[&#40;transact-sql&#41;sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)的**@conflict_retention**参数指定保持值。  
   
--   为 **@property** 参数指定 **conflict_retention** 值，并为 [sp_changemergepublication (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql) 的 **@value** 参数指定保持值。  
+-   将**@property**参数的值指定为**@value** **conflict_retention** ，并为[sp_changemergepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)的参数指定保持值。  
   
  默认情况下，冲突信息存储在下列位置：  
   
@@ -44,11 +44,11 @@ ms.locfileid: "63255430"
   
 ### <a name="to-view-and-resolve-conflicts-for-merge-publications"></a>查看和解决合并发布的冲突  
   
-1.  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接到发布服务器（或订阅服务器，若适合的话），然后展开服务器节点。  
+1.  连接到中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的发布服务器（或订阅服务器，如果适用），然后展开服务器节点。  
   
 2.  展开 **“复制”** 文件夹，再展开 **“本地发布”** 文件夹。  
   
-3.  右键单击要查看其冲突的发布，然后单击 **“查看冲突”** 。  
+3.  右键单击要查看其冲突的发布，然后单击 **“查看冲突”**。  
   
     > [!NOTE]  
     >  如果为 **conflict_logging** 属性指定了值 **“subscriber”** ， **“查看冲突”** 菜单选项将不可用。 若要查看冲突，请在命令提示符下启动 ConflictViewer.exe。 默认情况下，ConflictViewer.exe 位于以下目录中：Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE。 要获取有效引导参数的列表，请运行 ConflictViewer.exe -?。  
@@ -61,9 +61,9 @@ ms.locfileid: "63255430"
   
     -   在上部网格中选择行，以在下部网格中显示该行的信息。  
   
-    -   在上部网格中选择一行或多行，然后单击 **“删除”** ，这与单击 **“提交入选方”** 按钮的效果相同（不对数据进行任何更改）。  
+    -   在上部网格中选择一行或多行，然后单击 **“删除”**，这与单击 **“提交入选方”** 按钮的效果相同（不对数据进行任何更改）。  
   
-    -   单击属性按钮 (...) 查看有关冲突所涉及的列的详细信息  。  
+    -   单击属性按钮（**...**）可以查看有关冲突中涉及的列的详细信息。  
   
     -   编辑 **“冲突解决入选方”** 或 **“冲突解决落选方”** 列中的数据，然后再提交数据（如果列为灰色，则数据为只读）。  
   
@@ -71,12 +71,12 @@ ms.locfileid: "63255430"
   
     -   单击 **“提交落选方”** 覆盖解决结果，并将指定为冲突落选方的值传播到拓扑中的所有节点。  
   
-    -   选择 **“记录此冲突的详细信息”** 将冲突数据记录到一个文件中。 若要指定文件的位置，请指向 **“查看”** 菜单，然后单击 **“选项”** 。 输入一个值，或单击浏览按钮 ( **...** )，然后导航到相应文件。 单击 **“确定”** 可退出 **“选项”** 对话框。  
+    -   选择 **“记录此冲突的详细信息”** 将冲突数据记录到一个文件中。 若要指定文件的位置，请指向 **“查看”** 菜单，然后单击 **“选项”**。 输入一个值，或单击浏览按钮 (**...**)，然后导航到相应文件。 单击 **“确定”** 可退出 **“选项”** 对话框。  
   
 6.  关闭复制冲突查看器。  
   
-## <a name="see-also"></a>请参阅  
- [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+## <a name="see-also"></a>另请参阅  
+ [高级合并复制冲突的检测和解决](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [指定合并项目冲突解决程序](publish/specify-a-merge-article-resolver.md)  
   
   

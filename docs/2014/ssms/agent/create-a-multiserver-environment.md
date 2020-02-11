@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c5c59a8802597b893110a5f2c26c919c16c8e83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192969"
 ---
 # <a name="create-a-multiserver-environment"></a>创建多服务器环境
@@ -58,16 +58,16 @@ ms.locfileid: "63192969"
 ## <a name="related-tasks"></a>Related Tasks  
  以下主题介绍创建多服务器环境的常见任务：  
   
-|Description|主题|  
+|说明|主题|  
 |-----------------|-----------|  
-|描述如何创建主服务器。|[设置主服务器](make-a-master-server.md)|  
+|描述如何创建主服务器。|[Make a Master Server](make-a-master-server.md)|  
 |描述如何创建目标服务器。|[设置目标服务器](make-a-target-server.md)|  
 |描述如何将目标服务器登记到主服务器。|[将目标服务器登记到主服务器](enlist-a-target-server-to-a-master-server.md)|  
 |描述如何使目标服务器从主服务器脱离。|[将目标服务器从主服务器脱离](defect-a-target-server-from-a-master-server.md)|  
-|描述如何使多台目标服务器脱离主服务器。|[将多台目标服务器从主服务器脱离](defect-multiple-target-servers-from-a-master-server.md)|  
-|描述如何检查目标服务器的状态。|[sp_help_targetserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql)<br /><br /> [sp_help_targetservergroup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)|  
+|描述如何使多台目标服务器脱离主服务器。|[Defect Multiple Target Servers from a Master Server](defect-multiple-target-servers-from-a-master-server.md)|  
+|描述如何检查目标服务器的状态。|[sp_help_targetserver &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql)<br /><br /> [sp_help_targetservergroup &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [排除使用代理的多服务器作业的故障](troubleshoot-multiserver-jobs-that-use-proxies.md)  
   
   

@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ea11c177533a6101bb0654ca0450e85ea855d9a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150822"
 ---
 # <a name="plan-guides"></a>计划指南
@@ -33,7 +33,7 @@ ms.locfileid: "63150822"
  可创建的计划指南总数仅受可用系统资源的限制。 尽管如此，计划指南还是应当限于针对提高或稳定性能的关键查询。 计划指南不应用来影响已部署应用程序的大部分查询负荷。  
   
 > [!NOTE]  
->  计划指南不适用于每个 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关的各版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 计划指南在任何版本中可见。 包含计划指南的数据库可以附加到任何版本。 将数据库还原或附加到升级版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]后，计划指南保持不变。  
+>  计划指南不适用于每个 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关各个版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅 SQL Server 2014 的各个[版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 计划指南在任何版本中可见。 包含计划指南的数据库可以附加到任何版本。 将数据库还原或附加到升级版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]后，计划指南保持不变。  
   
 ## <a name="types-of-plan-guides"></a>计划指南的类型  
  可以创建以下类型的计划指南。  
@@ -125,7 +125,7 @@ sp_create_plan_guide
   
  对于基于 SQL 或 TEMPLATE 的计划指南， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过对 @module_or_batch 参数和 @params 参数的值逐个字符地进行比较来将这两个值与查询匹配。 这意味着必须提供与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在实际批处理中接收的文本完全相同的文本。  
   
- 当 @type = 'SQL' 且 @module_or_batch 设置为 NULL 时，则将 @module_or_batch 的值设置为 @stmt 的值。这意味着 *statement_text* 值的提供格式必须与其提交到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时所采用的格式完全相同（字符对字符）。 不会执行内部转换来帮助完成该匹配。  
+ 当@type = ' SQL ' 且@module_or_batch设置为 NULL 时，的值@module_or_batch将设置为的@stmt值。这意味着，在提交到** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，必须以相同的格式（字符对字符）提供 statement_text 的值。 不会执行内部转换来帮助完成该匹配。  
   
  当常规（SQL 或 OBJECT）计划指南和 TEMPLATE 计划指南都适用于语句时，将只使用常规计划指南。  
   
@@ -148,11 +148,11 @@ sp_create_plan_guide
 |说明如何使用 SQL Server 事件探查器创建和测试计划指南。|[使用 SQL Server Profiler 创建和测试计划指南](plan-guides.md)|  
 |说明如何验证计划指南。|[升级后验证计划指南](validate-plan-guides-after-upgrade.md)|  
   
-## <a name="see-also"></a>请参阅  
- [sp_create_plan_guide (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
- [sp_create_plan_guide_from_handle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)   
- [sp_control_plan_guide (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql)   
- [sys.plan_guides (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-plan-guides-transact-sql)   
- [sys.fn_validate_plan_guide (Transact-SQL)](/sql/relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql)  
+## <a name="see-also"></a>另请参阅  
+ [sp_create_plan_guide &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [sp_create_plan_guide_from_handle &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)   
+ [sp_control_plan_guide &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql)   
+ [sys. plan_guides &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-plan-guides-transact-sql)   
+ [sys. fn_validate_plan_guide &#40;Transact-sql&#41;](/sql/relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql)  
   
   

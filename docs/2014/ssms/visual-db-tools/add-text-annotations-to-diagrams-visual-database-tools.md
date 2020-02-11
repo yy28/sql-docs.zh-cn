@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dc390d06ab21b295f0e5f7a2475d8c91671e843c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63298291"
 ---
 # <a name="add-text-annotations-to-diagrams-visual-database-tools"></a>向关系图中添加文本批注 (Visual Database Tools)
@@ -36,7 +36,7 @@ ms.locfileid: "63298291"
 > [!NOTE]  
 >  若要更改字体，请右键单击该文本字段，再单击“设置文本批注字体”  。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用数据库关系图 (Visual Database Tools)](visual-database-tools.md)  
   
   

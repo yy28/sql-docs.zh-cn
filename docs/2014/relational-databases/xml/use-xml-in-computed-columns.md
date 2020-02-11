@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f9bfa88e56e5f914afd4f027634d0f069406c009
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63193225"
 ---
 # <a name="use-xml-in-computed-columns"></a>在计算列中使用 XML
@@ -85,7 +85,7 @@ FROM T
   
 ### <a name="in-this-section"></a>本节内容  
   
-|主题|Description|  
+|主题|说明|  
 |-----------|-----------------|  
 |[使用计算列提升常用的 XML 值](promote-frequently-used-xml-values-with-computed-columns.md)|介绍如何将属性提升用于计算列和属性表。|  
   

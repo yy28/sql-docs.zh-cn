@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5fdf00d1291180197f66cd6cb23cf27f10659c68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63183022"
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQL Server，Resource Pool Stats 对象
@@ -25,7 +25,7 @@ ms.locfileid: "63183022"
   
  每个活动资源池都创建一个 SQLServer:Resource Pool Stats 性能对象实例，实例的名称与资源调控器资源池的名称相同。 下表介绍了此实例支持的计数器。  
   
-|计数器名称|Description|  
+|计数器名称|说明|  
 |------------------|-----------------|  
 |CPU usage %|属于此池的所有工作负荷组中所有请求的 CPU 带宽使用量。 此值是相对于计算机度量的，并针对系统中的所有 CPU 进行规范化。 此值将随着可用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程的 CPU 量的变化而变化。 它不会针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程接收的信息进行规范化。|  
 |CPU usage target %|资源池基于资源池配置设置和系统负荷的目标 CPU 使用率 (%)。|  
@@ -36,21 +36,21 @@ ms.locfileid: "63183022"
 |Memory grants/sec|每秒此资源池中发生的内存授予数。|  
 |Active memory grants count|当前内存授予总数。 此信息还可在 [sys.dm_exec_query_memory_grants](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql)中获得。|  
 |Memory grant timeouts/sec|每秒内存授予超时数。|  
-|Active memory grant amount (KB)|当前授予的内存总量，以千字节 (KB) 为单位。 此信息还可在 [sys.dm_exec_query_resource_semaphores](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql) 中获得。|  
+|Active memory grant amount (KB)|当前授予的内存总量，以千字节 (KB) 为单位。 此信息还可在 [sys.dm_exec_query_resource_semaphores](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql)中获得。|  
 |Pending memory grant count|队列中挂起的内存授予请求数。 此信息还可在 [sys.dm_exec_query_resource_semaphores](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql)中获得。|  
 |Max memory (KB)|资源池基于资源池设置和服务器状态可获得的最大内存量，以千字节 (KB) 为单位。|  
 |Used memory (KB)|用于资源池的内存量，以千字节 (KB) 为单位。|  
 |Target memory (KB)|资源池基于资源池设置和服务器状态尝试获得的目标内存量，以千字节 (KB) 为单位。|  
 |Disk Read IO/sec|在上一秒中从磁盘读取的操作数。|  
 |Disk Read IO Throttled/sec|在上一秒中中止的读取操作数。|  
-|Disk Read Bytes/sec|在上一秒中从磁盘读取的字节数。|  
+|磁盘读取字节数/秒|在上一秒中从磁盘读取的字节数。|  
 |Avg Disk Read IO (ms)|从磁盘进行读取操作的平均时间（毫秒）。|  
 |Disk Write IO/sec|在上一秒中写入磁盘的操作数。|  
 |Disk Write IO Throttled/sec|在上一秒中中止的写入操作数。|  
-|Disk Write Bytes/sec|在上一秒中写入磁盘的字节数。|  
+|磁盘写入字节数/秒|在上一秒中写入磁盘的字节数。|  
 |Avg Disk Write IO (ms)|对磁盘进行写入操作的平均时间（毫秒）。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [监视资源使用情况（系统监视器）](monitor-resource-usage-system-monitor.md)   
  [SQLServer，Workload Group Stats 对象](sql-server-workload-group-stats-object.md)   
  [资源调控器](../resource-governor/resource-governor.md)  

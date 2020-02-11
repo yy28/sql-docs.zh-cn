@@ -1,5 +1,5 @@
 ---
-title: 第 2 课：向市场篮挖掘结构添加挖掘模型 |Microsoft Docs
+title: 第2课：向市场篮挖掘结构中添加挖掘模型 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,23 +11,23 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b9573d9359983e33cf23533787c26039572710ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204718"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>第 2 课：向市场篮挖掘结构中添加挖掘模型
-  在本课中，将两个挖掘模型添加到你在中创建的市场篮挖掘结构[第 1 课：创建市场篮挖掘结构](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)。 您可以通过这些挖掘模型创建预测。  
+  在本课中，您将向在[第1课：创建市场篮挖掘结构](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)中创建的市场篮挖掘结构中添加两个挖掘模型。 您可以通过这些挖掘模型创建预测。  
   
- 若要预测的客户想要同时购买的产品类型，您将创建两个挖掘模型使用[Microsoft 关联算法](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)和两个不同值*MINIMUM_PROBABILTY*参数。  
+ 若要预测客户往往同时购买的产品类型，您将使用[Microsoft 关联算法](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)创建两个挖掘模型，并为*MINIMUM_PROBABILTY*参数创建两个不同的值。  
   
- *MINIMUM_PROBABILTY*是[!INCLUDE[msCoName](../includes/msconame-md.md)]关联算法参数，可帮助确定挖掘模型将包含通过指定规则必须具有的最小概率的规则数。 例如，如果此值设置为 0.4，则表明仅当规则所描述的产品组合具有至少 40% 的发生概率时才可生成此规则。  
+ *MINIMUM_PROBABILTY*是一[!INCLUDE[msCoName](../includes/msconame-md.md)]种关联算法参数，通过指定规则必须具有的最小概率，有助于确定挖掘模型将包含的规则数。 例如，如果此值设置为 0.4，则表明仅当规则所描述的产品组合具有至少 40% 的发生概率时才可生成此规则。  
   
- 您将查看更改后的效果*MINIMUM_PROBABILTY*中后面的课程中的参数。  
+ 您将在后面的课程中查看更改*MINIMUM_PROBABILTY*参数的效果。  
   
 ## <a name="alter-mining-structure-statement"></a>ALTER MINING STRUCTURE 语句  
- 若要添加包含到挖掘结构的嵌套的表的挖掘模型，请使用[ALTER MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016)语句。 可以将语句中的代码分为下列几部分：  
+ 若要将包含嵌套表的挖掘模型添加到挖掘结构，请使用[&#40;DMX&#41;语句的 ALTER 挖掘 structure](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016) 。 可以将语句中的代码分为下列几部分：  
   
 -   标识挖掘结构  
   
@@ -67,7 +67,7 @@ ALTER MINING STRUCTURE [<mining structure name>]
 ADD MINING MODEL [<mining model name>]  
 ```  
   
- 有关命名的对象中数据挖掘扩展插件 (DMX) 的信息，请参阅[标识符&#40;DMX&#41;](/sql/dmx/identifiers-dmx)。  
+ 有关在数据挖掘扩展插件（DMX）中命名对象的信息，请参阅[标识符 &#40;DMX&#41;](/sql/dmx/identifiers-dmx)。  
   
  代码的接下来的各行对挖掘结构中将由挖掘模型使用的各列进行定义：  
   
@@ -78,9 +78,9 @@ ADD MINING MODEL [<mining model name>]
   
  您可以只使用挖掘结构中已有的列。  
   
- 挖掘模型列的列表中的第一列必须为挖掘结构中的键列。 但是，不需要键入`KEY`后指定用法的键列。 这是因为您在创建挖掘结构时已将列定义为键。  
+ 挖掘模型列的列表中的第一列必须为挖掘结构中的键列。 但是，您不必在键列的`KEY`后面键入来指定用法。 这是因为您在创建挖掘结构时已将列定义为键。  
   
- 其他行指定新挖掘模型中的列的用法。 您可以指定挖掘模型中的列将用于预测使用通过使用以下语法：  
+ 其他行指定新挖掘模型中的列的用法。 您可以使用以下语法指定挖掘模型中的列将用于预测：  
   
 ```  
 <column name> PREDICT,  
@@ -95,18 +95,18 @@ ADD MINING MODEL [<mining model name>]
 ```  
   
 ## <a name="lesson-tasks"></a>课程任务  
- 在本课程中，将执行以下任务：  
+ 您将在本课中执行以下任务：  
   
 -   使用默认的概率向结构中添加关联挖掘模型  
   
 -   使用修改的概率向结构中添加关联挖掘模型  
   
-## <a name="adding-an-association-mining-model-to-the-structure-using-the-default-minimumprobability"></a>使用默认的 MINIMUM_PROBABILITY 向结构中添加关联挖掘模型  
- 第一个任务是添加新的挖掘模型向市场篮挖掘结构基于[!INCLUDE[msCoName](../includes/msconame-md.md)]关联算法使用的默认值为*MINIMUM_PROBABILITY*。  
+## <a name="adding-an-association-mining-model-to-the-structure-using-the-default-minimum_probability"></a>使用默认的 MINIMUM_PROBABILITY 向结构中添加关联挖掘模型  
+ 第一个任务是使用*MINIMUM_PROBABILITY*的默认值将新的挖掘模型添加到市场篮挖掘[!INCLUDE[msCoName](../includes/msconame-md.md)]结构中。  
   
 #### <a name="to-add-an-association-mining-model"></a>添加关联挖掘模型  
   
-1.  在中**对象资源管理器**，右键单击该实例的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，依次指向**新查询**，然后单击**DMX**。  
+1.  在**对象资源管理器**中，右键单击实例[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，指向 "**新建查询**"，然后单击 " **DMX**"。  
   
      将打开查询编辑器，其中包含一个新的空白查询。  
   
@@ -121,7 +121,7 @@ ADD MINING MODEL [<mining model name>]
     <mining structure name>   
     ```  
   
-     使用：  
+     替换为：  
   
     ```  
     [Market Basket]  
@@ -133,7 +133,7 @@ ADD MINING MODEL [<mining model name>]
     <mining model name>   
     ```  
   
-     使用：  
+     替换为：  
   
     ```  
     [Default Association]  
@@ -149,7 +149,7 @@ ADD MINING MODEL [<mining model name>]
        <nested mining model columns> )  
     ```  
   
-     使用：  
+     替换为：  
   
     ```  
     OrderNumber,  
@@ -169,7 +169,7 @@ ADD MINING MODEL [<mining model name>]
     USING <algorithm>( <algorithm parameters> )  
     ```  
   
-     使用：  
+     替换为：  
   
     ```  
     Using Microsoft_Association_Rules  
@@ -189,18 +189,18 @@ ADD MINING MODEL [<mining model name>]
     Using Microsoft_Association_Rules  
     ```  
   
-7.  上**文件**菜单上，单击**另存 dmxquery1.dmx 另存为**。  
+7.  在 "**文件**" 菜单上，单击 "**将 DMXQuery1 另存为**"。  
   
-8.  在中**另存为**对话框中，浏览到相应的文件夹，并将文件命名`Default_Association_Model.dmx`。  
+8.  在 "**另存为**" 对话框中，浏览到相应的文件夹，并将`Default_Association_Model.dmx`该文件命名为。  
   
-9. 在工具栏上，单击**Execute**按钮。  
+9. 在工具栏上，单击 "**执行**" 按钮。  
   
-## <a name="adding-an-association-mining-model-to-the-structure-changing-the-default-minimumprobability"></a>向结构中添加关联挖掘模型并更改默认的 MINIMUM_PROBABILITY  
+## <a name="adding-an-association-mining-model-to-the-structure-changing-the-default-minimum_probability"></a>向结构中添加关联挖掘模型并更改默认的 MINIMUM_PROBABILITY  
  下一个任务是根据 [!INCLUDE[msCoName](../includes/msconame-md.md)] 关联算法，向市场篮挖掘结构中添加新的挖掘模型，并将 MINIMUM_PROBABILITY 的默认值改为 0.01。 更改参数会导致 [!INCLUDE[msCoName](../includes/msconame-md.md)] 关联算法创建更多的规则。  
   
 #### <a name="to-add-an-association-mining-model"></a>添加关联挖掘模型  
   
-1.  在中**对象资源管理器**，右键单击该实例的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，依次指向**新查询**，然后单击**DMX**。  
+1.  在**对象资源管理器**中，右键单击实例[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，指向 "**新建查询**"，然后单击 " **DMX**"。  
   
      将打开查询编辑器，其中包含一个新的空白查询。  
   
@@ -212,7 +212,7 @@ ADD MINING MODEL [<mining model name>]
     <mining structure name>   
     ```  
   
-     使用：  
+     替换为：  
   
     ```  
     Market Basket  
@@ -224,7 +224,7 @@ ADD MINING MODEL [<mining model name>]
     <mining model name>   
     ```  
   
-     使用：  
+     替换为：  
   
     ```  
     [Modified Association]  
@@ -239,7 +239,7 @@ ADD MINING MODEL [<mining model name>]
        <nested mining model columns> )  
     ```  
   
-     使用：  
+     替换为：  
   
     ```  
     OrderNumber,  
@@ -256,7 +256,7 @@ ADD MINING MODEL [<mining model name>]
     USING <algorithm>( <algorithm parameters> )  
     ```  
   
-     使用：  
+     替换为：  
   
     ```  
     USING Microsoft_Association_Rules (Minimum_Probability = 0.1)  
@@ -276,11 +276,11 @@ ADD MINING MODEL [<mining model name>]
     USING Microsoft_Association_Rules (Minimum_Probability = 0.1)  
     ```  
   
-7.  上**文件**菜单上，单击**另存 dmxquery1.dmx 另存为**。  
+7.  在 "**文件**" 菜单上，单击 "**将 DMXQuery1 另存为**"。  
   
-8.  在中**另存为**对话框中，浏览到相应的文件夹，并将文件命名`Modified Association_Model.dmx`。  
+8.  在 "**另存为**" 对话框中，浏览到相应的文件夹，并将`Modified Association_Model.dmx`该文件命名为。  
   
-9. 在工具栏上，单击**Execute**按钮。  
+9. 在工具栏上，单击 "**执行**" 按钮。  
   
  在下一课中，您将处理市场篮挖掘结构及其关联的挖掘模型。  
   

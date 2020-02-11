@@ -19,19 +19,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f59763b63f4e73687620482a2c1e739fe21fb6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150734"
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>减轻生产服务器优化负荷
-  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 优化顾问依赖于查询优化器分析工作负荷并提供优化建议。 在生产服务器上执行此分析会增加服务器负荷，并且可能会在优化会话过程中影响服务器的性能。 通过除了使用生产服务器以外，再使用一台测试服务器，可以减小在优化会话过程中对服务器负荷的影响。  
+  [!INCLUDE[ssDE](../../../includes/ssde-md.md)]优化顾问依赖于查询优化器分析工作负荷并提供优化建议。 在生产服务器上执行此分析会增加服务器负荷，并且可能会在优化会话过程中影响服务器的性能。 通过除了使用生产服务器以外，再使用一台测试服务器，可以减小在优化会话过程中对服务器负荷的影响。  
   
 ## <a name="how-database-engine-tuning-advisor-uses-a-test-server"></a>数据库引擎优化顾问如何使用测试服务器  
  使用测试服务器的传统方法是将所有数据从生产服务器复制到测试服务器，优化测试服务器，然后在生产服务器上实现建议。 此过程可以消除对生产服务器的性能影响，但这不是最佳解决方案。 例如，将大量数据从生产服务器复制到测试服务器可能消耗大量时间和资源。 此外，测试服务器硬件很少像生产服务器中部署的硬件那样功能强大。 优化进程依赖于查询优化器，而它生成的建议部分依赖于基础硬件。 如果测试服务器的硬件和生产服务器的硬件不相同， [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 优化顾问建议的质量就会降低。  
   
- 为避免出现此类问题， [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 优化顾问通过将大部分优化负荷转移到测试服务器来优化生产服务器上的数据库。 它通过使用生产服务器硬件配置信息，而不是真正地将数据从生产服务器复制到测试服务器，来执行该操作。 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 优化顾问不会将实际数据从生产服务器复制到测试服务器中。 它仅复制元数据和必要的统计信息。  
+ 为避免出现此类问题， [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 优化顾问通过将大部分优化负荷转移到测试服务器来优化生产服务器上的数据库。 它通过使用生产服务器硬件配置信息，而不是真正地将数据从生产服务器复制到测试服务器，来执行该操作。 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]优化顾问不会将实际数据从生产服务器复制到测试服务器。 它仅复制元数据和必要的统计信息。  
   
  下列步骤概要介绍了用于在测试服务器上优化生产数据库的过程：  
   
@@ -45,11 +45,11 @@ ms.locfileid: "63150734"
   
      在优化进程中，数据库引擎优化顾问将在测试服务器上创建 Shell 数据库。 若要创建此 Shell 数据库并对其进行优化，数据库引擎优化顾问需要在下列情况下调用生产服务器：  
   
-    1.  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 优化顾问将元数据从生产数据库导入到测试服务器 Shell 数据库。 此元数据包括空表、索引、视图、存储过程和触发器等。 这使得对测试服务器 Shell 数据库执行工作负荷查询成为可能。  
+    1.  [!INCLUDE[ssDE](../../../includes/ssde-md.md)]优化顾问将元数据从生产数据库导入到测试服务器 shell 数据库。 此元数据包括空表、索引、视图、存储过程和触发器等。 这使得对测试服务器 Shell 数据库执行工作负荷查询成为可能。  
   
-    2.  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 优化顾问从生产服务器导入统计信息，以便查询优化器可以准确优化对测试服务器的查询。  
+    2.  [!INCLUDE[ssDE](../../../includes/ssde-md.md)]优化顾问从生产服务器导入统计信息，以便查询优化器能够准确优化测试服务器上的查询。  
   
-    3.  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 优化顾问从生产服务器导入指定处理器数和可用内存量的硬件参数，为查询优化器提供生成查询计划所需的信息。  
+    3.  [!INCLUDE[ssDE](../../../includes/ssde-md.md)]优化顾问从生产服务器导入指定处理器数和可用内存量的硬件参数，为查询优化器提供生成查询计划所需的信息。  
   
 3.  在 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 优化顾问完成优化测试服务器 Shell 数据库后，将生成优化建议。  
   
@@ -60,14 +60,17 @@ ms.locfileid: "63150734"
  ![数据库引擎优化顾问测试服务器用法](../../database-engine/media/testsvr.gif "数据库引擎优化顾问测试服务器用法")  
   
 > [!NOTE]  
->  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 优化顾问图形用户界面 (GUI) 不支持测试服务器优化功能。  
+>  
+  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 优化顾问图形用户界面 (GUI) 不支持测试服务器优化功能。  
   
 ## <a name="example"></a>示例  
  首先，请确保测试服务器和生产服务器上都存在要执行优化的用户。  
   
  将用户信息复制到测试服务器后，您即可在 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 优化顾问 XML 输入文件中定义测试服务器优化会话。 下面的 XML 输入文件示例演示如何使用 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 优化顾问来指定测试服务器优化数据库。  
   
- 在此示例中， `MyDatabaseName` 数据库在 `MyServerName`上进行优化。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本（即 `MyWorkloadScript.sql`）用作工作负荷。 此工作负荷包含对 `MyDatabaseName`执行的事件。 查询优化器对此数据库的大部分调用操作（作为优化进程的一部分发生）是由驻留在 `MyTestServerName`上的 Shell 数据库实现的。 Shell 数据库由元数据和统计信息构成。 此进程会将优化开销转移到测试服务器。 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 优化顾问使用此 XML 输入文件生成其优化建议时，它应只考虑索引 (`<FeatureSet>IDX</FeatureSet>`) 而不考虑分区，并且不需要在 `MyDatabaseName`中保留任何现有的物理设计结构。  
+ 在此示例中， `MyDatabaseName` 数据库在 `MyServerName`上进行优化。 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本（即 `MyWorkloadScript.sql`）用作工作负荷。 此工作负荷包含对 `MyDatabaseName`执行的事件。 查询优化器对此数据库的大部分调用操作（作为优化进程的一部分发生）是由驻留在 `MyTestServerName`上的 Shell 数据库实现的。 Shell 数据库由元数据和统计信息构成。 此进程会将优化开销转移到测试服务器。 
+  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 优化顾问使用此 XML 输入文件生成其优化建议时，它应只考虑索引 (`<FeatureSet>IDX</FeatureSet>`) 而不考虑分区，并且不需要在 `MyDatabaseName`中保留任何现有的物理设计结构。  
   
 ```  
 <?xml version="1.0" encoding="utf-16" ?>  
@@ -92,7 +95,7 @@ ms.locfileid: "63150734"
 </DTAXML>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用测试服务器的注意事项](considerations-for-using-test-servers.md)   
  [XML 输入文件引用（数据库引擎优化顾问）](database-engine-tuning-advisor.md)  
   

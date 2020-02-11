@@ -16,14 +16,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2ea467b00223e31ec7672d4d54a49150cf05368c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63261979"
 ---
 # <a name="sql-server-replication-publisher-properties"></a>SQL Server 复制发布服务器属性
-  本部分包含可在分发服务器和发布服务器的发布服务器属性的信息。 
+  本部分包含有关分发服务器和发布服务器上可用的发布服务器属性的信息。 
 
 ## <a name="general"></a>常规  
   **“发布服务器属性”** 对话框的 **“常规”** 页显示有关发布服务器使用的分发服务器和分发数据库的只读信息。 若要更改发布服务器的分发服务器或分发数据库，请执行以下操作：  
@@ -42,7 +42,7 @@ ms.locfileid: "63261979"
   
 -   用于 Oracle 发布的快照代理和日志读取器代理。  
   
- 选择 **“模拟代理进程帐户”** 以使用运行这些代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户的上下文连接到发布服务器，或指定 **“SQL Server 身份验证”**，然后为 **“登录名”** 和 **“密码”** 输入值。 建议选择 **“模拟代理进程帐户”**。 有关代理安全性的详细信息，请参阅[复制代理安全模式](security/replication-agent-security-model.md)。  
+ 选择 **“模拟代理进程帐户”** 以使用运行这些代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户的上下文连接到发布服务器，或指定 **“SQL Server 身份验证”** ，然后为 **“登录名”** 和 **“密码”** 输入值。 建议选择 **“模拟代理进程帐户”** 。 有关代理安全性的详细信息，请参阅[复制代理安全模式](security/replication-agent-security-model.md)。  
   
  在新建发布向导中可以指定运行这些代理的 Windows 帐户。 您可以在如下位置更改这些帐户：  
   
@@ -50,7 +50,7 @@ ms.locfileid: "63261979"
   
 -   快照代理和日志读取器代理的 **“发布属性”** 对话框。  
   
- **杂项**  
+ **其他**  
  **“发布服务器类型”** 和 **“分发数据库名称”** 都是只读属性。 可以更改 **“默认快照文件夹”** 属性。 有关快照文件夹的详细信息，请参阅[保护快照文件夹](security/secure-the-snapshot-folder.md)。  
   
 
@@ -66,16 +66,16 @@ ms.locfileid: "63261979"
 
 ## <a name="subscribers"></a>订阅服务器
 
-  “发布服务器属性”对话框的“订阅服务器”页用于运行早于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的发布服务器。 使用此页，可以启用订阅服务器以接收此发布服务器上发布的数据。 启用订阅服务器接收此发布服务器的数据，并不会创建对此发布服务器上的发布的订阅。 若要创建订阅，必须使用新建订阅向导。  
+  “发布服务器属性”对话框的“订阅服务器”页面用于运行版本低于 **的**  **发布服务器**[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。 使用此页，可以启用订阅服务器以接收此发布服务器上发布的数据。 启用订阅服务器接收此发布服务器的数据，并不会创建对此发布服务器上的发布的订阅。 若要创建订阅，必须使用新建订阅向导。  
   
 ### <a name="options"></a>选项  
  **“发布服务器属性”**  
- **“订阅服务器”** 属性网格显示了已启用的从此发布服务器上发布接收数据的订阅服务器。 单击订阅服务器旁边的属性按钮 (**...**) 可以查看和设置其他属性。  
+ **“订阅服务器”** 属性网格显示了已启用的从此发布服务器上发布接收数据的订阅服务器。 单击订阅服务器旁边的属性按钮 ( **...** ) 可以查看和设置其他属性。  
   
- **“添加”**  
- 单击 **“添加”** 以添加订阅服务器，然后可单击 **“添加 SQL Server 订阅服务器”** 或 **“添加非 SQL Server 订阅服务器”**。  
+ **添加**  
+ 单击 **“添加”** 以添加订阅服务器，然后可单击 **“添加 SQL Server 订阅服务器”** 或 **“添加非 SQL Server 订阅服务器”** 。  
 
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [查看和修改分发服务器和发布服务器属性](view-and-modify-distributor-and-publisher-properties.md)   
 
   

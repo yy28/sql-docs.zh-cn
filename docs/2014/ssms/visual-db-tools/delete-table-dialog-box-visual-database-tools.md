@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5d4f31448f9a8db6e516eff6b7cac079d9d46dfd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63316112"
 ---
 # <a name="delete-table-dialog-box-visual-database-tools"></a>“删除表”对话框 (Visual Database Tools)
@@ -28,7 +28,7 @@ ms.locfileid: "63316112"
 > [!NOTE]  
 >  DELETE 查询将从表中删除全部行。 如果希望从个别数据列中清除值，请使用 UPDATE 查询。 如果希望从表定义中删除列，或删除表本身，请使用表设计器或适用于您的数据库的数据库设计工具。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [从查询中删除表 (Visual Database Tools)](visual-database-tools.md)  
   
   

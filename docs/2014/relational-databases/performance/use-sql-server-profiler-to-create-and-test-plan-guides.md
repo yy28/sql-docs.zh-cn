@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fcdbfe9f9289ab9cc529d4d37eb27d877dfff3ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150490"
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>使用 SQL Server Profiler 创建和测试计划指南
@@ -66,7 +66,7 @@ WHERE h.OrderDate BETWEEN '20000101' and '20050101';
   
 7.  在记事本中打开该批处理文本文件，将文本复制到复制和粘贴缓冲区。  
   
-8.  创建计划指南，并将复制的文本粘贴到为 **@stmt**参数指定的引号 ( **@stmt** ) 内。 必须通过在前面再加上其他单引号来转义 **@stmt** 参数中的任何单引号。 插入这些单引号时务必小心，不要添加或删除任何其他字符。 例如，日期文本 **'** 20000101 **'** 必须分隔为 **''** 20000101 **''** 。  
+8.  创建计划指南，并将复制的文本粘贴到为 **@stmt**参数指定的引号 ( **@stmt** ) 内。 必须将参数中的任何单引号替换为**@stmt**其他单引号，才能对参数中的任何单引号进行转义。 插入这些单引号时务必小心，不要添加或删除任何其他字符。 例如，日期文本 **'** 20000101 **'** 必须分隔为 **''** 20000101 **''** 。  
   
  下面是该计划指南：  
   
@@ -96,7 +96,7 @@ EXEC sp_create_plan_guide
   
 5.  如果计划指南的类型为 OBJECT 或 SQL，则请验证 **Showplan XML** 事件是否包含您希望与查询匹配的计划指南的 **PlanGuideDB** 和 **PlanGuideName** 属性。 或者，如果计划指南的类型为 TEMPLATE，则请验证 **Showplan XML** 事件是否包含预期计划指南的 **TemplatePlanGuideDB** 和 **TemplatePlanGuideName** 属性。 这可以验证计划指南是否在运行。 这些属性包含在计划的 **\<StmtSimple>** 元素下。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [sp_create_plan_guide (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)  
   
   

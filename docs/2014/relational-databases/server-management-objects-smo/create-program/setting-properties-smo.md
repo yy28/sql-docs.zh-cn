@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f07d9b2f613ca1face8be3bb23bac78202da6655
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192145"
 ---
 # <a name="setting-properties"></a>设置属性
-  属性是存储有关对象的说明性信息的值。 例如， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]所表示的配置选项<xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A>对象的属性。 使用属性集合可以直接或间接访问属性。 直接访问属性使用以下语法：  
+  属性是存储有关对象的说明性信息的值。 例如， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]配置选项由<xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A>对象的属性表示。 使用属性集合可以直接或间接访问属性。 直接访问属性使用以下语法：  
   
  `objInstance.PropertyName`  
   
@@ -54,18 +54,19 @@ ms.locfileid: "63192145"
   
  除在部分加载状态中提供的属性之外，如果应用程序的确还需要提取额外属性，则会提交检索这些额外属性的查询，并向上扩展到完全加载状态。 这可能会在客户端和服务器之间造成不必要的通信流量。 调用 <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> 方法可以实现更多优化。 使用 <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> 方法可以指定在初始化对象时加载的属性。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> 方法设置其余应用程序或重置应用程序后的属性加载行为。 您可以使用 <xref:Microsoft.SqlServer.Management.Smo.Server.GetDefaultInitFields%2A> 方法保存原始行为，并根据需要还原。  
+ 
+  <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> 方法设置其余应用程序或重置应用程序后的属性加载行为。 您可以使用 <xref:Microsoft.SqlServer.Management.Smo.Server.GetDefaultInitFields%2A> 方法保存原始行为，并根据需要还原。  
   
 ## <a name="examples"></a>示例  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  
   
 ## <a name="getting-and-setting-a-property-in-visual-basic"></a>在 Visual Basic 中获取和设置属性  
- 此代码示例演示如何获取 <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> 对象的 <xref:Microsoft.SqlServer.Management.Smo.Information> 属性，以及如何将 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> 属性的 <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> 属性设置为 <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> 枚举类型的 `ExecuteSql` 成员。  
+ 此代码示例演示如何获取 <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> 对象的 <xref:Microsoft.SqlServer.Management.Smo.Information> 属性，以及如何将 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> 属性的 <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> 属性设置为 `ExecuteSql` 枚举类型的 <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> 成员。  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBProperties1](SMO How to#SMO_VBProperties1)]  -->  
   
 ## <a name="getting-and-setting-a-property-in-visual-c"></a>在 Visual C# 中获取和设置属性  
- 此代码示例演示如何获取 <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> 对象的 <xref:Microsoft.SqlServer.Management.Smo.Information> 属性，以及如何将 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> 属性的 <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> 属性设置为 <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> 枚举类型的 `ExecuteSql` 成员。  
+ 此代码示例演示如何获取 <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> 对象的 <xref:Microsoft.SqlServer.Management.Smo.Information> 属性，以及如何将 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> 属性的 <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> 属性设置为 `ExecuteSql` 枚举类型的 <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> 成员。  
   
 ```  
 {   
@@ -118,14 +119,14 @@ tb.Create();
 ```  
   
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-basic"></a>在 Visual Basic 中遍历对象的所有属性  
- 此代码示例遍历 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 对象的 `Properties` 集合，并将其显示在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 的输出屏幕上。  
+ 此代码示例遍历 `Properties` 对象的 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 集合，并将其显示在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 的输出屏幕上。  
   
  在本示例中，由于 <xref:Microsoft.SqlServer.Management.Smo.Property> 对象同时也是 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 关键字，因此将该对象置于方括号中。  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBProperties3](SMO How to#SMO_VBProperties3)]  -->  
   
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-c"></a>在 Visual C# 中遍历对象的所有属性  
- 此代码示例遍历 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 对象的 `Properties` 集合，并将其显示在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 的输出屏幕上。  
+ 此代码示例遍历 `Properties` 对象的 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 集合，并将其显示在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 的输出屏幕上。  
   
 ```  
 {   
@@ -150,14 +151,16 @@ sp.QuotedIdentifierStatus = false;
 ## <a name="setting-default-initialization-fields-in-visual-basic"></a>在 Visual Basic 中设置默认的初始化字段  
  此代码示例演示如何使 SMO 程序中初始化的对象属性的数目降到最低。 您必须包括 `using System.Collections.Specialized`; 语句，以便使用 <xref:System.Collections.Specialized.StringCollection> 对象。  
   
- [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 可用于将发送到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的语句的数目和此优化进行比较。  
+ 
+  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 可用于将发送到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的语句的数目和此优化进行比较。  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBDefaultInitFields1](SMO How to#SMO_VBDefaultInitFields1)]  -->  
   
 ## <a name="setting-default-initialization-fields-in-visual-c"></a>在 Visual C# 中设置默认的初始化字段  
  此代码示例演示如何使 SMO 程序中初始化的对象属性的数目降到最低。 您必须包括 `using System.Collections.Specialized`; 语句，以便使用 <xref:System.Collections.Specialized.StringCollection> 对象。  
   
- [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 可用于将发送到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的语句的数目和此优化进行比较。  
+ 
+  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 可用于将发送到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的语句的数目和此优化进行比较。  
   
 ```  
 {   

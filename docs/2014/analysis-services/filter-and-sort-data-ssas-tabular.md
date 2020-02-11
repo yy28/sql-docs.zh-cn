@@ -1,5 +1,5 @@
 ---
-title: 筛选和排序数据 (SSAS 表格) |Microsoft Docs
+title: 对数据进行筛选和排序（SSAS 表格） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: faa6198bc9fa42b55be63ec57ff49ed6703ef260
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081261"
 ---
 # <a name="filter-and-sort-data-ssas-tabular"></a>对数据进行筛选和排序（SSAS 表格）
@@ -24,9 +24,9 @@ ms.locfileid: "66081261"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|主题|Description|  
+|主题|说明|  
 |-----------|-----------------|  
-|[对表中的数据进行排序&#40;SSAS 表格&#41;](tabular-models/sort-data-in-a-table-ssas-tabular.md)对表中的数据进行排序|本主题中的任务说明如何按字母或数字对表中的数据排序。|  
-|[筛选表中的数据&#40;SSAS 表格&#41;](tabular-models/filter-data-in-a-table-ssas-tabular.md)|本主题中的任务说明如何应用自定义筛选器以控制显示行的方式。|  
+|[对 &#40;SSAS 表格&#41;的表中的数据进行排序](tabular-models/sort-data-in-a-table-ssas-tabular.md)对表中的数据进行排序|本主题中的任务说明如何按字母或数字对表中的数据排序。|  
+|[&#40;SSAS 表格&#41;筛选表中的数据](tabular-models/filter-data-in-a-table-ssas-tabular.md)|本主题中的任务说明如何应用自定义筛选器以控制显示行的方式。|  
   
   

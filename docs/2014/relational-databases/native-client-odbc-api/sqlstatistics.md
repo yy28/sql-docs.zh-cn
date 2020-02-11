@@ -1,5 +1,5 @@
 ---
-title: SQLStatistics | Microsoft Docs
+title: SQLStatistics |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 509205e0eeb2a913c8fdb4505961b8a3d4965529
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188607"
 ---
 # <a name="sqlstatistics"></a>SQLStatistics
-  **SQLStatistics**可以对静态游标执行。 尝试执行**SQLStatistics**可更新 （由键集驱动或动态） 返回 sql_success_with_info 以指示游标类型已更改。  
+  可以对静态游标执行**SQLStatistics** 。 尝试对可更新的（键集驱动或动态）执行**SQLStatistics**将返回 SQL_SUCCESS_WITH_INFO 指示游标类型已更改。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQLStatistics 函数](https://go.microsoft.com/fwlink/?LinkId=59372)   
  [ODBC API 实现细节](odbc-api-implementation-details.md)  
   
