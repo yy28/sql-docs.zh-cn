@@ -14,13 +14,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c43cb42cffba31f20b0e9717204f5475b5bb156d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012077"
 ---
-# <a name="data-formats-for-bulk-import-or-bulk-export-sql-server"></a>用于批量导入或导出的数据格式 (SQL Server)
+# <a name="data-formats-for-bulk-import-or-bulk-export-sql-server"></a>用于大容量导入或导出的数据格式 (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以接受字符数据格式或本机二进制数据格式的数据。 当在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和其他应用程序（例如， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel）或其他数据库服务器（例如，Oracle 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]）之间移动数据时，请使用字符格式。 只有在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例之间传输数据时才可以使用本机格式。  
   
  **本主题内容：**  
@@ -32,7 +32,7 @@ ms.locfileid: "66012077"
 ##  <a name="ComponentsAndConcepts"></a> 用于大容量导入或导出的数据格式  
  下表列出了不同数据显示方式和操作的源或目标一般适合使用的数据格式。  
   
-|操作|本机|Unicode 本机|字符|Unicode 字符|  
+|Operation|本机|Unicode 本机|字符|Unicode 字符|  
 |---------------|------------|--------------------|---------------|-----------------------|  
 |使用不包含任何扩展字符或双字节字符集 (DBCS) 字符的数据文件在多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间进行大容量的数据传输。 除非使用格式化文件，否则这些表的定义必须相同。|是<sup>1</sup>|-|-|-|  
 |对于 `sql_variant` 列，最好使用本机数据格式，因为本机数据格式可以保留每一个 `sql_variant` 值的元数据，这一点不同于字符格式或 Unicode 格式。|是|-|-|-|  
@@ -41,7 +41,7 @@ ms.locfileid: "66012077"
 |将数据大容量导出到要在其他程序中使用的文本文件中。|-|-|是|-|  
 |使用包含 Unicode 数据而不包含任何扩展字符或 DBCS 字符的数据文件在多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间进行大容量的数据传输。|-|-|-|是|  
   
- <sup>1</sup>中的数据大容量导出的最快方法[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用时**bcp**。  
+ <sup>1</sup>使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **bcp**时从大容量导出数据的最快方法。  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66012077"
   
 -   [导入来自早期版本的 SQL Server 的本机格式数据和字符格式数据](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据类型 (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql)   
  [在使用 bcp 时指定数据格式以获得兼容性 (SQL Server)](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)  
   

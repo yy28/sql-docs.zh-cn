@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5de4600d4f4c3d52d1757218e1f2d9b32f554286
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797671"
 ---
 # <a name="join-a-secondary-database-to-an-availability-group-sql-server"></a>将辅助数据库联接到可用性组 (SQL Server)
@@ -43,19 +43,19 @@ ms.locfileid: "72797671"
      [PowerShell](#PowerShellProcedure)  
   
 > [!NOTE]  
->  有关辅助数据库加入组后发生的情况的信息，请参阅[AlwaysOn 可用性组&#40;SQL Server&#41;的概述](overview-of-always-on-availability-groups-sql-server.md)。  
+>  有关辅助数据库加入组后会发生的情况的信息，请参阅[AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)。  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a> 先决条件  
+###  <a name="Prerequisites"></a>先决条件  
   
 -   您必须连接到承载辅助副本的服务器实例。  
   
--   该辅助副本必须已联接到可用性组。 有关详细信息，请参阅 [将辅助副本联接到可用性组 (SQL Server)](join-a-secondary-replica-to-an-availability-group-sql-server.md)中通过 PowerShell 创建和配置 AlwaysOn 可用性组。  
+-   该辅助副本必须已联接到可用性组。 有关详细信息，请参阅 [将辅助副本联接到可用性组 (SQL Server)](join-a-secondary-replica-to-an-availability-group-sql-server.md)。  
   
--   辅助数据库必须已在最近进行了准备。 有关详细信息，请参阅[手动为可用性组准备辅助数据库 (SQL Server)](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)。  
+-   辅助数据库必须已在最近进行了准备。 有关详细信息，请参阅 [为可用性组手动准备辅助数据库 (SQL Server)](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 权限  
  对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  
@@ -69,9 +69,9 @@ ms.locfileid: "72797671"
   
 3.  展开您要更改的可用性组，然后展开 **“可用性数据库”** 节点。  
   
-4.  右键单击数据库，然后单击“联接到可用性组”。  
+4.  右键单击数据库，然后单击****“联接到可用性组”。  
   
-5.  这将打开 **“将数据库联接到可用性组”** 对话框。 验证在标题栏上显示的可用性组名称以及在网格中显示的数据库名称，然后单击 **“确定”** 或单击 **“取消”** 。  
+5.  这将打开 **“将数据库联接到可用性组”** 对话框。 验证在标题栏上显示的可用性组名称以及在网格中显示的数据库名称，然后单击 **“确定”** 或单击 **“取消”**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **将辅助数据库联接到可用性组**  
@@ -84,7 +84,7 @@ ms.locfileid: "72797671"
   
      其中 *database_name* 是要联接的数据库名， *group_name* 是可用性组名。  
   
-     下面的示例将辅助数据库 `Db1`联接到 `MyAG` 可用性组的本地辅助副本。  
+     下面的示例将辅助数据库 `Db1` 联接到 `MyAG` 可用性组的本地辅助副本。  
   
     ```sql
     ALTER DATABASE Db1 SET HADR AVAILABILITY GROUP = MyAG;  
@@ -93,7 +93,7 @@ ms.locfileid: "72797671"
     > [!NOTE]  
     >  若要查看此用于上下文的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句，请参阅[创建可用性组 (Transact-SQL)](create-an-availability-group-transact-sql.md)。  
   
-##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
+##  <a name="PowerShellProcedure"></a>使用 PowerShell  
  **将辅助数据库联接到可用性组**  
   
 1.  切换目录 (`cd`) 到承载辅助副本的服务器实例。  
@@ -109,9 +109,9 @@ ms.locfileid: "72797671"
     > [!NOTE]  
     >  若要查看 cmdlet 的语法，请在 `Get-Help` PowerShell 环境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
- **设置和使用 SQL Server PowerShell 提供程序**  
+ **设置并使用 SQL Server PowerShell 提供程序**  
   
--   [SQL Server PowerShell 提供程序](../../../powershell/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
   
@@ -120,6 +120,6 @@ ms.locfileid: "72797671"
 -   [为可用性组手动准备辅助数据库 (SQL Server)](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [ALTER AVAILABILITY GROUP (Transact-SQL)](/sql/t-sql/statements/alter-availability-group-transact-sql)   
- [ &#40;AlwaysOn 可用性组 SQL Server&#41;  概述](overview-of-always-on-availability-groups-sql-server.md)  
- [删除 SQL Server&#41;AlwaysOn 可用性组&#40;配置的疑难解答](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+ [更改可用性组 &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)   
+ [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [&#41;删除 AlwaysOn 可用性组配置 &#40;SQL Server 的疑难解答](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  

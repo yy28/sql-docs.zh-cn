@@ -17,16 +17,16 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 465416e87966ba3a80c8e98394c0b1f2009f591b
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73844463"
 ---
-# <a name="sysdatabase_service_objectives-azure-sql-database"></a>sys. database_service_objectives （Azure SQL Database）
+# <a name="sysdatabase_service_objectives-azure-sql-database"></a>sys.database_service_objectives (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
-返回 Azure SQL 数据库或 Azure SQL 数据仓库的版本（服务层）、服务目标（定价层）和弹性池名称（如果有）。 如果登录到 Azure SQL 数据库服务器中的 master 数据库，则将返回有关所有数据库的信息。 对于 Azure SQL 数据仓库，必须连接到 master 数据库。  
+返回 Azure SQL 数据库或 Azure SQL 数据仓库的版本（服务层）、服务目标（定价层）和弹性池名称（如果有）。 如果已登录到 Azure SQL 数据库服务器中的 master 数据库，则会返回所有数据库的相关信息。 对于 Azure SQL 数据仓库，必须连接到 master 数据库。  
   
   
  有关定价的信息，请参阅[Sql 数据库选项和性能： Sql 数据库定价](https://azure.microsoft.com/pricing/details/sql-database/)和[Sql 数据仓库定价](https://azure.microsoft.com/pricing/details/sql-data-warehouse/)。  
@@ -37,8 +37,8 @@ ms.locfileid: "73844463"
   
 |列名|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|database_id|int|数据库的 ID，在 Azure SQL 数据库服务器的实例中是唯一的。 可加入 with [Sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。|  
-|版本|sysname|数据库或数据仓库的服务层：**基本**、**标准**、**高级**或**数据仓库**。|  
+|database_id|int|数据库的 ID，在 Azure SQL 数据库服务器的实例中是唯一的。 可加入与[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。|  
+|edition|sysname|数据库或数据仓库的服务层：**基本**、**标准**、**高级**或**数据仓库**。|  
 |service_objective|sysname|数据库的定价层。 如果数据库位于弹性池中，则返回**ElasticPool**。<br /><br /> 在**基本**层上，返回**basic**。<br /><br /> **标准服务层中的单一数据库**返回以下项之一： S0、S1、S2、S3、S4、S6、S7、S9 或 S12。<br /><br /> **高级层中的单一数据库**返回以下各项： P1、P2、P4、P6、P11 或 P15。<br /><br /> **SQL 数据仓库**通过 DW30000C 返回 DW100。<br /><br /> 有关详细信息，请参阅[单一数据库](/azure/sql-database/sql-database-dtu-resource-limits-single-databases/)、[弹性池](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools/)、[数据仓库](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu/)|  
 |elastic_pool_name|sysname|数据库所属的[弹性池](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)的名称。 如果数据库为单一数据库或数据 warehoue，则返回**NULL** 。|  
   

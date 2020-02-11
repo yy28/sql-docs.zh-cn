@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9f00eb93492ca150278800c4bbdfa3565550fdef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721939"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
@@ -48,7 +48,7 @@ ms.locfileid: "62721939"
   
 -   使用复制向导或  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的用户。 有关详细信息，请参阅 [Scripting Replication](../scripting-replication.md)。  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 列中的一个值匹配。 有关详细信息，请参阅 [Scripting Replication](../scripting-replication.md)。  
   
 -   使用复制管理对象 (RMO) 以编程方式生成脚本，从而创建 RMO 对象。  
   
@@ -127,7 +127,7 @@ GO
  创建完复制脚本后，可以通过下列方式之一执行所创建的复制脚本：  
   
 ### <a name="creating-a-sql-query-file-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中创建一个 SQL 查询文件  
- 可以将复制 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本文件创建为 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 项目中的 SQL 查询文件。 编写完脚本后，可以为此查询文件创建一个与数据库的连接，然后即可执行该脚本。 有关如何创建详细信息[!INCLUDE[tsql](../../../includes/tsql-md.md)]使用的脚本[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]，请参阅[查询和文本编辑器&#40;SQL Server Management Studio&#41;](../../scripting/query-and-text-editors-sql-server-management-studio.md))。  
+ 可以将复制 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本文件创建为 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 项目中的 SQL 查询文件。 编写完脚本后，可以为此查询文件创建一个与数据库的连接，然后即可执行该脚本。 有关如何使用[!INCLUDE[tsql](../../../includes/tsql-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]创建脚本的详细信息，请参阅[查询和文本编辑器 &#40;SQL Server Management Studio&#41;](../../scripting/query-and-text-editors-sql-server-management-studio.md)）。  
   
  若要使用包含脚本变量的脚本，[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 必须在 **sqlcmd** 模式下运行。 在 **sqlcmd** 模式下，查询编辑器可接受特定于 **sqlcmd** 的附加语法，如可用于变量值的 `:setvar`。 有关 **sqlcmd** 模式的详细信息，请参阅[使用查询编辑器编辑 SQLCMD 脚本](../../scripting/edit-sqlcmd-scripts-with-query-editor.md)。 在下面的脚本中，`:setvar` 用于为 `$(DistPubServer)` 变量提供值。  
   
@@ -153,13 +153,13 @@ SET @publisher = $(DistPubServer);
 ```  
   
 ### <a name="using-the-sqlcmd-utility-from-the-command-line"></a>从命令行使用 sqlcmd 实用工具  
- 下面的示例说明如何在命令行中使用 [sqlcmd 实用工具](../../../tools/sqlcmd-utility.md)来执行 `instdistpub.sql` 脚本文件：  
+ 下面的示例说明如何在命令行中使用 `instdistpub.sql`sqlcmd 实用工具[来执行 ](../../../tools/sqlcmd-utility.md) 脚本文件：  
   
 ```  
 sqlcmd.exe -E -S sqlserverinstance -i C:\instdistpub.sql -o C:\output.log -v DistPubServer="N'MyDistributorAndPublisher'"  
 ```  
   
- 在此示例中，`-E` 开关指示连接 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时使用 Windows 身份验证。 使用 Windows 身份验证时，不需要在脚本文件中存储用户名和密码。 脚本文件的名称和路径是通过 `-i` 开关指定的，输出文件的名称是通过 `-o` 开关指定的（使用此开关时，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的输出将写入此文件，而不是控制台）。 在 `sqlcmd` 实用工具中使用 `-v` 开关，可以在运行时向 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本传递脚本变量。 在此示例中，`sqlcmd` 在执行前将脚本中的每个 `$(DistPubServer)` 实例替换为值 `N'MyDistributorAndPublisher'`。  
+ 在此示例中，`-E` 开关指示连接 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时使用 Windows 身份验证。 使用 Windows 身份验证时，不需要在脚本文件中存储用户名和密码。 脚本文件的名称和路径是通过 `-i` 开关指定的，输出文件的名称是通过 `-o` 开关指定的（使用此开关时，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的输出将写入此文件，而不是控制台）。 在 `sqlcmd` 实用工具中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 开关，可以在运行时向 `-v` 脚本传递脚本变量。 在此示例中，`sqlcmd` 在执行前将脚本中的每个 `$(DistPubServer)` 实例替换为值 `N'MyDistributorAndPublisher'`。  
   
 > [!NOTE]  
 >  `-X` 开关可禁用脚本变量。  
@@ -222,7 +222,7 @@ REM -- The following must be supplied on one line.
   
 -   同步请求订阅  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [复制编程概念](replication-programming-concepts.md)   
  [复制存储过程 &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql)   
  [编写复制脚本](../scripting-replication.md)  
