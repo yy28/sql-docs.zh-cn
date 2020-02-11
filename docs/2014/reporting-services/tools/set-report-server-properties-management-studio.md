@@ -13,22 +13,22 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8c6dd1e22f90b834f5683a53d7b206dd1c8ad46e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099505"
 ---
 # <a name="set-report-server-properties-management-studio"></a>设置报表服务器属性 (Management Studio)
-  可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中设置报表服务器系统属性以启用功能或设置服务器默认值。  
+  您可以在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]设置 Report Server 系统属性以启用功能或设置服务器默认值。  
   
 ### <a name="to-open-the-advanced-server-properties-page"></a>打开“高级服务器属性”页  
   
 1.  启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 并连接到报表服务器实例。  
   
-2.  右键单击报表服务器节点，然后选择“属性”  。 单击 **“高级”** 以打开属性页。 有关各属性的说明，请参阅[服务器属性（“高级”页）- Reporting Services](server-properties-advanced-page-reporting-services.md)。  
+2.  右键单击报表服务器节点，然后选择“属性”****。 单击 **“高级”** 以打开属性页。 有关各属性的说明，请参阅[服务器属性（“高级”页）- Reporting Services](server-properties-advanced-page-reporting-services.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在 Management Studio 中连接到报表服务器](connect-to-a-report-server-in-management-studio.md)   
  [报表服务器系统属性](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  
   

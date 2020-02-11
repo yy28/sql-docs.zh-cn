@@ -1,5 +1,5 @@
 ---
-title: 使用 ADO 与 ADO MD |Microsoft Docs
+title: 将 ADO 用于 ADO MD |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,20 +13,20 @@ ms.assetid: cfae435e-2ac3-4312-8c1e-9ca4a74cd875
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d3c634ec056d42e97dcbea3422a0e19a33596d54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923147"
 ---
 # <a name="using-ado-with-ado-md"></a>使用 ADO 与 ADO MD
-ADO 和 ADO MD 相关但独立的对象模型。 ADO 提供的对象用于连接到数据源、 执行命令、 检索表格格式数据和架构元数据以表格格式和查看提供程序错误的信息。 ADO MD 提供用于检索多维数据和查看多维架构元数据的对象。  
+ADO 和 ADO MD 与不同的对象模型相关。 ADO 提供用于连接到数据源、执行命令、以表格格式检索表格数据和架构元数据以及查看提供程序错误信息的对象。 ADO MD 提供用于检索多维数据和查看多维架构元数据的对象。  
   
- 当您处理 MDP，您可以选择使用 ADO、 ADO MD 和 / 或与你的应用程序。 通过引用在项目中的这两个库，将具有完全访问权限 MDP 提供的功能。  
+ 当使用 MDP 时，可以选择将 ADO 和/或 ADO MD 用于应用程序。 通过在你的项目中引用这两个库，你将对 MDP 提供的功能具有完全访问权限。  
   
- 它是经常用于使用者能够获取多维数据集的平展的表格视图。 您可以执行此操作使用 ADO[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。 指定的源你[单元集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)作为***源***参数[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法**记录集**，而不是作为源ADO MD**单元集**。  
+ 通常，使用者可以获取多维数据集的平展表格视图。 可以通过使用 ADO[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象来执行此操作。 指定[单元](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)集的源作为**记录集**的[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法的***源***参数，而不是作为 ADO MD**单元集**的源。  
   
- 它还可能非常有用，若要查看架构元数据中的表格视图，而不是对象的层次结构。 ADO [OpenSchema](../../../ado/reference/ado-api/openschema-method.md)方法[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象允许用户打开**记录集**包含架构信息。 ***QueryType***的参数**OpenSchema**方法具有多个[SchemaEnum](../../../ado/reference/ado-api/schemaenum.md)与 Mdp 特别相关的值。 其值如下所示：  
+ 在表格视图中查看架构元数据（而不是对象的层次结构）可能也很有用。 使用[Connection](../../../ado/reference/ado-api/connection-object-ado.md)对象上的 ADO [OpenSchema](../../../ado/reference/ado-api/openschema-method.md)方法，用户可以打开包含架构信息的**记录集**。 **OpenSchema**方法的***QueryType***参数具有几个特定于 MDPs 的[SchemaEnum](../../../ado/reference/ado-api/schemaenum.md)值。 其值如下所示：  
   
 -   **adSchemaCubes**  
   
@@ -40,13 +40,13 @@ ADO 和 ADO MD 相关但独立的对象模型。 ADO 提供的对象用于连接
   
 -   **adSchemaMembers**  
   
- 若要使用 ADO MD 属性或方法使用 ADO 枚举值，你的项目必须引用 ADO 和 ADO MD 库。 例如，可以使用 ADO **adState**枚举值与 ADO MD[状态](../../../ado/reference/ado-md-api/state-property-ado-md.md)属性。 有关如何建立对库的引用的详细信息，请参阅你的开发工具的文档。  
+ 若要在 ADO MD 属性或方法中使用 ADO 枚举值，你的项目必须同时引用 ADO 和 ADO MD 库。 例如，可以将 ADO **adState**枚举值用于 ADO MD[状态](../../../ado/reference/ado-md-api/state-property-ado-md.md)属性。 有关如何建立对库的引用的详细信息，请参阅开发工具的文档。  
   
- ADO 对象和方法有关的详细信息，请参阅[ADO API 参考](../../../ado/reference/ado-api/ado-api-reference.md)。  
+ 有关 ADO 对象和方法的详细信息，请参阅[ADO API 参考](../../../ado/reference/ado-api/ado-api-reference.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ADO MD 对象模型](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
- [ADO （多维） (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
+ [ADO （多维）（ADO MD）](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
  [多维架构和数据的概述](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
- [使用 ADO MD 进行编程](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
+ [用 ADO MD 进行编程](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
  [使用多维数据](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a00b07bb54d30d4e1db49cf2db70dec8286b27e0
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798292"
 ---
 # <a name="create-a-schedule"></a>Create a Schedule
@@ -27,7 +27,7 @@ ms.locfileid: "72798292"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要创建计划，可使用：**  
   
@@ -46,23 +46,23 @@ ms.locfileid: "72798292"
   
 #### <a name="to-create-a-schedule"></a>创建计划  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
+1.  在**对象资源管理器中，** 连接到的[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例，然后展开该实例。  
   
-2.  展开 **“SQL Server 代理”** ，右键单击 **“作业”** ，然后单击 **“管理计划”** 。  
+2.  展开 **“SQL Server 代理”**，右键单击 **“作业”**，然后单击 **“管理计划”**。  
   
-3.  在 **“管理计划”** 对话框中，单击 **“新建”** 。  
+3.  在 **“管理计划”** 对话框中，单击 **“新建”**。  
   
 4.  在 **“名称”** 框中，键入新计划的名称。  
   
 5.  如果不希望计划在创建后立即生效，请清除 **“启用”** 复选框。  
   
-6.  对于 **“计划类型”** ，请选择下列操作之一：  
+6.  对于 **“计划类型”**，请选择下列操作之一：  
   
-    -   若要在 CPU 达到空闲条件时启动作业，请单击 **“CPU 空闲时启动”** 。  
+    -   若要在 CPU 达到空闲条件时启动作业，请单击 **“CPU 空闲时启动”**。  
   
-    -   如果希望反复运行计划，请单击 **“重复执行”** 。 若要设置重复执行的计划，请完成对话框上的 **“频率”** 、 **“每天频率”** 和 **“持续时间”** 组。  
+    -   如果希望反复运行计划，请单击 **“重复执行”**。 若要设置重复执行的计划，请完成对话框上的 **“频率”**、 **“每天频率”** 和 **“持续时间”** 组。  
   
-    -   如果希望仅运行一次计划，请单击 **“执行一次”** 。 若要设置 **“执行一次”** 计划，请完成对话框上的 **“执行一次”** 组。  
+    -   如果希望仅运行一次计划，请单击 **“执行一次”**。 若要设置“执行一次”**** 计划，请完成对话框上的“执行一次”**** 组。  
   
 ##  <a name="TSQL"></a> 使用 Transact-SQL  
   
@@ -72,7 +72,7 @@ ms.locfileid: "72798292"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```sql
     -- creates a schedule named RunOnce.   
@@ -88,7 +88,7 @@ ms.locfileid: "72798292"
     GO  
     ```  
   
- 有关详细信息，请[参阅&#40;sp_add_schedule transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql)。  
+ 有关详细信息，请参阅[&#40;transact-sql&#41;sp_add_schedule ](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql)。  
   
 ##  <a name="SMO"></a>使用 SQL Server 管理对象  
  **创建计划**  

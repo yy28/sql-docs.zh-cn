@@ -20,18 +20,18 @@ ms.assetid: e3c1356a-5db7-4186-85fd-8b74633317e8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f33d55cc8ac5dab37ce200a5a654bcb4be7cc9ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67911365"
 ---
 # <a name="sqlgetdata-function"></a>SQLGetData 函数
-**符合性**  
- 版本引入了：ODBC 1.0 标准符合性：ISO 92  
+**度**  
+ 引入的版本： ODBC 1.0 标准符合性： ISO 92  
   
- **摘要**  
- **SQLGetData**检索结果集中的单个列或之后的单个参数数据**SQLParamData**返回 SQL_PARAM_DATA_AVAILABLE。 它可以多次调用来检索部分中的可变长度数据。  
+ **总结**  
+ **SQLGetData**检索结果集中单个列的数据，或在**SQLParamData**返回 SQL_PARAM_DATA_AVAILABLE 之后为单个参数检索数据。 可以多次调用此方法，以便在部分中检索可变长度数据。  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,174 +48,174 @@ SQLRETURN SQLGetData(
   
 ## <a name="arguments"></a>参数  
  *StatementHandle*  
- [输入]语句句柄。  
+ 送语句句柄。  
   
  *Col_or_Param_Num*  
- [输入]对于检索列数据，它是列的要为其返回数据数。 结果集列在不断增加的列顺序从 1 开始编号。 书签列是列号为 0;这可以是仅在指定是否启用书签。  
+ 送若要检索列数据，它是要为其返回数据的列的编号。 结果集列按递增的列顺序编号，从1开始。 Bookmark 列的列号为 0;仅当启用书签时才能指定。  
   
- 用于检索参数数据，它是从 1 开始的参数的序号。  
+ 对于检索参数数据，它是参数的序号，从1开始。  
   
  *TargetType*  
- [输入]C 数据类型的类型标识符 **TargetValuePtr*缓冲区。 有关有效的 C 数据类型和类型标识符的列表，请参阅[C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)附录 d： 中的部分数据类型。  
+ 送**TargetValuePtr*缓冲区的 C 数据类型的类型标识符。 有关有效 C 数据类型和类型标识符的列表，请参阅附录 D：数据类型中的[C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)部分。  
   
- 如果*TargetType*是 SQL_ARD_TYPE，驱动程序使用 ARD SQL_DESC_CONCISE_TYPE 字段中指定的类型标识符。 如果*TargetType*是 SQL_APD_TYPE， **SQLGetData**将使用相同的 C 数据类型中指定**SQLBindParameter**。 C 数据类型中的指定，否则**SQLGetData**重写中指定的 C 数据类型**SQLBindParameter**。 如果它为 SQL_C_DEFAULT，驱动程序将选择基于源的 SQL 数据类型的默认 C 数据类型。  
+ 如果 SQL_ARD_TYPE *TargetType* ，驱动程序将使用在 ARD 的 SQL_DESC_CONCISE_TYPE 字段中指定的类型标识符。 如果 SQL_APD_TYPE *TargetType* ，则**SQLGetData**将使用**SQLBindParameter**中指定的相同 C 数据类型。 否则，在**SQLGetData**中指定的 c 数据类型将重写**SQLBindParameter**中指定的 c 数据类型。 如果 SQL_C_DEFAULT，则驱动程序将基于源的 SQL 数据类型选择默认的 C 数据类型。  
   
- 此外可以指定扩展的 C 数据类型。 有关详细信息，请参阅[ODBC 中的 C 数据类型](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)。  
+ 还可以指定扩展的 C 数据类型。 有关详细信息，请参阅[ODBC 中的 C 数据类型](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)。  
   
  *TargetValuePtr*  
- [输出]指向用于返回数据缓冲区的指针。  
+ 输出指向要返回数据的缓冲区的指针。  
   
  *TargetValuePtr*不能为 NULL。  
   
  *BufferLength*  
- [输入]长度 **TargetValuePtr*以字节为单位的缓冲区。  
+ 送**TargetValuePtr*缓冲区的长度（以字节为单位）。  
   
- 驱动程序使用*BufferLength*以免超出末尾的编写\* *TargetValuePtr*缓冲时返回可变长度数据，如字符或二进制数据。 请注意，驱动程序将 null 终止字符，返回字符数据时记\* *TargetValuePtr*。 **TargetValuePtr*因此必须包含 null 终止字符的空间或驱动程序将截断数据。  
+ 驱动程序使用*BufferLength*来避免在返回长度可变的数据\*（如字符或二进制数据）时，写入超过*TargetValuePtr*缓冲区的末尾。 请注意，在将字符数据返回到\* *TargetValuePtr*时，驱动程序会对 null 终止字符进行计数。 *因此， *TargetValuePtr*必须包含 null 终止字符的空间，否则，驱动程序会截断数据。  
   
- 当驱动程序返回固定长度的数据，如整数或日期结构时，驱动程序会忽略*BufferLength*并假定缓冲区足够大以保存数据。 因此对于应用程序为固定长度的数据分配足够大的缓冲区或驱动程序将写入缓冲区的结束。  
+ 当驱动程序返回固定长度的数据（如整数或日期结构）时，驱动程序将忽略*BufferLength* ，并假定缓冲区足以容纳数据。 因此，应用程序必须为固定长度的数据分配足够大的缓冲区，否则驱动程序将写入超过缓冲区的末尾。  
   
- **SQLGetData**返回 SQLSTATE HY090 （字符串或缓冲区长度无效） 时*BufferLength*是小于 0，但不是在时*BufferLength*为 0。  
+ 当*BufferLength*小于0但当*BufferLength*为0时， **SQLGetData**返回 SQLSTATE HY090 （无效的字符串或缓冲区长度）。  
   
  *StrLen_or_IndPtr*  
- [输出]要返回的长度或指示器值在其中的缓冲区的指针。 如果这是 null 指针，则返回没有长度或指示器的值。 这将返回错误时要提取的数据为 NULL。  
+ 输出一个指针，指向要返回其长度或指示器值的缓冲区。 如果这是 null 指针，则不返回长度或指示器值。 当提取的数据为空时，这将返回错误。  
   
- **SQLGetData**可以返回的长度/指示器缓冲区中的以下值：  
+ **SQLGetData**可以返回长度/指示器缓冲区中的以下值：  
   
--   可用于返回的数据的长度  
+-   可供返回的数据的长度  
   
 -   SQL_NO_TOTAL  
   
 -   SQL_NULL_DATA  
   
- 有关详细信息，请参阅[使用长度/指示器值](../../../odbc/reference/develop-app/using-length-and-indicator-values.md)和本主题中的"注释"。  
+ 有关详细信息，请参阅本主题中的[使用长度/指示器值](../../../odbc/reference/develop-app/using-length-and-indicator-values.md)和 "注释"。  
   
 ## <a name="returns"></a>返回  
- SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_NO_DATA、 SQL_STILL_EXECUTING、 SQL_ERROR 或 SQL_INVALID_HANDLE。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_NO_DATA、SQL_STILL_EXECUTING、SQL_ERROR 或 SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>诊断  
- 当**SQLGetData**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，可以通过调用获取关联的 SQLSTATE 值**SQLGetDiagRec**与*HandleType*的SQL_HANDLE_STMT 和一个*处理*的*StatementHandle*。 下表列出了通常返回的 SQLSTATE 值**SQLGetData** ，并解释了此函数; 每个上下文中的表示法"（数据挖掘）"之前 SQLSTATEs 返回由驱动程序管理器的说明。 与每个 SQLSTATE 值关联的返回代码是 SQL_ERROR，除非另有说明。  
+ 当**SQLGetData**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 时，可以通过使用*HandleType*的 SQL_HANDLE_STMT 和*StatementHandle*的*句柄*调用**SQLGetDiagRec**来获取关联的 SQLSTATE 值。 下表列出了通常由**SQLGetData**返回的 SQLSTATE 值，并对该函数的上下文中的每个值进行了说明："（DM）" 表示法位于驱动程序管理器返回的 SQLSTATEs 的说明之前。 除非另有说明，否则与每个 SQLSTATE 值相关联的返回代码将 SQL_ERROR。  
   
-|SQLSTATE|Error|描述|  
+|SQLSTATE|错误|说明|  
 |--------------|-----------|-----------------|  
-|01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
-|01004|字符串数据，右截断|并非所有指定列的数据*Col_or_Param_Num*，可以在对函数的单个调用中检索。 SQL_NO_TOTAL 或保留在之前的当前调用的指定列中的数据的长度**SQLGetData**中返回\* *StrLen_or_IndPtr*。 （函数返回 SQL_SUCCESS_WITH_INFO。）<br /><br /> 有关详细信息进行多次调用**SQLGetData**单个列，请参阅"注释"。|  
-|01S07|截断小数部分|返回一个或多个列的数据已被截断。 对于数值数据类型，数字的小数部分被截断。 对于时间、 时间戳和 interval 数据类型包含时间部分，时间的小数部分被截断。<br /><br /> （函数返回 SQL_SUCCESS_WITH_INFO。）|  
-|07006|受限制的数据类型属性冲突|在结果集中的列的数据值不能转换为参数指定的 C 数据类型*TargetType*。|  
-|07009|描述符索引无效|为参数指定的值*Col_or_Param_Num*为 0，并将 SQL_ATTR_USE_BOOKMARKS 语句属性设置为 SQL_UB_OFF。<br /><br /> 为参数指定的值*Col_or_Param_Num*大于结果集中的列数。<br /><br /> *Col_or_Param_Num*值不是等于提供的参数的序号。<br /><br /> (DM) 指定的列被绑定。 此说明不适用于返回 SQL_GD_BOUND 位掩码中的 SQL_GETDATA_EXTENSIONS 选项的驱动程序**SQLGetInfo**。<br /><br /> (DM) 指定的列数为小于或等于最大的绑定列数。 此说明不适用于返回 SQL_GD_ANY_COLUMN 位掩码中的 SQL_GETDATA_EXTENSIONS 选项的驱动程序**SQLGetInfo**。<br /><br /> (DM) 已调用应用程序**SQLGetData**当前行; 在当前调用中指定的列数已在前面的调用; 中指定的列数小于和驱动程序不会返回 SQL_GD_ANY_ORDER SQL_GETDATA_EXTENSIONS 选项中的位掩码**SQLGetInfo**。<br /><br /> （数据挖掘） *TargetType*参数为 SQL_ARD_TYPE，并*Col_or_Param_Num* ARD 中的描述符记录未通过一致性检查。<br /><br /> （数据挖掘） *TargetType*参数为 SQL_ARD_TYPE，和 ARD SQL_DESC_COUNT 字段中的值是小于*Col_or_Param_Num*参数。|  
-|08S01|通讯链接失败|该驱动程序和驱动程序已连接到数据源之间的通信链接失败之前函数已完成处理。|  
-|22002|需要指示器变量，但未提供|*StrLen_or_IndPtr*是空指针，而 NULL 的数据检索。|  
-|22003|数值超出范围|为列 （为数字或字符串） 返回的数字值将导致要截断的数字的整个 （而不是小数） 部分。<br /><br /> 有关详细信息，请参阅[附录 d:数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。|  
-|22007|日期时间格式无效|在结果集中的字符列已绑定到 C 日期、 时间或时间戳结构和列中的值分别是无效的日期、 时间戳。 有关详细信息，请参阅[附录 d:数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。|  
-|22012|被零除|返回导致被零除的算术表达式中的值。|  
-|22015|间隔字段溢出|将分配从精确数字或时间间隔 SQL 类型到 C 间隔类型前导字段中时导致重要数字丢失。<br /><br /> 当数据返回到 C 间隔类型，时没有 C 间隔类型中的 SQL 类型的值的表示形式。|  
-|22018|转换指定的字符值无效|结果集中的字符列已返回到 C 字符缓冲区，并且该列包含出现没有缓冲区的字符集中的表示形式的字符。<br /><br /> C 类型为精确或近似数值、 日期时间或间隔数据类型;列的 SQL 类型是字符数据类型;和列中的值不是有效的绑定 C 类型的文本。|  
-|24000|游标状态无效|(DM) 而无需第一个调用调用函数**SQLFetch**或**SQLFetchScroll**若要将光标放在所需的数据行。<br /><br /> （数据挖掘） *StatementHandle*处于执行状态，但无结果集与关联*StatementHandle*。<br /><br /> 在打开游标的*StatementHandle*并**SQLFetch**或**SQLFetchScroll**已调用一样，但该游标所处的结果集或之后在开始之前结果集的末尾。|  
-|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义任何特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中*MessageText*缓冲区描述错误以及其原因。|  
-|HY001|内存分配错误|该驱动程序无法分配支持执行或完成该函数所需的内存。|  
-|HY003|超出范围的程序类型|(DM) 参数*TargetType*不是有效的数据类型、 SQL_C_DEFAULT、 SQL_ARD_TYPE （发生时检索列数据） 或 SQL_APD_TYPE （发生时检索参数数据）。<br /><br /> (DM) 参数*Col_or_Param_Num*是 0，并且该参数*TargetType*未 SQL_C_BOOKMARK 定长书签或 SQL_C_VARBOOKMARK 长度可变的书签。|  
-|HY008|操作已取消|异步处理的已启用*StatementHandle*。 调用该函数，和之前执行完毕**SQLCancel**或**SQLCancelHandle**上调用了*StatementHandle*，然后调用该函数是在上再次*StatementHandle*。<br /><br /> 调用该函数，和之前执行完毕**SQLCancel**或**SQLCancelHandle**上调用了*StatementHandle*来自不同线程中多线程应用程序，然后在函数上调用了再次*StatementHandle*。|  
-|HY009|使用空指针无效|(DM) 参数*TargetValuePtr*是空指针。|  
-|HY010|函数序列错误|(DM) 指定*StatementHandle*当时不处于执行状态。 调用函数时没有首先调用**SQLExecDirect**， **SQLExecute**或目录函数。<br /><br /> (DM) 为与之关联的连接句柄调用以异步方式执行的函数*StatementHandle*。 此异步函数仍在执行时**SQLGetData**调用函数。<br /><br /> (DM) 的调用以异步方式执行的函数 （不是此类似） *StatementHandle*和仍在执行时调用此函数。<br /><br /> （数据挖掘） **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或者**SQLSetPos**曾为*StatementHandle*和返回 SQL_NEED_DATA。 数据已发送的所有执行时数据参数或列之前调用此函数。<br /><br /> （数据挖掘） *StatementHandle*处于执行状态，但无结果集与关联*StatementHandle*。<br /><br /> 调用**SQLExeceute**， **SQLExecDirect**，或**SQLMoreResults**返回 SQL_PARAM_DATA_AVAILABLE，但**SQLGetData**调用而不是**SQLParamData**。|  
-|HY013|内存管理错误|无法处理函数调用，因为基础内存对象无法访问，可能是由于内存不足的情况。|  
-|HY090|字符串或缓冲区长度无效|(DM) 为参数指定的值*BufferLength*小于 0。<br /><br /> 为参数指定的值*BufferLength*为小于 4， *Col_or_Param_Num*参数设置为 0，并且司机的 ODBC 2 *.x*驱动程序。|  
-|HY109|无效的游标位置|游标被置于 (通过**SQLSetPos**， **SQLFetch**， **SQLFetchScroll**，或者**SQLBulkOperations**) 已删除的行无法提取或。<br /><br /> 游标的只进游标，并且行集大小大于 1。|  
-|HY117|由于未知的事务状态而挂起连接。 仅断开连接，并允许使用只读的函数。|(DM) 有关挂起状态的详细信息，请参阅[SQLEndTran 函数](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
-|HYC00|未实现的可选功能|驱动程序或数据源不支持使用**SQLGetData**与中的多个行**SQLFetchScroll**。 此说明不适用于返回 SQL_GD_BLOCK 位掩码中的 SQL_GETDATA_EXTENSIONS 选项的驱动程序**SQLGetInfo**。<br /><br /> 驱动程序或数据源不支持指定的组合来转换*TargetType*参数和相应的列的 SQL 数据类型。 此错误仅适用于 SQL 数据类型的列映射到特定于驱动程序的 SQL 数据类型。<br /><br /> 该驱动程序支持 ODBC 2 仅 *.x*，并将参数*TargetType*是以下之一：<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> 和中列出的 C 间隔数据类型的任何[C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)中附录 d:数据类型。<br /><br /> 该驱动程序仅支持之前需 3.50 和参数的 ODBC 版本*TargetType*已 SQL_C_GUID。|  
-|HYT01|连接超时时间已到|连接超时期限过期之前的数据源响应此请求。 通过设置连接超时期**SQLSetConnectAttr**，SQL_ATTR_CONNECTION_TIMEOUT。|  
-|IM001|驱动程序不支持此函数|(DM) 对应的驱动程序*StatementHandle*不支持该函数。|  
-|IM017|轮询异步通知模式中禁用|只要使用通知模型，将禁用轮询。|  
-|IM018|**SQLCompleteAsync**尚未调用以完成此句柄上以前的异步操作。|如果句柄上的上一个函数调用返回 SQL_STILL_EXECUTING，如果启用通知模式，则**SQLCompleteAsync**必须要对其进行后期处理并完成该操作的句柄上调用。|  
+|01000|一般警告|驱动程序特定的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
+|01004|字符串数据，右截断|并非指定列*Col_or_Param_Num*的所有数据都可以在对函数的单个调用中进行检索。 SQL_NO_TOTAL 或当前调用**SQLGetData**之前指定列中剩余数据的长度，将在\* *StrLen_or_IndPtr*中返回。 （函数返回 SQL_SUCCESS_WITH_INFO。）<br /><br /> 有关对单个列使用多个**SQLGetData**调用的详细信息，请参阅 "注释"。|  
+|01S07|小数截断|为一列或多列返回的数据被截断。 对于数值数据类型，数值的小数部分被截断。 对于包含时间部分的时间、时间戳和间隔数据类型，时间的小数部分将被截断。<br /><br /> （函数返回 SQL_SUCCESS_WITH_INFO。）|  
+|07006|受限制的数据类型属性冲突|结果集中的列的数据值无法转换为参数*TargetType*指定的 C 数据类型。|  
+|07009|描述符索引无效|为参数*Col_or_Param_Num*指定的值为0，而 SQL_ATTR_USE_BOOKMARKS 语句特性设置为 SQL_UB_OFF。<br /><br /> 为参数*Col_or_Param_Num*指定的值大于结果集中的列数。<br /><br /> *Col_or_Param_Num*值不等于可用的参数的序号。<br /><br /> （DM）指定的列已绑定。 此说明不适用于为**SQLGetInfo**中的 "SQL_GETDATA_EXTENSIONS" 选项返回 SQL_GD_BOUND 位掩码的驱动程序。<br /><br /> （DM）指定的列数小于或等于最大绑定列的数字。 此说明不适用于为**SQLGetInfo**中的 "SQL_GETDATA_EXTENSIONS" 选项返回 SQL_GD_ANY_COLUMN 位掩码的驱动程序。<br /><br /> （DM）应用程序已为当前行调用了**SQLGetData** ;当前调用中指定的列号小于上一调用中指定的列号;而且，驱动程序不会在**SQLGetInfo**中返回 SQL_GETDATA_EXTENSIONS 选项的 SQL_GD_ANY_ORDER 位掩码。<br /><br /> （DM） *TargetType*参数已 SQL_ARD_TYPE，ARD 中的*Col_or_Param_Num*描述符记录未通过一致性检查。<br /><br /> （DM）已 SQL_ARD_TYPE *TargetType*参数，但 ARD 的 SQL_DESC_COUNT 字段值小于*Col_or_Param_Num*参数。|  
+|08S01|通信链接失败|在函数完成处理之前，驱动程序与连接到的数据源之间的通信链接失败。|  
+|22002|需要指示器变量，但未提供|*StrLen_or_IndPtr*为 null 指针，并且检索到 null 数据。|  
+|22003|数值超出范围|返回列的数值（作为数字或字符串）将导致整数（而非分数）部分被截断。<br /><br /> 有关详细信息，请参阅[附录 D：数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。|  
+|22007|Datetime 格式无效|结果集中的字符列已绑定到 C 日期、时间或时间戳结构，并且列中的值为无效的日期、时间或时间戳。 有关详细信息，请参阅[附录 D：数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。|  
+|22012|被零除|返回了导致被零除的算术表达式的值。|  
+|22015|间隔字段溢出|从精确数值或间隔 SQL 类型赋值到 interval C 类型会导致前导字段的有效位丢失。<br /><br /> 将数据返回到时间间隔 C 类型时，interval C 类型中没有 SQL 类型的值的表示形式。|  
+|22018|转换规范的字符值无效|结果集中的字符列已返回到字符 C 缓冲区，列包含的字符在缓冲区的字符集中没有表示形式。<br /><br /> C 类型是精确或近似数字、日期时间或间隔数据类型;列的 SQL 类型是字符数据类型;列中的值不是绑定 C 类型的有效文本。|  
+|24000|无效的游标状态|（DM）在没有首先调用**SQLFetch**或**SQLFetchScroll**的情况下调用了函数，以便将游标定位到所需的数据行。<br /><br /> （DM） *StatementHandle*处于已执行状态，但没有与*StatementHandle*关联的结果集。<br /><br /> 已调用*StatementHandle*和**SQLFetch**或**SQLFetchScroll**上打开了游标，但游标位于结果集的开头之前或结果集的结尾之后。|  
+|HY000|常规错误|发生了一个错误，该错误没有特定的 SQLSTATE，没有为其定义实现特定的 SQLSTATE。 *MessageText*缓冲区中的**SQLGetDiagRec**返回的错误消息描述了错误及其原因。|  
+|HY001|内存分配错误|驱动程序无法分配支持执行或完成此函数所需的内存。|  
+|HY003|程序类型超出范围|（DM）参数*TargetType*不是有效的数据类型，SQL_C_DEFAULT、SQL_ARD_TYPE （在检索列数据的情况下）或 SQL_APD_TYPE （在检索参数数据的情况下）。<br /><br /> （DM）参数*Col_or_Param_Num*是0，并且参数*TargetType*对于固定长度书签不 SQL_C_BOOKMARK，或者对于可变长度书签为 SQL_C_VARBOOKMARK。|  
+|HY008|操作已取消|已为*StatementHandle*启用异步处理。 函数被调用，在完成执行之前，在*StatementHandle*上调用了**SQLCancel**或**SQLCancelHandle** ，然后在*StatementHandle*上再次调用了该函数。<br /><br /> 函数被调用，在完成执行之前，从多线程应用程序中的另一个线程调用*StatementHandle*上的**SQLCancel**或**SQLCancelHandle** ，然后在*StatementHandle*上再次调用该函数。|  
+|HY009|空值指针的使用无效|（DM）参数*TargetValuePtr*为 null 指针。|  
+|HY010|函数序列错误|（DM）指定的*StatementHandle*未处于执行状态。 调用函数时，无需先调用**SQLExecDirect**、 **SQLExecute**或 catalog 函数。<br /><br /> （DM）为与*StatementHandle*关联的连接句柄调用了异步执行的函数。 调用**SQLGetData**函数时，此异步函数仍在执行。<br /><br /> （DM）为*StatementHandle*调用了异步执行的函数（而不是此函数），并且在调用此函数时仍在执行。<br /><br /> （DM） **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**或**SQLSetPos**调用了*StatementHandle*并返回 SQL_NEED_DATA。 在为所有执行时数据参数或列发送数据之前，将调用此函数。<br /><br /> （DM） *StatementHandle*处于已执行状态，但没有与*StatementHandle*关联的结果集。<br /><br /> 调用**SQLExeceute**、 **SQLExecDirect**或**SQLMoreResults**的操作返回 SQL_PARAM_DATA_AVAILABLE，但调用**SQLGetData** ，而不是**SQLParamData**。|  
+|HY013|内存管理错误|未能处理函数调用，原因可能是由于内存不足而无法访问基础内存对象。|  
+|HY090|字符串或缓冲区长度无效|（DM）为参数*BufferLength*指定的值小于0。<br /><br /> 为参数*BufferLength*指定的值小于4， *Col_or_Param_Num*参数设置为0，驱动程序为 ODBC*2.x 驱动程序*。|  
+|HY109|游标位置无效|游标定位在已被删除或无法提取的行上（通过**SQLSetPos**、 **SQLFetch**、 **SQLFetchScroll**或**SQLBulkOperations**）。<br /><br /> 游标是一个只进游标，行集大小大于1。|  
+|HY117|由于未知的事务状态，连接被挂起。 仅允许断开连接和只读函数。|（DM）有关挂起状态的详细信息，请参阅[SQLEndTran 函数](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
+|HYC00|未实现的可选功能|驱动程序或数据源不支持在**SQLFetchScroll**中使用具有多个行的**SQLGetData** 。 此说明不适用于为**SQLGetInfo**中的 "SQL_GETDATA_EXTENSIONS" 选项返回 SQL_GD_BLOCK 位掩码的驱动程序。<br /><br /> 驱动程序或数据源不支持通过*TargetType*参数和相应列的 SQL 数据类型的组合指定的转换。 仅当该列的 SQL 数据类型映射到特定于驱动程序的 SQL 数据类型时，此错误才适用。<br /><br /> 驱动程序仅支持 ODBC 2.x *，而*参数*TargetType*是以下项之一：<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> 在附录 D：数据类型中， [c 数据类型](../../../odbc/reference/appendixes/c-data-types.md)中列出的任何时间间隔 c 数据类型。<br /><br /> 驱动程序仅支持3.50 之前的 ODBC 版本，并 SQL_C_GUID 参数*TargetType* 。|  
+|HYT01|连接超时已过期|连接超时期限在数据源响应请求之前过期。 连接超时期限通过**SQLSetConnectAttr**设置，SQL_ATTR_CONNECTION_TIMEOUT。|  
+|IM001|驱动程序不支持此功能|（DM）与*StatementHandle*相对应的驱动程序不支持该函数。|  
+|IM017|在异步通知模式下禁用轮询|无论何时使用通知模型，都将禁用轮询。|  
+|IM018|尚未调用**SQLCompleteAsync**来完成此句柄上先前的异步操作。|如果句柄上的上一个函数调用返回 SQL_STILL_EXECUTING 并且启用了通知模式，则必须在句柄上调用**SQLCompleteAsync** ，以执行后处理并完成操作。|  
   
 ## <a name="comments"></a>注释  
- **SQLGetData**为指定列中返回的数据。 **SQLGetData**仅在已提取从结果集的一个或多个行后，可以调用**SQLFetch**， **SQLFetchScroll**，或**SQLExtendedFetch**。 如果长度可变的数据太大，无法对单个调用中返回**SQLGetData** （由于应用程序中的限制）， **SQLGetData**可以检索它的部分。 可以将绑定中的行和调用的某些列**SQLGetData**对于其他操作系统，尽管这会受到某些限制。 有关详细信息，请参阅[获取长整型数据](../../../odbc/reference/develop-app/getting-long-data.md)。  
+ **SQLGetData**返回指定列中的数据。 只有从**SQLFetch**、 **SQLFetchScroll**或**SQLExtendedFetch**的结果集中提取一个或多个行后，才能调用**SQLGetData** 。 如果长度可变的数据太大，无法在对**SQLGetData**的单一调用中返回（由于应用程序中的限制）， **SQLGetData**可以在部分中检索它。 可以绑定行中的某些列并为其他列调用**SQLGetData** ，尽管这会受到某些限制。 有关详细信息，请参阅[获取长数据](../../../odbc/reference/develop-app/getting-long-data.md)。  
   
- 有关使用信息**SQLGetData**使用流式处理的输出参数，请参阅[使用 SQLGetData 检索输出参数](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)。  
+ 有关将**SQLGetData**与流式处理输出参数一起使用的信息，请参阅[使用 SQLGetData 检索输出参数](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)。  
   
 ## <a name="using-sqlgetdata"></a>使用 SQLGetData  
- 如果该驱动程序不支持的扩展**SQLGetData**，该函数可以返回仅对具有大量未绑定列的数据大于最后一个绑定列。 此外中某行的数据的值, *Col_or_Param_Num*每次调用中的参数**SQLGetData**必须是大于或等于的值*Col_or_Param_Num*中的上一个调用;也就是说，数字列按升序排列必须检索数据。 最后，如果没有扩展支持，则**SQLGetData**如果行集大小大于 1 不能调用。  
+ 如果驱动程序不支持对**SQLGetData**的扩展，则该函数只能返回其数字大于最后一个绑定列的未绑定列的数据。 此外，在数据行中，每次调用**SQLGetData**时*Col_or_Param_Num*参数的值必须大于或等于上一次调用中*Col_or_Param_Num*的值;也就是说，必须按递增的列号顺序检索数据。 最后，如果不支持任何扩展，并且行集大小大于1，则不能调用**SQLGetData** 。  
   
- 驱动程序可以放松任何这些限制。 若要确定驱动程序放松了什么限制，应用程序调用**SQLGetInfo**具有任一以下 SQL_GETDATA_EXTENSIONS 选项：  
+ 驱动程序可以放宽其中的任何限制。 若要确定驱动程序放宽的限制，应用程序需要使用以下任意 SQL_GETDATA_EXTENSIONS 选项调用**SQLGetInfo** ：  
   
--   SQL_GD_OUTPUT_PARAMS = **SQLGetData**可以调用以返回输出参数值。 有关详细信息，请参阅[使用 SQLGetData 检索输出参数](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)。  
+-   SQL_GD_OUTPUT_PARAMS = **SQLGetData**可调用以返回输出参数值。 有关详细信息，请参阅[使用 SQLGetData 检索输出参数](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)。  
   
--   SQL_GD_ANY_COLUMN。 如果返回此选项，则**SQLGetData**可以为任何未绑定列，包括那些在最后一个绑定列之前调用。  
+-   SQL_GD_ANY_COLUMN。 如果返回此选项，则可以为任何未绑定的列（包括在最后一个绑定列之前的列）调用**SQLGetData** 。  
   
--   SQL_GD_ANY_ORDER。 如果返回此选项，则**SQLGetData**可以为未绑定列按任何顺序调用。  
+-   SQL_GD_ANY_ORDER。 如果返回此选项，则可以按任意顺序为未绑定列调用**SQLGetData** 。  
   
--   SQL_GD_BLOCK。 如果返回此选项，那么**SQLGetInfo** SQL_GETDATA_EXTENSIONS 信息类型，该驱动程序支持对调用**SQLGetData**当行集大小是大于 1 时，应用程序可以调用**SQLSetPos** SQL_POSITION 选项将游标定位在正确的行，然后才能调用**SQLGetData。**  
+-   SQL_GD_BLOCK。 如果 SQL_GETDATA_EXTENSIONS InfoType 的**SQLGetInfo**返回此选项，则当行集大小大于1时，该驱动程序支持对**SQLGetData**的调用，且应用程序可以使用 SQL_POSITION 选项调用**SQLSetPos** ，以便在调用 SQLGetData 之前将游标置于正确的行上 **。**  
   
--   SQL_GD_BOUND。 如果返回此选项，则**SQLGetData**可以调用对于绑定列，以及未绑定列。  
+-   SQL_GD_BOUND。 如果返回此选项，则可以为绑定列和未绑定列调用**SQLGetData** 。  
   
- 有两种例外情况这些限制和放宽了它们的驱动程序的能力。 首先， **SQLGetData**时，应永远不会调用对于只进游标行集大小大于 1。 其次，如果驱动程序支持书签，它必须始终支持调用的能力**SQLGetData**列 0，即使它不允许应用程序可以调用**SQLGetData**对于最后一个之前的其他列绑定的列。 (应用程序使用 ODBC 2 *.x*驱动程序， **SQLGetData**成功返回时调用的书签*Col_or_Param_Num*等于 0 后调用**SQLFetch**，因为**SQLFetch** ODBC 3 映射 *.x*到驱动程序管理器**SQLExtendedFetch**与*FetchOrientation*的 SQL_FETCH_NEXT，并**SQLGetData**与*Col_or_Param_Num* 0 的映射由 ODBC 3 *.x*到驱动程序管理器**SQLGetStmtOption**与*fOption*的 SQL_GET_BOOKMARK。)  
+ 这些限制有两个例外，驱动程序可以放宽这些限制。 首先，如果行集大小大于1，则永远不应为只进游标调用**SQLGetData** 。 其次，如果驱动程序支持书签，则它必须始终支持对列0调用**SQLGetData**的能力，即使它不允许应用程序在最后一个绑定列之前为其他列调用**SQLGetData** 。 （当应用程序使用 ODBC 2.x 驱动程序时** ，在调用**SQLFetch**后， **SQLGetData**将成功返回*Col_or_Param_Num*等于*0 的书签*，因为**SQLFetch**由 odbc 1.X 驱动程序管理器映射到**SQLExtendedFetch** ，Col_or_Param_Num 为 SQL_FETCH_NEXT，而**FetchOrientation**的** 为0，则 odbc*1.x 驱动程序*管理器将映射到** **SQLGetData**SQL_GET_BOOKMARK 的*fOption* 。）  
   
- **SQLGetData**不能用于检索通过调用刚插入的行的书签将变为**SQLBulkOperations**带有 SQL_ADD 选项，因为该游标未定位在该行上。 应用程序可以通过绑定第 0 列之前调用检索这样的行的书签将变为**SQLBulkOperations** SQL_ADD，这种情况下使用**SQLBulkOperations**返回绑定的缓冲区中的书签。 **SQLFetchScroll**然后可以使用 SQL_FETCH_BOOKMARK 重新光标定位在该行上调用。  
+ **SQLGetData**不能用于检索刚刚插入的行的书签，只需使用 SQL_ADD 选项调用**SQLBulkOperations** ，因为游标不会定位在该行上。 应用程序可以在使用 SQL_ADD 调用**SQLBulkOperations**之前，通过绑定列0来检索此类行的书签，在这种情况下， **SQLBulkOperations**将返回绑定缓冲区中的书签。 然后，可以通过 SQL_FETCH_BOOKMARK 调用**SQLFetchScroll** ，以在该行上重新定位光标。  
   
- 如果*TargetType*参数中的 SQL_DESC_DATETIME_INTERVAL_PRECISION 和 SQL_DESC_PRECISION 字段设置为间隔数据类型，默认时间间隔的前导精度 (2) 和默认时间间隔的秒精度 (6)，ARD，分别用于数据。 如果*TargetType*参数为 SQL_C_NUMERIC 数据类型，默认的精度 （驱动程序定义） 和 ARD 的 SQL_DESC_PRECISION 和 SQL_DESC_SCALE 字段中设置默认小数位数 (0)，用于数据。 如果任何默认精度或小数位数不适当，应用程序显式应通过调用设置适当的描述符字段**SQLSetDescField**或**SQLSetDescRec**。 它可以将 SQL_DESC_CONCISE_TYPE 字段设置为 SQL_C_NUMERIC 并调用**SQLGetData**与*TargetType* SQL_ARD_TYPE，这将导致在描述符字段的精度和小数位数的值的参数若要使用。  
+ 如果*TargetType*参数是 interval 数据类型，则默认间隔的默认间隔（2）和默认间隔秒精度（6），分别在 ARD 的 SQL_DESC_DATETIME_INTERVAL_PRECISION 和 SQL_DESC_PRECISION 字段中进行设置，用于数据。 如果*TargetType*参数是 SQL_C_NUMERIC 的数据类型，则在 "SQL_DESC_PRECISION" 和 "SQL_DESC_SCALE" 字段中设置的默认精度（驱动程序定义）和默认刻度（0）用于数据。 如果任何默认的精度或小数位数不合适，则应用程序应通过调用**SQLSetDescField**或**SQLSetDescRec**显式设置相应的描述符字段。 它可以将 SQL_DESC_CONCISE_TYPE 字段设置为 SQL_C_NUMERIC 并使用 SQL_ARD_TYPE 的*TargetType*参数调用**SQLGetData** ，这将导致使用描述符字段中的精度和小数位数值。  
   
 > [!NOTE]
->  在 ODBC 2 *.x*，应用程序设置*TargetType* SQL_C_DATE、 SQL_C_TIME，或指示 SQL_C_TIMESTAMP \* *TargetValuePtr*是日期、 time、 或时间戳结构。 在 ODBC 3 *.x*，应用程序设置*TargetType* SQL_C_TYPE_DATE、 SQL_C_TYPE_TIME，或 SQL_C_TYPE_TIMESTAMP。 驱动程序管理器，可相应映射必要时，基于上的应用程序和驱动程序版本。  
+>  在 ODBC 2.x*中，应用*程序将*TargetType*设置为 SQL_C_DATE、SQL_C_TIME 或 SQL_C_TIMESTAMP，以指示\* *TargetValuePtr*是日期、时间或时间戳结构。 在 ODBC 3.x*中，应用*程序将*TargetType*设置为 SQL_C_TYPE_DATE、SQL_C_TYPE_TIME 或 SQL_C_TYPE_TIMESTAMP。 根据应用程序和驱动程序版本的需要，驱动程序管理器根据需要进行适当的映射。  
   
-## <a name="retrieving-variable-length-data-in-parts"></a>检索在部件中的可变长度数据  
- **SQLGetData**可用于从 SQL 数据类型的列的标识符是 SQL_CHAR、 SQL_VARCHAR、 SQL_LONGVARCHAR、 SQL_WCHAR、 SQL_WVARCHAR、 SQL_ 时，即包含部分的长度可变的数据的列中检索数据WLONGVARCHAR、 SQL_BINARY、 SQL_VARBINARY、 SQL_LONGVARBINARY 或可变长度类型的特定于驱动程序的标识符。  
+## <a name="retrieving-variable-length-data-in-parts"></a>在部分中检索可变长度数据  
+ **SQLGetData**可用于从包含可变长度数据的列中检索数据，也就是说，列的 SQL 数据类型的标识符 SQL_CHAR、SQL_VARCHAR、SQL_LONGVARCHAR、SQL_WCHAR、SQL_WVARCHAR、SQL_WLONGVARCHAR、SQL_BINARY、SQL_VARBINARY、SQL_LONGVARBINARY 或驱动程序特定的标识符，用于可变长度类型。  
   
- 若要从部件中的列检索数据，应用程序调用**SQLGetData**中同一列连续多次。 在每次调用**SQLGetData**返回数据的下一步的一部分。 它是由应用程序以重新组装的部分，注意，要移除的字符数据的中间部分的 null 终止字符。 如果没有更多数据，以返回或不为终止字符分配足够的缓冲区**SQLGetData**返回 SQL_SUCCESS_WITH_INFO 和 SQLSTATE 01004 （数据被截断）。 当它返回的最后一部分数据， **SQLGetData**返回 SQL_SUCCESS。 因为应用程序然后会有没有办法知道多少应用程序缓冲区中的数据有效，可从某一列，检索数据的最后一个有效调用上返回 SQL_NO_TOTAL 既不为零。 如果**SQLGetData**调用在此之后，其返回 sql_no_data 为止。 有关详细信息，请参阅下一部分中，"使用 SQLGetData 检索数据"。  
+ 若要在部分中检索列中的数据，应用程序将对同一列连续多次调用**SQLGetData** 。 每次调用时， **SQLGetData**将返回数据的下一部分。 应用程序需要重新组装部分，小心从字符数据的中间部分删除 null 终止字符。 如果有更多的数据要返回，或者没有为终止字符分配足够的缓冲区，则**SQLGetData**将返回 SQL_SUCCESS_WITH_INFO 和 SQLSTATE 01004 （数据已截断）。 当它返回数据的最后一部分时， **SQLGetData**将返回 SQL_SUCCESS。 在从列中检索数据的最后一个有效调用上，不能返回 SQL_NO_TOTAL 或零，因为应用程序将无法知道应用程序缓冲区中的数据量是否有效。 如果在此后调用**SQLGetData** ，则它将返回 SQL_NO_DATA。 有关详细信息，请参阅下一节 "用 SQLGetData 检索数据"。  
   
- 可以在部件中返回长度可变的书签**SQLGetData**。 与调用的其他数据一样**SQLGetData**返回中部分的长度可变的书签将返回 SQLSTATE 01004 （字符串数据，右端被截断） 和 SQL_SUCCESS_WITH_INFO 时要返回的更多数据。 通过调用截断长度可变的书签时，这一点不同于用例**SQLFetch**或**SQLFetchScroll**，这会返回 SQL_ERROR 并且 SQLSTATE 22001 （字符串数据，右端被截断）。  
+ 可变长度书签可以按**SQLGetData**在部件中返回。 与其他数据一样，在有更多数据需要返回时，对**SQLGetData**的调用返回部分中可变长度的书签将返回 SQLSTATE 01004 （字符串数据，右端被截断）和 SQL_SUCCESS_WITH_INFO。 这不同于通过调用**SQLFetch**或**SQLFetchScroll**来截断可变长度书签的情况，这种情况将返回 SQL_ERROR 和 SQLSTATE 22001 （字符串数据，右端被截断）。  
   
- **SQLGetData**不能用于返回部分中的固定长度的数据。 如果**SQLGetData**是为一列以包含固定长度的数据行中调用不止一次，其返回 sql_no_data 为止的所有调用后第一个。  
+ **SQLGetData**不能用于返回部分中的固定长度数据。 如果在一行中对包含固定长度数据的列调用**SQLGetData** ，则它将为第一个之后的所有调用返回 SQL_NO_DATA。  
   
-## <a name="retrieving-streamed-output-parameters"></a>检索流的输出参数  
- 如果驱动程序支持流的输出参数，应用程序可以调用**SQLGetData**使用一个较小缓冲区多次来检索大型参数值。 有关流式处理的输出参数的详细信息，请参阅[使用 SQLGetData 检索输出参数](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)。  
+## <a name="retrieving-streamed-output-parameters"></a>检索流式处理输出参数  
+ 如果驱动程序支持流式输出参数，则应用程序可以多次调用带有小缓冲区的**SQLGetData**来检索大型参数值。 有关流式处理输出参数的详细信息，请参阅[使用 SQLGetData 检索输出参数](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)。  
   
-## <a name="retrieving-data-with-sqlgetdata"></a>使用 SQLGetData 检索数据  
- 返回指定列的数据**SQLGetData**执行以下步骤序列：  
+## <a name="retrieving-data-with-sqlgetdata"></a>用 SQLGetData 检索数据  
+ 为了返回指定列的数据， **SQLGetData**执行以下一系列步骤：  
   
-1.  如果它已返回所有列的数据，则返回 sql_no_data 为止。  
+1.  如果已返回列的所有数据，则返回 SQL_NO_DATA。  
   
-2.  集\* *StrLen_or_IndPtr*为 SQL_NULL_DATA，如果数据为 NULL。 如果数据为 NULL 并且*StrLen_or_IndPtr*是空指针**SQLGetData**返回 SQLSTATE 22002 （指示器变量，但未提供）。  
+2.  如果\*数据为 NULL，则将*StrLen_or_IndPtr*设置为 SQL_NULL_DATA。 如果数据为 NULL 并且*StrLen_or_IndPtr*为 null 指针，则**SQLGetData**返回 SQLSTATE 22002 （需要指示器变量，但未提供）。  
   
-     如果列的数据不为 NULL， **SQLGetData**转到步骤 3。  
+     如果列的数据不为 NULL，则**SQLGetData**将继续执行到步骤3。  
   
-3.  如果 SQL_ATTR_MAX_LENGTH 语句属性设置为非零值，如果列包含字符或二进制数据，并且如果**SQLGetData**以前尚未调用的列数据被截断为 SQL_ATTR_MAX_LENGTH字节数。  
+3.  如果 SQL_ATTR_MAX_LENGTH 语句特性设置为一个非零值，则如果该列包含字符或二进制数据，并且以前未对列调用**SQLGetData** ，则数据将被截断为 SQL_ATTR_MAX_LENGTH 字节。  
   
     > [!NOTE]  
-    >  SQL_ATTR_MAX_LENGTH 语句属性旨在减少网络流量。 它通常被实现数据源，返回之前对其通过网络将截断数据。 驱动程序和数据源不需要支持它。 因此，若要确保数据将被截断为特定大小，应用程序应分配该大小的缓冲区，并指定的大小以*BufferLength*参数。  
+    >  SQL_ATTR_MAX_LENGTH 语句特性用于减少网络流量。 它通常由数据源实现，该数据源在网络中返回数据之前将其截断。 驱动程序和数据源不需要支持。 因此，若要保证数据被截断到特定大小，应用程序应分配该大小的缓冲区，并在*BufferLength*参数中指定大小。  
   
-4.  将数据转换中指定的类型为*TargetType*。 数据是为该数据类型提供的默认精度和小数位数。 如果*TargetType*是 SQL_ARD_TYPE，数据使用的 ARD SQL_DESC_CONCISE_TYPE 字段中的类型。 如果*TargetType*是 SQL_ARD_TYPE、 数据中提供了精度和小数位数 SQL_DESC_DATETIME_INTERVAL_PRECISION，SQL_DESC_PRECISION，和 ARD，具体取决于数据的 SQL_DESC_SCALE 字段键入 SQL_DESC_CONCISE类型 （_t） 字段。 如果任何默认精度或小数位数不适当，应用程序显式应通过调用设置适当的描述符字段**SQLSetDescField**或**SQLSetDescRec**。  
+4.  将数据转换为*TargetType*中指定的类型。 将为该数据类型提供默认的精度和小数位数。 如果 SQL_ARD_TYPE *TargetType* ，则使用 ARD 的 SQL_DESC_CONCISE_TYPE 字段中的数据类型。 如果 SQL_ARD_TYPE 了*TargetType* ，则会根据 SQL_DESC_CONCISE_TYPE 字段中的数据类型，为数据提供 ARD 的 SQL_DESC_DATETIME_INTERVAL_PRECISION、SQL_DESC_PRECISION 和 SQL_DESC_SCALE 字段的精度和小数位数。 如果任何默认的精度或小数位数不合适，则应用程序应通过调用**SQLSetDescField**或**SQLSetDescRec**显式设置相应的描述符字段。  
   
-5.  如果数据已转换为可变长度数据类型，如字符或二进制文件中， **SQLGetData**检查数据的长度是否超过*BufferLength*。 如果字符数据 （包括 null 终止字符） 的长度超过*BufferLength*， **SQLGetData**截断到数据*BufferLength*长度小于null 终止字符。 它然后则以 null 终止的数据。 如果二进制数据的长度超过了数据缓冲区的长度**SQLGetData**将它截断到*BufferLength*字节。  
+5.  如果将数据转换为可变长度的数据类型（如字符或二进制）， **SQLGetData**会检查数据长度是否超过*BufferLength*。 如果字符数据的长度（包括 null 终止字符）超过*BufferLength*，则**SQLGetData**会将数据截断为*BufferLength* ，使其不超过 null 终止字符的长度。 然后，它将终止数据。 如果二进制数据的长度超过数据缓冲区的长度，则**SQLGetData**会将其截断为*BufferLength*字节。  
   
-     如果提供的数据缓冲区太小，无法保留 null 终止字符**SQLGetData**返回 SQL_SUCCESS_WITH_INFO 和 SQLSTATE 01004。  
+     如果提供的数据缓冲区太小，无法容纳 null 终止字符，则**SQLGetData**将返回 SQL_SUCCESS_WITH_INFO 和 SQLSTATE 01004。  
   
-     **SQLGetData**永远不会截断数据转换为固定长度的数据类型; 它始终假定的长度 **TargetValuePtr*是数据类型的大小。  
+     **SQLGetData**从不截断转换为固定长度数据类型的数据;它始终假定 **TargetValuePtr*的长度为数据类型的大小。  
   
-6.  将中的已转换 （和可能被截断） 数据放\* *TargetValuePtr*。 请注意， **SQLGetData**不能返回行外的数据。  
+6.  将转换的数据（可能被截断的数据\*）放置在*TargetValuePtr*中。 请注意， **SQLGetData**无法从行返回数据。  
   
-7.  将放置在数据的长度\* *StrLen_or_IndPtr*。 如果*StrLen_or_IndPtr*是空指针**SQLGetData**不返回长度。  
+7.  将数据的长度置于\* *StrLen_or_IndPtr*中。 如果*StrLen_or_IndPtr*为 null 指针，则**SQLGetData**不返回长度。  
   
-    -   对于字符或二进制数据，这是数据的长度转换之后和之前由于截断*BufferLength*。 如果驱动程序无法转换后，确定数据的长度，因为有时是带有长数据的用例，它将返回 SQL_SUCCESS_WITH_INFO 和长度设置为 SQL_NO_TOTAL。 (上次调用**SQLGetData**必须始终返回数据、 不为零或 SQL_NO_TOTAL 的长度。)如果由于 SQL_ATTR_MAX_LENGTH 语句属性情况下，数据已被截断，而不是实际的长度-此特性的值将放入\* *StrLen_or_IndPtr*。 这是因为此属性设计使该驱动程序不有任何办法来找出实际长度截断的转换之前, 在服务器上的数据。 当**SQLGetData**是连续的多次调用同一列中，这是当前的调用开始处的可用数据的长度; 也就是说，长度还减少了每个后续调用。  
+    -   对于 "字符" 或 "二进制" 数据，这是转换后的数据长度和由于*BufferLength*而进行截断之前的时间长度。 如果驱动程序在转换后无法确定数据的长度，则有时会出现长数据的情况，它将返回 SQL_SUCCESS_WITH_INFO，并将长度设置为 SQL_NO_TOTAL。 （最后一次调用**SQLGetData**时，必须始终返回数据的长度，而不是零或 SQL_NO_TOTAL。）如果由于 SQL_ATTR_MAX_LENGTH 语句特性而导致数据被截断，则此属性的值（而不是实际长度）将置于\* *StrLen_or_IndPtr*。 这是因为该属性设计为在转换前截断服务器上的数据，因此驱动程序无法确定实际长度。 对于同一列连续调用**SQLGetData**时，这是在当前调用开始时可用的数据的长度;也就是说，长度随每个后续调用而减少。  
   
-    -   对于所有其他数据类型，这是数据的长度后转换，则也就是说，它是类型的到转换数据的大小。  
+    -   对于所有其他数据类型，这是转换后的数据长度;也就是说，它是数据转换到的类型的大小。  
   
-8.  如果在转换期间截断而不会丢失基数的倍数的数据 （例如，实际 1.234 截断数字转换为整数 1） 或由于*BufferLength*太小 （例如，字符串"abcdef"放置4 字节缓冲区） 中**SQLGetData**返回 SQLSTATE 01004 （数据被截断） 和 SQL_SUCCESS_WITH_INFO。 如果数据被截断而不会丢失基数的倍数 SQL_ATTR_MAX_LENGTH 语句属性，由于**SQLGetData**返回 SQL_SUCCESS，且不返回 SQLSTATE 01004 （数据被截断）。  
+8.  如果数据在转换过程中不会丢失重要性（例如，在转换为整数1时截断了实数1.234），或者由于*BufferLength*太小（例如，字符串 "abcdef" 放置在4字节缓冲区中），则**SQLGETDATA**将返回 SQLSTATE 01004 （数据已截断）和 SQL_SUCCESS_WITH_INFO。 如果由于 SQL_ATTR_MAX_LENGTH 语句特性而导致数据被截断而不会失去重要，则**SQLGetData**将返回 SQL_SUCCESS 并且不返回 SQLSTATE 01004 （数据已截断）。  
   
- 绑定的数据缓冲区的内容 (如果**SQLGetData**绑定列调用) 的长度/指示器缓冲区是不确定，如果**SQLGetData**不会返回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO。  
+ 绑定数据缓冲区的内容（如果对绑定列调用**SQLGetData** ），并且如果**SQLGetData**未返回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO，则不确定长度/指示器缓冲区。  
   
- 后续调用**SQLGetData**将从所请求的最后一列中检索数据; 而在以前的偏移量会无效。 例如，执行以下顺序执行：  
+ 对**SQLGetData**的后续调用将从请求的最后一列中检索数据;之前的偏移变为无效。 例如，在执行以下序列时：  
   
 ```cpp  
 SQLGetData(icol=n), SQLGetData(icol=m), SQLGetData(icol=n)  
 ```  
   
- SQLGetData(icol=n) 第二次调用开始处的 n 列检索数据。 任何数据，因为早期调用中的偏移量**SQLGetData**的列将不再有效。  
+ 对 SQLGetData （icol = n）的第二次调用从 n 列的开头检索数据。 由于对列之前调用**SQLGetData**的任何偏移量不再有效。  
   
 ## <a name="descriptors-and-sqlgetdata"></a>描述符和 SQLGetData  
- **SQLGetData**不与任何描述符字段的直接交互。  
+ **SQLGetData**不直接与任何描述符字段交互。  
   
- 如果*TargetType*是 SQL_ARD_TYPE，数据使用的 ARD SQL_DESC_CONCISE_TYPE 字段中的类型。 如果*TargetType* SQL_ARD_TYPE 或 SQL_C_DEFAULT，数据中提供了精度和小数位数 SQL_DESC_DATETIME_INTERVAL_PRECISION，SQL_DESC_PRECISION，然后键入 SQL_DESC_SCALE ARD，具体取决于数据字段中的 SQL_DESC_CONCISE_TYPE 字段中。  
+ 如果 SQL_ARD_TYPE *TargetType* ，则使用 ARD 的 SQL_DESC_CONCISE_TYPE 字段中的数据类型。 如果*TargetType*为 SQL_ARD_TYPE 或 SQL_C_DEFAULT，则根据 SQL_DESC_SCALE 字段中的数据类型，在 ARD 的 SQL_DESC_DATETIME_INTERVAL_PRECISION、SQL_DESC_PRECISION 和 SQL_DESC_CONCISE_TYPE 字段中提供数据的精度和小数位数。  
   
 ## <a name="code-example"></a>代码示例  
- 在以下示例中，应用程序执行**选择**语句返回结果集的客户 Id、 名称和电话号码按名称、 ID 和电话号码。 对于每个数据行，它调用**SQLFetch**来定位光标移到下一行。 它将调用**SQLGetData**检索提取的数据; 数据和返回的字节数的缓冲区中指定调用**SQLGetData**。 最后，会输出每个雇员的名称、 ID 和电话号码。  
+ 在下面的示例中，应用程序执行**SELECT**语句以返回按姓名、ID 和电话号码排序的客户 id、名称和电话号码的结果集。 对于每个数据行，它会调用**SQLFetch**将游标定位到下一行。 它调用**SQLGetData**来检索提取的数据;数据缓冲区和返回的字节数是在对**SQLGetData**的调用中指定的。 最后，打印每个雇员的姓名、ID 和电话号码。  
   
 ```cpp  
 #define NAME_LEN 50  
@@ -258,19 +258,19 @@ if (retcode == SQL_SUCCESS) {
   
 ## <a name="related-functions"></a>相关函数  
   
-|有关信息|请参阅|  
+|有关以下方面的信息|请参阅|  
 |---------------------------|---------|  
-|分配结果集中的列的存储|[SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
-|执行块的光标位置不相关的大容量操作|[SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)|  
-|取消语句处理|[SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|为结果集中的列分配存储|[SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
+|执行不与块光标位置相关的大容量操作|[SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)|  
+|正在取消语句处理|[SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)|  
 |执行 SQL 语句|[SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
 |执行已准备的 SQL 语句|[SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md)|  
-|提取的数据块或滚动浏览结果集|[SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
-|正在提取单行数据或仅向前方向中的数据块|[SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)|  
+|提取数据块或滚动结果集|[SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
+|按只进方向提取单个数据行或数据块|[SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)|  
 |在执行时发送参数数据|[SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)|  
-|定位光标，刷新的行集中的数据或更新或删除行集中的数据|[SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
+|定位游标，刷新行集中的数据，或更新或删除行集中的数据|[SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ODBC API 参考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 头文件](../../../odbc/reference/install/odbc-header-files.md)   
  [使用 SQLGetData 检索输出参数](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)

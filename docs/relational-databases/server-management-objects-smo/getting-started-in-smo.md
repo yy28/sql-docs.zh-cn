@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 22271c7c7fd5099ae9e65fecfedb820da00c6e30
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70911266"
 ---
 # <a name="getting-started-in-smo"></a>SMO 入门
@@ -33,7 +33,7 @@ ms.locfileid: "70911266"
 [对象模型](../../relational-databases/server-management-objects-smo/smo-object-model.md)描述 SMO 对象层次结构以及对象之间的相互关系。  
   
 ## <a name="programming-languages"></a>编程语言  
-[编程语言](../../relational-databases/server-management-objects-smo/smo-programming-languages.md)介绍编程环境，并包括在中C#开始编写 SMO 程序的详细过程。  
+[编程语言](../../relational-databases/server-management-objects-smo/smo-programming-languages.md)介绍编程环境，并包括使用 c # 开始编写 SMO 程序的详细过程。  
   
 ## <a name="general-programming-in-smo"></a>使用 SMO 进行常规编程  
 [Smo 中的常规编程](../../relational-databases/server-management-objects-smo/create-program/creating-smo-programs.md)是使用 smo 编程的简介。 本主题说明如何连接到 SQL Server 的实例，以及如何使用属性、方法和集合。 更高级的主题说明数据类型、事务、设置捕获模式以及事件和异常处理。  

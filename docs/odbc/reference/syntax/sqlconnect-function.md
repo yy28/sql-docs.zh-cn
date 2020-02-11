@@ -20,18 +20,18 @@ ms.assetid: 59075e46-a0ca-47bf-972a-367b08bb518d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b1c0b20fed0e6c15fef76b1bcbebc98edd37cfbc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68121461"
 ---
 # <a name="sqlconnect-function"></a>SQLConnect 函数
-**符合性**  
- 版本引入了：ODBC 1.0 标准符合性：ISO 92  
+**度**  
+ 引入的版本： ODBC 1.0 标准符合性： ISO 92  
   
- **摘要**  
- **SQLConnect**建立到驱动程序和数据源的连接。 连接句柄所引用有关连接到数据源，包括状态、 事务状态和错误信息的所有信息的存储。  
+ **总结**  
+ **SQLConnect**建立与驱动程序和数据源的连接。 连接句柄引用有关与数据源的连接的所有信息的存储，包括状态、事务状态和错误信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -52,145 +52,145 @@ SQLRETURN SQLConnect(
  [输入] 连接句柄。  
   
  *ServerName*  
- [输入]数据源名称。 数据可能不位于该程序，在同一台计算机上，也可以在网络上的某个位置的另一台计算机上。 有关应用程序如何选择数据源的信息，请参阅[选择数据源或驱动程序](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)。  
+ 送数据源名称。 数据可以与程序位于同一台计算机上，也可以位于网络中某个位置的另一台计算机上。 有关应用程序如何选择数据源的信息，请参阅[选择数据源或驱动程序](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)。  
   
  *NameLength1*  
- [输入]长度 **ServerName*以字符为单位。  
+ 送**ServerName*的长度（字符）。  
   
- *UserName*  
- [输入]用户标识符。  
+ *用户名*  
+ 送用户标识符。  
   
  *NameLength2*  
- [输入]长度 **用户名*以字符为单位。  
+ 送长度 **用户名*（字符）。  
   
  *身份验证*  
- [输入]身份验证的字符串 （通常是密码）。  
+ 送身份验证字符串（通常为密码）。  
   
  *NameLength3*  
- [输入]长度 **身份验证*以字符为单位。  
+ 送**身份验证*的长度（字符）。  
   
 ## <a name="returns"></a>返回  
- SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_ERROR、 SQL_INVALID_HANDLE 或 SQL_STILL_EXECUTING。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、SQL_INVALID_HANDLE 或 SQL_STILL_EXECUTING。  
   
 ## <a name="diagnostics"></a>诊断  
- 当**SQLConnect**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，关联的 SQLSTATE 值可以通过调用来获取**SQLGetDiagRec**与*HandleType*的 SQL_HANDLE_DBC 和一个*处理*的*ConnectionHandle*。 下表列出了通常由返回的 SQLSTATE 值**SQLConnect** ，并解释了此函数; 每个上下文中的表示法"（数据挖掘）"之前 SQLSTATEs 返回由驱动程序管理器的说明。 与每个 SQLSTATE 值关联的返回代码是 SQL_ERROR，除非另有说明。  
+ 当**SQLConnect**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 时，可以通过使用*HandleType*的 SQL_HANDLE_DBC 和*ConnectionHandle*的*句柄*调用**SQLGetDiagRec**来获取关联的 SQLSTATE 值。 下表列出了通常由**SQLConnect**返回的 SQLSTATE 值，并对该函数的上下文中的每个值进行了说明："（DM）" 表示法位于驱动程序管理器返回的 SQLSTATEs 的说明之前。 除非另有说明，否则与每个 SQLSTATE 值相关联的返回代码将 SQL_ERROR。  
   
-|SQLSTATE|Error|描述|  
+|SQLSTATE|错误|说明|  
 |--------------|-----------|-----------------|  
-|01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
-|01S02|选项值已更改|该驱动程序不支持的指定的值*ValuePtr*中的参数**SQLSetConnectAttr**和替换一个相近的值。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
-|08001|客户端无法建立连接|该驱动程序无法建立与数据源的连接。|  
-|08002|在使用的连接名称|(DM) 指定*ConnectionHandle*已用于建立连接并与数据源和连接时仍处于打开或用户已浏览的连接。|  
-|08004|服务器拒绝连接|数据源实现定义的原因拒绝建立连接。|  
-|08S01|通讯链接失败|该驱动程序和驱动程序已尝试连接到数据源之间的通信链接失败之前函数已完成处理。|  
-|28000|无效的授权说明|为参数指定的值*用户名*或为参数指定的值*身份验证*违反定义的数据源的限制。|  
-|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义任何特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*MessageText*缓冲区描述错误以及其原因。|  
-|HY001|内存分配错误|(DM) 的驱动程序管理器无法分配支持执行或完成该函数所需的内存。|  
-|HY008|操作已取消|异步处理的已启用*ConnectionHandle*。 **SQLConnect**调用函数，和之前执行完毕[SQLCancelHandle 函数](../../../odbc/reference/syntax/sqlcancelhandle-function.md)上调用了*ConnectionHandle*，然后**SQLConnect**上再次调用函数*ConnectionHandle*。<br /><br /> 或者， **SQLConnect**调用函数，和之前执行完毕**SQLCancelHandle**上调用了*ConnectionHandle*来自不同线程中多线程应用程序。|  
-|HY010|函数序列错误|(DM) 的调用以异步方式执行的函数 （不是此类似） *ConnectionHandle*和仍在执行时调用此函数。|  
-|HY013|内存管理错误|无法处理函数调用，因为基础内存对象无法访问，可能是由于内存不足的情况。|  
-|HY090|字符串或缓冲区长度无效|(DM) 为参数指定的值*NameLength1*， *NameLength2*，或*NameLength3*小于 0，但不是等于 SQL_NTS。<br /><br /> (DM) 为参数指定的值*NameLength1*超出数据源名称的最大长度。|  
-|HYT00|超时时间已到|查询超时期限过期之前完成的数据源的连接。 通过设置超时期限**SQLSetConnectAttr**，SQL_ATTR_LOGIN_TIMEOUT。|  
-|HY114|驱动程序不支持连接级别的异步函数执行|(DM) 应用程序启用对连接句柄之前建立的连接的异步操作。 但是，该驱动程序不支持连接句柄上的异步操作。|  
-|HYT01|连接超时时间已到|连接超时期限过期之前的数据源响应此请求。 通过设置连接超时期**SQLSetConnectAttr**，SQL_ATTR_CONNECTION_TIMEOUT。|  
-|IM001|驱动程序不支持此函数|(DM) 指定数据源名称的驱动程序不支持该函数。|  
-|IM002|找不到数据源和未指定的默认驱动程序|(DM) 的数据源名称参数中指定*ServerName*系统信息中未找到，也没有默认驱动程序规范。|  
-|IM003|指定的驱动程序不会连接到|(DM) 数据中列出的驱动程序源规范系统信息中的找不到或可能不会连接到某些其他原因。|  
-|IM004|SQL_HANDLE_ENV 上的驱动程序的 SQLAllocHandle 失败|(DM) 期间**SQLConnect**，驱动程序管理器调用的驱动程序**SQLAllocHandle**函数与*HandleType* SQL_HANDLE_ENV 和驱动程序返回了一个错误。|  
-|IM005|SQL_HANDLE_DBC 上的驱动程序的 SQLAllocHandle 失败|(DM) 期间**SQLConnect**，驱动程序管理器调用的驱动程序**SQLAllocHandle**函数与*HandleType* SQL_HANDLE_DBC 和驱动程序返回了一个错误。|  
-|IM006|驱动程序的 SQLSetConnectAttr 失败|期间**SQLConnect**，驱动程序管理器调用的驱动程序**SQLSetConnectAttr**函数和驱动程序返回了错误。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
-|IM009|无法连接到转换 DLL|该驱动程序无法连接到转换为数据源指定的 DLL。|  
-|IM010|数据源名称太长|（数据挖掘）  *\*ServerName*已超过 SQL_MAX_DSN_LENGTH 个字符。|  
-|IM014|指定的 DSN 包含驱动程序和应用程序体系结构不匹配|(DM) 32 位应用程序使用 DSN 连接到 64 位驱动程序;反之亦然。|  
-|IM015|驱动程序的 SQLConnect SQL_HANDLE_DBC_INFO_HANDLE 上失败|如果驱动程序将返回 SQL_ERROR，驱动程序管理器将向应用程序返回 SQL_ERROR，并且连接将失败。<br /><br /> 有关 SQL_HANDLE_DBC_INFO_TOKEN 详细信息，请参阅[ODBC 驱动程序中开发连接池感知](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)。|  
-|IM017|轮询异步通知模式中禁用|只要使用通知模型，将禁用轮询。|  
-|IM018|**SQLCompleteAsync**尚未调用以完成此句柄上以前的异步操作。|如果句柄上的上一个函数调用返回 SQL_STILL_EXECUTING，如果启用通知模式，则**SQLCompleteAsync**必须要对其进行后期处理并完成该操作的句柄上调用。|  
-|S1118|驱动程序不支持异步通知|当驱动程序不支持异步通知时，您不能设置 SQL_ATTR_ASYNC_DBC_EVENT 或 SQL_ATTR_ASYNC_DBC_RETCODE_PTR。|  
+|01000|一般警告|驱动程序特定的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
+|01S02|选项值已更改|驱动程序不支持**SQLSetConnectAttr**中的*将 valueptr*参数的指定值，并将其替换为类似值。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
+|08001|客户端无法建立连接|驱动程序无法与数据源建立连接。|  
+|08002|连接名称正在使用中|（DM）指定的*ConnectionHandle*已用于建立与数据源的连接，并且该连接仍处于打开状态，或者用户正在浏览连接。|  
+|08004|服务器拒绝了连接|由于实现定义的原因，数据源已拒绝建立连接。|  
+|08S01|通信链接失败|在函数完成处理之前，驱动程序与该驱动程序尝试连接到的数据源之间的通信链接失败。|  
+|28000|授权规范无效|为参数*UserName*指定的值或为参数*Authentication*指定的值违反了数据源定义的限制。|  
+|HY000|常规错误|发生了一个错误，该错误没有特定的 SQLSTATE，没有为其定义实现特定的 SQLSTATE。 MessageText 缓冲区中的**SQLGetDiagRec**返回的错误消息描述了错误及其原因。 * \**|  
+|HY001|内存分配错误|（DM）驱动程序管理器无法分配支持执行或完成该函数所需的内存。|  
+|HY008|操作已取消|已为*ConnectionHandle*启用异步处理。 调用**SQLConnect**函数，并在其完成执行之前，在*ConnectionHandle*上调用[SQLCancelHandle 函数](../../../odbc/reference/syntax/sqlcancelhandle-function.md)，然后在*ConnectionHandle*上再次调用**SQLConnect**函数。<br /><br /> 或者，调用**SQLConnect**函数，并在其完成执行之前，从多线程应用程序中的另一个线程调用*ConnectionHandle*上的**SQLCancelHandle** 。|  
+|HY010|函数序列错误|（DM）为*ConnectionHandle*调用了异步执行的函数（而不是此函数），并且在调用此函数时仍在执行。|  
+|HY013|内存管理错误|未能处理函数调用，原因可能是由于内存不足而无法访问基础内存对象。|  
+|HY090|字符串或缓冲区长度无效|（DM）为参数*NameLength1*、 *NameLength2*或*NameLength3*指定的值小于0，但不等于 SQL_NTS。<br /><br /> （DM）为参数*NameLength1*指定的值超出了数据源名称的最大长度。|  
+|HYT00|超时时间已到|在与数据源建立连接之前，查询超时期限已过。 超时期限通过**SQLSetConnectAttr**设置，SQL_ATTR_LOGIN_TIMEOUT。|  
+|HY114|驱动程序不支持连接级别的异步函数执行|（DM）在建立连接之前，应用程序已对连接句柄启用了异步操作。 但是，驱动程序不支持对连接句柄执行异步操作。|  
+|HYT01|连接超时已过期|连接超时期限在数据源响应请求之前过期。 连接超时期限通过**SQLSetConnectAttr**设置，SQL_ATTR_CONNECTION_TIMEOUT。|  
+|IM001|驱动程序不支持此功能|（DM）由数据源名称指定的驱动程序不支持该函数。|  
+|IM002|找不到数据源，未指定默认驱动程序|（DM）在系统信息中找不到参数*ServerName*中指定的数据源名称，也没有默认的驱动程序规范。|  
+|IM003|指定的驱动程序无法连接到|（DM）找不到系统信息的数据源规范中列出的驱动程序，或由于某些其他原因无法连接到该驱动程序。|  
+|IM004|SQL_HANDLE_ENV 上驱动程序的 SQLAllocHandle 失败|（DM）在**SQLConnect**期间，驱动程序管理器调用了驱动程序的**SQLAllocHandle**函数， *HandleType*为 SQL_HANDLE_ENV，驱动程序返回了一个错误。|  
+|IM005|SQL_HANDLE_DBC 上驱动程序的 SQLAllocHandle 失败|（DM）在**SQLConnect**期间，驱动程序管理器调用了驱动程序的**SQLAllocHandle**函数， *HandleType*为 SQL_HANDLE_DBC，驱动程序返回了一个错误。|  
+|IM006|驱动程序的 SQLSetConnectAttr 失败|在**SQLConnect**期间，驱动程序管理器调用了驱动程序的**SQLSetConnectAttr**函数，驱动程序返回了一个错误。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
+|IM009|无法连接到翻译 DLL|驱动程序无法连接到为数据源指定的转换 DLL。|  
+|IM010|数据源名称太长|（DM） * \*ServerName*的长度超过 SQL_MAX_DSN_LENGTH 个字符。|  
+|IM014|指定的 DSN 包含驱动程序和应用程序之间的体系结构不匹配|（DM）32位应用程序使用连接到64位驱动程序的 DSN;反之亦然。|  
+|IM015|SQL_HANDLE_DBC_INFO_HANDLE 上驱动程序的 SQLConnect 失败|如果驱动程序返回 SQL_ERROR，驱动程序管理器会将 SQL_ERROR 返回到应用程序，连接将失败。<br /><br /> 有关 SQL_HANDLE_DBC_INFO_TOKEN 的详细信息，请参阅[在 ODBC 驱动程序中开发连接池感知](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)。|  
+|IM017|在异步通知模式下禁用轮询|无论何时使用通知模型，都将禁用轮询。|  
+|IM018|尚未调用**SQLCompleteAsync**来完成此句柄上先前的异步操作。|如果句柄上的上一个函数调用返回 SQL_STILL_EXECUTING 并且启用了通知模式，则必须在句柄上调用**SQLCompleteAsync** ，以执行后处理并完成操作。|  
+|S1118|驱动程序不支持异步通知|当驱动程序不支持异步通知时，不能设置 SQL_ATTR_ASYNC_DBC_EVENT 或 SQL_ATTR_ASYNC_DBC_RETCODE_PTR。|  
   
 ## <a name="comments"></a>注释  
- 应用程序使用的原因的信息**SQLConnect**，请参阅[使用 SQLConnect 连接](../../../odbc/reference/develop-app/connecting-with-sqlconnect.md)。  
+ 有关应用程序为何要使用**SQLConnect**的信息，请参阅[使用 SQLConnect 连接](../../../odbc/reference/develop-app/connecting-with-sqlconnect.md)。  
   
- 驱动程序管理器在应用程序调用函数之前不会连接到驱动程序 (**SQLConnect**， **SQLDriverConnect**，或**SQLBrowseConnect**) 连接到驱动程序。 在此之前，驱动程序管理器具有其自己的句柄的工作和管理连接信息。 当应用程序调用连接函数时，驱动程序管理器将检查驱动程序当前是否连接到指定*ConnectionHandle*:  
+ 在应用程序调用某个函数（**SQLConnect**、 **SQLDriverConnect**或**SQLBrowseConnect**）以连接到该驱动程序之前，驱动程序管理器不会连接到该驱动程序。 在该点之前，驱动程序管理器会使用其自己的句柄并管理连接信息。 当应用程序调用连接函数时，驱动程序管理器会检查当前是否为指定的*ConnectionHandle*连接了驱动程序：  
   
--   如果驱动程序未连接到，驱动程序管理器连接到该驱动程序并调用**SQLAllocHandle**与*HandleType*设为 SQL_HANDLE_ENV， **SQLAllocHandle**与*HandleType*设为 SQL_HANDLE_DBC， **SQLSetConnectAttr** （如果应用程序指定任何连接属性），并在驱动程序中的连接函数。 驱动程序管理器返回 SQLSTATE IM006 (驱动程序的**SQLSetConnectOption**失败) 和连接函数如果驱动程序返回的错误 SQL_SUCCESS_WITH_INFO **SQLSetConnectAttr**。 有关详细信息，请参阅[连接到数据源或驱动程序](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)。  
+-   如果驱动程序未连接到，则驱动程序管理器将连接到该驱动程序，并使用 SQL_HANDLE_ENV 的*HandleType* 、 **SQLAllocHandle**和*HandleType* of SQL_HANDLE_DBC， **SQLSetConnectAttr** （如果应用程序指定了任何连接属性）和该驱动程序中的连接函数来调用**SQLAllocHandle** 。 如果驱动程序为**SQLSetConnectAttr**返回了错误，则驱动程序管理器会为连接函数返回 SQLSTATE IM006 （Driver **SQLSetConnectOption** failed）和 SQL_SUCCESS_WITH_INFO。 有关详细信息，请参阅[连接到数据源或驱动程序](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)。  
   
--   如果指定的驱动程序已连接到在*ConnectionHandle*，驱动程序管理器驱动程序中调用仅连接函数。 在这种情况下，该驱动程序必须确保所有连接都属性*ConnectionHandle*维护其当前设置。  
+-   如果指定的驱动程序已连接到*ConnectionHandle*上的，则驱动程序管理器仅调用驱动程序中的连接函数。 在这种情况下，驱动程序必须确保*ConnectionHandle*的所有连接属性都保持其当前设置。  
   
--   如果不同的驱动程序连接到，驱动程序管理器会调用**SQLFreeHandle**与*HandleType*设为 SQL_HANDLE_DBC，然后，如果没有其他驱动程序连接到该环境中，将调用**SQLFreeHandle**与*HandleType*设为 SQL_HANDLE_ENV 连接驱动程序中，然后断开连接该驱动程序。 然后，它执行与驱动程序时未连接到相同的操作。  
+-   如果连接到其他驱动程序，则驱动程序管理器将使用 SQL_HANDLE_DBC 的*HandleType*调用**SQLFreeHandle** ，然后，如果该环境中没有连接到的其他驱动程序，则它将在连接的驱动程序中调用**SQLFreeHandle**并 SQL_HANDLE_ENV *HandleType* ，然后断开该驱动程序的连接。 然后，它执行与驱动程序未连接时相同的操作。  
   
- 然后，该驱动程序分配句柄并初始化自身。  
+ 然后，该驱动程序将分配句柄并初始化自身。  
   
- 当应用程序调用**SQLDisconnect**，驱动程序管理器调用**SQLDisconnect**驱动程序中。 但是，它不会断开该驱动程序。 这在反复连接到和从数据源断开连接的应用程序的内存中保留该驱动程序。 当应用程序调用**SQLFreeHandle**与*HandleType*设为 SQL_HANDLE_DBC，驱动程序管理器调用**SQLFreeHandle**与*HandleType*设为 SQL_HANDLE_DBC，然后**SQLFreeHandle**与*HandleType*设为 SQL_HANDLE_ENV 在驱动程序，然后断开连接，驱动程序。  
+ 当应用程序调用**SQLDisconnect**时，驱动程序管理器将在驱动程序中调用**SQLDisconnect** 。 但是，它不会断开驱动程序的连接。 这会为重复连接到数据源和从数据源断开连接的应用程序在内存中保留该驱动程序。 当应用程序使用 SQL_HANDLE_DBC 的*HandleType*调用**SQLFreeHandle**时，驱动程序管理器会调用**SQLFreeHandle** ，其中*HandleType*的 SQL_HANDLE_DBC，然后使用驱动程序中的 SQL_HANDLE_ENV *SQLFreeHandle* HandleType **** ，然后断开驱动程序的连接。  
   
- ODBC 应用程序可以建立多个连接。  
+ 一个 ODBC 应用程序可以建立多个连接。  
   
-## <a name="driver-manager-guidelines"></a>驱动程序管理器指导原则  
- 内容 **ServerName*影响驱动程序管理器和一个驱动程序如何协同工作以建立与数据源的连接。  
+## <a name="driver-manager-guidelines"></a>驱动程序管理器指南  
+ **ServerName*的内容会影响驱动程序管理器和驱动程序协同工作的方式，以建立与数据源的连接。  
   
--   如果\* *ServerName*包含有效数据源名称，驱动程序管理器的系统信息中查找相应的数据源规范并将连接到关联的驱动程序。 驱动程序管理器将每个传递**SQLConnect**向驱动程序的参数。  
+-   如果\* *ServerName*包含有效的数据源名称，则驱动程序管理器将在系统信息中查找相应的数据源规范并连接到关联的驱动程序。 驱动程序管理器将每个**SQLConnect**参数传递给驱动程序。  
   
--   如果找不到数据源名称或*ServerName*是 null 指针，驱动程序管理器查找默认数据源说明，并连接到关联的驱动程序。 驱动程序管理器将传递给驱动程序*用户名*并*身份验证*以未经修改的参数和"DEFAULT"用于*ServerName*参数。  
+-   如果找不到数据源名称，或者*ServerName*为空指针，则驱动程序管理器将查找默认数据源规范并连接到关联的驱动程序。 驱动程序管理器会将*用户名*和*身份验证*参数（未修改）和*ServerName*参数的 "默认" 传递给驱动程序。  
   
--   如果*ServerName*参数为"DEFAULT"，驱动程序管理器查找默认数据源说明，并连接到关联的驱动程序。 驱动程序管理器将每个传递**SQLConnect**向驱动程序的参数。  
+-   如果*ServerName*参数为 "default"，则驱动程序管理器将查找默认数据源规范并连接到关联的驱动程序。 驱动程序管理器将每个**SQLConnect**参数传递给驱动程序。  
   
--   如果找不到数据源名称或*ServerName*为 null 指针，并且默认值的数据源规范不存在，则驱动程序管理器返回具有 SQLSTATE IM002 SQL_ERROR （数据源找不到名称和无默认值指定驱动程序）。  
+-   如果找不到数据源名称或者*ServerName*为空指针，并且默认数据源规范不存在，则驱动程序管理器将返回 SQL_ERROR 与 SQLSTATE IM002 （找不到数据源名称并且未指定默认驱动程序）。  
   
- 它已连接到由驱动程序管理器后，驱动程序可以在系统信息中查找其相应的数据源规范和使用规范中的特定于驱动程序的信息来完成其组的所需的连接信息。  
+ 驱动程序管理员连接到之后，驱动程序可以在系统信息中查找其相应的数据源规范，并使用规范中特定于驱动程序的信息来完成其所需的连接信息集。  
   
- 如果数据源的系统信息中指定默认转换库，则该驱动程序连接到它。 可以通过调用连接到不同的转换库**SQLSetConnectAttr**使用 SQL_ATTR_TRANSLATE_LIB 属性。 可以通过调用指定转换选项**SQLSetConnectAttr** SQL_ATTR_TRANSLATE_OPTION 属性。  
+ 如果在数据源的系统信息中指定了默认的翻译库，则驱动程序将连接到它。 可以通过使用 SQL_ATTR_TRANSLATE_LIB 特性调用**SQLSetConnectAttr**来连接到不同的转换库。 可以通过使用 SQL_ATTR_TRANSLATE_OPTION 特性调用**SQLSetConnectAttr**来指定转换选项。  
   
- 如果驱动程序支持**SQLConnect**，该驱动程序的系统信息的驱动程序关键字部分必须包含**ConnectFunctions**的第一个字符的关键字设置为"Y"。  
+ 如果驱动程序支持**SQLConnect**，则驱动程序的系统信息的驱动程序关键字部分必须包含**ConnectFunctions**关键字，其第一个字符设置为 "Y"。  
   
 ### <a name="connection-pooling"></a>连接池  
- 连接池允许应用程序以重复使用已创建的连接。 当启用连接池并**SQLConnect**调用时，驱动程序管理器尝试建立连接使用的是已被指定为连接池的环境中的连接池的一部分的连接。 此环境是在池中使用的连接的所有应用程序使用一个共享的环境。  
+ 连接池允许应用程序重用已创建的连接。 当启用连接池并调用**SQLConnect**时，驱动程序管理器将尝试使用连接，该连接是已为连接池指定的环境中的连接池。 此环境是一个共享环境，由使用池中的连接的所有应用程序使用。  
   
- 在环境分配通过调用之前启用连接池**SQLSetEnvAttr**将 SQL_ATTR_CONNECTION_POOLING 设置为 SQL_CP_ONE_PER_DRIVER （它指定每个驱动程序的一个池的最大值） 或 SQL_CP_ONE_PER_HENV（指定每个环境的一个池的最大值）。 **SQLSetEnvAttr**这种情况下使用调用*EnvironmentHandle*设置为 null，这使得进程级别属性的属性。 如果 SQL_ATTR_CONNECTION_POOLING 设置为 SQL_CP_OFF，已禁用连接池。  
+ 通过调用**SQLSetEnvAttr**将 SQL_ATTR_CONNECTION_POOLING 设置为 SQL_CP_ONE_PER_DRIVER （指定每个驱动程序最多一个池）或 SQL_CP_ONE_PER_HENV （每个环境最多指定一个池）或（指定每个环境最多一个池），可以在分配环境之前启用连接池。 在这种情况下，将调用**SQLSetEnvAttr** ，并将*EnvironmentHandle*设置为 null，这会使该属性成为进程级特性。 如果 SQL_ATTR_CONNECTION_POOLING 设置为 SQL_CP_OFF，将禁用连接池。  
   
- 已启用连接池后， **SQLAllocHandle**与*HandleType*设为 SQL_HANDLE_ENV 调用分配一个环境。 此调用分配的环境是一个共享的环境，因为已启用连接池。 但是，只有不确定将使用的环境**SQLAllocHandle**与*HandleType*设为 SQL_HANDLE_DBC 调用。  
+ 启用连接池后，将调用**SQLAllocHandle**的 SQL_HANDLE_ENV *HandleType*来分配环境。 此调用分配的环境是共享环境，因为已启用连接池。 但是，在调用具有 SQL_HANDLE_DBC 的*HandleType*的**SQLAllocHandle**之前，将不会确定要使用的环境。  
   
- **SQLAllocHandle**与*HandleType*设为 SQL_HANDLE_DBC 调用来分配连接。 驱动程序管理器尝试查找匹配应用程序设置的环境属性的现有共享的环境。 如果不存在任何此类环境，将创建一个作为一种隐式*共享的环境*。 如果找到匹配的共享的环境，环境句柄返回给应用程序和其引用计数会递增。  
+ 调用具有 SQL_HANDLE_DBC 的*HandleType*的**SQLAllocHandle** ，以分配连接。 驱动程序管理器将尝试查找与应用程序设置的环境特性相匹配的现有共享环境。 如果不存在这样的环境，则会创建一个隐式*共享环境*。 如果找到匹配的共享环境，则将环境句柄返回到应用程序，并递增其引用计数。  
   
- 但是，只有不确定将使用的连接**SQLConnect**调用。 此时，驱动程序管理器尝试在应用程序请求的条件相匹配的连接池中查找现有连接。 这些条件包括对的调用中所请求的连接选项**SQLConnect** (的值*ServerName*，*用户名*，和*身份验证*关键字) 和任何连接的属性集，因为**SQLAllocHandle**与*HandleType*设为 SQL_HANDLE_DBC 调用。 驱动程序管理器检查的相应连接关键字和池中的连接中的属性对这些条件。 如果找到匹配项，则使用池中的连接。 如果不找到任何匹配项，则创建新的连接。  
+ 但是，在调用**SQLConnect**之前，将不会确定要使用的连接。 此时，驱动程序管理器将尝试查找连接池中与应用程序所请求的条件匹配的现有连接。 这些条件包括对**SQLConnect**的调用中请求的连接选项（ *ServerName*、 *UserName*和*Authentication*关键字的值）和任何连接属性集，因为**SQLAllocHandle**已调用 HandleType SQL_HANDLE_DBC 的** 。 驱动程序管理器对照池中的连接关键字和属性检查这些条件。 如果找到匹配项，则使用池中的连接。 如果未找到匹配项，则创建一个新连接。  
   
- 如果 SQL_ATTR_CP_MATCH 环境属性设置为 SQL_CP_STRICT_MATCH，匹配必须为确切的池中使用的连接。 如果 SQL_ATTR_CP_MATCH 环境属性设置为 SQL_CP_RELAXED_MATCH，连接选项在调用**SQLConnect**必须匹配，而不是所有连接属性必须匹配。  
+ 如果 SQL_ATTR_CP_MATCH 环境特性设置为 SQL_CP_STRICT_MATCH，则匹配项对于池中要使用的连接必须是准确的。 如果 SQL_ATTR_CP_MATCH 环境特性设置为 SQL_CP_RELAXED_MATCH，则调用**SQLConnect**的连接选项必须匹配，但不是所有连接特性都必须匹配。  
   
- 将应用以下规则时的连接属性，所设置的应用程序，然后**SQLConnect**被调用时，与在池中的连接的连接属性不匹配：  
+ 在调用**SQLConnect**之前由应用程序设置的连接属性与池中连接的连接属性不匹配时，将应用以下规则：  
   
--   如果建立连接之前，必须设置连接属性：  
+-   如果在建立连接前必须设置连接属性：  
   
-     如果 SQL_ATTR_CP_MATCH SQL_CP_STRICT_MATCH，SQL_ATTR_PACKET_SIZE 中已入池连接必须与应用程序设置的属性相同。 如果 SQL_CP_RELAXED_MATCH，SQL_ATTR_PACKET_SIZE 的值可能会不同。  
+     如果 SQL_CP_STRICT_MATCH SQL_ATTR_CP_MATCH，则共用连接中的 SQL_ATTR_PACKET_SIZE 必须与应用程序设置的属性相同。 如果 SQL_CP_RELAXED_MATCH，则 SQL_ATTR_PACKET_SIZE 的值可能不同。  
   
-     SQL_ATTR_LOGIN_VALUE 的值不会影响匹配。  
+     SQL_ATTR_LOGIN_VALUE 的值不会影响匹配项。  
   
--   如果之前或之后建立连接时，可以设置连接属性：  
+-   如果在建立连接之前或之后可以设置连接属性：  
   
-     如果连接属性尚未设置应用程序，但尚未设置连接上的池中，并且没有默认值中已入池连接, 的连接属性重新设置为默认值，并声明一个匹配项。 如果没有默认值，已入池的连接不视为匹配项。  
+     如果应用程序尚未设置连接属性，但已在池中的连接上设置该属性，并且有一个默认值，则会将共用连接中的连接属性设置回默认值，并声明一个匹配项。 如果没有默认值，则不会将共用连接视为匹配项。  
   
-     如果连接属性已由应用程序设置，但尚未设置连接上的池中，对该集由应用程序更改池的连接属性和声明匹配项。  
+     如果连接属性已由应用程序设置，但尚未对池中的连接进行设置，则池上的连接属性将更改为应用程序设置的，并声明匹配项。  
   
-     如果连接属性已经设置了由应用程序，并且还已设置在连接上的池中，但这些值不匹配，则使用应用程序的连接属性的值，并声明匹配项。  
+     如果连接属性已由应用程序设置，并且还在池中的连接上设置，但这些值不同，则使用应用程序的连接属性的值并声明匹配项。  
   
--   如果驱动程序特定的连接属性的值不完全相同且 SQL_ATTR_CP_MATCH 设置为 SQL_CP_STRICT_MATCH，不是使用池中的连接。  
+-   如果驱动程序特定的连接属性的值不相同并且 SQL_ATTR_CP_MATCH 设置为 SQL_CP_STRICT_MATCH，则不会使用池中的连接。  
   
- 当应用程序调用**SQLDisconnect**断开连接，连接将返回到连接池，并且可供重复使用。  
+ 当应用程序调用**SQLDisconnect**断开连接时，连接将返回到连接池，并可用于重用。  
   
 ### <a name="optimizing-connection-pooling-performance"></a>优化连接池性能  
- 当涉及到分布式的事务时，就可以优化连接池使用的性能**SQL_DTC_TRANSITION_COST**，这是 SQLUINTEGER 位掩码。 引用转换的连接属性将从 0 的值不为零，SQL_ATTR_ENLIST_IN_DTC 的转换，反之亦然。 这是从连接未登记到分布式事务中登记在分布式事务中，反之亦然。 具体取决于如何驱动程序实现登记 （设置连接属性 SQL_ATTR_ENLIST_IN_DTC），这些转换可能会非常昂贵，因此应当避免为了获得最佳性能。  
+ 如果涉及到分布式事务，则可以使用 SQLUINTEGER 位掩码**SQL_DTC_TRANSITION_COST**来优化连接池的性能。 引用的转换是连接属性的转换 SQL_ATTR_ENLIST_IN_DTC 从值0到非零，反之亦然。 这是指未登记到分布式事务中以登记到分布式事务中的连接，反之亦然。 根据驱动程序实现登记的方式（SQL_ATTR_ENLIST_IN_DTC 设置连接属性），这些转换可能会消耗大量资源，因此应尽量避免这种转换。  
   
  驱动程序返回的值包含以下位的任意组合：  
   
--   **SQL_DTC_ENLIST_EXPENSIVE**，当设置，则意味着比从非零值转换到另一个非零值 （前面已登记的连接在其下一个事务中登记） 贵很多非零值转换为零。  
+-   如果设置了此项，则表示零到非零的转换比从非零转换到另一个非零值（在其下一个事务中登记以前登记的连接）的开销要大得多。 **SQL_DTC_ENLIST_EXPENSIVE**  
   
--   **SQL_DTC_UNENLIST_EXPENSIVE**，当设置，则意味着零转换为非零值是比使用其 SQL_ATTR_ENLIST_IN_DTC 属性已设置为零的连接贵很多。  
+-   如果设置此属性，则表示非零到零转换的开销要比使用 SQL_ATTR_ENLIST_IN_DTC 属性已设置为零的连接大得多。 **SQL_DTC_UNENLIST_EXPENSIVE**  
   
- 没有与连接使用情况权衡性能。 如果驱动程序指示一个或多个这些过渡是昂贵，驱动程序管理器的连接池进程将保留在池中的更多连接，从而对此做出响应。 一些池中的连接是首选非事务性使用，而有些则首选事务使用。 但是，如果该驱动程序指出，这些转换并不昂贵，较少连接可用，可能交替使用非事务性和事务使用。  
+ 性能与连接使用情况之间的折衷。 如果驱动程序指示其中一个或多个转换成本高昂，驱动程序管理器的连接池程序将通过在池中保留更多连接来响应这一转换。 池中的某些连接是非事务性使用的首选，一些是事务使用的首选。 但是，如果驱动程序指示这些转换开销不高，则可以使用更少的连接，这可能会在非事务性和事务使用之间交替。  
   
- 不支持 SQL_ATTR_ENLIST_IN_DTC 的驱动程序不需要支持 SQL_DTC_TRANSITION_COST。 支持 SQL_ATTR_ENLIST_IN_DTC，但不是 SQL_DTC_TRANSITION_COST 支持的驱动程序，请假定，转换并不昂贵，因为如果驱动程序返回此值为 0 （无设置位）。  
+ 不支持 SQL_ATTR_ENLIST_IN_DTC 的驱动程序无需支持 SQL_DTC_TRANSITION_COST。 对于支持 SQL_ATTR_ENLIST_IN_DTC 但不能 SQL_DTC_TRANSITION_COST 的驱动程序，假设转换的开销并不高，就好像该驱动程序为此值返回了0（无位设置）。  
   
- 尽管在 ODBC 3.5 中，ODBC 2 引入了 SQL_DTC_TRANSITION_COST。*x*驱动程序还可以支持它因为驱动程序管理器将查询此信息，不管驱动程序版本。  
+ 尽管 SQL_DTC_TRANSITION_COST 是在 ODBC 3.5 （ODBC 2）中引入的。*x*驱动程序还可以支持它，因为无论驱动程序版本如何，驱动程序管理器都将查询此信息。  
   
 ### <a name="code-example"></a>代码示例  
- 在以下示例中，应用程序分配环境和连接句柄。 然后，连接到具有用户 ID 约翰的销售订单数据源和密码 Sesame 并处理数据。 完成处理数据后，它与数据源断开连接并释放句柄。  
+ 在下面的示例中，应用程序分配环境和连接句柄。 然后，它将连接到具有用户 ID 约翰和密码 Sesame 的 SalesOrders 数据源，并处理数据。 处理完数据后，它会断开与数据源的连接，并释放句柄。  
   
 ```cpp  
 // SQLConnect_ref.cpp  
@@ -247,15 +247,15 @@ int main() {
   
 ### <a name="related-functions"></a>相关函数  
   
-|有关信息|请参阅|  
+|有关以下方面的信息|请参阅|  
 |---------------------------|---------|  
 |分配句柄|[SQLAllocHandle 函数](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
-|发现和枚举值来连接到数据源|[SQLBrowseConnect 函数](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|  
-|与数据源断开连接|[SQLDisconnect 函数](../../../odbc/reference/syntax/sqldisconnect-function.md)|  
-|连接到使用连接字符串或对话框中的数据源|[SQLDriverConnect 函数](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
+|发现和枚举连接到数据源所需的值|[SQLBrowseConnect 函数](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|  
+|断开与数据源的连接|[SQLDisconnect 函数](../../../odbc/reference/syntax/sqldisconnect-function.md)|  
+|使用连接字符串或对话框连接到数据源|[SQLDriverConnect 函数](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
 |返回连接属性的设置|[SQLGetConnectAttr 函数](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
-|将连接属性设置|[SQLSetConnectAttr 函数](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
+|设置连接属性|[SQLSetConnectAttr 函数](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ODBC API 参考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 头文件](../../../odbc/reference/install/odbc-header-files.md)

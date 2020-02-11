@@ -1,5 +1,5 @@
 ---
-title: WindowsServiceIdentityConfigured 属性 (WMI MSReportServer_ConfigurationSetting) |Microsoft Docs
+title: WindowsServiceIdentityConfigured 属性（WMI MSReportServer_ConfigurationSetting） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cb9b782aece15cf9aaf49b2bc427d34fa3d86525
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66096973"
 ---
-# <a name="windowsserviceidentityconfigured-property-wmi-msreportserverconfigurationsetting"></a>WindowsServiceIdentityConfigured 属性 (WMI MSReportServer_ConfigurationSetting)
+# <a name="windowsserviceidentityconfigured-property-wmi-msreportserver_configurationsetting"></a>WindowsServiceIdentityConfigured 属性 (WMI MSReportServer_ConfigurationSetting)
   返回在上次配置报表服务器 Windows 服务时所指定的运行时要使用的标识。 只读。  
   
 ## <a name="syntax"></a>语法  
@@ -45,9 +45,9 @@ public string WindowsServiceIdentityConfigured;
  [MSReportServer_ConfigurationSetting 类](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>要求  
- **命名空间:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](msreportserver-configurationsetting-members.md)  
   
   

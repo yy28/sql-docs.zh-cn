@@ -11,18 +11,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4106de497a43404cb44606259d53beb1ed8f5a58
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797449"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>配置 HealthCheckTimeout 属性设置
-  HealthCheckTimeout 设置用于指定在报告 AlwaysOn 故障转移群集之前，SQL Server 资源 DLL 应等待[sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)存储过程返回的信息的时间长度（以毫秒为单位）实例（FCI）为无响应。 对超时设置所做的更改会立即生效，不需要重新启动 SQL Server 资源。  
+  HealthCheckTimeout 设置用于指定在将 AlwaysOn 故障转移群集实例（FCI）报告为无响应之前，SQL Server 资源 DLL 应等待[sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)存储过程返回的信息的时间长度（以毫秒为单位）。 对超时设置所做的更改会立即生效，不需要重新启动 SQL Server 资源。  
   
--   **准备工作：** [限制和局限](#Limits)、[安全性](#Security)  
+-   **开始之前：**  [限制和限制](#Limits)、[安全性](#Security)  
   
--   **要配置 HeathCheckTimeout 设置，请使用：** [PowerShell](#PowerShellProcedure)、[故障转移群集管理器](#WSFC)、[Transact-SQL](#TsqlProcedure)  
+-   **若要配置 HeathCheckTimeout 设置，请使用：**  [PowerShell](#PowerShellProcedure)、[故障转移群集管理器](#WSFC)、 [transact-sql](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -31,10 +31,10 @@ ms.locfileid: "72797449"
   
 ###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要 ALTER SETTINGS 和 VIEW SERVER STATE 权限。  
   
-##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
+##  <a name="PowerShellProcedure"></a>使用 PowerShell  
   
 ### <a name="to-configure-healthchecktimeout-settings"></a>配置 HealthCheckTimeout 设置  
   
@@ -42,7 +42,7 @@ ms.locfileid: "72797449"
   
 2.  导入 `FailoverClusters` 模块以启用群集 cmdlet。  
   
-3.  使用 `Get-ClusterResource` cmdlet 查找 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源，然后使用 `Set-ClusterParameter` cmdlet 为故障转移群集实例设置**HealthCheckTimeout**属性。  
+3.  使用`Get-ClusterResource` cmdlet 查找[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]资源，然后使用`Set-ClusterParameter` cmdlet 为故障转移群集实例设置**HealthCheckTimeout**属性。  
   
 > [!TIP]  
 >  每次您打开新的 PowerShell 窗口时，都需要导入 `FailoverClusters` 模块。  
@@ -58,25 +58,25 @@ Get-ClusterResource $fci | Set-ClusterParameter HealthCheckTimeout 60000
   
 ### <a name="related-content-powershell"></a>相关内容 (PowerShell)  
   
--   [群集和高可用性](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) （故障转移群集和网络负载平衡团队博客）  
+-   [群集和高可用性](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx)（故障转移群集和网络负载平衡团队博客）  
   
--   [故障转移群集上的 Windows PowerShell 入门](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
+-   [在故障转移群集上使用 Windows PowerShell 入门](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
 -   [群集资源命令和等效的 Windows PowerShell cmdlet](https://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
   
-##  <a name="WSFC"></a> 使用故障转移群集管理器管理单元  
+##  <a name="WSFC"></a>使用故障转移群集管理器管理单元  
  **配置 HealthCheckTimeout 设置**  
   
 1.  打开故障转移群集管理器管理单元。  
   
 2.  展开 **“服务和应用程序”** ，然后选择 FCI。  
   
-3.  右键单击“其他资源”下的“SQL Server 资源”，然后从右键菜单中选择“属性”。 此时将打开 SQL Server 资源 **“属性”** 对话框。  
+3.  右键单击“其他资源”**** 下的“SQL Server 资源”****，然后从右键菜单中选择“属性”****。 此时将打开 SQL Server 资源 **“属性”** 对话框。  
   
 4.  选择 **“属性”** 选项卡，为 **HealthCheckTimeout** 属性输入所需的值，然后单击 **“确定”** 以应用更改。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
- 使用 [ALTER SERVER CONFIGURATION](/sql/t-sql/statements/alter-server-configuration-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句，你可以指定 HealthCheckTimeOut 属性值。  
+ 使用[ALTER SERVER CONFIGURATION](/sql/t-sql/statements/alter-server-configuration-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)]语句，你可以指定 HealthCheckTimeOut 属性值。  
   
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
  下面的示例将 HealthCheckTimeout 选项设置为 15,000 毫秒（15 秒）。  
@@ -87,4 +87,4 @@ SET FAILOVER CLUSTER PROPERTY HealthCheckTimeout = 15000;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Failover Policy for Failover Cluster Instances](failover-policy-for-failover-cluster-instances.md)  
+ [故障转移群集实例的故障转移策略](failover-policy-for-failover-cluster-instances.md)  

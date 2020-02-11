@@ -1,5 +1,5 @@
 ---
-title: 维度 (MDX) |Microsoft Docs
+title: 维度（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 58bee93a4cef37a8a5a71211b292a16392687f12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67999957"
 ---
 # <a name="dimension-mdx"></a>Dimension (MDX)
@@ -46,7 +46,7 @@ Member_Expression.Dimension
  返回成员的有效多维表达式 (MDX)。  
   
 ### <a name="examples"></a>示例  
- 下面的示例使用**维度**函数，结合**名称**函数，返回指定成员的层次结构名称。  
+ 下面的示例将**维度**函数与**Name**函数结合使用，以返回指定成员的层次结构名称。  
   
 ```  
 WITH member measures.x as [Product].[Product Model Lines].[Model].&[HL Road Tire].Dimension.Name  
@@ -62,7 +62,7 @@ SELECT measures.x on 0
 FROM [Adventure Works]  
 ```  
   
- 下面的示例使用**维度**函数，结合**成员**并**计数**函数，可以在层次结构中返回的成员数包含指定的成员。  
+ 下面的示例将**维度**函数与**成员**和**计数**函数结合使用，以返回包含指定成员的层次结构中的成员数。  
   
 ```  
 WITH member measures.x as [Product].[Product Model Lines].[Model].&[HL Road Tire].Dimension.Members.Count  
@@ -70,11 +70,11 @@ SELECT measures.x on 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [计数&#40;层次结构级别&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)   
- [Count（集）(MDX)](../mdx/count-set-mdx.md)   
- [级别&#40;MDX&#41;](../mdx/levels-mdx.md)   
- [成员&#40;设置&#41; &#40;MDX&#41;](../mdx/members-set-mdx.md)   
- [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#41; &#40;MDX&#41;&#40;层次结构级别](../mdx/count-hierarchy-levels-mdx.md)   
+ [&#41; &#40;MDX&#41;&#40;集计数](../mdx/count-set-mdx.md)   
+ [&#40;MDX&#41;级别](../mdx/levels-mdx.md)   
+ [成员 &#40;集&#41; &#40;MDX&#41;](../mdx/members-set-mdx.md)   
+ [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

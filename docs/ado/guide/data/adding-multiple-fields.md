@@ -16,14 +16,14 @@ ms.assetid: f3648ef4-9f36-4991-a868-83a617389844
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 07a1a3723b4169872c1b8aa872457e67a60d1f71
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926276"
 ---
 # <a name="adding-multiple-fields-and-values"></a>添加多个字段和值
-有时，可能会更有效的字段和其对应的值数组中传递**AddNew**方法，而不是设置**值**多次针对每个新字段。 如果*FieldList*是一个数组*值*必须也是一个数组具有相同成员的数目; 否则为就会出错。 字段名称的顺序必须与匹配的每个数组中的字段值的顺序。 下面的代码将数组的字段和值对的数组传递**AddNew**方法。
+有时，将字段及其相应值传入到**AddNew**方法可能更高效，而不是为每个新字段多次设置**值**。 如果*FieldList*是一个数组，则*值*也必须是具有相同成员数的数组;否则，将发生错误。 字段名称的顺序必须与每个数组中的字段值顺序相匹配。 下面的代码将字段数组和值数组传递到**AddNew**方法。
 
 ```
 'BeginAddNew2

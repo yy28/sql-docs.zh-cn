@@ -1,5 +1,5 @@
 ---
-title: 将提交模式设置 |Microsoft Docs
+title: 设置提交模式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ ms.assetid: b60d0d74-0655-4013-8d5a-bc1866eaa166
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a43a78ad9453f65d9b12595851bd622f720b409a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68094226"
 ---
 # <a name="setting-the-commit-mode"></a>设置提交模式
-应用程序使用 SQL_ATTR_AUTOCOMMIT 连接属性指定的事务模式。 默认情况下，ODBC 事务处于自动提交模式 (除非**SQLSetConnectAttr**并**SQLSetConnectOption**不受支持，这是不太可能)。 从手动提交模式切换到自动提交模式自动提交在连接上任何打开的事务。
+应用程序指定具有 SQL_ATTR_AUTOCOMMIT 连接属性的事务模式。 默认情况下，ODBC 事务处于自动提交模式（除非不支持**SQLSetConnectAttr**和**SQLSetConnectOption** ，这是不可能的）。 从手动提交模式切换到自动提交模式会自动提交连接上的任何打开的事务。

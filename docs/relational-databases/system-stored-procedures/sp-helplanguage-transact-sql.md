@@ -1,5 +1,5 @@
 ---
-title: sp_helplanguage (TRANSACT-SQL) |Microsoft Docs
+title: sp_helplanguage （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d46e178fc1872a84bb573f16629803c59f2fb6c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68122513"
 ---
-# <a name="sphelplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
+# <a name="sp_helplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   报告有关 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中的某个特定的替代语言或所有语言的信息。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,26 +41,27 @@ sp_helplanguage [ [ @language = ] 'language' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @language = ] 'language'` 是要显示其信息的替代语言的名称。 *语言*是**sysname**，默认值为 NULL。 如果*语言*是指定，则返回有关指定的语言信息。 如果未指定语言，有关中的所有语言的信息**sys.syslanguages**返回兼容性视图。  
+`[ @language = ] 'language'`要显示其信息的替代语言的名称。 *language*的值为**sysname**，默认值为 NULL。 如果指定*language* ，则返回有关指定语言的信息。 如果未指定 language，则返回**sys.syslanguages**兼容性视图中有关所有语言的信息。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**langid**|**smallint**|语言标识号。|  
-|**dateformat**|**nchar(3)**|日期的格式。|  
-|**datefirst**|**tinyint**|一周的第一天：1 代表星期一，2 代表星期二，依此类推，直到 7 代表星期日。|  
-|**upgrade**|**int**|最后一次升级此语言的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。|  
-|**name**|**sysname**|语言名称。|  
-|**alias**|**sysname**|语言的替代名称。|  
-|**几个月**|**nvarchar(372)**|月份名称。|  
-|**shortmonths**|**nvarchar(132)**|月份简称。|  
-|**天**|**nvarchar(217)**|日期名称。|  
+|**dateformat**|**nchar （3）**|日期的格式。|  
+|**datefirst**|**tinyint**|每周的第一天：1 代表星期一，2 代表星期二，依此类推，直到 7 代表星期日。|  
+|**升级**|**int**|最后一次升级此语言的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。|  
+|**路径名**|**sysname**|语言名称。|  
+|**a**|**sysname**|语言的替代名称。|  
+|**个月**|**nvarchar （372）**|月份名称。|  
+|**shortmonths**|**nvarchar （132）**|月份简称。|  
+|**天数**|**nvarchar （217）**|日期名称。|  
 |**lcid**|**int**|语言的 Windows 区域设置 ID。|  
-|**msglangid**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]消息组 ID。|  
+|**msglangid**|**smallint**|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]消息组 ID。|  
   
 ## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
@@ -81,8 +82,8 @@ sp_helplanguage French;
 sp_helplanguage;  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [数据库引擎存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [@@LANGUAGE (Transact-SQL)](../../t-sql/functions/language-transact-sql.md)   
  [SET LANGUAGE (Transact-SQL)](../../t-sql/statements/set-language-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

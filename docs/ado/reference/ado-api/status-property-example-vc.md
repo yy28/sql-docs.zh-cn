@@ -1,5 +1,5 @@
 ---
-title: Status 属性示例 （VC + +） |Microsoft Docs
+title: Status 属性示例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 194ce221-49bd-4474-ba34-91453d329381
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 708120992341b0e184cc42d13ebe1f461ecf861a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67916785"
 ---
 # <a name="status-property-example-vc"></a>Status 属性示例 (VC++)
-此示例使用[状态](../../../ado/reference/ado-api/status-property-ado-recordset.md)属性来显示之前发生的批处理更新批处理操作中修改哪些记录。  
+此示例使用[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)属性来显示批处理操作中修改了哪些记录，然后才能进行批处理更新。  
   
 ```  
 // BeginStatusCpp.cpp  
@@ -186,5 +186,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [Status 属性 （ADO 记录集）](../../../ado/reference/ado-api/status-property-ado-recordset.md)
+## <a name="see-also"></a>另请参阅  
+ [Status 属性（ADO 记录集）](../../../ado/reference/ado-api/status-property-ado-recordset.md)

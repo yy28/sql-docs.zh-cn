@@ -1,5 +1,5 @@
 ---
-title: BeginTrans、 CommitTrans 和 RollbackTrans 方法 (ADO) |Microsoft Docs
+title: BeginTrans、CommitTrans 和 RollbackTrans 方法（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -23,20 +23,20 @@ ms.assetid: d4683472-4120-4236-8640-fa9ae289e23e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c3a8bc22e57d91ab64bdbbc5fc694575a8aa8ff9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920529"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-ado"></a>BeginTrans、CommitTrans 和 RollbackTrans 方法 (ADO)
-这些事务方法管理事务中处理[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象，如下所示：  
+这些事务方法管理[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象中的事务处理，如下所示：  
   
--   **BeginTrans**开始新事务。  
+-   **BeginTrans**开始新的事务。  
   
--   **CommitTrans**保存任何更改并结束当前事务。 它还可能会启动新事务。  
+-   **CommitTrans**保存所有更改并结束当前事务。 它还可能会启动新的事务。  
   
--   **RollbackTrans**取消在当前事务期间所做的任何更改并结束事务。 它还可能会启动新事务。  
+-   **RollbackTrans**取消在当前事务中所做的任何更改并结束事务。 它还可能会启动新的事务。  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,33 +49,33 @@ object.RollbackTrans
 ```  
   
 ## <a name="return-value"></a>返回值  
- **BeginTrans**可作为返回的函数调用**长**变量，用于指示事务的嵌套级别。  
+ **BeginTrans**可作为一个函数调用，该函数返回一个指示事务的嵌套级别的**长**变量。  
   
-#### <a name="parameters"></a>Parameters  
- *object*  
- 一个**连接**对象。  
+#### <a name="parameters"></a>parameters  
+ *对象*  
+ **连接**对象。  
   
 ## <a name="connection"></a>连接  
- 使用这些方法与**连接**时想要保存或取消对作为单个单元的源数据所做更改的一系列对象。 例如，若要帐户之间转移资金，您从一个的金额中减去并将相同的量添加到另。 如果任一更新失败，帐户将无法再平衡。 打开的事务中进行这些更改可确保所有或任何更改都。  
+ 如果要将对源数据所做的一系列更改保存为单个单元，请将这些方法与**连接**对象一起使用。 例如，若要在帐户之间转移资金，可以从一个金额中减去一个金额，并将相同的金额添加到另一个。 如果任一更新失败，则帐户将不再平衡。 在打开的事务中进行这些更改可以确保所有更改或不会经历任何更改。  
   
 > [!NOTE]
->  并非所有提供程序支持的事务。 验证提供程序定义的属性"**事务 DDL**"将出现在**连接**对象的[属性](../../../ado/reference/ado-api/properties-collection-ado.md)集合，表示提供程序支持事务。 如果提供程序不支持事务，调用这些方法之一，将返回错误。  
+>  并非所有提供程序都支持事务。 验证提供程序定义的属性 "**事务 DDL**" 是否出现在**连接**对象的[Properties](../../../ado/reference/ado-api/properties-collection-ado.md)集合中，指示提供程序支持事务。 如果提供程序不支持事务，则调用这些方法之一将返回错误。  
   
- 调用后**BeginTrans**方法，该提供程序将无法再在瞬间完成提交在您调用之前所做的更改**CommitTrans**或**RollbackTrans**结束事务。  
+ 调用**BeginTrans**方法后，该提供程序将不会立即提交所做的更改，直到调用**CommitTrans**或**RollbackTrans**结束该事务为止。  
   
- 对于提供程序支持嵌套的事务，调用**BeginTrans**中打开的事务的方法将启动一个新的嵌套事务。 返回值指示的嵌套级别:"1"的返回值指示已打开顶级事务 （即事务不嵌套在另一个事务），"2"指示是否已打开第二个级别的事务 (事务嵌套在顶级事务），依次类推。 调用**CommitTrans**或**RollbackTrans**影响仅最新打开的事务; 您必须关闭或之前可以解决任何更高级别的事务回滚当前事务。  
+ 对于支持嵌套事务的提供程序，在打开的事务内调用**BeginTrans**方法将启动一个新的嵌套事务。 返回值指示嵌套的级别：返回值为 "1" 表示已打开顶级事务（也就是说，事务未嵌套在另一个事务中），"2" 表示已打开二级事务（嵌套在顶级事务中的事务等。 调用**CommitTrans**或**RollbackTrans**只会影响最近打开的事务;必须先关闭或回滚当前事务，然后才能解析任何更高级别的事务。  
   
- 调用**CommitTrans**方法保存的连接上打开的事务中所做的更改并结束事务。 调用**RollbackTrans**方法反转任何打开的事务中所做的更改并结束事务。 在没有任何打开的事务时调用任一种方法将生成错误。  
+ 调用**CommitTrans**方法将保存在连接上打开的事务中所做的更改并结束该事务。 调用**RollbackTrans**方法会反转在打开的事务中所做的任何更改，并结束该事务。 如果没有任何打开的事务，则调用任一方法都会生成错误。  
   
- 具体取决于**连接**对象的[特性](../../../ado/reference/ado-api/attributes-property-ado.md)属性，调用**CommitTrans**或者**RollbackTrans**方法可能自动启动新事务。 如果**特性**属性设置为**adXactCommitRetaining**，该提供程序会自动启动后的一个新事务**CommitTrans**调用。 如果**特性**属性设置为**adXactAbortRetaining**，该提供程序会自动启动后的一个新事务**RollbackTrans**调用。  
+ 根据**连接**对象的 "[属性](../../../ado/reference/ado-api/attributes-property-ado.md)" 属性，调用**CommitTrans**或**RollbackTrans**方法可能会自动启动一个新事务。 如果 "**属性**" 属性设置为**adXactCommitRetaining**，则提供程序将在**CommitTrans**调用后自动启动新事务。 如果 "**属性**" 属性设置为**adXactAbortRetaining**，则提供程序将在**RollbackTrans**调用后自动启动新事务。  
   
 ## <a name="remote-data-service"></a>远程数据服务  
- **BeginTrans**， **CommitTrans**，并**RollbackTrans**方法不可用客户端上**连接**对象。  
+ **BeginTrans**、 **CommitTrans**和**RollbackTrans**方法在客户端**连接**对象上不可用。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>请参阅  
- [BeginTrans、 CommitTrans 和 RollbackTrans 方法示例 (VB)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
- [BeginTrans、 CommitTrans 和 RollbackTrans 方法示例 （VC + +）](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vc.md)   
+## <a name="see-also"></a>另请参阅  
+ [BeginTrans、CommitTrans 和 RollbackTrans 方法示例（VB）](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
+ [BeginTrans、CommitTrans 和 RollbackTrans 方法示例（VC + +）](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vc.md)   
  [Attributes 属性 (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)

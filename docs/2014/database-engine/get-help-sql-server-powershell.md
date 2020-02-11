@@ -15,13 +15,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 705512f54feae3bf60317c18b8c260ef484abebc
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797884"
 ---
-# <a name="get-help-sql-server-powershell"></a>获取 SQL Server PowerShell 帮助
+# <a name="get-help-sql-server-powershell"></a>Get Help SQL Server PowerShell
   有关使用 Windows PowerShell 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供程序和 cmdlet 的信息有多个来源， 这包括 Windows PowerShell 环境中提供的帮助。  
   
 ## <a name="before-you-begin"></a>开始之前  
@@ -30,26 +30,29 @@ ms.locfileid: "72797884"
  有关 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cmdlet 和提供程序的概述，请参阅 [SQL Server PowerShell](../powershell/sql-server-powershell.md)。  
   
 ### <a name="help-in-the-windows-powershell-environment"></a>Windows PowerShell 环境中的帮助  
- 使用 **Get-Help** cmdlet 可在 Windows PowerShell 环境中获得帮助。 **Get-Help** 为 Windows PowerShell 语言以及 Windows PowerShell 中的各种 cmdlet 和提供程序提供基本帮助。  
+ 使用 **Get-Help** cmdlet 可在 Windows PowerShell 环境中获得帮助。 **Get-help**为 windows powershell 语言以及 windows powershell 中提供的各种 cmdlet 和提供程序提供基本帮助。  
   
  有关使用 **Get-Help**的方式的详细信息，请参阅 [Get-Help：获取帮助](https://go.microsoft.com/fwlink/?LinkId=102136)。  
   
 ### <a name="sql-server-powershell-provider-help"></a>SQL Server PowerShell 提供程序帮助  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 提供程序实现 SQLSERVER 虚拟驱动器上的若干文件夹，例如 SQLSERVER:\SQL 和 SQLSERVER:\DAC 文件夹。 每个文件夹都与一个 SQL Server 可管理性对象模型相关联。 虽然您可以列出与 SQL Server 路径中的每个节点关联的方法和属性，便不能在 PowerShell 环境中获取它们的帮助。 有关带有指向关联的编程参考的文件夹的表，请参阅 [SQL Server PowerShell Provider](../powershell/sql-server-powershell-provider.md)。  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 提供程序实现 SQLSERVER 虚拟驱动器上的若干文件夹，例如 SQLSERVER:\SQL 和 SQLSERVER:\DAC 文件夹。 每个文件夹都与一个 SQL Server 可管理性对象模型相关联。 虽然您可以列出与 SQL Server 路径中的每个节点关联的方法和属性，便不能在 PowerShell 环境中获取它们的帮助。 有关带有指向关联的编程参考的文件夹的表，请参阅 [SQL Server PowerShell Provider](../powershell/sql-server-powershell-provider.md)。  
   
 ### <a name="invoke-sqlcmd-help"></a>Invoke-Sqlcmd 帮助  
- **Invoke-Sqlcmd** cmdlet 将可由 **sqlcmd** 实用工具运行的查询或脚本文件作为输入。 可以使用 **Get-Help** 获取有关 **Invoke-Sqlcmd** 及其参数的信息，但是 **Get-Help** 不作用于 **sqlcmd** 查询。  
+ 
+  **Invoke-Sqlcmd** cmdlet 将可由 **sqlcmd** 实用工具运行的查询或脚本文件作为输入。 可以使用 **Get-Help** 获取有关 **Invoke-Sqlcmd** 及其参数的信息，但是 **Get-Help** 不作用于 **sqlcmd** 查询。  
   
- *-Query* 或 *-QueryFromFile* 输入可以包含：  
+ 
+  *-Query* 或 *-QueryFromFile* 输入可以包含：  
   
--   **sqlcmd** 变量和命令。 有关这些变量和命令的信息，请参阅 [sqlcmd Utility](../tools/sqlcmd-utility.md)的“备注”部分。  
+-   **sqlcmd**变量和命令。 有关这些变量和命令的信息，请参阅 [sqlcmd Utility](../tools/sqlcmd-utility.md)的“备注”部分。  
   
--   [!INCLUDE[tsql](../includes/tsql-md.md)] 语句不支持将数据大容量导入到分区视图。 有关 [!INCLUDE[tsql](../includes/tsql-md.md)] 语言的详细信息，请参阅 [TRANSACT-SQL 引用（数据库引擎）](/sql/t-sql/language-reference)。  
+-   [!INCLUDE[tsql](../includes/tsql-md.md)]前瞻性. 有关 [!INCLUDE[tsql](../includes/tsql-md.md)] 语言的详细信息，请参阅 [TRANSACT-SQL 引用（数据库引擎）](/sql/t-sql/language-reference)。  
   
 -   XQuery 语句。 有关 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持的 XQuery 语言的详细信息，请参阅 [XQuery 语言参考 (SQL Server)](/sql/xquery/xquery-language-reference-sql-server)。  
   
 ## <a name="get-help-for-a-sql-server-cmdlet"></a>获取 SQL Server cmdlet 的帮助  
- **获取 cmdlet 的帮助**  
+ **获取有关 cmdlet 的帮助信息**  
   
 -   运行 Get-Help 并且指定 cmdlet 的名称和要返回的帮助级别。  
   

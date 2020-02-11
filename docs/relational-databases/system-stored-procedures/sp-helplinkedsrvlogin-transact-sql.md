@@ -1,5 +1,5 @@
 ---
-title: sp_helplinkedsrvlogin (TRANSACT-SQL) |Microsoft Docs
+title: sp_helplinkedsrvlogin （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: a2b1eba0-bf71-47e7-a4c7-9f55feec82a3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f1728b3e5d4cd3189a8d9a01a8b72ecedaf7cb6d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68122460"
 ---
-# <a name="sphelplinkedsrvlogin-transact-sql"></a>sp_helplinkedsrvlogin (Transact-SQL)
+# <a name="sp_helplinkedsrvlogin-transact-sql"></a>sp_helplinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   提供有关某些登录名映射的信息，这些登录名是针对特定的链接服务器定义的，而这些链接服务器是用于分布式查询和远程存储过程的。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,27 +40,27 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @rmtsrvname = ] 'rmtsrvname'` 是应用登录映射的链接服务器的名称。 *rmtsrvname*是**sysname**，默认值为 NULL。 如果为 NULL，则返回针对所有链接服务器定义的所有登录映射，这些链接服务器在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地计算机中定义。  
+`[ @rmtsrvname = ] 'rmtsrvname'`应用登录映射的链接服务器的名称。 *rmtsrvname*的值为**sysname**，默认值为 NULL。 如果为 NULL，则返回针对所有链接服务器定义的所有登录映射，这些链接服务器在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地计算机中定义。  
   
-`[ @locallogin = ] 'locallogin'` 是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]映射到链接服务器的本地服务器上的登录名*rmtsrvname*。 *locallogin*是**sysname**，默认值为 NULL。 NULL 指定上定义的所有登录映射*rmtsrvname*返回。 如果不为 NULL 的映射*locallogin*到*rmtsrvname*必须已经存在。 *locallogin*可以是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名或 Windows 用户。 对于 Windows 用户来说，必须以直接的方式或通过已被授权访问的 Windows 组成员身份授予其访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的权限。  
+`[ @locallogin = ] 'locallogin'`本地服务器[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上的登录名，它具有到链接服务器的映射*rmtsrvname*。 *locallogin*的值为**sysname**，默认值为 NULL。 NULL 指定返回*rmtsrvname*上定义的所有登录映射。 如果不为 NULL，则必须已经存在*locallogin*到*rmtsrvname*的映射。 *locallogin*可以是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名或 Windows 用户。 对于 Windows 用户来说，必须以直接的方式或通过已被授权访问的 Windows 组成员身份授予其访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的权限。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**链接的服务器**|**sysname**|链接服务器名称。|  
-|**本地登录名**|**sysname**|本地登录，映射应用于该本地登录。|  
-|**是自映射**|**smallint**|0 =**本地登录名**映射到**远程登录名**连接到时**链接服务器**。<br /><br /> 1 =**本地登录名**时连接到映射到相同的登录名和密码**链接服务器**。|  
-|**远程登录**|**sysname**|上的登录名**LinkedServer**映射到**LocalLogin**时**IsSelfMapping**为 0。 如果**IsSelfMapping**为 1， **RemoteLogin**为 NULL。|  
+|**链接服务器**|**sysname**|链接服务器名称。|  
+|**本地登录**|**sysname**|本地登录，映射应用于该本地登录。|  
+|**Is Self Mapping**|**smallint**|0 = 连接到**链接服务器**时，**本地登录名**映射到**远程登录**。<br /><br /> 1 = 连接到**链接服务器**时，**本地登录**名映射到相同的登录名和密码。|  
+|**Remote Login**|**sysname**|**IsSelfMapping**为0时映射到**LocalLogin**的**LinkedServer**上的登录名。 如果**IsSelfMapping**为1，则**RemoteLogin**为 NULL。|  
   
 ## <a name="remarks"></a>备注  
- 在删除登录映射之前，请使用**sp_helplinkedsrvlogin**来确定所涉及的链接的服务器。  
+ 删除登录映射之前，请使用**sp_helplinkedsrvlogin**来确定所涉及的链接服务器。  
   
 ## <a name="permissions"></a>权限  
- 不检查权限。  
+ 未检查任何权限。  
   
 ## <a name="examples"></a>示例  
   
@@ -123,10 +123,10 @@ Sales            Mary          0               sa
 (2 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [安全存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_droplinkedsrvlogin &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
+ [sp_droplinkedsrvlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

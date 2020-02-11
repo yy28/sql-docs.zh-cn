@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b927483f5e57272460f1c2f0f1c4b1bca56a3abe
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782935"
 ---
 # <a name="remove-a-secondary-replica-from-an-availability-group-sql-server"></a>从可用性组中删除辅助副本 (SQL Server)
@@ -41,7 +41,7 @@ ms.locfileid: "72782935"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **跟进：** [在删除次要副本之后](#PostBestPractices)  
+-   **跟进：**  [在删除辅助副本之后](#PostBestPractices)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -51,11 +51,11 @@ ms.locfileid: "72782935"
   
 -   从可用性组中仅可删除辅助副本。  
   
-###  <a name="Prerequisites"></a> 先决条件  
+###  <a name="Prerequisites"></a>先决条件  
   
 -   您必须连接到承载可用性组的主副本的服务器实例。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 权限  
  对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  
@@ -75,9 +75,9 @@ ms.locfileid: "72782935"
   
     -   若要删除单个副本，请在 **“对象资源管理器”** 窗格或 **“对象资源管理器详细信息”** 窗格中选中此副本。  
   
-5.  右键单击选定的一个或多个次要副本，然后在命令菜单中选择“从可用性组中删除”。  
+5.  右键单击选定的一个或多个次要副本，然后在命令菜单中选择“从可用性组中删除”****。  
   
-6.  在 **“从可用性组删除辅助副本”** 对话框中，要删除所有列出的辅助副本，请单击 **“确定”** 。 如果您不想删除所有列出的副本，请单击 **“取消”** 。  
+6.  在 **“从可用性组删除辅助副本”** 对话框中，要删除所有列出的辅助副本，请单击 **“确定”**。 如果您不想删除所有列出的副本，请单击 **“取消”**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **删除辅助副本**  
@@ -86,17 +86,17 @@ ms.locfileid: "72782935"
   
 2.  按如下所示使用 [ALTER AVAILABILITY GROUP](/sql/t-sql/statements/alter-availability-group-transact-sql) 语句：  
   
-     ALTER AVAILABILITY GROUP group_name REMOVE REPLICA ON 'instance_name' [,...n]  
+     ALTER AVAILABILITY GROUP group_name** REMOVE REPLICA ON 'instance_name**' [,...n**]  
   
-     其中，group_name 为可用性组的名称，instance_name 为该次要副本所在的服务器实例。  
+     其中，group_name** 为可用性组的名称，instance_name** 为该次要副本所在的服务器实例。  
   
-     下面的示例将次要副本从 *MyAG* 可用性组中删除。 目标次要副本位于名为 COMPUTER02 的计算机上的服务器实例（名为 HADR_INSTANCE）上。  
+     下面的示例将次要副本从 *MyAG* 可用性组中删除。 目标次要副本位于名为 COMPUTER02** 的计算机上的服务器实例（名为 HADR_INSTANCE**）上。  
   
     ```sql
     ALTER AVAILABILITY GROUP MyAG REMOVE REPLICA ON 'COMPUTER02\HADR_INSTANCE';  
     ```  
   
-##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
+##  <a name="PowerShellProcedure"></a>使用 PowerShell  
  **删除辅助副本**  
   
 1.  将目录 (`cd`) 更改为承载主副本的服务器实例。  
@@ -112,16 +112,16 @@ ms.locfileid: "72782935"
     > [!NOTE]  
     >  若要查看 cmdlet 的语法，请在 `Get-Help` PowerShell 环境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
- **设置和使用 SQL Server PowerShell 提供程序**  
+ **设置并使用 SQL Server PowerShell 提供程序**  
   
--   [SQL Server PowerShell 提供程序](../../../powershell/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="PostBestPractices"></a> 跟进：在删除辅助副本之后  
+##  <a name="PostBestPractices"></a>跟进：在删除辅助副本之后  
  如果您指定一个当前不可用的副本，则在该副本联机时，将发现该副本已被删除。  
   
  删除副本会导致它停止接收数据。 在某个辅助副本确认其已从全局存储中删除之后，该副本将从其数据库（在本地服务器实例上保留为 RECOVERING 状态）中删除可用性组设置。  
   
 ## <a name="see-also"></a>另请参阅  
- [ &#40;AlwaysOn 可用性组 SQL Server&#41;  概述](overview-of-always-on-availability-groups-sql-server.md)  
- [将辅助副本添加到可用性组 (SQL Server)](add-a-secondary-replica-to-an-availability-group-sql-server.md)   
+ [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [将辅助副本添加到可用性组 &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)   
  [删除可用性组 (SQL Server)](remove-an-availability-group-sql-server.md)  

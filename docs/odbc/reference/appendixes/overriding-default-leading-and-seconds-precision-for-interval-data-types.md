@@ -1,5 +1,5 @@
 ---
-title: 间隔数据类型的替代前导和秒精度 |Microsoft Docs
+title: 对于间隔数据类型重写前导和秒精度 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,27 +18,27 @@ ms.assetid: 3d65493f-dce7-4d29-9f59-c63a4e47918c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 13adfb16b772acc5fac30cf3d10c6199f16f479d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68100617"
 ---
 # <a name="overriding-default-leading-and-seconds-precision-for-interval-data-types"></a>重写间隔数据类型的默认前导和秒精度
-如果 ARD 的 SQL_DESC_TYPE 字段设置为 datetime 或间隔 C 类型，通过调用**SQLBindCol**或**SQLSetDescField**，SQL_DESC_PRECISION 字段 （其中包含间隔 （秒）精度） 设置以下默认值为：  
+当 ARD 的 SQL_DESC_TYPE 字段设置为 datetime 或 interval C 类型时，通过调用**SQLBindCol**或**SQLSetDescField**，SQL_DESC_PRECISION 字段（其中包含间隔秒精度）设置为以下默认值：  
   
--   6 为时间戳以及与第二个组件的所有间隔数据类型。  
+-   6表示时间戳，使用另一个组件的所有时间间隔数据类型。  
   
--   对于所有其他数据类型为 0。  
+-   对于所有其他数据类型为0。  
   
- 对于所有的时间间隔数据类型，SQL_DESC_DATETIME_INTERVAL_PRECISION 描述符字段，其中包含时间间隔前导字段精度，设置为默认值为 2。  
+ 对于所有间隔数据类型，包含时间间隔前导字段精度的 SQL_DESC_DATETIME_INTERVAL_PRECISION 描述符字段均设置为默认值2。  
   
- 当 APD 中的 SQL_DESC_TYPE 字段设置为 datetime 或间隔 C 类型，通过调用**SQLBindParameter**或**SQLSetDescField**，SQL_DESC_PRECISION 和 SQL_DESC_DATETIME_INTERVAL_APD 中的精度字段设置为前面给出的默认值。 这是 true 为输入参数而不是输入/输出或输出参数。  
+ 当 APD 中的 SQL_DESC_TYPE 字段设置为 datetime 或 interval C 类型时，通过调用**SQLBindParameter**或**SQLSetDescField**，APD 中的 "SQL_DESC_PRECISION" 和 "SQL_DESC_DATETIME_INTERVAL_PRECISION" 字段将设置为先前给定的默认值。 这适用于输入参数，但不适用于输入/输出参数或输出参数。  
   
- 调用**SQLSetDescRec**将设置到默认起始精度的时间间隔，但设置的值 （在 SQL_DESC_PRECISION 字段中） 的间隔秒精度及其*精度*参数。  
+ 对**SQLSetDescRec**的调用会将间隔的精度设置为默认值，但会将间隔秒精度（在 SQL_DESC_PRECISION 字段中）设置为其*精度*参数的值。  
   
- 如果任何一个给定的默认值以前是不可接受的应用程序，该应用程序应通过调用设置的 SQL_DESC_PRECISION 或 SQL_DESC_DATETIME_INTERVAL_PRECISION 字段**SQLSetDescField**。  
+ 如果某个应用程序不接受以前给定的任何一个默认值，则该应用程序应通过调用**SQLSetDescField**来设置 SQL_DESC_PRECISION 或 SQL_DESC_DATETIME_INTERVAL_PRECISION 字段。  
   
- 如果应用程序调用**SQLGetData**为将数据返回到 datetime 或间隔 C 类型，使用默认时间间隔前导精度和间隔的秒精度。 如果默认值是不可接受，应用程序必须调用**SQLSetDescField**若要设置其中一个描述符字段，或**SQLSetDescRec**设置 SQL_DESC_PRECISION。 在调用**SQLGetData**应有*TargetType*的 SQL_ARD_TYPE 若要使用中的描述符字段的值。  
+ 如果应用程序调用**SQLGetData**将数据返回到 datetime 或 interval C 类型，则将使用默认的间隔的精度和间隔秒精度。 如果任何一个默认值都不是可接受的，则应用程序必须调用**SQLSetDescField**来设置描述符字段，或将**SQLSetDescRec**设置为 SQL_DESC_PRECISION。 对**SQLGetData**的调用应有一个 SQL_ARD_TYPE *TargetType*来使用 "描述符" 字段中的值。  
   
- 当**SQLPutData**调用时，间隔起始精度和时间间隔 （秒） 精度从相对应的描述符记录字段读取到执行时数据参数或列，这是用于调用 APD 域向**SQLExecute**或**SQLExecDirect**，或对的调用 ARD 字段**SQLBulkOperations**或者**SQLSetPos**。
+ 调用**SQLPutData**时，将从与执行时数据参数或列相对应的说明符记录字段中读取时间间隔的精度和间隔秒精度，这些字段是对**SQLExecute**或**SQLExecDirect**调用的 APD 字段，或者是对**ARD**或**SQLBulkOperations**的调用的 SQLSetPos 字段。

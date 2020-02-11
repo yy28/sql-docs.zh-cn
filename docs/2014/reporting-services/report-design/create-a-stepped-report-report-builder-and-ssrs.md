@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: de074a61bea0941b52240fe4d7b66eadc0cacaeb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106133"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>创建递阶报表（报表生成器和 SSRS）
   递阶报表可在父组下方的同一列中缩进显示详细信息行或子组，如下例所示：  
   
- ![呈现的递阶报表](../media/steppedreportrendered.gif "Rendered stepped report")  
+ ![呈现的递阶报表](../media/steppedreportrendered.gif "呈现的递阶报表")  
   
  传统的表报表将父组放置在报表中的相邻列中。 利用新的 tablix 数据区域，可以向同一列添加组和详细信息行或子组。 若要将组行与详细信息行或子组行区分开来，可以应用格式设置（如字体颜色）或缩进详细信息行。  
   
@@ -40,23 +40,23 @@ ms.locfileid: "66106133"
   
     1.  单击表中的任意位置以选择该表。 “分组”窗格将显示“行组”窗格中的详细信息组。  
   
-    2.  在“分组”窗格中，右键单击“详细信息”组，指向“添加组”，然后单击“父组”   。  
+    2.  在“分组”窗格中，右键单击“详细信息”组，指向“添加组”，然后单击“父组”********。  
   
-    3.  在“Tablix 组”对话框中，为该组提供一个名称，并键入或从下拉列表中选择组表达式  。 该下拉列表显示了“报表数据”窗格中可用的简单字段表达式。 例如，[PostalCode] 是数据集中 PostalCode 字段的简单字段表达式。  
+    3.  在“Tablix 组”对话框中，为该组提供一个名称，并键入或从下拉列表中选择组表达式****。 该下拉列表显示了“报表数据”窗格中可用的简单字段表达式。 例如，[PostalCode] 是数据集中 PostalCode 字段的简单字段表达式。  
   
-    4.  选择 **“添加组头”** 。 选择此选项将向组的上方添加一个组标签和组合计的静态行。 同样地，可以选择 **“添加组尾”** 在组的下方添加一个静态行。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+    4.  选择 **“添加组头”**。 选择此选项将向组的上方添加一个组标签和组合计的静态行。 同样地，可以选择 **“添加组尾”** 在组的下方添加一个静态行。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
      现在即创建了一个基本表格报表。 此报表呈现时，您将看到一列组实例值，以及一列或多列分组的详细信息数据。 下图显示了该数据区域在设计图面上可能的外观。  
   
-     ![带有组的表数据区域](../media/tabledataregionwithgroup.gif "Table data region with group")  
+     ![带有组的表数据区域](../media/tabledataregionwithgroup.gif "带有组的表数据区域")  
   
      下图显示了您查看报表时所呈现的数据区域可能的外观。  
   
-     ![呈现的分组报表](../media/tablereportrendered.gif "Rendered grouped report")  
+     ![呈现的分组报表](../media/tablereportrendered.gif "呈现的分组报表")  
   
-3.  对于递阶报表，不需要用于显示组实例的第一列。 相反，需要先复制组头单元中的值，再删除组列，然后将该值粘贴到组头行的第一个文本框中。 若要删除组列，请右键单击相应的组列或单元，然后单击“删除列”  。 下图显示了该数据区域在设计图面上可能的外观。  
+3.  对于递阶报表，不需要用于显示组实例的第一列。 相反，需要先复制组头单元中的值，再删除组列，然后将该值粘贴到组头行的第一个文本框中。 若要删除组列，请右键单击相应的组列或单元，然后单击“删除列”****。 下图显示了该数据区域在设计图面上可能的外观。  
   
-     ![带有组头行的数据区域](../media/tabledataregiongroupheader.gif "Data region with group header row")  
+     ![带有组头行的数据区域](../media/tabledataregiongroupheader.gif "带有组头行的数据区域")  
   
 4.  若要使同一列中组头行下方的详细信息行缩进显示，请更改详细信息数据单元的空白大小。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66106133"
   
     2.  在“属性”窗格的 **“对齐”** 下，展开 **“填充”** 的属性。  
   
-    3.  有关**左侧**，键入一个新的填充值，如`.5in`。 填充会在单元中按照您指定的值缩进文本。 默认空白大小为 2 磅。 填充属性的有效值是零或正数，后跟一个大小指示符。  
+    3.  对于 "**左**"，键入新的填充值， `.5in`如。 填充会在单元中按照您指定的值缩进文本。 默认空白大小为 2 磅。 填充属性的有效值是零或正数，后跟一个大小指示符。  
   
          大小指示符有：  
   
@@ -78,11 +78,11 @@ ms.locfileid: "66106133"
   
      数据区域的外观将与下例类似。  
   
-     ![递阶报表的数据区域](../media/steppedreportdataregion.gif "Data region for stepped report")  
+     ![递阶报表的数据区域](../media/steppedreportdataregion.gif "递阶报表的数据区域")  
   
      **递阶报表布局的数据区域**  
   
-     在 **“主文件夹”** 选项卡上，单击 **“运行”** 。 报表将根据子组值的缩进级别显示组。  
+     在 "**主页**" 选项卡上，单击 "**运行**"。 报表将根据子组值的缩进级别显示组。  
   
 ### <a name="to-create-a-stepped-report-with-multiple-groups"></a>创建包含多个组的递阶报表  
   
@@ -90,20 +90,20 @@ ms.locfileid: "66106133"
   
 2.  向报表添加其他组。  
   
-    1.  在“行组”窗格中，右键单击组，再单击“添加组”，然后选择要添加的组的类型  。  
+    1.  在“行组”窗格中，右键单击组，再单击“添加组”，然后选择要添加的组的类型****。  
   
         > [!NOTE]  
-        >  可以通过若干种方式向数据区域添加组。 有关详细信息，请参阅 [在数据区域中添加或删除组（报表生成器和 SSRS）](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)。  
+        >  可以通过若干种方式向数据区域添加组。 有关详细信息，请参阅[在数据区域中添加或删除组 &#40;报表生成器和 SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)。  
   
     2.  在 **“Tablix 组”** 对话框中，键入一个名称。  
   
-    3.  在 **“组表达式”** 中，键入一个表达式或选择要用作分组依据的数据集字段。 要创建表达式，请单击表达式 (fx) 按钮打开“表达式”对话框   。  
+    3.  在 **“组表达式”** 中，键入一个表达式或选择要用作分组依据的数据集字段。 要创建表达式，请单击表达式 (fx) 按钮打开“表达式”对话框********。  
   
     4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 3.  更改用于显示组数据的单元的填充值。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [页眉和页脚（报表生成器和 SSRS）](page-headers-and-footers-report-builder-and-ssrs.md)   
  [设置报表项的格式（报表生成器和 SSRS）](formatting-report-items-report-builder-and-ssrs.md)   
  [Tablix 数据区域（报表生成器和 SSRS）](../tablix-data-region-report-builder-and-ssrs.md)   

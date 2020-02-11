@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ec615911233227c15f43e55125adfd6166cb51e8
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783371"
 ---
 # <a name="write-the-job-status-to-the-windows-application-log"></a>Write the Job Status to the Windows Application Log
-  本主题介绍了如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)] 或 SQL Server 管理对象在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理以便将作业状态写入 Windows 应用程序事件日志。  
+  本主题介绍如何在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]配置代理，以便通过使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]或 SQL Server 管理对象将作业状态写入 Windows 应用程序事件日志。  
   
  作业响应可确保数据库管理员知道作业完成的时间和作业运行频率。 典型的作业响应包括：  
   
@@ -38,7 +38,7 @@ ms.locfileid: "72783371"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要将作业状态写入 Windows 应用程序日志，请使用：**  
   
@@ -55,19 +55,19 @@ ms.locfileid: "72783371"
   
 #### <a name="to-write-job-status-to-the-windows-application-log"></a>将作业状态写入 Windows 应用程序日志  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
+1.  在**对象资源管理器中，** 连接到的[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例，然后展开该实例。  
   
-2.  展开 **“SQL Server 代理”** ，展开 **“作业”** ，右键单击要编辑的作业，再单击 **“属性”** 。  
+2.  展开 **“SQL Server 代理”**，展开 **“作业”**，右键单击要编辑的作业，再单击 **“属性”**。  
   
 3.  选择 **“通知”** 页。  
   
-4.  请检查 **“写入 Windows 应用程序事件日志”** ，然后执行下列操作之一：  
+4.  请检查 **“写入 Windows 应用程序事件日志”**，然后执行下列操作之一：  
   
-    -   单击“当作业成功时”，以在作业成功完成时记录作业状态。  
+    -   单击“当作业成功时”****，以在作业成功完成时记录作业状态。  
   
-    -   单击“当作业失败时”，以在作业未成功完成时记录作业状态。  
+    -   单击“当作业失败时”****，以在作业未成功完成时记录作业状态。  
   
-    -   单击“当作业完成时”，以便无论完成状态如何，都记录作业状态。  
+    -   单击“当作业完成时”****，以便无论完成状态如何，都记录作业状态。  
   
 ##  <a name="SMO"></a>使用 SQL Server 管理对象  
 

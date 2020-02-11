@@ -17,19 +17,19 @@ ms.assetid: 442b08c5-ccc7-4192-a1cc-22f250867782
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0d697fa5b411d9000c03a700f6b4fe0e4b39aa5e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923514"
 ---
 # <a name="using-pages"></a>使用页
-使用**PageCount**属性来确定多少页的数据位于**记录集**对象。 *页面*是一组记录的大小等于**PageSize**属性设置。 即使最后一页是不完整，因为有比记录更少**PageSize**值，它计为中的其他页**PageCount**值。 如果**记录集**对象不支持此属性，请**PageCount**将为-1 指示**PageCount**是无法确定。  
+使用**PageCount**属性来确定**记录集**对象中的数据页的数目。 *页面*是大小等于**PageSize**属性设置的记录组。 即使最后一个页面不完整，因为记录数少于**PageSize**值，也会在**PageCount**值中作为附加页面计数。 如果**记录集**对象不支持此属性，则**PageCount**将为-1，表示**PageCount**为无法确定。  
   
- 使用**PageSize**属性来确定多少条记录组成的数据的逻辑页。 建立页面大小，可使用**AbsolutePage**属性将移动到特定页面的第一个记录。 当你想要允许用户逐页浏览数据，一次查看特定数量的记录时，这是在 Web 服务器方案中有用。  
+ 使用**PageSize**属性来确定构成逻辑页数据的记录数。 通过建立页面大小，可以使用**AbsolutePage**属性移动到特定页面的第一条记录。 当你希望允许用户逐页浏览数据，一次查看一定数量的记录时，这非常有用。  
   
- 可以在任何时候，设置此属性，其值将用于计算某一特定页的第一个记录的位置。  
+ 此属性可随时设置，它的值将用于计算特定页面的第一条记录的位置。  
   
- 使用**AbsolutePage**属性标识的当前记录所在的页号。 同样，提供程序必须支持相应的功能，此属性才可用。  
+ 使用**AbsolutePage**属性可以标识当前记录所在的页码。 同样，提供程序必须支持适当的功能，此属性才可用。  
   
- **AbsolutePage**是基于 1 的和等于 1 时的当前记录中的第一个记录**记录集**。 设置此属性将移动到特定页面的第一个记录。 获取从总页数**PageCount**属性。
+ **AbsolutePage**从1开始，在当前记录是**记录集**的第一条记录时等于1。 设置此属性可以移动到特定页的第一条记录。 获取**PageCount**属性中的总页数。

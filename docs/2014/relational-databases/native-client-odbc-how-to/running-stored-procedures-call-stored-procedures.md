@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a960df20b7b07bffab900589ae4d520541d720c1
-ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72688666"
 ---
 # <a name="call-stored-procedures-odbc"></a>调用存储过程 (ODBC)
   当 SQL 语句使用 ODBC CALL 转义子句调用存储过程时，Microsoft SQL Server 驱动程序使用远程存储过程调用（RPC）机制将该过程发送到 SQL Server。 RPC 请求在 SQL Server 中跳过大多数语句分析和参数处理，因此，其速度快于使用 Transact-SQL EXECUTE 语句。  
   
- 有关演示此功能的示例应用程序，请参阅[处理返回代码和输出&#40;参数&#41;ODBC](running-stored-procedures-process-return-codes-and-output-parameters.md)。  
+ 有关演示此功能的示例应用程序，请参阅使用[ODBC&#41;&#40;处理返回代码和输出参数](running-stored-procedures-process-return-codes-and-output-parameters.md)。  
   
 ### <a name="to-run-a-procedure-as-an-rpc"></a>将过程作为 RPC 运行  
   
@@ -40,7 +40,7 @@ ms.locfileid: "72688666"
 >  如果应用程序使用 Transact-SQL EXECUTE 语法提交过程（这与 ODBC CALL 转义序列相反），SQL Server ODBC 驱动程序会将过程调用作为 SQL 语句（而非 RPC）传递给 SQL Server。 此外，如果未使用 Transact-SQL EXECUTE 语句，则不会返回输出参数。  
   
 ## <a name="see-also"></a>另请参阅  
- [运行存储过程操作指南&#40;主题 ODBC&#41; ](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)   
+ [运行存储过程操作指南主题 &#40;ODBC&#41;](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)   
  [批处理存储过程调用](../native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)   
  [运行存储过程](../native-client-odbc-stored-procedures/running-stored-procedures.md)   
  [调用存储过程](../native-client-odbc-stored-procedures/calling-a-stored-procedure.md)   

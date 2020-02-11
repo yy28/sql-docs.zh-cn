@@ -1,5 +1,5 @@
 ---
-title: 报表故障排除：地图报表（报表生成器和 SSRS）| Microsoft Docs
+title: 报表疑难解答：地图报表（报表生成器和 SSRS）| Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1d5a5bee68f328a5ba15ffb1480437fad92adff8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104639"
 ---
-# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>报表故障排除：地图报表 （报表生成器和 SSRS）
+# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>报表故障排除：地图报表（报表生成器和 SSRS）
   当您向报表中添加地图或地图层、自定义报表中的现有地图或地图层、预览报表中的地图或发布具有地图的报表时，报表中的地图可能会出现问题。 使用本主题可以帮助解决这些问题。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Embedded"></a> 报表定义大小问题  
+##  <a name="Embedded"></a>报表定义大小问题  
  使用这一部分可以帮助解决与报表定义大小相关的问题。  
   
 ### <a name="how-do-i-reduce-the-report-definition-size"></a>如何减少报表定义大小？  
@@ -41,7 +41,7 @@ ms.locfileid: "66104639"
   
 1.  将 ESRI .shp 和 .dbf 文件上载或发布到报表服务器。  
   
-2.  在报表中，在“设计”视图的“地图”窗格中，选择具有嵌入数据的层，然后打开 **“层数据”** 属性。 在 **“使用的空间数据来自”** 中，选择 **“链接到 ESRI 形状文件”** ，然后浏览到报表服务器上包含 ESRI 形状文件的文件夹，选择该文件夹，然后单击“确定”。  
+2.  在报表中，在“设计”视图的“地图”窗格中，选择具有嵌入数据的层，然后打开 **“层数据”** 属性。 在 **“使用的空间数据来自”** 中，选择 **“链接到 ESRI 形状文件”**，然后浏览到报表服务器上包含 ESRI 形状文件的文件夹，选择该文件夹，然后单击“确定”。  
   
 3.  保存报表。 您更改的层的嵌入数据已从报表定义中删除。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66104639"
   
   
   
-##  <a name="Spatial"></a> 空间数据问题  
+##  <a name="Spatial"></a>空间数据问题  
  使用这一部分可以帮助解决与空间数据相关的问题。  
   
 ### <a name="on-the-design-surface-i-see-sample-spatial-data"></a>在设计图面上，我看到了示例空间数据  
@@ -102,7 +102,7 @@ ms.locfileid: "66104639"
   
   
   
-##  <a name="Viewport"></a> 视区居中和视图问题  
+##  <a name="Viewport"></a>视区中心和视图问题  
  使用这一部分可以帮助解决与视区选项相关的问题。  
   
 ### <a name="i-cannot-set-the-center-and-view-on-an-embedded-map-element"></a>无法对嵌入的地图元素设置居中和视图。  
@@ -111,7 +111,7 @@ ms.locfileid: "66104639"
 ### <a name="i-set-the-map-center-and-view-in-my-report-when-i-reopen-the-report-why-isnt-the-map-view-the-same"></a>我在报表中对地图设置了居中和视图。 当我重新打开报表时，为何地图视图并不相同？  
  如果当您打开报表时，读取空间数据所需的用户凭据对于此报表不可用，将使用占位符空间数据。 根据您为地图视区设置的居中和缩放选项，地图视图可能在不同的层上居中。  
   
- 若要重新加载空间数据并使用保存在报表中的地图视图中心，请右键单击地图视区，然后单击 **“重新加载”** 。 在为空间数据源输入凭据之后，该层将加载空间数据，并将还原地图视图。  
+ 若要重新加载空间数据并使用保存在报表中的地图视图中心，请右键单击地图视区，然后单击 **“重新加载”**。 在为空间数据源输入凭据之后，该层将加载空间数据，并将还原地图视图。  
   
 ### <a name="the-center-and-view-for-a-map-layer-option-does-not-work"></a>用于地图层的居中和视图选项不起作用。  
  如果视区设置为对于特定层的空间数据居中，并且视图中心并不显示为该层的中心，则可能是空间数据中包含的小岛或区域过小，而导致在视区中无法看到。 例如，某个国家/地区的空间数据可能包含小岛或其他小地域作为其领土的一部分。 视区使用所有空间数据来计算层的中心。  
@@ -126,7 +126,7 @@ ms.locfileid: "66104639"
   
   
   
-##  <a name="Layers"></a> 层问题  
+##  <a name="Layers"></a>层问题  
  使用这一部分可以帮助解决与层选项相关的问题。  
   
 ### <a name="i-do-not-see-one-or-more-layers-in-my-map"></a>我看不到地图中的一层或多层。  
@@ -138,9 +138,9 @@ ms.locfileid: "66104639"
   
 -   **层顺序。** “地图”窗格中各层的顺序是在报表呈现器中绘制层时所采用的顺序。 首先绘制的层的空间数据可能会被后面绘制的层的空间数据覆盖。 将首先绘制出现在列表顶部的层。 当您更改层在列表中的顺序时，您是在更改层的绘制顺序。  
   
--   **透明度。** 可以单独为每个地图层指定透明度。 默认的透明度值根据您添加层的方式不同而异。 透明度为 0% 表明该层是不透明的，而没有其他层数据将透过这种方式显示。 若要允许其他数据透过现有层进行显示，请将该值调整为更高的百分比，以提供您所需的效果。  
+-   **透明化.** 可以单独为每个地图层指定透明度。 默认的透明度值根据您添加层的方式不同而异。 透明度为 0% 表明该层是不透明的，而没有其他层数据将透过这种方式显示。 若要允许其他数据透过现有层进行显示，请将该值调整为更高的百分比，以提供您所需的效果。  
   
--   **可见性。** 层的可见性为“可见”、“隐藏”或“ZoomBased”，具体根据地图视区的缩放级别而定。    还可以指定最大和最小缩放级别范围。 可见性可以基于一个表达式，该表达式计算为上述三个值之一。  
+-   **可见.** 层的可见性为“可见”、“隐藏”或“ZoomBased”，具体根据地图视区的缩放级别而定。************ 还可以指定最大和最小缩放级别范围。 可见性可以基于一个表达式，该表达式计算为上述三个值之一。  
   
     > [!TIP]  
     >  可以针对“地图”窗格中的每层切换可见性。 当您设计每层时，请关闭所有其他层，以确定问题是针对某个单独层，还是针对层间的透明度问题。  
@@ -148,7 +148,7 @@ ms.locfileid: "66104639"
 ### <a name="i-set-a-filter-on-the-map-layer-and-it-has-no-effect"></a>我对地图层设置了一个筛选器，但它不起作用。  
  若要对某层筛选数据，必须在筛选器表达式中指定数据类型。 请验证您已指定正确的基础数据类型，以便筛选器公式正确地计算指定的条件。 有关详细信息，请参阅[筛选器公式示例（报表生成器和 SSRS）](filter-equation-examples-report-builder-and-ssrs.md)。  
   
-##  <a name="Legend"></a> 图例、色阶和规则问题  
+##  <a name="Legend"></a>图例、色阶和规则问题  
  使用这一部分可以帮助解决与规则、图例和色阶选项相关的问题。  
   
 ### <a name="how-do-i-control-the-values-in-the-map-legend"></a>如何控制地图图例中的值？  
@@ -172,7 +172,8 @@ ms.locfileid: "66104639"
 -   有关详细信息，请参阅 [按规则和分析数据更改多边形、线条和点的显示方式（报表生成器和 SSRS）](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)。  
   
 ### <a name="what-is-the-value-nan-on-the-color-scale"></a>对于色阶，值 NaN 是什么含义？  
- `NaN` 表示“非数字”。 色阶值应为数字值。 对于与色阶关联的规则，检查分布设置和图例文本值。 如果您创建了自定义分布范围，请验证您对第一个范围指定了下限，而对最后范围指定了上限。  
+ 
+  `NaN` 表示“非数字”。 色阶值应为数字值。 对于与色阶关联的规则，检查分布设置和图例文本值。 如果您创建了自定义分布范围，请验证您对第一个范围指定了下限，而对最后范围指定了上限。  
   
 ### <a name="my-color-scale-does-not-appear-when-i-run-the-report"></a>当我运行报表时，不显示色阶。  
  当地图层为整个层的多边形、线条或点或嵌入地图元素指定颜色规则时，色阶向用户显示信息。 如果没有地图元素指定颜色规则，或者如果地图规则是使用图例而非颜色地图指定的，则呈现的报表中不显示颜色地图。  
@@ -181,15 +182,15 @@ ms.locfileid: "66104639"
   
   
   
-##  <a name="Tile"></a> 图块问题  
+##  <a name="Tile"></a>磁贴问题  
  使用这一部分可以帮助解决与图块背景选项相关的问题。  
   
 ### <a name="i-cannot-see-the-bing-maps-tile-background"></a>我看不到 Bing 地图图块背景。  
  下面的设置影响 Bing 地图图块背景是显示本地预览中，还是显示在从报表服务器运行的报表上。  
   
--   地图图块层必须存在。 在“地图”向导或“层”向导中，选择 **“为该地图视图添加 Bing 地图背景”** 。 这将为当前地图视区视图中心和缩放级别添加一个图块层。 还可以从“地图”窗格工具栏中添加图块层。  
+-   地图图块层必须存在。 在“地图”向导或“层”向导中，选择 **“为该地图视图添加 Bing 地图背景”**。 这将为当前地图视区视图中心和缩放级别添加一个图块层。 还可以从“地图”窗格工具栏中添加图块层。  
   
--   视区的地图坐标系必须为 **“地理”** ，而非 **“平面数据”** 。  
+-   视区的地图坐标系必须为 **“地理”**，而非 **“平面数据”**。  
   
 -   地图投影必须为 **Mercator**。  
   
@@ -198,13 +199,14 @@ ms.locfileid: "66104639"
  有关添加图块层的详细信息，请参阅[添加、更改或删除地图或地图层（报表生成器和 SSRS）](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   
 ### <a name="how-do-i-control-the-text-on-a-tile-layer"></a>如何控制图块层上的文本？  
- **“道路”** 和 **“混合”** 视图均包含文本。 文本是来自 Bing 地图 Web 服务的图块的组成部分。  
+ 
+  **“道路”** 和 **“混合”** 视图均包含文本。 文本是来自 Bing 地图 Web 服务的图块的组成部分。  
   
  若要包含没有文本的图块层，请选择 **“空中”** 视图。  
   
   
   
-##  <a name="Tooltip"></a> 工具提示和标签问题  
+##  <a name="Tooltip"></a>工具提示和标签问题  
  使用这一部分可以帮助解决与标签或工具提示选项相关的问题。  
   
 ### <a name="i-get-an-expression-error-about-dataset-scope-when-i-set-a-label-or-tooltip-to-an-expression"></a>当我将标签或工具提示设置为表达式时，获得一个有关数据集作用域的表达式错误。  
@@ -214,7 +216,7 @@ ms.locfileid: "66104639"
   
   
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [地图（报表生成器和 SSRS）](maps-report-builder-and-ssrs.md)   
  [报表生成器故障排除](../troubleshoot-report-builder.md)  
   

@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: c49e4e01dd8ddaf0667546a8cc221a7918f42c81
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70911210"
 ---
 # <a name="sysdm_operation_status-azure-sql-database"></a>sys.dm_operation_status (Azure SQL Database)
@@ -32,29 +32,29 @@ ms.locfileid: "70911210"
 
   返回有关对 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 服务器中的数据库执行的操作的信息。  
   
-|Column Name|数据类型|描述|  
+|列名|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|session_activity_id|**ssNoversion**|操作的 ID。 不为 null。|  
+|session_activity_id|**uniqueidentifier**|操作的 ID。 不为 null。|  
 |resource_type|**int**|指示针对其执行操作的资源类型。 不为 null。 在当前版本中，此视图仅跟踪对 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 执行的操作，对应的整数值为 0。|  
-|resource_type_desc|**nvarchar(2048)**|针对其执行操作的资源类型的说明。 在当前版本中，此视图只跟踪对 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 执行的操作。|  
+|resource_type_desc|**nvarchar （2048）**|针对其执行操作的资源类型的说明。 在当前版本中，此视图只跟踪对 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 执行的操作。|  
 |major_resource_id|**sql_variant**|对其执行操作的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的名称。 不为 Null。|  
-|minor_resource_id|**sql_variant**|仅限内部使用。 不为 null。|  
-|运作|**nvarchar(60)**|在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 上执行的操作，如 CREATE 或 ALTER。|  
+|minor_resource_id|**sql_variant**|仅供内部使用。 不为 null。|  
+|operation|**nvarchar （60）**|在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 上执行的操作，如 CREATE 或 ALTER。|  
 |state|**tinyint**|操作的状态。<br /><br /> 0 = 等待批准<br />1 = 正在进行<br />2 = 已完成<br />3 = 失败<br />4 = 已取消|  
-|state_desc|**nvarchar(120)**|PENDING = 操作正在等待提供资源或配额。<br /><br /> IN_PROGRESS = 操作已启动并且正在进行。<br /><br /> COMPLETED = 操作已成功完成。<br /><br /> FAILED = 操作失败。 有关详细信息，请参阅**error_desc**列。<br /><br /> CANCELLED = 在用户的要求下停止操作。|  
+|state_desc|**nvarchar （120）**|PENDING = 操作正在等待提供资源或配额。<br /><br /> IN_PROGRESS = 操作已启动并且正在进行。<br /><br /> COMPLETED = 操作已成功完成。<br /><br /> FAILED = 操作失败。 有关详细信息，请参阅**error_desc**列。<br /><br /> CANCELLED = 在用户的要求下停止操作。|  
 |percent_complete|**int**|操作已完成的百分比。 值不是连续的，且下面列出了有效值。 Not NULL。<br/><br/>0 = 操作未启动<br/>50 = 正在进行的操作<br/>100 = 操作完成|  
 |error_code|**int**|指示在操作失败过程中发生的错误的代码。 如果值为 0，则指示操作已成功完成。|  
-|error_desc|**nvarchar(2048)**|在操作失败过程中发生的错误的说明。|  
+|error_desc|**nvarchar （2048）**|在操作失败过程中发生的错误的说明。|  
 |error_severity|**int**|在操作失败过程中发生的错误的严重性级别。 有关错误严重性的详细信息，请参阅[数据库引擎错误严重性](https://go.microsoft.com/fwlink/?LinkId=251052)。|  
-|error_state|**int**|留待将来使用。 不保证以后的兼容性。|  
+|error_state|**int**|保留供将来使用。 不保证以后的兼容性。|  
 |start_time|**datetime**|开始操作的时间戳。|  
 |last_modify_time|**datetime**|上次修改长时间运行的操作的记录的时间戳。 在成功完成操作的情况下，此字段显示操作完成的时间戳。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此视图仅在**master**数据库中适用于服务器级主体登录名。  
   
-## <a name="remarks"></a>Remarks  
- 若要使用此视图，您必须连接到**master**数据库。 使用 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务器的**master**数据库中的 `sys.dm_operation_status` 视图来跟踪对 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]执行的以下操作的状态：  
+## <a name="remarks"></a>备注  
+ 若要使用此视图，您必须连接到**master**数据库。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]使用服务器`sys.dm_operation_status`的 master 数据库中的视图跟踪对执行的以下操作的状态： **** [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
 -   创建数据库  
   
@@ -84,9 +84,9 @@ SELECT * FROM sys.dm_operation_status
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [异地复制动态管理视图和函数&#40;Azure SQL Database&#41; ](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
- [dm_geo_replication_link_status &#40;Azure SQL 数据库&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
- [geo_replication_links &#40;Azure SQL 数据库&#41; ](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
- [ALTER DATABASE（Azure SQL 数据库）](../../t-sql/statements/alter-database-azure-sql-database.md)  
+ [异地复制动态管理视图和函数 &#40;Azure SQL 数据库&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
+ [dm_geo_replication_link_status &#40;Azure SQL 数据库&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
+ [geo_replication_links &#40;Azure SQL 数据库&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
+ [更改 Azure SQL 数据库 &#40;的数据库&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)  
   
   

@@ -16,33 +16,33 @@ ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: decbc7c3b377234d91fe6b3e662d9449298041c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923601"
 ---
 # <a name="using-ado-for-internet-publishing"></a>使用 ADO 进行 Internet 发布
-[用于 Internet 发布的 OLE DB 提供程序](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)显示了访问与 ADO 一起异类数据的特定示例。 尽管本部分中的示例将特定于使用 Internet 发布提供程序，与其他异类数据，如电子邮件存储区的提供者的提供程序使用 ADO 时应类似演示的原则。  
+[用于 Internet 发布的 OLE DB 提供程序](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)演示了使用 ADO 访问异类数据的特定示例。 虽然本部分中的示例将特定于使用 Internet 发布提供程序，但在将 ADO 用于其他提供程序的异类数据（如提供程序到电子邮件存储）时，演示的原则应类似。  
   
 ## <a name="urls"></a>URL  
- 统一资源定位器 (Url) 可以作为连接字符串和命令文本的替代方法，用于指定数据源和文件和目录的位置。 可以使用与现有的 Url[连接](../../../ado/reference/ado-api/connection-object-ado.md)并**记录集**对象且**记录**并**Stream**对象。  
+ 统一资源定位器（Url）可用作连接字符串和命令文本的替代方法，以指定数据源以及文件和目录的位置。 可以将 Url 用于现有[连接](../../../ado/reference/ado-api/connection-object-ado.md)和**记录集**对象，并使用**记录**和**流**对象。  
   
- 有关如何使用 Url 的详细信息，请参阅[绝对和相对 Url](../../../ado/guide/data/absolute-and-relative-urls.md)。  
+ 有关如何使用 Url 的详细信息，请参阅[绝对和相对 url](../../../ado/guide/data/absolute-and-relative-urls.md)。  
   
 ## <a name="record-fields"></a>记录字段  
- 异类数据与同类数据之间的差别是，对于前者，每行数据，或**记录**，可以有一组不同的列，或**字段**。 同类数据，对于每个行包含相同的列集。 有关特定于 Internet 发布提供程序的字段的详细信息，请参阅[记录和提供程序提供额外字段](../../../ado/guide/data/records-and-provider-supplied-fields.md)。  
+ 异类数据和同类数据之间的区别在于：对于前者，每行数据或**记录**可以具有一组不同的列或**字段**。 对于同类数据，每行都具有相同的列集。 有关特定于 Internet 发布提供程序的字段的详细信息，请参阅[记录和提供程序提供的额外字段](../../../ado/guide/data/records-and-provider-supplied-fields.md)。  
   
-### <a name="appending-new-fields"></a>追加新的字段  
- ADO 的多个对象已得到增强，一起使用**记录**并**Stream**对象。  
+### <a name="appending-new-fields"></a>追加新字段  
+ 已增强几个 ADO 对象，使其与**Record**和**Stream**对象一起工作。  
   
--   [字段](../../../ado/reference/ado-api/fields-collection-ado.md)集合[追加](../../../ado/reference/ado-api/append-method-ado.md)方法，它会创建并添加[字段](../../../ado/reference/ado-api/field-object.md)到集合对象，还可以指定的值**字段**.  
+-   [字段](../../../ado/reference/ado-api/fields-collection-ado.md)集合[Append](../../../ado/reference/ado-api/append-method-ado.md)方法用于创建[字段](../../../ado/reference/ado-api/field-object.md)对象并将其添加到集合，还可以指定**字段**的值。  
   
--   [更新](../../../ado/reference/ado-api/update-method.md)方法完成的添加或删除的字段集合。  
+-   [Update](../../../ado/reference/ado-api/update-method.md)方法完成了向集合中添加或删除字段的操作。  
   
--   作为快捷方式和替代方法**追加**方法，您可以通过将值分配给一个未定义或以前已删除的字段创建字段。  
+-   作为**Append**方法的快捷方式和替代方法，您可以通过将值分配给未定义或之前删除的字段来创建字段。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [用于 Internet 发布的 OLE DB 提供程序](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "67923601"
   
 -   [记录和提供程序提供的字段](../../../ado/guide/data/records-and-provider-supplied-fields.md)  
   
-## <a name="see-also"></a>请参阅  
- [记录对象 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [Stream 对象 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
+## <a name="see-also"></a>另请参阅  
+ [Record 对象（ADO）](../../../ado/reference/ado-api/record-object-ado.md)   
+ [Stream 对象（ADO）](../../../ado/reference/ado-api/stream-object-ado.md)   
  [ADO 历史记录](../../../ado/guide/ado-history.md)

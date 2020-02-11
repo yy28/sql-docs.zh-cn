@@ -11,14 +11,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 464961600f69f14a2b66515a75906c0fd4af3f82
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175354"
 ---
 # <a name="lesson-9-restore-a-database-from-azure-storage"></a>第 9 课。 从 Azure 存储还原数据库
-  在本课中, 您将学习如何将数据库备份文件从 Azure 存储还原到数据库 (驻留在本地或 Azure 中的虚拟机上)。 不需要学完第 4、5、6、7 和 8 课即可听懂本课。  
+  在本课中，您将学习如何将数据库备份文件从 Azure 存储还原到数据库（驻留在本地或 Azure 中的虚拟机上）。 不需要学完第 4、5、6、7 和 8 课即可听懂本课。  
   
  本课假定您已完成以下步骤：  
   
@@ -34,7 +34,7 @@ ms.locfileid: "70175354"
   
 -   已在计算机上为 Azure 存储集成功能创建了 SQL Server 凭据。 注意，此凭据需要共享访问签名 (SAS) 密钥。  
   
- 若要从 Azure 存储还原数据库, 可以执行以下步骤:  
+ 若要从 Azure 存储还原数据库，可以执行以下步骤：  
   
 1.  启动 SQL Server Management Studio。 连接到默认实例。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "70175354"
   
 3.  复制以下完整脚本并将其粘贴到查询窗口。 根据需要修改脚本。  
   
-     **注意：** 运行`RESTORE`语句, 将 Azure 存储中的数据库备份 (.bak) 还原到其他计算机中的数据库实例。  
+     **注意：** 运行`RESTORE`语句，将 Azure 存储中的数据库备份（.bak）还原到其他计算机中的数据库实例。  
   
     ```sql  
   
@@ -95,6 +95,6 @@ ms.locfileid: "70175354"
   
     ```  
   
- **教程结束:SQL Server Azure 存储服务中的数据文件**  
+ **教程结束：在 Azure 存储服务中 SQL Server 数据文件**  
   
   

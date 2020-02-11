@@ -11,34 +11,34 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8cc6c9a2961696512c69f9c3e9de6d229eabb509
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72251312"
 ---
 # <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>使用存储过程部署和执行 SSIS 包
   在您配置一个 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目以便使用项目部署模型时，可以使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 目录中的存储过程部署该项目并且执行包。 有关项目部署模型的信息，请参阅 [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)。  
   
- 您还可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 部署项目和执行包。 有关详细信息，请参阅“另请参见” 部分中的主题。  
+ 您还可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 部署项目和执行包。 有关详细信息，请参阅“另请参见” **** 部分中的主题。  
   
 > [!TIP]
 >  您可以通过执行以下操作为下面的过程中列出的存储过程轻松地生成 Transact-SQL 语句，但 catalog.deploy_project 除外：  
 > 
->  1.  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中，在对象资源管理器中展开“Integration Services 目录” 节点，然后导航到您要执行的包。  
-> 2.  右键单击该包，然后单击“执行”。  
+>  1.  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中，在对象资源管理器中展开“Integration Services 目录” **** 节点，然后导航到您要执行的包。  
+> 2.  右键单击该包，然后单击“执行”****。  
 > 3.  根据需要，设置参数值、连接管理器属性和 **“高级”** 选项卡中的选项（例如，日志记录级别）。  
 > 
 >      有关日志记录级别的详细信息，请参阅 [启用日志记录在 SSIS 服务器上的包执行的](../../2014/integration-services/enable-logging-for-package-execution-on-the-ssis-server.md)。  
-> 4.  在单击 **“确定”** 以便执行该包之前，单击 **“脚本”** 。 Transact-SQL 将出现在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]的“查询编辑器”窗口中。  
+> 4.  在单击 **“确定”** 以便执行该包之前，单击 **“脚本”**。 Transact-SQL 将出现在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的“查询编辑器”窗口中。  
   
 ## <a name="to-deploy-and-execute-a-package-using-stored-procedures"></a>使用存储过程部署和执行包  
   
 1.  调用 [catalog.deploy_project（SSISDB 数据库）](/sql/integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database) 将包含包的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器。  
   
-     若要检索 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目部署文件的二进制内容，对于 *\@project_stream*参数，请将 SELECT 语句与 OPENROWSET 函数和 BULK 行集提供程序一起使用。 通过 BULK 行集提供程序，您可以从文件读取数据。 BULK 行集提供程序的 SINGLE_BLOB 参数将该数据文件的内容以 varbinary(max) 类型的单行、单列行集的形式返回。 有关详细信息，请参阅 [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)。  
+     若要检索[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]项目部署文件的二进制内容，请对* \@project_stream*参数使用带有 OPENROWSET 函数和 BULK 行集提供程序的 SELECT 语句。 通过 BULK 行集提供程序，您可以从文件读取数据。 BULK 行集提供程序的 SINGLE_BLOB 参数将该数据文件的内容以 varbinary(max) 类型的单行、单列行集的形式返回。 有关详细信息，请参阅 [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)。  
   
-     在下面的示例中，SSISPackages_ProjectDeployment 项目将部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器上的“SSIS 包”文件夹。 将从项目文件 SSISPackage_ProjectDeployment （.ispac）中读取二进制数据，并将其存储在 varbinary （max）类型的 *\@ProjectBinary*参数中。 将 *ProjectBinary 参数值赋给 \@project_stream 参数* *\@* 。  
+     在下面的示例中，SSISPackages_ProjectDeployment 项目将部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器上的“SSIS 包”文件夹。 将从项目文件 SSISPackage_ProjectDeployment （.ispac）中读取二进制数据，并将其存储在类型为 varbinary （max）的* \@ProjectBinary*参数中。 ProjectBinary 参数值将分配给* \@project_stream*参数。 * \@*  
   
     ```  
     DECLARE @ProjectBinary as varbinary(max)  
@@ -99,7 +99,7 @@ ms.locfileid: "72251312"
   
      在 **“链接服务器属性”** 的 **“服务器选项”** 页上，将 **RPC** 和 **RPC Out** 设置为 **True**。 此外，将 **“为 RPC 启用针对分布式事务的升级”** 设置为 **False**。  
   
--   通过在对象资源管理器中展开“链接服务器”下的“提供程序”节点，右键单击该提供程序，然后单击“属性”，对为链接服务器选择的提供程序启用动态参数。 选择 **“动态参数”** 旁边的 **“启用”** 。  
+-   通过在对象资源管理器中展开“链接服务器”下的“提供程序”节点，右键单击该提供程序，然后单击“属性”，对为链接服务器选择的提供程序启用动态参数。************ 选择 **“动态参数”** 旁边的 **“启用”**。  
   
 -   确认分布式事务处理协调器 (DTC) 在两个服务器上均启动。  
   

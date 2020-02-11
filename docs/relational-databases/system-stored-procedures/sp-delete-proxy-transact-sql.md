@@ -19,10 +19,10 @@ ms.assetid: 44a1db13-b7f2-4dab-a1b5-b8dafb41737c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fd717f645b9e53d08f6dabbfc1ea5779c373056e
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72305104"
 ---
 # <a name="sp_delete_proxy-transact-sql"></a>sp_delete_proxy (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "72305104"
 
   删除指定代理。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,22 +40,22 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @proxy_id = ] id` 要删除的代理的代理标识号。 *Proxy_id*的值为**int**，默认值为 NULL。  
+`[ @proxy_id = ] id`要删除的代理的代理标识号。 *Proxy_id*的值为**int**，默认值为 NULL。  
   
-`[ @proxy_name = ] 'proxy_name'` 要删除的代理的名称。 *Proxy_name*的值为**sysname**，默认值为 NULL。  
+`[ @proxy_name = ] 'proxy_name'`要删除的代理的名称。 *Proxy_name*的值为**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- InclusionThresholdSetting  
+ 无  
   
-## <a name="remarks"></a>Remarks  
- 必须指定 **\@proxy_name**或 **\@proxy_id** 。 如果同时指定这两个参数，这两个参数必须引用相同的代理，否则存储过程会失败。  
+## <a name="remarks"></a>备注  
+ 必须指定** \@proxy_name**或** \@proxy_id** 。 如果同时指定这两个参数，这两个参数必须引用相同的代理，否则存储过程会失败。  
   
  如果作业步骤引用了指定代理，则无法删除此代理，存储过程也将失败。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  默认情况下，只有**sysadmin**固定服务器角色的成员才能**sp_delete_proxy**执行。  
   
 ## <a name="examples"></a>示例  
@@ -71,6 +71,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)  
+ [sp_add_proxy &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)  
   
   

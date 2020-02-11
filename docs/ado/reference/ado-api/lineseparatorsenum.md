@@ -1,5 +1,5 @@
 ---
-title: LineSeparatorsEnum | Microsoft Docs
+title: LineSeparatorsEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,23 +16,23 @@ ms.assetid: 0440b793-99c7-49a2-b3e2-ec5b1a7e3e60
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c966e2ac972fbc613c3938e95e458786c399bc08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932329"
 ---
 # <a name="lineseparatorsenum"></a>LineSeparatorsEnum
-指定用作文本中的行分隔符的字符[Stream](../../../ado/reference/ado-api/stream-object-ado.md)对象。  
+指定在文本[流](../../../ado/reference/ado-api/stream-object-ado.md)对象中用作行分隔符的字符。  
   
-|常量|ReplTest1|描述|  
+|一直|值|说明|  
 |--------------|-----------|-----------------|  
-|**adCR**|13|表示回车。|  
-|**adCRLF**|-1|默认值。 表示回车换行符。|  
+|**adCR**|13|指示回车符。|  
+|**adCRLF**|-1|默认值。 指示回车换行符。|  
 |**adLF**|10|指示换行。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
- 这些常量不具有 ADO/WFC 等效项。  
+ 这些常量没有 ADO/WFC 等效项。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [LineSeparator 属性 (ADO)](../../../ado/reference/ado-api/lineseparator-property-ado.md)

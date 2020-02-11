@@ -15,14 +15,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96267b98d7e17b920e0a7cee70b69e4c964584e4
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798006"
 ---
 # <a name="copy-only-backups-sql-server"></a>仅复制备份 (SQL Server)
-  *仅复制备份* 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 独立于常规备份序列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的备份。 通常，进行备份会更改数据库并影响其后备份的还原方式。 但是，有时在不影响数据库总体备份和还原过程的情况下，为特殊目的而进行备份还是有用的。 仅复制备份就是用于此目的。  
+  *仅复制备份*是独立于常规[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]备份序列的备份。 通常，进行备份会更改数据库并影响其后备份的还原方式。 但是，有时在不影响数据库总体备份和还原过程的情况下，为特殊目的而进行备份还是有用的。 仅复制备份就是用于此目的。  
   
  仅复制备份的类型如下所示：  
   
@@ -41,7 +41,7 @@ ms.locfileid: "72798006"
  仅复制备份记录在 **backupset** 表的 [is_copy_only](/sql/relational-databases/system-tables/backupset-transact-sql) 列中。  
   
 ## <a name="to-create-a-copy-only-backup"></a>创建仅复制备份  
- 您可以通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 创建仅复制备份。  
+ 您可以通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或 PowerShell 创建仅复制备份。  
   
 ###  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
@@ -52,16 +52,16 @@ ms.locfileid: "72798006"
   
 -   对于仅复制完整备份：  
   
-     备份数据库*database_name*到 \<backup_device *>* 。COPY_ONLY 。  
+     备份数据库*database_name*到\<backup_device*>* .。。COPY_ONLY .。。  
   
     > [!NOTE]  
     >  使用 DIFFERENTIAL 选项指定时，COPY_ONLY 不起作用。  
   
 -   对于仅复制日志备份：  
   
-     备份日志*database_name*到 *\<* backup_device *>* 。COPY_ONLY 。  
+     备份日志*database_name*到*\<* backup_device*>* .。。COPY_ONLY .。。  
   
-###  <a name="PowerShellProcedure"></a> 使用 PowerShell  
+###  <a name="PowerShellProcedure"></a>使用 PowerShell  
   
 将 `Backup-SqlDatabase` cmdlet 与 `-CopyOnly` 参数一起使用。  
   
@@ -79,10 +79,10 @@ ms.locfileid: "72798006"
   
 ### <a name="to-set-up-and-use-the-sql-server-powershell-provider"></a>设置和使用 SQL Server PowerShell 提供程序
   
--   [SQL Server PowerShell 提供程序](../../powershell/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell Provider](../../powershell/sql-server-powershell-provider.md)  
 
 ## <a name="see-also"></a>另请参阅  
  [备份概述 (SQL Server)](backup-overview-sql-server.md)   
- [恢复模式 (SQL Server)](recovery-models-sql-server.md)   
- [通过备份和还原来复制数据库](../databases/copy-databases-with-backup-and-restore.md)   
+ [恢复模式 &#40;SQL Server&#41;](recovery-models-sql-server.md)   
+ [通过备份和还原复制数据库](../databases/copy-databases-with-backup-and-restore.md)   
  [还原和恢复概述 (SQL Server)](restore-and-recovery-overview-sql-server.md)  

@@ -13,26 +13,26 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 9ae4a5009c33067dcb5db2d26ff3e287b31b8768
-ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71118127"
 ---
 # <a name="query-options-pages-f1-help"></a>“查询选项”页的 F1 帮助
 
 本节包含 **中** “查询选项” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]页的 F1 帮助主题。
 
-[Analysis Services 查询执行选项&#40;常规页&#41;](analysis-services-query-execution-options-general-page.md)
+[Analysis Services "常规" 页 &#40;查询执行选项&#41;](analysis-services-query-execution-options-general-page.md)
 
-[Analysis Services 查询结果&#40;常规页&#41;](../../2014/database-engine/analysis-services-query-results-general-page.md)
+[Analysis Services "常规" 页 &#40;的查询结果&#41;](../../2014/database-engine/analysis-services-query-results-general-page.md)
 
-["查询选项&#40;执行" 高级页&#41;](../../2014/database-engine/query-options-execution-advanced-page.md)
+[查询选项执行 &#40;高级页面&#41;](../../2014/database-engine/query-options-execution-advanced-page.md)
 
-[查询选项执行&#40;ANSI 页&#41;](../../2014/database-engine/query-options-execution-ansi-page.md)
+[查询选项执行 &#40;ANSI 页面&#41;](../../2014/database-engine/query-options-execution-ansi-page.md)
 
-[查询选项执行&#40;常规页&#41;](../../2014/database-engine/query-options-execution-general-page.md)
+[查询选项执行 &#40;常规页&#41;](../../2014/database-engine/query-options-execution-general-page.md)
   
-[查询选项结果&#40;网格页&#41;](../../2014/database-engine/query-options-results-grid-page.md)
+[查询选项结果 &#40;网格页&#41;](../../2014/database-engine/query-options-results-grid-page.md)
 
-["查询选项&#40;" 结果文本页&#41;](../../2014/database-engine/query-options-results-text-page.md)
+[查询选项 &#40;文本页的结果&#41;](../../2014/database-engine/query-options-results-text-page.md)

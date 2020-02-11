@@ -14,14 +14,14 @@ ms.assetid: c0f76455-d072-4bae-bee7-452277dfa479
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ef89943f95a6492614972c3e89fe2129becc1aa5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68086426"
 ---
 # <a name="sqlfreeenv-mapping"></a>SQLFreeEnv 映射
-当应用程序调用**SQLFreeEnv**通过 ODBC *3.x*驱动程序，将会调用  
+当应用程序*通过 ODBC 1.x*驱动程序调用**SQLFreeEnv**时，调用  
   
 ```  
 SQLFreeEnv(henv)   
@@ -33,4 +33,4 @@ SQLFreeEnv(henv)
 SQLFreeHandle(SQL_HANDLE_ENV,Handle)  
 ```  
   
- 与*处理*参数设置为中的值*henv*。
+ 如果将*Handle*参数设置为*henv*中的值，则为。

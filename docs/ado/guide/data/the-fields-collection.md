@@ -1,5 +1,5 @@
 ---
-title: 字段集合 |Microsoft Docs
+title: Fields 集合 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,19 +14,19 @@ ms.assetid: 574cf36e-e5f5-403b-983c-749ef93c108f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 197a57b8a9b9ea2927a057733992a02c731a335a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923939"
 ---
 # <a name="the-fields-collection"></a>字段集合
-**字段**集合是一个 ADO 的内部集合。 集合是一组有序可以作为一个单元引用的项。 ADO 集合有关的详细信息，请参阅[ADO 对象模型](../../../ado/guide/data/ado-objects-and-collections.md)。  
+**字段**集合是 ADO 的内部集合之一。 集合是一组有序项，可作为一个单元来引用。 有关 ADO 集合的详细信息，请参阅[Ado 对象模型](../../../ado/guide/data/ado-objects-and-collections.md)。  
   
- **字段**集合包含**字段**对象的每个字段 （列） 中**记录集**。 像所有 ADO 集合，它具有**计数**和**项**属性，以及**追加**并**刷新**方法。 它还具有**CancelUpdate**，**删除**，**重新同步**，以及**更新**方法，对其他 ADO 集合不可用。  
+ **Fields**集合包含**记录集中**每个字段（列）的**字段**对象。 与所有 ADO 集合一样，它具有**计数**和**项**属性，以及**追加**和**刷新**方法。 它还具有**CancelUpdate**、 **Delete**、 **Resync**和**UPDATE**方法，这些方法对于其他 ADO 集合不可用。  
   
 ## <a name="examining-the-fields-collection"></a>检查字段集合  
- 请考虑**字段**的示例集合**记录集**本部分介绍。 该示例**记录集**派生自的 SQL 语句  
+ 请考虑本节中引入的示例**记录集**的**字段**集合。 示例**记录集**派生自 SQL 语句  
   
 ```  
 SELECT ProductID, ProductName, UnitPrice FROM Products WHERE CategoryID = 7  
@@ -49,15 +49,15 @@ SELECT ProductID, ProductName, UnitPrice FROM Products WHERE CategoryID = 7
 'EndWalkFields  
 ```  
   
- 此代码只是确定的数量**字段**中的对象**字段**集合使用**计数**属性，并循环访问集合，返回的值**名称**属性为每个**字段**对象。 可以使用更多**字段**属性以获取有关字段的信息。 有关查询的详细信息**字段**，请参阅[Field 对象](../../../ado/guide/data/the-field-object.md)。  
+ 此代码只是使用**Count**属性来确定**字段**集合中**字段**对象的数目，并循环遍历该集合，返回每个**字段**对象的**Name**属性的值。 您可以使用更多**字段**属性来获取有关字段的信息。 有关查询**字段**的详细信息，请参阅[field 对象](../../../ado/guide/data/the-field-object.md)。  
   
-## <a name="counting-columns"></a>计数列  
- 正如您所料，**计数**属性返回的实际数目**字段**中的对象**字段**集合。 由于对集合成员的编号从零开始，应始终将循环从零个成员开始和结束值为**计数**减 1 的属性。 如果你使用的 Microsoft Visual Basic 并想要循环访问集合的成员，而不检查**计数**属性，请使用**为每个...下一步**命令。  
+## <a name="counting-columns"></a>计算列数  
+ 正如您所料， **Count**属性返回**字段**集合中**字段**对象的实际数目。 由于集合成员的编号以零开始，因此，您始终应始终从零个成员开始编写循环，并以**Count**属性的值减1结束。 如果使用的是 Microsoft Visual Basic 并且想要循环遍历集合的成员而不检查**Count**属性，请使用**For Each .。。下一个**命令。  
   
- 如果**计数**属性为零，则集合中没有任何对象。  
+ 如果**Count**属性为零，则集合中不存在任何对象。  
   
-## <a name="getting-to-the-field"></a>获取为字段  
- 与任何 ADO 集合一样，**项**属性是集合的默认属性。 它将返回单个**字段**由名称指定的对象或传递给它的索引。 因此，以下语句是等效的示例**记录集**:  
+## <a name="getting-to-the-field"></a>转到字段  
+ 与任何 ADO 集合一样，**项**属性是集合的默认属性。 它返回由传递给它的名称或索引指定的单个**Field**对象。 因此，下面的语句对于示例**记录集**是等效的：  
   
 ```  
 objField = objRecordset.Fields.Item("ProductID")  
@@ -66,17 +66,17 @@ objField = objRecordset.Fields.Item(0)
 objField = objRecordset.Fields(0)  
 ```  
   
- 如果这些方法都是等效的哪一个是最佳？ 不一定。 使用索引来检索**字段**从集合会提高，因为它将访问**字段**直接而无需执行字符串查找。 另一方面的顺序**字段**集合中必须已知的而且如果顺序更改，对引用**字段的**索引必须出现的任何更改。 尽管稍慢些，但使用的名称**字段**是更灵活，因为它不依赖顺序的**字段**集合中。  
+ 如果这两种方法是等效的，最好这样做？ 视情况而定。 使用索引从集合中检索**字段**的速度更快，因为它直接访问**字段**，而无需执行字符串查找。 另一方面，集合中**字段**的顺序必须是已知的，并且如果顺序发生更改，则在任何情况下都必须更改对**字段的**索引的引用。 虽然稍微慢一些，但使用**字段**的名称更灵活，因为它不依赖于集合中**字段**的顺序。  
   
 ## <a name="using-the-refresh-method"></a>使用 Refresh 方法  
- 与某些其他 ADO 集合，使用不同**刷新**方法**字段**集合具有明显的效果。 若要检索从基础数据库结构更改，必须使用任一**再次查询**方法，或者如果**记录集**对象不支持书签， **MoveFirst**方法，这将导致再次执行针对提供程序的命令。  
+ 与其他一些 ADO 集合不同，对**字段**集合使用**Refresh**方法不会产生任何效果。 若要从基础数据库结构中检索更改，必须使用**Requery**方法，或者如果**记录集**对象不支持书签，则为**MoveFirst**方法，这将导致再次对提供程序执行该命令。  
   
 ## <a name="adding-fields-to-a-recordset"></a>将字段添加到记录集  
- **追加**方法用于将字段添加到**记录集**。  
+ **Append**方法用于向**记录集**添加字段。  
   
- 可以使用**追加**方法创建**记录集**以编程方式而无需打开与数据源的连接。 如果将发生运行时错误**追加**上调用方法**字段**的一种开放集合**记录集**或在**记录集**其中**ActiveConnection**设置属性。 您可以仅为将附加字段**记录集**的未打开，并且尚未连接到数据源。 但是，若要指定值的新追加**字段**，则**记录集**必须首先打开。  
+ 您可以使用**Append**方法以编程方式创建**记录集**，而无需打开与数据源的连接。 如果对打开的**记录集**的**字段**集合或已设置**ActiveConnection**属性的**记录集**调用**Append**方法，将会发生运行时错误。 您只能向未打开且尚未连接到数据源的**记录集**追加字段。 但是，若要指定新追加**字段**的值，必须先打开该**记录集**。  
   
- 开发人员通常需要一个位置来暂时存储一些数据，或想要其行为就好像它来自服务器以便在用户界面中的数据绑定可以参与某些数据。 ADO (结合[用于 OLE DB 的 Microsoft 游标服务](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md))，开发人员可以生成一个空**记录集**对象通过指定的列信息并调用**打开**. 在以下示例中，三个新字段追加到一个新**记录集**对象。 然后**记录集**打开时，两个中添加新记录，并**记录集**保存到文件。 (有关详细信息**记录集**暂留，请参阅[更新和保存数据](../../../ado/guide/data/updating-and-persisting-data.md)。)  
+ 开发人员通常需要一个位置来临时存储一些数据，或者希望某些数据像来自服务器一样，使其可以参与用户界面中的数据绑定。 ADO （与[用于 OLE DB 的 Microsoft 游标服务](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)结合使用）使开发人员能够通过指定列信息并调用**Open**来生成一个空的**记录集**对象。 在下面的示例中，向新的**记录集**对象追加了三个新字段。 然后，将打开该**记录集**，添加两条新记录，并将**记录集**保存到文件中。 （有关**记录集**持久性的详细信息，请参阅[更新和保存数据](../../../ado/guide/data/updating-and-persisting-data.md)。）  
   
 ```  
 'BeginFabricate  
@@ -111,7 +111,7 @@ objField = objRecordset.Fields(0)
 'EndFabricate  
 ```  
   
- 使用情况**字段追加**方法而异**记录集**对象并**记录**对象。 有关详细信息**记录**对象，请参阅[记录和流](../../../ado/guide/data/records-and-streams.md)。  
+ **字段 Append**方法的用法在**Recordset**对象和**Record**对象之间有所不同。 有关**Record**对象的详细信息，请参阅[记录和流](../../../ado/guide/data/records-and-streams.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [构造分层记录集](../../../ado/guide/data/fabricating-hierarchical-recordsets.md)

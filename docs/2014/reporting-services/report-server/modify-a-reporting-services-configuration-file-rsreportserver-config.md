@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2c77ae94a7b8c5760d14dcb3fed2af40573549d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103762"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>修改 Reporting Services 配置文件 (RSreportserver.config)
@@ -86,12 +86,12 @@ ms.locfileid: "66103762"
   
     -   [在 RSReportServer.Config 中自定义呈现扩展插件参数](../customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
-5.  保存该文件。  
+5.  保存文件。  
   
-6.  检查跟踪日志文件，确认没有错误发生。 如果看到错误情况，则说明错误地指定了某个设置或它的值。 请检查 [RSReportServer Configuration File](rsreportserver-config-configuration-file.md) ，了解引起错误的任何设置的有效值。 有关查看跟踪日志的详细信息，请参阅[报表服务器服务跟踪日志](report-server-service-trace-log.md)。  
+6.  检查跟踪日志文件，确认没有错误发生。 如果看到错误情况，则说明错误地指定了某个设置或它的值。 请检查 [RSReportServer Configuration File](rsreportserver-config-configuration-file.md) ，了解引起错误的任何设置的有效值。 有关查看跟踪日志的详细信息，请参阅 [报表服务器服务跟踪日志](report-server-service-trace-log.md)。  
   
-## <a name="see-also"></a>请参阅  
- [RSReportServer 配置文件](rsreportserver-config-configuration-file.md)   
+## <a name="see-also"></a>另请参阅  
+ [Rsreportserver.config 配置文件](rsreportserver-config-configuration-file.md)   
  [ReportingServicesService 配置文件](reportingservicesservice-configuration-file.md)   
  [RSReportDesigner 配置文件](rsreportdesigner-configuration-file.md)   
  [部署数据处理扩展插件](../extensions/data-processing/deploying-a-data-processing-extension.md)   

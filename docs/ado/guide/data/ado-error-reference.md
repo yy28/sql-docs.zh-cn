@@ -1,5 +1,5 @@
 ---
-title: ADO 错误参考 |Microsoft Docs
+title: ADO 错误引用 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,68 +15,68 @@ ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: da9d7d2374f8e3410598bfdfbd97e59eb505b255
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926247"
 ---
 # <a name="ado-errors"></a>ADO 错误
-**ErrorValueEnum**常量介绍 ADO 错误值。 包括的值，这些枚举常量的完整列表请参阅[附录 b:ADO 错误](../../../ado/guide/appendixes/appendix-b-ado-errors.md)。 本部分将检查的一些更有趣的错误，并介绍它们，或若要解决此问题的解决方案可以引发某些特定情况。 这两个**ErrorValueEnum**列出了常量和简短的正十进制数。
+**ErrorValueEnum**常数描述 ADO 错误值。 有关这些枚举常量（包括值）的完整列表，请参阅[附录 B： ADO 错误](../../../ado/guide/appendixes/appendix-b-ado-errors.md)。 本部分将介绍一些更有趣的错误，并说明一些可能引发这些错误的特定情况，或解决问题的解决方案。 同时列出了**ErrorValueEnum**常量和短的十进制数字。
 
 |Number|ErrorValueEnum 常量|说明/可能的原因|
 |------------|-----------------------------|----------------------------------|
-|**3000**|**adErrProviderFailed**|提供程序无法执行请求的操作。|
-|**3001**|**adErrInvalidArgument**|自变量的类型不正确、 不在可接受范围内，或与另一个冲突。 通常由一个 SQL SELECT 语句中的拼写错误导致此错误。 例如，拼写错误的字段名称或表名称可以生成此错误。 字段或 SELECT 语句中名为表中数据存储区不存在时，也可以发生此错误。|
-|**3002**|**adErrOpeningFile**|无法打开文件。 指定一个拼写错误的文件名，或文件已被移动、 重命名或删除。 通过网络，这些驱动器可能会暂时不可用或网络流量可能会阻止连接。|
-|**3003**|**adErrReadFile**|无法读取文件。 错误地指定的文件的名称，该文件可能被移动或删除，或该文件可能已损坏。|
-|**3004**|**adErrWriteFile**|写入文件失败。 可能已经关闭文件，然后又试着将写入到它，或该文件可能已损坏。 如果该文件位于网络驱动器上，暂时性的网络状况可能会阻止写入到网络驱动器。|
-|**3021**|**adErrNoCurrentRecord**|任一**BOF**或**EOF**为 True，或当前记录已被删除。 请求的操作需要当前记录。<br /><br /> 尝试通过使用更新的记录**查找**或**Seek**将记录指针移动到所需的记录。 如果未找到记录， **EOF**将为 True。 在出现故障后也会发生此错误**AddNew**或**删除**因为没有最新记录时这些方法都失败。|
-|**3219**|**adErrIllegalOperation**|在此上下文中不允许操作。|
-|**3220**|**adErrCantChangeProvider**|给定的提供程序不同于已在使用中。|
-|**3246**|**adErrInTransaction**|**连接**对象不能在事务中显式关闭。 一个**记录集**或**连接**无法关闭当前参与事务的对象。 调用**RollbackTrans**或**CommitTrans**之前关闭对象。|
-|**3251**|**adErrFeatureNotAvailable**|对象或提供程序不能执行请求的操作。 某些操作取决于特定的提供程序版本。|
-|**3265**|**adErrItemNotFound**|不能在集合中找到项，对应于请求的名称或序号。 指定不正确的字段或表名称。|
-|**3367**|**adErrObjectInCollection**|对象已在集合中。 无法追加。 对象无法添加到两次同一集合。|
+|**3000**|**adErrProviderFailed**|提供程序无法执行所请求的操作。|
+|**3001**|**adErrInvalidArgument**|参数的类型错误，不在可接受的范围内，或者相互冲突。 此错误通常是由 SQL SELECT 语句中的打字错误引起的。 例如，拼写错误的字段名称或表名称可能会生成此错误。 当在 SELECT 语句中指定的字段或表在数据存储中不存在时，也会发生此错误。|
+|**3002**|**adErrOpeningFile**|无法打开文件。 指定了拼写错误的文件名，或者文件已被移动、重命名或删除。 通过网络，驱动器可能暂时不可用，或者网络流量可能会阻止连接。|
+|**3003**|**adErrReadFile**|无法读取文件。 错误地指定了该文件的名称，该文件可能已被移动或删除，或者该文件已损坏。|
+|**3004**|**adErrWriteFile**|写入文件失败。 您可能已经关闭了某个文件，然后尝试写入该文件，或者该文件已损坏。 如果文件位于网络驱动器上，则暂时性的网络情况可能会阻止写入网络驱动器。|
+|**3021**|**adErrNoCurrentRecord**|**BOF**或**EOF**为 True，或当前记录已被删除。 请求的操作需要当前记录。<br /><br /> 尝试通过使用 "**查找** **" 或 "查找"** 将记录指针移到所需的记录来更新记录。 如果找不到该记录， **EOF**将为 True。 此错误还可能在出现失败的**AddNew**或**Delete**之后出现，因为当这些方法失败时，没有当前记录。|
+|**3219**|**adErrIllegalOperation**|不允许在此上下文中执行操作。|
+|**3220**|**adErrCantChangeProvider**|提供的提供程序与已在使用的提供程序不同。|
+|**3246**|**adErrInTransaction**|无法在事务中显式关闭**连接**对象。 无法关闭当前参与事务的**记录集**或**连接**对象。 在关闭对象之前调用**RollbackTrans**或**CommitTrans** 。|
+|**3251**|**adErrFeatureNotAvailable**|对象或提供程序无法执行所请求的操作。 某些操作依赖于特定的提供程序版本。|
+|**3265**|**adErrItemNotFound**|在与请求的名称或序号相对应的集合中找不到项。 指定的字段或表名不正确。|
+|**3367**|**adErrObjectInCollection**|对象已在集合中。 无法追加。 不能将一个对象添加到同一个集合两次。|
 |**3420**|**adErrObjectNotSet**|对象不再有效。|
-|**3421**|**adErrDataConversion**|应用程序使用当前操作的错误类型的值。 您可能会提供操作需要一个流，例如的字符串。|
-|**3704**|**adErrObjectClosed**|当对象已关闭时，不允许操作。 **连接**或**记录集**已关闭。 例如，一些其他例程可能会关闭全局对象。 可以通过检查来防止出现此错误**状态**尝试操作之前的属性。|
-|**3705**|**adErrObjectOpen**|打开对象时，不允许操作。 无法打开处于打开状态的对象。 字段不能为打开追加**记录集**。|
-|**3706**|**adErrProviderNotFound**|找不到提供程序。 它可能未正确安装。<br /><br /> 可能会错误地指定的提供程序名称、 指定的提供程序可能未安装计算机上正在执行你的代码，或安装可能已损坏。|
-|**3707**|**adErrBoundToCommand**|**ActiveConnection**的属性**记录集**对象，具有**命令**对象作为其源，不能更改。 应用程序尝试分配一个新**连接**对象传递给**记录集**具有**命令**对象作为其源。|
-|**3708**|**adErrInvalidParamInfo**|**参数**对象未正确定义。 提供的信息不一致或不完整。|
-|**3709**|**adErrInvalidConnection**|不能使用连接来执行此操作。 它是已关闭或在此上下文中无效。|
-|**3710**|**adErrNotReentrant**|无法处理事件时执行操作。 无法将导致再次触发的事件的事件处理程序中执行操作。 例如，导航方法不应调用内**WillMove**事件处理程序。|
-|**3711**|**adErrStillExecuting**|以异步方式执行时，无法执行操作。|
-|**3712**|**adErrOperationCancelled**|已由用户取消操作。 应用程序调用**CancelUpdate**或**CancelBatch**方法和当前操作已取消。|
-|**3713**|**adErrStillConnecting**|以异步方式连接时，无法执行操作。|
-|**3714**|**adErrInvalidTransaction**|协调事务无效，或尚未启动。|
-|**3715**|**adErrNotExecuting**|不执行时，无法执行操作。|
-|**3716**|**adErrUnsafeOperation**|在此计算机上的安全设置禁止访问其它域的数据源。|
-|**3717**|**adWrnSecurityDialog**|仅限内部使用。 不要使用。 （而包括此项为完整起见。 此错误不应出现在你的代码。）|
-|**3718**|**adWrnSecurityDialogHeader**|仅限内部使用。 不要使用。 （为了完整性而包括的项。 此错误不应出现在你的代码。）|
-|**3719**|**adErrIntegrityViolation**|数据值与该字段的完整性约束冲突。 新的值**字段**会导致重复键。 一个值，窗体的两条记录之间的关系的一方可能无法更新。|
-|**3720**|**adErrPermissionDenied**|没有足够的权限会阻止写入字段。 连接字符串中指定的用户没有适当的权限来写入**字段**。|
-|**3721**|**adErrDataOverflow**|数据值为太大而无法表示字段数据类型。 分配为预期的字段太大的数字值。 例如，一个长整型值被赋予一个短整数字段。|
-|**3722**|**adErrSchemaViolation**|数据值与数据类型或字段的约束冲突。 数据存储区具有不同的验证约束**字段**值。|
-|**3723**|**adErrSignMismatch**|由于数据值带有符号而访问接口所使用的字段数据类型无符号转换失败。|
-|**3724**|**adErrCantConvertvalue**|不能转换数据值，而原因并非符号不匹配或数据溢出。 例如，转换将截断数据。|
-|**3725**|**adErrCantCreate**|数据值不能设置或检索，因为字段数据类型未知，或提供程序出现资源不足，无法执行该操作。|
-|**3726**|**adErrColumnNotOnThisRow**|记录不包含此字段。 指定了不正确的字段名称或字段不在**字段**引用了当前记录的集合。|
-|**3727**|**adErrURLDoesNotExist**|源 URL 或目标 URL 的父级不存在。 源或目标 URL 中没有犯了输入错误。 你可能`https://mysite/photo/myphoto.jpg`时实际上应具有`https://mysite/photos/myphoto.jpg`相反。 父 URL 中的输入错误 (在这种情况下，*照片*而不是*照片*) 导致该错误。|
-|**3728**|**adErrTreePermissionDenied**|权限是不足以访问树或子树。 连接字符串中指定的用户没有适当的权限。|
-|**3729**|**adErrInvalidURL**|URL 包含无效字符。 请确保键入的 URL 正确。 URL 采用注册到当前提供程序的方案 （例如，Internet 发布提供程序注册为 http）。|
-|**3730**|**adErrResourceLocked**|指定 URL 表示的对象已由一个或多个其他进程锁定。 等待，直到该过程完成，然后重试该操作。 尝试访问的对象已由另一个用户或应用程序中的另一个进程锁定。 这是最有可能会出现在多用户环境中。|
-|**3731**|**adErrResourceExists**|无法执行复制操作。 命名对象的目标 URL 已存在。 指定**adCopyOverwrite**替换对象。 如果未指定**adCopyOverwrite**复制文件时的目录中，当你尝试复制目标位置中已存在的项目时，复制会失败。|
-|**3732**|**adErrCannotComplete**|服务器无法完成该操作。 这可能是因为服务器正忙于处理其他操作也可能是资源不足。|
-|**3733**|**adErrVolumeNotFound**|提供程序找不到的 URL 所示的存储设备。 请确保键入的 URL 正确。 存储设备的 URL 可能不正确，但由于其他原因而可能发生此错误。 设备可能处于脱机状态或大量的网络流量可能会阻止从正在进行的连接。|
-|**3734**|**adErrOutOfSpace**|无法执行操作。 提供程序无法获取足够的存储空间。 可能不会有足够的 RAM 或服务器上的临时文件的硬盘空间。|
+|**3421**|**adErrDataConversion**|应用程序为当前操作使用错误类型的值。 例如，你可能为需要流的操作提供了一个字符串。|
+|**3704**|**adErrObjectClosed**|对象处于关闭状态时，不允许执行操作。 已关闭**连接**或**记录集**。 例如，另一个例程可能已关闭全局对象。 在尝试操作之前，可以通过检查**状态**属性来避免此错误。|
+|**3705**|**adErrObjectOpen**|对象处于打开状态时，不允许执行操作。 无法打开打开的对象。 字段不能追加到打开的**记录集**。|
+|**3706**|**adErrProviderNotFound**|找不到提供程序。 它可能未正确安装。<br /><br /> 可能错误地指定了提供程序的名称，指定的访问接口可能未安装在执行您的代码的计算机上，或者安装可能已损坏。|
+|**3707**|**adErrBoundToCommand**|不能更改**记录集**对象的**ActiveConnection**属性，该对象将**命令**对象作为其源。 应用程序尝试将新的**连接**对象分配给将**命令**对象作为其源的**记录集**。|
+|**3708**|**adErrInvalidParamInfo**|**参数**对象定义不正确。 提供了不一致或不完整的信息。|
+|**3709**|**adErrInvalidConnection**|无法使用连接来执行此操作。 它已关闭或在此上下文中无效。|
+|**3710**|**adErrNotReentrant**|处理事件时无法执行操作。 操作不能在事件处理程序中执行，从而导致事件再次激发。 例如，不应从**WillMove**事件处理程序中调用导航方法。|
+|**3711**|**adErrStillExecuting**|异步执行时，无法执行操作。|
+|**3712**|**adErrOperationCancelled**|操作已被用户取消。 应用程序调用了**CancelUpdate**或**CancelBatch**方法，但当前操作已取消。|
+|**3713**|**adErrStillConnecting**|异步连接时无法执行操作。|
+|**3714**|**adErrInvalidTransaction**|协调事务无效或尚未启动。|
+|**3715**|**adErrNotExecuting**|无法执行时无法执行操作。|
+|**3716**|**adErrUnsafeOperation**|此计算机上的安全设置禁止访问另一个域中的数据源。|
+|**3717**|**adWrnSecurityDialog**|仅供内部使用。 请勿使用。 （出于完整性考虑，已提供条目。 此错误不会出现在你的代码中。）|
+|**3718**|**adWrnSecurityDialogHeader**|仅供内部使用。 请勿使用。 （出于完整性考虑，包含了条目。 此错误不会出现在你的代码中。）|
+|**3719**|**adErrIntegrityViolation**|数据值与字段的完整性约束冲突。 **字段**的新值将导致重复键。 构成两个记录之间的关系的一方的值可能是不可更新的。|
+|**3720**|**adErrPermissionDenied**|权限不足阻止写入字段。 连接字符串中指定的用户没有写入**字段**的适当权限。|
+|**3721**|**adErrDataOverflow**|数据值太大，无法由字段数据类型表示。 为指定的字段分配的数字值太大。 例如，将 long 整数值分配给短整型字段。|
+|**3722**|**adErrSchemaViolation**|数据值与字段的数据类型或约束冲突。 数据存储具有与**字段**值不同的验证约束。|
+|**3723**|**adErrSignMismatch**|由于数据值已签名且提供程序使用的字段数据类型为无符号，导致转换失败。|
+|**3724**|**adErrCantConvertvalue**|由于除符号不匹配或数据溢出之外的其他原因，无法转换数据值。 例如，转换可能会截断数据。|
+|**3725**|**adErrCantCreate**|由于字段数据类型未知，或者提供程序没有足够的资源来执行操作，因此无法设置或检索数据值。|
+|**3726**|**adErrColumnNotOnThisRow**|记录不包含该字段。 指定的字段名称不正确，或引用的字段不在当前记录的**字段**集合中。|
+|**3727**|**adErrURLDoesNotExist**|源 URL 或目标 URL 的父项不存在。 源或目标 URL 中存在录入错误。 您可能会`https://mysite/photo/myphoto.jpg`遇到这样的情况`https://mysite/photos/myphoto.jpg` 。 父 URL 中的打字错误（在本例中为*照片*而不是*照片*）导致了此错误。|
+|**3728**|**adErrTreePermissionDenied**|权限不足以访问树或子树。 连接字符串中指定的用户没有适当的权限。|
+|**3729**|**adErrInvalidURL**|URL 包含无效字符。 请确保正确键入了 URL。 URL 遵循注册到当前提供程序的方案（例如，为 http 注册了 Internet 发布提供程序）。|
+|**3730**|**adErrResourceLocked**|由指定的 URL 表示的对象已被一个或多个进程锁定。 请等待该进程完成，然后重试该操作。 您尝试访问的对象已被其他用户或应用程序中的其他进程锁定。 这很可能出现在多用户环境中。|
+|**3731**|**adErrResourceExists**|无法执行复制操作。 由目标 URL 命名的对象已存在。 指定**adCopyOverwrite**以替换对象。 如果在将文件复制到目录中时没有指定**adCopyOverwrite** ，则在尝试复制目标位置中已存在的项时，复制将失败。|
+|**3732**|**adErrCannotComplete**|服务器无法完成此操作。 这可能是因为服务器正忙于处理其他操作，或者资源可能不足。|
+|**3733**|**adErrVolumeNotFound**|提供程序找不到 URL 所指示的存储设备。 请确保正确键入了 URL。 存储设备的 URL 可能不正确，但出于其他原因，可能会发生此错误。 设备可能已脱机，或者大量网络流量可能会阻止连接。|
+|**3734**|**adErrOutOfSpace**|无法执行操作。 提供程序无法获得足够的存储空间。 对于服务器上的临时文件，可能没有足够的 RAM 或硬盘空间。|
 |**3735**|**adErrResourceOutOfScope**|源或目标 URL 超出了当前记录的范围。|
-|**3736**|**adErrUnavailable**|操作无法完成并且状态为不可用。 该字段可以是不可用或未尝试该操作。 另一个用户可能已更改或删除你尝试访问的字段。|
-|**3737**|**adErrURLNamedRowDoesNotExist**|此 URL 通过名为记录不存在。 尝试打开文件使用时**记录**对象的文件名或文件的路径为拼写错误。|
-|**3738**|**adErrDelResOutOfScope**|要删除对象的 URL 是超出了当前记录的范围。|
-|**3747**|**adErrCatalogNotSet**|操作需要有效**ParentCatalog**。|
-|**3748**|**adErrCantChangeConnection**|连接被拒绝。 所请求的新连接具有比已在使用一个不同的特征。|
-|**3749**|**adErrFieldsUpdateFailed**|字段更新失败。 有关详细信息，检查**状态**单独的字段对象的属性。 在两种情况下会出现此错误： 在更改时**字段**过程中更改或添加记录到数据库，并更改的属性时的对象的值**字段**对象本身。<br /><br /> **记录**或**记录集**更新失败，因为其中一个当前记录中字段的问题。 枚举**字段**集合并检查**状态**属性的每个字段，以确定问题的原因。|
-|**3750**|**adErrDenyNotSupported**|提供程序不支持共享的限制。 尝试限制文件共享和您的提供程序不支持这一概念。|
-|**3751**|**adErrDenyTypeNotSupported**|提供程序不支持所请求的类型的共享限制。 尝试建立特定类型的文件共享您的提供程序不支持的限制。 请参阅提供程序的文档来确定支持哪些文件共享限制。|
+|**3736**|**adErrUnavailable**|操作无法完成，状态为 "不可用"。 此字段可能不可用或未尝试此操作。 其他用户可能已更改或删除了您尝试访问的字段。|
+|**3737**|**adErrURLNamedRowDoesNotExist**|此 URL 命名的记录不存在。 尝试使用**Record**对象打开文件时，文件名或文件路径的拼写错误。|
+|**3738**|**adErrDelResOutOfScope**|要删除的对象的 URL 在当前记录的范围之外。|
+|**3747**|**adErrCatalogNotSet**|操作需要有效的**ParentCatalog**。|
+|**3748**|**adErrCantChangeConnection**|连接被拒绝。 您请求的新连接与已使用的连接具有不同的特征。|
+|**3749**|**adErrFieldsUpdateFailed**|字段更新失败。 有关详细信息，请检查各个字段对象的**Status**属性。 在以下两种情况下可能会发生此错误：在更改**字段**对象的值的过程中，在将记录更改或添加到数据库时，更改**字段**对象本身的属性。<br /><br /> 由于当前记录中的某个字段出现问题，**记录**或**记录集**更新失败。 枚举**Fields**集合并检查每个字段的**Status**属性，以确定问题的原因。|
+|**3750**|**adErrDenyNotSupported**|提供程序不支持共享限制。 尝试限制文件共享，并且提供程序不支持此概念。|
+|**3751**|**adErrDenyTypeNotSupported**|提供程序不支持所请求的共享限制种类。 尝试建立特定类型的文件共享限制，而提供程序不支持此限制。 请参阅提供程序的文档，以确定支持的文件共享限制。|

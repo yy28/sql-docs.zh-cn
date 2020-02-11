@@ -1,5 +1,5 @@
 ---
-title: VisualC++扩展插件示例 |Microsoft Docs
+title: Visual C++ 扩展示例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,18 +16,18 @@ ms.assetid: 9739c278-582c-402b-a158-7f68a1b2c293
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6d3517f40b15081ca2ee4621d07455cc13bb577d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926395"
 ---
 # <a name="visual-c-extensions-example"></a>Visual C++ 扩展示例
-此程序说明如何从字段中检索和转换为 C 值 /C++变量。  
+此程序说明如何从字段检索值并将其转换为 C/c + + 变量。  
   
- 此示例还会利用的"智能指针，"它会自动处理调用的特定于 COM 的详细信息`QueryInterface`和引用计数**IADORecordBinding**接口。  
+ 此示例还利用 "智能指针"，它自动处理`QueryInterface` **IADORecordBinding**接口调用和引用计数的特定于 COM 的详细信息。  
   
- 没有智能指针的情况下将代码：  
+ 如果不包含智能指针，可以编写代码：  
   
 ```cpp
 IADORecordBinding   *picRs = NULL;  
@@ -38,19 +38,19 @@ TESTHR(pRs->QueryInterface(
 if (picRs) picRs->Release();  
 ```  
   
- 使用智能指针派生`IADORecordBindingPtr`类型从`IADORecordBinding`接口使用此语句：  
+ 通过智能指针，可以通过以下`IADORecordBindingPtr`语句从`IADORecordBinding`接口派生类型：  
   
 ```cpp
 _COM_SMARTPTR_TYPEDEF(IADORecordBinding, __uuidof(IADORecordBinding));  
 ```  
   
- 并实例化此类的指针：  
+ 并实例化指针，如下所示：  
   
 ```cpp
 IADORecordBindingPtr picRs(pRs);  
 ```  
   
- 因为视觉对象C++扩展通过实现**记录集**对象，智能指针构造函数`picRs`，采用 _`RecordsetPtr`指针， `pRs`。 构造函数调用`QueryInterface`使用`pRs`若要查找`IADORecordBinding`接口。  
+ 由于 Visual C++ 扩展由**Recordset**对象实现`picRs`，智能指针的构造函数采用 _`RecordsetPtr`指针。 `pRs` 构造函数通过`QueryInterface` `pRs`调用来查找`IADORecordBinding`接口。  
   
 ```cpp
 // Visual_Cpp_Extensions_Example.cpp  
@@ -109,6 +109,6 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [使用视觉对象C++扩展](../../../ado/guide/appendixes/using-visual-c-extensions.md)   
+## <a name="see-also"></a>另请参阅  
+ [使用 Visual C++ 扩展](../../../ado/guide/appendixes/using-visual-c-extensions.md)   
  [Visual C++ 扩展标头](../../../ado/guide/appendixes/visual-c-extensions-header.md)

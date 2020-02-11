@@ -1,5 +1,5 @@
 ---
-title: 准备好属性示例 (VB) |Microsoft Docs
+title: 已准备的属性示例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: e3a3db2d-7f73-4288-ad08-5468f251d610
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 51bce52c7ec8355faa50b1c3be234c597f420a40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931598"
 ---
 # <a name="prepared-property-example-vb"></a>Prepared 属性示例 (VB)
-此示例演示[已准备](../../../ado/reference/ado-api/prepared-property-ado.md)通过打开两个属性[命令](../../../ado/reference/ado-api/command-object-ado.md)对象-一个准备好，另一个未准备好。  
+此示例通过打开两个[命令](../../../ado/reference/ado-api/command-object-ado.md)对象（一项已准备，一个未准备）来演示已[准备](../../../ado/reference/ado-api/prepared-property-ado.md)的属性。  
   
 ```  
 'BeginPreparedVB  
@@ -114,6 +114,6 @@ End Sub
 'EndPreparedVB  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [命令对象 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+## <a name="see-also"></a>另请参阅  
+ [Command 对象（ADO）](../../../ado/reference/ado-api/command-object-ado.md)   
  [Prepared 属性 (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)

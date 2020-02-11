@@ -15,16 +15,16 @@ ms.assetid: ef514f85-c446-4f05-824e-c9313b2ffae1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8e8fd90849b8e046a7f4fe5d158d4594e612c91f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925494"
 ---
 # <a name="editing-data"></a>编辑数据
-我们已介绍了如何使用 ADO 来连接到数据源、 执行命令、 获取中的结果**记录集**对象，并在导航**记录集**。 本部分重点介绍下一步的基础 ADO 操作： 编辑数据。  
+我们介绍了如何使用 ADO 连接到数据源、执行命令、获取**记录集**对象中的结果，以及在**记录集中**导航。 本部分重点介绍下一基本 ADO 操作：编辑数据。  
   
- 本部分将继续使用该示例**记录集**中引入[检查数据](../../../ado/guide/data/examining-data.md)，使用一项重要更改。 下面的代码用于打开**记录集**:  
+ 此部分继续使用[检查数据](../../../ado/guide/data/examining-data.md)时引入的示例**记录集**，其中一项重要更改。 以下代码用于打开**记录集**：  
   
 ```  
 'BeginEditIntro  
@@ -43,13 +43,13 @@ ms.locfileid: "67925494"
 'EndEditIntro  
 ```  
   
- 对代码进行重要更改，需要**CursorLocation**的属性**连接**对象等于**adUseClient**中*GetNewConnection*函数 （在下一步的示例中显示），用于指示客户端游标的用途。 有关客户端和服务器端游标之间差异的详细信息，请参阅[了解游标和锁定](../../../ado/guide/data/understanding-cursors-and-locks.md)。  
+ 代码的重要变化涉及到在*GetNewConnection*函数中将**连接**对象的**CursorLocation**属性设置为等于**adUseClient** （如下面的示例中所示），该属性指示使用客户端游标。 有关客户端和服务器端游标之间的差异的详细信息，请参阅[了解游标和锁定](../../../ado/guide/data/understanding-cursors-and-locks.md)。  
   
- **CursorLocation**属性的**adUseClient**设置将数据源 (SQL Server，在此情况下) 中的光标位置移动到的客户端代码 （桌面工作站） 的位置。 此设置会强制 ADO 来创建和管理光标以在客户端上调用 OLE DB 客户端游标引擎。  
+ **CursorLocation**属性的**adUseClient**设置将游标的位置从数据源（在本例中为 SQL Server）移动到客户端代码（桌面工作站）的位置。 此设置强制 ADO 调用客户端上的 OLE DB 客户端游标引擎，以便创建和管理游标。  
   
- 您可能还注意到， **LockType**的参数**打开**方法更改为**adLockBatchOptimistic**。 这将在批处理模式下打开游标。 (提供程序缓存多项更改，并将其写入到基础数据源仅在调用**UpdateBatch**方法。)对所做的更改**记录集**将不会更新在数据库中，直到**UpdateBatch**调用方法。  
+ 你可能还注意到， **Open**方法的**LockType**参数已更改为**adLockBatchOptimistic**。 这将在批处理模式下打开光标。 （提供程序会缓存多个更改，并仅在调用**UpdateBatch**方法时将这些更改写入基础数据源。）在调用**UpdateBatch**方法之前，对**记录集**所做的更改将不会在数据库中更新。  
   
- 最后，在本部分中的代码使用 GetNewConnection 函数的修改的版本。 此版本的函数现在返回客户端游标。 该函数如下所示：  
+ 最后，本部分中的代码使用 GetNewConnection 函数的修改版本。 此版本的函数现在返回客户端游标。 该函数如下所示：  
   
 ```  
 'BeginNewConnection  
@@ -81,7 +81,7 @@ End Function
 'EndNewConnection  
 ```  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [编辑现有记录](../../../ado/guide/data/editing-existing-records.md)  
   

@@ -13,23 +13,23 @@ ms.assetid: 7448d9ee-7f4b-47e3-be54-2df8c9bbac32
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2295d421f8b802f2f3b531d7de3fc086e43ad572
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924565"
 ---
 # <a name="preparing-and-executing-commands"></a>准备和执行命令
-命令是颁发给提供程序执行某些操作对基础数据源的说明。 SQL 语句，例如，是 Microsoft SQL 数据提供程序的命令。 在 ADO 中，命令通常表示由**命令**对象，尽管也可以通过发出简单命令**连接**或**记录集**对象。  
+命令是向提供程序发出的指令，用于对基础数据源执行一些操作。 例如，SQL 语句是 Microsoft SQL 数据访问接口的命令。 在 ADO 中，命令通常由**命令**对象表示，不过也可以通过**连接**或**Recordset**对象发出简单的命令。  
   
- 可以使用**命令**对象从提供程序，假定该提供程序可以正确地解释命令字符串中请求任何受支持的类型的操作。 数据提供程序的常见操作是查询数据库并返回中的记录**记录集**，可以认为的用于保存结果并使用工具来查看结果的容器的对象。 与许多 ADO 对象一样，某些**命令**对象集合、 方法或属性可能会产生错误时引用，具体取决于提供程序的功能。  
+ 您可以使用**Command**对象从提供程序请求任何支持的操作类型，前提是该提供程序可以正确解释命令字符串。 数据访问接口的常见操作是查询数据库并返回记录**集**对象中的记录，这可以被视为容器来容纳结果和查看结果的工具。 与许多 ADO 对象一样，某些**命令**对象集合、方法或属性在被引用时可能会生成错误，具体情况视提供程序的功能而定。  
   
- 除了使用之外**命令**对象，可以使用**Execute**方法**连接**对象或**打开**方法**记录集**对象发出命令，并使其执行。 但是，应使用**命令**对象，如果您需要重复使用在代码中，命令或如果需要传递详细的参数信息与你的命令。 本部分后面的更详细地介绍这些方案。  
+ 除了使用**命令**对象之外，还可以对**连接**对象使用**Execute**方法，或对**Recordset**对象使用**Open**方法来发出命令并使其执行。 但是，如果需要在代码中重复使用命令，或者需要通过命令传递详细的参数信息，则应使用**命令**对象。 本部分稍后将更详细地介绍这些方案。  
   
 > [!NOTE]
->  某些**命令**s 可以返回的结果集作为二进制流或作为单个**记录**而不是**记录集**，如果这提供程序支持。 此外，某些**命令**s 并不返回任何结果集，在所有 （例如，SQL 更新查询）。 本部分将介绍最典型的方案中，但是： 执行**命令**的返回结果作为**记录集**对象。 有关返回到结果的详细信息**记录**s 或**Stream**s，请参阅[记录和流](../../../ado/guide/data/records-and-streams.md)。  
+>  某些**命令**可以将结果集作为二进制流或单个**记录**而不是**记录集**返回，如果提供程序支持此方法。 此外，某些**命令**并非打算返回任何结果集（例如，SQL 更新查询）。 此部分将介绍最典型的方案，但是：执行将结果作为**记录集**对象返回的**命令**。 有关将结果返回到**Record**或**Stream**的详细信息，请参阅[记录和流](../../../ado/guide/data/records-and-streams.md)。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [命令对象概述](../../../ado/guide/data/command-object-overview.md)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "67924565"
   
 -   [使用命令调用存储过程](../../../ado/guide/data/calling-a-stored-procedure-with-a-command.md)  
   
--   [作为一个连接对象的方法调用存储的过程](../../../ado/guide/data/calling-a-stored-procedure-as-a-method-on-a-connection-object.md)  
+-   [在连接对象上调用存储过程作为方法](../../../ado/guide/data/calling-a-stored-procedure-as-a-method-on-a-connection-object.md)  
   
 -   [命名命令](../../../ado/guide/data/named-commands.md)  
   

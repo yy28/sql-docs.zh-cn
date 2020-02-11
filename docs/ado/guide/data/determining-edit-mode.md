@@ -14,22 +14,22 @@ ms.assetid: 4c7e010d-08cd-4e22-9b32-23c36f02f88c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22e63bad49586bbbc1a5616114055779cd3ea041
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925545"
 ---
 # <a name="determining-edit-mode"></a>确定编辑模式
-ADO 维护一个与当前记录相关联的编辑缓冲区。 **EditMode**属性指示是否进行了更改到此缓冲区或是否已创建一个新的记录。 使用**EditMode**来确定当前记录的编辑状态。 您可以测试挂起的更改被中断编辑过程并确定是否需要使用**更新**或**CancelUpdate**方法。  
+ADO 维护与当前记录相关联的编辑缓冲区。 **EditMode**属性指示是否已对此缓冲区进行了更改或者是否已创建新记录。 使用**EditMode**确定当前记录的编辑状态。 如果编辑进程已中断并确定是否需要使用**Update**或**CancelUpdate**方法，则可以测试挂起的更改。  
   
- **EditMode**返回的一个**EditModeEnum**常量下, 表中列出。  
+ **EditMode**返回下表中列出的一个**EditModeEnum**常量。  
   
-|常量|描述|  
+|一直|说明|  
 |--------------|-----------------|  
-|**adEditNone**|指示不编辑操作正在进行中。|  
-|**adEditInProgress**|指示当前记录中的数据已修改但尚未保存。|  
-|**adEditAdd**|指示**AddNew**已调用方法，并且复制缓冲区中的当前记录是尚未保存到数据库的新记录。|  
+|**adEditNone**|指示没有正在进行的编辑操作。|  
+|**adEditInProgress**|指示当前记录中的数据已修改但未保存。|  
+|**adEditAdd**|指示已调用**AddNew**方法，并且复制缓冲区中的当前记录是尚未保存到数据库中的新记录。|  
 |**adEditDelete**|指示当前记录已被删除。|  
   
- **EditMode**没有当前记录的情况下，才可以返回有效的值。 **EditMode**将返回一个错误，如果**BOF**或**EOF**是**True** ，或者删除当前记录。
+ 仅当存在当前记录时， **EditMode**才可以返回有效的值。 如果**BOF**或**EOF**为**True**或当前记录已被删除，则**EditMode**将返回错误。

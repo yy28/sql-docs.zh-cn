@@ -17,23 +17,24 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5e606844d031bb4ab2c29d9dfd012c97601ca12f
-ms.sourcegitcommit: b4962530f90234017073b3fdd2248936b2de4e69
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71077540"
 ---
 # <a name="smo-object-model-namespaces"></a>SMO 对象模型命名空间
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象 (SMO) 具有不同的命名空间。 不同的命名空间表示 SMO 中的不同功能区域。  
   
- 在[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，SMO 程序集位于 C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies 文件夹中。  
+ 在[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，SMO 程序集位于 C:\PROGRAM Files\Microsoft SQL Server\130\SDK\Assemblies 文件夹中。  
   
 ## <a name="namespaces"></a>命名空间  
  SMO 命名空间包括：  
   
-|类|Functions|  
+|类|函数|  
 |-----------|--------------|  
 |<xref:Microsoft.SqlServer.Management.Smo>|包含用于以编程方式操作[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例类、实用工具类和枚举。|  
 |<xref:Microsoft.SqlServer.Management.Common>|包含复制管理对象 (RMO) 和 SMO 共有的类，例如连接类。|  

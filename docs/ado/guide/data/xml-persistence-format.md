@@ -1,5 +1,5 @@
 ---
-title: XML 暂留格式 |Microsoft Docs
+title: XML 持久性格式 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,16 +13,16 @@ ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e2d1c30546a8466ba9950f31cffdfb9447bd89ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923381"
 ---
 # <a name="xml-persistence-format"></a>XML 暂留格式
-ADO 使用 utf-8 编码的 XML 流，它仍然存在。  
+ADO 对 XML 流使用 UTF-8 编码。  
   
- ADO XML 格式将划分成两个部分后, 跟数据部分的架构部分。 以下是 Northwind 数据库中的运货商表的示例 XML 文件。 下面的示例介绍了各个部分的 XML。  
+ ADO XML 格式分为两部分：架构部分和数据部分。 下面是来自 Northwind 数据库的 "货主" 表的示例 XML 文件。 示例中讨论了 XML 的各个部分。  
   
 ## <a name="remarks"></a>备注  
   
@@ -64,11 +64,11 @@ xmlns:z="#RowsetSchema">
 </xml>  
 ```  
   
- 架构演示了命名空间、 架构部分和数据部分的声明。 架构部分包含行、 ShipperID、 CompanyName 和 Phone 的定义。  
+ 该架构显示命名空间、架构部分和数据部分的声明。 Schema 部分包含行、ShipperID、公司名称和电话的定义。  
   
- 架构定义符合[W3C XML 数据规范](http://www.w3.org/TR/1998/NOTE-XML-data/)（尽管在 Internet Explorer 5 中将不进行验证） 可以完全验证。 XML 数据当前是记录集暂留的唯一支持的架构格式。  
+ 架构定义符合[W3C XML 数据规范](http://www.w3.org/TR/1998/NOTE-XML-data/)，并且可以进行完全验证（但 Internet Explorer 5 不会进行验证）。 对于记录集持久性，XML 数据是目前唯一受支持的架构格式。  
   
- 数据节中有三个行包含运货商有关的信息。 对于空的行集，数据部分可能为空，但\<rs： 数据 > 标记必须存在。 不包含数据，您可以编写标记速记简单地\<rs： 数据 / >。 前缀为"rs"任何标记指示它是由 urn： 架构定义的命名空间中的 microsoft-com:rowset。  
+ Data 节包含三行，其中包含有关货主的信息。 对于空行集，data 节可以为空，但\<rs： data> 标记必须存在。 如果没有数据，则可以将标记简写编写为\<rs： data/>。 以 "rs" 为前缀的任何标记均表示它位于 urn：架构-microsoft-com：行集定义的命名空间中。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [以 XML 格式保留记录](../../../ado/guide/data/persisting-records-in-xml-format.md)

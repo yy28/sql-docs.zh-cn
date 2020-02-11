@@ -9,10 +9,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 47fc9ba65aca128a7e812f85c5bd06ca38131cbf
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72251909"
 ---
 # <a name="branding-the-web-portal"></a>设置 Web 门户的品牌
@@ -91,9 +91,9 @@ Reporting Services 的 colors.json 文件有两种主要类别，项按这两种
   
 接口部细分为下列分组。  
   
-|部分|描述|  
+|部分|说明|  
 |---|---|  
-|primary|按钮和悬停颜色。|  
+|主|按钮和悬停颜色。|  
 |辅助副本|标题栏、搜索栏、左侧菜单（如果显示）以及这些项的文本颜色|  
 |中性第一级|主区域和报表区域背景。|  
 |中性第二级|文本框和文件夹选项背景，以及设置菜单。|  
@@ -119,7 +119,7 @@ Reporting Services 的 colors.json 文件有两种主要类别，项按这两种
   
 1.  选择右上角的“齿轮”  。  
   
-2.  选择“站点设置”  。  
+2.  选择“站点设置”。   
   
     ![ssRSGearMenu](../reporting-services/media/ssrsgearmenu.png)  
   

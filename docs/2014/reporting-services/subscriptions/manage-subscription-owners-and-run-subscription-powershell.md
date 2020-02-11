@@ -11,20 +11,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ebb20180e96302ba2ee90e9ab90cb79be19b7e1b
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72796378"
 ---
 # <a name="use-powershell-to-change-and-list-reporting-services-subscription-owners-and-run-a-subscription"></a>Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription
   从 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 开始，可通过编程方式将 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 订阅的所有权从一个用户转移给另一个用户。 本主题提供多个 Windows PowerShell 脚本，这些脚本可用于更改订阅所有权，或只是列出订阅所有权。 每个示例都包含本机模式和 SharePoint 模式的语法示例。 更改订阅的所有者后，订阅将在新所有者的安全上下文中执行，并且报表中的 User!UserID 字段将显示新所有者的值。 有关 PowerShell 示例调用的对象模型的详细信息，请参阅 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
   
- ![与 PowerShell 相关的内容](../media/rs-powershellicon.jpg "与 PowerShell 相关的内容")  
+ ![PowerShell 相关内容](../media/rs-powershellicon.jpg "PowerShell 相关内容")  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 本机模式 &#124; [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint 模式|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]SharePoint 模式 &#124; [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]纯模式|  
   
  **本主题内容：**  
   
@@ -42,9 +42,9 @@ ms.locfileid: "72796378"
   
 -   [脚本：运行（触发）单个订阅](#bkmk_run_1_subscription)  
   
-##  <a name="bkmk_how_to"></a> 如何使用脚本  
+##  <a name="bkmk_how_to"></a>如何使用脚本  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  本节总结了使用各本机模式和 SharePoint 模式 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]方法所需的权限级别。 本主题中的脚本使用以下 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 方法：  
   
 -   [ReportingService2010.ListSubscriptions 方法](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
@@ -53,11 +53,12 @@ ms.locfileid: "72796378"
   
 -   [ReportingService2010.ListChildren](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
   
--   [ReportingService2010.FireEvent](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx) 方法仅在最后一个脚本中使用，以触发特定订阅运行。 如果不计划使用该脚本，则可以忽略针对 FireEvent 方法的权限要求。  
+-   
+  [ReportingService2010.FireEvent](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx) 方法仅在最后一个脚本中使用，以触发特定订阅运行。 如果不计划使用该脚本，则可以忽略针对 FireEvent 方法的权限要求。  
   
  **本机模式：**  
   
--   列出订阅：（HYPERLINK "https://technet.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx" 报表上 ReadSubscription，用户是订阅所有者）或 ReadAnySubscription  
+-   列出订阅：（ReadSubscription 报表https://technet.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx上的超链接 ""，用户是订阅所有者）或 ReadAnySubscription  
   
 -   更改订阅：用户必须是 BUILTIN\Administrators 组的成员  
   
@@ -67,7 +68,7 @@ ms.locfileid: "72796378"
   
  **SharePoint 模式：**  
   
--   列出订阅： Managealerts or 或（HYPERLINK "https://technet.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx" CreateAlerts 上的报表，用户是订阅所有者，订阅是一个定时订阅）。  
+-   列出订阅：报表上的 Managealerts or 或https://technet.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx（HYPERLINK "" CreateAlerts，用户是订阅所有者，订阅是一个定时订阅）。  
   
 -   更改订阅：ManageWeb  
   
@@ -84,7 +85,7 @@ ms.locfileid: "72796378"
   
 2.  为每个脚本创建文本文件并将文件保存至 c:\scripts 文件夹。 创建 .ps1 时，请使用各命令行语法示例中的名称。  
   
-3.  使用管理权限打开命令提示符。  
+3.  使用管理员权限打开命令提示符。  
   
 4.  使用各示例提供的示例命令行语法运行各脚本文件。  
   
@@ -98,7 +99,7 @@ ms.locfileid: "72796378"
   
 -   [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]  
   
-##  <a name="bkmk_list_ownership_all"></a> 脚本：列出所有订阅的所有权  
+##  <a name="bkmk_list_ownership_all"></a>脚本：列出所有订阅的所有权  
  此脚本列出站点上的所有订阅。 可以使用此脚本测试连接或验证在其他脚本中使用的报表路径和订阅 ID。 这也是用于轻松审核存在哪些订阅以及它们的所有者是谁的一个有用脚本。  
   
 ### <a name="native-mode-syntax"></a>纯模式语法
@@ -113,7 +114,7 @@ powershell c:\scripts\ListAll_SSRS_Subscriptions.ps1 "[server]/reportserver" "/"
 powershell c:\scripts\ListAll_SSRS_Subscriptions.ps1 "[server]/_vti_bin/reportserver" "http://[server]"  
 ```  
   
-### <a name="script"></a>Script
+### <a name="script"></a>脚本
   
 ```powershell
 # Parameters  
@@ -135,7 +136,7 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 > [!TIP]  
 >  要在 SharePoint 模式下验证站点 URL，请使用 SharePoint cmdlet **Get-SPSite**。 有关详细信息，请参阅 [Get-SPSite](https://technet.microsoft.com/library/ff607950\(v=office.15\).aspx)。  
   
-##  <a name="bkmk_list_all_one_user"></a> 脚本：列出特定用户拥有的全部订阅  
+##  <a name="bkmk_list_all_one_user"></a>脚本：列出特定用户拥有的所有订阅  
  此脚本列出特定用户拥有的全部订阅。 可以使用此脚本测试连接或验证在其他脚本中使用的报表路径和订阅 ID。 当有人离开您的组织，而您想要验证他们拥有哪些订阅，以便更改所有者或删除订阅时，此脚本非常有用。  
   
 ### <a name="native-mode-syntax"></a>纯模式语法
@@ -150,7 +151,7 @@ powershell c:\scripts\ListAll_SSRS_Subscriptions4User.ps1 "[Domain]\[user]" "[se
 powershell c:\scripts\ListAll_SSRS_Subscriptions4User.ps1 "[Domain]\[user]"  "[server]/_vti_bin/reportserver" "http://[server]"  
 ```  
   
-### <a name="script"></a>Script  
+### <a name="script"></a>脚本  
   
 ```powershell
 # Parameters:  
@@ -172,7 +173,7 @@ Write-Host "----- $currentOwner's Subscriptions: "
 $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastexecuted,Status | where {$_.owner -eq $currentOwner}  
 ```  
   
-##  <a name="bkmk_change_all"></a> 脚本：更改特定用户拥有的全部订阅的所有权  
+##  <a name="bkmk_change_all"></a>脚本：更改特定用户拥有的所有订阅的所有权  
  此脚本将特定用户拥有的全部订阅的所有权更改为新所有者参数。  
   
 ### <a name="native-mode-syntax"></a>纯模式语法
@@ -187,7 +188,7 @@ powershell c:\scripts\ChangeALL_SSRS_SubscriptionOwner.ps1 "[Domain]\current own
 powershell c:\scripts\ChangeALL_SSRS_SubscriptionOwner.ps1 "[Domain]\{current owner]" "[Domain]\[new owner]" "[server]/_vti_bin/reportserver"  
 ```  
   
-### <a name="script"></a>Script
+### <a name="script"></a>脚本
   
 ```powershell
 # Parameters:  
@@ -242,7 +243,7 @@ ForEach ($item in $items)
 }  
 ```  
   
-##  <a name="bkmk_list_for_1_report"></a> 脚本：列出与特定报表关联的全部订阅  
+##  <a name="bkmk_list_for_1_report"></a>脚本：列出与特定报表关联的所有订阅  
  此脚本列出与特定报表关联的全部订阅。 报表路径语法是需要完整 URL 的不同 SharePoint 模式。 语法示例中使用的报表名称是“title only”，包含一个空格，因此报表名称两边需要带单引号。  
   
 ### <a name="native-mode-syntax"></a>纯模式语法
@@ -257,7 +258,7 @@ powershell c:\scripts\List_SSRS_One_Reports_Subscriptions.ps1 "[server]/reportse
 powershell c:\scripts\List_SSRS_One_Reports_Subscriptions.ps1 "[server]/_vti_bin/reportserver"  "'http://[server]/shared documents/title only.rdl'" "http://[server]"  
 ```  
   
-### <a name="script"></a>Script
+### <a name="script"></a>脚本
   
 ```powershell
 # Parameters:  
@@ -280,7 +281,7 @@ Write-Host "----- $reportpath 's Subscriptions: "
 $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastexecuted,Status | where {$_.path -eq $reportpath}  
 ```  
   
-##  <a name="bkmk_change_all_1_subscription"></a> 脚本：更改特定订阅的所有权  
+##  <a name="bkmk_change_all_1_subscription"></a>脚本：更改特定订阅的所有权  
  此脚本更改特定订阅的所有权。 订阅由传递到脚本中的 SubscriptionID 标识。 可以使用所列订阅脚本之一来确定正确的 SubscriptionID。  
   
 ### <a name="native-mode-syntax"></a>纯模式语法
@@ -295,7 +296,7 @@ powershell c:\scripts\Change_SSRS_Owner_One_Subscription.ps1 "[Domain]\[new owne
 powershell c:\scripts\Change_SSRS_Owner_One_Subscription.ps1 "[Domain]\[new owner]" "[server]/_vti_bin/reportserver" "http://[server]" "9660674b-f020-453f-b1e3-d9ba37624519"  
 ```  
   
-### <a name="script"></a>Script
+### <a name="script"></a>脚本
   
 ```powershell
 # Parameters:  
@@ -326,7 +327,7 @@ Write-Host "----- $subscriptionid's Subscription properties: "
 $subscription | select Path, report, Description, SubscriptionID, Owner, Status  
 ```  
   
-##  <a name="bkmk_run_1_subscription"></a> 脚本：运行（触发）单个订阅  
+##  <a name="bkmk_run_1_subscription"></a>脚本：运行（触发）单个订阅  
  此脚本将使用 FireEvent 方法运行特定订阅。 无论为订阅配置的计划如何，该脚本都将立即运行订阅。 EventType 与在报表服务器配置文件 **rsreportserver.config** 中定义的一组已知事件匹配。该脚本为标准订阅使用以下事件类型：  
   
  `<Event>`  
@@ -351,7 +352,7 @@ powershell c:\scripts\FireSubscription.ps1 "[server]/reportserver" $null "70366e
 powershell c:\scripts\FireSubscription.ps1 "[server]/_vti_bin/reportserver" "http://[server]" "c3425c72-580d-423e-805a-41cf9799fd25"  
 ```  
   
-### <a name="script"></a>Script
+### <a name="script"></a>脚本
   
 ```powershell
 # Parameters  

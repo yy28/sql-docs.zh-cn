@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 8959b1ca4ea719ce571cb8609b817bba965185bd
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798328"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>从命令提示符安装 PowerPivot
   您可以从命令行运行安装程序以便安装 SQL Server PowerPivot for SharePoint。 您必须在命令中包含 `/ROLE` 参数并排除 `/FEATURES` 参数。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必备条件  
  必须安装 SharePoint Server 2010 Enterprise Edition Service Pack 1 (SP1)。  
   
  您必须使用域帐户来设置 Analysis Services。  
@@ -41,7 +41,7 @@ ms.locfileid: "72798328"
  与以往的版本相比，所有的服务器配置任务都作为安装后的任务来执行。 如果要自动执行安装和配置步骤，则可以使用 PowerShell 来配置服务器。 有关详细信息，请参阅[使用 Windows PowerShell 的 PowerPivot 配置](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell)。  
   
 ## <a name="example-commands"></a>示例命令  
- 下列示例说明了每个选项的用法。 示例1显示 `SPI_AS_ExistingFarm`。  
+ 下列示例说明了每个选项的用法。 示例1显示`SPI_AS_ExistingFarm`。  
   
 ```cmd
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_ExistingFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
@@ -62,27 +62,33 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
     Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_ExistingFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
     ```  
   
-     `/q` 参数以不显示用户界面的静默模式运行安装程序。  
+     
+  `/q` 参数以不显示用户界面的静默模式运行安装程序。  
   
      如果为无人参与的安装指定了 `/IAcceptSQLServerLicenseTerms` 或 `/q` 参数，则 `/qs` 是必需的。  
   
-     `/action` 参数指示安装程序执行安装。  
+     
+  `/action` 参数指示安装程序执行安装。  
   
-     `/role` 参数指示安装程序安装 PowerPivot for SharePoint 所需的 Analysis Services 程序和配置文件。 此角色还检测并使用现有场连接信息来访问 SharePoint 配置数据库。 此参数是必需的。 使用该参数（而非 `/features` 参数）指定要安装的组件。  
+     
+  `/role` 参数指示安装程序安装 PowerPivot for SharePoint 所需的 Analysis Services 程序和配置文件。 此角色还检测并使用现有场连接信息来访问 SharePoint 配置数据库。 此参数是必需的。 使用该参数（而非 `/features` 参数）指定要安装的组件。  
   
-     `/instancename` 参数将“PowerPivot”指定为命名实例。 此值是硬编码的，因此不能更改。 出于教育目的在命令中指定该值，以便您知道该服务是如何安装的。  
+     
+  `/instancename` 参数将“PowerPivot”指定为命名实例。 此值是硬编码的，因此不能更改。 出于教育目的在命令中指定该值，以便您知道该服务是如何安装的。  
   
-     `/indicateprogress` 参数允许您在命令提示符窗口中监视进度。  
+     
+  `/indicateprogress` 参数允许您在命令提示符窗口中监视进度。  
   
-2.  `PID` 参数从命令中省略，该参数将导致安装 Evaluation 版本。 如果您想要安装 Enterprise 版本，则将 PID 添加到您的安装程序命令中并且提供有效的产品密钥。  
+2.  
+  `PID` 参数从命令中省略，该参数将导致安装 Evaluation 版本。 如果您想要安装 Enterprise 版本，则将 PID 添加到您的安装程序命令中并且提供有效的产品密钥。  
   
     ```  
     /PID=<product key for an Enterprise installation>  
     ```  
   
-3.  将 \<域 \ 用户名 > 和 \<StrongPassword > 的占位符替换为有效的用户帐户和密码。  
+3.  将\<域 \ 用户名> 和\<StrongPassword>的占位符替换为有效的用户帐户和密码。  
   
-     `/assvaccount` 和 **/assvcpassword**参数用于在应用程序服务器上配置 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 实例。 请使用有效的帐户信息替换这些占位符。  
+     `/assvaccount`和 **/assvcpassword**参数用于在应用程序服务器上[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]配置实例。 请使用有效的帐户信息替换这些占位符。  
   
      **/Assysadminaccounts**参数必须设置为运行 SQL Server 安装程序的用户的标识。 您必须至少指定一个系统管理员。 请注意，SQL Server 安装程序不再自动将 sysadmin 权限授予内置 Administrators 组的成员。  
   
@@ -100,7 +106,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
   
 10. 若要验证安装，请检查 \Program Files\SQL Server\120\Setup Bootstrap\Log 处的 summary.txt 文件。 如果服务器成功安装并且没有任何错误，最终的结果应显示“Passed”。  
   
-11. 配置服务器。 至少您必须部署解决方案，创建服务应用程序，并为各网站集启用功能。 有关详细信息，请参阅[配置或修复 PowerPivot for SharePoint &#40;2010 PowerPivot 配置&#41;工具](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md)或[在管理中心中管理和配置 powerpivot 服务器](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)。  
+11. 配置服务器。 至少您必须部署解决方案，创建服务应用程序，并为各网站集启用功能。 有关详细信息，请参阅[配置或修复 PowerPivot for SharePoint 2010 &#40;PowerPivot 配置工具&#41;](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md)或[在管理中心中管理和配置 powerpivot 服务器](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)。  
   
 ## <a name="see-also"></a>另请参阅  
  [配置 PowerPivot 服务帐户](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts)   

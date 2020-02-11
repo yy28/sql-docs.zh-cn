@@ -15,16 +15,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 63f6e86f08ea93525704159483b939c79c6575d8
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72909042"
 ---
 # <a name="scripting"></a>脚本编写
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  SMO 中的脚本由 <xref:Microsoft.SqlServer.Management.Smo.Scripter> 对象及其子对象或单个对象的**脚本**方法控制。 <xref:Microsoft.SqlServer.Management.Smo.Scripter> 对象控制对 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例上对象的依赖关系的映射。  
+  SMO 中的<xref:Microsoft.SqlServer.Management.Smo.Scripter>脚本由对象及其子对象或单个对象的**脚本**方法控制。 <xref:Microsoft.SqlServer.Management.Smo.Scripter>对象控制对实例[!INCLUDE[msCoName](../../../includes/msconame-md.md)]上对象的依赖关系的映射[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
  使用 <xref:Microsoft.SqlServer.Management.Smo.Scripter> 对象及其子对象进行的高级脚本撰写是一个由三个阶段组成的过程：  
   
@@ -43,7 +43,7 @@ ms.locfileid: "72909042"
  第三阶段也是最后一个阶段，在此阶段中，使用指定的列表和脚本撰写选项生成脚本。 结果以 <xref:System.Collections.Specialized.StringCollection> 系统对象的形式返回。 在此阶段中，接下来会从 <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> 对象和属性（如 <xref:Microsoft.SqlServer.Management.Smo.DependencyTree.NumberOfSiblings%2A> 和 <xref:Microsoft.SqlServer.Management.Smo.DependencyTree.FirstChild%2A>）的项集合中提取依赖对象的名称。  
   
 ## <a name="example"></a>示例  
- 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual Studio&#35; .Net 中创建 Visual C SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual Studio .net 中创建 Visual C&#35; SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
  此代码示例需要针对 System.web 命名空间的**Imports**语句。 请将此语句与其他 Imports 语句一同插入在应用程序中的任何声明代码前。  
   

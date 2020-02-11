@@ -1,5 +1,5 @@
 ---
-title: sp_helpmergearticleconflicts (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpmergearticleconflicts （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ ms.assetid: 4678a2b9-9a5f-4193-a20d-2e11fc896c3a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 85e75e1ce52866eb04b3c410f021db8de392239a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68122329"
 ---
-# <a name="sphelpmergearticleconflicts-transact-sql"></a>sp_helpmergearticleconflicts (Transact-SQL)
+# <a name="sp_helpmergearticleconflicts-transact-sql"></a>sp_helpmergearticleconflicts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   返回发布中有冲突的项目。 此存储过程在发布服务器上针对发布数据库执行，或在订阅服务器上针对合并订阅数据库执行。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,35 +39,35 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publication = ] 'publication'` 是合并发布的名称。*出版物*是**sysname**，默认值为 **%** ，这会返回数据库中有冲突的所有项目。  
+`[ @publication = ] 'publication'`合并发布的名称。*发布*的数据类型为**sysname**，默认**%** 值为，它返回数据库中具有冲突的所有项目。  
   
-`[ @publisher = ] 'publisher'` 是发布服务器的名称。*发布服务器*是**sysname**，默认值为 NULL。  
+`[ @publisher = ] 'publisher'`发布服务器的名称。*发布服务器*的**sysname**，默认值为 NULL。  
   
-`[ @publisher_db = ] 'publisher_db'` 是发布服务器数据库的名称。*publisher_db*是**sysname**，默认值为 NULL。  
+`[ @publisher_db = ] 'publisher_db'`发布服务器数据库的名称。*publisher_db*的默认值为**sysname**，默认值为 NULL。  
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**article**|**sysname**|项目的名称。|  
+|**下文**|**sysname**|项目的名称。|  
 |**source_owner**|**sysname**|源对象的所有者。|  
-|**source_object**|**nvarchar(386)**|源对象的名称。|  
+|**source_object**|**nvarchar （386）**|源对象的名称。|  
 |**conflict_table**|**nvarchar(258)**|存储插入或更新冲突的表的名称。|  
 |**guidcolname**|**sysname**|源对象的 RowGuidCol 名称。|  
 |**centralized_conflicts**|**int**|冲突记录是否存储在给定发布服务器上。|  
   
- 如果将项目的唯一删除冲突而没有**conflict_table**行的名称**conflict_table**结果集为 NULL。  
+ 如果项目只包含删除冲突并且没有**conflict_table**的行，则结果集中**conflict_table**的名称为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** （成功）或**1** （失败）  
   
 ## <a name="remarks"></a>备注  
- **sp_helpmergearticleconflicts**合并复制中使用。  
+ **sp_helpmergearticleconflicts**用于合并复制。  
   
 ## <a name="permissions"></a>权限  
- 只有的成员**sysadmin**固定的服务器角色和**db_owner**固定的数据库角色可以执行**sp_helpmergearticleconflicts**。  
+ 只有**sysadmin**固定服务器角色的成员和**db_owner**固定数据库角色的成员才能执行**sp_helpmergearticleconflicts**。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

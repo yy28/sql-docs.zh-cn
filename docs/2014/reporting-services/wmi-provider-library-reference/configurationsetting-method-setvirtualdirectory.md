@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e68bb7c70d08fb07d3079436fafe5fd61ae104f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097918"
 ---
-# <a name="setvirtualdirectory-method-wmi-msreportserverconfigurationsetting"></a>SetVirtualDirectory 方法 (WMI MSReportServer_ConfigurationSetting)
+# <a name="setvirtualdirectory-method-wmi-msreportserver_configurationsetting"></a>SetVirtualDirectory 方法 (WMI MSReportServer_ConfigurationSetting)
   设置给定应用程序的虚拟目录的名称。  
   
 ## <a name="syntax"></a>语法  
@@ -35,8 +35,8 @@ public void SetVirtualDirectory(string Application, string VirtualDirectory,
        int Lcid,out string Error, out int HRESULT);  
 ```  
   
-## <a name="parameters"></a>Parameters  
- *应用程序*  
+## <a name="parameters"></a>parameters  
+ *Application*  
  要为其设置虚拟目录的应用程序的名称。  
   
  *VirtualDirectory*  
@@ -62,9 +62,9 @@ public void SetVirtualDirectory(string Application, string VirtualDirectory,
  更新 \Configuration\URLReservations\Application\VirtualDirectory 元素的值。 即使尚未创建 URL 预留，也能成功。  
   
 ## <a name="requirements"></a>要求  
- **命名空间:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](msreportserver-configurationsetting-members.md)  
   
   

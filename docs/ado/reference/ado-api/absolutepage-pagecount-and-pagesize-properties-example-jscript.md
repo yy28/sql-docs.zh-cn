@@ -1,5 +1,5 @@
 ---
-title: AbsolutePage、 PageCount、 和 PageSize 属性示例 (JScript) |Microsoft Docs
+title: AbsolutePage、PageCount 和 PageSize 属性示例（JScript） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 2db6dd3f-5a9c-438c-ae62-d09242906c98
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 09b6c0303f11be8534ec46fcf2f719175f463e4b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921868"
 ---
-# <a name="absolutepage-pagecount-and-pagesize-properties-example-jscript"></a>AbsolutePage、 PageCount、 和 PageSize 属性示例 (JScript)
-此示例演示 AbsolutePage、 PageCount 和 PageSize 属性。 剪切并粘贴到记事本或其他文本编辑器，下面的代码，然后将其保存为**AbsolutePageJS.asp**。  
+# <a name="absolutepage-pagecount-and-pagesize-properties-example-jscript"></a>AbsolutePage、PageCount 和 PageSize 属性示例（JScript）
+此示例演示了 AbsolutePage、PageCount 和 PageSize 属性。 剪切下面的代码并将其粘贴到记事本或其他文本编辑器中，并将其保存为**AbsolutePageJS**。  
   
 ```  
 <!-- BeginAbsolutePageJS -->  
@@ -157,8 +157,8 @@ BODY {
 <!-- EndAbsolutePageJS -->  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [AbsolutePage 属性 (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
- [PageCount 属性 (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)   
- [PageSize 属性 (ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)   
+## <a name="see-also"></a>另请参阅  
+ [AbsolutePage 属性（ADO）](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
+ [PageCount 属性（ADO）](../../../ado/reference/ado-api/pagecount-property-ado.md)   
+ [PageSize 属性（ADO）](../../../ado/reference/ado-api/pagesize-property-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
