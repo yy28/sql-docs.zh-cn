@@ -1,5 +1,5 @@
 ---
-title: 访问外部数据： Hadoop-PolyBase
+title: 访问外部数据：Hadoop - PolyBase
 description: 介绍如何将 PolyBase 配置为并行数据仓库以连接到外部 Hadoop。
 author: mzaman1
 ms.prod: sql
@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019, seo-lt-2019
 ms.openlocfilehash: dc796ff58c5320e60011dc46dd45468177a98ed8
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245385"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>配置 PolyBase 以访问 Hadoop 中的外部数据

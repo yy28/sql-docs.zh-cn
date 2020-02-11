@@ -1,5 +1,5 @@
 ---
-title: 第 2 课：指定连接信息 (Reporting Services) | Microsoft Docs
+title: 第 2 课：指定连接信息 (Reporting Services)| Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,31 +11,31 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 69d7ad1e3a65f49aa850e016e5e5bd609039ccf3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108523"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>第 2 课：指定连接信息 (Reporting Services)
-  向“教程”项目添加报表之后，需要定义数据源  ，它是报表从关系数据库、多维数据库或其他资源访问数据所使用的连接信息。  
+  向“教程”项目添加报表之后，需要定义数据源**，它是报表从关系数据库、多维数据库或其他资源访问数据所使用的连接信息。  
   
- 在本课中，您将使用 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 示例数据库作为数据源。 本教程假定此数据库位于本地计算机上安装的默认 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] 实例中。  
+ 在本课中，您将使用 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 示例数据库作为数据源。 本教程假定此数据库位于本地计算机上安装[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)]的的默认实例中。  
   
 ### <a name="to-set-up-a-connection"></a>设置连接  
   
-1.  在中**报表数据**窗格中，单击**新建**，然后单击**数据源...** .  
+1.  在 "**报表数据**" 窗格中，单击 "**新建**"，然后单击 "**数据源 ...**"。  
   
     > [!NOTE]  
-    >  如果“报表数据”  窗格不可见，请单击“视图”  菜单上的“报表数据”  。  
+    >  如果“报表数据”**** 窗格不可见，请单击“视图”**** 菜单上的“报表数据”****。  
   
 2.  在 **“名称”** 中，键入 [!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)]。  
   
-3.  确保已选中“嵌入连接”  。  
+3.  确保已选中“嵌入连接”****。  
   
-4.  在“类型”中，选择 Microsoft SQL Server   。  
+4.  在“类型”中，选择 Microsoft SQL Server********。  
   
-5.  在“连接字符串”中，键入以下文本  ：  
+5.  在“连接字符串”中，键入以下文本****：  
   
     ```  
     Data source=localhost; initial catalog=AdventureWorks2012  
@@ -48,16 +48,16 @@ ms.locfileid: "66108523"
     >   
     >  `Data source=localhost\SQLEXPRESS; initial catalog=AdventureWorks2012`  
     >   
-    >  有关连接字符串的详细信息，请参阅[数据连接、 数据源和 Reporting Services 中的连接字符串](data-connections-data-sources-and-connection-strings-in-reporting-services.md)并[数据源属性对话框，常规](data-source-properties-dialog-box-general.md)。  
+    >  有关连接字符串的详细信息，请参阅 "Reporting Services 和[数据源属性" 对话框](data-source-properties-dialog-box-general.md)中的 "[数据连接、数据源和连接字符串](data-connections-data-sources-and-connection-strings-in-reporting-services.md)"。  
   
-6.  在左窗格中单击“凭据”  ，然后单击“使用 Windows 身份验证(集成安全性)”  。  
+6.  在左窗格中单击“凭据”****，然后单击“使用 Windows 身份验证(集成安全性)”****。  
   
-7.  [!INCLUDE[clickOK](../includes/clickok-md.md)] 数据源[!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)]添加到**报表数据**窗格。  
+7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]数据源[!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)]将添加到 "**报表数据**" 窗格中。  
   
 ## <a name="next-task"></a>下一个任务  
- 已成功定义了到 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 示例数据库的连接。 下一步，将创建报表。 请参阅[第 3 课：定义表报表的数据集 &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)。  
+ 已成功定义了到 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 示例数据库的连接。 下一步，将创建报表。 请参阅[第 3 课：为表报表定义数据集 (Reporting Services)](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)。  
   
-## <a name="see-also"></a>请参阅  
- [报表生成器中的数据连接、数据源和连接字符串](data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
+## <a name="see-also"></a>另请参阅  
+ [Data Connections, Data Sources, and Connection Strings in Reporting Services](data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   
   

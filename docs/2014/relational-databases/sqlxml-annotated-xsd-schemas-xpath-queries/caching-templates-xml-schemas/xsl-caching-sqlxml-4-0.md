@@ -1,5 +1,5 @@
 ---
-title: XSL 缓存 (SQLXML 4.0) |Microsoft Docs
+title: XSL 缓存（SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 79683626400f9ef9b410a182ffd81c862575e57d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013234"
 ---
 # <a name="xsl-caching-sqlxml-40"></a>XSL 缓存 (SQLXML 4.0)
@@ -33,14 +33,14 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML4\XSLCacheSize
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteRegistry](../../../includes/ssnoteregistry-md.md)]  
   
- 应根据可用内存和要使用的 XSL 样式表的个数来设置 XSL 缓存大小。 默认值为**XSLCacheSize**大小为 31。 如果 XSL 访问看起来较慢，您可以增加缓存大小；如果内存较少，则可以降低缓存大小。  
+ 应根据可用内存和要使用的 XSL 样式表的个数来设置 XSL 缓存大小。 **XSLCacheSize**大小的默认值为31。 如果 XSL 访问看起来较慢，您可以增加缓存大小；如果内存较少，则可以降低缓存大小。  
   
- 为了提高性能，建议您设置**XSLCacheSize**大于您通常使用的 XSL 样式表的数。 如果**XSLCacheSize**是小于的数字 XSL 样式的表的有，则性能会数目的 XSL 样式表增加。 **XSLCacheSize**可以设置为最多为 128。  
+ 为了获得更好的性能，建议您将**XSLCacheSize**设置为大于您通常使用的 XSL 样式表的数量。 如果**XSLCacheSize**小于您拥有的 xsl 样式表的数目，则会随着 xsl 样式表的数量的增加而降低性能。 **XSLCacheSize**最大可以设置为128。  
   
  每次使用缓存的 XSL 样式表时，都将检查 XSL 文件的修改时间以确定是否需要刷新该样式表。 其原因在于磁盘副本新于缓存副本。  
   
-## <a name="see-also"></a>请参阅  
- [模板缓存&#40;SQLXML 4.0&#41;](template-caching-sqlxml-4-0.md)   
- [架构缓存&#40;SQLXML 4.0&#41;](schema-caching-sqlxml-4-0.md)  
+## <a name="see-also"></a>另请参阅  
+ [SQLXML 4.0 &#40;模板缓存&#41;](template-caching-sqlxml-4-0.md)   
+ [&#40;SQLXML 4.0&#41;的架构缓存](schema-caching-sqlxml-4-0.md)  
   
   

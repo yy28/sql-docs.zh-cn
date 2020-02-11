@@ -17,14 +17,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 69724baa3790f2b7475369c8f947a4201bcd57f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108723"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>用于 SSRS 服务应用程序的设置订阅和警报
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅和数据警报需要 SQL Server 代理，还需配置 SQL Server 代理权限。 如果您看到指示“需要 SQL Server 代理”的错误消息，而您已验证 SQL Server 代理正在运行，则您需要更新或验证权限。 本主题限于 SharePoint 模式中的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，并说明使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅来更新 SQL Server 代理权限的三种方式。 对于服务应用程序、msdb 和 master 数据库中的对象，在本主题的步骤中使用的凭据必须具有足够的权限来将执行权限授予 RSExecRole。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]订阅和数据警报需要 SQL Server 代理，需要配置 SQL Server 代理的权限。 如果您看到指示“需要 SQL Server 代理”的错误消息，而您已验证 SQL Server 代理正在运行，则您需要更新或验证权限。 本主题限于 SharePoint 模式中的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，并说明使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅来更新 SQL Server 代理权限的三种方式。 对于服务应用程序、msdb 和 master 数据库中的对象，在本主题的步骤中使用的凭据必须具有足够的权限来将执行权限授予 RSExecRole。  
   
 ||  
 |-|  
@@ -32,7 +32,7 @@ ms.locfileid: "66108723"
   
  ![对服务应用程序数据库的 SQL 代理权限](../../../2014/sql-server/install/media/rs-provisionsqlagent.gif "对服务应用程序数据库的 SQL 代理权限")  
   
-||Description|  
+||说明|  
 |------|-----------------|  
 |**1**|承载 Reporting Services 服务应用程序数据库的 SQL Server 数据库引擎实例。|  
 |**2**|SQL 数据库引擎实例的 SQL Server 代理实例。|  
@@ -41,7 +41,7 @@ ms.locfileid: "66108723"
   
  使用以下三种方法之一更新权限：  
   
-1.  在 **“设置、订阅和警报”** 页上，键入凭据并单击 **“确定”** 。  
+1.  在 **“设置、订阅和警报”** 页上，键入凭据并单击 **“确定”**。  
   
 2.  在“设置、订阅和警报”页上单击 **“下载脚本”** 按钮，以便下载可用于配置权限的 transact SQL 脚本。  
   
@@ -53,19 +53,19 @@ ms.locfileid: "66108723"
   
 2.  在列表中找到您的服务应用程序，然后单击该应用程序的名称或者单击 **“类型”** 列以选择该服务应用程序，接着单击 SharePoint 功能区中的 **“管理”** 按钮。  
   
-3.  在 **“管理 Reporting Services 应用程序”** 页上，单击 **“设置订阅和警报”** 。  
+3.  在 **“管理 Reporting Services 应用程序”** 页上，单击 **“设置订阅和警报”**。  
   
 4.  如果 SharePoint 管理员具有针对 Master 数据库和服务应用程序数据库的足够权限，请键入那些凭据。  
   
-5.  单击 **“确定”** 按钮。  
+5.  单击“确定”**** 按钮。  
   
-##  <a name="bkmk_download"></a> 下载 Transact-SQL 脚本  
+##  <a name="bkmk_download"></a>下载 Transact-sql 脚本  
   
 1.  在 SharePoint 管理中心内，在 **“应用程序管理”** 组中单击 **“管理服务应用程序”**  
   
 2.  在列表中找到您的服务应用程序，然后单击该应用程序的名称或者单击 **“类型”** 列以选择该服务应用程序，接着单击 SharePoint 功能区中的 **“管理”** 按钮。  
   
-3.  在 **“管理 Reporting Services 应用程序”** 页上，单击 **“设置订阅和警报”** 。  
+3.  在 **“管理 Reporting Services 应用程序”** 页上，单击 **“设置订阅和警报”**。  
   
 4.  在 **“查看状态”** 区域中，验证 SQL Server 代理是否正在运行。  
   
@@ -75,24 +75,24 @@ ms.locfileid: "66108723"
   
 1.  您也可以在 SharePoint 2010 Management Shell 中使用 Windows PowerShell cmdlet 创建 Transact-SQL 脚本。  
   
-2.  在 **“开始”** 菜单上，单击 **“所有程序”** 。  
+2.  在 **“开始”** 菜单上，单击 **“所有程序”**。  
   
-3.  展开 **“Microsoft SharePoint 2010 产品”** ，然后单击 **“SharePoint 2010 Management Shell”** 。  
+3.  展开 **“Microsoft SharePoint 2010 产品”** ，然后单击 **“SharePoint 2010 Management Shell”**。  
   
 4.  通过替换报表服务器数据库的名称、应用程序池帐户和语句路径来更新下面的 PowerShell cmdlet。  
   
      **cmdlet 的语法：** `Get-SPRSDatabaseRightsScript -DatabaseName <ReportingServices database name> -UserName <app pool account> -IsWindowsUser | Out-File <path of statement>`  
   
-     **示例 cmdlet：** `Get-SPRSDatabaseRightsScript -DatabaseName ReportingService_46fd00359f894b828907b254e3f6257c -UserName "NT AUTHORITY\NETWORK SERVICE" -IsWindowsUser | Out-File c:\SQLServerAgentrights.sql`  
+     **示例 cmdlet：**`Get-SPRSDatabaseRightsScript -DatabaseName ReportingService_46fd00359f894b828907b254e3f6257c -UserName "NT AUTHORITY\NETWORK SERVICE" -IsWindowsUser | Out-File c:\SQLServerAgentrights.sql`  
   
 ## <a name="using-the-transact-sql-script"></a>使用 Transact-SQL 脚本  
  以下过程可用于通过“设置”页下载的脚本或使用 PowerShell 创建的脚本。  
   
 #### <a name="to-load-the-transact-sql-script-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中加载 Transact-SQL 脚本  
   
-1.  若要打开 SQL Server Management Studio，在**启动**菜单上，单击**Microsoft SQL Server 2012**然后单击**SQL Server Management Studio**。  
+1.  若要打开 SQL Server Management Studio，请在 "**开始**" 菜单上单击 " **Microsoft SQL Server 2012** "，然后单击 " **SQL Server Management Studio**"。  
   
-2.  在 **“连接到服务器”** 对话框中，设置以下选项：  
+2.  在 "**连接到服务器**" 对话框中，设置以下选项：  
   
     -   在 **“服务器类型”** 列表中，选择 **“数据库引擎”**  
   
@@ -102,20 +102,20 @@ ms.locfileid: "66108723"
   
     -   如果使用 SQL Server 身份验证进行连接，请提供登录名和密码。  
   
-3.  单击 **“连接”** 。  
+3.  单击“连接”  。  
   
 #### <a name="to-run-the-transact-sql-statement"></a>运行 Transact-SQL 语句  
   
-1.  在 SQL Server Management Studio 的工具栏上，单击 **“新建查询”** 。  
+1.  在 SQL Server Management Studio 的工具栏上，单击 **“新建查询”**。  
   
-2.  在 **“文件”** 菜单上，单击 **“打开”** ，然后单击 **“文件”** 。  
+2.  在 **“文件”** 菜单上，单击 **“打开”**，然后单击 **“文件”**。  
   
 3.  定位到保存 SharePoint 2010 Management Shell 中生成的 Transact-SQL 语句的文件夹。  
   
-4.  单击该文件，然后单击 **“打开”** 。  
+4.  单击该文件，然后单击 **“打开”**。  
   
      该语句将添加到查询窗口。  
   
-5.  单击 **“执行”** 。  
+5.  单击“执行”  。  
   
   

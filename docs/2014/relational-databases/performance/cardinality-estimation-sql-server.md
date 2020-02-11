@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f7c3f609bd2b25fcb3e3553497ead2baad476f2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151047"
 ---
 # <a name="cardinality-estimation-sql-server"></a>基数估计 (SQL Server)
@@ -32,22 +32,22 @@ ms.locfileid: "63151047"
   
  若要确保最佳查询性能，请使用以下建议用新的基数估计器测试您的工作负荷，然后在您的生产系统中启用它。  
   
-1.  升级所有现有数据库以便使用新的基数估计器。 若要执行此操作，请使用[ALTER DATABASE 兼容性级别&#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)数据库的兼容性级别设置为 120。  
+1.  升级所有现有数据库以便使用新的基数估计器。 为此，请使用[ALTER Database 兼容级别 &#40;transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)将数据库兼容级别设置为120。  
   
 2.  使用新基数估计器运行测试工作负荷，然后通过当前用来解决性能问题的相同方式解决任何新性能问题。  
   
 3.  在用新的基数估计器（数据库兼容级别 120 (SQL Server 2014)）运行工作负荷并且特定查询已回归后，你可以运行具有跟踪标志 9481 的查询，以便使用在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更早版本中使用的基数估计器版本。 若要运行具有跟踪标志的查询，请参阅知识库文章 [启用可通过特定查询级别上的不同跟踪标志控制的影响计划的 SQL Server 查询优化器行为](https://support.microsoft.com/kb/2801413)。  
   
-4.  如果不能更改的所有数据库以便使用新基数估计器，您可以使用之前的基数估计器的所有数据库使用[ALTER DATABASE 兼容性级别&#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)到设置数据库兼容性级别为 110。  
+4.  如果一次无法更改所有数据库以使用新的基数估计器，则可以通过使用[ALTER Database 兼容级别 &#40;transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)将数据库兼容级别设置为110，对所有数据库使用以前的基数估计器。  
   
 5.  如果使用数据库兼容级别 110 运行您的工作负荷并且您想要使用新的基数估计器测试或运行特定查询，则可以运行具有跟踪标志 2312 的查询，以便使用 SQL Server 2014 版基数估计器。  若要运行具有跟踪标志的查询，请参阅知识库文章 [启用可通过特定查询级别上的不同跟踪标志控制的影响计划的 SQL Server 查询优化器行为](https://support.microsoft.com/kb/2801413)。  
   
 ## <a name="new-xevents"></a>新 XEvents  
  有两个新的 query_optimizer_estimate_cardinality XEvents 以便支持新查询计划。  
   
--   *query_optimizer_estimate_cardinality* 在查询优化器对关系表达式上的基数进行评估时发生。  
+-   当查询优化器估计关系表达式上的基数时，将发生*query_optimizer_estimate_cardinality* 。  
   
--   *query_optimizer_force_both_cardinality_estimation*_behaviors 在启用跟踪标志 2312 以及 9481 时发生，并且尝试同时强制旧的和新的基数估计行为。  
+-   如果同时启用了跟踪标志2312和9481，同时试图同时强制执行新的和新的基数估算行为，则会发生*query_optimizer_force_both_cardinality_estimation*_behaviors。  
   
 ## <a name="examples"></a>示例  
  下面的示例显示新基数估计中的一些更改。 用于估计基数的代码已重新编写。 相关逻辑十分复杂，并且无法提供所有更改的详尽列表。  
@@ -67,15 +67,15 @@ SELECT item, category, amount FROM dbo.Sales AS s WHERE Date = '2013-12-19';
  此行为已更改。 现在，即使对于自上次统计信息更新后添加的最近的升序数据未进行更新，新的基数估计器也假定这些值存在并且对于列中的每个值将平均基数用作基数估计。  
   
 ### <a name="example-b-new-cardinality-estimates-assume-filtered-predicates-on-the-same-table-have-some-correlation"></a>示例 B. 新的基数估计假定对同一个表的筛选的谓词具有某种关联  
- 对于该示例，我们假定表 Cars 是 1000 行，Make 对于“Honda”具有 200 个匹配项，Model 对于“Civic”具有 50 个匹配项，并且所有 Civics 均为 Hondas。 因此，Make 列中 20% 的值是“Honda”，Model 列中 5% 的值是“Civic”，并且 Honda Civics 的实际数目为 50。 以前的基数估计假定 Make 和 Model 列中的值是彼此独立的。 上一查询优化器估计有 10 个 Honda Civics (.05 *.20 \* 1000年行 = 10 行)。  
+ 对于该示例，我们假定表 Cars 是 1000 行，Make 对于“Honda”具有 200 个匹配项，Model 对于“Civic”具有 50 个匹配项，并且所有 Civics 均为 Hondas。 因此，Make 列中 20% 的值是“Honda”，Model 列中 5% 的值是“Civic”，并且 Honda Civics 的实际数目为 50。 以前的基数估计假定 Make 和 Model 列中的值是彼此独立的。 之前的查询优化器估计有10个 Honda Civics （05 * .20 \* 1000 行 = 10 行）。  
   
 ```  
 SELECT year, purchase_price FROM dbo.Cars WHERE Make = 'Honda' AND Model = 'Civic';  
 ```  
   
- 此行为已更改。 现在，新基数估计假定 Make 和 Model 列具有“某种”  关联。 查询优化器通过向估计公式添加指数成分，估计更高的基数。 查询优化器现在估计 22.36 行 (.05 * SQRT(.20) \* 1000年行 = 22.36 行) 与谓词相匹配。 对于此方案以及特定的数据分布，22.36 行更接近于该查询将返回的实际 50 行。  
+ 此行为已更改。 现在，新基数估计假定 Make 和 Model 列具有“某种” ** 关联。 查询优化器通过向估计公式添加指数成分，估计更高的基数。 查询优化器现在估计，22.36 行（.05 * SQRT （20） \* 1000 rows = 22.36 行）与谓词匹配。 对于此方案以及特定的数据分布，22.36 行更接近于该查询将返回的实际 50 行。  
   
- 请注意，新的基数估计器逻辑将对谓词选择性进行排序并且增加该指数。 例如，如果谓词选择性为.05、.20 和.25，则基数估计将是 (.05 * SQRT(.20) \* SQRT(SQRT(.25)))。  
+ 请注意，新的基数估计器逻辑将对谓词选择性进行排序并且增加该指数。 例如，如果谓词选择性为 .05、.20 和 .25，则基数估计值为（05 * SQRT （20） \* SQRT （sqrt （25））。  
   
 ### <a name="example-c-new-cardinality-estimates-assume-filtered-predicates-on-different-tables-are-independent"></a>示例 C. 新的基数估计假定对不同表的筛选的谓词是独立的  
  对于此示例，以前的基数估计器谓词筛选器 filters s.type 和 r.date 是关联的。 但是，针对新型工作负荷的测试结果表明，针对不同表中列上的谓词筛选器通常是彼此不相关的。  
@@ -87,7 +87,7 @@ WHERE s.ticket = r.ticket AND s.type = 'toy' AND r.date = '2013-12-19';
   
  此行为已更改。 现在，新的基数估计器逻辑假定 s.type 与 r.date 不相关。 实际上，假定是每天都会退回玩具，而不是在具体某一天退回。 在此类情形下，与以前的基数估计相比，新的基数估计将是更小的数值。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [监视和优化性能](monitor-and-tune-for-performance.md)  
   
   

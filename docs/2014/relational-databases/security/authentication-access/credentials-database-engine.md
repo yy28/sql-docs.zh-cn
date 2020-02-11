@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: d42f93735723c81baf837736bfabcda2b1707aae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011830"
 ---
 # <a name="credentials-database-engine"></a>凭据（数据库引擎）
@@ -35,10 +35,10 @@ ms.locfileid: "63011830"
   
  系统凭据是自动创建的，并与特定端点关联， 系统凭据名以两个哈希符号 (##) 开头。  
   
- 有关凭据的详细信息，请参阅[sys.credentials](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql)目录视图。  
+ 有关凭据的详细信息，请参阅[sys.databases](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql)目录视图。  
   
 ## <a name="related-content"></a>相关内容  
- [创建凭据](../authentication-access/create-a-credential.md)[创建凭据&#40;Transact SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)  
+ &#40;Transact-sql[创建凭据](../authentication-access/create-a-credential.md)[创建凭据&#41;](/sql/t-sql/statements/create-credential-transact-sql)  
   
  [保护 SQL Server](../securing-sql-server.md)  
   

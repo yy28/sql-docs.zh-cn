@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 432b41216418cd1ad1bae70557c95a589f5e78dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101143"
 ---
 # <a name="specify-credentials-in-report-builder"></a>在报表生成器中指定凭据
@@ -23,7 +23,7 @@ ms.locfileid: "66101143"
  在报表定义中，每个数据源定义都指定以下内容：名称、连接字符串、是否使用集成安全性以及当需要凭据但未指定凭据时要显示什么提示。 凭据不保存在报表定义中。 在报表服务器上发布了报表后，数据源可以和报表定义分开进行管理。 数据源所有者可以为报表服务器上的嵌入数据源和共享数据源都指定凭据。  
   
 > [!NOTE]  
->  报表服务器管理员必须向用户授予浏览报表服务器的适当权限，以便让其选择共享数据源或模型或者打开或保存报表。 有关详细信息，请参阅[安装、 卸载、 和报表生成器支持](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)。  
+>  报表服务器管理员必须向用户授予浏览报表服务器的适当权限，以便让其选择共享数据源或模型或者打开或保存报表。 有关详细信息，请参阅[安装、卸载和报表生成器支持](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
@@ -71,14 +71,14 @@ ms.locfileid: "66101143"
  指定提示的凭据时，访问该报表的每个用户都必须输入用户名和密码才能检索数据。 建议将此选项用于包含机密数据的报表。 提示的凭据可以对应于 Windows 帐户或数据库登录。 如果数据库服务器未识别出您提供的凭据，或者指定的用户未被授予检索数据的权限，连接将失败。  
   
 ### <a name="no-credentials"></a>无凭据  
- 相应数据源不需要提供凭据。 若要在报表服务器上运行此报表，必须配置无人参与的执行帐户。 有关详细信息，请参阅[配置无人参与的执行帐户&#40;SSRS 配置管理器&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)中[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中的文档[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][联机丛书](https://go.microsoft.com/fwlink/?linkid=121312)。  
+ 相应数据源不需要提供凭据。 若要在报表服务器上运行此报表，必须配置无人参与的执行帐户。 有关详细信息，请参阅[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [联机丛书](https://go.microsoft.com/fwlink/?linkid=121312)的[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]文档中的[配置无人参与的执行帐户 &#40;SSRS Configuration Manager&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) 。  
   
-## <a name="see-also"></a>请参阅  
- [安装、 卸载和报表生成器支持](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)   
- [嵌入和共享的数据连接或数据源（报表生成器和 SSRS）](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
- [报表生成器选项对话框中，设置&#40;报表生成器&#41;](report-builder/set-default-options-for-report-builder.md)   
+## <a name="see-also"></a>另请参阅  
+ [安装、卸载和报表生成器支持](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)   
+ [嵌入和共享的数据连接或数据源 &#40;报表生成器和 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [报表生成器选项 "对话框，" 设置 "&#40;报表生成器&#41;](report-builder/set-default-options-for-report-builder.md)   
  [报表生成器中的数据连接、数据源和连接字符串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
- [向报表添加数据&#40;报表生成器和 SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [添加和验证数据连接或数据源&#40;报表生成器和 SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [将数据添加到报表 &#40;报表生成器和 SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [添加和验证数据连接或数据源 &#40;报表生成器和 SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
   

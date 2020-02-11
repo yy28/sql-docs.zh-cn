@@ -15,33 +15,33 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7a83df9dde4ada571b0fc39f6ac8e45c49d9ac17
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73777896"
 ---
 # <a name="additional-table-valued-parameter-metadata"></a>其他表值参数的元数据
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  若要检索表值参数的元数据，应用程序将调用 SQLProcedureColumns。 对于表值参数，SQLProcedureColumns 将返回单个行。 添加了另外两个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]特定的列 SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME，以提供与表值参数关联的表类型的架构和目录信息。 为了符合 ODBC 规范，SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME 的显示位置位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本中添加的所有驱动程序特定列之前，并位于 ODBC 自身委托的所有列之后。  
+  若要检索表值参数的元数据，应用程序将调用 SQLProcedureColumns。 对于表值参数，SQLProcedureColumns 将返回单个行。 添加了[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]两个额外特定的列 SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME，以提供与表值参数关联的表类型的架构和目录信息。 为了符合 ODBC 规范，SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME 的显示位置位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本中添加的所有驱动程序特定列之前，并位于 ODBC 自身委托的所有列之后。  
   
  下表列出了对表值参数非常重要的列。  
   
-|列名|数据类型|值/注释|  
+|列名称|数据类型|值/注释|  
 |-----------------|---------------|---------------------|  
 |DATA_TYPE|Smallint（非 NULL）|SQL_SS_TABLE|  
 |TYPE_NAME|WVarchar(128)（非 NULL）|表值参数的类型名称。|  
-|COLUMN_SIZE|Integer|NULL|  
+|COLUMN_SIZE|Integer|Null|  
 |BUFFER_LENGTH|Integer|0|  
-|DECIMAL_DIGITS|Smallint|NULL|  
-|NUM_PREC_RADIX|Smallint|NULL|  
+|DECIMAL_DIGITS|Smallint|Null|  
+|NUM_PREC_RADIX|Smallint|Null|  
 |NULLABLE|Smallint（非 NULL）|SQL_NULLABLE|  
-|REMARKS|Varchar|NULL|  
-|COLUMN_DEF|WVarchar(4000)|NULL|  
+|注释|Varchar|Null|  
+|COLUMN_DEF|WVarchar(4000)|Null|  
 |SQL_DATA_TYPE|Smallint（非 NULL）|SQL_SS_TABLE|  
-|SQL_DATETIME_SUB|Smallint|NULL|  
-|CHAR_OCTET_LENGTH|Integer|NULL|  
+|SQL_DATETIME_SUB|Smallint|Null|  
+|CHAR_OCTET_LENGTH|Integer|Null|  
 |ORDINAL_POSITION|Integer（非 NULL）|参数的序号位置。|  
 |IS_NULLABLE|Varchar|"YES"|  
 |SS_TYPE_CATALOG_NAME|WVarchar(128)（非 NULL）|包含表值参数表类型的类型定义的目录。|  
@@ -54,6 +54,6 @@ ms.locfileid: "73777896"
  将 SQL_SOPT_SS_NAME_SCOPE 设置为 SQL_SS_NAME_SCOPE_TABLE 时，对链接服务器的查询将失败。 对包含服务器组件的目录的 SQLColumns 或 SQLPrimaryKeys 的调用将失败。  
   
 ## <a name="see-also"></a>另请参阅  
- [表值参数&#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+ [ODBC&#41;&#40;表值参数](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

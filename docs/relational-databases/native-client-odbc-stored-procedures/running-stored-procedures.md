@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 05956ff9111fe9b296da0a35acba42e46e1a47a2
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73778080"
 ---
 # <a name="running-stored-procedures"></a>运行存储过程
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  存储过程是存储在数据库中的可执行对象。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持：  
+  存储过程是存储在数据库中的可执行对象。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持  
   
 -   存储过程：  
   
@@ -58,7 +58,7 @@ ms.locfileid: "73778080"
   
      扩展存储过程可使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句所不具备的 C 和 C++ 功能。  
   
-     有关如何调用存储过程的示例，请参阅[处理返回代码和输出参数&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)。  
+     有关如何调用存储过程的示例，请参阅使用[ODBC&#41;&#40;处理返回代码和输出参数](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
   
@@ -69,7 +69,7 @@ ms.locfileid: "73778080"
 -   [处理存储过程结果](../../relational-databases/native-client-odbc-stored-procedures/processing-stored-procedure-results.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server Native Client &#40;ODBC&#41; ](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [运行存储过程操作指南主题&#40;ODBC&#41;](https://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)  
+ [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [运行存储过程操作指南主题 &#40;ODBC&#41;](https://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)  
   
   

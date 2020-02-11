@@ -1,5 +1,5 @@
 ---
-title: 将报表导出为其他文件类型 （报表生成器和 SSRS） |Microsoft Docs
+title: 将报表导出为其他文件类型（报表生成器和 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c6da8c1190c07d3df930a2d83937e3a5ec39da32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109183"
 ---
 # <a name="export-a-report-as-another-file-type-report-builder-and-ssrs"></a>将报表导出为其他文件类型（报表生成器和 SSRS）
@@ -31,7 +31,7 @@ ms.locfileid: "66109183"
   
 3.  选择要使用的格式。  
   
-     将打开 **“另存为”** 对话框。 默认情况下，文件名为所导出报表的名称。 也可更改该文件名。  
+     此时会打开“另存为”**** 对话框。 默认情况下，文件名为所导出报表的名称。 也可更改该文件名。  
   
 4.  导航到保存导出报表的位置并打开此报表。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66109183"
   
 4.  选择要使用的格式。  
   
-5.  单击 **“导出”**。  
+5.  单击“导出”。****  
   
      将出现一条消息，询问是要打开还是要保存该文件。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66109183"
   
      将使用与所选格式关联的应用程序显示或保存该报表。 如果单击 **“保存”**，系统将提示您指定保存报表的位置。  
   
-     **注意** 如果因没有与此文件类型关联的程序而导致程序无法以您所选的格式打开此报表，系统会提示您保存导出的报表或在线查找可打开此报表的程序。  
+     **注意**如果程序无法以所选格式打开报表，因为您没有与此文件类型关联的程序，系统将提示您保存导出的报表或联机查找程序以打开报表。  
   
 ### <a name="to-export-a-report-as-another-file-type-in-a-sharepoint-library"></a>在 SharePoint 库中将报表导出为其他文件类型  
   
@@ -82,11 +82,11 @@ ms.locfileid: "66109183"
   
      还可以选择更改导出的报表的文件名。  
   
-     **注意** 如果因没有与此文件类型关联的程序而导致程序无法以您所选的格式打开此报表，系统会提示您保存导出的报表或在线查找可打开此报表的程序。  
+     **注意**如果程序无法以所选格式打开报表，因为您没有与此文件类型关联的程序，系统将提示您保存导出的报表或联机查找程序以打开报表。  
   
-## <a name="see-also"></a>请参阅  
- [导出报表&#40;报表生成器和 SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>另请参阅  
+ [导出报表 &#40;报表生成器和 SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
  [Reporting Services 中的分页（报表生成器和 SSRS）](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [不同报表呈现扩展插件的交互功能&#40;报表生成器和 SSRS&#41;](report-builder/interactive-functionality-different-report-rendering-extensions.md)  
+ [不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）](report-builder/interactive-functionality-different-report-rendering-extensions.md)  
   
   

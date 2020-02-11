@@ -14,10 +14,10 @@ ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 144a2b57fa671842f284445dee859e689e8adbe1
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75254820"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>将值从 Excel 文件导入到域
@@ -32,14 +32,14 @@ ms.locfileid: "75254820"
   
 -   将值导入到一个现有的已填充域中，在这种情况下，仅导入新值。 将不会导入所有已存在的值。  
   
-##  <a name="BeforeYouBegin"></a>开始之前  
+##  <a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Prerequisites"></a>先决条件  
  若要从 Excel 文件导入域，Excel 必须安装在装有 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序的计算机上，以便导入域值或整个域；您必须使用域值创建了一个 Excel 文件（请参阅 [How the import works](#How)）；并且必须创建并打开了要将域导入其中的知识库。  
   
-###  <a name="Security"></a>安全  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>访问  
+####  <a name="Permissions"></a> 权限  
  您必须具有针对 DQS_MAIN 数据库的 dqs_kb_editor 或 dqs_administrator 角色，才能从 Excel 文件导入域值。  
   
 ##  <a name="Import"></a>将值从 Excel 文件导入到域中  
@@ -62,7 +62,7 @@ ms.locfileid: "75254820"
   
 9. 如果电子表格中的第一行表示域名，并且所有其他行表示有效的域值，则选择 **“将第一行用作标头”** 。  
   
-10. 单击“确定”****。 将显示一个进度栏，指示成功导入了多少个值、未导入多少个值以及值的总数。 单击 **“取消”** 按钮将取消该过程。  
+10. 单击“确定”。  将显示一个进度栏，指示成功导入了多少个值、未导入多少个值以及值的总数。 单击 **“取消”** 按钮将取消该过程。  
   
 11. 确认“导入完成”显示在“导入域值”对话框中****。 在此对话框中查看哪些值已成功导入、哪些值未导入。 该对话框将指示文件的名称和路径、操作的完成状态、成功导入了多少个值、未导入多少个值以及处理的值的总数。  
   

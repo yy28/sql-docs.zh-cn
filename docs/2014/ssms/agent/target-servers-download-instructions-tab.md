@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 289faf0f637e5e4d4d84e7e7150189a37c5f59f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245335"
 ---
 # <a name="target-servers-download-instructions-tab"></a>目标服务器（“下载指令”选项卡）
@@ -32,7 +32,7 @@ ms.locfileid: "63245335"
  **目标服务器**  
  查看要应用下载指令的服务器的名称。  
   
- **运算**  
+ **操作**  
  查看下载指令将执行的操作。  
   
  **Object Name**  
@@ -50,10 +50,10 @@ ms.locfileid: "63245335"
  **删除**  
  删除所选下载指令。  
   
- **Clear**  
+ **清除**  
  清除所选下载指令的状态。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [企业范围的自动化管理](automated-administration-across-an-enterprise.md)  
   
   

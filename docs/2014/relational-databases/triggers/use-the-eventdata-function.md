@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a34a3e69e157894b29db48da19f44d1e35dad746
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524248"
 ---
 # <a name="use-the-eventdata-function"></a>使用 EVENTDATA 函数
@@ -49,7 +49,7 @@ AS
   
  `CREATE TABLE NewTable (Column1 int);`  
   
- DDL 触发器中的 `EVENTDATA()` 语句将捕获不允许使用的 `CREATE TABLE` 语句文本。 这通过使用 XQuery 语句来实现`xml`生成的 EVENTDATA 和检索的数据\<CommandText > 元素。 有关详细信息，请参阅 [XQuery 语言参考 (SQL Server)](/sql/xquery/xquery-language-reference-sql-server)。  
+ DDL 触发器中的 `EVENTDATA()` 语句将捕获不允许使用的 `CREATE TABLE` 语句文本。 这是通过对 EVENTDATA 生成的`xml`数据使用 XQuery 语句以及检索\<CommandText> 元素实现的。 有关详细信息，请参阅 [XQuery 语言参考 (SQL Server)](/sql/xquery/xquery-language-reference-sql-server)。  
   
 > [!CAUTION]  
 >  EVENTDATA 将捕获 CREATE_SCHEMA 事件的数据以及相应 CREATE SCHEMA 定义的 <schema_element>（如果存在）。 此外，EVENTDATA 将 <schema_element> 定义识别为单独的事件。 因此，针对 CREATE_SCHEMA 事件和由 CREATE_SCHEMA 定义的 <schema_element> 表示的事件创建的 DDL 触发器可能两次返回相同的事件数据，如 `TSQLCommand` 数据。 例如，针对 CREATE_SCHEMA 事件和 CREATE_TABLE 事件创建的 DDL 触发器，将运行下列批处理：  
@@ -125,11 +125,12 @@ GO
 ```  
   
 > [!NOTE]  
->  若要返回事件数据，建议您使用 XQuery `value()` 方法来替代 `query()` 方法。 `query()` 方法可在输出中返回 XML 和以“and”符转义的回车符和换行符 (CRLF) 实例，而 `value()` 方法无法在输出中呈现 CRLF 实例。  
+>  若要返回事件数据，建议您使用 XQuery `value()` 方法来替代 `query()` 方法。 
+  `query()` 方法可在输出中返回 XML 和以“and”符转义的回车符和换行符 (CRLF) 实例，而 `value()` 方法无法在输出中呈现 CRLF 实例。  
   
  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库还提供了类似的 DDL 触发器示例。 若要获得示例，请使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]找到 Database Triggers 文件夹。 此文件夹位于 **数据库的** Programmability [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 文件夹下。 右键单击“ddlDatabaseTriggerLog”  并选择“将数据库触发器脚本编写为”  。 默认情况下，DDL 触发器 ddlDatabaseTriggerLog  处于禁用状态。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [DDL 事件](../triggers/ddl-events.md)   
  [DDL 事件组](../triggers/ddl-event-groups.md)  
   

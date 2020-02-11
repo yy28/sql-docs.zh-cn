@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: af1548ad29203f06e6d9cc49c048f1973afa3e3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63131465"
 ---
 # <a name="reinitialize-subscriptions---one-subscription"></a>重新初始化订阅 - 一个订阅
@@ -41,7 +41,7 @@ ms.locfileid: "63131465"
  **标记为要重新初始化**  
  单击此项可以标记需要重新初始化的订阅。 在可以获得有效快照后，下次为订阅运行分发代理或合并代理时，该快照将应用在订阅服务器上。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [重新初始化订阅](reinitialize-subscriptions.md)  
   
   

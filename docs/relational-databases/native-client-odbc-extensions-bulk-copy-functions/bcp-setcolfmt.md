@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7e2942f60e1bb41edfcd2d474619867d35806660
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782336"
 ---
 # <a name="bcp_setcolfmt"></a>bcp_setcolfmt
@@ -32,7 +32,7 @@ ms.locfileid: "73782336"
   
  该函数提供在大容量复制操作中指定列格式的灵活方法。 它用于设置单独的列格式属性。 对的每个调用都将设置一个列格式特性**bcp_setcolfmt** 。  
   
- **Bcp_setcolfmt**函数指定用户文件中数据的源或目标格式。 用作源格式时， **bcp_setcolfmt**指定在大容量复制中用作数据源的现有数据文件的格式，该数据源指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的表。 用作目标格式时，将使用**bcp_setcolfmt**指定的列格式创建数据文件。  
+ **Bcp_setcolfmt**函数指定用户文件中数据的源或目标格式。 用作源格式时， **bcp_setcolfmt**指定在大容量复制到中的表中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用作数据源的现有数据文件的格式。 用作目标格式时，将使用**bcp_setcolfmt**指定的列格式创建数据文件。  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,13 +50,13 @@ RETCODE bcp_setcolfmt (
  *hdbc*  
  是启用大容量复制的 ODBC 连接句柄。  
   
- field  
+ *定义域*  
  要设置其属性的按一定顺序的列号。  
   
- property  
+ *知识产权*  
  属性常量之一。 在下表中定义属性常量。  
   
-|属性|“值”|说明|  
+|properties|值|说明|  
 |--------------|-----------|-----------------|  
 |BCP_FMT_TYPE|BYTE|用户文件中此列的数据类型。 如果不同于数据库表中相应列的数据类型，则大容量复制将根据情况转换数据。<br /><br /> BCP_FMT_TYPE 参数由 sqlncli.h 中的 SQL Server 数据类型标记枚举，而非采用 ODBC C 数据类型枚举器。 例如，您可以使用特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 SQLCHARACTER 类型指定一个字符串：ODBC 类型 SQL_C_CHAR。<br /><br /> 若要为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型指定默认的数据表示形式，则将此参数设置为 0。<br /><br /> 对于从 SQL Server 大容量复制到文件中，当 BCP_FMT_TYPE 为 SQLDECIMAL 或 SQLNUMERIC 时，如果源列不是**decimal**或**numeric**，则使用默认的精度和小数位数。 否则，如果源列为**decimal**或**numeric**，则使用源列的精度和小数位数。|  
 |BCP_FMT_INDICATOR_LEN|INT|以字节表示的指示器（前缀）的长度。<br /><br /> 它是列数据中以字节表示的长度/空指示器的长度。 有效的指示器长度值是 0（在未使用指示器时）、1、2 或 4。<br /><br /> 若要指定默认的大容量复制指示器用法，请将此参数设置为 SQL_VARLEN_DATA。<br /><br /> 指示器在内存中出现在任何数据的紧前面，在数据文件中出现在它们适用于的数据的紧前面。<br /><br /> 如果使用多种方法来指定数据文件列长度（例如指示器和最大列长度，或者指示器和终止符序列），则大容量复制将选择导致数据复制量最少的方法。<br /><br /> 如果列数据可能在长度上发生变化或列可能接受 NULL 作为值，则在没有调整数据格式的用户干预时，大容量复制生成的数据文件将包含指示器。|  
@@ -74,7 +74,7 @@ RETCODE bcp_setcolfmt (
 ## <a name="returns"></a>返回  
  SUCCEED 或 FAIL。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
  此函数取代了**bcp_colfmt**函数。 **Bcp_setcolfmt**函数中提供了**bcp_colfmt**的所有功能。 此外，还提供对列排序规则的支持。 建议按照下面给出的顺序设置以下列格式属性：  
   
  BCP_FMT_SERVER_COL  
@@ -97,7 +97,7 @@ RETCODE bcp_setcolfmt (
   
 -   可选终止字节序列的长度。  
   
- 对**bcp_setcolfmt**的每个调用都指定一个用户文件列的格式。 例如，若要更改五行用户数据文件中三列的默认设置，请首先调用[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) **（5）** ，然后调用**bcp_setcolfmt**五次，其中三个调用设置您的自定义格式。 对于剩余的两次调用，将 BCP_FMT_TYPE 设置为0，并分别将 BCP_FMT_INDICATOR_LENGTH、BCP_FMT_DATA_LEN 和*cbValue*设置为0、SQL_VARLEN_DATA 和0。 此过程复制全部五列，其中的三列采用您的自定义格式，另两列采用默认格式。  
+ 对**bcp_setcolfmt**的每个调用都指定一个用户文件列的格式。 例如，若要更改五行用户数据文件中三列的默认设置，请首先调用[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)**（5）**，然后调用**bcp_setcolfmt**五次，其中三个调用设置您的自定义格式。 对于剩余的两次调用，将 BCP_FMT_TYPE 设置为0，并分别将 BCP_FMT_INDICATOR_LENGTH、BCP_FMT_DATA_LEN 和*cbValue*设置为0、SQL_VARLEN_DATA 和0。 此过程复制全部五列，其中的三列采用您的自定义格式，另两列采用默认格式。  
   
  调用**bcp_setcolfmt**之前，必须先调用**bcp_columns**函数。  
   
@@ -108,9 +108,9 @@ RETCODE bcp_setcolfmt (
  [Bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md)函数可用于保留格式规范。  
   
 ## <a name="bcp_setcolfmt-support-for-enhanced-date-and-time-features"></a>针对增强的日期和时间功能的 bcp_setcolfmt 支持  
- 与日期/时间类型的 BCP_FMT_TYPE 属性一起使用的类型在[OLE DB 和 ODBC &#40;&#41;的增强日期和时间类型的大容量复制更改](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)中指定。  
+ 与日期/时间类型的 BCP_FMT_TYPE 属性一起使用的类型是在[&#40;OLE DB 和 ODBC&#41;的增强日期和时间类型的大容量复制更改](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)中指定的。  
   
- 有关详细信息，请参阅[日期和时间&#40;改进&#41;ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+ 有关详细信息，请参阅[ODBC&#41;&#40;日期和时间改进](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [大容量复制函数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

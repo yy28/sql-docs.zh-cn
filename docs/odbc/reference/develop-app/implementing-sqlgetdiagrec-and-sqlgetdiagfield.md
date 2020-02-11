@@ -17,20 +17,20 @@ ms.assetid: 11ba1857-b533-4517-8131-a2a8a0154a0a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a4b602d5ff4a94d2888395e6a62f03553fb50f98
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68216375"
 ---
 # <a name="implementing-sqlgetdiagrec-and-sqlgetdiagfield"></a>实现 SQLGetDiagRec 和 SQLGetDiagField
-**SQLGetDiagRec**并**SQLGetDiagField**由驱动程序管理器和每个驱动程序实现。 驱动程序管理器和每个驱动程序维护的每个环境、 连接、 语句和描述符句柄的诊断记录，仅当另一个函数调用与释放句柄或句柄的释放这些记录。  
+**SQLGetDiagRec**和**SQLGetDiagField**由驱动程序管理器和每个驱动程序实现。 驱动程序管理器和每个驱动程序都维护每个环境、连接、语句和描述符句柄的诊断记录，并且仅当通过该句柄调用另一个函数或释放该句柄时，才释放这些记录。  
   
- 尽管驱动程序管理器和每个驱动程序必须确定第一个状态记录中的排名根据[序列的状态记录](../../../odbc/reference/develop-app/sequence-of-status-records.md)，驱动程序管理器确定的记录的最后一个序列。  
+ 尽管驱动程序管理器和每个驱动程序必须根据[状态记录序列](../../../odbc/reference/develop-app/sequence-of-status-records.md)中的排名确定第一个状态记录，但驱动程序管理器会确定最后一条记录的顺序。  
   
- **SQLGetDiagRec**并**SQLGetDiagField**不发布有关自身的诊断记录。  
+ **SQLGetDiagRec**和**SQLGetDiagField**不会发布自身的诊断记录。  
   
- 本部分包含以下主题。  
+ 本部分包含下列主题。  
   
 -   [诊断处理规则](../../../odbc/reference/develop-app/diagnostic-handling-rules.md)  
   

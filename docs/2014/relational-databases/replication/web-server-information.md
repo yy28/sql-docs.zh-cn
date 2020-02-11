@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5f5c2385b4c58447db008544124ae9048566958
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63199940"
 ---
 # <a name="web-server-information"></a>Web 服务器信息
@@ -29,11 +29,11 @@ ms.locfileid: "63199940"
  **各个订阅服务器将如何连接到 Web 服务器?**  
  指定用于连接到 Web 服务器的身份验证的类型。 建议您将基本身份验证与安全套接字层 (SSL) 一起使用，以连接到 IIS 服务器。 如果选择了基本身份验证，请输入用于从订阅服务器连接到 IIS 服务器的登录名和密码。  
   
-## <a name="see-also"></a>请参阅  
- [创建请求订阅](create-a-pull-subscription.md)   
+## <a name="see-also"></a>另请参阅  
+ [Create a Pull Subscription](create-a-pull-subscription.md)   
  [查看和修改请求订阅属性](view-and-modify-pull-subscription-properties.md)   
- [非 SQL Server 订阅服务器](non-sql/non-sql-server-subscribers.md)   
- [订阅发布](subscribe-to-publications.md)   
+ [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)   
+ [Subscribe to Publications](subscribe-to-publications.md)   
  [合并复制的 Web 同步](web-synchronization-for-merge-replication.md)  
   
   

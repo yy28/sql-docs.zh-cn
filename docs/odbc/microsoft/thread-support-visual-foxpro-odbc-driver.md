@@ -1,5 +1,5 @@
 ---
-title: 线程支持 （Visual FoxPro ODBC 驱动程序） |Microsoft Docs
+title: 线程支持（Visual FoxPro ODBC 驱动程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,17 +16,17 @@ ms.assetid: 0c6abbbc-012b-41aa-bded-5e7e362d015b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 72672cfc20b5d363229fd1ba49278d11e6d6793d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67912412"
 ---
 # <a name="thread-support-visual-foxpro-odbc-driver"></a>线程支持（Visual FoxPro ODBC 驱动程序）
-Visual FoxPro ODBC 驱动程序是线程安全的。 访问环境句柄 (*hen*)，连接句柄 (*hdbc*)，和语句句柄 (*hstmt*) 封装在适当的信号量，以防止其他进程从访问，从而可能会改变，驱动程序的内部数据结构。  
+Visual FoxPro ODBC 驱动程序是线程安全的。 对环境句柄（*h)*）、连接句柄（*hdbc*）和语句句柄（*hstmt*）的访问将包装在适当的信号量中，以防止其他进程访问并可能更改驱动程序的内部数据结构。  
   
- 可以在多线程应用程序中，取消同步运行的函数*hstmt*通过调用[SQLCancel](../../odbc/microsoft/sqlcancel-visual-foxpro-odbc-driver.md)单独的线程上。  
+ 在多线程应用程序中，可以通过在单独的线程上调用[SQLCancel](../../odbc/microsoft/sqlcancel-visual-foxpro-odbc-driver.md)来取消在*hstmt*上同步运行的函数。  
   
- 驱动程序使用单独的线程使用渐进式提取时提取数据。 若要使用渐进式提取的数据源，选择**提取背景中的数据**上的复选框[ODBC Visual FoxPro 设置对话框](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)或在你的连接中使用 BackgroundFetch 属性关键字字符串。 避免当多线程应用程序中调用该驱动程序时使用后台获取。 有关连接字符串属性关键字的信息，请参阅[连接字符串使用](../../odbc/microsoft/using-connection-strings.md)。  
+ 使用渐进式提取时，驱动程序将使用一个单独的线程来提取数据。 若要对数据源使用渐进式提取，请在 " [ODBC Visual FoxPro 安装程序" 对话框](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)中选择 "**以后台提取数据**" 复选框，或在连接字符串中使用 BackgroundFetch 特性关键字。 从多线程应用程序调用驱动程序时，请避免使用后台提取。 有关连接字符串属性关键字的信息，请参阅[使用连接字符串](../../odbc/microsoft/using-connection-strings.md)。  
   
- 有关线程的详细信息和**SQLCancel**，请参阅[SQLCancel](../../odbc/reference/syntax/sqlcancel-function.md)中*ODBC 程序员参考*。
+ 有关线程和**SQLCancel**的详细信息，请参阅*ODBC 程序员参考*中的[SQLCancel](../../odbc/reference/syntax/sqlcancel-function.md) 。

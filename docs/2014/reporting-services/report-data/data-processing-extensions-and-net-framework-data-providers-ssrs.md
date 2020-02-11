@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e91dd470b4810fc13c95cbb335b1cf8d2b10430e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107375"
 ---
 # <a name="data-processing-extensions-and-net-framework-data-providers-ssrs"></a>数据处理扩展插件和 .NET Framework 数据访问接口 (SSRS)
@@ -46,7 +46,7 @@ ms.locfileid: "66107375"
 > [!NOTE]  
 >  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据访问接口或自定义数据处理扩展插件必须先行安装并注册，然后才能用于访问数据源中的数据。 必须同时在报表客户端和报表服务器安装并注册数据处理扩展插件，以便创作报表和查看已发布的报表。 不是所有数据访问接口都设计为在服务器环境中工作。 有关详细信息，请参阅[注册标准 .NET Framework 数据提供程序 (SSRS)](register-a-standard-net-framework-data-provider-ssrs.md) 和[部署数据处理扩展插件](../extensions/data-processing/deploying-a-data-processing-extension.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据处理扩展插件概述](../extensions/data-processing/data-processing-extensions-overview.md)   
  [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   

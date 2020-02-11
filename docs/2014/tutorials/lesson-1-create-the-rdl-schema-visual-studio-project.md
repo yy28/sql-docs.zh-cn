@@ -1,5 +1,5 @@
 ---
-title: 第 1 课：创建 RDL 架构 Visual Studio 项目 |Microsoft Docs
+title: 第1课：创建 RDL 架构 Visual Studio 项目 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: c34062acefc2dfd847790a39cea35b03727f49ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62678515"
 ---
 # <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>第 1 课：创建 RDL 架构 Visual Studio 项目
-  针对本教程，您将创建一个简单控制台应用程序。 本教程假定你正在开发中[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]。  
+  针对本教程，您将创建一个简单控制台应用程序。 本教程假定你在中[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]进行开发。  
   
 > [!NOTE]  
 >  访问在具有高级服务的 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 上运行的报表服务器 Web 服务时，必须将“_SQLExpress”追加到“ReportServer”路径。 例如：  
@@ -27,7 +27,7 @@ ms.locfileid: "62678515"
   
 ### <a name="to-create-the-web-service-proxy"></a>创建 Web 服务代理  
   
-1.  从**启动**菜单中，选择**所有程序**，然后 Microsoft Visual Studio 中，然后**Visual Studio Tools**，然后**Visual Studio 2010 命令提示**.  
+1.  从 "**开始**" 菜单中选择 "**所有程序**"，然后 Microsoft Visual Studio "，然后**Visual Studio Tools**，然后选择" **Visual Studio 2010 命令提示符**"。  
   
 2.  在命令提示符窗口中，如果您使用 C#，则运行以下命令：  
   
@@ -45,29 +45,29 @@ ms.locfileid: "62678515"
   
 ### <a name="to-create-a-console-application"></a>创建控制台应用程序  
   
-1.  上**文件**菜单，依次指向**新建**，然后单击**项目**以打开**新项目**对话框。  
+1.  在 "**文件**" 菜单上，指向 "**新建**"，然后单击 "**项目**" 以打开 "**新建项目**" 对话框。  
   
-2.  在左窗格中下,**已安装的模板**，单击**Visual Basic**或**Visual C#** 节点，然后选择某个类别，项目的类型从展开的列表。  
+2.  在左窗格中的 "**已安装的模板**" 下，单击 " **Visual Basic** " 或 " **Visual c #** " 节点，然后从展开的列表中选择一类项目类型。  
   
-3.  选择**控制台应用程序**项目类型。  
+3.  选择 "**控制台应用程序**" 项目类型。  
   
-4.  在中**名称**框中，输入你的项目的名称。 键入名称`SampleRDLSchema`。  
+4.  在 "**名称**" 框中，输入项目的名称。 键入名称`SampleRDLSchema`。  
   
-5.  在中**位置**框中，键入你想要保存你的项目，或者单击的路径**浏览**以导航到的文件夹。  
+5.  在 "**位置**" 框中，键入要保存项目的路径，或单击 "**浏览**" 导航到该文件夹。  
   
-6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] 在解决方案资源管理器中将显示你的项目的折叠的视图。  
+6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]项目的折叠视图以解决方案资源管理器显示。  
   
-7.  在“项目”  菜单上，单击“添加现有项”  。  
+7.  在“项目”**** 菜单上，单击“添加现有项”****。  
   
-8.  导航到的位置，.cs 或.vb 文件生成，然后选择该文件，然后依次**添加**。  
+8.  导航到生成的 .cs 或 .vb 文件的位置，选择该文件，然后单击 "**添加**"。  
   
      您还需要添加对 <xref:System.Web.Services> 命名空间的引用，Web 引用才能正常工作。  
   
-9. 在项目菜单上单击**添加引用**。  
+9. 在 "项目" 菜单上，单击 "**添加引用**"。  
   
-     在中**添加引用**对话框中 **.NET**选项卡上，选择**System.Web.Services**，然后单击**确定**。  
+     在 "**添加引用**" 对话框的 " **.net** " 选项卡中，选择 " **System.web**"，然后单击 **"确定"**。  
   
-     有关如何连接到报表服务器 Web 服务的详细信息，请参阅[使用 Web 服务和.NET Framework 构建应用程序](../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)。  
+     有关如何连接到报表服务器 Web 服务的详细信息，请参阅[使用 Web 服务构建应用程序和 .NET Framework](../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)。  
   
 10. 在解决方案资源管理器中，展开该项目节点。 您将看到默认名称为 Program.cs（对于 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]，为 Module1.vb）的代码文件已添加到您的项目中。  
   
@@ -197,10 +197,10 @@ ms.locfileid: "62678515"
     ```  
   
 ## <a name="next-lesson"></a>下一课  
- 在下一课中，您将使用 XML 架构定义工具 (Xsd.exe) 从 RDL 架构中生成类，并将其包含在项目中。 请参阅[第 2 课：从 RDL 架构使用 xsd 工具生成类](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)。  
+ 在下一课中，您将使用 XML 架构定义工具 (Xsd.exe) 从 RDL 架构中生成类，并将其包含在项目中。 请参阅[第2课：使用 Xsd 工具从 RDL 架构生成类](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)。  
   
-## <a name="see-also"></a>请参阅  
- [使用从 RDL 架构生成的类更新报表&#40;SSRS 教程&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
+## <a name="see-also"></a>另请参阅  
+ [使用从 RDL 架构生成的类更新报表 &#40;SSRS 教程&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
  [报表定义语言 (SSRS)](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

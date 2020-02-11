@@ -1,5 +1,5 @@
 ---
-title: 在示例 ASP 应用程序 (SQLXML 4.0) 中使用 Updategram |Microsoft Docs
+title: 在示例 ASP 应用程序中使用 Updategram （SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e209a4f6118ae9581889299c09653ebaf1cfe2cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014630"
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>在示例 ASP 应用程序中使用 Updategram (SQLXML 4.0)
@@ -158,7 +158,7 @@ You may update customer information below.<br><br>
 </html>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [Updategram 安全注意事项&#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
+## <a name="see-also"></a>另请参阅  
+ [&#40;SQLXML 4.0&#41;的 Updategram 安全注意事项](../security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

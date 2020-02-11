@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 17196f4e9a6deaadca09e77e94e2cf393f4af237
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62922880"
 ---
 # <a name="escape-sql-server-identifiers"></a>对 SQL Server 标识符进行转义
@@ -36,8 +36,8 @@ cd SQLSERVER:\SQL\MyComputer\MyInstance\MyDatabase\MySchema\`#MyTempTable
 Set-Location SQLSERVER:\SQL\`(local`)\DEFAULT  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [PowerShell 中的 SQL Server 标识符](sql-server-identifiers-in-powershell.md)   
+## <a name="see-also"></a>另请参阅  
+ [SQL Server PowerShell 中的标识符](sql-server-identifiers-in-powershell.md)   
  [SQL Server PowerShell 提供程序](sql-server-powershell-provider.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  
   

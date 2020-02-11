@@ -1,5 +1,5 @@
 ---
-title: sp_dropmergepartition (TRANSACT-SQL) |Microsoft Docs
+title: sp_dropmergepartition （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,18 +17,18 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2c7ac88631c481bb98515c3b4753e02b9f66b151
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933949"
 ---
-# <a name="spdropmergepartition-transact-sql"></a>sp_dropmergepartition (Transact-SQL)
+# <a name="sp_dropmergepartition-transact-sql"></a>sp_dropmergepartition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  从发布中删除参数化行筛选器的分区。 在发布服务器上对发布数据库执行此存储的过程。 此存储过程还删除分区的相应快照作业和快照文件。  
+  从发布中删除参数化行筛选器的分区。 此存储过程在发布服务器上对发布数据库执行。 此存储过程还删除分区的相应快照作业和快照文件。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,22 +40,22 @@ sp_dropmergepartition [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publication] = 'publication'` 是发布的名称。 *发布*是**sysname**，无默认值。  
+`[ @publication] = 'publication'`发布的名称。 *发布*为**sysname**，无默认值。  
   
-`[ @suser_sname = ] 'suser_sname'` 是的值[SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md)订阅服务器上的函数用于定义分区。 *suser_sname*是**sysname**，无默认值。  
+`[ @suser_sname = ] 'suser_sname'`订阅服务器上用于定义分区的[SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md)函数的值。 *suser_sname* **sysname**，无默认值。  
   
-`[ @host_name = ] 'host_name'` 是的值[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)订阅服务器上的函数用于定义分区。 *host_name*是**sysname**，无默认值。  
+`[ @host_name = ] 'host_name'`订阅服务器上用于定义分区的[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)函数的值。 *host_name* **sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** （成功）或**1** （失败）  
   
 ## <a name="remarks"></a>备注  
- **sp_dropmergepartition**合并复制中使用。  
+ **sp_dropmergepartition**用于合并复制。  
   
 ## <a name="permissions"></a>权限  
- 只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_dropmergepartition**。  
+ 只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_dropmergepartition**。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [通过参数化筛选器为合并发布管理分区](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)  
   
   

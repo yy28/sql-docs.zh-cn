@@ -1,5 +1,5 @@
 ---
-title: PageSize 属性 (ADO) |Microsoft Docs
+title: PageSize 属性（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,28 +16,28 @@ ms.assetid: e57930a6-46c4-4a17-a3b6-f79e94d5c9c7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1db01010fea79d2badaf81588296391d7e2149f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931769"
 ---
 # <a name="pagesize-property-ado"></a>PageSize 属性 (ADO)
-指示构成多少条记录中的一页[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
+指示记录[集中](../../../ado/reference/ado-api/recordset-object-ado.md)有一页的记录数。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
- 设置或返回**长**值，该值指示在页面有多少条记录。 默认值是**10**。  
+ 设置或返回一个**长整型**值，该值指示页上有多少记录。 默认值为**10**。  
   
 ## <a name="remarks"></a>备注  
- 使用**PageSize**属性来确定多少条记录组成的数据的逻辑页。 建立页面大小，可使用[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)属性将移动到特定页面的第一个记录。 当你想要允许用户逐页浏览数据，一次查看特定数量的记录时，这是在 Web 服务器方案中有用。  
+ 使用**PageSize**属性来确定构成逻辑页数据的记录数。 通过建立页面大小，可以使用[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)属性移动到特定页面的第一条记录。 当你希望允许用户逐页浏览数据，一次查看一定数量的记录时，这非常有用。  
   
- 可以在任何时候，设置此属性，其值将用于计算某一特定页的第一个记录的位置。  
+ 此属性可随时设置，它的值将用于计算特定页面的第一条记录的位置。  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>请参阅  
- [AbsolutePage、 PageCount、 和 PageSize 属性示例 (VB)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vb.md)   
- [AbsolutePage、 PageCount、 和 PageSize 属性示例 （VC + +）](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vc.md)   
- [AbsolutePage 属性 (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
+## <a name="see-also"></a>另请参阅  
+ [AbsolutePage、PageCount 和 PageSize 属性示例（VB）](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vb.md)   
+ [AbsolutePage、PageCount 和 PageSize 属性示例（VC + +）](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vc.md)   
+ [AbsolutePage 属性（ADO）](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
  [PageCount 属性 (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)

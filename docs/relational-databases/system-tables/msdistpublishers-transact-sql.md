@@ -1,5 +1,5 @@
 ---
-title: MSdistpublishers (Transact SQL) |Microsoft Docs
+title: MSdistpublishers （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,33 +18,33 @@ ms.assetid: 31844099-4b33-4dc9-84b4-bac70aa82598
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2c19f2d8e75a3c9744318d65683b29d1d84857ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67907427"
 ---
 # <a name="msdistpublishers-transact-sql"></a>MSdistpublishers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  **MSdistpublishers**表为每个远程发布服务器支持的本地分发服务器包含一行。 此表存储中**msdb**数据库。  
+  本地分发服务器支持的每个远程发布服务器在**MSdistpublishers**表中各占一行。 该表存储在**msdb**数据库中。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|发布服务器分发服务器的名称。|  
+|**路径名**|**sysname**|发布服务器分发服务器的名称。|  
 |**distribution_db**|**sysname**|分发数据库的名称。|  
 |**working_directory**|**nvarchar(255)**|用于存储发布的数据和架构文件的工作目录的名称。|  
-|**security_mode**|**int**|在分发服务器上实现的安全模式：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。<br /><br /> **1** = Windows 身份验证。|  
-|**login**|**sysname**|登录 ID[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。|  
-|**password**|**nvarchar(524)**|用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的密码（已加密）。|  
-|**active**|**bit**|指示远程发布服务器是否在使用本地分发服务器。|  
-|**受信任**|**bit**|指示远程发布服务器是否使用与本地分发服务器相同的密码：<br /><br /> **0** = A 密码需要远程发布服务器上，才能连接到分发服务器。<br /><br /> **1** = 不需要密码。|  
-|**third_party**|**bit**|发布服务器是否为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的安装：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装。**1** = 异类数据源。|  
-|**publisher_type**|**sysname**|发布服务器类型：<br /><br /> **MSSQLSERVER**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。<br /><br /> **ORACLE** = 标准 Oracle 发布服务器。<br /><br /> **ORACLE 网关**= Oracle 网关发布服务器。|  
-|**storage_connection_string**|**nvarchar(779)**|Azure SQL 数据库存储连接字符串的值。|  
+|**security_mode**|**int**|在分发服务器上实现的安全模式：<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。<br /><br /> **1** = Windows 身份验证。|  
+|**id**|**sysname**|用于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证的登录 ID。|  
+|password |**nvarchar （524）**|用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的密码（已加密）。|  
+|**正在**|**bit**|指示远程发布服务器是否在使用本地分发服务器。|  
+|**受信任**|**bit**|指示远程发布服务器是否使用与本地分发服务器相同的密码：<br /><br /> **0** = 远程发布服务器上需要用来连接到分发服务器的密码。<br /><br /> **1** = 无需密码。|  
+|**third_party**|**bit**|发布服务器是否为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的安装：<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ：安装。**1** = 异类数据源。|  
+|**publisher_type**|**sysname**|发布服务器类型：<br /><br /> **** =  MSSQLSERVER[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布者。<br /><br /> **Oracle** = 标准 Oracle 发布服务器。<br /><br /> **ORACLE 网关**= Oracle 网关发布服务器。|  
+|**storage_connection_string**|**nvarchar （779）**|Azure SQL 数据库存储连接字符串的值。|  
 
   
-## <a name="see-also"></a>请参阅  
- [复制表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

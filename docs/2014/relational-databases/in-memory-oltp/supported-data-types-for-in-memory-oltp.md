@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de5f805a9d722974adf7975f713436bc7b1ca4d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63155157"
 ---
 # <a name="supported-data-types"></a>支持的数据类型
@@ -22,58 +22,58 @@ ms.locfileid: "63155157"
   
  **数值数据类型**  
   
-|数据类型|有关详细信息，请参阅：|  
+|数据类型|更多信息|  
 |---------------|--------------------------|  
-|ssNoversion|[int、bigint、smallint 和 tinyint (Transact-SQL)](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
-|BIGINT|[int、bigint、smallint 和 tinyint (Transact-SQL)](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
-|SMALLINT|[int、bigint、smallint 和 tinyint (Transact-SQL)](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
-|TINYINT|[int、bigint、smallint 和 tinyint (Transact-SQL)](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
+|int|[int、bigint、smallint 和 tinyint (Transact-SQL)](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
+|bigint|[int、bigint、smallint 和 tinyint (Transact-SQL)](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
+|smallint|[int、bigint、smallint 和 tinyint (Transact-SQL)](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
+|tinyint|[int、bigint、smallint 和 tinyint (Transact-SQL)](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
 |Decimal|[decimal 和 numeric (Transact-SQL)](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)|  
-|NUMERIC|[decimal 和 numeric (Transact-SQL)](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)|  
+|numeric|[decimal 和 numeric (Transact-SQL)](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)|  
 |FLOAT|[float 和 real (Transact-SQL)](/sql/t-sql/data-types/float-and-real-transact-sql)|  
-|REAL|[float 和 real (Transact-SQL)](/sql/t-sql/data-types/float-and-real-transact-sql)|  
+|real|[float 和 real (Transact-SQL)](/sql/t-sql/data-types/float-and-real-transact-sql)|  
 |money|[money 和 smallmoney (Transact-SQL)](/sql/t-sql/data-types/money-and-smallmoney-transact-sql)|  
-|SMALLMONEY|[money 和 smallmoney (Transact-SQL)](/sql/t-sql/data-types/money-and-smallmoney-transact-sql)|  
+|smallmoney|[money 和 smallmoney (Transact-SQL)](/sql/t-sql/data-types/money-and-smallmoney-transact-sql)|  
   
  **字符串数据类型**  
   
-|数据类型|有关详细信息，请参阅：|  
+|数据类型|更多信息|  
 |---------------|--------------------------|  
 |char(n)|[char 和 varchar (Transact-SQL)](/sql/t-sql/data-types/char-and-varchar-transact-sql)|  
-|varchar(n) <sup>1</sup>|[char 和 varchar (Transact-SQL)](/sql/t-sql/data-types/char-and-varchar-transact-sql)|  
+|varchar （n） <sup>1</sup>|[char 和 varchar (Transact-SQL)](/sql/t-sql/data-types/char-and-varchar-transact-sql)|  
 |nchar(n)|[nchar 和 nvarchar (Transact-SQL)](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
-|nvarchar(n) <sup>1</sup>|[nchar 和 nvarchar (Transact-SQL)](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
+|nvarchar （n） <sup>1</sup>|[nchar 和 nvarchar (Transact-SQL)](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
 |sysname|[nchar 和 nvarchar (Transact-SQL)](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
   
- <sup>1</sup>限制为每行总数 8060 个字节变量长度类型中的 counting (n)。  
+ <sup>1</sup>限制为每行总数8060个字节，可变长度类型中的计数（n）。  
   
  有关支持的排序规则的信息，请参阅 [Collations and Code Pages](../../database-engine/collations-and-code-pages.md)。  
   
  **日期和时间数据类型**  
   
-|数据类型|有关详细信息，请参阅：|  
+|数据类型|更多信息|  
 |---------------|--------------------------|  
 |date|[date (Transact-SQL)](/sql/t-sql/data-types/date-transact-sql)|  
 |time|[time (Transact-SQL)](/sql/t-sql/data-types/time-transact-sql)|  
-|DATETIME|[datetime (Transact-SQL)](/sql/t-sql/data-types/datetime-transact-sql)|  
+|datetime|[datetime (Transact-SQL)](/sql/t-sql/data-types/datetime-transact-sql)|  
 |datetime2|[datetime2 (Transact-SQL)](/sql/t-sql/data-types/datetime2-transact-sql)|  
 |smalldatetime|[smalldatetime (Transact-SQL)](/sql/t-sql/data-types/smalldatetime-transact-sql)|  
   
  **二进制数据类型**  
   
-|数据类型|有关详细信息，请参阅：|  
+|数据类型|更多信息|  
 |---------------|--------------------------|  
 |bit|[bit (Transact-SQL)](/sql/t-sql/data-types/bit-transact-sql)|  
 |binary(n)|[binary 和 varbinary (Transact-SQL)](/sql/t-sql/data-types/binary-and-varbinary-transact-sql)|  
-|varbinary （n) <sup>1</sup>|[binary 和 varbinary (Transact-SQL)](/sql/t-sql/data-types/binary-and-varbinary-transact-sql)|  
+|varbinary （n） <sup>1</sup>|[binary 和 varbinary (Transact-SQL)](/sql/t-sql/data-types/binary-and-varbinary-transact-sql)|  
   
- <sup>1</sup>限制为每行总数 8060 个字节变量长度类型中的 counting (n)。  
+ <sup>1</sup>限制为每行总数8060个字节，可变长度类型中的计数（n）。  
   
  **其他数据类型**  
   
-|数据类型|有关详细信息，请参阅：|  
+|数据类型|更多信息|  
 |---------------|--------------------------|  
-|UNIQUEIDENTIFIER|[uniqueidentifier (Transact-SQL)](/sql/t-sql/data-types/uniqueidentifier-transact-sql)|  
+|uniqueidentifier|[uniqueidentifier &#40;Transact-sql&#41;](/sql/t-sql/data-types/uniqueidentifier-transact-sql)|  
   
  **不支持的数据类型**  
   
@@ -85,9 +85,9 @@ ms.locfileid: "63155157"
 |HIERARCHYID|大型对象 (LOB)。 例如，varchar(max)、nvarchar(max)、varbinary(max)、image、xml、text 和 ntext。|ROWVERSION|  
 |sql_variant|CLR 函数|用户定义类型 (UDT)|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [对内存中 OLTP 的 Transact-SQL 支持](transact-sql-support-for-in-memory-oltp.md)   
- [在内存优化的表中实现 LOB 列](../../database-engine/implementing-lob-columns-in-a-memory-optimized-table.md)   
+ [在内存优化表中实现 LOB 列](../../database-engine/implementing-lob-columns-in-a-memory-optimized-table.md)   
  [在内存优化的表中实现 SQL_VARIANT](implementing-sql-variant-in-a-memory-optimized-table.md)  
   
   

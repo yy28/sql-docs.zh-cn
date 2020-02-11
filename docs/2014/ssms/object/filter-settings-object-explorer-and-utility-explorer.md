@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 78573a21a5aa6a719a9bb55d0ee17bf9837258f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63277074"
 ---
 # <a name="filter-settings-object-explorer-and-utility-explorer"></a>筛选设置（对象资源管理器和实用工具资源管理器）
@@ -66,13 +66,13 @@ ms.locfileid: "63277074"
   
      此筛选器适用于日期，将显示日期不介于指定的两个日期之间的项。 选择“不介于”  并按 Tab 移出“运算符”  列，即可添加另一行，用于指定第二个日期。  
   
- **ReplTest1**  
+ **值**  
  键入要与属性进行比较的值。 对于日期，请单击下箭头显示日历，以选择日期。  
   
  **清除筛选器**  
  删除所有当前筛选设置。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用 SQL Server Management Studio](../sql-server-management-studio-ssms.md)   
  [SQL Server 实用工具功能和任务](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   

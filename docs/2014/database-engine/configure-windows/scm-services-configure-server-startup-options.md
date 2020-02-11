@@ -17,14 +17,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 91a48d4acd771c19617bac26c1393f30334768e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62810360"
 ---
 # <a name="configure-server-startup-options-sql-server-configuration-manager"></a>配置服务器启动选项（SQL Server 配置管理器）
-  本主题介绍如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 每次启动时使用的启动选项。 有关启动选项列表，请参阅 [数据库引擎服务启动选项](database-engine-service-startup-options.md)。  
+  本主题介绍如何使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration Manager 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 每次启动时使用的启动选项。 有关启动选项列表，请参阅 [数据库引擎服务启动选项](database-engine-service-startup-options.md)。  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -33,9 +33,9 @@ ms.locfileid: "62810360"
   
  在群集上，更改必须在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 处于联机状态的情况下，在活动服务器上进行，并且在重新启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 时生效。 在其他节点上，启动选项的注册表更新将在下次故障转移时进行。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  只有可以更改注册表中的相关项的用户才能配置服务器启动选项。 其中包括以下用户。  
   
 -   本地管理员组的成员。  
@@ -52,24 +52,24 @@ ms.locfileid: "62810360"
     >  因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台程序的一个管理单元而不是单独的程序，所以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器在新版本的 Windows 中不显示为一个应用程序。  
     >   
     >  -   **Windows 10**：  
-    >          若要打开[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]配置管理器，然后在**起始页**，键入 SQLServerManager12.msc (对于[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])。 对于早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请将 12 替换为较小的数字。 单击 SQLServerManager12.msc 会打开配置管理器。 若要固定到起始页或任务栏配置管理器，右键单击 SQLServerManager12.msc，然后依次**打开文件位置**。 在 Windows 文件资源管理器中，右键单击 SQLServerManager12.msc，，然后单击**固定到开始屏幕**或**锁定到任务栏**。  
+    >          若要[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]打开 Configuration Manager，请在 "**开始" 页**上键入 sqlservermanager12.msc （ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]对于）。 对于早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请将 12 替换为较小的数字。 单击 SQLServerManager12.msc 可打开“配置管理器”。 若要将 Configuration Manager 固定到 "起始页" 或 "任务栏"，请右键单击 "Sqlservermanager12.msc"，然后单击 "**打开文件位置**"。 在 Windows 文件资源管理器中，右键单击 "Sqlservermanager12.msc"，然后单击 "**固定到****任务栏**"。  
     > -   **Windows 8**：  
-    >          若要打开[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]配置管理器，请在**搜索**超级按钮**应用**，类型**SQLServerManager\<版本 >.msc**如`SQLServerManager12.msc`，然后按**Enter**。  
+    >          若要[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]打开 Configuration Manager，请在 "**搜索**" 超级按钮中的 "**应用**" 下，键入`SQLServerManager12.msc` **Sqlservermanager version>.msc\<version>** （如），然后按**enter**。  
   
-2.  在右侧窗格中，右键单击 “SQL Server (<instance_name>)” **** ，然后单击“属性”  。  
+2.  在右侧窗格中，右键单击**SQL Server （***<instance_name>***）**，然后单击 "**属性**"。  
   
 3.  在 **“启动参数”** 选项卡上的 **“指定启动参数”** 框中，键入该参数，然后单击 **“添加”** 。  
   
-     例如，若要在单用户模式启动，请键入`-m`中**指定启动参数**框，然后单击**添加**。 （以单用户模式重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，请停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理。 否则， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可能会首先连接，并阻止你作为第二个用户连接。）  
+     例如，若要在单用户模式下启动，请`-m`在 "**指定启动参数**" 框中键入，然后单击 "**添加**"。 （以单用户模式重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，请停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理。 否则， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可能会首先连接，并阻止你作为第二个用户连接。）  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 5.  重新启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
     > [!WARNING]  
-    >  结束单用户模式下，使用启动参数框中后，选择`-m`中的参数**现有参数**框中，然后依次**删除**。 重新启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还原为典型的多用户模式。  
+    >  完成单用户模式的使用之后，在 "启动参数" 框中选择 " `-m` **现有参数**" 框中的参数，然后单击 "**删除**"。 重新启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还原为典型的多用户模式。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在单用户模式下启动 SQL Server](start-sql-server-in-single-user-mode.md)   
  [在系统管理员被锁定时连接到 SQL Server](connect-to-sql-server-when-system-administrators-are-locked-out.md)   
  [启动、停止或暂停 SQL Server 代理服务](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  

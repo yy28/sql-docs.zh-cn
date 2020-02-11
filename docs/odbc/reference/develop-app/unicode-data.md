@@ -16,35 +16,35 @@ ms.assetid: abc28718-e6d9-49fb-97ff-402d50c3c375
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 899924b5c0847d5f42e383a9e04c33298bb368b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68087747"
 ---
 # <a name="unicode-data"></a>Unicode 数据
-提供 SQL Unicode 数据类型来描述驻留在本机上 DBMS 为 Unicode 的数据。 提供一种 C Unicode 数据类型以使应用程序将数据绑定到 Unicode 缓冲区。 驱动程序管理器可以将数据从 Unicode C 类型 (SQL_C_WCHAR) 以使其转换函数使用 ANSI 驱动程序。  
+提供了 SQL Unicode 数据类型，用于描述本机上以 Unicode 格式保存的数据。 提供 C Unicode 数据类型，使应用程序可以将数据绑定到 Unicode 缓冲区。 驱动程序管理器可以转换 Unicode C 类型（SQL_C_WCHAR）中的数据，使其与 ANSI 驱动程序一起工作。  
   
- ODBC 3.0 或 2。*x*应用程序将始终绑定到的 ANSI 数据类型。 为获得最佳性能，ODBC 3.5 （或更高版本） 应用程序应绑定到 ANSI C 数据类型中，如果 SQL 列类型为 ANSI，并应将绑定到 Unicode C 数据类型 SQL 列类型是否为 Unicode。  
+ ODBC 3.0 或2。*x*应用程序将始终绑定到 ANSI 数据类型。 为了获得最佳性能，如果 SQL 列类型为 ANSI，ODBC 3.5 （或更高版本）应用程序应绑定到 ANSI data C 类型，如果 SQL 列类型为 Unicode，则应绑定到 Unicode C 数据类型。  
   
- SQL Unicode 类型指示符为 SQL_WCHAR、 SQL_WVARCHAR 和 SQL_WLONGVARCHAR。 SQL_WCHAR 数据有固定的字符串的长度，而 SQL_WVARCHAR 具有可变长度的声明的最大值和 SQL_WLONGVARCHAR 具有可变长度取决于数据源的最大值。  
+ SQL Unicode 类型指示器是 SQL_WCHAR、SQL_WVARCHAR 和 SQL_WLONGVARCHAR。 SQL_WCHAR 数据具有固定字符串长度，而 SQL_WVARCHAR 的可变长度为已声明的最大值，SQL_WLONGVARCHAR 的长度可变，且最大值取决于数据源。  
   
- C Unicode 类型指示符是 SQL_C_WCHAR。 这是默认值为每个 SQL Unicode 类型指示符。 所有 SQL 类型可以转换为 sql_c_wchar; 和 SQL_C_WCHAR 可以转换为的所有 SQL 类型。 应用程序可以检索数据中有以下三种：  
+ C Unicode 类型指示器 SQL_C_WCHAR。 这是每个 SQL Unicode 类型指示器的默认值。 所有 SQL 类型都可以转换为 SQL_C_WCHAR，SQL_C_WCHAR 可转换为所有 SQL 类型。 应用程序可以通过以下三种方式之一来检索数据：  
   
--   检索为 SQL_C_CHAR 数据。  
+-   检索 SQL_C_CHAR 数据。  
   
--   像 sql_c_wchar 一样检索数据。  
+-   检索 SQL_C_WCHAR 数据。  
   
--   将数据声明为 SQL_C_TCHAR。 这是一个宏来插入 SQL_C_WCHAR，如果应用程序编译为 Unicode 应用程序，或者插入 SQL_C_CHAR，如果它被编译成 ANSI 应用程序。  
+-   将数据声明为 SQL_C_TCHAR。 这是一个宏，如果将应用程序编译为 Unicode 应用程序 SQL_C_CHAR 或将其编译为 ANSI 应用程序，则插入 SQL_C_WCHAR。  
   
- SQL_C_TCHAR，如下所示的函数中声明：  
+ 在函数中声明 SQL_C_TCHAR，如下所示：  
   
 ```  
 SQLBindParameter(StatementHandle, 1, SQL_PARAM_INPUT, SQL_C_TCHAR, SQL_WCHAR, NameLen, 0, Name, 0, &Name)  
 ```  
   
- 当应用程序编译为 Unicode 应用程序， *ValueType*参数将更改从 SQL_C_TCHAR 为 SQL_C_WCHAR。 在作为 ANSI 应用程序，编译应用程序时*ValueType*参数将更改为 SQL_C_CHAR。  
+ 当应用程序编译为 Unicode 应用程序时， *ValueType*参数将从 SQL_C_TCHAR 更改为 SQL_C_WCHAR。 当应用程序编译为 ANSI 应用程序时， *ValueType*参数将更改为 SQL_C_CHAR。  
   
- Unicode 驱动程序必须仍支持 ANSI 数据类型，包括 SQL_CHAR。 如果使用 Unicode 驱动程序的应用程序绑定到 SQL_CHAR，驱动程序管理器将映射到 SQL_WCHAR SQL_CHAR 数据。 Unicode 驱动程序必须接受 SQL_CHAR 数据。  
+ Unicode 驱动程序必须仍支持 ANSI 数据类型，包括 SQL_CHAR。 如果使用 Unicode 驱动程序的应用程序绑定到 SQL_CHAR，则驱动程序管理器不会将 SQL_CHAR 数据映射到 SQL_WCHAR。 Unicode 驱动程序必须接受 SQL_CHAR 的数据。  
   
- 驱动程序管理器以 Unicode 存储驱动程序和 DSN 名称，并根据需要将它们映射为 ANSI。 如果 Unicode 字符不能映射为 ANSI 字符 （如可以发生，如果不是计算机的本机代码页的代码页中的字符用在驱动程序和 DSN 名称），由默认字符 sup 表示无法转换的字符plied 系统。
+ 驱动程序管理器将驱动程序和 DSN 名称按 Unicode 存储，并根据需要将它们映射到 ANSI。 如果 Unicode 字符不能映射到 ANSI 字符（如在驱动程序和 DSN 名称中使用了不是计算机的本机代码页的代码页中的字符，则可能会出现这种情况），则不能转换的字符由默认字符 sup 表示plied 系统。

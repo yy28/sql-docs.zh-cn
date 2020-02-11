@@ -1,5 +1,5 @@
 ---
-title: 数据集属性对话框中，字段 |Microsoft Docs
+title: "\"数据集属性\" 对话框-\"字段\" |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -14,18 +14,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 133d905958f0613d9b7ecf2d28c439c15a59eedb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109394"
 ---
 # <a name="dataset-properties-dialog-box-fields"></a>“数据集属性”对话框 -&gt;“字段”
   在 **“数据集属性”** 对话框中选择 **“字段”** 可更改报表数据集的字段集合。 尽管字段列表是自动填充的，但是可以使用 **“字段”** 来添加、编辑和删除查询及计算字段。  
   
 ## <a name="options"></a>选项  
- **“添加”**  
- 将新查询字段或计算的字段添加到数据集。  
+ **添加**  
+ 向数据集添加新的查询字段或计算字段。  
   
  **删除**  
  从数据集中删除所选字段。  
@@ -43,9 +43,9 @@ ms.locfileid: "66109394"
  **表达式 (fx)**  
  添加或更改计算字段的表达式。 仅当单击 **“添加”** 并选择 **“计算字段”** 时，才会显示此按钮。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据集字段集合（报表生成器和 SSRS）](report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [向报表添加数据&#40;报表生成器和 SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [将数据添加到报表 &#40;报表生成器和 SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [表达式（报表生成器和 SSRS）](report-design/expressions-report-builder-and-ssrs.md)  
   
   

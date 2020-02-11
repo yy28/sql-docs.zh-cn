@@ -1,5 +1,5 @@
 ---
-title: 从 CLR 数据库对象的数据访问 |Microsoft Docs
+title: 从 CLR 数据库对象进行数据访问 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,14 +24,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4561c7b8979a919ea144bab6d9b42f722b089e48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874082"
 ---
 # <a name="data-access-from-clr-database-objects"></a>从 CLR 数据库对象进行数据访问
-  公共语言运行时 (CLR) 例程可以轻松地访问数据的实例中存储[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]中它运行所在，以及在远程实例中存储的数据。 该例程可以访问的特定数据由代码正在其中运行的用户上下文确定。 通过使用用于.NET Framework 数据提供程序访问数据从 CLR 数据库对象内的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]托管客户端和中间层应用程序中的数据。 因此，您可以在客户端和中间层应用程序中充分利用您所掌握的有关 ADO.NET 和 `SqlClient` 的知识。  
+  公共语言运行时（CLR）例程可以轻松地访问存储在其中运行的[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]实例中的数据，以及存储在远程实例中的数据。 该例程可以访问的特定数据由代码正在其中运行的用户上下文确定。 通过使用来自托管客户端和中间层应用程序的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据的 .NET Framework 数据提供程序，从 CLR 数据库对象中访问数据。 因此，您可以在客户端和中间层应用程序中充分利用您所掌握的有关 ADO.NET 和 `SqlClient` 的知识。  
   
 > [!NOTE]  
 >  默认情况下，不允许用户定义类型方法和用户定义函数执行数据访问。 您必须将 `DataAccess` 或 `SqlMethodAttribute` 的 `SqlFunctionAttribute` 属性设置为 `DataAccessKind.Read`，才能从用户定义类型 (UDT) 方法或用户定义函数进行只读数据访问。 不允许从 UDT 或用户定义函数执行数据修改操作，否则，将在执行时引发异常。  

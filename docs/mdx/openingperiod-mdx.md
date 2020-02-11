@@ -1,5 +1,5 @@
 ---
-title: OpeningPeriod (MDX) |Microsoft Docs
+title: OpeningPeriod （MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 07f94c3ed850af10120b1de7d95941bc5c90e826
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68088224"
 ---
 # <a name="openingperiod-mdx"></a>OpeningPeriod (MDX)
@@ -37,14 +37,14 @@ OpeningPeriod( [ Level_Expression [ , Member_Expression ] ] )
 ## <a name="remarks"></a>备注  
  该函数主要用于时间维度，但是也可以用于任何维度。  
   
--   如果指定了级别表达式，则**OpeningPeriod**函数使用的层次结构，包含指定的级别，并返回指定级别上的默认成员的后代中的第一个同级。  
+-   如果指定了级别表达式，则**OpeningPeriod**函数将使用包含指定级别的层次结构，并返回默认成员在指定级别的后代中的第一个同级。  
   
--   如果指定了级别表达式和成员表达式， **OpeningPeriod**函数将返回包含指定层次结构中的指定级别上的指定成员的后代中的第一个同级级别。  
+-   如果同时指定了级别表达式和成员表达式，则**OpeningPeriod**函数将返回指定成员在包含指定级别的层次结构内指定级别的后代中的第一个同级。  
   
--   如果指定了级别表达式既不是成员表达式， **OpeningPeriod**函数使用的是类型的时间的默认级别和维度的成员。  
+-   如果级别表达式和成员表达式均未指定，则**OpeningPeriod**函数将使用类型为 Time 的维度的默认级别和成员。  
   
 > [!NOTE]  
->  [ClosingPeriod](../mdx/closingperiod-mdx.md)函数是类似于**OpeningPeriod**函数，不同之处在于**ClosingPeriod**函数返回的最后一个同级而不是第一个同级。  
+>  [ClosingPeriod](../mdx/closingperiod-mdx.md)函数类似于**OpeningPeriod**函数，不同之处在于**ClosingPeriod**函数返回最后一个同级，而不是第一个同级。  
   
 ## <a name="examples"></a>示例  
  下面的示例将返回 Date 维度（Time 类型）FY2002 成员的默认度量值。 返回该成员是因为 Fiscal Year 级别是 [All] 级别的第一个后代，Fiscal 层次结构为默认层次结构是由于 Fiscal 层次结构是层次结构集合中第一个用户定义的层次结构，而且 FY2002 成员是该层次结构中该级别上的第一个同级。  
@@ -79,9 +79,9 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [TopCount &#40;MDX&#41;](../mdx/topcount-mdx.md)   
- [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)   
+ [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
  [FirstSibling &#40;MDX&#41;](../mdx/firstsibling-mdx.md)  
   
   

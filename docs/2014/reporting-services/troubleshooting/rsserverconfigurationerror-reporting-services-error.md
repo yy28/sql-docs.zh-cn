@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 19778bce64e5779471e78b8c4305e1bd6315c0ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099212"
 ---
 # <a name="rsserverconfigurationerror---reporting-services-error"></a>rsServerConfigurationError - Reporting Services 错误
@@ -31,7 +31,7 @@ ms.locfileid: "66099212"
 |组件|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
 |消息正文|报表服务器遇到配置错误。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  这是一个在报表服务器或报表创作工具具有无效配置设置时出现的常规错误。 通常该错误还附带另一条消息，该消息声明此错误的实际原因。  
   
  下面的列表汇总了可能的原因：  
@@ -47,11 +47,11 @@ ms.locfileid: "66099212"
 ## <a name="user-action"></a>用户操作  
  如果该错误在您手动编辑配置文件后开始出现，请删除所做的更改并输入以前的值，或者如果您有备份，请还原先前的版本。  
   
- 若要查看其他错误消息信息附带`rsServerConfiguration`错误，查看报表服务器跟踪日志文件，位于 \Microsoft SQL Server\MSRS12。\<实例名 > services\logfiles。 有关详细信息，请参阅 [Reporting Services 日志文件和源](../report-server/reporting-services-log-files-and-sources.md)。  
+ 若要查看`rsServerConfiguration`错误附带的其他错误消息信息，请查看 Report Server 跟踪日志文件，这些文件位于 \Microsoft SQL Server\MSRS12。\<instancename > \reporting services\logfiles。 有关详细信息，请参阅 [Reporting Services 日志文件和源](../report-server/reporting-services-log-files-and-sources.md)。  
   
 ## <a name="internal-only"></a>仅内部  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Reporting Services 配置文件](../report-server/reporting-services-configuration-files.md)   
  [修改 Reporting Services 配置文件 (RSreportserver.config)](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
   

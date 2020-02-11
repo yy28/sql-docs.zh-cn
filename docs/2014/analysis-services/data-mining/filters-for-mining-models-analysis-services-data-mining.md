@@ -1,5 +1,5 @@
 ---
-title: 挖掘模型的筛选器 (Analysis Services-数据挖掘) |Microsoft Docs
+title: 挖掘模型的筛选器（Analysis Services 数据挖掘） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44e60d60764396361122ed16a4e34f76fc3a6ab6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084431"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>挖掘模型的筛选器（Analysis Services - 数据挖掘）
@@ -43,14 +43,14 @@ ms.locfileid: "66084431"
   
 -   使用数据挖掘设计器中的 **“挖掘模型”** 选项卡，并借助筛选器编辑器对话框生成各个条件。  
   
--   键入筛选器表达式直接`Filter`挖掘模型的属性。  
+-   在挖掘模型的`Filter`属性中直接键入筛选表达式。  
   
 -   使用 AMO 以编程方式对模型设置筛选条件。  
   
 ### <a name="creating-model-filters-using-data-mining-designer"></a>使用数据挖掘设计器创建模型筛选器  
  可以通过更改挖掘模型的 `Filter` 属性在数据挖掘设计器中筛选模型。 可以在 **“属性”** 窗格中直接键入筛选表达式，也可以打开一个筛选器对话框来生成条件。  
   
- 共有两个筛选器对话框。 第一个对话框可用来创建应用于事例表的条件。 如果数据源中包含多个表，请首先选择一个表，然后选择一列并指定应用于该列的运算符和条件。 可以将多个条件链接使用`AND` / `OR`运算符。 可用于定义值的运算符取决于该列是包含离散值还是连续值。 例如，对于连续值，可以使用 `greater than` 和 `less than` 运算符。 但是，对于离散值，只能使用 `= (equal to)`、`!= (not equal to)` 和 `is null` 运算符。  
+ 共有两个筛选器对话框。 第一个对话框可用来创建应用于事例表的条件。 如果数据源中包含多个表，请首先选择一个表，然后选择一列并指定应用于该列的运算符和条件。 可以通过使用`AND` / `OR`运算符来链接多个条件。 可用于定义值的运算符取决于该列是包含离散值还是连续值。 例如，对于连续值，可以使用 `greater than` 和 `less than` 运算符。 但是，对于离散值，只能使用 `= (equal to)`、`!= (not equal to)` 和 `is null` 运算符。  
   
 > [!NOTE]  
 >  不支持使用 `LIKE` 关键字。 如果您希望包括多个离散属性，则必须创建不同条件并使用 `OR` 运算符来链接它们。  
@@ -62,7 +62,7 @@ ms.locfileid: "66084431"
   
  例如，如果您的事例表与客户相关，而且嵌套表中显示客户已经购买的产品，则可以通过在嵌套表的筛选器中使用下面的语法来为已经购买了特定商品的客户创建一个筛选器： `[ProductName]='Water Bottle' OR ProductName='Water Bottle Cage'`。  
   
- 还可以使用 `EXISTS` 或 `NOT EXISTS` 关键字和子查询在嵌套表中筛选特定值，以查看其是否存在。 这允许您创建诸如 `EXISTS (SELECT * FROM Products WHERE ProductName='Water Bottle')`之类的条件。 如果嵌套表中至少有一行包括 `EXISTS SELECT(<subquery>)` 值，则 `Water Bottle` 将返回 `true`。  
+ 还可以使用 `EXISTS` 或 `NOT EXISTS` 关键字和子查询在嵌套表中筛选特定值，以查看其是否存在。 这允许您创建诸如 `EXISTS (SELECT * FROM Products WHERE ProductName='Water Bottle')`之类的条件。 如果嵌套表中至少有一行包括 `EXISTS SELECT(<subquery>)` 值，则 `true` 将返回 `Water Bottle`。  
   
  可以将事例表中的条件与嵌套表中的条件组合起来。 例如，下面的语法包括事例表中的一个条件 (`Age > 30` )、嵌套表中的一个子查询 (`EXISTS (SELECT * FROM Products)`) 以及嵌套表中的多个条件 (`WHERE ProductName='Milk'  AND Quantity>2`)。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "66084431"
 ### <a name="how-can-i-tell-whether-a-filter-is-being-used"></a>我如何分辨是否正在使用筛选器？  
  可以使用多种方法确定是否对模型应用了筛选器：  
   
--   在设计器中，单击**挖掘模型**选项卡上，打开**属性**，并查看`Filter`挖掘模型的属性。  
+-   在设计器中，单击 "**挖掘模型**" 选项卡，打开 "**属性**"，然后查看挖掘模型的`Filter`属性。  
   
 -   DMV DMSCHEMA_MINING_MODELS 将输出一个包含筛选器文本的列。 您可以使用以下有关 DMV 的查询来返回模型的名称及其筛选器：  
   
@@ -99,7 +99,7 @@ ms.locfileid: "66084431"
 ### <a name="how-can-i-save-a-filter"></a>如何保存筛选器？  
  筛选表达式将保存为脚本，并随其关联挖掘模型或嵌套表一起存储。 如果删除了筛选器文本，则只能通过手动重新创建筛选表达式的方式来将其还原。 因此，如果创建了复杂的筛选表达式，还应当创建筛选器文本的备份副本。  
   
-### <a name="why-cant-i-see-any-effects-from-the-filter"></a>为何看不到筛选器造成任何影响？  
+### <a name="why-cant-i-see-any-effects-from-the-filter"></a>为什么看不到来自筛选器的任何效果？  
  无论何时更改或添加筛选表达式，都必须重新处理挖掘结构和挖掘模型，然后才能查看筛选器的效果。  
   
 ### <a name="why-do-i-see-filtered-attributes-in-prediction-query-results"></a>为什么我在预测查询结果中会看到已筛选的属性？  
@@ -120,8 +120,8 @@ ms.locfileid: "66084431"
   
  有关在测试挖掘模型时如何使用模型筛选器的信息，请参阅 [选择准确性图表类型和设置图表选项](choose-an-accuracy-chart-type-and-set-chart-options.md)。  
   
-## <a name="see-also"></a>请参阅  
- [模型筛选器语法和示例（Analysis Services – 数据挖掘）](model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [测试和验证（数据挖掘）](testing-and-validation-data-mining.md)  
+## <a name="see-also"></a>另请参阅  
+ [模型筛选器语法和示例 &#40;Analysis Services 数据挖掘&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md)   
+ [测试和验证 &#40;数据挖掘&#41;](testing-and-validation-data-mining.md)  
   
   

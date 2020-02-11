@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: de9a9d71a90f33db85636b1bd0344023f1a86c91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63155385"
 ---
 # <a name="create-filtered-indexes"></a>创建筛选索引
@@ -90,9 +90,9 @@ ms.locfileid: "63155385"
   
 -   如果筛选索引结果的筛选索引表达式中指定的比较运算符会导致隐式或显式数据转换，则转换发生在比较运算符的左边时，会出现错误。 解决方法是在比较运算符的右边编写包含数据转换运算符（CAST 或 CONVERT）的筛选索引表达式。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求对表或视图具有 ALTER 权限。 用户必须是 **sysadmin** 固定服务器角色的成员，或者是 **db_ddladmin** 和 **db_owner** 固定数据库角色的成员。 若要修改筛选索引表达式，请使用 CREATE INDEX WITH DROP_EXISTING。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -111,13 +111,13 @@ ms.locfileid: "63155385"
   
 6.  在“索引键列”下，单击“添加…”   。  
   
-7.  在“从 table_name  选择列”  对话框中，选中要添加到唯一索引的一个或多个表列的复选框。  
+7.  在 "**从**_Table_name_中选择列" 对话框中，选中要添加到唯一索引的一个或多个表列的复选框。  
   
-8.  单击“确定”  。  
+8.  单击“确定”。   
   
-9. 在“筛选器”页的“筛选表达式”下，输入要用于创建筛选索引的 SQL 表达式   。  
+9. 在“筛选器”页的“筛选表达式”下，输入要用于创建筛选索引的 SQL 表达式********。  
   
-10. 单击“确定”  。  
+10. 单击“确定”。   
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -180,6 +180,6 @@ ms.locfileid: "63155385"
     GO  
     ```  
   
- 有关详细信息，请参阅 [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql)。  
+ 有关详细信息，请参阅[CREATE INDEX &#40;transact-sql&#41;](/sql/t-sql/statements/create-index-transact-sql)。  
   
   

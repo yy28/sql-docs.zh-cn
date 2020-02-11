@@ -1,5 +1,5 @@
 ---
-title: 驱动程序的用途 |Microsoft Docs
+title: 驱动程序的作用 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,23 +17,23 @@ ms.assetid: 75dcdea6-ff6b-4ac8-aa11-a1f9edbeb8e6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5f27efed55a2ae63b8c3726263077441bdacc49b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68135719"
 ---
 # <a name="what-the-driver-does"></a>驱动程序的用途
-下表总结了哪些功能和语句属性 ODBC *3.x*驱动程序应实现的块和可滚动游标。  
+下表总结*了 ODBC 2.x*驱动程序应为块和可滚动游标实现的函数和语句属性。  
   
-|函数或<br /><br /> 语句属性|注释|  
+|函数或<br /><br /> 语句特性|注释|  
 |-----------------------------------------|--------------|  
-|SQL_ATTR_ROW_STATUS_PTR|集由行状态数组的地址填写**SQLFetch**并**SQLFetchScroll**。 此数组还通过来填充**SQLSetPos**如果**SQLSetPos**语句状态 S6 中调用。 如果**SQLSetPos**称为在 S7 状态中，不填充此数组，但指向的数组*RowStatusArray*自变量**SQLExtendedFetch**进行填充。 有关详细信息，请参阅[语句转换](../../../odbc/reference/appendixes/statement-transitions.md)在附录 b:状态转换表。|  
-|SQL_ATTR_ROWS_FETCHED_PTR|在其中设置缓冲区的地址**SQLFetch**并**SQLFetchScroll**返回提取的行数。 如果**SQLExtendedFetch**是调用，不填充此缓冲区，但*RowCountPtr*参数指向提取的行数。|  
-|SQL_ATTR_ROW_ARRAY_SIZE|设置使用的行集大小**SQLFetch**并**SQLFetchScroll**。|  
-|SQL_ROWSET_SIZE|设置使用的行集大小**SQLExtendedFetch**。 ODBC *3.x*如果他们想要使用 ODBC 驱动程序，则实现此*2.x*调用的应用程序**SQLExtendedFetch**或者**SQLSetPos**。|  
-|**SQLBulkOperations**|如果 ODBC *3.x*驱动程序应使用 ODBC *2.x*使用的应用程序**SQLSetPos**与*操作*的 SQL_ADD，驱动程序必须支持**SQLSetPos**与*操作*的除了 SQL_ADD **SQLBulkOperations**与*操作*的 SQL添加 （_A)。|  
-|**SQLExtendedFetch**|返回指定行集。 ODBC *3.x*如果他们想要使用 ODBC 驱动程序，则实现此*2.x*调用的应用程序**SQLExtendedFetch**或者**SQLSetPos**。 以下是实现详细信息：<br /><br /> -驱动程序从 SQL_ROWSET_SIZE 语句属性的值中检索行集大小。<br />-驱动程序检索的行状态数组，从地址*RowStatusArray*参数时，不将 SQL_ATTR_ROW_STATUS_PTR 语句属性。 *RowStatusArray*调用中的参数**SQLExtendedFetch**必须不能为 null 指针。 (请注意，在 ODBC *3.x*，SQL_ATTR_ROW_STATUS_PTR 语句属性可以为 null 指针。)<br />-驱动程序检索中的行提取缓冲区的地址*RowCountPtr*参数时，不将 SQL_ATTR_ROWS_FETCHED_PTR 语句属性。<br />-驱动程序将返回 SQLSTATE 01S01 （行中的错误） 以指示错误发生时通过调用提取的行**SQLExtendedFetch**。 ODBC *3.x*驱动程序应返回 SQLSTATE 01S01 （行中的错误） 时，才**SQLExtendedFetch**调用时，不时**SQLFetch**或**SQLFetchScroll**调用。 若要保留向后兼容，当 SQLSTATE 01S01 （行中的错误） 返回的**SQLExtendedFetch**，驱动程序管理器不会根据"序列的状态中所述的规则，错误队列中进行排序状态记录记录"部分[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)。|  
-|**SQLFetch**|返回下一步的行集。 以下是实现详细信息：<br /><br /> -驱动程序从 SQL_ATTR_ROW_ARRAY_SIZE 语句属性的值中检索行集大小。<br />-驱动程序从 SQL_ATTR_ROW_STATUS_PTR 语句属性检索的行状态数组的地址。<br />-驱动程序检索从 SQL_ATTR_ROWS_FETCHED_PTR 语句属性提取缓冲区行的地址。<br />-应用程序可以混合使用之间的调用**SQLFetchScroll**并**SQLFetch**。<br />-   **SQLFetch**如果绑定列 0，则返回的书签。<br />-   **SQLFetch**可以调用以返回多个行。<br />-驱动程序不会返回 SQLSTATE 01S01 （行中的错误） 以指示错误发生时通过调用提取的行**SQLFetch**。|  
-|**SQLFetchScroll**|返回指定行集。 以下是实现详细信息：<br /><br /> -驱动程序从 SQL_ATTR_ROW_ARRAY_SIZE 语句属性中检索行集大小。<br />-驱动程序从 SQL_ATTR_ROW_STATUS_PTR 语句属性检索的行状态数组的地址。<br />-驱动程序检索从 SQL_ATTR_ROWS_FETCHED_PTR 语句属性提取缓冲区行的地址。<br />-应用程序可以混合使用之间的调用**SQLFetchScroll**并**SQLFetch**。<br />-驱动程序不会返回 SQLSTATE 01S01 （行中的错误） 以指示错误发生时通过调用提取的行**SQLFetchScroll**。|  
-|**SQLSetPos**|执行各种定位的操作。 以下是实现详细信息：<br /><br /> -这可调用语句状态 S6 或 S7 中。 有关更多详细信息，请参阅[语句转换](../../../odbc/reference/appendixes/statement-transitions.md)在附录 b:状态转换表。<br />-如果这在语句状态 S5 或 S6 中调用，该驱动程序检索行集大小从 SQL_ATTR_ROWS_FETCHED_PTR 语句属性和行状态数组从 SQL_ATTR_ROW_STATUS_PTR 语句属性的地址。<br />-该驱动程序如果这在语句的状态 S7 中调用，从 SQL_ROWSET_SIZE 语句属性和行状态数组，从地址中检索行集大小*RowStatusArray*自变量的**SQLExtendedFetch**。<br />-驱动程序将返回 SQLSTATE 01S01 （行中的错误） 仅以指示错误发生时通过调用提取的行**SQLSetPos**在 S7 状态中调用该函数时执行大容量操作。 若要保留向后兼容性，如果 SQLSTATE 01S01 （行中的错误） 返回的**SQLSetPos**，驱动程序管理器不会根据序列的状态"记录"中所述的规则，错误队列中进行排序状态记录部分[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)。<br />-如果驱动程序应使用 ODBC *2.x*调用的应用程序**SQLSetPos**与*操作*SQL_ADD 参数，该驱动程序必须支持**SQLSetPos**与*操作*SQL_ADD 参数。|
+|SQL_ATTR_ROW_STATUS_PTR|设置由**SQLFetch**和**SQLFetchScroll**填充的行状态数组的地址。 如果在语句状态 S6 中调用**SQLSetPos** ，则此数组也由**SQLSetPos**填充。 如果在状态 S7 中调用**SQLSetPos** ，则不会填充此数组，但会填充**SQLExtendedFetch**的*RowStatusArray*参数所指向的数组。 有关详细信息，请参阅附录 B： ODBC 状态转换表中的[语句转换](../../../odbc/reference/appendixes/statement-transitions.md)。|  
+|SQL_ATTR_ROWS_FETCHED_PTR|设置缓冲区的地址，其中**SQLFetch**和**SQLFetchScroll**返回提取的行数。 如果调用**SQLExtendedFetch** ，则不填充此缓冲区，而*RowCountPtr*参数则指向提取的行数。|  
+|SQL_ATTR_ROW_ARRAY_SIZE|设置**SQLFetch**和**SQLFetchScroll**使用的行集大小。|  
+|SQL_ROWSET_SIZE|设置**SQLExtendedFetch**使用的行集大小。 如果 ODBC 2.x 驱动程序要使用调用**SQLExtendedFetch**或**SQLSetPos***的 odbc 1.x* *应用程序，* 则会实现此操作。|  
+|**SQLBulkOperations**|如果 ODBC 1.x*驱动程序*应与使用**SQLSetPos**的 odbc 2.x 应用程序一起使用，并且*该应用程序*使用的是 SQL_ADD 的*操作*，则该驱动程序必须支持**SQLSetPos**的 SQL_ADD*操作*以及具有 SQL_ADD*操作*的**SQLBulkOperations** 。|  
+|**SQLExtendedFetch**|返回指定的行集。 如果 ODBC 2.x 驱动程序要使用调用**SQLExtendedFetch**或**SQLSetPos***的 odbc 1.x* *应用程序，* 则会实现此操作。 下面是实现的详细信息：<br /><br /> -驱动程序从 SQL_ROWSET_SIZE 语句特性的值检索行集大小。<br />-驱动程序从*RowStatusArray*参数而不是 SQL_ATTR_ROW_STATUS_PTR 语句属性中检索行状态数组的地址。 对**SQLExtendedFetch**的调用中的*RowStatusArray*参数不能为 null 指针。 （请注意，在*ODBC 3.x 中，* SQL_ATTR_ROW_STATUS_PTR 语句特性可以是 null 指针。）<br />-驱动程序从*RowCountPtr*参数而不是 SQL_ATTR_ROWS_FETCHED_PTR 语句属性中检索已提取缓冲区的行的地址。<br />-驱动程序返回 SQLSTATE 01S01 （行中的错误）以指示在调用**SQLExtendedFetch**获取行时出现错误。 仅当调用**SQLExtendedFetch**时 *，ODBC 1.x*驱动程序应返回 SQLSTATE 01S01 （在行中出错），而不应在调用**SQLFetch**或**SQLFetchScroll**时返回。 为了保持向后兼容， **SQLExtendedFetch**返回 SQLSTATE 01S01 （行中的错误）时，驱动程序管理器不会根据[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)的 "状态记录序列" 部分中所述的规则对错误队列中的状态记录进行排序。|  
+|**SQLFetch**|返回下一个行集。 下面是实现的详细信息：<br /><br /> -驱动程序从 SQL_ATTR_ROW_ARRAY_SIZE 语句特性的值检索行集大小。<br />-驱动程序从 SQL_ATTR_ROW_STATUS_PTR 语句属性中检索行状态数组的地址。<br />-驱动程序从 SQL_ATTR_ROWS_FETCHED_PTR 语句属性中检索已提取缓冲区的行的地址。<br />-应用程序可以在**SQLFetchScroll**和**SQLFetch**之间混合调用。<br />-   如果绑定列0， **SQLFetch**将返回书签。<br />-   可以调用**SQLFetch**来返回多行。<br />-驱动程序不会返回 SQLSTATE 01S01 （行中的错误）以指示在调用**SQLFetch**获取行时出现错误。|  
+|**SQLFetchScroll**|返回指定的行集。 下面是实现的详细信息：<br /><br /> -驱动程序从 SQL_ATTR_ROW_ARRAY_SIZE 语句属性中检索行集大小。<br />-驱动程序从 SQL_ATTR_ROW_STATUS_PTR 语句属性中检索行状态数组的地址。<br />-驱动程序从 SQL_ATTR_ROWS_FETCHED_PTR 语句属性中检索已提取缓冲区的行的地址。<br />-应用程序可以在**SQLFetchScroll**和**SQLFetch**之间混合调用。<br />-驱动程序不会返回 SQLSTATE 01S01 （行中的错误）以指示在调用**SQLFetchScroll**获取行时出现错误。|  
+|**SQLSetPos**|执行各种定位操作。 下面是实现的详细信息：<br /><br /> -可在语句状态 S6 或 S7 中调用此项。 有关更多详细信息，请参阅附录 B： ODBC 状态转换表中的[语句转换](../../../odbc/reference/appendixes/statement-transitions.md)。<br />-如果在语句状态 S5 或 S6 中调用这种情况，驱动程序将 SQL_ATTR_ROWS_FETCHED_PTR 从 SQL_ATTR_ROW_STATUS_PTR 语句特性中检索行状态数组的行集大小和行状态数组的地址。<br />-如果在语句状态 S7 中调用此，则驱动程序将 SQL_ROWSET_SIZE 从**SQLExtendedFetch**的*RowStatusArray*参数中检索行状态数组的行集大小和行状态数组的地址。<br />-驱动程序将返回 SQLSTATE 01S01 （行中的错误），以指示当调用**SQLSetPos**时，如果在状态 S7 中调用函数时执行大容量操作，则在提取行时出现错误。 若要保留向后兼容性，在**SQLSetPos**返回 SQLSTATE 01S01 （行中的错误）时，驱动程序管理器不会根据[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)的 "状态记录序列" 一节中所述的规则对错误队列中的状态记录进行排序。<br />-如果*驱动程序应*与使用 SQL_ADD 的*操作*参数调用**SQLSetPos**的 ODBC 1.x 应用程序一起使用，则驱动程序必须支持 SQL_ADD 的*操作*参数的**SQLSetPos** 。|

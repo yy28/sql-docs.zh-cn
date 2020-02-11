@@ -1,5 +1,5 @@
 ---
-title: ObjectStateEnum | Microsoft Docs
+title: ObjectStateEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,27 +16,27 @@ ms.assetid: 32746558-097b-4749-989e-519aadf7e3f4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 708d146aaa40d873e0a519c860a047d4b1f93161
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931929"
 ---
 # <a name="objectstateenum"></a>ObjectStateEnum
-指定对象是否为开放还是闭合，连接到数据源，执行命令，或检索数据。  
+指定对象是打开还是关闭，连接到数据源，执行命令，或检索数据。  
   
-|常量|值|描述|  
+|一直|值|说明|  
 |--------------|-----------|-----------------|  
 |**adStateClosed**|0|指示对象已关闭。|  
-|**adStateOpen**|1|指示对象处于打开状态。|  
-|**adStateConnecting**|2|指示连接对象。|  
-|**adStateExecuting**|4|指示该对象正在执行命令。|  
+|**adStateOpen**|1|指示对象已打开。|  
+|**adStateConnecting**|2|指示对象正在连接。|  
+|**adStateExecuting**|4|指示对象正在执行命令。|  
 |**adStateFetching**|8|指示正在检索对象的行。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
- 包： **com.ms.wfc.data**  
+ Package： **.com. 数据**  
   
-|常量|  
+|一直|  
 |--------------|  
 |AdoEnums.ObjectState.CLOSED|  
 |AdoEnums.ObjectState.OPEN|  
@@ -44,7 +44,7 @@ ms.locfileid: "67931929"
 |AdoEnums.ObjectState.EXECUTING|  
 |AdoEnums.ObjectState.FETCHING|  
   
-## <a name="applies-to"></a>适用范围  
+## <a name="applies-to"></a>应用于  
   
 |||  
 |-|-|  

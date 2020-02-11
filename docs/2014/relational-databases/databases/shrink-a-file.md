@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f567c92632e99bef38fc1a6eb7a0179929f467c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871204"
 ---
 # <a name="shrink-a-file"></a>收缩文件
@@ -57,9 +57,9 @@ ms.locfileid: "62871204"
   
 -   被移动用来收缩文件的数据可以分布到文件的任何可用位置。 这将导致索引碎片并使搜索索引范围的查询变慢。 若要消除碎片，请考虑在收缩后重新生成文件的索引。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求具有 **sysadmin** 固定服务器角色或 **db_owner** 固定数据库角色的成员身份。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -72,7 +72,7 @@ ms.locfileid: "62871204"
   
 3.  依次指向 **“任务”** 和 **“收缩”** ，再单击 **“文件”** 。  
   
-     **“数据库”**  
+     **Database**  
      显示所选数据库的名称。  
   
      **文件类型**  
@@ -121,7 +121,7 @@ ms.locfileid: "62871204"
   
      选中此选项后，将指定文件中的所有数据移至同一文件组中的其他文件中。 然后就可以删除空文件。 此选项与执行包含 EMPTYFILE 选项 DBCC SHRINKFILE 相同。  
   
-9. 单击“确定”  。  
+9. 单击“确定”。   
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -131,11 +131,11 @@ ms.locfileid: "62871204"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例使用 [DBCC SHRINKFILE](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql) 将 `UserDB` 数据库中名为 `DataFile1` 的数据文件的大小收缩到 7 MB。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例使用 [DBCC SHRINKFILE](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql) 将 `DataFile1` 数据库中名为 `UserDB` 的数据文件的大小收缩到 7 MB。  
   
  [!code-sql[DBCC#DBCC_SHRINKFILE1](../../snippets/tsql/SQL14/tsql/dbcc/transact-sql/dbcc_other.sql#dbcc_shrinkfile1)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [DBCC SHRINKDATABASE (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql)   
  [收缩数据库](shrink-a-database.md)   
  [删除数据库中的数据文件或日志文件](delete-data-or-log-files-from-a-database.md)   

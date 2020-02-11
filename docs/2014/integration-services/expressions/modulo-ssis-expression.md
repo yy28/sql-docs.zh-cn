@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 163dbfecd4605c6c9624d94c047b1c7e893d8fcd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768873"
 ---
 # <a name="modulo-ssis-expression"></a>（取模）（SSIS 表达式）
@@ -36,7 +36,7 @@ dividend % divisor
  *被除数*  
  被除数的数值表达式。 *dividend* 可以是任意有效的数值表达式。 有关详细信息，请参阅 [Integration Services 数据类型](../data-flow/integration-services-data-types.md)。  
   
- *divisor*  
+ *除数*  
  除数的数值表达式。 *divisor* 可以是除 0 之外的任意有效的数值表达式。  
   
 ## <a name="result-types"></a>结果类型  
@@ -74,7 +74,7 @@ SalesQuota % 12
 @Value % 2 == 0? "even":"odd"  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [运算符优先级和结合性](operator-precedence-and-associativity.md)   
  [运算符（SSIS 表达式）](operators-ssis-expression.md)  
   

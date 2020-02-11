@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f86d2fe9f361470f96123f1035fe9ad51fc7cbe0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915612"
 ---
-# <a name="mssqlserver17053"></a>MSSQLSERVER_17053
+# <a name="mssqlserver_17053"></a>MSSQLSERVER_17053
     
 ## <a name="details"></a>详细信息  
   
@@ -30,9 +30,9 @@ ms.locfileid: "62915612"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|OS_ERROR|  
-|消息正文|%ls:遇到操作系统错误 %ls。|  
+|消息正文|%ls: 遇到操作系统错误 %ls。|  
   
-## <a name="explanation"></a>解释  
+## <a name="explanation"></a>说明  
  出现了一般性的操作系统错误。  不清楚会出现什么状态。  
   
 ## <a name="user-action"></a>用户操作  

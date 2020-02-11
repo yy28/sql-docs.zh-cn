@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3b43bbae1dfec9b7d97677b033c50d21635e6537
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754831"
 ---
 # <a name="database-mirroring-history"></a>数据库镜像历史记录
@@ -30,7 +30,7 @@ ms.locfileid: "62754831"
  **服务器实例**  
  从中报告历史记录的服务器实例的名称。  
   
- **“数据库”**  
+ **Database**  
  正报告其历史记录的数据库名称。  
   
  **筛选列表依据**  
@@ -56,20 +56,20 @@ ms.locfileid: "62754831"
   
 -   所有记录  
   
- **刷新**  
+ **“刷新”**  
  单击它可刷新历史记录列表。  
   
 > [!NOTE]  
 >  该对话框不自动刷新历史记录列表。 若要刷新该列表，可单击 **“刷新”** 或选择另一个筛选选项。 只有 **sysadmin** 固定服务器角色的成员才能更新镜像历史记录。  
   
- **历史记录**  
+ **History**  
  显示历史记录列表。 单击列标题，可以按该列对网格进行排序。 该列表包含以下列：  
   
-|列名|Description|  
+|列名称|说明|  
 |-----------------|-----------------|  
 |**记录时间**|历史记录行的时间戳。|  
 |**角色**|数据库的服务器实例的当前镜像角色，即主体或镜像。|  
-|**镜像状态**|数据库的状态：<br /><br /> 已断开连接<br /><br /> 正在挂起故障转移<br /><br /> 挂起<br /><br /> 已同步<br /><br /> 正在同步<br /><br /> Unknown|  
+|**镜像状态**|数据库的状态：<br /><br /> 已断开连接<br /><br /> 正在挂起故障转移<br /><br /> Suspended<br /><br /> 已同步<br /><br /> 正在同步<br /><br /> 未知|  
 |**见证服务器连接**|见证服务器连接在数据库镜像会话中的状态，即连接或已断开连接。 如果没有见证服务器，则该值为 NULL。|  
 |**未发送日志**|主体服务器实例上的发送队列中的未发送日志的大小（以 KB 计）。|  
 |**发送时间**|主体服务器实例将当前位于发送队列中的日志发送到镜像服务器实例所需的近似时间量（发送速率  ）。 由于传入事务的速率变化很大，因此发送日志的时间只是一个估计值。 但是，发送速率对于粗略估计手动故障转移所需的时间非常有用。|  
@@ -81,7 +81,7 @@ ms.locfileid: "62754831"
 |**还原速率**|将事务还原到镜像数据库的速率（以 KB/秒计）。|  
 |**镜像提交开销**|每个事务平均延迟的毫秒数（仅在同步模式下）。 此延迟是主体服务器实例等待镜像服务器实例将事务日志记录写入重做队列时，所发生的开销量。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [启动数据库镜像监视器 (SQL Server Management Studio)](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [监视数据库镜像 (SQL Server)](database-mirroring-sql-server.md)   
  [启动配置数据库镜像安全向导 (SQL Server Management Studio)](start-the-configuring-database-mirroring-security-wizard.md)  

@@ -11,26 +11,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1042eeefb53b16573fd13eb6f0449eeda4688f3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63049603"
 ---
 # <a name="nsltservice-namegt-properties-service-tab"></a>NS$&lt;服务名称&gt; 属性（“服务”选项卡）
-  此服务为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)] 服务。 如果属性值呈浅灰色，则不能使用此应用程序进行更改。  
+  此服务为[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)]服务。 如果属性值呈浅灰色，则不能使用此应用程序进行更改。  
   
 ## <a name="options"></a>选项  
  **二进制路径**  
  显示此服务所使用的程序文件的位置。  
   
  **错误控制**  
- 1 指示 `SERVICE_ERROR_NORMAL`。 如果在计算机启动过程中无法启动该服务，则启动程序会记录该错误并显示一个弹出消息框，但仍会继续执行启动操作。 此值不能更改。  
+ 1 指示 `SERVICE_ERROR_NORMAL`。 如果在计算机启动过程中无法启动该服务，则启动程序会记录该错误并显示一个弹出消息框，但仍会继续执行启动操作。 不能更改此值。  
   
  **退出代码**  
  当发生错误时，错误号显示在此信息框中。 您可以通过在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知识库中搜索该号码获取相关信息来排除故障，或将该错误号提供给技术支持人员以获得帮助。  
   
- **Host Name**  
+ **主机名**  
  显示运行全文搜索的计算机或群集的名称。  
   
  **名称**  
@@ -40,16 +40,17 @@ ms.locfileid: "63049603"
  显示 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 进程 ID。  
   
  **SQL 服务类型**  
- 用于调用进程的服务的类型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装有多种服务。  
+ 用于调用进程的服务的类型。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装有多种服务。  
   
  **启动模式**  
  对此服务设置以下选项：  
   
--   手动：此服务不会在计算机启动时自动启动。 您必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器或其他工具来启动该服务。  
+-   手动：计算机启动时，此服务不自动启动。 您必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器或其他工具来启动该服务。  
   
--   自动：此服务将尝试启动此计算机启动时。  
+-   自动：计算机启动时，此服务将尝试启动。  
   
--   已禁用：无法启动此服务。  
+-   已禁用：此服务无法启动。  
   
  **状态**  
  指示此服务是正在运行、已停止还是已禁用。  

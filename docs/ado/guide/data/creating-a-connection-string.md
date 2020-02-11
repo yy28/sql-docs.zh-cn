@@ -1,5 +1,5 @@
 ---
-title: 创建的连接字符串 |Microsoft Docs
+title: 创建连接字符串 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,43 +14,43 @@ ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3c9d81ef7be98f3c65167de24b3ff59ac6f05df5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925764"
 ---
 # <a name="creating-a-connection-string"></a>创建连接字符串
-连接字符串包含用分号分隔的参数/值对 （即，参数） 的列表。 例如：  
+连接字符串由以分号分隔的参数/值对列表（即参数）组成。 例如：  
   
 ```syntax
 "arg1=val1; arg2=val2; ... argN=valN;"  
 ```  
   
- ADO 或指定的提供程序必须识别所有参数。  
+ 所有参数都必须由 ADO 或指定的提供程序识别。  
   
- ADO 认识到连接字符串中的以下五个参数。  
+ ADO 识别连接字符串中的以下五个参数。  
   
-|参数|描述|  
+|参数|说明|  
 |--------------|-----------------|  
-|*提供程序*|指定要用于连接的提供程序的名称。|  
-|*文件名*|指定的特定于提供程序的文件 （例如，持久化的数据源对象） 包含预设的连接信息的名称。|  
-|*URL*|连接字符串指定为标识资源，例如文件或目录的绝对 URL。|  
-|*远程提供程序*|指定要打开客户端连接时使用的提供程序的名称。 （仅在远程数据服务中。）|  
-|*远程服务器*|指定要打开客户端连接时使用的服务器的路径名称。 （仅在远程数据服务中。）|  
+|*提供程序*|指定要用于连接的访问接口的名称。|  
+|*文件名*|指定包含预设连接信息的特定于提供程序的文件的名称（例如，持久化数据源对象）。|  
+|*链接*|将连接字符串指定为标识资源的绝对 URL，如文件或目录。|  
+|*远程提供程序*|指定打开客户端连接时要使用的提供程序的名称。 （仅限远程数据服务。）|  
+|*远程服务器*|指定打开客户端连接时要使用的服务器的路径名称。 （仅限远程数据服务。）|  
   
- 其他参数传递给提供程序中名为*提供程序*参数，而无需通过 ADO 任何处理。  
+ 其他参数传递给*提供程序*参数中名为的提供程序，而无需 ADO 处理。  
   
- HelloData 应用程序中的[HelloData:一个简单的 ADO 应用程序](../../../ado/guide/data/hellodata-a-simple-ado-application.md)使用以下连接字符串：  
+ HelloData 中的 HelloData 应用程序[：一个简单的 ADO 应用](../../../ado/guide/data/hellodata-a-simple-ado-application.md)程序使用以下连接字符串：  
   
 ```vb
 m_sConnStr = "Provider=SQLOLEDB;Data Source=MySqlServer;" & _  
              "Initial Catalog=Northwind;Integrated Security='SSPI';"  
 ```  
   
- 在此连接字符串，ADO 仅识别`"Provider=SQLOLEDB"`参数，指定作为 ADO 数据源的 SQL Server 的 Microsoft OLE DB 访问接口。 其余的参数/值对， `"Data Source=MySqlServer; Initial Catalog=Northwind;Integrated Security='SSPI';"`，传递逐字字符串到此提供程序。 类型和此类参数的有效性是特定于提供程序。 有关可以在连接字符串中传递的有效参数的信息，请参阅单个提供程序的文档。  
+ 在此连接字符串中，ADO 仅识别`"Provider=SQLOLEDB"`参数，该参数指定作为 ADO 数据源的 SQL Server 的 Microsoft OLE DB 提供程序。 参数/值对`"Data Source=MySqlServer; Initial Catalog=Northwind;Integrated Security='SSPI';"`的其余部分逐字传递到此提供程序。 此类参数的类型和有效性是特定于提供程序的。 有关可以在连接字符串中传递的有效参数的信息，请参阅各个提供商的文档。  
   
- 根据 OLE DB Provider for SQL Server 文档，您可以替换为"服务器"*数据源*参数和"数据库"，使*Initial Catalog*参数。 因此，以下连接字符串会生成与上面相同的结果：  
+ 根据 SQL Server 文档的 OLE DB 提供程序，您可以将 "Server" 替换为*数据源*参数，将 "Database" 替换为*初始目录*参数。 因此，以下连接字符串将产生与上面的结果相同的结果：  
   
 ```vb
 m_sConnStr = "Provider=SQLOLEDB;Server=MySqlServer;" & _  

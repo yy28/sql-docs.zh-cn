@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 76746ade9222257bcea6962c180ea12a01ff8afa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107653"
 ---
 # <a name="searching-for-reports-and-other-items-report-builder--and-ssrs"></a>搜索报表和其他项（报表生成器和 SSRS）
@@ -32,10 +32,10 @@ ms.locfileid: "66107653"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [在报表管理器中查找和查看报表（报表生成器和 SSRS）](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)   
- [使用“我的报表”（报表生成器和 SSRS）](using-my-reports-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>另请参阅  
+ [在报表管理器 &#40;报表生成器和 SSRS 中查找和查看报表&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)   
+ [使用我的报表 &#40;报表生成器和 SSRS&#41;](using-my-reports-report-builder-and-ssrs.md)   
  [查找、查看和管理报表（报表生成器和 SSRS）](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [打开和关闭报表（报表管理器）](../reports/open-and-close-a-report-report-manager.md)  
+ [打开并关闭报表 &#40;报表管理器&#41;](../reports/open-and-close-a-report-report-manager.md)  
   
   

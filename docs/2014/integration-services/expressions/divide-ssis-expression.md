@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: af4f0f53a1822d2fd45fdbaacfd9ab05d783c237
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769324"
 ---
 # <a name="divide-ssis-expression"></a>除（SSIS 表达式）
@@ -33,7 +33,7 @@ dividend / divisor
   
 ## <a name="arguments"></a>参数  
  *被除数*  
- 被除数的数值表达式。 *dividend* 可以是任意有效的数值表达式。 有关详细信息，请参阅 [Integration Services Data Types](../data-flow/integration-services-data-types.md)。  
+ 被除数的数值表达式。 *dividend* 可以是任意有效的数值表达式。 有关详细信息，请参阅 [Integration Services 数据类型](../data-flow/integration-services-data-types.md)。  
   
  *除数*  
  除数的数值表达式。 *divisor* 可以是除 0 之外的任意有效的数值表达式。  
@@ -65,7 +65,7 @@ dividend / divisor
 ListPrice / StandardCost  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [运算符优先级和结合性](operator-precedence-and-associativity.md)   
  [运算符（SSIS 表达式）](operators-ssis-expression.md)  
   

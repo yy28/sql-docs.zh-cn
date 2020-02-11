@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d18e97a60bf1c6108b3672f40747e8b612ad6e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62732220"
 ---
 # <a name="data-mining-programming"></a>数据挖掘编程
@@ -24,15 +24,17 @@ ms.locfileid: "62732220"
   
 -   **XMLA**  
   
-     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 支持 XML for Analysis (XMLA) 作为与客户端应用程序进行通信协议。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 还支持其他扩展了 XML for Analysis 规范的命令。  
+     [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]支持 XML FOR ANALYSIS （XMLA）作为与客户端应用程序进行通信的协议。 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 还支持其他扩展了 XML for Analysis 规范的命令。  
   
      由于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将 XMLA 用于数据定义、数据操作和数据控制支持，因此您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 提供的可视化工具创建挖掘结构和挖掘模型，然后扩展已使用数据挖掘扩展插件 (DMX) 和 Analysis Services 脚本语言 (ASSL) 脚本创建的数据挖掘对象。  
   
      您可以创建和修改 XMLA 脚本中的全部数据挖掘对象，并以编程方式从您自己的应用程序对模型运行预测查询。  
   
--   **分析管理对象 (AMO)**  
+-   **分析管理对象（AMO）**  
   
-     [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 还提供了一个完整的框架，该框架使第三方数据挖掘访问接口能够将数据挖掘对象集成到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中。  
+     
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 还提供了一个完整的框架，该框架使第三方数据挖掘访问接口能够将数据挖掘对象集成到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中。  
   
      可以使用 AMO 创建挖掘结构和挖掘模型。 在 CodePlex 中查看以下示例：  
   
@@ -46,26 +48,26 @@ ms.locfileid: "62732220"
   
          该示例还演示如何创建和处理数据挖掘结构和模型，以及浏览现有数据挖掘模型。  
   
--   **DMX**  
+-   **DMX-3**  
   
      您可以使用 DMX 封装命令语句、预测查询和元数据查询并以表格格式返回结果（假定您创建了与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器的连接）。  
   
 ## <a name="in-this-section"></a>本节内容  
- [数据挖掘 OLE DB](../../../2014/analysis-services/dev-guide/ole-db-for-data-mining.md)  
+ [OLE DB for Data Mining](../../../2014/analysis-services/dev-guide/ole-db-for-data-mining.md)  
  介绍在支持数据挖掘和多维数据方面对规范的扩展：新的架构行集和列，以及用于创建和管理挖掘结构的数据挖掘扩展插件 (DMX) 语言。  
   
 ## <a name="related-reference"></a>相关参考  
  [使用 ADOMD.NET 进行开发](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
  介绍 ADOMD.NET 客户端和服务器编程对象。  
   
- [使用分析管理对象 (AMO) 进行开发](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
+ [利用分析管理对象 &#40;AMO 进行开发&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
  介绍 AMO 编程库。  
   
- [使用 Analysis Services 脚本语言 (ASSL) 开发](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [Analysis Services 脚本语言开发 &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
  介绍 XML for Analysis (XMLA) 及其扩展插件。  
   
-## <a name="see-also"></a>请参阅  
- [开发人员指南&#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)   
- [数据挖掘扩展插件 (DMX) 参考](/sql/dmx/data-mining-extensions-dmx-reference)  
+## <a name="see-also"></a>另请参阅  
+ [开发人员指南 &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)   
+ [&#40;DMX&#41; 的数据挖掘扩展插件](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

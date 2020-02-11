@@ -43,14 +43,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47bf324dd757661a6f49f18b28f810c87ca1419e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242111"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>“生成和发布脚本向导”
-  你可以使用“生成和发布脚本向导”**** 创建脚本，以在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的实例之间传输数据库。 您可以在本地网络中或从 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]为数据库引擎实例上的数据库生成脚本。 生成的脚本可以在数据库引擎或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]的另一个实例上运行。 您还可以使用该向导将数据库的内容直接发布到使用 Database Publishing Services 创建的 Web 服务。 您可以为整个数据库创建脚本，或将其限制为特定的对象。  
+  你可以使用“生成和发布脚本向导”  创建脚本，以在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的实例之间传输数据库。 您可以在本地网络中或从 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]为数据库引擎实例上的数据库生成脚本。 生成的脚本可以在数据库引擎或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]的另一个实例上运行。 您还可以使用该向导将数据库的内容直接发布到使用 Database Publishing Services 创建的 Web 服务。 您可以为整个数据库创建脚本，或将其限制为特定的对象。  
   
 1.  **开始之前：**  [发布到托管服务](#PubHostSvc)、[权限](#Permissions)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "75242111"
   
  若要将一个数据库发布到 Web 宿主服务，请在该向导的 **“设置脚本编写选项”** 页上选择 **“发布到 Web 服务”** 。  
   
-###  <a name="Permissions"></a>访问  
+###  <a name="Permissions"></a> 权限  
  发布数据库的最小权限是原始数据库上 db_ddladmin 固定数据库角色中的成员身份。 将数据库脚本发布到位于宿主提供程序的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的最小权限是目标数据库上 db_ddladmin 固定数据库角色中的成员身份。  
   
  用户还必须提供用户名和密码来访问他们的宿主提供程序帐户，才能使用该向导进行发布。 必须先在宿主提供程序中创建目标数据库，然后才能发布源数据库。 发布将覆盖该现有数据库中的对象。  
@@ -78,28 +78,28 @@ ms.locfileid: "75242111"
   
 3.  完成向导对话框：  
   
-    -   [简介页](#Introduction)  
+    -   [“简介”页](#Introduction)  
   
-    -   [选择对象页](#ChooseObjects)  
+    -   [“选择对象”页](#ChooseObjects)  
   
-    -   ["设置脚本选项" 页](#SetScriptOpt)  
+    -   [“设置脚本编写选项”页](#SetScriptOpt)  
   
-    -   [高级脚本选项页](#AdvScriptOpt)  
+    -   [“高级脚本编写选项”页](#AdvScriptOpt)  
   
-    -   [管理提供程序页](#MgProviders)  
+    -   [“管理提供程序”页](#MgProviders)  
   
-    -   ["高级发布选项" 页](#AdvPubOpts)  
+    -   [“高级发布选项”页](#AdvPubOpts)  
   
-    -   ["提供程序配置" 页](#ProvConfig)  
+    -   [“提供程序配置”页](#ProvConfig)  
   
     -   [摘要页](#Summary)  
   
-    -   ["保存或发布脚本" 页](#SavePubScripts)  
+    -   [“保存或发布脚本”页](#SavePubScripts)  
   
-###  <a name="Introduction"></a>简介页  
+###  <a name="Introduction"></a> “简介”页  
  本页介绍用于生成或发布脚本的步骤。  
   
- 不再**显示此页**-下次启动 "**生成和发布脚本向导**" 时跳过此页。  
+ **不再显示此页** - 下次启动“生成和发布脚本向导”  时跳过此页。  
   
  **下一步 >** -继续到 "**选择方法**" 页。  
   
@@ -110,13 +110,13 @@ ms.locfileid: "75242111"
   
  **编写整个数据库的脚本选项**-单击此项可为数据库中的所有对象生成脚本，并为数据库本身包含脚本。  
   
- **选择特定数据库对象**-单击此项可将向导限制为仅为所选数据库中的特定对象生成脚本：  
+ **选择特定数据库对象** - 单击此项可以将向导限制为仅对数据库中的所选特定对象生成脚本：  
   
--   **数据库对象**-选择要在脚本中包含的至少一个对象。  
+-   **数据库对象** - 选择要在脚本中包含的至少一个对象。  
   
--   **全选-选中**所有可用的复选框。  
+-   **全选** - 选中所有可用的复选框。  
   
--   **取消全选**-清除所有复选框。 然后，您必须至少选择一个数据库对象才能继续。  
+-   **取消全选** - 清除所有复选框。 然后，您必须至少选择一个数据库对象才能继续。  
   
 ###  <a name="SetScriptOpt"></a>"设置脚本选项" 页  
  使用此页可以指定您是否希望向导将脚本保存到您选择的位置或者是否要使用它们将数据库对象发布到远程 Web 宿主提供程序。 若要发布，您必须有权访问通过使用 Database Publishing Services Web 服务安装的 Web 服务。  
@@ -246,7 +246,7 @@ ms.locfileid: "75242111"
   
 3.  **发布默认**值-在表列中包括用于设置默认值的默认对象。 默认值为**True**。 有关详细信息，请参阅 [CREATE DEFAULT (Transact-SQL)](/sql/t-sql/statements/create-default-transact-sql)。  
   
-4.  **发布依赖对象**-发布在执行所选对象的脚本时必须存在的任何对象。 默认值为**True**。  
+4.  **发布依赖对象**-发布在执行所选对象的脚本时必须存在的任何对象。 默认值为 **True**。  
   
 5.  **发布扩展属性**-如果对象具有扩展属性，则在发送到提供程序以供发布的脚本中包括扩展属性。 默认值为**True**。  
   
@@ -271,7 +271,7 @@ ms.locfileid: "75242111"
   
  **表/视图选项**-以下选项仅应用于表或视图。  
   
-1.  **发布 check 约束**-在发布过程中`CHECK`包括创建约束。 默认值为**True**。 
+1.  **发布 check 约束**-在发布过程中`CHECK`包括创建约束。 默认值为 **True**。 
   `CHECK` 约束要求输入表中的数据满足某些指定的条件。 有关详细信息，请参阅 [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)。  
   
 2.  **发布外键**-在发布过程中包括创建外键。 默认值为**True**。 外键可指示和强制保持表间的关系。 有关详细信息，请参阅 [Primary and Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md)。  
@@ -280,7 +280,7 @@ ms.locfileid: "75242111"
   
 4.  **发布索引**-在发布过程中包括表上的索引。 默认值为**True**。 索引有助于快速查找数据。  
   
-5.  **发布主键**-在发布过程中包括创建主键。 默认值为**True**。 主键可唯一标识表的每一行。 有关详细信息，请参阅 [Primary and Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md)。  
+5.  **发布主键**-在发布过程中包括创建主键。 默认值为 **True**。 主键可唯一标识表的每一行。 有关详细信息，请参阅 [Primary and Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md)。  
   
 6.  **发布触发器**-在发布过程中包括创建 DML 触发器。 默认值为**True**。 DML 触发器是当数据库服务器中发生数据操作语言 (DML) 事件时要执行的操作。 有关详细信息，请参阅 [DML Triggers](../triggers/dml-triggers.md)。  
   
@@ -323,7 +323,7 @@ ms.locfileid: "75242111"
   
  **取消**-撤消在此对话框中所做的所有更改并返回到向导。  
   
-###  <a name="Summary"></a>摘要页  
+###  <a name="Summary"></a> 摘要页  
  此页汇总了您在此向导中所选的选项。 若要更改某个选项，请单击 **“上一步”**。 若要开始生成将保存或发布的脚本，请单击 **“下一步”**。  
   
  **查看您的选择**-显示您在向导的每一页中所做的选择。 展开某个节点可看到在相应页中选择的选项。  

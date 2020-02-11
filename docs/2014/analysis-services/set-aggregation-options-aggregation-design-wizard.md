@@ -1,5 +1,5 @@
 ---
-title: 设置聚合选项 （聚合设计向导） |Microsoft Docs
+title: 设置聚合选项（聚合设计向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d82d19836147514a4a03296ebc40a047b80410b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068808"
 ---
 # <a name="set-aggregation-options-aggregation-design-wizard"></a>设置聚合选项（聚合设计向导）
@@ -30,22 +30,22 @@ ms.locfileid: "66068808"
  通过指定聚合设计的性能可以提升的最大估计百分比以限制聚合设计。  
   
  **单击停止**  
- 通过在设计过程中单击“停止”  ，可以限制聚合设计。  
+ 通过在设计过程中单击“停止”****，可以限制聚合设计。  
   
- **不设计聚合 （0%)**  
+ **不设计聚合(0%)**  
  指定聚合设计不包含聚合。 使用此选项可以清除分区、度量值组或多维数据集的现有聚合设计。  
   
  **开始**  
  启动聚合设计进程。  
   
- **停止**  
+ **Stop**  
  结束聚合设计进程。  
   
  **重置**  
  将此页上的所有聚合选项都重置为默认值。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [聚合设计向导的 F1 帮助](aggregation-design-wizard-f1-help.md)   
- [Analysis Services 向导&#40;多维数据&#41;](analysis-services-wizards-multidimensional-data.md)  
+ [&#40;多维数据的 Analysis Services 向导&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

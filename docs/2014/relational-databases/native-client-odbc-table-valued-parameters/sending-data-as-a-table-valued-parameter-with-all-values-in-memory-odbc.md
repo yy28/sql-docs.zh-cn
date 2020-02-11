@@ -1,5 +1,5 @@
 ---
-title: 将数据作为具有内存 (ODBC) 中的所有值的表值参数发送 |Microsoft Docs
+title: 使用内存中的所有值（ODBC）将数据作为表值参数发送 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 03eeb209dfef3c2bfa9c2ffaea70cb24286c23f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68205448"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>所有值位于内存中时将数据作为表值参数发送 (ODBC)
-  本主题描述当所有值都在内存中时，如何将数据作为表值参数发送到存储过程。 有关演示表值参数的另一个示例，请参阅[使用表值参数&#40;ODBC&#41;](table-valued-parameters-odbc.md)。  
+  本主题描述当所有值都在内存中时，如何将数据作为表值参数发送到存储过程。 有关演示表值参数的另一个示例，请参阅[将表值参数用于 ODBC&#41;&#40;](table-valued-parameters-odbc.md)。  
   
 ## <a name="prerequisite"></a>先决条件  
  该过程假定已在服务器上执行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)]：  
@@ -86,7 +86,7 @@ from @Items
        sizeof(OrdDate), &cbOrdDate);  
     ```  
   
-3.  参数绑定的第二阶段是绑定表值参数的列。 首先将参数焦点设置为表值参数的序号。 然后将它们是参数的存储过程，但以列序号作为 ParameterNumber 相同的方式使用 SQLBindParameter 绑定表值的列。 如果有更多表值参数，我们会轮流将焦点设置为每个参数，并绑定它们的列。 最终，将参数焦点重置为 0。  
+3.  参数绑定的第二阶段是绑定表值参数的列。 首先将参数焦点设置为表值参数的序号。 然后使用 SQLBindParameter 来绑定表值的列，方法与它们是存储过程的参数相同，但使用 ParameterNumber 的列序号。 如果有更多表值参数，我们会轮流将焦点设置为每个参数，并绑定它们的列。 最终，将参数焦点重置为 0。  
   
     ```  
     // Bind columns for the table-valued parameter (param 2).  
@@ -102,7 +102,8 @@ from @Items
     r = SQLSetStmtAttr(hstmt, SQL_SOPT_SS_PARAM_FOCUS, (SQLPOINTER) 0, SQL_IS_INTEGER);  
     ```  
   
-4.  填充参数缓冲区。 `cbTVP` 将设置为要发送到服务器的行数。  
+4.  填充参数缓冲区。 
+  `cbTVP` 将设置为要发送到服务器的行数。  
   
     ```  
     // Populate parameters.  
@@ -125,7 +126,7 @@ from @Items
     r = SQLExecDirect(hstmt, (SQLCHAR *) "{call TVPOrderEntry(?, ?, ?, ?)}",SQL_NTS);  
     ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ODBC 表值参数编程示例](../../database-engine/dev-guide/odbc-table-valued-parameter-programming-examples.md)  
   
   
