@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c9a9c5f01bd682e68e44a7a974cbbaeade8008d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62937014"
 ---
 # <a name="job-categories-manage-job-categories"></a>作业类别：管理作业类别
-  使用“作业类别”对话框可以添加或删除作业类别。 但不能删除内置作业类别。  
+  使用 "**作业类别**" 对话框可以添加或删除作业类别。 但不能删除内置作业类别。  
   
 ## <a name="options"></a>选项  
  **名称**  
@@ -32,19 +32,19 @@ ms.locfileid: "62937014"
  为此类别定义的作业数。  
   
  **查看作业**  
- 打开所选类别的“属性”对话框，列出当前为该类别定义的所有作业。  
+ 打开所选类别的“属性”**** 对话框，列出当前为该类别定义的所有作业。  
   
- **“添加”**  
- 打开“新建作业类别”对话框，添加新的作业类别。  
+ **添加**  
+ 打开“新建作业类别”**** 对话框，添加新的作业类别。  
   
  **删除**  
  删除所选作业类别。 只用于用户定义的作业类别。  
   
- **刷新**  
+ **“刷新”**  
  查询该服务器的当前信息。  
   
 #### <a name="to-access-the-job-categories-dialog-box"></a>访问“作业类别”对话框  
   
-1.  在“对象资源管理器”中，展开“SQL Server 代理”，右键单击“作业”，再单击“管理作业类别”。  
+1.  在“对象资源管理器”**** 中，展开“SQL Server 代理”****，右键单击“作业”****，再单击“管理作业类别”****。  
   
   

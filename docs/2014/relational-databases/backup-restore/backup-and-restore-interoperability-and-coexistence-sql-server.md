@@ -1,5 +1,5 @@
 ---
-title: 备份和还原：互操作性和共存 (SQL Server) |Microsoft Docs
+title: 备份和还原：互操作性和共存 (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96fd1b081ec9d990014dc61db7938f745cffa041
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62922432"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>备份和还原：互操作性和共存 (SQL Server)
@@ -48,7 +48,7 @@ ms.locfileid: "62922432"
   
  如果数据库启动过程中出现问题，恢复将失败且数据库被标记为 SUSPECT。 如果可以将问题隔离到单个文件或多个文件，则数据库管理员可以使文件脱机并尝试重新启动数据库。 若要使文件脱机，可以使用下列 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) 语句：  
   
- ALTER DATABASE *database_name* MODIFY FILE (名称 **=' *`filename`* **、 脱机)  
+ ALTER DATABASE *database_name*修改文件（name **= '*`filename`*'**，OFFLINE）  
   
  如果数据库成功启动，则任何包含脱机文件的文件组将保持脱机状态。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "62922432"
  本节仅与包含多个文件组的完整模式数据库有关。  
   
 > [!NOTE]  
->  后续版本的 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将删除数据库镜像功能。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 该工具将由 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 代替。  
+>  后续版本的 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将删除数据库镜像功能。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 请改用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]。  
   
  “数据库镜像”是一种提高数据库可用性的解决方案。 镜像基于每个数据库实现，并且只适用于使用完整恢复模式的数据库。 有关详细信息，请参阅[数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "62922432"
 >  若要分发数据库中部分文件组的副本，请使用复制：仅复制文件组中您要复制到其他服务器的那些对象。 有关复制的详细信息，请参阅 [SQL Server 复制](../../relational-databases/replication/sql-server-replication.md)。  
   
 ### <a name="creating-the-mirror-database"></a>创建镜像数据库  
- 镜像数据库是通过还原 (WITH NORECOVERY) 镜像服务器上主体数据库的备份创建的。 还原后的数据库必须保持相同的数据库名称。 有关详细信息，请参阅 [为镜像准备镜像数据库 (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)中若干功能的备份和还原注意事项。  
+ 镜像数据库是通过还原 (WITH NORECOVERY) 镜像服务器上主体数据库的备份创建的。 还原后的数据库必须保持相同的数据库名称。 有关详细信息，请参阅 [为镜像准备镜像数据库 (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)的各版本中均未提供见证服务器实例。  
   
  您可以使用段落还原顺序在支持镜像数据库的地方创建镜像数据库。 但是，在开始镜像之前，必须还原所有文件组后才能，通常还必须还原日志备份以保证镜像数据库的时间与原始数据库的时间足够接近。 有关详细信息，请参阅[段落还原 (SQL Server)](piecemeal-restores-sql-server.md)。  
   
@@ -129,9 +129,9 @@ ms.locfileid: "62922432"
   
 -   [备份和还原全文目录和索引](../search/back-up-and-restore-full-text-catalogs-and-indexes.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 数据库的备份和还原](back-up-and-restore-of-sql-server-databases.md)   
  [备份和还原复制的数据库](../replication/administration/back-up-and-restore-replicated-databases.md)   
- [活动次要副本：在辅助副本上备份&#40;AlwaysOn 可用性组&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
+ [活动辅助副本：辅助副本上的备份 &#40;AlwaysOn 可用性组&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   

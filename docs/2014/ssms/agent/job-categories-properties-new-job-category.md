@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d6748956dcfe0b880ffe3b384e49a8ccc00ebf12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62936984"
 ---
 # <a name="job-categories-properties-and-new-job-category"></a>作业类别属性和新建作业类别
@@ -32,13 +32,13 @@ ms.locfileid: "62936984"
  **显示所有作业**  
  列出所有作业。  
   
- **选择**  
+ **单击**  
  通过选中或清除此选项来改变作业的类别。  
   
  **作业**  
  显示作业的名称。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建作业](create-jobs.md)  
   
   
