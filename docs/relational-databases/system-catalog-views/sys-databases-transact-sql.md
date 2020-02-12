@@ -1,7 +1,7 @@
 ---
 title: sys.databases （Transact-sql） |Microsoft Docs
 ms.custom: ''
-ms.date: 02/11/2020
+ms.date: 11/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5b9b5147621fb459e419a29e0a31f9ad9381eb77
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
-ms.translationtype: MT
+ms.openlocfilehash: a307cf2fb9747e822cc48ca4b0723aed437d4af7
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "77147405"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "74165949"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 
@@ -117,8 +117,7 @@ ms.locfileid: "77147405"
 |**is_temporal_retention_enabled**|**bit**|指示是否启用时态保留策略清理任务。<br /> **适用**于：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type**|**int**|目录排序规则设置：<br />0 = DATABASE_DEFAULT<br />2 = SQL_Latin_1_General_CP1_CI_AS<br /> **适用**于：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type_desc**|**nvarchar （60）**|目录排序规则设置：<br />COLLATE<br />SQL_Latin_1_General_CP1_CI_AS<br /> **适用**于：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
-|**is_result_set_caching_on**|**bit**|1 = is_result_set_caching_on 为 on</br>0 = is_result_set_caching_on 为 off</br>**适用**于： Azure SQL 数据仓库 Gen2。 虽然此功能已推出到所有区域，但请查看部署到实例的版本，以及最新的[AZURE SQL DW 发行说明](/azure/sql-data-warehouse/release-notes-10-0-10106-0)，了解功能可用性。|
-|**is_memory_optimized_enabled**|**bit**|指示是否为数据库启用了某些内存中功能（如[混合缓冲池](../../database-engine/configure-windows/hybrid-buffer-pool.md)）。 不反映[内存中 OLTP](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)的可用性或配置状态。 <br />**适用于**： SQL Server 2019 （）|
+|**is_result_set_caching_on**|**int**|1 = is_result_set_caching_on 为 on</br>0 = is_result_set_caching_on 为 off</br>**适用**于： Azure SQL 数据仓库 Gen2。 虽然此功能已推出到所有区域，但请查看部署到实例的版本，以及最新的[AZURE SQL DW 发行说明](/azure/sql-data-warehouse/release-notes-10-0-10106-0)，了解功能可用性。|
   
 ## <a name="permissions"></a>权限
 
