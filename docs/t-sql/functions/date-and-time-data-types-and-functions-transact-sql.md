@@ -72,17 +72,17 @@ ms.locfileid: "75256092"
   
 |函数|语法|返回值|返回数据类型|确定性|  
 |---|---|---|---|---|
-|[SYSDATETIME](../../t-sql/functions/sysdatetime-transact-sql.md)|SYSDATETIME ()|返回包含计算机的日期和时间的 datetime2(7) 值， **的实例在该计算机上运行**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 返回值不包括时区偏移量。|**datetime2(7)**|不具有确定性|  
-|[SYSDATETIMEOFFSET](../../t-sql/functions/sysdatetimeoffset-transact-sql.md)|SYSDATETIMEOFFSET ( )|返回包含计算机的日期和时间的 datetimeoffset(7) 值， **的实例在该计算机上运行**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 返回值包括时区偏移量。|**datetimeoffset(7)**|不具有确定性|  
-|[SYSUTCDATETIME](../../t-sql/functions/sysutcdatetime-transact-sql.md)|SYSUTCDATETIME ( )|返回包含计算机的日期和时间的 datetime2(7) 值， **的实例正在该计算机上运行**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 该函数返回日期和时间作为 UTC 时间（协调世界时）。|**datetime2(7)**|不具有确定性|  
+|[SYSDATETIME](../../t-sql/functions/sysdatetime-transact-sql.md)|SYSDATETIME ()|返回包含计算机的日期和时间的 datetime2(7) 值，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例在该计算机上运行  。 返回值不包括时区偏移量。|**datetime2(7)**|不具有确定性|  
+|[SYSDATETIMEOFFSET](../../t-sql/functions/sysdatetimeoffset-transact-sql.md)|SYSDATETIMEOFFSET ( )|返回包含计算机的日期和时间的 datetimeoffset(7) 值，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例在该计算机上运行  。 返回值包括时区偏移量。|**datetimeoffset(7)**|不具有确定性|  
+|[SYSUTCDATETIME](../../t-sql/functions/sysutcdatetime-transact-sql.md)|SYSUTCDATETIME ( )|返回包含计算机的日期和时间的 datetime2(7) 值，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例正在该计算机上运行  。 该函数返回日期和时间作为 UTC 时间（协调世界时）。|**datetime2(7)**|不具有确定性|  
   
 #### <a name="lower-precision-system-date-and-time-functions"></a>精度较低的系统日期和时间函数
   
 |函数|语法|返回值|返回数据类型|确定性|  
 |---|---|---|---|---|
-|[CURRENT_TIMESTAMP](../../t-sql/functions/current-timestamp-transact-sql.md)|CURRENT_TIMESTAMP|返回包含计算机的日期和时间的 datetime 值， **的实例在该计算机上运行**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 返回值不包括时区偏移量。|**datetime**|不具有确定性|  
-|[GETDATE](../../t-sql/functions/getdate-transact-sql.md)|GETDATE ( )|返回包含计算机的日期和时间的 datetime 值， **的实例在该计算机上运行**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 返回值不包括时区偏移量。|**datetime**|不具有确定性|  
-|[GETUTCDATE](../../t-sql/functions/getutcdate-transact-sql.md)|GETUTCDATE ( )|返回包含计算机的日期和时间的 datetime 值， **的实例在该计算机上运行**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 该函数返回日期和时间作为 UTC 时间（协调世界时）。|**datetime**|不具有确定性|  
+|[CURRENT_TIMESTAMP](../../t-sql/functions/current-timestamp-transact-sql.md)|CURRENT_TIMESTAMP|返回包含计算机的日期和时间的 datetime 值，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例在该计算机上运行  。 返回值不包括时区偏移量。|**datetime**|不具有确定性|  
+|[GETDATE](../../t-sql/functions/getdate-transact-sql.md)|GETDATE ( )|返回包含计算机的日期和时间的 datetime 值，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例在该计算机上运行  。 返回值不包括时区偏移量。|**datetime**|不具有确定性|  
+|[GETUTCDATE](../../t-sql/functions/getutcdate-transact-sql.md)|GETUTCDATE ( )|返回包含计算机的日期和时间的 datetime 值，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例在该计算机上运行  。 该函数返回日期和时间作为 UTC 时间（协调世界时）。|**datetime**|不具有确定性|  
   
 ###  <a name="GetDateandTimeParts"></a>返回日期和时间部分的函数
   
@@ -126,11 +126,11 @@ ms.locfileid: "75256092"
 |函数|语法|返回值|返回数据类型|确定性|  
 |---|---|---|---|---|
 |[@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md)|@@DATEFIRST|返回对会话进行 SET DATEFIRST 操作所得结果的当前值。|**tinyint**|不具有确定性|  
-|[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)|SET DATEFIRST { number &#124; *number_var }* **\@** |将一周的第一天设置为从 1 到 7 的一个数字。|不适用|不适用|  
-|[SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)|SET DATEFORMAT { format &#124; *format_var }* **@** |设置用于输入 datetime 或 smalldatetime 数据的日期各部分（月/日/年）的顺序   。|不适用|不适用|  
+|[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)|SET DATEFIRST { number &#124; \@number_var }   |将一周的第一天设置为从 1 到 7 的一个数字。|不适用|不适用|  
+|[SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)|SET DATEFORMAT { format &#124; @format_var }   |设置用于输入 datetime 或 smalldatetime 数据的日期各部分（月/日/年）的顺序   。|不适用|不适用|  
 |[@@LANGUAGE](../../t-sql/functions/language-transact-sql.md)|@@LANGUAGE|返回当前所用语言的名称。 @@LANGUAGE 不是日期或时间函数。 但是，语言设置会影响日期函数的输出。|不适用|不适用|  
-|[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md)|SET LANGUAGE { [ N ] 'language' &#124; **language_var }**   **\@** |设置会话和系统消息的语言环境。 SET LANGUAGE 不是日期或时间函数。 但是，语言设置会影响日期函数的输出。|不适用|不适用|  
-|[sp_helplanguage](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)|sp_helplanguage [ [  **= ] 'language' ]** **@language**   |返回有关所有支持语言的日期格式的信息。 sp_helplanguage 不是日期或时间存储过程  。 但是，语言设置会影响日期函数的输出。|不适用|不适用|  
+|[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md)|SET LANGUAGE { [ N ] 'language' &#124; \@language_var }     |设置会话和系统消息的语言环境。 SET LANGUAGE 不是日期或时间函数。 但是，语言设置会影响日期函数的输出。|不适用|不适用|  
+|[sp_helplanguage](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)|sp_helplanguage [ [ @language = ] 'language' ]     |返回有关所有支持语言的日期格式的信息。 sp_helplanguage 不是日期或时间存储过程  。 但是，语言设置会影响日期函数的输出。|不适用|不适用|  
   
 ###  <a name="ValidateDateandTimeValues"></a>验证日期和时间值的函数
   

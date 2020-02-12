@@ -50,7 +50,7 @@ ms.locfileid: "75247453"
   
  如果数据库启动过程中出现问题，恢复将失败且数据库被标记为 SUSPECT。 如果可以将问题隔离到单个文件或多个文件，则数据库管理员可以使文件脱机并尝试重新启动数据库。 若要使文件脱机，可以使用下列 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 语句：  
   
- ALTER DATABASE database_name MODIFY FILE (NAME ='filename', OFFLINE)  ****  
+ ALTER DATABASE database_name MODIFY FILE (NAME ='filename', OFFLINE)     
   
  如果数据库成功启动，则任何包含脱机文件的文件组将保持脱机状态。  
   
@@ -134,6 +134,6 @@ ms.locfileid: "75247453"
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 数据库的备份和还原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [备份和还原复制的数据库](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
-[活动次要副本：次要副本备份 \(AlwaysOn 可用性组\)](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
+[活动次要副本：备份次要副本 \(Always On 可用性组\)](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   
