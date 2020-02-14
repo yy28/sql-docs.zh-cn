@@ -18,10 +18,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 93b368ece9fc259e13b63c0b58f7efe72256a564
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056381"
 ---
 # <a name="specify-file-storage-type-using-bcp-sql-server"></a>使用 bcp 指定文件存储类型 (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "74056381"
   
  您对此提示符的响应取决于要执行的任务，如下所示：  
   
--   若要以尽可能大的压缩存储的格式（本机数据格式）将数据从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例批量导出到数据文件中，请接受 **bcp**提供的默认文件存储类型。 有关本机文件存储类型的列表，请参阅本主题后面所述的“本机文件存储类型”。  
+-   若要以尽可能大的压缩存储（本机数据格式）将数据从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例批量导出到数据文件中，请接受 bcp 提供的默认文件存储类型  。 有关本机文件存储类型的列表，请参阅本主题后面所述的“本机文件存储类型”。  
   
 -   若要以字符格式将数据从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例大容量导出到数据文件中，请指定 **char** 作为表中所有列的文件存储类型。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "74056381"
     |**real**|**r**|  
     |**Int**|**i[nt]**|  
     |**bigint**|**B[igint]**|  
-    |**int**|**s[mallint]**|  
+    |**smallint**|**s[mallint]**|  
     |**tinyint**|**t[inyint]**|  
     |**money**|**m[oney]**|  
     |**smallmoney**|**M**|  
@@ -99,7 +99,7 @@ ms.locfileid: "74056381"
 |**numeric**|SQLNUMERIC|  
 |**float**|SQLFLT8|  
 |**real**|SQLFLT4|  
-|**smallint**|SQLINT|  
+|**int**|SQLINT|  
 |**bigint**|SQLBIGINT|  
 |**smallint**|SQLSMALLINT|  
 |**tinyint**|SQLTINYINT|  

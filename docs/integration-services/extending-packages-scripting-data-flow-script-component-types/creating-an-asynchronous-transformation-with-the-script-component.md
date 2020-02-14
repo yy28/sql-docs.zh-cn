@@ -17,10 +17,10 @@ ms.assetid: 0d814404-21e4-4a68-894c-96fa47ab25ae
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 55c02331a87c078b3f510f36dab6c7260d12ad4b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297061"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>使用脚本组件创建异步转换
@@ -81,7 +81,7 @@ ms.locfileid: "71297061"
  有关“脚本转换编辑器”的“脚本”页的详细信息，请参阅[脚本转换编辑器（“脚本”页）](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)   。  
   
 ## <a name="scripting-an-asynchronous-transformation-component-in-code-design-mode"></a>在代码设计模式下编写异步转换组件脚本  
- 为组件配置完所有元数据后，可以编写自定义脚本。 在“脚本转换编辑器”  的“脚本”  页中，单击“编辑脚本”  打开 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE，可在其中添加自定义脚本。 编写脚本所使用的语言取决于为“脚本”  页上的 **ScriptLanguage** 属性选择 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 还是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 作为脚本语言。  
+ 为组件配置完所有元数据后，可以编写自定义脚本。 在“脚本转换编辑器”的“脚本”页面中，单击“编辑脚本”打开 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE，可在其中添加自定义脚本    。 编写脚本所使用的语言取决于为“脚本”  页上的 **ScriptLanguage** 属性选择 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 还是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 作为脚本语言。  
   
  有关适用于使用脚本组件创建的所有组件类型的重要信息，请参阅[脚本组件的编码和调试](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "71297061"
   
 5.  重命名输入、输出和新输出列，使其名称更具说明性。 该示例使用 **MyAddressInput** 作为输入的名称，**MyAddressOutput** 和 **MySummaryOutput** 作为输出的名称，**MyRedmondCount** 作为第二个输出中的输出列的名称。  
   
-6.  在“脚本”  页中，单击“编辑脚本”  并输入下面的脚本。 然后关闭脚本开发环境和“脚本转换编辑器”  。  
+6.  在“脚本”页中，单击“编辑脚本”并输入下面的脚本   。 然后关闭脚本开发环境和“脚本转换编辑器”  。  
   
 7.  为需要 **AddressID** 和 **City** 列的第一个输出创建和配置一个目标组件，例如，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标或[使用脚本组件创建目标](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中演示的示例目标组件。 然后将该转换的第一个输出，即 **MyAddressOutput**，连接到目标组件。 在 AdventureWorks  数据库中运行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令，以创建目标表：  
   

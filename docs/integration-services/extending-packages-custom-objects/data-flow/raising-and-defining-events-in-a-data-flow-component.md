@@ -21,10 +21,10 @@ ms.assetid: 1d8c5358-9384-47a8-b7cb-7b0650384119
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 588883a254b465cfe1fa9b9b1ea9567e421fb8d4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71287567"
 ---
 # <a name="raising-and-defining-events-in-a-data-flow-component"></a>在数据流组件中引发和定义事件
@@ -46,7 +46,7 @@ ms.locfileid: "71287567"
   
  组件的自定义事件不会持久保留在包 XML 中。 因此，在设计和执行过程中都调用 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.RegisterEvents%2A> 方法，以允许组件定义所引发的事件。  
   
- <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSEventInfos100.Add%2A> 方法的 allowEventHandlers 参数指定组件是否允许为事件创建 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 对象  。 请注意，<xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandlers> 是同步的。 因此，直到附加到自定义事件的 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 执行完毕后，组件才会继续执行。   如果 allowEventHandlers参数为 true，则任何 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 对象都可以通过由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 运行时自动创建和填充的变量使用事件的每个参数。  
+ <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSEventInfos100.Add%2A> 方法的 allowEventHandlers 参数指定组件是否允许为事件创建 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 对象  。 请注意，<xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandlers> 是同步的。 因此，直到附加到自定义事件的 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 执行完毕后，组件才会继续执行。 如果 allowEventHandlers 参数为真，则任何 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 对象都可以通过由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 运行时自动创建和填充的变量使用事件的每个参数   。  
   
 ### <a name="raising-a-custom-event"></a>引发自定义事件  
  通过调用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A> 方法并提供事件的名称、文本和参数，组件可引发自定义事件。   如果 allowEventHandlers 参数为 true，则为自定义事件创建的所有 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandlers> 都由 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 运行时引擎执行。  

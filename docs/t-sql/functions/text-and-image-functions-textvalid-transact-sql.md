@@ -23,10 +23,10 @@ ms.assetid: 9411c349-b59b-4740-a270-92f91d81ad23
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0608d1c5bd8c24fc9e78b21abf7cad6b1045db18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099040"
 ---
 # <a name="text-and-image-functions---textvalid-transact-sql"></a>文本与图像函数 - TEXTVALID (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68099040"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]没有可用的替代功能。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -59,15 +59,15 @@ TEXTVALID ( 'table.column' ,text_ ptr )
 ## <a name="return-types"></a>返回类型  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果指针有效则返回 1，无效则返回 0。 请注意，text 列的标识符必须包含表名  。 在没有有效的文本指针的情况下，不能使用 UPDATETEXT、WRITETEXT 或 READTEXT。  
   
  当使用 text、ntext 和 image 数据时，下列函数和语句也非常有用    。  
   
-|函数或语句|描述|  
+|函数或语句|说明|  
 |---------------------------|-----------------|  
-|PATINDEX **(** '%pattern%  ' **,** expression  **)**|返回指定字符串在 text 和 ntext 列中所处的字符位置   。|  
-|DATALENGTH **(** _expression_ **)**|返回 text、ntext 和 image 列中数据的长度    。|  
+|PATINDEX **(** ' _%pattern%_ ' **,** _expression_ **)**|返回指定字符串在 text 和 ntext 列中所处的字符位置   。|  
+|DATALENGTH(expression)   |返回 text、ntext 和 image 列中数据的长度    。|  
 |SET TEXTSIZE|返回使用 SELECT 语句时返回的 text、ntext 或 image 数据的限制（字节）    。|  
   
 ## <a name="examples"></a>示例  

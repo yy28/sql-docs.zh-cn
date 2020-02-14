@@ -15,10 +15,10 @@ ms.assetid: 8cd3a270-0328-4bfd-bf23-b1d759cc120c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 91db0303326c74b710e7755de5a9573539e61425
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082982"
 ---
 # <a name="monitoring-replication-with-system-monitor"></a>使用系统监视器监视复制
@@ -27,7 +27,7 @@ ms.locfileid: "68082982"
   
  系统监视器使用性能对象和计数器，它们提供各种进程的性能信息。 您可以通过与复制代理相关联的计数器来测量复制的性能：  
   
-|代理|性能对象|计数器|描述|  
+|代理|性能对象|计数器|说明|  
 |-----------|------------------------|-------------|-----------------|  
 |所有代理|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]：复制代理|正在运行|当前正在运行的复制代理数。|  
 |快照代理|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]设置用户帐户 ：复制快照|Snapshot:Delivered Cmds/sec|每秒传递到分发服务器的命令数。|  

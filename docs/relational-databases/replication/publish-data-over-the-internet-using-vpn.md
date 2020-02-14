@@ -15,15 +15,15 @@ ms.assetid: 9ffb6546-9973-4574-aaa0-8fe0017e3601
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9200883cb64877d8b4fc2c35e6f19b28df4715c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67908015"
 ---
 # <a name="publish-data-over-the-internet-using-vpn"></a>使用 VPN 通过 Internet 发布数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  通过使用虚拟专用网络 (VPN) 技术，用户可以在家中、分支机构、远程客户端和其他公司通过 Internet 连接到企业网络进行工作，同时保持通信安全。 用户可以像在局域网 (LAN) 上那样使用 Windows 身份验证。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制的所有类型都可以通过 VPN 复制数据，但如果使用的是合并复制，则应该考虑使用 Web 同步。因为 Web 同步不需要使用 VPN。 有关详细信息，请参阅 [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)。  
+  通过使用虚拟专用网络 (VPN) 技术，用户可以在家中、分支机构、远程客户端和其他公司通过 Internet 连接到企业网络进行工作，同时保持通信安全。 用户可以像在局域网 (LAN) 上那样使用 Windows 身份验证。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制的所有类型都可以通过 VPN 复制数据，但如果使用的是合并复制，则应该考虑使用 Web 同步，因为 Web 同步不需要使用 VPN。 有关详细信息，请参阅 [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)。  
   
  VPN 包含客户端软件，以便计算机可以通过 Internet（特殊情况下甚至可以是 Intranet）连接到专用计算机或服务器上的软件。 用户可以选择使用两端加密和用户身份验证的方法。 Internet 上的 VPN 连接逻辑上可以像站点间的广域网 (WAN) 链接一样使用。  
   

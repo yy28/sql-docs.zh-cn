@@ -13,10 +13,10 @@ ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: abbd4cd516985dcebd28a5fd2fa28e9d83a413b2
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907781"
 ---
 # <a name="monitor-data-tier-applications"></a>监视数据层应用程序
@@ -24,7 +24,7 @@ ms.locfileid: "72907781"
   可以从 **(SSMS) 中的** 实用工具资源管理器 **和** 对象资源管理器 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 以及系统视图和表中监视数据层应用程序 (DAC)。 此外，可以使用标准数据库和 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 监视技术监视 DAC 中包含的数据库中的所有对象。  
   
 ## <a name="before-you-begin"></a>开始之前  
- 如果将 DAC 部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，在下次将实用工具收集组从该实例发送到实用工具控制点时，与部署的 DAC 有关的信息将合并到 SQL Server 实用工具中。 然后，您可以通过使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **实用工具资源管理器**，查看与该 DAC 有关的基本运行状况信息。  
+ 如果将 DAC 部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，在下次将实用工具收集组从该实例发送到实用工具控制点时，与部署的 DAC 有关的信息将合并到 SQL Server 实用工具中。 然后，通过使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 实用工具资源管理器，可以查看与该 DAC 有关的基本运行状况信息  。  
   
  SSMS **“对象资源管理器”** 显示与部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的每个 DAC 有关的基本配置信息，而与该实例是否在 SQL Server 实用工具中进行管理无关。 此外，可以使用与用于监视任何数据库的相同过程来监视与部署的 DAC 相关联的数据库。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "72907781"
   
 4.  在“对象资源管理器”  中选择映射到该实例的服务器节点，然后导航到“管理\数据层应用程序”  节点。  
   
-5.  详细信息页的顶部窗格中的列表视图列出部署到[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的每个 DAC。 在页面的底部选择要在详细信息窗格中显示信息的 DAC。  
+5.  详细信息页的顶部窗格中的列表视图列出部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的每个 DAC。 在页面的底部选择要在详细信息窗格中显示信息的 DAC。  
   
  “数据层应用程序”  节点的右键单击菜单还用于部署新的 DAC 或者删除现有 DAC。  
   

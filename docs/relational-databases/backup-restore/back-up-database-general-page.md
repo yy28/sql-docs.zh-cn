@@ -13,10 +13,10 @@ ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e3bbac9bbdc12e5f2c1a0fb318a91860e44131d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940927"
 ---
 # <a name="back-up-database-general-page"></a>备份数据库（“常规”页）
@@ -26,7 +26,7 @@ ms.locfileid: "67940927"
  有关基本备份概念的详细信息，请参阅 [备份概述 (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)。  
   
 > [!NOTE]  
->  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定备份任务时，可以通过单击“脚本”按钮，再为脚本选择一个目标，生成对应的 [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) 脚本。  
+>  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定备份任务时，可以通过单击“脚本”按钮，再为脚本选择一个目标，生成对应的 [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) 脚本  。  
   
  **使用 SQL Server Management Studio 创建备份**  
   
@@ -43,10 +43,10 @@ ms.locfileid: "67940927"
   
 ## <a name="options"></a>选项  
   
-### <a name="source"></a>数据源  
+### <a name="source"></a>源  
  可通过 **“源”** 面板中的选项标识数据库并指定备份操作的备份类型和组件。  
   
- **“数据库”**  
+ **Database**  
  选择要备份的数据库。  
   
  **恢复模式**  
@@ -65,7 +65,7 @@ ms.locfileid: "67940927"
  选择创建仅复制备份。 *仅复制备份*是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]独立于常规备份序列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的备份。 有关详细信息，请参阅[仅复制备份 (SQL Server)](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)。  
   
 > [!NOTE]  
->  选择“差异”选项时，无法创建仅复制备份。  
+>  选择“差异”  选项时，无法创建仅复制备份。  
   
  **备份组件**  
  选择要备份的数据库组件。 如果在 **“备份类型”** 列表中选择了 **“事务日志”** ，则不会激活此选项。  
@@ -74,8 +74,8 @@ ms.locfileid: "67940927"
   
 |||  
 |-|-|  
-|**“数据库”**|指定备份整个数据库。|  
-|**文件和文件组**|指定要备份的文件和/或文件组。<br /><br /> 选择此选项，打开 **“选择文件和文件组”** 对话框。 在选择要备份的文件组或文件并单击“确定” 后，所选内容将显示在“文件组和文件”  框中。|  
+|**Database**|指定备份整个数据库。|  
+|**文件和文件组**|指定要备份的文件和/或文件组。<br /><br /> 选择此选项，打开 **“选择文件和文件组”** 对话框。 在选择要备份的文件组或文件并单击“确定”  后，所选内容将显示在“文件组和文件”  框中。|  
   
 ### <a name="destination"></a>目标  
  “目标”  面板中的选项允许您为备份操作指定备份设备的类型，并查找现有的逻辑或物理备份设备。  
@@ -94,20 +94,20 @@ ms.locfileid: "67940927"
   
  显示的下一组选项会取决于所选目标的类型。 如果您选择“磁盘”或“磁带”，则会显示以下选项。  
   
- **“添加”**  
- 将文件或设备添加到“备份到”列表中。 最多可以同时向本地磁盘或远程磁盘上的 64 个设备进行备份。 若要指定远程磁盘上的文件，请使用完全限定的通用命名约定 (UNC) 名称。 有关详细信息，请参阅 [备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)。  
+ **添加**  
+ 将文件或设备添加到“备份到”  列表中。 最多可以同时向本地磁盘或远程磁盘上的 64 个设备进行备份。 若要指定远程磁盘上的文件，请使用完全限定的通用命名约定 (UNC) 名称。 有关详细信息，请参阅 [备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)。  
  
  
   
  **删除**  
- 从“备份到”列表中删除一个或多个当前所选的设备。  
+ 从“备份到”  列表中删除一个或多个当前所选的设备。  
   
- **目录**  
+ **Contents**  
 显示所选设备的媒体内容（如果存在）。  指定 **URL** 时，此按钮不会起作用。 
    
-“选择备份目标”对话框 选择“添加”后将出现“选择备份目标”对话框。   显示的选项集取决于所选目标的类型。 
+“选择备份目标”  对话框 选择“添加”  后将出现“选择备份目标”  对话框。   显示的选项集取决于所选目标的类型。 
 
-如果你选择“磁盘”或“磁带”作为备份目标，则会显示以下选项。  
+如果你选择“磁盘”  或“磁带”  作为备份目标，则会显示以下选项。  
 
 *
   **文件名**  

@@ -18,10 +18,10 @@ ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a6cd2bbabd1cae5fd23dd0522c9664d39b66084f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298529"
 ---
 # <a name="msmq-connection-manager"></a>MSMQ 连接管理器
@@ -44,7 +44,7 @@ ms.locfileid: "71298529"
 |队列类型|示例路径|  
 |----------------|-----------------|  
 |公共|\<computer name>\\<queue name\>|  
-|Private|\<computer name>\Private$\\<queue name\>|  
+|专用|\<computer name>\Private$\\<queue name\>|  
   
  可以用句点 (.) 代表本地计算机。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "71298529"
  **名称**  
  为工作流中的 MSMQ 连接管理器提供唯一的名称。 所提供的名称将在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中显示。  
   
- **Description**  
+ **说明**  
  描述连接管理器。 最好按照连接管理器的用途对其进行说明，使包的说明一目了然，且更便于维护。  
   
  **路径**  
@@ -76,11 +76,11 @@ ms.locfileid: "71298529"
 |队列类型|示例路径|  
 |----------------|-----------------|  
 |公共|\<computer name>\\<queue name\>|  
-|Private|\<computer name>\Private$\\<queue name\>|  
+|专用|\<computer name>\Private$\\<queue name\>|  
   
  可以用“.”代表本地计算机。  
   
- **测试**  
+ **Test**  
  在配置 MSMQ 连接管理器之后，单击“测试”确定该连接是否可用。   
   
 ## <a name="see-also"></a>另请参阅  

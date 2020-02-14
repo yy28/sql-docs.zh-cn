@@ -16,10 +16,10 @@ ms.assetid: f8b6ecff-ac99-4231-a0e7-7ce4ad76bad0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 318a7302d87e029f45d6e9202f587473210e0976
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296459"
 ---
 # <a name="simulating-an-error-output-for-the-script-component"></a>模拟脚本组件的错误输出
@@ -42,7 +42,7 @@ ms.locfileid: "71296459"
   
 3.  在“脚本”  页中，将 **ScriptLanguage** 属性设置为要用于编写脚本代码的脚本语言。  
   
-4.  单击“编辑脚本”  打开 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA)。  
+4.  单击“编辑脚本”打开 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA)  。  
   
 5.  在 **Input0_ProcessInputRow** 方法中，键入或粘贴如下所示的示例代码。  
   

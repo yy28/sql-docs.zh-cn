@@ -30,10 +30,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: efc249be2368973bcd1f3a4692ed280c1a131ec6
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68344597"
 ---
 # <a name="principals-database-engine"></a>主体（数据库引擎）
@@ -67,7 +67,7 @@ ms.locfileid: "68344597"
 ## <a name="public-server-role-and-database-role"></a>公共服务器角色和数据库角色  
 每个登录名都属于 `public` 固定服务器角色，并且每个数据库用户都属于 `public` 数据库角色。 当尚未为某个登录名或用户授予或拒绝为其授予对安全对象的特定权限时，该登录名或用户将继承已授予该安全对象的公共角色的权限。 `public` 固定服务器角色和 `public` 固定服务器角色无法删除。 但是，可以从 `public` 角色撤消权限。 默认情况下有许多权限已分配给 `public` 角色。 这些权限中的大部分是执行数据库中的日常操作（每个人都应能够执行的操作类型）所需的。 从公共登录名或用户撤消权限时应十分小心，因为这将影响所有登录名/用户。 通常不应拒绝公共登录名或用户的权限，因为 Deny 语句会覆盖你可能对个别登录名或用户设定的任何 Grant 语句。 
   
-## <a name="informationschema-and-sys-users-and-schemas"></a>INFORMATION_SCHEMA 和 sys 用户与架构 
+## <a name="information_schema-and-sys-users-and-schemas"></a>INFORMATION_SCHEMA 和 sys 用户与架构 
  每个数据库都包含两个实体，并且这些实体都作为用户显示在目录视图中：`INFORMATION_SCHEMA` 和 `sys`。 这些实体供数据库引擎内部使用。 它们无法修改或删除。  
   
 ## <a name="certificate-based-sql-server-logins"></a>基于证书的 SQL Server 登录名  
@@ -94,7 +94,7 @@ ms.locfileid: "68344597"
   
 -   [管理登录名、用户和架构操作指南主题](../../../relational-databases/security/authentication-access/managing-logins-users-and-schemas-how-to-topics.md)  
   
--   [服务器级别角色](../../../relational-databases/security/authentication-access/server-level-roles.md)  
+-   [服务器级角色](../../../relational-databases/security/authentication-access/server-level-roles.md)  
   
 -   [数据库级别的角色](../../../relational-databases/security/authentication-access/database-level-roles.md)  
   

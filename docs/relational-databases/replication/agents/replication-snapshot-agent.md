@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: e777b49ab8c27abff81f54fef52f2a2a7c4dec31
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710353"
 ---
 # <a name="replication-snapshot-agent"></a>复制快照代理
@@ -82,28 +82,28 @@ snapshot [ -?]
  **-?**  
  输出所有可用的参数。  
   
- -Publisher  server_name[\\instance\_name]      
+ **-Publisher**  _server_name_[ **\\** _instance\_name_]  
  发布服务器的名称。 为该服务器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。 为该服务器上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 命名实例指定 server\_name\\instance\_name    。  
   
- **-Publication** _发布_  
+ **-Publication** _publication_  
  发布的名称。 只有将发布设置为总是使快照可用于新订阅或重新初始化的订阅时，此参数才有效。  
   
  **-70Subscribers**  
  如果有任何订阅服务器在运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 版，则必须使用此参数。  
   
- -BcpBatchSize bcp\_ batch\_ size      
- 在一次大容量复制操作中发送的行数。 执行 **bcp in** 操作时，批的大小为要作为一个事务发送到服务器的行数，并且也是分发代理记录 **bcp** 进度消息之前必须发送的行数。 当执行 **bcp out** 操作时，将使用固定批大小 1000。 值为 0 表示不记录任何消息。  
+ **-BcpBatchSize** _bcp_\_ *batch*\_ *size*  
+ 在一次大容量复制操作中发送的行数。  执行 **bcp in** 操作时，批的大小为要作为一个事务发送到服务器的行数，并且也是分发代理记录 bcp 进度消息之前必须发送的行数。 当执行 **bcp out** 操作时，将使用固定批大小 1000。 值为 0 表示不记录任何消息。  
   
  **-DefinitionFile** _def_path_and_file_name_  
  代理定义文件的路径。 代理定义文件中包含该代理的命令行参数。 文件的内容被当作可执行文件进行分析。 使用双引号 (") 指定包含任意字符的参数值。  
   
- -Distributor server_name[\\instance\_name]      
+ **-Distributor** _server_name_[ **\\** _instance\_name_]  
  分发服务器名称。 为该服务器上的 *默认实例指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 为该服务器上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 命名实例指定 server\_name\\instance\_name    。  
   
  **-DistributorDeadlockPriority** [ **-1**|**0**|**1**]  
  死锁发生时快照代理连接到分发服务器的优先级。 指定此参数是为了解决快照生成期间在快照代理和用户应用程序之间发生的死锁问题。  
   
-|DistributorDeadlockPriority 值|描述|  
+|DistributorDeadlockPriority 值|说明|  
 |---------------------------------------|-----------------|  
 |**-1**|在分发服务器上发生死锁时，应用程序而非快照代理优先。|  
 |**0** （默认值）|未分配优先级。|  
@@ -130,7 +130,7 @@ snapshot [ -?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  建立连接时快照代理使用的安全套接字层 (SSL) 加密的等级。  
   
-|EncryptionLevel 值|描述|  
+|EncryptionLevel 值|说明|  
 |---------------------------|-----------------|  
 |**0**|指定不使用 SSL。|  
 |**1**|指定使用 SSL，但是代理不验证 SSL 服务器证书是否已由可信的颁发者进行签名。|  
@@ -147,7 +147,7 @@ snapshot [ -?]
  **-HistoryVerboseLevel** [ **1**| **2**| **3**]  
  指定在快照操作过程中记录的历史记录大小。 选择 **1**可将历史日志记录对性能的影响减至最小。  
   
-|HistoryVerboseLevel 值|描述|  
+|HistoryVerboseLevel 值|说明|  
 |-------------------------------|-----------------|  
 |**0**|进度消息将写入控制台或输出文件。 不在分发数据库中记录历史记录。|  
 |**1**|总是更新具有相同状态（启动、进行中、成功等）的上一历史记录消息。 如果不存在状态相同的上一记录，将插入新记录。|  
@@ -193,7 +193,7 @@ snapshot [ -?]
  **-OutputVerboseLevel** [ **0**| **1**| **2**]  
  指定输出是否应提供详细内容。  
   
-|OutputVerboseLevel 值|描述|  
+|OutputVerboseLevel 值|说明|  
 |------------------------------|-----------------|  
 |**0**|仅输出错误消息。|  
 |**1** （默认值）|输出所有进度报告消息（默认值）。|  
@@ -208,7 +208,7 @@ snapshot [ -?]
 **-PrefetchTables** [ **0**| **1**]  
  可选参数，指定是否预提取并缓存表对象。  默认行为是，根据内部计算结果，使用 SMO 组件来预提取特定表属性。  如果 SMO 预提取操作的耗时相当长，你会发现此参数非常有用。 如果你不使用此参数，此决定是在运行时做出，依据为以项目形式添加到发布中的表所占的百分比。  
   
-|OutputVerboseLevel 值|描述|  
+|OutputVerboseLevel 值|说明|  
 |------------------------------|-----------------|  
 |**0**|禁止调用 SMO 组件的预提取方法。|  
 |**1**|快照代理会调用预提取方法，以使用 SMO 缓存一些表属性|  
@@ -222,14 +222,14 @@ snapshot [ -?]
  **-PublisherDeadlockPriority** [ **-1**|**0**|**1**]  
  死锁发生时快照代理连接到发布服务器的优先级。 指定此参数是为了解决快照生成期间在快照代理和用户应用程序之间发生的死锁问题。  
   
-|PublisherDeadlockPriority 值|描述|  
+|PublisherDeadlockPriority 值|说明|  
 |-------------------------------------|-----------------|  
 |**-1**|在发布服务器上发生死锁时，应用程序而非快照代理优先。|  
 |**0** （默认值）|未分配优先级。|  
 |**1**|在发布服务器上发生死锁时，快照代理优先。|  
   
- -PublisherFailoverPartner server_name[\\instance\_name]      
- 指定参加与发布数据库进行的数据库镜像会话的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移伙伴实例。 有关详细信息，请参阅[数据库镜像和复制 &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)。  
+ **-PublisherFailoverPartner** _server_name_[ **\\** _instance\_name_]  
+ 指定参加与发布数据库进行的数据库镜像会话的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移伙伴实例。 有关详细信息，请参阅 [数据库镜像和复制 (SQL Server)](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)。  
   
  **-PublisherLogin** _publisher_login_  
  使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证连接到发布服务器时所用的登录名。  
@@ -255,7 +255,7 @@ snapshot [ -?]
  \- **UsePerArticleContentsView** _use_per_article_contents_view_  
  已不推荐使用此参数，支持它是为了能够向后兼容。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 > [!IMPORTANT]  
 >  如果您安装的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理是通过本地系统帐户而非域用户帐户（默认值）运行，则该服务仅可访问本地计算机。 如果将在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理下运行的快照代理配置为登录 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]时使用 Windows 身份验证模式，则快照代理将失败。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认设置为  身份验证。  

@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 20158894567c1452a8d605f5cec84354654c5e96
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: b263c3890ab9a03295212c723adad4a431fbf04f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959590"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76928008"
 ---
 # <a name="getting-started-with-includename-sosincludesname-sos-shortmd-extensibility"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] 扩展性入门
 
@@ -53,7 +53,7 @@ azuredatastudio 中支持 IntelliSense。
 
 向仪表板贡献选项卡、容器、见解小组件。
 
-![面板](media/extensibility/dashboard-page.png)
+![仪表板](media/extensibility/dashboard-page.png)
 
 `dashboard.tabs`
 
@@ -267,7 +267,7 @@ Dashboard.tabs 用于在仪表板页面内创建选项卡部分。 它需要对�
 
 在 Azure Data Studio 中，我们有关于数据库连接的特定上下文，可用于扩展。
 
-### <a name="dashboard"></a>面板
+### <a name="dashboard"></a>仪表板
 
 在仪表板中，我们提供以下上下文变量：
 

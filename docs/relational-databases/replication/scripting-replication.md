@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: e50fac44-54c0-470c-a4ea-9c111fa4322b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 62816ac084a565f75d50f5f1f8b2b23467158242
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 8cda2b7729f205da7908fa481b2e1a5639a095a1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768435"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287310"
 ---
 # <a name="scripting-replication"></a>编写复制脚本
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "68768435"
 5.  在多个订阅服务器上运行脚本，以生成所需的请求订阅。  
   
 ## <a name="script-replication-objects"></a>脚本复制对象  
- 从复制向导或  的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 如果从向导编写脚本，则可以选择创建对象并为其编写脚本，也可以选择仅编写脚本。  
+ 复制向导或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中“复制”文件夹中的脚本复制对象  。 如果从向导编写脚本，则可以选择创建对象并为其编写脚本，也可以选择仅编写脚本。  
   
 > [!IMPORTANT]  
 >  所有密码的脚本被编写为 NULL。 如果可能，请在运行时提示用户输入安全凭据。 如果将凭据存储在脚本文件中，则必须确保文件的安全以防受到未经授权的访问。  
@@ -56,7 +56,7 @@ ms.locfileid: "68768435"
   
 -   [配置发布和分发](../../relational-databases/replication/configure-publishing-and-distribution.md)  
   
--   [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)  
+-   [创建发布](../../relational-databases/replication/publish/create-a-publication.md)  
   
 -   [创建推送订阅](../../relational-databases/replication/create-a-push-subscription.md)  
   

@@ -13,10 +13,10 @@ ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 06f2d0cef2cafa90476b4e3f5b6e68efe208c21b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293104"
 ---
 # <a name="data-streaming-destination"></a>数据流目标
@@ -24,7 +24,7 @@ ms.locfileid: "71293104"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  “数据流目标”  是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) 目标组件，它能让 **OLE DB Provider for SSIS** 将 SSIS 包的输出作为表格结果集使用。 可以创建使用 OLE DB Provider for SSIS 的链接服务器，然后在链接服务器上运行 SQL 查询以显示由 SSIS 包返回的数据。  
+  “数据流目标”是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) 目标组件，它能让 OLE DB Provider for SSIS 将 SSIS 包的输出作为表格结果集使用   。 可以创建使用 OLE DB Provider for SSIS 的链接服务器，然后在链接服务器上运行 SQL 查询以显示由 SSIS 包返回的数据。  
   
  在下面的示例中，以下查询从 SSIS 目录的 Power BI 文件夹中的 SSISPackagePublishing 项目中的 Package.dtsx 包返回输出。 此查询使用名为 [Integration Services 的默认链接服务器] 的链接服务器，该服务器会反过来使用新的 OLE DB Provider for SSIS。 该查询包括 SSIS 目录中的文件夹名称、项目名称和包名称。 OLE DB Provider for SSIS 运行你在查询中指定的包，并返回表格结果集。  
   
@@ -60,9 +60,9 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 ## <a name="component-properties-tab"></a>“组件属性”选项卡  
  该选项卡具有以下可编辑字段：  
   
-|字段|描述|  
+|字段|说明|  
 |-----------|-----------------|  
-|“属性”|包中数据流目标组件的名称。|  
+|名称|包中数据流目标组件的名称。|  
 |ValidateExternalMetadata|指示设计时是否使用外部数据源对组件进行了验证。 如果设置为 False，对外部数据源的验证将推迟到运行时。|  
 |IDColumnName|数据馈送发布向导生成的视图有此附加 ID 列。 当其他应用程序将该数据用作 OData 馈送时，ID 列将作为数据流的输出数据的 EntityKey。<br /><br /> 此列的默认值为 _ID。 可以为 ID 列指定不同名称。|  
   

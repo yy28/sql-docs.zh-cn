@@ -13,10 +13,10 @@ ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d6c0aa05f095907b39cacf39f65dfc3b09d9786e
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907185"
 ---
 # <a name="configure-an-oracle-publisher"></a>配置 Oracle 发布服务器
@@ -27,7 +27,7 @@ ms.locfileid: "72907185"
   
 2.  对于发布的表，直接（而不是通过角色）将每个表的 SELECT 权限授予第一步创建的 Oracle 管理用户。  
   
-3.  在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器上安装 Oracle 客户端软件和 OLE DB 访问接口，然后重新启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 如果分发服务器运行在 64 位平台上，则必须使用 64 位版本的 Oracle OLE DB 访问接口。  
+3.  在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器上安装 Oracle 客户端软件和 OLE DB 提供程序，然后停止并重启 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 如果分发服务器运行在 64 位平台上，则必须使用 64 位版本的 Oracle OLE DB 访问接口。  
   
 4.  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器上将 Oracle 数据库配置为发布服务器。  
 
@@ -51,7 +51,7 @@ ms.locfileid: "72907185"
 >  您必须是 **sysadmin** 固定服务器角色的成员，才能启用发布服务器或分发服务器以及创建 Oracle 发布或来自 Oracle 发布的订阅。  
   
 ## <a name="creating-the-replication-administrative-user-schema-within-the-oracle-database"></a>在 Oracle 数据库中创建复制管理用户架构  
- 您必须创建一个用户架构，使复制代理在该用户架构的上下文中连接到 Oracle 数据库并执行操作。 必须授予此架构多种权限，下一部分列出了这些权限。 此架构拥有由 Oracle 发布服务器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制进程创建的所有对象，但公共同义词 **MSSQLSERVERDISTRIBUTOR**除外。 有关在 Oracle 数据库中创建的对象的详细信息，请参阅 [Objects Created on the Oracle Publisher](../../../relational-databases/replication/non-sql/objects-created-on-the-oracle-publisher.md)。  
+ 您必须创建一个用户架构，使复制代理在该用户架构的上下文中连接到 Oracle 数据库并执行操作。 必须授予此架构多种权限，下一部分列出了这些权限。 此架构拥有由 Oracle 发布服务器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制进程创建的所有对象，但公共同义词 MSSQLSERVERDISTRIBUTOR 除外  。 有关在 Oracle 数据库中创建的对象的详细信息，请参阅 [Objects Created on the Oracle Publisher](../../../relational-databases/replication/non-sql/objects-created-on-the-oracle-publisher.md)。  
   
 > [!NOTE]  
 >  删除 **MSSQLSERVERDISTRIBUTOR** 公共同义词和用 **CASCADE** 选项配置的 Oracle 复制用户，会删除 Oracle 发布服务器上的所有复制对象。  
@@ -89,7 +89,7 @@ ms.locfileid: "72907185"
   
  在 Oracle Universal Installer 中，必须提供以下信息：  
   
-|信息|描述|  
+|信息|说明|  
 |-----------------|-----------------|  
 |Oracle 主目录|这是 Oracle 软件的安装目录的路径。 接受默认路径（C:\oracle\ora90 或类似路径），或输入另一个路径。 有关 Oracle 主目录的详细信息，请参阅本主题后面的“Oracle 主目录注意事项”部分。|  
 |Oracle 主目录名称|Oracle 主目录路径的别名。|  
@@ -97,7 +97,7 @@ ms.locfileid: "72907185"
   
  完成 Oracle Universal Installer 之后，使用 Net Configuration Assistant 配置网络连接。 必须提供四部分信息以配置网络连接。 在设置数据库和侦听器时，Oracle 数据库管理员将配置网络。如果您没有此信息，应由数据库管理员提供此信息。 必须执行以下操作：  
   
-|操作|描述|  
+|操作|说明|  
 |------------|-----------------|  
 |标识数据库|标识数据库的方法有两种。 第一种方法是使用 Oracle 系统标识符 (SID)，该方法在所有 Oracle 版本中均可用。 第二种方法是使用服务名称，该名称从 Oracle 8.0 版本开始才可用。 这两种方法都使用一个在创建数据库时所配置的值，并且要注意，客户端网络配置所使用的命名方法要与管理员在配置数据库的侦听器时使用的命名方法相同。|  
 |标识数据库的网络别名|必须指定网络别名，该别名将用来访问 Oracle 数据库。 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器上将 Oracle 数据库标识为发布服务器时，也要提供此别名。 实际上，网络别名是指向在创建数据库时所配置的远程 SID 或服务名称的指针。在不同的 Oracle 版本和产品中存在多种引用名称，包括 Net 服务名称和 TNS 别名。 在登录时，SQL*Plus 将提示您输入此别名来作为“Host String”参数。|  
@@ -116,7 +116,7 @@ ms.locfileid: "72907185"
   
 2.  键入 `cmd` ，然后单击 **“确定”** 。  
   
-3.  在命令提示符下，键入：  
+3.  在命令提示符处，键入：  
   
      `sqlplus <UserSchemaLogin>/<UserSchemaPassword>@<NetServiceName>`  
   
@@ -145,7 +145,7 @@ ms.locfileid: "72907185"
   
 ## <a name="see-also"></a>另请参阅  
  [Oracle 发布服务器的管理注意事项](../../../relational-databases/replication/non-sql/administrative-considerations-for-oracle-publishers.md)   
- [Oracle 发布服务器的数据类型映射](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
+ [Data Type Mapping for Oracle Publishers](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
  [有关 Oracle 发布的术语词汇表](../../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)   
  [Oracle 发布概述](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   

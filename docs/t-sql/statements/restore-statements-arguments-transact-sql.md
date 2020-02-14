@@ -16,10 +16,10 @@ ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a39f9cf72f08e80face176412851778f1afec174
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982463"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE 语句 - 参数 (Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "73982463"
 
 本主题记录了在 RESTORE {DATABASE|LOG} 语句和如后所示的关联辅助语句的“语法”部分中说明的参数：RESTORE FILELISTONLY、RESTORE HEADERONLY、RESTORE LABELONLY、RESTORE REWINDONLY 和 RESTORE VERIFYONLY。 大多数参数都仅由这六个语句中的一部分支持。 每个参数的说明中都指示了相应的支持信息。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
  有关语法，请参阅下列主题：  
@@ -52,7 +52,7 @@ ms.locfileid: "73982463"
   
  对于使用完全恢复模式或大容量日志恢复模式的数据库，在大多数情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都要求您在还原数据库前备份日志尾部。 还原数据库而不首先备份日志的末尾将导致错误，除非 RESTORE DATABASE 语句包含 WITH REPLACE 或 WITH STOPAT 子句，此子句必须指定数据备份的结束时间或在数据备份结束之后发生的事务。 有关结尾日志备份的详细信息，请参阅[结尾日志备份 (SQL Server) ](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)。  
   
- LOG  
+ 日志  
  支持的语句  ：[RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  指示对该数据库应用事务日志备份。 必须按顺序应用事务日志。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 检查已备份的事务日志，以确保按正确的序列将事务加载到正确的数据库。 若要应用多个事务日志，请在除上一个外的所有还原操作中使用 NORECOVERY 选项。  
@@ -401,7 +401,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
 ##### <a name="monitoring-options"></a>监视选项  
  这些选项使您可以监视与备份设备之间的数据传输。  
   
- STATS [ **=** _percentage_ ]  
+ STATS [ = percentage ]    
  支持的语句  ：[RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 和 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
  每当另一个百分比完成时显示一条消息，并用于测量进度。 如果省略 percentage  ，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 每完成 10%（近似）就显示一条消息。  
@@ -541,7 +541,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
   
 -   [RESTORE LABELONLY (Transact-SQL)](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  有关其他备注，请参阅下列主题：  
   
 -   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
@@ -565,7 +565,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
   
  此选项的行为因语句而异，如下表所述：  
   
-|。|备份集 FILE 选项的行为|  
+|语句|备份集 FILE 选项的行为|  
 |---------------|-----------------------------------------|  
 |RESTORE|默认备份集文件号为 1。 一个 RESTORE 语句中只允许使用一个备份集 FILE 选项。 一定要按顺序指定备份集。|  
 |RESTORE FILELISTONLY|默认备份集文件号为 1。|  
@@ -594,7 +594,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
 |MOVE|√|-|-|-|-|√|  
 |PASSWORD|√|√|√|-|-|√|  
 |{ REWIND &#124; NOREWIND }|√|仅限 REWIND|仅限 REWIND|仅限 REWIND|-|√|  
-|STATS|√|-|-|-|-|√|  
+|统计信息|√|-|-|-|-|√|  
 |{ UNLOAD &#124; NOUNLOAD }|√|√|√|√|√|√|  
   
  <sup>1</sup> FILE **=** _backup\_set\_file\_number_，与 {FILE | FILEGROUP} 不同。  

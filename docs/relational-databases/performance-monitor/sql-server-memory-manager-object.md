@@ -14,10 +14,10 @@ ms.assetid: dbf49000-eeb0-4e9c-a361-5092363920dc
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: bf2451fbebb26bd8b9f47bcfe25c34e741e98eea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093397"
 ---
 # <a name="sql-server-memory-manager-object"></a>SQL Server Memory Manager 对象
@@ -29,9 +29,9 @@ ms.locfileid: "68093397"
 -   是否可以通过添加更多内存或使更多内存可用于数据缓存或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部结构来改善查询性能。  
   
 ## <a name="memory-manager-counters"></a>Memory Manager 计数器  
- 下表说明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Memory Manager** 计数器。  
+ 下表说明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Memory Manager 计数器  。  
   
-|SQL Server Memory Manager 计数器|描述|  
+|SQL Server Memory Manager 计数器|说明|  
 |----------------------------------------|-----------------|  
 |**Connection Memory (KB)**|指定服务器正用来维护连接的动态内存的总量。|  
 |**Database Cache Memory (KB)**|指定服务器当前正用来缓存数据库页面的内存量。|  
@@ -39,10 +39,10 @@ ms.locfileid: "68093397"
 |**Free Memory (KB)**|指定服务器当前未使用的已提交内存量。|  
 |**Granted Workspace Memory (KB)**|指定当前授予执行哈希、排序、大容量复制和索引创建操作等进程的内存总量。|  
 |**Lock Blocks**|指定服务器上使用的锁块的当前数目（定期进行刷新）。 一个锁块代表一个单独的锁定资源，如表、页或行。|  
-|**Lock Blocks Allocated**|指定所分配的锁块的当前数量。 服务器启动时，分配的锁块数加上分配的锁拥有者块数依赖于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Locks** 配置选项。 若需要更多的锁块，此值会增加。|  
+|**Lock Blocks Allocated**|指定所分配的锁块的当前数量。 服务器启动时，分配的锁块数加上分配的锁拥有者块数依赖于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Locks 配置选项  。 若需要更多的锁块，此值会增加。|  
 |**Lock Memory (KB)**|指定服务器用于锁的动态内存总量。|  
 |**Lock Owner Blocks**|指定当前正在服务器上使用的锁拥有者块的数目（定期进行刷新）。 一个锁拥有者块代表一个独立线程对某一对象上的一个锁的拥有权。 因此，若三个线程在一个页上各有一个共享 (S) 锁，就会有三个锁拥有者块。|  
-|**Lock Owner Blocks Allocated**|指定所分配的锁拥有者块的当前数量。 服务器启动时，分配的锁拥有者块数和分配的锁块数依赖于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Locks** 配置选项。 若需要更多的锁拥有者块，此数值会动态增加。|  
+|**Lock Owner Blocks Allocated**|指定所分配的锁拥有者块的当前数量。 服务器启动时，分配的锁拥有者块数和分配的锁块数依赖于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Locks 配置选项  。 若需要更多的锁拥有者块，此数值会动态增加。|  
 |**Log Pool Memory (KB)**|服务器正用于日志池的动态内存的总量。| 
 |**Maximum Workspace Memory (KB)**|指示用于执行哈希、排序、大容量复制和索引创建操作等进程的最大可用内存数。|  
 |**Memory Grants Outstanding**|指定成功获得工作空间内存授权的进程总数。|  

@@ -15,26 +15,26 @@ ms.assetid: 22902fd0-eb39-4f18-af94-3fcb69d2a3a4
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d63b9d5d864dc9027eaf6b19a4e4964895699feb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115514"
 ---
 # <a name="update-statistics-task-maintenance-plan"></a>“更新统计信息”任务（维护计划）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  使用 **“‘更新统计信息’任务”** 对话框可以更新与表和索引中的数据有关的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 信息。 此任务实现对数据库中的用户表创建的每个索引的分发统计信息进行重新抽样。 分发统计信息由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用，以便在处理 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句期间优化在各表之间的导航。 为了自动生成分布统计信息， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定期从每个索引所对应的表中抽样数据。 此样本的大小取决于表中的行数和数据修改的频率。 使用此选项可以利用表中指定的数据百分比执行另一次抽样。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用此信息来创建更好的查询计划。  
+  使用“更新统计信息任务”对话框可以更新与表和索引中的数据有关的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 信息  。 此任务实现对数据库中的用户表创建的每个索引的分发统计信息进行重新抽样。 分发统计信息由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用，以便在处理 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句期间优化在各表之间的导航。 为了自动生成分布统计信息， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定期从每个索引所对应的表中抽样数据。 此样本的大小取决于表中的行数和数据修改的频率。 使用此选项可以利用表中指定的数据百分比执行另一次抽样。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用此信息来创建更好的查询计划。  
   
 此任务执行 `UPDATE STATISTICS` 语句。  
   
 ## <a name="options"></a>选项  
- **“连接”**  
+ **Connection**  
  选择执行此任务时使用的服务器连接。  
   
  **新建**  
  创建一个新的服务器连接，在执行此任务时使用。 下面对 **“新建连接”** 对话框进行了介绍。  
   
- **“数据库”**  
+ **数据库**  
  指定受此任务影响的数据库。  
   
 -   **“所有数据库”**  
@@ -56,8 +56,8 @@ ms.locfileid: "68115514"
  > [!NOTE]
  > 只能对兼容级别被设置为 80 或更高的数据库运行维护计划。 不显示兼容级别设置为 70 或更低的数据库。  
   
- **对象**  
- 将“选择”网格限制为显示表、显示视图或同时显示两者。  
+ **Object**  
+ 将“选择”  网格限制为显示表、显示视图或同时显示两者。  
   
  **选择**  
  指定受此任务影响的表或索引。 在“对象”框中选择 **“表和视图”** 时不可用。  
@@ -100,12 +100,12 @@ ms.locfileid: "68115514"
  指定如何对服务器进行身份验证。  
   
  **使用 Windows 集成安全性**  
- 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 的实例。  
+ 使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。  
   
  **使用特定用户名和密码**  
- 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。 此选项不可用。  
+ 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。 此选项不可用。  
   
- **User name**  
+ **用户名**  
  提供一个在进行身份验证时要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 此选项不可用。  
   
  **密码**  

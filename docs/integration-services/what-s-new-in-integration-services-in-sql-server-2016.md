@@ -15,10 +15,10 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8a6bd6207df7d0e93c1b6d360643a9d549e90af9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295035"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 Integration Services 中的新增功能
@@ -187,9 +187,9 @@ ms.locfileid: "71295035"
 ####  <a name="encrypted"></a> 支持 SSIS 目录中的 Always Encrypted  
  SSIS 已在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中提供始终加密功能支持。 有关详细信息，请参阅以下博客文章。  
   
--   [SSIS with Always Encrypted](https://blogs.msdn.com/b/ssis/archive/2015/12/18/ssis-with-always.aspx)（SSIS 与始终加密）  
+-   [SSIS with Always Encrypted](https://blogs.msdn.com/b/ssis/archive/2015/12/18/ssis-with-always.aspx)  
   
--   [Lookup transformation with Always Encrypted](https://blogs.msdn.com/b/ssis/archive/2015/12/18/lookup-transformation-with-always-encrypted.aspx)（查找转换与始终加密）  
+-   [Lookup transformation with Always Encrypted](https://blogs.msdn.com/b/ssis/archive/2015/12/18/lookup-transformation-with-always-encrypted.aspx)  
 
 ### <a name="better-debugging"></a>改进调试
 
@@ -230,7 +230,7 @@ ms.locfileid: "71295035"
 > [!NOTE]  
 >  （在 RC0 中，此方法已移至新的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> 接口。 有关详细信息，请参阅 [API 中的全新 IDTSComponentMetaData130 接口](#CMD130)。）  
 
-####  <a name="ServerLogLevel"></a>支持服务器范围的默认日志记录级别  
+####  <a name="ServerLogLevel"></a> 支持服务器范围的默认日志记录级别  
  在 SQL Server“服务器属性”的“服务器日志记录级别”属性下，现在可以选择默认服务器范围的日志记录级别。   可以从内置日志记录级别（基本、无、详细、性能或运行时沿袭）中选择一项，也可以选择现有的自定义日志记录级别。 所选的日志记录级别适用于部署到 SSIS 目录的所有包， 同时也默认适用于运行 SSIS 包的 SQL 代理作业步骤。  
 
 ####  <a name="CMD130"></a> API 中的全新 IDTSComponentMetaData130 接口  
@@ -269,7 +269,7 @@ ms.locfileid: "71295035"
 ####  <a name="HDFS"></a> 支持 Hadoop 文件系统 (HDFS)  
  HDFS 支持包含连接到 Hadoop 群集的连接管理器，以及用于执行常用 HDFS 操作的任务。 有关详细信息，请参阅 [Integration Services (SSIS) 中的 Hadoop 和 HDFS 支持](../integration-services/hadoop-and-hdfs-support-in-integration-services-ssis.md)。  
 
-####  <a name="more_hadoop"></a>提供对 Hadoop 和 HDFS 的扩展支持  
+####  <a name="more_hadoop"></a> 提供对 Hadoop 和 HDFS 的扩展支持  
   
 -   Hadoop 连接管理器现在支持基本身份验证和 Kerberos 身份验证。 有关详细信息，请参阅 [Hadoop Connection Manager](../integration-services/connection-manager/hadoop-connection-manager.md)。  
   
@@ -280,7 +280,7 @@ ms.locfileid: "71295035"
 ####  <a name="hdfsORC"></a> HDFS 文件目标现在支持 ORC 文件格式  
  HDFS 文件目标现在除了支持文本文件格式和 Avro 文件格式，还支持 ORC 文件格式。 （HDFS 文件源仅支持文本文件格式和 Avro 文件格式。）有关此组件的详细信息，请参阅 [HDFS File Destination](../integration-services/data-flow/hdfs-file-destination.md)。  
 
-####  <a name="odbc2016"></a>ODBC 组件已针对 SQL Server 2016 进行更新  
+####  <a name="odbc2016"></a> ODBC 组件已针对 SQL Server 2016 进行更新  
  ODBC 源和目标组件在更新后已与 SQL Server 2016 完全兼容。 没有新功能，行为也没有改变。  
 
 ####  <a name="Excel2016"></a> 显式支持 Excel 2016 数据源  
@@ -308,7 +308,7 @@ ms.locfileid: "71295035"
 
 最新版本的 Azure 功能包包括连接管理器、源和目标，以便在 Azure Data Lake Store 中移出或移入数据。 有关详细信息，请参阅[用于 Integration Services 的 Azure 功能包 (SSIS)](../integration-services/azure-feature-pack-for-integration-services-ssis.md)
 
-#### <a name="sqldwupload"></a>发布了对 Azure SQL 数据仓库的支持
+#### <a name="sqldwupload"></a> 发布了对 Azure SQL 数据仓库的支持
 
 最新版本的 Azure 功能包包括 Azure SQL DW 上传任务，用于为 SQL 数据仓库填充数据。 有关详细信息，请参阅[用于 Integration Services 的 Azure 功能包 (SSIS)](../integration-services/azure-feature-pack-for-integration-services-ssis.md)
 
@@ -326,7 +326,7 @@ ms.locfileid: "71295035"
 
  在解决方案资源管理器中，右键单击 Integration Services 项目并选择“属性”  以打开该项目的属性页。 在“配置属性”  的“常规”  选项卡上，选择“TargetServerVersion”  属性，然后选择 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
    
- ![项目属性对话框中的 TargetServerVersion 属性](../integration-services/media/targetserverversion2.png "TargetServerVersion property in project properties dialog box")  
+ ![“项目属性”对话框中的 TargetServerVersion 属性](../integration-services/media/targetserverversion2.png "“项目属性”对话框中的 TargetServerVersion 属性")  
 
 > [!IMPORTANT]
 > 如果为 SSIS 开发自定义扩展插件，请参阅 [支持自定义组件中的多目标](../integration-services/extending-packages-custom-objects/support-multi-targeting-in-your-custom-components.md) 和 [Getting your SSIS custom extensions to be supported by the multi-version support of SSDT 2015 for SQL Server 2016](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/)（使 SSIS 自定义扩展插件获得用于 SQL Server 2016 的 SSDT 2015 多版本支持的支持）。  

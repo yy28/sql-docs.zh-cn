@@ -26,10 +26,10 @@ ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 998504b936681c5e20d185ab17b787630a6ae2f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039149"
 ---
 # <a name="use-xml-data-in-applications"></a>使用 XML 数据应用程序
@@ -146,7 +146,7 @@ Row 2
 ```  
   
 ## <a name="handling-xml-from-an-xml-type-column-by-using-adonet"></a>使用 ADO.NET 处理 xml 类型列中的 XML  
- 若要使用 ADO.NET 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 处理 **xml** 数据类型列中的 XML，可以使用 **SqlCommand** 类的标准行为。 例如，可以按照使用 **xml** 检索任何 SQL 列的相同方法检索 **SqlDataReader**数据类型列及其值。但是，如果要将 **xml** 数据类型列的内容作为 XML 使用，必须先将这些内容指派给 **XmlReader** 类型。  
+ 若要使用 ADO.NET 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 处理“xml”数据类型列中的 XML，可以使用“SqlCommand”类的标准行为   。 例如，可以按照使用 **xml** 检索任何 SQL 列的相同方法检索 **SqlDataReader**数据类型列及其值。但是，如果要将 **xml** 数据类型列的内容作为 XML 使用，必须先将这些内容指派给 **XmlReader** 类型。  
   
  有关详细信息和示例代码，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK 文档中的“数据读取器中的 XML 列值”。  
   

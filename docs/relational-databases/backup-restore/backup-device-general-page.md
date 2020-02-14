@@ -13,10 +13,10 @@ ms.assetid: c557e37d-319e-4adb-a0c1-94189b15d2ac
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0d37918c0ca2be62c2e620faa8034548df2b4592
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940828"
 ---
 # <a name="backup-device-general-page"></a>备份设备（“常规”页）
@@ -34,7 +34,7 @@ ms.locfileid: "67940828"
  查看现有逻辑备份设备的名称，或指定新逻辑备份设备的名称。  
   
  **磁带**  
- 在“磁带”  列表中查看或选择目标磁带设备。 仅在运行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例的计算机附连有磁带机时，此选项才可用。  
+ 在“磁带”  列表中查看或选择目标磁带设备。 仅在运行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例的计算机附连有磁带机时，此选项才可用。  
   
 > [!NOTE]  
 >  远程计算机中的磁带备份设备不是有效的备份目标。  
@@ -48,13 +48,13 @@ ms.locfileid: "67940828"
   
      若要指定本地备份文件，可以单击 **“文件”** 文本框右侧的“浏览”按钮。 然后，在 **“定位数据库文件”** 对话框中，您可以导航到运行服务器实例的计算机中任意固定驱动器上的任意位置。 如果备份文件尚不存在，则必须在该对话框的 **“文件名”** 字段中输入要使用的文件名。  
   
-     或者，也可以手动编辑 **“文件”** 字段，以覆盖默认路径、文件名和扩展名。 若要将远程文件指定为备份目标，请输入其完全限定的通用命名约定 (UNC) 名称。 有关详细信息，请参阅 [备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)实例的计算机附连有磁带机时，此选项才可用。  
+     或者，也可以手动编辑 **“文件”** 字段，以覆盖默认路径、文件名和扩展名。 若要将远程文件指定为备份目标，请输入其完全限定的通用命名约定 (UNC) 名称。 有关详细信息，请参阅 [备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)。  
   
     > [!IMPORTANT]  
     >  通过网络备份数据时可能会出现网络错误；因此，建议您在完成备份后验证备份操作。 有关详细信息，请参阅 [RESTORE VERIFYONLY (Transact-SQL)](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
-## <a name="remarks"></a>Remarks  
- 包含一个或多个备份设备的集合的备份构成一个介质集。 “介质集”  是“备份介质”（磁带或磁盘文件）的有序集合，使用固定类型和数量的备份设备向其写入一个或多个备份操作。 有关媒体集的信息，请参阅 [媒体集、媒体簇和备份集 (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)。  
+## <a name="remarks"></a>备注  
+ 包含一个或多个备份设备的集合的备份构成一个介质集。 “介质集”  是“备份介质”（磁带或磁盘文件）的有序集合，使用固定类型和数量的备份设备向其写入一个或多个备份操作。 有关媒体集的信息，请参阅 [媒体集、媒体簇和备份集 (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)实例的计算机附连有磁带机时，此选项才可用。  
   
  将介质集中的第一个备份写入逻辑备份设备时，将对与逻辑备份设备对应的物理备份设备进行初始化。 如果物理备份设备是尚不存在的文件，则此时将创建该文件。  
   

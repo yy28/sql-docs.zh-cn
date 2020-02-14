@@ -31,10 +31,10 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2266b837ce7822a6b03b3f6a26d4d1d818aade72
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298293"
 ---
 # <a name="foreach-loop-container"></a>Foreach 循环容器
@@ -72,7 +72,7 @@ ms.locfileid: "71298293"
   
  以下关系图显示了一个具有文件系统任务的 Foreach 循环容器。 该 Foreach 循环使用了 Foreach 文件枚举器，并将文件系统任务配置为复制文件。 如果枚举器指定的文件夹包含四个文件，则循环将重复四次，复制四个文件。  
   
- ![用于枚举文件夹的 Foreach 循环容器](../../integration-services/control-flow/media/ssis-foreachloop.gif "A Foreach Loop container that enumerates a folder")  
+ ![枚举文件夹的 Foreach 循环容器](../../integration-services/control-flow/media/ssis-foreachloop.gif "枚举文件夹的 Foreach 循环容器")  
   
  可以使用变量和属性表达式的组合，用枚举器集合值更新包对象的属性。 首先，将集合值映射到用户定义变量；然后，对使用该变量的属性执行一个属性表达式。 例如，将 Foreach 文件枚举器的集合值映射到名为 **MyFile** 的变量，然后在发送邮件任务的 Subject 属性的属性表达式中使用该变量。 如果运行该包，则每次重复循环时，都会用一个文件名更新 Subject 属性。 有关详细信息，请参阅 [在包中使用属性表达式](../../integration-services/expressions/use-property-expressions-in-packages.md)。  
   
@@ -179,7 +179,7 @@ ms.locfileid: "71298293"
   
 8.  也可以单击 **“表达式”** ，然后在 **“表达式”** 页上，为 Foreach 循环容器的属性创建属性表达式。 有关详细信息，请参阅 [添加或更改属性表达式](../../integration-services/expressions/add-or-change-a-property-expression.md)。  
   
-9. 单击“确定”  。  
+9. 单击“确定”。   
 
 ## <a name="general-page---foreach-loop-editor"></a>“常规”页 - Foreach 循环编辑器
 可以使用 **“Foreach 循环编辑器”** 对话框的 **“常规”** 页，对 Foreach 循环容器进行命名和说明，该容器使用指定的枚举器重复集合中每个成员的工作流。  
@@ -193,7 +193,7 @@ ms.locfileid: "71298293"
 > [!NOTE]  
 >  对象名称在一个包内必须是唯一的。  
   
- **Description**  
+ **说明**  
  键入对 Foreach 循环容器的说明。  
 
 ## <a name="collection-page---foreach-loop-editor"></a>“集合”页 - Foreach 循环编辑器
@@ -205,7 +205,7 @@ ms.locfileid: "71298293"
  **枚举器**  
  从列表中选择枚举器类型。 此属性具有下表所列的选项：  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**Foreach 文件枚举器**|枚举文件。 选择此值将显示 **“Foreach 文件枚举器”** 部分中的动态选项。|  
 |**Foreach 项枚举器**|枚举项中的值。 选择此值将显示 **“Foreach Item 枚举器”** 部分中的动态选项。|  
@@ -243,7 +243,7 @@ ms.locfileid: "71298293"
  **“浏览”**  
  浏览以定位到根文件夹。  
   
- **“文件”**  
+ **文件**  
  指定要枚举的文件。  
   
 > [!NOTE]  
@@ -313,7 +313,7 @@ ms.locfileid: "71298293"
 #### <a name="enumerator--foreach-adonet-schema-rowset-enumerator"></a>Enumerator = Foreach ADO.NET 架构行集枚举器  
  您可以使用 Foreach ADO.NET 架构行集枚举器枚举指定数据源的架构。 例如，如果 Foreach 循环包括执行 SQL 任务，则可以使用 Foreach ADO.NET 架构行集枚举器枚举架构（例如， **AdventureWorks** 数据库中的列），使用执行 SQL 任务获取架构权限。  
   
- **“连接”**  
+ **Connection**  
  从列表中选择 ADO.NET 连接管理器，或单击 **“新建连接...”\<** > 创建新的 ADO.NET 连接管理器。  
   
 > [!IMPORTANT]  
@@ -347,7 +347,7 @@ ms.locfileid: "71298293"
  **DocumentSourceType**  
  选择 XML 文档的源类型。 此属性具有下表所列的选项：  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**直接输入**|将源设置为 XML 文档。|  
 |**文件连接**|选择包含 XML 文档的文件。|  
@@ -367,7 +367,7 @@ ms.locfileid: "71298293"
  **EnumerationType**  
  从列表中选择枚举类型。 此属性具有下表所列的选项：  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**Navigator**|使用 XPathNavigator 进行枚举。|  
 |**Node**|枚举 XPath 运算返回的节点。|  
@@ -377,7 +377,7 @@ ms.locfileid: "71298293"
  **OuterXPathStringSourceType**  
  选择 XPath 字符串的源类型。 此属性具有下表所列的选项： 
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**直接输入**|将源设置为 XML 文档。|  
 |**文件连接**|选择包含 XML 文档的文件。|  
@@ -400,7 +400,7 @@ ms.locfileid: "71298293"
  **InnerXPathStringSourceType**  
  选择内部 XPath 字符串的源类型。 此属性具有下表所列的选项：  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**直接输入**|将源设置为 XML 文档。|  
 |**文件连接**|选择包含 XML 文档的文件。|  
@@ -420,7 +420,7 @@ ms.locfileid: "71298293"
 #### <a name="enumerator--foreach-smo-enumerator"></a>Enumerator = Foreach SMO 枚举器  
  您可以使用 Foreach SMO 枚举器枚举 SQL Server 管理对象 (SMO) 对象。 例如，如果 Foreach 循环包括执行 SQL 任务，则可以使用 Foreach SMO 枚举器枚举 **AdventureWorks** 数据库中的表并运行计算每个表中行数的查询。  
   
- **“连接”**  
+ **Connection**  
  选择现有 ADO.NET 连接管理器，或单击 **“新建连接...”\<** > 创建新的连接管理器。  
   
  相关主题：[ADO.NET 连接管理器](../../integration-services/connection-manager/ado-net-connection-manager.md)、[配置 ADO.NET 连接管理器](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
@@ -471,7 +471,7 @@ ms.locfileid: "71298293"
  指定包含要枚举的 blob 文件的 blob 容器名称。
   
  **Blob 目录**  
- 指定包含要枚举的 blob 文件的 blob 目录。 Blob 目录是虚拟的层次结构。  
+ 指定包含要枚举的 blob 文件的 blob 目录。 该 blob 目录是一个虚拟层次结构。  
   
  以递归方式搜索   
  指定是否在子目录中以递归方式搜索。
@@ -509,7 +509,7 @@ FolderPath
 **SearchRecursively**  
 指定是否在指定文件夹中以递归方式搜索。
 
-有关服务主体权限配置的说明
+***有关服务主体权限配置的说明***
 
 Data Lake Storage Gen2 由 [RBAC](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal) 和 [ACL](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer) 共同决定权限。
 请注意，ACL 使用用于注册应用的服务主体对象 ID (OID) 进行配置，如[此处](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal)所述。
@@ -571,7 +571,7 @@ Data Lake Storage Gen2 由 [RBAC](https://docs.microsoft.com/azure/storage/commo
  **数据类型**  
  选择数据类型。  
   
- **“添加”**  
+ **添加**  
  添加新列。  
   
  **删除**  

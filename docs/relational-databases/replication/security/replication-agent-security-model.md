@@ -21,10 +21,10 @@ ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: bd0cafe74b558dc86f6709b23e2f1195ecada520
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68768467"
 ---
 # <a name="replication-agent-security-model"></a>复制代理安全性模式
@@ -86,7 +86,7 @@ ms.locfileid: "68768467"
   
  配置复制时，指定运行代理应使用的帐户。 但是，所有作业步骤都使用“代理  ”的安全上下文运行；因此，复制会为指定的代理帐户在内部执行下列映射：  
   
--   首先使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] [CREATE CREDENTIAL](../../../t-sql/statements/create-credential-transact-sql.md) 语句将帐户映射到凭据。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理的代理帐户使用凭据存储 Windows 用户帐户的相关信息。  
+-   首先使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)][CREATE CREDENTIAL](../../../t-sql/statements/create-credential-transact-sql.md) 语句将帐户映射到凭据。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理的代理帐户使用凭据存储 Windows 用户帐户的相关信息。  
   
 -   调用 [sp_add_proxy](../../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md) 存储过程，并使用凭据来创建代理。  
   

@@ -12,10 +12,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: e32c215050b8ee7ec74bee51f7330dbb793814cd
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73729862"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE（Azure SQL 数据仓库）
@@ -108,16 +108,16 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 ### <a name="ColumnOptions"></a> 列选项
 
- `COLLATE` Windows_collation_name   
+ `COLLATE` *Windows_collation_name*  
  指定表达式的排序规则。 此排序规则必须是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的 Windows 排序规则之一。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的 Windows 排序规则列表，请参阅 [Windows 排序规则名称 (Transact-SQL)](windows-collation-name-transact-sql.md)/)。  
   
  `NULL` | `NOT NULL`  
- 指定列中是否允许使用 `NULL` 值。 默认值为 `NULL`。  
+ 指定列中是否允许使用 `NULL` 值。 默认为 `NULL`。  
   
  [ `CONSTRAINT` *constraint_name* ] `DEFAULT` *constant_expression*  
  指定默认列值。  
   
- | 参数 | 解释 |
+ | 参数 | 说明 |
  | -------- | ----------- |
  | constraint_name  | 约束的可选名称。 该约束名称在数据库中是唯一的。 此名称可以重用于其他数据库。 |
  | constant_expression  | 列的默认值。 表达式必须是文本值或一个常数。 例如，允许的常数表达式：`'CA'`、`4`。 禁止使用这些常量表达式：`2+3`、`CURRENT_TIMESTAMP`。 |
@@ -150,10 +150,10 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 ### <a name="TablePartitionOptions"></a> 表分区选项
 有关使用表分区的指南，请参阅[对 SQL 数据仓库中的表进行分区](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/)。
 
- `PARTITION` ( partition_column_name `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ boundary_value [,...n] ] ))      
+ `PARTITION` ( *partition_column_name* `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ *boundary_value* [,...*n*] ] ))   
 创建一个或多个表分区。 这些分区是水平表切片，可便于向行的子集应用操作，无论表是作为堆、聚集索引还是聚集列存储索引进行存储。 与分发列不同，表分区不确定存储每行的分发。 表分区决定行如何分组并存储在每个分发中。  
 
-| 参数 | 解释 |
+| 参数 | 说明 |
 | -------- | ----------- |
 |partition_column_name | 指定 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 将用于行分区的列。 此列可以是任何数据类型。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 按升序对分区列值进行排序。 在 `RANGE` 规范中，由低到高的排序是从 `LEFT` 到 `RIGHT`。 |  
 | `RANGE LEFT` | 指定属于左侧分区的边界值（较低值）。 默认为“左”。 |
@@ -187,7 +187,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  `datetime2` [ ( n ) ]   
 与 `datetime` 相同，只不过可以指定秒小数的数值。 n 的默认值为 `7`  。  
   
-|n 值 |精度|小数位数|  
+|n 值 |Precision|缩放|  
 |--:|--:|-:|  
 |`0`|19|0|  
 |`1`|21|1|  
@@ -213,14 +213,14 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  `float` [ ( n ) ]   
  用于表示浮点数值数据的近似数值数据类型。 浮点数据为近似值；也就是说，并非数据类型范围内的所有值都能精确地表示。 n 指定用于存储科学记数法中 `float` 尾数的字节数  。 n  表示精度和存储大小。 如果指定了 n，它必须是介于 `1` 和 `53` 之间的某个值  。 n 的默认值为 `53`  。  
   
-| n 值  | 精度 | 存储大小 |  
+| n 值  | Precision | 存储大小 |  
 | --------: | --------: | -----------: |  
 | 1-24   | 7 位数  | 4 个字节      |  
 | 25-53  | 15 位数 | 8 字节      |  
   
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 将 n 视为下列两个可能值之一  。 如果 `1`<= n <= `24`，将 n 视为 `24`   。 如果 `25` <= n <= `53`，将 n 视为 `53`   。  
   
- [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] `float` 数据类型从 `1` 到 `53` 之间的所有 n 值均符合 ISO 标准  。 double precision 的同义词是 `float(53)`。  
+ [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]`float` 数据类型从 `1` 到 `53` 之间的所有 n 值均符合 ISO 标准  。 double precision 的同义词是 `float(53)`。  
   
  `real` [ ( n ) ]   
  real 的定义与 float 相同。 `real` 的 ISO 同义词为 `float(24)`。  
@@ -234,7 +234,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  *scale*  
  小数点右边可以存储的十进制数字的最大位数。 小数位数的取值范围必须为 `0` 到精度   。 只有指定了精度，才能指定小数位数   。 默认确定位数为 `0`；因此，`0` <= 确定位数   <= 精度  。 最大存储大小基于精度而变化。  
   
-| 精度 | 存储字节数  |  
+| Precision | 存储字节数  |  
 | ---------: |-------------: |  
 |  1-9       |             5 |  
 | 10-19      |             9 |  

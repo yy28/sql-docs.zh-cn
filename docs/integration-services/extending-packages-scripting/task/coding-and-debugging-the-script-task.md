@@ -22,10 +22,10 @@ ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1a437704946f379f38aa590ccbf53f240fad94cc
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296919"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>脚本任务的编码和调试
@@ -214,7 +214,7 @@ To open Help, press F1.
   
  下表列出了 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> 类的主要公共成员，该类通过全局 **Dts** 对象向脚本任务代码公开。 本节中的主题详细讨论这些成员的使用。  
   
-|成员|用途|  
+|成员|目的|  
 |------------|-------------|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A>|提供对包中定义的连接管理器的访问。|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A>|提供事件接口，使脚本任务能够引发错误、警告和信息性消息。|  
@@ -226,7 +226,7 @@ To open Help, press F1.
   
  <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> 类还包含一些您可能不会使用的公共成员。  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.VariableDispenser%2A>|使用 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 属性可更加方便地访问变量。 虽然您可以使用 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.VariableDispenser%2A>，但您必须为读和写显式调用锁定和解锁变量的方法。 使用 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 属性时，脚本任务会为您处理锁定语义。|  
   

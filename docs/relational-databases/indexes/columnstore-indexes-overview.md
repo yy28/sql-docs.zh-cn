@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d48ff63d5ea5ab7ed805eb7db092fa35682bbc9b
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70009408"
 ---
 # <a name="columnstore-indexes-overview"></a>列存储索引：概述
@@ -61,7 +61,7 @@ ms.locfileid: "70009408"
 -   每个行组包含表中每个列的一个列段。  
 -   每个列段一起压缩并且存储于物理介质上。  
   
-![Column segment](../../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
+![列段](../../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "列段")  
   
 #### <a name="clustered-columnstore-index"></a>聚集列存储索引
 聚集列存储索引是整个表的物理存储。    
@@ -116,7 +116,7 @@ ms.locfileid: "70009408"
 对于扫描大量数据（尤其是大型表中）的分析查询，列存储索引可提高性能。 对数据仓库和分析工作负载（尤其是事实数据表）使用列存储索引，因为它们往往需要进行全表扫描，而不是表查找。  
   
 ### <a name="can-i-combine-rowstore-and-columnstore-on-the-same-table"></a>是否可以在同一个表中组合行存储与列存储？  
-是。 自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起，可以对行存储表创建可更新的非聚集列存储索引。 列存储索引存储选定列的副本，所以需要为此数据留出额外空间，但选定数据可实现平均 10 倍的压缩率。 可以同时对列存储索引和行存储索引上的事务运行分析。 列存储随行存储表中的数据更改一起更新，因此这两个索引处理的是相同数据。  
+是的。 自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起，可以对行存储表创建可更新的非聚集列存储索引。 列存储索引存储选定列的副本，所以需要为此数据留出额外空间，但选定数据可实现平均 10 倍的压缩率。 可以同时对列存储索引和行存储索引上的事务运行分析。 列存储随行存储表中的数据更改一起更新，因此这两个索引处理的是相同数据。  
   
 自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起，可以对列存储索引创建一个或多个非聚集行存储索引，并对基础列存储执行高效表查找。 其他选项也可供使用。 例如，可以通过在行存储表中使用 UNIQUE 约束来强制主键约束。 由于非唯一值无法插入到行存储表中，因此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法将值插入列存储。  
   

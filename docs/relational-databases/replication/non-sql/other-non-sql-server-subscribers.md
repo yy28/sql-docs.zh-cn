@@ -13,10 +13,10 @@ ms.assetid: 96b8beb9-38e8-4ce4-97ca-c0f8656b73b4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: dce8d383ca01fd205645a18f7aa181d12cff4675
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68110954"
 ---
 # <a name="other-non-sql-server-subscribers"></a>其他非 SQL Server 订阅服务器
@@ -60,7 +60,7 @@ ms.locfileid: "68110954"
   
 -   **IDBProperties**  
   
- 如果访问接口支持 **IDBInfo** 接口，则 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用该接口检索信息（如引用的标识符字符、最大 SQL 语句长度，以及表名和列名中最大字符数）。  
+ 如果提供程序支持 **IDBInfo** 接口，则 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用该接口检索信息（如引用的标识符字符、最大 SQL 语句长度，以及表名和列名中最大字符数）。  
   
 ### <a name="session-object-interfaces"></a>会话对象接口  
  下列接口是必需的：  
@@ -115,6 +115,6 @@ ms.locfileid: "68110954"
  有关 OLE DB 访问接口的详细信息，请参阅 OLE DB 访问接口附带的文档。  
   
 ## <a name="see-also"></a>另请参阅  
- [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)  
+ [非 SQL Server 订阅服务器](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)  
   
   

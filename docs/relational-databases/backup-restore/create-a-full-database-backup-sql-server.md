@@ -16,10 +16,10 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fe0c9a950221317cb4a9088bae7629fc0c894165
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710324"
 ---
 # <a name="create-a-full-database-backup"></a>完整数据库备份
@@ -60,7 +60,7 @@ ms.locfileid: "71710324"
 > [!NOTE]
 > 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定备份任务时，可以通过单击“脚本”按钮并选择脚本目标生成相应的 [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) 脚本  。
 
-1. 连接到相应的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例之后，在对象资源管理器中，展开服务器树  。
+1. 连接到相应的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例之后，在“对象资源管理器”中，展开服务器树  。
 
 1. 展开“数据库”，选择用户数据库，或展开“系统数据库”，选择系统数据库。  
 
@@ -136,11 +136,11 @@ GO
 
 在此示例中，将 `SQLTestDB` 数据库备份到默认备份位置处的磁盘。
 
-1. 连接到相应的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例之后，在对象资源管理器中，展开服务器树  。
+1. 连接到相应的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例之后，在“对象资源管理器”中，展开服务器树  。
 
 1. 展开“数据库”  ，右键单击 `SQLTestDB`，然后指向“任务”  ，再单击“备份...”  。
 
-1. 单击“确定”  。
+1. 单击“确定”。 
 
 1. 备份成功完成后，单击“确定”，关闭“SQL Server Management Studio”对话框  。
 
@@ -150,7 +150,7 @@ GO
 
 在此示例中，将 `SQLTestDB` 数据库备份到所选位置处的磁盘。
 
-1. 连接到相应的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例之后，在对象资源管理器中，展开服务器树  。
+1. 连接到相应的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例之后，在“对象资源管理器”中，展开服务器树  。
 
 1. 展开“数据库”  ，右键单击 `SQLTestDB`，然后指向“任务”  ，再单击“备份...”  。
 
@@ -172,7 +172,7 @@ GO
 
 在此示例中，将已加密的 `SQLTestDB` 数据库备份到默认备份位置。
 
-1. 连接到相应的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例之后，在对象资源管理器中，展开服务器树  。
+1. 连接到相应的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例之后，在“对象资源管理器”中，展开服务器树  。
 
 1. 展开“数据库”，展开“系统数据库”，右键单击 `master`，然后单击“新建查询”，打开连接到 `SQLTestDB` 数据库的查询窗口    。
 
@@ -210,7 +210,7 @@ GO
 
 如果在存储帐户中不具有 Azure blob 容器，请先创建一个，然后再继续操作。 有关详细信息，请参阅[创建常规用途存储帐户](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=azure-portal)和[创建容器](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container)。
 
-1. 连接到相应的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例之后，在对象资源管理器中，展开服务器树  。
+1. 连接到相应的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例之后，在“对象资源管理器”中，展开服务器树  。
 
 1. 展开“数据库”  ，右键单击 `SQLTestDB`，然后指向“任务”  ，再单击“备份...”  。
 
@@ -251,7 +251,7 @@ GO
 
  BACKUP DATABASE *database* TO *backup_device* [ **,** ...*n* ] [ WITH *with_options* [ **,** ...*o* ] ] ;
 
-|选项|“说明”|
+|选项|说明|
 |------------|-----------------|
 |*database*|要备份的数据库。|
 |*backup_device* [ **,** ...*n* ]|指定一个列表，它包含 1 至 64 个用于备份操作的备份设备。 您可以指定物理备份设备，也可以指定对应的逻辑备份设备（如果已定义）。 若要指定物理备份设备，请使用 DISK 或 TAPE 选项：<br /><br /> { DISK &#124; TAPE } =  物理\_备份\_设备\_名称 <br /><br /> 有关详细信息，请参阅 [备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)。|
@@ -264,7 +264,7 @@ GO
 
 - { COMPRESSION | NO_COMPRESSION }  ：在 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 及更高版本中，指定是否为此备份执行 [备份压缩](../../relational-databases/backup-restore/backup-compression-sql-server.md) ，该设置将替代服务器级默认设置。
 - ENCRYPTION (ALGORITHM, SERVER CERTIFICATE |ASYMMETRIC KEY)  ：仅在 SQL Server 2014 或更高版本中，指定要使用的加密算法以及要用于保护加密的证书或非对称密钥。
-- DESCRIPTION = { '_text_' | @_text\_variable_ }      ：指定说明备份集的自由格式文本。 该字符串最长可达 255 个字符。
+- **DESCRIPTION** **=** { **'** _text_ **'**  |  **@** _text\_variable_ }:指定说明备份集的自由格式文本。 该字符串最长可达 255 个字符。
 - NAME = { backup_set_name | @_backup\_set\_name\_var_ }   ：指定备份集的名称。 名称最长可达 128 个字符。 如果未指定 NAME，它将为空。
 
 默认情况下，`BACKUP` 将备份追加到现有介质集中，并保留现有备份集。 若要显式指定此项，请使用 `NOINIT` 选项。 有关附加到现有备份集的信息，请参阅 [媒体集、媒体簇和备份集 (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)。
@@ -389,7 +389,7 @@ Backup-SqlDatabase -ServerInstance Computer[\Instance] -Database <myDatabase> -B
 
 #### <a name="b-full-backup-to-azure"></a>B. 完整备份到 Azure
 
-下面的示例在 `<myDatabase>` 实例上向 Azure Blob 存储服务创建 `<myServer>` 数据库的完整备份。 已经创建具有读取、写入和表权限的存储访问策略。 已使用与存储访问策略相关联的共享访问签名创建 SQL Server 凭据 `https://<myStorageAccount>.blob.core.windows.net/<myContainer>`。 PowerShell 命令使用 **BackupFile** 参数指定位置 (URL) 和备份文件名。
+下面的示例在 `<myDatabase>` 实例上向 Azure Blob 存储服务创建 `<myServer>` 数据库的完整备份。 已经创建具有读取、写入和表权限的存储访问策略。 已使用与存储访问策略相关联的共享访问签名创建 SQL Server 凭据 `https://<myStorageAccount>.blob.core.windows.net/<myContainer>` 。 PowerShell 命令使用 **BackupFile** 参数指定位置 (URL) 和备份文件名。
 
 ```powershell
 $credential = Get-Credential

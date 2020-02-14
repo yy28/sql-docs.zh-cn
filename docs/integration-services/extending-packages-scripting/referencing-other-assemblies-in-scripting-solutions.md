@@ -25,10 +25,10 @@ ms.assetid: 9b655bcd-19f6-43d8-9f89-1b4d299c6380
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aa693a941ed5f6d56952c4e720aba7dc318600e0
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71286279"
 ---
 # <a name="referencing-other-assemblies-in-scripting-solutions"></a>引用脚本解决方案中的其他程序集

@@ -18,10 +18,10 @@ ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: f069a36982a624dceee4f2be38633ec6998f1eb2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041337"
 ---
 # <a name="tail-log-backups-sql-server"></a>结尾日志备份 (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "68041337"
    ##  <a name="TailLogScenarios"></a> 需要结尾日志备份的方案  
  建议您在以下方案中执行结尾日志备份：  
   
--   如果数据库处于联机状态并且您计划对数据库执行还原操作，则从备份日志结尾开始。 若要避免联机数据库错误，必须使用... [BACKUP](../../t-sql/statements/backup-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的 WITH NORECOVERY 选项。  
+-   如果数据库处于联机状态并且您计划对数据库执行还原操作，则从备份日志结尾开始。 若要避免联机数据库错误，必须使用...[BACKUP](../../t-sql/statements/backup-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的 WITH NORECOVERY 选项。  
   
 -   如果数据库处于脱机状态而无法启动，则需要还原数据库，从备份日志结尾开始。 由于此时不会发生任何事务，因此 WITH NORECOVERY 是可选的。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68041337"
   
 -   **backup_set_id**  
 -   **filegroup_id**  
--   **type**  
+-   type   
 -   **type_desc**  
 -   **is_readonly**  
   

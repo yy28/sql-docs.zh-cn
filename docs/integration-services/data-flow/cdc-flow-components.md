@@ -11,10 +11,10 @@ ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d1b067ae6f35f9f96f7f0f7207cb6d09456a177f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293404"
 ---
 # <a name="cdc-flow-components"></a>CDC 流组件
@@ -71,7 +71,7 @@ ms.locfileid: "71293404"
 ### <a name="uninstalling-the-microsoft-cdc-components"></a>卸载 Microsoft CDC 组件  
  可以使用卸载向导卸载 CDC 源、CDC 拆分器或 CDC 控制任务。 如果你要使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 进行包开发，请务必在运行卸载向导前关闭 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 。  
   
-## <a name="benefits"></a>优势  
+## <a name="benefits"></a>优点  
  借助用于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件的 CDC 组件，SSIS 开发者可以轻松生成 SSIS 包来处理变更数据。 这些组件增强了 SSIS 开发人员处理 CDC 的能力并降低了 CDC 包的复杂性。  
   
  使用 SSIS CDC 提供的更改数据更易于进一步处理，从而便于复制、加载数据仓库、更新 OLAP 的渐变维度、审核更改，或方便应用于其他可能的用途。 所使用的进一步处理的类型由 SSIS 开发人员确定。  
@@ -81,7 +81,7 @@ ms.locfileid: "71293404"
 ## <a name="getting-started-with-the-change-data-capture-components"></a>Change Data Capture 组件入门  
  典型的 CDC 包处理针对一组表的更改。 下图显示了此类 CDC 包的基本控制流部分。 此包被称为滴送处理包。  
   
- ![滴送处理包控制流](../../integration-services/data-flow/media/tricklefeedprocessing.gif "Trickle Feed Processing Package Control Flow")  
+ ![滴送处理包控制流](../../integration-services/data-flow/media/tricklefeedprocessing.gif "滴送处理包控制流")  
   
  这一 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 控制流包含两个 CDC 控制任务以及一个数据流任务。 第一个任务称为“获取 CDC 处理范围”，此任务为在称为“处理更改”的数据流任务中处理的更改建立 LSN 范围。   基于上一包运行期间处理的已保存在持久存储区中的更改建立此范围。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "71293404"
   
  下图显示了 **“处理更改”** 数据流，该数据流在概念上演示了如何处理更改。  
   
- ![处理变化数据流](../../integration-services/data-flow/media/processchangesdataflow.gif "Process Changes Data Flow")  
+ ![处理变化数据流](../../integration-services/data-flow/media/processchangesdataflow.gif "处理变化数据流")  
   
  此图中演示了以下步骤：  
   
@@ -125,11 +125,11 @@ ms.locfileid: "71293404"
   
  下图显示了可处理前两种方案的 SSIS 包：  
   
- ![处理前两个方案的 SSIS 包](../../integration-services/data-flow/media/scenarioonetwo.gif "SSIS package handling first two scenarios")  
+ ![处理前两个方案的 SSIS 包](../../integration-services/data-flow/media/scenarioonetwo.gif "处理前两个方案的 SSIS 包")  
   
  下图显示了可处理第三种方案的 SSIS 包：  
   
- ![处理第三个方案的 SSIS 包](../../integration-services/data-flow/media/scenario3.gif "处理第三个方案的 SSIS 包")  
+ ![处理第三方案的 SSIS 包](../../integration-services/data-flow/media/scenario3.gif "处理第三方案的 SSIS 包")  
   
  在初始加载包之后，会根据计划反复运行滴送更新包，以便一出现可使用的更改就送交处理。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "71293404"
   
  CDC 状态变量的值需在永久性存储中留存和维护。 应在启动 CDC 处理前读取该值，并在处理完成后以当前状态保存。 加载和存储 CDC 状态的任务可由 SSIS 开发人员处理，但是 CDC 控制组件可以通过在数据库表中维护 CDC 状态值来自动处理此任务。  
   
-## <a name="security-considerations"></a>需要考虑的安全性因素  
+## <a name="security-considerations"></a>安全注意事项  
  本节列出了与在 SSIS 中使用 CDC 组件相关的一些安全注意事项。  
   
 ### <a name="access-authorization-to-change-data"></a>针对更改数据的访问授权  
@@ -173,7 +173,7 @@ ms.locfileid: "71293404"
 ## <a name="cdc-state"></a>CDC 状态  
  每个 CDC 组都关联有某种状态，该状态表示为具有特定格式的字符串。 有关详细信息，请参阅 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)。 下表列出了可能的 CDC 状态值。  
   
-|状态|描述|  
+|状态|说明|  
 |-----------|-----------------|  
 |0-(INITIAL)|对当前 CDC 组运行任何包之前存在的状态。 这也是 CDC 状态为空时的状态。<br /><br /> 有关 CDC 控制任务操作的详细信息，请参阅 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)。|  
 |1-ILSTART（初始-加载-已启动）|这是在初始加载包启动时存在的状态。 在 **MarkInitialLoadStart** 操作调用 CDC 控制任务后就会出现该状态。<br /><br /> 有关 CDC 控制任务操作的详细信息，请参阅 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)。|  
@@ -188,7 +188,7 @@ ms.locfileid: "71293404"
   
  例如，在初始加载包的末尾，当试图将状态设置为 ILEND 时，如果该状态为 TFSTART，则 CDC 组将处于错误状态，滴送更新包不会运行（但初始加载包会运行）。  
   
- ![状态图](../../integration-services/data-flow/media/statediagram.gif "State Diagram")  
+ ![状态图](../../integration-services/data-flow/media/statediagram.gif "状态图")  
   
  一旦初始加载包成功运行，滴送更新包就会根据预先确定的计划反复运行，以处理针对源表的更改。 滴送更新包的每次运行都是一次 CDC 运行。  
   

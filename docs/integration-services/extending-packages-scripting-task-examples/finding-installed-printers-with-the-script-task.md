@@ -22,10 +22,10 @@ ms.assetid: 50a55014-e2c3-4ecd-84e1-3e877c55a260
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: cece5cb3e406bdc0fe5b437691528eb4cf6bf848
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71286858"
 ---
 # <a name="finding-installed-printers-with-the-script-task"></a>使用脚本任务查找已安装的打印机
@@ -33,13 +33,13 @@ ms.locfileid: "71286858"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包转换的数据的最终目的通常是打印成一份报表。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 System.Drawing.Printing  命名空间提供了用于处理打印机的类。  
+  由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包转换的数据的最终目的通常是打印成一份报表。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 System.Drawing.Printing 命名空间提供了用于处理打印机的类  。  
   
 > [!NOTE]  
 >  如果希望创建可更方便地重用于多个包的任务，请考虑以此脚本任务示例中的代码为基础，创建自定义任务。 有关详细信息，请参阅 [开发自定义任务](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)。  
   
-## <a name="description"></a>描述  
- 以下示例查找服务器上安装的支持合法纸张大小（以在美国使用为例）的打印机。 用于检查所支持的纸张大小的代码封装在一个私有函数中。 为了能够跟踪脚本检查每个打印机设置的进度，脚本使用 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> 方法对具有合法纸张大小的打印机引发信息性消息，对不具有合法纸张大小的打印机引发警告。 在设计器中运行包时，这些消息显示在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE 的“输出”  窗口中。  
+## <a name="description"></a>说明  
+ 以下示例查找服务器上安装的支持合法纸张大小（以在美国使用为例）的打印机。 用于检查所支持的纸张大小的代码封装在一个私有函数中。 为了能够跟踪脚本检查每个打印机设置的进度，脚本使用 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> 方法对具有合法纸张大小的打印机引发信息性消息，对不具有合法纸张大小的打印机引发警告。 在设计器中运行包时，这些消息显示在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE 的“输出”窗口中  。  
   
 #### <a name="to-configure-this-script-task-example"></a>配置此脚本任务示例  
   

@@ -13,10 +13,10 @@ ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6d39c2d0975f7be8a7e5481b9c91266528ae9ee2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006357"
 ---
 # <a name="database-mirroring-operating-modes"></a>数据库镜像运行模式
@@ -54,7 +54,7 @@ ms.locfileid: "68006357"
   
  下图显示了使用高性能模式的会话的配置。  
   
- ![会话的仅伙伴配置](../../database-engine/database-mirroring/media/dbm-high-performance-mode.gif "会话的仅伙伴配置")  
+ ![会话的仅合作伙伴配置](../../database-engine/database-mirroring/media/dbm-high-performance-mode.gif "会话的仅合作伙伴配置")  
   
  在高性能模式下，主体服务器向镜像服务器发送事务日志之后，就立即向客户端发送确认，而不会等待镜像服务器的确认。 事务不等待镜像服务器将日志写入磁盘便提交。 异步操作允许主体服务器的运行有一段最短事务滞后时间。  
   
@@ -145,14 +145,14 @@ ms.locfileid: "68006357"
 ###  <a name="HighSafetyWithOutAutoFailover"></a> 不带自动故障转移的高安全性模式  
  下图显示了不带自动故障转移的高安全性模式的配置。 配置仅包括两个伙伴。  
   
- ![不使用见证服务器的伙伴通信](../../database-engine/database-mirroring/media/dbm-high-protection-mode.gif "不使用见证服务器的伙伴通信")  
+ ![不使用见证服务器的合作伙伴通信](../../database-engine/database-mirroring/media/dbm-high-protection-mode.gif "不使用见证服务器的合作伙伴通信")  
   
  当伙伴连接在一起并且数据库已同步时，支持手动故障转移。 如果镜像服务器实例出现故障，则主体服务器实例不会受到影响并且公开运行（即，未镜像数据）。 如果主体服务器丢失，则镜像会挂起，但可以将服务强制到镜像服务器（可能造成数据丢失）。 有关详细信息，请参阅 [数据库镜像会话期间的角色切换 (SQL Server)](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)的各版本中均未提供见证服务器实例。  
   
 ###  <a name="HighSafetyWithAutoFailover"></a> 具有自动故障转移的高安全性模式  
  自动故障转移通过确保在丢失一个服务器之后仍向数据库提供服务来提供高可用性。 自动故障转移要求会话具有第三个服务器实例（“见证服务器  ”），理想情况是见证服务器驻留在第三台计算机上。 下图显示了支持自动故障转移的高安全性模式会话的配置。  
   
- ![会话的见证服务器和两个伙伴](../../database-engine/database-mirroring/media/dbm-high-availability-mode.gif "会话的见证服务器和两个伙伴")  
+ ![会话的见证服务器和合作伙伴双方](../../database-engine/database-mirroring/media/dbm-high-availability-mode.gif "会话的见证服务器和合作伙伴双方")  
   
  与这两个伙伴不同的是，见证服务器并不能用于数据库。 见证服务器通过验证主体服务器是否已启用并运行来仅支持自动故障转移。 只有在镜像服务器和见证服务器与主体服务器断开连接之后而保持相互连接时，镜像服务器才启动自动故障转移。  
   
@@ -168,7 +168,7 @@ ms.locfileid: "68006357"
   
 -   如果主体服务器变得不可用，则在上述条件下将发生自动故障转移。 镜像服务器切换为主体角色，并提供其数据库作为主体数据库。  
   
--   如果主体服务器在这些条件不满足时变得不可用，则可能会强制服务（可能造成数据丢失）。 有关详细信息，请参阅[数据库镜像会话期间的角色切换 (SQL Server)](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)。  
+-   如果主体服务器在这些条件不满足时变得不可用，则可能会强制服务（可能造成数据丢失）。 有关详细信息，请参阅 [数据库镜像会话期间的角色切换 (SQL Server)](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)的各版本中均未提供见证服务器实例。  
   
 -   如果只有镜像服务器变得不可用，则主体服务器和见证服务器将继续运行。  
   
@@ -247,7 +247,7 @@ ms.locfileid: "68006357"
 ###  <a name="ViewWitness"></a> 查看安全设置和见证服务器状态  
  若要针对数据库查看安全设置和见证服务器的状态，请使用 **sys.database_mirroring** 目录视图。 相关列如下所示：  
   
-|因素|“列”|描述|  
+|因素|列|说明|  
 |------------|-------------|-----------------|  
 |事务安全|**mirroring_safety_level** 或 **mirroring_safety_level_desc**|镜像数据库上用于更新的事务安全设置，如下所示：<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL<br /><br /> NULL= 数据库没有在线。|  
 |是否存在见证服务器？|**mirroring_witness_name**|数据库镜像见证服务器的名称或 NULL（指示不存在见证服务器）。|  

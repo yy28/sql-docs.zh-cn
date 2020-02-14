@@ -17,12 +17,12 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: b0590a46fe9e5037f5bec1895aa6602bcd8c568a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: cc42584c6b3f07961e83e53b8b5165243060256f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907677"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910240"
 ---
 # <a name="compare-execution-plans"></a>比较执行计划
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "72907677"
      > [!TIP]
      > 可用于执行计划的所有缩放和导航选项均在计划比较模式下工作。 有关详细信息，请参阅[显示实际执行计划](../../relational-databases/performance/display-an-actual-execution-plan.md)。
 
-5.  在默认选择范围内，右侧还会显示一个双属性窗口。 如果属性同时存在于两个被比较的运算符中但有差异，属性前面会带有不等  号 (&ne;)，这样更易识别。
+5.  在默认选择范围内，右侧还会显示一个双属性窗口。 如果属性同时存在于两个被比较的运算符中但有差异，属性前面会带有不等号 (&ne;)，这样更易识别  。
 
     ![双属性窗口](../../relational-databases/performance/media/plancomparison-properties.png "双属性窗口")  
 
@@ -102,6 +102,6 @@ ms.locfileid: "72907677"
 
     ![在查询存储中选择两个计划](../../relational-databases/performance/media/plancomparison-querystore.png "在查询存储中选择两个计划")   
 
-3.  使用“在单独的窗口中为选定的查询比较计划”按钮开始计划比较  。 这时可使用“比较执行计划”的步骤 4 到 6  。 
+3.  使用“在单独的窗口中比较选定查询的计划”按钮开始计划比较  。 这时可使用“比较执行计划”的步骤 4 到 6  。 
 
     ![在查询存储中比较显示计划](../../relational-databases/performance/media/plancomparison-querystoreoption.png "在查询存储中比较显示计划") 

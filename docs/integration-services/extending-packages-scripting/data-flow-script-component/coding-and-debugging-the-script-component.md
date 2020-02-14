@@ -22,10 +22,10 @@ ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c4b3337be486123545a187337949da1c160343ad
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71286544"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>脚本组件的编码和调试
@@ -38,7 +38,7 @@ ms.locfileid: "71286544"
 ## <a name="writing-the-script-in-code-design-mode"></a>在代码设计模式下编写脚本  
   
 ### <a name="script-component-development-environment"></a>脚本组件开发环境  
- 若要编写脚本，请在“脚本转换编辑器”的“脚本”页中，单击“编辑脚本”以打开 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE    。 VSTA IDE 包含 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] .NET 环境的所有标准功能，如具有颜色编码的 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 编辑器、IntelliSense 和对象浏览器。  
+ 要编写脚本，请在“脚本转换编辑器”的“脚本”页面中，单击“编辑脚本”打开 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE    。 VSTA IDE 包含 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] .NET 环境的所有标准功能，如具有颜色编码的 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 编辑器、IntelliSense 和对象浏览器。  
   
  脚本代码以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 编写。 在“脚本转换编辑器”中设置 ScriptLanguage 属性可指定脚本语言   。 如果您倾向于使用其他编程语言，则可以用您选择的语言开发自定义程序集，然后通过脚本组件中的代码调用其功能。  
   
@@ -172,7 +172,7 @@ public class ScriptMain : UserComponent
   
 |包的功能|访问方法|  
 |---------------------|-------------------|  
-|变量|使用 ComponentWrapper 项目项的 Variables 集合类中的命名取值函数属性和类型化取值函数属性，这些属性通过 ScriptMain 类的 Variables 属性公开     。<br /><br /> PreExecute 方法仅可访问只读变量  。 **PostExecute** 方法既可访问只读变量，又可访问读/写变量。|  
+|变量|使用 ComponentWrapper 项目项的 Variables 集合类中的命名取值函数属性和类型化取值函数属性，这些属性通过 ScriptMain 类的 Variables 属性公开     。<br /><br /> **PreExecute** 方法仅可访问只读变量。 **PostExecute** 方法既可访问只读变量，又可访问读/写变量。|  
 |连接|使用 ComponentWrapper 项目项的 Connections 集合类中的命名取值函数属性和类型化取值函数属性，这些属性通过 ScriptMain 类的 Connections 属性公开     。|  
 |事件|使用 ScriptMain 类的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> 属性和 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 接口的 Fire\<X> 方法引发事件   。|  
 |日志记录|使用 ScriptMain 类的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> 方法执行日志记录  。|  

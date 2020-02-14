@@ -15,10 +15,10 @@ ms.assetid: 8a14f12d-2fbf-4036-b8b2-8db3354e0eb7
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e70998bed1ed0f2681009622cfb086baa79dcf02
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982018"
 ---
 # <a name="alter-table-index_option-transact-sql"></a>ALTER TABLE index_option (Transact-SQL)
@@ -26,7 +26,7 @@ ms.locfileid: "73982018"
 
   指定一组可应用于某个索引的选项，该索引是使用 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 创建的约束定义的一部分。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -169,7 +169,7 @@ ms.locfileid: "73982018"
  有关详细信息，请参阅[联机索引操作的工作方式](../../relational-databases/indexes/how-online-index-operations-work.md)。  
   
 > [!NOTE]
->  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+>  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
  MAXDOP =max_degree_of_parallelism    
  **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
@@ -190,7 +190,7 @@ ms.locfileid: "73982018"
  DATA_COMPRESSION  
  **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
- 为指定的表、分区号或分区范围指定数据压缩选项。 选项如下所示：  
+ 为指定的表、分区号或分区范围指定数据压缩选项。 选项如下：  
   
  无  
  不压缩表或指定的分区。 仅适用于行存储表；不适用于列存储表。  
@@ -270,7 +270,7 @@ BLOCKERS
  终止阻塞当前 SWITCH 或联机索引重新生成 DDL 操作的所有用户事务以使操作可以继续  。  
  BLOCKERS 要求具有 ALTER ANY CONNECTION 权限  。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  有关索引选项的完整说明，请参阅 [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)。  
   
 ## <a name="see-also"></a>另请参阅  

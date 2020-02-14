@@ -22,10 +22,10 @@ ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 486339cc1c5ef550dbf4eee227bec3ad67ce0e3a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294102"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
@@ -33,7 +33,7 @@ ms.locfileid: "71294102"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  通过消息队列任务，你可以使用消息队列（也称为 MSMQ）在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包之间发送和接收消息，或将消息发送到由自定义应用程序处理的应用程序队列。 这些消息可以采用简单文本格式、文件格式或变量及其值的格式。  
+  通过消息队列任务，可以使用消息队列（也称为 MSMQ）在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包之间发送和接收消息，或将消息发送到由自定义应用程序处理的应用程序队列。 这些消息可以采用简单文本格式、文件格式或变量及其值的格式。  
   
  用消息队列任务可以协调整个企业的运作。 如果目标不可用或繁忙，可以将消息排队供以后发送；例如，该任务可以将要发给销售代表的离线便携式计算机的消息排队，当他们连接到网络时就会收到消息。 可以将消息队列任务用于下列目的：  
   
@@ -82,7 +82,7 @@ ms.locfileid: "71294102"
 ## <a name="custom-logging-messages-available-on-the-message-queue-task"></a>消息队列任务可用的自定义日志记录消息  
  下表列出了消息队列任务的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
-|日志项|描述|  
+|日志项|说明|  
 |---------------|-----------------|  
 |**MSMQAfterOpen**|指示任务已完成打开消息队列的操作。|  
 |**MSMQBeforeOpen**|指示任务开始打开消息队列。|  
@@ -113,7 +113,7 @@ ms.locfileid: "71294102"
 > [!NOTE]  
 >  任务名称在一个包内必须是唯一的。  
   
- **Description**  
+ **说明**  
  键入对消息队列任务的说明。  
   
  **Use2000Format**  
@@ -128,7 +128,7 @@ ms.locfileid: "71294102"
  指定消息队列任务是发送消息还是接收消息。 如果选择了 **“发送消息”** ，则该对话框的左窗格将列出“发送”页；如果选择了 **“接收消息”** ，则将列出“接收”页。 默认情况下，此值设置为 **“发送消息”** 。  
   
 ## <a name="message-queue-task-editor-send-page"></a>消息队列任务编辑器（“发送”页）
-  可以使用 **“消息队列任务编辑器”** 对话框的 **“发送”** 页，配置消息队列任务以便从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包发送消息。  
+  使用“消息队列任务编辑器”对话框的“发送”页面，能配置消息队列任务以便从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包发送消息   。  
   
 ### <a name="options"></a>选项  
  **UseEncryption**  
@@ -138,7 +138,7 @@ ms.locfileid: "71294102"
  如果选择使用加密，请指定要使用的加密算法的名称。 消息队列任务可以使用 RC2 和 RC4 算法。 默认值为 **RC2**。  
   
 > [!NOTE]  
->  RC4 算法仅用于支持向后兼容性。 仅当数据库兼容级别为 90 或 100 时，才能使用 RC4 或 RC4_128 对新材料进行加密。 （建议不要使用。）而是使用一种较新的算法，如 AES 算法之一。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的当前版本中，可以通过任何兼容级别对使用 RC4 或 RC4_128 加密的材料进行解密。  
+>  RC4 算法仅用于支持向后兼容性。 仅当数据库兼容级别为 90 或 100 时，才能使用 RC4 或 RC4_128 对新材料进行加密。 （建议不要使用。）而是使用一种较新的算法，如 AES 算法之一。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的当前版本中，可以通过任何兼容级别对使用 RC4 或 RC4_128 加密的材料进行解密。  
   
 > [!IMPORTANT]  
 >  这些算法是消息队列（也称为 MSMQ）技术支持的加密算法。 与较新的算法相比，这两种加密算法都被视为加密性很弱的算法，但消息队列尚不支持新的算法。 因此，在使用消息队列任务发送消息时，应考虑您的加密需要。  
@@ -146,7 +146,7 @@ ms.locfileid: "71294102"
  **MessageType**  
  选择消息类型。 此属性具有下表所列的选项。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**数据文件消息**|消息存储在文件中。 选择该值将显示动态选项 **DataFileMessage**。|  
 |**变量消息**|消息存储在变量中。 选择该值将显示动态选项 **VariableMessage**。|  
@@ -184,7 +184,7 @@ ms.locfileid: "71294102"
  **MessageType**  
  选择消息类型。 此属性具有下表所列的选项。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**数据文件消息**|消息存储在文件中。 选择该值将显示动态选项 **DataFileMessage**。|  
 |**变量消息**|消息存储在变量中。 选择该值将显示动态选项 **VariableMessage**。|  
@@ -200,10 +200,10 @@ ms.locfileid: "71294102"
  **Overwrite**  
  指示在保存数据文件消息的内容时是否覆盖现有文件中的数据。 默认值为 **False**。  
   
- **筛选**  
+ **筛选器**  
  指定是否对消息应用筛选器。 此属性具有下表所列的选项。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**无筛选器**|该任务不筛选消息。 选择该值将显示动态选项 **IdentifierReadOnly**。|  
 |**来源包**|该消息仅接收来自指定包的消息。 选择该值将显示动态选项 **Identifier**。|  
@@ -215,16 +215,16 @@ ms.locfileid: "71294102"
  此选项是只读的。 如果以前设置了 Filter 属性，此选项可能为空或包含包的 GUID。  
   
 ##### <a name="filter--from-package"></a>Filter = 来源包  
- **Identifier**  
+ **标识符**  
  如果选择应用筛选器，请键入可以从中接收消息的包的唯一标识符，或者单击省略号按钮 (…)，再指定包。   
   
  **相关主题：** [选择包](../../integration-services/control-flow/select-a-package.md)  
   
 #### <a name="messagetype--variable-message"></a>MessageType = 变量消息  
- **Filter**  
+ **筛选器**  
  指定是否将筛选器应用到消息。 此属性具有下表所列的选项。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**无筛选器**|该任务不筛选消息。 选择该值将显示动态选项 **IdentifierReadOnly**。|  
 |**来源包**|该消息仅接收来自指定包的消息。 选择该值将显示动态选项 **Identifier**。|  
@@ -241,7 +241,7 @@ ms.locfileid: "71294102"
  此选项为空白。  
   
 ##### <a name="filter--from-package"></a>Filter = 来源包  
- **Identifier**  
+ **标识符**  
  如果选择应用筛选器，请键入可以从中接收消息的包的唯一标识符，或者单击省略号按钮 (…)，再指定包。   
   
  **相关主题：** [选择包](../../integration-services/control-flow/select-a-package.md)  
@@ -250,10 +250,10 @@ ms.locfileid: "71294102"
  **比较**  
  指定是否将筛选器应用到消息。 此属性具有下表所列的选项。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
-|**InclusionThresholdSetting**|不对消息进行比较。|  
-|**Exact match**|消息必须与 **CompareString** 选项中的字符串完全匹配。|  
+|无 |不对消息进行比较。|  
+|**完全匹配**|消息必须与 **CompareString** 选项中的字符串完全匹配。|  
 |**忽略大小写**|消息必须与 **CompareString** 选项中的字符串匹配，但在比较时不区分大小写。|  
 |**包含**|消息必须包含 **CompareString** 选项中的字符串。|  
   
@@ -264,10 +264,10 @@ ms.locfileid: "71294102"
  **比较**  
  指定是否将筛选器应用到消息。 此属性具有下表所列的选项。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
-|**InclusionThresholdSetting**|不对消息进行比较。|  
-|**Exact match**|消息必须与 **CompareString** 选项中的字符串完全匹配。|  
+|无 |不对消息进行比较。|  
+|**完全匹配**|消息必须与 **CompareString** 选项中的字符串完全匹配。|  
 |**忽略大小写**|消息必须与 **CompareString** 选项中的字符串匹配，但在比较时不区分大小写。|  
 |**包含**|消息必须包含 **CompareString** 选项中的字符串。|  
   

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fb0199e5ec3bc083d7a6e2087ec86c04c233436b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68035825"
 ---
 # <a name="create-a-format-file-sql-server"></a>创建格式化文件 (SQL Server)
@@ -63,7 +63,7 @@ ms.locfileid: "68035825"
   
  **bcp** 命令包含以下限定符。  
   
-|限定符|描述|  
+|限定符|说明|  
 |----------------|-----------------|  
 |**formatnul-f** _format_file_|指定非 XML 格式化文件。|  
 |**-n**|指定本机数据类型。|  
@@ -93,7 +93,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
  **bcp** 命令包含以下限定符。  
   
-|限定符|描述|  
+|限定符|说明|  
 |----------------|-----------------|  
 |**formatnul-f** _format_file_|指定非 XML 格式化文件。|  
 |**-c**|指定字符数据。|  
@@ -191,7 +191,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
   
  **bcp** 命令包含以下限定符。  
   
-|限定符|描述|  
+|限定符|说明|  
 |----------------|-----------------|  
 |**formatnul-f** _format_file_ **-x**|指定 XML 格式化文件。|  
 |**-c**|指定字符数据。|  
@@ -231,7 +231,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
  **bcp** 命令包含以下限定符。  
   
-|限定符|描述|  
+|限定符|说明|  
 |----------------|-----------------|  
 |**formatnul-f** _format_file_ **-x**|指定 XML 格式化文件。|  
 |**-n**|指定本机数据类型。|  
@@ -266,7 +266,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n.x
  有关此格式化文件语法的详细信息，请参阅 [XML 格式化文件 (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md)。 有关如何使用本机数据的详细信息，请参阅[使用本机格式导入或导出数据 (SQL Server)](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)。  
   
 ## <a name="mapping-data-fields-to-table-columns"></a>将数据字段映射到表列  
- 如同使用 **bcp**创建一样，格式化文件按顺序说明所有的表列。 可以修改格式化文件以重新安排或忽略表列。 这便于您针对字段未直接映射到表列的数据文件来自定义格式化文件。 有关详细信息，请参阅以下主题：  
+ 如同使用 **bcp**创建一样，格式化文件按顺序说明所有的表列。 可以修改格式化文件以重新安排或忽略表列。 这便于您针对字段未直接映射到表列的数据文件来自定义格式化文件。 有关详情，请参阅以下主题：  
   
 -   [使用格式化文件跳过表列 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)  
   

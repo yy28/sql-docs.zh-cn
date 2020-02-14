@@ -12,10 +12,10 @@ ms.assetid: 8a56d80d-8e31-4542-87cc-a41b3fdd5a7d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4767267c1fc88eab6dafe646a0f61e3bd1992de8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284972"
 ---
 # <a name="welcome-to-sql-server-import-and-export-wizard"></a>欢迎使用 SQL Server 导入和导出向导
@@ -30,12 +30,12 @@ ms.locfileid: "71284972"
 
 ## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>先决条件 — 计算机上是否安装了向导？
 
-如果想要运行向导，但是尚未在计算机上安装 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则可以通过安装 SQL Server Data Tools (SSDT) 来安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导。 有关详细信息，请参阅 [下载 SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md)。
+如果想要运行向导，但是尚未在计算机上安装 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则可以通过安装 SQL Server Data Tools (SSDT) 来安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导。 有关详细信息，请参阅 [下载 SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md)。
 
 ## <a name="screen-shot-of-the-welcome-page"></a>“欢迎”页的屏幕截图  
 下面的屏幕截图显示向导的 **欢迎使用 SQL Server 导入和导出向导** 页。  
   
-![导入和导出向导的“欢迎”页](../../integration-services/import-export-data/media/welcome.png "Welcome page of the Import and Export Wizard")  
+![导入和导出向导的欢迎页](../../integration-services/import-export-data/media/welcome.png "导入和导出向导的欢迎页")  
 
 ## <a name="dont-show-this-page-again"></a>不再显示此页  
 **不再显示此起始页。**  
@@ -62,4 +62,4 @@ ms.locfileid: "71284972"
 
 -   **启动向导。** 如果已准备好运行向导，并且只想知道如何启动向导，请参阅[启动 SQL Server 导入和导出向导](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)。
 
--  **获取向导。**  如果想要运行向导，但是尚未在计算机上安装 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则可以通过安装 SQL Server Data Tools (SSDT) 来安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导。 有关详细信息，请参阅 [下载 SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md)。
+-  **获取向导。**  如果想要运行向导，但是尚未在计算机上安装 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则可以通过安装 SQL Server Data Tools (SSDT) 来安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导。 有关详细信息，请参阅 [下载 SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md)。

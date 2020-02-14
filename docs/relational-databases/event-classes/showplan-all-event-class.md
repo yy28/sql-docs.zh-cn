@@ -13,15 +13,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7576217c87fa43a1d10bf87f916d34dff7ff2716
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67911128"
 ---
 # <a name="showplan-all-event-class"></a>Showplan All 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行 SQL 语句时，会发生 Showplan All 事件类。 所包括的信息是 Showplan XML 统计信息配置文件或 Showplan XML 事件类中所包括信息的子集。  
+  Showplan All 事件类在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行 SQL 语句时发生。 所包括的信息是 Showplan XML 统计信息配置文件或 Showplan XML 事件类中所包括信息的子集。  
   
  Showplan All 事件类显示完整的编写时数据，因此包含 Showplan All 的跟踪可能会使性能受到重大影响。 若要最大限度地降低此开销，请仅将此事件类用于在短时间段内监视特定问题的跟踪。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "67911128"
   
 ## <a name="showplan-all-event-class-data-columns"></a>Showplan All 事件类数据列  
   
-|数据列名称|数据类型|描述|列 ID|可筛选|  
+|数据列名称|数据类型|说明|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |BinaryData|**图像**|Showplan 文本的估计开销。|2|否|  
@@ -40,7 +40,7 @@ ms.locfileid: "67911128"
 |EventSequence|**int**|给定事件在请求中的顺序。|51|否|  
 |GroupID|**int**|在其中激发 SQL 跟踪事件的工作负荷组的 ID。|66|是|  
 |HostName|**nvarchar**|正在运行客户端的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|是|  
-|Integer Data|**Integer**|预计返回的行数。|25|是|  
+|Integer Data|**整数**|预计返回的行数。|25|是|  
 |IsSystem|**int**|指示事件是发生在系统进程中还是发生在用户进程中。 1 = 系统，0 = 用户。|60|是|  
 |LineNumber|**int**|显示包含错误的行的编号。|5|是|  
 |LoginName|**nvarchar**|用户的登录名（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全登录名或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登录凭据，格式为“DOMAIN\username”）。|11|是|  

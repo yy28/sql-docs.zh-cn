@@ -1,10 +1,10 @@
 ---
 title: 创建链接服务器
-ms.date: 11/20/2015
+ms.date: 01/24/2020
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
-ms.reviewer: ''
+ms.reviewer: carlrab
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.linkedserver.properties.general.f1
@@ -17,12 +17,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 15d7b07b409d8a281b0ea47222ce608a712cfa3f
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: ddcead69006fdee32598590192e777984ea3fcd7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095887"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761888"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>创建链接服务器（SQL Server 数据库引擎）
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -97,11 +97,14 @@ ms.locfileid: "74095887"
   
      **远程用户**  
      使用远程用户映射 **“本地登录”** 中未定义的用户。 **“远程用户”** 必须是远程服务器中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录。  
-  
+
+    > [!WARNING]
+    > 在 Azure SQL 数据库托管实例部署中，只能将 SQL Server 用户用作“远程用户”。  
+
      **远程密码**  
      指定远程用户的密码。  
   
-     **“添加”**  
+     **添加**  
      添加新的本地登录。  
   
      **删除**  
@@ -140,7 +143,7 @@ ms.locfileid: "74095887"
   
      如果为 True，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源将使用远程列的排序规则，并且非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源将使用排序规则名称指定的排序规则。  
   
-     如果为 False，则分布式查询将始终使用本地服务器的默认排序规则，而排序规则名称和远程列的排序规则将被忽略。 默认值为 False。  
+     如果为 False，则分布式查询将始终使用本地服务器的默认排序规则，而排序规则名称和远程列的排序规则将被忽略。 默认值为 false。  
   
      **排序规则名称**  
      如果“使用远程排序规则”为 True，并且数据源不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源，则指定远程数据源使用的排序规则名称。 此名称必须是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持的排序规则之一。  
@@ -162,7 +165,7 @@ ms.locfileid: "74095887"
      **启用分布式事务处理的升级**  
      使用该选项可通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分布式事务处理协调器 (MS DTC) 事务保护服务器到服务器的操作过程。 如果该选项是 TRUE，则调用远程存储过程将启动分布式事务，并用 MS DTC 登记该事务。 有关详细信息，请参阅 [sp_serveroption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)的数据。  
   
-6.  单击“确定”  。  
+6.  单击“确定”。   
   
 ##### <a name="to-view-the-provider-options"></a>查看提供程序选项  
   

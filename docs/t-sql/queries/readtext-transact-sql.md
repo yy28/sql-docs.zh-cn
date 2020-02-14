@@ -20,10 +20,10 @@ ms.assetid: 91b69853-1381-4306-8343-afdb73105738
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: dd8ad58e96956e1ab0f7b542bab4168272b3f968
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68141285"
 ---
 # <a name="readtext-transact-sql"></a>READTEXT (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68141285"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]请改用 [SUBSTRING](../../t-sql/functions/substring-transact-sql.md) 函数。  
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,13 +44,13 @@ READTEXT { table.column text_ptr offset size } [ HOLDLOCK ]
 ```  
   
 ## <a name="arguments"></a>参数  
-table .   _column_  
+_table_ **.** _column_  
 要对其执行读取操作的表和列的名称。 表名和列名必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。 必须指定表名和列名。但是，可根据需要指定数据库名称和数据库所有者名称。  
   
 _text\_ptr_  
 有效的文本指针。 _text\_ptr_ 必须为 **binary(16)** 。  
   
-offset   
+_offset_  
 使用 **text** 或 **image** 数据类型时的字节数。 它还可以是使用 **ntext** 数据类型时，开始读取 **text**、**image** 或 **ntext** 数据之前要跳过的字符的字节数。  
   
 _size_ 使用 **text** 或 **image** 数据类型时的字节数。 它还可以是将 **ntext** 数据类型用于待读取数据时的字符的字节数。 如果 _size_ 为 0，则读取 4 KB 数据。  
@@ -58,7 +58,7 @@ _size_ 使用 **text** 或 **image** 数据类型时的字节数。 它还可以
 HOLDLOCK  
 使文本值被锁定以进行读取，直到事务结束为止。 其他用户可读取该值，但不能对其进行修改。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 使用 [TEXTPTR](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md) 函数获取有效的 _text\_ptr_ 值。 TEXTPTR 返回指向指定行中的 **text**、**ntext** 或 **image** 列的指针。 如果查询返回多行，则 TEXTPRT 还可以返回指向查询返回的最后一行中的 **text**、**ntext** 或 **image** 列的指针。 由于 TEXTPTR 返回 16 字节的二进制字符串，因此我们建议声明一个局部变量来保存该文本指针，然后在 READTEXT 中使用该变量。 有关创建局部变量的详细信息，请参阅 [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)。  
   
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，可能存在行内文本指针，但该指针可能无效。 有关 text in row 选项的详细信息，请参阅 [sp_tableoption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)  。 有关使文本指针无效的详细信息，请参阅 [sp_invalidate_textptr (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md)。  

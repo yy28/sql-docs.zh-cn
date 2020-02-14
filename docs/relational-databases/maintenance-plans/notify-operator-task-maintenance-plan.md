@@ -15,20 +15,20 @@ ms.assetid: 39c0797c-ad2b-4591-85c9-a23a7f902895
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a8b8e698dc6799847ddd462904da2eadeae14279
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115644"
 ---
 # <a name="notify-operator-task-maintenance-plan"></a>“通知操作员”任务（维护计划）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  使用 **“‘通知操作员’任务”** 对话框可以向此维护计划中添加自动通知。 若要使用此任务，必须启用数据库邮件并将 MSDB 正确配置为邮件主机数据库，而且还要具有一个带有有效电子邮件地址的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理操作员。  
+  使用 **“‘通知操作员’任务”** 对话框可以向此维护计划中添加自动通知。 要使用此任务，必须启用数据库邮件并将 MSDB 正确配置为邮件主机数据库，并且 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理操作员具有有效的电子邮件地址。  
   
  此任务使用 sp_notify_operator 存储过程。  
   
 ## <a name="options"></a>选项  
- **“连接”**  
+ **Connection**  
  选择执行此任务时使用的服务器连接。  
   
  **新建**  
@@ -63,12 +63,12 @@ ms.locfileid: "68115644"
  指定如何对服务器进行身份验证。  
   
  **使用 Windows 集成安全性**  
- 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 的实例。  
+ 使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。  
   
  **使用特定用户名和密码**  
- 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。 此选项不可用。  
+ 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。 此选项不可用。  
   
- **User name**  
+ **用户名**  
  提供一个在进行身份验证时要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 此选项不可用。  
   
  **密码**  

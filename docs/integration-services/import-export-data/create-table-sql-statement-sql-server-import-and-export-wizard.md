@@ -12,10 +12,10 @@ ms.assetid: 0d6f6b3b-d023-4770-a8a9-65b2977c8d05
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bc7255cdcb9758f2bdd55b043e70669affadabd8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285222"
 ---
 # <a name="create-table-sql-statement-sql-server-import-and-export-wizard"></a>Create Table SQL 语句（SQL Server 导入和导出向导）
@@ -33,7 +33,7 @@ ms.locfileid: "71285222"
  
 在此示例中，“SQL 语句”  框包含由向导生成的默认 **CREATE TABLE** 语句。 此语句创建一个名为 **Person.AddressNew** 的新目标表，该表是 **Person.Address** 源表的副本。 
   
- ![导入和导出向导的“创建表”页](../../integration-services/import-export-data/media/create-table.png "Create table page of the Import and Export Wizard")  
+ ![导入和导出向导的创建表页](../../integration-services/import-export-data/media/create-table.png "导入和导出向导的创建表页")  
   
 ## <a name="review-or-regenerate-the-create-table-statement"></a>查看或重新生成 CREATE TABLE 语句  
  **SQL 语句**  

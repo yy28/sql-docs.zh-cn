@@ -20,10 +20,10 @@ ms.assetid: a716bf8d-0c5a-490d-aadd-597b3b0fac0c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1d70bf0d8e99d24ee0d7ea9e046090ba4ed32453
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67939614"
 ---
 # <a name="full-file-backups-sql-server"></a>完整文件备份 (SQL Server)
@@ -37,7 +37,7 @@ ms.locfileid: "67939614"
  文件备份可以用作差异文件备份的“差异基准  ”。 有关详细信息，请参阅 [差异备份 (SQL Server)](../../relational-databases/backup-restore/differential-backups-sql-server.md)。  
   
 > [!NOTE]  
->  除了在与“差异文件备份”明确进行比较的时候，完整文件备份通常称为文件备份。  
+>  除了在与“差异文件备份”  明确进行比较的时候，完整文件备份通常称为文件备份  。  
   
  **本主题内容：**  
   

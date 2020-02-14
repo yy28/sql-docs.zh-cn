@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 93527accb44bd192e1468ea4176702173bf74114
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 43b3c6759f4ea213acf8bed789d67ff4952b4ae8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768216"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288144"
 ---
 # <a name="replication-agent-administration"></a>复制代理管理
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "68768216"
   
 |可执行代理|文件名|  
 |----------------------|---------------|  
-|[复制快照代理](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|snapshot.exe|  
+|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|snapshot.exe|  
 |[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|distrib.exe|  
 |[复制日志读取器代理](../../../relational-databases/replication/agents/replication-log-reader-agent.md)|logread.exe|  
 |[复制队列读取器代理](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)|qrdrsvc.exe|  
@@ -87,10 +87,10 @@ ms.locfileid: "68768216"
 ## <a name="replication-maintenance-jobs"></a>复制维护作业  
  复制使用下列作业来执行计划维护和按需维护。  
   
-|清除作业|描述|默认计划|  
+|清除作业|说明|默认计划|  
 |------------------|-----------------|----------------------|  
-|清除代理历史记录：Distribution|从分发数据库中删除复制代理历史记录。|每十分钟运行一次|  
-|清除分发：Distribution|从分发数据库中删除复制的事务。 |每十分钟运行一次|  
+|清除代理历史记录：分发|从分发数据库中删除复制代理历史记录。|每十分钟运行一次|  
+|清除分发：分发|从分发数据库中删除复制的事务。 |每十分钟运行一次|  
 |过期订阅清除|从发布数据库检测和删除过期的订阅。 在分发服务器上停用在最大分发保持期内尚未同步的订阅。|每天凌晨 1:00 运行| 
 |重新初始化数据验证失败的订阅|检测所有未通过数据验证的订阅并标记它们以进行重新初始化。 下次合并代理或分发代理运行时，订阅服务器上将应用新快照。|无默认调度（默认情况下未启用）。|  
 |复制代理检查|检测未积极记录历史信息的复制代理。 如果作业步骤失败，它将写入 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 事件日志。|每十分钟运行一次。|  

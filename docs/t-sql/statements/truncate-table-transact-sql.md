@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 115aba36783857d5a0915822cb6f8ff810562f16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68100067"
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68100067"
 
 删除表中的所有行或表中指定的分区，不记录单个行删除操作。 TRUNCATE TABLE 与没有 WHERE 子句的 DELETE 语句类似；但是，TRUNCATE TABLE 速度更快，使用的系统资源和事务日志资源更少。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -69,14 +69,14 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
  表所属架构的名称。  
   
  *table_name*  
- 要截断的表的名称，或要删除其全部行的表的名称。 table_name 须是文本。 table_name 不能是 OBJECT_ID() 函数或变量。  
+ 要截断的表的名称，或要删除其全部行的表的名称。 table_name 须是文本。  table_name 不能是 OBJECT_ID() 函数或变量。    
   
- WITH ( PARTITIONS ( { \<partition_number_expression> | \<range> } [ , ...n ] ) )  
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）
+ WITH ( PARTITIONS ( { \<partition_number_expression> | \<range> } [ , ...n ] ) )    
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)） 
   
- 指定要截断或删除其中所有行的分区。 如果表未分区，则 WITH PARTITIONS 参数会生成错误。 如果未提供 WITH PARTITIONS 子句，则整个表都将被截断。  
+ 指定要截断或删除其中所有行的分区。 如果表未分区，则 WITH PARTITIONS 参数会生成错误。  如果未提供 WITH PARTITIONS 子句，则整个表都将被截断。   
   
- 可以按以下方式指定 \<partition_number_expression>： 
+ 可以按以下方式指定 \<partition_number_expression>：  
   
 -   提供分区号，例如：`WITH (PARTITIONS (2))`  
   
@@ -84,11 +84,11 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
   
 -   同时提供范围和单独分区，例如：`WITH (PARTITIONS (2, 4, 6 TO 8))`  
   
--   \<range> 可指定为由单词 TO 隔开的分区号，例如：`WITH (PARTITIONS (6 TO 8))`  
+-   \<range> 可指定为由单词 TO 隔开的分区号，例如：`WITH (PARTITIONS (6 TO 8))`    
   
  要截断一个已分区表，表和索引必须对齐（在同一个分区函数上进行分区）。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  与 DELETE 语句相比，TRUNCATE TABLE 具有以下优点：  
   
 -   所用的事务日志空间较少。  
@@ -130,7 +130,7 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 能够删除或截断超过 128 个区的表，而无需同步锁定所有需删除的区。  
   
 ## <a name="permissions"></a>权限  
- 所需的最低权限是 table_name 上的 ALTER 权限。 TRUNCATE TABLE 权限默认授予表所有者、sysadmin 固定服务器角色的成员、db_owner 和 db_ddladmin 固定数据库角色的成员，并且不可转移权限。 但是，可以在诸如存储过程这样的模块中加入 TRUNCATE TABLE 语句，然后为使用 EXECUTE AS 子句的模块授予适当的权限。  
+ 所需的最低权限是 table_name 上的 ALTER 权限。  TRUNCATE TABLE 权限默认授予表所有者、sysadmin 固定服务器角色的成员、db_owner 和 db_ddladmin 固定数据库角色的成员，并且不可转移权限。 但是，可以在诸如存储过程这样的模块中加入 TRUNCATE TABLE 语句，然后为使用 EXECUTE AS 子句的模块授予适当的权限。  
   
 ## <a name="examples"></a>示例  
   
@@ -152,7 +152,7 @@ GO
   
 ### <a name="b-truncate-table-partitions"></a>B. 截断表分区  
   
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)） 
   
  下面的示例将截断已分区表的指定分区。 `WITH (PARTITIONS (2, 4, 6 TO 8))` 语法导致分区号 2、4、6、7 和 8 被截断。  
   

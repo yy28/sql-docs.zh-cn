@@ -15,16 +15,16 @@ ms.assetid: 7b2d49f2-b91c-4aee-a52b-6cc49bed03af
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 9d3ee24f8bf3d698314b5eb32a166ef7080622b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012044"
 ---
 # <a name="cross-db-ownership-chaining-server-configuration-option"></a>cross db ownership chaining 服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  使用 **cross db ownership chaining** 选项可以为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例配置跨数据库所有权链接。  
+  使用 cross db ownership chaining  选项可以为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例配置跨数据库所有权链。  
   
  此服务器选项使您能够在数据库级别控制跨数据库所有权链接，或者允许在所有数据库中启用跨数据库所有权链接：  
   

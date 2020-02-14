@@ -11,10 +11,10 @@ ms.author: pelopes
 manager: rothj
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 933a37dd4ef627796b7688510bd235c80db417be
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095995"
 ---
 # <a name="microsoft-sql-server-distributed-queries-ole-db-connectivity"></a>Microsoft SQL Server 分布式查询：OLE DB 连接
@@ -112,7 +112,7 @@ SQL 命令提供程序的示例包括 SQL Server 的 Microsoft OLE DB 提供程�
 
 #### <a name="updatable-keyset-cursor-requirements"></a>可更新的键集游标要求
 
-可以通过在分布式查询上定义的键集游标更新或删除远程表，例如 `UPDATE` \| DELETE `<remote-table>` `WHERE` CURRENT OF `<cursor-name>`。 下面是允许在分布式查询中使用可更新游标的条件：
+可以通过在分布式查询上定义的键集游标更新或删除远程表，例如 `UPDATE` \| DELETE `<remote-table>` `WHERE` CURRENT OF `<cursor-name>`。 下面是允许使用分布式查询中的可更新游标的条件：
 
 - 如果提供程序也满足更新和删除远程表的条件，则允许使用可更新游标。 有关详细信息，请参阅本文后面的 \"UPDATE 和 DELETE 语句\"。
 
@@ -190,18 +190,18 @@ SQL Server 支持两种远程数据对象命名约定：基于链接服务器的
 
    SQL Server 收集要在分布式查询评估中使用的几个提供程序属性；通过调用 `IDBProperties::GetProperties` 来检索这些属性。 所有这些属性都是可选的；但是，支持所有相关属性可使 SQL Server 能够充分利用提供程序的功能。 例如，需要 `DBPROP_SQLSUPPORT` 来确定 SQL Server 是否可以向提供程序发送查询。 如果不支持此属性，则即使远程提供程序是 SQL 命令提供程序，SQL Server 也不会将其用作 SQL 命令提供程序。 在下表中，“默认值”列指示 SQL Server 在提供程序不支持该属性时假定的值。
 
-属性| 默认值| 改用 |
+properties| 默认值| 用途 |
 |:----|:----|:----|
-|`DBPROP_DBMSNAME`|None|用于错误消息。|
-|`DBPROP_DBMSVER` |None|用于错误消息。|
-|`DBPROP_PROVIDERNAME`|None|用于错误消息。|
+|`DBPROP_DBMSNAME`|无|用于错误消息。|
+|`DBPROP_DBMSVER` |无|用于错误消息。|
+|`DBPROP_PROVIDERNAME`|无|用于错误消息。|
 |`DBPROP_PROVIDEROLEDBVER1`|1.5|用于确定 2.0 功能的可用性。
-|`DBPROP_CONCATNULLBEHAVIOR`|None|用于确定提供程序的 `NULL` 串联行为是否与 SQL Server 的串联行为相同。|
-|`DBPROP_NULLCOLLATION`|None|仅当 `NULLCOLLATION` 与 SQL Server 实例 null 排序规则行为匹配时，才允许使用排序/索引。|
-|`DBPROP_OLEOBJECTS`|None|确定提供程序是否支持用于大型数据对象列的结构化存储接口。|
-|`DBPROP_STRUCTUREDSTORAGE`|None|确定大型对象类型（`ILockBytes`、`Istream` 和 `ISequentialStream`）支持的结构化存储接口。|
+|`DBPROP_CONCATNULLBEHAVIOR`|无|用于确定提供程序的 `NULL` 串联行为是否与 SQL Server 的串联行为相同。|
+|`DBPROP_NULLCOLLATION`|无|仅当 `NULLCOLLATION` 与 SQL Server 实例 null 排序规则行为匹配时，才允许使用排序/索引。|
+|`DBPROP_OLEOBJECTS`|无|确定提供程序是否支持用于大型数据对象列的结构化存储接口。|
+|`DBPROP_STRUCTUREDSTORAGE`|无|确定大型对象类型（`ILockBytes`、`Istream` 和 `ISequentialStream`）支持的结构化存储接口。|
 |`DBPROP_MULTIPLESTORAGEOBJECTS`|False|确定是否可以同时打开多个大型对象列。|
-|`DBPROP_SQLSUPPORT`|None|确定是否可以向提供程序发送 SQL 查询。|
+|`DBPROP_SQLSUPPORT`|无|确定是否可以向提供程序发送 SQL 查询。|
 |`DBPROP_CATALOGLOCATION`|`DBPROPVAL_CL_START`|用于构造多部分表名。
 |`SQLPROP_DYNAMICSQL`|False|SQL Server 特定的属性：如果返回 `VARIANT_TRUE`，则表示参数化查询执行支持 `?` 参数标记。
 |`SQLPROP_NESTEDQUERIES`|False|SQL Server 特定的属性：如果返回 `VARIANT_TRUE`，则表示提供程序支持 `FROM` 子句中的嵌套 `SELECT` 语句。
@@ -323,25 +323,25 @@ SQL Server 和 OLE-DB 数据类型映射表。
 |`DBTYPE_NUMERIC`| |`numeric`|
 |`DBTYPE_DECIMAL`| |`decimal`|
 |`DBTYPE_CY`| |`money`|
-|`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`<br>或多个<br> 最大长度 > 4000 个字符|ntext|
-|`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`|NCHAR|
-|`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=false`|NVARCHAR|
+|`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`<br>或<br> 最大长度 > 4000 个字符|ntext|
+|`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`|nchar|
+|`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=false`|nvarchar|
 |`DBTYPE_IDISPATCH`| |错误|
 |`DBTYPE_ERROR`| |错误|
 |`DBTYPE_BOOL`| |`bit`|
-|`DBTYPE_VARIANT`*| |NVARCHAR|
+|`DBTYPE_VARIANT`*| |nvarchar|
 |`DBTYPE_IUNKNOWN`| |错误|
 |`DBTYPE_GUID`| |`uniqueidentifier`|
-|`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISLONG=true` <br>或多个<br> 最大长度 > 8000|`image`|
-|`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISROWVER=true`、`DBCOLUMNFLAGS_ISFIXEDLENGTH=true`、列宽 = 8 <br>或多个<br> 未报告最大长度。 | `timestamp` |
+|`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISLONG=true` <br>或<br> 最大长度 > 8000|`image`|
+|`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISROWVER=true`、`DBCOLUMNFLAGS_ISFIXEDLENGTH=true`、列宽 = 8 <br>或<br> 未报告最大长度。 | `timestamp` |
 |`DBTYPE_BYTES`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` | `binary` |
 |`DBTYPE_BYTES`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` | `varbinary`|
 |`DBTYPE_STR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` | `char`|
 |`DBTYPE_STR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` | `varchar` |
-|`DBTYPE_STR`| `DBCOLUMNFLAGS_ISLONG=true` <br>或多个<br> 最大长度 > 8000 个字符 <br>或多个<br>   未报告最大长度。 | `text`|
+|`DBTYPE_STR`| `DBCOLUMNFLAGS_ISLONG=true` <br>或<br> 最大长度 > 8000 个字符 <br>或<br>   未报告最大长度。 | `text`|
 |`DBTYPE_WSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` |`nchar`|
 |`DBTYPE_WSTR` | `DBCOLUMNFLAGS_ISFIXEDLENGTH=false`|`nvarchar`|
-|`DBTYPE_WSTR`| `DBCOLUMNFLAGS_ISLONG=true` <br>或多个<br> 最大长度 > 4000 个字符 <br>或多个<br>   未报告最大长度。 | `ntext`|
+|`DBTYPE_WSTR`| `DBCOLUMNFLAGS_ISLONG=true` <br>或<br> 最大长度 > 4000 个字符 <br>或<br>   未报告最大长度。 | `ntext`|
 |`DBTYPE_UDT`| |错误|
 |`DBTYPE_DATE`* | | `datetime` |
 |`DBTYPE_DBDATE` | | `datetime`（需要显式转换）|
@@ -427,7 +427,7 @@ SQL Server 使用 OLE DB 指定的 OLE DB 错误对象。 其中一些高级步�
 
 有关如何使用提供程序的错误对象的详细信息，请参阅 OLE DB 文档。
 
-### <a name="security"></a>Security
+### <a name="security"></a>安全性
 
 当使用者连接到 OLE DB 提供程序时，除非使用者希望作为集成安全用户进行身份验证，否则提供程序通常需要用户 ID 和密码。 对于分布式查询，SQL Server 代表执行分布式查询的 SQL Server 登录来充当 OLE DB 提供程序的使用者。 SQL Server 将当前的 SQL Server 登录映射到链接服务器上的用户 ID 和密码。
 
@@ -606,7 +606,7 @@ SQL Server 使用 `IOpenRowset::OpenRowset` 在基表上打开行集，并调用
 
 有关 SQL Server 使用的所有 OLE DB 接口的列表，请参阅 [SQL Server 使用的 OLE DB 接口](#appendixa)。
 
-### <a name="conclusion"></a>结语
+### <a name="conclusion"></a>结束语
 
 Microsoft SQL Server 提供了一组最强大的工具，用于访问来自异类数据源的数据。 通过了解 SQL Server 公开的 OLE-DB 接口，开发者可以在分布式查询中实现高度的控制和复杂性。
 
@@ -616,7 +616,7 @@ Microsoft SQL Server 提供了一组最强大的工具，用于访问来自异�
 
 对于可选接口，“方案”列指示使用指定接口的六个方案中的一个或多个方案。 例如，基表行集上的 `IRowsetChange` 接口是可选接口；此接口用于 `UPDATE` 和 DELETE 语句以及 `INSERT` 语句方案。 如果不支持此接口，则不支持对该提供程序使用 UPDATE、DELETE 和 `INSERT` 语句。 某些其他可选接口在“方案”列中标记为\"性能\"，表示该接口的基本性能更佳。 例如，如果不支持 `IDBSchemaRowset` 接口，则 SQL Server 必须打开行集两次：一次用于其元数据，一次用于执行查询。 通过支持 `IDBSchemaRowset`，SQL Server 性能得到了改进。
 
-|Object|接口|Required|注释|方案|
+|Object|接口|必选|注释|方案|
 |:-----|:-----|:-----|:-----|:-----|
 |数据源对象|`IDBInitialize`|是|初始化并设置数据和安全上下文。| |
 | |`IDBCreateSession`|是|创建 DB 会话对象。| |

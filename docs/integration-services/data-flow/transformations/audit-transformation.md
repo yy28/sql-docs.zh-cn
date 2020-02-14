@@ -17,10 +17,10 @@ ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 76ce8959e9b9cedb9a1e8a096913a3d6257cfd2d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298017"
 ---
 # <a name="audit-transformation"></a>审核转换
@@ -33,7 +33,7 @@ ms.locfileid: "71298017"
 ## <a name="system-variables"></a>系统变量  
  下表介绍了审核转换可以使用的系统变量。  
   
-|系统变量|索引|描述|  
+|系统变量|索引|说明|  
 |---------------------|-----------|-----------------|  
 |**ExecutionInstanceGUID**|0|标识包的执行实例的 GUID。|  
 |**PackageID**|1|包的唯一标识符。|  
@@ -54,7 +54,7 @@ ms.locfileid: "71298017"
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [通用属性](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [转换自定义属性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -70,7 +70,7 @@ ms.locfileid: "71298017"
  **审核类型**  
  选择用于提供审核信息的可用系统变量。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**执行实例 GUID**|插入唯一标识包的执行实例的 GUID。|  
 |**包 ID**|插入唯一标识包的 GUID。|  
@@ -78,7 +78,7 @@ ms.locfileid: "71298017"
 |**版本 ID**|插入唯一标识包版本的 GUID。|  
 |**执行开始时间**|插入包执行的开始时间。|  
 |**计算机名称**|插入启动包的计算机的名称。|  
-|**User name**|插入启动包的用户的登录名。|  
+|**用户名**|插入启动包的用户的登录名。|  
 |**任务名称**|插入与审核转换相关联的数据流任务的名称。|  
 |**任务 ID**|插入唯一标识与审核转换相关联的数据流任务的 GUID。|  
   

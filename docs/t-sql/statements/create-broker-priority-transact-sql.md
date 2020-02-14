@@ -26,10 +26,10 @@ ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 18e916c3f9a9d99ea177d0d266cb20bee44a3868
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064686"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "73064686"
 
   定义一个优先级别和一组条件，这组条件用于决定要将此优先级分配给哪些 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会话。 此优先级别分配给使用在会话优先级中指定的相同约定与服务组合的任何会话端点。 优先级的值范围为 1（低）到 10（高）。 默认值为 5。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -57,7 +57,7 @@ FOR CONVERSATION
   
 ## <a name="arguments"></a>参数  
  ConversationPriorityName   
- 指定此会话优先级的名称。 该名称在当前数据库中必须唯一，并且必须符合[!INCLUDE[ssDE](../../includes/ssde-md.md)][标识符](../../relational-databases/databases/database-identifiers.md)规则。  
+ 指定此会话优先级的名称。 该名称在当前数据库中必须唯一，并且必须符合 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [标识符](../../relational-databases/databases/database-identifiers.md)的规则。  
   
  SET  
  指定用于确定会话优先级是否应用于会话的条件。 如果已指定，SET 必须包含至少一个条件：CONTRACT_NAME、LOCAL_SERVICE_NAME、REMOTE_SERVICE_NAME 或 PRIORITY_LEVEL。 如果未指定 SET，则全部三个条件都设置为默认值。  
@@ -110,7 +110,7 @@ FOR CONVERSATION
  PRIORITY_LEVEL = { PriorityValue | DEFAULT }    
  指定要分配给使用在会话优先级中指定的约定和服务的任何会话端点的优先级。 PriorityValue 必须是一个从 1（优先级最低）到 10（优先级最高）的整数文本  。 默认值为 5。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 为会话端点分配优先级别。 优先级别控制与端点关联的操作的优先级。 每个会话均有两个会话端点：  
   
 -   发起方会话端点将会话的一端与发起方服务和发起方队列相关联。 发起方会话端点是在运行 BEGIN DIALOG 语句时创建的。 与发起方会话端点关联的操作包括：  

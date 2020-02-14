@@ -15,10 +15,10 @@ ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 91f0ca0980eceb5ccdd2b1c0814661695f573d50
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291651"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>使用渐变维度向导配置输出
@@ -78,12 +78,12 @@ ms.locfileid: "71291651"
   
      下列关系图所示的示例数据流支持固定的属性更改、变化的属性更改以及历史属性更改、推断成员和对匹配记录的更改。  
   
-     ![渐变维度向导的数据流](../../../integration-services/data-flow/transformations/media/dimensionwizard.gif "Data flow from Slowly Changing Dimension Wizard")  
+     ![渐变维度向导的数据流](../../../integration-services/data-flow/transformations/media/dimensionwizard.gif "渐变维度向导的数据流")  
   
 ## <a name="updating-slowly-changing-dimension-outputs"></a>更新渐变维度输出  
  更新渐变维度转换输出配置的最简单方法就是重新运行渐变维度向导并从向导页修改属性。 也可以使用 **“高级编辑器”** 对话框或以编程方式更新渐变维度转换。  
   
 ## <a name="see-also"></a>另请参阅  
- [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
+ [渐变维度转换](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
   
   

@@ -33,10 +33,10 @@ ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5082c3ab595cc11ff9ab3f5dbc869c11105ce70a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68134432"
 ---
 # <a name="database-mail-configuration-objects"></a>数据库邮件配置对象
@@ -79,7 +79,7 @@ ms.locfileid: "68134432"
   
 -   电子邮件服务器的名称。  
   
--   电子邮件服务器的类型。 对于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，其类型始终为简单邮件传输协议(SMTP)。  
+-   电子邮件服务器的类型。 对于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，其类型始终为简单邮件传输协议 (SMTP)。  
   
 -   电子邮件服务器的端口号。  
   
@@ -128,14 +128,14 @@ ms.locfileid: "68134432"
   
 ### <a name="database-mail-settings"></a>数据库邮件设置  
   
-|“属性”|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |[sysmail_configure_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)|更改数据库邮件的配置设置。|  
 |[sysmail_help_configure_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql.md)|显示数据库邮件的配置设置。|  
   
 ### <a name="accounts-and-profiles"></a>帐户和配置文件  
   
-|“属性”|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |[sysmail_add_profileaccount_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)|将邮件帐户添加到数据库邮件配置文件中。|  
 |[sysmail_delete_account_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-account-sp-transact-sql.md)|删除数据库邮件帐户。|  
@@ -148,9 +148,9 @@ ms.locfileid: "68134432"
 |[sysmail_update_profile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-update-profile-sp-transact-sql.md)|更改数据库邮件配置文件的说明或名称。|  
 |[sysmail_update_profileaccount_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-update-profileaccount-sp-transact-sql.md)|更新数据库邮件配置文件中帐户的序列号。|  
   
-### <a name="security"></a>Security  
+### <a name="security"></a>安全性  
   
-|“属性”|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |[sysmail_add_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md)|授予数据库主体使用数据库邮件配置文件的权限。|  
 |[sysmail_delete_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-principalprofile-sp-transact-sql.md)|删除数据库用户使用公共或专用数据库邮件配置文件的权限。|  
@@ -159,7 +159,7 @@ ms.locfileid: "68134432"
   
 ### <a name="system-state"></a>系统状态  
   
-|“属性”|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |[sysmail_start_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)|启动数据库邮件外部程序和关联的 SQL Service Broker 队列。|  
 |[sysmail_stop_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)|停止数据库邮件外部程序和关联的 SQL Service Broker 队列。|  

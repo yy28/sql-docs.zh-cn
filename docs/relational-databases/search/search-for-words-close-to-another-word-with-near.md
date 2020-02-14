@@ -21,15 +21,15 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0e94bdcf4770190d3d84986b511996213fac17f9
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68702834"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>使用 NEAR 搜索与另一个词邻近的词
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  可以在 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 谓词或 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 函数中使用  邻近词 **NEAR** 来搜索相互邻近的字词或短语。 
+  可以在 [CONTAINS ](../../t-sql/queries/contains-transact-sql.md) 谓词或 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 函数中使用邻近词 NEAR 来搜索相互邻近的字词或短语   。 
   
 ##  <a name="Custom_NEAR"></a> NEAR 概述  
 **NEAR** 具有以下功能：  

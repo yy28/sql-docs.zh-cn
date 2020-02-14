@@ -20,18 +20,18 @@ ms.assetid: 9246c7b2-7098-42c4-a222-cbf30267c46a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 16230302a44ef9c56d3b2ab9ff17de6288ead371
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109362"
 ---
-# <a name="keyguid-transact-sql"></a>KEY_GUID (Transact-SQL)
+# <a name="key_guid-transact-sql"></a>KEY_GUID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   返回数据库中对称密钥的 GUID。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,13 +41,13 @@ Key_GUID( 'Key_Name' )
 ```  
   
 ## <a name="arguments"></a>参数  
- **'** Key_Name **'**   
+ **'** *Key_Name* **'**  
  数据库中对称密钥的名称。  
   
 ## <a name="return-types"></a>返回类型  
  **uniqueidentifier**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果创建密钥时指定了标识值，则其 GUID 为该标识值的 MD5 哈希。 如果未指定标识值，则服务器生成 GUID。  
   
  如果密钥为临时密钥，则密钥名称必须以数字符号 (#) 开头。  

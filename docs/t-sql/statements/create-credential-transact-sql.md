@@ -24,12 +24,12 @@ ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 35db04fee2cc8d17034414bce9c994db501d5c02
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.openlocfilehash: 45c76487f9165da37d0c5383826b00e85ddf27df
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71680894"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286495"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 
@@ -40,7 +40,7 @@ ms.locfileid: "71680894"
 > [!NOTE]
 > 若要创建数据库级别的凭据，请参阅 [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)。 需要为服务器上的多个数据库使用相同凭据时，请使用服务器级别凭据。 使用数据库范围的凭据以使数据库更易于移植。 数据库移动到新服务器时，数据库范围的凭据将随之移动。 使用 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 上的数据库范围的凭据。
 
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>语法
 
@@ -69,7 +69,7 @@ SECRET ='secret' 指定发送身份验证所需的机密内容    。
 
 对于加密提供程序 cryptographic_provider_name，指定企业密钥管理提供程序 (EKM) 的名称   。 有关密钥管理的详细信息，请参阅[可扩展密钥管理 (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 当 IDENTITY 为 Windows 用户时，机密内容可以是密码。 机密内容使用服务主密钥进行加密。 如果重新生成服务主密钥，则使用新的服务主密钥重新加密机密内容。
 
@@ -99,7 +99,7 @@ GO
 
 ### <a name="b-creating-a-credential-for-ekm"></a>B. 创建用于 EKM 的凭据
 
-下面的示例使用一个名为 `User1OnEKM` 的帐户，它是以前通过 EKM 的管理工具在 EKM 模块中创建的，并带有一个基本帐户类型和密码。 服务器上的 sysadmin 帐户创建用于连接到 EKM 帐户的凭据，并将其分配给 `User1`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帐户  ：
+下面的示例使用一个名为 `User1OnEKM` 的帐户，它是以前通过 EKM 的管理工具在 EKM 模块中创建的，并带有一个基本帐户类型和密码。 服务器上的 sysadmin 帐户创建用于连接到 EKM 帐户的凭据，并将其分配给 `User1` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帐户  ：
 
 ```sql
 CREATE CREDENTIAL CredentialForEKM
@@ -108,13 +108,8 @@ CREATE CREDENTIAL CredentialForEKM
 GO
 
 /* Modify the login to assign the cryptographic provider credential */
-ALTER LOGIN Login1
+ALTER LOGIN User1
 ADD CREDENTIAL CredentialForEKM;
-
-/* Modify the login to assign a non cryptographic provider credential */
-ALTER LOGIN Login1
-WITH CREDENTIAL = AlterEgo;
-GO
 ```
 
 ### <a name="c-creating-a-credential-for-ekm-using-the-azure-key-vault"></a>C. 使用 Azure 密钥保管库创建用于 EKM 的凭据

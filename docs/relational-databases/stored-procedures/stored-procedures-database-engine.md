@@ -14,15 +14,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e64a097fb4d2eed917155fb3881d233231c413bc
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70148295"
 ---
 # <a name="stored-procedures-database-engine"></a>存储过程（数据库引擎）
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的存储过程是由一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行时 (CLR) 方法的引用构成的一个组。 过程与其他编程语言中的构造相似，这是因为它们都可以：  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的存储过程是由一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行时 (CLR) 方法的引用所构成的一个组。 过程与其他编程语言中的构造相似，这是因为它们都可以：  
   
 -   接受输入参数并以输出参数的格式向调用程序返回多个值。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "70148295"
  更容易维护  
  在客户端应用程序调用过程并且将数据库操作保持在数据层中时，对于基础数据库中的任何更改，只有过程是必须更新的。 应用程序层保持独立，并且不必知道对数据库布局、关系或进程的任何更改的情况。  
   
- 改进的性能  
+ 提高了性能  
  默认情况下，在首次执行过程时将编译过程，并且创建一个执行计划，供以后的执行重复使用。 因为查询处理器不必创建新计划，所以，它通常用更少的时间来处理过程。  
   
  如果过程引用的表或数据有显著变化，则预编译的计划可能实际上会导致过程的执行速度减慢。 在此情况下，重新编译过程和强制新的执行计划可提高性能。  

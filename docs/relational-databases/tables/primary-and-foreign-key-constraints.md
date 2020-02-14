@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b738bd06abe616adc846727dd5721b7204e340c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67999436"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>主键和外键约束
@@ -43,7 +43,7 @@ ms.locfileid: "67999436"
   
  如下图所示， **Purchasing.ProductVendor** 表中的 **ProductID** 和 **VendorID** 列构成了针对此表的复合主键约束。 这确保了 ProductVendor 表中的每个行都具有 ProductID 和 VendorID 的一个唯一组合    。 这样可以防止插入重复的行。  
   
- ![组合主键约束](../../relational-databases/tables/media/fund04.gif "组合主键约束")  
+ ![组合 PRIMARY KEY 约束](../../relational-databases/tables/media/fund04.gif "组合 PRIMARY KEY 约束")  
   
 -   一个表只能包含一个主键约束。  
   

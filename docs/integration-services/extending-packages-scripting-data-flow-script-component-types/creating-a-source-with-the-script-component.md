@@ -17,10 +17,10 @@ ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6b3362c4761d6ad17618a2c390ada247be9071f1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296449"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>使用脚本组件创建源
@@ -82,7 +82,7 @@ ms.locfileid: "71296449"
  有关“脚本转换编辑器”的“脚本”页的详细信息，请参阅[脚本转换编辑器（“脚本”页）](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)   。  
   
 ## <a name="scripting-a-source-component-in-code-design-mode"></a>在代码设计模式下编写源组件脚本  
- 为组件配置完元数据后，可以打开 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE 编写自定义脚本的代码。 若要打开 VSTA，请在“脚本转换编辑器”的“脚本”页中，单击“编辑脚本”    。 可使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 编写你的脚本，具体取决于为 ScriptLanguage 属性选择的脚本语言  。  
+ 为组件配置完元数据后，可以打开 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE 编写自定义脚本的代码。 若要打开 VSTA，请在“脚本转换编辑器”的“脚本”页中，单击“编辑脚本”    。 可使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 编写你的脚本，具体取决于为 ScriptLanguage 属性选择的脚本语言  。  
   
  有关适用于使用脚本组件创建的所有组件类型的重要信息，请参阅[脚本组件的编码和调试](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "71296449"
   
  ScriptMain 类包括 CreateNewOutputRows 方法的存根   。 CreateNewOutputRows 是源组件中最重要的方法  。  
   
- 如果打开 VSTA 的“项目资源管理器”窗口，可以看到脚本组件还生成了只读的 BufferWrapper 和 ComponentWrapper 项目项    。 ScriptMain 类从 ComponentWrapper 项目项中的 UserComponent 类继承    。  
+ 如果在 VSTA 中打开“项目资源管理器”  窗口，可以看到脚本组件还生成了只读的 **BufferWrapper** 和 **ComponentWrapper** 项目项。 **ScriptMain** 类继承自 **ComponentWrapper** 项目项中的 **UserComponent** 类。  
   
  在运行时，数据流引擎调用 UserComponent 类中的 PrimeOutput 方法，该方法替代 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 父类的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.PrimeOutput%2A> 方法   。 PrimeOutput 方法又调用下列方法  ：  
   

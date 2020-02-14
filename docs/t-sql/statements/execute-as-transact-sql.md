@@ -24,12 +24,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 9d6abc08f6ba46792d92887ca22f1a37b48e05cc
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: ee3854c45678cb29989849a6ee8b28e821b6d830
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73981006"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287834"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "73981006"
   
 
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -55,7 +55,7 @@ ms.locfileid: "73981006"
 ```  
   
 ## <a name="arguments"></a>参数  
- Login  
+ LOGIN  
  **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
  指定要模拟的执行上下文是一个登录名。 模拟范围处于服务器级别。  
@@ -63,7 +63,7 @@ ms.locfileid: "73981006"
 > [!NOTE]  
 >  此选项在包含的数据库、SQL 数据库或 SQL 数据仓库中不可用。  
   
- User  
+ USER  
  指定要模拟的上下文是当前数据库中的用户。 模拟范围只限于当前数据库。 对数据库用户的上下文切换不会继承该用户的服务器级别权限。  
   
 > [!IMPORTANT]  
@@ -96,7 +96,7 @@ ms.locfileid: "73981006"
  > [!NOTE]  
 >  此选项在 SQL 数据仓库中不可用。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  执行上下文中的更改在下列操作之一发生之前一直有效：  
   
 -   运行另一个 EXECUTE AS 语句。  
@@ -120,7 +120,7 @@ ms.locfileid: "73981006"
   
 如果用户处于孤立状态（关联登录名不再存在），并且该用户不是使用 WITHOUT LOGIN 创建的，EXECUTE AS 将针对此用户失败   。  
   
-## <a name="best-practice"></a>最佳实践  
+## <a name="best-practice"></a>最佳做法  
  指定具有执行会话中操作所需的最低特权的登录名或用户。 例如，如果只需要数据库级别的权限，则不要指定具有服务器级别权限的登录名；或者除非需要这些权限，否则不要指定数据库所有者帐户。  
   
 > [!CAUTION]  
@@ -129,9 +129,9 @@ ms.locfileid: "73981006"
 ## <a name="using-with-no-revert"></a>使用 WITH NO REVERT  
  当 EXECUTE AS 语句包含可选的 WITH NO REVERT 子句时，不能通过 REVERT 语句或执行另一个 EXECUTE AS 语句来重置会话的执行上下文。 由该语句设置的上下文在删除会话之前一直保持有效。  
   
- 当指定 WITH NO REVERT COOKIE = @varbinary_variable 子句时，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 将 cookie 值传递给 @varbinary_variable   。 只有执行调用的 REVERT WITH COOKIE = @varbinary_variable 语句包含相同的 @varbinary_variable 值时，该语句设置的执行上下文才能恢复为以前的上下文   。  
+ 当指定 WITH NO REVERT COOKIE = @varbinary_variable 子句时，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 将 cookie 值传递给 @varbinary_variable   。 只有执行调用的 REVERT WITH COOKIE = @varbinary_variable 语句包含相同的 \@varbinary_variable 值，该语句设置的执行上下文才能恢复为以前的上下文   。  
   
- 该选项在使用连接池的环境中非常有用。 连接池是指维护一组数据库连接，以使应用程序服务器上的应用程序能够重用它们。 由于传递给 @varbinary_variable 的值仅对于 EXECUTE AS 语句的调用方是已知的，因此该调用方可以保证它们建立的执行上下文不能被任何其他用户更改  。  
+ 该选项在使用连接池的环境中非常有用。 连接池是指维护一组数据库连接，以使应用程序服务器上的应用程序能够重用它们。 由于传递给 \@varbinary_variable 的值仅对于 EXECUTE AS 语句的调用方是已知的，因此该调用方可以保证它们建立的执行上下文不能被任何其他用户更改  。  
   
 ## <a name="determining-the-original-login"></a>确定原始登录  
  使用 [ORIGINAL_LOGIN](../../t-sql/functions/original-login-transact-sql.md) 函数可以返回连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的登录名。 您可以在具有众多显式或隐式上下文切换的会话中使用该函数返回原始登录的标识。  

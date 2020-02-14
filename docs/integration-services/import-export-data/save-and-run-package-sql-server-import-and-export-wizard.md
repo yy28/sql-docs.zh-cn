@@ -12,10 +12,10 @@ ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b1275f5cbb718f34ba1386d6d6313dd662901900
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284943"
 ---
 # <a name="save-and-run-package-sql-server-import-and-export-wizard"></a>保存并运行包（SQL Server 导入和导出向导）
@@ -30,7 +30,7 @@ ms.locfileid: "71284943"
 ## <a name="screen-shot-of-the-save-and-run-package-page"></a>“保存并运行包”页面的屏幕截图  
 下面的屏幕截图显示了向导的“保存并运行包”  页。 
    
-![保存并运行“导入和导出向导”的包页面](../../integration-services/import-export-data/media/save-and-run.png "Save and run package page of the Import and Export Wizard") 
+![“导入和导出向导”的“保存并运行包”页面](../../integration-services/import-export-data/media/save-and-run.png "“导入和导出向导”的“保存并运行包”页面") 
   
 ## <a name="run-and-save-the-package"></a>运行并保存包 
  若要继续，必须选择以下两个选项中的至少一个。  

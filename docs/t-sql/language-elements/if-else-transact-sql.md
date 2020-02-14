@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 266d03b1eb5b96f4f4e78ed1a7985e5071a12d20
-ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71823612"
 ---
 # <a name="ifelse-transact-sql"></a>IF...ELSE (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "71823612"
 
 指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的执行条件。 如果满足条件，则在 IF 关键字及其条件之后执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句：布尔表达式返回 TRUE。 可选的 ELSE 关键字引入另一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，当不满足 IF 条件时就执行该语句：布尔表达式返回 FALSE。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -53,7 +53,7 @@ IF Boolean_expression
   
  若要定义语句块，请使用控制流关键字 BEGIN 和 END。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  IF...ELSE 构造可用于批处理、存储过程和即席查询。 当此构造用于存储过程时，通常用于测试某个参数是否存在。  
   
  可以在其他 IF 之后或在 ELSE 下面，嵌套另一个 IF 测试。 嵌套级数的限制取决于可用内存。  

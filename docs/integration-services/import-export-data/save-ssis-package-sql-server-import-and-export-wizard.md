@@ -12,10 +12,10 @@ ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 63cc8413175555e37a29caf288a72815824c3778
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296258"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>保存 SSIS 包（SQL Server 导入和导出向导）
@@ -38,7 +38,7 @@ ms.locfileid: "71296258"
  **名称**  
  为包提供唯一的名称。  
   
- **描述**  
+ **说明**  
  为包提供说明。 最好说明包的用途，使其一目了然，便于维护。  
   
  **Target**  
@@ -48,7 +48,7 @@ ms.locfileid: "71296258"
 
  如果在“保存和运行包”  页选择了“SQL Server”  选项，则以下屏幕截图将显示向导的“保存 SSIS 包”  。 
   
-![导入和导出向导的 SSIS “保存包”页](../../integration-services/import-export-data/media/save-package2.png "Save SSIS Package page of the Import and Export Wizard")  
+![“导入和导出向导”的“保存 SSIS 包”页面](../../integration-services/import-export-data/media/save-package2.png "“导入和导出向导”的“保存 SSIS 包”页面")  
 
 ## <a name="options-to-specify-target--sql-server"></a>要指定的选项（目标 = SQL Server） 
 
@@ -61,10 +61,10 @@ ms.locfileid: "71296258"
  **Use Windows Authentication**  
 使用 Windows 集成身份验证连接到服务器。 这是首选的身份验证方法。  
   
- **使用 SQL Server 身份验证**  
+ **Use SQL Server Authentication**  
 使用 SQL Server 身份验证连接到服务器。  
   
- **User name**  
+ **用户名**  
 如果指定了 SQL Server 身份验证，输入用户名。  
   
  **密码**  
@@ -74,7 +74,7 @@ ms.locfileid: "71296258"
  
 如果选择了“保存并运行包”  页上的“文件系统”  选项，下面的屏幕截图将显示向导的“保存 SSIS 包”  页。 
   
-![导入和导出向导的 SSIS “保存包”页](../../integration-services/import-export-data/media/save-package1.png "Save SSIS Package page of the Import and Export Wizard")  
+![“导入和导出向导”的“保存 SSIS 包”页面](../../integration-services/import-export-data/media/save-package1.png "“导入和导出向导”的“保存 SSIS 包”页面")  
 
 ## <a name="options-to-specify-target--file-system"></a>要指定的选项（目标 = 文件系统）
 

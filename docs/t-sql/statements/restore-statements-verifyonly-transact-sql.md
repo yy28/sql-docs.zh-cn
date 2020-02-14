@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 1fec8542ec7575013f8dd101c1e50e3a7b6a13a6
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68742989"
 ---
 # <a name="restore-statements---verifyonly-transact-sql"></a>RESTORE 语句 - VERIFYONLY (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68742989"
 > [!NOTE]  
 >  有关参数的说明，请参阅 [RESTORE 参数 (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md)。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -112,7 +112,7 @@ FROM <backup_device> [ ,...n ]
 > [!NOTE]  
 >  借助快照备份，RESTORE VERIFYONLY 可确认快照是否在备份文件中指定的位置处存在。 快照备份是 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的新功能。 有关快照备份的详细信息，请参阅 [Azure 中数据库文件的文件快照备份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
  在备份时，可以根据需要为介质集、备份集或这两者指定密码。 如果已经在介质集或备份集上定义了密码，则必须在 RESTORE 语句中指定正确的密码。 这些密码可防止未经授权而使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具执行还原操作以及向介质追加备份集。 但是，密码不会阻止使用 BACKUP 语句的 FORMAT 选项覆盖介质。  
   
 > [!IMPORTANT]  

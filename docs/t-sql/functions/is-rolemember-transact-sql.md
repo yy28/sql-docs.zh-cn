@@ -21,18 +21,18 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 71a3d8f8ce28fcc8918f2058d08f99df2982be5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086715"
 ---
-# <a name="isrolemember-transact-sql"></a>IS_ROLEMEMBER (Transact-SQL)
+# <a name="is_rolemember-transact-sql"></a>IS_ROLEMEMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   指示指定的数据库主体是否为指定数据库角色的成员。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,22 +42,22 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
 ```  
   
 ## <a name="arguments"></a>参数  
- 'role'     
+ **'** *role* **'**  
  要检查的数据库角色的名称。 role 为 sysname   。  
   
- ' database_principal '     
+ **'** *database_principal* **'**  
  要检查的数据库用户、数据库角色或应用程序角色的名称。 database_principal 的数据类型为 sysname，默认值为 NULL   。 如果未指定值，则结果视当前执行上下文而定。 如果此参数包含词 NULL，将返回 NULL。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
   
-|返回值|描述|  
+|返回值|说明|  
 |------------------|-----------------|  
 |0|database_principal 不是 role 的成员   。|  
 |1|database_principal 是 role 的成员   。|  
-|NULL|database_principal 或 role 无效，或者你没有查看角色成员身份的权限   。|  
+|Null|database_principal 或 role 无效，或者你没有查看角色成员身份的权限   。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  请使用 IS_ROLEMEMBER 确定当前用户是否可以执行需要数据库角色权限的操作。  
   
  如果 database_principal 基于 Windows 登录名，如 Contoso\Mary5，则 IS_ROLEMEMBER 返回 NULL，除非为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 授予或拒绝了 database_principal 的直接访问权限   。  

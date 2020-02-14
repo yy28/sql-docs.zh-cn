@@ -16,10 +16,10 @@ ms.assetid: 8a75ccce-b174-4937-bc92-8e413b55afe1
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 36093a4cd91943b3db214dcb9cdeb55bda7399c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093512"
 ---
 # <a name="sql-server-external-scripts-object"></a>SQL Server，外部脚本对象
@@ -27,9 +27,9 @@ ms.locfileid: "68093512"
 
   **中的** SQLServer:External Scripts [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象可以提供计数器，以监视与执行外部脚本关联的操作。 有关执行外部脚本的信息，请参阅 [sp_execute_external_script (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。  
   
- 下表介绍了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **外部脚本** 计数器。  
+ 下表介绍了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] External Scripts 计数器  。  
   
-|SQL Server 外部脚本计数器|描述|  
+|SQL Server 外部脚本计数器|说明|  
 |------------------------------------------|-----------------|  
 |**执行错误**|执行外部脚本时的错误数量。|  
 |**隐含身份验证登录**|通过使用默示身份验证从附属进程验证的登录次数。|  

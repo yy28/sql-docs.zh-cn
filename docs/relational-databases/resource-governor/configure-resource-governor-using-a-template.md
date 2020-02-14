@@ -12,10 +12,10 @@ ms.assetid: f342dec2-d1d6-483e-b44e-98eb7d168b5e
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 2b26aba44ff43de115268dcafa5ecc51e3f13c02
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903951"
 ---
 # <a name="configure-resource-governor-using-a-template"></a>使用模板配置资源调控器
@@ -24,7 +24,7 @@ ms.locfileid: "72903951"
   
 -   **开始之前：** [权限](#Permissions)  
   
--   **若要创建工作负荷组，使用：**  [模板](#ConfRGTemplate)  
+-   要创建工作负载组，请使用：[模板](#ConfRGTemplate)   
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  使用下列步骤可打开和修改创建资源池和资源池的工作负荷组的模板。 此外，该模板还可以创建分类器用户定义函数，以将新的连接传送到默认组或用户创建的工作负荷组。  

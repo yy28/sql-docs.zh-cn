@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fad28919360caf2a37f410d1c3f3e122fd3dd803
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: 282e75c071ce220c5b7301b5c4b27fff2cf4b053
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119453"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76929105"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>使数据库在其他服务器上可用时管理元数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "74119453"
   
  某些应用程序依赖于单个用户数据库范围之外的信息、实体和/或对象。 通常，应用程序具有对 **master** 和 **msdb** 数据库的依赖关系，并且还具有对用户数据库的依赖关系。 用户数据库正确运行所需的存储在该数据库外部的任何内容必须在目标服务器实例上可用。 例如，应用程序的登录名作为元数据存储在 **master** 数据库中，必须在目标服务器上重新创建这些登录名。 如果应用程序或数据库维护计划依赖于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业（其元数据存储在 **msdb** 数据库中），则必须在目标服务器实例上重新创建这些作业。 同样，服务器级触发器的元数据存储在 **master**中。  
   
- 将应用程序的数据库移动到其他服务器实例时，必须在目标服务器实例的 **master** 和 **msdb** 中重新创建依赖实体和依赖对象的所有元数据。 例如，如果数据库应用程序使用服务器级触发器，则仅在新系统上附加或还原数据库是不够的。 如果不手动在 **master** 数据库中重新创建这些触发器的元数据，则数据库不能按预期方式工作。  
+ 将应用程序的数据库移动到其他服务器实例时，必须在目标服务器实例的 master 和 msdb 中重新创建依赖实体和依赖对象的所有元数据   。 例如，如果数据库应用程序使用服务器级触发器，则仅在新系统上附加或还原数据库是不够的。 如果不手动在 **master** 数据库中重新创建这些触发器的元数据，则数据库不能按预期方式工作。  
   
 ##  <a name="information_entities_and_objects"></a> 存储在用户数据库外部的信息、实体和对象  
  本文的其余部分概要说明了可能影响在其他服务器实例上可用的数据库的潜在问题。 最好重新创建以下列表中列出的一种或多种信息、实体或对象。 若要查看概要内容，请单击该项的链接。  
@@ -78,7 +78,7 @@ ms.locfileid: "74119453"
   
 -   [事件通知和 Windows Management Instrumentation (WMI) 事件（服务器级）](#event_notif_and_wmi_events)  
   
--   [扩展存储过程](#extended_stored_procedures)  
+-   [扩展的存储过程](#extended_stored_procedures)  
   
 -   [SQL Server 属性的全文引擎](#ifts_service_properties)  
   
@@ -132,7 +132,7 @@ ms.locfileid: "74119453"
   
  对加密数据库执行复制、还原或附加到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例等操作时，由服务主密钥加密的数据库主密钥的副本不存储在目标服务器实例上的 **master** 中。 在目标服务器实例上，必须打开数据库的主密钥。 若要打开主密钥，请执行以下语句：OPEN MASTER KEY DECRYPTION BY PASSWORD ='  password  '  . 建议通过执行下面的语句对数据库主密钥启用自动解密：ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY。 此 ALTER MASTER KEY 语句使用数据库主密钥（使用服务主密钥加密）的副本来设置服务器实例。 有关详细信息，请参阅 [OPEN MASTER KEY (Transact-SQL)](../../t-sql/statements/open-master-key-transact-sql.md) 和 [ALTER MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-master-key-transact-sql.md)。  
   
- 有关如何启用镜像数据库主秘钥自动加密的详细信息，请参阅[设置加密的镜像数据库](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)。  
+ 有关如何启用镜像数据库主秘钥自动加密的详细信息，请参阅 [设置加密的镜像数据库](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)。  
   
  有关详细信息，请参阅：  
   
@@ -192,9 +192,9 @@ ms.locfileid: "74119453"
 ##  <a name="ifts_service_properties"></a> Full-Text Engine for SQL Server Properties  
  全文引擎的属性是通过 [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)设置的。 请确保目标服务器实例具有这些属性的必需设置。 有关这些属性的详细信息，请参阅 [FULLTEXTSERVICEPROPERTY (Transact SQL)](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)。  
   
- 此外，如果原始服务器实例和目标服务器示例具有不同版本的 [断字符和词干分析器](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)组件或[全文搜索筛选器](../../relational-databases/search/configure-and-manage-filters-for-search.md)组件，则全文索引和查询的行为可能有所不同。 此外， [同义词库](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md) 存储在特定于实例的文件中。 您必须将这些文件的副本传输到目标服务器实例上的相同位置，或者在新的实例上重新创建这些文件。  
+ 此外，如果原始服务器实例和目标服务器示例具有不同版本的 [断字符和词干分析器](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) 组件或 [全文搜索筛选器](../../relational-databases/search/configure-and-manage-filters-for-search.md) 组件，则全文索引和查询的行为可能有所不同。 此外， [同义词库](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md) 存储在特定于实例的文件中。 您必须将这些文件的副本传输到目标服务器实例上的相同位置，或者在新的实例上重新创建这些文件。  
   
-> **注意**：当将包含全文目录文件的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库附加到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 服务器实例上时，会将目录文件从其以前的位置与其他数据库文件一起附加，这与 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中的情况相同。 有关详细信息，请参阅 [全文搜索升级](../../relational-databases/search/upgrade-full-text-search.md)。  
+> **注意：** 当将包含全文目录文件的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库附加到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 服务器实例上时，会将目录文件从其以前的位置与其他数据库文件一起附加，这与 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中的情况相同。 有关详细信息，请参阅 [全文搜索升级](../../relational-databases/search/upgrade-full-text-search.md)。  
   
  有关详细信息，请参阅：  
   
@@ -231,7 +231,7 @@ ms.locfileid: "74119453"
   
 -   [角色切换后登录名和作业的管理 (SQL Server)](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)（为镜像数据库）  
   
--   [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)（安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例时）  
+-   [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) （安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例时）  
   
 -   [配置 SQL Server 代理](../../ssms/agent/configure-sql-server-agent.md) （安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例时）  
   
@@ -273,15 +273,15 @@ ms.locfileid: "74119453"
 ### <a name="grant-revoke-and-deny-permissions-on-system-objects"></a>对系统对象的 GRANT、REVOKE 和 DENY 权限  
  对系统对象（例如存储过程、扩展存储过程、函数和视图）的权限存储在 **master** 数据库中，并且必须在目标服务器实例上进行配置。  
   
- 若要为数据库原始副本中的部分或全部对象生成脚本，可以使用生成脚本向导，并在 **“选择脚本选项”** 对话框中将 **“编写对象级权限脚本”** 选项设置为 **True**。  
+ 若要为数据库原始副本中的部分或全部对象生成脚本，可以使用生成脚本向导，并在“选择脚本选项”  对话框中将“编写对象级权限脚本”  选项设置为 **True**。  
   
    > [!IMPORTANT]
    > 如果编写登录脚本，则不编写密码的脚本。 如果登录名使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，则必须在目标上修改脚本。  
   
- 在 [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) 目录视图中可以查看系统对象。 在 **master** 数据库中的 [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) 目录视图中可以查看对系统对象的权限。 有关查询这些目录视图并授予系统对象权限的信息，请参阅 [GRANT 系统对象权限 (Transact-SQL)](../../t-sql/statements/grant-system-object-permissions-transact-sql.md)。 有关更多详细信息，请参阅 [REVOKE 系统对象权限 (Transact-SQL)](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md) 和 [DENY 系统权限 (Transact-SQL)](../../t-sql/statements/deny-system-object-permissions-transact-sql.md)。  
+ 在 [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) 目录视图中可以查看系统对象。 在 [master](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) 数据库中的 **sys.database_permissions** 目录视图中可以查看对系统对象的权限。 有关查询这些目录视图并授予系统对象权限的信息，请参阅 [GRANT 系统对象权限 (Transact-SQL)](../../t-sql/statements/grant-system-object-permissions-transact-sql.md)。 有关更多详细信息，请参阅 [REVOKE 系统对象权限 (Transact-SQL)](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md) 和 [DENY 系统权限 (Transact-SQL)](../../t-sql/statements/deny-system-object-permissions-transact-sql.md)。  
   
 ### <a name="grant-revoke-and-deny-permissions-on-a-server-instance"></a>对服务器实例的 GRANT、REVOKE 和 DENY 权限  
- 服务器范围的权限存储在 **master** 数据库中，并且必须在目标服务器实例上进行配置。 有关服务器实例的服务器权限的信息，请查询 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)目录视图；有关服务器主体的信息，请查询 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 目录视图；有关服务器角色成员身份的信息，请查询 [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) 目录视图。  
+ 服务器范围的权限存储在 **master** 数据库中，并且必须在目标服务器实例上进行配置。 有关服务器实例的服务器权限的信息，请查询 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 目录视图；有关服务器主体的信息，请查询 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)目录视图；有关服务器角色成员身份的信息，请查询 [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) 目录视图。  
   
  有关更多详细信息，请参阅 [GRANT 服务器权限 (Transact-SQL)](../../t-sql/statements/grant-server-permissions-transact-sql.md)、[REVOKE 服务器权限 (Transact-SQL)](../../t-sql/statements/revoke-server-permissions-transact-sql.md) 和 [DENY 服务器权限 (Transact-SQL)](../../t-sql/statements/deny-server-permissions-transact-sql.md)。  
   

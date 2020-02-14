@@ -17,10 +17,10 @@ ms.assetid: 3aa3bc0e-1a1c-452e-81b8-b4e3422ea053
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 081cfc1b5808ca38fb536197cfa44d60f2203b99
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056564"
 ---
 # <a name="execute-sql-server-agent-job-task"></a>“执行 SQL Server 代理作业”任务

@@ -17,15 +17,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: be602e61cfd34e8daf97200628df7fa3147c809a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120460"
 ---
 # <a name="sql-server-event-class-reference"></a>SQL Server 事件类参考
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 可以将事件记录为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例。 记录的事件是跟踪定义中事件类的实例。 在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中，事件类以及它们的事件类别位于 **“跟踪文件属性”** 对话框的 **“事件选择”** 选项卡中。  
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 可以记录 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例中发生的事件。 记录的事件是跟踪定义中事件类的实例。 在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中，事件类以及它们的事件类别位于 **“跟踪文件属性”** 对话框的 **“事件选择”** 选项卡中。  
   
  下表介绍了事件类别并列出了与它们相关的事件类。  
   
@@ -53,6 +53,6 @@ ms.locfileid: "68120460"
 |[User-Configurable 事件类别](../../relational-databases/event-classes/user-configurable-event-category.md) 包括你可以定义的事件类。|[User-Configurable 事件类](../../relational-databases/event-classes/user-configurable-event-class.md)|  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server 事件探查器](../../tools/sql-server-profiler/sql-server-profiler.md)  
+ [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

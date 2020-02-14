@@ -18,23 +18,23 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 886afc267d38ec92a478fc40bcbde53e428950f0
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68809957"
 ---
 # <a name="row-level-security"></a>行级安全性
 
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  ![“行级安全性”图](../../relational-databases/security/media/row-level-security-graphic.png "“行级安全性”图")  
+  ![行级安全图](../../relational-databases/security/media/row-level-security-graphic.png "行级安全图")  
   
 借助行级别安全性，可以使用组成员资格或执行上下文来控制对数据库表中行的访问权限。
   
 行级别安全性 (RLS) 简化了应用程序中安全性的设计和编码。 RLS 可帮助你实现对数据行访问的限制。 例如，可以确保工作人员仅访问与其部门相关的数据行。 再例如，将客户的数据访问权限限制为，仅访问与其公司相关的数据。  
   
-访问限制逻辑位于数据库层中，而不是在另一个应用层中远离数据。 数据库系统会在每次尝试从任何层进行数据访问时应用访问限制。 这样，你的安全系统可以通过减少安全系统的外围应用来更加可靠和强健。  
+访问限制逻辑位于数据库层中，而不是在另一个应用层中远离数据。 数据库系统会在每次尝试从任何层进行数据访问时应用访问限制。 这样就会通过减少安全系统的外围应用，使安全系统变得更加可靠和稳健。  
   
 可使用 [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句以及作为 [内联表值函数](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)创建的谓词来实现 RLS。  
 
@@ -101,7 +101,7 @@ RLS 支持两种类型的安全谓词。
   
  RLS 筛选器谓词在功能上等效于追加 **WHERE** 子句。 谓词可以如同业务做法规定一样复杂，或子句可以如同 `WHERE TenantId = 42`一样简单。  
   
- 用更正式的术语来说，RLS 引入了基于谓词的访问控制。 它以基于谓词的集中式灵活评估为重点。 谓词可以基于元数据，也可以基于管理员根据需要确定的其他任何条件。 谓词用作一个条件，以便基于用户属性来确定用户是否具有合适的数据访问权限。 可以使用基于谓词的访问控制来实现基于标签的访问控制。  
+ 用更正式的术语来说，RLS 引入了基于谓词的访问控制。 它以基于谓词的集中式灵活评估为重点。 谓词可以基于元数据，也可以基于管理员根据需要确定的其他任何条件。 谓词用作一个条件，以便基于用户属性来确定用户是否具有合适的数据访问权限。 基于标签的访问控制可以通过使用基于谓词的访问控制来实现。  
   
 ## <a name="Permissions"></a> 权限
 

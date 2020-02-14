@@ -11,10 +11,10 @@ ms.assetid: 1c10dd54-67cb-4b63-9e4d-aa6ff0452ecb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d3b3ccea56d367e7870826b39830e415e26bb2ac
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295902"
 ---
 # <a name="lesson-5-add-ssis-package-configurations-for-the-package-deployment-model"></a>第 5 课：添加包部署模型的 SSIS 包配置
@@ -23,7 +23,7 @@ ms.locfileid: "71295902"
 
 
 
-包配置允许从开发环境外部设置运行时属性和变量。 配置允许您开发灵活且易于部署和分发的包。 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了以下配置类型：  
+包配置允许从开发环境外部设置运行时属性和变量。 配置允许您开发灵活且易于部署和分发的包。 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了以下配置类型：  
   
 -   XML 配置文件  
   
@@ -35,7 +35,7 @@ ms.locfileid: "71295902"
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表  
   
-在本课中，将修改在[第 4 课：使用 SSIS 添加错误流重定向](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)中创建的示例  包，以便使用包部署模型并利用包配置。 还可以复制本教程附带的已完成的第 4 课包。 
+在本课中，将修改在[第 4 课：使用 SSIS 添加错误流重定向](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)中创建的示例 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包，以便使用包部署模型并利用包配置。 还可以复制本教程附带的已完成的第 4 课包。 
 
 使用“程序包配置向导”，可创建一个 XML 配置，以便更新 Foreach 循环容器的 Directory 属性  。 使用映射到 Directory 属性的包级别变量  。 创建配置文件后，将变量的值从开发环境外部修改为新的示例数据文件夹路径。 再次运行包时，配置文件将填充变量值，而变量将更新 **Directory** 属性。 然后，包将循环访问新数据文件夹中的文件，而不是原始硬编码文件夹中的文件。  
   

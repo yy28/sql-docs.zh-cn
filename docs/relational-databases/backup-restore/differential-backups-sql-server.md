@@ -14,20 +14,20 @@ ms.assetid: 123bb7af-1367-4bde-bfcb-76d36799b905
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: be0ff34acb9d7743ae096f8ecd2b0ad3ed8a4e28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68089837"
 ---
 # <a name="differential-backups-sql-server"></a>差异备份 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   此备份和还原主题与所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库相关。  
   
- 差异备份所基于的是最近一次的完整数据备份。 差异备份仅捕获自该次完整备份后发生更改的数据。 差异备份所基于的完整备份称为差异的“基准”  。 完整备份（仅复制备份除外）可以用作一系列差异备份的基准，包括数据库备份、部分备份和文件备份。 文件差异备份的基准备份可以包含在完整备份、文件备份或部分备份中。  
+ 差异备份基于最新的、以前的完整数据备份。 差异备份仅捕获自该次完整备份后发生更改的数据。 差异备份所基于的完整备份称为差异的“基准”  。 完整备份（仅复制备份除外）可以用作一系列差异备份的基准，包括数据库备份、部分备份和文件备份。 文件差异备份的基准备份可以包含在完整备份、文件备份或部分备份中。  
   
   
-##  <a name="Benefits"></a> 优点  
+##  <a name="Benefits"></a> 优势  
   
 -   与创建完整备份相比，创建差异备份的速度可能非常快。 差异备份只记录自差异备份所基于的完整备份后更改的数据。 这有助于频繁地进行数据备份，减少数据丢失的风险。 但是，在还原差异备份之前，必须先还原其基准。 因此，从差异备份进行还原必然要比从完整备份进行还原需要更多的步骤和时间，因为这需要两个备份文件。  
   

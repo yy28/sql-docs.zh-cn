@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 08a4a90580a00e3ab4f2c38c7dfa3cf81b331d08
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 32474836bfbf61f74370724f0750732e11542e9e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768623"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76284695"
 ---
 # <a name="distribution-agent-security"></a>分发代理安全性
 ::: moniker range=">=sql-server-2014||=sqlallproducts-allversions" 
@@ -51,7 +51,7 @@ ms.locfileid: "68768623"
   
  如果在建立连接时模拟进程帐户，则还需要其他权限。 请参阅下面的 **“连接到分发服务器”** 和 **“连接到订阅服务器”** 部分。  
   
- 由于分发代理没有运行在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 实例上，因此不能为对 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的请求订阅指定 **“进程帐户”** 。  
+ 由于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的实例上未运行分发代理，因此不能为对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的请求订阅指定“进程帐户”  。  
   
  **“密码”** 和 **“确认密码”**  
  输入 Windows 帐户的密码。  

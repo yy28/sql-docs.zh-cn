@@ -15,10 +15,10 @@ ms.assetid: 9f9cadad-a1d0-4db5-98f5-df5dbbec1be4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 62e22823d19ab7dff113566927f0d59dfd4a693e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294484"
 ---
 # <a name="analysis-services-connection-manager"></a>Analysis Services 连接管理器
@@ -33,7 +33,7 @@ ms.locfileid: "71294484"
  有关 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库的详细信息，请参阅[多维模型数据库 (SSAS)](https://docs.microsoft.com/analysis-services/multidimensional-models/multidimensional-model-databases-ssas)。  
   
 ## <a name="configuration-of-the-analysis-services-connection-manager"></a>Analysis Services 连接管理器的配置  
- 将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接管理器添加到包时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会创建在运行时作为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接进行解析的连接管理器，同时还会设置该连接管理器的属性，并将该连接管理器添加到包的 **Connections** 集合。 该连接管理器的 **ConnectionManagerType** 属性设置为 **MSOLAP100**。  
+ 将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接管理器添加到包时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会创建在运行时作为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接进行解析的连接管理器，同时还会设置该连接管理器的属性，并将该连接管理器添加到包的 Connections 集合  。 该连接管理器的 **ConnectionManagerType** 属性设置为 **MSOLAP100**。  
   
  可以通过下列方式配置 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接管理器：  
   

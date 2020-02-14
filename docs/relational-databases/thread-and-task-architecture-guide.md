@@ -15,10 +15,10 @@ author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4c19e3ad3589cad6f7503ff9f0e92c090bef5035
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72305196"
 ---
 # <a name="thread-and-task-architecture-guide"></a>线程和任务体系结构指南
@@ -36,7 +36,7 @@ ms.locfileid: "72305196"
 
 任务表示满足请求所需完成的工作单元。  可以向单个请求分配一个或多个任务。 并行请求有多个并行执行（而非串行）的活动任务。 在任何给定的时间点，串行执行的请求均仅有一个活动任务。 任务在其整个生存期期间以不同状态存在。 有关任务状态的详细信息，请参阅 [sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)。 处于“挂起”状态的任务正在等待执行任务所需的资源可用。 有关正在等待的任务的详细信息，请参阅 [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md)。
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 工作线程（又称为线程）是操作系统线程的逻辑表现形式。  执行串行请求时，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 将生成线程，以执行活动任务。 在[行模式](../relational-databases/query-processing-architecture-guide.md#execution-modes)下执行并行请求时，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 将分配线程，来协调负责完成已向其分配的任务的子线程。 为每个任务生成的工作线程数取决于以下因素：
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 工作线程（又称为工作器或线程）是操作系统线程的逻辑表现形式。  执行串行请求时，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 将生成线程，以执行活动任务。 在[行模式](../relational-databases/query-processing-architecture-guide.md#execution-modes)下执行并行请求时，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 将分配线程，来协调负责完成已向其分配的任务的子线程。 为每个任务生成的工作线程数取决于以下因素：
 -   请求是否符合并行要求（由查询优化器确定）。
 -   根据当前负载，系统的实际可用的[并行度 (DOP)](../relational-databases/query-processing-architecture-guide.md#DOP) 是多少。 它可能不同于估计的 DOP，后者基于最大并行度 (MAXDOP) 的服务器配置。 例如，MAXDOP 的服务器配置可能是 8，但在运行时可用的 DOP 可能仅为 2，这样则会影响查询性能。 
 

@@ -23,10 +23,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8247260f7a0233e255375143c23d5bc1c9e22c28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68070187"
 ---
 # <a name="drop-schema-transact-sql"></a>DROP SCHEMA (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68070187"
 
   从数据库中删除架构。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -59,12 +59,12 @@ DROP SCHEMA schema_name
  *schema_name*  
  架构在数据库中所使用的名称。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  要删除的架构不能包含任何对象。 如果架构包含对象，则 DROP 语句将失败。  
   
  可以在 [sys.schemas](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md) 目录视图中查看有关架构的信息。  
   
- **警告** [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
+ 小心 [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]   
   
 ## <a name="permissions"></a>权限  
  要求对架构具有 CONTROL 权限，或者对数据库具有 ALTER ANY SCHEMA 权限。  

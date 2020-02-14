@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: abec4388ccc56d2d643794cc354167359efa15f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e31a24a949968e3d17b50c32b42e92cdd0997483
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127295"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76516548"
 ---
 # <a name="rebuild-system-databases"></a>重新生成系统数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "68127295"
 ###  <a name="Restrictions"></a> 限制和局限  
  重新生成 master、model、msdb 和 tempdb 系统数据库时，将删除这些数据库，然后在其原位置重新创建它们。 如果在重新生成语句中指定了新排序规则，则将使用该排序规则设置创建系统数据库。 用户对这些数据库所做的所有修改都会丢失。 例如，您在 master 数据库中的用户定义对象、msdb 中的预定作业或 model 数据库中对默认数据库设置的更改都会丢失。  
   
-###  <a name="Prerequisites"></a> 先决条件  
+###  <a name="Prerequisites"></a>先决条件  
  在重新生成系统数据库之前执行下列任务，以确保可以将系统数据库还原至它们的当前设置。  
   
 1.  记录所有服务器范围的配置值。  
@@ -60,7 +60,7 @@ ms.locfileid: "68127295"
     SELECT * FROM sys.configurations;  
     ```  
   
-2.  记录所有应用到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例和当前排序规则的 Service Pack 和修补程序。 重新生成系统数据库后必须重新应用这些更新。  
+2.  记录所有应用到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例和当前排序规则的修补程序。 重新生成系统数据库后必须重新应用这些修补程序。  
   
     ```  
     SELECT  
@@ -100,14 +100,14 @@ ms.locfileid: "68127295"
   
      **Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=InstanceName /SQLSYSADMINACCOUNTS=accounts [ /SAPWD= StrongPassword ] [ /SQLCOLLATION=CollationName]**  
   
-    |参数名称|描述|  
+    |参数名称|说明|  
     |--------------------|-----------------|  
     |/QUIET 或 /Q|指定在没有任何用户界面的情况下运行安装程序。|  
     |/ACTION=REBUILDDATABASE|指定安装程序将重新创建系统数据库。|  
     |/INSTANCENAME=*InstanceName*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的名称。 对于默认实例，请输入 MSSQLSERVER。|  
     |/SQLSYSADMINACCOUNTS=*accounts*|指定要添加到 **sysadmin** 固定服务器角色中的 Windows 组或单个帐户。 指定多个帐户时，请用空格将帐户隔开。 例如，输入 **BUILTIN\Administrators MyDomain\MyUser**。 当您在帐户名称内指定包含空格的帐户时，用双引号将该帐户引起来。 例如，输入 **NT AUTHORITY\SYSTEM**。|  
-    |[ /SAPWD=*StrongPassword* ]|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sa** 帐户的密码。 如果实例使用混合身份验证（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 身份验证）模式，则此参数是必需的。<br /><br /> **\*\* 安全说明 \*\***  **sa** 帐户是广为人知的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帐户，并且经常成为恶意用户的攻击目标。 因此，为 **sa** 登录名使用强密码非常重要。<br /><br /> 不要为 Windows 身份验证模式指定此参数。|  
-    |[ /SQLCOLLATION=*CollationName* ]|指定新的服务器级排序规则。 此参数可选。 如果没有指定，则使用服务器的当前排序规则。<br /><br /> **\*\* 重要事项 \*\*** 更改服务器级排序规则不会更改现有用户数据库的排序。 默认情况下，所有新创建的用户数据库都将使用新排序规则。<br /><br /> 有关详细信息，请参阅 [设置或更改服务器排序规则](../../relational-databases/collations/set-or-change-the-server-collation.md)。|  
+    |[ /SAPWD=*StrongPassword* ]|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SA 帐户的密码  。 如果实例使用混合身份验证（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 身份验证）模式，则此参数是必需的。<br /><br /> **\*\* 安全说明 \*\*** **sa** 帐户是广为人知的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帐户，并且经常成为恶意用户的攻击目标。 因此，为 **sa** 登录名使用强密码非常重要。<br /><br /> 不要为 Windows 身份验证模式指定此参数。|  
+    |[ /SQLCOLLATION=*CollationName* ]|指定新的服务器级排序规则。 此参数是可选的。 如果没有指定，则使用服务器的当前排序规则。<br /><br /> **\*\* 重要事项 \*\*** 更改服务器级排序规则不会更改现有用户数据库的排序。 默认情况下，所有新创建的用户数据库都将使用新排序规则。<br /><br /> 有关详细信息，请参阅 [设置或更改服务器排序规则](../../relational-databases/collations/set-or-change-the-server-collation.md)。|  
     |[ /SQLTEMPDBFILECOUNT=NumberOfFiles ]|指定 tempdb 数据文件的数目。 此值可以增加至 8 或内核数，以较大者为准。<br /><br /> 默认值：8 或内核数量，以较低者为准。|  
     |[ /SQLTEMPDBFILESIZE=FileSizeInMB ]|指定每个 tempdb 数据文件的初始大小 (MB)。 安装程序允许的大小最大为 1024 MB。<br /><br /> 默认值：8|  
     |[ /SQLTEMPDBFILEGROWTH=FileSizeInMB ]|指定每个 tempdb 数据文件的文件增长增量 (MB)。 值为 0 时表明自动增长被设置为关闭，不允许增加空间。 安装程序允许的大小最大为 1024 MB。<br /><br /> 默认值：64|  
@@ -140,7 +140,7 @@ ms.locfileid: "68127295"
 -   验证服务器范围的配置值是否与您以前记录的值相符。  
   
 ##  <a name="Resource"></a> resource 数据库重新生成  
- 以下过程将重新生成 resource 系统数据库。 重新生成 resource 数据库时，所有的 Service Pack 和修补程序都将丢失，因此必须重新应用。  
+ 以下过程将重新生成 resource 系统数据库。 重新生成 resource 系统数据库时，所有的热修补程序都将丢失，因此必须重新应用。  
   
 #### <a name="to-rebuild-the-resource-system-database"></a>重新生成 resource 系统数据库：  
   
@@ -166,7 +166,7 @@ ms.locfileid: "68127295"
   
 2.  使用以下命令从命令行启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ： `NET START MSSQLSERVER /T3608`  
   
-     有关详细信息，请参阅 [启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
+     有关详细信息，请参阅 [启动、停止、暂停、继续、重启 SQL Server 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
 3.  在另一个命令行窗口中，通过执行以下命令（并且用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例替换 *\<servername>* ）来分离 **msdb** 数据库：`SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
   
@@ -180,7 +180,7 @@ ms.locfileid: "68127295"
   
 7.  使用 Windows 记事本，打开 **instmsdb.out** 文件，然后检查输出中是否存在任何错误。  
   
-8.  重新应用在该实例上安装的任何 service pack 或修补程序。  
+8.  重新应用在该实例上安装的任何修补程序。  
   
 9. 重新创建在 **msdb** 数据库中存储的用户内容，例如作业、警报等。  
   

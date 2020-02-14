@@ -22,15 +22,15 @@ ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6b64ac7463e9a1e3ef62d87d5cf9d6096be275cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67998004"
 ---
 # <a name="logging-in-to-sql-server"></a>登录到 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  使用任何图形管理工具或从命令提示符处，都可以登录到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
+  使用任何图形管理工具或从命令提示符处，都可以登录到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。  
   
  使用图形管理工具（如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ）登录到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]实例时，系统将会提示您提供服务器名称、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和密码（如果需要）。 如果使用 Windows 身份验证登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则不必在每次访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例时都提供 SQL Server 登录名。 相反地， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将使用您的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户自动登录。 如果在混合模式身份验证（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 身份验证模式）下运行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，并选择使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录，则必须提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和密码。 请尽可能使用 Windows 身份验证。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "67998004"
 |----------------------|-------------------------------|  
 |连接到使用默认协议的默认实例。|APPHOST|  
 |连接到使用默认协议的命名实例。 |APPHOST\SQLEXPRESS|  
-|连接到同一计算机上的默认实例，该计算机使用期间来指示该实例在本地计算机上运行。|实例时都提供 SQL Server 登录名。|  
+|连接到同一计算机上的默认实例，该计算机使用期间来指示该实例在本地计算机上运行。|。|  
 |连接到同一计算机上的命名实例，该计算机使用期间来指示该实例在本地计算机上运行。|.\SQLEXPRESS|  
 |连接到同一计算机上的默认实例，该计算机使用 localhost 指示该实例在本地计算机上运行。|localhost|  
 |连接到同一计算机上的命名实例，该计算机使用 localhost 指示该实例在本地计算机上运行。|localhost\SQLEXPRESS|  

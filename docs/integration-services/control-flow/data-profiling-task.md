@@ -17,10 +17,10 @@ ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 309fb584db245ee3da6b67e475a4881347f39bd5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294211"
 ---
 # <a name="data-profiling-task"></a>数据事件探查任务
@@ -53,7 +53,7 @@ ms.locfileid: "71294211"
   
  以下五个配置文件分析单个列。  
   
-|分析单个列的配置文件|描述|  
+|分析单个列的配置文件|说明|  
 |----------------------------------------------|-----------------|  
 |列长度分布配置文件|报告所选列中各个字符串值的不同长度，以及每个长度表示的行在表中的百分比。<br /><br /> 此配置文件可以帮助您识别数据中存在的问题，如无效的值。 例如，美国州代码列应以两个字符来表示，但在对其进行事件探查时却发现有超过两个字符的值。|  
 |列 Null 比率配置文件|报告所选列中 Null 值的百分比。<br /><br /> 此配置文件可以帮助您识别数据中存在的问题，如列中 null 值的比率意外偏高。 例如，您对邮政编码列进行事件探查，却发现缺失的邮政编码所占的比例超出允许的范围。|  
@@ -63,7 +63,7 @@ ms.locfileid: "71294211"
   
  以下三个配置文件分析多个列或列与表之间的关系。  
   
-|分析多个列的配置文件|描述|  
+|分析多个列的配置文件|说明|  
 |--------------------------------------------|-----------------|  
 |候选键配置文件|报告某个列或列集是选定表的键还是近似键。<br /><br /> 此配置文件还可以帮助您识别数据中存在的问题，如可能的键列中存在重复值。|  
 |函数依赖关系配置文件|报告某列（依赖列）中的值对另一列或一组列（决定列）中的值的依赖程度。<br /><br /> 此配置文件也可以帮助您识别数据中存在的问题，如无效的值。 例如，您对包含美国邮政编码的列和包含美国各州的列之间的依赖关系进行事件探查。 同一邮政编码应始终对应同一州，但配置文件却发现有违反此依赖关系的情况。|  
@@ -96,7 +96,7 @@ ms.locfileid: "71294211"
   
  Numeric 类型包括 **integer** 类型（ **bit**除外）、 **money**、 **smallmoney**、 **decimal**、 **float**、 **real**和 **numeric**。  
   
- \*\* **image**、 **text**、 **XML**、 **udt**和 **variant** 类型。  
+ \*\* 除列 Null 比率配置文件以外，其他任何配置文件都不支持 image、text、XML、udt 和 variant 类型      。  
   
 ### <a name="valid-tables-and-columns"></a>有效的表和列  
  如果表或列为空，则数据事件探查将执行以下操作：  
@@ -115,7 +115,7 @@ ms.locfileid: "71294211"
 ## <a name="custom-logging-messages-available-on-the-data-profililng-task"></a>数据事件探查任务可用的自定义日志记录消息  
  下表列出了数据事件探查任务的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
-|日志项|描述|  
+|日志项|说明|  
 |---------------|-----------------|  
 |**DataProfilingTaskTrace**|提供有关任务状态的说明性信息。 日志记录消息包含以下信息：<br /><br /> 开始处理请求<br /><br /> 查询开始<br /><br /> 查询结束<br /><br /> 完成计算请求|  
   

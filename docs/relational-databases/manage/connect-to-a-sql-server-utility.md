@@ -11,10 +11,10 @@ ms.assetid: b9b90b8d-241f-4b74-ac14-de7b10ea1821
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 08811675cce441406534da3c31e2d01f314a2c20
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115434"
 ---
 # <a name="connect-to-a-sql-server-utility"></a>连接到 SQL Server 实用工具
@@ -29,11 +29,11 @@ ms.locfileid: "68115434"
   
 2.  在 SSMS 中，连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的某一实例。  
   
-3.  单击 **“视图”** ，然后单击 **“实用工具资源管理器”**。  
+3.  单击 **“视图”** ，然后单击 **“实用工具资源管理器”** 。  
   
-4.  在“实用工具资源管理器”导航窗格中，单击 ![](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility")“连接到实用工具”。  
+4.  在实用工具资源管理器导航窗格中，单击 ![](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility")“连接到实用工具”  。  
   
-5.  在 **“连接到服务器”** 对话框中，指定 UCP 实例名称，再单击 **“连接”**。  
+5.  在 **“连接到服务器”** 对话框中，指定 UCP 实例名称，再单击 **“连接”** 。  
   
 6.  查看实用工具资源管理器导航窗格，以便查看 UCP 中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源的树视图。  
   

@@ -15,15 +15,15 @@ ms.assetid: 10ac57f1-b4bd-4528-bb66-3e47ccf663e7
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: dbc306b3ec8d23c4ddc7aec6477c407f21e345a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68025481"
 ---
 # <a name="server-properties---general-page"></a>服务器属性 -“常规”页
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  使用此页可以查看有关 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的只读信息。  
+  使用此页面可以查看有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] 安装的只读信息。  
   
 ## <a name="property-grid"></a>属性网格  
  查看所选服务器的属性，例如服务器名称、服务器操作系统或处理器数。  
@@ -40,7 +40,7 @@ ms.locfileid: "68025481"
  **平台**  
  说明运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的操作系统和硬件。  
   
- **版本(Version)**  
+ **版本**  
  显示当前运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的版本号。  
   
  **语言**  

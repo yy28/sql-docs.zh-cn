@@ -19,10 +19,10 @@ ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 60dcf1692fb8b805b9eef8fad228353104131c93
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295740"
 ---
 # <a name="save-packages"></a>保存包
@@ -47,7 +47,7 @@ ms.locfileid: "71295740"
     >  可以在“属性”窗口中验证保存包的路径及文件名。  
 
 ## <a name="save-a-copy-of-a-package"></a>保存一个包副本
-  此部分介绍如何将包的副本保存到文件系统、包存储区或 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 msdb  数据库。 指定保存包副本的位置时，也能够更新包的名称。  
+  此部分介绍如何将包的副本保存到文件系统、包存储区或 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 msdb 数据库  。 指定保存包副本的位置时，也能够更新包的名称。  
   
  包存储区可以同时包括 **msdb** 数据库和文件系统中的文件夹，也可以只包含 **msdb**或文件系统中的文件夹。 在 **msdb**中，包将保存到 **sysssispackages** 表中。 此表包括一个 **folderid** 列，用于标识包所属的逻辑文件夹。 逻辑文件夹提供了对保存到 **msdb** 中的包进行分组的有用方式，文件系统中的文件夹也提供了对保存到文件系统中的包进行分组的方式。 **msdb** 中的 **sysssispackagefolders** 表中的行定义这些文件夹。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "71295740"
   
 2.  在“文件”菜单上，单击“包文件\<的副本 > 另存为”   。  
   
-3.  在 **“保存包的副本”** 对话框，在 **“包位置”** 列表中选择包的位置。 可用选项包括：  
+3.  在 **“保存包的副本”** 对话框，在 **“包位置”** 列表中选择包的位置。 提供了以下选项：  
     -   SQL Server
     -   文件系统 
     -   SSIS 包存储区 
@@ -85,16 +85,16 @@ ms.locfileid: "71295740"
   
     -   在 **“包保护级别”** 对话框中，选择不同的保护级别。  
   
-    -   单击“确定”  。  
+    -   单击“确定”。   
   
-9. 单击“确定”  。  
+9. 单击“确定”。   
 
 ## <a name="save-a-package-as-a-package-template"></a>将包保存为包模板
  本部分介绍在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中创建新的 Integration Services 包时如何制定自定义包以及将自定义包作为模板。 默认情况下，在将新包添加到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目中时， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 使用创建空包的包模板。 您无法替换此默认模板，但可以添加新的模板。  
   
  可以指定多个包用作模板。 必须先创建这些包，然后才能实现将自定义包作为模板。  
   
- 使用自定义包作为模板来创建包时，新的包将具有与模板相同的名称和 GUID。 若要区分这些包，应当更新 **Name** 属性的值，并为 **ID** 属性生成新的 GUID。 有关详细信息，请参阅[在 SQL Server Data Tools 中创建包](../integration-services/create-packages-in-sql-server-data-tools.md)和[设置包属性](../integration-services/set-package-properties.md)。  
+ 使用自定义包作为模板来创建包时，新的包将具有与模板相同的名称和 GUID。 若要区分这些包，应当更新 **Name** 属性的值，并为 **ID** 属性生成新的 GUID。 有关详细信息，请参阅 [在 SQL Server Data Tools 中创建包](../integration-services/create-packages-in-sql-server-data-tools.md) 和 [设置包属性](../integration-services/set-package-properties.md)。  
   
 ### <a name="to-designate-a-custom-package-as-a-package-template"></a>将自定义包指定为包模板  
   
@@ -114,4 +114,4 @@ ms.locfileid: "71295740"
   
      模板列表包括名为“新建 SSIS 包”的默认包模板。 包图标将标识可以用作包模板的模板。  
   
-4.  单击 **“添加”** 。  
+4.  单击“添加”  。  

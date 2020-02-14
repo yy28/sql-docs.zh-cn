@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 69072514931e7e449893124a8f192043b2bf87d7
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: f240938196d50b76b182e994000727c4f3e30d58
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908333"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287120"
 ---
 # <a name="specify-synchronization-schedules"></a>指定同步计划
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "72908333"
 |请求订阅的合并代理|**\<发布服务器>-\<发布数据库>-\<发布>-\<订阅服务器>-\<订阅数据库>-\<整数>**|  
 |推送订阅的合并代理|**\<发布服务器>-\<发布数据库>-\<发布>-\<订阅服务器>-\<整数>**|  
 |推送订阅的分发代理|**\<发布服务器>-\<发布数据库>-\<发布>-\<订阅服务器>-\<整数>** <sup>1</sup>|  
-|请求订阅的分发代理|**\<发布服务器>-\<发布数据库>-\<发布>-\<订阅服务器>-\<订阅数据库>-\<GUID>** <sup>2</sup>|  
+|请求订阅的分发代理|**\<>-\<发布数据库>-\<发布>-\<订阅服务器>-\<数据库>-\<GUID>** <sup>2</sup>|  
 |非 SQL Server 订阅服务器的推送订阅的分发代理|**\<发布服务器>-\<发布数据库>-\<发布>-\<订阅服务器>-\<整数>**|  
   
  <sup>1</sup> 对于 Oracle 发布的推送订阅，它是“\<发布服务器>-\<发布服务器>”而不是“\<发布服务器>-\<发布数据库>”    
@@ -197,7 +197,7 @@ ms.locfileid: "72908333"
   
 #### <a name="to-define-a-replication-agent-schedule-when-you-create-a-push-subscription-to-a-transactional-publication"></a>在创建事务发布的推送订阅时定义一个复制代理计划  
   
-1.  为要创建的订阅创建一个 <xref:Microsoft.SqlServer.Replication.TransSubscription> 类的实例。 有关详细信息，请参阅 [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)。  
+1.  为要创建的订阅创建一个 <xref:Microsoft.SqlServer.Replication.TransSubscription> 类的实例。 有关详细信息，请参阅 [创建推送订阅](../../relational-databases/replication/create-a-push-subscription.md)。  
   
 2.  在调用 <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>之前，设置 <xref:Microsoft.SqlServer.Replication.Subscription.AgentSchedule%2A> 属性的下列一个或多个字段：  
   
@@ -290,7 +290,7 @@ ms.locfileid: "72908333"
   
 #### <a name="to-define-a-replication-agent-schedule-when-you-create-a-push-subscription-to-a-merge-publication"></a>在创建合并发布的推送订阅时定义一个复制代理计划  
   
-1.  为要创建的订阅创建一个 <xref:Microsoft.SqlServer.Replication.MergeSubscription> 类的实例。 有关详细信息，请参阅 [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)。  
+1.  为要创建的订阅创建一个 <xref:Microsoft.SqlServer.Replication.MergeSubscription> 类的实例。 有关详细信息，请参阅 [创建推送订阅](../../relational-databases/replication/create-a-push-subscription.md)。  
   
 2.  在调用 <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>之前，设置 <xref:Microsoft.SqlServer.Replication.Subscription.AgentSchedule%2A> 属性的下列一个或多个字段：  
   

@@ -20,10 +20,10 @@ ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1dd8c492c2353793ad195cea9606a89c502dc5f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024482"
 ---
 # <a name="utility-explorer-f1-help"></a>实用工具资源管理器的 F1 帮助
@@ -120,14 +120,14 @@ ms.locfileid: "68024482"
   实用工具资源管理器的“已部署的数据层应用程序”视图中的信息为单独的数据层应用程序提供使用率数据、CPU 使用率历史数据、文件级别的存储使用率详细信息，并且提供查看和更新策略阈值的能力。 可以在数据层应用程序级别为 CPU 使用率以及数据库数据文件和日志文件控制策略阈值。 您还可以查看各数据层应用程序的属性详细信息。  
   
 ### <a name="uielement-list"></a>UIElement 列表  
- 列表视图  
+ “列表”视图  
  顶部窗格中的列表视图显示与单独的数据层应用程序有关的数据。 运行状态图标按使用率类别为各数据层应用程序提供摘要状态：  
   
 -   绿色的选中标记 - ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - 没有违反资源使用策略的数据层应用程序的数目。 资源得到很好地利用。  
   
--   绿色向下箭头 - ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - 资源未充分利用。  
+-   绿色向下箭头 - ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - 资源使用不足。  
   
--   红色向上箭头 - ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - 资源过度利用。  
+-   红色向上箭头 - ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - 资源使用过度。  
   
  可以通过将列表视图中的列向左或向右拖动，更改这些列在列表视图中的顺序。 可通过右键单击列标题并选择或取消选择列，添加或删除列表视图中的列。 右键单击菜单还提供了排序选项。 还可以通过单击列名称的顶部激活排序。  
   
@@ -260,16 +260,16 @@ ms.locfileid: "68024482"
  实用工具资源管理器的“托管实例”视图中的信息为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的单独实例提供使用率数据、CPU 使用率历史记录、文件级别的存储使用率详细信息，并且提供查看和更新策略阈值的能力。 对于计算机，可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例级别控制策略阈值；对于数据库文件和日志文件，可以在存储卷的级别控制策略阈值。 您还可以查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的各个托管实例的属性详细信息。  
   
 ### <a name="uielement-list"></a>UIElement 列表  
- 列表视图  
+ “列表”视图  
  顶部窗格中的列表视图可以显示行中按 ComputerName\InstanceName 列出的各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的有关数据。  
   
  运行状态图标按使用率类别为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各实例提供摘要状态：  
   
 -   绿色的选中标记 - ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - 没有违反资源使用策略的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 托管实例的数目。 资源得到很好地利用。  
   
--   绿色向下箭头 - ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - 资源未充分利用。  
+-   绿色向下箭头 - ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - 资源使用不足。  
   
--   红色向上箭头 - ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - 资源过度利用。  
+-   红色向上箭头 - ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - 资源使用过度。  
   
  可以通过将列表视图中的列向左或向右拖动，更改这些列在列表视图中的顺序。 可通过右键单击列标题并选择或取消选择列，添加或删除列表视图中的列。 右键单击菜单还提供了排序选项。 还可以通过单击列名称的顶部激活排序。  
   
@@ -315,7 +315,7 @@ ms.locfileid: "68024482"
   
 -   区分大小写：（True 或 False）  
   
--   语言:  
+-   Language：  
   
 -   上次报告的时间：此列使用 datetime 数据类型显示 UCP 本地日期和时间。 有关详细信息，请参阅 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 主题。 在使用实用工具对象模型时，请注意 SSMS 使用 datetimeoffset 数据类型。 有关详细信息，请参阅 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 主题。  
   
@@ -412,7 +412,7 @@ ms.locfileid: "68024482"
   
 -   区分大小写：（True 或 False）  
   
--   语言:  
+-   Language：  
 
 ## <a name="utility-administration-sql-server-utility"></a>实用工具管理（SQL Server 实用工具）
 使用“实用工具管理”选项卡可以管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具的策略、安全性和数据仓库设置。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具概念的详细信息，请参阅 [SQL Server 实用工具功能和任务](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)。  
@@ -480,7 +480,7 @@ ms.locfileid: "68024482"
  
 “数据仓库”  选项卡 - 为实用工具管理数据仓库显示配置详细信息。  
   
- 数据保持期  
+ 数据保留  
  针对为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的托管实例收集的使用率信息，指定数据保持期。 默认保持期为 1 年。 最小值为 1 个月。 支持的最长的值是 2 年。  
   
  实用工具数据仓库配置信息  
@@ -492,7 +492,7 @@ ms.locfileid: "68024482"
   
  UMDW 目录是可配置的：\<System drive>:\Program Files\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\，其中，\<System drive> 通常为 C:\ 驱动器。 日志文件 UMDW_\<GUID>_LOG 位于同一目录中。  
   
-> **注意**：可以使用 detach/attach 或 ALTER DATABASE 更改该 UMDW (sysutility_mdw) 文件位置。 我们建议使用 ALTER DATABASE。 有关详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。  
+> **注意：** 可以使用 detach/attach 或 ALTER DATABASE 更改该 UMDW (sysutility_mdw) 文件位置。 我们建议使用 ALTER DATABASE。 有关详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。  
   
  返回到出厂默认值  
  若要将此选项卡上的设置重置为默认值，请单击  “还原默认设置”按钮，然后单击  “应用”。  

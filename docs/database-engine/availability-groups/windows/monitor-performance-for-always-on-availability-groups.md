@@ -11,10 +11,10 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 767de0e7c255a96ba9aa4b2c7201c423b1269d80
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68014678"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>监视 Always On 可用性组的性能
@@ -44,8 +44,8 @@ ms.locfileid: "68014678"
 |||||  
 |-|-|-|-|  
 |**Level**|**门数**|**消息数量**|**有用的指标**|  
-|Transport|每个可用性副本 1 个|8192|扩展事件 database_transport_flow_control_action |  
-|“数据库”|每个可用性数据库 1 个|11200 (x64)<br /><br /> 1600 (x86)|[DBMIRROR_SEND](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> 扩展事件 hadron_database_flow_control_action |  
+|传输|每个可用性副本 1 个|8192|扩展事件 database_transport_flow_control_action |  
+|数据库|每个可用性数据库 1 个|11200 (x64)<br /><br /> 1600 (x86)|[DBMIRROR_SEND](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> 扩展事件 hadron_database_flow_control_action |  
   
  达到任一门的消息阈值后，则不再向特定副本或为特定数据库发送消息日志。 接收到已发送消息的确认消息，以使发送的消息数量低于阈值后，可以发送消息。  
   
@@ -312,7 +312,7 @@ ms.locfileid: "68014678"
 
   
 ##  <a name="monitoring-for-rto-and-rpo"></a>监视 RTO 和 RPO  
- 本部分演示如何监视可用性组的 RTO 和 RPO 指标。 此演示类似于 [The Always On health model, part 2:Extending the health model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)（Always On 运行状况模型，第 2 部分：扩展运行状况模型）中给出的 GUI 教程。  
+ 本部分演示如何监视可用性组的 RTO 和 RPO 指标。 此演示类似于 [The Always On health model, part 2:Extending the health model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)（Always On 运行状况模型，第 2 部分：扩展运行状况模型）。  
   
  [估计故障转移时间 (RTO)](#estimating-failover-time-rto) 和[估计可能的数据丢失 (RPO)](#estimating-potential-data-loss-rpo) 中的故障转移时间和可能的数据丢失计算的元素，可方便地用作策略管理方面数据库副本状态中的性能指标（请参阅[查看 SQL Server 对象上基于策略的管理方面](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)）  。 可以按计划监视这两个指标，并在指标分别超过 RTO 和 RPO 时发出警报。  
   
@@ -439,7 +439,7 @@ ms.locfileid: "68014678"
 ##  <a name="BKMK_SCENARIOS"></a>性能故障排除方案  
  下表列出了常见的与性能相关的故障排除方案。  
   
-|应用场景|描述|  
+|场景|说明|  
 |--------------|-----------------|  
 |[故障排除：可用性组超过了 RTO](troubleshoot-availability-group-exceeded-rto.md)|进行自动故障转移或计划的手动故障转移（无数据丢失）后，故障转移时间超过 RTO。 或者，在估计同步提交次要副本（如自动故障转移伙伴）的故障转移时间时，发现该时间超过 RTO。|  
 |[故障排除：可用性组超过了 RPO](troubleshoot-availability-group-exceeded-rpo.md)|执行强制手动故障转移后，数据丢失超过 RPO。 或者，在计算异步提交次要副本可能丢失的数据时，发现它超过了 RPO。|  

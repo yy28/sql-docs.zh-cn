@@ -23,10 +23,10 @@ ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a40336899e804ee634cf586078ec7c219f31c486
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297878"
 ---
 # <a name="script-component"></a>脚本组件
@@ -117,7 +117,7 @@ ms.locfileid: "71297878"
   
  要了解有关脚本组件的详细信息，请参阅[在脚本组件编辑器中配置脚本组件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何对脚本组件进行编程，请参阅 [使用脚本组件扩展数据流](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  选择 **“源”** 、 **“目标”** 或 **“转换”** 将影响脚本转换的配置和脚本转换编辑器所显示的页。  
   
 ## <a name="script-transformation-editor-connection-managers-page"></a>脚本转换编辑器（“连接管理器”页）
@@ -125,7 +125,7 @@ ms.locfileid: "71297878"
   
  要了解有关脚本组件的详细信息，请参阅[在脚本组件编辑器中配置脚本组件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何对脚本组件进行编程，请参阅 [使用脚本组件扩展数据流](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **Connection managers**  
  查看脚本可使用的连接列表。  
   
@@ -135,10 +135,10 @@ ms.locfileid: "71297878"
  **连接管理器**  
  从可用的连接管理器列表中选择，或选择“\<新建连接>”以打开“添加 SSIS 连接管理器”对话框   。  
   
- **Description**  
+ **说明**  
  输入连接的说明。  
   
- **“添加”**  
+ **添加**  
  向“连接管理器”列表中添加另外一个连接  。  
   
  **删除**  
@@ -152,7 +152,7 @@ ms.locfileid: "71297878"
   
  要了解有关脚本组件的详细信息，请参阅[在脚本组件编辑器中配置脚本组件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何对脚本组件进行编程，请参阅 [使用脚本组件扩展数据流](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **输入名称**  
  从可用输入的列表中选择。  
   
@@ -176,7 +176,7 @@ ms.locfileid: "71297878"
   
  要了解有关脚本组件的详细信息，请参阅[在脚本组件编辑器中配置脚本组件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何对脚本组件进行编程，请参阅 [使用脚本组件扩展数据流](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **Inputs and outputs**  
  在左侧选择输入或输出即可在右侧的表中查看其属性。 选择不同的输入或输出，可编辑的属性也有所不同。 显示的许多属性是只读的。 有关各个属性的详细信息，请参阅以下主题：  
   
@@ -201,13 +201,13 @@ ms.locfileid: "71297878"
   
  要了解有关脚本组件的详细信息，请参阅[在脚本组件编辑器中配置脚本组件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何对脚本组件进行编程，请参阅 [使用脚本组件扩展数据流](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **属性**  
  查看和修改脚本转换的属性。 显示的许多属性是只读的。 您可以修改以下属性：  
   
-|ReplTest1|Description|  
+|值|说明|  
 |-----------|-----------------|  
-|**Description**|说明脚本转换的用途。|  
+|**说明**|说明脚本转换的用途。|  
 |**LocaleID**|指定区域设置，以便为排序以及日期和时间转换提供区域特定的信息。|  
 |**名称**|为组件键入说明性名称。|  
 |**ValidateExternalMetadata**|指示在设计时脚本转换是否要根据外部数据源对列的元数据进行验证。 如果值为 **false** ，则会将验证延迟到执行时。|  

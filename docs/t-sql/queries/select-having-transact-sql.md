@@ -1,7 +1,7 @@
 ---
 title: HAVING (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/28/2017
+ms.date: 01/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,19 +21,19 @@ ms.assetid: 55650709-001e-42f4-902f-ead09a3c34af
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7cba43ad87b39122f6cd3d3ae7328b963e6fb1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2a574e3f7348c4641665b067193c54604145386c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948439"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76315607"
 ---
 # <a name="select---having-transact-sql"></a>SELECT - HAVING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   指定组或聚合的搜索条件。 HAVING 只能与 SELECT 语句一起使用。 HAVING 通常与 GROUP BY 子句一起使用。 如果未使用 GROUP BY，则会有隐式的单一、聚合组。   
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -60,7 +60,7 @@ ORDER BY SalesOrderID ;
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下例使用 `HAVING` 子句检索 `FactInternetSales` 表中每个 `SalesAmount` 的总计，其中 `OrderDateKey` 是 2004 年或更晚。  
+ 以下示例使用 `HAVING` 子句来对 `FactInternetSales` 表中的每个 `OrderDateKey` 检索超过 `80000` 的总 `SalesAmount`。  
   
 ```sql
 -- Uses AdventureWorks  

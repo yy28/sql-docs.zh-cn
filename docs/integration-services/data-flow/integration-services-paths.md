@@ -21,10 +21,10 @@ ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f70ce04ebe25c752f3cc12d4888f1ff5c967b805
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292410"
 ---
 # <a name="integration-services-paths"></a>Integration Services 路径
@@ -56,7 +56,7 @@ ms.locfileid: "71292410"
   
 4.  在 **“数据流路径编辑器”** 中，单击 **“常规”** 。 然后，可以编辑默认的路径名称并提供路径说明。 还可以修改 PathAnnotation 属性。  
   
-5.  单击“确定”  。  
+5.  单击“确定”。   
   
 6.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
 
@@ -70,12 +70,12 @@ ms.locfileid: "71292410"
  为路径提供唯一的名称。  
   
  **ID**  
- 路径的沿袭标识符。 该属性为只读。  
+ 路径的沿袭标识符。 此属性为只读。  
   
  **IdentificationString**  
  用于标识路径的字符串。 从上面输入的名称自动生成。  
   
- **Description**  
+ **说明**  
  描述该路径。  
   
  **PathAnnotation**  
@@ -103,7 +103,7 @@ ms.locfileid: "71292410"
  **精度**  
  列出数值的位数。  
   
- **小数位数**  
+ **缩放**  
  列出数值的小数点后的位数。  
   
  **长度**  
@@ -137,7 +137,7 @@ ms.locfileid: "71292410"
  **数据查看器类型**  
  列出数据查看器的类型。  
   
- **“添加”**  
+ **添加**  
  单击此项可使用“配置数据查看器”  对话框来添加数据查看器。  
   
  **删除**  
@@ -156,7 +156,7 @@ ms.locfileid: "71292410"
   
  下表介绍了数据流中路径的可配置属性。 数据流引擎还为此处未列出的其他只读属性赋值。  
   
-|属性名称|数据类型|描述|  
+|属性名称|数据类型|说明|  
 |-------------------|---------------|-----------------|  
 |PathAnnotation|Integer（枚举）|用于指示在设计器图面上显示路径时是否应显示批注的值。 可能的值为 **AsNeeded**、 **SourceName**、 **PathName**和 **Never**。 默认值为 **AsNeeded**。|  
 |DestinationName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>|与路径关联的输入。|  

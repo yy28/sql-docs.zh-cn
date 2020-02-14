@@ -14,10 +14,10 @@ ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c0bb4dfc3a0ac9109b210cfe02fb6a2e743f0ce5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907957"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>对 Oracle 发布服务器进行故障排除
@@ -240,7 +240,7 @@ ms.locfileid: "72907957"
   
 3.  在 **“分发服务器属性”** 对话框中的 **“发布服务器”** 页上，清除 Oracle 发布服务器的复选框。  
   
-4.  单击“确定”  。  
+4.  单击“确定”。   
   
  **删除 Oracle 发布服务器 (Transact-SQL)**  
   

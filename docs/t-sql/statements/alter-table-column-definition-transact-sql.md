@@ -22,10 +22,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f3c261b2cc8a29af74adba6e32c646a11e940070
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982070"
 ---
 # <a name="alter-table-column_definition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "73982070"
 
   指定使用 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 添加到表中的列的属性。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -234,7 +234,7 @@ ADD MASKED WITH ( FUNCTION = ' mask_function ')
   
  有关函数参数的信息，请参阅[动态数据掩码](../../relational-databases/security/dynamic-data-masking.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果添加的列具有 uniqueidentifier 数据类型，则可以通过使用一个使用 NEWID() 函数的默认值对该列进行定义，以向表中的每个现有行的新列提供唯一标识符值  。  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不强制在列定义中指定 DEFAULT、IDENTITY、ROWGUIDCOL 或列约束的顺序。  

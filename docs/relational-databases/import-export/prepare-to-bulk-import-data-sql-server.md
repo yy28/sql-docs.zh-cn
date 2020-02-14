@@ -19,10 +19,10 @@ ms.assetid: a82ef43c-d006-4c71-bfca-f001a3ba1ba0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b65577b7f6b69bd4fb27392a7d71a2d68f17d7c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68063157"
 ---
 # <a name="prepare-to-bulk-import-data-sql-server"></a>准备大容量导入数据 (SQL Server)
@@ -36,7 +36,7 @@ ms.locfileid: "68063157"
 > [!NOTE]  
 >  不支持将数据大容量导入到远程表中。  
   
- 在将数据文件中的数据大容量导入到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例时，请使用以下原则：  
+ 在将数据文件中的数据大容量导入到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时，请使用以下原则：  
   
 -   为用户帐户获取所需的权限。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68063157"
      建议您在执行大容量导入操作之前，先将数据库改为使用大容量日志恢复模式。 之后应立即将数据库重设为完整恢复模式。 有关详细信息，请参阅[查看或更改数据库的恢复模式 (SQL Server)](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)。  
   
     > [!NOTE]  
-    >  有关如何在批量导入操作期间最小化日志记录的详细信息，请参阅[批量导入中最小化日志记录的先决条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
+    >  有关如何在批量导入操作期间最小化日志记录的详细信息，请参阅 [批量导入中最小化日志记录的先决条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
   
 -   大容量导入数据后进行备份。  
   

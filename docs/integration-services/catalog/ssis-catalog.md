@@ -15,10 +15,10 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1e240a53d86d66fdf81b53cae1ba55d41820befd
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294956"
 ---
 # <a name="ssis-catalog"></a>SSIS 目录
@@ -74,9 +74,9 @@ ms.locfileid: "71294956"
 ##  <a name="CatalogObjectIdentifiers"></a> 目录对象标识符  
  在目录中创建新对象时，为该对象指定一个名称。 对象名称就是一个标识符。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定义了有关可在标识符中使用的字符的规则。 以下对象的名称必须遵循标识符规则。  
   
--   文件夹  
+-   Folder  
   
--   项目  
+-   Project  
   
 -   环境  
   
@@ -118,7 +118,7 @@ ms.locfileid: "71294956"
 -   后续字符可以是在 Unicode 标准 2.0 中定义的字母或数字，或是下划线 (_)。  
   
 ##  <a name="Configuration"></a> 目录配置  
- 通过调整目录属性来优化目录的行为方式。 目录属性定义如何对敏感数据进行加密，以及如何保留操作和项目版本控制数据。 若要设置目录属性，请使用“目录属性”  对话框，或调用 [catalog.configure_catalog（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md)存储过程。 若要查看属性，请使用对话框或查询 [catalog.catalog_properties（SSISDB 数据库）](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)。 可以通过右键单击对象资源管理器中的 **SSISDB** 来访问该对话框。  
+ 通过调整目录属性来优化目录的行为方式。 目录属性定义如何对敏感数据进行加密，以及如何保留操作和项目版本控制数据。 若要设置目录属性，请使用“目录属性”  对话框，或调用 [catalog.configure_catalog（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md)存储过程。 若要查看属性，请使用对话框或查询 [catalog.catalog_properties（SSISDB 数据库）](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)。 可以通过右键单击对象资源管理器中的“SSISDB”  来访问该对话框。  
   
 ###  <a name="Cleanup"></a> 操作和项目版本清理  
  目录中很多操作的状态数据都存储在内部数据库表中。 例如，目录会跟踪包执行和项目部署的状态。 为了维持操作数据的大小，使用 **中的** “SSIS Server 维护作业” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 来删除旧数据。 在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时创建此 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 代理作业。  
@@ -135,7 +135,7 @@ ms.locfileid: "71294956"
  **保持期(天)**  
  定义可允许的操作数据的最长保存时间（以天为单位）。 将删除较旧的数据。  
   
- 最小值为一天。 最大值仅受到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **int** 数据的最大值的限制。 有关此数据类型的信息，请参阅 [int、bigint、smallint 和 tinyint (Transact-SQL)](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)。  
+ 最小值为一天。 最大值仅受到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] int 数据的最大值的限制  。 有关此数据类型的信息，请参阅 [int、bigint、smallint 和 tinyint (Transact-SQL)](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)。  
   
  **定期删除旧版本**  
  当此属性设置为 **True**时，项目版本清除作业步骤将会运行。  
@@ -166,7 +166,7 @@ ms.locfileid: "71294956"
   
  若要更改 **“加密算法”** 属性设置，请将 **“SSISDB”** 数据库设置为单用户模式，然后调用 catalog.configure_catalog 存储过程。 将 ENCRYPTION_ALGORITHM 用于 *property_name* 参数。 有关支持的属性值，请参阅 [catalog.catalog_properties（SSISDB 数据库）](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)。 有关该存储过程的详细信息，请参阅 [catalog.configure_catalog（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md)。  
   
- 有关单用户模式的详细信息，请参阅[将数据库设置为单用户模式](../../relational-databases/databases/set-a-database-to-single-user-mode.md)。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中加密和加密算法的信息，请参阅 [SQL Server 加密](../../relational-databases/security/encryption/sql-server-encryption.md)一节中的有关主题。  
+ 有关单用户模式的详细信息，请参阅 [将数据库设置为单用户模式](../../relational-databases/databases/set-a-database-to-single-user-mode.md)。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中加密和加密算法的信息，请参阅 [SQL Server 加密](../../relational-databases/security/encryption/sql-server-encryption.md)一节中的有关主题。  
   
  数据库主密钥用于加密。 创建目录时会创建此密钥。  
   
@@ -181,7 +181,7 @@ ms.locfileid: "71294956"
 |每个项目的最大版本数|MAX_PROJECT_VERSIONS|  
 |服务器范围的默认日志记录级别|SERVER_LOGGING_LEVEL|  
   
-##  <a name="Permissions"></a>权限  
+##  <a name="Permissions"></a> 权限  
  文件夹中包含的项目、环境和包是安全对象。 您可以授予对文件夹的权限，包括 MANAGE_OBJECT_PERMISSIONS 权限。 利用 MANAGE_OBJECT_PERMISSIONS，您可以将文件夹内容的管理委托给用户，而无需为 ssis_admin 角色授予用户成员身份。 您还可以授予对项目、环境和操作的权限。 操作包括初始化 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、部署项目、创建和启动执行、验证项目和包以及配置 **SSISDB** 目录。  
   
  有关数据库角色的详细信息，请参阅 [数据库级别的角色](../../relational-databases/security/authentication-access/database-level-roles.md)。  
@@ -203,7 +203,7 @@ ms.locfileid: "71294956"
 
  若要使用 Transact-SQL 管理权限，请调用 [catalog.grant_permission（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)、[catalog.deny_permission（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database.md)和 [catalog.revoke_permission（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database.md)。 若要查看所有对象的当前主体的有效权限，请查询 [catalog.effective_object_permissions（SSISDB 数据库）](../../integration-services/system-views/catalog-effective-object-permissions-ssisdb-database.md)。 本主题描述了不同类型的权限。 若要查看已显式分配给用户的权限，请查询 [catalog.explicit_object_permissions（SSISDB 数据库）](../../integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database.md)。  
   
-##  <a name="Folders"></a>文件夹  
+##  <a name="Folders"></a> 文件夹  
  文件夹包含 **SSISDB** 目录中的一个或多个项目和环境。 可以使用 [catalog.folders（SSISDB 数据库）](../../integration-services/system-views/catalog-folders-ssisdb-database.md) 视图来访问有关目录中的文件夹的信息。 可使用以下存储过程管理文件夹：  
   
 -   [catalog.create_folder（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-create-folder-ssisdb-database.md)  
@@ -214,7 +214,7 @@ ms.locfileid: "71294956"
   
 -   [catalog.set_folder_description（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-set-folder-description-ssisdb-database.md)  
   
-##  <a name="ProjectsAndPackages"></a>项目和包  
+##  <a name="ProjectsAndPackages"></a> 项目和包  
  每个项目可以包含多个包。 项目和包都可以包含参数和对环境的引用。 您可以使用 [Configure Dialog Box](../../integration-services/catalog/configure-dialog-box.md)访问参数和环境引用。  
   
  可通过调用以下存储过程来执行其他项目任务： 
@@ -237,7 +237,7 @@ ms.locfileid: "71294956"
   
 -   [catalog.object_versions（SSISDB 数据库）](../../integration-services/system-views/catalog-object-versions-ssisdb-database.md)  
   
-##  <a name="Parameters"></a>参数  
+##  <a name="Parameters"></a> Parameters  
  您可以使用参数在包执行时为包属性赋值。 若要设置包或项目参数的值和清除这些值，请调用 [catalog.set_object_parameter_value（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md)和 [catalog.clear_object_parameter_value（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md)。 若要为执行实例设置参数的值，请调用 [catalog.set_execution_parameter_value（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)。 可以通过调用 [catalog.get_parameter_values（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database.md)来检索默认参数值。  
   
  以下视图显示了所有包和项目的参数，以及用于执行实例的参数值。  
@@ -246,7 +246,7 @@ ms.locfileid: "71294956"
   
 -   [catalog.execution_parameter_values（SSISDB 数据库）](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md)  
   
-##  <a name="ServerEnvironments"></a>服务器环境、服务器变量和服务器环境引用  
+##  <a name="ServerEnvironments"></a> 服务器环境、服务器变量和服务器环境引用  
  服务器环境包含服务器变量。 当在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器上执行或验证包时，可以使用这些变量值。  
   
  利用以下存储过程，您可以为环境和变量执行很多其他管理任务。  
@@ -287,7 +287,7 @@ ms.locfileid: "71294956"
   
 -   [catalog.environment_references（SSISDB 数据库）](../../integration-services/system-views/catalog-environment-references-ssisdb-database.md)  
   
-##  <a name="Executions"></a>执行和验证  
+##  <a name="Executions"></a> 执行和验证  
  执行就是一个包执行实例。 调用 [catalog.create_execution（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)和 [catalog.start_execution（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)可创建并启动执行。 若要停止执行或停止包/项目验证，请调用 [catalog.stop_operation（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database.md)。  
   
  若要暂停正在运行的包和创建转储文件，请调用 catalog.create_execution_dump 存储过程。 转储文件提供了有关包执行的信息，可帮助您解决执行问题。 有关生成和配置转储文件的详细信息，请参阅 [Generating Dump Files for Package Execution](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)。  
@@ -385,7 +385,7 @@ ms.locfileid: "71294956"
 #### <a name="options"></a>选项  
  下表描述对话框中的某些属性以及 `catalog.catalog_properties` 视图中的相应属性。  
   
-|属性名称（“目录属性”对话框）|属性名称（catalog.catalog_properties 视图）|描述|  
+|属性名称（“目录属性”对话框）|属性名称（catalog.catalog_properties 视图）|说明|  
 |-----------------------------------------------------|------------------------------------------------------|-----------------|  
 |加密算法名称|ENCRYPTION_ALGORITHM|指定用于对于目录中的敏感参数值进行加密的加密类型。 下面是可能的值：<br /><br /> DES<br /><br /> TRIPLE_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESPX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256（默认值）|  
 |每个项目的最大版本数|MAX_PROJECT_VERSIONS|指定可以在目录中存储项目的多少个版本。 当项目版本清理作业运行时，如果旧版项目数超过此上限，就会遭到删除。|  
@@ -466,7 +466,7 @@ ms.locfileid: "71294956"
   
     ```  
   
-3.  在 **中使用** “还原数据库” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]对话框从备份中还原 SSISDB 数据库。 有关详细信息，请参阅以下主题：  
+3.  在 **中使用** “还原数据库” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]对话框从备份中还原 SSISDB 数据库。 有关详情，请参阅以下主题：  
   
     -   [还原数据库（“常规”页）](../../relational-databases/backup-restore/restore-database-general-page.md)  
   
@@ -561,7 +561,7 @@ ms.locfileid: "71294956"
   
 6.  在“结果”  页上，查看结果。  
   
-     ![在 SSISDB 升级向导中查看结果](../../integration-services/service/media/ssisdb-upgrade-wizard-3.png "在 SSISDB 升级向导中查看结果")  
+     ![查看 SSISDB 升级向导中的结果](../../integration-services/service/media/ssisdb-upgrade-wizard-3.png "查看 SSISDB 升级向导中的结果")  
 
 ## <a name="always-on-for-ssis-catalog-ssisdb"></a>对 SSIS 目录 (SSISDB) 使用 Always On
   AlwaysOn 可用性组功能是一个高可用性和灾难恢复解决方案，可以提供替代数据库镜像的企业级方案。 可用性组针对一组离散的用户数据库（称为可用性数据库，它们共同实现故障转移）支持故障转移环境。 有关详细信息，请参阅 [AlwaysOn 可用性组](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)。  
@@ -579,7 +579,7 @@ ms.locfileid: "71294956"
   
 3.  [在可用性组中升级 SSISDB](#Upgrade)  
   
-###  <a name="prereq"></a> 先决条件  
+###  <a name="prereq"></a>先决条件  
 为 SSISDB 数据库启用 Always On 支持前，请先执行以下先决性步骤。  
   
 1.  设置 Windows 故障转移群集。 请参阅 [安装适用于 Windows Server 2012 的故障转移群集功能和工具](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) 的博客文章以获取相关说明。 在所有群集节点上安装功能和工具。  
@@ -598,7 +598,7 @@ ms.locfileid: "71294956"
   
 > [!IMPORTANT]  
 > -   必须在可用性组的 **主节点** 上执行这些步骤。
-> -   将 SSISDB 添加到 Always On 可用性组后  ，必须为 Always On 启用 SSIS 支持  。  
+> -   将 SSISDB 添加到 Always On 可用性组后，必须启用“Always On 的 SSIS 支持”   。  
 
 > [!NOTE]
 > 若要详细了解此过程，请参阅数据平台 MVP Marcos Freccia 发布的以下演练及附加屏幕截图：[将 SSISDB 添加到 SQL Server 2016 的 AG](https://marcosfreccia.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/)。

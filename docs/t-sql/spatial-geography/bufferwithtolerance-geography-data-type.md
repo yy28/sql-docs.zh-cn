@@ -18,10 +18,10 @@ ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: ac8532f2cc5d8e2f50c0408ce983a61626748fb1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066537"
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance（geography 数据类型）
@@ -42,7 +42,7 @@ ms.locfileid: "68066537"
 distance   
 一个 float 表达式，用于指定与围绕其计算缓冲区的 geography 实例的距离   。  
   
-缓冲区的最大距离不得超过 0.999 \* π   * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 的地球圆周）或整个地球。  
+缓冲区的最大距离不得超过 0.999 \* _π_  * minorAxis \* minorAxis / majorAxis（~0.999 \* 1/2 的地球圆周）或整个地球。  
   
 tolerance   
 一个 float 表达式，用于指定缓冲区距离的公差  。  
@@ -61,14 +61,14 @@ _relative_
   
 CLR 返回类型：**SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 如果 distance  不是数字 (NAN)，或如果 distance  是正/负无穷大，此方法会抛出 ArgumentException  。  如果 tolerance  为零 (0)，而不是数字 (NaN)、负数或正/负无穷大，此方法也会抛出 ArgumentException  。  
   
 `STBuffer()` 在某些情况下将返回 FullGlobe 实例；例如，当缓冲区距离大于从赤道到两极的距离时，`STBuffer()` 在两极返回 FullGlobe 实例   。  
   
 在缓冲区的距离超过下列限制的 FullGlobe 实例中，此方法将引发 ArgumentException   ：  
   
-0.999 \* π * minorAxis \* minorAxis / majorAxis（~0.999 \* 1/2 地球的周长）   
+0.999 \* _π_ * minorAxis \* minorAxis / majorAxis（~0.999 \* 1/2 地球的周长）  
   
 理论缓冲区与计算缓冲区之间的误差为 max(tolerance, extents \* 1.E-7)，其中 tolerance 是 tolerance 参数的值  。 有关盘区的详细信息，请参阅 [geography 数据类型方法引用](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)。  
   

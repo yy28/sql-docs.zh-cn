@@ -15,10 +15,10 @@ ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2d9a354b23a751a657ca10acc7e6cc19c6b586b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68137420"
 ---
 # <a name="database-mail"></a>数据库邮件
@@ -51,7 +51,7 @@ ms.locfileid: "68137420"
   
 -   64 位兼容性：数据库邮件在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 64 位安装上完全受支持。  
   
-### <a name="security"></a>Security  
+### <a name="security"></a>安全性  
   
 -   默认关闭：为减少 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的外围应用，默认禁用数据库邮件存储过程。  
   

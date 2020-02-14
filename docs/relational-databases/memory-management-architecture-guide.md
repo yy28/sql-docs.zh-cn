@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4e33a8add08837fb71c0d0558d6bbe7f3ae9197c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115267"
 ---
 # <a name="memory-management-architecture-guide"></a>内存管理体系结构指南
@@ -107,10 +107,10 @@ ms.locfileid: "68115267"
 -  需要存储较大输入参数的跟踪操作。
 
 <a name="#changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>
-## <a name="changes-to-memorytoreserve-starting-with-includesssql11includessssql11-mdmd"></a>自 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以来对“memory_to_reserve”的更改
+## <a name="changes-to-memory_to_reserve-starting-with-includesssql11includessssql11-mdmd"></a>自 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以来对“memory_to_reserve”的更改
 在早期版本的 SQL Server（[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]）中，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 内存管理器保留了一部分进程虚拟地址空间 (VAS)，供多页分配器 (MPA)、CLR 分配器、用于 SQL Server 进程中的线程堆栈的内存分配以及直接 Windows 分配 (DWA) 使用     。 这一部分虚拟地址空间也称为“Mem-To-Leave”或“非缓冲池”区域。
 
-为这些分配保留的虚拟地址空间是由 _**memory\_to\_reserve**_ 配置选项确定的。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用的默认值是 256 MB。 若要替代该默认值，请使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -g 启动参数  。 有关 -g 启动参数的信息，请参阅介绍[数据库引擎服务启动选项](../database-engine/configure-windows/database-engine-service-startup-options.md)的文档页  。
+为这些分配保留的虚拟地址空间是由 _**memory\_to\_reserve**_ 配置选项确定的。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用的默认值是 256 MB。 要替代该默认值，请使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -g 启动参数  。 有关 -g 启动参数的信息，请参阅介绍[数据库引擎服务启动选项](../database-engine/configure-windows/database-engine-service-startup-options.md)的文档页  。
 
 因为从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 开始，新的“任何大小”页分配器也处理大于8 KB 的分配，所以 memory_to_reserve 值不包括多页分配  。 除了此更改以外，其他设置都与此配置选项相同。
 

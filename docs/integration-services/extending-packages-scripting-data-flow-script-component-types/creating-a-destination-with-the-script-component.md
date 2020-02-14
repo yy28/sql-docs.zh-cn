@@ -17,10 +17,10 @@ ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 946fc77d3bde2814176ebefce4102742a0288a91
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296490"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>使用脚本组件创建目标
@@ -79,7 +79,7 @@ ms.locfileid: "71296490"
  有关“脚本转换编辑器”的“脚本”页的详细信息，请参阅[脚本转换编辑器（“脚本”页）](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)   。  
   
 ## <a name="scripting-a-destination-component-in-code-design-mode"></a>在代码设计模式下编写目标组件脚本  
- 为组件配置完元数据后，可以编写自定义脚本。 在“脚本转换编辑器”  的“脚本”  页中，单击“编辑脚本”  打开 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE，可在其中添加自定义脚本。 编写脚本所使用的语言取决于为“脚本”  页上的 **ScriptLanguage** 属性选择 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 还是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 作为脚本语言。  
+ 为组件配置完元数据后，可以编写自定义脚本。 在“脚本转换编辑器”的“脚本”页面中，单击“编辑脚本”打开 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE，可在其中添加自定义脚本    。 编写脚本所使用的语言取决于为“脚本”  页上的 **ScriptLanguage** 属性选择 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 还是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 作为脚本语言。  
   
  有关适用于使用脚本组件创建的所有组件类型的重要信息，请参阅[脚本组件的编码和调试](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "71296490"
   
  如果在 VSTA 中打开“项目资源管理器”  窗口，可以看到脚本组件还生成了只读的 **BufferWrapper** 和 **ComponentWrapper** 项目项。 **ScriptMain** 类继承自 **ComponentWrapper** 项目项中的 **UserComponent** 类。  
   
- 在运行时，数据流引擎调用 **UserComponent** 类中的 **ProcessInput** 方法，该方法替代 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 父类的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> 方法。 而 ProcessInput  方法遍历输入缓冲区中的所有行并为每一行调用一次 ProcessInputRow  方法。  
+ 在运行时，数据流引擎调用 UserComponent  类中的 ProcessInput  方法，该方法替代 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 父类的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> 方法。 而 ProcessInput  方法遍历输入缓冲区中的所有行并为每一行调用一次 ProcessInputRow  方法。  
   
 ### <a name="writing-your-custom-code"></a>编写自定义代码  
  若要完成自定义目标组件的创建，可能需要在 **ScriptMain** 类的以下方法中编写脚本。  
@@ -242,7 +242,7 @@ public class ScriptMain:
   
 3.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中将上游源或转换的输出连接到目标组件。 （无需任何转换，即可将源直接连接到目标。）此输出应提供 **AdventureWorks** 示例数据库的 **Person.Address** 表中的数据，而且至少应包含 **AddressID** 和 **City** 列。  
   
-4.  打开“脚本转换编辑器”  。 在“输入列”  页中，选择 **AddressID** 和 **City** 列。  
+4.  打开“脚本转换编辑器”  。 在“输入列”  页中，选择 AddressID  和 City  列。  
   
 5.  在“输入和输出”  页中，用更具说明性的名称（如 **MyAddressInput**）重命名输入。  
   

@@ -19,10 +19,10 @@ ms.assetid: 05a0b8d1-3585-4f77-972f-69d1c0d4aa9b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 33875074e9c6975e187baceaff18ad49c057a8e8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68033727"
 ---
 # <a name="mirrored-backup-media-sets-sql-server"></a>镜像备份介质集 (SQL Server)
@@ -51,7 +51,7 @@ ms.locfileid: "68033727"
   
  下图显示了包含两个介质簇、两个镜像的镜像介质集示例。 每个介质簇都包含三个介质卷，这些介质卷在每个镜像中都备份一次。  
   
- ![镜像媒体集：具有两个镜像的两个媒体簇](../../relational-databases/backup-restore/media/bnr-backup-media-mirror.gif "镜像媒体集：具有两个镜像的两个媒体簇")  
+ ![镜像介质集：具有两个镜像的两个介质簇](../../relational-databases/backup-restore/media/bnr-backup-media-mirror.gif "镜像介质集：具有两个镜像的两个介质簇")  
   
  镜像中的对应卷都具有相同的内容。 这样，还原时它们可以互换。 例如，在上图中，tape2 的第三卷可以与 tape0 的第三卷互换。  
   

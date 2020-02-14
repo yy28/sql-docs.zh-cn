@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: d1b9131442160969e7511f42b91ed09a3b4001e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934827"
 ---
 # <a name="upgrade-master-data-services"></a>升级 Master Data Services
@@ -71,7 +71,7 @@ ms.locfileid: "67934827"
   
 2.  升级 MDS 数据库架构。  
   
-    1.  打开最新的 [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。  
+    1.  打开当前的 [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。  
   
         > [!IMPORTANT]  
         >  若要升级 MDS 数据库架构，您必须以在创建 MDS 数据库时指定的管理员帐户登录。 在 MDS 数据库的 mdm.tblUser 中，此用户的 **ID** 值为 **1**。  
@@ -84,7 +84,7 @@ ms.locfileid: "67934827"
   
 3.  创建 Web 应用程序。  
   
-    1.  打开最新的 [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。  
+    1.  打开当前的 [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。  
   
     2.  在左窗格中单击 **“Web 配置”** 。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "67934827"
   
     2.  选择 MDS 数据库。  
   
-    3.  单击 **“应用”** 。  
+    3.  单击“应用”  。  
   
 ##  <a name="engine"></a> 升级（升级数据库引擎）  
  此方案将数据库引擎和 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 应用程序均从早期版本升级到 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 或 [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)]。  

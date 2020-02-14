@@ -11,12 +11,12 @@ ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7644e38995d7afb7493ed3bfec20f2049beb9055
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.openlocfilehash: 1ef9084e8264caf6b14289d6d2674afca012cd15
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70009453"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761923"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>列存储索引 - 数据仓库
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "70009453"
 ## <a name="improve-performance-by-combining-nonclustered-and-columnstore-indexes"></a>通过结合使用非聚集索引和列存储索引来提高性能  
  自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起，可以对聚集列存储索引定义非聚集索引。   
   
-### <a name="example-improve-efficiency-of-table-seeks-with-a-nonclustered-index"></a>例如：使用非聚集索引提高表查找的效率  
+### <a name="example-improve-efficiency-of-table-seeks-with-a-nonclustered-index"></a>示例：使用非聚集索引提高表查找的效率  
  若要提高数据仓库中表查找的效率，可以创建专用于运行查询的非聚集索引，这种查询对于表查找的效率最高。 例如，查找匹配值或返回较小范围值的查询对于 B 树索引效果更好，而不是列存储索引。 它们无需通过列存储索引进行完整表扫描，只需通过 B 树索引执行二进制搜索就可以更快地返回正确结果。  
   
 ```sql  
@@ -63,8 +63,8 @@ GO
 CREATE UNIQUE INDEX taccount_nc1 ON t_account (AccountKey);  
 ```  
   
-### <a name="example-use-a-nonclustered-index-to-enforce-a-primary-key-constraint-on-a-columnstore-table"></a>例如：使用非聚集索引对列存储表强制实施主键约束  
- 按照设计，列存储表不允许实施主键约束。 现在可以在列存储表上使用非聚集索引，以强制实施主键约束。 主键等同于非 NULL 列上的唯一约束，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将唯一约束作为非聚集索引实施。 结合这些事实，下面的示例定义了非 NULL 列帐户密钥上的唯一约束。 结果获得非聚集索引，它将主键约束强制实施为非 NULL 列上的唯一约束。  
+### <a name="example-use-a-nonclustered-index-to-enforce-a-primary-key-constraint-on-a-columnstore-table"></a>示例：使用非聚集索引对列存储表强制实施主键约束  
+ 按照设计，列存储表不允许实施群集主键约束。 现在可以在列存储表上使用非聚集索引，以强制实施主键约束。 主键等同于非 NULL 列上的唯一约束，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将唯一约束作为非聚集索引实施。 结合这些事实，下面的示例定义了非 NULL 列帐户密钥上的唯一约束。 结果获得非聚集索引，它将主键约束强制实施为非 NULL 列上的唯一约束。  
   
  接下来，将表转换为聚集列存储索引。 在转换期间，非聚集索引仍然存在。 结果获得聚集列存储索引和非聚集索引，强制实施主键约束。 因为在列存储表中的任何更新或插入都会影响非聚集索引，违反唯一约束和非 NULL 的所有操作都将都导致整个操作失败。  
   

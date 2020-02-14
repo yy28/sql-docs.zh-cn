@@ -21,10 +21,10 @@ ms.assetid: 4c49bb95-7259-42f4-a785-bb6aaf5f8566
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ef381f9ff470422ed85b81832b1078d6c8767dcf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292887"
 ---
 # <a name="dimension-processing-destination"></a>维度处理目标
@@ -58,7 +58,7 @@ ms.locfileid: "71292887"
  有关如何设置属性的详细信息，请参阅 [设置数据流组件的属性](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
 ## <a name="dimension-processing-destination-editor-connection-manager-page"></a>维度处理目标编辑器（“连接管理器”页）
-  可以使用 **“维度处理目标编辑器”** 对话框的 **“连接管理器”** 页指定与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例之间的连接。  
+  可以使用“维度处理目标编辑器”对话框的“连接管理器”页面指定与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例之间的连接   。  
   
 ### <a name="options"></a>选项  
  **“ODBC 目标编辑器”**  
@@ -73,10 +73,10 @@ ms.locfileid: "71292887"
  **处理方法**  
  选择要应用于列表中选定维度的处理方法。 此选项的默认值为 **“完全”** 。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**添加(增量式)**|对维度执行增量处理。|  
-|**“完全”**|对维度执行完全处理。|  
+|**完整**|对维度执行完全处理。|  
 |**Update**|对维度执行更新处理。|  
   
 ## <a name="dimension-processing-destination-editor-mappings-page"></a>维度处理目标编辑器（“映射”页）
@@ -105,7 +105,7 @@ ms.locfileid: "71292887"
  **键错误操作**  
  指定如何处理包含不可接受的键值的记录。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**ConvertToUnknown**|将不适用的键值转换为 **UnknownMember** 值。|  
 |**DiscardRecord**|放弃记录。|  
@@ -122,7 +122,7 @@ ms.locfileid: "71292887"
  **出错时要执行的操作**  
  指定在达到错误阈值时执行的操作（如果选择了“出错时停止”  ）。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**StopProcessing**|停止处理。|  
 |**StopLogging**|停止记录错误。|  
@@ -130,7 +130,7 @@ ms.locfileid: "71292887"
  **找不到键**  
  指定在出现“找不到键”错误时执行的操作。 默认情况下，此值为 **ReportAndContinue**。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**IgnoreError**|忽略错误并继续处理。|  
 |**ReportAndContinue**|报告错误并继续处理。|  
@@ -139,7 +139,7 @@ ms.locfileid: "71292887"
  **重复键**  
  指定在出现“重复键”错误时执行的操作。 默认情况下，此值为 **IgnoreError**。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**IgnoreError**|忽略错误并继续处理。|  
 |**ReportAndContinue**|报告错误并继续处理。|  
@@ -148,7 +148,7 @@ ms.locfileid: "71292887"
  **空键转换为未知键**  
  指定在将空键转换为 **UnknownMember** 值后所采取的操作。 默认情况下，此值为 **IgnoreError**。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**IgnoreError**|忽略错误并继续处理。|  
 |**ReportAndContinue**|报告错误并继续处理。|  
@@ -157,7 +157,7 @@ ms.locfileid: "71292887"
  **不允许空键**  
  指定在不允许空键而又遇到空键时执行的操作。 默认情况下，此值为 **ReportAndContinue**。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**IgnoreError**|忽略错误并继续处理。|  
 |**ReportAndContinue**|报告错误并继续处理。|  

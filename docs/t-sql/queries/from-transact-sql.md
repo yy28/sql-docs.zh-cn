@@ -35,10 +35,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bcf4dc79c1b241d4a9f48a3d211c13871e32b711
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981973"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>FROM 子句以及 JOIN、APPLY、PIVOT (Transact-SQL)
@@ -59,7 +59,7 @@ SELECT 语句通常需要使用 FROM 子句。 当没有列出表列以及列出
 - APPLY
 - PIVOT
 
-![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>语法  
   
@@ -229,7 +229,7 @@ FROM { <table_source> [ ,...n ] }
  derived_table   
  从数据库中检索行的子查询。 derived_table 用作外部查询的输入  。  
   
- derived _table 可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 表值构造函数功能来指定多个行   。 例如， `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`。 有关详细信息，请参阅[表值构造函数 (Transact-SQL)](../../t-sql/queries/table-value-constructor-transact-sql.md)。  
+ derived _table 可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 表值构造函数功能来指定多个行   。 例如，`SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);` 。 有关详细信息，请参阅[表值构造函数 (Transact-SQL)](../../t-sql/queries/table-value-constructor-transact-sql.md)。  
   
  column_alias   
  代替派生表的结果集内列名的可选别名。 在选择列表中的每个列包括一个列别名，并将整个列别名列表用圆括号括起来。  
@@ -242,7 +242,7 @@ FROM { <table_source> [ ,...n ] }
  指定从指定时态表及其链接的系统版本控制的历史记录表返回特定版本的数据  
   
 ### <a name="tablesample-clause"></a>Tablesample 子句
-**适用范围：** SQL Server、SQL 数据库 
+**适用于：** SQL Server、SQL 数据库 
  
  指定返回来自表的数据样本。 该样本可以是近似的。 此子句可对 SELECT 或 UPDATE 语句中的任何主表或联接表使用。 不能对视图指定 TABLESAMPLE。  
   
@@ -268,7 +268,7 @@ FROM { <table_source> [ ,...n ] }
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用于生成随机数的常量整数表达式。 repeat_seed 是 bigint   。 如果未指定 repeat_seed，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将随机分配值  。 对于特定的 repeat_seed 值，如果尚未对表应用任何更改，抽样结果始终相同  。 repeat_seed 表达式的值必须是大于零的整数  。  
   
 ### <a name="tablesample-clause"></a>Tablesample 子句
-**适用范围：** SQL 数据仓库
+**适用于：** SQL 数据仓库
 
  指定返回来自表的数据样本。 该样本可以是近似的。 此子句可对 SELECT 或 UPDATE 语句中的任何主表或联接表使用。 不能对视图指定 TABLESAMPLE。 
 
@@ -409,7 +409,7 @@ ON (p.ProductID = v.ProductID);
  ALL  
  返回具有当前表和历史记录表中所有行中的值的表。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  FROM 子句支持用于联接表和派生表的 SQL-92-SQL 语法。 SQL-92 语法提供 INNER、LEFT OUTER、RIGHT OUTER、FULL OUTER 和 CROSS 联接运算符。  
   
  视图、派生表和子查询中均支持 FROM 子句内的 UNION 和 JOIN。  
@@ -593,9 +593,9 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
 ### <a name="k-using-apply"></a>K. 使用 APPLY  
 以下示例假定数据库中存在以下表和表值函数：  
 
-|Object Name|列名|      
+|对象名称|列名|      
 |---|---|   
-|部门|DeptID、DivisionID、DeptName、DeptMgrID|      
+|Departments|DeptID、DivisionID、DeptName、DeptMgrID|      
 |EmpMgr|MgrID、EmpID|     
 |Employees|EmpID、EmpLastName、EmpFirstName、EmpSalary|  
 |GetReports(MgrID)|EmpID、EmpLastName、EmpSalary|     

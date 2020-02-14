@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 520637f8bcbe8ae1fcd4fee0ebf3fa33fe3b3650
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: edd716b36e8dc7339ab9661a2213afae5ac35379
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710494"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909627"
 ---
 # <a name="monitor-and-troubleshoot-polybase"></a>PolyBase 的监视和故障排除
 
@@ -33,7 +33,7 @@ ms.locfileid: "71710494"
 
 |||  
 |-|-|  
-|“查看”|描述|  
+|查看|说明|  
 |[sys.external_tables (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-tables-transact-sql.md)|标识外部表。|  
 |[sys.external_data_sources (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)|标识外部数据源。|  
 |[sys.external_file_formats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)|标识外部文件格式。|  
@@ -142,7 +142,7 @@ PolyBase 查询拆分为 sys.dm_exec_distributed_request_steps 中的一系列�
 
 3. 右键单击“远程查询运算符”  ，然后选择“属性”  。
 
-4. 将远程查询值复制并粘贴到文本编辑器中，以查看 XML 远程查询计划。 以下是一个示例。
+4. 将远程查询值复制并粘贴到文本编辑器中，以查看 XML 远程查询计划。 下面显示了一个示例。
 
    ```xml  
 
@@ -217,7 +217,7 @@ PolyBase 查询拆分为 sys.dm_exec_distributed_request_steps 中的一系列�
 
 当前 PolyBase 未通过接口连接到名称节点 HA 服务（如 Zookeeper 或 Knox）。 但是，有一个经过验证的解决方法可用于提供此功能。
 
-解决方法：使用 DNS 名称重新路由与活动的名称节点的连接。 为完成此操作，需要确定外部数据源正在使用 DNS 名称与名称节点通信。 发生名称节点故障转移时，需要更改与外部数据源定义中使用的 DNS 名称相关联的 IP 地址。 此操作将所有新的连接重新路由到正确的名称节点。 故障转移发生时，现有连接将会失败。 若要自动化此过程，“检测信号”可以 ping 活动的名称节点。 如果检测信号失败，可以假设发生了故障转移，并且自动切换到辅助副本 IP 地址。
+解决方法：使用 DNS 名称重新路由与活动的名称节点的连接。 为完成此操作，需要确定外部数据源正在使用 DNS 名称与名称节点通信。 发生名称节点故障转移时，需要更改与外部数据源定义中使用的 DNS 名称相关联的 IP 地址。 此操作将所有新的连接重新路由到正确的名称节点。 故障转移发生时，现有连接将会失败。 若要自动化此过程，“检测信号”可以 ping 活动的名称节点。 如果检测信号失败，可以认为发生了故障转移，并且自动切换到辅助副本 IP 地址。
 
 ## <a name="error-messages-and-possible-solutions"></a>错误消息和可能的解决方案
 

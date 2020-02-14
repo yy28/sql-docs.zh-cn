@@ -19,10 +19,10 @@ ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 898c59cab6038b7025066906ea74ffd5b9222815
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983271"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>启动并使用数据库引擎优化顾问
@@ -50,11 +50,11 @@ ms.locfileid: "73983271"
   
 #### <a name="to-start-the-database-engine-tuning-advisor-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中启动数据库引擎优化顾问  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **中的** 菜单中，单击 **“数据库引擎优化顾问”** 。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的“工具”菜单中，单击“数据库引擎优化顾问”   。  
   
 #### <a name="to-start-the-database-engine-tuning-advisor-from-the-sql-server-management-studio-query-editor"></a>在 SQL Server Management Studio 查询编辑器中启动数据库引擎优化顾问  
   
-1.  在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 脚本文件。 有关详细信息，请参阅[查询和文本编辑器 (SQL Server Management Studio)](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)。  
+1.  在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]脚本文件。 有关详细信息，请参阅[查询和文本编辑器 (SQL Server Management Studio)](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)。  
   
 2.  在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本中选择一个查询，或选择整个脚本，右键单击选定的内容，再选择  “在数据库引擎优化顾问中分析查询”。 此时将打开数据库引擎优化顾问图形用户界面，并将该脚本作为 XML 文件工作负荷导入。 可以指定会话名称和优化选项，以将选定的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询作为工作负荷进行优化。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "73983271"
   
     -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，单击 **“工具”** 菜单，然后单击 **“SQL Server Profiler”** 。  
   
-2.  按照下面介绍的步骤，使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]  “优化”模板来创建跟踪文件或表：  
+2.  按照下面介绍的步骤，使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的“优化”模板来创建跟踪文件或表  ：  
   
     -   [创建跟踪 (SQL Server Profiler)](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
   
@@ -185,7 +185,7 @@ ms.locfileid: "73983271"
   
 2.  创建工作负荷。 有关详细信息，请参阅本主题前面的 [创建工作负荷](#Create) 。  
   
-3.  启动数据库引擎优化顾问，并登录到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。 有关详细信息，请参阅本主题前面的 [启动数据库引擎优化顾问](#Start) 。  
+3.  启动数据库引擎优化顾问，并登录到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 有关详细信息，请参阅本主题前面的 [启动数据库引擎优化顾问](#Start) 。  
   
 4.  在 **“常规”** 选项卡上，在 **“会话名称”** 中键入一个名称以创建新的优化会话。  
   
@@ -363,7 +363,7 @@ ms.locfileid: "73983271"
  **File**  
  为工作负荷指定 .sql 脚本或跟踪文件。 在关联的文本框中指定路径和文件名。 数据库引擎优化顾问假定工作负荷跟踪文件是滚动更新文件。 有关滚动更新文件的详细信息，请参阅 [Limit Trace File and Table Sizes](../../relational-databases/sql-trace/limit-trace-file-and-table-sizes.md)。  
   
- **“表”**  
+ **表**  
  为工作负荷指定跟踪表。 在关联的文本框中指定跟踪表的完全限定名称，如下所示：  
   
 ```  
@@ -455,7 +455,7 @@ database_name.owner_name.table_name
  **包括筛选的索引**  
  包括用来添加筛选索引的建议。 如果选择下列物理设计结构之一，则此选项可用：索引和索引视图、索引或非聚集索引    。  
   
- **“索引”**  
+ **索引**  
  只包括添加聚集和非聚集索引建议。 不会为索引视图提供建议。  
   
  **“非聚集索引”**  
@@ -503,10 +503,10 @@ database_name.owner_name.table_name
  **详细信息**  
  包含指示状态的图标。  
   
- **操作**  
+ **Action**  
  显示正在执行的步骤。  
   
- **“状态”**  
+ **Status**  
  显示操作步骤的状态。  
   
  **消息**  
@@ -517,6 +517,6 @@ database_name.owner_name.table_name
   
 ## <a name="see-also"></a>另请参阅  
  [查看和使用数据库引擎优化顾问的输出](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)   
- [dta Utility](../../tools/dta/dta-utility.md)  
+ [dta 实用工具](../../tools/dta/dta-utility.md)  
   
   

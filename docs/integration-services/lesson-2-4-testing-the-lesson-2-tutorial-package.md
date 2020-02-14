@@ -11,10 +11,10 @@ ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1b17fc99cc7746739f381ba22f55a973d55497a1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283556"
 ---
 # <a name="lesson-2-4-test-the-lesson-2-tutorial-package"></a>第 2-4 课：测试第 2 课教程包
@@ -33,11 +33,11 @@ ms.locfileid: "71283556"
   
 **控制流**  
   
-![包中的控制流](../integration-services/media/task4lesson2control.gif "Control flow in package")  
+![包中的控制流](../integration-services/media/task4lesson2control.gif "包中的控制流")  
   
 **数据流**  
   
-![包中的数据流](../integration-services/media/task9lesson1data.gif "Data flow in package")  
+![包中的数据流](../integration-services/media/task9lesson1data.gif "包中的数据流")  
   
 ## <a name="test-the-lesson-2-tutorial-package"></a>测试第 2 课教程包  
   

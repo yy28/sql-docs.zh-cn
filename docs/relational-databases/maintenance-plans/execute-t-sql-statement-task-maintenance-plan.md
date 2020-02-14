@@ -15,18 +15,18 @@ ms.assetid: fef3e259-0c47-4f6e-ade0-aee95e3d6c1a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d27395a66cd9bddb66bd2a74bcd13492509046e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115801"
 ---
 # <a name="execute-t-sql-statement-task-maintenance-plan"></a>“执行 T-SQL 语句”任务（维护计划）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  使用“执行 T-SQL 语句任务”对话框，可以通过向此维护计划添加所选择的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句来自定义维护计划。  
+  使用“执行 T-SQL 语句任务”  对话框，可以通过向此维护计划添加所选择的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句来自定义维护计划。  
   
 ## <a name="options"></a>选项  
- **“连接”**  
+ **Connection**  
  选择执行此任务时使用的服务器连接。  
   
  **新建**  
@@ -58,12 +58,12 @@ ms.locfileid: "68115801"
  指定如何对服务器进行身份验证。  
   
  **使用 Windows 集成安全性**  
- 使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 的实例。  
+ 使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 身份验证连接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例。  
   
  **使用特定用户名和密码**  
  使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。 此选项不可用。  
   
- **User name**  
+ **用户名**  
  提供一个在进行身份验证时要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 此选项不可用。  
   
  **密码**  

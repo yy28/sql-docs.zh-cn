@@ -12,18 +12,18 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: ac6d3ac9128c8f27a898f4b903f74d1e9ab9bb1c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68116498"
 ---
-# <a name="dbcc-pdwshowpartitionstats-transact-sql"></a>DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
+# <a name="dbcc-pdw_showpartitionstats-transact-sql"></a>DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 显示 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 或 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 数据库中表格每个分区的大小和行数。
   
-![文章链接图标](../../database-engine/configure-windows/media/topic-link.gif "文章链接图标") [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![项目链接图标](../../database-engine/configure-windows/media/topic-link.gif "文章链接图标") [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -43,17 +43,17 @@ DBCC PDW_SHOWPARTITIONSTATS ( " [ database_name . [ schema_name ] . ] | [ schema
 ## <a name="result-sets"></a>结果集  
 此集是 DBCC PDW_SHOWPARTITIONSTATS 命令的结果。
   
-|列名|数据类型|描述|  
+|列名|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|partition_number|INT|分区号。|  
-|used_page_count|BIGINT|用于数据的页数。|  
-|reserved_page_count|BIGINT|为分区保留的页数。|  
-|row_count|BIGINT|分区中的行数。|  
-|pdw_node_id|INT|数据的计算节点。|  
-|distribution_id|INT|数据的分发标识符。|  
+|partition_number|int|分区号。|  
+|used_page_count|bigint|用于数据的页数。|  
+|reserved_page_count|bigint|为分区保留的页数。|  
+|row_count|bigint|分区中的行数。|  
+|pdw_node_id|int|数据的计算节点。|  
+|distribution_id|int|数据的分发标识符。|  
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-### <a name="a-dbcc-pdwshowpartitionstats-basic-syntax-examples"></a>A. DBCC PDW_SHOWPARTITIONSTATS 基本语法示例  
+### <a name="a-dbcc-pdw_showpartitionstats-basic-syntax-examples"></a>A. DBCC PDW_SHOWPARTITIONSTATS 基本语法示例  
 以下示例显示 [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] 数据库中 FactInternetSales 表格按分区计算的空间和行数。
   
 ```sql

@@ -23,10 +23,10 @@ ms.assetid: 31a47aaf-6c7f-48a4-a86a-d57aec66c9cb
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 5f6888525a9b213806267d253fca9c8f2c391766
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065592"
 ---
 # <a name="alter-fulltext-catalog-transact-sql"></a>ALTER FULLTEXT CATALOG (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68065592"
 
   更改全文目录的属性。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,7 +49,7 @@ ALTER FULLTEXT CATALOG catalog_name
   
 ## <a name="arguments"></a>参数  
  catalog_name   
- 指定要修改的目录的名称。 如果不存在具有指定名称的目录，则 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回错误，并且不执行 ALTER 操作。  
+ 指定要修改的目录的名称。 如果具有指定名称的目录不存在，则 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回错误，并且不执行 ALTER 操作。  
   
  REBUILD  
  告知 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新生成整个目录。 重新生成目录时，将删除现有目录，并在其原位置创建一个新目录。 具有全文索引引用的所有表都与此新目录相关联。 重新生成会重置数据库系统表中的全文元数据。  

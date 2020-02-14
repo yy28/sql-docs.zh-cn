@@ -27,10 +27,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ed302e9361e46b8403cea168201fc6cadaa17986
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026191"
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68026191"
   
 有关所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和时间数据类型及函数的概述，请参阅[日期和时间数据类型及函数 (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -57,7 +57,7 @@ DATEADD (datepart , number , date )
   
 |*datepart*|缩写形式|  
 |---|---|
-|year |yy, yyyy  |  
+|**year**|yy, yyyy  |  
 |quarter |qq, q  |  
 |month |mm, m  |  
 |dayofyear |dy, y  |  
@@ -71,7 +71,7 @@ DATEADD (datepart , number , date )
 |microsecond |mcs |  
 |nanosecond |ns |  
   
-*number*  
+*数字*  
 一个表达式，可解析为 `DATEADD` 将其与 date 的 datepart 相加的 [int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)   。 对于 number，`DATEADD` 接受 用户定义的变量值  。 `DATEADD` 将截断带小数部分的指定 number 值  。 在这种情况下，它不对 number 值进行舍入  。
   
 *date*  
@@ -134,7 +134,7 @@ SELECT DATEADD(year,-2147483647, '20060731');
 -   若 datepart 为 millisecond 且 number 值在 -30001 和 +29998 之间，`DATEADD` 不进行任何更改    。  
 -   若 datepart 为 millisecond 且 number 值小于 -30001 或大于 +29998，`DATEADD` 从一分钟开始执行相加操作    。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 在以下子句中使用 `DATEADD`：
 
 + GROUP BY

@@ -12,10 +12,10 @@ ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a16e270acae2a2685bcaf53045883eaa078ab03d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285933"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>列映射（SQL Server 导入和导出向导）
@@ -32,7 +32,7 @@ ms.locfileid: "71285933"
  
  在此示例中，由于已选中“创建目标表”  ，因此可看到向导将创建新的目标表。 默认情况下，向导为新目标表中的每个列提供与对应源列相同的名称、数据类型和属性。 
   
- ![导入和导出向导的“列映射”页](../../integration-services/import-export-data/media/column-mappings.png "Column mappings page of the Import and Export Wizard")  
+ ![“导入和导出向导”的列映射页面](../../integration-services/import-export-data/media/column-mappings.png "“导入和导出向导”的列映射页面")  
   
 ## <a name="review-the-source-and-destination"></a>查看源和目标 
 ![列映射页、源和目标部分](../../integration-services/import-export-data/media/column-mappings-page-source-and-destination-section.png)
@@ -96,7 +96,7 @@ ms.locfileid: "71285933"
     
     不必从源表复制所有列。 针对要跳过的列，选中此列中的“忽略”  。 在映射列之前，必须忽略所有不会被映射的列。  
   
--   **类型**  
+-   类型   
     查看目标列的数据类型或选择不同的数据类型。
   
 -   **可以为 Null**  
@@ -108,7 +108,7 @@ ms.locfileid: "71285933"
 -    **精度**  
     指定目标列中的数值数据的精度（即数字位数）（如果适用）。  
   
- -   **小数位数**  
+ -   **缩放**  
     指定目标列中的数值数据的小数位数（即小数点后的位数）（如果适用）。  
   
 ## <a name="whats-next"></a>下一步是什么？  

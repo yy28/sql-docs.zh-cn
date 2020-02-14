@@ -12,17 +12,17 @@ ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 26caf279506d3f5120a97f3801ba6c69bc46ad94
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 832e7eaa4490df5b7946d1187de74fc494d36e21
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73637968"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76364117"
 ---
 # <a name="upgrade-sql-server"></a>升级 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
- 可以将 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或 [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 的实例升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序以升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之前，请先查看以下有关升级过程和发行说明的文章。  
+ 可以将 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、[!INCLUDE[ss2016](../../includes/sssql15-md.md)] 或 [!INCLUDE[ss2017](../../includes/sssqlv14-md.md)] 的实例直接升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 对于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]和 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]，需要执行并行升级或迁移，以移动到 SQL Server 2019，因为受支持的主流操作系统之间没有共同的重叠部分。 在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序以升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之前，请先查看以下有关升级过程和发行说明的文章。  
   
    - 有关从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]升级的详细信息，请参阅 [是否正在从 SQL Server 2005 进行升级？](../../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md)。  
    - [SQL Server 2016 发行说明](../../sql-server/sql-server-2016-release-notes.md) 

@@ -12,10 +12,10 @@ ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 095852eb02ba78c261b19a0a96fb639075ee5eab
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285127"
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>提供源查询（SQL Server 导入和导出向导）
@@ -32,7 +32,7 @@ ms.locfileid: "71285127"
 -   `SELECT *` 表示复制所有列。
 -   缺少 `WHERE` 子句表示复制所有行。
   
- ![导入和导出向导的“源查询”页](../../integration-services/import-export-data/media/source-query.png "Source query page of the Import and Export Wizard")  
+ ![“导入和导出向导”的“源查询”页面](../../integration-services/import-export-data/media/source-query.png "“导入和导出向导”的“源查询”页面")  
 
 ## <a name="provide-the-query-and-check-its-syntax"></a>提供查询，并检查其语法
 **SQL 语句**  

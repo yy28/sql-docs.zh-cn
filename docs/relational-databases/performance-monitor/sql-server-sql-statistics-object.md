@@ -14,10 +14,10 @@ ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 7841fef89ae4eb0600dcc62c1561bff769500a47
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67995662"
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server:SQL Statistics 对象
@@ -32,9 +32,9 @@ ms.locfileid: "67995662"
   
  有关简单参数化和强制参数化的详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。  
   
- 下面列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQL Statistics** 计数器。  
+ 下面列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Statistics 计数器  。  
   
-|SQL Server SQL Statistics 计数器|描述|  
+|SQL Server SQL Statistics 计数器|说明|  
 |----------------------------------------|-----------------|  
 |**Auto-Param Attempts/sec**|每秒的自动参数化尝试数。 其总数应为失败的、安全的和不安全的自动参数化尝试之和。 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例尝试通过将某些文字替换为参数来参数化 [!INCLUDE[tsql](../../includes/tsql-md.md)] 请求时，就会进行自动参数化，这样可以对多个相似的请求再次使用保存在缓存中的执行计划。 请注意，在更新版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，自动参数化也称为简单参数化。 此计数器不包括强制参数化。|  
 |**Batch Requests/sec**|每秒收到的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令批数。 这一统计信息受所有约束（如 I/O、用户数、高速缓存大小、请求的复杂程度等）影响。 批处理请求数值高意味着吞吐量很好。|  

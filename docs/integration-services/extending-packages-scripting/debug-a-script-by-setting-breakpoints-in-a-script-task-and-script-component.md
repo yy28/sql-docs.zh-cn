@@ -14,10 +14,10 @@ ms.assetid: 6c03464f-3f7d-4882-b7f8-8e396f8e2944
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7b9fddccdf8f6f89c7b03074d052c49c94692bc6
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71286285"
 ---
 # <a name="debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component"></a>通过在脚本任务和脚本组件中设置断点来调试脚本
@@ -44,13 +44,13 @@ ms.locfileid: "71286285"
   
 5.  单击“脚本”  ，然后单击“编辑脚本”  。  
   
-6.  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 中，找到要设置断点的脚本行，右键单击该行，指向“断点”  ，再单击“插入断点”  。  
+6.  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 中，找到要设置断点的脚本行，右键单击该行，指向“断点”，再单击“插入断点”   。  
   
      断点图标随即出现在该行代码上。  
   
 7.  在 **“文件”** 菜单中，单击 **“退出”** 。  
   
-8.  单击“确定”  。  
+8.  单击“确定”。   
   
 9. 若要保存包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   

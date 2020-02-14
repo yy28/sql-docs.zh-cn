@@ -1,7 +1,7 @@
 ---
 title: 配置 Windows 服务帐户和权限 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/28/2019
+ms.date: 01/28/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -50,12 +50,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ed0565a9cf5a5eecaff143f9a4583a763910d3d8
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: f8097f477368a9aa4cd8846b8da77e8bff73324e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73660280"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76929149"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>配置 Windows 服务帐户和权限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -129,7 +129,7 @@ ms.locfileid: "73660280"
 |---------------|------------------------------------|----------------------------------------------------------------|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)]|[NETWORK SERVICE](#Network_Service)|[虚拟帐户](#VA_Desc)*|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理|[NETWORK SERVICE](#Network_Service)|[虚拟帐户](#VA_Desc)*|  
-|[!INCLUDE[ssAS](../../includes/ssas-md.md)]|[NETWORK SERVICE](#Network_Service)|[虚拟帐户](#VA_Desc)\* \*\*|  
+|[!INCLUDE[ssAS](../../includes/ssas-md.md)]|[NETWORK SERVICE](#Network_Service)|[虚拟帐户](#VA_Desc)\*\*\*|  
 |[!INCLUDE[ssIS](../../includes/ssis-md.md)]|[NETWORK SERVICE](#Network_Service)|[虚拟帐户](#VA_Desc)\*|  
 |[!INCLUDE[ssRS](../../includes/ssrs.md)]|[NETWORK SERVICE](#Network_Service)|[虚拟帐户](#VA_Desc)\*|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 控制器|[NETWORK SERVICE](#Network_Service)|[虚拟帐户](#VA_Desc)\*|  
@@ -168,14 +168,14 @@ ms.locfileid: "73660280"
   
 托管服务帐户、组托管服务帐户和虚拟帐户设计用于向关键应用程序（例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ）提供其自己帐户的隔离，同时使管理员无需手动管理这些帐户的服务主体名称 (SPN) 和凭据。 这就使得管理服务帐户用户、密码和 SPN 的过程变得简单得多。  
   
--   <a name="MSA"></a> **Managed Service Accounts**  
+-   <a name="MSA"></a> 托管服务帐户   
   
      托管服务帐户 (MSA) 是一种由域控制器创建和管理的域帐户。 它分配给单个成员计算机以用于运行服务。 域控制器将自动管理密码。 您不能使用 MSA 登录到计算机，但计算机可以使用 MSA 来启动 Windows 服务。 MSA 获得读写 servicePrincipalName 权限时，可在 Active Directory 中注册服务主体名称 (SPN)。 MSA 的名称中有一个 **$** 后缀，例如 **DOMAIN\ACCOUNTNAME$** 。 在指定 MSA 时，请将密码留空。 因为将 MSA 分配给单个计算机，它不能用于 Windows 群集的不同节点。  
   
     > [!NOTE]  
     >  域管理员必须先在 Active Directory 中创建 MSA，然后 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序才能将其用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。  
   
--  <a name="GMSA"></a>**组托管服务帐户**  
+-  <a name="GMSA"></a> 组托管服务帐户   
   
      组托管服务帐户是针对多个服务器的 MSA。 Windows 为在一组服务器上运行的服务管理服务帐户。 Active Directory 自动更新组托管服务帐户密码，而不重启服务。 你可以配置 SQL Server 服务以使用组托管服务帐户主体。 从 SQL Server 2014 开始，SQL Server 支持适用于独立实例的组管理服务帐户，而 SQL Server 2016 及更高版本还支持适用于故障转移群集实例和可用性组的组管理服务帐户。  
   
@@ -236,7 +236,7 @@ ms.locfileid: "73660280"
   
  \*有关无人参与安装的详细信息和示例语法，请参阅[从命令提示符安装 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。  
   
- \*\* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 实例和具有高级服务的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 实例上处于禁用状态。
+ \*\*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 实例和具有高级服务的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 实例上处于禁用状态。
 
  \*\*\*当前不支持仅通过交换机设置启动板帐户。 请使用 SQL Server 配置管理器更改帐户或其他服务设置。
 
@@ -288,11 +288,11 @@ ms.locfileid: "73660280"
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序授予的权限|
 |---------------------------------------|------------------------------------------------------------|
-|**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> （所有权限都将授予 Per-service SID。 默认实例：NT SERVICE\MSSQLSERVER  。 命名实例：NT SERVICE\MSSQL$InstanceName。  ）|**以服务身份登录** (SeServiceLogonRight)<br /><br /> **替换进程级别标记** (SeAssignPrimaryTokenPrivilege)<br /><br /> **跳过遍历检查** (SeChangeNotifyPrivilege)<br /><br /> **调整进程的内存配额** (SeIncreaseQuotaPrivilege)<br /><br /> 启动 SQL 编写器的权限<br /><br /> 读取事件日志服务的权限<br /><br /> 读取远程过程调用服务的权限|  
-|**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理：** \*<br /><br /> （所有权限都将授予 Per-service SID。 默认实例：NT Service\SQLSERVERAGENT  。 命名实例：NT Service\SQLAGENT$InstanceName。   ）|**以服务身份登录** (SeServiceLogonRight)<br /><br /> **替换进程级别标记** (SeAssignPrimaryTokenPrivilege)<br /><br /> **跳过遍历检查** (SeChangeNotifyPrivilege)<br /><br /> **调整进程的内存配额** (SeIncreaseQuotaPrivilege)|  
-|**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> （所有权限都授予本地 Windows 组。 默认实例：SQLServerMSASUser$ComputerName$MSSQLSERVER    。 命名实例：SQLServerMSASUser$ComputerName$InstanceName     。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 实例：SQLServerMSASUser$ComputerName$PowerPivot     。）|**以服务身份登录** (SeServiceLogonRight)<br /><br /> 仅适用于表格：<br /><br /> **增加进程工作集** (SeIncreaseWorkingSetPrivilege)<br /><br /> **调整进程的内存配额** (SeIncreaseQuotaPrivilege)<br /><br /> “锁定内存页”(SeLockMemoryPrivilege) - 仅当完全关闭分页时才需要  。<br /><br /> 仅适用于故障转移群集安装：<br /><br /> **提高计划优先级** (SeIncreaseBasePriorityPrivilege)|  
-|**[!INCLUDE[ssRS](../../includes/ssrs.md)]:**<br /><br /> （所有权限都将授予 Per-service SID。 默认实例：NT SERVICE\ReportServer  。 命名实例：NT SERVICE\\ReportServer$InstanceName   。）|**以服务身份登录** (SeServiceLogonRight)|  
-|**[!INCLUDE[ssIS](../../includes/ssis-md.md)]:**<br /><br /> （所有权限都将授予 Per-service SID。 默认实例和命名实例：NT SERVICE\MsDtsServer130  。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 没有针对命名实例的单独进程。）|**以服务身份登录** (SeServiceLogonRight)<br /><br /> 应用程序事件日志的写入权限。<br /><br /> **跳过遍历检查** (SeChangeNotifyPrivilege)<br /><br /> **身份验证后模拟客户端** (SeImpersonatePrivilege)|  
+|**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]：**<br /><br /> （所有权限都将授予 Per-service SID。 默认实例：NT SERVICE\MSSQLSERVER  。 命名实例：NT SERVICE\MSSQL$InstanceName。  ）|**以服务身份登录** (SeServiceLogonRight)<br /><br /> **替换进程级别标记** (SeAssignPrimaryTokenPrivilege)<br /><br /> **跳过遍历检查** (SeChangeNotifyPrivilege)<br /><br /> **调整进程的内存配额** (SeIncreaseQuotaPrivilege)<br /><br /> 启动 SQL 编写器的权限<br /><br /> 读取事件日志服务的权限<br /><br /> 读取远程过程调用服务的权限|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理：  \*<br /><br /> （所有权限都将授予 Per-service SID。 默认实例：NT Service\SQLSERVERAGENT  。 命名实例：NT Service\SQLAGENT$InstanceName。   ）|**以服务身份登录** (SeServiceLogonRight)<br /><br /> **替换进程级别标记** (SeAssignPrimaryTokenPrivilege)<br /><br /> **跳过遍历检查** (SeChangeNotifyPrivilege)<br /><br /> **调整进程的内存配额** (SeIncreaseQuotaPrivilege)|  
+|**[!INCLUDE[ssAS](../../includes/ssas-md.md)]：**<br /><br /> （所有权限都授予本地 Windows 组。 默认实例：SQLServerMSASUser$ComputerName$MSSQLSERVER    。 命名实例：SQLServerMSASUser$ComputerName$InstanceName     。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 实例：SQLServerMSASUser$ComputerName$PowerPivot     。）|**以服务身份登录** (SeServiceLogonRight)<br /><br /> 仅适用于表格：<br /><br /> **增加进程工作集** (SeIncreaseWorkingSetPrivilege)<br /><br /> **调整进程的内存配额** (SeIncreaseQuotaPrivilege)<br /><br /> “锁定内存页”(SeLockMemoryPrivilege) - 仅当完全关闭分页时才需要  。<br /><br /> 仅适用于故障转移群集安装：<br /><br /> **提高计划优先级** (SeIncreaseBasePriorityPrivilege)|  
+|**[!INCLUDE[ssRS](../../includes/ssrs.md)]：**<br /><br /> （所有权限都将授予 Per-service SID。 默认实例：NT SERVICE\ReportServer  。 命名实例：NT SERVICE\\ReportServer$InstanceName   。）|**以服务身份登录** (SeServiceLogonRight)|  
+|**[!INCLUDE[ssIS](../../includes/ssis-md.md)]：**<br /><br /> （所有权限都将授予 Per-service SID。 默认实例和命名实例：NT SERVICE\MsDtsServer130  。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 没有针对命名实例的单独进程。）|**以服务身份登录** (SeServiceLogonRight)<br /><br /> 应用程序事件日志的写入权限。<br /><br /> **跳过遍历检查** (SeChangeNotifyPrivilege)<br /><br /> **身份验证后模拟客户端** (SeImpersonatePrivilege)|  
 |**全文搜索：**<br /><br /> （所有权限都将授予 Per-service SID。 默认实例：NT Service\MSSQLFDLauncher  。 命名实例：NT Service\ MSSQLFDLauncher$InstanceName   。）|**以服务身份登录** (SeServiceLogonRight)<br /><br /> **调整进程的内存配额** (SeIncreaseQuotaPrivilege)<br /><br /> **跳过遍历检查** (SeChangeNotifyPrivilege)|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser：**<br /><br /> （所有权限都授予本地 Windows 组。 默认实例或命名实例：SQLServer2005SQLBrowserUser$ComputerName   。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 没有针对命名实例的单独进程。）|**以服务身份登录** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS 编写器：**<br /><br /> （所有权限都将授予 Per-service SID。 默认实例或命名实例：NT Service\SQLWriter  。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS 编写器没有针对命名实例的单独进程。）|SQLWriter 服务在具有所需的所有权限的 LOCAL SYSTEM 帐户下运行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序不检查此服务或为其授予权限。| 
@@ -303,7 +303,7 @@ ms.locfileid: "73660280"
 |**R Services/机器学习服务：** **SQLRUserGroup**（SQL 2016 和 2017）  |默认情况下，没有“允许在本地登录”权限  |   
 |机器学习服务“所有应用程序包”的 [AppContainer] (SQL 2019)    |SQL Server“Binn”、R_Services 和 PYTHON_Services 目录的读取和执行权限  |   
 
- \* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的实例上处于禁用状态。  
+ \*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的实例上处于禁用状态。  
   
 ###  <a name="Reviewing_ACLs"></a> 授予 SQL Server Per-service SID 或本地 Windows 组的文件系统权限  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户必须具有对资源的访问权限。 为 Per-service SID 或本地 Windows 组设置了访问控制列表。  
@@ -344,12 +344,12 @@ ms.locfileid: "73660280"
 ||Instid\OLAP\Backup|读取和写入|  
 ||Instid\OLAP\Temp|读取和写入|  
 ||130\shared\Errordumps|读取和写入|  
-|SQLServerReportServerUser|Instid\Reporting Services\Log Files|读取、写入、删除|  
+|ReportServer|Instid\Reporting Services\Log Files|读取、写入、删除|  
 ||Instid\Reporting Services\ReportServer|读取和执行|  
-||Instid\Reportingservices\Reportserver\global.asax|完全控制|  
-||Instid\Reportingservices\Reportserver\Reportserver.config|读取|  
-||Instid\Reporting Services\reportManager|读取和执行|  
-||Instid\Reporting Services\RSTempfiles|读取、写入、执行、删除|  
+||Instid\Reporting Services\ReportServer\global.asax|完全控制|  
+||Instid\Reporting Services\ReportServer\rsreportserver.config|读取|  
+||Instid\Reporting Services\RSTempfiles|读取、写入、执行、删除| 
+||Instid\Reporting Services\RSWebApp|读取和执行|   
 ||130\shared|读取和执行|  
 ||130\shared\Errordumps|读取和写入|  
 |MSDTSServer100|130\dts\binn\MsDtsSrvr.ini.xml|读取|  
@@ -362,10 +362,8 @@ ms.locfileid: "73660280"
 |SQLWriter|不适用（以 Local System 身份运行）||  
 |用户|Instid\MSSQL\binn|读取和执行|  
 ||Instid\Reporting Services\ReportServer|读取、执行和列出文件夹内容|  
-||Instid\Reportingservices\Reportserver\global.asax|读取|  
-||Instid\Reporting Services\reportManager|读取和执行|  
-||Instid\Reporting Services\ReportManager\pages|读取|  
-||Instid\Reporting Services\ReportManager\Styles|读取|  
+||Instid\Reporting Services\ReportServer\global.asax|读取|  
+||Instid\Reporting Services\RSWebApp|读取、执行和列出文件夹内容|    
 ||130\dts|读取和执行|  
 ||130\tools|读取和执行|  
 ||100\tools|读取和执行|  
@@ -391,7 +389,7 @@ ms.locfileid: "73660280"
 ||ExtensiblilityData|完全控制|
 ||Log\ExtensibiltityLog|完全控制|
   
- \* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 实例和具有高级服务的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 实例上处于禁用状态。  
+ \*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 实例和具有高级服务的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 实例上处于禁用状态。  
   
  当数据库文件存储在用户定义的位置时，您必须授予每个服务 SID 访问该位置的权限。 有关将文件系统权限授予 Per-service SID 的详细信息，请参阅 [配置数据库引擎访问的文件系统权限](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md)。  
   
@@ -407,18 +405,15 @@ ms.locfileid: "73660280"
 ||仅限于管理员|\\\\.\root\Microsoft\SqlServer\ServerEvents\\<sql_instance_name>\*|完全控制|  
 ||管理员和系统|\tools\binn\schemas\sqlserver\2004\07\showplan|完全控制|  
 ||用户|\tools\binn\schemas\sqlserver\2004\07\showplan|读取和执行|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|\<报表服务器 Web 服务帐户>|\<install>  \Reporting Services\LogFiles|删除<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
-||报表管理器应用程序池标识、 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 帐户、Everyone|*\<install>* \Reporting Services\ReportManager, *\<install>* \Reporting Services\ReportManager\Pages\\\*.\*, *\<install>* \Reporting Services\ReportManager\Styles\\\*.\*, *\<install>* \Reporting Services\ReportManager\webctrl_client\1_0\\*。\*|读取|  
-||报表管理器应用程序池标识|*\<install>* \Reporting Services\ReportManager\Pages\\*。\*|读取|  
-||\<报表服务器 Web 服务帐户>|\<install>  \Reporting Services\ReportServer|读取|  
-||\<报表服务器 Web 服务帐户>|\<install>  \Reporting Services\ReportServer\global.asax|完全|  
-||Everyone|\<install>  \Reporting Services\ReportServer\global.asax|READ_CONTROL<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_READ_ATTRIBUTES|  
-||NETWORK SERVICE|\<install>  \Reporting Services\ReportServer\ReportService.asmx|完全|  
-||Everyone|\<install>  \Reporting Services\ReportServer\ReportService.asmx|READ_CONTROL<br /><br /> SYNCHRONIZE FILE_GENERIC_READ<br /><br /> FILE_GENERIC_EXECUTE<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_EXECUTE<br /><br /> FILE_READ_ATTRIBUTES|  
-||ReportServer Windows 服务帐户|\<install>  \Reporting Services\ReportServer\RSReportServer.config|删除<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
-||Everyone|报表服务器密钥（Instid 配置单元）|查询值<br /><br /> 枚举子项<br /><br /> 通知<br /><br /> 读取控制|  
-||终端服务用户|报表服务器密钥（Instid 配置单元）|查询值<br /><br /> 设置值<br /><br /> 创建子项<br /><br /> 枚举子项<br /><br /> 通知<br /><br /> DELETE<br /><br /> 读取控制|  
-||超级用户|报表服务器密钥（Instid 配置单元）|查询值<br /><br /> 设置值<br /><br /> 创建子项<br /><br /> 枚举子项<br /><br /> 通知<br /><br /> DELETE<br /><br /> 读取控制|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|报表服务器 Windows 服务帐户|\<install>  \Reporting Services\LogFiles|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
+||报表服务器 Windows 服务帐户|\<install>  \Reporting Services\ReportServer|读取|  
+||报表服务器 Windows 服务帐户|\<install>  \Reporting Services\ReportServer\global.asax|完全|  
+||报表服务器 Windows 服务帐户|*\<install>* \Reporting Services\RSWebApp|读取和执行|  
+||所有人|\<install>  \Reporting Services\ReportServer\global.asax|READ_CONTROL<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_READ_ATTRIBUTES|  
+||ReportServer Windows 服务帐户|*\<install>* \Reporting Services\ReportServer\rsreportserver.config|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
+||所有人|报表服务器密钥（Instid 配置单元）|查询值<br /><br /> 枚举子项<br /><br /> 通知<br /><br /> 读取控制|  
+||终端服务用户|报表服务器密钥（Instid 配置单元）|查询值<br /><br /> 设置值<br /><br /> 创建子项<br /><br /> 枚举子项<br /><br /> 通知<br /><br /> 删除<br /><br /> 读取控制|  
+||超级用户|报表服务器密钥（Instid 配置单元）|查询值<br /><br /> 设置值<br /><br /> 创建子项<br /><br /> 枚举子项<br /><br /> 通知<br /><br /> 删除<br /><br /> 读取控制|  
   
  \*这是 WMI 提供程序命名空间。  
   
@@ -526,7 +521,7 @@ Windows Management Instrumentation (WMI) 必须能够连接到 [!INCLUDE[ssDE](.
 ####  <a name="Agent"></a> SQL Server 代理登录名和特权  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务的 Per-service SID 设置为一个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 登录名。 Per-service SID 登录名是 **sysadmin** 固定服务器角色的成员。  
   
-####  <a name="Hadron"></a>[!INCLUDE[ssHADRc](../../includes/sshadrc-md.md)] 和 SQL 故障转移群集实例和特权  
+####  <a name="Hadron"></a> [!INCLUDE[ssHADRc](../../includes/sshadrc-md.md)] 和 SQL 故障转移群集实例和特权  
  当将 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 安装为 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 或 SQL 故障转移群集实例 (SQL FCI) 时，将在 **中设置** LOCAL SYSTEM [!INCLUDE[ssDE](../../includes/ssde-md.md)]。 **LOCAL SYSTEM** 登录名被授予 **ALTER ANY AVAILABILITY GROUP** 权限（对于 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]）以及 **VIEW SERVER STATE** 权限（对于 SQL FCI）。  
   
 ####  <a name="Writer"></a> SQL 编写器和特权  
@@ -586,26 +581,26 @@ Windows Management Instrumentation (WMI) 必须能够连接到 [!INCLUDE[ssDE](.
 ####  <a name="Any_OS"></a> 可用于任何操作系统的帐户  
  除了前面介绍的新的 [MSA](#MSA) 和 [虚拟帐户](#VA_Desc) 之外，还可以使用以下帐户。  
   
- <a name="Domain_User"></a>**Domain User 帐户**  
+ <a name="Domain_User"></a> 域用户帐户   
   
  如果服务必须与网络服务进行交互，则访问类似于文件共享的域资源；如果服务使用到运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的其他计算机的链接服务器连接，则可以使用具有最低特权的域帐户。 许多服务器到服务器的活动只能使用域用户帐户来执行。 此帐户应由域管理员在您的环境内预先创建。  
   
 > [!NOTE]  
 >  如果您将应用程序配置为使用域帐户，则可以隔离应用程序的特权，但必须手动管理密码或创建自定义解决方案以管理这些密码。 许多服务器应用程序使用此策略以增强安全性，但此策略要求额外的管理和复杂性。 在这些部署中，服务管理员将在维护任务方面花费大量时间，如管理服务密码和服务主体名称 (SPN)，但这些维护服务是 Kerberos 身份验证所必需的。 此外，这些维护任务可能会中断服务。  
   
- <a name="Local_User"></a> **Local User Accounts**  
+ <a name="Local_User"></a> 本地用户帐户   
   
  如果计算机不在域中，则建议您使用不具有 Windows 管理员权限的本地用户帐户。  
   
- <a name="Local_Service"></a>**Local Service 帐户**  
+ <a name="Local_Service"></a> 本地服务帐户   
   
  Local Service 帐户是一个内置帐户，与 Users 组的成员具有相同级别的资源和对象访问权限。 如果有个别服务或进程的安全性受到威胁，则此有限访问权限有助于保护系统的安全性。 以 Local Service 帐户身份运行的服务将以一个没有凭据的 Null 会话形式访问网络资源。 请注意， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务不支持 Local Service 帐户。 不支持将 Local Service 作为运行这些服务的帐户，因为该服务是一个共享服务，并且任何在 Local Service 下运行的其他服务都对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]具有系统管理员访问权限。 该帐户的实际名称为 **NT AUTHORITY\LOCAL SERVICE**。  
   
- <a name="Network_Service"></a>**Network Service 帐户**  
+ <a name="Network_Service"></a> 网络服务帐户   
   
  Network Service 帐户是一个内置帐户，比 Users 组的成员拥有更多的对资源和对象的访问权限。 以网络服务帐户身份运行的服务通过使用计算机帐户的凭据（格式为 _<domain_name>_ **\\** _<computer_name>_ **$** ）访问网络资源。 该帐户的实际名称为 **NT AUTHORITY\NETWORK SERVICE**。  
   
-<a name="Local_System"></a>**Local System 帐户**  
+<a name="Local_System"></a> 本地系统帐户   
   
  Local System 是一个具有高特权的内置帐户。 它对本地系统拥有许多特权并作为网络上的计算机。 该帐户的实际名称为 **NT AUTHORITY\SYSTEM**。  
   
@@ -639,9 +634,9 @@ Windows Management Instrumentation (WMI) 必须能够连接到 [!INCLUDE[ssDE](.
 ###  <a name="Localized_service_names"></a> 本地化的服务名称  
  下表列出了 Windows 的本地化版本所显示的服务名称。  
   
-|“报表”|Local Service 的名称|Network Service 的名称|Local System 的名称|Admin Group 的名称|  
+|语言|Local Service 的名称|Network Service 的名称|Local System 的名称|Admin Group 的名称|  
 |--------------|----------------------------|------------------------------|---------------------------|--------------------------|  
-|英语<br /><br /> 简体中文<br /><br /> 繁体中文<br /><br /> 朝鲜语<br /><br /> 日语|NT AUTHORITY\LOCAL SERVICE|NT AUTHORITY\NETWORK SERVICE|NT AUTHORITY\SYSTEM|BUILTIN\Administrators|  
+|英语<br /><br /> 简体中文<br /><br /> 繁体中文<br /><br /> 韩语<br /><br /> 日语|NT AUTHORITY\LOCAL SERVICE|NT AUTHORITY\NETWORK SERVICE|NT AUTHORITY\SYSTEM|BUILTIN\Administrators|  
 |德语|NT-AUTORITÄT\LOKALER DIENST|NT-AUTORITÄT\NETZWERKDIENST|NT-AUTORITÄT\SYSTEM|VORDEFINIERT\Administratoren|  
 |法语|AUTORITE NT\SERVICE LOCAL|AUTORITE NT\SERVICE RÉAU|AUTORITE NT\SYSTEM|BUILTIN\Administrators|  
 |意大利语|NT AUTHORITY\SERVIZIO LOCALE|NT AUTHORITY\SERVIZIO DI RETE|NT AUTHORITY\SYSTEM|BUILTIN\Administrators|  

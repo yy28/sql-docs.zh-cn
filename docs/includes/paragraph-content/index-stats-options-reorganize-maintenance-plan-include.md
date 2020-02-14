@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 78b372942de6ec62823dddecd08fdb7221cbe7a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68219681"
----
 
 
 ### <a name="index-stats-options"></a>索引统计信息选项
@@ -34,7 +26,7 @@ Initially used in:
 
 - Fast
 - 抽样
-- 详细
+- 详细信息
 
 
  **仅在以下情况下优化索引：**  

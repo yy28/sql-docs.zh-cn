@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7ad26acc2f1e23b61e9692dcf2720d7ee6dd8639
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077808"
 ---
 # <a name="money-and-smallmoney-transact-sql"></a>money 和 smallmoney (Transact-SQL)
@@ -36,9 +36,9 @@ ms.locfileid: "68077808"
 
 代表货币或货币值的数据类型。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
-|数据类型|范围|存储器|  
+|数据类型|范围|存储|  
 |---|---|---|
 |**money**|-922,337,203,685,477.5808 到 922,337,203,685,477.5807（对于 Informatica，为 -922,337,203,685,477.58<br />到 922,337,203,685,477.58。  Informatica 仅支持两位小数，而不是四位。）|8 字节|  
 |**smallmoney**|-214,748.3648 到 214,748.3647|4 个字节|  

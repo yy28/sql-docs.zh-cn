@@ -11,10 +11,10 @@ ms.assetid: 64cd24cc-ba8e-4bd7-b10b-6b80d8b04af6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6ebbc82f5570fb97d7b1169563bfde7c67f5be0d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296012"
 ---
 # <a name="lesson-3-add-logging-with-ssis"></a>第 3 课：使用 SSIS 添加日志记录

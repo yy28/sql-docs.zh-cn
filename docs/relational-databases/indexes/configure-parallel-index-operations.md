@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 627fa6a19c88507034bfbd8a7236b94e17242851
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908130"
 ---
 # <a name="configure-parallel-index-operations"></a>配置并行索引操作
@@ -56,7 +56,7 @@ ms.locfileid: "72908130"
   
 -   MAXDOP 索引选项只为指定此选项的查询覆盖 max degree of parallelism 配置选项。 下表列出了可为 max degree of parallelism 配置选项和 MAXDOP 索引选项指定的有效整数值。  
   
-    |ReplTest1|描述|  
+    |值|说明|  
     |-----------|-----------------|  
     |0|指定服务器根据当前系统工作负荷确定所使用的 CPU 数目。 这是默认值，还是推荐设置。|  
     |1|取消生成并行计划。 操作将以串行方式执行。|  
@@ -78,7 +78,7 @@ ms.locfileid: "72908130"
   
 -   如果查询优化器将并行度应用于生成操作，则需要排序的已分区索引操作的内存需求可能会很大。 并行度越高，内存需求就越大。 有关详细信息，请参阅 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)。  
   
-###  <a name="Security"></a> <a name="Permissions"></a> Permissions  
+###  <a name="Security"></a><a name="Permissions"></a> 权限  
  要求具有对表或视图的 `ALTER` 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -99,7 +99,7 @@ ms.locfileid: "72908130"
   
 7.  选择 **“最大并行度”** ，然后输入 1 和 64 之间的某个值。  
   
-8.  单击“确定”  。  
+8.  单击“确定”。   
 
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

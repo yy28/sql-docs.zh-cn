@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 19c261227f81debb3afec4e9d4b68f6ca7e8d607
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117666"
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68117666"
 
 返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的字符、二进制、文本或图像表达式的一部分。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -63,13 +63,13 @@ SUBSTRING ( expression ,start , length )
 |**nchar**/**nvarchar**/**ntext**|**nvarchar**|  
 |**binary**/**varbinary**/**image**|**varbinary**|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  start 和 length 的值对于 ntext、char 或 varchar 数据类型必须以字符数指定，对于 text、image、binary 或 varbinary 数据类型，则以字节数指定          。  
   
  start 或 length 包含大于 2147483647 的值时，expression 必须是 varchar(max) 或 varbinary(max)      。  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>补充字符（代理项对）  
- 在使用增补字符 (SC) 排序规则时，start 和 length 将 expression 中的每个代理项对计为一个字符    。 有关详细信息，请参阅 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
+ 在使用增补字符 (SC) 排序规则时，start 和 length 将 expression 中的每个代理项对计为一个字符    。 有关详细信息，请参阅 [排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
 ## <a name="examples"></a>示例  
   
@@ -85,7 +85,7 @@ WHERE database_id < 5;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 
-|NAME |初始 |ThirdAndFourthCharacters|
+|name |初始 |ThirdAndFourthCharacters|
 |---|--|--|
 |master  |m  |st |
 |tempdb  |t  |mp |

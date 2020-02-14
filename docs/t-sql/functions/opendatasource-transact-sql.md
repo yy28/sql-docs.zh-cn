@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 8aa3f690b79167df6de5b27f6dd78276c61e0b26
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71342060"
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "71342060"
 
   在四部分对象名称中提供连接信息，而不使用链接服务器名称。  
 
- ![链接图标](../../database-engine/configure-windows/media/topic-link.gif "链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![链接图标](../../database-engine/configure-windows/media/topic-link.gif "“链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -51,7 +51,7 @@ OPENDATASOURCE ( 'provider_name', 'init_string' )
  > 以前的 Microsoft OLE DB Provider for SQL Server (SQLOLEDB) 和 SQL Server Native Client OLEDB 提供程序 (SQLNCLI) 仍然不推荐使用，不建议在新的开发工作中使用它们。 相反，请使用新的 [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL)，其将使用最新的服务器功能进行更新。
  
  '*init_string*'  
- 连接字符串，该字符串将要传递给目标提供程序的 IDataInitialize 接口。 提供程序字符串语法是以关键字值对为基础的，这些关键字值对由分号隔开，例如：'keyword1=value ; keyword2=value'        。  
+ 连接字符串，该字符串将要传递给目标提供程序的 IDataInitialize 接口。 提供程序字符串语法是以关键字值对为基础的，这些关键字值对由分号隔开，例如：“keyword1=value；keyword2=value”        。  
   
  若要了解提供程序上支持的特定关键字值对，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Data Access SDK。 该文档定义了基本语法。 下表列出了 init_string 参数中最常用的关键字  。  
   
@@ -62,11 +62,11 @@ OPENDATASOURCE ( 'provider_name', 'init_string' )
 |扩展属性|DBPROP_INIT_PROVIDERSTRING|提供程序特定的连接字符串。|  
 |连接超时|DBPROP_INIT_TIMEOUT|达到此超时值后，连接尝试就会失败。|  
 |用户 ID|DBPROP_AUTH_USERID|用于该连接的用户 ID。|  
-|Password|DBPROP_AUTH_PASSWORD|用于该连接的密码。|  
+|密码|DBPROP_AUTH_PASSWORD|用于该连接的密码。|  
 |目录|DBPROP_INIT_CATALOG|连接到数据源时的初始或默认的目录名称。|  
 |集成安全性|DBPROP_AUTH_INTEGRATED|SSPI，指定 Windows 身份验证|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 `OPENROWSET` 始终继承实例排序规则，而不考虑列的排序规则集。
 
 仅当 DisallowAdhocAccess 注册表选项针对指定的提供程序显式设置为 0，并且启用 Ad Hoc Distributed Queries 高级配置选项时，`OPENDATASOURCE` 才可用于访问 OLE DB 数据源中的远程数据。 如果未设置这些选项，则默认行为不允许即席访问。  

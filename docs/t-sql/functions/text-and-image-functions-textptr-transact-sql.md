@@ -21,10 +21,10 @@ ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d0e511e34b782c444bcdf6c778bb89dfebd4fab4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099031"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>文本与图像函数 - TEXTPTR (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68099031"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]没有可用的替代功能。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -51,7 +51,7 @@ TEXTPTR ( column )
 ## <a name="return-types"></a>返回类型  
  **varbinary**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  对于含行内文本的表，TEXTPTR 将为要处理的文本返回一个句柄。 即使文本值为空，仍可获得有效的文本指针。  
   
  不能对视图列使用 TEXTPTR 函数。 只能对表列使用此函数。 若要在视图列中使用 TEXTPTR 函数，必须使用 [ALTER DATABASE 兼容级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)将兼容级别设置为 80。 如果表不含行内文本，并且 text、ntext 或 image 列尚未使用 UPDATETEXT 语句初始化，则 TEXTPTR 将返回一个空指针    。  
@@ -60,9 +60,9 @@ TEXTPTR ( column )
   
  当使用 text、ntext 和 image 数据时，下列函数和语句也非常有用    。  
   
-|函数或语句|描述|  
+|函数或语句|说明|  
 |---------------------------|-----------------|  
-|PATINDEX('%pattern%' , expression)<b></b>    |返回指定字符串在 text 或 ntext 列中所处的字符位置   。|  
+|PATINDEX<b>('</b>%pattern%' , expression)    |返回指定字符串在 text 或 ntext 列中所处的字符位置   。|  
 |DATALENGTH(expression)<b></b>  |返回 text、ntext 和 image 列中数据的长度    。|  
 |SET TEXTSIZE|返回使用 SELECT 语句时返回的 text、ntext 或 image 数据的限制（字节）    。|  
 |SUBSTRING(text_column, start, length)<b></b>    |返回由指定的 start 偏移量和 length 指定的 varchar 字符串    。 字符串的长度应小于 8 KB。|  

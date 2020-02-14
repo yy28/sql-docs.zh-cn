@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c6d84af2893cc535717c2785d35875ca2b0d5550
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68476303"
 ---
 # <a name="index-properties-f1-help"></a>“索引属性”对话框的 F1 帮助
@@ -46,7 +46,7 @@ ms.locfileid: "68476303"
 ##  <a name="General"></a> 索引属性常规页  
  使用“常规”页可以查看或修改所选表或视图的索引属性。 每一页上的选项可基于所选索引的类型更改。  
   
- **表名**  
+ **表名称**  
  显示创建索引的表或视图的名称。 此字段为只读。 若要选择不同的表，请关闭“索引属性”页，选择适当的表，然后再次打开“索引属性”页。  
   
  不能对索引视图指定空间索引。 仅可为具有主键的表定义空间索引。 表中主键列的最大数目为 15。 复合主键列的每行大小限制在最多 895 个字节。  
@@ -95,8 +95,8 @@ ms.locfileid: "68476303"
  **允许 Null**  
  显示组成索引键的列是否允许在表或视图列中存储 Null 值。  
   
- **“添加”**  
- 向索引键添加列。 从单击“添加”  时出现的“从 \<table name> 选择列”   对话框中选择表列。 对于空间索引，在选择一列后，该按钮将呈灰色。  
+ **添加**  
+ 向索引键添加列。 从单击“添加”时出现的“从 <表名称\< 选择列”对话框中选择表列    。 对于空间索引，在选择一列后，该按钮将呈灰色。  
   
  **删除**  
  从组成索引键的列中删除所选列。  
@@ -104,7 +104,7 @@ ms.locfileid: "68476303"
  **上移**  
  在索引键网格中向上移动所选列。  
   
- **下移**  
+ **“下移”**  
  在索引键网格中向下移动所选列。  
   
  **列存储列**  
@@ -207,7 +207,7 @@ False 或未指定填充因子<br>
  使用此页可查看或修改所选索引的文件组或分区方案属性。 仅显示与索引类型相关的选项。  
   
  **文件组**  
- 在指定的文件组中存储索引。 该列表仅显示标准 (row) 文件组。 默认情况下，将在该列表中选择相应数据库的 PRIMARY 文件组。 有关详细信息，请参阅 [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)。  
+ 在指定的文件组中存储索引。 该列表仅显示标准 (row) 文件组。 默认情况下，将在该列表中选择相应数据库的 PRIMARY 文件组。 有关详细信息，请参阅 [数据库文件和文件组](../../relational-databases/databases/database-files-and-filegroups.md)。  
   
  **Filestream 文件组**  
  指定 FILESTREAM 数据的文件组。 该列表仅显示 FILESTREAM 文件组。 默认情况下，将在该列表中选择 PRIMARY FILESTREAM 文件组。 有关详细信息，请参阅 [FILESTREAM (SQL Server)](../../relational-databases/blob/filestream-sql-server.md)。  
@@ -248,14 +248,14 @@ False 或未指定填充因子<br>
  **Y-min**  
  边界框左下角的 Y 坐标。  
   
- **X-max**  
+ **X 最大值**  
  边界框右上角的 X 坐标。  
   
  **Y-max**  
  边界框右上角的 Y 坐标。  
   
 ### <a name="general"></a>常规  
- **“分割方案”**  
+ **分割方案**  
  指示索引的分割方案。 支持的分割方案如下所示。  
   
  **几何图形网格**  

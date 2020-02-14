@@ -13,10 +13,10 @@ ms.assetid: d742fd30-347a-452f-b5fc-b03232360c6b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8158aed0298afe295e82a1b240a3f24ec05b1647
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68100026"
 ---
 # <a name="script-to-grant-oracle-permissions"></a>授予 Oracle 权限的脚本

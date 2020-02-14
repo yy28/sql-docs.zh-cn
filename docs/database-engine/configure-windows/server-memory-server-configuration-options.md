@@ -22,10 +22,10 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: pmasl
 ms.author: mikeray
 ms.openlocfilehash: a9e617488ac0543dd7794cce37137518c1422c80
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "69028742"
 ---
 # <a name="server-memory-configuration-options"></a>“服务器内存”配置选项
@@ -33,7 +33,7 @@ ms.locfileid: "69028742"
 
 使用“min server memory”  和“max server memory”  这两个服务器内存选项可以重新配置由 SQL Server 内存管理器为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例使用的 SQL Server 进程所管理的内存量 (MB)。  
   
-“min server memory”  的默认设置为 0，“max server memory”  的默认设置为 2147483647 MB。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内存要求会根据可用系统资源的情况动态变化。 有关详细信息，请参阅[动态内存管理](../../relational-databases/memory-management-architecture-guide.md#dynamic-memory-management)。 
+“min server memory”  的默认设置为 0，“max server memory”  的默认设置为 2147483647 MB。 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内存要求会根据可用系统资源的情况动态变化。 有关详细信息，请参阅[动态内存管理](../../relational-databases/memory-management-architecture-guide.md#dynamic-memory-management)。 
 
 **max server memory** 所允许的最小内存量是 128 MB。
   
@@ -55,14 +55,14 @@ ms.locfileid: "69028742"
 
 <a name="max_server_memory"></a> 使用 max_server_memory 来保证 OS 不会遇到不利的内存压力  。 若要设置 max server memory 配置，请监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程的总体消耗，以确定内存要求。 使单个实例的这些计算更准确：
 - 从 OS 总内存中，为 OS 自身保留 1GB - 4GB。
-- 然后，减去等于在“最大服务器内存”  控制范围外的潜在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存分配的值，即堆栈大小<sup>1</sup> \* 计算出的最大工作线程数<sup>2</sup>  。 所得结果就是一个实例设置的 max_server_memory 设置。
+- 然后，减去等于在“最大服务器内存”控制范围外的潜在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存分配的值，即堆栈大小<sup>1</sup> \* 计算出的最大工作线程数 <sup>2</sup>   。 所得结果就是一个实例设置的 max_server_memory 设置。
 
 <sup>1</sup> 有关每个体系结构的线程堆栈大小的信息，请参阅[内存管理体系结构指南](../../relational-databases/memory-management-architecture-guide.md#stacksizes)。
 
 <sup>2</sup> 有关为当前主机中给定数量的关联 CPU 计算得出的默认工作线程数的信息，请参阅介绍如何[配置最大工作线程数服务器配置选项](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)的文档页。
 
 ## <a name="how-to-configure-memory-options-using-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 配置内存选项的方式  
-使用“min server memory”  和“max server memory”  这两个服务器内存选项重新配置由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存管理器为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例管理的内存量 (MB)。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内存要求会根据可用系统资源的情况动态变化。  
+使用“min server memory”  和“max server memory”  这两个服务器内存选项重新配置由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存管理器为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例管理的内存量 (MB)。 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内存要求会根据可用系统资源的情况动态变化。  
   
 ### <a name="procedure-for-configuring-a-fixed-amount-of-memory-not-recommended"></a>配置固定内存量的过程（不推荐）  
 设置固定内存量：  
@@ -78,9 +78,9 @@ ms.locfileid: "69028742"
 ## <a name="lock-pages-in-memory-lpim"></a>锁定内存页 (LPIM) 
 此 Windows 策略将确定哪些帐户可以使用进程将数据保留在物理内存中，从而阻止系统将数据分页到磁盘的虚拟内存中。 锁定内存中的页可以在发生将内存分页到磁盘时保持服务器的响应能力。 已向有权运行 sqlservr.exe 的帐户授予 Windows 锁定内存页 (LPIM) 用户权限时，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard Edition 和更高版本的实例中将“锁定内存页”  选项设置为“打开”  。  
   
-若要对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **禁用**“锁定内存页”选项，请为有权运行 sqlservr.exe（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动帐户）启动帐户的帐户删除“锁定内存页”用户权限  。  
+若要对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**禁用**“锁定内存页”选项，请为有权运行 sqlservr.exe（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动帐户）启动帐户的帐户删除“锁定内存页”用户权限  。  
  
-设置此选项可实现根据其他内存分配器的请求扩大或缩小内存，不影响[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][动态内存管理](../../relational-databases/memory-management-architecture-guide.md#dynamic-memory-management)。 使用“锁定内存页”用户权限时，建议按[如上所述](#max_server_memory)，为 max server memory 设置一个上限   。
+设置此选项可实现根据其他内存分配器的请求扩大或缩小内存，不影响 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [动态内存管理](../../relational-databases/memory-management-architecture-guide.md#dynamic-memory-management)。 使用“锁定内存页”用户权限时，建议按[如上所述](#max_server_memory)，为 max server memory 设置一个上限   。
 
 > [!IMPORTANT]
 > 应仅在必要时设置此选项，即有迹象表明正在换出 sqlservr 进程时。在这种情况下，错误日志将报告错误 17890，类似于以下示例：`A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`

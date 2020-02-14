@@ -13,10 +13,10 @@ ms.assetid: 4338ce9f-c077-4301-aca5-47ed070ec94d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: eec72a0421576ed4c09d35cd19bb0d842bd08f78
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292367"
 ---
 # <a name="hdfs-file-destination"></a>HDFS 文件目标
@@ -28,12 +28,12 @@ ms.locfileid: "71292367"
 
  若要配置“HDFS 文件目标”，请将“HDFS 文件源”拖放到数据流设计器中，然后双击该组件打开编辑器。
 
- ![HDFS 文件目标编辑器](../../integration-services/data-flow/media/hdfs-file-dest.png "HDFS File Destination Editor")
+ ![HDFS 文件目标编辑器](../../integration-services/data-flow/media/hdfs-file-dest.png "HDFS 文件目标编辑器")
 
 ## <a name="options"></a>选项
  在“Hadoop 文件目标编辑器”  对话框的“常规”  选项卡上配置以下选项。
 
-|字段|描述|
+|字段|说明|
 |-----------|-----------------|
 |**Hadoop 连接**|指定现有的一个 Hadoop 连接管理器，或新建一个 Hadoop 连接管理器。 此连接管理器指明 HDFS 文件的托管位置。|
 |**文件路径**|指定 HDFS 文件的文件名。|

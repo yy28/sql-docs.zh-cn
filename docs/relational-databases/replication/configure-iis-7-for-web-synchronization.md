@@ -14,16 +14,16 @@ ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b77faf60734e6aad7248c59d37033b26bb6b92e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67903209"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>配置 IIS 7 以实现 Web 同步
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  本主题介绍手动配置 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) 版本 7 及更高版本的完整过程，以便与用于合并复制的 Web 同步一起使用。 
+  本主题针对如何将 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) 版本 7 及更高版本用于合并复制的 Web 同步，介绍手动配置 IIS 的完整过程。 
   
  配置 IIS 7 或更高版本是启用 Web 同步所需的三个步骤中的第一步。  
   
@@ -282,7 +282,7 @@ ms.locfileid: "67903209"
   
     4.  如果使用了代理服务器，请单击 **“为 LAN 使用代理服务器”** 和 **“对于本地地址不使用代理服务器”** ，然后单击 **“确定”** 。  
   
-2.  在订阅服务器上的 Internet Explorer 中，用向 replisapi.dll 的地址追加 `?diag` 的方法以诊断模式连接到服务器。 例如： `https://server.domain.com/directory/replisapi.dll?diag`。  
+2.  在订阅服务器上的 Internet Explorer 中，用向 replisapi.dll 的地址追加 `?diag` 的方法以诊断模式连接到服务器。 例如：`https://server.domain.com/directory/replisapi.dll?diag`。  
   
     > [!NOTE]  
     >  在上例中， **server.domain.com** 应原样替换为在 IIS 管理器的 **“服务器证书”** 部分中列出的 **“颁发给”** 名称。  

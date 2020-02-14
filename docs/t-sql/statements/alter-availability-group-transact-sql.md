@@ -23,10 +23,10 @@ ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1d3caeed2e7c57dfd4a3e993872034b066f56737
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70874527"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "70874527"
 
   更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中现有的 Always On 可用性组。 只有当前主副本支持大多数 ALTER AVAILABILITY GROUP 参数。 但是，只有辅助副本支持 JOIN、FAILOVER 和 FORCE_FAILOVER_ALLOW_DATA_LOSS 参数。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -177,7 +177,7 @@ ALTER AVAILABILITY GROUP group_name
  指定备份应该永远不会在主副本上执行。 如果主副本是唯一的联机副本，则备份应不会发生。  
   
  SECONDARY  
- 指定备份应在辅助副本上发生，但在主副本是唯一联机的副本时除外。 在该情况下，备份应在主副本上发生。 这是默认行为。  
+ 指定备份应在辅助副本上发生，但在主副本是唯一联机的副本时除外。 在该情况下，备份应在主副本上发生。 此选项为默认行为。  
   
  无  
  指定您希望在选择要执行备份的副本时备份作业将忽略可用性副本的角色。 请注意，备份作业可能评估其他因素，例如每个可用性副本的备份优先级及其操作状态和已连接状态。  
@@ -199,7 +199,7 @@ ALTER AVAILABILITY GROUP group_name
 |-----------|-----------------------|  
 |1|指定在发生以下任何情况时应启动自动故障转移：<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务停止。<br /><br /> 因为没有从服务器实例接收到 ACK，连接到 WSFC 群集的可用性组的租期到期。 有关详细信息，请参阅[工作原理：SQL Server Always On 租约超时](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)。|  
 |2|指定在发生以下任何情况时应启动自动故障转移：<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例未连接到群集，并且超出了可用性组的用户指定的 HEALTH_CHECK_TIMEOUT 阈值。<br /><br /> 可用性副本处于失败状态。|  
-|3|指定在发生了严重的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部错误（例如孤立的自旋锁、严重的写访问冲突或过多的转储）时应启动自动故障转移。<br /><br /> 这是默认行为。|  
+|3|指定在发生了严重的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部错误（例如孤立的自旋锁、严重的写访问冲突或过多的转储）时应启动自动故障转移。<br /><br /> 此选项为默认行为。|  
 |4|指定在发生了中等程度的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部错误（例如在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部资源池中出现持久的内存不足情况）时应启动自动故障转移。|  
 |5|指定在出现任何符合的失败条件时应启动自动故障转移，这些失败条件包括：<br /><br /> SQL 引擎的工作线程耗尽。<br /><br /> 检测到无法解决的死锁。|  
   
@@ -253,7 +253,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
  您需要将每个新的辅助副本联接到可用性组。 有关详细信息，请参阅本节后面对 JOIN 选项的说明。  
   
  \<server_instance>  
- 指定承载副本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的地址。 地址格式依赖于该实例是默认实例还是命名实例以及它是独立实例还是故障转移群集实例 (FCI)。 语法如下：  
+ 指定承载副本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的地址。 地址格式依赖于该实例是默认实例还是命名实例以及它是独立实例还是故障转移群集实例 (FCI)。 语法如下所示：  
   
  { '*system_name*[\\*instance_name*]' | '*FCI_network_name*[\\*instance_name*]' }  
   
@@ -354,7 +354,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
  指定给定的可用性副本（正在执行辅助角色，也就是充当辅助副本）的数据库是否可以接受来自客户端的连接，可以是以下之一：  
   
  是  
- 不允许与此副本的辅助数据库的用户连接。 它们不可用于读访问。 这是默认行为。  
+ 不允许与此副本的辅助数据库的用户连接。 它们不可用于读访问。 此选项为默认行为。  
   
  READ_ONLY  
  只允许连接应用程序意向属性设置为 ReadOnly  的次要副本中的数据库。 有关此属性的详细信息，请参阅 [Using Connection String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
@@ -386,7 +386,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
  不允许 Application Intent 连接属性设置为 **ReadOnly** 的连接。  在 Application Intent 属性设置为 **ReadWrite** 或者未设置 Application Intent 连接属性时，将允许连接。 有关 Application Intent 连接属性的详细信息，请参阅 [Using Connection String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
   
  ALL  
- 主副本中的数据库允许所有连接。 这是默认行为。  
+ 主副本中的数据库允许所有连接。 此选项为默认行为。  
   
  READ_ONLY_ROUTING_LIST = { ('\<server_instance>' [ ,...n ] ) | NONE}        
  指定一个以逗号分隔的服务器实例列表，这些实例承载在以辅助角色运行时满足以下要求的此可用性组的可用性副本：  
@@ -405,7 +405,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
  从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，可在可读次要副本间实现读意向请求的负载均衡。 可通过将副本放入只读路由列表中的一组嵌套括号中来指定。 有关详细信息和示例，请参阅[在只读副本间配置负载均衡](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing)。  
   
  无  
- 指定此可用性副本为主副本时将不支持只读路由。 这是默认行为。 与 MODIFY REPLICA ON 一起使用时，此值将禁用现有列表（如果有）。  
+ 指定此可用性副本为主副本时将不支持只读路由。 此选项为默认行为。 与 MODIFY REPLICA ON 一起使用时，此值将禁用现有列表（如果有）。  
   
  SESSION_TIMEOUT =  seconds   
  以秒为单位指定会话超时期限。 如果不指定此选项，则在默认情况下，超时期限为 10 秒。 最小值为 5 秒。  
@@ -458,7 +458,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
   
  有关强制故障转移的限制、先决条件和建议的信息，以及强制故障转移对可用性组中以前的主数据库的影响，请参阅[执行可用性组的强制手动故障转移 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)。  
   
- ADD LISTENER 'dns\_name'( \<add_listener_option> )      
+ ADD LISTENER **'** _dns\_name_ **'(** \<add_listener_option> **)**  
  为此可用性组定义新的可用性组侦听器。 仅在主要副本上受支持。  
   
 > [!IMPORTANT]
@@ -560,13 +560,13 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
  `WITH IP ( ('10.120.19.155','255.255.254.0') )`  
   
  *ipv4_address*  
- 指定可用性组侦听器的由四部分组成的 IPv4 地址。 例如， `10.120.19.155`。  
+ 指定可用性组侦听器的由四部分组成的 IPv4 地址。 例如，`10.120.19.155` 。  
   
  *ipv4_mask*  
- 指定可用性组侦听器的由四部分组成的 IPv4 掩码。 例如， `255.255.254.0`。  
+ 指定可用性组侦听器的由四部分组成的 IPv4 掩码。 例如，`255.255.254.0` 。  
   
  ipv6_address   
- 指定可用性组侦听器的 IPv6 地址。 例如， `2001::4898:23:1002:20f:1fff:feff:b3a3`。  
+ 指定可用性组侦听器的 IPv6 地址。 例如，`2001::4898:23:1002:20f:1fff:feff:b3a3` 。  
   
  PORT = listener_port    
  指定端口号 listener_port，以供由 WITH IP 子句指定的可用组侦听器使用  。 PORT 是可选的。  
@@ -575,7 +575,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
   
  例如： `WITH IP ( ('2001::4898:23:1002:20f:1fff:feff:b3a3') ) , PORT = 7777`  
   
- MODIFY LISTENER ‘dns\_name  ’( \<modify\_listener\_option\> )     
+ MODIFY LISTENER **'** _dns\_name_ **'(** \<modify\_listener\_option\> **)**  
  修改此可用性组的现有可用性组侦听器。 仅在主要副本上受支持。  
   
  \<modify\_listener\_option\>  
@@ -605,7 +605,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
   
  有关 AVAILABILITY GROUP Transact-SQL 语句的限制的信息，请参阅 [Always On 可用性组的 Transact-SQL 语句的概述 (SQL Server)](../../database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md)。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>权限  
  对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  还需要 ALTER ANY DATABASE 权限。   

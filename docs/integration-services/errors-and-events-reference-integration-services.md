@@ -16,10 +16,10 @@ ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 64e805e5dd9b334afe252e2c1d43685e9c92b95f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290624"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>错误和事件参考 (Integration Services)
@@ -36,7 +36,7 @@ ms.locfileid: "71290624"
   
 ## <a name="error-messages"></a>错误消息  
   
-|错误的符号名称|描述|  
+|错误的符号名称|说明|  
 |----------------------------|-----------------|  
 |DTS_E_CACHELOADEDFROMFILE|指示由于“缓存转换”转换正在尝试将数据写入内存中的缓存中而导致包无法运行。 但是，缓存连接管理器已将一个缓存文件加载到内存中的缓存中。|  
 |DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER|指示由于指定的连接失败而导致包无法运行。|  
@@ -55,7 +55,7 @@ ms.locfileid: "71290624"
 ## <a name="events-sqlispackage"></a>事件 (SQLISPackage)  
  有关详细信息，请参阅 [由 Integration Services 包记录的事件](../integration-services/performance/events-logged-by-an-integration-services-package.md)。  
   
-|事件|描述|  
+|事件|说明|  
 |-----------|-----------------|  
 |SQLISPackage_12288|指示包已启动。|  
 |SQLISPackage_12289|指示包已成功完成运行。|  
@@ -69,7 +69,7 @@ ms.locfileid: "71290624"
 ## <a name="events-sqlisservice"></a>事件 (SQLISService)  
  有关详细信息，请参阅 [由 Integration Services 服务记录的事件](../integration-services/service/events-logged-by-the-integration-services-service.md)。  
   
-|事件|描述|  
+|事件|说明|  
 |-----------|-----------------|  
 |SQLISService_256|指示服务正要启动。|  
 |SQLISService_257|指示服务已经启动。|  

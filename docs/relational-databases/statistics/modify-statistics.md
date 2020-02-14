@@ -14,10 +14,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c6f34bf5db992f1d7062f9def1805996701eda5f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72906211"
 ---
 # <a name="modify-statistics"></a>修改统计信息
@@ -61,9 +61,9 @@ ms.locfileid: "72906211"
   
 5.  右键单击要修改的统计信息对象，然后选择  “属性”。  
   
-6.  在  “统计信息属性 -”*statistics_name* 对话框中的  “常规页”上，单击  “添加”  “删除”  “上移”  “下移”或上述任意组合，以更改统计信息的属性。 请记住，某一列在“统计信息列”网格内的位置可能会显著影响统计信息的有用性  。  
+6.  在“统计信息属性 - statistics_name”对话框中的“常规”页面上，单击“添加”、“删除”、“上移”、“下移”或上述任何组合，以更改统计信息的属性        。 请记住，某一列在“统计信息列”网格内的位置可能会显著影响统计信息的有用性  。  
   
-7.  单击“确定”  。  
+7.  单击“确定”。   
 
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **修改统计信息**  

@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: b9567832-e6a8-45b2-a3ed-ea12aa002f4b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 95d2a3538cb775efb346d59e7db75c238e35c5d6
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: d0983db7dee94269981933f115594bdbb9c6a115
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769804"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287546"
 ---
 # <a name="replication-publishing-model-overview"></a>复制发布模型概述
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "68769804"
   
  ![复制组件和数据流](../../../relational-databases/replication/publish/media/replintro1.gif "复制组件和数据流")  
   
-## <a name="publisher"></a>发布服务器  
+## <a name="publisher"></a>发布者  
  发布服务器是一种数据库实例，它通过复制向其他位置提供数据。 发布服务器可以有一个或多个发布，每个发布定义一组要复制的具有逻辑关系的对象和数据。  
   
 ## <a name="distributor"></a>分发服务器  
@@ -68,7 +68,7 @@ ms.locfileid: "68769804"
   
 ## <a name="see-also"></a>另请参阅  
  [复制代理概述](../../../relational-databases/replication/agents/replication-agents-overview.md)   
- [复制类型](../../../relational-databases/replication/types-of-replication.md)   
+ [Types of Replication](../../../relational-databases/replication/types-of-replication.md)   
  [为 AlwaysOn 可用性组配置复制 (SQL Server)](../../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)   
  [维护 AlwaysOn 发布数据库 (SQL Server)](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
   

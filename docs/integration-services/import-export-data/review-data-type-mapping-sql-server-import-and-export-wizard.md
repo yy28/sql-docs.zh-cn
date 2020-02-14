@@ -12,10 +12,10 @@ ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f0bd7fe34b1945c3f0f2255e256ead38a6d15e3a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296269"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>查看数据类型映射（SQL Server 导入和导出向导）
@@ -31,12 +31,12 @@ ms.locfileid: "71296269"
 ## <a name="screen-shot-of-the-review-data-type-mapping-page"></a>“查看数据类型映射”页的屏幕截图
  以下屏幕截图显示了向导的“查看数据类型映射”页的一个示例  。
  
- 在此示例中:
+ 在本示例中：
  -   用户在“列映射”对话框中指定了可能不成功的映射  。
  -   “表”  列表中行上的警告图标指示，在将查询结果中的至少一列数据转换为目标表中的兼容数据类型时出现问题。
  -   “数据类型映射”列表中第一行的警告图标指示，从源列的 int 数据类型映射到目标列的 smalldatetime 数据类型可能会导致数据丢失    。
  
- ![导入和导出向导的“查看数据类型映射”页](../../integration-services/import-export-data/media/review-mapping.png "Review Data Type Mapping page of the Import and Export Wizard") 
+ ![“导入和导出向导”的“查看数据类型映射”页面](../../integration-services/import-export-data/media/review-mapping.png "“导入和导出向导”的“查看数据类型映射”页面") 
  
 ## <a name="review-the-source-and-destination-tables"></a>查看源表和目标表  
  “查看数据类型映射”  页的上半部分是“表”  列表，其中列出了要从源复制到目标的表。 若要查看单个表的转换信息，请在“表”  列表中选择表。 所选表的各列的转换信息显示在“数据类型映射”网格中的下半部分页面  。
@@ -47,10 +47,10 @@ ms.locfileid: "71296269"
   
  下表对“表”  列表中的列进行了说明。  
   
-|“列”|描述|  
+|列|说明|  
 |------------|-----------------|  
 |（源图标）|指示数据类型转换成功的可能性：<br /> - **绿色** 的复选标记图标指示向导认为此表的所有数据类型转换都将成功。<br />- **黄色** 的警告图标指示你应检查向导将执行的个别转换。 若要检查这些转换，可以选择表，然后在 **“数据类型映射”** 列表中检查单个列的转换。<br />- **红色** 的错误图标指示向导不能可靠地执行对此表的某些转换。|  
-|**源**|源表的名称。|  
+|**数据源**|源表的名称。|  
 |（目标图标）|指示目标是已经存在还是将由向导创建：<br /> -   表图标指示目标是一个现有表。<br />-   阳光四射的表图标指示目标是一张新表，需要由向导创建。|  
 |**目标**|目标表的名称。|  
   
@@ -63,7 +63,7 @@ ms.locfileid: "71296269"
 
 下表对“数据类型映射”  列表中的列进行了说明。 
 
-|“列”|描述|  
+|列|说明|  
 |------------|-----------------|  
 |（转换图标）|指示数据类型转换成功的可能性：<br /> - **绿色** 的复选标记图标指示向导认为此列的数据类型转换会成功。<br />- **黄色** 的警告图标指示你应检查向导将执行的转换。 若要查看转换，请双击该列以查看“列转换详细信息”  对话框。 有关详细信息，请参阅 [“列转换详细信息”对话框](../../integration-services/import-export-data/column-conversion-details-dialog-box-sql-server-import-and-export-wizard.md)。<br />- **红色** 的错误图标指示向导不能可靠地执行转换。|  
 |**源列**|源列的名称。|  

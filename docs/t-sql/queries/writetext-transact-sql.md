@@ -24,10 +24,10 @@ ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c10e7259062316454e4e0ecf430f6fdb87c53caf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948103"
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "67948103"
 > [!IMPORTANT]
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]请改用大值数据类型和 [UPDATE](../../t-sql/queries/update-transact-sql.md) 语句的 .WRITE 子句  。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -68,7 +68,7 @@ WRITETEXT [BULK]
  data   
  要存储的实际 text、ntext 或 image 数据    。 data 可以是文字或参数  。 对于 text、ntext 或 image 数据，可以使用 WRITETEXT 以交互方式插入的最大文本长度约为 120 KB    。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  使用 WRITETEXT 替换 text、ntext 或 image 数据，使用 UPDATETEXT 修改 text、ntext 或 image 数据       。 UPDATETEXT 更加灵活，因为它只更改 text、ntext 或 image 列的一部分而非整个列    。  
   
  为获得最佳性能，建议按照块区大小为 8040 字节倍数的方式插入或更新 text、ntext 或 image 数据。     

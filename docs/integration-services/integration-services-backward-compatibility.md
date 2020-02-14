@@ -18,10 +18,10 @@ ms.assetid: bfff5b25-cfe1-449b-8e07-38cd511ac307
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bb6f782de8d271edf005f5adb69e8c3e6b8945d3
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296234"
 ---
 # <a name="integration-services-backward-compatibility"></a>Integration Services 的向后兼容性
@@ -29,7 +29,7 @@ ms.locfileid: "71296234"
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  本主题介绍 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的不同版本之间的更改。 它包括不再可用或计划在将来的版本中删除的功能。 本部分还介绍对产品所做的更改，已知这些更改会使包含 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 功能的现有应用程序无法继续工作，或会使其行为发生变化。  
+  本主题介绍 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的不同版本之间的更改。 它包括不再可用或计划在将来的版本中删除的功能。 本部分还介绍对产品所做的更改，已知这些更改会使包含 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 功能的现有应用程序无法继续工作，或会使其行为发生变化。  
   
 ## <a name="deprecated-integration-services-features-in-sql-server-2016"></a>SQL Server 2016 中不推荐使用的 Integration Services 功能
 

@@ -19,10 +19,10 @@ ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3cba502e5f89c39df67b74909f3185ad45c659e2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298358"
 ---
 # <a name="data-mining-query-task"></a>数据挖掘查询任务
@@ -80,11 +80,11 @@ ms.locfileid: "71298358"
 > [!NOTE]  
 >  任务名称在一个包内必须是唯一的。  
   
- **Description**  
+ **说明**  
  键入数据挖掘查询任务的说明。  
   
 ### <a name="mining-model-tab-options"></a>挖掘模型选项卡选项  
- **“连接”**  
+ **Connection**  
  从列表中选择 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接管理器，或单击  “新建”创建新的连接管理器。  
   
  **相关主题：** [Analysis Services 连接管理器](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
@@ -112,7 +112,7 @@ ms.locfileid: "71298358"
 > [!NOTE]  
 >  任务名称在一个包内必须是唯一的。  
   
- **Description**  
+ **说明**  
  键入数据挖掘查询任务的说明。  
   
 ### <a name="build-query-tab-options"></a>“生成查询”选项卡选项  
@@ -133,7 +133,7 @@ ms.locfileid: "71298358"
  **“变量名称”**  
  在列表中选择变量以将其映射到参数。  
   
- **“添加”**  
+ **添加**  
  将参数添加到列表。  
   
  **删除**  
@@ -151,7 +151,7 @@ ms.locfileid: "71298358"
  **结果类型**  
  指示是返回单行还是返回完整结果集。  
   
- **“添加”**  
+ **添加**  
  向列表中添加结果集。  
   
  **删除**  
@@ -168,11 +168,11 @@ ms.locfileid: "71298358"
 > [!NOTE]  
 >  任务名称在一个包内必须是唯一的。  
   
- **Description**  
+ **说明**  
  键入数据挖掘查询任务的说明。  
   
 ### <a name="output-tab-options"></a>“输出”选项卡选项  
- **“连接”**  
+ **Connection**  
  从列表中选择连接管理器，或单击“新建”  以创建新的连接管理器。  
   
  **新建**  

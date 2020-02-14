@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 4d763ccf2799ea72a1882a576e4b17ef839e3f1e
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68742952"
 ---
 # <a name="restore-statements---labelonly-transact-sql"></a>RESTORE 语句 - LABELONLY (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68742952"
 > [!NOTE]  
 >  有关参数的说明，请参阅 [RESTORE 参数 (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md)。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -78,7 +78,7 @@ FROM <backup_device>
 ## <a name="result-sets"></a>结果集  
  RESTORE LABELONLY 的结果集包含提供下列信息的一个行。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**MediaName**|**nvarchar(128)**|介质的名称。|  
 |**MediaSetId**|**uniqueidentifier**|介质集的唯一标识号。|  
@@ -100,8 +100,8 @@ FROM <backup_device>
 ## <a name="general-remarks"></a>一般备注  
  执行 RESTORE LABELONLY 是一种查找备份介质所含内容的快速方法。 由于 RESTORE LABELONLY 只读取介质标头，因此，即使使用高容量磁带设备，该语句的执行速度也会非常快。  
   
-## <a name="security"></a>Security  
- 备份操作可以有选择地指定介质集的密码。 如果为介质集定义了密码，则必须在 RESTORE 语句中指定正确的密码。 此密码可防止在未经授权的情况下使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具执行还原操作以及向媒体追加备份集。 但是，密码不会阻止使用 BACKUP 语句的 FORMAT 选项覆盖介质。  
+## <a name="security"></a>安全性  
+ 备份操作可以有选择地指定介质集的密码。 如果为介质集定义了密码，则必须在 RESTORE 语句中指定正确的密码。 此密码可防止在未经授权的情况下使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具执行还原操作以及向介质追加备份集。 但是，密码不会阻止使用 BACKUP 语句的 FORMAT 选项覆盖介质。  
   
 > [!IMPORTANT]  
 >  此密码提供的安全性较低。 它旨在防止经过授权的用户或未经授权的用户使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具执行不正确的还原操作。 但是不能防止通过其他方式或通过替换密码来读取备份数据。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 保护备份的最佳做法是将备份磁带存储在安全位置，或者备份到由适当的访问控制列表 (ACL) 保护的磁盘文件。 ACL 应设置在创建备份的根目录下。  

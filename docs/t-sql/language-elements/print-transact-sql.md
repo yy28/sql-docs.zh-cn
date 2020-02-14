@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cc83aca49b6147835353538d809be121756ecda6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072401"
 ---
 # <a name="print-transact-sql"></a>PRINT (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68072401"
 
   向客户端返回用户定义消息。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,13 +47,13 @@ PRINT msg_str | @local_variable | string_expr
  msg_str   
  字符串或 Unicode 字符串常量。 有关详细信息，请参阅[常量 (Transact-SQL)](../../t-sql/data-types/constants-transact-sql.md)。  
   
- @ local_variable    
- 任何有效的字符数据类型的变量。 @  local\_variable  的数据类型必须为 char  、nchar  、varchar  或 nvarchar  ，或者必须能够隐式转换为这些数据类型。  
+ **@** *local_variable*  
+ 是任何有效的字符数据类型的变量。 @  local\_variable  的数据类型必须为 char  、nchar  、varchar  或 nvarchar  ，或者必须能够隐式转换为这些数据类型。  
   
  string_expr   
  返回字符串的表达式。 可包括串联的文字值、函数和变量。 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果消息字符串为非 Unicode 字符串，则最长不得超过 8,000 个字符；如果消息字符串为 Unicode 字符串，则最长不得超过 4,000 个字符。 超过最大长度的字符串会被截断。 varchar(max) 和 nvarchar(max) 数据类型被截断为不大于 varchar(8000) 和 nvarchar(4000) 的数据类型     。  
   
  RAISERROR 也可以用于返回消息。 RAISERROR 与 PRINT 相比具有以下优点：  

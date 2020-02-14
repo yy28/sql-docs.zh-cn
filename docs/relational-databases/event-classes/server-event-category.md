@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c7aaa763c5764c87335532ced73cbc3c64f6e28a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67911184"
 ---
 # <a name="server-event-category"></a>Server 事件类别
@@ -27,7 +27,7 @@ ms.locfileid: "67911184"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|描述|  
+|主题|说明|  
 |-----------|-----------------|  
 |[Mount Tape 事件类](../../relational-databases/event-classes/mount-tape-event-class.md)|指示收到磁带装入请求。|  
 |[Server Memory Change 事件类](../../relational-databases/event-classes/server-memory-change-event-class.md)|指示 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内存使用量已更改。|  

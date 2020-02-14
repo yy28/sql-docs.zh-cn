@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d35637b9452500caac680439bd1ef09442d9ef11
-ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
+ms.openlocfilehash: f5861ece9a27e0d38274e9cac97ae046a9f6bdde
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73142782"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910100"
 ---
 # <a name="best-practices-with-query-store"></a>查询存储最佳做法
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -73,7 +73,7 @@ SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);
  **数据刷新间隔（分钟）** ：它定义将收集的运行时统计信息保存到磁盘的频率。 它在图形用户界面 (GUI) 中以分钟为单位，但在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中以秒为单位。 默认值为 900 秒，在图形用户界面中为 15 分钟。 如果工作负载不生成大量不同的查询和计划或者你能够接受在数据库关闭之前花更长的时间来保留数据，可考虑使用更大的值。
  
 > [!NOTE]
-> 如果出现故障转移或关闭命令，使用跟踪标志 7745 会阻止查询存储数据写入磁盘。 有关详情，请查阅[在任务关键型服务器上使用跟踪标志改善灾难恢复](#Recovery)部分。
+> 如果出现故障转移或关闭命令，使用跟踪标志 7745 会阻止查询存储数据写入磁盘。 有关更多信息，请参阅[在任务关键型服务器上使用跟踪标志](#Recovery)部分。
 
 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 为“数据刷新间隔”设置不同的值  ：  
   
@@ -111,7 +111,10 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
 -   **AUTO**：忽略不太频繁的查询以及编译和执行持续时间不长的查询。 执行计数、编译和运行时持续时间的阈值由内部决定。 从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，这是默认选项。
 -   **无**：查询存储停止捕获新查询。  
 -   **自定义**：支持额外控件和微调数据收集策略功能。 新的自定义设置定义在内部捕获策略时间阈值期间执行的操作。 这是评估配置条件的时间边界，如果所有值为 true，则查询存储可以捕获查询。
-  
+
+> [!IMPORTANT]
+> 当查询存储捕获模式设置为“全部”、“自动”或“自定义”时，始终捕获游标、存储过程中的查询和本机编译的查询    。 若要捕获本机编译的查询，请使用 [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) 启用每个查询统计信息的收集。 
+
  以下脚本将 QUERY_CAPTURE_MODE 设置为 AUTO：
   
 ```sql  
@@ -203,14 +206,14 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
   
  下表说明了何时使用每个 Query Store 视图：  
   
-|SQL Server Management Studio|应用场景|  
+|SQL Server Management Studio|场景|  
 |---------------|--------------|  
 |**回归查询**|查明哪些查询的执行度量值最近进行了回归（例如，变得更糟）。 <br />使用此视图将应用程序中观察到的性能问题与需要进行修复或改进的实际查询关联起来。|  
 |**总体资源消耗**|针对任意执行度量值分析数据库的总资源消耗量。<br />使用此视图可以确定资源模式（白天工作负荷与夜间工作负荷的比较），并优化数据库的总体消耗。|  
 |**资源使用排名靠前的查询**|选择所关注的执行度量值，确定在指定的时间间隔内具有最极端值的查询。 <br />此视图可以帮助你关注最相关的查询，这些查询对数据库资源消耗的影响最大。|  
 |**具有强制计划的查询**|使用查询存储列出以前的强制计划。 <br />使用此视图快速访问当前的所有强制计划。|  
 |**变化程度高的查询**|分析执行变化程度较高的查询，此类变化可涉及任何可用的维度，例如所需时间间隔内的持续时间、CPU 时间、IO 和内存使用情况。<br />使用此视图可以标识性能有很大差异且可能会影响用户跨应用程序体验的查询。|  
-|**查询等待统计信息**|分析数据库中最活跃的等待类别和对所选等待类别贡献最大的查询。<br />使用此视图分析等待统计信息并识别可能在应用程序中影响用户体验的查询。<br /><br />适用范围：从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18.0 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始。|  
+|**查询等待统计信息**|分析数据库中最活跃的等待类别和对所选等待类别贡献最大的查询。<br />使用此视图分析等待统计信息并识别可能在应用程序中影响用户体验的查询。<br /><br />适用对象：从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18.0 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始。|  
 |**跟踪的查询**|实时跟踪最重要查询的执行情况。 通常情况下，使用此视图是因为你计划强制执行相关查询，因此需确保查询性能的稳定性。|
   
 > [!TIP]
@@ -227,7 +230,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
        > 
        > |形状|含义|  
        > |-------------------|-------------|
-       > |Circle|查询已完成，这意味着常规执行成功完成。|
+       > |圆形|查询已完成，这意味着常规执行成功完成。|
        > |Square|已取消，这意味着客户端发起的执行中止。|
        > |Triangle|失败，这意味着异常执行中止。|
        > 
@@ -322,11 +325,11 @@ FROM sys.database_query_store_options;
 ## <a name="set-the-optimal-query-store-capture-mode"></a>设置最佳查询存储捕获模式 
  在 Query Store 中保留最相关数据。 下表描述了每个查询存储捕获模式的典型方案：  
   
-|Query Store 捕获模式|应用场景|  
+|Query Store 捕获模式|场景|  
 |------------------------|--------------|  
-|**全部**|对工作负载进行彻底地分析，分析所有查询的形状及其执行频率和其他统计信息。<br /><br /> 确定工作负荷中的新查询。<br /><br /> 检测是否使用了即席查询来确定是否有机会进行用户参数化或自动参数化。<br /><br />注意：这是 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中的默认捕获模式。|
+|**全部**|对工作负载进行彻底地分析，分析所有查询的形状及其执行频率和其他统计信息。<br /><br /> 识别工作负荷中的新查询。<br /><br /> 检测是否使用即席查询来识别用户或自动参数化的机会。<br /><br />注意：这是 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中的默认捕获模式。|
 |**Auto**|关注相关且可操作的查询。 例如，那些定期执行的查询或资源消耗很大的查询。<br /><br />注意：从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，这是默认捕获模式。|  
-|**无**|你已经捕获了需要在运行时监视的查询集，因此需消除其他查询可能会带来的干扰。<br /><br /> “无”适用于测试和基准测试环境。<br /><br /> “无”也适用于需要提供已配置的 Query Store 配置来监视其应用程序工作负荷的软件供应商。<br /><br /> 在使用“无”时应格外小心，因为可能无法跟踪和优化重要的新查询。 避免使用“无”，除非你的特定方案需要使用它。|  
+|无 |你已经捕获了需要在运行时监视的查询集，因此需消除其他查询可能会带来的干扰。<br /><br /> “无”适用于测试和基准测试环境。<br /><br /> “无”也适用于需要提供已配置的 Query Store 配置来监视其应用程序工作负荷的软件供应商。<br /><br /> 在使用“无”时应格外小心，因为可能无法跟踪和优化重要的新查询。 避免使用“无”，除非你的特定方案需要使用它。|  
 |**自定义**|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 在 `ALTER DATABASE SET QUERY_STORE` 命令下引入自定义捕获模式。 启用后，在新的“查询存储捕获策略”设置下有额外可用的查询存储配置，可用于微调特定服务器中的数据收集。<br /><br />新的自定义设置定义在内部捕获策略时间阈值期间执行的操作。 这是评估配置条件的时间边界，如果所有值为 true，则查询存储可以捕获查询。 有关详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)。|  
 
 > [!NOTE]
@@ -336,7 +339,7 @@ FROM sys.database_query_store_options;
 将查询存储配置为只包含最相关的数据，这样在持续运行的时候对常规工作负载的影响最小，方便进行故障排除。  
 下表提供最佳实践：  
   
-|最佳实践|设置|  
+|最佳做法|设置|  
 |-------------------|-------------|  
 |对保留的历史数据进行限制。|配置基于时间的策略以激活自动清理功能。|  
 |筛选掉不相关的查询。|将“查询存储捕获模式”配置为“自动”   。|  

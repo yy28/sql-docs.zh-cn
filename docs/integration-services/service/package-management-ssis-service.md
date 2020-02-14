@@ -28,10 +28,10 @@ ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 33ce0a748381e425371b6f36c1ceeaaba4b62501
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296881"
 ---
 # <a name="package-management-ssis-service"></a>包管理（SSIS 服务）
@@ -110,7 +110,7 @@ ms.locfileid: "71296881"
   
  您可以从以下位置导出 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包，或将包导入以下位置：  
   
--   可以导入存储在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例、文件系统或 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区中的包。 导入的包将保存至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区中的文件夹。  
+-   可以导入存储在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例、文件系统或 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区中的包。 导入的包将保存至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区中的文件夹。  
   
 -   可以将存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例、文件系统或 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区中的包导出至不同的存储格式和位置。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "71296881"
   
 ### <a name="to-import-a-package-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 导入包  
   
-1.  单击  “开始”，指向 **Microsoft** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，然后单击 **SQL Server Management Studio**。  
+1.  单击“开始”  ，指向 Microsoft  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，然后单击“SQL Server Management Studio”  。  
   
 2.  在 **“连接到服务器”** 对话框中，设置以下选项：  
   
@@ -160,7 +160,7 @@ ms.locfileid: "71296881"
   
 ### <a name="to-export-a-package-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 导出包  
   
-1.  单击  “开始”，指向 **Microsoft** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，然后单击 **SQL Server Management Studio**。  
+1.  单击“开始”  ，指向 Microsoft  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，然后单击“SQL Server Management Studio”  。  
   
 2.  在 **“连接到服务器”** 对话框中，设置下列选项：  
   
@@ -197,7 +197,7 @@ ms.locfileid: "71296881"
   
 ### <a name="options"></a>选项  
  **包位置**  
- 选择要向其中导入包的存储位置的类型。 可用选项包括：  
+ 选择要向其中导入包的存储位置的类型。 提供了以下选项：  
   
  **SQL Server**  
   
@@ -217,7 +217,7 @@ ms.locfileid: "71296881"
  **身份验证类型**  
  选择身份验证类型。  
   
- **User name**  
+ **用户名**  
  如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，请提供用户名。  
   
  **密码**  
@@ -237,11 +237,11 @@ ms.locfileid: "71296881"
   
 ### <a name="options"></a>选项  
  **包位置**  
- 选择要将包导出到的存储区的类型。 可用选项包括：  
+ 选择要将包导出到的存储区的类型。 提供了以下选项：  
   
  **SQL Server**  
   
- **“文件系统”**  
+ **文件系统**  
   
  **SSIS 包存储**  
   
@@ -257,7 +257,7 @@ ms.locfileid: "71296881"
  **身份验证类型**  
  选择身份验证类型。  
   
- **User name**  
+ **用户名**  
  如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，请提供用户名。  
   
  **密码**  

@@ -23,10 +23,10 @@ ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 15da54550dd314a50d4c3235a77394292d23f1d9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296950"
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services 服务（SSIS 服务）
@@ -79,7 +79,7 @@ ms.locfileid: "71296950"
   
  可以使用以下某项 Microsoft 管理控制台 (MMC) 管理单元来管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务：SQL Server 配置管理器或服务。 若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中管理包，必须首先确保该服务已启动。  
   
- 默认情况下，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务配置为管理[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的 msdb 数据库中的包，该实例与 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 同时安装。 如果未同时安装[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例，则 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务可配置为管理本地默认[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的 msdb 数据库中的包。 若要管理 [!INCLUDE[ssDE](../../includes/ssde-md.md)]某个命名实例或远程实例中存储的包或 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的多个实例中存储的包，则必须修改该服务的配置文件。
+ 默认情况下， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务配置为管理 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的 msdb 数据库中的包，该实例与 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]同时安装。 如果未同时安装 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，则 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务可配置为管理本地默认 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的 msdb 数据库中的包。 若要管理 [!INCLUDE[ssDE](../../includes/ssde-md.md)]某个命名实例或远程实例中存储的包或 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的多个实例中存储的包，则必须修改该服务的配置文件。
   
  默认情况下， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务配置为在该服务停止时停止正在运行的包。 但是， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务不会等待包停止，因此，在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务停止后，一些包可能仍在运行。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "71296950"
   
 ## <a name="set-the-properties-of-the-service"></a>设置服务的属性
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务管理并监视 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的包。 首次安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]时， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务会启动，启动类型设置为自动。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务管理并监视 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的包。 首次安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 时，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务会启动，启动类型设置为自动。  
   
  安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务后，可以使用 SQL Server 配置管理器或 Services MMC 管理单元设置其属性。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "71296950"
         > [!NOTE]  
         >   “高级”选项卡不包含 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的信息。  
   
-4.  单击 **“确定”** 。  
+4.  单击“确定”。   
   
 5.  在“文件”菜单上，单击“退出”以关闭“SQL Server 配置管理器”管理单元。     
   
@@ -126,7 +126,7 @@ ms.locfileid: "71296950"
   
 4.  在 **“SQL Server Integration Services 属性”** 对话框中，可以执行下列操作：  
   
-    -   单击 **“常规”** 选项卡。若要启用该服务，请选择手动或自动启动类型。 若要禁用该服务，请选择 **“启动类型”** 框中的“禁用”。 选择“禁用”不会停止当前正在运行的服务。  
+    -   单击“常规”选项卡  。若要启用该服务，请选择手动或自动启动类型。 若要禁用该服务，请选择 **“启动类型”** 框中的“禁用”。 选择“禁用”不会停止当前正在运行的服务。  
   
          如果该服务已经启用，则可以单击 **“停止”** 停止该服务，或单击 **“启动”** 启动该服务。  
   
@@ -136,7 +136,7 @@ ms.locfileid: "71296950"
   
     -   单击 **“依赖项”** 选项卡可查看依赖服务的列表。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务没有任何依赖项。  
   
-5.  单击“确定”  。  
+5.  单击“确定”。   
   
 6.  另外，如果启动类型为“手动”或“自动”，还可以右键单击 **SQL Server Integration Services**，然后单击“启动”、“停止”或“重新启动”。   
   
@@ -293,7 +293,7 @@ to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487
   
 4.  在 **“连接到服务器”** 对话框中，提供服务器名。 可以使用句点 (.)、(local) 或 **localhost** 来指示本地服务器。  
   
-5.  单击 **“连接”** 。  
+5.  单击“连接”  。  
 
 ## <a name="connect-to-a-remote-ssis-server"></a>连接到远程 SSIS 服务器
   
@@ -314,12 +314,12 @@ to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487
   
 3.  在 **“服务器类型”** 列表中选择 **Integration Services** 。  
   
-4.  在“服务器名称”  文本框中键入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的名称。  
+4.  在“服务器名称”文本框中键入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的名称  。  
   
     > [!NOTE]  
     >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务是不特定于实例的。 通过使用正运行 Integration Services 服务的计算机的名称连接到该服务。  
   
-5.  单击 **“连接”** 。  
+5.  单击“连接”  。  
   
 > [!NOTE]  
 >  **“查找服务器”** 对话框中不显示 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的远程实例。 此外， **“连接到服务器”** 对话框中的 **“连接选项”** 选项卡上的选项不适用于 **连接（该选项卡在单击** “选项” [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 按钮后显示）。  
@@ -371,7 +371,7 @@ to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487
  如果您是在客户端计算机上使用本地 Windows 帐户工作，则只有远程计算机上存在与客户端计算机上的本地帐户的帐户名和密码相同并且具有相应权限的本地帐户时，才可以连接到远程计算机上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务。  
   
 ### <a name="by-default-the-ssis-service-does-not-support-delegation"></a>默认情况下，SSIS 服务不支持委派  
-默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务不支持委派凭据，或有时称为双跃点的功能。 在此方案中，你在客户端计算机上工作， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务在第二台计算机上运行和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在第三台计算机上运行。 首先， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 成功地将你的凭据从客户端计算机传递到第二台计算机上， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务正在这台计算机上运行。 但是，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务不能将你的凭据从第二台计算机委派到正在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的第三台计算机上。
+默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务不支持委派凭据，或有时称为双跃点的功能。 在此方案中，你在客户端计算机上工作， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务在第二台计算机上运行和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在第三台计算机上运行。 首先， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 成功地将你的凭据从客户端计算机传递到第二台计算机上， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务正在这台计算机上运行。 但是， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务不能将你的凭据从第二台计算机委派到正在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的第三台计算机上。
 
 可通过将“信任此用户对任何服务的委派(仅 Kerberos)”  的权限授予 SQL Server 服务帐户（它将 Integration Services 服务 (ISServerExec.exe) 作为子进程启动），从而启用凭据委派。 在授予此权限之前，请考虑它是否符合组织的安全要求。
 

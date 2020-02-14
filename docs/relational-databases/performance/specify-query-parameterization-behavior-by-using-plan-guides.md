@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f0f738ff-2819-4675-a8c8-1eb6c210a7e6
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: f79996ca171fa6c77daaf4c25bc3c1a8da9420d9
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.openlocfilehash: 8c4c252de5a9d23ecfbaee06ca6322f3b08b275f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74165984"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761881"
 ---
 # <a name="specify-query-parameterization-behavior-by-using-plan-guides"></a>使用计划指南指定查询参数化行为
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,13 +31,13 @@ ms.locfileid: "74165984"
   
  可以通过下列方式使用计划指南来覆盖数据库的参数化行为：  
   
--   当 PARAMETERIZATION 数据库选项设置为 SIMPLE 时，您可以指定对某一类查询尝试执行强制参数化。 可以通过在查询的参数化表单上创建 TEMPLATE 计划指南并在 [sp_create_plan_guide](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md) 存储过程中指定 PARAMETERIZATION FORCED 查询提示来完成此操作。 您可以将此种计划指南看作只对某一类查询（而不是所有查询）启用强制参数化的方法。  
+-   当 PARAMETERIZATION 数据库选项设置为 SIMPLE 时，您可以指定对某一类查询尝试执行强制参数化。 可以通过在查询的参数化表单上创建 TEMPLATE 计划指南并在 [sp_create_plan_guide](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md) 存储过程中指定 PARAMETERIZATION FORCED 查询提示来完成此操作。 您可以将此种计划指南看作只对某一类查询（而不是所有查询）启用强制参数化的方法。 有关简单参数化的更多信息，请参阅[查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md#SimpleParam)。 
   
--   当 PARAMETERIZATION 数据库选项设置为 FORCED 时，您可以指定对某一类查询仅尝试执行简单参数化而非强制参数化。 可以通过在查询的强制参数化表单上创建 TEMPLATE 计划指南并在 **sp_create_plan_guide**中指定 PARAMETERIZATION SIMPLE 查询提示来完成此操作。  
+-   当 PARAMETERIZATION 数据库选项设置为 FORCED 时，您可以指定对某一类查询仅尝试执行简单参数化而非强制参数化。 可以通过在查询的强制参数化表单上创建 TEMPLATE 计划指南并在 **sp_create_plan_guide**中指定 PARAMETERIZATION SIMPLE 查询提示来完成此操作。  有关强制参数化的详细信息，请参阅[查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)。 
   
  请考虑 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的以下查询：  
   
-```  
+```sql  
 SELECT pi.ProductID, SUM(pi.Quantity) AS Total  
 FROM Production.ProductModel AS pm   
     INNER JOIN Production.ProductInventory AS pi   
@@ -57,7 +57,7 @@ GROUP BY pi.ProductID, pi.Quantity HAVING SUM(pi.Quantity) > 50;
 
 以下脚本既可用于获取参数化查询也可用于之后对其创建计划指南：  
   
-```  
+```sql  
 DECLARE @stmt nvarchar(max);  
 DECLARE @params nvarchar(max);  
 EXEC sp_get_query_template   

@@ -13,15 +13,15 @@ ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a0933927b3c2fe9f6231831e29c329afb5c4e63c
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710819"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Web 同步的安全体系结构
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以对 Web 同步安全性的配置进行细粒度控制。 本主题提供了 Web 同步配置中可包括的所有组件以及这些组件之间的连接信息的综合列表。 [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以对 Web 同步安全性的配置进行精细控制。 本主题提供了 Web 同步配置中可包括的所有组件以及这些组件之间的连接信息的综合列表。 [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
   
  下图显示了所有可用连接，但特定拓扑中可能不需要其中的某些连接。 例如，仅当使用 FTP 传递快照时才需要与 FTP 服务器建立连接。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "71710819"
 ## <a name="a-windows-user-under-which-the-merge-agent-runs"></a>A. 用于运行合并代理的 Windows 用户  
  在同步期间，合并代理 (A) 在订阅服务器上启动。 合并代理可以从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理作业的作业步或独立的自定义应用程序中启动。 如果合并代理从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理作业的作业步启动，则该合并代理将在您指定的 Windows 用户的上下文中运行。 如果未指定 Windows 用户，则该合并代理将在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理的 Windows 服务帐户的上下文中运行。  
   
-|帐户类型|指定帐户的位置|  
+|帐户的类型|指定帐户的位置|  
 |---------------------|------------------------------------|  
 |Windows 用户|[!INCLUDE[tsql](../../../includes/tsql-md.md)]：[sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) 的 `@job_login` 和 `@job_password` 参数。<br /><br /> RMO（复制管理对象）： <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 的 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 和 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>属性。|  
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理的 Windows 服务帐户|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器|  
@@ -132,7 +132,7 @@ ms.locfileid: "71710819"
   
  该帐户还应属于 IIS_WPG 组。 有关详细信息，请参阅[配置 IIS 以实现 Web 同步](../../../relational-databases/replication/configure-iis-for-web-synchronization.md)中的“设置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制侦听器的权限”一节。  
   
-|帐户类型|指定帐户的位置|  
+|帐户的类型|指定帐户的位置|  
 |---------------------|------------------------------------|  
 |具有所需权限的任何 Windows 用户。|Internet 信息服务 (IIS) 管理器。 |  
   

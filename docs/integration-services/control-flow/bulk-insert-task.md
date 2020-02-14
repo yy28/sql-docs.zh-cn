@@ -19,10 +19,10 @@ ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 00c117a2282216f5f326cbf524f3326af5cc93e1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294332"
 ---
 # <a name="bulk-insert-task"></a>大容量插入任务
@@ -71,7 +71,7 @@ ms.locfileid: "71294332"
 ## <a name="custom-log-entries-available-on-the-bulk-insert-task"></a>大容量插入任务可用的自定义日志项  
  下表列出了大容量插入任务的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
-|日志项|描述|  
+|日志项|说明|  
 |---------------|-----------------|  
 |**BulkInsertTaskBegin**|指示大容量插入开始。|  
 |**BulkInsertTaskEnd**|指示大容量插入完成。|  
@@ -124,7 +124,7 @@ ms.locfileid: "71294332"
  若要了解大容量插入，请参阅[大容量插入任务](../../integration-services/control-flow/bulk-insert-task.md)和[用来导入或导出数据的格式化文件 (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)。  
   
 ### <a name="options"></a>选项  
- **“连接”**  
+ **Connection**  
  在列表中选择一个 OLE DB 连接管理器，或单击“\<新建连接…>”，创建一个新连接  。  
   
  **相关主题：** [OLE DB 连接管理器](../../integration-services/connection-manager/ole-db-connection-manager.md)  
@@ -135,7 +135,7 @@ ms.locfileid: "71294332"
  **格式**  
  选择大容量插入任务的格式源。 此属性具有下表所列的选项。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**使用文件**|选择包含格式规范的文件。 选择此选项将显示动态选项 **FormatFile**。|  
 |**指定**|指定格式。 选择此选项将显示动态选项 **RowDelimiter** 和 **ColumnDelimiter**。|  
@@ -175,7 +175,7 @@ ms.locfileid: "71294332"
 > [!NOTE]  
 >  任务名称在一个包内必须是唯一的。  
   
- **Description**  
+ **说明**  
  键入对大容量插入任务的说明。  
  
 ## <a name="bulk-insert-task-editor-options-page"></a>大容量插入任务编辑器（“选项”页）
@@ -199,7 +199,7 @@ ms.locfileid: "71294332"
  **FirstRow**  
  指定要开始复制的第一行。  
   
- **“大容量插入任务编辑器”**  
+ **选项**  
  |术语|定义|  
 |----------|----------------|  
 |**检查约束**|选择此项将检查表约束和列约束。|  

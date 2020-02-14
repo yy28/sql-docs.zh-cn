@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a03da24fe18f0d910f5054d8cfb321c42d633db8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113744"
 ---
 # <a name="data-types-transact-sql"></a>数据类型 (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68113744"
   
 当两个具有不同数据类型、排序规则、精度、小数位数或长度的表达式通过运算符进行组合时，结果的特征由以下规则确定：
 -   结果的数据类型是通过将数据类型的优先顺序规则应用到输入表达式的数据类型来确定的。 有关详细信息，请参阅[数据类型优先级 (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
--   当结果数据类型为 char、varchar、text、nchar、nvarchar 或 ntext 时，结果的排序规则由排序规则的优先顺序规则确定。 有关详细信息，请参阅[排序规则优先顺序 (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md)。  
+-   当结果数据类型为 char、varchar、text、nchar、nvarchar 或 ntext 时，结果的排序规则由排序规则的优先顺序规则确定       。 有关详细信息，请参阅[排序规则优先顺序 (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md)。  
 -   结果的精度、小数位数及长度取决于输入表达式的精度、小数位数及长度。 有关详细信息，请参阅[精度、小数位数和长度 (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了数据类型同义词，以便实现 ISO 兼容性。 有关详细信息，请参阅[数据类型同义词 (Transact-SQL)](../../t-sql/data-types/data-type-synonyms-transact-sql.md)。
@@ -49,11 +49,11 @@ ms.locfileid: "68113744"
 |字符串||  
   
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，根据其存储特征，某些数据类型被指定为属于下列各组：
--   大值数据类型：varchar(max) 和 nvarchar(max)  
--   大型对象数据类型：text、ntext、image、varbinary(max) 和 xml  
+-   大值数据类型：varchar(max) 和 nvarchar(max)    
+-   大型对象数据类型：text、ntext、image、varbinary(max) 和 xml       
   
     > [!NOTE]  
-    >  sp_help 返回 -1 作为较大值数据类型和 xml 数据类型的长度。  
+    >  sp_help 返回 -1 作为较大值数据类型和 xml 数据类型的长度  。  
   
 ### <a name="exact-numerics"></a>精确数字
   

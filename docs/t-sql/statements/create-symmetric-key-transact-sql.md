@@ -23,10 +23,10 @@ ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 485ef972b86795a2127dba5fc3e86bdf98354c7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117071"
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68117071"
   
  此功能与使用数据层应用程序框架 (DACFx) 的数据库导出不兼容。 必须在导出之前删除所有对称密钥。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -116,7 +116,7 @@ CREATE SYMMETRIC KEY key_name
 > [!WARNING]  
 > 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]开始，除 AES_128、AES_192 和 AES_256 以外的所有算法都已过时。 若要使用旧算法（不推荐），必须将数据库的数据库兼容级别设置为 120 或更低。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  创建对称密钥时，必须至少使用以下项之一来对该对称密钥进行加密：证书、密码、对称密钥、非对称密钥或 PROVIDER。 可使用上述每种类型中的多项对密钥进行加密。 换言之，可以同时使用多个证书、密码、对称密钥以及非对称密钥对单个对称密钥进行加密。  
   
 > [!CAUTION]  

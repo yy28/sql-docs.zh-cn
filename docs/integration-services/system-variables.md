@@ -17,10 +17,10 @@ ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c0b29d0e74d25739b72e712080d2f379ae3be437
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296725"
 ---
 # <a name="system-variables"></a>系统变量
@@ -35,7 +35,7 @@ ms.locfileid: "71296725"
 ## <a name="system-variables-for-packages"></a>包的系统变量  
  下表介绍 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 为包提供的系统变量。  
   
-|系统变量|数据类型|描述|  
+|系统变量|数据类型|说明|  
 |---------------------|---------------|-----------------|  
 |**CancelEvent**|Int32|Windows 事件对象的句柄，任务可以向其发送信号以指示任务应停止运行。|  
 |**ContainerStartTime**|DateTime|容器的开始时间。|  
@@ -63,14 +63,14 @@ ms.locfileid: "71296725"
 ## <a name="system-variables-for-containers"></a>容器的系统变量  
  下表介绍 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 为 For 循环、Foreach 循环和序列容器提供的系统变量。  
   
-|系统变量|数据类型|描述|容器|  
+|系统变量|数据类型|说明|容器|  
 |---------------------|---------------|-----------------|---------------|  
 |**LocaleId**|Int32|容器使用的区域设置。|For 循环容器<br /><br /> Foreach 循环容器<br /><br /> 序列容器|  
   
 ## <a name="system-variables-for-tasks"></a>任务的系统变量  
  下表介绍 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 为任务提供的系统变量。  
   
-|系统变量|数据类型|描述|  
+|系统变量|数据类型|说明|  
 |---------------------|---------------|-----------------|  
 |**CreationName**|String|任务的名称。|  
 |**LocaleId**|Int32|任务所使用的区域设置。|  
@@ -81,7 +81,7 @@ ms.locfileid: "71296725"
 ## <a name="system-variables-for-event-handlers"></a>事件处理程序的系统变量  
  下表介绍 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 为事件处理程序所提供的系统变量。 并非所有变量对所有事件处理程序都可用。  
   
-|系统变量|数据类型|描述|事件处理程序|  
+|系统变量|数据类型|说明|事件处理程序|  
 |---------------------|---------------|-----------------|-------------------|  
 |**取消**|Boolean|指示在出现错误、警告或查询取消时事件处理程序是否停止运行。|OnError 事件处理程序<br /><br /> OnWarning 事件处理程序<br /><br /> OnQueryCancel 事件处理程序|  
 |**ErrorCode**|Int32|错误标识符。|OnError 事件处理程序<br /><br /> OnInformation 事件处理程序<br /><br /> OnWarning 事件处理程序|  

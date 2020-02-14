@@ -13,10 +13,10 @@ ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 112a925c051b5345933ee4c8fc1fb3b1147c2e48
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297316"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>生成、部署和调试自定义对象
@@ -91,7 +91,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProvide
   
 |自定义对象|部署文件夹|  
 |-------------------|-----------------------|  
-|任务|“任务”|  
+|任务|任务|  
 |“ODBC 源编辑器”|连接|  
 |日志提供程序|LogProviders|  
 |数据流组件|PipelineComponents|  

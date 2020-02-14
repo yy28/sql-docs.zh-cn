@@ -16,10 +16,10 @@ ms.assetid: 4b73753a-4239-491b-b7a6-abc63ba83d2d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e253e6a4e19982e5350161cde00bc7609ed7380d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297011"
 ---
 # <a name="comparing-the-script-task-and-the-script-component"></a>比较脚本任务和脚本组件
@@ -32,7 +32,7 @@ ms.locfileid: "71297011"
 ## <a name="similarities-between-the-script-task-and-the-script-component"></a>脚本任务和脚本组件之间的相似之处  
  脚本任务和脚本组件有以下相同特性。  
   
-|功能|描述|  
+|Feature|说明|  
 |-------------|-----------------|  
 |两个设计时模式|在任务和组件中，都是从在编辑器中指定属性开始，然后切换到开发环境编写代码。|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA)|任务和组件都使用相同的 VSTA IDE，并且支持在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 中编写代码。|  
@@ -42,10 +42,10 @@ ms.locfileid: "71297011"
 ## <a name="differences-between-the-script-task-and-the-script-component"></a>脚本任务和脚本组件之间的不同之处  
  脚本任务和脚本组件有以下值得注意的不同之处。  
   
-|功能|脚本任务|脚本组件|  
+|Feature|脚本任务|脚本组件|  
 |-------------|-----------------|----------------------|  
 |控制流/数据流|脚本任务在设计器的“控制流”选项卡中配置，在包的数据流外部运行。|脚本组件在设计器的“数据流”页中配置，表示数据流任务中的源、转换或目标。|  
-|用途|脚本任务可完成几乎所有一般用途的任务。|必须指定是否要使用脚本组件创建源、转换或目标。|  
+|目的|脚本任务可完成几乎所有一般用途的任务。|必须指定是否要使用脚本组件创建源、转换或目标。|  
 |执行|脚本任务在包工作流中的某个点运行自定义代码。 除非将其放在循环容器或事件处理程序中，否则它只运行一次。|脚本组件也运行一次，但是通常它为数据流中的每行数据运行一次主处理例程。|  
 |编辑器|“脚本任务编辑器”  有三个页面：“常规”  、“脚本”  和“表达式”  。 只有 **ReadOnlyVariables**、**ReadWriteVariables** 和 **ScriptLanguage** 属性对用户可编写的代码有直接影响。|“脚本转换编辑器”  最多有四个页面：“输入列”  、“输入和输出”  、“脚本”  和“连接管理器”  。 在其中每个页面上配置的元数据和属性将决定自动生成以供您在编码中使用的基类的成员。|  
 |与包交互|在为脚本任务编写的代码中，使用 **Dts** 属性访问包的其他功能。 **Dts** 属性是 **ScriptMain** 类的成员。|在脚本组件代码中，使用类型化的取值函数属性访问特定包功能，如变量和连接管理器。<br /><br /> **PreExecute** 方法仅可访问只读变量。 **PostExecute** 方法既可访问只读变量，又可访问读/写变量。<br /><br /> 有关这些方法的详细信息，请参阅[脚本组件的编码和调试](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)。|  

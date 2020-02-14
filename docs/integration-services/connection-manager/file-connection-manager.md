@@ -20,10 +20,10 @@ ms.assetid: 019078bc-44ee-4975-9169-0f9a89e3f3be
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6c2578e1f002878ade93551a5abc48dfd2144709
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294510"
 ---
 # <a name="file-connection-manager"></a>文件连接管理器
@@ -38,7 +38,7 @@ ms.locfileid: "71294510"
   
  下表列出了 **FileUsageType**的值。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**0**|文件连接管理器使用现有文件。|  
 |**1**|文件连接管理器创建文件。|  
@@ -59,7 +59,7 @@ ms.locfileid: "71294510"
   
 -   指定文件或文件夹。  
   
- 通过在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的“属性”窗口中指定表达式，可以设置文件连接管理器的 ConnectionString 属性。 但为了避免在使用表达式指定文件或文件夹时出现验证错误，请在“文件连接管理器编辑器”  中，为“文件/文件夹”  添加文件或文件夹路径。  
+ 通过在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的“属性”窗口中指定表达式，可以设置文件连接管理器的 ConnectionString 属性。 但为了避免在使用表达式指定文件或文件夹时出现验证错误，请在“文件连接管理器编辑器”  中，为“文件/文件夹”  添加文件或文件夹路径。  
   
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "71294510"
  **使用类型**  
  指定“文件连接管理器”是连接到现有文件或文件夹，还是创建新的文件或文件夹。   
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |创建文件|在运行时创建新文件。|  
 |现有文件|使用现有文件。|  

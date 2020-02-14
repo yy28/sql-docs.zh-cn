@@ -23,10 +23,10 @@ ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f69f0553eecb8ebe13dc23f50982ac09ef63e5a0
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71299080"
 ---
 # <a name="working-with-variables-programmatically"></a>以编程方式使用变量
@@ -162,11 +162,11 @@ End Module
  请注意，所有作用域在系统  命名空间内的变量都可用于该包。 有关详细信息，请参阅 [System Variables](../../integration-services/system-variables.md)。  
   
 ## <a name="namespaces"></a>命名空间  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) 提供了两个供变量驻留的默认命名空间；“用户”和“系统”命名空间   。 默认情况下，开发人员所创建的任何自定义变量都会添加到用户  命名空间中。 系统变量驻留在系统  命名空间中。 可以创建除用户  命名空间以外的其他命名空间以保存自定义变量，可以更改用户  命名空间的名称，但是不能在系统  命名空间中添加变量或修改其中的变量，也不能向不同的命名空间分配系统变量。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) 提供了两个供变量驻留的默认命名空间；User 和 System 命名空间   。 默认情况下，开发人员所创建的任何自定义变量都会添加到用户  命名空间中。 系统变量驻留在系统  命名空间中。 可以创建除用户  命名空间以外的其他命名空间以保存自定义变量，可以更改用户  命名空间的名称，但是不能在系统  命名空间中添加变量或修改其中的变量，也不能向不同的命名空间分配系统变量。  
   
  可用的系统变量互有差异，具体取决于容器类型。 有关包、容器、任务和事件处理器可用的系统变量的列表，请参阅[系统变量](../../integration-services/system-variables.md)。  
   
-## <a name="value"></a>ReplTest1  
+## <a name="value"></a>值  
  自定义变量的值可以是文字或表达式：  
   
 -   如果希望变量包含文字值，请设置其 <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A> 属性的值。  

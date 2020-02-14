@@ -24,10 +24,10 @@ ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 43970780903aa0a4d5aef84f971ac230f2f26358
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065733"
 ---
 # <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE (Transact-SQL) SET HADR 
@@ -35,7 +35,7 @@ ms.locfileid: "68065733"
 
   本主题包含与在辅助数据库中设置 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 选项有关的 ALTER DATABASE 语法。 每个 ALTER DATABASE 语句只允许使用一个 SET HADR 选项。 只有辅助副本支持这些选项。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -126,7 +126,7 @@ ALTER DATABASE database_name
 ## <a name="restrictions"></a>限制  
  在事务和批处理两者之外执行 ALTER DATABASE 语句。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>权限  
  需要对数据库拥有 ALTER 权限。 将数据库联接到可用性组要求具有 db_owner  固定服务器角色的成员身份。  

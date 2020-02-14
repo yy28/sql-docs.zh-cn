@@ -16,10 +16,10 @@ ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 97b36ba7e90aeaa32a0d073b972f06a9fc336750
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70846745"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
@@ -113,7 +113,7 @@ replmerg [-?]
  输出所有可用的参数。  
   
  **-Publisher** _server_name_[ **\\** _instance_name_]  
- 发布服务器的名称。 为该服务器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 *server_name*。 为该服务器上的 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。  
+ 发布服务器的名称。 为该服务器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name  。 为该服务器上的 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。  
   
  **-PublisherDB** _publisher_database_  
  发布服务器数据库的名称。  
@@ -166,7 +166,7 @@ replmerg [-?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  建立连接时合并代理使用的安全套接字层 (SSL) 加密的级别。  
   
-|EncryptionLevel 值|描述|  
+|EncryptionLevel 值|说明|  
 |---------------------------|-----------------|  
 |**0**|指定不使用 SSL。|  
 |**1**|指定使用 SSL，但是代理不验证 SSL 服务器证书是否已由可信的颁发者进行签名。|  
@@ -183,7 +183,7 @@ replmerg [-?]
   
  指定同步过程中数据交换的类型，可以是下列值之一：  
   
-|ExchangeType 值|描述|  
+|ExchangeType 值|说明|  
 |------------------------|-----------------|  
 |**1**|代理应将订阅服务器上的数据更改上载到发布服务器。|  
 |**2**|代理应将发布服务器上的数据更改下载到订阅服务器。|  
@@ -202,9 +202,9 @@ replmerg [-?]
  **-ForceConvergenceLevel** [**0**|**1**|**2** ( **Publisher**| **Subscriber**| **Both**)]  
  指定合并代理应使用的收敛级别，可以为以下值之一：  
   
-|ForceConvergenceLevel 值|描述|  
+|ForceConvergenceLevel 值|说明|  
 |---------------------------------|-----------------|  
-|**0** （默认值）|默认值。 执行不具有附加收敛的标准合并。|  
+|**0** （默认值）|默认。 执行不具有附加收敛的标准合并。|  
 |**1**|强制所有生成进行收敛。|  
 |**2**|强制所有生成进行收敛并更正损坏的沿袭。 当指定此值时，请指定应更正何处的沿袭：发布服务器、订阅服务器，还是发布服务器和订阅服务器。|  
   
@@ -223,11 +223,11 @@ replmerg [-?]
  **-HistoryVerboseLevel** [**1**|**2**|**3**]  
  指定在合并操作期间记录的历史记录数量。 选择 **1**可将历史日志记录对性能的影响减至最小。  
   
-|HistoryVerboseLevel 值|描述|  
+|HistoryVerboseLevel 值|说明|  
 |-------------------------------|-----------------|  
 |**0**|记录最终的代理状态消息、最终的会话详细信息和任何错误。|  
 |**1**|记录每个会话状态的增量会话详细信息，包括完成百分比、最终代理状态消息、最终会话详细信息以及任何错误。|  
-|**2**|默认值。 记录每个会话状态的增量会话详细信息和项目级别会话详细信息，包括完成百分比、最终代理状态消息、最终会话详细信息以及任何错误。 同时还会记录代理状态消息。|  
+|**2**|默认。 记录每个会话状态的增量会话详细信息和项目级别会话详细信息，包括完成百分比、最终代理状态消息、最终会话详细信息以及任何错误。 同时还会记录代理状态消息。|  
 |**3**|除了将更多地记录代理进度消息之外，其他与 **-HistoryVerboseLevel** = **2**时相同。|  
   
  **-Hostname** _host_name_  
@@ -302,7 +302,7 @@ replmerg [-?]
  指定用于代理参数的代理配置文件。 如果 **ProfileName** 为 NULL，则将禁用代理配置文件。 如果未指定 **ProfileName** ，则使用该代理类型的默认配置文件。 有关信息，请参阅[复制代理配置文件](../../../relational-databases/replication/agents/replication-agent-profiles.md)。  
   
  **-PublisherFailoverPartner** _server_name_[ **\\** _instance_name_]  
- 指定参加与发布数据库进行的数据库镜像会话的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移伙伴实例。 有关详细信息，请参阅[数据库镜像和复制 &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)。  
+ 指定参加与发布数据库进行的数据库镜像会话的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移伙伴实例。 有关详细信息，请参阅 [数据库镜像和复制 (SQL Server)](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)。  
   
  **-PublisherLogin** _publisher_login_  
  发布服务器登录名。 如果 **PublisherSecurityMode** 为 **0** （对于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证），则必须指定此参数。  
@@ -328,7 +328,7 @@ replmerg [-?]
  **-SubscriberDBAddOption** [**0**| **1**| **2**| **3**]  
  指定是否存在现有的订阅服务器数据库。  
   
-|SubscriberDBAddOption 值|描述|  
+|SubscriberDBAddOption 值|说明|  
 |---------------------------------|-----------------|  
 |**0**|使用现有数据库（默认值）。|  
 |**1**|创建一个新的空订阅服务器数据库。|  
@@ -374,7 +374,7 @@ replmerg [-?]
  **-Validate** [**0**|**1**|**2**|**3**]  
  指定是否应在合并会话结束时执行验证，以及如果要执行验证，应执行哪种类型的验证。 建议值为 **3** 。  
   
-|Validate 值|描述|  
+|Validate 值|说明|  
 |--------------------|-----------------|  
 |**0** （默认值）|不执行验证。|  
 |**1**|只验证行计数。|  
@@ -387,7 +387,7 @@ replmerg [-?]
  **-ValidateInterval** _validate_interval_  
  在连续模式下对订阅进行验证的频率（单位为分钟）。 默认值为 **60** 分钟。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 > [!IMPORTANT]  
 >  如果您安装的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理是通过本地系统帐户而非域用户帐户（默认值）运行，则该服务只能访问本地计算机。 如果以 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理身份运行的合并代理已配置为在登录到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]时使用 Windows 身份验证模式，则合并代理将失败。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认设置为  身份验证。  

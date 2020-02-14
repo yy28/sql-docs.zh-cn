@@ -23,18 +23,19 @@ ms.assetid: 57817576-0bf1-49ed-b05d-fac27e8fed7a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2fa9c7a4ea14154315ef30ae8b193360b34ffda9
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 82876d2f0e749163ced821bdc24797a6f71b6e7e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75257044"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831579"
 ---
 # <a name="--wildcard---characters-to-match-transact-sql"></a>\[ \]（通配符 - 要匹配的字符）(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 匹配指定范围内或者属于方括号 `[ ]` 所指定的集合中的任意单个字符。 可以在涉及模式匹配的字符串比较（例如，`LIKE` 和 `PATINDEX`）中使用这些通配符。  
-  
+
+ 
 ## <a name="examples"></a>示例  
 ### <a name="a-simple-example"></a>A:简单示例   
 以下示例返回以 `m` 字母开头的名称。 `[n-z]` 指定第二个字母必须是 `n` 到 `z` 范围内的某个字母。 百分号通配符 `%` 允许任何或不包含以 3 个字符开头的字符。 `model` 数据库和 `msdb` 数据库均符合此条件。 `master` 数据库不符合条件，并被排除在结果集外。
@@ -68,7 +69,7 @@ INNER JOIN Person.Address AS a ON a.AddressID = ea.AddressID
 WHERE a.PostalCode LIKE '[0-9][0-9][0-9][0-9]';  
 ```  
   
- 结果集如下：  
+[!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]  
   
 ```  
 EmployeeID      FirstName      LastName      PostalCode  
@@ -76,8 +77,26 @@ EmployeeID      FirstName      LastName      PostalCode
 290             Lynn           Tsoflias      3000  
 ```  
 
+### <a name="c-using-a-set-that-combines-ranges-and-single-characters"></a>C:使用组合了范围和单字符的集
 
+通配符集可包含单字符和范围。 以下示例使用 [] 运算符查找以数字或一系列特殊字符开头的字符串。
 
+```sql
+SELECT [object_id], OBJECT_NAME(object_id) AS [object_name], name, column_id 
+FROM sys.columns 
+WHERE name LIKE '[0-9!@#$.,;_]%';
+```
+
+[!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]  
+
+```
+object_id     object_name                         name  column_id
+---------     -----------                         ----  ---------
+615673241     vSalesPersonSalesByFiscalYears      2002  5
+615673241     vSalesPersonSalesByFiscalYears      2003  6
+615673241     vSalesPersonSalesByFiscalYears      2004  7
+1591676718    JunkTable                           _xyz  1
+```
   
 ## <a name="see-also"></a>另请参阅  
  [LIKE (Transact-SQL)](../../t-sql/language-elements/like-transact-sql.md)   

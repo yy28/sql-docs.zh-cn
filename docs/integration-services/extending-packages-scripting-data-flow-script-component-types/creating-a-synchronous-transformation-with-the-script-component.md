@@ -17,10 +17,10 @@ ms.assetid: aa1bee1a-ab06-44d8-9944-4bff03d73016
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6fa19857dc7c0651beeaedfdef8b843fcfc58c62
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296412"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>使用脚本组件创建同步转换
@@ -82,7 +82,7 @@ ms.locfileid: "71296412"
  有关“脚本转换编辑器”的“脚本”页的详细信息，请参阅[脚本转换编辑器（“脚本”页）](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)   。  
   
 ## <a name="scripting-a-synchronous-transformation-component-in-code-design-mode"></a>在代码设计模式下编写同步转换组件脚本  
- 为组件配置完元数据后，可以编写自定义脚本。 在“脚本转换编辑器”  的“脚本”  页中，单击“编辑脚本”  打开 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE，可在其中添加自定义脚本。 编写脚本所使用的语言取决于为“脚本”  页上的 **ScriptLanguage** 属性选择 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 还是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 作为脚本语言。  
+ 为组件配置完元数据后，可以编写自定义脚本。 在“脚本转换编辑器”的“脚本”页面中，单击“编辑脚本”打开 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE，可在其中添加自定义脚本    。 编写脚本所使用的语言取决于为“脚本”  页上的 **ScriptLanguage** 属性选择 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 还是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 作为脚本语言。  
   
  有关适用于使用脚本组件创建的所有组件类型的重要信息，请参阅[脚本组件的编码和调试](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)。  
   

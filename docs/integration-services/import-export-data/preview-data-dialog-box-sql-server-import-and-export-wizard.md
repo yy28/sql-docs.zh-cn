@@ -12,10 +12,10 @@ ms.assetid: 423ac26a-ba02-4fdf-88b4-07995fe4a97e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: feeef370bc64697e3fa9ef3a279e31ba047301fd
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296313"
 ---
 # <a name="preview-data-dialog-box-sql-server-import-and-export-wizard"></a>“预览数据”对话框（SQL Server 导入和导出向导）
@@ -28,7 +28,7 @@ ms.locfileid: "71296313"
 ## <a name="screen-shot-of-the-preview-data-page"></a>“预览数据”页的屏幕截图 
  下面的屏幕快照显示向导的“预览数据”  对话框。  
  
-![导入和导出向导的“预览数据”页](../../integration-services/import-export-data/media/preview-data.png "Preview data page of the Import and Export Wizard")  
+![“导入和导出向导”的“预览数据”页面](../../integration-services/import-export-data/media/preview-data.png "“导入和导出向导”的“预览数据”页面")  
   
 ## <a name="preview-sample-data"></a>预览示例数据  
  **数据源**  

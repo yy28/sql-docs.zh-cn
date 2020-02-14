@@ -23,10 +23,10 @@ ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c93f0be480341abb59038db34616a94d4b475952
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298505"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>多平面文件连接管理器
@@ -36,7 +36,7 @@ ms.locfileid: "71298505"
 
   多平面文件连接管理器使包可以访问多个平面文件中的数据。 例如，数据流任务在循环容器（例如 For 循环容器）内时，平面文件源可以使用多平面文件连接管理器。 在容器的每个循环中，平面文件源从多平面文件连接管理器提供的下一个文件名加载数据。  
   
- 将多平面文件连接管理器添加到包时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会创建将在运行时解析多平面文件连接的连接管理器，同时还会设置该多平面文件连接管理器的属性，并将该多平面文件连接管理器添加到包的 **Connections** 集合。  
+ 将多平面文件连接管理器添加到包时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会创建将在运行时解析多平面文件连接的连接管理器，同时还会设置该多平面文件连接管理器的属性，并将该多平面文件连接管理器添加到包的 Connections 集合  。  
   
  该连接管理器的 **ConnectionManagerType** 属性设置为 **MULTIFLATFILE**。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "71298505"
   
  \<路径>|\<路径>    
   
- 也可以使用通配符来指定多个文件。 例如，若要引用 C 驱动器上的所有文本文件，可以将 **ConnectionString** 属性的值设置为 C:\\*.txt。  
+ 也可以使用通配符来指定多个文件。 例如，若要引用 C 驱动器上的所有文本文件，可以将 **ConnectionString** 属性的值设置为 C:\\\*.txt。  
   
  如果多平面文件连接管理器引用多个文件，则所有文件必须具有相同格式。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "71298505"
  **连接管理器名称**  
  为工作流中的“多平面文件连接”提供一个唯一名称。 所提供的名称将在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中显示。  
   
- **Description**  
+ **说明**  
  描述此连接。 最好按照连接的用途对其进行说明，使包的说明一目了然，且更便于维护。  
   
  **文件名**  
@@ -101,7 +101,7 @@ ms.locfileid: "71298505"
  **格式**  
  指示是否使用带分隔符、固定宽度或右边未对齐的格式。 所有文件的数据格式必须相同。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |带分隔符|各列之间由在 **“列”** 页上指定的分隔符隔开。|  
 |固定宽度|列的宽度固定，通过在 **“列”** 页上拖动标记线即可指定列的宽度。|  
@@ -113,7 +113,7 @@ ms.locfileid: "71298505"
  **标题行分隔符**  
  从标题行的分隔符列表中选择，或输入分隔符文本。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**{CR}{LF}**|标题行由回车符和换行符的组合分隔。|  
 |**{CR}**|标题行由回车符分隔。|  
@@ -139,7 +139,7 @@ ms.locfileid: "71298505"
  **连接管理器名称**  
  为工作流中的“多平面文件连接”提供一个唯一名称。 所提供的名称将在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中显示。  
   
- **Description**  
+ **说明**  
  描述此连接。 最好按照连接的用途对其进行说明，使包的说明一目了然，且更便于维护。  
   
 ### <a name="flat-file-format-dynamic-options"></a>平面文件格式动态选项  
@@ -148,7 +148,7 @@ ms.locfileid: "71298505"
  **行分隔符**  
  从可用行分隔符的列表中选择，或输入分隔符文本。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**{CR}{LF}**|行由回车符和换行符的组合分隔。|  
 |**{CR}**|行由回车符分隔。|  
@@ -162,7 +162,7 @@ ms.locfileid: "71298505"
  **列分隔符**  
  从可用列分隔符的列表中选择，或输入分隔符文本。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**{CR}{LF}**|列由回车符和换行符的组合分隔。|  
 |**{CR}**|列由回车符分隔。|  
@@ -203,7 +203,7 @@ ms.locfileid: "71298505"
  **行分隔符**  
  从可用行分隔符的列表中选择，或输入分隔符文本。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**{CR}{LF}**|行由回车符和换行符的组合分隔。|  
 |**{CR}**|行由回车符分隔。|  
@@ -228,15 +228,15 @@ ms.locfileid: "71298505"
  **连接管理器名称**  
  为工作流中的多平面文件连接管理器提供一个唯一名称。 所提供的名称将显示在 **设计器的** “连接管理器” [!INCLUDE[ssIS](../../includes/ssis-md.md)] 区域中。  
   
- **Description**  
+ **说明**  
  描述连接管理器。 最好按照连接管理器的用途对其进行说明，使包的说明一目了然，且更便于维护。  
   
  **配置各列的属性**  
  选择左窗格中的列可在右窗格中查看列的属性。 请参阅下表以了解数据类型属性的说明。 列出的部分属性仅对某些平面文件格式是可配置的。  
   
-|属性|描述|  
+|properties|说明|  
 |--------------|-----------------|  
-|**ColumnType**|表示列是由分隔符分隔、还是固定宽度，或是右边未对齐。 该属性为只读。 在右边未对齐的文件中，除最后一列之外的每一列的宽度都固定，而最后一列由行分隔符终止。|  
+|**ColumnType**|表示列是由分隔符分隔、还是固定宽度，或是右边未对齐。 此属性为只读。 在右边未对齐的文件中，除最后一列之外的每一列的宽度都固定，而最后一列由行分隔符终止。|  
 |**OutputColumnWidth**|指定值以字节数进行存储；对于 Unicode 文件，该值将显示为字符数。 在数据流任务中，此值用于设置平面文件源的输出列宽。<br /><br /> 注意：在对象模型中，此属性的名称为 MaximumWidth。|  
 |**DataType**|从可用数据类型的列表中进行选择。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)。|  
 |**TextQualified**|指示是否使用文本限定符限定文本数据：<br /><br /> **True**：平面文件中的文本数据是受限定的。<br /><br /> **False**：平面文件中的文本数据是不受限定的。|  
@@ -249,7 +249,7 @@ ms.locfileid: "71298505"
  **新建**  
  单击“新建”  添加一个新列。 默认情况下，单击 **“新建”** 按钮将会在列表末尾添加新列。 该按钮还包括以下选项，可以在下拉列表中选择。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**添加列**|在列表末尾添加新列。|  
 |**在其前插入**|在所选列前面插入新列。|  
@@ -270,7 +270,7 @@ ms.locfileid: "71298505"
  **连接管理器名称**  
  为工作流中的“多平面文件连接”提供一个唯一名称。 所提供的名称将显示在 **设计器的** “连接管理器” [!INCLUDE[ssIS](../../includes/ssis-md.md)] 区域中。  
   
- **Description**  
+ **说明**  
  描述此连接。 最好按照连接的用途对其进行说明，使包的说明一目了然，且更便于维护。  
   
  **要跳过的数据行数**  
@@ -280,7 +280,7 @@ ms.locfileid: "71298505"
  查看所选择的第一个平面文件中的示例数据，这些数据已按所选的选项划分为列和行。  
   
 ## <a name="see-also"></a>另请参阅  
- [“平面文件源”](../../integration-services/data-flow/flat-file-source.md)   
+ [平面文件源](../../integration-services/data-flow/flat-file-source.md)   
  [平面文件目标](../../integration-services/data-flow/flat-file-destination.md)   
  [Integration Services (SSIS) 连接](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   

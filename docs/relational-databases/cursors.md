@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: de565a5d34ddbf8388e2c20a564bc8c872a0a1c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140814"
 ---
 # <a name="cursors"></a>游标
@@ -88,7 +88,7 @@ API 游标支持 OLE DB 和 ODBC 中的 API 游标函数。 API 服务器游标�
 ### <a name="keyset"></a>Keyset  
 打开由键集驱动的游标时，该游标中各行的成员身份和顺序是固定的。 由键集驱动的游标由一组唯一标识符（键）控制，这组键称为键集。 键是根据以唯一方式标识结果集中各行的一组列生成的。 键集是打开游标时来自符合 `SELECT` 语句要求的所有行中的一组键值。 由键集驱动的游标对应的键集是打开该游标时在 **tempdb** 中生成的。  
   
-### <a name="dynamic"></a>Dynamic  
+### <a name="dynamic"></a>动态  
 动态游标与静态游标相对。 当滚动游标时，动态游标反映结果集中所做的所有更改。 结果集中的行数据值、顺序和成员在每次提取时都会改变。 所有用户做的全部 `UPDATE`、`INSERT` 和 `DELETE` 语句均通过游标可见。 如果使用 API 函数（如“SQLSetPos”）或 [!INCLUDE[tsql](../includes/tsql-md.md)] `WHERE CURRENT OF` 子句通过游标进行更新，它们将立即可见  。 在游标外部所做的更新直到提交时才可见，除非将游标的事务隔离级别设为未提交读。 有关隔离级别的详细信息，请参阅 [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。 
  
 > [!NOTE]

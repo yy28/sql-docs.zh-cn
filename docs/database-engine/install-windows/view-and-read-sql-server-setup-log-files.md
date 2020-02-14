@@ -18,12 +18,12 @@ ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7bf7d199239be10760df49d586cdf5048fbc4a80
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: b3ddfa9ee8866086fa16a384efb63a5392394d3a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "67906773"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76929125"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>查看和阅读 SQL Server 安装程序日志文件
 
@@ -82,7 +82,7 @@ ms.locfileid: "67906773"
 
 
   >[!NOTE]
-  > 注意：修补时可能存在多个子文件夹（一个用于修补的每个实例，一个用于共享功能），其中包含一系列类似的文件（即 %programfiles%\MicrosoftSQL Server\130\Setup Bootstrap\Log\<YYYYMMDD_HHMM>\MSSQLSERVER）。 
+  > 请注意，修补时可能会存在多个子文件夹（一个用于每个要修补的实例，一个用于共享功能），其中包含一组类似的文件（即 %programfiles%\MicrosoftSQL Server\130\Setup Bootstrap\Log\<YYYYMMDD_HHMM > \MSSQLSERVER）。 
   
 ### <a name="location"></a>位置  
  Summary.txt 位于 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\nnn\Setup Bootstrap\Log\\  。

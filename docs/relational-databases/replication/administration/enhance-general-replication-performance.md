@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: dd7cfe863fde1b4909caadca12b496705f956483
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 8ac6758c3856858f6b10b17184705022aa51a62e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768811"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288184"
 ---
 # <a name="enhance-general-replication-performance"></a>增强常规复制性能
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68768811"
   
 ## <a name="server-and-network"></a>服务器和网络  
   
--   设置分配给 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]的最小和最大内存量。  
+-   设置分配给 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 的最小和最大内存量。  
   
      默认情况下， [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 根据可用的系统资源动态改变它的内存要求。 为避免在复制活动期间出现低内存可用性的问题，请使用 **min server memory** 选项设置最小可用内存。 为避免将操作系统页写入磁盘以节省内存，也可以使用 **max server memory** 选项设置最大内存量。 有关详细信息，请参阅[服务器内存服务器配置选项](../../../database-engine/configure-windows/server-memory-server-configuration-options.md)。  
   

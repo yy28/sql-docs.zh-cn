@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 149c351796af7741c4bd3ef512fe27ebcbdcf35a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 5f744f0bb5d1ced6424fc8882a0a215042fbfc69
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75245441"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920346"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>从 SQL Server 备份到 URL 的最佳做法和疑难解答
 

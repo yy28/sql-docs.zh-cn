@@ -18,10 +18,10 @@ ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: ebab091b0e674339141c4ee2ea6d7c7993ccbabf
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68893685"
 ---
 # <a name="alter-external-resource-pool-transact-sql"></a>ALTER EXTERNAL RESOURCE POOL (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68893685"
 对于 [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]，外部池控制 `rterm.exe`、`python.exe`、`BxlServer.exe`，以及它们生成的其他进程。
 ::: moniker-end
 
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -73,7 +73,7 @@ MAX_CPU_PERCENT =value
 AFFINITY {CPU = AUTO | ( \<CPU_range_spec> ) | NUMANODE = (\<NUMA_node_range_spec>)}  
 将外部资源池附加到特定的 CPU。
 
-AFFINITY CPU = ( \<CPU_range_spec> ) 将外部资源池映射到给定 CPU_ID 标识的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPU   。 使用 AFFINITY NUMANODE = ( \<NUMA_node_range_spec> ) 时，外部资源池将关联到与给定 NUMA 节点或一系列节点相对应的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物理 CPU   。
+AFFINITY CPU = ( \<CPU_range_spec> ) 将外部资源池映射到由给定 CPU_ID 标识的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPU   。 使用 AFFINITY NUMANODE = ( \<NUMA_node_range_spec> ) 时，会将外部资源池关联到对应于给定 NUMA 节点或节点范围的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物理 CPU   。
 
 MAX_MEMORY_PERCENT =value   
 指定此外部资源池中的请求可使用的总服务器内存量。 value 是一个整数  。 value 的允许范围是 1 到 100  。
@@ -81,7 +81,7 @@ MAX_MEMORY_PERCENT =value
 MAX_PROCESSES =value   
 指定外部资源池允许的最大进程数。 指定 0 以便为池设置无限阈值，此阈值之后仅受计算机资源约束。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 执行 [ALTER RESOURCE GOVERNOR RECONFIGURE](../../t-sql/statements/alter-resource-governor-transact-sql.md) 语句时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]实现资源池。
 

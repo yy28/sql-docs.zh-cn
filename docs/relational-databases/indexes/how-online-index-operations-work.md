@@ -19,10 +19,10 @@ ms.author: mikeray
 ms.prod_service: database-engine, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2dd4970cc25e382706f63ed94b7bcc3700549d9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67909757"
 ---
 # <a name="how-online-index-operations-work"></a>联机索引操作的工作方式
@@ -61,8 +61,8 @@ ms.locfileid: "67909757"
   
 |阶段|源活动|源锁|  
 |-----------|---------------------|------------------|  
-|准备<br /><br /> 短暂的阶段|准备系统元数据以创建新的空索引结构。<br /><br /> 定义表的一个快照。 即，使用行版本控制提供事务级读一致性。<br /><br /> 对源执行的并发用户写操作在短时间内将受到阻止。<br /><br /> 不允许执行并发 DDL 操作（创建多个非聚集索引除外）。|对表的 S（共享）*<br /><br /> IS（意向共享）<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE\*\*|  
-|生成<br /><br /> 主要阶段|在大容量加载操作中对数据进行扫描、排序、合并并将数据插入到目标中。<br /><br /> 并发的用户选择、插入、更新和删除操作将被同时应用到预先存在的索引和所有正在生成的新索引。|IS<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE**|  
+|准备工作<br /><br /> 短暂的阶段|准备系统元数据以创建新的空索引结构。<br /><br /> 定义表的一个快照。 即，使用行版本控制提供事务级读一致性。<br /><br /> 对源执行的并发用户写操作在短时间内将受到阻止。<br /><br /> 不允许执行并发 DDL 操作（创建多个非聚集索引除外）。|对表的 S（共享）*<br /><br /> IS（意向共享）<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE\*\*|  
+|构建<br /><br /> 主要阶段|在大容量加载操作中对数据进行扫描、排序、合并并将数据插入到目标中。<br /><br /> 并发的用户选择、插入、更新和删除操作将被同时应用到预先存在的索引和所有正在生成的新索引。|IS<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE**|  
 |最后<br /><br /> 短暂的阶段|必须完成所有未提交的更新事务，这一阶段才能开始。 根据获取的锁，所有新的用户读/写事务将在短时间内被阻塞，直到此阶段完成为止。<br /><br /> 系统元数据将被更新以便用目标替换源。<br /><br /> 如有必要，源将被删除。 例如，在重新生成或删除聚集索引之后。|INDEX_BUILD_INTERNAL_RESOURCE**<br /><br /> 如果创建的是非聚集索引，则为对表的 S。\*<br /><br /> 如果删除了任何源结构（索引或表），则为 SCH-M（架构修改）。\*|  
   
  \* 索引操作将等待任何未提交的更新事务完成后，才会获取对表的 S 锁或 SCH-M 锁。  
@@ -76,9 +76,9 @@ ms.locfileid: "67909757"
   
 |阶段|目标活动|目标锁|  
 |-----------|---------------------|------------------|  
-|准备|创建新索引并将其设置为只写。|IS|  
-|生成|从源插入数据。<br /><br /> 应用已应用到源的用户修改（插入、更新、删除）。<br /><br /> 此活动对用户是透明的。|IS|  
-|最后|将更新索引元数据。<br /><br /> 索引将被设置为读/写状态。|S<br /><br /> 或多个<br /><br /> SCH-M|  
+|准备工作|创建新索引并将其设置为只写。|IS|  
+|构建|从源插入数据。<br /><br /> 应用已应用到源的用户修改（插入、更新、删除）。<br /><br /> 此活动对用户是透明的。|IS|  
+|最后|将更新索引元数据。<br /><br /> 索引将被设置为读/写状态。|S<br /><br /> 或<br /><br /> SCH-M|  
   
  在完成索引操作之前，不能通过用户发出的 SELECT 语句来访问目标。  
   

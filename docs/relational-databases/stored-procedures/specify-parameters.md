@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6b2ac27ecf2ca02acde1cefba87aaf828f8a3317
-ms.sourcegitcommit: 52d3902e7b34b14d70362e5bad1526a3ca614147
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70110273"
 ---
 # <a name="specify-parameters"></a>指定参数
@@ -137,7 +137,7 @@ GO
   
  若要指定输出参数，必须在 CREATE PROCEDURE 语句的参数定义中指定 OUTPUT 关键字。 当过程退出时，它向调用程序返回输出参数的当前值。 执行过程时，调用程序也必须使用 OUTPUT 关键字，才能将该参数值保存到可以在调用程序中使用的变量中。  
   
- 下列示例创建带有一个输入参数 `Production.usp_GetList` 过程，该过程返回价格不超过指定金额的产品的列表。 此示例显示如何使用多个 SELECT 语句和多个 OUTPUT 参数。 使用 OUTPUT 参数，外部过程、批或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句可以访问在过程执行期间设置的值。  
+ 下例创建 `Production.usp_GetList` 过程，该过程返回价格不超过指定金额的产品的列表。 此示例显示如何使用多个 SELECT 语句和多个 OUTPUT 参数。 使用 OUTPUT 参数，外部过程、批或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句可以访问在过程执行期间设置的值。  
   
 ```  
 USE AdventureWorks2012;  
@@ -171,7 +171,7 @@ GO
  执行 `usp_GetList` 以返回价格低于 $700 的 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 产品（自行车）的列表。 输出参数 \@cost  和 \@compareprices  用于控制流语言，以便在“消息”  窗口中返回消息。  
   
 > [!NOTE]  
->  OUTPUT 变量必须在过程创建和变量使用期间进行定义。 参数名称和变量名称不一定要匹配。 不过，数据类型和参数定位必须匹配（除非使用的是 \@listprice=  variable  ）。  
+>  OUTPUT 变量必须在过程创建和变量使用期间进行定义。 参数名称和变量名称不一定要匹配。 不过，数据类型和参数定位必须匹配（除非使用的是 \@listprice= _variable_）  。  
   
 ```  
 DECLARE @ComparePrice money, @Cost money ;  

@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 22bb9713faab2b1d3195092130a95997ca69641f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68010808"
 ---
 # <a name="permissions-hierarchy-database-engine"></a>权限层次结构（数据库引擎）
@@ -36,7 +36,7 @@ ms.locfileid: "68010808"
   
  权限系统在所有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、 [!INCLUDE[ssDW](../../includes/ssdw-md.md)]、 [!INCLUDE[ssAPS](../../includes/ssaps-md.md)]版本中的工作方式相同，但是有些功能并不是在所有版本中都可用。 例如，不能在 Azure 产品中配置服务器级权限。  
   
- ![数据库引擎权限层次结构的关系图](../../relational-databases/security/media/wj-security-layers.gif "数据库引擎权限层次结构的关系图")  
+ ![数据库引擎权限层次结构图](../../relational-databases/security/media/wj-security-layers.gif "数据库引擎权限层次结构图")  
   
 ## <a name="chart-of-sql-server-permissions"></a>SQL Server 权限图表  
  若要获取 pdf 格式的所有 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 权限的海报大小的图表，请参阅 [https://aka.ms/sql-permissions-poster](https://aka.ms/sql-permissions-poster)。  

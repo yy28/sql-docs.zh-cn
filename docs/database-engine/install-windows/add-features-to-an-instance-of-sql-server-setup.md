@@ -15,17 +15,17 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 0b7cdfe016a1010bef5322c3d39b7ee436437aa5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051201"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>向 SQL Server 的实例添加功能（安装程序）
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   
- 本文提供用于向 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例添加功能的分步过程。 某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件或服务特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例。 它们也称为识别实例的组件或服务。 这些组件或服务与承载它们的实例共享相同的版本，并且专用于该实例。 您可以向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例添加识别实例的组件以及共享组件（如果尚未安装此类组件）。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2017 的各版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。  
+ 本文提供用于向 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例添加功能的分步过程。 某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件或服务特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例。 它们也称为识别实例的组件或服务。 它们与托管它们的实例共享相同的版本，并且专用于该实例。 您可以向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例添加识别实例的组件以及共享组件（如果尚未安装此类组件）。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2017 的各版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。  
   
  若要从命令提示符向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例添加功能，请参阅[从命令提示符安装 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "68051201"
   
      在右侧窗格中显示所选功能的必备组件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将在本过程后面所述的安装步骤中安装尚未安装的必备组件。  
   
-     系统配置检查器将在安装继续之前检验计算机的系统状态。 单击 **“下一步”** 继续。  
+     系统配置检查器将在安装继续之前检验计算机的系统状态。 单击“下一步”  以继续。  
   
 9. “磁盘空间要求”页计算指定的功能所需的磁盘空间，并将磁盘空间要求与正在运行安装程序的计算机上的可用磁盘空间进行比较。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "68051201"
   
 20. 使用“ Distributed Replay 客户端配置”页可以指定您希望向其授予针对 Distributed Replay 客户端服务的管理权限的用户。 具有管理权限的用户将可以不受限制地访问 Distributed Replay 客户端服务。  
   
-     “控制器名称”是一个可选参数，其默认值为 \<blank>   。 输入客户端计算机将与 Distributed Replay 客户端服务进行通信的控制器的名称。 请注意以下事项：  
+     “控制器名称”是一个可选参数，其默认值为 \<blank>   。 输入客户端计算机将与 Distributed Replay 客户端服务进行通信的控制器的名称。 注意以下事项：  
   
     -   如果您已经设置了一个控制器，则在配置每个客户端时输入该控制器的名称。  
   
@@ -142,13 +142,13 @@ ms.locfileid: "68051201"
   
 26. 如果安装程序指示您重新启动计算机，请立即重新启动。 安装完成后，请务必阅读来自安装向导的消息。 有关安装程序日志文件的信息，请参阅 [查看和阅读 SQL Server 安装程序日志文件](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>后续步骤  
  配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装  
   
 -   为了减少系统的可攻击外围应用， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将有选择地安装和激活一些密钥服务和功能。 有关详细信息，请参阅 [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [查看和阅读 SQL Server 安装程序日志文件](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
+ [查看和读取 SQL Server 安装程序日志文件](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [验证 SQL Server 安装](../../database-engine/install-windows/validate-a-sql-server-installation.md)   
  [修复失败的 SQL Server 2016 安装](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)   
  [使用安装向导升级 SQL Server（安装程序）](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   

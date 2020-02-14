@@ -19,10 +19,10 @@ ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 724511cb3a60278c6642eb31cbb3481fe92f0d72
-ms.sourcegitcommit: ef7834ed0f38c1712f45737018a0bfe892e894ee
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68300437"
 ---
 # <a name="database-snapshots-sql-server"></a>数据库快照 (SQL Server)
@@ -119,7 +119,7 @@ ms.locfileid: "68300437"
   
 -   [含有脱机文件组的数据库快照](#OfflineFGs)  
   
-###  <a name="Prerequisites"></a> 先决条件  
+###  <a name="Prerequisites"></a>先决条件  
  可以使用任何恢复模式的源数据库必须满足以下先决条件：  
   
 -   服务器实例必须在支持数据库快照的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本上运行。 有关详细信息，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
@@ -197,7 +197,7 @@ ms.locfileid: "68300437"
     > [!NOTE]  
     >  对数据库快照执行的 SELECT 语句不能指定 FILESTREAM 列；否则，将返回如下错误消息： `Could not continue scan with NOLOCK due to data movement.`  
   
--   当有关只读快照的统计信息丢失或变得陈旧时， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将创建临时统计信息并在 tempdb 中进行维护。 有关更多信息，请参见 [Statistics](../../relational-databases/statistics/statistics.md)。  
+-   当有关只读快照的统计信息丢失或变得陈旧时， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将创建临时统计信息并在 tempdb 中进行维护。 有关详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)。  
   
 ###  <a name="DiskSpace"></a> 磁盘空间要求  
  数据库快照占用磁盘空间。 如果数据库快照用尽了磁盘空间，将被标记为可疑，必须将其删除。 （但是，源数据库不会受到影响，对其执行的操作仍能继续正常进行。）然而，与一份完整的数据库相比，快照具有高度空间有效性。 快照仅需足够存储空间来存储在其生存期中更改的页。 通常情况下，快照只会保留一段有限的时间，因此其大小不是主要问题。  

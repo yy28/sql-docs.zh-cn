@@ -17,10 +17,10 @@ ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 618c30a29473e7ade84812abeba52d23ff52da9e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290356"
 ---
 # <a name="cast-ssis-expression"></a>Cast（SSIS 表达式）
@@ -48,7 +48,7 @@ ms.locfileid: "71290356"
 ## <a name="result-types"></a>结果类型  
  *type_spec*数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  以下关系图显示了合法的转换运算。  
   
  ![数据类型之间的合法转换和非法转换](../../integration-services/expressions/media/data-conversion.gif "数据类型之间的合法转换和非法转换")  
@@ -60,8 +60,8 @@ ms.locfileid: "71290356"
 |DT_STR|*charcount*<br /><br /> *codepage*|(DT_STR,30,1252) 将 30 个字节（即 30 个单字符）转换为使用 1252 代码页的 DT_STR 数据类型。|  
 |DT_WSTR|*Charcount*|(DT_WSTR,20) 将 20 个字节对（即 20 个 Unicode 字符）转换为 DT_WSTR 数据类型。|  
 |DT_BYTES|*Bytecount*|(DT_BYTES,50) 将 50 个字节的数据转换为 DT_BYTES 数据类型。|  
-|DT_DECIMAL|*小数位数*|(DT_DECIMAL,2) 将数值转换为带 2 位小数的 DT_DECIMAL 数据类型。|  
-|DT_NUMERIC|*精度*<br /><br /> *小数位数*|(DT_NUMERIC,10,3) 将数值转换为带 3 位小数且精度为 10 的 DT_NUMERIC 数据类型。|  
+|DT_DECIMAL|*缩放*|(DT_DECIMAL,2) 将数值转换为带 2 位小数的 DT_DECIMAL 数据类型。|  
+|DT_NUMERIC|*精度*<br /><br /> *缩放*|(DT_NUMERIC,10,3) 将数值转换为带 3 位小数且精度为 10 的 DT_NUMERIC 数据类型。|  
 |DT_TEXT|*Codepage*|(DT_TEXT,1252) 将值转换为使用 1252 代码页的 DT_TEXT 数据类型。|  
   
  字符串和 DT_DATE 间相互转换时，将使用转换的区域设置。 但是，无论区域设置首选项是否使用 YYYY-MM-DD 这一 ISO 格式，日期均采用该 ISO 格式。  

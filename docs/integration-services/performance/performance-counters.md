@@ -17,10 +17,10 @@ ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 890bd202912cea88491acd79906c873c44e53658
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71282612"
 ---
 # <a name="performance-counters"></a>性能计数器
@@ -34,7 +34,7 @@ ms.locfileid: "71282612"
   
  下表介绍了这些性能计数器：  
   
-|性能计数器|描述|  
+|性能计数器|说明|  
 |-------------------------|-----------------|  
 |BLOB bytes read|数据流引擎从所有源中读取的二进制大型对象 (BLOB) 数据的字节数。|  
 |BLOB bytes written|数据流引擎已写入所有目标的 BLOB 数据的字节数。|  
@@ -75,7 +75,7 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 -   codeplex.com 上的工具 [Business Intelligence Development Studio 的 SSIS 性能可视化（CodePlex 项目）](https://go.microsoft.com/fwlink/?LinkId=146626)。  
   
--   msdn.microsoft.com 上的视频[测量和了解 SSIS 包在企业中的性能（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkId=150497)。  
+-   msdn.microsoft.com 上的视频 [测量和了解 SSIS 包在企业中的性能（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkId=150497)。  
   
 -   support.microsoft.com 上的支持文章 [升级到 Windows Server 2008 后性能监视器中不再提供 SSIS 性能计数器](https://go.microsoft.com/fwlink/?LinkId=235319)。  
 
@@ -93,7 +93,7 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 3.  在“性能”  对话框中，展开“性能日志和警报”  ，右键单击“计数器日志”  ，再单击“新建日志设置”  。 键入日志的名称。 例如，键入 **MyLog**。  
   
-4.  单击“确定”  。  
+4.  单击“确定”。   
   
 5.  在 **MyLog** 对话框中，单击 **“添加计数器”** 。  
   
@@ -107,15 +107,15 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
     -   选择 **“选择列表中的计数器”** ，然后选择要使用的性能计数器。  
   
-9. 单击 **“添加”** 。  
+9. 单击“添加”  。  
   
-10. 单击 **“关闭”** 。  
+10. 单击“关闭”  。  
   
 11. 在 **MyLog** 对话框中，检查 **“计数器”** 列表中记录日志的性能计数器的列表。  
   
 12. 若要添加其他计数器，请重复步骤 5 到步骤 10。  
   
-13. 单击“确定”  。  
+13. 单击“确定”。   
   
     > [!NOTE]  
     >  必须使用属于 Administrators 组成员的本地帐户或域帐户启动性能日志和警报服务。  

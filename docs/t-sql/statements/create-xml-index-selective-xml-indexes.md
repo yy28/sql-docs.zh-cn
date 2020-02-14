@@ -13,10 +13,10 @@ ms.assetid: 1f510151-41d5-45c2-9cd0-b1ca0246fffe
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3f5e9e831677a2779c908a0ec4b3afa5b27f7fff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68058488"
 ---
 # <a name="create-xml-index-selective-xml-indexes"></a>CREATE XML INDEX（选择性 XML 索引）
@@ -24,7 +24,7 @@ ms.locfileid: "68058488"
 
   在已通过现有选择性 XML 索引建立索引的单个路径上创建新的辅助选择性 XML 索引。 您还可以创建主要选择性 XML 索引。 有关详细信息，请参阅[创建、更改和删除选择性 XML 索引](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -87,13 +87,13 @@ xmlnamespace_uri AS xmlnamespace_prefix
   
  有关通过 \<index_options> 获取索引选项的信息，请参阅 [CREATE XML INDEX](../../t-sql/statements/create-xml-index-selective-xml-indexes.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  对于基表中的每个 XML 列，可能有多个辅助选择性 XML 索引。  
   
 ## <a name="limitations-and-restrictions"></a>限制和局限  
  XML 列中必须存在选择性 XML 索引，然后才能对该列创建辅助选择性 XML 索引。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>权限  
  要求对表或视图具有 ALTER 权限。 用户必须是 **sysadmin** 固定服务器角色的成员，或者是 **db_ddladmin** 和 **db_owner** 固定数据库角色的成员。  

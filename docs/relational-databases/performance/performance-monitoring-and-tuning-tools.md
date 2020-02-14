@@ -19,10 +19,10 @@ ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: d900593848561bba17e186f48632bf299fe9a7cd
-ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73962398"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>性能监视和优化工具
@@ -31,7 +31,7 @@ ms.locfileid: "73962398"
   
  以下是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 监视和优化工具：  
   
-|工具|描述|  
+|工具|说明|  
 |----------|-----------------|  
 |[内置函数 (Transact-SQL)](~/t-sql/functions/functions.md)|内置函数可显示自启动服务器以来有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 活动的快照统计信息，这些统计信息存储在预定义的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计数器中。 例如，\@\@CPU_BUSY 包含 CPU 执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代码所持续的时间；\@\@CONNECTIONS 包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接或尝试连接的次数；\@\@PACKET_ERRORS 包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接上出现的网络数据包数    。|  
 |[DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)|DBCC（数据库控制台命令）语句使您能够检查性能统计信息以及数据库的逻辑与物理一致性。|  
@@ -70,7 +70,7 @@ ms.locfileid: "73962398"
 ## <a name="windows-monitoring-tools"></a>Windows 监视工具  
  Windows 操作系统和 Windows Server 2003 也提供这些监视工具。  
   
-|工具|描述|  
+|工具|说明|  
 |----------|-----------------|  
 |任务管理器|显示在系统上运行的进程和应用程序的提要。|  
 |网络监视器代理|用于监视网络流量。|  

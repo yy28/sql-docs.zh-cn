@@ -22,10 +22,10 @@ ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 9b034e43f918a0f6c198c29cf2f6618ba38638f8
-ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72916065"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>还原与恢复概述 (SQL Server)
@@ -111,7 +111,7 @@ ms.locfileid: "72916065"
 |还原操作|完整恢复模式|大容量日志恢复模式|简单恢复模式|  
 |-----------------------|-------------------------|---------------------------------|---------------------------|  
 |数据恢复|完整还原（如果日志可用）。|某些数据将丢失。|自上次完整备份或差异备份后的任何数据将丢失。|  
-|时点还原|日志备份所涵盖的任何时间。|日志备份包含任何大容量日志更改时不允许。|不提供支持。|  
+|时点还原|日志备份所涵盖的任何时间。|日志备份包含任何大容量日志更改时不允许。|不支持。|  
 |文件还原 **\***|完全支持。|不完全支持。 **\*\***|仅对只读辅助文件可用。|  
 |页面还原 **\***|完全支持。|不完全支持。 **\*\***|无。|  
 |段落（文件组级）还原 **\***|完全支持。|不完全支持。 **\*\***|仅对只读辅助文件可用。|  

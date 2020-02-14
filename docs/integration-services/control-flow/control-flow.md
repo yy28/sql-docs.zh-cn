@@ -15,13 +15,13 @@ ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1b1e6e2278e20cf9ae7b3d31edaebd44ee4d3956
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298391"
 ---
-# <a name="control-flow"></a>“控制流”
+# <a name="control-flow"></a>控制流
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -32,7 +32,7 @@ ms.locfileid: "71298391"
   
  下面的关系图显示具有一个容器和六项任务的控制流。 这些任务中有五项定义于包级别，还有一项定义于容器级别。 任务位于容器内。  
   
- ![具有六项任务和一个容器的控制流](../../integration-services/control-flow/media/ssis-controlflowelmt.gif "Control flow with six tasks and a container")  
+ ![具有六个任务和一个容器的控制流](../../integration-services/control-flow/media/ssis-controlflowelmt.gif "具有六个任务和一个容器的控制流")  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 体系结构支持容器的嵌套，且一个控制流可以包含多级嵌套容器。 例如，一个包可以包含一个容器（如 Foreach 循环容器），此容器转而又能包含另一个 Foreach 循环容器，如此逐层嵌套。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "71298391"
   
  下面的关系图显示了控制流设计器中简单包的控制流。 此关系图中显示的控制流由三个包级任务和一个包含三个任务的包级容器组成。 通过使用优先约束将任务和容器连接起来。  
   
- ![具有包的控制流设计器的屏幕快照](../../integration-services/connection-manager/media/samplecontrolflow.gif "Screenshot of control flow designer with package")  
+ ![具有包的控制流设计器的屏幕快照](../../integration-services/connection-manager/media/samplecontrolflow.gif "具有包的控制流设计器的屏幕快照")  
   
  创建控制流包含下列任务：  
   
@@ -57,7 +57,7 @@ ms.locfileid: "71298391"
   
      将任务或容器添加到 **“控制流”** 选项卡的设计图面后， [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器自动将连接线添加到项。 如果包中包含两个或更多项、任务或容器，则可以通过将它们的连接线从一项拖动到其他项而将它们联接成控制流。  
   
-     两个项之间的连接器表示优先约束。 优先约束定义了两个连接项之间的关系。 它指定了运行时任务和容器的执行顺序以及任务和容器的运行条件。 例如，优先约束可以指定某任务必须成功，才能运行控制流中的下一个任务。 有关详细信息，请参阅 [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md)。  
+     两个项之间的连接器表示优先约束。 优先约束定义了两个连接项之间的关系。 它指定了运行时任务和容器的执行顺序以及任务和容器的运行条件。 例如，优先约束可以指定某任务必须成功，才能运行控制流中的下一个任务。 有关详细信息，请参阅 [优先约束](../../integration-services/control-flow/precedence-constraints.md)。  
   
 -   添加连接管理器。  
   

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 4c4338893ea7cd38743967df8b3523def58df9fd
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: fe3d184b1a64dded731c0746a8264b4dc5809dd7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710959"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286623"
 ---
 # <a name="change-publication-and-article-properties"></a>更改发布和项目属性
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "71710959"
   
 ## <a name="publication-properties-for-snapshot-and-transactional-replication"></a>快照和事务复制的发布属性  
   
-|描述|存储过程|属性|要求|  
+|说明|存储过程|属性|要求|  
 |-----------------|----------------------|----------------|------------------|  
 |更改快照格式。|**sp_changepublication**|**sync_method**|新建快照。|  
 |更改快照位置。|**sp_changepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|新建快照。|  
@@ -38,13 +38,13 @@ ms.locfileid: "71710959"
 |更改快照压缩。|**sp_changepublication**|**compress_snapshot**|新建快照。|  
 |更改任何文件传输协议 (FTP) 快照选项。|**sp_changepublication**|**enabled_for_internet**<br /><br /> **ftp_address**<br /><br /> **ftp_login**<br /><br /> **ftp_password**<br /><br /> **ftp_port**<br /><br /> **ftp_subdirectory**|新建快照。|  
 |更改快照前或快照后脚本位置。|**sp_changepublication**|**pre_snapshot_script**<br /><br /> **post_snapshot_script**|新建快照（更改脚本内容时也需要）。<br /><br /> 对订阅服务器应用新脚本需要进行重新初始化。|  
-|启用或禁用对非[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器的支持。|**sp_changepublication**|**is_enabled_for_het_sub**|新建快照。|  
+|启用或禁用对非 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器的支持。|**sp_changepublication**|**is_enabled_for_het_sub**|新建快照。|  
 |更改排队更新订阅的冲突报告|**sp_changepublication**|**centralized_conflicts**|只有在没有活动订阅时才可以进行更改。|  
 |更改排队更新订阅的冲突解决策略。|**sp_changepublication**|**conflict_policy**|只有在没有活动订阅时才可以进行更改。|  
   
 ## <a name="article-properties-for-snapshot-and-transactional-replication"></a>快照和事务复制的项目属性  
   
-|描述|存储过程|属性|要求|  
+|说明|存储过程|属性|要求|  
 |-----------------|----------------------|----------------|------------------|  
 |删除项目|**sp_droparticle**|所有参数。|项目可以在创建订阅之前删除。 使用存储过程，可以删除项目的订阅；如果使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]，则必须删除整个订阅，然后再重新创建订阅并进行同步。 有关详细信息，请参阅[向现有发布添加项目和从中删除项目](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)。|  
 |更改列筛选器。|**sp_articlecolumn**|`@column`<br /><br /> `@operation`|新建快照。<br /><br /> 重新初始化订阅。|  
@@ -62,7 +62,7 @@ ms.locfileid: "71710959"
   
 ## <a name="publication-properties-for-merge-replication"></a>合并复制的发布属性  
   
-|描述|存储过程|属性|要求|  
+|说明|存储过程|属性|要求|  
 |-----------------|----------------------|----------------|------------------|  
 |更改快照格式|**sp_changemergepublication**|**sync_mode**|新建快照。|  
 |更改快照位置。|**sp_changemergepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|新建快照。|  
@@ -81,7 +81,7 @@ ms.locfileid: "71710959"
   
 ## <a name="article-properties-for-merge-replication"></a>合并复制的项目属性  
   
-|描述|存储过程|属性|要求|  
+|说明|存储过程|属性|要求|  
 |-----------------|----------------------|----------------|------------------|  
 |删除在发布中使用最新参数化筛选器的项目。|**sp_dropmergearticle**|所有参数|新建快照。<br /><br /> 重新初始化订阅。|  
 |删除在联接筛选器或逻辑记录中处于父级的项目（这对删除联接有副作用）。|**sp_dropmergearticle**|所有参数|新建快照。<br /><br /> 重新初始化订阅。|  

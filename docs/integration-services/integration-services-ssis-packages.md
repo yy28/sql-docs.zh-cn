@@ -21,10 +21,10 @@ ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 78aa101ac0f7c86bc2563f7cf0151e7f976a5b80
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296189"
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services (SSIS) 包
@@ -32,13 +32,13 @@ ms.locfileid: "71296189"
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  包是一个有组织的集合，其中可包括连接、控制流元素、数据流元素、事件处理程序、变量、参数和配置，您可使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供的图形设计工具将这些对象组合到包中，或以编程方式生成包含这些对象的包。  然后将完成的包保存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包存储区或文件系统中，还可以将 ssISnoversion 项目部署到 [!INCLUDE[ssIS](../includes/ssis-md.md)] 服务器。 包是可被检索、执行和保存的工作单元。  
+  包是一个有组织的集合，其中可包括连接、控制流元素、数据流元素、事件处理程序、变量、参数和配置，可使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供的图形设计工具将这些对象组合到包中，或以编程方式生成包含这些对象的包。  然后将完成的包保存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包存储区或文件系统中，还可以将 ssISnoversion 项目部署到 [!INCLUDE[ssIS](../includes/ssis-md.md)] 服务器。 包是可被检索、执行和保存的工作单元。  
   
  首次创建包后，包是一个空对象，不能实现任何功能。 若要向包添加功能，可向包添加一个控制流，还可选择添加一个或多个数据流。  
   
  以下关系图显示了一个简单包，其中包含一个带有数据流任务的控制流，而数据流任务中又包含数据流。  
   
- ![具有控制流和数据流的包](../integration-services/media/ssis-package.gif "A package with a control flow and a data flow")  
+ ![具有控制流和数据流的包](../integration-services/media/ssis-package.gif "具有控制流和数据流的包")  
   
  创建基本包后，可添加高级功能（如日志记录和变量）来扩展包功能。 有关详细信息，请参阅“扩展包功能的对象”部分。  
   
@@ -70,14 +70,14 @@ ms.locfileid: "71296189"
   
  包级变量包括可供包使用的预定义系统变量以及作用域为包的用户定义变量。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../integration-services/integration-services-ssis-variables.md)。  
  
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>parameters  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 参数可用于在包执行时向包内的属性赋值。  您可以在项目级别创建“项目参数”  ，在包级别创建“包参数”。 项目参数可用于向项目中的一个或多个包提供项目接收的任何外部输入。 利用包参数，您不必编辑和重新部署包就可以修改包执行。 有关详细信息，请参阅 [Integration Services (SSIS) 参数](../integration-services/integration-services-ssis-package-and-project-parameters.md)。  
  
 ## <a name="package-properties-that-support-extended-features"></a>支持扩展功能的包属性  
  可对包对象进行配置以支持更多功能（如在检查点重新启动包、使用数字证书对包进行签名、设置包保护级别和通过使用事务确保数据完整性）。  
   
 ### <a name="restarting-packages"></a>重新启动包  
- 包中包含检查点属性，在包的一个或多个任务失败时，您可以使用该属性来重新启动包。 例如，如果包中有两个用于更新两个不同的表的数据流任务，若第二个任务失败了，则您可重新运行包且不重复第一个数据流任务。 重新启动包可为长时间运行的包节省时间。 重新启动意味着可从失败的任务启动包，而无需重新运行整个包。 有关详细信息，请参阅 [Restart Packages by Using Checkpoints](../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
+ 包中包含检查点属性，在包的一个或多个任务失败时，您可以使用该属性来重新启动包。 例如，如果包中有两个用于更新两个不同的表的数据流任务，若第二个任务失败了，则您可重新运行包且不重复第一个数据流任务。 重新启动包可为长时间运行的包节省时间。 重新启动意味着可从失败的任务启动包，而无需重新运行整个包。 有关详细信息，请参阅 [通过使用检查点重新启动包](../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
   
 ### <a name="securing-packages"></a>保护包的安全  
  可使用数字签名对包进行签名，并使用密码或用户密钥对包进行加密。 数字签名可以验证包源的身份。 但是，还必须将 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 配置为在加载包时检查数字签名。 有关详细信息，请参阅 [使用数字签名标识包的源](../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md) 和 [对包中敏感数据的访问控制](../integration-services/security/access-control-for-sensitive-data-in-packages.md)。  
@@ -88,7 +88,7 @@ ms.locfileid: "71296189"
 ## <a name="custom-log-entries-available-on-the-package"></a>包可用的自定义日志项  
  下表列出了包的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../integration-services/performance/integration-services-ssis-logging.md)。  
   
-|日志项|描述|  
+|日志项|说明|  
 |---------------|-----------------|  
 |**PackageStart**|指示包开始运行。<br /><br /> 注意：此日志项自动写入日志。 无法排除它。|  
 |**PackageEnd**|指示包已完成。<br /><br /> 注意：此日志项自动写入日志。 无法排除它。|  

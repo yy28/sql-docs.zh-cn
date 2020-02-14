@@ -17,10 +17,10 @@ ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4dcb5f8bd05b5cd1b5b68927abfef49576d6b072
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710724"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>对等事务复制
@@ -51,7 +51,7 @@ ms.locfileid: "71710724"
  下列方案说明了对等复制的典型应用。  
   
 ### <a name="topology-that-has-two-participating-databases"></a>包含两个参与数据库的拓扑  
- ![对等复制，两节点](../../../relational-databases/replication/transactional/media/repl-multinode-01.gif "对等复制，两节点")  
+ ![对等复制，双节点](../../../relational-databases/replication/transactional/media/repl-multinode-01.gif "对等复制，双节点")  
   
  上面两张图均显示了两个参与数据库，其中通过应用程序服务器将用户流量定向到数据库。 此配置可用于从网站到工作组应用程序等多种应用程序，并具有下列优点：  
   
@@ -112,7 +112,7 @@ ms.locfileid: "71710724"
   
 -   必须为对等复制启用发布后，才能创建订阅。  
   
--   必须使用备份或 **replication support only** 选项对订阅进行初始化。 有关详细信息，请参阅[在没有快照的情况下初始化事务订阅](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)。  
+-   必须使用备份或 **replication support only** 选项对订阅进行初始化。 有关详细信息，请参阅 [初始化事务订阅（不使用快照）](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)中手动初始化订阅。  
   
 -   建议不要使用标识列。 使用标识时，必须手动管理所分配的每个参与数据库中表的范围。 有关详细信息，请参阅[复制标识列](../../../relational-databases/replication/publish/replicate-identity-columns.md)中的“为手动标识范围管理分配范围”部分。  
   

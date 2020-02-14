@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f07afead7d74b358c0220dc7ed22dbf31ebbf11a
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056050"
 ---
 # <a name="security-audit-event-category-sql-server-profiler"></a>Security Audit 事件类别 (SQL Server Profiler)
@@ -27,7 +27,7 @@ ms.locfileid: "74056050"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|描述|  
+|主题|说明|  
 |-----------|-----------------|  
 |[Audit Add DB User 事件类](../../relational-databases/event-classes/audit-add-db-user-event-class.md)|指示已在数据库中添加或删除作为数据库用户的登录名。|  
 |[Audit Add Login to Server Role 事件类](../../relational-databases/event-classes/audit-add-login-to-server-role-event-class.md)|指示已在固定服务器角色中添加或删除登录名。|  
@@ -49,9 +49,9 @@ ms.locfileid: "74056050"
 |[Audit Database Operation 事件类](../../relational-databases/event-classes/audit-database-operation-event-class.md)|指示已发生各种操作（如检查点操作或订阅查询通知）。|  
 |[Audit Database Principal Impersonation 事件类](../../relational-databases/event-classes/audit-database-principal-impersonation-event-class.md)|指示已在数据库范围中发生模拟。|  
 |[Audit Database Principal Management 事件类](../../relational-databases/event-classes/audit-database-principal-management-event-class.md)|指示已在数据库中创建、更改或删除主体。|  
-|[Audit Database Scope GDR 事件类](../../relational-databases/event-classes/audit-database-scope-gdr-event-class.md)|指示在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中用户已针对语句权限发出 GRANT、REVOKE 或 DENY。|  
+|[Audit Database Scope GDR 事件类](../../relational-databases/event-classes/audit-database-scope-gdr-event-class.md)|指示 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中用户已针对语句权限发出 GRANT、REVOKE 或 DENY。|  
 |[Audit DBCC 事件类](../../relational-databases/event-classes/audit-dbcc-event-class.md)|指示已发出 DBCC 命令。|  
-|[审核全文事件类](../../relational-databases/event-classes/audit-fulltext-event-class.md)|指示全文事件已发生。|  
+|[Audit Fulltext 事件类](../../relational-databases/event-classes/audit-fulltext-event-class.md)|指示全文事件已发生。|  
 |[Audit Login Change Password 事件类](../../relational-databases/event-classes/audit-login-change-password-event-class.md)|指示用户已更改其 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录密码。|  
 |[Audit Login Change Property 事件类](../../relational-databases/event-classes/audit-login-change-property-event-class.md)|指示已使用 **sp_defaultdb**、 **sp_defaultlanguage**或 ALTER LOGIN 修改登录属性。|  
 |[Audit Login 事件类](../../relational-databases/event-classes/audit-login-event-class.md)|指示用户已成功登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  

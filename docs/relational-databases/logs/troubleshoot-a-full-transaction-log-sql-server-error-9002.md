@@ -19,17 +19,17 @@ ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ad8b68338987256f1c7fa01f1f0d56242cef6a7f
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056071"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>解决事务日志已满的问题（SQL Server 错误 9002）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主题讨论对已满事务日志可以采取的几种应对措施，并就以后如何避免出现已满事务日志给出建议。 
   
-  如果事务日志已满，则 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 会发出 **9002 错误**。 当数据库联机或恢复时，日志可能会满。 如果数据库联机时日志已满，则数据库保持联机状态，但是只能进行读取而不能更新。 如果恢复过程中日志已满，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将数据库标记为 RESOURCE PENDING。 不管哪种情况，都需要用户执行操作才能使日志空间可用。  
+  如果事务日志已满，则 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 会发出 **9002 错误**。 当数据库联机或恢复时，日志可能会满。 如果日志在数据库处于联机状态时已满，则该数据库仍会保持联机状态，但只能读取，不能更新。 如果恢复过程中日志已满，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将数据库标记为 RESOURCE PENDING。 不管哪种情况，都需要用户执行操作才能使日志空间可用。  
   
 ## <a name="responding-to-a-full-transaction-log"></a>对已满事务日志的响应  
  正确响应已满事务日志在某种程度上取决于导致日志已满的情况。 
@@ -102,7 +102,7 @@ ms.locfileid: "74056071"
 ### <a name="discovering-long-running-transactions"></a>发现长时间运行的事务
 很长时间运行的事务会导致事务日志填满。 若要查看长时间运行的事务，请使用下列方法之一：
  - **[sys.dm_tran_database_transactions](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)。**
-此动态管理视图返回有关数据库级事务的信息。 对于长时间运行的事务，最需要注意的列包括：第一条日志记录的时间 [(database_transaction_begin_time)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)、事务的当前状态 [(database_transaction_state)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)和事务日志中开始记录的 [日志序列号 (LSN)](../backup-restore/recover-to-a-log-sequence-number-sql-server.md) [(database_transaction_begin_lsn)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)。
+此动态管理视图返回有关数据库级事务的信息。 对于长时间运行的事务，最需要注意的列包括：第一条日志记录的时间 [(database_transaction_begin_time)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)、事务的当前状态 [(database_transaction_state)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)和事务日志中开始记录的 [日志序列号 (LSN)](../backup-restore/recover-to-a-log-sequence-number-sql-server.md)[(database_transaction_begin_lsn)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)。
 
  - **[DBCC OPENTRAN](../../t-sql/database-console-commands/dbcc-opentran-transact-sql.md)。**
 通过此语句，您可以标识该事务所有者的用户 ID，因此可以隐性地跟踪该事务的源以得到更加有序的终止（将其提交而非回滚）。
@@ -111,7 +111,7 @@ ms.locfileid: "74056071"
 有时只是需要结束进程；此时可能需要使用 [KILL](../../t-sql/language-elements/kill-transact-sql.md) 语句。 请谨慎使用此语句，特别是在运行不想终止的重要进程时。 有关详细信息，请参阅 [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md)
 
 ## <a name="see-also"></a>另请参阅  
-[KB 支持文章 - A transaction log grows unexpectedly or becomes full in SQL Server](https://support.microsoft.com/kb/317375)（SQL Server 中的事务日志意外增大或已满）[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+[KB 支持文章 - SQL Server 中的事务日志意外增加或已满](https://support.microsoft.com/kb/317375) [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [管理事务日志文件的大小](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
  [事务日志备份 (SQL Server)](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [sp_add_log_file_recover_suspect_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)  

@@ -26,10 +26,10 @@ ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 19f179ae869a175ea6238ba4ade9e5f87d663e08
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297801"
 ---
 # <a name="dtutil-utility"></a>Encrypt
@@ -37,7 +37,7 @@ ms.locfileid: "71297801"
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  **dtutil** 命令提示实用工具用于管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包。 该实用工具可以复制、移动、删除包，也可以验证包是否存在。 可对存储于以下三个位置之一的任何 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包执行上述操作： [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库、 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包存储区和文件系统。 如果此实用工具要访问存储在 **msdb**中的包，命令提示符可能要求输入用户名和密码。 如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证，则命令提示符要求输入用户名和密码。 如果缺少用户名， **dtutil** 将尝试使用 Windows 身份验证登录到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 包的存储类型由 **/SQL**、 **/FILE**和 **/DTS** 选项标识。  
+  dtutil 命令提示实用工具用于管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包  。 该实用工具可以复制、移动、删除包，也可以验证包是否存在。 可对存储于以下三个位置之一的任何 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包执行上述操作：[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库、[!INCLUDE[ssIS](../includes/ssis-md.md)] 包存储区和文件系统。 如果此实用工具要访问存储在 **msdb**中的包，命令提示符可能要求输入用户名和密码。 如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证，则命令提示符要求输入用户名和密码。 如果缺少用户名， **dtutil** 将尝试使用 Windows 身份验证登录到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 包的存储类型由 **/SQL**、 **/FILE**和 **/DTS** 选项标识。  
   
  **dtutil** 命令提示实用工具不支持使用命令文件或重定向。  
   
@@ -85,9 +85,9 @@ ms.locfileid: "71297801"
 dtutil /option [value] [/option [value]]...  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
   
-|选项|描述|  
+|选项|说明|  
 |------------|-----------------|  
 |/?|显示命令提示符选项。|  
 |/C[opy] location;destinationPathandPackageName |指定对 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包的复制操作。 使用此参数需要先使用 **/FI**、 **/SQ**或 **/DT** 选项指定包的位置。 然后指定目标位置和目标包名称。 destinationPathandPackageName  参数指定 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包的复制目标。 如果目标 *location* 为 **SQL**，那么还必须在命令中指定 *DestUser*、 *DestPassword* 和 *DestServer* 参数。<br /><br /> 如果 **Copy** 操作的目标处已经有一个包， **dtutil** 将提示用户确认是否删除该包。 回答 **Y** 将覆盖包，回答 **N** 将结束程序。 如果该命令包含 *Quiet* 参数，则将不显示任何提示，并覆盖任何现有包。|  
@@ -111,16 +111,16 @@ dtutil /option [value] [/option [value]]...
 |/M[ove] {SQL  &#124; File  &#124; DTS  }; pathandname |指定对 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包的移动操作。 若要使用该参数，请先使用 **/FI**、 **/SQ**或 **/DT** 选项指定包的位置。 然后指定 **Move** 操作。 此操作需要两个由分号分隔的参数：<br /><br /> 目标参数可指定 *SQL*、 *FILE*或 *DTS*。 *SQL* 目标可包含 *DESTUSER*、 *DESTPASSWORD*和 *DESTSERVER* 选项。<br /><br /> pathandname  参数指定包位置：SQL  使用包路径和包名称，FILE  使用 UNC 或本地路径，DTS  使用相对于 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包存储区的根目录的位置。 如果目标为 *FILE* 或 *DTS*，则路径参数将不包含文件名， 而使用指定位置的包名称作为文件名。<br /><br /> <br /><br /> 如果 **MOVE** 操作的目标处已经有一个包，则 **dtutil** 将提示你确认是否要覆盖这个包。 回答 **Y** 将覆盖包，回答 **N** 将结束程序。 如果该命令包含 *QUIET* 选项，则将不显示任何提示，并覆盖任何现有包。|  
 |/Q[uiet]|在执行包含 **COPY**、 **MOVE**或 **SIGN** 选项的命令时，停止可能显示的确认提示。 如果目标计算机中已经存在与指定包同名的包，或者如果已经对指定包进行了签名，则将显示这些提示。|  
 |/R[emark] text |向命令行中添加注释。 该注释参数是可选的。 如果注释文本包含空格，则文本必须用引号引起来。 可以在一个命令行中包含多个 REM 选项。|  
-|/Si[gn] {SQL  &#124; File  &#124; DTS  }; path  ; hash |对 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包进行签名。 此操作使用三个由分号分隔的必要参数；destination、path 和 hash：<br /><br /> 目标参数可指定 *SQL*、 *FILE*或 *DTS*。 SQL 目标可包含 *DESTUSER*、 *DESTPASSWORD* 和 *DESTSERVER* 选项。<br /><br /> Path 参数指定要操作的包的位置。<br /><br /> Hash 参数指定以长度可变的十六进制字符串表示的证书标识符。<br /><br /> 有关详细信息，请参阅 [使用数字签名标识包的源](../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)。<br /><br /> <br /><br /> **\*\* 重要提示 \*\*** 在配置为检查包签名时， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 仅检查数字签名是否存在、是否有效以及是否来自可信来源。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] *不* 检查包是否已更改。|  
+|/Si[gn] {SQL  &#124; File  &#124; DTS  }; path  ; hash |对 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包进行签名。 此操作使用三个由分号分隔的必要参数；destination、path 和 hash：<br /><br /> 目标参数可指定 *SQL*、 *FILE*或 *DTS*。 SQL 目标可包含 *DESTUSER*、 *DESTPASSWORD* 和 *DESTSERVER* 选项。<br /><br /> Path 参数指定要操作的包的位置。<br /><br /> Hash 参数指定以长度可变的十六进制字符串表示的证书标识符。<br /><br /> 有关详细信息，请参阅 [使用数字签名标识包的源](../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)。<br /><br /> <br /><br /> **\*\* 重要提示 \*\*** 在配置为检查包签名时， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 仅检查数字签名是否存在、是否有效以及是否来自可信来源。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]*不* 检查包是否已更改。|  
 |/SourceP[assword] password |指定与 *SQL* 和 *SOURCEUSER* 选项一起使用的密码，以便可以对存储在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 实例（使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 目标实例。 在不包含 *SOURCEUSER* 选项的命令行中指定 **SOURCEPASSWORD** 是错误的。<br /><br /> 请注意：[!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]|  
-|/SourceS[erver] server_instance |指定与 **SQL** 选项一起使用的服务器名称，以便可以检索存储在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 [!INCLUDE[ssIS](../includes/ssis-md.md)]。 在不包含 *SOURCESERVER* 、 *SIGN SQL*、 *COPY* *SQL*或 *MOVE* *SQL* 选项指定包的位置。<br /><br /> 通过在服务器名中添加反斜杠和实例名称，可以指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例名称。|  
+|/SourceS[erver] server_instance |指定与 **SQL** 选项一起使用的服务器名称，以便可以检索存储在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 在不包含 SIGN SQL、COPY、SQL 或 MOVE SQL 选项的命令行中指定 SOURCESERVER 是错误的       。<br /><br /> 通过在服务器名中添加反斜杠和实例名称，可以指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例名称。|  
 |/SourceU[ser] username |指定与 *SOURCESERVER* 选项一起使用的服务器名称，以便可以检索存储在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 身份验证的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 目标实例。 在不包含 *SOURCEUSER* 、 *SIGN SQL*或 *COPY SQL*选项的命令行中指定 *MOVE SQL* 是错误的。<br /><br /> 请注意：[!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]|  
-|/SQ[L] package_path |指定 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包的位置。 该选项指示包存储在 **msdb** 数据库中。 package_path  参数指定 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包的路径和名称。 文件夹名以反斜杠结尾。<br /><br /> 如果指定 SQL  选项的命令行中还有以下任一选项，则返回 DTEXEC_DTEXECERROR：<br /><br /> *DTS*<br /><br /> *FILE*<br /><br /> *SQL* 选项可以不附带实例，也可以附带下列选项的某个实例：<br /><br /> *SOURCEUSER*<br /><br /> *SOURCEPASSWORD*<br /><br /> *SOURCESERVER*<br /><br /> <br /><br /> 如果不包含 *SOURCEUSERNAME* ，则使用 Windows 身份验证来访问包。 仅当存在*SOURCEPASSWORD* 时，才允许指定 *SOURCEUSER* 。 如果不包含 *SOURCEPASSWORD* ，则使用空密码。<br /><br /> **\*\* 重要提示 \*\*** [!INCLUDE[ssNoteStrongPass](../includes/ssnotestrongpass-md.md)]|  
+|/SQ[L] package_path |指定 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包的位置。 该选项指示包存储在 **msdb** 数据库中。 package_path  参数指定 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包的路径和名称。 文件夹名以反斜杠结尾。<br /><br /> 如果指定 SQL  选项的命令行中还有以下任一选项，则返回 DTEXEC_DTEXECERROR：<br /><br /> *DTS*<br /><br /> *FILE*<br /><br /> *SQL* 选项可以不附带实例，也可以附带下列选项的某个实例：<br /><br /> *SOURCEUSER*<br /><br /> *SOURCEPASSWORD*<br /><br /> *SOURCESERVER*<br /><br /> <br /><br /> 如果不包含 *SOURCEUSERNAME* ，则使用 Windows 身份验证来访问包。 仅当存在*SOURCEPASSWORD* 时，才允许指定 *SOURCEUSER* 。 如果不包含 *SOURCEPASSWORD* ，则使用空密码。<br /><br /> **\*\* 重要说明 \*\*** [!INCLUDE[ssNoteStrongPass](../includes/ssnotestrongpass-md.md)]|  
   
 ## <a name="dtutil-exit-codes"></a>dtutil 退出代码  
  如果检测到语法错误、使用了错误参数或指定了无效的选项组合，**dtutil** 将设置退出代码以向你发出警报。 否则，该实用工具将报告“操作已成功完成”。下表列出了 **dtutil** 实用工具在退出时可以设置的值。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |0|已成功执行此实用工具。|  
 |1|此实用工具已失败。|  
@@ -128,7 +128,7 @@ dtutil /option [value] [/option [value]]...
 |5|此实用工具无法加载请求的包。|  
 |6|此实用工具无法解析命令行，因为它包含语法或语义错误。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  命令文件或重定向不能与 **dtutil**一起使用。  
   
  命令行中选项的顺序不分先后。  

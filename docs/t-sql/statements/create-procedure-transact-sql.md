@@ -46,12 +46,12 @@ ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d24ab7a119162c9ad0f084efa8f47961b270a11e
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 9ae139dda1837a6d8698809f984060f0b341b758
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982760"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909817"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "73982760"
 
 转到[简单示例](#Simple)可跳过详细的语法信息，获取基本存储过程的简单示例。
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -160,7 +160,7 @@ OR ALTER
   
  过程或全局临时程序的完整名称（包括 ##）不能超过 128 个字符。 局部临时程序的完整名称（包括 #）不能超过 116 个字符。  
   
- ; number    
+ **;** *number*  
  **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  用于对同名的过程分组的可选整数。 使用一个 DROP PROCEDURE 语句可将这些分组过程一起删除。  
@@ -170,7 +170,7 @@ OR ALTER
   
  带编号的过程不能使用 xml 或 CLR 用户定义类型，并且不能用于计划指南中  。  
   
- @ parameter    
+ **@** *parameter*  
  在过程中声明的参数。 通过将 at 符号 (@) 用作第一个字符来指定参数名称  。 参数名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。 每个过程的参数仅用于该过程本身；其他过程中可以使用相同的参数名称。  
   
  可声明一个或多个参数；最大值是 2,100。 除非定义了参数的默认值或者将参数设置为等于另一个参数，否则用户必须在调用过程时为每个声明的参数提供值。 如果过程包含[表值参数](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)，并且该参数在调用中缺失，则传入空表。 参数只能代替常量表达式，而不能用于代替表名、列名或其他数据库对象的名称。 有关详细信息，请参阅 [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)。  
@@ -294,7 +294,7 @@ LANGUAGE = [N] 'language'
 TRANSACTION ISOLATION LEVEL  
  **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- 对于本机编译存储过程是必需的。 指定存储过程的事务隔离级别。 选项如下所示：  
+ 对于本机编译存储过程是必需的。 指定存储过程的事务隔离级别。 选项如下：  
   
  有关这些选项的详细信息，请参阅 [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。  
   
@@ -308,7 +308,7 @@ SERIALIZABLE
 -   如果另一个事务插入的新行具有的键值在当前事务中任何语句读取的键范围内，当前事务将失败。  
   
 SNAPSHOT  
- 指定由事务中的任何语句读取的数据与事务开始时存在的数据版本一致。  
+ 指定事务中任何语句读取的数据都是事务开始时便存在的数据的事务上一致的版本。  
   
 DATEFIRST = *number*  
  **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
@@ -356,7 +356,7 @@ SELECT DB_NAME(@ID) AS ThatDB;
 ## <a name="best-practices"></a>最佳实践  
  尽管并未列出所有最佳做法，这些建议还是可以提高过程性能。  
   
--   使用 SET NOCOUNT ON 语句作为过程主体中的第一个语句。 也就是说，将其放置于紧接着 AS 关键字之后。 这会禁止显示在执行任何 SELECT、INSERT、UPDATE、MERGE 和 DELETE 语句后 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发送回客户端的消息。 这可确保最大限度地减少生成的输出，以便一目了然。 不过，对于当前的硬件，没有可度量的性能优势。 有关信息，请参阅 [SET NOCOUNT (Transact-SQL)](../../t-sql/statements/set-nocount-transact-sql.md)。  
+-   使用 SET NOCOUNT ON 语句作为过程主体中的第一个语句。 也就是说，将其放置于紧接着 AS 关键字之后。 这会禁止显示在执行任何 SELECT、INSERT、UPDATE、MERGE 和 DELETE 语句后 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发送回客户端的消息。 这可确保最大限度地减少生成的输出内容，让人一目了然。 不过，对于当前的硬件，没有明显的性能优势。 有关信息，请参阅 [SET NOCOUNT (Transact-SQL)](../../t-sql/statements/set-nocount-transact-sql.md)。  
   
 -   当在过程中创建或引用数据库对象时使用架构名称。 如果不需要搜索多个架构，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 解析对象名称时所需的处理时间会更少。 它还可以防止在未指定架构的情况下，创建对象期间分配用户默认架构时导致的权限和访问问题。  
   
@@ -440,7 +440,7 @@ GO
 ## <a name="metadata"></a>元数据  
  下表列出了可用于返回有关存储过程的信息的目录视图和动态管理视图。  
   
-|“查看”|描述|  
+|查看|说明|  
 |----------|-----------------|  
 |[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|返回 [!INCLUDE[tsql](../../includes/tsql-md.md)] 过程的定义。 使用 ENCRYPTION 选项创建的过程的文本不能使用 sys.sql_modules 目录视图查看  。|  
 |[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|返回有关 CLR 过程的信息。|  
@@ -451,13 +451,13 @@ GO
   
 |性能监视器对象名|性能监视器计数器名称|  
 |-------------------------------------|--------------------------------------|  
-|SQLServer：Plan Cache 对象|Cache Hit Ratio|  
+|SQLServer：Plan Cache 对象|缓存命中率|  
 ||Cache Pages|  
 ||Cache Object Counts*|  
   
  *各种类别的缓存对象均可以使用这些计数器，包括即席 [!INCLUDE[tsql](../../includes/tsql-md.md)]、准备好的 [!INCLUDE[tsql](../../includes/tsql-md.md)]、过程、触发器等。 有关详细信息，请参阅 [SQL Server 计划缓存对象](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>权限  
  要求数据库中的 CREATE PROCEDURE 权限以及对要在其中创建过程的架构的 ALTER 权限，或者要求 db_ddladmin 固定数据库角色中的成员身份    。  

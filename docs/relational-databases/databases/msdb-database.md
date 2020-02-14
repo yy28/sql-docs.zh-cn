@@ -16,10 +16,10 @@ ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2551ad6702eea03fc440b52437faef8cea8dc75f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68100438"
 ---
 # <a name="msdb-database"></a>msdb 数据库
@@ -27,7 +27,7 @@ ms.locfileid: "68100438"
 
   **代理使用** msdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库来计划警报和作业， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 和数据库邮件等其他功能也使用该数据库。  
   
- 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 **msdb**中的表中自动保留一份完整的联机备份和还原历史记录。 这些信息包括执行备份一方的名称、备份时间和用来存储备份的设备或文件。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 使用这些信息来提出计划，还原数据库和应用任何事务日志备份。 将会记录有关所有数据库的备份事件，即使它们是由自定义应用程序或第三方工具创建的。 例如，如果使用调用 SQL Server 管理对象 (SMO) 对象的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 应用程序执行备份操作，则事件将记录在 **msdb** 系统表、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 应用程序日志和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志中。 为了帮助您保护存储在 **msdb**中的信息，我们建议您考虑将 **msdb** 事务日志放在容错存储区中。  
+ 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 **msdb**中的表中自动保留一份完整的联机备份和还原历史记录。 这些信息包括执行备份一方的名称、备份时间和用来存储备份的设备或文件。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 使用这些信息来提出计划，还原数据库和应用任何事务日志备份。 将会记录有关所有数据库的备份事件，即使它们是由自定义应用程序或第三方工具创建的。 例如，如果使用调用 SQL Server 管理对象 (SMO) 对象的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 应用程序执行备份操作，则事件将记录在 msdb 系统表、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 应用程序日志和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志中  。 为了帮助您保护存储在 **msdb**中的信息，我们建议您考虑将 **msdb** 事务日志放在容错存储区中。  
   
  默认情况下， **msdb** 使用简单恢复模式。 如果使用 [备份和还原历史记录](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md) 表，我们建您对 **msdb**使用完整恢复模式。 有关详细信息，请参阅[恢复模式 (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)。 请注意，当安装或升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，只要使用 Setup.exe 重新生成系统数据库， **msdb** 的恢复模式便会自动设置为简单。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68100438"
 |文件|逻辑名称|物理名称|文件增长|  
 |----------|------------------|-------------------|-----------------|  
 |主数据|MSDBData|MSDBData.mdf|以 10% 的速度自动增长到磁盘充满为止。|  
-|Log|MSDBLog|MSDBLog.ldf|以 10% 的速度自动增长到最大 2 TB。|  
+|日志|MSDBLog|MSDBLog.ldf|以 10% 的速度自动增长到最大 2 TB。|  
   
  若要移动 **msdb** 数据库或日志文件，请参阅 [移动系统数据库](../../relational-databases/databases/move-system-databases.md)。  
   

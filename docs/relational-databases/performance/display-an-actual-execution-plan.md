@@ -17,10 +17,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d6e96322cdd6dcd310a550fa1cd94d80dba38738
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67946889"
 ---
 # <a name="display-an-actual-execution-plan"></a>显示实际执行计划
@@ -37,17 +37,17 @@ ms.locfileid: "67946889"
   
 3.  在“查询”菜单中，单击“包括实际的执行计划”或单击“包括实际的执行计划”工具栏按钮    。
 
-    ![工具栏上的“实际执行计划”按钮](../../relational-databases/performance/media/actualexecplantoolbar.png "Actual Execution Plan button on toolbar")   
+    ![工具栏上的“实际执行计划”按钮](../../relational-databases/performance/media/actualexecplantoolbar.png "工具栏上的“实际执行计划”按钮")   
   
 4.  通过单击 **“执行”** 工具栏按钮执行查询。 查询优化器使用的计划将显示在结果窗格的 **“执行计划”** 选项卡中。 
 
-    ![实际执行计划](../../relational-databases/performance/media/actualexecplan.png "Actual Execution Plan")   
+    ![实际执行计划](../../relational-databases/performance/media/actualexecplan.png "实际执行计划")   
 
 5.  将鼠标悬停在逻辑和物理运算符上，通过选择根节点运算符（上图中的 SELECT 节点），在显示的工具提示中查看运算符的描述和属性，包括整个执行计划的属性。   
   
     另外，还可以在“属性”窗口中查看运算符属性。 如果属性不可见，请右键单击一个运算符并单击  “属性”。 选择要查看其属性的运算符。  
 
-    ![右键单击计划运算符中的“属性”](../../relational-databases/performance/media/planproperties.png "Right-click Properties in plan operator")    
+    ![右键单击计划运算符中的“属性”](../../relational-databases/performance/media/planproperties.png "右键单击计划运算符中的“属性”")    
   
 6.  可以通过右键单击执行计划并选择“放大”、“缩小”、“自定义显示比例”或“缩放到合适大小”来更改执行计划的显示。     **“放大”** 和 **“缩小”** 可以放大或缩小执行计划， **“自定义显示比例”** 使您可以定义自己需要的显示比例，例如缩放到 80%。 **“缩放到合适大小”** 会放大执行计划以适应结果窗格。 或者，使用 Ctrl 键和鼠标滚轮的组合来激活动态缩放  。  
 

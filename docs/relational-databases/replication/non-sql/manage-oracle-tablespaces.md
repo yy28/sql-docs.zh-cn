@@ -14,15 +14,15 @@ ms.assetid: b8ea6c3b-01d6-4efc-bbfb-03b264530bbd
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6320d7192d2493486779a1b6ac433f78a45114ca
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70276542"
 ---
 # <a name="manage-oracle-tablespaces"></a>管理 Oracle 表空间
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  表空间是一个数据库存储单元，大致相当于 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的文件组。 表空间允许存储和管理各个组内的数据库对象。 有关详细信息，请参阅 Oracle 文档。  
+  表空间是一个数据库存储单元，大致相当于 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的文件组。 表空间允许存储和管理各个组内的数据库对象。 有关详细信息，请参阅 Oracle 文档。  
   
  如果将表配置为 Oracle 发布的一部分，则可以选择指定在存储复制记录信息时使用现有的 Oracle 表空间。 如果未指定，则复制对象的表空间就是与配置发布服务器时配置的复制管理用户架构相关联的默认表空间。  
   
@@ -44,6 +44,6 @@ ms.locfileid: "70276542"
   
 ## <a name="see-also"></a>另请参阅  
  [配置 Oracle 发布服务器](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
- [Objects Created on the Oracle Publisher](../../../relational-databases/replication/non-sql/objects-created-on-the-oracle-publisher.md)  
+ [在 Oracle 发布服务器上创建的对象](../../../relational-databases/replication/non-sql/objects-created-on-the-oracle-publisher.md)  
   
   

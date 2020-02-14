@@ -15,10 +15,10 @@ ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2b9d63f55ec7baacb4e387f6ee2f4a063ffa645b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67901122"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Oracle 发布服务器的数据类型映射
@@ -27,7 +27,7 @@ ms.locfileid: "67901122"
   
  下表显示了将数据从 Oracle 发布服务器移动到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器时，在 Oracle 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之间数据类型的默认映射情况。 “备用”列指示备用映射是否可用。  
   
-|Oracle 数据类型|SQL Server 数据类型|备用|  
+|Oracle 数据类型|SQL Server 数据类型|备选项|  
 |----------------------|--------------------------|------------------|  
 |BFILE|VARBINARY(MAX)|是|  
 |BLOB|VARBINARY(MAX)|是|  
@@ -50,7 +50,7 @@ ms.locfileid: "67901122"
 |RAW([1-2000])|VARBINARY([1-2000])|否|  
 |real|FLOAT|否|  
 |ROWID|CHAR(18)|否|  
-|timestamp|DATETIME|是|  
+|TIMESTAMP|DATETIME|是|  
 |TIMESTAMP(0-7)|DATETIME|是|  
 |TIMESTAMP(8-9)|DATETIME|是|  
 |TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|是|  

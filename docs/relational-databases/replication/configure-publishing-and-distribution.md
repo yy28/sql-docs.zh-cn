@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 67db54183f186ce5a116aada3e5f6b058abb9dc5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: f4f51850fe288f2bbbd6d0e70a123a03f84344ac
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907117"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76284904"
 ---
 # <a name="configure-publishing-and-distribution"></a>配置发布和分发
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "72907117"
 
 #### <a name="to-configure-distribution"></a>配置分发 
 
-1. 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接到将要作为分发服务器的服务器（许多情况下，发布服务器和分发服务器是同一服务器），然后展开该服务器节点。
+1. 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，连接到将要作为分发服务器的服务器（许多情况下，发布服务器和分发服务器是同一服务器），然后展开该服务器节点。
 
 2. 右键单击 **“复制”** 文件夹，然后单击 **“配置分发”** 。
 
@@ -96,15 +96,15 @@ ms.locfileid: "72907117"
 
 1. 使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与服务器的连接。
 
-2. 创建 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的实例。 传递步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。
+2. 创建的 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的实例。 传递步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。
 
-3. 创建 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 类的实例。
+3. 创建的 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 类的实例。
 
 4. 将 <xref:Microsoft.SqlServer.Replication.DistributionDatabase.Name%2A> 属性设置为数据库名称，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。
 
 5. 通过调用 <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> 方法安装分布服务器。 传递步骤 3 中的 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 对象。
 
-6. 创建 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 类的实例。
+6. 创建的 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 类的实例。
 
 7. 设置 <xref:Microsoft.SqlServer.Replication.DistributionPublisher>的以下属性： 
 
@@ -124,9 +124,9 @@ ms.locfileid: "72907117"
 
 1. 使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与远程分发服务器的连接。
 
-2. 创建 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的实例。 传递步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。
+2. 创建的 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的实例。 传递步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。
 
-3. 创建 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 类的实例。
+3. 创建的 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 类的实例。
 
 4. 将 <xref:Microsoft.SqlServer.Replication.DistributionDatabase.Name%2A> 属性设置为数据库名称，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。
 
@@ -134,7 +134,7 @@ ms.locfileid: "72907117"
 
    > `IMPORTANT!!` 如果可能，请在运行时提示用户输入安全凭据。 如果必须存储凭据，请使用 [Windows .NET Framework 提供的](https://go.microsoft.com/fwlink/?LinkId=34733) Cryptographic Services [!INCLUDE[msCoName](../../includes/msconame-md.md)] （加密服务）。
 
-6. 创建 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 类的实例。
+6. 创建的 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 类的实例。
 
 7. 设置 <xref:Microsoft.SqlServer.Replication.DistributionPublisher>的以下属性： 
 
@@ -152,7 +152,7 @@ ms.locfileid: "72907117"
 
 9. 使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与本地发布服务器的连接。
 
-10. 创建 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的实例。 传递步骤 9 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。
+10. 创建的 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的实例。 传递步骤 9 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。
 
 11. 调用 <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> 方法。 传递远程分发服务器的名称和在步骤 5 中指定的远程分发服务器的密码。
 

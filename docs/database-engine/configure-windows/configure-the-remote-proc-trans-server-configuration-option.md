@@ -14,10 +14,10 @@ ms.assetid: cfbc6158-ab96-44b4-87eb-ea278c1b0c6b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 9a372bf572373d0c3557ec4e40a32ba937d57d88
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012312"
 ---
 # <a name="configure-the-remote-proc-trans-server-configuration-option"></a>配置远程过程事务服务器配置选项
@@ -46,11 +46,11 @@ ms.locfileid: "68012312"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **跟进：**[在配置远程过程事务选项之后](#FollowUp)  
+-   **跟进：** [在配置远程过程事务选项之后](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a> 先决条件  
+###  <a name="Prerequisites"></a>先决条件  
   
 -   在设定此值前，必须允许远程服务器连接。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "68012312"
   
 #### <a name="to-configure-the-remote-proc-trans-option"></a>配置 remote proc trans 选项  
   
-1.  在对象资源管理器中，右键单击服务器并选择 **“属性”**。  
+1.  在对象资源管理器中，右键单击服务器并选择 **“属性”** 。  
   
 2.  单击 **“连接”** 节点。  
   
@@ -79,9 +79,9 @@ ms.locfileid: "68012312"
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 将 `remote proc trans` 选项的值设置为 `1`。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例说明如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 将 `remote proc trans` 选项的值设置为 `1`。  
   
 ```sql  
 USE AdventureWorks2012 ;  

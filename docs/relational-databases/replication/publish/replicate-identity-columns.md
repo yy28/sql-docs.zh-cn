@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: a0e861a1619921081a81fa52f72ba6fc88e98668
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: a7feb252e98be7cc820b074bcb3c3b2c6ff4ff5d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908351"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287578"
 ---
 # <a name="replicate-identity-columns"></a>复制标识列
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  为列分配 IDENTITY 属性后， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将为在包含标识列的表中插入的新行自动生成顺序编号。 有关详细信息，请参阅 [IDENTITY（属性）&#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql-identity-property.md)。 因为包含的标识列可能是主键的一部分，所以请务必避免在标识列中出现重复值。 若要在多个节点上都有更新的复制拓扑中使用标识列，复制拓扑中的每个节点都必须使用不同范围的标识值，以避免出现重复。  
+  将 IDENTITY 属性分配到列时，[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将为在包含标识列的表中插入的新行自动生成顺序编号。 有关详细信息，请参阅 [IDENTITY（属性）&#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql-identity-property.md)。 因为包含的标识列可能是主键的一部分，所以请务必避免在标识列中出现重复值。 若要在多个节点上都有更新的复制拓扑中使用标识列，复制拓扑中的每个节点都必须使用不同范围的标识值，以避免出现重复。  
   
  例如，可以为发布服务器分配范围 1-100，为订阅服务器 A 分配范围 101-200，为订阅服务器 B 分配范围 201-300。 如果在发布服务器中插入行，例如标识值是 65，则将该值复制到每个订阅服务器。 复制在每个订阅服务器上插入数据时，不会增加订阅服务器表中的标识列值，而是插入文字值 65。 仅用户插入，而复制代理不插入，将导致标识列值增加。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "72908351"
     >  如果将标识列中的值设置为减小而非增加，则请记录发现的最小值，然后用此值重设种子。  
   
 ## <a name="see-also"></a>另请参阅  
- [BACKUP &#40;Transact-SQL&#41;](../../../t-sql/statements/backup-transact-sql.md)   
+ [BACKUP (Transact-SQL)](../../../t-sql/statements/backup-transact-sql.md)   
  [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)   
  [IDENT_CURRENT &#40;Transact-SQL&#41;](../../../t-sql/functions/ident-current-transact-sql.md)   
  [IDENTITY（属性）&#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql-identity-property.md)   

@@ -20,10 +20,10 @@ ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 106b0d08ec24143ba497fb5b631fcbd5003a4872
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294412"
 ---
 # <a name="http-connection-manager"></a>HTTP 连接管理器
@@ -72,7 +72,7 @@ ms.locfileid: "71294412"
  **使用凭据**  
  指定是否希望 HTTP 连接管理器使用用户安全凭据进行身份验证。  
   
- **User name**  
+ **用户名**  
  如果 HTTP 连接管理器使用凭据，则必须指定用户名、密码和域。  
   
  **密码**  
@@ -114,7 +114,7 @@ ms.locfileid: "71294412"
  **使用凭据**  
  指定是否希望 HTTP 连接管理器对于代理服务器使用安全凭据。  
   
- **User name**  
+ **用户名**  
  如果 HTTP 连接管理器使用凭据，则必须指定用户名、密码和域。  
   
  **密码**  
@@ -126,7 +126,7 @@ ms.locfileid: "71294412"
  **代理跳过列表**  
  要跳过代理服务器的地址的列表。  
   
- **“添加”**  
+ **添加**  
  键入要跳过代理服务器的地址。  
   
  **删除**  

@@ -11,10 +11,10 @@ ms.assetid: e5018225-68bb-4f34-ae4a-ead79d8ad13a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9963f137470c7e252bc00be189c37ac98e6374e4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284360"
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>SQL Server 各个版本支持的 Integration Services 功能
@@ -35,11 +35,11 @@ ms.locfileid: "71284360"
 
 可在 180 天的试用期内使用 SQL Server 评估版。  
     
-> [![从评估中心下载](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) **[从评估中心下载 SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**    
+> [![从评估中心下载](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) [从评估中心下载 SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)     
     
 ## <a name="ISNew"></a>SQL Server 2017 中的新 Integration Services 功能
   
-|功能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Scale Out 主要角色|是|||||
 |Scale Out 辅助角色|是|是 <sup>1</sup>|TBD|TBD|TBD|
@@ -51,13 +51,13 @@ ms.locfileid: "71284360"
 
 ## <a name="IEWiz"></a>SQL Server 导入和导出向导
 
-|功能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |SQL Server 导入和导出向导|是|是|是|是|是|  
 
 ## <a name="IS"></a> Integration Services  
   
-|功能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |内置数据源连接器|是|是|||| 
 |内置任务和转换|是|是||||  
@@ -68,7 +68,7 @@ ms.locfileid: "71284360"
 
 ## <a name="ISAA"></a>Integration Services - 高级源和目标  
   
-|功能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Attunity 提供的高性能 Oracle 源和目标|是|||||  
 |Attunity 提供的高性能 Teradata 源和目标|是|||||  
@@ -79,7 +79,7 @@ ms.locfileid: "71284360"
   
 ## <a name="ISAT"></a>Integration Services - 高级任务和转换  
   
-|功能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Attunity <sup>1</sup> 提供的变更数据捕获组件|是|||||  
 |数据挖掘查询转换|是|||||  

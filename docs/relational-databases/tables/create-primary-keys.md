@@ -13,12 +13,12 @@ ms.assetid: 85c623ca-4656-4d70-a9db-ee4d897cd214
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 766ae29c9024afd31b4c2bf353653f9f6b1a079f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e1f9d94f1ddf6f6d3e9a8ce73a263790acc516de
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123715"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76259385"
 ---
 # <a name="create-primary-keys"></a>创建主键
 
@@ -46,9 +46,9 @@ ms.locfileid: "68123715"
 
 ### <a name="to-create-a-primary-key"></a>创建主键
 
-1. 在对象资源管理器中，右键单击要为其添加唯一约束的表，然后单击“设计”。
+1. 在对象资源管理器中，右键单击要为其添加唯一约束的表，然后单击“设计”  。
 2. 在 **“表设计器”** 中，单击要定义为主键的数据库列的行选择器。 若要选择多个列，请在单击其他列的行选择器时按住 Ctrl 键。
-3. 右键单击该列的行选择器，然后选择“设置主键”。
+3. 右键单击该列的行选择器，然后选择“设置主键”  。
 
 > [!CAUTION]
 > 若要重新定义主键，则必须首先删除与现有主键之间的任何关系，然后才能创建新主键。 此时，将显示一条消息警告您：作为该过程的一部分，将自动删除现有关系。
@@ -83,7 +83,7 @@ CREATE TABLE Production.TransactionHistoryArchive1
 ;
 ```
 
-### <a name="to-create-a-primary-key-with-nonclustered-index-in-a-new-table"></a>在新表中创建具有非聚集索引的主键
+### <a name="to-create-a-primary-key-with-clustered-index-in-a-new-table"></a>在新表中创建具有聚集索引的主键
 
 下面的示例创建一个表，并对 AdventureWorks 数据库中的 `CustomerID` 列和 `TransactionID` 分别定义主键和聚集索引。
 

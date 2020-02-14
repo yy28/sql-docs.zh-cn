@@ -1,89 +1,95 @@
 ---
-title: 为 Linux 上的 SQL Server 配置持久性内存 (PMEM)
+title: 配置永久内存 (PMEM)
 description: 本文提供在 Linux 上配置 PMEM 的教程。
 ms.custom: seo-lt-2019
 author: briancarrig
 ms.author: brcarrig
-ms.reviewer: vanto
-ms.date: 11/04/2019
+ms.date: 10/31/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0b5f86dac62c371a9e4dda607cbd9ec7533a187a
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.openlocfilehash: 5d98b728a1966861532a30a4b5dd92824d25f1d5
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75558602"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831963"
 ---
-# <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>如何为 Linux 上的 SQL Server 配置持久性内存 (PMEM)
+# <a name="configure-persistent-memory-pmem-for-sql-server-on-linux"></a>为 Linux 上的 SQL Server 配置持久性内存 (PMEM)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本文介绍如何为 Linux 上的 SQL Server 配置持久性内存 (PMEM)。 SQL Server 2019 引入了对 Linux 的 PMEM 支持。
+本文介绍如何为 Linux 上的 [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] 配置永久内存 (PMEM)。
 
 ## <a name="overview"></a>概述
 
-SQL Server 2016 引入了对非易失性 DIMM 的支持，以及称为[日志结尾在 NVDIMM 上缓存]( https://blogs.msdn.microsoft.com/bobsql/2016/11/08/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm/)的优化。 这些优化减少了将日志缓冲区强化为持久性存储所需的操作数量。 这利用了 Windows Server 对 DAX 模式下的持久性内存设备的直接访问权限。
+[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] 具有大量使用永久内存的内存中功能。 本文档介绍为 Linux 上的 SQL Server 配置永久内存所需的步骤。
 
-SQL Server 2019 将对持久性内存 (PMEM) 设备的支持扩展到 Linux，对 PMEM 上放置的数据和事务日志文件提供完整 enlightenment。 Enlightenment 是指使用高效用户空间 `memcpy()` 操作访问存储设备的方法。 SQL Server 利用 Linux 上的 DAX 支持将数据直接放入设备中，而不是通过文件系统和存储堆栈，从而减少延迟。
+> [!NOTE]
+> 引入了“启发”一词，旨在传达使用永久内存感知文件系统的概念  。 通过使用内存映射 (`mmap()`)，可以从用户空间应用程序直接访问文件系统。 在创建文件的内存映射时，应用程序可能会完全绕过 I/O 堆栈发出加载/存储指令。 从主机扩展应用程序的角度来看，这是一种“启发式”文件访问方法，它是允许 SQLPAL 与 Windows 或 Linux OS 交互的黑盒代码。
 
-## <a name="enable-enlightenment-of-database-files"></a>对数据库文件启用 enlightenment
-若要对 Linux 上的 SQL Server 中的数据库文件启用 enlightenment，请执行以下步骤：
+## <a name="create-namespaces-for-pmem-devices"></a>为 PMEM 设备创建命名空间
 
-1. 配置设备。
+### <a name="configure-the-devices"></a>配置设备
 
-  在 Linux 中，使用 `ndctl` 实用工具。
+在 Linux 中，使用 `ndctl` 实用工具。
 
-  - 安装 `ndctl` 以配置 PMEM 设备。 可在[此处](https://docs.pmem.io/getting-started-guide/installing-ndctl)找到。
-  - 使用 [ndctl] 创建命名空间。
+- 安装 `ndctl` 以配置 PMEM 设备。 可在[此处](https://docs.pmem.io/getting-started-guide/installing-ndctl)找到。
+- 使用 `ndctl` 创建命名空间。 命名空间在 PMEM NVDIMM 之间交错，可以对设备上的内存区域提供不同类型的用户空间访问。 `fsdax` 是 SQL Server 的默认和所需模式。
 
-  ```bash 
-  ndctl create-namespace -f -e namespace0.0 --mode=fsdax* --map=mem
-  ```
-
-  >[!NOTE]
-  >如果正在使用低于 59 的 `ndctl` 版本，请使用 `--mode=memory`。
-
-  使用 `ndctl` 验证命名空间。 示例输出如下：
-
-```bash
-ndctl list
-[
-  {
-    "dev":"namespace0.0",
-    "mode":"memory",
-    "size":1099511627776,
-    "blockdev":"pmem0",
-    "numa_node":0
-  }
-]
+```bash 
+ndctl create-namespace -f -e namespace0.0 --mode=fsdax* --map=dev
 ```
 
-  - 创建和装载 PMEM 设备
+请注意，我们已选择 `fsdax` 模式，并且使用系统内存来存储每页的元数据。 我们推荐使用 `--map=dev`。 这会将元数据直接存储在命名空间上。 目前，使用 `--map=mem` 将元数据存储在内存中被认为是一项试验性功能。
 
-    例如，使用 XFS
+使用 `ndctl` 验证命名空间。 
+  
+示例输出如下：
 
-    ```bash
-    mkfs.xfs -f /dev/pmem0
-    mount -o dax,noatime /dev/pmem0 /mnt/dax
-    xfs_io -c "extsize 2m" /mnt/dax
-    ```
+```bash
+# ndctl list -N
+{
+  "dev":"namespace0.0",
+  "mode":"fsdax",
+  "map":"dev",
+  "size":4294967296,
+  "sector_size":512,
+  "blockdev":"pmem0",
+  "numa_node":0
+}
+```
 
-    例如，使用 EXT4
+### <a name="create-and-mount-pmem-device"></a>创建和装载 PMEM 设备
 
-    ```bash
-    mkfs.ext4 -b 4096 -E stride=512 -F /dev/pmem0
-    mount -o dax,noatime /dev/pmem0 /mnt/dax
-    ```
+例如，使用 XFS
 
-  使用 ndctl 配置设备，并将其格式化和装载后，可以将数据库文件放在其中。 还可以创建新的数据库 
+```bash
+mkfs.xfs -f /dev/pmem0
+mount -o dax,noatime /dev/pmem0 /mnt/dax
+xfs_io -c "extsize 2m" /mnt/dax
+```
 
-1. 由于 PMEM 设备是 O_DIRECT 安全的，因此请启用跟踪标志 3979来禁用强制刷新机制。 此跟踪标志为启动跟踪标志，因此需要使用 mssql-conf 实用工具来启用。 请注意，这是服务器范围的配置更改，如果有任何需要强制刷新机制以确保数据完整性的 O_DIRECT 不兼容设备，则不应使用此跟踪标志。 有关详细信息，请参阅 https://support.microsoft.com/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux
+例如，使用 EXT4
 
-1. 请重新启动 SQL Server。
+```bash
+mkfs.ext4 -b 4096 -E stride=512 -F /dev/pmem0
+mount -o dax,noatime /dev/pmem0 /mnt/dax
+```
+
+## <a name="technical-considerations"></a>技术注意事项
+
+- XFS/EXT4 的 2 MB 块分配，如上文所述
+- 块分配和 `mmap` 之间的不一致会导致无提示回退到 4 KB
+- 文件大小应为 2 MB 的倍数（取模 2 MB）
+- 请勿禁用透明大页 (THP)（在大多数分发服务器上默认启用）
+
+使用 `ndctl` 配置、创建和装载设备后，可以将数据库文件放在该设备中，也可以创建新的数据库。
+
+由于 PMEM 设备是 O_DIRECT（直接 I/O）安全的，请考虑启用跟踪标志 3979 来禁用强制刷新机制。 有关详细信息，请参阅 [FUA 支持](https://support.microsoft.com/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux)。 [FUA 内部信息](https://blogs.msdn.microsoft.com/bobsql/2018/12/18/sql-server-on-linux-forced-unit-access-fua-internals/)中介绍了强制单元访问的内部信息。
 
 ## <a name="next-steps"></a>后续步骤
 
 有关 Linux 上 SQL Server 的详细信息，请参阅 [Linux 上的 SQL Server](sql-server-linux-overview.md)。
+有关 Linux 上的 SQL Server 的性能最佳做法，请参阅[性能最佳做法](sql-server-linux-performance-best-practices.md)。

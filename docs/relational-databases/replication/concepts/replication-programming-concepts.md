@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: af2e1ff51864215d3f5709463ab8d49e6737747e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 8359c9844cf9ebbc91da556f212429c96909d857
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768761"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76285632"
 ---
 # <a name="replication-programming-concepts"></a>复制编程概念
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -123,7 +123,7 @@ ms.locfileid: "68768761"
   
 2.  除了销售应用程序所需的典型数据访问外，此应用程序还应允许销售人员通过单击按钮来按需同步请求订阅。 由于销售代表要安装并运行该应用程序，因此该应用程序还要能在客户端配置订阅并应用初始快照。 作为可选功能，该应用程序还可以使用 Windows 提供的用于检测无线网络连接的基础结构，在检测到无线连接时自动同步订阅。  
   
-3.  遵守所有复制安全指南，包括连接发布服务器时使用 Windows 身份验证和虚拟专用网 (VPN)。 如果需要实现 Web 同步，请使用安全套接字层 (SSL) 连接。 有关详细信息，请参阅[配置 Web 同步](../../../relational-databases/replication/configure-web-synchronization.md)。  
+3.  遵守所有复制安全指南，包括连接发布服务器时使用 Windows 身份验证和虚拟专用网 (VPN)。 如果需要实现 Web 同步，请使用安全套接字层 (SSL) 连接。 有关详细信息，请参阅 [Configure Web Synchronization](../../../relational-databases/replication/configure-web-synchronization.md)。  
   
 4.  为了利用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 的功能，应使用托管代码语言开发应用程序。  
   

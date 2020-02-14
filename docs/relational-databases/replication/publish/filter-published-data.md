@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 55eb271c7eb5dff661b37cfb18b029e57bbeb0ba
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 38e0164de9dda9f86183a89a29b58753b2a7f118
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769881"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287634"
 ---
 # <a name="filter-published-data"></a>筛选已发布数据
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "68769881"
     > [!NOTE]  
     >  在事务发布中使用行筛选器会显著增加开销，因为对于为已发布表写入的每个日志行，都需要计算项目筛选器子句以确定是否要复制该行。 如果每个复制节点都能支持全部数据负载，而且总体数据集相当小，则应避免在事务发布中使用行筛选器。  
   
--   对于合并复制，请使用参数化行筛选器，而不要使用静态行筛选器创建多个发布。 有关详细信息，请参阅 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
+-   对于合并复制，请使用参数化行筛选器，而不要使用静态行筛选器创建多个发布。 有关详细信息，请参阅 [参数化行筛选器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
   
  若要定义或修改静态行筛选器，请参阅 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "68769881"
   
  还可以同时使用行筛选和列筛选，如下图所示。  
   
- ![行和列筛选](../../../relational-databases/replication/publish/media/repl-18.gif "行和列筛选")  
+ ![行筛选和列筛选](../../../relational-databases/replication/publish/media/repl-18.gif "行筛选和列筛选")  
   
  创建发布后，可以使用列筛选从现有发布中删除列，但在发布服务器中的表中保留该列，也可以在发布中包括现有列。 对于其他更改（如向表添加新列，然后再将其添加到已发布项目中），请使用架构更改复制。 有关详细信息，请参阅[对发布数据库进行架构更改](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)主题中的“添加列”和“删除列”这两部分。  
   

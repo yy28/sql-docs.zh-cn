@@ -23,10 +23,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 1e05ad220147e7f46bfaa66127fcc492aaeae6a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927189"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67927189"
   修改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中现有路由的路由信息。 
 
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -56,7 +56,7 @@ WITH
  route_name   
  要更改的路由的名称。 不能指定服务器、数据库和架构名称。  
   
- 替换为  
+ WITH  
  引入对要更改的路由进行定义的子句。  
   
  SERVICE_NAME **='** _service\_name_ **'**  
@@ -87,7 +87,7 @@ WHERE database_id = DB_ID();
 
  指定此路由的网络地址。 next_hop_address 按以下格式指定 TCP/IP 地址  ：  
   
- TCP://  { dns_name   | netbios_name   |  ip_address } :  port_number   
+ **TCP://** { *dns_name* | *netbios_name* |*ip_address* } **:** *port_number*  
   
  指定的 port_number 必须与指定计算机上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 端点的端口号匹配  。 这可以通过在选定数据库中运行如下查询获得：  
   
@@ -111,7 +111,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
  MIRROR_ADDRESS **='** next\_hop\_mirror\_address  **'**  
  指定镜像对的镜像服务器的网络地址，镜像对的主体服务器位于 next_hop_address  。 next_hop_mirror_address 按以下格式指定 TCP/IP 地址  ：  
   
- TCP://{ dns_name | netbios_name | ip_address } : port_number        
+ **TCP://** { *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
   
  指定的 port_number 必须与指定计算机上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 端点的端口号匹配  。 这可以通过在选定数据库中运行如下查询获得：  
   
@@ -128,7 +128,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
 > [!NOTE]  
 >  此选项在包含数据库中不可用。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  存储路由的路由表是元数据表，此表可通过 sys.routes  目录视图读取。 路由表只能通过 CREATE ROUTE、ALTER ROUTE 和 DROP ROUTE 语句进行更新。  
   
  未在 ALTER ROUTE 命令中指定的子句保持不变。 因此，无法通过对路由执行 ALTER 语句来指定此路由不超时、此路由与任何服务名称匹配或此路由与任何 Broker 实例匹配。 若要更改路由的这些特征，必须删除现有路由，然后使用新的信息创建一个新路由。  

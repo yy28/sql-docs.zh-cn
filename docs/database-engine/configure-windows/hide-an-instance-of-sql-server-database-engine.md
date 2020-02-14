@@ -14,10 +14,10 @@ ms.assetid: 392de21a-57fa-4a69-8237-ced8ca86ed1d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 28d7a01ce3c11ce332de7e7af70ff0c57746e840
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71682090"
 ---
 # <a name="hide-an-instance-of-sql-server-database-engine"></a>隐藏 SQL Server 数据库引擎的实例
@@ -32,7 +32,7 @@ ms.locfileid: "71682090"
   
 2.  在 **“标志”** 选项卡的 **“隐藏实例”** 框中，选择 **“是”** ，然后单击 **“确定”** 关闭对话框。 对于新连接，更改会立即生效。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果你隐藏命名实例，你将需要在连接字符串中提供端口号才能连接到隐藏的实例，即使浏览器服务正在运行也是如此。 对于命名隐藏实例，我们建议你使用静态端口而不是动态端口。  
   有关详细信息，请参阅[将服务器配置为侦听特定 TCP 端口（SQL Sever 配置管理器）](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)。  
   

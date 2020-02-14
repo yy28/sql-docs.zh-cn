@@ -12,10 +12,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bc6409f7a8f5fc15568e583aa50552667f2dd874
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71816718"
 ---
 # <a name="columnstore-indexes---query-performance"></a>列存储索引 - 查询性能
@@ -94,9 +94,9 @@ ms.locfileid: "71816718"
 |批处理模式运算符|何时使用此项？|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<sup>1</sup>|注释|    
 |---------------------------|------------------------|---------------------|---------------------|---------------------------------------|--------------|    
 |DML 操作（insert、delete、update、merge）||否|否|否|DML 不是批处理模式操作，因为它不是并行的。 即使我们启用串行模式批处理操作，允许 DML 以批处理模式处理，我们也看不到明显的收益。|    
-|columnstore index scan|扫描|不适用|是|是|对于列存储索引，我们可以将谓词推送到 SCAN 节点。|    
+|columnstore index scan|扫描|NA|是|是|对于列存储索引，我们可以将谓词推送到 SCAN 节点。|    
 |columnstore Index Scan（非聚集）|扫描|是|是|是|是|    
-|index seek||不适用|不适用|否|我们以行模式通过非聚集 B 树索引执行查找操作。|    
+|index seek||NA|NA|否|我们以行模式通过非聚集 B 树索引执行查找操作。|    
 |compute scalar|计算结果为标量值的表达式。|是|是|是|数据类型存在一些限制。 这适用于所有批处理模式运算符。|    
 |串联 (concatenation)|UNION 和 UNION ALL|否|是|是||    
 |filter|应用谓词|是|是|是||    
@@ -108,7 +108,7 @@ ms.locfileid: "71816718"
 |带有串行查询计划的单线程查询||否|否|是||    
 |sort|使用列存储索引的 SCAN 中的 Order by 子句。|否|否|是||    
 |top sort||否|否|是||    
-|window aggregates||不适用|不适用|是|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的新运算符。|    
+|window aggregates||NA|NA|是|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的新运算符。|    
     
 <sup>1</sup>适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 高级层、标准层（S3 及更高）和所有 vCore 层，以及 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
     
@@ -127,7 +127,7 @@ ms.locfileid: "71816718"
     
  通过在对缓存友好的执行中对压缩/编码数据进行高效聚合并利用 SIMD 可进一步加快聚合下推速度    
     
- ![aggregate pushdown](../../relational-databases/indexes/media/aggregate-pushdown.jpg "aggregate pushdown")    
+ ![聚合下推](../../relational-databases/indexes/media/aggregate-pushdown.jpg "聚合下推")    
     
 例如，在以下两个查询中完成了聚合下推：    
     

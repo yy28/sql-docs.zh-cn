@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2c705c60504dd6de0b143fd129d6660db9457b48
-ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71127375"
 ---
 # <a name="tables"></a>表
@@ -101,6 +101,6 @@ ms.locfileid: "71127375"
 |介绍如何指定列的默认值。 如果未提供其他值，则使用此值。|[指定列的默认值](../../relational-databases/tables/specify-default-values-for-columns.md)|
 
 ## <a name="see-also"></a>另请参阅
- [主键和外键约束](../../relational-databases/tables/primary-and-foreign-key-constraints.md) [唯一约束和 Check 约束](../../relational-databases/tables/unique-constraints-and-check-constraints.md)
+ [主键和外键约束](../../relational-databases/tables/primary-and-foreign-key-constraints.md) [唯一约束和 CHECK 约束](../../relational-databases/tables/unique-constraints-and-check-constraints.md)
 
 

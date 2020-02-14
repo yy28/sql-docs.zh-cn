@@ -11,10 +11,10 @@ ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2a16cd38eef12584f8d876e610bfda5d602c3076
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283017"
 ---
 # <a name="lesson-6-4-deploy-the-lesson-6-package"></a>第 6-4 课：部署第 6 课包
@@ -60,13 +60,13 @@ ms.locfileid: "71283017"
   
 3.  展开“SSIS Tutorial”文件夹，右键单击“项目”，然后选择“导入包”    。  
   
-4.  在“Integration Services 项目转换向导”的“简介”页上，选择“下一步”    。  
+4.  在“Integration Services 项目转换向导”的“简介”页面上，选择“下一步”    。  
   
 5.  在“查找包”页上，确保在“源”列表中选择“文件系统”，然后选择“浏览”     。  
   
 6.  在“浏览文件夹”对话框中，浏览到包含此 SSIS Tutorial 项目的文件夹，然后选择“确定”   。  
   
-7.  选择“下一步”  。  
+7.  选择“**下一页**”。  
   
 8.  在“选择包”页上，应看到 SSIS Tutorial 中的所有六个包。 在“包”列表中，选择 Lesson 6.dtsx，然后选择“下一步”    。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "71283017"
   
 关闭 Integration Services 项目转换向导时，SSIS 会显示 Integration Services 部署向导。 现在使用此向导部署第 6 课包。  
   
-1.  在“Integration Services 部署向导”的“简介”页上，检查用于部署项目的步骤，然后选择“下一步”    。  
+1.  在“Integration Services 部署向导”的“简介”页面上，查看用于部署项目的步骤，然后选择“下一步”    。  
   
 2.  在“选择目标”页上，验证服务器名称是否为包含 SSISDB 目录的 SQL Server 实例，以及路径是否显示 SSIS Tutorial Deployment，然后选择“下一步”    。  
   

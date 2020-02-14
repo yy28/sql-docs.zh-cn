@@ -22,10 +22,10 @@ ms.assetid: c75cf73d-0268-4c57-973d-b8a84ff801fa
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 92153155be5761e804c6d62cece4d392b40a1412
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67894892"
 ---
 # <a name="deallocate-transact-sql"></a>DEALLOCATE (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67894892"
 
   删除游标引用。 当释放最后的游标引用时，组成该游标的数据结构由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 释放。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,7 +48,7 @@ DEALLOCATE { { [ GLOBAL ] cursor_name } | @cursor_variable_name }
  @cursor_variable_name   
  cursor 变量的名称  。 @cursor_variable_name 必须为 cursor 类型   。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 对游标进行操作的语句使用游标名称或游标变量引用游标。 `DEALLOCATE` 删除游标与游标名称或游标变量之间的关联。 如果一个名称或变量是最后引用游标的名称或变量，则将释放游标，游标使用的任何资源也随之释放。 用于保护提取隔离的滚动锁在 `DEALLOCATE` 上释放。 用于保护更新（包括通过游标进行的定位更新）的事务锁一直到事务结束才释放。  
   
 `DECLARE CURSOR` 语句分配游标并将其与游标名称关联。  

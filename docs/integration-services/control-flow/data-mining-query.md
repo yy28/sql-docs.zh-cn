@@ -13,10 +13,10 @@ ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6ab9374312051ab22aa90c48bfed40713fe4e318
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298321"
 ---
 # <a name="data-mining-query"></a>数据挖掘查询
@@ -30,9 +30,9 @@ ms.locfileid: "71298321"
  “切换视图”按钮  
  单击图标可以在设计窗格和查询窗格之间切换。 默认情况下，设计窗格处于打开状态。  
   
- 若要切换到设计窗格，请单击![设计图标](../../integration-services/control-flow/media/ssis-designicon.gif "Design icon")图标。  
+ 要切换到设计窗格，请单击![设计图标](../../integration-services/control-flow/media/ssis-designicon.gif "设计图标")图标。  
   
- 若要切换到查询窗格，请单击 ![SQL 图标](../../integration-services/control-flow/media/ssis-queryicon.gif "SQL icon")图标。  
+ 要切换到查询窗格，请单击 ![SQL 图标](../../integration-services/control-flow/media/ssis-queryicon.gif "SQL 图标")。  
   
  **挖掘模型**  
  显示所选的挖掘模型，您希望利用该模型来进行预测。  
@@ -51,7 +51,7 @@ ms.locfileid: "71298321"
  **字段**  
  从派生自源表的列的列表中选择列。 如果在“源”  中选择了“预测函数”  ，则此单元将包含对所选挖掘模型可用的预测函数的下拉列表。  
   
- **别名**  
+ **Alias**  
  服务器返回的列的名称。  
   
  **显示**  

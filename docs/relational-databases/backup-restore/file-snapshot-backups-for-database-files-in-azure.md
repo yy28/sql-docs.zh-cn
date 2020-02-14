@@ -11,17 +11,17 @@ ms.assetid: 17a81fcd-8dbd-458d-a9c7-2b5209062f45
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: aed634232901aa116fddf361d3c3347d1e462eb2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086284"
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Azure 中数据库文件的文件快照备份
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文件快照备份使用 Azure 快照提供近乎即时的备份，并且更快速地还原使用 Azure Blob 存储服务存储的数据库文件。 此功能可用于简化备份和还原策略。 有关实时演示，请参阅 [时间点还原的演示](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo)。 有关使用 Azure Blob 存储服务存储数据库文件的详细信息，请参阅 [Microsoft Azure 中的 SQL Server 数据文件](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文件快照备份使用 Azure 快照提供近乎即时的备份，并且更快速地还原使用 Azure Blob 存储服务存储的数据库文件。 使用此功能可简化备份和还原策略。 有关实时演示，请参阅 [时间点还原的演示](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo)。 有关使用 Azure Blob 存储服务存储数据库文件的详细信息，请参阅 [Microsoft Azure 中的 SQL Server 数据文件](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)。  
   
- ![快照备份体系结构关系图](../../relational-databases/backup-restore/media/snapshotbackups.PNG "快照备份体系结构关系图")  
+ ![快照备份体系结构图](../../relational-databases/backup-restore/media/snapshotbackups.PNG "快照备份体系结构图")  
   
  **下载**  
   
@@ -148,7 +148,7 @@ GO
 ```  
   
 ## <a name="viewing-database-backup-file-snapshots"></a>查看数据库备份文件快照  
- 若要查看每个数据库文件的基本 blob 的文件快照，请使用 **sys.fn_db_backup_file_snapshots** 系统函数。 使用此系统函数可以查看使用 Azure Blob 存储服务存储的数据库的每个基本 blob 的所有备份文件快照。 此函数的主要用例是列出使用 **sys.sp_delete_backup** 系统存储过程以外的机制删除了文件快照备份集的备份文件时保留的数据库备份文件快照。 若要确定属于完整备份集的备份文件快照，和不属于完整备份集的备份文件快照，请使用 **RESTORE FILELISTONLY** 系统存储过程列出属于每个备份文件的文件快照。 有关详细信息，请参阅 [sys.fn_db_backup_file_snapshots (Transact-SQL)](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md) 和 [RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)。  
+ 若要查看每个数据库文件的基本 blob 的文件快照，请使用 **sys.fn_db_backup_file_snapshots** 系统函数。 使用此系统函数可以查看使用 Azure Blob 存储服务存储的数据库的每个基本 blob 的所有备份文件快照。 此函数的主要用例是列出使用 **sys.sp_delete_backup** 系统存储过程以外的机制删除了文件快照备份集的备份文件时保留的数据库备份文件快照。 若要确定属于完整备份集的备份文件快照，和不属于完整备份集的备份文件快照，请使用 **RESTORE FILELISTONLY**  系统存储过程列出属于每个备份文件的文件快照。 有关详细信息，请参阅 [sys.fn_db_backup_file_snapshots (Transact-SQL)](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md) 和 [RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)。  
   
  下面的示例返回指定数据库的所有备份文件快照的列表。  
   

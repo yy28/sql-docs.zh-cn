@@ -20,10 +20,10 @@ ms.assetid: 86609bf1-cae6-435e-a58d-41bdfc521e94
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ed4bca496d48e5fe268c1a425223fe03c8fcc6e7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297040"
 ---
 # <a name="monitoring-performance-counters-with-the-script-task"></a>使用脚本任务监视性能计数器
@@ -31,7 +31,7 @@ ms.locfileid: "71297040"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  管理员可能需要监视对大量数据执行复杂转换的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的性能。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的  System.Diagnostics 命名空间不但提供使用现有性能计数器的类，还提供用于创建你自己的性能计数器的类。  
+  管理员可能需要监视对大量数据执行复杂转换的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的性能。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的 System.Diagnostics 命名空间不但提供使用现有性能计数器的类，还提供用于创建自己性能计数器的类  。  
   
  性能计数器存储应用程序的性能信息，您可以利用这些信息分析软件在一段时间内的性能。 使用“性能监视器”  工具可以在本地或远程监视性能计数器。 您可以将性能计数器的值存储在变量中，用于以后在包中进行控制流分支跳转。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "71297040"
 > [!NOTE]  
 >  如果希望创建可更方便地重用于多个包的任务，请考虑以此脚本任务示例中的代码为基础，创建自定义任务。 有关详细信息，请参阅 [开发自定义任务](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)。  
   
-## <a name="description"></a>描述  
+## <a name="description"></a>说明  
  下面的示例创建一个自定义性能计数器并递增该计数器。 首先，该示例确定性能计数器是否已存在。 如果尚未创建性能计数器，则脚本会调用 PerformanceCounterCategory 对象的 Create 方法来创建它   。 创建性能计数器后，脚本将递增该计数器。 最后，该示例依照最佳实践，在不再需要该性能计数器时，对其调用 Close  方法。  
   
 > [!NOTE]  

@@ -14,10 +14,10 @@ ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a0c5b79da02f8b78601db8691c83e6782f83b8b0
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095677"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>教程：所有权链和上下文切换
@@ -27,7 +27,7 @@ ms.locfileid: "74095677"
 > [!NOTE]  
 > 若要在本教程中运行代码，必须已配置混合模式安全性并且已安装 AdventureWorks2017 数据库。 有关混合模式安全性的详细信息，请参阅 [选择身份验证模式](../relational-databases/security/choose-an-authentication-mode.md)。  
   
-## <a name="scenario"></a>应用场景  
+## <a name="scenario"></a>场景  
 在此应用场景中，两个用户需要帐户才能访问存储在 AdventureWorks2017 数据库中的采购订单数据。 要求如下：  
   
 -   第一个帐户 (TestManagerUser) 必须能够查看每个采购订单中的所有详细信息。  

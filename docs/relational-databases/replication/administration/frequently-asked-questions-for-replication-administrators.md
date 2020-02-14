@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 99be52de235c676137981021b9e926aba7320f43
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: f05b8d942a87f749fc5e1c1235d8410558603507
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75322022"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910160"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>复制管理员常见问题
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -113,7 +113,10 @@ ms.locfileid: "75322022"
   
 ### <a name="does-replication-work-over-low-bandwidth-connections-does-it-use-compression"></a>复制是否可以在低带宽连接上工作？ 它是否使用压缩？  
  是，复制的确可以在低带宽连接上工作。 对于通过 TCP/IP 的连接，复制使用该协议提供的压缩，但不提供其他压缩。 对于通过 HTTPS 的 Web 同步连接，复制使用协议提供的压缩，也使用复制更改所用的 XML 文件的其他压缩。  
-  
+
+### <a name="can-i-configure-replication-if-i-connect-to-the-server-by-using-the-ip-address"></a>如果使用 IP 地址连接到服务器，是否可以配置复制？ 
+否。只有使用实际的服务器名称时，复制才有效。 从 SQL Server Management Studio (SSMS) 18.0 （以及更高版本）开始，可以使用实际的服务器名称和端口号来配置复制。 
+
 ## <a name="logins-and-object-ownership"></a>登录名和对象所有权  
   
 ### <a name="are-logins-and-passwords-replicated"></a>是否复制登录名和密码？  

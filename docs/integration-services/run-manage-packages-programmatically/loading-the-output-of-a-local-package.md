@@ -17,10 +17,10 @@ ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dc35bb8b31c88cea2d903981e709f4075929ea7a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295750"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>加载本地包的输出
@@ -36,14 +36,14 @@ ms.locfileid: "71295750"
 > [!NOTE]  
 > 本主题介绍的过程要求数据流任务以及所有父对象的 DelayValidation 属性均设置为其默认值 False  。
   
-## <a name="description"></a>描述  
+## <a name="description"></a>说明  
  本过程说明如何使用托管代码开发客户端应用程序，该应用程序使用 DataReader 目标直接从内存加载包的输出。 此处总结的步骤在随后的代码示例中演示。  
   
 #### <a name="to-load-data-package-output-into-a-client-application"></a>将数据包输出加载到客户端应用程序中  
   
 1.  在包中，配置 DataReader 目标，以接收要读入到客户端应用程序中的输出。 使用说明性的名称为 DataReader 目标命名，因为您稍后将在客户端应用程序中使用此名称。 请记录 DataReader 目标的名称。  
   
-2.  在开发项目中，通过查找程序集 Microsoft.SqlServer.Dts.DtsClient.dll  设置对 Microsoft.SqlServer.Dts.DtsClient  命名空间的引用。 默认情况下，此程序集安装在 C:\Program Files\Microsoft SQL Server\100\DTS\Binn  中。 使用 C# Using  或 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] Imports  语句将该命名空间导入到代码中。  
+2.  在开发项目中，通过查找程序集 Microsoft.SqlServer.Dts.DtsClient.dll  设置对 Microsoft.SqlServer.Dts.DtsClient  命名空间的引用。 默认情况下，此程序集安装在 C:\Program Files\Microsoft SQL Server\100\DTS\Binn  中。 使用 C# Using 或 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] Imports 语句将该命名空间导入到代码中   。  
   
 3.  在代码中，创建类型为 DtsClient.DtsConnection  的对象，该对象具有一个连接字符串，其中包含 dtexec.exe  运行包时所需的命令行参数。 有关详细信息，请参阅 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)。 然后，使用此连接字符串打开连接。 还可以使用 dtexecui  实用工具直观地创建所需的连接字符串。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "71295750"
   
 7.  运行该应用程序并单击按钮。 在短暂运行包后，您应能够看到在窗体的文本框中显示由包计算的聚合值（Canada 的客户计数）。  
   
-### <a name="sample-code"></a>示例代码  
+### <a name="sample-code"></a>代码示例  
   
 ```vb  
 Imports System.Data  

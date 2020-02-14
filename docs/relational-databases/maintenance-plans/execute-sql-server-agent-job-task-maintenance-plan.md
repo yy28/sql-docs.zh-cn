@@ -15,10 +15,10 @@ ms.assetid: 4ed75956-ebb8-4d8c-9c16-fc0eb00bd3a0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5d5216f831a187911cc6b5d979b3b94d38cc9dfb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086234"
 ---
 # <a name="execute-sql-server-agent-job-task-maintenance-plan"></a>“执行 SQL Server 代理作业”任务（维护计划）
@@ -28,7 +28,7 @@ ms.locfileid: "68086234"
  此任务将使用 **.sp_start_job** 语句。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
- **连接**  
+ **Connection**  
  选择执行此任务时使用的服务器连接。  
   
  **新建**  
@@ -57,12 +57,12 @@ ms.locfileid: "68086234"
  指定如何对服务器进行身份验证。  
   
  **使用 Windows 集成安全性**  
- 使用 Microsoft Windows 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例。  
+ 使用 Microsoft Windows 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。  
   
  **使用特定用户名和密码**  
- 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。 此选项不可用。  
+ 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。 此选项不可用。  
   
- **User name**  
+ **用户名**  
  提供一个在进行身份验证时要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 此选项不可用。  
   
  **密码**  

@@ -14,10 +14,10 @@ ms.assetid: 70616a58-8921-4218-85bf-f3e90c5a9dbf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b6033c2d21b10755601f9ef82cabd829db5ad820
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293223"
 ---
 # <a name="connect-components-in-a-data-flow"></a>连接数据流中的组件
@@ -30,7 +30,7 @@ ms.locfileid: "71293223"
   
  下面的关系图显示一个简单的数据流，它具有一个源组件、两个转换、一个目标组件以及连接它们的路径。  
   
- ![Data flow](../../integration-services/data-flow/media/mw-dts-08.gif "Data flow")  
+ ![数据流](../../integration-services/data-flow/media/mw-dts-08.gif "数据流")  
   
  连接两个组件后，即可在 **“数据流路径编辑器”** 中查看通过路径移动的数据的元数据以及路径的属性。 有关详细信息，请参阅 [Integration Services Paths](../../integration-services/data-flow/integration-services-paths.md)。  
   
@@ -55,6 +55,6 @@ ms.locfileid: "71293223"
   
 ## <a name="see-also"></a>另请参阅  
  [在数据流中添加或删除组件](../../integration-services/data-flow/add-or-delete-a-component-in-a-data-flow.md)   
- [调试数据流](../../integration-services/troubleshooting/debugging-data-flow.md)[Data Flow](../../integration-services/data-flow/data-flow.md)  
+ [调试数据流](../../integration-services/troubleshooting/debugging-data-flow.md) [数据流](../../integration-services/data-flow/data-flow.md)  
   
   

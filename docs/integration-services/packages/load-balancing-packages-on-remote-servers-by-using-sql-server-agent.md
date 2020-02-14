@@ -15,10 +15,10 @@ ms.assetid: 9281c5f8-8da3-4ae8-8142-53c5919a4cfe
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 325d5cde9ae15bb58c6173a974f14f48847c3361
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71282478"
 ---
 # <a name="load-balancing-packages-on-remote-servers-by-using-sql-server-agent"></a>使用 SQL Server 代理在远程服务器上平衡包的负载
@@ -26,7 +26,7 @@ ms.locfileid: "71282478"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  在必须运行很多包时，方便的做法是使用其他可用的服务器。 这种当所有包都处于一个父包控制下时使用其他服务器来运行这些包的方法称为负载平衡。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，负载平衡是必须由包的所有者构建的手动过程。 服务器不自动执行负载平衡。 而且，在远程服务器上运行的包必须是整个包，而不能是其他包中的单个任务。  
+  在必须运行很多包时，方便的做法是使用其他可用的服务器。 这种当所有包都处于一个父包控制下时使用其他服务器来运行这些包的方法称为负载平衡。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中，负载均衡是必须由包的所有者构建的手动过程。 服务器不自动执行负载平衡。 而且，在远程服务器上运行的包必须是整个包，而不能是其他包中的单个任务。  
   
  负载平衡在以下情形下是有用的：  
   
@@ -39,7 +39,7 @@ ms.locfileid: "71282478"
 ## <a name="illustration-of-load-balancing"></a>负载平衡的图例  
  以下关系图显示了服务器上的父包。 父包包含多个“执行 SQL 作业代理”任务。 父包中的每项任务都会调用远程服务器上的 SQL Server 代理。 这些远程服务器包含 SQL Server 代理作业，而作业中包括调用该服务器上的包的步骤。  
   
- ![SSIS 负载平衡体系结构概览](../../integration-services/packages/media/loadbalancingoverview.gif "Overview of SSIS load balancing architecture")  
+ ![SSIS 负载均衡体系结构概览](../../integration-services/packages/media/loadbalancingoverview.gif "SSIS 负载均衡体系结构概览")  
   
  在此体系结构中的负载平衡所需的步骤不是新的概念。 实际上，负载平衡是通过一种新的方式使用现有概念和通用 SSIS 对象实现的。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "71282478"
   
  设计子包时，包的设计不受限制，并且可以添加任何希望的功能。 但是，如果包要访问数据，则必须确保运行包的服务器能够访问该数据。  
   
- 若要标识执行子包的父包，请在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的“解决方案资源管理器”中右键单击该包，然后单击“入口点包”  。  
+ 若要标识执行子包的父包，请在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的解决方案资源管理器中右键单击该包，然后单击 **“入口点包”** 。  
   
  设计完子包之后，下一个步骤是将它们部署在远程服务器上。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "71282478"
 ### <a name="listing-child-packages"></a>列出子包  
  如果将包含父包和子包的项目部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器，则可以查看由父包执行的子包的列表。 运行父包时， **中将自动生成父包** “概述” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]报表。 该报表列出了由父包中包含的执行包任务执行的子包，如下图所示。  
   
- ![包含子包列表的概述报告](../../integration-services/packages/media/overviewreport-childpackagelisting.png "Overview Report with list of child packages")  
+ ![包含子包列表的概述报告](../../integration-services/packages/media/overviewreport-childpackagelisting.png "包含子包列表的概述报告")  
   
  有关访问 **“概述”** 报表的信息，请参阅 [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports)。  
   

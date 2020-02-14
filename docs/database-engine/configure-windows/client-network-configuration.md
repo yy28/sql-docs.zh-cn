@@ -19,10 +19,10 @@ ms.assetid: c382eacd-0a0c-40a4-958f-9b774eb2d734
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4fcbb9e6ee0f68433034cd2c3a29f565e05359e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012957"
 ---
 # <a name="client-network-configuration"></a>客户端网络配置
@@ -43,7 +43,7 @@ ms.locfileid: "68012957"
   
 -   DB-Library 客户端  
   
-     这些应用程序包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **isql** 命令提示实用工具和写入 DB-Library 的客户端。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对使用 DB-Library 的客户端应用程序的支持仅限于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 功能。  
+     这些应用程序包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] isql 命令提示实用工具和写入 DB-Library 的客户端  。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对使用 DB-Library 的客户端应用程序的支持仅限于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 功能。  
   
 > [!NOTE]  
 >  尽管 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 仍然支持来自使用 DB-Library 和嵌入式 SQL API 的现有应用程序的连接，但不包含对使用这些 API 的应用程序进行编程工作所需的文件或文档。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的未来版本将不再支持来自 DB-Library 或嵌入式 SQL 应用程序的连接。 请不要使用 DB-Library 或嵌入式 SQL 来开发新的应用程序。 修改现有的应用程序时，请删除 DB-Library 或嵌入式 SQL 的任何依赖项。 请使用 SQLClient 命名空间或诸如 OLE DB 或 ODBC 的 API，而不使用这些 API。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不包含运行这些应用程序所需的 DB-Library DLL。 若要运行 DB-Library 或嵌入式 SQL 应用程序，必须有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.5 版、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 版或 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]提供的 DB-Library DLL。  
@@ -56,7 +56,7 @@ ms.locfileid: "68012957"
   
      客户端和服务器网络组件都使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器进行管理，它组合了早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 网络实用工具、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端网络实用工具和服务管理器。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器是一个 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台 (MMC) 管理单元。 它还在 Windows 计算机管理器管理单元中显示为一个节点。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器，可以启用、禁用、配置各个网络库，以及指定其优先级。  
   
--   安装  
+-   设置  
   
      运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序可在客户端计算机上安装网络组件。 如果从命令提示符处启动安装程序，则可以在安装过程中启用或禁用各个网络库。  
   

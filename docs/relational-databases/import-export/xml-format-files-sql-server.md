@@ -16,15 +16,15 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 724898bb35df9126ba61b5ebac147a37f272effc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68091436"
 ---
 # <a name="xml-format-files-sql-server"></a>XML 格式化文件 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供了一个 XML 架构，该架构定义了编写“XML 格式化文件”（用于将数据大容量导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中）的语法。 XML 格式化文件必须符合用 XML 架构定义语言 (XSDL) 定义的这种架构。 只有当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 一起安装后，才支持 XML 格式化文件。  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供了一个 XML 架构，该架构定义了编写“XML 格式化文件”  （用于将数据大容量导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中）的语法。 XML 格式化文件必须符合用 XML 架构定义语言 (XSDL) 定义的这种架构。 只有当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 一起安装后，才支持 XML 格式化文件。  
   
  可以结合使用 XML 格式化文件和 **bcp** 命令、BULK INSERT 语句或 INSERT...SELECT \* FROM OPENROWSET(BULK...) 语句。 使用 **bcp** 命令，你可以自动生成表的 XML 格式化文件；有关详细信息，请参阅 [bcp Utility](../../tools/bcp-utility.md)。  
   
@@ -176,40 +176,40 @@ ms.locfileid: "68091436"
  \</BCPFORMAT>  
  用于结束格式化文件。  
   
-####  <a name="AttrOfFieldElement"></a> \<FIELD> 元素的属性  
+####  <a name="AttrOfFieldElement"></a>\<FIELD> 元素的属性  
  本节介绍 \<FIELD> 元素的属性，现将其架构语法总结如下：  
   
  <FIELD  
   
- ID **="**_fieldID_**"**  
+ ID **="** _fieldID_ **"**  
   
- xsi **:** type **="**_fieldType_**"**  
+ xsi **:** type **="** _fieldType_ **"**  
   
- [ LENGTH **="**_n_**"** ]  
+ [ LENGTH **="** _n_ **"** ]  
   
- [ PREFIX_LENGTH **="**_p_**"** ]  
+ [ PREFIX_LENGTH **="** _p_ **"** ]  
   
- [ MAX_LENGTH **="**_m_**"** ]  
+ [ MAX_LENGTH **="** _m_ **"** ]  
   
- [ COLLATION **="**_collationName_**"** ]  
+ [ COLLATION **="** _collationName_ **"** ]  
   
- [ TERMINATOR **="**_terminator_**"** ]  
+ [ TERMINATOR **="** _terminator_ **"** ]  
   
  />  
   
  每个 \<FIELD> 元素都与其他元素无关。 字段是通过下列属性进行描述的：  
   
-|FIELD 属性|说明|可选/<br /><br /> Required|  
+|FIELD 属性|说明|可选/<br /><br /> 必选|  
 |---------------------|-----------------|------------------------------|  
-|ID **="**_fieldID_**"**|指定数据文件中的字段的逻辑名称。 字段的 ID 是用于引用字段的键。<br /><br /> \<FIELD ID **="**_fieldID_**"**/> maps to \<COLUMN SOURCE **="**_fieldID_**"**/>|Required|  
-|xsi:type **="**_fieldType_**"**|这是一个 XML 构造，用法类似于属性。它定义元素实例的类型。 *fieldType* 的值决定了给定实例中需要下面哪个可选属性。|必需（取决于数据类型）|  
-|LENGTH **="**_n_**"**|此属性定义固定长度的数据类型实例的长度。<br /><br /> *n* 值必须是正整数。|除非是 xsi:type 值所必需，否则可选。|  
-|PREFIX_LENGTH **="**_p_**"**|此属性定义二进制数据表示形式的前缀的长度。 PREFIX_LENGTH 值 p 必须是下列值之一：1、2、4 或 8。|除非是 xsi:type 值所必需，否则可选。|  
-|MAX_LENGTH **="**_m_**"**|此属性为给定字段中可以存储的最大字节数。 如果没有目标表，列的最大长度就是未知的。 MAX_LENGTH 属性限定输出字符列的最大长度，从而限制为列值分配的存储空间。 当在 SELECT FROM 子句中使用了 OPENROWSET 函数的 BULK 选项时，使用该属性将带来极大的方便。<br /><br /> *m* 值必须是正整数。 默认情况下， **char** 列的最大长度为 8000 个字符， **nchar** 列的最大长度为 4000 个字符。|可选|  
-|COLLATION **="**_collationName_**"**|COLLATION 仅适用于字符字段。 有关 SQL 排序规则名称的列表，请参阅 [SQL Server 排序规则名称 (Transact SQL)](../../t-sql/statements/sql-server-collation-name-transact-sql.md)。|可选|  
-|TERMINATOR **= "**_terminator_**"**|此属性指定数据字段的终止符。 该终止符可以是任意字符。 该字符必须是数据中没有的唯一字符。<br /><br /> 默认情况下，该字段的终止符为制表符（用 \t 表示）。 若要表示段落标记，请使用 \r\n。|仅和需要该属性的字符数据 xsi:type 一起使用。|  
+|ID **="** _fieldID_ **"**|指定数据文件中的字段的逻辑名称。 字段的 ID 是用于引用字段的键。<br /><br /> \<FIELD ID **="** _fieldID_ **"** /> maps to \<COLUMN SOURCE **="** _fieldID_ **"** />|必选|  
+|xsi:type **="** _fieldType_ **"**|这是一个 XML 构造，用法类似于属性。它定义元素实例的类型。 *fieldType* 的值决定了给定实例中需要下面哪个可选属性。|必需（取决于数据类型）|  
+|LENGTH **="** _n_ **"**|此属性定义固定长度的数据类型实例的长度。<br /><br /> *n* 值必须是正整数。|除非是 xsi:type 值所必需，否则可选。|  
+|PREFIX_LENGTH **="** _p_ **"**|此属性定义二进制数据表示形式的前缀的长度。 PREFIX_LENGTH 值 p 必须是下列值之一  ：1、2、4 或 8。|除非是 xsi:type 值所必需，否则可选。|  
+|MAX_LENGTH **="** _m_ **"**|此属性为给定字段中可以存储的最大字节数。 如果没有目标表，列的最大长度就是未知的。 MAX_LENGTH 属性限定输出字符列的最大长度，从而限制为列值分配的存储空间。 当在 SELECT FROM 子句中使用了 OPENROWSET 函数的 BULK 选项时，使用该属性将带来极大的方便。<br /><br /> *m* 值必须是正整数。 默认情况下， **char** 列的最大长度为 8000 个字符， **nchar** 列的最大长度为 4000 个字符。|可选|  
+|COLLATION **="** _collationName_ **"**|COLLATION 仅适用于字符字段。 有关 SQL 排序规则名称的列表，请参阅 [SQL Server 排序规则名称 (Transact SQL)](../../t-sql/statements/sql-server-collation-name-transact-sql.md)。|可选|  
+|TERMINATOR **= "** _terminator_ **"**|此属性指定数据字段的终止符。 该终止符可以是任意字符。 该字符必须是数据中没有的唯一字符。<br /><br /> 默认情况下，该字段的终止符为制表符（用 \t 表示）。 若要表示段落标记，请使用 \r\n。|仅和需要该属性的字符数据 xsi:type 一起使用。|  
   
-#####  <a name="XsiTypeValuesOfFIELD"></a> \<FIELD> 元素的 Xsi:type 值  
+#####  <a name="XsiTypeValuesOfFIELD"></a>\<FIELD> 元素的 Xsi:type 值  
  xsi:type 值是标识元素实例的数据类型的 XML 构造（用法同属性）。 本节后面将介绍有关“在数据集中包含 xsi:type 值”的信息。  
   
  \<FIELD> 元素的 xsi:type 值支持下列数据类型。  
@@ -225,9 +225,9 @@ ms.locfileid: "68091436"
 |**CharTerm**|**TERMINATOR**|MAX_LENGTH、COLLATION|  
 |**NCharTerm**|**TERMINATOR**|MAX_LENGTH、COLLATION|  
   
- 有关值数据类型 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的详细信息，请参阅 [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。  
+ 有关 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型的详细信息，请参阅[数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。  
   
-####  <a name="AttrOfColumnElement"></a> \<COLUMN> 元素的属性  
+####  <a name="AttrOfColumnElement"></a>\<COLUMN> 元素的属性  
  本节介绍 \<COLUMN> 元素的属性，现将其架构语法总结如下：  
   
  <COLUMN  
@@ -252,24 +252,24 @@ ms.locfileid: "68091436"
   
  使用下列属性将字段映射到目标表中的列：  
   
-|COLUMN 属性|描述|可选/<br /><br /> Required|  
+|COLUMN 属性|说明|可选/<br /><br /> 必选|  
 |----------------------|-----------------|------------------------------|  
-|SOURCE **="**_fieldID_**"**|指定映射到列的字段 ID。<br /><br /> \<COLUMN SOURCE **="**_fieldID_**"**/> maps to \<FIELD ID **="**_fieldID_**"**/>|Required|  
-|NAME = "*columnName*"|指定格式化文件所表示的行集中的列名。 此列名用于标识结果集中的列，并且该列不需要与目标表中使用的列名相对应。|Required|  
-|xsi **:** type **="**_ColumnType_**"**|这是一个 XML 构造，用法类似于属性。它定义元素实例的数据类型。 *ColumnType* 的值决定了给定实例中需要下面哪个可选属性。<br /><br /> 注意：[&lt;COLUMN&gt; 元素的 Xsi:type 值](#XsiTypeValuesOfCOLUMN)部分中的 <COLUMN\< 元素表列出了 *ColumnType* 的可能值及其相关属性。|可选|  
-|LENGTH **="**_n_**"**|定义固定长度的数据类型实例的长度。 仅当 xsi:type 为字符串数据类型时，才使用 LENGTH。<br /><br /> *n* 值必须是正整数。|可选（仅当 xsi:type 是字符串数据类型时才可用）|  
-|PRECISION **="**_n_**"**|指示数字的位数。 例如，数 123.45 精度为 5。<br /><br /> 该值必须是正整数。|可选（仅在 xsi:type 是变量数字数据类型时才可用）|  
-|SCALE **="**_int_**"**|指示数字中小数点右边的位数。 例如，数字 123.45 的小数位数为 2。<br /><br /> 该值必须为整数。|可选（仅在 xsi:type 是变量数字数据类型时才可用）|  
+|SOURCE **="** _fieldID_ **"**|指定映射到列的字段 ID。<br /><br /> \<COLUMN SOURCE **="** _fieldID_ **"** /> maps to \<FIELD ID **="** _fieldID_ **"** />|必选|  
+|NAME = "*columnName*"|指定格式化文件所表示的行集中的列名。 此列名用于标识结果集中的列，并且该列不需要与目标表中使用的列名相对应。|必选|  
+|xsi **:** type **="** _ColumnType_ **"**|这是一个 XML 构造，用法类似于属性。它定义元素实例的数据类型。 *ColumnType* 的值决定了给定实例中需要下面哪个可选属性。<br /><br /> 注意：[&lt;COLUMN&gt; 元素的 Xsi:type 值](#XsiTypeValuesOfCOLUMN)部分中的 <COLUMN\< 元素表列出了 *ColumnType* 的可能值及其相关属性。|可选|  
+|LENGTH **="** _n_ **"**|定义固定长度的数据类型实例的长度。 仅当 xsi:type 为字符串数据类型时，才使用 LENGTH。<br /><br /> *n* 值必须是正整数。|可选（仅当 xsi:type 是字符串数据类型时才可用）|  
+|PRECISION **="** _n_ **"**|指示数字的位数。 例如，数 123.45 精度为 5。<br /><br /> 该值必须是正整数。|可选（仅在 xsi:type 是变量数字数据类型时才可用）|  
+|SCALE **="** _int_ **"**|指示数字中小数点右边的位数。 例如，数字 123.45 的小数位数为 2。<br /><br /> 该值必须为整数。|可选（仅在 xsi:type 是变量数字数据类型时才可用）|  
 |NULLABLE **=** { **"** YES **"**<br /><br /> **"** NO **"** }|指示列是否可以接受 NULL 值。 此属性与 FIELDS 完全无关。 但是，如果列不可为空值，而字段指定为 NULL（未指定任何值），将产生运行时错误。<br /><br /> NULLABLE 属性仅在您只执行普通 SELECT FROM OPENROWSET(BULK...) 语句时才使用。|可选（任何数据类型均可用）|  
   
-#####  <a name="XsiTypeValuesOfCOLUMN"></a> \<COLUMN> 元素的 Xsi:type 值  
+#####  <a name="XsiTypeValuesOfCOLUMN"></a>\<COLUMN> 元素的 Xsi:type 值  
  xsi:type 值是标识元素实例的数据类型的 XML 构造（用法同属性）。 本节后面将介绍有关“在数据集中包含 xsi:type 值”的信息。  
   
  \<COLUMN> 元素支持下列本机 SQL 数据类型：  
   
 |类型类别|\<COLUMN> 数据类型|数据类型<br /><br /> 的可选 XML 属性|数据类型<br /><br /> 的可选 XML 属性|  
 |-------------------|---------------------------|---------------------------------------------------|---------------------------------------------------|  
-|固定|**SQLBIT**、 **SQLTINYINT**、 **SQLSMALLINT**、 **SQLINT**、 **SQLBIGINT**、 **SQLFLT4**、 **SQLFLT8**、 **SQLDATETIME**、 **SQLDATETIM4**、 **SQLDATETIM8**、 **SQLMONEY**、 **SQLMONEY4**、 **SQLVARIANT**和 **SQLUNIQUEID**|无。|NULLABLE|  
+|已修复|**SQLBIT**、 **SQLTINYINT**、 **SQLSMALLINT**、 **SQLINT**、 **SQLBIGINT**、 **SQLFLT4**、 **SQLFLT8**、 **SQLDATETIME**、 **SQLDATETIM4**、 **SQLDATETIM8**、 **SQLMONEY**、 **SQLMONEY4**、 **SQLVARIANT**和 **SQLUNIQUEID**|无。|NULLABLE|  
 |变量号|**SQLDECIMAL** 和 **SQLNUMERIC**|无。|NULLABLE、PRECISION、SCALE|  
 |LOB|**SQLIMAGE**、 **CharLOB**、 **SQLTEXT**和 **SQLUDT**|无。|NULLABLE|  
 |字符 LOB|**SQLNTEXT**|无。|NULLABLE|  

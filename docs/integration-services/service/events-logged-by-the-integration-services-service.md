@@ -15,10 +15,10 @@ ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8b2f033557c566050dffbd82bc64df84feabb7b6
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296928"
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>由 Integration Services 服务记录的事件
@@ -39,8 +39,8 @@ ms.locfileid: "71296928"
 |--------------|-------------------|----------|-----------|  
 |256|DTS_MSG_SERVER_STARTING|正在启动 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 服务。|服务即将启动。|  
 |257|DTS_MSG_SERVER_STARTED|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 服务已启动。|服务已启动。|  
-|260|DTS_MSG_SERVER_START_FAILED|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 服务启动失败。%n错误: %1|服务未能启动。 服务未能启动可能是由于安装已损坏或服务帐户不适当。|  
-|258|DTS_MSG_SERVER_STOPPING|正在停止 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 服务。%n%n退出时停止所有正在运行的包: %1|服务正在停止，如果将服务配置为执行此操作，则所有正在运行的包都会停止。 可以在配置文件中设置 True 或 False 值来决定服务是否在自身停止时停止正在运行的包。 此事件的消息包括这项设置的值。|  
+|260|DTS_MSG_SERVER_START_FAILED|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 服务启动失败。%n错误：%1|服务未能启动。 服务未能启动可能是由于安装已损坏或服务帐户不适当。|  
+|258|DTS_MSG_SERVER_STOPPING|正在停止 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 服务。%n%n退出时停止所有正在运行的包：%1|服务正在停止，如果将服务配置为执行此操作，则所有正在运行的包都会停止。 可以在配置文件中设置 True 或 False 值来决定服务是否在自身停止时停止正在运行的包。 此事件的消息包括这项设置的值。|  
 |259|DTS_MSG_SERVER_STOPPED|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 服务已停止。%n服务器版本 %1|服务已停止。|  
   
 ## <a name="settings-file-messages"></a>设置文件消息  
@@ -48,7 +48,7 @@ ms.locfileid: "71296928"
   
 |事件 ID|符号名称|文本|说明|  
 |--------------|-------------------|----------|-----------|  
-|274|DTS_MSG_SERVER_MISSING_CONFIG_REG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 服务: %n指定配置文件的注册表设置不存在。 %n正尝试加载默认的配置文件。|包含配置文件路径的注册表项不存在或为空。|  
+|274|DTS_MSG_SERVER_MISSING_CONFIG_REG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 服务：%n指定配置文件的注册表设置不存在。 %n正尝试加载默认的配置文件。|包含配置文件路径的注册表项不存在或为空。|  
 |272|DTS_MSG_SERVER_MISSING_CONFIG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 服务配置文件不存在。%n正在使用默认设置加载。|在指定位置不存在配置文件自身。|  
 |273|DTS_MSG_SERVER_BAD_CONFIG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 服务配置文件不正确。%n读取配置文件 %1 时出错%n%n正在使用默认设置加载服务器。|无法读取配置文件或配置文件无效。 此错误可能是由文件中的 XML 语法错误引起的。|  
   
@@ -56,7 +56,7 @@ ms.locfileid: "71296928"
   
 |事件 ID|符号名称|文本|说明|  
 |--------------|-------------------|----------|-----------|  
-|336|DTS_MSG_SERVER_STOPPING_PACKAGE|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 服务: 正在停止运行中的包。%n包实例 ID: %1%n包 ID: %2%n包名称: %3%n包说明: %4%n包|服务正在尝试停止运行中的包。 可以在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中监视和停止正在运行的包。 有关如何在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中管理包的信息，请参阅[包管理（SSIS 服务）](../../integration-services/service/package-management-ssis-service.md)。|  
+|336|DTS_MSG_SERVER_STOPPING_PACKAGE|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 服务：正在停止运行中的包。%n包实例 ID：%1%n包 ID：%2%n包名称：%3%n包说明：%4%n包|服务正在尝试停止运行中的包。 可以在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中监视和停止正在运行的包。 有关如何在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中管理包的信息，请参阅[包管理（SSIS 服务）](../../integration-services/service/package-management-ssis-service.md)。|  
 
 ## <a name="view-events"></a>查看事件
   可以使用以下两个工具来查看 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的事件：  
@@ -95,7 +95,7 @@ ms.locfileid: "71296928"
   
 7.  选择使用字节或字来显示事件数据。  
   
-8.  单击“确定”  。  
+8.  单击“确定”。   
   
 9. 在 **“文件”** 菜单上，单击 **“退出”** 关闭 **“事件查看器”** 对话框。  
  

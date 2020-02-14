@@ -1,7 +1,7 @@
 ---
 title: CREATE WORKLOAD Classifier (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2019
+ms.date: 01/27/2020
 ms.prod: sql
 ms.prod_service: sql-data-warehouse
 ms.reviewer: jrasnick
@@ -20,12 +20,12 @@ ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: adf8b1e04e7dcd75bcad0c4b184ae60f2b59d248
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 54c9145e40d9ad326faf0c897281fedb9a9fe9dc
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056493"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831614"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>CREATE WORKLOAD CLASSIFIER (Transact-SQL)
 
@@ -36,7 +36,7 @@ ms.locfileid: "74056493"
 > [!NOTE]
 > 工作负荷分类器取代 sp_addrolemember 资源类分配。  创建工作负荷分类器后，执行 sp_droprolemember 以删除任何冗余的资源类映射。
 
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
   
 ## <a name="syntax"></a>语法
 
@@ -70,7 +70,7 @@ WITH
  *WLM_LABEL*   
  指定可作为请求分类依据的标签值。  标签是类型为 nvarchar(255) 的可选参数。  使用请求中的 [OPTION (LABEL)](/azure/sql-data-warehouse/sql-data-warehouse-develop-label) 来匹配分类器配置。
 
-例如：
+示例：
 
 ```sql
 CREATE WORKLOAD CLASSIFIER wcELTLoads WITH  
@@ -86,7 +86,7 @@ SELECT COUNT(*)
 *WLM_CONTEXT*  
 指定可作为请求分类依据的会话上下文值。  上下文是类型为 nvarchar(255) 的可选参数。  在提交设置会话上下文的请求之前，请使用变量名称为 `wlm_context` 的 [sys.sp_set_session_context](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md?view=azure-sqldw-latest)。
 
-例如：
+示例：
 
 ```sql
 CREATE WORKLOAD CLASSIFIER wcDataLoad WITH  
@@ -108,7 +108,7 @@ EXEC sys.sp_set_session_context @key = 'wlm_context', @value = null
 *START_TIME* 和 *END_TIME*  
 指定可作为请求分类依据的 start_time 和 end_time。  start_time 和 end_time 为采用 HH:MM 格式的 UTC 时区值。  start_time 和 end_time 必须一起指定。
 
-例如：
+示例：
 
 ```sql
 CREATE WORKLOAD CLASSIFIER wcELTLoads WITH  
@@ -129,14 +129,17 @@ CREATE WORKLOAD CLASSIFIER wcELTLoads WITH
 
 如果未指定重要性，则使用工作负荷组的重要性设置。  默认工作负荷组重要性为“普通”。  重要性会影响请求的安排顺序，导致首先访问资源和锁定。
 
-## <a name="classification-parameter-precedence"></a>分类参数优先级
+## <a name="classification-parameter-weighting"></a>分类参数权重
 
-请求可以与多个分类器匹配。  分类器参数存在优先级。  优先级较高的匹配分类器会首先用于分配工作负荷组和重要性。  优先级如下：
-1. User
-2. ROLE
-3. WLM_LABEL
-4. WLM_SESSION
-5. START_TIME/END_TIME
+请求可以与多个分类器匹配。  分类器参数有一个权重。  权重较高的匹配分类器会用于分配工作负载组和重要性。  权重如下所示：
+
+|分类器参数 |重量   |
+|---------------------|---------|
+|USER                 |64       |
+|ROLE                 |32       |
+|WLM_LABEL            |16       |
+|WLM_CONTEXT          |8        |
+|START_TIME/END_TIME  |4        |
 
 请考虑以下分类器配置。
 
@@ -151,13 +154,13 @@ CREATE WORKLOAD CLASSIFIER classiferB WITH
 ( WORKLOAD_GROUP = 'wgUserQueries'  
  ,MEMBERNAME     = 'userloginA'
  ,IMPORTANCE     = LOW
- ,START_TIME     = '18:00')
+ ,START_TIME     = '18:00'
  ,END_TIME       = '07:00' )
 ```
 
-两个分类器均配置了用户 `userloginA`。  如果 userloginA 在 UTC 时间下午 6 点到上午 7 点之间运行标签为 `salesreport` 的查询，则该请求会分类为具有“高”重要性的 wgDashboards 工作负荷组。  预期结果可能会是将请求分类为具有“低”重要性的 wgUserQueries 以用于非工作时间报告，但 WLM_LABEL 的优先级高于 START_TIME/END_TIME。  在这种情况下，可以将 START_TIME/END_TIME 添加到 classiferA。
+两个分类器均配置了用户 `userloginA`。  如果 userloginA 在 UTC 时间下午 6 点到上午 7 点之间运行标签为 `salesreport` 的查询，则该请求会分类为具有“高”重要性的 wgDashboards 工作负荷组。  预期结果可能会是将请求分类为具有“低”重要性的 wgUserQueries 以用于非工作时间报告，但 WLM_LABEL 的权重高于 START_TIME/END_TIME。  ClassiferA 的权重为 80（用户 64，加上 WLM_LABEL 的 16）。  ClassifierB 的权重为 68（用户 64，加上 START_TIME/END_TIME 的 4）。  在这种情况下，可以将 WLM_LABEL 添加到 classiferB。
 
- 有关详细信息，请参阅[工作负荷分类](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-precedence)。
+ 有关详细信息，请参阅[工作负载权重](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-weighting)。
 
 ## <a name="permissions"></a>权限
 

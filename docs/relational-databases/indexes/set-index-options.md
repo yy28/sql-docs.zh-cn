@@ -26,10 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cf9b8222453cea1bdaecad25256819aa7bcb1366
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67909550"
 ---
 # <a name="set-index-options"></a>设置索引选项
@@ -75,7 +75,7 @@ ms.locfileid: "67909550"
 4. 在“表设计器”  菜单上，单击“索引/键”  。
 5. 选择要修改的索引。 其属性将显示在主网格中。
 6. 更改任意属性的设置以自定义索引。
-7. 单击 **“关闭”** 。
+7. 单击“关闭”  。
 8. 在“文件”  菜单上，选择“保存”  以保存 _table_name_。
 
 ### <a name="to-modify-the-properties-of-an-index-in-object-explorer"></a>在对象资源管理器中修改索引的属性
@@ -87,7 +87,7 @@ ms.locfileid: "67909550"
 5. 右键单击要修改其属性的索引，然后选择“属性”  。
 6. 在 **“选择页”** 下，选择 **“选项”** 。
 7. 更改任意属性的设置以自定义索引。
-8. 若要添加、删除或更改索引列的位置，请从“索引属性 -  index_name”  对话框中选择“常规”  页。 有关详细信息，请参阅 [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)
+8. 若要添加、删除或更改索引列的位置，请从“索引属性 - index_name”对话框中选择“常规”页    。 有关详细信息，请参阅 [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)
 
 ## <a name="TsqlProcedure"></a> 使用 Transact-SQL
 

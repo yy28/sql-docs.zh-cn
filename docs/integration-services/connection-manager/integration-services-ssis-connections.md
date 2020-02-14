@@ -24,10 +24,10 @@ ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3ed4c8c8feacdd41d2e806a4d2d663f639633e07
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294434"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) 连接
@@ -83,7 +83,7 @@ ms.locfileid: "71294434"
 ### <a name="built-in-connection-managers"></a>内置连接管理器  
  下表列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的连接管理器类型。  
   
-|类型|描述|主题|  
+|类型|说明|主题|  
 |----------|-----------------|-----------|  
 |ADO|连接到 ActiveX 数据对象 (ADO) 对象。|[ADO 连接管理器](../../integration-services/connection-manager/ado-connection-manager.md)|  
 |ADO.NET|使用 .NET 提供程序连接到数据源。|[ADO.NET 连接管理器](../../integration-services/connection-manager/ado-net-connection-manager.md)|  
@@ -111,7 +111,7 @@ ms.locfileid: "71294434"
 > [!IMPORTANT]  
 >  下表中列出的连接管理器只能用于 [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] 和 [!INCLUDE[ssDeveloperEd11](../../includes/ssdevelopered11-md.md)]。  
   
-|类型|描述|主题|  
+|类型|说明|主题|  
 |----------|-----------------|-----------|  
 |ORACLE|连接到 Oracle \<版本信息\> 服务器。|Oracle 连接管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 的连接管理器组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 还包括源和目标。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526)。|  
 |SAPBI|连接到 SAP NetWeaver BI 7 版系统。|SAP BI 连接管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 的连接管理器组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 还包括源和目标。 有关详细信息，请访问下载页 [Microsoft SQL Server 2008 功能包](https://go.microsoft.com/fwlink/?LinkId=262016)。|  
@@ -134,7 +134,7 @@ ms.locfileid: "71294434"
   
  以下关系图显示 **设计器的** “控制流” **选项卡上的** “连接管理器” [!INCLUDE[ssIS](../../includes/ssis-md.md)] 区域。  
   
- ![具有包的控制流设计器的屏幕快照](../../integration-services/connection-manager/media/samplecontrolflow.gif "Screenshot of control flow designer with package")    
+ ![具有包的控制流设计器的屏幕快照](../../integration-services/connection-manager/media/samplecontrolflow.gif "具有包的控制流设计器的屏幕快照")    
   
 ### <a name="32-bit-and-64-bit-providers-for-connection-managers"></a>用于连接管理器的 32 位和 64 位提供程序  
  连接管理器所使用的很多提供程序都有 32 位和 64 位版本。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 设计环境是 32 位环境，设计包时您只能看到 32 位提供程序。 因此，如果还安装了同一个提供程序的 32 位版本，则只能将连接管理器配置为使用特定的 64 位提供程序。  
@@ -162,7 +162,7 @@ ms.locfileid: "71294434"
   
     -   单击要添加到包中的连接管理器类型。  
   
-         -或 -  
+         -或-  
   
     -   如果没有列出您要添加的类型，请单击 **“新建连接”** 打开 **“添加 SSIS 连接管理器”** 对话框，选择某种连接管理器类型，然后单击 **“确定”** 。  
   
@@ -240,7 +240,7 @@ ms.locfileid: "71294434"
  **连接管理器类型**  
  选择一个连接类型，再单击“添加”，或双击一个连接类型，使用与各连接类型相应的编辑器来指定连接属性。   
   
- **“添加”**  
+ **添加**  
  使用与各连接类型相应的编辑器指定连接属性。  
    
 ##  <a name="parameter"></a> 创建连接管理器属性的参数  
@@ -299,7 +299,7 @@ ms.locfileid: "71294434"
   
 5.  在 **“属性”** 窗口中，编辑属性值。 **“属性”** 窗口提供对在连接管理器的标准编辑器中无法配置的一些属性的访问。  
   
-6.  单击“确定”  。  
+6.  单击“确定”。   
   
 7.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
@@ -313,7 +313,7 @@ ms.locfileid: "71294434"
   
 4.  在“连接管理器”区域中，双击连接管理器以打开“连接管理器”对话框   。 有关特定连接管理器类型以及每种类型可用的选项的信息，请参阅下表。  
   
-    |“连接管理器”|选项|  
+    |“ODBC 源编辑器”|选项|  
     |------------------------|-------------|  
     |[ADO 连接管理器](../../integration-services/connection-manager/ado-connection-manager.md)|[配置 OLE DB 连接管理器](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[ADO.NET 连接管理器](../../integration-services/connection-manager/ado-net-connection-manager.md)|[配置 ADO.NET 连接管理器](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
@@ -345,6 +345,6 @@ ms.locfileid: "71294434"
   
 -   msdn.microsoft.com 上的技术文章 [在 SQL Server Integration Services 中提取和加载 SharePoint 数据](https://go.microsoft.com/fwlink/?LinkId=247826)。  
   
--   support.microsoft.com 上的技术文章[在 SSIS 中使用 Oracle 连接管理器时收到“DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER”错误消息](https://go.microsoft.com/fwlink/?LinkId=233696)。  
+-   support.microsoft.com 上的技术文章 [在 SSIS 中使用 Oracle 连接管理器时收到“DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER”错误消息](https://go.microsoft.com/fwlink/?LinkId=233696)。  
   
   

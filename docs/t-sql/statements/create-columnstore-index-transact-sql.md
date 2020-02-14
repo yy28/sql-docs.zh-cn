@@ -30,10 +30,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2e917d4dcd2f722bb9d683ebe0a6a8777487c61d
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73729929"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
@@ -59,7 +59,7 @@ ms.locfileid: "73729929"
 -   [列存储索引指南](../../relational-databases/indexes/columnstore-indexes-overview.md)  
 -   [列存储索引功能摘要](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)  
   
-![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -128,7 +128,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
 
 创建一个聚集列存储索引，并按列压缩和存储其中的所有数据。 该索引包含表中的所有列，并且存储整个表。 如果现有表是堆或聚集索引，则该表会转换为聚集列存储索引。 如果该表已作为聚集列存储索引存储，则会删除并重新生成现有索引。  
   
-*index_name*  
+index_name   
 指定新索引的名称。  
   
 如果该表已具有聚集列存储索引，则可以指定与现有索引相同的名称，也可以使用 DROP EXISTING 选项指定新名称。  
@@ -175,7 +175,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
    有关何时使用 COMPRESSION_DELAY 的建议，请参阅[开始使用列存储进行实时运行分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)。  
   
 ##### <a name="data_compression--columnstore--columnstore_archive"></a>DATA_COMPRESSION = COLUMNSTORE | COLUMNSTORE_ARCHIVE  
-   为指定的表、分区号或分区范围指定数据压缩选项。 选项如下所示：   
+   为指定的表、分区号或分区范围指定数据压缩选项。 选项如下：   
 - `COLUMNSTORE` 是默认值，它指定使用性能最高的列存储压缩进行压缩。 这是典型选择。  
 - `COLUMNSTORE_ARCHIVE` 将表或分区进一步压缩为更小的大小。 可在许多情况下使用此选项，例如，用于要求存储更小并且可以付出更多时间来进行存储和检索的存档。  
   
@@ -197,7 +197,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 #### <a name="on-options"></a>ON 选项 
    使用 ON 选项，您可为数据存储指定选项，例如分区架构、特定的文件组或默认文件组。 如果未指定 ON 选项，索引会使用现有表的分区设置或文件组设置。  
   
-   partition_scheme_name ( column_name )      
+   *partition_scheme_name* **(** _column_name_ **)**  
    指定表的分区方案。 分区方案必须已在数据库中存在。 若要创建分区方案，请参阅 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md)。  
  
    *column_name* 指定对已分区索引进行分区所依据的列。 该列必须与 partition_scheme_name 使用的分区函数参数的数据类型、长度和精度相匹配  。  
@@ -216,7 +216,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 index_name   
    指定索引的名称。 *index_name* 在表中必须唯一，但在数据库中不必唯一。 索引名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)的规则。  
   
- ( column  [ ,...n ] )       
+ **(** _column_  [ **,** ...*n* ] **)**  
     指定要存储的列。 非聚集列存储索引限定为 1024 个列。  
    每个列都必须采用列存储索引支持的数据类型。 有关受支持数据类型的列表，请参阅[限制和局限](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest)。  
 
@@ -254,7 +254,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
    指定某一行在适合迁移到压缩行组之前，应在增量行组中保留的时间下限。 例如，客户可以说，如果某一行在 120 分钟内保持不变，则可以将其压缩为列存储格式。 对于基于磁盘的表中的列存储索引，我们不跟踪行的插入或更新时间，而是使用增量行组关闭时间作为行代理。 默认持续时间为 0 分钟。 一旦增量行组中累积了 100 万行，并且该行组标记为已关闭，就会将行迁移到列存储。  
   
 ###### <a name="data_compression"></a>DATA_COMPRESSION  
-   为指定的表、分区号或分区范围指定数据压缩选项。 仅适用于列存储索引，包括非聚集列存储索引和聚集列存储索引。 选项如下所示：
+   为指定的表、分区号或分区范围指定数据压缩选项。 仅适用于列存储索引，包括非聚集列存储索引和聚集列存储索引。 选项如下：
    
 - `COLUMNSTORE` - 默认值，它指定使用性能最高的列存储压缩进行压缩。 这是典型选择。  
 - `COLUMNSTORE_ARCHIVE` - COLUMNSTORE_ARCHIVE 将表或分区进一步压缩为更小的大小。 这可用于存档，或者用于要求更小存储大小并且可以付出更多时间来进行存储和检索的其他情形。  
@@ -309,7 +309,7 @@ filegroup_name
 - INSERT、UPDATE、DELETE 或 MERGE 操作修改筛选索引中的数据。  
 - 查询优化器使用该筛选索引生成查询计划。  
   
-    |SET 选项|必需的值|默认服务器值|默认<br /><br /> OLE DB 和 ODBC 值|默认<br /><br /> DB-Library 值|  
+    |SET 选项|所需的值|默认服务器值|默认<br /><br /> OLE DB 和 ODBC 值|默认<br /><br /> DB-Library 值|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
     |ANSI_NULLS|ON|ON|ON|OFF|  
     |ANSI_PADDING|ON|ON|ON|OFF|  
@@ -336,20 +336,20 @@ filegroup_name
 **列存储索引中的每一列都必须是以下常见业务数据类型之一：** 
 -   datetimeoffset [ ( n ) ]   
 -   datetime2 [ ( n ) ]   
--   DATETIME  
+-   datetime  
 -   smalldatetime  
--   日期  
+-   date  
 -   time [ ( n ) ]   
 -   float [ ( n ) ]   
 -   real [ ( n ) ]   
 -   decimal [ ( *precision* [ *, scale* ] **)** ]
 -   numeric [ ( *precision* [ *, scale* ] **)** ]    
 -   money  
--   SMALLMONEY  
--   BIGINT  
--   INT  
+-   smallmoney  
+-   bigint  
+-   int  
 -   smallint  
--   TINYINT  
+-   tinyint  
 -   bit  
 -   nvarchar [ ( n ) ]  
 -   nvarchar(max) （适用于 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和高级层、标准层（S3 及更高），以及所有 VCore 产品/服务层，仅限聚集列存储索引）   

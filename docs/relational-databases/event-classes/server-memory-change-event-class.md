@@ -13,19 +13,19 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b039f0cb4ff6aa944adf981ad5fa26e1cc4cbeea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67911175"
 ---
 # <a name="server-memory-change-event-class"></a>Server Memory Change 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  **Server Memory Change** 事件类在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内存使用量增加或减少了 1 MB 或最大服务器内存的 5%（或更多）时出现。  
+  当 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内存使用量增加或减少了 1 MB 或最大服务器内存的 5%（以较大者为准）时，会出现 Server Memory Change 事件类  。  
   
 ## <a name="server-memory-change-event-class-data-columns"></a>Server Memory Change 事件类的数据列  
   
-|数据列名称|数据类型|描述|列 ID|是|  
+|数据列名称|数据类型|说明|列 ID|是|  
 |----------------------|---------------|-----------------|---------------|---------|  
 |**EventClass**|**int**|事件类型 = 81。|27|否|  
 |**EventSequence**|**int**|给定事件在请求中的顺序。|51|否|  

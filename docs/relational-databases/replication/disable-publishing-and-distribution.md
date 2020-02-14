@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 3fe1baf8676db54161c0c0fb7fccea171c3a3341
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 7d48edb0024261bee87071cbd3ac77e3c49aabfd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908409"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76284694"
 ---
 # <a name="disable-publishing-and-distribution"></a>禁用发布和分发
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "72908409"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a> 先决条件  
+###  <a name="Prerequisites"></a>先决条件  
   
 -   若要禁用发布和分发，所有分发数据库和发布数据库都必须联机。 如果存在分发数据库或发布数据库的“数据库快照”  ，则在禁用发布和分发前，必须先删除这些数据库快照。 数据库快照是数据库的只读脱机副本，与复制快照无关。 有关详细信息，请参阅[数据库快照 (SQL Server)](../../relational-databases/databases/database-snapshots-sql-server.md)。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "72908409"
   
 #### <a name="to-disable-publishing-and-distribution"></a>禁用发布和分发  
   
-1.  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中连接到要禁用的发布服务器或分发服务器，然后展开该服务器节点。  
+1.  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中连接到要禁用的发布服务器或分发服务器，然后展开该服务器节点。  
   
 2.  右键单击 **“复制”** 文件夹，再单击 **“禁用发布和分发”** 。  
   
@@ -110,13 +110,13 @@ ms.locfileid: "72908409"
   
 3.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与分发服务器的连接。  
   
-4.  创建 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 类的实例。 指定 <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> 属性，并传递步骤 3 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象。  
+4.  创建的 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 类的实例。 指定 <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> 属性，并传递步骤 3 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象。  
   
 5.  （可选）调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以获取对象的属性，并验证发布服务器是否存在。 如果此方法返回 **false**，则步骤 4 中设置的发布服务器名称不正确，或者此分发服务器未使用该发布服务器。  
   
 6.  调用 <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A> 方法。 如果发布服务器和分发服务器在不同的服务器上，并且应在分发服务器上卸载发布服务器而没有首先验证发布服务器上是否不再存在发布时，将值 **true** 传递给 *force* 。  
   
-7.  创建 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的实例。 传递步骤 3 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象。  
+7.  创建的 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的实例。 传递步骤 3 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象。  
   
 8.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A> 方法。 在没有首先验证所有本地发布数据库是否已禁用以及分发数据库是否已卸载的情况下，将 **true** 值传递给 *force* 以删除分发服务器上的所有复制对象。  
   
@@ -135,6 +135,6 @@ ms.locfileid: "72908409"
   
 ## <a name="see-also"></a>另请参阅  
  [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
- [复制系统存储过程概念](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
+ [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
   
   

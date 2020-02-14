@@ -24,18 +24,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 694017e60682d191bd1d02cdc231b7185c3b8c87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68094616"
 ---
-# <a name="errorstate-transact-sql"></a>ERROR_STATE (Transact-SQL)
+# <a name="error_state-transact-sql"></a>ERROR_STATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   返回导致 TRY…CATCH 构造的 CATCH 块运行的错误状态号。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -51,7 +51,7 @@ ERROR_STATE ( )
   
  如果在 CATCH 块作用域以外调用，则返回 NULL。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  某些错误消息可能在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 代码中多处出现。 例如，几种不同情况下都可能发生“1105”错误。 每个引发错误的特定情况都分配唯一的状态代码。  
   
  查看记录已知问题的数据库（如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知识库）时，可以使用状态号确定所记录的问题是否与曾遇到的错误相同。 例如，如果一篇知识库文章讨论状态号为 2 的 1105 错误消息，而所收到的 1105 错误消息的状态号为 3，则您遇到的错误原因可能不同于该篇文章所报告的原因。  
@@ -66,7 +66,7 @@ ERROR_STATE ( )
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-using-errorstate-in-a-catch-block"></a>A. 在 CATCH 块中使用 ERROR_STATE  
+### <a name="a-using-error_state-in-a-catch-block"></a>A. 在 CATCH 块中使用 ERROR_STATE  
  下面的示例显示生成被零除错误的 `SELECT` 语句。 结果将返回错误状态。  
   
 ```sql  
@@ -80,7 +80,7 @@ END CATCH;
 GO  
 ```  
   
-### <a name="b-using-errorstate-in-a-catch-block-with-other-error-handling-tools"></a>B. 在包含其他错误处理工具的 CATCH 块中使用 ERROR_STATE  
+### <a name="b-using-error_state-in-a-catch-block-with-other-error-handling-tools"></a>B. 在包含其他错误处理工具的 CATCH 块中使用 ERROR_STATE  
  下面的示例显示生成被零除错误的 `SELECT` 语句。 结果将与错误状态一起返回有关错误的信息。  
   
 ```sql  
@@ -102,7 +102,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-errorstate-in-a-catch-block-with-other-error-handling-tools"></a>C. 在包含其他错误处理工具的 CATCH 块中使用 ERROR_STATE  
+### <a name="c-using-error_state-in-a-catch-block-with-other-error-handling-tools"></a>C. 在包含其他错误处理工具的 CATCH 块中使用 ERROR_STATE  
  下面的示例显示生成被零除错误的 `SELECT` 语句。 结果将与错误状态一起返回有关错误的信息。  
   
 ```sql  

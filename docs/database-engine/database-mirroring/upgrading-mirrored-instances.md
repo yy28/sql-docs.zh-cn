@@ -15,10 +15,10 @@ ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2d1b8c8060309cfb2f5137e5b1ea4ad2eaf31d1a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050628"
 ---
 # <a name="upgrading-mirrored-instances"></a>升级镜像实例
@@ -70,7 +70,7 @@ ms.locfileid: "68050628"
  ![显示滚动升级步骤的流程图](../../database-engine/database-mirroring/media/dbm-rolling-upgrade.gif "显示滚动升级步骤的流程图")  
   
 > [!IMPORTANT]  
->  在并发镜像会话中，一个服务器实例可能扮演不同的镜像角色（主体服务器、镜像服务器或见证服务器）。 在这种情况下，必须相应地调整基本滚动升级过程。 有关详细信息，请参阅 [数据库镜像会话期间的角色切换 (SQL Server)](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)。  
+>  在并发镜像会话中，一个服务器实例可能扮演不同的镜像角色（主体服务器、镜像服务器或见证服务器）。 在这种情况下，必须相应地调整基本滚动升级过程。 有关详细信息，请参阅 [数据库镜像会话期间的角色切换 (SQL Server)](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)的各版本中均未提供见证服务器实例。  
   
 > [!NOTE]  
 >  在许多情况下，滚动升级完成后，将会故障回复到原始主体服务器。  

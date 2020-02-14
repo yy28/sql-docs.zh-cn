@@ -11,10 +11,10 @@ ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1a6856b2bf297293fcf26c73885cbd46e68b3b1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68133244"
 ---
 # <a name="sql-trace"></a>SQL 跟踪
@@ -22,7 +22,7 @@ ms.locfileid: "68133244"
 在 SQL 跟踪中，如果事件是在跟踪定义中列出的事件类的实例，则收集这些事件。 可以将这些事件从跟踪中筛选出来或为其目标进行排队。 目标可以是文件或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象 (SMO)，它可以使用管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的应用程序中的跟踪信息。  
   
 > [!IMPORTANT]
-> 已弃用 SQL 跟踪和 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。 包含 Microsoft SQL Server 跟踪和重播对象的“Microsoft.SqlServer.Management.Trace”命名空间也已遭弃用。 
+> 已弃用 SQL 跟踪和 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。 包含 Microsoft SQL Server 跟踪和重播对象的“Microsoft.SqlServer.Management.Trace”命名空间也已遭弃用  。 
 > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 
 > 请改用扩展事件。 有关[扩展事件](../../relational-databases/extended-events/extended-events.md)的详细信息，请参阅[快速入门：SQL Server 中的扩展事件](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)和 [SSMS XEvent 探查器](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md)。
 
@@ -38,7 +38,7 @@ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供 [!INC
 下列词汇介绍了 SQL 跟踪的重要概念。  
   
  **事件**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例内发生的操作。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例内发生的操作。  
   
  **数据列**  
  事件的属性。  
@@ -58,7 +58,7 @@ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供 [!INC
  **跟踪定义**  
  事件类、数据列和筛选器的集合，用于标识跟踪过程中收集的事件的类型。  
   
- **ActualRebinds**  
+ **筛选器**  
  限制跟踪中收集的事件的条件。  
   
  **跟踪文件**  
@@ -73,15 +73,15 @@ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供 [!INC
 ## <a name="use-data-columns-to-describe-returned-events"></a>使用数据列描述返回的事件  
 跟踪运行时，SQL 跟踪使用跟踪输出中的数据列来描述返回的事件。 下表说明了 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 数据列（这些数据列与 SQL 跟踪使用的数据列相同），并指示默认情况下选择的列。  
   
-|数据列|列号|描述|  
+|数据列|列号|说明|  
 |-----------------|-------------------|-----------------|  
-|**ApplicationName**|10|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由该应用程序传递的值填充，而不是由程序名填充的。|  
+|ApplicationName |10|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由该应用程序传递的值填充，而不是由程序名填充的。|  
 |**BigintData1**|52|值（**bigint** 数据类型），取决于跟踪中指定的事件类。|  
 |**BigintData2**|53|值（**bigint** 数据类型），取决于跟踪中指定的事件类。|  
 |**Binary Data**|2|依赖于跟踪中捕获的事件类的二进制值。|  
 |**ClientProcessID**|9|由主机分配给正在运行客户端应用程序的进程的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|  
 |**ColumnPermissions**|44|表示是否已设置了列权限。 可以分析语句文本来确定各列所应用权限的情况。|  
-|**CPU**|18|事件使用的 CPU 时间（毫秒）。|  
+|CPU |18|事件使用的 CPU 时间（毫秒）。|  
 |**数据库 ID**|3|由 USE *database_name* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database_name*语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 数据列而且服务器可用，则 **ServerName** 将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|  
 |**DatabaseName**|35|正在运行用户语句的数据库的名称。|  
 |**DBUserName**|40|客户端的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户名。|  
@@ -124,19 +124,19 @@ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供 [!INC
 |**RowCounts**|48|批处理中的行数。|  
 |**ServerName**|26|正在跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|  
 |**SessionLoginName**|64|发起会话的用户的登录名。 例如，如果您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Login1 **连接到** 并以 **Login2**身份执行语句，则 **SessionLoginName** 将显示 **Login1**，而 **LoginName** 将显示 **Login2**。 此数据列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|  
-|**Severity**|20|异常错误事件的严重级别。|  
+|**严重性**|20|异常错误事件的严重级别。|  
 |**SourceDatabaseID**|62|存在该对象的源的数据库 ID。|  
 |**SPID**|12|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为客户端的相关进程分配的服务器进程 ID (SPID)。|  
 |**SqlHandle**|63|基于即席查询文本或 SQL 对象的数据库和对象 ID 的 64 位哈希运算。 可以将该值传递到 **sys.dm_exec_sql_text()** 以检索关联的 SQL 文本。|  
 |**StartTime**|14|事件（如果有）的开始时间。|  
 |**State**|30|错误状态代码。|  
-|**成功**|23|表示事件是否成功。 值包括：<br /><br /> **1** = Success.<br /><br /> **0** = Failure<br /><br /> 例如， **1** 表示权限检查成功，而 **0** 表示权限检查失败。|  
+|**Success**|23|表示事件是否成功。 值包括：<br /><br /> **1** = Success.<br /><br /> **0** = Failure<br /><br /> 例如， **1** 表示权限检查成功，而 **0** 表示权限检查失败。|  
 |**TargetLoginName**|42|如果是针对登录的操作（例如，添加新的登录），这是所针对登录的名称。|  
 |**TargetLoginSid**|43|如果是针对登录的操作（例如，添加新的登录），这是所针对登录的 SID。|  
 |**TargetUserName**|39|如果是针对某个数据库用户的操作（例如，授予用户权限），这是该用户的名称。|  
 |**TextData**|1|依赖于跟踪中捕获的事件类的文本值。 但是，如果跟踪参数化查询，则不以 **TextData** 列中的数据值显示变量。|  
 |**事务 ID**|4|系统为事务分配的 ID。|  
-|**类型**|57|跟踪中捕获的与事件类对应的整数值。|  
+|类型 |57|跟踪中捕获的与事件类对应的整数值。|  
 |**Writes**|17|由服务器代表事件写入物理磁盘的次数。|  
 |**XactSequence**|50|用于说明当前事务的标记。|  
   

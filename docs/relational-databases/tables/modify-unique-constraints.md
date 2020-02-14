@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 61747c9b7e445990bd285061f63c5497b0f51f85
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68811335"
 ---
 # <a name="modify-unique-constraints"></a>修改唯一约束
@@ -59,7 +59,7 @@ ms.locfileid: "68811335"
   
 4.  完成下表中的相应操作：  
   
-    |若要|需要遵循的步骤|  
+    |目标|需要遵循的步骤|  
     |--------|------------------------|  
     |更改与约束关联的列|1) 在“(常规)”下的网格中，单击“列”，再单击属性右侧的省略号 (…)    。<br /><br /> 2) 在“索引列”  对话框中，为索引指定新列和/或排序顺序。|  
     |重命名约束|在 **“标识”** 下的网格中，在 **“名称”** 框中键入新名称。 确保新名称不与“选定的主/唯一键或索引”  列表中的名称重复。|  

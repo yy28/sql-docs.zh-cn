@@ -20,10 +20,10 @@ ms.assetid: 5f84ff9e-c1ec-46aa-8501-50f854ebcc3a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 4d0feb6b3254ddff640a41de8e0b833739225761
-ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73168765"
 ---
 # <a name="pwdcompare-transact-sql"></a>PWDCOMPARE (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "73168765"
 
   对密码执行哈希操作并将该哈希与现有密码的哈希进行比较。 PWDCOMPARE 可用于搜索空的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录密码或常见的弱密码。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,7 +44,7 @@ PWDCOMPARE ( 'clear_text_password'
   
 ## <a name="arguments"></a>参数  
  **'** *clear_text_password* **'**  
- 未加密的密码。 clear_text_password 是 sysname (nvarchar(128))    。  
+ 是未加密的密码。 clear_text_password 是 sysname (nvarchar(128))    。  
   
  *password_hash*  
  密码的加密哈希。 password_hash 是 varbinary(128)   。  
@@ -60,7 +60,7 @@ PWDCOMPARE ( 'clear_text_password'
   
  如果 clear_text_password 的哈希与 password_hash 相匹配，则返回 1；反之，则返回 0   。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  PWDCOMPARE 函数不会威胁密码哈希的能力，因为可通过尝试使用作为第一个参数提供的密码登录，执行相同的测试。  
   
  PWDCOMPARE 不能与包含数据库用户的密码一起使用  。 没有等效的包含数据库。  

@@ -16,10 +16,10 @@ ms.assetid: ed1ef012-fa14-4ba5-bafe-d1527ba065b3
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 60183a9777098728ee258274a19aca4d65885b87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115829"
 ---
 # <a name="options-in-the-back-up-database-task-for-maintenance-plan"></a>维护计划的“备份数据库”任务中的选项
@@ -31,13 +31,13 @@ ms.locfileid: "68115829"
 -   [创建维护计划](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)  
   
 ## <a name="options"></a>选项  
- **“连接”**  
+ **Connection**  
  选择执行此任务时使用的服务器连接。  
   
  **新建**  
  创建一个新的服务器连接，在执行此任务时使用。 下面对 **“新建连接”** 对话框进行了介绍。  
   
- **“数据库”**  
+ **数据库**  
  指定受此任务影响的数据库。 选择后，下拉列表会提供以下选项：“所有数据库”、“所有系统数据库”、“所有用户数据库”、“特定数据库”     。  
   
  **“所有数据库”**  
@@ -123,12 +123,12 @@ ms.locfileid: "68115829"
  指定如何对服务器进行身份验证。  
   
  **使用 Windows 集成安全性**  
- 使用 Windows 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例。  
+ 使用 Windows 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。  
   
  **使用特定用户名和密码**  
- 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。 此选项不可用。  
+ 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。 此选项不可用。  
   
- **User name**  
+ **用户名**  
  提供一个在进行身份验证时要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 此选项不可用。  
   
  **密码**  

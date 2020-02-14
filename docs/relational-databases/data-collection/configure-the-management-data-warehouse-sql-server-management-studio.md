@@ -23,10 +23,10 @@ ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 54badd0404ee5360aef4a7bc095c236e5b31f79d
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056473"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>配置管理数据仓库 (SQL Server Management Studio)
@@ -93,7 +93,7 @@ ms.locfileid: "74056473"
   
  可通过为某个登录名选中 **“映射”** 复选框来指定该登录名。  
   
- **以下项的数据库角色成员身份：** *\<数据仓库名称>*  
+ **数据库角色成员身份：** *\<data warehouse name>*  
  通过单击以下一个或多个选项旁边的复选框，选择登录名映射到的管理数据仓库角色：  
   
 -   **mdw_admin**  
@@ -116,10 +116,10 @@ ms.locfileid: "74056473"
  **详细信息**  
  每个配置步骤在“详细信息”  网格中显示为一行。 每一行均包含描述相应步骤的 **“操作”** 列和指示该步骤成功或失败的 **“状态”** 列。 如果有错误，则在 **“消息”** 列中会显示消息。  
   
- **停止**  
+ **Stop**  
  停止向导的处理。  
   
- **报告**  
+ **Report**  
  查看数据收集配置的报告。 提供了以下报告选项：  
   
 -   查看报告  

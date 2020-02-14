@@ -34,10 +34,10 @@ ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 723c8f8b34ceb9e96ae6da196a64f766b18857ef
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291494"
 ---
 # <a name="fuzzy-lookup-transformation"></a>模糊查找转换
@@ -58,7 +58,7 @@ ms.locfileid: "71291494"
   
  此转换有一个输入和一个输出。  
   
- 在模糊匹配中，只能使用具有 **DT_WSTR** 和 **DT_STR** 数据类型的输入列。 完全匹配可以使用除 **DT_TEXT**、 **DT_NTEXT**和 **DT_IMAGE**之外的所有 DTS 数据类型。 有关详细信息，请参阅 [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md)。 参与输入和引用表之间联接的列必须具有兼容的数据类型。 例如，可以将具有 DTS **DT_WSTR** 数据类型的列联接到具有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **nvarchar** 数据类型的列，但是不能将具有 **DT_WSTR** 数据类型的列联接到具有 **DT_WSTR** 数据类型的列。  
+ 在模糊匹配中，只能使用具有 **DT_WSTR** 和 **DT_STR** 数据类型的输入列。 完全匹配可以使用除 **DT_TEXT**、 **DT_NTEXT**和 **DT_IMAGE**之外的所有 DTS 数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../../../integration-services/data-flow/integration-services-data-types.md)。 参与输入和引用表之间联接的列必须具有兼容的数据类型。 例如，可以将具有 DTS DT_WSTR 数据类型的列联接到具有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nvarchar 数据类型的列，但是不能将具有 DT_WSTR 数据类型的列联接到具有 int 数据类型的列     。  
   
  通过指定最大内存量、行比较算法以及对转换所用的索引和引用表进行缓存，可以自定义这种转换。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "71291494"
   
  下表介绍了匹配索引选项：  
   
-|选项|描述|  
+|选项|说明|  
 |------------|-----------------|  
 |**GenerateAndMaintainNewIndex**|创建一个新的索引，保存它，然后对其进行维护。 该转换在引用表上安装触发器，使引用表和索引表同步。|  
 |**GenerateAndPersistNewIndex**|创建一个新的索引，保存它，但不对其进行维护。|  
@@ -113,10 +113,10 @@ ms.locfileid: "71291494"
 > [!NOTE]  
 >  如果在 **“模糊查找转换编辑器”** 的 **“引用表”** 选项卡中选择 **“维护存储的索引”** ，则转换将使用托管存储过程维护索引。 这些托管存储过程使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的公共语言运行时 (CLR) 集成功能。 默认情况下，不启用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的 CLR 集成。 若要使用 **“维护存储的索引”** 功能，必须启用 CLR 集成。 有关详细信息，请参阅 [Enabling CLR Integration](../../../relational-databases/clr-integration/clr-integration-enabling.md)。  
 >   
->  由于“维护存储索引”选项需要 CLR 集成，所以只有在选择已启用 CLR 集成的 **实例上的引用表时，此功能才能发挥作用**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
+>  由于 **“维护存储的索引”** 选项需要 CLR 集成，所以只有在选择已启用 CLR 集成的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上的引用表时，此功能才能发挥作用。  
   
 ## <a name="row-comparison"></a>行比较  
- 配置模糊查找转换时，可以指定该转换在定位引用表中的匹配记录时所用的比较算法。 如果将 Exhaustive 属性设置为 **True**，则转换会将输入中的每一行与引用表中的每一行相比较。 这种比较算法可以生成更准确的结果，但是，除非引用表中的行数较少，否则很有可能使转换的执行速度变得很慢。 如果 Exhaustive 属性设置为 **True**，则整个引用表都会加载到内存中。 为了避免性能问题，最好只在包的开发过程中将 Exhaustive 属性设置为 **True**。  
+ 配置模糊查找转换时，可以指定该转换在定位引用表中的匹配记录时所用的比较算法。 如果将 Exhaustive 属性设置为 **True**，则转换会将输入中的每一行与引用表中的每一行相比较。 这种比较算法可以生成更准确的结果，但是，除非引用表中的行数较少，否则很有可能使转换的执行速度变得很慢。 如果 Exhaustive 属性设置为 **True**，则整个引用表都会加载到内存中。 为了避免性能问题，最好只在包的开发过程中将 Exhaustive 属性设置为 **True** 。  
   
  如果将 Exhaustive 属性设置为 **False**，则模糊查找转换只返回与输入记录一样至少有一个索引令牌或子字符串（该子字符串称为 q-gram  ）的匹配项。 若要最大程度提高查找效率，请以模糊查找转换查找匹配项时所用的倒排索引结构仅对表内每行中的一个令牌子集建立索引。 当输入数据集很小时，可以将 Exhaustive 设置为 **True** ，以避免遗漏索引表中不存在其公共令牌的匹配项。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "71291494"
   
  有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [通用属性](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [转换自定义属性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -219,7 +219,7 @@ ms.locfileid: "71291494"
   
 ## <a name="see-also"></a>另请参阅  
  [查找转换](../../../integration-services/data-flow/transformations/lookup-transformation.md)   
- [模糊分组转换](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
+ [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

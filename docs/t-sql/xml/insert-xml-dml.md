@@ -17,10 +17,10 @@ ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 95cf1eaa68e429d18456d7f0f9490b700efad3db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051295"
 ---
 # <a name="insert-xml-dml"></a>插入 (XML DML)
@@ -43,7 +43,7 @@ insert
  Expression1   
  标识要插入的一个或多个节点。 这可以是一个常量 XML 实例、对应用修改方法的相同 XML 架构集合的类型化 XML 数据类型实例的引用、使用单独的 sql:column()/sql:variable() 函数的非类型化 XML 数据类型实例或者是一个 XQuery 表达式   。 该表达式可以得出节点、文本节点或一组有序的节点。 但它无法解得根 (/) 节点。 如果该表达式得出一个值或一组值，则这些值作为单个文本节点插入，各值之间以空格分隔开。 如果将多个节点指定为常量，则这些节点用括号括住，并以逗号分隔开。 但无法插入异构序列（如一组元素、属性或值）。 如果 Expression1 解析到一个空序列，不发生插入操作且不返回任何错误  。  
   
- into  
+ 更改为  
  Expression1 标识的节点作为 Expression2 标识的节点的直接后代（子节点）插入   。 如果 Expression2 中的节点已有一个或多个子节点，则必须使用 as first 或 as last 来指定所需的新节点添加位置    。 例如，分别在子列表的开头或末尾。 插入属性时忽略 as first 和 as last 关键字   。  
   
  after  

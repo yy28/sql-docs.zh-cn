@@ -13,10 +13,10 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 ms.openlocfilehash: 915dde0b6b2083c45b5bfe4196e7578537a91379
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909159"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>迁移后验证和优化指南
@@ -31,7 +31,7 @@ ms.locfileid: "72909159"
 
 ## <a name="CEUpgrade"></a> 由于 CE 版本变更导致的查询回归
 
-适用于：  从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 迁移到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
+适用于：从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 迁移到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  。
 
 从较低版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 迁移到 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 或更高版本，且将[数据库兼容性级别](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)升级到最新可用级别时，工作负载可能会面临性能回归风险。
 
@@ -49,7 +49,7 @@ ms.locfileid: "72909159"
 
 ## <a name="ParameterSniffing"></a>对参数截取的敏感性
 
-**适用范围：** 从外部平台（如 Oracle、DB2、MySQL 和 Sybase）到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的迁移。
+**适用于：** 从外部平台（如 Oracle、DB2、MySQL 和 Sybase）到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的迁移。
 
 > [!NOTE]
 > 对于从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的迁移，如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 源中已存在此问题，则按原样迁移到较新版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将无法应对此方案。 
@@ -70,7 +70,7 @@ ms.locfileid: "72909159"
 
 ## <a name="MissingIndexes"></a>缺失索引
 
-**适用范围：** 从外部平台（如 Oracle、DB2、MySQL 和 Sybase）和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的迁移。
+**适用于：** 从外部平台（如 Oracle、DB2、MySQL 和 Sybase）和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的迁移。
 
 不正确的索引或缺失索引会导致额外的 I/O，从而产生额外内存并浪费 CPU。 原因可能是工作负载配置文件已更改（例如使用了其他谓词），进而导致现有索引设计无效。 索引策略不佳或工作负载配置文件发生更改的证据包括：
 -   查找重复、冗余、很少使用及完全未使用过的索引。
@@ -88,7 +88,7 @@ ms.locfileid: "72909159"
 
 ## <a name="InabilityPredicates"></a>无法使用谓词筛选数据
 
-**适用范围：** 从外部平台（如 Oracle、DB2、MySQL 和 Sybase）和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的迁移。
+**适用于：** 从外部平台（如 Oracle、DB2、MySQL 和 Sybase）和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的迁移。
 
 > [!NOTE]
 > 对于从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的迁移，如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 源中已存在此问题，则按原样迁移到较新版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将无法应对此方案。
@@ -117,7 +117,7 @@ ms.locfileid: "72909159"
 
 ## <a name="TableValuedFunctions"></a>使用表值函数（多语句表值函数和内联表值函数）
 
-**适用范围：** 从外部平台（如 Oracle、DB2、MySQL 和 Sybase）和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的迁移。
+**适用于：** 从外部平台（如 Oracle、DB2、MySQL 和 Sybase）和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的迁移。
 
 > [!NOTE]
 > 对于从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的迁移，如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 源中已存在此问题，则按原样迁移到较新版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将无法应对此方案。

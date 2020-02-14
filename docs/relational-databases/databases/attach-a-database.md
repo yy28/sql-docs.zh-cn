@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5d3d470a42d21e5c9946cd3b90dbd488bde515b8
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.openlocfilehash: b58af59da33a2a03627d06a2e461da76d359e28b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816762"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76911030"
 ---
 # <a name="attach-a-database"></a>附加数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中附加数据库。 可以使用此功能来复制、移动或升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。  
   
-##  <a name="Prerequisites"></a> 先决条件  
+##  <a name="Prerequisites"></a>先决条件  
   
 -   必须首先分离数据库。 尝试附加未分离的数据库将返回错误。 有关详细信息，请参阅 [分离数据库](../../relational-databases/databases/detach-a-database.md)。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "71816762"
 
 ### <a name="to-attach-a-database"></a>附加数据库  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对象资源管理中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例，然后单击以在 SSMS 中展开该实例视图。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对象资源管理中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后单击以在 SSMS 中展开该实例视图。  
   
 2.  右键单击“数据库”  ，然后单击“附加”  。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "71816762"
     > [!IMPORTANT]  
     > 尝试选择已附加的数据库将生成错误。  
   
-     **要附加的数据库**  
+     **“要附加的数据库”**  
      显示所选数据库的有关信息。  
   
      \<无列标题>  
@@ -78,17 +78,17 @@ ms.locfileid: "71816762"
      **附加为**  
      根据需要，可以指定要附加数据库的其他名称。  
   
-     **“所有者”**  
+     **所有者**  
      提供数据库可能所有者的下拉列表，您可以根据需要从其中选择其他所有者。  
   
-     **“状态”**  
+     **Status**  
      显示下表中相应的数据库状态。  
   
-    |图标|状态文本|描述|  
+    |图标|状态文本|说明|  
     |----------|-----------------|-----------------|  
     |（无图标）|（无文本）|此对象的附加操作尚未启动或者可能挂起。 这是打开该对话框时的默认值。|  
     |绿色的右向三角形|正在进行|已启动附加操作，但是该操作未完成。|  
-    |绿色的选中标记|成功|已成功附加该对象。|  
+    |绿色的选中标记|Success|已成功附加该对象。|  
     |包含白色十字形的红色圆圈|错误|附加操作遇到错误，未成功完成。|  
     |包含左、右两个黑色象限和上、下两个白色象限的圆圈|已停止|由于用户停止了附加操作，该操作未成功完成。|  
     |包含一个指向逆时针方向的曲线箭头的圆圈|已回滚|附加操作已成功，但已对其进行回滚，因为在附加其他对象的过程中出现了错误。|  
@@ -96,13 +96,13 @@ ms.locfileid: "71816762"
      **消息**  
      显示空消息或“找不到文件”超链接。  
   
-     **“添加”**  
+     **添加**  
      查找必需的主数据库文件。 当用户选择 .mdf 文件时，就会在 **“要附加的数据库”** 网格的相应字段中自动填充合适的信息。  
   
      **删除**  
      从 **“要附加的数据库”** 网格中删除选定文件。  
   
-     **"** *<database_name>* **”数据库详细信息**  
+     " <database_name> " 数据库详细信息     
      显示要附加的文件的名称。 若要验证或更改文件的路径名，请单击“浏览”按钮 (…)   。  
   
     > [!NOTE]  
@@ -143,9 +143,9 @@ ms.locfileid: "71816762"
     > 或者，你可以使用 [sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md) 或 [sp_attach_single_file_db](../../relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql.md) 存储过程。 但是，Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未来版本中将删除这些存储过程。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 建议改用 `CREATE DATABASE ... FOR ATTACH` 。  
   
 ##  <a name="FollowUp"></a> 跟进：在升级 SQL Server 数据库之后  
-在使用附加方法升级数据库后，该数据库将立即变为可用，然后自动进行升级。 如果数据库具有全文检索，升级过程将导入、重置或重新生成它们，具体取决于**全文升级选项**服务器属性的设置。 如果将升级选项设置为“导入”  或“重新生成”  ，在升级过程中将无法使用全文检索。 导入可能需要数小时，而重新生成所需的时间最多时可能十倍于此，具体取决于要编制索引的数据量。 另请注意，当升级选项设置为“导入”  时，如果全文目录不可用，将重新生成关联的全文检索。  
+在使用附加方法升级数据库后，该数据库将立即变为可用，然后自动进行升级。 如果数据库具有全文检索，升级过程将导入、重置或重新生成它们，具体取决于 **全文升级选项** 服务器属性的设置。 如果将升级选项设置为“导入”  或“重新生成”  ，在升级过程中将无法使用全文检索。 导入可能需要数小时，而重新生成所需的时间最多时可能十倍于此，具体取决于要编制索引的数据量。 另请注意，当升级选项设置为“导入”  时，如果全文目录不可用，将重新生成关联的全文检索。  
   
-如果升级前用户数据库的兼容级别为 100 或更高，升级后将保持相应级别。 如果升级前兼容级别为 90，则在升级后的数据库中，兼容级别将设置为 100，该级别为 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持的最低兼容级别。 有关详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
+如果升级前用户数据库的兼容级别为 100 或更高，升级后将保持相应级别。 如果升级前兼容级别为 90，则在升级后的数据库中，兼容级别将设置为 100，该级别为 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]支持的最低兼容级别。 有关详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
   
 > [!NOTE]
 > 如果从运行启用了变更数据捕获 (CDC) 的 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或更低版本的实例附加数据库，也需执行以下命令升级变更数据捕获 (CDC) 元数据。

@@ -12,10 +12,10 @@ ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 22f9918800930be9534441d2bb3706ad7844e9f7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285368"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>正在执行操作（SQL Server 导入和导出向导）
@@ -28,28 +28,28 @@ ms.locfileid: "71285368"
 ## <a name="screen-shot---operation-in-progress"></a>屏幕截图 - 正在进行中的操作 
  以下屏幕快照显示操作进行过程中，向导的“执行操作”页  。  
   
- ![导入和导出向导的“执行操作”页](../../integration-services/import-export-data/media/performing-operation1.png "Performing operation page of the Import and Export Wizard")  
+ ![导入和导出向导的执行操作页](../../integration-services/import-export-data/media/performing-operation1.png "导入和导出向导的执行操作页")  
 
 ## <a name="screen-shot---operation-completed"></a>屏幕截图 - 已完成的操作 
  以下屏幕快照显示操作完成后，向导的“执行操作”页  。 单击“消息”列中的项  可获取有关相应步骤的详细信息。  
   
- ![导入和导出向导的“执行操作”页](../../integration-services/import-export-data/media/performing-operation2.png "Performing operation page of the Import and Export Wizard")  
+ ![导入和导出向导的执行操作页](../../integration-services/import-export-data/media/performing-operation2.png "导入和导出向导的执行操作页")  
   
 ## <a name="watch-the-progress-of-the-operation"></a>监视操作的进度
- **操作**  
+ **Action**  
  显示操作的每个步骤。  
   
- **“状态”**  
+ **Status**  
  显示各步骤是成功还是失败。  
   
  **消息**  
  显示有关步骤的信息性消息和错误消息。 单击该列中的项可获取有关相应步骤的详细信息。
 
 ## <a name="interrupt-the-operation-or-save-the-results"></a>中断操作或保存结果
- **停止**  
+ **Stop**  
  在必要时单击“停止”  按钮即可中断操作。  
   
- **报表**  
+ **Report**  
  查看结果报表，将报表保存到文件，将报表复制到剪贴板或通过电子邮件发送报表。  
   
 ## <a name="whats-next"></a>下一步是什么？  

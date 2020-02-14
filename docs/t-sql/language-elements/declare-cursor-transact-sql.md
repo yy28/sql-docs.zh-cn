@@ -25,10 +25,10 @@ ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f0c5a07b7ff618b3857d9e67b11d50a5a29e8248
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67894792"
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "67894792"
 
   定义 [!INCLUDE[tsql](../../includes/tsql-md.md)] 服务器游标的属性，例如游标的滚动行为和用于生成游标所操作的结果集的查询。 `DECLARE CURSOR` 既接受基于 ISO 标准的语法，也接受使用一组 [!INCLUDE[tsql](../../includes/tsql-md.md)] 扩展的语法。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -91,7 +91,7 @@ GLOBAL
 >  如果 `GLOBAL` 和 `LOCAL` 参数都未指定，则默认值由“默认为本地游标”数据库选项的设置控制  。  
   
 FORWARD_ONLY  
-指定游标只能向前移动，并从第一行滚动到最后一行。 `FETCH NEXT` 是唯一支持的提取选项。 对所有由当前用户发出（或由其他用户提交）并影响结果集中的行的插入、更新和删除语句，其效果在提取这些行时是可见的。 由于游标无法向后滚动，但是，在提取行后对数据库中的行进行的更改通过游标均不可见。 默认只进游标是动态的，这意味着处理当前行时会检测到所有更改。 这可实现更快速的游标打开，并使结果集能够显示对基础表所做的更新。 尽管只进游标不支持向后滚动，但应用程序可通过关闭并重新打开游标返回到结果集的开头。 如果指定了 `FORWARD_ONLY` 而没有指定 `STATIC`、`KEYSET` 和 `DYNAMIC` 关键字，则游标作为动态游标进行操作。 如果未指定 `FORWARD_ONLY` 和 `SCROLL`，则默认为 `FORWARD_ONLY`，除非指定了关键字 `STATIC`、`KEYSET` 或 `DYNAMIC`。 `STATIC`、`KEYSET` 和 `DYNAMIC` 游标默认为 `SCROLL`。 与 ODBC 和 ADO 等数据库 API 不同，`STATIC`、`KEYSET` 和 `DYNAMIC` [!INCLUDE[tsql](../../includes/tsql-md.md)]游标支持 `FORWARD_ONLY`。  
+指定游标只能向前移动，并从第一行滚动到最后一行。 `FETCH NEXT` 是唯一支持的提取选项。 对所有由当前用户发出（或由其他用户提交）并影响结果集中的行的插入、更新和删除语句，其效果在提取这些行时是可见的。 由于游标无法向后滚动，但是，在提取行后对数据库中的行进行的更改通过游标均不可见。 默认只进游标是动态的，这意味着处理当前行时会检测到所有更改。 这可实现更快速的游标打开，并使结果集能够显示对基础表所做的更新。 尽管只进游标不支持向后滚动，但应用程序可通过关闭并重新打开游标返回到结果集的开头。 如果指定了 `FORWARD_ONLY` 而没有指定 `STATIC`、`KEYSET` 和 `DYNAMIC` 关键字，则游标作为动态游标进行操作。 如果未指定 `FORWARD_ONLY` 和 `SCROLL`，则默认为 `FORWARD_ONLY`，除非指定了关键字 `STATIC`、`KEYSET` 或 `DYNAMIC`。 `STATIC`、`KEYSET` 和 `DYNAMIC` 游标默认为 `SCROLL`。 与 ODBC 和 ADO 等数据库 API 不同，`STATIC`、`KEYSET` 和 `DYNAMIC` [!INCLUDE[tsql](../../includes/tsql-md.md)] 游标支持 `FORWARD_ONLY`。  
    
  STATIC  
 指定游标始终以第一次打开时的样式显示结果集，并制作数据的临时副本，供游标使用。 对游标的所有请求都通过 tempdb 中的这个临时表进行答复  。 因此，对基表所做的插入、更新和删除操作不在对此游标所做的提取操作返回的数据中反映，并且在该游标打开后，不会检测对结果集的成员、顺序或值所做的更改。 尽管不需要，但静态游标可检测其自己的更新、删除和插入。 例如，假定静态游标提取行，然后另一个应用程序将更新该行。 如果应用程序通过静态游标重新提取行，尽管更改由其他应用程序执行，但看到的值将保持不变。 支持所有类型的滚动。 
@@ -137,7 +137,7 @@ OPTIMISTIC
 FOR UPDATE [OF column_name [,...n]]     
 定义游标中可更新的列。 如果提供了 `OF <column_name> [, <... n>]`，则只允许修改所列出的列。 如果指定了 `UPDATE`，但未指定列的列表，则除非指定了 `READ_ONLY` 并发选项，否则可以更新所有的列。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 `DECLARE CURSOR` 定义了 [!INCLUDE[tsql](../../includes/tsql-md.md)] 服务器游标的属性，例如游标的滚动行为和用于生成游标所操作的结果集的查询。 `OPEN` 语句填充结果集，`FETCH` 返回结果集中的行。 `CLOSE` 语句释放与游标关联的当前结果集。 `DEALLOCATE` 语句释放游标所使用的资源。  
   
 `DECLARE CURSOR` 语句的第一种格式采用 ISO 语法来声明游标行为。 `DECLARE CURSOR` 的第二种格式使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 扩展插件，这些扩展插件允许使用在 ODBC 或 ADO 的数据库 API 游标函数中所使用的相同游标类型来定义游标。  
@@ -156,7 +156,7 @@ FOR UPDATE [OF column_name [,...n]]
   
 在声明游标后，可使用下列系统存储过程确定游标的特性。  
   
-|系统存储过程|描述|  
+|系统存储过程|说明|  
 |------------------------------|-----------------|  
 |**sp_cursor_list**|返回当前在连接上可视的游标列表及其特性。|  
 |**sp_describe_cursor**|说明游标属性，例如是只前推的游标还是滚动游标。|  

@@ -12,12 +12,12 @@ ms.assetid: e8acb408-938d-4b36-81dd-04f087410cc5
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57bd71b3f066b8b392371af0e49693f9f19e6b7a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ce090a9018327d1808cf891b5ba6c068d37ccb73
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67999825"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76516458"
 ---
 # <a name="blocked-process-report-event-class"></a>Blocked Process Report 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,10 +29,10 @@ ms.locfileid: "67999825"
   
 ## <a name="blocked-process-report-event-class-data-columns"></a>Blocked Process Report 事件类的数据列  
   
-|数据列名称|数据类型|描述|列 ID|可筛选|  
+|数据列名称|数据类型|说明|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|获取锁所在的数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 数据列而且服务器可用，则 **ServerName** 将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
-|**Duration**|**bigint**|进程阻塞的时间（毫秒）。|13|是|  
+|**Duration**|**bigint**|进程受阻止的时长（微秒）。|13|是|  
 |**EndTime**|**datetime**|事件结束的时间。 启动事件类（如 **SQL:BatchStarting** 或 **SP:Starting**）不填充此列。|15|是|  
 |**EventClass**|**int**|事件类型 = 137。|27|否|  
 |**EventSequence**|**int**|特定事件在请求中的顺序。|51|否|  

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 732c1c759eec875af0bd65b763b21d912ffe2de7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68085764"
 ---
 # <a name="column-properties-general-page"></a>列属性（“常规”页）
@@ -56,7 +56,7 @@ ms.locfileid: "68085764"
  指示标识列的初始行值。  
   
  **标识增量**  
- “标识增量”  属性指定在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为插入的行生成标识值时，在现有的最大行标识值基础上所加的值。  
+ “标识增量”属性指定在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为插入的行生成标识值时，在现有的最大行标识值基础上所加的值  。  
   
  **默认值绑定**  
  绑定到该列的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 默认值。 如果未绑定默认值，此选项为空白。  

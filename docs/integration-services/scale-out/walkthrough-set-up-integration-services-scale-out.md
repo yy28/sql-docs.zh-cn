@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
 ms.openlocfilehash: d3b6ea9f53a54b7f02042b85781bc8fe24028a69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896135"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>演练：安装 Integration Services (SSIS) Scale Out
@@ -64,13 +64,13 @@ ms.locfileid: "67896135"
 
 3.  在“Integration Services Scale Out Master 配置”  页上，指定 Scale Out Master 用于与 Scale Out Worker 进行通信的端口号。 默认端口号为 8391。  
 
-    ![Master Config](media/master-config.PNG "Master Config")
+    ![主节点配置](media/master-config.PNG "主节点配置")
 
 4.  通过执行以下操作之一，指定用于保护 Scale Out Master 与 Scale Out Worker 之间的通信的 SSL 证书。
     * 单击“创建新的 SSL 证书”，使安装进程创建默认的自签名 SSL 证书  。  默认证书安装在本地计算机中受信任的根证书颁发机构之下。 可在此证书中指定 CN。 CN 中应包含主终结点的主机名。 默认包含主节点的计算机名称和 IP。
     * 单击“使用现有的 SSL 证书”，然后单击“浏览”，在本地计算机上选择现有的 SSL 证书   。 文本框中显示证书的指纹。 单击“浏览”  ，显示存储在本地计算机中受信任的根证书颁发机构中的证书。 必须选择存储在此处的证书。       
 
-    ![Master Config 2](media/master-config-2.PNG "Master Config 2")
+    ![主节点配置 2](media/master-config-2.PNG "主节点配置 2")
   
 5.  完成 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 安装向导。
 
@@ -105,7 +105,7 @@ ms.locfileid: "67896135"
 
 2.  在“服务器配置”  页上，选择要运行“SQL Server Integration Services Scale Out Worker 服务”  的帐户，然后选择“启动类型”  。
 
-    ![Server Config 2](media/server-config-2.PNG "Server Config 2")
+    ![服务器配置 2](media/server-config-2.PNG "服务器配置 2")
 
 3.  在“Integration Services Scale Out Worker 配置”  页上，指定端点以连接到 Scale Out Master。 
 
@@ -113,7 +113,7 @@ ms.locfileid: "67896135"
 
     - 对于多台计算机环境，终结点包括安装了 Scale Out Master 的计算机的名称或 IP 以及 Scale Out Master 安装期间指定的端口号  。
    
-    ![Worker Config 1](media/worker-config.PNG "Worker Config 1")    
+    ![辅助角色配置 1](media/worker-config.PNG "辅助角色配置 1")    
 
     > [!NOTE]
     > 此处也可跳过 Worker 配置，并在安装后使用 [Scale Out Manager](integration-services-ssis-scale-out-manager.md) 将 Scale Out Worker 与 Scale Out Master 关联起来。
@@ -122,7 +122,7 @@ ms.locfileid: "67896135"
   
     单击“浏览”  ，查找证书文件 (*.cer)。 要使用默认 SSL 证书，请在安装了 Scale Out Master 的计算机上找到 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn`，并在其下选择 `SSISScaleOutMaster.cer` 文件。   
 
-    ![Worker Config 2](media/worker-config-2.PNG "Worker Config 2")
+    ![辅助角色配置 2](media/worker-config-2.PNG "辅助角色配置 2")
 
     > [!NOTE]
     > 如果 Scale Out Master 使用的 SSL 证书为自签名证书，则需要在具有 Scale Out Worker 的计算机上安装相应的客户端 SSL 证书。 如果在“Integration Services Scale Out Worker 配置”页上提供了客户端 SSL 证书的文件路径，证书将自动安装；否则，稍后必须手动安装证书  。 

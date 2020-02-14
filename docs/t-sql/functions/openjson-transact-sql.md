@@ -19,10 +19,10 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 48cd04467283683cf1dc54f300b2c4ff21fb8248
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68632138"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "68632138"
 >
 > 兼容级别 120 可能是默认级别，即使在新的 Azure SQL 数据库中也是如此。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标")[Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标")[Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -60,9 +60,9 @@ OPENJSON( jsonExpression [ , path ] )  [ <with_clause> ]
 
 默认情况下，**OPENJSON** 表值函数返回三列，这些列包含在 jsonExpression  中找到的每个 {键:值} 对的键名称、值和类型。 作为替代方法，可以通过提供 with_clause  来显式指定 **OPENJSON** 返回的结果集的架构。
   
-### <a name="withclause"></a>with_clause
+### <a name="with_clause"></a>with_clause
   
-![OPENJSON TVF 中的 WITH 子句的语法](../../relational-databases/json/media/openjson-shema-syntax.png " 语法")
+![OPENJSON TVF 中的 WITH 子句的语法](../../relational-databases/json/media/openjson-shema-syntax.png "OPENJSON WITH 语法")
 
 with_clause  包含 **OPENJSON** 要返回的列及其类型的列表。 默认情况下，**OPENJSON** 将 jsonExpression  中的键与 with_clause  中的列名进行匹配（在此情况下，匹配键意味着它区分大小写）。 如果列名与键名称不匹配，则可以提供可选的 column_path，它是在 jsonExpression 中引用键的 [JSON 路径表达式](../../relational-databases/json/json-path-expressions-sql-server.md)   。 
 
@@ -91,21 +91,21 @@ SELECT * FROM OpenJson(@json);
 
 **结果：**
 
-| Key                                | 值                 | type |
+| key                                | 值                 | type |
 | :--                                | :----                 | :--- |
 | String_value                       | John                  | 1 |
 | DoublePrecisionFloatingPoint_value | 45                    | 2 |
 | DoublePrecisionFloatingPoint_value | 2.3456                | 2 |
 | BooleanTrue_value                  | true                  | 3 |
 | BooleanFalse_value                 | false                 | 3 |
-| Null_value                         | NULL                  | 0 |
+| Null_value                         | Null                  | 0 |
 | Array_value                        | ["a","r","r","a","y"] | 4 |
 | Object_value                       | {"obj":"ect"}         | 5 |
 | &nbsp; | &nbsp; | &nbsp; |
 
 - DoublePrecisionFloatingPoint_value 遵循 IEEE-754。
 
-### <a name="path"></a>path 
+### <a name="path"></a>*路径*
 
 是在 jsonExpression  中引用对象或数组的可选 JSON 路径表达式。 **OPENJSON** 会定位到指定位置处的 JSON 文本，并且仅分析引用的片段。 有关详细信息，请参阅 [JSON 路径表达式 (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md)。
 
@@ -128,7 +128,7 @@ FROM OPENJSON(@json,'$.path.to."sub-object"')
   
  **结果**  
   
-|Key|ReplTest1|  
+|密钥|值|  
 |---------|-----------|  
 |0|en-GB|  
 |1|en-UK|  
@@ -140,7 +140,7 @@ FROM OPENJSON(@json,'$.path.to."sub-object"')
 
 用于将路径各步与 JSON 表达式的属性进行匹配的比较不区分大小写且无法识别排序规则（即是 BIN2 比较）。 
 
-### <a name="withclause"></a>*with_clause*
+### <a name="with_clause"></a>*with_clause*
 
 显式定义 **OPENJSON** 函数要返回的输出架构。 可选 with_clause  可以包含以下元素：
 
@@ -148,7 +148,7 @@ colName  是输出列的名称。
   
 默认情况下，**OPENJSON** 使用列的名称与 JSON 文本中的属性进行匹配。 例如，如果在架构中指定列 name  ，则 OPENJSON 会尝试使用 JSON 文本中的属性“name”填充此列。 可以使用 column_path 参数替代此默认映射  。  
   
-*类型*  
+type   
 是输出列的数据类型。  
 
 > [!NOTE]
@@ -214,7 +214,7 @@ WITH (
   
 **结果**
   
-|Number|date|Customer|Quantity|订单|  
+|Number|Date|客户|数量|订单|  
 |------------|----------|--------------|--------------|-----------|  
 |SO43659|2011-05-31T00:00:00|AW29825|1|{"Number":"SO43659","Date":"2011-05-31T00:00:00"}|  
 |SO43661|2011-06-01T00:00:00|AW73565|3|{"Number":"SO43661","Date":"2011-06-01T00:00:00"}|  
@@ -229,9 +229,9 @@ OPENJSON 函数返回的列取决于 WITH 选项。
   
         |类型列的值|JSON 数据类型|  
         |------------------------------|--------------------|  
-        |0|null|  
-        |1|string|  
-        |2|INT|  
+        |0|Null|  
+        |1|字符串|  
+        |2|int|  
         |3|true/false|  
         |4|array|  
         |5|对象 (object)|  
@@ -243,7 +243,7 @@ OPENJSON 函数返回的列取决于 WITH 选项。
 > [!NOTE]  
 > 只有在你结合使用 OPENJSON 和默认架构时，“Key”  、“Value”  和“Type”  列才会返回，它们不适用于显式架构。
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 
 在 OPENJSON 的第二个参数或 with_clause 中使用的 json_path可以以 lax 或 strict 关键字开头      。
 

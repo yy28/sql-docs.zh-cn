@@ -18,10 +18,10 @@ ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: db49332ec2710586e9cae23c3e41ee4aff42b486
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68136969"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>合并复制的 Web 同步
@@ -30,7 +30,7 @@ ms.locfileid: "68136969"
   
 -   通过 Internet 同步移动用户数据。  
   
--   穿过企业防火墙在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库之间同步数据。  
+-   跨企业防火墙在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库之间同步数据。  
   
  例如，正在出差的销售代表可以使用 Web 同步。 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]公司的销售代表们要去所在区域的不同商店和供应商那里出差。 如果出差时间较长，销售代表们会住在宾馆里，这就需要一种方便的方法，能够在每天结束时上载销售数据，下载产品更新信息。  
   
@@ -83,6 +83,6 @@ ms.locfileid: "68136969"
   
 ## <a name="see-also"></a>另请参阅  
  [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)   
- [Topologies for Web Synchronization](../../relational-databases/replication/topologies-for-web-synchronization.md)  
+ [Web 同步的拓扑](../../relational-databases/replication/topologies-for-web-synchronization.md)  
   
   

@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: bdd7c71d-1c59-4044-bfe8-c85f908345bb
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 21d23387b3d17f54cbd6cfed3398cf5a0e8cffe6
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 3f6fc6a82b0559282bf2ae714213bb8434c07bd0
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770801"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286884"
 ---
 # <a name="add-or-edit-filter"></a>添加或编辑筛选器
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "68770801"
   
 3.  **指定将从此表接收数据的订阅数**  
   
-     仅[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本适用；仅限合并复制。 通过合并复制，可以指定最适合您的数据和应用程序的分区类型。 如果选择 **“此表中的行将仅转到一个订阅”** ，则合并复制将设置不重叠分区选项。 不重叠分区与预计算分区协同工作以提高性能，使用不重叠分区可以将与预计算分区相关联的上载开销降至最低。 使用的参数化筛选器和联接筛选器越复杂，不重叠分区的性能优势就越明显。 如果选择此选项，则必须确保对数据分区时不能将行复制到多个订阅服务器。 有关详细信息，请参阅主题 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)中的“设置‘分区选项’”部分。  
+     仅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本适用；仅限合并复制。 通过合并复制，可以指定最适合您的数据和应用程序的分区类型。 如果选择 **“此表中的行将仅转到一个订阅”** ，则合并复制将设置不重叠分区选项。 不重叠分区与预计算分区协同工作以提高性能，使用不重叠分区可以将与预计算分区相关联的上载开销降至最低。 使用的参数化筛选器和联接筛选器越复杂，不重叠分区的性能优势就越明显。 如果选择此选项，则必须确保对数据分区时不能将行复制到多个订阅服务器。 有关详细信息，请参阅主题 [参数化行筛选器](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)中的“设置‘分区选项’”部分。  
   
  在添加或编辑完筛选器后，请单击 **“确定”** 以保存更改并关闭该对话框。 将对照 SELECT 子句中的表分析并运行指定的筛选器。 如果筛选语句有语法错误或其他问题，将会通知您编辑该筛选语句。  
   

@@ -35,15 +35,15 @@ ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8f7a42e7885e2c985cd8d0b65e336b912014c40f
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70155566"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>使用维护计划向导
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主题介绍了如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中使用维护计划向导创建单服务器或多服务器维护计划。 维护计划向导用于创建 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可定期运行的维护计划。 它使您可以执行各种数据库管理任务，包括备份、数据库完整性检查或以指定的间隔更新数据库统计信息。  
+  本主题介绍了如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中使用维护计划向导创建单服务器或多服务器维护计划。 维护计划向导可创建 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可定期运行的维护计划。 它使您可以执行各种数据库管理任务，包括备份、数据库完整性检查或以指定的间隔更新数据库统计信息。  
     
  
 ##  <a name="Restrictions"></a> 限制和局限  
@@ -54,7 +54,7 @@ ms.locfileid: "70155566"
 
 若要防止在运行维护计划、数据收集组和其它 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包时提升特权，请将运行包的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业配置为具有有限特权的代理帐户，或仅将 **sysadmin** 成员添加到 **db_ssisadmin** 和 **dc_admin** 角色。  
 
-##  <a name="Prerequisite"></a> 先决条件 
+##  <a name="Prerequisite"></a>先决条件 
 必须启用 [“代理 XP”服务器配置选项](../../database-engine/configure-windows/agent-xps-server-configuration-option.md)。
   
   
@@ -130,9 +130,9 @@ ms.locfileid: "70155566"
   
         6.  在 **“摘要”** 下的 **“说明”** 中，验证所有作业计划设置均正确。  
   
-        7.  单击“确定”  。  
+        7.  单击“确定”。   
   
-    6.  单击“下一步”  。  
+    6.  单击“下一步”。   
   
 6.  在 **“选择目标服务器”** 页上，选择要运行维护计划的服务器。 此页仅在配置为主服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上可见。  
   
@@ -157,7 +157,7 @@ ms.locfileid: "70155566"
   
  -  **“所有数据库”**  
   
-生成的维护计划将对除 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases except **tempdb**.  
+生成对所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库（“tempdb”  除外）运行此任务的维护计划。  
   
 **系统数据库**  
   
@@ -182,7 +182,7 @@ ms.locfileid: "70155566"
   
 ## <a name="define-database-shrink-tasks"></a>定义数据库收缩任务  
   
-1.  在 **“定义收缩数据库任务”** 页上，使用 `DBCC SHRINKDATABASE` 语句以及 `NOTRUNCATE` 或 `TRUNCATEONLY` 选项，可以创建一个任务，以尝试减小所选数据库的大小。 有关详细信息，请参阅 [DBCC SHRINKDATABASE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)。 完成后，单击 **“下一步”** 。  
+1.  在 **“定义收缩数据库任务”** 页上，使用 `DBCC SHRINKDATABASE` 语句以及 `NOTRUNCATE` 或 `TRUNCATEONLY` 选项，可以创建一个任务，以尝试减小所选数据库的大小。 有关详细信息，请参阅 [DBCC SHRINKDATABASE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)。 完成后，单击“下一步”  。  
   
     > **警告！！！！** 被移动用来收缩文件的数据可以分布到文件的任何可用位置。 这将导致索引碎片并使搜索索引范围的查询变慢。 若要消除碎片，请考虑在收缩后重新生成文件的索引。  
   
@@ -205,7 +205,7 @@ ms.locfileid: "70155566"
   
 ## <a name="define-the-index-tasks"></a>定义索引任务  
   
-1.  在 **“定义重新组织索引任务”** 页上，选择用来移动索引页以提高搜索顺序效率的服务器。 此任务使用 `ALTER INDEX ... REORGANIZE` 语句。 有关详细信息，请参阅 [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)。 完成后，单击 **“下一步”** 。  
+1.  在 **“定义重新组织索引任务”** 页上，选择用来移动索引页以提高搜索顺序效率的服务器。 此任务使用 `ALTER INDEX ... REORGANIZE` 语句。 有关详细信息，请参阅 [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)。 完成后，单击“下一步”  。  
   
      此页还提供以下选项：  
   
@@ -397,7 +397,7 @@ ms.locfileid: "70155566"
   
     -   AES 256  
   
-    -   Triple DES  
+    -   三重 DES  
   
      如果您选择了追加到现有备份集，则禁用加密选项。  
   
@@ -499,16 +499,16 @@ ms.locfileid: "70155566"
      **详细信息**  
      提供向导执行的操作所返回的操作、状态和所有消息。  
   
-     **操作**  
+     **Action**  
      指定每个操作的类型和名称。  
   
-     **“状态”**  
+     **Status**  
      指示向导操作作为一个整体返回的值是“成功”  还是“失败”  。  
   
      **消息**  
      提供从该进程中返回的任何错误或警告消息。  
   
-     **报告**  
+     **Report**  
      创建包含创建分区向导结果的报告。 这些选项是 **“查看报告”** 、 **“将报告保存到文件”** 、 **“将报告复制到剪贴板”** 和 **“将报告作为电子邮件发送”** 。  
   
      **查看报告**  

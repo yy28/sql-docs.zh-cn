@@ -11,10 +11,10 @@ ms.assetid: 55b28ba9-b6d5-4ea9-8103-db8a72f42982
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 40014049e46f10778ede60e9f1597d740bde882f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68102504"
 ---
 # <a name="sql-server-memory-node"></a>SQL Server、内存节点
@@ -22,9 +22,9 @@ ms.locfileid: "68102504"
   Microsoft **中的** “内存节点” [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象在 NUMA 节点上提供监视服务器内存使用情况的计数器。  
   
 ## <a name="memory-node-counters"></a>内存节点计数  
- 下表描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **内存节点** 计数器。  
+ 下表描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“内存节点”计数器  。  
   
-|SQL Server Memory Manager 计数器|描述|  
+|SQL Server Memory Manager 计数器|说明|  
 |----------------------------------------|-----------------|  
 |**Database Node Memory (KB)**|指定服务器当前在此节点上用于数据库页面的内存量。|  
 |**Free Node Memory (KB)**|指定服务器在此节点上未使用的内存量。|  

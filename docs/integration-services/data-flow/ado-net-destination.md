@@ -19,10 +19,10 @@ ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6829260583ebc3c1b0dec3fec5d3158ddbbea297
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293530"
 ---
 # <a name="ado-net-destination"></a>ADO NET 目标
@@ -162,7 +162,7 @@ ms.locfileid: "71293530"
  **截断**  
  未使用。  
   
- **Description**  
+ **说明**  
  查看操作的说明。  
   
  **将此值设置到选定的单元格**  

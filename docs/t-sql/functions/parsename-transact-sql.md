@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9b36e31e163999a6af70b498fef9d65c2ce0ae55
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843622"
 ---
 # <a name="parsename-transact-sql"></a>PARSENAME (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "73843622"
 > [!NOTE]  
 >  PARSENAME 函数不指示指定名称的对象是否存在。 PARSENAME 仅返回指定对象名称的指定部分。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -63,7 +63,7 @@ PARSENAME ( 'object_name' , object_piece )
 ## <a name="return-types"></a>返回类型  
  **sysname**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果存在下列条件之一，则 PARSENAME 返回 NULL：  
   
 -   object_name 或 object_piece 为 NULL   。  

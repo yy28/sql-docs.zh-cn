@@ -15,10 +15,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 40f30fd646e166cc9b8db433934d22a378c907cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67995624"
 ---
 # <a name="determining-effective-database-engine-permissions"></a>确定有效的数据库引擎权限
@@ -33,7 +33,7 @@ ms.locfileid: "67995624"
 >  * 旧系统和新系统有类似之处。 例如，`sysadmin` 固定服务器角色中的成员身份就类似于拥有 `CONTROL SERVER` 权限。 但是，这两个系统并不完全相同。 例如，如果某个登录名仅拥有 `CONTROL SERVER` 权限，而某个存储过程检查 `sysadmin` 固定服务器角色中的成员身份，则权限检查将会失败。 反之亦然。 
 
 
-## <a name="summary"></a>“摘要”   
+## <a name="summary"></a>总结   
 * 服务器级权限可以来自于固定服务器角色或用户定义的服务器角色中的成员身份。 每个人都属于 `public` 固定服务器角色，接收其中分配的任何权限。   
 * 服务器级权限可以来自于授予登录名或用户定义的服务器角色的权限。   
 * 数据库级权限可以来自于固定数据库角色中的成员身份，或者每个数据库中用户定义的数据库角色中的成员身份。 每个人都属于 `public` 固定数据库角色，接收其中分配的任何权限。   
@@ -92,7 +92,7 @@ SELECT DP1.name AS DatabaseRoleName,
 
 可在服务器级别、数据库级别、架构级别或对象等等级别授予权限。共有 26 个级别（称为类）。 类的完整列表按字母顺序分别包括：`APPLICATION ROLE`、`ASSEMBLY`、`ASYMMETRIC KEY`、`AVAILABILITY GROUP`、`CERTIFICATE`、`CONTRACT`、`DATABASE`、`DATABASE` `SCOPED CREDENTIAL`、`ENDPOINT`、`FULLTEXT CATALOG`、`FULLTEXT STOPLIST`、`LOGIN`、`MESSAGE TYPE`、`OBJECT`、`REMOTE SERVICE BINDING`、`ROLE`、`ROUTE`、`SCHEMA`、`SEARCH PROPERTY LIST`、`SERVER`、`SERVER ROLE`、`SERVICE`、`SYMMETRIC KEY`、`TYPE`、`USER`、`XML SCHEMA COLLECTION`。 （某些类在某些类型的 SQL Server 中不可用。）若要提供有关每个类的完整信息，需要执行不同的查询。
 
-### <a name="principals"></a>主体
+### <a name="principals"></a>Principals
 
 权限将授予主体。 主体可以是服务器角色、登录名、数据库角色或用户。 登录名可以代表包含许多 Windows 用户的 Windows 组。 由于 Windows 组不由 SQL Server 维护，因此，SQL Server 不一定总知道谁是 Windows 组的成员。 当某个 Windows 用户连接到 SQL Server 时，登录数据包中包含该用户的 Windows 组成员身份令牌。
 

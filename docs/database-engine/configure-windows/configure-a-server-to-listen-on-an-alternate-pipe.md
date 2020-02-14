@@ -16,10 +16,10 @@ ms.assetid: 914f7491-e2be-4b0d-b3aa-fe5409cdbafa
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fd7a0ebf16733109e59aac74652d90e0b63a1d9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012907"
 ---
 # <a name="configure-a-server-to-listen-on-an-alternate-pipe"></a>配置服务器以侦听备用管道
@@ -38,13 +38,13 @@ ms.locfileid: "68012907"
   
 #### <a name="to-configure-the-named-pipe-used-by-the-sql-server-database-engine"></a>配置 SQL Server 数据库引擎使用的命名管道  
   
-1.  在 SQL Server 配置管理器的控制台窗格中，展开“SQL Server 网络配置”，然后通过单击展开“\<instance name> 的协议”    。  
+1.  在 SQL Server 配置管理器的控制台窗格中，展开“SQL Server 网络配置”，然后单击以展开“\<实例名称> 的协议”    。  
   
 2.  在详细信息窗格中，右键单击“命名管道”  ，再单击“属性”  。  
   
 3.  在 **“协议”** 选项卡的 **“管道名称”** 框中，键入希望 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 侦听的管道，再单击 **“确定”** 。  
   
-4.   在控制台窗格中，单击“SQL Server 服务”。  
+4.  在控制台窗格中，单击“SQL Server 服务”。   
   
 5.  在详细信息窗格中，右键单击“SQL Server  (\<实例名称>)”  ，然后单击“重启”  以停止并重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   

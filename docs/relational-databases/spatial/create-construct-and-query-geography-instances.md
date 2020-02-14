@@ -15,15 +15,15 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b942e32e78a0a66e2d650ad36202bdf0effebc05
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048751"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>创建、构造和查询地理实例
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  地理空间 **geography**数据类型表示圆形地球坐标系中的数据。 此类型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中作为 .NET 公共语言运行时 (CLR) 数据类型实现。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** 数据类型存储诸如 GPS 纬度和经度坐标之类的椭球体（圆形地球）数据。  
+  地理空间 **geography**数据类型表示圆形地球坐标系中的数据。 此类型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中作为 .NET 公共语言运行时 (CLR) 数据类型实现。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geography 数据类型存储椭球体（圆形地球）数据，如 GPS 纬度和经度坐标  。  
   
  **geography** 类型已进行预定义，可在每个数据库中使用。 你可以创建 **geography** 类型的表列并对 **geography** 数据进行操作，就像使用其他系统提供的数据类型一样。  
   

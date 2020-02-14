@@ -18,10 +18,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: b5aecdf222ea325f67a23b728ed29ee40e768387
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056415"
 ---
 # <a name="prepare-data-for-bulk-export-or-import"></a>准备用于批量导出或导入的数据
@@ -39,7 +39,7 @@ ms.locfileid: "74056415"
   
 -   从表或视图大容量导出到数据文件要求对正在大容量复制的表或视图具有 SELECT 权限。  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以使用并行扫描检索数据。 因此，通常不保证从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例大容量导出的表行在数据文件中按特定顺序排列。 为了确保批量导出的表行在数据文件中按特定顺序排列，请使用 **queryout** 选项来通过查询进行批量导出，并指定一个 ORDER BY 子句。  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以使用并行扫描来检索数据。 因此，通常不保证从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例大容量导出的表行在数据文件中按特定顺序排列。 为了确保批量导出的表行在数据文件中按特定顺序排列，请使用 **queryout** 选项来通过查询进行批量导出，并指定一个 ORDER BY 子句。  
   
 ## <a name="data-file-format-requirements-for-bulk-import"></a>大容量导入的数据文件格式要求  
  为了导入数据文件中的数据，该文件必须满足以下基本要求：  
@@ -58,7 +58,7 @@ ms.locfileid: "74056415"
 -   数据文件中的每个字段都必须与目标表中的对应列兼容。 例如，不能将 **int** 字段加载到 **datetime** 列。 有关详细信息，请参阅[用于批量导入或导出的数据格式 (SQL Server)](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)[在使用 bcp 时指定数据格式以获得兼容性 (SQL Server)](../../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)  
   
     > [!NOTE]  
-    >  若要指定从数据文件导入的行子集而并非整个文件，可以使用带有 **-F** *first_row* 开关和/或 **-L** *last_row* 开关的 **bcp** 命令。 有关详细信息，请参阅 [bcp Utility](../../tools/bcp-utility.md)。  
+    >  要指定从数据文件导入的行子集而并非整个文件，可以使用带有 -F first_row 开关和/或 -L last_row 开关的 bcp 命令      。 有关详细信息，请参阅 [bcp Utility](../../tools/bcp-utility.md)。  
   
 -   若要从包含固定长度或固定宽度字段的数据文件导入数据，请使用格式化文件。 有关详细信息，请参阅 [XML 格式化文件 (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md)。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "74056415"
 |添加了有关使用 OLE DB Provider for Jet 导入 CSV 数据的信息。|  
   
 ## <a name="see-also"></a>另请参阅  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp 实用工具](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [使用字符格式导入或导出数据 (SQL Server)](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)   

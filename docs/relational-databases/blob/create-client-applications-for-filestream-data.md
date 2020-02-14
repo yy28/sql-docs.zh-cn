@@ -12,10 +12,10 @@ ms.assetid: 8a02aff6-e54c-40c6-a066-2083e9b090aa
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 385deb9dd689c6716ab8addaa64d8bf8bd62ed97
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68085396"
 ---
 # <a name="create-client-applications-for-filestream-data"></a>为 FILESTREAM 数据创建客户端应用程序
@@ -52,7 +52,7 @@ ms.locfileid: "68085396"
  [!code-sql[FILESTREAM#FS_PathName](../../relational-databases/blob/codesnippet/tsql/create-client-applicatio_1.sql)]  
   
 ###  <a name="trx"></a> 读取事务上下文  
- 若要获取当前事务上下文，请使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] [GET_FILESTREAM_TRANSACTION_CONTEXT()](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md) 函数。 下面的示例说明了如何开始执行事务并读取当前事务上下文。  
+ 要获取当前事务上下文，请使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] [GET_FILESTREAM_TRANSACTION_CONTEXT()](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md) 函数。 下面的示例说明了如何开始执行事务并读取当前事务上下文。  
   
  [!code-sql[FILESTREAM#FS_GET_TRANSACTION_CONTEXT](../../relational-databases/blob/codesnippet/tsql/create-client-applicatio_2.sql)]  
   
@@ -88,7 +88,7 @@ ms.locfileid: "68085396"
 ## <a name="see-also"></a>另请参阅  
  [避免与 FILESTREAM 应用程序中的数据库操作冲突](../../relational-databases/blob/avoid-conflicts-with-database-operations-in-filestream-applications.md)   
  [使用 OpenSqlFilestream 访问 FILESTREAM 数据](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)   
- [二进制大型对象 (Blob) 数据 (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
+ [二进制大型对象 &#40;Blob&#41; 数据 &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
  [对 FILESTREAM 数据进行部分更新](../../relational-databases/blob/make-partial-updates-to-filestream-data.md)  
   
   

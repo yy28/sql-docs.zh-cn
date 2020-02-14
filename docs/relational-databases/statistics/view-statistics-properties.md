@@ -16,10 +16,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 45c297ea29dbab974f72f4ecf69deb5c65f57bbb
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908018"
 ---
 # <a name="view-statistics-properties"></a>查看统计信息属性
@@ -59,9 +59,9 @@ ms.locfileid: "72908018"
   
 5.  双击要查看其属性的统计信息对象，然后选择“属性”  。  
   
-6.  在“统计信息属性 -  statistics_name”  对话框的“选择页”  窗格中，选择“详细信息”  。  
+6.  在“统计信息属性 - statistics_name”对话框的“选择页”窗格中，选择“详细信息”     。  
   
-     以下属性将显示在“统计信息属性 -   statistics_name”对话框的“详细信息”  页上。  
+     以下属性将显示在“统计信息属性 - statistics_name”对话框的“详细信息”页上    。  
   
      **表名**  
      显示统计信息中所涉及表的名称。  
@@ -77,7 +77,7 @@ ms.locfileid: "72908018"
      **名称**  
      统计信息对象的名称。  
   
-     **Updated**  
+     **已更新**  
      上一次更新统计信息的日期和时间。  
   
      **行**  
@@ -132,7 +132,7 @@ ms.locfileid: "72908018"
      **AVG_RANGE_ROWS**  
      重复列值位于直方图梯级内（不包括上限）的平均行数（如果 DISTINCT_RANGE_ROWS > 0，则为 RANGE_ROWS / DISTINCT_RANGE_ROWS）。  
   
-7.  单击“确定”  。  
+7.  单击“确定”。   
 
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

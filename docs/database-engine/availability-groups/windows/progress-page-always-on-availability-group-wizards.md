@@ -16,10 +16,10 @@ ms.assetid: bd3b0306-8384-4120-a1c9-03825f0ae26a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 87201ed5c3d2368f54e2ffb0c57391322066a30b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68014475"
 ---
 # <a name="progress-page-always-on-availability-group-wizards"></a>“结果”页（Always On 可用性组向导）
@@ -34,14 +34,14 @@ ms.locfileid: "68014475"
  **名称**  
  显示描述特定步骤的短语。  
   
- **“状态”**  
+ **Status**  
  指示已完成步骤的结果，以及当前步骤的完成百分比，如下所示：  
   
-|结果|描述|  
+|结果|说明|  
 |------------|-----------------|  
 |**错误**|指示此步骤操作遇到了错误。 单击该链接可显示一个描述该错误的消息对话框。|  
-|**正在进行（** 完成百分比 **）** |指示操作正在发生，并且估计此步骤已完成的百分比。|  
-|**成功**|指示此步骤操作已成功完成。|  
+|正在进行（完成百分比）   |指示操作正在发生，并且估计此步骤已完成的百分比。|  
+|**Success**|指示此步骤操作已成功完成。|  
   
  **更少详细信息**  
  单击此选项可隐藏进度网格。  

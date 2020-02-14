@@ -19,10 +19,10 @@ ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 50938fe4f3be40f280340fff5bfbca23ac8b1b44
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71680984"
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>Integration Services (SSIS) 项目和解决方案
@@ -68,7 +68,7 @@ ms.locfileid: "71680984"
   
  下表介绍 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目中出现的文件夹。  
   
-|文件夹|描述|  
+|Folder|说明|  
 |------------|-----------------|
 |连接管理器|包含项目连接管理器。 有关详细信息，请参阅 [Integration Services (SSIS) 连接](../integration-services/connection-manager/integration-services-ssis-connections.md)。|
 |[!INCLUDE[ssIS](../includes/ssis-md.md)] 包|包含包。 有关详细信息，请参阅 [Integration Services (SSIS) 包](../integration-services/integration-services-ssis-packages.md)。|  
@@ -91,7 +91,7 @@ ms.locfileid: "71680984"
   
  在解决方案资源管理器中，右键单击 Integration Services 项目并选择“属性”  以打开该项目的属性页。 在“配置属性”的“常规”选项卡上，选择“TargetServerVersion”属性，然后选择 SQL Server 2017、SQL Server 2016、SQL Server 2014 或 SQL Server 2012    。  
   
- ![项目属性对话框中的 TargetServerVersion 属性](../integration-services/media/targetserverversion2.png "TargetServerVersion property in project properties dialog box")  
+ ![“项目属性”对话框中的 TargetServerVersion 属性](../integration-services/media/targetserverversion2.png "“项目属性”对话框中的 TargetServerVersion 属性")  
 
 ## <a name="create-a-new-integration-services-project"></a>创建新的 Integration Services 项目  
   
@@ -166,7 +166,7 @@ ms.locfileid: "71680984"
   
 3.  或者，编辑项目的名称和位置。  
   
-4.  单击“确定”  。  
+4.  单击“确定”。   
   
 ### <a name="add-an-existing-project-to-a-solution"></a>向解决方案添加现有项目  
   

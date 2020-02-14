@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8081b4b4b4c8a9d19af0c558d162974d98e16878
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68094746"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>向表中添加列（数据库引擎）
@@ -59,7 +59,7 @@ ms.locfileid: "68094746"
     > [!NOTE]
     > 列属性的默认值在你创建新列时添加，但你可以在“列属性”  选项卡中更改这些值。
 
-6. 在你添加完列后，从“文件”  菜单中，选择“保存”  _table name_。
+6. 添加完列后，从“文件”菜单中，选择“保存”_表名称_   。
   
 ## <a name="TsqlProcedure"></a> 使用 Transact-SQL
   

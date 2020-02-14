@@ -20,10 +20,10 @@ ms.assetid: 70f35566-30cf-47c6-8394-dfe5d71629d3
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0b07cc17344e27d82155ceaae8e55494deb0bd57
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065672"
 ---
 # <a name="alter-endpoint-transact-sql"></a>ALTER ENDPOINT (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "68065672"
   
  从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，删除了本机 XML Web 服务（SOAP/HTTP 端点）  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -110,7 +110,7 @@ FOR DATABASE_MIRRORING (
  **FOR** { **TSQL** | **SERVICE_BROKER** | **DATABASE_MIRRORING** }  
  不能使用 **ALTER ENDPOINT** 更改有效负载类型。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  在使用 ALTER ENDPOINT 时，请仅指定要更新的参数。 除非进行显式更改，否则现有端点的所有属性均保持不变。  
   
  不能在用户事务中执行 ENDPOINT DDL 语句。  

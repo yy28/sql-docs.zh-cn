@@ -15,10 +15,10 @@ ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c6ec9ac5c4e868a9022a11cc153c9638cab737dc
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710989"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>通过 FTP 传递快照
@@ -53,7 +53,7 @@ ms.locfileid: "71710989"
   
 1.  在“发布属性 - \<发布>”对话框中，从以下任一页面选择“允许订阅服务器下载使用 FTP 的快照文件”。    
   
-    -   **“FTP 快照”** 页，用于快照发布和事务发布以及运行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]之前版本的发布服务器的合并发布。  
+    -   “FTP 快照”页面，用于运行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前版本的发布服务器的快照发布、事务发布以及合并发布  。  
   
     -   **“FTP 快照和 Internet”** 页，用于运行 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更高版本的发布服务器的合并发布。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "71710989"
   
     -   （可选）`@ftp_port` - FTP 服务器所使用的端口。  
   
-    -   （可选）`@ftp_subdirectory` - 分配给 FTP 登录名的默认 FTP 目录的子目录。 例如，如果 FTP 服务器根目录是 \\\ftpserver\home 并要将快照存储在 \\\ftpserver\home\snapshots 下，则将 **\snapshots\ftp** 指定给 `@ftp_subdirectory`（复制在创建快照文件时将“ftp”追加到快照文件夹路径中）。  
+    -   （可选）`@ftp_subdirectory` - 分配给 FTP 登录名的默认 FTP 目录的子目录。 例如，如果 FTP 服务器根目录是 \\\ftpserver\home 并要将快照存储在 \\\ftpserver\home\snapshots 下，则将 \snapshots\ftp  指定给 `@ftp_subdirectory`（复制在创建快照文件时将“ftp”追加到快照文件夹路径中）。  
   
     -   （可选）`@ftp_login` - 连接到 FTP 服务器时使用的登录帐户。  
   

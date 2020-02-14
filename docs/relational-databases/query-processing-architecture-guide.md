@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb6463efe0b4b4f5d7b009eae6f9a4a612cf5e7e
-ms.sourcegitcommit: 722f2ec5a1af334f5bcab8341bc744d16a115273
+ms.openlocfilehash: e5b890ff4a9d58f531f3a72e41e8280faf2511a3
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74866070"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909747"
 ---
 # <a name="query-processing-architecture-guide"></a>查询处理体系结构指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -637,16 +637,16 @@ WHERE ProductSubcategoryID = 4;
 
 * 任何 `SELECT` 语句的 <select_list>。 这包括子查询的 `SELECT` 列表和 `INSERT` 语句内的 `SELECT` 列表。
 * `SELECT` 语句中出现的子查询 `IF` 语句。
-* 查询的 `TOP`、 `TABLESAMPLE`、 `HAVING`、 `GROUP BY`、 `ORDER BY`、 `OUTPUT...INTO`或 `FOR XM`L 子句。
+* 查询的 `TOP`、`TABLESAMPLE`、`HAVING`、`GROUP BY`、`ORDER BY`、`OUTPUT...INTO` 或 `FOR XML` 子句。
 * `OPENROWSET`、 `OPENQUERY`、 `OPENDATASOURCE`、 `OPENXML`或任意 `FULLTEXT` 运算符的参数（直接或作为子表达式）。
 * `LIKE` 子句的模式和 escape_character 参数。
 * `CONVERT` 子句的样式参数。
 * `IDENTITY` 子句中的整数常量。
 * 使用 ODBC 扩展语法指定的常量。
-* 可折叠常量表达式，它们是 +、-、\*、/ 和 % 运算符的参数。 在考虑是否能够强制参数化时，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将认为满足下列条件之一的表达式是可折叠常量表达式：  
+* 可折叠常量表达式，它们是 `+`、`-`、`*`、`/` 和 `%` 运算符的参数。 在考虑是否能够强制参数化时，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将认为满足下列条件之一的表达式是可折叠常量表达式：  
   * 表达式中没有列、变量、或子查询。  
   * 表达式包含 `CASE` 子句。  
-* 查询提示子句的参数。 这些参数包括 `number_of_rows` 查询提示的 `FAST` 参数、 `number_of_processors` 查询提示的 `MAXDOP` 参数以及 `MAXRECURSION` 查询提示的 number 参数。
+* 查询提示子句的参数。 这些参数包括 `FAST` 查询提示的 number_of_rows 参数  、`MAXDOP` 查询提示的 number_of_processors 参数  ，以及 `MAXRECURSION` 查询提示的 number 参数  。
 
 参数化在单条 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句内发生。 即，批处理中的单条语句将参数化。 在编译之后，参数化查询将在它最初提交时所在的批的上下文中执行。 如果缓存了查询的执行计划，则可以通过引用 sys.syscacheobjects 动态管理视图的 sql 列来确定此查询是否已参数化。 如果查询已参数化，参数的名称和数据类型在此列中已提交批的文本前面，如 (\@1 tinyint)。
 

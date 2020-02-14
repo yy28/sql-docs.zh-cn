@@ -18,10 +18,10 @@ ms.assetid: e8c77aa7-6772-485e-918e-cef9eeb18c58
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b0d115753447a337cc9846942e2c39da54f3658f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298501"
 ---
 # <a name="odbc-connection-manager"></a>ODBC 连接管理器
@@ -31,7 +31,7 @@ ms.locfileid: "71298501"
 
   ODBC 连接管理器使得包能够使用开放式数据库连接规范 (ODBC) 连接到多种数据库管理系统。  
   
- 将 ODBC 连接添加到包并设置连接管理器的属性时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将创建连接管理器并将该连接管理器添加到包的 **Connections** 集合中。 该连接管理器在运行时决定物理 ODBC 连接。  
+ 将 ODBC 连接添加到包并设置连接管理器的属性时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将创建连接管理器并将该连接管理器添加到包的 Connections 集合中  。 该连接管理器在运行时决定物理 ODBC 连接。  
   
  该连接管理器的 **ConnectionManagerType** 属性设置为 **ODBC**。  
   

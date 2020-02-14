@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: e9bad34cf3d195e4038d794fac913bdb3d16bc91
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843555"
 ---
 # <a name="suser_id-transact-sql"></a>SUSER_ID (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "73843555"
 > [!NOTE]  
 >  从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 开始，SUSER_ID 返回在 **sys.server_principals** 目录视图中作为 **principal_id** 列出的值。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,13 +48,13 @@ SUSER_ID ( [ 'login' ] )
 ```  
   
 ## <a name="arguments"></a>参数  
- 'login'     
+ **'** *login* **'**  
  用户的登录名。 login  是 **nchar**。 如果 login  指定为 **char**，则 login  会隐式转换为 **nchar**。 login  可以是有权限连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名或 Windows 用户或组。 如果未指定 login  ，则返回当前用户的登录标识号。 如果此参数包含词 NULL，将返回 NULL。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  SUSER_ID 仅为已经在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中显式提供的登录名返回标识号。 此 ID 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中用于跟踪所有权和权限。 此 ID 不等同于 SUSER_SID 返回的登录名的 SID。 如果 login 是 SQL Server 登录名，则 SID 映射到 GUID  。 如果 login 是 Windows 登录名或 Windows 组，则 SID 映射到 Windows 安全标识符  。  
   
  SUSER_SID 只返回在 syslogins 系统表中有条目的登录名的 SUID  。  

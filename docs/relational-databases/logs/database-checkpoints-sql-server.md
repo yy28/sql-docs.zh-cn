@@ -28,10 +28,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 604a882daffeb2a9031aa9cc7e4d577e1e4e2663
-ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72916020"
 ---
 # <a name="database-checkpoints-sql-server"></a>数据库检查点 (SQL Server)
@@ -43,15 +43,15 @@ ms.locfileid: "72916020"
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 支持几种类型的检查点：自动、间接、手动和内部。 下表总结了“检查点”  的类型：
   
-|“属性”|[!INCLUDE[tsql](../../includes/tsql-md.md)] 接口|描述|  
+|名称|[!INCLUDE[tsql](../../includes/tsql-md.md)] 接口|说明|  
 |----------|----------------------------------|-----------------|  
 |自动|EXEC sp_configure **'** recovery interval **','** _seconds_ **'**|自动在后台发出，以满足 **recovery interval** 服务器配置选项建议的时间上限。 运行自动检查点直到完成。  基于未完成的写操作数和 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 是否检测到写入滞后时间超过 50 毫秒的写操作增加，来调控自动检查点。<br /><br /> 有关详细信息，请参阅 [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)。|  
-|间接|ALTER DATABASE ...SET TARGET_RECOVERY_TIME **=** _target\_recovery\_time_ { SECONDS &#124; MINUTES }|在后台发出，以满足给定数据库的用户指定的目标恢复时间要求。 从 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]开始，默认值是 1 分钟。 较旧版本的默认值为 0，表示数据库使用自动检查点，其频率依赖于针对服务器实例的恢复间隔设置。<br /><br /> 有关详细信息，请参阅 [更改数据库的目标恢复时间 (SQL Server)](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md)。|  
-|Manual|CHECKPOINT [*checkpoint_duration*]|执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] CHECKPOINT 命令时发出。 在连接的当前数据库中执行手动检查点操作。 默认情况下，手动检查点运行至完成。 调控方式与自动检查点的调控方式相同。  （可选） *checkpoint_duration* 参数指定完成检查点所需的时间（秒）。<br /><br /> 有关详细信息，请参阅 [检查点 (Transact-SQL)](../../t-sql/language-elements/checkpoint-transact-sql.md)。|  
+|间接|ALTER DATABASE ...SET TARGET_RECOVERY_TIME **=** _target\_recovery\_time_ { SECONDS &#124; MINUTES }|在后台发出，以满足给定数据库的用户指定的目标恢复时间要求。 从 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]开始，默认值是 1 分钟。 较旧版本的默认值为 0，表示数据库使用自动检查点，其频率依赖于针对服务器实例的恢复间隔设置。<br /><br /> 有关详细信息，请参阅 [更改数据库的目标恢复时间 (SQL Server)](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md)服务器配置选项。|  
+|手动|CHECKPOINT [*checkpoint_duration*]|执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] CHECKPOINT 命令时发出。 在连接的当前数据库中执行手动检查点操作。 默认情况下，手动检查点运行至完成。 调控方式与自动检查点的调控方式相同。  （可选） *checkpoint_duration* 参数指定完成检查点所需的时间（秒）。<br /><br /> 有关详细信息，请参阅 [检查点 (Transact-SQL)](../../t-sql/language-elements/checkpoint-transact-sql.md)。|  
 |内部|无。|由各种服务器操作（如备份和数据库快照创建）发出，以确保磁盘映像与日志的当前状态匹配。|  
   
 > [!NOTE]
-> **-k** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 高级设置选项允许数据库管理员基于某些检查点类型 I/O 子系统的吞吐量来调控检查点 I/O 行为。 **-k** 设置选项适用于自动检查点和任何未调控的手动和内部检查点。  
+> -k[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 高级设置选项允许数据库管理员基于某些检查点类型 I/O 子系统的吞吐量来限制检查点 I/O 行为  。 **-k** 设置选项适用于自动检查点和任何未调控的手动和内部检查点。  
   
  对于自动、手动和内部检查点，在数据库恢复期间只有在最新检查点后所做的修改需要前滚。 这将减少恢复数据库所需的时间。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "72916020"
 ##  <a name="AutomaticChkpt"></a> 自动检查点  
 每当日志记录数达到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 估计在“恢复间隔”  服务器配置选项中指定的时间内可以处理的数量时，便会生成一个自动检查点。 有关详细信息，请参阅 [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)。
  
-在没有用户定义的目标恢复时间的每个数据库中， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 生成自动检查点。 频率取决于“恢复间隔”  高级服务器配置选项，该选项指定给定的服务器实例在系统重新启动期间应用于恢复数据库的最长时间。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]将估计它可在恢复间隔内处理的最大日志记录数。 使用自动检查点的数据库达到此最大日志记录数后， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将对该数据库分发一个检查点。 
+在没有用户定义的目标恢复时间的每个数据库中， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 生成自动检查点。 频率取决于“恢复间隔”  高级服务器配置选项，该选项指定给定的服务器实例在系统重新启动期间应用于恢复数据库的最长时间。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将估计它可在恢复间隔内处理的最大日志记录数。 使用自动检查点的数据库达到此最大日志记录数后， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将对该数据库分发一个检查点。 
  
 自动检查点之间的时间间隔可以变化 **很大** 。 具有大量事务工作负荷的数据库的检查点生成频率将高于主要用于只读操作的数据库的检查点生成频率。 在简单恢复模式下，如果日志填充 70％，则自动检查点还将排队。  
   

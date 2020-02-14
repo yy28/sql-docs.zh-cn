@@ -14,10 +14,10 @@ ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2e2c8c8f77fd0643c503f5b817b050ff64529751
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297548"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>表达式中的 Integration Services 数据类型
@@ -44,7 +44,7 @@ ms.locfileid: "71297548"
   
  请考虑使用以下屏幕快照中的表达式。  
   
- ![SSIS 表达式中的字符串数据类型](../../integration-services/expressions/media/stringsinssisexpressions.png "String data types in SSIS expressions")  
+ ![SSIS 表达式中的字符串数据类型](../../integration-services/expressions/media/stringsinssisexpressions.png "SSIS 表达式中的字符串数据类型")  
   
 1.  第一个表达式运行时没有出错，因为 NULL(DT_STR, ...) 函数处于表达式的根级别。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "71297548"
   
  下面的示例演示转换的效果。  
   
- ![SSIS 表达式中的字符串转换](../../integration-services/expressions/media/stringsinssisexpressions2.png "Casting strings in SSIS expressions")  
+ ![SSIS 表达式中的强制转换字符串](../../integration-services/expressions/media/stringsinssisexpressions2.png "SSIS 表达式中的强制转换字符串")  
   
 1.  在第一个表达式中，转换不在表达式的根级别进行。 表达式计算器以智能方式处理这种转换，并转换为 DT_WSTR，而非 DT_STR。 表达式返回 DT_WSTR。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "71297548"
   
  以下关系图显示了 BINARY 运算的隐式转换的结果类型。 该表中列和行的交集为二元运算的结果类型，该运算中操作数的类型为左 (From) 和右 (To)。  
   
- ![数据类型之间的隐式数据类型转换](../../integration-services/expressions/media/mw-dts-impl-conver-02.gif "Implicit data type conversion between data types")  
+ ![数据类型之间的隐式数据类型转换](../../integration-services/expressions/media/mw-dts-impl-conver-02.gif "数据类型之间的隐式数据类型转换")  
   
  有符号整数和无符号整数的交集是可能大于这两者中任何一个的有符号整数。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "71297548"
 >   
 >  若要避免错误或意外结果，不应编写依赖 **True** 和 **False**为特定数值的代码。 如果可能，应将布尔变量的使用限制为与其设计意图对应的逻辑值。  
   
- 有关详细信息，请参阅以下主题：  
+ 有关详情，请参阅以下主题：  
   
 -   [==（等于）（SSIS 表达式）](../../integration-services/expressions/equal-ssis-expression.md)  
   

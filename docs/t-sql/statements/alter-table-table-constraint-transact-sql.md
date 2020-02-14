@@ -17,10 +17,10 @@ ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 92e12a2991d03c125e3247d1dd681b0a5754e2f9
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981994"
 ---
 # <a name="alter-table-table_constraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "73981994"
 
   指定通过使用 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 添加到表中的 PRIMARY KEY、UNIQUE、FOREIGN KEY、CHECK 约束或 DEFAULT 定义的属性。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -183,7 +183,7 @@ ms.locfileid: "73981994"
  logical_expression   
  用于 CHECK 约束的逻辑表达式，返回 TRUE 或 FALSE。 与 CHECK 约束一起使用的 logical_expression 无法引用其他表，但可以引用同一表中同一行的其他列  。 该表达式不能引用别名数据类型。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  当添加 FOREIGN KEY 或 CHECK 约束时，所有现有数据都要进行约束违反验证，除非指定了 WITH NOCHECK 选项。 如果违反了约束，ALTER TABLE 将失败并返回一个错误。 当在现有列上添加新 PRIMARY KEY 或 UNIQUE 约束时，该列中的数据必须唯一。 如果存在重复值，ALTER TABLE 语句将失败。 当添加 PRIMARY KEY 或 UNIQUE 约束时，WITH NOCHECK 选项不起作用。  
   
  每个 PRIMARY KEY 和 UNIQUE 约束都将生成一个索引。 UNIQUE 和 PRIMARY KEY 约束的数目不能导致表上非聚集索引的数目大于 999，也不能导致聚集索引的数目大于 1。 外键约束不会自动生成索引。 然而，经常在查询的联接条件中使用外键列，方法是将一个表的外键约束中的列与另一个表中的主键列或唯一键列匹配。 针对外键列的索引使[!INCLUDE[ssDE](../../includes/ssde-md.md)]可以在外键表中快速查找相关数据。  

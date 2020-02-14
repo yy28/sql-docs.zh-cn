@@ -19,10 +19,10 @@ ms.assetid: 220584d8-b291-43ae-b036-fbba3cc07a2e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8708518270e3d7d6597471e855505c06f3853f1b
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908568"
 ---
 # <a name="define-an-article"></a>定义项目
@@ -59,7 +59,7 @@ ms.locfileid: "72908568"
   
 #### <a name="to-create-a-publication-and-define-articles"></a>创建发布和定义项目  
   
-1.  在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中连接到发布服务器，然后展开服务器节点。  
+1.  在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中连接到发布服务器，然后展开服务器节点。  
   
 2.  展开 **“复制”** 文件夹，再右键单击 **“本地发布”** 文件夹。  
   
@@ -100,13 +100,13 @@ ms.locfileid: "72908568"
     -   指定发布的名称。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
- 在创建发布后，可以使用复制存储过程以编程方式创建项目。 用于创建项目的存储过程取决于要为其定义项目的发布的类型。 有关详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)。  
+ 在创建发布后，可以使用复制存储过程以编程方式创建项目。 用于创建项目的存储过程取决于要为其定义项目的发布的类型。 有关详细信息，请参阅 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)。  
   
 #### <a name="to-define-an-article-for-a-snapshot-or-transactional-publication"></a>为快照发布或事务发布定义项目  
   
 1.  在发布服务器上，对发布数据库执行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。 为 `@publication` 指定项目所属的发布名称，为 `@article` 指定项目的名称，并为 `@source_object` 指定要发布的数据库对象，同时指定任何其他可选参数。 如果不是 dbo，则使用 `@source_owner` 指定对象的架构所有权  。 如果该项目不是基于日志的表项目，可将 `@type` 指定为该项目类型；有关详细信息，请参阅[指定项目类型（复制 Transact-SQL 编程）](../../../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md)。  
   
-2.  若要水平筛选表中的行或查看项目，请使用 [sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) 来定义筛选子句。 有关详细信息，请参阅 [定义和修改静态行筛选器](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)。  
+2.  若要水平筛选表中的行或查看项目，请使用 [sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) 来定义筛选子句。 有关详细信息，请参阅 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)。  
   
 3.  若要垂直筛选表中的列或查看项目，请使用 [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)。 有关详细信息，请参阅 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)。  
   

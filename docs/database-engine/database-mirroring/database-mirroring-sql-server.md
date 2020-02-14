@@ -24,10 +24,10 @@ ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3f8ebb1119e84caa80c0faa03c5c1405992723b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006342"
 ---
 # <a name="database-mirroring-sql-server"></a>数据库镜像 (SQL Server)
@@ -157,7 +157,7 @@ ms.locfileid: "68006342"
   
  下图显示了包含见证服务器的配置。  
   
- ![包括见证服务器的镜像会话](../../database-engine/database-mirroring/media/dbm-3-way-session-intro-ov.gif "包括见证服务器的镜像会话")  
+ ![包含见证服务器的镜像会话](../../database-engine/database-mirroring/media/dbm-3-way-session-intro-ov.gif "包含见证服务器的镜像会话")  
   
  有关详细信息，请参阅本主题后面的 [角色切换](#RoleSwitching)。  
   
@@ -182,13 +182,13 @@ ms.locfileid: "68006342"
   
  存在以下三种角色切换形式。  
   
--   *Automatic failover*  
+-   *自动故障转移*  
   
      这要求使用高安全性模式并具有镜像服务器和见证服务器。 数据库必须已同步，并且见证服务器必须连接到镜像服务器。  
   
      见证服务器的作用是验证给定的伙伴服务器是否已启动并运行。 如果镜像服务器与主体服务器断开连接，但见证服务器仍与主体服务器保持连接，则镜像服务器无法启动故障转移。 有关详细信息，请参阅 [数据库镜像见证服务器](../../database-engine/database-mirroring/database-mirroring-witness.md)。  
   
--   *Manual failover*  
+-   *手动故障转移*  
   
      这要求使用高安全性模式。 伙伴双方必须互相连接，并且数据库必须已同步。  
   
@@ -213,7 +213,7 @@ ms.locfileid: "68006342"
   
  下图说明了都作为伙伴参与两个镜像会话的两个服务器实例。 一个会话用于名为 **Db_1**的数据库，另一个会话用于名为 **Db_2**的数据库。  
   
- ![位于两个并发会话中的两个服务器实例](../../database-engine/database-mirroring/media/dbm-concurrent-sessions.gif "位于两个并发会话中的两个服务器实例")  
+ ![两个并发会话中的两个服务器实例](../../database-engine/database-mirroring/media/dbm-concurrent-sessions.gif "两个并发会话中的两个服务器实例")  
   
  每个数据库独立于其他数据库。 例如，服务器实例最初可能是两个数据库的镜像服务器。 如果其中一个数据库发生故障转移，则服务器实例将变为已发生故障转移的数据库的主体服务器，同时为其他数据库保留镜像服务器。  
   
@@ -225,7 +225,7 @@ ms.locfileid: "68006342"
 >  由于镜像数据库相互独立，因此这些数据库不能作为一个组来进行故障转移。  
   
 ###  <a name="ClientConnections"></a> 客户端连接  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供了对数据库镜像会话的客户端连接支持。 有关详细信息，请参阅本主题后面的 [将客户端连接到数据库镜像会话 (SQL Server)](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供了对数据库镜像会话的客户端连接支持。 有关详细信息，请参阅 [将客户端连接到数据库镜像会话 (SQL Server)](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)。  
   
   
 ###  <a name="ImpactOfPausing"></a> 暂停会话对主体事务日志的影响  
@@ -251,7 +251,7 @@ ms.locfileid: "68006342"
  [数据库镜像的前提条件、限制和建议](../../database-engine/database-mirroring/prerequisites-restrictions-and-recommendations-for-database-mirroring.md)  
  说明了设置数据库镜像的前提条件和建议。  
   
- [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
+ [数据库镜像运行模式](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
  包含有关数据库镜像会话的同步和异步运行模式的信息，以及有关在数据库镜像会话期间切换伙伴角色的信息。  
   
  [数据库镜像见证服务器](../../database-engine/database-mirroring/database-mirroring-witness.md)  

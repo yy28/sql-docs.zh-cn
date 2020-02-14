@@ -16,10 +16,10 @@ ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 2dd802097e083adb633549174dbc420b5967fb10
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093593"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server，Deprecated Features 对象
@@ -36,16 +36,16 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 
 下表描述了 SQL Server **Deprecated Features** 性能对象。
 
-|**SQL Server Deprecated Features 计数器**|描述|  
+|**SQL Server Deprecated Features 计数器**|说明|  
 |-------------|-----------------|  
-|**用法**|SQL Server 自上次启动以来的功能使用情况。|
+|**使用情况**|SQL Server 自上次启动以来的功能使用情况。|
   
  下表描述了 SQL Server Deprecated Features 计数器实例。  
   
-|SQL Server Deprecated Features 计数器实例|描述|  
+|SQL Server Deprecated Features 计数器实例|说明|  
 |------------------------------------------------------|-----------------|  
 |“#”和“##”作为临时表和存储过程的名称|遇到不包含 # 以外的任何字符的标识符。 请至少使用一个其他字符。 每次编译时发生。|  
-|“::”函数调用语法|表值函数遇到 :: 函数调用语法。 替换为 `SELECT column_list FROM` *< function_name>* `()`。 例如，将 `SELECT * FROM ::fn_virtualfilestats(2,1)` 替换为 `SELECT * FROM sys.fn_virtualfilestats(2,1)`。 每次编译时发生。|  
+|“::”函数调用语法|表值函数遇到 :: 函数调用语法。 替换为 `SELECT column_list FROM` <function_name>`()`  。 例如，将 `SELECT * FROM ::fn_virtualfilestats(2,1)`替换为 `SELECT * FROM sys.fn_virtualfilestats(2,1)`。 每次编译时发生。|  
 |“\@”和以“\@\@”开头的名称作为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 标识符|遇到以 \@ 或 \@\@ 开头的标识符。 请勿使用 \@ 或 \@v@ 或以 \@\@ 开头的名称作为标识符。 每次编译时发生。|  
 |ADDING TAPE DEVICE|遇到不推荐使用的功能 sp_addumpdevice'**tape**'。 请改用 sp_addumpdevice'**disk**'。 每次使用时发生。|  
 |ALL 权限|遇到 GRANT ALL、DENY ALL 或 REVOKE ALL 语法的总次数。 请修改语法以拒绝特定权限。 每次查询时发生。|  
@@ -110,7 +110,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Hindi|每次数据库启动时和每次排序规则使用时发生事件。 计划修改使用该排序规则的应用程序。 请改用 Indic_General_90。|  
 |不带括号的 HOLDLOCK 表提示||  
 |IDENTITYCOL|遇到 INDENTITYCOL 语法。 请重写语句以使用 $identity 语法。 每次编译时发生。|  
-|不包含 COUNT_BIG(\*) 的索引视图选择列表|聚集索引视图的选择列表必须包含 COUNT_BIG (\*)。|  
+|不包含 COUNT_BIG(*) 的索引视图选择列表|聚集索引视图的选择列表必须包含 COUNT_BIG (\*)。|  
 |INDEX_OPTION|遇到选项两侧没有括号的 CREATE TABLE、ALTER TABLE 或 CREATE INDEX 语法。 请重写语句以使用当前语法。 每次查询时发生。|  
 |INDEXKEY_PROPERTY|遇到 INDEXKEY_PROPERTY 语法。 请重写语句以查询 sys.index_columns。 每次编译时发生。|  
 |间接 TVF 提示|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未来版本中将删除对通过视图执行的多语句表值函数 (TVF) 调用的间接应用表提示。|  
@@ -118,7 +118,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |INSERT_HINTS||  
 |Korean_Wansung_Unicode|每次数据库启动时和每次排序规则使用时发生事件。 计划修改使用该排序规则的应用程序。|  
 |Lithuanian_Classic|每次数据库启动时和每次排序规则使用时发生事件。 计划修改使用该排序规则的应用程序。|  
-|Macedonian|每次数据库启动时和每次排序规则使用时发生事件。 计划修改使用该排序规则的应用程序。 请改用 Macedonian_FYROM_90。|  
+|马其顿语|每次数据库启动时和每次排序规则使用时发生事件。 计划修改使用该排序规则的应用程序。 请改用 Macedonian_FYROM_90。|  
 |MODIFY FILEGROUP READONLY|遇到 MODIFY FILEGROUP READONLY 语法。 请重写语句以使用 READ_ONLY 语法。 每次编译时发生。|  
 |MODIFY FILEGROUP READWRITE|遇到 MODIFY FILEGROUP READWRITE 语法。 请重写语句以使用 READ_WRITE 语法。 每次编译时发生。|  
 |两个以上的部分构成的列名称|查询在列列表中使用了由 3 个部分或 4 个部分构成的名称。 请更改查询以使用标准兼容的由两部分构成的名称。 每次编译时发生。|  
@@ -267,7 +267,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |text in row 表选项|遇到对“text in row”表选项的引用。 请改用 sp_tableoption 'large value types out of row'。 每次查询时发生。|  
 |TEXTPTR|遇到对 TEXTPTR 函数的引用。 请重写应用程序以使用 **varchar(max)** 数据类型和已删除的 **text**、 **ntext**和 **image** 数据类型语法。 每次查询时发生。|  
 |TEXTVALID|遇到对 TEXTVALID 函数的引用。 请重写应用程序以使用 **varchar(max)** 数据类型和已删除的 **text**、 **ntext**和 **image** 数据类型语法。 每次查询时发生。|  
-|timestamp|在 DDL 语句中遇到不推荐使用的 **timestamp** 数据类型的总次数。 请改用 **rowversion** 数据类型。|  
+|TIMESTAMP|在 DDL 语句中遇到不推荐使用的 **timestamp** 数据类型的总次数。 请改用 **rowversion** 数据类型。|  
 |UPDATETEXT 或 WRITETEXT|遇到 UPDATETEXT 或 WRITETEXT 语句。 请重写应用程序以使用 **varchar(max)** 数据类型和已删除的 **text**、 **ntext**和 **image** 数据类型语法。 每次查询时发生。|  
 |USER_ID|遇到对 USER_ID 函数的引用。 请改用 DATABASE_PRINCIPAL_ID 函数。 每次编译时发生。|  
 |对链接服务器使用 OLEDB||  
@@ -275,7 +275,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |XMLDATA|遇到 FOR XML 语法。 对于 RAW 和 AUTO 模式，请使用 XSD 生成。 显式模式无替代项。 每次编译时发生。|  
 |XP_API|遇到扩展存储过程语句。 请勿使用。|  
 |xp_grantlogin|遇到 xp_grantlogin 过程。 请改用 CREATE LOGIN。 每次编译时发生。|  
-|xp_loginconfig|遇到 xp_loginconfig 过程。 请改用 SERVERPROPERTY 的 IsIntegratedSecurityOnly 参数。 每次查询时发生。|  
+|xp_loginConfig|遇到 xp_loginconfig 过程。 请改用 SERVERPROPERTY 的 IsIntegratedSecurityOnly 参数。 每次查询时发生。|  
 |xp_revokelogin|遇到 xp_revokelogin 过程。 请改用 ALTER LOGIN DISABLE 或 DROP LOGIN。 每次编译时发生。|  
   
 ## <a name="see-also"></a>另请参阅  

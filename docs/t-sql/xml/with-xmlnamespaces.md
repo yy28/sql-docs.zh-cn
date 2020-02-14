@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3b32662b-566f-454d-b7ca-e247002a9a0b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 86bdd12d5dabd7ad74662cd47b2004594328a6c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 12af8c813fd61b4f4c9040d72e19173ef810e80f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048137"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909787"
 ---
 # <a name="with-xmlnamespaces"></a>WITH XMLNAMESPACES
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68048137"
   声明一个或多个 XML 命名空间。  
   
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -67,7 +67,7 @@ DEFAULT <xml_namespace_uri>
   xml_namespace_prefix  
  指定一个要映射并与在 xml_namespace_uri  中指定的命名空间 URI 值关联的前缀。  xml_namespace_prefix 必须为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  在还包括公用表表达式的语句中使用 WITH XMLNAMESPACES 子句时，WITH XMLNAMESPACES 子句必须位于语句中的公用表表达式的前面。  
   
  下面是在使用 WITH XMLNAMESPACES 子句时所应用的常规语法规则：  

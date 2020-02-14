@@ -24,16 +24,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 11dc9169ec88928c893d875b7051bfbf551c95fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68034522"
 ---
 # <a name="service-broker"></a>Service Broker
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSB](../../includes/sssb-md.md)] 为 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 和 [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index)中的消息传递和队列提供本机支持。 开发人员可轻松创建通过 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 组件在不同数据库之间通信的复杂应用程序，也可构建分发式应用程序和可靠的应用程序。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] 为 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 和 [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index)中的消息传递和队列提供本机支持。 开发人员可轻松创建通过 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 组件在不同数据库之间通信的复杂应用程序，也可构建分发式应用程序和可靠的应用程序。  
   
 ## <a name="when-to-use-service-broker"></a>何时使用 Service Broker
 
@@ -43,7 +43,7 @@ ms.locfileid: "68034522"
 
   Service Broker 是一种消息传递框架，可用于创建本机数据库内面向服务的应用程序。 与在查询生命周期期间不断从表中读取数据的经典查询处理功能不同，面向服务的应用程序中提供可交换消息的数据库服务。 每个服务都有一个队列，消息在处理之前都排在队列中。
   
-![Service broker](media/service-broker.png)
+![服务代理](media/service-broker.png)
   
   可使用 Transact-SQL `RECEIVE` 命令或通过每次消息到达队列时都要调用的激活过程来提取队列中的消息。
   
@@ -106,7 +106,7 @@ FROM ExpenseQueue;
 
 - 不支持跨实例 Service Broker 
  - `sys.routes` -先决条件：通过 sys.routes 选择地址。 在每个路由上，地址必须是本地的。 请参阅 [sys.routes](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md)。
- - `CREATE ROUTE` -不能结合使用 `CREATE ROUTE` 和 `ADDRESS`（`LOCAL` 除外）。 请参阅 [CREATE ROUTE](https://docs.microsoft.com/sql/t-sql/statements/create-route-transact-sql)。
+ - `CREATE ROUTE` - 不能使用除 `LOCAL` 以外的 `ADDRESS` 执行 `CREATE ROUTE`。 请参阅 [CREATE ROUTE](https://docs.microsoft.com/sql/t-sql/statements/create-route-transact-sql)。
  - `ALTER ROUTE` 不能结合使用 `ALTER ROUTE` 和 `ADDRESS`（`LOCAL` 除外）。 请参阅 [ALTER ROUTE](../../t-sql/statements/alter-route-transact-sql.md)。  
   
 ### <a name="messages-can-be-sent-to-multiple-target-services-multicast"></a>可以将消息发送到多个目标服务（多播）  

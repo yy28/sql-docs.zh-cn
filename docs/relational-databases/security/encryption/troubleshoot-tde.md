@@ -14,12 +14,12 @@ ms.topic: conceptual
 ms.date: 11/06/2019
 ms.author: jaszymas
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 40584dda23d36af385b9cae5457377838694be6e
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.openlocfilehash: 8ec410ba98be0c1893f376daf596a0746983b87d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75558462"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909897"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>使用 Azure Key Vault 中的客户托管密钥进行透明数据加密的常见错误
 
@@ -33,7 +33,7 @@ ms.locfileid: "75558462"
 
 如果不再需要无法访问的数据库，可以立即删除它，以停止产生成本。 在恢复对 Azure Key Vault 密钥的访问权限，且数据库恢复联机之前，不允许对数据库执行其他任何操作。 在无法访问使用客户托管密钥加密的数据库期间，也不可能在服务器上将 TDE 选项从客户托管密钥更改为服务托管密钥。 这是必要的，可以在对 TDE 保护程序的权限遭撤销期间保护数据免遭未经授权的访问。 
 
-如果数据库无法访问的时长超过 8 小时，便无法再自动恢复。 如果那期间之后所需的 Azure Key Vault 密钥访问已恢复，必须手动重新验证访问，这样数据库才能恢复联机。 在这种情况下让数据库恢复联机可能需要相当长的时间（具体视数据库大小而定），目前需要开具支持票证。 在数据库恢复联机后，以前配置的设置（如异地链接（如果已配置 Geo-DR 的话）、PITR 历史记录和标记）则会丢失。 因此，建议使用[操作组](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups)实现通知系统，以便尽快了解并解决基础密钥保管库密钥访问问题。 
+如果数据库无法访问的时长超过 8 小时，便无法再自动恢复。 如果那期间之后所需的 Azure Key Vault 密钥访问已恢复，必须手动重新验证对密钥的访问，这样数据库才能恢复联机。 在这种情况下让数据库恢复联机可能需要相当长的时间（具体视数据库大小而定）。 在数据库恢复联机后，以前配置的设置（如[故障转移组](https://docs.microsoft.com/azure/sql-database/sql-database-auto-failover-group)、PITR 历史记录和任何标记）则会丢失  。 因此，建议使用[操作组](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups)实现通知系统，以便尽快了解并解决基础密钥保管库密钥访问问题。 
 
 ## <a name="common-errors-causing-databases-to-become-inaccessible"></a>导致数据库无法访问的常见错误
 

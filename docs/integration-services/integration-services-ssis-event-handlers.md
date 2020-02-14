@@ -22,10 +22,10 @@ ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 75258eabcc1874ca8cda731cc473847b7316ff28
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296198"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Integration Services (SSIS) 事件处理程序
@@ -47,11 +47,11 @@ ms.locfileid: "71296198"
   
  以下关系图显示具有 For 循环容器的简单包，该容器包含一个执行 SQL 任务。  
   
- ![包、For 循环、任务主机和执行 SQL 任务](../integration-services/media/mw-dts-eventhandlerpkg.gif "Package, For Loop, task host, and Execute SQL task")  
+ ![包、For 循环、任务宿主和执行 SQL 任务](../integration-services/media/mw-dts-eventhandlerpkg.gif "包、For 循环、任务宿主和执行 SQL 任务")  
   
  只有包具有事件处理程序，用于处理其 **OnError** 事件。 如果执行 SQL 任务运行时发生错误，包的 **OnError** 事件处理程序就会运行。 以下关系图显示导致包的 **OnError** 事件处理程序执行的调用序列。  
   
- ![事件处理程序流](../integration-services/media/mw-dts-eventhandlers.gif "Event handler flow")  
+ ![事件处理程序流](../integration-services/media/mw-dts-eventhandlers.gif "事件处理程序流")  
   
  事件处理程序是事件处理程序集的成员，所有容器都包含此事件处理程序集。 如果使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器创建包，就可以在 **设计器的** “包资源管理器” **选项卡上的** “事件处理程序” [!INCLUDE[ssIS](../includes/ssis-md.md)] 文件夹中看到事件处理程序集的成员。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "71296198"
   
 3.  单击 **“事件处理程序”** 选项卡。  
   
-     ![带有事件处理程序的设计图面的屏幕截图](../integration-services/media/eventhandlers.gif "Screenshot of design surface with event handler")  
+     ![带有事件处理程序的设计图面的屏幕快照](../integration-services/media/eventhandlers.gif "带有事件处理程序的设计图面的屏幕快照")  
   
      在事件处理程序中创建控制流和数据流类似于在包中创建控制流和数据流。 有关详细信息，请参阅 [Control Flow](../integration-services/control-flow/control-flow.md) 和 [Data Flow](../integration-services/data-flow/data-flow.md)。  
   
@@ -133,6 +133,6 @@ ms.locfileid: "71296198"
  有关如何以编程方式设置这些属性的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- 有关如何向包中添加事件处理程序的信息，请参阅[在包中添加事件处理程序](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)。  
+ 有关如何向包中添加事件处理程序的信息，请参阅 [在包中添加事件处理程序](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)。  
   
   

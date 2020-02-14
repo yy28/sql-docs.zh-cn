@@ -13,10 +13,10 @@ ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0230354bfe53de8c362bcdb70caa597652706ee2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293975"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>设置数据事件探查任务
@@ -48,7 +48,7 @@ ms.locfileid: "71293975"
  有关详细信息，请参阅[数据事件探查任务编辑器（“常规”页）](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)和[单个表快速配置文件窗体（数据事件探查任务）](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)。  
   
 > [!IMPORTANT]  
->  输出文件可能包含有关数据库的敏感数据和数据库所包含的数据。 有关如何使此文件更加安全的建议，请参阅 [访问包使用的文件](../../integration-services/security/security-overview-integration-services.md#files)。  
+>  输出文件可能包含有关数据库的敏感数据和数据库所包含的数据。 有关如何使此文件更加安全的建议，请参阅 [对包使用的文件的访问](../../integration-services/security/security-overview-integration-services.md#files)。  
   
 ## <a name="selection-and-configuration-of-the-profiles-to-be-computed"></a>选择和配置要计算的配置文件  
  设置输出文件后，必须选择要计算的数据配置文件。 数据事件探查任务可以计算 8 个不同的数据配置文件。 其中的 5 个配置文件分析单列，其余的 3 个则分析多列或列和表之间的关系。 在单个数据事件探查任务中，可以为多列或多个表或视图中的列组合计算多个配置文件。  

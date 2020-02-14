@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 4a6e56932ab54bc489000c98a29150df984f5991
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907870"
 ---
 # <a name="synchronize-a-push-subscription"></a>同步推送订阅
@@ -31,7 +31,7 @@ ms.locfileid: "72907870"
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  订阅由分发代理（对于快照复制和事务复制）或合并代理（对于合并复制）进行同步。 代理可以连续运行、按需运行或按计划运行。 有关如何指定同步计划的详细信息，请参阅[指定同步计划](../../relational-databases/replication/specify-synchronization-schedules.md)。  
   
- 从  的 **“本地发布”** 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 the **All Subscriptions** tab in Replication Monitor. 不能从订阅服务器按需同步对 Oracle 发布的订阅。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
+ 从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的“本地发布”和“本地订阅”文件夹及复制监视器的“所有订阅”选项卡中，按需同步订阅    。 不能从订阅服务器按需同步对 Oracle 发布的订阅。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
   
 #### <a name="to-synchronize-a-push-subscription-on-demand-in-management-studio-at-the-publisher"></a>在 Management Studio 中按需同步推送订阅（在发布服务器中）  
   
@@ -45,7 +45,7 @@ ms.locfileid: "72907870"
   
 5.  在“查看同步状态 - \<订阅服务器>:\<订阅数据库>”对话框中，单击“启动”。   完成同步后，将显示消息 **“同步完成”** 。  
   
-6.  单击 **“关闭”** 。  
+6.  单击“关闭”  。  
 
 #### <a name="to-synchronize-a-push-subscription-on-demand-in-management-studio-at-the-subscriber"></a>在 Management Studio 中按需同步推送订阅（在订阅服务器中）  
   
@@ -55,11 +55,11 @@ ms.locfileid: "72907870"
   
 3.  右键单击要同步的订阅，然后单击 **“查看同步状态”** 。  
   
-4.  将显示一条消息，指示建立与分发服务器的连接。 单击“确定”  。  
+4.  将显示一条消息，指示建立与分发服务器的连接。 单击“确定”。   
   
 5.  在“查看同步状态 - \<订阅服务器>:\<订阅数据库>”对话框中，单击“启动”。   完成同步后，将显示消息 **“同步完成”** 。  
   
-6.  单击 **“关闭”** 。  
+6.  单击“关闭”  。  
   
 #### <a name="to-synchronize-a-push-subscription-on-demand-in-replication-monitor"></a>在复制监视器中按需同步推送订阅  
   
@@ -276,7 +276,7 @@ REM -- The following command must be supplied without line breaks.
  [!code-vb[HowTo#rmo_vb_SyncMergePushSub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_syncmergepushsub)]  
   
 ## <a name="see-also"></a>另请参阅  
- [复制管理对象概念](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
+ [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [同步数据](../../relational-databases/replication/synchronize-data.md)   
  [复制安全最佳做法](../../relational-databases/replication/security/replication-security-best-practices.md)  
   

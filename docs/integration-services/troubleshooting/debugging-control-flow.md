@@ -20,10 +20,10 @@ ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f762b5c7c5c4ce48c0c1bee660ed726b124e9c55
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295134"
 ---
 # <a name="debugging-control-flow"></a>调试控制流
@@ -31,7 +31,7 @@ ms.locfileid: "71295134"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include features 和 tools that you can use to troubleshoot the control flow in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中控制流故障的功能和工具。  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含一些功能和工具，你可以使用这些功能和工具对 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中的控制流进行故障排除。  
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支持容器和任务上的断点。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "71295134"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供了十个可以在所有任务和容器上启用的中断条件。 在 **“设置断点”** 对话框中，可根据下列条件启用断点：  
   
-|中断条件|描述|  
+|中断条件|说明|  
 |---------------------|-----------------|  
 |当任务或容器收到 **OnPreExecute** 事件时。|任务将要执行时调用。 此事件由任务或容器在其运行前一刻引发。|  
 |当任务或容器收到 **OnPostExecute** 事件时。|任务的执行逻辑完成后立即调用。 此事件由任务或容器在其运行后引发。|  
@@ -71,7 +71,7 @@ ms.locfileid: "71295134"
   
  下表介绍命中计数类型。  
   
-|命中计数类型|描述|  
+|命中计数类型|说明|  
 |--------------------|-----------------|  
 |始终|断点命中时始终挂起执行。|  
 |命中计数等于|断点发生的次数等于命中计数时挂起执行。|  
@@ -112,11 +112,11 @@ ms.locfileid: "71295134"
   
  下表介绍这些窗口。  
   
-|窗口|描述|  
+|窗口|说明|  
 |------------|-----------------|  
 |断点|列出包中的断点并提供启用和删除断点的选项。|  
-|“输出”|显示 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中各功能的状态消息。|  
-|“即时”|用于调试和评估表达式，并打印变量值。|  
+|输出|显示 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中各功能的状态消息。|  
+|即时|用于调试和评估表达式，并打印变量值。|  
 
 ## <a name="debug"></a> 通过在任务或容器上设置断点调试包
   本过程介绍如何在包、任务、For 循环容器、Foreach 循环容器或序列容器中设置断点。  
@@ -148,13 +148,13 @@ ms.locfileid: "71295134"
  **已启用**  
  选择此选项可以对事件启用断点。  
   
- **中断条件**  
+ **Break Condition**  
  查看可设置断点的事件列表。  
   
- **命中计数类型**  
+ **Hit Count Type**  
  指定断点生效的时间。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**始终**|断点命中时始终挂起执行。|  
 |**命中计数等于**|断点发生的次数等于命中计数时挂起执行。|  

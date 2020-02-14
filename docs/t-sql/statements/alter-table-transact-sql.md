@@ -60,10 +60,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 37cbb3621a1c9567a778fe58c4771e4336308647
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74127498"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
@@ -800,7 +800,7 @@ REBUILD WITH ( \<rebuild_option> )
 DATA_COMPRESSION  
 **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
-为指定的表、分区号或分区范围指定数据压缩选项。 选项如下所示：
+为指定的表、分区号或分区范围指定数据压缩选项。 选项如下：
 
 NONE 不压缩表或指定的分区。 此选项不适用于列存储表。
 
@@ -873,25 +873,25 @@ SET ( FILETABLE_DIRECTORY = directory_name )
 
 为表禁用 Stretch 后，已迁移到 Azure 的远程数据的处理方式有两种。 有关详细信息，请参阅[禁用 Stretch Database 并恢复远程数据](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md)。
 
-- 要禁用表的拉伸或将表中的远程数据从 Azure 复制回 SQL Server，请运行以下命令。 此命令不能取消。
+- 要针对某个表禁用 Stretch 并将该表的远程数据从 Azure 复制回 SQL Server，请运行以下命令。 此命令不能取消。
 
     ```sql
     ALTER TABLE <table_name>
        SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;
     ```
 
-此操作会产生数据传输成本，并且不能取消。 有关详细信息，请参阅[数据传输定价详细信息](https://azure.microsoft.com/pricing/details/data-transfers/)。
+此操作会产生数据传输费用，并且不可取消。 有关详细信息，请参阅[数据传输定价详细信息](https://azure.microsoft.com/pricing/details/data-transfers/)。
 
-当所有远程数据已从 Azure 复制回 SQL Server 后，禁用表的“拉伸”。
+将所有远程数据从 Azure 复制回到 SQL Server 之后，将为表禁用延伸。
 
-- 要禁用表的“拉伸”并放弃远程数据，请运行以下命令。
+- 若要为某个表禁用延伸并放弃远程数据，请运行以下命令。
 
     ```sql
     ALTER TABLE <table_name>
        SET ( REMOTE_DATA_ARCHIVE = OFF_WITHOUT_DATA_RECOVERY ( MIGRATION_STATE = PAUSED ) ) ;
     ```
 
-禁用表的 Stretch Database 之后，将停止数据迁移，查询结果不再包括远程表中的结果。
+为表禁用 Stretch Database 之后，数据迁移会停止，查询结果不再包括来自远程表的结果。
 
 禁用 Stretch 不会删除远程表。 若要删除远程表，请使用 Azure 门户删除它。
 
@@ -901,7 +901,7 @@ SET ( FILETABLE_DIRECTORY = directory_name )
 根据需要，指定一个筛选器谓词，从包含历史数据和最新数据的表中选择要迁移的行。 该谓词必须调用确定性的内联表值函数。 有关详细信息，请参阅[为表启用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) 和[使用筛选器函数选择要迁移的行](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)。
 
 > [!IMPORTANT]
-> 如果提供的筛选器谓词性能不佳，则数据迁移性能也不佳。 Stretch Database 通过使用 CROSS APPLY 运算符将筛选器谓词应用到表。
+> 如果提供的筛选器谓词性能不佳，则数据迁移性能也不佳。 Stretch Database 通过使用 CROSS APPLY 运算符将筛选器谓词应用到表中。
 
 如果未指定筛选器谓词，则将迁移整个表。
 
@@ -913,7 +913,7 @@ MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED }
 - 指定 `OUTBOUND` 可将数据从 SQL Server 迁移到 Azure。
 - 指定 `INBOUND` 可将表中的远程数据从 Azure 复制回 SQL Server，然后对该表禁用 Stretch Database。 有关详细信息，请参阅[禁用 Stretch Database 并恢复远程数据](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md)。
 
-    此操作会产生数据传输成本，并且不能取消。
+    此操作会产生数据传输费用，并且不可取消。
 
 - 指定 `PAUSED` 可暂停或推迟数据迁移。 有关详细信息，请参阅[暂停和恢复数据迁移 - Stretch Database](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)。
 
@@ -946,7 +946,7 @@ IF EXISTS
 
 有条件地删除列或约束（仅当存在时）。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 要添加新数据行，请使用 [INSERT](../../t-sql/statements/insert-transact-sql.md)。 要删除数据行，请使用 [DELETE](../../t-sql/statements/delete-transact-sql.md) 或 [TRUNCATE TABLE](../../t-sql/statements/truncate-table-transact-sql.md)。 要更改现有行中的值，请使用 [UPDATE](../../t-sql/queries/update-transact-sql.md)。
 
@@ -1378,7 +1378,7 @@ GO
 DROP TABLE Person.ContactBackup ;
 ```
 
-![用于“返回首页”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标")[示例](#Example_Top)
+![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [示例](#Example_Top)
 
 ### <a name="alter_column"></a>更改列定义
 

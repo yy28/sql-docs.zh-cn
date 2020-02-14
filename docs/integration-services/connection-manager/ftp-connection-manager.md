@@ -17,10 +17,10 @@ ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0f1380370862b735e00799cbcb6a9ba46d69fd3f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294416"
 ---
 # <a name="ftp-connection-manager"></a>FTP 连接管理器
@@ -78,7 +78,7 @@ ms.locfileid: "71294416"
  **服务器端口**  
  指定用来连接的 FTP 服务器的端口号。 此属性的默认值为 **21**。  
   
- **User name**  
+ **用户名**  
  提供用于访问 FTP 服务器的用户名。 此属性的默认值为“匿名”。   
   
  **密码**  
@@ -90,7 +90,7 @@ ms.locfileid: "71294416"
  **使用被动模式**  
  指定是由服务器还是由客户端启动连接。 服务器使用主动模式启动连接，客户端使用被动模式启动连接。 此属性的默认值为“主动模式”。   
   
- **重试次数**  
+ **重试**  
  指定任务尝试连接的次数。 如果值为 **0** ，则表示不限制尝试次数。  
   
  **块区大小(KB)**  

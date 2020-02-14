@@ -22,29 +22,57 @@ helpviewer_keywords:
 ms.assetid: b970038f-f4e7-4a5d-96f6-51e3248c6aef
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a55abc5a9554ec68df33310f4f041e9605961c7e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: e7291bc39092d4f65fd69f8c4050bb52a512ef04
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75245279"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831729"
 ---
 # <a name="-wildcard---characters-not-to-match-transact-sql"></a>\[^\]（通配符 - 无需匹配的字符）(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  匹配不在方括号之间指定的范围或集合内的任何单个字符。  
+  匹配不在方括号 `[^]` 之间指定的范围或集合内的任何单个字符。 可以在涉及模式匹配的字符串比较（例如，`LIKE` 和 `PATINDEX`）中使用这些通配符。 
   
 ## <a name="examples"></a>示例  
- 下面的示例使用 [^] 运算符在 `Contact` 表中查找所有名字以 `Al` 开头且第三个字母不是字母 `a` 的所有人。  
+### <a name="a-simple-example"></a>A:简单示例   
+ 下面的示例使用 [^] 运算符查找 `Contact` 表中名字以 `Al` 开头且第三个字母不是 `a` 的前 5 名用户。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
-SELECT FirstName, LastName  
+SELECT TOP 5 FirstName, LastName  
 FROM Person.Person  
-WHERE FirstName LIKE 'Al[^a]%'  
-ORDER BY FirstName;  
+WHERE FirstName LIKE 'Al[^a]%';  
 ```  
+[!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]  
+
+```
+FirstName     LastName
+---------     --------
+Alex          Adams
+Alexandra     Adams
+Allison       Adams
+Alisha        Alan
+Alexandra     Alexander
+```
+### <a name="b-searching-for-ranges-of-characters"></a>B：搜索字符范围
+
+通配符集可以包含单个字符或字符范围，以及字符和范围的组合。 下面的示例使用 [^] 运算符来查找不以字母或数字开头的字符串。
+
+```sql
+SELECT [object_id], OBJECT_NAME(object_id) AS [object_name], name, column_id 
+FROM sys.columns 
+WHERE name LIKE '[^0-9A-z]%';
+```
+
+[!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]  
+
+```
+object_id     object_name   name    column_id
+---------     -----------   ----    ---------
+1591676718    JunkTable     _xyz    1
+```
   
 ## <a name="see-also"></a>另请参阅  
  [LIKE (Transact-SQL)](../../t-sql/language-elements/like-transact-sql.md)   

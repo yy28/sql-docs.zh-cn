@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9ee002f5c835f8a6a69aa6afe69e1838c56c24e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8083433f2b9e5af63abac4e4fba59d06e42dd86f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013065"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76918344"
 ---
 # <a name="buffer-pool-extension"></a>缓冲池扩展
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,15 +48,15 @@ ms.locfileid: "68013065"
  固态硬盘 (SSD)  
  固态硬盘将数据永久存储在内存 (RAM) 中。 有关详细信息，请参阅 [此定义](https://en.wikipedia.org/wiki/Solid-state_drive)。  
   
- 缓冲区  
+ Buffer  
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，一个缓冲区就是一个 8 KB 大小的内存页，其大小与一个数据页或索引页相同。 因此，缓冲区缓存被划分为多个 8-KB 页。 缓冲区缓存中会保留一页，直到缓冲区管理器需要该缓冲区读入更多数据。 数据只有在被修改后才重新写入磁盘。 这些内存中已修改的页称为脏页。 当一页等同于它在磁盘上的数据库映像时，该页就是干净页。 在将缓冲区缓存中的数据写回磁盘之前，可对其进行多次修改。  
   
  缓冲池  
  也称为缓冲区缓存。 缓冲池是一个由所有数据库共享的全局资源，用于存放其缓存数据页。 缓冲池缓存的最大和最小大小是在启动期间或使用 sp_configure 动态重新配置 SQL Server 实例时确定的。 此大小确定了运行的实例中在任何时候都可以缓存在缓冲池中的最大页数。  
   
- 缓冲池扩展所能承诺的最大内存在产生很大内存压力的情况下，可能会受到运行在计算机上的其他应用程序的限制。  
+ 缓冲池扩展所能承诺的最大内存在产生很大内存压力的情况下，可能会受到计算机上运行的其他应用程序的限制。  
   
- 检查点  
+ Checkpoint  
  检查点会创建一个已知的正常点，在意外关闭或崩溃后的恢复过程中， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 可以从该点开始应用事务日志中包含的更改。 检查点将脏页和事务日志信息从内存写入磁盘，并记录有关事务日志的信息。 有关详细信息，请参阅[数据库检查点 (SQL Server)](../../relational-databases/logs/database-checkpoints-sql-server.md)。  
   
 ## <a name="buffer-pool-extension-details"></a>缓冲池扩展详细信息  
@@ -88,7 +88,7 @@ ms.locfileid: "68013065"
   
  提供了以下 Xevent：  
   
-|XEvent|描述|Parameters|  
+|XEvent|说明|parameters|  
 |------------|-----------------|----------------|  
 |sqlserver.buffer_pool_extension_pages_written|在将页或页组从缓冲池逐出并写入缓冲池扩展文件时激发。|*number_page*<br /><br /> *first_page_id*<br /><br /> *first_page_offset*<br /><br /> *initiator_numa_node_id*|  
 |sqlserver.buffer_pool_extension_pages_read|在将页从缓冲池扩展文件读取到缓冲池时激发。|*number_page*<br /><br /> *first_page_id*<br /><br /> *first_page_offset*<br /><br /> *initiator_numa_node_id*|  

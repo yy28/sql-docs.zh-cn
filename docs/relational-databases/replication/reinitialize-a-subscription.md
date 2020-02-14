@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 733e63f6dd01c09fd007a7176721533f7a1c57d3
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70846513"
 ---
 # <a name="reinitialize-a-subscription"></a>重新初始化订阅
@@ -33,7 +33,7 @@ ms.locfileid: "70846513"
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  重新初始化订阅的过程由两个部分组成：  
   
-1.  将对发布的单个或所有订阅“标记”  为重新初始化。 在 **“重新初始化订阅”** 对话框中将订阅标记为要重新初始化，该对话框可以在  的 **“本地发布”** 文件夹和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 也可以从 **“所有订阅”** 选项卡和复制监视器中的发布节点中对订阅进行标记。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。 将订阅标记为要重新初始化时，可以选择下列选项之一：  
+1.  将对发布的单个或所有订阅“标记”  为重新初始化。 在“重新初始化订阅”对话框中将订阅标记为重新初始化，该对话框可从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“本地发布”文件夹和“本地订阅”文件夹中获取    。 也可以从 **“所有订阅”** 选项卡和复制监视器中的发布节点中对订阅进行标记。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。 将订阅标记为要重新初始化时，可以选择下列选项之一：  
   
      **使用当前快照**  
      选择此项可以在分发代理或合并代理下一次运行时将当前快照应用于订阅服务器。 如果无法获得有效快照，将无法选定此选项。  
@@ -188,7 +188,7 @@ ms.locfileid: "70846513"
   
 4.  调用 <xref:Microsoft.SqlServer.Replication.TransSubscription.Reinitialize%2A> 方法。 此方法将订阅标记为要重新初始化。  
   
-5.  同步推送订阅。 有关详细信息，请参阅 [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)。  
+5.  同步推送订阅。 有关详细信息，请参阅 [同步推送订阅](../../relational-databases/replication/synchronize-a-push-subscription.md)。  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-merge-publication"></a>重新初始化对合并发布的请求订阅  
   
@@ -224,7 +224,7 @@ ms.locfileid: "70846513"
     > [!NOTE]  
     >  如果订阅过期，则无法上载更改。 有关详细信息，请参阅 [Set the Expiration Period for Subscriptions](../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md)。  
   
-5.  同步推送订阅。 有关详细信息，请参阅 [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)。  
+5.  同步推送订阅。 有关详细信息，请参阅 [同步推送订阅](../../relational-databases/replication/synchronize-a-push-subscription.md)。  
   
 ###  <a name="PShellExample"></a> 示例 (RMO)  
  此示例将重新初始化事务发布的请求订阅。  
@@ -242,6 +242,6 @@ ms.locfileid: "70846513"
 ## <a name="see-also"></a>另请参阅  
  [重新初始化订阅](../../relational-databases/replication/reinitialize-subscriptions.md)   
  [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
+ [复制安全最佳做法](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

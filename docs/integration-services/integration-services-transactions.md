@@ -16,10 +16,10 @@ ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 90855baaa61e242488a7fb6a91a52e34d77e5f48
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284402"
 ---
 # <a name="integration-services-transactions"></a>Integration Services 事务
@@ -120,7 +120,7 @@ ms.locfileid: "71284402"
   
  下面的关系图显示了包中的五个不相关的事务。 一个事务是由序列容器启动的，其余四个事务是由执行 SQL 任务启动的。  
   
- ![多个事务的实现](../integration-services/media/mw-dts-trans2.gif "Implementation of multiple transactions")  
+ ![多个事务的实现](../integration-services/media/mw-dts-trans2.gif "多个事务的实现")  
  
 ## <a name="inherited-transactions"></a>继承的事务
  一个包可以使用执行包任务运行另一个包。 子包也就是执行包任务所运行的包，它可以创建自己的包事务，也可以继承父包事务。  
@@ -144,7 +144,7 @@ ms.locfileid: "71284402"
   
 -   对于包 E 以及任务执行包 C 和执行包 E，**TransactionOption** 设置为 **NotSupported** 。  
   
- ![继承的事务流](../integration-services/media/mw-dts-executepack.gif "Flow of inherited transactions")  
+ ![继承事务的流](../integration-services/media/mw-dts-executepack.gif "继承事务的流")  
   
  只有包 B、包 D 和包 F 可以从它们的父包继承事务。  
   

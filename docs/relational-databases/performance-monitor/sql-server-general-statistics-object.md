@@ -14,19 +14,19 @@ ms.assetid: c738e549-d7e7-4211-9ec3-064ac140af7c
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 5d835a317f2968775f0cc94df19866c0d083d69d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093517"
 ---
 # <a name="sql-server-general-statistics-object"></a>SQL Server General Statistics 对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **中的** SQLServer:General Statistics [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象提供计数器，用于监视服务器范围内的常规活动，例如，当前的连接数和每秒与运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的计算机连接和断开的用户数。 这在大型联机事务处理 (OLTP) 类型系统（这种系统中有很多客户端与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例连接和断开连接）上工作时会非常有用。  
   
- 下表介绍了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **General Statistics** 计数器。  
+ 此表介绍了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] General Statistics 计数器  。  
   
-|SQL Server General Statistics 计数器|描述|  
+|SQL Server General Statistics 计数器|说明|  
 |--------------------------------------------|-----------------|  
 |**Active Temp Tables**|正在使用的临时表/表变量的数目。|  
 |**Connection resets/sec**|从连接池启动的登录总次数。|  
@@ -50,7 +50,7 @@ ms.locfileid: "68093517"
 |**Tempdb recovery unit id**|生成的重复 tempdb 恢复单元 ID 的数目。|
 |**Tempdb rowset id**|生成的重复 tempdb 行集 ID 的数目。| 
 |**Trace Event Notifications Queue**|在内部队列中等待通过 Service Broker 发送的跟踪事件通知实例数。|  
-|**事务**|事务登记（本地、DTC 和绑定的事务）的数目。|  
+|**中的**|事务登记（本地、DTC 和绑定的事务）的数目。|  
 |**用户连接**|当前与 SQL Server 连接的用户数。|  
   
 ## <a name="see-also"></a>另请参阅  

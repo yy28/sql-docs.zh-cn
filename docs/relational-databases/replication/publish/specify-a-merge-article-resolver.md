@@ -15,10 +15,10 @@ ms.assetid: a40083b3-4f7b-4a25-a5a3-6ef67bdff440
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4c1267e08bfdb1361223f3a93ec465b3da83d8ce
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70846568"
 ---
 # <a name="specify-a-merge-article-resolver"></a>指定合并项目冲突解决程序
@@ -32,9 +32,9 @@ ms.locfileid: "70846568"
   
     -   默认冲突解决程序。 默认冲突解决程序的行为取决于订阅是客户端订阅还是服务器订阅。 有关如何指定订阅类型的详细信息，请参阅[指定合并订阅类型和冲突解决优先级 (SQL Server Management Studio)](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md)。  
   
-    -   您编写的自定义冲突解决程序，可以是业务逻辑处理程序（以托管代码编写）或基于 COM 的自定义冲突解决程序。 有关详细信息，请参阅 [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)中指定合并项目冲突解决程序。 如果需要实现针对复制的每一行而非只是针对冲突行执行的自定义逻辑，请参阅 [为合并项目实现业务逻辑处理程序](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)中指定合并项目冲突解决程序。  
+    -   您编写的自定义冲突解决程序，可以是业务逻辑处理程序（以托管代码编写）或基于 COM 的自定义冲突解决程序。 有关详细信息，请参阅 [高级合并复制冲突的检测和解决](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)。 如果需要实现针对复制的每一行而非只是针对冲突行执行的自定义逻辑，请参阅 [为合并项目实现业务逻辑处理程序](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)中指定合并项目冲突解决程序。  
   
-    -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]附带的基于 COM 的标准冲突解决程序。  
+    -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 附带的基于 COM 的标准冲突解决程序。  
   
 -   若要使用默认冲突解决程序以外的其他冲突解决程序，必须将该冲突解决程序复制到运行合并代理的计算机并对其进行注册（如果使用的是业务逻辑处理程序，还必须在发布服务器上注册）。 合并代理可以运行于：  
   

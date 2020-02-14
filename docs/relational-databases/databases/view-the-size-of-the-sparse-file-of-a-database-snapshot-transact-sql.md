@@ -19,10 +19,10 @@ ms.assetid: 1867c5f8-d57c-46d3-933d-3642ab0a8e24
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 71881edf1c98b0588a731964cf6f23dcffe6aa82
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055211"
 ---
 # <a name="view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql"></a>查看数据库快照的稀疏文件大小 (Transact-SQL)
@@ -47,7 +47,7 @@ ms.locfileid: "74055211"
 > [!NOTE]  
 >  稀疏文件按 64 KB 的增量增长；因此，磁盘上稀疏文件的大小始终是 64 KB 的倍数。  
   
- 若要查看磁盘上每个快照稀疏文件当前使用的字节数，请查询 **sys.dm_io_virtual_file_stats** 动态管理视图的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][size_on_disk_bytes](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) 列。  
+ 要查看磁盘上每个快照稀疏文件当前使用的字节数，请查询 sys.dm_io_virtual_file_stats 动态管理视图的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [size_on_disk_bytes](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) 列  。  
   
  若要查看稀疏文件占用的磁盘空间，在 Microsoft Windows 中右键单击文件，再单击“属性”  ，然后查看“占用空间”  值。  
   

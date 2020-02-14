@@ -17,10 +17,10 @@ ms.assetid: 636314fd-d099-45cd-8bb4-f730d0a06739
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 53fc016bc4657dd1dce7dd0eefcbea58a28ae14e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296998"
 ---
 # <a name="sending-to-a-remote-private-message-queue-with-the-script-task"></a>使用脚本任务向远程私有消息队列发送消息
@@ -33,7 +33,7 @@ ms.locfileid: "71296998"
 > [!NOTE]  
 >  如果希望创建可更方便地重用于多个包的任务，请考虑以此脚本任务示例中的代码为基础，创建自定义任务。 有关详细信息，请参阅 [开发自定义任务](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)。  
   
-## <a name="description"></a>描述  
+## <a name="description"></a>说明  
  下面的示例使用一个现有 MSMQ 连接管理器以及 System.Messaging 命名空间的对象和方法，向远程私有消息队列发送包含在包变量中的文本。 对 MSMQ 连接管理器的 M:Microsoft.SqlServer.Dts.ManagedConnections.MSMQConn.AcquireConnection(System.Object) 方法的调用可返回 MessageQueue 对象，其 Send 方法可完成此任务   。  
   
 #### <a name="to-configure-this-script-task-example"></a>配置此脚本任务示例  

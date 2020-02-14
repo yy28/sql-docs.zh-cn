@@ -31,10 +31,10 @@ ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: c456b6e34dba77b7e35cc24e8af673662725a2bb
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211380"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "70211380"
 
   启动从一个服务到另一个服务的对话。 所谓对话，就是让两个服务能够进行一次顺序消息传递。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -101,12 +101,12 @@ WHERE database_id = DB_ID() ;
  指定对话将保持打开状态的最长时间。 为使对话成功完成，两个端点都必须在生存期内显式结束对话。 *dialog_lifetime* 的值必须以秒表示。 生存期的类型为 **int**。如果未指定 LIFETIME 子句，则对话的生存期为 **int** 数据类型的最大值。  
   
  ENCRYPTION  
- 将此对话发送和接收的消息向 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例外发送时，是否必须对消息加密。 必须加密的对话是*安全对话*。 如果 ENCRYPTION = ON，但未配置支持加密所需的证书，则 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 将返回针对该会话的错误消息。 ENCRYPTION = OFF 时，如果为 *target_service_name* 配置了远程服务绑定，则使用加密；否则，发送消息时不加密。 如果未使用此子句，则默认值为 ON。  
+ 指定在将此对话发送和接收的消息发送到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例外部时是否必须进行加密。 必须加密的对话是*安全对话*。 如果 ENCRYPTION = ON，但未配置支持加密所需的证书，则 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 将返回针对该会话的错误消息。 ENCRYPTION = OFF 时，如果为 *target_service_name* 配置了远程服务绑定，则使用加密；否则，发送消息时不加密。 如果未使用此子句，则默认值为 ON。  
   
 > [!NOTE]  
 >  在任何情况下，都不对同一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的服务间交换的消息加密。 但是，如果用于会话的服务位于不同的数据库，则使用加密的会话仍然需要数据库主密钥和加密证书。 这样，在会话进行的过程中，如果将一个数据库移到其他实例，会话仍可继续进行。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  所有消息都是会话的一部分。 因此，发起方服务必须在发送消息到目标服务之前启动与目标服务的会话。 BEGIN DIALOG CONVERSATION 语句中指定的信息类似于信函上的地址；[!INCLUDE[ssSB](../../includes/sssb-md.md)] 使用此信息将消息传递到正确的服务。 TO SERVICE 子句中指定的服务是消息发送到的地址。 FROM SERVICE 子句中指定的服务是用于答复消息的返回地址。  
   
  会话目标不需要调用 BEGIN DIALOG CONVERSATION。 当会话中来自发起方的第一条消息到达时，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 将在目标数据库中创建一个会话。  

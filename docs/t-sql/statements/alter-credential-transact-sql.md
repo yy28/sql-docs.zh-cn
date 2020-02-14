@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: f6ac23553500fbf3092d9450b6f5a222863dc1dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065925"
 ---
 # <a name="alter-credential-transact-sql"></a>ALTER CREDENTIAL (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68065925"
   更改凭据的属性。  
 
 > [!IMPORTANT]
-> “应执行操作”为最佳做法；“必须执行操作”用于完成任务 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+> “应执行操作”为最佳做法；“必须执行操作”用于完成任务![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标")[Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,7 +44,7 @@ ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- credential_name   
+ *credential_name*  
  指定将要更改的凭据的名称。  
   
  IDENTITY ='identity_name'   
@@ -56,7 +56,7 @@ ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
 > [!IMPORTANT]
 > Azure SQL 数据库仅支持 Azure Key Vault 和共享访问签名标识。 不支持 Windows 用户标识。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  当凭据发生更改时，identity_name 和 secret 的值都将重置   。 如果未指定可选参数 SECRET 的值，则存储的密码值将设置为 NULL。  
   
  使用服务主密钥对密码进行加密。 如果重新生成服务主密钥，则需要使用新服务主密钥对该密码重新加密。  

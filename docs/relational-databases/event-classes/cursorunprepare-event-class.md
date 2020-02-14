@@ -13,23 +13,23 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 174cd2a4bc07d5de1cd664f715b9442846073502
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68092938"
 ---
 # <a name="cursorunprepare-event-class"></a>CursorUnprepare 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  **CursorUnprepare** 事件类提供了与应用程序编程接口 (API) 游标中发生的游标撤消事件相关的信息。 当 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 放弃执行计划时，将发生游标撤消事件。  
+  **CursorUnprepare** 事件类提供了与应用程序编程接口 (API) 游标中发生的游标撤消事件相关的信息。 游标撤消事件在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 放弃执行计划时发生。  
   
  将 **CursorUnprepare** 事件类包括到记录游标性能的跟踪中。 当跟踪中包括 **CursorUnprepare** 事件时，引发的开销量取决于跟踪过程中对数据库使用游标的频率。 如果广泛使用游标，则跟踪将会显著地降低性能。  
   
 ## <a name="cursorunprepare-event-class-data-columns"></a>CursorUnprepare 事件类的数据列  
   
-|数据列名称|数据类型|描述|列 ID|可筛选|  
+|数据列名称|数据类型|说明|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|**ApplicationName**|**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 该列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
+|ApplicationName |**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 该列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |**ClientProcessID**|**int**|主机为运行该客户端应用程序的进程分配的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|9|是|  
 |**DatabaseID**|**int**|由 USE 数据库语句指定的数据库的 ID；如果未对给定实例发出 USE 数据库语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 数据列而且服务器可用，则 **ServerName** 将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
 |**DatabaseName**|**nvarchar**|正在其中运行用户语句的数据库的名称。|35|是|  

@@ -24,10 +24,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 70e3fbfe0ed0d255cbe6f27c410af96061ab7432
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982062"
 ---
 # <a name="alter-procedure-transact-sql"></a>ALTER PROCEDURE (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "73982062"
 
   修改先前在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中通过执行 CREATE PROCEDURE 语句创建的过程。  
   
- ![主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -85,13 +85,13 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  procedure_name   
  要更改的过程的名称。 过程名称必须符合 [标识符](../../relational-databases/databases/database-identifiers.md)规则。  
   
- ; number    
+ **;** *number*  
  现有的可选整数，该整数用来对具有同一名称的过程进行分组，以便可以用一个 DROP PROCEDURE 语句全部删除它们。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- @ parameter    
+ **@** *parameter*  
  过程中的参数。 最多可以指定 2,100 个参数。  
   
  [ _type\_schema\_name_ **.** ] _data\_type_  
@@ -161,7 +161,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
   
  有关存储过程的详细信息，请参阅 [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>权限  
  要求对过程具有 ALTER 权限，或者要求 db_ddladmin 固定数据库角色中的成员身份   。  

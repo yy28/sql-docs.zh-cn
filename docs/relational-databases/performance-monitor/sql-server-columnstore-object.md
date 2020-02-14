@@ -11,26 +11,26 @@ ms.assetid: ae663a49-012f-4ffe-a332-f03157843052
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 334a8388b7abc217123071fdc37c9e1091f6a3fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987131"
 ---
 # <a name="sql-server-columnstore-object"></a>SQL Server，列存储对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  **SQLServer:Columnstore** 对象提供计数器以监视在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中执行的列存储索引。  
+  SQLServer:Columnstore 对象提供计数器以监视在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中执行的列存储索引  。  
   
- 下表介绍了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **列存储** 计数器。  
+ 下表介绍了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Columnstore 计数器  。  
   
-|列存储计数器|描述|  
+|列存储计数器|说明|  
 |--------------------------|-----------------|  
 |**已关闭增量行组**|关闭的增量行组数。|  
 |**已压缩增量行组**|压缩的增量行组数。|  
 |**已创建增量行组**|创建的增量行组数。|  
 |**段缓存命中率**|无需从磁盘读取即可在列存储池中找到的列段百分比。|  
-|**Segment Cache Hit Ratio Base**|仅限内部使用。|
+|**Segment Cache Hit Ratio Base**|仅供内部使用。|
 |**段读取次数/秒**|发出的物理段读取次数。|  
 |**已迁移的删除缓冲区合计**|元组发动机清除删除缓冲区的次数。|  
 |**合并策略评估数合计**|评估列存储合并策略的次数。|  

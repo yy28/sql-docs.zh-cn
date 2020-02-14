@@ -20,10 +20,10 @@ ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b447bec3817dbaa173c544dcb31200a702b8661d
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68890069"
 ---
 # <a name="full-database-backups-sql-server"></a>完整数据库备份 (SQL Server)
@@ -65,7 +65,7 @@ GO
 ##  <a name="DbBuRMf"></a> 完整恢复模式下的数据库备份  
  对于使用完整恢复模式和大容量日志恢复模式的数据库而言，数据库备份是必需的，但并不足够。 还需要事务日志备份。 下图显示了在完整恢复模式下可以使用的复杂性最小的备份策略。  
   
- ![系列完整数据库备份和日志备份](../../relational-databases/backup-restore/media/bnr-rmfull-1-fulldb-log-backups.gif "系列完整数据库备份和日志备份")  
+ ![一系列完整数据库备份和日志备份](../../relational-databases/backup-restore/media/bnr-rmfull-1-fulldb-log-backups.gif "一系列完整数据库备份和日志备份")  
   
  有关如何创建日志备份的信息，请参阅[事务日志备份 (SQL Server)](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)。  
   

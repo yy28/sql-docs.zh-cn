@@ -16,10 +16,10 @@ ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 96110e35227fbca970fd3bc92bcee314b5ebae6c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293704"
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中创建包
@@ -73,7 +73,7 @@ ms.locfileid: "71293704"
   
 2.  在“配置属性”  的“常规”  选项卡上，选择“TargetServerVersion”  属性，然后选择 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
   
-     ![项目属性对话框中的 TargetServerVersion 属性](../integration-services/media/targetserverversion2.png "TargetServerVersion property in project properties dialog box")  
+     ![“项目属性”对话框中的 TargetServerVersion 属性](../integration-services/media/targetserverversion2.png "“项目属性”对话框中的 TargetServerVersion 属性")  
   
  你可以创建、维护和运行面向 SQL Server 2016、SQL Server 2014 或 SQL Server 2012 的包。  
   

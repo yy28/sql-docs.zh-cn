@@ -35,12 +35,12 @@ ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5839bfa470bfc7a35c924f1710b1d78f86cb1245
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 943d0e840c0c407e66f0d47deec4c1e78fc57afa
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73843426"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761621"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST 和 CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,7 +57,7 @@ CAST ( expression AS data_type [ ( length ) ] )
 CONVERT ( data_type [ ( length ) ] , expression [ , style ] )  
 ```  
 
-![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## <a name="arguments"></a>参数  
 *expression*  
@@ -122,37 +122,37 @@ style
 
 <sup>6</sup> 仅在从字符数据强制转换到 datetime 或 smalldatetime 时提供支持   。 仅表示日期或时间成分的字符数据强制转换为 datetime 或 smalldatetime 数据类型时，未指定的时间成分设置为 00:00:00.000，未指定的日期成分设置为 1900-01-01   。
   
-<sup>7</sup> 使用可选的时区指示符 Z 更便于将具有时区信息的 XML datetime 值映射到没有时区的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datetime 值    。 Z 指示时区 UTC-0。 \+ 或 - 方向的 HH:MM 偏移量则指示其他时区。 例如： `2006-12-12T23:45:12-08:00`。
+<sup>7</sup> 使用可选的时区指示符 Z，可更容易地将具有时区信息的 XML datetime 值映射到没有时区的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datetime 值    。 Z 指示时区 UTC-0。 \+ 或 - 方向的 HH:MM 偏移量则指示其他时区。 例如：`2006-12-12T23:45:12-08:00`。
   
 将 smalldatetime 转换为字符数据时，包含秒或毫秒的样式将在这些位置上显示零  。 从 datetime 或 smalldatetime 值转换时，可以使用合适的 char 或 varchar 数据类型长度截断不需要的日期部分     。
   
 使用包含时间的样式将字符数据转换为 datetimeoffset 时，将在结果末尾追加时区偏移量  。
   
 ## <a name="float-and-real-styles"></a>float 和 real 样式
-对于 float 或 real 的 expression，style 可能具有下表显示的值之一     。 其他值作为 0 进行处理。
+对于 float 或 real 表达式，style 可能具有下表显示的值之一     。 其他值作为 0 进行处理。
   
-|ReplTest1|“输出”|  
+|值|输出|  
 |---|---|
 |**0** （默认值）|最多包含 6 位。 根据需要使用科学记数法。|  
 |**1**|始终为 8 位值。 始终使用科学记数法。|  
 |**2**|始终为 16 位值。 始终使用科学记数法。|  
-|**3**|始终为 17 位值。 用于无损转换。 使用此样式，可以保证每个不重复的 float 或 real 值转换为不重复的字符串。<br /><br /> **适用范围：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|  
+|**3**|始终为 17 位值。 用于无损转换。 使用此样式，可以保证每个不重复的 float 或 real 值转换为不重复的字符串。<br /><br /> **适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|  
 |**126, 128, 129**|为了保持向后兼容而包括在内，而以后的版本可能不推荐这些值。|  
   
 ## <a name="money-and-smallmoney-styles"></a>money 和 smallmoney 样式
-对于 money 和 smallmoney 的 expression，style 可能具有下表显示的值之一     。 其他值作为 0 进行处理。
+对于 money 和 smallmoney 表达式，style 可能具有下表显示的值之一     。 其他值作为 0 进行处理。
   
-|ReplTest1|“输出”|  
+|值|输出|  
 |---|---|
-|**0** （默认值）|小数点左侧每三位数字之间不以逗号分隔，小数点右侧取两位数<br /><br />例如：4235.98。|  
-|**1**|小数点左侧每三位数字之间以逗号分隔，小数点右侧取两位数<br /><br />例如：3,510.92。|  
-|**2**|小数点左侧每三位数字之间不以逗号分隔，小数点右侧取四位数<br /><br />例如：4235.9819。|  
+|**0** （默认值）|小数点左侧每三位数字之间不以逗号分隔，小数点右侧取两位数<br /><br />示例：4235.98。|  
+|**1**|小数点左侧每三位数字之间以逗号分隔，小数点右侧取两位数<br /><br />示例：3,510.92。|  
+|**2**|小数点左侧每三位数字之间不以逗号分隔，小数点右侧取四位数<br /><br />示例：4235.9819。|  
 |**126**|转换为 char(n) 或 varchar(n) 时，等同于样式 2|  
   
 ## <a name="xml-styles"></a>xml 样式
-对于 xml 的 expression，style 可能具有下表显示的值之一    。 其他值作为 0 进行处理。
+对于 xml 表达式，style 可能具有下表显示的值之一    。 其他值作为 0 进行处理。
   
-|ReplTest1|“输出”|  
+|值|输出|  
 |---|---|
 |**0** （默认值）|使用默认的分析行为，即放弃无用的空格，且不允许使用内部 DTD 子集。<br /><br />**注意：** 转换为 xml 数据类型时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的无用空格处理方式不同于 XML 1.0  。 有关详细信息，请参阅[创建 XML 数据的实例](../../relational-databases/xml/create-instances-of-xml-data.md)。|  
 |**1**|保留无用空格。 此样式设置将默认 xml:space 处理设置为匹配 xml:space="preserve" 的行为   。|  
@@ -160,12 +160,12 @@ style
 |**3**|保留无用空格，并启用有限的内部 DTD 子集处理。|  
   
 ## <a name="binary-styles"></a>二进制样式
-对于 binary(n)、varbinary(n)、char(n) 或 varchar(n) 的 expression，style 可能具有下表显示的值之一       。 表中没有列出样式值将返回错误。
+对于 binary(n)、char(n)、varbinary(n) 或 varchar(n) 表达式，style 可能具有下表显示的值之一       。 表中没有列出样式值将返回错误。
   
-|ReplTest1|“输出”|  
+|值|输出|  
 |---|---|
 |**0** （默认值）|将 ASCII 字符转换为二进制字节，或者将二进制字节转换为 ASCII 字符。 每个字符或字节按照 1:1 进行转换。<br /><br /> 对于二进制 data_type，则会在结果左侧添加字符 0x  。|  
-|**1**, **2**|对于二进制 data_type，则表达式必须为字符表达式  。 expression 必须具有偶数数量的十六进制数字（0、1、2、3、4、5、6、7、8、9、A、B、C、D、E、F、a、b、c、d、e、f）   。 如果将 style 设置为 1，则 0x 必须作为前两个字符  。 如果表达式中包含的字符数为奇数或者包含任何无效的字符，则会引发错误。<br /><br /> 如果转换后的表达式长度大于 data_type 长度，则会在右侧截断结果  。<br /><br /> 如果固定长度 data_types 大于转换后的结果，则在结果右侧添加零  。<br /><br /> 字符类型的 data_type 要求二进制表达式  。 每个二进制字符均转换为两个十六进制字符。 如果转换后的表达式长度大于 data_type 长度，则会在右侧将其截断  。<br /><br /> 对于固定大小的字符类型 data_type ，并且转换后的结果长度小于其 data_type 长度，则会在转换后的表达式右侧添加空格，以使十六进制数字的个数保持为偶数   。<br /><br /> 对于 style 1，将在转换后的结果左侧添加字符 0x  。|  
+|**1**, **2**|对于二进制 data_type，则表达式必须为字符表达式  。 expression 必须具有偶数数量的十六进制数字（0、1、2、3、4、5、6、7、8、9、A、B、C、D、E、F、a、b、c、d、e、f）   。 如果将 style 设置为 1，则表达式必须将 0x 作为前两个字符  。 如果表达式中包含的字符数为奇数或者包含任何无效的字符，则会引发错误。<br /><br /> 如果转换后的表达式长度大于 data_type 长度，则会在右侧截断结果  。<br /><br /> 如果固定长度 data_types 大于转换后的结果，则在结果右侧添加零  。<br /><br /> 字符类型的 data_type 要求二进制表达式  。 每个二进制字符均转换为两个十六进制字符。 如果转换后的表达式长度大于 data_type 长度，则会在右侧将其截断  。<br /><br /> 对于固定大小的字符类型 data_type ，并且转换后的结果长度小于其 data_type 长度，则会在转换后的表达式右侧添加空格，以使十六进制数字的个数保持为偶数   。<br /><br /> 对于 style 1，将在转换后的结果左侧添加字符 0x  。|  
   
 ## <a name="implicit-conversions"></a>隐式转换
 隐式转换不需要规范 CAST 函数或 CONVERT 函数。 显示转换需要规范 CAST 函数或 CONVERT 函数。 以下图例显示了可对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统提供的数据类型执行的所有显式和隐式数据类型转换。 这些包括 bigint、sql_variant 和 xml    。 不存在对 sql_variant 数据类型的赋值进行的隐式转换，但是存在转换为 sql_variant 的隐式转换   。
@@ -269,17 +269,17 @@ Gail        Erickson      Ms.    *
   
 转换小数位数不同的数据类型时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 有时会返回截断后的结果值，有时会返回舍入值。 此表显示了此行为。
   
-|From|若要|行为|  
+|源|目标|行为|  
 |---|---|---|
-|**numeric**|**numeric**|舍入|  
-|**numeric**|**int**|截断|  
-|**numeric**|**money**|舍入|  
-|**money**|**int**|舍入|  
-|**money**|**numeric**|舍入|  
-|**float**|**int**|截断|  
-|**float**|**numeric**|舍入<br /><br /> 如果将使用科学记数法的 float 值转换为 decimal 或 numeric 时，转换会限制为只有 17 位精度的值    。 精度高于 17 的任何值都将舍入为零。|  
-|**float**|**datetime**|舍入|  
-|**datetime**|**int**|舍入|  
+|**numeric**|**numeric**|Round|  
+|**numeric**|**int**|Truncate|  
+|**numeric**|**money**|Round|  
+|**money**|**int**|Round|  
+|**money**|**numeric**|Round|  
+|**float**|**int**|Truncate|  
+|**float**|**numeric**|Round<br /><br /> 如果将使用科学记数法的 float 值转换为 decimal 或 numeric 时，转换会限制为只有 17 位精度的值    。 精度高于 17 的任何值都将舍入为零。|  
+|**float**|**datetime**|Round|  
+|**datetime**|**int**|Round|  
   
 例如，10.6496 和 -10.6496 可能会被截断或者在转换到 int 或 numeric 类型期间被舍入   ：
   

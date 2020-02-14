@@ -21,10 +21,10 @@ ms.assetid: d73c28ee-3972-4afd-af8d-ebbbd9e50793
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: b858cc4930cdfe9792e08c991c3ebdf8f319d0f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948225"
 ---
 # <a name="updatetext-transact-sql"></a>UPDATETEXT (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67948225"
 > [!IMPORTANT]
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]请改用大值数据类型和 [UPDATE](../../t-sql/queries/update-transact-sql.md) 语句的 .WRITE 子句  。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -56,7 +56,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
 > [!IMPORTANT]  
 >  我们建议不要在基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的应用程序中使用 BULK 选项。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中可能会更改或删除该选项。  
   
- table_name .   dest_column_name   
+ table_name   。 dest_column_name   
  要更新的表以及 text、ntext 或 image 列的名称    。 表名和列名必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。 可以选择是否指定数据库名和所有者名。  
   
  dest_text_ptr   
@@ -83,7 +83,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
 > [!NOTE]  
 >  scr_text_ptr 值不能与 dest_text_ptr 值相同   。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  新插入的数据可以是单个 inserted_data 常量、表名、列名或文本指针  。  
   
 |Update 操作|UPDATETEXT 参数|  

@@ -15,10 +15,10 @@ ms.assetid: 9d5e1bb1-adda-4985-80f6-56e14d5d295c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0de4fe433a1f34b49dbfb12082759c954e87a7a4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298567"
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>“添加 Analysis Services 连接管理器”对话框 UI 参考
@@ -26,7 +26,7 @@ ms.locfileid: "71298567"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  可以使用 **“添加 Analysis Services 连接管理器”** 对话框，创建与运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的服务器之间的连接或编辑连接属性。  
+  可以使用“添加 Analysis Services 连接管理器”对话框  ，创建与运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的服务器之间的连接或编辑连接属性。  
   
  若要了解有关 Analysis Services 连接管理器的详细信息，请参阅 [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md)。  
   

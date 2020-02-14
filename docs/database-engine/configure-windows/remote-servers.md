@@ -17,10 +17,10 @@ ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2b3c4937d87d166d87711389be7acd0c4ae0f8ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67938184"
 ---
 # <a name="remote-servers"></a>远程服务器
@@ -36,7 +36,7 @@ ms.locfileid: "67938184"
   
  大多数情况下，不需要为远程服务器设置配置选项。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组将在本地计算机和远程计算机上设置默认值以允许远程服务器连接。  
   
- 为了能够进行远程访问，必须在本地和远程计算机上将 **remote access** 配置选项设置为 1。 （这是默认设置。）  **remote access** 控制远程服务器的登录。 可以通过使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] **sp_configure** 存储过程或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]重置此配置选项。 若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中设置选项，请在 **“服务器属性连接”** 页上，使用 **“允许远程连接到此服务器”** 。 若要访问“服务器属性连接”  页，请在对象资源管理器中右键单击服务器名称，再单击“属性”  。 在 **“服务器属性”** 页上，单击 **“连接”** 页。  
+ 为了能够进行远程访问，必须在本地和远程计算机上将 **remote access** 配置选项设置为 1。 （这是默认设置。）  **remote access** 控制远程服务器的登录。 可以通过使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] sp_configure 存储过程或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 来重置此配置选项  。 若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中设置选项，请在 **“服务器属性连接”** 页上，使用 **“允许远程连接到此服务器”** 。 若要访问“服务器属性连接”  页，请在对象资源管理器中右键单击服务器名称，再单击“属性”  。 在 **“服务器属性”** 页上，单击 **“连接”** 页。  
   
  在本地服务器中，您可以禁用远程服务器配置，以防止远程服务器中的用户对与其配对的本地服务器进行访问。  
   

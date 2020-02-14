@@ -13,10 +13,10 @@ ms.assetid: ae0b33dd-f44b-42df-b6f6-69861770ce10
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 50cf62449d789684324a25c4c0bd09bbe28ce28a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291709"
 ---
 # <a name="balanced-data-distributor-transformation"></a>平衡的数据分发服务器转换
@@ -28,7 +28,7 @@ ms.locfileid: "71291709"
   
  下图展示了一个使用 BDD 转换的简单示例。 在该示例中，BDD 转换从平面文件源的输入数据中每次挑选一个管道缓冲区并以循环方式将其向下发送至三个输出路径之一。 在 SQL Server Data Tools 中显示数据流任务属性的“属性”窗口中，可查看 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.DefaultBufferSize%2A>（管道缓冲区默认大小）和 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.DefaultBufferMaxRows%2A>（管道缓冲区默认最大行数）的值  。  
   
- ![平衡数据分发器](../../../integration-services/data-flow/transformations/media/balanceddatadistributor.JPG "Balanced Data Distributor")  
+ ![平衡数据分发器](../../../integration-services/data-flow/transformations/media/balanceddatadistributor.JPG "平衡的数据分发服务器")  
   
  平衡的数据分发服务器转换可在满足以下条件的方案中提升包的性能：  
   

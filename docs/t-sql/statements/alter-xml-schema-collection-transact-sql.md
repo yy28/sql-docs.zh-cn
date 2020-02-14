@@ -29,10 +29,10 @@ ms.assetid: e311c425-742a-4b0d-b847-8b974bf66d53
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2ae87d5c125ae3eac01013843c9fe2db183b9c1c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68055958"
 ---
 # <a name="alter-xml-schema-collection-transact-sql"></a>ALTER XML SCHEMA COLLECTION (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68055958"
 
   向现有 XML 架构集合中添加新架构组件。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -56,10 +56,10 @@ ALTER XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier ADD 'Schema Com
   sql_identifier  
  是 XML 架构集合的 SQL 标识符。  
   
- ' Schema Component '     
- 要插入的架构组件。  
+    “架构组件”  
+ 是要插入的架构组件。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  使用 ALTER XML SCHEMA COLLECTION 添加其命名空间尚不在 XML 架构集合中的新 XML 架构，或向已存在于该集合的命名空间中添加新组件。  
   
  以下示例将新的 \<element> 添加到集合 `MyColl` 的现有命名空间 `https://MySchema/test_xml_schema` 中。  

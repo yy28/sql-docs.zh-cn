@@ -11,10 +11,10 @@ ms.technology: linux
 helpviewer_keywords:
 - Linux, encrypted connections
 ms.openlocfilehash: 975a312988a7df4bdb4fb2858d7b0fcbe95cea33
-ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71016862"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>加密与 Linux 上 SQL Server 的连接
@@ -70,12 +70,12 @@ TLS 用于加密从客户端应用程序到 [!INCLUDE[ssNoVersion](../includes/s
         - **macOS**： 
            - 将证书复制到 ```/usr/local/etc/openssl/certs```
            - 运行以下命令获取哈希值：```/usr/local/Cellar/openssl/1.0.2l/openssl x509 -hash -in mssql.pem -noout```
-           - 将证书重命名为值。 例如： ```mv mssql.pem dc2dd900.0```。 确保 dc2dd900.0 在 ```/usr/local/etc/openssl/certs``` 中
+           - 将证书重命名为值。 例如：```mv mssql.pem dc2dd900.0```。 确保 dc2dd900.0 在 ```/usr/local/etc/openssl/certs``` 中
     
 -   **连接字符串示例** 
 
     - **[!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]**   
-  ![SSMS 连接对话框](media/sql-server-linux-encrypted-connections/ssms-encrypt-connection.png "SSMS 连接对话框")  
+  ![“SSMS 连接”对话框](media/sql-server-linux-encrypted-connections/ssms-encrypt-connection.png "“SSMS 连接”对话框")  
   
     - **SQLCMD** 
 

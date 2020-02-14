@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4a9ef3df75a54b6565b1d71c0a9e4557f752f95b
-ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68697495"
 ---
 # <a name="data-type-conversion-database-engine"></a>数据类型转换（数据库引擎）
@@ -56,7 +56,7 @@ CAST ( $157.27 AS VARCHAR(10) )
   
 以下图例显示了可对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统提供的数据类型执行的所有显式和隐式数据类型转换。 这些包括 xml、bigint 和sql_variant    。 不存在对 sql_variant 数据类型的赋值进行的隐式转换，但是存在转换为 sql_variant 的隐式转换   。
   
-![数据类型转换表](../../t-sql/data-types/media/lrdatahd.png "Data type conversion table")
+![数据类型转换表](../../t-sql/data-types/media/lrdatahd.png "数据类型转换表")
 
 虽然上面的图表说明了 SQL Server 中允许的所有显式和隐式转换，但并未指出转换的结果数据类型。 当 SQL Server 执行显式转换时，语句本身会确定结果数据类型。 对于隐式转换，赋值语句（例如设置变量的值或在列中插入值）将产生由变量声明或列定义所定义的数据类型。 对于比较运算符或其他表达式，结果数据类型取决于数据类型优先级的规则。
 
@@ -122,12 +122,12 @@ SELECT @notastring + '1'
   
 |SQL Server 数据类型|Visual Basic 数据类型|  
 |--------------------------|----------------------------|  
-|**char**、**varchar**、**text**、**nvarchar**、**ntext**|**String**|  
-|**decimal**、**numeric**|**String**|  
-|**bit**|**Boolean**|  
+|**char**、**varchar**、**text**、**nvarchar**、**ntext**|**字符串**|  
+|**decimal**、**numeric**|**字符串**|  
+|**bit**|**布尔值**|  
 |**binary**、**varbinary**、**image**|一维 Byte() 数组 |  
 |**int**|**Long**|  
-|**smallint**|**Integer**|  
+|**smallint**|**整数**|  
 |**tinyint**|**Byte**|  
 |**float**|**双精度**|  
 |**real**|**Single**|  
@@ -135,7 +135,7 @@ SELECT @notastring + '1'
 |**datetime**、**smalldatetime**|**Date**|  
 |设置为 NULL 的任何类型|Variant 设置为 Null |  
   
-除了 binary、varbinary 和 image 值以外，所有单个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 值都被转换为单个 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 值    。 这些值将被转换为 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中的一维 Byte() 数组  。 此数组的范围为 **Byte(** 0 to _length_ 1 **)** ，其中 *length* 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **binary**、**varbinary** 或 **image** 值中的字节数。
+除了 binary、varbinary 和 image 值以外，所有单个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 值都被转换为单个 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 值    。 这些值将被转换为 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中的一维 Byte() 数组  。 此数组的范围为 Byte( 0 to _length_ 1)，其中 length 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] binary、varbinary 或 image 值中的字节数       。
   
 以下是从 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 数据类型到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型的转换。
   

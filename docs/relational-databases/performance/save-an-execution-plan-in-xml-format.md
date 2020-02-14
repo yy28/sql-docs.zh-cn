@@ -18,10 +18,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8feec11884ae31e34cbc5497bf818991e59b39dd
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909787"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>以 XML 格式保存执行计划
@@ -51,7 +51,7 @@ ms.locfileid: "72909787"
      > [!NOTE] 
      > SHOWPLAN_XML 将会为查询生成编译时查询执行计划信息，但是不会执行查询。 这也称为估计的执行计划  。 STATISTICS XML 将会为查询生成运行时查询执行计划信息，而且会执行查询。 这也称为实际的执行计划  。  
   
-3.  执行查询。 例如：  
+3.  执行查询。 示例：  
   
     ```sql  
     USE AdventureWorks2012;  
@@ -68,7 +68,7 @@ ms.locfileid: "72909787"
   
 4.  在“结果”  窗格中，右键单击包含查询计划的“Microsoft SQL Server XML 显示计划”  ，然后单击“将结果另存为”  。  
   
-5.  在“保存 \<网格或文本> 结果”   对话框中的“保存类型”  框中，单击“所有文件(\*.\*)”  。  
+5.  在“保存 \<网格或文本> 结果”对话框中的“保存类型”框中，单击“所有文件(\*.\*)”     。  
   
 6.  在“文件名”框中，提供“\<名称>.sqlplan”格式的名称，然后单击“保存”    。  
 

@@ -11,10 +11,10 @@ ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: ca651634947e730df4ae4dda70999c7839521659
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67942807"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>内存优化表的持续性
@@ -82,7 +82,7 @@ ms.locfileid: "67942807"
   
  在下面的示例中，内存优化表文件组在时间戳 500 处具有四个数据和差异文件对，并且包含来自之前事务的数据。 例如，第一个数据文件中的行对应于时间戳大于 100 且小于等于 200 的事务，或者表示为 (100，200]。 考虑到标为已删除的行后，将第二个和第三个数据文件显示为完整程度小于 50%。 合并操作合并这两个 CFP 并且创建一个新 CFP，它包含时间戳大于 200 且小于等于 400 的事务，这是这两个 CFP 的合并后的范围。 您将看到另一个具有范围 (500, 600] 的 CFP，并且用于事务范围 (200, 400] 的非空差异文件显示，可与事务性活动（包括从源 CFP 删除更多行）同时完成合并操作。  
   
- ![关系图显示了内存优化表文件组](../../relational-databases/in-memory-oltp/media/storagediagram-hekaton.png "关系图显示了内存优化表文件组")  
+ ![图中显示了内存优化表文件组](../../relational-databases/in-memory-oltp/media/storagediagram-hekaton.png "图中显示了内存优化表文件组")  
   
  后台线程使用合并策略计算所有关闭的 CFP，然后启动一个或多个合并请求以便验证 CFP 的资格。 这些合并请求由脱机检查点线程处理。 将定期进行对合并策略的评估，并且在关闭检查点时也会进行评估。  
   
@@ -109,6 +109,6 @@ ms.locfileid: "67942807"
  你可以在日志备份后手动强制生成检查点，以便加快垃圾回收。 在生产方案中，作为备份策略的一部分进行的自动检查点和日志备份可使 CFP 无缝通过这些阶段，而无需任何手动干预。 垃圾回收进程的影响是，具有内存优化表的数据库与其在内存中的大小相比，可能具有更大的存储大小。 如果生成检查点和日志备份的操作未发生，则检查点文件的磁盘上占用将不断增长。  
   
 ## <a name="see-also"></a>另请参阅  
- [创建和管理用于内存优化的对象的存储](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
+ [创建和管理用于内存优化对象的存储](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

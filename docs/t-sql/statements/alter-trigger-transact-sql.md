@@ -22,18 +22,18 @@ ms.assetid: 2a99c7c1-ac2f-4637-aa7c-3d1bf514e500
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 5e8523831fd181c17bd8fcff1698d85f46c824e2
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983319"
 ---
 # <a name="alter-trigger-transact-sql"></a>ALTER TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  修改 CREATE TRIGGER 语句以前创建的 DML、DDL 或登录触发器的定义。 触发器是通过使用 CREATE TRIGGER 创建的。 这些触发器可以由 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句直接创建，也可以由程序集方法创建，这些方法在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行时 (CLR) 中创建并上传到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。 有关 ALTER TRIGGER 语句中使用的参数的详细信息，请参阅 [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)。  
+  修改 CREATE TRIGGER 语句以前创建的 DML、DDL 或登录触发器的定义。 触发器是通过使用 CREATE TRIGGER 创建的。 这些触发器可以由 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句直接创建，也可以由程序集方法创建，这些方法在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行时 (CLR) 中创建并上传到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 有关 ALTER TRIGGER 语句中使用的参数的详细信息，请参阅 [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -216,7 +216,7 @@ AS { sql_statement
   
  指定要与触发器绑定的程序集的方法。 该方法不能带有任何参数，并且必须返回空值。 class_name 必须是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符，并且它必须作为类存在于可见程序集中  。 该类不能为嵌套类。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  有关 ALTER TRIGGER 的详细信息，请参阅 [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md) 中的“备注”部分。  
   
 > [!NOTE]  

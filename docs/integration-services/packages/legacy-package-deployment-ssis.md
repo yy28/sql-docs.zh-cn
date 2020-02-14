@@ -32,10 +32,10 @@ ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6fc3a1e41edd95a8e1cf9b4489732cff7ac2852d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295819"
 ---
 # <a name="legacy-package-deployment-ssis"></a>早期包部署 (SSIS)
@@ -110,7 +110,7 @@ ms.locfileid: "71295819"
 ### <a name="package-configuration-types"></a>包配置类型  
  下表介绍了包配置的类型。  
   
-|类型|描述|  
+|类型|说明|  
 |----------|-----------------|  
 |XML 配置文件|XML 文件包含配置。 XML 文件可以包括多个配置。|  
 |环境变量|环境变量包含配置。|  
@@ -215,11 +215,11 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  在向导完成后，新的配置将添加到 **“包配置组织程序”** 对话框的配置列表中。  
   
-> **注意：** 包配置向导的最后一页“完成向导”列出了配置中的目标属性。 如果希望通过使用 **dtexec** 命令提示符实用工具在运行包时更新属性，则可以通过运行包配置向导来生成表示属性路径的字符串，然后将它们复制并粘贴到命令提示符窗口中，以便用于 **dtexec** 的设置选项。  
+> **注意：** 包配置向导的最后一页“完成向导”列出了配置中的目标属性。 如果希望通过使用 **dtexec** 命令提示符实用工具在运行包时更新属性，则可以通过运行包配置向导来生成表示属性路径的字符串，然后将它们复制并粘贴到命令提示符窗口中，以便用于 **dtexec**的设置选项。  
   
  下表介绍 **“包配置组织程序”** 对话框的配置列表中的各列。  
   
-|“列”|描述|  
+|列|说明|  
 |------------|-----------------|  
 |**配置名称**|配置的名称。|  
 |**配置类型**|配置类型。|  
@@ -235,7 +235,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 3.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中，单击 **“控制流”** 、 **“数据流”** 、 **“事件处理程序”** 或 **“包资源管理器”** 选项卡。  
   
-4.  在 **SSIS** 菜单上，单击“包配置”  。  
+4.  在 **SSIS** 菜单上，单击 **“包配置”** 。  
   
 5.  在 **“包配置组织程序”** 对话框中，选择 **“启用包配置”** ，再单击 **“添加”** 。  
   
@@ -251,7 +251,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 10. 查看 **“包配置组织程序”** 对话框中的配置。  
   
-11. 单击 **“关闭”** 。  
+11. 单击“关闭”  。  
 
 ## <a name="package-configurations-organizer"></a>“包配置组织程序”
   可以使用 **“包配置组织程序”** 对话框启用包配置，查看当前包的配置列表以及指定加载这些配置的首选顺序。  
@@ -283,7 +283,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **目标属性**  
  查看配置修改的属性的名称。 如果配置类型支持多个配置，则此列为空白。  
   
- **“添加”**  
+ **添加**  
  通过使用包配置向导来添加配置。  
   
  **编辑**  
@@ -321,7 +321,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **配置类型**  
  使用下列选项选择存储配置的源的类型：  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**XML 配置文件**|将配置存储为 XML 文件。 选择此值将显示 **“配置类型”** 部分中的动态选项。|  
 |**环境变量**|将配置存储在一个环境变量中。 选择此值将显示 **“配置类型”** 部分中的动态选项。|  
@@ -338,7 +338,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **直接指定配置设置**  
  用于直接指定设置。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**配置文件名**|键入向导生成的配置文件的路径。|  
 |**“浏览”**|使用 **“选择配置文件位置”** 对话框指定向导生成的配置文件的路径。 如果文件不存在，则向导将创建该文件。|  
@@ -346,7 +346,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **配置位置存储在一个环境变量中**  
  用于指定存储配置的环境变量。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**环境变量**|从列表中选择环境变量。|  
   
@@ -358,14 +358,14 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **直接指定配置设置**  
  用于直接指定设置。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**注册表项**|键入包含配置信息的注册表项。 格式为 \<registry key>。<br /><br /> 该注册表项必须已经存在于 HKEY_CURRENT_USER 中并且具有一个名为 Value 的值。 该值可以是 DWORD 或一个字符串。<br /><br /> 如果要使用不在 HKEY_CURRENT_USER 根目录下的注册表项，请使用 \<Registry key\registry key\\...> 格式来标识该项。|  
   
  **配置位置存储在一个环境变量中**  
  用于指定存储配置的环境变量。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**环境变量**|从列表中选择环境变量。|  
   
@@ -373,14 +373,14 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **直接指定配置设置**  
  用于直接指定设置。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**父变量**|指定父包中包含配置信息的变量。|  
   
  **配置位置存储在一个环境变量中**  
  用于指定存储配置的环境变量。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**环境变量**|从列表中选择环境变量。|  
   
@@ -388,16 +388,16 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **直接指定配置设置**  
  用于直接指定设置。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
-|**“连接”**|从列表中选择连接，或者单击 **“新建”** 创建新连接。|  
+|**Connection**|从列表中选择连接，或者单击 **“新建”** 创建新连接。|  
 |**配置表**|选择现有的表，或者单击 **“新建”** 编写用于创建新表的 SQL 语句。|  
 |**配置筛选器**|选择现有配置名称或者键入新名称。<br /><br /> 多个 SQL Server 配置可以存储在同一个表中，而且每个配置可以包括多个配置项。<br /><br /> 此用户定义值存储在表中以标识属于特定配置的配置项|  
   
  **配置位置存储在一个环境变量中**  
  用于指定存储配置的环境变量。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**环境变量**|从列表中选择环境变量。|  
   
@@ -482,7 +482,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  下表列出了部署实用工具属性。  
   
-|属性|描述|  
+|properties|说明|  
 |--------------|-----------------|  
 |AllowConfigurationChange|一个指定在部署过程中是否可以更新配置的值。|  
 |CreateDeploymentUtility|一个指定在生成项目时是否创建包部署实用工具的值。 此属性必须为 **True** 才能创建部署实用工具。|  
@@ -506,7 +506,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 6.  还可以通过修改 **DeploymentOutputPath** 属性来更新部署实用工具的位置。  
   
-7.  单击“确定”  。  
+7.  单击“确定”。   
   
 8.  在解决方案资源管理器中，右键单击该项目，再单击  “生成”。  
   
@@ -595,10 +595,10 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **路径**  
  查看要配置的属性的路径。  
   
- **类型**  
+ 类型   
  查看属性的数据类型。  
   
- **ReplTest1**  
+ **值**  
  指定配置的值。  
   
  **Next**  
@@ -613,7 +613,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Next**  
  安装包及其相关文件，并在完成安装后转到下一个向导页。  
   
- **“状态”**  
+ **Status**  
  显示包的安装进度。  
   
  **“完成”**  
@@ -670,10 +670,10 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Use Windows Authentication**  
  指定是否使用 Windows 身份验证来登录到服务器。 为了实现更好的安全性，建议使用 Windows 身份验证。  
   
- **使用 SQL Server 身份验证**  
+ **Use SQL Server Authentication**  
  指定包是否应使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证来登录到服务器。 如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，则必须提供用户名和密码。  
   
- **User name**  
+ **用户名**  
  指定用户名。  
   
  **密码**  

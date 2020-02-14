@@ -15,10 +15,10 @@ ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 63a80b7bebafdaf05c93a95b9ce5efd0dc89c316
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68001795"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>将 EXPLICIT 模式与 FOR XML 一起使用
@@ -52,7 +52,7 @@ ms.locfileid: "68001795"
   
 -   从此通用表生成 XML 的过程中，此表中的数据被垂直分区到列组中。 分组是根据 **Tag** 值和列名确定的。 在构造 XML 的过程中，处理逻辑为每行选择一组列，然后构造一个元素。 在此示例中，将应用以下规则：  
   
-    -   对于第一行中的 **Tag** 列值 1，名称中包括此相同标记号的列（**Customer!1!cid** 和 **Customer!1!name**）形成一组。 这些列用于处理行，您可能已经注意到所生成元素的形式为 <`Customer id=... name=...`>。 列名格式在本主题的后面部分进行介绍。  
+    -   对于第一行中的 **Tag** 列值 1，名称中包括此相同标记号的列（ **Customer!1!cid** 和 **Customer!1!name**）形成一组。 这些列用于处理行，您可能已经注意到所生成元素的形式为 <`Customer id=... name=...`>。 列名格式在本主题的后面部分进行介绍。  
   
     -   对于 **Tag** 列值为 2 的行，列 **Order!2!id** 和 **Order!2!date** 形成一组，然后该组用于构造元素（形式为 <`Order id=... date=... /`>）。  
   

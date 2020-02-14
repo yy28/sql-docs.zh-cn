@@ -18,10 +18,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a755ba9aa8915734768c56c096ea917a6e0c5564
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68021223"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>改进全文索引的性能
@@ -116,7 +116,7 @@ ms.locfileid: "68021223"
   
 |**变量**|**默认值**|  
 |------------------|-----------------------|  
-|*number_of_crawl_ranges*|CPU 的数目|  
+|*number_of_crawl_ranges*|CPU 数|  
 |*ism_size*|x86 计算机为 1 MB<br /><br /> x64 计算机为 4 MB、8 MB 或 16MB，具体取决于物理内存总量|  
 |*max_outstanding_isms*|x86 计算机为 25<br /><br /> x64 计算机为 5|  
   
@@ -140,7 +140,7 @@ ms.locfileid: "68021223"
 2.  500 MB 是系统中其他进程所需内存的估计值。 如果系统正在执行其他工作，请相应地增加此值。  
 3.  。*ism_size* 假定为 8 MB。  
   
- #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>例如：估计 fdhost.exe 的内存需求量  
+ #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>示例：估计 fdhost.exe 的内存需求量  
   
  此示例针对具有 8GM RAM 和 4 个双核处理器的 64 位计算机。 首先计算出 fdhost.exe 所需内存的估计值 -F  。 爬网范围数是 `8`。  
   
@@ -150,9 +150,9 @@ ms.locfileid: "68021223"
   
  `M = 8192-640-500=7052`  
   
- #### <a name="example-setting-max-server-memory"></a>例如：设置最大服务器内存  
+ #### <a name="example-setting-max-server-memory"></a>示例：设置最大服务器内存  
   
- 此示例使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 和 [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句将 **最大服务器内存** 设置为上一个示例中计算得到的 *M* 的值， `7052`：  
+ 此示例使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 和 [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句将“最大服务器内存”  设置为上一个示例中计算得到的 M  的值，`7052`：  
   
 ```  
 USE master;  
@@ -178,7 +178,7 @@ GO
   
      下表描述了这里需要了解的等待类型。  
   
-    |等待类型|描述|可能的解决方法|  
+    |等待类型|说明|可能的解决方法|  
     |---------------|-----------------|-------------------------|  
     |PAGEIO_LATCH_SH（_EX 或 _UP）|这可能表明存在 IO 瓶颈，在此情况下通常还会发现平均磁盘队列长度很高。|将全文索引移动到其他磁盘上的其他文件组可能有助于减少 IO 瓶颈。|  
     |PAGELATCH_EX（或 _UP）|这可能表明多个正在试图写入相同数据库文件的线程之间存在大量争用现象。|将文件添加到全文索引所在的文件组可能有助于减轻此类争用。|  

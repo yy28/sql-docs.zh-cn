@@ -28,10 +28,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2d3a0a9b09696959ba14c97c237e9e8ef9927db6
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982923"
 ---
 # <a name="is_member-transact-sql"></a>IS_MEMBER (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "73982923"
 
   指示当前用户是否为指定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 组或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库角色的成员。 Azure Active Directory 组不支持 IS_MEMBER 函数。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,25 +49,25 @@ IS_MEMBER ( { 'group' | 'role' } )
 ```  
   
 ## <a name="arguments"></a>参数  
- **'** group **'**   
+ **'** *group* **'**  
 **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本
   
  正在检查的 Windows 组的名称；必须采用格式 Domain\\Group   。 group 的数据类型为 sysname   。  
   
- 'role'     
+ **'** *role* **'**  
  要检查的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 角色的名称。 role 的数据类型为 sysname，它可以包括数据库固定角色或用户定义的角色，但不能包括服务器角色   。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  IS_MEMBER 返回以下值。  
   
-|返回值|描述|  
+|返回值|说明|  
 |------------------|-----------------|  
 |0|当前用户不是 group 或 role 的成员   。|  
 |1|当前用户是 group 或 role 的成员   。|  
-|NULL|group 或 role 无效   。 在由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名或使用应用程序角色的登录名查询时，对于 Windows 组返回 NULL。|  
+|Null|group 或 role 无效   。 在由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名或使用应用程序角色的登录名查询时，对于 Windows 组返回 NULL。|  
   
  IS_MEMBER 通过检查 Windows 创建的访问令牌来确定 Windows 组成员身份。 该访问标记不反映在用户连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例后对组成员身份进行的更改。 Windows 组成员身份不能由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 应用程序角色查询。  
   

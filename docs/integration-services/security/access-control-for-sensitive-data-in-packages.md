@@ -24,10 +24,10 @@ ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9cbb736b77cef9bcb87dfa7cac2cd5a33943ca66
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281977"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>对包中敏感数据的访问控制
@@ -61,7 +61,7 @@ ms.locfileid: "71281977"
 ## <a name="protection-levels"></a>保护级别  
  下表介绍 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的保护级别。 括号中的值是来自 <xref:Microsoft.SqlServer.Dts.Runtime.DTSProtectionLevel> 枚举的值。 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中处理包时，这些值出现在用来配置包属性的“属性”窗口中。  
   
-|保护级别|描述|  
+|保护级别|说明|  
 |----------------------|-----------------|  
 |不保存敏感数据 (**DontSaveSensitive**)|保存包时不保存包中敏感属性的值。 这种保护级别不进行加密，但它防止标记为敏感的属性随包一起保存，因此其他用户将无法使用这些敏感数据。 如果其他用户打开该包，敏感信息将被替换为空白，用户必须提供这些敏感信息。<br /><br /> 当与 **dtutil** 实用工具 (dtutil.exe) 一起使用时，此保护级别对应的值为 0。|  
 |使用密码加密所有数据 (**EncryptAllWithPassword**)|使用密码加密整个包。 使用用户在创建包或导出包时提供的密码加密包。 用户必须提供包密码，才能在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中打开包，或使用 **dtexec** 命令提示符实用工具运行包。 如果没有密码，用户将无法访问或运行包。<br /><br /> 当与 **dtutil** 实用工具一起使用时，此保护级别对应的值为 3。|  
@@ -142,7 +142,7 @@ ms.locfileid: "71281977"
  若要了解包安全性的要求和选项，参阅[安全性概述 (Integration Services)](../../integration-services/security/security-overview-integration-services.md) 可能有所帮助。  
   
 ### <a name="options"></a>选项  
- **Package protection level**  
+ **包保护级别**  
  从列表中选择保护级别。  
   
  **密码**  

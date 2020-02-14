@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: ac60bbbed5a14c0ec891b2794620c1492cdb0fb5
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: d84df39c307177dc2e7fcbab9c9cdf177b580a73
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768847"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286887"
 ---
 # <a name="add-publisher"></a>添加发布服务器
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   可以使用 **“添加发布服务器”** 对话框，将一个或多个发布服务器添加到复制监视器的左窗格中。 添加发布服务器之后，如果在左窗格中选择发布服务器，将在右窗格中显示该发布服务器的有关信息。  
   
 ## <a name="options"></a>选项  
- **“添加”**  
- 单击可选择要添加的发布服务器的类型，单击后将启动 **“连接到服务器”** 对话框。 相应的选项包括：  
+ **添加**  
+ 单击可选择要添加的发布服务器的类型，单击后将启动 **“连接到服务器”** 对话框。 选项包括：  
   
 -   **添加 SQL Server 发布服务器...**  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68768847"
   
 -   **添加 Oracle 发布服务器...**  
   
-     使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor associated with the Oracle Publisher using the **Connect to Server** dialog box.  
+     使用“连接到服务器”对话框连接到与 Oracle 发布服务器关联的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分发服务器  。  
   
 -   **指定分发服务器并添加其发布服务器...**  
   
@@ -65,7 +65,7 @@ ms.locfileid: "68768847"
  **在以下组中显示此发布服务器**  
  从该列表中选择某个发布服务器组。 该发布服务器显示在左窗格中此组下面。 通过组可以组织发布服务器，而且对复制的功能没有任何影响。 如果没有定义任何组或者希望创建新组，请单击 **“新建组”** 。  
   
- **“新建组”**  
+ **新建组**  
  单击此项可创建新的发布服务器组。 发布服务器组提供了在复制监视器内组织发布服务器的简便方法。 组既不影响数据的复制，也不影响复制拓扑中服务器之间的关系。  
   
 ## <a name="see-also"></a>另请参阅  

@@ -20,10 +20,10 @@ ms.assetid: 3241a44a-6958-415b-b8b7-2a1207c36ab3
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 478641bed0931fc78db3c7df166b860374034f90
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983263"
 ---
 # <a name="is_srvrolemember-transact-sql"></a>IS_SRVROLEMEMBER (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "73983263"
 
   指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名是否为指定服务器角色的成员。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,7 +41,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 ```  
   
 ## <a name="arguments"></a>参数  
- 'role'     
+ **'** *role* **'**  
  要检查的服务器角色的名称。 role 为 sysname   。  
   
  role 的有效值是用户定义的服务器角色和以下固定服务器角色  ：  
@@ -51,22 +51,22 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 |sysadmin|serveradmin|  
 |dbcreator|setupadmin|  
 |bulkadmin|securityadmin|  
-|diskadmin|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> public|  
+|diskadmin|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 公共|  
 |processadmin||  
   
- 'login'     
+ **'** *login* **'**  
  要检查的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录的名称。 login 的数据类型为 sysname，默认值为 NULL   。 如果未指定值，则结果视当前执行上下文而定。 如果此参数包含词 NULL，将返回 NULL。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
   
-|返回值|描述|  
+|返回值|说明|  
 |------------------|-----------------|  
 |0|login 不是 role 的成员   。<br /><br /> 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]中，此语句始终返回 0。|  
 |1|login 是 role 的成员   。|  
-|NULL|role 或 login 无效，或者没有查看角色成员身份的权限   。|  
+|Null|role 或 login 无效，或者没有查看角色成员身份的权限   。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  使用 IS_SRVROLEMEMBER 可确定当前用户是否可以执行需要服务器角色权限的操作。  
   
  如果为 login 指定了 Windows 登录名（例如 Contoso\Mary5），那么除非针对该登录名授予或拒绝了对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的直接访问权限，否则 IS_SRVROLEMEMBER 将返回 NULL    。  

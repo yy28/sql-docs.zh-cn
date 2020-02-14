@@ -14,10 +14,10 @@ ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8c2a89293e0cfa3428723a19e7ee2938fd7e8ca6
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294835"
 ---
 # <a name="change-data-capture-ssis"></a>变更数据捕获 (SSIS)
@@ -40,7 +40,7 @@ ms.locfileid: "71294835"
   
  管理员在数据库上启用变更数据捕获后，即可以创建执行变更数据增量加载的包。 下面的关系图显示的步骤用于创建一个从单表执行增量加载的包：  
   
- ![更改数据捕获包创建步骤](../../integration-services/change-data-capture/media/cdc-package-creation.gif "Change Data Capture Package Creation Steps")  
+ ![变更数据捕获包的创建步骤](../../integration-services/change-data-capture/media/cdc-package-creation.gif "变更数据捕获包的创建步骤")  
   
  如上面的关系图所示，创建执行变更数据的增量加载的包涉及下列步骤：  
   
@@ -97,7 +97,7 @@ ms.locfileid: "71294835"
  前面的关系图和步骤中介绍的过程涉及从单表进行增量加载。 当必须从多表执行增量加载时，整个过程是相同的。 但是，包的设计需要更改为满足多表处理。 有关如何创建从多个表执行增量加载的包的详细信息，请参阅 [执行多个表的增量加载](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)。  
   
 ## <a name="samples-of-change-data-capture-packages"></a>变更数据捕获包的示例  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供了两个示例来演示如何使用包中的变更数据捕获。 有关详细信息，请参阅以下主题：  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供了两个示例来演示如何使用包中的变更数据捕获。 有关详情，请参阅以下主题：  
   
 -   [Readme_Change Data Capture for Specified Interval Package Sample（关于指定间隔的变更数据捕获包示例的自述文件）](https://go.microsoft.com/fwlink/?LinkId=133507)  
   

@@ -13,10 +13,10 @@ ms.assetid: c08c26d8-5a62-487e-a4ee-4c529e4f9287
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2634dc520ef73065202588a6537ddd9fed120ce3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012678"
 ---
 # <a name="configure-the-default-language-server-configuration-option"></a>配置默认语言服务器配置选项
@@ -59,7 +59,7 @@ ms.locfileid: "68012678"
   
 2.  单击“高级”  选项卡。  
   
-3.  在“默认语言”  框中，选择 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 显示系统消息所用的语言。  
+3.  在“默认语言”框中，选择 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 显示系统消息所用的语言  。  
   
      默认语言为英语。  
   

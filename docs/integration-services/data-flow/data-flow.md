@@ -18,10 +18,10 @@ ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b252a53acd98a0c5b445166ffcf3fa4328dd646f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293143"
 ---
 # <a name="data-flow"></a>数据流
@@ -29,7 +29,7 @@ ms.locfileid: "71293143"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供 3 种不同类型的数据流组件：源、转换和目标。 源从数据存储区（如关系数据库中的表和视图、文件以及 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库）中提取数据。 转换修改、汇总和清除数据。 目标将数据加载到数据存储区，或创建内存中的数据集。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供三种不同类型的数据流组件：源、转换和目标。 源从数据存储区（如关系数据库中的表和视图、文件以及 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库）中提取数据。 转换修改、汇总和清除数据。 目标将数据加载到数据存储区，或创建内存中的数据集。  
   
 > [!NOTE]  
 >  在您使用自定义提供程序时，需要使用元数据列值更新 ProviderDescriptors.xml 文件。  
@@ -101,9 +101,9 @@ ms.locfileid: "71293143"
 ### <a name="sources-available-for-download"></a>可供下载的源  
  下表列出了可从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 网站下载的其他源。  
   
-|数据源|描述|  
+|源|说明|  
 |------------|-----------------|  
-|Oracle 源|Oracle 源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 的源组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 还包括连接管理器和目标。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle 和 Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384)。|  
+|Oracle 源|Oracle 源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 的源组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 还包括连接管理器和目标。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384)。|  
 |SAP BI 源|SAP BI 源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 的源组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 还包括连接管理器和目标。 有关详细信息，请访问下载页 [Microsoft SQL Server 功能包](https://go.microsoft.com/fwlink/?LinkID=746297)。|  
 |Teradata 源|Teradata 源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata 的源组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata 还包括连接管理器和目标。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384)。|  
   
@@ -140,7 +140,7 @@ ms.locfileid: "71293143"
   
  有关详细信息，请参阅 [Integration Services Transformations](../../integration-services/data-flow/transformations/integration-services-transformations.md)。  
   
-## <a name="destinations"></a>目标  
+## <a name="destinations"></a>Destinations  
  目标是将数据流中的数据写入特定数据存储区或创建内存中的数据集的数据流组件。 可以将数据加载到平面文件、处理分析对象以及为其他进程提供数据。 还可以通过访问数据库中的表和视图以及运行查询来提取数据。  
   
  数据流可以包含多个将数据加载到不同数据存储区的目标。  
@@ -162,11 +162,11 @@ ms.locfileid: "71293143"
 ### <a name="destinations-available-for-download"></a>可供下载的目标  
  下表列出了可从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 网站下载的其他目标。  
   
-|数据源|描述|  
+|源|说明|  
 |------------|-----------------|  
 |Oracle 目标|Oracle 目标是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 的目标组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 还包括连接管理器和源。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384)。|  
 |SAP BI 目标|SAP BI 目标是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 的目标组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 还包括连接管理器和源。 有关详细信息，请访问下载页 [Microsoft SQL Server 功能包](https://go.microsoft.com/fwlink/?LinkID=746297)。|  
-|Teradata 目标|Teradata 目标是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 的目标组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 还包括连接管理器和源。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle 和 Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384)。|  
+|Teradata 目标|Teradata 目标是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 的目标组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 还包括连接管理器和源。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384)。|  
   
  有关如何利用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 提高性能的演示，请参阅 [Microsoft Connector for Oracle by Attunity 的性能（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkID=210369)。  
   
@@ -184,7 +184,7 @@ ms.locfileid: "71293143"
 ### <a name="inputs"></a>输入  
  目标和转换具有输入。 输入包含一个或多个输入列，如果数据流组件已配置为使用外部列，则输入列可引用外部列。 输入可配置为监视和控制数据流：例如，可指定在出现错误时组件是应失败、忽略错误，还是将错误行重定向至错误输出。 还可为输入指派说明，或更新输入名称。 在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中，使用 **“高级编辑器”** 对话框对输入进行配置。 有关 **“高级编辑器”** 的详细信息，请参阅 [Integration Services User Interface](../../integration-services/integration-services-user-interface.md)。  
   
-### <a name="outputs"></a>输出  
+### <a name="outputs"></a>Outputs  
  源和转换始终具有输出。 输出包含一个或多个输出列，如果数据流组件已配置为使用外部列，则输出列可引用外部列。 可对输出进行配置以提供对数据的下游处理有用的信息。 例如，可指示输出是否已排序。 还可为输出提供说明或更新输出名称。 在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中，使用 **“高级编辑器”** 对话框对输出进行配置。  
   
 ### <a name="error-outputs"></a>错误输出  
@@ -192,7 +192,7 @@ ms.locfileid: "71293143"
   
  有关详细信息，请参阅 [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。  
   
-### <a name="columns"></a>“列”  
+### <a name="columns"></a>列  
  输入、输出和错误输出是列的集合。 每一列都可配置并且根据列类型（输入、输出或外部），[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会为列提供不同的属性。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供 3 种不同的列属性设置方法：编程方式、使用组件特定对话框，或使用“高级编辑器”  对话框。  
   
 ## <a name="paths"></a>路径  

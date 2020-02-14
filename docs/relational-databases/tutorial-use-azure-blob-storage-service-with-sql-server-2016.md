@@ -15,10 +15,10 @@ ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: aba8d7e3dc7aaf48523303ad6f63682c888b3c46
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095696"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>教程：将 Azure Blob 存储服务用于 SQL Server 2016
@@ -53,7 +53,7 @@ Microsoft Azure Blob 存储服务的 SQL Server 集成支持最初是 SQL Server
   
 可以使用 Azure PowerShell、Azure 存储 SDK、Azure REST API 或第三方实用程序创建存储访问策略和共享访问签名。 本教程演示了如何使用 Azure PowerShell 脚本来完成此任务。 该脚本使用资源管理器部署模型并创建以下新资源  
   
--   资源组 (Resource group)   
+-   资源组   
 -   存储帐户  
 -   Azure blob 容器   
 -   SAS 策略    
@@ -385,7 +385,7 @@ SQL Server 凭据是一个对象，用于存储连接到 SQL Server 以外资源
     SELECT COUNT (*) FROM AdventureWorks2016.Production.Location ;
     ```  
   
-5.  检查输出。 请注意，还原后，行计数为 18,389，介于日志备份 5 和 6 的行计数之间（你的行计数会有所变化）。  
+5.  查看输出。 请注意，还原后，行计数为 18,389，介于日志备份 5 和 6 的行计数之间（你的行计数会有所变化）。  
   
     ![18-thousand-rows.JPG](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/18-thousand-rows.png)
 
@@ -481,7 +481,7 @@ SQL Server 凭据是一个对象，用于存储连接到 SQL Server 以外资源
 ## <a name="see-also"></a>另请参阅
 
 [Microsoft Azure 中的 SQL Server 数据文件](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)  
-[Azure 中的数据库文件的文件快照备份](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
+[针对 Azure 中的数据库文件的文件快照备份](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
 [将 SQL Server 备份到 URL](../relational-databases/backup-restore/sql-server-backup-to-url.md) 
 [共享访问签名，第 1 部分：了解 SAS 模型](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
 [Create Container](https://msdn.microsoft.com/library/azure/dd179468.aspx)  
@@ -492,4 +492,4 @@ SQL Server 凭据是一个对象，用于存储连接到 SQL Server 以外资源
 [sys.credentials (Transact-SQL)](../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
 [sp_delete_backup (Transact-SQL)](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md)  
 [sys.fn_db_backup_file_snapshots (Transact-SQL)](../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)  
-[sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md)[Azure 中数据库文件的文件快照备份](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
+[sp_delete_backup_file_snapshot (Transact-SQL)](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) [Azure 中数据库文件的文件快照备份](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  

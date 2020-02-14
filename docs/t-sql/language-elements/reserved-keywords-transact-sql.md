@@ -19,16 +19,16 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cc0390a01bec10b58ed29d1824e8d0b482e78358
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68091776"
 ---
 # <a name="reserved-keywords-transact-sql"></a>保留关键字 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将保留关键字用于定义、操作和访问数据库。 保留关键字是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语言语法的一部分，用于分析和理解 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和批处理。 尽管在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 脚本中使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 保留关键字作为标识符和对象名在语法上是可行的，但规定只能使用分隔标识符。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将保留关键字用于定义、操作和访问数据库。 保留关键字是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语言语法的一部分，用于分析和理解 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和批处理。 尽管在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 脚本中使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 保留关键字作为标识符和对象名在语法上是可行的，但规定只能使用分隔标识符。  
   
  下表列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Azure SQL 数据仓库保留关键字。  
   
@@ -41,8 +41,8 @@ ms.locfileid: "68091776"
 |ANY|FOR|READTEXT|  
 |AS|FOREIGN|RECONFIGURE|  
 |ASC|FREETEXT|REFERENCES|  
-|AUTHORIZATION|FREETEXTTABLE|Replication|  
-|BACKUP|FROM|RESTORE|  
+|AUTHORIZATION|FREETEXTTABLE|复制|  
+|备份|FROM|RESTORE|  
 |BEGIN|FULL|RESTRICT|  
 |BETWEEN|FUNCTION|RETURN|  
 |BREAK|GOTO|REVERT|  
@@ -57,12 +57,12 @@ ms.locfileid: "68091776"
 |CLUSTERED|IN|SECURITYAUDIT|  
 |COALESCE|INDEX|SELECT|  
 |COLLATE|INNER|SEMANTICKEYPHRASETABLE|  
-|COLUMN|Insert|SEMANTICSIMILARITYDETAILSTABLE|  
+|COLUMN|INSERT|SEMANTICSIMILARITYDETAILSTABLE|  
 |COMMIT|INTERSECT|SEMANTICSIMILARITYTABLE|  
 |COMPUTE|INTO|SESSION_USER|  
 |CONSTRAINT|IS|SET|  
 |CONTAINS|JOIN|SETUSER|  
-|CONTAINSTABLE|KEY|SHUTDOWN|  
+|CONTAINSTABLE|KEY|关机|  
 |CONTINUE|KILL|SOME|  
 |CONVERT|LEFT|STATISTICS|  
 |CREATE|LIKE|SYSTEM_USER|  
@@ -73,18 +73,18 @@ ms.locfileid: "68091776"
 |CURRENT_TIMESTAMP|NOCHECK|TO|  
 |CURRENT_USER|NONCLUSTERED|返回页首|  
 |CURSOR|NOT|TRAN|  
-|DATABASE|NULL|TRANSACTION|  
+|DATABASE|Null|TRANSACTION|  
 |DBCC|NULLIF|TRIGGER|  
 |DEALLOCATE|OF|TRUNCATE|  
 |DECLARE|OFF|TRY_CONVERT|  
 |DEFAULT|OFFSETS|TSEQUAL|  
-|删除|ON|UNION|  
+|DELETE|ON|UNION|  
 |DENY|OPEN|UNIQUE|  
 |DESC|OPENDATASOURCE|UNPIVOT|  
 |DISK|OPENQUERY|UPDATE|  
 |DISTINCT|OPENROWSET|UPDATETEXT|  
 |DISTRIBUTED|OPENXML|USE|  
-|DOUBLE|OPTION|User|  
+|DOUBLE|OPTION|USER|  
 |DROP|或|VALUES|  
 |DUMP|ORDER|VARYING|  
 |ELSE|OUTER|VIEW|  
@@ -92,16 +92,16 @@ ms.locfileid: "68091776"
 |ERRLVL|PERCENT|WHEN|  
 |ESCAPE|PIVOT|WHERE|  
 |EXCEPT|PLAN|WHILE|  
-|EXEC|PRECISION|替换为|  
+|EXEC|PRECISION|WITH|  
 |在运行 CREATE 语句前执行|PRIMARY|WITHIN GROUP|  
 |EXISTS|PRINT|WRITETEXT|  
 |EXIT|PROC||
   
-下表列出了 Azure SQL 数据仓库专用的保留关键字。
+下表列出了 Azure SQL 数据仓库  专用的保留关键字。
 
 |||
 |-|-|
-|LABEL||
+|LABEL ||
   
  此外，ISO 标准定义了保留关键字列表。 不要使用 ISO 保留关键字作为对象名和标识符。 ODBC 保留关键字列表（如下表所示）与 ISO 保留关键字列表相同。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "68091776"
 |**ABSOLUTE**|**EXEC**|**OVERLAPS**|  
 |**ACTION**|**EXECUTE**|**PAD**|  
 |**ADA**|**EXISTS**|**PARTIAL**|  
-|**ADD**|EXTERNAL|**PASCAL**|  
+|**ADD**|EXTERNAL |**PASCAL**|  
 |**ALL**|**EXTRACT**|**POSITION**|  
 |**ALLOCATE**|**FALSE**|**PRECISION**|  
 |**ALTER**|**FETCH**|**PREPARE**|  
@@ -139,7 +139,7 @@ ms.locfileid: "68091776"
 |**BIT_LENGTH**|**GRANT**|**RIGHT**|  
 |**BOTH**|**GROUP**|**ROLLBACK**|  
 |**BY**|**HAVING**|**ROWS**|  
-|**CASCADE**|HOUR|**SCHEMA**|  
+|**CASCADE**|HOUR |**SCHEMA**|  
 |**CASCADED**|**IDENTITY**|**SCROLL**|  
 |**CASE**|**IMMEDIATE**|**SECOND**|  
 |**CAST**|**IN**|**SECTION**|  
@@ -165,18 +165,18 @@ ms.locfileid: "68091776"
 |**COUNT**|**LEADING**|**THEN**|  
 |**CREATE**|**LEFT**|**TIME**|  
 |**CROSS**|**LEVEL**|**TIMESTAMP**|  
-|**CURRENT**|**LIKE**|TIMEZONE_HOUR|  
-|**CURRENT_DATE**|**LOCAL**|TIMEZONE_MINUTE|  
-|**CURRENT_TIME**|**LOWER**|TO|  
+|**CURRENT**|**LIKE**|TIMEZONE_HOUR |  
+|**CURRENT_DATE**|**LOCAL**|TIMEZONE_MINUTE |  
+|**CURRENT_TIME**|**LOWER**|TO |  
 |**CURRENT_TIMESTAMP**|**MATCH**|**TRAILING**|  
 |**CURRENT_USER**|**MAX**|**TRANSACTION**|  
 |**CURSOR**|**MIN**|**TRANSLATE**|  
-|**DATE**|MINUTE|**TRANSLATION**|  
+|**DATE**|MINUTE |**TRANSLATION**|  
 |**DAY**|**MODULE**|**TRIM**|  
 |**DEALLOCATE**|**MONTH**|**TRUE**|  
 |**DEC**|**NAMES**|**UNION**|  
 |**DECIMAL**|**NATIONAL**|**UNIQUE**|  
-|**DECLARE**|**NATURAL**|UNKNOWN|  
+|**DECLARE**|**NATURAL**|UNKNOWN |  
 |**DEFAULT**|**NCHAR**|**UPDATE**|  
 |**DEFERRABLE**|**NEXT**|**UPPER**|  
 |**DEFERRED**|**NO**|**USAGE**|  
@@ -212,7 +212,7 @@ ms.locfileid: "68091776"
 |ARE|INOUT|ROW|  
 |ARRAY|INPUT|ROWS|  
 |ASENSITIVE|INT|SAVEPOINT|  
-|ASSERTION|整数|SCROLL|  
+|ASSERTION|INTEGER|SCROLL|  
 |ASYMMETRIC|INTERSECTION|SCOPE|  
 |AT|INTERVAL|SEARCH|  
 |ATOMIC|ISOLATION|SECOND|  
@@ -240,13 +240,13 @@ ms.locfileid: "68091776"
 |CONNECT|MODIFIES|STRUCTURE|  
 |CONNECTION|MODIFY|SUBMULTISET|  
 |CONSTRAINTS|MODULE|SUBSTRING_REGEX|  
-|CONSTRUCTOR|MONTH|SYMMETRIC|  
+|CONSTRUCTOR|月|SYMMETRIC|  
 |CORR|MULTISET|SYSTEM|  
 |CORRESPONDING|NAMES|TEMPORARY|  
 |COVAR_POP|NATURAL|TERMINATE|  
 |COVAR_SAMP|NCHAR|THAN|  
 |CUBE|NCLOB|TIME|  
-|CUME_DIST|NEW|timestamp|  
+|CUME_DIST|新增功能|TIMESTAMP|  
 |CURRENT_CATALOG|NEXT|TIMEZONE_HOUR|  
 |CURRENT_DEFAULT_TRANSFORM_GROUP|是|TIMEZONE_MINUTE|  
 |CURRENT_PATH|无|TRAILING|  
@@ -260,7 +260,7 @@ ms.locfileid: "68091776"
 |DEC|ORDINALITY|UNNEST|  
 |DECIMAL|OUT|USAGE|  
 |DEFERRABLE|OVERLAY|USING|  
-|DEFERRED|OUTPUT|Value|  
+|DEFERRED|OUTPUT|值|  
 |DEPTH|PAD|VAR_POP|  
 |DEREF|参数|VAR_SAMP|  
 |DESCRIBE|PARAMETERS|VARCHAR|  
@@ -291,7 +291,7 @@ ms.locfileid: "68091776"
 |GET|REGR_R2|XMLTABLE|  
 |GLOBAL|REGR_SLOPE|XMLTEXT|  
 |GO|REGR_SXX|XMLVALIDATE|  
-|GROUPING|REGR_SXY|YEAR|  
+|GROUPING|REGR_SXY|年|  
 |HOLD|REGR_SYY|ZONE|  
   
 ## <a name="see-also"></a>另请参阅  

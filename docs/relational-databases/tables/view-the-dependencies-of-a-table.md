@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4575c9cbc20faf6afa03201645b736a13325e66b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140304"
 ---
 # <a name="view-the-dependencies-of-a-table"></a>查看表的依赖关系
@@ -55,7 +55,7 @@ ms.locfileid: "68140304"
   
 2.  右键单击某个表，然后单击“查看依赖关系”  。  
   
-3.  在“对象依赖关系  _\<对象名称\>_ ”对话框中，选择“依赖于 _\<对象名称\>_ 的对象”  或“ _\<对象名称\>_ 依赖的对象”   。  
+3.  在“对象依赖关系 \<对象名称\>”对话框中，选择“依赖于 \<对象名称\> 的对象”，或“\<对象名称\> 依赖的对象”        。  
   
 4.  在 **“依赖关系”** 网格中选择一个对象。 对象类型（如“触发器”或“存储过程”）显示在“类型”  框中。  
   

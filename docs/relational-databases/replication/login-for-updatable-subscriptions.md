@@ -13,10 +13,10 @@ ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3bdb3585647e64ad1a175900263628b607eb0041
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710359"
 ---
 # <a name="login-for-updatable-subscriptions"></a>可更新订阅的登录名
@@ -41,19 +41,19 @@ ms.locfileid: "71710359"
  **创建使用以下 SQL Server 身份验证登录名进行连接的链接服务器：**  
  复制使用在 **“登录名”** 和 **“密码”** 字段中指定的凭据创建链接服务器。  
   
- **“登录名”**  
+ **登录**  
  输入仅具有本主题中所描述权限的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
   
- **“密码”**  
+ **密码**  
  为 **“登录名”** 中指定的登录名输入一个强密码。  
     
  **使用您指定的链接服务器或远程服务器。**  
  此选项需要使用您所定义的链接服务器或远程服务器。 有关详细信息，请参阅[链接服务器（数据库引擎）](../../relational-databases/linked-servers/linked-servers-database-engine.md)和[远程服务器](../../database-engine/configure-windows/remote-servers.md)。 请确保用于链接服务器或远程服务器的登录名具有强密码，并且仅具有本主题中描述的权限。  
   
 ## <a name="see-also"></a>另请参阅  
- [创建事务发布的可更新订阅](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
+ [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
  [查看和修改复制安全设置](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
- [事务发布的可更新订阅](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
+ [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [订阅发布](../../relational-databases/replication/subscribe-to-publications.md)  
   
   

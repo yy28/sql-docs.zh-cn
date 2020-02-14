@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 5dde30d826d5b6662a4f488aed7c3a1f21dd00b2
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: ab4bb319460e3666c638b40a63b5676b81048dd1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908423"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76284729"
 ---
 # <a name="create-a-pull-subscription"></a>创建请求订阅
 
@@ -65,7 +65,7 @@ Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation de
   
 #### <a name="to-create-a-pull-subscription-from-the-publisher"></a>从发布服务器创建请求订阅  
   
-1.  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中连接到发布服务器，然后展开服务器节点。  
+1.  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中连接到发布服务器，然后展开服务器节点。  
   
 2.  展开 **“复制”** 文件夹，再展开 **“本地发布”** 文件夹。  
   
@@ -285,7 +285,7 @@ GO
   
 5.  如果订阅数据库不存在，则使用 <xref:Microsoft.SqlServer.Management.Smo.Database> 类创建该数据库。 有关详细信息，请参阅[创建、更改和删除数据库](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md)。  
   
-6.  创建 <xref:Microsoft.SqlServer.Replication.TransPullSubscription> 类的实例。  
+6.  创建的 <xref:Microsoft.SqlServer.Replication.TransPullSubscription> 类的实例。  
   
 7.  设置下列订阅属性：  
   
@@ -307,7 +307,7 @@ GO
     -   （可选） **\@value** 指定为 <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> 值，用于创建用来同步订阅的代理作业。 如果您指定了 **false** （默认值），则只能以编程的方式同步订阅，如果您通过 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> 属性访问该对象，则必须指定 <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizationAgent%2A> 的其他属性。 有关详细信息，请参阅 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)。  
   
         > [!NOTE]  
-        >  并不是所有版本的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都提供 SQL Server 代理。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。 当您将 Express Edition 订阅服务器的值指定为 **true** 时，便不会创建代理作业。 但是，与订阅相关的重要元数据存储在订阅服务器中。  
+        >  并不是所有版本的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都提供 SQL Server 代理。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。 当您将 Express Edition 订阅服务器的值指定为 **true** 时，便不会创建代理作业。 但是，与订阅相关的重要元数据存储在订阅服务器中。  
   
     -   （可选）在使用 SQL Server 身份验证连接到分发服务器时设置 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 的 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 和 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> 或 <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> 字段。  
   
@@ -327,7 +327,7 @@ GO
   
 5.  如果订阅数据库不存在，则使用 <xref:Microsoft.SqlServer.Management.Smo.Database> 类创建该数据库。 有关详细信息，请参阅[创建、更改和删除数据库](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md)。  
   
-6.  创建 <xref:Microsoft.SqlServer.Replication.MergePullSubscription> 类的实例。  
+6.  创建的 <xref:Microsoft.SqlServer.Replication.MergePullSubscription> 类的实例。  
   
 7.  设置下列订阅属性：  
   

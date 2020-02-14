@@ -13,10 +13,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 81a3e6268b74c6aeb4a3fc7ea7c492133abf372d
-ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72930275"
 ---
 # <a name="full-text-search"></a>全文搜索
@@ -79,7 +79,7 @@ ms.locfileid: "72930275"
  有关详细信息，请参阅 [使用全文搜索查询](../../relational-databases/search/query-with-full-text-search.md)。  
   
 ##  <a name="like"></a> 全文搜索查询与 LIKE 谓词的对比
- 与全文搜索不同， [LIKE](../../t-sql/language-elements/like-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 谓词仅对字符模式有效。 另外，不能使用 LIKE 谓词来查询格式化的二进制数据。 此外，对大量非结构化的文本数据执行 LIKE 查询要比对相同数据执行同样的全文查询慢得多。 对数百万行文本数据进行的 LIKE 查询可能需要几分钟的时间才能返回结果；而对于同样的数据，全文查询只需要几秒甚至更少的时间，具体取决于返回的行数。  
+ 与全文搜索不同，[LIKE](../../t-sql/language-elements/like-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 谓词仅对字符模式有效。 另外，不能使用 LIKE 谓词来查询格式化的二进制数据。 此外，对大量非结构化的文本数据执行 LIKE 查询要比对相同数据执行同样的全文查询慢得多。 对数百万行文本数据进行的 LIKE 查询可能需要几分钟的时间才能返回结果；而对于同样的数据，全文查询只需要几秒甚至更少的时间，具体取决于返回的行数。  
   
 ##  <a name="architecture"></a> 全文搜索体系结构
  全文搜索体系结构包括以下进程：  

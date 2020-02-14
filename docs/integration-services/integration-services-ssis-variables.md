@@ -19,10 +19,10 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 973e5e1449205d5e72abfa03068db3c8c3e98f87
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296154"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services (SSIS) 变量
@@ -98,8 +98,8 @@ ms.locfileid: "71296154"
  **名称**    
  指定变量名称。  
   
- **命名空间**  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了两个命名空间： **User** 和 **System**。 默认情况下，自定义变量位于 **User** 命名空间中，系统变量位于 **System** 命名空间中。 你可以为用户定义变量创建其他命名空间，并可以更改 **User** 命名空间的名称，但不能更改 **System** 命名空间的名称，也不能向 **System** 命名空间添加变量或将系统变量分配给其他命名空间。  
+ **Namespace**  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了两个命名空间：User 和 System   。 默认情况下，自定义变量位于 **User** 命名空间中，系统变量位于 **System** 命名空间中。 你可以为用户定义变量创建其他命名空间，并可以更改 **User** 命名空间的名称，但不能更改 **System** 命名空间的名称，也不能向 **System** 命名空间添加变量或将系统变量分配给其他命名空间。  
   
 **RaiseChangedEvent**  
  将此属性设置为 **True**时，变量值的改变将会引发 **OnVariableValueChanged** 事件。  
@@ -158,7 +158,7 @@ ms.locfileid: "71296154"
   
  **数据流表达式** ：在派生列转换和有条件拆分转换用于填充列的表达式中使用变量来提供值，或将数据行定向到不同的转换输出中。 例如，表达式 `@varSalutation + LastName`连接 `VarSalutation` 变量和 `LastName` 列中的值。 表达式 `Income < @HighIncome`将 `Income` 列值小于 `HighIncome` 变量值的数据行定向到一个输出。 有关详细信息，请参阅 [派生列转换](../integration-services/data-flow/transformations/derived-column-transformation.md)、[有条件拆分转换](../integration-services/data-flow/transformations/conditional-split-transformation.md)和 [Integration Services (SSIS) 表达式](../integration-services/expressions/integration-services-ssis-expressions.md)。  
   
- **优先约束表达式** ：提供要在优先约束中用来确定受约束的可执行文件是否运行的值。 这些表达式可以和执行结果（成功、失败、完成）一起使用，也可代替执行结果。 例如，如果表达式 `@varMax > @varMin`的计算结果为 **true**，则运行可执行文件。 有关详细信息，请参阅[将表达式添加到优先约束](https://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1)。  
+ **优先约束表达式** ：提供要在优先约束中用来确定受约束的可执行文件是否运行的值。 这些表达式可以和执行结果（成功、失败、完成）一起使用，也可代替执行结果。 例如，如果表达式 `@varMax > @varMin`的计算结果为 **true**，则运行可执行文件。 有关详细信息，请参阅 [将表达式添加到优先约束](https://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1)。  
   
  **参数和返回代码** ：为输入参数提供值，或存储输出参数和返回代码的值。 可通过将变量映射到参数和返回值来执行上述操作。 例如，如果将变量 `varProductId` 设置为 23 并运行 SQL 语句 `SELECT * from Production.Product WHERE ProductID = ?`，查询将检索 `ProductID` 为 23 的产品。 有关详细信息，请参阅 [执行 SQL 任务](../integration-services/control-flow/execute-sql-task.md) 和 [执行 SQL 任务中的参数和返回代码](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663)。  
   
@@ -188,7 +188,7 @@ ms.locfileid: "71296154"
   
 6.  也可以单击 **“网格选项”** 图标，选择要在 **“变量网格选项”** 对话框中显示的其他列，然后单击 **“确定”** 。  
   
-7.  或者，设置变量属性。 有关详细信息，请参阅 [设置用户定义变量的属性](https://msdn.microsoft.com/library/f98ddbec-f668-4dba-a768-44ac3ae0536f)。  
+7.  或者，设置变量属性。 有关详细信息，请参阅 [设置用户定义变量的属性](https://msdn.microsoft.com/library/f98ddbec-f668-4dba-a768-44ac3ae0536f)定义。  
   
 8.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
 
@@ -208,7 +208,7 @@ ms.locfileid: "71296154"
  **值类型**  
  选择数据类型。  
   
- **ReplTest1**  
+ **值**  
  键入值。 该值必须与 **“值类型”** 选项中指定的数据类型相符。  
   
  **只读**  

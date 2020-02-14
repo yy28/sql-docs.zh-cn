@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ab40ebb4935616ff8960c3348756e36d45203c03
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68769548"
 ---
 # <a name="snapshot-agent-security"></a>快照代理安全性
@@ -45,7 +45,7 @@ ms.locfileid: "68769548"
   
 -   对快照共享具有写权限。  
   
-  和“确认密码”   
+ **“密码”** 和 **“确认密码”**  
  输入 Windows 帐户的密码。  
   
  **连接到发布服务器**  

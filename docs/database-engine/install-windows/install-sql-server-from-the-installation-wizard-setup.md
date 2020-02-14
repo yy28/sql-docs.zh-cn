@@ -14,12 +14,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c183b1830bc5625171cfbb3372b0dbbb6c99e236
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 9dc0d760bd7fd6a89d9829fa5e883ef1ad9b59b7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75259025"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76934193"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>使用安装向导安装 SQL Server（安装程序）
 
@@ -67,9 +67,9 @@ Microsoft 已发现，作为 SQL Server 2016 和 2017 系统必备组件安装�
    若要继续操作，请选择“下一步”  。
 
 1. 在“许可条款”  页中，审阅许可协议。 如果同意，请选中“我接受许可条款”  复选框，再选择“下一步”  。  
-
-   >[!NOTE]
-   > SQL Server 传输有关安装体验的信息，以及其他使用情况和性能数据，以帮助 Microsoft 改进产品。 若要详细了解 SQL Server 数据处理和隐私控制，请参阅[隐私声明](https://privacy.microsoft.com/privacystatement)和[将 SQL Server 配置为向 Microsoft 发送反馈](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016)。
+    
+   > [!NOTE]
+   > SQL Server 传输有关安装体验的信息，以及其他使用情况和性能数据，以帮助 Microsoft 改进产品。 若要详细了解 SQL Server 数据处理和隐私控制，请参阅[隐私声明](https://privacy.microsoft.com/privacystatement)和[将 SQL Server 配置为向 Microsoft 发送反馈](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback)。
 
 1. 在“全局规则”  页中，如果没有规则错误，安装程序会自动跳转到“产品更新”  页。  
   
@@ -227,15 +227,17 @@ Microsoft 已发现，作为 SQL Server 2016 和 2017 系统必备组件安装�
   
 1. 安装向导将运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装中心。 若要新建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装，请依次选择左侧导航区域中的“安装”  和“新建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 独立安装或向现有安装添加功能”  。  
 
-1. 在“产品密钥”  页中，选择选项来指明是要安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 免费版本，还是要安装有 PID 密钥的生产版本。 有关详细信息，请参阅 [SQL Server 2017 的各版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。  
+1. 在“产品密钥”  页中，选择选项来指明是要安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 免费版本，还是要安装有 PID 密钥的生产版本。 有关详细信息，请参阅 [SQL Server 2017 的各版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-version-15.md)。  
   
    若要继续操作，请选择“下一步”  。
-
   
 1. 在“许可条款”  页中，审阅许可协议。 如果同意，请选中“我接受许可条款和[隐私声明](https://privacy.microsoft.com/privacystatement)”  复选框，再选择“下一步”  。  
 
-   >[!NOTE]
-   > SQL Server 传输有关安装体验的信息，以及其他使用情况和性能数据，以帮助 Microsoft 改进产品。 若要详细了解 SQL Server 数据处理和隐私控制，请参阅[隐私声明](https://privacy.microsoft.com/privacystatement)和[将 SQL Server 配置为向 Microsoft 发送反馈](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016)。
+   > [!NOTE]
+   > 如果输入了企业服务器/CAL 许可证产品密钥，且计算机上有 20 多个物理内核，或者在启用超线程时有 40 个逻辑内核，则安装过程中会显示警告。 要继续安装，请选择“选中此框确认此限制或单击‘返回/取消’输入支持操作系统最大处理器数的企业内核产品许可证”复选框，或者单击“返回”并输入支持操作系统最大处理器数的许可证密钥   。
+
+   > [!NOTE]
+   > SQL Server 传输有关安装体验的信息，以及其他使用情况和性能数据，以帮助 Microsoft 改进产品。 若要详细了解 SQL Server 数据处理和隐私控制，请参阅[隐私声明](https://privacy.microsoft.com/privacystatement)和[将 SQL Server 配置为向 Microsoft 发送反馈](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback)。
 
 1. 在“全局规则”  页中，如果没有规则错误，安装程序会自动跳转到“产品更新”  页。  
   

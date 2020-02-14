@@ -16,10 +16,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 349e00b7734ed8e8176585c55018b7565649cc1f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903825"
 ---
 # <a name="get-started-with-full-text-search"></a>全文搜索入门
@@ -89,7 +89,7 @@ SQL Server 数据库默认已启用全文搜索。 但是，在运行全文查�
  
  建议将具有相同更新特征的表（如更改次数少的与更改次数多的，或者在一天中某个特定时段内频繁更改的表）关联在一起，并置于同一全文目录下。 通过设置全文目录填充计划，会使全文索引与表保持同步，且在数据库活动较多时不会对数据库服务器的资源使用产生负面影响。  
   
- 请考虑以下原则：  
+ 遵循以下指南：  
   
 -   如果创建索引的表有数百万行，请将该表分配到其自身的全文目录。  
   
@@ -118,7 +118,7 @@ GO
 有关详细信息，请参阅 [为全文搜索配置和管理非索引字和非索引字表](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)。
 
 ## <a name="update-a-full-text-index"></a>更新全文索引  
- 与普通 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 索引一样，全文索引可以在相关表中的数据修改时自动更新。 这是默认行为。 另外，还可以手动或在预定的间隔更新全文索引。 填充全文索引可能很耗时且要占用大量资源。 因此，索引更新通常作为异步进程执行，该进程在后台运行，在基表中进行修改后使全文索引保持最新。 
+ 与普通 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 索引一样，全文索引可以在相关表中的数据修改时自动更新。 此选项为默认行为。 另外，还可以手动或在预定的间隔更新全文索引。 填充全文索引可能很耗时且要占用大量资源。 因此，索引更新通常作为异步进程执行，该进程在后台运行，在基表中进行修改后使全文索引保持最新。 
  
 在基表中进行每次更改后立即更新全文索引也可能会占用大量的资源。 因此，如果更新/插入/删除操作非常频繁，你可能会发现查询性能有所降低。 如果出现这种情况，可以考虑制定一个手动的更改跟踪更新计划，以便按一定的间隔更新大量的更改，从而避免与查询争用资源。  
   

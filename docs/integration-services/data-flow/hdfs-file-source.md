@@ -13,10 +13,10 @@ ms.assetid: f8cda200-c389-4a2e-8ee9-5d59b326aac1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8a06374e2803a5e482e6d5a7a665756e38cb7f2f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292443"
 ---
 # <a name="hdfs-file-source"></a>HDFS 文件源
@@ -28,12 +28,12 @@ ms.locfileid: "71292443"
   
  若要配置“HDFS 文件源”，请将“HDFS 文件源”拖放到数据流设计器中，然后双击该组件打开编辑器。  
   
- ![HDFS 文件源编辑器](../../integration-services/data-flow/media/hdfs-file-source.png "HDFS File Source Editor")  
+ ![HDFS 文件源编辑器](../../integration-services/data-flow/media/hdfs-file-source.png "HDFS 文件源编辑器")  
   
 ## <a name="options"></a>选项  
  在“Hadoop 文件源编辑器”  对话框的“常规”  选项卡上配置以下选项。  
   
-|字段|描述|  
+|字段|说明|  
 |-----------|-----------------|  
 |**Hadoop 连接**|指定现有的一个 Hadoop 连接管理器，或新建一个 Hadoop 连接管理器。 此连接管理器指明 HDFS 文件的托管位置。|  
 |**文件路径**|指定 HDFS 文件的文件名。|  

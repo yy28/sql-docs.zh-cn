@@ -24,10 +24,10 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d4c44f8920fc3a8060dcff6112eb41055f1584d2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291263"
 ---
 # <a name="lookup-transformation"></a>查找转换
@@ -90,7 +90,7 @@ ms.locfileid: "71291263"
   
  下面是将缓存保留到文件中的其他好处：  
   
--   ***在多个包中共享缓存文件。有关详细信息，请参阅***[在完全缓存模式下使用缓存连接管理器来实现查找转换](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)***。***  
+-   ***在多个包中共享缓存文件。有关更多信息，请参阅***[在完全缓存模式下使用缓存连接管理器来实现查找转换](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)。  
   
 -   使用包部署缓存文件。 ***随后即可在多台计算机上使用该数据。*** 有关详细信息，请参阅 [为查找转换创建和部署缓存](../../../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md)。  
   
@@ -147,7 +147,7 @@ ms.locfileid: "71291263"
 ## <a name="lookup-transformation-editor-general-page"></a>查找转换编辑器（“常规”页）
   可以使用“查找转换编辑器”对话框的 **“常规”** 页，选择缓存模式，选择连接类型以及指定如何处理没有匹配项的行。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **完全缓存**  
  在执行查找转换前，生成引用数据集并将其加载到缓存中。  
   
@@ -157,7 +157,7 @@ ms.locfileid: "71291263"
  **不缓存**  
  在执行查找转换的过程中生成引用数据集。 不向缓存中加载任何数据。  
   
- **缓存连接管理器**  
+ **“完全缓存”**  
  将查找转换功能配置为使用缓存连接管理器。 只有当选择了“完全缓存”选项时，此选项才可用。  
   
  **“无缓存”**  
@@ -176,7 +176,7 @@ ms.locfileid: "71291263"
 ## <a name="lookup-transformation-editor-connection-page"></a>查找转换编辑器（“连接”页）
   可以使用 **“查找转换编辑器”** 对话框的 **“连接”** 页选择连接管理器。 在选择 OLE DB 连接管理器时，会同时选择用来生成引用数据集的查询、表或视图。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  在 **“查找转换编辑器”** 对话框的“常规”页上选择 **“完全缓存”** 和 **“缓存连接管理器”** 时，下列选项可用：  
   
  **“完全缓存”**  
@@ -223,7 +223,7 @@ ms.locfileid: "71291263"
 ## <a name="lookup-transformation-editor-columns-page"></a>查找转换编辑器（“列”页）
   可以使用 **“查找转换编辑器”** 对话框的 **“列”** 页，指定源表与引用表之间的联接以及从引用表中选择查找列。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **可用输入列**  
  查看可用输入列的列表。 输入列是所连接源的数据流中的列。 输入列和查找列必须具有相互匹配的数据类型。  
   
@@ -252,7 +252,7 @@ ms.locfileid: "71291263"
 ## <a name="lookup-transformation-editor-advanced-page"></a>查找转换编辑器（“高级”页）
   可以使用 **“查找转换编辑器”** 对话框的 **“高级”** 页，配置部分缓存以及修改查找转换的 SQL 语句。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **缓存大小(32 位)**  
  调整 32 位计算机的缓存大小 (MB)。 默认值为 5 MB。  
   

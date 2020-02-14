@@ -24,12 +24,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0d65bcb7db0bc0628d1c7b40d21e9b2089ad285c
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.openlocfilehash: 7ed32cf93d5bbf13580fc15d649ad403b98524cf
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74127698"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909647"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 兼容级别
 
@@ -54,7 +54,7 @@ COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 } 是使数据
 
 <a name="supported-dbcompats"></a>
 
-|Product|数据库引擎版本|默认兼容性级别标示|支持的兼容级别值|
+|Products|数据库引擎版本|默认兼容性级别标示|支持的兼容级别值|
 |-------------|-----------------------------|-------------------------------------|------------------------------------------|
 |[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|15|150|150、140、130、120、110、100|
 |[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|14|140|140、130、120、110、100|
@@ -71,8 +71,7 @@ COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 } 是使数据
 > [!IMPORTANT]
 > SQL Server 和 Azure SQL 数据库的数据库引擎版本号之间没有可比性，它们分别是这两项产品的内部版本号。 适用于 Azure SQL 数据库的数据库引擎与 SQL Server 数据库引擎基于相同的代码基础映像。 最重要的是，Azure SQL 数据库中的数据库引擎始终具有 SQL 数据库引擎的最新功能。 Azure SQL 数据库版本 12 比 SQL Server 版本 15 更新。
 
-## <a name="remarks"></a>Remarks
-
+## <a name="remarks"></a>备注
 对于所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装，默认兼容性级别都与 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的版本相关联。 新数据库将设置为此级别，除非模型数据库的兼容性级别较低  。 对于从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的任何早期版本附加或还原的数据库，如果数据库的兼容性级别是该 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例允许的最低级别，则将保留其现有的兼容性级别。 移动兼容性级别低于 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 允许级别的数据库会自动将数据库设置为允许的最低兼容性级别。 这既适用于系统数据库也适用于用户数据库。
 
 附加或还原数据库时以及就地升级后，[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 应出现以下行为：
@@ -92,7 +91,7 @@ COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 } 是使数据
 > 从 2019 年 11 月起，在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，新创建的数据库的默认兼容性级别为 150  。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 不会更新现有数据库的数据库兼容性级别。 这是由客户自行决定的。        
 > [!INCLUDE[msCoName](../../includes/msconame-md.md)] 强烈建议客户计划升级到最新的兼容性级别，以充分利用最新的查询优化改进。        
 
-若要对整个数据库利用数据库兼容性级别 120 或更高级别，但选择启用映射到数据库兼容性级别 110 的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [基数估计](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型，请参阅 [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)，尤其是它的关键字 `LEGACY_CARDINALITY_ESTIMATION = ON`  。
+若要对整个数据库利用数据库兼容性级别 120 或更高级别，但选择启用映射到数据库兼容性级别 110 的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][基数估计](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型，请参阅 [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)，尤其是它的关键字 `LEGACY_CARDINALITY_ESTIMATION = ON`  。
 
 要详细了解如何评估你最重要的查询在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 上的两个不同兼容性级别的性能差异，请参阅 [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/06/improved-query-performance-with-compatibility-level-130-in-azure-sql-database/)（在 Azure SQL 数据库中使用兼容性级别 130 改进了查询性能）。 请注意，本文介绍兼容性级别 130 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中也可以使用相同的方法升级到 140 或更高级别。
 
@@ -152,13 +151,15 @@ SELECT name, compatibility_level FROM sys.databases;
 ## <a name="differences-between-compatibility-levels"></a>兼容性级别之间的差异
 对于所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装，默认兼容性级别都与 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 版本相关联，如[此表](#supported-dbcompats)中所示。 对于新的开发工作，请始终计划在最新的数据库兼容性级别上验证应用程序。
 
-但数据库兼容性级别还提供与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本的向后兼容性，因为从任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本附加和还原的数据库会保留其现有的兼容性级别（如果等于或高于允许的最低兼容性级别）。 本文的[使用兼容性级别实现向后兼容性](#backwardCompat)部分对此进行了介绍。
+新的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法不受数据库兼容性级别的限制，除非它们可以通过创建与用户 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码的冲突来破坏现有应用程序。 本文的后续部分介绍了这些例外，并概述了特定兼容级别之间的差异。
+
+数据库兼容性级别还提供与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本的向后兼容性，因为从任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本附加和还原的数据库会保留其现有的兼容性级别（如果等于或高于允许的最低兼容性级别）。 本文的[使用兼容性级别实现向后兼容性](#backwardCompat)部分对此进行了介绍。
 
 从数据库兼容性级别 130 开始，任何影响查询计划的新修补程序和功能仅会添加到可用的最新兼容性级别（也称为默认兼容性级别）。 这样做是为了最大限度地减少在升级过程中由于以下原因而引发的风险：新查询优化行为可能引入的查询计划更改导致性能降低。 
 
 以下是仅添加到新版本 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 默认兼容性级别、影响计划的基本更改：
 
-1.  针对跟踪标志 4199 下的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本发布的查询优化器修补程序在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 较新版本的默认兼容性级别中自动启用  。 **适用范围：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+1.  针对跟踪标志 4199 下的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本发布的查询优化器修补程序在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 较新版本的默认兼容性级别中自动启用  。 **适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
     例如，发布 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 时，为使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 默认兼容性级别 (130) 的数据库自动启用了针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本（相应的兼容性级别为 100 至 120）发布的所有查询优化器修补程序。 只需显式启用后期 RTM 的查询优化器修补程序。
     
@@ -175,9 +176,9 @@ SELECT name, compatibility_level FROM sys.databases;
     
     |数据库引擎 (DE) 版本|数据库兼容性级别|TF 4199|来自所有以前的数据库兼容性级别的 QO 更改|DE 版本后期 RTM 的 QO 更改|
     |----------|----------|---|------------|--------|
-    |13 ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])|100 至 120<br /><br /><br />130|Off<br />On<br /><br />Off<br />On|**禁用**<br />已启用<br /><br />**已启用**<br />已启用|禁用<br />已启用<br /><br />禁用<br />已启用|
-    |14 ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])|100 至 120<br /><br /><br />130<br /><br /><br />140|Off<br />On<br /><br />Off<br />On<br /><br />Off<br />On|**禁用**<br />已启用<br /><br />**已启用**<br />已启用<br /><br />**已启用**<br />已启用|禁用<br />已启用<br /><br />禁用<br />已启用<br /><br />禁用<br />已启用|
-    |15 ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) 和 12 ([!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])|100 至 120<br /><br /><br />130 至 140<br /><br /><br />150|Off<br />On<br /><br />Off<br />On<br /><br />Off<br />On|**禁用**<br />已启用<br /><br />**已启用**<br />已启用<br /><br />**已启用**<br />已启用|禁用<br />已启用<br /><br />禁用<br />已启用<br /><br />禁用<br />已启用|
+    |13 ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])|100 至 120<br /><br /><br />130|关闭<br />启用<br /><br />关闭<br />启用|**已禁用**<br />已启用<br /><br />**已启用**<br />已启用|已禁用<br />已启用<br /><br />已禁用<br />已启用|
+    |14 ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])|100 至 120<br /><br /><br />130<br /><br /><br />140|关闭<br />启用<br /><br />关闭<br />启用<br /><br />关闭<br />启用|**已禁用**<br />已启用<br /><br />**已启用**<br />已启用<br /><br />**已启用**<br />已启用|已禁用<br />已启用<br /><br />已禁用<br />已启用<br /><br />已禁用<br />已启用|
+    |15 ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) 和 12 ([!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])|100 至 120<br /><br /><br />130 至 140<br /><br /><br />150|关闭<br />启用<br /><br />关闭<br />启用<br /><br />关闭<br />启用|**已禁用**<br />已启用<br /><br />**已启用**<br />已启用<br /><br />**已启用**<br />已启用|已禁用<br />已启用<br /><br />已禁用<br />已启用<br /><br />已禁用<br />已启用|
     
     > [!IMPORTANT]
     > 解决错误结果或访问冲突错误的查询优化器修补程序不受跟踪标志 4199 的保护。 这些修补程序并不被视为可选项。
@@ -192,9 +193,9 @@ SELECT name, compatibility_level FROM sys.databases;
     
     |数据库引擎版本|数据库兼容性级别|新版本 CE 更改|
     |----------|--------|-------------|
-    |13 ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])|< 130<br />130|禁用<br />已启用|
-    |14 ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])<sup>1</sup>|< 140<br />140|禁用<br />已启用|
-    |15 ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])<sup>1</sup>|< 150<br />150|禁用<br />已启用|
+    |13 ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])|< 130<br />130|已禁用<br />已启用|
+    |14 ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])<sup>1</sup>|< 140<br />140|已禁用<br />已启用|
+    |15 ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])<sup>1</sup>|< 150<br />150|已禁用<br />已启用|
     
     <sup>1</sup> 同样适用于 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
     
@@ -256,7 +257,7 @@ SQL Server 2017 之前的早期 SQL Server 版本中处于跟踪标志 4199 下�
 
 |兼容性级别设置为 110 或更低|兼容性级别设置为 120|
 |--------------------------------------------------|-----------------------------------------|
-|使用旧版查询优化器。|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 包括对创建和优化查询计划的组件的显著改进。 这个新的查询优化器功能依赖于使用数据库兼容性级别 120。 若要利用这些改进，应使用数据库兼容性级别 120 开发新的数据库应用程序。 应对从较早版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中迁移的应用程序进行仔细测试，以便确认保持或改进了好的性能。 如果性能下降，可以将数据库兼容性级别设置为 110 或更低，以便使用较早的查询优化器方法。<br /><br /> 数据库兼容级别 120 使用针对现代数据仓库和 OLTP 工作负荷进行优化的新基数估计器。 在因为性能问题将数据库兼容性级别设置为 110 前，请参阅 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [ 数据库引擎中的新增功能](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md)主题的“查询计划”一节中的建议  。|
+|使用旧版查询优化器。|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 包括对创建和优化查询计划的组件的显著改进。 这个新的查询优化器功能依赖于使用数据库兼容性级别 120。 若要利用这些改进，应使用数据库兼容性级别 120 开发新的数据库应用程序。 应对从较早版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中迁移的应用程序进行仔细测试，以便确认保持或改进了好的性能。 如果性能下降，可以将数据库兼容性级别设置为 110 或更低，以便使用较早的查询优化器方法。<br /><br /> 数据库兼容级别 120 使用针对现代数据仓库和 OLTP 工作负荷进行优化的新基数估计器。 在因为性能问题将数据库兼容性级别设置为 110 前，请参阅 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][数据库引擎中的新增功能](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md)主题的“查询计划”一节中的建议  。|
 |如果兼容级别低于 120，则在将 **date** 值转换为字符串值时语言设置将被忽略。 请注意，此行为仅特定于 **date** 类型。 请参阅下面“示例”部分中的“示例 B”。|将 **date** 值转换为字符串值时，不忽略语言设置。|
 |`EXCEPT` 子句右侧的递归引用产生无限循环。 下面“示例”部分中的示例 C 演示此行为。|`EXCEPT` 子句中的递归引用产生遵从 ANSI SQL 标准的错误。|
 |递归公用表表达式 (CTE) 允许重复的列名。|递归 CTE 禁止列名重复。|
@@ -285,27 +286,27 @@ SQL Server 2017 之前的早期 SQL Server 版本中处于跟踪标志 4199 下�
 
 |兼容性级别设置为 90|兼容性级别设置为 100|影响的可能性|
 |----------------------------------------|-----------------------------------------|---------------------------|
-|对于多语句表值函数，在创建它们时，无论会话级别设置如何，QUOTED_IDENTIFER 设置始终为 ON。|在创建多语句表值函数时，会遵循 QUOTED IDENTIFIER 会话设置。|Medium|
-|在创建或更改分区函数时，会评估函数中的 **datetime** 和 **smalldatetime** 文字，并假定语言设置为 US_English。|使用当前语言设置来评估该分区函数中的 **datetime** 和 **smalldatetime** 文字。|Medium|
-|允许在 `INSERT` 和 `SELECT INTO` 语句中使用（并忽略）`FOR BROWSE` 子句。|不允许在 `INSERT` 和 `SELECT INTO` 语句中使用 `FOR BROWSE` 子句。|Medium|
-|`OUTPUT` 子句中允许使用全文谓词。|`OUTPUT` 子句中不允许使用全文谓词。|Low|
-|`CREATE FULLTEXT STOPLIST`、`ALTER FULLTEXT STOPLIST` 和 `DROP FULLTEXT STOPLIST` 不受支持。 系统非索引字表自动与新的全文检索相关联。|`CREATE FULLTEXT STOPLIST`、`ALTER FULLTEXT STOPLIST` 和 `DROP FULLTEXT STOPLIST` 受支持。|Low|
-|`MERGE` 不作为保留关键字强制应用。|MERGE 是完全保留的关键字。 在 100 和 90 兼容级别下，都支持 `MERGE` 语句。|Low|
-|使用 INSERT 语句的 \<dml_table_source> 参数会引发语法错误。|您可以捕获嵌套的 INSERT、UPDATE、DELETE 或 MERGE 语句中 OUTPUT 子句的结果，然后将这些结果插入目标表或视图。 这通过使用 INSERT 语句的 \<dml_table_source> 参数来实现。|Low|
-|除非指定 `NOINDEX`，否则 `DBCC CHECKDB` 或 `DBCC CHECKTABLE` 将对单个表或索引视图及其所有非聚集索引和 XML 索引同时执行物理和逻辑一致性检查。 不支持空间索引。|除非指定 `NOINDEX`，否则 `DBCC CHECKDB` 或 `DBCC CHECKTABLE` 将对单个表及其所有非聚集索引同时执行物理和逻辑一致性检查。 但是，在默认情况下，仅对 XML 索引、空间索引和索引视图执行物理一致性检查。<br /><br /> 如果指定了 `WITH EXTENDED_LOGICAL_CHECKS`，则将对索引视图、XML 索引和空间索引（如果存在）执行逻辑检查。 默认情况下，先执行物理一致性检查，然后执行逻辑一致性检查。 如果还指定了 `NOINDEX`，则仅执行逻辑检查。|Low|
-|如果将 OUTPUT 子句和数据操作语言 (DML) 语句一起使用，并且在语句执行过程中发生运行时错误，则会终止并回滚整个事务。|如果将 `OUTPUT` 子句和数据操作语言 (DML) 语句一起使用，并且在语句执行过程中发生运行时错误，则行为取决于 `SET XACT_ABORT` 设置。 如果 `SET XACT_ABORT` 设置为 OFF，则由使用 `OUTPUT` 子句的 DML 语句所生成的语句中止错误将终止该语句，但批处理的执行仍会继续，并且不会回滚事务。 如果 `SET XACT_ABORT` 设置为 ON，则由使用 OUTPUT 子句的 DML 语句所生成的全部运行时错误都将终止批处理，并回滚事务。|Low|
-|CUBE 和 ROLLUP 不作为保留关键字强制应用。|`CUBE` 和 `ROLLUP` 是 GROUP BY 子句中的保留关键字。|Low|
-|对 XML **anyType** 类型的元素应用严格验证。|对 **anyType** 类型的元素应用宽松验证。 有关详细信息，请参阅[通配符组成部分和内容验证](../../relational-databases/xml/wildcard-components-and-content-validation.md)。|Low|
-|数据操作语言语句不能查询或修改特殊属性 **xsi:nil** 和 **xsi:type**。<br /><br /> 这意味着 `/e/@xsi:nil` 失败，同时 `/e/@*` 忽略 **xsi:nil** 和 **xsi:type** 属性。 但是，`/e` 返回 **xsi:nil** 和 **xsi:type** 属性，以保持与 `SELECT xmlCol` 的一致性，即使 `xsi:nil = "false"` 也是如此。|特殊属性 **xsi:nil** 和 **xsi:type** 作为常规属性存储，不能查询和修改。<br /><br /> 例如，执行查询 `SELECT x.query('a/b/@*')` 会返回包括 **xsi: nil** 和 **xsi: type** 在内的所有属性。 若要在查询中排除这些类型，请用 `@*[namespace-uri(.) != "`insert xsi namespace uri  `"` 替换 `@*`，而不是用 `(local-name(.) = "type"` 或 `local-name(.) ="nil".` 来替换|Low|
-|用于将 XML 常量字符串值转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datetime 类型的用户定义函数被标记为确定的。|用于将 XML 常量字符串值转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datetime 类型的用户定义函数被标记为不确定的。|Low|
-|不完全支持 XML 联合和列表类型。|完全支持联合和列表类型，包括以下功能：<br /><br /> 列表的联合<br /><br /> 联合的联合<br /><br /> 原子类型的列表<br /><br /> 联合的列表|Low|
-|当视图或内联表值函数中包含 xQuery 方法时，不对该方法所需的 SET 选项进行验证。|当视图或内联表值函数中包含 xQuery 方法时，对该方法所需的 SET 选项进行验证。 如果该方法的 SET 选项设置不正确，将引发一个错误。|Low|
-|包含行尾字符（回车符和换行符）的 XML 属性值不根据 XML 标准进行规范化。 即返回回车符和换行符，而不是单个换行符。|包含行尾字符（回车符和换行符）的 XML 属性值会根据 XML 标准进行规范化。 也就是说，外部已分析实体（包括文档实体）中的所有换行符都会在输入时进行规范化，方法是将两字符序列 #xD #xA 和后面没有跟 #xA 的所有 #xD 都转换为单个 #xA 字符。<br /><br /> 使用属性来传输包含行尾字符的字符串值的应用程序接收到的这些字符将和提交时有所不同。 若要避免规范化过程，请使用 XML 数字字符实体对所有行尾字符进行编码。|Low|
-|`ROWGUIDCOL` 和 `IDENTITY` 列属性可能错误地命名为约束。 例如，`CREATE TABLE T (C1 int CONSTRAINT MyConstraint IDENTITY)` 语句可以执行，但约束名不会保留，也无法让用户访问。|`ROWGUIDCOL` 和 `IDENTITY` 列属性不能命名为约束。 返回错误 156。|Low|
-|使用双向赋值（如 `UPDATE T1 SET @v = column_name = <expression>`）来更新列会产生意外后果，因为在语句执行过程中，可以在其他子句（如 `WHERE` 和 `ON` 子句）中使用变量的实时值，而不是使用语句起始值。 这会导致谓词的含义无法预测地逐行变化。<br /><br /> 只有在兼容性级别设置为 90 时，此行为才适用。|使用双向赋值来更新列会产生预期的结果，因为在语句执行过程中，只会访问列的语句起始值。|Low|
-|请参阅下面“示例”部分中的“示例 E”。|请参阅下面“示例”部分中的“示例 F”。|Low|
-|ODBC 函数 {fn CONVERT()} 使用语言的默认日期格式。 对于有些语言，默认格式为 YDM，这会导致在将 CONVERT() 与要求使用 YMD 格式的其他函数（如 `{fn CURDATE()}`）结合使用时出现转换错误。|在转换为 ODBC 数据类型 SQL_TIMESTAMP、SQL_DATE、SQL_TIME、SQLDATE、SQL_TYPE_TIME 和 SQL_TYPE_TIMESTAMP 时，ODBC 函数 `{fn CONVERT()}` 使用样式 121（一种独立于语言的 YMD 格式）。|Low|
-|日期时间内部函数（如 DATEPART）不需要字符串输入值，即可成为有效的日期时间文字。 例如，`SELECT DATEPART (year, '2007/05-30')` 会编译成功。|日期时间内部函数（如 `DATEPART`）需要字符串输入值，才能成为有效的日期时间文字。 在使用无效的日期时间文字时，会返回错误 241。|Low|
+|对于多语句表值函数，在创建它们时，无论会话级别设置如何，QUOTED_IDENTIFER 设置始终为 ON。|在创建多语句表值函数时，会遵循 QUOTED IDENTIFIER 会话设置。|中型|
+|在创建或更改分区函数时，会评估函数中的 **datetime** 和 **smalldatetime** 文字，并假定语言设置为 US_English。|使用当前语言设置来评估该分区函数中的 **datetime** 和 **smalldatetime** 文字。|中型|
+|允许在 `INSERT` 和 `SELECT INTO` 语句中使用（并忽略）`FOR BROWSE` 子句。|不允许在 `INSERT` 和 `SELECT INTO` 语句中使用 `FOR BROWSE` 子句。|中型|
+|`OUTPUT` 子句中允许使用全文谓词。|`OUTPUT` 子句中不允许使用全文谓词。|低|
+|不支持 `CREATE FULLTEXT STOPLIST`、`ALTER FULLTEXT STOPLIST` 和 `DROP FULLTEXT STOPLIST`。 系统非索引字表自动与新的全文检索相关联。|`CREATE FULLTEXT STOPLIST`、`ALTER FULLTEXT STOPLIST` 和 `DROP FULLTEXT STOPLIST` 受支持。|低|
+|`MERGE` 不作为保留关键字强制应用。|MERGE 是完全保留的关键字。 在 100 和 90 兼容级别下，都支持 `MERGE` 语句。|低|
+|使用 INSERT 语句的 \<dml_table_source> 参数会引发语法错误。|您可以捕获嵌套的 INSERT、UPDATE、DELETE 或 MERGE 语句中 OUTPUT 子句的结果，然后将这些结果插入目标表或视图。 这通过使用 INSERT 语句的 \<dml_table_source> 参数来实现。|低|
+|除非指定 `NOINDEX`，否则 `DBCC CHECKDB` 或 `DBCC CHECKTABLE` 将对单个表或索引视图及其所有非聚集索引和 XML 索引同时执行物理和逻辑一致性检查。 不支持空间索引。|除非指定 `NOINDEX`，否则 `DBCC CHECKDB` 或 `DBCC CHECKTABLE` 将对单个表及其所有非聚集索引同时执行物理和逻辑一致性检查。 但是，在默认情况下，仅对 XML 索引、空间索引和索引视图执行物理一致性检查。<br /><br /> 如果指定了 `WITH EXTENDED_LOGICAL_CHECKS`，则将对索引视图、XML 索引和空间索引（如果存在）执行逻辑检查。 默认情况下，先执行物理一致性检查，然后执行逻辑一致性检查。 如果还指定了 `NOINDEX`，则仅执行逻辑检查。|低|
+|如果将 OUTPUT 子句和数据操作语言 (DML) 语句一起使用，并且在语句执行过程中发生运行时错误，则会终止并回滚整个事务。|如果将 `OUTPUT` 子句和数据操作语言 (DML) 语句一起使用，并且在语句执行过程中发生运行时错误，则行为取决于 `SET XACT_ABORT` 设置。 如果 `SET XACT_ABORT` 设置为 OFF，则由使用 `OUTPUT` 子句的 DML 语句所生成的语句中止错误将终止该语句，但批处理的执行仍会继续，并且不会回滚事务。 如果 `SET XACT_ABORT` 设置为 ON，则由使用 OUTPUT 子句的 DML 语句所生成的全部运行时错误都将终止批处理，并回滚事务。|低|
+|CUBE 和 ROLLUP 不作为保留关键字强制应用。|`CUBE` 和 `ROLLUP` 是 GROUP BY 子句中的保留关键字。|低|
+|对 XML **anyType** 类型的元素应用严格验证。|对 **anyType** 类型的元素应用宽松验证。 有关详细信息，请参阅[通配符组成部分和内容验证](../../relational-databases/xml/wildcard-components-and-content-validation.md)。|低|
+|数据操作语言语句不能查询或修改特殊属性 **xsi:nil** 和 **xsi:type**。<br /><br /> 这意味着 `/e/@xsi:nil` 失败，同时 `/e/@*` 忽略 **xsi:nil** 和 **xsi:type** 属性。 但是，`/e` 返回 **xsi:nil** 和 **xsi:type** 属性，以保持与 `SELECT xmlCol` 的一致性，即使 `xsi:nil = "false"` 也是如此。|特殊属性 **xsi:nil** 和 **xsi:type** 作为常规属性存储，不能查询和修改。<br /><br /> 例如，执行查询 `SELECT x.query('a/b/@*')` 会返回包括 **xsi: nil** 和 **xsi: type** 在内的所有属性。 若要在查询中排除这些类型，请用 `@*[namespace-uri(.) != "`insert xsi namespace uri  `"` 替换 `@*`，而不是用 `(local-name(.) = "type"` 或 `local-name(.) ="nil".` 来替换|低|
+|用于将 XML 常量字符串值转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datetime 类型的用户定义函数被标记为确定的。|用于将 XML 常量字符串值转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datetime 类型的用户定义函数被标记为不确定的。|低|
+|不完全支持 XML 联合和列表类型。|完全支持联合和列表类型，包括以下功能：<br /><br /> 列表的联合<br /><br /> 联合的联合<br /><br /> 原子类型的列表<br /><br /> 联合的列表|低|
+|当视图或内联表值函数中包含 xQuery 方法时，不对该方法所需的 SET 选项进行验证。|当视图或内联表值函数中包含 xQuery 方法时，对该方法所需的 SET 选项进行验证。 如果该方法的 SET 选项设置不正确，将引发一个错误。|低|
+|包含行尾字符（回车符和换行符）的 XML 属性值不根据 XML 标准进行规范化。 即返回回车符和换行符，而不是单个换行符。|包含行尾字符（回车符和换行符）的 XML 属性值会根据 XML 标准进行规范化。 也就是说，外部已分析实体（包括文档实体）中的所有换行符都会在输入时进行规范化，方法是将两字符序列 #xD #xA 和后面没有跟 #xA 的所有 #xD 都转换为单个 #xA 字符。<br /><br /> 使用属性来传输包含行尾字符的字符串值的应用程序接收到的这些字符将和提交时有所不同。 若要避免规范化过程，请使用 XML 数字字符实体对所有行尾字符进行编码。|低|
+|`ROWGUIDCOL` 和 `IDENTITY` 列属性可能错误地命名为约束。 例如，`CREATE TABLE T (C1 int CONSTRAINT MyConstraint IDENTITY)` 语句可以执行，但约束名不会保留，也无法让用户访问。|`ROWGUIDCOL` 和 `IDENTITY` 列属性不能命名为约束。 返回错误 156。|低|
+|使用双向赋值（如 `UPDATE T1 SET @v = column_name = <expression>`）来更新列会产生意外后果，因为在语句执行过程中，可以在其他子句（如 `WHERE` 和 `ON` 子句）中使用变量的实时值，而不是使用语句起始值。 这会导致谓词的含义无法预测地逐行变化。<br /><br /> 只有在兼容性级别设置为 90 时，此行为才适用。|使用双向赋值来更新列会产生预期的结果，因为在语句执行过程中，只会访问列的语句起始值。|低|
+|请参阅下面“示例”部分中的“示例 E”。|请参阅下面“示例”部分中的“示例 F”。|低|
+|ODBC 函数 {fn CONVERT()} 使用语言的默认日期格式。 对于有些语言，默认格式为 YDM，这会导致在将 CONVERT() 与要求使用 YMD 格式的其他函数（如 `{fn CURDATE()}`）结合使用时出现转换错误。|在转换为 ODBC 数据类型 SQL_TIMESTAMP、SQL_DATE、SQL_TIME、SQLDATE、SQL_TYPE_TIME 和 SQL_TYPE_TIMESTAMP 时，ODBC 函数 `{fn CONVERT()}` 使用样式 121（一种独立于语言的 YMD 格式）。|低|
+|日期时间内部函数（如 DATEPART）不需要字符串输入值，即可成为有效的日期时间文字。 例如，`SELECT DATEPART (year, '2007/05-30')` 会编译成功。|日期时间内部函数（如 `DATEPART`）需要字符串输入值，才能成为有效的日期时间文字。 在使用无效的日期时间文字时，会返回错误 241。|低|
 
 ## <a name="reserved-keywords"></a>保留关键字
 

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2e254e09c52bee4adb1a2712857932488f7a0c63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68102537"
 ---
 # <a name="oledb-event-category"></a>OLEDB 事件类别
@@ -27,9 +27,9 @@ ms.locfileid: "68102537"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|描述|  
+|主题|说明|  
 |-----------|-----------------|  
-|[OLEDB Call 事件类](../../relational-databases/event-classes/oledb-call-event-class.md)|指示 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已向分布式查询和远程存储过程的 OLE DB 访问接口发出了非数据或非**QueryInterface** 调用。|  
+|[OLEDB Call 事件类](../../relational-databases/event-classes/oledb-call-event-class.md)|指示 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已对分布式查询和远程存储过程的 OLE DB 访问程序发出了非数据或非 QueryInterface  调用。|  
 |[OLEDB DataRead 事件类](../../relational-databases/event-classes/oledb-dataread-event-class.md)|指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已调用分布式查询和远程存储过程的 OLE DB 访问接口。|  
 |[OLEDB Errors 事件类](../../relational-databases/event-classes/oledb-errors-event-class.md)|指示 OLE DB 访问接口的调用返回了一个错误。|  
 |[OLEDB Provider Information 事件类](../../relational-databases/event-classes/oledb-provider-information-event-class.md)|指示分布式查询已运行并收集到与提供程序连接对应的信息。|  

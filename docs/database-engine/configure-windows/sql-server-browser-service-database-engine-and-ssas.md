@@ -16,10 +16,10 @@ ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fade5e48340e8cc2b51b354f9717a561c632e4d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68028628"
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>SQL Server Browser 服务（数据库引擎和 SSAS）
@@ -96,7 +96,7 @@ ms.locfileid: "68028628"
 <drive>\<path>\sqlbrowser.exe -c  
 ```  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
 ### <a name="account-privileges"></a>帐户权限  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 解析协议 (SSRP) 侦听 UDP 端口，并接受未经身份验证的请求。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器应该在低特权用户的安全上下文中运行，以将受到恶意攻击的几率降到最低。 通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器更改登录帐户。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器的最小用户权限如下：  
@@ -116,11 +116,11 @@ ms.locfileid: "68028628"
 ### <a name="default-account"></a>默认帐户  
  安装程序将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器配置为使用安装期间为服务选定的帐户。 其他可能的帐户包括：  
   
--   所有“域\本地”帐户  
+-   所有“域\本地”  帐户  
   
 -   **“本地服务”** 帐户  
   
--   “本地系统”帐户（不推荐使用，因为其具有不必要的权限）  
+-   “本地系统”  帐户（不推荐使用，因为其具有不必要的权限）  
   
 ### <a name="hiding-sql-server"></a>隐藏 SQL Server  
  隐藏的实例是仅支持共享内存连接的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，设置 `HideInstance` 标记来指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器不应对此服务器实例的相关信息做出响应。  

@@ -16,10 +16,10 @@ ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 7ba560e46aaebc1aa5bc6901a3c0067fae91bdb2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68085944"
 ---
 # <a name="replication-queue-reader-agent"></a>复制队列读取器代理
@@ -55,7 +55,7 @@ qrdrsvc [-?]
   
 ## <a name="arguments"></a>参数  
  **-?**  
- 显示使用信息。  
+ 显示用法信息。  
   
  **-Continuous**  
  指定代理是否尝试连续处理排队的事务。 如果指定此参数，即使任何订阅方都没有挂起的排队事务，代理仍然会连续执行。  
@@ -81,7 +81,7 @@ qrdrsvc [-?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  队列读取器代理建立连接时使用的安全套接字层 (SSL) 加密级别。  
   
-|EncryptionLevel 值|描述|  
+|EncryptionLevel 值|说明|  
 |---------------------------|-----------------|  
 |**0**|指定不使用 SSL。|  
 |**1**|指定使用 SSL，但是代理不验证 SSL 服务器证书是否已由可信的颁发者进行签名。|  
@@ -95,10 +95,10 @@ qrdrsvc [-?]
  **-HistoryVerboseLevel** [ **0**| **1**| **2**| **3**]  
  指定队列读取器运行期间记录的历史记录数量。 选择 **1**可将历史日志记录对性能的影响减至最小。  
   
-|HistoryVerboseLevel 值|描述|  
+|HistoryVerboseLevel 值|说明|  
 |-------------------------------|-----------------|  
 |**0**|不记录历史记录（不推荐）。|  
-|**1**|默认值。 总是更新具有相同状态（启动、进行中、成功等）的上一历史记录消息。 如果不存在状态相同的上一记录，将插入新记录。|  
+|**1**|默认。 总是更新具有相同状态（启动、进行中、成功等）的上一历史记录消息。 如果不存在状态相同的上一记录，将插入新记录。|  
 |**2**|插入新的历史记录，包括空闲消息或长时间运行作业的消息。|  
 |**3**|插入包括了可能对排除故障有用的其他详细信息的新历史记录。|  
   
@@ -115,7 +115,7 @@ qrdrsvc [-?]
  仅与使用基于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的队列的更新订阅有关。 指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 队列接受对挂起的排队事务的轮询的频率（以秒为单位）。 该值可介于 0 和 240 秒之间。 默认值为 5 秒。  
   
  **-PublisherFailoverPartner** _server_name_[ **\\** _instance_name_]  
- 指定参加与发布数据库进行的数据库镜像会话的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移伙伴实例。 有关详细信息，请参阅[数据库镜像和复制 (SQL Server)](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)。  
+ 指定参加与发布数据库进行的数据库镜像会话的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移伙伴实例。 有关详细信息，请参阅 [数据库镜像和复制 (SQL Server)](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)。  
   
  **-ProfileName** _agent_profile_name_  
  用于向代理提供一组默认值的代理配置文件的名称。 有关信息，请参阅[复制代理配置文件](../../../relational-databases/replication/agents/replication-agent-profiles.md)。  
@@ -126,7 +126,7 @@ qrdrsvc [-?]
  **-ResolverState** [ **1**| **2**| **3**]  
  指定解决排队更新冲突的方式。 值为 **1** ，表示发布服务器赢得冲突且当前发生冲突的排队事务将在发布服务器和发起更新的订阅服务器上回滚，后续排队事务的处理过程将继续进行。 值为 **2** 表示订阅服务器赢得冲突且排队事务将覆盖发布服务器上的值。 值为 **3** 表示任何冲突都将导致订阅服务器重新初始化；发布服务器赢得冲突，后续排队事务的处理过程将终止且订阅将重新初始化。 事务发布的默认设置为 **1** ，快照发布的默认设置为 **3** 。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  若要启动队列读取器代理，请从命令提示符下执行 **qrdrsvc.exe** 。 有关信息，请参阅 [复制代理可执行文件](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)。  
   
 ## <a name="see-also"></a>另请参阅  

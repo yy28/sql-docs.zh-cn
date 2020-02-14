@@ -21,10 +21,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7de5bc19cd49959663bf4ead3f8ebff62b3b982b
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982862"
 ---
 # <a name="alter-function-transact-sql"></a>ALTER FUNCTION (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "73982862"
 
   更改先前通过执行 CREATE FUNCTION 语句创建的现有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或 CLR 函数，但不更改权限，也不影响任何相关的函数、存储过程或触发器。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -211,8 +211,8 @@ RETURNS return_data_type
 > [!NOTE]  
 >  即使未指定参数，函数名称后也需要加上括号。  
   
- @ parameter_name    
- 用户定义函数中的参数。 可声明一个或多个参数。  
+  @ _parameter_name_  
+ 是用户定义函数中的参数。 可声明一个或多个参数。  
   
  一个函数最多可以有 2,100 个参数。 执行函数时，如果未定义参数的默认值，则用户必须提供每个已声明参数的值。  
   
@@ -274,7 +274,7 @@ RETURNS return_data_type
 > [!NOTE]  
 >  此选项在包含数据库中不可用。  
   
- \< __table\_type\_definition\>__ (  { \<column_definition\> \<column\_constraint\> | \<computed\_column\_definition\> } [ \<table\_constraint\> ] [ ,  ...n  ])   
+ _\<_table\_type\_definition_\>_ **(** { \<column_definition\> \<column\_constraint\> | \<computed\_column\_definition\> } [ \<table\_constraint\> ] [ **,** ...*n* ] **)**  
  定义 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数的表数据类型。 表声明包含列定义和列约束（或表约束）。  
   
 \< clr_table_type_definition \> ( { column_name**data_type } [ ,...n ] ) 适用于：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]（[某些区域为预览版](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)）       。  
@@ -422,7 +422,7 @@ RETURNS return_data_type
  ALLOW_PAGE_LOCKS = { ON | OFF }  
  指定是否允许使用页锁。 默认值为 ON。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  不能用 ALTER FUNCTION 将标量值函数更改为表值函数，反之亦然。 同样，也不能用 ALTER FUNCTION 将内联函数更改为多语句函数，反之亦然。 不能使用 ALTER FUNCTION 将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数更改为 CLR 函数，反之亦然。  
   
  下列 Service Broker 语句不能包含在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数的定义中：  

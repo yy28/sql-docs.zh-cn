@@ -25,10 +25,10 @@ ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0a49bef9dc75beea0e098908362f198b60a8b92c
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71680832"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
@@ -46,7 +46,7 @@ FROM tbl_B
 WHERE NOT EXISTS (SELECT col FROM tbl_A A2 WHERE A2.col = tbl_B.col);  
 ```  
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -262,7 +262,7 @@ UPDATE SET \<set_clause>
   
 有关该子句的参数的详细信息，请参阅 [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)。 不支持将变量设置为与列相同的值。  
   
-删除  
+DELETE  
 指定删除与 *target_table* 中的行匹配的行。  
   
 \<merge_not_matched>  
@@ -285,7 +285,7 @@ DEFAULT VALUES
 \<graph search pattern>  
 指定图匹配模式。 有关此子句的参数的详细信息，请参阅 [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 必须指定三个 MATCHED 子句中的至少一个子句，但可以按任何顺序指定。 无法在同一个 MATCHED 子句中多次更新一个变量。  
   
@@ -315,85 +315,85 @@ MERGE 语句需要一个分号 (;) 作为语句终止符。 如果运行没有�
   
 ## <a name="optimizing-merge-statement-performance"></a>优化 MERGE 语句性能
 
-使用 MERGE 语句，可以将各个 DML 语句替换为一个语句。 这可以提升查询性能，因为运算是在一个语句中执行的，从而最大限度地减少源表和目标表中数据的处理次数。 不过，性能的提升取决于是否有正确的索引、联接和其他考虑因素。
+通过使用 MERGE 语句，可以使用单个语句替换各个 DML 语句。 由于操作是在单个语句中执行的，因此可以提高查询性能，从而最大限度地减少处理源表和目标表中数据的次数。 然而，性能的提升取决于是否进行了正确的索引和联接以及是否遵守了其他注意事项。
 
-### <a name="index-best-practices"></a>索引最佳做法
+### <a name="index-best-practices"></a>有关索引的最佳做法
 
-为了提升 MERGE 语句的性能，建议遵循以下索引准则：
+若要提高 MERGE 语句的性能，我们建议您遵循以下索引准则：
 
-- 对源表的联接列创建唯一且涵盖的索引。
+- 对源表的联接列创建唯一的涵盖索引。
 - 对目标表的联接列创建唯一的聚集索引。
 
-这些索引可确保联接键是唯一的，且表中数据已经过排序。 查询性能之所以得到提升是因为，查询优化器不需要执行额外的验证处理，即可找到和更新重复行，也不需要执行额外的排序操作。
+这些索引确保联接键唯一并且表中的数据经过排序。 因为查询优化器不需要执行额外验证处理即可定位和更新重复的行，也不需要执行其他排序操作，所以查询性能得到了提高。
 
-### <a name="join-best-practices"></a>JOIN 最佳做法
+### <a name="join-best-practices"></a>与 JOIN 有关的最佳做法
 
-为了提升 MERGE 语句的性能，并确保获得正确的结果，建议遵循以下联接准则：
+若要提高 MERGE 语句的性能并确保获得正确的结果，我们建议您遵循以下联接准则：
 
-- 只在 ON <merge_search_condition> 子句中指定搜索条件，确定用于匹配源表与目标表中数据的条件。 也就是说，只指定与源表的对应列相比较的目标表中的列。 
+- 只在 ON <merge_search_condition> 子句中指定搜索条件，确定用于匹配源表与目标表中数据的条件。 也就是说，仅指定与源表中的对应列进行比较的目标表列。 
 - 不要包括与其他值（如常量）的比较。
 
-若要筛选掉源表或目标表中的行，请使用以下方法之一。
+若要从源表或目标表中筛选出行，请使用以下方法之一。
 
-- 在适当的 WHEN 子句中，指定用于行筛选的搜索条件。 例如，WHEN NOT MATCHED AND S.EmployeeName LIKE 'S%' THEN INSERT....
-- 对源表或目标表定义返回筛选后的行的视图，并将视图引用为源表或目标表。 如果视图是对目标表定义的，那么对它执行的任何操作都必须满足视图更新条件。 若要详细了解如何使用视图来更新数据，请参阅“通过视图修改数据”。
-- 使用 `WITH <common table expression>` 子句筛选掉源表或目标表中的行。 这种方法类似于在 ON 子句中指定附加搜索条件，可能会生成不正确的结果。 建议避免使用这种方法，或在实现这种方法前进行全面测试。
+- 在适当的 WHEN 子句中指定用于行筛选的搜索条件。 例如，WHEN NOT MATCHED AND S.EmployeeName LIKE 'S%' THEN INSERT....
+- 对返回筛选行的源表或目标表定义视图，并且将该视图作为源表或目标表进行引用。 如果该视图是针对目标表定义的，则针对该视图的任何操作都必须满足更新视图所需的条件。 若要详细了解如何使用视图来更新数据，请参阅“通过视图修改数据”。
+- 使用 `WITH <common table expression>` 子句筛选掉源表或目标表中的行。 此方法类似于在 ON 子句中指定附加搜索条件，并可能产生不正确的结果。 建议您避免使用此方法，或者在采用它前进行全面测试。
 
-MERGE 语句中联接运算的优化方式与 SELECT 语句中的联接相同。 也就是说，当 SQL Server 处理联接时，查询优化器从多种可行方法中选择最高效的方法来处理联接。 如果源表和目标表的大小相似，且前面介绍的索引准则已应用于源表和目标表，那么合并联接运算符是最高效的查询计划。 这是因为两个表都只扫描一次，且无需对数据进行排序。 如果源表小于目标表，最好使用嵌套循环运算符。
+MERGE 语句中联接操作的优化方式与 SELECT 语句中联接操作的优化方式相同。 也就是说，当 SQL Server 处理联接时，查询优化器从多种可行方法中选择最高效的方法来处理联接。 如果源表和目标表的大小相似，且前面介绍的索引准则已应用于源表和目标表，那么合并联接运算符是最高效的查询计划。 这是由于对两个表都只扫描一次，并且无需对数据进行排序。 如果源表小于目标表，最好使用嵌套循环运算符。
 
-通过在 MERGE 语句中指定 `OPTION (<query_hint>)` 子句，可以强制使用特定联接。 建议不要将哈希联接用作 MERGE 语句的查询提示，因为这种类型的联接不使用索引。
+通过在 MERGE 语句中指定 `OPTION (<query_hint>)` 子句，可以强制使用某种特定联接。 建议您不要将哈希联接用作 MERGE 语句的查询提示，因为该联接类型不使用索引。
 
-### <a name="parameterization-best-practices"></a>参数化最佳做法
+### <a name="parameterization-best-practices"></a>有关参数化的最佳做法
 
-如果在没有参数的情况下执行 SELECT、INSERT、UPDATE 或 DELETE 语句，SQL Server 查询优化器可能会选择在内部参数化语句。 也就是说，查询中包含的任何文本值都将被参数替换。 例如，可以在内部将语句 INSERT dbo.MyTable (Col1, Col2) VALUES (1, 10) 实现为 INSERT dbo.MyTable (Col1, Col2) VALUES (@p1, @p2)。 此过程称为“简单参数化”，它增强了关系引擎将新 SQL 语句与先前编译的现有执行计划进行匹配的能力。 查询性能可能会得到提升，因为查询编译和重新编译的频率降低了。 查询优化器不会对 MERGE 语句应用简单参数化过程。 因此，包含文本值的 MERGE 语句可能没有各个 INSERT、UPDATE 或 DELETE 语句执行得好，因为每次执行 MERGE 语句都会编译一个新计划。
+如果在没有参数的情况下执行 SELECT、INSERT、UPDATE 或 DELETE 语句，SQL Server 查询优化器可能会选择在内部参数化语句。 也就是说，使用参数替换查询中包含的任何文字值。 例如，可以在内部将语句 INSERT dbo.MyTable (Col1, Col2) VALUES (1, 10) 实现为 INSERT dbo.MyTable (Col1, Col2) VALUES (@p1, @p2)。 此过程称为“简单参数化”，它增强了关系引擎将新 SQL 语句与先前编译的现有执行计划进行匹配的能力。 由于减少了查询编译和重新编译的频率，因此可提高查询性能。 查询优化器不会对 MERGE 语句应用简单参数化过程。 由于在每次执行 MERGE 语句时都需要编译一个新计划，因此包含文字值的 MERGE 语句的性能表现可能低于各个 INSERT、UPDATE 或 DELETE 语句。
 
-为了提升查询性能，建议遵循以下参数化准则：
+若要提高查询性能，我们建议您遵循以下参数化准则：
 
-- 参数化 MERGE 语句的 `ON <merge_search_condition>` 子句和 `WHEN` 子句中的所有文本值。 例如，可以将 MERGE 语句合并到存储过程中，用适当的输入参数替换文本值。
+- 参数化 MERGE 语句的 `ON <merge_search_condition>` 子句和 `WHEN` 子句中的所有文本值。 例如，可以将 MERGE 语句合并到存储过程中，并用适当的输入参数替换文字值。
 - 如果无法参数化语句，请创建 `TEMPLATE` 类型的计划指南，并在计划指南中指定 `PARAMETERIZATION FORCED` 查询提示。
-- 如果对数据库频繁执行 MERGE 语句，建议将数据库的 PARAMETERIZATION 选项设置为 FORCED。 请谨慎设置此选项。 `PARAMETERIZATION` 选项是数据库级别设置，它影响如何对数据库处理所有查询。
+- 如果频繁对数据库执行 MERGE 语句，请考虑将数据库的 PARAMETERIZATION 选项设置为 FORCED。 设置此选项时请谨慎从事。 `PARAMETERIZATION` 选项是数据库级别设置，它影响如何对数据库处理所有查询。
 
-### <a name="top-clause-best-practices"></a>TOP 子句最佳做法
+### <a name="top-clause-best-practices"></a>与 TOP 子句有关的最佳做法
 
-在 MERGE 语句中，TOP 子句指定在对源表和目标表进行联接之后，以及在删除不符合执行插入、更新或删除操作条件的行之后，受影响的行数或所占的百分比。 TOP 子句进一步将联接行数减少到指定值，并以无序方式将插入、更新或删除操作应用于剩余联接行。 也就是说，在 WHEN 子句中定义的操作之间，行是无序分布的。 例如，指定 TOP (10) 会影响 10 行；在这些行中，可能会更新 7 行和插入 3 行，也可能会删除 1 行、更新 5 行和插入 4 行，依此类推。
+在 MERGE 语句中，TOP 子句指定在对源表和目标表进行联接之后（或在删除不符合执行插入、更新或删除操作条件的行之后）受影响的行的数量或百分比。 TOP 子句将联接行的数量进一步减少为指定值，并且以一种无序方式对其余联接行应用插入、更新或删除操作。 也就是说，在 WHEN 子句中定义的操作中，这些行是无序分布的。 例如，如果指定 TOP (10)，将会影响 10 行；在这些行中，可能会更新 7 行而插入 3 行，或者可能删除 1 行、更新 5 行并且插入 4 行，等等。
 
-通常使用 TOP 子句对大型表分批执行数据操作语言 (DML) 运算。 如果为此在 MERGE 语句中使用 TOP 子句，请务必了解以下影响。
+使用 TOP 子句对大型表分批执行数据操作语言 (DML) 操作是一种常见的做法。 如果出于此目的而在 MERGE 语句中使用 TOP 子句，请务必了解以下影响。
 
 - I/O 性能可能会受到影响。
 
-  MERGE 语句对源表和目标表都执行全表扫描。 将运算划分为多个批可以减少每批执行的写入操作数；但每个批处理都会对源表和目标表执行全表扫描。 由此产生的读取活动可能会影响查询性能。
+  MERGE 语句对源表和目标表都进行完全表扫描。 使操作分批执行可减少每批执行的写入操作的数量；但在每个批处理中都将对源表和目标表执行完全表扫描。 产生的读取活动可能会影响查询的性能。
 
-- 可能出现不正确的结果。
+- 可能产生不正确的结果。
 
-  请务必确保所有连续批处理都以新行为目标，否则可能会发生意外行为，如在目标表中错误地插入重复行。 当源表包含不在目标批处理中但在整个目标表中的行时，可能会发生这种情况。
+  请务必确保所有连续批处理都以新行为目标，否则可能会发生意外行为，如在目标表中错误地插入重复行。 如果源表包含的某行未包括在目标批处理中，但却包含在总目标表中，便会发生此情况。
 
-- 为了确保获得正确的结果，请执行以下操作：
+- 确保获得正确的结果：
 
-  - 使用 ON 子句确定哪些源行影响现有目标行，哪些是真正的新行。
-  - 在 WHEN MATCHED 子句中使用附加条件，以确定目标行是否已由上一批处理进行更新。
+  - 使用 ON 子句确定哪些源行影响现有目标行以及哪些是全新的。
+  - 在 WHEN MATCHED 子句中使用附加条件来确定目标行是否已由先前的批处理进行了更新。
 
-因为 TOP 子句只在这些子句应用之后才应用，所以每次执行要么插入一个真正不匹配的行，要么更新一个现有行。
+因为只有在应用这些子句之后才会应用 TOP 子句，所以每次执行会插入一个确实不匹配的行，或者更新一个现有行。
 
-### <a name="bulk-load-best-practices"></a>大容量加载最佳做法
+### <a name="bulk-load-best-practices"></a>有关大容量加载的最佳做法
 
-MERGE 语句可以将 `OPENROWSET(BULK…)` 子句指定为表源，高效地将源数据文件中的数据大容量加载到目标表中。 通过这种方式，可以在一个批处理中处理整个文件。
+MERGE 语句可以将 `OPENROWSET(BULK…)` 子句指定为表源，高效地将源数据文件中的数据大容量加载到目标表中。 通过这种方式，可以在单个批中处理整个文件。
 
-为了提升大容量合并流程的性能，建议遵循以下准则：
+若要改进大容量合并过程的性能，我们建议您遵循以下准则：
 
 - 对目标表中的联接列创建聚集索引。
 - 在 `OPENROWSET(BULK…)` 子句中使用 ORDER 和 UNIQUE 提示，以指定如何对源数据文件进行排序。
 
-  默认情况下，大容量操作假定数据文件未排序。 因此，请务必根据目标表的聚集索引对源数据进行排序，并使用 ORDER 提示来指明顺序，以便查询优化器能够生成更高效的查询计划。 提示是在运行时进行验证；如果数据流不符合指定提示，便会引发错误。
+  默认情况下，大容量操作假定数据文件未排序。 因此，请务必根据目标表的聚集索引对源数据进行排序并使用 ORDER 提示指示该顺序，以便查询优化器可以生成更有效的查询计划。 在运行时将对提示进行验证；如果数据流不符合指定的提示，则会引发错误。
 
-上述准则可确保联接键是唯一的，且源文件中数据的排序顺序与目标表一致。 查询性能之所以得到提升是因为，不需要执行额外的排序操作，也不需要执行不必要的数据复制。
+上述准则确保联接键唯一并且源文件中数据的排序顺序与目标表相符。 因为不需要执行其他排序操作和不必要的数据复制，所以提高了查询的性能。
 
-### <a name="measuring-and-diagnosing-merge-performance"></a>度量和诊断 MERGE 性能
+### <a name="measuring-and-diagnosing-merge-performance"></a>测量和诊断 MERGE 性能
 
-下面的功能有助于度量和诊断 MERGE 语句的性能。
+以下功能可帮助您测量和诊断 MERGE 语句的性能。
 
 - 在 [sys.dm_exec_query_optimizer_info](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql.md) 动态管理视图中使用 merge stmt 计数器，以返回用于 MERGE 语句的查询优化数。
 - 在 [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md) 动态管理视图中使用 merge_action_type 属性，以返回用作 MERGE 语句结果的触发器执行计划的类型。
-- 使用 SQL 跟踪来收集 MERGE 语句的疑难解答数据，就像对其他数据操作语言 (DML) 语句收集数据一样。 有关详细信息，请参阅 [SQL Trace](../../relational-databases/sql-trace/sql-trace.md)。
+- 使用 SQL 跟踪收集 MERGE 语句的故障排除数据，其方式与用于其他数据操作语言 (DML) 语句的方式相同。 有关详细信息，请参阅 [SQL Trace](../../relational-databases/sql-trace/sql-trace.md)。
 
 ## <a name="examples"></a>示例  
 

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 986461eb17ed8c5980139fd8789f4fcbed458734
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 745001fb70cf3e210a1e5646fb198acfecdc8cee
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71251079"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286944"
 ---
 # <a name="transactional-replication"></a>事务复制
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "71251079"
 ## <a name="publication-types"></a>发布类型 
 事务复制提供了四种发布类型：  
   
-|发布类型|描述|  
+|发布类型|说明|  
 |----------------------|-----------------|  
 |标准事务发布|适合于订阅服务器上的所有数据均为只读的拓扑（事务复制在订阅服务器上并不强制如此）。<br /><br /> 默认情况下，在使用 Transact-SQL 或复制管理对象 (RMO) 时创建标准事务发布。 使用新建发布向导时，将通过选择 **“发布类型”** 页上的 **“事务发布”** 来创建标准事务发布。<br /><br /> 有关创建发布的详细信息，请参阅 [发布数据和数据库对象](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)。|  
 |具有可更新订阅的事务发布|此发布类型的特征如下：<br /><br /> \- 每个位置都具有相同的数据，使用一个发布服务器和一个订阅服务器。 <br /> \- 可以更新订阅服务器上的行<br /> \- 此拓扑最适合需要高可用性和读取可伸缩性的服务器环境。<br /><br />有关详细信息，请参阅[可更新订阅](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)。|  

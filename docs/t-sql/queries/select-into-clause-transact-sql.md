@@ -30,10 +30,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d88b0c8e36b69bbc2a341917ec96e12ed8bfdc17
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981720"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - INTO 子句 (Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "73981720"
 
 SELECT…INTO 在默认文件组中创建一个新表，并将来自查询的结果行插入该表中。 要查看完整的 SELECT 语法，请参阅 [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)。  
   
-![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -63,7 +63,7 @@ SELECT…INTO 在默认文件组中创建一个新表，并将来自查询的结
  filegroup     
  指定要在其中创建新表的文件组的名称。 指定的文件组应存在于数据库中，否则 SQL Server 引擎会引发错误。   
  
- **适用范围：** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和更高版本。
+ **适用于：** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和更高版本。
   
 ## <a name="data-types"></a>数据类型  
  FILESTREAM 属性不转移到新表。 FILESTREAM BLOB 作为 varbinary(max) BLOB 复制并存储在新表中  。 如果没有 FILESTREAM 属性，则 varbinary(max) 数据类型具有 2 GB 的限制  。 如果某个 FILESTREAM BLOB 超过该值，则会引发 7119 错误并停止该语句。  
@@ -82,7 +82,7 @@ SELECT…INTO 在默认文件组中创建一个新表，并将来自查询的结
   
 如果这些条件中的一个为真，列将被创建为 NOT NULL 而不继承 IDENTITY 属性。 如果在新表中需要某一标识列，但此类列不可用，或者您需要不同于源标识列的种子或增量值，则使用 IDENTITY 函数在选择列表中定义该列。 请参阅下面的“示例”部分中的“使用 IDENTITY 函数创建标识列”。  
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 `SELECT...INTO` 语句的操作分为两个部分：创建新表，然后插入行。  这意味着如果插入失败，它们将全部回滚，但新的（空）表将保留。  如果需要整个操作以整体的形式成功或失败，请使用[显式事务](../language-elements/begin-transaction-transact-sql.md)。
   
 ## <a name="limitations-and-restrictions"></a>限制和局限  
@@ -171,7 +171,7 @@ WHERE name = 'AddressID';
 ### <a name="d-creating-a-table-by-specifying-columns-from-a-remote-data-source"></a>D. 通过指定来自远程数据源的列，创建一个表  
  下面的示例演示从远程数据源在本地服务器上创建新表的三个方法。 该示例从创建指向远程数据源的链接开始。 然后在第一个 SELECT...INTO 语句的 FROM 子句中和第二个 SELECT...INTO 语句的 OPENQUERY 函数中指定链接服务器名称 `MyLinkServer,`。 第三个 SELECT...INTO 语句使用 OPENDATASOURCE 函数，该函数直接指定远程数据源，而非使用链接的服务器名称。  
   
- **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
+ 适用于：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本  。  
   
 ```sql
 USE master;  
@@ -214,7 +214,7 @@ GO
 ### <a name="e-import-from-an-external-table-created-with-polybase"></a>E. 从使用 PolyBase 创建的外部表导入  
  从 Hadoop 或 Azure 存储空间将数据导入到 SQL Server 进行永久存储。 使用 `SELECT INTO` 导入外部表引用的数据，以便永久存储在 SQL Server 中。 动态创建关系表，然后在第二步中创建基于该表的列存储索引。  
   
- **适用于：** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ 适用对象：[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  。  
   
 ```sql
 -- Import data for car drivers into SQL Server to do more in-depth analysis.  
@@ -231,7 +231,7 @@ ORDER BY YearlyIncome;
 ### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>F. 创建一个新表作为另一个表的副本并将其加载到指定的文件组
 以下示例演示如何创建一个新表作为另一个表的副本，并将其加载到用户默认文件组之外的指定文件组。
 
- **适用范围：** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和更高版本。
+ **适用于：** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和更高版本。
 
 ```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;

@@ -16,18 +16,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.openlocfilehash: c56f702b6946662657f35fd7e0c8e6b9bc791c36
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67903962"
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-借助 FILESTREAM，基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的应用程序可以将非结构化的数据（如文档和图像）存储在文件系统中。 应用程序在利用丰富的流式 API 和文件系统的性能的同时，还可保持非结构化数据和对应的结构化数据之间的事务一致性。  
+借助 FILESTREAM，基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的应用程序可以将非结构化的数据（如文档和图像）存储在文件系统中。 应用程序在利用丰富的流式 API 和文件系统的性能的同时，还可保持非结构化数据和对应的结构化数据之间的事务一致性。  
   
-FILESTREAM 通过将 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] varbinary(max) **二进制大型对象 (BLOB) 数据作为文件存储在 NTFS 或 ReFS 文件系统中，将** 与该文件系统集成在一起。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句可插入、更新、查询、搜索和备份 FILESTREAM 数据。 通过 Win32 文件系统接口可以流式方式访问数据。  
+FILESTREAM 通过将 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] varbinary(max) **二进制大型对象 (BLOB) 数据作为文件存储在 NTFS 或 ReFS 文件系统中，将** 与该文件系统集成在一起。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句可插入、更新、查询、搜索和备份 FILESTREAM 数据。 Win32 文件系统接口提供对数据的流访问权限。  
   
 FILESTREAM 使用 NT 系统缓存来缓存文件数据。 这有助于减少 FILESTREAM 数据可能对 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 性能产生的任何影响。 由于没有使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 缓冲池，因此该内存可用于查询处理。  
   

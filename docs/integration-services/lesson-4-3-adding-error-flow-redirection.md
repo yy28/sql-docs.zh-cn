@@ -11,10 +11,10 @@ ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4a3626878ba4be6d56bb56b545f3d0cdc24a407a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283193"
 ---
 # <a name="lesson-4-3-add-error-flow-redirection"></a>第 4-3 课：添加错误流重定向
@@ -55,7 +55,7 @@ ms.locfileid: "71283193"
   
 10. 在“脚本”页中，验证是否已将“LocaleID”属性设置为“英语(美国)”    。
   
-11. 单击“编辑脚本”，打开 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA)  。 在“Input0_ProcessInputRow”方法中，键入或粘贴以下代码  ：  
+11. 选择“编辑脚本”，打开 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA)  。 在“Input0_ProcessInputRow”方法中，键入或粘贴以下代码  ：  
   
     [Visual Basic]  
   

@@ -13,15 +13,15 @@ ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: bbc94f7586c05746a70c2f9fd9172230771837a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67912057"
 ---
 # <a name="resource-governor"></a>Resource Governor
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源调控器是一项可用于管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作负荷和系统资源使用情况的功能。 您可使用资源调控器指定传入应用程序请求可以使用的 CPU、物理 IO 和内存的数量限制。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源调控器是一项可用于管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作负荷和系统资源使用情况的功能。 可以通过 Resource Governor 指定各种限制，对可供传入应用程序请求使用的 CPU、物理 IO 和内存量进行限制。  
   
 ## <a name="benefits-of-resource-governor"></a>资源调控器的优势  
  利用资源调控器，您可以通过指定传入请求的资源消耗限制来管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作负荷和资源。 在资源调控器上下文中，工作负荷是一组大小相似的查询或请求，可以且应该视为单个实体。 这并不是必需的，但是工作负荷的资源使用模式越统一，通过资源调控器可能获得的益处越多。 资源限制可以实时重新配置，对正在执行的工作负荷影响非常小。  
@@ -75,7 +75,7 @@ ms.locfileid: "67912057"
   
 -   资源池提供并限制应用程序所需的资源，例如，Application 3。  
   
- ![资源调控器功能组件](../../relational-databases/resource-governor/media/rg-basic-funct-components.gif "资源调控器功能组件")  
+ ![Resource Governor 功能组件](../../relational-databases/resource-governor/media/rg-basic-funct-components.gif "Resource Governor 功能组件")  
   
 ## <a name="resource-governor-tasks"></a>资源调控器任务  
   

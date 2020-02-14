@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6e0abb97eddddc65103bfaad7c2e1996423a4919
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.openlocfilehash: 67a62cc33877644f9feb6384c5d454b2cf30695b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75558663"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831808"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>使用基于策略的管理来管理服务器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -104,25 +104,19 @@ ms.locfileid: "75558663"
   
 ## <a name="links-to-specific-tasks"></a>特定任务的链接 
 
- - [存储基于策略的管理策略。](policy-based-management-storage.md)|  
- - [配置警报以通知策略管理员策略失败情况](../../relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)  
- - [创建新的基于策略的管理条件](../../relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md) 
+ - [存储基于策略的管理策略。](policy-based-management-storage.md)
+ - [配置警报以通知策略管理员策略失败情况](../../relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)
+ - [创建新的基于策略的管理条件](../../relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md)
  - [删除基于策略的管理条件](../../relational-databases/policy-based-management/delete-a-policy-based-management-condition.md)
- - [查看或修改基于策略的管理条件的属性](../../relational-databases/policy-based-management/view-or-modify-the-properties-of-a-policy-based-management-condition.md)|  
+ - [查看或修改基于策略的管理条件的属性](../../relational-databases/policy-based-management/view-or-modify-the-properties-of-a-policy-based-management-condition.md)
  - [导出基于策略的管理策略](../../relational-databases/policy-based-management/export-a-policy-based-management-policy.md)
- - [导入基于策略的管理策略](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md)|  
+ - [导入基于策略的管理策略](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md)
  - [评估来自对象的基于策略的管理策略](../../relational-databases/policy-based-management/evaluate-a-policy-based-management-policy-from-an-object.md)
- - [使用基于策略的管理方面](../../relational-databases/policy-based-management/working-with-policy-based-management-facets.md)|  
+ - [处理基于策略的管理方面](../../relational-databases/policy-based-management/working-with-policy-based-management-facets.md)
  - [使用基于策略的管理来监视和强制执行最佳实践](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)
-
 
 ## <a name="see-also"></a>另请参阅  
  
  - [教程：创建并应用 off-by-default 策略](lesson-1-create-and-apply-an-off-by-default-policy.md)
  - [教程：创建并应用命名标准策略](lesson-2-create-and-apply-a-naming-standards-policy.md)
  - [基于策略的管理视图 (Transact-SQL)](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
- 
-
- 
-  
-  

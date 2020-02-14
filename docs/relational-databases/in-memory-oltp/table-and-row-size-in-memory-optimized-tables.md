@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a3d52368ac0eaeba118d0ba6e7abc88ef5e69db9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68063143"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>内存优化表中的表和行大小
@@ -39,7 +39,7 @@ ms.locfileid: "68063143"
 
 内存优化表由行和索引的集合组成，其中包含行的指针。 下图是一个包含索引和行的表，因而也就有行标题和正文：  
   
-![内存优化表。](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Memory optimized table.")  
+![内存优化表。](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "内存优化表。")  
 内存优化表，由索引和行组成。  
 
 ##  <a name="bkmk_TableSize"></a> 计算表的大小
@@ -99,14 +99,14 @@ ms.locfileid: "68063143"
   
 对于大于 200 的时间，该表包含以下行：  
   
-|“属性”|City|  
+|名称|城市|  
 |----------|----------|  
-|John|Beijing|  
+|John|北京|  
 |Jane|Prague|  
   
 但是，开始时间为 100 的任意活动事务都将看到该表的以下版本：  
   
-|“属性”|City|  
+|名称|城市|  
 |----------|----------|  
 |John|Paris|  
 |Jane|Prague|  
@@ -124,13 +124,13 @@ ms.locfileid: "68063143"
   
 下表介绍行正文大小的计算，公式为 *实际行正文大小* = SUM(*浅表类型的大小*) + 2 + 2 * *深表类型列数*。  
   
-|部分|Size|注释|  
+|部分|大小|注释|  
 |-------------|----------|--------------|  
 |浅表类型列|SUM([浅表类型的大小])。 各类型的大小（字节数）如下：<br /><br /> **Bit**：1<br /><br /> **Tinyint**：1<br /><br /> **Smallint**：2<br /><br /> **Int**：4<br /><br /> **Real**：4<br /><br /> **Smalldatetime**：4<br /><br /> **Smallmoney**：4<br /><br /> **Bigint**：8<br /><br /> **Datetime**：8<br /><br /> **Datetime2**：8<br /><br /> **Float**：8<br /><br /> **Money**：8<br /><br /> **Numeric**（精度 <=18）：8<br /><br /> **Time**：8<br /><br /> **Numeric**（精度 > 18）：16<br /><br /> **Uniqueidentifier**：16||  
-|浅表列填充|可能的值有：<br /><br /> 如果存在深表类型列并且浅表列的总数据大小是奇数，则为 1。<br /><br /> 否则为 0|深表类型为类型 (var)binary 和 (n)(var)char。|  
-|深表类型列的偏移数组|可能的值有：<br /><br /> 如果没有深表类型列，则为 0<br /><br /> 否则为 2 + 2 * [深表类型列数]|深表类型为类型 (var)binary 和 (n)(var)char。|  
+|浅表列填充|可能的值包括：<br /><br /> 如果存在深表类型列并且浅表列的总数据大小是奇数，则为 1。<br /><br /> 否则为 0|深表类型为类型 (var)binary 和 (n)(var)char。|  
+|深表类型列的偏移数组|可能的值包括：<br /><br /> 如果没有深表类型列，则为 0<br /><br /> 否则为 2 + 2 * [深表类型列数]|深表类型为类型 (var)binary 和 (n)(var)char。|  
 |NULL 数组|[可以为 Null 的列数] / 8，舍入为完整字节。|数组每个可以为 Null 的列有一位。 这舍入为完整字节。|  
-|NULL 数组填充|可能的值有：<br /><br /> 如果存在深表类型列并且 NULL 数组的大小为奇数字节，则为 1。<br /><br /> 否则为 0|深表类型为类型 (var)binary 和 (n)(var)char。|  
+|NULL 数组填充|可能的值包括：<br /><br /> 如果存在深表类型列并且 NULL 数组的大小为奇数字节，则为 1。<br /><br /> 否则为 0|深表类型为类型 (var)binary 和 (n)(var)char。|  
 |填充|如果没有深表类型列：0<br /><br /> 如果有深表类型列，则根据浅表列需要的最大对齐添加 0-7 个填充字节。 每个浅表列都需要与上述大小相等的对齐，而 GUID 列需要 1（而不是 16）字节的对齐，数值列始终需要 8（而不是 16）字节的对齐。 所有浅表列间使用最大的对齐要求，添加了 0-7 个字节，现在总大小（不带深表类型列）是所需对齐的数倍。|深表类型为类型 (var)binary 和 (n)(var)char。|  
 |固定长度的深表类型列|SUM(*固定长度深表类型列的大小*)<br /><br /> 各列大小如下：<br /><br /> 对于 char(i) 和 binary(i)，为 i。<br /><br /> 对于 nchar(i)，为 2 * i|固定长度深表类型列是类型为 char(i)、nchar(i) 或 binary(i) 的列。|  
 |可变长度深表类型列*计算大小*|SUM(*可变长度深表类型列的计算大小*)<br /><br /> 各列的计算大小如下：<br /><br /> 对于 varchar(i) 和 varbinary(i)，为 i<br /><br /> 对于 nvarchar(i)，为 2 * i|此行仅适用于 *计算行正文大小*。<br /><br /> 可变长度的深表类型列是类型为 varchar(i)、nvarchar(i) 或 varbinary(i) 的列。 计算大小由列的最大长度 (i) 决定。|  
@@ -240,6 +240,6 @@ where object_id = object_id('dbo.Orders')
 [What's new for In-Memory OLTP in SQL Server 2016 since CTP3](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3)（ 自 CTP3 以来，SQL Server 2016 中内存中 OLTP 的新增功能）博客文章进一步详述了其中的某些复杂问题。   
  
 ## <a name="see-also"></a>另请参阅  
- [内存优化表](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+ [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

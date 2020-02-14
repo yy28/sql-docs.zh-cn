@@ -13,10 +13,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 95e9d1139619f64aa9ff1be53711019fdbdf6637
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909302"
 ---
 # <a name="spatial-indexes-overview"></a>空间索引概述
@@ -29,7 +29,7 @@ ms.locfileid: "72909302"
 ##  <a name="about"></a> 关于空间索引  
   
 ###  <a name="decompose"></a> 将索引空间分解成网格层次结构  
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，空间索引使用 B 树构建而成，也就是说，这些索引必须按 B 树的线性顺序表示二维空间数据。 因此，将数据读入空间索引之前，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 先实现对空间的分层均匀分解。 索引创建过程会将空间  分解成一个四级  网格层次结构。 这些级别指的是  第 1 级（顶级）、  第 2 级、  第 3 级和  第 4 级。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，空间索引使用 B 树构建而成，也就是说，这些索引必须按 B 树的线性顺序表示二维空间数据。 因此，将数据读入空间索引之前， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 先实现对空间的分层均匀分解。 索引创建过程会将空间  分解成一个四级  网格层次结构。 这些级别指的是  第 1 级（顶级）、  第 2 级、  第 3 级和  第 4 级。  
   
  每个后续级别都会进一步分解其上一级，因此上一级别的每个单元都包含下一级别的整个网格。 在给定级别上，所有网格沿两个轴都有相同数目的单元（例如 4x4 或 8x8），并且单元的大小都相同。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "72909302"
  ![最深单元优化](../../relational-databases/spatial/media/spndx-opt-deepest-cell.gif "最深单元优化")  
   
 ###  <a name="schemes"></a> 分割方案  
- 空间索引的行为部分取决于“分割方案”  。 分割方案特定于数据类型。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，空间索引支持两种分割方案：  
+ 空间索引的行为部分取决于“分割方案”  。 分割方案特定于数据类型。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，空间索引支持两种分割方案：  
   
 -   “几何图形网格分割”  ，这是适用于 **geometry** 数据类型的方案。  
   
@@ -199,7 +199,7 @@ ms.locfileid: "72909302"
   
 -   *geometry1*）的数据的表列。[STIntersects](../../t-sql/spatial-geometry/stintersects-geometry-data-type.md)(*geometry2*)= 1  
   
--   *geometry1.* [STOverlaps](../../t-sql/spatial-geometry/stoverlaps-geometry-data-type.md) *(geometry2) = 1*  
+-   *geometry1.* [STOverlaps](../../t-sql/spatial-geometry/stoverlaps-geometry-data-type.md) (geometry2) = 1   
   
 -   *geometry1*[STTouches](../../t-sql/spatial-geometry/sttouches-geometry-data-type.md)(*geometry2*) = 1  
   

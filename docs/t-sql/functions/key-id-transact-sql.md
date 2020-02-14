@@ -21,18 +21,18 @@ ms.assetid: d7309542-dbbe-41dc-b42e-5d9a1c8b4838
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 3ccf2da9a32cb932dc206d702d6303ffa85e0664
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109341"
 ---
-# <a name="keyid-transact-sql"></a>KEY_ID (Transact-SQL)
+# <a name="key_id-transact-sql"></a>KEY_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   返回当前数据库中对称密钥的 ID。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,13 +42,13 @@ Key_ID ( 'Key_Name' )
 ```  
   
 ## <a name="arguments"></a>参数  
- **'** Key_Name **'**   
+ **'** *Key_Name* **'**  
  数据库中对称密钥的名称。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  临时密钥的名称必须以数字符号 (#) 开头。  
   
 ## <a name="permissions"></a>权限  

@@ -7,20 +7,20 @@ ms.reviewer: ''
 ms.technology: supportability
 ms.topic: conceptual
 keywords:
-- “数据收集”
+- 数据收集
 helpviewer_keywords:
 - data collection [SQL Server]
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2e50a46d53e1bf8fbee2b711ddce80e21a65beca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140749"
 ---
-# <a name="data-collection"></a>“数据收集”
+# <a name="data-collection"></a>数据收集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   数据收集器是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的一个组件，用于收集不同的数据集。 数据收集连续运行或按照用户定义的计划运行。 数据收集器将收集的数据存储在称为管理数据仓库的关系数据库中。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68140749"
  有关详细信息，请参阅 [Integration Services (SSIS) 包](../../integration-services/integration-services-ssis-packages.md)。  
   
 ## <a name="terminology"></a>术语  
- **目标 (target)**  
+ **目标**  
  支持数据收集的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 版本中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 有关支持的版本的详细信息，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)的“可管理性”部分。  
   
  “目标根目录  ”定义目标层次结构中的子树。 “目标集  ”是通过将筛选器应用到目标根目录定义的子树上而得到的目标组。 目标根目录可以是数据库、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，或计算机实例。  
@@ -111,10 +111,10 @@ ms.locfileid: "68140749"
   
 ## <a name="things-you-can-do"></a>你可以执行的事项  
   
-|描述|主题|  
+|说明|主题|  
 |----------------------|-----------|  
 |管理数据收集的各个方面，例如启用或禁用数据收集、更改收集组配置或查看管理数据仓库中的数据。|[管理数据收集](../../relational-databases/data-collection/manage-data-collection.md)|  
-|使用这些报表获取信息以监视系统功能和解决系统性能问题。|[系统数据收集组报表](../../relational-databases/data-collection/system-data-collection-set-reports.md)|  
+|使用这些报表获取信息以监视系统功能和解决系统性能问题。|[系统数据收集组报告](../../relational-databases/data-collection/system-data-collection-set-reports.md)|  
 |使用管理数据仓库来收集自身为数据收集目标的服务器的数据。|[管理数据仓库](../../relational-databases/data-collection/management-data-warehouse.md)| 
 |可以利用 SQL Server Profiler 的服务器端跟踪功能导出跟踪定义，可使用跟踪定义创建一个使用通用 SQL 跟踪收集器类型的收集组| [使用 SQL Server Profiler 创建 SQL 跟踪收集组 (SQL Server Management Studio)](use-sql-server-profiler-to-create-a-sql-trace-collection-set.md)
   

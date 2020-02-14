@@ -22,10 +22,10 @@ ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 5d51385ff820155d805803773265f39cd8598df6
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981893"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "73981893"
 
   为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内数据库中的表或索引视图创建全文索引。 每个表或索引视图只允许有一个全文索引，并且每个全文索引会应用于单个表或索引视图。 全文索引最多可以包含 1024 个列。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -96,7 +96,7 @@ language_term 是可选的，可以将其指定为与语言区域设置标识符
   
 对于指定为 language_term 的语言，必须启用断字符和词干分析器等资源  。 如果这些资源不支持指定的语言， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回错误。  
   
-使用 sp_configure 存储过程可访问有关 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的默认全文语言的信息。 有关详细信息，请参阅本主题后面的 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)不熟悉的读者。  
+使用 sp_configure 存储过程可访问有关 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的默认全文语言信息。 有关详细信息，请参阅本主题后面的 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)不熟悉的读者。  
   
 如果非 BLOB 和非 XML 列包含多种语言的文本数据，或者列中存储的文本的语言未知，则可能适合使用非特定 (0x0) 语言资源。 但是，您应该先了解使用非特定 (0x0) 语言资源的可能后果。 有关使用非特定 (0x0) 语言资源的可能解决方案和后果的信息，请参阅[创建全文检索时选择语言](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)。  
   
@@ -153,7 +153,7 @@ OFF
 property_list_name         
 指定要与全文索引关联的搜索属性列表的名称。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 有关详细信息，请参阅[创建和管理全文检索](../../relational-databases/search/create-and-manage-full-text-indexes.md)。  
   
 在 xml 列上，可以创建一个全文检索以便为 XML 元素的内容编制索引，但忽略 XML 标记  。 不为数值的属性值都会进行全文索引。 元素标记用作标记边界。 支持包含多种语言的格式正确的 XML 或 HTML 文档和片段。 有关详细信息，请参阅 [结合使用具有全文搜索和 XML 列](../../relational-databases/xml/use-full-text-search-with-xml-columns.md)。  
@@ -167,7 +167,7 @@ property_list_name
 |---------------------|------------------------|------------|  
 |未启用|未指定|对索引执行完全填充。|  
 |未启用|Specified|在发出 ALTER FULLTEXT INDEX...START POPULATION 语句之前，不会进行任何索引填充。|  
-|已启用|指定|引发错误，并且不会更改索引。|  
+|已启用|Specified|引发错误，并且不会更改索引。|  
 |已启用|未指定|对索引执行完全填充。|  
   
  有关填充全文检索的详细信息，请参阅[填充全文检索](../../relational-databases/search/populate-full-text-indexes.md)。  

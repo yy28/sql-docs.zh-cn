@@ -17,10 +17,10 @@ ms.assetid: 3795d442-714b-4bbb-9acd-75bf277a468a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 40e6fc7d5156ebb56266977bf929242db232e3e8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298488"
 ---
 # <a name="smtp-connection-manager"></a>SMTP 连接管理器
@@ -63,7 +63,7 @@ ms.locfileid: "71298488"
  **名称**  
  为连接管理器提供唯一的名称。  
   
- **Description**  
+ **说明**  
  描述连接管理器。 最好按照连接管理器的用途对其进行说明，使包的说明一目了然，且更便于维护。  
   
  **SMTP 服务器**  

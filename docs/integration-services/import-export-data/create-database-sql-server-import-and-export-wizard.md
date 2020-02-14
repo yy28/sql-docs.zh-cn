@@ -12,10 +12,10 @@ ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4900f90f4044b32aea673106ad0a7a2a14a8f5cb
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296289"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>创建数据库（SQL Server 导入和导出向导）
@@ -33,7 +33,7 @@ ms.locfileid: "71296289"
 ## <a name="screen-shot-of-the-create-database-page"></a>“创建数据库”页的屏幕截图  
 以下屏幕截图显示向导的“创建数据库”  对话框。  
 
-![导入和导出向导的“创建数据库”页](../../integration-services/import-export-data/media/create-database.png "导入和导出向导的“创建数据库”页")  
+![导入和导出向导的创建数据库页](../../integration-services/import-export-data/media/create-database.png "导入和导出向导的创建数据库页")  
 
 ## <a name="provide-a-name-for-the-new-database"></a>提供新数据库的名称  
 **名称**  
@@ -87,7 +87,7 @@ ms.locfileid: "71296289"
  **增长规模**  
  指定日志文件可以增长的大小 (MB)。  
 
-### <a name="more-info"></a>详细信息
+### <a name="more-info"></a>更多信息
 有关在此页上看到的文件大小选项的详细信息，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)。 
 
 ## <a name="whats-next"></a>下一步是什么？  

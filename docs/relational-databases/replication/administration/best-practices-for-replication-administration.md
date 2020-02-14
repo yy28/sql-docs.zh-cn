@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 04cfff3e2772f945d01093bab15246924a104b2b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 5d0948f6732b97da93b1136635175b90d5e92059
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768841"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286870"
 ---
 # <a name="best-practices-for-replication-administration"></a>复制管理最佳实践
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -135,7 +135,7 @@ ms.locfileid: "68768841"
  在创建发布后，可能需要添加或删除项目或者更改发布和项目属性。 创建发布后，多数更改是允许的，但在某些情况下还需要生成发布的新快照，并且/或者重新初始化对发布的订阅。 有关详细信息，请参阅[更改发布和项目属性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)和[向现有发布添加项目和从中删除项目](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)。  
   
 ## <a name="understand-how-to-make-schema-changes-if-application-requirements-change"></a>如果应用程序的要求发生更改，了解如何进行架构更改  
- 在很多情况下，将应用程序投入生产后都需要进行架构更改。 在复制拓扑中，这些更改通常必须传播到所有的订阅服务器。 复制支持对已发布对象进行多种架构更改。 对 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 发布服务器中相应的已发布对象进行以下任何架构更改时，默认情况下更改都将传播到所有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器：  
+ 在很多情况下，将应用程序投入生产后都需要进行架构更改。 在复制拓扑中，这些更改通常必须传播到所有的订阅服务器。 复制支持对已发布对象进行多种架构更改。 对 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 发布服务器中相应的发布对象进行下列任何一种架构更改时，默认会将该更改传播到所有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器：  
   
 -   ALTER TABLE  
   

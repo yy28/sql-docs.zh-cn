@@ -18,16 +18,16 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 724eb513c3a48916e1083e3ce5bb50251896d381
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983252"
 ---
 # <a name="live-query-statistics"></a>实时查询统计信息
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 能够查看活动查询的实时执行计划。 此实时查询计划作为控制流，能够实时了解从一个[查询计划操作员](../../relational-databases/showplan-logical-and-physical-operators-reference.md)到另一个操作员的查询执行过程。 实时查询计划显示总体查询进度和操作员级运行时执行统计信息（例如处理的行数、经过的时间、操作员进度等）。由于此数据是实时可用的，无需等待完成查询，因此这些执行统计信息对于调试查询性能问题非常有用。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]开始支持此功能，但它可以与 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]配合使用。  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 能够查看活动查询的实时执行计划。 此实时查询计划作为控制流，能够实时了解从一个[查询计划操作员](../../relational-databases/showplan-logical-and-physical-operators-reference.md)到另一个操作员的查询执行过程。 实时查询计划显示总体查询进度和操作员级运行时执行统计信息（例如处理的行数、经过的时间、操作员进度等）。由于此数据是实时可用的，无需等待完成查询，因此这些执行统计信息对于调试查询性能问题非常有用。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 开始支持此功能，但它可以与 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 配合使用。  
 
 > [!NOTE]
 > 在内部，实时查询统计信息利用 [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) DMV。
@@ -58,7 +58,7 @@ ms.locfileid: "73983252"
   
  ![活动监视器中的“实时查询统计信息”按钮](../../relational-databases/performance/media/livequerystatsactmon.png "活动监视器中的“实时查询统计信息”按钮")  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  必须启用统计信息配置文件基础结构，实时查询统计信息才能捕获查询进度的相关信息。 开销有可能较大，具体取决于使用的版本。 有关此开销的详细信息，请参阅[查询分析基础结构](../../relational-databases/performance/query-profiling-infrastructure.md)。
   
 ## <a name="permissions"></a>权限  
@@ -69,7 +69,7 @@ ms.locfileid: "73983252"
  [性能监视和优化工具](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
  [打开活动监视器 (SQL Server Management Studio)](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)     
  [活动监视器](../../relational-databases/performance-monitor/activity-monitor.md)     
- [使用查询存储监视性能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
+ [相关视图、函数和过程](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
  [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md)     
  [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)     
  [跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)    

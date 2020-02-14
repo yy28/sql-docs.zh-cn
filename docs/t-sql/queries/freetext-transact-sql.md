@@ -22,16 +22,16 @@ ms.assetid: 2f199d3c-440e-4bcf-bdb5-82bb3994005d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 3c0d1ed26fa58934a51ec051eb3aa4e1d5b9a2bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67902105"
 ---
 # <a name="freetext-transact-sql"></a>FREETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  是一个谓词，用于在 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句的 [!INCLUDE[tsql](../../includes/tsql-md.md)] [WHERE 子句](../../t-sql/queries/where-transact-sql.md)中对包含基于字符的数据类型的全文索引列执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文搜索。 该谓词将搜索含义与搜索条件中的单词相同但不完全匹配的值。 如果使用 FREETEXT，全文查询引擎将在内部对 freetext_string 执行以下操作，并为每个字词分配权重，再查找匹配项  ：  
+  它是一个谓词，用于在 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句的 [!INCLUDE[tsql](../../includes/tsql-md.md)] [WHERE 子句](../../t-sql/queries/where-transact-sql.md)中对包含基于字符的数据类型的全文索引列执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文搜索。 该谓词将搜索含义与搜索条件中的单词相同但不完全匹配的值。 如果使用 FREETEXT，全文查询引擎将在内部对 freetext_string 执行以下操作，并为每个字词分配权重，再查找匹配项  ：  
   
 -   基于单词边界（断字）将字符串分隔成单独的单词。  
   
@@ -42,9 +42,9 @@ ms.locfileid: "67902105"
 > [!NOTE]  
 >  有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的全文搜索形式的信息，请参阅[使用全文搜索查询](../../relational-databases/search/query-with-full-text-search.md)。  
   
-**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）  。
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -126,7 +126,7 @@ WHERE FREETEXT(Description, @SearchWord);
  可以在 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 或 FREETEXT 谓词中使用由四部分组成的名称对链接服务器上的目标表的全文索引列进行查询。 若要准备远程服务器以接收全文查询，请在远程服务器上的目标表和列上创建全文索引，然后将该远程服务器添加为链接服务器。  
   
 ## <a name="comparison-of-like-to-full-text-search"></a>LIKE 与全文搜索的比较  
- 与全文搜索不同，[LIKE](../../t-sql/language-elements/like-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 谓词仅对字符模式有效。 另外，不能使用 LIKE 谓词来查询格式化的二进制数据。 此外，对大量非结构化的文本数据执行 LIKE 查询要比对相同数据执行同样的全文查询慢得多。 对数百万行文本数据进行的 LIKE 查询可能需要几分钟的时间才能返回结果；而对于同样的数据，全文查询只需要几秒甚至更少的时间，具体取决于返回的行数。  
+ 与全文搜索不同， [LIKE](../../t-sql/language-elements/like-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 谓词仅对字符模式有效。 另外，不能使用 LIKE 谓词来查询格式化的二进制数据。 此外，对大量非结构化的文本数据执行 LIKE 查询要比对相同数据执行同样的全文查询慢得多。 对数百万行文本数据进行的 LIKE 查询可能需要几分钟的时间才能返回结果；而对于同样的数据，全文查询只需要几秒甚至更少的时间，具体取决于返回的行数。  
   
 ## <a name="examples"></a>示例  
   

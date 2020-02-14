@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f18f33d58de48358ffe88adee0bb2a3605c3c50b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 1052379affba718d49879c85e395b0117671075a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769986"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286558"
 ---
 # <a name="publication-properties-subscription-options"></a>发布属性，订阅选项
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68769986"
   
 ### <a name="creation-and-synchronization"></a>创建和同步  
  **允许匿名订阅**  
- 确定是否允许匿名请求订阅。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEWEd2005](../../includes/ssewed2005-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssMobileEd2005](../../includes/ssmobileed2005-md.md)]和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for Windows CE 支持匿名订阅。 若要对快照发布和事务发布使用此选项，则必须将选项 **“快照始终可用”** 设置为 **True**。  
+ 确定是否允许匿名请求订阅。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEWEd2005](../../includes/ssewed2005-md.md)]、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssMobileEd2005](../../includes/ssmobileed2005-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for Windows CE 支持匿名订阅。 若要对快照发布和事务发布使用此选项，则必须将选项 **“快照始终可用”** 设置为 **True**。  
   
  **可附加的订阅数据库**  
  确定是否可以通过附加订阅数据库的副本来创建订阅（对于快照发布和事务发布，要求将选项 **“快照始终可用”** 设置为 **True** ）。  
@@ -50,7 +50,7 @@ ms.locfileid: "68769986"
   
 ### <a name="schema-replication"></a>架构复制  
  **复制架构更改**  
- 仅限[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更高版本。 确定是否将架构更改（例如向表中添加列或者更改列的数据类型）复制到已发布的对象。 有关详细信息，请参阅[对发布数据库进行架构更改](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。  
+ 仅限 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更高版本。 确定是否将架构更改（例如向表中添加列或者更改列的数据类型）复制到已发布的对象。 有关详细信息，请参阅[对发布数据库进行架构更改](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。  
   
 ## <a name="options-for-snapshot-and-transactional-publications"></a>适用于快照发布和事务发布的选项  
   
@@ -106,9 +106,9 @@ ms.locfileid: "68769986"
  **集中报告冲突**  
  决定是仅报告发布服务器上发生冲突的数据更改，还是同时报告发布服务器和订阅服务器上发生冲突的数据更改。 此选项是只读选项；对于用新建发布向导创建的发布，该选项默认设置为 **True** ，并且不能在创建发布后更改。 如果值为 **True** ，则表示只在发布服务器上报告冲突。 只能在报告冲突的位置查看冲突。 有关详细信息，请参阅 [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)的“查看冲突”部分。  
   
-### <a name="filtering"></a>筛选  
+### <a name="filtering"></a>Filtering  
  **允许参数化筛选器**  
- 根据发布是否使用参数化筛选器设置此选项。 此选项始终是只读的。 有关详细信息，请参阅 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
+ 根据发布是否使用参数化筛选器设置此选项。 此选项始终是只读的。 有关详细信息，请参阅 [参数化行筛选器](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
   
  **验证订阅服务器**  
  确定在验证订阅服务器是否具有正确的数据分区时，将使用哪些函数。 用逗号分隔多个值。 有关详细信息，请参阅[验证合并订阅服务器的分区信息](../../relational-databases/replication/validate-partition-information-for-a-merge-subscriber.md)。  

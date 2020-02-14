@@ -21,10 +21,10 @@ helpviewer_keywords:
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2fbf040bd24ce3da81497001213e953f7436d863
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296865"
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
@@ -45,7 +45,7 @@ ms.locfileid: "71296865"
 
 有关在 SQL Server 中安装 SQL Server Integration Services 以及其他可能想要或需要的下载信息，请参阅[安装 Integration Services](install-windows/install-integration-services.md)。
 
-##  <a name="info_tipsql-servermediainfo-tippng-resources"></a>![info_tip](../sql-server/media/info-tip.png) Resources
+##  <a name="info_tipsql-servermediainfo-tippng-resources"></a>![info_tip](../sql-server/media/info-tip.png) 资源
 -   [通过 SSIS 论坛获取帮助](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlintegrationservices)
 -   [通过 Stack Overflow 获取帮助](https://stackoverflow.com/questions/tagged/ssis)  
 -   [关注 SSIS 团队博客](https://blogs.msdn.microsoft.com/ssis/)

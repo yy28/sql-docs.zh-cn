@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 5b42a083-7a11-41d8-9e3f-320c7c907237
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 8c07f5b46b1f09f54ce152eeaccabd695b0f32ed
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 9f86ef648812c553a2445afac6a50f03824e8e72
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770684"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76284404"
 ---
 # <a name="distribution-database"></a>分发数据库
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "68770684"
   
 ## <a name="options"></a>选项  
  **分发数据库名称**  
- 为分发数据库输入名称。 分发数据库的默认名称为“distribution”。 如果您指定名称，名称最多可包含 128 个字符，在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例中必须是唯一的，并且必须符合标识符的规则。 有关详细信息，请参阅 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)。  
+ 为分发数据库输入名称。 分发数据库的默认名称为“distribution”。 如果指定名称，名称最多可包含 128 个字符，在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中必须是唯一的，并且必须符合标识符的规则。 有关详细信息，请参阅 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)。  
   
  **分发数据库文件的文件夹** / **分发数据库日志文件的文件夹**  
  输入分发数据库和日志文件的路径。 这些路径必须指向分发服务器的本地磁盘，并以本地驱动器号和冒号（如 C：）开头。 映射的驱动器号和网络路径无效。  

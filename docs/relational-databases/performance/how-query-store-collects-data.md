@@ -14,10 +14,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f60ded18e88d57c5a2975b567fa246923ece7ebe
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71974363"
 ---
 # <a name="how-query-store-collects-data"></a>查询存储的数据收集方式
@@ -28,10 +28,10 @@ SQL Server 查询存储的工作原理类似于飞行数据记录器，不断地
 ## <a name="views"></a>视图 
  下图显示了查询存储视图及其逻辑关系，以及显示为蓝色实体的编译时间信息：
   
- ![查询存储过程视图](../../relational-databases/performance/media/query-store-process-2views.png "query-store-process-2views")  
+ ![查询存储进程视图](../../relational-databases/performance/media/query-store-process-2views.png "query-store-process-2views")  
 **查看描述**  
   
-|“查看”|描述|  
+|查看|说明|  
 |----------|-----------------|  
 |**sys.query_store_query_text**|提供对数据库执行的唯一查询文本。 将忽略查询文本之前和之后的注释和空格。 不忽略文本内部的注释和空格。 批中每个语句都会生成单独的查询文本项。|  
 |**sys.query_context_settings**|显示执行查询所依据的影响计划的设置的非重复组合。 由于 `context_settings_id` 是查询键的一部分，因此采用影响计划的不同设置执行的相同查询文本将在查询存储中生成单独的查询条目。|  
@@ -55,12 +55,12 @@ SQL Server 查询存储的工作原理类似于飞行数据记录器，不断地
   
  下图描绘了上述步骤中所述的集成点：
   
- ![查询存储过程](../../relational-databases/performance/media/query-store-process-2processor.png "query-store-process-2processor") 
+ ![查询存储进程](../../relational-databases/performance/media/query-store-process-2processor.png "query-store-process-2processor") 
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
  若要最大程度减少 I/O 开销，新的数据是在内存中捕获的。 写入操作排队，并稍后将其刷新到磁盘。 下图中显示为“计划存储”的查询和计划信息以最小的延迟时间进行刷新。 显示为 Runtime Stats 的运行时统计信息会在内存中保留一段时间，该时间用 `SET QUERY_STORE` 语句的 `DATA_FLUSH_INTERVAL_SECONDS` 选项定义。 可以使用“[!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 查询存储”对话框为“数据刷新间隔（分钟）”输入一个值，该值在内部转换为秒  。 
   
- ![查询存储过程计划](../../relational-databases/performance/media/query-store-process-3.png "query-store-process-3plan") 
+ ![查询存储进程计划](../../relational-databases/performance/media/query-store-process-3.png "query-store-process-3plan") 
   
  如果在使用[跟踪标志 7745](../../relational-databases/performance/best-practice-with-the-query-store.md#Recovery) 时系统故障或关闭，则查询存储可能会丢失已收集但尚未保存的运行时数据，直到使用 `DATA_FLUSH_INTERVAL_SECONDS` 定义的时间窗口为止。 我们建议使用默认值 900 秒（15 分钟），可在查询捕获性能和数据可用性之间实现平衡。
  
@@ -74,7 +74,7 @@ SQL Server 查询存储的工作原理类似于飞行数据记录器，不断地
  
  如果会话终止或者客户端应用程序重启或崩溃，则不会记录查询统计信息。 
   
- ![查询存储过程计划信息](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
+ ![查询存储进程计划信息](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
 
 ## <a name="see-also"></a>另请参阅
  [使用查询数据存储来监视性能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  

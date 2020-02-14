@@ -17,10 +17,10 @@ ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 214f28fbb977414d4e14fdd14f2be53e9b705bc1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298338"
 ---
 # <a name="execute-process-task"></a>执行进程任务
@@ -35,7 +35,7 @@ ms.locfileid: "71298338"
 ## <a name="custom-log-entries-available-on-the-execute-process-task"></a>执行进程任务可用的自定义日志项  
  下表列出了执行进程任务的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
-|日志项|描述|  
+|日志项|说明|  
 |---------------|-----------------|  
 |**ExecuteProcessExecutingProcess**|提供所配置任务要运行的进程的信息。<br /><br /> 写入两个日志条目。 一个日志条目包含有关任务所运行可执行文件的名称和位置的信息，另一个条目则记录从可执行文件退出的信息。|  
 |**ExecuteProcessVariableRouting**|提供有关哪些变量被路由到可执行文件的输入和输出的信息。 将为 stdin（输入）、stdout（输出）和 stderr（错误输出）写入日志条目。|  
@@ -60,7 +60,7 @@ ms.locfileid: "71298338"
   
  可以使用表达式设置执行进程任务的各种属性。  
   
- 当使用 **StandardInputVariable** 属性配置执行进程任务以提供输入时，请从该应用程序中调用 **Console.ReadLine** 方法来读取输入。 有关详细信息，请参阅 [Console.ReadLine 方法](https://go.microsoft.com/fwlink/?LinkId=129201)类库中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 主题。  
+ 当使用 **StandardInputVariable** 属性配置执行进程任务以提供输入时，请从该应用程序中调用 **Console.ReadLine** 方法来读取输入。 有关详细信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 类库中的 [Console.ReadLine 方法](https://go.microsoft.com/fwlink/?LinkId=129201)主题。  
   
  当使用 **Arguments** 属性配置执行进程任务以提供输入时，请执行下列步骤之一以获得参数：  
   
@@ -96,7 +96,7 @@ ms.locfileid: "71298338"
 > [!NOTE]  
 >  任务名称在一个包内必须是唯一的。  
   
- **Description**  
+ **说明**  
  键入对执行进程任务的说明。  
   
 ## <a name="execute-process-task-editor-process-page"></a>执行进程任务编辑器（“进程”页）

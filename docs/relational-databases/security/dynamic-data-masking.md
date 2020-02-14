@@ -11,16 +11,16 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c0f2a5d652b23efec6b4dd1c6d021f85e1155247
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67997722"
 ---
 # <a name="dynamic-data-masking"></a>动态数据屏蔽
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-![动态数据屏蔽](../../relational-databases/security/media/dynamic-data-masking.png)
+![动态数据掩码](../../relational-databases/security/media/dynamic-data-masking.png)
 
 动态数据掩码 (DDM) 通过对非特权用户屏蔽敏感数据来限制敏感数据的公开。 它可以用于显著简化应用程序中安全性的设计和编码。  
 
@@ -31,7 +31,7 @@ ms.locfileid: "67997722"
 * DDM 采用完全掩码和部分掩码功能，以及用于数值数据的随机掩码。
 * 简单的 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 命令定义和管理掩码。
 
-例如，呼叫中心支持人员通过身份证号或信用卡号的几个数字就可以辨识呼叫者。  身份证号或信用卡号码不应完全暴露给支持人员。 可以通过定义屏蔽规则来屏蔽查询结果集中身份证号或信用卡号最后四位数字以外的所有数字。 另一个例子就是，在需要进行故障排除时，开发人员可以通过对数据进行适当的数据屏蔽来保护个人身份信息 (PII) 数据，因此可以在不违反遵从性法规的情况下，对生产环境进行查询。
+例如，呼叫中心支持人员通过身份证号或信用卡号的几个数字就可以辨识呼叫者。  身份证号或信用卡号码不应完全暴露给支持人员。 可以定义屏蔽规则，屏蔽任意查询的结果集中任何身份证号或信用卡号除最后四位数以外的其他所有数字。 另一个例子就是，在需要进行故障排除时，开发人员可以通过对数据进行适当的数据屏蔽来保护个人身份信息 (PII) 数据，因此可以在不违反遵从性法规的情况下，对生产环境进行查询。
 
 动态数据屏蔽旨在限制敏感数据的公开，防止没有访问权限的用户查看敏感数据。 动态数据屏蔽并不是要防止数据库用户直接连接到数据库并运行可以公开敏感数据的详尽查询。 动态数据屏蔽是对其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全功能（审核、加密、行级别安全性…）的补充，因此，强烈建议你将此功能与上述功能一起使用，以便更好地保护数据库中的敏感数据。  
   
@@ -40,9 +40,9 @@ ms.locfileid: "67997722"
 ## <a name="defining-a-dynamic-data-mask"></a>定义动态数据屏蔽
  针对表中的列定义屏蔽规则即可模糊该列中的数据。 可以使用四种类型的屏蔽。  
   
-|函数|描述|示例|  
+|函数|说明|示例|  
 |--------------|-----------------|--------------|  
-|，则“默认”|根据指定字段的数据类型进行完全屏蔽。<br /><br /> 对于字符串数据类型，可以使用 XXXX 或者在字段不到 4 个字符长的情况下使用更少的 X（**char**、**nchar**、**varchar**、**nvarchar**、**text**、**ntext**）。  <br /><br /> 对于数字数据类型，可使用零值（**bigint** **bit** **decimal**、 **int**、 **money**、 **numeric**、 **smallint**、 **smallmoney**、 **tinyint**、 **float**、 **real**）。<br /><br /> 对于日期和时间数据类型，可使用 01.01.1900 00:00:00.0000000（**date**、**datetime2**、**datetime**、**datetimeoffset**、**smalldatetime**、**time**）。<br /><br />对于二进制数据类型，可使用单字节的 ASCII 值 0（**binary**、 **varbinary**、 **image**）。|列定义语法示例： `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> ALTER 语法示例：`ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
+|默认|根据指定字段的数据类型进行完全屏蔽。<br /><br /> 对于字符串数据类型，可以使用 XXXX 或者在字段不到 4 个字符长的情况下使用更少的 X（**char**、**nchar**、**varchar**、**nvarchar**、**text**、**ntext**）。  <br /><br /> 对于数字数据类型，可使用零值（**bigint** **bit** **decimal**、 **int**、 **money**、 **numeric**、 **smallint**、 **smallmoney**、 **tinyint**、 **float**、 **real**）。<br /><br /> 对于日期和时间数据类型，可使用 01.01.1900 00:00:00.0000000（**date**、**datetime2**、**datetime**、**datetimeoffset**、**smalldatetime**、**time**）。<br /><br />对于二进制数据类型，可使用单字节的 ASCII 值 0（**binary**、 **varbinary**、 **image**）。|列定义语法示例： `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> ALTER 语法示例：`ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
 |电子邮件|该屏蔽方法公开电子邮件地址的第一个字母，以及电子邮件地址格式中的常量后缀“.com”。 `aXXX@XXXX.com` 列中的一个值匹配。|定义语法示例： `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> ALTER 语法示例：`ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
 |随机|一种随机屏蔽函数，适用于任何数字类型，可以在指定范围内使用随机值来屏蔽原始值。|定义语法示例： `Account_Number bigint MASKED WITH (FUNCTION = 'random([start range], [end range])')`<br /><br /> ALTER 语法示例：`ALTER COLUMN [Month] ADD MASKED WITH (FUNCTION = 'random(1, 12)')`|  
 |自定义字符串|该屏蔽方法公开第一个和最后一个字母，在中间添加自定义填充字符串。 `prefix,[padding],suffix`<br /><br /> 注意：如果因原始值太短而无法进行完整的屏蔽，则不会公开部分前缀或后缀。|定义语法示例： `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> ALTER 语法示例：`ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> 其他示例：<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`<br /><br /> `ALTER COLUMN [Social Security Number] ADD MASKED WITH (FUNCTION = 'partial(0,"XXX-XX-",4)')`|  
@@ -105,7 +105,7 @@ SELECT ID, Name, Salary FROM Employees
 WHERE Salary > 99999 and Salary < 100001;
 ```
 
->    |  ID | “属性”| 薪水 |   
+>    |  ID | 名称| 薪水 |   
 >    | ----- | ---------- | ------ | 
 >    |  62543 | Jane Doe | 0 | 
 >    |  91245 | John Smith | 0 |  
@@ -150,7 +150,7 @@ REVERT;
   
  `1    Roberto     Tamburello    555.123.4567    RTamburello@contoso.com`  
   
- into  
+ 更改为  
   
  `1    RXXXXXXX    Tamburello    xxxx            RXXX@XXXX.com`  
   

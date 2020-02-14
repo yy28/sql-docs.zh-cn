@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e293625ab72ba1b94b32a1e6c1ada853b88509f4
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 591cb0ff055a4a3556ac4b6200d052ffc58a6963
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770597"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286914"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>复制监视器界面概述
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制监视器提供一个以发布服务器为主或以分发服务器为主的视图，以两个窗格的形式显示所有复制活动。 在监视器的左窗格中添加发布服务器后，监视器的右窗格中即显示发布服务器、其发布、对这些发布的订阅和各种复制代理的相关信息。 除了显示有关复制拓扑的信息以外，复制监视器还可用于执行多种任务，如启动和停止代理以及验证数据。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制监视器提供一个以发布服务器为主的视图或一个以分发服务器为主的视图，以两个窗格的形式显示所有复制活动。 在监视器的左窗格中添加发布服务器后，监视器的右窗格中即显示发布服务器、其发布、对这些发布的订阅和各种复制代理的相关信息。 除了显示有关复制拓扑的信息以外，复制监视器还可用于执行多种任务，如启动和停止代理以及验证数据。  
   
 ## <a name="viewing-information-for-the-entire-topology"></a>查看整个拓扑的信息  
  复制监视器的左窗格显示  

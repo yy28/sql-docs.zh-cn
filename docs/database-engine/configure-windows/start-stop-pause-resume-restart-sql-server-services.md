@@ -41,10 +41,10 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 281d392bcb6c9bd6e46dbb6b41a85d080bb811f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68038827"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>启动、停止、暂停、继续、重启 SQL Server 服务
@@ -187,7 +187,7 @@ ms.locfileid: "68038827"
 3.  系统提示是否要执行该操作时，请单击 **“是”** 。  
   
 ##  <a name="CommandPrompt"></a> 在命令提示符窗口中使用 net 命令  
- 可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 命令启动、停止或暂停 **、** 服务。  
+ 可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows net 命令启动、停止或暂停 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务  。  
   
 ###  <a name="dbDefault"></a> 启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
@@ -195,7 +195,7 @@ ms.locfileid: "68038827"
   
      **net start "SQL Server (MSSQLSERVER)"**  
   
-     -或 -  
+     -或-  
   
      **net start MSSQLSERVER**  
   
@@ -203,11 +203,11 @@ ms.locfileid: "68038827"
   
 -   在命令提示符下，输入下列命令之一。 将 \<instancename> 替换为要管理的实例的名称  。  
   
-     **net start "SQL Server (**  instancename **)"**  
+     **net start "SQL Server (** *instancename* **)"**  
   
-     -或 -  
+     -或-  
   
-     **net start MSSQL$** instancename   
+     **net start MSSQL$** *instancename*  
   
 ###  <a name="dbStartup"></a> 使用启动选项启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
@@ -215,7 +215,7 @@ ms.locfileid: "68038827"
   
      **net start "SQL Server (MSSQLSERVER)" /f /m**  
   
-     -或 -  
+     -或-  
   
      **net start MSSQLSERVER /f /m**  
   
@@ -228,7 +228,7 @@ ms.locfileid: "68038827"
   
      **net start "SQL Server Agent (MSSQLSERVER)"**  
   
-     -或 -  
+     -或-  
   
      **net start SQLSERVERAGENT**  
   
@@ -236,9 +236,9 @@ ms.locfileid: "68038827"
   
 -   在命令提示符下，输入下列命令之一。 将 *instancename* 替换为要管理的实例的名称。  
   
-     **net start “SQL Server 代理(**  instancename **)”**  
+     **net start "SQL Server Agent(** *instancename* **)"**  
   
-     -或 -  
+     -或-  
   
      **net start SQLAgent$** *instancename*  
   
@@ -250,7 +250,7 @@ ms.locfileid: "68038827"
   
      **net start "SQL Server Browser"**  
   
-     -或 -  
+     -或-  
   
      **net start SQLBrowser**  
   
@@ -358,7 +358,7 @@ ms.locfileid: "68038827"
  [查看和读取 SQL Server 安装程序日志文件](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [SQL Server 配置管理器](../../relational-databases/sql-server-configuration-manager.md)   
  [以最小配置启动 SQL Server](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)   
- [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)  
+ [SQL Server 2016 版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)  
   
   
 

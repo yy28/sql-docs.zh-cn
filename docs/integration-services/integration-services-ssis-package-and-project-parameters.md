@@ -14,10 +14,10 @@ ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b595c8e2c09260e6874fc3cbaab8cc06d2a0c9df
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296162"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services (SSIS) 包和项目参数
@@ -50,11 +50,11 @@ ms.locfileid: "71296162"
   
  下表列出了值的类型。  
   
-|值名称|描述|值的类型|  
+|值名称|说明|值的类型|  
 |----------------|-----------------|-------------------|  
-|执行值|针对包执行的特定实例赋予的值。 此赋值将覆盖所有其他值，但仅应用于包执行的单个实例。|文字|  
+|执行值|针对包执行的特定实例赋予的值。 此赋值将覆盖所有其他值，但仅应用于包执行的单个实例。|文本|  
 |服务器值|在将项目部署到 Integration Services 服务器后在项目范围内赋予参数的值。 此值将覆盖设计默认值。|文字或环境变量引用|  
-|设计值|在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中创建或编辑项目时赋予参数的值。 该值对于项目而言是持久的。|文字|  
+|设计值|在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中创建或编辑项目时赋予参数的值。 该值对于项目而言是持久的。|文本|  
   
  可以使用单个参数向多个包属性分配值。 只能从单个参数为单个包属性分配值。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "71296162"
   
  在准备包执行的特定实例时，值 5 将赋给 **pkgOptions** 参数。 该值称作执行值，因为仅对于该特定执行实例，该值才适用于参数。 在执行开始时，向与 **pkgOptions** 参数相对应的包属性赋予值 5。  
   
-## <a name="create-parameters"></a>Create Parameters
+## <a name="create-parameters"></a>创建参数
 使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 可以创建项目参数和包参数。 下面的过程提供了有关创建包参数/项目参数的分步说明。  
   
 > **注意：** 若要将使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的早期版本创建的项目转换为项目部署模型，则可以使用 **“Integration Services 项目转换向导”** 来创建基于配置的参数。 有关详细信息，请参阅[部署 Integration Services (SSIS) 项目和包](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
@@ -112,22 +112,22 @@ ms.locfileid: "71296162"
   
 1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中打开包，然后在 SSIS 设计器中单击 **“参数”** 选项卡。  
   
-     ![包参数选项卡](../integration-services/media/denali-package-parameters.gif "Package Parameters Tab")  
+     ![包参数选项卡](../integration-services/media/denali-package-parameters.gif "包参数选项卡")  
   
 2.  单击工具栏上的 **“添加参数”** 按钮。  
   
-     ![添加工具栏按钮](../integration-services/media/denali-parameter-add.gif "Add Toolbar Button")  
+     ![添加工具栏按钮](../integration-services/media/denali-parameter-add.gif "添加工具栏按钮")  
   
 3.  为列表自身中或 **“属性”** 窗口中的 **“名称”** 、 **“数据类型”** 、 **“值”** 、 **“敏感”** 和 **“必需”** 属性输入值。 下表对这些属性进行了说明：  
   
-    |属性|描述|  
+    |properties|说明|  
     |--------------|-----------------|  
-    |“属性”|参数名。|  
-    |“名称”|参数的数据类型。|  
+    |名称|参数的名称。|  
+    |数据类型|参数的数据类型。|  
     |默认值|在设计时分配的参数的默认值。 这也称为设计默认值。|  
-    |区分|敏感参数值在目录中加密，并且在使用 Transact-SQL 或 SQL Server Management Studio 查看时以 NULL 值的形式出现。|  
-    |Required|需要首先指定并非设计默认值的值，包才能执行。|  
-    |描述|出于可维护性目的而提供的参数的说明。 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，当在适用的参数窗口中选择参数时，在“Visual Studio 属性”窗口中设置参数说明。|  
+    |敏感|敏感参数值在目录中加密，并且在使用 Transact-SQL 或 SQL Server Management Studio 查看时以 NULL 值的形式出现。|  
+    |必选|需要首先指定并非设计默认值的值，包才能执行。|  
+    |说明|出于可维护性目的而提供的参数的说明。 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，当在适用的参数窗口中选择参数时，在“Visual Studio 属性”窗口中设置参数说明。|  
   
     > **注意：** 在您向目录部署某一项目时，还有几个属性将与该项目相关联。 若要查看目录中所有参数的全部属性，请使用 [catalog.object_parameters（SSISDB 数据库）](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md)视图。  
   
@@ -143,22 +143,22 @@ ms.locfileid: "71296162"
   
 2.  在解决方案资源管理器中右键单击“Project.params”，然后单击“打开”，或者双击“Project.params”将其打开。     
   
-     ![项目参数窗口](../integration-services/media/denali-project-parameters.gif "Project Parameters Window")  
+     ![项目参数窗口](../integration-services/media/denali-project-parameters.gif "项目参数窗口")  
   
 3.  单击工具栏上的 **“添加参数”** 按钮。  
   
-     ![添加工具栏按钮](../integration-services/media/denali-parameter-add.gif "Add Toolbar Button")  
+     ![添加工具栏按钮](../integration-services/media/denali-parameter-add.gif "添加工具栏按钮")  
   
 4.  为 **“名称”** 、 **“数据类型”** 、 **“值”** 、 **“敏感”** 和 **“必需”** 属性输入值。  
   
-    |属性|描述|  
+    |properties|说明|  
     |--------------|-----------------|  
-    |“属性”|参数名。|  
-    |“名称”|参数的数据类型。|  
+    |名称|参数的名称。|  
+    |数据类型|参数的数据类型。|  
     |默认值|在设计时分配的参数的默认值。 这也称为设计默认值。|  
-    |区分|敏感参数值在目录中加密，并且在使用 Transact-SQL 或 SQL Server Management Studio 查看时以 NULL 值的形式出现。|  
-    |Required|需要首先指定并非设计默认值的值，包才能执行。|  
-    |描述|出于可维护性目的而提供的参数的说明。 在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，当在适用的参数窗口中选择参数时，在“Visual Studio 属性”窗口中设置参数说明。|  
+    |敏感|敏感参数值在目录中加密，并且在使用 Transact-SQL 或 SQL Server Management Studio 查看时以 NULL 值的形式出现。|  
+    |必选|需要首先指定并非设计默认值的值，包才能执行。|  
+    |说明|出于可维护性目的而提供的参数的说明。 在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，当在适用的参数窗口中选择参数时，在“Visual Studio 属性”窗口中设置参数说明。|  
   
 5.  保存项目以保存对参数所做的更改。 参数值将存储在项目文件的配置中。 保存项目文件以将对参数值的所有更改提交到磁盘。  
   
@@ -183,10 +183,10 @@ ms.locfileid: "71296162"
  **名称**  
  指定要创建的参数的名称。  
   
- **Description**  
+ **说明**  
  指定参数的说明。  
   
- **ReplTest1**  
+ **值**  
  指定参数的默认值。 这也称作设计默认值，以后在部署时可以覆盖该值。  
   
  **范围**  

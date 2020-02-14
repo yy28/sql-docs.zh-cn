@@ -21,10 +21,10 @@ ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0bc268c2baea6e0e661fac123df9fe19ec60252c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281947"
 ---
 # <a name="security-overview-integration-services"></a>安全性概述 (Integration Services)
@@ -82,7 +82,7 @@ ms.locfileid: "71281947"
 #### <a name="saving-packages-to-the-msdb-database"></a>将包保存到 msdb 数据库  
  将包保存到 msdb 数据库有助于提供服务器级、数据库级和表级的安全性。 在 msdb 数据库中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包将存储在 sysssispackages 表中。 由于包保存到 msdb 数据库的 sysssispackages 和 sysdtspackages 表中，因此在您备份 msdb 数据库时将自动备份这些包。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也可以通过应用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据库级别的角色，保护 msdb 数据库中存储的包。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括三个用于控制对包访问的固定数据库级别的角色：db_ssisadmin、db_ssisltduser、和 db_ssisoperator。 每个包都可以有关联的读取者角色和写入者角色。 还可以定义要在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中使用的自定义数据库级别的角色。 只能对保存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 msdb 数据库中的包实现角色。 有关详细信息，请参阅 [Integration Services Roles（SSIS 服务）](../../integration-services/security/integration-services-roles-ssis-service.md)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也可以通过应用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据库级别的角色，保护 msdb 数据库中存储的包。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括三个用于控制对包访问的固定数据库级别的角色：db_ssisadmin、db_ssisltduser、和 db_ssisoperator。 每个包都可以有关联的读取者角色和写入者角色。 还可以定义要在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中使用的自定义数据库级别的角色。 只能对保存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的 msdb 数据库中的包实现角色。 有关详细信息，请参阅 [Integration Services Roles（SSIS 服务）](../../integration-services/security/integration-services-roles-ssis-service.md)。  
   
 #### <a name="saving-packages-to-the-file-system"></a>将包保存到文件系统  
  如果将包存储到文件系统而不是 msdb 数据库中，请确保包文件和包含包文件的文件夹的安全。  

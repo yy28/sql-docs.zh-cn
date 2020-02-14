@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: e887c718c76563a7fcd8388c46a3e9e684faf6d5
-ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70304841"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Linux 上的 Always on 可用性组故障转移
@@ -102,7 +102,7 @@ ms.locfileid: "70304841"
 >[!NOTE]
 >自动故障转移不会添加位置约束，因此不需要进行清除。 
 
-详细信息：
+更多相关信息：
 - [Red Hat - 管理群集资源](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-manageresource-HAAR.html)
 - [Pacemaker - 手动移动资源](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/_manually_moving_resources_around_the_cluster.html)
  [SLES 管理指南 - 资源](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 

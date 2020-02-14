@@ -19,18 +19,18 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 770ef448094e764bcc1ca970354941c0d1d03d4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072286"
 ---
-# <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
+# <a name="set-local_variable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 将先前使用 DECLARE @local_variable 语句创建的指定局部变量设置为指定值  。  
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
 SQL Server 和 Azure SQL 数据库的语法：
@@ -66,7 +66,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
 ```  
   
 ## <a name="arguments"></a>参数  
-@ local_variable    
+**@** _local_variable_  
 除 **cursor**、**text**、**ntext**、**image** 或 **table** 之外的任何类型的变量的名称。 变量名称必须以 at 符号 (@) 开头  。 变量名称必须遵循有关[标识符](../../relational-databases/databases/database-identifiers.md)的规则。  
   
 property_name   
@@ -81,10 +81,10 @@ udt_name
 `{ . | :: }`  
 指定 CLR 用户定义类型的方法。 对于实例（非静态）方法，请使用句点 ( **.** )。 对于静态方法，请使用两个冒号 (::)  。 若要调用 CLR 用户定义类型的方法、属性或字段，必须对类型具有 EXECUTE 权限。  
   
-method_name ( argument [ ,... n ] )        
+_method_name_ **(** _argument_ [ **,** ... *n* ] **)**  
 用户定义类型的方法，它使用一个或多个参数来修改类型实例的状态。 静态方法必须是公共的。  
   
-@ SQLCLR_local_variable    
+**@** _SQLCLR_local_variable_  
 其类型位于程序集内的变量。 有关详细信息，请参阅[公共语言运行时 (CLR) 集成编程概念](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)。  
   
 mutator_method   
@@ -168,7 +168,7 @@ READ ONLY
 `UPDATE [OF column_name[ ,... n ] ]`  
 定义游标中可更新的列。 如果提供了 OF column_name [,...n]，则只允许修改列出的列    。 如果没有提供列表，则可更新所有列，除非已将游标定义为 READ_ONLY。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 声明一个变量后，该变量将初始化为 NULL。 使用 SET 语句将一个不是 NULL 的值赋予声明的变量。 给变量赋值的 SET 语句返回单值。 在初始化多个变量时，为每个局部变量使用单独的 SET 语句。  
   
 只能在表达式中使用变量，而不能代替对象名或关键字。 若要构造动态 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，请使用 EXECUTE。  

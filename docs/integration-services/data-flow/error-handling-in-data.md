@@ -23,10 +23,10 @@ ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 994018ab8b574bc313072f7a353ff999d645e0d9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292765"
 ---
 # <a name="error-handling-in-data"></a>数据中的错误处理
@@ -53,7 +53,7 @@ ms.locfileid: "71292765"
   
  下列关系图显示包含错误输出的简单数据流。  
   
- ![具有错误输出的数据流](../../integration-services/data-flow/media/mw-dts-11.gif "Data flow with error output")  
+ ![包含错误输出的数据流](../../integration-services/data-flow/media/mw-dts-11.gif "包含错误输出的数据流")  
   
  有关详细信息，请参阅 [数据流](../../integration-services/data-flow/data-flow.md) 和 [Integration Services 路径](../../integration-services/data-flow/integration-services-paths.md)。  
 
@@ -79,7 +79,7 @@ ms.locfileid: "71292765"
   
  **相关主题：** [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)  
   
- **Description**  
+ **说明**  
  查看操作的说明。  
   
  **将此值设置到选定的单元格**  
@@ -98,7 +98,7 @@ ms.locfileid: "71292765"
 ## <a name="select-an-error-handling-option"></a>选择一个错误处理选项  
  可以配置源、转换和目标处理错误和截断的方式。 下表对这些选项进行说明：  
   
-|选项|描述|  
+|选项|说明|  
 |------------|-----------------|  
 |组件失败|发生错误或截断时数据流任务失败。 失败是错误或截断的默认选项。|  
 |忽略失败|忽略错误或截断，并且将数据行定向到转换或源的输出。|  

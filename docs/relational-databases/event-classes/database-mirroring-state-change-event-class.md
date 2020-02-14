@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 730186265d6932fb74f0b6ab7221abaeb53ecf53
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68009554"
 ---
 # <a name="database-mirroring-state-change-event-class"></a>Database Mirroring State Change 事件类
@@ -29,7 +29,7 @@ ms.locfileid: "68009554"
   
 ## <a name="data-database-mirroring-state-change-event-class-data-columns"></a>Data Database Mirroring State Change 事件类的数据列  
   
-|数据列名称|数据类型|描述|列 ID|可筛选|  
+|数据列名称|数据类型|说明|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|由 USE *database* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database* 语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 数据列而且服务器可用，则 **ServerName** 将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
 |**DatabaseName**|**nvarchar**|镜像数据库的名称。|35|是|  
@@ -40,7 +40,7 @@ ms.locfileid: "68009554"
 |**LoginSid**|**图像**|登录用户的安全标识号 (SID)。 你可以在 **sys.server_principals** 目录视图中找到此信息。 服务器中的每个登录名都具有唯一的 SID。|41|是|  
 |**RequestID**|**int**|包含该语句的请求的 ID。|49|是|  
 |**ServerName**|**nvarchar**|所跟踪的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|否|  
-|**SessionLoginName**|**nvarchar**|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 **SessionLoginName** 将显示 Login1，而 **LoginName** 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
+|**SessionLoginName**|**nvarchar**|发起会话的用户的登录名。 例如，如果你使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 **SessionLoginName** 将显示 Login1，而 **LoginName** 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
 |**SPID**|**int**|发生该事件的会话的 ID。|12|是|  
 |**StartTime**|**datetime**|该事件（如果存在）的启动时间。|14|是|  
 |**State**|**int**|新的镜像状态 ID：<br /><br /> 0 = 空值通知<br /><br /> 1 = 已通过见证服务器同步了主体服务器<br /><br /> 2 = 未通过见证服务器同步了主体服务器<br /><br /> 3 = 已通过见证服务器同步了镜像服务器<br /><br /> 4 = 未通过见证服务器同步了镜像服务器<br /><br /> 5 = 丢失了与主体服务器的连接<br /><br /> 6 = 丢失了与镜像服务器的连接<br /><br /> 7 = 手动故障转移<br /><br /> 8 = 自动故障转移<br /><br /> 9 = 镜像已挂起<br /><br /> 10 = 无仲裁<br /><br /> 11 = 正在同步镜像服务器<br /><br /> 12 = 主体服务器运行已公开|30|是|  

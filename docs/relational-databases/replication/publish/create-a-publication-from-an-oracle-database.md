@@ -14,10 +14,10 @@ ms.assetid: b3812746-14b0-4b22-809e-b4a95e1c8083
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8b43b3b2f67554a59388ccd6a50485e4c71d9e1a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908601"
 ---
 # <a name="create-a-publication-from-an-oracle-database"></a>从 Oracle 数据库创建发布
@@ -38,7 +38,7 @@ ms.locfileid: "72908601"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a> 先决条件  
+###  <a name="Prerequisites"></a>先决条件  
   
 -   在创建发布之前，必须在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器上安装 Oracle 软件，并配置 Oracle 数据库。 有关详细信息，请参阅[配置 Oracle 发布服务器](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "72908601"
   
 6.  在 **“连接属性”** 选项卡上，选择 **“网关”** 或 **“完整”** 发布服务器类型。  
   
-     “完整”  选项用于为快照和事务发布提供所支持的完整 Oracle 发布功能集。 **“网关”** 选项提供特定的设计优化，以提高复制作为系统间的网关时的性能。 如果计划在多个事务发布中发布同一个表，则无法使用 **“网关”** 选项。 如果选择 **“网关”** ，则一个表可以最多出现在一个事务发布中或出现在任意数量的快照发布中。  
+     **“完整”** 选项用于为快照和事务发布提供所支持的完整的 Oracle 发布功能集。 **“网关”** 选项提供特定的设计优化，以提高复制作为系统间的网关时的性能。 如果计划在多个事务发布中发布同一个表，则无法使用 **“网关”** 选项。 如果选择 **“网关”** ，则一个表可以最多出现在一个事务发布中或出现在任意数量的快照发布中。  
   
 7.  单击 **“连接”** ，创建到 Oracle 发布服务器的连接，并配置该连接以进行复制。 “连接至服务器”对话框将关闭，你将返回到“分发服务器属性 - \<分发服务器>”对话框。    
   
@@ -147,6 +147,6 @@ ms.locfileid: "72908601"
  [发布数据和数据库对象](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [为 Oracle 发布服务器配置事务集作业（复制 Transact-SQL 编程）](../../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
  [Oracle 发布概述](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)   
- [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md)  
+ [授予 Oracle 权限的脚本](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md)  
   
   

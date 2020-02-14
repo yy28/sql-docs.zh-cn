@@ -17,10 +17,10 @@ ms.assetid: fbfa4ba7-3d0d-4d6b-94ad-50741a88d03d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7b3f33d0c37ba9c856d9cc0b66674c8ca4221e0d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294360"
 ---
 # <a name="wmi-connection-manager"></a>WMI 连接管理器
@@ -56,7 +56,7 @@ ms.locfileid: "71294360"
  **名称**  
  为连接管理器提供唯一的名称。  
   
- **Description**  
+ **说明**  
  描述连接管理器。 最好按照连接管理器的用途对其进行说明，使包的说明一目了然，且更便于维护。  
   
  **服务器名称**  
@@ -68,13 +68,13 @@ ms.locfileid: "71294360"
  **使用 Windows 身份验证**  
  选择此项可以使用 Windows 身份验证。 如果使用 Windows 身份验证，则不需要提供连接所用的用户名或密码。  
   
- **User name**  
+ **用户名**  
  如果不使用 Windows 身份验证，则必须提供连接所用的用户名。  
   
  **密码**  
  如果不使用 Windows 身份验证，则必须提供连接所用的密码。  
   
- **测试**  
+ **Test**  
  测试连接管理器设置。  
   
 ## <a name="see-also"></a>另请参阅  

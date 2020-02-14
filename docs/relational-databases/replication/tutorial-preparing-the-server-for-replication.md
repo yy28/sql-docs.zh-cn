@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 09d68b763d967b6bcea4853f40bfc2ee2694421b
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.openlocfilehash: 7d7582eca4c3934a43e3faa7c94fc84f5609d86e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75320384"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910020"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>教程：为复制准备 SQL Server（发布服务器、分发服务器、订阅服务器）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -181,8 +181,9 @@ ms.locfileid: "75320384"
    ![快捷菜单上的“配置分发”命令](media/tutorial-preparing-the-server-for-replication/configuredistribution.png)
   
    > [!NOTE]  
-   > 如果连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的是“localhost”  ，而不是实际服务器名称，则系统会向你显示一个警告提示，指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法连接到“localhost”  。 在警告对话框中选择“确定”  。 在“连接到服务器”  对话框中，将“服务器名称”  从“localhost”  更改为你的服务器的名称。 然后选择“连接”  。  
-  
+   > - 如果连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时使用的是 localhost  ，而不是实际服务器名称，则系统会向你显示一个警告提示，指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法连接到 localhost 或 IP 地址  。 在警告对话框中选择“确定”  。 在“连接到服务器”对话框中，将“服务器名称”从 localhost 或 IP 地址更改为你的服务器的名称    。 然后选择“连接”  。  
+   > - 目前 SQL Server Management Studio (SSMS) 18.0 （以及更高版本）存在一个已知问题，在使用 IP 地址连接到分发服务器时不会显示警告消息，但是这样的操作仍然无效  。 在连接到分发服务器时，应使用实际的服务器名称。 
+   
    此时分发配置向导启动。  
   
 3. 在“分发服务器”  页上，选择“<'ServerName'”  > “将充当自己的分发服务器；SQL Server 将创建分发数据库和日志”  。 然后，选择“下一步”  。  

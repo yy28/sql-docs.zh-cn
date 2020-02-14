@@ -17,10 +17,10 @@ ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 38c5c4daa65542dd8da14fa5c51a1b964a271fff
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296507"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>包开发的故障排除工具
@@ -80,7 +80,7 @@ ms.locfileid: "71296507"
  有关这些功能的详细信息，请参阅 [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md)。  
   
 ## <a name="troubleshooting-scripts"></a>脚本故障排除  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 是一种可以用来编写脚本任务和脚本组件所使用的脚本的开发环境。 VSTA 提供了可用于排除包开发过程中的脚本故障的以下功能和工具：  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 是一种可以用来编写脚本任务和脚本组件所使用脚本的开发环境。 VSTA 提供了可用于排除包开发过程中的脚本故障的以下功能和工具：  
   
 -   **在脚本任务的脚本中设置断点。** VSTA 仅对脚本任务中的脚本提供调试支持。 通过综合使用在脚本任务中设置的断点与对包以及包中的任务和容器设置的断点，可以对所有包元素进行无缝调试。  
   

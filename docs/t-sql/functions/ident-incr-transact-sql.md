@@ -20,10 +20,10 @@ ms.assetid: e13b491f-4f1f-4cb6-8b63-5084120f98cf
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 24c4b8af65830f8cc3a4a4bb2c4084ed4718515b
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843678"
 ---
 # <a name="ident_incr-transact-sql"></a>IDENT_INCR (Transact-SQL)
@@ -40,13 +40,13 @@ IDENT_INCR ( 'table_or_view' )
 ```  
   
 ## <a name="arguments"></a>参数  
-'table_or_view'     
-指定表或视图以检查有效的标识增量值的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 table_or_view  可以是带有引号的字符串常量。 也可以是变量、函数或列名。 table_or_view 的数据类型为 char、nchar、varchar 或 nvarchar      。  
+**'** *table_or_view* **'**  
+是指定表或视图以检查有效的标识增量值的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 table_or_view  可以是带有引号的字符串常量。 也可以是变量、函数或列名。 table_or_view 的数据类型为 char、nchar、varchar 或 nvarchar      。  
   
 ## <a name="return-types"></a>返回类型  
 numeric  ([@@MAXPRECISION](../../t-sql/functions/max-precision-transact-sql.md),0))  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
 在出错或调用方无权查看对象时返回 NULL。  
   
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，用户只能查看自己拥有或有权查看的安全对象的元数据。 如果没有用户对象权限，发出元数据的内置函数（如 IDENT_INCR）可能会返回 NULL。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

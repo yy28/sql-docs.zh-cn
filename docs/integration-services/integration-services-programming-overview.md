@@ -21,10 +21,10 @@ ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f540278d8f27eb091d4818f838d069c82a61159c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296217"
 ---
 # <a name="integration-services-programming-overview"></a>Integration Services 编程概述
@@ -32,11 +32,11 @@ ms.locfileid: "71296217"
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的体系结构是将数据移动和转换与包控制流和管理分开。 有两个截然不同的引擎定义此体系结构，对 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 进行编程可以扩展这两个引擎并使其自动化。 运行时引擎实现控制流和包管理基础结构，该基础结构使开发人员能够控制执行流并为日志记录、事件处理程序和变量设置选项。 数据流引擎是一个专用高性能引擎，专用于提取、转换和加载数据。 对 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 进行编程时，将针对这两个引擎进行编程。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 具有将数据移动和转换与包控制流和管理分开的体系结构。 有两个截然不同的引擎定义此体系结构，对 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 进行编程可以扩展这两个引擎并使其自动化。 运行时引擎实现控制流和包管理基础结构，该基础结构使开发人员能够控制执行流并为日志记录、事件处理程序和变量设置选项。 数据流引擎是一个专用高性能引擎，专用于提取、转换和加载数据。 对 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 进行编程时，将针对这两个引擎进行编程。  
   
  下图描绘了 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的体系结构。  
   
- ![Integration Services体系结构](../integration-services/media/mw-dts-01.gif "Integration Services 体系结构")  
+ ![集成服务体系结构](../integration-services/media/mw-dts-01.gif "集成服务体系结构")  
   
 ## <a name="integration-services-run-time-engine"></a>Integration Services 运行时引擎  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 运行时引擎通过实现启用执行顺序、日志记录、变量和事件处理的基础结构来控制包的管理和执行。 开发人员对 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 运行时引擎进行编程可自动化包的创建、配置和执行操作，并可创建自定义任务和其他扩展插件。  
@@ -69,7 +69,7 @@ ms.locfileid: "71296217"
 ## <a name="commonly-used-assemblies"></a>常用程序集  
  下表列出了使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 对 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 进行编程时常用的程序集。  
   
-|Assembly|描述|  
+|Assembly|说明|  
 |--------------|-----------------|  
 |Microsoft.SqlServer.ManagedDTS.dll|包含托管运行时引擎。|  
 |Microsoft.SqlServer.RuntimeWrapper.dll|包含用于本机运行时引擎的主互操作程序集 (PIA) 或包装。|  

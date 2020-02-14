@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7ed2d476be0ba9a22b42e5c7e60789a4059ea73c
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.openlocfilehash: 5483c2b6d344d72eb161b303abf1bf7e56825987
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816738"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76922893"
 ---
 # <a name="create-alter-and-drop-filetables"></a>创建、更改和删除 FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "71816738"
   
 2.  **FILETABLE_COLLATE_FILENAME**。 指定要应用于 FileTable 的“名称”  列的排序规则名称。  
   
-    1.  指定的排序规则必须**不区分大小写**，以符合 Windows 文件命名语义。  
+    1.  指定的排序规则必须 **不区分大小写** ，以符合 Windows 文件命名语义。  
   
     2.  如果未提供 **FILETABLE_COLLATE_FILENAME**的值，或指定了 **database_default**，则该列继承当前数据库的排序规则。 如果当前数据库排序规则区分大小写，将引发错误， **CREATE TABLE** 操作将失败。  
   
@@ -161,7 +161,7 @@ GO
   
 |||  
 |-|-|  
-|**列**|**索引类型**|  
+|**“列”**|**索引类型**|  
 |[path_locator] ASC|主键，非聚集|  
 |[parent_path_locator] ASC，<br /><br /> [name] ASC|唯一，非聚集|  
 |[stream_id] ASC|唯一，非聚集|  
@@ -175,7 +175,7 @@ GO
 |检查约束|系统定义的检查约束强制执行下列要求：<br /><br /> 有效的文件名。<br /><br /> 有效的文件属性。<br /><br /> 父对象必须是目录。<br /><br /> 命名空间层次结构在文件操作过程中锁定。|  
   
  **系统定义的约束的命名约定**  
- 上述系统定义的约束采用以下格式命名： **\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>** ，其中：  
+ 上述系统定义的约束采用以下格式命名：\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>  ，其中：  
   
 -   *<constraint_type>* 为 CK（检查约束）、DF（默认约束）、FK（外键）、PK（主键）或 UQ（唯一约束）。  
   

@@ -19,10 +19,10 @@ ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 98f0e19bb0e3eb424d742990ce2f63e3fb0af019
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295707"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>SSIS 包升级向导的 F1 帮助
@@ -30,7 +30,7 @@ ms.locfileid: "71295707"
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  使用 SSIS 包升级向导可将由较早版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 创建的包升级到当前版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的包格式。  
+  使用“SSIS 包升级向导”可将由较早版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 创建的包升级到当前版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的包格式。  
   
  **运行 SSIS 包升级向导**  
   
@@ -52,9 +52,9 @@ ms.locfileid: "71295707"
  **包源**  
  选择包含要升级包的存储位置。 此选项具有下表所列的值。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
-|**“文件系统”**|指示要升级的包位于本地计算机上的文件夹中。<br /><br /> 若要使向导在升级这些包前备份原始包，必须在文件系统中必须存储原始包。 有关详细信息，请参阅操作指南主题。|  
+|**文件系统**|指示要升级的包位于本地计算机上的文件夹中。<br /><br /> 若要使向导在升级这些包前备份原始包，必须在文件系统中必须存储原始包。 有关详细信息，请参阅操作指南主题。|  
 |**SSIS 包存储区**|指示要升级的包位于包存储区中。 包存储区由一组 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务管理的系统文件夹组成。 有关详细信息，请参阅[包管理（SSIS 服务）](../integration-services/service/package-management-ssis-service.md)。<br /><br /> 选择此值将显示相应的动态选项 **Package source** 。|  
 |**Microsoft SQL Server**|指示要升级的包来自 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的现有实例。<br /><br /> 选择此值将显示相应的动态选项 **Package source** 。|  
   
@@ -80,7 +80,7 @@ ms.locfileid: "71295707"
  **使用 SQL Server 身份验证**  
  选择此选项可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证连接到服务器。 如果使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证，则必须提供用户名和密码。  
   
- **User name**  
+ **用户名**  
  键入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证用于连接到服务器的用户名。  
   
  **密码**  
@@ -104,9 +104,9 @@ ms.locfileid: "71295707"
  **包源**  
  指定存储升级包的位置。 此选项具有下表所列的值。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
-|**“文件系统”**|指示将升级的包将保存到本地计算机上的文件夹中。|  
+|**文件系统**|指示将升级的包将保存到本地计算机上的文件夹中。|  
 |**SSIS 包存储区**|指示升级的包将保存到 Integration Services 包存储区中。 包存储区由一组 Integration Services 服务管理的文件系统文件夹组成。 有关详细信息，请参阅[包管理（SSIS 服务）](../integration-services/service/package-management-ssis-service.md)。<br /><br /> 选择此值将显示相应的动态选项 **“包源”** 。|  
 |**Microsoft SQL Server**|指示升级的包将保存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的现有实例中。<br /><br /> 选择此值将显示相应的动态选项 **“包源”** 。|  
   
@@ -132,7 +132,7 @@ ms.locfileid: "71295707"
  **使用 SQL Server 身份验证**  
  选择此选项可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证连接到服务器。 如果使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证，则必须提供用户名和密码。  
   
- **User name**  
+ **用户名**  
  键入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证连接到服务器时使用的用户名。  
   
  **密码**  
@@ -224,19 +224,19 @@ ms.locfileid: "71295707"
  **消息窗格**  
  在升级过程中显示进度消息和摘要信息。  
   
- **操作**  
+ **Action**  
  查看升级中的操作。  
   
- **“状态”**  
+ **Status**  
  查看每个操作的结果。  
   
  **消息**  
  查看每个操作生成的错误消息。  
   
- **停止**  
+ **Stop**  
  停止包升级。  
   
- **报告**  
+ **Report**  
  选择希望如何处理包含包升级结果的报告：  
   
 -   联机查看报告。  

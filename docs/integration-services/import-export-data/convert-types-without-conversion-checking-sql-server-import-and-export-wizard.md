@@ -12,10 +12,10 @@ ms.assetid: 87d9d3e5-477f-4117-a37f-bff53ea3e14d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8a6f07634f9f4a3fba48889391a4bfc9e4e245df
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285329"
 ---
 # <a name="convert-types-without-conversion-checking-sql-server-import-and-export-wizard"></a>转换类型时不进行转换检查（SQL Server 导入和导出向导）
@@ -38,7 +38,7 @@ ms.locfileid: "71285329"
 此页上的信息不包括缺少的映射文件的名称。 由于该向导不知道用于指定的数据提供程序的文件是否存在，因此不能提供缺少的文件的名称。
 
 ## <a name="whats-next"></a>下一步是什么？  
- 在不知道数据类型转换是否会成功的情况下，单击“下一步”  ，下一页是“保存并运行包”  。 在此页上，你可以指定是否要立即运行复制操作。 根据你的配置，或许还可以保存向导创建的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包，以便对其进行自定义并在以后重新使用。 有关详细信息，请参阅 [保存并运行包](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)。  
+ 在不知道数据类型转换是否会成功的情况下，单击“下一步”  ，下一页是“保存并运行包”  。 在此页上，你可以指定是否要立即运行复制操作。 根据你的配置，或许还可以保存向导创建的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包，以便对其进行自定义并在以后重复使用。 有关详细信息，请参阅 [保存并运行包](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)。  
 
 ## <a name="see-also"></a>另请参阅
 [SQL Server 导入和导出向导中的数据类型映射](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)

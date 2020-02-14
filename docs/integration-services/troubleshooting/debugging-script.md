@@ -15,10 +15,10 @@ ms.assetid: fddf57d8-8607-4f88-85a0-1b683087b491
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e4ad4f9578913e3a6fd9d78e50a7c44e9c8642bf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295101"
 ---
 # <a name="debugging-script"></a>调试脚本
@@ -41,6 +41,6 @@ ms.locfileid: "71295101"
 -   [通过在脚本任务和脚本组件中设置断点来调试脚本](../../integration-services/extending-packages-scripting/debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [包开发的故障排除工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  
+ [包开发的疑难解答工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  
   
   

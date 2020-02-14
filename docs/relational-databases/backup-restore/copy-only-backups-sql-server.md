@@ -1,7 +1,7 @@
 ---
 title: 仅复制备份 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/08/2018
+ms.date: 01/30/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -15,17 +15,17 @@ ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 621d3d701e1e815bac4d5028c3d78b00240bc293
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 1d95c1982d5809288b64f34cd1f6328b4ee00e4c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908988"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76941033"
 ---
 # <a name="copy-only-backups"></a>仅复制备份
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-*仅复制备份*是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]独立于常规备份序列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的备份。 通常，进行备份会更改数据库并影响其后备份的还原方式。 但是，有时在不影响数据库总体备份和还原过程的情况下，为特殊目的而进行备份还是有用的。 仅复制备份就是用于此目的。  
+*仅复制备份*是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]独立于常规备份序列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的备份。 通常，进行备份会更改数据库并影响其后备份的还原方式。 但是，有时在不影响数据库总体备份和还原过程的情况下，为特殊目的而进行备份还是有用的。 仅复制备份就是用于此目的。
   
  仅复制备份的类型如下所示：  
   
@@ -42,13 +42,16 @@ ms.locfileid: "72908988"
      事务日志从不在仅复制备份后出现截断。  
   
  仅复制备份记录在 **backupset** 表的 [is_copy_only](../../relational-databases/system-tables/backupset-transact-sql.md) 列中。  
+ 
+ > [!IMPORTANT]  
+> 在 Azure SQL 托管实例中，无法为使用[服务管理的透明数据加密 (TDE)](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-azure-sql?tabs=azure-portal#service-managed-transparent-data-encryption) 加密的数据库创建仅复制备份。 服务管理的 TDE 使用内部密钥对数据进行加密，并且该密钥无法导出，因此你无法在其他任何地方恢复备份。 请考虑改用[客户管理的 TDE](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql) 来创建加密数据库的仅复制备份，但请确保具有加密密钥供以后还原。
   
 ## <a name="to-create-a-copy-only-backup"></a>创建仅复制备份  
  您可以通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]或 PowerShell 创建仅复制备份。  
 
 ### <a name="examples"></a>示例  
 ###  <a name="SSMSProcedure"></a> A. 使用 SQL Server Management Studio  
-在此示例中，`Sales` 数据库的仅复制备份将备份到磁盘的默认备份位置。
+在此示例中， `Sales` 数据库的仅复制备份将备份到磁盘的默认备份位置。
 
 1. 在“对象资源管理器”  中，连接到一个 SQL Server 数据库引擎实例，然后展开该实例。
 
@@ -56,9 +59,9 @@ ms.locfileid: "72908988"
 
 1. 在“常规”  页的“源”  部分中，选中“仅复制备份”  复选框。
 
-1. 单击“确定”  。
+1. 单击“确定”。 
 
-###  <a name="TsqlProcedure"></a>B. 使用 Transact-SQL  
+###  <a name="TsqlProcedure"></a>B. “使用 Transact-SQL”  
 此示例利用 COPY_ONLY 参数为 `Sales` 数据库创建仅复制备份。  同时还创建事务日志的仅复制备份。
 
 ```sql

@@ -24,10 +24,10 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 651311d70b17ce4be761e7ecc246e8839ef34eb0
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295822"
 ---
 # <a name="execute-package-utility-dtexecui"></a>执行包实用工具 (dtexecui)
@@ -35,7 +35,7 @@ ms.locfileid: "71295822"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  使用 **“执行包实用工具”** 来运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。 该实用工具运行存储在以下三个位置之一的包： [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区和文件系统。 此用户界面是使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] DTExec **命令提示工具运行包的替代方法，可从** 打开，或者通过在命令提示符下键入 **dtexecui** 打开。  
+  使用 **“执行包实用工具”** 来运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。 该实用工具运行存储在以下三个位置之一的包：[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库、[!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区和文件系统。 此用户界面是使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] DTExec **命令提示工具运行包的替代方法，可从** 打开，或者通过在命令提示符下键入 **dtexecui** 打开。  
   
  包与 **dtexecui.exe** 实用工具在同一个进程中执行。 由于此实用工具为 32 位工具，因此，在 64 位环境中使用 **dtexecui.exe** 运行的包是在 Windows on Win32 (WOW) 中运行的。 当在 64 位计算机上使用 dtexecui.exe 实用工具开发和测试命令时，应该首先在 64 位模式下使用 64 位版本的 **dtexec.exe** 测试该命令，然后在生产服务器中部署或安排这些命令。  
   
@@ -70,8 +70,8 @@ ms.locfileid: "71295822"
   
 |||  
 |-|-|  
-|ReplTest1|描述|  
-|**SQL Server**|当包驻留在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时选择此选项。 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例，为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证提供用户名和密码。 每个用户名和密码会将 **/USER** _username_ 和 **/PASSWORD** _password_ options to the comm和 prompt.|  
+|值|说明|  
+|**SQL Server**|当包驻留在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时选择此选项。 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例，为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证提供用户名和密码。 每个用户名和密码会将 /USER username 和 /PASSWORD password 选项添加到命令提示符     。|  
 |**文件系统**|当包驻留在文件系统时选择此选项。|  
 |**SSIS 包存储区**|当包驻留在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区时选择此选项。|  
   
@@ -92,7 +92,7 @@ ms.locfileid: "71295822"
  **登录到服务器**  
  指定包使用 Windows 身份验证还是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 为了实现更好的安全性，建议使用 Windows 身份验证。 使用 Windows 身份验证时无需指定用户名和密码。  
   
- **使用 Windows 身份验证**  
+ **Use Windows Authentication**  
  选择此选项，可以使用 Windows 身份验证，并使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用户帐户登录。  
   
  **Use SQL Server Authentication**  
@@ -101,11 +101,11 @@ ms.locfileid: "71295822"
 > [!IMPORTANT]  
 >  请尽可能使用 Windows 身份验证。  
   
- **“包”**  
+ **包**  
  键入包的名称或者单击省略号按钮 (…)，使用“选择 SSIS 包”对话框定位包   。  
   
 #### <a name="package-source--file-system"></a>包源 = 文件系统  
- **“包”**  
+ **包**  
  键入包的名称或者单击省略号按钮 (…) ，使用“打开”对话框定位包  。 默认情况下，该对话框仅列出扩展名为 .dtsx 的文件。  
   
 #### <a name="package-source--ssis-package-store"></a>包源 = SSIS 包存储区  
@@ -121,7 +121,7 @@ ms.locfileid: "71295822"
  **Use SQL Server Authentication**  
  在运行存储于“SSIS 包存储区”  的包时，此选项不可用。  
   
- **“包”**  
+ **包**  
  键入包的名称或者单击省略号按钮 (…)，使用“选择 SSIS 包”对话框定位包   。  
   
 ## <a name="configurations-page"></a>配置页  
@@ -137,7 +137,7 @@ ms.locfileid: "71295822"
 > [!NOTE]  
 >  如果多个配置修改了同一个属性，则使用最后加载的配置。  
   
- **“添加”**  
+ **添加**  
  单击此项可以使用“打开”  对话框添加配置。 默认情况下，该对话框只列出具有 .dtsconfig 扩展名的文件。  
   
  **删除**  
@@ -153,13 +153,13 @@ ms.locfileid: "71295822"
  可以使用 **“执行包实用工具”** 对话框的 **“命令文件”** 页选择在运行时加载的命令文件。  
   
 ### <a name="options"></a>选项  
- **Command files**  
+ **命令文件**  
  列出包使用的命令文件。 一个包可以使用多个文件来设置命令行选项。  
   
  **箭头键**  
  在列表中选择命令文件，然后使用右侧的箭头键更改加载顺序。 将从列表顶部开始按顺序加载命令文件。  
   
- **“添加”**  
+ **添加**  
  单击此项可以使用“打开”  对话框添加命令文件。  
   
  **删除**  
@@ -178,7 +178,7 @@ ms.locfileid: "71295822"
  **连接管理器**  
  选中其复选框后，“连接字符串”  列即会变为可编辑状态。  
   
- **Description**  
+ **说明**  
  查看每个连接管理器的说明。 无法编辑说明。  
   
  **连接字符串**  
@@ -218,7 +218,7 @@ ms.locfileid: "71295822"
  **重新启动选项**  
  选择如何使用检查点（如果覆盖了重新启动选项）。  
   
- **Execute**  
+ **执行**  
  单击此项可运行包。  
   
  **关闭**  
@@ -231,7 +231,7 @@ ms.locfileid: "71295822"
  **控制台事件**  
  指示要报告的事件和消息类型。  
   
- **无**  
+ 无   
  选择此选项将不进行报告。  
   
  **错误**  
@@ -249,7 +249,7 @@ ms.locfileid: "71295822"
  **信息**  
  选择此选项将报告信息性消息。  
   
- **Verbose**  
+ **详细**  
  选择此选项将使用详细报告。  
   
  **控制台日志记录**  
@@ -258,10 +258,10 @@ ms.locfileid: "71295822"
  **名称**  
  选择此选项将报告创建包的人员的姓名。  
   
- **Computer**  
+ **计算机**  
  选择此选项将报告运行包的计算机的名称。  
   
- **运算符**  
+ **“运算符”**  
  选择此选项将报告启动包的人员的姓名。  
   
  **源名称**  
@@ -311,7 +311,7 @@ ms.locfileid: "71295822"
  **属性路径**  
  键入属性的路径。 在路径语法中，反斜杠 (\\) 用于指示其后面为容器项，句点 (.) 用于指示其后面为属性项，而括号用于指示集合成员。 成员可以通过其索引或其名称进行标识。 例如，包变量的属性路径可以是 \Package.Variables[MyVariable].Value。  
   
- **ReplTest1**  
+ **值**  
  键入属性的值。  
   
  **删除**  
@@ -333,7 +333,7 @@ ms.locfileid: "71295822"
  **验证包内部版本**  
  选择此项可以验证包内部版本。  
   
- 生成  
+ 构建  
  指定与内部版本相关联的内部版本序号。  
   
  **验证包 ID**  

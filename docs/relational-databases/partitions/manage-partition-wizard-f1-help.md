@@ -24,10 +24,10 @@ ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: dc76237530ba47a513aba164260061ec6b20e7c3
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68892411"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>“管理分区向导”的 F1 帮助
@@ -89,7 +89,7 @@ ms.locfileid: "68892411"
  **管理滑动窗口应用场景中的分区数据**  
  将空分区追加到可用于切入数据的现有表中。 向导当前支持切入上一个分区和切出第一个分区。  
   
- ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[本节内容](#Top)  
+ ![用于返回页首链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [本部分](#Top)  
   
 ##  <a name="SwitchIn"></a> 选择分区切入选项页  
  使用“选择分区切入选项”  页可以选择要切入到已分区表中的临时表。  
@@ -104,7 +104,7 @@ ms.locfileid: "68892411"
  **切入表**  
  选择包含您要添加到您的已分区表的分区的临时表。 必须先创建此临时表，然后才能使用“管理分区向导”  来切入分区。  
   
- ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[本节内容](#Top)  
+ ![用于返回页首链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [本部分](#Top)  
   
 ##  <a name="SwitchOut"></a> 选择分区切出选项页  
  使用“选择分区切出选项”  页可以选择用于保存要从已分区表中切出的分区数据的分区和临时表。  
@@ -122,7 +122,7 @@ ms.locfileid: "68892411"
  **现有**  
  选择要用于从当前源表切出的分区的现有临时表。 如果现有表包含数据，这些数据将被您切出的数据覆盖。  
   
- ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[本节内容](#Top)  
+ ![用于返回页首链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [本部分](#Top)  
   
 ##  <a name="StagingTableOptions"></a> 选择临时表选项页  
  使用 **“选择临时表选项”** 页可以创建用于切换已分区数据的临时表。  
@@ -144,7 +144,7 @@ ms.locfileid: "68892411"
  **文件组**  
  为新表选择文件组。  
   
- ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[本节内容](#Top)  
+ ![用于返回页首链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [本部分](#Top)  
   
 ##  <a name="OutputOption"></a> 选择输出选项页  
  使用 **“选择输出选项”** 页，以指定您想要如何完成对分区的修改。  
@@ -165,13 +165,13 @@ ms.locfileid: "68892411"
  **Run immediately**  
  当单击“下一步”  或“完成”  时，令向导完成对分区的修改。  
   
-### <a name="schedule"></a>“计划”  
+### <a name="schedule"></a>计划  
  选中此项可以在计划的日期和时间修改表分区。  
   
  **更改计划**  
  打开“新建作业计划”  对话框，你可以在此对话框中选择、更改或查看计划作业的属性。  
   
- ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[本节内容](#Top)  
+ ![用于返回页首链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [本部分](#Top)  
   
 ##  <a name="NewJob"></a> 新建作业计划页  
  使用 **“新建作业计划”** 页可以查看和更改计划的属性。  
@@ -251,10 +251,10 @@ ms.locfileid: "68892411"
  **Date**  
  选择作业的计划运行日期。  
   
- **Time**  
+ **时间**  
  选择作业的计划运行时间。  
   
- ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[本节内容](#Top)  
+ ![用于返回页首链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [本部分](#Top)  
   
 ##  <a name="Summary"></a> 摘要页  
  使用 **“摘要”** 可检查您在前面的页中选择的选项。  
@@ -263,7 +263,7 @@ ms.locfileid: "68892411"
  **检查所做选择**  
  显示您在向导的每一页中所做的选择。 单击节点可展开和查看以前选择的选项。  
   
- ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[本节内容](#Top)  
+ ![用于返回页首链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [本部分](#Top)  
   
 ##  <a name="Progress"></a> “进度”页  
  使用 **“进度”** 页可以监视有关 **“管理分区向导”** 操作的状态信息。 根据在向导中选择的选项， **“进度”** 页可能会包含一个操作或多个操作。 最上面的方框显示向导的总体状态和向导已接收到的状态、错误和警告消息数。  
@@ -272,20 +272,20 @@ ms.locfileid: "68892411"
  **详细信息**  
  提供向导执行的操作所返回的操作、状态和所有消息。  
   
- **操作**  
+ **Action**  
  指定每个操作的类型和名称。  
   
- **“状态”**  
+ **Status**  
  指示向导操作作为一个整体返回的值是“成功”  还是“失败”  。  
   
  **消息**  
  提供从该进程中返回的任何错误或警告消息。  
   
- **停止**  
+ **Stop**  
  停止向导的操作。  
   
- **报告**  
- 创建一个包含“管理分区向导”  的结果的报告。 相应的选项包括：  
+ **Report**  
+ 创建一个包含“管理分区向导”  的结果的报告。 选项包括：  
   
 -   **查看报告**  
   
@@ -293,7 +293,7 @@ ms.locfileid: "68892411"
   
 -   **将报告复制到剪贴板**  
   
--   **将报告作为电子邮件发送**  
+-   **“将报告作为电子邮件发送”**  
   
  **查看报告**  
  打开“查看报告”  对话框。 此对话框包含 **管理分区向导**进度的文本报告。  
@@ -301,7 +301,7 @@ ms.locfileid: "68892411"
  **关闭**  
  关闭向导。  
   
- ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[本节内容](#Top)  
+ ![用于返回页首链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [本部分](#Top)  
   
 ## <a name="see-also"></a>另请参阅  
  [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)  

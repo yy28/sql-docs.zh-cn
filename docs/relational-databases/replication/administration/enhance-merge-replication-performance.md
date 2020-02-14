@@ -20,10 +20,10 @@ ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 261f22847c8b397d57ff5f732ea4d97091895daa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67939205"
 ---
 # <a name="enhance-merge-replication-performance"></a>增强合并复制性能
@@ -34,7 +34,7 @@ ms.locfileid: "67939205"
   
 -   对行筛选器和联接筛选器中使用的列建立索引。  
   
-     在发布的项目上使用行筛选器时，则对筛选器的 WHERE 子句中使用的每一列创建索引。 如果不创建索引， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 必先读取表中的每一行来确定该行是否应包括在分区中。 使用索引， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可快速找到要包括的行。 如果复制只根据索引就能完全解析筛选器的 WHERE 子句，处理速度将最快。  
+     在发布的项目上使用行筛选器时，则对筛选器的 WHERE 子句中使用的每一列创建索引。 如果不创建索引，[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 必须先读取表中的每一行来确定该行是否应包含在分区中。 使用索引， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可快速找到要包括的行。 如果复制只根据索引就能完全解析筛选器的 WHERE 子句，处理速度将最快。  
   
      对联接筛选器中使用的所有列进行索引也很重要。 每当合并代理运行时，它都会搜索基表来确定父表中及相关表中的哪些行包括在分区中。 对联接的列创建索引可避免每当合并代理运行时， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 都读取表中的每一行。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "67939205"
   
     -   [处理复制代理配置文件](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   
-    -   [查看和修改复制代理命令提示符参数 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
+    -   [查看和修改复制代理命令提示符参数 (SQL Server Management Studio)](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
     -   [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   

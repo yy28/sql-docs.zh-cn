@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 4ff8da4a1076d8ade4d54e5d44c51d3263480c1c
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983034"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE 语句 - HEADERONLY (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "73983034"
 > [!NOTE]  
 >  有关参数的说明，请参阅 [RESTORE 参数 (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md)。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -86,12 +86,12 @@ FROM <backup_device>
  对于给定设备上的每个备份，服务器均发送一行包含以下各列的标头信息：  
   
 > [!NOTE]
->  RESTORE HEADERONLY 会查看介质上的所有备份集。 因此，使用高容量磁带机时，生成此结果集可能需要一些时间。 若要快速查看介质而不获取有关每个备份集的信息，请使用 RESTORE LABELONLY 或指定 FILE = backup_set_file_number   。  
+>  RESTORE HEADERONLY 会查看介质上的所有备份集。 因此，使用高容量磁带机时，生成此结果集可能需要一些时间。 要快速查看介质而不获取有关每个备份集的信息，请使用 RESTORE LABELONLY 或指定 FILE = backup_set_file_number   。  
 > 
 > [!NOTE]
 >  由于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 磁带格式的固有特点，来自其他软件程序的备份集可以与 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份集在同一介质上占有空间。 在由 RESTORE HEADERONLY 返回的结果集中，每一个来自其他软件程序的备份集都占用一行。  
   
-|列名|数据类型|SQL Server 备份集说明|  
+|列名称|数据类型|SQL Server 备份集说明|  
 |-----------------|---------------|--------------------------------------------|  
 |**BackupName**|**nvarchar(128)**|备份集名称。|  
 |**BackupDescription**|**nvarchar(255)**|备份集说明。|  
@@ -156,8 +156,8 @@ FROM <backup_device>
 ## <a name="general-remarks"></a>一般备注  
  客户端可以使用 RESTORE HEADERONLY 检索特殊备份设备上的所有备份的所有备份标头信息。 对于备份设备上的每个备份，服务器都会将标头信息作为一行发送。  
   
-## <a name="security"></a>Security  
- 在备份时，可以根据需要为介质集、备份集或这两者指定密码。 如果已经在介质集或备份集上定义了密码，则必须在 RESTORE 语句中指定正确的密码。 这些密码可防止未经授权的用户使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具执行还原操作和向介质追加备份集。 但是，密码不会阻止使用 BACKUP 语句的 FORMAT 选项覆盖介质。  
+## <a name="security"></a>安全性  
+ 在备份时，可以根据需要为介质集、备份集或这两者指定密码。 如果已经在介质集或备份集上定义了密码，则必须在 RESTORE 语句中指定正确的密码。 这些密码可防止未经授权而使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具执行还原操作以及向介质追加备份集。 但是，密码不会阻止使用 BACKUP 语句的 FORMAT 选项覆盖介质。  
   
 > [!IMPORTANT]  
 >  此密码提供的安全性较低。 它旨在防止经过授权的用户或未经授权的用户使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具执行不正确的还原操作。 但是不能防止通过其他方式或通过替换密码来读取备份数据。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 保护备份的最佳做法是将备份磁带存储在安全位置，或者备份到由适当的访问控制列表 (ACL) 保护的磁盘文件。 ACL 应设置在创建备份的根目录下。  

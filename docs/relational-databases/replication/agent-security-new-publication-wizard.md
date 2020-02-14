@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 05ae44df-8e9f-46ea-95f6-972ad109c6c0
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: db3e9b71b5e19e4dec55d64f9e0dde75a38947f5
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 192beff1882ddb743cd7840067c9b1ce21c32e77
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770780"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288294"
 ---
 # <a name="agent-security-new-publication-wizard"></a>代理安全性（新建发布向导）
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "68770780"
   
 -   所有事务发布的日志读取器代理。  
   
--   允许可更新订阅的事务发布的队列读取器代理。 如果在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job for this agent is created if you specified **Transactional publication with updatable subscriptions** on the **Publication Type** page, regardless of the type of updatable subscriptions you use. 有关可更新订阅的详细信息，请参阅[事务复制的可更新订阅](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)。  
+-   允许可更新订阅的事务发布的队列读取器代理。 如果你在“发布类型”页上指定了“具有可更新订阅的事务发布”，那么不管使用何种类型的可更新订阅，都将为此代理创建 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业   。 有关可更新订阅的详细信息，请参阅 [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)。  
   
  有关代理要求的权限及复制安全的最佳实践的信息，请参阅 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md) 和 [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)。  
   

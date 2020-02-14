@@ -14,10 +14,10 @@ ms.assetid: 44f9983c-1753-4fe0-8475-973aa2460b3a
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 753c7c08164de1583dd8de1aa1720fcad6a98dff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093630"
 ---
 # <a name="sql-server-agent-jobsteps-object"></a>SQL Server 代理中的 JobSteps 对象
@@ -26,7 +26,7 @@ ms.locfileid: "68093630"
   
  下表列出了 **SQLAgent:JobSteps** 计数器。  
   
-|“属性”|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |**Active steps**|此计数器报告当前运行的作业步骤数。|  
 |**Queued steps**|此计数器报告 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理准备运行但尚未开始运行的作业步骤数。|  
@@ -34,7 +34,7 @@ ms.locfileid: "68093630"
   
  对象中的每个计数器均包含以下实例：  
   
-|实例|描述|  
+|实例|说明|  
 |--------------|-----------------|  
 |**_Total**|有关所有作业步骤的信息。|  
 |**ActiveScripting**|有关使用 **ActiveScripting** 子系统的作业步骤的信息。|  

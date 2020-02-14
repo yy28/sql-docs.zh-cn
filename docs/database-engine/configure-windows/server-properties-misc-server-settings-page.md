@@ -13,10 +13,10 @@ ms.assetid: b170c066-30cd-42dd-8d34-aa129ea09551
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 62a8af2e4a82a0a0bdeec231db62c2166ed030de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68030828"
 ---
 # <a name="server-properties---misc-server-settings-page"></a>服务器属性 -“杂项服务器设置”页

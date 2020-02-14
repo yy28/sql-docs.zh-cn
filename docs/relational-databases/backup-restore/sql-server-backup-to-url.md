@@ -11,10 +11,10 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 9eb3f9c071194941d76878a016fbcefa4f5fbe5c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908813"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server 备份到 URL
@@ -83,7 +83,7 @@ ms.locfileid: "72908813"
   
  **Azure 快照：** 在某一时间点创建的 Azure blob 快照。 有关详细信息，请参阅 [创建 Blob 的快照](https://msdn.microsoft.com/library/azure/hh488361.aspx)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份现在支持对 Microsoft Azure Blob 存储服务中存储的数据库文件进行 Azure 快照备份。 有关详细信息，请参阅 [Azure 中数据库文件的文件快照备份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
   
-###  <a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Components  
+###  <a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件  
  **URL：** URL 指定统一资源标识符 (URI) 来标识唯一备份文件。 URL 用于提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份文件的位置和名称。 URL 必须指向实际 blob，而不仅仅是容器。 如果 blob 不存在，则创建它。 如果指定了现有 blob，则除非指定了“WITH FORMAT”选项以覆盖 blob 中的现有备份文件，否则备份将失败。  
   
  以下是一个示例 URL 值：http[s]://ACCOUNTNAME.blob.core.windows.net/\<CONTAINER>/\<FILENAME.bak>。 HTTPS 不是必需的，但建议这样做。  
@@ -120,14 +120,14 @@ ms.locfileid: "72908813"
   
 ###  <a name="Support"></a> 对备份/还原语句的支持  
   
-|备份/还原语句|是否支持|异常|注释|
+|备份/还原语句|支持|例外|注释|
 |-|-|-|-|
-|BACKUP|是|支持将 BLOCKSIZE 和 MAXTRANSFERSIZE 用于块 blob。 不支持将它们用于页 blob。 | 备份到块 blob 需要 SQL Server 凭据中保存的共享访问签名。 备份到页 blob 需要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据中保存的存储帐户密钥，并且需要指定 WITH CREDENTIAL 参数。|  
-|RESTORE|是||需要定义 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据，如果使用存储帐户密钥作为机密定义了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据，则需要指定 WITH CREDENTIAL 参数|  
-|RESTORE FILELISTONLY|是||需要定义 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据，如果使用存储帐户密钥作为机密定义了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据，则需要指定 WITH CREDENTIAL 参数|  
-|RESTORE HEADERONLY|是||需要定义 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据，如果使用存储帐户密钥作为机密定义了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据，则需要指定 WITH CREDENTIAL 参数|  
-|RESTORE LABELONLY|是||需要定义 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据，如果使用存储帐户密钥作为机密定义了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据，则需要指定 WITH CREDENTIAL 参数|  
-|RESTORE VERIFYONLY|是||需要定义 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据，如果使用存储帐户密钥作为机密定义了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据，则需要指定 WITH CREDENTIAL 参数|  
+|备份|Y|支持将 BLOCKSIZE 和 MAXTRANSFERSIZE 用于块 blob。 不支持将它们用于页 blob。 | 备份到块 blob 需要 SQL Server 凭据中保存的共享访问签名。 备份到页 blob 需要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据中保存的存储帐户密钥，并且需要指定 WITH CREDENTIAL 参数。|  
+|RESTORE|Y||需要定义 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据，如果使用存储帐户密钥作为机密定义了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据，则需要指定 WITH CREDENTIAL 参数|  
+|RESTORE FILELISTONLY|Y||需要定义 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据，如果使用存储帐户密钥作为机密定义了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据，则需要指定 WITH CREDENTIAL 参数|  
+|RESTORE HEADERONLY|Y||需要定义 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据，如果使用存储帐户密钥作为机密定义了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据，则需要指定 WITH CREDENTIAL 参数|  
+|RESTORE LABELONLY|Y||需要定义 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据，如果使用存储帐户密钥作为机密定义了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据，则需要指定 WITH CREDENTIAL 参数|  
+|RESTORE VERIFYONLY|Y||需要定义 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据，如果使用存储帐户密钥作为机密定义了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据，则需要指定 WITH CREDENTIAL 参数|  
 |RESTORE REWINDONLY|-|||  
   
  有关备份语句的语法和一般信息，请参阅 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)。  
@@ -136,74 +136,74 @@ ms.locfileid: "72908813"
   
 ### <a name="support-for-backup-arguments"></a>对备份参数的支持  
 
-|参数|是否支持|异常|注释|  
+|参数|支持|异常|注释|  
 |-|-|-|-|  
-|DATABASE|是|||  
-|LOG|是|||  
+|DATABASE|Y|||  
+|日志|Y|||  
 ||  
-|TO (URL)|是|与 DISK 和 TAPE 不同，URL 不支持指定或创建逻辑名称。|此参数用于指定备份文件的 URL 路径。|  
-|MIRROR TO|是|||  
+|TO (URL)|Y|与 DISK 和 TAPE 不同，URL 不支持指定或创建逻辑名称。|此参数用于指定备份文件的 URL 路径。|  
+|MIRROR TO|Y|||  
 |**WITH 选项：**||||  
-|CREDENTIAL|是||仅当使用 BACKUP TO URL 选项备份到 Microsoft Azure Blob 存储服务且使用存储帐户密钥作为机密定义了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据时，才支持 WITH CREDENTIAL|  
-|FILE_SNAPSHOT|是|||  
-|ENCRYPTION|是||当指定了 **WITH ENCRYPTION** 参数时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文件快照备份会确保在执行备份之前对整个数据库进行 TDE 加密，如果是这样，请使用数据库中为 TDE 指定的算法加密文件快照备份文件本身。 如果未加密整个数据库中的所有数据，备份将失败（例如，加密过程尚未完成）。|  
-|DIFFERENTIAL|是|||  
-|COPY_ONLY|是|||  
-|COMPRESSION&#124;NO_COMPRESSION|是|对文件快照备份不支持||  
-|DESCRIPTION|是|||  
-|NAME|是|||  
+|CREDENTIAL|Y||仅当使用 BACKUP TO URL 选项备份到 Microsoft Azure Blob 存储服务且使用存储帐户密钥作为机密定义了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据时，才支持 WITH CREDENTIAL|  
+|FILE_SNAPSHOT|Y|||  
+|ENCRYPTION|Y||当指定了 **WITH ENCRYPTION** 参数时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文件快照备份会确保在执行备份之前对整个数据库进行 TDE 加密，如果是这样，请使用数据库中为 TDE 指定的算法加密文件快照备份文件本身。 如果未加密整个数据库中的所有数据，备份将失败（例如，加密过程尚未完成）。|  
+|DIFFERENTIAL|Y|||  
+|COPY_ONLY|Y|||  
+|COMPRESSION&#124;NO_COMPRESSION|Y|对文件快照备份不支持||  
+|DESCRIPTION|Y|||  
+|名称|Y|||  
 |EXPIREDATE &#124; RETAINDAYS|-|||  
 |NOINIT &#124; INIT|-||不能追加到 blob。 要覆盖备份，请使用 **WITH FORMAT** 参数。 但是，当使用文件快照备份（使用 **WITH FILE_SNAPSHOT** 参数）时，不允许使用 **WITH FORMAT** 参数以避免保留使用原始备份创建的孤立文件快照。|  
 |NOSKIP &#124; SKIP|-|||  
-|NOFORMAT &#124; FORMAT|是||除非指定 **WITH FORMAT** ，否则对现有 blob 执行的备份将失败。 指定 **WITH FORMAT** 时，将覆盖现有 blob。 但是，当使用文件快照备份（使用 **WITH FILE_SNAPSHOT** 参数）时，不允许使用 FORMAT 参数以避免保留使用原始文件快照备份创建的孤立文件快照。 但是，当使用文件快照备份（使用 **WITH FILE_SNAPSHOT** 参数）时，不允许使用 **WITH FORMAT** 参数以避免保留使用原始备份创建的孤立文件快照。|  
-|MEDIADESCRIPTION|是|||  
-|MEDIANAME|是|||  
-|BLOCKSIZE|是|不支持用于页 blob。 支持用于块 blob。| 建议使用 BLOCKSIZE=65536 以优化块 blob 中允许的 50,000 个块的使用。 |  
-|BUFFERCOUNT|是|||  
-|MAXTRANSFERSIZE|是|不支持用于页 blob。 支持用于块 blob。| 默认值为 1048576。 该值的最大范围为 4 MB，以 65536 字节为增量递增。</br> 建议使用 MAXTRANSFERSIZE=4194304 以优化块 blob 中允许的 50,000 个块的使用。 |  
-|NO_CHECKSUM &#124; CHECKSUM|是|||  
-|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|是|||  
-|STATS|是|||  
+|NOFORMAT &#124; FORMAT|Y||除非指定 **WITH FORMAT** ，否则对现有 blob 执行的备份将失败。 指定 **WITH FORMAT** 时，将覆盖现有 blob。 但是，当使用文件快照备份（使用 **WITH FILE_SNAPSHOT** 参数）时，不允许使用 FORMAT 参数以避免保留使用原始文件快照备份创建的孤立文件快照。 但是，当使用文件快照备份（使用 **WITH FILE_SNAPSHOT** 参数）时，不允许使用 **WITH FORMAT** 参数以避免保留使用原始备份创建的孤立文件快照。|  
+|MEDIADESCRIPTION|Y|||  
+|MEDIANAME|Y|||  
+|BLOCKSIZE|Y|不支持用于页 blob。 支持用于块 blob。| 建议使用 BLOCKSIZE=65536 以优化块 blob 中允许的 50,000 个块的使用。 |  
+|BUFFERCOUNT|Y|||  
+|MAXTRANSFERSIZE|Y|不支持用于页 blob。 支持用于块 blob。| 默认值为 1048576。 该值的最大范围为 4 MB，以 65536 字节为增量递增。</br> 建议使用 MAXTRANSFERSIZE=4194304 以优化块 blob 中允许的 50,000 个块的使用。 |  
+|NO_CHECKSUM &#124; CHECKSUM|Y|||  
+|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|Y|||  
+|统计信息|Y|||  
 |REWIND &#124; NOREWIND|-|||  
 |UNLOAD &#124; NOUNLOAD|-|||  
-|NORECOVERY &#124; STANDBY|是|||  
-|NO_TRUNCATE|是|||  
+|NORECOVERY &#124; STANDBY|Y|||  
+|NO_TRUNCATE|Y|||  
   
  有关备份参数的详细信息，请参阅 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)。  
   
 ### <a name="support-for-restore-arguments"></a>对还原参数的支持  
   
-|参数|是否支持|异常|注释|  
+|参数|支持|例外|注释|  
 |-|-|-|-|  
-|DATABASE|是|||  
-|LOG|是|||  
-|FROM (URL)|是||FROM URL 参数用于指定备份文件的 URL 路径。|  
+|DATABASE|Y|||  
+|日志|Y|||  
+|FROM (URL)|Y||FROM URL 参数用于指定备份文件的 URL 路径。|  
 |**WITH Options:**||||  
-|CREDENTIAL|是||仅当使用 RESTORE FROM URL 选项从 Microsoft Azure Blob 存储服务还原时，才支持 WITH CREDENTIAL。|  
-|PARTIAL|是|||  
-|RECOVERY &#124; NORECOVERY &#124; STANDBY|是|||  
-|LOADHISTORY|是|||  
-|MOVE|是|||  
-|REPLACE|是|||  
-|RESTART|是|||  
-|RESTRICTED_USER|是|||  
+|CREDENTIAL|Y||仅当使用 RESTORE FROM URL 选项从 Microsoft Azure Blob 存储服务还原时，才支持 WITH CREDENTIAL。|  
+|PARTIAL|Y|||  
+|RECOVERY &#124; NORECOVERY &#124; STANDBY|Y|||  
+|LOADHISTORY|Y|||  
+|MOVE|Y|||  
+|REPLACE|Y|||  
+|RESTART|Y|||  
+|RESTRICTED_USER|Y|||  
 |FILE|-|||  
-|PASSWORD|是|||  
-|MEDIANAME|是|||  
-|MEDIAPASSWORD|是|||  
-|BLOCKSIZE|是|||  
+|PASSWORD|Y|||  
+|MEDIANAME|Y|||  
+|MEDIAPASSWORD|Y|||  
+|BLOCKSIZE|Y|||  
 |BUFFERCOUNT|-|||  
 |MAXTRANSFERSIZE|-|||  
-|CHECKSUM &#124; NO_CHECKSUM|是|||  
-|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|是|||  
-|FILESTREAM|是|对快照备份不支持||  
-|STATS|是|||  
+|CHECKSUM &#124; NO_CHECKSUM|Y|||  
+|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|Y|||  
+|FILESTREAM|Y|对快照备份不支持||  
+|统计信息|Y|||  
 |REWIND &#124; NOREWIND|-|||  
 |UNLOAD &#124; NOUNLOAD|-|||  
-|KEEP_REPLICATION|是|||  
-|KEEP_CDC|是|||  
-|ENABLE_BROKER &#124; ERROR_BROKER_CONVERSATIONS &#124; NEW_BROKER|是|||  
-|STOPAT &#124; STOPATMARK &#124; STOPBEFOREMARK|是|||  
+|KEEP_REPLICATION|Y|||  
+|KEEP_CDC|Y|||  
+|ENABLE_BROKER &#124; ERROR_BROKER_CONVERSATIONS &#124; NEW_BROKER|Y|||  
+|STOPAT &#124; STOPATMARK &#124; STOPBEFOREMARK|Y|||  
   
  有关还原参数的详细信息，请参阅[RESTORE 参数 (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md)。  
   
@@ -372,7 +372,7 @@ Write-Host $tSql
    ```  
   
 ###  <a name="complete"></a> 执行完整数据库备份  
- 下面的示例执行 AdventureWorks2016 数据库到 Microsoft Azure Blob 存储服务的完整数据库备份。 执行以下操作之一：   
+ 下面的示例执行 AdventureWorks2016 数据库到 Microsoft Azure Blob 存储服务的完整数据库备份。 执行下列操作之一：   
   
   
 2.  **To URL 使用共享访问签名**  

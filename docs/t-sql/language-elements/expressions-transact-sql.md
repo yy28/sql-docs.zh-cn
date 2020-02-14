@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0563510242e38e817c7fb01e4185241062feedf3
-ms.sourcegitcommit: 5a61854ddcd2c61bb6da30ccad68f0ad90da0c96
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70978600"
 ---
 # <a name="expressions-transact-sql"></a>表达式（Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "70978600"
 
   符号和运算符的一种组合，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]将处理该组合以获得单个数据值。 简单表达式可以是一个常量、变量、列或标量函数。 可以用运算符将两个或更多的简单表达式联接起来组成复杂表达式。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -88,8 +88,8 @@ ms.locfileid: "70978600"
 |[ table_name.   ]|表的名称或别名。|  
 |*column*|列的名称。 表达式中只允许列的名称。|  
 |variable |变量或参数的名称。 有关详细信息，请参阅 [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)。|  
-|( expression )   |本主题中定义的任意一个有效表达式。 括号是分组运算符，用于确保先运算括号内表达式中的运算符，然后再将结果与别的表达式组合。|  
-|( scalar_subquery )   |返回一个值的子查询。 例如：<br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
+|**(** _expression_  **)**|本主题中定义的任意一个有效表达式。 括号是分组运算符，用于确保先运算括号内表达式中的运算符，然后再将结果与别的表达式组合。|  
+|**(** _scalar_subquery_ **)**|返回一个值的子查询。 例如：<br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
 |{ unary_operator } |一元运算符只能用于计算结果数据类型属于数字数据类型类别的表达式。 只有一个数字操作数的运算符：<br /><br /> ＋ 指示正数。<br /><br /> - 指示负数。<br /><br /> ~ 指示一的补数运算符。|  
 |{ binary_operator } |用于定义如何组合两个表达式以得到一个结果的运算符。 binary_operator 可以是算术运算符、赋值运算符 (=)、位运算符、比较运算符、逻辑运算符、字符串连接运算符 (+) 或一元运算符  。 有关运算符的详细信息，请参阅[运算符 (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)。|  
 |ranking_windowed_function |任意 [!INCLUDE[tsql](../../includes/tsql-md.md)] 排名函数。 有关详细信息，请参阅[排名函数 (Transact-SQL)](../../t-sql/functions/ranking-functions-transact-sql.md)。|  
@@ -104,7 +104,7 @@ ms.locfileid: "70978600"
   
  由多个符号和运算符组成的复杂表达式的计算结果为单值结果。 生成的表达式的数据类型、排序规则、精度和值由进行组合的两个表达式决定，并按每次两个表达式的顺序递延，直到得出最后结果。 表达式中元素组合的顺序由表达式中运算符的优先级决定。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  两个表达式可以由一个运算符组合起来，只要它们具有该运算符支持的数据类型，并且满足至少下列一个条件：  
   
 -   两个表达式有相同的数据类型。  

@@ -14,10 +14,10 @@ ms.assetid: a6637e4b-4e6b-40aa-bee6-39d98cc507c8
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ec508dbaf274816ecf32f8eaa0a8047baa60e2a8
-ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68033396"
 ---
 # <a name="advanced-merge-replication-conflict---com-based-resolvers"></a>高级合并复制冲突 - 基于 COM 的解决程序
@@ -30,7 +30,7 @@ ms.locfileid: "68033396"
   
  下表说明了特定冲突解决程序的属性。  
   
-|“属性”|要求的输入|描述|注释|  
+|名称|要求的输入|说明|注释|  
 |----------|--------------------|-----------------|--------------|  
 |[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 累加性冲突解决程序|要求和的列的名称。 它必须为算术数据类型（例如 **int**、 **smallint**、 **numeric**等）。|冲突解决入选方由优先级值确定。 指定列的值设置为源列值与目标列值之和。 如果其中一列设置为 NULL，则结果按另一列的值设置。|只支持更新冲突和列跟踪。|  
 |[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 平均化冲突解决程序|要平均化的列的名称。 它必须为算术数据类型（例如 **int**、 **smallint**、 **numeric**等）。|冲突解决入选方由优先级值确定。 所得列的值设置为源列值与目标列值的平均值。 如果其中一列设置为 NULL，则结果按另一列的值设置。|只支持更新冲突和列跟踪。|  
@@ -41,7 +41,7 @@ ms.locfileid: "68033396"
 |[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 合并文本冲突解决程序|文本列的名称和分隔符，例如 `@resolver_info = '[col1][===]'`。|冲突解决入选方由优先级值确定。 冲突的文本列设置为合并值，该值的构成是：通用前缀，后面依次跟着发布服务器的特有部分、分隔符及订阅服务器的特有部分。|只支持更新冲突和列跟踪。|  
 |[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 首选订阅服务器冲突解决程序|无输入。|订阅服务器无论是作为源服务器还是目的服务器，始终是入选方。|支持所有冲突类型。|  
 |[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 列优先冲突解决程序|用于确定冲突解决入选方的列的名称。 它必须为算术数据类型（例如 **int**、 **smallint**、 **numeric**等）。|具有较大数值的列确定冲突解决入选方。 如果其中一列设置为 NULL，则包含另一列的行为入选方。|支持更新冲突、行和列跟踪。|  
-|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 仅限上载冲突解决程序|无输入。|接受上载到发布服务器的更改；但更改不下载到订阅服务器。|支持所有冲突类型。|  
+|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 仅限上传冲突解决程序|无输入。|接受上载到发布服务器的更改；但更改不下载到订阅服务器。|支持所有冲突类型。|  
 |[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 仅限下载冲突解决程序|无输入。|拒绝上载到发布服务器的更改；但更改下载到订阅服务器。|支持所有冲突类型。|  
 |[!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQL Server 存储过程冲突解决程序|冲突解决程序为处理冲突应调用的存储过程的名称。|冲突解决取决于在存储过程中指定的逻辑。|支持更新冲突。 有关详细信息，请参阅[为合并项目实现自定义冲突解决程序](../../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)|  
   

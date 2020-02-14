@@ -14,17 +14,17 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: aa6cc0eb253c0f21a1b66870f9dac2607f65e2e3
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68769301"
 ---
 # <a name="types-of-replication"></a>复制类型
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供以下类型的复制以用于分布式应用程序：  
 
-| **类型** | **Description** |
+| 类型  | **说明** |
 |:-------- | :-------------- |
 | [事务复制](transactional/transactional-replication.md)| 在发布服务器上进行的更改会在发生时（几乎实时）传递给订阅服务器。 数据更改将按照其在发布服务器上发生的顺序和事务边界应用于订阅服务器。 | 
 | [合并复制](merge/merge-replication.md) | 可以在发布服务器和订阅服务器上更改数据，并且可以通过触发器进行跟踪。 订阅服务器在连接到网络时将与发布服务器进行同步，并交换自上次同步以来发布服务器和订阅服务器之间发生更改的所有行。 | 

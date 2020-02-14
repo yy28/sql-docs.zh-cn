@@ -32,12 +32,12 @@ helpviewer_keywords:
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 6ccf21bcc3e0657123aa4f0fdcfe9b2d3cb0861a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 782536e79336c0224638707538e8a12a31f5af84
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68037591"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76315597"
 ---
 # <a name="database-files-and-filegroups"></a>数据库文件和文件组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "68037591"
 ## <a name="database-files"></a>数据库文件  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库具有三种类型的文件，如下表所示：  
   
-|文件|描述|  
+|文件|说明|  
 |----------|-----------------|  
 |主|主要数据文件包含数据库的启动信息，并指向数据库中的其他文件。 用户数据和对象可存储在此文件中，也可以存储在次要数据文件中。 每个数据库有一个主要数据文件。 主要数据文件的建议文件扩展名是 .mdf。|  
 |辅助副本|次要数据文件是可选的，由用户定义并存储用户数据。 通过将每个文件放在不同的磁盘驱动器上，次要文件可用于将数据分散到多个磁盘上。 另外，如果数据库超过了单个 Windows 文件的最大大小，可以使用次要数据文件，这样数据库就能继续增长。<br /><br /> 次要数据文件的建议文件扩展名是 .ndf。|  
@@ -67,7 +67,7 @@ ms.locfileid: "68037591"
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据和日志文件可以保存在 FAT 或 NTFS 文件系统中。 由于 NTFS 在安全方面具有优势，因此，建议在 Windows 系统上使用 NTFS 文件系统。 
 
 > [!WARNING]
-> 可读/写数据文件组和日志文件不能保存在 NTFS 压缩文件系统中。 只有只读数据库和只读次要文件组可以保存在 NTFS 压缩文件系统中。
+> NTFS 压缩文件系统不支持读/写数据文件组和日志文件。 仅允许只读数据库和只读次要文件组保存在 NTFS 压缩文件系统中。
 > 为了节省空间，强烈建议使用[数据压缩](../../relational-databases/data-compression/data-compression.md)而不是文件系统压缩。
 
 如果多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例在一台计算机上运行，则每个实例都会接收到不同的默认目录来保存在该实例中创建的数据库文件。 有关详细信息，请参阅 [SQL Server 的默认实例和命名实例的文件位置](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)。
@@ -101,7 +101,7 @@ ms.locfileid: "68037591"
   
  下表列出了存储在文件组中的所有数据文件。  
   
-|文件组|描述|  
+|文件组|说明|  
 |---------------|-----------------|  
 |主|包含主要文件的文件组。 所有系统表都被分配到主要文件组中。|  
 |内存优化数据|内存优化文件组基于 Filestream 文件组|  

@@ -27,19 +27,19 @@ ms.assetid: f938a666-fdd1-4233-b97f-719f27b1a0e6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da408c690622f5ba1ef45fa2466ed396d0022599
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e7ec15aed162c096bc13062ed1ec98b02c0c9ca4
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064609"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76516248"
 ---
 # <a name="set-arithabort-transact-sql"></a>SET ARITHABORT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 在查询执行过程中发生溢出或被零除错误时结束查询。  
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -55,7 +55,7 @@ SET ARITHABORT { ON | OFF }
 SET ARITHABORT ON
 ```
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 在登录会话中始终将 ARITHABORT 设置为 ON。 将 ARITHABORT 设置为 OFF 可能对查询优化产生负面影响，进而导致性能问题。  
   
 > [!WARNING]  
@@ -70,7 +70,7 @@ SET ARITHABORT ON
 > [!NOTE]  
 >  如果 SET ARITHABORT 和 SET ARITHIGNORE 均为 ON，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在运行查询后返回 NULL，并显示一条警告消息。  
   
-当数据库兼容级别设置为 90 或更高时，如果将 ANSI_WARNINGS 设置为 ON，则将使 ARITHABORT 隐式设置为 ON。 如果数据库兼容级别设置为 80 或更低，则必须将 ARITHABORT 选项显式设置为 ON。  
+当 ANSI_WARNINGS 的值为 ON 且数据库兼容性级别设置为 90 或更高时，无论其值如何设置，RITHABORT 都将隐式设置为 ON。 如果数据库兼容级别设置为 80 或更低，则必须将 ARITHABORT 选项显式设置为 ON。  
   
 在对表达式求值的过程中，如果 SET ARITHABORT 为 OFF，INSERT、UPDATE 或 DELETE 语句遇到算术、溢出、被零除或域错误，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将插入或更新一个 NULL 值。 如果目标列不可为空，则插入或更新操作将失败，用户将看到错误消息。  
   

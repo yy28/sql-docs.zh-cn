@@ -17,10 +17,10 @@ ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 66d7ac0e15ebfee2c79a90f8c5041ba899dbff93
-ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73926041"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
@@ -31,7 +31,7 @@ Microsoft SQL Server Express LocalDB 是一种面向开发人员的 [SQL Server 
 
 LocalDB 安装将复制启动 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 所需的最少的文件集。 安装 LocalDB 后，你可以使用特定连接字符串来启动连接。 连接时，将自动创建并启动所需的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基础结构，从而使应用程序无需执行复杂的配置任务即可使用数据库。 开发人员工具可以向开发人员提供 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ，使其不必管理 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的完整服务器实例即可撰写和测试 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代码。 
 
-## <a name="try-it-out"></a>进行试用： 
+## <a name="try-it-out"></a>试试看！ 
 
 - 若要下载并安装 SQL Server Express LocalDB，请转到 **[SQL Server 下载](https://www.microsoft.com/sql-server/sql-server-editions-express)** 。 LocalDB 是在安装过程中选择的一项功能，可在下载该介质时使用。 如果下载介质，则选择“Express Advanced”  或“LocalDB”包。 在 Visual Studio 安装程序中，可将 SQL Server Express LocalDB 作为 .NET 桌面开发工作负载的一部分安装，也可作为单独组件安装   。
 
@@ -48,9 +48,9 @@ LocalDB 安装将复制启动 [!INCLUDE[ssDEnoversion](../../includes/ssdenovers
 
 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB 的实例通过 `SqlLocalDB.exe` 实用工具进行托管。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB 应该用于代替已弃用的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 用户实例功能。
 
-## <a name="description"></a>描述
+## <a name="description"></a>说明
 
-LocalDB 安装程序使用 `SqlLocalDB.msi` 程序在计算机上安装所需文件。 安装后，LocalDB 是可以创建和打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的实例。 数据库的系统数据库文件存储于本地 AppData 路径中，这个路径通常是隐藏的。 例如， `C:\Users\<user>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\`。 用户数据库文件存储在用户指定的位置，通常为 `C:\Users\<user>\Documents\` 文件夹中的某个位置。
+LocalDB 安装程序使用 `SqlLocalDB.msi` 程序在计算机上安装所需文件。 安装后，LocalDB 是可以创建和打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的实例。 数据库的系统数据库文件存储于本地 AppData 路径中，这个路径通常是隐藏的。 例如，`C:\Users\<user>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\` 。 用户数据库文件存储在用户指定的位置，通常为 `C:\Users\<user>\Documents\` 文件夹中的某个位置。
 
 有关将 LocalDB 包括在应用程序中的详细信息，请参阅 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [本地数据概述](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/ms233817(v=vs.110))和[在 Visual Studio 中创建一个数据库并添加表](/visualstudio/data-tools/create-a-sql-database-by-using-a-designer)。
 
@@ -117,7 +117,7 @@ REM Gather information about the instance of LocalDB
 |共享名称|""|
 |“所有者”|"\<你的 Windows 用户>"|
 |自动创建|否|
-|状态|运行|
+|状态|“正在运行”|
 |上次启动时间|\<日期和时间>|
 |实例管道名称|np:\\\\.\pipe\LOCALDB#F365A78E\tsql\query|
 

@@ -17,10 +17,10 @@ ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a2eaffb39868737c955224b3ccd3ba39366d6f92
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72906374"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>将现有索引移动到其他文件组中
@@ -73,7 +73,7 @@ ms.locfileid: "72906374"
   
 7.  选择 **“文件组或分区方案名称”** 并从列表中选择要将索引移动到的文件组或分区方案。  
   
-8.  单击 **“关闭”** 。  
+8.  单击“关闭”  。  
   
 9. 在“文件”  菜单上，选择“保存”  以保存 _table_name_。  
 
@@ -99,9 +99,9 @@ ms.locfileid: "72906374"
   
      在使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的多处理器计算机上，可以通过指定最大的并行度值来配置用于执行索引语句的处理器数。 并非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本均提供并行索引操作功能。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅“SQL Server 2016 各个版本支持的功能”。 有关并行索引操作的详细信息，请参阅 [配置并行索引操作](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
   
-8.  单击“确定”  。  
+8.  单击“确定”。   
   
- “索引属性 - index_name” 对话框的“存储”页中提供以下信息    ：  
+ “索引属性 - index_name”对话框的“存储”页面中提供了以下信息    ：  
   
  **文件组**  
  在指定的文件组中存储索引。 该列表仅显示标准 (row) 文件组。 默认情况下，将在该列表中选择相应数据库的 PRIMARY 文件组。  

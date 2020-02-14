@@ -21,10 +21,10 @@ ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b342e77c542cd9f3357bccd4b97f3a876d1f5f1d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115686"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>创建 SQL Server 实用工具控制点（SQL Server 实用工具）
@@ -102,7 +102,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ## <a name="wizard-steps"></a>向导步骤  
  ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")  
   
- 以下各节提供与用于创建新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP 的向导工作流中每一页有关的详细信息。 若要启动向导以创建新的 UCP，则从 SSMS 的“视图”菜单中打开“实用工具资源管理器”窗格，然后单击“实用工具资源管理器”窗格顶部的 ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")“创建 UCP”按钮  。  
+ 以下各节提供与用于创建新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP 的向导工作流中每一页有关的详细信息。 要启动向导以创建新的 UCP，则从 SSMS 的“视图”菜单中打开“实用工具资源管理器”窗格，然后单击“实用工具资源管理器”窗格顶部的 ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")“创建 UCP”按钮  。  
   
  单击下面列表中的链接可以导航到向导中某一页的详细信息：  
   
@@ -125,9 +125,9 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ##  <a name="Welcome"></a> 创建 UCP 向导简介  
  如果您打开实用工具资源管理器并且没有连接的实用工具控制点，则必须连接到一个控制点或创建一个新的控制点。  
   
- **连接到现有 UCP** - 如果在部署中已存在一个实用工具控制点，则可以通过单击“实用工具资源管理器”窗格顶部的 ![](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility")“连接到实用工具”按钮连接到该实用工具控制点  。 若要连接到现有 UCP，您必须具有管理员凭据或是实用工具读取者角色的成员。 请注意，每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具只能有一个 UCP，并且只能从 SSMS 的某一实例连接到一个 UCP。  
+ 连接到现有 UCP - 如果在你的部署中已存在一个实用工具控制点，则可以通过单击“实用工具资源管理器”窗格顶部的 ![](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility")“连接到实用工具”按钮连接到该实用工具控制点   。 若要连接到现有 UCP，您必须具有管理员凭据或是实用工具读取者角色的成员。 请注意，每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具只能有一个 UCP，并且只能从 SSMS 的某一实例连接到一个 UCP。  
   
- **创建新 UCP** - 若要创建新的实用工具控制点，请单击“实用工具资源管理器”窗格顶部的 ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")“创建 UCP”按钮  。 若要创建一个新的 UCP，必须指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称并在连接对话框中提供管理员凭据。 请注意，每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具只能有一个 UCP。  
+ 创建新的 UCP - 要创建新的实用工具控制点，请单击“实用工具资源管理器”窗格顶部的 ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")“创建 UCP”按钮   。 若要创建一个新的 UCP，必须指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称并在连接对话框中提供管理员凭据。 请注意，每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具只能有一个 UCP。  
   
 ##  <a name="Instance_name"></a> 指定实例  
  指定与您正创建的 UCP 有关的以下信息：  
@@ -181,7 +181,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
  若要继续，请单击 **“下一步”** 。  
   
-##  <a name="Summary"></a> 摘要  
+##  <a name="Summary"></a>总结  
  摘要页显示您提供的与 UCP 有关的信息：  
   
 -   承载该 UCP 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称。  

@@ -20,10 +20,10 @@ ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d766d6a36dbe8f91f2c2fd42433093b298935b48
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290837"
 ---
 # <a name="xml-source"></a>XML 源
@@ -76,7 +76,7 @@ ms.locfileid: "71290837"
   
  XML 源支持多个常规输出和多个错误输出。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含“XML 源编辑器”  对话框，可用于配置 XML 源。 此对话框在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中可用。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含用于配置 XML 源的“XML 源编辑器”对话框  。 此对话框在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中可用。  
   
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "71290837"
  **数据访问模式**  
  指定从源选择数据的方法。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |XML 文件位置|从 XML 文件检索数据。|  
 |来自变量的 XML 文件|在变量中指定 XML 文件名。<br /><br /> **相关信息**：[在包中使用变量](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
@@ -163,7 +163,7 @@ ms.locfileid: "71290837"
  **截断**  
  指定发生截断时应执行的操作：忽略失败、重定向行或使组件失败。  
   
- **Description**  
+ **说明**  
  查看对错误的说明。  
   
  **将此值设置到选定的单元格**  

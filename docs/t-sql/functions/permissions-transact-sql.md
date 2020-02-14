@@ -25,10 +25,10 @@ ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: fc38de8bffc09461dc69a24acf15ce143276422b
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843632"
 ---
 # <a name="permissions-transact-sql"></a>PERMISSIONS (Transact-SQL)
@@ -36,9 +36,9 @@ ms.locfileid: "73843632"
 
   返回一个包含位图的值，该值指示当前用户的语句、对象或列权限。  
   
- **重要提示**[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]改用 [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md) 和 [Has_Perms_By_Name](../../t-sql/functions/has-perms-by-name-transact-sql.md)。 继续使用 PERMISSIONS 函数可能导致性能降低。  
+ **重要提示** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 改用 [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md) 和 [Has_Perms_By_Name](../../t-sql/functions/has-perms-by-name-transact-sql.md)。 继续使用 PERMISSIONS 函数可能导致性能降低。  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -51,13 +51,13 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
  *objectid*  
  安全对象的 ID。 如果未指定 objectid，则位图值包含当前用户的语句权限；否则，位图包含当前用户对该安全对象的权限  。 指定的安全对象必须在当前数据库中。 使用 [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) 函数确定 objectid 值  。  
   
- ' column '     
- 返回其权限信息的列的可选名。 该列必须是 objectid 指定的表中的有效列名  。  
+ **'** *column* **'**  
+ 是返回其权限信息的列的可选名。 该列必须是 objectid 指定的表中的有效列名  。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  可以使用 PERMISSIONS 确定当前用户是否具有执行某个语句或向另一用户授予权限所需的权限。  
   
  所返回的权限信息是 32 位位图。  
@@ -89,8 +89,8 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
 |1|0x1|SELECT ALL|  
 |2|0x2|UPDATE ALL|  
 |4|0x4|REFERENCES ALL|  
-|8|0x8|Insert|  
-|16|0x10|删除|  
+|8|0x8|INSERT|  
+|16|0x10|DELETE|  
 |32|0x20|EXECUTE（仅限于过程）|  
 |4096|0x1000|SELECT ANY（至少一列）|  
 |8192|0x2000|UPDATE ANY|  

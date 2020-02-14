@@ -14,10 +14,10 @@ ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: ab394b7eed0a284b8ed74e5333b01f27283469ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987361"
 ---
 # <a name="sql-server-access-methods-object"></a>SQL Server Access Methods 对象
@@ -42,9 +42,9 @@ ms.locfileid: "67987361"
   
 -   [sys.dm_db_session_space_usage (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  
   
- 下表介绍了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Access Methods** 计数器。  
+ 下表介绍了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Access Methods 计数器  。  
   
-|SQL Server Access Methods 计数器|描述|  
+|SQL Server Access Methods 计数器|说明|  
 |----------------------------------------|-----------------|  
 |**AU cleanup batches/sec**|负责清除延迟删除的分配单元的后台任务每秒成功完成的批处理数。|  
 |**AU cleanups/sec**|负责清除延迟删除的分配单元的后台任务每秒成功删除的分配单元数。 删除每个分配单元需要多个批处理。|  
@@ -88,7 +88,7 @@ ms.locfileid: "67987361"
 |**Used tree page cookie**|在索引搜索期间，自树页的父页上未发生更改以来成功使用树页 cookie 的次数。 Cookie 用于加快索引搜索。|  
 |**Workfiles Created/sec**|每秒创建的工作文件数。 例如，工作文件可用于存储哈希联接和哈希聚合的临时结果。|  
 |**Worktables Created/sec**|每秒创建的工作表数。 例如，工作表可用于存储查询假脱机、LOB 变量、XML 变量和游标的临时结果。|  
-|**Worktables From Cache Base**|仅限内部使用。|  
+|**Worktables From Cache Base**|仅供内部使用。|  
 |**Worktables From Cache Ratio**|其前两页虽未分配但可从工作表缓存中直接使用的已创建的工作表的百分比。 （工作表被删除后，这两页可能会保持分配状态并返回到工作表缓存中。 这将提高性能。）|  
   
 ## <a name="see-also"></a>另请参阅  

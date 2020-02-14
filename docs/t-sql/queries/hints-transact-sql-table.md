@@ -37,10 +37,10 @@ ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: d5675f7c62ce43a9e41770075cd4a97253ea051e
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981766"
 ---
 # <a name="hints-transact-sql---table"></a>提示 (Transact-SQL) - 表
@@ -51,7 +51,7 @@ ms.locfileid: "73981766"
 > [!CAUTION]  
 >  由于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询优化器通常会为查询选择最佳执行计划，因此我们建议仅在最后迫不得已的情况下才可由资深的开发人员和数据库管理员使用提示。  
   
- **适用范围：**  
+ **适用于：**  
   
  [DELETE](../../t-sql/statements/delete-transact-sql.md)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "73981766"
   
  [MERGE](../../t-sql/statements/merge-transact-sql.md)  
   
- ![“主题链接”图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -121,7 +121,7 @@ WITH  ( <table_hint> [ [, ]...n ] )
 ```  
   
 ## <a name="arguments"></a>参数  
-WITH ( \<table_hint> ) [ [, ]...n ]      
+WITH **(** \<table_hint> **)** [ [ **,** ]...*n* ]  
 存在一些例外情况：只有在使用 WITH 关键字指定表提示时，才支持在 FROM 子句中使用这些提示。 指定表提示时必须使用括号。  
   
 > [!IMPORTANT]  
@@ -192,7 +192,7 @@ FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... _n_ ] *
   
 可以通过以下方式指定 FORCESEEK 提示。  
   
-|语法|示例|描述|  
+|语法|示例|说明|  
 |------------|-------------|-----------------|  
 |没有索引或 INDEX 提示|`FROM dbo.MyTable WITH (FORCESEEK)`|查询优化器仅考虑执行索引查找操作以通过任意相关索引访问表或视图。|  
 |与 INDEX 提示组合使用|`FROM dbo.MyTable WITH (FORCESEEK, INDEX (MyIndex))`|查询优化器仅考虑执行索引查找操作以通过指定的索引访问表或视图。|  
@@ -354,7 +354,7 @@ UPDLOCK
 XLOCK  
 指定采用排他锁并保持到事务完成。 如果同时指定了 ROWLOCK, PAGLOCK 或 TABLOCK，则排他锁将应用于相应的粒度级别。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 如果查询计划不访问表，则将忽略表提示。 这可能是由于优化器选择了完全不访问该表，也可能是因为改成了访问索引视图。 在后一种情况中，使用 OPTION (EXPAND VIEWS) 查询提示可阻止访问索引视图。  
   
 所有锁提示将传播到查询计划访问的所有表和视图，其中包括在视图中引用的表和视图。 另外，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还将执行对应的锁一致性检查。  

@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: d06ed24f-82d7-4b9e-9e40-cc9780476a71
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: aa72ae36463f191ef8f127562d231b2e58480039
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: fd19ef065c98022d0f8fecd8e4fd044007759005
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68767723"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288064"
 ---
 # <a name="monitor-replication-agents"></a>监视复制代理
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "68767723"
   
     -   单击 **“监视器”** 启动 **复制监视器**。  
   
-5.  单击 **“关闭”** 。  
+5.  单击“关闭”  。  
   
 #### <a name="to-monitor-the-distribution-agent-and-merge-agent-from-the-publisher"></a>监视分发代理和合并代理（从发布服务器）  
   
@@ -98,7 +98,7 @@ ms.locfileid: "68767723"
   
     -   对于请求订阅，单击 **“查看作业历史记录”** 启动 **日志文件查看器**，此查看器可以显示代理日志的输出。  
   
-6.  单击 **“关闭”** 。  
+6.  单击“关闭”  。  
   
 #### <a name="to-monitor-the-distribution-agent-and-merge-agent-from-the-subscriber"></a>监视分发代理和合并代理（从订阅服务器）  
   
@@ -116,7 +116,7 @@ ms.locfileid: "68767723"
   
     -   单击 **“查看作业历史记录”** 启动 **日志文件查看器**，此查看器可以显示代理日志的输出。  
   
-5.  单击 **“关闭”** 。  
+5.  单击“关闭”  。  
   
 ## <a name="see-also"></a>另请参阅  
  [复制代理概述](../../../relational-databases/replication/agents/replication-agents-overview.md)  

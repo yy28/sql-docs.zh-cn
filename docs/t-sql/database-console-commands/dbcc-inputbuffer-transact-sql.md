@@ -24,10 +24,10 @@ ms.assetid: a44d702b-b3fb-4950-8c8f-1adcf3f514ba
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: d0b6f9dac0cb065a9509040b5693b09b1fa9d5e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039105"
 ---
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68039105"
 
 显示从客户端发送到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的最后一个语句。
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -57,7 +57,7 @@ SELECT request_id
 FROM sys.dm_exec_requests   
 WHERE session_id = @@spid;  
 ```  
-替换为  
+WITH  
 启用要指定的选项。  
   
 NO_INFOMSGS  
@@ -66,7 +66,7 @@ NO_INFOMSGS
 ## <a name="result-sets"></a>结果集  
 DBCC INPUTBUFFER 返回包含如下列的行集。
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**EventType**|**nvarchar(30)**|事件类型。 这可能是 RPC 事件或 Language 事件   。 检测不到上一个事件时，输出为 No Event  。|  
 |**参数**|**smallint**|0 = 文本<br /><br /> 1- n = Parameters |  

@@ -22,10 +22,10 @@ ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0d2546e349859b8f059623f25b2e8ac971ba5643
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297326"
 ---
 # <a name="developing-a-custom-source-component"></a>开发自定义源组件
@@ -173,7 +173,7 @@ End Sub
   
  列的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A> 决定了为其他属性设置的值。 下表说明了对每个 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A> 的依赖属性的要求。 未列出的数据类型的依赖属性设置为零。  
   
-|DataType|长度|小数位数|精度|CodePage|  
+|数据类型|长度|缩放|Precision|CodePage|  
 |--------------|------------|-----------|---------------|--------------|  
 |DT_DECIMAL|0|大于 0 且小于或等于 28。|0|0|  
 |DT_CY|0|0|0|0|  

@@ -22,10 +22,10 @@ ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ade0d29ed20bb8b39d9ac2a1762977abe24d8f65
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293512"
 ---
 # <a name="ado-net-source"></a>ADO NET 源
@@ -35,7 +35,7 @@ ms.locfileid: "71293512"
 
   ADO NET 源使用来自 .NET 提供程序的数据，并使这些数据对数据流可用。  
   
- 你可以使用 ADO NET 源连接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。 不支持使用 OLE DB 连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。 有关 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的详细信息，请参阅[通用指导原则和限制（Azure SQL 数据库）](https://go.microsoft.com/fwlink/?LinkId=248228)。  
+ 可使用 ADO NET 源连接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。 不支持使用 OLE DB 连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。 有关 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的详细信息，请参阅[通用指导原则和限制（Azure SQL 数据库）](https://go.microsoft.com/fwlink/?LinkId=248228)。  
   
 ## <a name="data-type-support"></a>数据类型支持  
  源会将未映射到特定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型的任意数据类型转换为 DT_NTEXT [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型。 即使数据类型为 **System.Object**，也会发生此转换。  
@@ -47,7 +47,7 @@ ms.locfileid: "71293512"
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，日期数据类型 DT_DBDATE、DT_DBTIME2、DT_DBTIMESTAMP2 和 DT_DBTIMESTAMPOFFSET 映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的某些日期数据类型。 您可以配置 ADO NET 源，从而将日期数据类型从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的数据类型转换为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用的数据类型。 若要配置 ADO NET 源以便转换这些日期数据类型，请将 **连接管理器的** Type System Version [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 属性设置为 **Latest**。 （**Type System Version** 属性位于“连接管理器”  对话框的“全部”  页。 若要打开“连接管理器”  对话框，请右键单击 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器，然后单击“编辑”  。  
   
 > [!NOTE]  
->  如果将 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器的 **Type System Version** 属性设置为**SQL Server 2005**，则系统会将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期数据类型转换为 DT_WSTR。  
+>  如果将 **连接管理器的** Type System Version [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 属性设置为 **SQL Server 2005**，则系统会将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期数据类型转换为 DT_WSTR。  
   
  当 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 连接管理器将提供程序指定为 .NET Data Provider for [!INCLUDE[vstecado](../../includes/vstecado-md.md)] (SqlClient) 时，系统会将用户定义的数据类型 (UDT) 转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 二进制大型对象 (BLOB)。 当系统转换 UDT 数据类型时会应用下列规则：  
   
@@ -115,7 +115,7 @@ ms.locfileid: "71293512"
  **数据访问模式**  
  指定从源选择数据的方法。  
   
-|选项|描述|  
+|选项|说明|  
 |------------|-----------------|  
 |表或视图|从 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 数据源中的表或视图中检索数据。|  
 |SQL 命令|使用 SQL 查询从 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 数据源中检索数据。|  
@@ -193,7 +193,7 @@ ms.locfileid: "71293512"
  **截断**  
  指定发生截断时应执行的操作：忽略失败、重定向行或使组件失败。  
   
- **Description**  
+ **说明**  
  查看对错误的说明。  
   
  **将此值设置到选定的单元格**  

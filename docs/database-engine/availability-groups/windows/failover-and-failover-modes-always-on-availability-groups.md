@@ -16,10 +16,10 @@ ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 269ec542c7de83afa9c174ea0bc9221f125f7e64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67949106"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>故障转移和故障转移模式（AlwaysOn 可用性组）
@@ -107,7 +107,7 @@ ms.locfileid: "67949106"
   
 |副本|可用性模式和故障转移模式设置|  
 |-------------|--------------------------------------------------|  
-|仅当辅助副本配置为使用手动故障转移模式，并且至少一个辅助副本当前与主要副本同步时，|同步提交模式（自动故障转移）|  
+|A|同步提交模式（自动故障转移）|  
 |B|同步提交模式（自动故障转移）|  
 |C|同步提交模式（仅限计划的手动故障转移）|  
 |D|异步提交模式（仅限强制故障转移）|  
@@ -164,7 +164,7 @@ ms.locfileid: "67949106"
 ###  <a name="EnableAutoFo"></a> 配置自动故障转移  
  可用性副本可以配置为支持在任何一点进行自动故障转移。  
   
- **To configure automatic failover**  
+ **配置自动故障转移**  
   
 1.  确保辅助副本配置为使用同步提交可用性模式。 有关详细信息，请参阅 [更改可用性副本的可用性模式 (SQL Server)](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)。  
   

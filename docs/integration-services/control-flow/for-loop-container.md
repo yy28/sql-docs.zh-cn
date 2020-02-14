@@ -18,10 +18,10 @@ ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 26d7442164d4d018feb6066e6cafdf12c9312429
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294145"
 ---
 # <a name="for-loop-container"></a>For 循环容器
@@ -41,7 +41,7 @@ ms.locfileid: "71294145"
   
  下图显示了一个具有发送邮件任务的 For 循环容器。 如果初始化表达式为 `@Counter = 0`，求值表达式为 `@Counter < 4`，迭代表达式为 `@Counter = @Counter + 1`，则该循环将重复运行四次并发送四封电子邮件。  
   
- ![For 循环容器重复执行任务四次](../../integration-services/control-flow/media/ssis-forloop.gif "A For Loop container repeats a task four times")  
+ ![For 循环容器重复执行任务四次](../../integration-services/control-flow/media/ssis-forloop.gif "For 循环容器重复执行任务四次")  
   
  表达式必须是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 表达式。  
   
@@ -62,11 +62,11 @@ ms.locfileid: "71294145"
   
 ## <a name="add-a-for-loop-container-in-a-control-flow"></a>在控制流中添加 For 循环容器  
   
-1.  将 For 循环容器添加到包。 有关详细信息，请参阅[在控制流中添加或删除任务或容器](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)。  
+1.  将 For 循环容器添加到包。 有关详细信息，请参阅 [在控制流中添加或删除任务或容器](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)。  
   
 2.  将任务和容器添加到 For 循环容器。 有关详细信息，请参阅 [在控制流中添加或删除任务或容器](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)。  
   
-3.  使用优先约束连接 For 循环容器中的任务和容器。 有关详细信息，请参阅[使用默认优先约束来连接任务和容器](https://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)。  
+3.  使用优先约束连接 For 循环容器中的任务和容器。 有关详细信息，请参阅 [使用默认优先约束来连接任务和容器](https://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)。  
   
 4.  配置 For 循环容器。 有关详细信息，请参阅 [配置 For 循环容器](https://msdn.microsoft.com/library/b9cd7ea7-b198-4a35-8b16-6acf09611ca5)。  
 
@@ -113,7 +113,7 @@ ms.locfileid: "71294145"
 > [!NOTE]  
 >  对象名称在一个包内必须是唯一的。  
   
- **Description**  
+ **说明**  
  提供 For 循环容器的说明。  
  
 ## <a name="use-expressions-with-the-for-loop-container"></a>将表达式与 For 循环容器配合使用  

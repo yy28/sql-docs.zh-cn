@@ -18,10 +18,10 @@ ms.assetid: cb4deab8-642b-44d9-b3d9-85114d64021e
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5651f61f33d598930aff2fb482b415e9749f6d44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042528"
 ---
 # <a name="stbuffer-geography-data-type"></a>STBuffer（geography 数据类型）
@@ -49,7 +49,7 @@ ms.locfileid: "68042528"
   
  CLR 返回类型：**SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  STBuffer() 计算缓冲区的方式与 [BufferWithTolerance](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md) 相同：指定 tolerance = abs(distance) \* .001 且 relative = false    。  
   
  负的缓冲区将删除 geography 实例的给定距离的边界内的所有点  。  
@@ -58,7 +58,7 @@ ms.locfileid: "68042528"
   
  在缓冲区的距离超过下列限制的 FullGlobe 实例中，此方法将引发 ArgumentException   ：  
   
- 0.999 \* π * minorAxis \* minorAxis / majorAxis（~0.999 \* 1/2 地球的周长）   
+ 0.999 \* *π* * minorAxis \* minorAxis / majorAxis（~0.999 \* 1/2 地球的周长）  
   
  最大距离限制允许将缓冲区构造得尽可能灵活。  
   

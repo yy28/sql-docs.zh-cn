@@ -12,10 +12,10 @@ ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f561fd0e5817ecc03e8d5fe4cc8c32661ebdca21
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296242"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>指定表复制或查询（SQL Server 导入和导出向导）
@@ -33,7 +33,7 @@ ms.locfileid: "71296242"
 ## <a name="screen-shot-of-the-specify-table-copy-or-query-page"></a>“指定表复制或查询”页的屏幕截图    
  以下屏幕截图显示向导的“指定表复制或查询”  页。    
     
- ![导入和导出向导的“表复制或查询”页](../../integration-services/import-export-data/media/table-copy-or-query.png "Table copy or query page of the Import and Export Wizard")    
+ ![导入和导出向导的表复制或查询页](../../integration-services/import-export-data/media/table-copy-or-query.png "导入和导出向导的表复制或查询页")    
     
 ## <a name="specify-whether-to-copy-an-entire-table-or-write-a-query"></a>指定是否复制整个表或编写查询 
  **复制一个或多个表或视图的数据**    
@@ -55,7 +55,7 @@ ms.locfileid: "71296242"
  
 只要知道要导出的表的名称，仍可使用“编写查询”选项，即便通常不编写 SQL 查询也是如此  。 在“提供源查询”对话框（单击“下一步”后看到）中，以 `SELECT * FROM <name of table>` 形式输入查询   。 如果表名称包含空格或其他特殊字符，使用方括号将名称括起来，如 `SELECT * FROM [<name of table>]`。
 
-### <a name="more-info"></a>详细信息
+### <a name="more-info"></a>更多信息
  “复制一个或多个表或视图的数据”  选项仅对在 ProviderDescriptors.xml 文件中有 ProviderDescription 部分的信息的那些访问接口可用。 （默认情况下，此文件位于 \<drive>:\Program Files\Microsoft SQL Server\130\DTS\ProviderDescriptors 中  。）此文件中的每个 ProviderDescription 部分都包含从相应访问接口检索元数据所需的信息。    
     
  默认情况下，ProviderDescriptors.xml 文件仅包含用于以下列表中的访问接口的 ProviderDescription 部分。    

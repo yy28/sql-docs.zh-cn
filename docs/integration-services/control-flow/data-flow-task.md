@@ -19,10 +19,10 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6683cec953daf6146371d62e8db2e4add2bd42df
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298349"
 ---
 # <a name="data-flow-task"></a>数据流任务
@@ -45,12 +45,12 @@ ms.locfileid: "71298349"
   
  以下关系图显示具有多个数据流的数据流任务。  
   
- ![数据流](../../integration-services/control-flow/media/mw-dts-09.gif "Data flows")  
+ ![数据流](../../integration-services/control-flow/media/mw-dts-09.gif "数据流")  
   
 ## <a name="log-entries"></a>日志项  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供了可用于所有任务的一组日志事件。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 还提供了可用于多个任务的自定义日志条目。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。 数据流任务包括下列自定义日志项：  
   
-|日志项|描述|  
+|日志项|说明|  
 |---------------|-----------------|  
 |**BufferSizeTuning**|指示数据流任务更改了缓冲区的大小。 日志条目描述了大小更改的原因，并列出了临时的新缓冲区大小。|  
 |**OnPipelinePostEndOfRowset**|表示组件已经给出它的行集结束信号，该信号由对 **ProcessInput** 方法的最后一次调用设置。 对于数据流中处理输入的每个组件，都会写入一项。 该项包括组件的名称。|  
@@ -92,7 +92,7 @@ ms.locfileid: "71298349"
   
  例如，下表包含消息“已经为数据流组件提供了若干行作为输入。 :  :1185:OLE DB 源输出:1180:排序:1181:对输入进行排序:76”，已解析为列。 该消息由 **OnPipelineRowsSent** 事件在将行从 OLE DB 源发送到排序转换时写入。  
   
-|“列”|描述|ReplTest1|  
+|列|说明|值|  
 |------------|-----------------|-----------|  
 |**PathID**|OLE DB 源和排序转换之间的路径中的 **ID** 属性值。|1185|  
 |**PathName**|路径的 **Name** 属性值。|OLE DB 源输出|  

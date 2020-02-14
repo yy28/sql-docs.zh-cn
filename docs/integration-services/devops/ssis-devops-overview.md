@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 11ed5aa2ddcd675d201fc86abf595055828d7621
-ms.sourcegitcommit: 3511da65d7ebc788e04500bbef3a3b4a4aeeb027
+ms.openlocfilehash: 88b8e54867aba5439af9ed87e4a42b2083a479b3
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75681768"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76281865"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>SQL Server Integration Services (SSIS) DevOps 工具（预览）
 
@@ -133,12 +133,25 @@ SSIS 部署任务当前不支持以下方案：
 
 ## <a name="release-notes"></a>发行说明
 
+### <a name="version-013-preview"></a>版本 0.1.3 预览版
+
+发行日期：2020 年 1 月 19 日
+
+- 修复了一个问题，该问题会在 ispac 的原始文件名发生更改时阻止部署。
+
+### <a name="version-012-preview"></a>版本 0.1.2 预览版
+
+发行日期：2020 年 1 月 13 日
+
+- 目标类型为 SSISDB 时，在 SSIS 部署任务日志中添加了更详细的异常信息。
+- 修正了 SSIS 部署任务的属性目标路径帮助文本中的示例目标路径。
+
 ### <a name="version-011-preview"></a>版本 0.1.1 预览版
 
 发行日期：2020 年 1 月 6 日
 
-- 增加了对最低代理版本要求的限制。 目前，此产品的最低代理版本是 2.144.0。
-- 修复了 SSIS 部署任务的一些不正确的显示文本。
+- 添加了对最低代理版本要求的限制。 目前，此产品的最低代理版本是 2.144.0。
+- 修正了 SSIS 部署任务的一些不正确的显示文本。
 - 完善了一些错误消息。
 
 ### <a name="version-010-preview"></a>版本 0.1.0 预览版

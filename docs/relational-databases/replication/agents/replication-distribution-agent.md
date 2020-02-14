@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 7524d1c984d1e12b744c57b97cfeb586dff3f7ce
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68770750"
 ---
 # <a name="replication-distribution-agent"></a>复制分发代理
@@ -93,7 +93,7 @@ distrib [-?]
  输出所有可用的参数。  
   
  **-Publisher** _server_name_[ **\\** _instance_name_]  
- 发布服务器的名称。 为该服务器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 *server_name*。 为该服务器上的 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。  
+ 发布服务器的名称。 为该服务器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name  。 为该服务器上的 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。  
   
  **-PublisherDB** _publisher_database_  
  发布服务器数据库的名称。  
@@ -137,7 +137,7 @@ distrib [-?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  分发代理建立连接时使用的安全套接字层 (SSL) 加密级别。  
   
-|EncryptionLevel 值|描述|  
+|EncryptionLevel 值|说明|  
 |---------------------------|-----------------|  
 |**0**|指定不使用 SSL。|  
 |**1**|指定使用 SSL，但是代理不验证 SSL 服务器证书是否已由可信的颁发者进行签名。|  
@@ -172,10 +172,10 @@ distrib [-?]
  **-HistoryVerboseLevel** [ **0** | **1** | **2** | **3** ]  
  指定分发操作期间记录的历史信息量。  选择 1 可将历史日志记录对性能的影响减小到最低限度。  
   
-|HistoryVerboseLevel 值|描述|  
+|HistoryVerboseLevel 值|说明|  
 |-------------------------------|-----------------|  
 |**0**|进度消息将写入控制台或输出文件。 不在分发数据库中记录历史记录。|  
-|**1**|默认值。 总是更新具有相同状态（启动、进行中、成功等）的上一历史记录消息。 如果不存在状态相同的上一记录，将插入新记录。|  
+|**1**|默认。 总是更新具有相同状态（启动、进行中、成功等）的上一历史记录消息。 如果不存在状态相同的上一记录，将插入新记录。|  
 |**2**|除非记录为空闲消息或长时间运行的作业消息等信息（此时将更新上一记录），否则插入新的历史记录。|  
 |**3**|始终插入新记录，除非它与空闲消息有关。|  
   
@@ -218,7 +218,7 @@ distrib [-?]
  **-PacketSize** _packet_size_  
  数据包大小（按字节计）。 默认值为 4096（字节）。  
   
- -PollingInterval polling_interval_    
+ **-PollingInterval** _polling_interval__  
  对分发数据库进行已复制事务查询的频率（以秒计）。 默认值为 5 秒。  
   
  **-ProfileName** _profile_name_  
@@ -251,7 +251,7 @@ distrib [-?]
  **-SubscriberType** [ **0**| **1**| **3**]  
  指定分发代理使用的订阅服务器连接类型。  
   
-|SubscriberType 值|描述|  
+|SubscriberType 值|说明|  
 |--------------------------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |**1**|ODBC 数据源|  
@@ -287,7 +287,7 @@ distrib [-?]
  **-UseOledbStreaming**  
  指定此参数时，可以将二进制大型对象数据作为流进行绑定。 使用 **-OledbStreamThreshold** 指定大小（按字节计），超过此大小时将使用流。 **UseOledbStreaming** 默认为启用状态。 **UseOledbStreaming** 写入到 **C:\Program Files\Microsoft SQL Server\\<version\>\COM** 文件夹。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 如果安装了  代理以在本地系统帐户而非域用户帐户（默认）下运行，则服务只能访问本地计算机。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 如果将以 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]代理身份运行的分发代理配置为在登录到  实例时使用 Windows 身份验证模式，则分发代理将失败。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认设置为  身份验证。 [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)有关更改安全帐户的详细信息，请参阅。  

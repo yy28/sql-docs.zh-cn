@@ -22,10 +22,10 @@ ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fe82e7d6746f3a5fc76fda3f960f069ef4345525
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71282609"
 ---
 # <a name="run-integration-services-ssis-packages"></a>运行 Integration Services (SSIS) 包
@@ -48,17 +48,17 @@ ms.locfileid: "71282609"
 |----------|-----------------------------------------------------------------|--------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|  
 |**SQL Server Data Tools**|否|否<br /><br /> 但是，你可以将现有包从包括 msdb 数据库的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区添加到项目中。 以此方式将现有包添加到项目中将在文件系统中生成该包的本地副本。|是|  
 |**SQL Server Management Studio（连接到托管 Integration Services 服务器的数据库引擎实例时）**<br /><br /> 有关详细信息，请参阅 [Execute Package Dialog Box](#execute_package_dialog)|是|否<br /><br /> 但是，可以从这些位置将包导入服务器。|否<br /><br /> 但是，可以从文件系统将包导入服务器。|
-|**SQL Server Management Studio（连接到托管启用为 Scale Out Master 的 Integration Services 服务器的数据库引擎实例时）**<br /><br /> 有关详细信息，请参阅[在 Scale Out 中运行包](../../integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md)|是|否|否|
+|**SQL Server Management Studio（连接到托管启用为 Scale Out Master 的 Integration Services 服务器的数据库引擎实例时）**<br /><br /> 有关详细信息，请参阅 [在 Scale Out 中运行包](../../integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md)|是|否|否|
 |**SQL Server Management Studio（连接到管理 SSIS 包存储的 Integration Services 服务时）**|否|是|否<br /><br /> 但是，可以从文件系统将包导入 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区中。|  
 |**dtexec**<br /><br /> 有关详细信息，请参阅 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)。|是|是|是|  
 |**dtexecui**<br /><br /> 有关详细信息，请参阅[执行包实用工具 (DtExecUI) 用户界面参考](../../integration-services/packages/execute-package-utility-dtexecui-ui-reference.md)|否|是|是|  
 |**SQL Server 代理**<br /><br /> 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业计划运行包。<br /><br /> 有关详细信息，请参阅 [SQL Server Agent Jobs for Packages](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)。|是|是|是|  
 |**内置存储过程**<br /><br /> 有关详细信息，请参阅 [catalog.start_execution（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)|是|否|否|  
-|**托管的 API，通过使用** <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空间中的类型和成员|是|否|否|  
-|**托管的 API，通过使用** <xref:Microsoft.SqlServer.Dts.Runtime> 命名空间中的类型和成员|目前不可用|是|是|  
+|托管 API，通过使用 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空间中的类型和成员 |是|否|否|  
+|托管 API，通过使用 <xref:Microsoft.SqlServer.Dts.Runtime> 命名空间中的类型和成员 |目前不可用|是|是|  
 
 ## <a name="execution-and-logging"></a>执行和日志记录  
- 可以启用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包进行日志记录，这样就可以在日志文件中捕获运行时信息。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。  
+ 可以启用[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包进行日志记录，这样就可以在日志文件中捕获运行时信息。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
  您可以使用操作报告监视部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器并在其上运行的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。 可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中使用这些报告。 有关详细信息，请参阅 [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports)。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "71282609"
   
 5.  单击 **“确定”** 运行包。  
   
-     -或 -  
+     -或-  
   
      使用存储过程来运行包。 单击“脚本”  生成创建执行实例并启动执行实例的 Transact-SQL 语句。 该语句包含对 catalog.create_execution、catalog.set_execution_parameter_value 和 catalog.start_execution 存储过程的调用。 有关这些存储过程的详细信息，请参阅 [catalog.create_execution（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)、[catalog.set_execution_parameter_value（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)和 [catalog.start_execution（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)。  
 
@@ -163,7 +163,7 @@ ms.locfileid: "71282609"
  选择用于执行包的日志记录级别。 有关详细信息，请参阅 [catalog.set_execution_parameter_value（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)。  
   
  **出错时转储**  
- 指定在包执行过程中发生错误时是否创建一个转储文件。 有关详细信息，请参阅 [Generating Dump Files for Package Execution](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)。  
+ 指定在包执行过程中发生错误时是否创建一个转储文件。 有关详细信息，请参阅 [生成包执行的转储文件](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)。  
   
  **32 位运行时**  
  指定包将在 32 位系统上执行。  

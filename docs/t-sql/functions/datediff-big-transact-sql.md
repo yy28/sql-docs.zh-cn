@@ -21,20 +21,20 @@ ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3724c25854bd98a98b077fb59897ba4da250aee1
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68329288"
 ---
-# <a name="datediffbig-transact-sql"></a>DATEDIFF_BIG (Transact-SQL)
+# <a name="datediff_big-transact-sql"></a>DATEDIFF_BIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 此函数返回指定的 startdate 和 enddate 之间所跨的指定 datepart 边界的计数（作为带符号大整数值）    。
   
 有关所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和时间数据类型及函数的概述，请参阅[日期和时间数据类型及函数 (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -53,7 +53,7 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
   
 |datepart 名称 | datepart 缩写 |  
 |---|---|
-|year |**yy, yyyy**|  
+|**year**|**yy, yyyy**|  
 |quarter |**qq, q**|  
 |month |**mm, m**|  
 |dayofyear |**dy, y**|  
@@ -118,7 +118,7 @@ SELECT DATEDIFF_BIG(second,      '2005-12-31 23:59:59.9999999', '2006-01-01 00:0
 SELECT DATEDIFF_BIG(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 ```
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 在 `SELECT <list>`、`WHERE`、`HAVING`、`GROUP BY` 和 `ORDER BY` 子句中使用 `DATEDIFF_BIG`。
   
 `DATEDIFF_BIG` 将字符串文字隐式转换为 datetime2 类型  。 这就意味着，日期在作为字符串传递时，`DATEDIFF_BIG` 不会支持 YDM 格式。 必须先将字符串显式转换为 datetime 或 smalldatetime 类型，然后才能使用 YDM 格式   。

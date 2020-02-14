@@ -11,10 +11,10 @@ ms.assetid: 80964293-f1f5-4da7-b1fb-00ab8c30c1c5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0563ceff3185f856692292884fe63e79c16e4216
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295874"
 ---
 # <a name="lesson-6-2-convert-the-project-to-the-project-deployment-model"></a>第 6-2 课：将项目转换为项目部署模型
@@ -27,7 +27,7 @@ ms.locfileid: "71295874"
   
 1.  在“项目”菜单上，选择“转换为项目部署模型”   。  
   
-2.  在“Integration Services 项目转换向导”的“简介”页上，检查步骤，然后选择“下一步”    。  
+2.  在“Integration Services 项目转换向导”的“简介”页面上，查看步骤，然后选择“下一步”    。  
   
 3.  在“选择包”页上的“包”列表中，清除所有复选框（除了 Lesson 6.dtsx），然后选择“下一步”     。  
   

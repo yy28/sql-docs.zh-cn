@@ -12,10 +12,10 @@ ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3d3019419538c05efc28ceabc5324d373500f65c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285134"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>选择源表和源视图（SQL Server 导入和导出向导）
@@ -33,14 +33,14 @@ ms.locfileid: "71285134"
  
 在此示例中，“源”  列表包含 AdventureWorks 示例数据库中的所有表。 所选的行显示用户要将 Sales.Customer  表从源复制到目标上的 Sales.CustomerNew  表。 
    
- ![导入和导出向导的“选择表”页](../../integration-services/import-export-data/media/select-tables1.png "Select tables page of the Import and Export Wizard")
+ ![导入和导出向导的选择表页](../../integration-services/import-export-data/media/select-tables1.png "导入和导出向导的选择表页")
   
 ## <a name="screen-shot---if-you-provided-a-query"></a>屏幕截图 — 如果提供了查询  
  以下屏幕截图显示一个示例，内容为在“指定表复制或查询”页上选择了“编写查询以指定要传输的数据”选项时，向导的“选择源表和视图”页    。 “源”  列表仅包含一行，其中名为 `[Query]` 的项表示在“提供源查询”  页上提供的查询。
  
 在此示例中，用户要将查询结果从源复制到目标上的 **Sales.CustomerNew** 表。  
     
- ![导入和导出向导的“选择表”页](../../integration-services/import-export-data/media/select-tables2.png "Select tables page of the Import and Export Wizard")  
+ ![导入和导出向导的选择表页](../../integration-services/import-export-data/media/select-tables2.png "导入和导出向导的选择表页")  
 
 ## <a name="select-source-and-destination-tables"></a>选择源表和目标表 
 **数据源**  
@@ -89,7 +89,7 @@ Excel 数据源的源表和视图的列表包括两种类型的 Excel 对象。
 > 使用 Excel 作为源或目标时，最好单击“编辑映射”  并在“列映射”  页查看数据类型映射。 
 
 ## <a name="whats-next"></a>下一步是什么？  
- 选择现有表和视图以进行复制并将它们映射到其目标之后，下一页是“保存并运行包”  。 在此页上，你可以指定是否要立即运行复制操作。 根据你的配置，或许还可以保存向导创建的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包，以便对其进行自定义并在以后重新使用。 有关详细信息，请参阅 [保存并运行包](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)。
+ 选择现有表和视图以进行复制并将它们映射到其目标之后，下一页是“保存并运行包”  。 在此页上，你可以指定是否要立即运行复制操作。 根据配置，你还可保存向导创建的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包，以便对其进行自定义和以后重新使用。 有关详细信息，请参阅 [保存并运行包](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)。
  
  ## <a name="see-also"></a>另请参阅
 [导入和导出向导的简单示例入门](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)  

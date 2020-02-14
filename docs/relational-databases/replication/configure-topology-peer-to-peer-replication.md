@@ -13,10 +13,10 @@ ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1fcb84fe69c617cacc183910e3446400a172ea6d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67903115"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>配置拓扑（对等复制）
@@ -29,12 +29,12 @@ ms.locfileid: "67903115"
 ## <a name="options"></a>选项  
  **“配置拓扑”** 页包含界面元素和在右键单击元素后显示的选项。 下表对每一界面元素进行了介绍。  
   
-|界面元素|描述|  
+|界面元素|说明|  
 |-----------------------|-----------------|  
 |设计图面|显示其他界面元素。 若要添加元素，请右键单击设计图面。|  
 |![拓扑中的第一个节点](../../relational-databases/replication/media/p2pwizard-firstnode.gif "拓扑中的第一个节点")|拓扑中的原始节点。 可使用来自原始节点的发布数据库副本初始化新节点。|  
-|![我们具有其完整信息的节点](../../relational-databases/replication/media/p2pwizard-complete.gif "我们具有其完整信息的节点")|运行 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本的实例的节点，复制具有其完整信息。 若要指定配置选项，请右键单击此节点。|  
-|![我们具有其不完整信息的节点](../../relational-databases/replication/media/p2pwizard-incomplete.gif "我们具有其不完整信息的节点")|复制具有其不完整信息的节点。 若要指定配置选项，请右键单击此节点。<br /><br /> 复制具有的信息不完整，原因为以下之一：<br /><br /> \- 节点运行的是 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]实例，该实例没有存储向导所需的所有元数据。<br /><br /> \- 节点运行的是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的更高版本，但是复制无法从此节点检索订阅信息。 针对此情况进行故障排除：<br /><br /> 确保此节点上的数据库为联机状态，并可使用连接到此节点的分发代理使用的同一凭据连接到此数据库。<br /><br /> 确保连接到此节点的日志读取器代理和所有分发代理当前都在运行。<br /><br /> 确保设置的刷新超时足够长以收集所有拓扑信息。 若要设置超时，请右键单击设计图面，然后单击 **“设置刷新超时”** 。|  
+|![信息完整的节点](../../relational-databases/replication/media/p2pwizard-complete.gif "信息完整的节点")|运行 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本的实例的节点，复制具有其完整信息。 若要指定配置选项，请右键单击此节点。|  
+|![信息不完整的节点](../../relational-databases/replication/media/p2pwizard-incomplete.gif "信息不完整的节点")|复制具有其不完整信息的节点。 若要指定配置选项，请右键单击此节点。<br /><br /> 复制具有的信息不完整，原因为以下之一：<br /><br /> \- 节点运行的是 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]实例，该实例没有存储向导所需的所有元数据。<br /><br /> \- 节点运行的是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的更高版本，但是复制无法从此节点检索订阅信息。 针对此情况进行故障排除：<br /><br /> 确保此节点上的数据库为联机状态，并可使用连接到此节点的分发代理使用的同一凭据连接到此数据库。<br /><br /> 确保连接到此节点的日志读取器代理和所有分发代理当前都在运行。<br /><br /> 确保设置的刷新超时足够长以收集所有拓扑信息。 若要设置超时，请右键单击设计图面，然后单击 **“设置刷新超时”** 。|  
 |灰色箭头线|两个节点之间的连接。 若要添加连接，请右键单击要连接的节点之一。 若要删除某连接，请右键单击该连接。<br /><br /> 如果箭头线上只有一个箭头，则表明复制拥有的其中一个节点的信息不完整。|  
   
 ### <a name="options-for-the-design-surface"></a>设计图面选项  

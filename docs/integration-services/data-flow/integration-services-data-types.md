@@ -19,10 +19,10 @@ ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 45ada0520d90c1c6e63adad4f9e62bf1ea31e270
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292416"
 ---
 # <a name="integration-services-data-types"></a>Integration Services 数据类型
@@ -32,11 +32,11 @@ ms.locfileid: "71292416"
 
   当数据进入包中的数据流时，提取这些数据的源会将数据转换为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型。 为数值数据分配数值数据类型，为字符串数据分配字符数据类型，为日期分配日期数据类型。 其他数据，如 GUID 和二进制大型对象块 (BLOB)，也要分配相应的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型。 如果数据的数据类型无法转换为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型，则会发生错误。  
   
- 某些数据流组件可在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]的托管数据类型之间转换数据类型。 有关 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和托管数据类型之间的映射的详细信息，请参阅 [在数据流中使用数据类型](../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)。  
+ 某些数据流组件可在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的托管数据类型之间转换数据类型。 有关 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和托管数据类型之间的映射的详细信息，请参阅 [在数据流中使用数据类型](../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)。  
   
  下表列出了 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型。 表中的一些数据类型提供了适用的精度和小数位数信息。 有关精度和小数位数的详细信息，请参阅[精度、小数位数和长度 (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)。  
   
-|数据类型|描述|  
+|数据类型|说明|  
 |---------------|-----------------|  
 |DT_BOOL|一个布尔值。|  
 |DT_BYTES|二进制数据值。 长度可变，且最大长度为 8000 字节。|  
@@ -64,7 +64,7 @@ ms.locfileid: "71292416"
 |DT_UI4|四字节无符号整数。|  
 |DT_UI8|八字节无符号整数。|  
 |DT_WSTR|以 Null 值结束的 Unicode 字符串，最大长度为 4000 个字符。 （如果列值包含其他 Null 终止符，则字符串将在第一个 Null 值出现的位置截断。）|  
-|DT_IMAGE|二进制值，最大大小为 2^31-1 (2,147,483,647) 个字节。 的托管数据类型之间转换数据类型。|  
+|DT_IMAGE|二进制值，最大大小为 2^31-1 (2,147,483,647) 个字节。 。|  
 |DT_NTEXT|Unicode 字符串，最大长度为 2^30 - 1 (1,073,741,823) 个字符。|  
 |DT_TEXT|[!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/MBCS 字符串，最大长度为 2^31-1 (2,147,483,647) 个字符。|  
   
@@ -113,7 +113,7 @@ ms.locfileid: "71292416"
   
 |将 DT_FILETIME 转换为|结果|  
 |-----------------------------|------------|  
-|DT_FILETIME|没有变化。|  
+|DT_FILETIME|无更改。|  
 |DT_DATE|转换该数据类型。|  
 |DT_DBDATE|删除时间值。|  
 |DT_DBTIME|删除日期值。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIME 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅 [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。|  
@@ -127,7 +127,7 @@ ms.locfileid: "71292416"
 |将 DT_DATE 转换为|结果|  
 |-------------------------|------------|  
 |DT_FILETIME|转换该数据类型。|  
-|DT_DATE|没有变化。|  
+|DT_DATE|无更改。|  
 |DT_DBDATE|删除 DT_DATA 数据类型表示的时间值。|  
 |DT_DBTIME|删除 DT_DATE 数据类型表示的日期值。|  
 |DT_DBTIME2|删除 DT_DATE 数据类型表示的日期值。|  
@@ -141,7 +141,7 @@ ms.locfileid: "71292416"
 |---------------------------|------------|  
 |DT_FILETIME|将 DT_FILETIME 数据类型的时间字段设置为零。|  
 |DT_DATE|将 DT_DATE 数据类型的时间字段设置为零。|  
-|DT_DBDATE|没有变化。|  
+|DT_DBDATE|无更改。|  
 |DT_DBTIME|将 DT_DBTIME 数据类型的时间字段设置为零。|  
 |DT_DBTIME2|将 DT_DBTIME2 数据类型的时间字段设置为零。|  
 |DT_DBTIMESTAMP|将 DT_DBTIMESTAMP 数据类型的时间字段设置为零。|  
@@ -155,7 +155,7 @@ ms.locfileid: "71292416"
 |DT_FILETIME|将 DT_FILETIME 数据类型的日期字段设置为当前日期。|  
 |DT_DATE|将 DT_DATE 数据类型的日期字段设置为当前日期。|  
 |DT_DBDATE|将 DT_DBDATE 数据类型的日期字段设置为当前日期。|  
-|DT_DBTIME|没有变化。|  
+|DT_DBTIME|无更改。|  
 |DT_DBTIME2|转换该数据类型。|  
 |DT_DBTIMESTAMP|将 DT_DBTIMESTAMP 数据类型的日期字段设置为当前日期。|  
 |DT_DBTIMESTAMP2|将 DT_DBTIMESTAMP2 数据类型的日期字段设置为当前日期。|  
@@ -183,7 +183,7 @@ ms.locfileid: "71292416"
 |DT_DBDATE|删除 DT_DBTIMESTAMP 数据类型表示的时间值。|  
 |DT_DBTIME|删除 DT_DBTIMESTAMP 数据类型表示的日期值。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIME 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅 [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。|  
 |DT_DBTIME2|删除 DT_DBTIMESTAMP 数据类型表示的日期值。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIME2 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅 [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。|  
-|DT_DBTIMESTAMP|没有变化。|  
+|DT_DBTIMESTAMP|无更改。|  
 |DT_DBTIMESTAMP2|当小数秒值的小数位数超过 DT_DBTIMESTAMP2 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅 [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。|  
 |DT_DBTIMESTAMPOFFSET|将 DT_DBTIMESTAMPOFFSET 数据类型的时区字段设置为零。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIMESTAMPOFFSET 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅 [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。|  
   
@@ -228,29 +228,29 @@ ms.locfileid: "71292416"
 |DT_BYTES|binary、varbinary、timestamp|binary、varbinary、timestamp|BigBinary、VarBinary|RAW|||  
 |DT_CY|smallmoney、money|smallmoney、money|货币||||  
 |DT_DATE|||||||  
-|DT_DBDATE|[date (Transact-SQL)](../../t-sql/data-types/date-transact-sql.md)|[date (Transact-SQL)](../../t-sql/data-types/date-transact-sql.md)||日期|日期|日期|  
-|DT_DBTIME||||TIMESTAMP|time|time|  
+|DT_DBDATE|[date (Transact-SQL)](../../t-sql/data-types/date-transact-sql.md)|[date (Transact-SQL)](../../t-sql/data-types/date-transact-sql.md)||date|date|date|  
+|DT_DBTIME||||timestamp|time|time|  
 |DT_DBTIME2|[time (Transact-SQL)](../../t-sql/data-types/time-transact-sql.md) (p)|[time (Transact-SQL)](../../t-sql/data-types/time-transact-sql.md) (p)|||||  
 |DT_DBTIMESTAMP|[datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md)[smalldatetime (Transact-SQL)](../../t-sql/data-types/smalldatetime-transact-sql.md)|[datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md)[smalldatetime (Transact-SQL)](../../t-sql/data-types/smalldatetime-transact-sql.md)|DateTime|TIMESTAMP、DATE、INTERVAL|TIME、TIMESTAMP、DATE|TIME、TIMESTAMP、DATE|  
-|DT_DBTIMESTAMP2|[datetime2 (Transact-SQL)](../../t-sql/data-types/datetime2-transact-sql.md)|[datetime2 (Transact-SQL)](../../t-sql/data-types/datetime2-transact-sql.md)||TIMESTAMP|TIMESTAMP|TIMESTAMP|  
+|DT_DBTIMESTAMP2|[datetime2 (Transact-SQL)](../../t-sql/data-types/datetime2-transact-sql.md)|[datetime2 (Transact-SQL)](../../t-sql/data-types/datetime2-transact-sql.md)||timestamp|timestamp|timestamp|  
 |DT_DBTIMESTAMPOFFSET|[datetimeoffset (Transact-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md) (p)|[datetimeoffset (Transact-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md) (p)||timestampoffset|timestamp,<br /><br /> varchar|timestamp,<br /><br /> varchar|  
 |DT_DECIMAL|||||||  
 |DT_FILETIME|||||||  
-|DT_GUID|UNIQUEIDENTIFIER|UNIQUEIDENTIFIER|GUID||||  
+|DT_GUID|uniqueidentifier|uniqueidentifier|GUID||||  
 |DT_I1|||||||  
-|DT_I2|SMALLINT|SMALLINT|Short||smallint|SMALLINT|  
-|DT_I4|INT|INT|Long||整数|整数|  
-|DT_I8|BIGINT|BIGINT|||bigint|bigint|  
+|DT_I2|smallint|smallint|Short||SMALLINT|SMALLINT|  
+|DT_I4|int|int|Long||INTEGER|INTEGER|  
+|DT_I8|bigint|bigint|||BIGINT|BIGINT|  
 |DT_NUMERIC|decimal、numeric|decimal、numeric|Decimal|NUMBER、INT|decimal、numeric|decimal、numeric|  
-|DT_R4|REAL|REAL|Single||real|real|  
-|DT_R8|FLOAT|FLOAT|双精度|FLOAT、REAL|FLOAT、DOUBLE|FLOAT、DOUBLE|  
-|DT_STR|char、varchar||varchar||char、varchar|char、varchar|  
-|DT_UI1|TINYINT|TINYINT|Byte||||  
+|DT_R4|real|real|Single||real|real|  
+|DT_R8|FLOAT|FLOAT|Double|FLOAT、REAL|FLOAT、DOUBLE|FLOAT、DOUBLE|  
+|DT_STR|char、varchar||VarChar||char、varchar|char、varchar|  
+|DT_UI1|tinyint|tinyint|Byte||||  
 |DT_UI2|||||||  
 |DT_UI4|||||||  
 |DT_UI8|||||||  
 |DT_WSTR|nchar、nvarchar、sql_variant、xml|char、varchar、nchar、nvarchar、sql_variant、xml|LongText|CHAR、ROWID、VARCHAR2、NVARCHAR2、NCHAR|GRAPHIC、VARGRAPHIC|GRAPHIC、VARGRAPHIC|  
-|DT_IMAGE|图像|图像|LongBinary|LONG RAW、BLOB、LOBLOCATOR、BFILE、VARGRAPHIC、LONG VARGRAPHIC、用户定义|CHAR () FOR BIT DATA、VARCHAR () FOR BIT DATA|CHAR () FOR BIT DATA、VARCHAR () FOR BIT DATA、BLOB|  
+|DT_IMAGE|image|image|LongBinary|LONG RAW、BLOB、LOBLOCATOR、BFILE、VARGRAPHIC、LONG VARGRAPHIC、用户定义|CHAR () FOR BIT DATA、VARCHAR () FOR BIT DATA|CHAR () FOR BIT DATA、VARCHAR () FOR BIT DATA、BLOB|  
 |DT_NTEXT|ntext|text、ntext||LONG、CLOB、NCLOB、NVARCHAR、TEXT|LONG VARCHAR、NCHAR、NVARCHAR、TEXT|LONG VARCHAR、DBCLOB、NCHAR、NVARCHAR、TEXT|  
 |DT_TEXT|text||||LONG VARCHAR FOR BIT DATA|LONG VARCHAR FOR BIT DATA、CLOB|  
   

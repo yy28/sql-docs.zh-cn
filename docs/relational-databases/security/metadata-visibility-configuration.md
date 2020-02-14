@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eba613c3736024de71a67e7cdb749960e91e89ff
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68661217"
 ---
 # <a name="metadata-visibility-configuration"></a>元数据可见性配置
@@ -45,7 +45,7 @@ GO
   
 |||  
 |-|-|  
-|目录视图|[!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** 存储过程|  
+|目录视图|[!INCLUDE[ssDE](../../includes/ssde-md.md)] sp_help 存储过程 |  
 |公开元数据的内置函数|信息架构视图|  
 |兼容性视图|扩展属性|  
   
@@ -65,7 +65,7 @@ GO
   
 -   元数据生成的内置函数（如 OBJECTPROPERTYEX）可能返回 NULL。  
   
--   [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** 存储过程可能只返回行子集或 NULL。  
+-   [!INCLUDE[ssDE](../../includes/ssde-md.md)] sp_help 存储过程可能只返回行子集或 NULL  。  
   
  SQL 模块（如存储过程和触发器）在调用方的安全上下文中运行，因此，它们只有有限的元数据访问性。 例如，在以下代码中，当存储过程尝试访问表 `myTable` （调用方对该表没有权限）的元数据时，返回空的结果集。 在早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，返回一行。  
   
@@ -79,7 +79,7 @@ END;
 GO  
 ```  
   
- 若要允许调用方查看元数据，可在适当的作用域（对象级、数据库级或服务器级）中授予调用方 VIEW DEFINITION 权限。 因此，在以上示例中，如果调用方对 `myTable` 具有 VIEW DEFINITION 权限，则存储过程返回一行。 有关详细信息，请参阅 [GRANT (Transact SQL)](../../t-sql/statements/grant-transact-sql.md) 和[授予数据库权限 (Transact SQL)](../../t-sql/statements/grant-database-permissions-transact-sql.md)。  
+ 若要允许调用方查看元数据，可在适当的作用域（对象级、数据库级或服务器级）中授予调用方 VIEW DEFINITION 权限。 因此，在以上示例中，如果调用方对 `myTable`具有 VIEW DEFINITION 权限，则存储过程返回一行。 有关详细信息，请参阅 [GRANT (Transact SQL)](../../t-sql/statements/grant-transact-sql.md) 和[授予数据库权限 (Transact SQL)](../../t-sql/statements/grant-database-permissions-transact-sql.md)。  
   
  也可以将存储过程修改为使用所有者凭据执行。 当过程所有者和表所有者相同时，便会应用所有权链，并且过程所有者的安全上下文便会启用对 `myTable`元数据的访问。 在这种情况下，以下代码会向调用方返回一行元数据。  
   

@@ -14,10 +14,10 @@ ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0aecc0f5bb867699bef16ff9f2947fe99a2cf1ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006472"
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>数据库镜像和日志传送 (SQL Server)
@@ -76,7 +76,7 @@ ms.locfileid: "68006472"
 ## <a name="setting-up-mirroring-and-log-shipping-together"></a>同时设置镜像和日志传送  
  若要同时设置数据库镜像和日志传送，需要执行下列步骤：  
   
-1.  使用 NORECOVERY 将主体/主数据库的备份还原到其他服务器实例，从而在以后作为经过数据库镜像实现的主体/主数据库的镜像数据库使用。 有关详细信息，请参阅[为镜像准备镜像数据库 (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)。  
+1.  使用 NORECOVERY 将主体/主数据库的备份还原到其他服务器实例，从而在以后作为经过数据库镜像实现的主体/主数据库的镜像数据库使用。 有关详细信息，请参阅 [为镜像准备镜像数据库 (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)的各版本中均未提供见证服务器实例。  
   
 2.  设置数据库镜像。 有关详细信息，请参阅[使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md) 或 [设置数据库镜像 (SQL Server)](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)。  
   

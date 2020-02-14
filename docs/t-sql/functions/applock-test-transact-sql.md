@@ -22,18 +22,18 @@ ms.assetid: 4ea33d04-f8e9-46ff-ae61-985bd3eaca2c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f71a288994afb76d1237f303edfc926116f5962e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040330"
 ---
-# <a name="applocktest-transact-sql"></a>APPLOCK_TEST (Transact-SQL)
+# <a name="applock_test-transact-sql"></a>APPLOCK_TEST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 此函数返回信息指示是否可以为指定锁所有者授予对某种资源的锁，而不必获取锁。 作为应用程序锁函数，APPLOCK_TEST 对当前数据库执行操作。 数据库是应用程序锁的作用域。
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -42,16 +42,16 @@ APPLOCK_TEST ( 'database_principal' , 'resource_name' , 'lock_mode' , 'lock_owne
 ```  
   
 ## <a name="arguments"></a>参数  
-' database_principal '     
+**'** *database_principal* **'**  
 可将对数据库中对象的权限授予它们的用户、角色或应用程序角色。 若要成功调用函数，该函数调用方必须是 database_principal、dbo 或 db_owner 固定数据库角色的成员  。
   
-**'** resource_name **'**   
+**'** *resource_name* **'**  
 由客户端应用程序指定的锁资源名称。 应用程序必须确保唯一的资源名称。 指定的名称经过内部哈希运算后成为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁管理器可内部存储的值。  resource_name 为 nvarchar(255)，无默认值   。 resource_name 使用二进制比较并区分大小写，无论当前数据库的排序规则设置为何  。
   
-**'** lock_mode **'**   
+**'** *lock_mode* **'**  
 要为特定资源获取的锁模式。 lock_mode 为 nvarchar(32)，无默认值   。 *lock_mode* 可具有任意下列值：Shared、Update、IntentShared、IntentExclusive、Exclusive      。
   
-**'** lock_owner **'**   
+**'** *lock_owner* **'**  
 锁的所有者，它是请求锁时所指定的 lock_owner 值  。 lock_owner 为 nvarchar(32)，值可以是 Transaction（默认值）或 Session     。 如果显式指定默认值或 Transaction，则必须从事务中执行 APPLOCK_TEST  。
   
 ## <a name="return-types"></a>返回类型

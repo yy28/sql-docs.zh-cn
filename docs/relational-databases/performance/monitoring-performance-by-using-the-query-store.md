@@ -15,10 +15,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f652fc8771162c81a7d86f0984eece90892e3cd3
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909306"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>使用查询存储监视性能
@@ -111,7 +111,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 ##  <a name="Regressed"></a> 使用回归查询功能  
 在启用查询存储后，刷新对象资源管理器窗格的数据库部分，以添加“查询存储”部分  。  
   
-![SSMS 对象资源管理器中的 SQL Server 2016 查询存储树](../../relational-databases/performance/media/objectexplorerquerystore.PNG "SSMS 对象资源管理器中的 SQL Server 2016 查询存储树")   ![SSMS 对象资源管理器中的 SQL Server 2017 查询存储树](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "SSMS 对象资源管理器中的 SQL Server 2017 查询存储树") 
+![SSMS 对象资源管理器中的 SQL Server 2016 查询存储树](../../relational-databases/performance/media/objectexplorerquerystore.PNG "SSMS 对象资源管理器中的 SQL Server 2016 查询存储树") ![SSMS 对象资源管理器中的 SQL Server 2017 查询存储树](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "SSMS 对象资源管理器中的 SQL Server 2017 查询存储树") 
   
 选择“回归查询”  ，以在 **中打开“回归查询”** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]窗格。 “回归查询”窗格将显示查询存储中的查询和计划。 使用顶部的下拉框根据各种条件筛选查询：持续时间（单位 ms，此为默认值）、CPU 时间 (ms)、逻辑读取 (KB)、逻辑写入 (KB)、物理读取 (KB)、CLR 时间 (ms)、DOP、内存使用量 (KB)、行计数、已用日志内存 (KB)、已用临时 DB 内存 (KB) 和等待时间 (ms)  。  
 选择某个计划以查看图形查询计划。 可以使用按钮查看源查询、强制执行和取消强制执行查询计划、在网格和图表格式之间进行切换、比较所选的计划（如果选择多个）及刷新显示。  
@@ -142,9 +142,9 @@ INNER JOIN sys.query_store_query_text AS Txt
 |||| 
 |-|-|-|  
 |曾经的体验|新的体验|操作|
-|每个数据库的高 RESOURCE_SEMAPHORE 等待|特定查询在查询存储中的高内存等待|查找查询存储中前几个使用内存最多的查询。 这些查询可能会进一步延迟受影响查询的进度。 请考虑对这些查询或受影响的查询使用 MAX_GRANT_PERCENT 查询提示。|
-|每个数据库的高 LCK_M_X 等待|特定查询在查询存储中的高锁定等待|检查受影响查询的查询文本，并确定目标实体。 在查询存储中查找修改同一实体的其他查询，该实体频繁执行和/或具有较高持续时间。 确定这些查询后，请考虑更改应用程序逻辑，以提高并发性，或使用限制性较弱的隔离级别。|
-|每个数据库的高 PAGEIOLATCH_SH 等待|特定查询在查询存储中的高缓冲 IO 等待|在查询存储中查找读取数越高的查询。 如果它们与含较高 IO 等待的查询匹配，执行执行搜索而不是扫描时，请考虑引入关于基础实体的索引，以便减少查询的 IO 开销。|
+|每个数据库的高 RESOURCE_SEMAPHORE 等待|特定查询在查询存储中的高内存等待|在查询存储中查找消耗内存最多的查询。 这些查询可能会延迟受影响查询的进度。 请考虑对这些查询或受影响的查询使用 MAX_GRANT_PERCENT 查询提示。|
+|每个数据库的高 LCK_M_X 等待|特定查询在查询存储中的高锁定等待|检查受影响查询的查询文本，并确定目标实体。 在查询存储中查找修改同一实体的其他查询，该实体频繁执行和/或具有较高持续时间。 确定这些查询后，请考虑更改应用程序逻辑以提高并发性，或使用限制较少的隔离级别。|
+|每个数据库的高 PAGEIOLATCH_SH 等待|特定查询在查询存储中的高缓冲 IO 等待|在查询存储中查找具有大量物理读取的查询。 如果它们与含较高 IO 等待的查询匹配，执行执行搜索而不是扫描时，请考虑引入关于基础实体的索引，以便减少查询的 IO 开销。|
 |每个数据库的高 SOS_SCHEDULER_YIELD 等待|特定查询在查询存储中的高 CPU 等待|查找查询存储中前几个使用 CPU 最多的查询。 其中，请确定其高 CPU 趋势与受影响查询的高 CPU 等待关联的查询。 重点优化这些查询 - 可能存在计划回归，或缺失的索引。|
 
 ##  <a name="Options"></a> 配置选项 
@@ -335,7 +335,7 @@ DEALLOCATE adhoc_queries_cursor;
   
  你可以使用其他逻辑来定义自己的过程，以清理不再需要的数据。  
   
- 以上示例使用 **sp_query_store_remove_query** 扩展存储过程来删除不必要的数据。 还可以使用：  
+ 以上示例使用 **sp_query_store_remove_query** 扩展存储过程来删除不必要的数据。 也可使用以下命令：  
   
 -   sp_query_store_reset_exec_stats 用于清除给定计划的运行时统计信息  。  
 -   sp_query_store_remove_plan 用于删除单个计划  。  

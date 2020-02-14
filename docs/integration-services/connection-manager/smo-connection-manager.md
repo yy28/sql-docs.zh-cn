@@ -17,10 +17,10 @@ ms.assetid: d273f1fb-a6a8-4f2f-a5ff-55c2e3de4723
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 87400e2216b51bfab0132f369e452f27447b0572
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294402"
 ---
 # <a name="smo-connection-manager"></a>SMO 连接管理器
@@ -63,7 +63,7 @@ ms.locfileid: "71294402"
  **Use SQL Server Authentication**  
  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证连接所选的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
- **User name**  
+ **用户名**  
  如果选择了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，那么请输入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户名。  
   
  **密码**  

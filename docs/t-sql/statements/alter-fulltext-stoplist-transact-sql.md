@@ -22,10 +22,10 @@ ms.assetid: f6ad87d5-6a34-435a-8456-8244947c5c83
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 692f62c6a5b9d6268a27de350a860c0cb58c74bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68067556"
 ---
 # <a name="alter-fulltext-stoplist-transact-sql"></a>ALTER FULLTEXT STOPLIST (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68067556"
 
   在当前数据库的默认全文非索引字表中插入或删除非索引字。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -63,7 +63,7 @@ ALTER FULLTEXT STOPLIST stoplist_name
   
  可将 language_term 指定为与语言区域设置标识符 (LCID) 对应的字符串、整数或十六进制值，如下所示  ：  
   
-|“格式”|描述|  
+|格式|说明|  
 |------------|-----------------|  
 |String|language_term 对应于 [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 兼容性视图中 alias 列的值   。 字符串必须用单引号引起来，如 'language_term'  。|  
 |Integer|language_term 是语言的 LCID  。|  
@@ -86,7 +86,7 @@ ALTER FULLTEXT STOPLIST stoplist_name
  ALL  
  删除非索引字表中的所有非索引字。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  只有在兼容级别为 100 或更高时，才支持 CREATE FULLTEXT STOPLIST。 在 80 和 90 兼容级别下，会始终为数据库分配系统非索引字表。  
   
 ## <a name="permissions"></a>权限  

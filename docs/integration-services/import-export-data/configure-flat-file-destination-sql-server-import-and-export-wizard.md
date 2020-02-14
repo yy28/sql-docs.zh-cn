@@ -12,10 +12,10 @@ ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8c596f37cb0a83682c5c8dff370a92a5d3d73eb5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285799"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>配置平面文件目标（SQL Server 导入和导出向导）
@@ -43,7 +43,7 @@ ms.locfileid: "71285799"
  **行分隔符**  
  从分隔符的列表中选择，以分隔输出中的行。 没有指定自定义行分隔符的选项  。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**{CR}{LF}**|使用回车符和换行符的组合分隔行。|  
 |**{CR}**|使用回车符分隔行。|  
@@ -52,12 +52,12 @@ ms.locfileid: "71285799"
 |**冒号 {:}**|使用冒号分隔行。|  
 |**逗号 {,}**|使用逗号分隔行。|  
 |**制表符 {t}**|使用制表符分隔行。|  
-|**竖线 {&#124;}**|使用竖线分隔行。|  
+|**竖线 {&#124;}** 。|使用竖线分隔行。|  
   
  **列分隔符**  
  从分隔符列表中进行选择，用于分隔输出中的列。 没有用于指定自定义列分隔符的选项  。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**{CR}{LF}**|使用回车符和换行符的组合分隔列。|  
 |**{CR}**|使用回车符分隔列。|  
@@ -66,7 +66,7 @@ ms.locfileid: "71285799"
 |**冒号 {:}**|使用冒号分隔列。|  
 |**逗号 {,}**|使用逗号分隔列。|  
 |**制表符 {t}**|使用制表符分隔列。|  
-|**竖线 {&#124;}**|使用竖线分隔列。|  
+|**竖线 {&#124;}** 。|使用竖线分隔列。|  
 
 ## <a name="optionally-review-column-mappings-and-preview-data"></a>（可选）查看列映射和预览数据
 
@@ -83,5 +83,5 @@ ms.locfileid: "71285799"
 预览数据后，你可能想更改之前在向导页面中选择的选项。 若要进行这些更改，请返回到“配置平面文件目标”  页，然后单击“后退”  返回到前面可以更改选项的页面。  
 
 ## <a name="whats-next"></a>下一步是什么？  
- 为目标平面文件指定格式设置选项之后，一页是“保存并执行包”  。 在此页上，你将指定是否要立即运行操作。 根据配置，或许还可以将设置保存为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包，以对其进行自定义并在以后重新使用。 有关详细信息，请参阅 [保存并运行包](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)。  
+ 为目标平面文件指定格式设置选项之后，一页是“保存并执行包”  。 在此页上，你将指定是否要立即运行操作。 根据配置，你还可将设置保存为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包，以对其进行自定义并在以后重新使用。 有关详细信息，请参阅 [保存并运行包](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)。  
 

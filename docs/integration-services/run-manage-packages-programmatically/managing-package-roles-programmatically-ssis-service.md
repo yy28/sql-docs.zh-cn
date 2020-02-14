@@ -15,10 +15,10 @@ ms.assetid: 2e0ca0d5-d4f5-421d-b17d-a48b37b923e5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f9a2ba8d4b8497acd907ea3521c3f73728b2a155
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71282040"
 ---
 # <a name="managing-package-roles-programmatically-ssis-service"></a>以编程方式管理包角色（SSIS 服务）
@@ -30,7 +30,7 @@ ms.locfileid: "71282040"
   
  角色仅适用于存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb 数据库中的包  。 有关包角色的详细信息，请参阅 [Integration Services 角色（SSIS 服务）](../../integration-services/security/integration-services-roles-ssis-service.md)。  
   
- 本主题中讨论的所有方法都需要引用 Microsoft.SqlServer.ManagedDTS 程序集  。 在新项目中添加引用后，请使用 using 或 Imports 语句导入 <xref:Microsoft.SqlServer.Dts.Runtime> 命名空间   。  
+ 本主题中讨论的所有方法都需要引用 **Microsoft.SqlServer.ManagedDTS** 程序集。 在新项目中添加引用后，请使用 using 或 Imports 语句导入 <xref:Microsoft.SqlServer.Dts.Runtime> 命名空间   。  
   
 > [!IMPORTANT]  
 >  <xref:Microsoft.SqlServer.Dts.Runtime.Application> 类中用于 SSIS 包存储的方法仅支持“.”、localhost 或本地服务器的服务器名称。 不能使用“(local)”。  

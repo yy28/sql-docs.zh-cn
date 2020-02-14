@@ -11,10 +11,10 @@ ms.assetid: ec611374-16bf-4a56-8fd9-45d3ddd7befc
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 91524408998df8be0df4ee5d4ede0b641dbaa2a4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71287229"
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>支持自定义组件中的多目标
@@ -26,13 +26,13 @@ ms.locfileid: "71287229"
 
  在解决方案资源管理器中，右键单击 Integration Services 项目并选择“属性”  以打开该项目的属性页。 在“配置属性”  的“常规”  选项卡上，选择“TargetServerVersion”  属性，然后选择 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
    
- ![项目属性对话框中的 TargetServerVersion 属性](../../integration-services/media/targetserverversion2.png "TargetServerVersion property in project properties dialog box")  
+ ![“项目属性”对话框中的 TargetServerVersion 属性](../../integration-services/media/targetserverversion2.png "“项目属性”对话框中的 TargetServerVersion 属性")  
  
  ## <a name="multiple-version-support-and-multi-targeting-for-custom-components"></a>自定义组件的多版本支持和多目标
  
 五种 SSIS 自定义扩展都支持多目标。
 -   连接管理器
--   “任务”
+-   任务
 -   枚举器
 -   日志提供程序
 -   数据流组件

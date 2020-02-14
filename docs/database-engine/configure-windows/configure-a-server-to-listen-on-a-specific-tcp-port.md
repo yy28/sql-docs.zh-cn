@@ -18,10 +18,10 @@ ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 48736a721cad475c6956e1715a3912481bc83c40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012925"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>配置服务器以侦听特定 TCP 端口
@@ -34,7 +34,7 @@ ms.locfileid: "68012925"
  有关默认 Windows 防火墙设置的详细信息以及有关影响数据库引擎、Analysis Services、Reporting Services 和 Integration Services 的 TCP 端口的说明，请参阅 [配置 Windows 防火墙以允许 SQL Server 访问](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
   
 > [!TIP]  
->  选择端口号时，请查看 [https://www.iana.org/assignments/port-numbers](https://www.iana.org/assignments/port-numbers) 以了解分配给特定应用程序的端口号列表。 请选择一个未分配的端口号。 更多详细信息，请参阅 [TCP/IP 的默认动态端口范围在 Windows Vista 和 Windows Server 2008 中已更改](https://support.microsoft.com/kb/929851)。  
+>  选择端口号时，请查看 [https://www.iana.org/assignments/port-numbers](https://www.iana.org/assignments/port-numbers) 以了解分配给特定应用程序的端口号列表。 选择一个未分配的端口号。 更多详细信息，请参阅 [TCP/IP 的默认动态端口范围在 Windows Vista 和 Windows Server 2008 中已更改](https://support.microsoft.com/kb/929851)。  
   
 > [!WARNING]  
 >  重新启动时，数据库引擎开始侦听新端口。 但是， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务监视注册表并在配置更改时报告新端口号，即使数据库引擎可能未使用该端口。 重新启动数据库引擎可确保一致性并避免连接失败。  
@@ -55,13 +55,13 @@ ms.locfileid: "68012925"
   
      ![TCP_ports](../../database-engine/configure-windows/media/tcp-ports.png "TCP_ports")  
   
-4.  在 **“IP**_n_ **属性”** 区域框的 **“TCP 端口”** box, type the port number you want this “IP address to listen on, and then click **“确定”** 。 通过逗号分隔，可指定多个端口。
+4.  在“IP_n_ 属性”区域框的“TCP 端口”框中，键入希望此 IP 地址侦听的端口号，然后单击“确定”     。 通过逗号分隔，可指定多个端口。
 
     > [!NOTE] 
     > 如果“协议”选项卡上的“全部侦听”设置为“是”，则仅使用 IPAll 部分下面的“TCP 端口”和“TCP 动态端口”值，并将完全忽略各 IPn 部分        。 如果“全部侦听”设置为“否”，将忽略 IPAll 部分下面的“TCP 端口”和“TCP 动态端口”设置，而改用各 IPn 部分的“TCP 端口”、“TCP 动态端口”和“已启用”设置          。
     > 每个 IPn 部分的“已启用”设置的默认值为“否”，这样会使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 忽略此 IP 地址，即使它已定义端口    。  
   
-5.   在控制台窗格中，单击“SQL Server 服务”。  
+5.  在控制台窗格中，单击“SQL Server 服务”。   
   
 6.  在详细信息窗格中，右键单击“SQL Server  (\<实例名称>)”  ，然后单击“重启”  以停止并重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   

@@ -20,10 +20,10 @@ ms.assetid: a85c0245-0a68-4eb0-83b1-9b11df80bd10
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 28393d15ade12562dbcaa4af457bf0de0e51948b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295021"
 ---
 # <a name="view-package-objects"></a>查看包对象
@@ -41,7 +41,7 @@ ms.locfileid: "71295021"
   
  下面的关系图显示一个简单包的树视图。  
   
- ![“包资源管理器”选项卡的屏幕截图](../integration-services/media/packageexplorer.gif "Screenshot of the Package Explorer tab")  
+ ![“包资源管理器”选项卡的屏幕快照](../integration-services/media/packageexplorer.gif "“包资源管理器”选项卡的屏幕快照")  
   
 ## <a name="view-the-package-structure-and-content"></a>查看包的结构和内容  
   

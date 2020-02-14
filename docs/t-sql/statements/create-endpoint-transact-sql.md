@@ -32,10 +32,10 @@ ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0a320b01433ad95f4bd695a3f700b7e7bb9ba653
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67902827"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
@@ -55,7 +55,7 @@ ms.locfileid: "67902827"
   
 > **注意：** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中已删除了本机 XML Web 服务（SOAP/HTTP 终结点）。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -147,7 +147,7 @@ FOR DATABASE_MIRRORING (
  LISTENER_PORT listenerPort **=**   
  指定 Service Broker TCP/IP 协议在其上侦听连接的端口号。 按照约定，将使用 4022，但 1024 和 32767 之间的任何数字都有效。  
   
- LISTENER_IP = ALL | (4-part-ip ) | ( "ip_address_v6" )         
+ LISTENER_IP **=** ALL | **(** _4-part-ip_ **)**  |  **(** "*ip_address_v6*" **)**  
  指定端点将侦听的 IP 地址。 默认值为 ALL。 这表示侦听器将接受任何有效 IP 地址上的连接。  
   
  如果用 IP 地址而不是完全限定域名（`ALTER DATABASE SET PARTNER = partner_IP_address` 或 `ALTER DATABASE SET WITNESS = witness_IP_address`）配置数据库镜像，则在创建镜像端点时必须指定 `LISTENER_IP =IP_address` 而不是 `LISTENER_IP=ALL`。  
@@ -159,7 +159,7 @@ FOR DATABASE_MIRRORING (
 > [!NOTE]  
 >  有关特定于 SERVICE_BROKER 的选项，请参阅本节后面的“SERVICE_BROKER 选项”。 有关特定于 DATABASE_MIRRORING 的选项，请参阅本节后面的“DATABASE_MIRRORING 选项”。  
   
- AUTHENTICATION = \<authentication_options> 指定此端点连接需要的 TCP/IP 身份验证  。 默认值为 WINDOWS。  
+ AUTHENTICATION =\<authentication_options> 为此终结点指定连接需要的 TCP/IP 身份验证  。 默认值为 WINDOWS。  
   
  支持的身份验证方法包括 NTLM 或 Kerberos 或这两种方法。  
   
@@ -169,7 +169,7 @@ FOR DATABASE_MIRRORING (
  \<authentication_options> ::=   
   
  WINDOWS [ { NTLM | KERBEROS | NEGOTIATE } ]    
- 指定端点使用 Windows 身份验证协议进行连接以验证端点。 这是默认设置。  
+ 指定端点使用 Windows 身份验证协议进行连接以验证端点。 这是默认值。  
   
  如果指定某一授权方法（NTLM 或 KERBEROS），则始终将该方法用作身份验证协议。 默认值 NEGOTIATE 允许端点使用 Windows 协商协议在 NTLM 和 Kerberos 之间进行选择。  
   
@@ -227,7 +227,7 @@ FOR DATABASE_MIRRORING (
  如果提供了转发地址，则转发消息。  
   
  DISABLED  
- 放弃位于其他位置的服务的消息。 这是默认设置。  
+ 放弃位于其他位置的服务的消息。 这是默认值。  
   
  MESSAGE_FORWARD_SIZE =forward_size    
  指定存储要转发的消息时为要使用的端点分配的最大存储量 (MB)。  
@@ -256,7 +256,7 @@ FOR DATABASE_MIRRORING (
 > [!NOTE]  
 >  没有用于 DATABASE_MIRRORING 的默认端口。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  ENDPOINT DDL 语句不能在用户事务内部执行。 即使活动的快照隔离级别事务正在使用被更改的端点，ENDPOINT DDL 语句也不会失败。  
   
  下列用户可以对 ENDPOINT 执行请求：  

@@ -17,10 +17,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e69d3d2d73a53f6bdd8a3fe7282c1e9ad65b5773
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68095287"
 ---
 # <a name="upgrade-full-text-search"></a>升级全文搜索
@@ -56,7 +56,7 @@ ms.locfileid: "68095287"
   
  有关导入全文检索的影响的信息，请参阅本主题后面的“有关选择全文升级选项的注意事项”。  
   
- **Rebuild**  
+ **重新生成**  
  使用新的和增强的断字符重新生成全文目录。 重新生成索引可能需要一些时间，且升级后可能需要占用大量的 CPU 和内存。  
   
  **重置**  
@@ -121,9 +121,9 @@ ms.locfileid: "68095287"
   
  **更改服务器实例的全文升级行为**  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]设置用户帐户 ：使用 [sp\_fulltext\_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md) 的 upgrade\_option 操作  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]设置用户帐户 ：使用 [sp\_fulltext\_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md) 的 upgrade\_option 操作   
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **：** 使用“服务器属性”对话框的“全文升级选项”。 有关详细信息，请参阅 [管理和监视服务器实例的全文搜索](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  ：使用“服务器属性”对话框的“全文升级选项”   。 有关详细信息，请参阅 [管理和监视服务器实例的全文搜索](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)。  
   
 ##  <a name="Considerations_for_Restore"></a> 有关将 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 全文目录还原到 的注意事项 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  将全文数据从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的其中一种方法是将完整数据库备份还原到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
@@ -173,7 +173,7 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中附加的每个全文目录的状态与从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]分离数据库时相同。 如果分离操作挂起任意全文检索填充，该填充将在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]上恢复，全文检索随后即可用于全文搜索。  
   
- 如果 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 找不到全文目录文件，或者在未指定新位置的情况下在附加操作期间移动全文文件，行为则取决于选择的全文升级选项。 如果全文升级选项为“导入”或“重新生成”，则重新生成附加的全文目录。 如果全文升级选项为“重置”，则重置附加的全文目录。  
+ 如果 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 找不到全文目录文件，或者在未指定新位置的情况下在附加操作期间移动全文文件，行为则取决于选择的全文升级选项。 如果全文升级选项为“导入”  或“重新生成”  ，则重新生成附加的全文目录。 如果全文升级选项为“重置”  ，则重置附加的全文目录。  
   
  有关分离和附加数据库的详细信息，请参阅[数据库分离和附加 (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)、[CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)、[sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md) 和 [sp_detach_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)。  
   

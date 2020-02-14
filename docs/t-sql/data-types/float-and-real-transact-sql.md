@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7f31e3894448e5d6a044af75c7e86b704b993aa6
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71682011"
 ---
 # <a name="float-and-real-transact-sql"></a>float 和 real (Transact-SQL)
@@ -35,12 +35,12 @@ ms.locfileid: "71682011"
 
 用于表示浮点数值数据的大致数值数据类型。 浮点数据为近似值；因此，并非数据类型范围内的所有值都能精确地表示。 real 的 ISO 同义词为 float(24)   。
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
 float [ (_n_) ] 其中 n 为用于存储 float 数值尾数的位数（以科学记数法表示），因此可以确定精度和存储大小      。 如果指定了 n，则它必须是介于 1 和 53 之间的某个值    。 n 的默认值为 53   。
   
-|n 值 |精度|存储大小|  
+|n 值 |Precision|存储大小|  
 |---|---|---|
 |**1-24**|7 位数|4 个字节|  
 |**25-53**|15 位数|8 字节|  
@@ -50,7 +50,7 @@ float [ (_n_) ] 其中 n 为用于存储 float 数值尾数的位数（以科学
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] float[(n)] 数据类型从 1 到 53 之间的所有 n 值均符合 ISO 标准      。 double precision 的同义词是 float(53)   。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 |数据类型|范围|存储|  
 |---|---|---|

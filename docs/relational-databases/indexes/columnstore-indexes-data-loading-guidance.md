@@ -12,10 +12,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e518d4021e4c78d4716f80c7f63f9a18bc1908be
-ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68307626"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>列存储索引 - 数据加载指南
@@ -31,7 +31,7 @@ ms.locfileid: "68307626"
 
 要执行大容量加载，可以使用 [bcp 实用工具](../../tools/bcp-utility.md)、[Integration Services](../../integration-services/sql-server-integration-services.md)，或从临时表中选择行。
 
-![加载到聚集列存储索引](../../relational-databases/indexes/media/sql-server-pdw-columnstore-loadprocess.gif "加载到聚集列存储索引")  
+![加载到聚集列存储索引中](../../relational-databases/indexes/media/sql-server-pdw-columnstore-loadprocess.gif "加载到聚集列存储索引中")  
   
 如图所示，大容量加载：
   
@@ -77,7 +77,7 @@ FROM sys.dm_db_column_store_row_group_physical_stats
  ![用于批量加载的行组和增量存储](../../relational-databases/indexes/media/sql-server-pdw-columnstore-batchload.gif "用于批量加载的行组和增量存储")  
   
 ## <a name="use-a-staging-table-to-improve-performance"></a>使用临时表提高性能
-如果加载数据只是为了在运行更多转换之前暂存数据，那么，将表加载到堆表将会比将数据加载到聚集列存储表快得多。 此外，将数据加载到 [临时表][临时] 也会比将表加载到永久性存储快得多。  
+如果加载数据只是在做运行更多转换之前的预备，将表载入堆表会远快于将数据载入聚集列存储表。 此外，将数据加载到 [临时表][临时] 也会比将表加载到永久性存储快得多。  
 
  数据加载的常见模式是将数据加载到临时表，执行某种转换，然后使用以下命令将其加载到目标表  
   

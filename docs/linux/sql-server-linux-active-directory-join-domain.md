@@ -9,12 +9,12 @@ ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 9bc52bc1708d4ca6e06e5cc78399e12615860d27
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 5999a50e793cb29ea67075d0fa36454cdb58a67d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75224507"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761871"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>将 Linux 主机上的 SQL Server 加入 Active Directory 域
 
@@ -27,7 +27,7 @@ ms.locfileid: "75224507"
 在配置 Active Directory 身份验证之前，需要先在自己的网络上设置 Active Directory 域控制器 (Windows)。 然后将自己的 Linux 主机上的 SQL Server 加入 Active Directory 域。
 
 > [!IMPORTANT]
-> 本文中所述的示例步骤仅供参考。 实际步骤可能会略有差异，具体取决于整体环境的配置方式。 让环境中的系统和域管理员参与进来并进行协作，以实现特定配置、自定义以及任何所需的故障排除操作。
+> 本文中所述的示例步骤仅用于指导，请参考 Ubuntu 16.04、Red Hat Enterprise Linux (RHEL) 7.x 和 SUSE Enterprise Linux (SLES) 12 操作系统。 根据你整体环境的配置和操作系统版本，实际步骤可能略有不同。 例如，Ubuntu 18.04 使用 netplan，而 Red Hat Enterprise Linux (RHEL) 8.x 使用 nmcli 等工具来管理和配置网络。 建议让你环境的系统和域管理员进行特定的工具、配置、自定义以及所需的任何故障排除。
 
 ## <a name="check-the-connection-to-a-domain-controller"></a>检查与域控制器的连接
 
@@ -43,7 +43,7 @@ ping contoso.com
 
 如果其中任何一个名称未能通过检查，请更新域搜索列表。 以下部分分别提供有关 Ubuntu、Red Hat Enterprise Linux (RHEL) 和 SUSE Linux Enterprise Server (SLES) 的说明。
 
-### <a name="ubuntu"></a>Ubuntu
+### <a name="ubuntu-1604"></a>Ubuntu 16.04
 
 1. 编辑“/etc/network/interfaces”文件，以使 Active Directory 域出现在域搜索列表中  ：
 
@@ -71,7 +71,7 @@ ping contoso.com
    nameserver **<AD domain controller IP address>**
    ```
 
-### <a name="rhel"></a>RHEL
+### <a name="rhel-7x"></a>RHEL 7.x
 
 1. 编辑“/etc/sysconfig/network-scripts/ifcfg-eth0”文件，以使 Active Directory 域出现在域搜索列表中  。 或根据需要编辑其他的接口配置文件：
 
@@ -100,7 +100,7 @@ ping contoso.com
    **<IP address>** DC1.CONTOSO.COM CONTOSO.COM CONTOSO
    ```
 
-### <a name="sles"></a>SLES
+### <a name="sles-12"></a>SLES 12
 
 1. 编辑“/etc/sysconfig/network/config”文件，以使 Active Directory 域控制器 IP 用于 DNS 查询，且 Active Directory 域出现在域搜索列表中  ：
 
@@ -178,7 +178,7 @@ ping contoso.com
 
    SQL Server 使用 SSSD 和 NSS 将用户帐户和组映射到安全标识符 (SID)。 若要成功创建 AD 登录名，必须为 SQL Server 配置 SSSD 并运行它。 “realmd”通常会在加入域时自动执行此操作，但在某些情况下，你必须单独执行此操作  。
 
-   有关详细信息，请参阅如何[手动配置 SSSD](https://access.redhat.com/articles/3023951) 和[配置 NSS 以使用 SSSD](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)。
+   有关详细信息，请参阅如何[手动配置 SSSD](https://access.redhat.com/articles/3023951) 和[配置 NSS 以使用 SSSD](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)。
 
 1. 请确认自己现在是否可以从域中收集有关用户的信息，及是否可以该用户的身份获取 Kerberos 工单。 下面的示例使用 id  、[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) 和 [klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html) 命令执行此操作。
 

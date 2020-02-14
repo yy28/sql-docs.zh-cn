@@ -13,16 +13,16 @@ ms.assetid: c8424d3c-86ba-4cc5-bf0c-be4ce44bdd04
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 526a196c280e4a8b62db27be4c8644315379b2d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67997943"
 ---
 # <a name="open-objects-server-configuration-option"></a>open objects 服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  虽然该选项的功能在  中已禁用，但在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. （其设置不起作用。）在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，打开的数据库对象的数量是动态管理的，该数量只受可用内存的限制。 **sp_configure** 中可用的 **open objects** 选项用于现有脚本的后向兼容性。  
+  尽管在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中已禁用此选项的功能，但此选项仍然存在于 sp_configure 中  。 （其设置不起作用。）在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，打开的数据库对象的数量是动态管理的，该数量只受可用内存的限制。 **sp_configure** 中可用的 **open objects** 选项用于现有脚本的后向兼容性。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  

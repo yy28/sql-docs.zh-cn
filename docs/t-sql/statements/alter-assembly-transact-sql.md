@@ -24,21 +24,21 @@ ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2881c4ee5145506158585611f61219983b764936
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066116"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
-  通过修改程序集的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目录属性更改程序集。 ALTER ASSEMBLY 将程序集刷新为保存其实现的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 模块的最新副本，并添加或删除与之关联的文件。 可以使用 [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md) 创建程序集。  
+  通过修改程序集的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目录属性更改程序集。 ALTER ASSEMBLY 将它刷新为保存其实现的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 模块的最新副本，并添加或删除与之关联的文件。 可以使用 [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md) 创建程序集。  
 
 > [!WARNING]
 >  CLR 在 .NET Framework 中使用代码访问安全性 (CAS)（不可再作为安全边界）。 使用 `PERMISSION_SET = SAFE` 创建的 CLR 程序集可以访问外部系统资源、调用非托管代码以及获取 sysadmin 特权。 从 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 开始，引入了名为 `clr strict security` 的 `sp_configure` 选项，以增强 CLR 程序集的安全性。 默认启用 `clr strict security`，并将 `SAFE` 和 `EXTERNAL_ACCESS` 程序集与标记为 `UNSAFE` 的程序集同等对待。 可禁用 `clr strict security` 选项以实现后向兼容性，但不建议这样做。 Microsoft 建议所有程序集都通过证书或非对称密钥进行签名，且该证书或非对称密钥具有已在主数据库中获得 `UNSAFE ASSEMBLY` 权限的相应登录名。 有关详细信息，请参阅 [CLR 严格安全性](../../database-engine/configure-windows/clr-strict-security.md)。  
 
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -125,7 +125,7 @@ ALTER ASSEMBLY assembly_name
 > [!NOTE]  
 >  这种方法不适用于包含的数据库或 Azure SQL 数据库。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  ALTER ASSEMBLY 不中断当前正在运行的会话，这些会话正在运行所修改的程序集中的代码。 当前会话通过使用程序集的未更改位完成执行。  
   
  如果指定 FROM 子句，则 ALTER ASSEMBLY 相对于所提供的模块的最新副本更新程序集。 由于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中可能存在已针对程序集定义的 CLR 函数、存储过程、触发器、数据类型和用户定义的聚合函数，因此 ALTER ASSEMBLY 语句将它们重新绑定到该程序集的最新实现。 若要完成实现此重新绑定，映射到 CLR 函数、存储过程和触发器的方法必须仍存在于具有相同签名的已修改程序集中。 实现 CLR 用户定义的类型和用户定义的聚合函数的类必须仍满足作为用户定义的类型或聚合的要求。  

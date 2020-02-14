@@ -23,10 +23,10 @@ ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 21bc28f99768c7b31d6ba5b18170140a23400853
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71287770"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>为数据流组件开发用户界面
@@ -49,7 +49,7 @@ ms.locfileid: "71287770"
   
 -   文件版本  
   
--   Culture  
+-   环境  
   
 -   公钥标记  
   
@@ -93,7 +93,7 @@ End Class
 ### <a name="using-the-services-of-the-ssis-designer"></a>使用 SSIS 设计器的服务  
  <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> 方法的 IServiceProvider  参数可以访问 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器的以下服务：  
   
-|服务|描述|  
+|服务|说明|  
 |-------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Design.IDtsClipboardService>|用于确定组件是否是通过复制/粘贴或剪切/粘贴操作生成的。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionService>|用于访问包中的现有连接或在包中创建新连接。|  

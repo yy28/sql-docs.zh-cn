@@ -12,10 +12,10 @@ ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
 ms.openlocfilehash: 8d13d6df17cad82076813c5fee93ed794d3439f2
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68892586"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>升级 Power Pivot for SharePoint
@@ -58,7 +58,7 @@ ms.locfileid: "68892586"
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 外接程序 (**spPowerPivot.msi**) 与先前版本并行安装。 例如， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 外接程序安装到文件夹 `c:\Program Files\Microsoft SQL Server\130\Tools\PowerPivotTools`。  
   
-##  <a name="bkmk_prereq"></a> 先决条件  
+##  <a name="bkmk_prereq"></a>先决条件  
  **权限**  
   
 -   你必须是场管理员才能对 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安装进行升级。 您必须是本地管理员才能运行 SQL Server 安装程序。  
@@ -67,9 +67,9 @@ ms.locfileid: "68892586"
   
  **SQL Server：**  
   
--   如果现有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 安装是 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]，则必须安装 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Service Pack 2 (SP2) 才能升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]。  
+-   如果现有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 安装是 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]，则必须安装 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Service Pack 2 (SP2) 才能升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]。  
   
--   如果现有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 安装是 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，则必须安装 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 (SP1) 才能升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]。  
+-   如果现有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 安装是 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，则必须安装 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 (SP1) 才能升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]。  
   
  **SharePoint 2010：**  
   
@@ -78,7 +78,7 @@ ms.locfileid: "68892586"
 ##  <a name="bkmk_uprgade_sharepoint2013"></a> 升级现有的 SharePoint 2013 场  
  若要升级在 SharePoint 2013 中部署的 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] ，请执行以下操作：  
   
- ![powerpivot for sharepoint 2013 升级](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2013.png "powerpivot for sharepoint 2013 upgrade")  
+ ![PowerPivot for SharePoint 2013 升级](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2013.png "PowerPivot for SharePoint 2013 升级")  
   
 1.  在以 SharePoint 模式运行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的后端服务器上运行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 安装程序。 如果服务器承载 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的多个实例，请至少升级 **POWERPIVOT** 实例。 以下列表概述了与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 升级相关的安装向导步骤：  
   
@@ -94,11 +94,11 @@ ms.locfileid: "68892586"
   
 3.  在 SharePoint 2013 场中的每个服务器上运行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 外接程序 (**spPowerPivot.msi**) 以安装数据访问接口。 您从中运行 SQL Server 安装向导的服务器除外，安装向导也将升级数据访问接口。 有关详细信息，请参阅[下载 Microsoft SQL Server 2014 Power Pivot for Microsoft SharePoint 2013](https://www.microsoft.com/download/details.aspx?id=42300) 和[安装或卸载 Power Pivot for SharePoint 外接程序 (SharePoint 2013)](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)。  
   
-4.  **在 SharePoint 2013 场中的每个服务器上运行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 配置** 工具，以使用外接程序安装的更新解决方案文件配置 SharePoint 场。 不能使用 SharePoint 管理中心执行此步骤。 有关详细信息，请参见以下内容：  
+4.  **在 SharePoint 2013 场中的每个服务器上运行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 配置** 工具，以使用外接程序安装的更新解决方案文件配置 SharePoint 场。 不能使用 SharePoint 管理中心执行此步骤。 有关详细信息，请参阅以下主题：  
   
     1.  在 Windows“开始”页上，键入 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** ，然后在搜索结果中单击 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] SharePoint 2013 配置**。 请注意，搜索可能会返回配置工具的两个版本。  
   
-         ![两个 powerpivot 配置工具](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/as-powerpivot-configtools-bothicons.gif "two powerpivot configuratoin tools")  
+         ![两个 PowerPivot 配置工具](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/as-powerpivot-configtools-bothicons.gif "两个 PowerPivot 配置工具")  
   
          或  
   
@@ -127,7 +127,7 @@ ms.locfileid: "68892586"
   
     9. 升级场中的解决方案和功能可能要花几分钟才能完成。 在此期间，对 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的连接请求“将失败”，并显示类似“无法刷新数据”或“试图执行请求操作期间出错   **。请重试**。” 升级完成后，服务器将变为可用，这些错误将不会再出现。  
   
-     有关详细信息，请参见以下内容：  
+     有关详细信息，请参阅以下主题：  
   
     -   [Power Pivot 配置工具](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools)  
   
@@ -142,7 +142,7 @@ ms.locfileid: "68892586"
 ##  <a name="bkmk_uprgade_sharepoint2010"></a> 升级现有的 SharePoint 2010 场  
  若要升级在 SharePoint 2010 中部署的 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] ，请执行以下操作：  
   
- ![powerpivot for sharepoint 2010 升级](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2010.png "powerpivot for sharepoint 2010 upgrade")  
+ ![PowerPivot for SharePoint 2010 升级](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2010.png "PowerPivot for SharePoint 2010 升级")  
   
 1.  下载 [Service Pack 2 for Microsoft SharePoint 2010](https://www.microsoft.com/download/details.aspx?id=39672) 并将其应用于场中的所有服务器。 验证 SharePoint SP2 安装是否成功。 在管理中心中的“升级和迁移”页上，打开“检查产品和修补程序安装状态”页，以查看与 SP2 相关的状态消息。  
   
@@ -254,11 +254,11 @@ Get-PowerPivotSystemService
   
  **Windows 文件资源管理器**：  
   
-1.  导航到 **实例的** Bin [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 文件夹。 例如 `C:\Program Files\Microsoft SQL Server\MSAS13.POWERPIVOT\OLAP\bin`。  
+1.  导航到 **实例的** Bin [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 文件夹。 例如，`C:\Program Files\Microsoft SQL Server\MSAS13.POWERPIVOT\OLAP\bin`。  
   
 2.  右键单击 `msmdsrv.exe` 并选择“属性”  。  
   
-3.  单击 **“详细信息”** 。  
+3.  单击“详细信息”。   
   
 4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 文件版本应为 13.00.\<major build>.\<minor build>。  
   

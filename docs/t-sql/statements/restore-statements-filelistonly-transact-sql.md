@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 892b18ac9780054cafe90d62569afb63f8261b3e
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68742982"
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>RESTORE 语句 - FILELISTONLY (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68742982"
 > [!NOTE]  
 >  有关参数的说明，请参阅 [RESTORE 参数 (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md)。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -86,13 +86,13 @@ FROM <backup_device>
 ## <a name="result-sets"></a>结果集  
  客户端可以使用 RESTORE FILELISTONLY 获得备份集中所含文件的列表。 此信息以结果集的形式返回，在结果集中每个文件占一行。  
   
-|列名|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-|-|-|  
 |LogicalName|**nvarchar(128)**|文件的逻辑名称。|  
 |PhysicalName|nvarchar(260) |文件的物理名称或操作系统名称。|  
 |类型|**char(1)**|文件的类型，其中包括：<br /><br />  L = Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志文件<br /><br />  D = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据文件<br /><br />  F = 全文目录<br /><br />  S = FileStream、FileTable 或 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 容器|  
 |FileGroupName|**nvarchar(128)** NULL|包含文件的文件组的名称。|  
-|Size|**numeric(20,0)**|当前大小（以字节为单位）。|  
+|大小|**numeric(20,0)**|当前大小（以字节为单位）。|  
 |MaxSize|**numeric(20,0)**|允许的最大大小（以字节为单位）。|  
 |FileID|**bigint**|文件标识符，在数据库中唯一。|  
 |CreateLSN|**numeric(25,0)**|创建文件时的日志序列号。|  
@@ -111,8 +111,8 @@ FROM <backup_device>
 |TDEThumbprint|**varbinary(32)** NULL|显示数据库加密密钥的指纹。 加密程序的指纹是带有加密密钥的证书的 SHA-1 哈希。 有关数据库加密的信息，请参阅[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)。|  
 |SnapshotURL|**nvarchar(360)** NULL|FILE_SNAPSHOT 备份中包含的数据库文件的 Azure 快照的 URL。 如果没有 FILE_SNAPSHOT 备份，则返回 NULL。|  
   
-## <a name="security"></a>Security  
- 在备份时，可以根据需要为介质集、备份集或这两者指定密码。 如果已经在介质集或备份集上定义了密码，则必须在 RESTORE 语句中指定正确的密码。 这些密码可防止未经授权的用户使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具执行还原操作和向介质追加备份集。 但是，密码不会阻止使用 BACKUP 语句的 FORMAT 选项覆盖介质。  
+## <a name="security"></a>安全性  
+ 在备份时，可以根据需要为介质集、备份集或这两者指定密码。 如果已经在介质集或备份集上定义了密码，则必须在 RESTORE 语句中指定正确的密码。 这些密码可防止未经授权而使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具执行还原操作以及向介质追加备份集。 但是，密码不会阻止使用 BACKUP 语句的 FORMAT 选项覆盖介质。  
   
 > [!IMPORTANT]  
 >  此密码提供的安全性较低。 它旨在防止经过授权的用户或未经授权的用户使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具执行不正确的还原操作。 但是不能防止通过其他方式或通过替换密码来读取备份数据。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]保护备份的最佳做法是将备份磁带存储在安全的位置，或者备份到由适当的访问控制列表 (ACL) 保护的磁盘文件。 ACL 应设置在创建备份的根目录下。  

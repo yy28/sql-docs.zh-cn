@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 6eca1e80614772a1aa65faa60351fb73f83ba433
-ms.sourcegitcommit: 2bc15f81d7a238c6fc409440800f1d6c7943a4b5
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70059292"
 ---
 # <a name="create-a-push-subscription"></a>创建推送订阅
@@ -58,7 +58,7 @@ ms.locfileid: "70059292"
   
 #### <a name="to-create-a-push-subscription-from-the-publisher"></a>从发布服务器创建推送订阅  
   
-1. 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中连接到发布服务器，然后展开服务器节点。  
+1. 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中连接到发布服务器，然后展开服务器节点。  
   
 2. 展开 **“复制”** 文件夹，再展开 **“本地发布”** 文件夹。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "70059292"
      > [!NOTE]
      > 使用 Windows 集成身份验证进行的连接始终使用由 \@job_login 和 \@job_password 指定的 Windows 凭据   。 分发代理始终使用 Windows 集成身份验证与分发服务器建立本地连接。 默认情况下，该代理将使用 Windows 集成身份验证连接到订阅服务器。  
   
-   - （可选）\@subscriber_security_mode  的 0  值以及 \@subscriber_login  和 \@subscriber_password  指定的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录信息。 如果您需要在连接到订阅服务器时使用 SQL Server 身份验证，则指定这些参数。  
+   - （可选）subscriber_security_mode 的 0 值以及 \@subscriber_login 和 \@subscriber_password 的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录信息  **\@**   。 如果您需要在连接到订阅服务器时使用 SQL Server 身份验证，则指定这些参数。  
   
    - 该订阅的分发代理作业计划。 有关详细信息，请参阅[指定同步计划](../../relational-databases/replication/specify-synchronization-schedules.md)。  
   
@@ -177,7 +177,7 @@ ms.locfileid: "70059292"
   
 5. 如果订阅数据库不存在，则使用 <xref:Microsoft.SqlServer.Management.Smo.Database> 类创建该数据库。 有关详细信息，请参阅[创建、修改和删除数据库](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md)。  
   
-6. 创建 <xref:Microsoft.SqlServer.Replication.TransSubscription> 类的实例。  
+6. 创建的 <xref:Microsoft.SqlServer.Replication.TransSubscription> 类的实例。  
   
 7. 设置下列订阅属性：  
   
@@ -217,7 +217,7 @@ ms.locfileid: "70059292"
   
 5. 如果订阅数据库不存在，则使用 <xref:Microsoft.SqlServer.Management.Smo.Database> 类创建该数据库。 有关详细信息，请参阅[创建、修改和删除数据库](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md)。  
   
-6. 创建 <xref:Microsoft.SqlServer.Replication.MergeSubscription> 类的实例。  
+6. 创建的 <xref:Microsoft.SqlServer.Replication.MergeSubscription> 类的实例。  
   
 7. 设置下列订阅属性：  
   

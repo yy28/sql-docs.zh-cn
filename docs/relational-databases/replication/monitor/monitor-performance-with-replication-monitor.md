@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 3c20631f9a24ddf3950a14897bca8934f6794045
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: feabed59f397f2a12ca3697e5938e0540fcad228
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770594"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288116"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>用复制监视器监视性能
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  通过使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制监视器，您可以通过以下列方式监视事务复制和合并复制性能：  
+  使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制监视器，可以通过以下列方式监视事务复制和合并复制性能：  
   
 -   设置警告和阈值  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68770594"
  有关详细信息，请参阅 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)。  
   
 ## <a name="view-performance-measurements"></a>查看性能度量值  
- 对于发布，复制监视器在 **“当前平均性能”** 和 **“当前最差的性能”** 列中显示事务复制和合并复制的性能质量值；对于订阅，复制监视器在 **“性能”** 列中显示这些值。 这些值有：  
+ 对于发布，复制监视器在 **“当前平均性能”** 和 **“当前最差的性能”** 列中显示事务复制和合并复制的性能质量值；对于订阅，复制监视器在 **“性能”** 列中显示这些值。 有效值为：  
   
 -   很好  
   
