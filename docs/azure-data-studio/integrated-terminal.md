@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: 13a0e3c17f45e0ba136d83f832d3531bc8059884
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67959536"
 ---
 # <a name="integrated-terminal"></a>集成终端
@@ -89,11 +89,11 @@ ms.locfileid: "67959536"
 
 ## <a id="key-bindings"></a>终端键绑定
 
-“视图: 切换集成终端”命令会被绑定到“Ctrl +`”，以快速将该集成终端面板切入和切出视图   。
+“视图:  切换集成终端”命令会被绑定到“Ctrl +`”，以快速将该集成终端面板切入和切出视图  。
 
 下面是用于在集成终端内快速导航的键盘快捷方式：
 
-|Key|Command|  
+|密钥|Command|  
 |---|---|  
 |**Ctrl+\`**|显示集成终端|  
 |**Ctrl+Shift+\`**|创建新终端|  
@@ -118,7 +118,7 @@ ms.locfileid: "67959536"
 
 ### <a name="run-selected-text"></a>运行所选文本
 
-要使用 `runSelectedText` 命令，请在编辑器中选择文本，然后通过命令面板 (Ctrl+Shift+P) 运行命令“终端: 在活动终端中运行所选文本”    。 终端随即尝试运行所选文本：
+要使用 `runSelectedText` 命令，请在编辑器中选择文本，然后通过命令面板 (Ctrl+Shift+P)  运行命令“终端: 在活动终端中运行所选文本”   。 终端随即尝试运行所选文本：
 
 ![运行所选文本](media/integrated-terminal/terminal_run_selected.png)
 
@@ -145,7 +145,7 @@ ms.locfileid: "67959536"
 
 ### <a name="rename-terminal-sessions"></a>重命名终端会话
 
-现在可以使用以下命令来重命名集成终端会话：“终端: 重命名”(`workbench.action.terminal.rename`)  。 新名称显示在终端选择下拉列表中。
+现在可以使用以下命令来重命名集成终端会话：“终端:  重命名”(`workbench.action.terminal.rename`)。 新名称显示在终端选择下拉列表中。
 
 ### <a name="forcing-key-bindings-to-pass-through-the-terminal"></a>强制通过终端传递键绑定
 

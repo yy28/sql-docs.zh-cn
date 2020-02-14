@@ -1,7 +1,7 @@
 ---
 title: 混合缓冲池 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -10,28 +10,34 @@ ms.topic: conceptual
 ms.assetid: ''
 author: briancarrig
 ms.author: brcarrig
-ms.openlocfilehash: d03c66219330df3cca892bd005d1e9a456959c83
-ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
+manager: amitban
+ms.openlocfilehash: c7919232bcd2c84ea58ac2e8b9d23b48cc58ee60
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71823573"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831705"
 ---
 # <a name="hybrid-buffer-pool"></a>混合缓冲池
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-混合缓冲池使数据库引擎能够直接访问存储在持久内存 (PMEM) 设备上的数据库文件中的数据页。 [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)] 中引入了此功能。
+混合缓冲池使缓冲池对象能够引用驻留在持久性内存 (PMEM) 设备上的数据库文件中的数据页，而不是缓存在易失 DRAM 中的数据页的副本。 [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)] 中引入了此功能。
 
-在没有 PMEM 的传统系统中，SQL Server 将数据页缓存在缓冲池中。 使用混合缓冲池，SQL Server 会跳过将页面副本执行到缓冲池的基于 DRAM 的部分，直接在 PMEM 设备上的数据库文件上访问该页面。 对混合缓冲池的 PMEM 设备上的数据文件的读取访问直接通过追随指向 PMEM 设备上数据页的指针来执行。  
+![混合缓冲池](./media/hybrid-buffer-pool.png)
 
-只能在 PMEM 设备上直接访问干净页。 当页面被标记为脏时，它会先被复制到 DRAM 缓冲池，最后被写回 PMEM 设备并再次标记为干净。 这将在常规检查点操作期间发生。 用于将文件从 PMEM 设备复制到 DRAM 的机制是直接内存映射 I/O (MMIO)，也称为 SQL Server 中的数据文件的 enlightenment  。
+持久性内存 (PMEM) 设备支持字节寻址，并且如果使用直接访问 (DAX) 持久性内存感知的文件系统（例如 XFS、EXT4 或 NTFS），则可以使用 OS 中的常用文件系统 API 来访问文件系统上的文件。 或者，它可以对设备上文件的内存映射执行所谓的加载和存储操作。 这允许 PMEM 感知的应用程序（如 SQL Server）访问设备上的文件，而无需遍历传统存储堆栈。
 
+混合缓冲池使用此功能对内存映射的文件执行加载和存储操作，以利用 PMEM 设备作为缓冲池的缓存，以及存储数据库文件。 这就造成了一种独特的情况，即逻辑读取和物理读取本质上是相同的操作。 持久性内存设备可通过内存总线访问，就像常规的易失 DRAM 一样。
 
-混合缓冲池功能同时适用于 Windows 和 Linux。 必须使用支持 DAX (DirectAccess) 的文件系统来格式化 PMEM 设备。 XFS、EXT4、NTFS 文件系统都支持 DAX。 SQL Server 将自动检测数据文件是否驻留在格式正确的 PMEM 设备上，并在用户空间中执行内存映射。 当连接、还原、创建新数据库或为数据库启用混合缓冲池功能时，将在启动时发生此映射。
+混合缓冲池的设备上仅缓存干净数据页。 页面标记为“脏”时，它会被复制到 DRAM 缓冲池，然后它最终被写入 PMEM 设备，并再次标记为干净。 在常规检查点操作过程中，这种情况的发生方式类似于针对标准块设备执行的操作。
 
-有关 Windows Server 对 PMEM 的支持的更多信息，请参阅[在 Windows Server 上部署持久内存](/windows-server/storage/storage-spaces/deploy-pmem/)。
+混合缓冲池功能同时适用于 Windows 和 Linux。 必须使用支持 DAX (DirectAccess) 的文件系统来格式化 PMEM 设备。 XFS、EXT4 和 NTFS 文件系统都支持 DAX。 当附加、还原或创建新数据库时，SQL Server 将自动检测数据文件是否驻留在格式正确的 PMEM 设备上，并在启动时执行数据库文件的内存映射。
 
-有关在 Linux 上为 PMEM 设备配置 SQL Server 的更多信息，请参阅[部署持久性内存](../../linux/sql-server-linux-configure-pmem.md)。
+有关详细信息，请参阅：
+
+* [了解和部署持久性内存 (Windows)](/windows-server/storage/storage-spaces/deploy-pmem/)
+* [为 Linux 上的 SQL Server 配置持久性内存 (PMEM)](../../linux/sql-server-linux-configure-pmem.md)
+
 
 ## <a name="enable-hybrid-buffer-pool"></a>启用混合缓冲池
 
@@ -43,7 +49,7 @@ ms.locfileid: "71823573"
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED HYBRID_BUFFER_POOL = ON;
 ```
 
-默认情况下，混合缓冲池在实例范围内设置为禁用。 请注意，要使设置更改生效，必须重启 SQL Server 实例。 必须重启以帮助分配足够的哈希页，以计算服务器上的总 PMEM 容量。
+默认情况下，混合缓冲池在实例范围内处于禁用状态。 请注意，要使设置更改生效，必须重启 SQL Server 实例。 必须重启以帮助分配足够的哈希页，以计算服务器上的总 PMEM 容量。
 
 以下示例为特定数据库启用混合缓冲池。
 
@@ -51,17 +57,17 @@ ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED HYBRID_BUFFER_POOL = ON;
 ALTER DATABASE <databaseName> SET MEMORY_OPTIMIZED = ON;
 ```
 
-默认情况下，混合缓冲池设置为在数据库范围启用。
+默认情况下，混合缓冲池在数据库范围内处于启用状态。
 
 ## <a name="disable-hybrid-buffer-pool"></a>启用混合缓冲池
 
-以下示例为 SQL Server 实例禁用混合缓冲池：
+以下示例在实例级别禁用混合缓冲池：
 
 ```sql
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED HYBRID_BUFFER_POOL = OFF;
 ```
 
-默认情况下，混合缓冲池在实例范围内设置为禁用。 请注意，要使设置更改生效，必须重启 SQL Server 实例。 必须重启以防止过度分配哈希页，因为无需计算服务器上的 PMEM 容量。
+默认情况下，在实例级别禁用混合缓冲池。 为了使此更改生效，必须重启实例。 这可确保为缓冲池分配足够的哈希页，因为现在需要考虑服务器上的 PMEM 容量。
 
 以下示例为特定数据库禁用混合缓冲池。
 
@@ -69,11 +75,11 @@ ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED HYBRID_BUFFER_POOL = OFF;
 ALTER DATABASE <databaseName> SET MEMORY_OPTIMIZED = OFF;
 ```
 
-默认情况下，混合缓冲池设置为在数据库范围启用。
+默认情况下，混合缓冲池在数据库范围内处于启用状态。
 
 ## <a name="view-hybrid-buffer-pool-configuration"></a>查看混合缓冲池配置
 
-以下示例返回 SQL Server 实例的混合缓冲池系统配置的当前状态。
+以下示例返回实例的当前混合缓冲池配置状态。
 
 ```sql
 SELECT * FROM
@@ -95,10 +101,12 @@ SELECT name, is_memory_optimized_enabled FROM sys.databases;
 
 在 Windows 上格式化 PMEM 设备时，使用可用于 NTFS 的最大分配单元大小（Windows Server 2019 中为 2 MB）并确保已为 DAX（直接访问）格式化该设备。
 
-为了获得最佳性能，请在 Windows 上启用[在内存中锁定页面](./enable-the-lock-pages-in-memory-option-windows.md)。
+使用大页面内存分配模型，该模型可通过[跟踪标志 834](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 启用。 跟踪标志 834 是一个启动跟踪标志。
+
+使用[大页面内存](./enable-the-lock-pages-in-memory-option-windows.md)分配模型要求在 Windows 上使用 内存中的锁定页面。
 
 文件大小应为 2 MB 的倍数（模数 2 MB 应等于零）。
 
-如果将混合缓冲池的服务器范围的设置设为禁用，则任何用户数据库都不会使用混合缓冲池。
+如果混合缓冲池的服务器范围设置禁用，则任何用户数据库将不能使用该功能。
 
-如果启用了“混合缓冲区”的服务器范围的设置，则可通过以下步骤为各用户数据库在数据库作用域级别禁用混合缓冲池，从而禁止这些用户数据库使用混合缓冲池。
+如果混合缓冲池的服务器范围设置启用，你可使用数据库范围设置禁用单个用户数据库的功能。

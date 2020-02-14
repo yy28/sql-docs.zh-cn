@@ -11,10 +11,10 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 09a8432d10a70bb8530654d76bce874f735788a6
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67959701"
 ---
 # <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>创建和使用代码片段，以便在 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 中快速创建 Transact-SQL (T-SQL) 脚本
@@ -51,7 +51,7 @@ ms.locfileid: "67959701"
 
 可以定义自己的片段。 打开需要编辑的 SQL 片段文件：
 
-1. 请打开“命令面板”(Shift+Ctrl+P)，并键入 snip，然后选择    “先决条件: 打开用户片段”  ：
+1. 请打开“命令面板”(Shift+Ctrl+P)，并键入 snip，然后选择     “先决条件: 打开用户片段”：
 
    ![替换模板字段](media/code-snippets/user-snippets.png)
 

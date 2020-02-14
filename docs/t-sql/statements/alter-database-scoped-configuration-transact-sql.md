@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9547eaae31787dc01946b8dfd2d2d43781b5a8af
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: db98f5aa3cdec76b59e51f743200b24725231f95
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75258135"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831636"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -92,6 +92,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | VERBOSE_TRUNCATION_WARNINGS = { ON | OFF }
     | LAST_QUERY_PLAN_STATS = { ON | OFF }
     | PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = <time>
+    | ISOLATE_SECURITY_POLICY_CARDINALITY  = { ON | OFF }
 }
 ```
 
@@ -131,7 +132,7 @@ MAXDOP **=** {\<value> | PRIMARY } **\<value>**
 
 > [!TIP]
 > 要在查询级别完成此操作，请使用 MAXDOP [查询提示](../../t-sql/queries/hints-transact-sql-query.md)  。    
-> 要在服务器级别完成此操作，请使用“**最大并行度 (MAXDOP)** ”[服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。     
+> 要在服务器级别完成此操作，请使用“最大并行度 (MAXDOP)”[服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)  。     
 > 要在工作负荷级别完成此操作，请使用 MAX_DOP [Resource Governor 工作负荷组配置选项](../../t-sql/statements/create-workload-group-transact-sql.md)  。    
 
 PRIMARY
@@ -366,6 +367,12 @@ PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES
 - 当设置为 0 时，暂停的操作永远不会自动中止
 
 此选项的当前值显示在 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 中。
+
+ISOLATE_SECURITY_POLICY_CARDINALITY **=** { ON | **OFF**}
+
+适用范围：  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+
+允许你控制[行级别安全性](../../relational-databases/security/row-level-security.md) (RLS) 谓词是否影响整个用户查询的执行计划的基数。 如果 ISOLATE_SECURITY_POLICY_CARDINALITY 为 ON，则 RLS 谓词不会影响执行计划的基数。 例如，假设有一个包含一百万行和一个 RLS 谓词的表，该表将发出查询的特定用户的结果限制为 10 行。 将此数据库范围的配置设置为 OFF 时，此谓词的基数估计值为 10。 将此数据库范围的配置为 ON 时，查询优化将估计一百万行。 建议对大多数工作负载使用默认值。
 
 ## <a name="Permissions"></a> 权限
 
