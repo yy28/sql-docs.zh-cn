@@ -1,23 +1,24 @@
 ---
-title: 如何：修复错误 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 修复错误
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 0d504e00-4ff0-4fdf-b874-85280bbd8668
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ba41850e214de60da9a7e64f328939e4660a9367
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: e7cc581bc721f3174b5526ecf44941ee2d455634
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035171"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241403"
 ---
 # <a name="how-to-fix-errors"></a>如何：修复错误
+
 “错误列表”窗格显示任何部署或生成错误。 当你编辑数据库实体及其定义时，因在 Transact\-SQL 编辑器或表设计器中编辑而导致的语法和语义错误也会显示在列表中。 在您跨不同的选项卡编辑脚本时，错误列表将动态更新。 然后，您可以按照标识的错误进一步排除故障。  
   
 > [!WARNING]  
@@ -31,7 +32,7 @@ ms.locfileid: "68035171"
   
 3.  请注意，在屏幕底部的“错误列表”  窗格中，如下警告和错误将立即弹出。  
   
-警告 SQL71502：函数 [dbo].[GetProductsBySupplier] 包含对某一对象的未解析引用。对象不存在或引用不明确，因为它可以引用以下任何对象：[dbo].[Product].[p]::[ShelfLife] 或 [dbo].[Product].[ShelfLife]。错误 SQL71501：Check 约束 [dbo].[CK_Product_ShelfLife] 具有对对象 [dbo].[Product].[ShelfLife] 的未解析引用。**  
+警告 SQL71502：函数 [dbo].[GetProductsBySupplier] 包含对某一对象的未解析引用。对象不存在或引用不明确，因为它可以引用以下任何对象：[dbo].[Product].[p]::[ShelfLife] 或 [dbo].[Product].[ShelfLife]。错误 SQL71501：Check 约束 [dbo].[CK_Product_ShelfLife] 具有对对象 [dbo].[Product].[ShelfLife] 的未解析引用。  
   
 4.  你可以右键单击“错误列表”  ，然后使用上下文菜单对结果进行排序、筛选要显示的条目以及希望为每个条目出现的信息列。  
   
