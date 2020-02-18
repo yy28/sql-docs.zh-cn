@@ -41,10 +41,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: cd6b2c3cea9876091532a5da3cf15bdda1da2d8d
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73530934"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 语句 (Transact-SQL)
@@ -63,7 +63,7 @@ ms.locfileid: "73530934"
 
 ||||
 |-|-|-|
-|**\* _SQL Server \*_** &nbsp;|[SQL 数据库<br />托管实例](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
+|**_\* SQL Server \*_** &nbsp;|[SQL 数据库<br />托管实例](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
 ||||
 
 &nbsp;
@@ -301,7 +301,7 @@ Note: URL is the format used to specify the location and the file name for the M
 |停止使用的关键字|替换为…|替换关键字的示例|
 |--------------------------|------------------|------------------------------------|
 |LOAD|RESTORE|`RESTORE DATABASE`|
-|TRANSACTION|LOG|`RESTORE LOG`|
+|TRANSACTION|日志|`RESTORE LOG`|
 |DBO_ONLY|RESTRICTED_USER|`RESTORE DATABASE ... WITH RESTRICTED_USER`|
 
 ### <a name="restore-log"></a>RESTORE LOG
@@ -420,7 +420,7 @@ RESTORE 语句也可用于对全文数据执行替代位置还原、差异还原
 
 有关详细信息，请参阅[将数据库恢复到数据库快照](../../relational-databases/databases/revert-a-database-to-a-database-snapshot.md)。
 
-## <a name="security"></a>Security
+## <a name="security"></a>安全性
 在备份时，可以根据需要为介质集、备份集或这两者指定密码。 如果已经在介质集或备份集上定义了密码，则必须在 RESTORE 语句中指定正确的密码。 这些密码可防止未经授权而使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具执行还原操作以及向介质追加备份集。 但是，可以通过 BACKUP 语句的 FORMAT 选项覆盖受密码保护的介质。
 
 > [!IMPORTANT]
@@ -688,7 +688,7 @@ RESTORE DATABASE Sales
   STATS = 10;
 ```
 
-**K2.将完整数据库备份从 Microsoft Azure 存储服务还原到本地存储** `Sales` 的完整数据库备份（位于 `mysecondcontainer`）会还原到本地存储。 `Sales` 当前不在服务器上。
+**K2.将完整数据库备份从 Microsoft Azure 存储服务还原到本地存储**`Sales` 的完整数据库备份（位于 `mysecondcontainer`）会还原到本地存储。 `Sales` 当前不在服务器上。
 
 ```sql
 RESTORE DATABASE Sales
@@ -876,7 +876,7 @@ WHERE r.command = 'RESTORE DATABASE'
 
 ## <a name="analytics-platform-system"></a>分析平台系统
 
-将[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]用户数据库从数据库备份还原到[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]设备。 数据库会从以前通过 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] [BACKUP DATABASE - Analytics Platform System](../../t-sql/statements/backup-transact-sql.md) 命令创建的备份进行还原。 使用备份和还原操作生成灾难恢复计划，或将数据库从一个设备移动到另一个。
+将[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]用户数据库从数据库备份还原到[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]设备。 数据库会从以前通过 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)][BACKUP DATABASE - Analytics Platform System](../../t-sql/statements/backup-transact-sql.md) 命令创建的备份进行还原。 使用备份和还原操作生成灾难恢复计划，或将数据库从一个设备移动到另一个。
 
 > [!NOTE]
 > 还原 master 包括还原设备登录信息。 若要还原 master，请使用 Configuration Manager  工具中的[还原 master 数据库](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md)页面。 有权访问控制节点的管理员可以执行此操作。 有关[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]数据库备份的详细信息，请参阅[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]中的“备份和还原”。

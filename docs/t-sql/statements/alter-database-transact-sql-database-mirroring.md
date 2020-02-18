@@ -18,10 +18,10 @@ ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 32cc95fa56d909602ab66d3ddad403bf4ceacebc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065820"
 ---
 # <a name="alter-database-transact-sql-database-mirroring"></a>ALTER DATABASE (Transact-SQL) 数据库镜像
@@ -38,7 +38,7 @@ ms.locfileid: "68065820"
 
 有关 ALTER DATABASE 选项，请参阅 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)。 有关 ALTER DATABASE SET 选项，请参阅 [ALTER DATABASE SET 选项](../../t-sql/statements/alter-database-transact-sql-set-options.md)。
 
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>语法
 
@@ -85,7 +85,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 > [!NOTE]
 > 每个 SET PARTNER 子句只允许使用一个 \<partner_option>。
 
-' partner_server '    指定在新数据库镜像会话中用作故障转移伙伴的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的服务器网络地址。 每个会话需要两个伙伴：一个作为主体服务器启动，另一个作为镜像服务器启动。 建议这两个伙伴驻留在不同的计算机上。
+' partner_server ' 指定在新数据库镜像会话中用作故障转移伙伴的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的服务器网络地址    。 每个会话需要两个伙伴：一个作为主体服务器启动，另一个作为镜像服务器启动。 建议这两个伙伴驻留在不同的计算机上。
 
 在每个伙伴上，为每个会话指定一次此选项。 启动数据库镜像会话需要两个 ALTER DATABASE database SET PARTNER ='partner_server' 语句     。 这两个语句的顺序非常重要。 首先，连接到镜像服务器，并将主体服务器实例指定为 partner_server (SET PARTNER ='principal_server')     。 然后，连接到主体服务器，并将镜像服务器实例指定为 partner_server (SET PARTNER ='mirror_server')；此操作会在这两个伙伴之间启动数据库镜像会话     。 有关详细信息，请参阅本主题后面的[设置数据库镜像](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)。
 
@@ -174,18 +174,18 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 > [!NOTE]
 > 不能在见证服务器上设置数据库属性。
 
- \<witness_option> ::= 
+ **\<witness_option> ::=**
 
 > [!NOTE]
 > 每个 SET WITNESS 子句只允许使用一个 \<witness_option>。
 
- ' witness_server '    指定一个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，作为数据库镜像会话的见证服务器。 只能在主体服务器上指定 SET WITNESS 语句。
+ **'**  _witness_server_ **'** 指定一个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，作为数据库镜像会话的见证服务器。 只能在主体服务器上指定 SET WITNESS 语句。
 
 在 SET WITNESS ='witness_server' 语句中，witness_server 的语法与 partner_server 的语法相同      。
 
 OFF 从数据库镜像会话中删除见证服务器。 将见证服务器设置为 OFF 会禁用自动故障转移。 如果数据库设置为 FULL SAFETY 并且见证服务器设置为 OFF，则镜像服务器上的故障会导致主体服务器使该数据库不可用。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 ## <a name="examples"></a>示例
 
