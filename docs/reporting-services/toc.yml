@@ -44,20 +44,20 @@
               href: ../reporting-services/lesson-2-specifying-connection-information-reporting-services.md
             - name: 第 3 课：为表报表定义数据集
               href: ../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md
-            - name: 第 4 课：向报表添加表
+            - name: 第 4 课：将表添加到报表
               href: ../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md
-            - name: 'Lesson 5: Formatting a Report'
+            - name: 第 5 课：设置报表格式
               href: ../reporting-services/lesson-5-formatting-a-report-reporting-services.md
-            - name: 'Lesson 6: Adding Grouping and Totals'
+            - name: 第 6 课：添加分组和总计
               href: ../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md
         - name: 创建数据驱动订阅（SSRS 教程）
           href: ../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md
           items:
             - name: 第 1 课：创建示例订阅服务器数据库
               href: ../reporting-services/lesson-1-creating-a-sample-subscriber-database.md
-            - name: 'Lesson 2: Modifying the Report Data Source Properties'
+            - name: 第 2 课：修改报表数据源属性
               href: ../reporting-services/lesson-2-modifying-the-report-data-source-properties.md
-            - name: 'Lesson 3: Defining a Data-Driven Subscription'
+            - name: 第 3 课：定义数据驱动订阅
               href: ../reporting-services/lesson-3-defining-a-data-driven-subscription.md
         - name: 使用 ReportViewer 创建带有参数的钻取 (RDLC) 报表（SSRS 教程）
           href: ../reporting-services/create-drillthrough-rdlc-report-with-parameters-reportviewer.md
@@ -72,13 +72,13 @@
               href: ../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md
             - name: 第 5 课：使用报表向导设计子报表
               href: ../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md
-            - name: 第 6 课：将 ReportViewer 控件添加到应用程序
+            - name: 第 6 课：向应用程序添加 ReportViewer 控件
               href: ../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md
             - name: 第 7 课：在父报表上添加钻取操作
               href: ../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md
             - name: 第 8 课：创建数据筛选器
               href: ../reporting-services/lesson-8-create-a-data-filter.md
-            - name: 'Lesson 9: Build and Run the Application'
+            - name: 第 9 课：生成并运行应用程序
               href: ../reporting-services/lesson-9-build-and-run-the-application.md
     - name: 报表生成器教程
       href: ../reporting-services/report-builder-tutorials.md
@@ -145,53 +145,53 @@
           href: ../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md
         - name: 在 SQL Server 故障转移群集中承载报表服务器数据库
           href: ../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md
-        - name: Reporting Services 配置管理器（本机节点）
-          href: ../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md
+    - name: Reporting Services 配置管理器（本机节点）
+      href: ../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md
+      items:
+        - name: 配置报表服务器服务帐户（SSRS 配置管理器）
+          href: ../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md
+        - name: 配置报表服务器 URL（SSRS 配置管理器）
+          href: ../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md
           items:
-            - name: 配置报表服务器服务帐户（SSRS 配置管理器）
-              href: ../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md
-            - name: 配置报表服务器 URL（SSRS 配置管理器）
-              href: ../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md
-              items:
-                - name: 关于 URL 预留和注册（SSRS 配置管理器）
-                  href: ../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md
-                - name: 配置 URL（SSRS 配置管理器）
-                  href: ../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md
-                - name: URL 预留语法（SSRS 配置管理器）
-                  href: ../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md
-                - name: 配置文件中的 URL（SSRS 配置管理器）
-                  href: ../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md
-                - name: 多实例报表服务器部署的 URL 预留（SSRS 配置管理器）
-                  href: ../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md
-            - name: 创建数据库
-              href: ../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md
-            - name: 创建本机模式数据库
-              href: ../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md
-            - name: 配置报表服务器数据库连接
-              href: ../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md
-            - name: 电子邮件设置 - Reporting Services 本机模式（配置管理器）
-              href: ../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md
-            - name: 配置无人参与的执行帐户（SSRS 配置管理器）
-              href: ../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md
-            - name: SSRS 加密密钥 - 管理加密密钥
-              href: ../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md
-              items:
-                - name: SSRS 加密密钥 - 初始化报表服务器
-                  href: ../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md
-                - name: SSRS 加密密钥 - 存储加密的报表服务器数据
-                  href: ../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md
-                - name: SSRS 加密密钥 - 备份和还原
-                  href: ../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md
-                - name: SSRS 加密密钥 - 删除并重新创建
-                  href: ../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md
-                - name: SSRS 加密密钥 - 扩展部署的添加和删除
-                  href: ../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md
-            - name: 订阅设置和文件共享帐户（配置管理器）
-              href: ../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md
-            - name: 配置本机模式报表服务器扩展部署（SSRS 配置管理器）
-              href: ../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md
-            - name: Power BI 集成
-              href: ../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md
+            - name: 关于 URL 预留和注册（SSRS 配置管理器）
+              href: ../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md
+            - name: 配置 URL（SSRS 配置管理器）
+              href: ../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md
+            - name: URL 预留语法（SSRS 配置管理器）
+              href: ../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md
+            - name: 配置文件中的 URL（SSRS 配置管理器）
+              href: ../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md
+            - name: 多实例报表服务器部署的 URL 预留（SSRS 配置管理器）
+              href: ../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md
+        - name: 创建数据库
+          href: ../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md
+        - name: 创建本机模式数据库
+          href: ../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md
+        - name: 配置报表服务器数据库连接
+          href: ../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md
+        - name: 电子邮件设置 - Reporting Services 本机模式（配置管理器）
+          href: ../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md
+        - name: 配置无人参与的执行帐户（SSRS 配置管理器）
+          href: ../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md
+        - name: SSRS 加密密钥 - 管理加密密钥
+          href: ../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md
+          items:
+            - name: SSRS 加密密钥 - 初始化报表服务器
+              href: ../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md
+            - name: SSRS 加密密钥 - 存储加密的报表服务器数据
+              href: ../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md
+            - name: SSRS 加密密钥 - 备份和还原
+              href: ../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md
+            - name: SSRS 加密密钥 - 删除并重新创建
+              href: ../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md
+            - name: SSRS 加密密钥 - 扩展部署的添加和删除
+              href: ../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md
+        - name: 订阅设置和文件共享帐户（配置管理器）
+          href: ../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md
+        - name: 配置本机模式报表服务器扩展部署（SSRS 配置管理器）
+          href: ../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md
+        - name: Power BI 集成
+          href: ../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md
     - name: 在 SharePoint 模式下安装 Reporting Services 2016
       href: ../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md
       items:
@@ -411,25 +411,25 @@
           href: ../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md
         - name: 设置处理选项
           href: ../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md
-    - name: SharePoint 站点上的报表查看器 Web 部件
-      href: ../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site.md
-      items:
-        - name: 部署报表查看器 Web 部件
-          href: ../reporting-services/report-server-sharepoint/deploy-report-viewer-web-part.md
-        - name: 将报表查看器 Web 部件添加到网页
-          href: ../reporting-services/report-server-sharepoint/add-report-viewer-web-part-to-page.md
-        - name: 连接筛选器或文档 Web 部件
-          href: ../reporting-services/report-server-sharepoint/connect-filter-or-documents-web-part-sharepoint-integrated-mode.md
-        - name: 自定义报表查看器 Web 部件
-          href: ../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md
-        - name: 用于报表查看器 Web 部件的 SharePoint 网站设置
-          href: ../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site-settings.md
     - name: 高可用性
       href: ../reporting-services/report-server-sharepoint/high-availability-reporting-services.md
     - name: 启用和禁用 RDL 沙盒
       href: ../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md
     - name: 配置 Reporting Services 以使用使用者可选名称
       href: ../reporting-services/report-server-sharepoint/configure-reporting-services-to-use-a-subject-alternative-name.md
+- name: SharePoint 站点上的报表查看器 Web 部件
+  href: ../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site.md
+  items:
+    - name: 部署报表查看器 Web 部件
+      href: ../reporting-services/report-server-sharepoint/deploy-report-viewer-web-part.md
+    - name: 将报表查看器 Web 部件添加到网页
+      href: ../reporting-services/report-server-sharepoint/add-report-viewer-web-part-to-page.md
+    - name: 连接筛选器或文档 Web 部件
+      href: ../reporting-services/report-server-sharepoint/connect-filter-or-documents-web-part-sharepoint-integrated-mode.md
+    - name: 自定义报表查看器 Web 部件
+      href: ../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md
+    - name: 用于报表查看器 Web 部件的 SharePoint 网站设置
+      href: ../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site-settings.md
 - name: 固定到 Power BI
   href: ../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md
 - name: Reporting Services (SSRS) 中的报表生成器
@@ -1904,7 +1904,7 @@
       href: ../reporting-services/custom-report-items/custom-report-item-implementation-requirements.md
     - name: 自定义报表项
       href: ../reporting-services/custom-report-items/custom-report-items.md
-    - name: 如何部署自定义报表项
+    - name: 如何：部署自定义报表项
       href: ../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md
     - name: 通过表达式访问自定义程序集
       href: ../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md
@@ -1912,7 +1912,7 @@
       href: ../reporting-services/custom-assemblies/asserting-permissions-in-custom-assemblies.md
     - name: 部署自定义程序集
       href: ../reporting-services/custom-assemblies/deploying-a-custom-assembly.md
-    - name: 如何调试自定义程序集
+    - name: 如何：调试自定义程序集
       href: ../reporting-services/custom-assemblies/how-to-debug-custom-assemblies.md
     - name: 初始化自定义程序集对象
       href: ../reporting-services/custom-assemblies/initializing-custom-assembly-objects.md

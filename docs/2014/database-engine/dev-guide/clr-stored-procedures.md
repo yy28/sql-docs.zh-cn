@@ -7,7 +7,6 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: reference
 dev_langs:
-- TSQL
 - VB
 - CSharp
 helpviewer_keywords:
@@ -21,12 +20,12 @@ ms.assetid: bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9f509b2a2544c67c9113bc700b7d98bfd4a24024
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e7e79307e2c913841ae1e017e6a5c180dfd55b6b
+ms.sourcegitcommit: 9b8b71cab6e340f2cb171397f66796d7a76c497e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62753811"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77213963"
 ---
 # <a name="clr-stored-procedures"></a>CLR 存储过程
   存储过程是不能用于标量表达式的例程。 与标量函数不同，存储过程可以向客户端返回表格结果和消息、调用数据定义语言 (DDL) 和数据操作语言 (DML) 语句并返回输出参数。 有关 CLR 集成的优点以及如何在托管代码和[!INCLUDE[tsql](../../includes/tsql-md.md)]之间进行选择的信息，请参阅[clr 集成概述](../../relational-databases/clr-integration/clr-integration-overview.md)。  
@@ -50,9 +49,9 @@ ms.locfileid: "62753811"
   
 ### <a name="output-parameters-and-clr-stored-procedures"></a>OUTPUT 参数和 CLR 存储过程  
  与 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程一样，信息可通过使用 OUTPUT 参数从 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 存储过程返回。 用于创建 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] DML 语法与用于创建使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 撰写的存储过程相同。 
-  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 类中实现代码的相应参数应将传址调用参数用作参数。 请注意，Visual Basic 不支持采用与 Visual C# 的相同方法输出参数。 必须按引用指定参数，并应用\<Out （） > 特性来表示 OUTPUT 参数，如下所示：  
+  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 类中实现代码的相应参数应将传址调用参数用作参数。 请注意，Visual Basic 不支持采用与 c # 相同的方式来输出参数。 必须按引用指定参数，并应用\<Out （） > 特性来表示 OUTPUT 参数，如下所示：  
   
-```  
+```vb
 Imports System.Runtime.InteropServices  
 ...  
 Public Shared Sub PriceSum ( <Out()> ByRef value As SqlInt32)  
@@ -60,9 +59,7 @@ Public Shared Sub PriceSum ( <Out()> ByRef value As SqlInt32)
   
  以下示例显示通过 OUTPUT 参数返回信息的存储过程。  
   
- C#  
-  
-```  
+```csharp  
 using System;  
 using System.Data.SqlTypes;  
 using System.Data.SqlClient;  
@@ -92,9 +89,7 @@ public class StoredProcedures
 }  
 ```  
   
- Visual Basic  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -130,7 +125,7 @@ End Class
   
  在服务器上生成并创建了包含上述 CLR 存储过程的程序集后，将使用以下[!INCLUDE[tsql](../../includes/tsql-md.md)]方法在数据库中创建该过程，并将*SUM*指定为输出参数。  
   
-```  
+```sql
 CREATE PROCEDURE PriceSum (@sum int OUTPUT)  
 AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum  
 -- if StoredProcedures class was inside a namespace, called MyNS,  
@@ -152,9 +147,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 ###### <a name="returning-tabular-results"></a>返回表格结果  
  若要将查询的结果直接发送到客户端，请对 `Execute` 对象使用 `SqlPipe` 方法的重载之一。 这是将结果返回到客户端的最高效方法，因为数据不必复制到托管内存即传输到网络缓冲区。 例如：  
   
- [C#]  
-  
-```  
+```csharp  
 using System;  
 using System.Data;  
 using System.Data.SqlTypes;  
@@ -179,9 +172,7 @@ public class StoredProcedures
 }  
 ```  
   
- [Visual Basic]  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -232,10 +223,8 @@ public class StoredProcedures
    }  
 }  
 ```  
-  
- [Visual Basic]  
-  
-```  
+ 
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -289,9 +278,7 @@ public class StoredProcedures
 }  
 ```  
   
- [Visual Basic]  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -341,9 +328,7 @@ public class StoredProcedures
 }  
 ```  
   
- [Visual Basic]  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -374,7 +359,7 @@ End Class
   
  请注意，这些示例只用于说明用途。 对于执行大量计算的应用程序，CLR 函数比简单的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句更合适。 与前一示例几乎等效的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程是：  
   
-```  
+```sql
 CREATE PROCEDURE HelloWorld() AS  
 BEGIN  
 PRINT('Hello world!')  
@@ -387,13 +372,13 @@ END;
   
  如果以上 Visual C# 代码保存在 MyFirstUdp.cs 文件中并且使用以下语句编译：  
   
-```  
+```console
 csc /t:library /out:MyFirstUdp.dll MyFirstUdp.cs   
 ```  
   
  或者，如果以上 Visual Basic 代码保存在 MyFirstUdp.vb 文件中并且使用以下语句编译：  
   
-```  
+```console
 vbc /t:library /out:MyFirstUdp.dll MyFirstUdp.vb   
 ```  
   
@@ -402,7 +387,7 @@ vbc /t:library /out:MyFirstUdp.dll MyFirstUdp.vb
   
  可以使用以下 DDL 注册最终生成的程序集，以及调用的入口点：  
   
-```  
+```sql
 CREATE ASSEMBLY MyFirstUdp FROM 'C:\Programming\MyFirstUdp.dll';  
 CREATE PROCEDURE HelloWorld  
 AS EXTERNAL NAME MyFirstUdp.StoredProcedures.HelloWorld;  

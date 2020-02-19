@@ -1,7 +1,7 @@
 ---
 title: sys.databases （Transact-sql） |Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 02/12/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: 066bd9ac-6554-4297-88fe-d740de1f94a8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d4d307ea18127586ac46b0f6afb973ef62cf6ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3208f538a1c1e111913c0808a8213743fed41bcc
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74761450"
+ms.lasthandoff: 02/13/2020
+ms.locfileid: "77179288"
 ---
 # <a name="sysindexes-transact-sql"></a>sys.indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "74761450"
 |**allow_row_locks**|**bit**|1 = 索引允许行锁。<br /><br /> 0 = 索引不允许行锁。<br /><br /> 对于聚集列存储索引始终为 0。|  
 |**allow_page_locks**|**bit**|1 = 索引允许页锁。<br /><br /> 0 = 索引不允许页锁。<br /><br /> 对于聚集列存储索引始终为 0。|  
 |**has_filter**|**bit**|1 = 索引具有一个筛选器，且仅包含符合筛选器定义的行。<br /><br /> 0 = 索引不具有筛选器。|  
-|**filter_definition**|**nvarchar(max)**|包含在筛选索引中的行子集的表达式。<br /><br /> 对于堆或非筛选索引，其值为 NULL。|  
+|**filter_definition**|**nvarchar(max)**|包含在筛选索引中的行子集的表达式。<br /><br /> 对于堆、非筛选索引或表的权限不足，则为 NULL。|  
 |**auto_created**|**bit**|1 = 自动优化创建索引。<br /><br />0 = 索引是由用户创建的。
 |**optimize_for_sequential_key**|**bit**|1 = 索引已启用上一页插入优化。<br><br>0 = 默认值。 索引已禁用上一页插入优化。|
 

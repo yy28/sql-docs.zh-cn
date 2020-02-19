@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 10/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: sstein
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -19,13 +18,14 @@ helpviewer_keywords:
 ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
 author: pmasl
 ms.author: pelopes
+ms.reviewer: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 20257eb1a91b35dd45e1b4fc79f84533c64b2561
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 16939894f9e43e4538a8d56e76632af891d9714a
+ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74307998"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77429011"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
@@ -40,9 +40,9 @@ ms.locfileid: "74307998"
 |start_time|**datetime**|请求到达时的时间戳。 不可为 null。|  
 |status|**nvarchar （30）**|请求的状态。 可以是以下值之一：<br /><br /> 背景<br />正在运行<br />可运行<br />Sleeping<br />Suspended<br /><br /> 不可为 null。|  
 |command|**nvarchar （32）**|标识正在处理的命令的当前类型。 常用命令类型包括：<br /><br /> SELECT<br />INSERT<br />UPDATE<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> 可通过结合使用 sys.dm_exec_sql_text 和与请求对应的 sql_handle 检索请求的文本。 内部系统进程将基于它们所执行任务的类型来设置该命令。 这些任务可以包括：<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> 不可为 null。|  
-|sql_handle|**varbinary （64）**|是唯一标识查询所属的批处理或存储过程的标记。 可以为 Null。|  
-|statement_start_offset|**int**|在当前正在执行的批处理或存储过程中，指示当前正在执行的语句开始位置的字符数。 可以与 sql_handle、statement_end_offset 和 sys.dm_exec_sql_text 动态管理函数一起使用，以便为请求检索当前正在执行的语句。 可以为 Null。|  
-|statement_end_offset|**int**|在当前正在执行的批处理或存储过程中，指示当前正在执行的语句结束位置的字符数。 可以与 sql_handle、statement_end_offset 和 sys.dm_exec_sql_text 动态管理函数一起使用，以便为请求检索当前正在执行的语句。 可以为 Null。|  
+|sql_handle|**varbinary （64）**|是唯一标识查询所属的批处理或存储过程的标记。 可以为 Null。| 
+|statement_start_offset|**int**|指示当前正在执行的批处理或持久化对象当前正在执行的语句的开始位置（以字节为单位），从0开始。 可以与`sql_handle`、 `statement_end_offset`和`sys.dm_exec_sql_text`动态管理函数一起使用，以检索请求的当前正在执行的语句。 可以为 Null。|  
+|statement_end_offset|**int**|指示当前正在执行的批处理或持久化对象当前正在执行的语句的结束位置（以字节为单位，从0开始）。 可以与`sql_handle`、 `statement_start_offset`和`sys.dm_exec_sql_text`动态管理函数一起使用，以检索请求的当前正在执行的语句。 可以为 Null。|  
 |plan_handle|**varbinary （64）**|是一个标记，用于为当前正在执行的批处理唯一标识查询执行计划。 可以为 Null。|  
 |database_id|**smallint**|对其执行请求的数据库的 ID。 不可为 null。|  
 |user_id|**int**|提交请求的用户的 ID。 不可为 null。|  

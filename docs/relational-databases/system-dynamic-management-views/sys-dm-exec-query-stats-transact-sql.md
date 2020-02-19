@@ -20,12 +20,12 @@ ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a4fba10bd080c4b97cd38a7330611bed51f3d225
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 23fd1a0c896436dad27ab771e2ed04c775938091
+ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73982654"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77429008"
 ---
 # <a name="sysdm_exec_query_stats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "73982654"
 |-----------------|---------------|-----------------|  
 |**sql_handle**|**varbinary （64）**  |是唯一标识查询所属的批处理或存储过程的标记。<br /><br /> **sql_handle**与**statement_start_offset**和**statement_end_offset**一起使用，可以通过调用**sys. dm_exec_sql_text**动态管理函数来检索查询的 sql 文本。|  
 |**statement_start_offset**|**int**|指示行所说明的查询在其批查询或持久化对象文本中的开始位置（以字节为单位，从 0 开始）。|  
-|**statement_end_offset**|**int**|指示行所说明的查询在其批查询或持久化对象文本中的结束位置（以字节为单位，从 0 开始）。 对于之前[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]的版本，值-1 指示批处理的结束。 尾随注释不再包括在内。|  
+|**statement_end_offset**|**int**|指示行所说明的查询在其批查询或持久化对象文本中的结束位置（以字节为单位，从 0 开始）。 对于之前[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]的版本，值-1 指示批处理的结束。 不再包含尾随的注释。|  
 |**plan_generation_num**|**bigint**|可用于在重新编译后区分不同计划实例的序列号。|  
 |**plan_handle**|**varbinary （64）**|是一个标记，用于唯一标识已执行并且其计划驻留在计划缓存中或当前正在执行的批处理的查询执行计划。 可以将此值传递给 [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) 动态管理函数来获取查询计划。<br /><br /> 当本机编译的存储过程查询内存优化的表时，此项将始终为 0x000。|  
 |**creation_time**|**datetime**|编译计划的时间。|  
