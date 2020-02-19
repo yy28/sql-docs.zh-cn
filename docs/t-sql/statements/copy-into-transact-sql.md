@@ -2,7 +2,7 @@
 title: COPY INTO (Transact-SQL)（预览版）
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: 在 Azure SQL 数据仓库中使用 COPY 语句从外部存储帐户加载数据。
-ms.date: 11/07/2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 24cfced04b8d2d0366d2058c81bcedfd9b00d2f9
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 4e42c60e945512c09b88b19b18b6f24ce45b46dc
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74055135"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76536643"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL)（预览版）
 
@@ -65,7 +65,7 @@ WITH
 如果执行操作的用户的默认架构是指定表的架构，则该参数是可选的。 如果未指定 *schema*，并且执行复制操作的用户的默认架构不同于指定表的架构，则将取消复制，并返回一条错误消息。  
 
 *table_name*  
-要将数据复制到其中的表的名称。 目标表可以是临时表或永久表。
+要将数据复制到其中的表的名称。 目标表可以是临时或永久表，并且必须已存在于数据库中。 
 
 *(column_list)*  
 包含一列或多列的可选列表，用于将源数据字段映射到目标表列以加载数据。 必须用括号将 column_list 括起来，并且用逗号进行分隔  。 列列表的格式如下：
@@ -130,8 +130,8 @@ WITH
 
 使用 AAD 或公共存储帐户进行身份验证时，无需指定 CREDENTIAL。 
 
-- 使用共享访问签名 (SAS) 进行身份验证 *IDENTITY：一个值为“共享访问签名”的常量*
-  *SECRET：* [*共享访问签名*](/azure/storage/common/storage-sas-overview)*对存储帐户中的资源提供委托访问。*
+- 使用共享访问签名 (SAS) 进行身份验证 IDENTITY：  一个值为“共享访问签名”的常量
+  *SECRET：* [共享访问签名  ](/azure/storage/common/storage-sas-overview)对存储帐户中的资源提供委托访问  。
   所需的最低权限：READ 和 LIST
 
 - 使用[*服务主体*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)进行身份验证
@@ -164,7 +164,7 @@ WITH
   
 - 使用共享访问签名 (SAS) 进行身份验证
   - *IDENTITY：一个值为“共享访问签名”的常量*
-  - *SECRET：* [*共享访问签名*](/azure/storage/common/storage-sas-overview)*对存储帐户中的资源提供委托访问。*
+  - *SECRET：[共享访问签名](/azure/storage/common/storage-sas-overview)对存储帐户中的资源提供委托访问*   。
   - 所需的最低权限：READ、LIST、WRITE、CREATE、DELETE
   
 - 使用[*服务主体*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)进行身份验证
@@ -214,13 +214,13 @@ WITH
 > FIELDQUOTE 字符会在有双 FIELDQUOTE（分隔符）的字符串列中进行转义。 
 
 *FIELDTERMINATOR = 'field_terminator’*</br>
-*FIELDTERMINATOR* 仅适用于 CSV。 指定将在 CSV 文件中使用的字段终止符。 字段终止符可以是多字符。 默认的字段终止符为 (,)。
+*FIELDTERMINATOR* 仅适用于 CSV。 指定将在 CSV 文件中使用的字段终止符。 可使用十六进制表示法指定字段终止符。 字段终止符可以是多字符。 默认的字段终止符为 (,)。
 有关详细信息，请参阅[指定字段终止符和行终止符 (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md?view=sql-server-2017)。
 
 ROW TERMINATOR = 'row_terminator'</br>
-*ROW TERMINATOR* 仅适用于 CSV。 指定将在 CSV 文件中使用的行终止符。 行终止符可以是多字符。 默认情况下，行终止符为 \r\n。 
+*ROW TERMINATOR* 仅适用于 CSV。 指定将在 CSV 文件中使用的行终止符。 可使用十六进制表示法指定行终止符。 行终止符可以是多字符。 默认情况下，行终止符为 \r\n。 
 
-当指定 \n（换行符）以生成 \r\n 时，COPY 命令会为 \r 字符加上前缀。 若要仅指定 \n 字符，请使用十六进制 (0x0A)。 以十六进制指定多字符行终止符时，请勿在每个字符之间指定 0x。
+当指定 \n（换行符）以生成 \r\n 时，COPY 命令会为 \r 字符加上前缀。 要仅指定 \n 字符，请使用十六进制表示法 (0x0A)。 以十六进制指定多字符行终止符时，请勿在每个字符之间指定 0x。
 
 有关如何指定行终止符的其他指导，请查看以下[文档](https://docs.microsoft.com/sql/relational-databases/import-export/specify-field-and-row-terminators-sql-server?view=sql-server-2017#using-row-terminators)。
 
@@ -259,7 +259,7 @@ IDENTITY_INSERT 指定是否将导入数据文件中的标识值用于标识列�
 下面的示例将从公共存储帐户加载数据，这是 COPY 命令最简单的一种形式。 在此示例中，COPY 语句的默认值与行项 csv 文件的格式匹配。
 
 ```sql
-COPY INTO dbo.[lineitem] FROM 'https://unsecureaccount.blob.core.windows.net/customerdatasets/folder1/lineitem.csv’
+COPY INTO dbo.[lineitem] FROM 'https://unsecureaccount.blob.core.windows.net/customerdatasets/folder1/lineitem.csv'
 ```
 
 COPY 命令的默认值为：
@@ -306,7 +306,7 @@ WITH (
     DATEFORMAT = 'ymd',
     MAXERRORS = 10,
     ERRORFILE = '/errorsfolder/',--path starting from the storage container
-    IDENTITY_INSERT = ‘ON’
+    IDENTITY_INSERT = 'ON'
 )
 ```
 
@@ -357,6 +357,46 @@ WITH (
     FIELDTERMINATOR = '|'
 )
 ```
+
+## <a name="faq"></a>常见问题解答
+
+### <a name="what-is-the-performance-of-the-copy-command-compared-to-polybase"></a>与 PolyBase 相比，COPY 命令的性能如何？
+COPY 命令功能正式发布后，将具有更高的性能。 为了在公共预览期间获得最佳加载性能，请考虑在加载 CSV 时将你的输入拆分为多个文件。 目前，使用 INSERT SELECT 时，COPY 和 PolyBase 在性能方面不相上下。 
+
+### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-csv-files"></a>加载 CSV 文件时，COPY 命令的文件拆分指导是什么？
+下表概述了文件数量指导。 一旦达到推荐的文件数量，便能获得更大的文件，性能也就越高。 COPY 命令正式发布后，无需拆分未压缩的文件。 
+
+| **DWU** | **文件数** |
+| :-----: | :--------: |
+|   100   |     60     |
+|   200   |     60     |
+|   300   |     60     |
+|   400   |     60     |
+|   500   |     60     |
+|  1,000  |    120     |
+|  1,500  |    180     |
+|  2,000  |    240     |
+|  2,500  |    300     |
+|  3,000  |    360     |
+|  5,000  |    600     |
+|  6,000  |    720     |
+|  7,500  |    900     |
+| 10,000  |    1200    |
+| 15,000  |    1800    |
+| 30,000  |    3600    |
+
+
+### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-parquet-or-orc-files"></a>加载 Parquet 或 ORC 文件时，COPY 命令的文件拆分指导是什么？
+不需要拆分 Parquet 或 ORC 文件，因为 COPY 命令会自动拆分这些文件。 为了获取再最佳性能，Azure 存储帐户中的 Parquet 或 ORC 文件应为 256 MB 或更大。 
+
+### <a name="when-will-the-copy-command-be-generally-available"></a>COPY 命令什么时候正式发布？
+COPY 命令会在本日历年 (2020) 末正式发布。 
+
+### <a name="are-there-any-known-issues-with-the-copy-command"></a>COPY 命令是否存在已知问题？
+
+- (n)varchar(max) 之类的 LOB 支持在 COPY 语句中不可用。 此功能将在明年年初推出。
+
+请向以下通讯组列表发送反馈和问题：sqldwcopypreview@service.microsoft.com
 
 ## <a name="see-also"></a>另请参阅  
 

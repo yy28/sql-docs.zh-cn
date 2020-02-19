@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: c0414147-7ffe-4f9a-908c-71c1b5201584
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 9bf49c5892dd22b417df7aeec50f20c0f81b410b
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: b3d02391f8a0423b46e18298b997e0de3623651b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75322064"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76516508"
 ---
 # <a name="configure-predefined-replication-alerts-sql-server-management-studio"></a>配置预定义的复制警报 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md.md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   复制提供了下列预定义警报，可以配置这些警报以响应复制事件：  
   
 -   **复制: 代理成功**  
@@ -60,7 +60,7 @@ ms.locfileid: "75322064"
   
     -   在 **“响应”** 页上，指定是否应发送电子邮件和/或是否应执行作业。  
   
-         如果警报是“复制：订阅服务器未通过数据验证”，可以指定复制为此警报提供的响应作业：  选择“执行作业”，再单击浏览按钮（“...”）。   在 **“定位作业”** 对话框中，单击 **“浏览”** 。 在 **“查找对象”** 对话框中，选择 **“重新初始化未通过数据验证的订阅”** 。 在两个打开的对话框中，单击 **“确定”** 。 作业执行时，它将把远程过程调用 (RPC) 用于重新初始化订阅的存储过程。 如果发布服务器使用远程分发服务器，您必须在发布服务器上定义远程服务器登录名，以便可以从分发服务器到发布服务器进行 RPC。  
+         如果警报是“复制：  订阅服务器未通过数据验证”，可以指定复制为此警报提供的响应作业：选择“执行作业”，再单击浏览按钮（“...”）。   在 **“定位作业”** 对话框中，单击 **“浏览”** 。 在 **“查找对象”** 对话框中，选择 **“重新初始化未通过数据验证的订阅”** 。 在两个打开的对话框中，单击 **“确定”** 。 作业执行时，它将把远程过程调用 (RPC) 用于重新初始化订阅的存储过程。 如果发布服务器使用远程分发服务器，您必须在发布服务器上定义远程服务器登录名，以便可以从分发服务器到发布服务器进行 RPC。  
   
     -   在 **“选项”** 页上，自定义响应文本。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "75322064"
   
     -   在 **“响应”** 页上，指定是否应发送电子邮件和/或是否应执行作业。  
   
-         如果警报是“复制：订阅服务器未通过数据验证”，可以指定复制为此警报提供的响应作业：  选择“执行作业”，再单击浏览按钮（“...”）。   在 **“定位作业”** 对话框中，单击 **“浏览”** 。 在 **“查找对象”** 对话框中，选择 **“重新初始化未通过数据验证的订阅”** 。 在两个打开的对话框中，单击 **“确定”** 。 作业执行时，它将把远程过程调用 (RPC) 用于重新初始化订阅的存储过程。 如果发布服务器使用远程分发服务器，您必须在发布服务器上定义远程服务器登录名，以便可以从分发服务器到发布服务器进行 RPC。  
+         如果警报是“复制：  订阅服务器未通过数据验证”，可以指定复制为此警报提供的响应作业：选择“执行作业”，再单击浏览按钮（“...”）。   在 **“定位作业”** 对话框中，单击 **“浏览”** 。 在 **“查找对象”** 对话框中，选择 **“重新初始化未通过数据验证的订阅”** 。 在两个打开的对话框中，单击 **“确定”** 。 作业执行时，它将把远程过程调用 (RPC) 用于重新初始化订阅的存储过程。 如果发布服务器使用远程分发服务器，您必须在发布服务器上定义远程服务器登录名，以便可以从分发服务器到发布服务器进行 RPC。  
   
     -   在 **“选项”** 页上，自定义响应文本。  
   
