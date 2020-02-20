@@ -21,7 +21,7 @@
           href: ../connect/ado-net/step-2-create-sql-database-ado-net-development.md
         - name: 步骤 3：使用 ADO.NET 连接到 SQL 的概念证明
           href: ../connect/ado-net/step-3-connect-sql-ado-net.md
-        - name: 步骤 4：使用 ADO.NET 实现对 SQL 的弹性连接
+        - name: 步骤 4：使用 ADO.NET 弹性连接到 SQL
           href: ../connect/ado-net/step-4-connect-resiliently-sql-ado-net.md
     - name: SqlClient 驱动程序概述
       href: ../connect/ado-net/overview-sqlclient-driver.md
@@ -2630,6 +2630,9 @@
           href: ../connect/jdbc/handling-metadata-with-the-jdbc-driver.md
         - name: 对 JDBC 驱动程序使用始终加密
           href: ../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md
+          items:
+            - name: 具有安全 Enclave 的 Always Encrypted
+              href: ../connect/jdbc/always-encrypted-with-secure-enclaves.md
         - name: 指南文章
           items:
             - name: 使用 SQL 语句
@@ -3036,7 +3039,7 @@
                     - name: 基本 ODBC 应用程序步骤
                       href: ../odbc/reference/develop-app/basic-odbc-application-steps.md
                       items:
-                        - name: 步骤 1：连接数据源
+                        - name: 步骤 1：连接到数据源
                           href: ../odbc/reference/develop-app/step-1-connect-to-the-data-source.md
                         - name: 步骤 2：初始化应用程序
                           href: ../odbc/reference/develop-app/step-2-initialize-the-application.md
@@ -4110,19 +4113,19 @@
                         - name: 将数据从 SQL 转换为 C 数据类型
                           href: ../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md
                           items:
-                            - name: 从 SQL 到 C：二进制
+                            - name: 从 SQL 到 C：Binary
                               href: ../odbc/reference/appendixes/sql-to-c-binary.md
-                            - name: 从 SQL 到 C：位
+                            - name: 从 SQL 到 C：bit
                               href: ../odbc/reference/appendixes/sql-to-c-bit.md
                             - name: 从 SQL 到 C：字符
                               href: ../odbc/reference/appendixes/sql-to-c-character.md
-                            - name: 从 SQL 到 C：日期
+                            - name: 从 SQL 到 C：Date
                               href: ../odbc/reference/appendixes/sql-to-c-date.md
                             - name: 从 SQL 到 C：日期时间间隔
                               href: ../odbc/reference/appendixes/sql-to-c-day-time-intervals.md
                             - name: 从 SQL 到 C：GUID
                               href: ../odbc/reference/appendixes/sql-to-c-guid.md
-                            - name: 从 SQL 到 C：数字
+                            - name: 从 SQL 到 C：Numeric
                               href: ../odbc/reference/appendixes/sql-to-c-numeric.md
                             - name: 从 SQL 到 C：时间戳
                               href: ../odbc/reference/appendixes/sql-to-c-timestamp.md
@@ -4135,19 +4138,19 @@
                         - name: 将数据从 C 转换为 SQL 数据类型
                           href: ../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md
                           items:
-                            - name: 从 C 到 SQL：二进制
+                            - name: 从 C 到 SQL：Binary
                               href: ../odbc/reference/appendixes/c-to-sql-binary.md
-                            - name: 从 C 到 SQL：位
+                            - name: 从 C 到 SQL：bit
                               href: ../odbc/reference/appendixes/c-to-sql-bit.md
                             - name: 从 C 到 SQL：字符
                               href: ../odbc/reference/appendixes/c-to-sql-character.md
-                            - name: 从 C 到 SQL：日期
+                            - name: 从 C 到 SQL：Date
                               href: ../odbc/reference/appendixes/c-to-sql-date.md
                             - name: 从 C 到 SQL：日期时间间隔
                               href: ../odbc/reference/appendixes/c-to-sql-day-time-intervals.md
                             - name: 从 C 到 SQL：GUID
                               href: ../odbc/reference/appendixes/c-to-sql-guid.md
-                            - name: 从 C 到 SQL：数字
+                            - name: 从 C 到 SQL：Numeric
                               href: ../odbc/reference/appendixes/c-to-sql-numeric.md
                             - name: 从 C 到 SQL：时间戳
                               href: ../odbc/reference/appendixes/c-to-sql-timestamp.md
@@ -5454,9 +5457,9 @@
           href: ../connect/php/step-1-configure-development-environment-for-php-development.md
         - name: 步骤 2：创建用于 PHP 开发的 SQL 数据库
           href: ../connect/php/step-2-create-a-sql-database-for-php-development.md
-        - name: 第 3 步：使用 PHP 连接到 SQL Server 的概念证明
+        - name: 步骤 3：使用 PHP 连接到 SQL Server 的概念证明
           href: ../connect/php/step-3-proof-of-concept-connecting-to-sql-using-php.md
-        - name: 第 4 步：使用 PHP 弹性连接到 SQL Server
+        - name: 步骤 4：使用 PHP 弹性连接到 SQL Server
           href: ../connect/php/step-4-connect-resiliently-to-sql-with-php.md
     - name: 概述
       href: ../connect/php/overview-of-the-php-sql-driver.md
@@ -5487,7 +5490,7 @@
           items:
             - name: 如何：使用 Windows 身份验证进行连接
               href: ../connect/php/how-to-connect-using-windows-authentication.md
-            - name: 'How to: Connect Using SQL Server Authentication'
+            - name: 如何：使用 SQL Server 身份验证进行连接
               href: ../connect/php/how-to-connect-using-sql-server-authentication.md
             - name: 如何：使用 Azure Active Directory 身份验证进行连接
               href: ../connect/php/azure-active-directory.md
@@ -5495,7 +5498,7 @@
               href: ../connect/php/how-to-connect-on-a-specified-port.md
             - name: 连接池
               href: ../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md
-            - name: 如何：禁用多个活动的结果集 (MARS)
+            - name: 如何：禁用多重活动结果集 (MARS)
               href: ../connect/php/how-to-disable-multiple-active-resultsets-mars.md
             - name: 连接选项
               href: ../connect/php/connection-options.md
@@ -5582,6 +5585,10 @@
           href: ../connect/php/logging-activity.md
         - name: 在适用于 SQL Server 的 PHP 驱动程序中使用 Always Encrypted
           href: ../connect/php/using-always-encrypted-php-drivers.md
+        - name: 适用于 SQL Server 的 PHP 驱动程序中具有安全 Enclave 的 Always Encrypted
+          href: ../connect/php/always-encrypted-secure-enclaves.md
+        - name: 非系统区域设置
+          href: ../connect/php/non-system-locale-settings.md
         - name: 常量 (Microsoft Drivers for PHP for SQL Server)
           href: ../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md
         - name: SQLSRV 驱动程序 API 参考
@@ -5734,7 +5741,7 @@
           href: ../connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md
         - name: 步骤 2：创建用于 pyodbc Python 开发的 SQL 数据库
           href: ../connect/python/pyodbc/step-2-create-a-sql-database-for-pyodbc-python-development.md
-        - name: 步骤 3：使用 pyodbc 连接到 SQL 的概念验证
+        - name: 步骤 3：使用 pyodbc 连接到 SQL 的概念证明
           href: ../connect/python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc.md
     - name: Python SQL 驱动程序 - pymssql
       href: ../connect/python/pymssql/python-sql-driver-pymssql.md
@@ -5743,7 +5750,7 @@
           href: ../connect/python/pymssql/step-1-configure-development-environment-for-pymssql-python-development.md
         - name: 步骤 2：创建用于 pymssql Python 开发的 SQL 数据库
           href: ../connect/python/pymssql/step-2-create-a-sql-database-for-pymssql-python-development.md
-        - name: 步骤 3：使用 pymssql 连接到 SQL 的概念验证
+        - name: 步骤 3：使用 pymssql 连接到 SQL 的概念证明
           href: ../connect/python/pymssql/step-3-proof-of-concept-connecting-to-sql-using-pymssql.md
 - name: Ruby
   items:
@@ -7554,7 +7561,7 @@
               href: ../ado/reference/adox-api/indexnulls-property-example-vb.md
             - name: 项 Append 方法、项 Type、RelatedColumn、RelatedTable 和 UpdateRule 属性示例 (VB)
               href: ../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md
-            - name: ADOX 代码示例：NumericScale 和 Precision 属性示例 (VB)
+            - name: ADO 代码示例：NumericScale 和 Precision 属性示例 (VB)
               href: ../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md
             - name: 参数集合、Command 属性示例 (VB)
               href: ../ado/reference/adox-api/parameters-collection-command-property-example-vb.md
@@ -7623,7 +7630,7 @@
               href: ../ado/reference/adox-api/parentcatalog-property-example-vc.md
             - name: PrimaryKey 和 Unique 属性示例 (VC++)
               href: ../ado/reference/adox-api/primarykey-and-unique-properties-example-vc.md
-    - name: 已弃用：RDS API 参考
+    - name: 不推荐使用：RDS API 参考
       href: ../ado/reference/rds-api/rds-api-reference.md
     - name: RDS 对象
       href: ../ado/reference/rds-api/rds-objects.md

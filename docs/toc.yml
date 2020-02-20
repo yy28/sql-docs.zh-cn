@@ -130,6 +130,8 @@
           items:
             - name: SQL Server 主实例
               href: big-data-cluster/configure-sql-server-master-instance.md
+            - name: 配置 Apache Spark 和 Apache Hadoop
+              href: big-data-cluster/configure-spark-hdfs.md
         - name: 数据虚拟化
           items:
             - name: 关系数据
@@ -461,6 +463,8 @@
                   href: relational-databases/backup-restore/transaction-log-backups-sql-server.md
                 - name: 系统数据库
                   href: relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md
+                - name: VSS 和 SQL 编写器
+                  href: relational-databases/backup-restore/sql-server-vss-writer-backup-guide.md
             - name: 配置
               items:
                 - name: 压缩
@@ -907,11 +911,11 @@
               items:
                 - name: 监视可用性组的性能
                   href: database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups.md
-                - name: 故障排除：可用性组超过了 RPO
+                - name: 排除故障：可用性组超过了 RPO
                   href: database-engine/availability-groups/windows/troubleshoot-availability-group-exceeded-rpo.md
-                - name: 故障排除：可用性组超过了 RTO
+                - name: 排除故障：可用性组超过了 RTO
                   href: database-engine/availability-groups/windows/troubleshoot-availability-group-exceeded-rto.md
-                - name: 疑难解答：主要副本的更改未反映在次要副本上
+                - name: 排除故障：主要副本的更改未反映在次要副本中
                   href: database-engine/availability-groups/windows/troubleshoot-primary-changes-not-reflected-on-secondary.md
                 - name: 有用的故障排除工具
                   href: database-engine/availability-groups/windows/useful-tools-for-troubleshooting.md
@@ -1985,7 +1989,7 @@
                   href: relational-databases/xml/example-retrieving-product-model-information-as-xml.md
                 - name: 示例：指定带有 ELEMENTS 指令的 XSINIL
                   href: relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md
-                - name: 示例：使用 XMLDATA 和 XMLSCHEMA 选项作为结果请求架构
+                - name: 示例：使用 XMLDATA 和 XMLSCHEMA 选项请求架构作为结果
                   href: relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md
                 - name: 示例：检索二进制数据
                   href: relational-databases/xml/example-retrieving-binary-data.md
@@ -1993,7 +1997,7 @@
                   href: relational-databases/xml/example-renaming-the-row-element.md
                 - name: 示例：为 FOR XML 生成的 XML 指定根元素
                   href: relational-databases/xml/example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md
-                - name: 示例：查询 XML 类型的列
+                - name: 示例：查询 XMLType 列
                   href: relational-databases/xml/example-querying-xmltype-columns.md
             - name: AUTO 模式
               href: relational-databases/xml/use-auto-mode-with-for-xml.md
@@ -2007,7 +2011,7 @@
             - name: EXPLICIT 模式
               href: relational-databases/xml/use-explicit-mode-with-for-xml.md
               items:
-                - name: 示例：检索雇员信息
+                - name: 示例：检索员工信息
                   href: relational-databases/xml/example-retrieving-employee-information.md
                 - name: 示例：指定 ELEMENT 指令
                   href: relational-databases/xml/example-specifying-the-element-directive.md
@@ -2017,7 +2021,7 @@
                   href: relational-databases/xml/example-constructing-siblings-with-explicit-mode.md
                 - name: 示例：指定 ID 和 IDREF 指令
                   href: relational-databases/xml/example-specifying-the-id-and-idref-directives.md
-                - name: 示例：指定 ID 和 IDREFS 指令
+                - name: 示例：指定 ID 和 IDREF 指令
                   href: relational-databases/xml/example-specifying-the-id-and-idrefs-directives.md
                 - name: 示例：指定 HIDE 指令
                   href: relational-databases/xml/example-specifying-the-hide-directive.md
@@ -2725,7 +2729,7 @@
               href: relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md
             - name: 行集和游标
               href: relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md
-            - name: 在行集中重新同步行
+            - name: 重新同步行集中的行
               href: relational-databases/native-client-ole-db-rowsets/updating-data-in-rowsets-resynchronizing-rows.md
             - name: 更新行集中的数据
               href: relational-databases/native-client-ole-db-rowsets/updating-data-in-rowsets.md
@@ -2986,7 +2990,7 @@
                   href: relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-delete-a-data-source.md
                 - name: 获取 Kerberos 相互身份验证
                   href: relational-databases/native-client-odbc-how-to/get-mutual-kerberos-authentication.md
-                - name: 如何在 Geography 列中插入行
+                - name: 如何：在 Geography 列中插入行
                   href: relational-databases/native-client-odbc-how-to/how-to-insert-rows-into-geography-column-odbc.md
                 - name: 管理 text 和 image 列 - 使用 data-at-execution 列
                   href: relational-databases/native-client-odbc-how-to/managing-text-and-image-columns-use-data-at-execution-columns.md
@@ -6106,9 +6110,9 @@
             - name: 教程：使用基于策略的管理来管理服务器
               href: relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md
               items:
-                - name: 第 1 课：创建并应用默认禁用的策略
+                - name: 第 1 课：创建并应用 Off By Default 策略
                   href: relational-databases/policy-based-management/lesson-1-create-and-apply-an-off-by-default-policy.md
-                - name: 第 2 课：创建并应用命名标准策略
+                - name: 第 2 课：创建并应用“命名标准”策略
                   href: relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md
             - name: 参考
               items:
@@ -7067,7 +7071,7 @@
               items:
                 - name: 连接 MDS 存储库
                   href: master-data-services/microsoft-excel-add-in/connect-to-an-mds-repository-mds-add-in-for-excel.md
-            - name: 'Overview: Exporting Data to Excel (MDS Add-in for Excel)'
+            - name: 概述：将数据导出到 Excel (MDS Add-in for Excel)
               href: master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md
               items:
                 - name: 导出前筛选数据
@@ -7083,7 +7087,7 @@
                   href: master-data-services/microsoft-excel-add-in/email-a-shortcut-query-file-mds-add-in-for-excel.md
                 - name: 刷新数据
                   href: master-data-services/microsoft-excel-add-in/refreshing-data-mds-add-in-for-excel.md
-            - name: 概述：从 Excel（用于 Excel 的 MDS 外接程序）导入数据
+            - name: 概述：从 Excel 导入数据 (MDS Add-in for Excel)
               href: master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md
               items:
                 - name: 将数据从 Excel 导入 Master Data Services
@@ -7329,7 +7333,7 @@
               href: master-data-services/create-a-collection-master-data-services.md
             - name: 将成员添加到集合
               href: master-data-services/add-members-to-a-collection-master-data-services.md
-        - name: 概述：导出数据
+        - name: 概述：Exporting Data
           href: master-data-services/overview-exporting-data-master-data-services.md
           items:
             - name: 创建订阅视图以导出数据
@@ -7525,17 +7529,17 @@
                       href: relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md
                 - name: 轮换 Always Encrypted 密钥
                   items:
-                    - name: 使用 SSMS 轮换 Always Encrypted 密钥
+                    - name: SQL Server Management Studio (SSMS)
                       href: relational-databases/security/encryption/rotate-always-encrypted-keys-using-ssms.md
-                    - name: 使用 PowerShell 轮换 Always Encrypted 密钥
+                    - name: PowerShell
                       href: relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md
                 - name: 使用 Always Encrypted 配置列
                   items:
-                    - name: 使用 Always Encrypted 向导配置列加密
+                    - name: 向导
                       href: relational-databases/security/encryption/always-encrypted-wizard.md
-                    - name: 通过 PowerShell 配置使用 Always Encrypted 的列加密
+                    - name: PowerShell
                       href: relational-databases/security/encryption/configure-column-encryption-using-powershell.md
-                    - name: 使用 Always Encrypted 和 DAC 包配置列加密
+                    - name: DAC 包 (DAC package)
                       href: relational-databases/security/encryption/configure-always-encrypted-using-dacpac.md
                 - name: 使用 Always Encrypted 查询列
                   items:
@@ -7543,13 +7547,13 @@
                       href: relational-databases/security/encryption/always-encrypted-query-columns-ssms.md
                 - name: 迁移受 Always Encrypted 保护的敏感数据
                   items:
-                    - name: 导出和导入使用 Always Encrypted 的数据库
+                    - name: 导出再导入
                       href: relational-databases/security/encryption/always-encrypted-migrate-using-bacpac.md
-                    - name: 使用 Always Encrypted 备份和还原数据库
+                    - name: 备份和还原
                       href: relational-databases/security/encryption/always-encrypted-migrate-using-backup-restore.md
-                    - name: 使用导入和导出向导迁移数据
+                    - name: 通过“导入和导出”向导迁移数据
                       href: relational-databases/security/encryption/always-encrypted-migrate-using-import-export-wizard.md
-                    - name: 使用 Always Encrypted 将加密数据批量加载到列中
+                    - name: 将加密数据批量加载到列中
                       href: relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md
                 - name: 使用 Always Encrypted 开发应用程序
                   items:
@@ -7963,7 +7967,7 @@
             - name: 教程
               href: tools/dta/tutorial-database-engine-tuning-advisor.md
               items:
-                - name: 第 1 课：数据库引擎优化顾问中的基本导航
+                - name: 第 1 课：数据库引擎优化顾问基本导览
                   href: tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md
                 - name: 第 2 课：使用数据库引擎优化顾问
                   href: tools/dta/lesson-2-using-database-engine-tuning-advisor.md
@@ -8206,21 +8210,21 @@
               href: ssdt/data-tools-operations-window.md
             - name: T-SQL 编辑器选项
               href: ssdt/transact-sql-editor-options.md
-            - name: 如何创建新的数据库项目
+            - name: 如何：创建新的数据库项目
               href: ssdt/how-to-create-a-new-database-project.md
-            - name: 如何使用架构比较来比较不同数据库定义
+            - name: 如何：使用架构比较来比较不同数据库定义
               href: ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md
             - name: 如何：生成和部署到本地数据库
               href: ssdt/how-to-build-and-deploy-to-a-local-database.md
-            - name: 如何在您的项目中使用 Microsoft SQL Server 2012 对象
+            - name: 如何：在项目中使用 Microsoft SQL Server 2012 对象
               href: ssdt/how-to-use-microsoft-sql-server-2012-objects-in-your-project.md
-            - name: 如何使用 CLR 数据库对象
+            - name: 如何：使用 CLR 数据库对象
               href: ssdt/how-to-work-with-clr-database-objects.md
-            - name: 如何创建项目的快照
+            - name: 如何：创建项目的快照
               href: ssdt/how-to-create-a-snapshot-of-a-project.md
             - name: 如何：更改目标平台并发布数据库项目
               href: ssdt/how-to-change-target-platform-and-publish-a-database-project.md
-            - name: 如何：将 Visual Studio 2010 数据库项目转换为 SQL Server 数据库项目并重定向到其他平台
+            - name: 如何：将 Visual Studio 2010 数据库项目转换为 SQL Server 数据库项目并重新以不同平台为目标
               href: ssdt/how-to-convert-visual-studio-2010-database-projects-to-ssql-server-projects.md
             - name: 如何：指定预先部署或后期部署脚本
               href: ssdt/how-to-specify-predeployment-or-postdeployment-scripts.md
@@ -8234,21 +8238,21 @@
               items:
                 - name: 如何：连接到数据库并浏览现有对象
                   href: ssdt/how-to-connect-to-a-database-and-browse-existing-objects.md
-                - name: 如何使用表设计器创建数据库对象
+                - name: 如何：使用表设计器创建数据库对象
                   href: ssdt/how-to-create-database-objects-using-table-designer.md
                 - name: 如何：使用 Power Buffer 更新连接的数据库
                   href: ssdt/how-to-update-a-connected-database-with-power-buffer.md
                 - name: “筛选和排序”对话框
                   href: ssdt/filter-and-sort-dialog-box.md
-                - name: 如何使用查询创建新的数据库对象
+                - name: 如何：使用查询创建新的数据库对象
                   href: ssdt/how-to-create-new-database-objects-using-queries.md
-                - name: 如何使用查询编辑现有表
+                - name: 如何：使用查询编辑现有表
                   href: ssdt/how-to-edit-an-existing-table-using-queries.md
                 - name: 如何：查看和编辑表中的数据
                   href: ssdt/how-to-view-and-edit-data-in-a-table.md
                 - name: 如何：删除对象和解析依赖关系
                   href: ssdt/how-to-delete-objects-and-resolve-dependencies.md
-                - name: 如何克隆现有数据库
+                - name: 如何：克隆现有数据库
                   href: ssdt/how-to-clone-an-existing-database.md
                 - name: 提取、发布和注册 .dacpac 文件
                   href: ssdt/extract-publish-and-register-dacpac-files.md
@@ -8263,13 +8267,13 @@
                   href: ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md
                 - name: 如何：显示 T-SQL 脚本的大纲并向 Transact-SQL 脚本添加代码片段
                   href: ssdt/how-to-outline-and-add-snippets-to-transact-sql-script.md
-                - name: 如何在脚本之间导航
+                - name: 如何：在脚本之间导航
                   href: ssdt/how-to-navigate-between-scripts.md
                 - name: 如何：使用重命名和重构更改数据库对象
                   href: ssdt/how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects.md
-                - name: 如何执行部分查询
+                - name: 如何：执行部分查询
                   href: ssdt/how-to-execute-a-partial-query.md
-                - name: 如何调试存储过程
+                - name: 如何：调试存储过程
                   href: ssdt/how-to-debug-stored-procedures.md
                 - name: 分析脚本性能
                   href: ssdt/analyze-script-performance.md
@@ -8278,7 +8282,7 @@
               items:
                 - name: 如何：使用表设计器管理表和关系
                   href: ssdt/how-to-use-the-table-designer-to-manage-tables-and-relationships.md
-                - name: 如何修复错误
+                - name: 如何：修复错误
                   href: ssdt/how-to-fix-errors.md
             - name: 使用 SQL Server 单元测试验证数据库代码
               href: ssdt/verifying-database-code-by-using-sql-server-unit-tests.md
@@ -8302,7 +8306,7 @@
                       href: ssdt/how-to-create-an-empty-sql-server-unit-test.md
                     - name: 如何：为函数、触发器和存储过程创建 SQL Server 单元测试
                       href: ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md
-                    - name: 如何：向 SQL Server 单元测试中添加条件
+                    - name: 如何：向 SQL Server 单元测试添加测试条件
                       href: ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md
                     - name: 如何：打开 SQL Server 单元测试以进行编辑
                       href: ssdt/how-to-open-a-sql-server-unit-test-to-edit.md
@@ -10076,7 +10080,7 @@
       items:
         - name: 示例概述
           href: samples/sql-samples-where-are.md
-        - name: 所有 Github 示例 >>
+        - name: 所有 GitHub 示例 >>
           href: 'https://github.com/Microsoft/sql-server-samples/tree/master/samples'
         - name: AdventureWorks
           items:
@@ -10910,7 +10914,7 @@
         - name: Progress Report 事件类别
           href: relational-databases/event-classes/progress-report-event-category.md
           items:
-            - name: 'Progress Report: Online Index Operation 事件类'
+            - name: 'Progress Report:Online Index Operation 事件类'
               href: relational-databases/event-classes/progress-report-online-index-operation-event-class.md
         - name: Query Notifications 事件类别
           href: relational-databases/event-classes/query-notifications-event-category.md
@@ -11073,25 +11077,25 @@
               href: relational-databases/event-classes/dtctransaction-event-class.md
             - name: SQLTransaction 事件类
               href: relational-databases/event-classes/sqltransaction-event-class.md
-            - name: 'TM: Begin Tran Completed 事件类'
+            - name: 'TM:Begin Tran Completed 事件类'
               href: relational-databases/event-classes/tm-begin-tran-completed-event-class.md
-            - name: 'TM: Begin Tran Starting 事件类'
+            - name: 'TM:Begin Tran Starting 事件类'
               href: relational-databases/event-classes/tm-begin-tran-starting-event-class.md
-            - name: 'TM: Commit Tran Completed 事件类'
+            - name: 'TM:Commit Tran Completed 事件类'
               href: relational-databases/event-classes/tm-commit-tran-completed-event-class.md
-            - name: 'TM: Commit Tran Starting 事件类'
+            - name: 'TM:Commit Tran Starting 事件类'
               href: relational-databases/event-classes/tm-commit-tran-starting-event-class.md
-            - name: 'TM: Promote Tran Completed 事件类'
+            - name: 'TM:Promote Tran Completed 事件类'
               href: relational-databases/event-classes/tm-promote-tran-completed-event-class.md
-            - name: 'TM: Promote Tran Starting 事件类'
+            - name: 'TM:Promote Tran Starting 事件类'
               href: relational-databases/event-classes/tm-promote-tran-starting-event-class.md
-            - name: 'TM: Rollback Tran Completed 事件类'
+            - name: 'TM:Rollback Tran Completed 事件类'
               href: relational-databases/event-classes/tm-rollback-tran-completed-event-class.md
-            - name: 'TM: Rollback Tran Starting 事件类'
+            - name: 'TM:Rollback Tran Starting 事件类'
               href: relational-databases/event-classes/tm-rollback-tran-starting-event-class.md
-            - name: 'TM: Save Tran Completed 事件类'
+            - name: 'TM:Save Tran Completed 事件类'
               href: relational-databases/event-classes/tm-save-tran-completed-event-class.md
-            - name: 'TM: Save Tran Starting 事件类'
+            - name: 'TM:Save Tran Starting 事件类'
               href: relational-databases/event-classes/tm-save-tran-starting-event-class.md
             - name: TransactionLog 事件类
               href: relational-databases/event-classes/transactionlog-event-class.md
@@ -14644,7 +14648,7 @@
               href: t-sql/data-types/getancestor-database-engine.md
             - name: GetDescendant
               href: t-sql/data-types/getdescendant-database-engine.md
-            - name: GetLevel)
+            - name: GetLevel
               href: t-sql/data-types/getlevel-database-engine.md
             - name: GetRoot
               href: t-sql/data-types/getroot-database-engine.md
