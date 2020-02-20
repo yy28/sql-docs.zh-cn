@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7720db661d90c3ff2ebec593b22a5aa638038132
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 105fa47ecaa560eace9d798a39950639ecbcb5c0
+ms.sourcegitcommit: 043c0be0ceab09434c394bf0d72aea5b7ae88cb5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844219"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76831188"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>如何使用 MSSQL Spark 连接器从 Spark 对 SQL Server 执行读写操作
 
@@ -35,11 +35,11 @@ Spark 中的大容量数据处理是一种关键大数据使用模式，之后�
 
 ## <a name="mssql-spark-connector-interface"></a>MSSQL Spark 连接器接口
 
-SQL Server 2019 为大数据群集提供 MSSQL Spark 连接器，该连接器使用 SQL Server 批量写入 API 执行 Spark 到 SQL 的写入操作  。 MSSQL Spark 连接器基于 Spark 数据源 API，并提供熟悉的 Spark JDBC 连接器接口。 有关接口参数，请参阅 [Apache Spark 文档](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html)。 MSSQL Spark 连接器以 **com.microsoft.sqlserver.jdbc.spark** 这一名称被引用。
+SQL Server 2019 为大数据群集提供 MSSQL Spark 连接器，该连接器使用 SQL Server 批量写入 API 执行 Spark 到 SQL 的写入操作。 MSSQL Spark 连接器基于 Spark 数据源 API，并提供熟悉的 Spark JDBC 连接器接口。 有关接口参数，请参阅 [Apache Spark 文档](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html)。 MSSQL Spark 连接器以 **com.microsoft.sqlserver.jdbc.spark** 这一名称被引用。
 
 下表介绍已更改或新增的接口参数：
 
-| 属性名称 | 可选 | 描述 |
+| 属性名称 | 可选 | 说明 |
 |---|---|---|
 | **isolationlevel** | 是 | 此参数描述连接的隔离级别。 MSSQL Spark 连接器的默认值为 **READ_COMMITTED** |
 
@@ -68,9 +68,9 @@ SQL Server 2019 为大数据群集提供 MSSQL Spark 连接器，该连接器使
 
 1. 启动 Azure Data Studio，并[连接到大数据群集](connect-to-big-data-cluster.md)。
 
-1. 右键单击大数据群集中的 HDFS 文件夹，然后选择“新建目录”  。 将目录命名为“spark_data”  。
+1. 右键单击大数据群集中的 HDFS 文件夹，然后选择“新建目录”。 将目录命名为“spark_data”。
 
-1. 右键单击“spark_data”目录，然后选择“上传文件”   。 上传“AdultCensusIncome.csv”文件  。
+1. 右键单击“spark_data”目录，然后选择“上传文件”。 上传“AdultCensusIncome.csv”文件。
 
    ![AdultCensusIncome CSV 文件](./media/spark-mssql-connector/spark_data.png)
 
@@ -78,10 +78,10 @@ SQL Server 2019 为大数据群集提供 MSSQL Spark 连接器，该连接器使
 
 若要演示如何将 MSSQL Spark 连接器与此数据配合使用，可下载示例笔记本，在 Azure Data Studio 中打开它，然后运行每个代码块。 有关使用笔记本的详细信息，请参阅[如何在 SQL Server 中使用笔记本](notebooks-guidance.md)。
 
-1. 从 PowerShell 或 bash 命令行运行以下命令，以下载“mssql_spark_connector.ipynb”示例笔记本  ：
+1. 从 PowerShell 或 bash 命令行运行以下命令，以下载“mssql_spark_connector_non_ad_pyspark.ipynb”示例笔记本：
 
    ```PowerShell
-   curl -o mssql_spark_connector.ipynb "https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/data-virtualization/mssql_spark_connector.ipynb"
+   curl -o mssql_spark_connector.ipynb "https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/data-virtualization/mssql_spark_connector_non_ad_pyspark.ipynb"
    ```
 
 1. 在 Azure Data Studio 中，打开示例笔记本文件。 验证它是否已连接到大数据群集的 HDFS/Spark 网关。
