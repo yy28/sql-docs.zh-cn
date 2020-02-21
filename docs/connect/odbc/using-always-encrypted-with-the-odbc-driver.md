@@ -7,13 +7,13 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
-author: MightyPen
-ms.openlocfilehash: bf15831517ebaa8646c1d6f3c080033c3a41405d
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+author: v-chojas
+ms.openlocfilehash: c140087942ebe39870316e21994b6a1169daeba0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594377"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76706270"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>在适用于 SQL Server 的 ODBC 驱动程序中使用 Always Encrypted
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -23,13 +23,13 @@ ms.locfileid: "73594377"
 - 适用于 SQL Server 的 ODBC 驱动程序 13.1
 - 适用于 SQL Server 的 ODBC 驱动程序 17
 
-### <a name="introduction"></a>简介
+### <a name="introduction"></a>介绍
 
 本文介绍如何使用 [Always Encrypted（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)或[具有安全 Enclaves 的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md) 和[适用于 SQL Server 的 ODBC 驱动程序](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)。
 
 始终加密允许客户端应用程序对敏感数据进行加密，并且永远不向 SQL Server 或 Azure SQL 数据库显示该数据或加密密钥。 启用了 Always Encrypted 的驱动程序（例如适用于 SQL Server 的 ODBC 驱动程序）通过在客户端应用程序中以透明方式对敏感数据进行加密和解密来实现此目标。 该驱动程序自动确定哪些查询参数与敏感数据库列（使用始终加密进行保护）相对应，并对这些参数的值进行加密，然后再将数据传递到 SQL Server 或 Azure SQL 数据库。 同样，该驱动程序以透明方式对查询结果中从加密数据库列检索到的数据进行解密。 具有安全 enclave 的 Always Encrypted  扩展此功能，以便对敏感数据启动更丰富的功能，同时保持数据的机密性。
 
-有关详细信息，请参阅[Always Encrypted （数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)和[安全 Enclaves Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。
+有关详细信息，请参阅 [Always Encrypted（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)和[具有安全 Enclave 的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。
 
 ### <a name="prerequisites"></a>必备条件
 
@@ -59,23 +59,26 @@ SQLWCHAR *connString = L"Driver={ODBC Driver 13 for SQL Server};Server={myServer
 
 ### <a name="enabling-always-encrypted-with-secure-enclaves"></a>启用“具有安全 Enclaves 的 Always Encrypted”
 
-自版本 17.4 起，驱动程序支持具有安全 Enclave 的 Always Encrypted。 若要在连接到 SQL Server 2019 或更高版本时启用 enclave，请将 "`ColumnEncryption` DSN"、"连接字符串" 或 "连接属性" 设置为 "enclave" 类型和 "认证协议" 的名称，并将关联的证明数据（用逗号分隔）。 在版本17.4 中，只支持 `VBS-HGS`所表示的[基于虚拟化的安全](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/)enclave 类型和[主机保护者服务](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server)证明协议;若要使用它，请指定证明服务器的 URL，例如：
+> [!NOTE]
+> 在 Linux 和 Mac 上，必须有 OpenSSL 版本 1.0.1 或更高版本，才能使用具有安全 Enclave 的 Always Encrypted。
+
+自版本 17.4 起，驱动程序支持具有安全 Enclave 的 Always Encrypted。 若要启用在连接到 SQL Server 2019 或更高版本时使用 enclave，请将 `ColumnEncryption` DSN、连接字符串或连接属性设置为 enclave 类型名称、证明协议和关联的证明数据（用逗号分隔）。 在版本 17.4 中，只支持[基于虚拟化的安全性](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) enclave 类型和[主机保护者服务](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server)证明协议（由 `VBS-HGS` 表示）；若要使用它，请指定认证服务器的 URL，例如：
 
 ```
 Driver=ODBC Driver 17 for SQL Server;Server=yourserver.yourdomain;Trusted_Connection=Yes;ColumnEncryption=VBS-HGS,http://attestationserver.yourdomain/Attestation
 ```
 
-如果为所需列正确配置了服务器和证明服务以及启用了 enclave 的 Cmk 和 Cek，则现在应该能够执行使用 enclave 的查询（如就地加密和丰富的计算），除了Always Encrypted 提供的现有功能。 有关详细信息，请参阅[Configure Always Encrypted with secure enclaves](../../relational-databases/security/encryption/configure-always-encrypted-enclaves.md) 。
+如果正确配置了服务器和证明服务，并为相应列的 CMK 和 CEK 启用了 enclave，则除了Always Encrypted 提供的现有功能，现在还应能够执行使用 enclave（如就地加密和丰富计算）的查询。 有关详细信息，请参阅[配置具有安全 Enclave 的 Always Encrypted](../../relational-databases/security/encryption/configure-always-encrypted-enclaves.md)。
 
 
 ### <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>检索和修改加密列中的数据
 
-启用连接 Always Encrypted 后，可以使用标准 ODBC Api。 ODBC Api 可以检索或修改加密数据库列中的数据。 以下文档项可帮助解决此操作：
+在连接上启用 Always Encrypted 后，就可以使用标准 ODBC API 了。 ODBC API 可以检索或修改加密数据库列中的数据。 下面的文档项可能会对此有所帮助：
 
 - [ODBC 示例代码](cpp-code-example-app-connect-access-sql-db.md)
 - [ODBC 程序员参考](../../odbc/reference/odbc-programmer-s-reference.md)
 
-应用程序必须具有所需的数据库权限，并且必须能够访问列主密钥。 然后，该驱动程序对所有面向加密列的查询参数进行加密。 驱动程序还会对从加密列中检索到的数据进行解密。 驱动程序将执行所有加密和解密，而无需你的源代码的任何帮助。 对于您的程序，这就像列未加密一样。
+应用程序必须具有所需的数据库权限，并且必须能够访问列主密钥。 然后，驱动程序对所有定目标到加密列的查询参数进行加密。 驱动程序还会对从加密列中检索到的数据进行解密。 驱动程序执行所有加密和解密操作，而无需源代码的任何帮助。 对于你的程序，就好像列没有加密一样。
 
 如果未启用 Always Encrypted，具有面向加密列的参数的查询将失败。 只要查询没有面向加密列的参数，就仍然可以从加密列中检索数据。 但是，驱动程序不会尝试进行任何解密，并且应用程序将收到二进制加密数据（字节数组形式）。
 
@@ -107,13 +110,13 @@ CREATE TABLE [dbo].[Patients](
 
 #### <a name="data-insertion-example"></a>数据插入示例
 
-此示例向 Patients 表插入一行。 请注意以下事项：
+此示例向 Patients 表插入一行。 注意以下事项：
 
 - 对于示例代码中的加密，没有什么特定的注意事项。 驱动程序自动检测到面向加密列的 SSN 和日期参数的值，并将其加密。 这使得加密操作对应用程序而言是透明的。
 
 - 插入到数据库列（包括加密列）中的值将作为绑定参数传递（请参阅 [SQLBindParameter 函数](https://msdn.microsoft.com/library/ms710963(v=vs.85).aspx)）。 在将值发送到非加密列时，可以选择使用参数（强烈建议使用它，因为它有助于防止 SQL 注入），而在发送面向加密列的值时，必须使用该参数。 若将插入 SSN 或 BirthDate 列的值传递为嵌入查询声明的文本，查询将失败，因为驱动程序不会尝试加密或处理查询中的文本。 因此，服务器会因为与加密列不兼容而拒绝它们。
 
-- 将插入 SSN 列的参数的 SQL 类型设置为映射 char SQL Server 数据类型 (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`) 的 SQL_CHAR。  如果将该参数的类型设置为映射到 nchar 的 SQL_WCHAR，查询将失败，因为 Always Encrypted 不支持从加密 nchar 值到加密 char 值的服务器端转换。  有关数据类型映射的信息，请参阅 [ODBC 程序员参考 - 附录 D：数据类型](https://msdn.microsoft.com/library/ms713607.aspx)。
+- 将插入 SSN 列的参数的 SQL 类型设置为映射 char SQL Server 数据类型 (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`) 的 SQL_CHAR。  如果将该参数的类型设置为映射到 nchar 的 SQL_WCHAR，查询将失败，因为 Always Encrypted 不支持从加密 nchar 值到加密 char 值的服务器端转换。  若要了解数据类型映射，请参阅 [ODBC 程序员参考 -- 附录 D：数据类型](https://msdn.microsoft.com/library/ms713607.aspx)。
 
 ```
     SQL_DATE_STRUCT date;
@@ -154,14 +157,14 @@ CREATE TABLE [dbo].[Patients](
 
 #### <a name="plaintext-data-retrieval-example"></a>纯文本数据检索示例
 
-以下示例演示如何根据加密值筛选数据，以及从加密列中检索纯文本数据。 请注意以下事项：
+以下示例演示如何根据加密值筛选数据，以及从加密列中检索纯文本数据。 注意以下事项：
 
 - WHERE 子句中用于筛选 SSN 列的值需要使用 SQLBindParameter 进行传递，以便驱动程序可以在将其发送到数据库之前以透明方式对其加密。
 
 - 程序打印的所有值均为纯文本形式，因为驱动程序将以透明方式解密从 SSN 和 BirthDate 列中检索到的数据。
 
 > [!NOTE]
-> 仅当加密是确定性的或启用了 secure enclave 时，查询才能对加密列执行相等比较。 有关详细信息，请参阅[选择确定性加密或随机加密](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption)。
+> 只有在加密是确定性加密或启用了安全 enclave 的情况下，查询才能对加密列执行相等比较。 有关详细信息，请参阅[选择确定性加密或随机加密](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption)。
 
 ```
 SQLCHAR SSN[12];
@@ -207,7 +210,7 @@ while (SQL_SUCCEEDED(SQLFetch(hstmt)))
 
 如果未启用始终加密，只要查询没有面向加密列的参数，就仍然可以从加密列中检索数据。
 
-以下示例说明如何从加密列中检索二进制加密数据。 请注意以下事项：
+以下示例说明如何从加密列中检索二进制加密数据。 注意以下事项：
 
 - 由于未在连接字符串中启用始终加密，因此，查询将以字节数组的形式返回 SSN 和 BirthDate 的加密值（程序会将值转换为字符串）。
 - 如果禁用始终加密，从加密列中检索数据的查询可以有参数，但前提是所有参数均不面向加密列。 上述查询按未在数据库中加密的 LastName 进行筛选。 如果查询按 SSN 或 BirthDate 进行筛选，则将失败。
@@ -289,7 +292,7 @@ string queryText = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo
 
 #### <a name="sqlmoreresults--sqldescribecol"></a>SQLMoreResults 和 SQLDescribeCol
 
-应用程序的程序可以调用 [SQLDescribeCol](https://msdn.microsoft.com/library/ms716289(v=vs.85).aspx)来返回有关所准备声明中的列的元数据。  启用 Always Encrypted 后，如果在调用 `SQLDescribeCol` 之前先调用 `SQLMoreResults`，这样会导致调用 [sp_describe_first_result_set](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)，并无法正确返回加密列的纯文本元数据。  请先在预定义的声明上调用 `SQLDescribeCol`，然后再调用 *。* `SQLMoreResults`
+应用程序的程序可以调用 [SQLDescribeCol](https://msdn.microsoft.com/library/ms716289(v=vs.85).aspx)来返回有关所准备声明中的列的元数据。  启用 Always Encrypted 后，如果在调用 `SQLDescribeCol` 之前  先调用 `SQLMoreResults`，这样会导致调用 [sp_describe_first_result_set](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)，这样就无法正确返回加密列的纯文本元数据。 请先在预定义的声明上调用 `SQLDescribeCol`，然后再调用 *。* `SQLMoreResults`
 
 ## <a name="controlling-the-performance-impact-of-always-encrypted"></a>控制 Always Encrypted 对性能的影响
 
@@ -303,7 +306,7 @@ Always Encrypted 是一种客户端加密技术，因此，大部分性能开销
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>控制为了检索查询参数的元数据而往返的次数
 
-如果为连接启用了 Always Encrypted，默认情况下，驱动程序将为每个参数化查询调用 [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)，并将查询语句（不带任何参数值）传递到 SQL Server。 此存储过程会分析查询语句，以了解是否有任何参数需要加密；如果有，则会针对每个参数返回加密相关信息，以便驱动程序对它们加密。 上述行为将确保对客户端应用程序高度透明：应用程序（和应用程序开发人员）不需要知道哪些查询在访问加密列，只需将面向加密列的值传递到参数中的驱动程序即可。
+如果为连接启用了 Always Encrypted，默认情况下，驱动程序将为每个参数化查询调用 [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)，并将查询语句（不带任何参数值）传递到 SQL Server。 此存储过程会分析查询语句，以了解是否有任何参数需要加密；如果有，则会针对每个参数返回加密相关信息，以便驱动程序对它们加密。 以上行为可确保实现针对客户端应用程序的高级别透明性：应用程序（和应用程序开发人员）不需要知道哪些查询在访问加密列，只需将面向加密列的值传递到参数中的驱动程序即可。
 
 ### <a name="per-statement-always-encrypted-behavior"></a>每个语句的 Always Encrypted 行为
 
@@ -311,7 +314,7 @@ Always Encrypted 是一种客户端加密技术，因此，大部分性能开销
 
 请调用 SQLSetStmtAttr，将 `SQL_SOPT_SS_COLUMN_ENCRYPTION` 语句属性设置为下列值之一，以便控制语句的 Always Encrypted 行为：
 
-|ReplTest1|描述|
+|值|说明|
 |-|-|
 |`SQL_CE_DISABLED` (0)|对语句禁用了 Always Encrypted|
 |`SQL_CE_RESULTSETONLY` (1)|仅解密。 解密结果集和返回值，不对参数加密|
@@ -364,7 +367,7 @@ SQLSetDescField(ipd, paramNum, SQL_CA_SS_FORCE_ENCRYPT, (SQLPOINTER)TRUE, SQL_IS
 
 适用于 SQL Server 的 ODBC 包含下列内置密钥存储提供程序：
 
-| “属性” | 描述 | 提供程序（元数据）名称 |可用性|
+| 名称 | 说明 | 提供程序（元数据）名称 |可用性|
 |:---|:---|:---|:---|
 |Azure Key Vault |将 CMK 存储在 Azure 密钥保管库中 | `AZURE_KEY_VAULT` |Windows、macOS、Linux|
 |Windows 证书存储|将 CMK 存储在本地 Windows 密钥存储中| `MSSQL_CERTIFICATE_STORE`|Windows|
@@ -378,7 +381,7 @@ SQLSetDescField(ipd, paramNum, SQL_CA_SS_FORCE_ENCRYPT, (SQLPOINTER)TRUE, SQL_IS
 Azure Key Vault (AKV) 便于存储和管理用于 Always Encrypted 的列主密钥（尤其是当应用程序在 Azure 中托管时）。 适用于 Linux、macOS 和 Windows 上的 SQL Server 的 ODBC 驱动程序包含用于 Azure 密钥保管库的内置列主密钥存储提供程序。 有关为 Azure 密钥保管库设置 Always Encrypted 的详细信息，请参阅 [Azure 密钥保管库 - 分步说明](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/)、[密钥保管库入门](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)以及[在 Azure 密钥保管库中创建列主密钥](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2)。
 
 > [!NOTE]
-> ODBC 驱动程序不支持 AKV authentication Active Directory 联合身份验证服务。 如果使用 Azure Active Directory authentication 进行 AKV，而 Active Directory 配置包括联合服务，则身份验证可能会失败。
+> ODBC 驱动程序不支持使用 Active Directory 联合身份验证服务进行 AKV 身份验证。 如果对 AKV 使用的是 Azure Active Directory 身份验证，并且 Active Directory 配置包括联合服务，则身份验证可能会失败。
 > 对于 Linux 和 macOS 上的驱动程序版本 17.2 以及更高版本，需要提供 `libcurl` 才能使用此提供程序，但这不是显式依赖项，因为对驱动程序执行的其他操作不需要它。 如果遇到有关 `libcurl` 的错误，请确保它已安装。
 
 驱动程序支持使用下列凭据类型对 Azure 密钥保管库进行身份验证：
@@ -391,7 +394,7 @@ Azure Key Vault (AKV) 便于存储和管理用于 Always Encrypted 的列主密�
 
 |凭据类型| `KeyStoreAuthentication` |`KeyStorePrincipalId`| `KeyStoreSecret` |
 |-|-|-|-|
-|用户名/密码| `KeyVaultPassword`|用户主体名称|Password|
+|用户名/密码| `KeyVaultPassword`|用户主体名称|密码|
 |客户端 ID/机密| `KeyVaultClientSecret`|客户端 ID|机密|
 
 #### <a name="example-connection-strings"></a>连接字符串示例
@@ -436,7 +439,7 @@ ODBC Driver for SQL Server 同时支持使用 CEKeystoreProvider 接口的自定
 SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER StringLength);
 ```
 
-| 参数 | 描述 |
+| 参数 | 说明 |
 |:---|:---|
 |`ConnectionHandle`|[输入] 连接句柄。 必须为有效连接句柄，但在同一个进程中，可以通过其他任何连接句柄访问由某个连接句柄加载的提供程序。|
 |`Attribute`|[输入] 要设置的属性：`SQL_COPT_SS_CEKEYSTOREPROVIDER` 常量。|
@@ -445,7 +448,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 驱动程序尝试使用平台定义的动态库加载机制加载 ValuePtr 参数标识的库（在 Linux 和 macOS 上为 `dlopen()`，在 Windows 上为 `LoadLibrary()`），并将其中定义的任何提供程序添加到驱动程序已知的提供程序列表。 可能会出现以下错误：
 
-| 错误 | 描述 |
+| 错误 | 说明 |
 |:--|:--|
 |`CE203`|未能加载动态库。|
 |`CE203`|无法在库中找到“CEKeyStoreProvider”导出符号。|
@@ -456,7 +459,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 > [!NOTE]
 > 应用程序程序员必须确保，在通过任何连接发送需要任意自定义提供程序的任意查询前，已加载这些提供程序。 如果没有这样做，会导致错误：
 
-| 错误 | 描述 |
+| 错误 | 说明 |
 |:--|:--|
 |`CE200`|找不到密钥存储提供程序 %1。 请确保已加载适当的密钥存储提供程序库。|
 
@@ -471,7 +474,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER BufferLength, SQLINTEGER * StringLengthPtr);
 ```
 
-| 参数 | 描述 |
+| 参数 | 说明 |
 |:---|:---|
 |`ConnectionHandle`|[输入] 连接句柄。 必须为有效连接句柄，但在同一个进程中，可以通过其他任何连接句柄访问由某个连接句柄加载的提供程序。|
 |`Attribute`|[输入] 要检索的属性：`SQL_COPT_SS_CEKEYSTOREPROVIDER` 常量。|
@@ -498,7 +501,7 @@ char data[];
 } CEKEYSTOREDATA;
 ```
 
-| 参数 | 描述 |
+| 参数 | 说明 |
 |:---|:---|
 |`name`|[输入] 在 Set 上，为数据要发送到的提供程序的名称。 在 Get 上将忽略它。 以 Null 结尾的宽字符串。|
 |`dataSize`|[输入] 结构后面的数据数组的大小。|
@@ -511,7 +514,7 @@ char data[];
 SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER StringLength);
 ```
 
-| 参数 | 描述 |
+| 参数 | 说明 |
 |:---|:---|
 |`ConnectionHandle`| [输入] 连接句柄。 必须为有效连接句柄，但在同一个进程中，可以通过其他任何连接句柄访问由某个连接句柄加载的提供程序。|
 |`Attribute`|[输入] 要设置的属性：`SQL_COPT_SS_CEKEYSTOREDATA` 常量。|
@@ -531,7 +534,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER BufferLength, SQLINTEGER * StringLengthPtr);
 ```
 
-| 参数 | 描述 |
+| 参数 | 说明 |
 |:---|:---|
 |`ConnectionHandle`|[输入] 连接句柄。 必须为有效连接句柄，但在同一个进程中，可以通过其他任何连接句柄访问由某个连接句柄加载的提供程序。|
 |`Attribute`|[输入] 要检索的属性：`SQL_COPT_SS_CEKEYSTOREDATA` 常量。|
@@ -569,11 +572,11 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 - 若要插入使用 varbinary(max) 格式的已加密文本（如前面检索到的内容），请将 `BCPMODIFYENCRYPTED` 选项设置为 TRUE，并执行 BCP IN 操作。 请确保目标列的 CEK 与已加密文本的初始获取位置的 CEK 相同，以便生成的数据可解密。
 
-在使用 bcp 实用工具时，若要控制  **设置，请使用 -D 选项，并指定包含所需值的 DSN。** `ColumnEncryption` 若要插入已加密文本，请确保启用了用户的 `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` 设置。
+如果使用的是 bcp  实用工具：若要控制 `ColumnEncryption` 设置，请使用 -D 选项，并指定包含所需值的 DSN。 若要插入已加密文本，请确保启用了用户的 `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` 设置。
 
 下表汇总了作用于加密列时的操作：
 
-|`ColumnEncryption`|BCP 方向|描述|
+|`ColumnEncryption`|BCP 方向|说明|
 |----------------|-------------|-----------|
 |`Disabled`|OUT（面向客户端）|检索已加密文本。 观察到的数据类型为 varbinary(max)。 |
 |`Enabled`|OUT（面向客户端）|检索纯文本。 驱动程序将解密列数据。|
@@ -582,7 +585,7 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 ### <a name="the-bcpmodifyencrypted-option"></a>BCPMODIFYENCRYPTED 选项
 
-服务器通常不允许直接将已加密文本插入加密列，以防止数据损坏，因此此类操作将失败；但是，将 `BCPMODIFYENCRYPTED` [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) 选项设置为 TRUE 以使用 BCP API 批量加载加密数据后，即可直接插入已加密文本；为用户帐户设置 `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` 选项后，即可降低加密数据损坏的风险。 即使如此，密钥也必须与数据匹配，并且在完成批量插入后以及进一步使用数据前，最好对插入的数据执行一些只读检查。
+为了防止数据损坏，服务器通常不允许直接将已加密文本插入加密列，因此此类操作将失败；不过，对于使用 BCP API 批量加载加密数据，将 `BCPMODIFYENCRYPTED` [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) 选项设置为 TRUE，即可允许直接插入已加密文本，并降低了为用户帐户设置 `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` 选项导致加密数据损坏的风险。 即使如此，密钥也必须与数据匹配，并且在完成批量插入后以及进一步使用数据前，最好对插入的数据执行一些只读检查。
 
 有关详细信息，请参阅[迁移通过 Always Encrypted 保护的敏感数据](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md)。
 
@@ -590,9 +593,9 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 ### <a name="connection-string-keywords"></a>连接字符串关键字
 
-|“属性”|描述|  
+|名称|说明|  
 |----------|-----------------|  
-|`ColumnEncryption`|接受的值为 `Enabled`/`Disabled`。<br>`Enabled` - 启用或针对连接的 Always Encrypted 功能。<br>`Disabled` - 禁用针对连接的 Always Encrypted 功能。<br>*type*，*data* -（版本17.4 及更高版本）启用具有 secure enclave 和证明协议*类型*的 Always Encrypted，并启用关联的证明数据*数据*。 <br><br>默认值为 `Disabled`。|
+|`ColumnEncryption`|接受的值为 `Enabled`/`Disabled`。<br>`Enabled` - 启用或针对连接的 Always Encrypted 功能。<br>`Disabled` - 禁用针对连接的 Always Encrypted 功能。<br>type  ,data  --（版本 17.4 及更高版本）启用具有安全 Enclave 的 Always Encrypted、证明协议类型 type  和关联的证明数据 data  。 <br><br>默认为 `Disabled`。|
 |`KeyStoreAuthentication` | 有效值：`KeyVaultPassword`、`KeyVaultClientSecret` |
 |`KeyStorePrincipalId` | 为 `KeyStoreAuthentication` = `KeyVaultPassword` 时，将此值设置为有效的 Azure Active Directory 用户主体名称。 <br>为 `KeyStoreAuthetication` = `KeyVaultClientSecret` 时，将此值设置为有效的 Azure Active Directory 应用程序客户端 ID |
 |`KeyStoreSecret` | 为 `KeyStoreAuthentication` = `KeyVaultPassword` 时，将此值设置为相应用户名的密码。 <br>为 `KeyStoreAuthentication` = `KeyVaultClientSecret` 时，将此值设置为 Azure Active Directory 应用程序客户端 ID 关联的应用程序机密 |
@@ -600,9 +603,9 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 ### <a name="connection-attributes"></a>连接属性
 
-|“属性”|类型|描述|  
+|名称|类型|说明|  
 |----------|-------|----------|  
-|`SQL_COPT_SS_COLUMN_ENCRYPTION`|预连接|`SQL_COLUMN_ENCRYPTION_DISABLE` (0) -- 禁用 Always Encrypted <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1) -- 启用 Always Encrypted<br> 指向*类型*、*数据*字符串的指针（版本17.4 及更高版本）通过安全 enclave 启用|
+|`SQL_COPT_SS_COLUMN_ENCRYPTION`|预连接|`SQL_COLUMN_ENCRYPTION_DISABLE` (0) -- 禁用 Always Encrypted <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1) -- 启用 Always Encrypted<br> 指向 type  ,data  字符串的指针 --（版本 17.4 及更高版本）启用使用安全 enclave|
 |`SQL_COPT_SS_CEKEYSTOREPROVIDER`|后连接|[Set] 尝试加载 CEKeystoreProvider<br>[Get] 返回 CEKeystoreProvider 名称|
 |`SQL_COPT_SS_CEKEYSTOREDATA`|后连接|[Set] 将数据写入 CEKeystoreProvider<br>[Get] 从 CEKeystoreProvider 读取数据|
 |`SQL_COPT_SS_CEKCACHETTL`|后连接|[Set] 设置 CEK 缓存 TTL<br>[Get] 获取当前 CEK 缓存 TTL|
@@ -610,21 +613,42 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 ### <a name="statement-attributes"></a>语句属性
 
-|“属性”|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |`SQL_SOPT_SS_COLUMN_ENCRYPTION`|`SQL_CE_DISABLED` (0) -- 对语句禁用了 Always Encrypted <br>`SQL_CE_RESULTSETONLY` (1) -- 仅解密。 解密结果集和返回值，不对参数加密 <br>`SQL_CE_ENABLED` (3) -- 启用 Always Encrypted，并将其用于参数和结果|
 
 ### <a name="descriptor-fields"></a>描述符字段
 
-|IPD 字段|大小/类型|默认值|描述|
+|IPD 字段|大小/类型|默认值|说明|
 |-|-|-|-|  
 |`SQL_CA_SS_FORCE_ENCRYPT` (1236)|单词（2 个字节）|0|如果值为 0（默认值）：决定是否加密此参数取决于加密元数据的可用性。<br><br>为非零值时：若提供了此参数的加密元数据，将加密它。 否则，请求将由于下面的错误而失败：[CE300] [Microsoft][ODBC Driver 13 for SQL Server]对参数指定了强制加密，但服务器未提供任何加密元数据。|
 
 ### <a name="bcp_control-options"></a>bcp_control 选项
 
-|选项名称|默认值|描述|
+|选项名称|默认值|说明|
 |-|-|-|
 |`BCPMODIFYENCRYPTED` (21)|FALSE|如果值为 TRUE，可以将 varbinary(max) 值插入加密列。 如果为 FALSE，除非提供正确的类型和加密元数据，否则将阻止插入。|
+
+## <a name="troubleshooting"></a>故障排除
+
+如果使用 Always Encrypted 时遇到问题，请先检查以下几点：
+
+- 加密相应列的 CEK 在服务器上存在且可访问。
+
+- 加密 CEK 的 CMK 在服务器上有可访问的元数据，并能从客户端进行访问。
+
+- `ColumnEncryption` 在 DSN、连接字符串或连接属性中启用，并采用正确格式（如果使用安全 Enclave 的话）。
+
+
+此外，在使用安全 Enclave 时，证明失败会根据下表确定证明过程中出现故障的步骤：
+
+|步骤|说明|
+|----|-----------|
+|0-99| 证明响应无效，或签名验证错误。 |
+|100-199| 从证明 URL 检索证书时出错。 请确保 `<attestation URL>/v2.0/signingCertificates` 有效且可访问。 |
+|200-299| enclave 标识的格式异常或不正确。 |
+|300-399| 与 enclave 建立安全通道时出错。 |
+
 
 ## <a name="see-also"></a>另请参阅
 

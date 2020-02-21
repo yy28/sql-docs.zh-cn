@@ -1,6 +1,6 @@
 ---
-title: SQL Server Browser 属性（“登录”选项卡）| Microsoft Docs
-ms.custom: ''
+title: SQL Server 浏览器属性（“登录”选项卡）
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: c77871ec-c2f4-4e4a-9a10-5aeb4ae70507
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 03fd1c500fbf394ecc0391367e26509df8032ba7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: e1457374ca9e7ba7a0504e7c025333d3bcd48c20
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024142"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307101"
 ---
 # <a name="sql-server-browser-properties-log-on-tab"></a>SQL Server 浏览器属性（“登录”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -48,10 +48,10 @@ ms.locfileid: "68024142"
  **服务状态**  
  指示此服务是正在运行、已停止还是已禁用。 “...  ”指明状态更改是挂起的。  
   
- **开始**  
+ **启动**  
  启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务。  
   
- **停止**  
+ **Stop**  
  停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务。  
   
  **暂停**  

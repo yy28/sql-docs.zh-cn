@@ -16,10 +16,10 @@ ms.assetid: 276e0093-3d42-4f73-acc4-2b5b98245b40
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 23ba6bc636e5bc714a606c29a46f7b52ce1bbea4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977992"
 ---
 # <a name="getxaconnection-method-javalangstring-javalangstring"></a>getXAConnection 方法 (java.lang.String, java.lang.String)
@@ -35,7 +35,7 @@ public javax.sql.XAConnection getXAConnection(java.lang.String user,
                                               java.lang.String password)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  user   
   
  一个包含用户名的字符串  。  
@@ -45,13 +45,13 @@ public javax.sql.XAConnection getXAConnection(java.lang.String user,
  一个包含密码的字符串  。  
   
 ## <a name="return-value"></a>返回值  
- 一个 Javax.sql.xaconnection 对象。  
+ XAConnection 对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
- 此 getXAConnection 方法由 getXAConnection 方法在 javax.mail.session。 Javax.sql.xadatasource 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 getXAConnection 方法是由 javax.sql.XADataSource 接口中的 getXAConnection 方法指定的。  
   
 > [!NOTE]  
 >  此方法一般由 XA 连接池实现调用，而不由常规的 JDBC 应用程序代码调用。  

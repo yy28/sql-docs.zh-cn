@@ -1,5 +1,5 @@
 ---
-title: 缓存结果集数据示例 |Microsoft Docs
+title: 缓存结果集数据的示例 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 13a95ebb-996c-4713-a1bd-5834fe22a334
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f59c7010875824b65d6b7d12129056f02537e908
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028425"
 ---
 # <a name="caching-result-set-data-sample"></a>缓存结果集数据的示例
@@ -29,7 +29,7 @@ ms.locfileid: "69028425"
 要对客户端中缓存的行数进行限制，首先必须在创建 Statement 对象时使用服务器端游标，并且在创建 Statement 对象时专门声明要使用的游标类型。 例如，JDBC 驱动程序提供了 TYPE_SS_SERVER_CURSOR_FORWARD_ONLY 游标类型，该类型是用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的快速只进、只读的服务器端游标。
 
 > [!NOTE]  
-> 如果不使用 SQL Server 的特定游标类型，也可以使用 selectMethod 连接字符串属性，并将其值设置为“cursor”。 有关 JDBC 驱动程序支持的游标类型的详细信息, 请参阅[了解游标类型](../../connect/jdbc/understanding-cursor-types.md)。
+> 如果不使用 SQL Server 的特定游标类型，也可以使用 selectMethod 连接字符串属性，并将其值设置为“cursor”。 有关 JDBC 驱动程序支持的游标类型的详细信息，请参阅[了解游标类型](../../connect/jdbc/understanding-cursor-types.md)。
 
 运行完 Statement 对象中包含的查询且数据已经以结果集的形式返回到客户端后，可以调用 setFetchSize 方法来控制一次可从数据库中检索的数据量。 例如，某表格包含 100 行数据，提取大小设置为 10，则无论何时，客户端中都仅缓存 10 行数据。 尽管这样会降低数据处理速度，但其优势是所占用的客户端内存较少，这在需要处理大量数据时尤为有用。
 
@@ -41,7 +41,7 @@ ms.locfileid: "69028425"
 
 ## <a name="requirements"></a>要求
 
-若要运行此示例应用程序，必须设置 classpath 以包含 mssql-jdbc jar 文件。 还需要访问 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 示例数据库。 有关如何设置类路径的详细信息, 请参阅[使用 JDBC 驱动程序](../../connect/jdbc/using-the-jdbc-driver.md)。
+若要运行此示例应用程序，必须设置 classpath 以包含 mssql-jdbc jar 文件。 还需要访问 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 示例数据库。 若要详细了解如何设置 classpath，请参阅[使用 JDBC 驱动程序](../../connect/jdbc/using-the-jdbc-driver.md)。
 
 > [!NOTE]  
 > [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供要使用的 mssql-jdbc 类库文件，具体使用哪个文件取决于首选的 Java Runtime Environment (JRE) 设置。 有关选择哪个 JAR 文件的详细信息，请参阅 [JDBC 驱动程序的系统要求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。

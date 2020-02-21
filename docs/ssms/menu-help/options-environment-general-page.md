@@ -1,6 +1,6 @@
 ---
-title: 选项（“环境”-“常规”页）| Microsoft Docs
-ms.custom: ''
+title: 选项（“环境”-“常规”页）
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,17 +13,17 @@ f1_keywords:
 ms.assetid: c32ccdb8-2cf8-4c78-b474-a3abd3dbbd13
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1ddb14bf485eb7bdd91c2383d165fc02ce20637b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 808fcde7587a68f45bda472ba51e03bddc0884af
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68257252"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245742"
 ---
 # <a name="options-environment---general-page"></a>选项（“环境”-“常规”页）
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用“选项”  对话框可以配置 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 启动操作、常规窗口管理选项和其他常规设置。 在“工具”  菜单上，单击“选项”  ，展开“环境”  文件夹，再单击“常规”  。
+使用“选项”对话框可以配置 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 启动操作、常规窗口管理选项和其他常规设置  。 在“工具”  菜单上，单击“选项”  ，展开“环境”  文件夹，再单击“常规”  。
 
 ## <a name="uielement-list"></a>UIElement 列表
 

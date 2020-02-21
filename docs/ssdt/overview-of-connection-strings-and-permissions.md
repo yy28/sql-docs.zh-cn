@@ -1,23 +1,24 @@
 ---
-title: 连接字符串和权限概述 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 连接字符串和权限
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: ceff114e-a738-46ad-9785-b6647a2247f9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6ae4fe656cbd299d46960ec9b711de4c51d30a51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 37e1b0c050da78722422d9bf20e4eae310565ec1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064795"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243763"
 ---
 # <a name="overview-of-connection-strings-and-permissions"></a>连接字符串和权限概述
+
 若要运行 SQL Server 单元测试，必须通过使用一个或两个特定连接字符串来连接数据库服务器。 每个连接字符串均表示一个具有特定权限的帐户，您必须具有相关权限才能在特定脚本中执行作为测试的一部分的某个任务/某一组任务。 可以在“SQL Server 测试配置”  对话框中指定这些字符串，或者通过手动编辑测试项目的 app.config 文件来指定这些字符串。  
   
 ## <a name="connection-strings"></a>连接字符串  
@@ -26,7 +27,7 @@ ms.locfileid: "68064795"
 > [!NOTE]  
 > 只有在使用 SQL Server 身份验证的情况下执行上下文和特权上下文才会不同。 如果使用 Windows 身份验证，则将对这两个连接字符串使用相同的凭据。  
   
--   执行上下文（必需）- 运行测试脚本的用户帐户。 此连接字符串应具有您预期用户会拥有的相同凭据。 这一点非常重要，因为它将确保会将适当的权限应用于您的数据库。 有关详细信息，请参阅[如何：配置 SQL Server 单元测试执行](../ssdt/how-to-configure-sql-server-unit-test-execution.md)。  
+-   执行上下文（必需）- 运行测试脚本的用户帐户。 此连接字符串应具有您预期用户会拥有的相同凭据。 这一点非常重要，因为它将确保会将适当的权限应用于您的数据库。 有关详细信息，请参阅[操作说明：配置 SQL Server 单元测试执行](../ssdt/how-to-configure-sql-server-unit-test-execution.md)。  
   
     在测试项目的 app.config 文件中，这是 `ExecutionContext` 元素。  
   

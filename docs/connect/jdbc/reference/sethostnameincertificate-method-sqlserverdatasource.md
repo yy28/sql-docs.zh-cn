@@ -1,5 +1,5 @@
 ---
-title: setHostNameInCertificate 方法 (SQLServerDataSource) |Microsoft Docs
+title: setHostNameInCertificate 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 2bcf4f2e-a103-4374-abc4-ffad4ce8e3c0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: deeab57c573311db36eabdbad60c3cb2fbda9a47
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974222"
 ---
 # <a name="sethostnameincertificate-method-sqlserverdatasource"></a>setHostNameInCertificate 方法 (SQLServerDataSource)
@@ -34,12 +34,12 @@ ms.locfileid: "67974222"
 public void setHostNameInCertificate(java.lang.String hostNameInCertificate)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *hostNameInCertificate*  
   
  一个包含主机名的字符串  。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  当使用 SSL 对通信层加密时，将使用 hostNameInCertificate 值来验证 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SSL 证书。 默认值为 null。  
   
  如果 hostNameInCertificate 属性设置为 Null 或未指定，则 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 将使用 serverName 属性值来对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SSL 证书进行验证。 如果 hostNameInCertificate 属性被设置为字符串或空字符串 ("")，则驱动程序将使用该值验证服务器 SSL 证书。  

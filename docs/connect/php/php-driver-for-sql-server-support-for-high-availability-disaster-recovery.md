@@ -1,5 +1,5 @@
 ---
-title: 支持用于 PHP 的 Microsoft 驱动程序的高可用性、灾难恢复 SQL Server |Microsoft Docs
+title: Microsoft Drivers for PHP for SQL Server 支持高可用性和灾难恢复 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/31/2018
 ms.prod: sql
@@ -10,68 +10,36 @@ ms.topic: conceptual
 ms.assetid: 73a80821-d345-4fea-b076-f4aabeb4af3e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fab65d777025f59fab6566d118233febbb51aaa6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 9f67a0cc7f564683ed11ce7d7de9da5200128434
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992972"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76929180"
 ---
 # <a name="support-for-high-availability-disaster-recovery"></a>支持高可用性、灾难恢复
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-本主题讨论了对高可用性、灾难恢复的 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 支持（3.0 版中的新增功能）- [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]。  在 [!INCLUDE[ssHADR](../../includes/sshadr_md.md)] 中添加了 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 支持。 有关 [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书。  
-  
-在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 3.0 版中，可在连接属性中指定（高可用性、灾难恢复）可用性组 (AG) 的可用性组侦听程序。 如果将 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 应用程序连接到具有故障转移功能的 AlwaysOn 数据库，则在故障转移后，会断开原始连接，并且该应用程序必须建立一个新的连接才能继续运行。  
-  
-如果未连接到某一可用性组侦听程序，并且多个 IP 地址与一个主机名关联，则 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 将按顺序循环访问与 DNS 条目关联的所有 IP 地址。 如果 DNS 服务器返回的第一个 IP 地址未绑定到任何网络接口卡 (NIC)，则上述遍历操作可能会用时较长。 连接到可用性组侦听程序时，[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 尝试建立与所有 IP 地址的并行连接，如果连接尝试成功，则驱动程序将放弃所有挂起的连接尝试。  
-  
-> [!NOTE]  
-> 增大连接超时值和实现连接重试逻辑将增加应用程序连接到可用性组的概率。 此外，由于可用性组进行故障转移而可能使连接失败，您应实现连接重试逻辑，重试失败的连接，直至重新连接。  
-  
-## <a name="connecting-with-multisubnetfailover"></a>使用 MultiSubnetFailover 进行连接  
-MultiSubnetFailover 连接属性指示应用程序正部署在某一可用性组或故障转移群集实例中，并且 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 将尝试通过连接到所有 IP 地址来连接到主 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上的数据库  。 如果对连接指定的是 MultiSubnetFailover=true  ，客户端重试 TCP 连接尝试的速度快于操作系统的默认 TCP 重传间隔。 这样，就可以在对 AlwaysOn 可用性组或 AlwaysOn 故障转移群集实例执行故障转移之后更快地进行重新连接，这一点同时适用于单子网和多子网可用性组和故障转移群集实例。  
-  
-在连接到 SQL Server 2012 可用性组侦听程序或 SQL Server 2012 故障转移群集实例时，应始终指定 MultiSubnetFailover=True  。 MultiSubnetFailover 可加快 SQL Server 2012 中所有可用性组和故障转移群集实例的故障转移速度，并且显著缩短单子网和多子网 AlwaysOn 拓扑的故障转移时间  。 在多子网故障转移过程中，客户端将尝试并行进行连接。 子网故障转移期间，[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 将积极地重试 TCP 连接。  
-  
-有关中[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的连接字符串关键字的详细信息, 请参阅[连接选项](../../connect/php/connection-options.md)。  
-  
-如果在连接到非可用性组侦听程序或非故障转移群集实例时指定了 MultiSubnetFailover=true，可能会对性能造成负面影响，因此不支持这样做  。  
-  
-使用以下准则可以连接到可用性组中的服务器：  
-  
--   连接到单子网或多子网时使用 **MultiSubnetFailover** 连接属性，这二者的性能都会得到改进。  
-  
--   若要连接到某一可用性组，请在您的连接字符串中将该可用性组的可用性组侦听器指定为服务器。  
-  
--   连接到配置有超过 64 个 IP 地址的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例将导致连接失败。  
-  
--   基于以下身份验证类型，使用 **MultiSubnetFailover** 连接属性的应用程序的行为不受影响：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证、Kerberos 身份验证或 Windows 身份验证。  
-  
--   增加 loginTimeout 的值，以延长故障转移时间并减少应用程序连接重试次数  。  
-  
--   不支持分布式事务。  
-  
-如果只读路由不起作用，则连接到可用性组中的辅助副本位置在以下情况下将失败：  
-  
-- 如果未将辅助副本位置配置为接受连接。  
-  
-- 如果应用程序使用 **ApplicationIntent=ReadWrite**（在下文中介绍）且将次要副本位置配置为只读访问。  
-  
-如果将主副本配置为拒绝只读工作负荷且连接字符串包含 **ApplicationIntent=ReadOnly**，连接将失败。  
+本主题介绍了 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 支持高可用性和灾难恢复（版本 3.0 中新增支持）。
+
+自 Microsoft Drivers for PHP for SQL Server 版本 3.0 起，可以在连接字符串中将高可用性、灾难恢复可用性组或故障转移群集实例的可用性组侦听程序指定为服务器。
+
+MultiSubnetFailover  连接属性指明，应用程序正部署在可用性组或故障转移群集实例中，且驱动程序会通过尝试连接到所有 IP 地址来尝试连接到主 SQL Server 实例中的数据库。 在连接到 SQL Server 可用性组侦听程序或 SQL Server 故障转移群集实例时，应始终指定 MultiSubnetFailover=True  。 如果将应用程序连接到具有故障转移功能的 AlwaysOn 数据库，那么在故障转移后，原始连接会断开，且应用程序必须建立新连接才能继续运行。
+
+有关 AlwaysOn 可用性组的完整详细信息，可以访问[高可用性、灾难恢复](https://docs.microsoft.com/sql/relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery)文档页。
 
 ## <a name="transparent-network-ip-resolution-tnir"></a>透明网络 IP 解析 (TNIR)
 
-透明网络 IP 解析 (TNIR) 是现有 MultiSubnetFailover 功能的修订版本。 当主机名的第一个解析的 IP 没有响应并且有多个 Ip 与主机名关联时, 它会影响驱动程序的连接顺序。 除了 MultiSubnetFailover, 它们提供以下四个连接序列: 
+透明网络 IP 解析 (TNIR) 是对现有 MultiSubnetFailover  功能的修订。 如果第一个解析的主机名 IP 未响应，且存在多个与主机名关联的 IP，就会影响驱动程序的连接序列。 相应的连接选项是 TransparentNetworkIPResolution  。 它与 MultiSubnetFailover  一起提供以下四个连接序列： 
 
-- 启用了 TNIR & MultiSubnetFailover 已禁用: 尝试一个 IP, 然后并行所有 Ip
-- 启用了 TNIR & MultiSubnetFailover 启用: 所有 Ip 都是并行尝试的
-- 已禁用 TNIR 禁用 & MultiSubnetFailover: 所有 Ip 一次尝试
-- 已启用 TNIR 禁用 & MultiSubnetFailover: 所有 Ip 都是并行尝试的
+- TNIR 已启用且 MultiSubnetFailover  已禁用：先尝试一个 IP，再并行尝试所有 IP
+- TNIR 已启用且 MultiSubnetFailover  已启用：并行尝试所有 IP
+- TNIR 已禁用且 MultiSubnetFailover  已禁用：逐一尝试所有 IP
+- TNIR 已禁用且 MultiSubnetFailover  已启用：并行尝试所有 IP
 
-默认情况下启用 TNIR, 并且默认情况下禁用 MultiSubnetFailover。
+TNIR 默认处于启用状态，MultiSubnetFailover  默认处于禁用状态。
 
-下面的示例使用 PDO_SQLSRV 驱动程序启用 TNIR 和 MultiSubnetFailover:
+下面的示例展示了如何使用 PDO_SQLSRV 驱动程序同时启用 TNIR 和 MultiSubnetFailover  ：
 
 ```
 <?php
@@ -92,12 +60,11 @@ try {
 ```
 
 ## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>升级以便使用来自数据库镜像的多子网群集  
-如果连接字符串中已存在 **MultiSubnetFailover** 和 **Failover_Partner** 连接关键字，将出现连接错误。 如果使用 **MultiSubnetFailover** 且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回一个故障转移伙伴响应指示它是数据库镜像对的一部分，也将出现错误。  
+如果连接字符串中已存在 **MultiSubnetFailover** 和 **Failover_Partner** 连接关键字，将出现连接错误。 如果使用的是 MultiSubnetFailover  ，且 SQL Server 返回指明它属于数据库镜像对的故障转移伙伴响应，也会导致错误抛出。  
   
-如果将当前使用数据库镜像的 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 应用程序升级到多子网方案，则应删除 Failover_Partner 连接属性并使用设置为“是”的 MultiSubnetFailover 替换它，并且还应使用可用性组侦听程序替换连接字符串中的服务器名称    。 如果连接字符串使用 Failover_Partner 和 MultiSubnetFailover=true，驱动程序将生成一个错误   。 但是，如果连接字符串使用 Failover_Partner 和 MultiSubnetFailover=false（或 ApplicationIntent=ReadWrite），则该应用程序将使用数据库镜像    。  
+如果将当前使用数据库镜像的 PHP 应用程序升级到多子网方案，请删除 Failover_Partner  连接属性，并使用设置为“True”  的 MultiSubnetFailover  替换它，同时还使用可用性组侦听程序替换连接字符串中的服务器名称。 如果连接字符串使用 Failover_Partner 和 MultiSubnetFailover=true，驱动程序将生成一个错误   。 但是，如果连接字符串使用 Failover_Partner 和 MultiSubnetFailover=false（或 ApplicationIntent=ReadWrite），则该应用程序将使用数据库镜像    。  
   
 如果数据库镜像用于 AG 中的主数据库，并且 MultiSubnetFailover=true 用于连接到主数据库（而非连接到可用性组侦听程序）的连接字符串中，则驱动程序将返回错误  。  
-
 
 [!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
 

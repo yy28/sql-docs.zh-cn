@@ -12,10 +12,10 @@ ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d660cc7b3c15706951981540f592589ba92e9df2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62513635"
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>安装 Reporting Services 2016 本机模式报表服务器
@@ -38,7 +38,7 @@ ms.locfileid: "62513635"
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 命令行实用工具 rsconfig.exe、rskeymgmt.exe 和 rs.exe。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 现在是单独的下载。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 现在是单独进行下载。  
   
  安装程序为本机模式的报表服务器安装配置以下设置：  
   
@@ -82,9 +82,9 @@ ms.locfileid: "62513635"
 ##  <a name="bkmk_defaultURLreservations"></a> 默认 URL 预留  
  URL 预留由前缀、主机名、端口和虚拟目录组成：  
   
-|组成部分|描述|  
+|组成部分|说明|  
 |----------|-----------------|  
-|Prefix|默认的前缀为 HTTP。 如果以前安装过安全套接字层 (SSL) 证书，安装程序将尝试创建使用 HTTP 前缀的 URL 预留。|  
+|前缀|默认的前缀为 HTTP。 如果以前安装过安全套接字层 (SSL) 证书，安装程序将尝试创建使用 HTTP 前缀的 URL 预留。|  
 |主机名|默认主机名为强通配符 (+)。 它指定对于解析为计算机的任何主机名，报表服务器均会接受指定端口上的任何 HTTP 请求，包括 `https://<computername>/reportserver`、`https://localhost/reportserver` 或 `https://<IPAddress>/reportserver`。|  
 |端口|默认端口为 80。 请注意，如果使用端口 80 以外的其他任何端口，则在浏览器窗口中打开 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 应用程序时，必须将该端口显式添加至 URL 中。|  
 |虚拟目录|默认情况下，虚拟目录创建时的格式为 ReportServer_\<instance_name>（对于报表服务器 Web 服务）和 Reports_\<instance_name>（对于 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]）   。 对于报表服务器 Web 服务，默认的虚拟目录为 **reportserver**。 对于 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]，默认的虚拟目录为 **reports**。|  
@@ -116,7 +116,7 @@ ms.locfileid: "62513635"
   
 2.  在 **“安装角色”** 页上，选择 **“SQL Server 功能安装”** 。  
   
-     ![安装角色的 SQL Server 功能安装](../../reporting-services/install-windows/media/rs-setuprole.png "SQL Server Feature Installation for setup role")  
+     ![安装角色的 SQL Server 功能安装](../../reporting-services/install-windows/media/rs-setuprole.png "安装角色的 SQL Server 功能安装")  
   
 3.  在 **“功能选择”** 页上，选择以下选项：  
   
@@ -124,7 +124,7 @@ ms.locfileid: "62513635"
   
     -   (2) **Reporting Services - 本机**。  
   
-     ![功能选择中的 SSRS 本机模式选择](../../reporting-services/install-windows/media/rs-setupfeatureselection-native-withcircles.png "SSRS Native Mode Select in Feature Selection")  
+     ![功能选择中的 SSRS 本机模式选择](../../reporting-services/install-windows/media/rs-setupfeatureselection-native-withcircles.png "功能选择中的 SSRS 本机模式选择")  
   
 4.  查看通过的“功能规则”  。  
   
@@ -134,13 +134,13 @@ ms.locfileid: "62513635"
   
     -   `https://[ServerName]/Reports_THESQLINSTANCE`  
   
-6.  **服务器配置**：如果计划使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅功能，则在“服务器配置”  页上，配置 SQL Server 代理“自动”  启动类型。   默认为手动。  
+6.  **服务器配置**：如果计划使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅功能，则在“服务器配置”  页上配置 SQL Server 代理“自动”  启动类型。   默认为手动。  
   
 7.  在“数据库引擎配置”  页上，添加 SQL Server 管理员。  
   
 8.  在 **“Reporting Services 配置”** 页上，选择 **“安装和配置”** 。  
   
-     ![SSRS 本机模式配置](../../reporting-services/install-windows/media/rs-setupconfiguration-native-with-circles.png "SSRS Native Mode Configuration")  
+     ![SSRS 本机模式配置](../../reporting-services/install-windows/media/rs-setupconfiguration-native-with-circles.png "SSRS 本机模式配置")  
   
     > [!NOTE]  
     >  除非同时选择安装该数据库功能，否则“安装和配置”  将不可用。  
@@ -159,7 +159,7 @@ ms.locfileid: "62513635"
   
  有关详细信息，请参阅以下两个主题的“本机”一节：  
   
- [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)  
+ [验证 Reporting Services 安装](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)  
   
  [排除 Reporting Services 安装故障](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)   
   

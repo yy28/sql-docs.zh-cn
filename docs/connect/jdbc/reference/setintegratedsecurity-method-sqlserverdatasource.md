@@ -1,5 +1,5 @@
 ---
-title: setIntegratedSecurity 方法 (SQLServerDataSource) |Microsoft Docs
+title: setIntegratedSecurity 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 4c968ee4-b041-424a-bf69-cc2c4a4f51c6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 79d9090df19851af3a778e23b7919f28081f32ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974152"
 ---
 # <a name="setintegratedsecurity-method-sqlserverdatasource"></a>setIntegratedSecurity 方法 (SQLServerDataSource)
@@ -34,18 +34,18 @@ ms.locfileid: "67974152"
 public void setIntegratedSecurity(boolean enable)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *enable*  
   
  如果启用了 integratedSecurity，则为“true”  。 否则为 **false**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  设置为“true”表示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将使用 Windows 凭据来对应用程序用户进行身份验证  。 如果为“true”，[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 则将搜索本地计算机凭据缓存，以寻找在登录计算机或网络时已提供的凭据  。 如果为“false”，则必须提供用户名和密码  。  
   
 > [!NOTE]  
 >  只有 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] Windows 操作系统才支持此属性。  
   
- 有关使用集成身份验证的详细信息, 请参阅[生成连接 URL](../../../connect/jdbc/building-the-connection-url.md)。  
+ 有关使用集成身份验证的详细信息，请参阅[生成连接 URL](../../../connect/jdbc/building-the-connection-url.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDataSource 成员](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

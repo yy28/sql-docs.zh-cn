@@ -1,5 +1,5 @@
 ---
-title: clearBatch 方法 (SQLServerPreparedStatement) |Microsoft Docs
+title: clearBatch 方法 (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 6e5cda26-e24d-4637-8dfd-8135ba126e3b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 12ac8ff4ab9e066d9d0c24b95290e0d86674eec0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955826"
 ---
 # <a name="clearbatch-method-sqlserverpreparedstatement"></a>clearBatch 方法 (SQLServerPreparedStatement)
@@ -34,11 +34,11 @@ ms.locfileid: "67955826"
 public final void clearBatch()  
 ```  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 clearBatch 方法由 clearBatch 方法在 .sql 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 clearBatch 方法是由 java.sql.Statement 接口中的 clearBatch 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerPreparedStatement 成员](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

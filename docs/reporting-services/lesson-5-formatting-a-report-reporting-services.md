@@ -9,10 +9,10 @@ ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a8bf8b6814f7989a904507cd89fbea397b8b6930
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65105930"
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>第 5 课：设置报表格式 (Reporting Services)
@@ -59,13 +59,13 @@ LineTotal 字段表达式显示常规数字。 可以设置其格式，以使其
 
 4. 预览报表。 应如下所示：
 
-    ![具有以粗体显示的列标题的表的预览](media/rs-basictabledetailsformattedpreview.png "Preview of table with bold column headers")  
+    ![带有以粗体显示的列标题的表预览](media/rs-basictabledetailsformattedpreview.png "带有以粗体显示的列标题的表预览")  
 
 5. 在“文件”  菜单上，选择“全部保存”  来保存报表。
 
 ## <a name="next-steps"></a>后续步骤
 
-在本课程中，你已成功设置列标题和字段表达式格式。 接下来，向报表添加分组和总计。 继续学习[第 6 课：添加分组和总计 (Reporting Services)](lesson-6-adding-grouping-and-totals-reporting-services.md)。
+在本课程中，你已成功设置列标题和字段表达式格式。 接下来，向报表添加分组和总计。 继续学习[第 6 课：添加分组和总计 &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)。
 
 ## <a name="see-also"></a>另请参阅
 
