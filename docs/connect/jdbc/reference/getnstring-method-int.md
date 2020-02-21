@@ -1,5 +1,5 @@
 ---
-title: getNString 方法 (int) |Microsoft Docs
+title: getNString 方法 (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 2048bb9f-7d9b-4aaa-b135-c716910cc800
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bbe3bc040ba79ad7699a571b13b48f2c41965c60
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981419"
 ---
 # <a name="getnstring-method-int"></a>getNString 方法 (int)
@@ -29,18 +29,18 @@ ms.locfileid: "67981419"
 public final java.lang.String getNString(int parameterIndex)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  parameterIndex   
   
  指示参数索引的 int  。  
   
 ## <a name="return-value"></a>返回值  
- AStringobject.  
+ AStringobject。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 getNString 方法是由 java.sql.CallableStatement 接口中的 getNString 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  

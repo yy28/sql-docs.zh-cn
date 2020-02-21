@@ -1,5 +1,5 @@
 ---
-title: SQL Server 错误详细信息 |Microsoft Docs
+title: SQL Server 错误详细信息 | Microsoft Docs
 description: SQL Server 错误详细信息
 ms.custom: ''
 ms.date: 06/14/2018
@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: ddc9a1b1a242f9a92b1e854520d16abeb7baf809
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015647"
 ---
 # <a name="sql-server-error-detail"></a>SQL Server 错误详细信息
@@ -29,7 +29,7 @@ ms.locfileid: "68015647"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server 的 OLE DB 驱动程序定义了特定于提供程序的错误接口[ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)。 该接口返回有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 错误的更多详细信息，在命令执行或行集操作失败时这些信息很有用。  
+  OLE DB Driver for SQL Server 定义了特定于访问接口的错误接口 [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)。 该接口返回有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 错误的更多详细信息，在命令执行或行集操作失败时这些信息很有用。  
   
  可以用两种方式访问 ISQLServerErrorInfo 接口  。  
   
@@ -48,7 +48,7 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
   
  SSERRORINFO 结构成员由使用者解释如下。  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |pwszMessage |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 错误消息。 与在 IErrorInfo::GetDescription 中返回的字符串相同  。|  
 |pwszServer |会话的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。|  

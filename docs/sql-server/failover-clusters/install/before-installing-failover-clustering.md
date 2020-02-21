@@ -14,10 +14,10 @@ ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5d2fe2d80b0f9d54e877d6bc1be9a05c8c34c584
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72517944"
 ---
 # <a name="before-installing-failover-clustering"></a>安装故障转移群集前的准备工作
@@ -146,7 +146,7 @@ ms.locfileid: "72517944"
   
 -   若要对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]启用 Kerberos 身份验证，请参阅 [知识库中的](https://support.microsoft.com/kb/319723) How to use Kerberos authentication in SQL Server [!INCLUDE[msCoName](../../../includes/msconame-md.md)] （如何在 SQL Server 中使用 Kerberos 身份验证）。  
 
--   SQL Server 故障转移群集实例 (FCI) 要求群集节点加入域。 不支持  使用以下配置： 
+-   SQL Server 故障转移群集实例 (FCI) 要求群集节点加入域。 不支持使用以下配置： 
     *   工作组群集上的 SQL FCI。 
     *   多域群集上的 SQL FCI。   
     *   域和工作组群集上的 SQL FCI。 
@@ -202,7 +202,7 @@ ms.locfileid: "72517944"
 ##  <a name="MultiSubnet"></a> 针对多子网配置的其他注意事项  
  下面的部分描述了在安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多子网故障转移群集时要记住的要求。 多子网配置涉及跨多个子网的群集，因此，涉及使用多个 IP 地址以及对 IP 地址资源依赖关系的更改。  
   
-### <a name="includessnoversionincludesssnoversion-mdmd-edition-and-operating-system-considerations"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Edition 和操作系统注意事项  
+### <a name="ssnoversion-edition-and-operating-system-considerations"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Edition 和操作系统注意事项  
   
 -   有关支持 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多子网故障转移群集的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本的信息，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
@@ -253,7 +253,7 @@ ms.locfileid: "72517944"
 > [!IMPORTANT]  
 >  如果安装到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的本地群集组的 MSDTC 实例失败， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将不自动尝试使用 MSDTC 的默认群集实例或本地计算机实例。 为了使用 MSDTC 的其他实例，您将需要从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 组中完全删除 MSDTC 的失败的实例。 同样，如果您为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 创建一个映射并且该映射的 MSDTC 实例失败，则您的分布式事务也将失败。 如果您希望 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用其他 MSDTC 实例，则必须将 MSDTC 的某个实例添加到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的本地群集组，或删除该映射。  
   
-### <a name="configure-includemsconameincludesmsconame-mdmd-distributed-transaction-coordinator"></a>配置 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 分布式事务处理协调器  
+### <a name="configure-msconame-distributed-transaction-coordinator"></a>配置 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 分布式事务处理协调器  
  安装操作系统并配置群集后，您还必须使用群集管理器配置 MSDTC 以便在群集中使用。 群集 MSDTC 失败不会导致 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序停止运行，但如果未能正确配置 MSDTC，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 应用程序功能可能会受影响。  
   
 ## <a name="see-also"></a>另请参阅  

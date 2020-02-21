@@ -12,10 +12,10 @@ ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9822af554536d9168c2ee3dd690c641865e66574
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593865"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>配置本机模式报表服务器扩展部署
@@ -75,7 +75,7 @@ Reporting Services 本机模式支持扩展部署模式。该模式允许运行�
 
 在处理扩展部署时，用于 Reporting Services 实例的服务帐户非常重要。 部署 Reporting Services 实例时，应执行以下操作之一。
 
-**选项 1：** 应使用相同的域用户帐户为服务帐户配置所有的 Reporting Services 实例。
+**选项 1：** 应使用相同的域用户帐户为服务帐户配置所有 Reporting Services 实例。
 
 **选项 2：** 需要向每个单独的服务帐户（无论是否为域帐户）授予 SQL Server 数据库实例内的 dbadmin 权限，该数据库实例正在托管 ReportServer 目录数据库。
 
@@ -117,7 +117,7 @@ An error occurred within the report server database.  This may be due to a conne
   
     6.  在“报表服务器数据库”中，选择为第一个报表服务器创建的数据库，然后选择“下一步”   。 默认名称为 ReportServer。 请勿选择 ReportServerTempDB；它仅用于在处理报表时存储临时数据。 如果数据库列表为空，请重复前四个步骤以建立服务器连接。  
   
-    7.  在“凭据”页中，选择报表服务器将用于连接到报表服务器数据库的帐户类型和凭据。 可以使用与第一个报表服务器实例相同的凭据，也可以使用其他凭据。 选择“下一步”  。  
+    7.  在“凭据”页中，选择报表服务器将用于连接到报表服务器数据库的帐户类型和凭据。 可以使用与第一个报表服务器实例相同的凭据，也可以使用其他凭据。 选择“**下一页**”。  
   
     8.  选择“摘要”，然后选择“完成”   。  
   
@@ -146,8 +146,8 @@ An error occurred within the report server database.  This may be due to a conne
 
 ## <a name="next-steps"></a>后续步骤
 
-
-[配置 URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)来[配置服务帐户](configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+[配置服务帐户](configure-the-report-server-service-account-ssrs-configuration-manager.md)
+[配置 URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
 [创建本机模式报表服务器数据库](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
 [配置报表服务器 URL](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
 [配置报表服务器数据库连接](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   

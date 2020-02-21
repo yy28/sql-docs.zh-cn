@@ -1,5 +1,5 @@
 ---
-title: SQLServerStatement 成员 |Microsoft Docs
+title: SQLServerStatement 成员 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 828cbaa9-ea7a-4986-95c3-5ba0d7d01d83
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 72eededd01cd61d6845cc92bbdfbfd073668dd76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970350"
 ---
 # <a name="sqlserverstatement-members"></a>SQLServerStatement 成员
@@ -30,13 +30,13 @@ ms.locfileid: "67970350"
   
 ## <a name="inherited-fields"></a>继承的字段  
   
-|“属性”|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |java.sql.Statement|CLOSE_ALL_RESULTS、CLOSE_CURRENT_RESULT、EXECUTE_FAILED、KEEP_CURRENT_RESULT、NO_GENERATED_KEYS、RETURN_GENERATED_KEYS、SUCCESS_NO_INFO|  
   
 ## <a name="methods"></a>方法  
   
-|“属性”|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverstatement.md)|将给定的 SQL 命令添加至此 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 对象的当前命令列表。|  
 |[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|取消当前正由此 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 对象运行的 SQL 语句。|  

@@ -1,5 +1,5 @@
 ---
-title: getVersionColumns 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getVersionColumns 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 6dd275d3-d9b2-4db7-938a-d4406c940a7a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3e2cf823a6c1cd33d647472a2e709517175ddce7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978167"
 ---
 # <a name="getversioncolumns-method-sqlserverdatabasemetadata"></a>getVersionColumns 方法 (SQLServerDatabaseMetaData)
@@ -36,7 +36,7 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
                                             java.lang.String table)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *catalog*  
   
  一个包含目录名称的字符串  。  
@@ -52,20 +52,20 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
 ## <a name="return-value"></a>返回值  
  一个 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 getVersionColumns 方法是由 java.sql.DatabaseMetaData 接口中的 getVersionColumns 方法指定的。  
   
  由 getVersionColumns 方法返回的结果集将包含下列信息：  
   
-|“属性”|类型|描述|  
+|名称|类型|说明|  
 |----------|----------|-----------------|  
 |SCOPE|**short**|JDBC 驱动程序不支持此类型。|  
-|COLUMN_NAME|**String**|列名称。|  
+|COLUMN_NAME|**字符串**|列名称。|  
 |DATA_TYPE|**short**|来自 java.sql.Types 的 SQL 数据类型。|  
-|TYPE_NAME|**String**|数据类型的名称。|  
+|TYPE_NAME|**字符串**|数据类型的名称。|  
 |COLUMN_SIZE|**int**|列的精度。|  
 |BUFFER_LENGTH|**int**|列的长度（字节）。|  
 |DECIMAL_DIGITS|**short**|列的小数位数。|  

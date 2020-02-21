@@ -1,19 +1,20 @@
 ---
-title: 配置报表服务器数据库连接（SSRS 配置管理器）| Microsoft Docs
+title: 配置报表服务器数据库连接（配置管理器）| Microsoft Docs
+description: 每个报表服务器实例都需要连接到存储由服务器管理的报表、共享数据源、资源和元数据的报表服务器数据库。
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
-ms.custom: seodec18
-ms.date: 10/09/2019
-ms.openlocfilehash: 7c781721ff9dcd2ec82844e8e0604aca83a186e4
-ms.sourcegitcommit: 3cde6aa3159beb761a19bc568d7e402bfa7aeb41
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019, seo-mmd-2019
+ms.date: 12/04/2019
+ms.openlocfilehash: d65c0e8bebf9f4019055e2fbabb30785235dacea
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72239370"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866033"
 ---
 # <a name="configure-a-report-server-database-connection-ssrs-configuration-manager"></a>配置报表服务器数据库连接（SSRS 配置管理器）
 
@@ -109,7 +110,7 @@ ms.locfileid: "72239370"
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
 > [!NOTE]
-> 使用 Azure SQL 托管实例托管 Reporting Services 2019 数据库时，支持仅限于使用连接 SQL Server 登录凭据。
+> 如果你使用 Azure SQL 托管实例来托管 Reporting Services 2019 数据库，支持仅限于使用 SQL Server 登录凭据进行连接。
 
 ::: moniker-end
 

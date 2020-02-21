@@ -1,6 +1,6 @@
 ---
-title: 探查器实用工具 |Microsoft Docs
-ms.custom: ''
+title: Profiler 实用工具
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: faaf063fc00964ec6d060d03f42acc3e1eaaa33a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 9ed207e5fa854dc25a07edfff49a75aad9d370ff
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105637"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307395"
 ---
 # <a name="profiler-utility"></a>Profiler 实用工具
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ profiler
  用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证的用户登录 ID。 登录 ID 区分大小写。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]。  
+>  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)] 列中的一个值匹配。  
   
  **/P** *password*  
  指定用户指定的用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证的密码。  
@@ -70,7 +70,7 @@ profiler
  指定使用当前用户的凭据与 Windows 身份验证连接。  
   
  **/S**  *sql_server_name*  
- 指定一个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例。 Profiler 会使用在 **/U** 和 **/P** 开关或 **/E** 开关中指定的身份验证信息，自动连接到指定的服务器。 若要连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的命名实例，请使用 **/S** *sql_server_name*\\*instance_name*。  
+ 指定一个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例。 Profiler 会使用在 **/U** 和 **/P** 开关或 **/E** 开关中指定的身份验证信息，自动连接到指定的服务器。 若要连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的命名实例，请使用 **/S** *sql_server_name*\\*instance_name*。  
   
  **/A**  *analysis_services_server_name*  
  指定一个 Analysis Services 实例。 Profiler 会使用在 **/U** 和 **/P** 开关或 **/E** 开关中指定的身份验证信息，自动连接到指定的服务器。 若要连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的命名实例，请使用 **/A** *analysis_services_server_name\instance_name*。  
@@ -106,7 +106,7 @@ profiler
 |DD|两位数日期|  
 |YY|两位数年份|  
 |hh|24 小时制的两位数小时|  
-|MM|两位数分钟|  
+|mm|两位数分钟|  
 |ss|两位数秒数|  
   
 > [!NOTE]  
@@ -118,7 +118,7 @@ profiler
  **/Z**  *file_size*  
  指定跟踪文件的大小（以兆字节 (MB) 为单位）。 默认大小是 5 MB。 若启用了滚动功能，则所有滚动文件的大小将被限制为此参数所指定的值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  若要使用特定的模板启动跟踪，请同时使用 **/S** 和 **/T** 选项。 例如，若要使用 MyServer\MyInstance 上的 Standard 模板启动跟踪，请在命令提示符处输入以下内容：  
   
 ```  

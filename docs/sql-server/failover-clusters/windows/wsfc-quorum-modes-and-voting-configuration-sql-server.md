@@ -1,6 +1,7 @@
 ---
-title: WSFC 仲裁模式和投票配置 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: WSFC 仲裁模式和投票配置
+descriptoin: 'A description of the quroum modes and voting configuration used by the Windows Server Failover Cluster with a SQL Server failover cluster instance, or an Always On availability group. '
+ms.custom: seo-lt-2019
 ms.date: 10/03/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,30 +14,17 @@ helpviewer_keywords:
 ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 09dc99233119b39161039f524599b9f36c3128ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 448d3679530c689befa59e2b8a70d409d93f6dd4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68107874"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74822173"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>WSFC 仲裁模式和投票配置 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 AlwaysOn 故障转移群集实例 (FCI) 都利用 Windows Server 故障转移群集 (WSFC) 来作为平台技术。  WSFC 使用一种基于仲裁的方法来监视群集的整体运行状况，并且最大限度地提高节点级别的容错能力。 理解 WSFC 仲裁模式和节点投票配置对于 Always On 高可用性和灾难恢复解决方案的设计、操作和故障排除十分重要。  
   
- **本主题内容：**  
-  
--   [由仲裁进行的群集运行状况检测](#ClusterHealthDetectionbyQuorum)  
-  
--   [仲裁模式](#QuorumModes)  
-  
--   [投票和非投票节点](#VotingandNonVotingNodes)  
-  
--   [建议的仲裁投票调整](#RecommendedAdjustmentstoQuorumVoting)  
-  
--   [相关任务](#RelatedTasks)  
-  
--   [相关内容](#RelatedContent)  
   
 ##  <a name="ClusterHealthDetectionbyQuorum"></a> 由仲裁进行的群集运行状况检测  
  WSFC 群集中的每个节点都参与周期性信号通信，以便与其他节点共享该节点的运行状况。 未响应的节点被认为是处于故障状态。  

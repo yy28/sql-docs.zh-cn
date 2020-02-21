@@ -1,5 +1,5 @@
 ---
-title: '步骤 4: 将弹性连接到 SQL with PHP |Microsoft Docs'
+title: 步骤 4：使用 PHP 弹性连接到 SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2018
 ms.prod: sql
@@ -11,21 +11,21 @@ ms.assetid: 8013474f-48e9-43d5-ab89-7b0504044468
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 002c27145360e0877d4e1bff816c25070247ddd8
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70874377"
 ---
-# <a name="step-4-connect-resiliently-to-sql-with-php"></a>步骤 4：使用 PHP 实现对 SQL 的弹性连接
+# <a name="step-4-connect-resiliently-to-sql-with-php"></a>步骤 4：使用 PHP 弹性连接到 SQL
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
   
-设计演示程序的目的是, 在尝试连接时会出现暂时性错误 (这是此[附录](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes)中列出的任何带有前缀 "08" 的错误代码), 从而导致重试。 但在查询命令期间发生暂时性错误后, 程序将放弃连接并创建新的连接, 然后再重试查询命令。 我们既不建议也不反对此设计选项。 演示程序演示了一些可供你使用的设计灵活性。  
+设计演示程序的目的是，在尝试连接的过程中，如果出现暂时性故障（这是此[附录](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes)中列出的带有前缀“08”的任何错误代码），则会导致重试。 但是，在执行查询命令期间发生暂时性故障时会导致程序丢弃连接并创建新的连接，然后重试查询命令。 我们既不建议也不反对这种设计。 演示程序演示了一些可供你使用的设计弹性。  
   
-此代码示例的长度主要在捕获异常逻辑中到期。   
+此代码示例的长度多半是因为捕获异常的逻辑。   
   
-[Sqlsrv_query （）](../../connect/php/sqlsrv-query.md)函数可用于针对 SQL 数据库从查询中检索结果集。 此函数实际上可接受任何查询和连接对象，并返回一个结果集，可以使用[sqlsrv_fetch_array （）](../../connect/php/sqlsrv-fetch-array.md)循环访问该结果集。 
+[sqlsrv_query()](../../connect/php/sqlsrv-query.md) 函数可用于针对 SQL 数据库从查询中检索结果集。 此函数实际上可接受任何查询和连接对象，并返回可使用 [sqlsrv_fetch_array()](../../connect/php/sqlsrv-fetch-array.md) 循环访问的结果集。 
   
 ```php
 

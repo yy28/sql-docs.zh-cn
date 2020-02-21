@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c81833ea-8b8a-459d-8f24-920098da994d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e286b0a66258b68680e8144d2aa04876dc70092a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: c25e68d0e03442cc8cb493aea91c9ae09b175def
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67936226"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76916380"
 ---
 # <a name="pdogetattribute"></a>PDO::getAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,19 +29,20 @@ ms.locfileid: "67936226"
 mixed PDO::getAttribute ( $attribute )  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
 *$attribute*：受支持的属性之一。 请参阅受支持的属性列表的“备注”部分。  
   
 ## <a name="return-value"></a>返回值  
 如果成功，返回连接选项的值、预定义 PDO 属性或自定义驱动程序属性。 如果失败，返回 null。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 下表包含受支持的属性列表。  
   
-|Attribute|由以下值处理|支持的值|描述|  
+|Attribute|由以下值处理|支持的值|说明|  
 |-------------|----------------|--------------------|---------------|  
 |PDO::ATTR_CASE|PDO|PDO::CASE_LOWER<br /><br />PDO::CASE_NATURAL<br /><br />PDO::CASE_UPPER|指定列名称是否应使用特定格式。 PDO::CASE_LOWER 强制使用小写列名称，PDO::CASE_NATURAL 保留数据库返回的列名称，而PDO::CASE_UPPER 强制使用大写列名称。<br /><br />默认值为 PDO::CASE_NATURAL。<br /><br />还可以使用 PDO::setAttribute 设置此属性。|  
-|PDO::ATTR_CLIENT_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|字符串数组|介绍驱动程序和相关库的版本。 返回带有以下元素的数组：ODBC 版本 (MajorVer.MinorVer)、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client DLL 名称和版本、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 版本 (MajorVer.MinorVer.BuildNumber.Revision)      |  
+|PDO::ATTR_CLIENT_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|字符串数组|介绍驱动程序和相关库的版本。 返回带有以下元素的数组：ODBC 版本 (*MajorVer*.*MinorVer*)、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client DLL 名称和版本、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 版本 (*MajorVer*.*MinorVer*.*BuildNumber*.*Revision*)|  
+|PDO::ATTR_DEFAULT_STR_PARAM|PDO|PDO::PARAM_STR_CHAR<br /><br />PDO::PARAM_STR_NATL|如果未设置为 PDO::PARAM_STR_CHAR，则返回 PDO::PARAM_STR_NATL。|
 |PDO::ATTR_DRIVER_NAME|PDO|String|始终返回“sqlsrv”。|  
 |PDO::ATTR_DRIVER_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|String|指示 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 版本 (MajorVer.MinorVer.BuildNumber.Revision)    |  
 |PDO::ATTR_ERRMODE|PDO|PDO::ERRMODE_SILENT<br /><br />PDO::ERRMODE_WARNING<br /><br />PDO::ERRMODE_EXCEPTION|指定驱动程序应如何处理失败。<br /><br />PDO::ERRMODE_SILENT（默认值）设置错误代码和信息。<br /><br />PDO::ERRMODE_WARNING 引发 E_WARNING。<br /><br />PDO::ERRMODE_EXCEPTION 引发异常。<br /><br />还可以使用 PDO::setAttribute 设置此属性。|  

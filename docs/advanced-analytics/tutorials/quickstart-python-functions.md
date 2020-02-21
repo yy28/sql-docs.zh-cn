@@ -1,27 +1,26 @@
 ---
-title: 快速入门：写入 Python 函数
-titleSuffix: SQL Server Machine Learning Services
-description: 在本快速入门中，学习如何使用 SQL Server 机器学习服务写入用于高级统计计算的 Python 函数。
+title: 快速入门：Python 函数
+description: 本快速入门介绍了如何将 Python 数学和实用工具函数与 SQL Server 机器学习服务结合使用。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 08f43c6406d0ca2c95cc21a207cae63af6e86902
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: d939e04c4a82575cf8210f2c11e734b9912c0fe5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727009"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831406"
 ---
-# <a name="quickstart-write-advanced-python-functions-with-sql-server-machine-learning-services"></a>快速入门：使用 SQL Server 机器学习服务编写高级 Python 函数
+# <a name="quickstart-python-functions-with-sql-server-machine-learning-services"></a>快速入门：结合使用 Python 函数和 SQL Server 机器学习服务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本快速入门介绍了如何使用 SQL Server 机器学习服务在 SQL 存储过程中嵌入 Python 数学和实用函数。 在 T-SQL 中难以实现的高级统计函数在 Python 中只需单个代码行就可以实现。
+本快速入门介绍了如何将 Python 数学和实用工具函数与 SQL Server 机器学习服务结合使用。 统计函数在 T-SQL 中实现起来通常很复杂，但在 Python 中只需几行代码就可以完成。
 
 ## <a name="prerequisites"></a>必备条件
 

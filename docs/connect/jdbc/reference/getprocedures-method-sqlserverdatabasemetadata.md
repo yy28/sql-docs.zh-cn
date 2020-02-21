@@ -1,5 +1,5 @@
 ---
-title: getProcedures 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getProcedures 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 66c9a8b0-dc4c-4cbb-8004-c7157368cab4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 054ce4f6f646f873d4aff05fbe1d31aa9903ded9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980740"
 ---
 # <a name="getprocedures-method-sqlserverdatabasemetadata"></a>getProcedures 方法 (SQLServerDatabaseMetaData)
@@ -36,7 +36,7 @@ public java.sql.ResultSet getProcedures(java.lang.String sCatalog,
                                         java.lang.String proc)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  sCatalog   
   
  一个包含目录名称的字符串  。 对此参数提供 Null 值指示无需使用目录名称。  
@@ -52,23 +52,23 @@ public java.sql.ResultSet getProcedures(java.lang.String sCatalog,
 ## <a name="return-value"></a>返回值  
  一个 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 getProcedures 方法由 getProcedures 方法在 Java.sql.databasemetadata 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 getProcedures 方法是由 java.sql.DatabaseMetaData 接口中的 getProcedures 方法指定的。  
   
  由 getProcedures 方法返回的结果集将包含以下信息：  
   
-|“属性”|类型|描述|  
+|名称|类型|说明|  
 |----------|----------|-----------------|  
-|PROCEDURE_CAT|**String**|指定的存储过程所在数据库的名称。|  
-|PROCEDURE_SCHEM|**String**|存储过程的架构。|  
-|PROCEDURE_NAME|**String**|存储过程的名称。|  
+|PROCEDURE_CAT|**字符串**|指定的存储过程所在数据库的名称。|  
+|PROCEDURE_SCHEM|**字符串**|存储过程的架构。|  
+|PROCEDURE_NAME|**字符串**|存储过程的名称。|  
 |NUM_INPUT_PARAMS|**int**|保留以供将来使用，当前返回 -1 值。|  
 |NUM_OUTPUT_PARAMS|**int**|保留以供将来使用，当前返回 -1 值。|  
 |NUM_RESULT_SETS|**int**|保留以供将来使用，当前返回 -1 值。|  
-|REMARKS|**String**|过程列的说明。<br /><br /> <br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不会为此列返回值。|  
+|REMARKS|**字符串**|过程列的说明。<br /><br /> <br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不返回此列的值。|  
 |PROCEDURE_TYPE|**smallint**|存储过程的类型。 可以为下列值之一：<br /><br /> SQL_PT_UNKNOWN (0)<br /><br /> SQL_PT_PROCEDURE (1)<br /><br /> SQL_PT_FUNCTION (2)|  
   
 > [!NOTE]  

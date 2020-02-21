@@ -1,20 +1,20 @@
 ---
-title: 使用 pip 安装 Python 包
+title: 使用 sqlmlutils 安装 Python 包
 description: 了解如何使用 Python pip 在 SQL Server 机器学习服务的实例上安装新的 Python 包。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/22/2019
+ms.date: 01/30/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 2e3452a6aad04d0d524e4eb0e6bd473fd39a2bf7
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 9d759921ac82f34156856b587161f44c64269ea0
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72542147"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76929901"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>使用 sqlmlutils 安装 Python 包
 
@@ -25,7 +25,7 @@ ms.locfileid: "72542147"
 有关包位置和安装路径的详细信息，请参阅[获取 Python 包信息](../package-management/python-package-information.md)。
 
 > [!NOTE]
-> 不建议使用标准 Python `pip install` 命令在 SQL Server 上添加 Python 包。 请改用本文中所述的 sqlmlutils  。
+> 不建议使用标准 Python `pip install` 命令在 SQL Server 2019 上添加 Python 包。 请改用本文中所述的 sqlmlutils  。
 
 ## <a name="prerequisites"></a>必备条件
 
@@ -56,14 +56,15 @@ ms.locfileid: "72542147"
 
 ## <a name="install-sqlmlutils-on-the-client-computer"></a>在客户端计算机上安装 sqlmlutils
 
-若要使用 sqlmlutils，首先需要将其安装在用于连接到 SQL Server 的客户端计算机上  。
+若要使用 sqlmlutils，首先需要将其安装在用于连接到 SQL Server 的客户端计算机上  。 请确保已安装 `pip`，有关详细信息，请参阅 [pip 安装](https://pip.pypa.io/en/stable/installing/)。
 
 1. 从 https://github.com/Microsoft/sqlmlutils/tree/master/Python/dist 将最新的 sqlmlutils zip 文件下载到客户端计算机  。 请勿解压缩文件。
 
-1. 打开“命令提示符”并运行以下命令，以安装 sqlmlutils 包   。 替换下载的 sqlmlutils zip 文件的完整路径（此示例假定下载的文件为 `c:\temp\sqlmlutils_0.6.0.zip`）  。
+1. 打开命令提示符并运行以下命令，安装 sqlmlutils 包   。 替换下载的 sqlmlutils zip 文件的完整路径（此示例假定下载的文件为 `c:\temp\sqlmlutils_0.7.2.zip`）  。
 
    ```console
-   pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils_0.6.0.zip
+   pip install "pymssql<3.0"
+   pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils_0.7.2.zip
    ```
 
 ## <a name="add-a-python-package-on-sql-server"></a>在 SQL Server 上添加 Python 包

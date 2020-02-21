@@ -1,22 +1,22 @@
 ---
 title: Python 教程：将用户分类
-description: 本系列教程由四个部分组成，引导你使用 K-Means 算法在采用 Python 与 SQL Server 机器学习服务的 SQL 数据库中执行针对客户的聚类分析。
+description: 本系列教程由四个部分组成，你将使用 K-Means 在 SQL 数据库中结合使用 Python 与 SQL Server 机器学习服务对客户进行群集。
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 08/30/2019
+ms.date: 12/17/2019
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 245a1566bfbbf19821323d0b474669eaba1d2e6e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: f5d1254c6b5c478c7bcad63da0902f21f4db70a9
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727081"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306583"
 ---
 # <a name="tutorial-categorizing-customers-using-k-means-clustering-with-sql-server-machine-learning-services"></a>教程：配合使用 K-Means 群集和 SQL Server 机器学习服务对客户进行分类
 
@@ -46,27 +46,19 @@ K-Means 群集是一种无监督式学习算法，该算法根据相似性寻找
 
 * 支持 Python 语言的 [SQL Server 机器学习服务](../what-is-sql-server-machine-learning.md) - 按照 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)或 [Linux 安装指南](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-machine-learning?toc=%2fsql%2fadvanced-analytics%2ftoc.json&view=sql-server-linux-ver15)中的安装说明进行操作。
 
-* Python IDE - 本教程在 [Azure Data Studio](../../azure-data-studio/what-is.md) 中使用 Python 笔记本。 有关详细信息，请参阅[如何使用 Azure Data Studio 中的笔记本](../../azure-data-studio/sql-notebooks.md)。 还可以使用自己的 Python IDE，例如 Jupyter 笔记本或具有 [Python 扩展](https://marketplace.visualstudio.com/items?itemName=ms-python.python)和 [mssql 扩展](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)的 [Visual Studio Code](https://code.visualstudio.com/docs)。
+* [Azure Data Studio](../../azure-data-studio/what-is.md)。 你将使用 Azure Data Studio 中同时适用于 Python 和 SQL 的笔记本。 若要详细了解笔记本，请参阅[如何使用 Azure Data Studio 中的笔记本](../../azure-data-studio/sql-notebooks.md)。
 
-* [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) 包 - SQL Server 机器学习服务中包含 revoscalepy 包  。 若要在客户端计算机上使用包，请参阅[设置用于 Python 开发的数据科学客户端](../python/setup-python-client-tools-sql.md)，了解用于在本地安装该包的选项。
+  * Python - 也可以使用你自己的 Python IDE，如 Jupyter 笔记本或 [Visual Studio Code](https://code.visualstudio.com/docs)（具有 [Python 扩展](https://marketplace.visualstudio.com/items?itemName=ms-python.python)和 [mssql 扩展](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)）。
+  * SQL - 也可以使用 [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) (SSMS)。
 
-  如果使用 Azure Data Studio 中的 Python 笔记本，请按照以下附加步骤使用 revoscalepy  ：
+* 附加 Python 包 - 在本教程系列中的示例所使用的 Python 包中，有些可能是你已经安装了的，有些可能是你尚未安装的。
 
-  1. 打开 Azure Data Studio
-  1. 在“文件”菜单中，选择“首选项”，然后选择“设置”   
-  1. 展开“扩展”，然后选择“笔记本配置”  
-  1. 在“Python 路径”下方，输入库的安装路径（例如，`C:\path-to-python-for-mls`） 
-  1. 确保选中“使用现有 Python” 
-  1. 重启 Azure Data Studio
-
-  如果使用其他 Python IDE，则对 IDE 执行类似步骤。
-
-* SQL 查询工具 - 本教程假定使用的是 [Azure Data Studio](../../azure-data-studio/what-is.md)。 也可以使用 [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) (SSMS)。
-
-* 附加 Python 包 - 本系列教程中的示例使用的是你可能已安装，也可能未安装的 Python 包。 如有必要，可使用以下 **pip** 命令安装这些包。
+  打开命令提示符  ，并更改为 Azure Data Studio 中使用的 Python 版本的安装路径。 例如，`cd %LocalAppData%\Programs\Python\Python37-32` 。 然后，运行下面的命令，以安装所有尚未安装的包。
 
   ```console
   pip install matplotlib
+  pip install pandas
+  pip install pyodbc
   pip install scipy
   pip install sklearn
   ```

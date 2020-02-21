@@ -1,5 +1,5 @@
 ---
-title: rollback 方法 () |Microsoft Docs
+title: rollback 方法 () | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 7adb6772-4047-4d8e-931d-b3d20eec44b5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e3b4575251cb4eb55f9af37bb81ed2c4bedbf564
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975711"
 ---
 # <a name="rollback-method-"></a>rollback 方法 ()
@@ -34,16 +34,16 @@ ms.locfileid: "67975711"
 public void rollback()  
 ```  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此回滚方法由 sql 中的 rollBack 方法指定。  
+## <a name="remarks"></a>备注  
+ 此 rollBack 方法是由 java.sql.Connection 接口中的 rollBack 方法指定的。  
   
  仅当已禁用自动提交模式时才应使用此方法。  
   
 ## <a name="see-also"></a>另请参阅  
- [rollback 方法&#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/rollback-method-sqlserverconnection.md)   
+ [rollback 方法 (SQLServerConnection)](../../../connect/jdbc/reference/rollback-method-sqlserverconnection.md)   
  [SQLServerConnection 成员](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection 类](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

@@ -13,17 +13,17 @@ author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
 ms.openlocfilehash: 3a6592781464bb148bf31fdaa135d17a159b5e13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68136533"
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 发行说明
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 本发行说明文档介绍了在安装 Microsoft SQL Server 2012 或对其进行故障排除前需要了解的已知问题（[此处下载](https://go.microsoft.com/fwlink/?LinkId=238647)(#单击此处下载)）。 本发行说明文档只能在线下载，而不提供有关的安装介质，并且本文档将定期更新。  
   
-有关如何开始安装 SQL Server 2012 的信息，请参阅 SQL Server 2012 自述文件。 该自述文档在安装介质上提供，也可从 [自述文件](https://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) (#自述文件) 下载页获得。 还可以在 [SQL Server 联机丛书](https://go.microsoft.com/fwlink/?LinkId=190948) (#sql-server-联机丛书) 中以及 [SQL Server 论坛](https://go.microsoft.com/fwlink/?LinkId=213599)(#sql-server-论坛) 上找到更多信息。  
+有关如何开始安装 SQL Server 2012 的信息，请参阅 SQL Server 2012 自述文件。 该自述文档在安装介质上提供，也可从 [自述文件](https://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) (#自述文件) 下载页获得。 您还可以在 [SQL Server 联机丛书](https://go.microsoft.com/fwlink/?LinkId=190948) 中以及 [SQL Server 论坛](https://go.microsoft.com/fwlink/?LinkId=213599)上找到更多的信息。  
   
 ## <a name="Install"></a>1.0 安装之前  
 在安装 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]之前，请考虑以下信息。  
@@ -64,7 +64,7 @@ ms.locfileid: "68136533"
 <pre>The following error has occurred:  
 Service 'SQLBrowser' start request failed. Click 'Retry' to retry the failed action, or click 'Cancel' to cancel this action and continue setup.</pre>  
   
-或多个  
+或  
   
 <pre>The following error has occurred:  
 SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu32' was cancelled by user after a previous installation failure. The last attempted step: Starting the SQL Server Browser service 'SQLBrowser', and waiting for up to '900' seconds for the process to complete.</pre>  
@@ -136,7 +136,7 @@ A semantic language statistics database is not registered. Full-text indexes usi
   
         1.  单击“**启动**” | “**所有程序**” | “**附件**”。  
   
-        2.  展开“**Windows PowerShell**”，右键单击“**Windows PowerShell**”，然后单击“**以管理员身份运行**”。 在“ **用户帐户控制** ”框中单击“ **是** ”。  
+        2.  展开“ **Windows PowerShell**”，右键单击“ **Windows PowerShell**”，然后单击“ **以管理员身份运行**”。 在“ **用户帐户控制** ”框中单击“ **是** ”。  
   
         3.  在 PowerShell 命令提示符处，键入以下命令，然后在每条命令之后按 Enter：  
   
@@ -151,7 +151,7 @@ A semantic language statistics database is not registered. Full-text indexes usi
   
         2.  若要启用“ **Microsoft .NET Framework 3.5.1**”，请选中该功能旁边的复选框。 若要关闭 Windows 功能，请取消选中该复选框。  
   
-        3.  单击“确定”  。  
+        3.  单击“确定”。   
   
         **使用部署映像服务和管理 (DISM.exe) 启用 .NET Framework 3.5 SP1：**  
   
@@ -291,7 +291,7 @@ A semantic language statistics database is not registered. Full-text indexes usi
   
 **问题：** 该工具中的某些配置选项不适用。 例如，在处理分区时不应使用“处理相关对象”，并且“并行处理”配置选项包含指示在标准 SKU 上不支持并行处理的无效错误消息。  
   
-**解决方法：** None  
+**解决方法：** 无  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
@@ -332,7 +332,7 @@ A semantic language statistics database is not registered. Full-text indexes usi
 ### <a name="43-indication-of-a-terminated-knowledge-discovery-or-interactive-cleansing-activity-is-delayed"></a>4.3 知识发现或交互式清理活动已终止的指示被延迟  
 **问题：** 如果管理员在“活动监视”屏幕中终止某一活动，则在正在运行知识发现、域管理或交互式清理活动的交互用户执行下一操作前，将不会收到指出其活动已终止的任何指示。  
   
-**解决方法：** None  
+**解决方法：** 无  
   
 ### <a name="44-a-cancel-operation-discards-work-from-multiple-activities"></a>4.4 取消操作放弃来自多个活动的工作  
 **问题：** 如果为正在运行的知识发现或域管理活动单击“取消”，并且当此活动正在运行时其他活动之前已完成了且没有任何发布操作正在执行，则自上次发布以来执行的所有活动中的工作都将被放弃，而不仅是放弃当前工作  。  
@@ -392,7 +392,7 @@ A semantic language statistics database is not registered. Full-text indexes usi
   
 -   在 .xls 文件中删除第 255 列之后所有列的数据，保存该文件，然后将 .xls 文件中的值导入域。  
   
-### <a name="416-activity-monitoring-feature-is-unavailable-for-roles-other-than-dqsadministrator"></a>4.16 活动监视功能不可用于 dqs_administrator 以外的其他规则  
+### <a name="416-activity-monitoring-feature-is-unavailable-for-roles-other-than-dqs_administrator"></a>4.16 活动监视功能不可用于 dqs_administrator 以外的其他规则  
 活动监视功能仅供具有 dqs_administrator 角色的用户使用。 如果您的用户帐户具有 dqs_kb_editor 或 dqs_kb_operator 角色，则活动监视功能将不可用于数据质量客户端应用程序。  
   
 ### <a name="417-error-on-opening-a-knowledge-base-in-the-recent-knowledge-base-list-for-domain-management"></a>4.17 在为域管理打开“最近的知识库”列表中的数据库时出错  
@@ -475,7 +475,7 @@ Invalid object name 'sys.federations'. (Microsoft SQL Server, Error: 208)
 ### <a name="55-new-maintenance-plan-layout-not-compatible-with-earlier-sql-server-tools"></a>5.5 新的维护计划布局与早期的 SQL Server 工具不兼容  
 **问题：** 在使用 SQL Server 2012 管理工具修改在以前版本的 SQL Server 管理工具（SQL Server 2008 R2、SQL Server 2008 或 SQL Server 2005）中创建的现有维护计划时，该维护计划以新格式保存。 早期版本的 SQL Server 管理工具不支持这个新格式。  
   
-**解决方法**：None  
+**解决方法**：无  
   
 ### <a name="56-intellisense-has-limitations-when-logged-in-to-a-contained-database"></a>5.6 在登录到包含的数据库时 Intellisense 具有限制  
 问题：包含的用户登录到包含的数据库时，SQL Server Management Studio (SSMS) 和 SQL Server Data Tools (SSDT) 中的 Intellisense 无法按预期方式正常工作。 在此类情况下会出现以下行为：  
@@ -486,7 +486,7 @@ Invalid object name 'sys.federations'. (Microsoft SQL Server, Error: 208)
   
 3.  针对内置功能的工具提示帮助不工作。  
   
-**解决方法**：None  
+**解决方法**：无  
   
 ### <a name="57-alwayson-availability-groups"></a>5.7 AlwaysOn 可用性组  
 在尝试创建可用性组前，请参阅联机丛书中的 [AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](https://go.microsoft.com/?linkid=9753168) (#alwayson-可用性组的先决条件、限制和建议-(sql-server))。 有关 AlwaysOn 可用性组的简介，请参阅联机丛书中的 [AlwaysOn 可用性组 (SQL Server)](https://go.microsoft.com/?linkid=9753166)(#alwayson-可用性组-(sql-server))。  
@@ -504,7 +504,7 @@ Invalid object name 'sys.federations'. (Microsoft SQL Server, Error: 208)
 |----------|--------------------------|----------------------|----------------------|------------------------------------------------------------------|---------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|是|是|是|是|是|  
 |SQL Native Client 11.0 OLEDB|否|是|是|否|否|  
-|ADO.NET（结合使用 .NET Framework 4.0 和连接性修补程序 **\&#42;** ）|是|是|是|是|用户帐户控制|  
+|ADO.NET（结合使用 .NET Framework 4.0 和连接性修补程序 **\&#42;** ）|是|是|是|是|是|  
 |ADO.NET（结合使用 .NET Framework 3.5 SP1 和连接性修补程序 **\&#42;\&#42;** ）|是|是|是|是|是|  
 |Microsoft JDBC driver 4.0 for SQL Server|是|是|是|是|是|  
   

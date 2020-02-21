@@ -19,13 +19,13 @@ ms.assetid: 37836b49-258e-45ce-9549-b8bd85d6952d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 11da2b4eca130eafe93a01315aaa1f6d9919632c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015039"
 ---
-# <a name="sqlsrvconnect"></a>sqlsrv_connect
+# <a name="sqlsrv_connect"></a>sqlsrv_connect
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 创建一个连接资源，并打开该连接。 默认情况下，使用 Windows 身份验证尝试连接。  
@@ -37,23 +37,23 @@ ms.locfileid: "68015039"
 sqlsrv_connect( string $serverName [, array $connectionInfo])  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
 *$serverName*：指定建立连接的服务器名称的字符串。 实例名称（例如“myServer\instanceName”）或端口号（例如“myServer, 1521”）可以包括为此字符串的一部分。 有关可用于此参数的选项的完整介绍，请参阅[结合使用连接字符串关键字与 SQL Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) 的 ODBC 驱动程序连接字符串关键字部分中的 Server 关键字。  
   
-从 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 3.0 开始，你还可以指定带有 `"(localdb)\instancename"`的 LocalDB 实例。 有关详细信息, 请参阅[对 LocalDB 的支持](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)。  
+从 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 3.0 开始，你还可以指定带有 `"(localdb)\instancename"`的 LocalDB 实例。 有关详细信息，请参阅[支持 LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)。  
   
-同样从 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 3.0 开始，你还可以指定要连接到 AlwaysOn 可用性组的虚拟网络名称。 有关对的[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]支持的详细信息, 请参阅[对高可用性和灾难恢复的支持](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。  
+同样从 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 3.0 开始，你还可以指定要连接到 AlwaysOn 可用性组的虚拟网络名称。 有关对 [!INCLUDE[ssHADR](../../includes/sshadr_md.md)] 的 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 支持的详细信息，请参阅[对高可用性和灾难恢复的支持](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。  
   
-$connectionInfo [可选]：包含连接属性的关联数组（例如，array ("Database" => "AdventureWorks")）    。 有关数组的受支持密钥的列表，请参阅 [Connection Options](../../connect/php/connection-options.md) 。  
+*$connectionInfo* [可选]：包含连接属性的关联数组（例如，array("Database" => "AdventureWorks")）。 有关数组的受支持密钥的列表，请参阅 [Connection Options](../../connect/php/connection-options.md) 。  
   
 ## <a name="return-value"></a>返回值  
 PHP 连接资源。 如果无法成功创建和打开连接，则返回 **false** 。  
   
-## <a name="remarks"></a>Remarks  
-如果在可选的 *$connectionInfo* 参数中没有指定 *UID* 和 *PWD* 的值，将尝试使用 Windows 身份验证进行此连接。 有关连接到服务器的详细信息，请参阅 [How to: Connect Using Windows Authentication](../../connect/php/how-to-connect-using-windows-authentication.md) 和 [How to: Connect Using SQL Server Authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md)。  
+## <a name="remarks"></a>备注  
+如果在可选的 *$connectionInfo* 参数中没有指定 *UID* 和 *PWD* 的值，将尝试使用 Windows 身份验证进行此连接。 有关连接到服务器的详细信息，请参阅[如何：使用 Windows 身份验证进行连接](../../connect/php/how-to-connect-using-windows-authentication.md)和[如何：使用 SQL Server 身份验证进行连接](../../connect/php/how-to-connect-using-sql-server-authentication.md)。  
   
 ## <a name="example"></a>示例  
-以下示例使用 Windows 身份验证创建和打开连接。 该示例假定本地计算机上已安装了 SQL Server 和 [AdventureWorks](https://www.codeplex.com/SqlServerSamples) 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  
+以下示例使用 Windows 身份验证创建和打开连接。 该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://www.codeplex.com/SqlServerSamples) 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  
   
 ```  
 <?php  
@@ -90,7 +90,7 @@ sqlsrv_close( $conn);
 ## <a name="see-also"></a>另请参阅  
 [SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)
 
-[Connecting to the Server](../../connect/php/connecting-to-the-server.md)
+[连接到服务器](../../connect/php/connecting-to-the-server.md)
 
 [文档中相关的代码示例](../../connect/php/about-code-examples-in-the-documentation.md)  
   

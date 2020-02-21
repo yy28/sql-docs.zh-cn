@@ -1,24 +1,26 @@
 ---
 title: 什么是应用程序部署？
-titleSuffix: Big Data Clusters for SQL Server 2019
+titleSuffix: SQL Server Big Data Clusters
 description: 本文介绍 SQL Server 2019 大数据群集上的应用程序部署。
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: da497f8d7c435a807ba530ae619ff91a6f2dff71
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 4b647ab4d03d110ce303388a8b62461f28033b6c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653009"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831571"
 ---
-# <a name="what-is-application-deployment-on-a-sql-server-2019-big-data-cluster"></a>什么是 SQL Server 2019 大数据群集上的应用程序部署？
+# <a name="what-is-application-deployment-on-a-big-data-cluster"></a>什么是大数据群集上的应用程序部署？
 
-应用程序部署通过提供用于创建、管理和运行应用程序的界面，允许在大数据群集上部署应用程序。 部署在大数据群集上的应用程序可以受益于群集的计算能力，并且可以访问群集上可用的数据。 这会提高应用程序的可伸缩性和性能，同时管理数据所在的应用程序。
+应用程序部署通过提供用于创建、管理和运行应用程序的界面，允许在大数据群集上部署应用程序。 部署在大数据群集上的应用程序可以受益于群集的计算能力，并且可以访问群集上可用的数据。 这会提高应用程序的可伸缩性和性能，同时管理数据所在的应用程序。 SQL Server 大数据群集上支持的应用程序运行时包括 R、Python、SSIS、MLeap。
+
 以下部分介绍了应用程序部署的体系结构和功能。
 
 ## <a name="application-deployment-architecture"></a>应用程序部署体系结构

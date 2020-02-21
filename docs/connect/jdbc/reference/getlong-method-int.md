@@ -1,5 +1,5 @@
 ---
-title: getLong 方法 (int) |Microsoft Docs
+title: getLong 方法 (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: b7078ca7-fd2a-4474-ab29-989ae28c77e8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b19807b810605a42b0036e9ee2cee57da4d20b2e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982525"
 ---
 # <a name="getlong-method-int"></a>getLong 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  在给定参数索引的情况下，检索指定参数的值作为 Java 编程语言中的 long  。  
+  在给定参数索引的情况下，检索指定参数的值作为 Java 编程语言中的 long。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,18 +34,18 @@ ms.locfileid: "67982525"
 public long getLong(int index)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
- 索引   
+#### <a name="parameters"></a>parameters  
+ 索引  
   
- 指示参数索引的 int  。  
+ 指示参数索引的 int。  
   
 ## <a name="return-value"></a>返回值  
- 一个**长整型**值。  
+ long 值。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 getLong 方法是由 java.sql.CallableStatement 接口中的 getLong 方法指定的。  
   
  只有可以安全返回整数值的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型（例如 bigint、int、smallint、tinyint 和 bit）才支持此方法。 在任何其他数据类型上使用此方法会引发异常。  

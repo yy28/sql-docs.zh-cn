@@ -1,5 +1,5 @@
 ---
-title: getLoginTimeout 方法 (SQLServerDataSource) |Microsoft Docs
+title: getLoginTimeout 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 316f067c-9e08-456a-af19-b80b0bbd4a5c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5fe82d2709aa8efa32408a9d9d86f0f660bed823
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982555"
 ---
 # <a name="getlogintimeout-method-sqlserverdatasource"></a>getLoginTimeout 方法 (SQLServerDataSource)
@@ -37,10 +37,10 @@ public int getLoginTimeout()
 ## <a name="return-value"></a>返回值  
  一个表示要等待的秒数的 int  值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果应用程序未明确指定超时值，则此方法会返回 15 秒的默认值。  
   
- 此 getLoginTimeout 方法由 getLoginTimeout 方法在 javax.mail.session 接口中指定。  
+ 此 getLoginTimeout 方法是由 javax.sql.DataSource 接口中的 getLoginTimeout 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDataSource 成员](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

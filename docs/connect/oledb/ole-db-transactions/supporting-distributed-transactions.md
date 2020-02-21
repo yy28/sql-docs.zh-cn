@@ -1,5 +1,5 @@
 ---
-title: 支持分布式事务 |Microsoft Docs
+title: 支持分布式事务 | Microsoft Docs
 description: OLE DB Driver for SQL Server 中的分布式事务
 ms.custom: ''
 ms.date: 06/14/2018
@@ -19,10 +19,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 22527cdfa08907dfdf120ef32c918ecb9eaf86bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993977"
 ---
 # <a name="supporting-distributed-transactions"></a>支持分布式事务
@@ -32,18 +32,18 @@ ms.locfileid: "67993977"
 
   适用于 SQL Server 的 OLE DB 驱动程序使用者可以使用 ITransactionJoin::JoinTransaction 方法参与由 Microsoft 分布式事务处理协调器 (MS DTC) 协调的分布式事务  。  
   
- MS DTC 公开 COM 对象，这些对象允许客户端跨各种数据存储的多个连接来启动和参与协调的事务。 若要启动事务, SQL Server 使用者的 OLE DB 驱动程序使用 MS DTC **ITransactionDispenser**接口。 ITransactionDispenser 的 BeginTransaction 成员返回分布式事务对象的引用   。 使用**JoinTransaction**将此引用传递到 SQL Server 的 OLE DB 驱动程序。  
+ MS DTC 公开 COM 对象，这些对象允许客户端跨各种数据存储的多个连接来启动和参与协调的事务。 为了启动事务，OLE DB Driver for SQL Server 使用者使用 MS DTC ITransactionDispenser  接口。 ITransactionDispenser 的 BeginTransaction 成员返回分布式事务对象的引用   。 此引用使用 JoinTransaction  传递给 OLE DB Driver for SQL Server。  
   
  MS DTC 支持对分布式事务的异步提交和中止。 为了通知异步事务状态，使用者实现 ITransactionOutcomeEvents 接口并将该接口与 MS DTC 事务对象连接  。  
   
  对于分布式事务，适用于 SQL Server 的 OLE DB 驱动程序按如下方式实现 ITransactionJoin::JoinTransaction 参数  。  
   
-|参数|描述|  
+|参数|说明|  
 |---------------|-----------------|  
 |punkTransactionCoord |指向 MS DTC 事务对象的指针。|  
-|IsoLevel |被 SQL Server OLE DB 驱动程序忽略。 使用者在从 MS DTC 获取事务对象时，确定由 MS DTC 协调的事务的隔离级别。|  
-|IsoFlags |必须为 0。 如果使用者指定了任何其他值, SQL Server 的 OLE DB 驱动程序将返回 XACT_E_NOISORETAIN。|  
-|POtherOptions |如果不为 NULL, 则 SQL Server 的 OLE DB 驱动程序从接口请求选项对象。 如果选项对象的*ulTimeout*成员不为零, 则 SQL Server 的 OLE DB 驱动程序将返回 XACT_E_NOTIMEOUT。 SQL Server 的 OLE DB 驱动程序将忽略*szDescription*成员的值。|  
+|IsoLevel |被 OLE DB Driver for SQL Server 忽略。 使用者在从 MS DTC 获取事务对象时，确定由 MS DTC 协调的事务的隔离级别。|  
+|IsoFlags |必须为 0。 如果使用者指定了其他任何值，OLE DB Driver for SQL Server 返回 XACT_E_NOISORETAIN。|  
+|POtherOptions |如果不为 NULL，OLE DB Driver for SQL Server 请求从接口获取 options 对象。 如果 options 对象的 ulTimeout  成员不为零，OLE DB Driver for SQL Server 返回 XACT_E_NOTIMEOUT。 OLE DB Driver for SQL Server 忽略 szDescription  成员的值。|  
   
  下面的示例通过使用 MS DTC 来协调事务：  
   

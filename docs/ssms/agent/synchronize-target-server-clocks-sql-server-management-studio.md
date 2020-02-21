@@ -1,8 +1,7 @@
 ---
-title: 同步目标服务器时钟 (SQL Server Management Studio) | Microsoft Docs
+title: 同步目标服务器的时钟
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,17 +13,19 @@ helpviewer_keywords:
 ms.assetid: 4fb80502-d271-4d06-bcbc-bfbbceb5f2a2
 author: markingmyname
 ms.author: maghan
-ms.custom: ''
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 583ef664fa510ad4d71f15f4ea45bb8e679834cb
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 7fa715d0df6c94630564ede8a162a940542d7510
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552650"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257902"
 ---
-# <a name="synchronize-target-server-clocks-sql-server-management-studio"></a>Synchronize Target Server Clocks (SQL Server Management Studio)
+# <a name="synchronize-target-server-clocks"></a>同步目标服务器的时钟
 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 

@@ -1,8 +1,7 @@
 ---
-title: 下载 SQL Server Management Studio (SSMS) | Microsoft Docs
+title: 下载 SQL Server Management Studio (SSMS)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: sstein, maghan
 ms.technology: ssms
 ms.topic: conceptual
 keywords:
@@ -21,14 +20,15 @@ keywords:
 ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dnethi
 ms.author: dinethi
-ms.custom: ''
+ms.reviewer: sstein, maghan
+ms.custom: seo-lt-2019
 ms.date: 11/04/2019
-ms.openlocfilehash: 38c594e235bf68c18ec493fd8ec43f585ea0378c
-ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
+ms.openlocfilehash: 3532c1d7cfe148c4fe4f1d5331e711a994916818
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74097859"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76761761"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下载 SQL Server Management Studio (SSMS)
 
@@ -44,17 +44,17 @@ SSMS 是免费的！
 
 **[![下载](media/download-icon.png)下载 SQL Server Management Studio (SSMS)](https://aka.ms/ssmsfullsetup)**
 
-SSMS 18.4 是 SSMS 的最新正式发布 (GA) 版。 如果安装了之前的 SSMS 18 GA 版本，请安装 SSMS 18.4 将它升级到 18.4。 如果安装了较早的 SSMS 18.x 预览版，必须在安装 SSMS 18.4 前卸载预览版  。
+SSMS 18.4 是 SSMS 的最新正式发布 (GA) 版。 如果安装了之前的 SSMS 18 GA 版本，请安装 SSMS 18.4 将它升级到 18.4。
 
 ### <a name="version-information"></a>版本信息
 
 - 版本号：18.4  
 - 生成号：15.0.18206.0  
-- 发布日期：2019 年 11 月 4 日  
+- 发行日期：2019 年 11 月 4 日  
 
 如果你有任何意见或建议，或想报告问题，最好是通过 [UserVoice](https://aka.ms/sqlfeedback) 与 SSMS 团队联系。
 
-SSMS 18.x 安装不会升级或替换 SSMS 17.x 或更早版本。 SSMS 18.x 与以前的版本并行安装，因此，这两个版本均可供使用。
+SSMS 18.x 安装不会升级或替换 SSMS 17.x 或更早版本。 SSMS 18.x 与以前的版本并行安装，因此，这两个版本均可供使用。 但是，如果安装了 SSMS 18.x 预览版，必须在安装 SSMS 18.4 前卸载  预览版。
 
 如果计算机包含 SSMS 的并行安装，请验证你是否针对特定需求启动相应的版本。 最新版本标记为 Microsoft SQL Server Management Studio 18 
 
@@ -112,7 +112,7 @@ SQL Server Management Studio 18.4：
 <sup>*</sup> 需要 1607 (10.0.14393) 或更高版本
 
 > [!NOTE]
-> SSMS 仅在 Windows 上运行。 如果需要在 Windows 以外的平台上运行的工具，请查看 Azure Data Studio。 Azure Data Studio 是一个全新的跨平台工具，可在 macOS、Linux 以及 Windows 上运行。 有关详细信息，请参阅 [Azure Data Studio](../azure-data-studio/what-is.md)。
+> SSMS 仅在 Windows（AMD 或 Intel）上运行。 如果需要在 Windows 以外的平台上运行的工具，请查看 Azure Data Studio。 Azure Data Studio 是一个全新的跨平台工具，可在 macOS、Linux 以及 Windows 上运行。 有关详细信息，请参阅 [Azure Data Studio](../azure-data-studio/what-is.md)。
 
 ## <a name="release-notes-ssms-184"></a>发行说明 (SSMS 18.4)
 
@@ -130,7 +130,9 @@ SQL Server Management Studio 18.4：
 
 - [教程：SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
 - [SQL Server Management Studio 文档](sql-server-management-studio-ssms.md)
-- [其他更新程序和 Service Pack](https://technet.microsoft.com/sqlserver/ff803383.aspx)
+- [最新更新](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
+- [Azure Data Studio](../azure-data-studio/what-is.md)
 - [下载 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
+- [Azure 数据体系结构指南](https://docs.microsoft.com/azure/architecture/data-guide/)
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

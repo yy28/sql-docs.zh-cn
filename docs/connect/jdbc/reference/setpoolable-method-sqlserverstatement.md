@@ -1,5 +1,5 @@
 ---
-title: setPoolable 方法 (SQLServerStatement) |Microsoft Docs
+title: setPoolable 方法 (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: f0f798c8-cafb-4acc-b85d-2e0059c91d92
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5424de7d0d6f7bda44ec61ea61f48d63bb097c97
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973205"
 ---
 # <a name="setpoolable-method-sqlserverstatement"></a>setPoolable 方法 (SQLServerStatement)
@@ -29,20 +29,20 @@ ms.locfileid: "67973205"
 public void setPoolable(boolean poolable) throws SQLException  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  poolable   
   
  如果为 true  ，则请求语句入池。 如果为 false  ，则请求语句不入池。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  poolable  参数中指定的值是对语句池实现的提示，用于指示应用程序是否希望语句入池。 语句池管理器决定应用程序是否使用该提示。  
   
  语句的池值既应用于由驱动程序实现的内部语句缓存，也应用于由应用程序服务器和其他应用程序实现的外部语句缓存。  
   
- 默认情况下, SQLServerStatement 对象在创建时不可入池。 SQLServerPreparedStatement 和 SQLServerCallableStatement 对象在创建时是可入池。  
+ 默认情况下，创建时 SQLServerStatement 对象不能合并。 SQLServerPreparedStatement 和 SQLServerCallableStatement 对象在创建时可以合并。  
   
  如果对已关闭的语句调用此方法，将引发 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)。  
   

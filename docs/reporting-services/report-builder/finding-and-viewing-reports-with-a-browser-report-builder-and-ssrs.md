@@ -9,10 +9,10 @@ ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cf30cee34e988f552a36fac1f7b9eb9ed14d83ef
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73594009"
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>使用浏览器查找和查看报表（报表生成器和 SSRS）
@@ -28,7 +28,7 @@ ms.locfileid: "73594009"
 > [!NOTE]  
 >  如果是通过手持设备访问报表，则必须使用浏览器打开报表。 报表管理器界面的大小不适于在手持设备上显示。  
   
- 有关可以使用的浏览器类型的详细信息，请参阅[Reporting Services 和 Power View 浏览器支持](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)。  
+ 若要详细了解可使用的浏览器类型，请参阅 [Reporting Services 和 Power View 的浏览器支持](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

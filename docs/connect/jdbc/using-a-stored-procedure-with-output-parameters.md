@@ -11,10 +11,10 @@ ms.assetid: 1c006f27-7e99-43d5-974c-7b782659290c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: efafaa709666620e7237f2481c392aba25dfd5f8
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026835"
 ---
 # <a name="using-a-stored-procedure-with-output-parameters"></a>使用含输出参数的存储过程
@@ -28,11 +28,11 @@ ms.locfileid: "69026835"
 `{call procedure-name[([parameter][,[parameter]]...)]}`
 
 > [!NOTE]  
-> 有关 SQL 转义序列的详细信息, 请参阅[使用 sql 转义序列](../../connect/jdbc/using-sql-escape-sequences.md)。
+> 若要详细了解 SQL 转义序列，请参阅[使用 SQL 转义序列](../../connect/jdbc/using-sql-escape-sequences.md)。
 
-构造`call`转义序列时, 请使用？ 来指定 IN 参数。 此字符充当要从该存储过程返回的参数值的占位符。 要为 OUT 参数指定值，必须在运行存储过程前使用 SQLServerCallableStatement 类的 [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) 方法指定各参数的数据类型。
+构造 `call` 转义序列时，请使用 ?（问号）字符 来指定 OUT 参数。 此字符充当要从该存储过程返回的参数值的占位符。 要为 OUT 参数指定值，必须在运行存储过程前使用 SQLServerCallableStatement 类的 [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) 方法指定各参数的数据类型。
 
-使用 registerOutParameter 方法为 OUT 参数指定的值必须是 java.sql.Types 所包含的 JDBC 数据类型之一，而它又被映射成本地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型之一。 有关 jdbc 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型的详细信息, 请参阅[了解 jdbc 驱动程序数据类型](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)。
+使用 registerOutParameter 方法为 OUT 参数指定的值必须是 java.sql.Types 所包含的 JDBC 数据类型之一，而它又被映射成本地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型之一。 若要详细了解 JDBC 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型，请参阅[了解 JDBC 驱动程序数据类型](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)。
 
 对于 OUT 参数向 registerOutParameter 方法传递一个值时，不仅必须指定要用于此参数的数据类型，而且必须在存储过程中指定此参数的序号位置或此参数的名称。 例如，如果存储过程包含单个 OUT 参数，则其序数值为 1；如果存储过程包含两个参数，则第一个序数值为 1，第二个序数值为 2。
 
@@ -84,7 +84,7 @@ public static void executeStoredProcedure(Connection con) throws SQLException {
 > [!NOTE]  
 > 这些示例使用 SQLServerCallableStatement 类的 execute 方法来运行存储过程。 使用此方法是因为存储过程也不会返回结果集。 如果返回，则使用 [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 方法。
 
-存储过程可能返回更新计数和多个结果集。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 遵循 JDBC 3.0 规范，此规范规定在检索 OUT 参数之前应检索多个结果集和更新计数。 也就是说, 在使用 CallableStatement 方法检索 OUT 参数之前, 应用程序应检索所有结果集对象和更新计数。 否则，当检索 OUT 参数时，尚未检索的 ResultSet 对象和更新计数将丢失。 有关更新计数和多个结果集的详细信息, 请参阅[使用带有更新计数的存储过程](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)和[使用多个结果集](../../connect/jdbc/using-multiple-result-sets.md)。
+存储过程可能返回更新计数和多个结果集。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 遵循 JDBC 3.0 规范，此规范规定在检索 OUT 参数之前应检索多个结果集和更新计数。 也就是说，应用程序应先检索所有 ResultSet 对象和更新计数，再使用 CallableStatement.getter 方法检索 OUT 参数。 否则，当检索 OUT 参数时，尚未检索的 ResultSet 对象和更新计数将丢失。 若要详细了解更新计数和多个结果集，请参阅[使用包含更新计数的存储过程](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)和[使用多个结果集](../../connect/jdbc/using-multiple-result-sets.md)。
 
 ## <a name="see-also"></a>另请参阅
 

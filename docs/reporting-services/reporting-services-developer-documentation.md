@@ -12,14 +12,14 @@ helpviewer_keywords:
 - programming [Reporting Services]
 ms.date: 03/17/2017
 ms.openlocfilehash: e2db4a113ebdb53756200879e3797ccbbeec8a52
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68259608"
 ---
 # <a name="reporting-services-developer-documentation"></a>Reporting Services 开发人员文档
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了多个编程接口，你可以在自己的应用程序中利用这些接口。 您可以使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的现有特性和功能将自定义报表和管理工具置入网站和 Windows 应用程序，也可以扩展 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 平台。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了多个编程接口，你可以在自己的应用程序中利用这些接口。 您可以使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的现有特性和功能将自定义报表和管理工具置入网站和 Windows 应用程序，也可以扩展 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 平台。  
   
  扩展 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 平台包括创建可用于数据访问、报表传递等等的新组件和资源。 可以向在其组织中使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的公司销售这些组件和资源。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68259608"
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 支持一组完整的基于 URL 的请求，您可以将这些请求用作进行报表导航和查看的快捷访问点。 可以将此技术与报表服务器 Web 服务结合使用，以便将完整的报表解决方案集成到自定义业务应用程序中。 当将报表作为 Web 门户的一部分集成或从 Web 浏览器查看报表时，URl 访问尤其有用。  
   
  [Reporting Services 扩展插件](../reporting-services/extensions/reporting-services-extensions.md)  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的模块化体系结构旨在实现可扩展性。 提供了一个托管代码 API，以便您能够轻松地开发、安装和管理由许多 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 组件使用的扩展插件。 可以使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 创建程序集，并添加新的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 呈现、安全、传递和数据访问功能以满足不断发展的业务需求。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的模块化体系结构旨在实现可扩展性。 提供了一个托管代码 API，以便您能够轻松地开发、安装和管理由许多 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 组件使用的扩展插件。 可以使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 创建程序集，并添加新的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 呈现、安全、传递和数据处理功能以满足不断发展的业务需求。  
   
  [自定义报表项](../reporting-services/custom-report-items/custom-report-items.md)  
  介绍如何创建自定义报表项，以便向 RDL 添加功能或扩展现有控件的功能。  

@@ -1,6 +1,7 @@
 ---
-title: 通过强制仲裁进行 WSFC 灾难恢复 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 通过强制仲裁进行灾难恢复
+description: 从仲裁故障恢复需要手动干预。 本文介绍在 SQL Server 故障转移群集实例 (FCI) 发生灾难的情况下如何强制仲裁的解决方法。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -13,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2453c994ca274d4fd584d04026e3f4e0eb0cecf6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 36eebd77371cf2cede1e36ab68873c080a752128
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904955"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74821979"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>通过强制仲裁进行 WSFC 灾难恢复 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   仲裁故障通常由涉及 WSFC 群集中的多个节点的系统性灾难、持久性通信故障或配置错误引起的。  从仲裁故障恢复需要手动干预。  
   
--   **开始之前：** [先决条件](#Prerequisites)、[安全性](#Security)  
+-   **开始之前：**[先决条件](#Prerequisites)、[安全性](#Security)  
   
--   **通过强制仲裁过程进行 WSFC 灾难恢复** [通过强制仲裁过程进行 WSFC 灾难恢复](#Main)  
+-   通过强制仲裁过程进行 WSFC 灾难恢复 [通过强制仲裁过程进行 WSFC 灾难恢复](#Main)  
   
 -   [相关任务](#RelatedTasks)  
   
@@ -34,7 +35,7 @@ ms.locfileid: "67904955"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a> 先决条件  
+###  <a name="Prerequisites"></a>先决条件  
  强制仲裁过程假定在仲裁失败前存在运行状况正常的仲裁。  
   
 > [!WARNING]  

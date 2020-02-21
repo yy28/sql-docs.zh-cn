@@ -1,10 +1,9 @@
 ---
-title: 警报属性（“历史记录”页）| Microsoft Docs
-ms.custom: ''
+title: 警报属性（“历史记录”页）
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,13 +11,15 @@ f1_keywords:
 ms.assetid: f5359f5c-93a3-4a4a-8286-e9fe6f0196c7
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b88f208afdb819c106991675c4ba9a23b83477ba
-ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
+ms.openlocfilehash: 6be187d6d8a54468fba199753c145f837470dd1f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383470"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254543"
 ---
 # <a name="alert-properties-history-page"></a>警报属性（“历史记录”页）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,10 +33,10 @@ ms.locfileid: "70383470"
 
 ## <a name="options"></a>选项  
 **上次警报的日期**  
-显示指定事件上次发生的日期，或者如果自从创建警报后从未发生该事件则显示“(从未发生)”  。  
+显示指定事件上次发生的日期，或者如果自从创建警报后从未发生该事件则显示“(从未发生)”。  
   
 **上次响应的日期**  
-显示警报上次响应该事件的日期，或者如果自从创建警报后从未发生该事件则显示“(从未响应)”  。  
+显示警报上次响应该事件的日期，或者如果自从创建警报后从未发生该事件则显示“(从未响应)”。  
   
 **发生次数**  
 自从创建警报后或从上次重置计数后，该事件发生的总次数。  

@@ -1,5 +1,5 @@
 ---
-title: getMoreResults 方法 (int) |Microsoft Docs
+title: getMoreResults 方法 (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 6419e5a8-8b3a-4d5b-8226-95865c52c723
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 08760680774b2e760b66d9e210c4ef939872444e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981775"
 ---
 # <a name="getmoreresults-method-int"></a>getMoreResults 方法 (int)
@@ -34,7 +34,7 @@ ms.locfileid: "67981775"
 public final boolean getMoreResults(int mode)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  模式   
   
  指示如何处理当前打开的结果集对象的 int  。 必须是下列常量之一：  
@@ -48,11 +48,11 @@ public final boolean getMoreResults(int mode)
 ## <a name="return-value"></a>返回值  
  如果返回的结果为一个结果集，则为 true  。 否则为 **false**。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 getMoreResults 方法由 getMoreResults 方法在 .sql 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 getMoreResults 方法是由 java.sql.Statement 接口中的 getMoreResults 方法指定的。  
   
  如果在检索结果前调用 getMoreResults 方法，则该方法就会采用 mode  参数指定的行为方式并移动到下一个结果。  
   

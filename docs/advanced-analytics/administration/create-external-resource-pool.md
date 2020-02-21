@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 49027d7b9ab230f80bb8154a746eb503846534f2
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: fc1803724f0dafccc1fe41d8e17060810a85e001
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727781"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252828"
 ---
 # <a name="create-a-resource-pool-for-sql-server-machine-learning-services"></a>为 SQL Server 机器学习服务创建资源池
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,11 +39,11 @@ ms.locfileid: "73727781"
     SELECT * FROM sys.resource_governor_resource_pools WHERE name = 'default'
     ```
 
-    **示例结果**
+    示例结果 
 
-    |pool_id|NAME|min_cpu_percent|max_cpu_percent|min_memory_percent|max_memory_percent|cap_cpu_percent|min_iops_per_volume|max_iops_per_volume|
+    |pool_id|name|min_cpu_percent|max_cpu_percent|min_memory_percent|max_memory_percent|cap_cpu_percent|min_iops_per_volume|max_iops_per_volume|
     |-|-|-|-|-|-|-|-|-|
-    |2|默认值|0|100|0|100|100|0|0|
+    |2|default|0|100|0|100|100|0|0|
 
 2.  检查分配到默认**外部**资源池的资源。
   
@@ -51,11 +51,11 @@ ms.locfileid: "73727781"
     SELECT * FROM sys.resource_governor_external_resource_pools WHERE name = 'default'
     ```
 
-    **示例结果**
+    示例结果 
 
-    |external_pool_id|NAME|max_cpu_percent|max_memory_percent|max_processes|version|
+    |external_pool_id|name|max_cpu_percent|max_memory_percent|max_processes|版本|
     |-|-|-|-|-|-|
-    |2|默认值|100|20|0|2|
+    |2|default|100|20|0|2|
  
 3.  使用这些服务器默认设置时，外部运行时可能无法获得足够的资源来完成大多数任务。 若要改变这种局面，必须按如下所述修改服务器资源用量：
   
@@ -123,7 +123,7 @@ ms.locfileid: "73727781"
   
 2.  在每个资源池的分类器函数中，定义应分配到资源池的语句或传入请求的类型。
   
-     例如，如果发送请求的应用程序是“Microsoft R Host”或“RStudio”，则以下函数将返回分配到用户定义的外部资源池的架构的名称；否则，将返回默认资源池。
+     例如，如果发送请求的应用程序是“Microsoft R Host”、“RStudio”或“Mashup”，下面的函数返回分配到用户定义的外部资源池的架构的名称；否则，它返回默认资源池。
   
     ```sql
     USE master
@@ -133,7 +133,7 @@ ms.locfileid: "73727781"
     WITH schemabinding
     AS
     BEGIN
-        IF program_name() in ('Microsoft R Host', 'RStudio') RETURN 'ds_wg';
+        IF program_name() in ('Microsoft R Host', 'RStudio', 'Mashup') RETURN 'ds_wg';
         RETURN 'default'
         END;
     GO
@@ -143,7 +143,7 @@ ms.locfileid: "73727781"
   
     ```sql
     ALTER RESOURCE GOVERNOR WITH  (classifier_function = dbo.is_ds_apps);
-    ALTER RESOURCE GOVERNOR WITH reconfigure;
+    ALTER RESOURCE GOVERNOR RECONFIGURE;
     GO
     ```
 
@@ -161,13 +161,13 @@ ms.locfileid: "73727781"
     SELECT * FROM sys.resource_governor_workload_groups;
     ```
 
-    **示例结果**
+    示例结果 
 
-    |group_id|NAME|importance|request_max_memory_grant_percent|request_max_cpu_time_sec|request_memory_grant_timeout_sec|max_dop|group_max_requests pool_id|pool_idd|external_pool_id|
+    |group_id|name|importance|request_max_memory_grant_percent|request_max_cpu_time_sec|request_memory_grant_timeout_sec|max_dop|group_max_requests pool_id|pool_idd|external_pool_id|
     |-|-|-|-|-|-|-|-|-|-|
-    |1|内部|Medium|25|0|0|0|0|1|2|
-    |2|默认值|Medium|25|0|0|0|0|2|2|
-    |256|ds_wg|Medium|25|0|0|0|0|2|256|
+    |1|内部|中型|25|0|0|0|0|1|2|
+    |2|default|中型|25|0|0|0|0|2|2|
+    |256|ds_wg|中型|25|0|0|0|0|2|256|
   
 2.  使用新的目录视图 [sys.resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md) 查看所有外部资源池。
   
@@ -175,11 +175,11 @@ ms.locfileid: "73727781"
     SELECT * FROM sys.resource_governor_external_resource_pools;
     ```
 
-    **示例结果**
+    示例结果 
     
-    |external_pool_id|NAME|max_cpu_percent|max_memory_percent|max_processes|version|
+    |external_pool_id|name|max_cpu_percent|max_memory_percent|max_processes|版本|
     |-|-|-|-|-|-|
-    |2|默认值|100|20|0|2|
+    |2|default|100|20|0|2|
     |256|ds_ep|100|40|0|1|
   
      有关详细信息，请参阅[资源调控器目录视图 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)。

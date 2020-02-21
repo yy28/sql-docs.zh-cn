@@ -1,6 +1,6 @@
 ---
-title: 选项（“环境”-“帮助”-“联机”页）| Microsoft Docs
-ms.custom: ''
+title: 选项（“环境”-“帮助”-“联机”页）
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 24933338-3a47-44c0-87fc-c3dca8faf4de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 252acb0bc5e3d7fbbd66c0c41fdbd97b59b64f24
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 7be77c2ce856a1940197a7b1d52550beac011e4b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68257120"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252334"
 ---
 # <a name="options-environment---help---online-page"></a>选项（“环境”-“帮助”-“联机”页）
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用“选项”  对话框，可以指定用于 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 搜索的帮助源，包括 F1 帮助。 在“工具”  菜单上，单击“选项”  ，展开“环境”  文件夹，选择“帮助”  ，再单击“联机”  。 如果列表中没有显示“联机”  页，请在“选项”  对话框中选中“显示所有设置”  复选框。  
+使用“选项”对话框，可以指定用于 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 搜索的帮助源，包括 F1 帮助。 在“工具”菜单上，单击“选项”，展开“环境”文件夹，选择“帮助”，再单击“联机”。 如果列表中没有显示“联机”页，请在“选项”对话框中选中“显示所有设置”复选框。  
   
 **当载入帮助内容时**  
 设置在 F1 帮助中使用帮助源的顺序，并指定使用哪些帮助源。  
@@ -45,7 +45,7 @@ ms.locfileid: "68257120"
 列出可以包括在帮助搜索中的可用 Codezone 社区网站。  
   
 **详细信息**  
-对于在“Codezone 社区”  列表中选中的每个提供程序，显示其简要说明（如果可用）。  
+对于在“Codezone 社区”列表中选中的每个提供程序，显示其简要说明（如果可用）。  
   
 **阅读 隐私声明**  
 显示 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 的联机使用保密策略。  

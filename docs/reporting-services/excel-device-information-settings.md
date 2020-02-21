@@ -1,6 +1,6 @@
 ---
 title: Excel 设备信息设置 | Microsoft Docs
-ms.date: 03/16/2017
+ms.date: 01/23/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -11,21 +11,23 @@ helpviewer_keywords:
 ms.assetid: bb5f3566-f033-4470-be87-1f52fb7a4ab6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4e63af3904696e053d7e74419bd7cffdd23aa117
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 7a83bcd79a50400888d5a973ad9a743db19b87b5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65504015"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76761821"
 ---
 # <a name="excel-device-information-settings"></a>Excel 设备信息设置
   下表列出以 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 格式呈现时的设备信息设置。  
   
-|设置|ReplTest1|  
+|设置|值|  
 |-------------|-----------|  
 |**OmitDocumentMap**|指示是否对于支持文档结构图的报表忽略文档结构图。 默认值是 **false**秒。|  
 |**OmitFormulas**|指示是否对所呈现报表忽略公式。 默认值是 **false**秒。|  
-|**SimplePageHeade**rs|指示是否将报表的页眉呈现到 Excel 页眉。 值为 **false** 指示将页眉呈现到工作表的第一行。 默认值是 **false**秒。|  
+|**SimplePageHeaders**|指示是否将报表的页眉呈现到 Excel 页眉。 值为 **false** 指示将页眉呈现到工作表的第一行。 默认值是 **false**秒。|  
+|**DynamicImageDpi**|动态图像（如图表、仪表和地图）的分辨率。 默认值为 **96**。 （在 Power BI 报表服务器(2020 年 1 月版)及更高版本中可用）|  
+
   
 ## <a name="see-also"></a>另请参阅  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   

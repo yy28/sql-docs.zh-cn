@@ -11,10 +11,10 @@ ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5759a1f9936fdb8a6df4de422ae2ff0542dc63a8
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027675"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>JDBC 驱动程序的系统要求
@@ -51,11 +51,11 @@ ms.locfileid: "69027675"
   
   下面汇总了 Microsoft JDBC Drivers 7.4 for SQL Server 随附的两个 JAR 文件所提供的支持：  
   
-  |JAR|JDBC 版本法规遵从性|推荐的 Java 版本|描述|  
+  |JAR|JDBC 版本法规遵从性|推荐的 Java 版本|说明|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-7.4.1. jre8|4.2|8|需要 Java Runtime Environment (JRE) 1.8。 使用 JRE 1.7 或更低版本会引发异常。<br /><br /> 7\.4 中的新功能包括: JDK 12 支持、NTLM 身份验证和 useFmtOnly。 |    
-|mssql-jdbc-7.4.1. jre11|4.3|11|需要 Java 运行时环境 (JRE) 11.0. 使用 JRE 10.0 或更低版本会引发异常。<br /><br /> 7\.4 中的新功能包括: JDK 12 支持、NTLM 身份验证和 useFmtOnly。 |  
-|mssql-jdbc-7.4.1. jre12|4.3|12|需要 Java Runtime Environment (JRE) 12.0。 使用 JRE 11.0 或更低版本会引发异常。<br /><br /> 7\.4 中的新功能包括: JDK 12 支持、NTLM 身份验证和 useFmtOnly。 |   
+|mssql-jdbc-7.4.1.jre8.jar|4.2|8|需要 Java Runtime Environment (JRE) 1.8。 使用 JRE 1.7 或更低版本会引发异常。<br /><br /> 7\.4 中的新功能包括：JDK 12 支持、NTLM 身份验证和 useFmtOnly。 |    
+|mssql-jdbc-7.4.1.jre11.jar|4.3|11|需要 Java 运行时环境 (JRE) 11.0. 使用 JRE 10.0 或更低版本会引发异常。<br /><br /> 7\.4 中的新功能包括：JDK 12 支持、NTLM 身份验证和 useFmtOnly。 |  
+|mssql-jdbc-7.4.1.jre12.jar|4.3|12|需要 Java Runtime Environment (JRE) 12.0。 使用 JRE 11.0 或更低版本会引发异常。<br /><br /> 7\.4 中的新功能包括：JDK 12 支持、NTLM 身份验证和 useFmtOnly。 |   
 
 
   JDBC Driver 7.4 还适用于 Maven Central Repository，并且可以通过在 POM.XML 中添加以下代码来添加到 Maven 项目：  
@@ -76,10 +76,10 @@ ms.locfileid: "69027675"
   
   下面汇总了 Microsoft JDBC Drivers 7.2 for SQL Server 随附的两个 JAR 文件所提供的支持：  
   
-  |JAR|JDBC 版本法规遵从性|推荐的 Java 版本|描述|  
+  |JAR|JDBC 版本法规遵从性|推荐的 Java 版本|说明|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-7.2.2.jre8.jar|4.2|8|需要 Java Runtime Environment (JRE) 8.0。 使用 JRE 7.0 或更低版本会引发异常。<br /><br /> 7\.2 中的新增功能包括：JDK 11 支持、Active Directory 托管服务标识 (MSI) 身份验证、OSGi 支持、SQLServerError API。 |    
-|mssql-jdbc-7.2.2.jre11.jar|4.3|10|需要 Java 运行时环境 (JRE) 11.0. 使用 JRE 10.0 或更低版本会引发异常。<br /><br /> 7\.2 中的新增功能包括：JDK 11 支持、Active Directory 托管服务标识 (MSI) 身份验证、OSGi 支持、SQLServerError API。 |    
+|mssql-jdbc-7.2.2.jre8.jar|4.2|8|需要 Java Runtime Environment (JRE) 8.0。 使用 JRE 7.0 或更低版本会引发异常。<br /><br /> 7\.2 中的新功能包括：JDK 11 支持、Active Directory 托管服务标识 (MSI) 身份验证、OSGi 支持、SQLServerError API。 |    
+|mssql-jdbc-7.2.2.jre11.jar|4.3|10|需要 Java 运行时环境 (JRE) 11.0. 使用 JRE 10.0 或更低版本会引发异常。<br /><br /> 7\.2 中的新功能包括：JDK 11 支持、Active Directory 托管服务标识 (MSI) 身份验证、OSGi 支持、SQLServerError API。 |    
 
 
   JDBC Driver 7.2 还适用于 Maven Central Repository，并且可以通过在 POM.XML 中添加以下代码来添加到 Maven 项目：  
@@ -100,10 +100,10 @@ ms.locfileid: "69027675"
   
   下面概述了 Microsoft JDBC Driver 7.0 for SQL Server 附带的两个 JAR 文件提供的支持：  
   
-  |JAR|JDBC 版本法规遵从性|推荐的 Java 版本|描述|  
+  |JAR|JDBC 版本法规遵从性|推荐的 Java 版本|说明|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-7.0.0.jre8.jar|4.2|8|需要 Java Runtime Environment (JRE) 8.0。 使用 JRE 7.0 或更低版本会引发异常。<br /><br /> 7\.0 中的新增功能包括：JDK 10 支持、已将默认符合性级别更新为 JDBC 4.2 规范、空间数据类型支持、cancelQueryTimeout 连接属性、请求边界方法、useBulkCopyForBatchInsert 连接属性、数据发现和分类信息、UTF-8 功能扩展和 CityHash 支持。 |    
-|mssql-jdbc-7.0.0.jre10.jar|4.3|10|需要 Java Runtime Environment (JRE) 10.0。 使用 JRE 9.0 或更低版本会引发异常。<br /><br /> 7\.0 中的新增功能包括：JDK 10 支持、已将默认符合性级别更新为 JDBC 4.2 规范、空间数据类型支持、cancelQueryTimeout 连接属性、请求边界方法、useBulkCopyForBatchInsert 连接属性、数据发现和分类信息、UTF-8 功能扩展和 CityHash 支持。 |    
+|mssql-jdbc-7.0.0.jre8.jar|4.2|8|需要 Java Runtime Environment (JRE) 8.0。 使用 JRE 7.0 或更低版本会引发异常。<br /><br /> 7\.0 中的新功能包括：JDK 10 支持、已将默认符合性级别更新为 JDBC 4.2 规范、空间数据类型支持、cancelQueryTimeout 连接属性、请求边界方法、useBulkCopyForBatchInsert 连接属性、数据发现和分类信息、UTF-8 功能扩展和 CityHash 支持。 |    
+|mssql-jdbc-7.0.0.jre10.jar|4.3|10|需要 Java Runtime Environment (JRE) 10.0。 使用 JRE 9.0 或更低版本会引发异常。<br /><br /> 7\.0 中的新功能包括：JDK 10 支持、已将默认符合性级别更新为 JDBC 4.2 规范、空间数据类型支持、cancelQueryTimeout 连接属性、请求边界方法、useBulkCopyForBatchInsert 连接属性、数据发现和分类信息、UTF-8 功能扩展和 CityHash 支持。 |    
 
 
   JDBC Driver 7.0 还适用于 Maven Central Repository，并且可以通过在 POM.XML 中添加以下代码来添加到 Maven 项目：  
@@ -124,11 +124,11 @@ ms.locfileid: "69027675"
   
   下面概述了由 Microsoft JDBC Driver 6.4 for SQL Server 附带的三个 JAR 文件提供的支持：  
   
-  |JAR|JDBC 版本法规遵从性|推荐的 Java 版本|描述|  
+  |JAR|JDBC 版本法规遵从性|推荐的 Java 版本|说明|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-6.4.0.jre7.jar|4.1|7|需要 Java Runtime Environment (JRE) 7.0。 使用 JRE 6.0 或更低版本会引发异常。<br /><br /> 6\.4 中的新增功能包括：适用于 Linux 的 Azure AD 身份验证、Kerberos 的主体/密码方法、在跨域身份验证的 SPN 中自动检测领域、Kerberos 约束委派、查询超时、套接字超时和已准备好的语句句柄重复使用。 |  
-|mssql-jdbc-6.4.0.jre8.jar|4.2|8|需要 Java Runtime Environment (JRE) 8.0。 使用 JRE 7.0 或更低版本会引发异常。<br /><br /> 6\.4 中的新增功能包括：适用于 Linux 的 Azure AD 身份验证、Kerberos 的主体/密码方法、在跨域身份验证的 SPN 中自动检测领域、Kerberos 约束委派、查询超时、套接字超时和已准备好的语句句柄重复使用。 |    
-|mssql-jdbc-6.4.0.jre9.jar|4.3|9|需要 Java Runtime Environment (JRE) 9.0。 使用 JRE 8.0 或更低版本会引发异常。<br /><br /> 6\.4 中的新增功能包括：适用于 Linux 的 Azure AD 身份验证、Kerberos 的主体/密码方法、在跨域身份验证的 SPN 中自动检测领域、Kerberos 约束委派、查询超时、套接字超时和已准备好的语句句柄重复使用。 |
+|mssql-jdbc-6.4.0.jre7.jar|4.1|7|需要 Java Runtime Environment (JRE) 7.0。 使用 JRE 6.0 或更低版本会引发异常。<br /><br /> 6\.4 中的新功能包括：适用于 Linux 的 Azure AD 身份验证、Kerberos 的主体/密码方法、在跨域身份验证的 SPN 中自动检测领域、Kerberos 约束委派、查询超时、套接字超时和已准备好的语句句柄重复使用。 |  
+|mssql-jdbc-6.4.0.jre8.jar|4.2|8|需要 Java Runtime Environment (JRE) 8.0。 使用 JRE 7.0 或更低版本会引发异常。<br /><br /> 6\.4 中的新功能包括：适用于 Linux 的 Azure AD 身份验证、Kerberos 的主体/密码方法、在跨域身份验证的 SPN 中自动检测领域、Kerberos 约束委派、查询超时、套接字超时和已准备好的语句句柄重复使用。 |    
+|mssql-jdbc-6.4.0.jre9.jar|4.3|9|需要 Java Runtime Environment (JRE) 9.0。 使用 JRE 8.0 或更低版本会引发异常。<br /><br /> 6\.4 中的新功能包括：适用于 Linux 的 Azure AD 身份验证、Kerberos 的主体/密码方法、在跨域身份验证的 SPN 中自动检测领域、Kerberos 约束委派、查询超时、套接字超时和已准备好的语句句柄重复使用。 |
 
 JDBC Driver 6.4 还适用于 Maven Central Repository，并且可以通过在 POM.XML 中添加以下代码来添加到 Maven 项目 
 
@@ -148,10 +148,10 @@ JDBC Driver 6.4 还适用于 Maven Central Repository，并且可以通过在 PO
   
  下面概述了由 Microsoft JDBC Driver for SQL Server 6.0 和 4.2 附带的两个 JAR 文件提供的支持：  
   
-|JAR|JDBC 版本法规遵从性|推荐的 Java 版本|描述|  
+|JAR|JDBC 版本法规遵从性|推荐的 Java 版本|说明|  
 |---------|-----------------------------|----------------------|-----------------|
-|mssql-jdbc-6.2.2.jre7.jar|4.1|7|需要 Java Runtime Environment (JRE) 7.0。 使用 JRE 6.0 或更低版本会引发异常。<br /><br /> 6\.2 中的新增功能包括：适用于 Linux 的 Azure AD 身份验证、Kerberos 的主体/密码方法、在跨域身份验证的 SPN 中自动检测领域、Kerberos 约束委派、查询超时、套接字超时和已准备好的语句句柄重复使用。 |  
-|mssql-jdbc-6.2.3.jre8.jar|4.2|8|需要 Java Runtime Environment (JRE) 8.0。 使用 JRE 7.0 或更低版本会引发异常。<br /><br /> 6\.2 中的新增功能包括：适用于 Linux 的 Azure AD 身份验证、Kerberos 的主体/密码方法、在跨域身份验证的 SPN 中自动检测领域、Kerberos 约束委派、查询超时、套接字超时和已准备好的语句句柄重复使用|    
+|mssql-jdbc-6.2.2.jre7.jar|4.1|7|需要 Java Runtime Environment (JRE) 7.0。 使用 JRE 6.0 或更低版本会引发异常。<br /><br /> 6\.2 中的新功能包括：适用于 Linux 的 Azure AD 身份验证、Kerberos 的主体/密码方法、在跨域身份验证的 SPN 中自动检测领域、Kerberos 约束委派、查询超时、套接字超时和已准备好的语句句柄重复使用。 |  
+|mssql-jdbc-6.2.3.jre8.jar|4.2|8|需要 Java Runtime Environment (JRE) 8.0。 使用 JRE 7.0 或更低版本会引发异常。<br /><br /> 6\.2 中的新功能包括：适用于 Linux 的 Azure AD 身份验证、Kerberos 的主体/密码方法、在跨域身份验证的 SPN 中自动检测领域、Kerberos 约束委派、查询超时、套接字超时和已准备好的语句句柄重复使用|    
 
   JDBC Driver 6.2 还适用于 Maven Central Repository，并且可以通过在 POM.XML 中添加以下代码来添加到 Maven 项目 
   
@@ -171,16 +171,16 @@ JDBC Driver 6.4 还适用于 Maven Central Repository，并且可以通过在 PO
   
  下面概述了由 Microsoft JDBC Driver for SQL Server 6.0 和 4.2 附带的两个 JAR 文件提供的支持：  
   
-|JAR|JDBC 版本法规遵从性|推荐的 Java 版本|描述|  
+|JAR|JDBC 版本法规遵从性|推荐的 Java 版本|说明|  
 |---------|-----------------------------|----------------------|-----------------|   
-|sqljdbc41.jar|4.1|7|需要 Java Runtime Environment (JRE) 7.0。 使用 JRE 6.0 或更低版本会引发异常。<br /><br /> 6\.0 和 4.2 包中的新增功能包括：JDBC 4.1 符合性和大容量复制<br /><br /> 此外，6.0 包中独有的新增功能包括：Always Encrypted、表值参数、Azure Active Directory 身份验证、与 AlwaysOn 可用性组的透明连接、已准备好的查询和国际化域名 (IDN) 的参数元数据检索的改进|  
-|sqljdbc42.jar|4.2|8|需要 Java Runtime Environment (JRE) 8.0。 使用 JRE 7.0 或更低版本会引发异常。<br /><br /> 6\.0 和 4.2 包中的新增功能包括：JDBC 4.1 符合性、JDBC 4.2 符合性和大容量复制<br /><br /> 此外，6.0 包中独有的新增功能包括：Always Encrypted、表值参数、Azure Active Directory 身份验证、与 AlwaysOn 可用性组的透明连接、已准备好的查询和国际化域名 (IDN) 的参数元数据检索的改进|  
+|sqljdbc41.jar|4.1|7|需要 Java Runtime Environment (JRE) 7.0。 使用 JRE 6.0 或更低版本会引发异常。<br /><br /> 6\.0 和 4.2 中的新功能包括：JDBC 4.1 符合性和大容量复制<br /><br /> 此外，6.0 包中独有的新增功能包括：Always Encrypted、表值参数、Azure Active Directory 身份验证、与 AlwaysOn 可用性组的透明连接、已准备好的查询和国际化域名 (IDN) 的参数元数据检索的改进|  
+|sqljdbc42.jar|4.2|8|需要 Java Runtime Environment (JRE) 8.0。 使用 JRE 7.0 或更低版本会引发异常。<br /><br /> 6\.0 和 4.2 中的新功能包括：JDBC 4.1 符合性、JDBC 4.2 符合性和大容量复制<br /><br /> 此外，6.0 包中独有的新增功能包括：Always Encrypted、表值参数、Azure Active Directory 身份验证、与 AlwaysOn 可用性组的透明连接、已准备好的查询和国际化域名 (IDN) 的参数元数据检索的改进|  
   
  **Microsoft JDBC Driver 4.1 for SQL Server：**  
   
  JDBC Driver 4.1 的每个安装包中都有一个 JAR 类库：sqljdbc41.jar  。  
     
-|JAR|描述|  
+|JAR|说明|  
 |---------|-----------------|  
 |sqljdbc41.jar|sqljdbc41.jar 类库提供对 JDBC 4.0 API 的支持  。 它包含 JDBC 4.0 驱动程序的所有功能以及 JDBC 4.0 API 方法。 JDBC 4.1 不受支持（引发异常“SQLFeatureNotSupportedException”）。<br /><br /> sqljdbc41.jar 类库要求使用 Java Runtime Environment (JRE) 7.0。  使用 JRE 6.0 和 5.0 上的 sqljdbc41.jar  引发异常。<br /><br /> 
   

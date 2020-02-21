@@ -9,10 +9,10 @@ ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d315aa1c5037e27d5c48e1ee03addef35cbc22df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573313"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Analysis Services 数据库的扩展字段属性 (SSRS)
@@ -40,22 +40,22 @@ ms.locfileid: "65573313"
   
  下表提供了您可以使用的预定义字段属性的列表：  
   
-|**属性**|**类型**|**说明或所需的值**|  
+|**属性**|类型 |**说明或所需的值**|  
 |------------------|--------------|---------------------------------------|  
-|**Value**|**对象**|指定字段的数据值。|  
-|**IsMissing**|**Boolean**|指示是否在结果数据集中找到了该字段。|  
-|**UniqueName**|**String**|返回级别的完全限定名称。 例如，某位员工的 **UniqueName** 值可能为 [Employee].[Employee Department].[Department].&[Sales].&[North American Sales Manager].&[272]  。|  
-|**BackgroundColor**|**String**|返回数据库中为该字段定义的背景颜色。|  
-|**Color**|**String**|返回数据库中为该项定义的前景色。|  
-|**FontFamily**|**String**|返回数据库中为该项定义的字体的名称。|  
-|**FontSize**|**String**|返回数据库中为该项定义的字体的字号。|  
-|**FontWeight**|**String**|返回数据库中为该项定义的字体的粗细。|  
-|**FontStyle**|**String**|返回数据库中为该项定义的字体的样式。|  
-|**TextDecoration**|**String**|返回数据库中为该项定义的特殊文本格式设置。|  
-|**FormattedValue**|**String**|返回度量值或关键数字的格式值。 例如， **“销售额配额”** 的 **FormattedValue** 属性将返回一种货币格式，如 $1,124,400.00。|  
-|**Key**|**对象**|返回级别的键。|  
-|**LevelNumber**|**Integer**|针对父子层次结构返回级别号或维度编号。|  
-|**ParentUniqueName**|**String**|针对父子层次结构返回父级的完全限定名称。|  
+|**值**|**Object**|指定字段的数据值。|  
+|**IsMissing**|**布尔值**|指示是否在结果数据集中找到了该字段。|  
+|**UniqueName**|**字符串**|返回级别的完全限定名称。 例如，某位员工的 **UniqueName** 值可能为 [Employee].[Employee Department].[Department].&[Sales].&[North American Sales Manager].&[272]  。|  
+|**BackgroundColor**|**字符串**|返回数据库中为该字段定义的背景颜色。|  
+|**彩色**|**字符串**|返回数据库中为该项定义的前景色。|  
+|**FontFamily**|**字符串**|返回数据库中为该项定义的字体的名称。|  
+|**FontSize**|**字符串**|返回数据库中为该项定义的字体的字号。|  
+|**FontWeight**|**字符串**|返回数据库中为该项定义的字体的粗细。|  
+|**FontStyle**|**字符串**|返回数据库中为该项定义的字体的样式。|  
+|**TextDecoration**|**字符串**|返回数据库中为该项定义的特殊文本格式设置。|  
+|**FormattedValue**|**字符串**|返回度量值或关键数字的格式值。 例如， **“销售额配额”** 的 **FormattedValue** 属性将返回一种货币格式，如 $1,124,400.00。|  
+|**Key**|**Object**|返回级别的键。|  
+|**LevelNumber**|**整数**|针对父子层次结构返回级别号或维度编号。|  
+|**ParentUniqueName**|**字符串**|针对父子层次结构返回父级的完全限定名称。|  
   
 > [!NOTE]  
 >  仅当数据源（如 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多维数据集）在运行报表并检索报表数据集的数据时，为这些扩展字段属性提供值，这些值才存在。 然后，您可以使用下面介绍的语法从任意表达式引用这些字段属性值。 但是，由于这些字段专用于此数据访问接口，因此，对这些值所做的更改不会随报表定义一同保存。  
@@ -117,19 +117,19 @@ CELL PROPERTIES
   
  下表显示了 MDX“结果”窗格中的前四行结果。  
   
-|Month of Year|Order Count|  
+|Month of Year|订单计数|  
 |-------------------|-----------------|  
-|January|2,481|  
+|1 月|2,481|  
 |February|2,684|  
 |March|2,749|  
 |April|2,739|  
   
- 即使属性是 MDX 选择语句的一部分，它们也不会显示在结果集列中。 尽管如此，使用扩展属性功能仍可将这些数据用于报表。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的 MDX 查询结果窗格中，你可以双击单元格并查看单元格的属性值（如果在多维数据集中进行了设置）。 如果双击第一个包含 1,379 的 Order Count 单元，则会看到一个包含以下单元属性的弹出窗口：  
+ 即使属性是 MDX 选择语句的一部分，它们也不会显示在结果集列中。 尽管如此，使用扩展属性功能仍可将这些数据用于报表。 如果在多维数据集中设置了单元格属性值，可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的 MDX 查询“结果”窗格中双击单元格，并查看单元格属性值。 如果双击第一个包含 1,379 的 Order Count 单元，则会看到一个包含以下单元属性的弹出窗口：  
   
-|属性|Value|  
+|properties|值|  
 |--------------|-----------|  
 |CellOrdinal|0|  
-|Value|2481|  
+|值|2481|  
 |BACK_COLOR|(null)|  
 |FORE_COLOR|(null)|  
 |FORMATTED_VALUE|2,481|  

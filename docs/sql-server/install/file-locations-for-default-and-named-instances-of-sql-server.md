@@ -1,7 +1,7 @@
 ---
-title: SQL Server 的默认实例和命名实例的文件位置 | Microsoft Docs
-ms.custom: ''
-ms.date: 08/25/2017
+title: 文件位置
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 463c570e-9f75-4653-b3b8-4d61753b0013
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 033090c5650455b16e846200e8b8caf8a3940b48
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: da7f187cc388e08f4d1f0307ba6fae78c58e6489
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74055194"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253483"
 ---
 # <a name="file-locations-for-default-and-named-instances-of-sql-server"></a>SQL Server 默认实例和命名实例的文件位置
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "74055194"
 >   
 >  请勿删除以下任何目录或其内容：Binn、Data、Ftdata、HTML 或 1033。 如有必要，可以删除其他目录；但是，如果不卸载并重新安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则可能无法检索失去的功能或数据。 请勿删除或修改 HTML 目录中的任何 .htm 文件。 它们对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具的正常运行是必需的。  
   
-## <a name="shared-files-for-all-instances-of-includessnoversionincludesssnoversion-mdmd"></a>所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="shared-files-for-all-instances-of-ssnoversion"></a>所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  单台计算机上所有实例使用的公共文件安装在以下文件夹中：[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]。 其中 \<drive> 是安装组件的驱动器号  。 通常默认使用 C 盘。nnn 标识版本  。 下表标识路径的版本。 \{nn} 是在实例 ID 和注册表路径中使用的版本值。 
 
 |版本|\*nnn*|{nn}|
@@ -78,7 +78,7 @@ ms.locfileid: "74055194"
 > [!NOTE]  
 >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和客户端组件是不识别实例的，因此不为它们指定实例 ID。 默认情况下，将不识别实例的组件安装在单个目录 [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]中。 更改一个共享组件的安装路径还会更改其他共享组件的安装路径。 后续安装会将非实例识别组件安装到与原始安装相同的目录。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 是唯一的在安装后支持实例重命名的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件。 如果重命名 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，实例 ID 不会发生变化。 在实例重命名完成后，目录和注册表项会继续使用在安装期间创建的实例 ID。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 是在安装后支持实例重命名的唯一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件。 如果重命名 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，实例 ID 不会发生变化。 在实例重命名完成后，目录和注册表项会继续使用在安装期间创建的实例 ID。  
   
  将在 HKLM\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<*Instance_ID*> 下为识别实例的组件创建注册表配置单元。 例如，  
   
@@ -103,14 +103,14 @@ ms.locfileid: "74055194"
   
 |组件|默认路径|可配置或固定路径|  
 |---------------|------------------|--------------------------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务器组件|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL\{nn}.\<InstanceID>\ |可配置|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 数据文件|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL\{nn}.\<InstanceID>\ |可配置|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS\{nn}.\<InstanceID>\ |可配置|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据文件|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS\{nn}.\<InstanceID>\ |可配置|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS\{nn}.\<InstanceID>\Reporting Services\ReportServer\Bin\ |可配置|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务器组件|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL\{nn}.\<InstanceID>\ |可配置性|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 数据文件|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL\{nn}.\<InstanceID>\ |可配置性|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS\{nn}.\<InstanceID>\ |可配置性|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据文件|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS\{nn}.\<InstanceID>\ |可配置性|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS\{nn}.\<InstanceID>\Reporting Services\ReportServer\Bin\ |可配置性|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表管理器|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS\{nn}.\<InstanceID>\Reporting Services\ReportManager\ |固定路径|  
-|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|\<>\nnn\DTS\\ <sup>1</sup> |可配置 |  
-|客户端组件（bcp.exe 和 sqlcmd.exe 除外）|\<>\nnn\Tools\\ <sup>1</sup> |可配置 |  
+|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|\<安装目录>\nnn\DTS\\ <sup>1</sup> |可配置性 |  
+|客户端组件（bcp.exe 和 sqlcmd.exe 除外）|\<安装目录>\nnn\Tools\\ <sup>1</sup> |可配置性 |  
 |客户端组件（bcp.exe 和 sqlcmd.exe）|\<>\Client SDK\ODBC\nnn\Tools\Binn|固定路径|  
 |复制和服务器端 COM 对象|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]COM\\ <sup>2</sup> |固定路径|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 用于数据转换运行时引擎、数据转换管道引擎和 **dtexec** 命令提示实用工具的组件 DLL|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|固定路径|  
@@ -124,7 +124,7 @@ ms.locfileid: "74055194"
   
 注意，文件位置的默认驱动器为 *systemdrive*，通常为驱动器 C。子功能的安装路径由父功能的安装路径确定。  
   
-<sup>1</sup> [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和客户端组件共享单个安装路径。 更改一个组件的安装路径会同时更改其他组件的安装路径。 后续安装将组件安装到与原始安装相同的位置。  
+<sup>1</sup>[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和客户端组件共享单个安装路径。 更改一个组件的安装路径会同时更改其他组件的安装路径。 后续安装将组件安装到与原始安装相同的位置。  
   
 <sup>2</sup> 此目录由计算机上的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例使用。 如果对计算机上的任何实例应用更新，对此文件夹中的文件所做的任何更改都会影响计算机上的所有实例。 向现有安装添加功能时，不能更改以前安装的功能的位置，也不能为新功能指定该位置。 必须将其他功能安装到安装程序已建立的目录，或卸载并重新安装产品。  
   

@@ -1,7 +1,7 @@
 ---
-title: 使用 SQL Server 的多个版本和实例 | Microsoft Docs
-ms.custom: ''
-ms.date: 08/25/2017
+title: 处理多个版本和实例
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ba5e4fdaab769fca0443f6395536dc31207b1374
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0ff71430707e210daf970e969d854e408d777e4e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045657"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258967"
 ---
-# <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>使用 SQL Server 的多个版本和实例
+# <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>处理多个 SQL Server 版本和实例
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -58,33 +58,33 @@ ms.locfileid: "68045657"
   
  rr - 内部修订版本号  
   
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个主版本或次版本中，都会增加该版本号，以便与之前的版本区分。 这一对版本的更改出于多种目的。 包括在用户界面中显示版本信息，控制在升级期间替换文件的方式，并且还作为后续版本间在功能上进行区分的机制。
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个主版本或次版本中，都会增加该版本号，以便与之前的版本区分。 这一对版本的更改出于多种目的。 这包括在用户界面中显示版本信息、控制升级过程中的文件替换方式、应用服务包，以及作为后续版本的功能区分机制。
   
-### <a name="components-shared-by-all-versions-of-includessnoversionincludesssnoversion-mdmd"></a>由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="components-shared-by-all-versions-of-ssnoversion"></a>由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
  某些组件由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的所有已安装版本的所有实例共享。 在同一台计算机上并行安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的不同版本时，这些组件将自动升级到最新版本。 此类组件通常会在卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的最后的实例时自动卸载。
   
  示例：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 和 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer。
   
-### <a name="components-shared-across-all-instances-of-the-same-major-version-of-includessnoversionincludesssnoversion-mdmd"></a>在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="components-shared-across-all-instances-of-the-same-major-version-of-ssnoversion"></a>在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本在所有实例之间共享某些组件。 如果在升级过程中选择了这些共享的组件，现有组件将升级到最新版本。
   
 示例： [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书。
   
-### <a name="components-shared-across-minor-versions"></a>在次版本之间共享的组件
+### <a name="components-shared-across-minor-versions"></a>跨次要版本共享的组件
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本共享组件。
   
-例如：安装程序支持文件。
+示例：安装程序支持文件。
   
-### <a name="components-specific-to-an-instance-of-includessnoversionincludesssnoversion-mdmd"></a>特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="components-specific-to-an-instance-of-ssnoversion"></a>特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件或服务特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例。 它们也称为识别实例的组件或服务。 这些组件或服务与承载它们的实例共享相同的版本，并且专用于该实例。
+某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件或服务特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例。 它们也称为识别实例的组件或服务。 它们与托管它们的实例共用相同的版本，并且仅用于相应实例。
   
 示例： [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
   
-### <a name="components-that-are-independent-of-the-includessnoversionincludesssnoversion-mdmd-versions"></a>独立于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的组件
+### <a name="components-that-are-independent-of-the-ssnoversion-versions"></a>独立于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的组件
 
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中将安装某些组件，但这些组件独立于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的版本。 它们可在主版本之间共享，或者由所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本共享。  
 
@@ -92,7 +92,7 @@ ms.locfileid: "68045657"
   
 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 安装的详细信息，请参阅 [使用安装向导安装 SQL Server 2016（安装程序）](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)。 有关如何卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 的详细信息，请参阅[卸载现有 SQL Server 实例（安装程序）](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)。  
   
-## <a name="using-includessnoversionincludesssnoversion-mdmd-side-by-side-with-previous-versions-of-includessnoversionincludesssnoversion-mdmd"></a>并行使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 与其早期版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+## <a name="using-ssnoversion-side-by-side-with-previous-versions-of-ssnoversion"></a>并行使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 与其早期版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 可以在已运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本实例的计算机上安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果计算机上已存在默认实例，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必须作为命名实例安装。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "68045657"
 
 ## <a name="preventing-ip-address-conflicts"></a>防止 IP 地址冲突
 
-并行安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例与 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的独立实例时，请注意避免 IP 地址上的 TCP 端口号冲突。 当 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的两个实例都配置为使用默认 TCP 端口 (1433) 时，通常会发生冲突。 要避免冲突，请将一个实例配置为使用非默认的固定端口。 在独立实例上配置固定端口通常是最简单的。 如果将 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 配置为使用不同的端口，可以防止在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例无法切换到备用节点时，出现阻止实例启动的意外 IP 地址/TCP 端口冲突。
+并行安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例与 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的独立实例时，请注意避免 IP 地址上的 TCP 端口号冲突。 当 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的两个实例都配置为使用默认 TCP 端口 (1433) 时，通常会发生冲突。 要避免冲突，请将一个实例配置为使用非默认的固定端口。 在独立实例上配置固定端口通常是最简单的。 若将 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 配置为使用不同的端口，则在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例失败到备用节点时，将防止出现会阻止实例启动的意外 IP 地址/TCP 端口冲突。
   
 ## <a name="see-also"></a>另请参阅
 

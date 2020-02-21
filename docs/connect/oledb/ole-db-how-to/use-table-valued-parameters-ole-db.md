@@ -1,5 +1,5 @@
 ---
-title: 使用表值参数 (OLE DB) |Microsoft Docs
+title: 使用表值参数 (OLE DB) | Microsoft Docs
 description: 使用表值参数 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 7ec89b3fdafaba7fe81849ab2ae5b2baf926ef83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994599"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>使用表值参数 (OLE DB)
@@ -22,7 +22,7 @@ ms.locfileid: "67994599"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  此示例适用于 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 或更高版本。 此示例可执行下列操作：  
+  此示例适用于 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 或更高版本。 该示例将执行以下操作：  
   
 -   通过 IOpenRowset::OpenRowset 使用动态发现创建表值参数。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "67994599"
   
 -   显示 MSOLEDBSQL 错误的错误处理。  
   
- 有关表值参数的详细信息, 请参阅[&#41;SQL Server OLE DB 驱动程序&#40;的表值参数](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md)。  
+ 若要详细了解表值参数，请参阅[表值参数 &#40;OLE DB Driver for SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md)。  
   
 ## <a name="example"></a>示例  
  第一个 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 代码列表创建该示例使用的数据库。  

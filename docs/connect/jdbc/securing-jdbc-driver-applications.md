@@ -1,5 +1,5 @@
 ---
-title: 保护 JDBC driver 应用程序 |Microsoft Docs
+title: 保护 JDBC 驱动程序应用程序 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 90724ec6-a9cb-43ef-903e-793f89410bc0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 61a17b302499f87d552ec61c90208effc688e164
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027747"
 ---
 # <a name="securing-jdbc-driver-applications"></a>保护 JDBC 驱动程序应用程序
@@ -27,13 +27,13 @@ ms.locfileid: "69027747"
   
 ## <a name="in-this-section"></a>在本节中  
   
-| 主题                                                                            | 描述                                                                                                                                                           |
+| 主题                                                                            | 说明                                                                                                                                                           |
 | -------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [保护连接字符串](../../connect/jdbc/securing-connection-strings.md) | 描述有助于保护可用来连接到数据源的信息的各种技术。                                                                                    |
 | [验证用户输入](../../connect/jdbc/validating-user-input.md)             | 描述验证用户输入的技术。                                                                                                                          |
 | [应用程序安全性](../../connect/jdbc/application-security.md)               | 描述如何使用 Java 策略权限来帮助保护 JDBC Driver 应用程序。                                                                                |
 | [使用 SSL 加密](../../connect/jdbc/using-ssl-encryption.md)               | 描述如何使用安全套接字层 (SSL) 与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库之间建立安全通信通道。 |
-| [FIPS 模式](../../connect/jdbc/fips-mode.md)                                     | 描述如何在 FIPS 兼容模式下使用 JDBC 驱动程序。                                                                                                              |
+| [FIPS 模式](../../connect/jdbc/fips-mode.md)                                     | 介绍了如何在符合 FIPS 规定的模式下使用 JDBC 驱动程序。                                                                                                              |
   
 ## <a name="see-also"></a>另请参阅  
 

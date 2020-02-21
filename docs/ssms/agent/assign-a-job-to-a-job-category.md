@@ -1,5 +1,5 @@
 ---
-title: 将作业分配到作业类别 | Microsoft Docs
+title: 将作业分配到作业类别
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -14,16 +14,17 @@ helpviewer_keywords:
 ms.assetid: a9ea65a2-1d73-4582-a335-63adeb450cb6
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ff6fa55f2c4accc16a89758d0687519d76b51f6c
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 4f4efb07aaa9264a74eeebe4f432d4e4351cefe1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553373"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252696"
 ---
 # <a name="assign-a-job-to-a-job-category"></a>将作业分配到作业类别
 
@@ -55,7 +56,7 @@ ms.locfileid: "69553373"
   
 5.  在“作业属性 - _job\_name_”  对话框的“类别”  列表中，选择要分配给作业的作业类别。  
   
-6.  单击“确定”  。  
+6.  单击“确定”。   
   
 ## <a name="TSQL"></a>使用 Transact-SQL  
   

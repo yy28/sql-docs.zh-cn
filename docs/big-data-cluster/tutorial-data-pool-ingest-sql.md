@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f2ae96a04da69835b4b13886637cf87e62996b57
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: b389f8ba8e99678f98ef4eb22d3fe51d8b04bee3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653315"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75325413"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>教程：使用 Transact-SQL 将数据引入 SQL Server 数据池
 
@@ -32,7 +32,7 @@ ms.locfileid: "69653315"
 > [!TIP]
 > 如果需要，可以下载并运行本教程中的命令脚本。 有关说明，请参阅 GitHub 上的[数据池示例](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool)。
 
-## <a id="prereqs"></a> 先决条件
+## <a id="prereqs"></a>先决条件
 
 - [大数据工具](deploy-big-data-tools.md)
    - **kubectl**
@@ -77,8 +77,8 @@ ms.locfileid: "69653315"
          DISTRIBUTION = ROUND_ROBIN
       );
    ```
-  
-1. 在 CTP 3.1 中，数据池的创建是异步的，但还无法确定其完成时间。 等待两分钟，确保在数据池创建完成之后再继续。
+
+创建数据池外部表是一项锁定操作。 在所有后端数据池节点上创建指定表后，控制权恢复。 如果在创建操作期间发生故障，便会向调用方返回错误消息。
 
 ## <a name="load-data"></a>加载数据
 

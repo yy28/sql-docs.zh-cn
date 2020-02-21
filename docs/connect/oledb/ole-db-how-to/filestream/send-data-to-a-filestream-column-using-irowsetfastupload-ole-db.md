@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 1dffc95e50ffb1e7e2cba68700a26ade0a72da6a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015570"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>使用 IRowsetFastUpload 向 FILESTREAM 列发送数据 (OLE DB)
@@ -24,10 +24,10 @@ ms.locfileid: "68015570"
 
   此示例使用 IRowsetFastUpload 接口向 filestream 列发送大小在 4 MB 与 4 GB 之间的数据。  
   
- 有关 filestream 功能的详细信息, 请参阅[Filestream 支持](../../../oledb/features/filestream-support.md)。  
+ 若要详细了解 filestream 功能，请参阅 [FILESTREAM 支持](../../../oledb/features/filestream-support.md)。  
   
 ## <a name="example"></a>示例  
- 在编译并运行此示例之前, 启用 FILESTREAM 支持 ([启用和配置 filestream](../../../../relational-databases/blob/enable-and-configure-filestream.md))。  
+ 编译和运行此示例前，先启用 FILESTREAM 支持（[启用和配置 FILESTREAM](../../../../relational-databases/blob/enable-and-configure-filestream.md)）。  
   
  请确保 INCLUDE 环境变量包括含有 msoledbsql.h 的目录。  
   

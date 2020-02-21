@@ -16,10 +16,10 @@ ms.assetid: 149609b5-a6de-4e23-a440-7061775d0899
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a0ee14b90dd8aaffb178c81ea46e5ec914752e28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953695"
 ---
 # <a name="getbinarystream-method-javalangstring"></a>getBinaryStream 方法 (java.lang.String)
@@ -34,19 +34,19 @@ ms.locfileid: "67953695"
 public java.io.InputStream getBinaryStream(java.lang.String columnName)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *columnName*  
   
- 一个包含列名的字符串  。  
+ 一个包含列名的字符串。  
   
 ## <a name="return-value"></a>返回值  
- 一个 InputStream 对象。  
+ InputStream 对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 getBinaryStream 方法由 getBinaryStream 方法在方法中指定。  
+## <a name="remarks"></a>备注  
+ 此 getBinaryStream 方法是由 java.sql.ResultSet 接口中的 getBinaryStream 方法指定的。  
   
  此方法只能用于 binary、varbinary、varbinary(max) 和 image 的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型。 尝试将它用于其他数据类型会引发异常。  
   

@@ -1,5 +1,5 @@
 ---
-title: MSSQL JDBC Driver 的空间数据类型示例 |Microsoft Docs
+title: MSSQL JDBC 驱动程序的空间数据类型示例 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6e0557030bdec7b566a69696a8fd50cb543a7fc1
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027686"
 ---
 # <a name="spatial-data-types-sample"></a>空间数据类型示例
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-此[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]示例应用程序演示了如何创建、插入和检索空间数据类型 (几何图形和地理位置)。
+此 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 示例应用程序演示了如何创建、插入和检索空间数据类型（Geometry 和 Geography）。
   
 此示例的代码文件名为 SpatialDataTypes.java，位于以下位置：  
 
@@ -30,18 +30,18 @@ ms.locfileid: "69027686"
 
 ## <a name="requirements"></a>要求  
 
-若要运行此示例应用程序，必须设置 classpath 以包含 mssql-jdbc jar 文件。 有关如何设置类路径的详细信息, 请参阅[使用 JDBC 驱动程序](../../connect/jdbc/using-the-jdbc-driver.md)。  
+若要运行此示例应用程序，必须设置 classpath 以包含 mssql-jdbc jar 文件。 若要详细了解如何设置类路径，请参阅[使用 JDBC 驱动程序](../../connect/jdbc/using-the-jdbc-driver.md)。  
 
 > [!NOTE]  
 > [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供要使用的 mssql-jdbc 类库文件，具体使用哪个文件取决于首选的 Java Runtime Environment (JRE) 设置。 有关选择哪个 JAR 文件的详细信息，请参阅 [JDBC 驱动程序的系统要求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。  
   
 ## <a name="example"></a>示例
 
-在下面的示例中, 示例代码创建一个名为 SpatialDataTypesTable_JDBC_Sample 的表, 该表包含 "Geometry" 和 "Geography" 列。
+在下面的示例中，示例代码创建一个名为 SpatialDataTypesTable_JDBC_Sample 的表，其中包含“Geometry”和“Geography”列。
 
-该示例首先从表示点的已知文本 (WKT) 创建 "Geometry" 和 "Geography" 对象。 它将 SQLServerPreparedStatement 与参数化查询结合使用, 以便相应地将数据映射到每个列。
+该示例首先根据表示 POINT 的熟知文本 (WKT) 创建“Geometry”和“Geography”对象。 它将 SQLServerPreparedStatement 和参数化查询结合使用，以便将数据相应地映射到每列。
 
-最后, 此示例将数据插入表中, 并检索数据。 数据显示形式为 WKT。
+最后，该示例将数据插入表中并进行检索。 数据以 WKT 的格式显示。
 
 ```java
 import java.sql.Connection;
@@ -97,5 +97,5 @@ public class SpatialDataTypes {
 
 ## <a name="see-also"></a>另请参阅  
 
-[使用 JDBC 数据类型](../../connect/jdbc/working-with-data-types-jdbc.md)  
+[处理 JDBC 数据类型](../../connect/jdbc/working-with-data-types-jdbc.md)  
   

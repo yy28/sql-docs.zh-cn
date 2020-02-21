@@ -1,5 +1,5 @@
 ---
-title: 区域字符集支持 |Microsoft Docs
+title: 区域字符集支持 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,16 +11,16 @@ ms.assetid: 4fceacfd-df4f-40cd-b7a2-5e5e58a5979f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ae20e40723822da0004b82dd7c89961fa0448e10
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027876"
 ---
 # <a name="national-character-set-support"></a>区域字符集支持
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  JDBC 驱动程序提供对 JDBC 4.0 API 的支持，后者包括新的区域字符集转换 API 方法。 此支持包括**NCHAR**、 **NVARCHAR**、 **LONGNVARCHAR**和**NCLOB** JDBC 类型的新增 setter、getter 和更新方法。  
+  JDBC 驱动程序提供对 JDBC 4.0 API 的支持，后者包括新的区域字符集转换 API 方法。 此支持新增用于 NCHAR  、NVARCHAR  、LONGNVARCHAR  和 NCLOB  JDBC 类型的 setter、getter 和 updater 方法。  
   
  下面是支持区域字符集转换的新增 getter、setter 和 updater 方法的列表：  
   
@@ -33,7 +33,7 @@ ms.locfileid: "69027876"
 > [!NOTE]  
 >  要在应用程序中使用这些方法，必须将 classpath 设置为包含 sqljdbc4.jar 文件。  
   
- 若要以 Unicode 格式发送 String 参数，应用程序应使用新的 JDBC 4.0 区域字符方法；如果使用非区域字符方法，则应将“sendStringParametersAsUnicode”  连接属性设置为“true”  。 建议尽可能使用新的 JDBC 4.0 区域字符方法。 有关**sendStringParametersAsUnicode**连接属性的详细信息, 请参阅[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)。  
+ 若要以 Unicode 格式发送 String 参数，应用程序应使用新的 JDBC 4.0 区域字符方法；如果使用非区域字符方法，则应将“sendStringParametersAsUnicode”  连接属性设置为“true”  。 建议尽可能使用新的 JDBC 4.0 区域字符方法。 若要详细了解 sendStringParametersAsUnicode  连接属性，请参阅[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [了解 JDBC 驱动程序数据类型](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

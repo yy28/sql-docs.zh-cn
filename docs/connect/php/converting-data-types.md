@@ -1,5 +1,5 @@
 ---
-title: 转换数据类型 |Microsoft Docs
+title: 转换数据类型 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 508542ec-cc28-4a17-80f4-52325d6a48db
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ca79a13146df59b0c7159de112feee3ec478249d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015105"
 ---
 # <a name="converting-data-types"></a>转换数据类型
@@ -24,17 +24,17 @@ ms.locfileid: "68015105"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|描述|  
+|主题|说明|  
 |---------|---------------|  
 |[默认 SQL Server 数据类型](../../connect/php/default-sql-server-data-types.md)|在向服务器发送数据时，提供有关默认 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型的信息。|  
 |[默认 PHP 数据类型](../../connect/php/default-php-data-types.md)|在从服务器检索数据时，提供有关默认 PHP 数据类型的信息。|  
 |[如何：指定 SQL Server 数据类型](../../connect/php/how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md)|演示如何在向服务器发送数据时指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型。|  
 |[如何：指定 PHP 数据类型](../../connect/php/how-to-specify-php-data-types.md)|演示如何在从服务器检索数据时指定 PHP 数据类型。|  
 |[如何：使用内置 UTF-8 支持发送和检索 UTF-8 数据](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)|演示如何使用 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 对 UTF-8 数据的内置支持。<br /><br />已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 的版本 1.1 中添加了对 UTF-8 字符的支持。|  
-|[如何：在 Linux 和 macOS 中发送和检索 ASCII 数据](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)|演示如何使用[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]对 Linux 或 macOS 中的 ASCII 数据的支持。<br /><br />在的版本 5.2 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]中添加了对非 Windows 环境中的 ASCII 字符的支持。|
+|[如何：在 Linux 和 macOS 中发送和检索 ASCII 数据](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)|演示如何在 Linux 或 macOS 中使用 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 对 ASCII 数据的支持。<br /><br />[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 的 5.2 版增加了对非 Windows 环境中 ASCII 字符的支持。|
   
 ## <a name="see-also"></a>另请参阅  
-[Microsoft Driver for PHP for SQL Server 编程指南](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 编程指南](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)
 

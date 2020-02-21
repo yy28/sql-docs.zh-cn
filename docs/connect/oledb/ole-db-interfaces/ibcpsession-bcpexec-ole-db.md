@@ -1,5 +1,5 @@
 ---
-title: 'IBCPSession:: BCPExec (OLE DB) |Microsoft Docs'
+title: IBCPSession::BCPExec (OLE DB) | Microsoft Docs
 description: IBCPSession::BCPExec (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 6ace2ccd8fbba9c8c3566ad706754ed314152d4a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015492"
 ---
 # <a name="ibcpsessionbcpexec-ole-db"></a>IBCPSession::BCPExec (OLE DB)
@@ -37,7 +37,7 @@ HRESULT BCPExec(
       DBROWCOUNT *pRowsCopied);  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  BCPExec 方法将数据从用户文件复制到数据库表或执行相反的操作，具体取决于与 [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 方法一起使用的 eDirection 参数的值   。  
   
  在调用 BCPExec 之前，请用有效的用户文件名调用 BCPInit 方法   。 如果没有这样做，会导致错误。 唯一的例外就是如果查询要用于大容量复制操作。 这种情况下，在 BCPInit 方法中将表名指定为 NULL，然后使用 BCP_OPTION_HINTS 选项指定查询  。  

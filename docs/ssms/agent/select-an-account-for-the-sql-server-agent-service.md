@@ -1,10 +1,7 @@
 ---
-title: 为 SQL Server 代理服务选择帐户 | Microsoft Docs
-ms.custom: ''
-ms.date: 05/04/2017
+title: 为 SQL Server 代理服务选择帐户
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,15 +18,20 @@ helpviewer_keywords:
 ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 05/04/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a1398e56ccb4ade7504d20708fda3c4bdec9d34b
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 86ee07ffd09ab72fdce4bde1a247e37328c4b626
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811550"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253235"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>为 SQL Server 代理服务选择帐户
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -39,7 +41,7 @@ ms.locfileid: "68811550"
   
 -   **内置帐户**。 可以从下列内置 Windows 服务帐户的列表中选择：  
   
-    -   **Local System** 帐户。 此帐户的名称是 NT AUTHORITY\System。 它是一个功能强大的帐户，可以不受限制地访问所有本地系统资源。 它是本地计算机上 Windows **管理员**组的成员，因此也是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin** 固定服务器角色的成员。  
+    -   **Local System** 帐户。 此帐户的名称是 NT AUTHORITY\System。 它是一个功能强大的帐户，可以不受限制地访问所有本地系统资源。 它是本地计算机上 Windows“管理员”  组的成员，因此也是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin  固定服务器角色的成员。  
   
         > [!IMPORTANT]  
         > 提供“Local System 帐户”  选项只是为了向后兼容。 本地系统帐户具有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理不需要的权限。 避免使用本地系统帐户运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理。 为了提高安全性，请使用具有下面部分“Windows 域帐户权限”中所列出权限的 Windows 域帐户。  
@@ -82,11 +84,11 @@ ms.locfileid: "68811550"
   
 |服务帐户类型|非聚集服务器|群集服务器|域控制器（非聚集）|  
 |------------------------|-------------------------|--------------------|--------------------------------------|  
-|[!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 域帐户（Windows 管理员组的成员）|是否支持|是否支持|是否支持|  
-|Windows 域帐户（非管理）|是否支持<br /><br />请参阅下面的限制 1。|是否支持<br /><br />请参阅下面的限制 1。|是否支持<br /><br />请参阅下面的限制 1。|  
-|网络服务帐户 (NT AUTHORITY\NetworkService)|是否支持<br /><br />请参阅下方的限制 1、3 和 4。|不支持|不支持|  
-|本地用户帐户（非管理）|是否支持<br /><br />请参阅下面的限制 1。|不支持|不适用|  
-|本地系统帐户 (NT AUTHORITY\System)|是否支持<br /><br />请参阅下面的限制 2。|不支持|是否支持<br /><br />请参阅下面的限制 2。|  
+|[!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 域帐户（Windows 管理员组的成员）|支持|支持|支持|  
+|Windows 域帐户（非管理）|支持<br /><br />请参阅下面的限制 1。|支持<br /><br />请参阅下面的限制 1。|支持<br /><br />请参阅下面的限制 1。|  
+|网络服务帐户 (NT AUTHORITY\NetworkService)|支持<br /><br />请参阅下方的限制 1、3 和 4。|不支持|不支持|  
+|本地用户帐户（非管理）|支持<br /><br />请参阅下面的限制 1。|不支持|不适用|  
+|本地系统帐户 (NT AUTHORITY\System)|支持<br /><br />请参阅下面的限制 2。|不支持|支持<br /><br />请参阅下面的限制 2。|  
 |本地服务帐户 (NT AUTHORITY\LocalService)|不支持|不支持|不支持|  
   
 ### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>限制 1：针对多服务器管理使用非管理帐户  
@@ -118,7 +120,7 @@ ms.locfileid: "68811550"
   
 **指定 SQL Server 代理的邮件配置文件**  
   
--   [如何：配置 SQL Server 代理邮件以使用数据库邮件 (SQL Server Management Studio)](https://msdn.microsoft.com/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
+-   [如何：将 SQL Server 代理邮件配置为使用数据库邮件](https://msdn.microsoft.com/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
   
 > [!NOTE]  
 > 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器可以指定启动操作系统时必须启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理。  

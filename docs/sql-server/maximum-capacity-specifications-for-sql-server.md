@@ -21,10 +21,10 @@ ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0fae5c47de0b8017d3f374afe18e926eea9818cc
-ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72008435"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server 的最大容量规范
@@ -43,7 +43,7 @@ ms.locfileid: "72008435"
 ##  <a name="Engine"></a> [!INCLUDE[ssDE](../includes/ssde-md.md)] 对象  
  在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库中定义的或在 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句中引用的各种对象的最大大小和最大数量。  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] 对象 (object)||最大大小/数量 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] （64 位）|其他信息|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] 对象||最大大小/数量 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] （64 位）|其他信息|  
 |---------------------------------------------------------|-|------------------------------------------------------------------|----------------------------|  
 |批大小||65,536 * 网络数据包大小|网络数据包大小指的是用于在应用程序和关系 [!INCLUDE[ssDE](../includes/ssde-md.md)]之间进行通信的表格格式数据流 (TDS) 数据包的大小。 默认的数据包大小为 4 KB，由“网络数据包大小”配置选项控制。|  
 |每个短字符串列的字节数||8,000||  
@@ -55,7 +55,7 @@ ms.locfileid: "72008435"
 |每行的字节数||8,060|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持行溢出存储，行溢出存储使长度可变的列可以被推送到行外。 只有 24 字节的根存储在推送出行外的可变长度列的主记录中；因此，此版本中的有效行限制高于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]早期版本中的有效行限制。 有关更多信息，请参阅[大型行支持](../relational-databases/pages-and-extents-architecture-guide.md#large-row-support)。|  
 |内存优化表中的每行字节数||8,060|启动 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 内存优化表支持行外存储。 如果表中的所有列的最大大小超过 8060 个字节，则可变长度列将被挤出行，这是编译时的决定。 存储于行外的列仅有 8 字节的引用存储于行内。 有关详细信息，请参阅 [内存优化表中的表和行大小](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)。|  
 |存储过程源文本中的字节数||批处理大小中的较小者或 250 MB||  
-|每个 **varchar(max)**、 **varbinary(max)**、 **xml**、 **text**或 **image** 列的字节||2^31-1||  
+|每个 **varchar(max)** 、 **varbinary(max)** 、 **xml**、 **text**或 **image** 列的字节||2^31-1||  
 |每个 **ntext** 或 **nvarchar(max)** 列的字符||2^30-1||  
 |每个表的聚集索引数||1||  
 |GROUP BY、ORDER BY 中的列数||仅受字节数限制||  
@@ -118,7 +118,7 @@ ms.locfileid: "72008435"
 |每个数据库的日志文件数||1|  
 |每台计算机的卷数||3|  
   
- * [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具支持的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 托管实例的最大数目将会依服务器的硬件配置而定。 有关入门信息，请参阅 [SQL Server 实用工具功能和任务](../relational-databases/manage/sql-server-utility-features-and-tasks.md)。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本中均提供 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。 有关 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](https://msdn.microsoft.com/library/cc645993.aspx)。    
+ \* [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具支持的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 托管实例的最大数目将会依服务器的硬件配置而定。 有关入门信息，请参阅 [SQL Server 实用工具功能和任务](../relational-databases/manage/sql-server-utility-features-and-tasks.md)。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本中均提供 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。 有关 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](https://msdn.microsoft.com/library/cc645993.aspx)。    
   
 ##  <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据层应用程序对象  
  在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据层应用程序 (DAC) 中测试的各种对象的最大大小和最大数量。  

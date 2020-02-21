@@ -9,10 +9,10 @@ ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8918251cccca5c04bd42bcb931c4efa5d1f9fd6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576327"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>规划地图报表（报表生成器和 SSRS）
@@ -110,9 +110,9 @@ ms.locfileid: "65576327"
 |![rs_MapType_Polygon_Bubble](../../reporting-services/report-design/media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|气泡图|Polygon|一个在各区域中心以不同气泡大小显示分析数据的地图，例如，按区域列出的销售数据。<br /><br /> 选项：根据第二个分析字段改变区域颜色以及指定颜色规则。|  
 |![rs_MapType_Line_Basic](../../reporting-services/report-design/media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|基本线条图|行|只显示线条的地图，例如，交货路线。<br /><br /> 选项：通过调色板改变颜色或使用一种颜色。|  
 |![rs_MapType_Line_Analytical](../../reporting-services/report-design/media/rs-maptype-line-analytical.gif "rs_MapType_Line_Analytical")|分析线条图|行|线条颜色和宽度发生变化的地图，例如，交货的包装数和按路线的实时度量。<br /><br /> 选项：通过一个分析字段改变线条宽度，通过第二个分析字段改变线条颜色，以及指定颜色规则。|  
-|![rs_MapType_Marker_Basic](../../reporting-services/report-design/media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|基本标记地图|点|在每个位置显示一个标记的地图，例如，市县。<br /><br /> 选项：通过调色板改变颜色或使用一种颜色，以及更改标记样式。|  
-|![rs_MapType_Marker_Bubble](../../reporting-services/report-design/media/rs-maptype-marker-bubble.gif "rs_MapType_Marker_Bubble")|气泡标记地图|点|对每个位置显示一个气泡且气泡大小按一个分析数据字段变化的地图，例如，按市县列出的销售数据。<br /><br /> 选项：根据第二个分析字段改变气泡颜色以及指定颜色规则。|  
-|![rs_MapType_Marker_Analytical](../../reporting-services/report-design/media/rs-maptype-marker-analytical.gif "rs_MapType_Marker_Analytical")|分析标记地图|点|在每个位置显示一个标记且标记颜色、大小和类型随分析数据发生变化的地图，例如，最畅销的产品、利润范围和折扣策略。<br /><br /> 选项：通过一个分析字段改变标记类型，通过第二个分析字段改变标记大小，通过第三个分析字段改变标记颜色，以及指定颜色规则。|  
+|![rs_MapType_Marker_Basic](../../reporting-services/report-design/media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|基本标记地图|Point|在每个位置显示一个标记的地图，例如，市县。<br /><br /> 选项：通过调色板改变颜色或使用一种颜色，以及更改标记样式。|  
+|![rs_MapType_Marker_Bubble](../../reporting-services/report-design/media/rs-maptype-marker-bubble.gif "rs_MapType_Marker_Bubble")|气泡标记地图|Point|对每个位置显示一个气泡且气泡大小按一个分析数据字段变化的地图，例如，按市县列出的销售数据。<br /><br /> 选项：根据第二个分析字段改变气泡颜色以及指定颜色规则。|  
+|![rs_MapType_Marker_Analytical](../../reporting-services/report-design/media/rs-maptype-marker-analytical.gif "rs_MapType_Marker_Analytical")|分析标记地图|Point|在每个位置显示一个标记且标记颜色、大小和类型随分析数据发生变化的地图，例如，最畅销的产品、利润范围和折扣策略。<br /><br /> 选项：通过一个分析字段改变标记类型，通过第二个分析字段改变标记大小，通过第三个分析字段改变标记颜色，以及指定颜色规则。|  
   
  在使用“地图”向导添加地图之后，您可以使用“层”向导创建其他层或更改用于层的选项。 有关向导的详细信息，请参阅[地图向导和地图层向导（报表生成器和 SSRS）](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)。  
   

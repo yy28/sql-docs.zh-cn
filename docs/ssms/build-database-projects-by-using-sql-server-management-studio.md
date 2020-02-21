@@ -1,7 +1,5 @@
 ---
-title: 使用 SQL Server Management Studio 生成数据库项目 | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: 生成数据库项目
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -15,16 +13,20 @@ helpviewer_keywords:
 ms.assetid: c2e80045-894d-44cf-b65c-e547ed738947
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 07dfe77992cb5e0e8011424d9cea878063a18943
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: 503bf99e9300a155a3521f52f8fecd18d3d65005
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267615"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243963"
 ---
 # <a name="build-database-projects-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 生成数据库项目
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-数据库脚本项目是与数据库或数据库的某一部分关联的一组经过整理的脚本、连接信息和模板。 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供了 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 用于在脚本项目上下文中管理和设计 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 包含设计器、编辑器、指南和向导，可帮助用户开发、部署和维护数据库。  
+
+数据库脚本项目是与数据库或数据库的某一部分关联的一组经过整理的脚本、连接信息和模板。 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供了 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]，用于在脚本项目上下文中管理和设计 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 包含设计器、编辑器、指南和向导，可帮助用户开发、部署和维护数据库。  
   
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio  
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 是一套管理工具，用于管理从属于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的组件。 此集成环境使用户可以在一个界面内执行各种任务，例如，备份数据、编辑查询和自动执行常见函数。  

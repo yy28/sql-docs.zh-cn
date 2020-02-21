@@ -1,5 +1,5 @@
 ---
-title: 连接 sqlcmd |Microsoft Docs
+title: 使用 sqlcmd 进行连接 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,10 +13,10 @@ ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a782db89033da42ebf17ed33565ec680fafa0d04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68005910"
 ---
 # <a name="connecting-with-sqlcmd"></a>使用 sqlcmd 进行连接
@@ -24,7 +24,7 @@ ms.locfileid: "68005910"
 
 [sqlcmd](https://go.microsoft.com/fwlink/?LinkID=154481) 实用工具适用于 Linux 和 macOS 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。
   
-以下命令演示如何分别使用 Windows 身份验证 (Kerberos) 和[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]身份验证:
+以下命令分别演示如何使用 Windows 身份验证 (Kerberos) 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证：
   
 ```  
 sqlcmd -E -Sxxx.xxx.xxx.xxx  
@@ -35,23 +35,23 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 
 在当前版本中，可以使用以下选项：  
   
-- -? 显示`sqlcmd`使用量。  
+- -? 显示 `sqlcmd` 使用情况。  
   
 - -a 请求数据包大小。  
   
 - -b 如果发生错误，则终止批处理作业。  
   
-- -c *batch_terminator*指定批处理终止符。  
+- -c batch_terminator  指定批处理终止符。  
   
 - -C 信任服务器证书。  
 
-- -d *database_name*在启动`USE` `sqlcmd`时发出*database_name*语句。  
+- -d database_name  启动 `sqlcmd` 时发出 `USE` database_name  语句。  
 
 - -D 使值传递给将解释为数据源名称 (DSN) 的 `sqlcmd` -S 选项。 有关详细信息，请参阅本主题末尾的“`sqlcmd` 和 `bcp` 中的 DSN 支持”。  
   
 - -e 将输入脚本写入标准输出设备 (stdout)。
 
-- 使用可信连接、集成身份验证。有关从 Linux 或 macOS 客户端使用集成身份验证的可信连接的详细信息, 请参阅[使用集成身份验证](../../../connect/odbc/linux-mac/using-integrated-authentication.md)。
+- -E 使用可信连接（集成身份验证）。有关从 Linux 或 macOS 客户端建立使用集成身份验证的可信连接的详细信息，请参阅[使用集成身份验证](../../../connect/odbc/linux-mac/using-integrated-authentication.md)。
 
 - -h number_of_rows  指定要在列标题之间打印的行数  。  
   
@@ -59,7 +59,7 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
   
 - -i input_file  [,input_file  [,...]] 标识包含一批 SQL 语句或存储过程的文件。  
   
-- -I 将`SET QUOTED_IDENTIFIER`连接选项设置为 ON。  
+- -I 将 `SET QUOTED_IDENTIFIER` 连接选项设置为“开”。  
   
 - -k 删除或替换控制字符。  
   
@@ -87,28 +87,28 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
   
 - -P 指定用户密码。  
   
-- -q *commandline_query*启动时`sqlcmd`执行查询, 但在查询完成运行后不退出。  
+- -q commandline_query  在启动 `sqlcmd` 时执行查询，但是在查询结束运行时不退出。  
 
-- -Q *commandline_query*启动时`sqlcmd`执行查询。 查询结束时，`sqlcmd` 将退出。  
+- -Q commandline_query  在 `sqlcmd` 启动时执行查询。 查询结束时，`sqlcmd` 将退出。  
 
 - -r 将错误消息重定向到 stderr。
 
 - -R 使驱动程序使用客户端区域设置来将货币以及日期和时间数据转换为字符数据。 当前仅使用 en_US（美国英语）格式设置。
   
-- -s *column_separator_char*指定列分隔符字符。  
+- -s column_separator_char  指定列分隔符字符。  
 
 - -S [*protocol*:] *server*[ **,** _port_]  
-指定[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]要连接到的实例, 或者如果使用了-D, 则为。 Linux 和 macOS 上的 ODBC 驱动程序需要-S。 请注意, " **tcp** " 是唯一有效的协议。  
+指定要连接的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例，如果使用的是 -D，则指定 DSN。 Linux 和 macOS 上的 ODBC 驱动程序需要 -S。 请注意，tcp  是唯一有效的协议。  
   
 - -t query_timeout 指定命令（或 SQL 语句）超时之前的秒数  。  
   
 - -u 指定以 Unicode 格式存储 output_file，无需考虑 input_file 的格式。  
   
-- -U *login_id*指定用户登录 id。  
+- -U login_id  指定用户登录 ID。  
   
 - -V error_severity_level 控制用于设置 ERRORLEVEL 变量的严重性级别  。  
   
-- -w *column_width*指定用于输出的屏幕宽度。  
+- -w column_width  指定用于输出的屏幕宽度。  
   
 - -W 删除列的尾随空格。  
   
@@ -116,9 +116,9 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
   
 - -X 禁用命令、启动脚本和环境变量。  
   
-- -y *variable_length_type_display_width*设置`sqlcmd`脚本变量`SQLCMDMAXFIXEDTYPEWIDTH`。
+- -y variable_length_type_display_width  设置 `sqlcmd` 脚本变量 `SQLCMDMAXFIXEDTYPEWIDTH`。
   
-- -Y *fixed_length_type_display_width*设置`sqlcmd`脚本变量`SQLCMDMAXVARTYPEWIDTH`。
+- -Y fixed_length_type_display_width  设置 `sqlcmd` 脚本变量 `SQLCMDMAXVARTYPEWIDTH`。
 
 
 ## <a name="available-commands"></a>可用命令
@@ -166,7 +166,7 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
   
 - -v 创建可用于 `sqlcmd` 脚本中的 `sqlcmd` 脚本变量。  
   
-可以使用以下替代方法: 将参数放入一个文件中, 然后可以将这些参数附加到另一个文件。 这将有助于你使用参数文件来替换值。 例如，创建一个名为 `a.sql` 的文件（参数文件），其中包含以下内容：
+可以使用以下替代方法：将参数放入一个文件中，然后可以将其附加到另一个文件。 这将有助于你使用参数文件来替换值。 例如，创建一个名为 `a.sql` 的文件（参数文件），其中包含以下内容：
   
     :setvar ColumnName object_id  
     :setvar TableName sys.objects  
@@ -175,19 +175,19 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
   
     select $(ColumnName) from $(TableName)  
 
-在命令行中, 使用`a.sql`以下`b.sql`命令`c.sql`将和组合到中:  
+在命令行下，使用以下命令将 `a.sql` 和 `b.sql` 合并为 `c.sql`：  
   
     cat a.sql > c.sql 
   
     cat b.sql >> c.sql  
   
-`sqlcmd` 运行`c.sql`并用作输入文件:  
+运行 `sqlcmd` 并将 `c.sql` 用作输入文件：  
   
     slqcmd -S<...> -P<..> -U<..> -I c.sql  
 
-- -z*密码*更改密码。  
+- -z password  更改密码。  
   
-- -Z*密码*更改密码并退出。  
+- -Z password  更改密码并退出。  
 
 ## <a name="unavailable-commands"></a>不可用的命令
 
@@ -201,9 +201,9 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
   
 ## <a name="dsn-support-in-sqlcmd-and-bcp"></a>sqlcmd 和 bcp 中的 DSN 支持
 
-如果指定 -D，则可以在 sqlcmd 或 bcp `-S` 选项（或 sqlcmd :Connect 命令）中指定数据源名称 (DSN) 而不是服务器名称    。 -D 会导致**sqlcmd**或**Bcp**通过-S 选项连接到 DSN 中指定的服务器。  
+如果指定 -D，则可以在 sqlcmd  或 bcp  `-S` 选项（或 sqlcmd  :Connect 命令）中指定数据源名称 (DSN) 而不是服务器名称。 -D 使 sqlcmd  或 bcp  通过 -S 选项连接到 DSN 中指定的服务器。  
   
-系统 dsn 存储在`odbc.ini` ODBC SysConfigDir 目录的文件中 (`/etc/odbc.ini`在标准安装上)。 用户 dsn 存储在`.odbc.ini`用户主目录 (`~/.odbc.ini`) 中。
+系统 DSN 存储在 ODBC SysConfigDir 目录的 `odbc.ini` 文件（即标准安装上的 `/etc/odbc.ini`）中。 用户 DSN 存储在用户主目录 (`~/.odbc.ini`) 的 `.odbc.ini` 中。
   
 以下项在 Linux 或 macOS 上的 DSN 中受支持：
 
@@ -211,7 +211,7 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 
 -   Database=  database\_name   
   
--   **Driver = Odbc driver 11 for SQL Server**或**Driver = odbc driver 13 for SQL Server**
+-   Driver=ODBC Driver 11 for SQL Server  或 Driver=ODBC Driver 13 for SQL Server 
   
 -    MultiSubnetFailover=Yes  
   

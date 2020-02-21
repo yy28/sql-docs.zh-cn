@@ -1,5 +1,5 @@
 ---
-title: 使用连接池 |Microsoft Docs
+title: 使用连接池 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 699d4e8a-34bf-4c60-b0d5-4a10dad6084a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 69aa4d7f29d8c7963f9b300f868bc8265cde2fd0
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026376"
 ---
 # <a name="using-connection-pooling"></a>使用连接池
@@ -26,11 +26,11 @@ ms.locfileid: "69026376"
 > [!NOTE]  
 > 尽管 JDBC 驱动程序支持 Java EE 5 连接池，但其自身并不提供池实现。 驱动程序依赖于第三方 Java 应用程序服务器来管理连接。  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 用于连接池实现的类如下。  
   
-| 类                                                           | 实现                                                    | 描述                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| 类                                                           | 实现                                                    | 说明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | --------------------------------------------------------------- | ------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | com.microsoft.sqlserver.jdbc. SQLServerXADataSource             | javax.sql.ConnectionPoolDataSource 和 javax.sql.XADataSource | 建议对所有 Java EE 服务器需求都使用 [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) 类，因为它实现了所有的 JDBC 3.0 池和 XA 接口。                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | com.microsoft.sqlserver.jdbc. SQLServerConnectionPoolDataSource | javax.sql.ConnectionPoolDataSource                            | 该类是一个连接工厂，它使得 Java EE 应用程序服务器可使用物理连接来填充它的连接池。 如果 Java EE 供应商的配置需要实现 javax.sql.ConnectionPoolDataSource 的类，则将该类的名称指定为 [SQLServerConnectionPoolDataSource](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)。 通常，建议改用 [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) 类，因为它同时实现了池和 XA 接口，并且已在更多的 Java EE 服务器配置中经过了验证。 |

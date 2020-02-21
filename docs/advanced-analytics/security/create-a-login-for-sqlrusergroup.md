@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: a5194f251b7ea47e0d9485446b8957e96037ded0
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68714964"
 ---
 # <a name="create-a-login-for-sqlrusergroup"></a>为 SQLRUserGroup 创建登录名
@@ -33,26 +33,26 @@ ms.locfileid: "68714964"
 
 2. 在“登录名 - 新建”对话框中，选择“搜索”   。 （请勿在该框中键入任何内容。）
     
-     ![单击“搜索”为机器学习添加新的登录名](media/implied-auth-login1.png "Click search to add new login for machine learning")
+     ![单击“搜索”为机器学习添加新的登录名](media/implied-auth-login1.png "单击“搜索”为机器学习添加新的登录名")
 
 3. 在“选择用户或组”框中，单击“对象类型”按钮   。
 
-     ![搜索对象类型，为机器学习添加新的登录名](media/implied-auth-login2.png "Search object types to add new login for machine learning")
+     ![搜索对象类型为机器学习添加新的登录名](media/implied-auth-login2.png "搜索对象类型为机器学习添加新的登录名")
 
 4. 在“对象类型”对话框中，选择“组”   。 清除所有其他复选框。
 
-     ![在“对象类型”对话框中选择“组”](media/implied-auth-login3.png "Select Groups in Object Types dialog box")
+     ![在“对象类型”对话框中选择“组”](media/implied-auth-login3.png "在“对象类型”对话框中选择“组”")
 
 4. 单击“高级”，验证要搜索的位置是否位于当前计算机，然后单击“立即查找”   。
 
-     ![单击“立即查找”以获取组列表](media/implied-auth-login4.png "Click Find Now to get list of groups")
+     ![单击“立即查找”获取组列表](media/implied-auth-login4.png "单击“立即查找”获取组列表")
 
 5. 滚动服务器上的组帐户列表，直到找到一个以 `SQLRUserGroup` 开头的组帐户。
     
     + 无论安装的是 R 还是 Python，或者两者都已安装，与默认实例的 Launchpad 服务相关联的组名称始终为 SQLRUserGroup   。 仅为默认实例选择此帐户。
     + 如果使用的是命名实例，则实例名称将附加到默认工作组名称 `SQLRUserGroup` 的名称之后  。 例如，如果实例名称为“MLTEST”，则此实例的默认用户组名称将为 SQLRUserGroupMLTest  。
  
-    ![服务器上的组示例](media/implied-auth-login5.png "Example of groups on server")
+    ![服务器上的组示例](media/implied-auth-login5.png "服务器上的组示例")
    
 5. 单击“确定”关闭高级搜索对话框  。
 

@@ -1,5 +1,5 @@
 ---
-title: getMetaData 方法 (SQLServerPreparedStatement) |Microsoft Docs
+title: getMetaData 方法 (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 5ed49a53-ed61-4e95-ad67-45957aaabb6a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bbc0a0493498f3d216c9e1395f651d8afec70711
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981854"
 ---
 # <a name="getmetadata-method-sqlserverpreparedstatement"></a>getMetaData 方法 (SQLServerPreparedStatement)
@@ -35,13 +35,13 @@ public final java.sql.ResultSetMetaData getMetaData()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 一个 Java.sql.resultsetmetadata 对象。  
+ ResultSetMetaData 对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 getMetaData 方法由 getMetaData 方法在 Java.sql.preparedstatement 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 getMetaData 方法是由 java.sql.PreparedStatement 接口中的 getMetaData 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerPreparedStatement 成员](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

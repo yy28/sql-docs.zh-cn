@@ -9,10 +9,10 @@ ms.assetid: 8556807e-f2e2-4a7b-bb1b-ac5ea1872e51
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2f98607ce8544a913ace04bbc70aa578d1090557
-ms.sourcegitcommit: 071065bc5433163ebfda4fdf6576349f9d195663
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71923790"
 ---
 # <a name="finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs"></a>在 Web 门户中查找和查看报表（报表生成器和 SSRS）
@@ -26,7 +26,7 @@ ms.locfileid: "71923790"
 ## <a name="navigating-the-folder-hierarchy-in-report-manager"></a>在报表管理器中的文件夹层次结构中导航  
  若要通过浏览查找要运行的报表，可以使用主页，当您启动报表管理器时以及当您打开文件夹层次结构中的任意文件夹时，此页会自动显示。 主页仅显示您有权查看的项。 文件夹路径会作为一行链接显示在主页的顶部。 文件夹名依次列出，根文件夹（主文件夹）排在最前面。 打开其他各个文件夹时，相应的文件夹名将添加到页面顶部的文件夹路径中。 下图中的 **(1)** 。 打开报表时，相应的报表名称也将添加到文件夹路径中。  
   
- ![报表管理器功能区和导航](../../reporting-services/report-builder/media/rs-reportmanager-ribbon.gif "Report Manager Ribbon and Navigation")  
+ ![报表管理器功能区和导航](../../reporting-services/report-builder/media/rs-reportmanager-ribbon.gif "报表管理器功能区和导航")  
 报表管理器功能区  
   
  使用以下方法可以在整个文件夹层次结构中定位：  

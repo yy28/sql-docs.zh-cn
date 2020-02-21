@@ -1,6 +1,7 @@
 ---
-title: 孤立用户故障排除 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 孤立用户疑难解答
+description: 当数据库用户登录名不再存在于 master 数据库中时，就会出现孤立用户。 本主题讨论如何识别和解析孤立用户。
+ms.custom: seo-lt-2019
 ms.date: 07/14/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -19,14 +20,14 @@ ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d42da661015f1184945d4e4ae45cb3f70016e987
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 91d3d04efa0300683a5ee727cfa0a1fcd31e3c10
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063811"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74822058"
 ---
-# <a name="troubleshoot-orphaned-users-sql-server"></a>孤立用户故障排除 (SQL Server)
+# <a name="troubleshoot-orphaned-users-sql-server"></a>孤立用户疑难解答 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   当数据库用户是基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 主 **数据库中的登录名，但该登录名在** 主 **数据库中已不存在时，** 中会出现孤立用户。 当删除登录名，或者将数据库移动到另一台不存在该登录名的服务器时会出现这种情况。 本主题介绍如何找到孤立用户，并将它们重新映射到登录名。  
@@ -55,7 +56,7 @@ ms.locfileid: "68063811"
   
  在服务器实例上未定义或错误定义了其相应 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的数据库用户（基于登录名）无法登录到该实例。 这样的用户被称为此服务器实例上的数据库的“孤立用户”  。 如果数据库用户映射到 `master` 实例中不存在的登录名 SID，则该用户可能变为孤立用户。 在数据库还原或附加到从未创建过登录名的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 其他实例之后，数据库用户也可能变为孤立用户。 如果删除了对应的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名，则数据库用户可能会变为孤立用户。 即使重新创建该登录名，它也会具有不同的 SID，因此该数据库用户仍为孤立用户。  
   
-## <a name="to-detect-orphaned-users"></a>检测孤立用户  
+## <a name="detect-orphaned-users"></a>检测孤立用户  
 
 **对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 PDW**
 
@@ -95,7 +96,7 @@ WHERE sp.SID IS NULL
 
 3. 比较两个列表，以确定用户数据库 `sys.database_principals` 表中是否存在与 master 数据库 `sql_logins` 表中不匹配的登录名 SID。 
   
-## <a name="to-resolve-an-orphaned-user"></a>解决孤立用户问题  
+## <a name="resolve-an-orphaned-user"></a>解析孤立用户  
 在 master 数据库中，使用带有 SID 选项的 [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) 语句以重新创建缺失的登录名，提供上一部分中获得的数据库用户的 `SID`  
   
 ```  

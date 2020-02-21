@@ -1,6 +1,6 @@
 ---
-title: 'IBCPSession:: BCPWriteFmt (OLE DB) |Microsoft Docs'
-description: '使用 IBCPSession:: BCPWriteFmt 将格式化文件保存为 xml 或文本格式 (OLE DB)'
+title: IBCPSession::BCPWriteFmt (OLE DB) | Microsoft Docs
+description: 使用 IBCPSession::BCPWriteFmt 以 xml 或文本格式保存格式化文件 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 42a8b450fcc5536920ead44d4f401fb2e81d2b08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994533"
 ---
 # <a name="ibcpsessionbcpwritefmt-ole-db"></a>IBCPSession::BCPWriteFmt (OLE DB)
@@ -37,15 +37,15 @@ HRESULT BCPWriteFmt(
       const wchar_t *pwszFormatFile);  
 ```  
   
-## <a name="remarks"></a>Remarks  
- 格式化文件指定大容量复制所创建的数据文件的数据格式。 调用 [IBCPSession::BCPColumns](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) 和 [IBCPSession::BCPColFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) 方法将定义数据文件的格式。 BCPWriteFmt 方法将此定义保存在 pwszFormatFile 参数引用的文件中  。  
+## <a name="remarks"></a>备注  
+ 格式化文件指定大容量复制所创建的数据文件的数据格式。 调用 [IBCPSession::BCPColumns](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) 和 [IBCPSession::BCPColFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) 方法将定义数据文件的格式。 BCPWriteFmt 方法将此定义保存在 pwszFormatFile 参数引用的文件中。  
   
- BCPWriteFmt 方法可以通过 xml 或文本格式保存格式化文件  。 这必须通过将 BCP_OPTION_XML 控制选项用于 [IBCPSession::BCPControl](../../oledb/ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md) 方法来指示。  
+ BCPWriteFmt 方法可以通过 xml 或文本格式保存格式化文件。 这必须通过将 BCP_OPTION_XML 控制选项用于 [IBCPSession::BCPControl](../../oledb/ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md) 方法来指示。  
   
  若要加载已保存的格式化文件，请使用 [IBCPSession::BCPReadFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md) 方法。  
   
 ## <a name="arguments"></a>参数  
- pwszFormatFile  [in]  
+ pwszFormatFile[in]  
  包含数据文件格式值的文件的路径和文件名。  
   
 ## <a name="return-code-values"></a>返回代码值  

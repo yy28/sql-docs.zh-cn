@@ -1,10 +1,7 @@
 ---
-title: ssbdiagnose 实用工具 (Service Broker) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: ssbdiagnose 实用工具 (Service Broker)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
@@ -25,16 +22,22 @@ helpviewer_keywords:
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3a4f198a1b492719a6cf6916f4ee483424b3a7fa
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 5775600e5dc6e0bebd74104dcc9bfa350873de3e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70211404"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254196"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 实用工具 (Service Broker)
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  **ssbdiagnose** 实用工具可报告 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会话或 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服务配置中的问题。 可为两个服务或单个服务执行配置检查。 检查出的问题在命令提示符窗口以人工读取文本的形式报告，或输出为可重定向到文件或其他程序的格式化 XML。
+
+**ssbdiagnose** 实用工具可报告 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会话或 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服务配置中的问题。 可为两个服务或单个服务执行配置检查。 检查出的问题在命令提示符窗口以人工读取文本的形式报告，或输出为可重定向到文件或其他程序的格式化 XML。
 
 ## <a name="syntax"></a>语法  
   
@@ -184,14 +187,14 @@ WHERE database_id = DB_ID();
  *conversation_handle*  
  标识应用程序中某个会话端点的唯一标识符。 每个会话端点的会话句柄都是唯一的，发起方端点和目标端点具有不同的会话句柄。  
   
- 会话句柄由 BEGIN DIALOG 语句的 \@dialog_handle 参数以及 RECEIVE 语句结果集中的 conversation_handle 列返回到应用程序。  
+ 会话句柄由 BEGIN DIALOG  语句的 \@dialog_handle  参数以及 RECEIVE  语句结果集中的 conversation_handle  列返回到应用程序。  
   
  会话句柄在 **sys.transmission_queue** 和 **sys.conversation_endpoints** 目录视图的 **conversation_handle** 列中报告。  
   
  *conversation_group_id*  
  标识会话组的唯一标识符。  
   
- 会话组 ID 由 GET CONVERSATION GROUP 语句的 \@conversation_group_id 参数以及 RECEIVE 语句结果集中的 conversation_group_id 列返回到应用程序。  
+ 会话组 ID 由 GET CONVERSATION GROUP  语句的 \@conversation_group_id  参数以及 RECEIVE  语句结果集中的 conversation_group_id  列返回到应用程序。  
   
  会话组 ID 在 **sys.conversation_groups** 和 **sys.conversation_endpoints** 目录视图的 **conversation_group_id** 列中报告。  
   
@@ -201,7 +204,7 @@ WHERE database_id = DB_ID();
  会话 ID 在 **sys.conversation_endpoints** 目录视图的 **conversation_id** 列中报告。  
   
  **-TIMEOUT** _timeout_interval_  
- 指定运行 **RUNTIME** 报告的秒数。 如果未指定 **-TIMEOUT** ，则运行时报告的运行时间不限。 **-TIMEOUT** 仅用于 **RUNTIME** 报告，而不用于 **CONFIGURATION** 报告。 如果未指定 -TIMEOUT 或要在超时间隔到期之前结束运行时报告，请按 Ctrl + C 退出 ssbdiagnose**-**。 *timeout_interval* 必须是介于 1 和 2,147,483,647 之间的数字。  
+ 指定运行 **RUNTIME** 报告的秒数。 如果未指定 **-TIMEOUT** ，则运行时报告的运行时间不限。 **-TIMEOUT** 仅用于 **RUNTIME** 报告，而不用于 **CONFIGURATION** 报告。 如果未指定 -TIMEOUT 或要在超时间隔到期之前结束运行时报告，请按 Ctrl + C 退出 ssbdiagnose   **-** 。 *timeout_interval* 必须是介于 1 和 2,147,483,647 之间的数字。  
   
  **\<runtimeconnectionoptions>**  
  指定数据库的连接信息，该数据库包含与受监视的会话元素关联的服务。 如果所有服务都位于同一数据库中，则只需指定一个 **CONNECT TO** 子句。 如果各服务位于不同的数据库中，必须为每个数据库提供一个 **CONNECT TO** 子句。 如果未指定 **runtimeconnectionoptions** ，则 **ssbdiagnose** 使用 **baseconnectionoptions**中的连接信息。  
@@ -220,7 +223,7 @@ WHERE database_id = DB_ID();
   
  如果 **-E** 和 **-U** 都未指定，则 **ssbdiagnose** 将使用 SQLCMDUSER 环境变量的值。 如果 SQLCMDUSER 也未设置，则 **ssbdiagnose** 会尝试使用 Windows 身份验证模式，基于运行 **ssbdiagnose**的用户的 Windows 帐户进行连接。  
   
- 如果将 **-U** 选项与 **-E** 选项一起使用，将生成错误消息。 如果 -U 选项后跟多个参数，便会生成错误消息并退出程序。  
+ 如果将 **-U** 选项与 **-E** 选项一起使用，将生成错误消息。 如果 -U  选项后跟多个参数，便会生成错误消息并退出程序。  
   
  **-P** _password_  
  指定 **-U** 登录 ID 的密码。 密码是区分大小写的。 如果使用了 **-U** 选项而未使用 **-P** 选项，则 **ssbdiagnose** 将使用 SQLCMDPASSWORD 环境变量的值。 如果 SQLCMDPASSWORD 也未设置，则 **ssbdiagnose** 会提示用户输入密码。  
@@ -231,7 +234,7 @@ WHERE database_id = DB_ID();
  如果指定了 **-P** 选项而未指定密码，则 **ssbdiagnose** 将使用默认密码 (NULL)。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] 有关详细信息，请参阅 [Strong Passwords](../../relational-databases/security/strong-passwords.md)。  
+>  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]有关详细信息，请参阅[强密码](../../relational-databases/security/strong-passwords.md)。  
   
  通过向控制台输出密码提示，可以显示密码提示，如下所示： `Password:`  
   
@@ -241,12 +244,12 @@ WHERE database_id = DB_ID();
   
  如果 **-P** 选项后跟多个参数，将生成错误消息。  
   
- **baseconnetionoptions** _server_name_[\\*instance_name*]  
+ **-S** _server_name_[\\*instance_name*]  
  指定承载要分析的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 实例。  
   
- 指定要连接到该服务器上 *默认实例的* server_name [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。 指定要连接到该服务器上 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的命名实例的 _server\_name_\\_instance\_name_。 如果未指定 **-S** ，则 **ssbdiagnose** 将使用 SQLCMDSERVER 环境变量的值。 如果 SQLCMDSERVER 也未设置，则 **ssbdiagnose** 将连接到本地计算机上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的默认实例。  
+ 指定要连接到该服务器上 *默认实例的* server_name [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。 指定要连接到该服务器上 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的命名实例的 _server\_name_\\  _instance\_name_。 如果未指定 **-S** ，则 **ssbdiagnose** 将使用 SQLCMDSERVER 环境变量的值。 如果 SQLCMDSERVER 也未设置，则 **ssbdiagnose** 将连接到本地计算机上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的默认实例。  
   
- **-S** _database_name_  
+ **-d** _database_name_  
  指定承载要分析的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服务的数据库。 如果该数据库不存在，将生成错误消息。 如果未指定 **-d** ，则默认为登录帐户的默认数据库属性中指定的数据库。  
   
  **-l** _login_timeout_  
@@ -255,7 +258,7 @@ WHERE database_id = DB_ID();
  **-?**  
  显示命令行帮助。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  使用 **ssbdiagnose** 可以执行下列操作：  
   
 -   确认在新配置的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 应用程序中没有配置错误。  
@@ -303,7 +306,7 @@ WHERE database_id = DB_ID();
  **事件**  
  报告 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 事件，该事件指示 **RUNTIME** 报告期间监视的会话所遇到的问题。 **ssbdiagnose** 在每次生成事件时都进行报告。 如果多个会话都遇到相同问题，则会多次报告相关事件。  
   
- **问题**  
+ 问题   
  报告导致 **ssbdiagnose** 无法完成配置分析或无法监视会话的问题。  
   
 ## <a name="sqlcmd-environment-variables"></a>sqlcmd 环境变量  
@@ -459,7 +462,7 @@ ssbdiagnose -XML -E -d MyDatabase CONFIGURATION FROM SERVICE
  [CREATE REMOTE SERVICE BINDING (Transact-SQL)](../../t-sql/statements/create-remote-service-binding-transact-sql.md)   
  [CREATE ROUTE (Transact SQL)](../../t-sql/statements/create-route-transact-sql.md)   
  [CREATE SERVICE (Transact SQL)](../../t-sql/statements/create-service-transact-sql.md)   
- [RECEIVE (Transact SQL)](../../t-sql/statements/receive-transact-sql.md)   
+ [RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md)   
  [sys.transmission_queue (Transact-SQL)](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)   
  [sys.conversation_endpoints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
  [sys.conversation_groups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)  

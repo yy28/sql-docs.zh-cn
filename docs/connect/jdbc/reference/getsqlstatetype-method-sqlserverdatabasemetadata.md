@@ -1,5 +1,5 @@
 ---
-title: getSQLStateType 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getSQLStateType 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: ee4d6751-68a3-4d04-831c-e6d704c59e63
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 76faa3bcaccac4f75d95dc49276c669a5631b5a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979730"
 ---
 # <a name="getsqlstatetype-method-sqlserverdatabasemetadata"></a>getSQLStateType 方法 (SQLServerDatabaseMetaData)
@@ -37,15 +37,15 @@ public int getSQLStateType()
 ## <a name="return-value"></a>返回值  
  指示 SQLSTATE 类型的 int  ，可以为以下值之一：  
   
--   对于 Java Runtime Environment 版本 5.0: 如果将**xopenStates**连接属性设置为**true**, 则此方法将返回 java.sql.databasemetadata。 否则，返回的是 DatabaseMetaData.sqlStateSQL99。  
+-   对于 Java Runtime Environment 版本 5.0：如果 xopenStates  连接属性设置为 true  ，则此方法将返回 DatabaseMetaData.sqlStateXOpen。 否则，返回的是 DatabaseMetaData.sqlStateSQL99。  
   
--   对于 Java Runtime Environment 版本 6.0: 如果将**xopenStates**连接属性设置为**true**, 则此方法将返回 java.sql.databasemetadata。 否则为 Java.sql.databasemetadata. sqlStateSQL。  
+-   对于 Java Runtime Environment 版本 6.0：如果 xopenStates  连接属性设置为 true  ，则此方法将返回 DatabaseMetaData.sqlStateXOpen。 否则，返回的是 DatabaseMetaData.sqlStateSQL。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 getSQLStateType 方法由 getSQLStateType 方法在 Java.sql.databasemetadata 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 getSQLStateType 方法是由 java.sql.DatabaseMetaData 接口中的 getSQLStateType 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

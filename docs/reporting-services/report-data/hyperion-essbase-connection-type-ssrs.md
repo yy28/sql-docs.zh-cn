@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 904a3bbc5b7a3d4987cd6c06b257ff680e4e8343
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 61cfc9c83e5d9c2976f5fcb00eab29e91c1f726d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593838"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190840"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Hyperion Essbase 连接类型 (SSRS)
   若要在报表中包含来自 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 外部数据源的数据，您必须拥有一个基于 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]类型的报表数据源的数据集。 此内置数据源类型基于 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]的数据扩展插件，让你可以从 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 外部数据源检索多维数据。  
@@ -27,7 +27,7 @@ ms.locfileid: "73593838"
 Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample  
 ```  
   
- 有关连接字符串示例的详细信息，请参阅 [报表生成器中的数据连接、数据源和连接字符串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
+ 有关连接字符串示例的更多信息，请参阅[创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
   
 ##  <a name="Credentials"></a> 凭据  
@@ -35,7 +35,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
  报表发布后，您可能需要更改数据源的凭据，以使报表在报表服务器上运行时，用于检索数据的权限有效。  
   
- 有关详细信息，请参阅[数据连接、数据源和连接字符串&#40;报表生成器和 SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)或[为报表数据源指定凭据和连接信息](specify-credential-and-connection-information-for-report-data-sources.md)。  
+ 有关详细信息，请参阅[为报表数据源指定凭据和连接信息](specify-credential-and-connection-information-for-report-data-sources.md)  
   
   
 ##  <a name="Query"></a> 查询  
@@ -60,7 +60,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
 
  若要包括查询参数，请在查询设计器的筛选区域创建一个筛选器，并将该筛选器标记为参数。 系统将为每个筛选器自动创建一个数据集以提供可用值。 默认情况下，这些数据集不显示在“报表数据”窗格中。 有关详细信息，请参阅[为多维数据的参数值显示隐藏的数据集（报表生成器和 SSRS）](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md)。
 
- 默认情况下，每个报表参数的数据类型均为 **Text**。 创建报表参数后，您可能需要更改默认值。 有关详细信息，请参阅 [报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)类型的报表数据源的数据集。  
+ 默认情况下，每个报表参数的数据类型均为 **Text**。 创建报表参数后，您可能需要更改默认值。 有关详细信息，请参阅 [报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)的详细信息。  
   
   
 ##  <a name="Extended"></a> 扩展字段属性  
@@ -79,14 +79,14 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
  下表提供了可以用于 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 数据源的预定义字段属性的列表。  
   
-|**属性**|**类型**|**说明或所需的值**|  
+|**属性**|类型 |**说明或所需的值**|  
 |------------------|--------------|---------------------------------------|  
-|**Value**|**对象**|指定字段的数据值。<br /><br /> 对于维度属性，它映射到 MEMBER_CAPTION。 对于度量值，它映射到数据值。|  
-|**IsMissing**|**Boolean**|指示是否在结果数据集中找到了该字段。|  
-|**FormattedValue**|**String**|返回关键数字的格式值。<br /><br /> 映射自 MDX 表达式中的 FORMATTED_VALUE。|  
-|**BackgroundColor**|**String**|返回数据库中为该字段定义的背景颜色。<br /><br /> 映射自 MDX 表达式中的 BACK_COLOR。|  
-|**Color**|**String**|返回数据库中为该项定义的前景色。<br /><br /> 映射自 MDX 表达式中的 FORE_COLOR。|  
-|**UniqueName**|**String**|返回级别的完全限定名称。<br /><br /> 映射自 MDX 表达式中的 MEMBER_UNIQUE_NAME。|  
+|**值**|**Object**|指定字段的数据值。<br /><br /> 对于维度属性，它映射到 MEMBER_CAPTION。 对于度量值，它映射到数据值。|  
+|**IsMissing**|**布尔值**|指示是否在结果数据集中找到了该字段。|  
+|**FormattedValue**|**字符串**|返回关键数字的格式值。<br /><br /> 映射自 MDX 表达式中的 FORMATTED_VALUE。|  
+|**BackgroundColor**|**字符串**|返回数据库中为该字段定义的背景颜色。<br /><br /> 映射自 MDX 表达式中的 BACK_COLOR。|  
+|**彩色**|**字符串**|返回数据库中为该项定义的前景色。<br /><br /> 映射自 MDX 表达式中的 FORE_COLOR。|  
+|**UniqueName**|**字符串**|返回级别的完全限定名称。<br /><br /> 映射自 MDX 表达式中的 MEMBER_UNIQUE_NAME。|  
   
  有关如何在表达式中使用字段和字段属性的详细信息，请参阅[表达式中的内置集合（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)。  
   
@@ -100,9 +100,9 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
  下表显示了可用于 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 数据源的自定义字段属性。  
   
-|**属性**|**类型**|**说明或所需的值**|  
+|**属性**|类型 |**说明或所需的值**|  
 |------------------|--------------|---------------------------------------|  
-|**FORMAT_STRING**|**String**|针对度量值定义，是可作为 String 类型的 **FormattedValue** 。|  
+|**FORMAT_STRING**|**字符串**|针对度量值定义，是可作为 String 类型的 **FormattedValue** 。|  
   
   
 ##  <a name="Remarks"></a> 注释  
@@ -127,7 +127,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
  提供访问报表数据的概述。  
   
- [报表生成器中的数据连接、数据源和连接字符串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  提供有关数据连接和数据源的信息。  
   
  [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
@@ -136,7 +136,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [数据集字段集合（报表生成器和 SSRS）](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  提供有关数据集查询生成的字段集合的信息。  
   
- [Reporting Services &#40;SSRS&#41;支持的数据源](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)提供有关每个数据扩展插件的平台和版本支持的详细信息。  
+ 有关每个数据扩展插件的平台和版本支持的详细信息，请参阅 [Reporting Services 支持的数据源 (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
   
  [Using SQL Server 2005 Reporting Services with Hyperion Essbase](https://go.microsoft.com/fwlink/?LinkId=81970)  
  提供有关使用此数据扩展插件的详细信息。  

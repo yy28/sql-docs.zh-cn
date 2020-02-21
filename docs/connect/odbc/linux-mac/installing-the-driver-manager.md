@@ -13,10 +13,10 @@ ms.assetid: 7c4b6fb4-f45a-4973-adb9-a4d83f0a2a7a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6fc46627dcbd10e4fc64a8520412105475e9c0a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68008791"
 ---
 # <a name="installing-the-driver-manager"></a>安装驱动程序管理器
@@ -65,13 +65,13 @@ ms.locfileid: "68008791"
 
 1.  删除所有已安装的旧版 unixODBC（例如 unixODBC 2.2.11）。 在 Red Hat Enterprise Linux 5 或 6 上，执行以下命令：**yum remove unixODBC**。 SUSE Linux enterprise **zypper 删除 unixODBC**。  
   
-2.  转到 [http://www.unixodbc.org](http://www.unixodbc.org/)。单击页面左侧的“下载”链接，转到下载页面  。 然后，单击相应链接以将文件 unixODBC-2.3.0.tar.gz 保存到计算机。 该版本的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不支持 UnixODBC-2.3.1。  
+2.  转到[http://www.unixodbc.org](http://www.unixodbc.org/)。单击页面左侧的“下载”链接，转到下载页面  。 然后，单击相应链接以将文件 unixODBC-2.3.0.tar.gz 保存到计算机。 该版本的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不支持 UnixODBC-2.3.1。  
   
 3.  在你的 Linux 计算机上执行该命令： **tar xvzf unixODBC-2.3.0.tar.gz**。  
   
 4.  转到 unixODBC-2.3.0 目录。  
   
-5.  在命令提示符处，执行以下命令： **CPPFLAGS ="-DSIZEOF_LONG_INT = 8"** 。  
+5.  在命令提示符下，执行以下命令：**CPPFLAGS="-DSIZEOF_LONG_INT=8"** 。  
   
 6.  在命令提示符处，执行以下命令：**export CPPFLAGS**。  
   

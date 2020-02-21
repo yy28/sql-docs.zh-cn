@@ -1,6 +1,6 @@
 ---
 title: 用于教程的 Iris 演示数据集
-Description: 创建一个包含 Iris 数据集的数据库和一个用于存储模型的表。 练习中的该数据集用于演示如何在 SQL Server 存储过程中包装 R 语言或 Python 代码。
+Description: 创建一个包含 Iris 数据集的数据库和多个预测模型。 本数据集用于 Microsoft SQL Server 机器学习服务的 R 和 Python 教程。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/19/2018
@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e580a4d3b8d0e294573cf19c0194cc9b8a103518
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: c87b5c9fede3a8a9ab72add650447d1b02ac89c7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727095"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74908765"
 ---
 #  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>SQL Server 中用于 Python 和 R 教程的 Iris 演示数据 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,9 +29,9 @@ ms.locfileid: "73727095"
 
 ## <a name="create-the-database"></a>创建数据库
 
-1. 启动 SQL Server Management Studio，并打开一个新的“查询”窗口  。  
+1. 启动 SQL Server Management Studio，并打开一个新的“查询”窗口。  
 
-2. 为此项目创建一个新数据库，并更改“查询”窗口的上下文以使用该新数据库  。
+2. 为此项目创建一个新数据库，并更改“查询”窗口的上下文以使用该新数据库。
 
     ```sql
     CREATE DATABASE irissql
@@ -41,9 +41,9 @@ ms.locfileid: "73727095"
     ```
 
     > [!TIP] 
-    > 如果你不熟悉 SQL Server，或使用自己的服务器，一个常见的错误就是登录便开始操作，而没有注意到你在 master 数据库中  。 为确保使用正确的数据库，请始终使用 `USE <database name>` 语句（例如，`use irissql`）指定上下文。
+    > 如果你不熟悉 SQL Server，或使用自己的服务器，一个常见的错误就是登录便开始操作，而没有注意到你在 master 数据库中。 为确保使用正确的数据库，请始终使用 `USE <database name>` 语句（例如，`use irissql`）指定上下文。
 
-3. 添加一些空表：一个用于存储数据，另一个用于存储已定型的模型。 “iris_models”表用于存储在其他练习中生成的序列化模型  。
+3. 添加一些空表：一个用于存储数据，另一个用于存储已定型的模型。 “iris_models”表用于存储在其他练习中生成的序列化模型。
 
     以下代码创建用于定型数据的表。
 
@@ -61,7 +61,7 @@ ms.locfileid: "73727095"
     > [!TIP] 
     > 如果你不熟悉 T-SQL，则需要记住 `DROP...IF` 语句。 尝试创建表并已存在表时，SQL Server 返回错误：“数据库中已存在名为‘iris_dat’的对象。” 避免这类错误的一种方法是在代码中删除任何现有的表或其他对象。
 
-4. 运行以下代码以创建用于存储定型模型的表。 若要将 Python（或 R）模型保存在 SQL Server 中，必须将它们序列化并存储在 varbinary(max) 类型的列中  。 
+4. 运行以下代码以创建用于存储定型模型的表。 若要将 Python（或 R）模型保存在 SQL Server 中，必须将它们序列化并存储在 varbinary(max) 类型的列中。 
 
     ```sql
     DROP TABLE IF EXISTS iris_models;
@@ -127,7 +127,7 @@ ms.locfileid: "73727095"
     GO
     ```
 
-3. 若要实际填充表，请运行存储过程并指定应在其中写入数据的表。 运行时，存储过程执行 Python 或 R 代码，该代码加载内置 Iris 数据集，然后将数据插入“iris_data”表  。
+3. 若要实际填充表，请运行存储过程并指定应在其中写入数据的表。 运行时，存储过程执行 Python 或 R 代码，该代码加载内置 Iris 数据集，然后将数据插入“iris_data”表。
 
     ```sql
     INSERT INTO iris_data ("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "Species", "SpeciesId")
@@ -144,7 +144,7 @@ ms.locfileid: "73727095"
 
 作为验证步骤，运行查询以确认已上传数据。
 
-1. 在“对象资源管理器”中的“数据库”下，右键单击“irissql”数据库，然后启动一个新查询  。
+1. 在“对象资源管理器”中的“数据库”下，右键单击“irissql”数据库，然后启动一个新查询。
 
 2. 运行一些简单的查询：
 

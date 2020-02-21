@@ -11,10 +11,10 @@ ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 04a179492b151e664dfe31f4fe4e51c5440fcef5
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027792"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver"></a>Microsoft JDBC Driver 的发行说明
@@ -24,15 +24,15 @@ ms.locfileid: "69027792"
 本文列出了 Microsoft JDBC Driver for SQL Server  的版本。 对于每个发行版本，将对所做的更改进行命名和说明。
 ## <a name="741"></a>7.4.1
 
-### <a name="compliance"></a>遵从性
+### <a name="compliance"></a>合规性
 
-2019年8月2日
+2019 年 8 月 2 日
 
 | 符合性更改 | 详细信息 |
 | :---------------- | :------ |
-| 下载 JDBC Driver 7.4 的最新更新。 | &bull; &nbsp; [Microsoft 下载中心](https://go.microsoft.com/fwlink/?linkid=2099962)<br/>&bull; &nbsp; [GitHub，7.4.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.4.1)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| 下载 JDBC Driver 7.4 的最新更新。 | &bull;&nbsp;[Microsoft 下载中心](https://go.microsoft.com/fwlink/?linkid=2099962)<br/>&bull; &nbsp; [GitHub, 7.4.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.4.1)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
 | 完全符合 JDBC API 规范 4.2。 | 根据 Java 版本兼容性命名 7.4 包中的 jar。<br/><br/>例如，7.4 包中的 mssql-jdbc-7.4.1.jre11.jar 文件应与 Java 11 配合使用。 |
-| 与 Java 开发工具包 (JDK) 版本12.0、11.0 和1.8 兼容。 | 除 JDK 11.0 和 1.8 外，Microsoft JDBC Driver 7.4 for SQL Server 现在还与 JDK 开发工具包 (JDK) 版本 12.0 兼容。 |
+| 与 Java 开发工具包 (JDK) 版本 12.0、11.0 和 1.8 兼容。 | 除 JDK 11.0 和 1.8 外，Microsoft JDBC Driver 7.4 for SQL Server 现在还与 JDK 开发工具包 (JDK) 版本 12.0 兼容。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="support-for-jdk-12"></a>支持 JDK 12
@@ -43,15 +43,15 @@ ms.locfileid: "69027792"
 
 | NTLM 更改 | 详细信息 |
 | :--------- | :------ |
-| 支持 NTLM 身份验证模式。 | 此身份验证模式允许 Windows 和非 Windows 客户端使用 Windows 域用户对 SQL Server 其自身进行身份验证。 |
+| 支持 NTLM 身份验证模式。 | 这种身份验证模式允许 Windows 和非 Windows 客户端使用 Windows 域用户对 SQL Server 进行身份验证。 |
 | 使用此身份验证模式的更多详细信息以及示例应用程序。 | 请参阅[使用 NTLM 身份验证进行连接](../../connect/jdbc/using-ntlm-authentication-to-connect-to-sql-server.md)。 |
 | &nbsp; | &nbsp; |
 
-### <a name="introduces-querying-parametermetadata-via-_usefmtonly_"></a>介绍如何通过_useFmtOnly_查询 java.sql.parametermetadata
+### <a name="introduces-querying-parametermetadata-via-_usefmtonly_"></a>通过 useFmtOnly  引入了对 ParameterMetaData 的查询
 
 | useFmtOnly 更改 | 详细信息 |
 | :---------- | :------ |
-| 已添加**useFmtOnly**连接属性。 | 此功能允许用户根据需要通过`SET FMTONLY ON`旧 API 查询 java.sql.parametermetadata。 这对于`sp_describe_undeclared_parameters`不按预期执行的方案非常有用。 |
+| 添加了 useFmtOnly  连接属性。 | 借助此功能，用户可以选择通过 `SET FMTONLY ON` 旧版 API 查询 ParameterMetaData。 这对于 `sp_describe_undeclared_parameters` 不按预期执行的情况很有用。 |
 | 更多详细信息和限制。 | 请参阅[使用 useFmtOnly](../../connect/jdbc/using-usefmtonly.md) |
 | &nbsp; | &nbsp; |
 
@@ -69,18 +69,18 @@ ms.locfileid: "69027792"
 | 已知问题 | 详细信息 |
 | :----------- | :------ |
 | 使用 NTLM 身份验证时。 | 目前不支持同时启用扩展保护和加密连接。 |
-| 使用 useFmtOnly 时。 | 此功能存在一些问题，是由 SQL 分析逻辑中的缺陷导致的。 有关更多详细信息和解决方法建议, 请参阅[使用 useFmtOnly](../../connect/jdbc/using-usefmtonly.md) 。 |
+| 使用 useFmtOnly 时。 | 此功能存在一些问题，是由 SQL 分析逻辑中的缺陷导致的。 有关更多详细信息和解决方法建议，请参阅[使用 useFmtOnly](../../connect/jdbc/using-usefmtonly.md)。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="722"></a>7.2.2
 
-### <a name="compliance"></a>遵从性
+### <a name="compliance"></a>合规性
 
 2019 年 4 月 16 日
 
 | 符合性更改 | 详细信息 |
 | :---------------- | :------ |
-| 下载 JDBC Driver 7.2 的最新更新。 | &bull; &nbsp; [Microsoft 下载中心](https://go.microsoft.com/fwlink/?linkid=2063159)<br/>&bull; &nbsp; [GitHub, 7.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.2)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| 下载 JDBC Driver 7.2 的最新更新。 | &bull;&nbsp;[Microsoft 下载中心](https://go.microsoft.com/fwlink/?linkid=2063159)<br/>&bull;&nbsp;[GitHub, 7.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.2)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
 | 完全符合 JDBC API 规范 4.2。 | 根据 Java 版本兼容性命名 7.2 包中的 jar。<br/><br/>例如，7.2 包中的 mssql-jdbc-7.2.2.jre11.jar 文件应与 Java 11 配合使用。 |
 | 除 Java 开发工具包 (JDK) 版本 1.8 外，还与 JDK 11.0 兼容。 | 除 Java 开发工具包 (JDK) 版本 1.8 外，Microsoft JDBC Driver 7.2 for SQL Server 现在还与 JDK 11.0 兼容。 |
 | &nbsp; | &nbsp; |
@@ -195,7 +195,7 @@ public SQLServerColumnEncryptionAzureKeyVaultProvider(
             SQLServerKeyVaultAuthenticationCallback authenticationCallback) throws SQLServerException;
 ```
 
-### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-160"></a>更新了“用于 Java 的 Microsoft Azure Active Directory 身份验证库 (ADAL4J)”版本 1.6.0
+### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-160"></a>更新了“用于 Java 的 Microsoft Azure Active Directory 身份验证库 (ADAL4J)”版本：1.6.0
 
 Microsoft JDBC Driver 7.0 for SQL Server 已将“用于 Java 的 Microsoft Azure Active Directory 身份验证库 (ADAL4J)”上的 Maven 依赖项更新为版本 1.6.0。 有关依赖项的详细信息，请参阅 [Microsoft JDBC Driver for SQL Server 的功能依赖项](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)。
 
@@ -251,7 +251,7 @@ JDBC 驱动程序已实现预处理语句元数据缓存以改进性能。 现�
 
 JDBC Driver 现在支持，在所有受支持的操作系统（Windows、Linux 和 Mac）上结合使用 Azure Active Directory (Azure AD) 集成身份验证和 Kerberos。 或者，在 Windows 操作系统上，用户可以使用 sqljdbc_auth.dll 进行身份验证。
 
-### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-140"></a>更新了“用于 Java 的 Microsoft Azure Active Directory 身份验证库 (ADAL4J)”版本 1.4.0
+### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-140"></a>更新了“用于 Java 的 Microsoft Azure Active Directory 身份验证库 (ADAL4J)”版本：1.4.0
 
 JDBC 驱动程序已将“用于 Java 的 Microsoft Azure Active Directory 身份验证库 (ADAL4J)”上的 Maven 依赖项更新为版本 1.4.0。 有关依赖项的详细信息，请参阅 [Microsoft JDBC Driver for SQL Server 的功能依赖项](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)。
 
@@ -297,14 +297,14 @@ Microsoft JDBC Driver 6.1 for SQL Server 完全符合 JDBC 规范 4.1 和 4.2。
 
 Microsoft JDBC Driver 6.0 for SQL Server 完全符合 JDBC 规范 4.1 和 4.2。 根据 JDBC API 版本兼容性命名 6.0 包中的 jar。 例如，6.0 包中的 sqljdbc42.jar 文件符合 JDBC API 4.2。 同样，sqljdbc41.jar 文件符合 JDBC API 4.1。
 
-若要确保 sqljdbc42.jar 或 sqljdbc41.jar 文件正确，请运行以下代码行。 如果输出是“Driver version: 6.0.7507.100”，则表示具有 JDBC Driver 6.0 包。
+若要确保 sqljdbc42.jar 或 sqljdbc41.jar 文件正确，请运行以下代码行。 如果输出为“驱动程序版本：6.0.7507.100”，则具有 JDBC 驱动程序 6.0 包。
 
 ```java
 Connection conn = DriverManager.getConnection("jdbc:sqlserver://<server>;user=<user>;password=<password>;");
 System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
 ```
 
-### <a name="always-encrypted"></a>始终加密
+### <a name="always-encrypted"></a>Always Encrypted
 
 驱动程序支持 SQL Server 2016 中的 Always Encrypted 功能。 此功能可确保从不在 SQL Server 实例中以纯文本形式显示敏感数据。 Always Encrypted 工作方式是，以透明方式加密应用程序中的数据，这样 SQL Server 就只会处理已加密数据，而不会处理纯文本值。 即使 SQL Server 实例或主机计算机遭入侵，攻击者也只能获得敏感数据的已加密文本。 有关详细信息，请参阅[对 JDBC 驱动程序使用 Always Encrypted](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)。
 
@@ -334,7 +334,7 @@ Azure AD 身份验证是一种使用 Azure AD 标识连接到 Azure SQL 数据�
 
 Microsoft JDBC Driver 4.2 for SQL Server 完全符合 JDBC 规范 4.1 和 4.2。 根据 JDBC API 版本兼容性命名 4.2 包中的 jar。 例如，4.2 包中的 sqljdbc42.jar 文件符合 JDBC API 4.2。 同样，sqljdbc41.jar 文件符合 JDBC API 4.1。
 
-若要确保 sqljdbc42.jar 或 sqljdbc41.jar 文件正确，请运行以下代码行。 如果输出是“Driver version: 4.2.6420.100”，则表示具有 JDBC Driver 4.2 包。
+若要确保 sqljdbc42.jar 或 sqljdbc41.jar 文件正确，请运行以下代码行。 如果输出为“驱动程序版本：4.2.6420.100”，则具有 JDBC 驱动程序 4.2 包。
 
 ```java
 Connection conn = DriverManager.getConnection("jdbc:sqlserver://<server>;user=<user>;password=<password>;");

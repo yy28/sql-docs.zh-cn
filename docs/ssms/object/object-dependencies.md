@@ -1,6 +1,6 @@
 ---
-title: 对象依赖关系 | Microsoft Docs
-ms.custom: ''
+title: 对象依赖关系
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 78be395cccceff6c01152b38ddf9aa7008a273c8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 82aa0e5ae67d3dbbf4e2a897ba5e49976cfc09a6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264093"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257162"
 ---
 # <a name="object-dependencies"></a>对象依赖关系
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,13 +34,13 @@ ms.locfileid: "68264093"
 \<所选对象> 依赖的对象     
 单击此按钮将列出所选对象所依赖的并且依赖关系跟踪涉及的对象。  
   
-**依赖关系**  
+**依赖项**  
 如果单击了“依赖 <selected object> 的对象”   ，则选择此选项将显示依赖于所选对象的对象的层次结构视图。 如果单击了“<selected object> 依赖的对象”    ，则选择此选项将显示所选对象所依赖的对象的层次结构视图。  
   
 **名称**  
 显示上面“依赖关系”  树视图中所选对象的名称。  
   
-**类型**  
+类型   
 显示上面“依赖关系”  树视图中所选对象的类型。  
   
 **上次同步时间**  
@@ -53,7 +53,7 @@ ms.locfileid: "68264093"
 > [!NOTE]  
 > 仅在“常规”  页上提供此选项。  
   
-显示两个对象之间的依赖关系的类型。 可以为以下各项之一：  
+显示两个对象之间的依赖关系的类型。 可以是以下值之一：  
   
 -   架构绑定依赖关系  
   

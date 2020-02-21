@@ -1,26 +1,25 @@
 ---
-title: 设置跟踪文件的最大文件大小 (SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 设置跟踪文件的最大文件大小
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- maximum file size for traces
-- size [SQL Server], trace files
 ms.assetid: e86dc4ce-5aa3-4c0d-acb5-c9e8871ed963
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7eb97c28901f5f88c5e741d0d34b845bc40b93ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 74d0d90ed27da0cd66ccf4a14232731a9eeb8f7b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928735"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307915"
 ---
 # <a name="set-a-maximum-file-size-for-a-trace-file-sql-server-profiler"></a>设置跟踪文件的最大文件大小 (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   使用以下步骤可设置跟踪文件的最大文件大小。  
   
@@ -41,7 +40,7 @@ ms.locfileid: "67928735"
   
 5.  在 **“设置最大文件大小”** 复选框中，指定跟踪的最大文件大小。 当文件大小达到此最大值时，跟踪文件就不再记录到此文件中。 如果选中  “启用文件滚动更新”（默认情况下选中此选项），则出现以下情况：  
   
-     如果使用文件滚动更新选项，则在达到最大文件大小时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会关闭当前文件并创建一个新文件。 新文件的名称与上一个文件相同，但是在其名称后追加了一个指明顺序的整数。例如，如果原始跟踪文件命名为 filename_1.trc，则下一个跟踪文件就为 filename_2.trc，依此类推。 如果分配给新的滚动更新文件的名称已经被现有文件使用，则现有文件将被覆盖，除非它是只读的。 将跟踪数据保存到文件时，默认情况下启用文件滚动选项。  
+     如果使用文件滚动更新选项，则在达到最大文件大小时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会关闭当前文件并创建一个新文件。 新文件的名称与上一个文件相同，但是在其名称后追加了一个指明顺序的整数。例如，如果原始跟踪文件命名为 filename_1.trc，则下一个跟踪文件就为 filename_2.trc，依此类推。 如果分配给新的滚动更新文件的名称已经被现有文件使用，则现有文件将被覆盖，除非它是只读的。 将跟踪数据保存到文件时，默认情况下启用文件滚动选项。  
   
      如果启用了文件滚动更新选项，则在使用其他某种方法停止跟踪之前，跟踪将一直继续。 若要停止在达到文件大小限制后进行跟踪，请禁用文件滚动更新选项。  
   
@@ -49,6 +48,6 @@ ms.locfileid: "67928735"
     >  FAT32 文件系统将文件大小限制为略微小于 4 GB。 当跟踪文件达到该大小时，跟踪将会失败，并出现错误“磁盘空间不足”。 若要创建更大的文件，请使用 NTFS 文件系统。  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server 事件探查器](../../tools/sql-server-profiler/sql-server-profiler.md)  
+ [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

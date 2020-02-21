@@ -15,10 +15,10 @@ ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 59889ce4625b8c8748c83fada670551db8584ea6
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593380"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>关系查询设计器用户界面（报表生成器）
@@ -87,13 +87,13 @@ ms.locfileid: "73593380"
   
  聚合功能可对数据进行汇总，并且数据也会进行分组，以支持传递汇总数据的聚合。 在查询中使用聚合时，查询返回的其他字段将自动进行分组，并且查询包括 SQL GROUP BY 子句。 可以通过仅在 **“分组和聚合”** 列表中使用 **“分组依据”** 选项来汇总数据，而不必添加聚合。 许多聚合都包括使用 DISTINCT 关键字的版本。 包括 DISTINCT 可消除重复的值。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] 使用 [!INCLUDE[DWsql](../../includes/dwsql-md.md)]。 SQL 语言的这两种分支都支持查询设计器提供的子句、关键字和聚合。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]，[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] 使用 [!INCLUDE[DWsql](../../includes/dwsql-md.md)]。 SQL 语言的这两种分支都支持查询设计器提供的子句、关键字和聚合。  
   
  有关 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的详细信息，请参阅 [Transact-SQL 引用（数据库引擎）](../../t-sql/transact-sql-reference-database-engine.md)。  
   
  下表列出各种聚合并提供其简要说明。  
   
-|Aggregate|描述|  
+|Aggregate|说明|  
 |---------------|-----------------|  
 |Avg|返回组中各值的平均值。 实现 SQL AVG 聚合。|  
 |Count|返回组中项数。 实现 SQL COUNT 聚合。|  
@@ -182,7 +182,7 @@ ms.locfileid: "73593380"
 ### <a name="graphical-query-designer-toolbar"></a>图形查询设计器工具栏  
  关系查询设计器工作栏提供了以下按钮，帮助您指定或查看查询结果。  
   
-|按钮|描述|  
+|按钮|说明|  
 |------------|-----------------|  
 |**编辑为文本**|切换到基于文本的查询设计器，可查看自动生成的查询，也可以修改查询。|  
 |**导入**|从文件或报表中导入现有的查询。 支持 .sql 和 .rdl 文件类型。|  

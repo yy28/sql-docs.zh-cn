@@ -1,29 +1,28 @@
 ---
-title: 快速入门：Python 数据类型
-titleSuffix: SQL Server Machine Learning Services
-description: 在本快速入门中，了解如何在 SQL Server 机器学习服务中使用 Python 和 SQL Server 处理数据类型和数据对象。
+title: 快速入门：Python 数据结构
+description: 在本快速入门中，了解如何在 SQL Server 机器学习服务中使用 Python 处理数据结构和数据对象。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1bac339105acdb7318b29426cd0bb4afdc2481e7
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 0f04e021664a92241c8c029d296a298b10c142d2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727015"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831904"
 ---
-# <a name="quickstart-handle-data-types-and-objects-using-python-in-sql-server-machine-learning-services"></a>快速入门：在 SQL Server 机器学习服务中使用 Python 处理数据类型和对象
+# <a name="quickstart-data-structures-and-objects-using-python-in-sql-server-machine-learning-services"></a>快速入门：在 SQL Server 机器学习服务中使用 Python 处理数据结构和对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 本快速入门介绍在 SQL Server 机器学习服务中使用 Python 时如何使用数据结构。
 
-SQL Server 依赖于 Python 的 pandas 包，该包非常适合处理表格数据  。 但是，不能将标量从 Python 传递到 SQL Server 并期望它“正常运行”。 在本快速入门中，你将回顾一些基本的数据类型定义，以便为在 Python 和 SQL Server 之间传递表格数据时可能遇到的其他问题做好准备。
+SQL Server 依赖于 Python 的 pandas 包，该包非常适合处理表格数据  。 但是，不能将标量从 Python 传递到 SQL Server 并期望它“正常运行”。 在本快速入门中，你将回顾一些基本的数据结构定义，以便为在 Python 和 SQL Server 之间传递表格数据时可能遇到的其他问题做好准备。
 
 需预先了解的概念包括：
 

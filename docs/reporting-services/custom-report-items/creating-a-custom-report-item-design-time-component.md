@@ -11,10 +11,10 @@ ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a9789c2d017200650bcae7b5f864da708e5c7453
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63194295"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>创建自定义报表项设计时组件
@@ -182,7 +182,7 @@ private void OnProportionalScaling(object sender, EventArgs e)
 ```  
   
 ### <a name="using-adornments"></a>使用修饰  
- 此外，自定义报表项类还可实现 Microsoft.ReportDesigner.Design.Adornment 类  。 使用修饰后，自定义报表项控件可提供设计图面主矩形之外的区域。 这些区域可用来处理用户界面事件，如鼠标单击和拖放操作。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Microsoft.ReportDesigner 命名空间中定义的 Adornment 类是通过传递 Windows 窗体中的 <xref:System.Windows.Forms.Design.Behavior.Adorner> 类实现的   。 有关 Adorner 类的完整文档，请参阅 MSDN 库中的[行为服务概述](https://go.microsoft.com/fwlink/?LinkId=116673)  。 有关实现 Microsoft.ReportDesigner.Design.Adornment 类的示例代码，请参阅 [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)  （SQL Server Reporting Services 产品示例）。  
+ 此外，自定义报表项类还可实现 Microsoft.ReportDesigner.Design.Adornment 类  。 使用修饰后，自定义报表项控件可提供设计图面主矩形之外的区域。 这些区域可用来处理用户界面事件，如鼠标单击和拖放操作。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Microsoft.ReportDesigner  命名空间中定义的 Adornment  类是通过传递 Windows 窗体中的 <xref:System.Windows.Forms.Design.Behavior.Adorner> 类实现的。 有关 Adorner 类的完整文档，请参阅 MSDN 库中的[行为服务概述](https://go.microsoft.com/fwlink/?LinkId=116673)  。 有关实现 Microsoft.ReportDesigner.Design.Adornment 类的示例代码，请参阅 [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)  （SQL Server Reporting Services 产品示例）。  
   
  有关在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中如何对 Windows 窗体进行编程和使用 Windows 窗体的详细信息，请参见 MSDN Library 中的以下主题：  
   
@@ -190,12 +190,12 @@ private void OnProportionalScaling(object sender, EventArgs e)
   
 -   [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中的组件  
   
--   Walkthrough: Creating a Windows Forms Control that Takes Advantage of Visual Studio Design-Time Features（演练：创建一个利用 Visual Studio 设计时功能的 Windows 窗体控件）  
+-   演练：Walkthrough: Creating a Windows Forms Control that Takes Advantage of Visual Studio Design-Time Features（创建一个利用 Visual Studio 设计时功能的 Windows 窗体控件）  
   
 ## <a name="see-also"></a>另请参阅  
  [自定义报表项体系结构](../../reporting-services/custom-report-items/custom-report-item-architecture.md)   
  [创建自定义报表项运行时组件](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)   
  [自定义报表项类库](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)   
- [如何部署自定义报表项](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
+ [如何：部署自定义报表项](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
   

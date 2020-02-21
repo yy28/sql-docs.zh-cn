@@ -11,10 +11,10 @@ ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3eb2778f11aa83498bdfc47ece599aa07c403fe0
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027263"
 ---
 # <a name="understanding-java-ee-support"></a>了解 Java EE 支持
@@ -39,7 +39,7 @@ ms.locfileid: "69027263"
 
 对于 JDBC Driver 7.4，驱动程序包含在 mssql-jdbc-7.4.1.jre8.jar  、mssql-jdbc-7.4.1.jre11.jar  或 mssql-jdbc-7.4.1.jre12.jar  中。
   
-无论何时使用 JDBC DriverManager 类加载驱动程序, 只要在任何驱动程序配置中指定驱动程序的类名, 就会使用类名称。 例如，配置 Java EE 应用程序服务器内的数据源可能要求输入驱动程序类名称。  
+只要你使用 JDBC DriverManager 类加载驱动程序，只要你在任何驱动程序配置中指定驱动程序的类名，就会使用此类名。 例如，配置 Java EE 应用程序服务器内的数据源可能要求输入驱动程序类名称。  
   
 ## <a name="data-sources"></a>数据源
 
@@ -51,7 +51,7 @@ JDBC 驱动程序为 Java EE / JDBC 3.0 数据源提供支持。 JDBC 驱动程�
   
 |数据源类型|类名和说明|  
 |---------------|--------------------------|  
-|DataSource|`com.microsoft.sqlserver.jdbc.SQLServerDataSource` <br/> <br/> 非连接池数据源。|  
+|数据源|`com.microsoft.sqlserver.jdbc.SQLServerDataSource` <br/> <br/> 非连接池数据源。|  
 |ConnectionPoolDataSource|`com.microsoft.sqlserver.jdbc.SQLServerConnectionPoolDataSource` <br/> <br/> 用于配置 JAVA EE 应用程序服务器连接池的数据源。 通常当应用程序在 JAVA EE 应用程序服务器中运行时使用。|  
 |XADataSource|`com.microsoft.sqlserver.jdbc.SQLServerXADataSource` <br/> <br/> 用于配置 JAVA EE XA 数据源的数据源。 通常当应用程序在 JAVA EE 应用程序服务器和 XA 事务管理器中运行时使用。|  
   

@@ -1,5 +1,5 @@
 ---
-title: storesMixedCaseIdentifiers 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
+title: storesMixedCaseIdentifiers 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: a91e5cd6-22b1-464e-aeec-665590737a74
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a1d1a924b913ecffc4baea959053001d7e30c1db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969907"
 ---
 # <a name="storesmixedcaseidentifiers-method-sqlserverdatabasemetadata"></a>storesMixedCaseIdentifiers 方法 (SQLServerDatabaseMetaData)
@@ -37,11 +37,11 @@ public boolean storesMixedCaseIdentifiers()
 ## <a name="return-value"></a>返回值  
  如果以大小写混合形式存储标识符，则为 true  。 否则为 **false**。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 storesMixedCaseIdentifiers 方法由 storesMixedCaseIdentifiers 方法在 Java.sql.databasemetadata 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 storesMixedCaseIdentifiers 方法是由 java.sql.DatabaseMetaData 接口中的 storesMixedCaseIdentifiers 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

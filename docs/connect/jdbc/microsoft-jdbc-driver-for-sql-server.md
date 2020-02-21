@@ -11,10 +11,10 @@ ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bc81bae599bcd9e401aad7e610a7c43ed1a0dcec
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027877"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server
@@ -48,13 +48,13 @@ ms.locfileid: "69027877"
   
 ## <a name="download"></a>下载
 
-[下载 MICROSOFT JDBC Driver for SQL Server](download-microsoft-jdbc-driver-for-sql-server.md) -包含有关 Maven 项目和其他内容的其他信息。
+[下载 Microsoft JDBC Driver for SQL Server](download-microsoft-jdbc-driver-for-sql-server.md) - 包含 Maven 项目等内容的其他信息。
   
 ## <a name="samples"></a>示例  
 
 * [示例 JDBC 驱动程序应用程序](sample-jdbc-driver-applications.md)  
 * [Windows 上的 Java 入门](https://www.microsoft.com/sql-server/developer-get-started/java/windows/)
-* [MacOS 上的 Java 入门](https://www.microsoft.com/sql-server/developer-get-started/java/mac/)
+* [macOS 上的 Java 入门](https://www.microsoft.com/sql-server/developer-get-started/java/mac/)
 * [Ubuntu 上的 Java 入门](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/)
-* [Red Hat Enterprise Linux 上的 Java 入门 (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/java/rhel/)
-* [SUSE Linux Enterprise Server 上的 Java 入门 (SLES)](https://www.microsoft.com/sql-server/developer-get-started/java/sles/)
+* [Red Hat Enterprise Linux (RHEL) 上的 Java 入门](https://www.microsoft.com/sql-server/developer-get-started/java/rhel/)
+* [SUSE Linux Enterprise Server (SLES) 上的 Java 入门](https://www.microsoft.com/sql-server/developer-get-started/java/sles/)

@@ -1,10 +1,9 @@
 ---
-title: “关系图”窗格 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: “关系图”窗格
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +14,14 @@ helpviewer_keywords:
 ms.assetid: 399dfc7b-e2e7-47d3-bd11-163cbe0ce13c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 00f4257a78b06d9f0ce3c21cb16ef04514eda76d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 9ba8a064256541ffc756ef37fe01f1205e6bc243
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263846"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251901"
 ---
 # <a name="diagram-pane-visual-database-tools"></a>关系图窗格 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +65,7 @@ ms.locfileid: "68263846"
   
 下表列出了各个表或表值对象的矩形中所使用的复选框和符号：  
   
-|复选框或符号|描述|  
+|复选框或符号|说明|  
 |-----------------------|---------------|  
 |![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbi7.gif "Visual Database Tools 图标")<br /><br />![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbi8.gif "Visual Database Tools 图标")<br /><br />![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbi9.gif "Visual Database Tools 图标")<br /><br />![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbia.gif "Visual Database Tools 图标")|指定某个数据列是否出现在查询结果集内（“选择”查询），或者是否用于“更新”、“插入源”、“生成表”或“插入到”查询中。 选择要添加到结果中的列。 如果选择“(所有列)”  ，则所有数据列都将出现在输出中。<br /><br />与复选框一起使用的图标会根据要创建的查询类型而更改。 在创建“删除”查询时，不能选择单个列。|  
 |![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbib.gif "Visual Database Tools 图标")<br /><br />![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbic.gif "Visual Database Tools 图标")|表示数据列用于对查询结果进行排序（是 ORDER BY 子句的一部分）。 如果排序顺序为升序，则图标显示为 A-Z；如果排序顺序为降序，则图标显示为 Z-A。|  
@@ -80,7 +81,7 @@ ms.locfileid: "68263846"
   
 联接线中间的图标形状指示表或表结构对象的联接方式。 如果联接子句使用等于 (=) 以外的运算符，则该运算符将显示在联接线图标中。 下表列出可在联接线中显示的图标：  
   
-|联接线图标|描述|  
+|联接线图标|说明|  
 |------------------|---------------|  
 |![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbih.gif "Visual Database Tools 图标")|内部联接（使用等号创建）。|  
 |![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbii.gif "Visual Database Tools 图标")|基于“大于”运算符的内部联接。 （在联接线图标中显示的运算符反映了在联接中使用的运算符。）|  
@@ -90,7 +91,7 @@ ms.locfileid: "68263846"
   
 联接线末端的图标表示联接的类型。 下表列出联接的类型以及可在联接线末端显示的图标：  
   
-|联接线末端的图标|描述|  
+|联接线末端的图标|说明|  
 |-----------------------------|---------------|  
 |![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbim.gif "Visual Database Tools 图标")|一对一联接|  
 |![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbin.gif "Visual Database Tools 图标")|一对多联接|  

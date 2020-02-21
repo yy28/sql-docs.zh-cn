@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ba5f48b7788b6ebec63149175568777e6659017f
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 2aef2ed82803af2a6ca1966cde5f5bf6675ca016
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73725072"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74901847"
 ---
 # <a name="explore-and-visualize-the-data"></a>浏览并可视化数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -197,7 +197,7 @@ ms.locfileid: "73725072"
   
     ![小费金额与车费金额](media/sqldev-python-sample-plot.png "小费金额与车费金额") 
 
-## <a name="next-step"></a>下一步
+## <a name="next-step"></a>后续步骤
 
 [使用 T-SQL 创建数据功能](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 

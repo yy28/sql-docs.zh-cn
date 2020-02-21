@@ -1,10 +1,9 @@
 ---
-title: 从以前的版本升级数据库关系图 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 从早前版本升级数据库关系图
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,16 +17,18 @@ helpviewer_keywords:
 ms.assetid: c5434211-697a-423f-ad71-d78178b69a78
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d28b90273084e9a5b2f9678500efcd68dba924e0
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 11617b30fef96d189f5d91f46c3fc272d86a153f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263126"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246050"
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>从以前的版本升级数据库关系图 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-如果对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 设置了数据库关系图创建功能，则对以前版本的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库创建的数据库关系图将自动升级。 有关设置关系图的详细步骤，请参阅 [设置数据库关系图设计器 (Visual Database Tools)](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)。  
+如果对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 设置了数据库关系图创建功能，则对以前版本的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]数据库创建的数据库关系图将自动升级。 有关设置关系图的详细步骤，请参阅[设置数据库关系图设计器](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)。  
   
 ### <a name="to-upgrade-legacy-database-diagrams"></a>升级旧的数据库关系图  
   
@@ -40,6 +41,6 @@ ms.locfileid: "68263126"
     这将升级存储在数据库中的关系图。  
   
 ## <a name="see-also"></a>另请参阅  
-[了解数据库关系图所有权 (Visual Database Tools)](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
-[设置数据库关系图设计器 (Visual Database Tools)](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)  
+[了解数据库关系图所有权](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
+[设置数据库关系图设计器](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)  
   

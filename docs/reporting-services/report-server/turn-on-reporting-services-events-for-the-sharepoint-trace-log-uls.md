@@ -9,10 +9,10 @@ ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 07f8cd00781717511bbcaba6e76553cc17d0c5bf
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68893243"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>为 SharePoint 跟踪日志 (ULS) 启用 Reporting Services 事件
@@ -38,9 +38,9 @@ ms.locfileid: "68893243"
 ##  <a name="bkmk_general"></a> 一般 ULS 日志建议  
  下表列出了监视 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 环境的推荐事件类别和级别。 记录事件时，每一项都包括记录事件的时间、进程名和线程 ID。  
   
-|类别|级别|描述|  
+|类别|级别|说明|  
 |--------------|-----------|-----------------|  
-|“数据库”|“详细”|记录涉及数据库访问的事件。|  
+|数据库|“详细”|记录涉及数据库访问的事件。|  
 |常规|“详细”|记录涉及访问以下各项的事件：<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 网页<br /><br /> 报表查看器 HTTP 处理程序<br /><br /> 报表访问（.rdl 文件）<br /><br /> 数据源（.rsds 文件）<br /><br /> SharePoint 网站上的 URL（.smdl 文件）|  
 |Office Server 常规|异常|记录登录失败。|  
 |拓扑|“详细”|记录当前用户信息。|  
@@ -124,7 +124,7 @@ Get-SPDiagnosticConfig
 |报表服务器提供程序||  
 |报表服务器呈现||  
 |报表服务器报表预览||  
-|报表服务器资源实用工具|示例条目：<br /><br /> MediumReporting Services starting SKU: Evaluation<br /><br /> MediumEvaluation copy: 180 days left|  
+|报表服务器资源实用工具|示例条目：<br /><br /> MediumReporting Services starting SKU:计算<br /><br /> MediumEvaluation copy:180 days left|  
 |报表服务器运行作业||  
 |报表服务器运行请求||  
 |报表服务器计划||  

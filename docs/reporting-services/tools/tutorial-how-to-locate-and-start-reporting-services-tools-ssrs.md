@@ -1,10 +1,10 @@
 ---
-title: 教程：如何查找并启动 Reporting Services 工具 (SSRS) | Microsoft Docs
-ms.date: 05/15/2019
+title: 教程：查找并启动 Reporting Services 工具 | Microsoft Docs
+description: 本教程介绍了用于配置报表服务器、管理报表服务器内容和操作以及创建并发布分页和移动 Reporting Services 报表的工具。
+ms.date: 12/09/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: tools
-description: 本教程介绍了用于配置报表服务器、管理报表服务器内容和操作以及创建并发布分页和移动 Reporting Services 报表的工具。
 ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 27e90deec22d20f65943f9c7e07cf425772c7737
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: be9da26fc71dbcbf9fd47aa94c0ee721b160eed6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65875166"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245515"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>教程：如何查找并启动 Reporting Services 工具 (SSRS)
 
@@ -42,17 +42,17 @@ ms.locfileid: "65875166"
 -   管理加密密钥。  
 -   配置无人参与的报表处理和电子邮件报表传递。  
   
-**安装：** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式时会安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器。 有关详细信息，请参阅 [安装 Reporting Services 本机模式报表服务器](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)。  
+**安装：** 安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式时，会安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager。 有关详细信息，请参阅 [安装 Reporting Services 本机模式报表服务器](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)。  
   
 ### <a name="to-start-the-reporting-services-configuration-manager"></a>启动 Reporting Services 配置管理器  
   
-1.  在 Windows“开始”屏幕上，键入 **reporting** ，然后在“应用”  搜索结果中，单击“Reporting Services 配置管理器”  。  
+1.  在 Windows“开始”屏幕上，键入 **reporting** ，然后在“应用”  搜索结果中，单击“Reporting Services 配置管理器” 。  
   
-     ![正在启动的 Reporting Services 配置管理器](../../reporting-services/tools/media/bi-ssrs-configmanager-win8-startscreen.gif "正在启动的 Reporting Services 配置管理器")  
+     ![“开始”屏幕中的 Reporting Services 配置管理器](../../reporting-services/tools/media/bi-ssrs-configmanager-win8-startscreen.gif "“开始”屏幕中的 Reporting Services 配置管理器")  
   
      **Or**  
   
-     单击 **“开始”** ，然后依次单击 **“程序”** 、“ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]”、 **“配置工具”** 、 **“Reporting Services 配置管理器”** 。  
+     单击 **“开始”**，然后依次单击 **“程序”**、“ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]”、 **“配置工具”**、 **“Reporting Services 配置管理器”**。  
   
      此时将出现 **“选择报表服务器安装实例”** 对话框，可以选择要配置的报表服务器实例。  
   
@@ -60,20 +60,20 @@ ms.locfileid: "65875166"
   
      如果指定远程计算机，请单击 **“查找”** 以建立一个连接。 必须事先配置报表服务器，以便进行远程管理。 有关详细信息，请参阅 [配置报表服务器以进行远程管理](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)。  
   
-3.  在 **在stance Name**中，选择要配置的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例。 在列表中只显示 SQL Server 2008 及更高版本的报表服务器实例。 不能配置较早版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
+3.  在“实例名称”中，选择要配置的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例。 在列表中只显示 SQL Server 2008 及更高版本的报表服务器实例。 不能配置较早版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
   
-4.  单击 **“连接”** 。  
+4.  单击“连接”。  
   
 5.  若要验证是否已启动工具，请将您的结果与下图进行比较：  
   
      ![Reporting Services 配置工具](../../reporting-services/tools/media/rs-ui-reportserverconfigkatmai.png "Reporting Services 配置工具")  
   
- **后续步骤：** [配置和管理报表服务器（SSRS 本机模式）](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)和 [Reporting Services Configuration Manager（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
+ **后续步骤：**[配置和管理报表服务器（SSRS 本机模式）](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)和 [Reporting Services 配置管理器（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
   
 ##  <a name="web-portal-native-mode"></a>Web 门户（本机模式）  
  使用 [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md) 可设置权限、管理订阅和计划以及处理报表。 还可以使用 Web 门户查看报表。  
   
- **安装：** Web 门户在安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式时进行安装： [安装 Reporting Services 本机模式报表服务器](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)  
+ **安装：** 安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式时，会安装 Web 门户：[安装 Reporting Services 本机模式报表服务器](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)  
   
  必须拥有足够的权限才能打开 Web 门户（最初，只有本地 Administrators 组的成员拥有访问 Web 门户功能的权限）。 Web 门户根据当前用户的角色分配提供不同的页和选项。 没有权限的用户将得到一个空页。 拥有查看报表权限的用户将获得链接，用户点击这些链接可以打开报表。 若要了解有关权限的详细信息，请参阅[角色和权限 (Reporting Services)](../../reporting-services/security/roles-and-permissions-reporting-services.md)。  
   
@@ -92,13 +92,13 @@ ms.locfileid: "65875166"
   
 ### <a name="to-start-sql-server-management-studio"></a>启动 SQL Server Management Studio  
   
-1.  在 Windows“开始”屏幕上，键入 **sql server** ，然后在“应用”  搜索结果中，单击“SQL Server Management Studio”  。  
+1.  在 Windows“开始”屏幕上，键入 **sql server** ，然后在“应用”  搜索结果中，单击“SQL Server Management Studio” 。  
   
      ![Windows“开始”屏幕中的 Managment Studio](../../reporting-services/tools/media/bi-ssms-win8-startscreen.gif "Windows“开始”屏幕中的 Managment Studio")  
   
      **Or**  
   
-     依次单击“开始”  、“所有程序”  、“ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]”和“SQL Server Management Studio”  。 此时，将显示 **“连接到服务器”** 对话框。  
+     依次单击“开始” 、“所有程序” 、“ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]”和“SQL Server Management Studio” 。 此时会显示“连接到服务器”对话框。  
   
 2.  如果没有出现 **“连接到服务器”** 对话框，请在 **“对象资源管理器”** 中单击 **“连接”** ，然后选择 **Reporting Services**。  
   
@@ -106,10 +106,10 @@ ms.locfileid: "65875166"
   
 4.  在 **“服务器名称”** 列表中，选择一个报表服务器实例。 本地实例将显示在列表中。 您还可以键入远程 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。  
   
-5.  单击 **“连接”** 。 可以扩展根节点以设置服务器属性，修改角色定义或关闭报表服务器功能。  
+5.  单击“连接”。 可以扩展根节点以设置服务器属性，修改角色定义或关闭报表服务器功能。  
   
 ##  <a name="bkmk_ssdt"></a> 具有报表设计器和报表向导的 SQL Server Data Tools  
- 你可以选择两种不同的工具来创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分页报表：报表设计器和 [报表生成器](#bkmk_report_builder)。  
+ 可以选择两种不同的工具来创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分页报告：  报表设计器和[报表生成器](#bkmk_report_builder)。  
   
  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] -Visual Studio 中可以找到报表设计器。 报表设计器的设计图面包括选项卡式窗口、向导和用于访问报表创建功能的菜单。 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中选择 Report Server 项目或者 Report Server 向导模板后，即可使用此报表设计器工具。 若要了解详细信息，请参阅 [SQL Server Data Tools 中的 Reporting Services (SSDT)](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)。 
  
@@ -119,17 +119,17 @@ ms.locfileid: "65875166"
   
 1.  打开 **SQL Server Data Tools**。  
   
-2.  在 **“文件”** 菜单上，指向 **“新建”** ，再单击 **“项目”** 。  
+2.  在 **“文件”** 菜单上，指向 **“新建”**，再单击 **“项目”**。  
   
-3.  在 **“项目类型”** 列表中，单击 **“商业智能项目”** 。  
+3.  在 **“项目类型”** 列表中，单击 **“商业智能项目”**。  
   
-4.  在 **“模板”** 列表中，单击 **“报表服务器项目”** 。 下图显示了对话框中显示的项目模板的外观：  
+4.  在 **“模板”** 列表中，单击 **“报表服务器项目”**。 下图显示了对话框中显示的项目模板的外观：  
   
      ![“新建项目模板”对话框](../../reporting-services/tools/media/rs-ui-newrsproject.gif "“新建项目模板”对话框")  
   
 5.  为项目键入名称和位置，或单击 **“浏览”** 并选择位置。  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ，并显示 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 起始页。 解决方案资源管理器提供用来创建报表和数据源的类别。 可以使用这些类别来创建新的报表和数据源。 创建报表定义时将显示选项卡式窗口。 选项卡式窗口包括“数据”、“布局”和“预览”。  
+6.  此时，[!INCLUDE[clickOK](../../includes/clickok-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 打开，并显示 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 起始页。 解决方案资源管理器提供用来创建报表和数据源的类别。 可以使用这些类别来创建新的报表和数据源。 创建报表定义时将显示选项卡式窗口。 选项卡式窗口包括“数据”、“布局”和“预览”。  
   
  若要掌握有关创建报表的入门知识，请参阅[创建基本表报表（SSRS 教程）](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)。 若要了解有关在报表设计器中可以使用的查询设计器的详细信息，请参阅 [查询设计工具 (SSRS)](../../reporting-services/report-data/query-design-tools-ssrs.md)的技能。  
   
@@ -140,13 +140,13 @@ ms.locfileid: "65875166"
   
  从 Microsoft 下载中心[下载报表生成器](https://go.microsoft.com/fwlink/?LinkID=219138) 。  
   
-### <a name="to-start-includessrbnoversionincludesssrbnoversionmd"></a>启动 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
+### <a name="to-start-ssrbnoversion"></a>启动 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
   
-1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web 门户中，在“新建”   菜单上选择“分页报表”  。  
+1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web 门户中，在“新建”   菜单上选择“分页报表” 。  
   
      ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png "PBI_SSMRP_NewMenu")  
   
-2.  如果未在此计算机上安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]，请选择“获取 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]”  。  
+2.  如果未在此计算机上安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]，请选择“获取 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]”。  
   
      或  
   
@@ -159,13 +159,13 @@ ms.locfileid: "65875166"
   
  从 Microsoft 下载中心[下载 SQL Server 移动报表发布服务器](https://go.microsoft.com/fwlink/?LinkID=733527) 。  
   
-### <a name="to-start-includessmobilereptpubshortincludesss-mobilereptpub-shortmd"></a>启动 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]  
+### <a name="to-start-ss_mobilereptpub_short"></a>启动 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]  
   
-1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web 门户中，在“新建”   菜单上选择“移动报表”  。  
+1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web 门户中，在“新建”   菜单上选择“移动报表” 。  
   
      ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png "PBI_SSMRP_NewMenu")  
   
-2.  如果未在此计算机上安装 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]，请选择“获取 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]”  。  
+2.  如果未在此计算机上安装 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]，请选择“获取 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]”。  
   
      或  
   

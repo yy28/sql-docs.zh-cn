@@ -1,10 +1,9 @@
 ---
-title: 表属性 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 表的属性
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +12,14 @@ f1_keywords:
 ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0d40b20c75b6ce9c86767ee655e6e7992ed32cff
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: b53bed28d05d490b9b6d603260917f7ffbb4d047
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68261567"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242184"
 ---
 # <a name="table-properties-visual-database-tools"></a>表属性 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "68261567"
 > 本主题中的属性按类别排序，而不是按字母顺序排序。  
   
 **标识类别**  
-展开此项可显示“名称”、“说明”和“架构”的属性。  
+展开此项可显示“名称”  、“说明”  和“架构”  的属性。  
   
 **名称**  
 显示表的名称。 若要编辑名称，请在文本框中键入相应的内容。  
@@ -41,11 +42,11 @@ ms.locfileid: "68261567"
 > [!CAUTION]  
 > 如果现有查询、视图、用户定义函数、存储过程或程序引用该表，则对名称的修改将使这些对象无效。  
   
-**数据库名称**  
+**Database Name**  
 显示所选表的数据源的名称。  
   
-**Description**  
-显示所选表的说明。 若要查看或编辑完整的说明，请单击相应的说明，再单击属性右侧的省略号 (…)。  
+**说明**  
+显示所选表的说明。 若要查看或编辑完整的说明，请单击相应的说明，再单击属性右侧的省略号 (…)  。  
   
 **架构**  
 显示此表所属的架构的名称。 （仅适用于 Microsoft SQL Server。）  
@@ -54,7 +55,7 @@ ms.locfileid: "68261567"
 显示用于数据源的服务器的名称。  
   
 **表设计器类别**  
-展开此项可显示“标识列”、“可编制索引”和“是复制的”的属性。  
+展开此项可显示“标识列”  、“可编制索引”  和“是复制的”  的属性。  
   
 **标识列**  
 显示用作表的标识列的列。 若要更改标识列，请从下拉列表中进行选择。 该列表中只显示数值数据类型的列。  
@@ -66,7 +67,7 @@ ms.locfileid: "68261567"
 显示是否在另一个位置复制了该表。  
   
 **常规数据空间规范类别**  
-展开此项可显示“（数据空间类型）”、“文件组或分区方案名称”和“分区列列表”的属性。  
+展开此项可显示“（数据空间类型）”  、“文件组或分区方案名称”  和“分区列列表”  的属性。  
   
 **(数据空间类型)**  
 显示是使用文件组还是使用分区方案存储此表。  
@@ -75,7 +76,7 @@ ms.locfileid: "68261567"
 显示文件组或分区方案的名称。  
   
 **分区列列表**  
-通过此项可访问“分区列列表”对话框。  
+通过此项可访问“分区列列表”  对话框。  
   
 **行 GUID 列**  
 显示由 Microsoft SQL Server 用作表的 ROWGUID 列的列。 若要更改 ROWGUID 列，请从下拉列表中进行选择。 （仅适用于 SQL Server 7.0 或更高版本。）  
@@ -84,5 +85,5 @@ ms.locfileid: "68261567"
 提供一个下拉列表，您可以从中为具有 text 或 image 数据类型的列选择文件组。 如果该表是使用分区方案存储的，则将此字段保留为空。  
   
 ## <a name="see-also"></a>另请参阅  
-[设计表 (Visual Database Tools)](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
+[设计表](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
   

@@ -1,6 +1,7 @@
 ---
-title: 更改故障转移群集实例的 IP 地址 | Microsoft Docs
-ms.custom: ''
+title: 更改故障转移群集实例的 IP 地址
+description: 了解如何使用故障转移群集管理器更改 SQL Server 故障转移群集实例的 IP 地址。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b685f400-cbfe-4c5d-a070-227a1123dae4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 93738cb12b13b5f7c6434acd7d7d86b5496d4fc3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f4960a10a44e3a84b42c0bf43872a38be05be292
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063792"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230143"
 ---
 # <a name="change-the-ip-address-of-a-failover-cluster-instance"></a>更改故障转移群集实例的 IP 地址
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

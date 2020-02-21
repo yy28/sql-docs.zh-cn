@@ -13,10 +13,10 @@ ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b2d5f511fe6008801b25f7c93300911851482025
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72305046"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services 中的电子邮件传递
@@ -32,7 +32,7 @@ ms.locfileid: "72305046"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式 | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式 | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式|  
   
 ## <a name="e-mail-delivery-options"></a>电子邮件传递选项  
  报表服务器电子邮件传递可以通过以下方式传递报表  
@@ -41,9 +41,9 @@ ms.locfileid: "72305046"
   
 -   在电子邮件的“主题:”行中发送通知。 默认情况下，订阅定义中的“主题:”行包含以下变量（这些变量将在处理订阅时替换为报表特定的信息）：  
   
-     \@ReportName 指定报表的名称。  
+     \@ReportName 指定报表的名称  。  
   
-     \@ExecutionTime 指定执行报表的时间。  
+     \@ExecutionTime 指定执行报表的时间  。  
   
      您可以将这些变量与静态文本组合在一起，也可以修改每个订阅的“主题:”行中的文本。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "72305046"
   
      [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不会检查附件或邮件的大小。 如果附件或邮件的大小超出邮件服务器允许的最大限制，则无法传递报表。 如果是大型报表，请选择其他传递选项（例如 URL 或通知）。  
   
- 在您创建订阅时，将设置确定报表传递方式的传递选项。 例如，如果选择在订阅中“包含链接”，电子邮件将包含一个指向该报表的超链接。  
+ 在您创建订阅时，将设置确定报表传递方式的传递选项。 例如，如果选择在订阅中“包含链接”，电子邮件将包含一个指向该报表的超链接  。  
   
 ## <a name="native-mode-role-based-e-mail-settings"></a>本机模式的基于角色的电子邮件设置  
  在本机模式的报表服务器环境中，所使用的电子邮件传递设置因角色是包含“管理单独的订阅”任务还是“管理所有订阅”任务而异。  
@@ -81,7 +81,7 @@ ms.locfileid: "72305046"
  对于本机模式的报表服务器，电子邮件传递扩展插件通过本机模式的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器和编辑 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置文件进行配置。 对于 SharePoint 模式的报表服务器，电子邮件传递扩展插件是在 SharePoint 管理页和 PowerShell 脚本中进行配置的。  
   
  
- 有关如何配置本机模式报表服务器的信息，请参阅 [电子邮件设置 — Reporting Services 本机模式（配置管理器）](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)
+ 有关如何配置本机模式报表服务器的信息，请参阅[电子邮件设置 - Reporting Services 本机模式（配置管理器）](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)
  
  
  有关如何配置 SharePoint 模式报表服务器的信息，请参阅以下内容：  
@@ -90,7 +90,7 @@ ms.locfileid: "72305046"
 ## <a name="see-also"></a>另请参阅  
  [任务和权限](../../reporting-services/security/tasks-and-permissions.md)   
  [订阅和传递 (Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [数据驱动订阅](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [角色分配](../../reporting-services/security/role-assignments.md)  
   
   

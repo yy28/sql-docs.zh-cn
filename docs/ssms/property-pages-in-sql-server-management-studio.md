@@ -1,6 +1,6 @@
 ---
-title: SQL Server Management Studio 中的属性页 | Microsoft Docs
-ms.custom: ''
+title: SQL Server Management Studio 中的属性页
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 719282c3-e9cc-4e0e-9a83-7fb8b8b17f67
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8b42208648f5e310b484105a88335e13046387ea
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 039ad2ec8ea2e0d05eae0ec2d627c07117580bf8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68261995"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258920"
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>SQL Server Management Studio 中的属性页
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,11 +25,11 @@ ms.locfileid: "68261995"
   
 下表对 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 属性页对话框的常用元素进行了说明。  
   
-|元素|描述|  
+|元素|说明|  
 |-----------|---------------|  
 |**按分类顺序**|按类别列出所选对象的所有属性和属性值。 在类别视图中，可以将类别折叠起来以减少可见属性的数量。 折叠或展开类别时，类别名称的左侧将显示一个加号 (+) 或减号 (-)。 类别按字母顺序列出。|  
 |**字母顺序**|按字母顺序列出所选对象的所有属性和属性值。|  
 |属性名称|网格中的第一列列出属性名称。|  
 |属性|网格中的第二列列出属性值。|  
-|说明窗格|说明窗格显示在属性页的底部，可以显示属性的类型和简短说明。 可以使用快捷菜单上的“说明”  命令打开或关闭属性的说明。|  
+|说明窗格|说明窗格显示在属性页的底部，可以显示属性的类型和简短说明。 可以使用快捷菜单上的“说明”命令打开或关闭属性的说明。|  
   

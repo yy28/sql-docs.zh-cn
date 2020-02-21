@@ -1,6 +1,6 @@
 ---
-title: SQL Server 属性（“服务”选项卡）| Microsoft Docs
-ms.custom: ''
+title: SQL Server 属性（“服务”选项卡）
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,16 +11,16 @@ ms.assetid: e4ae0c6b-6fd8-4325-b54e-1758fc659958
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6b26b262e6451c909175e8cb4bac5f33dbe49164
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: b87f54bcfc50249cef1810a728eaa796e7ee3b38
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023956"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306798"
 ---
 # <a name="sql-server-properties-service-tab"></a>SQL Server 属性（“服务”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  使用“MSSQLSERVER 属性”  对话框上的“服务”  选项卡查看或指定下列选项。  
+  使用“MSSQLSERVER 属性”对话框上的“服务”选项卡查看或指定下列选项。  
   
 ## <a name="options"></a>选项  
  **二进制路径**  
@@ -47,13 +47,13 @@ ms.locfileid: "68023956"
  **启动模式**  
  对此服务设置以下选项：  
   
--   手动：计算机启动时，此服务不自动启动。 您必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器或其他工具来启动该服务。  
+-   手动：当计算机启动时，此服务不会自动启动。 您必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器或其他工具来启动该服务。  
   
--   自动：计算机启动时，此服务将尝试启动。  
+-   自动：此服务尝试在计算机启动时启动。  
   
--   已禁用：此服务无法启动。  
+-   禁用：此服务无法启动。  
   
  **State**  
- 指示此服务是正在运行、已停止还是已禁用。 “...  ”指明状态更改是挂起的。  
+ 指示此服务是正在运行、已停止还是已禁用。 “...”指明状态更改是挂起的。  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 通过 JDBC 驱动程序管理结果集 |Microsoft Docs
+title: 通过 JDBC 驱动程序管理结果集 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 9ed5ad41-22e0-4e4a-8a79-10512db60d50
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 273a03e088036057f6d7b31c98074391138de07e
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027914"
 ---
 # <a name="managing-result-sets-with-the-jdbc-driver"></a>通过 JDBC 驱动程序管理结果集
@@ -32,7 +32,7 @@ ms.locfileid: "69027914"
   
 ## <a name="in-this-section"></a>在本节中  
   
-|主题|描述|  
+|主题|说明|  
 |-----------|-----------------|  
 |[了解游标类型](../../connect/jdbc/understanding-cursor-types.md)|说明 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支持的不同游标类型。|  
 |[了解并发控制](../../connect/jdbc/understanding-concurrency-control.md)|说明 JDBC 驱动程序如何支持并发控制。|  

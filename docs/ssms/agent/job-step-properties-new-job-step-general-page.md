@@ -1,10 +1,7 @@
 ---
-title: 作业步骤属性 - 新建作业步骤（“常规”页）| Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: 新建作业步骤属性（“常规”页）
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,15 +9,20 @@ f1_keywords:
 ms.assetid: 8d1885ba-4386-4528-8f2b-68c16852720c
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 173f317ba66a9b05bfa6d99bf28f60ecf518ae19
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 7c8c707e8a1916041b32a2509e54d6150ea8df9a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267567"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242222"
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>作业步骤属性 - 新建作业步骤（“常规”页）
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -34,16 +36,16 @@ ms.locfileid: "68267567"
 **步骤名称**  
 设置作业步骤的名称。  
   
-**类型**  
+类型   
 设置作业步骤使用的子系统。 显示的用于定义作业步骤的选项会根据所选子系统的不同而变化。  
   
 **运行身份**  
 为作业步骤设置代理帐户。 sysadmin 固定服务器角色的成员还可以指定“SQL 代理服务帐户”  。  
   
-**“数据库”**  
+**Database**  
 设置在其中运行作业步骤的数据库。 此选项并不适用于所有作业步骤类型。  
   
-**Command**  
+**命令**  
 设置作业步骤运行的命令。  
   
 ## <a name="options-for-transact-sql-job-steps"></a>Transact-SQL 作业步骤的选项  
@@ -53,7 +55,7 @@ ms.locfileid: "68267567"
 **全选**  
 选择命令文本。  
   
-**复制**  
+**Copy**  
 将所选文本复制到剪贴板。  
   
 **粘贴**  
@@ -82,7 +84,7 @@ ms.locfileid: "68267567"
 **全选**  
 选择命令文本。  
   
-**复制**  
+**Copy**  
 复制选定的文本。  
   
 **粘贴**  
@@ -98,7 +100,7 @@ ms.locfileid: "68267567"
 **全选**  
 选择命令文本。  
   
-**复制**  
+**Copy**  
 复制选定的文本。  
   
 **粘贴**  
@@ -111,7 +113,7 @@ ms.locfileid: "68267567"
 **全选**  
 选择脚本文本。  
   
-**复制**  
+**Copy**  
 复制选定的文本。  
   
 **粘贴**  
@@ -121,7 +123,7 @@ ms.locfileid: "68267567"
 **全选**  
 选择命令文本。  
   
-**复制**  
+**Copy**  
 复制选定的文本。  
   
 **粘贴**  
@@ -131,20 +133,20 @@ ms.locfileid: "68267567"
 **全选**  
 选择命令文本。  
   
-**复制**  
+**Copy**  
 复制选定的文本。  
   
 **粘贴**  
 粘贴剪贴板的内容。  
   
 ## <a name="options-for-replication-queue-reader-job-steps"></a>复制队列读取器作业步骤的选项  
-**“数据库”**  
+**Database**  
 用于作业步骤的数据库。  
   
 **全选**  
 选择命令文本。  
   
-**复制**  
+**Copy**  
 复制选定的文本。  
   
 **粘贴**  
@@ -154,7 +156,7 @@ ms.locfileid: "68267567"
 **全选**  
 选择命令文本。  
   
-**复制**  
+**Copy**  
 复制选定的文本。  
   
 **粘贴**  
@@ -164,7 +166,7 @@ ms.locfileid: "68267567"
 **全选**  
 选择命令文本。  
   
-**复制**  
+**Copy**  
 复制选定的文本。  
   
 **粘贴**  
@@ -180,7 +182,7 @@ ms.locfileid: "68267567"
 **全选**  
 选择命令文本。  
   
-**复制**  
+**Copy**  
 复制选定的文本。  
   
 **粘贴**  
@@ -190,7 +192,7 @@ ms.locfileid: "68267567"
 **Server**  
 选择运行作业步骤的服务器。  
   
-**数据库**  
+**Database**  
 用于作业步骤的数据库。  
   
 **打开**  
@@ -199,7 +201,7 @@ ms.locfileid: "68267567"
 **全选**  
 选择命令文本。  
   
-**复制**  
+**Copy**  
 复制选定的文本。  
   
 **粘贴**  
@@ -231,7 +233,7 @@ ms.locfileid: "68267567"
 > [!IMPORTANT]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供身份验证是为了向后兼容。 为了增强安全性，请使用 Windows 身份验证（如果可能的话）。  
   
-**“包”**  
+**包**  
 键入包的位置。  
   
 > [!IMPORTANT]  
@@ -243,7 +245,7 @@ ms.locfileid: "68267567"
 **配置文件**  
 列出包的配置文件。  
   
-**“添加”**  
+**添加**  
 添加包的配置文件。  
   
 **删除**  
@@ -252,7 +254,7 @@ ms.locfileid: "68267567"
 **上移**  
 将所选的配置文件上移。  
   
-**下移**  
+**“下移”**  
 将所选的配置文件下移。  
   
 ### <a name="command-files-tab"></a>“命令文件”选项卡  
@@ -261,7 +263,7 @@ ms.locfileid: "68267567"
 **命令文件**  
 列出包的命令文件。  
   
-**“添加”**  
+**添加**  
 添加命令文件。  
   
 **删除**  
@@ -279,7 +281,7 @@ ms.locfileid: "68267567"
 **连接管理器**  
 查看数据源的名称。  
   
-**Description**  
+**说明**  
 查看数据源的说明。  
   
 **连接字符串**  
@@ -330,7 +332,7 @@ ms.locfileid: "68267567"
 **属性路径**  
 查看或更改属性的路径。  
   
-**ReplTest1**  
+**值**  
 查看或更改属性的值。  
   
 **删除**  

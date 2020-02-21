@@ -1,10 +1,9 @@
 ---
-title: 在查询和视图设计器中导航 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 在查询和视图设计器中导航
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +14,14 @@ helpviewer_keywords:
 ms.assetid: 1c65acef-6dfa-463a-bf37-5a5335fe3865
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f9581eca3d6abbefcd897ccc4ce627ca180649b3
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 5e78aa041929e5b804547db0ef773d40aea7d7c8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262304"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75224591"
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>在查询和视图设计器中导航 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "68262304"
   
 ## <a name="any-pane"></a>任意窗格  
   
-|**若要**|**请按**|**单击“网络和共享中心”**|  
+|**收件人**|**请按**|**单击“网络和共享中心”**|  
 |----------|-------------|-------------|  
 |在查询和视图设计器窗格中移动|F6、Shift+F6|目标窗格中的任意位置|  
   
@@ -37,13 +38,13 @@ ms.locfileid: "68262304"
   
 ## <a name="diagram-pane"></a>“关系图”窗格  
   
-|**若要**|**请按**|**单击“网络和共享中心”**|  
+|**收件人**|**请按**|**单击“网络和共享中心”**|  
 |----------|-------------|-------------|  
 |在表、其他表结构对象和联接线（如果可用）之间移动|Tab 或 Shift+Tab|要移动到的表、表结构对象或联接线|  
 |在表或表结构对象中的列之间移动|箭头键|要移动到的列|  
 |选择要输出的选定数据列|空格键或加号键|列名旁的复选框|  
 |从查询输出中移除选定的数据列|空格键或减号键|列名旁的复选框|  
-|从查询中移除选定的表、表结构对象或联接线|删除|右键单击，再选择“删除” |  
+|从查询中移除选定的表、表结构对象或联接线|DELETE|右键单击，再选择“删除”|  
   
 > [!NOTE]  
 > 如果选择了多个项，则按此键将影响所有选定的项。 按住 Ctrl 键并单击要选择的项，可以选择多个项。  
@@ -52,7 +53,7 @@ ms.locfileid: "68262304"
   
 ## <a name="criteria-pane"></a>“条件”窗格  
   
-|若要|请按|单击“网络和共享中心”|  
+|目标|请按|单击|  
 |------|---------|---------|  
 |在单元格之间移动|箭头键、Tab 或 Shift+Tab|目标单元格|  
 |移动到选定列中的最后一行|Ctrl+向下键||  
@@ -64,11 +65,11 @@ ms.locfileid: "68262304"
 |在编辑模式和单元格选择模式间切换|F2||  
 |将单元格中的选定文本复制到剪贴板（在编辑模式下）|Ctrl+C||  
 |剪切单元格中的选定文本并将其放到剪贴板上（在编辑模式下）|Ctrl+X||  
-|从剪贴板中粘贴文本（在编辑模式下）|Ctrl+V||  
+|从剪贴板中粘贴文本（在编辑模式下）|CTRL+V||  
 |在单元格中进行编辑时，在插入和替换模式间切换|Ins||  
 |切换输出列中的复选框|空格键|复选框|  
-|清除单元格中的选定内容|删除||  
-|清除选定网格列的所有值|删除||  
+|清除单元格中的选定内容|DELETE||  
+|清除选定网格列的所有值|DELETE||  
 |在现有行之间插入行|在选择网格行后按 Ins||  
 |添加“或...”列|在选择任意“或...”列后按 Ins||  
   
@@ -78,7 +79,7 @@ ms.locfileid: "68262304"
 有关详细信息，请参阅[“条件”窗格 (Visual Database Tools)](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)。  
   
 ## <a name="sql-pane"></a>SQL 窗格  
-在 SQL 窗格中工作时，可以使用标准 Windows 编辑键（例如 Ctrl + 箭头键）在字词之间移动游标，也可使用“编辑”  菜单上的“剪切”  、“复制”  和“粘贴”  命令。  
+在 SQL 窗格中工作时，可以使用标准 Windows 编辑键（例如 Ctrl + 箭头键）在字词之间移动游标，也可使用“编辑”菜单上的“剪切”、“复制”和“粘贴”命令。  
   
 > [!NOTE]  
 > 只能插入文本；没有替换模式。  
@@ -87,7 +88,7 @@ ms.locfileid: "68262304"
   
 ## <a name="results-pane"></a>“结果”窗格  
   
-|**若要**|**请按**|**单击“网络和共享中心”**|  
+|**收件人**|**请按**|**单击“网络和共享中心”**|  
 |----------|-------------|-------------|  
 |在单元格之间移动|箭头键、Tab 或 Shift+Tab|目标单元格|  
 |移动到当前行中的第一个或最后一个单元格|Home 或 End||  
@@ -98,14 +99,14 @@ ms.locfileid: "68262304"
 |选择到单元格中的最后一个字符|Shift+End||  
 |在编辑模式和单元格选择模式间切换|F2||  
 |在单元格中进行编辑时，在插入和替换模式间切换|Ins||  
-|从表中删除行|删除||  
+|从表中删除行|DELETE||  
 |撤消对当前单元格的更改|在更改的单元格中按 Esc||  
 |撤消对当前行的更改|在尚未更改的单元格中按 Esc||  
 |向单元格中输入空值|Ctrl+0||  
 |将选定列或选定行复制到剪贴板|Ctrl+C||  
 |将单元格中的选定文本复制到剪贴板（在编辑模式下）|Ctrl+C||  
 |将单元格中的选定文本剪切到剪贴板（在编辑模式下）|Ctrl+X||  
-|从剪贴板中粘贴文本（在编辑模式下）|Ctrl+V||  
+|从剪贴板中粘贴文本（在编辑模式下）|CTRL+V||  
   
 > [!NOTE]  
 > 如果选择了多个项，则按此键将影响所有选定的项。  

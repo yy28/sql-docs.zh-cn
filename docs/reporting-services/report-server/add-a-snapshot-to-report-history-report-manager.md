@@ -1,5 +1,5 @@
 ---
-title: 向报表历史记录添加快照-Reporting Services |Microsoft Docs
+title: 向报表历史记录添加快照 - Reporting Services | Microsoft Docs
 ms.prod: reporting-services
 ms.technology: reporting-services
 ms.topic: conceptual
@@ -9,10 +9,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/26/2019
 ms.openlocfilehash: 2ada64f14c3564bd1e6c9846f890fdd8b287cb6f
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68251931"
 ---
 # <a name="add-a-snapshot-to-report-history"></a>向报表历史记录添加快照
@@ -31,9 +31,9 @@ ms.locfileid: "68251931"
   
 3. 单击 **“新建快照”** 。 将在 **“运行时间”** 列中创建一个新快照。  
     > [!NOTE]
-    > 若要启用快照创建, 管理员必须将报表历史记录配置为 "**允许手动创建历史记录**"。 有关详细信息，请参阅 [限制报表历史记录（报表管理器）](../reports/limit-report-history-report-manager.md)。
+    > 管理员必须将报表历史记录配置为“允许手动创建历史记录”  ，才能启用快照创建。 有关详细信息，请参阅 [限制报表历史记录（报表管理器）](../reports/limit-report-history-report-manager.md)。
 
-4. 单击 **“应用”** 。
+4. 单击“应用”  。
   
 ## <a name="to-automatically-add-all-snapshots-to-report-history"></a>自动向报表历史记录中添加所有快照  
   
@@ -47,7 +47,7 @@ ms.locfileid: "68251931"
   
 5. 选中 **“在历史记录中存储所有报表执行快照”** 复选框。  
   
-6. 单击 **“应用”** 。  
+6. 单击“应用”  。  
   
 ## <a name="to-automatically-add-snapshots-to-report-history-based-on-a-schedule"></a>基于计划自动向报表历史记录中添加快照  
   
@@ -57,13 +57,13 @@ ms.locfileid: "68251931"
   
 3. 单击 **“快照选项”** 。  
   
-4. 选中 **“使用以下计划将快照添加到报表历史记录中”** 复选框。 执行下列操作之一：  
+4. 选中 **“使用以下计划将快照添加到报表历史记录中”** 复选框。 执行以下某种方案：  
   
     - 选择“报表特定计划”  。 填入计划详细信息，选择计划的开始日期和结束日期，再单击 **“确定”** 。  
 
     - 选择 **“共享计划”** 。 从列表中选择首选计划。  
 
-5. 单击 **“应用”** 。  
+5. 单击“应用”  。  
   
 ## <a name="see-also"></a>另请参阅
 
@@ -78,86 +78,86 @@ ms.locfileid: "68251931"
 
 ## <a name="to-manually-add-snapshots-to-report-history"></a>向报表历史记录中手动添加快照
   
-1. 在 web 门户中, 导航到要查看其历史记录的项目, 然后右键单击该项目。  
+1. 在 Web 门户中，转到要查看历史记录的项，并右键单击此项。  
   
 2. 在下拉菜单中，选择“管理”  。  
   
-3. 选择 "**历史记录快照**" 选项卡。  
+3. 选择“历史记录快照”  选项卡。  
   
-4. 在 "**历史记录快照**" 页上, 选择**新的历史记录快照**。 此时会创建新的快照, 并显示在 "已**创建**" 列中的当前日期和时间下面。  
+4. 在“历史记录快照”  页上，选择“新建历史记录快照”  。 此时，系统新建快照并在下面显示它（“创建时间”  列中包含当前日期和时间）。  
   
     > [!NOTE]
-    > 若要启用快照创建, 管理员必须将报表历史记录配置为 "**允许手动创建历史记录**"。 有关详细信息, 请参阅[限制报表历史记录 (web 门户)](../../reporting-services/reports/limit-report-history-report-manager.md)。
+    > 管理员必须将报表历史记录配置为“允许手动创建历史记录”  ，才能启用快照创建。 有关详细信息，请参阅[限制报表历史记录（Web 门户）](../../reporting-services/reports/limit-report-history-report-manager.md)。
 
-## <a name="to-add-snapshots-via-a-schedule-to-report-history"></a>通过计划将快照添加到报表历史记录
+## <a name="to-add-snapshots-via-a-schedule-to-report-history"></a>通过计划向报表历史记录添加快照的具体步骤
 
-1. 在 web 门户中, 导航到要查看其历史记录的项目, 然后右键单击该项目。  
+1. 在 Web 门户中，转到要查看历史记录的项，并右键单击此项。  
   
 2. 在下拉菜单中，选择“管理”  。  
   
-3. 选择 "**历史记录快照**" 选项卡。  
+3. 选择“历史记录快照”  选项卡。  
   
-4. 在 "**历史记录快照**" 页上, 选择 "**计划和设置**" 按钮。  
+4. 在“历史记录快照”  页上，选择“计划和设置”  按钮。  
   
-5. 如果还没有选择至少一个选项, 请在 "**计划**" 部分选择以下选项中的一个或两个:
+5. 在“计划”  部分中，选择下面的一个或两个选项（如果至少有一个选项尚未选择的话）：
     - **按计划创建历史记录快照**。  
     - **允许用户手动创建快照**。  
   
-6. 在 "**高级**" 部分中, 选择 "**保留所有历史记录快照**"。  
+6. 在“高级”  部分中，选中“保留所有历史记录快照”  。  
   
-7. 也可以选中 "**将缓存快照保存在报表历史记录中**" 复选框。  
+7. （可选）选中“同时将缓存快照保存在报表历史记录中”  复选框。  
   
 8.  选择“应用”以保存设置  。  
 
     > [!NOTE]  
-    > 若要启用快照创建, 管理员必须将报表历史记录配置为 "**允许手动创建历史记录**"。 有关详细信息, 请参阅[限制报表历史记录 (web 门户)](../../reporting-services/reports/limit-report-history-report-manager.md)。
+    > 管理员必须将报表历史记录配置为“允许手动创建历史记录”  ，才能启用快照创建。 有关详细信息，请参阅[限制报表历史记录（Web 门户）](../../reporting-services/reports/limit-report-history-report-manager.md)。
 
-9.  单击 **“应用”** 。
+9.  单击“应用”  。
 
 ## <a name="to-automatically-add-all-snapshots-to-report-history"></a>自动向报表历史记录中添加所有快照  
   
 1. 对于已配置为作为报表执行快照运行的报表，可以设置其他属性以在每次刷新该快照时将该快照的副本保存到报表历史记录。  
   
-2. 在 web 门户中, 导航到要查看其历史记录的项目, 然后右键单击该项目。  
+2. 在 Web 门户中，转到要查看历史记录的项，并右键单击此项。  
   
 3. 在下拉菜单中，选择“管理”  。  
   
-4. 选择 "**历史记录快照**" 选项卡。  
+4. 选择“历史记录快照”  选项卡。  
   
-5. 在 "**历史记录快照**" 页上, 选择 "**计划和设置**" 按钮。  
+5. 在“历史记录快照”  页上，选择“计划和设置”  按钮。  
   
-6. 如果还没有选择至少一个选项, 请在 "**计划**" 部分选择以下选项中的一个或两个:
+6. 在“计划”  部分中，选择下面的一个或两个选项（如果至少有一个选项尚未选择的话）：
     - **按计划创建历史记录快照**。  
     - **允许用户手动创建快照**。  
   
-7. 在 "**高级**" 部分中, 选择 "**保留所有历史记录快照**"。  
+7. 在“高级”  部分中，选中“保留所有历史记录快照”  。  
   
-8. 也可以选中 "**将缓存快照保存在报表历史记录中**" 复选框。  
+8. （可选）选中“同时将缓存快照保存在报表历史记录中”  复选框。  
   
 9. 选择“应用”以保存设置  。  
   
 ## <a name="to-automatically-add-snapshots-to-report-history-based-on-a-schedule"></a>基于计划自动向报表历史记录中添加快照  
   
-1. 在 web 门户中, 导航到要查看其历史记录的项目, 然后右键单击该项目。  
+1. 在 Web 门户中，转到要查看历史记录的项，并右键单击此项。  
   
 2. 在下拉菜单中，选择“管理”  。  
   
-3. 选择 "**历史记录快照**" 选项卡。  
+3. 选择“历史记录快照”  选项卡。  
   
-4. 在 "**历史记录快照**" 页上, 选择 "**计划和设置**" 按钮。  
+4. 在“历史记录快照”  页上，选择“计划和设置”  按钮。  
   
-5. 选中 **“使用以下计划将快照添加到报表历史记录中”** 复选框。 执行下列操作之一：  
+5. 选中 **“使用以下计划将快照添加到报表历史记录中”** 复选框。 执行以下某种方案：  
   
     - 选择“报表特定计划”  。 填入计划详细信息，选择计划的开始日期和结束日期，再单击 **“确定”** 。  
 
     - 选择 **“共享计划”** 。 从列表中选择首选计划。  
 
-5. 单击 **“应用”** 。  
+5. 单击“应用”  。  
   
 ## <a name="see-also"></a>另请参阅
 
 - [配置报表的执行属性（Web 门户）](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)
-- [限制报表历史记录 (web 门户)](../../reporting-services/reports/limit-report-history-report-manager.md)
+- [限制报表历史记录（Web 门户）](../../reporting-services/reports/limit-report-history-report-manager.md)
 - [计划](../../reporting-services/subscriptions/schedules.md)   
 - [Web 门户（SSRS 本机模式）](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)
 

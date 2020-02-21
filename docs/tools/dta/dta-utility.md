@@ -1,10 +1,7 @@
 ---
-title: dta 实用工具 | Microsoft Docs
-ms.custom: ''
-ms.date: 01/09/2017
+title: dta 实用工具
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,18 +17,24 @@ helpviewer_keywords:
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 23cd3f3b29db6d6c791b97b40401781fa3a3bbfc
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/09/2017
+ms.openlocfilehash: 7225e09e0cda9c371d1fc24934f9aeb9a803be9b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73981806"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258278"
 ---
 # <a name="dta-utility"></a>dta 实用工具
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **dta** 实用工具是数据库引擎优化顾问的命令提示符版。 通过 **dta** 实用工具，您可以在应用程序和脚本中使用数据库引擎优化顾问功能。  
-  
- 与数据库引擎优化顾问一样， **dta** 实用工具可以分析工作负荷，并可为该工作负荷推荐可改进服务器性能的物理设计结构。 工作负荷可以是计划缓存、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 跟踪文件或跟踪表，也可以是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。 物理设计结构包括索引、索引视图和分区。 分析了工作负荷后， **dta** 实用工具将生成数据库物理设计结构建议，并可生成实现该建议所需的脚本。 可以在命令提示符处，使用 **-if** 或 **-it** 参数指定工作负荷。 也可以在命令提示符处，使用 **-ix** 参数指定 XML 输入文件。 在这种情况下，在 XML 输入文件中指定工作负荷。  
+
+**dta** 实用工具是数据库引擎优化顾问的命令提示符版。 通过 **dta** 实用工具，您可以在应用程序和脚本中使用数据库引擎优化顾问功能。  
+
+与数据库引擎优化顾问一样， **dta** 实用工具可以分析工作负荷，并可为该工作负荷推荐可改进服务器性能的物理设计结构。 工作负荷可以是计划缓存、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 跟踪文件或跟踪表，也可以是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。 物理设计结构包括索引、索引视图和分区。 分析了工作负荷后， **dta** 实用工具将生成数据库物理设计结构建议，并可生成实现该建议所需的脚本。 可以在命令提示符处，使用 **-if** 或 **-it** 参数指定工作负荷。 也可以在命令提示符处，使用 **-ix** 参数指定 XML 输入文件。 在这种情况下，在 XML 输入文件中指定工作负荷。  
   
 ## <a name="syntax"></a>语法  
   
@@ -78,7 +81,7 @@ dta
   
 ## <a name="arguments"></a>参数  
  **-?**  
- 显示使用信息。  
+ 显示用法信息。  
   
  **-A** _time_for_tuning_in_minutes_  
  指定优化时间限制（分钟）。 **dta** 使用指定的时间优化工作负荷，并生成一个包含建议的物理设计更改的脚本。 默认情况下， **dta** 采用的优化时间为 8 小时。 指定 0 允许不限制优化时间。 **dta** 可能在限制时间之前完成整个工作负荷的优化。 但是，为确保整个工作负荷都得到优化，我们建议您指定不受限制的优化时间 (-A 0)。  
@@ -153,7 +156,7 @@ dta -d AdventureWorks2012 ...
 |---------------|-------------------|-------------|  
 |*database_name*|使用 -D  选项指定的 database_name ||  
 |*owner_name*|**dbo**|*owner_name* 必须为 **dbo**。 如果指定了其他值，则 **dta** 执行将失败并返回错误。|  
-|*table_name*|None||  
+|*table_name*|无||  
   
  如果使用文件，则指定 .xml 作为其扩展名。 例如，TuningLog.xml。  
   
@@ -166,7 +169,7 @@ dta -d AdventureWorks2012 ...
  **-fa** _physical_design_structures_to_add_  
  指定 **dta** 应在建议中包括的物理设计结构的类型。 下表列出并说明了可为此参数指定的值。 未指定任何值时，dta  将使用默认值 -fa IDX  。  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |IDX_IV|索引和索引视图。|  
 |IDX|仅限索引。|  
@@ -187,7 +190,7 @@ dta -d AdventureWorks2012 ...
  **-fk** _keep_existing_option_  
  指定 **dta** 在生成其建议时必须保留的现有物理设计结构。 下表列出并介绍了可以为此参数指定的值：  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |无|无现有结构|  
 |ALL|所有现有结构|  
@@ -198,7 +201,7 @@ dta -d AdventureWorks2012 ...
  **-fp** _partitioning_strategy_  
  指定 **dta** 建议的新物理设计结构（索引和索引视图）是否应进行分区以及如何进行分区。 下表列出并介绍了可以为此参数指定的值：  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |无|不分区|  
 |FULL|完全分区（选择该值可增强性能）|  
@@ -214,14 +217,13 @@ dta -d AdventureWorks2012 ...
   
  **-ip**  
  指定计划高速缓存可用作工作负荷。 分析显式选择的数据库的前 1000 个计划缓存事件。 可使用 -n  选项更改此值。  
- 
+
 **-iq**  
- 指定将查询存储用作工作负荷。 分析显式选择的数据库的查询存储中的 top 1000 事件。 可使用 -n  选项更改此值。  有关详细信息，请参阅[查询存储](../../relational-databases/performance/how-query-store-collects-data.md)和[使用查询存储中的工作负荷优化数据库](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)。
+ 指定查询存储可用作工作负载。 对于显式选择的数据库，将分析查询存储中的前 1,000 个事件。 可使用 -n  选项更改此值。  有关详细信息，请参阅[查询存储](../../relational-databases/performance/how-query-store-collects-data.md)和[使用查询存储中的工作负荷优化数据库](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)。
  ||  
 |-|  
 |**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本。|  
      
-  
  **-if** _workload_file_  
  指定用作优化输入的工作负荷文件的路径和文件名。 该文件必须采用下列格式之一：.trc（SQL Server Profiler 跟踪文件）、.sql（SQL 文件）或 .log（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 跟踪文件）。 必须指定一个工作负荷文件或一个工作负荷表。  
   
@@ -241,14 +243,20 @@ dta -d AdventureWorks2012 ...
   
  **-ix** _input_XML_file_name_  
  指定包含 **dta** 输入信息的 XML 文件的名称。 该文件必须是符合 DTASchema.xsd 的有效 XML 文档。 在命令提示符中指定的优化选项参数将覆盖与其冲突的此 XML 文件中的相应值。 唯一的例外情况是：在计算模式下，在 XML 输入文件中输入用户指定的配置。 例如，如果在 XML 输入文件的 **Configuration** 元素中输入了配置，并将 **EvaluateConfiguration** 元素指定为优化选项之一，则 XML 输入文件中指定的优化选项将覆盖命令提示符中输入的任何优化选项。  
-  
+
+ **-k** _maxtotalindexes_  
+ 建议中的索引数上限。  
+
+ **-k** _maxtotalindexes_  
+ 每表的索引数上限。
+
  **-m** _minimum_improvement_  
  指定推荐的配置必须满足的最小改进百分比。  
   
  **-N** _online_option_  
  指定是否联机创建物理设计结构。 下表列出并说明了可为此参数指定的值：  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |OFF|建议的物理设计结构都无法联机创建。|  
 |ON|所有建议的物理设计结构都可以联机创建。|  
@@ -266,18 +274,18 @@ dta -n number_of_events -A 0
  在此示例中，必须指定不受限制的优化时间 (`-A 0`)。 否则，数据库引擎优化顾问将采用默认的 8 小时优化时间。
  
  **-I** _time_window_in_hours_   
-   指定在使用 **-iq**选项（工作负荷来自查询存储）时，必须执行查询的时间窗口（以小时为单位），以供 DTA 用于优化。 
+   指定在使用 -iq  选项（查询存储中的工作负载）时，必须执行某个查询，以便 DTA 考虑优化它的时间窗口（以小时为单位）。 
 ```  
 dta -iq -I 48  
 ```  
-在这种情况下，DTA 将使用查询存储作为工作负荷源，仅考虑在过去48小时内执行的查询。  
+在此示例中，DTA 将查询存储用作工作负载源，只考虑在过去 48 小时内执行的查询。  
   ||  
 |-|  
 |**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本。|  
 
 
   
- **-or** _output_script_file_name_  
+ **-of** _output_script_file_name_  
  指定 **dta** 使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本将建议写入指定的文件名和目标。  
   
  可以将 **-F** 与此选项一起使用。 请确保文件名是唯一的，尤其在使用了 **-or** 和 **-ox**时更应注意。  
@@ -301,7 +309,7 @@ dta -iq -I 48
  **-rl** _analysis_report_list_  
  指定要生成的分析报告列表。 下表列出并说明了可为此参数指定的值：  
   
-|ReplTest1|报告|  
+|值|报表|  
 |-----------|------------|  
 |ALL|所有分析报告|  
 |STMT_COST|语句开销报告|  
@@ -361,7 +369,7 @@ dta -iq -I 48
  **-x**  
  启动优化会话，然后退出。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  按 Ctrl+C 一次可停止优化会话，并可根据 **dta** 此时已完成的分析生成建议。 系统将提示您确定是否要生成建议。 再次按 Ctrl+C 停止优化会话，而不生成建议。  
   
 ## <a name="examples"></a>示例  
@@ -390,33 +398,32 @@ dta -D orders -if orders_wkld.sql -of script.sql -A 15 -n 10
 ```  
   
  **D.优化文件中列出的特定表**  
-  
+
  该示例演示了 *table_list_file* （ **-Tf** 参数）的用法。 table_list.txt 文件的内容如下所示：  
-  
-```  
+
+```
 AdventureWorks2012.Sales.Customer  100000  
 AdventureWorks2012.Sales.Store  
 AdventureWorks2012.Production.Product  2000000  
-```  
+```
+
+table_list.txt 的内容指定：  
+
+- 应当仅优化数据库中的 **Customer**、 **Store**和 **Product** 表。  
   
- table_list.txt 的内容指定：  
+- **Customer** 和 **Product** 表中的行数分别假定为 100,000 和 2,000,000。  
   
--   应当仅优化数据库中的 **Customer**、 **Store**和 **Product** 表。  
-  
--   **Customer** 和 **Product** 表中的行数分别假定为 100,000 和 2,000,000。  
-  
--   **Store** 中的行数假定为表中的当前行数。  
-  
- 请注意， *table_list_file*中的行数计数和前面的表名间可以有一个或多个空格。  
-  
- 优化时间为 2 小时 (`-A 120`)，输出将写入 XML 文件 (`-ox XMLTune.xml`)。  
-  
-```  
+- **Store** 中的行数假定为表中的当前行数。  
+
+    请注意， *table_list_file*中的行数计数和前面的表名间可以有一个或多个空格。  
+    
+    优化时间为 2 小时 (`-A 120`)，输出将写入 XML 文件 (`-ox XMLTune.xml`)。  
+
+``` 
 dta -D pubs -if pubs_wkld.sql -ox XMLTune.xml -A 120 -Tf table_list.txt  
-```  
-  
-## <a name="see-also"></a>另请参阅  
- [命令提示实用工具参考（数据库引擎）](../../tools/command-prompt-utility-reference-database-engine.md)   
- [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)  
-  
-  
+``` 
+
+## <a name="see-also"></a>另请参阅
+
+- [命令提示实用工具参考（数据库引擎）](../../tools/command-prompt-utility-reference-database-engine.md)
+- [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)

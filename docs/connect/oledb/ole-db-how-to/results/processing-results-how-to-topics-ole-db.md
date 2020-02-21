@@ -1,5 +1,5 @@
 ---
-title: 处理结果操作指南主题 (OLE DB) |Microsoft Docs
+title: 处理结果操作指南主题 (OLE DB) | Microsoft Docs
 description: 处理结果操作指南主题 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 3cda281e8ce5bc276ff8baab6887754ba56e43a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015550"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>处理结果操作指南主题 (OLE DB)

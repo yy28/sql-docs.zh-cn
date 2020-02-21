@@ -1,6 +1,6 @@
 ---
 title: 使用 RevoScaleR 创建 R 模型
-description: 有关如何在 SQL Server 上使用 R 语言构建模型的教程演练。
+description: RevoScaleR 教程 7：如何在 SQL Server 上使用 R 语言生成模型。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9a23691e8ed4b5ec5290ae666455f789954fa95d
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 11feb62609cba61a695dd60085461410a38ed0f7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727269"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947231"
 ---
 # <a name="create-r-models-sql-server-and-revoscaler-tutorial"></a>创建 R 模型（SQL Server 和 RevoScaleR 教程）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本课程属于 [RevoScaleR 教程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)，该教程介绍如何在 SQL Server 中使用 [RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)。
+这是介绍如何在 SQL Server 中使用 [RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)的 [RevoScaleR 教程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的第 7 个教程。
 
-你已经丰富了定型数据。 现在可以使用回归建模来分析这些数据了。 线性模型是预测分析领域中的一种重要工具。 RevoScaleR 包包含可以对工作负荷进行细分以及并行运行的回归算法  。
+你已经丰富了定型数据。 在本教程中，将使用回归建模来分析数据。 线性模型是预测分析领域中的一种重要工具。 RevoScaleR 包包含可以对工作负荷进行细分以及并行运行的回归算法  。
 
 > [!div class="checklist"]
 > * 创建线性回归模型
@@ -75,7 +75,7 @@ Condition number: 1.0184
 
 ## <a name="create-a-logistic-regression-model"></a>创建逻辑回归模型
 
-接着，创建一个逻辑回归模型，它指示特定客户是否存在欺诈风险。 你将使用 RevoScaleR [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) 函数，它支持在远程计算上下文中调整逻辑回归模型  。
+接着，创建一个逻辑回归模型，它指示特定客户是否存在欺诈风险。 你将使用 RevoScaleR  [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) 函数，它支持在远程计算上下文中调整逻辑回归模型。
 
 将计算上下文保持为原样。 你还将继续使用相同的数据源。
 

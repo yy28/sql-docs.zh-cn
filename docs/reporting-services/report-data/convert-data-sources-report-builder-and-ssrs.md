@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0e099c7e-8c03-43eb-9ea3-76e52d9ebbe3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1bd47c468354cead8a3fd9c2ad5b391988a919b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: ad8b75d75b5f9c4bc5b606c4e103c318e23398ed
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65573189"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190858"
 ---
 # <a name="convert-data-sources-report-builder-and-ssrs"></a>转换数据源（报表生成器和 SSRS）
   “报表数据”窗格中的每个数据源都是嵌入且特定于报表的，或者是共享的。 在报表生成器中，共享数据源将指向报表服务器或 SharePoint 站点上的已发布共享数据源。 在报表设计器中，共享数据源将指向解决方案资源管理器中 **“共享数据源”** 文件夹下的某一共享数据源。  
@@ -41,7 +41,7 @@ ms.locfileid: "65573189"
   
 ### <a name="to-convert-a-data-source-from-shared-to-embedded"></a>将共享数据源转换为嵌入数据源  
   
--   在“报表数据”窗格中，右键单击数据源，打开“数据源属性”对话框，然后单击“嵌入连接”   。 输入必需的信息。  
+-   在“报表数据”窗格中，右键单击数据源，打开“数据源属性”对话框，然后单击“嵌入连接”   。 输入所需的信息。  
   
      在“报表数据”窗格中，数据源图标将更改为共享数据源图标。  
   
@@ -49,18 +49,18 @@ ms.locfileid: "65573189"
   
 #### <a name="to-convert-a-data-source-from-embedded-to-shared"></a>将嵌入数据源转换为共享数据源  
   
--   在“报表数据”窗格中，右键单击数据源以便打开“数据源属性”对话框，然后单击“嵌入连接”   。 输入必需的信息。  
+-   在“报表数据”窗格中，右键单击数据源以便打开“数据源属性”对话框，然后单击“嵌入连接”   。 输入所需的信息。  
   
      在“报表数据”窗格中，数据源图标将更改为共享数据源图标。  
   
 #### <a name="to-convert-a-data-source-from-shared-to-embedded"></a>将共享数据源转换为嵌入数据源  
   
--   在“报表数据”窗格中，右键单击数据源，打开“数据源属性”对话框，然后单击“嵌入连接”   。 输入必需的信息。  
+-   在“报表数据”窗格中，右键单击数据源，打开“数据源属性”对话框，然后单击“嵌入连接”   。 输入所需的信息。  
   
      在“报表数据”窗格中，数据源图标将更改为共享数据源图标。  
   
 ## <a name="see-also"></a>另请参阅  
  [管理报表数据源](../../reporting-services/report-data/manage-report-data-sources.md)   
- [数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'ISSAsynchStatus:: GetStatus (OLE DB) |Microsoft Docs'
+title: ISSAsynchStatus::GetStatus (OLE DB) | Microsoft Docs
 description: ISSAsynchStatus::GetStatus (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 6f05b5c7c7b03fa1b68f3da5c6fbed29ed98a3c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994373"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
@@ -44,10 +44,10 @@ HRESULT GetStatus(
   
 ## <a name="arguments"></a>参数  
  hChapter[in]   
- 章节句柄。 如果轮询的对象不是行集对象或操作不适用于某一章节, 则应将其设置为 DB_NULL_HCHAPTER, 该提供程序将忽略该对象。  
+ 章节句柄。 如果轮询的对象不是行集对象或操作不适用于某一章节，则应将其设置为 DB_NULL_HCHAPTER，访问接口将忽略此参数。  
   
  eOperation[in]   
- 请求其异步状态的操作。 应使用以下值:  
+ 请求其异步状态的操作。 应使用以下值：  
   
  DBASYNCHOP_OPEN - 使用者请求获取有关行集的异步打开或填充的信息，或有关数据源对象的异步初始化的信息。 如果访问接口是支持直接 URL 绑定且与 OLE DB 2.5 兼容的访问接口，使用者则请求有关异步初始化或填充数据源、行集、行或流对象的信息。  
   
@@ -97,7 +97,7 @@ HRESULT GetStatus(
  异步处理在数据源对象的初始化过程中取消。 数据源对象处于未初始化状态。  
   
  E_INVALIDARG  
- *HChapter*参数不正确。  
+ hChapter  参数不正确。  
   
  E_UNEXPECTED  
  已对数据源对象调用 ISSAsynchStatus::GetStatus 方法，但尚未对该数据源对象调用 IDBInitialize::Initialize   。  
@@ -109,7 +109,7 @@ HRESULT GetStatus(
  E_FAIL  
  发生了特定于访问接口的错误。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  ISSAsynchStatus::GetStatus 方法的行为与 IDBAsynchStatus::GetStatus 方法完全类似，不同之处在于如果中止对数据源对象的初始化，前者将返回 E_UNEXPECTED，而不是 DB_E_CANCELED（但是 [ISSAsynchStatus::WaitForAsynchCompletion](../../oledb/ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) 将返回 DB_E_CANCELED）   。 这是因为在中止后，数据源对象不会照常处于僵停状态，以便进一步尝试初始化操作。  
   
  如果异步初始化或填充行集，则必须支持此方法。  

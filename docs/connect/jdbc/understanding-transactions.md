@@ -1,5 +1,5 @@
 ---
-title: 了解事务 |Microsoft Docs
+title: 了解事务 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: d3e0414c-6809-4bb1-93b1-4960507faecc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2d5a6caa9c9bf1766b59aa813719d1461b6ef1aa
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027342"
 ---
 # <a name="understanding-transactions"></a>了解事务
@@ -23,7 +23,7 @@ ms.locfileid: "69027342"
 
 事务是组合到工作的逻辑单位的操作组。 它们用于控制和维护事务中的各项操作的一致性和完整性（尽管系统中可能发生错误）。
 
-对于 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，事务可以是本地的，也可以是分布式的。 事务还可以使用隔离级别。 有关 JDBC 驱动程序支持的隔离级别的详细信息, 请参阅[了解隔离级别](../../connect/jdbc/understanding-isolation-levels.md)。
+对于 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，事务可以是本地的，也可以是分布式的。 事务还可以使用隔离级别。 有关 JDBC 驱动程序支持的隔离级别的详细信息，请参阅[了解隔离级别](../../connect/jdbc/understanding-isolation-levels.md)。
 
 应用程序应使用 Transact-SQL 语句或 JDBC Driver 提供的方法来控制事务，但不可同时使用二者。 对同一事务既使用 Transact-SQL 语句又使用 JDBC API 方法可能会导致问题，例如无法在预期的时间提交事务，提交或回滚事务后又意外地开始了一个新的事务，或者出现“无法继续执行该事务”异常。
 
@@ -41,7 +41,7 @@ ms.locfileid: "69027342"
 
 JDBC 驱动程序与 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 分布式事务处理协调器 (MS DTC) 无缝集成，为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供真正的分布式事务处理支持。 MS DTC 是 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 为 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 系统提供的分布式事务处理工具。 MS DTC 使用 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 推出的久经考验的事务处理技术来支持 XA 功能，例如完整的两步分布式提交协议和分布式事务的恢复。
 
-有关如何使用分布式事务的详细信息, 请参阅[了解 XA 事务](../../connect/jdbc/understanding-xa-transactions.md)。
+有关如何使用分布式事务的详细信息，请参阅[了解 XA 事务](../../connect/jdbc/understanding-xa-transactions.md)。
 
 ## <a name="see-also"></a>另请参阅
 

@@ -8,10 +8,10 @@ ms.topic: conceptual
 ms.assetid: 157bc376-ab72-4c99-8bde-7b12db70843a
 ms.date: 05/08/2019
 ms.openlocfilehash: f5d2aad7b0a306dd4bd2c8e64b7a49581c8fb5d2
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68264966"
 ---
 # <a name="backup-and-restore-operations-for-reporting-services"></a>Reporting Services 的备份和还原操作
@@ -39,13 +39,13 @@ ms.locfileid: "68264966"
     ::: moniker-end
   
 ## <a name="backing-up-the-report-server-databases"></a>备份和还原报表服务器数据库  
- 由于报表服务器是无状态服务器，因此所有应用程序数据都存储于在 **实例上运行的** reportserver **和** reportservertempdb [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 数据库中。 可以使用支持的备份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的方法之一来备份 reportserver 和 reportservertempdb 数据库   。 下面是一些特定于报表服务器数据库的建议：  
+ 由于报表服务器是无状态服务器，因此所有应用程序数据都存储于在 **实例上运行的** reportserver **和** reportservertempdb [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 数据库中。 可以使用支持的备份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的方法之一来备份 reportserver 和 reportservertempdb 数据库。 下面是一些特定于报表服务器数据库的建议：  
   
--   使用完整恢复模式备份 reportserver  数据库。  
+-   使用完整恢复模式备份 reportserver 数据库。  
   
--   使用简单恢复模式备份 reportservertempdb  数据库。  
+-   使用简单恢复模式备份 reportservertempdb 数据库。  
   
--   可以对每个数据库使用不同的备份计划。 备份 reportservertempdb  只是为了在发生硬件故障时避免重新创建该数据库。 在发生硬件故障时，不必恢复 **reportservertempdb**中的数据，但需要使用表结构。 如果 **reportservertempdb**丢失，重新获得它的唯一方法是重新创建报表服务器数据库。 如果重新创建 **reportservertempdb**，应使其名称与主报表服务器数据库的名称相同，这一点非常重要。  
+-   可以对每个数据库使用不同的备份计划。 备份 reportservertempdb 只是为了在发生硬件故障时避免重新创建该数据库。 在发生硬件故障时，不必恢复 **reportservertempdb**中的数据，但需要使用表结构。 如果 **reportservertempdb**丢失，重新获得它的唯一方法是重新创建报表服务器数据库。 如果重新创建 **reportservertempdb**，应使其名称与主报表服务器数据库的名称相同，这一点非常重要。  
   
  有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库的备份和恢复的详细信息，请参阅 [SQL Server 数据库的备份和还原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)。  
 

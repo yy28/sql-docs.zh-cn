@@ -14,10 +14,10 @@ ms.assetid: cd8d6382-abe6-48ee-9d10-4e6c52c0cb9a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3f77439f2369d7fbf4e27603bcbf8c8a2f8d8399
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993486"
 ---
 # <a name="how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驱动程序以流的形式检索二进制数据
@@ -87,7 +87,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-在示例中指定返回类型演示了如何以二进制流的形式指定 PHP 返回类型。 从技术上说，这在示例中不需要，因为 LargePhoto 字段具有 SQL Server 类型 varbinary(max)，因此默认返回为二进制流  。 有关默认 PHP 数据类型的信息，请参阅 [Default PHP Data Types](../../connect/php/default-php-data-types.md)。 有关如何指定 PHP 返回类型的信息，请参阅 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)。  
+在示例中指定返回类型演示了如何以二进制流的形式指定 PHP 返回类型。 从技术上说，这在示例中不需要，因为 LargePhoto 字段具有 SQL Server 类型 varbinary(max)，因此默认返回为二进制流  。 有关默认 PHP 数据类型的信息，请参阅 [Default PHP Data Types](../../connect/php/default-php-data-types.md)。 若要了解如何指定 PHP 返回类型，请参阅[操作说明：指定 PHP 数据类型](../../connect/php/how-to-specify-php-data-types.md)。  
   
 ## <a name="see-also"></a>另请参阅  
 [检索数据](../../connect/php/retrieving-data.md)

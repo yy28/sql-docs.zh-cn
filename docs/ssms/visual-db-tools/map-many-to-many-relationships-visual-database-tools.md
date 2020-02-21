@@ -1,10 +1,9 @@
 ---
-title: 映射多对多关系 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 映射多对多关系
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,14 @@ helpviewer_keywords:
 ms.assetid: 2977cf92-98b5-48b2-b0fd-8fbc7040f2b4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 95bf9ae712e0732e2cc586a7d3a992487f247add
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 63134fcbb7204bd701af073eee1bcaab22e68b05
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265286"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75224606"
 ---
 # <a name="map-many-to-many-relationships-visual-database-tools"></a>映射多对多关系 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,15 +34,15 @@ ms.locfileid: "68265286"
   
 1.  在数据库关系图中，添加要在它们之间创建多对多关系的表。  
   
-2.  右键单击关系图，然后从快捷菜单中选择“新建表”  创建第三个表。 该表将成为联接表。  
+2.  右键单击关系图，然后从快捷菜单中选择“新建表”创建第三个表。 该表将成为联接表。  
   
-3.  在“选择名称”  对话框中，更改系统分配的表名。 例如，`titles` 表和 `authors` 表之间的联接表现在命名为 `titleauthors`。  
+3.  在“选择名称”对话框中，更改系统分配的表名。 例如，`titles` 表和 `authors` 表之间的联接表现在命名为 `titleauthors`。  
   
 4.  将其他两个表中的主键列复制到联接表中。 与任何其他表一样，您可以向此表中添加其他列。  
   
-5.  在联接表中，将主键设置为包含其他两个表中的所有主键列。 有关详细信息，请参阅[如何创建主键 (Visual Database Tools)](https://msdn.microsoft.com/85c623ca-4656-4d70-a9db-ee4d897cd214)。  
+5.  在联接表中，将主键设置为包含其他两个表中的所有主键列。 有关详细信息，请参阅 [如何：创建主键 (https://msdn.microsoft.com/85c623ca-4656-4d70-a9db-ee4d897cd214).  
   
-6.  分别定义每个主表与联接表之间的一对多关系。 联接表应位于您所创建的这两个关系的“多”方。 有关详细信息，请参阅[如何在表之间创建关系 (Visual Database Tools)](https://msdn.microsoft.com/867a54b8-5be4-46e6-9702-49ae6dabf67c)。  
+6.  分别定义每个主表与联接表之间的一对多关系。 联接表应位于您所创建的这两个关系的“多”方。 有关详细信息，请参阅 [如何：在表之间创建关系 (https://msdn.microsoft.com/867a54b8-5be4-46e6-9702-49ae6dabf67c).  
   
     > [!NOTE]  
     > 在数据库关系图中创建联接表并不会将数据从相关表插入联接表中。 有关将数据插入表的信息，请参阅[创建插入结果查询 (Visual Database Tools)](../../ssms/visual-db-tools/create-insert-results-queries-visual-database-tools.md)。  

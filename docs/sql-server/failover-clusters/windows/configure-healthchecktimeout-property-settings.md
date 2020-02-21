@@ -1,6 +1,7 @@
 ---
-title: 配置 HealthCheckTimeout 属性设置 | Microsoft Docs
-ms.custom: ''
+title: 为可用性组配置 HealthCheckTimeout
+description: 为 AlwaysOn 可用性组配置 HealthCheckTimeout，用于指定 SQL Server 资源 DLL 在报告无响应之前应等待的时间。
+ms.custom: seo-lt-2019
 ms.date: 03/09/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cfcb5d25b207af35e9a26b95b86997c803828f3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3e03c9f0a62896daa192fa33e7b1e0a549b1b46f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002468"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74822004"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>配置 HealthCheckTimeout 属性设置
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,6 +90,6 @@ SET FAILOVER CLUSTER PROPERTY HealthCheckTimeout = 15000;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [故障转移群集实例的故障转移策略](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
+ [Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

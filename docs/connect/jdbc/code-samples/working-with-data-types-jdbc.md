@@ -1,5 +1,5 @@
 ---
-title: 使用数据类型 (JDBC) |Microsoft Docs
+title: 使用数据类型 (JDBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: b39f44d0-3710-4bc6-880c-35bd8c10a734
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ee1e64794480346b1742b441437db95b8ae41456
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028288"
 ---
 # <a name="working-with-data-types-jdbc"></a>处理数据类型 (JDBC)
@@ -32,11 +32,11 @@ ms.locfileid: "69028288"
   
 ## <a name="in-this-section"></a>在本节中  
   
-| 主题                                                                         | 描述                                                                                                                                                                                                                                                  |
+| 主题                                                                         | 说明                                                                                                                                                                                                                                                  |
 | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [基本数据类型示例](../../../connect/jdbc/code-samples/basic-data-types-sample.md)   | 说明如何使用结果集的 getter 方法来检索基本 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型值，以及如何使用结果集的 update 方法来更新这些值。                                             |
-| [SQLXML 数据类型示例](../../../connect/jdbc/code-samples/sqlxml-data-type-sample.md)   | 说明如何在关系数据库中存储 XML 数据，如何从数据库中检索 XML 数据，以及如何使用 SQLXML Java 数据类型分析 XML 数据  。                                                                                   |
-| [空间数据类型示例](../../../connect/jdbc/code-samples/spatial-data-types-sample.md) | 介绍如何在 SQL Server 中存储空间数据类型, 以及如何从 SQL Server 中检索这些类型。 还介绍如何使用驱动程序中新定义的类**几何图形**和**地理位置**管理这些数据类型的 Java 引用。 |
+| [SQLXML 数据类型示例](../../../connect/jdbc/code-samples/sqlxml-data-type-sample.md)   | 说明如何在关系数据库中存储 XML 数据，如何从数据库中检索 XML 数据，以及如何使用 SQLXML Java 数据类型分析 XML 数据。                                                                                   |
+| [空间数据类型示例](../../../connect/jdbc/code-samples/spatial-data-types-sample.md) | 介绍如何在 SQL Server 中存储空间数据类型，以及如何从 SQL Server 中检索这些类型。 此外，还介绍了如何从驱动程序使用新定义的类 Geometry 和 Geography 来管理这些数据类型的 Java 引用。 |
   
 ## <a name="see-also"></a>另请参阅
 

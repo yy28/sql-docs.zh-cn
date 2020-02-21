@@ -1,10 +1,7 @@
 ---
-title: 查看 SQL Server 代理错误日志 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: 查看 SQL Server 代理错误日志
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,15 +13,20 @@ helpviewer_keywords:
 ms.assetid: de920425-fa44-469f-b83d-49e3f97e97f4
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 08ddb38c46c565e45f4112718d5c7ca48d340aa4
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 9166b647ec2921efb460add27ae75a00ea6cb4eb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552106"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257556"
 ---
-# <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>View SQL Server Agent Error Log (SQL Server Management Studio)
+# <a name="view-sql-server-agent-error-log"></a>查看 SQL Server 代理错误日志
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -56,7 +58,7 @@ ms.locfileid: "69552106"
   
 ## <a name="SSMSProcedure"></a>使用 SQL Server Management Studio  
   
-#### <a name="to-view-the-includessnoversionincludesssnoversion-mdmd-agent-error-log"></a>查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理错误日志  
+#### <a name="to-view-the-ssnoversion-agent-error-log"></a>查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理错误日志  
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开包含要查看的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理错误日志的服务器。  
   
@@ -77,17 +79,17 @@ ms.locfileid: "69552106"
     **“刷新”**  
     刷新选定日志的视图。 在应用任何筛选器设置时， **“刷新”** 按钮重新从目标服务器中读取选定的日志。  
   
-    **筛选**  
+    **筛选器**  
     打开一个对话框，你可以使用该对话框指定用于筛选日志文件的设置，例如“连接”  、“日期”  或其他“常规”  筛选条件。  
   
     **搜索**  
     在日志文件中搜索特定文本。 不支持在搜索中使用通配符。  
   
-    **停止**  
+    **Stop**  
     停止加载日志文件条目。 例如，如果远程或脱机日志文件需要较长时间才能加载，并且您只想查看最新的条目，则可以使用此选项。  
   
     **日志文件摘要**  
-    此信息窗格显示日志文件筛选摘要。 如果未对文件进行筛选，您将看到以下文本： **“未应用任何筛选器”** 。 如果对日志应用了筛选器，将看到以下文本：**基于以下条件筛选日志项：** <filter criteria>  
+    此信息窗格显示日志文件筛选摘要。 如果未对文件进行筛选，您将看到以下文本： **“未应用任何筛选器”** 。 如果对日志应用了筛选器，将看到以下文本：基于以下条件筛选日志项：  <filter criteria>。  
   
     **所选行详细信息**  
     选择一行可以在页面底部显示有关所选事件行的其他详细信息。 在网格中，通过将列拖动到的新位置可以重新排列各列的顺序。 通过将网格标题中的列分隔条向左或向右拖动，可以调列的大小。 双击网格标题中的列分隔条，可以按内容宽度自动调整列的大小。  

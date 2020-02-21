@@ -1,10 +1,9 @@
 ---
-title: 停止作业 | Microsoft Docs
-ms.custom: ''
+title: Stop a Job
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,13 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4249328a-24d8-4284-9d1d-7d04ed90e3d7
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: baeca9415080f7b333e2edbe55f447d1017a9f2e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 26fbc4c13cca5a84c92130fd7541e7d3e63d3ae9
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265216"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257910"
 ---
 # <a name="stop-a-job"></a>Stop a Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "68265216"
 > [!IMPORTANT]  
 > [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-本主题说明如何停止 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业。 作业是 SQL Server 代理执行的一系列指定操作。  
+本主题介绍如何停止 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业。 作业是 SQL Server 代理执行的一系列指定操作。  
   
 -   **开始之前：**  ，  
   
@@ -61,9 +62,9 @@ ms.locfileid: "68265216"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  展开 **“SQL Server 代理”** ，再展开 **“作业”** ，右键单击要停止的作业，再单击 **“停止作业”** 。  
+2.  展开 **“SQL Server 代理”**，再展开 **“作业”**，右键单击要停止的作业，再单击 **“停止作业”**。  
   
-3.  若要停止多个作业，请右键单击 **“作业活动监视器”** ，然后单击 **“查看作业活动”** 。 在作业活动监视器中，选择要停止的作业，右键单击所选内容，然后单击 **“停止作业”** 。  
+3.  若要停止多个作业，请右键单击 **“作业活动监视器”**，然后单击 **“查看作业活动”**。 在作业活动监视器中，选择要停止的作业，右键单击所选内容，然后单击 **“停止作业”**。  
   
 ## <a name="TSQL"></a>使用 Transact-SQL  
   
@@ -71,9 +72,9 @@ ms.locfileid: "68265216"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”** 。  
+2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     -- stops a job named Weekly Sales Data Backup  

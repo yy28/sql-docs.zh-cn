@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 950fa902d2772d131f5ecd626653ad58c97c0fb1
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027896"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Microsoft JDBC Driver for SQL Server 支持矩阵
@@ -32,7 +32,7 @@ ms.locfileid: "69027896"
   
 |驱动程序名称|驱动程序包版本|适用的 JAR|主要支持结束日期|
 |-|-|-|-|  
-|Microsoft JDBC Driver 7.4 for SQL Server|7.4|mssql-jdbc-7.4.1. jre12<br> mssql-jdbc-7.4.1. jre11<br> mssql-jdbc-7.4.1. jre8|2024年8月2日|
+|Microsoft JDBC Driver 7.4 for SQL Server|7.4|mssql-jdbc-7.4.1.jre12.jar<br> mssql-jdbc-7.4.1.jre11.jar<br> mssql-jdbc-7.4.1.jre8.jar|2024 年 8 月 2 日|
 |Microsoft JDBC Driver 7.2 for SQL Server|7.2|mssql-jdbc-7.2.2.jre11.jar<br> mssql-jdbc-7.2.2.jre8.jar|2024 年 4 月 16 日|
 |Microsoft JDBC Driver 7.0 for SQL Server|7.0|mssql-jdbc-7.0.0.jre10.jar<br> mssql-jdbc-7.0.0.jre8.jar|2023 年 7 月 31 日|  
 |Microsoft JDBC Driver 6.4 for SQL Server|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|2023 年 2 月 27 日|    
@@ -55,24 +55,24 @@ ms.locfileid: "69027896"
   
 ## <a name="sql-version-compatibility"></a>SQL 版本兼容性  
   
-|驱动程序版本|SQL Server 2008|SQL Server 2008R2|SQL Server 2012|Azure SQL Database|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|SQL Server 2019|  
+|驱动程序版本|SQL Server 2008|SQL Server 2008R2|SQL Server 2012|Azure SQL 数据库|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|SQL Server 2019|  
 |-|-|-|-|-|-|-|-|-|-|-|
-|7.4|否|否|是|是|是|是|是|是|是|
-|7.2|否|是|是|是|是|是|是|是|否| 
-|7.0|否|是|是|是|是|是|是|是|否| 
-|6.4|否|是|是|是|是|是|是|是|否| 
-|6.2|是|是|是|是|是|是|是|是|否|
-|6.1|是|是|是|是|是|是|是|否|否|
-|6.0|是|是|是|是|是|是|是|否|否|
-|4.2|是|是|是|是|是|是|是|否|否|
-|4.1|是|是|是|是|是|是|是|否|否|
-|4.0|是|是|是|是|是|是|是|否|否|
-|3.0|是|是|是<sup>1</sup>|是<sup>2</sup>|否|是<sup>5</sup>|否|否|否|
-|2.0|是<sup>3</sup>|是<sup>3</sup>|否|否|否|否|否|否|否|
-|1.2|是<sup>3</sup>|否|否|否|否|否|否|否|否|
-|1.1|否|否|否|否|否|否|否|否|否|  
-|1.0|否|否|否|否|否|否|否|否|否|  
-|2000|否|否|否|否|否|否|否|否|否|  
+|7.4|N|N|Y|Y|Y|Y|Y|Y|Y|
+|7.2|N|Y|Y|Y|Y|Y|Y|Y|N| 
+|7.0|N|Y|Y|Y|Y|Y|Y|Y|N| 
+|6.4|N|Y|Y|Y|Y|Y|Y|Y|N| 
+|6.2|Y|Y|Y|Y|Y|Y|Y|Y|N|
+|6.1|Y|Y|Y|Y|Y|Y|Y|N|N|
+|6.0|Y|Y|Y|Y|Y|Y|Y|N|N|
+|4.2|Y|Y|Y|Y|Y|Y|Y|N|N|
+|4.1|Y|Y|Y|Y|Y|Y|Y|N|N|
+|4.0|Y|Y|Y|Y|Y|Y|Y|N|N|
+|3.0|Y|Y|是<sup>1</sup>|是<sup>2</sup>|N|是<sup>5</sup>|N|N|N|
+|2.0|是<sup>3</sup>|是<sup>3</sup>|N|N|N|N|N|N|N|
+|1.2|是<sup>3</sup>|N|N|N|N|N|N|N|N|
+|1.1|N|N|N|N|N|N|N|N|N|  
+|1.0|N|N|N|N|N|N|N|N|N|  
+|2000|N|N|N|N|N|N|N|N|N|  
   
  <sup>1</sup>Microsoft SQL Server JDBC 驱动程序 3.0 版可作为下级客户端连接到 SQL Server 2012。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "69027896"
 |1.0|1.4|3.0|  
 |2000|1.4|3.0|  
   
-## <a name="supported-operating-systems"></a>受支持的操作系统  
+## <a name="supported-operating-systems"></a>支持的操作系统  
  Microsoft JDBC 驱动程序可在任何支持使用 Java 虚拟机 (JVM) 的操作系统上工作。 一些常用的平台包括 Windows 10、Windows 8.1、Windows 8、Windows 7、Windows Server 2008 R2、Windows Vista、Linux、Unix、AIX、MacOS 等。  
   
  JDBC 产品团队在 Windows、Sun Solaris、SUSE Linux 和 RedHat Linux 上测试了驱动程序。  所有平台都提供客户支持，但我们可能会要求你在 Windows 等平台上重现问题。  

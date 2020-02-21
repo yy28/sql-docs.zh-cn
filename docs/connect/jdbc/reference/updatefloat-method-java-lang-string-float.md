@@ -1,5 +1,5 @@
 ---
-title: updateFloat 方法 (.java, float) |Microsoft Docs
+title: updateFloat 方法 (java.lang.String, float) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 19a6164f-f560-4304-8466-e55f0667a3d4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 74df5537849daddf09d9edbb10f1baa4d8808e41
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998943"
 ---
 # <a name="updatefloat-method-javalangstring-float"></a>updateFloat 方法 (java.lang.String, float)
@@ -35,19 +35,19 @@ public void updateFloat(java.lang.String columnName,
                         float x)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *columnName*  
   
  一个包含列名的字符串  。  
   
  *x*  
   
- **Float**值。  
+ float  值。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 updateFloat 方法是由 java.sql.ResultSet 接口中的 updateFloat 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  

@@ -16,10 +16,10 @@ ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8714aee2b5bb33c84a1d9f11b626d3e21e06ed1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570971"
 ---
 # <a name="configurationsetting-method---generatedatabaserightsscript"></a>ConfigurationSetting 方法 - GenerateDatabaseRightsScript
@@ -39,7 +39,7 @@ public void GenerateDatabaseRightsScript(string UserName, string DatabaseName, b
 out Int32 HRESULT);  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>parameters  
  *UserName*  
  通过此脚本授予权限时作为授予对象的用户的用户名或 Windows 安全标识符 (SID)。  
   
@@ -61,7 +61,7 @@ out Int32 HRESULT);
 ## <a name="return-value"></a>返回值  
  返回 *HRESULT* ，指示方法调用是成功还是失败。 值 0 指示方法调用已成功。 非零值指示已发生错误。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果 *DatabaseName* 为空，则忽略 *IsRemote* ，并且数据库名称使用报表服务器配置文件中的值。  
   
  如果将 IsWindowsUser 设置为 true，则 UserName 的格式应为 \<domain>\\<username\>    。  
@@ -72,7 +72,7 @@ out Int32 HRESULT);
   
  下表显示了转换后的帐户及其远程表示形式。  
   
-|被转换的帐户/SID|公用名称|远程名称|  
+|被转换的帐户/SID|公用名|远程名称|  
 |---------------------------------------|-----------------|-----------------|  
 |(S-1-5-18)|Local System|\<Domain>\\<ComputerName\>$|  
 |.\LocalSystem|Local System|\<Domain>\\<ComputerName\>$|  
@@ -87,7 +87,7 @@ out Int32 HRESULT);
   
  如果指定了 **LocalService** 内置帐户，且报表服务器数据库是远程数据库，将返回错误。  
   
- 如果 *IsWindowsUser* 为 true，且 *UserName* 中提供的值需要转换，则 WMI 提供程序会确定报表服务器数据库是位于同一计算机上还是远程计算机上。 为了确定该数据库是否安装在本地，WMI 提供程序会将 DatabaseServerName 属性与下面的值列表进行对比评估。 如果发现结果匹配，则数据库为本地数据库。 否则，为远程数据库。 比较时不区分大小写。  
+ 如果 *IsWindowsUser* 为 true，且 *UserName* 中提供的值需要转换，则 WMI 提供程序会确定报表服务器数据库是位于同一计算机上还是远程计算机上。 为了确定该数据库是否安装在本地，WMI 提供程序会将 DatabaseServerName 属性与下面的值列表进行对比评估。 如果发现结果匹配，则数据库为本地数据库。 否则，为远程数据库。 比较不区分大小写。  
   
 |DatabaseServerName 的值|示例|  
 |---------------------------------|-------------|  
@@ -110,7 +110,7 @@ out Int32 HRESULT);
  生成的脚本支持 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 和 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]。  
   
 ## <a name="requirements"></a>要求  
- **命名空间:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

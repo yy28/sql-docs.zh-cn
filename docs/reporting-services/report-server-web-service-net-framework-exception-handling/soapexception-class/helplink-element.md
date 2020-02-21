@@ -12,10 +12,10 @@ ms.assetid: a4489103-a874-44c2-8f75-95cb238928ed
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0ed62c34095adc2e9c039d1780f616530679b601
-ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68307579"
 ---
 # <a name="helplink-element"></a>HelpLink 元素
@@ -25,7 +25,7 @@ ms.locfileid: "68307579"
   
  下表列出 HelpLink  URL 的参数。  
   
-|参数|ReplTest1|  
+|参数|值|  
 |--------------|-----------|  
 |EvtSrc |“Microsoft.ReportingServices.Diagnostics.ErrorStrings.resources.Strings”|  
 |EvtID |报表服务器错误代码，例如，rsReservedItem。|  

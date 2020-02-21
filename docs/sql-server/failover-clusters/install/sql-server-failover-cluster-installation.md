@@ -1,7 +1,7 @@
 ---
-title: SQL Server 故障转移群集安装 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 安装故障转移群集实例
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cdc11ab9550b0faaf1fcdc9aa3ba5d7d3fe09eaf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c3de22853ccef8bd38c338b05043da7061ffeed0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063873"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230621"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>SQL Server 故障转移群集安装
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "68063873"
   
 1.  若要安装、配置和维护 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集，请使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序。  
   
-    -   确定创建故障转移群集实例（如群集磁盘资源、IP 地址和网络名称）和可用于故障转移的节点所需的信息。 详细信息：  
+    -   确定创建故障转移群集实例（如群集磁盘资源、IP 地址和网络名称）和可用于故障转移的节点所需的信息。 更多相关信息：  
   
         -   [安装故障转移群集前的准备工作](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68063873"
     - 多域群集上的 SQL FCI。   
     - 域和工作组群集上的 SQL FCI。 
 
-## <a name="includessnoversionincludesssnoversion-mdmd-failover-cluster-installation-options"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集安装选项  
+## <a name="ssnoversion-failover-cluster-installation-options"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集安装选项  
   
 ##### <a name="option-1-integrated-installation-with-add-node"></a>选项 1：带“添加节点”功能的集成安装  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 集成故障转移群集安装包括两个步骤：  
@@ -81,7 +81,7 @@ ms.locfileid: "68063873"
   
  **注意** 支持 IPV6 IP 地址。  如果您同时配置 IPV4 和 IPV6，将像对待不同的子网那样处理它们，IPV6 首先联机。  
   
-##### <a name="includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多子网故障转移群集  
+##### <a name="ssnoversion-multi-subnet-failover-cluster"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多子网故障转移群集  
  当群集上的节点位于不同子网时，您可以设置 OR 依赖关系。 但是， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多子网故障转移群集中的每个节点必须是至少一个指定的 IP 地址的可能所有者。  
   
 ## <a name="see-also"></a>另请参阅  

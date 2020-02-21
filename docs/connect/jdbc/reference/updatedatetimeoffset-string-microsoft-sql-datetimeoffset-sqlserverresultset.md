@@ -11,10 +11,10 @@ ms.assetid: 952947ce-7c6e-4364-b035-46cb7fe621b2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1543d6412df3370bd25d89a47dc60f915e286fd3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67999045"
 ---
 # <a name="updatedatetimeoffsetstring-microsoftsqldatetimeoffset-sqlserverresultset"></a>updateDateTimeOffset(string, microsoft.sql.DateTimeOffset) (SQLServerResultSet)
@@ -31,7 +31,7 @@ ms.locfileid: "67999045"
 public void updateDateTimeOffset(String columnName, microsoft.sql.DateTimeOffset x)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *columnName*  
   
  列的名称。  
@@ -40,11 +40,11 @@ public void updateDateTimeOffset(String columnName, microsoft.sql.DateTimeOffset
   
  [DateTimeOffset 类](../../../connect/jdbc/reference/datetimeoffset-class.md)对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 可以使用[SQLServerResultSet](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)检索[DateTimeOffset 类](../../../connect/jdbc/reference/datetimeoffset-class.md)的值。  
+## <a name="remarks"></a>备注  
+ 可以使用 [SQLServerResultSet.getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md) 检索 [DateTimeOffset 类](../../../connect/jdbc/reference/datetimeoffset-class.md)值。  
   
 ## <a name="see-also"></a>另请参阅  
  [updateDateTimeOffset (SQLServerResultSet)](../../../connect/jdbc/reference/updatedatetimeoffset-sqlserverresultset.md)   

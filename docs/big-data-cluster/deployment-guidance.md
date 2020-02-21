@@ -9,14 +9,14 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 818ffbb7a8957fbcec67e6686b12a731397b6501
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.openlocfilehash: 94e2fe49e52ed224a35183f9629bf8eeab112d17
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74127381"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831607"
 ---
-# <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>如何在 Kubernetes 上部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>如何在 Kubernetes 上部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -33,7 +33,7 @@ SQL Server 大数据群集在 Kubernetes 群集上部署为 docker 容器。 下
 - `azdata`
 - `kubectl`
 - Azure Data Studio
-- 适用于 Azure Data Studio 的 SQL Server 2019 扩展
+- Azure Data Studio 的[数据虚拟化扩展](../azure-data-studio/data-virtualization-extension.md)
 
 ## <a id="prereqs"></a> Kubernetes 必备条件
 
@@ -48,13 +48,13 @@ SQL Server 大数据群集在 Kubernetes 群集上部署为 docker 容器。 下
 
 可以选择通过以下三种方式中的任意一种部署 Kubernetes：
 
-| 部署 Kubernetes 的位置： | 描述 | 链接 |
+| 部署 Kubernetes 的位置： | 说明 | 链接 |
 |---|---|---|
 | **Azure Kubernetes 服务 (AKS)** | Azure 中的托管 Kubernetes 容器服务。 | [说明](deploy-on-aks.md) |
 | 一台或多台计算机 (`kubeadm`)  | 在使用 `kubeadm` 的物理计算机或虚拟机上部署的 Kubernetes 群集 | [说明](deploy-with-kubeadm.md) |
 
 > [!TIP]
-> 也可以一步编写 AKS 和大数据群集的部署脚本。 有关详细信息，请参阅如何在 [python 脚本](quickstart-big-data-cluster-deploy.md)或 Azure Data Studio [笔记本](deploy-notebooks.md)中执行此操作。
+> 还可以将 AKS 和大数据群集的部署脚本编写成一个步骤。 有关详细信息，请参阅 [python 脚本](quickstart-big-data-cluster-deploy.md)或 Azure Data Studio [笔记本](deploy-notebooks.md)，了解如何实现此操作。
 
 ### <a name="verify-kubernetes-configuration"></a>验证 Kubernetes 配置
 
@@ -169,10 +169,10 @@ azdata bdc create --accept-eula=yes
 
 以下环境变量用于未存储在部署配置文件中的安全设置。 请注意，可以在配置文件中设置除凭据之外的 Docker 设置。
 
-| 环境变量 | 要求 |描述 |
+| 环境变量 | 要求 |说明 |
 |---|---|---|
-| `AZDATA_USERNAME` | Required |SQL Server 大数据群集管理员的用户名。 具有相同名称的 sysadmin 登录名在 SQL Server 主实例中创建。 最佳安全做法是禁用 `sa` 帐户。 |
-| `AZDATA_PASSWORD` | Required |上面创建的用户帐户的密码。 `root` 用户使用相同的密码，用于保护 Knox 网关和 HDFS。 |
+| `AZDATA_USERNAME` | 必选 |SQL Server 大数据群集管理员的用户名。 具有相同名称的 sysadmin 登录名在 SQL Server 主实例中创建。 最佳安全做法是禁用 `sa` 帐户。 |
+| `AZDATA_PASSWORD` | 必选 |上面创建的用户帐户的密码。 `root` 用户使用相同的密码，用于保护 Knox 网关和 HDFS。 |
 | `ACCEPT_EULA`| 首次使用 `azdata` 时为必需项| 设置为“是”。 设置为环境变量时，它将 EULA 同时应用于 SQL Server 和 `azdata`。 如果未设置为环境变量，则可以在第一次使用 `azdata` 命令时将 `--accept-eula=yes` 包含在内。|
 | `DOCKER_USERNAME` | 可选 | 当容器映像存储在专用存储库中时，用于访问容器映像的用户名。 有关如何使用专用 Docker 存储库部署大数据群集的更多详细信息，请参阅[脱机部署](deploy-offline.md)主题。|
 | `DOCKER_PASSWORD` | 可选 |用于访问上述专用存储库的密码。 |
@@ -193,7 +193,8 @@ SET AZDATA_PASSWORD=<password>
 ```
 
 > [!NOTE]
-> 必须将 `root` 用户用于使用上述密码的 Knox 网关。 `root` 是在此基本身份验证（用户名/密码）设置中唯一受支持的用户。 对于 SQL Server 主实例，预配为与上述密码一起使用的用户名是 `sa`。
+> 必须将 `root` 用户用于使用上述密码的 Knox 网关。 `root` 是在此基本身份验证（用户名/密码）中唯一受支持的用户。
+> 若要通过基本身份验证连接到 SQL Server，请使用与 AZDATA_USERNAME 和 AZDATA_PASSWORD [环境变量](#env)相同的值。 
 
 
 设置环境变量后，必须运行 `azdata bdc create` 才能触发部署。 本示例使用上面创建的群集配置文件：
@@ -227,7 +228,7 @@ Cluster control plane is ready.
 ```
 
 > [!IMPORTANT]
-> 由于下载大数据群集组件的容器映像所需的时间，整个部署可能需要很长时间。 但是，这个过程应不会长达几个小时。 有关部署问题，请参阅[监视 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]并对其进行故障排除](cluster-troubleshooting-commands.md)。
+> 由于下载大数据群集组件的容器映像需要一定的时间，整个部署可能需要很长时间。 但是，这个过程应不会长达几个小时。 有关部署问题，请参阅[监视 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]并对其进行故障排除](cluster-troubleshooting-commands.md)。
 
 部署完成后，输出会通知你成功：
 

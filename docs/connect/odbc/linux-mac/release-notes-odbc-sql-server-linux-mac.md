@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/30/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: MightyPen
+ms.reviewer: v-jizho2
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-makouz
+author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: e7a3d7b7f67abae251041ff2b702d93b60228958
-ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
-ms.translationtype: MTE75
+ms.openlocfilehash: cf6cd4cce3435491632afa98195650a73fe4a23b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72173138"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76911187"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-to-sql-server-on-linux-and-macos"></a>Linux 和 macOS 上的 Microsoft ODBC Driver for SQL Server 的发行说明
 
@@ -35,6 +35,17 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+
+## <a name="175-january-2020"></a>17.5，2020 年 1 月
+
+| 新增功能 | 详细信息 |
+| :------------ | :------ |
+| SQL_COPT_SS_SPID 连接属性，用于在不往返服务器的情况下检索 SPID | 请参阅 [DSN 和连接字符串属性及关键字](../dsn-connection-string-attribute.md)。 |
+| 支持通过 Debian 和 Ubuntu 上的 `debconf` 指示 EULA 接受情况 | 请参阅[安装驱动程序](./installing-the-microsoft-odbc-driver-for-sql-server.md)。 |
+| 支持新分发。 | &bull; &nbsp; &nbsp; Alpine Linux（3.10、3.11）<br/>&bull; &nbsp; &nbsp; Oracle Linux 8<br/>&bull; &nbsp; &nbsp; Ubuntu 19.10<br/>&bull; &nsbp; &nbsp; macOS 10.15 |
+| bug 修复。 | 请参阅 [bug 修复](../bug-fixes.md)。 |
+| &nbsp; | &nbsp; |
+
 ## <a name="1742-october-2019"></a>2019 年 10 月 17.4.2 版
 
 | 新增功能 | 详细信息 |
@@ -46,7 +57,7 @@ GeneMi.  2019/04/03.
 
 **已知问题：**
 
-使用具有安全 enclaves 和 Azure Key Vault 的 Always Encrypted 时，奇数密钥路径长度可能导致 CMK 签名验证错误。 如果遇到此问题，请尝试通过重命名 AKV 键，将 keypath 的长度更改为一个字符。
+使用具有安全 Enclave 和 Azure Key Vault 的 Always Encrypted 时，奇数密钥路径长度可能导致 CMK 签名验证错误。 如果遇到此问题，请尝试通过重命名 AKV 键，将 keypath 的长度更改为一个字符。
 
 ## <a name="174-august-2019"></a>17.4，2019 年 8 月
 
@@ -116,17 +127,17 @@ GeneMi.  2019/04/03.
 > -   不支持 ALTER DATABASE [dbname1] MODIFY NAME = [dbname2]
 > -   无论语言设置如何，错误消息始终以英语显示（与 Azure 相同） 
 
-## <a name="131-for-includessnoversionincludesssnoversion-mdmd-on-linux-and-macos-may-2017"></a>Linux 和 macOS 上的 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，2017 年 5 月
+## <a name="131-for-ssnoversion-on-linux-and-macos-may-2017"></a>Linux 和 macOS 上的 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，2017 年 5 月
 
 ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 添加了对将 Always Encrypted 和 Azure Active Directory 与 Microsoft SQL Server 2016 一起使用的支持。
 
 **支持新分发**：在 macOS 上的 ODBC Driver 的第一个版本中支持 OS X 10.11 和 macOS 10.12。 现在还支持 Ubuntu 16.10、Red Hat 6、7 和 SUSE 12。 每个平台都有与平台相关的包（RPM 或 DEB），用于简化安装和配置。  有关安装说明，请参阅[安装 ODBC Driver](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)。
 
-**unixODBC 驱动程序管理器 2.3.1 支持更改**ODBC 驱动程序不再依赖于 unixODBC 驱动程序管理器的自定义打包（RedHat 6 除外），而是依赖于分发包管理器来解析分发程序库中的 UnixODBC 依赖项。
+**unixODBC 驱动程序管理器 2.3.1 支持更改**：ODBC 驱动程序不再依赖于 unixODBC 驱动程序管理器的自定义打包（RedHat 6 除外），而是依赖于分发包管理器来解析分发程序库中的 UnixODBC 依赖项。
 
-**BCP API 支持**Linux 和 macOS ODBC 驱动程序现支持使用 [BCP API 函数（bcp_init 等。）](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md) 
+**BCP API 支持**：Linux 和 macOS ODBC 驱动程序现支持使用 [BCP API 函数（bcp_init  等）](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)
 
-## <a name="130-for-includessnoversionincludesssnoversion-mdmd-on-linux"></a>Linux 上的 13.0 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
+## <a name="130-for-ssnoversion-on-linux"></a>Linux 上的 13.0 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
 
 借助 Microsoft ODBC Driver 13.0 for SQL Server，SQL Server 2014 和 SQL Server 2016 现在也受支持。  
 
@@ -140,12 +151,12 @@ Ubuntu 以及 Red Hat 和 SUSE 现在受支持。 每个平台都有与平台相
 
 **TLS 1.2 支持**：使用与 SQL Server 的安全通信时，Linux 上的 Microsoft ODBC Driver 13.0 for SQL Server 现支持 TLS 1.2。
 
-## <a name="11-for-includessnoversionincludesssnoversion-mdmd-on-linux"></a>Linux 上的 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
+## <a name="11-for-ssnoversion-on-linux"></a>Linux 上的 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
 
-SUSE Linux 上的 ODBC 驱动程序（预览版）支持 64 位 SUSE Linux Enterprise 11 Service Pack 2。 有关详细信息，请参阅 [System Requirements](../../../connect/odbc/linux-mac/system-requirements.md)。  
+SUSE Linux 上的 ODBC 驱动程序（预览版）支持 64 位 SUSE Linux Enterprise 11 Service Pack 2。 有关详细信息，请参阅[系统需求](../../../connect/odbc/linux-mac/system-requirements.md)。  
 
 Linux 上的 ODBC 驱动程序支持 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]。 有关详细信息，请参阅 [Linux 上的 ODBC Driver 对高可用性、灾难恢复的支持](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)。  
 
-Linux 上的 ODBC 驱动程序支持与 Microsoft Azure SQL 数据库的连接。 有关详细信息，请参阅[如何：使用 ODBC 连接到 Azure SQL 数据库](https://msdn.microsoft.com/library/hh974312.aspx)。  
+Linux 上的 ODBC 驱动程序支持与 Microsoft Azure SQL 数据库的连接。 有关详细信息，请参阅[操作说明：使用 ODBC 连接到 Azure SQL 数据库](https://msdn.microsoft.com/library/hh974312.aspx)。  
 
 `-l` 选项（登录超时）已添加到 `bcp` 中。 有关详细信息，请参阅[使用 bcp 连接](../../../connect/odbc/linux-mac/connecting-with-bcp.md)  。

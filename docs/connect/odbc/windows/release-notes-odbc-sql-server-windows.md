@@ -7,16 +7,16 @@ ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: b8459ed8-625e-4d8b-891c-e7e78c9977cc
-ms.reviewer: v-jizho2, v-chojas, genemi
+ms.reviewer: v-chojas
 author: v-makouz
-ms.author: v-makouz
+ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 98e7aec7883bc12d04ce24aba7b9a93244f707f6
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
-ms.translationtype: MTE75
+ms.openlocfilehash: c53832e40b055792d98b9bffea368d156d535545
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72041158"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910930"
 ---
 # <a name="release-notes-for-odbc-to-sql-server-on-windows"></a>适用于 Windows 上 SQL Server 的 ODBC 的发行说明
 
@@ -44,13 +44,21 @@ Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
 
+## <a name="175-january-2020"></a>17.5，2020 年 1 月
+
+| 新增功能 | 详细信息 |
+| :------------ | :------ |
+| SQL_COPT_SS_SPID 连接属性，用于在不往返服务器的情况下检索 SPID | 请参阅 [DSN 和连接字符串属性及关键字](../dsn-connection-string-attribute.md)。 |
+| bug 修复。 | 请参阅 [bug 修复](../bug-fixes.md)。 |
+| &nbsp; | &nbsp; |
+
 ## <a name="1742-october-2019"></a>2019 年 10 月 17.4.2 版
 
 | 新增功能 | 详细信息 |
 | :------------ | :------ |
 | 支持其他 Azure Key Vault 终结点 | 请参阅[对 ODBC 驱动程序使用 Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md)。 |
 | 支持设置数据分类版本 | 请参阅[数据分类](../data-classification.md#bkmk-version)。 |
-| 现在，驱动程序将安装用于对 Azure 进行身份验证的 Azure Active Drirectory Authentication 库（adal） | |
+| 在安装程序中添加 Azure Active Directory 身份验证库 (adal.dll) | 现已包含在基础驱动程序安装中，这会升级适用于 SQL Server 的 Microsoft Active Directory 身份验证库的现有安装，同时从 Windows 的已安装应用程序列表中将其删除。 |
 | bug 修复。 | 请参阅 [bug 修复](../bug-fixes.md)。 |
 | &nbsp; | &nbsp; |
 

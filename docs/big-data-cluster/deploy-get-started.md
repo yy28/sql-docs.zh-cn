@@ -9,14 +9,14 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2bbb4c05a6760709fcb873cd8c39f301c37aeb2b
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 02c3e6e217ea2918ab36829d6f0cceb4a6269e81
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706356"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190391"
 ---
-# <a name="get-started-with-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 入门
+# <a name="get-started-with-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 入门
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -33,11 +33,16 @@ ms.locfileid: "73706356"
 > [!TIP]
 > 要快速获得一个部署了 Kubernetes 和大数据群集的环境以协助增强其功能，请使用[脚本部分](#scripts)中指向的示例脚本之一。 部署后，可使用以下部分中的[客户端工具](#tools)来管理群集。
 
+观看此 9 分钟的视频，大致了解如何部署大数据群集：
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Big-Data-Clusters-deployment-overview/player?WT.mc_id=dataexposed-c9-niner]
+
+
 ## <a id="tools"></a> 客户端工具
 
 大数据群集需要一组特定的客户端工具。 将大数据群集部署到 Kubernetes 之前，应安装以下工具：
 
-| 工具 | 描述 |
+| 工具 | 说明 |
 |---|---|
 | **azdata** | 部署和管理大数据群集。 |
 | **kubectl** | 创建和管理基础 Kubernetes 群集。 |

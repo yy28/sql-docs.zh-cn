@@ -1,10 +1,9 @@
 ---
-title: 查看作业步骤信息 | Microsoft Docs
-ms.custom: ''
+title: View Job Step Information
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,13 +14,15 @@ helpviewer_keywords:
 ms.assetid: e3f06492-dc86-4e06-b186-ea58aff6d591
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c3097703661b74e1d2e33ad12982ea6c2d06f038
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 353f9924a93e14d0617deb143ec2cbe080a465ad
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260656"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241899"
 ---
 # <a name="view-job-step-information"></a>View Job Step Information
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -55,13 +56,13 @@ ms.locfileid: "68260656"
   
 #### <a name="to-view-job-step-information"></a>查看作业步骤信息  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
+1.  在“对象资源管理器”  中，连接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 的实例，然后展开此实例。  
   
-2.  依次展开“SQL Server 代理”和“作业”，右键单击包含要查看的作业步骤的作业，再单击“属性”。  
+2.  依次展开“SQL Server 代理”  和“作业”  ，右键单击包含要查看的作业步骤的作业，再单击“属性”  。  
   
 3.  在 **“作业属性”** 对话框中，单击 **“步骤”** 页。  
   
-4.  单击要查看的作业步骤，再单击 **“编辑”**。  
+4.  单击要查看的作业步骤，再单击 **“编辑”** 。  
   
 5.  在 **“作业步骤属性”** 对话框的 **“常规”** 页上，可以查看作业步骤的类型和用途。  
   

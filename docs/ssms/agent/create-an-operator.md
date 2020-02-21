@@ -1,10 +1,9 @@
 ---
-title: 创建操作员 | Microsoft Docs
-ms.custom: ''
+title: 创建操作员
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,13 +16,15 @@ helpviewer_keywords:
 ms.assetid: 1359d790-5905-4927-a208-e7155e7768a2
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 27f99081b3af76448732ae887fb6f6059628fd4a
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 65c9940c130dbaf27d5b50b73d11b22adb11664e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553046"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258775"
 ---
 # <a name="create-an-operator"></a>创建操作员
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

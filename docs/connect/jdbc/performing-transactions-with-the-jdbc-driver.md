@@ -1,5 +1,5 @@
 ---
-title: 通过 JDBC 驱动程序执行事务 |Microsoft Docs
+title: 通过 JDBC 驱动程序执行事务 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: afbb776f-05dc-4e79-bb25-2c340483e401
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58c6282a11e3fcc0ca896a2e3e4075a4b51d928e
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027854"
 ---
 # <a name="performing-transactions-with-the-jdbc-driver"></a>通过 JDBC 驱动程序执行事务
@@ -26,7 +26,7 @@ ms.locfileid: "69027854"
   
 ## <a name="in-this-section"></a>在本节中  
   
-|主题|描述|  
+|主题|说明|  
 |-----------|-----------------|  
 |[了解事务](../../connect/jdbc/understanding-transactions.md)|提供了如何通过 JDBC 驱动程序执行事务的概述。|  
 |[了解 XA 事务](../../connect/jdbc/understanding-xa-transactions.md)|提供了如何通过 JDBC 驱动程序执行 XA 事务的概述。|  

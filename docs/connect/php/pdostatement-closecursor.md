@@ -1,5 +1,5 @@
 ---
-title: 'PDOStatement:: closeCursor |Microsoft Docs'
+title: PDOStatement::closeCursor | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 8997ab61-e948-4d54-8d32-fc080d55525c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: caf214fa7055bb0e8000f52f5db43c4f76e48e1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993098"
 ---
 # <a name="pdostatementclosecursor"></a>PDOStatement::closeCursor
@@ -32,8 +32,8 @@ bool PDOStatement::closeCursor();
 ## <a name="return-value"></a>返回值  
 如果成功，则为 true；否则为 false。  
   
-## <a name="remarks"></a>Remarks  
-当 MultipleActiveResultSets 连接选项设置为 false 时，closeCursor 将起作用。  有关 MultipleActiveResultSets 连接选项的详细信息，请参阅[如何：禁用多个活动的结果集 (MARS)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md)。  
+## <a name="remarks"></a>备注  
+当 MultipleActiveResultSets 连接选项设置为 false 时，closeCursor 将起作用。  若要详细了解 MultipleActiveResultSets 连接选项，请参阅[操作说明：禁用多重活动结果集 (MARS)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md)。  
   
 也可以只将语句句柄设置为 null，而不是调用 closeCursor。  
   

@@ -1,5 +1,5 @@
 ---
-title: 修改作业 | Microsoft Docs
+title: Modify a Job
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -11,16 +11,17 @@ helpviewer_keywords:
 ms.assetid: dd5e5f20-20c4-4ab9-a19a-db87577dcd43
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2ec7f21de56bf6845a9b4b5941b7a423d798396c
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 006ba96e2d614be47c7298a2320df0cf03ec81f0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552861"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245223"
 ---
 # <a name="modify-a-job"></a>Modify a Job
 
@@ -29,7 +30,7 @@ ms.locfileid: "69552861"
 > [!IMPORTANT]  
 > [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-本主题介绍如何在 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 SQL Server 管理对象更改 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]， or SQL Server Management Objects.  
+本主题介绍如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)] 或 SQL Server 管理对象在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中更改 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业的属性。  
 
 ## <a name="BeforeYouBegin"></a>开始之前  
   
@@ -45,7 +46,7 @@ ms.locfileid: "69552861"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  展开“SQL Server 代理”  ，再展开“作业”  ，然后右键单击要修改的作业，再单击“属性”  。  
+2.  展开“SQL Server 代理”，再展开“作业”，然后右键单击要修改的作业，再单击“属性”。  
   
 3.  在 **“作业属性”** 对话框中，使用相应的页来更新作业的属性、步骤、计划、警报和通知。  
   
@@ -55,7 +56,7 @@ ms.locfileid: "69552861"
   
 1.  在对象资源管理器中，连接到数据库引擎实例，然后展开该实例。  
   
-2.  在工具栏上，单击 **“新建查询”** 。  
+2.  在工具栏上，单击 **“新建查询”**。  
   
 3.  在查询窗口中，使用以下系统存储过程修改作业。  
   

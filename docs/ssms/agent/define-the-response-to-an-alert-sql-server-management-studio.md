@@ -1,10 +1,7 @@
 ---
-title: 定义对警报的响应 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: 定义对警报的响应
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,15 +11,20 @@ helpviewer_keywords:
 ms.assetid: c86ca6eb-c59f-46e9-bc32-d474e7c3b170
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f1511e187fe18338aed364b43a5c75abc719574d
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 8dd80ad63be8446371328e154b7d18d1f8faa7de
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553027"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256022"
 ---
-# <a name="define-the-response-to-an-alert-sql-server-management-studio"></a>定义对警报的响应 (SQL Server Management Studio)
+# <a name="define-the-response-to-an-alert"></a>定义对警报的响应
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -89,5 +91,4 @@ ms.locfileid: "69553027"
     GO  
     ```  
   
-有关详细信息，请参阅 [sp_add_notification (Transact-SQL)](https://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)。  
-  
+有关详细信息，请参阅 [sp_add_notification (TRANSACT-SQL)](https://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)。

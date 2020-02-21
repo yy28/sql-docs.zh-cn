@@ -1,27 +1,26 @@
 ---
-title: 快速入门：创建 R 脚本
-titleSuffix: SQL Server Machine Learning Services
-description: 通过 SQL Server 机器学习服务在 SQL Server 实例中创建和运行简单的 R 脚本。
+title: 快速入门：运行 R 脚本
+description: 使用 SQL Server 机器学习服务运行一组简单的 R 脚本。 了解如何在 SQL Server 实例中使用存储过程 sp_execute_external_script 执行该脚本。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5a8e2779e930671faa9fa3ab94a7384ab1bdca83
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 495bb56cf76391c8baa1734665d5064b586d4be8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73726983"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831783"
 ---
-# <a name="quickstart-create-and-run-simple-r-scripts-with-sql-server-machine-learning-services"></a>快速入门：通过 SQL Server 机器学习服务创建和运行简单的 R 脚本
+# <a name="quickstart-run-simple-r-scripts-with-sql-server-machine-learning-services"></a>快速入门：通过 SQL Server 机器学习服务运行简单的 R 脚本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-在本快速入门中，使用 [SQL Server 机器学习服务](../what-is-sql-server-machine-learning.md)创建并运行一组简单的 R 脚本。 可了解如何在存储过程 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 中包装格式标准的 R 脚本，并在一个 SQL Server 实例中执行该脚本。
+在本快速入门中，将使用 [SQL Server 机器学习服务](../what-is-sql-server-machine-learning.md)运行一组简单的 R 脚本。 你将了解如何在 SQL Server 实例中使用存储过程 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 执行该脚本。
 
 ## <a name="prerequisites"></a>必备条件
 
@@ -29,7 +28,7 @@ ms.locfileid: "73726983"
 
   SQL Server 实例可以位于 Azure 虚拟机中，也可以位于本地。 请注意，默认情况下禁用外部脚本编写功能，因此可能需要在开始之前[启用外部脚本编写](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature)并验证 SQL Server Launchpad 服务是否正在运行  。
 
-- 还需要一个工具来运行包含 R 脚本的 SQL 查询。 可使用任何数据库管理或查询工具运行这些脚本，只要它可以连接到 SQL Server 实例，并运行 T-SQL 查询或存储过程即可。 本快速入门使用 [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)。
+- 你还需要一个工具来运行包含 R 脚本的 SQL 查询。 可使用任何数据库管理或查询工具运行这些脚本，只要它可以连接到 SQL Server 实例，并运行 T-SQL 查询或存储过程即可。 本快速入门使用 [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)。
 
 ## <a name="run-a-simple-script"></a>运行简单脚本
 
@@ -91,7 +90,7 @@ GO
 | | |
 |-|-|
 | @language | 定义本例中要调用 R 的语言扩展 |
-| @script | 定义传递给 R 运行时的命令。 必须以 Unicode 文本形式将整个 R 脚本封装在此参数中。 还可将文本添加到 nvarchar 类型的变量并调用该变量  |
+| @script | 定义传递给 R 运行时的命令。 必须将整个 R 脚本作为 Unicode 文本包括在此参数中。 还可将文本添加到 nvarchar 类型的变量并调用该变量  |
 | @input_data_1 | 查询返回的数据将传递给 R 运行时，后者将数据以数据框架的形式返回给 SQL Server |
 |WITH RESULT SETS | 子句为 SQL Server 定义返回的数据表的架构，并将“Hello World”添加为列名称且 int 为数据类型  |
 
@@ -161,7 +160,7 @@ GO
     请注意 R 区分大小写。 R 脚本中使用的输入和输出变量（SQL_out、SQL_in）需要匹配使用 `@input_data_1_name` 和 `@output_data_1_name` 定义的名称，包括大小写   。
 
    > [!TIP]
-   > 仅可将一个输入数据集作为参数传递，且仅可返回一个数据集。 但是，可以从 R 代码内调用其他数据集，并且除数据集以外，还可以返回其他类型的输出。 还可以向任何参数添加 OUTPUT 关键字，使其随结果一起返回。
+   > 只能将一个输入数据集作为参数传递，并且只能返回一个数据集。 但是，可以从 R 代码内部调用其他数据集，并且可以返回除数据集之外的其他类型的输出。 也可向任何参数添加 OUTPUT 关键字，让该参数随结果一起返回。
 
 1. 还可以仅使用没有输入数据的 R 脚本（`@input_data_1` 设置为空白）生成值。
 

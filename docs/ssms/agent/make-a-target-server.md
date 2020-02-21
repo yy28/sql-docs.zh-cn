@@ -1,5 +1,5 @@
 ---
-title: 设置目标服务器 | Microsoft Docs
+title: 设置目标服务器
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -16,16 +16,17 @@ helpviewer_keywords:
 ms.assetid: 13aabe2d-67fe-4c67-8d49-2928dd705b7a
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b151a51a9d68b8459b2564396c5e4bc4c1d00868
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 0c115e8d11a72bb7b066169e4f2a21d570adc366
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552836"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242862"
 ---
 # <a name="make-a-target-server"></a>设置目标服务器
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -61,7 +62,7 @@ ms.locfileid: "69552836"
   
 #### <a name="to-make-a-target-server"></a>生成目标服务器  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
+1.  在“对象资源管理器”  中，连接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 的实例，然后展开该实例。  
   
 2.  右键单击“SQL Server 代理”  ，指向“多服务器管理”  ，然后单击“使其成为目标服务器”  。 **“目标服务器向导”** 会指导您完成生成目标服务器的过程。  
   

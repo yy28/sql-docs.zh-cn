@@ -1,5 +1,5 @@
 ---
-title: 日志记录活动 |Microsoft Docs
+title: 日志记录活动 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -13,10 +13,10 @@ ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 29c7c1e3b536e237e2c61a8e3303313ec53fe679
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993327"
 ---
 # <a name="logging-activity"></a>日志记录活动
@@ -24,7 +24,7 @@ ms.locfileid: "67993327"
 
 默认情况下，不会记录 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 生成的错误和警告。 本主题讨论如何配置日志记录活动。  
   
-## <a name="logging-activity-using-the-pdosqlsrv-driver"></a>使用 PDO_SQLSRV 驱动程序的日志记录活动  
+## <a name="logging-activity-using-the-pdo_sqlsrv-driver"></a>使用 PDO_SQLSRV 驱动程序的日志记录活动  
 可用于 PDO_SQLSRV 驱动程序的唯一配置是 php.ini 文件中的 pdo_sqlsrv.log_severity 条目。  
   
 在 php.ini 文件末尾添加以下内容：  
@@ -36,13 +36,13 @@ pdo_sqlsrv.log_severity = <number>
   
 **log_severity** 可以为下列值之一：  
   
-|ReplTest1|描述|  
+|值|说明|  
 |---------|---------------|  
 |0|禁用日志记录（如果未进行任何定义，则为默认值）。|  
 |-1|指定将记录错误、警告和通知。|  
-|1|指定记录错误。|  
-|2|指定记录警告。|  
-|4|指定记录通知。|  
+|1|指定将记录错误。|  
+|2|指定将记录警告。|  
+|4|指定将记录通知。|  
   
 日志记录信息将添加到 phperrors.log 文件。  
   
@@ -61,10 +61,10 @@ PHP 在初始化时读取配置文件并将数据存储在缓存中；它还提�
   
 下表描述了可用作 **LogSubsystems** 设置的值的常量：  
   
-|值（括号中为等效整数）|描述|  
+|值（括号中为等效整数）|说明|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SYSTEM_ALL (-1)|对所有子系统启用日志记录。|  
-|SQLSRV_LOG_SYSTEM_OFF (0)|禁用日志记录。 这是默认设置。|  
+|SQLSRV_LOG_SYSTEM_OFF (0)|禁用日志记录。 这是默认值。|  
 |SQLSRV_LOG_SYSTEM_INIT (1)|对初始化活动启用日志记录。|  
 |SQLSRV_LOG_SYSTEM_CONN (2)|对连接活动启用日志记录。|  
 |SQLSRV_LOG_SYSTEM_STMT (4)|对语句活动启用日志记录。|  
@@ -92,12 +92,12 @@ PHP 在初始化时读取配置文件并将数据存储在缓存中；它还提�
   
 下表描述了可用作 **LogSeverity** 设置的值的常量：  
   
-|值（括号中为等效整数）|描述|  
+|值（括号中为等效整数）|说明|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SEVERITY_ALL (-1)|指定将记录错误、警告和通知。|  
-|SQLSRV_LOG_SEVERITY_ERROR (1)|指定记录错误。 这是默认设置。|  
-|SQLSRV_LOG_SEVERITY_WARNING (2)|指定记录警告。|  
-|SQLSRV_LOG_SEVERITY_NOTICE (4)|指定记录通知。|  
+|SQLSRV_LOG_SEVERITY_ERROR (1)|指定将记录错误。 这是默认值。|  
+|SQLSRV_LOG_SEVERITY_WARNING (2)|指定将记录警告。|  
+|SQLSRV_LOG_SEVERITY_NOTICE (4)|指定将记录通知。|  
   
 可以使用 OR 逻辑运算符 (|) 一次为 LogSeverity  设置来设置多个值。 例如，以下代码行指定应记录错误和警告：  
   
@@ -115,7 +115,7 @@ PHP 在初始化时读取配置文件并将数据存储在缓存中；它还提�
 `sqlsrv.LogSeverity = 3`  
   
 ## <a name="see-also"></a>另请参阅  
-[Microsoft Driver for PHP for SQL Server 编程指南](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 编程指南](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [常量（Microsoft Drivers for PHP for SQL Server）](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 

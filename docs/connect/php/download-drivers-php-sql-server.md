@@ -1,7 +1,7 @@
 ---
 title: 下载 Microsoft Drivers for PHP for SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 02/11/2019
+ms.date: 01/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 13da9b638f117bc84700b044c6c2e8e70ada8518
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: e752df73d1da04b5db870cb01be581811a137ea0
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68015098"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910456"
 ---
 # <a name="download-the-microsoft-drivers-for-php-for-sql-server"></a>下载 Microsoft Drivers for PHP for SQL Server
 
@@ -22,8 +22,9 @@ ms.locfileid: "68015098"
 
 ## <a name="windows"></a>Windows
 
-Windows 上的 PHP 驱动程序的以下版本可供下载:
+以下版本的 Windows 版 PHP 驱动程序可供下载：
 
+- [Microsoft Drivers 5.8 for PHP for SQL Server](https://download.microsoft.com/download/2/6/a/26a631f3-24e3-4a99-83a3-882ae78f3503/SQLSRV58.EXE)
 - [Microsoft Drivers 5.6 for PHP for SQL Server](https://www.microsoft.com/download/details.aspx?id=57916)
 - [Microsoft Drivers 5.3 for PHP for SQL Server](https://www.microsoft.com/download/details.aspx?id=57163)
 - [Microsoft Drivers 5.2 for PHP for SQL Server](https://www.microsoft.com/download/details.aspx?id=56729)
@@ -32,8 +33,9 @@ Windows 上的 PHP 驱动程序的以下版本可供下载:
 
 ## <a name="linux-and-macos"></a>Linux 和 macOS
 
-使用 Linux 和 macOS 上的 PECL, 可以轻松下载和安装 PHP 驱动程序。 有关详细信息, 请参阅[Linux 和 macOS 安装教程](installation-tutorial-linux-mac.md)。 如果需要手动安装适用于 Linux 和 macOS 的 PHP 驱动程序, 可下载以下版本:
+使用 PECL 可在 Linux 和 macOS 上轻松下载和安装 PHP 驱动程序。 有关详细信息，请参阅 [Linux 和 macOS 安装教程](installation-tutorial-linux-mac.md)。 如果需要手动安装 Linux 和 macOS 版 PHP 驱动程序，以下版本可供下载：
 
+- [Microsoft Drivers 5.8 for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v5.8.0)
 - [Microsoft Drivers 5.6 for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v5.6.0)
 - [Microsoft Drivers 5.3 for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v5.3.0)
 - [Microsoft Drivers 5.2 for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v5.2.0)

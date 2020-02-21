@@ -1,5 +1,5 @@
 ---
-title: SQL Server 消息结果 |Microsoft Docs
+title: SQL Server 消息结果 | Microsoft Docs
 description: SQL Server 消息结果
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,10 +15,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 05d731f418bad21f9e8ec32c620b352c5663994a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994917"
 ---
 # <a name="sql-server-message-results"></a>SQL Server 消息结果
@@ -38,9 +38,9 @@ ms.locfileid: "67994917"
   
 -   SET STATISTICS  
   
- 这些语句会返回一个或多个信息性消息，或者使 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 返回信息性消息以替代行集或计数结果。 成功执行时, SQL Server 的 OLE DB 驱动程序返回 S_OK, 消息可用于 SQL Server 使用者的 OLE DB 驱动程序。  
+ 这些语句会返回一个或多个信息性消息，或者使 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 返回信息性消息以替代行集或计数结果。 在成功执行之后，OLE DB Driver for SQL Server 返回 S_OK，并向 OLE DB Driver for SQL Server 使用者提供消息。  
   
- SQL Server 的 OLE DB 驱动程序返回 S_OK, 并在执行多[!INCLUDE[tsql](../../../includes/tsql-md.md)]个语句或使用者执行 SQL Server 成员函数的 OLE DB 驱动程序时提供一个或多个信息性消息。  
+ 在执行多个 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句，或者在使用者执行 OLE DB Driver for SQL Server 成员函数之后，OLE DB Driver for SQL Server 返回 S_OK，并提供一条或多条信息性消息。  
   
  在每次执行成员函数之后，不论返回代码的值如何、是否存在返回的 IRowset 或 IMultipleResults 接口引用或受影响的行数是多少，允许动态指定查询文本的适用于 SQL Server 的 OLE DB 驱动程序使用者都应检查错误接口   。  
   

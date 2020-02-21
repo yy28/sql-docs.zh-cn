@@ -13,10 +13,10 @@ ms.assetid: 89fddca5-bd96-4128-9072-5348d1b6e02c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6fd76ce7d20349301d3bfeb70b4ed1c24325cbdc
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72251202"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>基于文本的查询设计器用户界面（报表生成器）
@@ -34,7 +34,7 @@ ms.locfileid: "72251202"
 ## <a name="text-based-query-designer-toolbar"></a>基于文本的查询设计器工具栏  
  基于文本的查询设计器为所有命令类型都提供一个单一工具栏。 下表列出了该工具栏中的每个按钮及其功能。  
   
-|按钮|描述|  
+|按钮|说明|  
 |------------|-----------------|  
 |**编辑为文本**|在基于文本的查询设计器和图形查询设计器之间切换。 并非所有的数据源类型都支持图形查询设计器。|  
 |**导入**|从文件或报表中导入现有的查询。 仅支持 sql 和 rdl 文件类型|  
@@ -44,7 +44,7 @@ ms.locfileid: "72251202"
 ### <a name="command-type-text"></a>命令类型 Text  
  创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据集时，默认情况下，关系查询设计器将会打开。 若要切换为基于文本的查询设计器，请单击工具栏上的“编辑为文本”切换按钮  。 基于文本的查询设计器将显示两个窗格：“查询”窗格和“结果”窗格。 下图标出了每个窗格。  
   
- ![通用查询设计器，用于关系数据查询](../../reporting-services/report-data/media/rsqd-dsaw-sql-generic.gif "通用查询设计器，用于关系数据查询")  
+ ![用于关系数据查询的通用查询设计器](../../reporting-services/report-data/media/rsqd-dsaw-sql-generic.gif "用于关系数据查询的通用查询设计器")  
   
  下表介绍了每个窗格的功能。  
   

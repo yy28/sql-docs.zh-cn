@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: a6ed79b08fb4d20e184206185c991336636fe570
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015606"
 ---
 # <a name="read-a-filestream-column-to-file-using-ibcpsession-ole-db"></a>使用 IBCPSession 将 FILESTREAM 列读入文件 (OLE DB)
@@ -24,7 +24,7 @@ ms.locfileid: "68015606"
 
   此示例使用 IBCPSession 接口将 filestream 列读入文件并编写格式化文件。  
   
- 有关 filestream 功能的详细信息, 请参阅[Filestream 支持](../../../oledb/features/filestream-support.md)。  
+ 若要详细了解 filestream 功能，请参阅 [FILESTREAM 支持](../../../oledb/features/filestream-support.md)。  
   
 ## <a name="example"></a>示例  
  请确保 INCLUDE 环境变量包括含有 msoledbsql.h 的目录。  

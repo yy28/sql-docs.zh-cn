@@ -1,24 +1,26 @@
 ---
-title: 更改 SQL Server 代理主作业计划的详细信息 | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: 更改主作业的计划详细信息
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: f5414451-4d8e-464b-bd9e-f2b70c6899b3
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9baa8d095102f63f834342d7145e05c345a6ac1e
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 45eddc3b97099eafdba01ec091f3e860f1b2ab8e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553307"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242535"
 ---
 # <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>Change the Scheduling Details for a SQL Server Agent Master Job
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -40,31 +42,31 @@ ms.locfileid: "69553307"
   
 #### <a name="to-change-the-scheduling-details-for-a-job-definition"></a>更改作业定义计划的详细信息  
   
-1.  在 **“对象资源管理器”** 中，单击加号以展开包含要编辑其计划的作业的服务器。  
+1. 在 **“对象资源管理器”** 中，单击加号以展开包含要编辑其计划的作业的服务器。  
   
-2.  单击加号以展开 **“SQL Server 代理”** 。  
+2. 单击加号以展开 **“SQL Server 代理”** 。  
   
-3.  单击加号以便展开 **“作业”** 文件夹。  
+3. 单击加号以便展开 **“作业”** 文件夹。  
   
-4.  右键单击要编辑其计划的作业，然后选择“属性”  。  
+4. 右键单击要编辑其计划的作业，然后选择“属性”  。  
   
-5.  在“作业属性 – _job\_name_”对话框中的“选择页”下，选择“计划”    。 有关此页上可用选项的详细信息，请参阅[作业属性 - 新建作业（“计划”页）](../../ssms/agent/job-properties-new-job-schedules-page.md)。  
+5. 在“作业属性 – _job\_name_”对话框中的“选择页”下，选择“计划”    。 有关此页上可用选项的详细信息，请参阅[作业属性 - 新建作业（“计划”页）](../../ssms/agent/job-properties-new-job-schedules-page.md)。  
   
-6.  完成后，单击 **“确定”** 。  
+6. 完成后，单击 **“确定”** 。  
   
 ## <a name="TsqlProcedure"></a>使用 Transact-SQL  
   
-#### <a name="to-change-the-scheduling-details-for-a-job-definition"></a>更改作业定义计划的详细信息  
+#### <a name="to-change-the-scheduling-details-for-a-job-definition"></a>更改作业定义计划的详细信息
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的实例。  
+1. 在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”** 。  
+2. 在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3. 将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
-    -- changes the enabled status of the NightlyJobs schedule to 0   
-    -- and sets the owner to terrid.   
+    -- changes the enabled status of the NightlyJobs schedule to 0
+    -- and sets the owner to terrid.
     USE msdb ;  
     GO  
   
@@ -75,5 +77,4 @@ ms.locfileid: "69553307"
     GO  
     ```  
   
-有关详细信息，请参阅 [sp_update_schedule (Transact-SQL)](https://msdn.microsoft.com/97b3119b-e43e-447a-bbfb-0b5499e2fefe)。  
-  
+有关详细信息，请参阅 [sp_update_schedule (Transact-SQL)](https://msdn.microsoft.com/97b3119b-e43e-447a-bbfb-0b5499e2fefe)。

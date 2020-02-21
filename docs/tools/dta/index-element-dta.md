@@ -1,10 +1,7 @@
 ---
-title: Index 元素 (DTA) |Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 索引元素 (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3e7b86c8ac990c7add4856e2c00e43550903f55a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 1d865d3ea2893f255155ee03c229731eed9d48a8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034833"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307705"
 ---
 # <a name="index-element-dta"></a>索引元素 (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  包含为用户指定的配置创建或删除的索引的信息。  
+
+包含为用户指定的配置创建或删除的索引的信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,7 +42,7 @@ ms.locfileid: "68034833"
   
 ## <a name="element-attributes"></a>元素属性  
   
-|索引属性|数据类型|描述|  
+|索引属性|数据类型|说明|  
 |---------------------|---------------|-----------------|  
 |**群集**|**boolean**|可选。 指定一个聚集索引。 设置为“true”或“false”，例如：<br /><br /> `<Index Clustered="true">`<br /><br /> 默认情况下，此属性设置为“false”。|  
 |**唯一**|**boolean**|可选。 指定唯一索引。 设置为“true”或“false”，例如：<br /><br /> `<Index Unique="true">`<br /><br /> 默认情况下，此属性设置为“false”。|  
@@ -56,7 +59,7 @@ ms.locfileid: "68034833"
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|描述|  
+|特征|说明|  
 |--------------------|-----------------|  
 |**数据类型和长度**|无。|  
 |**默认值**|无。|  

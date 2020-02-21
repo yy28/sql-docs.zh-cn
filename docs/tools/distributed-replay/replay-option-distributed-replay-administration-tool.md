@@ -1,7 +1,6 @@
 ---
-title: 重播选项（Distributed Replay 管理工具）| Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 管理工具中的重播选项
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -10,20 +9,24 @@ ms.topic: conceptual
 ms.assetid: d7bce6a5-d414-488d-a3cd-50c1c62019c4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 75fb9df87b432dc4b1357901e740ed83d628509e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: b1db107bc9d426036f5831ad8f49f5fc5f7edddc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67949967"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306998"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>重播选项（分布式重播管理工具）
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理工具 **DReplay.exe** 是一个命令行工具，可与分布式重播控制器一起用来进行通信。 本主题介绍 **replay** 命令行选项和相应的语法。  
+
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理工具 DReplay.exe 是一个命令行工具，可用于与 Distributed Replay 控制器进行通信。 本主题介绍 **replay** 命令行选项和相应的语法。  
   
  **replay** 选项启动事件重播阶段，在该阶段中，控制器将重播数据调度到指定客户端，启动分布式重播并同步客户端。 每个参与重播的客户端可以选择记录重播活动并在本地保存结果跟踪文件。  
   
- ![主题连接图标](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") 有关与此管理工具语法结合使用的语法约定的详细信息，请参阅 [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") 有关与此管理工具语法结合使用的语法约定的详细信息，请参阅 [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,8 +37,8 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
     [-f status_interval]  
 ```  
   
-#### <a name="parameters"></a>Parameters  
- **-m** _控制器_  
+#### <a name="parameters"></a>parameters  
+ **-m** _controller_  
  指定控制器的计算机名称。 可以用“`localhost`”或“`.`”指代本地计算机。  
   
  如果未指定 **-m** 参数，则使用本地计算机。  
@@ -56,7 +59,7 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
  **-o**  
  捕获客户端的重播活动，并将其保存到一个结果跟踪文件中，该文件的路径由客户端配置文件 `<ResultDirectory>` 的 `DReplayClient.xml`元素指定。  
   
- 如果 -o  参数未指定，结果跟踪文件就不会生成。 在重播结束时，控制台输出将返回摘要信息，但不提供其他重播统计信息。  
+ 如果 -o 参数未指定，结果跟踪文件就不会生成。 在重播结束时，控制台输出将返回摘要信息，但不提供其他重播统计信息。  
   
  **-s** _target_server_  
  指定应针对其重播分布式工作负荷的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的目标实例。 必须以 **server_name[\instance name]** 格式指定此参数。  
@@ -159,7 +162,7 @@ dreplay replay -m controller1 -d c:\WorkingDir -o -w client1,client2,client3,cli
  [重播跟踪数据](../../tools/distributed-replay/replay-trace-data.md)   
  [查看重播结果](../../tools/distributed-replay/review-the-replay-results.md)   
  [SQL Server 分布式重播](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Configure Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)   
+ [配置 Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)   
  [SQL Server 分布式重播论坛](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
  [使用 Distributed Replay 对 SQL Server 进行负载测试 - 第 2 部分](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
  [使用 Distributed Replay 对 SQL Server 进行负载测试 – 第 1 部分](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: de76ab165f201500399ff6c0585a49122d6b9cc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: f30568da0ea6f8b937fd87a4891058b9d68949fe
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580657"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74957441"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>以 HTML 格式呈现（报表生成器和 SSRS）
   HTML 呈现扩展插件以 HTML 格式呈现分页报表。 该呈现扩展插件还可以生成完整的 HTML 页面，或生成 HTML 片段以嵌入其他 HTML 页面。 所有 HTML 都是使用 UTF-8 编码生成的。  
@@ -84,6 +84,8 @@ ms.locfileid: "65580657"
   
  其他搜索和查找功能由 ReportViewer Web 窗体控件提供。  
   
+##  <a name="FontsOnClient"></a> 客户端计算机上的字体
+ 如果报表中使用的是自定义字体，用于查看报表的计算机（客户端计算机）必须安装自定义字体，才能正确显示报表。 如果客户端计算机上没有安装此字体，报表显示的是系统默认字体，而不是自定义字体。
   
 ##  <a name="DeviceInfo"></a> 设备信息设置  
  您可以通过更改设备信息设置来更改此呈现器的某些默认设置（包括以哪个模式呈现）。 有关详细信息，请参阅 [HTML Device Information Settings](../../reporting-services/html-device-information-settings.md)。  

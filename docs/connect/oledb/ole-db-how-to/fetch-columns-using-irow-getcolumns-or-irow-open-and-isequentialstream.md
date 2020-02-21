@@ -15,10 +15,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 0ff29e4ed9a5986173020530bd691d0c95a89749
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994794"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>使用 IRow::GetColumns（或 IRow::Open）和 ISequentialStream 提取列
@@ -26,7 +26,7 @@ ms.locfileid: "67994794"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  可使用 ISequentialStream 接口绑定或检索大型数据  。 对于绑定列，状态标志 DBSTATUS_S_TRUNCATED 表示数据被截断。  
+  可使用 ISequentialStream 接口绑定或检索大型数据。 对于绑定列，状态标志 DBSTATUS_S_TRUNCATED 表示数据被截断。  
   
 > [!IMPORTANT]  
 >  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
@@ -35,15 +35,15 @@ ms.locfileid: "67994794"
   
 1.  建立与数据源的连接。  
   
-2.  执行命令（本例中通过 IID_IRow 调用 ICommandExecute::Execute()）  。  
+2.  执行命令（本例中通过 IID_IRow 调用 ICommandExecute::Execute()）。  
   
-3.  使用**IRow:: Open ()** 或**IRow:: GetColumns ()** 提取列数据。  
+3.  使用 IRow::Open() 或 IRow::GetColumns() 提取列数据。  
   
-    -   **IRow:: open ()** 可用于打开行上的**ISequentialStream** 。 指定 DBGUID_STREAM，以指示列包含二进制数据流（随后可使用 IStream 或 ISequentialStream 读取列数据）   。  
+    -   IRow::Open() 可用于打开行上的 ISequentialStream。 指定 DBGUID_STREAM，以指示列包含二进制数据流（随后可使用 IStream 或 ISequentialStream 读取列数据）。  
   
-    -   如果使用 IRow::GetColumns()，则 DBCOLUMNACCESS 结构的 pData 元素设置为指向流对象   。  
+    -   如果使用 IRow::GetColumns()，则 DBCOLUMNACCESS 结构的 pData 元素设置为指向流对象。  
   
-4.  重复使用**ISequentialStream:: read ()** 将指定数量的字节读入使用者缓冲区。  
+4.  重复使用 ISequentialStream::Read()，将指定的字节数读入使用者缓冲区。  
   
 ## <a name="example"></a>示例  
  此示例显示如何使用 IRow 提取单行。 在此示例中，将一次从该行中检索一列。 此示例演示了 IRow::Open() 和 IRow::GetColumns() 的用法。 为读取列数据，示例中使用了 ISequentialStream::Read。  

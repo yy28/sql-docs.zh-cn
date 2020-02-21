@@ -1,6 +1,6 @@
 ---
-title: sqlagent90 应用程序 |Microsoft Docs
-ms.custom: ''
+title: sqlagent90 应用程序
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e8b80e8d-d0c9-4500-a868-0ce08233da08
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 20405a10a2e36232068329542923aae65c10c4e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 5c75d932356d24bd5a268eb27d50deee91a6329f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059595"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307768"
 ---
 # <a name="sqlagent90-application"></a>sqlagent90 应用程序
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sqlagent90
  **-i** *instance_name*  
  指示 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理连接到由 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance_name *所指定的*命名实例。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  在显示版权消息后，只有在指定了 **-v** 开关时， **sqlagent90** 才会在命令提示符窗口中显示输出。 若要停止 **sqlagent90**，请在命令提示符处按 CTRL+C。 在停止 **sqlagent90**之前，请不要关闭命令提示符窗口。  
   
 ## <a name="see-also"></a>另请参阅  

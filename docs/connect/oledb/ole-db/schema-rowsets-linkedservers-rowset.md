@@ -1,5 +1,5 @@
 ---
-title: LINKEDSERVERS 行集 (OLE DB) |Microsoft Docs
+title: LINKEDSERVERS 行集 (OLE DB) | Microsoft Docs
 description: LINKEDSERVERS 行集 (OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 75b443df235fd99f262cf3fda0abf6a6354da413
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993876"
 ---
 # <a name="schema-rowsets---linkedservers-rowset"></a>架构行集 - LINKEDSERVERS 行集
@@ -29,7 +29,7 @@ ms.locfileid: "67993876"
   
  LINKEDSERVERS 行集包含以下列  。  
   
-|列名|类型指示符|描述|  
+|列名称|类型指示符|说明|  
 |-----------------|--------------------|-----------------|  
 |SVR_NAME|DBTYPE_WSTR|链接服务器的名称。|  
 |SVR_PRODUCT|DBTYPE_WSTR|标识由链接服务器的名称所表示的数据存储的类型的制造商或其他名称。|  

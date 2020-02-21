@@ -8,10 +8,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: af1ceea86c3e91cb11c393f585c2906f50f039c1
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68892283"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>在 SharePoint 模式下安装第一个 Report Server
@@ -47,7 +47,7 @@ ms.locfileid: "68892283"
 |**(3)**|由 Power View 和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]使用的 Excel Service 应用程序。 这在 SharePoint 2016 单个服务器部署中不可用。 需要 [Office Online Server](https://technet.microsoft.com/library/jj219437\(v=office.16\).aspx) 。|  
 |**(4)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序。|  
   
- ![SSRS SharePoint 模式单服务器部署](../../reporting-services/install-windows/media/rs-sharepoint-1server-deployment.gif "SSRS SharePoint Mode Single Server Deployment")  
+ ![SSRS SharePoint 模式单服务器部署](../../reporting-services/install-windows/media/rs-sharepoint-1server-deployment.gif "SSRS SharePoint 模式单服务器部署")  
   
 > [!TIP]  
 >  有关更复杂的部署实例，请参阅 [SharePoint 中 SQL Server BI 功能的部署拓扑](https://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26)。  
@@ -58,7 +58,7 @@ ms.locfileid: "68892283"
   
  **安装并注册 Reporting Services 服务：**  
   
--   在 SharePoint 模式下安装 Reporting Services 过程中使用的当前帐户（称为“安装”帐户）需要具有本地计算机的管理权限。 如果在安装 SharePoint 后安装 Reporting Services 并且“安装”帐户也是 SharePoint 场管理员组的成员，Reporting Services 安装将为你注册 Reporting Services 服务。 如果在安装 SharePoint 之前安装 Reporting Services 或者“安装”帐户不是场管理员组的成员，则需手动注册该服务。 请参见 [步骤 2：注册并启动 Reporting Services SharePoint 服务](#bkmk_install_SSRS_sharedservice)。  
+-   在 SharePoint 模式下安装 Reporting Services 过程中使用的当前帐户（称为“安装”帐户）需要具有本地计算机的管理权限。 如果在安装 SharePoint 后安装 Reporting Services 并且“安装”帐户也是 SharePoint 场管理员组的成员，Reporting Services 安装将为你注册 Reporting Services 服务。 如果在安装 SharePoint 之前安装 Reporting Services 或者“安装”帐户不是场管理员组的成员，则需手动注册该服务。 请参阅部分[步骤 2：注册并启动 Reporting Services SharePoint 服务](#bkmk_install_SSRS_sharedservice)。  
   
  **创建 Reporting Services 服务应用程序**  
   
@@ -110,23 +110,23 @@ ms.locfileid: "68892283"
 
 3.  如果看到“产品密钥”页，请键入密钥或接受 Enterprise Evaluation 版本的默认密钥  。  
   
-     选择“下一步”  。  
+     选择“**下一页**”。  
   
 4.  如果您看到许可条款页，则查看并接受许可条款。 对于你同意发送功能使用情况数据来帮助改进产品功能和支持，Microsoft 深表感谢。  
   
-     选择“下一步”  。  
+     选择“**下一页**”。  
 
 5.  建议选择“使用 Microsoft 更新检查更新(推荐)”  。 此为可选项。
   
-     选择“下一步”  。   
+     选择“**下一页**”。   
   
 6.  在“安装安装程序文件”页上，根据你的计算机上已安装的内容，可能会看到以下消息  ：  
   
     -   “一个或多个受影响的文件具有挂起的操作。 安装过程完成后，必须重新启动计算机。”  
   
-    -   选择“下一步”  。  
+    -   选择“**下一页**”。  
   
-7.  如果看到“安装规则”  页。 查看任何警告或妨碍安装的问题。 然后选择“下一步”  。
+7.  如果看到“安装规则”  页。 查看任何警告或妨碍安装的问题。 然后，选择“下一步”  。
  
 8. 在 **“功能选择”** 页中，选择以下选项：  
   
@@ -136,17 +136,17 @@ ms.locfileid: "68892283"
   
     -   （可选）还可以选择“数据库引擎服务”以提供完整的环境，但是你应有托管 SharePoint 数据库的 SQL Server 数据库引擎实例  。  
   
-     选择“下一步”  。  
+     选择“**下一页**”。  
   
      ![rs_SetupFeatureSelection_SharePoint_with_circles](../../reporting-services/install-windows/media/rs-setupfeatureselection-sharepoint-with-circles.png)
   
 9. 如果您已选择“数据库引擎服务”，请在 **“实例配置”** 页上接受 **MSSQLSERVER** 的默认实例，然后单击 **“下一步”** 。  
   
-     ![请注意](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "请注意") 与以前的 Reporting Services 体系结构一样，Reporting Services SharePoint 服务体系结构不基于 SQL Server“实例”。  
+     ![请注意](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "备注")与以前的 Reporting Services 体系结构一样，Reporting Services SharePoint 服务体系结构不基于 SQL Server“实例”。  
   
 10. 如果您看到 **“服务器配置”** 页，则键入相应的凭据。 如果要使用 Reporting Services 数据警报或订阅功能，则需要将 SQL Server 代理的“启动类型”更改为“自动”   。 根据已在计算机上安装的项，您可能不会看到 **“服务器配置”** 页。  
   
-     选择“下一步”  。  
+     选择“**下一页**”。  
   
 11. 如果选择了“数据库引擎服务”，你将看到“数据库引擎配置”页，请将相应的帐户添加到 SQL 管理员列表，然后选择“下一步”   。  
   
@@ -164,7 +164,7 @@ ms.locfileid: "68892283"
 15. 安装将需要几分钟时间。 您将看到 **“完成”** 页，其中列出了功能以及各功能的状态。 您可能会看到一个信息对话框，指示计算机需要重新启动。  
   
 ##  <a name="bkmk_install_SSRS_sharedservice"></a> 步骤 2：注册并启动 Reporting Services SharePoint 服务  
- ![与 PowerShell 相关的内容](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")  
+ ![PowerShell 相关内容](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相关内容")  
   
 > [!NOTE]
 > 如果您要安装到现有 SharePoint 场，则不需要完成本节中的步骤。 当你在本文档的上一节中运行 SQL Server 安装向导时，就已经安装并启动了 Reporting Services SharePoint 服务。  
@@ -209,7 +209,7 @@ ms.locfileid: "68892283"
     > [!IMPORTANT]
     > 如果您看到与以下内容类似的错误消息：  
     >   
-    >     Install-SPRSService：术语“Install-SPRSService”无法识别为 cmdlet、函数、脚本文件或可操作程序的名称  。 检查名称的拼写，如果包括路径，请验证路径是否正确并重试。  
+    >     Install-SPRSService:术语“Install-SPRSService”无法识别为 cmdlet、函数、脚本文件或可操作程序的名称  。 检查名称的拼写，如果包含路径，请验证该路径是否正确，并重试。  
     >
     > 你位于 Windows Powershell 中而不是 SharePoint 命令行管理程序中，或尚未安装 Reporting Services SharePoint 模式。 有关 Reporting Services 和PowerShell 的详细信息，请参阅[用于 Reporting Services SharePoint 模式的 PowerShell cmdlet](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)。  
   
@@ -254,7 +254,7 @@ ms.locfileid: "68892283"
   
 11. 用于创建服务应用程序的过程可能会需要几分钟才能完成。 当它完成时，将显示确认消息和一个指向 **“设置订阅和警报”** 页的链接。 如果要使用 Reporting Services 订阅功能或数据警报功能，请完成此设置步骤。 有关详细信息，请参阅[用于 SSRS 服务应用程序的设置订阅和警报](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)。  
   
- ![与 PowerShell 相关的内容](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content") 有关使用 PowerShell 创建 Reporting Services 服务应用程序的信息，请参阅：  
+ ![PowerShell 相关内容](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相关内容") 有关使用 PowerShell 创建 Reporting Services 服务应用程序的信息，请参阅：  
   
 -   请参阅下面的 [等同于步骤 1-4 的 Windows PowerShell 脚本](#bkmk_full_script)部分。  
   
@@ -272,7 +272,7 @@ ms.locfileid: "68892283"
   
      打开浏览器找到所需的 SharePoint 网站。 例如 https://\<servername>/sites/bi  
   
-2.  选择“设置”![SharePoint 设置](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")  。  
+2.  选择“设置”  ![SharePoint 设置](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")。  
   
 3.  选择“网站设置”  。  
   
@@ -295,7 +295,7 @@ ms.locfileid: "68892283"
   
 -   启用网站集的 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 功能。  
   
- Parameters  
+ parameters  
   
 -   更新服务代理的 **-Account** 。 该帐户在 SharePoint 场中必须是一个托管服务帐户。 有关详细信息，请参阅 SharePoint 主题 [规划 SharePoint 2013 中的管理和服务帐户](https://technet.microsoft.com/library/cc263445.aspx)。  
   
@@ -395,7 +395,7 @@ Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi
  
  - [在多层 SharePoint 2016 场中部署 SQL Server 2016 PowerPivot 和 Power View](https://docs.microsoft.com/analysis-services/instances/install-windows/deploy-powerpivot-and-power-view-multi-tier-sharepoint-2016-farm)
  
- 对于 SharePoint 2016，你需要创建并配置一个 Excel Services 应用程序。 有关详细信息，请参见以下内容：  
+ 对于 SharePoint 2016，你需要创建并配置一个 Excel Services 应用程序。 有关详细信息，请参阅以下主题：  
   
 -   [在 Power Pivot 模式下安装 Analysis Services](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode) 中的“为 Analysis Services 集成配置 Excel Services”部分。  
   

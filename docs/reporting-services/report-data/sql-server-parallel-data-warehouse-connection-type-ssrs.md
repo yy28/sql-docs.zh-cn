@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a7da810593c6b7dee9ab80af17d840ed3d0dc4d
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 445057a5ac7144e7bb97f74f8d6eb20d8332f8e0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594032"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190628"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>SQL Server Parallel Data Warehouse 连接类型 (SSRS)
 
@@ -21,7 +21,7 @@ ms.locfileid: "73594032"
   
  该工具可跨多个物理节点对大型数据库表进行分区，每个节点运行自己的 SQL Server 实例。 当报表连接到 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 以检索报表数据时，它将连接到 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 工具中的控制节点，该节点负责管理查询处理。 建立连接后，无论是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境内部还是外部的 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 实例，都没有任何区别。  
   
- 若要在报表中包含来自 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 的数据，您必须拥有一个基于类型为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并行数据仓库的报表数据源的数据集。 此内置数据源类型基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并行数据仓库数据扩展插件。 使用此数据源类型可连接到 [!INCLUDE[ssDW](../../includes/ssdw-md.md)]并从中检索数据。  
+ 若要在报表中包含来自 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 的数据，你必须拥有一个基于类型为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并行数据仓库的报表数据源的数据集。 此内置数据源类型基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并行数据仓库数据扩展插件。 使用此数据源类型可连接到 [!INCLUDE[ssDW](../../includes/ssdw-md.md)]并从中检索数据。  
   
  此数据扩展插件支持多值参数、服务器聚合以及与连接字符串分开管理的凭据。  
    
@@ -37,7 +37,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
  此外，可以使用 **“数据源属性”** 对话框提供用户名和密码等凭据。系统会自动将 `User Id` 和 `Password` 选项追加到连接字符串中，您无需将它们作为连接字符串的一部分键入。 用户界面还提供了相关选项，用于指定 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 工具中的控制节点的 IP 地址及端口号。 默认情况下，该端口为 17000。 该端口可由管理员配置，您的连接字符串可能会使用不同的端口号。  
   
- 有关连接字符串示例的详细信息，请参阅 [报表生成器中的数据连接、数据源和连接字符串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
+ 有关连接字符串示例的更多信息，请参阅[创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
 ##  <a name="Credentials"></a> 凭据  
  [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 提供其自己的安全技术，以实现和存储用户名和密码。 不能使用 Windows 身份验证。 如果试图使用 Windows 身份验证连接到 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] ，则会发生错误。  
@@ -50,7 +50,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
 -   不需要提供任何凭据。 若要使用此选项，您必须具有为报表服务器配置的无人参与的执行帐户。 有关详细信息，请参阅[配置无人参与的执行帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。 
   
- 有关详细信息，请参阅[数据连接、数据源和连接字符串&#40;报表生成器和 SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)或[为报表数据源指定凭据和连接信息](specify-credential-and-connection-information-for-report-data-sources.md)。  
+ 有关详细信息，请参阅[创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 或[为报表数据源指定凭据和连接信息](specify-credential-and-connection-information-for-report-data-sources.md)。  
   
   
 ##  <a name="Query"></a> 查询  
@@ -141,7 +141,7 @@ WHERE EmployeeID = (@EmpID)
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
  提供访问报表数据的概述。  
   
- [报表生成器中的数据连接、数据源和连接字符串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  提供有关数据连接和数据源的信息。  
   
  [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

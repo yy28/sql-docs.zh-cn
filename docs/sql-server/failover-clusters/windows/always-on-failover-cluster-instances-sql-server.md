@@ -1,6 +1,7 @@
 ---
-title: AlwaysOn 故障转移群集实例 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: AlwaysOn 故障转移群集实例
+description: 介绍了 SQL Server 的 AlwaysOn 故障转移群集实例。
+ms.custom: seo-lt-2019
 ms.date: 01/18/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: feceb314570449173b5ffc03869e5e3ad06906d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6d9f3675a2bbd2af5d33452c0dccbb46d0596d85
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063805"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230192"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>AlwaysOn 故障转移群集实例 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -133,7 +134,7 @@ ms.locfileid: "68063805"
  SQL Server 二进制文件  
  产品二进制文件本地安装在 FCI 的每个节点上，此过程类似于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 独立安装。 但是，在启动过程中，服务将不会自动启动，而是由 WSFC 管理。  
   
- 存储器  
+ 存储  
  与可用性组相反，对于数据库和日志存储，FCI 必须在 FCI 的所有节点之间使用共享存储。 共享存储的形式可以为 WSFC 群集磁盘、SAN 上的磁盘、存储空间直通 (S2D) 或 SMB 上的文件共享。 这样一来，当发生故障转移时，FCI 中的所有节点都会具有相同的实例数据视图。 但这意味着，共享存储有可能成为单个故障点，并且 FCI 依赖于基本存储解决方案来确保数据保护。  
   
  网络名称  

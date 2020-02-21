@@ -1,8 +1,10 @@
 ---
-title: 电子邮件设置 - Reporting Services 本机模式（配置管理器）| Microsoft Docs
-ms.date: 06/01/2016
+title: SSRS 本机模式下的电子邮件设置（配置管理器）| Microsoft Docs
+description: SQL Server Reporting Services 包括电子邮件传递扩展插件，便于用户通过电子邮件分发报表。
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 f1_keywords:
 - SQL13.rsconfigtool.emailsettings.F1
@@ -11,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 872c7e4d501017627fcc64eca7ed48204c9d3533
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 9ceb9ccbbe9c54ab24b6a37e8f86c109f0e69bd6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593810"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866000"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>电子邮件设置 - Reporting Services 本机模式（配置管理器）
-Reporting Services 包括电子邮件传递扩展插件，以便可以通过电子邮件分发报表。 根据定义电子邮件订阅的方式，传递可能由通知、链接、附件或嵌入报表组成。 电子邮件传递扩展插件可与现有的邮件服务器技术一起使用。 邮件服务器必须是 SMTP 服务器或转发器。 报表服务器通过操作系统提供的协作数据对象 (CDO) 库 (cdosys.dll) 连接到 SMTP 服务器。
+SQL Server Reporting Services 包括电子邮件传递扩展插件，便于用户通过电子邮件分发报表。 根据定义电子邮件订阅的方式，传递可能由通知、链接、附件或嵌入报表组成。 电子邮件传递扩展插件可与现有的邮件服务器技术一起使用。 邮件服务器必须是 SMTP 服务器或转发器。 报表服务器通过操作系统提供的协作数据对象 (CDO) 库 (cdosys.dll) 连接到 SMTP 服务器。
 
 默认情况下，未配置报表服务器电子邮件传递扩展插件。 必须使用 Reporting Services 配置管理器最低配置此扩展插件。 若要设置高级属性，必须编辑 RSReportServer.config 文件。 如果无法将报表服务器配置为使用此扩展插件，则可以将报表传递到共享文件夹。 有关详细信息，请参阅 Reporting Services 中的文件共享传递。
 
@@ -72,7 +74,7 @@ Reporting Services 包括电子邮件传递扩展插件，以便可以通过电�
      
           选择此选项将在 rsreportserver.config 中设置 `<SendUsing>` 的值为 **2** 和 `<SMTPAuthenticate>` 的值为 **2** 。
 
-5. 选择“应用”  。
+5. 选择“应用”。 
 
 6. 你可以在 rsreportserver.config 中对电子邮件配置选择性地调整附加字段。
 
@@ -109,7 +111,7 @@ Reporting Services 包括电子邮件传递扩展插件，以便可以通过电�
      <SendPassword></SendPassword>
 </RSEmailDPConfiguration>
 ```
-## <a name="configuration-options-for-setting-the-to-field-in-a-message"></a>用于在邮件中设置“收件人:”字段的配置选项
+## <a name="configuration-options-for-setting-the-to-field-in-a-message"></a>用于设置邮件中的“收件人:”字段的配置选项
 根据“管理单独的订阅”任务授予的权限而创建的用户定义订阅包含基于域用户帐户的预设用户名。 用户创建订阅时，“收件人:”  字段中的收件人姓名会使用创建该订阅的人员的域用户帐户自行转换为地址。
 
 如果您所用的 SMTP 服务器或转发器使用了不同于域用户帐户的电子邮件帐户，则 SMTP 服务器尝试将报表传递给该用户时，报表传递会失败。
@@ -122,7 +124,7 @@ Reporting Services 包括电子邮件传递扩展插件，以便可以通过电�
 
 3. 将 `<DefaultHostName>` 设置为 SMTP 服务器或转发器的域名系统 (DNS) 名称或 IP 地址。
 
-4. 保存该文件。
+4. 保存文件。
 
 ## <a name="configuration-options-for-remote-smtp-service"></a>远程 SMTP 服务的配置选项
 报表服务器与 SMTP 服务器或转发器之间的连接是由下列配置设置决定的：
@@ -158,7 +160,7 @@ Reporting Services 包括电子邮件传递扩展插件，以便可以通过电�
 
 7. 设置 `<From>`。 您必须指定一个有权从 SMTP 服务器中发送邮件的用户帐户。
 
-8. 保存该文件。
+8. 保存文件。
 
      报表服务器将自动使用新的设置；不需要重新启动该服务。 您可以指定其他 SMTP 设置，以进一步配置如何将 SMTP 服务器用于报表服务器电子邮件传递。
 
@@ -217,7 +219,7 @@ Reporting Services 包括电子邮件传递扩展插件，以便可以通过电�
      
 16. 设置 `<From>`。 这将设置电子邮件的“发件人：”行中显示的值  。
      
-17. 保存该文件。
+17. 保存文件。
   
 ## <a name="see-also"></a>另请参阅  
 [Reporting Services 配置管理器（本机节点）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  

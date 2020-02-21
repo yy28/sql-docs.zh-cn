@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 1c38c2e8-7a29-4f79-a4a3-85ed2b13723b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0daca68faa97a59b9c98b13ab9ca8f867341917c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: f2ce2535a28661e40e845aa87936f3c23353e544
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500471"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190848"
 ---
 # <a name="create-and-modify-embedded-data-sources"></a>创建和修改嵌入的数据源
   嵌入数据源在报表定义中定义并只由该报表使用。  
@@ -33,7 +33,7 @@ ms.locfileid: "66500471"
   
     2.  采用以下备选方案之一指定连接字符串：  
   
-        -   直接在 **“连接字符串”** 文本框中键入连接字符串。 有关示例连接字符串的列表，请参阅[报表生成器中的数据连接、数据源和连接字符串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)或[数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
+        -   直接在 **“连接字符串”** 文本框中键入连接字符串。 有关连接字符串的示例列表，请参阅[创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
         -   单击表达式 (**fx** ) 按钮创建计算结果为连接字符串的表达式。 在 **“表达式”** 对话框的“表达式”窗格中，键入该表达式。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66500471"
   
     2.  采用以下备选方案之一指定连接字符串：  
   
-        -   直接在 **“连接字符串”** 文本框中键入连接字符串。 有关示例连接字符串的列表，请参阅 [报表生成器中的数据连接、数据源和连接字符串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
+        -   直接在 **“连接字符串”** 文本框中键入连接字符串。 有关连接字符串的示例列表，请参阅[创建数据连接字符串 - 报表生成器和 SSRS](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
         -   单击表达式 (**fx** ) 按钮创建计算结果为连接字符串的表达式。 在 **“表达式”** 对话框的“表达式”窗格中，键入该表达式。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

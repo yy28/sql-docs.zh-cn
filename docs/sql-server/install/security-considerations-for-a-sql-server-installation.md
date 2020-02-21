@@ -1,5 +1,5 @@
 ---
-title: 安装 SQL Server 的安全注意事项 | Microsoft Docs
+title: 安全注意事项
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
@@ -25,19 +25,19 @@ helpviewer_keywords:
 ms.assetid: cf96155f-30a8-48b7-8d6b-24ce90dafdc7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 302b29901b9f20c70799704bdf75938270900173
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c11b2a788561af2281a7f0967972e63358c4ab82
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019809"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258966"
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>安装 SQL Server 的安全注意事项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
  安全对于每个产品和每家企业都很重要。 遵循简单的最佳做法，可以避免很多安全漏洞。 本文讨论安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 前和安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 后应考虑的一些最佳安全做法。 这些功能的参考文章中包括了特定功能的安全指南。  
   
-## <a name="before-installing-includessnoversionincludesssnoversion-mdmd"></a>安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="before-installing-ssnoversion"></a>安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  设置服务器环境时，请遵循以下最佳做法：  
   
 -   [增强物理安全性](#physical_security)  
@@ -64,11 +64,11 @@ ms.locfileid: "68019809"
 -   定期备份所有数据，并将备份存储在远离工作现场的安全位置。  
   
 ###  <a name="firewalls"></a> Use Firewalls  
- 防火墙对于协助确保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的安全十分重要。 若要使防火墙发挥最佳效用，请遵循以下指南：  
+ 防火墙对于协助确保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的安全十分重要。 如果遵循以下准则，防火墙将最为有效：  
   
 -   在服务器和 Internet 之间放置防火墙。 启用防火墙。 如果防火墙处于关闭状态，请将其开启。 如果防火墙处于开启状态，请不要将其关闭。  
   
--   将网络分成若干安全区域，区域之间用防火墙分隔。 先阻塞所有通信流量，然后有选择地只接受所需的通信。  
+-   将网络分成若干安全区域，区域之间用防火墙分隔。 阻止所有流量，然后有选择性地仅接受所需内容。  
   
 -   在多层环境中，使用多个防火墙创建屏蔽子网。  
   
@@ -79,17 +79,17 @@ ms.locfileid: "68019809"
  有关默认 Windows 防火墙设置的详细信息，以及有关影响 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的 TCP 端口的说明，请参阅 [配置 Windows 防火墙以允许 SQL Server 访问](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
   
 ###  <a name="isolated_services"></a> Isolate Services  
- 隔离服务可以降低风险，防止已受到危害的服务被用于危及其他服务。 若要隔离服务，请考虑以下原则：  
+ 隔离服务可降低一项遭到入侵的服务可能被用来危害其他服务的风险。 要隔离服务，请考虑以下准则：  
   
 -   在不同的 Windows 帐户下运行各自的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。 对每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务，尽可能使用不同的低权限 Windows 或本地用户帐户。 有关详细信息，请参阅 [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)预览版本升级问题的解答。  
   
 ###  <a name="sa_with_least_privileges"></a> Configure a Secure File System  
  使用正确的文件系统可提高安全性。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装，应执行以下几项任务：  
   
--   使用 NTFS 文件系统 (NTFS)。 NTFS 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的首选文件系统，因为它比 FAT 文件系统更加稳定和更容易恢复。 NTFS 还可以使用安全选项，例如文件和目录访问控制列表 (ACL) 和加密文件系统 (EFS) 文件加密。 在安装期间，如果检测到 NTFS， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将对注册表项和文件设置相应的 ACL。 不应对这些权限做任何更改。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本可能不支持在具有 FAT 文件系统的计算机上进行安装。  
+-   使用 NTFS 文件系统 (NTFS)。 NTFS 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的首选文件系统，因为它比 FAT 文件系统更加稳定和更容易恢复。 NTFS 还启用安全选项，例如文件和目录访问控制列表 (ACL) 和加密文件系统 (EFS) 文件加密。 在安装期间，如果检测到 NTFS， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将对注册表项和文件设置相应的 ACL。 不应对这些权限做任何更改。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本可能不支持在具有 FAT 文件系统的计算机上进行安装。  
   
     > [!NOTE]  
-    >  如果使用 EFS，则将在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的帐户的标识下加密数据库文件。 只有此帐户才可解密文件。 如果必须更改运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的帐户，则应先在旧帐户下解密文件，然后在新帐户下将文件重新加密。  
+    >  如果使用 EFS，则将在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的帐户的标识下加密数据库文件。 只有该帐户才能解密文件。 如果必须更改运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的帐户，则应先在旧帐户下解密文件，然后在新帐户下将文件重新加密。  
   
 -   对关键数据文件使用独立磁盘冗余阵列 (RAID)。  
   
@@ -121,11 +121,11 @@ ms.locfileid: "68019809"
   
 -   将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装到计算机上之后，无法将此计算机从域控制器更改为域成员。 必须先卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，然后才能将主机计算机更改为域成员。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例。  
+-   在群集节点用作域控制器的情况下，不支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序不能在只读域控制器上创建安全组或预配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户。 在这种情况下，安装将失败。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序不能在只读域控制器上创建安全组或设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户。 在这种情况下，安装将失败。  
   
-## <a name="during-or-after-installation-of-includessnoversionincludesssnoversion-mdmd"></a>在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="during-or-after-installation-of-ssnoversion"></a>在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  安装完成后，若要增强所安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 软件的安全性，请遵循以下有关帐户和身份验证模式的最佳做法：  
   
  **服务帐户**  
@@ -146,7 +146,7 @@ ms.locfileid: "68019809"
   
 -   始终为 **sa** 帐户分配强密码。  
   
--   始终启用密码策略检查来验证密码强度以及密码是否过期。  
+-   始终启用密码策略检查以检查密码强度和有效期。  
   
 -   始终对所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名使用强密码。  
   

@@ -1,6 +1,7 @@
 ---
-title: 将报表服务器数据库移动到其他计算机（SSRS 本机模式）| Microsoft Docs
-ms.date: 05/30/2017
+title: 将报表服务器数据库移至其他计算机（本机模式）| Microsoft Docs
+description: 可将安装 SQL Server 数据库引擎时使用的报表服务器数据库移至其他计算机上的实例。
+ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: be1e4f34356f611e4c76ba57aa12bd13b0bf8f30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 762bee43a32bed19b5646ad982467c67c933ed85
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65619683"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254579"
 ---
-# <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>将报表服务器数据库移至其他计算机（SSRS 本机模式）
+# <a name="moving-report-server-databases-to-another-computer-ssrs-native-mode"></a>将报表服务器数据库移至其他计算机（SSRS 本机模式）
 
   可将安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 时使用的报表服务器数据库移至其他计算机上的实例。 必须一同移动或复制数据库 reportserver 和数据库 reportservertempdb。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装需要这两个数据库；reportservertempdb 数据库必须按名称与将要移动的 reportserver 主数据库相关。  
   
@@ -72,7 +73,7 @@ ms.locfileid: "65619683"
 ## <a name="backing-up-and-restoring-the-report-server-databases"></a>备份和还原报表服务器数据库  
  如果不能使报表服务器脱机，则可使用备份和还原来重新定位报表服务器数据库。 您必须使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句执行备份和还原。 还原数据库后，必须将报表服务器配置为使用新服务器实例上的数据库。 有关详细信息，请参阅本主题结尾的说明。  
   
-### <a name="using-backup-and-copyonly-to-backup-the-report-server-databases"></a>使用 BACKUP 和 COPY_ONLY 备份报表服务器数据库  
+### <a name="using-backup-and-copy_only-to-backup-the-report-server-databases"></a>使用 BACKUP 和 COPY_ONLY 备份报表服务器数据库  
  备份数据库时，请设置 COPY_ONLY 参数。 请确保备份数据库和日志文件。  
   
 ```  
@@ -200,15 +201,15 @@ GO
   
 1.  启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器并连接到报表服务器。  
   
-2.  在“数据库”页上，单击 **“更改数据库”** 。 单击“下一步”  。  
+2.  在“数据库”页上，单击 **“更改数据库”** 。 单击“下一步”。   
   
-3.  单击 **“选择现有报表服务器数据库”** 。 单击“下一步”  。  
+3.  单击 **“选择现有报表服务器数据库”** 。 单击“下一步”。   
   
-4.  选择现在承载报表服务器数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并单击 **“测试连接”** 。 单击“下一步”  。  
+4.  选择现在承载报表服务器数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并单击 **“测试连接”** 。 单击“下一步”。   
   
-5.  在“数据库名称”中，选择要使用的报表服务器数据库。 单击“下一步”  。  
+5.  在“数据库名称”中，选择要使用的报表服务器数据库。 单击“下一步”。   
   
-6.  在“凭据”中，指定报表服务器用来连接到报表服务器数据库的凭据。 单击“下一步”  。  
+6.  在“凭据”中，指定报表服务器用来连接到报表服务器数据库的凭据。 单击“下一步”。   
   
 7.  单击 **“下一步”** ，然后单击 **“完成”** 。  
   

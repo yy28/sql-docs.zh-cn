@@ -14,10 +14,10 @@ ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e1cf8ea99cac00670bd96437e0a5484d2888cbe9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68044788"
 ---
 # <a name="failover-cluster-troubleshooting"></a>故障转移群集疑难解答
@@ -38,17 +38,17 @@ ms.locfileid: "68044788"
   
 #### <a name="how-to-revalidate-your-cluster"></a>如何重新验证群集  
   
-1.  在故障转移群集管理单元中，控制台树内，确保选定“故障转移群集管理”  ，然后在“管理”  下面，单击“验证配置”  。  
+1.  在故障转移群集管理单元中，控制台树内，确保选定“故障转移群集管理”，然后在“管理”下面，单击“验证配置”。  
   
 2.  按照向导中的说明指定服务器和测试，然后运行这些测试。 在运行测试之后会显示 **“摘要”** 页。  
   
 3.  仍位于“摘要”  页面时，单击“查看报告”  以查看测试结果。  
   
-     若要在关闭向导之后查看测试结果，请参阅 **%SystemRoot%\Cluster\Reports\Validation Report date and time.html**，其中 **%SystemRoot%** 是安装操作系统的文件夹（例如，**C:\Windows**）。  
+     若要在关闭向导之后查看测试结果，请参阅 **%SystemRoot%\Cluster\Reports\Validation Report date and time.html** ，其中 **%SystemRoot%** 是安装操作系统的文件夹（例如， **C:\Windows**）。  
   
-4.  若要查看可帮助你解释测试结果的帮助主题，请单击“关于群集验证测试的详细信息”  。  
+4.  若要查看可帮助你解释测试结果的帮助主题，请单击“关于群集验证测试的详细信息” 。  
   
- 若要在关闭向导后查看关于群集验证的帮助主题，在故障转移群集管理单元中，依次单击“帮助”  、“帮助主题”  和“内容”  选项卡，展开故障转移群集帮助的内容并单击“验证故障转移群集配置”  。  验证向导运行完毕后，“摘要报告”  会显示结果。 所有带绿色复选标记或者在某些情况下带黄色三角形标记（警告）的测试表示通过。 查看问题区域（红色的 X 或黄色的问号）时，在汇总测试结果的报表部分中，单击单个测试以查看详细信息。 任何红色的 X 标示的问题必须在疑难解答 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 问题之前解决。  
+ 若要在关闭向导后查看关于群集验证的帮助主题，在故障转移群集管理单元中，依次单击“帮助”、“帮助主题”和“内容”选项卡，展开故障转移群集帮助的内容并单击“验证故障转移群集配置”。  验证向导运行完毕后，“摘要报告”  会显示结果。 所有带绿色复选标记或者在某些情况下带黄色三角形标记（警告）的测试表示通过。 查看问题区域（红色的 X 或黄色的问号）时，在汇总测试结果的报表部分中，单击单个测试以查看详细信息。 任何红色的 X 标示的问题必须在疑难解答 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 问题之前解决。  
   
  **安装更新**  
   
@@ -83,16 +83,16 @@ ms.locfileid: "68044788"
  以下列表介绍了常见的使用问题并说明如何解决这些问题。  
   
 ### <a name="problem-incorrect-use-of-command-prompt-syntax-to-install-sql-server"></a>问题：不正确使用命令提示语法安装 SQL Server  
- **问题 1：** 在从命令提示符使用 /qn 开关时，很难诊断安装程序问题，因为 /qn 开关取消了所有安装程序对话框和错误消息   。 如果指定了 **/qn** 开关，则所有安装程序消息（包括错误消息）都将写入安装程序日志文件。 有关日志文件的详细信息，请参阅 [查看和阅读 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
+ **问题 1：** 在从命令提示符使用 /qn 开关时，很难诊断安装程序问题，因为 /qn 开关取消了所有安装程序对话框和错误消息。 如果指定了 **/qn** 开关，则所有安装程序消息（包括错误消息）都将写入安装程序日志文件。 有关日志文件的详细信息，请参阅 [查看和阅读 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
   
- **解决方法 1**：使用 /qb 开关替代 /qn 开关   。 如果使用 **/qb** 开关，将显示每个步骤中的基本 UI（包括错误消息）。  
+ **解决方法 1**：使用 /qb 开关替代 /qn 开关。 如果使用 **/qb** 开关，将显示每个步骤中的基本 UI（包括错误消息）。  
   
 ### <a name="problem-sql-server-cannot-log-on-to-the-network-after-it-migrates-to-another-node"></a>问题：在迁移到另一个节点之后，SQL Server 无法登录到网络  
- **问题 1：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服务帐户无法与域控制器取得联系。  
+ **问题 1：**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户无法与域控制器取得联系。  
   
  **解决方法 1**：检查事件日志以查看是否存在网络连接问题，例如适配器故障或 DNS 问题。 验证是否能成功对域控制器运行 ping 命令。  
   
- **问题 2：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户密码在所有群集节点上并非全都一致，或者节点没有重启从失败的节点迁移过来的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务。  
+ **问题 2：**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户密码在所有群集节点上并非全都一致，或者节点没有重启从失败的节点迁移过来的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务。  
   
  **解决方法 2：** 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器更改 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户密码。 如果不这样做，并且更改了其中一个节点上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户密码，也必须更改所有其他节点上的密码。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器会自动执行此操作。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "68044788"
   
  **解决方法 2：** 使用 NBTSTAT 查找重复的名称，然后更正问题。  
   
- **问题 3：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不是使用命名管道进行连接。  
+ **问题 3：**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不是使用命名管道进行连接。  
   
  **解决方法 3：** 若要使用命名管道进行连接，请使用 SQL Server 配置管理器创建一个别名，以连接到适当的计算机。 例如，如果有一个群集包含两个节点（**节点 A** 和 **节点 B**）和一个具有默认实例的故障转移群集实例 (**Virtsql**)，则可以执行下列步骤连接到网络名称资源已离线的服务器：  
   
@@ -139,7 +139,7 @@ ms.locfileid: "68044788"
 6.  使用别名 SQLTEST1 作为服务器名称连接到此实例。  
   
 ### <a name="problem-sql-server-setup-fails-on-a-cluster-with-error-11001"></a>问题：群集上的 SQL Server 安装程序因发生错误 11001 而失败  
- **问题：** [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.X\Cluster] 中存在孤立的注册表项  
+ **问题：**[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.X\Cluster] 中存在孤立的注册表项  
   
  **解决方法：** 确保当前未使用 MSSQL.X 注册表配置单元，然后删除该群集项。  
   
@@ -167,15 +167,15 @@ ms.locfileid: "68044788"
   
  若要完全启用 MS DTC，请执行下列步骤：  
   
-1.  在控制面板中打开 **“管理工具”** ，然后打开 **“计算机管理”** 。  
+1.  在控制面板中打开 **“管理工具”**，然后打开 **“计算机管理”**。  
   
-2.  在“计算机管理”的左侧面板中，展开 **“服务和应用程序”** ，然后单击 **“服务”** 。  
+2.  在“计算机管理”的左侧面板中，展开 **“服务和应用程序”**，然后单击 **“服务”**。  
   
-3.  在“计算机管理”的右窗格中，右键单击“分布式事务处理协调器”  ，并选择“属性”  。  
+3.  在“计算机管理”的右窗格中，右键单击“分布式事务处理协调器”，并选择“属性”。  
   
 4.  在 **“Distributed Transaction Coordinator 的属性”** 窗口中，单击 **“常规”** 选项卡，再单击 **“停止”** 来停止此服务。  
   
-5.  在“分布式事务处理协调器”  窗口中，单击“登录”  选项卡，将登录帐户设置为 NT AUTHORITY\NetworkService。  
+5.  在“分布式事务处理协调器”窗口中，单击“登录”选项卡，将登录帐户设置为 NT AUTHORITY\NetworkService。  
   
 6.  单击 **“应用”** 和 **“确定”** 以关闭 **“分布式事务处理协调器”** 窗口。 关闭 **“计算机管理”** 窗口。 关闭 **“管理工具”** 窗口。  
   
@@ -185,7 +185,7 @@ ms.locfileid: "68044788"
  如果扩展存储过程使用 COM 组件，管理员必须在群集的所有节点中都注册 COM 组件。 活动节点的注册表中必须包含加载和执行 COM 组件所需的信息，才能创建这些组件。 否则，这些信息将保留在最先注册 COM 组件的计算机的注册表中。  
   
 ## <a name="see-also"></a>另请参阅  
- [查看和阅读 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
+ [查看和读取 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [扩展存储过程的工作方式](../../../relational-databases/extended-stored-procedures-programming/how-extended-stored-procedures-work.md)   
  [扩展存储过程的执行特征](../../../relational-databases/extended-stored-procedures-programming/execution-characteristics-of-extended-stored-procedures.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: "\"SQL Server 登录\" 对话框 (ODBC) |Microsoft Docs"
+title: SQL Server 登录对话框 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/21/2018
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: v-jizho2
 ms.openlocfilehash: fcfde122b978fa1e77baa690a1f3e09417dab1c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67989419"
 ---
 # <a name="sql-server-login-dialog-box-odbc"></a>“SQL Server 登录”对话框 (ODBC)
@@ -23,9 +23,9 @@ ms.locfileid: "67989419"
 
 ## <a name="options"></a>选项
 
-### <a name="server"></a>“服务器”
+### <a name="server"></a>服务器
 
-网络上 SQL Server 的实例名称。 从列表中选择一个服务器\实例名，或在“服务器”  框中键入服务器\实例名。 或者，可以在客户端计算机上使用“SQL Server 配置管理器”  创建服务器别名，并在“服务器”  框中键入该名称。
+网络上的 SQL Server 实例的名称。 从列表中选择一个服务器\实例名，或在“服务器”  框中键入服务器\实例名。 或者，可以在客户端计算机上使用“SQL Server 配置管理器”  创建服务器别名，并在“服务器”  框中键入该名称。
 
 当使用与 SQL Server 相同的计算机时可以输入“(local)”。 即使正在运行非联网版的 SQL Server，也可以连接到 SQL Server 的本地实例。
 
@@ -33,14 +33,14 @@ ms.locfileid: "67989419"
 
 ### <a name="authentication-mode"></a>身份验证模式
 
-从以下项之一中选择身份验证模式:
-- 具有登录 ID 和密码**SQL Server**
-- 使用当前登录用户的帐户进行**Windows 集成**的身份验证
-- 具有登录名和密码**Active Directory 密码**
-- 使用当前登录用户的帐户**Active Directory 集成**身份验证
+请选择以下身份验证模式之一：
+- 使用登录 ID 和密码的 SQL Server 
+- 使用当前登录用户帐户的 Windows 集成  身份验证
+- 使用登录 ID 和密码的 Active Directory 密码 
+- 使用当前登录用户帐户的 Active Directory 集成  身份验证
 - Active Directory 交互式身份验证与登录 ID 
 
-有关身份验证模式的详细信息, 请参阅[数据源向导屏幕 2](../../../connect/odbc/windows/dsn-wizard-2.md) 。
+有关身份验证模式的详细信息，请参阅[数据源向导屏幕 2](../../../connect/odbc/windows/dsn-wizard-2.md)。
 
 ### <a name="server-spn"></a>服务器 SPN
 
@@ -48,11 +48,11 @@ ms.locfileid: "67989419"
 
 ### <a name="login-id"></a>登录 ID
 
-如果**身份验证模式**设置为**SQL Server**或**Active Directory Password**或**Active Directory Interactive**, 则指定用于连接的 SQL Server 或 Azure Active Directory 登录 ID。 否则, "**登录 ID** " 框处于禁用状态。
+如果“身份验证模式”  设置为“SQL Server”  或“Active Directory 密码”  或“Active Directory 交互式”  ，则指定用于连接的 SQL Server 或 Azure Active Directory 登录 ID。 否则，将禁用“登录 ID”  框。
 
-### <a name="password"></a>Password
+### <a name="password"></a>密码
 
-指定 SQL Server 的密码, 或在**身份验证模式**设置为**SQL Server**或**Active Directory password**时用于连接的 Azure Active Directory 登录 ID。 否则, 将禁用**密码**框。
+如果“身份验证模式”  设置为“SQL Server”  或“Active Directory 密码”  ，则指定用于连接的 SQL Server 或 Azure Active Directory 登录 ID 的密码。 否则，将禁用“密码”  框。
 
 ### <a name="options"></a>选项
 
@@ -70,7 +70,7 @@ ms.locfileid: "67989419"
 
 再次指定新密码以便确认。
 
-### <a name="database"></a>“数据库”
+### <a name="database"></a>数据库
 
 指定将用于该连接的默认数据库。 此设置将覆盖为该服务器上的登录名指定的默认数据库。 如果未指定数据库，连接将使用为该服务器上的登录名指定的默认数据库。
 
@@ -82,7 +82,7 @@ ms.locfileid: "67989419"
 
 您还可以指定镜像服务器的 SPN。 镜像服务器的 SPN 用于在客户端和服务器之间相互进行身份验证。
 
-### <a name="language"></a>“报表”
+### <a name="language"></a>语言
 
 指定用于 SQL Server 系统消息的国家/地区语言。 运行 SQL Server 的计算机必须安装该语言。 此设置将覆盖为该服务器上的登录名指定的默认语言。 如果未指定语言，连接将使用为该服务器上的登录名指定的默认语言。
 
@@ -96,12 +96,12 @@ ms.locfileid: "67989419"
 
 ### <a name="use-strong-encryption-for-data"></a>对数据使用强加密
 
-如果选择此选项, 将对通过连接传递的数据进行加密。 默认情况下，即使清除此复选框，也将对登录名加密。
+如果选择此选项，将对通过连接传递的数据进行加密。 默认情况下，即使清除此复选框，也将对登录名加密。
 
 ### <a name="trust-server-certificate"></a>信任服务器证书
 
-此选项仅在启用 "**对数据使用强加密**" 时适用。 如果选择此选项, 将不会验证服务器的证书是否具有服务器的正确主机名, 并由受信任的证书颁发机构颁发。
+仅当启用“对数据使用强加密”  时，此选项才适用。 选中后，将不会验证服务器的证书是否有服务器的正确主机名，以及是否由受信任的证书颁发机构颁发。
 
 ## <a name="see-also"></a>另请参阅
 
-[Microsoft ODBC Driver for SQL Server（Windows 平台）](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)
+[Windows 上的 Microsoft ODBC Driver for SQL Server](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)

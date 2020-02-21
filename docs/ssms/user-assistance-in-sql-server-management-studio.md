@@ -1,6 +1,6 @@
 ---
-title: SQL Server Management Studio 中的用户帮助 | Microsoft Docs
-ms.custom: ''
+title: SQL Server Management Studio 中的用户帮助
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 46393ffe47252be2d445647d1b3ebed45f72f946
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 01d2738b6a095646d1585857fdee7760079672c3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263395"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252207"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>SQL Server Management Studio 中的用户帮助
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "68263395"
 对“帮助”的帮助（[!INCLUDE[msCoName](../includes/msconame_md.md)] Document Explorer 帮助）可将用户链接到有关帮助查看器的文档，但这些主题位于一个独立于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 联机丛书的集合中。 有关帮助查看器的信息，请从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 联机丛书的“帮助”菜单上选择“帮助之帮助”  。  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>MSDN Online 和 SQL Server 社区  
-[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 中的“帮助”还允许用户通过访问网站上的 MSDN Online 和专门针对于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的社区两种途径来获取信息。 您可以：  
+[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 中的“帮助”还允许用户通过访问网站上的 MSDN Online 和专门针对于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的社区两种途径来获取信息。 可以：  
   
 -   从“如何实现”页访问 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 社区。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68263395"
   
 1.  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的“帮助”  菜单上，单击“如何实现”  。  
   
-2.  此时会打开 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]“操作方法”  页。 在“社区链接”侧栏中，单击要访问的社区站点的名称。  
+2.  此时会打开“[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]操作方法  ”页。 在“社区链接”侧栏中，单击要访问的社区站点的名称。  
   
     > [!NOTE]  
     > 运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的计算机必须直接连接到 Web。  
@@ -75,7 +75,7 @@ ms.locfileid: "68263395"
   
 4.  如果 **Codezone 社区**是你选定的搜索提供程序之一，则可根据需要在“Codezone 社区”  列表中选择和清除项。  
   
-5.  单击“确定”  。  
+5.  单击“确定”。   
   
 #### <a name="to-search-msdn-online-and-sql-server-focused-communities-from-the-search-page"></a>从“搜索”页搜索 MSDN Online 和专门针对于 SQL Server 的社区  
   

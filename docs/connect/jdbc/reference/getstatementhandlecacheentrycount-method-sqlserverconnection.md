@@ -1,5 +1,5 @@
 ---
-title: getStatementHandleCacheEntryCount 方法 (SQLServerConnection) |Microsoft Docs
+title: getStatementHandleCacheEntryCount 方法 (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6a5d87ab4f78a5f006e87c34fa774fd9f430aaae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979532"
 ---
 # <a name="getstatementhandlecacheentrycount-method-sqlserverconnection"></a>getStatementHandleCacheEntryCount 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- 返回当前汇集的已准备语句句柄的数目。
+ 返回准备的共用语句句柄的当前数目。
 
 ## <a name="syntax"></a>语法  
   
@@ -35,13 +35,13 @@ public int getStatementHandleCacheEntryCount()
 ```  
 
 ## <a name="return-value"></a>返回值
- 一个**int** , 其中包含当前汇集的已准备好的语句句柄数。
+ 包含准备的共用语句句柄的当前数目的 int  。
 
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
-## <a name="remarks"></a>Remarks  
- 此方法可从 JDBC 驱动程序版本6.4 和更前版本获得。
+## <a name="remarks"></a>备注  
+ JDBC 驱动程序版本 6.4 及更高版本中提供此方法。
  
 ## <a name="see-also"></a>另请参阅  
  [SQLServerConnection 成员](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

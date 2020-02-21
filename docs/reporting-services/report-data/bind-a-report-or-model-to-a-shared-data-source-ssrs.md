@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bd958c0bbe781f7c39c2a2e00ecbc0ccfde7164e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 9e41ac864403dce2cad648790099496b53c4b6dc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65573258"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190898"
 ---
 # <a name="bind-a-report-to-a-shared-data-source-ssrs"></a>将报表绑定到共享数据源 (SSRS)
   在某些情况下，例如将报表从测试服务器移到生产服务器时，最好将文件保存到本地计算机，然后将其上传到其他报表服务器。 将报表上传到新服务器时，需要将其重新绑定到存储在新报表服务器上的共享数据源。 如果不重新绑定报表，在从新报表服务器对其进行访问时，报表将无法正常工作。  
@@ -34,7 +34,7 @@ ms.locfileid: "65573258"
   
 4.  选择该数据源，然后单击“保存”  。  
   
-5.  单击 **“应用”** 。  
+5.  单击“应用”  。  
   
      此时，报表已绑定到所选择的数据源。  
   
@@ -58,12 +58,12 @@ ms.locfileid: "65573258"
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-10. 单击 **“关闭”** 。  
+10. 单击“关闭”  。  
   
 ## <a name="see-also"></a>另请参阅  
  [将文档上传到 SharePoint 库（SharePoint 模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)   
  [创建和管理共享数据源（SharePoint 集成模式下的 Reporting Services）](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)   
- [数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Reporting Services 支持的数据源 (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
   
   

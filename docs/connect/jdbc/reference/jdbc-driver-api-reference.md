@@ -1,5 +1,5 @@
 ---
-title: JDBC 驱动程序 API 参考 |Microsoft Docs
+title: JDBC 驱动程序 API 参考 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/19/2018
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: e4e1ae9d-18a6-41db-8bd2-9cf0eee4cccb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 04cbe39698a99fbde43043b70bb9b1f0e5887f58
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976999"
 ---
 # <a name="jdbc-driver-api-reference"></a>JDBC 驱动程序 API 参考
@@ -25,26 +25,26 @@ ms.locfileid: "67976999"
 
 
 
-### <a name="javadocio-website-is-primary"></a>JavaDoc.io 网站是主要网站
+### <a name="javadocio-website-is-primary"></a>JavaDoc.io 网站为主要网站
 
-Microsoft JDBC API 参考文档托管在 JavaDoc.io 网站上供你查看。 JavaDoc.io 是 JDBC 参考文档的主要网站。 有关 JavaDoc.io 的 JDBC 参考文档, 请访问以下直接链接:
+Microsoft JDBC API 参考文档托管在 JavaDoc.io 网站上以供查看。 JavaDoc.io 是 JDBC 参考文档的主要网站。 我们关于 JavaDoc.io 的 JDBC 参考文档可通过以下直接链接获取：
 
 - [https://javadoc.io/doc/com.microsoft.sqlserver/mssql-jdbc/](https://javadoc.io/doc/com.microsoft.sqlserver/mssql-jdbc/)
 
-JavaDoc.io 提供了从版本6.0 开始的 JDBC 参考文档。
+JavaDoc.io 提供了从版本 6.0 开始的 JDBC 参考文档。
 
-#### <a name="only-legacy-jdbc-documentation-is-here-on-docs"></a>文档上仅提供旧版 JDBC 文档
+#### <a name="only-legacy-jdbc-documentation-is-here-on-docs"></a>此处文档仅提供旧版 JDBC 文档
 
-对于新版本, 在中对 jdbc **https://docs.microsoft.com/sql/connect/jdbc/reference/** 类进行更新后, 将不再更新上的 jdbc API 参考文档。 但是, 此处的文章包含对 JDBC 版本4.1 和4.2 的所有参考。
+当针对新版本更新 JDBC 类时，此处 **https://docs.microsoft.com/sql/connect/jdbc/reference/** 上的 JDBC API 参考文档文章将不再更新。 但是，这里的文章包含了 JDBC 4.1 和 4.2 版本的所有参考。
 
-此处也提供了 JDBC 版本6.0 和更高版本的文档。 但对于任何版本6.0 或更高版本, 请使用 JavaDoc.io 网站。
+还提供了 JDBC 6.0 版和一些更高版本的文档。 但对于任何 6.0 版或更高版本，请使用 JavaDoc.io 网站。
 
 
 
 ### <a name="important-notes"></a>重要说明
 
 > [!NOTE]  
->  有关使用 JDBC 驱动程序的概念性信息, 请参阅[Jdbc 驱动程序概述](../../../connect/jdbc/overview-of-the-jdbc-driver.md)。  
+>  有关使用 JDBC 驱动程序的概念性信息，请参阅 [JDBC 驱动程序概述](../../../connect/jdbc/overview-of-the-jdbc-driver.md)。  
   
 > [!IMPORTANT]  
 >  对于 JDBC 4.1 和 4.2 符合性支持，请使用 Microsoft JDBC Driver 4.2 for SQL Server（或更高版本）。 以前版本的 Microsoft JDBC Drivers 4.1 和 4.0 不支持 JDBC 4.1 或 4.2 中引入的新方法。  
@@ -57,7 +57,7 @@ JavaDoc.io 提供了从版本6.0 开始的 JDBC 参考文档。
 >   
 >  本部分内容不含有从 Microsoft JDBC Driver 6.0 for SQL Server 开始提供的 Always Encrypted 的 API 详细信息。 请参阅 [JDBC 驱动程序的 Always Encrypted API 参考](../../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)  
 >   
->  本部分未提供使用表值参数的 API 详细信息, 从 Microsoft JDBC Driver 6.0 for SQL Server 开始。 请参阅[使用表值参数](../../../connect/jdbc/using-table-valued-parameters.md)  
+>  本部分内容不含有从 Microsoft JDBC Driver 6.0 for SQL Server 开始提供的使用表值参数的 API 详细信息。 请参阅[使用表值参数](../../../connect/jdbc/using-table-valued-parameters.md)  
 >   
 >  Microsoft JDBC Driver 6.4 支持使用 JDK 7.0、8.0 和 9.0 进行编译。  
 >   
@@ -71,7 +71,7 @@ JavaDoc.io 提供了从版本6.0 开始的 JDBC 参考文档。
 
 ## <a name="interfaces"></a>界面  
   
-|接口名称|描述|  
+|接口名称|说明|  
 |--------------------|-----------------|  
 |[ISQLServerCallableStatement 接口](../../../connect/jdbc/reference/isqlservercallablestatement-interface.md)|允许你指定要与输入和输出参数一起使用的要调用的存储过程名称。|  
 |[ISQLServerConnection 接口](../../../connect/jdbc/reference/isqlserverconnection-interface.md)|表示连接至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库的 JDBC 连接。|  
@@ -85,7 +85,7 @@ JavaDoc.io 提供了从版本6.0 开始的 JDBC 参考文档。
   
 ## <a name="classes"></a>类  
   
-|类名称|描述|  
+|类名|说明|  
 |----------------|-----------------|  
 |[DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md)|表示 microsoft.sql.DateTimeOffset 类型的对象。|  
 |[SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md)|表示二进制大型对象 (BLOB)。|  

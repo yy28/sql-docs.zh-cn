@@ -1,5 +1,5 @@
 ---
-title: 使用 NTLM 身份验证连接到 SQL Server |Microsoft Docs
+title: 使用 NTLM 身份验证连接到 SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -13,40 +13,40 @@ author: lilgreenbird
 ms.author: v-susanh
 manager: kenvh
 ms.openlocfilehash: 2fab4794544ada07e0bf5e690da35b72ad6b7421
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026104"
 ---
 # <a name="using-ntlm-authentication-to-connect-to-sql-server"></a>使用 NTLM 身份验证连接到 SQL Server
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-允许应用程序使用 authenticationScheme 连接属性来指示它需要使用 NTLM v2 身份验证连接到数据库。  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 允许应用程序使用 authenticationScheme  连接属性，以指明要使用 NTLM v2 身份验证连接到数据库。 
 
-以下属性还用于 NTLM 身份验证:
+以下属性也用于 NTLM 身份验证：
 
-- **域 =** 域名可有可无
-- **用户 = 用户名**
+- **domain = domainName**（可选）
+- **user = userName**
 - **密码 = 密码**
 - **integratedSecurity = true**
 
-除**域**之外的其他属性是必需的, 如果使用**NTLM** authenticationScheme 属性时, 驱动程序将引发错误。 
+除了 domain  以外，其他属性都是必需的；使用 NTLM  authenticationScheme 属性时，如果缺少任何必需属性，驱动程序都会抛出错误。 
 
-有关连接属性的详细信息, 请参阅[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)。 有关 Microsoft NTLM 身份验证协议的详细信息, 请参阅[MICROSOFT ntlm](https://docs.microsoft.com/windows/desktop/SecAuthN/microsoft-ntlm)。
+若要详细了解连接属性，请参阅[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)。 若要详细了解 Microsoft NTLM 身份验证协议，请参阅 [Microsoft NTLM](https://docs.microsoft.com/windows/desktop/SecAuthN/microsoft-ntlm)。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
-请参阅[网络安全: LAN Manager 身份验证级别](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level), 了解用于控制 NTLM 身份验证行为的 SQL server 设置。 
+请参阅[网络安全：LAN Manager 身份验证级别](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level)，了解控制 NTLM 身份验证行为的 SQL Server 设置。 
 
 ## <a name="logging"></a>日志记录
 
 新增了一个记录程序以支持 NTLM 身份验证：com.microsoft.sqlserver.jdbc.internals.NTLMAuthentication。 有关详细信息，请参阅[跟踪驱动程序操作](../../connect/jdbc/tracing-driver-operation.md)。
 
-## <a name="datasource"></a>DataSource
+## <a name="datasource"></a>数据源
 
-使用数据源创建连接时, 可使用**setAuthenticationScheme**、 **setDomain**和 (可选) **SETSERVERSPN**以编程方式设置 NTLM 属性。
+使用数据源创建连接时，可以使用 setAuthenticationScheme  、setDomain  和 setServerSpn  （可选）以编程方式设置 NTLM 属性。
 
 ```java
 SQLServerDataSource ds = new SQLServerDataSource();
@@ -72,9 +72,9 @@ try (Connection c = ds.getConnection(); Statement s = c.createStatement();
 
 服务主体名称 (SPN) 是客户端用来唯一标识服务实例的名称。
 
-可以使用 serverSpn 连接属性指定 SPN 或让驱动程序生成它（默认）  。 此属性采用“MSSQLSvc/fqdn:port\@REALM”的形式，其中 fqdn 是完全限定的域名，port 是端口号，REALM 是 SQL Server 的领域（采用大写形式）。 此属性的领域部分是可选的, 因为默认领域与服务器的领域相同。
+可以使用 serverSpn 连接属性指定 SPN 或让驱动程序生成它（默认）  。 此属性的格式为“MSSQLSvc/fqdn:port\@REALM”，其中 fqdn 是完全限定的域名，port 是端口号，REALM 是用大写字母表示的 SQL Server 领域。 此属性的领域部分是可选的，因为默认领域与 SQL Server 领域相同。
 
-例如, 你的 SPN 可能如下所示: "MSSQLSvc/: 1433"
+例如，SPN 可能如下所示：“MSSQLSvc/some-server.zzz.corp.contoso.com:1433”
 
 有关服务主体名称 (SPN) 的详细信息，请参阅：
 
@@ -83,24 +83,24 @@ try (Connection c = ds.getConnection(); Statement s = c.createStatement();
 > [!NOTE]  
 > serverSpn 连接属性仅受 Microsoft JDBC Driver 4.2 及更高版本支持。
 
-> 在6.2 版本的 JDBC driver 之前, 需要显式设置**serverSpn**。 从6.2 版的发行版中, 默认情况下, 驱动程序将能够生成**serverSpn** , 但也可以显式使用**serverSpn** 。
+> 在 JDBC 驱动程序版本 6.2 推出前，需要显式设置 serverSpn  。 自版本 6.2 起，驱动程序可以默认生成 serverSpn  ，尽管也能显式使用 serverSpn  。
 
 ## <a name="security-risks"></a>安全风险
 
-NTLM 协议是一种具有各种漏洞的旧身份验证协议, 这会带来安全风险。 它基于一个相对弱的加密方案, 容易受到各种攻击。 它已替换为 Kerberos, 这是一种更安全的安全建议。 NTLM 身份验证仅应在安全的受信任环境中使用, 或在不能使用 Kerberos 的情况下使用。
+NTLM 协议是一种老旧的身份验证协议，存在各种造成安全风险的漏洞。 它基于相对较弱的加密方案，容易受到各种攻击。 取而代之的是 Kerberos，它更安全，值得推荐。 NTLM 身份验证应仅在安全的受信任环境中使用，或在无法使用 Kerberos 时使用。
 
-[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]仅支持 NTLM v2, 这对原始 v1 协议具有一些安全改进。 还建议使用 It'ss 来启用扩展保护, 或者使用 SSL 加密来提高安全性。 
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 只支持 NTLM v2，它比原来的 v1 协议有一些安全改进。 还建议启用扩展保护，或使用 SSL 加密来提高安全性。 
 
-有关如何启用扩展保护和的详细信息, 请参阅:
+若要详细了解如何启用扩展保护，请参阅：
 
 - [使用扩展保护连接到数据库引擎](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)
 
-有关连接 SSL 加密的详细信息, 请参阅:
+若要详细了解如何使用 SSL 加密进行连接，请参阅：
 
 - [使用 SSL 加密进行连接](../../connect/jdbc/connecting-with-ssl-encryption.md)
 
 > [!NOTE]
-> 在7.4 版本中, 不  支持启用扩展保护和加密。
+> 对于版本 7.4，不支持同时  启用扩展保护和加密。
 
 ## <a name="see-also"></a>另请参阅
 

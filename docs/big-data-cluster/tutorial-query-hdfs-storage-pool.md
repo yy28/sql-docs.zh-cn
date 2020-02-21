@@ -1,20 +1,21 @@
 ---
-title: 在存储池中查询 HDFS 数据
-titleSuffix: SQL Server big data clusters
+title: 查询 HDFS 数据：存储池
+titleSuffix: SQL Server Big Data Clusters
 description: 本教程演示如何在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 中查询 HDFS 数据。 可以为存储池中的数据创建外部表，然后运行查询。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7ba5721ef461fe327a3309431cc994a5ed377be7
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: cf20e6b02e67655b7347a2a53d1e62501d357f30
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652445"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75226484"
 ---
 # <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>教程：在 SQL Server 大数据群集中查询 HDFS
 
@@ -31,13 +32,17 @@ ms.locfileid: "69652445"
 > [!TIP]
 > 如果需要，可以下载并运行本教程中的命令脚本。 有关说明，请参阅 GitHub 上的[数据虚拟化示例](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization)。
 
-## <a id="prereqs"></a> 先决条件
+这段 7 分钟的视频将引导你逐步了解在大数据集群中查询 HDFS 数据的步骤：
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Query-HDFS-data-inside-SQL-Server-big-data-cluster/player?WT.mc_id=dataexposed-c9-niner]
+
+## <a id="prereqs"></a>先决条件
 
 - [大数据工具](deploy-big-data-tools.md)
    - **kubectl**
    - **Azure Data Studio**
    - **SQL Server 2019 扩展**
-- [将示例数据加载到大数据群集](tutorial-load-sample-data.md)
+- [将示例数据加载到大数据群集中](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-to-hdfs"></a>为 HDFS 创建外部表
 

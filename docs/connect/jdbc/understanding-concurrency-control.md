@@ -1,5 +1,5 @@
 ---
-title: 了解并发控制 |Microsoft Docs
+title: 了解并发控制 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3cbc805ece4cc28a646d93d6607bcc45d65cd563
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027637"
 ---
 # <a name="understanding-concurrency-control"></a>了解并发控制
@@ -25,10 +25,10 @@ ms.locfileid: "69027637"
 > [!NOTE]  
 >  有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并发的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“管理并发数据访问”。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  JDBC 驱动程序支持以下并发类型：  
   
-|并发类型|特征|行锁|描述|  
+|并发类型|特征|行锁|说明|  
 |----------------------|---------------------|---------------|-----------------|  
 |CONCUR_READ_ONLY|只读|否|不允许通过游标进行更新，并且针对组成结果集的行不持有锁。|  
 |CONCUR_UPDATABLE|乐观读写|否|数据库假定未必会发生行争用现象，但存在这种可能性。 使用时间戳比较来检查行完整性。|  
@@ -39,7 +39,7 @@ ms.locfileid: "69027637"
 ## <a name="result-sets-that-are-not-updateable"></a>不可更新的结果集  
  可更新的结果集是指可以在其中插入、更新和删除行的结果集。 在下列情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法创建可更新的游标。 生成的异常为“结果集不可更新”。  
   
-|原因|描述|纠正方法|  
+|原因|说明|纠正方法|  
 |-----------|-----------------|------------|  
 |语句不是使用 JDBC 2.0（或更高版本）语法创建的|JDBC 2.0 引入了新的方法来创建语句。 如果使用 JDBC 1.0 语法，则结果集默认为只读。|创建语句时，指定结果集类型和并发机制。|  
 |语句是使用 TYPE_SCROLL_INSENSITIVE 创建的|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 创建一个静态快照游标。 这将从基础表行中断开连接，以帮助保护游标，从而防止其他用户进行更新。|将 TYPE_SCROLL_SENSITIVE、TYPE_SS_SCROLL_KEYSET、TYPE_SS_SCROLL_DYNAMIC 或 TYPE_FORWARD_ONLY 用于 CONCUR_UPDATABLE 以避免创建静态游标。|  

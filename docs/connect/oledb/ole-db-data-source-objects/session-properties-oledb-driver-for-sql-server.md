@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 7bc2ae9c6908bfcd0bf28b4f05be757d22c55f75
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015908"
 ---
 # <a name="session-properties---ole-db-driver-for-sql-server"></a>会话属性 - 适用于 SQL Server 的 OLE DB 驱动程序
@@ -25,21 +25,21 @@ ms.locfileid: "68015908"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server 的 OLE DB 驱动程序解释 OLE DB 会话属性, 如下所示。  
+  OLE DB Driver for SQL Server 按如下所示解释 OLE DB 会话属性。  
   
-|属性 ID|描述|  
+|属性 ID|说明|  
 |-----------------|-----------------|  
 |DBPROP_SESS_AUTOCOMMITISOLEVELS|适用于 SQL Server 的 OLE DB 驱动程序支持所有自动提交的事务隔离级别，混沌级别 DBPROPVAL_TI_CHAOS 除外。|  
   
  在特定于访问接口的属性集 DBPROPSET_SQLSERVERSESSION 中，适用于 SQL Server 的 OLE DB 驱动程序定义以下附加的会话属性。  
   
-|属性 ID|描述|  
+|属性 ID|说明|  
 |-----------------|-----------------|  
-|SSPROP_QUOTEDCATALOGNAMES|类型：VT_BOOL<br /><br /> R/W：读/写<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明：在 CATALOG 限制中允许带引号的标识符。<br /><br /> VARIANT_TRUE：对提供分布式查询支持的架构行集的目录限制识别带引号的标识符。<br /><br /> VARIANT_FALSE：对提供分布式查询支持的架构行集的目录限制不识别带引号的标识符。<br /><br /> 有关提供分布式查询支持的架构行集的详细信息，请参阅[架构行集中的分布式查询支持](../../oledb/ole-db/schema-rowsets-distributed-query-support.md)。|  
-|SSPROP_ALLOWNATIVEVARIANT|类型：VT_BOOL<br /><br /> R/W：读/写<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明：确定提取的数据是作为 DBTYPE_VARIANT 还是作为 DBTYPE_SQLVARIANT。<br /><br /> VARIANT_TRUE：列类型作为 DBTYPE_SQLVARIANT 返回，这种情况下缓冲区将保留 SSVARIANT 结构。<br /><br /> VARIANT_FALSE：列类型作为 DBTYPE_VARIANT 返回，且缓冲区将具有 VARIANT 结构。|  
+|SSPROP_QUOTEDCATALOGNAMES|键入：VT_BOOL<br /><br /> R/W：读取/写入<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明:在 CATALOG 限制中允许带引号的标识符。<br /><br /> VARIANT_TRUE：对提供分布式查询支持的架构行集的目录限制识别带引号的标识符。<br /><br /> VARIANT_FALSE：对提供分布式查询支持的架构行集的目录限制不识别带引号的标识符。<br /><br /> 有关提供分布式查询支持的架构行集的详细信息，请参阅[架构行集中的分布式查询支持](../../oledb/ole-db/schema-rowsets-distributed-query-support.md)。|  
+|SSPROP_ALLOWNATIVEVARIANT|键入：VT_BOOL<br /><br /> R/W：读取/写入<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明:确定提取的数据是作为 DBTYPE_VARIANT 还是作为 DBTYPE_SQLVARIANT。<br /><br /> VARIANT_TRUE：列类型作为 DBTYPE_SQLVARIANT 返回，这种情况下缓冲区将保留 SSVARIANT 结构。<br /><br /> VARIANT_FALSE：列类型作为 DBTYPE_VARIANT 返回，且缓冲区将具有 VARIANT 结构。|  
 |SSPROP_ASYNCH_BULKCOPY|若要使用异步模式，请在调用 BCPExec 方法之前，将特定于提供程序的会话属性 SSPROP_ASYNCH_BULKCOPY 设置为 VARIANT_TRUE。 此属性位于 DBPROPSET_SQLSERVERSESSION 属性集中。|  
   
 ## <a name="see-also"></a>另请参阅  
- [数据源对象&#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [数据源对象 (OLE DB)](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

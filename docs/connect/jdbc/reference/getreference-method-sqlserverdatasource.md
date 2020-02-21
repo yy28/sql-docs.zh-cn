@@ -1,5 +1,5 @@
 ---
-title: getReference 方法 (SQLServerDataSource) |Microsoft Docs
+title: getReference 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: b3fb1a97-86ee-4977-adca-c35ae199dbb3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c4774dcda174d5260289409053a892cc4039b4f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980459"
 ---
 # <a name="getreference-method-sqlserverdatasource"></a>getReference 方法 (SQLServerDataSource)
@@ -35,10 +35,10 @@ public javax.naming.Reference getReference()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 一个引用对象。  
+ Reference 对象。  
   
-## <a name="remarks"></a>Remarks  
- 此 getReference 方法由 getReference 方法在 javax.mail.session 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 getReference 方法是由 javax.naming.Referenceable 接口中的 getReference 方法指定的。  
   
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 之前，如果对 SQLServerDataSource 对象调用 SQLServerDataSource.setTrustStorePassword，密码将会出现在 SQLServerDataSource.getReference 所返回的对象中，从而能够使用此对象建立其他的连接。 在 JDBC Driver 3.0 中，您在使用 SQLServerDataSource.getReference 返回的对象建立连接前，将需要设置该对象的密码。  
   

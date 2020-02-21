@@ -1,6 +1,6 @@
 ---
 title: 数据科学解决方案模板
-description: 本文描述了演示最佳做法和提供构建块以帮助快速实现解决方案的模板。 每个模板都是为特定的纵向或行业解决特定问题而设计的。
+description: 本文介绍了演示最佳做法和提供构建基块以帮助实现机器学习解决方案的行业特定的模板。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 03/29/2019
@@ -9,17 +9,26 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 01893edd0174ec7aeab262b8aeddc3babb8194f7
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 6d87fbbb60f70292075d4f24080798d017ee5288
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727279"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947273"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>数据科学方案和解决方案模板
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-模板是演示最佳做法和提供构建基块，以帮助快速实现解决方案的示例解决方案。 每个模板都是为特定的纵向或行业解决特定问题而设计的。 每个模板中的任务从数据准备和特征工程扩展到模型定型和计分。 使用这些模板了解 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 的工作原理。 然后，可以根据自己的方案自定义模板并构建自定义解决方案。 
+本文介绍了大量 SQL Server 机器学习解决方案模板。 这些模板演示最佳做法并提供构建基块，帮助快速实现机器学习解决方案。 每个模板都旨在解决特定行业的特定数据科学问题。
+每个模板中的任务从数据准备和特征工程扩展到模型定型和计分。 
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+使用这些模板了解 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 的工作原理。 然后，可以根据自己的方案自定义模板并构建自定义解决方案。
+::: moniker-end
+
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+使用这些模板了解 SQL Server 机器学习服务的工作方式。 然后，可以根据自己的方案自定义模板并构建自定义解决方案。
+::: moniker-end
 
 每个解决方案都包括示例数据、R 代码或 Python 代码，以及 SQL 存储过程（如果适用）。 代码可以在首选的 R 或 Python 开发环境中运行，计算在 SQL Server 中完成。 在某些情况下，可以使用 T-SQL 和任何 SQL 客户端工具（如 SQL Server Management Studio）直接运行代码。
 
@@ -62,7 +71,7 @@ ms.locfileid: "73727279"
 
 **方式：** 此模板将流失问题描述为“二元分类”问题  。 它使用来自于两个源，客户人口统计和客户交易记录的示例数据，将客户分为“可能”和“不太可能”流失两类。
   
-## <a name="predictive-maintenance"></a>预测维护
+## <a name="predictive-maintenance"></a>预见性维护
 
 [预测维护模板 (SQL Server 2016)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/PredictiveMaintenance/README.md)
 

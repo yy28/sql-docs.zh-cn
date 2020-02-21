@@ -5,29 +5,24 @@ description: 了解如何使用安装程序 (Linux) 安装 azdata 工具，以�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9d8d4a34e89de7c136e1e80b43929531a2d10eba
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: ac50d0c20f76e78aaa5016f62cefb8c7cc7f075a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532065"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75728578"
 ---
-# <a name="install-azdata-to-manage-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-linux"></a>安装 `azdata` 以管理 Linux 上的 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="install-azdata-with-apt"></a>使用 apt 安装 `azdata`
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 本文介绍如何在 Linux 上安装用于 SQL Server 2019 大数据群集的 `azdata`。 在这些包管理器可用之前，需要 `pip` 来安装 `azdata`。
 
-包管理器适用于各种操作系统和发行版。
-
-- 对于 Windows 和 Linux （Ubuntu 发行版），可以使用[包管理器](./deploy-install-azdata-installer.md)进行安装，以获得更简单的体验。
-- 对于 Linux (Ubuntu)，[使用 `apt` 安装 `azdata`](#azdata-apt)
-
-目前，没有可在其他操作系统或发行版上安装 `azdata` 的包管理器。 对于这些平台，请参阅[不使用包管理器安装 `azdata`](./deploy-install-azdata.md)。
+[!INCLUDE [azdata-package-installation-remove-pip-install](../includes/azdata-package-installation-remove-pip-install.md)]
 
 ## <a id="linux"></a>安装适用于 Linux 的 `azdata`
 
@@ -42,19 +37,27 @@ ms.locfileid: "73532065"
 
     ```bash
     sudo apt-get update
-    sudo apt-get install gnupg ca-certificates curl apt-transport-https lsb-release -y
+    sudo apt-get install gnupg ca-certificates curl wget software-properties-common apt-transport-https lsb-release -y
     ```
 
 2. 下载并安装签名密钥：
 
     ```bash
-    wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+    curl -sL https://packages.microsoft.com/keys/microsoft.asc |
+    gpg --dearmor |
+    sudo tee /etc/apt/trusted.gpg.d/microsoft.asc.gpg > /dev/null
     ```
 
-3. 添加 `azdata` 存储库信息：
+3. 添加 `azdata` 存储库信息。
 
+   对于 Ubuntu 16.04 客户端运行：
     ```bash
     sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
+    ```
+
+   对于 Ubuntu 18.04 客户端运行：
+    ```bash
+    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019.list)"
     ```
 
 4. 更新存储库信息并安装 `azdata`：
@@ -70,7 +73,7 @@ ms.locfileid: "73532065"
     azdata --version
     ```
 
-### <a name="update"></a>Update
+### <a name="update"></a>更新
 
 仅升级 `azdata`：
 
@@ -78,7 +81,7 @@ ms.locfileid: "73532065"
 sudo apt-get update && sudo apt-get install --only-upgrade -y azdata-cli
 ```
 
-### <a name="uninstall"></a>Uninstall
+### <a name="uninstall"></a>卸载
 
 1. 通过 apt-get remove 卸载：
 

@@ -1,5 +1,5 @@
 ---
-title: 诊断 JDBC 驱动程序的问题 |Microsoft Docs
+title: 诊断 JDBC 驱动程序问题 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 723e2680-a0c5-4a7d-a319-1e49e41078cf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9c36e81631435e4e079d2b52aea4fe9bce587159
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028098"
 ---
 # <a name="diagnosing-problems-with-the-jdbc-driver"></a>诊断 JDBC 驱动程序问题
@@ -26,7 +26,7 @@ ms.locfileid: "69028098"
   
 ## <a name="in-this-section"></a>在本节中  
   
-|主题|描述|  
+|主题|说明|  
 |-----------|-----------------|  
 |[处理错误](../../connect/jdbc/handling-errors.md)|介绍如何处理从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回的错误。|  
 |[获取驱动程序版本](../../connect/jdbc/getting-the-driver-version.md)|介绍如何确定安装 JDBC Driver 的哪个版本。|  

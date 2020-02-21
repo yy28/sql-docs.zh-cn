@@ -1,6 +1,7 @@
 ---
-title: 角色切换后登录名和作业的管理 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 管理镜像故障转移后的登录名和作业
+description: 了解如何在将镜像数据库从主数据库故障转移到辅助数据库后，管理登录名和作业。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2887cfe969afd8739b15646efb8ee4700c8affff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bf355678b3219fb0bf32ecd1620c00b0e58f346f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063854"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230215"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>角色切换后登录名和作业的管理 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "68063854"
   
  有关详细信息，请参阅 [与数据库镜像和日志传送有关的孤立用户](https://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) （数据库引擎博客）。  
   
-## <a name="jobs"></a>中执行计划的管理任务，即“作业”  
+## <a name="jobs"></a>作业  
  作业（如备份作业）需要特殊考虑。 通常，在角色切换后，数据库所有者或系统管理员必须为新的主/主体数据库重新创建作业。  
   
  如果以前的主/主体服务器实例可用，则应该在该 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上删除原始作业。 请注意，当前镜像数据库上的作业失败，因为它处于 RESTORING 状态，以致不可用。  

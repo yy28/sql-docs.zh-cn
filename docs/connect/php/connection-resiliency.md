@@ -10,44 +10,44 @@ author: david-puglielli
 ms.author: v-dapugl
 manager: v-mabarw
 ms.openlocfilehash: 3edba0cde94d8661eed053319142ce7f84a70613
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68265167"
 ---
 # <a name="idle-connection-resiliency"></a>空闲连接复原
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[连接复原](../odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)是指可以在某些约束内重新建立中断的空闲连接的原则。 如果与 Microsoft SQL Server 的连接失败, 则连接复原允许客户端自动尝试重新建立连接。 连接复原是数据源的属性;仅 SQL Server 2014 及更高版本以及 Azure SQL 数据库支持连接复原。
+[连接复原](../odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)是指在一定约束条件下可以重新建立断开的空闲连接的原则。 如果与 Microsoft SQL Server 连接断开，连接复原可便于客户端自动尝试重新建立连接。 连接复原是数据源属性；只有 SQL Server 2014 及更高版本和 Azure SQL 数据库才支持连接复原。
 
-连接复原是通过可添加到连接字符串的两个连接关键字实现的: **ConnectRetryCount**和**ConnectRetryInterval**。
+连接复原是通过下面两个可以添加到连接字符串的连接关键字来实现的：ConnectRetryCount  和 ConnectRetryInterval  。
 
-|关键字|值|，则“默认”|描述|
+|关键字|值|默认|说明|
 |-|-|-|-|
-|**ConnectRetryCount**| 介于 0 和 255 之间（含限值）的整数|1|在放弃之前, 尝试重新建立断开连接的最大次数。 默认情况下, 一次尝试在中断时重新建立连接。 值0表示不会尝试重新连接。|
-|**ConnectRetryInterval**| 介于 1 和 60 之间（含限值）的整数|1| 尝试重新建立连接所用的时间 (以秒为单位)。 应用程序将在检测到中断的连接时立即尝试重新连接, 然后等待**ConnectRetryInterval**秒, 然后重试。 如果**ConnectRetryCount**等于 0, 则忽略此关键字。
+|**ConnectRetryCount**| 介于 0 和 255 之间（含限值）的整数|1|在连接断开时最多尝试重新建立多少次连接后放弃。 在连接断开时，默认尝试一次重新建立连接。 值 0 表示不会尝试重新建立连接。|
+|**ConnectRetryInterval**| 介于 1 和 60 之间（含限值）的整数|1| 尝试重新建立连接的时间间隔（以秒为单位）。 应用程序在检测到连接断开后立即尝试重新连接，然后在等待 ConnectRetryInterval  秒后重试。 如果 ConnectRetryCount  等于 0，则忽略此关键字。
 
-如果**ConnectRetryCount**的乘积乘以**ConnectRetryInterval**大于**LoginTimeout**, 则在达到**LoginTimeout**后, 客户端将停止尝试连接;否则, 在达到**ConnectRetryCount**之前, 它将继续尝试重新连接。
+如果 ConnectRetryCount  与 ConnectRetryInterval  的乘积大于 LoginTimeout  ，则在达到 LoginTimeout  后，客户端会立即停止尝试连接；如果不大于，它会继续尝试重新连接，直到达到 ConnectRetryCount  。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>备注
 
-连接处于空闲状态时, 将应用连接复原。 例如, 在执行事务时发生的故障将不会触发重新连接尝试-它们将失败, 否则应该会失败。 以下情况 (称为不可恢复的会话状态) 将不会触发重新连接尝试:
+连接复原在连接处于空闲状态时应用。 例如，在执行事务期间发生的故障不会触发重新连接尝试，而是按预期失败。 以下情况称为不可恢复的会话状态，不会触发重新连接尝试：
 
 * 临时表
 * 全局和局部游标
-* 事务上下文和会话级事务锁
+* 事务上下文和会话级别事务锁
 * 应用程序锁
-* EXECUTE AS/REVERT 安全上下文
-* OLE 自动化处理
-* 已准备的 XML 句柄
+* EXECUTE AS/REVERT 安全性上下文
+* OLE 自动化句柄
+* 准备的 XML 句柄
 * 跟踪标志
 
 ## <a name="example"></a>示例
 
-以下代码连接到数据库并执行查询。 通过终止会话来中断连接, 并使用断开的连接尝试新的查询。 本示例使用 [AdventureWorks](https://msdn.microsoft.com/library/ms124501%28v=sql.100%29.aspx) 示例数据库。
+下面的代码连接到数据库，并执行查询。 它通过终止会话来断开连接，并尝试使用断开的连接进行新查询。 本示例使用 [AdventureWorks](https://msdn.microsoft.com/library/ms124501%28v=sql.100%29.aspx) 示例数据库。
 
-在此示例中, 我们将在中断连接之前指定一个缓冲的游标。 如果未指定缓冲游标, 连接将不会重新建立, 因为这会产生活动的服务器端游标, 从而导致连接在中断时不会处于空闲状态。 但是, 在这种情况下, 我们可以在中断连接以 vacate 游标之前调用 sqlsrv_free_stmt (), 并成功重新建立连接。
+此示例在断开连接之前指定缓冲的游标。 如果未指定缓冲的游标，就不会重新建立连接，因为会有活动的服务器端游标，导致连接在断开时不处于空闲状态。 不过，在这种情况下，可以先调用 sqlsrv_free_stmt()，再断开连接以腾出游标，这样就可以成功地重新建立连接。
 
 ```php
 <?php
@@ -122,7 +122,7 @@ sqlsrv_close( $conn );
 sqlsrv_close( $conn_break );
 ?>
 ```
-预期输出:
+预期输出：
 ```
 Statement 1 successful.
 290 rows in result set.

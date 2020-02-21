@@ -1,10 +1,7 @@
 ---
-title: 创建中央管理服务器和服务器组 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 创建中央管理服务器
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,16 +9,22 @@ helpviewer_keywords:
 ms.assetid: da265482-3953-440a-ac23-0ab7e42a55eb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f3247e98b4ae2894d80e42bfd824aea44eb0127f
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 67bc366117bd7dfd172a34458b05c94a8410965e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267786"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258934"
 ---
 # <a name="create-a-central-management-server-and-server-group"></a>创建中央管理服务器和服务器组
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  本主题说明如何在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 指定一个 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]实例作为中央管理服务器。 中央管理服务器存储组织到一个或多个中央管理服务器组中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例列表。 使用中央管理服务器组执行的操作将作用于服务器组中的所有服务器。 这包括使用对象资源管理器连接到服务器以及在多个服务器上同时执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和基于策略的管理策略。  
+
+本主题说明如何在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 指定一个 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]实例作为中央管理服务器。 中央管理服务器存储组织到一个或多个中央管理服务器组中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例列表。 使用中央管理服务器组执行的操作将作用于服务器组中的所有服务器。 这包括使用对象资源管理器连接到服务器以及在多个服务器上同时执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和基于策略的管理策略。  
   
 > [!NOTE]  
 >  不能将早于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 指定为中央管理服务器。  
@@ -62,11 +65,11 @@ ms.locfileid: "68267786"
   
 4.  在 **“已注册的服务器”** 中，输入服务器名称和可选说明。  
   
-5.  在 **“连接属性”** 选项卡上，查看或修改网络和连接属性。 有关详细信息，请参阅[连接到服务器（“连接属性”页）数据库引擎](https://msdn.microsoft.com/library/edc1143c-6a47-4b02-92ab-441bdea8ea8a)。  
+5.  在“连接属性”  选项卡中，查看或修改网络和连接属性。 有关详细信息，请参阅[连接到服务器（“连接属性”页）数据库引擎](https://msdn.microsoft.com/library/edc1143c-6a47-4b02-92ab-441bdea8ea8a)。  
   
 6.  单击 **“测试”** ，对连接进行测试。  
   
-7.  单击 **“保存”** 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例将出现在 **“中央管理服务器”** 文件夹下。  
+7.  单击“ **保存**”。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例将出现在 **“中央管理服务器”** 文件夹下。  
   
 #### <a name="create-a-new-server-group-and-add-servers-to-the-group"></a>创建新服务器组并向该组添加服务器  
   

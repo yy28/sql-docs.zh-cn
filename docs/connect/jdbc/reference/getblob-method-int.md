@@ -1,5 +1,5 @@
 ---
-title: getBlob 方法 (int) |Microsoft Docs
+title: getBlob 方法 (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: bef3ef12-cdda-4a18-90d6-4a501b8e30f0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d4ed9b8f6e4b29d5609ced88592b96de9c196d89
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953817"
 ---
 # <a name="getblob-method-int"></a>getBlob 方法 (int)
@@ -34,7 +34,7 @@ ms.locfileid: "67953817"
 public java.sql.Blob getBlob(int index)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  索引   
   
  指示参数索引的 int  。  
@@ -42,10 +42,10 @@ public java.sql.Blob getBlob(int index)
 ## <a name="return-value"></a>返回值  
  Blob 对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 getBlob 方法是由 java.sql.CallableStatement 接口中的 getBlob 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  

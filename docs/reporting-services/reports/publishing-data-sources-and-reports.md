@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3a740f8a-1060-4ec3-938b-2305b6887ebd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e98421a76fda260c71c691551151bd9dad245a5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: a5a043efe7e80805a9d2c1c18dc86a425f01be7f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65579963"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190462"
 ---
 # <a name="publishing-data-sources-and-reports"></a>发布数据源和报表
   在发布报表之前，您应预览报表以查看其运行时的外观。 您可以继续改进设计，直到对结果满意为止。  
@@ -37,7 +37,7 @@ ms.locfileid: "65579963"
  说明如何将报表发布到 SharePoint 站点。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [页面布局和呈现方式（报表生成器和 SSRS）](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   

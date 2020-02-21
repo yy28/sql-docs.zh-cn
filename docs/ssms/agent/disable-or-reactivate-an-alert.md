@@ -1,10 +1,9 @@
 ---
-title: 禁用或重新激活警报 | Microsoft Docs
-ms.custom: ''
+title: Disable or Reactivate an Alert
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,13 +19,15 @@ helpviewer_keywords:
 ms.assetid: 4cb37dc6-1134-405d-8590-58b44dcf63b2
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e422c4136dbe956727a4ef1a3b03bc56df0a3eea
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 4c4709e8d9c379d21f3646be796f8066f790978e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552919"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246070"
 ---
 # <a name="disable-or-reactivate-an-alert"></a>Disable or Reactivate an Alert
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "69552919"
 > [!IMPORTANT]  
 > [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中禁用或重新激活 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报。  
+本主题介绍了如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中禁用或重新激活 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报。  
 ## <a name="BeforeYouBegin"></a>开始之前  
   
 ### <a name="Security"></a>安全性  
@@ -54,7 +55,7 @@ ms.locfileid: "69552919"
   
 4.  右键单击要启用的警报，然后选择“启用”  。若要禁用某一警报，请右键单击要禁用的警报，然后选择“禁用”  。  
   
-5.  **“禁用警报”** 或 **“启用警报”** 对话框将显示该进程的状态。 完成后，单击 **“关闭”** 。  
+5.  **“禁用警报”** 或 **“启用警报”** 对话框将显示该进程的状态。  完成后，单击“关闭”。  
   
 ## <a name="TsqlProcedure"></a>使用 Transact-SQL  
   

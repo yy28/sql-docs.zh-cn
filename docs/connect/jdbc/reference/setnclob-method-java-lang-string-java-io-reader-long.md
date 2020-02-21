@@ -11,10 +11,10 @@ ms.assetid: c1b95ee7-7e82-418f-8f30-948589086f63
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c8dba5603a0dcd3cb264b8c49883b1aa43101509
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973745"
 ---
 # <a name="setnclob-method-javalangstring-javaioreader-long"></a>setNClob 方法 (java.lang.String, java.io.Reader, long)
@@ -31,7 +31,7 @@ public final void setNClob(java.lang.String parameterName,
               long length)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  parameterName   
   
  包含参数名称的字符串  。  
@@ -44,11 +44,11 @@ public final void setNClob(java.lang.String parameterName,
   
  指示流中字符数的 long  。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 应将此方法用于**NCHAR**、 **NVARCHAR**、 **NTEXT**和**XML**参数数据类型。  
+## <a name="remarks"></a>备注  
+ 此方法应用于 NCHAR  、NVARCHAR  、NTEXT  和 XML  参数数据类型。  
   
  此 setNClob 方法是由 java.sql.CallableStatement 接口中的 setNClob 方法指定的。  
   

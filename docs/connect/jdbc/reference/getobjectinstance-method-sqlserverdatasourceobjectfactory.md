@@ -1,5 +1,5 @@
 ---
-title: getObjectInstance 方法 (SQLServerDataSourceObjectFactory) |Microsoft Docs
+title: getObjectInstance 方法 (SQLServerDataSourceObjectFactory) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 0a1503e2-e991-4d70-a223-087fc63baf73
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: de25e608c9fbdbdf6ff91d08e7a6502765bb590e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981049"
 ---
 # <a name="getobjectinstance-method-sqlserverdatasourceobjectfactory"></a>getObjectInstance 方法 (SQLServerDataSourceObjectFactory)
@@ -37,12 +37,12 @@ public java.lang.Object getObjectInstance(java.lang.Object ref,
                                           java.util.Hashtable h)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
- ref   
+#### <a name="parameters"></a>parameters  
+ *ref*  
   
  Object 值  。  
   
- *名称*  
+ name   
   
  对象的名称。  
   
@@ -57,11 +57,11 @@ public java.lang.Object getObjectInstance(java.lang.Object ref,
 ## <a name="return-value"></a>返回值  
  Object 值  。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
- 此 getObjectInstance 方法由 getObjectInstance 方法在 javax.mail.session 中指定。 Javax.naming.spi.objectfactory 接口。  
+## <a name="remarks"></a>备注  
+ 此 getObjectInstance 方法是由 javax.naming.spi.ObjectFactory 接口中的 getObjectInstance 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDataSourceObjectFactory 方法](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-methods.md)   

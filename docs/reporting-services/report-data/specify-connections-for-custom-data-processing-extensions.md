@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2cddc9ea-0e28-4350-80ae-332412908e47
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f346427ee41f8049caa050aa49eda393dd304566
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 2f6bea94776853f23a02f44ff91748c510fd6f03
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65575483"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190620"
 ---
 # <a name="specify-connections-for-custom-data-processing-extensions"></a>指定用于自定义数据处理扩展插件的连接
   您可以在报表服务器上创建或使用第三方自定义数据处理扩展插件来增强支持的数据源的数据处理能力，或者支持默认 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装中不可用的其他类型的数据源。 对连接的处理会因实现方式的不同而有所不同。 数据处理扩展插件可能具有下列实现方式：  
@@ -77,7 +77,7 @@ ms.locfileid: "65575483"
 ## <a name="see-also"></a>另请参阅  
  [配置无人参与的执行帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
  [为报表数据源指定凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [实现数据处理扩展插件](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
  [配置报表的数据源属性](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   

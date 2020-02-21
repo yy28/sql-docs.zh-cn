@@ -1,6 +1,6 @@
 ---
-title: 重新同步行 |Microsoft Docs
-description: 使用 SQL Server 的 OLE DB 驱动程序重新同步行
+title: 重新同步行 | Microsoft Docs
+description: 使用 OLE DB Driver for SQL Server 重新同步行
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 2f1ea1a563e986914c5fe820740776da129c3b28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994170"
 ---
 # <a name="updating-data-in-rowsets---resynchronizing-rows"></a>更新行集中的数据 - 重新同步行
@@ -27,7 +27,7 @@ ms.locfileid: "67994170"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server 的 OLE DB 驱动程序仅  支持对[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]支持游标的行集进行 IRowsetResynch。 IRowsetResynch 并不是需要时就可用  。 使用者在打开行集前必须请求该接口。  
+  OLE DB Driver for SQL Server 仅对于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 游标支持的行集支持 IRowsetResynch  。 IRowsetResynch 并不是需要时就可用  。 使用者在打开行集前必须请求该接口。  
   
 ## <a name="see-also"></a>另请参阅  
  [更新行集中的数据](../../oledb/ole-db-rowsets/updating-data-in-rowsets.md)  

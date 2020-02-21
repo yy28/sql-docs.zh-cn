@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 5e1a6ea1debfb4a432ef63395e3e8b7fd476d891
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015625"
 ---
 # <a name="ole-db-how-to-topics"></a>OLE DB 操作指南主题
@@ -30,7 +30,7 @@ ms.locfileid: "68015625"
   
 -   [处理结果操作指南主题 (OLE DB)](../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
--   [设置大型数据&#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md)  
+-   [设置大型数据 (OLE DB)](../../oledb/ole-db-how-to/set-large-data-ole-db.md)  
   
 -   [枚举 OLE DB 数据源 (OLE DB)](../../oledb/ole-db-how-to/enumerate-ole-db-data-sources-ole-db.md)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "68015625"
   
 -   [使用 IROWSETFASTLOAD 和 ISEQUENTIALSTREAM 将 BLOB 数据发送到 SQL SERVER (OLE DB)](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)  
   
--   [使用大型 CLR Udt &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-large-clr-udts-ole-db.md)  
+-   [使用大型 CLR UDT (OLE DB)](../../oledb/ole-db-how-to/use-large-clr-udts-ole-db.md)  
   
 -   [显示稀疏列的列和目录元数据 (OLE DB)](../../oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)  
   

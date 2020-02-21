@@ -1,5 +1,5 @@
 ---
-title: 'ISSCommandWithParameters:: SetParameterProperties (OLE DB) |Microsoft Docs'
+title: ISSCommandWithParameters::SetParameterProperties (OLE DB) | Microsoft Docs
 description: ISSCommandWithParameters::SetParameterProperties (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: b9f5a3251b05453d01b2ef984c6a9ea7bde1c115
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015381"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties (OLE DB)
@@ -48,7 +48,7 @@ HRESULT SetParameterProperties(
 ## <a name="return-code-values"></a>返回代码值  
  ISSCommandWithParameters::SetParameterProperties 方法返回的错误代码与核心 OLE DB ICommandProperties::SetProperties 方法返回的错误代码相同   。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  允许按照序号基于每个参数使用此方法设置参数属性，或者在已经从属性数组生成 SSPARAMPROPS 之后使用单个 ISSCommandWithParameters::SetParameterProperties 调用设置参数属性  。  
   
  在调用 ISSCommandWithParameters::SetParameterProperties 方法之前，必须首先调用 SetParameterInfo 方法   。 调用 `SetParameterProperties(0, NULL)` 可清除所有指定的参数属性，而调用 `SetParameterInfo(0,NULL,NULL)` 则会清除所有参数信息（包括可能与某个参数相关的任何属性）。  
@@ -73,9 +73,9 @@ HRESULT SetParameterProperties(
   
  `};`  
   
- 数据库引擎中的改进, 从[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]允许 ISSCommandWithParameters:: SetParameterProperties 获取有关预期结果的更准确说明。 这些更准确的结果可能与以前版本[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的 ISSCommandWithParameters:: SetParameterProperties 返回的值不同。 有关详细信息, 请参阅[元数据发现](../../oledb/features/metadata-discovery.md)。  
+ 自 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 起，借助数据库引擎中的改进，ISSCommandWithParameters::SetParameterProperties 可以获取预期结果的更准确描述。 这些更准确的结果可能与旧版 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中 ISSCommandWithParameters::SetParameterProperties 返回的值有所不同。 有关详细信息，请参阅[元数据发现](../../oledb/features/metadata-discovery.md)。  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |iOrdinal |所传递参数的序号。|  
 |cPropertySets |rgPropertySets 中 DBPROPSET 结构的数量  。|  

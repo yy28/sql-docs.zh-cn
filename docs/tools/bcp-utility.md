@@ -1,5 +1,5 @@
 ---
-title: bcp 实用工具 | Microsoft Docs
+title: bcp 实用工具
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -25,23 +25,23 @@ ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
-ms.date: 01/14/2019
+ms.custom: seo-lt-2019
+ms.date: 01/23/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 0f9081562a0cb0f8ddba663f04305c7bd2b387fe
-ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
-ms.translationtype: MTE75
+ms.openlocfilehash: 6fcb5285a7ec24b8b27afd86cd0b77777f716ce3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72989566"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76761541"
 ---
 # <a name="bcp-utility"></a>bcp 实用工具
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-> 有关在 Linux 上使用 bcp 的详细情况，请参阅[在 linux 上安装 sqlcmd 和 bcp](../linux/sql-server-linux-setup-tools.md)。
+> 有关在 Linux 上使用 bcp 的信息，请参阅[在 Linux 上安装 sqlcmd 和 bcp](../linux/sql-server-linux-setup-tools.md)。
 >
-> 有关将 bcp 与 Azure SQL 数据仓库配合使用的详细信息，请参阅[使用 Bcp 加载数据](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp)。
+> 有关将 bcp 与 Azure SQL 数据仓库配合使用的详细信息，请参阅[使用 bcp 加载数据](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp)。
 
 大容量复制程序实用工具 (bcp) 可以在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例和用户指定格式的数据文件间大容量复制数据     。 使用 **bcp** 实用工具可以将大量新行导入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表，或将表数据导出到数据文件。 除非与 **queryout** 选项一起使用，否则使用该实用工具不需要了解 [!INCLUDE[tsql](../includes/tsql-md.md)]知识。 若要将数据导入表中，必须使用为该表创建的格式文件，或者必须了解表的结构以及对于该表中的列有效的数据类型。  
 
@@ -55,24 +55,24 @@ ms.locfileid: "72989566"
 **[![下载](../ssdt/media/download.png) 下载 Microsoft Command Line Utilities 15.0 for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2043518)**
 <br>**[![下载](../ssdt/media/download.png) 下载 Microsoft Command Line Utilities 15.0 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2043622)**
 
-命令行工具是公开发行版（GA），但与 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]的安装程序包一起发布。
+命令行工具为公开发行版 (GA)，但与 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的安装程序包一起发布。
 
 ### <a name="version-information"></a>版本信息
 
 版本号：15.0 <br>
 生成号：15.0.1000.34<br>
-发布日期：2018 年 10 月 18 日
+发行日期：2018 年 10 月 18 日
 
-新版本的 SQLCMD 支持 Azure AD 身份验证，包括 SQL 数据库、SQL 数据仓库和 Always Encrypted 功能的多重身份验证（MFA）支持。
-新的 BCP 支持 Azure AD 身份验证，包括 SQL 数据库和 SQL 数据仓库的多重身份验证（MFA）支持。
+新版本的 SQLCMD 支持 Azure AD 身份验证，包括对 SQL 数据库、SQL 数据仓库和 Always Encrypted 功能的多重身份验证 (MFA) 支持。
+新 BCP 支持 Azure AD 身份验证，包括对 SQL 数据库和 SQL 数据仓库的多重身份验证 (MFA) 支持。
 
 ### <a name="system-requirements"></a>系统要求
 
-Windows 10、Windows 7、Windows 8、Windows 8.1，Windows Server 2008，Windows Server 2008 R2，Windows Server 2008 R2 SP1，Windows Server 2012，Windows Server 2012 R2，Windows Server 2016
+Windows 10、Windows 7、Windows 8、Windows 8.1、Windows Server 2008、Windows Server 2008 R2、Windows Server 2008 R2 SP1、Windows Server 2012、Windows Server 2012 R2、Windows Server 2016
 
-此组件要求 SQL Server [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483)和[Microsoft ODBC Driver 17.3](https://www.microsoft.com/download/details.aspx?id=56567)。
+此组件要求安装 [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) 和 [Microsoft ODBC Driver 17.3 for SQL Server](https://www.microsoft.com/download/details.aspx?id=56567)。
 
-若要检查 BCP version execute `bcp /v` 命令，并确认正在使用15.0.1000.34 或更高版本。
+若要查看 BCP 版本，请执行 `bcp /v` 命令，并确认使用的是 15.0.1000.34 或更高版本。
 
 <table><th>语法</th><tr><td><pre>
 bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a href="#tbl_name">table_name</a> | <a href="#vw_name">view_name</a> | <a href="#query">"query"</a>}
@@ -83,6 +83,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     [<a href="#c">-c</a>]
     [<a href="#C">-C { ACP | OEM | RAW | code_page } </a>]
     [<a href="#d">-d database_name</a>]
+    [<a href="#D">-D</a>]
     [<a href="#e">-e err_file</a>]
     [<a href="#E">-E</a>]
     [<a href="#f">-f format_file</a>]
@@ -157,7 +158,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  不要将此选项与 **-h "** ROWS_PER_BATCH **=** _bb_ **"** 选项一起使用。  
  
  **-c**<a name="c"></a>  
- 使用字符数据类型执行该操作。 此选项不提示输入每个字段；它使用 **char** 作为存储类型，没有前缀；使用 **\t** （制表符）作为字段分隔符，使用 **\r\n** （换行符）作为行终止符。 **-c** 与 **-w** 不兼容。  
+ 使用字符数据类型执行该操作。 此选项不提示输入每个字段；它使用 **char** 作为存储类型，没有前缀；使用 **\t** （制表符）作为字段分隔符，使用 **\r\n** （换行符）作为行终止符。 **-c** 与 **-w**不兼容。  
   
  有关详细信息，请参阅[使用字符格式导入或导出数据 (SQL Server)](../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)。  
   
@@ -167,16 +168,20 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 > [!NOTE]
 > 我们建议你为格式文件中的每个列指定一个排序规则名称，除非你希望 65001 选项优先于排序规则/代码页规范。
   
-|代码页值|描述|  
+|代码页值|说明|  
 |---------------------|-----------------|  
 |ACP|[!INCLUDE[vcpransi](../includes/vcpransi-md.md)]/Microsoft Windows (ISO 1252)。|  
 |OEM|客户端使用的默认代码页。 未指定 **-C** 时使用的默认代码页。|  
 |RAW|不进行代码页间的转换。 因为不进行转换，所以这是最快的选项。|  
 |*code_page*|特定的代码页编号，例如 850。<br /><br /> 低于 13 ([!INCLUDE[ssSQL15](../includes/sssql15-md.md)]) 的版本不支持代码页 65001（UTF-8 编码）。 版本 13 和后续版本可将 UTF-8 编码导入以前版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。|  
+|||
   
  **-d** _**database\_name**_ <a name="d"></a>   
- 指定要连接到的数据库。 默认情况下，bcp.exe 连接到用户的默认数据库。 如果指定了 * *-d database_name 和三部分名称（database_name，作为第一个参数传递到），则会发生错误，因为不能同时指定数据库名称。 如果 database_name 以连字符 (-) 或正斜杠 (/) 开头，则不要在 -d 与数据库名称之间添加空格   。  
-  
+ 指定要连接到的数据库。 默认情况下，bcp.exe 连接到用户的默认数据库。 如果指定了 -d database_name 和包含三部分的名称（database_name.schema.table，作为第一个参数传递给 bcp.exe），则将发生错误，因为该数据库名称不能指定两次。 如果 database_name 以连字符 (-) 或正斜杠 (/) 开头，则不要在 -d 与数据库名称之间添加空格   。  
+
+**-D**<a name="D"></a>  
+使值传递给将解释为数据源名称 (DSN) 的 `bcp` `-S` 选项。 有关详细信息，请参阅[使用 sqlcmd 进行连接](../connect/odbc/linux-mac/connecting-with-sqlcmd.md)中的“sqlcmd 和 bcp 中的 DSN 支持”  。
+
  **-e** _**err\_file**_ <a name="e"></a>  
  指定错误文件的完整路径，此文件用于存储 **bcp** 实用工具无法从文件传输到数据库的所有行。 **bcp** 命令产生的错误消息将被发送到用户的工作站。 如果不使用此选项，则不会创建错误文件。  
   
@@ -185,7 +190,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **-E**<a name="E"></a>   
  指定导入数据文件中的标识值用于标识列。 如果未指定 **-E** ，则将忽略要导入的数据文件中此列的标识值，而且 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将根据创建表期间指定的种子值和增量值自动分配唯一值。  
   
- 如果数据文件不包含表或视图中的标识列的值，则可使用格式化文件指定，在导入数据时应跳过表或视图中的标识列；[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将自动为该列分配唯一值。 有关详细信息，请参阅 [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)。  
+ 如果数据文件不包含表或视图中的标识列的值，则可使用格式化文件指定，在导入数据时应跳过表或视图中的标识列； [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将自动为该列分配唯一值。 有关详细信息，请参阅 [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)。  
   
  **-E** 选项有一个特殊的权限要求。 有关详细信息，请参阅本主题后面的“[备注](#remarks)”。  
    
@@ -204,28 +209,28 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 **-F** _**first\_row**_ <a name="F"></a>  
  指定要从表中导出或从数据文件导入的第一行的编号。 此参数的值应大于 (>) 0，小于 (<) 或等于 (=) 总行数。 如果未指定此参数，则默认为文件的第一行。  
   
- *first_row* 可以是一个最大为 2^63-1 的正整数值。 **-F** first_row  的值从 1 开始。  
+ *first_row* 可以是一个最大为 2^63-1 的正整数值。 **-F** *first_row* 的值从 1 开始。  
 
 **-G**<a name="G"></a>  
- 当连接到 Azure SQL 数据库或 Azure SQL 数据仓库时，客户端将使用此开关指定该用户使用 Azure Active Directory 身份验证来进行身份验证。 -G 开关需要[版本14.0.3008.27 或更高版本](https://go.microsoft.com/fwlink/?LinkID=825643)。 要确定你的版本，请执行 bcp -v。 有关详细信息，请参阅[使用 Azure Active Directory 身份验证使用 Sql 数据库或 Sql 数据仓库进行身份验证](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)。 
+ 当连接到 Azure SQL 数据库或 Azure SQL 数据仓库时，客户端将使用此开关指定该用户使用 Azure Active Directory 身份验证来进行身份验证。 -G 开关需要[版本 14.0.3008.27 或更高版本](https://go.microsoft.com/fwlink/?LinkID=825643)。 要确定你的版本，请执行 bcp -v。 有关详细信息，请参阅[将 Azure Active Directory 身份验证用于 SQL 数据库或 SQL 数据仓库身份验证](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)。 
 
 > [!IMPORTANT]
 > **-G** 选项仅适用于 Azure SQL 数据库 和 Azure 数据仓库。
 > Linux 或 macOS 目前不支持 AAD 集成和交互式身份验证。
 
 > [!TIP]
->  若要检查您的 bcp 版本是否包括对 Azure Active Directory Authentication （AAD）类型**bcp**的支持（bcp\<space >\<虚线 >\<虚线 >），并验证在可用参数列表中是否显示了-G。
+>  若要检查 bcp 版本是否包含对 Azure Active Directory 身份验证 (AAD) 类型 **bcp --** (bcp\<space>\<dash>\<dash>) 的支持，并验证在可用参数列表中是否显示 -G。
 
 - **Azure Active Directory 用户名和密码：** 
 
     当你想要使用 Azure Active Directory 用户名和密码时，可以提供 **-G** 选项，也可以通过提供 **-U** 选项和 **-P** 选项来使用用户名和密码。 
 
-    下面的示例使用 Azure AD 用户名和密码导出数据，其中 user 和 password 是 AAD 凭据。 该示例从 Azure 服务器 `aadserver.database.windows.net` 的数据库 `testdb` 导出 `bcptest` 表，并将数据存储在文件 `c:\last\data1.dat`中：
+    下面的示例使用 Azure AD 用户名和密码导出数据，其中用户和密码是 AAD 凭据。 该示例从 Azure 服务器 `aadserver.database.windows.net` 的数据库 `testdb` 导出表 `bcptest`，并将数据存储在文件 `c:\last\data1.dat` 中：
     ``` 
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ``` 
 
-    下面的示例使用 Azure AD 用户名和密码导入数据，其中 user 和 password 是 AAD 凭据。 该示例使用 Azure AD 用户/密码将数据从文件 `c:\last\data1.dat` 导入到 Azure `aadserver.database.windows.net` 服务器上的数据库 `testdb` 的表 `bcptest` 中：
+    下面的示例使用 Azure AD 用户名和密码导入数据，其中用户和密码是 AAD 凭据。 该示例使用 Azure AD 用户/密码将数据从文件 `c:\last\data1.dat` 导入到 Azure 服务器 `aadserver.database.windows.net` 上的数据库 `testdb` 的表 `bcptest` 中：
     ```
     bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
@@ -234,13 +239,13 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
     要进行 Azure Active Directory 集成身份验证，可提供 -G 选项而无需用户名或密码  。 此配置假定当前的 Windows 用户帐户（运行 bcp 命令的帐户）与 Azure AD 联合： 
 
-    下面的示例使用 Azure AD 集成帐户导出数据。 该示例使用从 Azure `aadserver.database.windows.net` 服务器集成的 Azure AD 从数据库 `testdb` 导出表 `bcptest`，并将数据存储在文件 `c:\last\data2.dat`中：
+    下面的示例使用 Azure AD 集成帐户导出数据。 该示例使用 Azure 服务器 `aadserver.database.windows.net` 中的 Azure AD 集成身份验证从数据库 `testdb` 导出表 `bcptest`，并将数据存储在文件 `c:\last\data2.dat` 中：
 
     ```
     bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
-    以下示例使用 Azure AD 集成身份验证导入数据。该示例使用 Azure AD 集成身份验证，将数据从文件 `c:\last\data2.txt` 导入到 Azure `aadserver.database.windows.net` 服务器上的数据库 `testdb` `bcptest` 的表中：
+    以下示例使用 Azure AD 集成身份验证导入数据。该示例使用 Azure AD 集成身份验证，将数据从文件 `c:\last\data2.txt` 导入到 Azure 服务器 `aadserver.database.windows.net` 上的数据库 `testdb` 的表 `bcptest` 中：
 
     ```
     bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
@@ -248,13 +253,13 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
 - **Azure Active Directory 交互式身份验证**  
 
-   使用 Azure SQL 数据库和 SQL 数据仓库 Azure AD 交互身份验证，可以使用支持多重身份验证的交互式方法。 有关详细信息，请参阅[Active Directory 交互身份验证](../ssdt/azure-active-directory.md#active-directory-interactive-authentication)。 
+   使用面向 Azure SQL 数据库和 SQL 数据仓库的 Azure AD 交互身份验证，可以使用支持多重身份验证的交互式方法。 有关详细信息，请参阅 [Active Directory 交互式身份验证](../ssdt/azure-active-directory.md#active-directory-interactive-authentication)。 
 
-   Azure AD interactive 需要**bcp** [版本 15.0.1000.34](#download-the-latest-version-of-bcp-utility)或更高版本以及[ODBC 版本17.2 或更高](https://www.microsoft.com/download/details.aspx?id=56567)版本。  
+   Azure AD 交互式身份验证需要 bcp  [版本 15.0.1000.34](#download-the-latest-version-of-bcp-utility) 或更高版本，以及 [ODBC 版本 17.2 或更高版本](https://www.microsoft.com/download/details.aspx?id=56567)。  
 
-   若要启用交互身份验证，请仅在不使用密码的情况下提供-G 选项和用户名（-U）。   
+   若要启用交互身份验证，请仅提供用户名 (-U) 的 -G 选项，而不提供密码。   
 
-   下面的示例使用 Azure AD 交互模式导出数据，该模式指示用户表示 AAD 帐户的用户名。 这是上一节中使用的示例： *Azure Active Directory 用户名和密码*。  
+   下面的示例使用 Azure AD 交互模式导出数据，该模式指示用户表示 AAD 帐户的用户名。 这是上一节中使用的同一示例：*Azure Active Directory 用户名和密码*。  
 
    交互模式需要手动输入密码，或者对于启用了多重身份验证的帐户，请完成配置的 MFA 身份验证方法。 
 
@@ -262,15 +267,15 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com 
    ``` 
 
-   如果 Azure AD 用户是使用 Windows 帐户的域联合的域，则命令行中所需的用户名包含其域帐户（例如，joe@contoso.com 见下文）：   
+   如果 Azure AD 用户是使用 Windows 帐户的域联合用户，则命令行中所需的用户名包含其域帐户（例如 joe@contoso.com，见下文）：   
 
    ```
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com 
    ```
 
-   如果来宾用户在特定 Azure AD 中存在，并且属于 SQL 数据库中存在的包含执行 bcp 命令的数据库权限的组，则将使用其来宾用户别名（例如， *keith0@adventureworks.com* ）。
+   如果来宾用户在特定 Azure AD 中存在，并且属于 SQL DB 中存在的包含执行 bcp 命令的数据库权限的组，则将使用其来宾用户别名（例如， *keith0@adventureworks.com* ）。
   
--h "load hints[ ,... n]"      <a name="h"></a> 指定向表或视图中批量导入数据时要用到的提示。  
+**-h** _**"load hints**_ [ ,... *n*] **"** <a name="h"></a> 指定向表或视图中批量导入数据时要用到的一个或多个提示。  
   
 * **ORDER**( **_column_[ASC | DESC] [** , **..._n_])**  
 数据文件中的数据排序次序。 如果根据表中的聚集索引（如果有）对要导入的数据排序，则可提高批量导入的性能。 如果数据文件以不同的次序（即不同于聚集索引键的次序）排序，或者表中不存在任何聚集索引，则将忽略 ORDER 子句。 提供的列名必须是目标表中有效的列名。 默认情况下， **bcp** 假定数据文件没有排序。 对于经过优化的批量导入， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 还将验证导入的数据是否已排序。  
@@ -315,10 +320,10 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 指定在操作过程中空列应该保留 null 值，而不是所插入列的任何默认值。 有关详细信息，请参阅[在批量导入期间保留 Null 或使用默认值 (SQL Server)](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)。  
   
 **-K** _**application\_intent**_ <a name="K"></a>   
-连接到服务器时声明应用程序工作负荷类型。 唯一可能的值是 **ReadOnly**。 如果未指定 **-K**，bcp 实用工具将不支持连接到 Always On 可用性组中的辅助副本。 有关详细信息，请参阅 [活动辅助副本：可读辅助副本（AlwaysOn 可用性组）](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)概念。  
+连接到服务器时声明应用程序工作负荷类型。 唯一可能的值是 **ReadOnly**。 如果未指定 **-K** ，bcp 实用工具将不支持连接到 Always On 可用性组中的辅助副本。 有关详细信息，请参阅[活动次要副本：可读次要副本（Always On 可用性组）](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
 **-l** _**login\_timeout**_ <a name="l"></a>  
-指定登录超时。 -l 选项指定在尝试连接到服务器时登录 SQL Server 的超时时间（以秒为单位）。 默认的登录超时时间为15秒。 登录超时必须是介于 0 和 65534 之间的数字。 如果提供的值不是数值或不在此范围内，bcp 将生成错误消息。 值0指定无限超时。
+指定登录超时。 -l 选项指定在尝试连接到服务器时登录 SQL Server 的超时时间（以秒为单位）。 默认登录超时值为 15 秒。 登录超时必须是介于 0 和 65534 之间的数字。 如果提供的值不是数值或不在此范围内，bcp 将生成错误消息。 值 0 指定无限超时。
   
 **-L** _**last\_row**_ <a name="L"></a>  
 指定要从表中导出或从数据文件中导入的最后一行的编号。 此参数的值应大于 (>) 0，小于 (<) 或等于 (=) 最后一行的编号。 如果未指定此参数，则默认为文件的最后一行。  
@@ -341,9 +346,9 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 **-N**<a name="N"></a>  
 执行大容量复制操作时，对非字符数据使用本机（数据库）数据类型的数据，对字符数据使用 Unicode 字符。 此选项是 **-w** 选项的一个替代选项，并具有更高的性能。此选项主要用于通过数据文件将数据从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的一个实例传送到另一个实例。 此选项不提示输入每个字段。 如果要传送包含 ANSI 扩展字符的数据，并希望利用本机模式的性能优势，则可使用此选项。  
   
- 有关详细信息信息，请参阅[使用 Unicode 本机格式导入或导出数据 (SQL Server)](../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)。  
+ 有关详细信息信息，请参阅 [使用 Unicode 本机格式导入或导出数据 (SQL Server)](../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)。  
   
- 通过使用 bcp.exe 和 **-N** 来导出数据后又将数据导入到同一表架构时，如果存在固定长度的非 Unicode 字符列（例如 **char(10)** ），系统可能会显示截断警告。  
+ 通过使用 bcp.exe 和 **-N**来导出数据后又将数据导入到同一表架构时，如果存在固定长度的非 Unicode 字符列（例如 **char(10)** ），系统可能会显示截断警告。  
   
  可忽略该警告。 解决此警告的一个方法是使用 **-n** 来替代 **-N**。  
   
@@ -381,7 +386,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **-R**<a name="R"></a>  
  指定使用客户端计算机区域设置中定义的区域格式，将货币、日期和时间数据大容量复制到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中。 默认情况下，将忽略区域设置。  
   
- -S server\_name [\\instance\_name]<a name="S"></a> 指定要连接的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例      。 如果未指定服务器，则 **bcp** 实用工具将连接到本地计算机上的默认 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。 如果从网络或本地命名实例上的远程计算机中运行 **bcp** 命令，则必须使用此选项。 若要连接到服务器上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 默认实例，请仅指定 *server_name*。 要连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的命名实例，请指定 server\_name\\instance\_name    。  
+ **-S** _**server\_name**_ [\\ _**instance\_name**_ ]<a name="S"></a> 指定要连接的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例。 如果未指定服务器，则 **bcp** 实用工具将连接到本地计算机上的默认 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。 如果从网络或本地命名实例上的远程计算机中运行 **bcp** 命令，则必须使用此选项。 若要连接到服务器上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 默认实例，请仅指定 *server_name*。 要连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的命名实例，请指定 server\_name\\instance\_name    。  
   
  **-t** _**field\_term**_ <a name="t"></a>  
  指定字段终止符。 默认的字段终止符是 **\t** （制表符）。 使用此参数可以替代默认字段终止符。 有关详细信息，请参阅 [指定字段终止符和行终止符 (SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。  
@@ -425,12 +430,12 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  有关详细信息，请参阅 [导入来自早期版本的 SQL Server 的本机格式数据和字符格式数据](../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)。  
   
  **-w**<a name="w"></a>  
- 使用 Unicode 字符执行大容量复制操作。 此选项不提示输入每个字段；它使用 **nchar** 作为存储类型，不带前缀；使用 **\t** （制表符）作为字段分隔符，使用 **\n** （换行符）作为行终止符。 **-w** 与 **-c** 不兼容。  
+ 使用 Unicode 字符执行大容量复制操作。 此选项不提示输入每个字段；它使用 **nchar** 作为存储类型，不带前缀；使用 **\t** （制表符）作为字段分隔符，使用 **\n** （换行符）作为行终止符。 **-w** 与 **-c**不兼容。  
   
  有关详细信息，请参阅 [使用 Unicode 字符格式导入或导出数据 (SQL Server)](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)。  
   
  **-x**<a name="x"></a>  
- 结合使用 **format** 和 **-f** format_file  选项，可生成基于 XML 的格式化文件，而不是默认的非 XML 格式化文件。 在导入或导出数据时， **-x** 不起作用。 如果不与 **format** 和 **-f** format_file  一起使用，则将生成错误。  
+ 结合使用该格式  和 -f  format_file  选项，可生成基于 XML 的格式化文件，而不是默认的非 XML 格式化文件。 在导入或导出数据时， **-x** 不起作用。 如果不与格式  和 -f  format_file  一起使用，则将生成错误。  
 
 ## 备注<a name="remarks"></a>
 
@@ -443,7 +448,7 @@ bcp 实用工具还可以与 [Microsoft SQL Server 2016 功能包](https://www.m
   
  有关在何处查找或如何运行 **bcp** 实用工具的信息以及有关命令提示实用工具语法约定的信息，请参阅[《Command Prompt Utility Reference &#40;Database Engine&#41;》](../tools/command-prompt-utility-reference-database-engine.md)（命令提示实用工具参考（数据库引擎））。  
   
- 有关准备数据以进行批量导入或导出操作的信息，请参阅[准备用于批量导出或导入的数据 (SQL Server)](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)。  
+ 有关准备数据以进行批量导入或导出操作的信息，请参阅 [准备用于批量导出或导入的数据 (SQL Server)](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)知识。  
   
  有关何时在事务日志中记录由批量导入执行的行插入操作的信息，请参阅 [《Prerequisites for Minimal Logging in Bulk Import》](../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)（批量导入的最小日志记录的先决条件）。  
 
@@ -617,7 +622,7 @@ bcp -v
   
  该示例假定你使用混合模式身份验证，必须使用 **-U** 开关指定登录 ID。 并且，除非你连接到本地计算机上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的默认实例，否则请使用 **-S** 开关指定系统名称和实例名称（可选）。  
 
-在命令提示符处，输入以下命令： \(系统将提示你输入密码。\)
+在命令提示符处输入以下命令：\(系统将提示你输入密码。\)
 
 ```
 bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -U<login_id> -S<server_name\instance_name>
@@ -657,7 +662,7 @@ bcp "SELECT StockItemTransactionID FROM WideWorldImporters.Warehouse.StockItemTr
 
 ### <a name="f-copying-a-specific-row-into-a-data-file"></a>F. 将特定的行复制到数据文件中
 
-若要复制特定行，可以使用 **queryout** 选项。 以下示例仅将名为 `Amy Trefl` 的人员行从 `WideWorldImporters.Application.People` 表复制到数据文件 `Amy_Trefl_c.bcp` 中。  注意： **-d** 开关用于标识数据库。
+若要复制特定行，可以使用 **queryout** 选项。 以下示例仅将名为 `Amy Trefl` 的人员行从 `WideWorldImporters.Application.People` 表复制到数据文件 `Amy_Trefl_c.bcp`中。  注意： **-d** 开关用于标识数据库。
   
 在命令提示符处输入以下命令：
 
@@ -708,7 +713,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp in D:\BCP\StockItemTr
 ```
 
 > [!NOTE]  
->  如果数据文件字段和表中的列不同（例如，在编号、排序或数据类型方面），则可使用格式化文件。 有关详细信息，请参阅 [用来导入或导出数据的格式化文件 (SQL Server)](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)知识。  
+>  如果数据文件字段和表中的列不同（例如，在编号、排序或数据类型方面），则可使用格式化文件。 有关详细信息，请参阅 [用来导入或导出数据的格式化文件 (SQL Server)](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)。  
 
 ### <a name="j-specifying-a-code-page"></a>J. 指定代码页
 
@@ -722,7 +727,7 @@ bcp.exe MyTable in "D:\data.csv" -T -c -C 65001 -t , ...
 
 |以下主题包含有关使用 bcp的示例： |
 |---|
-|用于批量导入或导出的数据格式 (SQL Server)<br />&emsp;&#9679;&emsp;[使用本机格式导入或导出数据 (SQL Server)](../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[使用字符格式导入或导出数据 (SQL Server)](../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[使用 Unicode 本机格式导入或导出数据 (SQL Server)](../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[使用 Unicode 字符格式导入或导出数据 (SQL Server)](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)<br /><br />[指定字段终止符和行终止符 (SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)<br /><br />[在批量导入期间保留 Null 或使用默认值 (SQL Server)](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)<br /><br />[批量导入数据时保留标识值 (SQL Server)](../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)<br /><br />用于导入或导出数据的格式化文件 (SQL Server)）<br />&emsp;&#9679;&emsp;[创建格式化文件 (SQL Server)](../relational-databases/import-export/create-a-format-file-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式化文件批量导入数据 (SQL Server)](../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式化文件跳过表列 (SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式化文件跳过数据字段 (SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式化文件将表列映射到数据文件字段 (SQL Server)](../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)<br /><br />[批量导入和导出 XML 文档的示例 (SQL Server)](../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)<br /><p>  </p>|
+|用于批量导入或导出的数据格式 (SQL Server)<br />&emsp;&#9679;&emsp;[使用本机格式导入或导出数据 (SQL Server)](../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[使用字符格式导入或导出数据 (SQL Server)](../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[使用 Unicode 本机格式导入或导出数据 (SQL Server)](../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[使用 Unicode 字符格式导入或导出数据 (SQL Server)](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)<br /><br />[指定字段终止符和行终止符 (SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)<br /><br />[在批量导入期间保留 Null 或使用默认值 (SQL Server)](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)<br /><br />[大容量导入数据时保留标识值 (SQL Server)](../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)<br /><br />用于导入或导出数据的格式化文件 (SQL Server)）<br />&emsp;&#9679;&emsp;[创建格式化文件 (SQL Server)](../relational-databases/import-export/create-a-format-file-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式化文件批量导入数据 (SQL Server)](../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式化文件跳过表列 (SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式化文件跳过数据字段 (SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式化文件将表列映射到数据文件字段 (SQL Server)](../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)<br /><br />[批量导入和导出 XML 文档的示例 (SQL Server)](../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)<br /><p>  </p>|
 
 ## <a name="see-also"></a>另请参阅
 
@@ -731,7 +736,7 @@ bcp.exe MyTable in "D:\data.csv" -T -c -C 65001 -t , ...
  [OPENROWSET (Transact-SQL)](../t-sql/functions/openrowset-transact-sql.md)   
  [SET QUOTED_IDENTIFIER (Transact-SQL)](../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [sp_tableoption &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)   
+ [sp_tableoption (Transact-SQL)](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)   
  [用来导入或导出数据的格式化文件 (SQL Server)](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)
 
 ## <a name="feedback"></a>反馈

@@ -1,5 +1,7 @@
 ---
-title: 运行 TSQL 调试器之前配置防火墙规则
+title: 在运行 T-SQL 调试器之前配置防火墙规则
+description: 了解如何在连接到 SQL Server Management Studio 中的 SQL Server 时，在运行 Transact-SQL (T-SQL) 调试器之前配置 Windows 防火墙规则。
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: scripting
@@ -19,21 +21,20 @@ ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
 ms.date: 10/20/2016
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd9d501f8acdbdbbc9a2942ef522714a445e62fb
-ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
+ms.openlocfilehash: de184b30270ff301e343b1598327a449907fb508
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74097948"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75558253"
 ---
 # <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>运行 TSQL 调试器之前配置防火墙规则
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-必须配置 Windows 防火墙规则，以便在连接到[!INCLUDE[tsql](../../includes/tsql-md.md)]实例（运行该实例的计算机不同于运行[!INCLUDE[ssDE](../../includes/ssde-md.md)]查询编辑器的计算机）时启用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 调试。
+必须配置 Windows 防火墙规则，以便在连接到 [!INCLUDE[tsql](../../includes/tsql-md.md)] 实例（运行该实例的计算机不同于运行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器的计算机）时启用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 调试。
 
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
 

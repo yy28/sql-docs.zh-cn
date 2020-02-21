@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
 ms.openlocfilehash: 94175594fe2539320941b5a83c1a7aa4b127783f
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70155689"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
@@ -27,7 +27,7 @@ SQL Server 2014 SP2 包含针对 SQL Server 2014 SP1 CU7 发布的修补程序�
 
 ### <a name="performance-and-scalability-improvements-in-sp2"></a>SP2 中性能和可伸缩性方面的改进
 
-|功能|描述|有关详细信息，请参阅：|
+|Feature|说明|更多信息|
 |---|---|---|
 |自动 Soft NUMA 分区|可在报告每个 NUMA 节点 8 个或更多 CPU 的系统上自动配置 Soft NUMA。|[软件 NUMA (SQL Server)](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)|
 |缓冲池扩展|启用 SQL Server 缓冲池以缩放 8 TB 以上。|[缓冲池扩展](https://docs.microsoft.com/sql/database-engine/configure-windows/buffer-pool-extension)|
@@ -38,7 +38,7 @@ SQL Server 2014 SP2 包含针对 SQL Server 2014 SP1 CU7 发布的修补程序�
 
 ### <a name="supportability-and-diagnostics-improvements-in-sp2"></a>SP2 中的可支持性和诊断改进
 
-|功能|描述|有关详细信息，请参阅：|
+|Feature|说明|更多信息|
 |---|---|---|
 |AlwaysON 超时日志记录|添加租约超时消息的新日志记录功能，以便记录当前时间和预期的续订时间。 |[Improved AlwaysOn Availability Group Lease Timeout Diagnostics](https://blogs.msdn.microsoft.com/alwaysonpro/2016/02/23/improved-alwayson-availability-group-lease-timeout-diagnostics/)（改进的 AlwaysOn 可用性组租约超时诊断）
 |AlwaysON XEvent 和性能计数器|新 AlwaysON XEvent 和性能计数器，在对 AlwaysON 的延迟问题进行故障排除时改进诊断。 |[KB 3107172](https://support.microsoft.com/help/3107172/improve-tempdb-spill-diagnostics-by-using-extended-events-in-sql-serve) 和 [KB 3107400](https://support.microsoft.com/help/3107400/improved-tempdb-spill-diagnostics-in-showplan-xml-schema-in-sql-server)
@@ -233,7 +233,7 @@ optimized table or natively compiled stored procedure with object ID
     SELECT @v0 + @v1 + @v2 + ... + @v199  
     ```  
   
-    编写：  
+    写入：  
   
     ```  
     SELECT((@v0 + ... + @v49) + (@v50 + ... + @v99)) + ((@v100 + ... + @v149) + (@v150 + ... + @v199))  
@@ -245,7 +245,7 @@ optimized table or natively compiled stored procedure with object ID
     SELECT @v0 +@v1 +@v2 +...+@v199  
     ```  
   
-    编写：  
+    写入：  
   
     ```  
     SELECT @v0 +@v1  
@@ -299,7 +299,7 @@ DATEPART(weekday, @d)
   
 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 本机模式不能在以下条件之一中并行运行：  
   
--   用于 SharePoint 产品的 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 外接程序    
+-   用于 SharePoint 产品的 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 加载项    
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 共享服务  
   
 并行安装会阻止 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 本机模式 Windows 服务启动。 Windows 事件日志中将看到类似于此处描述的错误消息：  
@@ -360,7 +360,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 1.  从 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能包下载 MSOLAP.5 访问接口。 将访问接口安装在运行 Excel Services 的应用程序服务器上。 有关详细信息，请参阅“用于 Microsoft SQL Server 2012 SP1 的 Microsoft Analysis Services OLE DB 提供程序”[Microsoft SQL Server 2012 SP1 功能包](https://www.microsoft.com/download/details.aspx?id=35580)部分。  
   
-2.  将 MSOLAP.5 注册为 SharePoint Excel Services 中的受信任数据访问接口。 有关详细信息，请参阅 [“将 MSOLAP.5 添加为 Excel Services 中的受信任数据访问接口”](https://technet.microsoft.com/library/hh758436.aspx)。  
+2.  将 MSOLAP.5 注册为 SharePoint Excel Services 中的受信任数据访问接口。 有关详细信息，请参阅 [将 MSOLAP.5 添加为 Excel Services 中的受信任数据访问接口](https://technet.microsoft.com/library/hh758436.aspx)。  
   
 **详细信息：**  
   
@@ -375,7 +375,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 1.  从 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能包下载 MSOLAP.5 访问接口。 将访问接口安装在运行 Excel Services 的应用程序服务器上。 有关详细信息，请参阅“用于 Microsoft SQL Server 2012 SP1 的 Microsoft Analysis Services OLE DB 提供程序”[Microsoft SQL Server 2012 SP1 功能包](https://www.microsoft.com/download/details.aspx?id=35580)部分。  
   
-2.  将 MSOLAP.5 注册为 SharePoint Excel Services 中的受信任数据访问接口。 有关详细信息，请参阅 [“将 MSOLAP.5 添加为 Excel Services 中的受信任数据访问接口”](https://technet.microsoft.com/library/hh758436.aspx)。  
+2.  将 MSOLAP.5 注册为 SharePoint Excel Services 中的受信任数据访问接口。 有关详细信息，请参阅 [将 MSOLAP.5 添加为 Excel Services 中的受信任数据访问接口](https://technet.microsoft.com/library/hh758436.aspx)。  
   
 **详细信息：**  
   

@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 05/24/2018
 ms.openlocfilehash: 09fcacbd2f1c5c197517f962073dce6294aed2e2
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68891859"
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>在 Reporting Services 数据源中存储凭据
@@ -65,15 +65,15 @@ ms.locfileid: "68891859"
   
     -   如果用户名和密码是数据库凭据，请不要选择 **“在与数据源建立连接时用作 Windows 凭据”** 。 如果数据库服务器支持模拟或委托，则可以选择 **“与数据源建立连接之后模拟经过身份验证的用户”** 。  
   
-8.  单击 **“应用”** 。  
+8.  单击“应用”  。  
   
-     ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [适用于存储凭据的安全策略要求](#bkmk_top)  
+     ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [适用于存储凭据的安全策略要求](#bkmk_top)  
   
 ##  <a name="bkmk_stored_credentials_data_source_sharepoint"></a> 为特定于报表的数据源配置存储的凭据（SharePoint 模式）  
   
-1.  浏览到包含该报表的文档库，然后单击打开菜单 ![ssrs 项的文档库上下文菜单](../../reporting-services/report-data/media/ssrs-sharepoint-item-context-menu.png "document library context menu for ssrs items")。  
+1.  浏览到包含该报表的文档库，然后单击打开菜单 ![ssrs 项的文档库上下文菜单](../../reporting-services/report-data/media/ssrs-sharepoint-item-context-menu.png "ssrs 项的文档库上下文菜单")。  
   
-2.  单击第二个打开菜单 ![ssrs 项的文档库上下文菜单](../../reporting-services/report-data/media/ssrs-sharepoint-item-context-menu.png "document library context menu for ssrs items")，然后单击“管理数据源”  。  
+2.  单击第二个打开菜单 ![ssrs 项的文档库上下文菜单](../../reporting-services/report-data/media/ssrs-sharepoint-item-context-menu.png "ssrs 项的文档库上下文菜单")，然后单击“管理数据源”  。  
   
 3.  单击想要使用存储的凭据进行配置的“自定义”  数据源的名称。  
   
@@ -93,9 +93,9 @@ ms.locfileid: "68891859"
   
     -   如果用户名和密码是数据库凭据，请勿选择“用作 Windows 凭据”  。 如果数据库服务器支持模拟或委托，则可选择 **“设置此帐户的执行上下文”** 。  
   
-8.  单击 **ok**。  
+8.  单击“确定”  。  
   
-     ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [适用于存储凭据的安全策略要求](#bkmk_top)  
+     ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [适用于存储凭据的安全策略要求](#bkmk_top)  
   
 ##  <a name="bkmk_stored_credentials_shared_data_source_native"></a> 为共享数据源配置存储凭据（本机模式）  
   
@@ -119,15 +119,15 @@ ms.locfileid: "68891859"
   
     -   如果用户名和密码是数据库凭据，请不要选择 **“在与数据源建立连接时用作 Windows 凭据”** 。 如果数据库服务器支持模拟或委托，则可以选择 **“与数据源建立连接之后模拟经过身份验证的用户”** 。  
   
-6.  单击 **“应用”** 。  
+6.  单击“应用”  。  
   
-     ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [适用于存储凭据的安全策略要求](#bkmk_top)  
+     ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [适用于存储凭据的安全策略要求](#bkmk_top)  
   
 ##  <a name="bkmk_stored_credentials_shared_data_source_sharepoint"></a> 为共享数据源配置存储凭据（SharePoint 模式）  
   
-1.  在文档库中，浏览到共享数据源项。![共享数据源图标](../../reporting-services/report-data/media/hlp-16datasource.png "Shared data source icon")  
+1.  在文档库中，浏览到共享数据源项。![共享数据源图标](../../reporting-services/report-data/media/hlp-16datasource.png "共享数据源图标")  
   
-2.  单击上下文菜单 ![ssrs 项的文档库上下文菜单](../../reporting-services/report-data/media/ssrs-sharepoint-item-context-menu.png "document library context menu for ssrs items")，然后单击第二个上下文菜单 ![ssrs 项的文档库上下文菜单](../../reporting-services/report-data/media/ssrs-sharepoint-item-context-menu.png "document library context menu for ssrs items")。  
+2.  单击上下文菜单 ![ssrs 项的文档库上下文菜单](../../reporting-services/report-data/media/ssrs-sharepoint-item-context-menu.png "ssrs 项的文档库上下文菜单")，然后单击第二个上下文菜单 ![ssrs 项的文档库上下文菜单](../../reporting-services/report-data/media/ssrs-sharepoint-item-context-menu.png "ssrs 项的文档库上下文菜单")。  
   
 3.  单击“编辑数据源定义”  。  
   
@@ -145,11 +145,11 @@ ms.locfileid: "68891859"
   
     -   如果帐户是 Windows 域用户帐户，请按照以下格式指定该帐户：\<域>\\<帐户\>，然后选择“用作 Windows 凭据”  。  
   
-    -   如果用户名和密码是数据库凭据，请勿选择“用作 Windows 凭据”  。 如果数据服务器支持模拟或委托，则可以选择“设置此帐户的执行上下文”  。  
+    -   如果用户名和密码是数据库凭据，请勿选择“用作 Windows 凭据”  。 如果数据库服务器支持模拟或委托，则可选择 **Set Execution context to this account**。  
   
-7.  单击 **“确定”** 。  
+7.  单击“确定”  。  
   
-     ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [适用于存储凭据的安全策略要求](#bkmk_top)  
+     ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [适用于存储凭据的安全策略要求](#bkmk_top)  
   
 ## <a name="see-also"></a>另请参阅  
  [为报表数据源指定凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   

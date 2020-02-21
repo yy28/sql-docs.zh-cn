@@ -1,7 +1,7 @@
 ---
-title: 创建新的 SQL Server 故障转移群集（安装程序）| Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 创建新的故障转移群集
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.reviewer: ''
 ms.prod: sql
 ms.technology: install
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 02cb0eb53ee8561884799c3a5e4f4f44eb5ff752
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 7d66a12e545374196a2fa6a8833bcbf159c1c9c6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893186"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230478"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>创建新的 SQL Server 故障转移群集（安装程序）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "68893186"
   
     -   如果要添加的节点具有其他或不同子网，安装程序允许您指定其他 IP 地址。 如果要添加的节点在其他子网上，还需要确认 IP 地址资源依赖关系更改为 OR。 有关在“添加节点”操作期间可能的不同方案的详细信息，请参阅[在 SQL Server 故障转移群集中添加或删除节点（安装程序）](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。  
   
- 选项 2：  高级/企业安装  
+ **选项 2：** 高级/企业安装  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 高级/企业故障转移群集安装包括以下步骤：  
   
@@ -82,7 +82,7 @@ ms.locfileid: "68893186"
 > [!NOTE]  
 >  在运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序之前，请记录共享驱动器在群集管理器中的位置。 您必须获得此信息以创建新的故障转移群集。  
   
-### <a name="to-install-a-new-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-integrated-install-with-add-node"></a>使用带“添加节点”功能的集成安装来安装新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集。  
+### <a name="to-install-a-new-ssnoversion-failover-cluster-using-integrated-install-with-add-node"></a>使用带“添加节点”功能的集成安装来安装新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集。  
   
 1.  插入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装介质，然后双击根文件夹中的 Setup.exe。 若要从网络共享进行安装，请浏览到共享中的根文件夹，然后双击 Setup.exe。 有关如何安装必备组件的详细信息，请参阅 [Before Installing Failover Clustering](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "68893186"
   
 7.  在“产品密钥”页上，指示您是安装免费版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，还是您拥有该产品生产版本的 PID 密钥。 有关详细信息，请参阅 [SQL Server 2016 的版本和组件](../../../sql-server/editions-and-components-of-sql-server-2016.md)。  
   
-8.  在“许可条款”页上阅读许可协议，然后选中相应的复选框以接受许可条款和条件。 为了帮助改进 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，您还可以启用功能使用情况选项并将报告发送给 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]。 单击 **“下一步”** 继续。 若要结束安装程序，请单击 **“取消”** 。  
+8.  在“许可条款”页上阅读许可协议，然后选中相应的复选框以接受许可条款和条件。 为了帮助改进 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，您还可以启用功能使用情况选项并将报告发送给 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]。 单击“下一步”  以继续。 若要结束安装程序，请单击 **“取消”** 。  
   
 9. 在“功能选择”页上，选择要安装的组件。 选择功能名称后，右侧窗格中会显示每个组件组的说明。 您可以选择复选框的任意组合，但仅有 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]、表格模式下的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 和多维模式下的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支持故障转移群集。 其他所选组件将作为不带故障转移功能的独立功能在运行安装程序的当前节点上运行。 有关 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 模式的详细信息，请参阅 [确定 Analysis Services 实例的服务器模式](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance)。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "68893186"
   
      **实例根目录** - 默认情况下，实例根目录为 C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\。 若要指定一个非默认的根目录，请使用所提供的字段，或单击省略号按钮以找到一个安装文件夹。  
   
-     **在该计算机上检测到的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例和功能** - 该网格将显示运行安装程序的计算机上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 如果计算机上已经安装了一个默认实例，则必须安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的命名实例。 单击 **“下一步”** 继续。  
+     **在该计算机上检测到的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例和功能** - 该网格将显示运行安装程序的计算机上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 如果计算机上已经安装了一个默认实例，则必须安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的命名实例。 单击“下一步”  以继续。  
   
 12. 使用“群集资源组”页指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 虚拟服务器资源所在的群集资源组名称。 若要指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 群集资源组名称，您有两种选择：  
   
@@ -143,7 +143,7 @@ ms.locfileid: "68893186"
   
     -   键入要创建的新组的名称。 请注意，名称“Available storage”不是有效的组名。  
   
-13. 在“群集磁盘选择”页上，为您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集选择共享群集磁盘资源。 群集磁盘用于存放 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据。 可以指定多个磁盘。 可用共享磁盘网格会显示可用磁盘的列表、每个磁盘是否可用作共享磁盘以及每个磁盘资源的说明。 单击 **“下一步”** 继续。  
+13. 在“群集磁盘选择”页上，为您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集选择共享群集磁盘资源。 群集磁盘用于存放 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据。 可以指定多个磁盘。 可用共享磁盘网格会显示可用磁盘的列表、每个磁盘是否可用作共享磁盘以及每个磁盘资源的说明。 单击“下一步”  以继续。  
   
     > [!NOTE]  
     >  第一个驱动器用作所有数据库的默认驱动器，但是可以在 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 或 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 配置页上更改它。  
@@ -154,7 +154,7 @@ ms.locfileid: "68893186"
   
     -   **网络设置** - 指定故障转移群集实例的 IP 类型和 IP 地址。  
   
-     单击 **“下一步”** 继续。  
+     单击“下一步”  以继续。  
   
 15. 使用此页以指定群集安全策略。  
   
@@ -162,7 +162,7 @@ ms.locfileid: "68893186"
   
     -   在 [!INCLUDE[winxpsvr](../../../includes/winxpsvr-md.md)]上，为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务指定域组。 所有资源权限都是由包括作为组成员的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户的域级组控制。  
   
-     单击 **“下一步”** 继续。  
+     单击“下一步”  以继续。  
   
 16. 本主题中的其余工作流取决于要安装的功能。 您可能不会看到所有的页面，具体取决于您进行的选择（[!INCLUDE[ssDE](../../../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]和 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]）。  
   
@@ -196,7 +196,7 @@ ms.locfileid: "68893186"
     > [!NOTE]  
     >  若要将服务器消息块 (SMB) 文件服务器指定为数据目录，请将“默认数据根目录”  指定为 \\\Servername\ShareName\\... 格式的文件共享  
    
-21. 使用“[!INCLUDE[ssDE](../../../includes/ssde-md.md)]配置 - FILESTREAM”页对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例启用 FILESTREAM。 单击 **“下一步”** 继续。  
+21. 使用“ [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 配置 - FILESTREAM”页对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例启用 FILESTREAM。 单击“下一步”  以继续。  
   
 22. 使用“[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 配置 - 帐户设置”页指定将拥有 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的管理员权限的用户或帐户。 您必须为 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]至少指定一个系统管理员。 若要添加用以运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序的帐户，请单击 **“添加当前用户”** 。 若要向系统管理员列表中添加帐户或从中删除帐户，请单击 **“添加”** 或 **“删除”** ，然后编辑将拥有 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]的管理员特权的用户、组或计算机的列表。
   
@@ -252,7 +252,7 @@ ms.locfileid: "68893186"
     > [!NOTE]  
     >  在为相同故障转移群集准备的所有节点上，您必须指定相同的产品密钥。  
   
-9. 在“许可条款”页上阅读许可协议，然后选中相应的复选框以接受许可条款和条件。 为了帮助改进 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，您还可以启用功能使用情况选项并将报告发送给 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]。 单击 **“下一步”** 继续。 若要结束安装程序，请单击 **“取消”** 。  
+9. 在“许可条款”页上阅读许可协议，然后选中相应的复选框以接受许可条款和条件。 为了帮助改进 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，您还可以启用功能使用情况选项并将报告发送给 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]。 单击“下一步”  以继续。 若要结束安装程序，请单击 **“取消”** 。  
   
 10. 在“功能选择”页上，选择要安装的组件。 选择功能名称后，右侧窗格中会显示每个组件组的说明。 您可以选择复选框的任意组合，但仅有 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]、表格模式下的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 和多维模式下的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支持故障转移群集。 其他所选组件将作为不带故障转移功能的独立功能在运行安装程序的当前节点上运行。 有关 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 模式的详细信息，请参阅 [确定 Analysis Services 实例的服务器模式](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance)。  
   
@@ -275,7 +275,7 @@ ms.locfileid: "68893186"
   
      **实例根目录** - 默认情况下，实例根目录为 C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\。 若要指定一个非默认的根目录，请使用所提供的字段，或单击省略号按钮以找到一个安装文件夹。  
   
-     **已安装的实例** - 该网格显示安装程序正在其中运行的计算机上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 如果计算机上已经安装了一个默认实例，则必须安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的命名实例。 单击 **“下一步”** 继续。  
+     **已安装的实例** - 该网格显示安装程序正在其中运行的计算机上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 如果计算机上已经安装了一个默认实例，则必须安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的命名实例。 单击“下一步”  以继续。  
   
 12. “磁盘空间要求”页计算指定的功能所需的磁盘空间，并将磁盘空间要求与正在运行安装程序的计算机上的可用磁盘空间进行比较。  
   
@@ -285,13 +285,13 @@ ms.locfileid: "68893186"
   
     -   在 [!INCLUDE[winxpsvr](../../../includes/winxpsvr-md.md)]上，为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务指定域组。 所有资源权限都是由包括作为组成员的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户的域级组控制。  
   
-     单击 **“下一步”** 继续。  
+     单击“下一步”  以继续。  
   
 14. 本主题中的其余工作流取决于要安装的功能。 您可能不会看到所有的页面，具体取决于您进行的选择。  
   
 15. 在“服务器配置 - 服务帐户”页上指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务的登录帐户。 此页上配置的实际服务取决于您选择安装的功能。  
   
-     您可以为所有的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务分配相同的登录帐户，也可以单独配置各个服务帐户。 将能够识别群集的服务（包括全文搜索和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理）的启动类型设置为“手动”，且在安装过程中不能进行更改。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 建议对各服务帐户进行单独配置，以便为每项服务提供最低特权，即向 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务授予它们完成各自任务所必须拥有的最低权限。 有关详细信息，请参阅 [配置 Windows 服务帐户和权限](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
+     您可以为所有的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务分配相同的登录帐户，也可以单独配置各个服务帐户。 将能够识别群集的服务（包括全文搜索和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理）的启动类型设置为“手动”，且在安装过程中不能进行更改。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 建议对各服务帐户进行单独配置，以便为每项服务提供最低特权，即向 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务授予它们完成各自任务所必须拥有的最低权限。 有关详细信息，请参阅 [配置 Windows 服务帐户和权限](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)预览版本升级问题的解答。  
   
      若要为此 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例中的所有服务帐户指定同一个登录帐户，请在该页底部的字段中提供凭据。  
   
@@ -301,7 +301,7 @@ ms.locfileid: "68893186"
   
 16. 使用“服务器配置 - 排序规则”  选项卡为 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 指定非默认的排序规则。  
   
-17. 使用 **服务器配置 - 文件流** 对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例启用 FILESTREAM。  单击 **“下一步”** 继续。  
+17. 使用 **服务器配置 - 文件流** 对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例启用 FILESTREAM。  单击“下一步”  以继续。  
   
 18. 使用“ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 配置”页指定要创建的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 安装类型。 对于故障转移群集安装，将选项设置为未配置的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 安装。 完成安装后必须配置 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服务。  
    
@@ -319,9 +319,9 @@ ms.locfileid: "68893186"
   
 24. 重复以上步骤以准备故障转移群集的其他节点。 还可以使用自动生成的配置文件来准备其他节点。 有关详细信息，请参阅 [使用配置文件安装 SQL Server 2016](../../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)。  
   
-## <a name="complete"></a>“完成”  
+## <a name="complete"></a>完成  
   
-#### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>高级/企业故障转移群集安装步骤 2：“完成”  
+#### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>高级/企业故障转移群集安装步骤 2：完成  
   
 1.  按照 [准备步骤](#prepare)中的说明准备好所有节点后，在某个准备好的节点上运行安装程序，最好是在拥有共享磁盘的节点上运行。 在  安装中心的“高级” [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 页上，单击 **“高级群集完成”** 。  
   
@@ -342,13 +342,13 @@ ms.locfileid: "68893186"
   
 7.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序会再运行一组规则，这些规则基于您选择用于验证配置的功能。  
   
-8.  使用“群集资源组”页指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 虚拟服务器资源所在的群集资源组名称。 若要指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 群集资源组名称， 您有以下两种选择：  
+8.  使用“群集资源组”页指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 虚拟服务器资源所在的群集资源组名称。 若要指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 群集资源组名称， 可以使用两个选项：  
   
     -   使用列表指定一个现有组以供使用。  
   
     -   键入要创建的新组的名称。 请注意，名称“Available storage”不是有效的组名。  
   
-9. 在“群集磁盘选择”页上，为您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集选择共享群集磁盘资源。 群集磁盘用于存放 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据。 可以指定多个磁盘。 可用共享磁盘网格会显示可用磁盘的列表、每个磁盘是否可用作共享磁盘以及每个磁盘资源的说明。 单击 **“下一步”** 继续。  
+9. 在“群集磁盘选择”页上，为您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集选择共享群集磁盘资源。 群集磁盘用于存放 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据。 可以指定多个磁盘。 可用共享磁盘网格会显示可用磁盘的列表、每个磁盘是否可用作共享磁盘以及每个磁盘资源的说明。 单击“下一步”  以继续。  
   
     > [!NOTE]  
     >  第一个驱动器用作所有数据库的默认驱动器，但是可以在 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 或 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 配置页上更改它。  
@@ -357,7 +357,7 @@ ms.locfileid: "68893186"
   
     -   **网络设置** - 为故障转移群集实例的所有节点和子网指定 IP 类型和 IP 地址。 您可以为一个多子网故障转移群集指定多个 IP 地址，但每个子网只支持一个 IP 地址。 准备好的每个节点应至少是一个 IP 地址的所有者。 如果您在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集中有多个子网，系统将提示您将 IP 地址资源依赖关系设置为 OR。  
   
-     单击 **“下一步”** 继续。  
+     单击“下一步”  以继续。  
   
 11. 本主题中的其余工作流取决于要安装的功能。 您可能不会看到所有的页面，具体取决于您进行的选择。  
   
@@ -395,7 +395,7 @@ ms.locfileid: "68893186"
   
 19. 安装完成后， **“完成”** 页会提供指向安装摘要日志文件以及其他重要说明的链接。 若要完成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装过程，请单击 **“关闭”** 。 完成此步骤后，为同一故障转移群集准备的所有节点就变为完成后的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集的一部分。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>后续步骤  
  **配置新安装的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** - 为了减少系统的可攻击外围应用，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将有选择地安装和启用一些关键服务和功能。 有关详细信息，请参阅 [Surface Area Configuration](../../../relational-databases/security/surface-area-configuration.md)。  
   
  有关日志文件位置的详细信息，请参阅 [查看和阅读 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  

@@ -1,10 +1,9 @@
 ---
-title: 警报属性 - 新建警报（“常规”页）| Microsoft Docs
-ms.custom: ''
+title: 警报属性 - 新建警报（“常规”页）
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,13 +11,15 @@ f1_keywords:
 ms.assetid: f5c11610-62e3-44df-9800-a5dc35be4a09
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4634821adee5021b986b3f9c87c0416bad33ec6a
-ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
+ms.openlocfilehash: d889dc5f93abb61dd3d92b736eb483a5a4ba2ff6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383810"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254563"
 ---
 # <a name="alert-properties---new-alert-general-page"></a>警报属性 - 新建警报（“常规”页）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "70383810"
 **启用**  
 启用警报。 如果未启用警报，则警报中指定的操作将不会发生。  
   
-**类型**  
+类型   
 选择警报的类型：  
   
 -   **SQL Server 事件警报** ，该警报用于响应 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 事件日志中的消息。  
@@ -52,7 +53,7 @@ ms.locfileid: "70383810"
 **错误号**  
 指定此事件将用于响应错误，并指定错误号。  
   
-**Severity**  
+**严重性**  
 指定此事件将用于响应特定严重级别的所有消息，并指定严重级别。  
   
 **当消息包含以下内容时触发警报**  
@@ -62,7 +63,7 @@ ms.locfileid: "70383810"
 指定要用于筛选事件的字符串。  
   
 ## <a name="sql-server-performance-condition-alerts"></a>SQL Server 性能条件警报  
-**对象**  
+**Object**  
 指定要监视的性能对象。  
   
 **计数器**  
@@ -74,14 +75,14 @@ ms.locfileid: "70383810"
 **计数器满足以下条件时触发警报**  
 指定警报响应的计数器的行为。 例如，可能希望警报响应 **Free space in tempdb (KB)** 计数器的值低于特定值的条件，或者希望警报响应 **SQL Compilations/sec** 高于特定值的条件。  
   
-**“值”**  
+**值**  
 指定计数器的值。  
   
 ## <a name="wmi-event-alert-options"></a>WMI 事件警报选项  
-**命名空间**  
+**Namespace**  
 指定用于 WMI 查询语言 (WQL) 语句的命名空间。 仅支持运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的计算机上的命名空间。  
   
-**“数据集属性”**  
+**查询**  
 指定用于标识该警报所响应事件的 WQL 语句。  
   
 ## <a name="see-also"></a>另请参阅  

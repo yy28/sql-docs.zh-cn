@@ -1,6 +1,6 @@
 ---
-title: 正在准备命令 |Microsoft Docs
-description: 使用 SQL Server 的 OLE DB 驱动程序准备命令
+title: 准备命令 | Microsoft Docs
+description: 使用 OLE DB Driver for SQL Server 的准备命令
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: d4242f987820b384ab5bfed1bd74066a54fc09ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68016047"
 ---
 # <a name="preparing-commands"></a>准备命令
@@ -29,7 +29,7 @@ ms.locfileid: "68016047"
 
   适用于 SQL Server 的 OLE DB 驱动程序支持命令准备，以优化单个命令的多次执行。不过，命令准备会带来开销，使用者不必准备执行次数多于一次的命令。 一般而言，如果命令的执行次数超过三次，则应当进行准备。  
   
- 出于性能方面的考虑，命令准备会延迟至命令执行之时。 这是默认行为。 待准备命令中的任何错误，直到执行命令或执行元属性操作时才会发现。 将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 属性 SSPROP_DEFERPREPARE 设置为 FALSE 可以关闭此默认行为。  
+ 出于性能方面的考虑，命令准备会延迟至命令执行之时。 此选项为默认行为。 待准备命令中的任何错误，直到执行命令或执行元属性操作时才会发现。 将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 属性 SSPROP_DEFERPREPARE 设置为 FALSE 可以关闭此默认行为。  
   
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，直接执行命令（即不提前准备命令）时，会创建并缓存一个执行计划。 如果再次执行该 SQL 语句，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 会采用有效的算法将新的语句与缓存中的现有执行计划进行匹配，然后再次使用该语句的执行计划。  
   

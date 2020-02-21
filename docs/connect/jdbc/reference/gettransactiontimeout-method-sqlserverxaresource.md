@@ -1,5 +1,5 @@
 ---
-title: getTransactionTimeout 方法 (SQLServerXAResource) |Microsoft Docs
+title: getTransactionTimeout 方法 (SQLServerXAResource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: ed0a37e9-1132-4d3f-b88f-8be674e852b1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e7aa67a0d4cc8a218500d278783f9dc8b6026fb0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978622"
 ---
 # <a name="gettransactiontimeout-method-sqlserverxaresource"></a>getTransactionTimeout 方法 (SQLServerXAResource)
@@ -34,11 +34,11 @@ ms.locfileid: "67978622"
 public int getTransactionTimeout()  
 ```  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  javax.transaction.xa.XAException  
   
-## <a name="remarks"></a>Remarks  
- 此 getTransactionTimeout 方法由 getTransactionTimeout 方法在 javax.mail.session。 XAResource 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 getTransactionTimeout 方法是由 javax.transaction.xa.XAResource 接口中的 getTransactionTimeout 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerXAResource 方法](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   

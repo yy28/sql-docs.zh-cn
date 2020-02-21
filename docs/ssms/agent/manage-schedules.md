@@ -1,10 +1,9 @@
 ---
-title: 管理计划 | Microsoft Docs
-ms.custom: ''
+title: 管理计划
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,13 +11,15 @@ f1_keywords:
 ms.assetid: f56c0736-dccc-41d2-afcf-71344aff143a
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d193c516566635bae1cfba0d691f823b2cba5d31
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 91521d9e78bdc91b7e05cbb66b5788950d497561
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68257827"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251105"
 ---
 # <a name="manage-schedules"></a>管理计划
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "68257827"
 > [!IMPORTANT]  
 > [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-允许查看和更改 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业计划的属性。  
+允许查看和更改 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业计划的属性。  
   
 ## <a name="options"></a>选项  
 **可用计划**  
@@ -38,7 +39,7 @@ ms.locfileid: "68257827"
 **已启用**  
 选择此选项可以启用该计划。  
   
-**Description**  
+**说明**  
 描述计划运行作业的条件。  
   
 **计划中的作业**  

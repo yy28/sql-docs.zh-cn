@@ -1,5 +1,5 @@
 ---
-title: 'IRowsetFastLoad:: InsertRow (OLE DB) |Microsoft Docs'
+title: IRowsetFastLoad::InsertRow (OLE DB) | Microsoft Docs
 description: IRowsetFastLoad::InsertRow (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: b01c63e74ee26cea327a01e3bf9a3595bc5012d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015447"
 ---
 # <a name="irowsetfastloadinsertrow-ole-db"></a>IRowsetFastLoad::InsertRow (OLE DB)
@@ -27,7 +27,7 @@ ms.locfileid: "68015447"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  将行添加到大容量复制行集中。 有关示例, 请参阅[使用 IRowsetFastLoad &#40;OLE DB&#41;批量复制数据](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md), 并[使用 IRowsetFastLoad 和 ISEQUENTIALSTREAM &#40;OLE DB&#41;将 BLOB 数据发送到 SQL SERVER](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)。  
+  将行添加到大容量复制行集中。 有关示例，请参阅[使用 IRowsetFastLoad 大容量复制数据 (OLE DB)](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md) 和[使用 IROWSETFASTLOAD 和 ISEQUENTIALSTREAM 将 BLOB 数据发送到 SQL Server (OLE DB)](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -67,12 +67,12 @@ HRESULT InsertRow(
  DB_E_BADACCESSORTYPE  
  指定的取值函数不是行取值函数，或者未指定使用者拥有的内存。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  将使用者数据转换为列的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型时出错会导致从适用于 SQL Server 的 OLE DB 驱动程序返回 E_FAIL。 可以通过任何 InsertRow 方法或只通过 Commit 方法将数据传输到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]   。 在使用者应用程序收到存在数据类型转换错误的通知之前，它可以用错误数据多次调用 InsertRow 方法  。 因为 Commit 方法可确保使用者正确指定所有数据，所以使用者可在必要时使用 Commit 方法适当地验证数据   。  
   
- SQL Server 大容量复制行集的 OLE DB 驱动程序是只写的。 SQL Server 的 OLE DB 驱动程序不公开允许使用者查询行集的方法。 若要终止处理，使用者可以在不调用 Commit 方法的情况下释放其对 [IRowsetFastLoad](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md) 接口的引用  。 没有用于进行以下操作的设备：访问行集中使用者插入的行、更改其值或从行集中逐一删除该行。  
+ OLE DB Driver for SQL Server 大容量复制行集是只写的。 LE DB Driver for SQL Server 显示不存在允许行集使用者查询的方法。 若要终止处理，使用者可以在不调用 Commit 方法的情况下释放其对 [IRowsetFastLoad](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md) 接口的引用  。 没有用于进行以下操作的设备：访问行集中使用者插入的行、更改其值或从行集中逐一删除该行。  
   
- 大容量复制行在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的服务器上进行了格式化。 可能已针对连接或会话（例如 ANSI_PADDING）设置的任何选项均会影响行格式。 默认情况下, 此选项默认设置为通过 SQL Server OLE DB 驱动程序建立的任何连接。  
+ 大容量复制行在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的服务器上进行了格式化。 可能已针对连接或会话（例如 ANSI_PADDING）设置的任何选项均会影响行格式。 默认情况下，对于通过 OLE DB Driver for SQL Server 建立的任何连接，此选项均设置为启用。  
   
 ## <a name="see-also"></a>另请参阅  
  [IRowsetFastLoad &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md)  

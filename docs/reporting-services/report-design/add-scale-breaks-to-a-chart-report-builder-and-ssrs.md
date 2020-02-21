@@ -9,17 +9,17 @@ ms.assetid: 84d66436-ed62-4967-bbbd-b457593ee787
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f21fe04e31c4360400934afc76376165083c1dc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581946"
 ---
 # <a name="add-scale-breaks-to-a-chart-report-builder-and-ssrs"></a>在图表中添加刻度分隔线（报表生成器和 SSRS）
 
   刻度分隔线是在图表的绘图区绘制的一个条带，表示值轴（通常为垂直轴或 Y 轴）上高值和低值之间的一个中断。 使用刻度分隔线可以在同一图表区中显示两个不同范围。  
   
- ![具有刻度分隔线的图表](../../reporting-services/report-design/media/rs-multipledatarangeschart-scalebreak.gif "Chart with scale break")  
+ ![具有刻度分割线的图表](../../reporting-services/report-design/media/rs-multipledatarangeschart-scalebreak.gif "具有刻度分割线的图表")  
   
 > [!NOTE]  
 >  您不能指定在图表中放置刻度分隔线的位置。 图表根据数据集中的值使用自有的计算方法确定数据范围之间是否有足够的分离空间，以便在运行时的值轴（Y 轴）上绘制刻度分隔线。  

@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 231a33f4d149e442487a7c93c1e2b4c5cdfad8d5
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 31e5d851b6c049bdd7fd81a4c90be1de7ceff77f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531993"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76115426"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>部署高可用性 SQL Server 大数据群集
 
@@ -200,6 +200,7 @@ SQL Server Master Readable Secondary Replicas  11.11.111.11,11111  sql-server-ma
 - 除 `CREATE DATABASE`（如 `RESTORE DATABSE`、`CREATE DATABASE FROM SNAPSHOT`）之外，因工作流而创建的数据库不会自动添加到可用性组。 [连接到实例 ](#instance-connect)，并手动将数据库添加到可用性组。
 - 某些操作（如通过 `sp_configure` 运行服务器配置设置）需要连接到 SQL Server 实例 `master` 数据库，而不是可用性组 `master`。 不能使用相应的主要终结点。 按照[说明](#instance-connect)公开终结点，然后连接到 SQL Server 实例并运行 `sp_configure`。 当手动公开终结点以连接到 SQL Server 实例 `master` 数据库时，只能使用 SQL 身份验证。
 - 部署大数据群集时，必须创建高可用性配置。 部署后，无法通过可用性组启用高可用性配置。
+- 虽然包含的 msdb 数据库包含在可用性组中，并且 SQL 代理作业在其中进行复制，但不会按计划触发作业。 解决方法是[连接到每个 SQL Server 实例](#instance-connect)，并在实例 msdb 中创建作业。
 
 ## <a name="next-steps"></a>后续步骤
 

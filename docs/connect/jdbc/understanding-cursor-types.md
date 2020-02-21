@@ -1,5 +1,5 @@
 ---
-title: 了解游标类型 |Microsoft Docs
+title: 了解游标类型 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 4f4d3db7-4f76-450d-ab63-141237a4f034
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e5ea30d2280ffea4c2ccf09d1f884a03751ed843
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027491"
 ---
 # <a name="understanding-cursor-types"></a>了解游标类型
@@ -37,25 +37,25 @@ ms.locfileid: "69027491"
   
  JDBC 规范支持的只进和可滚动游标对其他作业所做的更改可能敏感，也可能不敏感，而且可以是只读游标或可更新游标。 这一功能由 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 的 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 类提供。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  JDBC 驱动程序支持以下游标类型：  
   
-|结果集<br /><br /> （游标）类型|SQL Server 游标类型|特征|select<br /><br /> 方法|响应<br /><br /> 缓冲|描述|  
+|结果集<br /><br /> （游标）类型|SQL Server 游标类型|特征|select<br /><br /> 方法|响应<br /><br /> 缓冲|说明|  
 |------------------------------------|----------------------------|---------------------|-----------------------|----------------------------|-----------------|  
 |TYPE_FORWARD_ONLY (CONCUR_READ_ONLY)|空值|只进，只读|直通|完全|应用程序必须（向前）经过结果集一次。 这是默认行为，其行为与 TYPE_SS_DIRECT_FORWARD_ONLY 游标的方式相同。 在语句执行期间，驱动程序将整个结果集从服务器读入内存中。|  
 |TYPE_FORWARD_ONLY (CONCUR_READ_ONLY)|空值|只进，只读|直通|自适应|应用程序必须（向前）经过结果集一次。 其行为与 TYPE_SS_DIRECT_FORWARD_ONLY 游标的行为相同。 当应用程序请求行时，驱动程序从服务器读取对应的行，这样可以最大限度地减少客户端内存占用。|  
 |TYPE_FORWARD_ONLY (CONCUR_READ_ONLY)|快进|只进，只读|cursor|空值|应用程序必须通过使用服务器游标在结果集中进行一次（前进）传递。 其行为与 TYPE_SS_SERVER_CURSOR_FORWARD_ONLY 游标的行为相同。<br /><br /> 从提取大小指定的服务器中分块检索行。|  
-|TYPE_FORWARD_ONLY (CONCUR_UPDATABLE)|动态（只进）|只进，可更新|空值|空值|应用程序必须（向前）经过结果集一次才能更新一行或多行。<br /><br /> 从提取大小指定的服务器中分块检索行。<br /><br /> 默认情况下，当应用程序调用 [SQLServerResultSet](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) 对象的 [setFetchSize](../../connect/jdbc/reference/sqlserverresultset-class.md) 方法时，提取大小是固定的。<br /><br /> **注意：** JDBC 驱动程序提供一项自适应缓冲功能，使你能够在应用程序需要时从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中检索语句执行结果，而不是一次性检索全部结果。 例如，如果应用程序需要检索一个因为太大而无法完全容纳于应用程序内存中的大型数据块，则自适应缓冲使客户端应用程序可以检索诸如流这样的值。 驱动程序的默认行为是“adaptive”  。 但是，若要为只进的可更新结果集获取自适应缓冲，应用程序必须通过提供字符串值“adaptive”来显式调用 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 对象的 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 方法   。 有关示例代码, 请参阅[更新大型数据示例](../../connect/jdbc/updating-large-data-sample.md)。|  
+|TYPE_FORWARD_ONLY (CONCUR_UPDATABLE)|动态（只进）|只进，可更新|空值|空值|应用程序必须（向前）经过结果集一次才能更新一行或多行。<br /><br /> 从提取大小指定的服务器中分块检索行。<br /><br /> 默认情况下，当应用程序调用 [SQLServerResultSet](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) 对象的 [setFetchSize](../../connect/jdbc/reference/sqlserverresultset-class.md) 方法时，提取大小是固定的。<br /><br /> **注意：** JDBC 驱动程序提供一项自适应缓冲功能，使你能够在应用程序需要时从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中检索语句执行结果，而不是一次性检索全部结果。 例如，如果应用程序需要检索一个因为太大而无法完全容纳于应用程序内存中的大型数据块，则自适应缓冲使客户端应用程序可以检索诸如流这样的值。 驱动程序的默认行为是“adaptive”  。 但是，若要为只进的可更新结果集获取自适应缓冲，应用程序必须通过提供字符串值“adaptive”来显式调用 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 对象的 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 方法   。 有关示例代码，请参阅[更新大型数据示例](../../connect/jdbc/updating-large-data-sample.md)。|  
 |TYPE_SCROLL_INSENSITIVE|静态|可滚动，不可更新。<br /><br /> 外部行更新、插入和删除不可见。|空值|空值|应用程序需要数据库快照。 结果集不可更新。 仅支持 CONCUR_READ_ONLY。  使用此游标类型时，所有其他并发类型都将导致异常。<br /><br /> 从提取大小指定的服务器中分块检索行。|  
 |TYPE_SCROLL_SENSITIVE<br /><br /> (CONCUR_READ_ONLY)|Keyset|可滚动，只读。 外部行更新可见，删除显示为缺失数据。<br /><br /> 外部行插入不可见。|空值|空值|应用程序必须只看到现有行的已更改数据。<br /><br /> 从提取大小指定的服务器中分块检索行。|  
 |TYPE_SCROLL_SENSITIVE<br /><br /> （CONCUR_UPDATABLE、CONCUR_SS_SCROLL_LOCKS、CONCUR_SS_OPTIMISTIC_CC、CONCUR_SS_OPTIMISTIC_CCVAL）|Keyset|可滚动，可更新。<br /><br /> 外部和内部行更新可见，删除显示为缺失数据；插入不可见。|空值|空值|应用程序可以使用 ResultSet 对象更改现有行中的数据。 应用程序还必须能够从 ResultSet 对象之外看到其他人员对行所做的更改。<br /><br /> 从提取大小指定的服务器中分块检索行。|  
 |TYPE_SS_DIRECT_FORWARD_ONLY|空值|只进，只读|空值|full 或 adaptive|整数值 = 2003。 提供一个完全缓冲的只读客户端游标。 不创建服务器游标。<br /><br /> 仅支持 CONCUR_READ_ONLY 并发类型。 与此游标类型一起使用时，所有其他并发类型都将导致异常。|  
-|TYPE_SS_SERVER_CURSOR_FORWARD_ONLY|快进|只进|空值|空值|整数值 = 2004。 快速，使用服务器游标访问所有数据。 使用 CONCUR_UPDATABLE 并发类型时可更新。<br /><br /> 从提取大小指定的服务器中分块检索行。<br /><br /> 对于这种情况，为了获得自适应缓冲，应用程序必须通过提供一个 字符串值“adaptive”来显式调用 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 对象的 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 方法   。 有关示例代码, 请参阅[更新大型数据示例](../../connect/jdbc/updating-large-data-sample.md)。|  
+|TYPE_SS_SERVER_CURSOR_FORWARD_ONLY|快进|只进|空值|空值|整数值 = 2004。 快速，使用服务器游标访问所有数据。 使用 CONCUR_UPDATABLE 并发类型时可更新。<br /><br /> 从提取大小指定的服务器中分块检索行。<br /><br /> 对于这种情况，为了获得自适应缓冲，应用程序必须通过提供一个 字符串值“adaptive”来显式调用 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 对象的 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 方法   。 有关示例代码，请参阅[更新大型数据示例](../../connect/jdbc/updating-large-data-sample.md)。|  
 |TYPE_SS_SCROLL_STATIC|静态|不反映其他用户的更新。|空值|空值|整数值 = 1004。 应用程序需要数据库快照。 这是 JDBC TYPE_SCROLL_INSENSITIVE 特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的同义词，并且具有相同的并发设置行为。<br /><br /> 从提取大小指定的服务器中分块检索行。|  
 |TYPE_SS_SCROLL_KEYSET<br /><br /> (CONCUR_READ_ONLY)|Keyset|可滚动，只读。 外部行更新可见，删除显示为缺失数据。<br /><br /> 外部行插入不可见。|空值|空值|整数值 = 1005。 应用程序必须只看到现有行的已更改数据。 这是 JDBC TYPE_SCROLL_SENSITIVE 特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的同义词，并且具有相同的并发设置行为。<br /><br /> 从提取大小指定的服务器中分块检索行。|  
 |TYPE_SS_SCROLL_KEYSET<br /><br /> （CONCUR_UPDATABLE、CONCUR_SS_SCROLL_LOCKS、CONCUR_SS_OPTIMISTIC_CC、CONCUR_SS_OPTIMISTIC_CCVAL）|Keyset|可滚动，可更新。<br /><br /> 外部和内部行更新可见，删除显示为缺失数据；插入不可见。|空值|空值|整数值 = 1005。 应用程序必须更改现有行的数据或看到现有行的已更改数据。 这是 JDBC TYPE_SCROLL_SENSITIVE 特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的同义词，并且具有相同的并发设置行为。<br /><br /> 从提取大小指定的服务器中分块检索行。|  
-|TYPE_SS_SCROLL_DYNAMIC<br /><br /> (CONCUR_READ_ONLY)|Dynamic|可滚动，只读。<br /><br /> 外部行更新和插入可见，删除显示为当前提取缓冲区中的临时缺失数据。|空值|空值|整数值 = 1006。 应用程序在游标的生存期内必须看到现有行的已更改数据并看到已插入和已删除的行。<br /><br /> 从提取大小指定的服务器中分块检索行。|  
-|TYPE_SS_SCROLL_DYNAMIC<br /><br /> （CONCUR_UPDATABLE、CONCUR_SS_SCROLL_LOCKS、CONCUR_SS_OPTIMISTIC_CC、CONCUR_SS_OPTIMISTIC_CCVAL）|Dynamic|可滚动，可更新。<br /><br /> 外部和内部行更新和插入可见，删除显示为当前提取缓冲区中的临时缺失数据。|空值|空值|整数值 = 1006。 应用程序可以使用 ResultSet 对象更改现有行的数据或者插入或删除行。 应用程序还必须能够从 ResultSet 对象之外看到其他人员所做的更改、插入和删除。<br /><br /> 从提取大小指定的服务器中分块检索行。|  
+|TYPE_SS_SCROLL_DYNAMIC<br /><br /> (CONCUR_READ_ONLY)|动态|可滚动，只读。<br /><br /> 外部行更新和插入可见，删除显示为当前提取缓冲区中的临时缺失数据。|空值|空值|整数值 = 1006。 应用程序在游标的生存期内必须看到现有行的已更改数据并看到已插入和已删除的行。<br /><br /> 从提取大小指定的服务器中分块检索行。|  
+|TYPE_SS_SCROLL_DYNAMIC<br /><br /> （CONCUR_UPDATABLE、CONCUR_SS_SCROLL_LOCKS、CONCUR_SS_OPTIMISTIC_CC、CONCUR_SS_OPTIMISTIC_CCVAL）|动态|可滚动，可更新。<br /><br /> 外部和内部行更新和插入可见，删除显示为当前提取缓冲区中的临时缺失数据。|空值|空值|整数值 = 1006。 应用程序可以使用 ResultSet 对象更改现有行的数据或者插入或删除行。 应用程序还必须能够从 ResultSet 对象之外看到其他人员所做的更改、插入和删除。<br /><br /> 从提取大小指定的服务器中分块检索行。|  
   
 ## <a name="cursor-positioning"></a>游标定位  
  TYPE_FORWARD_ONLY、TYPE_SS_DIRECT_FORWARD_ONLY 和 TYPE_SS_SERVER_CURSOR_FORWARD_ONLY 游标仅支持 [next](../../connect/jdbc/reference/next-method-sqlserverresultset.md) 定位方法。  
@@ -78,18 +78,18 @@ ms.locfileid: "69027491"
 ## <a name="cursor-conversion"></a>游标转换  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 有时选择实现的游标类型与所请求的游标类型不同，这称为隐式游标转换（或游标降级）。 有关隐式游标转换的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“使用隐式游标转换”主题。  
   
- 对于[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], 当你通过 TYPE_SCROLL_SENSITIVE 和 CONCUR_UPDATABLE 结果集更新数据时, 将引发异常并显示消息 "游标是只读的"。 发生此异常的原因是 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 已针对该结果集执行了隐式游标转换，而没有返回所请求的可更新游标。  
+ 对于 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]，当你通过 ResultSet.TYPE_SCROLL_SENSITIVE 和 ResultSet.CONCUR_UPDATABLE 结果集更新数据时，将引发异常并显示消息“游标是只读的”。 发生此异常的原因是 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 已针对该结果集执行了隐式游标转换，而没有返回所请求的可更新游标。  
   
  若要解决此问题，可以采用以下两种解决方案之一：  
   
 -   确保基础表具有主键  
   
--   创建语句时, 请使用[SQLSERVERRESULTSET TYPE_SS_SCROLL_DYNAMIC](../../connect/jdbc/reference/type-ss-scroll-dynamic-field-sqlserverresultset.md)而不是 TYPE_SCROLL_SENSITIVE。  
+-   创建语句时，使用 [SQLServerResultSet.TYPE_SS_SCROLL_DYNAMIC](../../connect/jdbc/reference/type-ss-scroll-dynamic-field-sqlserverresultset.md)，而不使用 ResultSet.TYPE_SCROLL_SENSITIVE。  
   
 ## <a name="cursor-updating"></a>游标更新  
  对于游标而言，如果游标类型和并发支持更新，则支持对游标进行就地更新。 如果游标未定位在结果集中的可更新行上（get\<类型> 方法调用未成功），则调用 update\<类型> 方法将引发异常并显示“结果集没有当前行”的消息。 JDBC 规范规定，对类型为 CONCUR_READ_ONLY 的游标的列调用 update 方法时，将引发异常。 在由于乐观并发冲突（例如竞争性的更新或删除）等此类原因而导致无法更新行的情况下，在调用 [insertRow](../../connect/jdbc/reference/insertrow-method-sqlserverresultset.md)、[updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) 或 [deleteRow](../../connect/jdbc/reference/deleterow-method-sqlserverresultset.md) 之前可能不会引发异常。  
   
- 在调用更新\<类型 > 之后, 在调用 updateRow 或[cancelRowUpdates](../../connect/jdbc/reference/cancelrowupdates-method-sqlserverresultset.md)之前, 不能\<通过 get 类型访问受影响的列 >。 这将避免以下问题：使用与服务器返回的类型不同的类型更新列，而随后调用的 getter 可能会引起给出不准确结果的客户端类型转换。 调用 get\<类型> 将引发异常并显示“在调用 updateRow() 或 cancelRowUpdates() 之前，无法访问已更新列”的消息。  
+ 在调用 update\<Type> 之后，一直到调用了 updateRow 或 [cancelRowUpdates](../../connect/jdbc/reference/cancelrowupdates-method-sqlserverresultset.md) 之前，get\<Type> 都无法访问受影响的列。 这将避免以下问题：使用与服务器返回的类型不同的类型更新列，而随后调用的 getter 可能会引起给出不准确结果的客户端类型转换。 调用 get\<类型> 将引发异常并显示“在调用 updateRow() 或 cancelRowUpdates() 之前，无法访问已更新列”的消息。  
   
 > [!NOTE]  
 >  如果在未更新任何列时调用 updateRow 方法，JDBC 驱动程序将引发异常并显示“在未更新任何列时调用了 updateRow()”的消息  

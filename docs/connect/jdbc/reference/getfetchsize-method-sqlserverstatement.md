@@ -1,5 +1,5 @@
 ---
-title: getFetchSize 方法 (SQLServerStatement) |Microsoft Docs
+title: getFetchSize 方法 (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 8115ca58-8ae9-46ce-8515-7905d7bb25fe
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22ba06688fb402fdbcd5e9afd951a668ef9c440d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983210"
 ---
 # <a name="getfetchsize-method-sqlserverstatement"></a>getFetchSize 方法 (SQLServerStatement)
@@ -37,11 +37,11 @@ public final int getFetchSize()
 ## <a name="return-value"></a>返回值  
  指示提取大小的 int  ，该提取大小由 [setFetchSize](../../../connect/jdbc/reference/setfetchsize-method-sqlserverstatement.md) 方法指定。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 getFetchSize 方法由 getFetchSize 方法在 .sql 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 getFetchSize 方法是由 java.sql.Statement 接口中的 getFetchSize 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerStatement 成员](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

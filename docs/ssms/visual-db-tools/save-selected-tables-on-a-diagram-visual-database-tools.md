@@ -1,10 +1,9 @@
 ---
-title: 保存关系图中所选的表 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 保存关系图上的所选的表
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +11,14 @@ helpviewer_keywords:
 ms.assetid: 86943b49-48f3-432c-8021-928c13edfbcf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c473a6af4ee2bcf10c482f223d442da0936c0a40
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 9a5e54642e5ee6250d8c01294f7f618288236cc3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256378"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255083"
 ---
 # <a name="save-selected-tables-on-a-diagram-visual-database-tools"></a>保存关系图中所选的表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,17 +28,17 @@ ms.locfileid: "68256378"
   
 1.  在数据库关系图中，选择要保存的表。  
   
-2.  在“文件”  菜单中，选择“保存选择”  。  
+2.  在“文件”菜单中，选择“保存选择”。  
   
-3.  保存所做的选择时，“保存”  对话框将显示数据库中会被更新的表列表。  
+3.  保存所做的选择时，“保存”对话框将显示数据库中会被更新的表列表。  
   
-    如果希望在继续操作前将表列表以文本文件形式保存到项目目录中，请选择“保存文本文件”  。  
+    如果希望在继续操作前将表列表以文本文件形式保存到项目目录中，请选择“保存文本文件”。  
   
-4.  在“保存”  对话框中，确认表列表，再选择“是”  保存这些表。  
+4.  在“保存”对话框中，确认表列表，再选择“是”保存这些表。  
   
     > [!NOTE]  
     > 表的列表除了包含所选的表之外，可能还包含其他表。 例如，如果更改了某列的数据类型，而该列参与了与另一个表的关系，那么这两个表都将包括在此列表中。  
   
 ## <a name="see-also"></a>另请参阅  
-[使用数据库关系图 (Visual Database Tools)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+[处理数据库关系图](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   

@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 213db5ee9b88f7af34e3d000fc0f3b241d8e5791
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73725223"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>第 1 课：浏览并可视化数据
@@ -115,7 +115,7 @@ ms.locfileid: "73725223"
   
     **结果**
     
-    绘图 0xFFD8FFE000104A4649...  
+    plot  0xFFD8FFE000104A4649... 
   
 2. 打开 PowerShell 命令提示符，并运行以下命令，提供相应的作为参数的实例名称、数据库名称、用户名和凭据。 对于使用 Windows 身份的用户，可以将 -U 和 -P 替换为 -T    。
   

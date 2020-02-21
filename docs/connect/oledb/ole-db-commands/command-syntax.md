@@ -1,5 +1,5 @@
 ---
-title: 命令语法 |Microsoft Docs
+title: 命令语法 | Microsoft Docs
 description: 命令语法和存储过程
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 15d6d221c9e3435a3ba4c3f58c7d6b6e55314f29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68016120"
 ---
 # <a name="command-syntax"></a>命令语法
@@ -27,7 +27,7 @@ ms.locfileid: "68016120"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server 的 OLE DB 驱动程序识别 DBGUID_SQL 宏指定的命令语法。 对于 SQL Server 的 OLE DB 驱动程序, 说明符指示 ODBC SQL、ISO 和[!INCLUDE[tsql](../../../includes/tsql-md.md)]的综合是有效的语法。 例如，以下 SQL 语句使用 ODBC SQL 转义序列指定 LCASE 字符串函数：  
+  OLE DB Driver for SQL Server 可以识别由 DBGUID_SQL 宏指定的命令语法。 对于 OLE DB Driver for SQL Server，说明符指示 ODBC SQL、ISO 和 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 组合使用有效的语法。 例如，以下 SQL 语句使用 ODBC SQL 转义序列指定 LCASE 字符串函数：  
   
 ```  
 SELECT customerid={fn LCASE(CustomerID)} FROM Customers  

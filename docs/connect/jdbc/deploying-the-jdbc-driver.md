@@ -11,10 +11,10 @@ ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 518f6bd2605d92857520f870b20edcd351771c54
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73049837"
 ---
 # <a name="deploying-the-jdbc-driver"></a>部署 JDBC 驱动程序
@@ -52,11 +52,11 @@ ms.locfileid: "73049837"
   
  `tar -xf sqljdbc_<version>_<language>.tar`  
 
-## <a name="legalities-of-driver-redistribution"></a>驱动程序重新分发的 Legalities
+## <a name="legalities-of-driver-redistribution"></a>驱动程序重新分发的合法性
 
-JDBC 驱动程序版本6.0、6.2、6.4 和7.0 是可再发行的。 查看许可协议中的“可分发代码”子句  。
+JDBC 驱动程序版本 6.0、6.2、6.4 和 7.0 是可再发行版本。 查看许可协议中的“可分发代码”子句  。
 
-JDBC Driver 版本4.x 为旧版本和过时版本。 支持在2018之前过期。
+JDBC 驱动程序版本 4.x 是旧的过时版本。 对 4.x 的支持已在 2018 年之前过期。
 
 ## <a name="see-also"></a>另请参阅  
  [JDBC 驱动程序概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

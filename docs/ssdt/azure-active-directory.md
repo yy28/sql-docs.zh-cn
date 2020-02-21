@@ -1,20 +1,21 @@
 ---
-title: SQL Server Data Tools (SSDT) 中的 Azure Active Directory | Microsoft Docs
-ms.custom: ''
-ms.date: 10/28/2019
+title: SSDT 中的 Azure Active Directory
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: ssdt
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
+manager: jroth
+reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 10/28/2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 302345a2d7e8c1bd9192c91c6f88253c9a4668f2
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.openlocfilehash: ed7bc77b48881351a144ed5d217454518abafcc2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73049900"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245577"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 中的 Azure Active Directory 支持
 
@@ -30,7 +31,7 @@ SQL Server Data Tools (SSDT) 提供了多种 [Azure Active Directory (Azure AD)]
 
 本文介绍 [Azure 云](https://azure.microsoft.com/)中以下 Azure SQL 产品列表的 Azure AD  ：
 
-- Azure SQL Database
+- Azure SQL 数据库
 - Azure SQL 数据仓库
 
 ## <a name="active-directory-password-authentication"></a>Active Directory 密码身份验证
@@ -40,11 +41,11 @@ Active Directory 密码验证是一种连接到之前列出的 Azure SQL 产品�
 - 使用来自未与 Azure 联合的域的凭据登录到 Windows，或者
 - 通过 Azure AD 使用 Azure AD 身份验证，并且它基于初始域或客户端域。
 
-有关详细信息，请参阅 [使用 Azure Active Directory 身份验证连接到 SQL 数据库](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)。  
+有关详细信息，请参阅[使用 Azure Active Directory 身份验证连接到 SQL 数据库](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)。  
 
 ## <a name="active-directory-integrated-authentication"></a>Active Directory 集成身份验证
 
-Active Directory 集成身份验证是一种使用 Azure Active Directory (Azure AD) 中的标识连接到列出的 Azure SQL 产品的机制  。 如果使用 Azure Active Directory 凭据从联盟域登录 Windows，请使用这种方法进行连接。 有关详细信息，请参阅 [使用 Azure Active Directory 身份验证连接到 SQL 数据库](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)。
+Active Directory 集成身份验证是一种使用 Azure Active Directory (Azure AD) 中的标识连接到列出的 Azure SQL 产品的机制  。 如果使用 Azure Active Directory 凭据从联盟域登录 Windows，请使用这种方法进行连接。 有关详细信息，请参阅[使用 Azure Active Directory 身份验证连接到 SQL 数据库](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)。
 
 ## <a name="active-directory-interactive-authentication"></a>Active Directory 交互式身份验证
 

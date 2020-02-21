@@ -1,5 +1,5 @@
 ---
-title: 'ISQLServerErrorInfo:: GetErrorInfo (OLE DB) |Microsoft Docs'
+title: ISQLServerErrorInfo::GetErrorInfo (OLE DB) | Microsoft Docs
 description: ISQLServerErrorInfo::GetErrorInfo (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 54e9c71ca21647004ea3899306dcb15689dcc3d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015440"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
@@ -27,9 +27,9 @@ ms.locfileid: "68015440"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  返回一个指向包含[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]错误详细信息 SQL Server SSERRORINFO 结构的 OLE DB 驱动程序的指针。  
+  返回指向包含 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 错误详细信息的 OLE DB Driver for SQL Server SSERRORINFO 结构的指针。  
   
- SQL Server 的 OLE DB 驱动程序定义**ISQLServerErrorInfo**错误接口。 此接口从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 错误返回详细信息，包括其严重性和状态。  
+ OLE DB Driver for SQL Server 定义了 ISQLServerErrorInfo  错误接口。 此接口从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 错误返回详细信息，包括其严重性和状态。  
 
   
 ## <a name="syntax"></a>语法  
@@ -53,12 +53,12 @@ HRESULT GetErrorInfo(
  方法成功。  
   
  E_INVALIDARG  
- *PpSSErrorInfo*或*ppErrorStrings*参数均为 NULL。  
+ ppSSErrorInfo  或 ppErrorStrings  参数为 NULL。  
   
  E_OUTOFMEMORY  
- SQL Server 的 OLE DB 驱动程序无法分配足够的内存来完成请求。  
+ OLE DB Driver for SQL Server 无法分配足够的内存来完成请求。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  适用于 SQL Server 的 OLE DB 驱动程序为通过使用者传递的指针返回的 SSERRORINFO 和 OLECHAR 字符串分配内存。 当使用者不再需要访问错误数据时，使用者必须使用 IMalloc::Free 方法释放该内存  。  
   
  SSERRORINFO 结构的定义如下所示：  
@@ -77,7 +77,7 @@ typedef struct tagSSErrorInfo
 SSERRORINFO;  
 ```  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |pwszMessage |来自 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的错误消息。 消息是通过 IErrorInfo::GetDescription 方法返回的  。|  
 |pwszServer |在其上发生了该错误的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。|  

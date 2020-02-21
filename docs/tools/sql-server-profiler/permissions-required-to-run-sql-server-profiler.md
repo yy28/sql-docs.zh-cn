@@ -1,31 +1,28 @@
 ---
-title: 运行 SQL Server Profiler 所需的权限 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 所需的权限
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- Profiler [SQL Server Profiler], permissions
-- traces [SQL Server], replaying
-- replaying traces
-- SQL Server Profiler, permissions
-- security [SQL Server], SQL Server Profiler
 ms.assetid: 5c580a87-88ae-4314-8fe1-54ade83f227f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 73b4be6320ab342bcdee3b2e66d8bcd31445e0d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 0570401f34d08009c4af1cfc9038bec9aae0fc7a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031512"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307538"
 ---
 # <a name="permissions-required-to-run-sql-server-profiler"></a>运行 SQL Server Profiler 所需的权限
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  默认情况下，用户运行 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 所需的权限与执行用于创建跟踪的 Transact-SQL 存储过程所需的权限相同。 若要运行 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，用户必须拥有 ALTER TRACE 权限。 有关详细信息，请参阅 [GRANT 服务器权限 (Transact-SQL)](../../t-sql/statements/grant-server-permissions-transact-sql.md)。  
+
+默认情况下，用户运行 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 所需的权限与执行用于创建跟踪的 Transact-SQL 存储过程所需的权限相同。 若要运行 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，用户必须拥有 ALTER TRACE 权限。 有关详细信息，请参阅 [GRANT 服务器权限 (Transact-SQL)](../../t-sql/statements/grant-server-permissions-transact-sql.md)。  
   
 > [!IMPORTANT]  
 >  拥有 SHOWPLAN、ALTER TRACE 或 VIEW SERVER STATE 权限的用户可以对显示计划输出中捕获的查询进行查看。 这些查询可能包含敏感信息，例如密码。 因此，建议您仅将这些权限授予有权查看敏感信息的一类用户，例如 db_owner 固定数据库角色的成员或 sysadmin 固定服务器角色的成员。 此外，建议您最好将包含显示计划相关事件的显示计划文件或跟踪文件保存到使用 NTFS 文件系统的某个位置，并且只允许有权查看敏感信息的用户对之进行访问。  
@@ -63,7 +60,7 @@ ms.locfileid: "68031512"
   
  以下关系图说明了重播跟踪时此检查权限的过程：  
   
- ![SQL Server Profiler 重播跟踪权限](../../tools/sql-server-profiler/media/replaytracedecisiontree.gif "SQL Server Profiler 重播跟踪权限")  
+ ![SQL Server Profiler 重播跟踪权限](../../tools/sql-server-profiler/media/replaytracedecisiontree.gif"SQL Server Profiler replay trace permissions")  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server Profiler 存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)   

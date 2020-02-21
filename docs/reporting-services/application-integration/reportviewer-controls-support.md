@@ -1,24 +1,25 @@
 ---
-title: Report Viewer 当前分支版本支持
+title: 对报表查看器控件版本的支持
+description: Microsoft Report Viewer 控件与遵循 Microsoft 现代支持生命周期策略的 SQL Server Reporting Services 和 Power BI 报表服务器兼容。
 author: maggiesMSFT
+ms.custom: ''
 ms.author: maggies
 ms.reviewer: jonhp
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
 ms.topic: reference
-ms.custom: ''
 ms.date: 01/09/2019
-ms.openlocfilehash: b67b62ae0155355d4bd13ce67880c6fa3c5ed002
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.openlocfilehash: 66691267ecdd2814cc84b2bfe544acce1d17ae82
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266941"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796872"
 ---
 # <a name="support-for-report-viewer-current-branch-versions"></a>Report Viewer 当前分支版本支持
 
-_适用于：Microsoft Report Viewer 版本 150.900.148 及更高版本_ 
+**适用范围：  Microsoft Report Viewer 版本 150.900.148 及更高版本**
 
 Microsoft Report Viewer 控件与遵循 Microsoft 现代[支持生命周期策略](https://support.microsoft.com/hub/4095338/microsoft-lifecycle-policy)的 SQL Server Reporting Services 和 Power BI 报表服务器兼容  。 此信息适用于通过 [NuGet](https://www.nuget.org/) 分发的“ASP.net”和“WinForms”版本   。 所有已发布的版本都可通过 [NuGet](https://www.nuget.org/) 获得。 修补程序、功能或其他更新将回滚转发到最新版本。 必须应用最新版本才能接收更改。 Report Viewer 会继续接收“安全更新和关键更新”，并且至少提前一年通知任何支持的策略更改  。
 

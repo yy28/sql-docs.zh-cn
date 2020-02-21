@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 2037d797-0b61-44c7-931f-6c689c3fc733
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 25d2741a8449875852c733aa763322011834a6b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 05d33d719be8bc2e136e34ebb14da394d5d99db9
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581281"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190413"
 ---
 # <a name="reporting-services-login-dialog-box-ssrs"></a>“Reporting Services 登录”对话框 (SSRS)
   使用 **“Reporting Services 登录”** 对话框可以提供向报表服务器发布报表时要使用的凭据。  
@@ -24,16 +24,16 @@ ms.locfileid: "65581281"
   
 ## <a name="options"></a>选项  
  **Server**  
- 显示报表服务器的名称。 例如， `https://localhost/reportserver`。 如果报表服务器使用的不是默认端口 80，则需要包含端口号。 例如， `https://localhost:81/reportserver`。  
+ 显示报表服务器的名称。 例如，`https://localhost/reportserver` 。 如果报表服务器使用的不是默认端口 80，则需要包含端口号。 例如，`https://localhost:81/reportserver` 。  
   
- **User name**  
+ **用户名**  
  键入登录 Web 服务时要使用的用户名。  
   
  **密码**  
  键入登录 Web 服务时要使用的密码。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [为报表数据源指定凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [报表设计器的 F1 帮助](../../reporting-services/tools/report-designer-f1-help.md)  
   

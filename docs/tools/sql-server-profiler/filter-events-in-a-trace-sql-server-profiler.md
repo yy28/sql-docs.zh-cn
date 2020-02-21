@@ -1,29 +1,28 @@
 ---
-title: 筛选跟踪中的事件 (SQL Server Profiler) |Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: 在跟踪中筛选事件
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- filters [SQL Server], traces
-- traces [SQL Server], filters
-- traces [SQL Server], events
 ms.assetid: 0fd63573-3b35-4f67-9e1e-ed9aabee11a8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8dc3d0c27b1fae754c4a6fb5f38984f4c8c4a324
-ms.sourcegitcommit: 71b9ebb511c68e0c9cb32a860a443803d2cb58f5
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 66780fe3a71f784679e80779985740a3d9069777
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69979490"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307233"
 ---
 # <a name="filter-events-in-a-trace-sql-server-profiler"></a>在跟踪中筛选事件 (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  筛选器将限制跟踪内收集的事件。 如果没有设置筛选器，则跟踪输出中将返回选定事件类的所有事件。 并不一定要为跟踪设置筛选器。 但筛选器可使跟踪过程中造成的开销最小化。  
+
+筛选器将限制跟踪内收集的事件。 如果没有设置筛选器，则跟踪输出中将返回选定事件类的所有事件。 并不一定要为跟踪设置筛选器。 但筛选器可使跟踪过程中造成的开销最小化。  
   
  可以使用 **“跟踪属性”** 或 **“跟踪模板属性”** 对话框中的 **“事件选择”** 选项卡向跟踪定义中添加筛选器。  
   
@@ -39,7 +38,7 @@ ms.locfileid: "69979490"
   
 3.  若要应用筛选器，请单击比较运算符，再键入要用于该筛选器的值。  
   
-4.  单击“确定”  。  
+4.  单击“确定”。   
   
  **注意事项：**  
   
@@ -47,9 +46,9 @@ ms.locfileid: "69979490"
   
     -   输入的日期符合此格式： `YYYY/MM/DD HH:mm:sec`。  
   
-         -或-  
+         \- 或 -  
   
-    -   在 **“常规选项”** 对话框中选中了 **“使用区域设置来显示日期和时间值”** 。 要查看“常规选项”对话框，请在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的“工具”菜单上单击“选项”    。  
+    -   在 **“常规选项”** 对话框中选中了 **“使用区域设置来显示日期和时间值”** 。 要查看“常规选项”  对话框，请在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的“工具”  菜单上单击“选项”  。  
   
          -以及-  
   
@@ -58,6 +57,6 @@ ms.locfileid: "69979490"
 -   如果从 **osql** 实用工具或 **sqlcmd** 实用工具跟踪事件，则始终将 **%** 追加到 **TextData** 数据列上的筛选器。  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server 事件探查器](../../tools/sql-server-profiler/sql-server-profiler.md)  
+ [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

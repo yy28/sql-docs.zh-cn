@@ -1,7 +1,7 @@
 ---
 title: PDO::prepare | Microsoft Docs
 ms.custom: ''
-ms.date: 04/25/2019
+ms.date: 01/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3bb02fefe4e4845a1ab1e7b7a7117845fdaebf13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 902a1e986f79205dfd676c635ac54814382c2ec3
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67993200"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76941206"
 ---
 # <a name="pdoprepare"></a>PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,28 +28,28 @@ ms.locfileid: "67993200"
 PDOStatement PDO::prepare ( $statement [, array(key_pair)] )
 ```
 
-#### <a name="parameters"></a>Parameters
-$*statement*：包含 SQL 语句的字符串。
+#### <a name="parameters"></a>parameters
+$*语句*：包含 SQL 语句的字符串。
 
-key_pair：包含属性名称和值的数组  。 有关详细信息，请参阅“备注”部分。
+*key_pair*：包含属性名称和值的数组。 有关详细信息，请参阅“备注”部分。
 
 ## <a name="return-value"></a>返回值
 如果成功，则返回 PDOStatement 对象。 如果失败，则返回 PDOException 对象或 False，具体取决于 `PDO::ATTR_ERRMODE` 的值。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 在执行已准备的语句之前不会对其进行评估。
 
 下表列出可能的 key_pair 值  。
 
-|Key|描述|
+|密钥|说明|
 |-------|---------------|
-|PDO::ATTR_CURSOR|指定游标行为。 默认值为 `PDO::CURSOR_FWDONLY`，一个不可滚动的前向游标。 `PDO::CURSOR_SCROLL` 是可滚动的游标。<br /><br />例如， `array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY )`。<br /><br />如果设置为 `PDO::CURSOR_SCROLL`，则可以使用 `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE` 设置可滚动游标的类型，如下所述。<br /><br />有关 PDO_SQLSRV 驱动程序中的结果集和游标的详细信息，请参阅[游标类型（PDO_SQLSRV 驱动程序）](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)。|
+|PDO::ATTR_CURSOR|指定游标行为。 默认值为 `PDO::CURSOR_FWDONLY`，一个不可滚动的前向游标。 `PDO::CURSOR_SCROLL` 是可滚动的游标。<br /><br />例如，`array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY )` 。<br /><br />如果设置为 `PDO::CURSOR_SCROLL`，则可以使用 `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE` 设置可滚动游标的类型，如下所述。<br /><br />有关 PDO_SQLSRV 驱动程序中的结果集和游标的详细信息，请参阅[游标类型（PDO_SQLSRV 驱动程序）](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)。|
 |PDO::ATTR_EMULATE_PREPARES|默认情况下，此属性为 false，可通过此 `PDO::ATTR_EMULATE_PREPARES => true` 更改。 有关详细信息和示例，请参阅[模拟准备](#emulate-prepare)。|
 |PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE|指定可滚动游标的类型。 仅在 `PDO::ATTR_CURSOR` 设置为 `PDO::CURSOR_SCROLL` 时有效。 有关此属性可采用的值，请参阅下文。|
 |PDO::SQLSRV_ATTR_DECIMAL_PLACES|指定设置提取的 Money 值格式时的小数位数。 仅当 `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` 为 true 时此选项才起作用。 有关详细信息，请参阅[设置十进制字符串和 Money 值格式（PDO_SQLSRV 驱动程序）](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)。|
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|如果为 True，则指定直接查询执行。 False 表示已准备的语句执行。 有关 `PDO::SQLSRV_ATTR_DIRECT_QUERY` 的详细信息，请参阅 [PDO_SQLSRV 驱动程序中的直接语句执行和预定语句执行](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)。|
 |PDO::SQLSRV_ATTR_ENCODING|PDO::SQLSRV_ENCODING_UTF8（默认值）<br /><br />PDO::SQLSRV_ENCODING_SYSTEM<br /><br />PDO::SQLSRV_ENCODING_BINARY|
-|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|指定是否以 [PHP DateTime](http://php.net/manual/en/class.datetime.php) 对象形式检索日期和时间类型。 有关详细信息，请参阅[如何：使用 PDO_SQLSRV 驱动程序以 PHP DateTime 对象形式检索日期和时间类型](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)。|  
+|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|指定是否以 [PHP DateTime](http://php.net/manual/en/class.datetime.php) 对象形式检索日期和时间类型。 有关详细信息，请参阅[操作说明：使用 PDO_SQLSRV 驱动程序以 PHP DateTime 对象形式检索日期和时间类型](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)。|  
 |PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|处理具有数值 SQL 类型的列中的数值提取。 有关详细信息，请参阅 [PDO::setAttribute](../../connect/php/pdo-setattribute.md)。|
 |PDO::SQLSRV_ATTR_FORMAT_DECIMALS|指定是否在合适时向十进制字符串添加前导零。 如已设置，此选项将启用用于设置 Money 类型格式的 `PDO::SQLSRV_ATTR_DECIMAL_PLACES` 选项。 有关详细信息，请参阅[设置十进制字符串和 Money 值格式（PDO_SQLSRV 驱动程序）](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)。| 
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|有关详细信息，请参阅 [PDO::setAttribute](../../connect/php/pdo-setattribute.md)。|
@@ -60,7 +60,7 @@ array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL, PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYP
 ```
 下表列出了 `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE` 的可能值。 有关可滚动游标的详细信息，请参阅[游标类型（PDO_SQLSRV 驱动程序）](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)。
 
-|ReplTest1|描述|
+|值|说明|
 |---------|---------------|
 |PDO::SQLSRV_CURSOR_BUFFERED|创建一个客户端（缓冲）静态游标，该游标将结果集缓冲到客户端计算机上的内存中。|
 |PDO::SQLSRV_CURSOR_DYNAMIC|创建服务器端（无缓冲）动态游标，该游标支持你采用任意顺序访问行，并且可以反映数据库中的更改。|
@@ -137,6 +137,33 @@ print_r($row);
 $row = $stmt->fetch( PDO::FETCH_NUM, PDO::FETCH_ORI_LAST );
 print_r($row);
 ?>
+```
+
+## <a name="example"></a>示例
+以下两个代码段演示如何将 PDO::prepare 与面向 CHAR/VARCHAR 列的数据一起使用。 因为 PDO::prepare 的默认编码为 UTF-8，所以用户可以使用选项 `PDO::SQLSRV_ENCODING_SYSTEM` 来避免隐式转换。
+
+**选项 1**
+```
+$options = array(PDO::SQLSRV_ATTR_ENCODING => PDO::SQLSRV_ENCODING_SYSTEM);
+$statement = $pdo->prepare(
+  'SELECT *
+   FROM myTable
+   WHERE myVarcharColumn = :myVarcharValue',
+  $options
+);
+
+$statement->bindValue(':myVarcharValue', 'my data', PDO::PARAM_STR);
+```
+
+**选项 2**
+```
+$statement = $pdo->prepare(
+  'SELECT *
+   FROM myTable
+   WHERE myVarcharColumn = :myVarcharValue'
+);
+$p = 'my data';
+$statement->bindParam(':myVarcharValue', $p, PDO::PARAM_STR, 0, PDO::SQLSRV_ENCODING_SYSTEM);
 ```
 
 <a name="emulate-prepare" />
@@ -216,6 +243,52 @@ Information on :con_name parameter
 PDO_SQLSRV 驱动程序首先检查 `PDO::bindParam()` 中指定的编码（例如 `$statement->bindParam(:cus_name, "Cardinal", PDO::PARAM_STR, 10, PDO::SQLSRV_ENCODING_UTF8)`）。
 
 如果找不到，则驱动程序会检查是否在 `PDO::prepare()` 或 `PDOStatement::setAttribute()` 中设置了任何编码。 否则，驱动程序将使用 `PDO::__construct()` 或 `PDO::setAttribute()` 中指定的编码。
+
+此外，从版本 5.8.0 开始，在使用 PDO::prepare 时，如果 `PDO::ATTR_EMULATE_PREPARES` 设置为 true，则用户可以使用 [PHP 7.2 中引入的扩展字符串类型](https://wiki.php.net/rfc/extended-string-types-for-pdo)，以确保使用 `N` 前缀。 下面的代码段显示了各种备选方法。
+
+> [!NOTE]
+> 默认情况下，模拟准备设置为 false，在这种情况下，将忽略扩展 PDO 字符串常量。
+
+**绑定时使用驱动程序选项 PDO::SQLSRV_ENCODING_UTF8**
+
+```
+$p = '가각';
+$sql = 'SELECT :value';
+$options = array(PDO::ATTR_EMULATE_PREPARES => true);
+$stmt = $conn->prepare($sql, $options);
+$stmt->bindParam(':value', $p, PDO::PARAM_STR, 0, PDO::SQLSRV_ENCODING_UTF8);
+$stmt->execute();
+```
+
+**使用 PDO::SQLSRV_ATTR_ENCODING 属性**
+
+```
+$p = '가각';
+$sql = 'SELECT :value';
+$options = array(PDO::ATTR_EMULATE_PREPARES => true, PDO::SQLSRV_ATTR_ENCODING => PDO::SQLSRV_ENCODING_UTF8);
+$stmt = $conn->prepare($sql, $options);
+$stmt->execute([':value' => $p]);
+```
+
+**使用 PDO 常量 PDO::PARAM_STR_NATL**
+```
+$p = '가각';
+$sql = 'SELECT :value';
+$options = array(PDO::ATTR_EMULATE_PREPARES => true);
+$stmt = $conn->prepare($sql, $options);
+$stmt->bindParam(':value', $p, PDO::PARAM_STR | PDO::PARAM_STR_NATL);
+$stmt->execute();
+```
+
+**设置默认字符串参数类型 PDO::PARAM_STR_NATL**
+```
+$conn->setAttribute(PDO::ATTR_DEFAULT_STR_PARAM, PDO::PARAM_STR_NATL);
+$p = '가각';
+$sql = 'SELECT :value';
+$options = array(PDO::ATTR_EMULATE_PREPARES => true);
+$stmt = $conn->prepare($sql, $options);
+$stmt->execute([':value' => $p]);
+```
 
 ### <a name="limitations"></a>限制
 

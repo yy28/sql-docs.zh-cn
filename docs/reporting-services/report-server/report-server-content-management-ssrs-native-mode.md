@@ -14,14 +14,14 @@ ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fa8579f24cbad2bdbebe3ad5198732ac7786bde9
-ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67228745"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>报表服务器内容管理（SSRS 本机模式）
-在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，内容管理是指对报表服务器项进行管理。 通过属性和安全设置，所有项可以彼此独立地进行管理。 可以将任何一项移动到报表服务器文件夹命名空间中的不同位置。 为了有效管理项，您需要了解道内容管理员所执行的任务。 从 SQL Server 2016 Reporting Services 或更高版本 (SSRS) CTP 3.2 开始[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]web 门户可供使用。 本文将介绍 Web 门户和新的 Web 门户体验。  
+在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，内容管理是指对报表服务器项进行管理。 通过属性和安全设置，所有项可以彼此独立地进行管理。 可以将任何一项移动到报表服务器文件夹命名空间中的不同位置。 为了有效管理项，您需要了解道内容管理员所执行的任务。 从 SQL Server 2016 Reporting Services 或更高版本 (SSRS) CTP 3.2 开始，[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户可用。 本文将介绍 Web 门户和新的 Web 门户体验。  
   
 > [!NOTE]  
 > 内容管理不同于报表服务器管理。 有关如何管理报表服务器运行环境的详细信息，请参阅 [Reporting Services 报表服务器（本机模式）](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)。  
@@ -42,7 +42,7 @@ ms.locfileid: "67228745"
   
 -   通过制定报表处理计划，并指定哪些报表按需运行，哪些报表应从缓存加载，从而均衡服务器上的报表处理需求。  
   
--   通过使用以下两个预定义的角色提供执行管理任务的权限： **系统管理员** 和 **内容管理员**。 若要有效地管理报表服务器内容，要求您同时分配有这两个角色。  
+-   通过使用以下两个预定义的角色提供执行管理任务的权限：系统管理员  和内容管理员  。 若要有效地管理报表服务器内容，要求您同时分配有这两个角色。  
   
 用于管理报表服务器内容的工具包括 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或 Web 门户。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 允许您设置默认值和启用功能。 Web 门户用于向用户授予对报表服务器项和操作的访问权限，用于查看和使用报表以及其他内容类型，并用于查看和使用所有共享项和报表分发功能。 Web 门户是更新后的站点，提供了已弃用报表管理器的许多功能。 有关详细信息，请参阅 [Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md)。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "67228745"
   
  在 Web 门户中，文件夹层次结构指明了可以移动的项。 下图展示了每个可移动项的图标。  
   
-  ![可移动项的报表服务器图标](media/report-server-content-management-ssrs-native-mode/report-server-content-icons.png)
+  ![用于可移动项的报表服务器图标](media/report-server-content-management-ssrs-native-mode/report-server-content-icons.png)
 
  并非所有使用的项都可以移动。 不能移动与报表相关联的项，例如订阅或报表历史记录。 这些项随其关联报表一起移动。 同样，也不能移动文件夹层次结构之外的项（如共享计划）。 不具备相应权限时不能移动项。 移动项的权限在你为相关项在角色分配中选择了以下任务时传递：“管理报表”、“管理文件夹”和“管理数据源”。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "67228745"
   
  下表对支撑文件夹层次结构并为多种功能提供框架的预定义文件夹进行了说明：  
   
-|文件夹|用途|  
+|Folder|目的|  
 |------------|-------------|  
 |主页|文件夹层次结构的根节点。|  
 |用户|在您启用了“我的报表”功能时，将显示此文件夹。 它包含使用“我的报表”功能的所有用户的子文件夹，只有报表服务器管理员才可以访问该文件夹。 每个子文件夹的名称都与相应用户的名称匹配。|  
@@ -121,7 +121,7 @@ ms.locfileid: "67228745"
 ### <a name="adding-and-viewing-a-resource"></a>添加和查看资源  
  若要向报表服务器中添加资源，请上载或发布文件：  
   
-|运算|文件类型|  
+|Operation|文件类型|  
 |---------------|---------------|  
 |上载|若要上传资源，如果报表服务器在本机模式下运行，必须使用 Web 门户；如果报表服务器在 SharePoint 集成模式下运行，必须使用 SharePoint 网站上的应用程序页。 有关详细信息，请参阅[在报表服务器中上传文件或报表](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)，或[将文档上传到 SharePoint 库（SharePoint 模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)。|  
 |发布|项目中不是报表、报表部件、数据源或数据集的所有文件都作为资源上载。 若要发布资源，请将现有项添加到报表设计器的一个项目中，然后将该项目发布到报表服务器。|  
@@ -142,7 +142,7 @@ ms.locfileid: "67228745"
   
  若要在报表中使用某个图像资源，请将该图像文件添加到项目，并与报表一起发布。 发布图像之后，可以更新报表中的图像引用，使之指向报表服务器上的相应资源，然后只需重新发布该报表即可保存所做的更改。 随后，即可通过重新发布资源来独立更新报表的图像。 报表将使用报表服务器上可用的最新版本的图像。  
   
- 有关详细信息，请参阅[更新资源 （web 门户）](../../reporting-services/report-server/update-a-resource-report-manager.md)。  
+ 有关详细信息，请参阅[更新资源（Web 门户）](../../reporting-services/report-server/update-a-resource-report-manager.md)。  
   
 ##  <a name="bkmk_MyReports"></a> 我的报表  
  “我的报表”文件夹是使用有效域帐户登录到报表服务器中的用户的个人工作区。 此专用文件夹为制作中的报表、不准备大范围分发的报表或为特定需要定制的报表提供了存储区域。 您不能限制“我的报表”文件夹中存储的项数量或大小，也不能将“我的报表”文件夹配置为在多个用户间共享。  
@@ -167,10 +167,10 @@ ms.locfileid: "67228745"
   
  “我的报表”功能是可选的。 安装报表服务器时，默认情况下将禁用“我的报表”功能。 有关启用此功能的详细信息，请参阅 [启用和禁用“我的报表”](../../reporting-services/report-server/enable-and-disable-my-reports.md)。 有关详细信息，请参阅 [保护我的报表](../../reporting-services/security/secure-my-reports.md)。  
   
-## <a name="tasks"></a>“任务”  
+## <a name="tasks"></a>任务  
  [将文件上载到文件夹](../../reporting-services/report-server/upload-files-to-a-folder.md)  
  [创建、删除或修改文件夹（Web 门户）](../../reporting-services/report-server/create-delete-or-modify-a-folder-web-portal.md)  
- [更新资源 （web 门户）](../../reporting-services/report-server/update-a-resource-report-manager.md)  
+ [更新资源（Web 门户）](../../reporting-services/report-server/update-a-resource-report-manager.md)  
  [将文件上载到文件夹](../../reporting-services/report-server/upload-files-to-a-folder.md)  
   
 ## <a name="see-also"></a>另请参阅  

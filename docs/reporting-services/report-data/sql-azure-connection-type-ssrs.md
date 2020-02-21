@@ -9,12 +9,12 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.date: 02/15/2019
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d3eccb52c9a7164285627063f23dbb790b6dfa3c
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: c9ffc6865a6dd7ccc9665eb85da8142bc918b4af
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594067"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244573"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>SQL Azure 连接类型 (SSRS)
 
@@ -43,7 +43,7 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
 此外，使用“数据源属性”  对话框，还可以提供凭据，如用户名和密码。 `User Id` 和 `Password` 选项自动追加到连接字符串；无需将它们作为连接字符串的一部分键入其中。  
   
-有关连接字符串示例的详细信息，请参阅 [报表生成器中的数据连接、数据源和连接字符串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
+有关详细信息和连接字符串示例，请参阅[创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
 ## <a name="Credentials"></a> 凭据
 
@@ -57,7 +57,7 @@ Windows 身份验证（集成安全性）不受支持。 如果试图使用 Wind
   
 - 不需要提供任何凭据。 若要使用此选项，您必须具有为报表服务器配置的无人参与的执行帐户。 有关详细信息，请参阅[配置无人参与的执行帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
-有关详细信息，请参阅[数据连接、数据源和连接字符串&#40;报表生成器和 SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)或[为报表数据源指定凭据和连接信息](specify-credential-and-connection-information-for-report-data-sources.md)。  
+有关详细信息，请参阅[创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 或[为报表数据源指定凭据和连接信息](specify-credential-and-connection-information-for-report-data-sources.md)。  
   
 ## <a name="Query"></a> 查询
 
@@ -160,7 +160,7 @@ WHERE EmployeeID = (@EmpID)
 
 正确设置以下项后，可以实现此方案：
 
-- 在报表服务器上安装[适用于 SQL Server 的 Active Directory 身份验证库 (ADALSQL)](https://www.microsoft.com/en-us/download/details.aspx?id=48742)。
+- 在报表服务器上安装[适用于 SQL Server 的 Active Directory 身份验证库 (ADALSQL)](https://www.microsoft.com/download/details.aspx?id=48742)。
 - 将 [Active Directory 联合身份验证服务 (ADFS)](https://docs.microsoft.com/windows-server/identity/active-directory-federation-services) 配置为，跨本地 Active Directory (AD) 和 AAD 进行联合。
 - 将 [Kerberos 约束委派 (KCD)](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) 从报表服务器配置到 ADFS 服务器。
 - 将报表/数据源配置为，在用户查看报表时对 [Azure SQL 数据库](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)进行身份验证。
@@ -184,7 +184,7 @@ WHERE EmployeeID = (@EmpID)
 [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
 提供访问报表数据的概述。  
   
-[报表生成器中的数据连接、数据源和连接字符串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+[创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
 提供有关数据连接和数据源的信息。  
   
 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

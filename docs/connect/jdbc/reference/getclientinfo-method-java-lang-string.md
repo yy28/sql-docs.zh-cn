@@ -1,5 +1,5 @@
 ---
-title: getClientInfo 方法 (.java) |Microsoft Docs
+title: getClientInfo 方法 (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: e8e632c4-d6cc-4c5e-b6ad-873579343b19
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7d3005e2b5ae8628ab31ceeb6314159afd796e83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953138"
 ---
 # <a name="getclientinfo-method-javalangstring"></a>getClientInfo 方法 (java.lang.String)
@@ -29,19 +29,19 @@ ms.locfileid: "67953138"
 public java.lang.String getClientInfo (java.lang.String name)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
- *名称*  
+#### <a name="parameters"></a>parameters  
+ name   
   
  包含要检索的客户端信息属性名称的 String。  
   
 ## <a name="return-value"></a>返回值  
  包含客户端信息属性值的 String。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 getClientInfo 方法由 getClientInfo 方法在 sql 连接接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 getClientInfo 方法是由 java.sql.Connection 接口中的 getClientInfo 方法指定的。  
   
  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 不支持任何客户端信息属性。 因此，此方法将返回 null  。  
   

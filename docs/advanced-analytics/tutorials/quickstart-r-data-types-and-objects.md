@@ -1,27 +1,26 @@
 ---
-title: 快速入门：R 数据类型
-titleSuffix: SQL Server Machine Learning Services
-description: 在本快速入门中，了解如何通过 SQL Server 机器学习服务在 R 和 SQL Server 中使用数据类型和数据对象。
+title: 快速入门：R 数据结构、数据类型和对象
+description: 本快速入门介绍了如何在 SQL Server 机器学习服务中使用 R 时使用数据结构、数据类型和对象。 你将了解如何在 R 与 SQL Server 之间迁移数据，以及可能出现的常见问题。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4dab7cca8edcc01052ced81ec33a1f411da7ba9a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: a3f978865d2fdd643650a7c7308adb65d2c79fa7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73726975"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76916407"
 ---
-# <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>快速入门：在 SQL Server 机器学习服务中使用 R 处理数据类型和对象
+# <a name="quickstart-data-structures-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>快速入门：在 SQL Server 机器学习服务中使用 R 时使用数据结构、数据类型和对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本快速入门介绍在 R 与 SQL Server 之间迁移数据时出现的常见问题。 通过本练习所获得的经验可以为在自己的脚本中处理数据时提供必要的背景信息。
+本快速入门介绍了如何在 SQL Server 机器学习服务中使用 R 时使用数据结构和数据类型。 你将了解如何在 R 与 SQL Server 之间迁移数据，以及可能出现的常见问题。
 
 要预先了解的常见问题包括：
 
@@ -34,7 +33,7 @@ ms.locfileid: "73726975"
 
 - 本快速入门需要使用安装了 R 语言的 [SQL Server 机器学习服务](../install/sql-machine-learning-services-windows-install.md)访问 SQL Server 实例。
 
-  SQL Server 实例可以位于 Azure 虚拟机中，也可以位于本地。 请注意，默认情况下禁用外部脚本编写功能，因此可能需要在开始之前[启用外部脚本编写](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature)并验证 SQL Server Launchpad 服务是否正在运行  。
+  SQL Server 实例可以位于 Azure 虚拟机中，也可以位于本地。 请注意，默认情况下禁用外部脚本编写功能，因此可能需要在开始之前[启用外部脚本编写](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature)并验证 SQL Server Launchpad 服务是否正在运行。
 
 - 你还需要一个工具来运行包含 R 脚本的 SQL 查询。 可使用任何数据库管理或查询工具运行这些脚本，只要它可以连接到 SQL Server 实例，并运行 T-SQL 查询或存储过程即可。 本快速入门使用 [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)。
 
@@ -69,7 +68,7 @@ EXECUTE sp_execute_external_script
 
 结果为何有这么大的差别？
 
-使用 R `str()` 命令通常可以找到答案。 在 R 脚本中的任何位置添加函数 `str(object_name)` 可使指定 R 对象的数据架构作为信息性消息返回。 若要查看消息，请查看 Visual Studio Code 中的“消息”窗格，或者查看 SSMS 中的“消息”选项卡。  
+使用 R `str()` 命令通常可以找到答案。 在 R 脚本中的任何位置添加函数 `str(object_name)` 可使指定 R 对象的数据架构作为信息性消息返回。 若要查看消息，请查看 Visual Studio Code 中的“消息”窗格，或者查看 SSMS 中的“消息”选项卡。
 
 若要找出示例 1 和示例 2 的结果为何有这么大的差别，请在每个语句的 _@script_ 变量定义末尾插入 `str(OutputDataSet)` 行，如下所示：
 
@@ -95,7 +94,7 @@ EXECUTE sp_execute_external_script
   @input_data_1 = N'  ';
 ```
 
-现在，查看“消息”中的文本，了解输出为何不相同的原因。 
+现在，查看“消息”中的文本，了解输出为何不相同的原因。
 
 **结果 - 示例 1**
 
@@ -115,7 +114,7 @@ $ X...      : Factor w/ 1 level " ": 1
 $ c..world..: Factor w/ 1 level "world": 1
 ```
 
-可以看到，对 R 语法进行轻微的更改会给结果的架构造成很大的影响。 本文不会深究原因，但 [Hadley Wickham 所著的“Advanced R”](http://adv-r.had.co.nz)中的“Data Structures”（数据结构）一节详细介绍了 R 数据类型的差异  。
+可以看到，对 R 语法进行轻微的更改会给结果的架构造成很大的影响。 本文不会深究原因，但 [Hadley Wickham 所著的“Advanced R”](http://adv-r.had.co.nz)中的“Data Structures”（数据结构）一节详细介绍了 R 数据类型的差异。
 
 暂时，你只需在将 R 对象强制转换成数据框架时注意检查预期的结果。
 
@@ -124,7 +123,7 @@ $ c..world..: Factor w/ 1 level "world": 1
 
 ## <a name="implicit-conversion-of-data-objects"></a>数据对象的隐式转换
 
-每个 R 数据对象都有自身的规则，指定在将值与其他数据对象组合时，如果两个数据对象具有相同的维度数目，或者如果任意数据对象包含异构数据类型，应如何处理值。
+每个 R 数据对象都有自己的规则，指定在将值与其他数据对象组合时，如果两个数据对象的维度数相同，或如果任意数据对象包含异类数据类型，应如何处理值。
 
 首先，创建一个小型测试数据表。
 
@@ -186,11 +185,11 @@ execute sp_execute_external_script
 |---|
 |1542|
 
-原因是什么？ 在本例中，由于可以将这两个参数作为长度相同的向量进行处理，R 会以矩阵形式返回内积。  根据线性代数的规则，这种行为符合预期；但是，如果下游应用程序预期输出架构永远不变，则这种行为可能会导致问题！
+为什么？ 在本例中，由于可以将这两个参数作为长度相同的向量进行处理，R 会以矩阵形式返回内积。  根据线性代数的规则，这种行为符合预期；但是，如果下游应用程序预期输出架构永远不变，则这种行为可能会导致问题！
 
 > [!TIP]
 > 
-> 出现错误？ 确保在包含表的数据库的上下文中运行存储过程，而不是在 master 或其他数据库中运行  。
+> 出现错误？ 确保在包含表的数据库的上下文中运行存储过程，而不是在 master 或其他数据库中运行。
 >
 > 此外，建议避免在这些示例中使用临时表。 某些 R 客户端将停止批次之间的连接，从而删除临时表。
 
@@ -284,9 +283,9 @@ STDOUT message(s) from external script: $ Amount       : num  3400 16925 20350 1
 ```
 
 - 日期时间列已使用 R 数据类型 **POSIXct** 进行处理。
-- 文本列“ProductSeries”已标识为因子，意味着它是一个分类变量  。 默认情况下，字符串值将作为因子处理。 如果将某个字符串传递给 R，该字符串将转换为整数供内部使用，然后映射回到输出中的字符串。
+- 文本列“ProductSeries”已标识为因子，意味着它是一个分类变量。 默认情况下，字符串值将作为因子处理。 如果将某个字符串传递给 R，该字符串将转换为整数供内部使用，然后映射回到输出中的字符串。
 
-### <a name="summary"></a>“摘要”
+### <a name="summary"></a>总结
 
 即使是这些简短的示例，你也可以看出将 SQL 查询作为输入进行传递时需要检查数据转换的影响。 由于 R 不支持某些 SQL Server 数据类型，因此为了避免出错，请考虑以下方式：
 

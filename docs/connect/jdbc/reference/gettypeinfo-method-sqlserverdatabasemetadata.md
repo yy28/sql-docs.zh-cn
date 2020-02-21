@@ -1,5 +1,5 @@
 ---
-title: getTypeInfo 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getTypeInfo 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 23208f01-c1bf-4235-b29c-9051d3df59a3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cb9b1b632d5a17b7c8f497e30a4f033932f09b33
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978512"
 ---
 # <a name="gettypeinfo-method-sqlserverdatabasemetadata"></a>getTypeInfo 方法 (SQLServerDatabaseMetaData)
@@ -37,29 +37,29 @@ public java.sql.ResultSet getTypeInfo()
 ## <a name="return-value"></a>返回值  
  一个 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 getTypeInfo 方法是由 java.sql.DatabaseMetaData 接口中的 getTypeInfo 方法指定的。  
   
  由 getTypeInfo 方法返回的结果集将包含以下信息：  
   
-|“属性”|类型|描述|  
+|名称|类型|说明|  
 |----------|----------|-----------------|  
-|TYPE_NAME|**String**|数据类型的名称。|  
+|TYPE_NAME|**字符串**|数据类型的名称。|  
 |DATA_TYPE|**short**|来自 java.sql.Types 的 SQL 数据类型。|  
 |PRECISION|**int**|有效数字总个数。|  
-|LITERAL_PREFIX|**String**|常量之前使用的一个或多个字符。|  
-|LITERAL_SUFFIX|**String**|用于终止常量的一个或多个字符。|  
-|CREATE_PARAMS|**String**|此数据类型的创建参数说明。|  
+|LITERAL_PREFIX|**字符串**|常量之前使用的一个或多个字符。|  
+|LITERAL_SUFFIX|**字符串**|用于终止常量的一个或多个字符。|  
+|CREATE_PARAMS|**字符串**|此数据类型的创建参数说明。|  
 |NULLABLE|**short**|指示列能否包含 Null 值。 可以为下列值之一：<br /><br /> typeNoNulls (0)<br /><br /> typeNullable (1)<br /><br /> typeNullableUnknown (2)|  
 |CASE_SENSITIVE|**boolean**|指示数据类型是否区分大小写。 如果类型区分大小写，则为“true”；否则为“false”   。|  
 |SEARCHABLE|**short**|指示是否可在 SQL WHERE 子句中使用此列。 可以为下列值之一：<br /><br /> typePredNone (0)<br /><br /> typePredChar (1)<br /><br /> typePredBasic (2)<br /><br /> typeSeachable (3)|  
 |UNSIGNED_ATTRIBUTE|**boolean**|指示数据类型的符号。 如果类型未签名，则为“true”；否则为“false”   。|  
 |FIXED_PREC_SCALE|**boolean**|指示数据类型可以为 money 值。 如果数据类型为 money 类型，则为“true”；否则为“false”   。|  
 |AUTO_INCREMENT|**boolean**|指示数据类型可以自动递增。 如果类型可以自动递增，则为“true”；否则为“false”   。|  
-|LOCAL_TYPE_NAME|**String**|数据类型的本地化名称。|  
+|LOCAL_TYPE_NAME|**字符串**|数据类型的本地化名称。|  
 |MINIMUM_SCALE|**short**|小数点右边的最大位数。|  
 |MAXIMUM_SCALE|**short**|小数点右边的最小位数。|  
 |SQL_DATA_TYPE|**int**|JDBC 驱动程序不支持此类型。|  

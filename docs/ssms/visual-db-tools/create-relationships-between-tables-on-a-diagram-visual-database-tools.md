@@ -1,10 +1,9 @@
 ---
-title: 在关系图中创建表间的关系 | Microsoft Docs
-ms.custom: ''
+title: 在关系图中创建表间的关系
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +11,14 @@ helpviewer_keywords:
 ms.assetid: 28e9630c-dff4-46cc-bb0e-fe77998b6ac2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e6ad73857c6eddd459f86663acffb2a49d74d16e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: b206d31d349119ed361e00ff1ff697c438ec3ba4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264295"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254268"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>在关系图中创建表间的关系（可视化数据库工具）
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,17 +30,17 @@ ms.locfileid: "68264295"
   
 2.  将所选列拖动到相关的表中。  
   
-3.  出现两个对话框：“外键关系”对话框和“表和列”对话框，并且后者显示在前。  
+3.  出现两个对话框：“外键关系”对话框和“表和列”对话框，并且后者显示在前   。  
   
-4.  “关系名”使用系统提供的名称，其格式为 FK_localtable_\_foreigntabl。 您可以更改此值。  
+4.  “关系名”使用系统提供的名称，其格式为 FK_localtable_\_foreigntabl    。 您可以更改此值。  
   
-5.  验证“主键表”是否指定了正确的表。  
+5.  验证“主键表”  是否指定了正确的表。  
   
 6.  网格列出了本地列及与其匹配的外部列。 您可以添加或删除表列或者更改映射。  
   
-7.  选择“确定”。  
+7.  选择“确定”。   
   
-    此时将出现“外键关系”对话框。 “选定的关系”中显示了已创建的关系。  
+    此时将出现“外键关系”  对话框。 “选定的关系”  中显示了已创建的关系。  
   
 8.  在网格中更改关系的属性。  
   
@@ -49,6 +50,6 @@ ms.locfileid: "68264295"
   
 ## <a name="see-also"></a>另请参阅  
 [“表和列”对话框 (Visual Database Tools)](../../ssms/visual-db-tools/tables-and-columns-dialog-box-visual-database-tools.md)  
-[使用约束 (Visual Database Tools)](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
+[使用约束(https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
 [使用数据库关系图中的表 (Visual Database Tools)](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
   

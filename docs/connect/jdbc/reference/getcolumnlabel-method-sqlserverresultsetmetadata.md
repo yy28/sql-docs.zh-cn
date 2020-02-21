@@ -1,5 +1,5 @@
 ---
-title: getColumnLabel 方法 (SQLServerResultSetMetaData) |Microsoft Docs
+title: getColumnLabel 方法 (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: cf67692c-24aa-49e6-8e88-a47d4e8c021c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9784c4aa2dd892473e4ac0ef46f0e8f62d359c5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67952959"
 ---
 # <a name="getcolumnlabel-method-sqlserverresultsetmetadata"></a>getColumnLabel 方法 (SQLServerResultSetMetaData)
@@ -34,7 +34,7 @@ ms.locfileid: "67952959"
 public java.lang.String getColumnLabel(int column)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *column*  
   
  指示列索引的 int  。  
@@ -42,11 +42,11 @@ public java.lang.String getColumnLabel(int column)
 ## <a name="return-value"></a>返回值  
  包含列标题的 String  。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 getColumnLabel 方法由 getColumnLabel 方法在 Java.sql.resultsetmetadata 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 getColumnLabel 方法是由 java.sql.ResultSetMetaData 接口中的 getColumnLabel 方法指定的。  
   
  此方法返回列的别名。 如果列别名不可用，此方法将返回列名称。  
   

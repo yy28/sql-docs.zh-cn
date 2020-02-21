@@ -1,5 +1,5 @@
 ---
-title: setServerPreparedStatementDiscardThreshold 方法 (SQLServerConnection) |Microsoft Docs
+title: setServerPreparedStatementDiscardThreshold 方法 (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8f66746b15e96f49d96b428e8cf8844eeea12a12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972917"
 ---
 # <a name="setserverpreparedstatementdiscardthreshold-method-sqlserverconnection"></a>setServerPreparedStatementDiscardThreshold 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- 指定特定连接实例的行为。 此设置控制在执行在服务器上清除未完成的句柄之前, 每个连接可以完成多少个未完成的已准备语句放弃操作 (sp_unprepare)。 如果设置为 < = 1 在预定义的语句关闭时立即执行 "取消准备" 操作。 如果将该值设置为 > 1, 则这些调用将一起分批, 以避免调用 sp_unprepare 的开销过于频繁。
+ 指定特定连接实例的行为。 此设置控制在执行调用以清除服务器上未完成的句柄之前，每个连接可以有多少个未完成的预定义语句放弃操作 (sp_unprepare) 处于未处理状态。 如果设置 <= 1，则在预定义语句关闭时将立即执行 un-prepare 操作。 如果将该值设置为 > 1，则这些调用将一起进行批处理，以避免过于频繁地调用 sp_unprepare 的开销。
 
 
 ## <a name="syntax"></a>语法  
@@ -35,16 +35,16 @@ ms.locfileid: "67972917"
 public void setServerPreparedStatementDiscardThreshold(boolean thresholdValue)  
 ```  
 
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  thresholdValue   
  
- **ServerPreparedStatementDiscardThreshold**连接属性的新值。  
+ serverPreparedStatementDiscardThreshold  连接属性的新值。  
  
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
-## <a name="remarks"></a>Remarks  
- 此方法可从 JDBC 驱动程序版本6.4 和更前版本获得。
+## <a name="remarks"></a>备注  
+ JDBC 驱动程序版本 6.4 及其后续版本中提供此方法。
  
 ## <a name="see-also"></a>另请参阅  
  [SQLServerConnection 成员](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

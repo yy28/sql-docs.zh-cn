@@ -1,11 +1,7 @@
 ---
-title: 如何：使用重命名和重构对数据库对象进行更改 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 重命名和重构以更改数据库对象
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.dbrefactoring.previewdialog
@@ -16,14 +12,19 @@ f1_keywords:
 ms.assetid: f35520e6-8e6e-47b1-87a3-22c0cf2cabdb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0897d9498ca93e915dba5df9c32c4544fe08767d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: ac10530cf2fa3831a26733e7470b6bd107d17121
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097478"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244241"
 ---
 # <a name="how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects"></a>如何：使用重命名和重构更改数据库对象
+
 通过 Transact\-SQL 编辑器中的“重构”上下文菜单，可以重命名对象或将对象移到不同架构，并且在提交更改前预览所有受影响的区域。 也可以使用“重构”菜单完全限定对数据库对象的所有引用，或者扩展你的数据库项目的 `SELECT` 语句中的任何通配符。  
   
 > [!NOTE]  
@@ -39,7 +40,7 @@ ms.locfileid: "68097478"
   
 4.  在下一个屏幕中，您将能够预览将会受此重命名操作影响的脚本的列表。 具体来说，引用 `Products` 的所有位置都将突出显示。 这非常类似于前一过程中的“查找所有引用”任务。 单击顶部窗格中的任意内容，然后在底部窗格的脚本中查看实际更改（以绿色突出显示）。  
   
-5.  单击 **“应用”** 。  
+5.  单击“应用”  。  
   
 6.  对于已在表设计器或 Transact\-SQL 编辑器中打开的脚本文件，请注意 Transact\-SQL 编辑器已用左侧的绿色条突出显示了发生了更改的位置。  
   

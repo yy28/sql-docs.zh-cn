@@ -1,5 +1,5 @@
 ---
-title: 使用书签检索行 (OLE DB) |Microsoft Docs
+title: 使用书签检索行 (OLE DB) | Microsoft Docs
 description: 使用书签检索行 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: b2ab2e7be75e10ff97fcf254f885bfaa9dd25ec9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994703"
 ---
 # <a name="retrieve-rows-using-bookmarks-ole-db"></a>使用书签检索行 (OLE DB)
@@ -25,7 +25,7 @@ ms.locfileid: "67994703"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  使用者可将绑定结构的 dwFlag 字段值设置为 DBCOLUMNSINFO_ISBOOKMARK，以指示将该列用作书签  。 使用者还可将行集属性 DBPROP_BOOKMARKS 设置为 VARIANT_TRUE。 这允许在行集中出现第 0 列。 然后，使用 IRowsetLocate::GetRowsAt 提取行（起始行的位置为书签加上一个偏移量得到的位置）  。  
+  使用者可将绑定结构的 dwFlag 字段值设置为 DBCOLUMNSINFO_ISBOOKMARK，以指示将该列用作书签。 使用者还可将行集属性 DBPROP_BOOKMARKS 设置为 VARIANT_TRUE。 这允许在行集中出现第 0 列。 然后，使用 IRowsetLocate::GetRowsAt 提取行（起始行的位置为书签加上一个偏移量得到的位置）。  
   
 > [!IMPORTANT]  
 >  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
@@ -38,9 +38,9 @@ ms.locfileid: "67994703"
   
 3.  执行命令。  
   
-4.  对于将用作书签的列，请将绑定结构的 dwFlag 字段设置为 DBCOLUMNSINFO_ISBOOKMARK 标记  。  
+4.  对于将用作书签的列，请将绑定结构的 dwFlag 字段设置为 DBCOLUMNSINFO_ISBOOKMARK 标记。  
   
-5.  使用**IRowsetLocate:: GetRowsAt**从书签的偏移量指定的行开始提取行。  
+5.  使用 IRowsetLocate::GetRowsAt 提取行（起始行为书签偏移量指定的行）。  
   
 ## <a name="example"></a>示例  
  此示例显示如何使用书签提取行。 IA64 平台不支持此示例。  

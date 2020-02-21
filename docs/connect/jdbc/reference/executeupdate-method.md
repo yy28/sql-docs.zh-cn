@@ -1,5 +1,5 @@
 ---
-title: executeUpdate 方法 () |Microsoft Docs
+title: executeUpdate 方法 () | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: ca534c6b-ef4d-4ae8-8cc3-514728623cff
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: eae73888b97b8511a23ba3387e2674bff40643c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954587"
 ---
 # <a name="executeupdate-method-"></a>executeUpdate 方法 ()
@@ -37,10 +37,10 @@ public int executeUpdate()
 ## <a name="return-value"></a>返回值  
  一个指示受影响的行数的 int，如果使用 DDL 语句，则为 0  。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 executeUpdate 方法是由 java.sql.PreparedStatement 接口中的 executeUpdate 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  

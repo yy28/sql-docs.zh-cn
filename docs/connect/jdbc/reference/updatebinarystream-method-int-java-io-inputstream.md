@@ -11,10 +11,10 @@ ms.assetid: 1db3a975-c108-45d1-8c0d-14a094f391bd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8a1b69d4f4e1845b4ec86297c06298c1302becea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67985372"
 ---
 # <a name="updatebinarystream-method-int-javaioinputstream"></a>updateBinaryStream 方法 (int, java.io.InputStream)
@@ -30,22 +30,22 @@ public void updateBinaryStream(int columnIndex,
                                java.io.InputStream x)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  columnIndex   
   
  指示列索引的 int  。  
   
  *x*  
   
- 一个 InputStream 对象。  
+ InputStream 对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 updateBinaryStream 方法由 updateBinaryStream 方法在方法中指定。  
+## <a name="remarks"></a>备注  
+ 此 updateBinaryStream 方法是由 java.sql.ResultSet 接口中的 updateBinaryStream 方法指定的。  
   
- 对**image**、 **text**和**ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据类型使用此方法可能会影响性能。  
+ 将此方法应用于 image  、text  和 ntext  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型可能会影响性能。  
   
  此方法将来自 InputStream 对象的字节传递给所选的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 二进制列，例如 binary、varbinary、varbinary(max)、image、xml 和 udt。 此方法不支持更新字符列。 若要使用 InputStream 更新字符列，请使用 [updateAsciiStream](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md) 方法。  
   

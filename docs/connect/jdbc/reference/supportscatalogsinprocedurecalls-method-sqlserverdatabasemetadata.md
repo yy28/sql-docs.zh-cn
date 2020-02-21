@@ -1,5 +1,5 @@
 ---
-title: supportsCatalogsInProcedureCalls 方法 |Microsoft Docs
+title: supportsCatalogsInProcedureCalls 方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 5ec3571a-c7c6-4b94-a9ea-ac08adc7f978
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e9f6532ca8f23a9e8d729bccc204865860e71ac9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969682"
 ---
 # <a name="supportscatalogsinprocedurecalls-method-sqlserverdatabasemetadata"></a>supportsCatalogsInProcedureCalls 方法 (SQLServerDatabaseMetaData)
@@ -35,13 +35,13 @@ public boolean supportsCatalogsInProcedureCalls()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 如果支持,**则为 true** 。 否则为 **false**。  
+ 如果支持，则值为 true  。 否则为 **false**。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 supportsCatalogsInProcedureCalls 方法由 supportsCatalogsInProcedureCalls 方法在 Java.sql.databasemetadata 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 supportsCatalogsInProcedureCalls 方法是由 java.sql.DatabaseMetaData 接口中的 supportsCatalogsInProcedureCalls 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

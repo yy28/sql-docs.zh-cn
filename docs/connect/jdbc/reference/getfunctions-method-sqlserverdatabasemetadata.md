@@ -1,5 +1,5 @@
 ---
-title: getFunctions 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getFunctions 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 44335cbd-c84d-4ef3-a6a1-fca7eb7ec768
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b799fb56207294041c52fe455ad2acceff508d3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982952"
 ---
 # <a name="getfunctions-method-sqlserverdatabasemetadata"></a>getFunctions 方法 (SQLServerDatabaseMetaData)
@@ -31,7 +31,7 @@ public ResultSet getFunctions(java.lang.String catalog,
                        java.lang.String functionNamePattern)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *catalog*  
   
  数据库中的目录名称。 如果该名称为空字符串 ""，则结果将包括无目录的函数。 如果此字符串为“null”，目录名称则不可用于搜索  。  
@@ -47,10 +47,10 @@ public ResultSet getFunctions(java.lang.String catalog,
 ## <a name="return-value"></a>返回值  
  一个 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 getFunctions 方法是由 java.sql.DatabaseMetaData 接口中的 getFunctions 方法指定的。  
   
  此方法只返回与指定架构和函数名称匹配的系统函数和用户函数。  
@@ -60,15 +60,15 @@ public ResultSet getFunctions(java.lang.String catalog,
   
  每个函数说明都包括以下列：  
   
-|“属性”|类型|描述|  
+|名称|类型|说明|  
 |----------|----------|-----------------|  
-|FUNCTION_CAT|**String**|函数所在的数据库的名称。|  
-|FUNCTION_SCHEM|**String**|函数所在的架构的名称。|  
-|FUNCTION_NAME|**String**|函数的名称。|  
+|FUNCTION_CAT|**字符串**|函数所在的数据库的名称。|  
+|FUNCTION_SCHEM|**字符串**|函数所在的架构的名称。|  
+|FUNCTION_NAME|**字符串**|函数的名称。|  
 |NUM_INPUT_PARAMS|**int**|保留以供将来使用，当前返回 -1 值。|  
 |NUM_OUTPUT_PARAMS|**int**|保留以供将来使用，当前返回 -1 值。|  
 |NUM_RESULT_SETS|**int**|保留以供将来使用，当前返回 -1 值。|  
-|REMARKS|**String**|有关函数的注释。|  
+|REMARKS|**字符串**|有关函数的注释。|  
 |FUNCTION_TYPE|**short**|函数的类型。 可以为下列值之一：<br /><br /> SQL_PT_UNKNOWN (0)<br /><br /> SQL_PT_PROCEDURE (1)<br /><br /> SQL_PT_FUNCTION (2)|  
   
  返回的结果集中的所有说明都按 FUNCTION_CAT、FUNCTION_SCHEM、FUNCTION_NAME 和 SPECIFIC_NAME 排序。  

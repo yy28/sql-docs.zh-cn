@@ -1,7 +1,7 @@
 ---
-title: 删除 SQL Server 故障转移群集实例（安装程序）| Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 删除故障转移群集实例
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bf63353b-69cf-4c5c-98ea-7b151e36537f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 20a569c628ca7d9d181b7389cdff83b3a46b50a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 97573a3a8a7d08f9eb615443dd7b0d42d6fd1b23
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063926"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230726"
 ---
 # <a name="remove-a-sql-server-failover-cluster-instance-setup"></a>删除 SQL Server 故障转移群集实例（安装程序）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +38,11 @@ ms.locfileid: "68063926"
   
  有关命令提示符语法的信息，请参阅 [从命令提示符安装 SQL Server 2016](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。  
   
-### <a name="to-uninstall-a-includessnoversionincludesssnoversion-mdmd-failover-cluster"></a>卸载 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集  
+### <a name="to-uninstall-a-ssnoversion-failover-cluster"></a>卸载 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集  
   
 1.  若要卸载 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集，请使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序提供的删除节点功能分别删除每个节点。 有关详细信息，请参阅[在 SQL Server 故障转移群集中添加或删除节点（安装程序）](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [查看和阅读 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
+ [查看和读取 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

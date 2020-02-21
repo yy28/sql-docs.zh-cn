@@ -1,5 +1,5 @@
 ---
-title: OLE DB 用于 SQL Server 编程的驱动程序 |Microsoft Docs
+title: OLE DB Driver for SQL Server 编程 | Microsoft Docs
 description: 适用于 SQL Server 的 OLE DB 驱动程序编程
 ms.custom: ''
 ms.date: 06/12/2018
@@ -19,10 +19,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 0645659036af0b00e2cf1b62b67830ded43aecbe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993929"
 ---
 # <a name="ole-db-driver-for-sql-server-programming"></a>适用于 SQL Server 的 OLE DB 驱动程序编程
@@ -30,17 +30,17 @@ ms.locfileid: "67993929"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server 的 OLE DB 驱动程序是用于访问数据的低级别 COM API。 建议将适用于 SQL Server 的 OLE DB 驱动程序用于开发需要高性能的工具、实用工具或底层组件。 适用于 SQL Server 的 OLE DB 驱动程序是直接访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表格格式数据流 (TDS) 协议的本机高性能访问接口。  
+  OLE DB Driver for SQL Server 是用于访问数据的底层 COM API。 建议将适用于 SQL Server 的 OLE DB 驱动程序用于开发需要高性能的工具、实用工具或底层组件。 适用于 SQL Server 的 OLE DB 驱动程序是直接访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表格格式数据流 (TDS) 协议的本机高性能访问接口。  
   
- SQL Server OLE DB 驱动程序向连接到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的应用程序提供 OLE DB 支持。  
+ OLE DB Driver for SQL Server 对连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的应用程序提供 OLE DB 支持。  
   
- SQL Server 的 OLE DB 驱动程序是 OLE DB 版本2.0 兼容的提供程序。  
+ OLE DB Driver for SQL Server 是与 OLE DB 版本 2.0 兼容的提供程序。  
   
 ## <a name="in-this-section"></a>本节内容  
   
 -   [创建适用于 SQL Server 的 OLE DB 驱动程序应用程序](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)  
   
--   [数据源对象&#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+-   [数据源对象 (OLE DB)](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
 -   [命令](../../oledb/ole-db-commands/commands.md)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "67993929"
   
 -   [表和索引](../../oledb/ole-db-tables-indexes/tables-and-indexes.md)  
   
--   [数据类型&#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
+-   [数据类型 (OLE DB)](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
 -   [架构行集支持 (OLE DB)](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
   
@@ -72,7 +72,7 @@ ms.locfileid: "67993929"
   
 -   [稀疏列支持 (OLE DB)](../../oledb/ole-db/sparse-columns-support-ole-db.md)  
   
--   [OLE DB SQL Server &#40;OLE DB&#41;参考的驱动程序](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
+-   [OLE DB Driver for SQL Server (OLE DB) 引用](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
   
 -   [OLE DB 操作指南主题](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   

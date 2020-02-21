@@ -1,5 +1,5 @@
 ---
-title: Azure Key Vault 示例版本 6.2.2 |Microsoft Docs
+title: Azure Key Vault 示例版本 6.2.2 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 315d6cad8ee643cc64a3b331ee321372a70c7824
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028429"
 ---
 # <a name="azure-key-vault-sample-version-622"></a>Azure Key Vault 示例版本 6.2.2
@@ -22,7 +22,7 @@ ms.locfileid: "69028429"
 
 ## <a name="sample-application-using-azure-key-vault-feature"></a>使用 Azure Key Vault 功能的示例应用程序
 
-此应用程序可使用 JDBC Driver 6.2.2 和 v6.4.0 和 Azure Keyvault (1.0.0 版)、Adal4j (版本 1.4.0) 及其依赖项运行。  可以通过将这些库添加到项目的 pom 文件来解决基本依赖项, 如下所[述](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md):
+此应用程序可使用 JDBC 驱动程序版本 6.2.2 和 6.4.0 和 Azure-Keyvault（版本 1.0.0）、Adal4j（版本 1.4.0）及其依赖项运行。  可以通过将这些库添加到项目的 pom 文件来解析基础依赖项，如[此处](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)所述：
 
 ```java
 import java.net.URISyntaxException;

@@ -1,6 +1,6 @@
 ---
-title: SQL Server 配置管理器帮助 | Microsoft Docs
-ms.custom: ''
+title: SQL Server 配置管理器帮助
+ms.custom: seo-lt-2019
 ms.date: 02/01/2018
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,24 +13,24 @@ ms.assetid: 6e909911-39a6-469b-b22a-3afdfd08a30b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: fa579e072ffdddc70e10d3ad1e9a205840374aee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 8ade0d0e0944b01005866fc5c38e50ce45fae0fd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024094"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306958"
 ---
 # <a name="sql-server-configuration-manager-help"></a>SQL Server 配置管理器帮助
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器可以配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务和网络连接。 若要创建或管理数据库对象、配置安全性以及编写 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询，请使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 有关 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书。  
 
  > [!TIP]
- > 如果需要在 Linux 上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]进行配置, 请使用**mssql 会议**工具。 有关详细信息，请参阅[使用 mssql-con 工具配置 Linux 上的 SQL Server](../../linux/sql-server-linux-configure-mssql-conf.md)。
+ > 如果需要在 Linux 上配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请使用 mssql-conf  工具。 有关详细信息，请参阅[使用 mssql-con 工具配置 Linux 上的 SQL Server](../../linux/sql-server-linux-configure-mssql-conf.md)。
 
  本节包含了按 F1 后看到的有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器中各对话框的帮助主题。  
   
 > [!NOTE]
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器无法配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]版本。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器无法配置 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 之前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。  
   
 ## <a name="services"></a>服务  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器管理与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]相关的服务。 尽管其中许多任务可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 服务对话框来完成，但值得注意的是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器还可以对其管理的服务执行更多的操作（例如，在服务帐户更改后应用正确的权限）。 使用标准的 Windows 服务对话框配置任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务都可能会造成服务无法正常工作。  
@@ -55,7 +55,7 @@ ms.locfileid: "68024094"
 -   配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 网络协议  
   
 > [!NOTE]  
->  有关如何配置协议和连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的简短教程，请参阅 [教程：数据库引擎入门](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)。  
+>  有关如何配置协议和连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的简短教程，请参阅[教程：数据库引擎入门](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)。  
   
 ## <a name="sql-server-native-client-configuration"></a>SQL Server Native Client 配置  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 网络库连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器可以完成下列与此计算机上的客户端应用程序相关的任务：  

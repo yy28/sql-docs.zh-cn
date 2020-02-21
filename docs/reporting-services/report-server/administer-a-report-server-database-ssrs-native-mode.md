@@ -16,10 +16,10 @@ ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7822cadea8dbe051c0e7dbc11417987dd5e5c543
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593767"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>管理报表服务器数据库（SSRS 本机模式）
@@ -29,7 +29,7 @@ ms.locfileid: "73593767"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了许多用来管理报表服务器数据库的工具。  
   
--   若要备份或还原报表服务器数据库、移动报表服务器数据库或恢复报表服务器数据库，可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令或数据库命令提示实用工具。 有关说明，请参阅[将报表服务器数据库移至其他计算机（SSRS 本机模式）](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)。  
+-   若要备份或还原报表服务器数据库、移动报表服务器数据库或恢复报表服务器数据库，可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)] 命令或数据库命令提示实用工具。 有关说明，请参阅[将报表服务器数据库移至其他计算机（SSRS 本机模式）](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)。  
   
 -   若要将现有数据库内容复制到另一个报表服务器数据库，可以附加报表服务器数据库的一个副本，并将其用于其他报表服务器实例。 或者，可以创建并运行一个使用 SOAP 调用的脚本，以便在新数据库中重新创建报表服务器。 可以使用 **rs** 实用工具来运行该脚本。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "73593767"
  由于 ReportServerTempdb 名称是在内部存储的，并且由存储过程用来执行内部操作，所以会发生此错误。 重命名临时数据库将使存储过程无法正常工作。  
   
 ## <a name="enabling-snapshot-isolation-on-the-report-server-database"></a>针对报表服务器数据库启用快照隔离  
- 您不能针对报表服务器数据库启用快照隔离。 如果快照隔离处于打开状态，则将遇到以下错误“所选报表尚未做好准备，无法查看。 报表仍处于呈现状态，或报表快照不可用。”  
+ 您不能针对报表服务器数据库启用快照隔离。 如果启用了快照隔离，则会遇到以下错误：“所选报表尚不可查看。 报表仍处于呈现状态，或报表快照不可用。”  
   
  如果快照隔离不是有意启用的，则说明属性可能已经由另一个应用程序设置，或者已经针对 **“模型”** 数据库启用了快照隔离，从而导致所有的新数据库都继承该设置。  
   

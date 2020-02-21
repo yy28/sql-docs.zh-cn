@@ -1,7 +1,7 @@
 ---
 title: PDO::quote | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ab9ddc48-42f8-4edf-aa8b-b0fc66706161
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: eeb83be9d9414d0d9380ca1771bf50985e283b98
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 7908655954c0f93bd697599ed0d6c809e97d080f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67993173"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76916364"
 ---
 # <a name="pdoquote"></a>PDO::quote
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,15 +29,23 @@ ms.locfileid: "67993173"
 string PDO::quote( $string[, $parameter_type ] )  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
 $*string*：要用引号括起来的字符串。  
   
-$parameter_type：指示数据类型的可选（整数）符号  。  默认值为 PDO::PARAM_STR。  
+$*parameter_type*：指示数据类型的可选（整数）符号。  默认值为 PDO::PARAM_STR。  
+
+PHP 7.2 中引入了新的 PDO 常量，以添加对[绑定 Unicode 和非 Unicode 字符串](https://wiki.php.net/rfc/extended-string-types-for-pdo)的支持。 Unicode 字符串可以括在引号中，并使用 N 作为前缀（即 N'string' 而不是 'string'）。
+
+1. PDO::PARAM_STR_NATL - Unicode 字符串的新类型，作为按位 OR 应用到 PDO::PARAM_STR
+1. PDO::PARAM_STR_CHAR - 非 Unicode 字符串的新类型，作为按位 OR 应用到 PDO::PARAM_STR
+1. PDO::ATTR_DEFAULT_STR_PARAM - 设置为 PDO::PARAM_STR_NATL 或 PDO::PARAM_STR_CHAR，以指示默认情况下 PDO::PARAM_STR 的按位 OR 的值
+
+从版本 5.8.0 开始，可以将这些常量和 PDO::quote 一起使用。
   
 ## <a name="return-value"></a>返回值  
 可传递到 SQL 语句的用引号括起来的字符串，或 False（如果失败）。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 2.0 中添加了对 PDO 的支持。  
   
 ## <a name="example"></a>示例  
@@ -60,6 +68,25 @@ $stmt = $conn->prepare( $query );
 $stmt->execute(array($param, $param2));  
 ?>  
 ```  
+  
+## <a name="example"></a>示例  
+
+下面的脚本演示了一些示例，说明扩展字符串类型如何影响带有 PHP 7.2+ 的 PDO::quote()。
+
+```
+<?php
+$database = "test";
+$server = "(local)";
+$db = new PDO("sqlsrv:server=$server; Database=$database", "", "");
+
+$db->quote('über', PDO::PARAM_STR | PDO::PARAM_STR_NATL); // N'über'
+$db->quote('foo'); // 'foo'
+
+$db->setAttribute(PDO::ATTR_DEFAULT_STR_PARAM, PDO::PARAM_STR_NATL);
+$db->quote('über'); // N'über'
+$db->quote('foo', PDO::PARAM_STR | PDO::PARAM_STR_CHAR); // 'foo'
+?>
+```
   
 ## <a name="see-also"></a>另请参阅  
 [PDO 类](../../connect/php/pdo-class.md)

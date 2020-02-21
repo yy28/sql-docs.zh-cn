@@ -1,10 +1,9 @@
 ---
-title: 设置主服务器 | Microsoft Docs
-ms.custom: ''
+title: Make a Master Server
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -21,13 +20,15 @@ helpviewer_keywords:
 ms.assetid: 05739a73-1fdf-4d9d-92a6-70f328380322
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 79f02ab705f6bf340403739ed01d46e8ab11b024
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 816c6b0432f9e5c93ae1ff1f1328e7c05c1a731e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552874"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242210"
 ---
 # <a name="make-a-master-server"></a>Make a Master Server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -63,7 +64,7 @@ ms.locfileid: "69552874"
   
 #### <a name="to-make-a-master-server"></a>设置主服务器  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
+1.  在“对象资源管理器”  中，连接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 的实例，然后展开该实例。  
   
 2.  右键单击“SQL Server 代理”  ，指向“多服务器管理”  ，再单击“将其设置为主服务器”  。 **主服务器向导** 将引导您完成设置主服务器和添加目标服务器的过程。  
   
@@ -101,7 +102,7 @@ ms.locfileid: "69552874"
     **添加连接**  
     向目标服务器列表中添加服务器，但不注册该服务器。  
   
-    **“连接”**  
+    **Connection**  
     更改所选服务器的连接属性。  
   
 5.  从 **“主服务器登录凭据”** 页中，指定是否要在必要时为目标服务器创建新的登录名，并为其分配针对主服务器的权限。  

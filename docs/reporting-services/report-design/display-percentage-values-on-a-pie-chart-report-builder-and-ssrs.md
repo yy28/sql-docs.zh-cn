@@ -1,6 +1,7 @@
 ---
-title: 在饼图上显示百分比值（报表生成器和 SSRS）| Microsoft Docs
-ms.date: 03/01/2017
+title: 在饼图上显示百分比值（报表生成器）| Microsoft Docs
+description: 在 Reporting Services 分页报表中，图例默认显示类别。 有时可能需要在图例或饼图扇区中显示百分比。
+ms.date: 12/09/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -8,19 +9,19 @@ ms.topic: conceptual
 ms.assetid: eb905fc1-5235-4773-a27e-b07be9318be5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fab9a9c5f6fbdbf3201ba597102450bad0d95629
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: ffa11ae9d6c0d539accb4bbf6d796019cbc3371e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65578193"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254601"
 ---
 # <a name="display-percentage-values-on-a-pie-chart-report-builder-and-ssrs"></a>在饼图上显示百分比值（报表生成器和 SSRS）
 在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，图例默认显示类别。 有时可能需要在图例或饼图扇区中显示百分比。   
 
 ![report-builder-pie-chart-preview-percents](../../reporting-services/media/report-builder-pie-chart-preview-percents.png)
 
- [教程：向报表添加饼图（报表生成器）](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)向观看者演示如何向饼图添加百分比（如果想先通过示例数据尝试此操作）。
+ [教程：向报表添加饼图（报表生成器）](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)逐步介绍了如何向饼图添加百分比（若要先通过示例数据进行尝试的话）。
  
   
 ## <a name="to-display-percentage-values-as-labels-on-a-pie-chart"></a>在饼图上显示百分比值  
@@ -44,7 +45,7 @@ ms.locfileid: "65578193"
 ## <a name="see-also"></a>另请参阅  
 * [教程：向报表添加饼图（报表生成器）](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)
 *  [饼图&#40;报表生成器和 SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
-*  [设置图表上图例的格式&#40;报表生成器和 SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
+*  [设置图表上图例的格式（报表生成器和 SSRS）](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
 *  [在饼图外显示数据点标签（报表生成器和 SSRS）](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  
   

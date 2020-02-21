@@ -21,10 +21,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 93b906a0604772fe224b1e63eaf6eed9eb8af983
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67989231"
 ---
 # <a name="using-the-ole-db-driver-for-sql-server-header-and-library-files"></a>使用适用于 SQL Server 的 OLE DB 驱动程序头文件和库文件
@@ -32,42 +32,42 @@ ms.locfileid: "67989231"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  如果在安装过程中选择了 "SQL Server SDK 的 OLE DB 驱动程序" 选项, 则会安装适用于 SQL Server 标头和库文件的 OLE DB 驱动程序。 开发应用程序时，应将开发所需的所有文件复制到开发环境并进行安装，这一点非常重要。 有关安装和重新分发 SQL Server OLE DB 驱动程序的详细信息, 请参阅[安装 SQL Server 的 OLE DB 驱动程序](../../oledb/applications/installing-oledb-driver-for-sql-server.md)。  
+  如果在安装过程中选择了“OLE DB Driver for SQL Server SDK”选项，则会安装 OLE DB Driver for SQL Server 头文件和库文件。 开发应用程序时，应将开发所需的所有文件复制到开发环境并进行安装，这一点非常重要。 有关安装和重新分发 OLE DB Driver for SQL Server 的详细信息，请参阅[安装 OLE DB Driver for SQL Server](../../oledb/applications/installing-oledb-driver-for-sql-server.md)。  
   
- SQL Server 标头和库文件的 OLE DB 驱动程序安装在以下位置:  
+ OLE DB Driver for SQL Server 头文件和库文件安装在以下位置：  
   
  *%PROGRAM FILES%* \Microsoft SQL Server\Client SDK\OLEDB\182\SDK  
   
- SQL Server 头文件 (msoledbsql) 的 OLE DB 驱动程序可用于将 SQL Server 数据访问功能的 OLE DB 驱动程序添加到自定义应用程序。 在适用于 SQL Server 的 OLE DB 驱动程序头文件中，可找到利用 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中引入的新功能所需的所有定义、特性、属性和接口。  
+ OLE DB Driver for SQL Server 头文件 (msoledbsql.h) 可用于将 OLE DB Driver for SQL Server 数据访问功能添加到自定义应用程序。 在适用于 SQL Server 的 OLE DB 驱动程序头文件中，可找到利用 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中引入的新功能所需的所有定义、特性、属性和接口。  
   
- 除了 SQL Server 头文件的 OLE DB 驱动程序外, 还存在一个 msoledbsql 库文件, 该文件是[OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)功能的导出库。  
+ 除了 OLE DB Driver for SQL Server 头文件外，还存在 msoledbsql.lib 库文件，该文件是 [OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) 功能的导出库。  
   
  适用于 SQL Server 的 OLE DB 驱动程序头文件与 Microsoft 数据访问组件 (MDAC) 使用的 sqloledb.h 头文件向后兼容，但不包含 SQLOLEDB 的 CLSID（MDAC 附带的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB 访问接口）或 XML 功能的符号（适用于 SQL Server 的 OLE DB 驱动程序不支持这些符号）。    
   
- 使用 OLE DB 驱动程序 SQL Server 的 OLE DB 应用程序只需引用 msoledbsql。 如果应用程序使用 MDAC (SQLOLEDB) 和适用于 SQL Server 的 OLE DB 驱动程序，则可同时引用 sqloledb.h 和 msoledbsql.h，但必须先引用 sqloledb.h。  
+ 使用 OLE DB Driver for SQL Server 的 OLE DB 应用程序只需引用 msoledbsql.h。 如果应用程序使用 MDAC (SQLOLEDB) 和适用于 SQL Server 的 OLE DB 驱动程序，则可同时引用 sqloledb.h 和 msoledbsql.h，但必须先引用 sqloledb.h。  
   
-## <a name="using-the-ole-db-driver-for-sql-server-header-file"></a>使用 OLE DB 驱动程序 SQL Server 头文件  
- 若要使用 OLE DB 驱动程序 SQL Server 头文件, 必须在 C/  C++编程代码中使用 include 语句。 以下部分介绍如何在 OLE DB 应用程序中执行此操作。  
+## <a name="using-the-ole-db-driver-for-sql-server-header-file"></a>使用 OLE DB Driver for SQL Server 头文件  
+ 若要使用 OLE DB Driver for SQL Server 头文件，必须在 C/C++ 编程代码中使用 include  语句。 以下几节介绍如何在 OLE DB 应用程序中执行此操作。  
   
 > [!NOTE]  
->  只能使用 Visual Studio C++ 2012 或更高版本编译 SQL Server 头文件和库文件的 OLE DB 驱动程序。  
+>  OLE DB Driver for SQL Server 头文件和库文件只能使用 Visual Studio C++ 2012 或更高版本编译。  
   
 ### <a name="ole-db"></a>OLE DB  
- 若要在 OLE DB 应用程序中使用 SQL Server 标头文件的 OLE DB 驱动程序, 请使用以下编程代码行:  
+ 若要在 OLE DB 应用程序中使用 OLE DB Driver for SQL Server 头文件，请使用以下编程代码行：  
   
 ```    
 include "msoledbsql.h";  
 ```  
   
 > [!NOTE]  
->  如果应用程序具有 sqloledb 的**include**语句, 则 msoledbsql 的**include**语句必须位于它后面。  
+>  如果应用程序的 sqloledb.h 具有用于 sqloledb.h 的 include  语句，msoledbsql.h 的 include  语句必须在该语句之后。  
   
- 通过 SQL Server OLE DB 驱动程序创建与数据源的连接时, 请使用 "MSOLEDBSQL" 作为提供程序名称字符串。  
+ 当通过 OLE DB Driver for SQL Server 创建与数据源的连接时，请将“MSOLEDBSQL”用作访问接口名称字符串。  
 
   
 ## <a name="component-names-and-properties-by-version"></a>基于版本的组件名称和属性  
 
-|属性|适用于 SQL Server 的 OLE DB 驱动程序|MDAC|  
+|properties|适用于 SQL Server 的 OLE DB 驱动程序|MDAC|  
 |--------|----------------------------|----|   
 |OLE DB PROGID|MSOLEDBSQL|SQLOLEDB|  
 |OLE DB 头文件名|msoledbsql.h|Sqloledb.h|  
@@ -77,7 +77,7 @@ include "msoledbsql.h";
 ## <a name="static-linking-and-bcp-functions"></a>静态链接和 BCP 函数  
  在某一应用程序使用 BCP 函数时，对于该应用程序十分需要特别注意的是，应在连接字符串中指定来自用于编译该应用程序的头文件和库随附的相同版本的驱动程序。  
   
- 有关详细信息, 请参阅执行[大容量复制操作](../../oledb/features/performing-bulk-copy-operations.md)。  
+ 有关详细信息，请参阅[执行大容量复制操作](../../oledb/features/performing-bulk-copy-operations.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [使用适用于 SQL Server 的 OLE DB 驱动程序生成应用程序](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  

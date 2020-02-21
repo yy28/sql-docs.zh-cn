@@ -14,10 +14,10 @@ ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c10e37d7c1231a3ed4db2d7412ea223cccc6922d
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67688517"
 ---
 # <a name="report-builder-in-sql-server"></a>SQL Server 中的报表生成器
@@ -36,7 +36,7 @@ ms.locfileid: "67688517"
   
 -   **使用表、矩阵或图表向导创建报表**。 选择数据源连接，拖放字段以创建数据集查询，选择布局和样式并自定义报表。  
   
--   **使用地图向导** 创建显示针对地理或几何背景的聚合数据的报表。 地图数据可以是来自 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询或 Environmental Systems Research Institute, Inc.(ESRI) 形状文件的空间数据。 还可以添加 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Bing 地图图块背景。  
+-   **使用地图向导** 创建显示针对地理或几何背景的聚合数据的报表。 地图数据可以是来自 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询或 Environmental Systems Research Institute, Inc. 的空间数据。(ESRI) 形状文件。 还可以添加 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Bing 地图图块背景。  
   
 -   **使用报表部件开始创建报表**。 报表部件是已单独发布到本机模式或 SharePoint 集成模式中的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器的报表项。 报表部件可以在其他报表中重用。 表、矩阵、图表和图像等报表项可以作为报表部件发布。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "67688517"
   
 -   **创建具有表、矩阵、图表或自由格式报表布局的分页报表。** 为基于列的数据创建表报表，为汇总数据创建矩阵报表（如交叉表或数据透视表），为图形数据创建图表报表，为任何其他类型的数据创建自由格式报表。 报表可以与基于 Web 的动态应用程序的列表、图形和控件一同嵌入其他报表和图表。  
   
--   **可基于各种数据源生成报表。** 使用具有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]托管数据提供程序、OLE DB 提供程序或 ODBC 数据源的任何数据源类型的数据生成报表。 可以创建使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、Oracle、Hyperion 及其他数据库中的关系数据和多维数据的报表。 您可以使用 XML 数据处理扩展插件从任何 XML 数据源检索数据。 可以使用表值函数来设计自定义数据源。  
+-   **可基于各种数据源生成报表。** 使用具有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 托管数据提供程序、OLE DB 提供程序或 ODBC 数据源的任何数据源类型的数据生成报表。 可以创建使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、Oracle、Hyperion 及其他数据库中的关系数据和多维数据的报表。 您可以使用 XML 数据处理扩展插件从任何 XML 数据源检索数据。 可以使用表值函数来设计自定义数据源。  
   
 -   **修改现有报表。** 使用 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]，你可以自定义和更新在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]报表设计器中创建的报表。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "67688517"
 
   [SQL Server Reporting Services 和报表生成器中的新增功能](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
   介绍此版本的 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]的新增功能。   
-  [教程：脱机创建快速图表报表](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+  [教程：脱机生成快速图表报表](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  介绍 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 以及可用来帮助创建报表的向导。 教程提供了一组供您使用的数据，因此不需要连接到数据源即可开始工作。  
   
  [规划报表（报表生成器）](../../reporting-services/report-design/planning-a-report-report-builder.md)  

@@ -7,30 +7,30 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 83e793fac40a8e41850f2a45e138dd125130c13e
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 602dfe9c96c1e8713b90c607806dd09ed16a37b6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452216"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247763"
 ---
 # <a name="filestream-data"></a>FILESTREAM 数据
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下载 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-FILESTREAM 存储属性适用于在 varbinary （max）列中存储的二进制（BLOB）数据。 在 FILESTREAM 之前，存储需要特殊处理的二进制数据。 非结构化数据（例如文本文档、图像和视频）通常存储在数据库之外，因而难以管理。
+FILESTREAM 存储属性可用于 varbinary(max) 列中存储的二进制 (BLOB) 数据。 在使用 FILESTREAM 之前，存储二进制数据需要经过特殊处理。 非结构化数据（例如文本文档、图像和视频）通常存储在数据库外部，因此难以管理。
 
 > [!NOTE]
-> 必须安装 .NET Framework 3.5 SP1 （或更高版本）或 .NET Core 才能使用 SqlClient 处理 FILESTREAM 数据。
+> 必须安装 .NET Framework 3.5 SP1（或更高版本）或 .NET Core 才能使用 SqlClient 处理 FILESTREAM 数据。
 
 在 varbinary(max) 列上指定 FILESTREAM 特性会致使 SQL Server 将数据存储在本地 NTFS 文件系统中，而不是存储在数据库文件中。 虽然数据是单独存储的，但可以使用受支持的相同 Transact-SQL 语句处理存储在数据库中的 varbinary(max) 数据。
 
-## <a name="sqlclient-support-for-filestream"></a>FILESTREAM 的 SqlClient 支持
+## <a name="sqlclient-support-for-filestream"></a>SqlClient 对 FILESTREAM 的支持
 
-适用于 SQL Server 的 Microsoft SqlClient 数据提供程序 (<xref:Microsoft.Data.SqlClient>) 支持使用在 <xref:System.Data.SqlTypes> 命名空间中定义的 <xref:Microsoft.Data.SqlTypes.SqlFileStream> 类来读写 FILESTREAM 数据。 `SqlFileStream` 继承自 <xref:System.IO.Stream> 类，该类提供了用于读写数据流的方法。 从流中读取将数据从流传输到数据结构（如字节数组）中。 写入将数据从数据结构传输到流中。
+适用于 SQL Server 的 Microsoft SqlClient 数据提供程序 (<xref:Microsoft.Data.SqlClient>) 支持使用在 <xref:System.Data.SqlTypes> 命名空间中定义的 <xref:Microsoft.Data.SqlTypes.SqlFileStream> 类来读写 FILESTREAM 数据。 `SqlFileStream` 继承自 <xref:System.IO.Stream> 类，该类提供了用于读写数据流的方法。 从流中读取会将数据从流传输到数据结构（如字节数组）中。 写入数据会将数据从数据结构传输到流中。
 
 ### <a name="creating-the-sql-server-table"></a>创建 SQL Server 表
 
@@ -52,11 +52,11 @@ GO
 
 ### <a name="example-reading-overwriting-and-inserting-filestream-data"></a>示例：读取、覆盖和插入 FILESTREAM 数据
 
-下面的示例演示如何从 FILESTREAM 读取数据。 此代码获取文件的逻辑路径，将 `FileAccess` 设置为 `Read` 并将 `FileOptions` 设置为 `SequentialScan`。 然后，该代码将 SqlFileStream 中的字节读取到缓冲区中。 然后，将字节写入控制台窗口。
+下面的示例演示如何从 FILESTREAM 读取数据。 该代码获取文件的逻辑路径，将 `FileAccess` 设置为 `Read`，并将 `FileOptions` 设置为 `SequentialScan`。 然后，该代码将 SqlFileStream 中的字节读取到缓冲区中。 然后，将字节写入控制台窗口。
 
-该示例还演示了如何将数据写入到其中覆盖了所有现有数据的 FILESTREAM。 此代码获取文件的逻辑路径并创建 `SqlFileStream`，并将 `FileAccess` 设置为 `Write`，并将 `FileOptions` 设置为 `SequentialScan`。 单个字节将写入到 `SqlFileStream` 中，替换文件中的所有数据。
+该示例还演示了如何将数据写入到 FILESTREAM（其中现有的所有数据将被覆盖）。 该代码获取文件的逻辑路径，并创建 `SqlFileStream`，将 `FileAccess` 设置为 `Write`，将 `FileOptions` 设置为 `SequentialScan`。 将一个字节写入 `SqlFileStream`，替换文件中的所有数据。
 
-示例还演示了如何通过使用 Seek 方法将数据附加到 FILESTREAM 文件的结尾，以将数据写入到其中。 此代码获取文件的逻辑路径并创建 `SqlFileStream`，并将 `FileAccess` 设置为 `ReadWrite`，并将 `FileOptions` 设置为 `SequentialScan`。 此代码使用 Seek 方法查找到文件的末尾，并将一个字节追加到现有文件。
+示例还演示了如何通过使用 Seek 方法将数据附加到 FILESTREAM 文件的结尾，以将数据写入到其中。 该代码获取文件的逻辑路径，并创建 `SqlFileStream`，将 `FileAccess` 设置为 `ReadWrite`，将 `FileOptions` 设置为 `SequentialScan`。 此代码使用 Seek 方法查找到文件的末尾，并向现有文件追加一个字节。
 
 ```csharp
 using System;
@@ -187,7 +187,7 @@ namespace FileStreamTest
 
 FILESTREAM 的完整文档位于 SQL Server 联机丛书中的以下各节中。
 
-|主题|描述|
+|主题|说明|
 |-----------|-----------------|
 |[FILESTREAM (SQL Server)](../../../relational-databases/blob/filestream-sql-server.md)|介绍何时使用 FILESTREAM 存储以及它如何将 SQL Server 数据库引擎与 NTFS 文件系统集成。|
 |[为 FILESTREAM 数据创建客户端应用程序](../../../relational-databases/blob/create-client-applications-for-filestream-data.md)|介绍用于处理 FILESTREAM 数据的 Windows API 函数。|

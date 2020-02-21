@@ -1,21 +1,23 @@
 ---
-title: 在 Reporting Services 中的 URL 访问与 SOAP 之间选择| Microsoft Docs
+title: 在 URL 访问与 SOAP 之间选择
+description: 可以通过两种方法将 Reporting Services 集成到自定义应用程序中：URL 访问和 Reporting Services SOAP API。 具体使用哪种方法取决于若干因素。
 ms.date: 10/19/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8a9c28c2e0eeae14dbc25db3c78c3962ddebd89e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: d401c7d95cff5011dffbfaac2ebcc9bfa5ea5c24
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62704073"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796911"
 ---
-# <a name="choosing-between-url-access-and-soap-in-reporting-services"></a>在 Reporting Services 中的 URL 访问与 SOAP 之间选择
+# <a name="choose-between-url-access-and-soap-in-reporting-services"></a>在 Reporting Services 中的 URL 访问与 SOAP 之间选择
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
 

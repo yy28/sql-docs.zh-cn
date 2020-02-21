@@ -1,6 +1,6 @@
 ---
-title: “已注册的服务器”组件的 F1 帮助 | Microsoft Docs
-ms.custom: ''
+title: “已注册的服务器”组件的 F1 帮助
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 59f76b28-ba78-4a1a-b5d5-8b581f30114d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cf08f76b0df0b3624aa1450b2463599b31fb85fa
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: f8422cd501258d15365e7125c11e616c94d7dc8d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266136"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256231"
 ---
 # <a name="registered-servers-f1-help"></a>“已注册的服务器”组件的 F1 帮助
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "68266136"
  **记住密码**  
  存储已经输入的密码。 只有在单击了 **“基本身份验证”** 或 **“窗体身份验证”** 时，此选项才可用。  
   
-> **注意**：如果已经存储了此密码，而现在要放弃存储，请清除此复选框，再单击“保存”  。  
+> **注意：** 如果已经存储了此密码，而现在要放弃存储，请清除此复选框，再单击“保存”  。  
   
  **已注册的服务器名称**  
  希望在“已注册的服务器”中显示的名称。 此名称不必与 **“服务器名称”** 框中的名称相匹配。  
@@ -71,7 +71,7 @@ ms.locfileid: "68266136"
  **已注册的服务器说明**  
  输入服务器的说明（可选）。  
   
- **测试**  
+ **Test**  
  单击此项可测试与“服务器名称”  中所选服务器的连接。  
   
  
@@ -91,7 +91,7 @@ ms.locfileid: "68266136"
  **身份验证**  
  通过 Windows 身份验证，用户可以使用其 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 凭据以 Windows 用户或 Windows 组成员的身份进行连接。  
   
- **User name**  
+ **用户名**  
  此选项在此版本中不可用。  
   
  **密码**  
@@ -106,7 +106,7 @@ ms.locfileid: "68266136"
  **已注册的服务器说明**  
  输入服务器的说明（可选）。  
   
- **测试**  
+ **Test**  
  单击此项可测试与“服务器名称”  中所选服务器的连接。 
  
  ## <a name="ssis-new-or-edit-server-registration-general-tab"></a>SSIS 新建或编辑服务器注册（“常规”选项卡） 
@@ -117,7 +117,7 @@ ms.locfileid: "68266136"
   
 ### <a name="options"></a>选项  
  **服务器类型**  
- 在“已注册的服务器”中注册服务器时，  “服务器类型”框是只读的，它与“已注册的服务器”窗格中显示的服务器类型相匹配。 若要注册其他类型的服务器，在开始注册新服务器之前，请在 **“已注册的服务器”** 工具栏上依次单击 **“数据库引擎”** 、 **“分析服务器”** 、 **Reporting Services** **、** SQL Server Compact Edition  或 **Integration Services** 。  
+ 在“已注册的服务器”中注册服务器时，  “服务器类型”框是只读的，它与“已注册的服务器”窗格中显示的服务器类型相匹配。 若要注册其他类型的服务器，请在开始注册新服务器前，先依次单击“已注册服务器”  工具栏上的“数据库引擎”  、“Analysis Server”  、“Reporting Services”  、“SQL Server Compact Edition”   或“Integration Services”  。  
   
  **服务器名称**  
  选择要连接的服务器。 默认情况下，显示上次连接的服务器。  
@@ -125,7 +125,7 @@ ms.locfileid: "68266136"
  **身份验证**  
  Windows 身份验证模式允许用户通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用户帐户进行连接。  
   
- **User name**  
+ **用户名**  
  此选项在此版本中不可用。  
   
  **密码**  
@@ -140,7 +140,7 @@ ms.locfileid: "68266136"
  **已注册的服务器说明**  
  输入服务器的说明（可选）。  
   
- **测试**  
+ **Test**  
  单击此项可测试与“服务器名称”  中所选服务器的连接。 
   
 

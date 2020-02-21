@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5f0d3a49ae2fc2b0b5f8ecf8f8a92161f66aa839
-ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
-ms.translationtype: MTE75
+ms.openlocfilehash: 6a0b224d51daad95e4d19cc614d3a964779cd11b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67314028"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190452"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Reporting Services 报表 (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表是基于 XML 的报表定义，其中包括报表数据和报表布局元素。 在客户端文件系统中，报表定义具有文件扩展名 .rdl。 在发布某一分页报表后，该报表将成为在报表服务器或 SharePoint 站点上存储的报表项。 分页报表是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]提供的基于服务器的报表平台的一部分。 你还可以 [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)。  
@@ -73,7 +73,7 @@ ms.locfileid: "67314028"
   
 -   对于各报表：  
   
-    -   **标识数据源。** 定义报表数据源，每个数据源一个定义。 有关详细信息，请参阅 [数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
+    -   **标识数据源。** 定义报表数据源，每个数据源一个定义。 有关详细信息，请参阅[创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
     -   **从每个数据源选择要使用的数据。** 对于每个数据源，定义报表数据集。 每个数据集都包含指定要使用的数据的查询。 如果您具有报表参数，则定义数据集以便为每个参数填充可用值列表。 有关详细信息，请参阅[报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)[报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)。  
   
@@ -134,7 +134,7 @@ ms.locfileid: "67314028"
   
 -   **打印。**  报表读者可根据查看报表的方式，打印报表或报表页。 有关详细信息，请参阅[打印报表（报表生成器和 SSRS）](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)。  
   
--   **Web 或 Windows 窗体应用程序。**  使用 Visual Studio 开发应用程序，方便通过 SSRS 进行报告。 有关详细信息，请参阅 [[集成到应用程序中的 Reporting Services](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)。  
+-   **Web 或 Windows 窗体应用程序。**  使用 Visual Studio 开发有助于通过 SSRS 生成报表的应用程序。 有关详细信息，请参阅[将 Reporting Services 集成到应用程序中](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)。  
   
 ## <a name="manage-reports"></a>管理报表  
  管理已发布报表：  
@@ -180,5 +180,5 @@ ms.locfileid: "67314028"
 ## <a name="see-also"></a>另请参阅  
  [Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md)   
  [扩展插件 (SSRS)](../../reporting-services/extensions-ssrs.md)   
- [比较本机模式和 SharePoint 的 Reporting Services 报表服务器](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
+ [比较本机和 SharePoint Reporting Services 报表服务器](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
   

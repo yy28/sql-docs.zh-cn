@@ -1,5 +1,6 @@
 ---
 title: 管理订阅所有者并运行订阅 - PowerShell | Microsoft Docs
+description: 可以编程方式将 Reporting Services 订阅的所有权从一个用户转让给另一个用户。
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: subscriptions
@@ -8,13 +9,13 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 04/26/2019
-ms.openlocfilehash: 2a0972f5cd644ed06718791ee20b2c5dfd9a1660
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.date: 01/16/2020
+ms.openlocfilehash: a5ec1524c7105c5a408aa11448984b9366e6d51d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893429"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76259325"
 ---
 # <a name="manage-subscription-owners-and-run-subscription---powershell"></a>管理订阅所有者并运行订阅 - PowerShell
 
@@ -22,7 +23,7 @@ ms.locfileid: "68893429"
 
 从 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 开始，可通过编程方式将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅的所有权从一个用户转移给另一个用户。 本主题提供多个 Windows PowerShell 脚本，这些脚本可用于更改订阅所有权，或只是列出订阅所有权。 每个示例都包含本机模式和 SharePoint 模式的语法示例。 更改订阅的所有者后，订阅将在新所有者的安全上下文中执行，并且报表中的 User!UserID 字段将显示新所有者的值。 有关 PowerShell 示例调用的对象模型的详细信息，请参阅 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
 
-![与 PowerShell 相关的内容](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")
+![PowerShell 相关内容](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相关内容")
 
 ##  <a name="bkmk_top"></a> 本主题内容：
   
@@ -56,23 +57,23 @@ ms.locfileid: "68893429"
   
 **本机模式：**
   
-- 列出订阅：（报表上的 [ReportOperation Enumeration](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx) ，且用户是订阅所有者）或 ReadAnySubscription。  
+- 列出订阅：报表上的 [ReportOperation 枚举](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx)（且用户是订阅所有者），或 ReadAnySubscription。  
   
 - 更改订阅：用户必须是 BUILTIN\Administrators 组的成员  
   
-- 列出子级：项的 ReadProperties  
+- 列出子级：项上的 ReadProperties  
   
 - 触发事件：GenerateEvents（系统）  
   
  **SharePoint 模式：**
   
-- 列出订阅：ManageAlerts 或（报表上的 [CreateAlerts](https://msdn.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx) ，且用户是订阅所有者、订阅为定时订阅）。  
+- 列出订阅：报表上的 ManageAlerts 或 [CreateAlerts](https://msdn.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx)（且用户是订阅所有者、订阅是有时限的订阅）。  
   
 - 更改订阅：ManageWeb  
   
 - 列出子级：ViewListItems  
   
-- 引发事件：ManageWeb  
+- 触发事件：ManageWeb  
   
  有关详细信息，请参阅 [Reporting Services 中的角色和任务与 SharePoint 组和权限的比较](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)。  
   
@@ -84,7 +85,7 @@ ms.locfileid: "68893429"
   
 2. 为每个脚本创建文本文件并将文件保存至 c:\scripts 文件夹。 创建 .ps1 时，请使用各个示例命令行语法中的名称。  
   
-3. 使用管理权限打开命令提示符。  
+3. 使用管理员权限打开命令提示符。  
   
 4. 使用随各个示例提供的示例命令行语法，运行每个脚本文件。  
   
@@ -98,7 +99,7 @@ ms.locfileid: "68893429"
   
 - [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
   
-## <a name="bkmk_list_ownership_all"></a> 脚本：列出所有订阅的所有权
+## <a name="bkmk_list_ownership_all"></a> 脚本：列出全部订阅的所有权
 
 此脚本列出站点上的所有订阅。 可以使用此脚本来测试连接，或验证在其他脚本中使用的报表路径和订阅 ID。 这也是用于轻松审核存在哪些订阅以及它们的所有者是谁的一个有用脚本。  
   
@@ -216,7 +217,7 @@ ForEach ($item in $items)
         $curRepSubs = $rs2010.ListSubscriptions($item.Path);  
         ForEach ($curRepSub in $curRepSubs)  
         {  
-            if ($curRepSub.Owner -eq $previousOwner)  
+            if ($curRepSub.Owner -eq $currentOwner)  
             {  
                 $subscriptions += $curRepSub;  
             }  

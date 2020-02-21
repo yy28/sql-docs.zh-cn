@@ -1,7 +1,6 @@
 ---
-title: 查看重播结果 |Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 查看重播结果
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -10,18 +9,22 @@ ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e6b68d6e5376bdf24efb09c50e3df63ed5810373
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 03c6f6e0bcb58037e362ffd4b3ad20914fd9c328
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67949937"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306945"
 ---
 # <a name="review-the-replay-results"></a>查看重播结果
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式重播功能完成一个分布式重播之后，可以在每个客户端上的结果跟踪文件中捕获和保存每个客户端的重播活动。 为了捕获此活动，使用“重播”  选项运行管理工具时，必须使用 **-o** 参数。 有关“重播”选项的详细信息，请参阅[“重播”选项（Distributed Replay 管理工具）](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)。  
+
+在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 功能完成一个分布式重播之后，可以在每个客户端上的结果跟踪文件中捕获和保存每个客户端的重播活动。 为了捕获此活动，使用“重播”  选项运行管理工具时，必须使用 **-o** 参数。 有关“重播”选项的详细信息，请参阅[“重播”选项（Distributed Replay 管理工具）](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)。  
   
- 存储结果跟踪文件的位置由位于每个客户端上的客户端配置文件 `<ResultDirectory>` 中的 XML 元素 `DReplayClient.xml` 指定。 每次重播时，都将覆盖客户端结果目录中的跟踪文件。  
+ 存储结果跟踪文件的位置由位于每个客户端上的客户端配置文件 `<ResultDirectory>` 中的 XML 元素 `DReplayClient.xml`指定。 每次重播时，都将覆盖客户端结果目录中的跟踪文件。  
   
  若要指定在结果跟踪文件中应捕获哪种类型的输出，请修改重播配置文件 `DReplay.exe.replay.config`。 您可以使用 `<OutputOptions>` XML 元素以指定是应记录行计数还是应记录结果集内容。  
   
@@ -36,14 +39,14 @@ ms.locfileid: "67949937"
 ||审核注销|针对原始跟踪数据中的每个审核退出事件捕获一次|在成功完成事件或事件失败后|  
 ||SQL:BatchCompleted|针对原始跟踪数据中的每个 SQL:BatchStarting 事件捕获一次|在成功完成事件或事件失败后|  
 ||RPC:Completed|针对原始跟踪数据中的每个 RPC:Starting 事件捕获一次|在成功完成事件或事件失败后|  
-|统计信息和结果|重播设置事件|一次|结果跟踪的第一个事件|  
-||重播统计信息事件|一次|结果跟踪的最后一个事件|  
+|统计信息和结果|重播设置事件|一次性|结果跟踪的第一个事件|  
+||重播统计信息事件|一次性|结果跟踪的最后一个事件|  
 ||重播结果集事件|针对每个 SQL:BatchStarting 和 RPC:Starting 事件捕获一次。<br /><br /> 仅当重播配置文件中的 `<RecordResultSet>` 选项的值为 `Yes`时才捕获。||  
 ||重播结果行事件|针对 SQL:BatchStarting 和 RPC:Starting 事件的结果集中的每行捕获一次。<br /><br /> 仅当重播配置文件中的 `<RecordResultSet>` 选项的值为 `Yes`时才捕获。||  
 |错误和警告|重播内部错误|针对每个内部错误捕获一次|在出现内部错误条件时|  
 ||重播提供程序错误|针对每个提供程序错误捕获一次|在出现提供程序错误条件时|  
   
- 请注意以下事项：  
+ 注意以下事项：  
   
 -   对于在目标服务器上成功重播的每个事件，都有一个对应的输出事件类。  
   
@@ -52,12 +55,12 @@ ms.locfileid: "67949937"
 ## <a name="event-class-column-mapping"></a>事件类列映射  
  下图列出了哪些结果跟踪列可用于在重播期间捕获的每种事件类。  
   
- ![Event class column mapping](../../tools/distributed-replay/media/eventclassmappings.gif "Event class column mapping")  
+ ![事件类列映射](../../tools/distributed-replay/media/eventclassmappings.gif "事件类列映射")  
   
 ## <a name="column-descriptions-for-result-trace"></a>跟踪结果的列说明  
  下表说明了结果跟踪数据的各列。  
   
-|数据列名称|数据类型|描述|列 ID|  
+|数据列名称|数据类型|说明|列 ID|  
 |----------------------|---------------|-----------------|---------------|  
 |EventClass|**nvarchar**|事件类的名称。|1|  
 |EventSequence|**bigint**|对于提供程序错误、内部错误和警告，这是对应于错误或警告的捕获事件序列。<br /><br /> 对于所有其他事件类，这是原始跟踪数据中的事件序列。|2|  
@@ -81,6 +84,6 @@ ms.locfileid: "67949937"
  [SQL Server 分布式重播](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
  [管理工具命令行选项（Distributed Replay 实用工具）](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [配置分布式重播](../../tools/distributed-replay/configure-distributed-replay.md)  
+ [配置 Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

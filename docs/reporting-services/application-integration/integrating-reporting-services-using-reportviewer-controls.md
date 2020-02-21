@@ -1,9 +1,11 @@
 ---
-title: 使用报表查看器控件集成 Reporting Services | Microsoft Docs
+title: 使用报表查看器控件集成
+description: Visual Studio 提供两个报表查看器控件，用于将报表查看功能集成到应用程序中。
 ms.date: 09/18/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - Report Viewer controls
@@ -11,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 3ba47fb4-73a9-4059-89fd-329adebe94a8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8ffaeb12bc961256959571d18808e2869a1d7485
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 1ce8530e2f7afb998c14838efb91c93d0b1cae3c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62741870"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796861"
 ---
-# <a name="integrating-reporting-services-using-report-viewer-controls"></a>使用报表查看器控件集成 Reporting Services
+# <a name="integrate-reporting-services-using-report-viewer-controls"></a>使用报表查看器控件集成 Reporting Services
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 2015 提供两个报表查看器控件，用于将报表查看功能集成到应用程序中。 一个控件版本针对基于 Windows 窗体的应用程序，另一个版本针对 Web 窗体应用程序。 每个控件都提供类似的功能，但分别设计为针对其各自的环境。 这两个控件都可以处理已部署到报表服务器（远程处理模式）的报表或已复制到尚未安装 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的计算机（本地处理模式）的报表。  
   
  报表查看器控件不包括对动态适应具有不同屏幕分辨率的不同设备的内置支持。  

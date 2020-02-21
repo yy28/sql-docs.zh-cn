@@ -16,10 +16,10 @@ ms.assetid: 183af414-b0a3-4ca7-b160-d199bcf469b0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2ab1ec7a5fc68a34c2f6a72b9ea940405d099f05
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979859"
 ---
 # <a name="getshort-method-javalangstring-sqlserverresultset"></a>getShort 方法 (java.lang.String) (SQLServerResultSet)
@@ -34,18 +34,18 @@ ms.locfileid: "67979859"
 public short getShort(java.lang.String columnName)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *columnName*  
   
  一个包含列名的字符串  。  
   
 ## <a name="return-value"></a>返回值  
- **短**值。  
+ short  值。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 getShort 方法是由 java.sql.ResultSet 接口中的 getShort 方法指定的。  
   
  只有可以安全返回整数值的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型（例如 smallint、tinyint 和 bit）才支持此方法。 在任何其他数据类型上使用此方法会引发异常。  

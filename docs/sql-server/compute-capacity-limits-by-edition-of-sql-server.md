@@ -14,21 +14,21 @@ ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6bd60789112a8aa28481b3bb615f1df2a957125a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68067567"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>按 SQL Server 版本划分的计算能力限制
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本文讨论不同 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 版本的计算能力限制，以及在具有超线程处理器的物理和虚拟化环境中计算能力限制有何不同。  
   
- ![符合计算机能力限制](../sql-server/media/compute-capacity-limits.gif "符合计算机能力限制")  
+ ![映射到计算能力限制](../sql-server/media/compute-capacity-limits.gif "映射到计算能力限制")  
   
  下表描述上图中的表示法：  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |0..1|零个或 1 个|  
 |1|恰好一个|  

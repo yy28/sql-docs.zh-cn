@@ -1,34 +1,28 @@
 ---
-title: 重播跟踪 |Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 重播跟踪
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- SQL Server Profiler, replaying traces
-- Run to Cursor option
-- Toggle Breakpoint option
-- traces [SQL Server], replaying
-- replaying traces
-- playback engine [SQL Server Profiler]
-- events [SQL Server], replaying traces
-- Profiler [SQL Server Profiler], replaying traces
 ms.assetid: da958d3c-7f3e-44c9-aecc-8a9493bea7c0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9d255396add95167673908e13041760c2c7d6c30
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 50ef296f7ce7198dc0e233aca08e33c5f1cf7af0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928834"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307463"
 ---
 # <a name="replay-traces"></a>重播跟踪
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  重播是重现在跟踪内捕获的活动的功能。 在创建或编辑跟踪时，可以将跟踪保存到文件中并在以后重播。 可以使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 从一台计算机重播跟踪活动。 对于大型工作负荷，可使用分布式重播实用工具从多台计算机重播跟踪数据。  
+
+重播是重现在跟踪内捕获的活动的功能。 在创建或编辑跟踪时，可以将跟踪保存到文件中并在以后重播。 可以使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 从一台计算机重播跟踪活动。 对于大型工作负荷，可使用分布式重播实用工具从多台计算机重播跟踪数据。  
   
  本节描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]的重播功能。 有关分布式重播实用工具的详细信息，请参阅 [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)。  
   
@@ -40,7 +34,7 @@ ms.locfileid: "67928834"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|描述|  
+|主题|说明|  
 |-----------|-----------------|  
 |[重播要求](../../tools/sql-server-profiler/replay-requirements.md)|说明跟踪定义必须包含的事件，以便它能使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]进行重播。|  
 |[重播选项 (SQL Server Profiler)](../../tools/sql-server-profiler/replay-options-sql-server-profiler.md)|说明在 **的** “重播配置” [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]对话框中可以设置的选项。|  

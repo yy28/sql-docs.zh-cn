@@ -1,6 +1,6 @@
 ---
-title: “外部工具”对话框 | Microsoft Docs
-ms.custom: ''
+title: 外部工具对话框
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ba797203-24d0-4922-9b97-8ab483f1db14
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 22b70fa3a33404cee302f12ccb98ea03dbdb9aed
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: deeb0a237d1982a92e08c056375fca277f095017
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265125"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245034"
 ---
 # <a name="external-tools-dialog-box"></a>外部工具对话框
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68265125"
 **“下移”**  
 将所选工具移动到工具列表（显示在“工具”  菜单上）中更靠下的位置。  
   
-**“添加”**  
+**添加**  
 清除相应的文本框以便指定新工具。  
   
 **删除**  
@@ -44,7 +44,7 @@ ms.locfileid: "68265125"
 **标题**  
 输入的工具或命令的名称将显示在“工具”  菜单的“外部工具”  子菜单上。 在工具名称中的一个字母前放置“与”符号 (&)，可以将该字母指定为工具的快捷键。 例如，“&SQLCMD”会在“工具”  菜单上显示“SQLCMD”。  
   
-**Command**  
+**命令**  
 指定要启动的文件路径。  
   
 **参数**  
@@ -68,10 +68,10 @@ ms.locfileid: "68265125"
 ## <a name="example"></a>示例  
 在“外部工具”  对话框中输入以下值将创建标有“DAC”的菜单项，将其选定，便可以使用专用管理员连接打开命令提示符并运行 **sqlcmd** 实用工具。  
   
-|Box|ReplTest1|  
+|Box|值|  
 |-------|---------|  
 |**标题**|DAC|  
-|**Command**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath-md.md)]Tools\Binn\SQLCMD.exe|  
+|**命令**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath-md.md)]Tools\Binn\SQLCMD.exe|  
 |**参数**|-A|  
   
 ## <a name="see-also"></a>另请参阅  

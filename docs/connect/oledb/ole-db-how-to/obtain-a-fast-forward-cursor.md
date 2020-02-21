@@ -1,6 +1,6 @@
 ---
-title: 获取 FAST_FORWARD 游标 |Microsoft Docs
-description: 使用 SQL Server OLE DB 驱动程序获取 FAST_FORWARD 游标
+title: 获取 FAST_FORWARD 游标 | Microsoft Docs
+description: 使用 OLE DB Driver for SQL Server 获取 FAST_FORWARD 游标
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,13 +13,13 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 2b49071908be3d8093d66358148e305b79476324
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994737"
 ---
-# <a name="obtain-a-fastforward-cursor"></a>获取 FAST_FORWARD 游标
+# <a name="obtain-a-fast_forward-cursor"></a>获取 FAST_FORWARD 游标
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "67994737"
 > [!IMPORTANT]  
 >  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
   
-### <a name="to-obtain-fastforward-cursor"></a>获取 FAST_FORWARD 游标  
+### <a name="to-obtain-fast_forward-cursor"></a>获取 FAST_FORWARD 游标  
   
 1.  建立与数据源的连接。  
   

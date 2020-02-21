@@ -1,10 +1,7 @@
 ---
-title: 为 SQL Server 代理设置服务启动帐户 | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: 设置服务启动帐户
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,15 +11,20 @@ helpviewer_keywords:
 ms.assetid: 46ffe818-ebb5-43a0-840b-923f219a2472
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 22dd09dceaf111429ae37be4aa28bc063a87df6c
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 536bba3034dc4aa80d0e0588e382aae085941b8b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552576"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75239206"
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>为 SQL Server 代理设置服务启动帐户（SQL Server 配置管理器）
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -69,7 +71,7 @@ ms.locfileid: "69552576"
   
 6.  在详细信息窗格中，右键单击“SQL Server 代理 _(server\_name)_ ”  （其中 server_name  是要更改其服务启动帐户的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理实例的名称），然后选择“属性”  。  
   
-7.  在“SQL Server 代理 _(server\_name)_ 属性”   对话框的“登录”  选项卡中，选择“登录身份”  下的以下选项之一：  
+7.  在“SQL Server 代理(server\_name)  属性”   对话框的“登录”  选项卡中，选择“登录身份”  下的以下选项之一：  
   
     -   **内置帐户**：如果你的作业仅需要本地服务器中的资源，则选择此选项。 有关如何选择 Windows 内置帐户类型的信息，请参阅 [为 SQL Server 代理服务选择帐户](https://msdn.microsoft.com/library/ms191543.aspx)。  
   
@@ -84,7 +86,7 @@ ms.locfileid: "69552576"
   
         2.  在 **“密码”** 框中，输入帐户密码。 在“确认密码”  框中重新输入密码。  
   
-8.  单击“确定”  。  
+8.  单击“确定”。   
   
 9. 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器中，单击 **“关闭”** 按钮。  
   

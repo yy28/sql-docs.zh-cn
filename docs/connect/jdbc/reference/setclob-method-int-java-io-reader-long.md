@@ -1,5 +1,5 @@
 ---
-title: setClob 方法 (int, .java, long) |Microsoft Docs
+title: setClob 方法 (int, java.io.Reader, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 157882dd-1a96-4501-a895-46e88a49266e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 589a2c7a12523658fc5fd58afb46dc8bb959a276
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974598"
 ---
 # <a name="setclob-method-int-javaioreader-long"></a>setClob 方法 (int, java.io.Reader, long)
@@ -31,7 +31,7 @@ public final void setClob(int parameterIndex,
                           long length)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  parameterIndex   
   
  指示参数索引的 int  。  
@@ -44,10 +44,10 @@ public final void setClob(int parameterIndex,
   
  指示参数值中字符数的 long  。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 setClob 方法是由 java.sql.PreparedStatement 接口中的 setClob 方法指定的。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="see-also"></a>另请参阅  

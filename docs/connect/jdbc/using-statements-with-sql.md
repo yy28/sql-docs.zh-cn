@@ -1,5 +1,5 @@
 ---
-title: Using 语句与 SQL |Microsoft Docs
+title: 使用 SQL 语句 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: fe28f48a-e1bc-48ff-a5e7-c24cd6e5ecc7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 553c0e742b34406b23a68f1403c372dcc7080088
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025831"
 ---
 # <a name="using-statements-with-sql"></a>使用 SQL 语句
@@ -26,13 +26,13 @@ ms.locfileid: "69025831"
 如果 SQL 语句不包含 IN 参数，则使用 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 类；但如果包含 IN 参数，则使用 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 类。  
   
 > [!NOTE]  
-> 如果需要使用同时包含 IN 和 OUT 参数的 SQL 语句，则必须将这些语句作为存储过程来实现，并使用 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类对其进行调用。 有关使用存储过程的详细信息, 请参阅[使用存储过程的语句](../../connect/jdbc/using-statements-with-stored-procedures.md)。  
+> 如果需要使用同时包含 IN 和 OUT 参数的 SQL 语句，则必须将这些语句作为存储过程来实现，并使用 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类对其进行调用。 有关使用存储过程的详细信息，请参阅[结合使用语句和存储过程](../../connect/jdbc/using-statements-with-stored-procedures.md)。  
   
 下列部分说明了使用 SQL 语句来处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中数据的不同方案。  
 
 ## <a name="in-this-section"></a>本节内容  
 
-| 主题                                                                                                                        | 描述                                                       |
+| 主题                                                                                                                        | 说明                                                       |
 | ---------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
 | [使用不含参数的 SQL 语句](../../connect/jdbc/using-an-sql-statement-with-no-parameters.md)                 | 说明如何使用不包含参数的 SQL 语句。   |
 | [使用含参数的 SQL 语句](../../connect/jdbc/using-an-sql-statement-with-parameters.md)                       | 说明如何使用包含参数的 SQL 语句。      |

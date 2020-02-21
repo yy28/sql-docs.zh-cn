@@ -1,8 +1,10 @@
 ---
-title: 配置无人参与的执行帐户（SSRS 配置管理器）| Microsoft Docs
-ms.date: 05/31/2016
+title: 配置无人参与的执行帐户 (Configuration Manager) | Microsoft Docs
+description: Reporting Services 提供一个特殊帐户，用于进行无人参与的报表处理和通过网络发送连接请求。
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 helpviewer_keywords:
 - no credentials option [Reporting Services]
@@ -15,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4326c38c84ad7af8fb23a5dde035720a1a7024d4
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: b09992c53a680e19bd5676e8944b2ddab8358296
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593314"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866314"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>配置无人参与的执行帐户（SSRS 配置管理器）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供一个特殊帐户，用于进行无人参与的报表处理和通过网络发送连接请求。 可以通过下列方式使用该帐户：  
@@ -32,7 +34,7 @@ ms.locfileid: "73593314"
  无人参与的报表处理是指任何由事件（计划驱动事件或数据刷新事件）而不是用户请求触发的报表执行过程。 报表服务器使用无人参与的报表处理帐户来登录承载外部数据源的计算机。 由于报表服务器服务帐户从不用于连接到其他计算机，因此该帐户是必需的。  
   
 > [!IMPORTANT]  
->  配置该帐户的过程为可选操作。 但是，如果不配置该帐户，用于连接到某些数据源的选项会受到限制，并且可能无法从远程计算机检索图像文件。 如果配置了该帐户，则必须对其进行不断更新。 具体来说，如果允许密码过期或在 Active Directory 中更改了帐户信息，则在下次处理报表时将遇到以下错误：“登录失败 (rsLogonFailed) 登录失败: 未知的用户名或密码不正确。” 即使您从不检索外部图像也不向外部计算机发送连接请求，正确维护无人参与的报表处理帐户也是必要的。 如果配置了该帐户但后来发现不需要使用它，则可以将其删除以避免日常的帐户维护任务。  
+>  配置该帐户的过程为可选操作。 但是，如果不配置该帐户，用于连接到某些数据源的选项会受到限制，并且可能无法从远程计算机检索图像文件。 如果配置了该帐户，则必须对其进行不断更新。 具体而言，如果允许密码过期或在 Active Directory 中更改了帐户信息，则在下次处理报表时将遇到以下错误：“登录失败 (rsLogonFailed) 登录失败：未知的用户名或密码错误。” 即使您从不检索外部图像也不向外部计算机发送连接请求，正确维护无人参与的报表处理帐户也是必要的。 如果配置了该帐户但后来发现不需要使用它，则可以将其删除以避免日常的帐户维护任务。  
   
 ## <a name="how-to-configure-the-account"></a>如何配置帐户  
  必须使用域用户帐户。 若要发挥该帐户应有的作用，它应不同于用于运行报表服务器服务的帐户。 请确保使用具有如下特征的帐户：对为报表服务器提供数据源和资源的那些计算机只拥有最小权限（具有网络连接权限的只读访问权限就已足够）和有限访问权限。  
@@ -50,7 +52,7 @@ ms.locfileid: "73593314"
   
 1.  创建或选择一个有权访问为报表服务器提供数据或服务的计算机和服务器的域帐户。 您应使用权限受到限制（如只读权限）的帐户。  
   
-2.  打开命令提示符窗口：在 **“开始”** 菜单上，单击 **“运行”** ，键入 **cmd**，再单击 **“确定”** 。  
+2.  打开命令提示符：在“开始”  菜单上，单击“运行”  ，键入“cmd”  ，然后单击“确定”  。  
   
 3.  键入以下命令，为本地报表服务器实例配置该帐户：  
   
@@ -99,7 +101,7 @@ ms.locfileid: "73593314"
   
 2.  在“执行帐户”页上，清除 **“指定执行帐户”** 。  
   
-3.  单击 **“应用”** 。  
+3.  单击“应用”  。  
   
  将从 RSReportServer.config 文件中删除此帐户的信息。  
   

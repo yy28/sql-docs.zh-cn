@@ -12,10 +12,10 @@ ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2791293f805f1e2c0d9bd39822bc3f452777c007
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66175608"
 ---
 # <a name="data-driven-subscriptions"></a>数据驱动订阅
@@ -45,12 +45,12 @@ ms.locfileid: "66175608"
 
 - 有关支持数据驱动订阅功能的 SQL Server 版本的详细信息，请参阅[各个版本支持的 SQL Server Reporting Services 功能](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)。  
 
-- 对于订阅数据，请选择可为报表服务器提供架构信息的数据源。 支持的数据源类型的示例包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据、Oracle、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包数据、ODBC 数据源以及 OLE DB 数据源。 有关订阅方数据源要求的详细信息，请参阅 [使用外部数据源提供订阅方数据（数据驱动订阅）](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)。  
+- 对于订阅数据，请选择可为报表服务器提供架构信息的数据源。 支持的数据源类型的示例包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据、Oracle、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包数据、ODBC 数据源以及 OLE DB 数据源。 有关订阅方数据源要求的详细信息，请参阅 [使用外部数据源提供订阅方数据（数据驱动订阅）](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)。  
   
 ## <a name="working-with-data-driven-subscriptions"></a>处理数据驱动订阅  
  以下主题介绍有关数据驱动订阅的详细信息：  
   
-|主题|描述|  
+|主题|说明|  
 |------------|-----------------|  
 |[创建、修改和删除数据驱动订阅](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)|介绍如何创建、修改和删除数据驱动订阅。|  
 |[使用外部数据源提供订阅方数据（数据驱动订阅）](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)|介绍有关可用于数据驱动订阅的数据源的信息。|  

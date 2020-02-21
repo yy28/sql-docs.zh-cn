@@ -1,7 +1,7 @@
 ---
-title: Microsoft Drivers for PHP for SQL Server 支持矩阵 |Microsoft Docs
+title: SQL Server 的 Microsoft PHP 驱动程序支持矩阵 | Microsoft Docs
 ms.custom: ''
-ms.date: 02/12/2019
+ms.date: 01/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: genemi
 manager: ''
-ms.openlocfilehash: 0790d2cc0497ef2912f96cd4679e4541fc9b2262
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: c542a77c3a7cfbbe9c54786116e3e9e800a3dda0
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63180271"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76917811"
 ---
-# <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>Microsoft PHP Drivers for SQL Server 支持矩阵
+# <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>SQL Server 的 Microsoft PHP 驱动程序支持矩阵
 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
@@ -33,100 +33,106 @@ Microsoft PHP 驱动程序不提供扩展和自定义支持选项。
 
 |驱动程序名称|驱动程序包版本|主要支持结束日期|
 |-|:-:|-|
+|Microsoft PHP Drivers 5.8 for SQL Server|5.8|2025 年 1 月 31 日|
 |Microsoft PHP Driver 5.6 for SQL Server|5.6|2024 年 2 月 21 日|
 |Microsoft PHP Driver 5.3 for SQL Server|5.3|2023 年 7 月 20 日|
 |Microsoft PHP Driver 5.2 for SQL Server|5.2|2023 年 2 月 9 日|
 |Microsoft PHP Driver 4.3 for SQL Server|4.3|2022 年 7 月 6 日|
 |Microsoft PHP Driver 4.0 for SQL Server|4.0|2021 年 7 月 11 日|
-|Microsoft PHP Driver 3.2 for SQL Server|3.2|于 2020 年 3 月 9日日|
-|Microsoft PHP Driver 3.1 for SQL Server|3.1|2019 年 12 月 12 日|
+|Microsoft PHP Driver 3.2 for SQL Server|3.2|2020 年 3 月 9 日|
 | &nbsp; | &nbsp; | &nbsp; |
 
 不再支持以下 Microsoft PHP 驱动程序。
 
 |驱动程序名称|驱动程序包版本|主要支持结束日期|
 |-|:-:|-|
+|Microsoft PHP Driver 3.1 for SQL Server|3.1|2019 年 12 月 12 日|
 |Microsoft PHP Driver 3.0 for SQL Server|3.0|2017 年 3 月 6 日|
-|Microsoft PHP Driver 2.0 for SQL Server|2.0|2015 年 8 月 10日日|
+|Microsoft PHP Driver 2.0 for SQL Server|2.0|2015 年 8 月 10 日|
 |Microsoft PHP Driver 1.0 for SQL Server|1.0|2014 年 4 月 28 日|
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="sql-server-version-certified-compatibility"></a>SQL Server 版本认证兼容性
- 以下矩阵列出了经过测试和认证为与相应的驱动程序版本兼容的 SQL Server 版本。 我们将努力保持向后的兼容早期驱动程序版本，但测试和认证与新的 SQL Server 版本的 SQL Server 发布仅最新支持的驱动程序。
+## <a name="sql-server-version-certified-compatibility"></a>SQL Server 版本认证的兼容性
+ 下面的矩阵列出了经过测试并已验证与相应驱动程序版本兼容的 SQL Server 版本。 我们努力保持与以前驱动程序版本的向后兼容性，但是随着 SQL Server 的发布，只有最新受支持的驱动程序才会通过新的 SQL Server 版本进行测试和认证。
 
-|SQL Server 驱动程序版本的 PHP&#8594;<br />&#8595; SQL Server 版本|5.6|5.3|5.2|4.3|4.0|3.2|3.1|3.0|2.0|
-|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Azure SQL 托管实例<br/> （扩展的个人预览版）|是|是|是|是| | | | | |
-|Azure SQL 数据仓库|是|是|是|是| | | | | |
-|SQL Server 2017         |是|是|是|是| | | | | |
-|SQL Server 2016         |是|是|是|是|是| | | | |
-|SQL Server 2014         |是|是|是|是|是|是|是| | |
-|SQL Server 2012         |是|是|是|是|是|是|是|是| |
-|SQL Server 2008 R2      |是|是|是|是|是|是|是|是|是|
-|SQL Server 2008         | | | | |是|是|是|是|是|
-| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+|SQL Server 的 PHP 驱动程序版本 &#8594;<br />&#8595; SQL Server 版本|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
+|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|Azure SQL 托管实例|Y|Y|Y|Y|Y| | |
+|Azure SQL 数据仓库|Y|Y|Y|Y|Y| | |
+|SQL Server 2019         |Y| | | | | | |
+|SQL Server 2017         |Y|Y|Y|Y|Y| | |
+|SQL Server 2016         |Y|Y|Y|Y|Y|Y| |
+|SQL Server 2014         |Y|Y|Y|Y|Y|Y|Y|
+|SQL Server 2012         |Y|Y|Y|Y|Y|Y|Y|
+|SQL Server 2008 R2      | |Y|Y|Y|Y|Y|Y|
+|SQL Server 2008         | | | | | |Y|Y|
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="php-version-support"></a>PHP 版本支持
 
-与列出的版本的 Microsoft PHP 驱动程序支持以下版本的 PHP:
+列出的 Microsoft PHP 驱动程序版本支持以下版本的 PHP：
 
-|SQL Server 驱动程序版本的 PHP&#8594;<br />&#8595; PHP 版本|5.6|5.3|5.2|4.3|4.0|3.2|3.1|3.0|2.0|
-|:---:|---|---|---|---|---|---|---|---|---|
-|7.3|7.3.0+          |                |                |       |       | | | | |
-|7.2|7.2+<sup>1</sup>|7.2+<sup>1</sup>|7.2+<sup>1</sup>|       |       | | | | |
-|7.1|7.1.0+          |7.1.0+          |7.1.0+          |7.1.0+ |       |        |        |        |        |
-|7.0|                |7.0.0+          |7.0.0+          |7.0.0+ |7.0.0+ |        |        |        |        |
-|5.6|                |                |                |       |       |5.6.4+  |        |        |        |
-|5.5|                |                |                |       |       |5.5.16+ |5.5.16+ |        |        |
-|5.4|                |                |                |       |       |5.4.32  |5.4.32  |5.4.32  |        |
-|5.3|                |                |                |       |       |        |        |5.3.0   |5.3.0   |
-|5.2|                |                |                |       |       |        |        |        |5.2.4<br />5.2.13|
-| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+|SQL Server 的 PHP 驱动程序版本 &#8594;<br />&#8595; PHP 版本|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
+|:---:|---|---|---|---|---|---|---|
+|7.4|7.4.0+          |                |                |                |       |        |        |
+|7.3|7.3.0+          |7.3.0+          |                |                |       |        |        |
+|7.2|7.2+<sup>1</sup>|7.2+<sup>1</sup>|7.2+<sup>1</sup>|7.2+<sup>1</sup>|       |        |        |
+|7.1|                |7.1.0+          |7.1.0+          |7.1.0+          |7.1.0+ |        |        |
+|7.0|                |                |7.0.0+          |7.0.0+          |7.0.0+ |7.0.0+  |        |
+|5.6|                |                |                |                |       |        |5.6.4+  |
+|5.5|                |                |                |                |       |        |5.5.16+ |
+|5.4|                |                |                |                |       |        |5.4.32  |
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-1. 版本 7.2.1 和更高版本上支持 Windows，同时版本 7.2.0 和更高版本支持 Linux 和 macOS 上。
+1. Windows 支持版本 7.2.1 及更高版本，而 Linux 和 macOS 支持版本 7.2.0 及更高版本。
 
-## <a name="supported-operating-systems"></a>支持的操作系统
+## <a name="supported-operating-systems"></a>受支持的操作系统
 
-与列出的版本的 Microsoft PHP 驱动程序支持以下 Windows 操作系统版本：
+列出的 Microsoft PHP 驱动程序版本支持以下 Windows 操作系统版本：
 
-|SQL Server 驱动程序版本的 PHP&#8594;<br />&#8595; 操作系统|5.6|5.3|5.2|4.3|4.0|3.2|3.1|3.0|2.0|
-|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Windows Server 2016                 |是  |是  |是  |是  |   |   |   |   |   |
-|Windows Server 2012 R2              |是  |是  |是  |是  |是  |是  |是  |   |   |
-|Windows Server 2012                 |是  |是  |是  |是  |是  |是  |是  |   |   |
-|Windows Server 2008 R2 SP1          |   |   |   |   |是  |是  |是  |是  |   |
-|Windows Server 2008 R2              |   |   |   |   |   |   |   |   |是  |
-|Windows Server 2008 SP2             |   |   |   |   |是  |是  |是  |是  |   |
-|Windows Server 2008（可能为英文页面）                 |   |   |   |   |   |   |   |   |是  |
-|Windows Server 2003 SP1             |   |   |   |   |   |   |   |   |是  |
-|Windows 10                          |是  |是  |是  |是  |是  |   |   |   |   |
-|Windows 8.1                         |是  |是  |是  |是  |是  |是  |是  |   |   |
-|Windows 8                           |   |   |   |是  |是  |是  |是  |   |   |
-|Windows 7 SP1                       |   |   |   |   |是  |是  |是  |是  |   |
-|Windows Vista SP2                   |   |   |   |   |是  |是  |是  |是  |是  |
-|Windows XP SP3                      |   |   |   |   |   |   |   |   |是  |
-| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+|SQL Server 的 PHP 驱动程序版本 &#8594;<br />&#8595; 操作系统|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
+|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|Windows Server 2019                 |Y  |Y  |   |   |   |   |   |
+|Windows Server 2016                 |Y  |Y  |Y  |Y  |Y  |   |   |
+|Windows Server 2012 R2              |Y  |Y  |Y  |Y  |Y  |Y  |Y  |
+|Windows Server 2012                 |Y  |Y  |Y  |Y  |Y  |Y  |Y  |
+|Windows Server 2008 R2 SP1          |   |   |   |   |   |Y  |Y  |
+|Windows Server 2008 R2              |   |   |   |   |   |   |   |
+|Windows Server 2008 SP2             |   |   |   |   |   |Y  |Y  |
+|Windows 10                          |Y  |Y  |Y  |Y  |Y  |Y  |   |
+|Windows 8.1                         |Y  |Y  |Y  |Y  |Y  |Y  |Y  |
+|Windows 8                           |   |   |   |   |Y  |Y  |Y  |
+|Windows 7 SP1                       |   |   |   |   |   |Y  |Y  |
+|Windows Vista SP2                   |   |   |   |   |   |Y  |Y  |
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-与列出的版本的 Microsoft PHP 驱动程序支持以下 Linux 和 Mac 操作系统版本 （仅限 64 位）：
+列出的 Microsoft PHP 驱动程序版本支持以下 Linux 和 Mac 操作系统版本（仅限 64 位）：
 
-|SQL Server 驱动程序版本的 PHP&#8594;<br />&#8595; 操作系统|5.6|5.3|5.2|4.3|4.0|3.2|3.1|3.0|2.0|
-|--|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Ubuntu 18.10 （64 位）               |是  |   |   |   |   |   |   |   |   |
-|Ubuntu 18.04 （64 位）               |是  |是  |   |   |   |   |   |   |   |
-|Ubuntu 17.10 （64 位）               |   |是  |是  |   |   |   |   |   |   |
-|Ubuntu 16.04 （64 位）               |是  |是  |是  |是  |是  |   |   |   |   |
-|Ubuntu 15.10 （64 位）               |   |   |   |是  |   |   |   |   |   |
-|Ubuntu 15.04 （64 位）               |   |   |   |   |是  |   |   |   |   |
-|Debian 9 （64 位）                   |是  |是  |是  |   |   |   |   |   |   |
-|Debian 8 （64 位）                   |是  |是  |是  |是  |   |   |   |   |   |
-|Red Hat Enterprise Linux 7（64 位） |是  |是  |是  |是  |是  |   |   |   |   |
-|Suse Enterprise Linux 15 （64 位）   |是  |   |   |   |   |   |   |   |   |
-|Suse Enterprise Linux 12 （64 位）   |是  |是  |是  |   |   |   |   |   |   |
-|macOS Mojave （64 位）               |是  |   |   |   |   |   |   |   |   |
-|macOS High Sierra （64 位）          |是  |是  |   |   |   |   |   |   |   |
-|macOS Sierra （64 位）               |是  |是  |是  |是  |   |   |   |   |   |
-|macOS El Capitan （64 位）           |   |是  |是  |是  |   |   |   |   |   |
-| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+|SQL Server 的 PHP 驱动程序版本 &#8594;<br />&#8595; 操作系统|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
+|--|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|Ubuntu 19.10（64 位）               |Y  |   |   |   |   |   |   |
+|Ubuntu 18.10（64 位）               |   |Y  |   |   |   |   |   |
+|Ubuntu 18.04（64 位）               |Y  |Y  |Y  |   |   |   |   |
+|Ubuntu 17.10（64 位）               |   |   |Y  |Y  |   |   |   |
+|Ubuntu 16.04（64 位）               |Y  |Y  |Y  |Y  |Y  |Y  |   |
+|Ubuntu 15.10（64 位）               |   |   |   |   |Y  |   |   |
+|Ubuntu 15.04（64 位）               |   |   |   |   |   |Y  |   |
+|Debian 10（64 位）                  |Y  |   |   |   |   |   |   |
+|Debian 9（64 位）                   |Y  |Y  |Y  |Y  |   |   |   |
+|Debian 8（64 位）                   |Y  |Y  |Y  |Y  |Y  |   |   |
+|Red Hat Enterprise Linux 8（64 位） |Y  |   |   |   |   |   |   |
+|Red Hat Enterprise Linux 7（64 位） |Y  |Y  |Y  |Y  |Y  |Y  |   |
+|Suse Enterprise Linux 15（64 位）   |Y  |Y  |   |   |   |   |   |
+|Suse Enterprise Linux 12（64 位）   |Y  |Y  |Y  |Y  |   |   |   |
+|Alpine Linux 3.11（64 位）<sup>1</sup>|Y  |   |   |   |   |   |   |
+|macOS Catalina（64 位）             |Y  |   |   |   |   |   |   |
+|macOS Mojave（64 位）               |Y  |Y  |   |   |   |   |   |
+|macOS High Sierra（64 位）          |Y  |Y  |Y  |   |   |   |   |
+|macOS Sierra（64 位）               |   |Y  |Y  |Y  |Y  |   |   |
+|macOS El Capitan（64 位）           |   |   |Y  |Y  |Y  |   |   |
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+
+<sup>1</sup> 版本 5.8 中的 Alpine Linux 支持是实验性支持。
 
 ## <a name="see-also"></a>另请参阅
 

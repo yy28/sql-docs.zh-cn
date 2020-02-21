@@ -1,6 +1,6 @@
 ---
-title: 表和索引 |Microsoft Docs
-description: 使用 SQL Server OLE DB 驱动程序创建、更改和 droping 表和索引
+title: 表和索引 | Microsoft Docs
+description: 使用 OLE DB Driver for SQL Server 创建、更改和删除表和索引
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -20,10 +20,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 0fc8aeed348f64c17894fa3432a7a81274ffbea4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015237"
 ---
 # <a name="tables-and-indexes"></a>表和索引
@@ -35,13 +35,13 @@ ms.locfileid: "68015237"
   
  创建或删除表和索引的功能取决于使用者应用程序用户的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 访问权限。 删除表的功能还可以通过是否存在声明性引用完整性约束或其他因素进行进一步限制。  
   
- 面向[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的大多数应用程序使用 sql-dmo 而不是这些 OLE DB 驱动程序来 SQL Server 接口。 SQL-DMO 是支持所有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理功能的 OLE 自动化对象的集合。 面向多个 OLE DB 访问接口的应用程序使用多种 OLE DB 访问接口支持的通用 OLE DB 接口。  
+ 面向 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的大多数应用程序均使用 SQL-DMO，而不是这些 OLE DB Driver for SQL Server 接口。 SQL-DMO 是支持所有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理功能的 OLE 自动化对象的集合。 面向多个 OLE DB 访问接口的应用程序使用多种 OLE DB 访问接口支持的通用 OLE DB 接口。  
   
  在特定于访问接口的 DBPROPSET_SQLSERVERCOLUMN 属性集中，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 定义了以下属性。  
   
-|属性 ID|描述|  
+|属性 ID|说明|  
 |-----------------|-----------------|  
-|SSPROP_COL_COLLATIONNAME|类型：VT_BSTR<br /><br /> R/W：写<br /><br /> 默认值：Null<br /><br /> 说明：该属性只能在 ITableDefinition 中使用  。 该属性中指定的字符串可在创建 [CREATE TABLE](../../../t-sql/statements/create-table-transact-sql.md)<br /><br /> 语句时使用。|  
+|SSPROP_COL_COLLATIONNAME|键入：VT_BSTR<br /><br /> R/W：写入<br /><br /> 默认值：Null<br /><br /> 说明:此属性只能在 ITableDefinition 中使用  。 该属性中指定的字符串可在创建 [CREATE TABLE](../../../t-sql/statements/create-table-transact-sql.md)<br /><br /> 语句时使用。|  
   
 ## <a name="in-this-section"></a>本节内容  
   

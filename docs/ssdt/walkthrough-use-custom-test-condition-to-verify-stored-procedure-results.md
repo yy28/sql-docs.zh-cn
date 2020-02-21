@@ -1,23 +1,24 @@
 ---
-title: 演练：使用自定义测试条件来验证存储过程的结果 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 用于验证存储过程结果的自定义测试条件
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 4c33b494-a85e-4dd2-97b6-c88ee858a99c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6ef888bf2cf4259ec904194a39aa74ed44040586
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 60160fe3f36d61364b8bf4385fa53b744f9a3475
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068983"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242660"
 ---
 # <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>演练：使用自定义测试条件来验证存储过程的结果
+
 在本功能扩展演练中，将创建一个测试条件，并且将通过创建 SQL Server 单元测试来验证其功能。 此过程包括为该测试条件创建一个类库项目，并且对该项目进行签名和安装它。 如果你已具有一个要更新的测试条件，请参见[如何：将 Visual Studio 2010 自定义测试条件从早期版本升级到 SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md)。  
   
 本演练演示以下任务：  
@@ -63,7 +64,7 @@ ms.locfileid: "68068983"
   
 6.  在“文件”  菜单上，单击“全部保存”  。  
   
-7.  在“生成”  菜单上，单击“生成解决方案”  。  
+7.  在“生成”  菜单中，单击“生成解决方案”  。  
   
 接下来，您将添加对项目的必需的引用。  
   
@@ -344,7 +345,7 @@ namespace ColumnCountCondition
 接下来，我们将生成该项目。  
   
 ## <a name="xxx"></a>编译项目并且安装测试条件  
-在“生成”  菜单上，单击“生成解决方案”  。  
+在“生成”  菜单中，单击“生成解决方案”  。  
   
 接下来，您要将程序集信息复制到 Extensions 目录中。 在 Visual Studio 启动后，它会标识 %Program Files%\Microsoft Visual Studio <Version>\Common7\IDE\Extensions\Microsoft\SQLDB\TestConditions 目录和子目录中的任何扩展，并且使它们可供使用：  
   
@@ -399,7 +400,7 @@ namespace ColumnCountCondition
   
 5.  在“属性”  窗口中，配置 Count、Enabled 和 ResultSet 属性。  
   
-    有关详细信息，请参阅[如何：向 SQL Server 单元测试添加测试条件](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md)。  
+    有关详细信息，请参阅[操作说明：向 SQL Server 单元测试添加测试条件](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md)。  
   
 ## <a name="see-also"></a>另请参阅  
 [SQL Server 单元测试的自定义测试条件](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)  

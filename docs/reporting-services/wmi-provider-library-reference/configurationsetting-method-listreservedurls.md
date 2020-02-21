@@ -11,10 +11,10 @@ ms.assetid: 32335af1-5eae-4420-a0ef-b1e8a3267166
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 886c6b6622a2051751704aa9ea72aabcbb4afef3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579911"
 ---
 # <a name="configurationsetting-method---listreservedurls"></a>ConfigurationSetting 方法 - ListReservedURLs
@@ -34,7 +34,7 @@ public void ListReservedUrls(out string[] Application, out string[] UrlString,
         out int[] Length, out int[] HRESULT);  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>parameters  
  *Application[]*  
  [out] 具有 URL 预留的应用程序。  
   
@@ -56,10 +56,10 @@ public void ListReservedUrls(out string[] Application, out string[] UrlString,
 ## <a name="return-value"></a>返回值  
  返回 *HRESULT* ，指示方法调用是成功还是失败。 值 0 指示方法调用已成功；错误代码指示调用未成功。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 ## <a name="requirements"></a>要求  
- **命名空间:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

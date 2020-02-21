@@ -11,10 +11,10 @@ ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cd0b847ba4ebaa2d669927abe0665b18a2d517bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579184"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>在报表中使用表达式（报表生成器和 SSRS）
@@ -22,7 +22,7 @@ ms.locfileid: "65579184"
   
  表达式可以是简单的，也可以是复杂的。 “简单表达式”  包含对单个数据集字段、参数或内置字段的引用。 复杂表达式可以包含多个内置引用、运算符和函数调用。 例如，复杂表达式可能包含应用于“销售量”字段的 Sum 函数。  
   
- 表达式以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]语言编写。 表达式以等号 (=) 开头，后跟对内置集合（如数据集字段和参数）、常量、函数和运算符的引用组合。  
+ 表达式是用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 语言编写。 表达式以等号 (=) 开头，后跟对内置集合（如数据集字段和参数）、常量、函数和运算符的引用组合。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -57,12 +57,12 @@ ms.locfileid: "65579184"
 |根据值设置文本框中数据的格式。|Tablix 详细信息行中的文本框中占位符的颜色。 使用 **“文本框属性”** 对话框 -&gt;“字体”。|`=IIF(Fields!TotalDue.Value < 10000,"Red","Black")`|  
 |计算一次要在整个报表中引用的值。|报表变量的值。 使用 **“报表属性”** 对话框 -&gt;“变量”。|`=Variables!MyCalculation.Value`|  
 |包含数据集中多个字段的特定值。|Tablix 中组的筛选器公式。 使用 **“Tablix 属性”** 对话框 -&gt;“筛选器”。|对于数据类型，请选择 **Boolean**。<br /><br /> `=IIF(InStr(Fields!Subcat.Value,"Shorts")=0 AND (Fields!Size.Value="M" OR Fields!Size.Value="S"),TRUE, FALSE)`<br /><br /> `=`<br /><br /> `TRUE`|  
-|隐藏设计图面上的文本框，用户可使用名为 *Show*的布尔型参数切换该文本框。|文本框中的 Hidden 属性。 使用 **“文本框属性”** 对话框 -&gt;“可见性”。|`=Not Parameters!` 显示 \<布尔型参数> `.Value` |  
+|隐藏设计图面上的文本框，用户可使用名为 *Show*的布尔型参数切换该文本框。|文本框中的 Hidden 属性。 使用 **“文本框属性”** 对话框 -&gt;“可见性”。|`=Not Parameters!` 显示 \<布尔参数>  `.Value`|  
 |指定动态页眉或页脚内容。|位于页眉或页脚中的文本框中占位符的值。|`="Page " & Globals!PageNumber & " of "  & Globals!TotalPages`|  
 |使用参数动态指定数据源。|数据源中的连接字符串。 使用 **“数据源属性”** 对话框 -&gt;“常规”。|`="Data Source=" & Parameters!ServerName.Value & ";initial catalog=AdventureWorks2012"`|  
 |标识用户选定的多值参数的所有值。|文本框中占位符的值。 使用 **“Tablix 属性”** 对话框 -&gt;“筛选器”。|`=Join(Parameters!MyMultivalueParameter.Value,", ")`|  
 |为不含其他组的 Tablix 中的每 20 行指定一个分页符。|Tablix 中组的组表达式。 使用 **“组属性”** 对话框 -&gt;“分页符”。 选择选项 **“在组的各实例之间”** 。|`=Ceiling(RowNumber(Nothing)/20)`|  
-|基于参数指定条件可见性。|Tablix 的 Hidden 属性。 使用 **“Tablix 属性”** 对话框 -&gt;“可见性”。|`=Not Parameters!<` *布尔参数* `>.Value`|  
+|基于参数指定条件可见性。|Tablix 的 Hidden 属性。 使用 **“Tablix 属性”** 对话框 -&gt;“可见性”。|`=Not Parameters!<`布尔参数  `>.Value`|  
 |指定针对特定区域性而设置格式的日期。|数据区域中的文本框中占位符的值。 使用 **“文本框属性”** 对话框 -&gt;“常规”。|`=Fields!OrderDate.Value.ToString(System.Globalization.CultureInfo.CreateSpecificCulture("de-DE"))`|  
 |将字符串与格式为两位小数的百分比的数字串联。|数据区域中的文本框中占位符的值。 使用 **“文本框属性”** 对话框 -&gt;“常规”。|`="Growth Percent: " & Format(Fields!Growth.Value,"p2")`|  
   

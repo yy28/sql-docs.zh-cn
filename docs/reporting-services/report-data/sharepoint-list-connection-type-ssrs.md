@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 30a7e283fe7f4b16903dbf293c3db5c77a2409af
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 43f726dbddb9b9f3737a92a82987dc3832182d49
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593956"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190696"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint 列表连接类型 (SSRS)
 
@@ -28,7 +28,7 @@ ms.locfileid: "73593956"
   
  查询设计器会自动显示您拥有足够访问权限的 SharePoint 列表。  
   
- 有关更多连接字符串的示例，请参阅 [报表生成器中的数据连接、数据源和连接字符串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
+ 有关更多连接字符串的示例，请参阅[创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
 ##  <a name="Credentials"></a> 凭据  
  执行以下操作时需要提供凭据：运行查询、本地预览报表以及从报表服务器预览报表。 报表发布后，您可能需要更改数据源的凭据，以使报表在报表服务器上运行时，用于检索数据的权限有效。 可与此数据扩展插件一起使用的凭据类型取决于用作数据源的 SharePoint 列表的 SharePoint 技术配置。  
@@ -71,7 +71,7 @@ ms.locfileid: "73593956"
   
  有关 Microsoft BI 堆栈中声明身份验证支持的信息，请参阅 [在 Microsoft BI 堆栈中使用声明身份验证](https://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx)。  
   
- 有关详细信息，请参阅[数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)、[指定报表数据源的凭据和连接信息](specify-credential-and-connection-information-for-report-data-sources.md)和 [Reporting Services 支持的数据源 &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
+ 有关详细信息，请参阅[创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)、[指定报表数据源的凭据和连接信息](specify-credential-and-connection-information-for-report-data-sources.md)和 [Reporting Services 支持的数据源 (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
   
 ##  <a name="Query"></a> 查询  
  若要设计一个查询，请基于数据源创建新数据集，然后打开关联的查询设计器。 有关详细信息，请参阅 [创建共享数据集或嵌入数据集（报表生成器和 SSRS）](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)。  
@@ -111,7 +111,7 @@ ms.locfileid: "73593956"
 ### <a name="query-text"></a>查询文本  
  若要查看图形查询设计器生成的查询，请切换到基于文本的查询设计器。 在此视图中，您可以看到由图形查询设计器创建的 XML。 该 XML 包括用于列表名称、字段集合和筛选器的元素。  
   
-#### <a name="example-1-specified-fields-for-a-list"></a>示例 1： 列表的指定字段  
+#### <a name="example-1-specified-fields-for-a-list"></a>示例 1。 列表的指定字段  
  下面的示例演示一个格式正确的 SharePoint 查询：  
   
 ```  
@@ -169,7 +169,7 @@ ms.locfileid: "73593956"
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
  提供访问报表数据的概述。  
   
- [报表生成器中的数据连接、数据源和连接字符串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  提供有关数据连接和数据源的信息。  
   
  [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

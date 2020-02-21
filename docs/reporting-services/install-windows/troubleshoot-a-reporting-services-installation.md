@@ -8,10 +8,10 @@ ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 281eeffa237a24e6da8794e99ff6d4fd3a716181
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68889698"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>排除 Reporting Services 安装故障
@@ -74,16 +74,16 @@ ms.locfileid: "68889698"
   
  **解决方法：** 使用 SharePoint 管理中心在 SharePoint 模式中配置报表服务器。 有关详细信息，请参阅 [管理 Reporting Services SharePoint 服务应用程序](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)  
   
- ![用于返回首页链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回首页链接的箭头图标")[排除 SharePoint 模式安装问题](#bkmk_tshoot_sharepoint)  
+ ![用于返回首页链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [排除 SharePoint 模式安装问题](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_no_ssrs_service"></a> 在 SharePoint 模式下安装 SQL Server 2016 SSRS 后，在 SharePoint 管理中心看不到 SQL Server Reporting Services 服务  
- 说明：如果在 SharePoint 模式中成功安装 SQL Server 2016 Reporting Services 和适用于 SharePoint 2013/2016 的 SQL Server 2016 Reporting Services 外接程序后，在以下两个菜单中看不到“SQL Server Reporting Services”，则 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务尚未注册  ：  
+ **说明：** 如果在 SharePoint 模式中成功安装 SQL Server 2016 Reporting Services 和适用于 SharePoint 2013/2016 的 SQL Server 2016 Reporting Services 加载项后，在以下两个菜单中看不到“SQL Server Reporting Services”，则 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务尚未注册：  
   
 -   SharePoint 2013/2016 管理中心 ->“应用程序管理” ->“管理服务器上的服务”页  
   
 -   SharePoint 2013/2016 管理中心 ->“应用程序管理”->“管理服务应用程序”->“新建”菜单  
   
- **解决方法：** 注册并启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint Services，完成以下步骤：  
+ **解决方法：** 若要注册并启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 服务，完成以下步骤：  
   
 1.  在运行 SharePoint 2013/2016 管理中心的计算机上  
   
@@ -101,16 +101,16 @@ ms.locfileid: "68889698"
         Get-SPServiceInstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
         ```  
   
-2.  确认在以下页面上 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务的状态显示为“已启动”：SharePoint 2013/2016 管理中心 ->“应用程序管理”->“管理服务器上的服务”     
+2.  请验证 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务状态在以下页面上是否显示为“已启动”  ：SharePoint 2013/2016 管理中心 ->“应用程序管理”->“管理服务器上的服务”    
   
- ![用于返回首页链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回首页链接的箭头图标")[排除 SharePoint 模式安装问题](#bkmk_tshoot_sharepoint)  
+ ![用于返回首页链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [排除 SharePoint 模式安装问题](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_cmdlets_not_recognized"></a> Reporting Services PowerShell cmdlet 不可用，并且命令无法识别  
  **说明：** 尝试运行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] PowerShell cmdlet 时，会看到类似如下的错误消息：  
   
--   术语“Install-SPRSServiceInstall-SPRSService” **无法识别** 作为 cmdlet、函数、脚本文件或可操作程序的名称。 检查名称的拼写，如果包括路径，请验证路径是否正确并重试。 At line:1 char:39+ Install-SPRSServiceInstall-SPRSService <<<<    + CategoryInfo          : ObjectNotFound: (Install-SPRSServiceInstall-SPRSService:String) [], CommandNotFoundExcep  
+-   术语“Install-SPRSServiceInstall-SPRSService” **无法识别** 作为 cmdlet、函数、脚本文件或可操作程序的名称。 检查名称的拼写，如果包含路径，请验证该路径是否正确，并重试。 At line:1 char:39+ Install-SPRSServiceInstall-SPRSService <<<<    + CategoryInfo          :ObjectNotFound：(Install-SPRSServiceInstall-SPRSService:String) [], CommandNotFoundExcep  
   
- **解决方法：** 完成以下操作之一：  
+ **解决方法：** 请完成以下任一操作：  
   
 -   运行用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序。 **rssharepoint.msi**。  
   
@@ -124,10 +124,10 @@ ms.locfileid: "68889698"
   
 -   [在 SharePoint 模式下安装第一个报表服务器](install-the-first-report-server-in-sharepoint-mode.md)  
   
- ![用于返回首页链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回首页链接的箭头图标")[排除 SharePoint 模式安装问题](#bkmk_tshoot_sharepoint)  
+ ![用于返回首页链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [排除 SharePoint 模式安装问题](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_URL_not_configured"></a> 您将会看到一则错误消息，指示 URL 未配置  
- **说明**：会看到类似如下错误消息：  
+ **说明：** 你会看到类似如下的错误消息：  
   
  不支持此 SQL Server Reporting Services (SSRS) 功能。 使用管理中心验证和修复以下一个或多个问题：
  
@@ -137,9 +137,9 @@ ms.locfileid: "68889698"
  
  - SSRS 服务应用程序未映射到此 web 应用程序。 使用 SSRS 服务应用程序页可以将该 SSRS 服务应用程序代理与此 Web 应用程序的应用程序代理组相关联。 
   
- **解决方法：** 错误消息包含三个建议的步骤来纠正此问题。 “报表服务器 URL 未配置”消息中的第一个建议。 在与 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]之前的报表服务器版本集成时相关。 使用 **SQL Server Reporting Services (2008 和 2008 R2)** 在 **常规应用程序设置**页上完成针对以前报表服务器版本的 SharePoint 配置。  
+ **解决方法：** 错误消息包含三个建议的步骤来更正此问题。 “报表服务器 URL 未配置”消息中的第一个建议。 在与 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]之前的报表服务器版本集成时相关。 使用 **SQL Server Reporting Services (2008 和 2008 R2)** 在 **常规应用程序设置**页上完成针对以前报表服务器版本的 SharePoint 配置。  
   
- **更多信息：** 在您尝试使用要求连接到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务的任何 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能时将看到此错误消息。 这包括：  
+ **详细信息：** 在尝试使用要求连接到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务的任何 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能时，你将看到此错误消息。 这包括：  
   
 -   从 SharePoint 文档库中打开 SQL Server 报表生成器。  
   
@@ -147,49 +147,49 @@ ms.locfileid: "68889698"
   
 -   管理服务应用程序。  
   
- ![用于返回首页链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回首页链接的箭头图标")[排除 SharePoint 模式安装问题](#bkmk_tshoot_sharepoint)  
+ ![用于返回首页链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [排除 SharePoint 模式安装问题](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_sharepoint_not_confiugred"></a> 在安装有但未配置 SharePoint 的计算机上进行安装时安装程序将失败  
- **说明：** 如果选择在安装有但未配置 SharePoint 的计算机上安装 Reporting Services SharePoint 模式，则将看到一条类似于以下内容的消息，而且安装程序将停止运行：  
+ **说明：** 如果选择在安装有 SharePoint 但尚未配置 SharePoint 的计算机上安装 Reporting Services SharePoint 模式，你将看到一条类似于以下内容的消息，而且安装程序将停止运行：  
   
  SQL Server 安装程序已停止工作  
   
  **解决方法：** 配置 SharePoint，然后运行 SQL Server 安装。  
   
- **更多信息：** 将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装到现有 SharePoint 安装中时，安装程序会尝试安装并启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 服务。 如果未配置 SharePoint，服务安装将失败，从而导致安装程序失败。  
+ **详细信息：** 将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装到现有 SharePoint 安装中时，安装程序将尝试安装并启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 服务。 如果未配置 SharePoint，服务安装将失败，从而导致安装程序失败。  
   
- ![用于返回首页链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回首页链接的箭头图标")[排除 SharePoint 模式安装问题](#bkmk_tshoot_sharepoint)  
+ ![用于返回首页链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [排除 SharePoint 模式安装问题](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_central_admin_blank"></a> SharePoint 管理中心页空白  
- **说明：** 你能够成功地安装 SharePoint 2013/2016，而不出现任何安装错误。 但是，当您浏览到管理中心时，您仅看到空白页：  
+ **说明：** 你能够成功安装 SharePoint 2013/2016，而不出现任何安装错误。 但是，当您浏览到管理中心时，您仅看到空白页：  
   
- **解决方法：** 此问题不是特定于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，但与整体 SharePoint 安装中的权限配置有关。 一些建议如下：  
+ **解决方法：** 此问题并非特定于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，但与整体 SharePoint 安装中的权限配置有关。 一些建议如下：  
   
 -   查看有关开发环境的 SharePoint 文章。 [为 SharePoint 设置常规开发环境](https://msdn.microsoft.com/library/ee554869)  
   
--   查阅论坛帖子： [在 Windows 7 上进行安装后管理中心返回空白页](https://social.technet.microsoft.com/Forums/en/sharepoint2010setup/thread/a422a3c8-39f6-4b9e-988a-4c4d1e745694)  
+-   查阅论坛文章：[在 Windows 7 上进行安装后管理中心返回空白页](https://social.technet.microsoft.com/Forums/en/sharepoint2010setup/thread/a422a3c8-39f6-4b9e-988a-4c4d1e745694)  
   
 -   用于 SharePoint 2013/2016 管理中心服务等 SharePoint 服务的服务帐户在本地操作系统中应具有管理权限。  
   
- ![用于返回首页链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回首页链接的箭头图标")[排除 SharePoint 模式安装问题](#bkmk_tshoot_sharepoint)  
+ ![用于返回首页链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [排除 SharePoint 模式安装问题](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_reportbuilder_newreport_error"></a> 当您尝试创建新的报表生成器报表时，您会看到一条错误消息  
- **说明：** 当您尝试在文档库内创建报表生成器报表时您会看到一条类似于以下内容的错误消息：  
+ **说明：** 当你尝试在文档库中创建报表生成器报表时，你将看到一条类似于以下内容的错误消息：  
   
  不支持此功能，因为 SQL Server Reporting Services 服务应用程序不存在或者尚未在管理中心配置报表服务器 URL。  
   
- **解决方法：** 确认您有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序且已正确对其进行配置。 有关详细信息，请参阅[在 SharePoint 模式下安装第一个报表服务器](install-the-first-report-server-in-sharepoint-mode.md)。
+ **解决方法：** 验证你有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序且已对其进行正确配置。 有关详细信息，请参阅[在 SharePoint 模式下安装第一个报表服务器](install-the-first-report-server-in-sharepoint-mode.md)。
   
- ![用于返回首页链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回首页链接的箭头图标")[排除 SharePoint 模式安装问题](#bkmk_tshoot_sharepoint)  
+ ![用于返回首页链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [排除 SharePoint 模式安装问题](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_RS_SHP_notsupported"></a> 您看到一条指示 PREPAREIMAGE 不支持 RS_SHP 的错误消息  
  **说明：** 尝试为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 运行 PREPAREIMAGE 时，会看到类似如下的错误消息：  
   
  “当执行 PREPAREIMAGE 操作时，指定的功能“RS_SHP”不受支持，因为它不支持 SysPrep。 删除与 SysPrep 不兼容的功能，然后重新运行安装程序。”  
   
- **解决方法：** 没有解决方法。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不支持 SYSPREP (PREPAREIMAGE)。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式支持 SYSPREP。  
+ **解决方法：** 目前没有解决方法。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不支持 SYSPREP (PREPAREIMAGE)。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式支持 SYSPREP。  
   
- ![用于返回首页链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回首页链接的箭头图标")[排除 SharePoint 模式安装问题](#bkmk_tshoot_sharepoint)  
+ ![用于返回首页链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [排除 SharePoint 模式安装问题](#bkmk_tshoot_sharepoint)  
 
 ::: moniker-end
   

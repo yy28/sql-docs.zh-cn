@@ -1,5 +1,5 @@
 ---
-title: 通过 JDBC 驱动程序处理元数据 |Microsoft Docs
+title: 通过 JDBC 驱动程序处理元数据 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 5cfb35d4-ddcd-40a2-8091-f29cddc32552
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0176e1da9a64e4ed32ba6989496178f5f9741193
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028018"
 ---
 # <a name="handling-metadata-with-the-jdbc-driver"></a>通过 JDBC 驱动程序处理元数据
@@ -37,7 +37,7 @@ ms.locfileid: "69028018"
   
 ## <a name="in-this-section"></a>在本节中  
   
-|主题|描述|  
+|主题|说明|  
 |-----------|-----------------|  
 |[使用数据库元数据](../../connect/jdbc/using-database-metadata.md)|说明如何检索有关当前已连接数据库的元数据信息。|  
 |[使用结果集元数据](../../connect/jdbc/using-result-set-metadata.md)|说明如何检索有关当前结果集的元数据信息。|  

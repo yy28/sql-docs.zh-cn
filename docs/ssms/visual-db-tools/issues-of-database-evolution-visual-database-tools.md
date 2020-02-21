@@ -1,10 +1,9 @@
 ---
-title: 数据库演化问题 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 数据库演化问题
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,20 +12,22 @@ helpviewer_keywords:
 ms.assetid: 1ed6ae10-d212-4ec2-8569-1b94ab1cba6d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 33083fd036f2c52b12380f4186cbccc0c47f86be
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 987f808a647966671e155c94a80270b1faf6da30
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254252"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75225034"
 ---
 # <a name="issues-of-database-evolution-visual-database-tools"></a>数据库演化问题 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 如果更改已部署的数据库的结构，则必须特别留意更改应与现有的数据和数据库结构兼容。 当进行以下修改时，可能需要采取特殊步骤：  
   
--   **添加约束** 在添加约束时，数据库可能已经包含不满足该约束的数据。 当尝试保存新约束时，[“保存后通知”对话框 (Visual Database Tools)](../../ssms/visual-db-tools/post-save-notifications-dialog-box-visual-database-tools.md) 将通知你数据库服务器无法创建该约束。 若要强制数据库接受新约束，可以清除“在创建时检查现有数据”  复选框。  
+-   **添加约束** 在添加约束时，数据库可能已经包含不满足该约束的数据。 当尝试保存新约束时，[“保存后通知”对话框 (Visual Database Tools)](../../ssms/visual-db-tools/post-save-notifications-dialog-box-visual-database-tools.md) 将通知你数据库服务器无法创建该约束。 若要强制数据库接受新约束，可以清除“在创建时检查现有数据”复选框。  
   
--   **添加关系** 在添加关系时，数据库可能已经包含在主键表中没有相应行的外键表中的行。 即现有数据可能不满足引用完整性。 尝试保存新关系时，[“保存后通知”对话框 (Visual Database Tools)](../../ssms/visual-db-tools/post-save-notifications-dialog-box-visual-database-tools.md) 将通知你数据库服务器无法保存修改过的外键表。 若要强制数据库接受修改，可以清除“在创建时检查现有数据”  复选框。  
+-   **添加关系** 在添加关系时，数据库可能已经包含在主键表中没有相应行的外键表中的行。 即现有数据可能不满足引用完整性。 尝试保存新关系时，[“保存后通知”对话框 (Visual Database Tools)](../../ssms/visual-db-tools/post-save-notifications-dialog-box-visual-database-tools.md) 将通知你数据库服务器无法保存修改过的外键表。 若要强制数据库接受修改，可以清除“在创建时检查现有数据”复选框。  
   
 -   **修改分配给索引视图的表** 如果修改分配给 Microsoft SQL Server 索引视图的表，该视图的索引将丢失。 有关重新创建索引的信息，请参阅 SQL Server 联机丛书。  
   
@@ -35,6 +36,6 @@ ms.locfileid: "68254252"
 无论如何更改数据库设计，都应保留更改的历史记录。 可以通过保留对成品数据库进行的所有修改的 SQL 脚本来保留所做更改。  
   
 ## <a name="see-also"></a>另请参阅  
-[使用约束 (Visual Database Tools)](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
+[使用约束](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
 [多用户环境 (Visual Database Tools)](../../ssms/visual-db-tools/multiuser-environments-visual-database-tools.md)  
   

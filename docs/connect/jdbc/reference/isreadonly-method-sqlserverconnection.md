@@ -1,5 +1,5 @@
 ---
-title: isReadOnly 方法 (SQLServerConnection) |Microsoft Docs
+title: isReadOnly 方法 (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 902fd2c1-05e0-436e-9779-c048cdb8475a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 708060b6192e47a126c9c4c3ea47052c098bb1fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977319"
 ---
 # <a name="isreadonly-method-sqlserverconnection"></a>isReadOnly 方法 (SQLServerConnection)
@@ -40,11 +40,11 @@ public boolean isReadOnly()
 ## <a name="return-value"></a>返回值  
  如果连接处于只读模式，则为 true  ；否则为 false  。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 isReadOnly 方法由 isReadOnly 方法在 sql 连接接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 isReadOnly 方法是由 java.sql.Connection 接口中的 isReadOnly 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerConnection 成员](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
