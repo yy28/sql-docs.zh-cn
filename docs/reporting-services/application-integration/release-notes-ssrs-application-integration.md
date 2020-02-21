@@ -1,54 +1,62 @@
 ---
-title: SSRS 报表查看器控件的发行说明
-ms.date: 09/20/2018
+title: 报表查看器控件的发行说明
+description: 与 Reporting Services 相关的 WebForms 和 WinForms 报表查看器控件的发行说明。
+ms.date: 01/16/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 ms.assetid: 112e0240-351d-46a9-98c7-2be09f26ac60
 ms.reviewer: maggies
 author: RhysSchmidtke
 ms.author: rhys
-ms.openlocfilehash: d6c7130e45e535ad1849bed5713313bf6f89020f
-ms.sourcegitcommit: 071065bc5433163ebfda4fdf6576349f9d195663
-ms.translationtype: MTE75
+ms.openlocfilehash: 5ee9bd80519e9dc9d75bb78a98b548b2a60ef247
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71923809"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76259375"
 ---
-# <a name="release-notes-for-the-report-viewer-controls-for-webforms-and-winforms-of-ssrs"></a>SSRS 的 WebForms 和 WinForms 报表查看器控件的发行说明
+# <a name="release-notes-for-report-viewer-controls-for-webforms-and-winforms-of-ssrs"></a>适用于 SSRS 的 WebForms 和 WinForms 的报表查看器控件的发行说明
 
-这是 WebForms 和 WinForms 的报表查看器控件（与 @no__t [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] （SSRS）相关）的发行说明。
+这些是与 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) 相关的 WebForms 和 WinForms 报表查看器控件的发行说明。
 
-有关 SSRS 的发行说明，请参阅[SQL Server Reporting Services （SSRS）2017及更高版本的发行说明](../release-notes-reporting-services.md)。
+有关 SSRS 的发行说明，请参阅 [SQL Server Reporting Services (SSRS) 2017 及更高版本的发行说明](../release-notes-reporting-services.md)。
+
+## <a name="15014000"></a>150.1400.0
+| 更改描述 | 详细信息 |
+| :----------------- | :------ |
+| Bug 修复 | 修复了查看器控件在设计模式下无法加载的问题。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="15013580"></a>150.1358.0
 | 更改描述 | 详细信息 |
 | :----------------- | :------ |
-| Bug 修复 | 还原从项目引用中删除了 Microsoft ReportViewer 设计程序集的更改。 |
-|           | 作为其他更改的一部分，两个程序集从15.0 版本更改为15.3。 此已还原。 |
+| Bug 修复 | 还原了从项目引用中删除了 Microsoft.ReportViewer.Design 程序集的更改。 |
+|           | 作为其他更改的一部分，两个程序集从 15.0 版本更改为 15.3。 已还原此更改。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="15013570"></a>150.1357.0
 | 更改描述 | 详细信息 |
 | :----------------- | :------ |
-| Bug 修复  | 适用于高 DPI 监视器的正确打印预览 |
-|            | "打印" 对话框将显示在可见空间之外 |
+| Bug 修复  | 高 DPI 监视器的正确打印预览 |
+|            | “打印”对话框将显示在可见区域之外 |
 |            | 大量参数导致参数滚动条和下拉列表不能正常工作 |
 |            | 修复了包含 Null 和日期时间参数的问题 |
-|            | 已将 JQuery 更新到版本3.3。1 |
-|            | 修复了 HTML 呈现中与 tablix 单元重叠的情况 |
+|            | 已将 JQuery 更新至版本 3.3.1 |
+|            | 修复了 HTML 呈现中与 tablix 单元重叠的问题 |
 |            | 删除了设计时项目引用以消除添加到项目的错误 VS 程序集 |
-|            | 工具栏的辅助功能修补程序仅为活动项叙述 |
+|            | 工具栏的辅助功能修补程序只说明活动项目 |
 | &nbsp; | &nbsp; |
 
-## <a name="15900148"></a>15.900.148
+## <a name="150900148"></a>150.900.148
 
 | 更改描述 | 详细信息 |
 | :----------------- | :------ |
 | 防止不带参数通过 Server.LoadReportDefinition 加载报表的 bug 修复。  | &nbsp; |
-| WebForms 报表查看器控件。 | 支持在 RTL 页面（使用 *direction: rtl;* css 属性更改文本流的页面）中进行嵌入。<br/><br/>支持通过 IReportViewerMessages5  本地化接口自定义打印对话框文本。<br/><br/>改进了辅助功能支持。<br/><br/>&bull; @no__t[为 WebForms 的报表查看器控件](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.Webforms/150.900.148)&nbsp; NuGet 包 |
-| WinForms 报表查看器控件。 | 应用在高 DPI 模式下运行时进行打印的修补程序。<br/><br/>&bull; @no__t[为 WinForms 的报表查看器控件](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.Winforms/150.900.148)&nbsp; NuGet 包 |
+| WebForms 报表查看器控件。 | 支持在 RTL 页面（使用 *direction: rtl;* css 属性更改文本流的页面）中进行嵌入。<br/><br/>支持通过 IReportViewerMessages5  本地化接口自定义打印对话框文本。<br/><br/>改进了辅助功能支持。<br/><br/>&bull; &nbsp; &nbsp; [WebForms 报表查看器控件的 NuGet 包](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.Webforms/150.900.148) |
+| WinForms 报表查看器控件。 | 应用在高 DPI 模式下运行时进行打印的修补程序。<br/><br/>&bull; &nbsp; &nbsp; [WinForms 报表查看器控件的 NuGet 包](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.Winforms/150.900.148) |
 | &nbsp; | &nbsp; |
 
 ## <a name="next-steps"></a>后续步骤

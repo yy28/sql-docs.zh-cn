@@ -1,20 +1,21 @@
 ---
-title: 在 SQL Server 大数据群集上使用适用于 VS Code 的 Spark & Hive Tools 运行 Spark 作业
-titleSuffix: SQL Server big data clusters
+title: 运行作业：适用于 VS Code 的 Spark & Hive Tools
+titleSuffix: SQL Server Big Data Clusters
 description: 在 SQL Server 大数据群集上使用适用于 Visual Studio Code 的 Spark & Hive Tools 提交 Spark 作业。
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b09a5febe9bc67f04d70c4d5b7850ef26ebac750
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 732db8e12b2923dfdd74727c5e9e0a5a56483fc4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653733"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255921"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-cluster-in-visual-studio-code"></a>在 Visual Studio Code 中的 SQL Server 大数据群集上提交 Spark 作业
 
@@ -146,7 +147,7 @@ Spark & Hive Tools 可以安装在 Visual Studio Code 支持的平台上，包�
 
    ![pyspark 交互式 python 交互式窗口](./media/spark-hive-tools-vscode/pyspark-interactive-python-interactive-window.png) 
 
-6. 输入“%%info”，然后按 Shift+Enter 查看作业信息   。 （可选）
+6. 输入“%%info”，然后按 Shift+Enter 查看作业信息   。 (可选)
 
    ![查看作业信息](./media/spark-hive-tools-vscode/pyspark-interactive-view-job-information.png)
 
@@ -200,36 +201,36 @@ Spark & Hive Tools 可以安装在 Visual Studio Code 支持的平台上，包�
 
 **请求正文**
 
-| NAME | description | type |
+| name | description | type |
 | :- | :- | :- |
 | 文件 | 包含要执行的应用程序的文件 | 路径（必需） |
-| proxyUser | 运行作业时要模拟的用户 | string |
-| className | 应用程序 Java/Spark 主类 | string |
+| proxyUser | 运行作业时要模拟的用户 | 字符串 |
+| className | 应用程序 Java/Spark 主类 | 字符串 |
 | args | 应用程序的命令行参数 | 字符串列表 |
 | jars | 将在本次会话中使用的 jars | 字符串列表 |
 | pyFiles | 将在本次会话中使用的 Python 文件 | 字符串列表 |
 | files | 将在本次会话中使用的文件 | 字符串列表 |
-| driverMemory | 用于驱动程序进程的内存量 | string |
-| driverCores | 用于驱动程序进程的内核数 | INT |
-| executorMemory | 每个执行程序进程使用的内存量 | string |
-| executorCores | 每个执行程序使用的内核数 | INT |
-| numExecutors | 为此会话启动的执行程序数 | INT |
+| driverMemory | 用于驱动程序进程的内存量 | 字符串 |
+| driverCores | 用于驱动程序进程的内核数 | int |
+| executorMemory | 每个执行程序进程使用的内存量 | 字符串 |
+| executorCores | 每个执行程序使用的内核数 | int |
+| numExecutors | 为此会话启动的执行程序数 | int |
 | archives | 将在本次会话中使用的存档 | 字符串列表 |
-| queue | 提交到的 YARN 队列的名称 | string |
-| NAME | 会话的名称 | string |
+| queue | 提交到的 YARN 队列的名称 | 字符串 |
+| name | 会话的名称 | 字符串 |
 | conf | Spark 配置属性 | key=val 的映射 |
 
 #### <a name="response-body"></a>响应正文
 
 创建的批处理对象。
 
-| NAME | description | type |
+| name | description | type |
 | :- | :- | :- |
-| id | 会话 ID | INT |
+| id | 会话 ID | int |
 | appId | 此会话的应用程序 ID | String |
 | appInfo | 详细的应用程序信息 | key=val 的映射 |
 | log | 日志行 | 字符串列表 |
-| state | 批处理状态 | string |
+| state | 批处理状态 | 字符串 |
 
 >[!NOTE]
 >提交脚本时，分配的 Livy 配置将显示在输出窗格中。

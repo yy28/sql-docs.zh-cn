@@ -11,10 +11,10 @@ ms.assetid: b8d4e1f7-14fc-4590-af98-1eda30d2ca6d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d97ed3360db0d1a81f71225e4664c6624cb9da37
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974700"
 ---
 # <a name="setcharacterstream-method-int-javaioreader"></a>setCharacterStream 方法 (int, java.io.Reader)
@@ -33,7 +33,7 @@ public final void setCharacterStream(int parameterIndex,
                               java.io.Reader reader)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  parameterIndex   
   
  指示参数编号的 int  。  
@@ -42,11 +42,11 @@ public final void setCharacterStream(int parameterIndex,
   
  包含 Unicode 数据的 java.io.Reader 对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 setCharacterStream 方法由 setCharacterStream 方法在 Java.sql.preparedstatement 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 setCharacterStream 方法是由 java.sql.PreparedStatement 接口中的 setCharacterStream 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [setCharacterStream 方法 &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setcharacterstream-method-sqlserverpreparedstatement.md)   

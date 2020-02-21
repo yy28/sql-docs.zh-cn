@@ -1,6 +1,7 @@
 ---
-title: 在 SQL Server 代理中运行 Windows PowerShell 步骤 | Microsoft Docs
-ms.custom: ''
+title: 在 SQL Server 代理中运行 Windows PowerShell 步骤
+description: 了解如何在 SQL Server 代理作业中运行 Windows PowerShell 步骤。
+ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e1fe4fa35e5916bd64c88dd9276f09d111ca1a7d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 700aa5adb410c7718667bf05313f18636be01a69
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049102"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75557942"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>在 SQL Server 代理中运行 Windows PowerShell 步骤
 

@@ -1,5 +1,5 @@
 ---
-title: 'IBCPSession:: BCPColFmt (OLE DB) |Microsoft Docs'
+title: IBCPSession::BCPColFmt (OLE DB) | Microsoft Docs
 description: IBCPSession::BCPColFmt (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 76dd26d42951a95c604b8d5b3bceaff21c355be2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994576"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
@@ -43,7 +43,7 @@ HRESULT BCPColFmt(
       DBORDINAL idxServerCol);  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  BCPColFmt 方法用于在 BCP 数据文件字段和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 列之间创建绑定  。 它将列的长度、类型、终止符和前缀长度视为参数处理，并为各个字段设置所有这些属性。  
   
  如果用户选择交互模式，则调用该方法两次；一次按照默认值（与服务器列的类型相对应）设置列格式，另一次按照在交互模式期间选择的客户端的所选列类型为每个列设置格式。  
@@ -64,21 +64,21 @@ HRESULT BCPColFmt(
   
 -   可选终止字节序列的长度。  
   
- 对 BCPColFmt 的每次调用将指定一个用户文件字段的格式  。 例如，要在具有 5 个字段的用户数据文件中更改 3 个字段的默认设置，请先调用 `BCPColumns(5)`，再调用 BCPColFmt 五次，其中三次调用设置自定义格式  。 对于剩余的两次调用, 将*eUserDataType*设置为 BCP_TYPE_DEFAULT, 并将*cbIndicator*、 *cbUserData*和*cbUserDataTerm*分别设置为0、BCP_VARIABLE_LENGTH 和0。 此过程复制全部五列，其中的三列采用您的自定义格式，另两列采用默认格式。  
+ 对 BCPColFmt 的每次调用将指定一个用户文件字段的格式  。 例如，要在具有 5 个字段的用户数据文件中更改 3 个字段的默认设置，请先调用 `BCPColumns(5)`，再调用 BCPColFmt 五次，其中三次调用设置自定义格式  。 对于剩余的两次调用，请将 eUserDataType  设置为 BCP_TYPE_DEFAULT，并将 cbIndicator  、cbUserData  和 cbUserDataTerm  分别设置为 0、BCP_VARIABLE_LENGTH 和 0。 此过程复制全部五列，其中的三列采用您的自定义格式，另两列采用默认格式。  
   
 > [!NOTE]  
 >  在对 BCPColFmt 进行任何调用之前，必须先调用 [IBCPSession::BCPColumns](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) 方法  。 必须对用户文件中的每个列调用一次 BCPColFmt  。 对任何用户文件列多次调用 BCPColFmt 将导致错误  。  
   
  不必将用户文件中的所有数据复制到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表。 若要跳过某一列，请指定该列的数据格式，并且将 idxServerCol 参数设置为 0。 若要跳过某一字段，仍然需要所有信息才能让该方法正常工作。  
   
- **注意** [IBCPSession::BCPWriteFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md) 函数可以用于持久化通过 BCPColFmt 提供的格式规范  。  
+ **注意**[IBCPSession::BCPWriteFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md) 函数可以用于持久化通过 BCPColFmt 提供的格式规范  。  
   
 ## <a name="arguments"></a>参数  
  idxUserDataCol[in]   
  用户的数据文件中字段的索引。  
   
  eUserDataType[in]   
- 用户的数据文件中字段的数据类型。 可用的数据类型在 SQL Server 标头文件 (msoledbsql) 的 OLE DB 驱动程序中列出, 其格式为 BCP_TYPE_XXX, 例如 BCP_TYPE_SQLINT4。 如果指定 BCP_TYPE_DEFAULT 值，则访问接口将尝试使用与表或视图列相同的类型。 当 eUserDataType 参数是 BCP_TYPE_SQLDECIMAL 或 BCP_TYPE_SQLNUMERIC 时，对于源为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和目标为文件的大容量复制操作  ：  
+ 用户的数据文件中字段的数据类型。 可用数据类型在 OLE DB Driver for SQL Server 头文件 (msoledbsql.h) 中以 BCP_TYPE_XXX 格式列出（例如，BCP_TYPE_SQLINT4）。 如果指定 BCP_TYPE_DEFAULT 值，则访问接口将尝试使用与表或视图列相同的类型。 当 eUserDataType 参数是 BCP_TYPE_SQLDECIMAL 或 BCP_TYPE_SQLNUMERIC 时，对于源为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和目标为文件的大容量复制操作  ：  
   
 -   如果源列的数据类型不是 decimal 或 numeric，则使用默认的精度和小数位数。  
   

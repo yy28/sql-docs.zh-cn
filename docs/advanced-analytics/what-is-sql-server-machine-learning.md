@@ -9,12 +9,12 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 634f9f62a3ff1de70be84fd5a7721d8efed891bf
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: fe7a83c66dba9af372e82fc2814828aae32d6a2d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149940"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75558282"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>什么是 SQL Server 机器学习服务（Python 和 R）？
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ Python 和 R 的基本分发包含在机器学习服务中。 除了用于 Pytho
 
 除了 Microsoft 的企业包外，还可以使用开源包和框架。 大多数常见的开源 Python 和 R 包都已预装在机器学习服务中。 还包括 Microsoft 提供的以下 Python 和 R 包：
 
-| “报表” | “包” | 描述 |
+| 语言 | 程序包 | 说明 |
 |-|-|-|
 | Python | [revoscalepy](python/ref-py-revoscalepy.md) | 可缩放的 Python 的主包。 数据转换和操作、统计摘要、可视化和多种形式的建模。 此外，此包中的函数会自动在可用内核之间分配工作负载以进行并行处理。 |
 | Python | [microsoftml](python/ref-py-microsoftml.md) | 添加机器学习算法，以便为文本分析、图像分析和情绪分析创建自定义模型。 | 

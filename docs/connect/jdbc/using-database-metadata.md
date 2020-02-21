@@ -1,5 +1,5 @@
 ---
-title: 使用数据库元数据 |Microsoft Docs
+title: 使用数据库元数据 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 8b048371-e912-4ed1-afd7-436978f48888
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fce2bf9d72136b303ee3bc974f3aede313233a82
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026422"
 ---
 # <a name="using-database-metadata"></a>使用数据库元数据
@@ -25,7 +25,7 @@ ms.locfileid: "69026422"
 
 若要创建一个 SQLServerDatabaseMetaData 对象，可以使用 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 类的 [getMetaData](../../connect/jdbc/reference/getmetadata-method-sqlserverconnection.md) 方法获得有关已连接到的数据库的信息。
 
-在下面的示例中, 将向[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]此函数传递示例数据库的打开连接, 使用 SQLServerConnection 类的 getMetaData 方法返回 SQLServerDatabaseMetadata 对象, 然后使用SQLServerDatabaseMetaData 对象用于显示有关驱动程序、驱动程序版本、数据库名和数据库版本的信息。
+在下面的实例中，将向此函数传递 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 示例数据库的打开连接，使用 SQLServerConnection 类的 getMetaData 方法返回 SQLServerDatabaseMetadata 对象，然后使用 SQLServerDatabaseMetaData 对象的各种方法显示有关驱动程序、驱动程序版本、数据库名和数据库版本的信息。
 
 [!code[JDBC#UsingDBMetaData1](../../connect/jdbc/codesnippet/Java/using-database-metadata_1.java)]
 

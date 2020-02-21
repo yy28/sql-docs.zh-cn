@@ -11,23 +11,23 @@ ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7dc49b466885e63ad9bd380a53a432a936310e18
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68419255"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>步骤 3：使用 Node.js 连接到 SQL 的概念证明
 
-![向下键-带圆圈的](../../ssdt/media/download.png)[下载 NODE.JS SQL 驱动程序](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-DownArrow-Circled](../../ssdt/media/download.png)[下载 Node.js SQL 驱动程序的具体步骤](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-此示例只应视为概念证明。  为清楚起见, 示例代码已简化, 不一定表示 Microsoft 推荐的最佳做法。 Github 上提供了使用相同的重要函数的其他示例:
+应只将此示例视为概念证明。  为了清楚起见，此示例代码已经过简化，并不一定代表 Microsoft 建议的最佳做法。 Github 上提供了其他使用相同关键函数的示例：
 
 - [https://github.com/tediousjs/tedious/blob/master/examples/](https://github.com/tediousjs/tedious/blob/master/examples/)
   
-## <a name="step-1-connect"></a>步骤 1: 连接  
+## <a name="step-1-connect"></a>步骤 1：连接  
   
-**新的连接**函数用于连接到 SQL 数据库。  
+new Connection 函数用于连接到 SQL 数据库。  
   
 ```javascript  
     var Connection = require('tedious').Connection;  
@@ -56,7 +56,7 @@ ms.locfileid: "68419255"
 ## <a name="step-2--execute-a-query"></a>步骤 2：执行查询  
   
   
-使用**新的 Request ()** 函数执行所有 SQL 语句。 如果语句返回行 (如 select 语句), 则可以使用**请求. on ()** 函数来检索它们。 如果没有任何行, 则 request. on () 函数返回空列表。  
+所有 SQL 语句都是使用 new Request() 函数执行的。 如果语句返回了行（如 SELECT 语句），你可以使用 request.on() 函数检索这些行。 如果未返回行，request.on() 函数返回空列表。  
   
   
 ```javascript  
@@ -111,7 +111,7 @@ ms.locfileid: "68419255"
     }  
 ```  
   
-## <a name="step-3-insert-a-row"></a>步骤 3: 插入行  
+## <a name="step-3-insert-a-row"></a>步骤 3：插入行  
   
 此示例展示了如何安全执行 [INSERT](../../t-sql/statements/insert-transact-sql.md) 语句，并传递用于保护应用程序免遭 [SQL 注入](../../relational-databases/tables/primary-and-foreign-key-constraints.md)值影响的参数。    
   

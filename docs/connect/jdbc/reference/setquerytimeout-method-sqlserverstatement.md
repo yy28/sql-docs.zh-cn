@@ -1,5 +1,5 @@
 ---
-title: setQueryTimeout 方法 (SQLServerStatement) |Microsoft Docs
+title: setQueryTimeout 方法 (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 0c513265-cd0c-4b38-9494-94458c17a16d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9a4a271e07dea5a533dcb19b098a3e3de29e535e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973179"
 ---
 # <a name="setquerytimeout-method-sqlserverstatement"></a>setQueryTimeout 方法 (SQLServerStatement)
@@ -34,16 +34,16 @@ ms.locfileid: "67973179"
 public final void setQueryTimeout(int seconds)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *seconds*  
   
  指示要等待秒数的 int  ，如果没有限制，则为 0。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 setQueryTimeout 方法由 setQueryTimeout 方法在 .sql 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 setQueryTimeout 方法是由 java.sql.Statement 接口中的 setQueryTimeout 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerStatement 成员](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

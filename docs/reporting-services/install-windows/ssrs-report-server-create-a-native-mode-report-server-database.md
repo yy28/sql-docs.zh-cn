@@ -1,8 +1,10 @@
 ---
-title: 创建本机模式报表服务器数据库（SSRS 配置管理器）| Microsoft Docs
-ms.date: 05/24/2018
+title: 创建本机模式报表服务器数据库（配置管理器）| Microsoft Docs
+description: 本机模式 Reporting Services 将 SQL Server 数据库用于内部存储。 该数据库是必需的，它用于存储已发布的报表、模型、共享数据源、会话数据、资源和服务器元数据。
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], databases
@@ -10,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5b80a7e6ee0d68009ff21f01ba0c75b3f0a7fb33
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: dbe8c7f4d755d18c0baa01f5f6ef37601292047b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593558"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866328"
 ---
-# <a name="create-a-native-mode-report-server-database"></a>创建本机模式报表服务器数据库
+# <a name="create-a-native-mode-report-server-database-ssrs-configuration-manager"></a>创建本机模式报表服务器数据库（SSRS 配置管理器）
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
 
@@ -65,7 +67,7 @@ ms.locfileid: "73593558"
   
 5.  右键单击“TCP/IP”，并选择“已启用”   。  
   
-6.  重新启动服务。  
+6.  重启服务。  
   
 7.  打开防火墙软件并打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 侦听的端口。 对于默认实例，此端口通常为用于 TCP/IP 连接的 1433 端口。 有关详细信息，请参阅 [为数据库引擎访问配置 Windows 防火墙](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)。  
   
@@ -85,7 +87,7 @@ ms.locfileid: "73593558"
   
     3.  选择“测试连接”，验证与服务器的连接  。  
   
-    4.  选择“下一步”  。  
+    4.  选择“**下一页**”。  
   
 5.  指定用于创建数据库的属性。 有关如何使用这些属性的详细信息，请参阅本主题中的 [开始之前](#rsdbrequirements) ：  
   
@@ -95,7 +97,7 @@ ms.locfileid: "73593558"
   
     3.  报表服务器模式始终设置为 **“本机”** 。  
   
-    4.  选择“下一步”  。  
+    4.  选择“**下一页**”。  
   
 6.  指定报表服务器用来连接到报表服务器数据库的凭据。  
   
@@ -107,7 +109,7 @@ ms.locfileid: "73593558"
   
          如果希望报表服务器使用其自身的服务帐户进行连接，则选择 **“服务凭据”** 。 使用此选项，该服务器将使用集成安全性进行连接；凭据不进行加密或存储。  
   
-    2.  选择“下一步”  。  
+    2.  选择“**下一页**”。  
   
 7.  检查“摘要”页上的信息以确保设置正确，然后选择“下一步”  。  
   
@@ -127,7 +129,7 @@ ms.locfileid: "73593558"
   
     2.  选择“测试连接”，验证与服务器的连接  。  
   
-    3.  选择“下一步”  。  
+    3.  选择“**下一页**”。  
 
 4.  指定报表服务器用来连接到报表服务器数据库的凭据。  
   
@@ -139,7 +141,7 @@ ms.locfileid: "73593558"
   
          如果希望报表服务器使用其自身的服务帐户进行连接，则选择 **“服务凭据”** 。 使用此选项，该服务器将使用集成安全性进行连接；凭据不进行加密或存储。  
   
-    2.  选择“下一步”  。 
+    2.  选择“**下一页**”。 
 
 5. 检查设置，然后选择“下一步”  。
 

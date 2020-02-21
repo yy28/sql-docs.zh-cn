@@ -14,16 +14,16 @@ ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 40e4fb9280d7ff9d05412966487997f507fb3dc7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65503090"
 ---
 # <a name="feature-reference-reporting-services"></a>功能参考 (Reporting Services)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包括可用于创建、管理和查看报表的若干工具和应用程序。 本部分提供了介绍这些工具和应用程序的对话框、网页和向导的特定主题。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包括几个可用于创建、管理和查看报表的工具和应用程序。 本部分提供了介绍这些工具和应用程序的对话框、网页和向导的特定主题。  
   
- 若要在工具或应用程序运行时访问某个用户界面主题，请在对话框、网页或向导处于打开状态时按 F1 或单击 **“帮助”** 。 有关启动 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 工具的详细信息，请参阅[教程：如何查找和启动 Reporting Services 工具 (SSRS)](../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md)。  
+ 若要在工具或应用程序运行时访问某个用户界面主题，请在对话框、网页或向导处于打开状态时按 F1 或单击 **“帮助”** 。 若要详细了解如何启动 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 工具，请参阅[教程：如何查找并启动 Reporting Services 工具 &#40;SSRS&#41;](../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [报表设计器的 F1 帮助](../reporting-services/tools/report-designer-f1-help.md)  
@@ -33,7 +33,7 @@ ms.locfileid: "65503090"
  提供用于部署和管理报表服务器实例的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 配置工具的帮助。  
   
  [Management Studio 中报表服务器的 F1 帮助](../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
- 提供 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]中用于管理报表和报表服务器的对话框的帮助。  
+ 为用于在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 中管理报表和报表服务器的对话框提供帮助。  
   
  [HTML 查看器和报表工具栏](../reporting-services/html-viewer-and-the-report-toolbar.md)  
  提供用于在 Web 浏览器中查看报表的 HTML 查看器组件的帮助。  

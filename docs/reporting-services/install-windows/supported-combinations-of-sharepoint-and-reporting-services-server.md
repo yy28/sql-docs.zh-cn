@@ -1,8 +1,10 @@
 ---
 title: 支持的 SharePoint 和 Reporting Services 服务器组合 | Microsoft Docs
-ms.date: 07/01/2017
+description: 在 SharePoint 模式下安装的 SQL Server Reporting Services 报表服务器需要在 SharePoint 服务器上安装的 SharePoint 版本和用于 SharePoint 产品的 SQL Server Reporting Services 加载项 (rsSharePoint.msi)。
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint mode
@@ -12,12 +14,12 @@ ms.assetid: dc6a3372-db26-43f0-b7aa-f725acc635c2
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 59cd04ffa97005edc1e957ed4fcefb66685c2256
-ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
-ms.translationtype: MTE75
+ms.openlocfilehash: 56da894b141733357ff33ec820073c52836e4cca
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68995863"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866060"
 ---
 # <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>支持的 SharePoint 和 Reporting Services 服务器组合
 
@@ -59,7 +61,7 @@ ms.locfileid: "68995863"
 
  有关外接程序下载页的链接，请参阅 [在何处查找用于 SharePoint 产品的 Reporting Services 外接程序](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
 
- 其他注意事项： 
+ 其他注意事项：
 
 - 请确保升级，以升级场中所有的 SharePoint 服务器。 这包括应用和 Web 前端服务器。
 
@@ -71,7 +73,7 @@ ms.locfileid: "68995863"
 
 - SQL Server 2012（或更高版本）报表服务器不支持 SQL Server 2008 R2 外接程序。 SharePoint 2010 必备组件安装程序会自动安装 SQL Server 2008 R2 外接程序。 必须在安装外接程序的更新版本前卸载它。 不支持外接程序的就地升级。
 
-- **升级：** 装有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序的 SharePoint 2010 无法就地升级到 SharePoint 2013。 SharePoint 2013 需要 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 加载项和报表服务器的 SQL Server 2012 SP1 或更高版本。 有关升级的详细信息，请参阅 [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)。
+- **升级：** 装有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 加载项的 SharePoint 2010 无法就地升级到 SharePoint 2013。 SharePoint 2013 需要 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 加载项和报表服务器的 SQL Server 2012 SP1 或更高版本。 有关升级的详细信息，请参阅 [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)。
 
 ## <a name="next-steps"></a>后续步骤
 

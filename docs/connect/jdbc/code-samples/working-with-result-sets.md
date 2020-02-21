@@ -1,5 +1,5 @@
 ---
-title: 使用结果集 |Microsoft Docs
+title: 处理结果集 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 4fc4b1c6-3075-4ad7-9244-865d9ede7ae6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 44eac2fbcc156b3591bdf02fd00ff0d6bd19366b
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028243"
 ---
 # <a name="working-with-result-sets"></a>处理结果集
@@ -26,13 +26,13 @@ ms.locfileid: "69028243"
 此外，SQLServerResultSet 对象还提供了多种方法，可用于在其数据行中进行导航、获取或设置其中包含的数据，以及建立针对基础数据库中更改的各种敏感度级别。  
   
 > [!NOTE]  
-> 有关管理结果集的详细信息 (包括其更改敏感度), 请参阅[通过 JDBC 驱动程序管理结果集](../../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)。  
+> 有关管理结果集的详细信息（包括其更改敏感度），请参阅[通过 JDBC 驱动程序管理结果集](../../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)。  
   
 此部分的主题说明了使用结果集来处理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中所包含数据的各种方法。  
   
 ## <a name="in-this-section"></a>在本节中  
   
-| 主题                                                                                           | 描述                                                                                                                                                                                             |
+| 主题                                                                                           | 说明                                                                                                                                                                                             |
 | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [检索结果集数据的示例](../../../connect/jdbc/code-samples/retrieving-result-set-data-sample.md) | 说明如何使用结果集从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中检索数据，并将其显示出来。                                                         |
 | [修改结果集数据的示例](../../../connect/jdbc/code-samples/modifying-result-set-data-sample.md)   | 说明如何使用结果集在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中插入、检索和修改数据。                                                      |

@@ -1,37 +1,46 @@
 ---
 title: 下载用于脱机安装的更新
-description: 下载适用于 SQL Server 机器学习服务和 SQL Server 2016 R Services 的 R 和 Python CAB 以及包文件。
+description: 下载适用于 SQL Server 机器学习服务的 Python 和 R CAB 文件。 这些 CAB 文件包含对机器学习服务（Python 和 R）功能的更新，在不访问 Internet 的服务器上安装 SQL Server 时，可以使用这些文件。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/30/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e7266d90e04071c242145fc0df2e59ce86d86a16
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: b2b84349e60bf89a066fb2157a9c521d7be8ecbd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727623"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75776518"
 ---
-# <a name="cab-downloads-for-cumulative-updates-of-sql-server-in-database-analytics-instances"></a>SQL Server 数据库内分析实例上的累积更新的 CAB 下载
+# <a name="cab-downloads-for-cumulative-updates-of-sql-server-machine-learning-services"></a>SQL Server 机器学习服务的累积更新的 CAB 下载
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-为数据库内分析配置的 SQL Server 实例包括 R 和 Python 功能。 这些功能随附在 CAB 文件中，可通过 SQL Server 安装程序进行安装和维护。 在连接 Internet 的设备上，通常是通过 Windows 更新应用 CAB 更新。 在断开连接的服务器上，必须手动下载和应用 CAB 文件。 
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+下载适用于 SQL Server 机器学习服务的 Python 和 R CAB 文件。 这些 CAB 文件包含对机器学习服务（Python 和 R）功能的更新，在不访问 Internet 的服务器上安装 SQL Server 时，可以使用这些文件。
+::: moniker-end
 
-本文提供了每个累积更新的 CAB 文件的下载链接。 有关脱机安装的详细信息，请参阅[在没有 Internet 访问权限的情况下安装 SQL Server 机器学习组件](sql-ml-component-install-without-internet-access.md#apply-cu)。
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+下载适用于 SQL Server 2016 R Services 的 Python 和 R CAB 文件。 这些 CAB 文件包含对 R Services 功能的更新，在不访问 Internet 的服务器上安装 SQL Server 时，可以使用这些文件。
+::: moniker-end
+
+下面提供了每个累积更新的 CAB 文件的下载链接。 有关脱机安装的详细信息，请参阅[在没有 Internet 访问权限的情况下安装 SQL Server 机器学习组件](sql-ml-component-install-without-internet-access.md#apply-cu)。
 
 ## <a name="prerequisites"></a>必备条件
 
-开始使用基线安装。
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+开始使用基线安装。 在 SQL Server 机器学习服务上，初始版本为基线安装。 
+::: moniker-end
 
-+ 在 SQL Server 机器学习服务上，初始版本为基线安装。 
-+ 在 SQL Server 2016 R Services 上，可从初始版本、SP1 或 SP2 开始。 
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+开始使用基线安装。  在 SQL Server 2016 R Services 上，可从初始版本、SP1 或 SP2 开始。 
+::: moniker-end
 
-还可将累积更新应用于独立服务器。
+也可以应用累积更新。
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
@@ -39,7 +48,7 @@ ms.locfileid: "73727623"
 
 CAB 文件按时间倒序列出。 下载 CAB 文件并将其传输到目标计算机时，请将其放置在方便找到的文件夹中，例如“下载”或安装程序用户的 %temp% 文件夹  。
 
-|发行版本  |组件 | 下载链接  | 解决的问题 | 
+|发布  |组件 | 下载链接  | 解决的问题 | 
 |---------|----------|----------------|------------------|
 |**[SQL Server 2017 CU14](https://support.microsoft.com/help/4484710/)-[CU15](https://support.microsoft.com/help/4498951/)-[CU16](https://support.microsoft.com/help/4508218/)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073898&clcid=1033)| 包中的二进制文件现已签名。 |
@@ -94,7 +103,7 @@ CAB 文件按时间倒序列出。 下载 CAB 文件并将其传输到目标计�
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
 <a name="bkmk_2016Installers"></a>
 
@@ -102,7 +111,7 @@ CAB 文件按时间倒序列出。 下载 CAB 文件并将其传输到目标计�
 
 对于 SQL Server 2016 R Services，基线版本是 RTM 版本或 Service Pack 版本。
 
-|发行版本  |下载链接  |
+|发布  |下载链接  |
 |---------|---------------|
 |**SQL Server 2016 SP2 CU6**     |
 |Microsoft R Open     |[SRO_3.2.2.20100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2079936&clcid=1033)|

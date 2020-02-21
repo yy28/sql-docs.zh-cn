@@ -1,6 +1,7 @@
 ---
-title: SQL Server 使用情况和诊断数据收集的本地审核 | Microsoft Docs
-ms.custom: ''
+title: 使用情况和诊断数据收集的本地审核
+description: 了解由 SQL Server 用于收集使用情况和诊断数据并将其发送给 Microsoft 的本地审核。
+ms.custom: seo-lt-2019
 ms.date: 03/27/2019
 ms.prod: sql
 ms.prod_service: security
@@ -13,24 +14,24 @@ ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3c7697d72aa98429bdaff64044f447dd11384f6d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b34d69ea0d402f568efa4e6951367cce3cfa0eca
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984765"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75558033"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>SQL Server 使用情况和诊断数据收集的本地审核 (CEIP)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-## <a name="introduction"></a>简介
+## <a name="introduction"></a>介绍
 
 Microsoft SQL Server 包含了一些支持 Internet 的功能，可以收集和发送关于计算机或设备的信息。 这被称为“标准计算机信息”  。 [SQL Server 使用情况和诊断数据收集](usage-and-diagnostic-data-configuration-for-sql-server.md)的本地审核组件将服务收集的数据（表示将发送给 Microsoft 的数据（日志））写入指定文件夹。 本地审核的用途是，便于客户出于合规性、监管或隐私验证原因，查看 Microsoft 使用此功能收集的所有数据。  
 
 自 SQL Server 2016 CU2 起，可以在实例一级为 SQL Server 数据库引擎和 SQL Server Analysis Services (SSAS) 配置本地审核。 在 SQL Server 2016 CU4 和 SQL Server 2016 SP1 中，SQL Server Integration Services (SSIS) 也启用了本地审核。 在安装过程中安装的其他 SQL Server 组件，以及在安装后下载或安装的 SQL Server 工具没有使用情况和诊断数据收集的本地审核功能。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
  - 不支持删除或禁用 SQL CEIP 服务。 
  - 不支持从群集组中删除 SQL CEIP 资源。 
@@ -93,7 +94,7 @@ Microsoft SQL Server 包含了一些支持 Internet 的功能，可以收集和�
 
 1. 在“安全性”选项卡上，选择“编辑”以管理权限   。
 
-1. 选择“添加”  ，并键入 SQL Server CEIP 服务的凭据。 例如 `NT Service\SQLTELEMETRY`。
+1. 选择“添加”  ，并键入 SQL Server CEIP 服务的凭据。 例如，`NT Service\SQLTELEMETRY`。
 
 1. 选择“检查名称”以验证所提供的名称，然后选择“确定”   。
 
@@ -111,19 +112,22 @@ Microsoft SQL Server 包含了一些支持 Internet 的功能，可以收集和�
    | :------ | :----------------------------- |
    | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL13.Your-Instance-Name\\CPE   |
    | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL14.Your-Instance-Name\\CPE   |
+   | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL15  .Your-Instance-Name  \\CPE |
    | &nbsp; | &nbsp; |
 
    | 版本 | Analysis Services - 注册表项 |
    | :------ | :------------------------------- |
    | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS13.Your-Instance-Name\\CPE   |
    | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS14.Your-Instance-Name\\CPE   |
+   | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS15  .Your-Instance-Name  \\CPE |  
    | &nbsp; | &nbsp; |
 
-  | 版本 | Integration Services - 注册表项 |
-  | :------ | :---------------------------------- |
-  | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\130  |
-  | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\140  |
-  | &nbsp; | &nbsp; |
+   | 版本 | Integration Services - 注册表项 |
+   | :------ | :---------------------------------- |
+   | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\130  |
+   | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\140  |
+   | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\150  |
+   | &nbsp; | &nbsp; |
 
 1. 右键单击 CPE 路径并选择“新建”  。 选择“字符串值”  。
 
@@ -156,6 +160,7 @@ Microsoft SQL Server 包含了一些支持 Internet 的功能，可以收集和�
     - 对于 Integration Services， 
         - 对于 SQL 2016，使用 SQL Server Integration Services CEIP 服务 13.0  。
         - 对于 SQL 2017，使用 SQL Server Integration Services CEIP 服务 14.0  。
+    - 对于 SQL 2019，使用 SQL Server Integration Services CEIP 服务 15.0  。
 
 1. 右键单击服务，然后选择“重新启动”。 
 
@@ -185,18 +190,18 @@ Microsoft SQL Server 包含了一些支持 Internet 的功能，可以收集和�
 
 | 逻辑本地审核信息层次结构 | 相关列 |
 | ------ | -------|
-| 标题 | emitTime、schemaVersion 
+| 标头 | emitTime、schemaVersion 
 | 计算机 | operatingSystem 
 | 实例 | instanceUniqueID、correlationID、clientVersion 
-| Session | sessionID、traceName 
+| 会话 | sessionID、traceName 
 | 查询 | sequence、querySetVersion、queryIdentifier、query、queryTimeInTicks 
-| data |  data 
+| 数据 |  data 
 
 ### <a name="namevalue-pairs-definition-and-examples"></a>名称/值对定义和示例 
 
 下面各列表示本地审核文件输出的顺序。 采用 SHA 256 的单向哈希常常是下面一些列的匿名值。  
 
-| “属性” | 描述 | 示例值
+| 名称 | 说明 | 示例值
 |-------|--------| ----------|
 |instanceUniqueID| 匿名实例标识符 | 888770C4D5A8C6729F76F33D472B28883AE518C92E1999888B171A085059FD 
 |schemaVersion| SQLCEIP 的架构版本 |  3 
@@ -210,7 +215,7 @@ Microsoft SQL Server 包含了一些支持 Internet 的功能，可以收集和�
 |traceName | 跟踪的类别：（SQLServerXeQueries、SQLServerPeriodicQueries、SQLServerOneSettingsException） | SQLServerPeriodicQueries 
 |queryIdentifier | 查询的标识符 | SQLServerProperties.002 
 |data   | 以 T-SQL 查询、XE 会话或应用程序输出的形式，对 queryIdentifier 收集的信息的输出 |  [{"Collation":"SQL_Latin1_General_CP1_CI_AS","SqlFTinstalled":"0" "SqlIntSec":"1","IsSingleUser":"0","SqlFilestreamMode":"0","SqlPbInstalled":"0","SqlPbNodeRole": "","SqlVersionMajor":"13","SqlVersionMinor":"0","SqlVersionBuild":"2161","ProductBuildType": "","ProductLevel":"RTM","ProductUpdateLevel":"CU2","ProductUpdateReference":"KB3182270","ProductRevision":"3","SQLEditionId": "-1534726760","IsClustered":"0","IsHadrEnabled":"0","SqlAdvAInstalled":"0","PacketReceived":"1210","Version":"Microsoft SQL Server 2016 (RTM-CU2) (KB3182270) - 13.0.2161.3 (X64) \n\tSep  7 2016 14:24:16 \n\tCopyright (c) Microsoft Corporation\n\tStandard Edition (64-bit) on Windows Server 2012 R2 Datacenter 6.3 \u003cX64\u003e (Build 9600: ) (Hypervisor)\n"}],
-|Query| 如果适用，是与生成数据的 queryIdentifier 相关的 T-SQL 查询定义。        此组件不会由 SQL Server CEIP 服务上传。 它包含在本地审核中，仅供客户参考。| SELECT\n      SERVERPROPERTY(\u0027Collation\u0027) AS [Collation],\n      SERVERPROPERTY(\u0027IsFullTextInstalled\u0027) AS [SqlFTinstalled],\n      SERVERPROPERTY(\u0027IsIntegratedSecurityOnly\u0027) AS [SqlIntSec],\n      SERVERPROPERTY(\u0027IsSingleUser\u0027) AS [IsSingleUser],\n      SERVERPROPERTY (\u0027FileStreamEffectiveLevel\u0027) AS [SqlFilestreamMode],\n      SERVERPROPERTY(\u0027IsPolyBaseInstalled\u0027) AS [SqlPbInstalled],\n      SERVERPROPERTY(\u0027PolyBaseRole\u0027) AS [SqlPbNodeRole],\n      SERVERPROPERTY(\u0027ProductMajorVersion\u0027) AS [SqlVersionMajor],\n      SERVERPROPERTY(\u0027ProductMinorVersion\u0027) AS [SqlVersionMinor],\n      SERVERPROPERTY(\u0027ProductBuild\u0027) AS [SqlVersionBuild],\n      SERVERPROPERTY(\u0027ProductBuildType\u0027) AS ProductBuildType,\n      SERVERPROPERTY(\u0027ProductLevel\u0027) AS ProductLevel,\n      SERVERPROPERTY(\u0027ProductUpdateLevel\u0027) AS ProductUpdateLevel,\n      SERVERPROPERTY(\u0027ProductUpdateReference\u0027) AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)),CHARINDEX(\u0027.\u0027, REVERSE(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY(\u0027EditionID\u0027) AS SQLEditionId,\n      SERVERPROPERTY(\u0027IsClustered\u0027) AS IsClustered,\n      SERVERPROPERTY(\u0027IsHadrEnabled\u0027) AS IsHadrEnabled,\n      SERVERPROPERTY(\u0027IsAdvancedAnalyticsInstalled\u0027) AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version
+|query| 如果适用，是与生成数据的 queryIdentifier 相关的 T-SQL 查询定义。        此组件不会由 SQL Server CEIP 服务上传。 它包含在本地审核中，仅供客户参考。| SELECT\n      SERVERPROPERTY(\u0027Collation\u0027) AS [Collation],\n      SERVERPROPERTY(\u0027IsFullTextInstalled\u0027) AS [SqlFTinstalled],\n      SERVERPROPERTY(\u0027IsIntegratedSecurityOnly\u0027) AS [SqlIntSec],\n      SERVERPROPERTY(\u0027IsSingleUser\u0027) AS [IsSingleUser],\n      SERVERPROPERTY (\u0027FileStreamEffectiveLevel\u0027) AS [SqlFilestreamMode],\n      SERVERPROPERTY(\u0027IsPolyBaseInstalled\u0027) AS [SqlPbInstalled],\n      SERVERPROPERTY(\u0027PolyBaseRole\u0027) AS [SqlPbNodeRole],\n      SERVERPROPERTY(\u0027ProductMajorVersion\u0027) AS [SqlVersionMajor],\n      SERVERPROPERTY(\u0027ProductMinorVersion\u0027) AS [SqlVersionMinor],\n      SERVERPROPERTY(\u0027ProductBuild\u0027) AS [SqlVersionBuild],\n      SERVERPROPERTY(\u0027ProductBuildType\u0027) AS ProductBuildType,\n      SERVERPROPERTY(\u0027ProductLevel\u0027) AS ProductLevel,\n      SERVERPROPERTY(\u0027ProductUpdateLevel\u0027) AS ProductUpdateLevel,\n      SERVERPROPERTY(\u0027ProductUpdateReference\u0027) AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)),CHARINDEX(\u0027.\u0027, REVERSE(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY(\u0027EditionID\u0027) AS SQLEditionId,\n      SERVERPROPERTY(\u0027IsClustered\u0027) AS IsClustered,\n      SERVERPROPERTY(\u0027IsHadrEnabled\u0027) AS IsHadrEnabled,\n      SERVERPROPERTY(\u0027IsAdvancedAnalyticsInstalled\u0027) AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version
 |queryTimeInTicks | 执行具有以下跟踪类别的查询所需的持续时间：（SQLServerXeQueries、SQLServerPeriodicQueries） |  0 
  
 ### <a name="trace-categories"></a>跟踪类别 
@@ -306,7 +311,7 @@ Microsoft SQL Server 包含了一些支持 Internet 的功能，可以收集和�
   }
 ]
 ```
-## <a name="frequently-asked-questions"></a>常见问题解答
+## <a name="frequently-asked-questions"></a>常见问题
 
 **DBA 如何读取本地审核日志文件？**
 这些日志文件以 JSON 格式写入。 每行都是一个 JSON 对象，表示上传到 Microsoft 的一段使用情况/诊断数据。 字段名称应该浅显易懂。

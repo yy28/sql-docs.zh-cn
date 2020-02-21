@@ -1,27 +1,26 @@
 ---
-title: 快速入门：创建 Python 脚本
-titleSuffix: SQL Server Machine Learning Services
-description: 通过 SQL Server 机器学习服务在 SQL Server 实例中创建和运行简单的 Python 脚本。
+title: 快速入门：运行 Python 脚本
+description: 使用 SQL Server 机器学习服务运行一组简单的 Python 脚本。 了解如何在 SQL Server 实例中使用存储过程 sp_execute_external_script 执行该脚本。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8409eaf8129d7c8eb2eecd5a1157a17444341734
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 8c1347d58f0b8a4014a51a220b6ecded5a343082
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727032"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831917"
 ---
-# <a name="quickstart-create-and-run-simple-python-scripts-with-sql-server-machine-learning-services"></a>快速入门：通过 SQL Server 机器学习服务创建和运行简单的 Python 脚本
+# <a name="quickstart-run-simple-python-scripts-with-sql-server-machine-learning-services"></a>快速入门：通过 SQL Server 机器学习服务运行简单的 Python 脚本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-在本快速入门中，使用 [SQL Server 机器学习服务](../what-is-sql-server-machine-learning.md)创建并运行一组简单的 Python 脚本。 可了解如何在存储过程 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 中包装格式标准的 Python 脚本，并在一个 SQL Server 实例中执行该脚本。
+在本快速入门中，将使用 [SQL Server 机器学习服务](../what-is-sql-server-machine-learning.md)运行一组简单的 Python 脚本。 你将了解如何在 SQL Server 实例中使用存储过程 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 执行该脚本。
 
 ## <a name="prerequisites"></a>必备条件
 
@@ -159,7 +158,7 @@ GO
     请注意 Python 区分大小写。 Python 脚本中使用的输入和输出变量（SQL_out、SQL_in）需要匹配使用 `@input_data_1_name` 和 `@output_data_1_name` 定义的名称，包括大小写   。
 
    > [!TIP]
-   > 仅可将一个输入数据集作为参数传递，且仅可返回一个数据集。 但是，可以从 Python 代码内调用其他数据集，并且除数据集以外，还可以返回其他类型的输出。 还可以向任何参数添加 OUTPUT 关键字，使其随结果一起返回。
+   > 只能将一个输入数据集作为参数传递，并且只能返回一个数据集。 但是，可以从 Python 代码内调用其他数据集，并且除数据集以外，还可以返回其他类型的输出。 也可向任何参数添加 OUTPUT 关键字，让该参数随结果一起返回。
 
 1. 还可以仅使用没有输入数据的 Python 脚本（`@input_data_1` 设置为空白）生成值。
 
@@ -225,40 +224,27 @@ Microsoft 在 SQL Server 实例中提供了许多随 SQL Server 机器学习服�
 ```SQL
 EXECUTE sp_execute_external_script @language = N'Python'
     , @script = N'
-import pip
-for i in pip.get_installed_distributions():
-    print(i)
+import pkg_resources
+import pandas
+dists = [str(d) for d in pkg_resources.working_set]
+OutputDataSet = pandas.DataFrame(dists)
 '
+WITH RESULT SETS(([Package] NVARCHAR(max)))
 GO
 ```
 
-输出来自 Python 中的 `pip.get_installed_distributions()`，并作为 `STDOUT` 消息返回。
+此列表来自 Python 中的 `pkg_resources.working_set`，并作为数据帧返回到 SQL。
 
 **结果**
 
-```text
-STDOUT message(s) from external script:
-xlwt 1.2.0
-XlsxWriter 0.9.6
-xlrd 1.0.0
-win-unicode-console 0.5
-widgetsnbextension 2.0.0
-wheel 0.29.0
-Werkzeug 0.12.1
-wcwidth 0.1.7
-unicodecsv 0.14.1
-traitlets 4.3.2
-tornado 4.4.2
-toolz 0.8.2
-. . .
-```
+:::image type="content" source="media/python-package-list.png" alt-text="已安装的 Python 包的列表":::
 
 ## <a name="next-steps"></a>后续步骤
 
 若要了解在 SQL Server 机器学习服务中使用 Python 时如何使用数据结构，请按照此快速入门操作：
 
 > [!div class="nextstepaction"]
-> [在 SQL Server 机器学习服务中使用 Python 处理数据类型和对象](quickstart-python-data-structures.md)
+> [快速入门：在 SQL Server 机器学习服务中使用 Python 处理数据结构和对象](quickstart-python-data-structures.md)
 
 有关在 SQL Server 机器学习服务中使用 Python 的详细信息，请参阅以下文章：
 

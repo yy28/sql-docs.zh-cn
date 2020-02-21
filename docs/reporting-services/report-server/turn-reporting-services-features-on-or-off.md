@@ -12,10 +12,10 @@ ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 67945db1fd131b27b37a7e34853987c38fad8d84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140373"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>打开或关闭 Reporting Services 功能
@@ -96,7 +96,7 @@ ms.locfileid: "67140373"
   
 ##  <a name="WebPortal"></a>Web 门户
   
-从 SQL Server 2016 Reporting Services 累积更新 2，开始将始终启用 web 门户。
+从 SQL Server 2016 Reporting Services 累积更新 2 开始，将始终启用 Web 门户。
   
 ##  <a name="WinIntSec"></a> Windows 集成安全性  
   

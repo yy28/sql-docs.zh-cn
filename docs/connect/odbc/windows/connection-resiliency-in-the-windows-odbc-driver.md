@@ -11,10 +11,10 @@ ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: eecf4868791a9dcd963a31963f742f90a2cf3843
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68008431"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Windows ODBC 驱动程序中的连接弹性
@@ -35,11 +35,11 @@ ms.locfileid: "68008431"
   
      在以下情况下可以修改连接重试次数：  
   
-    -   定义或修改一个将 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 与“连接重试计数”  控件结合使用的数据源。  
+    -   定义或修改一个将 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 与“连接重试计数” 控件结合使用的数据源。  
   
     -   使用 **ConnectRetryCount** 连接字符串关键字。  
   
-     若要检索连接重试尝试的次数，请使用 SQL_COPT_SS_CONNECT_RETRY_COUNT（只读）连接属性  。 如果应用程序连接到的服务器并不支持连接复原，SQL_COPT_SS_CONNECT_RETRY_COUNT 将返回 0  。  
+     若要检索连接重试尝试的次数，请使用 SQL_COPT_SS_CONNECT_RETRY_COUNT（只读）连接属性。 如果应用程序连接到的服务器并不支持连接复原，SQL_COPT_SS_CONNECT_RETRY_COUNT 将返回 0。  
   
 -   连接重试间隔。  
   
@@ -47,21 +47,21 @@ ms.locfileid: "68008431"
   
      在以下情况下可以修改连接重试间隔：  
   
-    -   定义或修改一个将 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 与“连接重试间隔”  控件结合使用的数据源。  
+    -   定义或修改一个将 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 与“连接重试间隔” 控件结合使用的数据源。  
   
     -   使用 **ConnectRetryInterval** 连接字符串关键字。  
   
-     若要检索连接重试间隔的时间长度，请使用 SQL_COPT_SS_CONNECT_RETRY_INTERVAL（只读）连接属性  。  
+     若要检索连接重试间隔的时间长度，请使用 SQL_COPT_SS_CONNECT_RETRY_INTERVAL（只读）连接属性。  
   
  如果应用程序建立与 SQL_DRIVER_COMPLETE_REQUIRED 的连接，并稍后尝试通过断开的连接执行语句，ODBC 驱动程序将不再显示该对话框。 此外，在恢复正在进行期间，  
   
--   在恢复期间，任何对 SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD) 的调用都必须返回 SQL_CD_FALSE   。  
+-   在恢复期间，任何对 SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD) 的调用都必须返回 SQL_CD_FALSE。  
   
--   如果恢复失败，任何对 SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD) 的调用都必须返回 SQL_CD_TRUE   。  
+-   如果恢复失败，任何对 SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD) 的调用都必须返回 SQL_CD_TRUE。  
   
  在服务器上执行命令的任何函数都会返回以下状态代码：  
   
-|State|消息|  
+|状态|消息|  
 |-----------|-------------|  
 |IMC01|连接已断开，且不能恢复。 客户端驱动程序尝试一次或多次恢复连接，但所有尝试均失败。 增大 ConnectRetryCount 的值以增加恢复尝试的次数。|  
 |IMC02|服务器未收到恢复尝试，无法恢复连接。|  
@@ -71,7 +71,7 @@ ms.locfileid: "68008431"
 |IMC06|连接已断开，且不能恢复。 客户端驱动程序将连接标记为不可恢复。 未尝试还原连接。|  
   
 ## <a name="example"></a>示例  
- 以下示例包含两个函数。 func1 演示如何通过使用 Windows 上的 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的数据源名称 (DSN) 建立连接  。 DSN 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证，并指定用户 ID。 然后, **func1**检索与**SQL_COPT_SS_CONNECT_RETRY_COUNT**的连接重试次数。  
+ 以下示例包含两个函数。 func1 演示如何通过使用 Windows 上的 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的数据源名称 (DSN) 建立连接。 DSN 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证，并指定用户 ID。 然后，func1 使用 SQL_COPT_SS_CONNECT_RETRY_COUNT 检索连接重试次数。  
   
  **func2** 使用 **SQLDriverConnect**、 **ConnectRetryCount** 连接字符串关键字和连接属性，检索连接重试和重试间隔的设置。  
   
@@ -173,6 +173,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Microsoft ODBC Driver for SQL Server（Windows 平台）](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  
+ [Windows 上的 Microsoft ODBC Driver for SQL Server](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  
   
   

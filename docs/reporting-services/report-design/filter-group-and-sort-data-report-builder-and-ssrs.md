@@ -18,10 +18,10 @@ ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0012f01fead8d6890f8e593f4991cbb0252e3dd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576528"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>对数据进行筛选、分组和排序（报表生成器和 SSRS）
@@ -85,7 +85,7 @@ ms.locfileid: "65576528"
   
  组名标识表达式作用域。 可将组名指定为要在其中计算聚合的作用域，以便按层次结构方式组织数据，并切换明细报表中父节点的子节点的显示；在多个数据区域中显示相同数据的不同视图；在表、矩阵、图表、仪表或地图中可视化摘要数据。 有关详细信息，请参阅 [总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
   
- 若要根据若干数据集字段进行分组，请将每个字段添加到组表达式集合。 您还可以在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]中编写您自己的组表达式。 例如，您可以按照值范围进行分组，或者通过使用报表参数使用户能够选择对数据区域中的数据进行分组的方式。 有关详细信息，请参阅 [组表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)。  
+ 若要根据若干数据集字段进行分组，请将每个字段添加到组表达式集合。 还可以在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中编写你自己的组表达式。 例如，您可以按照值范围进行分组，或者通过使用报表参数使用户能够选择对数据区域中的数据进行分组的方式。 有关详细信息，请参阅 [组表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)。  
   
  在报表显示方面，可以在各组或组的每个实例前后添加分页符，以减少每页中的数据量，帮助管理报表呈现性能。 有关详细信息，请参阅[添加分页符（报表生成器和 SSRS）](../../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md)。  
   
@@ -107,12 +107,12 @@ ms.locfileid: "65576528"
   
  所有三种排序类型均可在同一报表中组合使用。 默认情况下，排序顺序取决于数据集查询返回数据的顺序。 排序表达式应用于数据区域和数据区域组。 交互式排序在排序表达式后应用。  
   
- 对于包含聚合函数的表达式，大多数结果不受排序顺序的影响。 聚合函数 First、Last 和 Previous 的返回值会受到排序顺序的影响。 有关详细信息，请参阅 [聚合函数引用（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)。  
+ 对于包含聚合函数的表达式，大多数结果不受排序顺序的影响。 以下聚合函数的返回值受排序顺序影响：First、Last 和 Previous。 有关详细信息，请参阅 [聚合函数引用（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)。  
   
 ### <a name="sorting-data-in-a-dataset-query"></a>在数据集查询中对数据进行排序  
  在数据集查询中包括排序顺序可在为报表检索数据之前对数据进行预排序。 通过在查询中对数据进行排序，排序工作将由数据源而非报表处理器完成。  
   
- 对于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源类型，您可以向数据集查询添加 ORDER BY 子句。 例如，以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询对表 SalesOrders 中的 Sales 和 Region 列按 Sales 进行降序排序： `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`。  
+ 对于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源类型，可以向数据集查询添加 ORDER BY 子句。 例如，以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询对表 SalesOrders 中的 Sales 和 Region 列按 Sales 进行降序排序： `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`。  
   
 > [!NOTE]  
 >  并非所有数据源都支持在查询中指定排序顺序的功能。  

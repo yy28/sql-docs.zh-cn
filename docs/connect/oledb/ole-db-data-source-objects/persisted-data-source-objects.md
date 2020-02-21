@@ -1,5 +1,5 @@
 ---
-title: 持久化数据源对象 |Microsoft Docs
+title: 持久化数据源对象 | Microsoft Docs
 description: 持久化数据源对象
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: c8ba02b1b459e3f1381138eaa708658b317cd9f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015939"
 ---
 # <a name="persisted-data-source-objects"></a>持久化数据源对象
@@ -27,7 +27,7 @@ ms.locfileid: "68015939"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server 的 OLE DB 驱动程序支持具有**IPersistFile**接口的持久化数据源对象。  
+  OLE DB Driver for SQL Server 通过 IPersistFile  接口支持持久化数据源对象。  
   
 ## <a name="examples"></a>示例  
  **A.使数据源初始化持久化：**  
@@ -232,6 +232,6 @@ HRESULT InitFromPersistedDS
  可在调用 IDBInitialize::Initialize 前后调用 IPersistFile::Save 方法   。 如果在从 IDBInitialize::Initialize 成功返回后调用该方法，可确保使有效的数据源指定持久化  。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据源对象&#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [数据源对象 (OLE DB)](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

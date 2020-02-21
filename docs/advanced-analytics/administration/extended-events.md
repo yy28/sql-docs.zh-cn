@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 272e92bed10261b5701e2dcb4d35092ad11d59c3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727738"
 ---
 # <a name="monitor-python-and-r-scripts-with-extended-events-in-sql-server-machine-learning-services"></a>在 SQL Server 机器学习服务中使用扩展事件监视 Python 和 R 脚本
@@ -46,7 +46,7 @@ AND p.name = 'SQLSatellite';
 
 ## <a name="table-of-extended-events"></a>扩展事件表
 
-|事件|描述|说明|  
+|事件|说明|说明|  
 |-----------|-----------------|---------|  
 |connection_accept|接受一个新连接时发生。 此事件用于记录所有连接尝试。||  
 |failed_launching|启动失败。|指示一个错误。|  
@@ -125,7 +125,7 @@ SQL Server 机器学习服务启动在 SQL Server 进程外部运行的一些服
 + 若要配置跟踪，请编辑会话名称  占位符、文件名的占位符 (`[SessionName].xel`) 和要捕获的事件的名称（如 `[XEvent Name 1]`、`[XEvent Name 1]`）。  
 + 可能出现任意数量的“event package”标记，并且只要名称属性正确，就会收集此标记。
 
-### <a name="example-capturing-launchpad-events"></a>例如：捕获 Launchpad 事件
+### <a name="example-capturing-launchpad-events"></a>示例：捕获 Launchpad 事件
 
 下面的示例显示了 Launchpad 服务的事件跟踪定义：
 
@@ -148,7 +148,7 @@ SQL Server 机器学习服务启动在 SQL Server 进程外部运行的一些服
 + 将 *.config* 文件放在 SQL Server 实例的 Binn 目录中。
 + 此文件必须命名为 `Launchpad.xevents.xml`。
 
-### <a name="example-capturing-bxlserver-events"></a>例如：捕获 BXLServer 事件  
+### <a name="example-capturing-bxlserver-events"></a>示例：捕获 BXLServer 事件  
 
 下面的示例显示了 BXLServer 可执行文件的事件跟踪定义。
   

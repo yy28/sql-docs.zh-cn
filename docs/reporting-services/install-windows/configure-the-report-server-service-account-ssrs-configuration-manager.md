@@ -1,18 +1,19 @@
 ---
-title: 配置报表服务器服务帐户（SSRS 配置管理器）| Microsoft Docs
+title: 配置报表服务器服务帐户（配置管理器）| Microsoft Docs
+description: Reporting Services 是作为单个服务实现的，其中包含报表服务器 Web 服务、Web 门户以及用于计划的报告处理和订阅传递的后台处理应用程序。
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
-ms.custom: seodec18
-ms.date: 12/10/2018
-ms.openlocfilehash: 3cf868f9fb89bf6daa20ae6977bf1111649d46c1
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019, seo-mmd-2019
+ms.date: 12/04/2019
+ms.openlocfilehash: 49a5f8e19db65691fe8e521d7ca6a65e828fe6bd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594083"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866020"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>配置报表服务器服务帐户（SSRS 配置管理器）
 
@@ -34,9 +35,9 @@ ms.locfileid: "73594083"
   
 - 自动将新帐户添加到本地计算机上创建的报表服务器组中。 此组是在用于保护 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件的访问控制列表 (ACL) 中指定的。  
   
-- 自动更新用于承载报表服务器数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的登录权限。 新帐户已添加到 RSExecRole  。  
+- 自动更新用于托管报表服务器数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的登录权限。 新帐户已添加到 RSExecRole  。  
   
-     旧帐户的数据库登录名不会被自动删除。 请务必删除不再使用的帐户。 有关详细信息，请参阅[管理报表服务器数据库&#40;SSRS 本机模式&#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)。  
+     旧帐户的数据库登录名不会被自动删除。 请务必删除不再使用的帐户。 有关详细信息，请参阅[管理报表服务器数据库（SSRS 本机模式）](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)。  
   
      只有在首先将报表服务器数据库连接配置为使用新服务帐户的情况下，才需要将数据库权限授予该服务帐户。 如果将报表服务器数据库连接配置为使用域用户帐户或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库登录名，连接信息将不受服务帐户更新的影响。  
   
@@ -55,11 +56,11 @@ ms.locfileid: "73594083"
   
      如果报表服务器部署在支持 Kerberos 身份验证的网络中，则必须使用指定的域用户帐户注册报表服务器服务主体名称 (SPN)。 有关详细信息，请参阅[为报表服务器注册服务主体名称 (SPN)](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)。  
   
-4. 单击 **“应用”** 。  
+4. 单击“应用”  。  
   
 5. 当系统提示您备份对称密钥时，请键入对称密钥备份的文件名和位置，并键入用于锁定和解锁该文件的密码，然后单击 **“确定”** 。  
   
-6. 如果报表服务器使用该服务帐户连接到报表服务器数据库，则连接信息更新为使用新的帐户或密码。 更新连接信息要求连接到数据库。 如果出现“ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **数据库连接”** 对话框，请输入拥有连接到数据库的权限的凭据，然后单击 **“确定”** 。  
+6. 如果报表服务器使用该服务帐户连接到报表服务器数据库，则连接信息更新为使用新的帐户或密码。 更新连接信息要求连接到数据库。 如果出现 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的“数据库连接”  对话框，请输入拥有连接到数据库的权限的凭据，然后单击“确定”  。  
   
 7. 当系统提示您还原对称密钥时，请键入在步骤 5 中指定的密码，并单击 **“确定”** 。  
   
@@ -69,7 +70,7 @@ ms.locfileid: "73594083"
 
  为了实现最佳的结果，请指定一个拥有网络连接权限、可以访问网络域控制器和公司 SMTP 服务器或网关的帐户。 下表汇总了各个帐户，并为使用这些帐户提供了建议。  
   
-|帐户|解释|  
+|帐户|说明|  
 |-------------|-----------------|  
 |域用户帐户|如果您有一个拥有报表服务器操作所需的最小权限的 Windows 域用户帐户，则应使用此帐户。<br /><br /> 之所以建议使用域帐户，是因为这种帐户可以将报表服务器服务与其他应用程序隔离开。 使用共享帐户（如 Network Service）运行多个应用程序会增加恶意用户控制报表服务器的风险，因为在这种情况下，任何一个应用程序的安全漏洞会很容易扩散到使用同一帐户运行的所有其他应用程序。<br /><br /> 如果使用域用户帐户，并且组织实施了密码过期策略，则必须定期更改密码。 您可能还需要使用此用户帐户注册服务。 有关详细信息，请参阅[为报表服务器注册服务主体名称 (SPN)](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)。<br /><br /> 避免使用本地 Windows 用户帐户。 本地帐户通常没有足够的权限访问其他计算机上的资源。 有关如何使用本地帐户限制报表服务器功能的详细信息，请参阅本主题中的 [使用本地帐户的注意事项](#localaccounts) 。|  
 |**虚拟服务帐户**|**虚拟服务帐户** 表示 Windows 服务。 它是一个拥有网络登录权限的内置最低特权帐户。 如果没有可用的域用户帐户，或者要避免因密码过期策略而可能导致的任何服务中断，建议使用此帐户。|  
@@ -111,7 +112,7 @@ ms.locfileid: "73594083"
   
 - 更新服务帐户时可能会发生 URL 预留错误。 每个 URL 预留都包含一个安全描述符，其中包含授权该服务帐户接受该 URL 上的请求的自由访问控制列表 (DACL)。 更新帐户时，必须重新创建该 URL，以便用新帐户信息更新 DACL。 如果无法重新创建 URL 预留，并且你知道该帐户是有效的，请尝试重新启动计算机。 如果错误仍然存在，请尝试使用不同的帐户。  
   
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>后续步骤
 
  [配置报表服务器 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
  [Reporting Services Configuration Manager（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)

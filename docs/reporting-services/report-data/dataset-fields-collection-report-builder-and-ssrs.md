@@ -9,10 +9,10 @@ ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a893a9a25f4ad19dcc71f538b62110b5838fa3ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573155"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>数据集字段集合（报表生成器和 SSRS）
@@ -53,7 +53,7 @@ ms.locfileid: "65573155"
  如果您使用报表模型数据源，则指定实体和实体字段作为报表数据。 在报表模型的查询设计器中，可以通过交互方式浏览和选择相关实体，并选择要包含在报表数据集中的字段。 完成查询设计后，可以在“报表数据”窗格中查看实体标识符和实体字段的集合。 实体标识符由报表模型自动生成，通常不显示给最终用户。  
   
 ### <a name="using-extended-field-properties"></a>使用扩展字段属性  
- 支持多维查询的数据源（例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]）支持字段的字段属性。 字段属性显示在查询的结果集中，但是在 **“报表数据”** 窗格中不可见。 它们仍可在报表中使用。 若要引用字段的属性，请将该字段拖到报表中，然后将默认属性 **Value** 更改为所需属性的字段名。 例如，在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多维数据集中，可以定义多维数据集单元格中的值格式。 通过使用字段属性 **FormattedValue**可使用已格式化值。 若要直接使用该格式化值，而不是使用一个值，然后再设置文本框的格式属性，请将该字段拖到该文本框中，然后将默认表达式 `=Fields!FieldName.Value` 更改为 `=Fields!FieldName.FormattedValue`。  
+ 支持多维查询的数据源（例如，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]）支持字段的字段属性。 字段属性显示在查询的结果集中，但是在 **“报表数据”** 窗格中不可见。 它们仍可在报表中使用。 若要引用字段的属性，请将该字段拖到报表中，然后将默认属性 **Value** 更改为所需属性的字段名。 例如，在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多维数据集中，可以定义多维数据集单元格中的值格式。 通过使用字段属性 **FormattedValue**可使用已格式化值。 若要直接使用该格式化值，而不是使用一个值，然后再设置文本框的格式属性，请将该字段拖到该文本框中，然后将默认表达式 `=Fields!FieldName.Value` 更改为 `=Fields!FieldName.FormattedValue`。  
   
 > [!NOTE]
 >  并非所有的 **Field** 属性均可用于所有数据源。 针对所有的数据源定义 **Value** 和 **IsMissing** 属性。 仅当数据源提供了其他预定义的属性（例如，多维数据源的 **Key**、 **UniqueName**和 **ParentUniqueName** ）时，才支持这些属性。 某些数据访问接口支持自定义属性。 有关详细信息，请参阅 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。 例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源，请参阅 [Analysis Services 数据库的扩展字段属性 (SSRS)](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)。  
@@ -89,10 +89,10 @@ ms.locfileid: "65573155"
   
      例如，下表显示了报表处理器用于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中引入的新日期和时间类型的数据类型：  
   
-    |SQL 数据类型|CLR 数据类型|描述|  
+    |SQL 数据类型|CLR 数据类型|说明|  
     |-------------------|-------------------|-----------------|  
     |**Date**|**DateTime**|仅日期|  
-    |**Time**|**TimeSpan**|仅时间|  
+    |**时间**|**TimeSpan**|仅时间|  
     |**DateTimeTZ**|**DateTimeOffset**|带有时区偏移量的日期和时间|  
     |**DateTime2**|**DateTime**|带有毫秒小数部分的日期和时间|  
   

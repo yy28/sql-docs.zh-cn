@@ -9,10 +9,10 @@ ms.assetid: 6d9192a4-fd5c-41ad-b9ef-f88f9496afed
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 61263520f5d519c2b908c753b72c1d5ec7f67e13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580133"
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>在滚动报表时保持标题可见（报表生成器和 SSRS）
@@ -27,11 +27,11 @@ ms.locfileid: "65580133"
   
  下图显示了一个表。  
   
- ![表](../../reporting-services/report-design/media/table.png "Table")  
+ ![表](../../reporting-services/report-design/media/table.png "表")  
   
  下图显示了一个矩阵。  
   
- ![矩阵](../../reporting-services/report-design/media/matrix.png "Matrix")  
+ ![矩阵](../../reporting-services/report-design/media/matrix.png "矩阵")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -48,7 +48,7 @@ ms.locfileid: "65580133"
   
 1.  在设计图面上，单击表中任意位置，可在分组窗格中显示静态成员及组。  
   
-     ![“分组”窗格](../../reporting-services/report-design/media/grouppane-updated.png "Grouping pane")  
+     ![分组窗格](../../reporting-services/report-design/media/grouppane-updated.png "分组窗格")  
   
      “行组”窗格显示行组层次结构的层次结构静态和动态成员，而“列组”窗格显示列组层次结构的相同内容。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "65580133"
   
 3.  单击要在滚动时保持可见的静态成员（行或列）。 “属性”窗格显示 **“Tablix 成员”** 属性。  
   
-     ![Tablix 成员属性](../../reporting-services/report-design/media/grouppane-tablixmember-updated.png "Tablix Member properties")  
+     ![Tablix 成员属性](../../reporting-services/report-design/media/grouppane-tablixmember-updated.png "Tablix 成员属性")  
   
 4.  在“属性”窗格中，将 **FixedData** 设置为 **True**。  
   

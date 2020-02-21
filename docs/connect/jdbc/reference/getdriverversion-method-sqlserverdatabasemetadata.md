@@ -1,5 +1,5 @@
 ---
-title: getDriverVersion 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getDriverVersion 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 3be84d65-af61-4c34-b052-74a5d488eaa9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fd67749bc8dcb29617c97a441c9858b3bb8fb6f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983429"
 ---
 # <a name="getdriverversion-method-sqlserverdatabasemetadata"></a>getDriverVersion 方法 (SQLServerDatabaseMetaData)
@@ -35,12 +35,12 @@ public java.lang.String getDriverVersion()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 包含 JDBC 驱动程序版本的 String  。  
+ 包含 JDBC 驱动程序版本的 String。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 getDriverVersion 方法是由 java.sql.DatabaseMetaData 接口中的 getDriverVersion 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  

@@ -1,5 +1,5 @@
 ---
-title: 调用存储过程 (OLE DB) |Microsoft Docs
+title: 调用存储过程 (OLE DB) | Microsoft Docs
 description: 调用存储过程 (OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -19,10 +19,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 26e97354d54cb65578bcbb35d2c96fb6914270d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015198"
 ---
 # <a name="stored-procedures---calling"></a>存储过程 - 调用
@@ -30,14 +30,14 @@ ms.locfileid: "68015198"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  存储过程可以有零个或多个参数。 它还可以返回值。 使用 SQL Server 的 OLE DB 驱动程序时, 可以通过以下方式传递存储过程的参数:  
+  存储过程可以有零个或多个参数。 它还可以返回值。 使用 OLE DB Driver for SQL Server 时，可以使用下面的方法将参数传递到存储过程：  
   
 -   对数据值进行硬编码。  
   
 -   使用参数标记 (?) 指定参数，将程序变量绑定到参数标记，然后将数据值放在程序变量中。  
   
 > [!NOTE]  
->  在使用 OLE DB 和命名参数调用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 存储过程时，参数名称必须以“\@”字符开头。 这是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 特有的限制。 SQL Server 的 OLE DB 驱动程序强制实施此限制, 此限制比 MDAC 更严格。  
+>  在使用 OLE DB 和命名参数调用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 存储过程时，参数名称必须以“\@”字符开头。 这是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 特有的限制。 OLE DB Driver for SQL Server 比 MDAC 更严格地执行这一限制。  
   
  为了支持参数，ICommandWithParameters 接口是对命令对象公开的  。 若要使用参数，使用者首先应通过调用 ICommandWithParameters::SetParameterInfo 方法（或者根据需要准备一个调用 GetParameterInfo 方法的调用语句）来向访问接口描述这些参数   。 然后，使用者创建一个指定缓冲区结构的取值函数并将参数值放入该缓冲区中。 最后，它将取值函数的句柄和指向此缓冲区的指针传递给 Execute  。 以后在调用 Execute 时，使用者将新参数值放入此缓冲区并使用取值函数句柄和缓冲区指针调用 Execute   。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "68015198"
 5.  通过使用 ICommand::Execute 执行命令  。  
   
 ## <a name="methods-of-calling-a-stored-procedure"></a>调用存储过程的方法  
- 在中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]执行存储过程时, SQL Server 的 OLE DB 驱动程序支持:  
+ 执行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的存储过程时，OLE DB Driver for SQL Server 支持：  
   
 -   ODBC CALL 转义序列。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "68015198"
   
  如果使用 RPC 转义序列执行存储过程，则访问接口不会调用任何 Helper 函数来确定参数信息（使用 ODBC CALL 语法时则会调用 Helper 函数）。 RPC 语法比 ODBC CALL 语法简单，因此命令的分析速度更快，从而提高了性能。 在这种情况下，需要通过执行 ICommandWithParameters::SetParameterInfo 来提供参数信息  。  
   
- RPC 转义序列要求您具有返回值。 如果存储过程不返回值，则服务器默认返回 0。 此外，您无法对存储过程打开 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 游标。 存储过程是隐式准备的，对 ICommandPrepare::Prepare 的调用会失败  。 由于无法准备 RPC 调用, 因此不能查询列元数据;IColumnsInfo:: GetColumnInfo 和 IColumnsRowset:: GetColumnsRowset 将返回 DB_E_NOTPREPARED。  
+ RPC 转义序列要求您具有返回值。 如果存储过程不返回值，则服务器默认返回 0。 此外，您无法对存储过程打开 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 游标。 存储过程是隐式准备的，对 ICommandPrepare::Prepare 的调用会失败  。 由于无法准备 RPC 调用，因此也就无法查询列元数据；IColumnsInfo::GetColumnInfo 和 IColumnsRowset::GetColumnsRowset 会返回 DB_E_NOTPREPARED。  
   
  如果知道所有参数元数据，建议采用 RPC 转义序列方式执行存储过程。  
   
@@ -118,12 +118,12 @@ ms.locfileid: "68015198"
 {rpc SalesByCategory}  
 ```  
   
- 有关演示 RPC 转义序列的示例应用程序, 请参阅[使用&#40;Rpc 语法&#41;执行存储过程和处理返回代码和输出参数&#40;OLE DB&#41;](../../oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md)。  
+ 有关展示 RPC 转义序列的示例应用程序，请参阅[执行存储过程（使用 RPC 语法）并处理返回代码和输出参数 &#40;OLE DB&#41;](../../oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md)。  
   
 ### <a name="transact-sql-execute-statement"></a>Transact-SQL EXECUTE 语句  
- 与 [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md) 语句相比，ODBC CALL 转义序列和 RPC 转义序列是调用存储过程的首选方法。 SQL Server 的 OLE DB 驱动程序使用的 RPC 机制[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]来优化命令处理。 此 RPC 协议通过避免在服务器上进行大量参数处理和语句分析来提高性能。  
+ 与 [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md) 语句相比，ODBC CALL 转义序列和 RPC 转义序列是调用存储过程的首选方法。 OLE DB Driver for SQL Server 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 RPC 机制来优化命令处理。 此 RPC 协议通过避免在服务器上进行大量参数处理和语句分析来提高性能。  
   
- 下面是一个 [!INCLUDE[tsql](../../../includes/tsql-md.md)] EXECUTE 语句的示例  ：  
+ 下面是 [!INCLUDE[tsql](../../../includes/tsql-md.md)] EXECUTE  语句示例：  
   
 ```  
 EXECUTE SalesByCategory 'Produce', '1995'  

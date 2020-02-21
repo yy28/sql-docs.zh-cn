@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 1ed49ebaffb46b8542247e67ff7c639cec1cca1d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68016114"
 ---
 # <a name="command-parameters"></a>命令参数
@@ -34,7 +34,7 @@ ms.locfileid: "68016114"
 {call SalesByCategory('Produce', ?)}  
 ```  
   
- 为减少网络流量以提高性能，适用于 SQL Server 的 OLE DB 驱动程序不自动获取参数信息，除非在执行命令之前调用了 ICommandWithParameters::GetParameterInfo 或 ICommandPrepare::Prepare   。 这意味着 SQL Server 的 OLE DB 驱动程序不会自动执行以下操作:  
+ 为减少网络流量以提高性能，适用于 SQL Server 的 OLE DB 驱动程序不自动获取参数信息，除非在执行命令之前调用了 ICommandWithParameters::GetParameterInfo 或 ICommandPrepare::Prepare   。 这意味着 OLE DB Driver for SQL Server 不会自动执行以下操作：  
   
 -   验证使用 ICommandWithParameters::SetParameterInfo 指定的数据类型的正确性  。  
   
@@ -53,11 +53,11 @@ ms.locfileid: "68016114"
 > [!NOTE]  
 >  对于包含 FROM 子句的任意 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] UPDATE 或 DELETE 语句，对于依赖于包含参数的子查询的任意 SQL 语句，对于在比较和类似表达式中包含参数标记或包含限定谓词的 SQL 语句，或其参数之一为函数参数的查询，访问接口不支持调用 ICommandWithParameters::GetParameterInfo  。 在对 SQL 语句进行批处理时，对于批处理中第一个语句后的语句中的参数标记，访问接口也不支持调用 ICommandWithParameters::GetParameterInfo  。 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 命令中不允许使用注释 (/* \*/)。  
   
- SQL Server 的 OLE DB 驱动程序支持 SQL 语句命令中的输入参数。 在过程调用命令中, SQL Server 的 OLE DB 驱动程序支持输入参数、输出参数和输入/输出参数。 输出参数值在运行时（仅当没有行集返回时）或当应用程序用尽返回的所有行集时，返回到应用程序。 若要确保返回值有效，可使用 IMultipleResults 强制使用行集  。  
+ OLE DB Driver for SQL Server 支持 SQL 语句命令中的输入参数。 在过程调用命令中，OLE DB Driver for SQL Server 支持输入、输出以及输入/输出参数。 输出参数值在运行时（仅当没有行集返回时）或当应用程序用尽返回的所有行集时，返回到应用程序。 若要确保返回值有效，可使用 IMultipleResults 强制使用行集  。  
   
  在 DBPARAMBINDINFO 结构中无需指定存储过程参数的名称。 pwszName 成员值可使用 NULL，以指示适用于 SQL Server 的 OLE DB 驱动程序应忽视参数名称，并只使用在 ICommandWithParameters::SetParameterInfo 的 rgParamOrdinals 成员中指定的序号    。 如果命令文本中既包含命名参数又包含未命名参数，则必须在所有命名参数之前指定所有未命名参数。  
   
- 如果指定了存储过程参数的名称，则适用于 SQL Server 的 OLE DB 驱动程序会检查该名称以确保其有效。 当 SQL Server 的 OLE DB 驱动程序收到来自使用者的错误参数名称时, 该驱动程序将返回错误。  
+ 如果指定了存储过程参数的名称，则适用于 SQL Server 的 OLE DB 驱动程序会检查该名称以确保其有效。 如果 OLE DB Driver for SQL Server 从使用者处收到错误的参数名称，则会返回一个错误。  
   
 > [!NOTE]  
 >  为公开对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML 和用户定义类型 (UDT) 的支持，适用于 SQL Server 的 OLE DB 驱动程序实现了新的 [ISSCommandWithParameters](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md) 接口。  

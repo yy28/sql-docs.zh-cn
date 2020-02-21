@@ -1,27 +1,27 @@
 ---
 title: SqlClient 对高可用性和灾难恢复的支持
-description: 介绍对高可用性、灾难恢复（AlwaysOn）可用性组的 SqlClient 支持。
+description: 介绍对高可用性、灾难恢复 (AlwaysOn) 可用性组的 SqlClient 支持。
 ms.date: 08/15/2019
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: c60ade4c949574b589bf1e1e660564775b394527
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: b84790960455d60411cae14ae180be0d8891e4a2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451993"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258552"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>SqlClient 对高可用性和灾难恢复的支持
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下载 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-本主题讨论 Microsoft SqlClient Data Provider for SQL Server 对高可用性、灾难恢复的支持--AlwaysOn 可用性组。  AlwaysOn 可用性组功能已添加到 SQL Server 2012 中。 有关 AlwaysOn 可用性组的详细信息，请参阅 SQL Server 联机丛书。  
+本主题讨论 Microsoft SqlClient Data Provider for SQL Server 对高可用性、灾难恢复 - AlwaysOn 可用性组的支持。  AlwaysOn 可用性组功能已添加到 SQL Server 2012 中。 有关 AlwaysOn 可用性组的详细信息，请参阅 SQL Server 联机丛书。  
   
 现可在连接属性中指定（高可用性、灾难恢复功能）可用性组 (AG) 的可用性组侦听程序或 SQL Server 2012 故障转移群集实例。 如果将 SqlClient 应用程序连接到具有故障转移功能的 AlwaysOn 数据库，则在故障转移后，系统会断开原始连接，并且该应用程序必须建立一个新的连接才能继续运行。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "72451993"
 > [!NOTE]
 >  增大连接超时值和实现连接重试逻辑将增加应用程序连接到可用性组的概率。 此外，由于故障转移可能会使连接失败，因此请实现连接重试逻辑；重试失败的连接直至重新连接。  
   
-适用于 SQL Server 的 Microsoft SqlClient 数据提供程序支持以下连接属性：  
+Microsoft SqlClient Data Provider for SQL Server 支持以下连接属性：  
   
 - `ApplicationIntent`  
   
@@ -76,7 +76,7 @@ ms.locfileid: "72451993"
 如果将主副本配置为拒绝只读工作负荷且连接字符串包含 `ApplicationIntent=ReadOnly`，连接将失败。  
   
 ## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>从数据库镜像升级到使用多子网群集  
-如果连接字符串中存在 `MultiSubnetFailover` 和 `Failover Partner` 连接关键字，`MultiSubnetFailover=True` 或者使用了除 TCP 之外的协议，则会出现连接错误（<xref:System.ArgumentException>）。 如果使用 `MultiSubnetFailover` 且 SQL Server 返回一个故障转移伙伴响应指示它是数据库镜像对的一部分，也将出现错误 (<xref:Microsoft.Data.SqlClient.SqlException>)。  
+如果连接字符串中已存在 `MultiSubnetFailover` 和 `Failover Partner` 连接关键字，或者如果使用了 `MultiSubnetFailover=True` 和除 TCP 以外的其他协议，将出现连接错误 (<xref:System.ArgumentException>)。 如果使用 `MultiSubnetFailover` 且 SQL Server 返回一个故障转移伙伴响应指示它是数据库镜像对的一部分，也将出现错误 (<xref:Microsoft.Data.SqlClient.SqlException>)。  
   
 如果你将当前使用数据库镜像的 SqlClient 应用程序升级到多子网方案，则应删除 `Failover Partner` 连接属性并使用设置为 `True` 的 `MultiSubnetFailover` 替换它，并且还应使用可用性组侦听程序替换连接字符串中的服务器名称。 如果连接字符串使用 `Failover Partner` 和 `MultiSubnetFailover=True`，则驱动程序将生成错误。 但是，如果连接字符串使用 `Failover Partner` 和 `MultiSubnetFailover=False`（或 `ApplicationIntent=ReadWrite`），则应用程序将使用数据库镜像。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "72451993"
   
 `ApplicationIntent` 关键字不适用于早期的只读数据库。  
   
-数据库可允许或禁止目标 AlwaysOn 数据库上的读取工作负荷。 （这是通过 `PRIMARY_ROLE` 和 `SECONDARY_ROLE`Transact SQL 语句的 `ALLOW_CONNECTIONS` 子句来完成的。）  
+数据库可允许或禁止目标 AlwaysOn 数据库上的读取工作负荷。 （这是通过 `PRIMARY_ROLE` 和 `SECONDARY_ROLE`Transact-SQL 语句的 `ALLOW_CONNECTIONS` 子句实现的。）  
   
 `ApplicationIntent` 关键字用于启用只读路由。  
   

@@ -12,31 +12,31 @@ author: yitam
 ms.author: v-yitam
 manager: v-mabarw
 ms.openlocfilehash: 4a5ac641a98077c09bb38a5fc8fbd3fb1a4bf73d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68265137"
 ---
 # <a name="formatting-decimal-strings-and-money-values-sqlsrv-driver"></a>设置十进制字符串和 Money 值格式（SQLSRV 驱动程序）
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-为了保持准确性, 将始终以精确精度和缩放的字符串形式提取[decimal 或 numeric 类型](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)。 如果任何值小于 1, 则缺少前导零。 这与 money 和 smallmoney 字段相同, 因为这些字段是固定刻度等于4的小数字段。
+为了保持准确性，[十进制或数字类型](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)始终以精确精度和数值范围的字符串形式提取。 如果任何值小于 1，则缺少前导零。 money 和 smallmoney 字段也是如此，因为这些字段是固定数值范围等于 4 的十进制字段。
 
-## <a name="add-leading-zeroes-if-missing"></a>如果缺少, 则添加前导零
-从版本5.6.0 开始, 将选项`FormatDecimals`添加到 sqlsrv 连接和语句级别, 这允许用户设置十进制字符串的格式。 此选项需要一个布尔值 (true 或 false), 并且仅影响提取的结果中的十进制值或数值的格式设置。 换句话说, `FormatDecimals`选项对插入或更新等其他操作不起作用。
+## <a name="add-leading-zeroes-if-missing"></a>添加前导零（如果缺少）
+从版本 5.6.0 开始，将选项 `FormatDecimals` 添加到 sqlsrv 连接和语句级别，这允许用户设置十进制字符串格式。 此选项需要一个布尔值（true 或 false），并且仅影响提取结果中的十进制值或数值的格式设置。 换言之，`FormatDecimals` 选项不会对其他操作（如插入或更新）产生影响。
 
-默认情况下，`FormatDecimals` 为 false  。 如果设置为 true, 则将为小于1的任何十进制值添加前导零到十进制字符串。
+默认情况下，`FormatDecimals` 为 false  。 如果设置为 true，则将为小于 1 的任何十进制值添加前导零到十进制字符串。
 
 ## <a name="configure-number-of-decimal-places"></a>配置小数位数
-启用后, 另一个`DecimalPlaces`选项允许用户在显示 money 和 smallmoney 数据时配置小数位数。 `FormatDecimals` 它接受 [0, 4] 范围内的整数值, 并在显示时可能出现舍入。 但是, 基础货币数据保持不变。
+打开 `FormatDecimals` 后，另一个选项 `DecimalPlaces` 允许用户在显示 money 和 smallmoney 数据时配置小数位数。 它接受 [0, 4] 范围内的整数值，在显示时可能会出现舍入。 但是，基础 money 数据保持不变。
 
-这两个选项都可以设置为连接或语句级别, 并且语句设置始终会重写相应的连接设置。 请注意`DecimalPlaces` , `FormatDecimals`  选项**只**影响money数据,并且必须`DecimalPlaces`设置为 true 才能生效。 否则, 无论`DecimalPlaces`设置如何, 都将关闭格式设置。
+这两个选项都可以设置为连接或语句级别，并且语句设置始终会重写相应的连接设置。 请注意，`DecimalPlaces` 选项仅  影响 money 数据，并且 `FormatDecimals` 必须设置为 true 才能使 `DecimalPlaces` 生效。 否则，无论 `DecimalPlaces` 如何设置，都会关闭格式设置。
 
 > [!NOTE]
-> 由于 money 或 smallmoney 字段的小数位数为 4 `DecimalPlaces` , 因此将值设置为任何负数或大于4的任何值都将被忽略。 不建议使用任何格式的货币数据作为任何计算的输入。
+> 由于 money 或 smallmoney 字段的数值范围为 4，因此将 `DecimalPlaces` 值设置为负数或大于 4 的任何值都将被忽略。 不建议使用任何格式化的 money 数据作为任何计算的输入。
 
-## <a name="example---a-simple-fetch"></a>示例-简单提取
+## <a name="example---a-simple-fetch"></a>示例 - 简单提取
 下面的示例演示如何在简单提取中使用新选项。
 
 ```php
@@ -65,10 +65,10 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="example---format-the-output-parameter"></a>示例-设置输出参数的格式
-如果 decimal 或 numeric 字段作为[output 参数](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)返回, 则返回的值将被视为常规 varchar 字符串。 但是, 如果指定了 SQLSRV_SQLTYPE_DECIMAL 或 SQLSRV_SQLTYPE_NUMERIC, 则可以将设置`FormatDecimals`为 true, 以确保数值字符串值不会缺少前导零。 有关详细信息，请参阅[如何：使用 SQLSRV 驱动程序检索输出参数](../..//connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)。
+## <a name="example---format-the-output-parameter"></a>示例 - 设置输出参数的格式
+如果 decimal 或 numeric 字段作为[输出参数](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)返回，则返回的值将被视为常规 varchar 字符串。 但是，如果指定了 SQLSRV_SQLTYPE_DECIMAL 或 SQLSRV_SQLTYPE_NUMERIC，则可以将 `FormatDecimals` 设置为 true，以确保数值字符串值不会缺少前导零。 有关详细信息，请参阅[如何：使用 SQLSRV 驱动程序检索输出参数](../..//connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)。
 
-下面的示例演示如何格式化返回 decimal (8, 4) 值的存储过程的 output 参数。
+下面的示例演示如何格式化返回十进制 (8,4) 值的存储过程的输出参数。
 
 ```php
 $outString = '';

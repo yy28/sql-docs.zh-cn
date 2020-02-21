@@ -16,10 +16,10 @@ ms.assetid: 233bf4f8-4758-42d0-a80b-33e34fa78027
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b253ad989593fa88b2281d933387dfe38fee1732
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974253"
 ---
 # <a name="setfetchsize-method-sqlserverresultset"></a>setFetchSize 方法 (SQLServerResultSet)
@@ -34,16 +34,16 @@ ms.locfileid: "67974253"
 public void setFetchSize(int rows)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *rows*  
   
  指示要提取的行数的 int  。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 setFetchSize 方法由 setFetchSize 方法在方法中指定。  
+## <a name="remarks"></a>备注  
+ 此 setFetchSize 方法是由 java.sql.ResultSet 接口中的 setFetchSize 方法指定的。  
   
  如果指定的提取大小为零，JDBC 驱动程序将忽略该值并计算应使用的提取大小。 默认值由创建结果集的 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 对象设置。 可以随时更改提取大小。  
   

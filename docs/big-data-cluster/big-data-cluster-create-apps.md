@@ -1,22 +1,23 @@
 ---
-title: 使用 azdate 部署应用程序
-titleSuffix: SQL Server big data clusters
+title: 使用 azdata 部署应用程序
+titleSuffix: SQL Server Big Data Clusters
 description: 在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 上将 Python 或 R 脚本部署为应用程序。
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 11/04/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1253863bcd2e1da804480a3e1d0e628024b0798b
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 33b5bf6061e9168fd150adcb4a7ccf29302bce63
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706691"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253150"
 ---
-# <a name="how-to-deploy-an-app-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>如何在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上部署应用
+# <a name="how-to-deploy-an-app-on-big-data-clusters-2019"></a>如何在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上部署应用
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -45,13 +46,13 @@ ms.locfileid: "73706691"
 
 在 SQL Server 2019 中，可以创建、删除、描述、初始化、列出运行和更新应用程序。 下表介绍了可以与 azdata 一起使用的应用程序部署命令  。
 
-|Command |描述 |
+|Command |说明 |
 |:---|:---|
 |`azdata login` | 登录到 SQL Server 大数据群集 |
 |`azdata app create` | 创建应用程序。 |
 |`azdata app delete` | 删除应用程序。 |
 |`azdata app describe` | 描述应用程序。 |
-|`azdata app init` | Kickstart 新应用程序主干。 |
+|`azdata app init` | 启动新应用程序主干。 |
 |`azdata app list` | 列出应用程序。 |
 |`azdata app run` | 运行应用程序。 |
 |`azdata app update`| 更新应用程序。 |

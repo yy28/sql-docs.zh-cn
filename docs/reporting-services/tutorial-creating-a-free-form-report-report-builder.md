@@ -9,10 +9,10 @@ ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 567abd4423f546f853abea4caa5c944ce9d8ccdb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66499560"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>教程：创建自由格式的报表（报表生成器）
@@ -22,7 +22,7 @@ ms.locfileid: "66499560"
 
 该报表按地区对信息进行分组，并且显示该地区的销售经理的姓名以及详细和汇总销售信息。 从使用列表数据区域作为自由格式报表的基础开始，然后添加具有图像的装饰性面板、插入数据的静态文本、用于显示详细信息的表以及可选的用于显示汇总信息的饼图和柱形图。  
   
-完成本教程的预计学时：20 分钟。  
+完成本教程的估计时间：20 分钟。  
   
 ## <a name="requirements"></a>要求  
 有关要求的详细信息，请参阅[教程先决条件（报表生成器）](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
@@ -48,23 +48,23 @@ ms.locfileid: "66499560"
   
 1.  在“报表数据”窗格中，单击“新建” > “数据源”   。  
   
-2.  在 **“名称”** 框中，键入： **ListDataSource**。  
+2.  在“名称”  框中键入：ListDataSource   
   
 3.  单击 **“使用我的报表中嵌入的连接”** 。  
   
-4.  请确认连接类型为 Microsoft SQL Server，然后在“连接字符串”框中键入：Data Source = \<servername>    
+4.  验证连接类型是否为 Microsoft SQL Server，然后在“连接字符串”  框中键入：数据源 = \<servername>   
   
     \<servername>（例如，Report001）指定安装了 SQL Server Database Engine 的实例的计算机  。 因为此报表的数据不是从 SQL Server 数据库中提取的，所以不需要包括数据库的名称。 指定服务器上的默认数据库仅用于对查询进行分析。  
   
 5.  单击 **“凭据”** ，然后输入连接至 SQL Server 数据库引擎实例所需的凭据。  
   
-6.  单击“确定”  。  
+6.  单击“确定”。   
   
 ### <a name="to-create-a-new-dataset"></a>新建数据集  
   
 1.  在“报表数据”窗格中，单击“新建” > “数据集”   。  
   
-2.  在“名称”框中，键入：ListDataset   。  
+2.  在“名称”  框中键入：ListDataset  。  
   
 3.  单击“使用在我的报表中嵌入的数据集”  ，然后验证数据源是否为 **ListDataSource**。  
   
@@ -199,7 +199,7 @@ ms.locfileid: "66499560"
   
 2.  在“插入”选项卡 >“文本框”上   。 在列表左上角的之前添加的矩形内部单击，通过拖动将文本框设为约 3.45 英寸宽，5 英寸高。  
   
-3.  将光标置于文本框中，然后键入 **Newsletter for** 。 在“for”一词后包括一个空格，以将文本与将要在下一步中添加的字段分隔开来。   
+3.  将光标置于文本框中，然后键入：Newsletter for  。 在“for”一词后包括一个空格，以将文本与将要在下一步中添加的字段分隔开来。   
   
     ![添加新闻稿标题文本](../reporting-services/media/tutorial-newsletterfor.png "添加新闻稿标题文本")  
   
@@ -215,7 +215,7 @@ ms.locfileid: "66499560"
     *  “20 磅”  。
     *  “番茄色”  。  
   
-9. 将光标置于步骤 3 中键入的文本下方，然后键入 **Hello** 并在该词后面加一个空格，以将文本与将要在下一步中添加的字段分隔开来。  
+9. 将光标置于你在步骤 3 中键入的文本之下，然后键入：Hello，在单词后面有一个空格，用于分隔将在下一步中添加的文本和字段  。  
  
 10. 将“ `[FullName]` ”字段从“报表数据”窗格的“ListDataSet”拖到文本框中，将它放在“Hello ”后面，然后键入一个逗号 (,)。  
    
@@ -244,7 +244,7 @@ ms.locfileid: "66499560"
       *  “10 磅”  。
       *  “黑色”  。  
  
-20. 将光标置于文本框内无意义文本的下方，然后键入 **Congratulations on your total sales of**并在文本后面加一个空格，以将文本与将要在下一步中添加的字段分隔开来。 
+20. 将光标放在文本框中的无意义文本的下方，然后键入：Congratulations on your total sales of，在文本后面加一个空格，以将文本与将要在下一步中添加的字段分隔开来  。 
   
 21. 将“Sales”字段拖到文本框中，放在之前步骤中键入的文本后面，然后键入一个感叹号 (!)。  
 
@@ -295,15 +295,15 @@ ms.locfileid: "66499560"
   
 5.  对“SalesDate”、“Quantity”和“Sales”重复步骤 3。 将 SalesDate 放置于 Product 之下，将 Quantity 放置于 SalesDate 之下，并且将 Sales 放置于 SalesDate 之下。  
   
-6.  单击“下一步”  。  
+6.  单击“下一步”。   
   
 7.  在 **“选择布局”** 页上，查看表的布局。  
   
     这个表很简单：只有五列，没有行或列组。 因为它不具有组，所以与组相关的布局选项不可用。 您将手动更新该表以便包括本教程后面部分中的总计。  
   
-8.  单击“下一步”  。  
+8.  单击“下一步”。   
   
-9. 单击 **“完成”** 。  
+9. 单击“完成”  。  
   
 11. 将该表拖到您在第 4 课中添加的文本框之下。  
   
@@ -345,7 +345,7 @@ ms.locfileid: "66499560"
   
 4.  在 **“名称”** 中，用 **SalesInformationByTerritory**替换默认名称。  
   
-5.  单击 **“保存”** 。  
+5.  单击“ **保存**”。  
   
 报表即已保存至报表服务器。 您连接的报表服务器的名称将显示在窗口底部的状态栏中。  
   
@@ -357,7 +357,7 @@ ms.locfileid: "66499560"
   
 3.  在 **“名称”** 中，用 **SalesInformationByTerritory**替换默认名称。  
   
-4.  单击 **“保存”** 。  
+4.  单击“ **保存**”。  
   
 ## <a name="Line"></a>7.（可选）添加线条以便分隔报表区域  
 添加线条可以分隔报表的可编辑区域和详细信息区域。  
@@ -399,18 +399,18 @@ ms.locfileid: "66499560"
   
 5.  将“Quantity”拖到“值”中，然后单击“下一步”   。  
   
-6.  单击 **“完成”** 。  
+6.  单击“完成”  。  
   
 8.  调整报表左上角中出现的图表的大小，将其设为约 2.25 英寸宽，3.6 英寸高。  
   
 9. 将图表拖至该矩形内。  
    
-10. 选择图表标题，然后键入 **Product Quantities Sold**。  
+10. 选择图表标题，然后键入：Product Quantities Sold  。  
   
 12. 在“开始”选项卡的“字体”上，对标题进行以下设置   ：
-    * “字体”设为“Segoe UI Semibold”   。
-    * “大小”设为“12 磅”   。
-    * “颜色”设为“黑色”   。  
+    * 字体  为 Segoe UI Semibold  。
+    * 大小  为 12 pt  。
+    * 颜色  为黑色  。  
 
 13. 右键单击图例，然后单击“图例属性”  。
 
@@ -436,7 +436,7 @@ ms.locfileid: "66499560"
   
     “值”显示在垂直轴上。  
   
-6.  单击 **“完成”** 。  
+6.  单击“完成”  。  
   
     一个柱形图将添加到报表的左上角。  
   
@@ -444,12 +444,12 @@ ms.locfileid: "66499560"
   
 9. 将图表拖至该矩形内的饼图之下。  
    
-10. 选择图表标题，然后键入 **Product Sales**。  
+10. 选择图表标题，然后键入：Product Sales  。  
   
 12. 在“开始”选项卡的“字体”上，对标题进行以下设置   ：
-    * “字体”设为“Segoe UI Semibold”   。
-    * “大小”设为“12 磅”   。
-    * “颜色”设为“黑色”   。  
+    * 字体  为 Segoe UI Semibold  。
+    * 大小  为 12 pt  。
+    * 颜色  为黑色  。  
   
 15. 右键单击图例，然后单击 **“删除图例”** 。  
   
@@ -497,7 +497,7 @@ ms.locfileid: "66499560"
   
 
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>后续步骤  
 有关如何创建自由格式报表的教程到此结束。  
   
 有关列表的详细信息，请参阅： 

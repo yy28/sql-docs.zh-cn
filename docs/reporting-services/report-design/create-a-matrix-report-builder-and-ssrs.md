@@ -9,10 +9,10 @@ ms.assetid: 493e63b9-ecd0-4054-97ec-92d84e9b8182
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: aec3e79fbfbaf96475cf10457c9f21c8c3d78b6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581547"
 ---
 # <a name="create-a-matrix-report-builder-and-ssrs"></a>创建矩阵（报表生成器和 SSRS）
@@ -20,7 +20,7 @@ ms.locfileid: "65581547"
   
  在最初设计之后，便可继续开发矩阵以改善用户的查看体验。 有关详细信息，请参阅 [控制 Tablix 数据区域在报表页上的显示（报表生成器和 SSRS）](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)。  
   
- 若要快速开始使用列表，请参阅[教程：创建矩阵报表（报表生成器）](../../reporting-services/tutorial-creating-a-matrix-report-report-builder.md)。  
+ 若要快速开始使用矩阵，请参阅[教程：生成矩阵报表（报表生成器）](../../reporting-services/tutorial-creating-a-matrix-report-report-builder.md)。  
   
 > [!NOTE]  
 >  您可以将列表作为报表部件与报表分开发布。 阅读有关 [报表部件（报表生成器和 SSRS）](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)的详细信息。  
@@ -65,7 +65,7 @@ ms.locfileid: "65581547"
   
  当报表运行时，动态列标题向右扩展（如果将矩阵的 Direction 属性设置为 RTL，则向左扩展），有多少唯一组值就扩展多少列。 而动态行则沿页面方向纵向扩展。 Tablix 正文单元中显示的数据是基于行组和列组的交集的聚合，如下图所示。  
   
- ![矩阵，带总计的嵌套行和列组](../../reporting-services/report-design/media/rs-basicmatrixnestedgroupstotalsdesign.gif "矩阵，带总计的嵌套行和列组")  
+ ![带有总计的矩阵、嵌套行组和列组](../../reporting-services/report-design/media/rs-basicmatrixnestedgroupstotalsdesign.gif "带有总计的矩阵、嵌套行组和列组")  
   
  在预览中，报表显示如下图所示。  
   

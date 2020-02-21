@@ -1,7 +1,7 @@
 ---
-title: 卸载现有 SQL Server 实例（安装程序）| Microsoft Docs
-ms.custom: ''
-ms.date: 09/11/2019
+title: 卸载现有的 instanceInstance
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 16c406052b563accdc2cd98fd629909cce38e0ce
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: 980982f6ae55d72ef6a54fdc07c0c707c4752b8f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71251070"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258952"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>卸载现有 SQL Server 实例（安装程序）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -55,19 +55,19 @@ ms.locfileid: "71251070"
     > SQL Server Reporting Services 附带 ReportServer 数据库。   
 
  
-1.  **停止所有的**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **服务。** 建议先停止所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务，然后再卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件的本地安全组。 活动的连接可能会使卸载过程无法成功完成。  
+1.  停止所有  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务  。 建议先停止所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务，然后再卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件的本地安全组。 活动的连接可能会使卸载过程无法成功完成。  
   
 1.  **使用具有适当权限的帐户。** 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户或具有同等权限的帐户登录到服务器。 例如，可以使用本地 Administrators 组的成员帐户登录到服务器。  
   
-## <a name="uninstall"></a>Uninstall 
+## <a name="uninstall"></a>卸载 
 
-# <a name="windows-10--2016-tabwindows10"></a>[Windows 10/2016 +](#tab/Windows10)
+# <a name="windows-10--2016-"></a>[Windows 10/2016 +](#tab/Windows10)
 
 若要从 Windows 10、Windows Server 2016、Windows Server 2019 及更高版本中卸载 SQL Server，请执行以下步骤： 
 
 1. 若要开始删除过程，请从“开始”菜单导航至“设置”，然后选择“应用”   。 
 1. 在搜索框中搜索 `sql`。 
-1. 选择“Microsoft SQL Server（版本）（位）”  。 例如， `Microsoft SQL Server 2017 (64-bit)`。
+1. 选择“Microsoft SQL Server（版本）（位）”  。 例如，`Microsoft SQL Server 2017 (64-bit)` 。
 1. 选择“卸载”  。
  
     ![卸载 SQL Server](media/uninstall-an-existing-instance-of-sql-server-setup/uninstall-sql-server-windows-10.png)
@@ -84,12 +84,12 @@ ms.locfileid: "71251070"
  
 1. 刷新“应用和功能”窗口，以验证是否已成功删除 SQL Server 实例，并确定哪些 SQL Server 组件仍然存在（如有）  。 如果需要，也可以通过此窗口删除这些组件。 
 
-# <a name="windows-2008---2012-r2tabwindows2012"></a>[Windows 2008 - 2012 R2](#tab/windows2012)
+# <a name="windows-2008---2012-r2"></a>[Windows 2008 - 2012 R2](#tab/windows2012)
 
 若要从 Windows Server 2008、Windows Server 2012 和 Windows 2012 R2 卸载 SQL Server，请执行以下步骤： 
 
 1. 若要开始删除过程，请导航至“控制面板”，然后选择“程序和功能”   。
-1. 右键单击“Microsoft SQL Server（版本）（位）”，然后选择“卸载”   。 例如， `Microsoft SQL Server 2012 (64-bit)`。  
+1. 右键单击“Microsoft SQL Server（版本）（位）”，然后选择“卸载”   。 例如，`Microsoft SQL Server 2012 (64-bit)` 。  
   
     ![卸载 SQL Server](media/uninstall-an-existing-instance-of-sql-server-setup/uninstall-sql-server-windows-2012.png)
 
@@ -116,6 +116,6 @@ ms.locfileid: "71251070"
 
   
 ## <a name="see-also"></a>另请参阅  
- [查看和阅读 SQL Server 安装程序日志文件](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
+ [查看和读取 SQL Server 安装程序日志文件](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

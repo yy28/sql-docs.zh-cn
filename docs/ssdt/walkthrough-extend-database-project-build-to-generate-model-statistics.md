@@ -1,23 +1,24 @@
 ---
-title: 演练：扩展数据库项目生成以生成模型统计信息 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 将数据库项目内部版本扩展为生成模型统计信息
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5e1844ae19de96b13b36fad59f5032fe68caaf19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: fbbedff0adbe0302465344d437f9646bf68d997f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68069011"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242693"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>演练：扩展数据库项目生成以生成模型统计信息
+
 可以创建生成参与者以便在生成数据库项目时执行自定义操作。 在本演练中，您将创建一个名为 ModelStatistics 的生成参与者，该参与者可在生成数据库项目时从 SQL 数据库模型中输出统计信息。 由于此生成参与者在您生成时会使用一些参数，因此需要执行一些额外步骤。  
   
 在本演练中，您将完成以下主要任务：  
@@ -53,7 +54,7 @@ ms.locfileid: "68069011"
   
 以下是本演练中的示例参与者使用的一些命令：  
   
-|**类**|**方法/属性**|**Description**|  
+|**类**|**方法/属性**|**说明**|  
 |-------------|------------------------|-------------------|  
 |[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|用于查询对象的模型，并且是模型 API 的主入口点。 只能查询顶级类型，如表或视图 - 诸如列这样的类型只能通过遍历模型来查找。 如果未指定 ModelTypeClass 筛选器，则将返回所有顶级类型。|  
 |[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|查找与当前 TSqlObject 引用的元素的关系。 例如，对于表，这将返回类似表的列的对象。 在此情况下，ModelRelationshipClass 筛选器可用于指定要查询的确切关系（例如，使用“Table.Columns”筛选器将确保仅返回列）。<br /><br />有多种类似的方法，如 GetReferencingRelationshipInstances、GetChildren 和 GetParent。 有关详细信息，请参阅 API 文档。|  
@@ -74,7 +75,7 @@ ms.locfileid: "68069011"
   
 -   创建类库项目并添加所需的引用。  
   
--   定义从 [BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)继承的名为 ModelStatistics 的类。  
+-   定义从 [BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx) 继承的名为 ModelStatistics 的类。  
   
 -   重写 OnExecute 方法。  
   
@@ -88,11 +89,11 @@ ms.locfileid: "68069011"
   
 2.  将文件“Class1.cs”重命名为“ModelStatistics.cs”。  
   
-3.  在解决方案资源管理器中，右键单击项目节点，然后单击“添加引用”  。  
+3.  在解决方案资源管理器中，右键单击项目节点，然后单击“添加引用”。  
   
-4.  选择“System.ComponentModel.Composition”  条目，然后单击“确定”  。  
+4.  选择“System.ComponentModel.Composition”  条目，然后单击“确定” 。  
   
-5.  添加所需的 SQL 引用：右键单击项目节点，然后单击“添加引用”  。 单击“浏览”按钮。  导航到 C:\Program Files (x86)\Microsoft SQL Server\110\DAC\Bin  文件夹。 选择“Microsoft.SqlServer.Dac.dll”  、“Microsoft.SqlServer.Dac.Extensions.dll”  和“Microsoft.Data.Tools.Schema.Sql.dll”  条目，然后单击“确定”  。  
+5.  添加所需的 SQL 引用：右键单击项目节点，然后单击“添加引用”。 单击“浏览”按钮。  导航到 C:\Program Files (x86)\Microsoft SQL Server\110\DAC\Bin 文件夹。 选择“Microsoft.SqlServer.Dac.dll” 、“Microsoft.SqlServer.Dac.Extensions.dll” 和“Microsoft.Data.Tools.Schema.Sql.dll”  条目，然后单击“确定” 。  
   
     接下来，开始向类中添加代码。  
   
@@ -431,23 +432,23 @@ ms.locfileid: "68069011"
   
 ### <a name="to-sign-and-build-the-assembly"></a>生成程序集并对其进行签名  
   
-1.  在“项目”  菜单上，单击“MyBuildContributor 属性”  。  
+1.  在“项目”  菜单上，单击“MyBuildContributor 属性” 。  
   
-2.  单击“签名”选项卡。   
+2.  单击“签名”  选项卡。  
   
-3.  单击“对程序集签名”  。  
+3.  单击“对程序集签名” 。  
   
-4.  在“选择强名称密钥文件”  中，单击 **<New>** 。  
+4.  在“选择强名称密钥文件”中，单击 **<New>**。  
   
-5.  在“创建强名称密钥”  对话框的“密钥文件名称”  中，键入“MyRefKey”  。  
+5.  在“创建强名称密钥”  对话框的“密钥文件名称” 中，键入“MyRefKey” 。  
   
 6.  （可选）可以为强名称密钥文件指定密码。  
   
-7.  单击“确定”  。  
+7.  单击“确定”。  
   
-8.  在“文件”  菜单上，单击“全部保存”  。  
+8.  在“文件”  菜单上，单击“全部保存” 。  
   
-9. 在“生成”  菜单上，单击“生成解决方案”  。  
+9. 在“生成”菜单中，单击“生成解决方案”。  
   
     接下来，您必须安装程序集，以便在生成 SQL 项目时加载该程序集。  
   
@@ -458,7 +459,7 @@ ms.locfileid: "68069011"
   
 1.  接下来，您要将程序集信息复制到 Extensions 目录中。 Visual Studio 在启动后将识别 %Program Files%\Microsoft SQL Server\110\DAC\Bin\Extensions 目录和子目录中的任何扩展文件，并使其可供使用。  
   
-2.  将 MyBuildContributor.dll  程序集文件从输出目录复制到 %Program Files%\Microsoft SQL Server\110\DAC\Bin\Extensions 目录。  
+2.  将 MyBuildContributor.dll 程序集文件从输出目录复制到 %Program Files%\Microsoft SQL Server\110\DAC\Bin\Extensions 目录。  
   
     > [!NOTE]  
     > 默认情况下，已编译的 .dll 文件的路径为 YourSolutionPath\YourProjectPath\bin\Debug 或 YourSolutionPath\YourProjectPath\bin\Release。  
@@ -524,11 +525,11 @@ ms.locfileid: "68069011"
   
 1.  在 Visual Studio 中，右键单击项目并选择“重新生成”。 这将重新生成项目，您应该看到生成的模型统计信息，其中输出将包含在生成输出中并保存到 ModelStatistics.xml。 请注意，可能需要在解决方案资源管理器中选择“显示所有文件”才能看到 xml 文件。  
   
-2.  打开 Visual Studio 命令提示符：在“开始”菜单上，依次单击“所有程序”、“Microsoft Visual Studio <Visual Studio Version>”、“Visual Studio Tools”和“Visual Studio 命令提示符(<Visual Studio Version>)”      。  
+2.  打开 Visual Studio 命令提示符：在“开始”菜单上，依次单击“所有程序”、“Microsoft Visual Studio <Visual Studio Version>”、“Visual Studio Tools”和“Visual Studio 命令提示符(<Visual Studio Version>)”。  
   
 3.  在命令提示符处，导航到包含 SQL 项目的文件夹。  
   
-4.  在命令提示符下，键入以下命令：  
+4.  在命令提示符窗口中键入以下命令：  
   
     ```  
     MSBuild /t:Rebuild MyDatabaseProject.sqlproj /p:BuildContributors=$(BuildContributors);ExampleContributors.ModelStatistics /p:ContributorArguments=$(ContributorArguments);GenerateModelStatistics=true;SortModelStatisticsBy=name;OutDir=.\;  
@@ -587,7 +588,7 @@ Relationships
   
     以报告的结果也将永久保存到 XML 文件中。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>后续步骤  
 可以创建其他工具来处理输出 XML 文件。 这只是生成参与者的一个示例。 例如，您可以创建生成参与者来将数据字典文件作为生成的一部分输出。  
   
 ## <a name="see-also"></a>另请参阅  

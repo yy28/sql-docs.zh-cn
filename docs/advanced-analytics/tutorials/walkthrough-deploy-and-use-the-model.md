@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d553d991bd07785a6a6a7592cee38a1e66badf29
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 0117ff1ccbd90a18c1198c9a46fa60c27d28107d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73723708"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74479396"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>部署 R 模型并在 SQL Server 中使用它（演练）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "73723708"
 
     + 使用 SELECT 语句从 SQL 表中调用存储模型。 从表中检索模型，将其作为 varbinary(max) 数据存储在 SQL 变量 \@lmodel2 中，并作为参数 mod 传递给系统存储过程 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)    。
 
-    + 用作计分输入的数据定义为 SQL 查询，并作为字符串存储在 SQL 变量 \@input 中  。 从数据库中检索数据时，数据存储在一个名为 InputDataSet 的数据框中，该数据框只是 [sp_execute_external_script ](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)过程的输入数据的默认名称；可以根据需要使用参数 \@input_data_1_name 定义其他变量名    。
+    + 用作计分输入的数据定义为 SQL 查询，并作为字符串存储在 SQL 变量 \@input 中  。 从数据库中检索数据时，数据存储在一个名为 InputDataSet  的数据框中，该数据框只是 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 过程的输入数据的默认名称；可以根据需要使用参数 \@input_data_1_name  定义其他变量名。
 
     + 为了生成分数，存储过程会从 RevoScaleR 库调用 rxPredict 函数  。
 

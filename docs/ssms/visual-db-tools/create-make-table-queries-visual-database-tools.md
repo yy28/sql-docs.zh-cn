@@ -1,10 +1,9 @@
 ---
-title: 创建“生成表”查询 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 创建“生成表”查询
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,14 @@ helpviewer_keywords:
 ms.assetid: 4493cffa-7b2d-4c24-8ef0-d49329198972
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dbacf31bf3fcbb9cafd88e57e7c798a584b74ef7
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 50b9e158fe828271cc4e96c6175895cc858ac962
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264384"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254328"
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>创建“生成表”查询 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,24 +67,24 @@ WHERE country = 'UK'
   
     若要在另一个数据库中创建目标表，请指定完全限定表名，包括目标数据库的名称、所有者（如果需要）以及表名。  
   
-4.  通过将其添加到查询中来指定要复制的列。 有关详细信息，请参阅 [向查询中添加列 (Visual Database Tools)](../../ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md)。 列只有在添加到查询后才能复制。 若要复制全部行，请选择“&#42; (所有列)”  。  
+4.  通过将其添加到查询中来指定要复制的列。 有关详细信息，请参阅[向查询中添加列](../../ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md)。 列只有在添加到查询后才能复制。 若要复制全部行，请选择“&#42; (所有列)”  。  
   
     “查询和视图设计器”会将选择的列添加到“条件”窗格的“列”  列中。  
   
 5.  如果希望按特定顺序复制行，请指定排序顺序。 有关详细信息，请参阅“对查询结果进行排序和分组”  。  
   
-6.  通过输入搜索条件指定要复制的行。 有关详细信息，请参阅 [指定搜索条件 (Visual Database Tools)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)。  
+6.  通过输入搜索条件指定要复制的行。 有关详细信息，请参阅[指定搜索条件(../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)。  
   
     如果未指定搜索条件，则源表中的所有行都会复制到目标表中。  
   
     > [!NOTE]  
     > 当向“条件”窗格添加要搜索的列时，查询和视图设计器也会将该列添加到要复制的列的列表中。 若要在搜索中使用某列但不复制该列，请在表示表或表结构对象的矩形中，清除该列名旁边的复选框。  
   
-7.  如果希望复制摘要信息，请指定“分组依据”选项。 有关详细信息，请参阅 [汇总查询结果 (Visual Database Tools)](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)。  
+7.  如果希望复制摘要信息，请指定“分组依据”选项。 有关详细信息，请参阅[汇总查询结果(../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)。  
   
 在执行“生成表”查询时，不会在 [“结果窗格”](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)中报告任何结果。 但是，会显示一条消息，指出已复制的行数。  
   
 ## <a name="see-also"></a>另请参阅  
-[设计查询和视图操作指南主题 (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-[查询类型 (Visual Database Tools)](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
+[设计查询和查看操作说明主题(../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[查询类型(../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
   

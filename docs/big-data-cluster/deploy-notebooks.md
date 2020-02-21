@@ -1,22 +1,23 @@
 ---
-title: 使用 Azure Data Studio 笔记本部署 SQL Server 大数据群集
-titleSuffix: Deploy SQL Server big data cluster cluster with Azure Data Studio notebooks
+title: 部署：Azure Data Studio 笔记本
+titleSuffix: SQL Server Big Data Clusters
 description: 使用 Azure Data Studio 中的笔记本部署大数据群集。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dfdf7dfd2ca5521bd80c4fdbf81e7b5c45d58b8d
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: e11a4ac0bcbb66d6b3216d8c2f7a4a3b15cedfb8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594251"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246871"
 ---
-# <a name="deploy-sql-server-big-data-cluster-with-azure-data-studio-notebooks"></a>使用 Azure Data Studio 笔记本部署 SQL Server 大数据群集
+# <a name="deploy-sql-server-big-data-cluster-with-azure-data-studio-notebook"></a>使用 Azure Data Studio 笔记本部署 SQL Server 大数据群集
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -42,19 +43,19 @@ ms.locfileid: "73594251"
 
 1. 启动 Azure Data Studio。
 
-2. 在“连接”选项卡上，选择省略号 (...)，然后选择“部署 SQL Server...”。
+2. 在“连接”选项卡上，选择省略号 (...)，然后选择“部署 SQL Server...”    。
 
    ![部署 SQL Server](media/deploy-notebooks/deploy-notebooks.png)
 
-3. 从部署选项中选择“SQL Server 大数据群集”。
+3. 从部署选项中选择“SQL Server 大数据群集”  。
 
-4. 在“选项”下的“部署目标”中，选择“新建 Azure Kubernetes 群集”或“现有 Azure Kubernetes 服务群集”。
+4. 在“选项”下的“部署目标”中，选择“新建 Azure Kubernetes 群集”或“现有 Azure Kubernetes 服务群集”     。
 
 5. 接受隐私和许可条款
 
-6. 此对话框还会检查主机上是否存在部署所选类型的 SQL 所需的工具。 工具检查成功后才会启用“选择”按钮。
+6. 此对话框还会检查主机上是否存在部署所选类型的 SQL 所需的工具。 工具检查成功后才会启用“选择”按钮  。
 
-7. 选择“选择”按钮。 此操作将启动部署体验。
+7. 选择“选择”按钮  。 此操作将启动部署体验。
 
 ## <a name="set-deployment-configuration-template"></a>设置部署配置模板
 
@@ -72,7 +73,7 @@ ms.locfileid: "73594251"
 
    ![Azure 设置](media/deploy-notebooks/azure-settings.png)
 
-如果部署目标是现有的 Kubernetes 群集，向导则会提示你输入 kube 配置文件的路径以导入 Kubernetes 群集设置。 请确保选择适当的群集上下文，可在其中部署 SQL Server 2019 大数据群集。
+如果部署目标是现有的 Kubernetes 群集，向导则会提示你输入 kube 配置文件的路径以导入 Kubernetes 群集设置  。 请确保选择适当的群集上下文，可在其中部署 SQL Server 2019 大数据群集。
 
    ![目标群集上下文](media/deploy-notebooks/target-cluster-context.png)
 
@@ -93,7 +94,7 @@ ms.locfileid: "73594251"
 
 ### <a name="service-settings"></a>服务设置
 
-此屏幕中包含各种设置的输入，例如“缩放”、“终结点”、“存储”和其他的“高级存储设置”。 请输入适当的值，然后选择“下一步”。
+此屏幕中包含各种设置的输入，例如“缩放”、“终结点”、“存储”和其他的“高级存储设置”     。 请输入适当的值，然后选择“下一步”  。
 
 #### <a name="scale-settings"></a>缩放设置
 
@@ -119,7 +120,7 @@ Spark 实例可以随 HDFS 一起提供。 它包含在存储池中，或者单�
 
 #### <a name="advanced-storage-settings"></a>高级存储设置
 
-可以在“高级存储设置”下添加其他存储设置
+可以在“高级存储设置”下添加其他存储设置 
 
 * 存储池 (HDFS)
 * 数据池
@@ -127,11 +128,11 @@ Spark 实例可以随 HDFS 一起提供。 它包含在存储池中，或者单�
 
    ![高级存储设置](media/deploy-notebooks/advanced-storage-settings.png)
 
-### <a name="summary"></a>“摘要”
+### <a name="summary"></a>总结
 
-此屏幕中汇总了用于部署 SQL Server 2019 大数据群集所提供的所有输入。 可以通过“保存配置文件”按钮下载配置文件。 选择“将脚本编写到笔记本”来将整个部署配置的脚本编写到笔记本。 打开笔记本后，选择“运行单元格”开始将 SQL Server 2019 BDC 部署到所选目标。
+此屏幕中汇总了用于部署 SQL Server 2019 大数据群集所提供的所有输入。 可以通过“保存配置文件”按钮下载配置文件  。 选择“将脚本编写到笔记本”来将整个部署配置的脚本编写到笔记本  。 打开笔记本后，选择“运行单元格”开始将 SQL Server 2019 BDC 部署到所选目标  。
 
-   ![“摘要”](media/deploy-notebooks/deploy-sql-server-big-data-cluster-on-a-new-AKS-cluster.png)
+   ![总结](media/deploy-notebooks/deploy-sql-server-big-data-cluster-on-a-new-AKS-cluster.png)
 
 ## <a name="next-steps"></a>后续步骤
 

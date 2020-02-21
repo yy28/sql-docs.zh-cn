@@ -1,20 +1,20 @@
 ---
 title: Python 教程：雪橇租赁
-description: 在本教程中，你将在 SQL Server 机器学习服务中使用 Python 和线性回归来预测雪橇租赁次数。
+description: 本教程系列由四个部分组成。在第三部分中，你将在 Python 中生成线性回归模型，以在 SQL Server 机器学习服务中预测雪橇租赁次数。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/03/2019
+ms.date: 01/02/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 927816988be8882d4149115f6d4aee38dd3a8f3f
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: fe8a0c9af06d39ce183677adb86f30d9fc197d67
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727034"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75681738"
 ---
 # <a name="python-tutorial-predict-ski-rental-with-linear-regression-in-sql-server-machine-learning-services"></a>Python 教程：在 SQL Server 机器学习服务中使用线性回归来预测雪橇租赁
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,32 +44,24 @@ ms.locfileid: "73727034"
 
     还可以使用自己的 Python IDE，例如 Jupyter 笔记本或具有 [Python 扩展](https://marketplace.visualstudio.com/items?itemName=ms-python.python)和 [mssql 扩展](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)的 [Visual Studio Code](https://code.visualstudio.com/docs)。 
 
-* [revoscalepy](../python/ref-py-revoscalepy.md) 包 - SQL Server 机器学习服务中包含 **revoscalepy** 包。 若要在客户端计算机上使用包，请参阅[设置用于 Python 开发的数据科学客户端](../python/setup-python-client-tools-sql.md)，了解用于在本地安装该包的选项。
-
-    如果使用 Azure Data Studio 中的 Python 笔记本，请按照以下附加步骤使用 revoscalepy  ：
-
-    1. 打开 Azure Data Studio
-    1. 在“文件”菜单中，选择“首选项”，然后选择“设置”   
-    1. 展开“扩展”，然后选择“笔记本配置”  
-    1. 在“Python 路径”下方，输入库的安装路径（例如，`C:\path-to-python-for-mls`） 
-    1. 确保选中“使用现有 Python” 
-    1. 重启 Azure Data Studio
-
-    如果使用其他 Python IDE，则对 IDE 执行类似步骤。
-
 * SQL 查询工具 - 本教程假定使用的是 [Azure Data Studio](../../azure-data-studio/what-is.md)。 也可以使用 [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) (SSMS)。
 
-* 附加 Python 包 - 在本教程系列中的示例所使用的 Python 包中，有些可能是你已经安装了的，有些可能是你尚未安装的。 如有必要，可使用以下 **pip** 命令安装这些包。
+* 附加 Python 包 - 在本教程系列中的示例所使用的以下 Python 包中，有些可能是默认未安装的：
 
-    ```console
-    pip install pandas
-    pip install sklearn
-    pip install pickle
-    ```
+  * pandas
+  * pyodbc
+  * sklearn
+
+  若要安装这些包：
+  1. 在 Azure Data Studio 中，选择“管理包”  。
+  2. 在“管理包”  窗格中，选择“添加新包”  选项卡。
+  3. 对于以下每个包，输入包名称，单击“搜索”  ，然后单击“安装”  。
+
+  作为替代方法，你可以打开“命令提示符”  ，更改为在 Azure Data Studio 中使用的 Python 版本的安装路径（例如 `cd %LocalAppData%\Programs\Python\Python37-32`），然后针对每个包运行 `pip install`。
 
 ## <a name="restore-the-sample-database"></a>还原示例数据库
 
-本教程中使用的示例数据集已保存到 **.bak** 数据库备份文件，以供下载和使用。
+本教程中使用的示例数据库已保存到 .bak  数据库备份文件，以供下载和使用。
 
 1. 下载文件 [TutorialDB.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/TutorialDB.bak)。
 
@@ -78,12 +70,19 @@ ms.locfileid: "73727034"
    * 从下载的 **TutorialDB.bak** 文件中导入
    * 将目标数据库命名为“TutorialDB”
 
-1. 还原数据库后，可以通过查询 **dbo.rental_data** 表来验证是否存在该数据集：
+1. 可以通过查询 dbo.rental_data  表来验证是否存在还原的数据集：
 
-    ```sql
-    USE TutorialDB;
-    SELECT * FROM [dbo].[rental_data];
-    ```
+   ```sql
+   USE TutorialDB;
+   SELECT * FROM [dbo].[rental_data];
+   ```
+
+通过运行以下 SQL 命令来启用外部脚本：
+
+  ```sql
+  sp_configure 'external scripts enabled', 1;
+  RECONFIGURE WITH override;
+  ```
 
 ## <a name="next-steps"></a>后续步骤
 

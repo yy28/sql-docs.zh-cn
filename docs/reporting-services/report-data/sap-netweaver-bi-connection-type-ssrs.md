@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0e377fc94559600a98ee2cd03daadd59a5f3c2eb
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
-ms.translationtype: MTE75
+ms.openlocfilehash: 31e191772d7c58d5dc1573f941d6744ffa08aefe
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66500076"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190680"
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>SAP NetWeaver BI 连接类型 (SSRS)
   若要在报表中包含来自 SAP NetWeaver® Business Intelligence 外部数据源的数据，您必须拥有一个基于 [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]类型的报表数据源的数据集。 此内置数据源类型基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 的 [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)].NET Framework Data Provider 1.0 的数据扩展插件。  
@@ -29,7 +29,7 @@ ms.locfileid: "66500076"
 DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla  
 ```  
   
- 有关更多连接字符串的示例，请参阅 [报表生成器中的数据连接、数据源和连接字符串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
+ 有关更多连接字符串示例，请参阅[创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
   
 ##  <a name="Credentials"></a> 凭据  
@@ -37,7 +37,7 @@ DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
  报表发布后，您可能需要更改数据源的凭据，以使报表在报表服务器上运行时，用于检索数据的权限有效。  
   
- 有关详细信息，请参阅[数据连接、 数据源和连接字符串&#40;报表生成器和 SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)或[指定凭据和连接信息的报表数据源](specify-credential-and-connection-information-for-report-data-sources.md).  
+ 有关详细信息，请参阅[为报表数据源指定凭据和连接信息](specify-credential-and-connection-information-for-report-data-sources.md)  
   
   
 ##  <a name="Query"></a> 查询  
@@ -79,17 +79,17 @@ DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
 ### <a name="predefined-field-properties"></a>预定义的字段属性  
  下表提供了可以用于 [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] 数据源的预定义字段属性的列表。  
   
-|**属性**|**类型**|**说明或所需的值**|  
+|**属性**|类型 |**说明或所需的值**|  
 |------------------|--------------|---------------------------------------|  
-|**Value**|**对象**|指定字段的数据值。|  
-|**IsMissing**|**Boolean**|指示是否在结果数据集中找到了该字段。|  
-|**FormattedValue**|**String**|返回关键数字的格式值。|  
-|**BackgroundColor**|**String**|返回数据库中为该字段定义的背景颜色。|  
-|**Color**|**String**|返回数据库中为该项定义的前景色。|  
-|**Key**|**对象**|返回级别的键。|  
-|**LevelNumber**|**Integer**|针对父子层次结构返回级别号或维度编号。|  
-|**ParentUniqueName**|**String**|针对父子层次结构返回父级的完全限定名称。|  
-|**UniqueName**|**String**|返回级别的完全限定名称。 例如，某员工的 **UniqueName** 值可能为 *[0D_Company].[10D_Department].[11]* 。|  
+|**值**|**Object**|指定字段的数据值。|  
+|**IsMissing**|**布尔值**|指示是否在结果数据集中找到了该字段。|  
+|**FormattedValue**|**字符串**|返回关键数字的格式值。|  
+|**BackgroundColor**|**字符串**|返回数据库中为该字段定义的背景颜色。|  
+|**彩色**|**字符串**|返回数据库中为该项定义的前景色。|  
+|**Key**|**Object**|返回级别的键。|  
+|**LevelNumber**|**整数**|针对父子层次结构返回级别号或维度编号。|  
+|**ParentUniqueName**|**字符串**|针对父子层次结构返回父级的完全限定名称。|  
+|**UniqueName**|**字符串**|返回级别的完全限定名称。 例如，某员工的 **UniqueName** 值可能为 *[0D_Company].[10D_Department].[11]* 。|  
   
  有关在表达式中使用字段和字段属性的详细信息，请参阅[表达式中的内置集合（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)。  
   
@@ -116,7 +116,7 @@ DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
  提供访问报表数据的概述。  
   
- [报表生成器中的数据连接、数据源和连接字符串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  提供有关数据连接和数据源的信息。  
   
  [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

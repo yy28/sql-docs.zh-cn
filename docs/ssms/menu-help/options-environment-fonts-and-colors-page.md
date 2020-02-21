@@ -1,6 +1,6 @@
 ---
-title: 选项（“环境”-“字体和颜色”页）| Microsoft Docs
-ms.custom: ''
+title: 选项（“环境” - “字体和颜色”页）
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7270a67f9f040f986b58ee0bb9d0d5366fe05169
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 97d8667e7c6972331471622685d8a0bb97303dcd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265954"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245730"
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>选项（“环境” - “字体和颜色”页）
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用“选项”  对话框可以为 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的各种用户界面元素建立自定义的字体和配色方案。 在“工具”  菜单上，单击“选项”  ，展开“环境”  文件夹，然后选择“字体和颜色”  。  
+使用“选项”对话框可以为 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的各种用户界面元素建立自定义的字体和配色方案  。 在“工具”  菜单上，单击“选项”  ，展开“环境”  文件夹，然后选择“字体和颜色”  。  
   
 在更改配色方案的会话期间，更改不会生效。 您可以通过打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的另一个实例，并将其设置为您的更改要应用的环境，来评估颜色更改效果。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "68265954"
 **项背景色**  
 提供一个调色板，可以用来为“显示项”  中选定的项选择背景色。 因为某些项是相关的，所以应该始终使用一致的显示方案；例如，更改文本的背景色也会更改“SQL 字符串”等元素的背景色。  
   
-**Custom**  
+**自定义**  
 显示“颜色”  对话框，在其中可以为“显示项”  列表中所选的项设置自定义颜色。  
   
 **加粗**  

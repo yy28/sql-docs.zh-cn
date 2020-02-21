@@ -1,6 +1,6 @@
 ---
 title: 使用 RevoScaleR 对数据进行评分
-description: 教程演练如何使用 SQL Server 上的 R 语言对数据进行评分。
+description: RevoScaleR 教程 8：如何在 SQL Server 中使用 R 语言对数据进行评分。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bf4198e4f8baa0c572f5da3d2b4cf457e695a4b7
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 26f5c7b56298e6a3bd5f1fa9d8bc1d4db79d60af
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727174"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947184"
 ---
 # <a name="score-new-data-sql-server-and-revoscaler-tutorial"></a>对新数据进行评分（SQL Server 和 RevoScaleR 教程）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本课程属于 [RevoScaleR 教程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)，该教程介绍如何在 SQL Server 中使用 [RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)。
+这是介绍如何在 SQL Server 中使用 [RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)的 [RevoScaleR 教程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的第 8 个教程。
 
-在这一步中，你将使用在上一课中创建的逻辑回归模型来对使用相同的独立变量作为输入的其他数据集进行评分。
+在本教程中，你将使用在上一教程中创建的逻辑回归模型，对使用相同的独立变量作为输入的其他数据集进行评分。
 
 > [!div class="checklist"]
 > * 对新数据进行评分
@@ -32,7 +32,7 @@ ms.locfileid: "73727174"
 
 ## <a name="generate-and-save-scores"></a>生成并保存分数
   
-1. 更新在[第二课](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)中创建的 sqlScoreDS 数据源，以使用在上一课中创建的列信息。
+1. 将在[教程 2](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md) 中创建的 sqlScoreDS 数据源更新为，使用在上一教程中创建的列信息。
   
     ```R
     sqlScoreDS <- RxSqlServerData(

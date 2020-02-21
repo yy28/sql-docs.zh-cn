@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 599059c2820bd55132ed98525a60fa9ba6baeec7
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 96049f3ec8f0cd79a25a57ab0467dff29053ee27
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594024"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190482"
 ---
 # <a name="xml-connection-type-ssrs"></a>XML 连接类型 (SSRS)
   若要在报表中包含来自 XML 数据源的数据，则必须拥有一个基于 XML 类型的报表数据源的数据集。 此内置数据源类型基于 XML 数据扩展插件。 使用此数据源类型可连接到 XML 文档、Web 服务、或查询中嵌入的 XML 并从中检索数据。  
@@ -48,7 +48,7 @@ ms.locfileid: "73594024"
   
  不支持存储的凭据和提示的凭据。 注意，如果禁用 Windows 集成安全性，则无法使用它来检索数据。 如果指定了存储凭据或提示凭据，则会在执行时发生错误。  
   
- 有关详细信息，请参阅[数据连接、数据源和连接字符串&#40;报表生成器和 SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)或[为报表数据源指定凭据和连接信息](specify-credential-and-connection-information-for-report-data-sources.md)。  
+ 有关详细信息，请参阅[创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 或[指定报表数据源的凭据和连接信息](specify-credential-and-connection-information-for-report-data-sources.md)。  
   
 ##  <a name="Query"></a> 查询  
  查询指定了要为报表数据集检索哪些数据。 查询的结果集中的列填充数据集的字段集合。 报表仅处理查询检索的第一个结果集。  
@@ -75,21 +75,21 @@ ms.locfileid: "73594024"
   
          必需的 XML 元素：  
   
-         `<Method Namespace=` *"命名空间"*  `Name="MethodName" />`  
+         `<Method Namespace=` *"namespace"*  `Name="MethodName" />`  
   
          `-- or --`  
   
-         `<SoapAction>` *soap 操作* `</SoapAction>`  
+         `<SoapAction>` *soap action* `</SoapAction>`  
   
          可选的 XML 元素：  
   
-         `<ElementPath>`  *元素路径*  `</ElementPath>`  
+         `<ElementPath>`  *element path*  `</ElementPath>`  
   
-         `<Method Namespace=` *"命名空间"*  `Name="MethodName" />`  
+         `<Method Namespace=` *"namespace"*  `Name="MethodName" />`  
   
          `-- or --`  
   
-         `<SoapAction>` *soap 操作* `</SoapAction>`  
+         `<SoapAction>` *soap action* `</SoapAction>`  
   
     -   **XML 数据源为 XML 文档**  
   
@@ -97,7 +97,7 @@ ms.locfileid: "73594024"
   
          可选的 XML 元素：  
   
-         `<ElementPath>`  *元素路径*  `</ElementPath>`  
+         `<ElementPath>`  *element path*  `</ElementPath>`  
   
     -   **XML 数据源为嵌入式 XML 文档**  
   
@@ -107,15 +107,15 @@ ms.locfileid: "73594024"
   
          可选的 XML 元素：  
   
-         `<ElementPath>`  *元素路径*  `</ElementPath>`  
+         `<ElementPath>`  *element path*  `</ElementPath>`  
   
          `-- or --`  
   
-         `<ElementPath IgnoreNamespaces="true">`  *元素路径*  `</ElementPath>`  
+         `<ElementPath IgnoreNamespaces="true">`  *element path*  `</ElementPath>`  
   
- 有关查询语法的详细信息，请参阅 xml[报表数据&#40;SSRS&#41;的 xml 查询语法](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md)。  
+ 有关查询语法的详细信息，请参阅[用于 XML 报表数据的 XML 查询语法 (SSRS)](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md)。  
   
- 有关示例，请参阅 [Reporting Services: Using XML and Web Service Data Sources（Reporting Services：使用 XML 和 Web 服务数据源）](https://go.microsoft.com/fwlink/?LinkId=81654)。  
+ 有关示例，请参阅 [Reporting Services：使用 XML 和 Web 服务数据源](https://go.microsoft.com/fwlink/?LinkId=81654)。  
   
 ### <a name="requirements-for-retrieving-xml-web-service-data"></a>检索 XML Web 服务数据的要求  
  XML 数据处理扩展插件不能检测架构。 因此，您必须通过某种方式来发现哪些 SOAP 方法将检索所需数据。 您还必须了解 Web 服务用于其数据的寻址方案或命名空间。  
@@ -156,7 +156,7 @@ ms.locfileid: "73594024"
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
  提供访问报表数据的概述。  
   
- [报表生成器中的数据连接、数据源和连接字符串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  提供有关数据连接和数据源的信息。  
   
  [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

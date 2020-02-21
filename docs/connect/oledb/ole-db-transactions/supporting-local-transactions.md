@@ -1,5 +1,5 @@
 ---
-title: 支持本地事务 |Microsoft Docs
+title: 支持本地事务 | Microsoft Docs
 description: OLE DB Driver for SQL Server 中的本地事务
 ms.custom: ''
 ms.date: 06/14/2018
@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: c0cfc1ad6ff3439efe458f97394909c919b77075
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993959"
 ---
 # <a name="supporting-local-transactions"></a>支持本地事务
@@ -29,40 +29,40 @@ ms.locfileid: "67993959"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  会话分隔 SQL Server 本地事务的 OLE DB 驱动程序的事务作用域。 当使用者的方向, SQL Server 的 OLE DB 驱动程序将请求提交到连接的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例, 则该请求构成用于 SQL Server 的 OLE DB 驱动程序的工作单元。 本地事务始终在 SQL Server 会话的单个 OLE DB 驱动程序上包装一个或多个工作单元。  
+  会话分隔 OLE DB Driver for SQL Server 本地事务的事务范围。 当 OLE DB Driver for SQL Server 根据使用者指示向连接的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例提交请求时，该请求构成 OLE DB Driver for SQL Server 的工作单元。 本地事务始终在一个 OLE DB Driver for SQL Server 会话中包装一个或多个工作单元。  
   
- 使用默认的适用于 SQL Server 的 OLE DB 驱动程序自动提交模式，将一个工作单元视为本地事务的范围。 只能有一个单元参与本地事务。 当创建会话时, SQL Server 的 OLE DB 驱动程序将为会话启动一个事务。 在成功完成工作单元之后提交工作。 如果失败，则回滚任何已开始的任何工作，并向使用者报告错误。 无论哪种情况，适用于 SQL Server 的 OLE DB 驱动程序都会为会话开始新的本地事务，以便在一个事务中执行所有工作。  
+ 使用默认的适用于 SQL Server 的 OLE DB 驱动程序自动提交模式，将一个工作单元视为本地事务的范围。 只能有一个单元参与本地事务。 创建会话时，OLE DB Driver for SQL Server 开始该会话的事务。 在成功完成工作单元之后提交工作。 如果失败，则回滚任何已开始的任何工作，并向使用者报告错误。 无论哪种情况，适用于 SQL Server 的 OLE DB 驱动程序都会为会话开始新的本地事务，以便在一个事务中执行所有工作。  
   
- 适用于 SQL Server 的 OLE DB 驱动程序使用者可使用 ITransactionLocal 接口对本地事务范围进行更精确的控制  。 当使用者会话启动事务时，事务起点和最终 Commit 或 Abort 方法调用之间的所有会话工作单元都被视为原子单元   。 当使用者指示 SQL Server 的 OLE DB 驱动程序时, 它会隐式启动事务。 如果使用者未请求保持，该会话恢复为父事务级行为，通常为自动提交模式。  
+ 适用于 SQL Server 的 OLE DB 驱动程序使用者可使用 ITransactionLocal 接口对本地事务范围进行更精确的控制  。 当使用者会话启动事务时，事务起点和最终 Commit 或 Abort 方法调用之间的所有会话工作单元都被视为原子单元   。 当使用者指示开始事务时，OLE DB Driver for SQL Server 将隐式执行此操作。 如果使用者未请求保持，该会话恢复为父事务级行为，通常为自动提交模式。  
   
- SQL Server 的 OLE DB 驱动程序支持**ITransactionLocal:: StartTransaction**参数, 如下所示。  
+ OLE DB Driver for SQL Server 支持以下 ITransactionLocal::StartTransaction  参数。  
   
-|参数|描述|  
+|参数|说明|  
 |---------------|-----------------|  
-| isoLevel[in]|用于该事务的隔离级别。 在本地事务中, SQL Server 的 OLE DB 驱动程序支持以下各项:<br /><br /> **ISOLATIONLEVEL_UNSPECIFIED**<br /><br /> **ISOLATIONLEVEL_CHAOS**<br /><br /> **ISOLATIONLEVEL_READUNCOMMITTED**<br /><br /> **ISOLATIONLEVEL_READCOMMITTED**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_CURSORSTABILITY**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_SERIALIZABLE**<br /><br /> **ISOLATIONLEVEL_ISOLATED**<br /><br /> **ISOLATIONLEVEL_SNAPSHOT**<br /><br /> <br /><br /> 注意：从 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 开始，ISOLATIONLEVEL_SNAPSHOT 对 isoLevel 参数有效，而不管是否对数据库启用了版本支持  。 但是，如果用户尝试执行语句，并且未启用版本支持和/或数据库不为只读，则将发生错误。 此外，如果在连接到 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以前的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本时将 ISOLATIONLEVEL_SNAPSHOT 指定为 isoLevel，将发生 XACT_E_ISOLATIONLEVEL 错误  。|  
-| isoFlags[in]|对于任何非零值, SQL Server 的 OLE DB 驱动程序将返回错误。|  
-| pOtherOptions[in]|如果不为 NULL, 则 SQL Server 的 OLE DB 驱动程序从接口请求选项对象。 如果选项对象的*ulTimeout*成员不为零, 则 SQL Server 的 OLE DB 驱动程序将返回 XACT_E_NOTIMEOUT。 SQL Server 的 OLE DB 驱动程序将忽略*szDescription*成员的值。|  
-| pulTransactionLevel[out]|如果不为 NULL, 则 SQL Server 的 OLE DB 驱动程序将返回事务的嵌套级别。|  
+| isoLevel[in]|用于该事务的隔离级别。 在本地事务中，OLE DB Driver for SQL Server 支持以下各项：<br /><br /> **ISOLATIONLEVEL_UNSPECIFIED**<br /><br /> **ISOLATIONLEVEL_CHAOS**<br /><br /> **ISOLATIONLEVEL_READUNCOMMITTED**<br /><br /> **ISOLATIONLEVEL_READCOMMITTED**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_CURSORSTABILITY**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_SERIALIZABLE**<br /><br /> **ISOLATIONLEVEL_ISOLATED**<br /><br /> **ISOLATIONLEVEL_SNAPSHOT**<br /><br /> <br /><br /> 注意：从 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 开始，不管是否对数据库启用了版本支持，ISOLATIONLEVEL_SNAPSHOT 对 isoLevel  参数都有效。 但是，如果用户尝试执行语句，并且未启用版本支持和/或数据库不为只读，则将发生错误。 此外，如果在连接到 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以前的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本时将 ISOLATIONLEVEL_SNAPSHOT 指定为 isoLevel，将发生 XACT_E_ISOLATIONLEVEL 错误  。|  
+| isoFlags[in]|OLE DB Driver for SQL Server 针对任何非零值返回错误。|  
+| pOtherOptions[in]|如果不是 NULL，OLE DB Driver for SQL Server 将从该接口请求选项对象。 如果选项对象的 ulTimeout  成员不为零，则 OLE DB Driver for SQL Server 返回 XACT_E_NOTIMEOUT。 OLE DB Driver for SQL Server 忽略 szDescription  成员的值。|  
+| pulTransactionLevel[out]|如果不为 NULL，OLE DB Driver for SQL Server 将返回事务的嵌套级别。|  
   
- 对于本地事务, SQL Server 的 OLE DB 驱动程序实现**ITransaction:: Abort**参数, 如下所示。  
+ 对于本地事务，OLE DB Driver for SQL Server 按如下方式实现 ITransaction::Abort  参数。  
   
-|参数|描述|  
+|参数|说明|  
 |---------------|-----------------|  
 | pboidReason[in]|忽略（如果设置）。 可以安全地为 NULL。|  
-| fRetaining[in]|当该参数为 TRUE 时，将针对会话隐式开始新的事务。 事务必须由使用者提交或中止。 为 FALSE 时, SQL Server 的 OLE DB 驱动程序恢复会话的自动提交模式。|  
-| fAsync[in]|SQL Server 的 OLE DB 驱动程序不支持异步中止。 如果值不为 FALSE, 则 SQL Server 的 OLE DB 驱动程序将返回 XACT_E_NOTSUPPORTED。|  
+| fRetaining[in]|当该参数为 TRUE 时，将针对会话隐式开始新的事务。 事务必须由使用者提交或中止。 当该参数为 FALSE 时，OLE DB Driver for SQL Server 则恢复到会话的自动提交模式。|  
+| fAsync[in]|OLE DB Driver for SQL Server 不支持异步中止。 如果该值不为 FALSE，OLE DB Driver for SQL Server 返回 XACT_E_NOTSUPPORTED。|  
   
- 对于本地事务, SQL Server 的 OLE DB 驱动程序实现**ITransaction:: Commit**参数, 如下所示。  
+ 对于本地事务，OLE DB Driver for SQL Server 按如下方式实现 ITransaction::Commit  参数。  
   
-|参数|描述|  
+|参数|说明|  
 |---------------|-----------------|  
-| fRetaining[in]|当该参数为 TRUE 时，将针对会话隐式开始新的事务。 事务必须由使用者提交或中止。 为 FALSE 时, SQL Server 的 OLE DB 驱动程序恢复会话的自动提交模式。|  
-| grfTC[in]|SQL Server 的 OLE DB 驱动程序不支持异步和阶段的一个返回。 SQL Server 的 OLE DB 驱动程序为除 XACTTC_SYNC 以外的任何值返回 XACT_E_NOTSUPPORTED。|  
+| fRetaining[in]|当该参数为 TRUE 时，将针对会话隐式开始新的事务。 事务必须由使用者提交或中止。 当该参数为 FALSE 时，OLE DB Driver for SQL Server 则恢复到会话的自动提交模式。|  
+| grfTC[in]|OLE DB Driver for SQL Server 不支持第一阶段的异步返回。 OLE DB Driver for SQL Server 针对除 XACTTC_SYNC 以外的任何值返回 XACT_E_NOTSUPPORTED。|  
 | grfRM[in]|必须为 0。|  
   
  会话上的适用于 SQL Server 的 OLE DB 驱动程序行集根据行集属性 DBPROP_ABORTPRESERVE 和 DBPROP_COMMITPRESERVE 的值保留在本地提交或中止操作中。 默认情况下，这些属性均为 VARIANT_FALSE，并且在执行中止或提交操作之后，将丢失该会话上的所有适用于 SQL Server 的 OLE DB 驱动程序行集。  
   
- SQL Server 的 OLE DB 驱动程序未实现**ITransactionObject**接口。 尝试检索接口上的引用的使用者将返回 E_NOINTERFACE。  
+ OLE DB Driver for SQL Server 不实现 ITransactionObject  接口。 尝试检索接口上的引用的使用者将返回 E_NOINTERFACE。  
   
  此示例使用 ITransactionLocal  。  
   

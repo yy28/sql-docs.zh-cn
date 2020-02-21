@@ -1,23 +1,24 @@
 ---
-title: 如何：将 Visual Studio 2010 自定义测试条件从早期版本升级到 SQL Server Data Tools | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 从旧版升级 Visual Studio 2010 自定义测试条件
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 44c895a3-dee0-4032-a60f-812f5fe3c713
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2b46be709cb14ff9105bcfbcacd65bc32af8de77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 333ef282fe4e1f9d7af53cd3569371e88018a03f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034998"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251076"
 ---
 # <a name="how-to-upgrade-a-visual-studio-2010-custom-test-condition-from-a-previous-release-to-sql-server-data-tools"></a>如何：将 Visual Studio 2010 自定义测试条件从早期版本升级到 SQL Server Data Tools
+
 要使用在低于 SQL Server Data Tools 的版本中创建的测试单元条件，必须升级它：  
   
 -   [更新引用](#UpdateReferences)  
@@ -29,27 +30,27 @@ ms.locfileid: "68034998"
 ## <a name="UpdateReferences"></a>更新引用  
 要更新项目引用：  
   
-1.  仅对于 Visual Basic，在“解决方案资源管理器”  中单击“显示所有文件”  。  
+1.  仅对于 Visual Basic，在“解决方案资源管理器”中单击“显示所有文件”。  
   
-2.  在“解决方案资源管理器”  中，展开“引用”  节点。  
+2.  在“解决方案资源管理器”中，展开“引用”节点。  
   
-3.  右键单击以下程序集引用，然后单击“删除”  ：  
+3.  右键单击以下程序集引用，然后单击“删除”：  
   
     1.  Microsoft.Data.Schema.UnitTesting  
   
     2.  Microsoft.Data.Schema  
   
-4.  在“项目”  菜单上，或通过右键单击“解决方案资源管理器”  中的项目文件夹，单击“添加引用”  。  
+4.  在“项目”菜单上，或通过右键单击“解决方案资源管理器”中的项目文件夹，单击“添加引用”。  
   
-5.  单击 .NET  选项卡。  
+5.  单击 .NET 选项卡。  
   
-6.  在“组件名称”  列表中，选择“System.ComponentModel.Composition”  ，然后单击“确定”  。  
+6.  在“组件名称”列表中，选择“System.ComponentModel.Composition”，然后单击“确定”。  
   
-7.  添加所需的程序集引用。 右键单击项目节点，然后单击“添加引用”  。 单击“浏览”  ，并导航到 C:\Program Files (x86)\\MicrosoftSQL Server\110\DAC\Bin 文件夹。 选择 Microsoft.Data.Tools.Schema.Sql.dll 并单击“添加”，然后单击“确定”。  
+7.  添加所需的程序集引用。 右键单击项目节点，然后单击“添加引用”。 单击“浏览”，并导航到 C:\Program Files (x86)\\MicrosoftSQL Server\110\DAC\Bin 文件夹。 选择 Microsoft.Data.Tools.Schema.Sql.dll 并单击“添加”，然后单击“确定”。  
   
-8.  在“项目”  菜单上，单击“卸载项目”  。  
+8.  在“项目”菜单上，单击“卸载项目”。  
   
-9. 在“解决方案资源管理器”  中右键单击“项目”  ，然后选择“编辑 `project_name` .csproj”   。  
+9. 在“解决方案资源管理器”中右键单击“项目”，然后选择“编辑 `project_name` .csproj”。  
   
 10. 在导入 `Microsoft.CSharp.targets` 后添加以下 Import 语句：  
   
@@ -59,9 +60,9 @@ ms.locfileid: "68034998"
     <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.Sql.UnitTesting.targets" Condition="'$(VisualStudioVersion)' != ''" />  
     ```  
   
-11. 保存文件并将其关闭。 在“解决方案资源管理器”  中右键单击该项目，然后选择“重新加载项目”  。  
+11. 保存文件并将其关闭。 在“解决方案资源管理器”中右键单击该项目，然后选择“重新加载项目”。  
   
-12. 打开该测试条件类，删除以 Microsoft.Data.Schema  开头的所有 using 语句。 这样做最简单的方式是右键单击该文件，然后选择“组织 using”  ，选择“移除和排序”  。 必须删除以下 using 语句：  
+12. 打开该测试条件类，删除以 Microsoft.Data.Schema 开头的所有 using 语句。 这样做最简单的方式是右键单击该文件，然后选择“组织 using”，选择“移除和排序”。 必须删除以下 using 语句：  
   
     ```  
     using Microsoft.Data.Schema.UnitTesting;  
@@ -121,7 +122,7 @@ ms.locfileid: "68034998"
     ```  
   
 ### <a name="update-type-references"></a>更新类型引用  
-一些类型名称已在 SQL Server 单元测试框架中更改。 要更新你的代码以使用新的类型名称，请使用“编辑”  菜单中的“查找和替换”  。 类型名称现在以 Sql  开头。 应按以下方式更新类名称：  
+一些类型名称已在 SQL Server 单元测试框架中更改。 要更新你的代码以使用新的类型名称，请使用“编辑”菜单中的“查找和替换”。 类型名称现在以 Sql 开头。 应按以下方式更新类名称：  
   
 |旧类型名称|新类型名称|  
 |-----------------|-----------------|  

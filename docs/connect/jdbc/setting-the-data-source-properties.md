@@ -1,5 +1,5 @@
 ---
-title: 设置数据源属性 |Microsoft Docs
+title: 设置数据源属性 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: f3363d05-07fc-4bf8-ae5e-2a7a968808ad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0b3093b87557917655fcbfd6cf7c2ec37151ca44
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027728"
 ---
 # <a name="setting-the-data-source-properties"></a>设置数据源属性
@@ -25,7 +25,7 @@ ms.locfileid: "69027728"
 
 通过使用 Java EE 产品（例如应用程序服务器和 servlet/JSP 引擎），通常可配置数据库访问的数据源。 配置允许通过“属性=值”对来输入属性时，可以指定[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)主题中列出的任何属性。
 
-有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源的详细信息，请参阅 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 类。 有关如何使用 SQLServerDataSource 类建立与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库的连接的示例, 请参阅[数据源示例](../../connect/jdbc/data-source-sample.md)。
+有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源的详细信息，请参阅 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 类。 有关如何使用 SQLServerDataSource 类来建立到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的连接的示例，请参阅[数据源示例](../../connect/jdbc/data-source-sample.md)。
 
 ## <a name="see-also"></a>另请参阅
 

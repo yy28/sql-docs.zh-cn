@@ -1,5 +1,5 @@
 ---
-title: '如何: 以流的形式发送数据 |Microsoft Docs'
+title: 如何：以流的形式发送数据 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/28/2019
 ms.prod: sql
@@ -14,10 +14,10 @@ ms.assetid: ab6b95d6-b6e6-4bd7-a18c-50f2918f7532
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d524e7c7f00b08ce636f8a3b7b945f3e8b349af0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936400"
 ---
 # <a name="how-to-send-data-as-a-stream"></a>如何：以流的形式发送数据
@@ -27,7 +27,7 @@ ms.locfileid: "67936400"
   
 第三个示例演示如何使用 PDO_SQLSRV 驱动程序将流数据发送到服务器。  
   
-## <a name="example-sending-stream-data-at-execution"></a>示例: 在执行时发送流数据
+## <a name="example-sending-stream-data-at-execution"></a>示例：在执行时发送流数据
 以下示例向 AdventureWorks 数据库的 *Production.ProductReview* 表中插入一行。 客户意见 ($comments) 通过 PHP [fopen](https://php.net/manual/en/function.fopen.php) 函数以流的形式打开，随后在查询执行几批流式传输到服务器  。  
   
 该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 所有输出都写入控制台。  
@@ -79,7 +79,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example-sending-stream-data-using-sqlsrvsendstreamdata"></a>示例: 使用 sqlsrv_send_stream_data 发送流数据
+## <a name="example-sending-stream-data-using-sqlsrv_send_stream_data"></a>示例：使用 sqlsrv_send_stream_data 发送流数据
 下一个示例与上述示例相同，但禁用了在执行时发送所有流数据的默认行为。 该示例使用 [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md) 将流数据发送到服务器。 每次调用 sqlsrv_send_stream_data 时，最多可以发送八千字节 (8kB) 的数据  。 该脚本将对 **sqlsrv_send_stream_data** 发出的调用数进行计数并将该计数显示到控制台。  
   
 该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 所有输出都写入控制台。  
@@ -143,7 +143,7 @@ sqlsrv_close( $conn);
   
 虽然本主题中的示例将字符数据发送到服务器，但任何格式的数据都可以采用流的形式发送。 例如，你还可以使用本主题中所演示的技术以流的形式发送采用二进制格式的图像。  
   
-## <a name="example-sending-an-image-as-a-stream"></a>示例: 以流的形式发送图像 
+## <a name="example-sending-an-image-as-a-stream"></a>示例：以流的形式发送图像 
   
 ```  
 <?php  

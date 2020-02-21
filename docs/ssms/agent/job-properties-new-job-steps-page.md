@@ -1,10 +1,9 @@
 ---
-title: 作业属性 - 新建作业（“步骤”页）| Microsoft Docs
-ms.custom: ''
+title: 作业属性 - 新建作业（“步骤”页）
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,13 +11,15 @@ f1_keywords:
 ms.assetid: 231fe13e-c2dc-4149-a73e-1497e62c49e8
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 214374ee87b1896ec6683827eaecff7484e3d922
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: b4994a7398b038ce8b99d38b2584da6e95d7e552
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262330"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242274"
 ---
 # <a name="job-properties---new-job-steps-page"></a>作业属性 - 新建作业（“步骤”页）
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "68262330"
 **新建**  
 在所选作业步骤下创建新的作业步骤。  
   
-**Insert**  
+**插入**  
 在所选作业步骤上方创建新的作业步骤。  
   
 **编辑**  

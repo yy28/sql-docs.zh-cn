@@ -1,6 +1,6 @@
 ---
-title: 使用 IOpenRowset 创建行集 |Microsoft Docs
-description: 使用用于 SQL Server 的 OLE DB 驱动程序的 IOpenRowset 接口创建行集
+title: 使用 IOpenRowset 创建行集 | Microsoft Docs
+description: 使用 OLE DB Driver for SQL Server 的 IOpenRowset 接口创建行集
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 2c6da41d19fed61fd83a7d4a1521ddba8726ba46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994307"
 ---
 # <a name="creating-a-rowset-with-iopenrowset"></a>使用 IOpenRowset 创建行集
@@ -27,7 +27,7 @@ ms.locfileid: "67994307"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server 的 OLE DB 驱动程序支持**IOpenRowset:: OpenRowset**方法, 但有以下限制:  
+  OLE DB Driver for SQL Server 支持 IOpenRowset::OpenRowset  方法，但具有以下限制：  
   
 -   必须在 pTableID 参数指向的数据库 ID (DBID) 结构中指定基表或视图  。  
   

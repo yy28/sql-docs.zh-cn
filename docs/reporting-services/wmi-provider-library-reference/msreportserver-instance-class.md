@@ -17,13 +17,13 @@ ms.assetid: 0c2e8587-1dda-4e7b-8ef8-646fcda051fc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 92b678e0b9cc07cacfc6501b75b3e9d5c2889e12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65572259"
 ---
-# <a name="msreportserverinstance-class"></a>MSReportServer_Instance 类
+# <a name="msreportserver_instance-class"></a>MSReportServer_Instance 类
   MSReportServer_Instance 类为客户端提供连接到已安装的报表服务器所需的基本信息。  
   
  有关此类型所有成员的列表，请参阅 [MSReportServer_Instance 成员](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
@@ -42,9 +42,9 @@ public class MSReportServer_Instance
  此类型的任何公共静态（**中的** Shared [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]）成员在多线程操作中是安全的。 不能保证任何实例成员都是线程安全的。  
   
 ## <a name="requirements"></a>要求  
- **命名空间:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **命名空间：** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
- **平台:** [!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
+ **平台：** [!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
  [MSReportServer_Instance 成员](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  

@@ -21,10 +21,10 @@ ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: abdd5e7af707bd566288bd1048eda4874d82311c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68126066"
 ---
 # <a name="network-protocols-and-network-libraries"></a>网络协议和网络库
@@ -35,12 +35,12 @@ ms.locfileid: "68126066"
 ## <a name="default-sql-server-network-configuration"></a>默认 SQL Server 网络配置  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的默认实例针对 TCP/IP 端口 1433 进行配置，并命名为管道 \\\\.\pipe\sql\query。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命名实例配置为采用 TCP 动态端口，其端口号由操作系统分配。  
   
- 如果无法使用动态端口地址（例如，当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接必须通过服务器配置为要通过特定端口地址的防火墙时）。 请选择一个未分配的端口号。 Internet 号码分配机构负责管理端口号的分配，并在 [https://www.iana.org](https://go.microsoft.com/fwlink/?LinkId=48844) 上列出这些端口号。  
+ 如果无法使用动态端口地址（例如，当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接必须通过服务器配置为要通过特定端口地址的防火墙时）。 选择一个未分配的端口号。 Internet 号码分配机构负责管理端口号的分配，并在 [https://www.iana.org](https://go.microsoft.com/fwlink/?LinkId=48844) 上列出这些端口号。  
   
  为了增强安全性，当安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时不会完全启用网络连接。 在安装完成后，若要启用、禁用和配置网络协议，请使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 网络配置区域。  
   
 ## <a name="server-message-block-protocol"></a>服务器消息块协议  
- 周边网络中的服务器应该禁用所有不必要的协议，其中包括服务器消息块 (SMB)。 Web 服务器和域名系统 (DNS) 服务器不需要 SMB。 应该禁用此协议，以防来自用户枚举的威胁。  
+ 周边网络中的服务器应该禁用所有不必要的协议，其中包括服务器消息块 (SMB)。 Web 服务器和域名系统 (DNS) 服务器不需要 SMB。 为了应对用户枚举的威胁，应禁用此协议。  
   
 > [!WARNING]
 >  禁用服务器消息块将阻止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Windows 群集服务访问远程文件共享。 如果您执行或计划执行以下操作之一，请不要禁用 SMB：  
@@ -68,7 +68,7 @@ ms.locfileid: "68126066"
 -   在本地连接属性中，使用“传播控制协议/Internet 协议 (TCP/IP) 属性”  对话框删除“Microsoft 网络的文件和打印共享”  和“Microsoft 网络客户端”  。  
   
 ## <a name="endpoints"></a>终结点  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接引入了一个新概念；在服务器端用 [!INCLUDE[tsql](../../includes/tsql-md.md)]*终结点*。 可以对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 端点授予、撤消和拒绝权限。 默认情况下，所有用户都具备访问端点的权限，除非 sysadmin 组的成员或端点所有者拒绝或撤消了此权限。 GRANT、REVOKE 和 DENY ENDPOINT 语法使用管理员必须从端点的目录视图中获得的端点 ID。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接引入了一个新概念；在服务器端用 [!INCLUDE[tsql](../../includes/tsql-md.md)]*终结点*。 可以对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 端点授予、撤消和拒绝权限。 默认情况下，所有用户都具备访问端点的权限，除非 sysadmin 组的成员或端点所有者拒绝或撤消了此权限。 GRANT、REVOKE 和 DENY ENDPOINT 语法使用终结点 ID，管理员必须从终结点的目录视图中获取此 ID。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将为所有支持的网络协议以及专用管理员连接创建 [!INCLUDE[tsql](../../includes/tsql-md.md)] 端点。  
   

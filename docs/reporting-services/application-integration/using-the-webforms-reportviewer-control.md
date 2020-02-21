@@ -1,23 +1,25 @@
 ---
-title: 使用 WebForms ReportViewer 控件 | Microsoft Docs
+title: 使用 WebForms ReportViewer 控件
+description: 若要查看部署到报表服务器的报表或在本地文件系统上存在的报表，您可以在 Web 应用程序中使用 WebForms ReportViewer 控件来呈现它们。
 ms.date: 06/12/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - ReportViewer controls
 ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a5ea5370cbb59d5fb70fa233f3695ac77e412669
-ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
-ms.translationtype: MTE75
+ms.openlocfilehash: 1271a159feaf20dd46d23c5fc3ff4a0cb2aa87be
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71687373"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796933"
 ---
-# <a name="using-the-webforms-reportviewer-control"></a>使用 WebForms ReportViewer 控件
+# <a name="use-the-webforms-reportviewer-control"></a>使用 WebForms ReportViewer 控件
   若要查看部署到报表服务器的报表或在本地文件系统上存在的报表，您可以在 Web 应用程序中使用 WebForms ReportViewer 控件来呈现它们。  
   
 ## <a name="to-use-the-reportviewer-control-in-a-web-application"></a>在 Web 应用程序中使用 ReportViewer 控件  
@@ -28,19 +30,19 @@ ms.locfileid: "71687373"
   
      打开一个现有的 ASP.NET 网站并添加一个新的 Web 窗体。  
   
-2.  在“工具箱”窗口的“AJAX 扩展”组中找到“ScriptManager”控件，并将其拖到 Web 窗体的设计图面上。  
+2.  在“工具箱”窗口的“AJAX 扩展”组中找到“ScriptManager”控件，并将其拖到 Web 窗体的设计图面上    。  
   
-     如果“工具箱”不可见，可以通过从“视图”菜单中选择“工具箱”来进行访问。  
+     如果“工具箱”不可见，可以通过从“视图”菜单中选择“工具箱”来进行访问    。  
   
-3.  在“工具箱”中找到“ReportViewer”控件，并将其拖到“ScriptManager”控件下的设计图面上。  
+3.  在“工具箱”中找到“ReportViewer”控件，并将其拖到“ScriptManager”控件下的设计图面上    。  
   
-     名为 reportViewer1 的“ReportViewer”控件便会添加到该窗体中。  
+     名为 reportViewer1 的“ReportViewer”控件便会添加到该窗体中  。  
   
- 此控件添加到该窗体之后，将出现“ReportViewer 任务”智能标记，并提示你选择一个报表。 如果要查看的报表已部署到报表服务器上，则从“选择报表”下拉列表中选择“\<服务器报表>”选项。 选中“\<服务器报表>”选项后，将出现两个附加的属性，“报表服务器 URL”和“报表路径”。 “报表服务器 URL”是指向相应报表服务器的地址，“报表路径”是指向要呈现的报表的完整路径。  
+ 此控件添加到该窗体之后，将出现“ReportViewer 任务”  智能标记，并提示你选择一个报表。 如果要查看的报表已部署到报表服务器上，则从“选择报表”下拉列表中选择“\<服务器报表>”选项   。 选中“\<服务器报表>”选项后，将出现两个附加的属性，“报表服务器 URL”和“报表路径”    。 “报表服务器 URL”是指向相应报表服务器的地址，“报表路径”是指向要呈现的报表的完整路径   。  
   
- 如果想要以本地模式查看报表，请选择“设计新报表”选项以启动报表设计器，或选择已是现有项目一部分的一个报表。 选择报表后，请确保在 ReportViewer 控件的“ReportPath”属性中输入报表 RDLC 文件的名称。 此属性将显示在“属性”窗格中的“LocalReport”节点下。  
+ 如果想要以本地模式查看报表，请选择“设计新报表”选项以启动报表设计器，或选择已是现有项目一部分的一个报表  。 选择报表后，请确保在 ReportViewer 控件的“ReportPath”属性中输入报表 RDLC 文件的名称  。 此属性将显示在“属性”窗格中的“LocalReport”节点下   。  
   
- 在呈现报表时，您可以选择在 ReportViewer 工具栏上隐藏一个或多个项。 例如，您可以隐藏打印按钮。 若要隐藏工具栏项，可在“属性”窗格中将以下 ReportViewer 属性设置为“False”。  
+ 在呈现报表时，您可以选择在 ReportViewer 工具栏上隐藏一个或多个项。 例如，您可以隐藏打印按钮。 若要隐藏工具栏项，可在“属性”窗格中将以下 ReportViewer 属性设置为“False”   。  
   
 -   **ShowBackButton**  
   
@@ -59,7 +61,7 @@ ms.locfileid: "71687373"
 ## <a name="viewing-reports-in-remote-processing-mode"></a>在远程处理模式下查看报表  
  下面的示例演示如何呈现已部署到报表服务器的报表。 此示例使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例报表项目随附的 Sales Order Detail 报表。  
   
- 该示例使用集成的 Windows 身份验证，因此您首先必须启用模拟。 为此，请将以下行插入“web.config”文件：  
+ 该示例使用集成的 Windows 身份验证，因此您首先必须启用模拟。 为此，请将以下行插入“web.config”文件  ：  
   
 ```  
 <!-- Web.config file. -->  
@@ -145,19 +147,19 @@ End Class
   
 1.  打开该报表将添加到的网站。  
   
-2.  从“网站”菜单中选择“添加现有项”。  
+2.  从“网站”菜单中选择“添加现有项”   。  
   
 3.  浏览到安装了 AdventureWorks 报表示例项目的位置。  
   
      默认位置是 C:\Program Files\Microsoft SQL Server\100\Samples\Reporting Services\Report Samples\AdventureWorks Sample Reports。  
   
-4.  选择 Sales Order Detail.rdl 文件并单击“添加”按钮。  
+4.  选择 Sales Order Detail.rdl 文件并单击“添加”按钮  。  
   
      Sales Order Detail.rdl 文件现在应是该项目的一部分。  
   
-5.  在“解决方案资源管理器”中右键单击 Sales Order Detail.rdl 文件，然后选择“重命名”。 将该报表重命名为“Sales Order Detail.rdlc”，然后按 Enter。  
+5.  在“解决方案资源管理器”中右键单击 Sales Order Detail.rdl 文件，然后选择“重命名”  。 将该报表重命名为“Sales Order Detail.rdlc”，然后按 Enter  。  
   
-     如果“解决方案资源管理器”不可见，可以通过从“视图”菜单中选择“解决方案资源管理器”来将其打开。  
+     如果“解决方案资源管理器”不可见，可以通过从“视图”菜单中选择“解决方案资源管理器”来将其打开  。  
   
  以下代码示例将为销售订单数据创建一个数据集，然后以本地模式呈现 Sales Order Detail 报表。  
 

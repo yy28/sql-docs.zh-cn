@@ -11,10 +11,10 @@ ms.assetid: 09042ee9-dfb1-4d0b-82bd-d1224b0aea80
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dc966b97231f491a5f3c2cdb71c457f0324a8df3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974848"
 ---
 # <a name="setcharacterstream-method-sqlservernclob"></a>setCharacterStream 方法 (SQLServerNClob)
@@ -29,7 +29,7 @@ ms.locfileid: "67974848"
 public java.io.Writer setCharacterStream(long pos)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  pos   
   
  写入 NCLOB  值的起始位置；第一个位置为 1。  
@@ -37,11 +37,11 @@ public java.io.Writer setCharacterStream(long pos)
 ## <a name="return-value"></a>返回值  
  表示可向其中写入 Unicode 编码字符的流的 Writer 对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 setCharacterStream 方法由 setCharacterStream 方法在 NClob 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 setCharacterStream 方法是由 java.sql.NClob 接口中的 setCharacterStream 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerNClob 方法](../../../connect/jdbc/reference/sqlservernclob-methods.md)   

@@ -9,10 +9,10 @@ ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 851a574989f56609298e4283a398fcddce027024
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580738"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>基于报表生成数据馈送（报表生成器和 SSRS）
@@ -54,7 +54,7 @@ ms.locfileid: "65580738"
   
  ![RS_Atom_PeerDynamicColumns](../../reporting-services/report-builder/media/rs-atom-peerdynamiccolumns.gif "RS_Atom_PeerDynamicColumns")  
   
- 从此报表生成的 Atom 服务文档包括两个数据馈送：两个动态对等列（Territory 和 Year）各对应一个数据馈送。 下图显示了每个数据馈送的内容。  
+ 该报表生成的 Atom 服务文档包括两个数据馈送，每个数据馈送对应一个动态对等列：Territory 和 Year。 下图显示了每个数据馈送的内容。  
   
  ![RS_Atom_PeerDynamicDataFeeds](../../reporting-services/report-builder/media/rs-atom-peerdynamicdatafeeds.gif "RS_Atom_PeerDynamicDataFeeds")  
   
@@ -76,13 +76,13 @@ ms.locfileid: "65580738"
  `<updated>2009-05-08T23:09:58Z</updated>`  
   
 ### <a name="data-section"></a>数据部分  
- 数据馈送的数据部分为 Atom 呈现扩展插件生成的平展行集中的每一行都包含一个 \<entry> 元素  。  
+ 数据馈送的数据部分为 Atom 呈现扩展插件生成的平展行集中的每一行都包含一个 \<entry> 元素。  
   
  下图显示了使用组和总计的报表。  
   
  ![RS_Atom_ProductSalesSummaryCircledValues](../../reporting-services/report-builder/media/rs-atom-productsalessummarycircledvalues.gif "RS_Atom_ProductSalesSummaryCircledValues")  
   
- 下面的 XML 在数据馈送中显示了来自该报表的 \<entry> 元素  。 请注意，\<entry> 元素包含该组的销售和订单的总计以及所有组的销售和订单的总计  。 \<entry> 元素包含报表中的所有值  。  
+ 下面的 XML 在数据馈送中显示了来自该报表的 \<entry> 元素。 请注意，\<entry> 元素包含该组的销售和订单的总计以及所有组的销售和订单的总计。 \<entry> 元素包含报表中的所有值。  
   
  `<entry><id>uuid:1795992c-a6f3-40ec-9243-fbfd0b1a5be3;id=166322</id><title type="text"></title><updated>2009-05-08T23:09:58Z</updated><author /><content type="application/xml"><m:properties>`  
   
@@ -105,7 +105,7 @@ ms.locfileid: "65580738"
  `</entry>`  
   
 ### <a name="working-with-data-feeds"></a>使用数据馈送  
- 由报表生成的所有数据馈送都包括生成数据馈送的数据区域父级范围内的报表项。 集成的 SharePoint 站点来生成 Atom 服务文档和数据馈送。 设想有一个报表包含若干表和一个图表。 报表正文中的文本框提供有关每个数据区域的说明性文本。 该报表生成的每个数据馈送中的每个条目都包括该文本框的值。 例如，如果文本为“Chart displays monthly sales averages by sales region”，则所有三个数据馈送都会在每一行中包括此文本。  
+ 由报表生成的所有数据馈送都包括生成数据馈送的数据区域父级范围内的报表项。 。 设想有一个报表包含若干表和一个图表。 报表正文中的文本框提供有关每个数据区域的说明性文本。 该报表生成的每个数据馈送中的每个条目都包括该文本框的值。 例如，如果文本为“Chart displays monthly sales averages by sales region”，则所有三个数据馈送都会在每一行中包括此文本。  
   
  如果报表布局包括分层数据关系，如嵌套数据区域，这些关系将包括在报表数据的平展行集中。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "65580738"
   
  报表项名称默认为报表项的报表定义语言 (RDL) 元素名称，这些名称经常较为直观或容易记忆。 例如，放入报表的第一个矩阵的默认名称为 Tablix 1。 数据馈送使用这些名称。  
   
- 若要令数据馈送易于使用，可以使用数据区域的 DataElementName 属性来提供友好名称。 如果为 DataElementName 提供值，数据馈送子元素 \<d> 将使用该值，而不是使用默认的数据区域名称  。 例如，如果数据区域的默认名称为 Tablix1，而 DataElementName 设置为 SalesByTerritoryYear，则数据馈送中的 \<d> 将使用 SalesByTerritoryYear  。 如果数据区域具有两个数据馈送（类似上述矩阵报表），则数据馈送中使用的名称为 SalesByTerritoryYear _Territory 和 SalesByTerritoryYear _Year。  
+ 若要令数据馈送易于使用，可以使用数据区域的 DataElementName 属性来提供友好名称。 如果为 DataElementName 提供值，数据馈送子元素 \<d> 将使用该值，而不是使用默认的数据区域名称。 例如，如果数据区域的默认名称为 Tablix1，而 DataElementName 设置为 SalesByTerritoryYear，则数据馈送中的 \<d> 将使用 SalesByTerritoryYear。 如果数据区域具有两个数据馈送（类似上述矩阵报表），则数据馈送中使用的名称为 SalesByTerritoryYear _Territory 和 SalesByTerritoryYear _Year。  
   
  如果对报表显示的数据和数据馈送中的数据进行比较，则可能发现一些差异。 报表经常显示格式化的数值和时间/日期数据，但数据馈送包含非格式化的数据。  
   
@@ -167,18 +167,18 @@ ms.locfileid: "65580738"
   
  下表说明了呈现报表项时这些报表项的外观：  
   
-|项|呈现行为|  
+|Item|呈现行为|  
 |----------|------------------------|  
 |表|呈现方式为扩展该表，在只保留最起码的格式的情况下为每一行和每一列都分别创建行和列。 小计行和小计列没有列标题或行标题。 不支持钻取报表。|  
 |矩阵|呈现方式为扩展该矩阵，在只保留最起码的格式的情况下为每一行和每一列都分别创建行和列。 小计行和小计列没有列标题或行标题。|  
-|列表|为列表中每一明细行或实例呈现一个记录。|  
+|列出|为列表中每一明细行或实例呈现一个记录。|  
 |子报表|对于内容的每个实例，都会重复它的父项。|  
 |图表|为每个图表值呈现具有所有图表标签的记录。 来自系列和类别的标签采用平展的层次结构，并包含在图表值的行中。|  
 |数据条|像图表一样呈现。 通常，数据条并不包括层次结构或标签。|  
 |迷你图|像图表一样呈现。 通常，迷你图并不包括层次结构或标签。|  
-|测量|作为单个记录呈现，具有线性刻度的最小值和最大值、范围的起始和终止值，以及指针的值。|  
+|仪表|作为单个记录呈现，具有线性刻度的最小值和最大值、范围的起始和终止值，以及指针的值。|  
 |指示器|作为单个记录呈现，具有活动状态名称、可用状态以及数据值。|  
-|地图|为每个地图数据区域生成数据馈送。 如果多个地图层使用相同数据区域，数据馈送将包含所有层的数据。 该数据馈送包含一个记录，该记录包含地图层的每个地图成员的标签和值。|  
+|映射|为每个地图数据区域生成数据馈送。 如果多个地图层使用相同数据区域，数据馈送将包含所有层的数据。 该数据馈送包含一个记录，该记录包含地图层的每个地图成员的标签和值。|  
   
   
 ##  <a name="DeviceInfo"></a> 设备信息设置  

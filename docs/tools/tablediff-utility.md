@@ -1,6 +1,6 @@
 ---
-title: tablediff 实用程序 |Microsoft Docs
-ms.custom: ''
+title: tablediff 实用工具
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -19,12 +19,12 @@ ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 48fc2d25bc65e76156da80c6b6117a62fa39e2a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: cb12cc164490e249dae13ef22cdd5279a0427102
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986035"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75304799"
 ---
 # <a name="tablediff-utility"></a>tablediff 实用工具
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -166,13 +166,13 @@ tablediff
   
 ## <a name="return-value"></a>返回值  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
-|**0**|成功|  
+|**0**|Success|  
 |**1**|严重错误|  
 |**2**|存在表差异|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  tablediff  实用工具不能用于非 -[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服务器。  
   
  不支持包含 **sql_variant** 数据类型列的表。  

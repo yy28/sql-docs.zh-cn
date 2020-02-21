@@ -9,10 +9,10 @@ ms.assetid: abd61e19-dba3-423c-a26c-e8bc43197d3f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 48da3d62e18a77bc8629d43ef170ca2b0622fe16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581704"
 ---
 # <a name="change-the-order-of-a-report-parameter-report-builder-and-ssrs"></a>更改报表参数的顺序（报表生成器和 SSRS）
@@ -29,7 +29,7 @@ ms.locfileid: "65581704"
   
 -   单击  “报表数据”窗格中的参数，然后使用向上和向下箭头按钮在列表中上下移动该参数，如下图所示。  更改参数在  “报表数据”窗格中的顺序时，参数窗格中的参数位置也会发生变化。  
   
-     ![更改“报表数据”窗格中参数的顺序](../../reporting-services/report-design/media/ssrs-changeorderofparameters-reportdata.png "Change the order of the parameters in the Report Data pane")  
+     ![更改“报表数据”窗格中的参数顺序](../../reporting-services/report-design/media/ssrs-changeorderofparameters-reportdata.png "更改“报表数据”窗格中的参数顺序")  
   
 -   在参数窗格中，将参数拖到窗格中的新列或新行。 更改参数在窗格中的位置时，  “报表数据”窗格中的参数顺序也会发生变化。 有关移动窗格中的参数的详细信息，请参阅[自定义报表中的参数窗格（报表生成器）](../../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)。  
   

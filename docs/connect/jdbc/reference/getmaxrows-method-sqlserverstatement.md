@@ -1,5 +1,5 @@
 ---
-title: getMaxRows 方法 (SQLServerStatement) |Microsoft Docs
+title: getMaxRows 方法 (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 6aece4e5-027d-434e-a8cf-a67c0484f189
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e0b9df5512466c5f12c5fda1b4e5cb4a91504499
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982068"
 ---
 # <a name="getmaxrows-method-sqlserverstatement"></a>getMaxRows 方法 (SQLServerStatement)
@@ -37,11 +37,11 @@ public final int getMaxRows()
 ## <a name="return-value"></a>返回值  
  一个 int 值，此值指示最大行数；如果没有限制，则为 0  。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 getMaxRows 方法由 getMaxRows 方法在 .sql 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 getMaxRows 方法是由 java.sql.Statement 接口中的 getMaxRows 方法指定的。  
   
  此 getMaxRows 方法对于动态可滚动游标始终返回 0。  
   

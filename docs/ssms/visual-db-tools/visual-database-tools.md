@@ -1,5 +1,5 @@
 ---
-title: Visual Database Tools | Microsoft Docs
+title: Visual Database Tools
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -7,15 +7,16 @@ ms.topic: conceptual
 ms.assetid: 1b1921b1-dcb2-47cd-985e-5a264de0bcf5
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 2c1da480b2857033c524d520a42ef5473e94063f
-ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
+ms.openlocfilehash: 4cc7ac6000027b1471c29d4657260a2c0408d68e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988078"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246294"
 ---
 # <a name="visual-database-tools"></a>Visual Database Tools
 
@@ -26,8 +27,8 @@ ms.locfileid: "70988078"
 
 通过以下任务以开始使用可视化数据库工具：  
   
-|**Description**|**主题**|  
+|**说明**|**主题**|  
 |-------------------|-------------|  
-|描述数据库关系图工具。|[设计数据库关系图 (Visual Database Tools)](../../ssms/visual-db-tools/design-database-diagrams-visual-database-tools.md)|  
-|描述可视化表设计工具。|[设计表 (Visual Database Tools)](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)|  
-|描述可视化查询设计器。|[设计查询和视图操作指南主题 (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)| 
+|描述数据库关系图工具。|[设计数据库关系图](../../ssms/visual-db-tools/design-database-diagrams-visual-database-tools.md)|  
+|描述可视化表设计工具。|[设计表](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)|  
+|描述可视化查询设计器。|[有关设计查询和视图的操作说明主题](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)| 

@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 17cffe2f1eaf94174301212c6bb926528c56c7d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63225702"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>向场中添加另一个报表服务器（SSRS 扩展）
@@ -30,7 +30,7 @@ ms.locfileid: "63225702"
 ##  <a name="bkmk_loadbalancing"></a> 负载平衡  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序的负载平衡将由 SharePoint 自动管理，除非您的环境具有自定义或第三方负载平衡解决方案。 默认 SharePoint 负载平衡行为是，每个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序都将在您启动了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务的所有应用程序服务器之间保持平衡。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 若要确认  服务是否安装和启动，请在 SharePoint 管理中心中单击“管理服务器上的服务”。  
   
-##  <a name="bkmk_prerequisites"></a> 先决条件  
+##  <a name="bkmk_prerequisites"></a>先决条件  
   
 -   您必须是本地管理员才能运行 SQL Server 安装程序。  
   

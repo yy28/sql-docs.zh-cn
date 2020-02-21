@@ -1,10 +1,7 @@
 ---
-title: 作业步骤属性 - 新建作业步骤（“高级”页）| Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: 新建作业步骤属性（“高级”页）
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,15 +9,20 @@ f1_keywords:
 ms.assetid: bdecfd4f-bcd8-4ba2-8ada-fbb636314f40
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f9395e9d1f7af28f0ff8a7d3f50d25eb665b7bb9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 1d51de2031e8187e96eaea3fcb344df133928779
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263296"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242236"
 ---
 # <a name="job-step-properties---new-job-step-advanced-page"></a>作业步骤属性 - 新建作业步骤（“高级”页）
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -48,8 +50,8 @@ ms.locfileid: "68263296"
 **...**  
 浏览至用于作业步骤输出的文件。  
   
-**“视图”**  
-[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]禁止通过此按钮查看输出文件。 相反，请使用记事本查看作业步骤输出文件。  
+**视图**  
+在 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，禁止通过此按钮查看输出文件。 相反，请使用记事本查看作业步骤输出文件。  
   
 **将输出追加到现有文件**  
 将输出追加到文件的现有内容后面。 否则，每次作业步骤运行时都将覆盖以前的文件内容。  
@@ -57,7 +59,7 @@ ms.locfileid: "68263296"
 **记录到表**  
 将作业步骤的输出记录到 **msdb** 数据库的 **sysjobstepslogs** 表中。  
   
-**“视图”**  
+**视图**  
 在作业步骤至少运行一次后，单击“查看”  即可在该表中查看输出。  
   
 **将输出追加到表中的现有条目**  
@@ -76,8 +78,8 @@ ms.locfileid: "68263296"
 **...**  
 浏览至用于作业步骤输出的文件。  
   
-**“视图”**  
-[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]禁止通过此按钮查看输出文件。 相反，请使用记事本查看作业步骤输出文件。  
+**视图**  
+在 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，禁止通过此按钮查看输出文件。 相反，请使用记事本查看作业步骤输出文件。  
   
 **将输出追加到现有文件**  
 每次运行时将作业步骤输出追加到之前的文件内容后面。  
@@ -85,7 +87,7 @@ ms.locfileid: "68263296"
 **记录到表**  
 将作业步骤的输出记录到 **msdb** 数据库的 **sysjobstepslogs** 表中。  
   
-**“视图”**  
+**视图**  
 在作业步骤至少运行一次后，单击“查看”  即可在该表中查看输出。  
   
 **将输出追加到表中的现有条目**  
@@ -101,8 +103,8 @@ ms.locfileid: "68263296"
 **...**  
 浏览至用于作业步骤输出的文件。  
   
-**“视图”**  
-[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]禁止通过此按钮查看输出文件。 相反，请使用记事本查看作业步骤输出文件。  
+**视图**  
+在 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，禁止通过此按钮查看输出文件。 相反，请使用记事本查看作业步骤输出文件。  
   
 **将输出追加到现有文件**  
 每次运行时将作业步骤输出追加到之前的文件内容后面。  
@@ -110,7 +112,7 @@ ms.locfileid: "68263296"
 **记录到表**  
 将作业步骤的输出记录到 **msdb** 数据库的 **sysjobstepslogs** 表中。  
   
-**“视图”**  
+**视图**  
 在作业步骤至少运行一次后，单击“查看”  即可在该表中查看输出。  
   
 **将输出追加到表中的现有条目**  
@@ -123,7 +125,7 @@ ms.locfileid: "68263296"
 **Server**  
 设置服务器用于复制队列读取器作业步骤。  
   
-**“数据库”**  
+**Database**  
 设置数据库用于复制队列读取器作业步骤。  
   
 ## <a name="options-for-sql-server-analysis-services-job-steps"></a>SQL Server Analysis Services 作业步骤的选项。  
@@ -142,7 +144,7 @@ ms.locfileid: "68263296"
 **记录到表**  
 将作业步骤的输出记录到 **msdb** 数据库的 **sysjobstepslogs** 表中。  
   
-**“视图”**  
+**视图**  
 在作业步骤至少运行一次后，单击“查看”  即可在该表中查看输出。  
   
 **将输出追加到表中的现有条目**  

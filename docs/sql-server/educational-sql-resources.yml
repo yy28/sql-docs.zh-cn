@@ -1,0 +1,214 @@
+### YamlMime:Landing
+title: SQL 教育资源
+summary: 介绍如何使用 SQL Server 和 Azure SQL 数据库的教程、快速入门和其他教育资源。
+metadata:
+  title: SQL 教育资源
+  description: 一系列教程和快速入门旨在教你如何使用 SQL Server 和 Azure SQL 数据库。
+  ms.prod: sql
+  ms.topic: landing-page
+  author: MashaMSFT
+  ms.author: mathoma
+  ms.date: 01/07/2020
+  ms.openlocfilehash: 6ff11b20d71d7af251c1d28d57bd86aef278c330
+  ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+  ms.translationtype: HT
+  ms.contentlocale: zh-CN
+  ms.lasthandoff: 01/31/2020
+  ms.locfileid: "76832208"
+landingContent:
+- title: SQL Server
+  linkLists:
+  - linkListType: learn
+    links:
+    - text: 升级 SQL Server
+      url: https://docs.microsoft.com/learn/modules/introduction-upgrading-sql-server/
+    - text: 使用查询优化助手
+      url: https://docs.microsoft.com/learn/modules/use-sql-server-query-tuning-assistant/
+    - text: SQL Server 研讨会
+      url: https://aka.ms/sqlworkshops
+  - linkListType: quickstart
+    links:
+    - text: 使用 Azure Data Studio 进行连接和查询
+      url: ../azure-data-studio/quickstart-sql-server.md
+    - text: 使用 SSMS 进行连接和查询
+      url: ../ssms/tutorials/connect-query-sql-server.md
+    - text: 编写 Transact-SQL (T-SQL)
+      url: ../t-sql/tutorial-writing-transact-sql-statements.md
+    - text: 扩展的事件
+      url: ../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md
+    - text: 本地备份和还原
+      url: ../relational-databases/backup-restore/quickstart-backup-restore-database.md
+    - text: 备份和还原到 Azure blob 存储
+      url: ../relational-databases/backup-restore/quickstart-backup-restore-database.md
+  - linkListType: tutorial
+    links:
+    - text: 可用性组 (availability group)
+      url: ../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md
+    - text: 事务复制
+      url: ../relational-databases/replication/tutorial-replicating-data-between-continuously-connected-servers.md
+    - text: 合并复制
+      url: ../relational-databases/replication/tutorial-replicating-data-with-mobile-clients.md
+    - text: 创建内存中表
+      url: ../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md
+    - text: 使用证书为存储过程签名
+      url: ../relational-databases/tutorial-signing-stored-procedures-with-a-certificate.md
+    - text: Azure Blob 存储服务
+      url: ../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md
+    - text: 数据库优化顾问
+      url: ../tools/dta/tutorial-database-engine-tuning-advisor.md
+  - linkListType: architecture
+    links:
+    - text: 索引体系结构和设计
+      url: ../relational-databases/sql-server-index-design-guide.md
+    - text: 页和盘区体系结构
+      url: ../relational-databases/pages-and-extents-architecture-guide.md
+    - text: 迁移后验证和优化
+      url: ../relational-databases/post-migration-validation-and-optimization-guide.md
+    - text: 查询处理体系结构
+      url: ../relational-databases/query-processing-architecture-guide.md
+    - text: 线程和任务体系结构
+      url: ../relational-databases/thread-and-task-architecture-guide.md
+    - text: 事务日志体系结构
+      url: ../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md
+    - text: 事务锁定和行版本控制
+      url: ../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md
+    - text: 内存管理体系结构
+      url: ../relational-databases/memory-management-architecture-guide.md
+- title: Azure VM 上的 SQL Server (IaaS)
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: 通过门户创建 VM
+      url: /azure/virtual-machines/windows/sql/quickstart-sql-vm-create-portal
+    - text: 通过 PowerShell 创建 VM
+      url: /azure/virtual-machines/windows/sql/quickstart-sql-vm-create-powershell
+  - linkListType: how-to-guide
+    links:
+    - text: 注册资源提供程序
+      url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-register-with-resource-provider
+    - text: 通过 Az CLI 配置可用性组
+      url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-availability-group-cli
+    - text: 使用高级文件共享创建 FCI
+      url: /azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-create-failover-cluster-premium-file-share
+    - text: 使用 Azure 存储进行备份和还原
+      url: /azure/virtual-machines/windows/sql/virtual-machines-windows-use-storage-sql-server-backup-restore
+- title: Azure SQL 数据库单一数据库
+  linkLists:
+  - linkListType: learn
+    links:
+    - text: 选择数据存储方法
+      url: https://docs.microsoft.com/learn/modules/choose-storage-approach-in-azure/
+    - text: 保护 SQL 数据库
+      url: https://docs.microsoft.com/learn/modules/secure-your-azure-sql-database/
+    - text: 地理分散式应用
+      url: https://docs.microsoft.com/learn/modules/design-a-geographically-distributed-application/
+    - text: 用于查询 SQL 数据库的 ASP.NET 应用
+      url: https://docs.microsoft.com/learn/modules/develop-app-that-queries-azure-sql/
+  - linkListType: quickstart
+    links:
+    - text: 通过门户或代码创建数据库
+      url: /azure/sql-database/sql-database-single-database-get-started
+    - text: 通过模板创建数据库
+      url: /azure/sql-database/sql-database-single-database-get-started-template
+    - text: 配置服务器级别 IP 防火墙规则
+      url: /azure/sql-database/sql-database-server-level-firewall-rule
+  - linkListType: tutorial
+    links:
+    - text: 使用 Azure 数据库迁移服务进行迁移
+      url: /azure/dms/tutorial-sql-server-to-azure-sql?toc=/azure/sql-database/toc.json
+    - text: 将单个数据库添加到故障转移组
+      url: /azure/sql-database/sql-database-single-database-failover-group-tutorial
+    - text: 将弹性池添加到故障转移组
+      url: /azure/sql-database/sql-database-elastic-pool-failover-group-tutorial
+    - text: 配置活动异地复制
+      url: /azure/sql-database/sql-database-active-geo-replication-portal
+    - text: 配置安全性
+      url: /azure/sql-database/sql-database-security-tutorial
+- title: 其他资源
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Microsoft Learn
+      url: /azure/sql-database/sql-database-single-database
+    - text: LinkedIn Learning
+      url: /azure/sql-database/sql-database-managed-instance
+    - text: Microsoft Virtual Academy
+      url: /azure/sql-database/sql-database-single-database
+    - text: Pluralsight
+      url: /azure/sql-database/sql-database-managed-instance
+    - text: Channel 9
+      url: /azure/sql-database/sql-database-managed-instance
+- title: Linux 上的 SQL Server
+  linkLists:
+  - linkListType: learn
+    links:
+    - text: 介绍
+      url: https://docs.microsoft.com/learn/modules/introduction-sql-server-linux/
+    - text: 部署
+      url: https://docs.microsoft.com/learn/modules/deploy-sql-server-linux/
+    - text: 自动优化
+      url: https://docs.microsoft.com/learn/modules/automatically-tune-sql-server-linux/
+    - text: 容器
+      url: https://docs.microsoft.com/learn/modules/run-sql-server-2017-linux-containers/
+  - linkListType: quickstart
+    links:
+    - text: Red Hat
+      url: ../linux/quickstart-install-connect-red-hat.md
+    - text: SUSE
+      url: ../linux/quickstart-install-connect-suse.md
+    - text: Ubuntu
+      url: ../linux/quickstart-install-connect-ubuntu.md
+    - text: Docker
+      url: ../linux/quickstart-install-connect-docker.md
+    - text: 在 Azure 上
+      url: /azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine
+  - linkListType: tutorial
+    links:
+    - text: 从 Windows 迁移
+      url: ../linux/sql-server-linux-migrate-restore-database.md
+    - text: 迁移到 Docker
+      url: ../linux/tutorial-restore-backup-in-sql-server-container.md
+    - text: 创建作业
+      url: ../linux/sql-server-linux-run-sql-server-agent-job.md
+    - text: 设置 Active Directory 身份验证
+      url: ../linux/sql-server-linux-active-directory-authentication.md
+    - text: 配置 FCI
+      url: ../linux/sql-server-linux-shared-disk-cluster-configure.md
+    - text: 部署 Pacemaker 群集
+      url: ../linux/sql-server-linux-deploy-pacemaker-cluster.md
+    - text: 创建和配置可用性组
+      url: ../linux/sql-server-linux-create-availability-group.md
+    - text: 在 Kubernetes 上部署
+      url: ../linux/tutorial-sql-server-containers-kubernetes.md
+    - text: 配置复制
+      url: ../linux/sql-server-linux-replication-tutorial-tsql.md
+- title: Azure SQL 数据库托管实例
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: 通过门户创建实例
+      url: /azure/sql-database/sql-database-managed-instance-get-started
+    - text: 通过 PowerShell 创建实例
+      url: /azure/sql-database/scripts/sql-database-create-configure-managed-instance-powershell
+    - text: 创建实例池
+      url: /azure/sql-database/sql-database-instance-pools-how-to
+    - text: 配置公共终结点
+      url: /azure/sql-database/sql-database-managed-instance-public-endpoint-configure
+    - text: 连接客户端 VM
+      url: /azure/sql-database/sql-database-managed-instance-configure-vm
+    - text: 配置点到站点连接
+      url: /azure/sql-database/sql-database-managed-instance-configure-p2s
+    - text: 还原数据库备份
+      url: /azure/sql-database/sql-database-managed-instance-get-started-restore
+  - linkListType: tutorial
+    links:
+    - text: 使用 Azure 数据库迁移服务进行迁移
+      url: /azure/dms/tutorial-sql-server-to-managed-instance?toc=/azure/sql-database/toc.json
+    - text: 配置事务复制
+      url: /azure/sql-database/sql-database-managed-instance-configure-replication-tutorial
+    - text: 添加到故障转移组
+      url: /azure/sql-database/sql-database-managed-instance-failover-group-tutorial?tabs=azure-portal
+    - text: 迁移本地用户和组
+      url: /azure/sql-database/tutorial-managed-instance-azure-active-directory-migration
+    - text: 配置安全性
+      url: /azure/sql-database/sql-database-managed-instance-aad-security-tutorial

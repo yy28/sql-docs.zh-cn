@@ -1,6 +1,7 @@
 ---
-title: 故障转移群集实例的故障转移策略 | Microsoft Docs
-ms.custom: ''
+title: 故障转移群集实例的故障转移策略
+description: 介绍了适用于 SQL Server 故障转移群集实例的不同故障转移策略。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8e2fae9bbc5f0f601f4d455204df6c9d18383458
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 153de78e01099cf1079c6fe0ad34c15c6d7afc44
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044747"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258158"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Failover Policy for Failover Cluster Instances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +77,7 @@ ms.locfileid: "68044747"
   
 4.  io_subsystem  
   
-5.  事件  
+5.  活动  
   
  系统、资源和查询进程组件用于故障检测。 io_subsytem 和事件组件仅用于诊断目的。  
   
@@ -92,7 +93,7 @@ ms.locfileid: "68044747"
   
  查看 [sp_server_diagnostics (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md)，因为此系统存储过程在故障条件级别中起重要作用。  
   
-|Level|条件|描述|  
+|级别|条件|说明|  
 |-----------|---------------|-----------------|  
 |0|无自动故障转移或重新启动|表示对于任何故障条件将不自动触发故障转移或重新启动。 此级别仅适用于系统维护目的。|  
 |1|服务器关闭时进行故障转移或重新启动|指示当满足以下条件时将触发服务器重新启动或故障转移：<br /><br /> SQL Server 服务停止。|  

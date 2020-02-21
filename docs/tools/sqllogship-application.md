@@ -1,6 +1,6 @@
 ---
-title: sqllogship 应用程序 |Microsoft Docs
-ms.custom: ''
+title: sqllogship 应用程序
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0e59ba2473ce58caebcb76521dcc191479abdb92
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
-ms.translationtype: MTE75
+ms.openlocfilehash: 8f66feb78bb789bf976d6b44b025af20c6575ee6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "68065456"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306655"
 ---
 # <a name="sqllogship-application"></a>sqllogship 应用程序
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **sqllogship** 应用程序用于执行日志传送配置中的备份、复制或还原操作以及相关的清理任务。 这些操作是在特定的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例上针对特定数据库执行的。  
   
- 关于语法约定，请参阅![命令提示实用工具参考（数据库引擎）](../database-engine/configure-windows/media/topic-link.gif "主题链接图标")。  
+ ![主题链接图标](../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标")关于语法约定，请参阅[命令提示实用工具参考（数据库引擎）](../tools/command-prompt-utility-reference-database-engine.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -54,7 +54,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
  **-verboselevel** _level_  
  指定要添加到日志传送历史记录的消息的级别。 *level* 是以下整数之一：  
   
-|level|描述|  
+|级别|说明|  
 |-----------|-----------------|  
 |0|不输出跟踪消息和调试消息。|  
 |1|输出错误处理消息。|  
@@ -68,7 +68,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
  **-querytimeout** _timeout_value_  
  指定所分配的在尝试启动指定操作超时之前的尝试时间。默认情况下不指定超时期限。 *timeout_value* 为 **int** _._  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  我们建议您尽可能使用备份、复制和还原作业来执行备份、复制和还原操作。 若要从批处理操作或其他应用程序启动这些作业，请调用 [sp_start_job](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md) 存储过程。  
   
  由 **sqllogship** 创建的日志传送历史记录与由日志传送备份、复制和还原作业创建的历史记录混杂在一起。 如果打算反复使用 **sqllogship** 来执行日志传送配置中的备份、复制或还原操作，请考虑禁用相应的日志传送作业。 有关详细信息，请参阅 [Disable or Enable a Job](../ssms/agent/disable-or-enable-a-job.md)。  
@@ -82,10 +82,10 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 |------------|----------------------|-----------------|  
 |**-backup**|需要对备份目录的读/写访问权限。|需要与 BACKUP 语句相同的权限。 有关详细信息，请参阅 [BACKUP (Transact-SQL)](../t-sql/statements/backup-transact-sql.md)。|  
 |**-copy**|需要对备份目录的读取访问权限以及对复制目录的写入访问权限。|需要与 [sp_help_log_shipping_secondary_database](../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md) 存储过程相同的权限。|  
-|**-restore**|需要对复制目录的读/写访问权限。|需要与 RESTORE 语句相同的权限。 有关详细信息，请参阅 [RESTORE (Transact-SQL)](../t-sql/statements/restore-statements-transact-sql.md)。|  
+|**-restore**|需要对复制目录的读/写访问权限。|需要与 RESTORE 语句相同的权限。 有关详细信息，请参阅 [RESTORE (Transact-SQL)](../t-sql/statements/restore-statements-transact-sql.md)备份。|  
   
 > [!NOTE]  
->  若要找出备份和复制目录的路径，可以运行 **sp_help_log_shipping_secondary_database** 存储过程或查看 **msdb** 中的 **log_shipping_secondary** 表。 备份目录和目标目录的路径分别位于 **backup_source_directory** 和 **backup_destination_directory** 列。  
+>  若要找出备份和复制目录的路径，可以运行 **sp_help_log_shipping_secondary_database** 存储过程或查看 **msdb** 中的 **log_shipping_secondary**表。 备份目录和目标目录的路径分别位于 **backup_source_directory** 和 **backup_destination_directory** 列。  
   
 ## <a name="see-also"></a>另请参阅  
  [关于日志传送 (SQL Server)](../database-engine/log-shipping/about-log-shipping-sql-server.md)   

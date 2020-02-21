@@ -20,10 +20,10 @@ ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fd9288a630dd24dd8d79deef184cfc4c4fabcd9f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578035"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>订阅和传递 (Reporting Services)
@@ -78,7 +78,7 @@ ms.locfileid: "65578035"
   
  下表对常见的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅方案进行了说明。  
   
-|应用场景|描述|  
+|场景|说明|  
 |--------------|-----------------|  
 |以电子邮件形式发送报表|以电子邮件形式将报表发送给单个用户和组。 创建订阅，并指定组别名或电子邮件别名以便接收您要分发的报表。 您可以让 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 在运行时确定订阅。 如果您想要将相同的报表发送给其成员会发生变化的组，则可以使用查询在运行时派生订阅列表。|  
 |脱机查看报表|用户可以为订阅输出选择以下格式之一：<br /><br /> -   具有报表数据的 XML 文件<br />-   CSV（逗号分隔）<br />-   PDF<br />-   MHTML（Web 存档）<br />-   Microsoft Excel<br />-   TIFF 文件<br />-   Microsoft Word<br /><br /> 您要存档的报表可以直接发送到您计划在每天夜里备份到的共享文件夹。 要用很长时间在浏览器中加载的大型报表可通过能够在桌面应用程序中查看的格式发送到共享文件夹。|  
@@ -88,7 +88,7 @@ ms.locfileid: "65578035"
 ##  <a name="bkmk_standard_and_datadriven"></a> 标准订阅和数据驱动订阅  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支持两种类型的订阅： **标准订阅** 和 **数据驱动订阅**。 标准订阅由各个用户创建和管理。 标准订阅由静态值组成，这些值在订阅处理期间不能改变。 每个标准订阅都有一组报表显示选项、传递选项和报表参数。  
   
- 数据驱动订阅通过查询外部数据源（提供用于指定收件人、报表参数或应用程序格式的值）来获取运行时订阅信息。 如果收件人列表非常大，或希望每位收件人的报表输出都不相同，则可以使用数据驱动订阅。 若要使用数据驱动订阅，必须具备生成查询的专业知识并了解如何使用参数。 通常，由报表服务器管理员创建和管理这些订阅。 有关详细信息，请参见以下内容：  
+ 数据驱动订阅通过查询外部数据源（提供用于指定收件人、报表参数或应用程序格式的值）来获取运行时订阅信息。 如果收件人列表非常大，或希望每位收件人的报表输出都不相同，则可以使用数据驱动订阅。 若要使用数据驱动订阅，必须具备生成查询的专业知识并了解如何使用参数。 通常，由报表服务器管理员创建和管理这些订阅。 有关详细信息，请参阅以下主题：  
   
 -   [数据驱动订阅](../../reporting-services/subscriptions/data-driven-subscriptions.md)  
   
@@ -97,7 +97,7 @@ ms.locfileid: "65578035"
 ##  <a name="bkmk_subscription_requirements"></a> 订阅要求  
  在对报表创建订阅之前，必须满足以下前提条件：  
   
-|要求|描述|  
+|要求|说明|  
 |-----------------|-----------------|  
 |权限|您必须对报表具有访问权限。 在订阅报表之前，您必须具有查看该报表的权限。<br /><br /> 对于本机模式报表服务器，以下角色分配会影响订阅：<br /><br /> -   通过“管理单独的订阅”任务，用户可以创建、修改和删除特定报表的订阅。 在预定义的角色中，“浏览器”和“报表生成器”角色包括此任务。 包括此任务的角色分配只允许用户管理自己创建的那些订阅。<br />-   通过“管理所有订阅”任务，用户可以访问和修改所有订阅。 此任务是创建数据驱动订阅所必需的。 在预定义的角色中，只有“内容管理员”角色包括此任务。|  
 |已存储凭据|若要创建订阅，报表必须使用已存储的凭据或不使用任何凭据在运行时检索数据。 不能订阅配置为使用当前用户的模拟凭据或委托凭据连接到外部数据源的报表。 已存储的凭据可以是 Windows 帐户或数据库用户帐户。 有关详细信息，请参阅 [为报表数据源指定凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)<br /><br /> 您必须拥有查看报表和创建单个订阅的权限。 必须对报表服务器启用 **“预定的事件和报表传递”** 。 有关详细信息，请参阅 [（旧）创建和管理本机模式报表服务器的订阅](https://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)。|  
@@ -110,7 +110,7 @@ ms.locfileid: "65578035"
   
  用户创建订阅后，就可以选择可用的传递扩展插件之一来确定传递报表的方式。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包括以下传递扩展插件。  
   
-|传递扩展插件|描述|  
+|传递扩展插件|说明|  
 |------------------------|-----------------|  
 |Windows 文件共享|将报表作为静态的应用程序文件传递到可通过网络访问的共享文件夹。|  
 |电子邮件|将通知或报表作为电子邮件附件或 URL 链接进行传递。|  

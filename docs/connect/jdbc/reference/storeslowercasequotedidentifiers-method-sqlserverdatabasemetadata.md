@@ -1,5 +1,5 @@
 ---
-title: storesLowerCaseQuotedIdentifiers 方法 |Microsoft Docs
+title: storesLowerCaseQuotedIdentifiers 方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 3e104c9e-66d4-436b-8b5b-a00ff667c95b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58135670e18af30dd8795cc124eb43908f611e24
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969980"
 ---
 # <a name="storeslowercasequotedidentifiers-method-sqlserverdatabasemetadata"></a>storesLowerCaseQuotedIdentifiers 方法 (SQLServerDatabaseMetaData)
@@ -37,11 +37,11 @@ public boolean storesLowerCaseQuotedIdentifiers()
 ## <a name="return-value"></a>返回值  
  如果以小写形式存储标识符，则为 true  。 否则为 **false**。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 storesLowerCaseQuotedIdentifiers 方法由 storesLowerCaseQuotedIdentifiers 方法在 Java.sql.databasemetadata 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 storesLowerCaseQuotedIdentifiers 方法是由 java.sql.DatabaseMetaData 接口中的 storesLowerCaseQuotedIdentifiers 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

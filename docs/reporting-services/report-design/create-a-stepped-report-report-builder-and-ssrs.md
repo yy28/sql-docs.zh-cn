@@ -9,16 +9,16 @@ ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: adfde8e92d249c40749dba76f42c6d1d5ba20d71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581541"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>创建递阶报表（报表生成器和 SSRS）
 递阶报表是一种  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表，可在父组下方的同一列中缩进显示详细信息行或子组，如下例所示：  
   
- ![呈现的递阶报表](../../reporting-services/report-design/media/steppedreportrendered.gif "Rendered stepped report")  
+ ![呈现的递阶报表](../../reporting-services/report-design/media/steppedreportrendered.gif "呈现的递阶报表")  
   
  传统的表报表将父组放置在报表中的相邻列中。 利用新的 tablix 数据区域，可以向同一列添加组和详细信息行或子组。 若要将组行与详细信息行或子组行区分开来，可以应用格式设置（如字体颜色）或缩进详细信息行。  
   
@@ -46,15 +46,15 @@ ms.locfileid: "65581541"
   
      现在即创建了一个基本表格报表。 此报表呈现时，您将看到一列组实例值，以及一列或多列分组的详细信息数据。 下图显示了该数据区域在设计图面上可能的外观。  
   
-     ![带有组的表数据区域](../../reporting-services/report-design/media/tabledataregionwithgroup.gif "Table data region with group")  
+     ![带有组的表数据区域](../../reporting-services/report-design/media/tabledataregionwithgroup.gif "带有组的表数据区域")  
   
      下图显示了您查看报表时所呈现的数据区域可能的外观。  
   
-     ![呈现的分组报表](../../reporting-services/report-design/media/tablereportrendered.gif "Rendered grouped report")  
+     ![呈现的分组报表](../../reporting-services/report-design/media/tablereportrendered.gif "呈现的分组报表")  
   
 3.  对于递阶报表，不需要用于显示组实例的第一列。 相反，需要先复制组头单元中的值，再删除组列，然后将该值粘贴到组头行的第一个文本框中。 若要删除组列，请右键单击相应的组列或单元，然后单击“删除列”  。 下图显示了该数据区域在设计图面上可能的外观。  
   
-     ![带有组头行的数据区域](../../reporting-services/report-design/media/tabledataregiongroupheader.gif "Data region with group header row")  
+     ![带有组标头行的数据区域](../../reporting-services/report-design/media/tabledataregiongroupheader.gif "带有组标头行的数据区域")  
   
 4.  若要使同一列中组头行下方的详细信息行缩进显示，请更改详细信息数据单元的空白大小。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "65581541"
   
      数据区域的外观将与下例类似。  
   
-     ![递阶报表的数据区域](../../reporting-services/report-design/media/steppedreportdataregion.gif "Data region for stepped report")  
+     ![递阶报表的数据区域](../../reporting-services/report-design/media/steppedreportdataregion.gif "递阶报表的数据区域")  
   
      **递阶报表布局的数据区域**  
   

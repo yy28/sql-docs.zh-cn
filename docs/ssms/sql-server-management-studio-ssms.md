@@ -14,14 +14,14 @@ helpviewer_keywords:
 - SQL Server Management Studio for Integration Services
 - SQL Server Management Studio for Reporting Services
 - SQL Server Management Studio for Analysis Services
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 09/11/2019
-ms.openlocfilehash: a185d7506b23931787699b52fedddfddf21c1cb8
-ms.sourcegitcommit: 059da40428ee9766b6f9b16b66c689b788c41df1
+ms.openlocfilehash: 613e3eddce55fbc52cd011f5070def12d31d83b9
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71038855"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76037182"
 ---
 # <a name="what-is-sql-server-management-studio-ssms"></a>什么是 SQL Server Management Studio (SSMS)？
 
@@ -37,7 +37,7 @@ ms.locfileid: "71038855"
 
 ## <a name="sql-server-management-studio-components"></a>SQL Server Management Studio 组件  
   
-|描述|组件|  
+|说明|组件|  
 |---------------|---------|  
 |使用“对象资源管理器”  查看和管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的一个或多个实例中的所有对象。|[对象资源管理器](../ssms/object/object-explorer.md)|  
 |如何使用“模板资源管理器”生成和管理用于加快查询和脚本开发速度的样板文本文件  。|[模板资源管理器](../ssms/template/template-explorer.md)|  
@@ -91,6 +91,10 @@ ms.locfileid: "71038855"
 - 从 SSMS 17.0 开始，SQL 工具团队采用 [Microsoft 新式生命周期策略](https://support.microsoft.com/help/30881/modern-lifecycle-policy)。
 - 阅读原版[新式生命周期策略公告](https://support.microsoft.com/help/447912/announcing-microsoft-modern-lifecycle-policy)。 有关详细信息，请参阅[新式策略常见问题解答](https://support.microsoft.com/help/30882/modern-lifecycle-policy-faq)。
 - 若要了解诊断数据收集和功能使用情况，请参阅 [SQL Server 隐私补充](https://docs.microsoft.com/sql/sql-server/sql-server-privacy)。
+
+## <a name="cross-platform-tool"></a>跨平台工具
+
+[!INCLUDE[ssms-azure-data-studio-mention](../includes/ssms-azure-data-studio-mention.md)]
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

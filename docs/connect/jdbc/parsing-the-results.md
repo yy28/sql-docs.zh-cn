@@ -1,5 +1,5 @@
 ---
-title: 分析结果 |Microsoft Docs
+title: 分析结果 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -12,23 +12,23 @@ author: rene-ye
 ms.author: v-reye
 manager: kenvh
 ms.openlocfilehash: 127c97ec155ef1e19df4103b12a6e10b8b67fe74
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027861"
 ---
 # <a name="parsing-the-results"></a>分析结果
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-本文介绍 SQL Server 期望用户完全处理从任何查询返回的结果。
+本文介绍 SQL Server 如何期望用户完全处理从任何查询返回的结果。
 
 ## <a name="update-counts-and-result-sets"></a>更新计数和结果集
 
-本节将讨论 SQL Server: 更新计数和结果集返回的两个最常见的结果。 通常, 用户执行的任何查询都将导致返回其中的一个结果;处理结果时, 用户应同时处理这两种情况。
+本节将讨论从 SQL Server 返回的两个最常见的结果：Update Count 和 ResultSet。 通常，用户执行的任何查询都将导致返回其中的一个结果，在处理结果时，用户应同时处理这两种结果。
 
-下面的代码是一个示例, 说明用户如何循环访问服务器中的所有结果:
+下面的代码示例说明用户如何循环访问来自服务器的所有结果：
 ```java
 try (Connection connection = DriverManager.getConnection(URL); Statement statement = connection.createStatement()) {
     boolean resultsAvailable = statement.execute(USER_SQL);
@@ -47,10 +47,10 @@ try (Connection connection = DriverManager.getConnection(URL); Statement stateme
 }
 ```
 
-## <a name="exceptions"></a>异常
-当您执行导致错误或信息性消息的语句时, SQL Server 的响应方式将有所不同, 具体取决于它是否可以生成执行计划。 可以在语句执行后立即引发错误消息, 也可以需要单独的结果集。 在后一种情况下, 应用程序需要分析结果集以检索异常。
+## <a name="exceptions"></a>例外
+在执行导致错误或信息性消息的语句时，SQL Server 的响应方式将有所不同，具体取决于它是否可以生成执行计划。 在执行语句后可能会立即引发错误消息，也可能需要单独的结果集才能引发。 在后一种情况下，应用程序需要分析结果集以检索异常。
 
-当 SQL Server 无法生成执行计划时, 将立即引发异常。
+如果 SQL Server 无法生成执行计划，将立即引发异常。
 
 ```java
 String SQL = "SELECT * FROM nonexistentTable;";
@@ -61,7 +61,7 @@ try (Statement statement = connection.createStatement();) {
 }
 ```
 
-如果 SQL Server 在结果集中返回错误消息, 则需要对结果集进行处理以检索该异常。
+如果 SQL Server 在结果集中返回错误消息，则需要处理结果集以检索异常。
 
 ```java
 String SQL = "SELECT 1/0;";
@@ -78,7 +78,7 @@ try (Statement statement = connection.createStatement();) {
 }
 ```
 
-如果语句执行生成了多个结果集, 则需要处理每个结果集, 直到达到具有异常的结果集。
+如果语句执行生成了多个结果集，则需要处理每个结果集，直到发现异常结果集。
 
 ```java
 String SQL = "SELECT 1; SELECT * FROM nonexistentTable;";
@@ -99,9 +99,9 @@ try (Statement statement = connection.createStatement();) {
 }
 ```
 
-在这种情况`String SQL = "SELECT * FROM nonexistentTable; SELECT 1;";`下, 将`execute()`立即引发异常, `SELECT 1`并且根本不执行。
+在 `String SQL = "SELECT * FROM nonexistentTable; SELECT 1;";` 情况下，会立即在 `execute()` 时引发异常，并且完全不会执行 `SELECT 1`。
 
-如果 SQL Server 的错误的严重性`0`为`9`, 则将其视为信息性消息, 并返回为`SQLWarning`。
+如果来自 SQL Server 的错误严重性级别为 `9` 到 `0`，则将其视为信息性消息并作为 `SQLWarning` 返回。
 
 ```java
 String SQL = "RAISERROR ('WarningLevel5', 5, 2);";

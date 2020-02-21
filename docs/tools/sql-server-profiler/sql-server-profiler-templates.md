@@ -1,34 +1,30 @@
 ---
-title: SQL Server Profiler 模板 |Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 模板
+titleSuffix: SQl Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- default SQL Server Profiler templates
-- templates [SQL Server], SQL Server Profiler
-- Profiler [SQL Server Profiler], templates
-- trace templates [SQL Server]
-- predefined templates [SQL Server Profiler]
-- SQL Server Profiler, templates
 ms.assetid: b674e491-dc58-47a1-acdd-7028e9a201fc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9d73ecd7342f870e9645c86e714bd0420200b61c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 8b0d52f5405e3519b861b7642264460b316acd03
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059681"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307842"
 ---
 # <a name="sql-server-profiler-templates"></a>SQL Server Profiler 模板
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  可以使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 来创建模板，定义要包含在跟踪中的事件类和数据列。 定义并保存模板后，可以运行跟踪来记录每个选定事件类的数据。 您可以将一个模板用于多个跟踪；模板本身并不会执行。  
-  
- [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]提供了预定义的跟踪模板，使您可以轻松配置特定跟踪可能最需要的事件类。 例如，Standard 模板可帮助您创建通用跟踪，用于记录登录、注销、已完成的批处理和连接信息。 您可以使用此模板来运行跟踪而无需修改，也可以基于该模板创建具有不同事件配置的其他模板。  
+
+可以使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 来创建模板，定义要包含在跟踪中的事件类和数据列。 定义并保存模板后，可以运行跟踪来记录每个选定事件类的数据。 您可以将一个模板用于多个跟踪；模板本身并不会执行。  
+
+[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]提供了预定义的跟踪模板，使您可以轻松配置特定跟踪可能最需要的事件类。 例如，Standard 模板可帮助您创建通用跟踪，用于记录登录、注销、已完成的批处理和连接信息。 您可以使用此模板来运行跟踪而无需修改，也可以基于该模板创建具有不同事件配置的其他模板。  
   
 > [!NOTE]  
 >  除了通过预定义模板进行跟踪以外， [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 还允许您从空模板（默认情况下不包含任何事件类）创建跟踪。 当计划的跟踪与任何预定义模板的配置都不相符时，使用空跟踪模板会十分有用。  
@@ -48,14 +44,14 @@ ms.locfileid: "68059681"
 |TSQL_Locks|捕获客户端与异常锁事件一起提交到 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语句。 用于排除死锁、锁超时和锁升级事件的故障。|**Blocked Process Report**<br /><br /> **SP:StmtCompleted**<br /><br /> **SP:StmtStarting**<br /><br /> **SQL:StmtCompleted**<br /><br /> **SQL:StmtStarting**<br /><br /> **Deadlock Graph**<br /><br /> **Lock:Cancel**<br /><br /> **Lock:Deadlock**<br /><br /> **Lock:Deadlock Chain**<br /><br /> **Lock:Escalation**<br /><br /> **Lock:Timeout (timeout>0)**|  
 |TSQL_Replay|捕获重播跟踪所需的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的详细信息。 用于执行迭代优化，例如基准测试。|**CursorClose**<br /><br /> **CursorExecute**<br /><br /> **CursorOpen**<br /><br /> **CursorPrepare**<br /><br /> **CursorUnprepare**<br /><br /> **审核登录**<br /><br /> **审核注销**<br /><br /> **Existing Connection**<br /><br /> **RPC Output Parameter**<br /><br /> **RPC:Completed**<br /><br /> **RPC:Starting**<br /><br /> **Exec Prepared SQL**<br /><br /> **Prepare SQL**<br /><br /> **SQL:BatchCompleted**<br /><br /> **SQL:BatchStarting**|  
 |TSQL_SPs|捕获有关执行的所有存储过程的详细信息。 用于分析存储过程的组成步骤。 如果您怀疑过程正在重新编译，请添加 **SP:Recompile** 事件。|**审核登录**<br /><br /> **审核注销**<br /><br /> **ExistingConnection**<br /><br /> **RPC:Starting**<br /><br /> **SP:Completed**<br /><br /> **SP:Starting**<br /><br /> **SP:StmtStarting**<br /><br /> **SQL:BatchStarting**|  
-|Tuning|捕获有关存储过程和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理执行的信息。 用于生成跟踪输出， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问可以将该输出用作工作负荷来优化数据库。|**RPC:Completed**<br /><br /> **SP:StmtCompleted**<br /><br /> **SQL:BatchCompleted**|  
+|优化|捕获有关存储过程和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理执行的信息。 用于生成跟踪输出， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问可以将该输出用作工作负荷来优化数据库。|**RPC:Completed**<br /><br /> **SP:StmtCompleted**<br /><br /> **SQL:BatchCompleted**|  
   
  有关事件类的信息，请参阅 [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)。  
   
 ## <a name="default-template"></a>默认模板  
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 自动指定 **Standard** 模板作为应用于任何新跟踪的默认模板。 但是，您可以将默认模板更改为其他任何预定义模板或用户定义模板。 若要更改默认模板，请在使用 **“跟踪模板属性”** 对话框的 **“常规”** 选项卡创建或编辑模板时，选中 **“用作所选服务器类型的默认模板”** 复选框。  
   
- 若要导航到 **“跟踪模板属性”** 对话框，请在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **“文件”** 菜单中，选择 **“模板”** ，然后单击 **“新建模板”** 或 **“编辑模板”** 。  
+ 若要导航到“跟踪模板属性”对话框，请在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]“文件”菜单中，选择“模板”，然后单击“新建模板”或“编辑模板”。  
   
 > [!NOTE]  
 >  默认模板针对给定的服务器类型。 更改一个服务器类型的默认模板不会影响其他任何服务器类型的默认模板。 有关设置特定服务器的默认模板的详细信息，请参阅[设置跟踪定义默认值 (SQL Server Profiler)](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md)。  

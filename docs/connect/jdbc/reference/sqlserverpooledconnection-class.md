@@ -1,5 +1,5 @@
 ---
-title: SQLServerPooledConnection 类 |Microsoft Docs
+title: SQLServerPooledConnection 类 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 4c87e9d3-904a-4b86-90cc-3684034c86ee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26b0386f0f206427580ee8ff85eb704512914106
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970852"
 ---
 # <a name="sqlserverpooledconnection-class"></a>SQLServerPooledConnection 类
@@ -35,8 +35,8 @@ ms.locfileid: "67970852"
 public final class SQLServerPoolingDataSource  
 ```  
   
-## <a name="remarks"></a>Remarks  
- SQLServerPooledConnection 类为连接池管理器提供用于管理连接池的方法。 应用程序一般不直接实例化这些连接。  
+## <a name="remarks"></a>备注  
+ SQLServerPooledConnection 类为连接池管理器提供管理连接池的方法。 应用程序一般不直接实例化这些连接。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerPooledConnection 成员](../../../connect/jdbc/reference/sqlserverpooledconnection-members.md)   

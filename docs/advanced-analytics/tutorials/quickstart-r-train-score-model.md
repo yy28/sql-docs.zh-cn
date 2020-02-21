@@ -1,32 +1,31 @@
 ---
 title: 快速入门：在 R 中定型模型
-titleSuffix: SQL Server Machine Learning Services
-description: 使用 SQL Server 机器学习服务在 R 中创建简单的预测模型，然后使用新数据预测结果。
+description: 在本快速入门中，你将使用 T 创建和定型预测模型。将此模型保存到 SQL Server 实例中的表，然后通过 SQL Server 机器学习服务使用此模型来通过新数据预测值。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bd91191a84aac8c245bdcbbe0afd2bf3241aa6b3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: b6be97041912027cf284ff34c2c826a37edabe93
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73726515"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831723"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>快速入门：通过 SQL Server 机器学习服务在 R 中创建预测模型并对其进行评分
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-在本快速入门中，你将使用 R 创建和定型预测模型，将此模型保存到 SQL Server 实例中的表，然后通过 [SQL Server 机器学习服务](../what-is-sql-server-machine-learning.md)使用此模型来通过新数据预测值。
+在本快速入门中，你将使用 T 创建和定型预测模型。将此模型保存到 SQL Server 实例中的表，然后通过 [SQL Server 机器学习服务](../what-is-sql-server-machine-learning.md)使用此模型来通过新数据预测值。
 
 你将创建并执行 SQL 中运行的两个存储过程。 第一个存储过程使用 R 中包含的 mtcars 数据集，并生成一个简单的通用线性模型 (GLM)，此模型会预测车辆与手动变速的拟合概率  。 第二个存储过程用于评分，它调用第一个过程中生成的模型，从而根据新数据输出一组预测。 通过将 R 代码放入 SQL 存储过程，操作会包含在 SQL 中，可重复使用，并且可以由其他存储过程和客户端应用程序调用。
 
 > [!TIP]
-> 如果需要对线性模型进行回顾，请尝试以下教程，其中介绍了使用 rxLinMod 拟合模型的过程：[Fitting Linear Models](/machine-learning-server/r/how-to-revoscaler-linear-model)（拟合线性模型）
+> 如果需要对线性模型进行回顾，请尝试以下教程，其中介绍了使用 rxLinMod 拟合模型的过程：[拟合线性模型](/machine-learning-server/r/how-to-revoscaler-linear-model)
 
 完成本快速入门后，你将了解以下内容：
 
@@ -80,7 +79,7 @@ ms.locfileid: "73726515"
    ```
 
    > [!TIP]
-   > R 运行时包含许多或大或小的数据集。 若要获取随 R 一起安装的数据集列表，请在 R 命令提示符下键入 `library(help="datasets")`。
+   > R 运行时随附许多数据集，有大有小。 若要获取随 R 一起安装的数据集列表，请在 R 命令提示符下键入 `library(help="datasets")`。
 
 ### <a name="create-and-train-the-model"></a>创建和定型模型
 
@@ -107,7 +106,7 @@ GO
 ```
 
 - `glm` 的第一个参数是 formula 参数，定义与 `hp + wt` 相关的 `am`  。
-- 输入数据存储在 SQL 查询填充的变量 `MTCarsData` 中。 如果未将特定的名称分配到输入数据，默认变量名称将是 _InputDataSet_。
+- 输入数据存储在由 SQL 查询填充的 `MTCarsData` 变量中。 如果不为输入数据分配特定的名称，则默认变量名称为 _InputDataSet_。
 
 ### <a name="store-the-model-in-the-sql-database"></a>将模型存储在 SQL 数据库中
 
@@ -132,7 +131,7 @@ GO
    ```
 
    > [!TIP]
-   > 如果再次运行此代码，将出现以下错误："PRIMARY KEY 约束冲突 ...无法在对象 stopping_distance_models "中插入重复键。 避免此错误的一种做法是更新每个新模型的名称。 例如，可将该名称更改为更具描述性的名称，并包含模型类型、创建日期，等等。
+   > 如果再次运行此代码，将出现以下错误："PRIMARY KEY 约束冲突 ...无法在对象 stopping_distance_models "中插入重复键。 若要避免此错误，一个选择是更新每个新模型的名称。 例如，可以将名称更改为更具说明性的名称，并且包括模型类型、创建日期等。
 
      ```sql
      UPDATE GLM_models
@@ -202,11 +201,11 @@ WITH RESULT SETS ((new_hp INT, new_wt DECIMAL(10,3), predicted_am DECIMAL(10,3))
 
 上面的脚本执行以下步骤：
 
-- 使用 SELECT 语句从表中获取单个模型，并将它作为输入参数传递。
+- 使用 SELECT 语句从表中获取单个模型，然后将其作为输入参数传递。
 
-- 从表中检索模型后，针对该模型调用 `unserialize` 函数。
+- 从表中检索模型以后，在该模型上调用 `unserialize` 函数。
 
-- 将带有相应参数的 `predict` 函数应用到该模型，并提供新的输入数据。
+- 将带有适当参数的 `predict` 函数应用到模型，并提供新的输入数据。
 
 > [!NOTE]
 > 在示例中，测试阶段添加了 `str` 函数，用于检查从 R 返回的数据的架构。之后你可以删除该语句。

@@ -1,42 +1,42 @@
 ---
 title: 在 Windows 上安装
-description: 本文介绍如何在 Windows 上安装 SQL Server 机器学习服务。 可使用机器学习服务在数据库中执行 Python 和 R 脚本。
+description: 了解如何在 Windows 上安装 SQL Server 机器学习服务。 可使用机器学习服务在数据库中执行 Python 和 R 脚本。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/04/2019
+ms.date: 01/23/2020
 ms.topic: conceptual
-author: dphansen
-ms.author: davidph
+author: cawrites
+ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 8d51c147cfe5895356f8af270f62443643caa8f1
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 26fe15ff88a52b6673d5e7de7dcad3a047fca6ba
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727652"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76891720"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>在 Windows 上安装 SQL Server 机器学习服务（Python 和 R）
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文介绍如何在 Windows 上安装 SQL Server 机器学习服务。 可使用机器学习服务在数据库中执行 Python 和 R 脚本。
+了解如何在 Windows 上安装 SQL Server 机器学习服务。 可使用机器学习服务在数据库中执行 Python 和 R 脚本。
 
-## <a name="bkmk_prereqs"> </a> 安装前清单
+## <a name="bkmk_prereqs"></a> 安装前清单
 
-+ 需要数据库引擎实例。 不能只安装 R 或 Python 功能，但可以将它们逐渐添加到现有实例。
++ 需要数据库引擎实例。 不能只安装 Python 或 R 功能，但可以将它们逐渐添加到现有实例。
 
-+ 为了实现业务连续性，机器学习服务支持 [Always On 可用性组](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server)。 必须在每个节点上安装机器学习服务并配置包。
++ 为了实现业务连续性，机器学习服务支持 [Always On 可用性组](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server)。 在每个节点上安装机器学习服务并配置包。
 
-+ SQL Server 2017 中的故障转移群集不支持安装机器学习服务  。 但 SQL Server 2019 却支持  。 
++ SQL Server 2017 中的故障转移群集不支持安装机器学习服务。 SQL Server 2019 支持上述服务。
  
 + 不要在域控制器上安装机器学习服务。 安装程序的机器学习服务部分将失败。
 
-+ 不要在运行数据库内实例的同一台计算机上安装“共享功能” > “Machine Learning Server（独立）”   。 一个独立服务器将争夺相同的资源，从而降低这两个安装的性能。
++ 不要在运行数据库实例的同一台计算机上安装“共享功能” > “Machine Learning Server（独立）”。 一个独立服务器将争夺相同的资源，从而降低这两个安装的性能。
 
-+ 支持并行安装其他版本的 R 和 Python，但不建议这样做。 之所以支持，是因为 SQL Server 实例使用自己的开源 R 和 Anaconda 分发副本。 但不建议这样做，因为在 SQL Server 外部的 SQL Server 计算机上运行使用 R 和 Python 的代码可能会导致各种问题：
++ 支持并行安装 Python 和 R 的其他版本，但不建议这样做。 之所以支持，是因为 SQL Server 实例使用自己的开源 R 和 Anaconda 分发副本。 不建议这样做，因为在 SQL Server 外部的 SQL Server 计算机上运行使用 Python 和 R 的代码可能会导致各种问题：
     
-  + 你将使用不同于在 SQL Server 中运行时使用的库和可执行文件，因此会获得不同的结果。
+  + 使用不同的库和可执行文件将创建不一致的结果，而不是 SQL Server 中运行的结果。
   + SQL Server 无法管理在外部库中运行的 R 和 Python 脚本，从而导致资源争用。
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
@@ -50,13 +50,21 @@ ms.locfileid: "73727652"
 
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
 
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+有关哪些 SQL Server 版本支持将 Python 和 R 与机器学习服务集成的详细信息，请参阅 [SQL Server 2017 的版本和受支持的功能](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2017)。
+::: moniker-end
+
+::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+有关哪些 SQL Server 版本支持将 Python 和 R 与机器学习服务集成的详细信息，请参阅 [SQL Server 2019 (15.x) 的版本和受支持的功能](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-version-15)。
+::: moniker-end
+
 ## <a name="run-setup"></a>运行安装程序
 
 对于本地安装，必须以管理员身份运行安装程序。 如果从远程共享安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则必须使用对远程共享具有读取和执行权限的域帐户。
 
 1. 启动 SQL Server 的安装向导。
   
-1. 在“安装”选项卡上，选择“全新 SQL Server 独立安装或向现有安装添加功能”   。
+1. 在“安装”选项卡上，选择“全新 SQL Server 独立安装或向现有安装添加功能”。
 
    ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
    ![全新 SQL Server 独立安装](media/2017setup-installation-page-mlsvcs.png)
@@ -84,11 +92,11 @@ ms.locfileid: "73727652"
 
    - **数据库引擎服务**
      
-     若要将 R、Python 和 Java 与 SQL Server 结合使用，则必须安装数据库引擎实例。 可使用默认实例或命名实例。
+     若要将 R 或 Python 与 SQL Server 结合使用，则必须安装数据库引擎实例。 可使用默认实例或命名实例。
 
    - **机器学习服务（数据库内）**
      
-     此选项安装支持 R、Python 和 Java 脚本执行的数据库服务。
+     此选项安装支持 R 和 Python 脚本执行的数据库服务。
 
    ::: moniker-end
 
@@ -101,9 +109,7 @@ ms.locfileid: "73727652"
      选中此选项可添加 Microsoft Python 包、Python 3.5 可执行文件以及从 Anaconda 分发中选择库。
      
    ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
-   - **Java**
-     
-     选中此选项可安装 SQL 随附的 Open JRE，或提供不同版本的 JDK 或 JRE 的位置。
+   有关安装和使用 Java 的信息，请参阅[在 Windows 上安装 SQL Server 语言扩展](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md)。
    ::: moniker-end
    
    ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
@@ -111,23 +117,28 @@ ms.locfileid: "73727652"
    ::: moniker-end
    
    ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
-   ![R、Python 的功能选项](media/2019setup-features-page-mls-rpy.png "R、Python 和 Java 的安装选项")
+   ![R 和 Python 的功能选项](media/2019setup-features-page-mls-rpy.png "R 和 Python 的安装选项")
    ::: moniker-end
    
    > [!NOTE]
    > 
-   > 不要选择 Machine Learning Server（独立）对应的选项  。 在“共享功能”下安装 Machine Learning Server 的选项适用于在单独的计算机上使用  。
+   > 不要选择 Machine Learning Server（独立）对应的选项。 在“共享功能”下安装 Machine Learning Server 的选项适用于在单独的计算机上使用。
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 
-4. 在“同意安装 Microsoft R Open”页上，选择“接受”，然后选择“下一步”    。 该许可协议涵盖 Microsoft R Open，其中包括分发开源 R 基础包和工具，以及 Microsoft 开发团队提供的增强型 R 包和连接提供程序。
+4. 在“同意安装 Microsoft R Open”页上，选择“接受”，然后选择“下一步”。 
 
-1. 在“同意安装 Python”页上，选择“接受”，然后选择“下一步”    。 Python 开源许可协议还涵盖了 Anaconda 和相关工具，以及 Microsoft 开发团队提供的一些新 Python 库。
+许可协议涵盖以下内容：
++ Microsoft R Open
++ 开放源代码 R 基本包和工具
++ Microsoft 开发团队提供的增强 R 包和连接提供程序。
+
+1. 在“同意安装 Python”页上，选择“接受”，然后选择“下一步”。 Python 开源许可协议还涵盖了 Anaconda 和相关工具，以及 Microsoft 开发团队提供的一些新 Python 库。
 
    > [!NOTE]
    >  如果正在使用的计算机无法访问 Internet，则可以在此时暂停安装以单独下载安装程序。 有关详细信息，请参阅[在没有 Internet 连接的情况下安装机器学习组件](../install/sql-ml-component-install-without-internet-access.md)。
 
-1. 在“准备安装”页面上，验证是否已包括这些选择，然后选择“安装”   。
+1. 在“准备安装”页面上，验证是否已包括这些选择，然后选择“安装”。
   
    + 数据库引擎服务
    + 机器学习服务（数据库内）
@@ -141,32 +152,27 @@ ms.locfileid: "73727652"
 
 ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
 
-1. 在“同意安装 Microsoft R Open”页上，选择“接受”，然后选择“下一步”    。 该许可协议涵盖 Microsoft R Open，其中包括分发开源 R 基础包和工具，以及 Microsoft 开发团队提供的增强型 R 包和连接提供程序。
+1. 在“同意安装 Microsoft R Open”页上，选择“接受”，然后选择“下一步”。 该许可协议涵盖 Microsoft R Open，其中包括分发开源 R 基础包和工具，以及 Microsoft 开发团队提供的增强型 R 包和连接提供程序。
 
-1. 在“同意安装 Python”页上，选择“接受”，然后选择“下一步”    。 Python 开源许可协议还涵盖了 Anaconda 和相关工具，以及 Microsoft 开发团队提供的一些新 Python 库。
+2. 在“同意安装 Python”页上，选择“接受”，然后选择“下一步”。 Python 开源许可协议还涵盖了 Anaconda 和相关工具，以及 Microsoft 开发团队提供的一些新 Python 库。
 
-1. 在“Java 安装位置”页上，可以安装 SQL 随附的 Open JRE 版本，也可以提供自己的 JDK 或 JRE 安装位置  。 然后选择“下一步”  。
-
-   > [!NOTE]
-   >  如果正在使用的计算机无法访问 Internet，则可以在此时暂停安装以单独下载安装程序。 有关详细信息，请参阅[在没有 Internet 连接的情况下安装机器学习组件](../install/sql-ml-component-install-without-internet-access.md)。
-
-1. 在“准备安装”页面上，验证是否已包括这些选择，然后选择“安装”   。
+3. 在“准备安装”页面上，验证是否已包括这些选择，然后选择“安装”。
   
    + 数据库引擎服务
    + 机器学习服务（数据库内）
-   + R、Python 和/或 Java
+   + R 和/或 Python
 
    请注意配置文件存储路径 `..\Setup Bootstrap\Log` 下的文件夹位置。 安装完成后，可以在“摘要”文件中查看已安装的组件。
 
-1. 安装完成后，如果收到重启计算机的指示，请立即重启。 安装完成后，请务必阅读来自安装向导的消息。 有关详细信息，请参阅 [查看和读取 SQL Server 安装程序日志文件](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)。
+4. 安装完成后，如果收到重启计算机的指示，请立即重启。 安装完成后，请务必阅读来自安装向导的消息。 有关详细信息，请参阅 [查看和读取 SQL Server 安装程序日志文件](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)。
 
 ::: moniker-end
 
 ## <a name="set-environment-variables"></a>设置环境变量
 
-（仅适用于 R 功能集成）应设置“MKL_CBWR”环境变量，以确保从 Intel 数学核心函数库 (MKL) 计算得到[一致的输出结果](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)  。
+（仅适用于 R 功能集成）应设置“MKL_CBWR”环境变量，以确保从 Intel 数学核心函数库 (MKL) 计算得到[一致的输出结果](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)。
 
-1. 在“控制面板”中，单击“系统和安全” > “系统” > “高级系统设置” > “环境变量”     。
+1. 在“控制面板”中，单击“系统和安全” > “系统” > “高级系统设置” > “环境变量”。
 
 2. 创建新的用户或系统变量。 
 
@@ -186,13 +192,13 @@ ms.locfileid: "73727652"
     > 
     > 还可以使用 [Azure Data Studio](../../azure-data-studio/what-is.md)，它支持管理任务和针对 SQL Server 的查询。
   
-2. 连接到安装了机器学习服务的实例，单击“新建查询”打开查询窗口，然后运行以下命令  ：
+2. 连接到安装了机器学习服务的实例，单击“新建查询”打开查询窗口，然后运行以下命令：
 
     ```sql
     sp_configure
     ```
 
-    属性 `external scripts enabled` 的值目前应为 **0**。 这是因为默认情况下该功能处于关闭状态。 必须先由管理员显式启用此功能，然后才能运行 R 或 Python 脚本。
+    属性 `external scripts enabled` 的值目前应为 **0**。 默认情况下，此功能处于关闭状态。 必须先由管理员显式启用此功能，然后才能运行 R 或 Python 脚本。
     
 3.  若要启用外部脚本编写功能，请运行以下语句：
     
@@ -209,7 +215,7 @@ ms.locfileid: "73727652"
 
 重启服务也会自动重启相关的 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] 服务。
 
-可以使用右键单击 SSMS 中实例的“重启”命令、使用“控制面板”中的“服务”面板，或者使用 [SQL Server 配置管理器](../../relational-databases/sql-server-configuration-manager.md)来重启服务   。
+可以使用右键单击 SSMS 中实例的“重启”命令、使用“控制面板”中的“服务”面板，或者使用 [SQL Server 配置管理器](../../relational-databases/sql-server-configuration-manager.md)来重启服务。
 
 ## <a name="verify-installation"></a>验证安装
 
@@ -223,14 +229,13 @@ ms.locfileid: "73727652"
    EXECUTE sp_configure  'external scripts enabled'
    ```
 
-   **run_value** 现在应已设置为 1。
+   run_value 设置为 1。
     
-2. 打开“服务”面板或 SQL Server 配置管理器，并验证“SQL Server Launchpad”是否正在运行   。 应该为每个安装了 R 或 Python 的数据库引擎实例提供一项服务。 有关该服务的详细信息，请参阅[扩展性框架](../concepts/extensibility-framework.md)。 
+2. 打开“服务”面板或 SQL Server 配置管理器，并验证“SQL Server Launchpad”是否正在运行。 应该为每个安装了 R 或 Python 的数据库引擎实例提供一项服务。 有关该服务的详细信息，请参阅[扩展性框架](../concepts/extensibility-framework.md)。 
    
-3. 如果 Launchpad 正在运行，则应该能够运行简单的 R 和 Python 脚本，以验证外部脚本运行时是否可以与 SQL Server 通信。
+3. 如果 Launchpad 正在运行，则可以运行简单的 Python 和 R 脚本，以验证外部脚本运行时是否可以与 SQL Server 通信。
 
-   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中打开新的“查询”窗口，然后运行如下脚本  ：
-   
+   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中打开新的“查询”窗口，然后运行如下脚本：
    + 对于 R
    
      ```sql
@@ -264,8 +269,8 @@ ms.locfileid: "73727652"
    | 1|
 
 > [!NOTE]
-> 根据设计，系统不会返回 Python 脚本中使用的列或标题。 若要在输出结果中添加列名称，则必须为返回数据集指定架构。 为此，请使用存储过程的 WITH RESULTS 参数，命名列并指定 SQL 数据类型。
-> 
+> 不会自动返回 Python 脚本中使用的列或标题。 若要在输出结果中添加列名称，则必须为返回数据集指定架构。 为此，请使用存储过程的 WITH RESULTS 参数，命名列并指定 SQL 数据类型。
+>
 > 例如，可以添加以下行来生成任意列名：`WITH RESULT SETS ((Col1 AS int))`
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
@@ -277,13 +282,13 @@ ms.locfileid: "73727652"
 
 建议将最新的累积更新应用于数据库引擎和机器学习组件。
 
-在连接 Internet 的设备上，累积更新通常通过 Windows 更新进行应用，但也可以使用以下步骤进行可控更新。 为数据库引擎应用更新时，安装程序将为你在同一实例上安装的任何 R 或 Python 功能拉取累积更新。 
+在连接 Internet 的设备上，累积更新通常通过 Windows 更新进行应用，但也可以使用以下步骤进行可控更新。 为数据库引擎应用更新时，安装程序将为你在同一实例上安装的任何 Python 或 R 功能拉取累积更新。 
 
-在断开连接的服务器上，需要执行额外的步骤。 有关详细信息，请参阅 [在没有 Internet 连接的计算机上安装 > 应用累积更新](sql-ml-component-install-without-internet-access.md#apply-cu)。
+断开连接的服务器需要执行额外的步骤。 有关详细信息，请参阅 [在没有 Internet 连接的计算机上安装 > 应用累积更新](sql-ml-component-install-without-internet-access.md#apply-cu)。
 
 1. 开始使用已安装的基线实例：SQL Server 2017 初始版本
 
-2. 请转到累积更新列表：[SQL Server 2017 更新](https://sqlserverupdates.com/sql-server-2017-updates/)
+2. 请转到累积更新列表：[Microsoft SQL Server 的最新更新](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server)
 
 3. 选择最新的累积更新。 自动下载并提取可执行文件。
 
@@ -310,7 +315,7 @@ ms.locfileid: "73727652"
 * [管理磁盘配额](https://docs.microsoft.com/windows/desktop/fileio/managing-disk-quotas)以避免外部脚本运行耗尽磁盘空间的任务
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-在 Windows 上的 SQL Server 2019 中，隔离机制已发生更改。 这会影响 **SQLRUserGroup**、防火墙规则、文件权限和默示身份验证。 有关详细信息，请参阅 [机器学习服务的隔离更改](sql-server-machine-learning-services-2019.md)。
+在 Windows 上的 SQL Server 2019 中，隔离机制已发生更改。 此机制会影响 SQLRUserGroup、防火墙规则、文件权限和默示身份验证。 有关详细信息，请参阅 [机器学习服务的隔离更改](sql-server-machine-learning-services-2019.md)。
 ::: moniker-end
 
 <a name="bkmk_configureAccounts"></a> 
@@ -325,7 +330,7 @@ ms.locfileid: "73727652"
 
 ## <a name="suggested-optimizations"></a>建议的优化
 
-现在所有工作已顺利进行，可能还需要优化服务器以支持机器学习，或安装预先训练的模型。
+现在所有工作已顺利进行，可能还需要优化服务器以支持机器学习，或安装预先训练的机器学习模型。
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 ### <a name="add-more-worker-accounts"></a>添加更多辅助角色帐户
@@ -335,7 +340,7 @@ ms.locfileid: "73727652"
 
 ### <a name="optimize-the-server-for-script-execution"></a>优化服务器执行脚本
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序的默认设置旨在为数据库引擎支持的各种服务（可能包括提取、转换和加载 (ETL) 进程、报告、审核和使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据的应用程序）优化服务器平衡。 因此，在默认设置下，可能会发现机器学习（尤其是占用大量内存的操作）的资源有时被限制或被阻止。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序的默认设置旨在为数据库引擎支持的各种服务（可能包括提取、转换和加载 (ETL) 进程、报告、审核和使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据的应用程序）优化服务器平衡。 在默认设置下，机器学习（尤其是占用大量内存的操作）的资源有时会被限制或被阻止。
 
 若要确保机器学习作业的优先级并为其分配适当资源，建议使用 SQL Server Resource Governor 配置外部资源池。 可能还要更改分配到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库引擎的内存量，或增加 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] 服务下运行的帐户数。
 

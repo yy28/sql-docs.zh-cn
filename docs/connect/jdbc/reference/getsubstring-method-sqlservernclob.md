@@ -1,5 +1,5 @@
 ---
-title: getSubString 方法 (SQLServerNClob) |Microsoft Docs
+title: getSubString 方法 (SQLServerNClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 1d91c930-1bac-4da9-b9a5-ac2cfd31541b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cf2caa03e047bb53ca946153205492c417448e85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979325"
 ---
 # <a name="getsubstring-method-sqlservernclob"></a>getSubString 方法 (SQLServerNClob)
@@ -30,7 +30,7 @@ public java.lang.String getSubString(long pos,
                                   int length)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  pos   
   
  要提取的子字符串的第一个字符。 第一个字符的位置为 1。  
@@ -42,10 +42,10 @@ public java.lang.String getSubString(long pos,
 ## <a name="return-value"></a>返回值  
  作为 NCLOB  中指定子字符串的 String  。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 getSubString 方法是由 java.sql.NClob 接口中的 getSubString 方法指定的。  
   
  尝试从 Null 或长度为零的 NCLOB 获取零个字符将返回空字符串。 尝试在长度为零的 NCLOB 中从除了位置 1 之外的其他位置获取任意长度的字符将引发位置异常。  

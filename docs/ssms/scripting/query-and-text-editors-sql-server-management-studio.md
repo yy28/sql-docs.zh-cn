@@ -1,5 +1,7 @@
 ---
-title: 查询和文本编辑器 (SQL Server Management Studio) | Microsoft Docs
+title: 查询和文本编辑器 (SSMS)
+description: 了解如何使用 SQL Server Management Studio (SSMS) 编辑器以交互方式查询、编辑和测试文件。
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -22,15 +24,14 @@ ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8d8958849239c730aa7f687cd12a559de158d5e1
-ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
+ms.openlocfilehash: 07ab012f916a86ca8642c81e2bdd87dfc815db2e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988162"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75558035"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>查询和文本编辑器 (SQL Server Management Studio)
 
@@ -131,7 +132,7 @@ ms.locfileid: "70988162"
 |介绍如何打印窗口或网格中的脚本或结果。|[打印代码和结果](../../relational-databases/scripting/print-code-and-results.md)|  
 |介绍如何使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器中的 sqlcmd 功能。|[使用查询编辑器编辑 SQLCMD 脚本](../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)|  
 |介绍如何使用 IntelliSense 功能，如在键入对象时自动完成对象名称或确保断点置于有效位置上。|[IntelliSense (SQL Server Management Studio)](../../relational-databases/scripting/intellisense-sql-server-management-studio.md)|  
-|介绍如何使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器中的代码段。 代码段是常用语句或语句块的模板，可以自定义或扩展以包含特定站点代码段。|[Transact-SQL 代码段](../../relational-databases/scripting/transact-sql-code-snippets.md)|  
+|介绍如何使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器中的代码段。 代码段是常用语句或语句块的模板，可以自定义或扩展以包含特定站点代码段。|[Transact-SQL 代码片段](../../relational-databases/scripting/transact-sql-code-snippets.md)|  
 |介绍如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器逐句运行代码，并查看诸如变量和参数中的值之类的调试信息。|[Transact-SQL 调试器](../../relational-databases/scripting/transact-sql-debugger.md)|  
 |介绍如何为不同 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例设置自定义颜色，并将这些颜色设置为 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口中状态栏的背景。|[状态栏（数据库引擎查询编辑器）](../../relational-databases/scripting/status-bar-database-engine-query-editor.md)|  
   

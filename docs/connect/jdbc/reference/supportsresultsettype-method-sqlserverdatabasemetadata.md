@@ -1,5 +1,5 @@
 ---
-title: supportsResultSetType 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
+title: supportsResultSetType 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: aded734f-c96e-460f-afaa-8f64a92560d7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5966367c786cc8e591103166bbe8dadb47c664f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67968937"
 ---
 # <a name="supportsresultsettype-method-sqlserverdatabasemetadata"></a>supportsResultSetType 方法 (SQLServerDatabaseMetaData)
@@ -34,8 +34,8 @@ ms.locfileid: "67968937"
 public boolean supportsResultSetType(int type)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
- *类型*  
+#### <a name="parameters"></a>parameters  
+ type   
   
  指示结果集类型的 int，它可以为 java.sql.ResultSet 或 SQLServerResultSet 中定义的以下值之一  ：  
   
@@ -58,13 +58,13 @@ public boolean supportsResultSetType(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>返回值  
- 如果支持,**则为 true** 。 否则为 **false**。  
+ 如果支持，则值为 true  。 否则为 **false**。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 supportsResultSetType 方法由 supportsResultSetType 方法在 Java.sql.databasemetadata 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 supportsResultSetType 方法是由 java.sql.DatabaseMetaData 接口中的 supportsResultSetType 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

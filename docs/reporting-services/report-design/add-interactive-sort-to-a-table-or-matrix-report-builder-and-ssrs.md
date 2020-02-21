@@ -12,10 +12,10 @@ ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 962f07f5e5f6ce00bc21c362ce905bec2773c28c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68893807"
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>向表或矩阵添加交互式排序（报表生成器和 SSRS）
@@ -60,7 +60,7 @@ ms.locfileid: "68893807"
   
  若要验证排序操作，请单击 **“运行”** 以预览报表，然后单击交互式排序按钮。  
   
- ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#BackToTop)  
+ ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [返回页首](#BackToTop)  
   
 ##  <a name="SortingTopLevelParent"></a> 对表或矩阵的顶级父行组进行排序  
  将交互式排序按钮添加到列标题，可使用户能够单击列标题并按该列中显示的值对表或矩阵中的父组行进行排序。 子组的顺序保持不变。  
@@ -84,7 +84,7 @@ ms.locfileid: "68893807"
   
  若要验证排序操作，请单击 **“运行”** 以预览报表，然后单击交互式排序按钮。  
   
- ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#BackToTop)  
+ ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [返回页首](#BackToTop)  
   
 ##  <a name="SortingChildGroups"></a> 对组的子组或详细信息行进行排序  
  将交互式排序按钮添加到组头行，可使用户能够对父组中的子组的值进行排序，或者对最内部的子组的详细信息行进行排序。  
@@ -107,7 +107,7 @@ ms.locfileid: "68893807"
   
  若要验证排序操作，请单击 **“运行”** 以预览报表，然后单击交互式排序按钮。  
   
- ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#BackToTop)  
+ ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [返回页首](#BackToTop)  
   
 ##  <a name="SortingMultipleRowGroups"></a> 基于复杂组表达式对行进行排序  
  将交互式排序按钮添加到列标题，可使用户能够单击列标题并对组合的父组和子组进行排序。 若要获得此效果，必须将组表达式更改为两个组的组合。 例如，假定用一个矩阵显示某个商店中按颜色和大小分组的商品的库存总计。 若要基于颜色和大小的组合对行进行排序，而不是让颜色和大小各有单独的组，则可以基于颜色和大小的组合来定义组。 有关定义组表达式的详细信息，请参阅[组表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)。  
@@ -164,7 +164,7 @@ ms.locfileid: "68893807"
   
  若要验证排序操作，请单击 **“运行”** 以预览报表，然后单击交互式排序按钮。 矩阵将按组表达式的组合值进行排序，但每个值分别显示在其各自的列中。  
   
- ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#BackToTop)  
+ ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [返回页首](#BackToTop)  
   
 ##  <a name="SynchronizingSortOrder"></a> 同步多个数据区域的排序顺序  
  添加交互式排序按钮，可使用户能够单击一个排序按钮并对多个数据区域进行排序。 创建交互式排序按钮时，可以指定是否基于相同报表数据集同步多个数据区域的排序。 例如，报表可能包括以图形方式显示数据的矩阵和图表。 用户更改矩阵中行的排序顺序时，图表将自动显示相同的排序顺序。  
@@ -191,7 +191,7 @@ ms.locfileid: "68893807"
   
 8.  单击 **“排序”** 。  
   
-9. 单击 **“添加”** 。 将向排序选项网格添加一个新的排序行。  
+9. 单击“添加”  。 将向排序选项网格添加一个新的排序行。  
   
 10. 在“排序依据”中，从下拉列表选择在步骤 6 中选择的要按其分组的相同字段。  
   
@@ -213,7 +213,7 @@ ms.locfileid: "68893807"
   
  若要验证排序操作，请单击 **“运行”** 以预览报表，然后单击交互式排序按钮。 矩阵将按组表达式的组合值进行排序，但每个值分别显示在其各自的列中。  
   
- ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#BackToTop)  
+ ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [返回页首](#BackToTop)  
   
 ## <a name="see-also"></a>另请参阅  
  [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   

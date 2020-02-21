@@ -1,5 +1,5 @@
 ---
-title: getCatalogs 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getCatalogs 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 7f8bd0f1-f340-4bb9-b559-0a6176124033
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 786f55e436b9582eaed875f8c7cd265b1d3e2cc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953455"
 ---
 # <a name="getcatalogs-method-sqlserverdatabasemetadata"></a>getCatalogs 方法 (SQLServerDatabaseMetaData)
@@ -37,23 +37,23 @@ public java.sql.ResultSet getCatalogs()
 ## <a name="return-value"></a>返回值  
  一个 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 getCatalogs 方法是由 java.sql.DatabaseMetaData 接口中的 getCatalogs 方法指定。  
   
 > [!NOTE]  
->  在 SQL Azure 上, 应连接到 master 数据库以调用**SQLServerDatabaseMetaData. getCatalogs**。 SQL Azure 不支持从用户数据库中返回整个目录集。 **SQLServerDatabaseMetaData。 getCatalogs**使用 sys.databases 视图获取目录。 请参阅[database_usage (AZURE SQL database)](../../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md)中有关权限的讨论, 了解 SQL Azure 上的**SQLServerDatabaseMetaData**行为。  
+>  在 SQL Azure 上，应连接到 master 数据库，以调用 SQLServerDatabaseMetaData.getCatalogs  。 SQL Azure 不支持从用户数据库中返回整个目录集。 SQLServerDatabaseMetaData.getCatalogs  使用 sys.databases 视图来获取目录。 若要了解 SQL Azure 上的 SQLServerDatabaseMetaData.getCatalogs  行为，请参阅 [sys.database_usage（Azure SQL 数据库）](../../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md)中关于权限的讨论。  
   
  由 getCatalogs 方法返回的结果集将包含以下信息：  
   
-|“属性”|类型|描述|  
+|名称|类型|说明|  
 |----------|----------|-----------------|  
-|TABLE_CAT|**String**|目录名称，包括 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的系统数据库。|  
+|TABLE_CAT|**字符串**|目录名称，包括 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的系统数据库。|  
   
 ## <a name="example"></a>示例  
- 以下示例演示了如何使用 getCatalogs 方法返回 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中包含的所有数据库（包括系统数据库）的名称。  
+ 下面的示例展示了如何使用 getCatalogs 方法返回 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中包含的所有数据库（包括系统数据库）的名称。  
   
 ```  
 public static void executeGetCatalogs(Connection con) {  

@@ -1,5 +1,5 @@
 ---
-title: 了解 JDBC 驱动程序数据类型 |Microsoft Docs
+title: 了解 JDBC 驱动程序数据类型 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 7802328d-4d23-4775-9573-4169b127d258
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a8daea8b477be13dd7b267a17ddf5f960868f579
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027275"
 ---
 # <a name="understanding-the-jdbc-driver-data-types"></a>了解 JDBC 驱动程序数据类型
@@ -29,7 +29,7 @@ JDBC 类型系统负责调解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
   
 ## <a name="in-this-section"></a>在本节中  
   
-| 主题                                                                                                                                            | 描述                                                                                                                                                                                                                                                          |
+| 主题                                                                                                                                            | 说明                                                                                                                                                                                                                                                          |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [使用基本数据类型](../../connect/jdbc/using-basic-data-types.md)                                                                           | 描述 JDBC 基本数据类型。 包括一些示例，介绍如何通过结果集、参数化查询和存储过程来使用数据类型。                                                                                                        |
 | [配置 java.sql.Time 值发送到服务器的方式](../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md) | 说明 JDBC 驱动程序如何生成日期。                                                                                                                                                                                                                       |
@@ -37,7 +37,7 @@ JDBC 类型系统负责调解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
 | [了解数据类型区别](../../connect/jdbc/understanding-data-type-differences.md)                                                 | 描述不同 JDBC 驱动程序数据类型之间的差异。                                                                                                                                                                                                    |
 | [了解数据类型转换](../../connect/jdbc/understanding-data-type-conversions.md)                                                 | 描述当使用 getter 和 setter 方法时如何处理数据类型转换。                                                                                                                                                                                  |
 | [区域字符集支持](../../connect/jdbc/national-character-set-support.md)                                                           | 介绍对区域字符集类型的支持。                                                                                                                                                                                                          |
-| [支持 XML 数据](../../connect/jdbc/supporting-xml-data.md)                                                                                 | 介绍 SQLXML 接口。 此外还说明了如何使用 SQLXML Java 数据类型在关系数据库中读取和写入 XML 数据  。                                                                                                             |
+| [支持 XML 数据](../../connect/jdbc/supporting-xml-data.md)                                                                                 | 介绍 SQLXML 接口。 此外还说明了如何使用 SQLXML Java 数据类型在关系数据库中读取和写入 XML 数据。                                                                                                             |
 | [包装器和接口](../../connect/jdbc/wrappers-and-interfaces.md)                                                                         | 论述具有允许应用程序服务器创建类代理的 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 特定的方法和常量的接口，还论述对 `java.sql.Wrapper` 接口的支持。 |
   
 ## <a name="see-also"></a>另请参阅

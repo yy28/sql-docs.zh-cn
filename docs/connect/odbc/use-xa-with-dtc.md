@@ -12,12 +12,12 @@ helpviewer_keywords:
 author: karinazhou
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: c2dbe0f90af6d3c51c55698ebd74c4972ea1d4db
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.openlocfilehash: 03399ea4653df03c873739b24a167d88564c3927
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68252152"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76911111"
 ---
 # <a name="using-xa-transactions"></a>使用 XA 事务
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -25,13 +25,13 @@ ms.locfileid: "68252152"
 
 ## <a name="overview"></a>概述
 
-从版本17.3 开始的 Microsoft ODBC Driver for SQL Server 提供对 Windows、Linux 和 Mac 上的分布式事务处理协调器 (DTC) 的 XA 事务的支持。 驱动程序端的 XA 实现使客户端应用程序能够将串行操作 (如启动、提交、回滚事务分支等) 发送到事务管理器 (TM)。 然后, TM 会根据这些操作与资源管理器 (RM) 进行通信。 有关 XA 规范和适用于 DTC (MS DTC) 的 Microsoft 实现的详细信息, 请参阅[它的工作原理: SQL SERVER DTC (MSDTC 和 XA 事务)](https://blogs.msdn.microsoft.com/bobsql/2018/01/28/how-it-works-sql-server-dtc-msdtc-and-xa-transactions/)。
+自版本 17.3 起，Microsoft ODBC Driver for SQL Server 开始支持在 Windows、Linux 和 Mac 上通过分布式事务处理协调器 (DTC) 使用 XA 事务。 借助驱动程序端上的 XA 实现，客户端应用程序可以将串行操作（如启动、提交、回滚事务分支等）发送到事务管理器 (TM)。 然后，TM 会根据这些操作与资源管理器 (RM) 进行通信。 若要详细了解 XA 规范和 Microsoft DTC (MS DTC) 实现，请参阅[工作原理：SQL Server DTC（MSDTC 和 XA 事务）](https://blogs.msdn.microsoft.com/bobsql/2018/01/28/how-it-works-sql-server-dtc-msdtc-and-xa-transactions/)。
 
 
 
 ## <a name="the-xacallparam-structure"></a>XACALLPARAM 结构
 
-`XACALLPARAM`结构定义 XA 事务管理器请求所需的信息。 定义方式如下:
+`XACALLPARAM` 结构定义了 XA 事务管理器请求所需的信息。 它的定义如下：
 
 ```
 typedef struct XACallParam {    
@@ -46,27 +46,27 @@ typedef struct XACallParam {
 ```
 
 *sizeParam*  
-`XACALLPARAM`结构的大小。 这不包括以下`XACALLPARAM`数据的大小。
+`XACALLPARAM` 结构的大小。 这不包括 `XACALLPARAM` 后面的数据大小。
 
 *operation*  
-要传递给 TM 的 XA 操作。 可能的操作是在[xadefs](../../connect/odbc/use-xa-with-dtc.md#xadefsh)中定义的。
+要传递给 TM 的 XA 操作。 [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh) 中定义了可取操作值。
 
 *xid*  
 事务分支标识符。
 
 *flag*  
-与 TM 请求关联的标志。 可能的值在[xadefs](../../connect/odbc/use-xa-with-dtc.md#xadefsh)中定义。
+与 TM 请求关联的标志。 [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh) 中定义了可取值。
 
 *status*  
-从 TM 返回状态。 有关可能的返回状态, 请参阅[xadefs](../../connect/odbc/use-xa-with-dtc.md#xadefsh)标头。
+从 TM 返回状态。 若要了解可能返回的状态，请参阅 [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh) 头。
 
 *sizeData*  
-数据缓冲区`XACALLPARAM`的大小。 
+`XACALLPARAM` 后面的数据缓冲区大小。 
 
 *sizeReturned*  
 返回的数据的大小。
 
-为了发出 TM 请求, 需要使用属性_SQL_COPT_SS_ENLIST_IN_XA_和指向`XACALLPARAM`对象的指针来调用[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)函数。  
+必须使用属性 SQL_COPT_SS_ENLIST_IN_XA  和指向 `XACALLPARAM` 对象的指针来调用 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 函数，才能发出 TM 请求。  
 
 ```
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XACALLPARAM *param
@@ -75,7 +75,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XA
 
 ## <a name="code-sample"></a>代码示例 
 
-下面的示例演示如何与 TM 事务通信, 并从客户端应用程序执行不同的操作。 如果针对 Microsoft SQL Server 运行测试, 则需要将 MS DTC 正确配置为启用 XA 事务。 可以在[xadefs](../../connect/odbc/use-xa-with-dtc.md#xadefsh)头文件中找到 XA 定义。 
+下面的示例展示了如何就 XA 事务与 TM 通信，以及如何从客户端应用程序执行不同的操作。 如果测试是针对 Microsoft SQL Server 运行，必须将 MS DTC 正确配置为启用 XA 事务。 可以在 [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh) 头文件中找到 XA 定义。 
 
 ```
 
@@ -368,7 +368,7 @@ bool TestRecover(HDBC hdbc, const char* connectionString)
             rc = testRunner->Commit(*pXid, false, xaStatus);
             if (SQL_SUCCEEDED(xaStatus))
             {
-                std::cout << "TestRecover::Successfully commited recovered transaction " << tr << " formatId=" << pXid->formatID << std::endl;
+                std::cout << "TestRecover::Successfully committed recovered transaction " << tr << " formatId=" << pXid->formatID << std::endl;
             }
             else
             {
@@ -434,7 +434,7 @@ int main(int argc, char** argv)
 
 ```
 
-`XATestRunner`类在与服务器通信时实现可能的 XA 调用。
+`XATestRunner` 类在与服务器通信时实现可能的 XA 调用。
 
 ```
 

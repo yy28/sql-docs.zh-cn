@@ -1,5 +1,5 @@
 ---
-title: getPrimaryKeys 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getPrimaryKeys 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: ebfe236a-dc02-493e-a3ab-5353d3769e36
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bdb1eb0053c9bb15c6d03013df13635e022a5072
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980762"
 ---
 # <a name="getprimarykeys-method-sqlserverdatabasemetadata"></a>getPrimaryKeys 方法 (SQLServerDatabaseMetaData)
@@ -36,31 +36,31 @@ public java.sql.ResultSet getPrimaryKeys(java.lang.String cat,
                                          java.lang.String table)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *cat*  
   
- 一个包含目录名称的字符串  。  
+ 一个包含目录名称的字符串。  
   
  *schema*  
   
- 一个包含架构名称的字符串  。  
+ 一个包含架构名称的字符串。  
   
  *table*  
   
- 一个包含表名称的字符串  。  
+ 一个包含表名称的字符串。  
   
 ## <a name="return-value"></a>返回值  
  一个 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 getPrimaryKeys 方法由 getPrimaryKeys 方法在 Java.sql.databasemetadata 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 getPrimaryKeys 方法是由 java.sql.DatabaseMetaData 接口中的 getPrimaryKeys 方法指定的。  
   
  由 getPrimaryKeys 方法返回的结果集将包含以下信息：  
   
-|“属性”|类型|描述|  
+|名称|类型|说明|  
 |----------|----------|-----------------|  
 |TABLE_CAT|String|指定的表所在的数据库的名称。|  
 |TABLE_SCHEM|String|表的架构。|  

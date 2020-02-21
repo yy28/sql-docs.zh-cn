@@ -1,5 +1,5 @@
 ---
-title: 'ISSAsynchStatus:: WaitForAsynchCompletion (OLE DB) |Microsoft Docs'
+title: ISSAsynchStatus::WaitForAsynchCompletion (OLE DB) | Microsoft Docs
 description: ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 6779c0892137ee60f011f365e0f3ee4d46b046f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994370"
 ---
 # <a name="issasynchstatuswaitforasynchcompletion-ole-db"></a>ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
@@ -57,7 +57,7 @@ HRESULT WaitForAsynchCompletion(
 > [!NOTE]  
 >  除了上面列出的返回代码值之外，ISSAsynchStatus::WaitForAsynchCompletion 方法还支持由核心 OLEDB ICommand::Execute 和 IDBInitialize::Initialize 方法返回的返回代码值    。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  在经过超时值（毫秒）或完成挂起操作之前，ISSAsynchStatus::WaitForAsynchCompletion 方法将不会返回值  。 Command 对象具有 CommandTimeout 属性，该属性控制查询在超时之前将运行的秒数   。如果将 CommandTimeout 属性与 ISSAsynchStatus::WaitForAsynchCompletion 方法结合使用，则将忽略该属性   。  
   
  对于异步操作，将忽略超时属性。 ISSAsynchStatus::WaitForAsynchCompletion 的超时参数指定在将控制权返回到调用方之前将经过的最大时间量  。 如果此超时值已到期，将返回 DB_S_ASYNCHRONOUS。 超时从不会取消异步操作。 如果应用程序需要取消在超时期限内未完成的异步操作，则它必须等待发生超时，然后，如果返回 DB_S_ASYNCHRONOUS，则显式取消此操作。  

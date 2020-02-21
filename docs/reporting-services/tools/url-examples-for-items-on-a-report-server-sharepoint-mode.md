@@ -9,10 +9,10 @@ ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: af9333214aa10f8c21d8b7eb31b92c261ff155e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574020"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>用于报表服务器上的项的 URL 示例 - SharePoint 模式
@@ -29,12 +29,12 @@ ms.locfileid: "65574020"
   
  以下 Web 层次结构元素可用于访问和保护报表服务器内容。 其他对象（如列表和页）不用于访问报表服务器内容，因此未在下表中进行说明。  
   
-|Object|描述|  
+|Object|说明|  
 |------------|-----------------|  
 |SharePoint Web 应用程序|SharePoint Web 应用程序可以作为独立的服务器安装，也可以在包含许多虚拟服务器的场中安装。 Web 应用程序具有 URL（例如，`http:*//servername*`）并且可以包含多个站点。|  
 |站点|站点为 Web 应用程序的父站点或子站点。|  
 |SharePoint 库|库包含文档或文件夹。 库或库中的文件夹是仅有的可用来存储报表、报表模型、共享数据源和外部图像的站点对象。|  
-|项|可以在 URL 中引用的报表服务器项包括报表或子报表的报表定义、报表模型、共享数据源或外部图像。|  
+|Item|可以在 URL 中引用的报表服务器项包括报表或子报表的报表定义、报表模型、共享数据源或外部图像。|  
   
 ## <a name="url-syntax-and-rules"></a>URL 语法和规则  
  库中每个报表服务器项都由完全限定的 URL 进行标识，该 URL 包括协议前缀、服务器名、站点、库、文件名和文件类型的文件扩展名。  
@@ -54,9 +54,9 @@ ms.locfileid: "65574020"
 ### <a name="url-for-a-sharepoint-library"></a>SharePoint 库的 URL  
  向 SharePoint 库中部署报表或相关项时，必须使用 SharePoint 库的 URL。 要用于库的 URL 根据所使用的 SharePoint 版本而不同。  
   
- 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 或中 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 中，库显示在服务器名之后，例如 `https://*servername/*Shared Documents`。  
+ 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 或 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 中，库显示在服务器名之后，例如 `https://*servername/*Shared Documents`。  
   
- 在 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]中，库显示在站点和子站点之后。 例如， `https://*servername/site/*Documents`。  
+ 在 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]中，库显示在站点和子站点之后。 例如，`https://*servername/site/*Documents` 。  
   
  若要查找新的 SharePoint 库或某个不熟悉站点的路径信息，请打开浏览器，然后找到要发布报表的 SharePoint 库。 如果该库为空，则上载任意文件。 右键单击该文件，然后选择“属性”以打开“属性”窗口   。 文件地址中包含发布操作所需的 URL 值。  
   

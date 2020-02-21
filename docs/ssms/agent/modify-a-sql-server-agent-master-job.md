@@ -1,10 +1,9 @@
 ---
-title: 修改 SQL Server 代理主作业 | Microsoft Docs
-ms.custom: ''
+title: 修改 SQL Server 代理主作业
+ms.custom: seo-lt-2019
 ms.date: 02/28/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,13 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4fd5e734-1a57-47d7-b3af-03a726b619a4
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ef8ca56120197c6f21908b60eccba25043c75596
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 721b9fb2849763dedd8787cc7e24cec4fab90094
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267548"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255831"
 ---
 # <a name="modify-a-sql-server-agent-master-job"></a>修改 SQL Server 代理主作业
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "68267548"
 
 下面的主题介绍了如何修改 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理主作业。  
   
-[Change the Scheduling Details for a SQL Server Agent Master Job](../../ssms/agent/change-the-scheduling-details-for-a-sql-server-agent-master-job.md)  
+[更改 SQL Server 代理主作业计划的详细信息](../../ssms/agent/change-the-scheduling-details-for-a-sql-server-agent-master-job.md)  
   
 [向 SQL Server 代理主作业添加步骤](../../ssms/object/add-steps-to-a-sql-server-agent-master-job.md)  
   

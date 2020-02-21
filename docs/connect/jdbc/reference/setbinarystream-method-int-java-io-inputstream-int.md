@@ -16,10 +16,10 @@ ms.assetid: fd6be063-08eb-40cf-9201-5a9f62387726
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0265f06d589ea89b38f995f8a9616fd22bcf92ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975271"
 ---
 # <a name="setbinarystream-method-int-javaioinputstream-int"></a>setBinaryStream 方法 (int, java.io.InputStream, int)
@@ -36,24 +36,24 @@ public final void setBinaryStream(int n,
                                   int length)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *n*  
   
  指示参数编号的 int  。  
   
  *x*  
   
- 一个 InputStream 对象。  
+ InputStream 对象。  
   
  *length*  
   
  指示字节数的 int  。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 setBinaryStream 方法由 setBinaryStream 方法在 Java.sql.preparedstatement 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 setBinaryStream 方法是由 java.sql.PreparedStatement 接口中的 setBinaryStream 方法指定的。  
   
  如果流长度与 length  参数指定的长度不同，则 JDBC 驱动程序将在更新或插入行时引发异常。  
   

@@ -1,5 +1,5 @@
 ---
-title: getXAResource 方法 (SQLServerXAConnection) |Microsoft Docs
+title: getXAResource 方法 (SQLServerXAConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: e1d2828f-fd20-44b0-b796-dc70f77c5b03
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c3d4b2132c3bbcf5612faa5f319a5358f158e2b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977985"
 ---
 # <a name="getxaresource-method-sqlserverxaconnection"></a>getXAResource 方法 (SQLServerXAConnection)
@@ -35,13 +35,13 @@ public javax.transaction.xa.XAResource getXAResource()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 一个 XAResource 对象。  
+ XAResource 对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
- 此 getXAResource 方法由 getXAResource 方法在 javax.mail.session。 Javax.sql.xaconnection 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 getXAResource 方法是由 javax.sql.XAConnection 接口中的 getXAResource 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerXAConnection 方法](../../../connect/jdbc/reference/sqlserverxaconnection-methods.md)   

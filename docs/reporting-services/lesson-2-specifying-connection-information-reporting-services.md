@@ -1,6 +1,7 @@
 ---
-title: 第 2 课：指定连接信息 (Reporting Services)| Microsoft Docs
-ms.date: 05/01/2019
+title: 第 2 课：指定连接信息 (Reporting Services) | Microsoft Docs
+description: 在本课中，将定义一个数据源：报表用于从关系数据库或其他源访问数据的连接信息。
+ms.date: 12/09/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0a0c21b2662fc14977c4ac57687754d15d544994
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 9d4e12a0322a35e96bd930c4fa6f1f852daf2bdd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65106064"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258465"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>第 2 课：指定连接信息 (Reporting Services)
 
@@ -21,7 +22,7 @@ ms.locfileid: "65106064"
   
 在本课中，将定义数据源  ，这是报表用于访问关系数据库或其他源中的数据的连接信息。
 
-对于此报表，你将添加 AdventureWorks2016 示例数据库作为数据源。 本教程假定此数据库位于本地计算机上安装的默认 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] 实例中。  
+对于此报表，你将添加 AdventureWorks2016 示例数据库作为数据源。 本教程假定数据库位于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] 的默认实例中，并安装在本地计算机上。  
 
 ## <a name="to-set-up-a-connection"></a>设置连接  
 
@@ -62,8 +63,8 @@ ms.locfileid: "65106064"
 
 ## <a name="next-steps"></a>后续步骤
 
-在本课中，你已成功定义了到 AdventureWorks2016 示例数据库的连接。 继续学习[第 3 课：为表报表定义数据集 (Reporting Services)](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md) 以定义报表数据集。
+在本课中，你已成功定义了到 AdventureWorks2016 示例数据库的连接。 继续学习[第 3 课：为表报表定义数据集 (Reporting Services)](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)，为报表定义数据集。
 
 ## <a name="see-also"></a>另请参阅
 
-[报表生成器中的数据连接、数据源和连接字符串](report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)
+[创建数据连接字符串 - 报表生成器和 SSRS](report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)

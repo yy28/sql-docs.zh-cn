@@ -1,10 +1,9 @@
 ---
-title: 删除一个或多个作业 | Microsoft Docs
-ms.custom: ''
+title: 删除一个或多个作业
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,13 +15,15 @@ helpviewer_keywords:
 ms.assetid: 67dcdad0-57b2-431c-b77f-4ffc926af93d
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f2dd5a2f8ba4c1edb05df681769115485675403d
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 6312b79fc580987cfeb4aaa26b6503609100a841
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552993"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242482"
 ---
 # <a name="delete-one-or-more-jobs"></a>删除一个或多个作业
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -43,21 +44,21 @@ ms.locfileid: "69552993"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  依次展开“SQL Server 代理”  和“作业”  ，右键单击要删除的作业，再单击“删除”  。  
+2.  依次展开“SQL Server 代理”和“作业”，右键单击要删除的作业，再单击“删除”。  
   
-3.  在“删除对象”  对话框中，确认选择了要删除的作业。  
+3.  在“删除对象”对话框中，确认选择了要删除的作业。  
   
-4.  单击“确定”  。  
+4.  单击“确定”。  
   
 #### <a name="to-delete-multiple-jobs"></a>删除多个作业  
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  展开 **“SQL Server 代理”** 。  
+2.  展开 **“SQL Server 代理”**。  
   
-3.  右键单击“作业活动监视器”  ，然后单击“查看作业活动”  。  
+3.  右键单击“作业活动监视器”，然后单击“查看作业活动”。  
   
-4.  在作业活动监视器中，选择要删除的作业，右键单击选择的作业，然后选择“删除作业”  。  
+4.  在作业活动监视器中，选择要删除的作业，右键单击选择的作业，然后选择“删除作业”。  
   
 ## <a name="TSQL"></a>使用 Transact-SQL  
   
@@ -65,9 +66,9 @@ ms.locfileid: "69552993"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”** 。  
+2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     USE msdb ;  

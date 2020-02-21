@@ -1,39 +1,39 @@
 ---
-title: SQL Server 各个版本支持的 Reporting Services 功能
+title: 不同版本支持的功能 - SQL Server Reporting Services | Microsoft Docs
+description: 本主题介绍 SQL Server 各个版本支持的 SQL Server Reporting Services (SSRS) 功能。 可在 180 天的试用期内使用 SQL Server 评估版。
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/20/2019
-ms.openlocfilehash: 3e61381c2298a197be698ed82c247023ad708789
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.date: 12/16/2019
+ms.openlocfilehash: 96fe1480deed7dad420687b5b3b08a3ea8da2ffd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893285"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76516598"
 ---
-# <a name="sql-server-reporting-services-features-supported-by-its-editions"></a>SQL Server 各个版本支持的 Reporting Services 功能
+# <a name="sql-server-reporting-services-features-supported-by-editions"></a>不同版本支持的 SQL Server Reporting Services 功能
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 本主题介绍 SQL Server 各个版本支持的 SQL Server Reporting Services (SSRS) 功能。 可在 180 天的试用期内使用 SQL Server 评估版。  
+
+## <a name="related-links"></a>相关链接
   
- 有关最新的 SQL Server 发行说明，请参阅 [SQL Server 2017 发行说明](../sql-server/sql-server-2017-release-notes.md)。 有关新增功能的最新信息，请参阅 [SQL Server Reporting Services (SSRS) 中的新增功能](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)。
+ - [SQL Server Reporting Services (SSRS) 发行说明](release-notes-reporting-services.md)。 
+ - [SQL Server Reporting Services (SSRS) 最近更新](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)。
+ - [不同 SQL Server 版本支持的功能](~/sql-server/editions-and-components-of-sql-server-version-15.md)
 
- ## <a name="try-sql-server-2017"></a>试用 SQL Server 2017
-
-> [![下载 SQL Server 2017](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **[从评估中心下载 SQL Server 2017](https://go.microsoft.com/fwlink/?LinkID=829477)**    
->
-> ![Azure 小型虚拟机](https://docs.microsoft.com/analysis-services/analysis-services/media/azure-virtual-machine-small.png) **[启动已安装 SQL Server 2017 的虚拟机](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
+##  <a name="SSRS"></a> SQL Server Reporting Services  
 
 有关 Evaluation 和 Developer 版本支持的功能，请参阅下表中列出的 SQL Server Enterprise Edition 列。
 
-##  <a name="SSRS"></a> SQL Server Reporting Services  
-  
 |功能名称|Enterprise|Standard|Web|Express with Advanced Services|开发人员|  
-|------------------|---------|------------------------------------|------------------------|-------------|---------------|  
+|------|---------|---------------|-----------|-------|---------|  
+| Power BI 报表和 Excel 工作簿 | 是，有软件保障 | | | | 是 |
 |移动报表和分析|是||||是|  
 |支持的目录数据库 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本|Standard 或更高版本|Standard 或更高版本|Web|Express|Standard 或更高版本|  
 |支持的数据源 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本|所有   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本|所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本|Web|Express|所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本|  
@@ -81,13 +81,14 @@ ms.locfileid: "68893285"
 |Standard|Standard Edition 或 Enterprise Edition（本地或远程）|  
 |Web|Web Edition（仅用于本地）|  
 |Express with Advanced Services|具有高级服务的 Express（仅本地）|  
-|Evaluation|Evaluation|  
+|计算|计算|  
   
 ##  <a name="BIC"></a>商业智能客户端  
 Microsoft 下载中心提供以下软件客户端应用程序。 它们有助于创建在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例上运行的商业智能文档。 当你在某一服务器环境中托管这些文档时，请使用支持该文档类型的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本。 下表标识哪一 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本包含承载在这些客户端应用程序中创建的文档所需的服务器功能。  
   
 |工具名称|Enterprise|Standard|Web|Express with Advanced Services|开发人员|  
-|---------------|----------------|--------------|------------------------|-------------|---------------|  
+|---------------|----------------|--------------|------------------------|-------------|---------------| 
+| 更适用于 Power BI 报表服务器的 Power BI Desktop (.pbix)  | 是，有软件保障 | | | | 是 |
 |[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] （.rdl 和 .rds   ）|是|是|是|是|是|  
 |[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] (.rsmobile  )|是||||是|  
 |用于移动设备的 Power BI 应用（iOS、Windows 10 和 Android）(.rsmobile  )|是||||是|  

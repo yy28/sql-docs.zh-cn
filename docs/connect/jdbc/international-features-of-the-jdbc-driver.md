@@ -1,5 +1,5 @@
 ---
-title: JDBC 驱动程序的国际功能 |Microsoft Docs
+title: JDBC 驱动程序的国际功能 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 64c046ade18bfdf8789ce9fec221f3d33517fcbb
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028007"
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>JDBC 驱动程序的国际功能
@@ -33,7 +33,7 @@ ms.locfileid: "69028007"
 ## <a name="handling-of-character-data"></a>处理字符数据  
  默认情况下，Java 中的字符数据是作为 Unicode 来处理的；Java 字符串对象表示 Unicode 字符数据  。 在 JDBC Driver 中，唯一可以不遵守此规则的是 ASCII 流的 getter 和 setter 方法，这属于比较特殊的情况，因为这些方法使用的字节流带有单个已知代码页 (ASCII) 的隐式假定。  
   
- 此外, JDBC driver 还提供了**sendStringParametersAsUnicode**连接字符串属性。 此属性可用于指定字符数据的预定义参数作为 ASCII 或多字节字符集 (MBCS) 而不是 Unicode 来发送。 有关**sendStringParametersAsUnicode**连接字符串属性的详细信息, 请参阅[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)。  
+ 此外，JDBC 驱动程序还提供了 sendStringParametersAsUnicode  连接字符串属性。 此属性可用于指定字符数据的预定义参数作为 ASCII 或多字节字符集 (MBCS) 而不是 Unicode 来发送。 若要详细了解 sendStringParametersAsUnicode  连接字符串属性，请参阅[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)。  
   
 ### <a name="driver-incoming-conversions"></a>驱动程序传入转换  
  来自服务器的 Unicode 文本数据不是必须要转换的数据。 它将作为 Unicode 直接进行传递。 来自服务器的非 Unicode 数据从数据库或列级别的数据代码页直接转换为 Unicode。 JDBC 驱动程序将使用 Java 虚拟机 (JVM) 转换例程执行这些转换。 这些转换将通过所有类型化 String 和 Character 流 getter 方法得到执行。  
@@ -46,7 +46,7 @@ ms.locfileid: "69028007"
  另一方面，非国家字符 API 方法（例如 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 和 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类的 setString、setCharacterStream 和 setClob 方法）仅在 sendStringParametersAsUnicode 属性设置为默认值“true”时才将它们的值以 Unicode 格式发送到服务器  。  
   
 ## <a name="non-unicode-parameters"></a>非 Unicode 参数  
- 为实现使用非 Unicode 参数的**CHAR**、 **VARCHAR**或**LONGVARCHAR**类型的最佳性能, 请将**sendStringParametersAsUnicode**连接字符串属性设置为 "false", 并使用非区域字符方法。  
+ 为了获得非 Unicode 参数的 CHAR  、VARCHAR  或 LONGVARCHAR  类型的最佳性能，请将 sendStringParametersAsUnicode  连接字符串属性设置为“false”，并使用非区域字符方法。  
   
 ## <a name="formatting-issues"></a>格式问题  
  对于日期、时间和货币，将使用 Locale 对象在 Java 语言级别对本地化数据执行所有格式设置；并针对 Date、Calendar 和 Number 数据类型使用各种不同的格式设置方法    。 只有在极少数的情况下，JDBC Driver 才需要以本地化格式传递受区域设置影响的数据，此时需要根据默认的 JVM 区域设置来使用相应的格式化程序。  

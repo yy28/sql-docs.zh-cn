@@ -1,29 +1,29 @@
 ---
 title: 安装 Machine Learning Server（独立版）
-description: 安装一个不识别实例的独立 Machine Learning Server，以使用 RevoScaleR、revoscalepy、MicrosoftML 和其他包进行 R 和 Python 开发。
+description: 为 Python 和 R 设置一个独立的机器学习服务器。由 SQL Server 安装程序安装的独立服务器在功能上等同于 Microsoft Machine Learning Server 的非 SQL 品牌版本。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/04/2019
+ms.date: 01/03/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 02df024801dad815b640f4ef4222a0c8face485b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 319ae61fbdca64bc6f27143bdd4a42aec635d129
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727639"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76891719"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>使用 SQL Server 安装程序安装 Machine Learning Server（独立版）或 R Server（独立版）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-SQL Server 安装程序包含一个“共享功能”选项，用于安装在 SQL Server 外部运行且不识别实例的独立 Machine Learning Server  。 它称为 **Machine Learning Server（独立版）** ，包括 R 和 Python。 
+SQL Server 安装程序包含一个“共享功能”  选项，用于安装在 SQL Server 外部运行的独立机器学习服务器。 它称为 Machine Learning Server（独立版）  ，包括 Python 和 R。 
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-SQL Server 安装程序包含一个“共享功能”选项，用于安装在 SQL Server 外部运行且不识别实例的独立 Machine Learning Server  。 在 SQL Server 2016 中，此功能称为 **R Server（独立版）** 。  
+SQL Server 安装程序包含一个“共享功能”  选项，用于安装在 SQL Server 外部运行的独立机器学习服务器。 在 SQL Server 2016 中，此功能称为 **R Server（独立版）** 。  
 ::: moniker-end
 
 由 SQL Server 安装程序安装的独立服务器在功能上等同于 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server) 的非 SQL 品牌版本，并且支持相同的用例和应用场景，其中包括：
@@ -45,7 +45,7 @@ SQL Server 安装程序包含一个“共享功能”选项，用于安装在 SQ
 
 通常，我们建议将独立服务器和识别数据库引擎实例的安装视为互斥项，以免出现资源争用情况，但如果有足够的资源，则不禁止将它们安装在同一台物理计算机上。
 
-计算机上只能有一个独立服务器：SQL Server Machine Learning Server（独立版）或 SQL Server R Server（独立版）。 在添加新版本之前，请确保先卸载以前的版本。
+计算机上只能有一台独立服务器：SQL Server Machine Learning Server（独立版）或 SQL Server R Server（独立版）。 在添加新版本之前，请确保先卸载以前的版本。
 
 ::: moniker range="=sql-server-2016"
 <a name="bkmk_ga_instalpatch"></a> 
@@ -196,11 +196,7 @@ SQL Server 安装程序包含一个“共享功能”选项，用于安装在 SQ
 
 3. 如果为 Web 服务部署启用了操作化以作为 Web 节点和计算节点运行，请备份 **AppSettings.json** 文件，以防万一。 应用 SQL Server 2017 CU13 或更高版本会修改此文件，因此你可能需要一个备份副本来保留原始版本。
 
-4. 在连接 Internet 的设备上，单击你的 SQL Server 版本的累积更新链接。
-
-  + SQL Server 2019 更新 *（尚无可用更新）*
-  + [SQL Server 2017 更新](https://sqlserverupdates.com/sql-server-2017-updates/)
-  + [SQL Server 2016 更新](https://sqlserverupdates.com/sql-server-2016-updates/)
+4. 在连接 Internet 的计算机上，从 [Microsoft SQL Server 的最新更新](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server)下载你的版本的最新累积更新。
 
 5. 下载最新的累积更新。 它是一个可执行文件。
 
@@ -214,7 +210,7 @@ SQL Server 安装程序包含一个“共享功能”选项，用于安装在 SQ
 
    + 双击 .exe 运行安装程序。 在未连接 Internet 的服务器上安装累积更新时，系统会提示你选择 R 和 Python 的 .cab 文件的位置。
 
-8. 安装后，在通过 Web 节点和计算节点实现了操作化的服务器上，编辑 **AppSettings.json**（直接在“MMLNativePath”下添加“MMLResourcePath”条目）。 例如：
+8. 安装后，在通过 Web 节点和计算节点实现了部署的服务器上，编辑 AppSettings.json  （直接在“MMLNativePath”下添加“MMLResourcePath”条目）。 例如：
 
     ```json
     "ScorerParameters": {

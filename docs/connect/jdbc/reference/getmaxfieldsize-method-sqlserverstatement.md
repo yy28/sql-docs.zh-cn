@@ -1,5 +1,5 @@
 ---
-title: getMaxFieldSize 方法 (SQLServerStatement) |Microsoft Docs
+title: getMaxFieldSize 方法 (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: ed7bbcb8-660b-4e9b-8241-e216c42826f9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9a1700cc8bb2bfb54dd9ddee52da54899f764650
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982103"
 ---
 # <a name="getmaxfieldsize-method-sqlserverstatement"></a>getMaxFieldSize 方法 (SQLServerStatement)
@@ -35,13 +35,13 @@ public final int getMaxFieldSize()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 指示列可包含的最大字节数的 int  ；如果没有限制，则为 0。  
+ 指示列可包含的最大字节数的 int；如果没有限制，则为 0。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 getMaxFieldSize 方法由 getMaxFieldSize 方法在 .sql 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 getMaxFieldSize 方法是由 java.sql.Statementt 接口中的 getMaxFieldSize 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerStatement 方法](../../../connect/jdbc/reference/sqlserverstatement-methods.md)   

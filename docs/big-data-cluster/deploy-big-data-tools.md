@@ -5,16 +5,16 @@ description: 了解如何安装与 [!INCLUDE[big-data-clusters-2019](../includes
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 964b6db780564797e35c4a40377227d3b56e4a3e
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: fd1cab79ce226a710de1f701cfff5094a82704a5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532227"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75721649"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>安装 SQL Server 2019 大数据工具
 
@@ -26,7 +26,7 @@ ms.locfileid: "73532227"
 
 下表列出了常见的大数据群集工具及其安装方式：
 
-| 工具 | Required | 描述 | 安装 |
+| 工具 | 必选 | 说明 | 安装 |
 |---|---|---|---|
 | `python` | 是 | Python 是一种使用动态语义解释的面向对象的高级编程语言。 SQL Server 大数据群集的许多部分都使用 python。 | [安装 python](#python)|
 | `azdata` | 是 | 用于安装和管理大数据群集的命令行工具。 | [安装](deploy-install-azdata.md) |
@@ -58,7 +58,7 @@ ms.locfileid: "73532227"
 - `azdata`
 - `kubectl`
 - **Azure Data Studio**
-- **SQL Server 2019 扩展**
+- **数据虚拟化扩展**
 
 其余工具仅在某些情况下需要。 **Azure CLI** 可用于管理与 AKS 部署相关联的 Azure 服务。 **mssql-cli** 是一个可选但有用的工具，可用于连接到群集中的 SQL Server 主实例并从命令行运行查询。 如果计划使用 GitHub 脚本安装示例数据，则需要 sqlcmd 和 `curl`  。
 

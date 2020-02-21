@@ -11,10 +11,10 @@ ms.assetid: 8f491b70-7d1b-42bd-964f-9a8b86af5eaa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6c84e4081b9369d504d173387c6944b06d927c9c
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026897"
 ---
 # <a name="using-a-stored-procedure-with-input-parameters"></a>使用含输入参数的存储过程
@@ -28,9 +28,9 @@ ms.locfileid: "69026897"
 `{call procedure-name[([parameter][,[parameter]]...)]}`
 
 > [!NOTE]  
-> 有关 SQL 转义序列的详细信息, 请参阅[使用 sql 转义序列](../../connect/jdbc/using-sql-escape-sequences.md)。
+> 若要详细了解 SQL 转义序列，请参阅[使用 SQL 转义序列](../../connect/jdbc/using-sql-escape-sequences.md)。
 
-构造`call`转义序列时, 可通过使用来指定 IN 参数: 来指定 IN 参数。 此字符充当要传递给该存储过程的参数值的占位符。 若要指定参数的值, 可以使用 SQLServerPreparedStatement 类的 setter 方法之一。 可使用的 setter 方法由 IN 参数的数据类型决定。
+构造 `call` 转义序列时，请使用 ?（问号）字符 来指定 IN 参数。 此字符充当要传递给该存储过程的参数值的占位符。 可以使用 SQLServerPreparedStatement 类的 setter 方法之一为参数指定值。 可使用的 setter 方法由 IN 参数的数据类型决定。
 
 向 setter 方法传递值时，不仅需要指定要在参数中使用的实际值，还必须指定参数在存储过程中的序数位置。 例如，如果存储过程包含单个 IN 参数，则其序数值为 1。 如果存储过程包含两个参数，则第一个序数值为 1，第二个序数值为 2。
 

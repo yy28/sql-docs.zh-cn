@@ -5,18 +5,19 @@ description: 通过 RESTful Web 服务使用部署在 SQL Server 大数据群集
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 01/07/2020
+ms.metadata: seo-lt-2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 32b3884b48e20b73da186f8c0d80e6c85516a8ed
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 305080d5c3b0a1c517d757c1f6f2bd07fefb216c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73707179"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75721402"
 ---
-# <a name="consume-an-app-deployed-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-using-a-restful-web-service"></a>通过 RESTful Web 服务使用部署在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上的应用
+# <a name="consume-an-app-deployed-on-big-data-clusters-2019-using-a-restful-web-service"></a>通过 RESTful Web 服务使用部署在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上的应用
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -32,7 +33,7 @@ ms.locfileid: "73707179"
 
 将应用程序部署到 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 后，可以通过 RESTful Web 服务访问和使用该应用程序。 这样就可以从其他应用程序或服务（例如，移动应用或网站）集成该应用。 下表介绍了一些应用程序部署命令，可将其与 **azdata** 配合使用，为应用获取有关 RESTful Web 服务的信息。
 
-|Command |描述 |
+|Command |说明 |
 |:---|:---|
 |`azdata app describe` | 描述应用程序。 |
 
@@ -90,7 +91,16 @@ azdata app describe --name add-app --version v1
 
 ## <a name="generate-a-jwt-access-token"></a>生成 JWT 访问令牌
 
-若要为已部署的应用访问 RESTful Web 服务，首先必须生成 JWT 访问令牌。 在浏览器中打开以下 URL：`https://[IP]:[PORT]/docs/swagger.json`（使用通过运行上面的 `describe` 命令检索到的 IP 地址和端口）。 必须使用用于 `azdata login` 的同一凭据登录。
+若要为已部署的应用访问 RESTful Web 服务，首先必须生成 JWT 访问令牌。 访问令牌的 URL 取决于大数据群集的版本。 
+
+|版本 |代码|
+|------------|------|
+|GDR1|  `https://[IP]:[PORT]/docs/swagger.json`|
+|CU1 及更高版本| `https://[IP]:[PORT]/api/v1/swagger.json`|
+
+> 有关版本信息，请参阅[版本历史记录](release-notes-big-data-cluster.md#release-history)。
+
+使用通过运行上面的 [`describe`](#retrieve-the-endpoint) 命令检索到的 IP 地址和端口，在浏览器中打开相应 URL。 使用用于 `azdata login` 的相同凭据登录。
 
 将 `swagger.json` 的内容粘贴到 [Swagger 编辑器](https://editor.swagger.io)中，以了解可用的方法：
 

@@ -1,6 +1,8 @@
 ---
-title: ReportViewer 2016 控件入门 | Microsoft Docs
-ms.date: 09/18/2018
+title: 报表查看器控件入门
+description: 报表查看器控件可用来将 Reporting Services RDL 报表集成到 WebForms 和 WinForms 应用。
+ms.custom: seo-lt-2019
+ms.date: 12/12/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
@@ -8,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1fd408e5459aea50c04c29d234fce54d8a3ab772
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: d7e1e64bddcdcc7efed701770aea0e97c8e84ec5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65503910"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241829"
 ---
 # <a name="integrating-reporting-services-using-the-report-viewer-controls---get-started"></a>使用报表查看器控件集成 Reporting Services - 入门
 
@@ -48,7 +50,7 @@ ms.locfileid: "65503910"
     
 最终页面应如下所示。
 
-```
+```html
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="Sample" %>
 
 <%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
@@ -69,7 +71,6 @@ ms.locfileid: "65503910"
     </form>
 </body>
 </html>
-
 ```
 
 ## <a name="updating-an-existing-project-to-use-the-report-viewer-control"></a>更新现有项目，以使用报表查看器控件
@@ -78,7 +79,7 @@ ms.locfileid: "65503910"
 
 ### <a name="sample-webconfig-changes"></a>示例 web.config 更改
 
-```
+```xml
 <?xml version="1.0"?>
 <!--
   For more information on how to configure your ASP.NET application, please visit
@@ -145,9 +146,9 @@ ms.locfileid: "65503910"
     ```
     Install-Package Microsoft.ReportingServices.ReportViewerControl.WinForms
     ```
-3. 通过代码添加新控件或[向工具箱添加控件](##adding-control-to-visual-studio-toolbar)。
+3. 通过代码添加新控件或[向工具箱添加控件](#adding-control-to-visual-studio-toolbar)。
 
-    ```
+    ```csharp
     private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     
     private void InitializeComponent()
@@ -175,7 +176,7 @@ ms.locfileid: "65503910"
 
 ### <a name="setting-the-height-of-all-the-ancestors-to-100"></a>将所有上级元素的高度设置为 100%
 
-```
+```html
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -196,14 +197,13 @@ ms.locfileid: "65503910"
     </form>
 </body>
 </html>
-
 ```
 
 ### <a name="setting-the-parents-height-attribute"></a>设置父元素的高度属性
 
 有关视区百分比长度的详细信息，请参阅[视区百分比长度](http://www.w3.org/TR/css3-values/#viewport-relative-lengths)。
 
-```
+```html
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -219,7 +219,6 @@ ms.locfileid: "65503910"
     </form>
 </body>
 </html>
-
 ```
 
 ## <a name="adding-control-to-visual-studio-toolbar"></a>向 Visual Studio 工具栏添加控件

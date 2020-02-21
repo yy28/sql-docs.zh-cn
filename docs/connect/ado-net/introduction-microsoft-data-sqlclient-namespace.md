@@ -1,52 +1,69 @@
 ---
 title: Microsoft.Data.SqlClient 命名空间简介
-description: SqlClient 命名空间的简介页。
+description: Microsoft.Data.SqlClient 命名空间的简介页面。
 ms.date: 09/30/2019
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 4f4034c557c13054dcfb6ed425ca996b0c5363f6
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: e64a4b04e5059ebc4acbd8e673746fc3953fbb03
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452379"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251006"
 ---
 # <a name="introduction-to-microsoftdatasqlclient-namespace"></a>Microsoft.Data.SqlClient 命名空间简介
 
 ![Download-DownArrow-Circled](../../ssdt/media/download.png)[下载 ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-本页介绍 SqlClient 命名空间如何通过现有 SqlClient 命名空间提供附加功能。
-  
-## <a name="release-notes"></a>发行说明
-[GitHub 存储库](https://github.com/dotnet/SqlClient/tree/master/release-notes)中提供了所有发行说明。
+## <a name="release-notes-for-microsoftdatasqlclient-110"></a>Microsoft.Data.SqlClient 1.1.0 的发行说明
 
-## <a name="new-features"></a>新增功能
+GitHub 存储库中也提供了发行说明：[1.1 发行说明](https://github.com/dotnet/SqlClient/tree/master/release-notes/1.1)。
 
-### <a name="new-features-over-net-framework-472-systemdatasqlclient"></a>.NET Framework 4.7.2. SqlClient 上的新功能
+### <a name="new-features"></a>新功能
 
-数据分类-Azure SQL 数据库中提供的数据分类和自 2019 2.0 以来的 Microsoft SQL Server。
+#### <a name="always-encrypted-with-secure-enclaves"></a>具有安全 Enclave 的 Always Encrypted
 
-UTF-8 支持-可从 CTP 2.3 Microsoft SQL Server SQL Server 2019。
+从 Microsoft SQL Server 2016 开始，提供 Always Encrypted。 从 Microsoft SQL Server 2019 开始，提供安全 enclave。 为了使用 enclave 功能，连接字符串应包括所需的证明协议和证明 URL。 示例：
 
-### <a name="new-features-over-net-core-22-systemdatasqlclient"></a>.NET Core 2.2 SqlClient 上的新功能
+```
+Attestation Protocol=HGS;Enclave Attestation Url=<attestation_url_for_HGS>
+```
 
-数据分类-Azure SQL 数据库中提供的数据分类和自 2019 2.0 以来的 Microsoft SQL Server。
+有关详细信息，请参阅：
 
-UTF-8 支持-可从 CTP 2.3 Microsoft SQL Server SQL Server 2019。
+- [对 Always Encrypted 的 SqlClient 支持](sql/sqlclient-support-always-encrypted.md)
+- [教程：使用具有安全 enclave 的 Always Encrypted 开发 .NET 应用程序](sql/tutorial-always-encrypted-enclaves-develop-net-apps.md)
 
-Microsoft SQL Server 2016 和更高版本中提供了具有 Enclaves Always Encrypted 的 Always Encrypted。 Microsoft Sql Server 2019 CTP 2.0 中引入了 Enclave 支持。
+## <a name="release-notes-for-microsoftdatasqlclient-10"></a>Microsoft.Data.SqlClient 1.0 的发行说明
 
-身份验证-Active Directory 密码身份验证模式。
+Microsoft.Data.SqlClient 命名空间的初始版本提供了现有 System.Data.SqlClient 命名空间之外的其他功能。
+GitHub 存储库中也提供了发行说明：[1.0 发行说明](https://github.com/dotnet/SqlClient/tree/master/release-notes/1.0)。
+
+### <a name="new-features"></a>新增功能
+
+#### <a name="new-features-over-net-framework-472-systemdatasqlclient"></a>通过 .NET Framework 4.7.2 System.Data.SqlClient 提供的新增功能
+
+- **数据分类** - 在 Azure SQL 数据库和 Microsoft SQL Server 2019 中提供。
+
+- **UTF-8 支持** - 在 Microsoft SQL Server 2019 中提供。
+
+#### <a name="new-features-over-net-core-22-systemdatasqlclient"></a>通过 .NET Core 2.2 System.Data.SqlClient 提供的新增功能
+
+- **数据分类** - 在 Azure SQL 数据库和 Microsoft SQL Server 2019 中提供。
+
+- **UTF-8 支持** - 在 Microsoft SQL Server 2019 中提供。
+
+- **身份验证** - Active Directory 密码身份验证模式。
 
 ### <a name="data-classification"></a>数据分类
 
-数据分类引入了一组新的 Api，该 Api 公开了只读数据敏感度和有关通过 SqlDataReader 检索的对象的分类信息。 [分类](../../relational-databases/security/sql-data-discovery-and-classification.md)。
+当基础源支持该功能并包含有关[数据敏感度和分类](../../relational-databases/security/sql-data-discovery-and-classification.md)的元数据时，数据分类会引入一组新的 API，公开有关通过 SqlDataReader 检索到的对象的只读数据敏感度和分类信息。
 
 ```csharp
 public class SqlDataReader
@@ -86,11 +103,11 @@ namespace Microsoft.Data.SqlClient.DataClassification
 
 ### <a name="utf-8-support"></a>UTF-8 支持
 
-UTF-8 支持无需更改任何应用程序代码。 当服务器支持 UTF-8 且基础列排序规则为 UTF-8 时，这些 SqlClient 更改只会优化客户端与服务器之间的通信。 请参阅[SQL Server 2019 预览版的新增功能中](../../sql-server/what-s-new-in-sql-server-ver15.md)的 utf-8 部分。
+UTF-8 支持不需要更改任何应用程序代码。 当服务器支持 UTF-8 且基础列排序规则为 UTF-8 时，这些 SqlClient 更改只会优化客户端与服务器之间的通信。 请参阅 [SQL Server 2019 预览版的新增功能](../../sql-server/what-s-new-in-sql-server-ver15.md)中的 UTF-8 部分。
 
-### <a name="always-encrypted-with-enclaves"></a>始终用 enclaves 加密
+### <a name="always-encrypted-with-enclaves"></a>具有 enclave 的 Always Encrypted
 
-通常，在 .NET Framework**和内置列主密钥存储提供程序**上使用 SqlClient 的现有文档也应该适用于 .net Core。
+通常，使用 .NET Framework 上的 System.Data.SqlClient 和内置列主密钥存储提供程序  的现有文档现在还应与 .NET Core 一起使用。
 
  [配合使用 Always Encrypted 和 .NET Framework 数据提供程序进行开发](../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 
@@ -98,8 +115,8 @@ UTF-8 支持无需更改任何应用程序代码。 当服务器支持 UTF-8 且
 
 ### <a name="authentication"></a>身份验证
 
-可以通过使用_身份验证_连接字符串选项来指定不同的身份验证模式。 有关详细信息，请参阅[SqlAuthenticationMethod 的文档](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlauthenticationmethod?view=netframework-4.7.2)。
+可以使用“身份验证”  连接字符串选项来指定不同的身份验证模式。 有关详细信息，请参阅 [SqlAuthenticationMethod 的文档](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlauthenticationmethod?view=netframework-4.7.2)。
 
 > [!NOTE]
-> 自定义密钥存储提供程序（如 Azure Key Vault 提供程序）将需要更新以支持 SqlClient。 同样，还需要更新 enclave 提供程序以支持 SqlClient。
-> 仅支持 .NET Framework 和 .NET Core 目标 Always Encrypted。 不支持 .NET Standard，因为 .NET Standard 缺少某些加密依赖项。
+> 自定义密钥存储提供程序（如 Azure 密钥保管库提供程序）将需要更新以支持 Microsoft.Data.SqlClient。 同样，还需要更新 enclave 提供程序以支持 Microsoft.Data.SqlClient。
+> 仅 .NET Framework 和 .NET Core 目标支持 Always Encrypted。 .NET Standard 不支持 Always Encrypted，因为 .NET Standard 缺少某些加密依赖项。

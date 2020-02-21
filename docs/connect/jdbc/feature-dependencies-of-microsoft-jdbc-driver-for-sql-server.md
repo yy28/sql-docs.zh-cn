@@ -11,10 +11,10 @@ ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7abf0d389217535292260b6a5b055697eb4b19df
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028094"
 ---
 # <a name="feature-dependencies-of-the-microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server 的功能依赖项
@@ -28,15 +28,15 @@ ms.locfileid: "69028094"
  - `com.microsoft.azure:azure-keyvault`：具有 Always Encrypted Azure Key Vault 功能的 Azure Key Vault 提供程序（可选）
  - `com.microsoft.azure:adal4j`：具有 Azure Active Directory 身份验证功能和 Azure Key Vault 功能的用于 Java 的 Azure Active Directory 库（可选）
  - `com.microsoft.rest:client-runtime`：具有 Azure Active Directory 身份验证功能和 Azure Key Vault 功能的用于 Java 的 Azure Active Directory 库（可选）
- - `org.antlr:antlr4-runtime`: 用于 useFmtOnly 的 ANTLR 4 运行时功能 (可选)
- - `org.osgi:org.osgi.core`：具有 OSGi Framework 支持的 OSGi Core 库。
- - `org.osgi:org.osgi.compendium`：具有 OSGi Framework 支持的 OSGi Compendium 库。
+ - `org.antlr:antlr4-runtime`设置用户帐户 ：用于 useFmtOnly 的 ANTLR 4 Runtime 功能（可选）
+ - `org.osgi:org.osgi.core`设置用户帐户 ：具有 OSGi Framework 支持的 OSGi Core 库。
+ - `org.osgi:org.osgi.compendium`设置用户帐户 ：具有 OSGi Framework 支持的 OSGi Compendium 库。
 
 ## <a name="test-time"></a>测试时间
 
 需要任何上述功能的特定项目需要显式声明其 POM 文件中的相应依赖项。
 
-例如  ：时要使用 Azure Active Directory 身份验证功能，需要重新声明`adal4j`项目的 POM 文件中的依赖关系。 请查看以下代码片段：
+例如：  使用 Azure Active Directory 身份验证功能时，需要重新声明项目的 POM 文件中的 `adal4j` 依赖项。 请查看以下代码片段：
 
 ```xml
 <dependency>
@@ -59,7 +59,7 @@ ms.locfileid: "69028094"
 </dependency>
 ```
 
-例如  ：时要使用 Azure 密钥保管库功能，需要重新声明`azure-keyvault`依赖关系和`adal4j`项目的 POM 文件中的依赖关系。 请查看以下代码片段：
+例如：  使用 Azure Key Vault 功能时，需要重新声明 `azure-keyvault` 依赖项和项目的 POM 文件中的 `adal4j` 依赖项。 请查看以下代码片段：
 
 ```xml
 <dependency>
@@ -106,7 +106,7 @@ ms.locfileid: "69028094"
 
 ### <a name="working-with-azure-active-directory-authentication"></a>使用 Azure Active Directory 身份验证：
 
-- JDBC Driver 版本 7.4.1 - 依赖项版本：Adal4j（版本 1.6.4）、Client-Runtime-for-AutoRest (1.6.10) 及其依赖项
+- JDBC 驱动程序版本 7.4.1 - 依赖项版本：Adal4j（版本 1.6.4）、Client-Runtime-for-AutoRest (1.6.10) 及其依赖项
 - JDBC 驱动程序版本 7.2.2 - 依赖项版本：Adal4j（版本 1.6.3）、Client-Runtime-for-AutoRest (1.6.5) 及其依赖项
 - JDBC 驱动程序版本 7.0.0 - 依赖项版本：Adal4j（版本 1.6.0）及其依赖项
 - JDBC 驱动程序版本 6.4.0 - 依赖项版本：Adal4j（版本 1.4.0）及其依赖项

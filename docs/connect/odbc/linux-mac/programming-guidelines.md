@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: v-makouz
 ms.author: genemi
-ms.openlocfilehash: d87e39bcabeabe5c0ea5d5648456eded8ea75510
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
-ms.translationtype: MTE75
+ms.openlocfilehash: bf0961b8ef53060904ad797832e7c7467a859c2b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742790"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76911181"
 ---
 # <a name="programming-guidelines"></a>编程指南
 
@@ -64,7 +64,7 @@ macOS 和 Linux 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] OD
     -   SQL_COPT_SS_PERF_QUERY  
     -   SQL_COPT_SS_PERF_QUERY_INTERVAL  
     -   SQL_COPT_SS_PERF_QUERY_LOG  
--   SQLBrowseConnect (版本17.2 之前)
+-   SQLBrowseConnect（在 17.2 版以前）
 -   诸如 SQL_C_INTERVAL_YEAR_TO_MONTH（记录在[数据类型标识符和描述符](https://msdn.microsoft.com/library/ms716351(VS.85).aspx)中）的 C 间隔类型
 -   SQLSetConnectAttr 函数的 SQL_ATTR_ODBC_CURSORS 属性的 SQL_CUR_USE_ODBC 值。
 
@@ -74,7 +74,12 @@ macOS 和 Linux 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] OD
 
 对于 ODBC Driver 17，支持以下一种字符集/编码中的 SQLCHAR 数据：
 
-|“属性”|描述|
+> [!NOTE]  
+> 由于 `musl` 和 `glibc` 中存在 `iconv` 差异，许多区域设置在 Alpine Linux 上不受支持。
+>
+> 有关详细信息，请参阅[与 glibc 的功能差异](https://wiki.musl-libc.org/functional-differences-from-glibc.html)
+
+|名称|说明|
 |-|-|
 |UTF-8|Unicode|
 |CP437|MS-DOS 拉丁语(美国)|
@@ -101,7 +106,7 @@ macOS 和 Linux 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] OD
 |ISO-8859-13|拉丁语 - 7|
 |ISO-8859-15|拉丁语 - 9|
 
-连接后，驱动程序将检测加载它的进程的当前区域设置。 如果驱动程序使用上述一种编码，则驱动程序会将该编码用于 SQLCHAR（窄字符）数据；否则，默认使用 UTF-8。 默认情况下，由于所有进程都在“C”区域设置中启动（并因此导致驱动程序默认为 UTF-8），如果应用程序需要使用上述一种编码，则它应在连接前使用 setlocale 函数设置适当的区域设置：可显式指定所需的区域设置，或通过使用空字符串（例如，`setlocale(LC_ALL, "")`）来使用环境的区域设置  。
+连接后，驱动程序将检测加载它的进程的当前区域设置。 如果驱动程序使用上述一种编码，则驱动程序会将该编码用于 SQLCHAR（窄字符）数据；否则，默认使用 UTF-8。 默认情况下，由于所有进程都在“C”区域设置中启动（并因此导致驱动程序默认为 UTF-8），如果应用程序需要使用上述一种编码，则它应在连接前使用 setlocale 函数设置适当的区域设置：可显式指定所需的区域设置，或通过使用空字符串（例如，`setlocale(LC_ALL, "")`）来使用环境的区域设置。
 
 因此，在编码为 UTF-8 的典型 Linux 或 Mac 环境中，从 ODBC Driver 13 或 13.1 升级的 ODBC Driver 17 用户将不会察觉到任何差异。 但是，通过 `setlocale()` 使用上述列表中非 UTF-8 编码的应用程序需要对传入/传出驱动程序的数据使用该编码，而不是 UTF-8。
 
@@ -109,7 +114,7 @@ SQLWCHAR 数据必须是 UTF-16LE (Little Endian)。
 
 使用 SQLBindParameter 绑定输入参数时，如果指定了 SQL_VARCHAR 等窄字符 SQL 类型，则驱动程序会将提供的数据从客户端编码转换为默认（通常为代码页 1252）[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 编码。 对于输出参数，驱动程序将从与数据关联的排序规则信息中指定的编码转换为客户端编码。 但是，数据可能会丢失 - 无法以目标编码表示的源编码字符将转换为问号（“?”）。
 
-要在绑定输入参数时避免此类数据丢失，请指定一种 Unicode SQL 字符类型，例如 SQL_NVARCHAR。 在这种情况下，驱动程序将从客户端编码转换为 UTF-16，该编码可表示所有 Unicode 字符。 此外，服务器上的目标列或参数也必须是 Unicode 类型（nchar、nvarchar 和 ntext）或带有排序规则/编码的其他类型，这可以表示原始源数据的所有字符    。 为避免输出参数丢失数据，请指定 Unicode SQL 类型和 Unicode C 类型 (SQL_C_WCHAR)（使驱动程序以 UTF-16 形式返回数据）或窄 C 类型，并确保客户端编码可以表示源数据的所有字符（可始终使用 UTF-8 实现这一目的）。
+要在绑定输入参数时避免此类数据丢失，请指定一种 Unicode SQL 字符类型，例如 SQL_NVARCHAR。 在这种情况下，驱动程序将从客户端编码转换为 UTF-16，该编码可表示所有 Unicode 字符。 此外，服务器上的目标列或参数也必须是 Unicode 类型（nchar、nvarchar 和 ntext）或带有排序规则/编码的其他类型，这可以表示原始源数据的所有字符。 为避免输出参数丢失数据，请指定 Unicode SQL 类型和 Unicode C 类型 (SQL_C_WCHAR)（使驱动程序以 UTF-16 形式返回数据）或窄 C 类型，并确保客户端编码可以表示源数据的所有字符（可始终使用 UTF-8 实现这一目的）。
 
 有关排序规则和编码的详细信息，请参阅[排序规则和 Unicode 支持](../../../relational-databases/collations/collation-and-unicode-support.md)。
 
@@ -118,14 +123,17 @@ Windows 与 Linux 和 macOS 上的几个版本的 iconv 库之间存在一些编
 在 ODBC 驱动程序 13 和 13.1 中，当在 SQLPutData 缓冲区上拆分 UTF-8 多字节字符或 UTF-16 代理项时，这会导致数据损坏。 使用用于流式传输不会在部分字符编码中结束的 SQLPutData 的缓冲区。 ODBC Driver 17 消除了这一限制。
 
 ## <a name="bkmk-openssl"></a>OpenSSL
-从版本17.4 开始, 驱动程序会动态加载 OpenSSL, 这允许在版本1.0 或1.1 的系统上运行, 而无需单独的驱动程序文件。 当存在多个版本的 OpenSSL 时, 驱动程序将尝试加载最新版本。 驱动程序当前支持 OpenSSL 1.0. x 和 1.1. x
+从版本 17.4 开始，驱动程序将动态加载 OpenSSL，从而使其可以在具有版本 1.0 或 1.1 的系统上运行，而不需要单独的驱动程序文件。 当存在多个版本的 OpenSSL 时，驱动程序将尝试加载最新版本。 该驱动程序当前支持 OpenSSL 1.0.x 和 1.1.x
 
 > [!NOTE]  
-> 如果使用驱动程序 (或其组件之一) 的应用程序链接或动态加载不同版本的 OpenSSL, 则可能会发生冲突。 如果系统中存在多个版本的 OpenSSL, 并且应用程序使用该版本, 则强烈建议在确保应用程序和驱动程序加载的版本不匹配时特别小心, 因为错误可能会损坏内存, 因此不一定会以明显或一致的方式进行清单。
+> 如果链接到使用驱动程序（或其组件之一）的应用程序或动态加载不同版本的 OpenSSL，则可能会发生潜在冲突。 如果系统上存在多个版本的 OpenSSL，并且应用程序使用 OpenSSL，则强烈建议你格外谨慎，以确保应用程序和驱动程序加载的版本不匹配，因为这些错误可能会破坏内存，从而损坏内存，因此，不一定会以明显或一致的方式表现出来。
+
+## <a name="bkmk-alpine"></a>Alpine Linux
+在撰写本文时，MUSL 中的默认堆栈大小为 128K，足以满足基本的 ODBC 驱动程序功能，但是根据应用程序执行的操作，超过此限制并不困难，尤其是从多个线程调用驱动程序的情况。 建议使用 `-Wl,-z,stack-size=<VALUE IN BYTES>` 编译 Alpine Linux 上的 ODBC 应用程序，以增加堆栈大小。 作为参考，大多数 GLIBC 系统上的默认堆栈大小为 2MB。
 
 ## <a name="additional-notes"></a>其他说明  
 
-1.  可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证和 主机,端口建立专用管理员连接 (DAC)  。 首先，Sysadmin 角色成员需要发现 DAC 端口。 请参阅[用于数据库管理员的诊断连接](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators#dac-port)来了解如何操作。 例如，如果 DAC 端口为 33000，可以使用 `sqlcmd` 连接它，如下所示：  
+1.  可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证和 主机,端口建立专用管理员连接 (DAC)。 首先，Sysadmin 角色成员需要发现 DAC 端口。 请参阅[用于数据库管理员的诊断连接](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators#dac-port)来了解如何操作。 例如，如果 DAC 端口为 33000，可以使用 `sqlcmd` 连接它，如下所示：  
 
     ```
     sqlcmd -U <user> -P <pwd> -S <host>,33000
@@ -136,7 +144,7 @@ Windows 与 Linux 和 macOS 上的几个版本的 iconv 库之间存在一些编
     
 2.  当所有语句属性均通过 SQLSetConnectAttr 传递时，UnixODBC 驱动程序管理器会为其返回“属性/选项标识符无效”。 在 Windows 上，当 SQLSetConnectAttr 接收某个语句属性值时，它会使驱动程序在属于连接句柄子级的所有活动语句上设置该值。  
 
-3.  将驱动程序用于高度多线程应用程序时, unixODBC 的句柄验证可能会成为性能瓶颈。 在这种情况下, 可以通过使用`--enable-fastvalidate`选项编译 unixODBC 来获得更高的性能。 但请注意, 这可能会导致将无效句柄传递到 ODBC api 的应用程序崩溃`SQL_INVALID_HANDLE` , 而不是返回错误。
+3.  当驱动程序与高度多线程的应用程序一起使用时，unixODBC 的句柄验证可能会成为性能瓶颈。 在这种情况下，通过使用 `--enable-fastvalidate` 选项编译 unixODBC 可以显着提高性能。 但是，请注意，这可能导致将无效句柄传递给 ODBC API 的应用程序崩溃，而不是返回 `SQL_INVALID_HANDLE` 错误。
 
 ## <a name="see-also"></a>另请参阅  
 [常见问题解答](../../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)

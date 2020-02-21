@@ -1,6 +1,6 @@
 ---
 title: 从文件中插入图像
-description: 描述如何处理文件中的图像。
+description: 介绍了如何处理文件中的图像。
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -9,26 +9,26 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: d8f7b561a6aba4539964d73dacfd9e45db2dd6aa
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 613ae5b3326bc49ab25f30628ecd85e13959e2dc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452177"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247735"
 ---
 # <a name="inserting-an-image-from-a-file"></a>从文件中插入图像
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下载 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-您可以根据数据源中的字段类型，将二进制大型对象（BLOB）作为二进制或字符数据写入数据库。 BLOB 是指作为 `text`、`ntext` 和 `image` 数据类型的通用术语，通常包含文档和图片。  
+可以将二进制大型对象 (BLOB) 作为二进制数据或字符数据（具体视数据源中的字段类型而定）写入数据库。 BLOB 这一通用术语是指，通常包含文档和图片的 `text`、`ntext` 和 `image` 数据类型。  
   
-若要将 BLOB 值写入数据库，请发出相应的 INSERT 或 UPDATE 语句并将 BLOB 值作为输入参数传递。 如果 BLOB 存储为文本（例如 SQL Server `text` 字段），则可以将 BLOB 作为字符串参数传递。 如果 BLOB 存储为二进制格式（例如 SQL Server `image` 字段），则可将 `byte` 类型的数组作为二进制参数传递。
+若要将 BLOB 值写入数据库，请发出相应的 INSERT 或 UPDATE 语句并将 BLOB 值作为输入参数传递。 如果 BLOB 存储为文本（如 SQL Server `text` 字段），可以将 BLOB 作为字符串参数传递。 如果 BLOB 以二进制格式存储（如 SQL Server `image` 字段），可以将 `byte` 类型的数组作为二进制参数传递。
   
 ## <a name="example"></a>示例  
-下面的代码示例将员工信息添加到 Northwind 数据库的 Employees 表中。 将从文件中读取雇员照片，并将其添加到表中的 Photo 字段，这是一个图像字段。  
+下面的代码示例将员工信息添加到 Northwind 数据库中的 Employees 表。 它从文件中读取员工照片，并将它添加到表中的“照片”字段（图像字段）。  
   
 ```csharp  
 public static void AddEmployee(  

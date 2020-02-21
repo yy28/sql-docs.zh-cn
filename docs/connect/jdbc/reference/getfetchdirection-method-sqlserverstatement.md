@@ -1,5 +1,5 @@
 ---
-title: getFetchDirection 方法 (SQLServerStatement) |Microsoft Docs
+title: getFetchDirection 方法 (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: ceb4ae68-decc-46d3-83f1-0bbd23aaf58c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1be44732bb2843e7ce4b306a28dec7343d960ea1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983238"
 ---
 # <a name="getfetchdirection-method-sqlserverstatement"></a>getFetchDirection 方法 (SQLServerStatement)
@@ -40,11 +40,11 @@ public final int getFetchDirection()
 ## <a name="return-value"></a>返回值  
  指示由 [setFetchDirection](../../../connect/jdbc/reference/setfetchdirection-method-sqlserverstatement.md) 方法指定的提取方向的 int  值。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 getFetchDirection 方法由 getFetchDirection 方法在 .sql 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 getFetchDirection 方法是由 java.sql.Statement 接口中的 getFetchDirection 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerStatement 成员](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

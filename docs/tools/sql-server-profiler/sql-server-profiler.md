@@ -1,45 +1,33 @@
 ---
-title: SQL Server Profiler |Microsoft Docs
-ms.custom: ''
-ms.date: 11/27/2018
+title: SQL Server Profiler
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- Profiler [SQL Server Profiler], about SQL Server Profiler
-- traces [SQL Server], SQL Server Profiler
-- database monitoring [SQL Server], SQL Server Profiler
-- tuning databases [SQL Server], SQL Server Profiler
-- SQL Server Profiler
-- server performance [SQL Server], SQL Server Profiler
-- Profiler [SQL Server Profiler]
-- tracing [SQL Server]
-- monitoring performance [SQL Server], SQL Server Profiler
-- events [SQL Server], SQL Server Profiler
-- SQL Server Profiler, about SQL Server Profiler
-- tools [SQL Server], SQL Server Profiler
-- database performance [SQL Server], SQL Server Profiler
-- trace [SQL Server]
 ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 928901caae5ed500913f59f138499a03f73f5439
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 11/27/2018
+ms.openlocfilehash: 4b2130aad931b55e1644aedb36762ad3b94a1e1c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059728"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307821"
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是一个界面，用于创建和管理跟踪并分析和重播跟踪结果。 这些事件保存在一个跟踪文件中，稍后试图诊断问题时，可以对该文件进行分析或用它来重播一系列特定的步骤。  
   
 > [!IMPORTANT]
 > 已弃用 SQL 跟踪和 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。 包含 Microsoft SQL Server 跟踪和重播对象的“Microsoft.SqlServer.Management.Trace”命名空间也已遭弃用  。 
 > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 
-> 请改用扩展事件。 有关[扩展事件](../../relational-databases/extended-events/extended-events.md)的详细信息，请参阅[快速入门：SQL Server 中的扩展事件](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)和 [SSMS XEvent Profiler](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md)。
+> 请改用扩展事件。 有关[扩展事件](../../relational-databases/extended-events/extended-events.md)的详细信息，请参阅[快速入门：SQL Server 中的扩展事件](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)和 [SSMS XEvent 探查器](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md)。
 
 > [!NOTE]
 > 针对 Analysis Services 工作负荷的 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 尚未弃用，我们将继续提供支持。
@@ -54,7 +42,7 @@ ms.locfileid: "68059728"
 ||||  
 |-|-|-|  
 |**功能\目标工作负荷**|**关系引擎**|**Analysis Services**|  
-|**跟踪捕获**|[扩展事件](../../relational-databases/extended-events/extended-events.md)图形用户界面[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|  
+|**跟踪捕获**|[扩展事件](../../relational-databases/extended-events/extended-events.md) [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的图形用户界面|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|  
 |**跟踪重播**|[Distributed Replay](../distributed-replay/sql-server-distributed-replay.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|  
   
 ## <a name="sql-server-profiler"></a>SQL Server Profiler  
@@ -76,13 +64,13 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是 SQL 
 若要使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，您需要了解描述该工具工作方式的术语。  
   
 > [!NOTE]
-> 了解 SQL 跟踪在使用[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]时非常有用。 有关详细信息，请参阅 [SQL Trace](../../relational-databases/sql-trace/sql-trace.md)。  
+> 使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 时，了解 SQL 跟踪非常有帮助。 有关详细信息，请参阅 [SQL Trace](../../relational-databases/sql-trace/sql-trace.md)。  
   
  **事件**  
  事件是在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例中生成的操作。 示例包括：  
   
 -   登录连接、失败和断开。    
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] `SELECT`、`INSERT`、`UPDATE` 和 `DELETE` 语句。    
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]、`SELECT`、`INSERT`、`UPDATE` 和 `DELETE` 语句。    
 -   远程过程调用 (RPC) 批处理状态。  
 -   存储过程的开始或结束。  
 -   存储过程中的语句的开始或结束。  
@@ -117,7 +105,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是 SQL 
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了以下两种用于跟踪 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的方法：使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 进行跟踪，或使用系统存储过程进行跟踪。  
   
- **Filter**  
+ **筛选器**  
  当创建跟踪或模板时，可以定义筛选由事件收集的数据的准则。 若要避免跟踪过大，可以筛选跟踪，以便只收集一部分事件数据。 例如，可以在跟踪中将 Microsoft Windows 用户名限制为特定的用户，从而减少输出的数据。  
   
  如果没有设置筛选器，则跟踪输出中将返回选定事件类的所有事件。  
@@ -127,7 +115,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是 SQL 
 |任务说明|主题|  
 |----------------------|-----------|  
 |列出 SQL Server 提供的用于监视特定类型事件的预定义模板，以及重播跟踪所需使用的权限。|[SQL Server Profiler 模板和权限](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)|  
-|描述如何运行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]探查器。|[运行 SQL Server Profiler 所需的权限](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)|  
+|介绍了如何运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler。|[运行 SQL Server Profiler 所需的权限](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)|  
 |介绍如何创建跟踪。|[创建跟踪 (SQL Server Profiler)](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)|  
 |说明如何指定跟踪文件的事件和数据列。|[指定跟踪文件的事件和数据列 (SQL Server Profiler)](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)|  
 |说明如何将跟踪结果保存到文件。|[将跟踪结果保存到文件 (SQL Server Profiler)](../../tools/sql-server-profiler/save-trace-results-to-a-file-sql-server-profiler.md)|  
@@ -156,29 +144,29 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是 SQL 
 |说明如何每次重播一个事件。|[每次重播一个事件 (SQL Server Profiler)](../../tools/sql-server-profiler/replay-a-single-event-at-a-time-sql-server-profiler.md)|  
 |说明如何重播到断点。|[重播到断点 (SQL Server Profiler)](../../tools/sql-server-profiler/replay-to-a-breakpoint-sql-server-profiler.md)|  
 |介绍如何重播至光标处。|[重播至光标处 (SQL Server Profiler)](../../tools/sql-server-profiler/replay-to-a-cursor-sql-server-profiler.md)|  
-|描述如何重播[!INCLUDE[tsql](../../includes/tsql-md.md)]脚本。|[重播 Transact-SQL 脚本 (SQL Server Profiler)](../../tools/sql-server-profiler/replay-a-transact-sql-script-sql-server-profiler.md)|  
+|介绍了如何重播 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。|[重播 Transact-SQL 脚本 (SQL Server Profiler)](../../tools/sql-server-profiler/replay-a-transact-sql-script-sql-server-profiler.md)|  
 |说明如何创建跟踪模板。|[创建跟踪模板 (SQL Server Profiler)](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)|  
 |说明如何修改跟踪模板。|[修改跟踪模板 (SQL Server Profiler)](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)|  
 |说明如何设置全局跟踪选项。|[设置全局跟踪选项 (SQL Server Profiler)](../../tools/sql-server-profiler/set-global-trace-options-sql-server-profiler.md)|  
 |说明如何在跟踪时查找值或数据列。|[在跟踪时查找值或数据列 (SQL Server Profiler)](../../tools/sql-server-profiler/find-a-value-or-data-column-while-tracing-sql-server-profiler.md)|  
 |说明如何从正在运行的跟踪派生模板。|[从正在运行的跟踪中派生模板 (SQL Server Profiler)](../../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)|  
 |说明如何从跟踪文件或跟踪表派生模板。|[从跟踪文件或跟踪表派生模板 (SQL Server Profiler)](../../tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)|  
-|介绍如何创建[!INCLUDE[tsql](../../includes/tsql-md.md)]用于运行跟踪的脚本。|[创建 Transact-SQL 脚本来运行跟踪 (SQL Server Profiler)](../../tools/sql-server-profiler/create-a-transact-sql-script-for-running-a-trace-sql-server-profiler.md)|  
+|介绍了如何创建 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本来运行跟踪。|[创建 Transact-SQL 脚本来运行跟踪 (SQL Server Profiler)](../../tools/sql-server-profiler/create-a-transact-sql-script-for-running-a-trace-sql-server-profiler.md)|  
 |说明如何导出跟踪模板。|[导出跟踪模板 (SQL Server Profiler)](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)|  
 |说明如何导入跟踪模板。|[导入跟踪模板 (SQL Server Profiler)](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)|  
 |说明如何从跟踪提取脚本。|[从跟踪提取脚本 (SQL Server Profiler)](../../tools/sql-server-profiler/extract-a-script-from-a-trace-sql-server-profiler.md)|  
 |说明如何将跟踪与 Windows 性能日志数据关联。|[将跟踪与 Windows 性能日志数据关联 (SQL Server Profiler)](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)|  
 |说明如何组织跟踪中显示的列。|[组织跟踪中显示的列 (SQL Server Profiler)](../../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)|  
-|介绍如何启动[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。|[启动 SQL Server Profiler](../../tools/sql-server-profiler/start-sql-server-profiler.md)|  
+|介绍了如何启动 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。|[启动 SQL Server Profiler](../../tools/sql-server-profiler/start-sql-server-profiler.md)|  
 |说明如何保存跟踪和跟踪模板。|[保存跟踪和跟踪模板](../../tools/sql-server-profiler/save-traces-and-trace-templates.md)|  
 |说明如何修改跟踪模板。|[修改跟踪模板](../../tools/sql-server-profiler/modify-trace-templates.md)|  
 |说明如何将跟踪与 Windows 性能日志数据关联。|[将跟踪与 Windows 性能日志数据关联](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data.md)|  
-|描述如何查看和分析跟踪[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。|[使用 SQL Server Profiler 查看和分析跟踪](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)|  
-|描述如何用[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]分析死锁。|[使用 SQL Server Profiler 分析死锁](../../tools/sql-server-profiler/analyze-deadlocks-with-sql-server-profiler.md)|  
+|介绍了如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 查看和分析跟踪。|[使用 SQL Server Profiler 查看和分析跟踪](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)|  
+|介绍了如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 分析死锁。|[使用 SQL Server Profiler 分析死锁](../../tools/sql-server-profiler/analyze-deadlocks-with-sql-server-profiler.md)|  
 |说明如何在 SQL Server Profiler 中使用 SHOWPLAN 结果来分析查询。|[在 SQL Server Profiler 中使用 SHOWPLAN 结果来分析查询](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)|  
-|描述如何用[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]筛选跟踪。|[使用 SQL Server Profiler 筛选跟踪](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)|  
+|介绍了如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 筛选跟踪。|[使用 SQL Server Profiler 筛选跟踪](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)|  
 |说明如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的重播功能。|[重播跟踪](../../tools/sql-server-profiler/replay-traces.md)|  
-|列出的上下文相关帮助主题[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。|[SQL Server Profiler 的 F1 帮助](../../tools/sql-server-profiler/sql-server-profiler-f1-help.md)|  
+|列出了 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的上下文相关帮助主题。|[SQL Server Profiler 的 F1 帮助](../../tools/sql-server-profiler/sql-server-profiler-f1-help.md)|  
 |列出由 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 用于监视性能和活动的系统存储过程。|[SQL Server Profiler 存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)|  
   
 ## <a name="see-also"></a>另请参阅  

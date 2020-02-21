@@ -16,10 +16,10 @@ ms.assetid: 5ab385c2-e18c-4b75-ac2d-2402af5c52a5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f56893764392236d563fa2b9a236f55e67e13595
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983252"
 ---
 # <a name="getfetchdirection-method-sqlserverresultset"></a>getFetchDirection 方法 (SQLServerResultSet)
@@ -35,13 +35,13 @@ public int getFetchDirection()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 指示当前提取方向的 int  值。  
+ 指示当前提取方向的 int 值。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 getFetchDirection 方法由 getFetchDirection 方法在方法中指定。  
+## <a name="remarks"></a>备注  
+ 此 getFetchDirection 方法是由 java.sql.ResultSet 接口中的 getFetchDirection 方法指定的。  
   
  此方法对只进游标返回 FETCH_FORWARD，对于其他游标类型返回调用 [setFetchDirection](../../../connect/jdbc/reference/setfetchdirection-method-sqlserverresultset.md) 方法所指定的最后设置。如果从未调用 setFetchDirection 方法，则为这些游标类型返回 FETCH_UNKNOWN。  
   

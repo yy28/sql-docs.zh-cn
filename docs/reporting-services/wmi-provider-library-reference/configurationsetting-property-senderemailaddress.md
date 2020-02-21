@@ -16,10 +16,10 @@ ms.assetid: 087de0ab-6505-48c6-80f3-bd493f76282d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 62c64167886a28ad05a60a576cfa0a42a2cbbcf1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570242"
 ---
 # <a name="configurationsetting-property---senderemailaddress"></a>ConfigurationSetting 属性 - SenderEmailAddress
@@ -42,7 +42,7 @@ public string SenderEmailAddress;
  [MSReportServer_ConfigurationSetting 类](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>要求  
- **命名空间:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

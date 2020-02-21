@@ -10,21 +10,21 @@ ms.topic: conceptual
 ms.assetid: 2246ddeb-7c2f-46f3-8a91-cdd718d39b40
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 27b56a20a0456bef04553c614432bde270d8e98d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: c1dfce515eeadbdbaf1fd96e6dcf1a08cd536ab5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935773"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74200460"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>步骤 3：使用 pymssql 连接到 SQL 的概念验证
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>步骤 3：使用 pymssql 连接到 SQL 的概念证明
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
 
-此示例只应视为概念证明。  为清楚起见, 示例代码已简化, 不一定表示 Microsoft 推荐的最佳做法。  
+此示例应只视为概念证明。  为清楚起见，示例代码已简化，不一定代表 Microsoft 建议的最佳做法。  
   
-## <a name="step-1--connect"></a>步骤 1: 连接  
+## <a name="step-1--connect"></a>步骤 1：连接  
   
-[Pymssql](https://pymssql.org/en/latest/ref/pymssql.html)函数用于连接到 SQL 数据库。  
+[Pymssql.connect](https://pypi.org/project/pymssql/) 函数用于连接到 SQL 数据库。  
   
 ```python
     import pymssql  
@@ -32,9 +32,9 @@ ms.locfileid: "67935773"
 ```  
   
   
-## <a name="step-2--execute-query"></a>步骤 2: 执行查询  
+## <a name="step-2--execute-query"></a>步骤 2：执行查询  
   
-[Cursor. execute](https://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.execute)函数可用于从针对 SQL 数据库的查询中检索结果集。 此函数实际上可接受任何查询, 并返回可使用[cursor.fetchone ()](https://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.fetchone)循环访问的结果集。  
+[Cursor.execute](https://pypi.org/project/pymssql/) 函数可用于针对 SQL 数据库从查询中检索结果集。 此函数实际上可接受任何查询，并返回可使用 [cursor.fetchone()](https://pypi.org/project/pymssql/) 循环访问的结果集。  
   
   
 ```python
@@ -48,7 +48,7 @@ ms.locfileid: "67935773"
         row = cursor.fetchone()  
 ```  
   
-## <a name="step-3--insert-a-row"></a>步骤 3: 插入行  
+## <a name="step-3--insert-a-row"></a>步骤 3：插入行  
   
 此示例展示了如何安全执行 [INSERT](../../../t-sql/statements/insert-transact-sql.md) 语句，并传递用于保护应用程序免遭 [SQL 注入](../../../relational-databases/tables/primary-and-foreign-key-constraints.md)值影响的参数。    
   
@@ -66,11 +66,11 @@ ms.locfileid: "67935773"
     conn.close()
 ```  
   
-## <a name="step-4--rollback-a-transaction"></a>步骤 4: 回滚事务  
+## <a name="step-4--rollback-a-transaction"></a>步骤 4：回滚事务  
   
-此代码示例演示如何使用事务, 其中:  
+此代码示例演示了可以在其中执行以下操作的事务的用法：  
   
-* 开始事务  
+* 开始一个事务  
 * 插入一行数据  
 * 回滚事务以撤消插入  
   
@@ -86,4 +86,4 @@ ms.locfileid: "67935773"
     
   ## <a name="next-steps"></a>后续步骤  
   
-有关详细信息, 请参阅[Python 开发人员中心](https://azure.microsoft.com/develop/python/)。
+有关详细信息，请参阅 [Python 开发人员中心](https://azure.microsoft.com/develop/python/)。

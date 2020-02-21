@@ -1,6 +1,6 @@
 ---
-title: SqlLocalDB 实用程序 |Microsoft Docs
-ms.custom: ''
+title: SqlLocalDB 实用工具
+ms.custom: seo-lt-2019
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 78358b6477208dcb7aecb4c031ee25318eab9e05
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: c829c9adce95dd1a4a84d5fd6fc7b88abdece96a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065464"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306669"
 ---
 # <a name="sqllocaldb-utility"></a>SqlLocalDB 实用工具
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ SqlLocalDB.exe
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **create** | **c** ] *\<instance-name>* *\<instance-version>* [ **-s** ]  
+ [ create   | c  ] \<instance-name>  \<instance-version>  [-s  ]  
  新建 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**实例。 SqlLocalDB 使用由 \<instance-version> 参数指定的 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 二进制文件的版本   。 版本号以数字格式指定，至少有一个小数点。 次要版本号 (Service Pack） 是可选的。 例如，下面的两个版本号均可接受：11.0 或 11.0.1186。 必须在计算机上安装指定的版本。 如果未指定，版本号默认为 **SqlLocalDB** 实用工具的版本。 添加 -s  可启动新的 LocalDB  实例。  
   
  [ **共享** | **h** ]  
@@ -73,7 +73,7 @@ SqlLocalDB.exe
  **-?**  
  返回每个 **SqlLocalDB** 选项的简短说明。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  *实例名称* 参数必须遵循 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 标识符规则，或者必须将该参数放入双引号。  
   
  执行不带参数的 SqlLocalDB 将返回帮助文档。  

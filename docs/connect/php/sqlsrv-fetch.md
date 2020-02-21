@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_fetch |Microsoft Docs
+title: sqlsrv_fetch | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: a5a640a1-6e7d-452e-8b66-850a4dc2ce89
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 32b095c37f6a0b039e0836da4508ed8cbfe5fd3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015023"
 ---
-# <a name="sqlsrvfetch"></a>sqlsrv_fetch
+# <a name="sqlsrv_fetch"></a>sqlsrv_fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 使结果集的下一行可供读取。 [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) 可用于读取行的字段。  
@@ -36,13 +36,13 @@ ms.locfileid: "68015023"
 sqlsrv_fetch( resource $stmt[, row[, ]offset])  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
 *$stmt*：对应于已执行语句的语句资源。  
   
 > [!NOTE]  
 > 必须执行语句，才可以检索结果。 有关执行语句的信息，请参阅 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 和 [sqlsrv_execute](../../connect/php/sqlsrv-execute.md)。  
   
-row  [可选]：下面的值之一，用于指定要在使用可滚动游标的结果集中访问的行：  
+*row* [可选]：以下值之一，用于指定要在使用可滚动游标的结果集中访问的行：  
   
 -   SQLSRV_SCROLL_NEXT  
   
@@ -58,7 +58,7 @@ row  [可选]：下面的值之一，用于指定要在使用可滚动游标的�
   
 有关这些值的详细信息，请参阅 [指定游标类型和选择行](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)。  
   
-offset [可选]：结合使用 SQLSRV_SCROLL_ABSOLUTE 和 SQLSRV_SCROLL_RELATIVE 以指定要检索的行  。 结果集中的第一个记录为 0。  
+*offset* [可选]：结合使用 SQLSRV_SCROLL_ABSOLUTE 和 SQLSRV_SCROLL_RELATIVE 以指定要检索的行。 结果集中的第一个记录为 0。  
   
 ## <a name="return-value"></a>返回值  
 如果已成功检索结果集的下一行，将返回 **True** 。 如果结果集中没有更多结果，将返回 **null** 。 如果出现错误，将返回 **False** 。  

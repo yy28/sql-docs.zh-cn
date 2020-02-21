@@ -1,5 +1,5 @@
 ---
-title: 了解 XA 事务 |Microsoft Docs
+title: 了解 XA 事务 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6e7f602107e828ee0bd985345ed5e641d6870558
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.openlocfilehash: 3e249bb515ca0a8b579e923e7d289fccd80ce6ef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69027219"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947129"
 ---
 # <a name="understanding-xa-transactions"></a>了解 XA 事务
 
@@ -23,14 +23,16 @@ ms.locfileid: "69027219"
 
 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供对 Java Platform, Enterprise Edition/JDBC 2.0 可选分布式事务的支持。 从 [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) 类获取的 JDBC 连接可以参与标准分布式事务处理环境，例如 Java Platform, Enterprise Edition (Java EE) 应用程序服务器。  
 
-> [!WARNING]  
-> 适用于 SQL 的 Microsoft JDBC Driver 4.2（和更高版本）包含现有功能的新的超时选项，以供自动回滚尚未准备好的事务。 有关更多详细信息, 请参阅本主题稍后部分中[的配置服务器端超时设置以自动回滚未准备好的事务](../../connect/jdbc/understanding-xa-transactions.md#BKMK_ServerSide)。  
+在本文中，XA 代表扩展体系结构。
 
-## <a name="remarks"></a>Remarks
+> [!WARNING]  
+> 适用于 SQL 的 Microsoft JDBC Driver 4.2（和更高版本）包含现有功能的新的超时选项，以供自动回滚尚未准备好的事务。 有关更多详细信息，请参阅本主题后面将介绍的[为自动回滚尚未准备好的事务配置服务器端超时设置](../../connect/jdbc/understanding-xa-transactions.md#BKMK_ServerSide)。  
+
+## <a name="remarks"></a>备注
 
 用于此分布式事务实现的类如下：  
   
-| 类                                              | 实现                      | 描述                                       |
+| 类                                              | 实现                      | 说明                                       |
 | -------------------------------------------------- | ------------------------------- | ------------------------------------------------- |
 | com.microsoft.sqlserver.jdbc.SQLServerXADataSource | javax.sql.XADataSource          | 分布式连接的类工厂。    |
 | com.microsoft.sqlserver.jdbc.SQLServerXAResource   | javax.transaction.xa.XAResource | 事务管理器的资源适配器。 |
@@ -44,9 +46,9 @@ ms.locfileid: "69027219"
 
 - 将 XA 事务与 Microsoft 分布式事务处理协调器 (MS DTC) 一起使用时，你可能会注意到 MS DTC 的当前版本不支持紧密结合的 XA 分支行为。 例如，MS DTC 在 XA 分支事务 ID (XID) 与 MS DTC 事务 ID 之间具有一对一的映射，由松散耦合的 XA 分支执行的工作彼此之间是隔离的。  
   
-     [MSDTC 和紧密耦合事务](https://support.microsoft.com/kb/938653)中提供的修补程序可实现对紧密耦合的 XA 分支的支持，其中具有全局事务 ID (GTRID) 的多个 XA 分支会映射到单个 MS DTC 事务 ID。 通过该项支持，多个紧密耦合的 XA 分支可在资源管理器中查看彼此的更改，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
+- MS DTC 还支持紧密耦合的 XA 分支，其中具有相同全局事务 ID (GTRID) 的多个 XA 分支会映射到单个 MS DTC 事务 ID。 通过该项支持，多个紧密耦合的 XA 分支可在资源管理器中查看彼此的更改，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
   
-- 借助 [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) 标志，应用程序可使用紧密耦合的 XA 事务，其中这些事务具有不同的 XA 分支事务 ID (BQUAL)，但其全局事务 ID (GTRID) 和格式 ID (FormatID) 相同。 若要使用该功能, 必须在 XAResource 方法的 flags 参数上设置[SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) :
+- 借助 [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) 标志，应用程序可使用紧密耦合的 XA 事务，其中这些事务具有不同的 XA 分支事务 ID (BQUAL)，但其全局事务 ID (GTRID) 和格式 ID (FormatID) 相同。 为了使用该功能，必须对 XAResource.start 方法的 flags 参数设置 [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md)：
   
     ```java
     xaRes.start(xid, SQLServerXAResource.SSTRANSTIGHTLYCPLD);  
@@ -60,12 +62,12 @@ ms.locfileid: "69027219"
 > JDBC 分布式事务组件包含在 JDBC 驱动程序安装的 xa 目录中。 这些组件包括 xa_install.sql 和 sqljdbc_xa.dll 文件。  
 
 > [!NOTE]  
-> 从 SQL Server 2019 公共预览版 CTP 2.0 开始, JDBC XA 分布式事务组件包含在 SQL Server 引擎中, 可以使用系统存储过程启用或禁用。
-> 若要使用 JDBC 驱动程序启用必需组件来执行 XA 分布式事务, 请执行以下存储过程。
+> 从 SQL Server 2019 公共预览版 CTP 2.0 开始，JDBC XA 分布式事务组件包含在 SQL Server 引擎中，可以通过系统存储过程启用或禁用。
+> 若要使用 JDBC 驱动程序启用必需组件来执行 XA 分布式事务，请执行以下存储过程。
 >
 > EXEC sp_sqljdbc_xa_install
 >
-> 若要禁用先前安装的组件, 请执行以下存储过程。
+> 若要禁用先前安装的组件，请执行以下存储过程。
 >
 > EXEC sp_sqljdbc_xa_uninstall
 
@@ -108,9 +110,9 @@ ms.locfileid: "69027219"
   
 1. 打开将参与分布式事务处理的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机的 LOG 目录。 选择并打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的“ERRORLOG”文件。 在“ERRORLOG”文件中搜索“使用‘SQLJDBC_XA.dll’版本 ...”这一短语。  
   
-2. 打开将参与分布式事务处理的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机的 Binn 目录。 选择 sqljdbc_xa 程序集。
+2. 打开将参与分布式事务处理的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机的 Binn 目录。 选择 sqljdbc_xa.dll 程序集。
 
-    - 在 Windows Vista 或更高版本上：右键单击 sqljdbc_xa.dll，然后选择“属性”。 然后单击“详细信息”选项卡  。“文件版本”字段显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上当前安装的 sqljdbc_xa.dll 的版本  。  
+    - 在 Windows Vista 或更高版本上：右键单击“sqljdbc_xa.dll”，然后选择“属性”。 然后单击“详细信息”选项卡  。“文件版本”字段显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上当前安装的 sqljdbc_xa.dll 的版本  。  
   
 3. 按照下一节的代码示例所示设置日志记录功能。 在输出日志文件中搜索“服务器 XA DLL 版本:...”这一短语。  
 
@@ -121,9 +123,9 @@ ms.locfileid: "69027219"
 
 有两个注册表设置（DWORD 值）来控制分布式事务的超时行为：  
   
-- **XADefaultTimeout**(以秒为单位): 用户未指定任何超时值时要使用的默认超时值。 默认值为 0。  
+- **XADefaultTimeout**（以秒为单位）：在用户未指定任何超时时使用的默认超时值。 默认值为 0。  
   
-- **XAMaxTimeout**(以秒为单位): 用户可设置的最大超时值。 默认值为 0。  
+- **XAMaxTimeout**（以秒为单位）：用户可以设置的最大超时值。 默认值为 0。  
   
 这些设置特定用于 SQL Server 实例，应在以下注册表项下创建：  
 
@@ -159,7 +161,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL<version>.<insta
 > [!IMPORTANT]  
 > 你应在维护时段内或在未处理任何 MS DTC 事务时升级 sqljdbc_xa.dll。
   
-1. 使用[!INCLUDE[tsql](../../includes/tsql-md.md)]命令**DBCC sqljdbc_xa (FREE)** 卸载 sqljdbc_xa。  
+1. 使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令 DBCC sqljdbc_xa (FREE)  卸载 sqljdbc_xa.dll。  
   
 2. 将新 sqljdbc_xa.dll 从 JDBC 驱动程序安装目录复制到每台要参与分布式事务的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机的 Binn 目录中。  
   

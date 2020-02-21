@@ -1,5 +1,5 @@
 ---
-title: 使用 SQL Server Management Studio (SSMS) 的提示和技巧
+title: 使用 SSMS 的提示和技巧
 description: 了解如何使用 SQL Server Management Studio 注释和取消注释代码、缩进文本、筛选对象资源管理器中的对象、访问 SQL Server 错误日志和查找 SQL Server 实例名称。
 ms.topic: tutorial
 ms.prod: sql
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: d5b52a35bce720e3985a8191335491c50e43c50e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 7a07e4cd77d02e4c62c34e55eedbd3dbf01c8322
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267585"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245508"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS) 的提示和技巧
 
@@ -146,7 +146,7 @@ ms.locfileid: "68267585"
 
 3. 右键单击“表”，然后选择“筛选器” > “筛选器设置”    ：
 
-    ![筛选设置](media/ssms-tricks/filtersettings.png)
+    ![筛选器设置](media/ssms-tricks/filtersettings.png)
 
 4. 在“筛选器设置”窗口中，可以修改以下某些筛选器设置  ：
     * 按名称筛选： 

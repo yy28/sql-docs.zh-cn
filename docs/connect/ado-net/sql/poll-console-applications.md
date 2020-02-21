@@ -1,6 +1,6 @@
 ---
 title: 在控制台应用程序中轮询
-description: 提供一个示例，演示如何使用轮询等待从控制台应用程序中完成异步命令执行。 此方法也适用于类库或其他不带用户界面的应用程序。
+description: 提供了一个示例，演示如何使用轮询等待从控制台应用程序中完成异步命令执行。 此方法也适用于类库或其他不带用户界面的应用程序。
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -9,26 +9,26 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: e8dc5597743a277b53f36d0bfb1487a12cbd80d9
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: bf89d2d111452970955953132edd76e602590668
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452100"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247680"
 ---
 # <a name="polling-in-console-applications"></a>在控制台应用程序中轮询
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下载 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-使用 ADO.NET 中的异步操作，可以在一个线程上启动耗时的数据库操作，同时在另一个线程上执行其他任务。 但在大多数情况下，最终会到达一个点，在该点上应用程序不应继续，直到数据库操作完成。 对于这种情况，轮询异步操作以确定操作是否已完成非常有用。  
+使用 ADO.NET 中的异步操作，可以在一个线程上启动耗时的数据库操作，同时在另一个线程上执行其他任务。 但在大多数情况下，最终会遇到这样的情况：在数据库操作完成之前，应用程序不应继续运行。 对于这种情况，一个有用的方法是轮询异步操作以确定操作是否已完成。  
   
-您可以使用 <xref:System.IAsyncResult.IsCompleted%2A> 属性来确定操作是否已完成。  
+可以使用 <xref:System.IAsyncResult.IsCompleted%2A> 属性来确定操作是否已完成。  
   
 ## <a name="example"></a>示例  
-以下控制台应用程序更新 AdventureWorks 示例数据库中的数据，异步完成其任务。 为了模拟长时间运行的进程，此示例在命令文本中插入一个 WAITFOR 语句。 通常情况下，你不会尝试使命令运行速度较慢，但在这种情况下这样做会使演示异步行为变得更加容易。  
+以下控制台应用程序更新 AdventureWorks 示例数据库中的数据，异步完成其任务  。 为了模拟长时间运行的进程，此示例在命令文本中插入一个 WAITFOR 语句。 通常，你不会尝试使命令运行速度变慢，但是在这种情况下，这样做可以更轻松地演示异步行为。  
   
 ```csharp  
 using System;  

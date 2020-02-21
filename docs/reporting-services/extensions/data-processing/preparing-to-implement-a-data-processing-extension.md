@@ -12,10 +12,10 @@ ms.assetid: 698817e4-33da-4eb5-9407-4103e1c35247
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b3ae11d41956f37f1a203235abad71639f942ae7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193892"
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>准备实现数据处理扩展插件
@@ -62,19 +62,19 @@ ms.locfileid: "63193892"
 ## <a name="available-extension-interfaces"></a>可用的扩展插件接口  
  下表介绍可用接口以及实现是必需的还是可选的。  
   
-|接口|描述|实现|  
+|接口|说明|实现|  
 |---------------|-----------------|--------------------|  
-|IDbConnection|表示与某一数据源的唯一会话。 在客户端/服务器数据库系统的情况下，该会话可等效于到服务器的一个网络连接。|Required|  
+|IDbConnection|表示与某一数据源的唯一会话。 在客户端/服务器数据库系统的情况下，该会话可等效于到服务器的一个网络连接。|必选|  
 |IDbConnectionExtension|表示可由 [!INCLUDE[ssRS](../../../includes/ssrs.md)] 数据处理扩展插件针对安全性和身份验证实现的附加连接属性。|可选|  
-|IDbTransaction|表示本地事务。|Required|  
+|IDbTransaction|表示本地事务。|必选|  
 |IDbTransactionExtension|表示可由 [!INCLUDE[ssRS](../../../includes/ssrs.md)] 数据处理扩展插件实现的附加事务属性。|可选|  
-|IDbCommand|表示在连接到数据源时使用的查询或命令。|Required|  
+|IDbCommand|表示在连接到数据源时使用的查询或命令。|必选|  
 |IDbCommandAnalysis|表示用于分析某一查询并返回在该查询中使用的参数名称列表的附加命令信息。|可选|  
-|IDataParameter|表示传递到命令或查询的参数或名称/值对。|Required|  
-|IDataParameterCollection|表示与某一命令或查询相关的所有参数的集合。|Required|  
-|IDataReader|提供从数据源读取数据的只进、只读流的方法。|Required|  
+|IDataParameter|表示传递到命令或查询的参数或名称/值对。|必选|  
+|IDataParameterCollection|表示与某一命令或查询相关的所有参数的集合。|必选|  
+|IDataReader|提供从数据源读取数据的只进、只读流的方法。|必选|  
 |IDataReaderExtension|提供一种方法来读取一个或多个通过在数据源执行命令所获得的只进结果集流。 此接口为字段聚合提供附加支持。|可选|  
-|IExtension|为 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据处理扩展插件提供基类。 还使实现者可为扩展插件包括本地化的名称并将配置设置从配置文件传递到扩展插件。|Required|  
+|IExtension|为 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据处理扩展插件提供基类。 还使实现者可为扩展插件包括本地化的名称并将配置设置从配置文件传递到扩展插件。|必选|  
   
  数据处理扩展插件接口将尽可能与 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 数据访问接口、方法和属性的子集完全相同。 有关实现完整 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 数据访问接口的详细信息，请参阅 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 软件开发包 (SDK) 文档中的“实现 .NET Framework 数据访问接口”。  
   

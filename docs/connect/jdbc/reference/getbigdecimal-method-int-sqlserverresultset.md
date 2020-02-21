@@ -16,10 +16,10 @@ ms.assetid: 49872b95-a11c-472e-a0d2-a794e8f32f52
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 425540c4ce37f0d30de503b1aebec7d086e6f94c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953997"
 ---
 # <a name="getbigdecimal-method-int-sqlserverresultset"></a>getBigDecimal 方法 (int) (SQLServerResultSet)
@@ -34,19 +34,19 @@ ms.locfileid: "67953997"
 public java.math.BigDecimal getBigDecimal(int columnIndex)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
- columnIndex   
+#### <a name="parameters"></a>parameters  
+ columnIndex  
   
- 指示列索引的 int  。  
+ 指示列索引的 int。  
   
 ## <a name="return-value"></a>返回值  
- 一个 Java.math.bigdecimal 对象。  
+ BigDecimal 对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 getBigDecimal 方法由 getBigDecimal 方法在方法中指定。  
+## <a name="remarks"></a>备注  
+ 此 getBigDecimal 方法是由 java.sql.ResultSet 接口中的 getBigDecimal 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [getBigDecimal 方法 (SQLServerResultSet)](../../../connect/jdbc/reference/getbigdecimal-method-sqlserverresultset.md)   

@@ -1,5 +1,5 @@
 ---
-title: isDefinitelyWritable 方法 (SQLServerResultSetMetaData) |Microsoft Docs
+title: isDefinitelyWritable 方法 (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 7650e89a-dc8e-43ca-8eb2-f962f1a4b4ae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 49ca65fc7fd2c7768db81460e331d960bad1c5ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977646"
 ---
 # <a name="isdefinitelywritable-method-sqlserverresultsetmetadata"></a>isDefinitelyWritable 方法 (SQLServerResultSetMetaData)
@@ -34,7 +34,7 @@ ms.locfileid: "67977646"
 public boolean isDefinitelyWritable(int column)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *column*  
   
  指示列索引的 int  。  
@@ -42,11 +42,11 @@ public boolean isDefinitelyWritable(int column)
 ## <a name="return-value"></a>返回值  
  如果列写入操作将一定成功，则为“true”  。 否则为 **false**。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 isDefinitelyWritable 方法由 isDefinitelyWritable 方法在 Java.sql.resultsetmetadata 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 isDefinitelyWritable 方法是由 java.sql.ResultSetMetaData 接口中的 isDefinitelyWritable 方法指定的。  
   
 > [!NOTE]  
 >  将 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库一起使用时，此方法会始终返回 false。  

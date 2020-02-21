@@ -1,10 +1,9 @@
 ---
-title: 列属性 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 列属性
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,14 @@ f1_keywords:
 ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3ee1e24b0f9b55d299f56aa02c99405e001c33c1
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 7646eb379b3fe81603e78843808c90914889ed5d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262556"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241272"
 ---
 # <a name="column-properties-visual-database-tools"></a>列属性 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "68262556"
 **名称**  
 显示列的名称。  
   
-**“数据库”**  
+**Database**  
 显示所选列的数据源的名称。 （仅适用于 OLE DB。）  
   
 **杂项类别**  
@@ -72,7 +73,7 @@ ms.locfileid: "68262556"
 **精度**  
 显示数值数据类型所允许的最大位数。 对于非数值数据类型，此属性显示 **0** 。  
   
-**小数位数**  
+**缩放**  
 显示数值数据类型的小数点右侧可显示的最大位数。 此值必须小于或等于精度。 对于非数值数据类型，此属性显示 **0** 。  
   
 ## <a name="column-properties-tab"></a>“列属性”选项卡  
@@ -105,7 +106,7 @@ ms.locfileid: "68262556"
 **精度**  
 显示数值数据类型所允许的最大位数。 对于非数值数据类型，此属性显示 **0** 。 此属性仅可用于数值数据类型。  
   
-**小数位数**  
+**缩放**  
 显示数值数据类型的小数点右侧可显示的最大位数。 此值必须小于或等于精度。 对于非数值数据类型，此属性显示 **0** 。 此属性仅可用于数值数据类型。  
   
 **表设计器类别**  
@@ -126,7 +127,7 @@ ms.locfileid: "68262556"
 **简洁数据类型**  
 按与 SQL CREATE TABLE 语句同样的格式显示有关字段的数据类型的信息。 例如，一个包含可变长度字符串（最大长度为 20 个字符）的字段将表示为“varchar(20)”。 若要更改此属性，请直接键入值。  
   
-**Description**  
+**说明**  
 显示列的说明。 若要查看或编辑完整说明，请单击“说明”，再单击属性右侧的省略号“(…)”  。  
   
 **全文本规范类别**  
@@ -182,7 +183,7 @@ ms.locfileid: "68262556"
 **是 RowGuid**  
 指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是否将该列用作 ROWGUID。 只有对于数据类型为 **uniqueidentifier** 的列，才能将此值设置为“是”  。 若要编辑此属性，请单击该属性的值，展开下拉列表，然后选择其他值。  
   
-**Size**  
+**大小**  
 显示该列的数据类型所允许的大小（字节）。 例如，某个 **nchar** 数据类型的长度为 10（字符数），但在 Unicode 字符集中，该数据类型的大小为 20。  
   
 > [!NOTE]  

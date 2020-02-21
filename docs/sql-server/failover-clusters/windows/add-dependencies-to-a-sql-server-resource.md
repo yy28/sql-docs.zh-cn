@@ -1,6 +1,7 @@
 ---
-title: 向 SQL Server 资源添加依赖项 | Microsoft Docs
-ms.custom: ''
+title: 向 SQL Server FCI 资源添加依赖项
+descriptoin: Describes how to add dependencies to an Always On failover cluster instance (FCI) resource using the Failover Cluster Manager.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 25dbb751-139b-4c8e-ac62-3ec23110611f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: dfaad71ac357ed261643267c7eab019b91548fa4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e78380d509d2b291c0794cb408909a10622c3f53
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063818"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74822060"
 ---
 # <a name="add-dependencies-to-a-sql-server-resource"></a>向 SQL Server 资源添加依赖项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +55,7 @@ ms.locfileid: "68063818"
   
      如果在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 组中安装 MS DTC，并且具有依赖于 MS DTC 的其他资源，则在此组脱机时或者处于故障转移期间的情况下，MS DTC 将不可用。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 建议您尽可能将 MS DTC 放入单独的组中且占用单独的物理磁盘资源。  
   
-###  <a name="Prerequisites"></a> 先决条件  
+###  <a name="Prerequisites"></a>先决条件  
  如果将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装到具有多个磁盘驱动器的 WSFC 资源组，并选择将数据置于其中一个驱动器上，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源将被设置为只依赖于该驱动器。 若要将数据或日志放到另一个磁盘上，必须先为相应磁盘添加与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源的依赖关系。  
   
 ##  <a name="WinClusManager"></a> 使用故障转移群集管理器管理单元  

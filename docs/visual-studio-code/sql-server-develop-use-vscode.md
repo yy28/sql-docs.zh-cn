@@ -1,6 +1,5 @@
 ---
-title: 为 SQL Server 使用 Visual Studio Code mssql 扩展
-titleSuffix: SQL Server
+title: 使用 Visual Studio Code mssql 扩展
 description: 为 Visual Studio Code 使用 mssql 扩展来编辑和运行用于 Linux 上 SQL Server 的 Transact-SQL 脚本。
 ms.topic: conceptual
 ms.prod: sql
@@ -9,12 +8,12 @@ ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 author: markingmyname
 ms.author: maghan
 ms.date: 10/28/2019
-ms.openlocfilehash: 91cc06b4d0d2791f91a26ecc1800859713267d9b
-ms.sourcegitcommit: 82b70c39550402a2b0b327db32bf5ecf88b50d3c
+ms.openlocfilehash: 615e205566ced2c1d0a66ab69b3e9eb80c7f82f3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73588981"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75558452"
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts"></a>使用 Visual Studio Code 创建并运行 Transact SQL 脚本
 
@@ -39,7 +38,7 @@ Visual Studio Code 是支持扩展的跨平台图形代码编辑器。
 
 1. 在 Visual Studio Code 中，选择“查看” > “命令面板”，或按“Ctrl”+“Shift”+“P”，或按“F1”打开“命令面板”        。
 
-2. 在命令面板中，从下拉列表中选择“扩展  ：安装扩展”** 。
+2. 在命令面板中，从下拉列表中选择“扩展  ：安装扩展”  。
 
 3. 在“扩展”窗格中，键入“mssql”   。
 
@@ -68,27 +67,27 @@ Visual Studio Code 是支持扩展的跨平台图形代码编辑器。
 
 请按照以下步骤创建连接配置文件并连接到 SQL Server。
 
-1. 按“Ctrl”+“Shift”+“P”或“F1”打开“命令面板”。      。 
+1. 按“Ctrl”+“Shift”+“P”或“F1”打开“命令面板”      。 
 
-2. 键入 sql 以显示 mssql 命令，或键入 sqlcon，然后从下拉列表中选择“MS SQL   ：连接”** 。
+2. 键入 sql 以显示 mssql 命令，或键入 sqlcon，然后从下拉列表中选择“MS SQL   ：连接”  。
 
    ![mssql 命令](./media/sql-server-develop-use-vscode/vscode-commands.png)
 
    >[!NOTE]
    >代码编辑器中的焦点须位于 SQL 文件（例如创建的空 SQL 文件），才能执行 mssql 命令。
 
-3. 选择“MS SQL：管理连接配置文件”命令**。
+3. 选择“MS SQL：管理连接配置文件”命令  。
 
 4. 然后选择“创建”为 SQL Server 创建新的连接配置文件  。
 
 5. 按照提示为新连接配置文件指定属性。 指定每个值后，按“Enter”继续  。
 
-   | 连接属性 | 描述 |
+   | 连接属性 | 说明 |
    |---|---|
    | **服务器名称或 ADO 连接字符串** | 指定 SQL Server 实例名称。 使用 localhost 连接到本地计算机上的 SQL Server 实例  。 如果要连接到远程 SQL Server，请输入目标 SQL Server 的名称，或它的 IP 地址。 若要连接到 SQL Server 容器，请指定容器主机的 IP 地址。 如果需要指定端口，请使用逗号将其与名称分开。 例如，对于侦听端口 1401 的服务器，请输入 `<servername or IP>,1401`。<br/><br/>或者，可以在此处输入数据库的 ADO 连接字符串。 |
    | “数据库名称”（可选）  | 要使用的数据库。 若要连接到默认数据库，请不要在此处指定数据库名称。 |
    | **身份验证类型** | 选择“集成”或“SQL 登录”   。 |
-   | **User name** | 如果选择了“SQL 登录”，则输入拥有访问服务器上数据库权限的用户名  。 |
+   | **用户名** | 如果选择了“SQL 登录”，则输入拥有访问服务器上数据库权限的用户名  。 |
    | **密码** | 输入指定用户的密码。 |
    | **保存密码** | 按“Enter”选择“是”并保存密码   。 选择“否”，系统将在每次使用连接配置文件时提示输入密码  。 |
    | “配置文件名称”（可选）  | 键入连接配置文件的名称，例如 localhost 配置文件  。 |
@@ -141,7 +140,7 @@ Visual Studio Code 是支持扩展的跨平台图形代码编辑器。
 
 2. 按“Ctrl”+“Shift”+“P”或“F1”打开“命令面板”      。
 
-3. 键入 sql 以显示 mssql 命令，或键入 sqluse，然后选择“MS SQL   ：使用数据库”命令**。
+3. 键入 sql 以显示 mssql 命令，或键入 sqluse，然后选择“MS SQL   ：使用数据库”命令  。
 
 4. 选择新的“TutorialDB”数据库  。
 

@@ -12,10 +12,10 @@ ms.assetid: ef84ce9d-9156-48e9-8073-7e0535476932
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5723122c76b02900f6906c03efb807e58ebcc6d9
-ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67313981"
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>配置报表服务器（Reporting Services 本机模式）
@@ -27,9 +27,9 @@ ms.locfileid: "67313981"
   
 -   用于存储应用程序数据、报表和其他项的报表服务器。  
   
- 如果选择了以下安装选项之一：本机模式默认配置或 SharePoint 集成模式默认配置，则安装程序会配置最低设置。 如果在“仅文件”模式下安装报表服务器（即通过安装向导中的 **“安装但不配置”** 选项），则只需要配置服务帐户。 完成安装之后，必须配置 Web 服务 URL 和报表服务器数据库。  
+ 如果选择以下任意安装选项，则安装程序将配置最低设置：本机模式默认配置或 SharePoint 集成的模式默认配置。 如果在“仅文件”模式下安装报表服务器（即通过安装向导中的 **“安装但不配置”** 选项），则只需要配置服务帐户。 完成安装之后，必须配置 Web 服务 URL 和报表服务器数据库。  
   
-建议你配置 web 门户，以便你可以授予用户对报表服务器访问和管理报表服务器内容。 如果在 SharePoint 集成模式下部署报表服务器，请使用 SharePoint 服务器的 Web 前端来授予访问权限。  
+建议配置 Web 门户，以便授予用户对报表服务器的访问权限并管理报表服务器内容。 如果在 SharePoint 集成模式下部署报表服务器，请使用 SharePoint 服务器的 Web 前端来授予访问权限。  
   
  可以根据需要配置其他功能，例如报表服务器电子邮件和无人参与的执行帐户。 有关详细信息，请参阅 [管理 Reporting Services 本机模式报表服务器](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)。  
   
@@ -47,8 +47,8 @@ ms.locfileid: "67313981"
   
 5.  按照“后续步骤”中的说明完成您的部署。  
   
-## <a name="next-steps"></a>Next Steps  
- 若要完成部署，应配置 Web 门户或 SharePoint 集成。 有关详细信息，请参阅[配置 web 门户](../../reporting-services/report-server/configure-web-portal.md)。  
+## <a name="next-steps"></a>后续步骤  
+ 若要完成部署，应配置 Web 门户或 SharePoint 集成。 有关详细信息，请参阅[配置 Web 门户](../../reporting-services/report-server/configure-web-portal.md)。  
   
  如果 Windows 防火墙已开启，配置为报表服务器使用的端口很可能已关闭。 表明端口可能已关闭的一个迹象是，在尝试从远程客户端计算机打开 Web 门户时，看到空白页。 有关配置防火墙的信息，请参阅 [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "67313981"
   
 ## <a name="see-also"></a>另请参阅  
  [管理 Reporting Services 本机模式报表服务器](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
- [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)   
+ [将防火墙配置为允许报表服务器访问](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)   
  [配置本机模式报表服务器以进行本地管理 (SSRS)](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)   
  [配置报表服务器以进行远程管理](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)   
  [Reporting Services Configuration Manager（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  

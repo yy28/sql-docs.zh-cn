@@ -1,5 +1,5 @@
 ---
-title: 行集 |Microsoft Docs
+title: 行集 | Microsoft Docs
 description: 适用于 SQL Server 的 OLE DB 驱动程序中的行集
 ms.custom: ''
 ms.date: 06/14/2018
@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 23d07cd93ada1d1eeae36b4e4ed104906feef88d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015368"
 ---
 # <a name="rowsets"></a>行集
@@ -30,7 +30,7 @@ ms.locfileid: "68015368"
 
   行集是一组包含数据列的行。 行集是使所有 OLE DB 数据访问接口能够以表格形式公开结果集数据的中心对象。  
   
- 使用者使用 IDBCreateSession::CreateSession 方法创建会话之后，该使用者可以对会话使用 IOpenRowset 或 IDBCreateCommand 接口创建行集    。 SQL Server 的 OLE DB 驱动程序支持这两个接口。 下面描述这两种方法。  
+ 使用者使用 IDBCreateSession::CreateSession 方法创建会话之后，该使用者可以对会话使用 IOpenRowset 或 IDBCreateCommand 接口创建行集    。 OLE DB Driver for SQL Server 支持这两个接口。 下面描述这两种方法。  
   
 -   可调用 IOpenRowset::OpenRowset 方法来创建行集  。  
   

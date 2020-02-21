@@ -1,10 +1,9 @@
 ---
-title: 为多个列指定多个搜索条件 | Microsoft Docs
-ms.custom: ''
+title: 为多个列指定多个搜索条件
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,14 @@ helpviewer_keywords:
 ms.assetid: 06617729-0d0b-4da2-9890-b7e2f5cdbc7b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1110e4ae1ca4268af611cbb039af2b148694b552
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 57269ce8ed6c9a63ba846b0287ea9130db409617
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265501"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255003"
 ---
 # <a name="specify-multiple-search-conditions-for-multiple-columns-visual-database-tools"></a>为多个列指定多个搜索条件 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "68265501"
   
 #### <a name="to-specify-an-or-condition-for-two-different-columns"></a>为两个不同的列指定 OR 条件  
   
-1.  在[“条件”窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)中，添加要搜索的列。  
+1.  在 [“条件”窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)中，添加要搜索的列。  
   
 2.  在要搜索的第一个列的“筛选器”  列中，指定第一个条件。  
   
@@ -77,8 +78,8 @@ ms.locfileid: "68265501"
 4.  对每个要添加的其他条件重复第 2 和第 3 步。  
   
 ## <a name="see-also"></a>另请参阅  
-[在 AND 优先时组合条件 (Visual Database Tools)](../../ssms/visual-db-tools/combine-conditions-when-and-has-precedence-visual-database-tools.md)  
-[在 OR 优先时组合条件 (Visual Database Tools)](../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
-[在“条件”窗格中组合搜索条件的约定 (Visual Database Tools)](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
-[指定搜索条件 (Visual Database Tools)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
+[在 AND 优先时合并条件](../../ssms/visual-db-tools/combine-conditions-when-and-has-precedence-visual-database-tools.md)  
+[在 OR 优先时合并条件](../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
+[在“条件”窗格中合并搜索条件的约定](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
+[指定搜索条件](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   

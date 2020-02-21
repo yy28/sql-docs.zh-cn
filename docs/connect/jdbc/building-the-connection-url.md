@@ -1,5 +1,5 @@
 ---
-title: 生成连接 URL |Microsoft Docs
+title: 生成连接 URL | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 18ed8477e6fc7c276db1842dba4f8856629bd29a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028455"
 ---
 # <a name="building-the-connection-url"></a>创建连接 URL
@@ -40,7 +40,7 @@ ms.locfileid: "69028455"
 -   property（可选）是一个或多个选项连接属性  。 有关详细信息，请参阅[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)。 可指定该列表中的任何属性。 属性只能用分号（“;”）分隔，且不允许重复。  
   
 > [!CAUTION]  
->  出于安全考虑，应避免根据用户输入的内容创建连接 URL。 只应在 URL 中指定服务器名称和驱动程序。 对于用户名和密码值，请使用连接属性集。 有关 JDBC 应用程序中安全性的详细信息, 请参阅[保护 jdbc 驱动程序应用程序](../../connect/jdbc/securing-jdbc-driver-applications.md)。  
+>  出于安全考虑，应避免根据用户输入的内容创建连接 URL。 只应在 URL 中指定服务器名称和驱动程序。 对于用户名和密码值，请使用连接属性集。 有关 JDBC 应用程序安全性的详细信息，请参阅[保护 JDBC 驱动程序应用程序](../../connect/jdbc/securing-jdbc-driver-applications.md)。  
   
 ## <a name="connection-examples"></a>连接示例  
  使用用户名和密码连接到本地计算机上的默认数据库：  
@@ -73,7 +73,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
  `jdbc:sqlserver://localhost;databaseName=AdventureWorks;integratedSecurity=true;applicationName=MyApp;`  
   
 ## <a name="named-and-multiple-sql-server-instances"></a>命名的多个 SQL Server 实例  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许在每台服务器上安装多个数据库实例。 每个实例都由一个专用名称所标识。 若要连接到指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，可以使用指定实例的端口号（首选），也可将实例名指定为 JDBC URL 属性或 datasource 属性  。 如果未指定实例名属性或端口号属性，则会创建与默认实例的连接。 请参阅以下示例：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许在每台服务器上安装多个数据库实例。 每个实例都由一个专用名称所标识。 若要连接到指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，可以使用指定实例的端口号（首选），也可将实例名指定为 JDBC URL 属性或 datasource 属性  。 如果未指定实例名属性或端口号属性，则会创建与默认实例的连接。 请看以下示例：  
   
  若要使用端口号，请执行下列操作：  
   
@@ -98,7 +98,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  \<安装目录  >\sqljdbc_\<版本  >\\<语言  >\auth\  
   
- 对于支持[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]的任何操作系统, 请参阅[使用 Kerberos 集成身份验证连接到 SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) , 以获取中[!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]添加的功能的说明, 该功能允许应用程序使用集成的连接到数据库类型 4 Kerberos 的身份验证。  
+ 有关 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支持的任何操作系统，请参阅[使用 Kerberos 集成身份验证连接到 SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) 以了解 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 中新增的一个功能，该功能允许应用程序使用集成身份验证和类型 4 Kerberos 来连接数据库。  
   
 > [!NOTE]  
 >  如果您运行 32 位的 Java 虚拟机 (JVM)，则使用 x86 文件夹中的 sqljdbc_auth.dll 文件，即使操作系统是 x64 版本也不例外。 如果您在 x64 处理器上运行 64 位 JVM，则使用 x64 文件夹中的 sqljdbc_auth.dll 文件。  

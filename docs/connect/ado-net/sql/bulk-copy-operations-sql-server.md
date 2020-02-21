@@ -7,23 +7,23 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 70eed483eb7cb857e23b110b7149badff14ab46f
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: d038b0a67923d7c475011b8f3d141f7d64358f61
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452292"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247862"
 ---
 # <a name="bulk-copy-operations-in-sql-server"></a>SQL Server 中的大容量复制操作
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下载 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Microsoft SQL Server 包含一个名为 bcp 的受欢迎的命令行实用工具，以便将较大文件快速大容量复制到 SQL Server 数据库的表或视图中  。 @No__t_0 类允许编写提供类似功能的托管代码解决方案。 还可通过其他方法将数据加载到 SQL Server 表（例如 INSERT 语句），但 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 可提供显著的性能优势。  
+Microsoft SQL Server 包含一个名为 bcp 的受欢迎的命令行实用工具，以便将较大文件快速大容量复制到 SQL Server 数据库的表或视图中  。 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 类允许你编写可提供类似功能的托管代码解决方案。 还可通过其他方法将数据加载到 SQL Server 表（例如 INSERT 语句），但 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 可提供显著的性能优势。  
   
-使用 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 类，您可以执行以下操作：  
+使用 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 类，你可以执行以下操作：  
   
 - 单次大容量复制操作  
   
@@ -39,13 +39,13 @@ Microsoft SQL Server 包含一个名为 bcp 的受欢迎的命令行实用工具
 介绍用于大容量复制示例的表，并提供用于在 AdventureWorks 数据库中创建表的 SQL 脚本。  
   
 [单次大容量复制操作](single-bulk-copy-operations.md)  
-描述如何使用 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 类将数据批量复制到 SQL Server 的实例，以及如何使用 Transact-sql 语句和 <xref:Microsoft.Data.SqlClient.SqlCommand> 类执行大容量复制操作。  
+介绍如何使用 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 类将单个大容量数据复制到 SQL Server 实例，以及如何使用 Transact-SQL 语句和 <xref:Microsoft.Data.SqlClient.SqlCommand> 类执行大容量复制操作。  
   
 [多次大容量复制操作](multiple-bulk-copy-operations.md)  
-描述如何使用 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 类在 SQL Server 的实例中执行多个大容量复制操作。  
+介绍如何使用 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 类在 SQL Server 的实例中执行多次大容量复制操作。  
   
 [事务和大容量复制操作](transaction-bulk-copy-operations.md)  
-描述如何在事务中执行大容量复制操作，包括如何提交或回滚事务。  
+介绍如何在事务中执行大容量复制操作，包括如何提交或回滚事务。  
   
 ## <a name="next-steps"></a>后续步骤
 - [SQL Server 和 ADO.NET](index.md)

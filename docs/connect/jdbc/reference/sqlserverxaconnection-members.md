@@ -1,5 +1,5 @@
 ---
-title: SQLServerXAConnection 成员 |Microsoft Docs
+title: SQLServerXAConnection 成员 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 4b61dabd-369b-460c-8450-9fe424f76541
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 85d106ad25c1823f873ade24800e44987d78a2f7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970253"
 ---
 # <a name="sqlserverxaconnection-members"></a>SQLServerXAConnection 成员
@@ -33,7 +33,7 @@ ms.locfileid: "67970253"
   
 ## <a name="methods"></a>方法  
   
-|“属性”|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |[addConnectionEventListener](../../../connect/jdbc/reference/addconnectioneventlistener-method-sqlserverpooledconnection.md)|（继承自 [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)）注册给定的事件侦听器，以便在此 Connection 对象发生事件时通知该侦听器。|  
 |[close](../../../connect/jdbc/reference/close-method-sqlserverpooledconnection.md)|（继承自 [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)）关闭此 Connection 对象表示的物理连接。|  

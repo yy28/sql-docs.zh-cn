@@ -15,10 +15,10 @@ ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ca402d8170c9954f8a85e3b439e14d1d3644d9bb
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593471"
 ---
 # <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>SSRS 加密密钥 - 存储加密的报表服务器数据
@@ -52,7 +52,7 @@ ms.locfileid: "73593471"
   
  在多个报表服务器实例共享同一个报表服务器数据库的报表服务器扩展部署中，所有报表服务器节点都使用一个对称密钥。 每个节点必须具有一个共享对称密钥的副本。 配置扩展部署时，将为每个节点自动创建一个对称密钥副本。 每个节点都使用 Windows 服务帐户专有密钥对的公钥来加密对称密钥的副本。 若要详细了解如何为单个实例和扩展部署创建对称密钥，请参阅[初始化报表服务器（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)。  
  
- 此外，从2019开始，可以在 SQL Server 中透明数据加密配置 Report Server 数据库，以便为静态数据提供额外的保护。
+ 此外，自 2019 年起，还可以在 SQL Server 中为报表服务器数据库配置透明数据加密，以便为静态数据提供额外的保护。
   
 > [!NOTE]  
 >  如果更改 Report Server Windows 服务帐户，则非对称密钥将变为无效，从而中断服务器操作。 为了避免此类故障，请始终使用 Reporting Services 配置工具来修改服务帐户设置。 使用配置工具时，密钥会自动更新。 有关详细信息，请参阅 [配置报表服务器服务帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。  

@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7b24d5499e618a09c4d80e8614b08219e6c6f788
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73706758"
 ---
 # <a name="revoscaler-r-library-in-sql-server"></a>RevoScaleR（SQL Server 中的 R 库）
@@ -53,7 +53,7 @@ RevoScaleR 包含用于创建数据源和设置执行计算的位置或计算上
 
 在某些情况下，SQL Server 和 R 使用不同的数据类型。 有关 SQL 和 R 数据类型之间的映射的列表，请参阅 [R 到 SQL 数据类型](r-libraries-and-data-types.md)。
 
-| 函数| 描述|
+| 函数| 说明|
 | ------- | ---------- |
 | [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) |  创建 SQL Server 计算上下文对象以将计算推送到远程实例。 好几个 RevoScaleR 函数都将计算上下文作为参数  。 |
 |[rxGetComputeContext/rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) | 获取或设置活动计算上下文。 |
@@ -68,7 +68,7 @@ RevoScaleR 包含用于创建数据源和设置执行计算的位置或计算上
 
 如果你在实例和数据库上具有所需的权限，则还可以从 R 执行 DDL 语句。 以下函数使用 ODBC 调用执行 DDL 语句或检索数据库架构。
 
-| 函数| 描述|
+| 函数| 说明|
 | ------- | ---------- |
 | [rxSqlServerTableExists 和 rxSqlServerDropTable](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable) | 删除 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 表，或检查是否存在某个数据库表或对象。 |
 | [rxExecuteSQLDDL](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexecutesqlddl) | 执行定义或操作数据库对象的数据定义语言 (DDL) 命令。 此函数无法返回数据，仅用于检索或修改对象架构或元数据。|
@@ -77,7 +77,7 @@ RevoScaleR 包含用于创建数据源和设置执行计算的位置或计算上
 
 创建数据源对象后，可使用该对象将数据加载到其中，转换数据或将新数据写入指定目标。 你还可以根据源中的数据大小将批大小定义为数据源的一部分，并成块移动数据。
 
-| 函数 | 描述 |
+| 函数 | 说明 |
 |----------|-------------|
 | [rxOpen-methods](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxopen-methods) | 检查数据源是否可用、打开或关闭数据源、从源读取数据、向目标写入数据以及关闭数据源。|
 | [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) | 将数据从数据源移动到文件存储或数据帧中。|
@@ -87,7 +87,7 @@ RevoScaleR 包含用于创建数据源和设置执行计算的位置或计算上
 
 ## <a name="3-graphing-functions"></a>3 绘图函数
 
-| 函数名称 | 描述 |
+| 函数名称 | 说明 |
 |---------------|-------------|
 |[rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)  |使用数据创建直方图。 | 
 |[rxLinePlot](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlineplot) |使用数据创建线图。 | 
@@ -98,7 +98,7 @@ RevoScaleR 包含用于创建数据源和设置执行计算的位置或计算上
 
 ## <a name="4-descriptive-statistics"></a>4 描述性统计信息
 
-| 函数名称 | 描述 |
+| 函数名称 | 说明 |
 |---------------|-------------|
 |[rxQuantile](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxquantile) <sup>*</sup> |计算 .xdf 文件和数据帧的近似分位数，但不排序。 | 
 |[rxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary) <sup>*</sup> |数据的基本摘要统计信息，包括按组进行的计算。 不支持将按组进行的计算写入 .xdf 文件。 | 
@@ -113,13 +113,13 @@ RevoScaleR 包含用于创建数据源和设置执行计算的位置或计算上
 |[rxRiskRatio](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxriskratio)  |计算 xtab 对象两两组合的相对风险。 | 
 |[rxOddsRatio](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxriskratio)  |计算 xtab 对象两两组合的比值比。 | 
 
-<sup>* </sup> 表示该类别中最受欢迎的函数。
+<sup>*</sup> 表示该类别中最受欢迎的函数。
 
 <a name="prediction-functions"></a>
 
 ## <a name="5-prediction-functions"></a>5 预测函数
 
-| 函数名称 | 描述 |
+| 函数名称 | 说明 |
 |---------------|-------------|
 |[rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) <sup>*</sup> |调整线性模型以适应数据。 | 
 |[rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) <sup>*</sup> |调整逻辑回归模型以适应数据。 | 
@@ -136,7 +136,7 @@ RevoScaleR 包含用于创建数据源和设置执行计算的位置或计算上
 |[rxSSCP](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcovcor)  |计算一组变量的平方和/叉积矩阵。 | 
 |[rxRoc](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxroc)  |使用二进制分类器系统中的实际值和预测值计算接收器操作特征 (ROC) | 
 
-<sup>* </sup> 表示该类别中最受欢迎的函数。
+<sup>*</sup> 表示该类别中最受欢迎的函数。
 
 
 ## <a name="how-to-work-with-revoscaler"></a>如何使用 RevoScaleR

@@ -1,22 +1,22 @@
 ---
-title: 使用 SQL Server Management Studio (SSMS) 连接和查询 SQL Server 实例
+title: 连接和查询 SQL Server 实例
 description: 有关使用 SQL Server Management Studio 连接到 SQL Server 实例和运行基本 T-SQL 查询的教程。
 keywords: SQL Server, SSMS, SQL Server Management Studio
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: sstein
+author: markingmyname
+ms.author: maghan
+ms.reviewer: sstein; maghan
 ms.topic: quickstart
 ms.prod_service: sql-tools
 ms.prod: sql
 ms.technology: ssms
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: eaf544085bfe6040bdf9f54300eb733ee4fd92f0
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: c1d13b939dc0846c88e9bd05a1384d259c3f911c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708334"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76162646"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>教程：使用 SQL Server Management Studio (SSMS) 连接和查询 SQL Server 实例
 
@@ -109,7 +109,7 @@ ms.locfileid: "71708334"
    ![更改数据库](media/connect-query-sql-server/changedb.png)
 
 2. 将以下 T-SQL 代码片段粘贴到查询窗口，选择它，再选择“执行”（或选择键盘上的 F5）。   
-   可在查询窗口中替换现有文本或将其追加到末尾。 若要在查询窗口中执行所有文本，请选择“执行”  。 如果追加了文本，仅需执行部分文本，因此突出显示该部分，然后选择“执行”  。  
+   可在查询窗口中替换现有文本或将其追加到末尾。 若要在查询窗口中执行所有文本，请选择“执行”  。 如果已追加文本，不妨只执行部分文本，因此请突出显示相应部分，然后选择“执行”  。  
   
    ```sql
    USE [TutorialDB]
@@ -195,11 +195,16 @@ ms.locfileid: "71708334"
     > [!NOTE]
     > 此操作仅更改查询窗口连接到的服务器，而不更改对象资源管理器使用的服务器。
 
+## <a name="azure-data-studio"></a>Azure Data Studio
+
+也可以使用 Azure Data Studio 连接和查询 [SQL Server](../../azure-data-studio/quickstart-sql-server.md)、[Azure SQL 数据库](../../azure-data-studio/quickstart-sql-database.md)和 [Azure SQL 数据仓库](../../azure-data-studio/quickstart-sql-dw.md)。
+
 ## <a name="next-steps"></a>后续步骤
 
-熟悉 SSMS 的最好方式是进行实践演练。 这些文章可帮助你使用 SSMS 的各种功能。  这些文章教你如何管理 SSMS 组件，以及如何查找常用功能。
+熟悉 SSMS 的最好方式是进行实践演练。 这些文章可帮助你使用 SSMS 的各种功能。 这些文章教你如何管理 SSMS 组件，以及如何查找常用功能。
 
 * [脚本](scripting-ssms.md)
 * [在 SSMS 中使用模板](../template/templates-ssms.md)
 * [SSMS 配置](ssms-configuration.md)
 * [使用 SSMS 的其他提示和技巧](ssms-tricks.md)
+* [Azure Data Studio](../../azure-data-studio/download.md)

@@ -1,5 +1,5 @@
 ---
-title: JDBC 驱动程序入门 |Microsoft Docs
+title: JDBC 驱动程序入门 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 5f4c5d0d-c8d9-48e6-b0a5-56d308140c51
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c9e116ad3a3804642a32c1d2d0e19fb2777da946
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028051"
 ---
 # <a name="getting-started-with-the-jdbc-driver"></a>JDBC 驱动程序入门

@@ -12,10 +12,10 @@ ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3b26db3656ee548e08f9e5d4737033bb3393a969
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593875"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>启用远程错误 (Reporting Services)
@@ -46,7 +46,7 @@ ms.locfileid: "73593875"
   
 5.  在 **“安全性”** 部分，单击 **“启用远程错误”** 。  
   
-6.  单击“确定”  。  
+6.  单击“确定”。   
   
 #### <a name="enable-remote-errors-for-a-sharepoint-site"></a>为 SharePoint 站点启用远程错误  
   
@@ -58,7 +58,7 @@ ms.locfileid: "73593875"
   
 4.  单击 **“启用本地模式下的远程错误”** 。  
   
-5.  单击 **“确定”** 。  
+5.  单击 **“确定”**  
   
 ##  <a name="bkmk_mgtStudio"></a> 通过 SQL Server Management Studio 启用远程错误（本机模式）  
   
@@ -68,7 +68,7 @@ ms.locfileid: "73593875"
   
 3.  单击 **“高级”** 以打开属性页。 有关详细信息，请参阅[服务器属性（“高级”页）- Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md)。  
   
-4.  在 "**安全性**" 部分的**EnableRemoteErrors**中，选择 " **True**"。  
+4.  在“安全”  部分的“EnableRemoteErrors”  中，选择“True”  。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

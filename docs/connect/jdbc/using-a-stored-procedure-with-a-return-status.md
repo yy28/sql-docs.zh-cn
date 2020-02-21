@@ -11,10 +11,10 @@ ms.assetid: 4b126e95-8458-41d6-af37-fc6662859f19
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b5b5425dcc88a3f4a2b5bc24c85ab41beb04bb48
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027114"
 ---
 # <a name="using-a-stored-procedure-with-a-return-status"></a>使用含返回状态的存储过程
@@ -28,7 +28,7 @@ ms.locfileid: "69027114"
 `{[?=]call procedure-name[([parameter][,[parameter]]...)]}`
 
 > [!NOTE]  
-> 有关 SQL 转义序列的详细信息, 请参阅[使用 sql 转义序列](../../connect/jdbc/using-sql-escape-sequences.md)。
+> 若要详细了解 SQL 转义序列，请参阅[使用 SQL 转义序列](../../connect/jdbc/using-sql-escape-sequences.md)。
 
 构造 `call` 转义序列时，请使用 ?（问号）字符 来指定 IN 参数。 此字符充当要从该存储过程返回的参数值的占位符。 要为返回状态参数指定值，必须在执行存储过程前使用 SQLServerCallableStatement 类的 [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) 方法指定参数的数据类型。
 

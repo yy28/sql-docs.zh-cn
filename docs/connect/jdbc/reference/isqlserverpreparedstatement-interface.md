@@ -1,5 +1,5 @@
 ---
-title: ISQLServerPreparedStatement 接口 |Microsoft Docs
+title: ISQLServerPreparedStatement 接口 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: cf87892e-5c34-4ac6-8258-c2a81e117b26
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 05fda4ea42c1819f3cbb4f16fcc7f02da2a06b8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977432"
 ---
 # <a name="isqlserverpreparedstatement-interface"></a>ISQLServerPreparedStatement 接口
@@ -33,8 +33,8 @@ ms.locfileid: "67977432"
 public interface ISQLServerPreparedStatement  
 ```  
   
-## <a name="remarks"></a>Remarks  
- 此接口由[SQLServerPreparedStatement 类](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)实现。  
+## <a name="remarks"></a>备注  
+ 此接口是由 [SQLServerPreparedStatement 类](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)实现的。  
   
  此接口公开以下 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 特定的方法：  
   

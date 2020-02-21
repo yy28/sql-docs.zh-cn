@@ -11,10 +11,10 @@ ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6dad85f35be1d7fb26f4c9eef6241e01baadb692
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67492816"
 ---
 # <a name="create-a-linked-report"></a>创建链接报表
@@ -28,17 +28,17 @@ ms.locfileid: "67492816"
   
 ## <a name="to-create-a-linked-report"></a>创建链接报表  
   
-1. 在 web 门户中，导航到所需的报表，右键单击它并选择**管理**从下拉列表菜单。
+1. 在 Web 门户中，导航到所需的报表，右键单击该报表，然后从下拉菜单中选择“管理”  。
 
-2. 上**管理<reportname>** 页上，选择**创建链接的报表**。  
+2. 在“管理” **<reportname>** 页上，选择“创建链接报表”  。  
   
-3. 输入新链接报表的名称。 输入可选说明。  
+3. 输入新链接报表的名称。 （可选）输入说明。  
   
-4. 若要选择不同的报表的文件夹，选择右侧的省略号按钮 （...）***位置***。  导航到新文件夹的报表并选择**选择**。 如果不选择其他文件夹，在当前文件夹中创建链接的报表。  
+4. 若要为报表选择不同的文件夹，请选择“位置”右侧的省略号按钮 (...)。  导航到报表的新文件夹，然后选择“选择”  。 如果没有选择不同的文件夹，则将在当前文件夹中创建链接报表。  
   
-5. 选择“创建”  。 创建链接的报表。  
+5. 选择“创建”  。 将创建链接报表。  
 
-6. 下**高级**，选择不同**报表超时**如果需要，则值为，然后选择**应用**以保存所做的更改。
+6. 在“高级”  下，根据需要选择不同的“报表超时”  值，然后选择“应用”  以保存更改。
   
      链接报表的图标与报表服务器管理的其他项不同。 下面的图标表示链接报表：  
   

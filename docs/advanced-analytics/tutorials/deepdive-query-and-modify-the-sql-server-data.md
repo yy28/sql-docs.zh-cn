@@ -1,6 +1,6 @@
 ---
 title: 使用 RevoScaleR 修改 SQL 数据
-description: 有关如何使用 SQL Server 上的 R 语言查询和修改数据的教程演练。
+description: RevoScaleR 教程 3：如何使用 SQL Server 上的 R 语言查询和修改数据。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 65db15d8c6778723ff04f82cde985c4827813339
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 48802f815515948c957c718e4bf666b0d7133670
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727184"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947063"
 ---
 # <a name="query-and-modify-the-sql-server-data-sql-server-and-revoscaler-tutorial"></a>查询和修改 SQL Server 数据（SQL Server 和 RevoScaleR 教程）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本课程属于 [RevoScaleR 教程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)，该教程介绍如何在 SQL Server 中使用 [RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)。
+这是 [RevoScaleR 教程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的第 3 个教程，介绍如何在 SQL Server 中使用 [RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)。
 
-在上一课程中，已将数据加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中。 在此步骤中，可以使用 RevoScaleR 浏览和修改数据  ：
+在上一教程中，已将数据加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中。 在本教程中，可以使用 RevoScaleR 浏览和修改数据  ：
 
 > [!div class="checklist"]
 > * 返回有关变量的基本信息

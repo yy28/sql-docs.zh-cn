@@ -11,10 +11,10 @@ ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 007427739f91a12ea6603bbf58450821d2c999ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66500405"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>更改默认 Reporting Services 传递扩展插件
@@ -27,7 +27,7 @@ ms.locfileid: "66500405"
 ## <a name="default-native-mode-report-server-configuration"></a>默认的本机模式报表服务器配置  
  报表管理器的“传递方式”  列表中传递扩展插件的显示顺序取决于 **RSReportServer.config** 文件中传递扩展插件项的顺序。 例如，下图显示列表中最先显示的是“电子邮件”，并且它默认处于选中状态。  
   
- ![传递扩展插件的默认列表](../../reporting-services/subscriptions/media/ssrs-default-delivery.png "default list of delivery extensions")  
+ ![传递扩展插件的默认列表](../../reporting-services/subscriptions/media/ssrs-default-delivery.png "传递扩展插件的默认列表")  
   
  以下是 **RSReportServer.config** 的默认部分，用于控制默认传递扩展插件及其在报表管理器中的显示顺序。 请注意，“电子邮件”最先显示在该文件中，并且已设置为默认项。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66500405"
   
      在文本编辑器中打开 RSReportServer.config 文件。 有关配置文件的详细信息，请参阅 [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)。 更改该配置后，UI 的外观将类似于下图：  
   
-     ![修改后的传递扩展插件的列表](../../reporting-services/subscriptions/media/ssrs-modified-delivery.png "modified list of delivery extensions")  
+     ![修改后的传递扩展插件的列表](../../reporting-services/subscriptions/media/ssrs-modified-delivery.png "修改后的传递扩展插件的列表")  
   
 2.  将 DeliveryUI 部分修改为如以下示例所示，并注意关键更改：  
   
@@ -77,7 +77,7 @@ ms.locfileid: "66500405"
     </DeliveryUI>  
     ```  
   
-3.  保存配置文件。  
+3.  保存此配置文件。  
   
 4.  报表服务器将在几分钟内重新加载该配置文件，随后新设置将生效。 你可以重新启动报表服务器服务，以强制加载配置文件。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "66500405"
   
 ## <a name="see-also"></a>另请参阅  
  [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+ [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Reporting Services 中的文件共享传递](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
  [Reporting Services 中的电子邮件传递](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
 

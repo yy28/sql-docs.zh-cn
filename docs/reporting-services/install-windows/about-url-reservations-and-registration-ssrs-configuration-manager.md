@@ -1,8 +1,10 @@
 ---
-title: 关于 URL 预留和注册（SSRS 配置管理器）| Microsoft Docs
-ms.date: 06/20/2019
+title: URL 预留和注册 (Configuration Manager)| Microsoft Docs
+description: Reporting Services 应用程序的 URL 在 HTTP.SYS 中定义为 URL 预留。
+ms.date: 01/16/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
@@ -11,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dba8913c5aa5fa0aa8d93dd1c4dd639f85ac3081
-ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
-ms.translationtype: MTE75
+ms.openlocfilehash: 64c458b703d740fa50ff7bcdd6fce20752e6746a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67314040"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76259330"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>关于 URL 预留和注册（SSRS 配置管理器）
   Reporting Services 应用程序的 URL 在 HTTP.SYS 中定义为 URL 预留。 URL 预留定义了指向 Web 应用程序的 URL 端点的语法。 在报表服务器上配置应用程序时，URL 预留是同时针对报表服务器 Web 服务和 Web 门户进行定义。 通过安装程序或 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具配置 URL 时，会自动为你创建 URL 预留：  
@@ -55,7 +57,7 @@ ms.locfileid: "67314040"
   
  下面几个简单的示例说明了 URL 预留的概念以及它与用于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序的 URL 地址之间的关联。 需要注意一个关键点，即 URL 预留与用于访问应用程序的 URL 具有不同的语法：  
   
-|HTTP.SYS 中的 URL 预留|URL|解释|  
+|HTTP.SYS 中的 URL 预留|代码|说明|  
 |---------------------------------|---------|-----------------|  
 |`https://+:80/reportserver`|`https://<computername>/reportserver`<br /><br /> `https://<IPAddress>/reportserver`<br /><br /> `https://localhost/reportserver`|此 URL 预留针对端口 80 指定了一个通配符 (+)。 这会将指定主机（在端口 80 上解析为报表服务器计算机）的任何传入请求放入报表服务器队列中。 请注意，借助此 URL 预留，可以使用任意数目的 URL 访问报表服务器。<br /><br /> 对于大多数操作系统而言，这是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器的默认 URL 预留。|  
 |`https://123.45.67.0:80/reportserver`|`https://123.45.67.0/reportserver`|此 URL 预留指定了一个 IP 地址，与通配符 URL 预留相比，其限制性要强很多。 只能使用包含此 IP 地址的 URL 连接到报表服务器。 给定此 URL 预留，对 `https://<computername>/reportserver` 或 `https://localhost/reportserver` 的报表服务器请求将失败。|  
@@ -82,8 +84,8 @@ ms.locfileid: "67314040"
   
 |实例类型|应用程序|默认 URL|HTTP.SYS 中的实际 URL 预留|  
 |-------------------|-----------------|-----------------|----------------------------------------|  
-|默认实例|报表服务器 Web 服务|`https://\<servername>/reportserver`|`https://<servername>:80/reportserver`|  
-|默认实例|Web 门户|`https://<servername>/reportserver`|`https://<servername>:80/reportserver`|  
+|默认实例|报表服务器 Web 服务|`https://<servername>/reportserver`|`https://<servername>:80/reportserver`|  
+|默认实例|Web 门户|`https://<servername>/reports`|`https://<servername>:80/reports`|  
 |命名实例|报表服务器 Web 服务|`https://<servername>/reportserver_<instancename>`|`https://<servername>:80/reportserver_<instancename>`|  
 |命名实例|Web 门户|`https://<servername>/reports_<instancename>`|`https://<servername>:80/reports_<instancename>`|  
 |SQL Server Express|报表服务器 Web 服务|`https://<servername>/reportserver_SQLExpress`|`https://<servername>:80/reportserver_SQLExpress`|  

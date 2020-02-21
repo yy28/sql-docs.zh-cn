@@ -1,5 +1,5 @@
 ---
-title: 使用 SQL 转义序列 |Microsoft Docs
+title: 使用 SQL 转义序列 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: da2ae6b5353448d5281910d94aeef05ee0999c6a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025896"
 ---
 # <a name="using-sql-escape-sequences"></a>使用 SQL 转义序列
@@ -71,7 +71,7 @@ SELECT {fn UCASE(Name)} FROM Employee
   
 | 字符串函数                                                                                                                                                                                                                                                                                                                        | 数值函数                                                                                                                                                                                                                                                                                                                                                                                                   | 日期时间函数                                                                                                                                                                                                                                                                                                                                             | 系统函数                             |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
-| ASCII<br /><br /> CHAR<br /><br /> CONCAT<br /><br /> DIFFERENCE<br /><br /> Insert<br /><br /> LCASE<br /><br /> LEFT<br /><br /> LENGTH<br /><br /> LOCATE<br /><br /> LTRIM<br /><br /> REPEAT<br /><br /> REPLACE<br /><br /> RIGHT<br /><br /> RTRIM<br /><br /> SOUNDEX<br /><br /> SPACE<br /><br /> SUBSTRING<br /><br /> UCASE | ABS<br /><br /> ACOS<br /><br /> ASIN<br /><br /> ATAN<br /><br /> ATAN2<br /><br /> CEILING<br /><br /> COS<br /><br /> COT<br /><br /> DEGREES<br /><br /> EXP<br /><br /> FLOOR<br /><br /> LOG<br /><br /> LOG10<br /><br /> MOD<br /><br /> PI<br /><br /> POWER<br /><br /> RADIANS<br /><br /> RAND<br /><br /> ROUND<br /><br /> SIGN<br /><br /> SIN<br /><br /> SQRT<br /><br /> TAN<br /><br /> TRUNCATE | CURDATE<br /><br /> CURTIME<br /><br /> DAYNAME<br /><br /> DAYOFMONTH<br /><br /> DAYOFWEEK<br /><br /> DAYOFYEAR<br /><br /> EXTRACT<br /><br /> HOUR<br /><br /> MINUTE<br /><br /> MONTH<br /><br /> MONTHNAME<br /><br /> NOW<br /><br /> QUARTER<br /><br /> SECOND<br /><br /> TIMESTAMPADD<br /><br /> TIMESTAMPDIFF<br /><br /> WEEK<br /><br /> YEAR | DATABASE<br /><br /> IFNULL<br /><br /> User |
+| ASCII<br /><br /> CHAR<br /><br /> CONCAT<br /><br /> DIFFERENCE<br /><br /> INSERT<br /><br /> LCASE<br /><br /> LEFT<br /><br /> LENGTH<br /><br /> LOCATE<br /><br /> LTRIM<br /><br /> REPEAT<br /><br /> REPLACE<br /><br /> RIGHT<br /><br /> RTRIM<br /><br /> SOUNDEX<br /><br /> SPACE<br /><br /> SUBSTRING<br /><br /> UCASE | ABS<br /><br /> ACOS<br /><br /> ASIN<br /><br /> ATAN<br /><br /> ATAN2<br /><br /> CEILING<br /><br /> COS<br /><br /> COT<br /><br /> DEGREES<br /><br /> EXP<br /><br /> FLOOR<br /><br /> 日志<br /><br /> LOG10<br /><br /> MOD<br /><br /> PI<br /><br /> POWER<br /><br /> RADIANS<br /><br /> RAND<br /><br /> ROUND<br /><br /> SIGN<br /><br /> SIN<br /><br /> SQRT<br /><br /> TAN<br /><br /> TRUNCATE | CURDATE<br /><br /> CURTIME<br /><br /> DAYNAME<br /><br /> DAYOFMONTH<br /><br /> DAYOFWEEK<br /><br /> DAYOFYEAR<br /><br /> EXTRACT<br /><br /> HOUR<br /><br /> MINUTE<br /><br /> 月<br /><br /> MONTHNAME<br /><br /> NOW<br /><br /> QUARTER<br /><br /> SECOND<br /><br /> TIMESTAMPADD<br /><br /> TIMESTAMPDIFF<br /><br /> WEEK<br /><br /> 年 | DATABASE<br /><br /> IFNULL<br /><br /> USER |
 
 > [!NOTE]  
 > 如果您试图使用数据库不支持的函数，则将发生错误。  
@@ -86,10 +86,10 @@ SELECT {fn UCASE(Name)} FROM Employee
 
 其中，`literal-type` 为以下值之一：  
   
-| 文本类型 | 描述 | 值格式               |
+| 文本类型 | 说明 | 值格式               |
 | ------------ | ----------- | -------------------------- |
-| d            | date        | yyyy-mm-dd                 |
-| t            | Time        | hh:mm:ss [1]               |
+| d            | Date        | yyyy-mm-dd                 |
+| t            | 时间        | hh:mm:ss [1]               |
 | ts           | TimeStamp   | yyyy-mm-dd hh:mm:ss[.f...] |
   
 例如：  
@@ -111,7 +111,7 @@ JDBC 驱动程序对于存储过程调用支持 `{? = call proc_name(?,...)}` �
 
 其中，`procedure-name` 指定存储过程的名称，`parameter` 指定存储过程参数。  
   
-有关将`call`转义序列用于存储过程的详细信息, 请参阅[对存储过程使用语句](../../connect/jdbc/using-statements-with-stored-procedures.md)。  
+有关将 `call` 转义序列用于存储过程的详细信息，请参阅[结合使用语句和存储过程](../../connect/jdbc/using-statements-with-stored-procedures.md)。  
 
 ## <a name="outer-joins"></a>外部联接
 

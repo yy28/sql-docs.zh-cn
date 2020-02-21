@@ -1,5 +1,5 @@
 ---
-title: 集成的 Kerberos 身份验证 (OLE DB) |Microsoft Docs
+title: 集成的 Kerberos 身份验证 (OLE DB) | Microsoft Docs
 description: 集成的 Kerberos 身份验证 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 9829c7857ec86c7a1f623691c04b0dd0ac62bafe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994764"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>集成的 Kerberos 身份验证 (OLE DB)
@@ -22,7 +22,7 @@ ms.locfileid: "67994764"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  此示例演示如何在 SQL Server 的 OLE DB 驱动程序中使用 OLE DB 获取相互 Kerberos 身份验证。 此示例适用于 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 或更高版本。  
+  此示例显示如何使用 OLE DB Driver for SQL Server 中的 OLE DB 获得 Kerberos 相互身份验证。 此示例适用于 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 或更高版本。  
   
  有关 SPN 和 Kerberos 身份验证的详细信息，请参阅[客户端连接中的服务主体名称 (SPN) 支持](../../oledb/features/service-principal-name-spn-support-in-client-connections.md)。  
   

@@ -1,10 +1,9 @@
 ---
-title: 放弃对查询所做的更改 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 放弃对查询所做的更改
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,14 @@ helpviewer_keywords:
 ms.assetid: 7bb17ece-1222-4622-b476-5789d7641c64
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cb5db1e50e23772219bd7cd822d8e04615b13a29
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 1739a1a7d3fa42ccd0df4ba80bf6961b4e58ca08
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263761"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254641"
 ---
 # <a name="discard-changes-made-to-queries-visual-database-tools"></a>放弃对查询所做的更改 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,8 +38,8 @@ ms.locfileid: "68263761"
     查询定义将返回到上次保存时的状态。  
   
 ## <a name="see-also"></a>另请参阅  
-[保存查询 (Visual Database Tools)](../../ssms/visual-db-tools/save-queries-visual-database-tools.md)  
-[设计查询和视图操作指南主题 (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-[执行基本的查询操作 (Visual Database Tools)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
-[使用“结果”窗格中的数据 (Visual Database Tools)](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
+[保存查询](../../ssms/visual-db-tools/save-queries-visual-database-tools.md)  
+[设计查询和查看操作说明主题](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[执行基本的查询操作](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[使用“结果”窗格中的数据](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
   

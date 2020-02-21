@@ -5,18 +5,18 @@ description: 了解如何在 Active Directory 域中升级 SQL Server 大数据�
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 11/13/2019
+ms.date: 12/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 40b1101d9ee6c57db865282d1556f96aa4311a1f
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.openlocfilehash: e47af4ef20bc3dac6c61b9c5f851822348d36650
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74127448"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253111"
 ---
-# <a name="deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-active-directory-mode"></a>在 Active Directory 模式下部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>在 Active Directory 模式下部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -109,7 +109,7 @@ BDC 域服务帐户 (DSA) 需要能够在 OU 中创建用户、组和计算机�
        - “创建用户对象” 
        - “删除用户对象” 
 
-    - 单击 **“确定”** 。
+    - 单击 **“确定”**
 
 - 单击“添加” 
 
@@ -123,7 +123,7 @@ BDC 域服务帐户 (DSA) 需要能够在 OU 中创建用户、组和计算机�
 
     - 滚动回到顶部，然后选择“重置密码” 
 
-    - 单击 **“确定”** 。
+    - 单击 **“确定”**
 
 - 单击“添加” 
 
@@ -137,7 +137,7 @@ BDC 域服务帐户 (DSA) 需要能够在 OU 中创建用户、组和计算机�
 
     - 滚动回到顶部，然后选择“重置密码” 
 
-    - 单击 **“确定”** 。
+    - 单击 **“确定”**
 
 - 再单击“确定”两次以关闭打开的对话框 
 
@@ -168,19 +168,22 @@ AD 集成需要以下参数。 使用本文后面显示的 `config replace` 命�
 
 - `security.dnsIpAddresses`：域控制器的 IP 地址列表
 
-- `security.domainControllerFullyQualifiedDns`设置用户帐户 ：域控制器的 FQDN 列表。 FQDN 包含域控制器的计算机/主机名。 如果有多个域控制器，可以在此处提供列表。 例如：`HOSTNAME.CONTOSO.LOCAL`
+- `security.domainControllerFullyQualifiedDns`设置用户帐户 ：域控制器的 FQDN 列表。 FQDN 包含域控制器的计算机/主机名。 如果有多个域控制器，可以在此处提供列表。 示例： `HOSTNAME.CONTOSO.LOCAL`
 
 - `security.realm` 可选参数  ：大多数情况下，领域等同于域名。 对于领域不同于域名的情况，请使用此参数定义领域名称（例如 `CONTOSO.LOCAL`）。
 
 - `security.domainDnsName`设置用户帐户 ：域的名称（例如 `contoso.local`）。
 
-- `security.clusterAdmins`设置用户帐户 ：此参数采用 *one- AD 组。 此组的成员将在群集中获得管理员权限。 这意味着他们将在 SQL Server 中具有 sysadmin 权限、在 HDFS 中具有超级用户权限、在控制器中具有管理员权限。
+- `security.clusterAdmins`设置用户帐户 ：此参数采用一个 AD 组  。 此组的成员将在群集中获得管理员权限。 这意味着他们将在 SQL Server 中具有 sysadmin 权限、在 HDFS 中具有超级用户权限、在控制器中具有管理员权限。 **请注意，在部署开始之前，此组需要存在于 AD 中。另请注意，在 Active Directory 中不能将此组的作用域设置为 DomainLocal。域本地作用域组将导致部署失败。**
 
-- `security.clusterUsers`设置用户帐户 ：大数据群集中常规用户（无管理员权限）的 AD 组列表。
+- `security.clusterUsers`设置用户帐户 ：大数据群集中常规用户（无管理员权限）的 AD 组列表。 **请注意，在部署开始之前，这些组需要存在于 AD 中。另请注意，在 Active Directory 中不能将这些组的作用域设置为 DomainLocal。域本地作用域组将导致部署失败。**
 
-- `security.appOwners` 可选参数  ：有权创建、删除和运行任何应用程序的 AD 组列表。
+- `security.appOwners` 可选参数  ：有权创建、删除和运行任何应用程序的 AD 组列表。 **请注意，在部署开始之前，这些组需要存在于 AD 中。另请注意，在 Active Directory 中不能将这些组的作用域设置为 DomainLocal。域本地作用域组将导致部署失败。**
 
-- `security.appReaders` 可选参数：有权运行任何应用程序的 AD 用户或组的列表  。 
+- `security.appReaders` 可选参数：有权运行任何应用程序的 AD 组的列表  。 **请注意，在部署开始之前，这些组需要存在于 AD 中。另请注意，在 Active Directory 中不能将这些组的作用域设置为 DomainLocal。域本地作用域组将导致部署失败。**
+
+**如何查看 AD 组作用域：** 
+[单击此处获取说明](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps)，以便查看 AD 组作用域以及确定其是否为 DomainLocal.
 
 如果尚未初始化部署配置文件，则可以运行此命令来获取配置的副本。
 
@@ -199,6 +202,7 @@ azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.dom
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.domainDnsName=contoso.local"
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterAdmins=[\"bdcadminsgroup\"]"
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterUsers=[\"bdcusersgroup\"]"
+#Example for providing multiple clusterUser groups: [\"bdcusergroup1\",\"bdcusergroup2\"]
 ```
 
 除了上述信息之外，还需要提供不同群集终结点的 DNS 名称。 在部署时，将自动在 DNS 服务器中创建使用提供的 DNS 名称的 DNS 条目。 在连接到不同群集终结点时，将使用这些名称。 例如，如果 SQL 主实例的 DNS 名称是 `mastersql`，则将使用 `mastersql.contoso.local,31433` 从工具连接到主实例。
@@ -293,3 +297,5 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 - 安全 AD 模式现在仅适用于 `kubeadm` 部署环境，而不适用于 AKS。 默认情况下，`kubeadm-prod` 部署配置文件包含安全部分。
 
 - 目前，每个域只能使用一个 BDC。 计划在将来的版本中对每个域启用多个 BDC。
+
+- 无法将安全配置中指定的任何 AD 组的作用域设置为 DomainLocal。 可以按照[这些说明](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps)来查看 AD 组的作用域。

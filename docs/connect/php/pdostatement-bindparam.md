@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cd3332f9dc12d1cf7df22c097ab9370606985a68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 77b0899d6bc0a73db5e0cfa7794209ab74ed25ef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67936156"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76918657"
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,22 +29,22 @@ ms.locfileid: "67936156"
 bool PDOStatement::bindParam($parameter, &$variable[, $data_type[, $length[, $driver_options]]]);  
 ```  
   
-#### <a name="parameters"></a>Parameters  
-$parameter：（混合）参数标识符  。 对于使用命名占位符的语句，使用参数名 (:name)。 对于使用问号语法的已准备的语句，为基于 1 的参数索引。  
+#### <a name="parameters"></a>parameters  
+$parameter：（混合）参数标识符。 对于使用命名占位符的语句，使用参数名 (:name)。 对于使用问号语法的已准备的语句，为基于 1 的参数索引。  
   
-&$variable：要绑定到 SQL 语句参数的 PHP 变量的（混合）名称  。  
+&$variable：要绑定到 SQL 语句参数的 PHP 变量的（混合）名称。  
   
-$datatype：可选（整数）PDO::PARAM_* 常量  。 默认值为 PDO::PARAM_STR。  
+$data_type：可选（整数）PDO::PARAM_* 常量。 默认值为 PDO::PARAM_STR。  
   
-$length：数据类型的可选（整数）长度  。 当在 $data_type 中使用 PDO::PARAM_INT 或 PDO::PARAM_BOOL 时，可以指定 PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE 来指示默认大小  。  
+$length：数据类型的可选（整数）长度。 当在 $data_type 中使用 PDO::PARAM_INT 或 PDO::PARAM_BOOL 时，可以指定 PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE 来指示默认大小。  
   
-$*driver_options*: 可选 (混合) 驱动程序特定的选项。 例如，你可以指定 PDO::SQLSRV_ENCODING_UTF8 来将列作为使用 UTF-8 编码的字符串绑定到变量。  
+$driver_options：可选（混合）驱动程序专用选项。 例如，你可以指定 PDO::SQLSRV_ENCODING_UTF8 来将列作为使用 UTF-8 编码的字符串绑定到变量。  
   
 ## <a name="return-value"></a>返回值  
 如果成功，则为 TRUE；否则为 FALSE。  
   
-## <a name="remarks"></a>Remarks  
-在将 null 数据绑定到 varbinary、binary 或 varbinary(max) 类型的服务器列时，应使用 $driver_options 指定二进制编码 (PDO::SQLSRV_ENCODING_BINARY)  。 有关编码常量的详细信息，请参阅[常量](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。  
+## <a name="remarks"></a>备注  
+在将 null 数据绑定到 varbinary、binary 或 varbinary(max) 类型的服务器列时，应使用 $driver_options 指定二进制编码 (PDO::SQLSRV_ENCODING_BINARY)。 有关编码常量的详细信息，请参阅[常量](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。  
   
 已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 2.0 中添加了对 PDO 的支持。  
 
@@ -99,7 +99,7 @@ echo $input1;
 ```  
   
 > [!NOTE]
-> 将输出参数绑定到 bigint 类型时, 如果值可能在[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)范围之外结束, 则使用 pdo::P ARAM_INT 和 PDO:: SQLSRV_PARAM_OUT_DEFAULT_SIZE 可能会导致 "值超出范围" 异常。 因此, 请改用默认的 PDO::P ARAM_STR, 并提供结果字符串的大小, 最大值为21。 它是任意 bigint 值的最大位数, 包括负号。 
+> 将输出参数绑定到 bigint 类型时，如果值最终超出 [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) 范围，那么结合使用 PDO::PARAM_INT 和 PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE 可能会导致“值超出范围”异常抛出。 因此，请改用默认的 PDO::PARAM_STR，并提供生成的字符串的大小（大小上限为 21 个字符）。 它是任意 bigint 值的最大位数（包括负号）。 
 
 ## <a name="example"></a>示例  
 此代码示例演示如何使用输入/输出参数。  
@@ -133,7 +133,7 @@ $server = "(local)";
 $conn = new PDO("sqlsrv:server=$server ; Database = $database", "", "");  
 
 // Assume TestTable exists with a decimal field 
-$input = 9223372036854.80000;
+$input = "9223372036854.80000";
 $stmt = $conn->prepare("INSERT INTO TestTable (DecimalCol) VALUES (?)");
 // by default it is PDO::PARAM_STR, rounding of a large input value may
 // occur if PDO::PARAM_INT is specified

@@ -16,10 +16,10 @@ ms.assetid: b2d24a6b-f029-4691-981b-125c690b8ba5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: feadeaffb5fd74ebc6b2d273dca263cac16c14ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954197"
 ---
 # <a name="getasciistream-method-javalangstring"></a>getAsciiStream 方法 (java.lang.String)
@@ -34,19 +34,19 @@ ms.locfileid: "67954197"
 public java.io.InputStream getAsciiStream(java.lang.String columnName)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *columnName*  
   
  一个包含列名的字符串  。  
   
 ## <a name="return-value"></a>返回值  
- 一个 InputStream 对象。  
+ InputStream 对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 getAsciiStream 方法由 getAsciiStream 方法在方法中指定。  
+## <a name="remarks"></a>备注  
+ 此 getAsciiStream 方法是由 java.sql.ResultSet 接口中的 getAsciiStream 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [getAsciiStream 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md)   

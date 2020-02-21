@@ -11,13 +11,13 @@ ms.assetid: 4865e32c-0114-465a-be8c-be223a7bc09e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bc04865c9dcbdf16627c1ab4598610426e4a8d5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571949"
 ---
-# <a name="msreportserverinstance-methods---getreportserverurls"></a>MSReportServer_Instance 方法 - GetReportServerUrls
+# <a name="msreportserver_instance-methods---getreportserverurls"></a>MSReportServer_Instance 方法 - GetReportServerUrls
   返回用户可用于访问报表服务器和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]的 URL 列表。  
   
 ## <a name="syntax"></a>语法  
@@ -32,7 +32,7 @@ public void GetReportServerUrls(out string[] applicationName,
     out string[] URLs, out int length, out int HRESULT);  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>parameters  
  *ApplicationName[]*  
  一个包含安装的应用程序的数组。 值为 **ReportServerWebService** 或 **ReportServerWebApp**。  
   
@@ -47,11 +47,11 @@ public void GetReportServerUrls(out string[] applicationName,
   
 ## <a name="return-values"></a>返回值  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  可通过 InvokeMethod 函数调用由 WMI 管理对象公开的方法。 有关详细信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework WMI 文档中的“Executing Methods on Management Objects”（对管理对象执行方法）。  
   
 ## <a name="requirements"></a>要求  
- **命名空间:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **命名空间：** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

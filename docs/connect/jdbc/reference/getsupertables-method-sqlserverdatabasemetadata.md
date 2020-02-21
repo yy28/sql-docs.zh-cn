@@ -1,5 +1,5 @@
 ---
-title: getSuperTables 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getSuperTables 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 085461de-367b-4832-88aa-010813d2bc41
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 798b5d2abca5aad5daa075a10652b4952dae6e8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979312"
 ---
 # <a name="getsupertables-method-sqlserverdatabasemetadata"></a>getSuperTables 方法 (SQLServerDatabaseMetaData)
@@ -39,7 +39,7 @@ public java.sql.ResultSet getSuperTables(java.lang.String catalog,
                                          java.lang.String tableNamePattern)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *catalog*  
   
  一个包含目录名称的字符串  。  
@@ -55,10 +55,10 @@ public java.sql.ResultSet getSuperTables(java.lang.String catalog,
 ## <a name="return-value"></a>返回值  
  一个 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 getSuperTables 方法是由 java.sql.DatabaseMetaData 接口中的 getSuperTables 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  

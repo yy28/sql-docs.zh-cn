@@ -16,13 +16,13 @@ ms.assetid: 55c6c8b6-dfad-499f-befa-042c1caba17f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 924db3a5f26fad62baaded79471786619d1ef9ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65569123"
 ---
-# <a name="msreportserverinstance-properties---instanceid"></a>MSReportServer_Instance 属性 - InstanceID
+# <a name="msreportserver_instance-properties---instanceid"></a>MSReportServer_Instance 属性 - InstanceID
   此对象支持 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 基础结构，但不能通过代码直接使用。  
   
 ## <a name="syntax"></a>语法  
@@ -36,7 +36,7 @@ public string InstanceID;
 ```  
   
 ## <a name="requirements"></a>要求  
- **命名空间:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **命名空间：** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
  [MSReportServer_Instance 成员](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  

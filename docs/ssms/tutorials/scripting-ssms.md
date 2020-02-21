@@ -1,5 +1,5 @@
 ---
-title: 教程：在 SQL Server Management Studio 中编写对象脚本
+title: SSMS 脚本对象
 description: 有关在 SSMS 中编写对象脚本的教程
 keywords: SQL Server, SSMS, SQL Server Management Studio, 脚本, 编写脚本
 author: MashaMSFT
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: 36d3b90a9ac1e49af564323c86421216216522a9
-ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
+ms.openlocfilehash: f1709114c064e6d46ab69ba7a15143bab24ea280
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72988418"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247300"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中编写对象脚本
 
@@ -35,7 +35,7 @@ ms.locfileid: "72988418"
 > * 两种不同方式（“脚本编写为”和“生成脚本”）的数据库
 > * 表
 > * 存储过程
-> * 扩展事件
+> * 扩展的事件
 
 要为“对象资源管理器”  中的任何对象编写脚本，请右键单击它并选择“编写对象脚本为”  选项。 本教程将介绍该过程。
 
@@ -135,9 +135,9 @@ ms.locfileid: "72988418"
 
 5. 选择“下一步”以打开“设置脚本编写选项”页面   。 在此，你可以配置保存脚本的位置以及一些其他高级选项。 
 
-    A. 选择“保存到新建查询窗口”  。
+    a. 选择“保存到新建查询窗口”  。
 
-    B. 选择“高级”并确保已设置以下选项  ：
+    b. 选择“高级”并确保已设置以下选项  ：
 
       * “编写统计信息脚本”设置为“编写统计信息脚本”   。
       * “要编写脚本的数据的类型”设置为“仅限架构”   。

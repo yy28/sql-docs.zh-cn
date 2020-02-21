@@ -1,7 +1,7 @@
 ---
-title: 重命名 SQL Server 故障转移群集实例 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 重命名故障转移群集实例
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 612f0171cbb7786374923dc5ed8c257224474a21
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: af1ec295ef8567496da84819532342164cb269cb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063877"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230719"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>重命名 SQL Server 故障转移群集实例
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,13 +67,13 @@ ms.locfileid: "68063877"
   
 -   如果 SQL 代理配置为事件转发，请修复注册表设置。 有关详细信息，请参阅[指定事件转发服务器 (SQL Server Management Studio)](https://msdn.microsoft.com/library/81dfcbe4-3000-4e77-99de-bf85fef63a12)。  
   
--   在重命名计算机/群集网络名称后修复主服务器 (MSX) 和目标服务器 (TSX) 实例名称。 有关详细信息，请参阅以下主题：  
+-   在重命名计算机/群集网络名称后修复主服务器 (MSX) 和目标服务器 (TSX) 实例名称。 有关详情，请参阅以下主题：  
   
-    -   [使多台目标服务器脱离主服务器](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
+    -   [将多台目标服务器从主服务器脱离](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
   
     -   [创建多服务器环境](../../../ssms/agent/create-a-multiserver-environment.md)  
   
--   重新配置日志传送以便更新的服务器名称用于备份和还原日志。 有关详细信息，请参阅以下主题：  
+-   重新配置日志传送以便更新的服务器名称用于备份和还原日志。 有关详情，请参阅以下主题：  
   
     -   [配置日志传送 (SQL Server)](../../../database-engine/log-shipping/configure-log-shipping-sql-server.md)  
   
@@ -82,6 +82,6 @@ ms.locfileid: "68063877"
 -   更新依赖于服务器的名称的 Jobsteps。 有关详细信息，请参阅 [Manage Job Steps](../../../ssms/agent/manage-job-steps.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [重命名承载 SQL Server 独立实例的计算机](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)  
+ [重命名托管 SQL Server 独立实例的计算机](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)  
   
   

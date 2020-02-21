@@ -16,10 +16,10 @@ ms.assetid: 207e25f4-769c-4ff3-913c-3517b06208e4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5d0d59186e15dc07d1d4e91ac673c456ec592d01
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67952827"
 ---
 # <a name="getconcurrency-method-sqlserverresultset"></a>getConcurrency 方法 (SQLServerResultSet)
@@ -41,11 +41,11 @@ public int getConcurrency()
   
  ResultSet.CONCUR_UPDATABLE  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 getConcurrency 方法由 getConcurrency 方法在方法中指定。  
+## <a name="remarks"></a>备注  
+ 此 getConcurrency 方法是由 java.sql.ResultSet 接口中的 getConcurrency 方法指定的。  
   
  使用的并发类型是由创建结果集的 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 对象决定的。  
   

@@ -11,10 +11,10 @@ ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3fbef30f8a5bf5658376a37144c8f770317d6981
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576714"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>报表部件（报表生成器和 SSRS）
@@ -55,7 +55,7 @@ ms.locfileid: "65576714"
   
 -   地图  
   
--   Parameters  
+-   parameters  
   
 -   矩形  
   
@@ -107,7 +107,7 @@ ms.locfileid: "65576714"
  每次打开报表时，报表生成器都检查该报表中各报表部件的服务器实例是否已在服务器上进行了更新。 它还将检查报表部件的依赖项（如数据集和参数）的更改。 如果任何已发布的报表部件或其依赖关系已在服务器上进行了更新，则报表中的信息栏将显示已更新的数量。 您可以选择查看并接受或拒绝更新，或关闭信息栏。 如果您选择查看更新，则可以看到报表部件的缩略图、最后修改者以及最后修改时间。 然后，您可以接受任何或所有更新项。  
   
 > [!NOTE]  
->  您可以禁用信息栏，这样，当更改报表部件时系统将不会通知您。 您可以在向报表中添加报表部件时设置此选项。 即使已禁用信息栏，也仍可以检查更新。 有关详细信息，请参阅 [检查更新或关闭更新（报表生成器和 SSRS）](https://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606)。  
+>  您可以禁用信息栏，这样，当更改报表部件时系统将不会通知您。 您可以在向报表中添加报表部件时设置此选项。 即使已禁用信息栏，也仍可以检查更新。 有关详细信息，请参阅[检查是否有更新或禁用更新（报表生成器和 SSRS）](https://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606)。  
   
  报表生成器检查在服务器上最后一次更新报表部件的日期与您最后将报表部件与服务器同步的日期之间的差异。 它不检查您在报表中修改报表部件的日期。 因此，您的报表中的报表部件和服务器上的报表部件可能差别很大，但在报表生成器检查更新时，它将不会发现任何差异。  
   

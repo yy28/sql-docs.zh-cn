@@ -1,5 +1,5 @@
 ---
-title: getMajorVersion 方法 (SQLServerDriver) |Microsoft Docs
+title: getMajorVersion 方法 (SQLServerDriver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 027edab7-9b5c-4f5f-9469-fe00cf7798b6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7439a62f8bdb987bf50d76c12277c5341c0dd354
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982422"
 ---
 # <a name="getmajorversion-method-sqlserverdriver"></a>getMajorVersion 方法 (SQLServerDriver)
@@ -37,8 +37,8 @@ public int getMajorVersion()
 ## <a name="return-value"></a>返回值  
  包含 JDBC 驱动程序主版本号的 int  。  
   
-## <a name="remarks"></a>Remarks  
- 此 getMajorVersion 方法由 getMajorVersion 方法在 java .sql 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 getMajorVersion 方法是由 java.sql.Driver 接口中的 getMajorVersion 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDriver 方法](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   

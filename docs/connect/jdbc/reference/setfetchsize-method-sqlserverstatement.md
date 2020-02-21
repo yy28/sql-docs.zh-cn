@@ -1,5 +1,5 @@
 ---
-title: setFetchSize 方法 (SQLServerStatement) |Microsoft Docs
+title: setFetchSize 方法 (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 760e555e-9667-4b40-b0ba-778026ff2923
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58af3c6d8b9d0967ff370047e49a377bf52ec985
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974236"
 ---
 # <a name="setfetchsize-method-sqlserverstatement"></a>setFetchSize 方法 (SQLServerStatement)
@@ -34,16 +34,16 @@ ms.locfileid: "67974236"
 public final void setFetchSize(int rows)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *rows*  
   
  指示要提取的行数的 int  。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 setFetchSize 方法由 setFetchSize 方法在 .sql 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 setFetchSize 方法是由 java.sql.Statementt 接口中的 setFetchSize 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerStatement 成员](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

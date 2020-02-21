@@ -1,6 +1,7 @@
 ---
-title: 第 4 课：向报表添加表 (Reporting Services) | Microsoft Docs
-ms.date: 04/29/2019
+title: 第 4 课：向报表添加表 | Microsoft Docs
+description: 定义数据集后，可以开始设计分页报表。 通过将“工具箱”窗格中的报表对象拖放到“设计图面”来创建报表布局。
+ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -8,20 +9,20 @@ ms.topic: conceptual
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e925dec5eb14365a6c313349599a77ffe1d7ab13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: fca89bf8992db9ec3b07cea422ec146993e8aec8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65106010"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244303"
 ---
-# <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>第 4 课：向报表添加表 (Reporting Services)
+# <a name="lesson-4-add-a-table-to-the-report-reporting-services"></a>第 4 课：向报表添加表 (Reporting Services)
 
-定义数据集后，您可以开始定义报表。 通过将“工具箱”  窗格中的报表对象  拖放到“设计图面”  来创建报表布局。 一些报表对象的类型包括：
+定义数据集后，可以开始设计分页报表。 通过将“工具箱”  窗格中的报表对象  拖放到“设计图面”  来创建报表布局。 一些报表对象的类型包括：
 
 - 表
 - 文本框
-- 图像
+- 映像
 - 行
 - Rectangle
 - 图表
@@ -54,7 +55,7 @@ ms.locfileid: "65106010"
 
 7. 请以相同方式添加 `[LineTotal]` 字段，并创建第五列。 列标签添加为“行总数”。 报表设计器通过将“LineTotal”拆分为两个单词，自动创建该列的友好名称。
 
-以下关系图显示已由下列字段填充的表数据区域：Date、Order、Product、Qty 和 Line Total。
+下图展示了已填充有下面这些字段的表数据区域：“Date”、“Order”、“Product”、“Qty”和“Line Total”。
 ![rs_BasicTableDetailsDesign](media/rs-basictabledetailsdesign.png)
 
 ## <a name="preview-your-report"></a>预览报表
@@ -69,7 +70,7 @@ ms.locfileid: "65106010"
 
 下图显示了“预览”  视图中的部分报表。
 
-   ![具有五列的表的详细信息行预览](media/rs-basictabledetailspreview.png "Preview, Detail rows of table with five columns")
+   ![具有 5 列的表的详细信息行预览](media/rs-basictabledetailspreview.png "具有 5 列的表的详细信息行预览")
 
 查看 Date 和 Line Total 的值。 在下一课中，你将了解如何设置其格式以更整齐地显示。
 
@@ -78,7 +79,7 @@ ms.locfileid: "65106010"
 
 ## <a name="next-steps"></a>后续步骤
 
-你已成功地向报表添加了表数据区域、向数据区域添加了字段，并成功地预览了报表。 在下一课中，将了解如何设置列标题和字段表达式的格式。 接下来，请继续学习[第 5 课：设置报表格式 (Reporting Services)](lesson-5-formatting-a-report-reporting-services.md)。
+你已成功地向报表添加了表数据区域、向数据区域添加了字段，并成功地预览了报表。 在下一课中，将了解如何设置列标题和字段表达式的格式。 接下来，继续学习[第 5 课：设置报表格式 &#40;Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md)。
   
 ## <a name="see-also"></a>另请参阅
 

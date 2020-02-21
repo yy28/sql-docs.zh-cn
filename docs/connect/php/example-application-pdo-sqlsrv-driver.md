@@ -1,5 +1,5 @@
 ---
-title: 示例应用程序 (PDO_SQLSRV 驱动程序) |Microsoft Docs
+title: 示例应用程序（PDO_SQLSRV 驱动程序）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -11,20 +11,20 @@ ms.assetid: a153e4ce-992d-4211-9a0f-c0998c706402
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8414497fed891e153399febf84151c82d915d77a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993588"
 ---
-# <a name="example-application-pdosqlsrv-driver"></a>示例应用程序（PDO_SQLSRV 驱动程序）
+# <a name="example-application-pdo_sqlsrv-driver"></a>示例应用程序（PDO_SQLSRV 驱动程序）
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 AdventureWorks 产品评论示例应用程序是使用 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的 PDO_SQLSRV 驱动程序的 Web 应用程序。 该应用程序可使用户通过输入关键字来搜索产品、查看选定产品的评论、为选定产品撰写评论以及为选定产品上载图像。  
   
 ### <a name="running-the-example-application"></a>运行示例应用程序  
   
-1.  安装 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]。 有关详细信息, 请参阅[通过用于 PHP 的 Microsoft 驱动程序 SQL Server 入门](../../connect/php/getting-started-with-the-php-sql-driver.md)
+1.  安装 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]。 有关详细信息，请参阅 [Microsoft Drivers for PHP for SQL Server 入门](../../connect/php/getting-started-with-the-php-sql-driver.md)
 2.  将文本档后面列出的代码复制到两个文件中：adventureworks_demo.php 和 photo.php。  
 3.  将 adventureworks_demo.php 和 photo.php 文件放在 Web 服务器的根目录中。  
 4.  通过从你的浏览器启动 \://localhost/adventureworks_demo.php 来运行应用程序。  
@@ -32,7 +32,7 @@ AdventureWorks 产品评论示例应用程序是使用 [!INCLUDE[ssDriverPHP](..
 ## <a name="requirements"></a>要求  
 若要运行 AdventureWorks 产品评论示例应用程序，你的计算机必须符合以下情况：  
   
--   你的系统满足 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的要求。 有关详细信息, 请参阅[Microsoft 用于 PHP 的驱动程序的系统要求 SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md)。  
+-   你的系统满足 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的要求。 有关详细信息，请参阅 [Microsoft Drivers for PHP for SQL Server 的系统要求](../../connect/php/system-requirements-for-the-php-sql-driver.md)。  
  -   adventureworks_demo.php 和 photo.php 文件放置在 Web 服务器的根目录中。 文件必须包含本文档后面列出的代码。  
 -   已在本地计算机上安装了已连接 [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库的 SQL Server 2005 或 SQL Server 2008。  
 -   安装了 Web 浏览器。  

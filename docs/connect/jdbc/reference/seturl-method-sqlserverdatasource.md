@@ -1,5 +1,5 @@
 ---
-title: setURL 方法 (SQLServerDataSource) |Microsoft Docs
+title: setURL 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: bea70100-ac98-4625-8748-ef7cc0b111ea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d42af84c320eadb167126325299fb25cadaed2dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972117"
 ---
 # <a name="seturl-method-sqlserverdatasource"></a>setURL 方法 (SQLServerDataSource)
@@ -34,12 +34,12 @@ ms.locfileid: "67972117"
 public void setURL(java.lang.String url)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *url*  
   
  一个包含 URL 的字符串  。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  出于安全原因，请不要在提供给 setURL 方法的 URL 中包括密码。 这是因为：第三方 Java 应用程序服务器经常会在其数据源配置用户界面中显示为 URL 属性设置的值。 请改用 [setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md) 方法设置密码值。 Java 应用程序服务器不会在配置用户界面中显示在其数据源中设置的密码。  
   
 > [!NOTE]  

@@ -1,34 +1,28 @@
 ---
-title: 保存跟踪和跟踪模板 |Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 保存跟踪和跟踪模板
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- saving traces
-- traces [SQL Server], saving
-- templates [SQL Server], SQL Server Profiler
-- Profiler [SQL Server Profiler], templates
-- trace templates [SQL Server]
-- exporting trace templates
-- importing trace templates
-- SQL Server Profiler, templates
 ms.assetid: 957e6bf8-e7a3-4a59-a1cd-0a41538a8158
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9d3c8a9ddcaa11f4bcfae6e5abd4c000f1ffbdba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 9d3437ca51d12de09c7f0ae386b2e1c09ad50eab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928743"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307428"
 ---
 # <a name="save-traces-and-trace-templates"></a>保存跟踪和跟踪模板
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  区分保存跟踪文件和保存跟踪模板很重要。 保存跟踪文件是指将捕获的事件数据保存到指定位置。 保存跟踪模板是指保存跟踪定义，例如指定的数据列、事件类或筛选器。  
+
+区分保存跟踪文件和保存跟踪模板很重要。 保存跟踪文件是指将捕获的事件数据保存到指定位置。 保存跟踪模板是指保存跟踪定义，例如指定的数据列、事件类或筛选器。  
   
 ## <a name="saving-traces"></a>保存跟踪  
  如果需要在以后分析或重播捕获数据，请将捕获的事件数据保存到文件或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中。 使用跟踪文件可以执行下列操作：  
@@ -51,7 +45,7 @@ ms.locfileid: "67928743"
  跟踪的模板定义包括事件类、数据列、筛选器和用于创建跟踪的所有其他属性（捕获的事件数据除外）。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 提供针对常见跟踪任务和特定任务的预定义系统模板，如创建可供数据库引擎优化顾问用来优化物理数据库设计的工作负荷。 还可以创建和保存用户定义模板。  
   
 ### <a name="importing-and-exporting-templates"></a>导入和导出模板  
- [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 允许在服务器之间导入和导出模板。 导出模板会将现有模板的副本移到指定目录。 导入模板会复制指定的模板。 在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中查看这些模板时，可以通过模板名称后的“(user)”使它们区别于系统模板。 您无法覆盖或直接修改预定义系统模板。  
+ [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 允许在服务器之间导入和导出模板。 导出模板会将现有模板的副本移到指定目录。 导入模板会复制指定的模板。 在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 中查看这些模板时，可以通过模板名称后的术语“(user)”使它们区别于系统模板。 您无法覆盖或直接修改预定义系统模板。  
   
 ### <a name="analyzing-performance-with-templates"></a>使用模板分析性能  
  如果您经常监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请使用模板分析性能。 模板每次都捕获相同的事件数据，并使用同一跟踪定义监视相同的事件。 您不需要在每次创建跟踪时都定义事件类和数据列。 此外，可以将模板提供给其他用户，供其监视特定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件。 例如，支持提供商可以向客户提供一个模板。 客户使用该模板捕获所需的事件数据，然后将数据发送给支持提供商供其分析。  

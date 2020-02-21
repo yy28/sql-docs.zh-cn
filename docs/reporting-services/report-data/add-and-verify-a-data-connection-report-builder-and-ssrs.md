@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/01/2017
-ms.openlocfilehash: 9b8eca48287388eba7f8e1f13ba4c6e5692a278d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.openlocfilehash: b3607172643129b7ec327d12f6818dafbde10e23
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68251067"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190021"
 ---
 # <a name="add-and-verify-a-data-connection-report-builder-and-ssrs"></a>添加和验证数据连接（报表生成器和 SSRS）
 
@@ -24,7 +24,7 @@ ms.locfileid: "68251067"
 
 若要创建嵌入数据源，您必须具有到外部数据源的连接信息并知道需要何种权限才能访问数据。 此信息通常来自数据源的所有者。 可以测试该连接以验证指定的凭据是否有效。
 
-有关详细信息，请参阅[报表生成器中的数据连接、数据源和连接字符串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)和[在报表生成器中指定凭据](https://docs.microsoft.com/sql/reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources?view=sql-server-2017)
+有关详细信息，请参阅[创建数据连接字符串 - 报表生成器和 SSRS](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 和[在报表生成器中指定凭据](https://docs.microsoft.com/sql/reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources?view=sql-server-2017)
 
 > [!NOTE]  
 > [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
@@ -52,9 +52,9 @@ ms.locfileid: "68251067"
 
 2. 单击 **“测试连接”** 。
 
-3. 如果连接成功，则显示以下消息：“已成功地创建连接”。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3. 如果连接成功，则显示以下消息：“已成功创建连接”。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-4. 如果连接失败，则显示以下消息：“无法连接到数据源”。  
+4. 如果连接不成功，则显示以下消息：“无法连接到数据源”。  
 
 5. 单击 **“详细信息”** ，然后使用该信息来解决问题。
 
@@ -67,4 +67,4 @@ ms.locfileid: "68251067"
 - [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
 - [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)
 - [查找、查看和管理报表（报表生成器和 SSRS）](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)
-- [报表生成器中的数据连接、数据源和连接字符串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)
+- [创建数据连接字符串 - 报表生成器和 SSRS](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)

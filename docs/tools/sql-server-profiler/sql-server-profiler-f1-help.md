@@ -1,61 +1,33 @@
 ---
-title: SQL Server Profiler 对话框 |Microsoft Docs
-ms.custom: ''
-ms.date: 07/07/2017
+title: SQL Server Profiler 对话框
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: reference
-f1_keywords:
-- sql13.pro.traceproperties.general.f1;
-- sql13.pro.traceproperties.eventsselection.f1;
-- sql13.pro.traceproperties.eventsselection.f1
-- sql13.pro.traceproperties.general.f1
-- sql13.pro.tracetemplateproperties
-- sql13.pro.edittracetemplateproperties.general.f1
-- sql13.pro.edittracetemplateproperties.eventsselection.f1
-- sql13.pro.tracefileproperties.general.f1
-- sql13.pro.tracefileproperties.eventsselection.f1
-- sql13.pro.performancecounterlimit.f1
-- sql13.pro.replay.tools.generaloptions.f1
-- sql13.pro.replay.tools.sourcetable.f1
-- sql13.pro.replay.tools.destinationtable.f1
-- sql13.pro.replay.generaloptions.f1
-- sql13.pro.replay.generaloptions.advanced.f1
-- sql13.pro.find.f1
-- sql13.pro.organize.columns.f1
-- sql13.pro.editfilter.f1
-helpviewer_keywords:
-- Profiler [SQL Server Profiler], help
-- SQL Server Profiler, help
-- Trace Properties dialog box
-- Trace Template Properties dialog box
-- Trace Files Properties dialog box
-- Performance Counters List dialog box
-- General Options dialog box
-- Select Workload Table dialog box
-- Destination Table dialog box
-- Replay Configuration dialog box
-- Find dialog box
 ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 32cc19df636f6e0fa98dca0ab45dd8142d9db54f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 07/07/2017
+ms.openlocfilehash: 24375bafa9123c5bba4adf83fce81427f39722e4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059700"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307850"
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>SQL Server Profiler 对话框
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是从服务器捕获 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件的工具。 这些事件保存在一个跟踪文件中，稍后试图诊断问题时，可以对该文件进行分析或用它来重播特定的一系列步骤。 下面是的对话框[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中提供的命令和设置。  
+
+Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是从服务器捕获 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件的工具。 这些事件保存在一个跟踪文件中，稍后试图诊断问题时，可以对该文件进行分析或用它来重播特定的一系列步骤。 下面是 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的对话框中提供的命令和设置。  
 ## <a name="trace-properties"></a>跟踪属性
 ### <a name="general-tab"></a>“常规”选项卡
 使用 **“跟踪属性”** 对话框中的 **“常规”** 选项卡可以查看或指定跟踪属性。  
 
-|项|描述
+|Item|说明
 |---|---
 |**跟踪名称** |指定跟踪的名称。  
 |**跟踪提供程序名称**|显示要跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 将使用连接时指定的服务器的名称自动填充此字段。 若要更改跟踪提供程序的名称，请单击 **“取消”** 关闭该对话框，然后启动新的跟踪。  
@@ -75,7 +47,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是从�
 ### <a name="events-selection-tab"></a>“事件选择”选项卡
 使用 **“跟踪属性”** 对话框的 **“事件选择”** 选项卡可以查看或指定跟踪的事件和数据列。  
 
-|项|描述
+|Item|说明
 |---|---
 |“事件”  列|通过选中或清除事件列中的复选框，指定跟踪的事件。 **“事件”** 按事件类别进行组织。 模板中指定的事件类是自动选择的。 有关详细信息，请参阅 [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)。  
 |数据列|通过选中与所需的事件和数据列对应的框，指定跟踪的数据列。 对于在跟踪中包括的每个事件，将默认选中所有相关事件列。  
@@ -86,20 +58,20 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是从�
 |**组织列**|更改跟踪中列的顺序，并按一列或多列对结果分组。  
 
 ## <a name="trace-template-properties"></a>跟踪模板属性 
-### <a name="new-general-tab"></a>新建 ("常规" 选项卡)
-通过使用下列选项，使用 **“跟踪模板属性”** 对话框的 **“常规”** 选项卡可以创建新的跟踪模板。 要访问此对话框，请在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]“文件”菜单上，指向“模板”，再单击“新建”    。
+### <a name="new-general-tab"></a>新建（“常规”选项卡）
+通过使用下列选项，使用 **“跟踪模板属性”** 对话框的 **“常规”** 选项卡可以创建新的跟踪模板。 要访问此对话框，请在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]“文件”  菜单上，指向“模板”  ，再单击“新建”  。
 
-|项|描述
+|Item|说明
 |---|---
 |**选择服务器类型**|指定要对其使用此模板的服务器的类型。  
 |**新模板名称**|为该模板提供一个说明性名称。  
 |**使新模板基于现有模板**|将该列表中的模板用作此模板的基础。 所有选定的事件、数据列和筛选器最初都与现有模板中的事件、数据列和筛选器相匹配，您随后可以根据需要修改它们。  
 |**用作所选服务器类型的默认模板**|默认情况下，将此模板用于为此服务器类型创建的跟踪。  
 
-### <a name="edit-general-tab"></a>编辑 ("常规" 选项卡)
- 通过使用下列选项，使用 **“跟踪模板属性”** 的 **“常规”** 选项卡可以查看或编辑现有跟踪模板。 要访问此对话框，请在[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]“文件”菜单上，指向“模板”，再单击“编辑模板”    。  
+### <a name="edit-general-tab"></a>编辑（“常规”选项卡）
+ 通过使用下列选项，使用 **“跟踪模板属性”** 的 **“常规”** 选项卡可以查看或编辑现有跟踪模板。 要访问此对话框，请在[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]“文件”  菜单上，指向“模板”  ，再单击“编辑模板”  。  
 
-|项|描述
+|Item|说明
 |---|---
 |**选择服务器类型**|指定要对其使用此模板的服务器的类型。  
 |**选择模板名称**|选择要编辑的模板。  
@@ -108,7 +80,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是从�
 ### <a name="events-selection-tab"></a>“事件选择”选项卡
 使用 **“跟踪模板属性”** 对话框的 **“事件选择”** 选项卡，可以查看、编辑或指定要包含在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 跟踪模板中的事件类和数据列。  
 
-|项|描述
+|Item|说明
 |---|---
 |“事件”  列|通过选择或清除事件列中的复选框，指定要跟踪的事件。 事件按事件类别进行组织。 如果在 **“常规”** 选项卡上选中 **“使新模板基于现有模板”** ，将会根据指定的模板自动选择事件。 有关事件类的详细信息，请参阅 [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)。  
 |数据列|通过选中与所需的事件和数据列对应的框，指定要跟踪的数据列。 如果选中与事件对应的复选框，则默认情况下，将选中与跟踪中包括的每一个事件相关的事件列。 如果在 **“常规”** 选项卡上选中 **“使新模板基于现有模板”** ，将会根据指定的模板自动选择数据列和筛选器。  
@@ -123,7 +95,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是从�
 使用 **“跟踪文件属性”** 对话框中的 **“常规”** 选项卡可以查看跟踪文件的属性。  
 若要查看此窗口，请打开跟踪文件。 然后在 **“文件”** 菜单上，单击 **“属性”** 。  
 
-|项|描述
+|Item|说明
 |---|---
 |**文件名**|所显示的跟踪文件的路径和名称。  
 |**跟踪提供程序名称**|显示跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。  
@@ -137,7 +109,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是从�
 使用 **“跟踪文件模板属性”** 对话框的 **“事件选择”** 选项卡，可以查看跟踪的列属性或者从跟踪中删除数据列。  
 若要查看此窗口，请打开跟踪文件。 然后，在 **“文件”** 菜单上，单击 **“属性”** ，再单击 **“事件选择”** 选项卡。  
 
-|项|描述
+|Item|说明
 |---|---
 |“事件”  列|查看按事件类别组织的跟踪事件。 最初，跟踪中的所有事件均被选中。 可以通过选中事件框或选中事件的数据列来选择事件。 如果选中事件框，则该事件的所有可用数据列均被选中。 如果选中了某个事件的数据列，则该事件将被选中，并且其他所有必需列也被自动选中。 如果您正在查看跟踪文件或表，清除事件复选框或数据列将减少跟踪窗口中的可见数据量，便于分析。 您也可以更改列筛选器以减少跟踪窗口中的可见数据量。 有关事件类的详细信息，请参阅 [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)。  
 |数据列|查看跟踪数据列。 默认情况下，将会为跟踪中包含的每个事件选中跟踪中的所有相关数据列。  
@@ -152,7 +124,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是从�
 使用 **“跟踪表属性”** 对话框的 **“事件选择”** 选项卡可以查看跟踪的事件和数据列属性，或者从跟踪中删除事件或列。  
 若要查看此窗口，请使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 打开一个跟踪表。 然后在 **“文件”** 菜单上单击 **“属性”** ，再单击 **“事件选择”** 选项卡。  
 
-|项|描述
+|Item|说明
 |---|---
 |“事件”  列|查看按事件类别组织的跟踪事件。 可以通过选中事件框或选中事件的数据列来选择事件。 如果选中事件框，则该事件的所有可用数据列均被选中。 如果选中了某个事件的数据列，则该事件将被选中，并且其他所有必需列也被自动选中。 如果您正在查看跟踪文件或表，清除事件复选框或数据列将减少跟踪窗口中的可见数据量，便于分析。 您也可以更改列筛选器以减少跟踪窗口中的可见数据量。 有关事件类的详细信息，请参阅 [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)。  
 |其他数据列|查看跟踪数据列。 默认情况下，将会为跟踪中包含的每个事件选中跟踪中的所有相关数据列。  
@@ -170,11 +142,11 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是从�
 2.  选中要与 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 跟踪文件关联的计数器。  
 
 如果希望选择某个性能对象的所有计数器，请选中与该性能对象相邻的框。 如果选中指示计算机的最顶层节点，则会选择性能日志文件中包含的所有性能对象和计数器。 
-## <a name="toolsoptions-general-options-page"></a>工具/选项 ("常规选项" 页)
+## <a name="toolsoptions-general-options-page"></a>工具/选项（“常规选项”页）
 使用 **“常规选项”** 对话框可以查看或指定以下选项：  
 ### <a name="display-options"></a>显示选项  
 
-|项|描述
+|Item|说明
 |---|---
 |**字体名称**|显示在跟踪过程中“跟踪结果”网格所使用字体的名称。  
 |**字号**|显示在跟踪过程中“跟踪结果”网格所使用字体的大小。  
@@ -184,14 +156,14 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是从�
 
 ### <a name="tracing-options"></a>跟踪选项  
 
-|项|描述
+|Item|说明
 |---|---
 |**建立连接后立即开始跟踪**|建立连接后立即使用默认模板开始跟踪。  
 |**当提供程序版本发生更改时更新跟踪定义**|更新提供程序后，为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 应用最新的跟踪定义。 默认情况下不选中此项。 此选项强制 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 在服务器中查询跟踪定义，如果存在，则将在磁盘上重新创建该文件。  
 
 ### <a name="file-rollover-options"></a>文件滚动更新选项  
 
-|项|描述
+|Item|说明
 |---|---
 |**不作提示，依次加载所有滚动更新文件**|在打开跟踪文件时，自动加载滚动更新文件。 如果在跟踪时创建了多个文件，选择此选项可以自动加载所有滚动更新文件。  
 |**加载滚动更新文件之前进行提示**|打开跟踪文件后，让 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 在添加滚动更新文件之前进行提示。  
@@ -199,7 +171,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是从�
 
 ### <a name="replay-options"></a>重播选项  
 
-|项|描述
+|Item|说明
 |---|---
 |**默认重播线程数**|指定要并发使用的重播线程数。 数目越大，重播期间消耗的资源越多，但是可增加并发的重播事件数目。  
 |**默认 Health Monitor 等待间隔(秒)**|指定重播的等待间隔（秒）。 默认值为 3600 秒（1 小时）。 此设置影响线程在被 Health Monitor 终止前所允许运行的时间。  
@@ -210,29 +182,29 @@ Microsoft SQL Server Profiler 和优化顾问使用此对话框来选择表。
 - 在 Profiler 中，使用“源表”  对话框为跟踪表指定源表。 源表是一个加载跟踪的表，重播跟踪时需要查看或使用其内容。  
 - 在优化顾问中，使用“选择工作负荷表”  对话框选择包含 profiler 跟踪信息的数据库表，以用作优化工作负荷或在开始优化分析前预览表的内容。  
 
-|项|描述
+|Item|说明
 |---|---
 |**SQL Server**|指定当前连接的 SQL Server 的实例。 此字段将自动填充，并且无法更新。  
-|**“数据库”**|指定跟踪表所在的数据库。  
-|**“所有者”**|Specifies the owner of the trace table. 此字段将自动填充为 **dbo**。  
+|**Database**|指定跟踪表所在的数据库。  
+|**所有者**|Specifies the owner of the trace table. 此字段将自动填充为 **dbo**。  
 |**表**|指定将从中读取跟踪的跟踪表的名称。  
 
-## <a name="destination-table"></a>目的表
+## <a name="destination-table"></a>目标表
 使用 **“目标表”** 对话框可以指定要用于存储跟踪的表。  
 
-|项|描述
+|Item|说明
 |---|---
 |**SQL Server**|指定当前连接的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。 此字段将自动填充，并且无法更新。 若要更改服务器，请单击 **“取消”** ，然后连接到要用于存储跟踪表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
-|**“数据库”**|指定要用于存储跟踪表的数据库。  
-|**“所有者”**|Specifies the owner of the trace table. 此字段将自动填充为 **dbo**。  
-|**Table**|指定要用于存储跟踪的表的名称。  
+|**Database**|指定要用于存储跟踪表的数据库。  
+|**所有者**|Specifies the owner of the trace table. 此字段将自动填充为 **dbo**。  
+|**表**|指定要用于存储跟踪的表的名称。  
 
 ## <a name="replay-configuration"></a>重播配置
 ### <a name="basic-replay-options"></a>基本重播选项
 在 **“重播配置”** 对话框中，使用 **“基本重播配置”** 页可以指定如何重播跟踪文件或表。  
 若要查看此窗口，请使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 打开包含相应重播事件的跟踪文件或表。 有关详细信息，请参阅 [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md)。 打开跟踪文件或表后，在 **“重播”** 菜单上，单击 **“启动”** ，然后连接到要重播跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
 
-|项|描述
+|Item|说明
 |---|---
 |**重播服务器**|显示要连接用来重播的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
 |**更改...**|启动“连接到服务器”  对话框以连接到另一台服务器。  
@@ -247,7 +219,7 @@ Microsoft SQL Server Profiler 和优化顾问使用此对话框来选择表。
 在 **“重播配置”** 对话框中，使用 **“高级重播选项”** 选项卡可以指定如何重播跟踪文件。  
 若要查看此窗口，请使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 打开包含相应重播事件的跟踪文件或表。 有关详细信息，请参阅 [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md)。 打开跟踪文件或表后，在 **“重播”** 菜单上，单击 **“启动”** ，连接到要重播跟踪的 SQL Server 实例，再单击 **“高级重播选项”** 选项卡。  
 
-|项|描述
+|Item|说明
 |---|---
 |**重播系统 SPID**|指定 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是否重播系统进程标识符 (SPID)。  
 |**仅重播一个 SPID**|仅重播与所选 SPID 相关的源跟踪文件中的活动。  
@@ -264,7 +236,7 @@ Microsoft SQL Server Profiler 和优化顾问使用此对话框来选择表。
 使用 **“查找”** 对话框可以在跟踪中搜索特定字符或字词。 若要取消正在进行的搜索，请按 Esc。  
  若要在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中打开此对话框，请在 **“编辑”** 菜单上，单击 **“查找”** 。  
 
-|项|描述
+|Item|说明
 |---|---
 |**查找内容**|输入要搜索的文本。 该搜索匹配包含指定字符串的任何字符串。 例如，针对“Completed”的搜索匹配“SQL:BatchCompleted”。 不支持通配符（*、? 等）。  
 |**在列中搜索**|单击要搜索的数据列，或者单击“\<所有列>”以搜索跟踪中的所有数据列  。  
@@ -279,15 +251,15 @@ Microsoft SQL Server Profiler 和优化顾问使用此对话框来选择表。
 - 通过分组，可以在跟踪显示窗口中将特定类型的所有事件组织起来。 但是，这些事件在其事件类类型下并不折叠显示。  
 
 在跟踪显示窗口中对事件进行分组或聚合时，所选择的用于分组或聚合的列会在显示窗口中保持固定，但是您可以左右滚动，以便查看所有其他的数据列。  
-若要访问此对话框，请打开现有的跟踪文件或跟踪表，再单击[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]“文件”菜单上的“属性”   。 在 **“跟踪属性”** 对话框中，单击 **“事件选择”** 选项卡，再单击 **“组织列”** 。 您也可以在创建新的跟踪时单击 **“事件选择”** 选项卡上的 **“组织列”** 。  
+若要访问此对话框，请打开现有的跟踪文件或跟踪表，再单击[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]“文件”  菜单上的“属性”  。 在 **“跟踪属性”** 对话框中，单击 **“事件选择”** 选项卡，再单击 **“组织列”** 。 您也可以在创建新的跟踪时单击 **“事件选择”** 选项卡上的 **“组织列”** 。  
 将数据列名称移动到“组”  下，可以在跟踪窗口中对事件类进行分组或聚合。
 - 若要对事件进行聚合，请将一个数据列移动到 **“组”** 中。 这会导致在跟踪显示窗口中相应的事件类类型名称下折叠所有特定类型的事件。 事件类名称的左侧将显示一个加号 ( **+** )。 单击加号可展开相应的事件类类型，以便查看所有事件。 您可以通过单击 **“视图”** 菜单上的 **“聚合视图”** 或 **“分组视图”** 来启用或禁用聚合和分组功能。
 - 若要对事件进行分组，请将多个数据列移动到 **“组”** 中。 这会将跟踪显示窗口中所有特定类型的事件分到一组中，但是不会在各事件类类型名称下折叠事件。 您可以通过单击“视图”菜单上的 **“分组视图”** 在分组视图和未分组视图之间来回切换。 当多个数据列移动到 **“组”** 中时，将无法切换到 **“聚合视图”** 。
 
-|项|描述
+|Item|说明
 |---|---
 |**“列”**|列出可移动到“组”  中的数据列。 单击“列”  左侧的加号 ( **+** ) 可展开列表。  
-|**向上**|选择数据列之后，单击“向上”  可将数据列移动到“组”  中。 您也可以单击 **“向上”** 在跟踪显示窗口中对列的显示顺序重新进行排列。  
+|**Up**|选择数据列之后，单击“向上”  可将数据列移动到“组”  中。 您也可以单击 **“向上”** 在跟踪显示窗口中对列的显示顺序重新进行排列。  
 |**向下**|选择数据列之后，单击“向下”  可将数据列从“组”  中移出。 您也可以单击 **“向下”** 在跟踪显示窗口中对列的显示顺序重新进行排列。  
 
 ## <a name="edit-filter"></a>编辑筛选器
@@ -296,9 +268,9 @@ Microsoft SQL Server Profiler 和优化顾问使用此对话框来选择表。
  >对于字符串类型数据列，筛选条件将显示为 LIKE 或 NOT LIKE 字符串值。  
 
 ## <a name="select-template-name"></a>选择模板名称
-使用 **“选择模板名称”** 对话框，可以选择现有的 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 跟踪模板以导出到操作系统的文件中。 当编辑现有的跟踪模板时，还可以使用此对话框选择或输入不同的名称来另存跟踪模板。 要在导出模板时访问此对话框，请在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]“文件”菜单上，指向“模板”，再单击“导出模板”    。 若要在更改模板名称时访问此对话框，请在 **“文件”** 菜单上，依次指向 **“模板”** 和 **“编辑模板”** ，再单击 **“另存为”** 。  
+使用 **“选择模板名称”** 对话框，可以选择现有的 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 跟踪模板以导出到操作系统的文件中。 当编辑现有的跟踪模板时，还可以使用此对话框选择或输入不同的名称来另存跟踪模板。 要在导出模板时访问此对话框，请在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]“文件”  菜单上，指向“模板”  ，再单击“导出模板”  。 若要在更改模板名称时访问此对话框，请在 **“文件”** 菜单上，依次指向 **“模板”** 和 **“编辑模板”** ，再单击 **“另存为”** 。  
 
-|项|描述
+|Item|说明
 |---|---
 |**服务器类型**|选择要从中选择模板的服务器的类型。 仅当导出模板时，此选项才可用。  
 |**模板名称**|键入新的模板名称，或者从列表中选择一个模板名称。 如果要导出模板，则只能从列表中选择一个模板名称。 

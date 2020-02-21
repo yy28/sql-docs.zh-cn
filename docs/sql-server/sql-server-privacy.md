@@ -7,22 +7,22 @@ ms.custom: ''
 ms.topic: conceptual
 f1_keywords: ''
 helpviewer_keywords: ''
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: c92eead00b10c4a26a93234c3bbfeebf254f6aff
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 946e99884b4c261393c29cd06747823c3aa7e3a1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028846"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76761801"
 ---
 # <a name="sql-server-privacy-supplement"></a>SQL Server 隐私补充
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本文总结了已启用 Internet 的功能，这些功能可收集并向 Microsoft 发送匿名功能使用情况和诊断数据。 SQL Server 可能会收集标准计算机信息，并可能会将有关使用情况和性能的数据传输给 Microsoft 进行分析，以便改进产品的质量、安全性和可靠性。 本文用作整个 [Microsoft 隐私声明](https://go.microsoft.com/fwlink/?LinkId=521839)的附录。 本文中的数据分类仅适用于 SQL Server 本地产品版本。 它不适用于：
+本文总结了已启用 Internet 的功能，这些功能可收集并向 Microsoft 发送匿名功能使用情况和诊断数据。 SQL Server 可能会收集标准计算机信息，并可能会将有关使用情况和性能的数据传输给 Microsoft 进行分析，以便改进产品的质量、安全性和可靠性。 如果在 Microsoft Azure 服务上的虚拟机中安装了 SQL Server，则会将环境信息发送到 Microsoft，以便 Microsoft 可以将 SQL Server 虚拟机资源注册到 Azure 订阅中的资源提供程序，如[此处](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-register-with-resource-provider)进一步说明所示。 作为注册 SQL Server 虚拟机资源的一部分，可以在虚拟机上安装 SQL Server IaaS 代理扩展，如[此处](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-agent-extension)进一步说明所示。 本文用作整个 [Microsoft 隐私声明](https://go.microsoft.com/fwlink/?LinkId=521839)的附录。 本文中的数据分类仅适用于 SQL Server 本地产品版本。 它不适用于：
 
-- Azure SQL Database
+- Azure SQL 数据库
 - [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms?view=sql-server-2017)
 - SQL Server Data Tools (SSDT)
 - Azure Data Studio
@@ -43,7 +43,7 @@ ms.locfileid: "69028846"
 
 ### <a name="permitted-usage-scenarios"></a>允许的使用方案
 
-|应用场景 |访问限制 |保留期要求 |
+|场景 |访问限制 |保留期要求 |
 |---------|---------|---------|
 |这些凭据通过使用情况和诊断数据始终保留在用户计算机上。 |- |- |
 |故障转储可以包含访问控制数据。 |- |故障转储：最长 30 天。 |
@@ -62,7 +62,7 @@ ms.locfileid: "69028846"
 
 ### <a name="permitted-usage-scenarios"></a>允许的使用方案
 
-|应用场景  |访问限制  |保留期要求 |
+|场景  |访问限制  |保留期要求 |
 |---------|---------|---------|
 |此数据通过使用情况和诊断数据保留在用户计算机上。 |- |- |
 |故障转储可以包含客户内容，并可以发送至 Microsoft。 |- |故障转储：最长 30 天。 |
@@ -85,7 +85,7 @@ ms.locfileid: "69028846"
 
 ### <a name="permitted-usage-scenarios"></a>允许的使用方案
 
-|应用场景  |访问限制  |保留期要求|
+|场景  |访问限制  |保留期要求|
 |---------|---------|---------|
 |此数据通过使用情况和诊断数据保留在用户计算机上。 |- |- |
 |故障转储可包含 EUII，并可发送至 Microsoft。 |- |故障转储：最长 30 天 |
@@ -107,7 +107,7 @@ ms.locfileid: "69028846"
 
 ### <a name="permitted-usage-scenarios"></a>允许的使用方案
 
-|应用场景  |访问限制  |保留期要求|
+|场景  |访问限制  |保留期要求|
 |---------|---------|---------| 
 |Microsoft 可以使用该数据来优化功能和/或修复当前功能中的 bug。 |仅限 Microsoft 内部使用，不允许第三方访问。 Microsoft 可向原始客户公开数据。  例如，仪表板 |最短 90 天 - 最长 3 年 |
 |客户可自愿向 Microsoft 发送包含客户内容的用户反馈。 |仅限 Microsoft 内部使用，不允许第三方访问。 |客户可自愿向 Microsoft 发送包含客户内容的用户反馈。 |
@@ -136,7 +136,7 @@ Microsoft does 会检查由使用 SQL Server 的其他程序设置的应用程�
 
 ### <a name="permitted-usage-scenarios"></a>允许的使用方案
 
-|应用场景  |访问限制  |保留期要求|
+|场景  |访问限制  |保留期要求|
 |---------|---------|---------|
 |Microsoft 可能使用它来优化功能，并/或修复当前功能中的 bug。|仅限 Microsoft 内部使用，不允许第三方访问。 |最短 90 天 - 最长 3 年 |
 |可用于向客户提供建议。  例如，“根据产品的使用情况，建议使用功能 X，因为它性能更优良  。” |例如，Microsoft 可通过仪表板向原始客户公开该数据。 |客户数据安全日志：最短 3 年 - 最长 6 年 |
@@ -161,7 +161,7 @@ Microsoft does 会检查由使用 SQL Server 的其他程序设置的应用程�
 > 所有对象元数据值在收集之前都会经过哈希处理。
 >
 
-|应用场景  |访问限制  |保留期要求|
+|场景  |访问限制  |保留期要求|
 |---------|---------|---------|
 |Microsoft 可能使用它来优化功能，并/或修复当前功能中的 bug。 |仅限 Microsoft 内部使用，不允许第三方访问。 |最短 90 天 - 最长 3 年|
 

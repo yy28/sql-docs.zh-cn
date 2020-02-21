@@ -1,6 +1,6 @@
 ---
 title: 使用 RevoScaleR 转换数据
-description: 本教程演练如何使用 SQL Server 上的 R 语言转换数据。
+description: RevoScaleR 教程 9：如何在 SQL Server 中使用 R 语言转换数据。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,23 +9,23 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 773607c7800ed1d507aa721ca7cf86a03857ab8b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 3e8c28548ba4fa5f5ad661e3b7b0872ad166b812
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727168"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947180"
 ---
 # <a name="transform-data-using-r-sql-server-and-revoscaler-tutorial"></a>使用 R（SQL Server 和 RevoScaleR 教程）转换数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本课程属于 [RevoScaleR 教程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)，该教程介绍如何在 SQL Server 中使用 [RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)。
+这是 [RevoScaleR 教程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的第 9 个教程，RevoScaleR 教程介绍如何在 SQL Server 中使用 [RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)。
 
-在本课程中，了解用于在不同的分析阶段转换数据的 RevoScaleR 函数。
+在本教程中，了解用于在不同的分析阶段转换数据的 RevoScaleR  函数。
 
 > [!div class="checklist"]
-> * 使用 rxDataStep 创建和转换数据子集
-> * 在导入期间使用 rxImport 在 XDF 文件或内存数据帧中或从XDF 文件或内存数据帧中转换数据
+> * 使用 rxDataStep 创建和转换数据子集 
+> * 在导入期间使用 rxImport 在 XDF 文件或内存数据帧中或从XDF 文件或内存数据帧中转换数据 
 
 函数 **rxSummary**、 **rxCube**、 **rxLinMod**、 **rxLogit** 虽然不是专门用于数据移动，但都支持数据转换。
 
@@ -35,10 +35,10 @@ ms.locfileid: "73727168"
 
 若要使本示例有趣，可以使用另一个 R 包中的函数来转换数据。 **引导** 包是一个“建议”包，也就是说， **引导** 包包含在每个 R 分发版中，但是不会在启动时自动加载。 因此，此包应已在配置为 R 集成的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上可用。
 
-在“引导”包中，使用函数 inv.logit 计算 logit 的反函数。 也就是说，**inv.logit** 函数将 logit 转换为范围在 [0，1] 之间的概率。
+在“引导”包中，使用函数 inv.logit 计算 logit 的反函数   。 也就是说，**inv.logit** 函数将 logit 转换为范围在 [0，1] 之间的概率。
 
 > [!TIP] 
-> 获取此范围的预测值的另一种方法是在对 rxPredict 的最初调用中将 type 参数设为 **response**。
+> 获取此范围的预测值的另一种方法是在对 rxPredict  的最初调用中将 type  参数设为 **response**。
 
 1. 首先创建用于存储表 `ccScoreOutput` 的数据的数据源。
   
@@ -60,7 +60,7 @@ ms.locfileid: "73727168"
     rxSetComputeContext(sqlCompute)
     ```
   
-4. 使用函数 rxSqlServerTableExists 检查是否已存在输出表 `ccScoreOutput2`；如果存在，请使用函数 rxSqlServerDropTable 删除该表。
+4. 使用函数 rxSqlServerTableExists 检查是否已存在输出表 `ccScoreOutput2`；如果存在，请使用函数 rxSqlServerDropTable 删除该表   。
   
     ```R
     if (rxSqlServerTableExists("ccScoreOutput2"))     rxSqlServerDropTable("ccScoreOutput2")

@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 746a9cadfca28aae3bd2781a3daf71aabb8d6e5b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727325"
 ---
 # <a name="real-time-scoring-with-sp_rxpredict-in-sql-server-machine-learning"></a>在 SQL Server 机器学习中使用 sp_rxPredict 进行实时评分
@@ -128,7 +128,7 @@ ms.locfileid: "73727325"
 
 <a name ="bkmk_enableRtScoring"></a> 
 
-### <a name="step-1-enable-the-real-time-scoring-procedure"></a>步骤 1. 启用实时评分过程
+### <a name="step-1-enable-the-real-time-scoring-procedure"></a>步骤 1。 启用实时评分过程
 
 必须对要用于评分的每个数据库启用此功能。 服务器管理员应运行包含在 RevoScaleR 包中的命令行实用工具 RegisterRExt.exe。
 

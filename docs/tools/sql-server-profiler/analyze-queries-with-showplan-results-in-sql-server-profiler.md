@@ -1,27 +1,25 @@
 ---
-title: 在 SQL Server Profiler 中使用 SHOWPLAN 结果来分析查询 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 使用 SHOWPLAN 结果来分析查询
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- events [SQL Server], Showplan
-- Profiler [SQL Server Profiler], Showplan results
-- SQL Server Profiler, Showplan results
 ms.assetid: 6a2f7727-141c-4f59-8613-2e452bc78467
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 577590c360b14af9129487c120dbf70726f2a7ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: e0936a3931b574c08e5a58f396d7917eae569078
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105616"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307388"
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>在 SQL Server Profiler 中使用 SHOWPLAN 结果来分析查询
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   可以将导致 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 在跟踪中收集和显示查询计划信息的 Showplan 事件类添加到跟踪定义。 也可能从跟踪中收集的其他事件中提取显示计划事件，并将这些显示计划事件保存在单独的 XML 文件中。  
   
@@ -36,7 +34,7 @@ ms.locfileid: "68105616"
 ## <a name="showplan-events"></a>显示计划事件  
  下表中列出并说明了显示计划跟踪事件。  
   
-|事件名称|描述|  
+|事件名称|说明|  
 |----------------|-----------------|  
 |**Performance statistics**|指明编写的显示计划第一次保存到缓存中、何时对其重新编写以及何时将其从计划缓存中删除。 **TextData** 列包含 XML 格式的显示计划。 有关详细信息，请参阅 [Performance Statistics 事件类](../../relational-databases/event-classes/performance-statistics-event-class.md)。|  
 |**Showplan All**|显示查询计划，列出已执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的完整编写时详细信息。 例如，可能显示估计开销值和列列表。 有关详细信息，请参阅 [Showplan All Event Class](../../relational-databases/event-classes/showplan-all-event-class.md)。|  
@@ -49,6 +47,6 @@ ms.locfileid: "68105616"
 |**Showplan XML Statistics Profile**|显示查询计划，列出 XML 格式的完整运行时详细信息。 例如，此事件类捕获通过已执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的每个运算符的行数。 有关详细信息，请参阅 [Showplan XML Statistics Profile Event Class](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md)。|  
   
 ## <a name="see-also"></a>另请参阅  
- [Performance 事件类别](../../relational-databases/event-classes/performance-event-category.md)  
+ [“性能”事件类别](../../relational-databases/event-classes/performance-event-category.md)  
   
   
