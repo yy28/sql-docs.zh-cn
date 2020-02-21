@@ -1,10 +1,9 @@
 ---
-title: 从数据库关系图中移除表 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 从数据库关系图中移除表
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,14 @@ helpviewer_keywords:
 ms.assetid: 11afcfa1-816b-419c-9bc7-3abf366f4c3c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fae136b4de6a85d26d14b487e1812c3b95a17b7a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 7b6e3847aa5471b757333a4ec7ff1964acabf0e1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256084"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255256"
 ---
 # <a name="remove-tables-from-database-diagrams-visual-database-tools"></a>从数据库关系图中移除表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,9 +30,9 @@ ms.locfileid: "68256084"
   
 1.  在数据库关系图中，选择要移除的表。  
   
-2.  右键单击该表，然后从快捷菜单中选择“从关系图中删除表”。  
+2.  右键单击该表，然后从快捷菜单中选择“从关系图中删除表”  。  
   
-    -或 -  
+    -或-  
   
     按 Esc 键。  
   
@@ -41,5 +42,5 @@ ms.locfileid: "68256084"
   
 ## <a name="see-also"></a>另请参阅  
 [使用数据库关系图 (Visual Database Tools)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
-[如何：从数据库中删除表 (Visual Database Tools)](https://msdn.microsoft.com/ca6aa3e9-9885-44c3-bafc-aec441fd97ec)  
+[如何：从数据库中删除表 (https://msdn.microsoft.com/ca6aa3e9-9885-44c3-bafc-aec441fd97ec)  
   

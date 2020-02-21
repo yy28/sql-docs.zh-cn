@@ -1,10 +1,8 @@
 ---
-title: “错误列表”窗口 (Management Studio) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: “错误列表”窗口
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -14,20 +12,28 @@ helpviewer_keywords:
 ms.assetid: fae6327d-e268-44ae-a474-4a8f8f843129
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dcf0886a58e1e735e95ed0383313769f4796bd24
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 64fa6b834d3f771712f9ce09dedb237fff46ed2c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68253629"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243385"
 ---
 # <a name="transact-sql-debugger---error-list-window"></a>Transact-SQL 调试器 -“错误列表”窗口
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **“错误列表”** 用于显示由 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器中的 IntelliSense 代码生成的语法和语义错误。  
-  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]“错误列表”  用于显示由 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器中的 IntelliSense 代码生成的语法和语义错误。  
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
 ## <a name="features-of-the-error-list"></a>“错误列表”的功能  
- **“错误列表”** 提供下列功能：  
+
+**“错误列表”** 提供下列功能：  
   
 -   编辑脚本时， **“错误列表”** 可显示由 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器中的 IntelliSense 生成的错误和警告。  
   
@@ -40,9 +46,9 @@ ms.locfileid: "68253629"
 -   关闭某个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本文件的选项卡后，与该文件相关的错误将从 **“错误列表”** 中删除。  
   
 ## <a name="working-with-the-error-list"></a>使用“错误列表”  
- 若要显示 **“错误列表”**，请执行下列操作之一：  
+ 若要显示 **“错误列表”** ，请执行下列操作之一：  
   
--   在 **“视图”** 菜单上单击 **“错误列表”**。  
+-   在 **“视图”** 菜单上单击 **“错误列表”** 。  
   
 -   使用键盘快捷键 CTRL+\\和 CTRL+E。  
   
@@ -66,7 +72,7 @@ ms.locfileid: "68253629"
  有时候错误会同时在上述两个位置列出。 例如，某脚本文件可能存在已在 **“错误列表”** 中列出的语法错误。 如果在纠正此错误之前执行了该脚本，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 分析器会检测到相同的错误情形并在 **“消息”** 选项卡中返回此错误消息。  
   
 > [!NOTE]  
->  “错误列表”仅显示来源于 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器的错误，而不显示来源于 MDX、DMX 或 XML/A 编辑器的错误。 所有 MDX、DMX 和 XML/A 错误均显示在这些编辑器的“消息”选项卡中。  
+>  “错误列表”  仅显示来源于 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器的错误，而不显示来源于 MDX、DMX 或 XML/A 编辑器的错误。 所有 MDX、DMX 和 XML/A 错误均显示在这些编辑器的“消息”  选项卡中。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
  **“错误列表”** 后，将在以下列中显示相关信息：  
@@ -74,10 +80,10 @@ ms.locfileid: "68253629"
  **默认顺序**  
  显示一个整数，该整数指示相应项的生成次序。  
   
- **Description**  
+ **说明**  
  显示相应错误项的文本。 较长的说明会自动换行。  
   
- **文件**  
+ **File**  
  显示生成相应错误的脚本文件的名称。  
   
  **线条**  

@@ -1,11 +1,7 @@
 ---
-title: 导入到数据库项目 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 导入到数据库项目
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL.DATA.TOOLS.SQLPROJECTIMPORTSNAPSHOTSUMMARYDIALOG.DIALOG
@@ -14,19 +10,24 @@ f1_keywords:
 ms.assetid: d0a0a394-6cb6-416a-a25f-9babf8ba294a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 89ca0b89957081fa2e93d5d28bbef79ecb7d7834
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 0cfdbb9cb094188e372424257656953b62635996
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119836"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246454"
 ---
 # <a name="import-into-a-database-project"></a>导入到数据库项目
+
 可以使用“导入”功能，从活动的数据库或 .dacpac 把新对象填充到项目，或使用脚本中的新定义更新您项目中的现有对象。 请注意这三种途径存在一些行为差异，下面将进行说明。  
   
 **“导入”菜单**  
   
-![SSDT 导入菜单](../ssdt/media/ssdt-import.gif "SSDT 导入菜单")  
+![SSDT“导入”菜单](../ssdt/media/ssdt-import.gif "SSDT“导入”菜单")  
   
 **本主题的内容**  
   

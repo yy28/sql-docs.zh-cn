@@ -1,20 +1,21 @@
 ---
-title: 创建报表服务器数据库（SSRS Configuration Manager）| Microsoft Docs
+title: 创建报表服务器数据库，配置管理器 | Microsoft Docs
+description: SQL Server Reporting Services 本机模式使用两个 SQL Server 关系数据库来存储报表服务器元数据和对象。 一个数据库用于主存储，另一个数据库用于存储临时数据。
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
-ms.date: 08/28/2019
-ms.openlocfilehash: d8bbc1436b3615259248598a9fa19346d4f2a43f
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
-ms.translationtype: MTE75
+ms.date: 12/16/2019
+ms.openlocfilehash: a0ff8c253af6165602b626da9aedbba09bb819f8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123009"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253309"
 ---
-# <a name="create-a-report-server-database"></a>创建报表服务器数据库 
+# <a name="create-a-report-server-database-ssrs-configuration-manager"></a>创建报表服务器数据库，SSRS 配置管理器  
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 

@@ -1,7 +1,7 @@
 ---
-title: 在 SQL Server 故障转移群集上安装客户端工具 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 安装客户端工具：故障转移群集
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.reviewer: ''
 ms.prod: sql
 ms.technology: install
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3c82d510-9798-46be-bebb-cac9bef56936
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 359548f6315535e324158cdecd015c1c03266d7a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c4918cdbb99a49bf577f9efad19ed0360c9a4911
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063937"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230501"
 ---
 # <a name="install-client-tools-on-a-sql-server-failover-cluster"></a>在 SQL Server 故障转移群集上安装客户端工具
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,19 +29,19 @@ ms.locfileid: "68063937"
   
 ## <a name="installation-procedures"></a>安装过程  
   
-#### <a name="installing-includessnoversionincludesssnoversion-mdmd-client-tools-using-the-setup-user-interface"></a>使用安装程序用户界面安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 客户端工具  
+#### <a name="installing-ssnoversion-client-tools-using-the-setup-user-interface"></a>使用安装程序用户界面安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 客户端工具  
   
 1.  插入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装介质， 然后双击根安装文件夹中的 Setup.exe。 若要从网络共享进行安装，请找到共享中的根文件夹，然后双击 Setup.exe。  
   
-2.  在“安装”  页上，单击“全新” **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]独立安装或向现有安装添加功能**。 请勿单击“新建” **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]故障转移群集安装**。  
+2.  在“安装”页上，单击“全新”**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]独立安装或向现有安装添加功能**。 请勿单击“新建”**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]故障转移群集安装**。  
   
 3.  系统配置检查器将验证计算机的系统状态，然后安装程序继续运行。  
   
-4.  在“安装类型”  页上，单击“执行全新安装” **[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]** 。  
+4.  在“安装类型”页上，单击“执行全新安装”**[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]**。  
   
 5.  在 **“功能选择”** 页上，选择需要安装的工具，然后按照安装过程的剩余步骤操作。  
   
-#### <a name="installing-includessnoversionincludesssnoversion-mdmd-client-tools-at-the-command-prompt"></a>在命令提示符处安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 客户端工具  
+#### <a name="installing-ssnoversion-client-tools-at-the-command-prompt"></a>在命令提示符处安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 客户端工具  
   
 1.  若要安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 客户端工具和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 联机丛书，请运行以下命令：Setup.exe/q/Action=Install /Features=Tools  
   
@@ -49,10 +49,10 @@ ms.locfileid: "68063937"
   
 3.  若要安装完整的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理工具，请运行以下命令：Setup.exe/q/Action=Install /Features=ADV_SSMS。 有关功能的参数值的详细信息，请参阅 [从命令提示符安装 SQL Server 2016](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。  
   
-### <a name="uninstalling-includessnoversionincludesssnoversion-mdmd-client-tools"></a>卸载 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 客户端工具  
- 它们在“控制面板”的“添加或删除程序”中显示为 **[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]** ，可从此处将其删除。 当使用“删除节点”从故障转移群集中卸载 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例时，并不同时卸载这些客户端组件。  
+### <a name="uninstalling-ssnoversion-client-tools"></a>卸载 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 客户端工具  
+ 它们在“控制面板”的“添加或删除程序”中显示为 **[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]**，可从此处将其删除。 当使用“删除节点”从故障转移群集中卸载 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例时，并不同时卸载这些客户端组件。  
   
 ## <a name="see-also"></a>另请参阅  
- [查看和阅读 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
+ [查看和读取 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

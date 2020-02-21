@@ -1,5 +1,5 @@
 ---
-title: setTrustStore 方法 (SQLServerDataSource) |Microsoft Docs
+title: setTrustStore 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: bab5485d-4547-426c-adbe-44e2b5702d1d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: be54aea70e712d2209c04196d3e450bca488578b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972191"
 ---
 # <a name="settruststore-method-sqlserverdatasource"></a>setTrustStore 方法 (SQLServerDataSource)
@@ -34,12 +34,12 @@ ms.locfileid: "67972191"
 public void setTrustStore(java.lang.String trustStore)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
   trustStore  
   
  包含证书 trustStore 文件的路径（包括文件名）的字符串  。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果未指定 trustStore 属性或将此属性设置为 null，则 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 将依赖于信任关系管理器工厂的查找规则来确定要使用哪一个证书存储区。 默认的 SunX509 TrustManagerFactory 尝试按此顺序在下列位置查找信任的资料：  
   
 -   1. 由“javax.net.ssl.trustStore”Java 虚拟机 (JVM) 系统属性指定的文件。  

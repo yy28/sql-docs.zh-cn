@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 51c21800dcddec471d6760c31c3cea12e6123b6e
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 7a4deeec624f349f7fd40bb89dc9b14b6baf309b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73592315"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190689"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>报表的嵌入数据集和共享数据集（报表生成器和 SSRS）
   数据集指定要从数据连接使用的数据。 数据集基于已作为嵌入数据源或对报表服务器上共享数据源的引用保存在报表中的数据连接。 数据集包括指定一组字段的查询。 在您将这些字段拖到设计图面上时，将创建在报表运行时对实际数据进行计算的表达式。  
@@ -42,7 +42,7 @@ ms.locfileid: "73592315"
   
 6.  **查询结果** 您可以运行查询并查看示例结果集。 您必须拥有设计时凭据才能运行查询。  
   
-7.  **来自架构的元数据** 数据访问接口将架构查询命令与检索数据集字段集合的元数据的查询分开运行。 例如， [!INCLUDE[tsql](../../includes/tsql-md.md)] **SELECT** 语句返回数据库表的列名称。 使用“报表数据”窗格展开数据集以查看数据集字段集合。  
+7.  **来自架构的元数据** 数据访问接口将架构查询命令与检索数据集字段集合的元数据的查询分开运行。 例如，[!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT  语句返回数据库表的列名称。 使用“报表数据”窗格展开数据集以查看数据集字段集合。  
   
  通过使用预定义的共享数据集和报表部件，也可以将数据包含在报表中。 这些项已具有您所需的数据连接信息。 有关详细信息，请参阅[报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md) 和[报表部件（报表生成器和 SSRS）](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "73592315"
   
 -   来自任何注册和配置的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据访问接口的结果集。  
   
--   来自为特定数据源设计的报表模型的数据，这样的报表模型具有预定义实体、实体关系和字段。 有关详细信息，请参阅[Reporting Services 文档](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)中的 "报表数据集"。  
+-   来自为特定数据源设计的报表模型的数据，这样的报表模型具有预定义实体、实体关系和字段。 有关详细信息，请参阅 [Reporting Services 文档](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)中的“报表数据集”。  
   
  当在运行时处理报表时，查询返回的实际结果集可能有零行或更多行。 在查询中定义的列也有可能已从数据源中丢失。 来自数据源的 Null 值映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 值 **System.DBNull.Value**。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "73592315"
   
  嵌入数据源和共享数据源的区别在于创建、存储和管理它们的方式不同。 下表总结了嵌入数据源和共享数据源之间的差异：  
   
-|描述|嵌入<br /><br /> 数据源|共享<br /><br /> 数据源|  
+|说明|嵌入<br /><br /> 数据源|共享<br /><br /> 数据源|  
 |-----------------|------------------------------|----------------------------|  
 |数据连接嵌入在报表定义中。|![可用](../../reporting-services/report-data/media/greencheck.gif "可用")||  
 |指向报表服务器上的数据连接的指针嵌入在报表定义中。||![可用](../../reporting-services/report-data/media/greencheck.gif "可用")|  
@@ -140,7 +140,7 @@ ms.locfileid: "73592315"
   
  下表将可为报表服务器上共享数据集的定义配置的属性与可为报表定义中共享数据集的实例配置的属性进行了比较。  
   
-|属性|有关定义的配置说明|有关实例的配置说明|  
+|properties|有关定义的配置说明|有关实例的配置说明|  
 |--------------|--------------------------------------------|------------------------------------------|  
 |查询文本|配置查询，包括将查询定义为表达式。|无法更改查询。|  
 |查询参数|不能引用报表参数<br /><br /> 包含默认值<br /><br /> 包含只读标志|配置定义中未标记为只读的参数|  
@@ -219,7 +219,7 @@ ms.locfileid: "73592315"
   
 ## <a name="see-also"></a>另请参阅  
  [数据集字段集合（报表生成器和 SSRS）](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [报表生成器中的数据连接、数据源和连接字符串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
   
   

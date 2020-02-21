@@ -8,14 +8,14 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3aa251e7d31f21cf51f4f528b1f0ccd35c0afb2c
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 0cddfe78555d5e5f57e57346aff1ead52f05cebf
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844557"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831553"
 ---
-# <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新增功能
+# <a name="whats-new-in-sql-server-2019"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新增功能
 
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
@@ -29,9 +29,14 @@ ms.locfileid: "73844557"
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 为 [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] 引入了 [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]。 它还为 SQL Server 数据库引擎、SQL Server Analysis Services、SQL Server 机器学习服务、Linux 上的 SQL Server 和 SQL Server Master Data Services 提供了附加功能和改进。
 
+下面的一个 13 分钟的视频提供了对 SQL Server 2019 的介绍：
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-SQL-Server-2019/player?WT.mc_id=dataexposed-c9-niner]
+
+
 下面几个部分概述了这些功能。
 
-## <a name="data-virtualization-and-includebig-data-clusters-2019includesssbigdataclusters-ver15md"></a>数据虚拟化和 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]
+## <a name="data-virtualization-and-big-data-clusters-2019"></a>数据虚拟化和 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]
 
 当代企业通常掌管着庞大的数据资产，这些数据资产由托管在整个公司的孤立数据源中的各种不断增长的数据集组成。 利用 SQL Server 2019 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]，可以从所有数据中获得近乎实时的见解，该群集提供了一个完整的环境来处理包括机器学习和 AI 功能在内的大量数据。
 
@@ -60,7 +65,7 @@ ms.locfileid: "73844557"
 
 
 ### <a name="in-memory-database"></a>内存数据库
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [内存中数据库](../relational-databases/in-memory-database.md)技术利用现代硬件创新提供卓越的性能和规模。 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 在此领域早期创新的基础上构建（例如内存中联机事务处理 (OLTP)），旨在为所有数据库工作负荷实现新的可伸缩性级别。  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [内存数据库](../relational-databases/in-memory-database.md)技术利用现代硬件创新提供无与伦比的性能和规模。 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 在此领域早期创新的基础上构建（例如内存中联机事务处理 (OLTP)），旨在为所有数据库工作负荷实现新的可伸缩性级别。  
 
 |新增功能或更新 | 详细信息 |
 |:---|:---|
@@ -70,7 +75,7 @@ ms.locfileid: "73844557"
 | &nbsp; | &nbsp; |
 
 ### <a name="intelligent-performance"></a>智能性能
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 在早期版本的智能数据库创新的基础上构建，旨在确保[提高运行速度](https://blogs.msdn.microsoft.com/bobsql/tag/it-just-runs-faster/)。 这些改进有助于克服已知的资源瓶颈，并提供配置数据库服务器的选项，以在所有工作负荷中提供可预测性能。
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 在早期版本的智能数据库创新的基础上构建，旨在确保[提高运行速度](https://docs.microsoft.com/archive/blogs/bobsql/)。 这些改进有助于克服已知的资源瓶颈，并提供配置数据库服务器的选项，以在所有工作负荷中提供可预测性能。
 
 |新增功能或更新 | 详细信息 |
 |:---|:---|
@@ -79,7 +84,7 @@ ms.locfileid: "73844557"
 |资源调控| `REQUEST_MAX_MEMORY_GRANT_PERCENT` 和 `ALTER WORKLOAD GROUP` 的 `CREATE WORKLOAD GROUP` 选项的可配置值已从整数更改为浮点数数据类型，以允许更精细地控制内存限制。 请参阅[修改工作负载组](../t-sql/statements/alter-workload-group-transact-sql.md)和[创建工作负载组](../t-sql/statements/create-workload-group-transact-sql.md)。|
 |减少了对工作负荷的重新编译| 通过减少不必要的重新编译，改进了跨多个作用域使用临时表的性能。 请参阅[减少了对工作负荷的重新编译](../relational-databases/tables/tables.md#ctp23)。 |
 |间接检查点可伸缩性 |请参阅[改进了间接检查点可伸缩性](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23)。|
-|并发 PFS 更新|[页可用空间 (PFS) 页](https://techcommunity.microsoft.com/t5/SQL-Server/Under-the-covers-GAM-SGAM-and-PFS-pages/ba-p/383125)是数据库文件中的特殊页面，SQL Server 用来在为对象分配空间时帮助定位可用空间。 PFS 页上的页闩锁争用通常与 [TempDB](https://support.microsoft.com/en-us/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d) 关联，但当有许多并发对象分配线程时，也可能会在用户数据库上发生。 此改进改变了使用 PFS 更新来管理并发的方式，这样就能在共享闩锁（而不是排他闩锁）下更新它们。 自 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 起，此行为在所有数据库（包括 TempDB）中默认处于启用状态。|
+|并发 PFS 更新|[页可用空间 (PFS) 页](https://techcommunity.microsoft.com/t5/SQL-Server/Under-the-covers-GAM-SGAM-and-PFS-pages/ba-p/383125)是数据库文件中的特殊页面，SQL Server 用来在为对象分配空间时帮助定位可用空间。 PFS 页上的页闩锁争用通常与 [TempDB](https://support.microsoft.com/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d) 关联，但当有许多并发对象分配线程时，也可能会在用户数据库上发生。 此改进改变了使用 PFS 更新来管理并发的方式，这样就能在共享闩锁（而不是排他闩锁）下更新它们。 自 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 起，此行为在所有数据库（包括 TempDB）中默认处于启用状态。|
 |计划程序辅助角色迁移 |通过辅助角色迁移，空闲的计划程序可将辅助角色从同一 NUMA 节点上其他计划程序的可运行队列中迁移，并立即恢复已迁移的辅助角色的任务。 在将长时间运行的任务恰好分配给同一计划程序的情况下，此增强功能可提供更均衡的 CPU 使用率。 有关详细信息，请参阅 [SQL Server 2019 智能性能 - 辅助角色迁移](https://techcommunity.microsoft.com/t5/SQL-Server/SQL-Server-2019-Intelligent-Performance-Worker-Migration/ba-p/939610)。 |
 | &nbsp; | &nbsp; |
 
@@ -152,8 +157,9 @@ ms.locfileid: "73844557"
 |新增功能或更新 | 详细信息 |
 |:---|:---|
 |具有安全 Enclave 的 Always Encrypted|通过对服务器端安全隔离区中的纯文本数据启用计算，使用就地加密和丰富计算扩展 Always Encrypted。 就地加密可提高加密列、旋转列、加密密钥等加密操作的性能和可靠性，因为这样可以避免将数据移出数据库。<br><br> 对丰富计算（模式匹配和比较操作）的支持可将 Always Encrypted 解锁到一组更广泛的方案和应用程序，这些方案和应用程序需要敏感数据保护，同时还需要在 Transact-SQL 查询中使用更丰富的功能。 请参阅[包含安全 Enclave 的 Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md)。|
-|SQL Server 配置管理器中的证书管理|请参阅[证书管理（SQL Server 配置管理器）](../database-engine/configure-windows/manage-certificates.md)。|
-|数据发现和分类|数据发现和分类提供了本机内置在 SQL Server 中的高级功能，用于对分类、标记和保护数据库中的敏感数据。 对最敏感的数据（如商业、金融、医疗和 PII 等）进行分类，这在组织的信息保护中起到关键作用。 它可以充当基础结构，用于：<ul><li>帮助满足数据隐私标准和法规遵从性要求</li><li>各种安全方案，如监视（审核），以及对敏感数据异常访问的警报</li><li>可以更轻松地识别企业中敏感数据所在的位置，以便管理员采取保护数据库的正确措施</li></ul>对[审核](../relational-databases/security/auditing/sql-server-audit-database-engine.md)进行了强化处理，在审核日志中包含了名为 `data_sensitivity_information` 的新字段，其中记录查询返回的实际数据的敏感度分类（标签）。 有关详细信息和示例，请参阅 [ADD SENSITIVITY CLASSIFICATION](../t-sql/statements/add-sensitivity-classification-transact-sql.md)。|
+|SQL Server 配置管理器中的证书管理|现在可以使用 SQL Server 配置管理器来执行查看和部署证书等证书管理任务。 请参阅[证书管理（SQL Server 配置管理器）](../database-engine/configure-windows/manage-certificates.md)。|
+|数据发现和分类|数据发现和分类功能提供对用户表中的列进行分类和标记的功能。 对敏感数据（如商业、金融、医疗和 PII 等）进行分类，这在组织的信息保护中起到关键作用。 它可以充当基础结构，用于：<ul><li>帮助满足数据隐私标准和法规遵从性要求</li><li>各种安全方案，如监视（审核），以及对敏感数据异常访问的警报</li><li>可以更轻松地识别企业中敏感数据所在的位置，以便管理员采取保护数据库的正确措施</li></ul>|
+|SQL Server 审核|另外，对[审核](../relational-databases/security/auditing/sql-server-audit-database-engine.md)进行了强化处理，在审核日志中包含了 `data_sensitivity_information` 新字段，其中包含查询返回的实际数据的敏感度分类（标签）。 有关详细信息和示例，请参阅 [`ADD SENSITIVITY CLASSIFICATION`](../t-sql/statements/add-sensitivity-classification-transact-sql.md)。|
 | &nbsp; | &nbsp; |
 
 ## <a name="high-availability"></a>高可用性
@@ -200,7 +206,7 @@ ms.locfileid: "73844557"
 | 变更数据捕获 (CDC) 支持 | Linux 上的 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 现在支持变更数据捕获 (CDC)。 |
 | &nbsp; | &nbsp; |
 
-### <a name="containers"></a>“配置 SSIS 日志”
+### <a name="containers"></a>容器
 开始使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的最简单方法是使用容器。 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 在早期版本中引入的创新的基础上构建，旨在使你能够以更安全的方式在新平台上部署 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 容器，并获得更多功能。
 
 |新增功能或更新 | 详细信息 |
@@ -217,6 +223,7 @@ ms.locfileid: "73844557"
 |:---|:---| 
 |新内存设置选项 | 在安装过程中设置“最小服务器内存(MB)”  和“最大服务器内存(MB)”  服务器配置。 请参阅[“数据库引擎配置 - 内存”页](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory)，以及[通过命令提示符安装 SQL Server](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install) 中的 `USESQLRECOMMENDEDMEMORYLIMITS`、`SQLMINMEMORY` 和 `SQLMAXMEMORY` 参数。 建议值遵循[服务器内存配置选项](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)中的内存配置准则。| 
 |新并行度设置选项 | 在安装过程中设置“最大并行度”  服务器配置。 有关详细信息，请参阅[“数据库引擎配置 - MaxDOP”页](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop)，以及[通过命令提示符安装 SQL Server](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install) 中的 `SQLMAXDOP` 参数。 默认值遵循[配置服务器配置选项“最大并行度”](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)中的最大并行度准则。| 
+|服务器/CAL 许可证产品密钥的设置警告|如果输入了企业服务器/CAL 许可证产品密钥，且计算机上有 20 多个物理内核，或者在启用超线程时有 40 个逻辑内核，则安装过程中会显示警告。 用户仍然可以确认限制并继续设置，或者输入支持操作系统最大处理器数量的许可证密钥。|
 | &nbsp; | &nbsp; |
 
 ## <a id="ml"></a>SQL Server 机器学习服务
@@ -250,7 +257,7 @@ ms.locfileid: "73844557"
 |灵活的文件任务 |在本地文件系统、Azure Blob 存储和 Azure Data Lake Storage Gen2 上执行文件操作。 查看[灵活的文件任务](../integration-services/control-flow/flexible-file-task.md)。|
 |灵活的文件源和目标 |对 Azure Blob 存储和 Azure Data Lake Storage Gen2 读写数据。 请参阅[灵活的文件源](../integration-services/data-flow/flexible-file-source.md)和[灵活的文件目标](../integration-services/data-flow/flexible-file-destination.md)。 |
 
-## <a name="sql-server-includemaster-data-servicesincludesssmdsshort-mdmd"></a>SQL Server [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
+## <a name="sql-server-master-data-services"></a>SQL Server [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
 
 | 新增功能或更新 | 详细信息 |
 |:---|:---|

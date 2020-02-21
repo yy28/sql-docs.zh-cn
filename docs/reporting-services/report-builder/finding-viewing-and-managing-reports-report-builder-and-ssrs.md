@@ -1,6 +1,7 @@
 ---
 title: 查找、查看和管理报表（报表生成器和 SSRS）| Microsoft Docs
-ms.date: 05/20/2019
+description: 在报表生成器和报表设计器中，可以通过浏览查找分页报表、共享数据源、模型和其他相关报表项。
+ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-builder
@@ -8,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c2e379d463734b751770a8b9a844ea92b1f328b6
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
-ms.translationtype: MTE75
+ms.openlocfilehash: 74c4591122fa45d4e050718e78296ed672a4c210
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67492870"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258106"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>查找、查看和管理报表（报表生成器和 SSRS）
-  在报表生成器中，您可以浏览报表服务器或 SharePoint 站点上的文件夹，以便查找报表、共享数据源、模型和其他相关报表项；并且可以浏览您的计算机，以便查找本地报表。 为了便于查找报表，报表生成器维护最近使用的服务器和站点的列表，并提供对您的计算机的文件系统中“桌面”、“我的文档”和“我的电脑”文件夹的直接访问。  
+  在报表生成器中，可以浏览报表服务器或 SharePoint 站点上的文件夹，以便查找分页报表、共享数据源、模型和其他相关报表项；并且可以浏览计算机，以便查找本地报表。 为了便于查找报表，报表生成器维护最近使用的服务器和站点的列表，并提供对您的计算机的文件系统中“桌面”、“我的文档”和“我的电脑”文件夹的直接访问。  
   
- 在报表设计器中，您还可以浏览您的计算机以查找本地报表。 将报表部署到报表服务器或 SharePoint 站点之后，可以通过使用 Web 门户来浏览报表服务器，或搜索 SharePoint 站点来查找报表。 报表和相关项在部署之后仍在本地可用。  
+ 在报表设计器中，还可以浏览计算机以查找本地分页报表。 将报表部署到报表服务器或 SharePoint 站点之后，可以通过使用 Web 门户来浏览报表服务器，或搜索 SharePoint 站点来查找报表。 报表和相关项在部署之后仍在本地可用。  
   
 > [!NOTE]  
 > 您可以在本地模式中使用报表生成器，也可以在连接到报表服务器的情况下使用报表生成器。 如果您没有与报表服务器的活动连接，则会受到某些限制。  
@@ -103,9 +104,9 @@ Web 门户通常包含文件夹、报表、数据源以及“我的报表”文�
   
  访问 SharePoint 站点时，您可以看到“浏览”页和“库工具”选项卡。“浏览”页列出各个库，还列出所选库的内容。 可以查看库中的报表和其他项，浏览文件夹，搜索站点以查找项。  
   
- 若要将报表服务器项与 SharePoint 站点中的其他项区分开，可使用图标直观地识别出报表服务器项，也可以将鼠标指针置于类型上方并查看文件扩展名。 下图显示了 Reports 库中的文件夹和报表定义  ：  
+ 若要将报表服务器项与 SharePoint 站点中的其他项区分开，可使用图标直观地识别出报表服务器项，也可以将鼠标指针置于类型上方并查看文件扩展名。 下图显示了 Reports 库中的文件夹和报表定义：  
   
- ![带有报表服务器项的 SharePoint 库](../../reporting-services/report-builder/media/rs-sharepointlibrary.gif "Sharepoint library with report server items")  
+ ![带有报表服务器项的 SharePoint 库](../../reporting-services/report-builder/media/rs-sharepointlibrary.gif "带有报表服务器项的 SharePoint 库")  
   
 ### <a name="viewing-reports"></a>查看报表  
  上载到 SharePoint 库的报表定义（.rdl 文件）是通过 Reporting Services 外接程序安装的报表查看器 Web 部件来查看的。 当您安装该外接程序时会自动定义一个 .rdl 文件关联。 因此，选择报表时，报表会自动在该 Web 部件中打开。 在打开报表后，可使用 Web 部件提供的报表工具栏在页面间导航，或者搜索、缩放和打印报表。 工具栏包括“导出数据馈送”选项，用于将报表导出为 Atom 数据馈送。它还包括 **“操作”** 菜单，提供用于打印报表、订阅报表和将报表导出为不同格式（例如 PDF、Word 和 Excel）的选项。 通过 **“操作”** 菜单，您还可以在报表生成器中打开报表。 下图显示了一个报表以及 **“操作”** 菜单中的“导出”选项的选项。  
@@ -115,7 +116,7 @@ Web 门户通常包含文件夹、报表、数据源以及“我的报表”文�
 ### <a name="managing-items-through-actions"></a>通过操作来管理项  
  可以通过每个项的下拉菜单中的操作来执行管理任务。 根据您拥有的权限，每个项都拥有一些共有的操作，这些操作是存储在 SharePoint 库中的项的标准操作。 **“查看属性”** 和 **“编辑属性”** 便属于这样的共有操作。 自定义操作可提供特定于项的管理功能。 下图显示了某个报表定义具有的操作。 对于报表定义，可以具有 **“管理订阅”** 和 **“管理处理选项”** 这样的自定义操作：  
   
- ![报表服务器项的菜单命令](../../reporting-services/report-builder/media/rs-ecbforrsitems.gif "Menu commands for report server items")  
+ ![报表服务器项的菜单命令](../../reporting-services/report-builder/media/rs-ecbforrsitems.gif "报表服务器项的菜单命令")  
   
   
 ##  <a name="DeskTop"></a> 在桌面应用程序中查看报表  

@@ -1,5 +1,5 @@
 ---
-title: 了解加密支持 |Microsoft Docs
+title: 了解加密支持 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5ec3ad142e3dc5e2945afebeb2c9a6c97350672c
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71713301"
 ---
 # <a name="understanding-encryption-support"></a>了解加密支持
@@ -28,9 +28,9 @@ ms.locfileid: "71713301"
 > [!NOTE]  
 > 确保传递给 serverName 的值与服务器证书的公用名 (CN) 或使用者替代名称 (SAN) 中的 DNS 名称完全匹配，以便成功建立 TLS 连接  。  
 >
-> 有关如何为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置 TLS 的详细信息，请参阅[启用到数据库引擎的加密连接](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
+> 有关如何为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置 TLS 的详细信息，请参阅[启用数据库引擎的加密连接](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 为了允许应用程序使用 TLS 加密，从 1.2 版开始，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 引入了以下连接属性：encrypt、trustServerCertificate、trustStore、trustStorePassword 和 hostNameInCertificate      。 有关详细信息，请参阅[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "71713301"
   
 - 使用其他 JVM  
   
-## <a name="validating-server-tls-certificate"></a>正在验证服务器 TLS 证书  
+## <a name="validating-server-tls-certificate"></a>验证服务器 TLS 证书  
 
 在 TLS 握手期间，服务器向客户端发送其公钥证书。 JDBC 驱动程序或客户端必须验证服务器证书是由客户端信任的证书颁发机构颁发的。 驱动程序要求服务器证书必须满足以下条件：  
   

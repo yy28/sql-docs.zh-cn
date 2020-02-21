@@ -1,5 +1,5 @@
 ---
-title: getDateTimeOffset 方法 (int) |Microsoft Docs
+title: getDateTimeOffset 方法 (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,16 +11,16 @@ ms.assetid: 8bb00356-4d6e-4625-b924-67646930fdf2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ec297d1b01b6d7cf8d292d2f4518aa5b51cd9704
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983839"
 ---
 # <a name="getdatetimeoffset-method-int"></a>getDateTimeOffset 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 中新增了此方法。  
+  [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 中新增了此方法。  
   
  在给定参数索引的情况下，检索指定参数的值作为 Java 编程语言中的 [DateTimeOffset 类](../../../connect/jdbc/reference/datetimeoffset-class.md)对象。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "67983839"
 public microsoft.sql.DateTimeOffset getDateTimeOffset(int index)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  索引   
   
  从 1 开始的参数序号。  
@@ -39,11 +39,11 @@ public microsoft.sql.DateTimeOffset getDateTimeOffset(int index)
 ## <a name="return-value"></a>返回值  
  [DateTimeOffset 类](../../../connect/jdbc/reference/datetimeoffset-class.md)对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 可以使用[SQLServerCallableStatement. setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md)设置[DateTimeOffset 类](../../../connect/jdbc/reference/datetimeoffset-class.md)参数值。  
+## <a name="remarks"></a>备注  
+ 可以使用 [SQLServerCallableStatement.setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md) 设置 [DateTimeOffset 类](../../../connect/jdbc/reference/datetimeoffset-class.md)参数值。  
   
 ## <a name="see-also"></a>另请参阅  
  [getDateTimeOffset 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)   

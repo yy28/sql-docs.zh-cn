@@ -1,7 +1,6 @@
 ---
-title: 修改控制器和客户端服务帐户 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 修改控制器和客户端服务帐户
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -9,16 +8,20 @@ ms.topic: conceptual
 ms.assetid: 44a73ddb-18ad-415c-bfbe-126ab2e3290b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e946949debc6d5a1fa3c586ece94da58e5241b4d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: c9ac64de75c79f3a614a8448b47e48af00b967b0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67950041"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75238915"
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>修改控制器和客户端服务帐户
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  在本主题中，您将了解如何修改 Distributed Replay 控制器和客户端服务帐户，然后重新应用访问控制列表 (ACL)。  
+
+在本主题中，您将了解如何修改 Distributed Replay 控制器和客户端服务帐户，然后重新应用访问控制列表 (ACL)。  
   
 ### <a name="to-start-or-stop-the-distributed-replay-services-using-computer-management"></a>使用“计算机管理”启动或停止 Distributed Replay 服务  
   
@@ -34,7 +37,7 @@ ms.locfileid: "67950041"
   
 3.  在 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 控制器属性”** 窗口中的 **“登录”** 选项卡上，选择 **“本帐户”** ，键入或单击 **“浏览”** 以输入新的登录帐户，然后单击 **“确定”** 。  
   
-     **重要**：在您配置 Distributed Replay 控制器时，可以指定将用于运行 Distributed Replay 客户端服务的一个或多个帐户。 下面是支持的帐户的列表：  
+     **重要说明**：配置 Distributed Replay 控制器时，可以指定一个或多个用于运行 Distributed Replay 客户端服务的用户帐户。 下面是支持的帐户的列表：  
   
     -   域用户帐户  
   

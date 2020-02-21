@@ -18,12 +18,12 @@ helpviewer_keywords:
 - native data access [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: adc18554ebb4494112f424f3e6a3dd02c13b121c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 849c3dbc0a0f94387f2e2f25ba17d64c910653cb
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67993790"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76918811"
 ---
 # <a name="microsoft-ole-db-driver-for-sql-server"></a>适用于 SQL Server 的 Microsoft OLE DB 驱动程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,11 +40,11 @@ ms.locfileid: "67993790"
   
  适用于 SQL Server 的 OLE DB 驱动程序可与 Windows DAC 提供的 OLE DB 核心服务一起使用，但这不是必要条件；是否选择使用核心服务取决于单个应用程序的要求（例如是否必需连接池）。  
   
- ActiveX 数据对象 (ADO) 应用程序可以使用适用于 SQL Server 的 OLE DB 驱动程序，但建议将 ADO 与 DataTypeCompatibility  连接字符串关键字（或其对应的 DataSource  属性）一起使用。 使用适用于 SQL Server 的 OLE DB 驱动程序时，ADO 应用程序可以通过连接字符串关键字、OLE DB 属性或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 利用在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中引入的通过适用于 SQL Server 的 OLE DB 驱动程序提供的那些新功能。 有关将这些功能与 ADO 一起使用的详细信息，请参阅[将 ADO 与适用于 SQL Server 的 OLE DB 驱动程序结合使用](../oledb/applications/using-ado-with-oledb-driver-for-sql-server.md)。  
+ ActiveX 数据对象 (ADO) 应用程序可以使用适用于 SQL Server 的 OLE DB 驱动程序，但建议将 ADO 与 DataTypeCompatibility 连接字符串关键字（或其对应的 DataSource 属性）一起使用。 使用适用于 SQL Server 的 OLE DB 驱动程序时，ADO 应用程序可以通过连接字符串关键字、OLE DB 属性或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 利用在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中引入的通过适用于 SQL Server 的 OLE DB 驱动程序提供的那些新功能。 有关将这些功能与 ADO 一起使用的详细信息，请参阅[将 ADO 与适用于 SQL Server 的 OLE DB 驱动程序结合使用](../oledb/applications/using-ado-with-oledb-driver-for-sql-server.md)。  
   
  适用于 SQL Server 的 OLE DB 驱动程序旨在让用户更简单地使用 OLE DB 获取对 SQL Server 的本机数据访问。 它提供一种创新和开发新的数据访问功能而不更改当前 Windows DAC 组件（现在是 Microsoft Windows 平台的一部分）的方法。  
   
- 尽管 适用于 SQL Server 的 OLE DB 驱动程序使用 Windows DAC 中的组件，但它并不显式依赖特定版本的 Windows DAC。 可以将适用于 SQL Server 的 OLE DB 驱动程序与随适用于 SQL Server 的 OLE DB 驱动程序支持的任一操作系统安装的 Windows DAC 版本一起使用。  
+ 尽管 OLE DB Driver for SQL Server 使用 Windows DAC 中的组件，但它并不显式依赖特定版本的 Windows DAC。 可以将适用于 SQL Server 的 OLE DB 驱动程序与随适用于 SQL Server 的 OLE DB 驱动程序支持的任一操作系统安装的 Windows DAC 版本一起使用。  
 
  ## <a name="different-generations-of-ole-db-drivers"></a>不同代的 OLE DB 驱动程序
 

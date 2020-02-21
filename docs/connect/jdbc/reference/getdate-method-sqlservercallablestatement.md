@@ -1,5 +1,5 @@
 ---
-title: getDate 方法 (SQLServerCallableStatement) |Microsoft Docs
+title: getDate 方法 (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: a4a969e7-e72c-4ac8-8b8c-ae2281e4e705
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0c308966a0aa474287709ac498db871c5202222b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983887"
 ---
 # <a name="getdate-method-sqlservercallablestatement"></a>getDate 方法 (SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67983887"
   
 ## <a name="overload-list"></a>重载列表  
   
-|“属性”|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |[getDate (int)](../../../connect/jdbc/reference/getdate-method-int.md)|根据给定的参数索引，检索指定参数的值作为 Java 编程语言中的 java.sql.Date 对象。|  
 |[getDate (int, java.util.Calendar)](../../../connect/jdbc/reference/getdate-method-int-java-util-calendar.md)|在给定参数索引和 Calendar 对象的情况下，检索指定参数的值作为 Java 编程语言中的 java.sql.Date 对象。|  

@@ -1,5 +1,5 @@
 ---
-title: getSchemaTerm 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getSchemaTerm 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 3e4a400f-0859-4ac3-983e-c25633b33683
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b0c2355ce38cbaabedeaa3e62da894ee6e67d67c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980076"
 ---
 # <a name="getschematerm-method-sqlserverdatabasemetadata"></a>getSchemaTerm 方法 (SQLServerDatabaseMetaData)
@@ -37,10 +37,10 @@ public java.lang.String getSchemaTerm()
 ## <a name="return-value"></a>返回值  
  一个包含首选术语的字符串  。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 getSchemaTerm 方法是由 java.sql.DatabaseMetaData 接口中的 getSchemaTerm 方法指定的。  
   
  将 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库时，此方法将返回“架构”作为首选术语。  

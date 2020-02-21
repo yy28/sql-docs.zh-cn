@@ -9,24 +9,24 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: d6c83ffd407a9b27a04b254fb3e9e5673a600417
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: d1b5742d082fdb40b03663cf2db719399290a010
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452203"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247768"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>枚举 SQL Server 实例 (ADO.NET)
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下载 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-SQL Server 允许应用程序在当前网络中查找 SQL Server 实例。 @No__t_0 类向应用程序开发人员公开此信息，并提供 <xref:System.Data.DataTable>，其中包含所有可见服务器的相关信息。 此返回的表包含网络上可用服务器实例的列表（该列表与用户尝试创建新连接时提供的列表匹配），并展开“连接属性”对话框上包含所有可用服务器的下拉列表  。 显示的结果并非始终完成。  
+SQL Server 允许应用程序在当前网络中查找 SQL Server 实例。 <xref:System.Data.Sql.SqlDataSourceEnumerator> 类向应用程序开发人员公开此信息，提供了包含所有可见服务器的相关信息的 <xref:System.Data.DataTable>。 此返回的表包含网络上可用服务器实例的列表（该列表与用户尝试创建新连接时提供的列表匹配），并展开“连接属性”对话框上包含所有可用服务器的下拉列表  。 显示的结果并不总是完整的。  
   
 > [!NOTE]
->  与大多数 Windows 服务一样，最好以最少的特权运行 SQL Browser 服务。 有关 SQL Browser 服务以及如何管理其行为的更多信息，请参见 SQL Server 联机丛书。  
+>  与大多数 Windows 服务一样，最好以尽可能小的特权运行 SQL Browser 服务。 有关 SQL Browser 服务以及如何管理其行为的更多信息，请参见 SQL Server 联机丛书。  
   
 ## <a name="retrieving-an-enumerator-instance"></a>检索枚举器实例  
 若要检索包含有关可用 SQL Server 实例的信息的表，必须先使用共享/静态 <xref:System.Data.Sql.SqlDataSourceEnumerator.Instance%2A> 属性来检索枚举器：  
@@ -36,30 +36,30 @@ System.Data.Sql.SqlDataSourceEnumerator instance =
    System.Data.Sql.SqlDataSourceEnumerator.Instance  
 ```  
   
-检索静态实例后，可以调用 <xref:System.Data.Sql.SqlDataSourceEnumerator.GetDataSources%2A> 方法，该方法将返回包含可用服务器相关信息的 <xref:System.Data.DataTable>：  
+检索静态实例后，可以调用 <xref:System.Data.Sql.SqlDataSourceEnumerator.GetDataSources%2A> 方法，此方法返回包含可用服务器的相关信息的 <xref:System.Data.DataTable>：  
   
 ```csharp  
 System.Data.DataTable dataTable = instance.GetDataSources();  
 ```  
   
-从方法调用返回的表包含以下列，其中所有列都包含 `string` 值：  
+通过方法调用返回的表包含以下列，其中所有列都包含 `string` 值：  
   
-|“列”|描述|  
+|列|说明|  
 |------------|-----------------|  
 |**ServerName**|服务器的名称。|  
 |**InstanceName**|服务器实例的名称。 如果服务器作为默认实例运行，则为空。|  
-|**IsClustered**|指示服务器是否为群集的一部分。|  
-|**版本(Version)**|服务器的版本。 例如：<br /><br /> -   9.00.x (SQL Server 2005)<br />-10.0. xx （SQL Server 2008）<br />-   10.50.x (SQL Server 2008 R2)<br />-11.0. xx （SQL Server 2012）|  
+|**IsClustered**|指明服务器是否属于群集。|  
+|**版本**|服务器的版本。 例如：<br /><br /> -   9.00.x (SQL Server 2005)<br />-   10.0.xx (SQL Server 2008)<br />-   10.50.x (SQL Server 2008 R2)<br />-   11.0.xx (SQL Server 2012)|  
   
 ## <a name="enumeration-limitations"></a>枚举限制  
-所有可用服务器都可能会列出，也可能不列出。 根据超时和网络流量等因素，此列表可能有所不同。 这可能导致两次连续调用的列表不同。 仅列出相同网络上的服务器。 广播数据包通常不会遍历路由器，这就是为什么您看不到列出的服务器的原因，但在调用时将是稳定的。  
+不一定会列出所有可用服务器。 此列表因超时和网络流量等因素而异。 这可能会导致两次连续调用生成不同的列表。 只有同一网络中的服务器才列出。 广播数据包通常不会遍历路由器，正因为此，可能看不到列出的服务器，但它跨调用是稳定的。  
   
-列出的服务器可能包含也可能不包含其他信息，例如 `IsClustered` 和版本。 这取决于获取列表的方式。 通过 SQL Server 浏览器服务列出的服务器比通过 Windows 基础结构发现的服务器具有更详细的信息，后者仅列出名称。  
+列出的服务器不一定包含 `IsClustered` 和版本等其他信息。 这取决于列表的获取方式。 通过 SQL Server 浏览器服务列出的服务器比通过 Windows 基础结构发现的服务器具有更详细的信息，后者仅列出名称。  
   
 > [!NOTE]
->  仅当在完全信任环境中运行时，服务器枚举才可用。 在部分受信任的环境中运行的程序集将不能使用该程序集，即使它们具有 <xref:Microsoft.Data.SqlClient.SqlClientPermission> 的代码访问安全性（CAS）权限。  
+>  仅当在完全信任的环境中运行时，服务器枚举才可用。 在部分信任的环境中运行的程序集无法使用它，即使拥有 <xref:Microsoft.Data.SqlClient.SqlClientPermission> 代码访问安全性 (CAS) 权限，也不例外。  
   
-SQL Server 通过使用名为 SQL Browser 的外部 Windows 服务来提供 <xref:System.Data.Sql.SqlDataSourceEnumerator> 的信息。 默认情况下启用此服务，但管理员可以将其关闭或禁用，使服务器实例不会对此类可见。  
+SQL Server 通过使用名为 SQL Browser 的外部 Windows 服务来提供 <xref:System.Data.Sql.SqlDataSourceEnumerator> 的信息。 此服务默认处于启用状态，但管理员可以禁用它，让服务器实例对此类不可见。  
   
 ## <a name="example"></a>示例  
 以下控制台应用程序检索所有可见 SQL Server 实例的信息，并在控制台窗口中显示该信息。  

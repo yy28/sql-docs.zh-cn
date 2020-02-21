@@ -1,23 +1,25 @@
 ---
-title: 使用 WinForms ReportViewer 控件 | Microsoft Docs
+title: 使用 WinForms ReportViewer 控件
+description: 若要查看已部署到报表服务器的报表或存在于本地文件系统上的报表，您可以使用 WinForms ReportViewer 控件在 Windows 应用程序中呈现这些报表。
 ms.date: 09/06/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - ReportViewer controls
 ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d43534148ccf22419c630880192ff21eba2a441
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: b5b294d78c3e63766ac72b2cdfcfd3c592df3690
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63195255"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796885"
 ---
-# <a name="using-the-winforms-reportviewer-control"></a>使用 WinForms ReportViewer 控件
+# <a name="use-the-winforms-reportviewer-control"></a>使用 WinForms ReportViewer 控件
   若要查看已部署到报表服务器的报表或存在于本地文件系统上的报表，您可以使用 WinForms ReportViewer 控件在 Windows 应用程序中呈现这些报表。  
   
 ## <a name="to-add-the-reportviewer-control-to-a-windows-application"></a>将 ReportViewer 控件添加到 Windows 应用程序  
@@ -30,7 +32,7 @@ ms.locfileid: "63195255"
   
 2.  在“工具箱”中找到 ReportViewer 控件  。 如果“工具箱”不可见，可以通过从“视图”菜单中选择“工具箱”来进行访问    。  
   
-     ![选择 ReportViewer 控件](../../reporting-services/application-integration/media/windowsapp-toolboxreportviewer.png "Selecting ReportViewer control")  
+     ![选择 ReportViewer 控件](../../reporting-services/application-integration/media/windowsapp-toolboxreportviewer.png "选择 ReportViewer 控件")  
   
 3.  将 ReportViewer 控件拖到 Windows 窗体的设计图面上。  
   
@@ -38,13 +40,13 @@ ms.locfileid: "63195255"
   
  此控件添加到该窗体之后，将出现“ReportViewer 任务”智能标记，并提示你选择一个报表  。  
   
- 如果要查看的报表已部署到报表服务器上，则从“选择报表”下拉列表中选择“\<服务器报表>”选项   。 选中“\<服务器报表>”选项后，将出现两个附加的属性：“报表服务器 URL”和“报表路径”    。 “报表服务器 URL”是指向相应报表服务器的地址，“报表路径”是指向要呈现的报表的完整路径   。  
+ 如果要查看的报表已部署到报表服务器上，则从“选择报表”下拉列表中选择“\<服务器报表>”选项   。 在选择“\<服务器报告>  ”选项后，将出现两个其他属性：“报告服务器 Url”  和“报告路径”  。 “报表服务器 URL”是指向相应报表服务器的地址，“报表路径”是指向要呈现的报表的完整路径   。  
   
- ![选择服务器报表](../../reporting-services/application-integration/media/windowsapp-serverreportsettings.png "Select server report")  
+ ![选择服务器报表](../../reporting-services/application-integration/media/windowsapp-serverreportsettings.png "选择服务器报表")  
   
  如果想以本地模式查看报表，请选择“设计新报表”选项来启动报表设计器，或选择一个已是现有项目一部分的报表  。  
   
- ![选择本地报表](../../reporting-services/application-integration/media/windowsapp-localreportsettings.png "Select local report")  
+ ![选择本地报表](../../reporting-services/application-integration/media/windowsapp-localreportsettings.png "选择本地报表")  
   
 ## <a name="viewing-reports-in-remote-processing-mode"></a>在远程处理模式下查看报表  
  下面的示例演示了如何使用 WinForms ReportViewer 控件呈现已部署到报表服务器的报表。 此示例使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例报表项目随附的 Sales Order Detail 报表。  
@@ -157,7 +159,7 @@ End Class
   
      Sales Order Detail.rdl 文件现在应是该项目的一部分。  
   
-     ![销售订单详细信息报表](../../reporting-services/application-integration/media/windowsapp-salesorderdetailreport.png "Sales Order Detail Report")  
+     ![销售订单详细信息报表](../../reporting-services/application-integration/media/windowsapp-salesorderdetailreport.png "销售订单详细信息报表")  
   
 5.  在“解决方案资源管理器”中右键单击 Sales Order Detail.rdl 文件，然后选择“重命名”  。 将该报表重命名为“Sales Order Detail.rdlc”，然后按 Enter  。  
   
@@ -168,7 +170,7 @@ End Class
   
 6.  对该报表重命名之后，请选择该文件并找到“属性”窗口。 将“复制到输出目录”属性更改为“如果较新则复制”   。  
   
-     ![配置复制到输出设置](../../reporting-services/application-integration/media/windowsapp-copytooutputsetting.png "Configuring Copy To Output setting")  
+     ![配置复制到输出设置](../../reporting-services/application-integration/media/windowsapp-copytooutputsetting.png "配置复制到输出设置")  
   
      如果“属性”窗口不可见，可以通过从“视图”菜单中选择“属性窗口”来将其打开    。  
   

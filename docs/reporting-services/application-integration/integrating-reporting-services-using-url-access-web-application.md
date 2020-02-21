@@ -1,9 +1,11 @@
 ---
-title: 在 Web 应用程序中使用 URL 访问 | Microsoft Docs
+title: 在 Web 应用程序中使用 URL 访问
+description: Reporting Services 中的 URL 访问是为通过网络访问各个报表而专门设计的。
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - links [Reporting Services], URL access
@@ -15,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 39e7918c-ad2d-4ca6-b099-2dd4dbdb83dc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9f2a3c9db568d6c6cddc71ec221f68306acb7f22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: de2ae80c7bb4a8e6d5b7eb4b0131a8c69ffdf7c1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62741690"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796971"
 ---
 # <a name="integrating-reporting-services-using-url-access---web-application"></a>使用 URL 访问集成 Reporting Services - Web 应用程序
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的 URL 访问是为实现通过网络访问单独报表而专门设计的。 此类型的访问最适合于将报表查看和导航集成到自定义 Web 应用程序中。 为了在 Web 应用程序中使用 URL 访问，您可以：  

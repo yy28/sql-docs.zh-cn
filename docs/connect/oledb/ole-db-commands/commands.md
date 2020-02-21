@@ -1,5 +1,5 @@
 ---
-title: 命令 |Microsoft Docs
+title: 命令 | Microsoft Docs
 description: 适用于 SQL Server 的 OLE DB 驱动程序中的命令
 ms.custom: ''
 ms.date: 06/14/2018
@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: f6919c8355660ee2c1e27f2c0896ca189497b50d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68016025"
 ---
 # <a name="commands"></a>命令
@@ -25,7 +25,7 @@ ms.locfileid: "68016025"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  适用于 SQL Server 的 OLE DB 驱动程序公开了 ICommand 接口和命令对象，详细信息请参见本部分  ：  
+  适用于 SQL Server 的 OLE DB 驱动程序公开了 ICommand 接口和命令对象，详细信息请参见本部分：  
   
 -   [命令语法](../../oledb/ole-db-commands/command-syntax.md)  
   

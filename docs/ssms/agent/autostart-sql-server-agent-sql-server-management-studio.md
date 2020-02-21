@@ -1,10 +1,7 @@
 ---
-title: 自动启动 SQL Server 代理 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: 自动启动 SQL Server 代理
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,21 +10,26 @@ helpviewer_keywords:
 ms.assetid: 2ea332da-0ede-4d2b-b122-c4c10eaca191
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e698d8e2d148b2276f2cd9892f4df3765742585c
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 2c9a777a7f0a450d69b4fa5944efb79909f55634
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553334"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255721"
 ---
-# <a name="autostart-sql-server-agent-sql-server-management-studio"></a>Autostart SQL Server Agent (SQL Server Management Studio)
+# <a name="autostart-sql-server-agent"></a>自动启动 SQL Server 代理
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
 > [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-本主题将介绍如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中将 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理配置为在其意外停止时自动重启。  
+本主题介绍了如何将 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理配置为在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中意外停止时自动重启。  
   
 ## <a name="BeforeYouBegin"></a>开始之前  
   
@@ -55,7 +57,7 @@ ms.locfileid: "69553334"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开要将 SQL Server 代理配置为自动重新启动的服务器。  
   
-2.  右键单击“SQL Server 代理”  ，然后单击“属性”  。  
+2.  右键单击“SQL Server 代理”，然后单击“属性”。  
   
-3.  在 **“常规”** 页上，选中 **“SQL Server 代理意外停止时自动重新启动”** 。  
+3.  在 **“常规”** 页上，选中 **“SQL Server 代理意外停止时自动重新启动”**。  
   

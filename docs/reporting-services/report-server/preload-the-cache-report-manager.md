@@ -12,10 +12,10 @@ ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6b2be1e020354f47aa21dc83f17ff6169bcf2d72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66175002"
 ---
 # <a name="preload-the-cache"></a>预加载缓存  
@@ -48,8 +48,8 @@ ms.locfileid: "66175002"
 5. 选择“缓存此数据集的副本，并在可用时使用它们”单选按钮，以激活数据集缓存。  然后它的下方将出现“缓存过期”部分。  选择以下单选按钮之一：
 
     - **在 x 分钟后缓存过期**（请输入所需的分钟数来作为 x）。
-    - **缓存在计划时间过期**。  Reporting Services 提供共享计划和报表特定计划，来帮助你控制处理、一致性内容和报表分发性能。 有关详细信息，请参阅[创建、修改和删除计划](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md "创建、修改和删除计划")。 有多个创建计划选项可选，对于此缓存过期：请选择下面两种计划选项之一：  
-      - 选择“共享计划”单选按钮，然后从“选择共享计划”下拉文本框选择计划。   有关详细信息，请参阅[计划](../../reporting-services/subscriptions/schedules.md "计划")。  
+    - **缓存在计划时间过期**。  Reporting Services 提供共享计划和报表特定计划，来帮助你控制处理、一致性内容和报表分发性能。 有关详细信息，请参阅 [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md "Create, Modify, and Delete Schedules")。 对于此缓存过期有多个创建计划选项可选：请选择下面两种计划选项之一：  
+      - 选择“共享计划”单选按钮，然后从“选择共享计划”下拉文本框选择计划。   有关更多信息，请参见 [Schedules](../../reporting-services/subscriptions/schedules.md "计划")。  
       - 选择“报表特定计划”单选按钮，如有必要，可以继续选择“编辑计划”链接，来查看“计划详细信息”页。    。  
 
          ![数据集的 Web 门户缓存过期计划详细信息页](../../reporting-services/report-server/media/preload-the-cache/web-portal-dataset-cache-schedule-details.png "数据集缓存计划详细信息页")
@@ -58,7 +58,7 @@ ms.locfileid: "66175002"
          - 计划的类型：
            - **小时** - 每隔多久运行一次计划：指定小时数和分钟数，以及开始时间。
            - **天** - 选择下面的三个选项之一：  
-              - **于以下日期**：（周一、周二、周三、周四、周五、周六、周日）。
+              - **于以下日期**：（周日、周一、周二、周三、周四、周五、周六）。
               - **每个工作日**
               - **重复执行间隔的天数**请指定一个数值。  
            - **周** - 同时指定下面的两个项：
@@ -132,7 +132,7 @@ ms.locfileid: "66175002"
 
 13. 选择“创建订阅”。   
   
-14. 将显示“订阅”页，其中说明了新的数据驱动的订阅。  准备就绪时，可以从此页选择左侧的复选框，然后选择“启用按钮”来启用此订阅。  ![订阅页启用按钮](../../reporting-services/report-server/media/preload-the-cache/subscriptions-page-enable-button.png "订阅页上的启用按钮")
+14. 将显示“订阅”页，其中说明了新的数据驱动的订阅。  准备就绪时，可以从此页选择左侧的复选框，然后选择“启用按钮”来启用此订阅。  ![“订阅”页的“启用”按钮](../../reporting-services/report-server/media/preload-the-cache/subscriptions-page-enable-button.png "“订阅”页上的“启用”按钮")
 
 15. 指定处理订阅的时间。 不要选择“在报表服务器上更新报表数据时”  。 该设置仅适用于快照。 如果要使用预先存在的计划，请选择“根据共享计划”  。  
   
@@ -153,7 +153,7 @@ ms.locfileid: "66175002"
   
     - 若要按计划使缓存的副本过期，请选择“缓存报表的临时副本。  按下列计划使报表副本过期。” 选择“配置”  ，或选择一个共享计划以设置报表过期计划。  
   
-20. 选择“应用”  。
+20. 选择“应用”。 
   
 ## <a name="see-also"></a>另请参阅  
 

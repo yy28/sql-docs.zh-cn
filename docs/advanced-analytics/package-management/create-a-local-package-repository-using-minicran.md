@@ -3,19 +3,19 @@ title: 使用 miniCRAN 创建存储库
 description: 了解如何使用 miniCRAN 包来创建包和依赖项的本地存储库，从而脱机安装 R 包。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2019
+ms.date: 11/20/2019
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9b83a0c016cf16e4df8ef7fcb90b3711eabe4933
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: c8ddfcf997cd4cc62f1c65efd7ecfc4cf3aff730
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727579"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74479469"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>使用 miniCRAN 创建本地 R 包存储库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "73727579"
 
 - 安全性  ：许多 R 用户都习惯从 CRAN 或其某个镜像站点中随意下载并安装新的 R 包。 但是，出于安全原因，运行 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 的生产服务器通常都未连接 Internet。
 
-- 更简单的脱机安装  ：若要将包安装到脱机服务器，则还需要下载所有包依赖项。 使用 miniCRAN 可以更轻松地获取正确格式的所有依赖项。 在使用 [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) 语句准备要安装的包时，使用 miniCRAN 可以避免出现包依赖项错误。
+- 更简单的脱机安装  ：若要将包安装到脱机服务器，则还需要下载所有包依赖项。 使用 miniCRAN 可以更轻松地获取正确格式的所有依赖项，并避免出现依赖项错误。
 
 - 改进的版本管理  ：在多用户环境中，有充分的理由可以避免在服务器上无限制安装多个包版本。 使用本地存储库为用户提供一致的包集。
 
@@ -112,6 +112,11 @@ pdb[, c("Package", "Version", "License")]
 
 使用所需的包创建本地存储库后，将包存储库移动到 SQL Server 计算机。 以下过程介绍如何使用 R 工具安装包。
 
+::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+> [!NOTE]
+> 安装包的建议方法是使用 sqlmlutils  。 请参阅[使用 sqlmlutils 安装新的 R 包](install-additional-r-packages-on-sql-server.md)。
+::: moniker-end
+
 1. 将包含 miniCRAN 存储库的文件夹完整复制到计划在其中安装包的服务器。 文件夹通常具有以下结构： 
 
    `<miniCRAN root>/bin/windows/contrib/version/<all packages>`
@@ -124,7 +129,7 @@ pdb[, c("Package", "Version", "License")]
    - 例如，RGUI 的默认文件位置是 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`。
    ::: moniker-end
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range"=sql-server-2017||=sqlallproducts-allversions"
    - 例如，RGUI 的文件位置是 `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`。
    ::: moniker-end
 

@@ -1,29 +1,38 @@
 ---
 title: 在 Azure 虚拟机上安装
-description: 在 Azure 云中的 SQL Server 虚拟机上运行 R 和 Python 数据科学以及机器学习解决方案。
+description: 在 Azure 云中的虚拟机上，使用 SQL Server 机器学习服务运行 Python 和 R 数据科学以及机器学习解决方案。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/09/2018
+ms.date: 01/02/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: aeec25b561822e8083b89e03f0f7e74f40660f7b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: d81237f67c82fd7cc8b9259fcd7a0202ffb7fd4b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727622"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75776585"
 ---
-# <a name="install-sql-server-machine-learning-services-with-r-and-python-on-an-azure-virtual-machine"></a>在 Azure 虚拟机上安装带有 R 和 Python 的 SQL Server 机器学习服务
+# <a name="install-sql-server-machine-learning-services-with-python-and-r-on-an-azure-virtual-machine"></a>在 Azure 虚拟机上安装带有 Python 和 R 的 SQL Server 机器学习服务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-可在 Azure 中的 SQL Server 虚拟机上安装 R 和 Python 与机器学习服务的集成，从而消除安装和配置任务。 部署虚拟机后，即可使用这些功能。
- 
-有关分步说明，请参阅[如何在 Azure 门户中配置 Windows SQL Server 虚拟机](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision)。
+了解如何在 Azure 虚拟机上安装带有 SQL Server 机器学习服务的 Python 和 R。 通过此操作，无需再执行机器学习服务的安装和配置任务。
 
-在[配置 SQL server 设置](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings)步骤中应将机器学习添加到实例。
+执行以下步骤:
+
+1. 在 Azure 中预配 SQL Server 虚拟机
+1. 取消阻止防火墙
+1. 启用远程客户端的 ODBC 回调
+1. 添加网络协议
+
+## <a name="provision-sql-server-virtual-machine-in-azure"></a>在 Azure 中预配 SQL Server 虚拟机
+
+有关分步说明，请参阅[如何在 Azure 门户中配置 Windows SQL Server 虚拟机](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision)。 
+
+在[配置 SQL Server 设置](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings)步骤中，将机器学习服务添加到实例。
 
 <a name="firewall"></a>
 

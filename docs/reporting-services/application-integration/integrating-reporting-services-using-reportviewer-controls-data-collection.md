@@ -1,22 +1,23 @@
 ---
-title: ReportViewer 控件 2016 中的数据收集
+title: ReportViewer 控件中的数据收集
+description: 控件收集匿名使用率数据，以便更好地了解客户如何使用产品。 借助使用率数据，未来的开发能够将重点放在与客户最相关的改进上。
 author: maggiesMSFT
 ms.author: maggies
+ms.custom: ''
 ms.reviewer: ''
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
 ms.topic: reference
-ms.custom: ''
 ms.date: 09/18/2018
-ms.openlocfilehash: 2372adbf0fd0b9ad15383d6538d25ef955b27426
-ms.sourcegitcommit: 071065bc5433163ebfda4fdf6576349f9d195663
-ms.translationtype: MTE75
+ms.openlocfilehash: d7b70445fc4d8a29d8ebcdf7ecbffe4b54133f0e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71923802"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796893"
 ---
-# <a name="integrating-reporting-services-using-reportviewer-controls---data-collection"></a>使用 ReportViewer 控件集成 Reporting Services - 数据集合
+# <a name="integrate-reporting-services-using-reportviewer-controls---data-collection"></a>使用 ReportViewer 控件集成 Reporting Services - 数据收集
 
 为了更好地了解客户如何使用产品，控件收集匿名使用情况数据。 使用情况数据可使将来开发专注于与客户最相关的改进。
 

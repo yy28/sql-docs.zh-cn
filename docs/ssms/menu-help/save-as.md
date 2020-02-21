@@ -1,6 +1,6 @@
 ---
-title: 另存为 | Microsoft Docs
-ms.custom: ''
+title: 另存为
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ef6bd7f10ba88988b02dce010f7cce235ad2c751
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 75a385cb2898c48e980f7f6b539d9a21879d8c56
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256991"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75240522"
 ---
 # <a name="save-as"></a>另存为
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-用于将当前项的实例以指定的文件格式保存到指定位置。 单击“文件”  菜单上的“将 <file>另存为”    （其中， *<file>* 是当前项的名称），或者在代码编辑器中按 Alt+F，再按 Alt+ A。  
+用于将当前项的实例以指定的文件格式保存到指定位置。 单击“文件”  菜单上的“将 <file> 另存为”    （其中，<file>  是当前项的名称），或者在代码编辑器中按 Alt+F，再按 Alt+ A。  
   
 ## <a name="central-panel"></a>中央面板  
 **保存于**  

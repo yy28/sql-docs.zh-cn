@@ -1,6 +1,6 @@
 ---
-title: 使用通配符搜索文本 | Microsoft Docs
-ms.custom: ''
+title: 使用通配符搜索文本
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
@@ -16,16 +16,16 @@ ms.assetid: 449600f8-cc87-4b3f-878a-59c158a88a40
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fdc79f8162ef95fdbaa34e36629484f1a17d6436
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 766bb8d9a90fb3f1af5a7697e52ae42f6c8fc8d7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264161"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253624"
 ---
 # <a name="search-text-with-wildcards"></a>使用通配符搜索文本
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  以下表达式可以替换“查找和替换”  对话框的“查找内容”  字段中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的字符或数字。  
+  以下表达式可以替换 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]“查找和替换”对话框的“查找内容”字段中的字符或数字   。  
   
 #### <a name="to-search-using-wildcards"></a>使用通配符进行搜索  
   
@@ -35,7 +35,7 @@ ms.locfileid: "68264161"
   
  下表介绍了 **“引用列表”** 中可用的通配符。  
   
-|表达式|语法|描述|  
+|表达式|语法|说明|  
 |----------------|------------|-----------------|  
 |任何单个字符|?|与任何单个字符匹配。|  
 |任何单个数字|#|与任何单个数字匹配。 例如，7# 与包括 7 且其后跟随另一数字的数字匹配，例如 71，但不能是 17。|  

@@ -1,7 +1,7 @@
 ---
-title: 将多宿主计算机配置为允许 SQL Server 访问 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 配置多宿主计算机以允许访问
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4a024707b5fa7ab70394a068ed47110898ae0518
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d8733c9a4624bcadb60eb5cfa70cf81f242f43a7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126215"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244459"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>将多宿主计算机配置为允许 SQL Server 访问
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "68126215"
   
 3.  请注意正在使用的 IPv4 地址和 IPv6 地址。 列表中的其他信息（例如临时地址、子网掩码和默认网关）是配置 TCP/IP 网络的重要信息。 但是在本示例中未用到这些信息。  
   
-#### <a name="to-determine-the-ip-addresses-and-ports-used-by-includessnoversionincludesssnoversion-mdmd"></a>确定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+#### <a name="to-determine-the-ip-addresses-and-ports-used-by-ssnoversion"></a>确定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  单击 **“开始”** ，依次指向 **“所有程序”** 、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]和 **“配置工具”** ，然后单击 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器”** 。  
   

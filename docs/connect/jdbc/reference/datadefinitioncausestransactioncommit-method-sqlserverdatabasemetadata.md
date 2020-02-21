@@ -1,5 +1,5 @@
 ---
-title: 数据定义语句强制事务提交。 | Microsoft Docs
+title: 数据定义语句是否强制事务提交。 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: bf04fa73-b9f1-4403-b6a0-e53d0d27c671
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5c1b6732f5cb22126ad9a102322a88df95606be7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955212"
 ---
 # <a name="datadefinitioncausestransactioncommit-method-sqlserverdatabasemetadata"></a>dataDefinitionCausesTransactionCommit 方法 (SQLServerDatabaseMetaData)
@@ -37,11 +37,11 @@ public boolean dataDefinitionCausesTransactionCommit()
 ## <a name="return-value"></a>返回值  
  如果 DDL 语句强制提交，则为 true  。 否则为 **false**。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 dataDefinitionCausesTransactionCommit 方法由 dataDefinitionCausesTransactionCommit 方法在 Java.sql.databasemetadata 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 dataDefinitionCausesTransactionCommit 方法由 java.sql.DatabaseMetaData 接口中的 dataDefinitionCausesTransactionCommit 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

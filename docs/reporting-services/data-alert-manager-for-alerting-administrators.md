@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: a80b90f30ce2b304bd7bbb0229f172407589d3c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571542"
 ---
 # <a name="data-alert-manager-for-alerting-administrators"></a>向管理员提出警报的数据警报管理器
@@ -44,13 +44,13 @@ SQL Server Reporting Services 为 SharePoint 警报管理员提供了数据警�
 ##  <a name="ViewingAlerts"></a> 查看数据警报信息  
  在 SharePoint 中安装和配置 Reporting Services 时，“站点设置”SharePoint 页将包括 **Reporting Services** 选项。 警报管理员可在 Reporting Service 中单击 **“管理数据警报”** 选项以便打开数据警报管理器。 下图显示您可以从“站点设置”页上的何处打开数据警报管理器。  
   
- ![“站点设置”页的 Reporting Services 部分](../reporting-services/media/rs-sitesettings.gif "Reporting Services section of Site Settings page")  
+ ![“站点设置”页的 Reporting Services 部分](../reporting-services/media/rs-sitesettings.gif "“站点设置”页的 Reporting Services 部分")  
   
  数据警报管理器包括一个表，该表列出警报名称、报表名称、警报所有者的姓名、发送警报消息的数目、上次运行警报的时间、上次修改警报定义的时间以及警报消息的状态。 如果无法生成或发送警报，则状态列将包含有关该错误的信息并且帮助您纠正该警报问题。 有关详细信息，请参阅 [在数据警报管理器中管理 SharePoint 站点上的所有数据警报](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)。  
   
  下表在数据警报管理器中显示某个表中的示例数据。 发生错误时，错误消息和日志中条目的标识符 (GUID) 包含在表的“状态”字段中  。  
   
-|警报名称|报表名称|创建者|发送的警报数|上次运行时间|上次修改时间|“登录属性”|  
+|警报名称|报表名称|创建者|发送的警报数|上次运行时间|上次修改时间|状态|  
 |----------------|-----------------|----------------|-----------------|--------------|-------------------|------------|  
 |SalesQTR|SalesByTerritoryAndQTR|Lauren Johnson|4|6/12/2011|6/1/2011|最后一个警报已成功运行且已发送。|  
 |UnitsSold|ProductsSalesByQTR|Michael Blythe|2|7/1/2011|6/28/2011|已成功运行最后一个警报，但由于数据未发生更改，因此未发送任何警报。|  

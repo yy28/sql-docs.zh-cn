@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: b02779c2-a6b9-453c-815f-adad53353952
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0c631b873ad32082dabe2fb268b7c4254b6d7551
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
-ms.translationtype: MTE75
+ms.openlocfilehash: d6c79de239689a2c0c72743139b874f5ba9d3d0a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71680883"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190529"
 ---
 # <a name="teradata-connection-type-ssrs"></a>Teradata 连接类型 (SSRS)
   若要在报表中包括来自 Teradata 的数据，您必须有一个基于 Teradata 类型的报表数据源的数据集。 此内置数据源类型基于 .NET Managed Provider for Teradata 数据处理扩展插件。  
@@ -27,14 +27,14 @@ ms.locfileid: "71680883"
 data source=<IP Address>  
 ```  
   
- 有关更多连接字符串的示例，请参阅 [报表生成器中的数据连接、数据源和连接字符串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
+ 有关更多连接字符串的示例，请参阅[创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
 ##  <a name="Credentials"></a> 凭据  
  执行以下操作时需要提供凭据：运行查询、本地预览报表以及从报表服务器预览报表。  
   
  报表发布后，您可能需要更改数据源的凭据，以使报表在报表服务器上运行时，用于检索数据的权限有效。  
   
- 有关详细信息，请参阅[数据连接、数据源和连接字符串&#40;报表生成器和 SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)或[为报表数据源指定凭据和连接信息](specify-credential-and-connection-information-for-report-data-sources.md)。  
+ 有关详细信息，请参阅[创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 或[为报表数据源指定凭据和连接信息](specify-credential-and-connection-information-for-report-data-sources.md)。  
   
   
 ##  <a name="Remarks"></a> 注释  
@@ -44,7 +44,7 @@ data source=<IP Address>
   
   
 ##  <a name="Models"></a> 报表模型  
- 若要从基于 Teradata 数据源的报表模型创建数据集，则模型必须在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的模型设计器内设计，并在报表服务器上发布。  
+ 若要从基于 Teradata 数据源的报表模型创建数据集，则必须在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的模型设计器中设计模型，并在报表服务器上发布。  
   
   
 ##  <a name="Related"></a> 相关章节  
@@ -53,7 +53,7 @@ data source=<IP Address>
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
  提供访问报表数据的概述。  
   
- [报表生成器中的数据连接、数据源和连接字符串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  提供有关数据连接和数据源的信息。  
   
  [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
@@ -62,7 +62,7 @@ data source=<IP Address>
  [数据集字段集合（报表生成器和 SSRS）](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  提供有关数据集查询生成的字段集合的信息。  
   
- [Reporting Services &#40;SSRS&#41;支持的数据源](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)提供有关每个数据扩展插件的平台和版本支持的详细信息。  
+ 有关每个数据扩展插件的平台和版本支持的详细信息，请参阅 [Reporting Services 支持的数据源 (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
  
   
 ## <a name="see-also"></a>另请参阅  

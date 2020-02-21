@@ -1,10 +1,9 @@
 ---
-title: 设置作业历史记录日志 | Microsoft Docs
-ms.custom: ''
+title: Set Up the Job History Log
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,13 +14,15 @@ helpviewer_keywords:
 ms.assetid: 018e5c49-d3a0-4504-851a-f70996a34bb7
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e7a802b3bf5e3ef8842ba01f3c95237b67adb3d3
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 7d8ff3c1350bac2331ab6e895804e735318ba049
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263054"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245810"
 ---
 # <a name="set-up-the-job-history-log"></a>Set Up the Job History Log
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "68263054"
   
 3.  在 **“SQL Server 代理属性”** 对话框中，选择 **“历史记录”** 页。  
   
-4.  从下列选项中选择：  
+4.  从以下选项中选择：  
   
     1.  选中 **“限制作业历史记录日志的大小”** ，然后键入作业历史记录日志的最大行数和每个作业的最大行数。  
   

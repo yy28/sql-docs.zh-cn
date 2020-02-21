@@ -14,10 +14,10 @@ ms.assetid: 2aa43ce9-f51e-408a-8ce0-b40d3dd62561
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7639cd7ce7cd33f59fbc65116264a8b887879b77
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72278293"
 ---
 # <a name="report-server-namespace-management-methods"></a>报表服务器命名空间管理方法
@@ -28,7 +28,7 @@ ms.locfileid: "72278293"
 |<xref:ReportService2010.ReportingService2010.CancelJob%2A>|取消某一作业的执行。|  
 |<xref:ReportService2010.ReportingService2010.CreateFolder%2A>|将文件夹添加到报表服务器数据库或 SharePoint 库。|  
 |<xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>|将新项添加到报表服务器数据库或 SharePoint 库。 此方法适用于 Report、Model、Dataset、Component、Resource 和 DataSource 项类型       。|  
-|M:ReportService2010.ReportingService2010.CreateReportEditSession （System.string，system.string，System.string []，ReportService2010 [] @）|创建新的报表编辑会话。|  
+|M:ReportService2010.ReportingService2010.CreateReportEditSession(System.String, System.String,System.Byte[],ReportService2010.Warning[]@)|创建新的报表编辑会话。|  
 |<xref:ReportService2010.ReportingService2010.DeleteItem%2A>|从报表服务器数据库或 SharePoint 库删除项。|  
 |<xref:ReportService2010.ReportingService2010.FindItems%2A>|返回报表服务器数据库或 SharePoint 库中与指定的搜索条件匹配的项。|  
 |<xref:ReportService2010.ReportingService2010.FireEvent%2A>|基于提供的参数触发事件。|  

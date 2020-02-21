@@ -1,11 +1,13 @@
 ---
-title: 删除和重新创建加密密钥（SSRS 配置管理器）| Microsoft Docs
-ms.date: 05/31/2016
+title: 删除和重新创建加密密钥（配置管理器）| Microsoft Docs
+description: 删除和重新创建加密密钥不属于常规加密密钥维护活动。
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 helpviewer_keywords:
-- re-creating encryption keys
+- recreating encryption keys
 - encryption keys [Reporting Services]
 - deleting encryption keys
 - symmetric keys [Reporting Services]
@@ -14,28 +16,28 @@ helpviewer_keywords:
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5bf83ea3eb7ed7f4ef28872b964449d2924aab48
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 13f0237a987a87087f04da88f4a21173611c4437
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593536"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866300"
 ---
-# <a name="ssrs-encryption-keys---delete-and-re-create-encryption-keys"></a>SSRS 加密密钥 - 删除和重新创建加密密钥
-  删除和重新创建加密密钥不属于加密密钥例行维护活动。 您可以为了响应对报表服务器的特定威胁来执行这些任务，或者当无法访问报表服务器数据库时作为最后一种解决手段来执行这些任务。  
+# <a name="delete-and-recreate-encryption-keys-ssrs-configuration-manager"></a>删除和重新创建加密密钥（SSRS 配置管理器）
+  删除和重新创建加密密钥不属于常规加密密钥维护活动。 您可以为了响应对报表服务器的特定威胁来执行这些任务，或者当无法访问报表服务器数据库时作为最后一种解决手段来执行这些任务。  
   
--   当确信现有对称密钥的安全受到威胁时，应重新创建对称密钥。 作为安全性方面的最佳做法，您还可以定期重新创建密钥。  
+-   如果你认为现有对称密钥已遭入侵，请重新创建对称密钥。 作为安全性方面的最佳做法，还可以定期重新创建密钥。  
   
 -   当无法还原对称密钥时，应删除现有加密密钥和不可用的加密内容。  
   
-## <a name="re-creating-encryption-keys"></a>重新创建加密密钥  
- 如果确认对称密钥已泄露给未经授权的用户，或者报表服务器遭到攻击，作为一种防范措施，您想要重置对称密钥，那么可以重新创建对称密钥。 当重新创建对称密钥时，将使用新值对所有加密值重新进行加密。 如果在扩展部署中运行了多个报表服务器，则对称密钥的所有副本都将更新为新值。 报表服务器使用可用的公钥更新部署中每一台服务器的对称密钥。  
+## <a name="recreating-encryption-keys"></a>重新创建加密密钥  
+ 如果你有证据表明未授权的用户知道对称密钥，或报表服务器遭到攻击，且你希望重置对称密钥作为防范措施，那么可以重新创建对称密钥。 当你重新创建对称密钥时，所有加密值会使用新值重新进行加密。 如果在扩展部署中运行了多个报表服务器，则对称密钥的所有副本都将更新为新值。 报表服务器使用可用的公钥更新部署中每一台服务器的对称密钥。  
   
- 只有在报表服务器处于工作状态时，才能重新创建对称密钥。 重新创建加密密钥以及重新对内容进行加密将会中断服务器的操作。 在进行重新加密时，必须将服务器脱机。 在重新加密过程中，不应该向报表服务器发送请求。  
+ 只有在报表服务器处于工作状态时，才能重新创建对称密钥。 重新创建加密密钥和重新加密内容都会中断服务器操作。 在进行重新加密时，必须将服务器脱机。 在重新加密过程中，不应该向报表服务器发送请求。  
   
  可以使用 Reporting Services 配置工具或 **rskeymgmt** 实用工具重置对称密钥和加密的数据。 有关如何创建对称密钥的详细信息，请参阅[初始化报表服务器（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)。  
   
-### <a name="how-to-re-create-encryption-keys-reporting-services-configuration-tool"></a>如何重新创建加密密钥（Reporting Services 配置工具）  
+### <a name="how-to-recreate-encryption-keys-reporting-services-configuration-tool"></a>如何重新创建加密密钥（Reporting Services 配置工具）  
   
 1.  通过修改 rsreportserver.config 文件中的 **IsWebServiceEnabled** 属性禁用报表服务器 Web 服务和 HTTP 访问。 此步骤可暂时停止将身份验证请求发送到报表服务器而不会完全关闭服务器。 您必须具有最低限度的服务，以便可以重新创建密钥。  
   
@@ -55,7 +57,7 @@ ms.locfileid: "73593536"
   
 5.  通过修改 rsreportserver.config 文件中的 **IsWebServiceEnabled** 属性重新启用 Web 服务和 HTTP 访问。 如果使用的是扩展部署，请对所有实例执行此操作。  
   
-### <a name="how-to-re-create-encryption-keys-rskeymgmt"></a>如何重新创建加密密钥 (rskeymgmt)  
+### <a name="how-to-recreate-encryption-keys-rskeymgmt"></a>如何重新创建加密密钥 (rskeymgmt)  
   
 1.  禁用报表服务器 Web 服务和 HTTP 访问。 使用以上过程中的说明停止 Web 服务操作。  
   

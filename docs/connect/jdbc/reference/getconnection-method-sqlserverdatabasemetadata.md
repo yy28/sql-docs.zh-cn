@@ -1,5 +1,5 @@
 ---
-title: getConnection 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getConnection 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 16e46603-a678-4b0f-998e-479abbea151c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3397faaf4c1e6380ef7456d0d5a67e8bb8ca4f2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67952739"
 ---
 # <a name="getconnection-method-sqlserverdatabasemetadata"></a>getConnection 方法 (SQLServerDatabaseMetaData)
@@ -37,11 +37,11 @@ public java.sql.Connection getConnection()
 ## <a name="return-value"></a>返回值  
  [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 getConnection 方法由 getConnection 方法在 Java.sql.databasemetadata 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 getConnection 方法是由 java.sql.DatabaseMetaData 接口中的 getConnection 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

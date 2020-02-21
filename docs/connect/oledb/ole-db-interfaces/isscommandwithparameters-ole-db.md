@@ -1,5 +1,5 @@
 ---
-title: ISSCommandWithParameters (OLE DB) |Microsoft Docs
+title: ISSCommandWithParameters (OLE DB) | Microsoft Docs
 description: ISSCommandWithParameters (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 3bf78fc05390cc3c0d3cff0b87f05883eafe916a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994358"
 ---
 # <a name="isscommandwithparameters-ole-db"></a>ISSCommandWithParameters (OLE DB)
@@ -32,13 +32,13 @@ ms.locfileid: "67994358"
 > [!NOTE]  
 >  当使用服务组件时，可以使用 ISSCommandWithParameters 接口，但是服务组件不会使用此接口  。  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
 |[ISSCommandWithParameters::GetParameterProperties &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md)|对传递到该命令的每个 UDT 或 XML 参数返回数组中的一个 SSPARAMPROPS 属性集结构，但是对于其他类型的参数，不会返回任何内容  。|  
 |[ISSCommandWithParameters::SetParameterProperties &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md)|按照序号基于每个参数设置参数属性，或者通过指定 SSPARAMPROPS 结构数组来设置大容量参数属性  。|  
   
 ## <a name="see-also"></a>另请参阅  
- [接口&#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)    
+ [接口 &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)    
  [使用 XML 数据类型](../../oledb/features/using-xml-data-types.md)   
  [使用用户定义类型](../../oledb/features/using-user-defined-types.md)  
   

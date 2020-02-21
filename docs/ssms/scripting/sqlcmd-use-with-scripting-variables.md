@@ -1,6 +1,6 @@
 ---
-title: 将 sqlcmd 与脚本变量结合使用 | Microsoft Docs
-ms.custom: ''
+title: 将 sqlcmd 与脚本变量结合使用
+ms.custom: seo-lt-2019
 ms.date: 08/09/2016
 ms.prod: sql
 ms.technology: scripting
@@ -18,18 +18,18 @@ ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 142fd6bdd0ceb39003aba5c8ec8131c9df6427dd
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 3a084f84473dd6394aa0ad09e1730bcdb13e4a22
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262865"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76761611"
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>sqlcmd - 与脚本变量结合使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   脚本中使用的变量称为脚本变量。 使用脚本变量，一个脚本可以应用于多个方案中。 例如，如果需要对多台服务器运行单个脚本，则可以用脚本变量来表示服务器名称，而不必为每台服务器修改脚本。 通过更改脚本变量表示的服务器名称，可以在不同的服务器上运行同一脚本。  
   
- 可以使用 **setvar** 命令显式定义脚本变量，也可以使用 **sqlcmd-v** 选项隐式定义脚本变量。  
+ 可以使用 setvar  命令显式定义脚本变量，也可以使用 sqlcmd -v  选项隐式定义脚本变量。  
   
  本主题还包含有关使用 **SET**在 Cmd.exe 命令提示符下定义环境变量的示例。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68262865"
   
 3.  启动**SET X=Y**之前在命令提示符下设置的命令 shell ( **SET X=Y**)  
   
-4.  **sqlcmd-v** X=Y  
+4.  sqlcmd -v  X=Y  
   
 5.  **:Setvar** X Y  
   
@@ -100,7 +100,7 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 -   如果引号属于变量值的一部分，则必须对其进行转义。 例如：:`setvar MyVar "spac""e"`。  
   
 ## <a name="guidelines-for-cmdexe-set-variable-values-and-names"></a>有关 Cmd.exe SET 变量值和变量名的原则  
- 使用 SET 定义的变量是 Cmd.exe 环境的一部分并可以通过 **sqlcmd**进行引用。 请考虑以下原则：  
+ 使用 SET 定义的变量是 Cmd.exe 环境的一部分并可以通过 **sqlcmd**进行引用。 遵循以下指南：  
   
 -   变量名不能包含空格字符或引号。  
   
@@ -109,7 +109,7 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 ## <a name="sqlcmd-scripting-variables"></a>sqlcmd 脚本变量  
  将 **sqlcmd** 定义的变量称为脚本变量。 下表列出了 **sqlcmd** 脚本变量。  
   
-|        变量         | 相关选项 | R/W |         ，则“默认”         |
+|        变量         | 相关选项 | R/W |         默认         |
 | ----------------------- | -------------- | --- | ----------------------- |
 | SQLCMDUSER\*             | -U             | R   | ""                      |
 | SQLCMDPASSWORD\*         | -P             | --  | ""                      |
@@ -119,9 +119,9 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 | SQLCMDLOGINTIMEOUT      | -l             | R/W | "8"（秒）           |
 | SQLCMDSTATTIMEOUT       | -t             | R/W | "0" = 无限期等待 |
 | SQLCMDHEADERS           | -H             | R/W | "0"                     |
-| SQLCMDCOLSEP            | -S             | R/W | “ ”                     |
+| SQLCMDCOLSEP            | -S             | R/W | " "                     |
 | SQLCMDCOLWIDTH          | -w             | R/W | "0"                     |
-| SQLCMDPACKETSIZE        | -A             | R   | "4096"                  |
+| SQLCMDPACKETSIZE        | -a             | R   | "4096"                  |
 | SQLCMDERRORLEVEL        | -M             | R/W | "0"                     |
 | SQLCMDMAXVARTYPEWIDTH   | -y             | R/W | "256"                   |
 | SQLCMDMAXFIXEDTYPEWIDTH | -y             | R/W | "0" = 无限制         |
@@ -189,7 +189,7 @@ C:\>sqlcmd -d AdventureWorks2012
 ```
   
 ### <a name="d-using-user-level-environment-variables-within-sqlcmd"></a>D. 在 sqlcmd 中使用用户级环境变量  
- 在下面的示例中，在命令提示符下设置了用户级环境变量 `%Temp%`，并将其传递给了 `sqlcmd` 输入文件。 若要获取用户级环境变量，请在“控制面板”  中双击“系统”  。 单击 **“高级”** 选项卡，再单击 **“环境变量”** 。  
+ 在下面的示例中，在命令提示符下设置了用户级环境变量 `%Temp%` ，并将其传递给了 `sqlcmd` 输入文件。 若要获取用户级环境变量，请在“控制面板”  中双击“系统”  。 单击 **“高级”** 选项卡，再单击 **“环境变量”** 。  
   
  下列代码位于输入文件 `c:\testscript.txt`:
 
@@ -332,7 +332,7 @@ C:\> sqlcmd
   
 ## <a name="see-also"></a>另请参阅  
  [使用 sqlcmd 实用工具](../../relational-databases/scripting/sqlcmd-use-the-utility.md)   
- [-b](../../tools/sqlcmd-utility.md)   
+ [sqlcmd 实用工具](../../tools/sqlcmd-utility.md)   
  [命令提示实用工具参考（数据库引擎）](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

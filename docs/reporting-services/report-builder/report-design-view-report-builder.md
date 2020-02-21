@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3dff76f6293b5f02373234fb2546076f7584f13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 7ecc2115b106fe61492be388c90cfa2bd27eae9f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65577990"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190035"
 ---
 # <a name="report-design-view-report-builder"></a>报表设计视图（报表生成器）
   报表生成器窗口旨在帮助轻松组织报表资源并快速生成所需分页报表。 设计图面位于窗口中心，周围是功能区和窗格。 设计图面用于添加和组织报表项。 本文说明用于添加、选择和组织报表资源，以及更改报表项属性的窗格。  
   
- ![报表生成器设计视图](../../reporting-services/report-builder/media/ssrb-designview.png "Report Builder Design View")  
+ ![报表生成器设计视图](../../reporting-services/report-builder/media/ssrb-designview.png "报表生成器设计视图")  
   
 1.  功能区  
   
@@ -98,7 +98,7 @@ ms.locfileid: "65577990"
   
 -   [图像（报表生成器和 SSRS）](../../reporting-services/report-design/images-report-builder-and-ssrs.md)  
   
--   [数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+-   [创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
 -   [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
@@ -137,15 +137,15 @@ ms.locfileid: "65577990"
  根据相应的属性，可以从下拉列表中设置属性值、键入值或单击 `<Expression>` 来创建表达式。  
   
 ### <a name="changing-the-properties-pane-view"></a>更改“属性”窗格视图  
- 默认情况下，“属性”窗格中显示的属性是按大的类别（例如操作、边框、填充、字体和常规）分类的。 每个类别都有一组与其相关联的属性。 例如，“字体”类别内会列出以下属性：Color、FontFamily、FontSize、FontStyle、FontWeight、LineHeight 和 TextDecoration。 如果愿意，可以按字母顺序排列该窗格内列出的所有属性。 这会删除类别并按字母顺序列出所有属性，而不考虑类别。  
+ 默认情况下，“属性”窗格中显示的属性是按大的类别（例如操作、边框、填充、字体和常规）分类的。 每个类别都有一组与其相关联的属性。 例如，在“字体”类别中列出以下属性：Color、FontFamily、FontSize、FontStyle、FontWeight、LineHeight 和 TextDecoration。 如果愿意，可以按字母顺序排列该窗格内列出的所有属性。 这会删除类别并按字母顺序列出所有属性，而不考虑类别。  
   
- “属性”窗格顶部有三个按钮：“按分类顺序”、“按字母顺序”和“属性页”。 单击“按分类顺序”和“按字母顺序”按钮可在“属性”窗格视图之间切换。 单击 **“属性页”** 按钮可打开所选报表项的属性对话框。  
+ “属性”窗格的顶部有三个按钮：“类别”、“按字母顺序排序”和“属性页”。 单击“按分类顺序”和“按字母顺序”按钮可在“属性”窗格视图之间切换。 单击 **“属性页”** 按钮可打开所选报表项的属性对话框。  
   
   
 ##  <a name="GroupPane"></a> “分组”窗格 (Report Builder)  
- 使用组可以将报表数据组织成可视层次结构，也可以计算总计。 可以在设计图面上或“分组”窗格中查看数据区域内的行组和列组。 “分组”窗格有两个窗格：“行组”和“列组”。 选定数据区域后，“分组”窗格会将该数据区域内的所有组显示为一个层次结构列表；子组以缩进的方式显示在其父组下方。  
+ 使用组可以将报表数据组织成可视层次结构，也可以计算总计。 可以在设计图面上或“分组”窗格中查看数据区域内的行组和列组。 “分组”窗格有两个窗格：“行组”和“列组”。 在你选择数据区域后，“分组”窗格会将此数据区域内的所有组显示为一个层次结构列表：子组以缩进的方式显示在其父组下方。  
   
- ![报表生成器行组](../../reporting-services/report-builder/media/ssrb-rowgroups.png "Report Builder Row Groups")  
+ ![报表生成器行组](../../reporting-services/report-builder/media/ssrb-rowgroups.png "报表生成器行组")  
   
  可通过将字段从“报表数据”窗格中拖放到设计图面上或“分组”窗格中来创建组。 在“分组”窗格中，可以添加父组、相邻组和子组，更改组属性以及删除组。  
   
@@ -162,7 +162,7 @@ ms.locfileid: "65577990"
  阅读有关 [在报表生成器中预览报表](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)的详细信息。  
   
 ### <a name="running-a-report-with-parameters"></a>使用参数运行报表  
- 当您运行报表时，该报表会自动进行处理。 如果报表中包含参数，则只有在所有参数都具有默认值的情况下，该报表才能自动运行。 如果某个参数没有默认值，当运行报表时，需要为参数选择一个值，然后在“运行”选项卡上单击 **“查看报表”** 。有关详细信息，请参阅[报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)。  
+ 当您运行报表时，该报表会自动进行处理。 如果报表中包含参数，则只有在所有参数都具有默认值的情况下，该报表才能自动运行。 如果某个参数没有默认值，当运行报表时，需要为参数选择一个值，然后在“运行”选项卡上单击 **“查看报表”** 。有关详细信息，请参阅 [报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)的详细信息。  
   
 ### <a name="print-preview"></a>打印预览  
  在“运行”模式下预览报表时，报表像是以 HTML 格式生成的报表。 虽然预览并非 HTML 格式，但报表的布局和分页与 HTML 格式的输出结果类似。 可通过切换到打印预览模式，查看报表的打印效果。 单击 **“运行”** 选项卡上的 **“打印预览”** 按钮。所显示的报表就如同打印在纸张上一样。 此视图与图像呈现扩展插件和 PDF 呈现扩展插件所生成的输出类似。 虽然打印预览并非图像或 PDF 文件，但报表的布局和分页与这些格式的输出类似。  

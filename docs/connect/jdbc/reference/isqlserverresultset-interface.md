@@ -11,10 +11,10 @@ ms.assetid: 002496f7-8ec0-4267-b4e6-ba095e2ef306
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: edbf5a7feb65d39cb5158c42a218f077a3332236
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977408"
 ---
 # <a name="isqlserverresultset-interface"></a>ISQLServerResultSet 接口
@@ -33,8 +33,8 @@ ms.locfileid: "67977408"
 public interface ISQLServerResultSet  
 ```  
   
-## <a name="remarks"></a>Remarks  
- 此接口由[SQLServerResultSet 类](../../../connect/jdbc/reference/sqlserverresultset-class.md)实现。  
+## <a name="remarks"></a>备注  
+ 此接口由 [SQLServerResultSet 类](../../../connect/jdbc/reference/sqlserverresultset-class.md)实现。  
   
  此接口公开 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 特定的方法：  
   

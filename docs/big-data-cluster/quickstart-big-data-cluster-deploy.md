@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1b2a838f8ad386b8a236304401308d5be0f63ff1
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: b2f96f79b81b79d2abfaadc40c37b864d20a93dc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706351"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831393"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>使用 python 脚本在 Azure Kubernetes 服务 (AKS) 上部署 SQL Server 大数据群集
 
@@ -57,7 +57,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 
 ## <a name="run-the-deployment-script"></a>运行部署脚本
 
-使用以下步骤运行部署脚本。 此脚本将在 Azure 中创建 AKS 服务，然后会将 SQL Server 2019 大数据群集部署到 AKS。 还可以使用其他[环境变量](deployment-guidance.md#configfile)修改脚本以创建自定义部署。
+在 Windows PowerShell 或 Linux bash 提示符下，使用以下步骤运行部署脚本。 此脚本将在 Azure 中创建 AKS 服务，然后会将 SQL Server 2019 大数据群集部署到 AKS。 还可以使用其他[环境变量](deployment-guidance.md#configfile)修改脚本以创建自定义部署。
 
 1. 使用以下命令运行该脚本：
 
@@ -70,7 +70,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 
 1. 出现提示时，输入以下信息：
 
-   | ReplTest1 | 描述 |
+   | 值 | 说明 |
    |---|---|
    | **Azure 订阅 ID** | 用于 AKS 的 Azure 订阅 ID。 可以通过从另一个命令行运行 `az account list` 来列出所有订阅及其 ID。 |
    | **Azure 资源组** | 要为 AKS 群集创建的 Azure 资源组名称。 |
@@ -88,8 +88,6 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
    > 在大数据群集部署期间，SQL Server `sa` 帐户处于禁用状态。 SQL Server 主实例中预配了一个新的 sysadmin 登录名，其名称与为“用户名”输入指定的名称相同，密码与“密码”输入相对应   。 相同的“用户名”和“密码”值用于预配控制器管理员用户   。 网关 (Knox) 仅支持 **root** 用户，密码与上面相同。
 
 1. 该脚本将首先使用指定的参数创建 AKS 群集。 此步骤需要花费几分钟时间。
-
-   <img src="./media/quickstart-big-data-cluster-deploy/script-parameters.png" width="800px" alt="Script parameters and AKS cluster creation"/>
 
 ## <a name="monitor-the-status"></a>监视状态
 

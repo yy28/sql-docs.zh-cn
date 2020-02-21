@@ -1,6 +1,6 @@
 ---
-title: 从结果集中提取行 (OLE DB) |Microsoft Docs
-description: 使用 SQL Server OLE DB 驱动程序从结果集中提取行
+title: 从结果集中提取行 (OLE DB) | Microsoft Docs
+description: 使用 OLE DB Driver for SQL Server 从结果集中提取行
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 8aed6ce5eb93c68f22217667fe01306e28d9910e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015553"
 ---
 # <a name="fetch-rows-from-a-result-set-ole-db"></a>从结果集中提取行 (OLE DB)
@@ -33,7 +33,7 @@ ms.locfileid: "68015553"
   
 ## <a name="example"></a>示例  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>说明  
  使用 ole32.lib 和 oleaut32.lib 编译并执行以下 C++ 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请将连接字符串从 L"(local)" 更改为 L"(local)\\\name"，其中 name 是命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保 INCLUDE 环境变量包括含有 msoledbsql.h 的目录。  
   
 ### <a name="code"></a>代码  

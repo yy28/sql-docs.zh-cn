@@ -1,23 +1,24 @@
 ---
-title: 如何：通过 Team Foundation Build 运行 SQL Server 单元测试 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 通过 Team Foundation Build 运行 SQL Server 单元测试
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4c4008d88a2a353ead1ddd16f678c4167ff6714d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 0a892598e2d461d6c51e42292b00a367925f5f13
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035089"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244294"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>如何：通过 Team Foundation Build 运行 SQL Server 单元测试
+
 可以使用 Team Foundation Build 将 SQL Server 单元测试作为生成验证测试 (BVT) 的一部分运行。 可以配置单元测试以部署数据库、生成测试数据，然后运行选定测试。 如果您不熟悉 Team Foundation Build，则应该在执行本主题中的过程之前查看以下信息：  
   
 -   [创建和定义 SQL Server 单元测试](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
@@ -81,7 +82,7 @@ ms.locfileid: "68035089"
   
 4.  在详细信息窗格中的“宿主进程平台”中，单击“MSIL”以将测试配置为在 x64 生成代理上运行。  
   
-5.  单击 **“应用”**。  
+5.  单击“应用”。  
   
 ## <a name="CreateATestList"></a>为测试指定测试类别（可选）  
 通常，在创建生成定义以运行单元测试时，可以指定一个或多个测试类别。 在运行生成时，将运行指定类别中的所有测试。  
@@ -196,9 +197,9 @@ ms.locfileid: "68035089"
   
 5.  在“添加部署文件”对话框中，指定你创建的 BuildComputer.sqlunitttest.config 文件。  
   
-6.  单击 **“应用”**。  
+6.  单击“应用”。  
   
-7.  单击 **“关闭”**。  
+7.  单击“关闭”。  
   
 8.  在“文件”  菜单上，单击“全部保存” 。  
   
@@ -259,7 +260,7 @@ ms.locfileid: "68035089"
   
     此解决方案将显示在“要生成的项目或解决方案文件”列表中。  
   
-9. 单击“确定” 。  
+9. 单击“确定”。  
   
 10. 在“基本”组中的“自动测试”中，指定要运行的测试。 默认情况下，将运行解决方案中名为 \*test\*.dll 的文件中包含的测试。  
   

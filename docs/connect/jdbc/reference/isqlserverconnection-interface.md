@@ -1,5 +1,5 @@
 ---
-title: ISQLServerConnection 接口 |Microsoft Docs
+title: ISQLServerConnection 接口 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,16 +11,16 @@ ms.assetid: 031c01e2-2c65-4fe4-9700-fdbcc7a39f30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2fbe3b6c1721720720b06bdcf4122a289589e639
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977452"
 ---
 # <a name="isqlserverconnection-interface"></a>ISQLServerConnection 接口
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  表示连接至 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库的 JDBC 连接。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 中新增了此接口。  
+  表示连接至 [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库的 JDBC 连接。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 中新增了此接口。  
   
  **包：** com.microsoft.sqlserver.jdbc  
   
@@ -33,8 +33,8 @@ ms.locfileid: "67977452"
 public interface ISQLServerConnection  
 ```  
   
-## <a name="remarks"></a>Remarks  
- 此接口由[SQLServerConnection 类](../../../connect/jdbc/reference/sqlserverconnection-class.md)实现。  
+## <a name="remarks"></a>备注  
+ 此接口由 [SQLServerConnection 类](../../../connect/jdbc/reference/sqlserverconnection-class.md)实现。  
   
  此接口公开以下 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 特定的字段：  
   

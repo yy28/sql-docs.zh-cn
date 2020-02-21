@@ -16,10 +16,10 @@ ms.assetid: 72b5c4a5-1382-4b2c-80a0-47c97c5f52d3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 81623f6495540e70ae44755228b0c309df957b4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976133"
 ---
 # <a name="preparestatement-method-javalangstring-int"></a>prepareStatement 方法 (java.lang.String, int[])
@@ -35,7 +35,7 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sql,
                                                    int[] columnIndexes)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *sql*  
   
  包含 SQL 语句的 String  。  
@@ -45,13 +45,13 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sql,
  整数的数组。  
   
 ## <a name="return-value"></a>返回值  
- 一个 Java.sql.preparedstatement 对象。  
+ PreparedStatement 对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 prepareStatement 方法由 prepareStatement 方法在 sql 连接接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 prepareStatement 方法是由 java.sql.Connection 接口中的 prepareStatement 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [prepareStatement 方法 &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md)   

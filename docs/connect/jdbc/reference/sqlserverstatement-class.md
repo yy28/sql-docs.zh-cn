@@ -1,5 +1,5 @@
 ---
-title: SQLServerStatement 类 |Microsoft Docs
+title: SQLServerStatement 类 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: ec24963c-8b51-4838-91e9-1fbfa2347451
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 89547655fd734ca9e6e340d94832dea5816f2733
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970376"
 ---
 # <a name="sqlserverstatement-class"></a>SQLServerStatement 类
@@ -33,10 +33,10 @@ ms.locfileid: "67970376"
 public class SQLServerStatement  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  SQLServerStatement 类还提供了大量基类实现方法，以用于 JDBC 准备就绪语句和可调用语句。 SQLServerStatement 类的基本作用是先运行 SQL 语句，再向用户应用程序返回更新计数和结果集。  
   
- 此类支持取消包装 SQLServerStatement 类、ISQLServerStatement 接口和 java.sql.Statement 接口。 有关详细信息, 请参阅[包装器和接口](../../../connect/jdbc/wrappers-and-interfaces.md)。  
+ 此类支持取消包装 SQLServerStatement 类、ISQLServerStatement 接口和 java.sql.Statement 接口。 有关详细信息，请参阅[包装器和接口](../../../connect/jdbc/wrappers-and-interfaces.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerStatement 成员](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

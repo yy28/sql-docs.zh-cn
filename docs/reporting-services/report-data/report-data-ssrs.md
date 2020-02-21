@@ -1,5 +1,5 @@
 ---
-title: 报表数据
+title: SQL Server Reporting Services (SSRS) 中的报表数据简介
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
@@ -8,28 +8,44 @@ ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.custom: seodec18
-ms.date: 12/14/2018
-ms.openlocfilehash: f3aa702eef414fdc92670a51b8d374627797fe3d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.date: 11/18/2019
+ms.openlocfilehash: 6317e8161871d7094486ed8b6178847549d8ab96
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265561"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190721"
 ---
-# <a name="report-data-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中的报表数据
+# <a name="intro-to-report-data-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中的报表数据简介
 
   报表数据可以来自您的组织中的多种数据源。 设计报表的第一步是创建表示基础报表数据的数据源和数据集。 每个数据源都包含数据连接信息。 每个数据集都包含一个查询命令，该命令定义要用作来自数据源的数据的字段集。 若要展现来自各数据集的数据，请添加表、矩阵、图表或地图之类的数据区域。 处理报表时，将对数据源运行查询，并且每个数据区域都可以根据需要进行扩展，以便显示数据集的查询结果。  
 
 > [!NOTE]
 > 自 SQL Server 2016 之后，不再提供 Reporting Services 与 SharePoint 的集成这一功能。
+
+## <a name="data-in-ssrbnoversion"></a>数据位于 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
+ ![rs_DataSourcesStory](../../reporting-services/report-data/media/rs-datasourcesstory.gif "rs_DataSourcesStory")  
   
-##  <a name="BkMk_ReportDataTerms"></a> 术语  
+1.  **“报表数据”窗格中的数据源** 在创建嵌入数据源或添加共享数据源后，会在“报表数据”窗格中显示一个数据源。  
+  
+2.  **“连接”对话框** 使用“连接”对话框可以生成连接字符串或粘贴连接字符串。  
+  
+3.  **数据连接信息** 将连接字符串传递给数据扩展插件。  
+  
+4.  **凭据** 凭据与连接字符串是分开管理的。  
+  
+5.  **数据扩展插件/数据访问接口** 对数据的连接可通过多个数据访问层。  
+  
+6.  **外部数据源** 检索来自关系数据库、多维数据库、SharePoint 列表或 Web 服务的数据。  
+
+
+##  <a name="BkMk_ReportDataTerms"></a> 定义术语  
   
 - **数据连接。** 也称为“数据源”  。 数据连接包含名称和依赖于连接类型的连接属性。 根据设计，数据源连接不包含凭据。 数据连接不指定从外部数据源中检索哪些数据。 为此，请在创建数据集时指定查询。  
   
-- **数据源定义。** 包含报表数据源的 XML 表示形式的文件。 在发布报表之后，其数据源作为数据源定义（独立于报表定义）保存到报表服务器或 SharePoint 站点上。 例如，报表服务器管理员可以更新连接字符串或凭据。 在本机报表服务器上，文件类型为 .rds。 在 SharePoint 站点上，文件类型为 .rsds。  
+- **数据源定义。** 包含报表数据源的 XML 表示形式的文件。 在发布报表之后，其数据源作为数据源定义（独立于报表定义）保存在报表服务器或 SharePoint 站点上。 例如，报表服务器管理员可以更新连接字符串或凭据。 在本机报表服务器上，文件类型为 .rds。 在 SharePoint 站点上，文件类型为 .rsds。  
   
-- **连接字符串。** 连接字符串是连接到数据源所需的连接属性的字符串版本。 连接属性根据数据连接类型不同而异。 有关示例，请参阅 [数据连接、数据源和连接字符串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
+- **连接字符串。** 连接字符串是连接到数据源所需的连接属性的字符串版本。 连接属性根据数据连接类型不同而异。 例如，请参阅[创建数据连接字符串 - 报表生成器和 SSRS](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
 - **共享数据源。** 报表服务器或 SharePoint 站点上提供的可由多个报表使用的数据源。  
   
@@ -47,11 +63,11 @@ ms.locfileid: "68265561"
   
 - **报表部件使用的数据** 报表部件可以包含它们所依赖的数据。 有关报表部件的详细信息，请参阅[报表设计器中的报表部件 (SSRS)](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)。  
   
-- **筛选数据** 可以在查询中或报表中筛选报表数据。 您可以使用数据集和查询变量来创建级联参数，并且使用户能够将成千上万种选择缩减为更为可控的数目。 您可以基于参数值或者您指定的其他值来筛选表或图表中的数据。  
+- **筛选数据** 可以在查询中或报表中筛选报表数据。 可以使用数据集和查询变量来创建级联参数。 使用级联参数，用户可以缩小选择范围，从数千个选择缩小到一个更易于管理的数字。 您可以基于参数值或者您指定的其他值来筛选表或图表中的数据。  
   
-- **参数** 包含查询变量的数据集查询命令将自动创建匹配的报表参数。 也可以手动创建参数。 当您查看报表时，报表工具栏将显示这些参数。 用户可以选择值，以便控制报表数据或报表外观。 若要为特定用户自定义报表数据，可以创建具有链接到相同报表定义的不同默认值的报表参数集，或者使用内置的 **UserID** 字段。 有关详细信息，请参阅[报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)和[表达式中的内置集合（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)。  
+- **参数** 包含查询变量的数据集查询命令将自动创建匹配的报表参数。 也可以手动创建参数。 当您查看报表时，报表工具栏将显示这些参数。 用户可以选择值，以便控制报表数据或报表外观。 若要为特定用户自定义报表数据，可以创建具有链接到相同报表定义的不同默认值的报表参数集。 还可以使用内置 UserID  字段为不同的用户自定义数据。 有关详细信息，请参阅[报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)和[表达式中的内置集合（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)。  
   
-- **数据警报** 在发布报表后，您可以基于报表数据创建警报，并且在警报满足您指定的规则时接收电子邮件。  
+- **数据警报** 发布报表后，可以基于报表数据创建警报。 然后，当符合指定的规则时，你将收到该电子邮件。  
   
 - **对数据进行分组和聚合** 可在查询或报表中对报表数据进行分组和聚合。 如果您聚合查询中的值，则可以继续在有意义的约束内合并报表中的值。  有关详细信息，请参阅[对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)和[聚合函数（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)。  
   
@@ -71,7 +87,7 @@ ms.locfileid: "68265561"
   
 - 了解 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 客户端/服务器体系结构和工具。 例如，在报表设计器中，您在使用内置数据源类型的客户端计算机上创作报表。 在您发布报表时，在报表服务器或 SharePoint 站点上必须支持数据源类型。  有关详细信息，请参阅 [Reporting Services 支持的数据源 (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
   
-- 数据源和数据集在报表中创作，并且从客户端创作工具发布到报表服务器或 SharePoint 站点。 可以直接在报表服务器上创建数据源。 在发布后，您可以在报表服务器上配置凭据和其他属性。 有关详细信息，请参阅 [数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 和 [Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md)。  
+- 数据源和数据集在报表中创作，并且从客户端创作工具发布到报表服务器或 SharePoint 站点。 可以直接在报表服务器上创建数据源。 在发布后，您可以在报表服务器上配置凭据和其他属性。 有关详细信息，请参阅[创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 和 [Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md)。  
   
 - 您可以使用的数据源取决于所安装的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据扩展插件。 对数据源的支持可能会因客户端创作工具、报表服务器版本和报表服务器平台而异。 有关详细信息，请参阅 [Reporting Services 支持的数据源 (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
   
@@ -84,7 +100,7 @@ ms.locfileid: "68265561"
 |||  
 |-|-|  
 |**常见任务**|**链接**|  
-|创建数据连接|[数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
+|创建数据连接|[创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
 |创建数据集和查询|[报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|  
 |在发布后管理数据源|[管理报表数据源](../../reporting-services/report-data/manage-report-data-sources.md)|  
 |在发布后管理共享数据集|[管理共享数据集](../../reporting-services/report-data/manage-shared-datasets.md)|  

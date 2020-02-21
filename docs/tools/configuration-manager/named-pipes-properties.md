@@ -1,6 +1,6 @@
 ---
-title: Named Pipes 属性 |Microsoft Docs
-ms.custom: ''
+title: Named Pipes 属性
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,22 +16,22 @@ ms.assetid: a5fd5b8e-f889-485b-89e3-d4010ec4c6ec
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c42b3846ce4e2eda1e7aaf40eeb47ea76babf0af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 923f84ccc98837892d144a07ce71238c877ca5b6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010139"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306444"
 ---
 # <a name="named-pipes-properties"></a>Named Pipes 属性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  在使用 Named Pipes 协议时，可以使用“Named Pipes 属性”  对话框的“协议”  页查看或更改 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]侦听的命名管道。  
+  使用“命名管道属性”对话框中的“协议”页，可以在使用命名管道协议时查看或更改 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 侦听的命名管道。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 才能启用或禁用该协议，或更改命名管道。  
   
 ## <a name="options"></a>选项  
  **已启用**  
- 可能的值为“是”  和“否”  。  
+ 可能的值为“是”和“否”。  
   
  **管道名称**  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 侦听的命名管道。 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 侦听： `\\.\pipe\sql\query` （对于默认实例）和 `\\.\pipe\MSSQL$<instancename>\sql\query` （对于命名实例）。 此字段最多允许 2047 个字符。  

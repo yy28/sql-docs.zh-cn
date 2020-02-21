@@ -1,6 +1,6 @@
 ---
-title: 代码大纲显示 | Microsoft Docs
-ms.custom: ''
+title: 代码大纲显示
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +14,12 @@ ms.assetid: 556c7dfe-7bc8-4cab-a36f-2b753a05d3f1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c718d4f6ff1d057c23f8041be755da54f9b5da58
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 366928df4dfe2b4b3c7c2749201d1d3980937f01
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256645"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254027"
 ---
 # <a name="code-outlining"></a>代码大纲显示
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,23 +36,23 @@ ms.locfileid: "68256645"
 ### <a name="analysis-services-xmla-query-editor-regions"></a>Analysis Services XMLA 查询编辑器区域  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] XMLA 查询编辑器为每个多行 XML 属性生成大纲区域。 该编辑器可为嵌套标签嵌套大纲区域。 例如，XMLA 编辑器为以下文件创建三个大纲区域。  
   
- ![XML 代码显示大纲显示](../../ssms/scripting/media/editoutlinexmlfull.gif "XML 代码显示大纲显示")  
+ ![显示大纲的 XML 代码](../../ssms/scripting/media/editoutlinexmlfull.gif "显示大纲的 XML 代码")  
   
  单击 \<InnerTag> 行上的减号时，只有 InnerTag 会折叠起来，如下图所示。  
   
- ![隐藏了内部节点的 XML 代码](../../ssms/scripting/media/editoutlinexmlinnercol.gif "隐藏了内部节点的 XML 代码")  
+ ![隐藏内部节点的 XML 代码](../../ssms/scripting/media/editoutlinexmlinnercol.gif "隐藏内部节点的 XML 代码")  
   
  将指针移动到含有三个句点 (...) 的框上方时，折叠区域中的代码将出现在工具提示中，如下图所示。  
   
- ![带有显示了隐藏代码的提示的 XML 代码](../../ssms/scripting/media/editoutlinexmlmouse.gif "带有显示了隐藏代码的提示的 XML 代码")  
+ ![带有显示隐藏代码的工具提示的 XML 代码](../../ssms/scripting/media/editoutlinexmlmouse.gif "带有显示隐藏代码的工具提示的 XML 代码")  
   
  单击 \<MiddleTag> 行上的减号时，MiddleTag 和 InnerTag 都会折叠起来，如下图所示。  
   
- ![隐藏了内部和中间标记的 XML 代码](../../ssms/scripting/media/editoutlinexmlmiddlecol.gif "隐藏了内部和中间标记的 XML 代码")  
+ ![隐藏内部和中间标记的 XML 代码](../../ssms/scripting/media/editoutlinexmlmiddlecol.gif "隐藏内部和中间标记的 XML 代码")  
   
  单击 \<OuterTag> 行上的减号时，所有三行均折叠起来，如下图所示。  
   
- ![显示了所有三个隐藏标记的 XML 代码](../../ssms/scripting/media/editoutlinexmloutercol.gif "显示了所有三个隐藏标记的 XML 代码")  
+ ![显示所有三个隐藏标记的 XML 代码](../../ssms/scripting/media/editoutlinexmloutercol.gif "显示所有三个隐藏标记的 XML 代码")  
   
 ### <a name="database-engine-query-editor-regions"></a>数据库引擎查询编辑器区域  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器为以下层次结构中的每个元素生成大纲区域：  

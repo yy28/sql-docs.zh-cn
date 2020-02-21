@@ -13,12 +13,12 @@ ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 741aec40bf972ae6caedfc0301e7a3dcd080d593
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.openlocfilehash: 7db6dbdbe45102c2a1bc2533d156e55060869b58
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73632912"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76909847"
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 发行说明
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ SQL Server 2016 SP2 安装可能需要在安装后重新启动。 作为最佳�
 
 SQL Server 2016 SP2 中包括与性能和缩放相关的改进。
 
-|功能|描述|详细信息|
+|Feature|说明|详细信息|
 |---|---|---|
 |分发数据库清除过程已改进 |   分发数据库表过大导致出现阻塞和死锁情况。 改进的清理过程旨在消除其中某些阻塞或死锁情况的发生。 |   [KB4040276](https://support.microsoft.com/help/4040276/fix-indirect-checkpoints-on-the-tempdb-database-cause-non-yielding)  |
 |更改跟踪清除    |   改进了更改跟踪端表的更改跟踪清除性能和效率。    |   [KB4052129](https://support.microsoft.com//help/4052129/update-for-manual-change-tracking-cleanup-procedure-in-sql-server-2016) |
@@ -54,7 +54,7 @@ SQL Server 2016 SP2 中包括与性能和缩放相关的改进。
 
 SQL Server 2016 SP2 中包含与可支持性和诊断相关的改进。
 
-|功能|描述|详细信息|
+|Feature|说明|详细信息|
 |---|---|---|
 |对可用性组中数据库的完整 DTC 支持    |   SQL Server 2016 目前不支持可用性组中数据库的跨数据库事务。 我们在 SQL Server 2016 SP2 中引入了对可用性组数据库的分布式事务的完整支持。   |       |
 |更新到 sys.databases is_encrypted 列，准确反映 TempDB 的加密状态 |   对于 TempDB，sys.databases 中 is_encryptedcolumn 列的值为 1，即使是在关闭所有用户数据库的加密并重新启动 SQL Server 后也一样。 由于 TempDB 在这种情况下不再处于加密状态，因此该列中的值本该为 0。 从 SQL Server 2016 SP2 开始，sys.databases.is_encrypted 现可准确反映 TempDB 的加密状态。  |       |
@@ -95,7 +95,7 @@ SQL Server 2016 SP2 中包含与可支持性和诊断相关的改进。
 - 更改数据捕获（在 Express 版中不可用）
 - columnstore
 - 压缩
-- 动态数据屏蔽
+- 动态数据掩码
 - 精细审核
 - 内存中 OLTP（在 Local DB 版中不可用）
 - 多文件流容器（在 Local DB 版中不可用）
@@ -105,7 +105,7 @@ SQL Server 2016 SP2 中包含与可支持性和诊断相关的改进。
 
 下表总结了 SQL Server 2016 SP1 中提供的重要改进。
 
-|功能|描述|详细信息|
+|Feature|说明|详细信息|
 |---|---|---|
 |在 TF 715 下与自动 TABLOCK 成堆的大容量插入| 跟踪标志 715 为没有非聚集索引的堆中的大容量加载操作启用表锁。|[Migrating SAP workloads to SQL Server just got 2.5x faster](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)（将 SAP 工作负荷迁移到 SQL Server 速度加快了 2.5 倍）|
 |CREATE 或 ALTER|部署存储过程、触发器、用户定义的函数和视图等对象。|[SQL Server 数据库引擎博客](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/11/17/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1/)|
@@ -113,7 +113,7 @@ SQL Server 2016 SP2 中包含与可支持性和诊断相关的改进。
 |文件流 RsFx 驱动程序签名|文件流 RsFx 驱动程序使用 Windows 硬件开发人员中心仪表板门户（开发门户）签名和认证，从而允许在 Windows Server 2016/Windows 10 上毫无问题地安装 SQL Server 2016 SP1 文件流 RsFx 驱动程序。|[Migrating SAP workloads to SQL Server just got 2.5x faster](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)（将 SAP 工作负荷迁移到 SQL Server 速度加快了 2.5 倍）|
 |SQL 服务帐户的 LPIM - 编程识别|允许 DBA 以编程方式识别服务启动时内存中锁定页面 (LPIM) 特权是否生效。|[Developers Choice:Programmatically identify LPIM and IFI privileges in SQL Server](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-programmatically-identify-lpim-and-ifi-privileges-in-sql-server)（开发人员选择：以编程方式识别 SQL Server 中的 LPIM 和 IFI 特权）|
 |手动更改跟踪清除|新存储过程根据需要清除更改跟踪内部表。| [KB 3173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking)|
-|本地临时表的并行 INSERT...SELECT 更改|INSERT..SELECT 操作中的新并行插入。|[SQL Server Customer Advisory Team](https://blogs.msdn.microsoft.com/sqlcat/2016/07/21/real-world-parallel-insert-what-else-you-need-to-know/)（SQL Server 客户咨询团队）|
+|本地临时表的并行 INSERT...SELECT更改|INSERT..SELECT 操作中的新并行插入。|[SQL Server Customer Advisory Team](https://blogs.msdn.microsoft.com/sqlcat/2016/07/21/real-world-parallel-insert-what-else-you-need-to-know/)（SQL Server 客户咨询团队）|
 |Showplan XML|扩展诊断包括授予警告和针对查询启用的最大内存、启用的跟踪标志，并且还显示其他诊断信息。 | [KB 3190761](https://support.microsoft.com/help/3190761/update-to-improve-diagnostics-by-expose-data-type-of-the-parameters-fo)|
 |存储类内存|在 Windows Server 2016 中使用存储类内存推进事务处理，带来的结果是事务提交时间加快了几个数量级。|[SQL Server 数据库引擎博客](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/)|
 |USE HINT|使用查询选项 `OPTION(USE HINT('<option>'))` 通过受支持的查询级别提示更改查询优化器行为。 与 QUERYTRACEON 不同，USE HINT 选项不需要 sysadmin 特权。|[Developers Choice:USE HINT query hints](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-use-hint-query-hints/)（开发人员选择：USE HINT 查询提示）|
@@ -141,7 +141,7 @@ SQL Server 2016 SP1 安装可能需要重新启动后安装。 作为最佳做�
 -   [查询存储 (GA)](#bkmk_ga_query_store)
 -   [产品文档 (GA)](#bkmk_ga_docs)
 
-### ![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> Install Patch Requirement (GA)
+### ![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> 安装修补程序要求 (GA)
 **问题及其对客户的影响：** Microsoft 已发现影响 Microsoft VC++ 2013 运行时二进制文件的一个问题，这些二进制文件是作为 SQL Server 2016 系统必备进行安装的。 现在有可用的更新来修复该问题。 如果未安装适用于该 VC 运行时二进制文件的更新，则在某些情况下 SQL Server 2016 可能会遇到稳定性问题。 在安装 SQL Server 2016 之前，请检查计算机是否需要 [KB 3164398](https://support.microsoft.com/kb/3164398)中所述的修补程序。 此修补程序也包含在 [SQL Server 2016 RTM 的累积更新包 1 (CU1)](https://www.microsoft.com/download/details.aspx?id=53338) 中。
 
 **解决方法：** 使用以下任一解决方案：
