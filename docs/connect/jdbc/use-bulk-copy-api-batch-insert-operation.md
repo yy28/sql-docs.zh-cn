@@ -1,5 +1,5 @@
 ---
-title: 使用大容量复制 API 进行批处理 JDBC 驱动程序的批处理插入操作 |Microsoft Docs
+title: MSSQL JDBC 驱动程序支持使用大容量复制 API 执行批量插入操作 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,66 +11,66 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3050cdf87775a67618902dfbb88b656003020769
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027097"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>将大容量复制 API 用于批量插入操作
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-适用于 SQL Server 的 Microsoft JDBC Driver 7.0 支持使用大容量复制 API 进行 Azure 数据仓库的批量插入操作。 此功能允许用户在执行批处理插入操作时允许驱动程序在下面执行大容量复制操作。 该驱动程序旨在实现性能改进, 同时插入与驱动程序使用定期批处理插入操作时相同的数据。 驱动程序将分析用户的 SQL 查询, 利用大容量复制 API 代替常用的批处理插入操作。 下面介绍了如何通过各种方式为批处理插入功能启用大容量复制 API 以及其限制列表。 此页还包含一个小示例代码, 该代码演示了用法和性能的提高。
+Microsoft JDBC Driver 7.0 for SQL Server 支持使用大容量复制 API 对 Azure 数据仓库执行批量插入操作。 使用此功能，用户可以将驱动程序启用为，在执行批量插入操作时，在底层执行大容量复制操作。 驱动程序旨在实现性能提升，同时插入驱动程序通过常规批量插入操作插入的相同数据。 驱动程序分析用户的 SQL 查询，同时利用大容量复制 API 代替常规批量插入操作。 下面介绍了为大容量复制 API 启用批量插入功能的各种方法，并列出了此功能的限制。 此页还包含一个展示使用情况和性能提升的小型示例代码。
 
-此功能仅适用于 java.sql.preparedstatement 和 CallableStatement 的`executeBatch()`  &  `executeLargeBatch()` api。
+此功能仅适用于 PreparedStatement 和 CallableStatement 的 `executeBatch()` 和 `executeLargeBatch()` API。
 
 ## <a name="prerequisites"></a>必备条件
 
-为批量插入启用大容量复制 API 有两个先决条件。
+为大容量复制 API 启用批量插入功能有两个先决条件。
 
 * 服务器必须是 Azure 数据仓库。
-* 查询必须是插入查询 (查询可能包含注释, 但查询必须以 INSERT 关键字开头才能使此功能生效)。
+* 查询必须是插入查询（查询可以包含注释，但要使此功能生效，查询必须以 INSERT 关键字开头）。
 
-## <a name="enabling-bulk-copy-api-for-batch-insert"></a>启用成批插入的批量复制 API
+## <a name="enabling-bulk-copy-api-for-batch-insert"></a>为大容量复制 API 启用批量插入功能
 
-可以通过三种方式为批处理插入启用批量复制 API。
+为大容量复制 API 启用批量插入功能的方法有三种。
 
-### <a name="1-enabling-with-connection-property"></a>1.通过连接属性启用
+### <a name="1-enabling-with-connection-property"></a>1.使用连接属性启用
 
-**如果将 useBulkCopyForBatchInsert = true;** 添加到连接字符串, 则会启用此功能。
+将 useBulkCopyForBatchInsert=true;  添加到连接字符串可启用此功能。
 
 ```java
 Connection connection = DriverManager.getConnection("jdbc:sqlserver://<server>:<port>;userName=<user>;password=<password>;database=<database>;useBulkCopyForBatchInsert=true;");
 ```
 
-### <a name="2-enabling-with-setusebulkcopyforbatchinsert-method-from-sqlserverconnection-object"></a>2.通过 SQLServerConnection 对象启用 with setUseBulkCopyForBatchInsert () 方法
+### <a name="2-enabling-with-setusebulkcopyforbatchinsert-method-from-sqlserverconnection-object"></a>2.从 SQLServerConnection 对象使用 setUseBulkCopyForBatchInsert() 方法启用
 
-调用**SQLServerConnection. setUseBulkCopyForBatchInsert (true)** 将启用此功能。
+调用 SQLServerConnection.setUseBulkCopyForBatchInsert(true)  可启用此功能。
 
-**SQLServerConnection. getUseBulkCopyForBatchInsert ()** 检索**useBulkCopyForBatchInsert**连接属性的当前值。
+SQLServerConnection.getUseBulkCopyForBatchInsert()  用于检索 useBulkCopyForBatchInsert  连接属性的当前值。
 
-对于每个 Java.sql.preparedstatement, **useBulkCopyForBatchInsert**的值在初始化时保持不变。 对**SQLServerConnection ()** 的任何后续调用都不会影响已创建的 java.sql.preparedstatement 相对于其值。
+对于每个 PreparedStatement，useBulkCopyForBatchInsert  值在其初始化时保持不变。 对 SQLServerConnection.setUseBulkCopyForBatchInsert()  的任何后续调用都不会影响已创建的 PreparedStatement 的值。
 
-### <a name="3-enabling-with-setusebulkcopyforbatchinsert-method-from-sqlserverdatasource-object"></a>3.通过 SQLServerDataSource 对象启用 with setUseBulkCopyForBatchInsert () 方法
+### <a name="3-enabling-with-setusebulkcopyforbatchinsert-method-from-sqlserverdatasource-object"></a>3.从 SQLServerDataSource 对象使用 setUseBulkCopyForBatchInsert() 方法启用
 
-与上面类似, 但使用 SQLServerDataSource 创建 SQLServerConnection 对象。 这两种方法可以得到相同的结果。
+与上面的方法类似，不同之处在于使用 SQLServerDataSource 创建 SQLServerConnection 对象。 这两种方法可以得到相同的结果。
 
 ## <a name="known-limitations"></a>已知的限制
 
-目前这些限制适用于此功能。
+目前，这些限制适用于此功能。
 
-* 不支持包含非参数化值 (例如`INSERT INTO TABLE VALUES (?, 2`) 的 Insert 查询。 通配符 (？) 是此函数支持的唯一参数。
-* 不支持包含插入选择表达式的插入查询 (例如`INSERT INTO TABLE SELECT * FROM TABLE2`)。
-* 不支持包含多个值表达式 (例如`INSERT INTO TABLE VALUES (1, 2) (3, 4)`) 的 Insert 查询。
-* 不支持将后跟 OPTION 子句、与多个表联接或后跟另一个查询的查询插入。
-* 由于大`MONEY`容量复制 API、 `DATETIMEOFFSET` `DATE` `DATETIME` 、、`GEOGRAPHY` 、、、、、和数据类型的限制, 目前不支持此`SMALLMONEY` `SMALLDATETIME` `TIME` `GEOMETRY`具有.
+* 不支持包含非参数化值的插入查询（例如，`INSERT INTO TABLE VALUES (?, 2`）。 通配符 (?) 是此函数唯一支持的参数。
+* 不支持包含 INSERT-SELECT 表达式的插入查询（例如，`INSERT INTO TABLE SELECT * FROM TABLE2`）。
+* 不支持包含多个 VALUE 表达式的插入查询（例如，`INSERT INTO TABLE VALUES (1, 2) (3, 4)`）。
+* 不支持后跟 OPTION 子句、与多个表联接或后跟另一个查询的插入查询。
+* 由于大容量复制 API 的限制，此功能暂不支持 `MONEY`、`SMALLMONEY`、`DATE`、`DATETIME`、`DATETIMEOFFSET`、`SMALLDATETIME`、`TIME`、`GEOMETRY` 和 `GEOGRAPHY` 数据类型。
 
-如果查询由于非 "SQL server" 相关错误而失败, 则驱动程序将记录错误消息, 并回退到批处理插入的原始逻辑。
+如果查询因非“SQL Server”相关错误而失败，驱动程序会记录错误消息，并回退到批量插入的原始逻辑。
 
 ## <a name="example"></a>示例
 
-下面是一个示例代码, 演示了在 (常规 vs 大容量复制 API) 方案中针对上千行的 Azure DW 执行批量插入操作的用例。
+下面的示例代码展示了在两种方案（常规和大容量复制 API）中对包含上千行的 Azure DW 执行批量插入操作的用例。
 
 ```java
     public static void main(String[] args) throws Exception

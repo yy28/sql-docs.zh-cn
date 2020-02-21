@@ -8,12 +8,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
-ms.openlocfilehash: 66bc987b71bb8b139eec5b69e78532aa54f1294d
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: e16304765e5f4a51feed4d3d59e790505baa740d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531949"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252027"
 ---
 # <a name="run-python-and-r-scripts-with-machine-learning-services-on-sql-server-big-data-clusters"></a>通过机器学习服务在 SQL Server 大数据群集上运行 Python 和 R 脚本
 
@@ -26,7 +26,7 @@ ms.locfileid: "73531949"
 
 ## <a name="enable-machine-learning-services"></a>启用机器学习服务
 
-机器学习服务默认安装在大数据群集上，并且需要单独安装。
+机器学习服务默认安装在大数据群集上，并且不需要单独安装。
 
 若要启用机器学习服务，请在主实例上运行以下语句：
 
@@ -46,7 +46,7 @@ GO
     SELECT @@SERVERNAME
     ```
 
-    记下服务器名称。 在此示例中，主实例的服务器名称为 **master-2**。
+    记下服务器名称。 在此示例中，主实例的服务器名称为 master-2  。
 
 1. 在大数据群集中 Always On 可用性组上的每个副本上，运行以下 `kubectl` 命令：
 

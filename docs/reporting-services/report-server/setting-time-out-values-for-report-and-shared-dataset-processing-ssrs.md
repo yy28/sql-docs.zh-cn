@@ -1,6 +1,7 @@
 ---
 title: 为报表和共享数据集处理设置超时值 (SSRS) | Microsoft Docs
-ms.date: 05/30/2019
+description: 在 Reporting Services 中，可以通过指定超时值来限制使用系统资源的方式。
+ms.date: 01/16/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f4d98747a2f00de41dd5661b76a05a9f22d341df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 1bc1f2f27fa46f8262d3c0ca99549d23f2381ff0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66506440"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76259407"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>为报表和共享数据集处理设置超时值 (SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可以通过指定超时值来限制使用系统资源的方式。 报表服务器支持两种类型的超时值：  
+在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中，可以通过指定超时值来限制使用系统资源的方式。 报表服务器支持两个超时值：  
   
 - 嵌入数据集查询超时值，即报表服务器等待数据库响应的秒数。 此值在报表中定义。  
   
@@ -33,7 +34,10 @@ ms.locfileid: "66506440"
   
 ## <a name="setting-a-query-time-out-for-an-embedded-dataset-in-a-report"></a>设置报表中的内嵌数据集的查询超时  
  查询超时值是在创作报表过程中在定义嵌入数据集时指定的。 该超时值随报表一起存储，它存储在报表定义的 **Timeout** 元素中。 默认情况下，此值设置为 30 秒。 有关详细信息，请参阅 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
-  
+ 
+ > [!NOTE]  
+ > 对于 Power BI 中的分页报表  ，默认值设置为 600 秒  。
+ 
  对已发布报表的属性具有修改权限的用户可以通过编辑报表定义文件来重置此值。  
   
  还可以为数据驱动订阅指定查询超时值。 查询超时值是在“数据驱动订阅”页中指定的。 指定的值决定了报表服务器在从订阅服务器数据源检索数据时等待查询处理完成的时间。  

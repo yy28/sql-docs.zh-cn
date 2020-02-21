@@ -1,5 +1,5 @@
 ---
-title: 通过 useFmtOnly 检索 Java.sql.parametermetadata |Microsoft Docs
+title: 通过 useFmtOnly 检索 ParameterMetaData | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -15,18 +15,18 @@ author: rene-ye
 ms.author: v-reye
 manager: kenvh
 ms.openlocfilehash: 6877a6421622ab52a92b89502c68f47c4c315d93
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025497"
 ---
-# <a name="retrieving-parametermetadata-via-usefmtonly"></a>通过 useFmtOnly 检索 Java.sql.parametermetadata
+# <a name="retrieving-parametermetadata-via-usefmtonly"></a>通过 useFmtOnly 检索 ParameterMetaData
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Microsoft JDBC Driver for SQL Server 包含从服务器**useFmtOnly**查询参数元数据的另一种方法。 此功能是在驱动程序版本7.4 中首次引入的, 并需要作为中`sp_describe_undeclared_parameters`已知问题的解决方法。
+  The Microsoft JDBC Driver for SQL Server 提供从服务器查询参数元数据的另一种方法，即 useFmtOnly  。 此功能是在驱动程序版本 7.4 中首次引入的，需要作为 `sp_describe_undeclared_parameters` 中已知问题的解决方法。
   
-  驱动程序主要使用该存储过程`sp_describe_undeclared_parameters`来查询参数元数据, 因为在大多数情况下, 使用这种方法来检索参数元数据。 但是, 在以下用例中, 当前执行存储过程会失败:
+  驱动程序主要使用存储过程 `sp_describe_undeclared_parameters` 来查询参数元数据，因为在大多数情况下，这是用于检索参数元数据的推荐方法。 但是，在以下用例中，当前执行存储过程会失败：
   
 -   针对 Always Encrypted 列
   
@@ -34,7 +34,7 @@ ms.locfileid: "69025497"
   
 -   针对视图 
   
-  针对这些用例的建议的解决方案是, 分析用户的参数和表目标的 SQL 查询, 然后执行`SELECT` `FMTONLY`启用的查询。 以下代码片段将帮助可视化此功能。
+  针对这些用例的建议解决方案是，分析用户的参数和表目标的 SQL 查询，然后在启用 `FMTONLY` 的情况下执行 `SELECT` 查询。 以下代码片段具体演示了此功能。
   
 ```sql
 --create a normal table 'Foo' and a temporary table 'Bar'
@@ -52,10 +52,10 @@ SELECT c1 FROM #Bar; --works
 SET FMTONLY OFF;
 ```
  
-## <a name="turning-the-feature-onoff"></a>打开/关闭功能 
- 默认情况下, 功能**useFmtOnly**处于关闭状态。 用户可以通过指定`useFmtOnly=true`连接字符串来启用此功能。 例如： `jdbc:sqlserver://<server>:<port>;databaseName=<databaseName>;user=<user>;password=<password>;useFmtOnly=true;`。
+## <a name="turning-the-feature-onoff"></a>启用/禁用功能 
+ 默认情况下，**useFmtOnly** 功能处于禁用状态。 用户可以通过指定 `useFmtOnly=true` 在连接字符串中启用此功能。 例如：`jdbc:sqlserver://<server>:<port>;databaseName=<databaseName>;user=<user>;password=<password>;useFmtOnly=true;`。
  
- 或者, 通过`SQLServerDataSource`提供此功能。
+ 或者，通过 `SQLServerDataSource` 提供该功能。
  ```java
 SQLServerDataSource ds = new SQLServerDataSource();
 ds.setServerName(<server>);
@@ -69,12 +69,12 @@ try (Connection c = ds.getConnection()) {
 }
  ```
  
- 此功能也可用于语句级别。 用户可以通过`PreparedStatement.setUseFmtOnly(boolean)`打开/关闭功能。
+ 此功能也可在语句级别提供。 用户可以通过 `PreparedStatement.setUseFmtOnly(boolean)` 启用/禁用该功能。
 > [!NOTE]  
->  驱动程序将对 "连接级别" 属性的 "语句级别" 属性设置优先级。
+>  驱动程序将对“语句级别”属性和“连接级别”属性设置优先级。
 
 ## <a name="using-the-feature"></a>使用功能
-  启用后, 驱动程序将在内部开始使用新功能, 而`sp_describe_undeclared_parameters`不是查询参数元数据。 最终用户不需要执行任何其他操作。
+  启用新功能后，驱动程序将在内部开始使用该功能，而不是在查询参数元数据时使用 `sp_describe_undeclared_parameters`。 最终用户不需要执行任何其他操作。
 ```java
 final String sql = "INSERT INTO #Bar VALUES (?)";
 try (Connection c = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
@@ -90,12 +90,12 @@ try (Connection c = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
 }
 ```
 > [!NOTE]  
->  此功能仅支持`SELECT/INSERT/UPDATE/DELETE`查询。 查询应以4个支持的关键字之一开始, 或使用一个受支持的查询的[公用表表达式](https://docs.microsoft.com/sql/t-sql/queries/with-common-table-expression-transact-sql?view=sql-server-2017)。 不支持公用表表达式中的参数。
+>  该功能仅支持 `SELECT/INSERT/UPDATE/DELETE` 查询。 查询应以 4 个支持的关键字之一或[公用表表达式](https://docs.microsoft.com/sql/t-sql/queries/with-common-table-expression-transact-sql?view=sql-server-2017)开头，后跟一个支持的查询。 不支持使用公用表表达式中的参数。
 
 ## <a name="known-issues"></a>已知问题
-  此功能当前存在一些问题，是由 SQL 分析逻辑中的缺陷导致的。 此功能的未来更新可能会解决这些问题, 并在下面提供解决方法建议。
+  此功能当前存在一些问题，是由 SQL 分析逻辑中的缺陷导致的。 这些问题可能会在以后对该功能的更新中得到解决，现已在下面列出，并提供了解决方法建议。
   
-A. 使用 "前向声明" 别名
+A. 使用“前向声明”别名
 ```sql
 CREATE TABLE Foo(c1 int)
 
@@ -107,7 +107,7 @@ DELETE fooAlias FROM Foo AS fooAlias WHERE c1 > ?;
 DELETE Foo FROM Foo fooAlias WHERE c1 > ?;
 ```
 
-B. 当表具有共享列名时, 列名称不明确
+B. 当表具有共享的多个列名时，列名不明确
 ```sql
 CREATE TABLE Foo(c1 int, c2 int, c3 int)
 CREATE TABLE Bar(c1 int, c2 int, c3 int)
@@ -118,7 +118,7 @@ SELECT c1,c2 FROM Foo WHERE c3 IN (SELECT c3 FROM Bar WHERE c1 > ? and c2 < ? an
 SELECT c1,c2 FROM Foo WHERE c3 IN (SELECT c3 FROM Bar b WHERE b.c1 = ? and b.c2 = ? and b.c3 = ?);
 ```
 
-C. 从包含参数的子查询中选择
+C. 从包含参数的子查询中 SELECT
 ```sql
 
 CREATE TABLE Foo(c1 int)
@@ -128,7 +128,7 @@ SELECT * FROM (SELECT * FROM Foo WHERE c1 = ?) WHERE c1 = ?; --Incorrect syntax 
 --Workaround: N/A
 ```
 
-D. SET 子句中的子查询
+D. SET 子句中存在子查询
 ```sql
 CREATE TABLE Foo(c1 int)
 
