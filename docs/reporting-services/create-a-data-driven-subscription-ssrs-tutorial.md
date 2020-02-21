@@ -13,10 +13,10 @@ ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: baff01bd8bc02af409a37c5cc1ce193e69663387
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63194834"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>创建数据驱动订阅（SSRS 教程）
@@ -39,7 +39,7 @@ ms.locfileid: "63194834"
 
 下图展示了教程的基本工作流：
 
-| 步骤    | 描述 |
+| 步骤    | 说明 |
 | --------|------------ |
 | (1)     | 订阅配置说明了源报表、计划和映射到订阅服务器数据库的字段。 |
 | (2)     | OrderInfo 表包含 4 个用于筛选的订单编号，每个文件 1 个。 该表还包含所生成的报告的文件格式。 |

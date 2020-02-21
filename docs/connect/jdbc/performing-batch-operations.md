@@ -1,5 +1,5 @@
 ---
-title: 执行批处理操作 |Microsoft Docs
+title: 执行批量操作 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 1a576d95-7da6-4b7b-8b32-59e5b4d354c4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a77816598e7c8e3f0589f71cb5c02e40e0e17317
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027917"
 ---
 # <a name="performing-batch-operations"></a>执行批量操作
@@ -24,7 +24,7 @@ ms.locfileid: "69027917"
   
  [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)、[SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 和 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类都可用于提交批量更新。 [addBatch](../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md) 方法可用于添加命令。 [clearBatch](../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md) 方法可用于清除命令列表。 [executeBatch](../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md) 方法可用于提交要处理的所有命令。 只有返回简单更新计数的数据定义语言 (Data Definition Language, DDL) 和数据操作语言 (Data Manipulation Language, DML) 语句可作为批处理的一部分运行。  
   
- executeBatch 方法返回一个由 int 值组成的数组，这些值对应于每个命令的更新计数  。 如果其中一条命令失败, 则会引发 BatchUpdateException, 应使用 BatchUpdateException 类的 getUpdateCounts 方法检索更新计数数组。 如果一条命令失败，则驱动程序会继续处理剩余的命令。 但是，如果一条命令有语法错误，批处理中的语句就会失败。  
+ executeBatch 方法返回一个由 int 值组成的数组，这些值对应于每个命令的更新计数  。 如果其中一条命令失败，则会引发 BatchUpdateException，应使用 BatchUpdateException 类的 getUpdateCounts 方法检索更新计数数组。 如果一条命令失败，则驱动程序会继续处理剩余的命令。 但是，如果一条命令有语法错误，批处理中的语句就会失败。  
   
 > [!NOTE]  
 >  如果不是必须使用更新计数，则可以先向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发送一条 SET NOCOUNT ON 语句。 这将减少网络流量并同时提高应用程序的性能。  

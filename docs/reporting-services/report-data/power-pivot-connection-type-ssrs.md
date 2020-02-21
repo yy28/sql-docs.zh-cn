@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ed100221dd827b84dba935db730d02e8268aac41
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
-ms.translationtype: MTE75
+ms.openlocfilehash: 8d6c9273abda883b175a46d9695d4d231cc5bc73
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73638006"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190754"
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Power Pivot 连接类型 (SSRS)
   可以使用 SQL Server Analysis Services 数据处理扩展插件从在 SharePoint [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库中发布的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿检索数据。  
@@ -32,7 +32,7 @@ ms.locfileid: "73638006"
  连接字符串是指向 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库或其他库中在 SharePoint 上发布的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿的 URL，例如，`https://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`。  
   
 ## <a name="credentials"></a>凭据  
- 指定访问 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿和 SharePoint 站点所需的凭据，例如 Windows 身份验证（集成安全性）。 有关详细信息，请参阅[数据连接、数据源和连接字符串&#40;报表生成器和 SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)或[为报表数据源指定凭据和连接信息](specify-credential-and-connection-information-for-report-data-sources.md)。  
+ 指定访问 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿和 SharePoint 站点所需的凭据，例如 Windows 身份验证（集成安全性）。 有关详细信息，请参阅[创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 或[指定报表数据源的凭据和连接信息](specify-credential-and-connection-information-for-report-data-sources.md)。  
   
 ## <a name="queries"></a>查询  
  在连接到 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据源之后，使用 MDX 图形查询，通过从基础数据结构中浏览并进行选择来生成查询。 生成查询后，运行该查询在“结果”窗格中查看示例数据。  
@@ -42,10 +42,10 @@ ms.locfileid: "73638006"
 ## <a name="filters"></a>筛选器  
  在“筛选器”窗格中，指定要在查询结果中排除或包含的维度和成员。  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>parameters  
  在“筛选器”窗格中，针对某个筛选器选择 **“参数”** 选项，以便自动使用与所选筛选器对应的可用值创建报表参数。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果从 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿打开报表生成器，则不会在报表中重新创建 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿中的数据透视表、数据透视图、切片器以及其他布局和分析功能。 而是生成一个空报表，其中包含一个预配置的数据源，该数据源指向 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿中的数据。 基于 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿设计报表可能很费时费力，具体取决于要在报表中重新创建的切片器、筛选器以及表或图表的数量。 一个更好的方法是独立于 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 设计构思你要包含在报表中的数据的显示格式。  
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿中的数据经过高度压缩；而从 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿中为报表检索的数据未经压缩。 使用查询设计器可指定筛选器和参数，以便将数据限制为仅是报表中所需的数据。  

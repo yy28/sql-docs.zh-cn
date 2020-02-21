@@ -1,5 +1,5 @@
 ---
-title: getPrecision 方法 (SQLServerParameterMetaData) |Microsoft Docs
+title: getPrecision 方法 (SQLServerParameterMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 8bd79484-bab6-423b-978f-d7ec7132ebeb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b0c6b7d8c69e1cc6bc4a9e8d239c3a47c24573d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980779"
 ---
 # <a name="getprecision-method-sqlserverparametermetadata"></a>getPrecision 方法 (SQLServerParameterMetaData)
@@ -34,7 +34,7 @@ ms.locfileid: "67980779"
 public int getPrecision(int param)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *param*  
   
  指示参数索引的 int  。  
@@ -42,11 +42,11 @@ public int getPrecision(int param)
 ## <a name="return-value"></a>返回值  
  指示指定参数精度的 int  。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 getPrecision 方法由 getPrecision 方法在 Java.sql.parametermetadata 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 getPrecision 方法是由 java.sql.ParameterMetaData 接口中的 getPrecision 方法指定的。  
   
  对于数字类型，此方法获取小数位数。 对于字符类型，此方法获取用字符表示的最大长度。 对于二进制类型，此方法获取用字节表示的最大长度。 如果位数未知，此方法将返回“0”。  
   

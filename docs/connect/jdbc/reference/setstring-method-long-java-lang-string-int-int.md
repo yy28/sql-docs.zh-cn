@@ -16,10 +16,10 @@ ms.assetid: 9fb59b09-e825-46a6-ba5d-85d4a8dc143a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5741f8ba74009327befc8f940e1d3b37df6ef1ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972697"
 ---
 # <a name="setstring-method-long-javalangstring-int-int"></a>setString 方法 (long, java.lang.String, int, int)
@@ -37,7 +37,7 @@ public int setString(long pos,
                      int len)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  pos   
   
  开始写入 CLOB 的位置。  
@@ -46,7 +46,7 @@ public int setString(long pos,
   
  要写入 CLOB 的字符串。  
   
- offset   
+ *offset*  
   
  字符串中的偏移量，从这个位置开始读取字符。  
   
@@ -57,16 +57,16 @@ public int setString(long pos,
 ## <a name="return-value"></a>返回值  
  写入的字符数。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 setString 方法是由 java.sql.Clob 接口中的 setString 方法指定的。  
   
  从指定位置开始覆盖字符数据，并可以覆盖 CLOB 的初始长度。 指定“位置+1”值将追加到字符串末尾。 指定“位置+2”或更大值（或零或更小值）会引发位置错误。  
   
 ## <a name="see-also"></a>另请参阅  
- [setString 方法&#40;SQLServerClob&#41;](../../../connect/jdbc/reference/setstring-method-sqlserverclob.md)   
+ [setString 方法 &#40;SQLServerClob&#41;](../../../connect/jdbc/reference/setstring-method-sqlserverclob.md)   
  [SQLServerClob 方法](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [SQLServerClob 成员](../../../connect/jdbc/reference/sqlserverclob-members.md)   
  [SQLServerClob 类](../../../connect/jdbc/reference/sqlserverclob-class.md)  

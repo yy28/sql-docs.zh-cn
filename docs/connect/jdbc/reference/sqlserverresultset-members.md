@@ -1,5 +1,5 @@
 ---
-title: SQLServerResultSet 成员 |Microsoft Docs
+title: SQLServerResultSet 成员 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 2a438d5d-2d6a-46a0-a2ae-f35fbae4a472
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fed1b515d6e003f00cebbaf3f3a9306572e2ad2b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970560"
 ---
 # <a name="sqlserverresultset-members"></a>SQLServerResultSet 成员
@@ -27,7 +27,7 @@ ms.locfileid: "67970560"
   
 ## <a name="fields"></a>字段  
   
-|“属性”|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |[CONCUR_SS_OPTIMISTIC_CC](../../../connect/jdbc/reference/concur-ss-optimistic-cc-field-sqlserverresultset.md)|用于指定无行锁的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 读/写乐观并发类型。|  
 |[CONCUR_SS_OPTIMISTIC_CCVAL](../../../connect/jdbc/reference/concur-ss-optimistic-ccval-field-sqlserverresultset.md)|用于指定无行锁的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 读/写乐观并发类型。|  
@@ -40,13 +40,13 @@ ms.locfileid: "67970560"
   
 ## <a name="inherited-fields"></a>继承的字段  
   
-|类继承自：|描述|  
+|类继承自：|说明|  
 |---------------------------|-----------------|  
 |java.sql.ResultSet|CLOSE_CURSORS_AT_COMMIT、CONCUR_READ_ONLY、CONCUR_UPDATABLE、FETCH_FORWARD、FETCH_REVERSE、FETCH_UNKNOWN、HOLD_CURSORS_OVER_COMMIT、TYPE_FORWARD_ONLY、TYPE_SCROLL_INSENSITIVE 和 TYPE_SCROLL_SENSITIVE|  
   
 ## <a name="methods"></a>方法  
   
-|“属性”|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |[absolute](../../../connect/jdbc/reference/absolute-method-sqlserverresultset.md)|将游标移到此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象中指定的行。|  
 |[afterLast](../../../connect/jdbc/reference/afterlast-method-sqlserverresultset.md)|将光标移到此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的最后一行之后。|  
@@ -116,7 +116,7 @@ ms.locfileid: "67970560"
 |[setFetchSize](../../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md)|为 JDBC 驱动程序提供提示，以指明在此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象需要更多行时应从数据库中提取的行数。|  
 |[updateArray](../../../connect/jdbc/reference/updatearray-method-sqlserverresultset.md)|使用 Array 对象更新指定列。|  
 |[updateAsciiStream](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md)|使用 ASCII 流值更新指定列。|  
-|[updateBigDecimal](../../../connect/jdbc/reference/updatebigdecimal-method-sqlserverresultset.md)|使用 Java.math.bigdecimal 对象更新指定的列。|  
+|[updateBigDecimal](../../../connect/jdbc/reference/updatebigdecimal-method-sqlserverresultset.md)|使用 BigDecimal 对象更新指定列。|  
 |[updateBinaryStream](../../../connect/jdbc/reference/updatebinarystream-method-sqlserverresultset.md)|使用二进制流值更新指定列。|  
 |[updateBlob](../../../connect/jdbc/reference/updateblob-method-sqlserverresultset.md)|使用 java.sql.Blob 值更新指定列。|  
 |[updateBoolean](../../../connect/jdbc/reference/updateboolean-method-sqlserverresultset.md)|使用布尔值更新指定列  。|  
@@ -125,7 +125,7 @@ ms.locfileid: "67970560"
 |[updateCharacterStream](../../../connect/jdbc/reference/updatecharacterstream-method-sqlserverresultset.md)|使用字符流值更新指定列。|  
 |[updateClob](../../../connect/jdbc/reference/updateclob-method-sqlserverresultset.md)|使用 java.sql.Clob 值更新指定列。|  
 |[updateDate](../../../connect/jdbc/reference/updatedate-method-sqlserverresultset.md)|使用日期值更新指定列。|  
-|[updateDateTimeOffset](../../../connect/jdbc/reference/updatedatetimeoffset-sqlserverresultset.md)|更新[DateTimeOffset 类](../../../connect/jdbc/reference/datetimeoffset-class.md)列。|  
+|[updateDateTimeOffset](../../../connect/jdbc/reference/updatedatetimeoffset-sqlserverresultset.md)|更新 [DateTimeOffset 类](../../../connect/jdbc/reference/datetimeoffset-class.md)列。|  
 |[updateDouble](../../../connect/jdbc/reference/updatedouble-method-sqlserverresultset.md)|使用 double 值更新指定列  。|  
 |[updateFloat](../../../connect/jdbc/reference/updatefloat-method-sqlserverresultset.md)|使用 float 值更新指定列  。|  
 |[updateInt](../../../connect/jdbc/reference/updateint-method-sqlserverresultset.md)|使用 int 值更新指定列  。|  

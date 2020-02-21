@@ -1,5 +1,5 @@
 ---
-title: supportsSubqueriesInQuantifieds 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
+title: supportsSubqueriesInQuantifieds 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 6749e14c-0f8a-4f1f-8583-dd5cc79b24fe
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c57ff4c4f293112cb84706b559f8c1ec2a18cf69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67968727"
 ---
 # <a name="supportssubqueriesinquantifieds-method-sqlserverdatabasemetadata"></a>supportsSubqueriesInQuantifieds 方法 (SQLServerDatabaseMetaData)
@@ -35,13 +35,13 @@ public boolean supportsSubqueriesInQuantifieds()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 如果支持,**则为 true** 。 否则为 **false**。  
+ 如果支持，则值为 true  。 否则为 **false**。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 supportsSubqueriesInQuantifieds 方法由 supportsSubqueriesInQuantifieds 方法在 Java.sql.databasemetadata 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 supportsSubqueriesInQuantifieds 是由 java.sql.DatabaseMetaData 接口中的 supportsSubqueriesInQuantifieds 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

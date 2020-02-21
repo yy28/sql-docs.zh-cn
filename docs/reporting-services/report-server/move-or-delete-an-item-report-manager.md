@@ -12,10 +12,10 @@ ms.assetid: 980a66c7-a18b-4af7-8954-45726fa517d6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a1be40ed580de1163c0e85e37e7b8ffc1bccc342
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581091"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>移动或删除项（报表管理器）
@@ -28,14 +28,14 @@ ms.locfileid: "65581091"
   
 |图标|可移动项|  
 |----------|-------------------|  
-|![报表图标](../../reporting-services/report-server/media/hlp-16doc.gif "报表图标")|报告|  
+|![Report icon](../../reporting-services/report-server/media/hlp-16doc.gif "报表图标")|报表|  
 |![链接报表图标](../../reporting-services/report-server/media/hlp-16linked.gif "链接报表图标")|链接报表|  
-|![文件夹图标](../../reporting-services/report-server/media/hlp-16folder.gif "文件夹图标")|文件夹|  
+|![文件夹图标](../../reporting-services/report-server/media/hlp-16folder.gif "文件夹图标")|Folder|  
 |![通用资源图标](../../reporting-services/report-server/media/hlp-16file.gif "通用资源图标")|一般资源|  
-|![共享数据源图标](../../reporting-services/report-data/media/hlp-16datasource.png "共享数据源图标")|共享数据源|  
+|![Shared data source icon](../../reporting-services/report-data/media/hlp-16datasource.png "共享数据源图标")|共享数据源|  
 ||共享数据集|  
   
- 并非所有使用的项都可以移动。 不能移动与报表相关联的项，例如订阅或报表历史记录。 这些项随其关联报表一起移动。 同样，也不能移动文件夹层次结构之外的项（如共享计划）。 不具备相应权限时不能移动项。 如果您对相关项的角色分配选择了以下任务，则说明已被授予移动相应项的权限：“管理报表”、“管理模型”、“管理文件夹”和“管理数据源”。  
+ 并非所有使用的项都可以移动。 不能移动与报表相关联的项，例如订阅或报表历史记录。 这些项随其关联报表一起移动。 同样，也不能移动文件夹层次结构之外的项（如共享计划）。 不具备相应权限时不能移动项。 移动项的权限在你为相关项在角色分配中选择了以下任务时传递：“管理报表”、“管理模型”、“管理文件夹”和“管理数据源”。  
   
 #### <a name="to-move-an-item-from-within-the-contents-page"></a>从“内容”页中移动项  
   

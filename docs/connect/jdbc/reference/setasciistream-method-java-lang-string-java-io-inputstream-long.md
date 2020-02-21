@@ -1,5 +1,5 @@
 ---
-title: setAsciiStream 方法到输入流字节-长时间) |Microsoft Docs
+title: 设置输入流字节数的 setAsciiStream 方法 - long | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 6bc486cd-e432-4057-8789-9957ba23dd30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1c4e5244ba0798fdd02f30faafa3459aa801e8dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975474"
 ---
 # <a name="setasciistream-method-javalangstring-javaioinputstream-long"></a>setAsciiStream 方法 (java.lang.String, java.io.InputStream, long)
@@ -31,28 +31,28 @@ public final void setAsciiStream(java.lang.String parameterName,
                                 long length)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
- parameterName   
+#### <a name="parameters"></a>parameters  
+ parameterName  
   
- 包含参数名称的字符串  。  
+ 包含参数名称的字符串。  
   
  *x*  
   
- 一个 InputStream 对象。  
+ InputStream 对象。  
   
  *length*  
   
- 指示字节数的 long  值。  
+ 指示字节数的 long 值。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 setAsciiStream 方法由 setAsciiStream 方法在 Java.sql.preparedstatement 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 setAsciiStream 方法是由 java.sql.PreparedStatement 接口中的 setAsciiStream 方法指定的。  
   
- 如果流长度与 length 参数指定的长度不同，则 JDBC 驱动程序将在更新或插入行时引发异常  。  
+ 如果流长度与 length 参数指定的长度不同，则 JDBC 驱动程序将在更新或插入行时引发异常。  
   
- 如果流长度未知，则可将 length 参数设置为 -1 以指示驱动程序应接受流而不考虑其长度  。 使用 sqljdbc4.jar，当应用程序希望使用长度未知的流来更新列时，建议使用 JDBC 4.0 方法 [setAsciiStream 方法 (java.lang.String, java.io.InputStream)](../../../connect/jdbc/reference/setasciistream-method-java-lang-string-java-io-inputstream.md)。  
+ 如果流长度未知，则可将 length 参数设置为 -1 以指示驱动程序应接受流而不考虑其长度。 使用 sqljdbc4.jar，当应用程序希望使用长度未知的流来更新列时，建议使用 JDBC 4.0 方法 [setAsciiStream 方法 (java.lang.String, java.io.InputStream)](../../../connect/jdbc/reference/setasciistream-method-java-lang-string-java-io-inputstream.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [setAsciiStream &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setasciistream-sqlservercallablestatement.md)   

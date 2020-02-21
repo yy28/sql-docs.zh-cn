@@ -1,5 +1,5 @@
 ---
-title: isCurrency 方法 (SQLServerResultSetMetaData) |Microsoft Docs
+title: isCurrency 方法 (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 7fe25d90-693c-4d3b-9dd2-0f8351c5a9ed
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 33d21e8bfe8a774d8b5b21584ba9fd3f02246f4e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977682"
 ---
 # <a name="iscurrency-method-sqlserverresultsetmetadata"></a>isCurrency 方法 (SQLServerResultSetMetaData)
@@ -34,7 +34,7 @@ ms.locfileid: "67977682"
 public boolean isCurrency(int column)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *column*  
   
  指示列索引的 int  。  
@@ -42,11 +42,11 @@ public boolean isCurrency(int column)
 ## <a name="return-value"></a>返回值  
  如果列为现金值，则为“true”  。 否则为 **false**。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 isCurrency 方法由 isCurrency 方法在 Java.sql.resultsetmetadata 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 isCurrency method 方法是由 java.sql.ResultSetMetaData 接口中的 isCurrency 方法指定的。  
   
  此方法将仅对于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] money 和 smallmoney 数据类型返回“true”  。  
   

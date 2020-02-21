@@ -1,5 +1,5 @@
 ---
-title: 从服务器到客户端的转换 |Microsoft Docs
+title: 在服务器和客户端之间执行的转换 | Microsoft Docs
 description: 在服务器和客户端之间执行的转换
 ms.custom: ''
 ms.date: 06/14/2018
@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 22f3b681f9c4256087c17bd1e74011c2ba0916fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015815"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>在服务器和客户端之间执行的转换
@@ -27,30 +27,30 @@ ms.locfileid: "68015815"
   本文说明在 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]（或更高版本）与使用适用于 SQL Server 的 OLE DB 驱动程序编写的客户端应用程序之间执行的日期/时间转换。  
   
 ## <a name="conversions"></a>转换  
- 下表说明了返回到客户端的类型与绑定中的类型之间的转换。 对于输出参数, 如果已调用 ICommandWithParameters:: SetParameterInfo, 且*pwszDataSourceType*中指定的类型与服务器上的实际类型不匹配, 则服务器将执行隐式转换, 并返回类型到客户端将与通过 ICommandWithParameters:: SetParameterInfo 指定的类型匹配。 如果服务器的转换规则与本文描述的不同，这可能会导致意外转换结果出现。 例如，在必须提供默认日期时，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用 1900-1-1，而不是 1899-12-30。  
+ 下表说明了返回到客户端的类型与绑定中的类型之间的转换。 对于输出参数，如果已调用 ICommandWithParameters::SetParameterInfo，并且在 pwszDataSourceType  中指定的类型与服务器上的实际类型不匹配，该服务器将执行隐式转换，并且返回到客户端的类型将与通过 ICommandWithParameters::SetParameterInfo 指定的类型匹配。 如果服务器的转换规则与本文描述的不同，这可能会导致意外转换结果出现。 例如，在必须提供默认日期时，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用 1900-1-1，而不是 1899-12-30。  
   
-|转换后 -><br /><br /> From|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
+|转换后 -><br /><br /> 源|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
-|date|1, 7|“确定”|-|-|1|1, 3|1, 7|-|OK (VT_BSTR)|“确定”|“确定”|4|4|  
-|Time|5, 6, 7|-|9|“确定”|6|3, 6|5, 6|-|OK (VT_BSTR)|“确定”|“确定”|4|4|  
-|Smalldatetime|7|8|9, 10|10|“确定”|3|7|-|7 (VT_DATE)|“确定”|“确定”|4|4|  
-|DATETIME|5, 7|8|9, 10|10|“确定”|3|7|-|7 (VT_DATE)|“确定”|“确定”|4|4|  
-|Datetime2|5, 7|8|9, 10|10|7|3|5, 7|-|OK (VT_BSTR)|“确定”|“确定”|4|4|  
-|Datetimeoffset|5, 7, 11|8, 11|9, 10, 11|10, 11|7, 11|“确定”|5, 7, 11|-|OK (VT_BSTR)|“确定”|“确定”|4|4|  
-|Char、Varchar、<br /><br /> Nchar、Nvarchar|7, 13|12|12, 9|12|12|12|7, 13|N/A|N/A|N/A|N/A|N/A|N/A|  
-|Sql_variant<br /><br /> (datetime)|7|8|9, 10|10|“确定”|3|7|-|7(VT_DATE)|“确定”|“确定”|4|4|  
-|Sql_variant<br /><br /> (smalldatetime)|7|8|9, 10|10|“确定”|3|7|-|7(VT_DATE)|“确定”|“确定”|4|4|  
-|Sql_variant<br /><br /> (date)|1, 7|“确定”|2|2|1|1, 3|1, 7|-|OK(VT_BSTR)|“确定”|“确定”|4|4|  
-|Sql_variant<br /><br /> (time)|5, 6, 7|2|6|“确定”|6|3, 6|5, 6|-|OK(VT_BSTR)|“确定”|“确定”|4|4|  
-|Sql_variant<br /><br /> (datetime2)|5, 7|8|9, 10|10|“确定”|3|5, 7|-|OK(VT_BSTR)|“确定”|“确定”|4|4|  
-|Sql_variant<br /><br /> (datetimeoffset)|5, 7, 11|8, 11|9, 10, 11|10, 11|7, 11|“确定”|5, 7, 11|-|OK(VT_BSTR)|“确定”|“确定”|4|4|  
+|Date|1, 7|OK|-|-|1|1, 3|1, 7|-|OK (VT_BSTR)|OK|OK|4|4|  
+|时间|5, 6, 7|-|9|OK|6|3, 6|5, 6|-|OK (VT_BSTR)|OK|OK|4|4|  
+|Smalldatetime|7|8|9, 10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
+|Datetime|5, 7|8|9, 10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
+|Datetime2|5, 7|8|9, 10|10|7|3|5, 7|-|OK (VT_BSTR)|OK|OK|4|4|  
+|Datetimeoffset|5, 7, 11|8, 11|9, 10, 11|10, 11|7, 11|OK|5, 7, 11|-|OK (VT_BSTR)|OK|OK|4|4|  
+|Char、Varchar、<br /><br /> Nchar、Nvarchar|7, 13|12|12, 9|12|12|12|7, 13|空值|空值|空值|空值|空值|空值|  
+|Sql_variant<br /><br /> (datetime)|7|8|9, 10|10|OK|3|7|-|7(VT_DATE)|OK|OK|4|4|  
+|Sql_variant<br /><br /> (smalldatetime)|7|8|9, 10|10|OK|3|7|-|7(VT_DATE)|OK|OK|4|4|  
+|Sql_variant<br /><br /> (date)|1, 7|OK|2|2|1|1, 3|1, 7|-|OK(VT_BSTR)|OK|OK|4|4|  
+|Sql_variant<br /><br /> (time)|5, 6, 7|2|6|OK|6|3, 6|5, 6|-|OK(VT_BSTR)|OK|OK|4|4|  
+|Sql_variant<br /><br /> (datetime2)|5, 7|8|9, 10|10|OK|3|5, 7|-|OK(VT_BSTR)|OK|OK|4|4|  
+|Sql_variant<br /><br /> (datetimeoffset)|5, 7, 11|8, 11|9, 10, 11|10, 11|7, 11|OK|5, 7, 11|-|OK(VT_BSTR)|OK|OK|4|4|  
   
 ## <a name="key-to-symbols"></a>符号含义  
   
 |符号|含义|  
 |------------|-------------|  
-|“确定”|不需要任何转换。|  
-|-|不支持任何转换。 如果调用 IAccessor:: CreateAccessor 时验证绑定, 则会在*rgStatus*中返回 DBBINDSTATUS_UPSUPPORTEDCONVERSION。 当延迟取值函数验证时，则设置 DBSTATUS_E_BADACCESSOR。|  
+|OK|不需要任何转换。|  
+|-|不支持任何转换。 如果在调用 IAccessor::CreateAccessor 时验证绑定，则在 rgStatus  中返回 DBBINDSTATUS_UPSUPPORTEDCONVERSION。 当延迟取值函数验证时，则设置 DBSTATUS_E_BADACCESSOR。|  
 |1|时间字段设置为零。|  
 |2|设置 DBSTATUS_E_CANTCONVERTVALUE。|  
 |3|时区设置为零。|  

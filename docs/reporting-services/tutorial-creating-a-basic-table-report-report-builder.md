@@ -1,5 +1,5 @@
 ---
-title: 教程：创建基本表报表（报表生成器）| Microsoft Docs
+title: 教程：生成基本表报表（报表生成器）| Microsoft Docs
 ms.date: 06/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,19 +9,19 @@ ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5a97a0cfc446a32e02172d22391dec8e5ca13af6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63041195"
 ---
-# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>教程：创建基本表报表（报表生成器）
+# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>教程：生成基本表报表（报表生成器）
 本教程教您如何基于示例销售数据创建基本表格报表。 下图显示了将创建的报表。  
   
 ![SSRS_Tutorial_Basic_Table_Report](../reporting-services/media/ssrs-tutorial-basic-table-report.png)  
   
 
-完成本教程的预计学时：20 分钟。  
+学完本教程的估计时间：20 分钟。  
   
 ## <a name="requirements"></a>要求  
 有关要求的详细信息，请参阅[教程先决条件（报表生成器）](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
@@ -74,7 +74,7 @@ ms.locfileid: "63041195"
   
     这将返回“选择数据源的连接”页，且在此页中选择了新数据源  。  
   
-9. 单击“下一步”  。  
+9. 单击“下一步”。   
   
 ## <a name="Query"></a>1b. 在表向导中创建查询  
 在报表中，可以使用具有预定义查询的共享数据集，也可以创建仅在这一报表中使用的嵌入数据集。 在本教程中，将创建一个嵌入数据集。  
@@ -130,7 +130,7 @@ ms.locfileid: "63041195"
   
     在结果集中，列标题基于查询中的名称。 在数据集中，列标题会成为字段名称并保存在报表中。 完成向导后，可以使用“报表数据”窗格查看数据集字段集合。  
   
-4.  单击“下一步”  。  
+4.  单击“下一步”。   
   
 ## <a name="Groups"></a>1c. 在表向导中将数据组织到组中  
 在选择要进行分组的字段时，可以设计一个表格，其中的行和列显示了详细数据和聚合数据。  
@@ -157,7 +157,7 @@ ms.locfileid: "63041195"
   
     步骤 4 和 5 首先按日期组织字段的值，然后按照该日期的产品子类别组织字段的值。  
   
-6.  单击“下一步”  。  
+6.  单击“下一步”。   
   
 ## <a name="Subtotals"></a>1d. 在表向导中添加小计行和合计行  
 创建组后，可以添加用于显示字段的聚合值的行并设置其格式。 可以选择是显示所有数据还是允许用户以交互方式展开和折叠已分组数据。  
@@ -184,7 +184,7 @@ ms.locfileid: "63041195"
   
 4.  单击“下一步”预览表，然后单击“完成”   。  
   
-表将添加到设计图面中。 该表有 5 列、5 行。 “行组”窗格显示三个行组：SalesDate、Subcategory 和 Details。 详细信息数据是由数据集查询检索的所有数据。  
+表将添加到设计图面中。 该表有 5 列、5 行。 “行组”窗格显示三个行组：“SalesDate”、“Subcategory”和“Details”。 详细信息数据是由数据集查询检索的所有数据。  
   
 ## <a name="FormatCurrency"></a>2.将数据格式设置为货币  
 默认情况下，Sales 字段的汇总数据将显示总数。 请设置其格式，以使其显示货币形式的数字。   
@@ -297,7 +297,7 @@ SalesDate 值将显示月份名而非月份数字。
   
 4.  在“名称”中，将“无标题”替换为“Product_Sales”    。  
   
-5.  单击 **“保存”** 。  
+5.  单击“ **保存**”。  
   
 报表即已保存至报表服务器。 您连接的报表服务器的名称将显示在窗口底部的状态栏中。  
   
@@ -309,7 +309,7 @@ SalesDate 值将显示月份名而非月份数字。
   
 3.  在“名称”中，将“无标题”替换为“Product Sales”    。  
   
-4.  单击 **“保存”** 。  
+4.  单击“ **保存**”。  
   
 ## <a name="Export"></a>7.导出报表  
 可以将报表导出为不同的格式，如 Microsoft Excel 和逗号分隔值 (CSV) 文件。 有关详细信息，请参阅 [导出报表（报表生成器和 SSRS）](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)中用于控制分页的规则。  
@@ -342,7 +342,7 @@ SalesDate 值将显示月份名而非月份数字。
   
 5.  确认文件类型为 Excel (\*.xlsx)  。  
   
-6.  单击 **“保存”** 。  
+6.  单击“ **保存**”。  
   
 ### <a name="to-view-the-report-in-excel"></a>在 Excel 中查看报表  
   
@@ -350,7 +350,7 @@ SalesDate 值将显示月份名而非月份数字。
   
 2.  验证工作簿选项卡的名称是否为 **Product Sales Excel**。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>后续步骤  
 到此为止，我们结束了有关如何创建基本表格报表的演练。 有关表的详细信息，请参阅[表、矩阵和列表（报表生成器和 SSRS）](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另请参阅  

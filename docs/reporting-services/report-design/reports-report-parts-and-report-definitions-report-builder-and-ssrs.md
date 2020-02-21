@@ -12,10 +12,10 @@ ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 640cd9bfd39b272e7829cc25b51ee50a82176a65
-ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67037872"
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>报表、报表部件和报表定义（报表生成器和 SSRS）
@@ -60,7 +60,7 @@ ms.locfileid: "67037872"
   
 -   订阅报表，这样报表将以您指定的输出格式传递到电子邮件收件箱或文件共享位置。  
   
- 订阅报表，这样报表将以您指定的输出格式传递到电子邮件收件箱或文件共享位置。 报表的默认呈现格式为 HTML 4.0。 除了 HTML 之外，报表还可以用多种输出格式呈现，其中包括 Excel、Word、XML、PDF、TIFF 和 CSV。 与发布的报表一样，无法编辑呈现的报表，也不能将其保存回报表服务器。 有关详细信息，请参阅 [导出报表（报表生成器和 SSRS）](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)。  
+ 订阅报表，这样报表将以您指定的输出格式传递到电子邮件收件箱或文件共享位置。 报表的默认呈现格式为 HTML 4.0。 除了 HTML 之外，报表还可以用多种输出格式呈现，其中包括 Excel、Word、XML、PDF、TIFF 和 CSV。 与发布的报表一样，无法编辑呈现的报表，也不能将其保存回报表服务器。 有关详细信息，请参阅 [导出报表（报表生成器和 SSRS）](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)中用于控制分页的规则。  
   
 ## <a name="see-also"></a>另请参阅  
  [Reporting Services 概念 (SSRS)](../reporting-services-concepts-ssrs.md) [SQL Server 中的报表生成器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   

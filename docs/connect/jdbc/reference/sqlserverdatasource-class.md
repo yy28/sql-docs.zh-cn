@@ -1,5 +1,5 @@
 ---
-title: SQLServerDataSource 类 |Microsoft Docs
+title: SQLServerDataSource 类 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 097434fd-2b74-411c-a5ed-eba04481dde5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a1de4bc16b37c6224c0dfbb5556f59b6e15d825a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971522"
 ---
 # <a name="sqlserverdatasource-class"></a>SQLServerDataSource 类
@@ -33,8 +33,8 @@ ms.locfileid: "67971522"
 public class SQLServerDataSource  
 ```  
   
-## <a name="remarks"></a>Remarks  
- 此类支持解包到 SQLServerDataSource 类、ISQLServerDataSource 接口和 DataSource 接口。 有关详细信息, 请参阅[包装器和接口](../../../connect/jdbc/wrappers-and-interfaces.md)。  
+## <a name="remarks"></a>备注  
+ 此类支持解包到 SQLServerDataSource 类、ISQLServerDataSource 接口和 DataSource 接口。 有关详细信息，请参阅[包装器和接口](../../../connect/jdbc/wrappers-and-interfaces.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDataSource 成员](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

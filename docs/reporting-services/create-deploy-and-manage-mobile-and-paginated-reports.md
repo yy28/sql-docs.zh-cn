@@ -16,10 +16,10 @@ ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 26fa81278afd686d25192fdd49bbc3f2119a5762
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571568"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>什么是 SQL Server Reporting Services (SSRS)？
@@ -30,7 +30,7 @@ ms.locfileid: "65571568"
 
 SQL Server Reporting Services (SSRS) 提供了一系列本地工具和服务，用于创建、部署和管理移动和分页报表。
 
-![SQL Server Reporting Services 汇总](../reporting-services/media/ss-reporting-services-all-together.png "SQL Server Reporting Services 汇总")
+![所有 SQL Server Reporting Services](../reporting-services/media/ss-reporting-services-all-together.png "所有 SQL Server Reporting Services")
 
 ## <a name="create-deploy-and-manage-mobile-and-paginated-reports"></a>创建、部署和管理移动和分页报表
 
@@ -63,7 +63,7 @@ Reporting Services 与“传统”分页报表相关联，非常适合用于为�
 * 已更新所有默认样式和调色板，因此默认情况下，使用新的极简主义新式样式创建报表。
 * 已更新“参数”窗格，因此可随意排列参数。
 * 可以导出到 PowerPoint 等新格式。 PowerPoint 中的 Reporting Services 可视化效果是实时且可编辑的，不仅仅是屏幕截图。
-* 可创建混合的 Power BI/Reporting Services 体验：可将报表中的视觉对象固定到 Power BI 仪表板，而不是在 Power BI 中重新创建本地 Reporting Services 报表。 然后可以在 Power BI 仪表板上同一个位置监视所有内容。
+* 可以打造混合的 Power BI/Reporting Services 体验：可以将报表中的视觉对象固定到 Power BI 仪表板，而不是在 Power BI 中重新生成本地 Reporting Services 报表。 然后可以在 Power BI 仪表板上同一个位置监视所有内容。
 
 ## <a name="mobile-reports"></a>移动报表
 
@@ -83,7 +83,7 @@ Reporting Services 与“传统”分页报表相关联，非常适合用于为�
 
 对于本机模式 Reporting Services 的最终用户，前门是可在大多数浏览器中查看的新式 Web 门户。 可以在新门户中访问所有 Reporting Services 移动报表、分页报表及 KPI。 KPI 可结合浏览器查看关键业务指标，而无需打开报表。
 
-新的 Web 门户是完全重写的报表管理器。 现在，它是单页、基于标准的 HTML5 应用，新式浏览器针已针对此应用进行了优化，这些浏览器包括：Microsoft Edge、Internet Explorer 10 和 11、Chrome、Firefox、Safari 以及所有主流浏览器。
+新的 Web 门户是完全重写的报表管理器。 它现在是基于标准的单页 HTML5 应用程序，更适合在以下新式浏览器中使用：Microsoft Edge、Internet Explorer 10 和11、Chrome、Firefox、Safari 以及所有主流浏览器。
 
 Web 门户内容按类型进行整理：
 
@@ -110,7 +110,7 @@ Web 门户内容按类型进行整理：
 
 ::: moniker-end
 
-## <a name="includessrsnoversionincludesssrsnoversion-mdmd-programming-features"></a>[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 编程功能
+## <a name="ssrsnoversion-programming-features"></a>[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 编程功能
 
 充分利用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 编程功能，以便扩展和自定义报告功能。 使用 SSRS API 在自定义应用程序中集成或扩展数据和报表处理。
 

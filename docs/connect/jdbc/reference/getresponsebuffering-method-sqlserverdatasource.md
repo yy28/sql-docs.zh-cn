@@ -1,5 +1,5 @@
 ---
-title: getResponseBuffering 方法 (SQLServerDataSource) |Microsoft Docs
+title: getResponseBuffering 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 19585a93-88a4-415e-a20e-12ba58cddeaa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4b3e53579b8c95cce0585e9614152053f39cafa8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980432"
 ---
 # <a name="getresponsebuffering-method-sqlserverdatasource"></a>getResponseBuffering 方法 (SQLServerDataSource)
@@ -35,14 +35,14 @@ public java.lang.String getResponseBuffering()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 包含小写 full  或 adaptive  的 String  。  
+ 包含小写 full 或 adaptive 的 String。  
   
-## <a name="remarks"></a>Remarks  
- 指定在运行时从服务器读取全部结果的 full  值。  
+## <a name="remarks"></a>备注  
+ 指定在运行时从服务器读取全部结果的 full 值。  
   
- adaptive  值指定在必要时缓冲尽可能少的数据。 adaptive  值为默认缓冲模式。  
+ adaptive 值指定在必要时缓冲尽可能少的数据。 adaptive 值为默认缓冲模式。  
   
- 有关使用响应缓冲模式的详细信息, 请参阅[使用自适应缓冲](../../../connect/jdbc/using-adaptive-buffering.md)。  
+ 有关使用响应缓冲模式的详细信息，请参阅[使用自适应缓冲](../../../connect/jdbc/using-adaptive-buffering.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [setResponseBuffering 方法 &#40;SQLServerDataSource&#41;](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverdatasource.md)   

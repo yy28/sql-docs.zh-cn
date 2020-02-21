@@ -1,5 +1,5 @@
 ---
-title: 行集和 SQL Server 游标 |Microsoft Docs
+title: 行集和 SQL Server 游标 | Microsoft Docs
 description: 行集和 SQL Server 游标
 ms.custom: ''
 ms.date: 06/14/2018
@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 9ba062c9718203c52659dd0c35fa7bcb76b1a40c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994185"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>行集和 SQL Server 游标
@@ -62,9 +62,9 @@ ms.locfileid: "67994185"
   
  通过设置某些行集属性，使用者可以请求行集中的其他游标行为。 如果使用者未设置其中任一行集属性，或将其全部设置为其默认值，则适用于 SQL Server 的 OLE DB 驱动程序使用默认的结果集实现相应行集。 如果其中任一属性设置为非默认值，则适用于 SQL Server 的 OLE DB 驱动程序使用服务器游标实现相应行集。  
   
- 以下行集属性指示 SQL Server 的 OLE DB 驱动程序使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]游标。 某些属性可以安全地与其他属性组合。 例如，展示 DBPROP_IRowsetScroll 和 DBPROP_IRowsetChange 属性的行集将是展示立即更新行为的书签行集。 其他属性相互排斥。 例如，展示 DBPROP_OTHERINSERT 的行集不能包含书签。  
+ 以下行集属性指引 OLE DB Driver for SQL Server 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 游标。 某些属性可以安全地与其他属性组合。 例如，展示 DBPROP_IRowsetScroll 和 DBPROP_IRowsetChange 属性的行集将是展示立即更新行为的书签行集。 其他属性相互排斥。 例如，展示 DBPROP_OTHERINSERT 的行集不能包含书签。  
   
-|属性 ID|ReplTest1|行集行为|  
+|属性 ID|值|行集行为|  
 |-----------------|-----------|---------------------|  
 |DBPROP_SERVERCURSOR|VARIANT_TRUE|无法通过行集更新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据。 行集是有顺序的，只支持向前滚动和提取。 支持相对行定位。 命令文本可以包含 ORDER BY 子句。|  
 |DBPROP_CANSCROLLBACKWARDS 或 DBPROP_CANFETCHBACKWARDS|VARIANT_TRUE|无法通过行集更新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据。 行集支持双向滚动和提取。 支持相对行定位。 命令文本可以包含 ORDER BY 子句。|  
@@ -93,7 +93,7 @@ ms.locfileid: "67994185"
   
  若要使用某一类型的游标模型，请找到对应于该游标模型的列，并查找在此列中值为“T”的所有行集属性。 将这些行集属性设置为 VARIANT_TRUE 即可使用特定游标模型。 可以将值为“-”的行集属性设置为 VARIANT_TRUE 或 VARIANT_FALSE。  
   
-|行集属性/游标模型|，则“默认”<br /><br /> result<br /><br /> 集<br /><br /> (RO)|Fast<br /><br /> 只<br /><br /> 进<br /><br /> (RO)|静态<br /><br /> (RO)|Keyset<br /><br /> 驱动<br /><br /> (RO)|  
+|行集属性/游标模型|默认<br /><br /> result<br /><br /> set<br /><br /> (RO)|Fast<br /><br /> 只<br /><br /> 进<br /><br /> (RO)|静态<br /><br /> (RO)|Keyset<br /><br /> 驱动<br /><br /> (RO)|  
 |--------------------------------------|-------------------------------------------|--------------------------------------------|-----------------------|----------------------------------|  
 |DBPROP_SERVERCURSOR|F|T|T|T|  
 |DBPROP_DEFERRED|F|F|-|-|  

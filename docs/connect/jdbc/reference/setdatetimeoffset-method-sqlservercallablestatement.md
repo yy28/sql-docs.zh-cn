@@ -1,5 +1,5 @@
 ---
-title: setDateTimeOffset 方法 (SQLServerCallableStatement) |Microsoft Docs
+title: setDateTimeOffset 方法 (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 9383e14d-c83e-43c5-980c-50a3e0bedc31
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 264de7ac150aca7494a380fbbd4f5b490607c5c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974641"
 ---
 # <a name="setdatetimeoffset-method-sqlservercallablestatement"></a>setDateTimeOffset 方法 (SQLServerCallableStatement)
@@ -22,7 +22,7 @@ ms.locfileid: "67974641"
 
   [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 中新增了此方法。  
   
- 将指定的列的值设置为[DateTimeOffset 类](../../../connect/jdbc/reference/datetimeoffset-class.md)值。  
+ 将指定列的值设置为 [DateTimeOffset 类](../../../connect/jdbc/reference/datetimeoffset-class.md)值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -31,8 +31,8 @@ ms.locfileid: "67974641"
 public void setDateTimeOffset(String sCol, microsoft.sql.DateTimeOffset t)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
- sCol   
+#### <a name="parameters"></a>parameters  
+ sCol  
   
  列的名称。  
   
@@ -40,11 +40,11 @@ public void setDateTimeOffset(String sCol, microsoft.sql.DateTimeOffset t)
   
  [DateTimeOffset 类](../../../connect/jdbc/reference/datetimeoffset-class.md)对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 可以使用[SQLServerCallableStatement](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)检索[DateTimeOffset 类](../../../connect/jdbc/reference/datetimeoffset-class.md)的值。  
+## <a name="remarks"></a>备注  
+ 可以使用 [SQLServerCallableStatement.getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md) 检索 [DateTimeOffset 类](../../../connect/jdbc/reference/datetimeoffset-class.md)值。  
   
  [setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlserverpreparedstatement.md) 获取列的序号。  
   

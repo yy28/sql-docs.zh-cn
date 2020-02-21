@@ -1,6 +1,6 @@
 ---
 title: 使用 rxImport 加载数据
-description: 教程演练如何在 SQL Server 中使用 R 语言加载数据。
+description: RevoScaleR 教程 10：如何在 SQL Server 中使用 R 语言加载数据。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,21 +9,21 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ee0a1ddf8ccfdaf9c2b7b4f2ba5724451e7d71b8
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: b9b3924f2c9b315e519d5f65e68d2006a2a6edf4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727227"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947065"
 ---
 # <a name="load-data-into-memory-using-rximport-sql-server-and-revoscaler-tutorial"></a>使用 rxImport 将数据加载到内存中（SQL Server 和 RevoScaleR 教程）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本课程属于 [RevoScaleR 教程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)，该教程介绍如何在 SQL Server 中使用 [RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)。
+这是 [RevoScaleR 教程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的第 10 个教程，RevoScaleR 教程介绍如何在 SQL Server 中使用 [RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)。
+
+在本教程中，将学习如何从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 获取数据，然后使用 rxImport 函数将感兴趣的数据放入本地文件中。 这样一来，就可以在本地计算上下文中重复对数据进行分析，而无需重新查询数据库。
 
 [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) 函数可用于将数据从数据源移到会话内存中的数据帧或磁盘中的 XDF 文件。 如果未指定某个文件作为目标，数据会作为数据框放入内存中。
-
-本步骤介绍如何从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 获取数据，然后使用 **rxImport** 函数将感兴趣的数据放入本地文件中。 这样一来，就可以在本地计算上下文中重复对数据进行分析，而无需重新查询数据库。
 
 ## <a name="extract-a-subset-of-data-from-sql-server-to-local-memory"></a>从 SQL Server 将数据子集提取到本地内存
 
@@ -35,7 +35,7 @@ ms.locfileid: "73727227"
     rxSetComputeContext("local")
     ```
 
-2. 如果 sqlQuery  参数中存在效的 SQL 语句，则创建新的 SQL Server 数据源对象。 此示例获取具有最高风险评分的观测值的子集。 这样一来，只有真正需要的数据才会放入本地内存。
+2. 如果 sqlQuery 参数中存在效的 SQL 语句，则创建新的 SQL Server 数据源对象。 此示例获取具有最高风险评分的观测值的子集。 这样一来，只有真正需要的数据才会放入本地内存。
 
     ```R
     sqlServerProbDS \<- RxSqlServerData(
@@ -74,7 +74,7 @@ ccFraudLogitScore   state gender cardholder balance numTrans numIntlTrans credit
 
 ## <a name="more-about-rximport"></a>详细了解 rxImport
 
-不仅可以使用 rxImport  来移动数据，还可在读取它的过程中转换数据。 例如，可以为固定宽度的列指定字符数，提供变量的说明，设置因子列的级别，甚至还能创建可在导入后使用的新级别。
+不仅可以使用 rxImport 来移动数据，还可在读取它的过程中转换数据。 例如，可以为固定宽度的列指定字符数，提供变量的说明，设置因子列的级别，甚至还能创建可在导入后使用的新级别。
 
 **rxImport** 函数在导入过程中将变量名称分配到列，但可以使用 *colInfo* 参数指示新变量名称，或使用 *colClasses* 参数更改数据类型。
 

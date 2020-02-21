@@ -13,10 +13,10 @@ ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b4bf1f99d6ebadaa0b5740d3563386802bbc3e69
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578063"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Reporting Services 中的 SharePoint 库传递
@@ -68,7 +68,7 @@ ms.locfileid: "65578063"
  文件名和扩展名  
  指定要在目标库中为报表显示的文件名和扩展名。 如果不指定文件扩展名，则报表服务器会根据报表输出格式创建一个扩展名。 此值是必需的。 文件名中不得包含下列字符：: \ / * ? " < > | # { } %  
   
- Title  
+ 标题  
  为目标库中的报表指定可选的“标题”属性  。 该属性是库中存储的所有项的标准属性。 用户可以指定在 SharePoint 站点上查看库内容时是显示还是隐藏该属性。  
   
  路径  

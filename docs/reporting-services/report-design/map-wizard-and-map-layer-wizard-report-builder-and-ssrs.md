@@ -13,10 +13,10 @@ ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7acbf53f3a77252d00d3ad5de65ffb221afe3b7a
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66499884"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>地图向导和地图层向导（报表生成器和 SSRS）
@@ -26,7 +26,7 @@ ms.locfileid: "66499884"
   
 -   **空间数据源。** 提供空间数据的源的位置或连接，例如，包含空间数据的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例和数据库的名称，或是 Environmental Systems Research Institute, Inc.(ESRI) 形状文件的名称。  
   
--   **空间数据的第三方站点。** 来自空间数据源，是包含用于指定位置的一系列坐标的字段。  
+-   **Spatial data.** 来自空间数据源，是包含用于指定位置的一系列坐标的字段。  
   
 -   **分析数据。** 用于改变地图显示的分析数据，例如，年度商店销售额。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66499884"
   
  单击向导页标题以获得相应的帮助内容。 您看到的页面取决于您选择的地图类型、空间数据源和分析数据源。  
   
-1.  [选择空间数据的源](#SpatialDataSource)。 空间数据可来自地图库、Environmental Systems Research Institute, Inc. (ESRI) 形状文件，或来自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库中的空间数据。  
+1.  [选择空间数据的源](#SpatialDataSource)。 空间数据可以来自地图库，即环境系统研究会公司。或来自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库中的空间数据。  
   
     -   [什么是空间数据？](#SpatialData)  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66499884"
   
     -   选择地图可视化：点  
   
-4.  选择与数据源的连接选择地图可视化：点。 选择或创建一个与包含要在地图上显示的分析数据的外部数据源的数据源连接。  
+4.  选择数据源连接 选择地图可视化：点： 选择或创建一个与包含要在地图上显示的分析数据的外部数据源的数据源连接。  
   
 5.  设计查询。 生成指定分析数据的查询。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "66499884"
 > [!NOTE]  
 >  这一 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 地图功能使用的数据来自经美国人口免费获得 ([https://www.census.gov/](https://www.census.gov/))。 TIGER/Line 形状文件是从 Census MAF/TIGER 数据库中精选的地理和制图信息的摘录。 TIGER/Line 形状文件可以从美国人口普查局免费获得。 若要获取关于 TIGER/Line 形状文件的详细信息，请转到 [TIGER/Line 形状文件和 TIGER/Line 文件技术文档](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/tiger-geo-line.html)。 TIGER/Line 形状文件中的边界信息仅用于统计数据收集和制表目的；其中用于统计目的的描述和名称不构成对于司法机构、所有权或享有权利的界定，它们不是法律上关于领土的说明。 Census TIGER 和 TIGER/Line 是美国人口普查局的注册商标。  
   
- 若要扩展地图库，可以在地图库目录中添加或删除报表，并添加文件夹对地图进行组织。 有关详细信息，请参阅 [地图（报表生成器和 SSRS）](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)。  
+ 若要扩展地图库，可以在地图库目录中添加或删除报表，并添加文件夹对地图进行组织。 有关详细信息，请参阅[地图（报表生成器和 SSRS）](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)。  
   
 ###  <a name="Shapefile"></a> What is an ESRI shapefile?  
  ESRI 形状文件是一个文件集，其中的数据符合 Environmental Systems Research Institute, Inc. (ESRI) 形状文件空间数据格式。 该文件集通常包含 \<filename.shp> 文件（包含空间数据）和一个支持文件 \<filename.dbf>   。  
@@ -134,7 +134,7 @@ ms.locfileid: "66499884"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 空间查询是一种数据集查询，该查询指定来自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库的 SQLGeometry 或 SQLGeography 数据类型的数据。  
   
 > [!NOTE]  
->  在向导中定义数据源时，您将在“设计查询”页中看到不同的查询设计器，具体取决于您所连接的数据源的类型。 有关详细信息，请参阅[查询设计工具&#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md)。  
+>  在向导中定义数据源时，您将在“设计查询”页中看到不同的查询设计器，具体取决于您所连接的数据源的类型。 有关详细信息，请参阅[查询设计工具 (SSRS)](../report-data/query-design-tools-ssrs.md)。  
   
  在查询设计器中运行该查询时，结果集显示一列，其中的空间数据显示为文本。 例如，一行可能包含作为一个点的空间数据，而下一行可能包含定义一组点的空间数据。 每行都成为一个地图元素。 您可以改变每个图元素的显示，将其作为不可分的单元。  
   
@@ -181,11 +181,11 @@ ms.locfileid: "66499884"
   
 -   **空中：** 仅显示鸟瞰图。 这种模式下不显示任何文本。  
   
--   **混合：** 显示组合起来的 **“道路”** 和 **“空中”** 视图。  
+-   **混合。** 显示组合起来的 **“道路”** 和 **“空中”** 视图。  
   
  有关图块的详细信息，请参阅 [Bing 地图图块系统](https://go.microsoft.com/fwlink/?LinkId=147315)。 有关在报表中使用 Bing 地图图块的详细信息，请参阅 [其他使用条款](https://go.microsoft.com/fwlink/?LinkId=151371)。  
   
- 若要在设计视图中查看图块背景，您必须能访问 Internet。 若要通过报表服务器上的报表以预览模式查看图块背景，报表服务器必须配置为支持 Bing 地图图块。 有关详细信息，请参阅 [报表故障排除：地图报表（报表生成器和 SSRS）](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md) 和 [规划地图报表](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)。  
+ 若要在设计视图中查看图块背景，您必须能访问 Internet。 若要通过报表服务器上的报表以预览模式查看图块背景，报表服务器必须配置为支持 Bing 地图图块。 有关详细信息，请参阅[排除报表故障：地图报表（报表生成器和 SSRS）](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)和[计划地图报表](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)。  
   
  有关自定义图块层的其他方式的详细信息，请参阅[添加、更改或删除地图或地图层（报表生成器和 SSRS）](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   
@@ -248,7 +248,7 @@ ms.locfileid: "66499884"
  报表处理器应用您设置的规则，并自动确定要显示在图例中的项列表。 默认情况下，所有层的所有规则的结果都会显示在第一个图例中。 您可以在完成向导操作后对此进行调整。 有关详细信息，请参阅 [按规则和分析数据更改多边形、线条和点的显示方式（报表生成器和 SSRS）](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [报表故障排除：地图报表（报表生成器和 SSRS）](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
+ [报表故障排除：映射报表（报表生成器和 SSRS）](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [规划地图报表（报表生成器和 SSRS）](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)   
  [地图（报表生成器和 SSRS）](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
   

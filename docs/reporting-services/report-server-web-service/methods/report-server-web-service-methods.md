@@ -16,10 +16,10 @@ ms.assetid: ce5afa27-e90c-44a7-b204-098a065b3665
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4b7425b205bdc630d17e5c962519348d2b1ce7a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63284660"
 ---
 # <a name="report-server-web-service-methods"></a>报表服务器 Web 服务方法
@@ -28,7 +28,7 @@ ms.locfileid: "63284660"
 ## <a name="endpoints-and-methods"></a>端点和方法  
  下表列出了报表服务器 Web 服务的端点以及 <xref:ReportService2010.ReportingService2010> 端点提供的方法的类别。 有关其他终结点中可用方法的信息，请参阅[技术参考 (SSRS)](../../../reporting-services/technical-reference-ssrs.md)。  
   
-|主题|描述|  
+|主题|说明|  
 |-----------|-----------------|  
 |[报表服务器 Web 服务终结点](../../../reporting-services/report-server-web-service/methods/report-server-web-service-endpoints.md)|介绍如何管理和执行报表服务器 Web 服务的端点。|  
 |[报表服务器命名空间管理方法](../../../reporting-services/report-server-web-service/methods/report-server-namespace-management-methods.md)|介绍可用来管理报表服务器数据库的方法。 特别值得一提的是，您可以管理文件夹和资源，并设置项属性。|  

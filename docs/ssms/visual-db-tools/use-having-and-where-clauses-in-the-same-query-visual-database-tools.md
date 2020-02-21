@@ -1,10 +1,9 @@
 ---
-title: 在同一查询中使用 HAVING 和 WHERE 子句 | Microsoft Docs
-ms.custom: ''
+title: 在同一查询中使用 HAVING 和 WHERE 子句
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,14 @@ helpviewer_keywords:
 ms.assetid: 1e07cf56-b4b7-4c49-8ddd-c276812a7148
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 84abe2405901012565e98950320c8d5aa92fa903
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: b74f4847964be363972c4226f124c94cce032a07
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263043"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246023"
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>在同一查询中使用 HAVING 和 WHERE 子句 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +57,7 @@ HAVING AVG(price) > 10
   
 ### <a name="to-specify-a-where-condition-in-an-aggregate-query"></a>在聚合查询中指定 WHERE 条件  
   
-1.  为查询指定组。 有关详细信息，请参阅 [对查询结果中的行进行分组 (Visual Database Tools)](../../ssms/visual-db-tools/group-rows-in-query-results-visual-database-tools.md)。  
+1.  为查询指定组。 有关详细信息，请参阅[对查询结果中的行进行分组](../../ssms/visual-db-tools/group-rows-in-query-results-visual-database-tools.md)。  
   
 2.  如果 WHERE 条件要基于的列不在“条件”窗格中，请添加该列。  
   
@@ -90,6 +91,6 @@ HAVING AVG(price) > 10
     ```  
   
 ## <a name="see-also"></a>另请参阅  
-[对查询结果进行排序和分组 (Visual Database Tools)](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
-[汇总查询结果 (Visual Database Tools)](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
+[对查询结果进行排序和分组](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
+[汇总查询结果](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
   

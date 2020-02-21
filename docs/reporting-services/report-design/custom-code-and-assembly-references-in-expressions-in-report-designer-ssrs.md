@@ -18,10 +18,10 @@ ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1a440ba648fd7ca0c377cc09b8bf67ac799e2e9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581493"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>报表设计器的表达式中的自定义代码和程序集引用 (SSRS)
@@ -48,7 +48,7 @@ ms.locfileid: "65581493"
 2.  在本地模式下预览具有对自定义程序集的引用的报表。  
   
 ##  <a name="Common"></a> 包括对常用函数的引用  
- 使用 **“表达式”** 对话框查看内置到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的常见函数分类列表。 展开 **“常见函数”** 并单击一个类别时， **“项”** 窗格显示表达式中包括的函数的列表。 常见函数包括 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> 和 <xref:System.Convert> 命名空间和 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 运行时库函数的类。 为方便起见，您可以在 **“表达式”** 对话框中查看最常用的函数，这些函数按以下类别排列：文本、日期和时间、数学函数、检查函数、程序流函数、聚合函数、财务函数、转换函数和杂项函数。 不太常用的函数未显示在列表中，但仍然可以用在表达式中。  
+ 使用 **“表达式”** 对话框查看内置到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的常见函数分类列表。 展开 **“常见函数”** 并单击一个类别时， **“项”** 窗格显示表达式中包括的函数的列表。 常见函数包括 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> 和 <xref:System.Convert> 命名空间以及 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 运行时库函数中的类。 为方便起见，你可以在“表达式”对话框中查看最常用的函数，它们在其中按类别列出：文本、日期和时间、数学、检查、程序流、聚合、金融、转换和杂项。 不太常用的函数未显示在列表中，但仍然可以用在表达式中。  
   
  若要使用内置函数，请双击“项”窗格中的函数名称。 “说明”窗格中显示该函数的说明，“示例”窗格中显示函数调用的示例。 在“代码”窗格中，在左圆括号 **(** 后键入函数名称时，IntelliSense 将帮助显示函数调用的各项有效语法。 例如，若要计算表中一个名为 `Quantity` 的字段的最大值，首先将简单表达式 `=Max(` 添加到“代码”窗格，然后使用智能标记查看该函数调用的所有可能的有效语法。 若要完成本示例，请键入 `=Max(Fields!Quantity.Value)`。  
   
@@ -178,9 +178,9 @@ End Function
  有关访问代码的详细信息，请参阅 [Accessing Custom Assemblies Through Expressions](../../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md)。  
   
 ##  <a name="collections"></a> 将内置集合传递到自定义程序集  
- 如果要将内置集合（如 *Globals* 或 *Parameters* 集合）传递到自定义程序集进行处理，则必须将代码项目中的程序集引用添加到定义内置集合的程序集中并且访问正确的命名空间。 根据您是为运行在报表服务器上的报表（服务器报表）开发自定义程序集，还是为在 .NET 应用程序中本地运行的报表（本地报表）开发自定义程序集，需要引用的程序集会有所不同。 有关详细信息，请参阅下面的内容。  
+ 如果要将内置集合（如 *Globals* 或 *Parameters* 集合）传递到自定义程序集进行处理，则必须将代码项目中的程序集引用添加到定义内置集合的程序集中并且访问正确的命名空间。 根据您是为运行在报表服务器上的报表（服务器报表）开发自定义程序集，还是为在 .NET 应用程序中本地运行的报表（本地报表）开发自定义程序集，需要引用的程序集会有所不同。 有关详细信息，请参阅下文。  
   
--   **命名空间：** Microsoft.ReportingServices.ReportProcessing.ReportObjectModel  
+-   **命名空间:** Microsoft.ReportingServices.ReportProcessing.ReportObjectModel  
   
 -   **程序集（本地报表）：** Microsoft.ReportingServices.ProcessingObjectModel.dll  
   

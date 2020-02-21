@@ -11,18 +11,18 @@ ms.assetid: 1d652605-9313-4c75-98b4-ba4dcbbb222d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 67e20d8d0bdcfbb03d0188ac62b4d89bc12b704f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63194191"
 ---
 # <a name="data-processing-extensions-overview"></a>数据处理扩展插件概述
-  借助于 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的数据处理扩展插件，您可以连接到数据源并检索数据。 它们还可以充当数据源和数据集之间的桥梁。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据处理扩展插件是模仿 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 数据提供程序接口的子集创建的。  
+  借助于 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的数据处理扩展插件，您可以连接到数据源并检索数据。 它们还可以充当数据源和数据集之间的桥梁。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据处理扩展插件是模仿 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 数据提供程序接口的子集创建的。  
   
  下表列出 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 随附的数据处理扩展插件。  
   
-|数据处理扩展插件|描述|  
+|数据处理扩展插件|说明|  
 |-------------------------------|-----------------|  
 |用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的数据处理扩展插件|使用用于 SQL Server 的 .NET Framework 数据提供程序可以连接到 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 和从其检索数据。|  
 |用于 OLE DB 的数据处理扩展插件|使用用于 OLE DB 的 .NET Framework 数据提供程序。 使用此扩展插件，报表服务器可以查询具有 OLE DB 访问接口的任何数据源。|  
@@ -38,7 +38,7 @@ ms.locfileid: "63194191"
   
  您可为自己的数据源开发数据处理扩展插件，或者可以使用接口向公共数据库基础结构添加用于数据处理的附加层。 您可以部署自定义数据处理扩展插件，实现数据与组织中的现有报表服务器的无缝集成。 还可以将它们用作提供给您的使用者的自定义报表套件的一部分。  
   
- ![数据处理扩展插件体系结构](../../../reporting-services/extensions/data-processing/media/bk-dataprocess-extensions.gif "Data processing extension architecture")  
+ ![数据处理扩展插件体系结构](../../../reporting-services/extensions/data-processing/media/bk-dataprocess-extensions.gif "数据处理扩展插件体系结构")  
 Reporting Services 数据处理扩展插件体系结构  
   
  实现自定义 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据处理扩展插件的好处包括：  
@@ -52,7 +52,7 @@ Reporting Services 数据处理扩展插件体系结构
 ## <a name="data-extension-process-flow"></a>数据扩展插件处理流程  
  在开发自定义数据扩展插件前，您应该理解报表服务器是如何使用数据扩展插件处理数据的。 还应理解报表服务器调用的构造函数和方法。  
   
- ![数据处理扩展插件的处理流程](../../../reporting-services/extensions/data-processing/media/bk-ext-01.gif "Process flow for data processing extension")  
+ ![数据处理扩展插件的处理流程](../../../reporting-services/extensions/data-processing/media/bk-ext-01.gif "数据处理扩展插件的处理流程")  
 报表服务器调用的数据扩展插件的分步处理流程  
   
  该图说明下列事件序列：  

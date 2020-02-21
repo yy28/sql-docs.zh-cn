@@ -1,6 +1,6 @@
 ---
 title: 教程适用的纽约市出租车演示数据
-description: 下载纽约市出租车示例数据和创建数据库的说明。 数据用于 SQL Server Python 和 R 语言教程，该教程演示了如何在 SQL Server 存储过程和 T-SQL 函数中嵌入脚本。
+description: 创建包含纽约市出租车示例数据的数据库。 此数据集用于 SQL Server 机器学习服务的 R 和 Python 教程。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/31/2018
@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8413456563a85f9c126dd9981e3e6df548cd30c4
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: e55076a539cb2a932c2f1e0c432daf774899518f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727155"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74908918"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>用于 SQL Server Python 和 R 教程的纽约市出租车演示数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,16 +56,16 @@ ms.locfileid: "73727155"
 
 下表总结了纽约市出租车演示数据库中创建的对象。
 
-|**对象名称**|**对象类型**|**Description**|
+|**对象名称**|**对象类型**|**说明**|
 |----------|------------------------|---------------|
-|**NYCTaxi_Sample** | “数据库” | 创建一个数据库和两个表：<br /><br />dbo.nyctaxi_sample 表：包含纽约市出租车主数据集。 将在表中添加一个聚集列存储索引，改善存储和查询性能。 此表中插入了纽约市出租车数据集的 1% 采样。<br /><br />dbo.nyc_taxi_models 表：用于保留已定型的高级分析模型。|
+|**NYCTaxi_Sample** | database | 创建一个数据库和两个表：<br /><br />dbo.nyctaxi_sample 表：包含纽约市出租车主数据集。 将在表中添加一个聚集列存储索引，改善存储和查询性能。 此表中插入了纽约市出租车数据集的 1% 采样。<br /><br />dbo.nyc_taxi_models 表：用于保留已定型的高级分析模型。|
 |**fnCalculateDistance** |标量值函数 (scalar-valued function) | 计算搭乘位置和下车位置之间的直接距离。 在[创建数据功能](sqldev-create-data-features-using-t-sql.md)、[定型和保存模型](sqldev-train-and-save-a-model-using-t-sql.md)以及[操作 R 模型](sqldev-operationalize-the-model.md)中使用此功能。|
 |**fnEngineerFeatures** |表值函数 (table-valued function) | 为模型定型创建新的数据功能。 在[创建数据功能](sqldev-create-data-features-using-t-sql.md)和[操作 R 模型](sqldev-operationalize-the-model.md)中使用此功能。|
 
 
 使用在各种教程中找到的 R 和 Python 脚本创建存储过程。 下表总结了从不同课程运行脚本时可以选择添加到纽约市出租车演示数据库的存储过程。
 
-|**存储过程**|**语言**|**Description**|
+|**存储过程**|**语言**|**说明**|
 |-------------------------|------------|---------------|
 |**RxPlotHistogram** |R | 调用 RevoScaleR rxHistogram 函数绘制变量的直方图，然后将绘图作为二进制对象返回。 在[浏览并可视化数据](sqldev-explore-and-visualize-the-data.md)中使用此存储过程。|
 |**RPlotRHist** |R| 使用 Hist 函数创建图形，然后将输出保存为本地 PDF 文件。 在[浏览并可视化数据](sqldev-explore-and-visualize-the-data.md)中使用此存储过程。|

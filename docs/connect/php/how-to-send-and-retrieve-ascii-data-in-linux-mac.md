@@ -1,5 +1,5 @@
 ---
-title: '如何: 在 Linux 和 macOS 中发送和检索 ASCII 数据 (SQL) |Microsoft Docs'
+title: 如何：在 Linux 和 macOS 中发送和检索 ASCII 数据 (SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/16/2018
 ms.prod: sql
@@ -15,33 +15,33 @@ author: yitam
 ms.author: v-yitam
 manager: v-mabarw
 ms.openlocfilehash: 9edd73f5ef01d1d3f22db78400cc3c204efe1379
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68251907"
 ---
 # <a name="how-to-send-and-retrieve-ascii-data-in-linux-and-macos"></a>如何：在 Linux 和 macOS 中发送和检索 ASCII 数据 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-本文假设已在 Linux 或 macOS 系统中生成或安装 ASCII (非 UTF-8) 区域设置。 
+本文假定已在 Linux 或 macOS 系统中生成或安装 ASCII（非 UTF-8）区域设置。 
 
-向服务器发送或检索 ASCII 字符集:  
+向服务器发送或检索 ASCII 字符集：  
 
-1.  如果所需的区域设置不是系统环境中的默认区域设置, 请`setlocale(LC_ALL, $locale)`确保在进行第一次连接前调用。 PHP setlocale () 函数仅更改当前脚本的区域设置, 如果在进行第一次连接后调用, 则它可能会被忽略。
+1.  如果所需的区域设置不是系统环境中的默认区域设置，请务必在进行第一次连接之前先调用 `setlocale(LC_ALL, $locale)`。 PHP setlocale() 函数仅更改当前脚本的区域设置，如果在进行第一次连接后调用，它可能会被忽略。
  
-2.  使用 SQLSRV 驱动程序时, 可以将指定`'CharacterSet' => SQLSRV_ENC_CHAR`为连接选项, 但此步骤是可选的, 因为它是默认编码。
+2.  使用 SQLSRV 驱动程序时，可以将 `'CharacterSet' => SQLSRV_ENC_CHAR` 指定为连接选项，但此步骤是可选的，因为它是默认编码。
 
-3.  使用 PDO_SQLSRV 驱动程序时, 有两种方法。 首先, 在建立连接时, 将`PDO::SQLSRV_ATTR_ENCODING`设置`PDO::SQLSRV_ENCODING_SYSTEM`为 (有关设置连接选项的示例, 请参阅[PDO:: __construct](../../connect/php/pdo-construct.md))。 或者, 在成功连接后, 添加以下行`$conn->setAttribute(PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ENCODING_SYSTEM);` 
+3.  在使用 PDO_SQLSRV 驱动程序时，有两种方法。 首先，在建立连接时，将 `PDO::SQLSRV_ATTR_ENCODING` 设置为 `PDO::SQLSRV_ENCODING_SYSTEM`（有关设置连接选项的示例，请参阅 [PDO::__construct](../../connect/php/pdo-construct.md)）。 或者，在成功连接后，添加以下行：`$conn->setAttribute(PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ENCODING_SYSTEM);` 
   
-当指定连接资源 (在 SQLSRV 中) 或连接对象 (PDO_SQLSRV) 的编码时, 驱动程序假定其他连接选项字符串使用相同的编码。 也可以假定服务器名称和查询字符串使用相同的字符集。  
+（在 SQLSRV 中）指定连接资源或连接对象 (PDO_SQLSRV) 的编码时，驱动程序假定其他连接选项字符串使用相同的编码。 也可以假定服务器名称和查询字符串使用相同的字符集。  
   
-PDO_SQLSRV 驱动程序的默认编码为 UTF-8 (PDO:: SQLSRV_ENCODING_UTF8), 这与 SQLSRV 驱动程序不同。 有关这些常量的详细信息，请参阅[常量 (Microsoft Drivers for PHP for SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。 
+PDO_SQLSRV 驱动程序的默认编码为 UTF-8 (PDO::SQLSRV_ENCODING_UTF8)，这与 SQLSRV 驱动程序不同。 有关这些常量的详细信息，请参阅[常量 (Microsoft Drivers for PHP for SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。 
   
 ## <a name="example"></a>示例  
-下面的示例演示如何通过在建立连接之前指定特定的区域设置, 使用 PHP 驱动程序来发送和检索 ASCII 数据 SQL Server。 不同 Linux 平台中的区域设置的命名方式可能不同于 macOS 中的相同区域设置。 例如, 美国 ISO-8859-1 (拉丁语 1) 区域设置`en_US.ISO-8859-1`在 Linux 中, 而在 macOS 中, 名称为。 `en_US.ISO8859-1`
+下面的示例演示如何通过在建立连接之前指定特定的区域设置，使用 SQL Server PHP 驱动程序来发送和检索 ASCII 数据。 各种 Linux 平台中的区域设置与 macOS 中的同一区域设置可能具有不同的命名方式。 例如，在 Linux 中，US ISO-8859-1 (Latin 1) 区域设置为 `en_US.ISO-8859-1`，而在 macOS 中名为 `en_US.ISO8859-1`。
   
-这些示例假定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在服务器上安装了。 当从浏览器运行该示例时，所有输出都将写入该浏览器。  
+这些示例假定已在服务器上安装了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 当从浏览器运行该示例时，所有输出都将写入该浏览器。  
   
 ```  
 <?php  
@@ -166,8 +166,8 @@ try {
 
 ## <a name="see-also"></a>另请参阅  
 [检索数据](../../connect/php/retrieving-data.md)  
-[使用 utf-8 数据](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)
-[更新数据&#40;Microsoft 的 PHP 驱动程序 SQL Server&#41; ](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
+[使用 UTF-8 数据](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)
+[更新数据（Microsoft SQL Server PHP 驱动程序）](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
 [SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)  
 [常量（Microsoft Drivers for PHP for SQL Server）](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
 [示例应用程序（SQLSRV 驱动程序）](../../connect/php/example-application-sqlsrv-driver.md)  

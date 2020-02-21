@@ -1,10 +1,9 @@
 ---
-title: 指定目标服务器位置 | Microsoft Docs
-ms.custom: ''
+title: 指定目标服务器位置
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,15 +12,17 @@ helpviewer_keywords:
 ms.assetid: 511ff311-21f5-4f2f-839f-b4deee26ec98
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 99c67c3d0e3afbda0c05e3feb3ed1e0d6951f870
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: ad1eb886c611da105be9c999d8ebc323edb9eb6d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552469"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245804"
 ---
-# <a name="specify-a-target-server39s-location-sql-server-management-studio"></a>指定目标服务器的位置 (SQL Server Management Studio)
+# <a name="specify-a-target-server39s-location"></a>指定目标服务器的位置
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -45,11 +46,11 @@ ms.locfileid: "69552469"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开要指定目标服务器的位置的 master 服务器。  
   
-2.  右键单击“SQL Server 代理”  ，指向“多服务器管理”  ，然后选择“管理目标服务器”  。  
+2.  右键单击“SQL Server 代理”，指向“多服务器管理”，然后选择“管理目标服务器”。  
   
-3.  右键单击某一目标服务器，再选择“属性”  。  
+3.  右键单击某一目标服务器，再选择“属性”。  
   
-4.  在 **“位置”** 框中，输入该服务器的位置，然后单击 **“确定”** 。  
+4.  在 **“位置”** 框中，输入该服务器的位置，然后单击 **“确定”**。  
   
 ## <a name="TsqlProcedure"></a>使用 Transact-SQL  
   
@@ -57,9 +58,9 @@ ms.locfileid: "69552469"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”** 。  
+2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     USE msdb ;  

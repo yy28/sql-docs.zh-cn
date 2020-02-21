@@ -1,5 +1,5 @@
 ---
-title: end 方法 (SQLServerXAResource) |Microsoft Docs
+title: end 方法 (SQLServerXAResource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: e6418b27-793b-4b36-8dfb-756aec7bcbba
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8aa3da36a6bffbcaf223ea72d4adf5f9e541d90c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955042"
 ---
 # <a name="end-method-sqlserverxaresource"></a>end 方法 (SQLServerXAResource)
@@ -35,19 +35,19 @@ public void end(javax.transaction.xa.Xid xid,
                 int flags)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *xid*  
   
- 一个 Xid 对象。  
+ Xid 对象。  
   
  *flag*  
   
- **整数**值。  
+ int  值。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  javax.transaction.xa.XAException  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 end 方法是由 javax.transaction.xa.XAResource 接口中的 end 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  

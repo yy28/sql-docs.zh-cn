@@ -1,5 +1,5 @@
 ---
-title: 如何向报表设计器部署数据处理扩展插件 | Microsoft Docs
+title: 如何：向报表设计器部署数据处理扩展插件 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,10 +12,10 @@ ms.assetid: 3614e601-004e-4a16-8388-836ffd67e9dd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b3ff2fbd4cc5b910cdb5191d4fc51941167d8bfb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63194040"
 ---
 # <a name="deploying-a-data-processing-extension-to-report-designer"></a>向报表设计器部署数据处理扩展插件
@@ -25,7 +25,7 @@ ms.locfileid: "63194040"
   
 1.  将程序集从临时位置复制到报表设计器目录中。 报表服务器目录的默认位置为 C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies。  
   
-2.  在复制程序集文件后，打开 RSReportDesigner.config 文件。 RSReportDesigner.config 文件也位于报表设计器目录中。 还需要在配置文件中为数据处理扩展插件程序集文件生成一个条目。 可以使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 或诸如记事本之类的简单文本编辑器打开该配置文件。  
+2.  在复制程序集文件后，打开 RSReportDesigner.config 文件。 RSReportDesigner.config 文件也位于报表设计器目录中。 还需要在配置文件中为数据处理扩展插件程序集文件生成一个条目。 可以使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 或简单文本编辑器（如记事本）打开配置文件。  
   
 3.  在 RSReportDesigner.config 文件中找到 **Data** 元素。 应当在以下位置为新创建的数据处理扩展插件生成一个条目：  
   

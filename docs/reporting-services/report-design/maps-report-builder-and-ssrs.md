@@ -16,10 +16,10 @@ ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c03db76d1c8ad67bf9db43c1b4acfa728396b703
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66428970"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>地图（报表生成器和 SSRS）
@@ -29,7 +29,7 @@ ms.locfileid: "66428970"
   
  ![rs_MapElements](../../reporting-services/report-design/media/rs-mapelements.gif "rs_MapElements")  
   
- 若要开始立即使用地图，请参阅[教程：地图报表（报表生成器）](../../reporting-services/tutorial-map-report-report-builder.md)或[报表示例（报表生成器和 SSRS）](https://go.microsoft.com/fwlink/?LinkId=198283)。  
+ 若要立即开始使用地图，请参阅[教程：地图报表（报表生成器）](../../reporting-services/tutorial-map-report-report-builder.md)或[报表示例（报表生成器和 SSRS）](https://go.microsoft.com/fwlink/?LinkId=198283)。  
   
 > [!NOTE]  
 >  可以将地图作为报表部件与报表分开保存。 阅读有关 [报表部件](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)的详细信息。  
@@ -75,7 +75,7 @@ ms.locfileid: "66428970"
     > [!NOTE]  
     >  这一 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 地图功能使用的数据来自经美国人口免费获得 ([https://www.census.gov/](https://www.census.gov/))。 TIGER/Line 形状文件是从 Census MAF/TIGER 数据库中精选的地理和制图信息的摘录。 TIGER/Line 形状文件可以从美国人口普查局免费获得。 若要获取关于 TIGER/Line 形状文件的详细信息，请转到 [TIGER/Line 形状文件和 TIGER/Line 文件技术文档](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/tiger-geo-line.html)。 TIGER/Line 形状文件中的边界信息仅用于统计数据收集和制表目的；其中用于统计目的的描述和名称不构成对于司法机构、所有权或享有权利的界定，它们不是法律上关于领土的说明。 Census TIGER 和 TIGER/Line 是美国人口普查局的注册商标。  
   
--   **ESRI 形状文件。** ESRI 形状文件包含符合 Environmental Systems Research Institute, Inc. (ESRI) 形状文件空间数据格式的数据。 ESRI 形状文件指一组文件。 .shp 文件中的数据指定地理或几何形状。 .dbf 文件中的数据提供形状的属性。 若要在设计视图中查看地图或从报表服务器运行地图，这两个文件必须位于同一个文件夹中。 当您从本地文件系统上的 .shp 文件添加空间数据时，空间数据将嵌入到报表中。 若要在运行时动态检索空间数据，请将形状文件上载到您的报表服务器中，然后将它们指定为空间数据源。 有关详细信息，请参阅 [Finding ESRI Shapefiles for a Map](https://go.microsoft.com/fwlink/?linkid=178814)（查找用于地图的 ESRI 形状文件）。  
+-   **ESRI 形状文件。** ESRI 形状文件包含符合 Environmental Systems Research Institute, Inc. (ESRI) 形状文件(ESRI) 形状文件空间数据格式。 ESRI 形状文件指一组文件。 .shp 文件中的数据指定地理或几何形状。 .dbf 文件中的数据提供形状的属性。 若要在设计视图中查看地图或从报表服务器运行地图，这两个文件必须位于同一个文件夹中。 当您从本地文件系统上的 .shp 文件添加空间数据时，空间数据将嵌入到报表中。 若要在运行时动态检索空间数据，请将形状文件上载到您的报表服务器中，然后将它们指定为空间数据源。 有关详细信息，请参阅 [Finding ESRI Shapefiles for a Map](https://go.microsoft.com/fwlink/?linkid=178814)（查找用于地图的 ESRI 形状文件）。  
   
 -   **存储在数据库中的 SQL Server 空间数据。** 可以使用一个查询，该查询从 **关系数据库中指定** SQLGeometry **或** SQLGeography [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型。 有关详细信息，请参阅[空间数据类型概述](../../relational-databases/spatial/spatial-data-types-overview.md)。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "66428970"
   
     -   **SpatialData。** 具有指定城市经纬度的空间数据字段。  
   
-    -   **名称：** 具有市县名称的字段。  
+    -   **名称。** 具有市县名称的字段。  
   
     -   **区域：** 具有区域名称的字段。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "66428970"
   
     -   **空中：** 显示空中图像样式（无文本）。  
   
-    -   **混合：** 显示 **“道路”** 和 **“空中”** 样式的组合。  
+    -   **混合。** 显示 **“道路”** 和 **“空中”** 样式的组合。  
   
 -   用于图块上的显示文本的语言。  
   
@@ -224,7 +224,7 @@ ms.locfileid: "66428970"
   
  如果您查看地图报表时看不到所需的结果，其根源可能是各种问题。 为了帮助您隔离和了解每个问题，一次处理一个层肯定会有所帮助。 使用“地图”窗格可以选择层并轻松地切换其可见性。  
   
- 有关地图报表问题的详细信息，请参阅 [报表故障排除：地图报表（报表生成器和 SSRS）](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ 若要详细了解地图报表问题，请参阅[排除报表故障：地图报表（报表生成器和 SSRS）](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
 ##  <a name="HowTo"></a> 操作指南主题  
  本部分列出的过程分步向您介绍如何在报表中使用地图和地图层。  

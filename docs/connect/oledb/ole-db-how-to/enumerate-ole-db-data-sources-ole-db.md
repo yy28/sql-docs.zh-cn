@@ -1,5 +1,5 @@
 ---
-title: 枚举 OLE DB 数据源 (OLE DB) |Microsoft Docs
+title: 枚举 OLE DB 数据源 (OLE DB) | Microsoft Docs
 description: 使用 MSOLEDBSQL 枚举器枚举 OLE DB 数据源
 ms.custom: ''
 ms.date: 06/14/2018
@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: b9e14ef426a07705c51c0aa77c908dd1c2b8bbcf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994828"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>枚举 OLE DB 数据源 (OLE DB)
@@ -39,15 +39,15 @@ ms.locfileid: "67994828"
   
 ### <a name="to-enumerate-ole-db-data-sources"></a>枚举 OLE DB 数据源  
   
-1.  通过调用**ISourceRowset:: GetSourcesRowset**检索源行集。  
+1.  通过调用 ISourceRowset::GetSourcesRowset  检索源行集。  
   
-2.  通过调用**GetColumnInfo:: IColumnInfo**查找枚举器行集的说明。  
+2.  通过调用 GetColumnInfo::IColumnInfo  查找枚举器行集的说明。  
   
 3.  根据列信息创建绑定结构。  
   
-4.  通过调用**IAccessor:: CreateAccessor**创建行集访问器。  
+4.  通过调用 IAccessor::CreateAccessor  创建行集访问器。  
   
-5.  调用**IRowset:: GetNextRows**提取行。  
+5.  通过调用 IRowset::GetNextRows  提取行。  
   
 6.  通过调用 IRowset::GetData 从行集中该行的副本检索数据，然后处理这些数据  。  
   

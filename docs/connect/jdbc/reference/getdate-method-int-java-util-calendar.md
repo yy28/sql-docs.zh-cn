@@ -16,10 +16,10 @@ ms.assetid: 38ce7b75-2623-4eff-bc18-8cf7193adec8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2ff7567d85800969eeb5c450bbe0a59753491e2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67984057"
 ---
 # <a name="getdate-method-int-javautilcalendar"></a>getDate 方法 (int, java.util.Calendar)
@@ -35,7 +35,7 @@ public java.sql.Date getDate(int index,
                              java.util.Calendar cal)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  索引   
   
  指示参数索引的 int  。  
@@ -47,13 +47,13 @@ public java.sql.Date getDate(int index,
 ## <a name="return-value"></a>返回值  
  Date 对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 getDate 方法是由 java.sql.CallableStatement 接口中的 getDate 方法指定的。  
   
- 此方法返回 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime 或 smalldatetime 数据类型的有效日期部分，时间部分设置为 Java 时间基线 00:00（午夜）   。  
+ 此方法返回 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime  或 smalldatetime  数据类型的有效日期部分，时间部分设置为 Java 时间基线 00:00（午夜）。  
   
 ## <a name="see-also"></a>另请参阅  
  [getDate 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getdate-method-sqlservercallablestatement.md)   

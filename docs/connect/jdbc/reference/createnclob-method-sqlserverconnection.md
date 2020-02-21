@@ -1,5 +1,5 @@
 ---
-title: createNClob 方法 (SQLServerConnection) |Microsoft Docs
+title: createNClob 方法 (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: fa160884-394e-4fb2-a6e8-0437b81c149d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7c2c8a91e3c3f3eee050fefce1d24f87e245cb8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955352"
 ---
 # <a name="createnclob-method-sqlserverconnection"></a>createNClob 方法 (SQLServerConnection)
@@ -30,13 +30,13 @@ public java.sql.NClob createNClob()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 一个 NClob 对象。  
+ NClob 对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 createNClob 方法由 createNClob 方法在 sql 连接接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 createNClob 方法是由 java.sql.Connection 接口中的 createNClob 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerConnection 成员](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

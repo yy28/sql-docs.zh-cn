@@ -9,10 +9,10 @@ ms.assetid: b99e4398-1fba-4824-958f-5c75d10485ea
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8aedfd50c591f3a8aef4855854eed760ce093a7a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580629"
 ---
 # <a name="multiple-series-on-a-chart-report-builder-and-ssrs"></a>图表中的多个序列（报表生成器和 SSRS）
@@ -34,7 +34,7 @@ ms.locfileid: "65580629"
 ## <a name="using-chart-areas"></a>使用图表区  
  图表为包括外部边框、图表标题和图例的顶级容器。 默认情况下，图表包含一个默认图表区。 图表区在图表图面上不可见，但您可将图表区视为只包含轴标签、轴标题和一个或多个序列的绘图区的容器。 下图说明了单个图表中的图表区的概念。  
   
- ![显示图表区域的图表](../../reporting-services/report-design/media/chartareasdiagram.gif "Shows a diagram of a chart area")  
+ ![显示图表区域关系图](../../reporting-services/report-design/media/chartareasdiagram.gif "显示图表区域关系图")  
   
  使用 **“图表区属性”** 对话框，可以指定图表区包含的所有序列的二维和三维方向，对齐同一图表中的多个图表区，并设置绘图区颜色的格式。 在仅包含一个默认图表区的图表中定义新的图表区时，该图表区的可用空间水平划分为两部分，新图表区位于第一个图表区的下方。  
   

@@ -26,10 +26,10 @@ ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 36eb4aff0571be5eb25115df06df5079a59da75b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65575630"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>设置图表上轴标签的格式（报表生成器和 SSRS）
@@ -45,7 +45,7 @@ ms.locfileid: "65575630"
 ## <a name="types-of-axes"></a>轴的类型  
  图表有两个主轴：值轴和类别轴。  
   
- ![图表分类和值轴](../../reporting-services/report-design/media/rsaxes-categorical-vs-value.gif "Chart categorical and value axes")  
+ ![图表分类和值轴](../../reporting-services/report-design/media/rsaxes-categorical-vs-value.gif "图表分类和值轴")  
   
  当您将一个字段从数据集拖放到图表表面上时，该图表会确定此字段是属于类别轴还是值轴。  
   
@@ -56,9 +56,9 @@ ms.locfileid: "65575630"
   
  轴刻度是由用于定义要沿该轴显示的数据范围的最小值和最大值限定的。 图表将根据结果集中的值计算每个轴上的最小值和最大值。 在值轴上，该刻度始终由值字段中的最小数和最大数确定。 在类别轴上，最小值类型和最大值类型根据类别字段的类型而定。 数据集中的任何字段都可分为三种类别字段类型之一。 下表说明了这三种类型的类别字段。  
   
-|类别字段类型|描述|示例|  
+|类别字段类型|说明|示例|  
 |-------------------------|-----------------|-------------|  
-|数字|按数值顺序沿 x 轴绘制类别。|按雇员标识号排列的销售报表沿 x 轴显示雇员标识号。|  
+|Numeric|按数值顺序沿 x 轴绘制类别。|按雇员标识号排列的销售报表沿 x 轴显示雇员标识号。|  
 |日期/时间|按时间顺序沿 x 轴绘制类别。|月销售报表沿 x 轴显示已格式化的日期。|  
 |字符串|按类别在数据源中首次出现的顺序沿 x 轴绘制类别。|区域销售报表沿 x 轴显示区域名称。|  
   
@@ -75,7 +75,7 @@ ms.locfileid: "65575630"
 ### <a name="example-of-how-the-chart-calculates-axis-labels"></a>图表计算轴标签的方式示例  
  此处显示的表包含要绘制在柱形图上的示例销售数据。 “姓名”字段将添加到“类别组”区域中，“数量”字段将添加到“值”区域中。  
   
-|“属性”|数量|  
+|名称|数量|  
 |----------|--------------|  
 |Michael Blythe|229|  
 |Jae Pak|112|  

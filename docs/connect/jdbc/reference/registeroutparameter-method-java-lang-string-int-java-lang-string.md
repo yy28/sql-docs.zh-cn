@@ -1,5 +1,5 @@
 ---
-title: 用于类型和名称的 registerOutParameter 方法 |Microsoft Docs
+title: 注册类型和名称的 registerOutParameter 方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: f962c912-2475-4e1f-a384-579be2d17f37
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 18c7dad22a4f5314a0bc920c650bcdf0ecd32d52
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975921"
 ---
 # <a name="registeroutparameter-method-javalangstring-int-javalangstring"></a>registerOutParameter 方法 (java.lang.String, int, java.lang.String)
@@ -36,24 +36,24 @@ public void registerOutParameter(java.lang.String s,
                                  java.lang.String s1)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *s*  
   
- 包含参数名称的字符串  。  
+ 包含参数名称的字符串。  
   
  *n*  
   
  在 java.sql.Types 中定义的 JDBC 类型代码。  
   
- s1   
+ s1  
   
- 一个包含完全限定的 SQL 类型名称的字符串  。  
+ 一个包含完全限定的 SQL 类型名称的字符串。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 registerOutParameter 方法由 registerOutParameter 方法在 CallableStatement 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 registerOutParameter 方法是由 java.sql.CallableStatement 接口中的 registerOutParameter 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [registerOutParameter 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md)   

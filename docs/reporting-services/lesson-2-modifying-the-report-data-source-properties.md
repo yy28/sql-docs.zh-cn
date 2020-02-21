@@ -9,13 +9,13 @@ ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 466415ebd4075afd5dda83e95a498a32b50af453
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62651706"
 ---
-# <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
+# <a name="lesson-2-modifying-the-report-data-source-properties"></a>第 2 课：修改报表数据源属性
 在此 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 教程课程中，你会使用 Web 门户来选择要传递给收件人的报表。 你将定义的数据驱动订阅将分发在 **创建基本表报表（SSRS 教程）** 教程中创建的 [创建基本表报表（SSRS 教程）](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)报表。  在接下来的步骤中，将修改此报表使用的数据源连接信息，以获取数据。 只有使用 **已存储凭据** 访问报表数据源的报表才能通过数据驱动订阅进行分发。 已存储凭据是处理无人参与的报表所必需的。  
   
 您还将修改数据集和报表以便使用参数来筛选 `[Order]` 上的报表，这样，订阅可为特定的顺序和呈现格式输出不同的报表实例。  
@@ -49,7 +49,7 @@ ms.locfileid: "62651706"
     
 9. 若要验证是否能连接到数据源，请单击 **“测试连接”** 。  
   
-10. 单击 **“保存”** 。
+10. 单击“ **保存**”。
 11. 单击“取消”   
   
 11. 查看报表以验证报表是否以指定的凭据运行。 。  
@@ -79,7 +79,7 @@ ms.locfileid: "62651706"
     HAVING (ppc.Name = 'Clothing')  
     ```  
   
-4.  单击 **“确定”** 。  
+4.  单击 **“确定”**  
  在以下步骤中，你将向报表添加一个参数。  该报表参数会馈送数据集参数。 
 ## <a name="bkmk_add_reportparameter"></a>添加报表参数并重新发布报表  
   
@@ -93,9 +93,9 @@ ms.locfileid: "62651706"
   
 5.  选择 **“允许 Null 值”** 。  
   
-6.  单击“确定”  。  
+6.  单击“确定”。   
   
-7.  单击“预览”选项卡以运行报表  。 请注意报表顶部的参数输入框。 您可以：  
+7.  单击“预览”选项卡以运行报表  。 请注意报表顶部的参数输入框。 可以：  
   
     -   在不使用参数的情况下单击“查看报表”以便看到完整的报表。  
   
@@ -105,13 +105,13 @@ ms.locfileid: "62651706"
   
 ## <a name="bkmk_redeploy"></a>重新部署报表  
   
-1.  重新部署报表，以便下一课程中的订阅配置可利用您在本课程中进行的更改。 有关在表教程中使用的项目属性的详细信息，请参阅[第 6 课：添加分组和总计 (Reporting Services)](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md) 中的“将报表发布到报表服务器（可选）”部分。  
+1.  重新部署报表，以便下一课程中的订阅配置可利用您在本课程中进行的更改。 有关在表教程中使用的项目属性的详细信息，请参阅以下课程中的“将报表发布到报表服务器（可选）”部分：[第 6 课：添加分组和总计 &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)。  
   
 2.  在工具栏上，单击 **“生成”** ，然后单击 **“部署教程”** 。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>后续步骤  
 + 你已成功地将报表配置为使用已存储凭据获取数据，并且可以使用参数筛选数据。 
-+ 在下一课中，你会使用 Web 门户“数据驱动订阅”页来配置订阅。 请参阅 [第 3 课：定义数据驱动订阅](../reporting-services/lesson-3-defining-a-data-driven-subscription.md)。  
++ 在下一课中，你会使用 Web 门户“数据驱动订阅”页来配置订阅。 请参阅[第 3 课：定义数据驱动订阅](../reporting-services/lesson-3-defining-a-data-driven-subscription.md)。  
   
 ## <a name="see-also"></a>另请参阅  
 [管理报表数据源](../reporting-services/report-data/manage-report-data-sources.md)  

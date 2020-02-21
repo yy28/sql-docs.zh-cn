@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: e13654a38738c84095cc284a24fb723aa2b05327
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580499"
 ---
 # <a name="reporting-services-site-collection-features"></a>Reporting Services 网站集功能
@@ -30,9 +30,9 @@ Reporting Services SharePoint 模式提供了三个 SharePoint 网站集功能�
 
  下表对 Reporting Services 网站集功能进行了说明。  
   
-|功能|描述|  
+|Feature|说明|  
 |-------------|-----------------|  
-|**报表服务器管理中心功能**|启用用于管理与 Reporting Services 报表服务器的集成的功能。 此功能仅安装和用于 SharePoint 管理中心网站集中。<br /><br /> 在安装了用于 SharePoint 产品的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 外接程序之后，报表服务器集成功能将自动在 SharePoint 管理中心网站集中激活。 在某些情况下，你需要手动激活此功能。 若要激活报表服务器功能，请在 SharePoint 管理中心的“站点设置”页中使用 Reporting Services 页。<br /><br /> 用于 SharePoint 产品的外接程序的 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Reporting Services 版本和更高版本将在安装外接程序时为所有现有的网站集激活报表服务器集成功能。 此外，对于新的网站集，此功能将自动激活。|  
+|**报表服务器管理中心功能**|启用用于管理与 Reporting Services 报表服务器的集成的功能。 此功能仅安装和用于 SharePoint 管理中心网站集中。<br /><br /> 在安装了用于 SharePoint 产品的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 加载项之后，报表服务器集成功能将自动在 SharePoint 管理中心网站集中激活。 在某些情况下，你需要手动激活此功能。 若要激活报表服务器功能，请在 SharePoint 管理中心的“站点设置”页中使用 Reporting Services 页。<br /><br /> 用于 SharePoint 产品的外接程序的 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Reporting Services 版本和更高版本将在安装外接程序时为所有现有的网站集激活报表服务器集成功能。 此外，对于新的网站集，此功能将自动激活。|  
 |**报表服务器集成功能**|使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Reporting Services 启用多功能报告<br /><br /> 默认情况下此功能处于活动状态。|  
 |**Power View 集成功能**|对 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿和 Analysis Services 表格数据库启用交互式数据浏览和直观的展示。<br /><br /> 该功能可通过下列数据源的上下文菜单访问：<br /><br /> **.rdlx**<br /><br /> **.rsds**<br /><br /> **.bism** 连接文件<br /><br /> <br /><br /> 如果 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 未出现在上下文菜单中，请确认 **“Power View 集成功能”** 已激活。<br /><br /> 默认情况下此功能是被停用的。|  
 

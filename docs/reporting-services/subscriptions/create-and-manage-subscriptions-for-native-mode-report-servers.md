@@ -12,10 +12,10 @@ ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 69cc078dc5ce605f1d7bf55d872c2a4629eb3301
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66403255"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>创建和管理本机模式报表服务器的订阅
@@ -52,7 +52,7 @@ ms.locfileid: "66403255"
   
 2.  导航到所需报表。 右键单击报表，并选择“订阅”。   
   
-3.  **描述**：键入此报表订阅的描述，最多 512 个字符。  
+3.  **说明**：键入此报表订阅的描述，最多 512 个字符。  
   
 4.  **所有者**：“所有者”字段默认为当前用户，创建订阅时不能编辑。 但是，在保存订阅后，你可以更改订阅属性，包括所有者和描述。  
 
@@ -68,10 +68,10 @@ ms.locfileid: "66403255"
   
 8. 在“传递选项(Windows 文件共享)”下，指定：   
    - **文件名**：键入报表的文件名。
-   - **创建文件时添加文件扩展名**：此选项会在文件名中添加三个字符的文件扩展名。 文件扩展名由所选择的报表输出格式决定。  
+   - **创建文件时添加文件扩展名**：选择此选项，将向文件名中添加三个字符的文件扩展名。 文件扩展名由所选择的报表输出格式决定。  
    - **路径**：键入要向其中传递报表的现有文件夹的通用命名约定 (UNC) 路径（例如，\\<servername\>\<myreports>）。 在路径开头包括双反斜杠字符。 在路径末尾不要使用反斜杠。  
   
-     ![文件共享订阅](../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-file-share-delivery-option.png "file share subscription")  
+     ![文件共享订阅](../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-file-share-delivery-option.png "文件共享订阅")  
   
    - **呈现格式**：为文件传递选择一种报表输出格式。 选择与要用来打开报表的桌面应用程序相对应的格式。 避免使用不以单数据流呈现报表的格式，也不要使用引入静态文件不支持的交互的格式（例如 HTML 4.0）。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "66403255"
   
 2. 导航到所需报表。 右键单击报表，并选择“订阅”。   
   
-3. **描述**：键入此报表订阅的描述，最多 512 个字符。  
+3. **说明**：键入此报表订阅的描述，最多 512 个字符。  
   
 4.  **所有者**：“所有者”字段默认为当前用户，创建订阅时不能编辑。 但是，在保存订阅后，你可以更改订阅属性，包括所有者和描述。  
 
@@ -112,11 +112,11 @@ ms.locfileid: "66403255"
      >[!NOTE]  
      > 根据所拥有的权限，您可能还可以键入您希望报表传递到的电子邮件地址。 若要指定多个电子邮件地址，请用分号 (;) 分隔它们。 还可以在“抄送”、“密件抄送”和“答复”文本框中键入其他电子邮件地址    。 这要求您具有管理所有订阅的权限。  
   
-   - 主题：默认为“在 @ExecutionTime 执行 @ReportName”  。 可以对主题进行编辑，但请注意，@ReportName 和 @ExecutionTime 是“主题”字段中仅支持的两个全局变量  。  
+   - **使用者**：默认为“在 @ExecutionTime 执行 @ReportName”。 可以对主题进行编辑，但请注意，@ReportName 和 @ExecutionTime 是“主题”字段中仅支持的两个全局变量  。  
   
      ![电子邮件订阅](../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-e-mail-delivery-option.png "电子邮件订阅")  
 
-   - **包括报表**：选择此选项可嵌入或附加报表副本。 报表的格式由所选的呈现格式决定。 如果您认为报表大小会超过为电子邮件系统定义的限制，请不要选择此选项。  
+   - **包括报表**：选择此选项可嵌入或附加报表的副本。 报表的格式由所选的呈现格式决定。 如果您认为报表大小会超过为电子邮件系统定义的限制，请不要选择此选项。  
   
    - **包括链接**：选择此选项可在电子邮件正文中包括指向报表的 URL 链接。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "66403255"
 ##  <a name="bkmk_modify_subscription"></a> 修改订阅  
  您可以随时修改订阅。 在修改正在处理的订阅时，如果更新的设置在传递扩展插件接收订阅数据之前就已保存到报表服务器中，则订阅将使用更新的设置。 否则，使用现有设置。  
   
- 创建订阅的用户拥有该订阅。 每个用户都可以修改或删除自己所拥有的订阅。 你可以从订阅属性页中更改报表的所有者，或者以编程方式更改所有权。 有关详细信息，请参见以下内容：  
+ 创建订阅的用户拥有该订阅。 每个用户都可以修改或删除自己所拥有的订阅。 你可以从订阅属性页中更改报表的所有者，或者以编程方式更改所有权。 有关详细信息，请参阅以下主题：  
   
 -   [使用 PowerShell 更改和列出 Reporting Services 订阅所有者并运行订阅](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
   

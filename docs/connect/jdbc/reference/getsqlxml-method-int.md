@@ -1,5 +1,5 @@
 ---
-title: getSQLXML 方法 (int) |Microsoft Docs
+title: getSQLXML 方法 (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: a1b32d3a-d7c9-4086-ae2b-fc1da96949b1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 957def695287bbd63d21e02859a441f07e3583be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979697"
 ---
 # <a name="getsqlxml-method-int"></a>getSQLXML 方法 (int)
@@ -29,18 +29,18 @@ ms.locfileid: "67979697"
 public final java.sql.SQLXML getSQLXML(int parameterIndex)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
- parameterIndex   
+#### <a name="parameters"></a>parameters  
+ parameterIndex  
   
- 指示参数索引的 int  。  
+ 指示参数索引的 int。  
   
 ## <a name="return-value"></a>返回值  
- ASQLXMLobject.  
+ ASQLXMLobject。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 getSQLXML 方法是由 java.sql.CallableStatement 接口中的 getSQLXML 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  

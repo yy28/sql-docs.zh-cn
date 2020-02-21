@@ -13,10 +13,10 @@ ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: dfb0f48bb35e6341e2b2a9a72007ef4eb09c2b9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66506634"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService 配置文件
@@ -26,7 +26,7 @@ ms.locfileid: "66506634"
 ReportingServicesService.exe.config 文件包含配置跟踪的设置信息。  
   
 ## <a name="file-location"></a>文件位置  
-此文件可能位于以下路径之一：  
+此文件可以位于下面的任意路径中：  
 
 ``` Paths  
 \Reporting Services\Report Server\Bin  
@@ -77,7 +77,7 @@ ReportingServicesService.exe.config 文件包含配置跟踪的设置信息。
 ## <a name="configuration-settings"></a>配置设置  
  下表提供了有关具体设置的信息， 将按设置在配置文件中的显示顺序依次列出：  
   
-|设置|描述|  
+|设置|说明|  
 |-------------|-----------------|  
 |**RStrace**|指定用于错误和跟踪的命名空间。|  
 |**DefaultTraceSwitch**|指定向 ReportServerService 跟踪日志报告的信息的级别。 每个级别都包含所有更低级别（用更小的数字表示）报告的信息。 建议您不要禁用跟踪。 有效值包括：<br /><br /> 0= 禁用跟踪<br /><br /> 1= 异常和重新启动<br /><br /> 2= 异常、重新启动、警告<br /><br /> 3= 异常、重新启动、警告、状态消息（默认值）<br /><br /> 4= 详细模式|  

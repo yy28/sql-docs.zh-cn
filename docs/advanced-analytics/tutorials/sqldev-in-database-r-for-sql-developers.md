@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f0734203a5b5e49ad344b2c0440208c6b652c080
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 9669b2c38d2e8b571ef7e519100b13cf5a63a10d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73725463"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74479413"
 ---
 # <a name="tutorial-r-data-analytics-for-sql-developers"></a>教程：适用于 SQL 开发者的 R 数据分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-在面向 SQL 程序员的本教程中，使用 SQL Server 上的 [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) 数据库来构建和部署基于 R 的机器学习解决方案，以了解 R 集成。 你将结合[机器学习服务]（[机器学习服务](../install/sql-machine-learning-services-windows-install.md)）和 R 语言支持，使用 T-SQL、SQL Server Management Studio 和数据库引擎实例
+在面向 SQL 程序员的本教程中，使用 SQL Server 上的 [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) 数据库来构建和部署基于 R 的机器学习解决方案，以了解 R 集成。 你将使用 T-SQL、SQL Server Management Studio 和数据库引擎实例，其中包含[机器学习服务](../install/sql-machine-learning-services-windows-install.md)和 R 语言支持
 
 本教程介绍在数据建模工作流中使用的 R 函数。 这包括数据浏览、构建和定型二元分类模型以及模型部署等步骤。 要构建的模型会根据一天中的时间、行程距离和上车位置预测行程是否可能产生小费。 
 

@@ -1,5 +1,5 @@
 ---
-title: getColumnTypeName 方法 (SQLServerResultSetMetaData) |Microsoft Docs
+title: getColumnTypeName 方法 (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: a444da82-c1af-40a5-9774-02476416c92c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6ff7fbebe710b9d52394b12bbd1524ff9785ba7e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67952805"
 ---
 # <a name="getcolumntypename-method-sqlserverresultsetmetadata"></a>getColumnTypeName 方法 (SQLServerResultSetMetaData)
@@ -34,7 +34,7 @@ ms.locfileid: "67952805"
 public java.lang.String getColumnTypeName(int column)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *column*  
   
  指示列索引的 int  。  
@@ -42,13 +42,13 @@ public java.lang.String getColumnTypeName(int column)
 ## <a name="return-value"></a>返回值  
  一个包含列的服务器名称的字符串  。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 getColumnTypeName 方法由 getColumnTypeName 方法在 Java.sql.resultsetmetadata 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 getColumnTypeName 方法是由 java.sql.ResultSetMetaData 接口中的 getColumnTypeName 方法指定的。  
   
- [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 在 TYPE_NAME 列中的行为发生了更改。 有关详细信息，请参阅 [SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md)。  
+ [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 在 TYPE_NAME 列中的行为发生了更改。 有关详细信息，请参阅 [SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerResultSetMetaData 成员](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   

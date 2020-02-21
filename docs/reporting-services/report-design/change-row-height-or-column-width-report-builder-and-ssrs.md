@@ -9,10 +9,10 @@ ms.assetid: f061c204-5cd5-4467-9a9c-8a12803d93ba
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: adf756e3ef9cbed7689a5cceb80e6ef4d93e2fb9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581726"
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>更改行高或列宽（报表生成器和 SSRS）
@@ -37,11 +37,11 @@ ms.locfileid: "65581726"
   
 1.  在设计视图中，单击表行中的单元。  
   
-     ![表中的已选单元格](../../reporting-services/report-design/media/table-selectcell.png "Selected Cell in a Table")  
+     ![表中的已选单元](../../reporting-services/report-design/media/table-selectcell.png "表中的已选单元")  
   
 2.  在显示的“属性”  窗格中，修改“高度”  属性，然后单击“属性”  窗格外部的任意位置。  
   
-     ![所选表单元格的“属性”窗格](../../reporting-services/report-design/media/cell-propertiespane.png "Properties Pane for selected table cell")  
+     ![所选表单元的“属性”窗格](../../reporting-services/report-design/media/cell-propertiespane.png "所选表单元的“属性”窗格")  
   
 ### <a name="to-prevent-a-row-from-automatically-expanding-vertically"></a>防止行自动垂直增高  
   

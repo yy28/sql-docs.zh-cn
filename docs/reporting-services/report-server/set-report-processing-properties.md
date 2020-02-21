@@ -16,16 +16,16 @@ ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4a7729e8880e811494e6e1016b827831674cd812
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140397"
 ---
 # <a name="set-report-processing-properties"></a>设置报表处理属性
   报表执行属性控制报表的处理方式。 必须为每个报表分别设置执行属性。  
   
- 若要设置报表执行属性，请导航到 web 门户中的报表，右键单击报表，并选择**管理**从下拉列表菜单。
+ 若要设置报表执行属性，请在 Web 门户中导航到报表，右键单击该报表，然后从下拉菜单中选择“管理”  。
   
 ## <a name="report-execution-modes"></a>报表执行模式  
  您既可以按需运行报表，也可以按快照形式运行报表。 以下部分介绍了各种运行方法。  

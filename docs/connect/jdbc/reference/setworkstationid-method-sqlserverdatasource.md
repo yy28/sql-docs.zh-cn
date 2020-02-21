@@ -1,5 +1,5 @@
 ---
-title: setWorkstationID 方法 (SQLServerDataSource) |Microsoft Docs
+title: setWorkstationID 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: c1093615-90bf-4918-9f05-8abd765ffb03
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 08b09958276a5cc7f7cc3de6e56f7d7336ca9e64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972030"
 ---
 # <a name="setworkstationid-method-sqlserverdatasource"></a>setWorkstationID 方法 (SQLServerDataSource)
@@ -34,13 +34,13 @@ ms.locfileid: "67972030"
 public void setWorkstationID(java.lang.String workstationID)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  workstationID   
   
  包含客户端计算机名称的 String  。  
   
-## <a name="remarks"></a>Remarks  
- workstationID 是客户端计算机或工作站的名称。 如果未设置 workstationID 属性, 则通过调用 InetAddress (). getHostName () 方法构造默认值。 如果 getHostName 返回空值, 则调用 getHostAddress () 方法。  
+## <a name="remarks"></a>备注  
+ workstationID 是客户端计算机或工作站的名称。 如果未设置 workstationID 属性，则通过调用 InetAddress.getLocalHost().getHostName() 方法构造默认值。 如果 getHostName 返回空值，则调用 getHostAddress().toString() 方法。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDataSource 成员](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

@@ -1,5 +1,5 @@
 ---
-title: setBinaryStream 方法到输入流) |Microsoft Docs
+title: 设置输入流的 setBinaryStream 方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 339c8277-2d08-4094-9fa9-26c8ad3e7348
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 04a286c4d6c8b44482c254e7fe30b84836283df0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975130"
 ---
 # <a name="setbinarystream-method-javalangstring-javaioinputstream"></a>setBinaryStream 方法 (java.lang.String, java.io.InputStream)
@@ -30,20 +30,20 @@ public void setBinaryStream(java.lang.String parameterName,
                             java.io.InputStream x)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  parameterName   
   
  一个字符串，该字符串包含参数的名称  。  
   
  *x*  
   
- 一个 InputStream 对象。  
+ InputStream 对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 setBinaryStream 方法由 setBinaryStream 方法在 CallableStatement 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 setBinaryStream 方法是由 java.sql.CallableStatement 接口中的 setBinaryStream 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [setBinaryStream (SQLServerCallableStatement)](../../../connect/jdbc/reference/setbinarystream-sqlservercallablestatement.md)   

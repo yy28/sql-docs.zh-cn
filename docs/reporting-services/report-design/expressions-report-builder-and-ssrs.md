@@ -9,16 +9,16 @@ ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6083acaca377fdce5bcaed33ce57bb4e75cc3167
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579112"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>表达式（报表生成器和 SSRS）
   表达式在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中被广泛使用，以便对数据进行检索、计算、显示、分组、排序、筛选、参数化和格式设置。 
   
-  许多报表项属性都可以设置为表达式。 表达式可帮助您控制报表的内容、设计和交互。 表达式以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]编写，保存在报表定义中，并且在运行报表时由报表处理器计算。  
+  许多报表项属性都可以设置为表达式。 表达式可帮助您控制报表的内容、设计和交互。 表达式以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 编写，保存在报表定义中，并且在运行报表时由报表处理器计算。  
   
  与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 之类的应用程序（在此类应用程序中，直接在工作表中使用数据）不同，在报表中，您使用作为数据的占位符的表达式。 若要查看来自已计算表达式的实际数据，您必须预览报表。 在运行报表时，报表处理器在合并报表数据和报表布局元素（例如表和图表）时对每个表达式进行计算。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "65579112"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ##  <a name="Types"></a> 了解简单表达式和复杂表达式  
- 表达式通常以等号 (=) 开头，以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]语言编写。 表达式可包含以下项的组合：常量、运算符、对内置值（字段、集合和函数）的引用以及对外部或自定义代码的引用。  
+ 表达式通常以等号 (=) 开头，以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 语言编写。 表达式可包含以下项的组合：常量、运算符、对内置值（字段、集合和函数）的引用以及对外部或自定义代码的引用。  
   
  您可以使用表达式来指定许多报表项属性的值。 最常见的属性是文本框和占位符文本的值。 通常，如果某一文本框只包含一个表达式，则该表达式是文本框属性的值。 如果某一文本框包含多个表达式，则每个表达式都是该文本框中占位符文本的值。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "65579112"
 
 简单表达式使用符号来指示引用是指向字段、参数、内置集合还是指向 ReportItems 集合。 下表显示了显示文本和表达式文本的示例：  
   
-|项|显示文本示例|表达式文本示例|  
+|Item|显示文本示例|表达式文本示例|  
 |----------|--------------------------|-----------------------------|  
 |数据集字段|`[Sales]`<br /><br /> `[SUM(Sales)]`<br /><br /> `[FIRST(Store)]`|`=Fields!Sales.Value`<br /><br /> `=Sum(Fields!Sales.Value)`<br /><br /> `=First(Fields!Store.Value)`|  
 |报表参数|`[@Param]`<br /><br /> `[@Param.Label]`|`=Parameters!Param.Value`<br /><br /> `=Parameters!Param.Label`|  
@@ -75,7 +75,7 @@ ms.locfileid: "65579112"
   
  下表列出了可以包含在表达式中的引用类型：  
   
-|References|描述|示例|  
+|参考|说明|示例|  
 |----------------|-----------------|-------------|  
 |[常量](../../reporting-services/report-design/constants-in-expressions-report-builder-and-ssrs.md)|介绍能以交互方式访问需要常量值的属性（例如字体颜色）的常量。|`="Blue"`|  
 |[运算符](../../reporting-services/report-design/operators-in-expressions-report-builder-and-ssrs.md)|描述可用于合并表达式中的引用的运算符。 例如， **&** 运算符用于串联字符串。|`="The report ran at: " & Globals!ExecutionTime & "."`|  

@@ -1,5 +1,5 @@
 ---
-title: setNCharacterStream 方法到读取器对象-int |Microsoft Docs
+title: 设置为 Reader 对象的 setNCharacterStream 方法 - int | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 7732746b-eda5-469e-8567-e8546c4d81cd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 01e501bbe9ae68b35c4e9b8373b0dfe1f55d9f6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973908"
 ---
 # <a name="setncharacterstream-method-int-javaioreader"></a>setNCharacterStream 方法 (int, java.io.Reader)
@@ -30,7 +30,7 @@ public final void setNCharacterStream(int parameterIndex,
                                                  java.io.Reader value)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  parameterIndex   
   
  指示参数索引的 int  。  
@@ -39,13 +39,13 @@ public final void setNCharacterStream(int parameterIndex,
   
  包含参数值的 Reader 对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 setNCharacterStream 方法由 setNCharacterStream 方法在 Java.sql.preparedstatement 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 setNCharacterStream 方法是由 java.sql.PreparedStatement 接口中的 setNCharacterStream 方法指定的。  
   
- 应将此方法用于**NCHAR**、 **NVARCHAR**、 **NTEXT**和**XML**数据类型。  
+ 此方法应用于 NCHAR  、NVARCHAR  、NTEXT  和 XML  数据类型。  
   
 ## <a name="see-also"></a>另请参阅  
  [setNCharacterStream 方法 &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setncharacterstream-method-sqlserverpreparedstatement.md)   

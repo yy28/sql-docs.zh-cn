@@ -1,5 +1,5 @@
 ---
-title: getXopenStates 方法 (SQLServerDataSource) |Microsoft Docs
+title: getXopenStates 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: de6fdf6b-8345-4490-b35e-7115b61e782e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5c263a94b8df0337d05cc8f3ee41df4e2f30fc72
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977930"
 ---
 # <a name="getxopenstates-method-sqlserverdatasource"></a>getXopenStates 方法 (SQLServerDataSource)
@@ -37,7 +37,7 @@ public boolean getXopenStates()
 ## <a name="return-value"></a>返回值  
  如果启用了将 SQL 状态转换为 XOPEN 兼容状态，则为  true。 否则为 **false**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果将 xopenStates 属性设置为 true  ，则 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 会将 SQL 状态转换为 XOPEN 兼容状态。 默认为 false  ，这将导致 JDBC 驱动程序生成 SQL 99 状态代码。 如果未设置 xopenStates，则 getXopenStates 方法会返回默认值 false  。  
   
 ## <a name="see-also"></a>另请参阅  

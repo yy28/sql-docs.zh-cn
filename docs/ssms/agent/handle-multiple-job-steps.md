@@ -1,10 +1,9 @@
 ---
-title: 处理多个作业步骤 | Microsoft Docs
-ms.custom: ''
+title: 处理多个作业步骤
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,13 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7aba19ff-72b3-45f6-8e54-23f4988d63a8
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 800318df9945b674f3e0777f6c53b67b71ba61a9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: ab3749882850be2a07ca9e72a31f729f2f6fadb8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262396"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242343"
 ---
 # <a name="handle-multiple-job-steps"></a>处理多个作业步骤
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -30,9 +31,9 @@ ms.locfileid: "68262396"
 > [!IMPORTANT]  
 > [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-如果作业有多个作业步骤，必须指定这些作业步骤的运行顺序。 我们称之为“流控制”  。 您可以随时添加新的作业步骤并重排作业步骤流，更改在下次运行作业时生效。 下图说明了一个数据库备份作业的流控制。  
+如果作业有多个作业步骤，必须指定这些作业步骤的运行顺序。 我们称之为“流控制”。 您可以随时添加新的作业步骤并重排作业步骤流，更改在下次运行作业时生效。 下图说明了一个数据库备份作业的流控制。  
   
-![SQL Server 代理作业步骤控制流](../../ssms/agent/media/dbflow01.gif "SQL Server 代理作业步骤控制流")  
+![SQL Server 代理作业步骤的流控制](../../ssms/agent/media/dbflow01.gif "SQL Server 代理作业步骤的流控制")  
   
 第一步是备份数据库。 如果这一步失败， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理将把失败报告给定义为接收通知的操作员。 如果备份数据库步骤成功，则作业将继续进行下一步，即“清理”客户端数据。 如果这一步失败， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理将向前跳至还原数据库。 如果“清理”客户端数据成功，则作业将继续进行下一步，即更新统计信息，如此继续，直至最后报告成功或报告失败。  
   

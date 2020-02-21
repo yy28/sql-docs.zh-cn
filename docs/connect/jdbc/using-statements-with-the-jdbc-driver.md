@@ -1,5 +1,5 @@
 ---
-title: 使用带有 JDBC 驱动程序的语句 |Microsoft Docs
+title: 通过 JDBC 驱动程序使用语句 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 7f8f3e8f-841e-4449-9154-b5366870121f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9ddd61d15e3c363766c7e49b8e9045b60a7be164
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025787"
 ---
 # <a name="using-statements-with-the-jdbc-driver"></a>通过 JDBC 驱动程序使用语句
@@ -35,7 +35,7 @@ JDBC 驱动程序提供了三个从 [!INCLUDE[ssNoVersion](../../includes/ssnove
   
 ## <a name="in-this-section"></a>在本节中  
 
-| 主题                                                                                                    | 描述                                                                                                                                            |
+| 主题                                                                                                    | 说明                                                                                                                                            |
 | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [使用 SQL 语句](../../connect/jdbc/using-statements-with-sql.md)                             | 说明如何通过 JDBC 驱动程序使用 SQL 语句来处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的数据。    |
 | [结合使用语句和存储过程](../../connect/jdbc/using-statements-with-stored-procedures.md) | 说明如何通过 JDBC 驱动程序使用存储过程来处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的数据。 |

@@ -1,5 +1,5 @@
 ---
-title: 'PDOStatement:: fetchObject |Microsoft Docs'
+title: PDOStatement::fetchObject | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 71ad1932-cab3-4c29-8950-f5e82547d3b5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 118a473e3e1675b81b732eb76f0271bbbe9d2e15
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936015"
 ---
 # <a name="pdostatementfetchobject"></a>PDOStatement::fetchObject
@@ -29,15 +29,15 @@ ms.locfileid: "67936015"
 mixed PDOStatement::fetchObject([ $class_name[,$ctor_args ]] )  
 ```  
   
-#### <a name="parameters"></a>Parameters  
-$class_name  ：可选字符串，指定要创建的类的名称。 默认值为 stdClass。  
+#### <a name="parameters"></a>parameters  
+$*class_name*：一个可选的字符串，用于指定要创建的类的名称。 默认值为 stdClass。  
   
-$ctor_args  ：包含自定义类构造函数的参数的可选数组。  
+$*ctor_args*：一个带有自定义类构造函数的参数的可选数组。  
   
 ## <a name="return-value"></a>返回值  
 如果成功，则返回带有该类的实例的对象。 属性将映射到列。 如果失败，则返回 false。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 2.0 中添加了对 PDO 的支持。  
   
 ## <a name="example"></a>示例  

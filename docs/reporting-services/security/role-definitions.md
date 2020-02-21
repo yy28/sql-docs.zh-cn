@@ -14,10 +14,10 @@ ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 22087b03c0c11d008d91de80930d98fef79fc3a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570588"
 ---
 # <a name="role-definitions"></a>角色定义
@@ -53,7 +53,7 @@ ms.locfileid: "65570588"
  如果不再使用该角色定义，可以删除它。 只要启用了“我的报表”功能，就不能删除为此功能选择的角色定义。 在删除用于“我的报表”功能的角色定义之前，首先必须禁用该功能，或为该功能另选一个角色定义以供使用。  
   
 ## <a name="see-also"></a>另请参阅  
- [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md)   
+ [任务和权限](../../reporting-services/security/tasks-and-permissions.md)   
  [授予对本机模式报表服务器的权限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [创建、删除或修改角色 (Management Studio)](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
  [授予用户对报表服务器的访问权限（报表管理器）](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   

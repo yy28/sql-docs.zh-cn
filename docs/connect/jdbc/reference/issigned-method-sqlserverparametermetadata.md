@@ -1,5 +1,5 @@
 ---
-title: isSigned 方法 (SQLServerParameterMetaData) |Microsoft Docs
+title: isSigned 方法 (SQLServerParameterMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 1a4af386-e379-4a60-a107-a99e63a490ac
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 46b93b2b5c45491ad91be8b1e40fc909f0c4510d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977237"
 ---
 # <a name="issigned-method-sqlserverparametermetadata"></a>isSigned 方法 (SQLServerParameterMetaData)
@@ -34,7 +34,7 @@ ms.locfileid: "67977237"
 public boolean isSigned(int param)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *param*  
   
  指示参数索引的 int  。  
@@ -42,11 +42,11 @@ public boolean isSigned(int param)
 ## <a name="return-value"></a>返回值  
  如果指定参数可以包含带符号的数字，则为 true  。 否则为 **false**。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 isSigned 方法由 isSigned 方法在 Java.sql.parametermetadata 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 isSigned 方法是由 java.sql.ParameterMetaData 接口中的 isSigned 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerParameterMetaData 方法](../../../connect/jdbc/reference/sqlserverparametermetadata-methods.md)   

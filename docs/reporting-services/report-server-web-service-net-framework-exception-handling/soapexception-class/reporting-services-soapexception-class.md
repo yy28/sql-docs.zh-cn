@@ -12,10 +12,10 @@ ms.assetid: 2cec49ee-20b1-40eb-a75b-0908d9c05b34
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: daab30930fb1ae5df3c36dcfb417bd977d6663c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62991692"
 ---
 # <a name="reporting-services-soapexception-class"></a>Reporting Services SoapException 类
@@ -25,7 +25,7 @@ ms.locfileid: "62991692"
   
  下表列出 SoapException 类的公共属性  。  
   
-|公共属性|描述|  
+|公共属性|说明|  
 |---------------------|-----------------|  
 |Actor |导致了异常的代码。 该值是指向 Web 服务方法的 URL。|  
 |Detail |应用程序特定的错误信息。 该值由报表服务器设置并且采用 XML 格式。 有关详细信息，请参阅 [Detail 属性](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/detail-property.md)和[使用 Detail 属性处理特定错误](../../../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/using-the-detail-property-to-handle-specific-errors.md)。|  

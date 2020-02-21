@@ -9,16 +9,16 @@ ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7044e079ddf6aa9ce322a742a78aa83059efca6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580285"
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>设置仪表上刻度的格式（报表生成器和 SSRS）
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，仪表刻度是仪表上显示的具有上限和下限的数字范围。 为了准确显示仪表指针指向的读数，仪表刻度通常包含仪表标签和刻度线。 仪表刻度通常与一个或多个仪表指针相关联。 同一个仪表中可以具有多个刻度。  
   
- ![仪表刻度上的元素概述](../../reporting-services/report-design/media/scaleoverviewdiagram.gif "Overview of elements on a gauge scale")  
+ ![仪表刻度上的元素概述](../../reporting-services/report-design/media/scaleoverviewdiagram.gif "仪表刻度上的元素概述")  
   
  与其中定义了多个组的图表不同，仪表上只显示一个值。 必须定义刻度的最小值和最大值。 间隔数值会根据指定的最小值和最大值自动计算。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "65580285"
   
  刻度半径是从仪表中心到刻度条中间位置的距离。 刻度半径的值按仪表直径的百分比度量。 最好使刻度半径值低于 35。 如果指定的值大于 35，绘制的刻度将可能超出仪表的边界。 下图显示如何相对于仪表直径在刻度条上度量刻度半径。  
   
- ![相对于仪表直径的刻度半径](../../reporting-services/report-design/media/scaleradiusdiagram.gif "Scale radius relative to gauge diameter")  
+ ![相对于仪表直径的刻度半径](../../reporting-services/report-design/media/scaleradiusdiagram.gif "相对于仪表直径的刻度半径")  
   
  开始角度是介于 0 至 360 之间的旋转角度，是刻度的起始位置。 位置零 (0) 位于仪表的底部，开始角度按顺时针方向旋转。 例如，如开始角度为 90 度，将使刻度从 9 点钟位置开始。  
   

@@ -1,10 +1,9 @@
 ---
-title: “表和列”对话框 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: “表和列”对话框
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: 8cf27be1-e66d-4735-a428-9ab4b33af4f5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 29b9d5cc4cccd2c60cf58476bacaba3e9fa95e2e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 342a7701b0b33482e5c83f0703121e3522654866
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263160"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256147"
 ---
 # <a name="tables-and-columns-dialog-box-visual-database-tools"></a>“表和列”对话框 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,5 +47,5 @@ ms.locfileid: "68263160"
 > 选作外键的列必须与其对应的主键列具有相同的数据类型。 每个键中列的数目必须相等。 例如，如果关系主键方的表的主键由两列组成，您将需要将这两列中的每一列与关系外键方的表中的列匹配。  
   
 ## <a name="see-also"></a>另请参阅  
-[如何：在表之间创建关系 (Visual Database Tools)](https://msdn.microsoft.com/867a54b8-5be4-46e6-9702-49ae6dabf67c)  
+[如何：在表之间创建关系(https://msdn.microsoft.com/867a54b8-5be4-46e6-9702-49ae6dabf67c)  
   

@@ -12,16 +12,16 @@ ms.assetid: dc3c365b-c263-402a-bf6f-c2a7081db073
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5ef1e735b69e0547f7a9ca9a9d64bf9423a6068e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578528"
 ---
 # <a name="specify-a-chart-area-for-a-series-report-builder-and-ssrs"></a>指定序列的图表区（报表生成器和 SSRS）
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，“图表”  为包括外部边框、图表标题和图例的顶级容器。 默认情况下，图表包含一个“图表区域”  。 图表区在图表表面上不可见，但您可将图表区当作只包含轴标签、轴标题和一个或多个序列的绘图区的容器。 下图说明了单个图表中的多个图表区的概念。  
   
- ![显示图表区域的图表](../../reporting-services/report-design/media/chartareasdiagram.gif "Shows a diagram of a chart area")  
+ ![显示图表区域关系图](../../reporting-services/report-design/media/chartareasdiagram.gif "显示图表区域关系图")  
   
  默认情况下，所有序列都将添加到默认图表区。 使用面积图、柱形图、折线图和散点图时，这些序列的任何组合均可显示在同一图表区上。 如果您在同一图表区拥有多个序列，则图表的可读性将会下降。 最好将图表类型分为多个图表区。 使用多个图表区将提高可读性以更易于进行比较。 例如，价量股票图表通常具有不同范围的值，但可以在同一时期在价格和数量数据之间进行比较。  
   
@@ -46,6 +46,6 @@ ms.locfileid: "65578528"
  [使用调色板定义图表上的颜色（报表生成器和 SSRS）](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
  [极坐标图（报表生成器和 SSRS）](../../reporting-services/report-design/polar-charts-report-builder-and-ssrs.md)   
  [形状图（报表生成器和 SSRS）](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md)   
- [饼图（报表生成器和 SSRS）](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)  
+ [饼图&#40;报表生成器和 SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)  
   
   

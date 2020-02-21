@@ -19,10 +19,10 @@ ms.assetid: 92a9678c-bc4f-4d7a-ba44-85989bfe27ca
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f22f1b32318f5f6440b4506adcbb4926224908e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63284645"
 ---
 # <a name="building-applications-using-the-web-service-and-the-net-framework"></a>Building Applications Using the Web Service and the .NET Framework
@@ -30,7 +30,7 @@ ms.locfileid: "63284645"
   
  报表服务器 Web 服务客户端是使用简单对象访问协议 (SOAP) 消息与报表服务器通信的任何组件或应用程序。  
   
- 要使用 .NET Framework 创建报表服务器 Web 服务，请按照以下基本步骤进行操作  ：  
+ 要使用 .NET Framework 创建报表服务器 Web 服务，请按照以下基本步骤进行操作：  
   
 1.  创建 Web 服务的代理类。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "63284645"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|描述|  
+|主题|说明|  
 |-----------|-----------------|  
 |[创建 Web 服务代理](../../../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md)|介绍使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 将代理类添加到项目的方法。|  
 |[Web 服务身份验证](../../../reporting-services/report-server-web-service/net-framework/web-service-authentication.md)|介绍如何对针对报表服务器 Web 服务的调用进行身份验证。|  
@@ -54,7 +54,7 @@ ms.locfileid: "63284645"
 |[设置 Web 服务的 Url 属性](../../../reporting-services/report-server-web-service/net-framework/setting-the-url-property-of-the-web-service.md)|说明在创建 Web 引用之后，如何以编程方式将 Web 服务代理定向到新的服务器 URL。|  
 |[提供 Web 服务方法参数](../../../reporting-services/report-server-web-service/net-framework/supplying-web-service-method-arguments.md)|介绍如何调用 Web 服务方法并提供方法参数。|  
 |[省略可选 Web 服务对象的值](../../../reporting-services/report-server-web-service/net-framework/omitting-values-for-optional-web-service-objects.md)|介绍如何忽略可选 Web 服务对象的值。|  
-|[使用安全 Web 服务方法](../../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md)|介绍 SecureConnectionLevel 设置以及它影响 Reporting Services SOAP API 使用的方式  。|  
+|[使用安全 Web 服务方法](../../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md)|介绍 SecureConnectionLevel 设置以及它影响 Reporting Services SOAP API 使用的方式。|  
 |[将设备信息设置传递给呈现扩展插件](../../../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)|介绍用于将报表呈现为不同格式的设备信息设置。|  
 |[Reporting Services 传递扩展插件设置](../../../reporting-services/report-server-web-service/net-framework/reporting-services-delivery-extension-settings.md)|介绍用于通过报表服务器电子邮件传递报表的设置。|  
 |[使用 Reporting Services SOAP 标头](../../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)|说明如何在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中使用 SOAP 标头。|  

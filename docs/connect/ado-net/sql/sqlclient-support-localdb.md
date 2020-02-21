@@ -7,30 +7,30 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 14cbe4ccf227c9462d2a2dc19fb42d913ca7bc5a
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 819a92294fb3d316c172d8c3719bbf659bfa9f86
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451969"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244000"
 ---
 # <a name="sqlclient-support-for-localdb"></a>SqlClient 对 LocalDB 的支持
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下载 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-从 SQL Server 代码名称 Denali 开始，将提供 SQL Server 的轻型版本（称为 LocalDB）。 本主题讨论如何连接到 LocalDB 数据库。  
+从 SQL Server 代码名称 Denali 开始，将提供 SQL Server 的称作 LocalDB 的轻型版本。 本主题介绍如何连接到 LocalDB 数据库。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 有关 LocalDB 的详细信息（包括如何安装 LocalDB 和配置 LocalDB 实例），请参阅 SQL Server 联机丛书。  
   
-若要汇总如何处理 LocalDB：  
+若要汇总可通过 LocalDB 执行的操作：  
   
-- 用 sqllocaldb 或 app.config 文件创建和启动 LocalDB 实例。  
+- 使用 sqllocaldb 或 app.config 文件创建和启动 LocalDB 实例。  
   
-- 使用 sqlcmd.exe 添加和修改 LocalDB 实例中的数据库。 例如， `sqlcmd -S (localdb)\myinst`。  
+- 使用 sqlcmd.exe 添加和修改 LocalDB 实例中的数据库。 例如，`sqlcmd -S (localdb)\myinst` 。  
   
 - 使用 `AttachDBFilename` 连接字符串关键字将数据库添加到 LocalDB 实例。 在使用 `AttachDBFilename` 时，如果你没有使用 `Database` 连接字符串关键字指定数据库的名称，则在应用程序关闭时，将从 LocalDB 实例中删除该数据库。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "72451969"
 server=(localdb)\\myInstance  
 ```  
   
-连接到 LocalDB 数据库时，不允许 `User Instance=True`。  
+连接到 LocalDB 数据库时不允许使用 `User Instance=True`。  
   
 可以从 [Microsoft SQL Server 2012 功能包](https://www.microsoft.com/download/en/details.aspx?id=29065)下载 LocalDB。 如果将使用 sqlcmd.exe 来修改 LocalDB 实例中的数据，将需要 SQL Server 2012 中的 sqlcmd，你也可以从 SQL Server 2012 功能包中获得它。  
   
@@ -67,7 +67,7 @@ server=(localdb)\\myInstance
   
 - 使用 `server` 连接字符串关键字指定实例的名称。  `server` 连接字符串关键字中指定的实例名称必须与 app.config 文件中指定的名称匹配。  
   
-- 使用 `AttachDBFilename` 连接字符串关键字来指定。 .MDF 文件。  
+- 使用 `AttachDBFilename` 连接字符串关键字来指定 .MDF 文件。  
   
 ## <a name="next-steps"></a>后续步骤
 - [SQL Server 功能和 ADO.NET](sql-server-features-adonet.md)

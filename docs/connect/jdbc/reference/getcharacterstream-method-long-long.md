@@ -1,5 +1,5 @@
 ---
-title: getCharacterStream 方法 (long, long) |Microsoft Docs
+title: getCharacterStream 方法 (long, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: d70f502f-f60f-436a-83e6-797a0ed71bf3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a47b7ea56873b0b502ba39a91e4d1ba30044e993
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953257"
 ---
 # <a name="getcharacterstream-method-long-long"></a>getCharacterStream 方法 (long, long)
@@ -30,7 +30,7 @@ public java.io.Reader getCharacterStream(long pos,
                                          long length)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  pos   
   
  指示与要检索的部分值的第一个字符之间偏移量的 long 值  。  
@@ -42,11 +42,11 @@ public java.io.Reader getCharacterStream(long pos,
 ## <a name="return-value"></a>返回值  
  包含 Clob  数据的 Reader 对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 getCharacterStream 方法由 getCharacterStream 方法在 Clob 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 getCharacterStream 方法是由 java.sql.Clob 接口中的 getCharacterStream 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [getCharacterStream 方法 &#40;SQLServerClob&#41;](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverclob.md)   

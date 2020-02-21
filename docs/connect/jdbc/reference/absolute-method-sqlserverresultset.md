@@ -16,10 +16,10 @@ ms.assetid: 638e8148-8ca0-4e1f-9ec2-04a11bc9809b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 66bdbfa417077e70be7969b28ae851a0244e54ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67956067"
 ---
 # <a name="absolute-method-sqlserverresultset"></a>absolute 方法 (SQLServerResultSet)
@@ -34,18 +34,18 @@ ms.locfileid: "67956067"
 public boolean absolute(int row)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
- row   
+#### <a name="parameters"></a>parameters  
+ row  
   
- 指示要移到的行号的 int  值。 它可以为正数、负数或 0。  
+ 指示要移到的行号的 int 值。 它可以为正数、负数或 0。  
   
 ## <a name="return-value"></a>返回值  
- 如果光标移到给定位置,**则为 true** 。 如果它位于第一行之前或最后一行之后, 则**为 false** 。  
+ 如果游标移到给定位置，则值为 true。 如果游标位于第一行之前或最后一行之后，则值为 false。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 absolute 方法是由 java.sql.ResultSet 接口中的 absolute 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  

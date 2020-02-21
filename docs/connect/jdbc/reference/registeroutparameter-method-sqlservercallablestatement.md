@@ -1,5 +1,5 @@
 ---
-title: registerOutParameter 方法 (SQLServerCallableStatement) |Microsoft Docs
+title: registerOutParameter 方法 (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 82f8d608-efc1-4af8-a985-ec25d19420aa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bda185834c24c63ec0a6c9209e6dfd779bece858
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975883"
 ---
 # <a name="registeroutparameter-method-sqlservercallablestatement"></a>registerOutParameter 方法 (SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67975883"
   
 ## <a name="overload-list"></a>重载列表  
   
-|“属性”|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |[registerOutParameter (int, int)](../../../connect/jdbc/reference/registeroutparameter-method-int-int.md)|将指定序号位置的 OUT 参数注册为给定的 JDBC 类型。|  
 |[registerOutParameter (int, int, int)](../../../connect/jdbc/reference/registeroutparameter-method-int-int-int.md)|将指定序号位置的 OUT 参数注册为给定的 JDBC 类型和小数位数。|  

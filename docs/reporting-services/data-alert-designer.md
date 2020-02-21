@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: f259c5a8a9b32d723c62d73f2b0563093851ef5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571595"
 ---
 # <a name="data-alert-designer"></a>数据警报设计器
@@ -50,14 +50,14 @@ ms.locfileid: "65571595"
 > [!NOTE]  
 >  因为只有在 SharePoint 模式下安装了 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 后， [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 数据警报功能才可用，所以，你想要对其创建警报的报表必须保存、部署或上传到 SharePoint 文档库中。  
 >   
->  不能针对使用 Windows 集成身份验证或提示输入凭据的报表创建数据警报。 报表必须使用已存储的凭据。 有关详细信息，请参阅 [为报表数据源指定凭据和连接信息](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)。  
+>  不能针对使用 Windows 集成身份验证或提示输入凭据的报表创建数据警报。 报表必须使用已存储的凭据。 有关详细信息，请参阅[为报表数据源指定凭据和连接信息](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
  若要打开数据警报设计器，请单击报表工具栏上 **“操作”** 菜单中的 **“新建数据警报”** 选项。 如果您看不到 **“新建数据警报”** 选项，则此报表未配置为使用存储的凭据。 您可以通过从 SharePoint 库更新报表数据源来更新凭据类型。  
   
 ##  <a name="AlertDesigner"></a> 数据警报设计器用户界面  
  数据警报设计器分为若干区域。 其中包括用于选择报表数据馈送的区域、通过向条件添加规则来创建简单或复杂条件的区域等区域。 下图显示数据警报设计器中的区域。  
   
- ![“警报设计器”用户界面中的区域](../reporting-services/media/rs-alertdesigner.gif "Areas within the Alert Designer user interface")  
+ ![“警报设计器”用户界面中的区域](../reporting-services/media/rs-alertdesigner.gif "“警报设计器”用户界面中的区域")  
   
   
 ### <a name="alert-data"></a>警报数据  
@@ -179,7 +179,7 @@ ms.locfileid: "65571595"
 ##  <a name="CreateAlert"></a> 创建数据警报定义  
  如果您被授予了 SharePoint 的“查看项”和“创建警报”权限，只要报表使用存储的凭据或没有凭据，您就可以为您有权查看的任何报表创建数据警报定义。 您从 SharePoint 库运行该报表。 您可在数据警报设计器中使用的数据来自该报表。 如果对此报表进行参数化，你可能需要使用不同的参数值来运行此报表，从而确保你感兴趣的数据出现在此报表中。 在该报表打开后，单击报表工具栏上 **“操作”** 菜单中的 **“新建数据警报”** 选项，以便打开数据警报设计器。 下图显示如何打开数据警报设计器。  
   
- ![从 SharePoint 库打开警报设计器](../reporting-services/media/rs-openalertdesigneriw.gif "Open Alert Designer from SharePoint library")  
+ ![从 SharePoint 库打开警报设计器](../reporting-services/media/rs-openalertdesigneriw.gif "从 SharePoint 库打开警报设计器")  
   
  有关详细信息，请参阅 [在数据警报设计器中创建数据警报](../reporting-services/create-a-data-alert-in-data-alert-designer.md)。  
   
@@ -198,7 +198,7 @@ ms.locfileid: "65571595"
   
  若要编辑数据警报定义，请在警报管理器中右键单击，然后单击 **“编辑”** 。 下图显示了数据警报管理器中数据警报上的上下文菜单。  
   
- ![通过单击“编辑”打开数据警报设计器](../reporting-services/media/rs-alertmanageriwopendesigner.gif "Open Data Alert Designer by clicking Edit")  
+ ![通过单击“编辑”打开数据警报设计器](../reporting-services/media/rs-alertmanageriwopendesigner.gif "通过单击“编辑”打开数据警报设计器")  
   
  有关详细信息，请参阅 [在警报设计器中编辑数据警报](../reporting-services/edit-a-data-alert-in-alert-designer.md)。  
   

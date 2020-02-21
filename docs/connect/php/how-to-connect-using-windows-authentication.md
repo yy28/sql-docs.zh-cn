@@ -1,5 +1,5 @@
 ---
-title: '如何: 使用 Windows 身份验证进行连接 |Microsoft Docs'
+title: 如何：使用 Windows 身份验证进行连接 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -13,10 +13,10 @@ ms.assetid: f403a4e0-b0a8-4939-9dc1-e1209626367e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 84707c67491d4f02be41e6506fb233ee7afef9fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936507"
 ---
 # <a name="how-to-connect-using-windows-authentication"></a>如何：使用 Windows 身份验证进行连接
@@ -39,7 +39,7 @@ ms.locfileid: "67936507"
   
 -   用户要进行集中式帐户管理；强制执行多次无效登录请求后的安全策略，如密码有效期、最短密码长度和帐户锁定。  
   
-如果 Windows 身份验证不可行，请参阅 [How to: Connect Using SQL Server Authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md)。  
+如果 Windows 身份验证不可行，请参阅[如何：使用 SQL Server 身份验证进行连接](../../connect/php/how-to-connect-using-sql-server-authentication.md)。  
   
 ## <a name="example"></a>示例  
 通过使用 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的 SQLSRV 驱动程序，以下示例将使用 Windows 身份验证连接到 SQL Server 的本地实例。 建立连接后，服务器将查询正在访问数据库的用户登录名。  
@@ -107,13 +107,13 @@ while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
 ## <a name="see-also"></a>另请参阅  
 [如何：使用 SQL Server 身份验证进行连接](../../connect/php/how-to-connect-using-sql-server-authentication.md)
 
-[Microsoft Driver for PHP for SQL Server 编程指南](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 编程指南](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [文档中相关的代码示例](../../connect/php/about-code-examples-in-the-documentation.md)
 
 [如何：创建 SQL Server 登录名](../../relational-databases/security/authentication-access/create-a-login.md)
 
-[如何创建数据库用户](../../relational-databases/security/authentication-access/create-a-database-user.md)
+[如何：创建数据库用户](../../relational-databases/security/authentication-access/create-a-database-user.md)
 
 [管理用户、角色和登录帐户](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
 

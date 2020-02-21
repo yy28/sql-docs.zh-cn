@@ -1,5 +1,5 @@
 ---
-title: setSendStringParametersAsUnicode 方法 (SQLServerDataSource) |Microsoft Docs
+title: setSendStringParametersAsUnicode 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 49198d63-76cb-4843-8d04-e49b1fbb6916
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fe32325caccebd0e85204bbbc11b7a0cbe4eefca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972991"
 ---
 # <a name="setsendstringparametersasunicode-method-sqlserverdatasource"></a>setSendStringParametersAsUnicode 方法 (SQLServerDataSource)
@@ -34,15 +34,15 @@ ms.locfileid: "67972991"
 public void setSendStringParametersAsUnicode(boolean sendStringParametersAsUnicode)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  sendStringParametersAsUnicode   
   
  如果以 UNICODE 格式将字符串参数发送到服务器，则为 true  。 否则为 **false**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果 sendStringParametersAsUnicode 属性设置为 true  （默认值），字符串参数便会以 UNICODE 格式发送到服务器。 如果 sendStringParametersAsUnicode 设置为 false  ，字符串参数便会以 ASCII/MBCS 格式（而非 UNICODE 格式）发送到服务器。 如果 sendStringParametersAsUnicode 属性未设置，[getSendStringParametersAsUnicode](../../../connect/jdbc/reference/getsendstringparametersasunicode-method-sqlserverdatasource.md) 返回默认值 true  。  
   
- 有关 sendStringParametersAsUnicode 连接属性的详细信息, 请参阅[设置连接属性](../../../connect/jdbc/setting-the-connection-properties.md)。  
+ 有关 sendStringParametersAsUnicode 连接属性的详细信息，请参阅[设置连接属性](../../../connect/jdbc/setting-the-connection-properties.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDataSource 成员](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

@@ -1,5 +1,5 @@
 ---
-title: getLockTimeout 方法 (SQLServerDataSource) |Microsoft Docs
+title: getLockTimeout 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 676094e9-ec18-4524-9b21-1f9c5b16dd52
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f9c94e0c69bd528f1c579f41319a4db18b7d4d3c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982558"
 ---
 # <a name="getlocktimeout-method-sqlserverdatasource"></a>getLockTimeout 方法 (SQLServerDataSource)
@@ -37,7 +37,7 @@ public int getLockTimeout()
 ## <a name="return-value"></a>返回值  
  包含数据库要等待的毫秒数的 int  值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  锁定超时是指在等待多少毫秒后数据库报告锁定超时。默认值 -1 表示无限期等待。 如果指定，该值将成为此连接上所有语句的默认值。  
   
 > [!NOTE]  

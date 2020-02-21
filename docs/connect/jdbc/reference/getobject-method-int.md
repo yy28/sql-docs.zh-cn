@@ -1,5 +1,5 @@
 ---
-title: getObject 方法 (int) |Microsoft Docs
+title: getObject 方法 (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: c4b8366b-c065-48e1-b712-19e2d9834228
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: db0b8768c599ebf8fcef127139b9fb8bd6d8ec50
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981217"
 ---
 # <a name="getobject-method-int"></a>getObject 方法 (int)
@@ -34,18 +34,18 @@ ms.locfileid: "67981217"
 public java.lang.Object getObject(int index)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
- 索引   
+#### <a name="parameters"></a>parameters  
+ 索引  
   
- 指示参数索引的 int  。  
+ 指示参数索引的 int。  
   
 ## <a name="return-value"></a>返回值  
- Object 值  。  
+ Object 值。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 getObject 方法是由 java.sql.CallableStatement 接口中的 getObject 方法指定的。  
   
  此方法将返回给定列的值作为一个 Java 对象。 根据 JDBC 规范中指定的内置类型映射，Java 对象的类型将为对应于此列 SQL 类型的默认 Java 对象类型。 如果此值为 SQL NULL，则驱动程序会返回 Java null。  
@@ -54,13 +54,13 @@ public java.lang.Object getObject(int index)
   
  从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 开始：  
   
--   date 类型的值将作为 java.sql.Date 对象返回  。  
+-   date 类型的值将作为 java.sql.Date 对象返回。  
   
--   time 类型的值将作为 java.sql.Time 对象返回  。  
+-   time 类型的值将作为 java.sql.Time 对象返回。  
   
--   datetime2 类型的值将作为 java.sql.Timestamp 对象返回  。  
+-   datetime2 类型的值将作为 java.sql.Timestamp 对象返回。  
   
--   datetimeoffset 类型的值将作为 microsoft.sql.DateTimeOffset 对象返回  。  
+-   datetimeoffset 类型的值将作为 microsoft.sql.DateTimeOffset 对象返回。  
   
 ## <a name="see-also"></a>另请参阅  
  [getObject 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getobject-method-sqlservercallablestatement.md)   

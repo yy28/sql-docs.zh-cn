@@ -14,10 +14,10 @@ ms.assetid: d8143a4b-08a1-4c38-9d00-8e50818ee380
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8b9e33f7c4d1b3ed953882175cd430df2b1e6ce1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62991595"
 ---
 # <a name="identifying-execution-state"></a>标识执行状态
@@ -37,7 +37,7 @@ ms.locfileid: "62991595"
   
  下图显示报表的处理和呈现路径。  
   
- ![报表处理/呈现路径](../../reporting-services/report-server-web-service-net-framework-soap-headers/media/rs-render-process-diagram.gif "Report processing/rendering path")  
+ ![报表处理/呈现路径](../../reporting-services/report-server-web-service-net-framework-soap-headers/media/rs-render-process-diagram.gif "报表处理/呈现路径")  
   
  为了支持上面介绍的函数，当前 SOAP Render 方法已被拆分为多个方法，其中包括执行初始化阶段、处理阶段和呈现阶段。  
   

@@ -1,6 +1,7 @@
 ---
-title: 从故障转移群集实例故障中恢复 | Microsoft Docs
-ms.custom: ''
+title: 从故障转移群集实例故障中恢复
+description: 描述如何从 SQL Server 故障转移群集实例的故障转移中恢复。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3d151d0c-e841-4325-8606-c094de37d7d1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f962688b69155c6daddc98e6d505a5275741cf86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1670638b32f2f5bd32a9ee7b12e28e7a468b75da
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044715"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74821989"
 ---
 # <a name="recover-from-failover-cluster-instance-failure"></a>从故障转移群集实例故障中恢复
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

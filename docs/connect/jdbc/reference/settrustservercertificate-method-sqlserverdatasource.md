@@ -1,5 +1,5 @@
 ---
-title: setTrustServerCertificate 方法 (SQLServerDataSource) |Microsoft Docs
+title: setTrustServerCertificate 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 6c37b518-147e-4cd9-9eff-b48a3f5888c6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bd4059c3562d679e4f5f8bfdd133ca69a62c1fd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972208"
 ---
 # <a name="settrustservercertificate-method-sqlserverdatasource"></a>setTrustServerCertificate 方法 (SQLServerDataSource)
@@ -34,12 +34,12 @@ ms.locfileid: "67972208"
 public void setTrustServerCertificate(boolean trustServerCertificate)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *trustServerCertificate*  
   
  如果当使用安全套接字层 (SSL) 对通信层加密时应自动信任服务器安全套接字层证书，则为“true”  。 否则为 **false**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果将 trustServerCertificate 属性设置为“true”，则当使用 SSL 对通信层加密时将自动信任 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SSL 证书  。 换言之，[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 将不会验证 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SSL 证书。 默认值是 **false**秒。  
   
  如果将 trustServerCertificate 属性设置为“false”，则 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 将验证服务器 SSL 证书  。  

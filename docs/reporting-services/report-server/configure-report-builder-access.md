@@ -8,10 +8,10 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 06/06/2019
 ms.openlocfilehash: 724fac17abf7f5da45101a6ff22d3185a7ade93b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68255175"
 ---
 # <a name="configure-report-builder-access"></a>配置报表生成器访问权限
@@ -29,15 +29,15 @@ ms.locfileid: "68255175"
 
 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本中均不提供报表生成器。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2017 各个版本支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。  
 
-客户端计算机必须[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]分别为 SSRS 2016 和2017安装4.6 或4.6.1。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 提供运行 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 应用程序的基础结构。  
+客户端计算机必须分别为 SSRS 2016 和 2017 安装 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 或 4.6.1。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 提供运行 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 应用程序的基础结构。  
 
-必须使用 Internet [!INCLUDE[msCoName](../../includes/msconame-md.md)] Explorer 11 或更高版本, 或使用其他新式浏览器。  
+必须使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 11 或更高版本或其他新式浏览器。  
 
 报表生成器始终在完全信任模式下运行；不能将其配置为在部分信任模式下运行。 在以前的版本中，可以在部分信任模式下运行报表生成器，但是 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本中不支持该选项。  
 
 ## <a name="enabling-and-disabling-report-builder"></a>启用和禁用报表生成器  
 
-默认情况下，将启用报表生成器。 报表服务器管理员可以视需要将报表服务器系统属性 ShowDownloadMenu  设置为 false  ，以禁用报表生成器功能。 设置此属性将禁用该 Report Server 报表生成器、移动报表发布服务器和 Power BI 移动版下载。  
+默认情况下，将启用报表生成器。 报表服务器管理员可以视需要将报表服务器系统属性 ShowDownloadMenu  设置为 false  ，以禁用报表生成器功能。 设置此属性将会禁用该报表服务器的报表生成器、移动报表发布服务器和 Power BI 移动版下载功能。  
 
  若要设置报表服务器系统属性，可以使用 Management Studio 或脚本：   
 
@@ -101,7 +101,7 @@ ms.locfileid: "68255175"
 
     4. 在“说明”中，输入角色说明，以便 Web 门户中的用户知道角色的用途。  
 
-    5. 添加下列任务： **“使用报表”** 、 **“查看报表”** 、 **“查看模型”** 、 **“查看资源”** 、 **“查看文件夹”** 和 **“管理单独的订阅”** 。  
+    5. 添加下列任务：“使用报表”  、“查看报表”  、“查看模型”  、“查看资源”  、“查看文件夹”  和“管理单独的订阅”  。  
 
     6. 单击 **“确定”** 保存角色。  
 
@@ -109,8 +109,8 @@ ms.locfileid: "68255175"
 
 1. 启动 Web 门户。  
 
-2. 单击 web 门户主页右上方的齿轮图标, 并从下拉菜单中选择 "**站点设置**"。  
-![web 门户齿轮图标和菜单](../../reporting-services/report-builder/media/configure-report-builder-access/ssrswebportal-site-settings-gear-icon-and-menu.png)
+2. 单击 Web 门户主页右上方的齿轮图标，并从下拉菜单中选择“网站设置”  。  
+![Web 门户齿轮图标和菜单](../../reporting-services/report-builder/media/configure-report-builder-access/ssrswebportal-site-settings-gear-icon-and-menu.png)
 
 3. 单击 **“安全性”** 。  
 
@@ -123,7 +123,7 @@ ms.locfileid: "68255175"
 
 7. 单击 **“文件夹设置”** 选项卡。  
 
-8. 单击 **“安全性”** 选项卡。  
+8. 单击“安全”选项卡。   
 
 9. 如果要为其配置报表生成器访问权的用户或组已经分配有角色，则单击 **“编辑”** 。  
 

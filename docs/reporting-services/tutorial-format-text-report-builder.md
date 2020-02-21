@@ -9,10 +9,10 @@ ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 090729625991e3a1aaa6fb1ada3012a15ff20dce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63042939"
 ---
 # <a name="tutorial-format-text-report-builder"></a>教程：设置文本格式（报表生成器）
@@ -25,7 +25,7 @@ ms.locfileid: "63042939"
   
 在一个步骤中，您可以故意犯某个错误，以便可以了解错误的成因。 然后，您可以纠正该错误以便实现预期效果。  
     
-完成本教程的预计学时：20 分钟。  
+完成本教程的估计时间：20 分钟。  
   
 ## <a name="requirements"></a>要求  
 有关要求的信息，请参阅[教程先决条件（报表生成器）](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
@@ -50,7 +50,7 @@ ms.locfileid: "63042939"
 
     如果未出现“报表数据”窗格，请在“视图”选项卡上选中“报表数据”    。
   
-2.  在“名称”框中，键入：TextDataSource    
+2.  在“名称”  框中键入：“TextDataSource”   
   
 3.  单击 **“使用我的报表中嵌入的连接”** 。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "63042939"
   
 2.  确保数据源为 **TextDataSource**。  
   
-3.  在“名称”框中，键入：TextDataset   。  
+3.  在“名称”  框中键入：“TextDataset”  。  
   
 4.  确保已选择 **“文本”** 查询类型，然后单击 **“查询设计器”** 。  
   
@@ -187,7 +187,7 @@ ms.locfileid: "63042939"
   
 4.  在“选择布局”页上，取消选中“展开/折叠组”复选框，以便查看整个表，然后单击“下一步”    。 
   
-5.  单击 **“完成”** 。  
+5.  单击“完成”  。  
   
 6.  单击 **“运行”** 。  
   
@@ -314,7 +314,7 @@ ms.locfileid: "63042939"
   
 6.  在“常规”选项卡上的“标记类型”下，单击“HTML - 将 HTML 标记解释为样式”    。  
   
-7.  单击“确定”  。  
+7.  单击“确定”。   
   
 8.  单击“运行” ( **!** ) 以预览报表。  
   
@@ -339,7 +339,7 @@ ms.locfileid: "63042939"
   
 4.  在“名称”中，用选择的名称替换默认名称  。
 
-5.  单击 **“保存”** 。  
+5.  单击“ **保存**”。  
   
 报表即已保存至报表服务器。 您连接的报表服务器的名称将显示在窗口底部的状态栏中。  
   
@@ -351,11 +351,11 @@ ms.locfileid: "63042939"
   
 3.  在“名称”中，用选择的名称替换默认名称  。 
   
-4.  单击 **“保存”** 。  
+4.  单击“ **保存**”。  
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>后续步骤
 
-有许多方式可以在报表生成器中设置文本的格式。 [教程：创建自由格式的报表](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)中提供了更多示例。  
+有许多方式可以在报表生成器中设置文本的格式。 [教程：生成自由格式报表](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)包含更多示例。  
 
 [报表生成器教程](../reporting-services/report-builder-tutorials.md) 
 [设置报表项的格式](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  

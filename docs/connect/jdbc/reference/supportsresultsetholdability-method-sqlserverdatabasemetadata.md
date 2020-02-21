@@ -1,5 +1,5 @@
 ---
-title: supportsResultSetHoldability 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
+title: supportsResultSetHoldability 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: ab575792-fd11-4ff3-8847-1368e7a322c5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 766c09aca5256d369ebad98cb1c002f4498dda7a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67968941"
 ---
 # <a name="supportsresultsetholdability-method-sqlserverdatabasemetadata"></a>supportsResultSetHoldability 方法 (SQLServerDatabaseMetaData)
@@ -34,7 +34,7 @@ ms.locfileid: "67968941"
 public boolean supportsResultSetHoldability(int holdability)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *holdability*  
   
  指示结果集可保持性的 int  ，可以为以下值之一：  
@@ -44,13 +44,13 @@ public boolean supportsResultSetHoldability(int holdability)
  ResultSet.CLOSE_CURSORS_AT_COMMIT  
   
 ## <a name="return-value"></a>返回值  
- 如果支持,**则为 true** 。 否则为 **false**。  
+ 如果支持，则值为 true  。 否则为 **false**。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 supportsResultSetHoldability 方法由 supportsResultSetHoldability 方法在 Java.sql.databasemetadata 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 supportsResultSetHoldability 方法是由 java.sql.DatabaseMetaData 接口中的 supportsResultSetHoldability 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

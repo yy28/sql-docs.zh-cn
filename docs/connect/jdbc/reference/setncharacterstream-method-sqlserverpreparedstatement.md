@@ -1,5 +1,5 @@
 ---
-title: setNCharacterStream 方法到 java. 读取器对象 |Microsoft Docs
+title: 设置为 java.io.Reader 对象的 setNCharacterStream 方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 2c245f0e-85ec-4d94-93ac-4957aa52b984
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4f64854a45318af22d50705a69ac4c5d7dd63786
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973815"
 ---
 # <a name="setncharacterstream-method-sqlserverpreparedstatement"></a>setNCharacterStream 方法 (SQLServerPreparedStatement)
@@ -24,7 +24,7 @@ ms.locfileid: "67973815"
   
 ## <a name="overload-list"></a>重载列表  
   
-|“属性”|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |[setNCharacterStream 方法 &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/setncharacterstream-method-int-java-io-reader.md)|将指定参数设置为指定的 java.io.Reader 对象。|  
 |[setNCharacterStream 方法 &#40;int, java.io.Reader, long&#41;](../../../connect/jdbc/reference/setncharacterstream-method-int-java-io-reader-long.md)|将指定参数设置为指定的 java.io.Reader 对象。|  

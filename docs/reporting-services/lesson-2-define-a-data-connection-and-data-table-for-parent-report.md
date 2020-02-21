@@ -9,10 +9,10 @@ ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e8bcfe976a8094c6faa22d8aab3db8a4a833d8cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62651595"
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>第 2 课：定义用于父报表的数据连接和数据表
@@ -46,7 +46,7 @@ ms.locfileid: "62651595"
   
 7.  如果在第 6 (b) 步中选择了“使用 SQL Server 身份验证”，则选择一个选项，决定是在字符串中加入敏感数据还是在应用程序代码中设置该信息  。  
   
-8.  在“将连接字符串保存到应用程序配置文件中”页上，键入连接字符串的名称，或接受默认的“AdventureWorks2014ConnectionString”   。 选择“下一步”  。  
+8.  在“将连接字符串保存到应用程序配置文件中”页上，键入连接字符串的名称，或接受默认的“AdventureWorks2014ConnectionString”   。 选择“**下一页**”。  
   
 9. 在“选择命令类型”页上，选择“使用 SQL 语句”，然后选择“下一步”    。  
   
@@ -65,11 +65,11 @@ ms.locfileid: "62651595"
   
     配置 ADO.NET DataTable 对象作为报表的数据源现已完毕。 在 Visual Studio 中的“数据集设计器”页上，应看到所添加的 DataTable 对象，并列出在查询中指定的列。 DataSet1 由根据查询从 Product 表获得的数据组成。  
   
-12. 保存该文件。  
+12. 保存文件。  
   
 13. 要预览数据，请在“数据”菜单上选择“预览数据”，然后选择“预览”    。  
   
 ## <a name="next-task"></a>下一个任务  
-您已成功创建了用于父报表的数据连接和数据表。 接下来，将使用报表向导设计父报表。 请参阅 [第 3 课：使用报表向导设计父报表](../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md)。  
+您已成功创建了用于父报表的数据连接和数据表。 接下来，将使用报表向导设计父报表。 请参阅[第 3 课：使用报表向导设计父报表](../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md)。  
   
 

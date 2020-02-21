@@ -1,5 +1,5 @@
 ---
-title: getDouble 方法 (int) |Microsoft Docs
+title: getDouble 方法 (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: c0ed63bb-5ebe-4155-9f91-8fbfeac9c3b2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b02292225d0f0be0529537f369c2fa760d677486
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983591"
 ---
 # <a name="getdouble-method-int"></a>getDouble 方法 (int)
@@ -34,18 +34,18 @@ ms.locfileid: "67983591"
 public double getDouble(int index)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  索引   
   
  指示参数索引的 int  。  
   
 ## <a name="return-value"></a>返回值  
- **双精度**值。  
+ double  值。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 getDouble 方法是由 java.sql.CallableStatement 接口中的 getDouble 方法指定的。  
   
  此方法使用 Java double 精度返回所有基于数字的数据类型  。  

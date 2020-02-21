@@ -1,6 +1,6 @@
 ---
-title: 使用 sqlcmd 实用工具 | Microsoft Docs
-ms.custom: ''
+title: 使用 sqlcmd 实用工具
+ms.custom: seo-lt-2019
 ms.date: 06/06/2017
 ms.prod: sql
 ms.technology: scripting
@@ -17,12 +17,12 @@ ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7fd1c2eafec0d0dd832e4d01d43195d7ec175485
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.openlocfilehash: f3e77699ce94f150bc5ec38fa40c400884d38faa
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816616"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243462"
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - 使用实用工具
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "71816616"
   
 ## <a name="typically-used-sqlcmd-options"></a>常用 sqlcmd 选项  
   
--   服务器选项 (-S)，用于标识 sqlcmd 连接到的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例   。  
+-   服务器选项 (-S  )，用于标识 sqlcmd  连接到的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。  
   
 -   身份验证选项（-E、-U 和 -P），用于指定 sqlcmd 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例所使用的凭据     。 **注意：** -E  选项为默认选项，无需指定。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "71816616"
     sqlcmd -S <ComputerName>\<InstanceName>  
     ```  
   
-     或多个  
+     或  
   
     ```  
     sqlcmd -S .\<InstanceName>  

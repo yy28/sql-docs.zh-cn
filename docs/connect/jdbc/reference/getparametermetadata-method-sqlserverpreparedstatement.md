@@ -1,5 +1,5 @@
 ---
-title: getParameterMetaData 方法 (SQLServerPreparedStatement) |Microsoft Docs
+title: getParameterMetaData 方法 (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: c2876dec-ce29-4b61-9d74-ec3173b8cba5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a24871c504be10e766bbbec59a8f03f98cb5e00c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980984"
 ---
 # <a name="getparametermetadata-method-sqlserverpreparedstatement"></a>getParameterMetaData 方法 (SQLServerPreparedStatement)
@@ -37,11 +37,11 @@ public final java.sql.ParameterMetaData getParameterMetaData()
 ## <a name="return-value"></a>返回值  
  [SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md) 对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 getParameterMetaData 方法由 getParameterMetaData 方法在 Java.sql.preparedstatement 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 getParameterMetaData 方法是由 java.sql.PreparedStatement 接口中的 getParameterMetaData 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerPreparedStatement 成员](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

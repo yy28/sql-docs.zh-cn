@@ -11,10 +11,10 @@ ms.assetid: 6c32b904-c44b-472e-a084-38f008a742b4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 483588eee0a5d1baaf7f2eda4a88372c45836d2e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975309"
 ---
 # <a name="setbinarystream-method-int-javaioinputstream"></a>setBinaryStream 方法 (int, java.io.InputStream)
@@ -30,20 +30,20 @@ public final void setAsciiStream(int parameterIndex,
                                  java.io.InputStream x)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  parameterIndex   
   
  指示参数编号的 int  。  
   
  *x*  
   
- InputStream 对象。  
+ java.io.InputStream 对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 setBinaryStream 方法由 setBinaryStream 方法在 Java.sql.preparedstatement 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 setBinaryStream 方法是由 java.sql.PreparedStatement 接口中的 setBinaryStream 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [setBinaryStream 方法 &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setbinarystream-method-sqlserverpreparedstatement.md)   

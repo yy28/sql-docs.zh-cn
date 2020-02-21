@@ -1,5 +1,5 @@
 ---
-title: free 方法 (SQLServerNClob) |Microsoft Docs
+title: free 方法 (SQLServerNClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: ff46e669-a719-4dad-8b1a-3a6478175d41
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f7bfa913dc8a879be9279e086d1d7ff397c578bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954457"
 ---
 # <a name="free-method-sqlservernclob"></a>free 方法 (SQLServerNClob)
@@ -29,10 +29,10 @@ ms.locfileid: "67954457"
 public void free()  
 ```  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 free 方法是由 java.sql.NClob 接口中的 free 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  

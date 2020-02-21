@@ -1,5 +1,5 @@
 ---
-title: 'PDOStatement:: execute |Microsoft Docs'
+title: PDOStatement::execute | Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2018
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: c2e80566-fa41-4918-8521-cf2e05374cbd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 31e7465b2fca0d76f569afb83e3a7d8501fd6036
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936048"
 ---
 # <a name="pdostatementexecute"></a>PDOStatement::execute
@@ -29,13 +29,13 @@ ms.locfileid: "67936048"
 bool PDOStatement::execute ([ $input ] );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
-$input：（可选）包含参数标记的值的关联阵列  。  
+#### <a name="parameters"></a>parameters  
+$input：（可选）包含参数标记的值的关联阵列。  
   
 ## <a name="return-value"></a>返回值  
 如果成功，则为 True；否则为 False。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 使用 PDOStatement::execute 执行的语句必须先通过 [PDO::prepare](../../connect/php/pdo-prepare.md)准备就绪。 请参阅 [PDO_SQLSRV 驱动程序中的直接语句执行和已准备的语句执行](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md) 获取有关如何指定直接或已准备的语句执行的信息。  
   
 输入参数数组的所有值将会视为 PDO::PARAM_STR 值。  

@@ -1,5 +1,5 @@
 ---
-title: setBoolean 方法 (SQLServerCallableStatement) |Microsoft Docs
+title: setBoolean 方法 (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 8cd810b1-9858-4e51-9535-239d864cd288
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 04f09bcd843946763fe3bb2b69cbdcd9560e7c91
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975046"
 ---
 # <a name="setboolean-method-sqlservercallablestatement"></a>setBoolean 方法 (SQLServerCallableStatement)
@@ -35,19 +35,19 @@ public void setBoolean(java.lang.String sCol,
                        boolean b)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  sCol   
   
  包含参数名称的字符串  。  
   
  *b*  
   
- **布尔**值,**为 true**或**false**。  
+ 布尔值  ，为 true  或 false  。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 setBoolean 方法由 java.sql.CallableStatement 接口中的 setBoolean 方法指定。  
   
 ## <a name="see-also"></a>另请参阅  

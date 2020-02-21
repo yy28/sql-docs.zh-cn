@@ -11,10 +11,10 @@ ms.assetid: 7641698e-b25c-4bb2-bcc7-9273bdd08bf0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 11d0a2c40462784558f4d618c7e3d0a206d6d382
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953291"
 ---
 # <a name="getcharacterstream-method--sqlservernclob"></a>getCharacterStream 方法 () (SQLServerNClob)
@@ -29,14 +29,14 @@ ms.locfileid: "67953291"
 public java.io.Reader getCharacterStream()  
 ```  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="return-value"></a>返回值  
  包含 NCLOB  数据的 Reader 对象。  
   
-## <a name="remarks"></a>Remarks  
- 此 getCharacterStream 方法由 getCharacterStream 方法在 NClob 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 getCharacterStream 方法是由 java.sql.NClob 接口中的 getCharacterStream 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [getCharacterStream 方法 &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/getcharacterstream-method-sqlservernclob.md)   

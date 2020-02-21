@@ -9,10 +9,10 @@ ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 944b6c7053b024a0a62cc24c53095464844d4387
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573950"
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Tablix 数据区域（报表生成器和 SSRS）
@@ -26,7 +26,7 @@ ms.locfileid: "65573950"
   
 在设计图面上，用点线表示选定 Tablix 数据区域中的上述四个区域。 下图显示了 Tablix 区域的相应区域，该 Tablix 区域具有基于 Category 和 Subcategory 的嵌套行组、基于 Geography 和 Country/Region 的嵌套列组，以及基于 Year 的相邻列组。  
   
- ![Tablix data region areas](../../reporting-services/report-design/media/rs-tablixareas.gif "Tablix data region areas")  
+ ![Tablix 数据区域](../../reporting-services/report-design/media/rs-tablixareas.gif "Tablix 数据区域")  
   
  下表对各区域进行了说明：  
   
@@ -42,7 +42,7 @@ ms.locfileid: "65573950"
   
  下图在预览中显示 Tablix 数据区域。  
   
- ![预览、Tablix 角、行组和列组、正文](../../reporting-services/report-design/media/rs-tablixareaspreview.gif "预览、Tablix 角、行组和列组、正文")  
+ ![Tablix 角、行组和列组、正文的预览](../../reporting-services/report-design/media/rs-tablixareaspreview.gif "Tablix 角、行组和列组、正文的预览")  
   
  行组区显示 Clothing 和 Components 的两个类别组实例。 列组显示 North America 的地理组实例，其中包括 Canada (CA) 和 United States (US) 两个嵌套国家/地区组实例。 此外，相邻列显示 2003 和 2004 的两个年份组实例。 Total 列显示行总计；总计 (totals) 行重复用于显示子类别总计的类别组，而总计 (grand total) 行对数据区域显示一次类别总计。  
   

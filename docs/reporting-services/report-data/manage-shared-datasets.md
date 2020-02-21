@@ -9,10 +9,10 @@ ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 332103dd9f100a2477b9ae7392bd6d24088261f6
-ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67220589"
 ---
 # <a name="manage-shared-datasets"></a>管理共享数据集
@@ -25,7 +25,7 @@ ms.locfileid: "67220589"
   
 -   报表生成器   使用共享数据集设计模式并将共享数据集保存到某一报表服务器或 SharePoint 站点。  
   
--   报表设计器在[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]/ Visual Studio 解决方案资源管理器中的数据集文件夹中创建共享数据集。 若要发布某一共享数据集，请将其部署到报表服务器或 SharePoint 站点。  
+-   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] / Visual Studio 中的报表设计器在解决方案资源管理器的“数据集”文件夹中创建共享数据集。 若要发布某一共享数据集，请将其部署到报表服务器或 SharePoint 站点。  
   
 -   上传共享数据集定义 (.rsd) 文件   你可以将某一文件上传到报表服务器或 SharePoint 站点。 在 SharePoint 站点上。 在缓存共享数据集或者在报表中使用共享数据集之前，不根据架构对上载的文件进行验证。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "67220589"
   
  下面的其他共享数据集属性将自动配置：  
   
-|属性|描述|  
+|properties|说明|  
 |--------------|-----------------|  
 |HasDataSourceCredentials|相关联的共享数据源是否将凭据保存在报表服务器上。|  
 |HasUserProfileDependencies|报表在其查询或筛选表达式中是否具有对“用户”全局集合的引用。|  
@@ -82,7 +82,7 @@ ms.locfileid: "67220589"
   
 |任务      |工具      |链接      |  
 |----------|----------|----------|  
-|添加共享数据集或更改共享数据集定义属性。|在报表生成器中保存。<br /><br /> 在报表设计器中部署。<br /><br /> 上载.rsd 文件中的 web 门户|[报表内嵌数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)]<br /><br /> [在报表服务器中上传文件或报表](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)<br /><br /> 如果您首先上载一个共享数据集，然后发布该共享数据集所依赖的共享数据源，则必须手动将该共享数据集绑定到该共享数据源。 有关详细信息，请参阅[.../..使用共享数据集-web 门户 /reporting-services/Work](../work-with-shared-datasets-web-portal.md)。|  
+|添加共享数据集或更改共享数据集定义属性。|在报表生成器中保存。<br /><br /> 在报表设计器中部署。<br /><br /> 在 Web 门户中上传 .rsd 文件|[报表内嵌数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)]<br /><br /> [在报表服务器中上传文件或报表](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)<br /><br /> 如果您首先上载一个共享数据集，然后发布该共享数据集所依赖的共享数据源，则必须手动将该共享数据集绑定到该共享数据源。 有关详细信息，请参阅 [../../reporting-services/使用共享数据集 - Web 门户](../work-with-shared-datasets-web-portal.md)。|  
 |更改共享数据集的项属性。|Web 门户|[使用共享数据集 - Web 门户](../../reporting-services/work-with-shared-datasets-web-portal.md)|  
 |为报表中的共享数据集实例指定其他共享数据集属性。|报表生成器/报表设计器|[“数据集属性”对话框 >“查询”（报表生成器）](../../reporting-services/report-data/dataset-properties-dialog-box-query-report-builder.md)|  
 |绑定到共享数据集的不同共享数据源。|Web 门户|[配置分页报表的数据源属性 - SSRS](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)|  
@@ -98,7 +98,7 @@ ms.locfileid: "67220589"
   
 -   与共享数据源类似，可以独立于使用共享数据集的报表来管理共享数据集。 在报表服务器上管理共享数据集的一部分工作就是能够不必编辑共享数据集定义，便可更改它所依赖的共享数据源。  
   
--   与报表类似，可以缓存共享数据集。 数据源所要求的凭据必须满足缓存限制，并且必须为每个参数指定默认值。 有关详细信息，请参阅 msdn.microsoft.com 上 [缓存共享数据集 (SSRS)](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)。  
+-   与报表类似，可以缓存共享数据集。 数据源所要求的凭据必须满足缓存限制，并且必须为每个参数指定默认值。 有关详细信息，请参阅[缓存共享数据集 (SSRS)](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)。  
   
 -   与报表类似，每次进行处理时，都将使用报表服务器上项的当前定义。 如果您对某一共享数据集进行更改，则在处理报表时，使用该共享数据集的每个报表都将使用报表服务器上的当前定义。 如果为共享数据集启用了缓存并且您对共享数据集定义进行更改，则在缓存中的数据到期前，将不使用这些更改。 您可以使用缓存刷新计划来帮助为多个报表提供一致的数据集。  
   

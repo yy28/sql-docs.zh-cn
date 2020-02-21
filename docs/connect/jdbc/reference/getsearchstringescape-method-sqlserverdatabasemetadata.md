@@ -1,5 +1,5 @@
 ---
-title: getSearchStringEscape 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getSearchStringEscape 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: ea0f95d0-0238-4dc8-9f26-7ff9b65f30c3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1b65281fbe6ba1f758bdd4e12ae834cee3347842
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980050"
 ---
 # <a name="getsearchstringescape-method-sqlserverdatabasemetadata"></a>getSearchStringEscape 方法 (SQLServerDatabaseMetaData)
@@ -37,11 +37,11 @@ public java.lang.String getSearchStringEscape()
 ## <a name="return-value"></a>返回值  
  包含转义通配符字符串的 String  。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 getSearchStringEscape 方法由 getSearchStringEscape 方法在 Java.sql.databasemetadata 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 getSearchStringEscape 方法是由 java.sql.DatabaseMetaData 接口中的 getSearchStringEscape 方法指定的。  
   
  此方法仅用于元数据模式搜索。 它返回“\\”。 String  搜索模式可以对通配符（“%”和“_”）进行转义，并通过在这些通配符之前加反斜杠将其作为文字提供。 这样可将“\\%”转换为“[%]”，将“\\\_”转换为“[\_]”。  
   

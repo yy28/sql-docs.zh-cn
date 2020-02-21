@@ -16,10 +16,10 @@ ms.assetid: 240983e8-bd59-4bb1-a37a-5ba71f85fb72
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ae69ea0bcbd77d509e541d34594560863af0475e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67996927"
 ---
 # <a name="updatebyte-method-sqlserverresultset"></a>updateByte 方法 (SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67996927"
   
 ## <a name="overload-list"></a>重载列表  
   
-|“属性”|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |[updateByte (int, byte)](../../../connect/jdbc/reference/updatebyte-method-int-byte.md)|根据给定的列索引使用 byte  值更新指定的列。|  
 |[updateByte (java.lang.String, byte)](../../../connect/jdbc/reference/updatebyte-method-java-lang-string-byte.md)|根据给定的列名称使用 byte  值更新指定的列。|  

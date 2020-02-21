@@ -16,10 +16,10 @@ ms.assetid: cdddc572-05c1-480d-b3e5-28270001575c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 174deb24d78821e30d69dc899c5657909241ad3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953284"
 ---
 # <a name="getcharacterstream-method-javalangstring"></a>getCharacterStream 方法 (java.lang.String)
@@ -34,7 +34,7 @@ ms.locfileid: "67953284"
 public java.io.Reader getCharacterStream(java.lang.String columnName)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *columnName*  
   
  一个包含列名的字符串  。  
@@ -42,11 +42,11 @@ public java.io.Reader getCharacterStream(java.lang.String columnName)
 ## <a name="return-value"></a>返回值  
  Reader 对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 getCharacterStream 方法由 getCharacterStream 方法在方法中指定。  
+## <a name="remarks"></a>备注  
+ 此 getCharacterStream 方法是由 java.sql.ResultSet 接口中的 getCharacterStream 方法指定的。  
   
  此方法将只读取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Unicode 字符数据类型，例如 nchar、nvarchar、nvarchar(max) 和 ntext。 任何其他数据类型（包括 ASCII 字符类型）会引发异常。 若要读取 ASCII 数据类型，请使用 [getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md) 方法。  
   

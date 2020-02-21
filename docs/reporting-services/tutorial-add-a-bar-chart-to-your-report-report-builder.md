@@ -9,10 +9,10 @@ ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8e6855a7a6a47021a635e12b2c53515ed20aa6f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63041175"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>教程：向报表添加条形图（报表生成器）
@@ -30,9 +30,9 @@ ms.locfileid: "63041175"
   
  
 > [!NOTE]  
-> 在本教程中，将向导的多个步骤合并为一个过程。 有关如何浏览到报表服务器、创建数据集和选择数据源的分步说明，请参阅这一系列教程中的第一个教程：[教程：创建基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+> 在本教程中，将向导的多个步骤合并为一个过程。 有关如何转到报表服务器、创建数据集和选择数据源的分步说明，请参阅本系列教程中的第一个教程：[教程：生成基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
-本教程的预计学时：15 分钟。  
+完成本教程的估计时间：15 分钟。  
   
 ## <a name="requirements"></a>要求  
 有关要求的详细信息，请参阅[教程先决条件（报表生成器）](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
@@ -47,7 +47,7 @@ ms.locfileid: "63041175"
   
      此时将显示 **“入门”** 对话框。  
   
-     ![报表生成器入门](../reporting-services/media/rb-getstarted.png "Report Builder Get Started")  
+     ![报表生成器入门](../reporting-services/media/rb-getstarted.png "报表生成器入门")  
   
      如果看不到“入门”  对话框中，单击“文件”   >“新建”  。 “新建报表或数据集”  对话框的内容与“入门”  对话框的内容大致相同。 
       
@@ -85,7 +85,7 @@ ms.locfileid: "63041175"
   
 8.  （可选）单击“运行”按钮 ( **!** )，查看要用于图表的数据。  
   
-9. 单击“下一步”  。  
+9. 单击“下一步”。   
   
 ## <a name="ChartType"></a>2.创建条形图  
  
@@ -93,7 +93,7 @@ ms.locfileid: "63041175"
   
 2.  单击“条形图”，然后单击“下一步”   。  
   
-    “排列图表字段”页上的“可用字段”窗格中有 4 个字段：FirstName、LastName、SalesYear2015 以及 SalesYear2014   。  
+    “排列图表字段”  页上的“可用字段”  窗格中有 4 个字段：“FirstName”、“LastName”、“SalesYear2015”和“SalesYear2014”。  
   
 3.  将 LastName 拖动到“类别”窗格。  
   
@@ -101,9 +101,9 @@ ms.locfileid: "63041175"
   
 5.  将 SalesYear2014 拖动到 SalesYear2015 下的“值”窗格。 SalesYear2014 表示每个销售人员在 2014 年的销售总额。  
   
-6.  单击“下一步”  。  
+6.  单击“下一步”。   
   
-7.  单击 **“完成”** 。  
+7.  单击“完成”  。  
   
     图表将添加到设计图面中。 请注意，新的条形图只显示表述性数据。 图例读取 Last Name A、Last Name B 等，而不是人员的姓名，这只用于展示报表的外观。 
   
@@ -199,7 +199,7 @@ ms.locfileid: "63041175"
   
 1.  切换到报表设计视图。  
   
-2.  选择图表顶部的词语“图表标题”，然后键入 Sales for 2014 and 2015   。  
+2.  选择图表顶部的“图表标题”  字词，再键入：“2014 年和 2015 年销售额”  。  
   
 3.  选择标题后，在“属性”窗格中，将“颜色”设置为“黑色”并将“字体”设置为“12磅”     。 
   
@@ -226,7 +226,7 @@ ms.locfileid: "63041175"
   
 7.  在“轴标题”框中，键入 Sales in thousands，然后按 Enter   。  
 
-    >**注意：** 键入时，轴标题框在垂直轴上。 但是，按 Enter 后，它将转到水平轴。
+    >**注意：** 键入时，“轴标题”框显示在垂直轴上。 但是，按 Enter 后，它将转到水平轴。
   
 9. 单击 **“运行”** 以预览报表。  
   
@@ -243,7 +243,7 @@ ms.locfileid: "63041175"
   
 4.  单击 **“筛选器”** 。 “更改筛选器”页可以显示筛选器表达式的列表  。 默认情况下，此列表为空。  
   
-5.  单击 **“添加”** 。 此时将显示一个新的空白筛选器。  
+5.  单击“添加”  。 此时将显示一个新的空白筛选器。  
   
 6.  在“表达式”中，键入 [Sum(SalesYear2015)]   。 此时将创建基础表达式 `=Sum(Fields!SalesYear2015.Value)`，可以查看是否单击了“fx”按钮  。  
   
@@ -291,9 +291,9 @@ ms.locfileid: "63041175"
 
     可将其保存到计算机或报表服务器中。
   
-4.  单击 **“保存”** 。   
+4.  单击“ **保存**”。   
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>后续步骤  
 您已成功完成“向报表添加条形图”教程的学习。 若要了解有关图表的详细信息，请参阅 [图表](../reporting-services/report-design/charts-report-builder-and-ssrs.md) 和 [条形图](../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另请参阅  

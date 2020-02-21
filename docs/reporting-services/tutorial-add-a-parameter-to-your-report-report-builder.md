@@ -9,10 +9,10 @@ ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7a50e32eb3d13e2b78705a3f2ba4fd63e9ccd442
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72252137"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>教程：向报表添加参数（报表生成器）
@@ -23,9 +23,9 @@ ms.locfileid: "72252137"
 报表参数是针对您在数据集查询中包含的每个查询参数自动创建的。 参数的数据类型确定了参数在报表视图工具栏上显示的方式。 
    
 > [!NOTE]  
-> 在本教程中，将向导的多个步骤合并为一个过程。 有关如何浏览到报表服务器、选择数据源和创建数据集的分步说明，请参阅本系列中的第一个教程：[教程：创建基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+> 在本教程中，将向导的多个步骤合并为一个过程。 有关如何转到报表服务器、选择数据源和创建数据集的分步说明，请参阅本系列教程中的第一个教程：[教程：生成基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
-本教程的预计学时：25 分钟。  
+完成本教程的估计时间：25 分钟。  
   
 ## <a name="requirements"></a>要求  
 有关要求的信息，请参阅[教程先决条件（报表生成器）](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
@@ -52,7 +52,7 @@ ms.locfileid: "72252137"
   
 7.  在“选择数据源的连接”页上，从列表中选择一个数据源或浏览到报表服务器进行选择  。 选择任何类型为 **SQL Server**的数据源。  
       
-8.  单击“下一步”  。  
+8.  单击“下一步”。   
 
     可能需要输入凭据。    
      
@@ -82,11 +82,11 @@ ms.locfileid: "72252137"
   
 11. 在查询设计器工具栏中，单击“运行(!)”来查看数据   。   
   
-    结果集由 11 行数据组成，这些数据显示四个商店的每个子类别销售的物品数量，包含以下列：StoreID、Subcategory、Quantity。商店名称不是结果集的一部分。 接下来，您将在本教程中从单独的数据集查找与商店标识符对应的商店名称。  
+    结果集在以下列中包含 11 行数据，以显示四个店铺的每个子类别的商品销售数量：“StoreID”、“Subcategory”和“Quantity”。店铺名称不属于结果集。 接下来，您将在本教程中从单独的数据集查找与商店标识符对应的商店名称。  
   
     此查询不包含查询参数。 稍后，您将在本教程中添加查询参数。   
   
-12. 单击 **“下一步”** 。  
+12. 单击“下一步”。   
   
 ## <a name="CompleteWizard"></a>2.在向导中组织数据并选择布局  
 该向导提供用于显示数据的起始设计。 此向导中的预览窗格可帮助您在完成表或矩阵设计之前将对数据进行分组的结果可视化。  
@@ -101,15 +101,15 @@ ms.locfileid: "72252137"
   
     已将销售量值组织到了按子类别分组的行中，一家商店一列。  
   
-4.  单击“下一步”  。  
+4.  单击“下一步”。   
   
 5.  在“选择布局”页的“选项”下，确保已选择“显示小计和总计”    。  
   
     当您运行报表时，最后一列将显示所有商店的每个子类别的总数量，而最后一行将显示每个商店的所有子类别的总数量。  
   
-6.  单击“下一步”  。  
+6.  单击“下一步”。   
   
-8.  单击 **“完成”** 。  
+8.  单击“完成”  。  
   
     矩阵将添加到设计图面中。 矩阵将显示 3 列和 3 行。 第一行中的单元格内容是 Subcategory、[StoreID] 和“总计”。 第二行中的单元格内容包含的表达式表示子类别、每个商店销售的物品数量以及所有商店每个子类别的总数量。 最后一行中的单元格显示每个商店的总计。  
       
@@ -136,7 +136,7 @@ ms.locfileid: "72252137"
   
 2.  在“报表数据”窗格中，展开“数据集”文件夹，右键单击“DataSet1”，然后单击“查询”    。  
   
-3.  将以下 [!INCLUDE[tsql](../includes/tsql-md.md)] **WHERE** 子句添加为查询的最后一行：  
+3.  将以下 [!INCLUDE[tsql](../includes/tsql-md.md)] WHERE  子句添加为查询的最后一行：  
   
     ```  
     WHERE StoreID = (@StoreID)  
@@ -308,7 +308,7 @@ ms.locfileid: "72252137"
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    Store 列标题包含复杂表达式的显示文本： **Expr**。  
+    店铺列标题包含复杂表达式的显示文本：Expr  。  
   
 8.  预览报表。  
   
@@ -492,11 +492,11 @@ ms.locfileid: "72252137"
   
 4.  在“名称”中，用 Parameterized Sales Report 替换默认名称  。  
   
-5.  单击 **“保存”** 。  
+5.  单击“ **保存**”。  
   
 报表即已保存至报表服务器。 您连接的报表服务器将显示在窗口底部的状态栏中。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>后续步骤  
 到此为止，我们结束了有关如何向报表添加参数的演练。 要了解有关参数的详细信息，请参阅[报表参数（报表生成器和报表设计器）](../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)。  
   
 ## <a name="see-also"></a>另请参阅  

@@ -10,10 +10,10 @@ ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b854add44b256078cd19963f2ef22d55a7b3d300
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "64330626"
 ---
 # <a name="install-reporting-and-internet-information-services-side-by-side"></a>并行安装 Reporting Services 和 Internet Information Services
@@ -24,7 +24,7 @@ ms.locfileid: "64330626"
 
 可以在同一台计算机上安装和运行 SQL Server Reporting Services (SSRS) 和 Internet Information Services (IIS)。 所用 IIS 的版本确定了必须解决的互操作性问题。  
   
-|IIS 版本|问题|描述|  
+|IIS 版本|问题|说明|  
 |-----------------|------------|-----------------|  
 |8.0，8.5|一个应用程序收到发往另一个应用程序的请求。<br /><br /> HTTP.SYS 强制实施了 URL 预留的优先规则。 在向多个具有相同虚拟目录名称且共同监视端口 80 的应用程序发出请求时，如果目标应用程序的 URL 预留相对于另一个应用程序的 URL 预留较弱，则这些请求可能无法到达预期的目标。|在某些情况下，取代 URL 预留方案中另一个 URL 端点的已注册端点可能会收到发往其他应用程序的 HTTP 请求。<br /><br /> 为报表服务器 Web 服务和 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 使用唯一的虚拟目录名有助于避免发生这种冲突。<br /><br /> 本主题中提供了有关此方案的详细信息。|  
   
@@ -47,12 +47,12 @@ ms.locfileid: "64330626"
 |`https://+:80`|对于映射到 **“所有已分配的”** 的任何应用程序端点，接收尚未由其他应用程序接收的请求。|  
 |`https://*:80`|对于映射到 **“所有未分配的”** 的应用程序端点，接收尚未由其他应用程序接收的请求。|  
   
- 端口冲突的一个迹象是看到以下错误消息：“System.IO.FileLoadException: 进程无法访问该文件，因为它正在被其他进程使用。 (HRESULT 异常: 0x80070020)”。  
+ 端口冲突的一个指示是你将看到以下错误消息：“System.IO.FileLoadException：进程无法访问该文件，因为它正在被另一个进程使用。 （异常来自 HRESULT：0x80070020）。”  
   
 ## <a name="url-reservations-for-iis-80-85-with-sql-server-reporting-services"></a>用于带有 SQL Server Reporting Services 的 IIS 8.0、8.5 的 URL 预留  
  使用上一节中概述的优先规则，即可以开始了解为 Reporting Services 和 IIS 定义的 URL 预留是如何提高互操作性的。 Reporting Services 接收为其应用程序明确指定了虚拟目录名的请求；IIS 接收所有的剩余请求，这些请求随后可定向到运行于 IIS 进程模型中的应用程序。  
   
-|应用程序|URL 预留|描述|请求接收情况|  
+|应用程序|URL 预留|说明|请求接收情况|  
 |-----------------|---------------------|-----------------|---------------------|  
 |报表服务器|`https://+:80/ReportServer`|针对端口 80 使用强通配符，带有报表服务器虚拟目录。|接收端口 80 上指定了报表服务器虚拟目录的所有请求。 报表服务器 Web 服务接收针对 https://\<computername>/reportserver 的所有请求。|  
 |Web 门户|`https://+:80/Reports`|针对端口 80 使用强通配符，带有 Reports 虚拟目录。|接收端口 80 上指定了 reports 虚拟目录的所有请求。 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 接收针对 https://\<computername>/reports 的所有请求。|  
@@ -72,7 +72,7 @@ ms.locfileid: "64330626"
   
  为了确保所有的应用程序都能收到请求，请遵循下面的准则：  
   
--   对于 Reporting Services 安装，请使用 Reporting Services 所在端口上的 IIS 网站尚未使用的虚拟目录名。 如果存在冲突，请在“仅文件”模式（使用“安装”，但是不在安装向导中配置服务器选项）下安装 Reporting Services，以便可以在安装完成后配置虚拟目录。 您的配置存在冲突的一个迹象是看到以下错误消息：“System.IO.FileLoadException: 进程无法访问该文件，因为它正在被其他进程使用。 (HRESULT 异常: 0x80070020)”。  
+-   对于 Reporting Services 安装，请使用 Reporting Services 所在端口上的 IIS 网站尚未使用的虚拟目录名。 如果存在冲突，请在“仅文件”模式（使用“安装”，但是不在安装向导中配置服务器选项）下安装 Reporting Services，以便可以在安装完成后配置虚拟目录。 如果配置存在冲突，你将看到以下错误消息：System.IO.FileLoadException：进程无法访问该文件，因为它正在被另一个进程使用。 （异常来自 HRESULT：0x80070020）。  
   
 -   对于手动配置的安装，请在所配置的 URL 中使用默认的命名约定。 如果以命名实例形式安装 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] ，请在创建虚拟目录时包括实例名称。  
 

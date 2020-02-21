@@ -1,5 +1,5 @@
 ---
-title: setLoginTimeout 方法 (SQLServerDataSource) |Microsoft Docs
+title: setLoginTimeout 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: b63d1cf4-dc1b-4e35-9a56-50436642eaaf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a64bc643e8d5a9d820b2bcd9cd307f033a869d7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974085"
 ---
 # <a name="setlogintimeout-method-sqlserverdatasource"></a>setLoginTimeout 方法 (SQLServerDataSource)
@@ -34,13 +34,13 @@ ms.locfileid: "67974085"
 public void setLoginTimeout(int loginTimeout)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *loginTimeout*  
   
  一个表示要等待的秒数的 int  值。 零表示该超时为默认系统超时，默认情况下指定为 15 秒。  
   
-## <a name="remarks"></a>Remarks  
- 此 setLoginTimeout 方法由 setLoginTimeout 方法在 javax.mail.session 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 setLoginTimeout 方法是由 javax.sql.DataSource 接口中的 setLoginTimeout 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDataSource 成员](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

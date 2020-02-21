@@ -1,5 +1,5 @@
 ---
-title: SQLServerXAConnection 类 |Microsoft Docs
+title: SQLServerXAConnection 类 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 5ecb4bf1-b8d1-47cf-9cb1-7a18acc11ce2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 32d538e31ca3f4a0d9b23411ebcb7b282df46b33
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970318"
 ---
 # <a name="sqlserverxaconnection-class"></a>SQLServerXAConnection 类
@@ -24,7 +24,7 @@ ms.locfileid: "67970318"
   
  **包：** com.microsoft.sqlserver.jdbc  
   
- **扩展：** [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)  
+ **扩展：**[SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)  
   
  **实现：** javax.sql.XAConnection  
   
@@ -35,8 +35,8 @@ ms.locfileid: "67970318"
 public class SQLServerXAConnection  
 ```  
   
-## <a name="remarks"></a>Remarks  
- SQLServerXAConnection 对象可以通过 [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) 对象登记到分布式事务中。 事务管理器通常是中间层服务器的一部分, 通过 SQLServerXAResource 对象管理 SQLServerXAConnection 对象。  
+## <a name="remarks"></a>备注  
+ SQLServerXAConnection 对象可以通过 [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) 对象登记到分布式事务中。 事务管理器通常是中间层服务器的一部分，它通过 SQLServerXAResource 对象管理 SQLServerXAConnection 对象。  
   
 > [!NOTE]  
 >  应用程序编程人员一般不直接使用此接口。 它主要由在中间层服务器中工作的事务管理器使用。  

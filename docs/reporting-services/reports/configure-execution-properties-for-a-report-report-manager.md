@@ -13,10 +13,10 @@ ms.assetid: 73cc8dcc-ef80-40d7-9739-d33bba0eb28a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6dfb24b6314529b19fb7bb5edb81534f30dc018a
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67492755"
 ---
 # <a name="configure-execution-properties-for-a-report"></a>配置报表的执行属性
@@ -44,7 +44,7 @@ ms.locfileid: "67492755"
   
     -   如果希望立即创建快照，请选择 **“在此页上单击‘应用’按钮后创建报表快照”** 。  
   
-3.  单击 **“应用”** 。  
+3.  单击“应用”  。  
   
 ## <a name="see-also"></a>另请参阅  
  [设置报表处理属性](../../reporting-services/report-server/set-report-processing-properties.md)   
@@ -60,22 +60,22 @@ ms.locfileid: "67492755"
   
 通过[报表服务器的 Web 门户（SSRS 本机模式）](../../reporting-services/web-portal-ssrs-native-mode.md)：  
   
-1. 导航到你想要配置的执行属性的报表。  
+1. 导航到要配置执行属性的报表。  
   
-2. 右键单击报表并选择**管理**从下拉列表菜单。
+2. 右键单击报表，然后从下拉菜单中选择“管理”  。
 
-3. 选择**历史记录快照**选项卡以显示**历史记录快照**页。  
+3. 选择“历史记录快照”  选项卡以显示“历史记录快照”  页。  
   
-4. 选择**计划和设置**按钮，并检查**按计划创建历史记录快照**如果未选中。
+4. 选择“计划和设置”  按钮，并选中“按计划创建历史记录快照”  （如果尚未选中）。
   
-5. 选择任一**共享计划**或**报表特定计划**根据需要。  
+5. 根据需要选择“共享计划”  或“报表特定计划”  。  
   
-6. 在中**高级**部分中，选择所需**保留**策略历史记录快照。  
+6. 在“高级”  部分中，为历史记录快照选择所需的“保留”  策略。  
   
-7. 选择“应用”  。  
+7. 选择“应用”。   
   
    >[!NOTE]
-   >如果你想要立即创建快照，请选择**新的历史记录快照**而不是按钮**计划和设置**将立即创建按钮和报表快照。  
+   >如果希望立即创建快照，请选择“新建历史记录快照”  按钮，而不是“计划和设置”  按钮，此时将立即创建报表快照。  
   
 ## <a name="see-also"></a>另请参阅  
  [设置报表处理属性](../../reporting-services/report-server/set-report-processing-properties.md)   

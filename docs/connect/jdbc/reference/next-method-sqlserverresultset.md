@@ -16,10 +16,10 @@ ms.assetid: 60248447-6908-4036-a779-a501453cd553
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c83fe6aa33d77db98fcdfc757b9bf219a45a9b15
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976759"
 ---
 # <a name="next-method-sqlserverresultset"></a>next 方法 (SQLServerResultSet)
@@ -35,12 +35,12 @@ public boolean next()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 如果新的当前行有效,**则为 true** 。 如果没有更多的行要处理, 则**为 false** 。  
+ 如果新的当前行有效，则值为 true  。 如果没有其他要处理的行，则值为 false  。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 next 方法是由 java.sql.ResultSet 接口中的 next 方法指定的。  
   
  结果集游标最初位于第一行之前。 第一次调用 next 方法让第一行成为当前行，第二次调用让第二行成为当前行，以此类推。  

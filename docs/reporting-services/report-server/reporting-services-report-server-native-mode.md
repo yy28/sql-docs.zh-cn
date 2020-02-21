@@ -13,16 +13,16 @@ ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4a0e3f521549bb309fcbd69fc7905746be09d84b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66826901"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services 报表服务器（本机模式）
   配置为本机模式的报表服务器将作为应用程序服务器运行，并专门通过 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]组件提供所有处理和管理功能。  
   
- 你可以使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]或 web 门户来管理[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]报表。 使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器可在本机模式下管理报表服务器。  
+ 可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或 Web 门户来管理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表。 使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器可在本机模式下管理报表服务器。  
   
  如果将报表服务器配置为 SharePoint 模式，则必须使用 SharePoint 站点上的内容管理页来管理报表、共享数据源和其他报表服务器项。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "66826901"
   
 -   通过制定报表处理计划，并指定哪些报表按需运行，哪些报表应从缓存加载，从而均衡服务器上的报表处理需求。  
   
- 通过以下两个预定义的角色提供执行管理任务的权限： **系统管理员** 和 **内容管理员**。 若要有效地管理报表服务器内容，要求您同时分配有这两个角色。 有关这些预定义角色的详细信息，请参阅[角色和权限 (Reporting Services)](../../reporting-services/security/roles-and-permissions-reporting-services.md)。  
+ 执行管理任务的权限是通过以下两个预定义的角色提供的：“系统管理员”  和“内容管理员”  。 若要有效地管理报表服务器内容，要求您同时分配有这两个角色。 有关这些预定义角色的详细信息，请参阅[角色和权限 (Reporting Services)](../../reporting-services/security/roles-and-permissions-reporting-services.md)。  
   
  用于管理报表服务器内容的工具包括 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或 Web 门户。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 允许您设置默认值和启用功能。 Web 门户用于向用户授予对报表服务器项和操作的访问权限，用于查看和使用报表以及其他内容类型，并用于查看和使用所有共享项和报表分发功能。  
   
@@ -84,12 +84,12 @@ ms.locfileid: "66826901"
   
  若要向报表服务器中添加资源，请上载或发布文件：  
   
-|运算|文件类型|  
+|Operation|文件类型|  
 |---------------|---------------|  
 |上载|除报表定义 (.rdl) 文件和报表模型 (.smdl) 文件之外的所有文件都将作为资源上载。<br /><br /> 若要上传资源，如果报表服务器在本机模式下运行，必须使用 Web 门户；如果报表服务器在 SharePoint 集成模式下运行，必须使用 SharePoint 网站上的应用程序页。 有关详细信息，请参阅[在报表服务器中上传文件或报表](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)，或[将文档上传到 SharePoint 库（SharePoint 模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)。|  
 |发布|除 .rdl、.smdl 和 .rds 数据源文件之外，项目中的所有文件都将作为资源上载。 若要发布资源，请将现有项添加到报表设计器的一个项目中，然后将该项目发布到报表服务器。|  
   
- 所有资源最初都是文件系统中的文件，只是随后上载到报表服务器上而已。 没有任何限制可以上传的文件类型，文件大小，最多 1 GB。 不过，具有等效 MIME 类型的文件类型比其他类型更适于作为资源发布到报表服务器。 例如，在用户单击基于 HTML 和 JPG 文件的资源时，这些资源将在浏览器窗口中打开，以网页形式呈现 HTML 文件，并以图像形式呈现 JPG 文件，这样，用户就可以看到。 相反，对于不具有等效 MIME 类型的资源（如桌面应用程序文件），则不能在浏览器窗口中呈现。  
+ 所有资源最初都是文件系统中的文件，只是随后上载到报表服务器上而已。 你可以上传的文件类型没有限制，但文件大小不得超过 1GB。 不过，具有等效 MIME 类型的文件类型比其他类型更适于作为资源发布到报表服务器。 例如，在用户单击基于 HTML 和 JPG 文件的资源时，这些资源将在浏览器窗口中打开，以网页形式呈现 HTML 文件，并以图像形式呈现 JPG 文件，这样，用户就可以看到。 相反，对于不具有等效 MIME 类型的资源（如桌面应用程序文件），则不能在浏览器窗口中呈现。  
   
  报表用户是否可以查看资源取决于浏览器的查看功能。 由于报表服务器不对资源进行处理，因此浏览器必须提供用于呈现特定 MIME 类型的查看功能。 如果浏览器无法呈现资源的内容，则查看资源的用户只能看到资源的常规属性。  
   

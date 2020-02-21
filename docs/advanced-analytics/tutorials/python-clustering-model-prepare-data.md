@@ -1,22 +1,22 @@
 ---
 title: Python 教程：准备群集数据
-description: 此教程包括四分部分，在第二部分中，你将准备 SQL Server 数据库中的数据，以便通过 SQL Server 机器学习服务在 Python 中执行聚类分析。
+description: 此教程包括四个部分，在第二部分中，你将准备 SQL 数据，以便通过 SQL Server 机器学习服务在 Python 中执行聚类分析。
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 08/30/2019
+ms.date: 12/17/2019
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 11c24d5403e6540da52ec3557c64e1dc8fa57c78
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 8ee19ddfa59f8f1a4a32c0adf08b8f36eef9aa1f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727091"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75305548"
 ---
 # <a name="tutorial-prepare-data-to-categorize-customers-in-python-with-sql-server-machine-learning-services"></a>教程：准备数据以通过 SQL Server 机器学习服务在 Python 中对客户进行分类
 
@@ -55,10 +55,10 @@ ms.locfileid: "73727091"
 
 ```python
 # Load packages.
+import pyodbc
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import revoscalepy as revoscale
 from scipy.spatial import distance as sci_distance
 from sklearn import cluster as sk_cluster
 
@@ -69,7 +69,7 @@ from sklearn import cluster as sk_cluster
 ################################################################################################
 
 # Connection string to connect to SQL Server named instance.
-conn_str = 'Driver=SQL Server;Server=localhost;Database=tpcxbb_1gb;Trusted_Connection=True;'
+conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=localhost; DATABASE=tpcxbb_1gb; Trusted_Connection=yes')
 
 input_query = '''SELECT
 ss_customer_sk AS customer,
@@ -115,14 +115,10 @@ column_info = {
 
 ## <a name="load-the-data-into-a-data-frame"></a>将数据加载到数据帧中
 
-使用 revoscalepy RxSqlServerData 函数将查询结果返回到 Python  。 在此过程中，将使用在前面的脚本中定义的列信息。
+使用 Pandas read_sql 函数将查询结果返回到 Python  。 在此过程中，将使用在前面的脚本中定义的列信息。
 
 ```python
-data_source = revoscale.RxSqlServerData(sql_query=input_query, column_Info=column_info,
-                                        connection_string=conn_str)
-revoscale.RxInSqlServer(connection_string=conn_str, num_tasks=1, auto_cleanup=False)
-# import data source and convert to pandas dataframe.
-customer_data = pd.DataFrame(revoscale.rx_import(data_source))
+customer_data = pandas.read_sql(input_query, conn_str)
 ```
 
 现在显示数据帧的开头，验证其是否正确。

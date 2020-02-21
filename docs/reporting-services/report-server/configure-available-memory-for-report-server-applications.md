@@ -12,10 +12,10 @@ ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d7cbcb0b2cd0da8bd13d28620261c2e9894463db
-ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67564027"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>为报表服务器应用程序配置可用内存
@@ -38,9 +38,9 @@ ms.locfileid: "67564027"
   
 |内存压力|服务器响应|  
 |---------------------|---------------------|  
-|Low|继续处理当前请求。 几乎总是接受新请求。 定向到后台处理应用程序的请求优先级低于定向到报表服务器 Web 服务的请求优先级。|  
-|Medium|继续处理当前请求。 可能会接受新请求。 定向到后台处理应用程序的请求优先级低于定向到报表服务器 Web 服务的请求优先级。 所有三种服务器应用程序的内存分配都将减少，但后台处理应用程序的内存减少相对更多，以便为 Web 服务器请求提供更多可用内存。|  
-|High|进一步减少内存分配。 拒绝要请求更多内存的服务器应用程序。 当前请求的速度将会降低，完成所需的时间会更长。 不接受新请求。 报表服务器将内存中的数据文件交换到磁盘。<br /><br /> 如果内存约束很严格，因此没有可用于处理新请求的内存，则报表服务器将在完成当前请求时返回 HTTP 503 服务器不可用的错误。 在某些情况下，可以回收应用程序域以立即减少内存压力。|  
+|低|继续处理当前请求。 几乎总是接受新请求。 定向到后台处理应用程序的请求优先级低于定向到报表服务器 Web 服务的请求优先级。|  
+|中型|继续处理当前请求。 可能会接受新请求。 定向到后台处理应用程序的请求优先级低于定向到报表服务器 Web 服务的请求优先级。 所有三种服务器应用程序的内存分配都将减少，但后台处理应用程序的内存减少相对更多，以便为 Web 服务器请求提供更多可用内存。|  
+|高|进一步减少内存分配。 拒绝要请求更多内存的服务器应用程序。 当前请求的速度将会降低，完成所需的时间会更长。 不接受新请求。 报表服务器将内存中的数据文件交换到磁盘。<br /><br /> 如果内存约束很严格，因此没有可用于处理新请求的内存，则报表服务器将在完成当前请求时返回 HTTP 503 服务器不可用的错误。 在某些情况下，可以回收应用程序域以立即减少内存压力。|  
   
  尽管无法对不同内存压力情况自定义报表服务器响应，但您可以指定配置设置，以定义区分高、中和低内存压力响应的边界。  
   
@@ -60,11 +60,11 @@ ms.locfileid: "67564027"
   
  下图显示了如何综合使用这些设置来区分低、中和高级别的内存压力：  
   
- ![内存状态的配置设置](../../reporting-services/report-server/media/rs-memoryconfigurationzones.png "Configuration settings for memory state")  
+ ![内存状态的配置设置](../../reporting-services/report-server/media/rs-memoryconfigurationzones.png "内存状态的配置设置")  
   
  下表介绍了 **WorkingSetMaximum**、 **WorkingSetMinimum**、 **MemorySafetyMargin**和 **MemoryThreshold** 设置。 配置设置是在 [RSReportServer.config 文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)中指定的。  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
 |**WorkingSetMaximum**|指定内存阈值，在超出此值后将不会向报表服务器应用程序授予任何新的内存分配请求。<br /><br /> 默认情况下，报表服务器将 **WorkingSetMaximum** 设置为计算机上的可用内存量。 启动服务时，将会检测此值。<br /><br /> 除非您手动添加，否则此设置不会显示在 RSReportServer.config 文件中。 如果希望报表服务器使用较少的内存，则可修改 RSReportServer.config 文件并添加该元素和值。 有效值的范围为 0 到最大整数之间。 此值以 KB 为单位表示。<br /><br /> 达到 **WorkingSetMaximum** 的值时，报表服务器将不接受新请求。 允许完成当前正在执行的请求。 只有当所用内存低于通过 **WorkingSetMaximum**指定的值时，才会接受新的请求。<br /><br /> 如果现有请求在达到 **WorkingSetMaximum** 值后继续占用额外内存，则将回收所有报表服务器应用程序域。 有关详细信息，请参阅 [Application Domains for Report Server Applications](../../reporting-services/report-server/application-domains-for-report-server-applications.md)。|  
 |**WorkingSetMinimum**|指定资源占用的下限；如果内存使用总量低于此限制值，报表服务器将不会释放内存。<br /><br /> 默认情况下，将在服务启动时计算该值。 计算结果为初始内存分配请求占 **WorkingSetMaximum**的 60%。<br /><br /> 除非您手动添加，否则此设置不会显示在 RSReportServer.config 文件中。 如果要自定义此值，必须将 **WorkingSetMinimum** 元素添加到 RSReportServer.config 文件中。 有效值的范围为 0 到最大整数之间。 此值以 KB 为单位表示。|  
@@ -72,7 +72,7 @@ ms.locfileid: "67564027"
 |**MemorySafetyMargin**|指定 **WorkingSetMaximum** 的百分比，该百分比用于定义中压情况和低压情况之间的边界。 此值是为系统保留的可用内存百分比，无法用于报表服务器操作。 默认值为 80。|  
   
 > [!NOTE]  
->  **MemoryLimit** 和 **MaximumMemoryLimit** 设置在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本中已过时。 如果升级现有安装或使用包含这些设置的 RSReportServer.config 文件，报表服务器将不再读取这些值。  
+>  MemoryLimit 和 MaximumMemoryLimit 设置在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本中已过时。 如果升级现有安装或使用包含这些设置的 RSReportServer.config 文件，报表服务器将不再读取这些值。  
   
 #### <a name="example-of-memory-configuration-settings"></a>内存配置设置示例  
  下面的示例显示了使用自定义内存配置值的报表服务器计算机的配置设置。 如果要添加 **WorkingSetMaximum** 或 **WorkingSetMinimum**，必须在 RSReportServer.config 文件中键入这些元素和值。 两个值都是整数，表示要分配给服务器应用程序的 RAM（以 KB 为单位）。 下面的示例指定报表服务器应用程序的总内存分配不能超过 4 GB。 如果 **WorkingSetMinimum** 的默认值（ **WorkingSetMaximum**的 60%）可接受，则可忽略该值并在 RSReportServer.config 文件中仅指定 **WorkingSetMaximum** 。 此示例包括 **WorkingSetMinimum** 以说明在要添加该元素时的显示方式：  
@@ -86,7 +86,7 @@ ms.locfileid: "67564027"
 ```  
   
 #### <a name="about-aspnet-memory-configuration-settings"></a>关于 ASP.NET 内存配置设置  
- 尽管在 2016年及更高版本报表服务器 Web 服务和 web 门户是 HTML5 应用程序，以前版本是[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]应用程序，两个应用程序中指定的内存配置设置会响应**processModel**部分针对的 machine.config[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]在 IIS 5.0 和更高版本兼容性模式下运行的应用程序。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 仅从 RSReportServer.config 文件中读取内存配置设置。  
+ 尽管 2016 及更高版本的报表服务器 Web 服务和 Web 门户是 HTML5 应用程序，早期版本是 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 应用程序，但这些应用程序都不会响应在 IIS 5.0 及更高兼容性模式下运行的 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 应用程序的 machine.config 的 processModel 部分中指定的内存配置设置。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 仅从 RSReportServer.config 文件中读取内存配置设置。  
   
 ## <a name="see-also"></a>另请参阅  
  [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   

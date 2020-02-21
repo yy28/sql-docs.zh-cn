@@ -1,5 +1,5 @@
 ---
-title: 了解隔离级别 |Microsoft Docs
+title: 了解隔离级别 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 2c41e23a-da6c-4650-b5fc-b5fe53ba65c3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b4886b1bd0f4ff62df06334af469a76b64600839
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027393"
 ---
 # <a name="understanding-isolation-levels"></a>了解隔离级别
@@ -41,7 +41,7 @@ ms.locfileid: "69027393"
   
 较低的隔离级别可以增强许多用户同时访问数据的能力，但也增加了用户可能遇到的并发副作用（例如脏读或丢失更新）的数量。 相反，较高的隔离级别减少了用户可能遇到的并发副作用的类型，但需要更多的系统资源，并增加了一个事务阻塞其他事务的可能性。 应平衡应用程序的数据完整性要求与每个隔离级别的开销，在此基础上选择相应的隔离级别。 最高隔离级别（可序列化）保证事务在每次重复读取操作时都能准确检索到相同的数据，但需要通过执行某种级别的锁定来完成此操作，而锁定可能会影响多用户系统中的其他用户。 最低隔离级别（未提交读）可以检索其他事务已经修改、但未提交的数据。 在未提交读取中，所有并发副作用都可能发生，但因为没有读取锁定或版本控制，所以开销最少。  
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
  下表显示了不同隔离级别允许的并发副作用。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "69027393"
   
 事务必须至少在可重复读的隔离级别运行，才能在两个事务都检索同一行，然后根据原先检索的值更新行时，防止出现丢失更新的情况。 如果两个事务使用一个 UPDATE 语句更新行，而且更新并不以先前检索的值为基础，则在默认的已提交读的隔离级别上不会发生丢失更新的情况。  
 
-若要为事务设置隔离级别，可以使用 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 类的 [setTransactionIsolation](../../connect/jdbc/reference/settransactionisolation-method-sqlserverconnection.md) 方法。 此方法接受 int 值作为其参数，此参数基于如下所示的连接常量之一  ：  
+若要为事务设置隔离级别，可以使用 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 类的 [setTransactionIsolation](../../connect/jdbc/reference/settransactionisolation-method-sqlserverconnection.md) 方法。 此方法接受 int 值作为其参数，此参数基于如下所示的连接常量之一：  
 
 ```java
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);  

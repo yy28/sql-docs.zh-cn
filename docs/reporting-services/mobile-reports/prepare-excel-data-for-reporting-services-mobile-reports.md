@@ -9,10 +9,10 @@ ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9285b9b89930fe540f9b5493f1730184cf4e9526
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62499937"
 ---
 # <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>为 Reporting Services 移动报表准备 Excel 数据
@@ -63,7 +63,7 @@ ms.locfileid: "62499937"
   
 对于导入到 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]中的 Excel 文件，其存储位置不受限制。 但是，如果在导入后移动或重命名该文件，将无法通过数据视图中的 **刷新所有数据** 命令来刷新该数据。   
   
->**注意**： [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 不会自动刷新 Excel 数据。 你可以通过 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] **刷新** 命令来刷新数据，但前提是文件没有移动。  
+>**注意**： [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 不会自动刷新 Excel 数据。 可以通过 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 刷新  命令来刷新数据，但前提是文件没有移动。  
   
 ## <a name="dates"></a>日期  
   
@@ -84,8 +84,8 @@ ms.locfileid: "62499937"
 Excel 工作表中的自定义对象（包括数据透视表、可视化功能以及图像）不能导入到 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]。  
   
 ### <a name="see-also"></a>另请参阅  
-- [Prepare data for Reporting Services mobile reports](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)  
-- [使用 SQL Server 移动报表发布服务创建和发布移动报表](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
+- [为 Reporting Services 移动报表准备数据](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)  
+- [使用 SQL Server Mobile Report Publisher 创建和发布移动报表](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 -  [在 iPad 应用中查看 SQL Server 移动报表和 KPI](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI for iOS)  
 -  [View SQL Server mobile reports and KPIs in the iPhone app (Power BI for iOS)（在 iPhone 应用 (Power BI for iOS) 中查看 SQL Server 移动报表和 KPI）](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-iphone-kpis-mobile-reports)  
   

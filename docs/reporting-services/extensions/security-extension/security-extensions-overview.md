@@ -11,10 +11,10 @@ ms.assetid: 24ccd795-6506-457c-93ac-6a9dd6bb9a46
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c066c893833e1c8588be2460959ed298d6cf1b4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63225858"
 ---
 # <a name="security-extensions-overview---reporting-services-ssrs"></a>安全扩展插件概述 - Reporting Services (SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "63225858"
   
  因为安全扩展插件基于可扩展的开放式 API，所以您可以在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中创建新的身份验证和授权扩展插件。 下面的示例为使用基于窗体的身份验证和授权的典型安全扩展插件实现：  
   
- ![Reporting Services 安全扩展插件进程](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionflow.gif "Reporting Services security extension process")  
+ ![Reporting Services 安全扩展插件进程](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionflow.gif "Reporting Services 安全扩展插件进程")  
   
  如图所示，身份验证和授权将按以下所示发生：  
   

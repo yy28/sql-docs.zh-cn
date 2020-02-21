@@ -14,16 +14,16 @@ ms.assetid: 549c40c4-d33d-46c2-9d6a-7bbb671ac67a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ad2792a390597223a98b8606af4cb361d17b9e8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193685"
 ---
 # <a name="using-a-notification-class-for-a-delivery-extension"></a>将通知类用于传递扩展插件
   <xref:Microsoft.ReportingServices.Interfaces.Notification> 类位于 <xref:Microsoft.ReportingServices.Interfaces> 命名空间中，表示传递扩展插件用于传递报表的订阅信息。 <xref:Microsoft.ReportingServices.Interfaces.Notification> 类提供多种属性，这些属性可用于呈现用于传递的报表、确定通知的状态和设置用户数据。  
   
- ![报表通知流程](../../../reporting-services/extensions/delivery-extension/media/bk-ext-03.gif "Report notification process")  
+ ![报表通知进程](../../../reporting-services/extensions/delivery-extension/media/bk-ext-03.gif "报表通知进程")  
 通知是任何传递的中心对象  
   
  在引发与某一订阅关联的事件时，如果该订阅使用您的自定义传递扩展插件，则将创建包含 <xref:Microsoft.ReportingServices.Interfaces.Report> 对象的通知。 <xref:Microsoft.ReportingServices.Interfaces.Report> 对象封装将给定报表呈现给支持的呈现格式所需的功能，并且包含特定于报表的属性，例如指向服务器上报表的 URL 和报表的名称。 有关 <xref:Microsoft.ReportingServices.Interfaces.Report> 类的详细信息，请参阅[将 Report 类用于传递扩展插件](../../../reporting-services/extensions/delivery-extension/using-the-report-class-for-a-delivery-extension.md)。  

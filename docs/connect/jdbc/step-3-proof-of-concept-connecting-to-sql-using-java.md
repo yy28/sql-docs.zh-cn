@@ -11,17 +11,17 @@ ms.assetid: 1504a348-1774-47ab-8967-288ec3985ae4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a0def25f7fc19344c3548353bbd15ffa27e65caa
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027512"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>步骤 3：使用 Java 连接到 SQL 的概念证明
   
-此示例只应视为概念证明。 为清楚起见, 示例代码已简化, 不一定表示 Microsoft 推荐的最佳做法。  
+应只将此示例视为概念证明。 为了清楚起见，此示例代码已经过简化，并不一定代表 Microsoft 建议的最佳做法。  
   
-## <a name="step-1-connect"></a>步骤 1: 连接  
+## <a name="step-1-connect"></a>步骤 1：连接  
   
 使用 connection 类连接到 SQL 数据库。   
   
@@ -55,7 +55,7 @@ public class SQLDatabaseConnection {
 ```  
   
 ## <a name="step-2-execute-a-query"></a>步骤 2：执行查询  
-在此示例中, 连接到 Azure SQL 数据库, 执行 SELECT 语句, 并返回所选的行。   
+在此示例中，连接到 Azure SQL 数据库，执行 SELECT 语句，并返回选定行。   
   
 ```java  
 import java.sql.Connection;
@@ -99,8 +99,8 @@ public class SQLDatabaseConnection {
 }
 ```  
   
-## <a name="step-3-insert-a-row"></a>步骤 3: 插入行  
-在此示例中, 执行 INSERT 语句, 传递参数, 并检索自动生成的主键值。   
+## <a name="step-3-insert-a-row"></a>步骤 3：插入行  
+在此示例中，执行 INSERT 语句，传递参数，并检索自动生成的主键值。   
   
 ```java  
 import java.sql.Connection;

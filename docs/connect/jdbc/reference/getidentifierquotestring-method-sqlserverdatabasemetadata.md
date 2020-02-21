@@ -1,5 +1,5 @@
 ---
-title: getIdentifierQuoteString 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getIdentifierQuoteString 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 6dea35a0-56a8-412c-8cd3-6539527ff597
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fe27259efbc3448fd0d8d4350d0c2e93e906c34a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982849"
 ---
 # <a name="getidentifierquotestring-method-sqlserverdatabasemetadata"></a>getIdentifierQuoteString 方法 (SQLServerDatabaseMetaData)
@@ -37,11 +37,11 @@ public java.lang.String getIdentifierQuoteString()
 ## <a name="return-value"></a>返回值  
  一个包含引号标识符的字符串  。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 getIdentifierQuoteString 方法由 getIdentifierQuoteString 方法在 Java.sql.databasemetadata 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 getIdentifierQuoteString 方法是由 java.sql.DatabaseMetaData 接口中的 getIdentifierQuoteString 方法指定的。  
   
  将 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] JDBC 驱动程序用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库时，此方法返回双引号 ("")  。  
   

@@ -11,10 +11,10 @@ ms.assetid: 3a0ad63f-87f9-4ca1-b0c2-c85fa991634a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 870f1fbc49e99e2cd43c6adb857137776c275550
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574082"
 ---
 # <a name="rsmodelgenerationerror---reporting-services-error"></a>rsModelGenerationError - Reporting Services 错误
@@ -29,8 +29,8 @@ ms.locfileid: "65574082"
 |组件|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
 |消息正文|生成模型时出错。 (rsModelGenerationError) (ReportingServicesLibrary) %1|  
   
-## <a name="explanation"></a>解释  
- 不能生成报表模型。 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005 SP1 及更早版本中，如果 System.Data.DataSet 对象不能处理数据库架构中的表或关系（例如，如果在某个表中的同一列上定义两个外键），则最有可能发生此错误。  
+## <a name="explanation"></a>说明  
+ 不能生成报表模型。 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 SP1 及更低版本中，如果 System.Data.DataSet 对象无法处理数据库架构中的表或关系（例如，如果在表中的同一列上定义了两个外键），最有可能会显示此错误。  
   
 ## <a name="user-action"></a>用户操作  
  若要确定导致出现此消息的具体原因，请查看报表服务器日志文件，该文件位于 \Microsoft SQL Server\\<SQL Server Instance\>\Reporting Services\LogFiles。  

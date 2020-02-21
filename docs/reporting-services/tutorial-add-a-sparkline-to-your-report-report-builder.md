@@ -9,10 +9,10 @@ ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4dbe5d5afdf507f3edfd68135aa8ee14aee5ae08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63043078"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>教程：向报表添加迷你图（报表生成器）
@@ -23,7 +23,7 @@ ms.locfileid: "63043078"
   
 ![report-builder-sparkline-final](../reporting-services/media/report-builder-sparkline-final.png)  
      
-本教程的预计学时：30 分钟。  
+完成本教程的估计时间：30 分钟。  
   
 ## <a name="requirements"></a>要求  
 有关要求的详细信息，请参阅[教程先决条件（报表生成器）](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
@@ -69,7 +69,7 @@ ms.locfileid: "63043078"
   
 12. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-13. 单击“下一步”  。  
+13. 单击“下一步”。   
   
 ## <a name="Query"></a>2.在表向导中创建查询和表布局  
 在报表中，可以使用具有预定义查询的共享数据集，也可以创建仅在报表中使用的嵌入数据集。 在本教程中，将创建一个嵌入数据集。  
@@ -122,7 +122,7 @@ ms.locfileid: "63043078"
   
     该查询运行并显示 **SalesDate**、 **Subcategory**、 **Product**、 **Sales**和 **Quantity**字段的结果集。  
   
-5.  单击“下一步”  。  
+5.  单击“下一步”。   
   
 6.  在“排列字段”页上，将 Sales 拖到“值”中    。  
   
@@ -134,7 +134,7 @@ ms.locfileid: "63043078"
 
     ![report-builder-sparkline-arrange-fields](../reporting-services/media/report-builder-sparkline-arrange-fields.png)
   
-9. 单击“下一步”  。  
+9. 单击“下一步”。   
   
 10. 在“选择布局”页的“选项”下，确认已选择“显示小计和总计”    。  
   
@@ -148,13 +148,13 @@ ms.locfileid: "63043078"
     
     ![report-builder-sparkline-choose-layout](../reporting-services/media/report-builder-sparkline-choose-layout.png)
   
-11. 单击“下一步”  。  
+11. 单击“下一步”。   
   
-12. 单击 **“完成”** 。  
+12. 单击“完成”  。  
   
 14. 表将添加到设计图面中。 此表有三列和三行。  
   
-    在“分组”窗格中查找。 如果未显示“分组”窗格，请在“视图”菜单上，单击“分组”   。 “行组”窗格显示一个行组： **Product**。 “列组”窗格显示一个列组： **SalesDate**。 详细信息数据是由数据集查询检索的所有数据。  
+    在“分组”窗格中查找。 如果未显示“分组”窗格，请在“视图”菜单上，单击“分组”   。 “行组”窗格显示一个行组：“Product”  。 “列组”窗格显示一个列组：“SalesDate”  。 详细信息数据是由数据集查询检索的所有数据。  
     
     ![report-builder-sparkline-grouping-pane](../reporting-services/media/report-builder-sparkline-grouping-pane.png)
   
@@ -235,7 +235,7 @@ ms.locfileid: "63043078"
   
      该选项设置在各迷你图中条形相对于其他条形的高度。 
   
-4.  单击“确定”  。  
+4.  单击“确定”。   
   
 5.  右键单击迷你图，然后单击“水平轴属性”  。  
   
@@ -243,7 +243,7 @@ ms.locfileid: "63043078"
   
     该选项设置在各迷你图中条形相对于其他条形的宽度。 如果某些迷你图中的条形比其他迷你图少，则这些迷你图将对于缺失的数据具有空白空间。  
   
-7.  单击“确定”  。  
+7.  单击“确定”。   
   
 8.  单击“运行”，再次预览报表  。  
   
@@ -300,7 +300,7 @@ ms.locfileid: "63043078"
   
 4.  在“名称”中，用“Product Sales”替换默认名称   。  
   
-5.  单击 **“保存”** 。  
+5.  单击“ **保存**”。  
   
 报表即已保存至报表服务器。 您连接的报表服务器的名称将显示在窗口底部的状态栏中。  
   
@@ -312,9 +312,9 @@ ms.locfileid: "63043078"
   
 3.  在“名称”中，用“Product Sales”替换默认名称   。  
   
-4.  单击 **“保存”** 。  
+4.  单击“ **保存**”。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>后续步骤  
 
 用于创建具有迷你图的表报表的教程到此结束。 有关迷你图的详细信息，请参阅[迷你图和数据条](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)。  
   

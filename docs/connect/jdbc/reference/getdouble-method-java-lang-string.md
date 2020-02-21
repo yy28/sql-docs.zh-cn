@@ -16,10 +16,10 @@ ms.assetid: 8eab6a8e-91f3-47b1-8707-5e57368ad0c6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 81faa132ccdba32537615aeed4a34aa39e1b7c76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983531"
 ---
 # <a name="getdouble-method-javalangstring"></a>getDouble 方法 (java.lang.String)
@@ -34,18 +34,18 @@ ms.locfileid: "67983531"
 public double getDouble(java.lang.String sCol)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  sCol   
   
  包含参数名称的字符串  。  
   
 ## <a name="return-value"></a>返回值  
- **双精度**值。  
+ double  值。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 getDouble 方法是由 java.sql.CallableStatement 接口中的 getDouble 方法指定的。  
   
  此方法使用 Java double 精度返回所有基于数字的数据类型  。  

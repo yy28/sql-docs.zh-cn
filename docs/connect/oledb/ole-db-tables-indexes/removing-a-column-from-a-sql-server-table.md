@@ -1,6 +1,6 @@
 ---
-title: 从 SQL Server 表中删除列 |Microsoft Docs
-description: 使用 SQL Server 的 OLE DB 驱动程序从 SQL Server 表中删除列
+title: 从 SQL Server 表中删除列 | Microsoft Docs
+description: 使用 OLE DB Driver for SQL Server 从 SQL Server 表中删除列
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 7e367c1b0664b0b43007db3a465dcbec0ffa90d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993995"
 ---
 # <a name="removing-a-column-from-a-sql-server-table"></a>从 SQL Server 表中删除列
@@ -27,11 +27,11 @@ ms.locfileid: "67993995"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server 的 OLE DB 驱动程序公开**ITableDefinition::D ropcolumn**函数。 这允许使用者从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表中删除某一列。  
+  OLE DB Driver for SQL Server 公开 ITableDefinition::DropColumn  函数。 这允许使用者从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表中删除某一列。  
   
  在 pTableID 参数的 uName 联合的 pwszName 成员中，使用者将表名指定为 Unicode 字符串    。 pTableID 的 eKind 成员必须是 DBKIND_NAME   。  
   
- 使用者指示*pColumnID*参数的*UName*联合的*pwszName*成员中的列名称。 该列名称为 Unicode 字符串。 pColumnID 的 eKind 成员必须是 DBKIND_NAME   。  
+ 使用者在 pColumnID  参数的 uName  联合的 pwszName  成员中指明列名。 该列名称为 Unicode 字符串。 pColumnID 的 eKind 成员必须是 DBKIND_NAME   。  
   
 ## <a name="example"></a>示例  
   

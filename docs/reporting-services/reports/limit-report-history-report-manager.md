@@ -1,5 +1,5 @@
 ---
-title: 限制报表历史记录-Reporting Services |Microsoft Docs
+title: 限制报表历史记录 - Reporting Services | Microsoft Docs
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,10 +15,10 @@ ms.assetid: 8e255792-d9ef-496f-a26c-9e969c1209a0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2dd66078363e281c2a73bfcc70ba685493bc3b88
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67492596"
 ---
 # <a name="limit-report-history---reporting-services"></a>限制报表历史记录 - Reporting Services
@@ -34,13 +34,13 @@ ms.locfileid: "67492596"
   
 2.  如果希望无限制地保留所有报表历史记录，请选择 **“不限制报表历史记录中保留的快照数”** 。 否则，请选择 **“限制报表历史记录的副本数”** ，以指定可以为任何给定报表保留的最多快照数。  
   
-3.  单击 **“应用”** 。  
+3.  单击“应用”  。  
   
 ## <a name="to-configure-report-history-for-a-specific-report"></a>为特定的报表配置报表历史记录  
   
 1.  在报表管理器中，导航到要配置历史记录的报表，再单击该报表将其打开。  
   
-2.  单击 **“属性”** 选项卡。  
+2.  单击“属性”  选项卡。  
   
 3.  单击 **“历史记录”** 选项卡。  
   
@@ -60,13 +60,13 @@ ms.locfileid: "67492596"
   
 2.  如果希望无限制地保留所有报表历史记录，请选择 **“不限制报表历史记录中保留的快照数”** 。 否则，请选择 **“限制报表历史记录的副本数”** ，以指定可以为任何给定报表保留的最多快照数。  
   
-3.  单击 **“应用”** 。  
+3.  单击“应用”  。  
   
 ## <a name="to-configure-report-history-for-a-specific-report"></a>为特定的报表配置报表历史记录  
   
 1.  在 Web 门户中，导航到要配置历史记录的报表，再单击该报表将其打开。  
   
-2.  单击 **“属性”** 选项卡。  
+2.  单击“属性”  选项卡。  
   
 3.  单击 **“历史记录”** 选项卡。  
   

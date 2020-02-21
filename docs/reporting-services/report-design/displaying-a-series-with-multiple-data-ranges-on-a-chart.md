@@ -9,17 +9,17 @@ ms.assetid: 45da3d39-278e-4760-a4b3-9932c9547cf2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 776c8ab4b133a8655ce42c5b5c3d996360c71322
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578822"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart"></a>在图表中显示包含多个数据区域的序列
 
   图表将使用序列中的最小值和最大值计算轴刻度。 图表中的序列包含多个数据区域时，数据点将会变得模糊，在图表中只能轻松地看到少量数据点。 例如，假设报表显示 30 天内的每日销售总额。  
   
- ![包含多个数据区域的图表](../../reporting-services/report-design/media/rs-multipledatarangeschart.gif "Chart with multiple data ranges")  
+ ![具有多个数据区域的图表](../../reporting-services/report-design/media/rs-multipledatarangeschart.gif "具有多个数据区域的图表")  
   
  对于大多数月份而言，销售量通常介于 10 到 40 之间。 然而，为期一周的市场营销活动促使 4 月初的销售量突然增加。 这次销售数据的变化导致数据点的分布不均匀，从而降低了图表的整体可读性。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "65578822"
 ## <a name="displaying-multiple-data-ranges-using-scale-breaks"></a>使用刻度分隔线显示多个数据区域  
  启用刻度分隔线后，图表将计算在整个图表中绘制线条的位置。 在各数据区域之间必须有足够的分隔空间，才能绘制刻度分隔线。 默认情况下，数据区域之间的分隔空间至少占图表总空间的 25% 时，才能添加刻度分隔线。  
   
- ![具有刻度分隔线的图表](../../reporting-services/report-design/media/rs-multipledatarangeschart-scalebreak.gif "Chart with scale break")  
+ ![具有刻度分割线的图表](../../reporting-services/report-design/media/rs-multipledatarangeschart-scalebreak.gif "具有刻度分割线的图表")  
   
 > [!NOTE]  
 >  您不能指定在图表中放置刻度分隔线的位置。 但是，可以修改刻度分隔线的计算方式，这将在本主题的后面部分进行介绍。  

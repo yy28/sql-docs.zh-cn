@@ -1,5 +1,5 @@
 ---
-title: executeBatch 方法 (SQLServerStatement) |Microsoft Docs
+title: executeBatch 方法 (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: fb034f63-2532-4da8-a1b0-bc125734585a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1d05b367901aae7a37e10b0a2091a268c3a78a7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954837"
 ---
 # <a name="executebatch-method-sqlserverstatement"></a>executeBatch 方法 (SQLServerStatement)
@@ -35,14 +35,14 @@ public int[] executeBatch()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 一个包含更新计数的 int 数组。   
+ 一个包含更新计数的 int 数组。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
  java.sql.BatchUpdateException  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 executeBatch 方法是由 java.sql.Statement 接口中的 executeBatch 方法指定的。  
   
  向数据库提交命令后，此方法将清除批中的所有命令。  

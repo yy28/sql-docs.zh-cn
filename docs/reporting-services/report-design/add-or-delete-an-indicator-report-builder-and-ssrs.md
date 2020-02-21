@@ -9,10 +9,10 @@ ms.assetid: a8b1aac1-53ef-47a4-afc0-8fa866c6c480
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d9bb437acf4b30a4a497286e3b8c6adabd6b5291
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581914"
 ---
 # <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>添加或删除指示器（报表生成器和 SSRS）
@@ -22,7 +22,7 @@ ms.locfileid: "65581914"
   
  当您首次添加指示器时，指示器配置为默认使用百分比作为度量单位。 百分比范围均匀分布在指示器集的各成员之间，并且由指示器表示的值的作用域为该指示器的父级（如表或矩阵）。  
   
- 您可以更新指示器的值和状态。 有关详细信息，请参阅以下主题：  
+ 您可以更新指示器的值和状态。 有关详情，请参阅以下主题：  
   
 -   [更改指示器图标和指示器集（报表生成器和 SSRS）](../../reporting-services/report-design/change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "65581914"
   
 5.  在 **“选择指示器样式”** 对话框的左窗格中，单击所需的指示器类型，然后单击指示器集。  
   
-6.  单击“确定”  。  
+6.  单击“确定”。   
   
 7.  单击指示器。 将打开 **“仪表数据”** 窗格。  
   

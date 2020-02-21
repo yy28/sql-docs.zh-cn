@@ -1,5 +1,5 @@
 ---
-title: getClob 方法 (int) |Microsoft Docs
+title: getClob 方法 (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 34858e03-5b93-40b1-bf21-13ad7cc7a55e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8c2a617bb0494529254b54d81b0572f13d8b597e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953049"
 ---
 # <a name="getclob-method-int"></a>getClob 方法 (int)
@@ -34,18 +34,18 @@ ms.locfileid: "67953049"
 public java.sql.Clob getClob(int index)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
- 索引   
+#### <a name="parameters"></a>parameters  
+ 索引  
   
- 指示参数索引的 int  。  
+ 指示参数索引的 int。  
   
 ## <a name="return-value"></a>返回值  
- 一个 Clob 对象。  
+ Clob 对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 getClob 方法是由 java.sql.CallableStatement 接口中的 getClob 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  

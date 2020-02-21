@@ -9,10 +9,10 @@ ms.assetid: 737cfc80-b39e-497c-817b-b46693deb58f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 34f69e4c8c1b62e01f8cb73e26f84d05e427a9ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581657"
 ---
 # <a name="chart-effects---add-bevel-emboss-or-texture-report-builder"></a>图表效果 - 添加棱台、浮雕或纹理（报表生成器）
@@ -40,7 +40,7 @@ ms.locfileid: "65581657"
 > [!NOTE]  
 >  不能在同一个图表上具有三维和凹凸效果或阳文样式。 如果已为图表启用三维样式，将看不到 PieDrawingStyle 属性。  
   
- ![带有凹形绘制样式的饼图](../../reporting-services/report-design/media/rs-piedrawingeffects-concave.gif "带有凹形绘制样式的饼图")  
+ ![具有凹形绘制样式的饼图](../../reporting-services/report-design/media/rs-piedrawingeffects-concave.gif "具有凹形绘制样式的饼图")  
   
 ### <a name="to-add-texture-styles-to-a-bar-or-column-chart"></a>向条形图或柱状图中添加纹理样式  
   
@@ -61,6 +61,6 @@ ms.locfileid: "65581657"
  [条形图（报表生成器和 SSRS）](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)   
  [柱形图（报表生成器和 SSRS）](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)   
  [饼图（报表生成器和 SSRS）](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
- [设置图表格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
+ [设置图表格式&#40;报表生成器和 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
   
   

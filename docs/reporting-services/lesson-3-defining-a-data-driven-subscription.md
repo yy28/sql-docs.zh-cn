@@ -9,18 +9,18 @@ ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fafd591e4b29f9b8beb1639ff64f4e2d43b65c2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66826859"
 ---
-# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
+# <a name="lesson-3-defining-a-data-driven-subscription"></a>第 3 课：定义数据驱动订阅
 本 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 教程课程使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Web 门户的“数据驱动订阅”页，以连接到订阅数据源、生成检索订阅数据的查询，并将结果集映射到报表和传递选项。  
   
 > [!NOTE]  
 > 开始操作之前，请确认“[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理”服务正在运行  。 如果该代理服务未运行，则无法保存订阅。  一种验证方法是，打开 [SQL Server 配置管理器](../relational-databases/sql-server-configuration-manager.md)。
-本课程假设您已经完成了第 1 课和第 2 课，并且报表数据源使用存储的凭据。  有关详细信息，请参阅 [第 2 课：修改报表数据源属性](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
+本课程假设您已经完成了第 1 课和第 2 课，并且报表数据源使用存储的凭据。  有关详细信息，请参阅[第 2 课：修改报表数据源属性](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
   
 ## <a name="bkmk_startwizard"></a>启动数据驱动订阅向导  
   
@@ -36,13 +36,13 @@ ms.locfileid: "66826859"
 ## <a name="type"></a>类型
 1.  单击“数据驱动订阅”  。  
 
-## <a name="schedule"></a>“计划”
+## <a name="schedule"></a>计划
 1. 在“计划”部分中，单击“报表特定计划”  。
 2. 单击“编辑计划”  。
 3. 在 **“计划详细信息”** 中，单击 **“一次”** 。  
 4. 将开始时间指定为当前时间的前几分钟。  
-5. 指定**开始和结束日期**。
-6. 选择“应用”  。
+5. 指定开始日期和结束日期  。
+6. 选择“应用”。 
 
 ## <a name="destination"></a>目标  
 1.  在“目标”部分中，选择“Windows 文件共享”作为传递方法  。  
@@ -83,7 +83,7 @@ ms.locfileid: "66826859"
 ---------|---------|---------
 **文件名**     |从数据集获取值 | 订单     
 **路径**     | 输入值  | 在“值”中，键入拥有写入权限的公共文件共享的名称（例如， `\\mycomputer\public\myreports`）。 
-**呈现格式** | 从数据集获取值 | “格式”
+**呈现格式** | 从数据集获取值 | 格式
 **写入模式**| 输入值| 自动增加    
 **文件扩展名** |输入值 |True
 **用户名** | 输入值 | 键入您的域用户帐户。 按以下格式输入：\<domain>\\\<account>。 用户帐户需要对配置的路径具有权限。 
@@ -97,13 +97,13 @@ ms.locfileid: "66826859"
 ## <a name="next-steps"></a>后续步骤  
 订阅运行时，将有四个报表文件（分别属于 *Subscribers* 数据源中的各订单）发送到指定的文件共享中。 每个发送的报表在数据（数据应当是订单特定的）、呈现格式和文件格式方面都将是唯一的。 可以打开共享文件夹中的每一个报表以验证是否每个版本都是根据您定义的订阅选项来自定义的。  
   
-![按订阅创建的文件列表](../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif "List of files created by the subscription")  
+![按订阅创建的文件列表](../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif "按订阅创建的文件列表")  
   
 Web 门户中的“订阅”页包含订阅的“上次运行日期”  和“状态”  。 
 > [!NOTE]
 > 在订阅运行后刷新该页可查看更新后的信息。  
     
-![在 web 门户中的订阅结果](../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png "web 门户中的订阅结果")  
+![Web 门户中的订阅结果](../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png "Web 门户中的订阅结果")  
   
 此步骤会结束“定义数据驱动订阅”教程。   
   

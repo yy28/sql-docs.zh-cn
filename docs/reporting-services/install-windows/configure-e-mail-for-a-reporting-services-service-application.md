@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 1025ea1de1e349e640b285174ffab694f791fd21
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68221639"
 ---
 # <a name="configure-e-mail-for-a-reporting-services-service-application"></a>为 Reporting Services 服务应用程序配置电子邮件
@@ -50,7 +50,7 @@ ms.locfileid: "68221639"
   
 1.  如果您的电子邮件环境需要 NTLM 身份验证且不允许匿名访问，则需要修改 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序的电子邮件传递扩展插件配置。 例如，如果你在“管理订阅”  页面上的“上次结果”  中看到以下页面：订阅。  
   
-    -   发送邮件失败：SMTP 服务器需要安全连接或客户端未经身份验证。 服务器响应为：5.7.1 客户端未经身份验证 将不重新发送邮件。  
+    -   发送邮件时出错：SMTP 服务器需要一个安全连接或客户端未经过身份验证。 服务器响应为：5.7.1 客户端未经身份验证将不重新发送邮件。  
   
      对 SMTPAuthenticate  进行更改，令其使用值“2”。 无法从用户界面更改此值。 以下 PowerShell 脚本示例更新了名为“SSRS_TESTAPPLICATION”的服务应用程序的报表服务器电子邮件传递扩展插件的完全配置。 请注意，此脚本中列出的某些节点（例如“发件人”地址）也可从用户界面进行设置。  
   

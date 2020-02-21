@@ -1,5 +1,5 @@
 ---
-title: 截断方法 (SQLServerBlob) |Microsoft Docs
+title: truncate 方法 (SQLServerBlob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: ef181e04-003a-442a-9b7e-0c508a7cc873
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3195b0eafb5eb48f7ec6b159fef05036d6efd7df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67968499"
 ---
 # <a name="truncate-method-sqlserverblob"></a>truncate 方法 (SQLServerBlob)
@@ -34,16 +34,16 @@ ms.locfileid: "67968499"
 public void truncate(long len)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
- len   
+#### <a name="parameters"></a>parameters  
+ len  
   
  BLOB 的新长度。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
- 此截断方法由 java .sql 接口中的截断方法指定。  
+## <a name="remarks"></a>备注  
+ 此 truncate 方法是由 java.sql.Blob 接口中的 truncate 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerBlob 方法](../../../connect/jdbc/reference/sqlserverblob-methods.md)   

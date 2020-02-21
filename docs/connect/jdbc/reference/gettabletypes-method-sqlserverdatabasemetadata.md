@@ -1,5 +1,5 @@
 ---
-title: getTableTypes 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getTableTypes 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: e0f5dc57-07b8-4811-ab1a-80a524bfdb42
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8da791a53d6ee25dd56f7f015ccc69947999f3b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979155"
 ---
 # <a name="gettabletypes-method-sqlserverdatabasemetadata"></a>getTableTypes 方法 (SQLServerDatabaseMetaData)
@@ -37,17 +37,17 @@ public java.sql.ResultSet getTableTypes()
 ## <a name="return-value"></a>返回值  
  一个 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 getTableTypes 方法是由 java.sql.DatabaseMetaData 接口中的 getTableTypes 方法指定的。  
   
  由 getTableTypes 方法返回的结果集将包含以下信息：  
   
-|“属性”|类型|描述|  
+|名称|类型|说明|  
 |----------|----------|-----------------|  
-|TABLE_TYPE|**String**|表类型。|  
+|TABLE_TYPE|**字符串**|表类型。|  
   
 > [!NOTE]  
 >  有关 getTableTypes 方法返回的数据的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 联机丛书中的“sp_tables (Transact-SQL)”。  

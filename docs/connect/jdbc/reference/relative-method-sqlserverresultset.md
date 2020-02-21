@@ -16,10 +16,10 @@ ms.assetid: 2bcdbb69-95fd-4ae8-8488-1a75a91fe2e0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5b2e644feff3cd2787cc6bd80bce54562ad20794
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975780"
 ---
 # <a name="relative-method-sqlserverresultset"></a>relative 方法 (SQLServerResultSet)
@@ -34,7 +34,7 @@ ms.locfileid: "67975780"
 public boolean relative(int nRows)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  nRows   
   
  指示要移动的行数的 int  。  
@@ -42,11 +42,11 @@ public boolean relative(int nRows)
 ## <a name="return-value"></a>返回值  
  如果游标在行上，则为 true  。 否则为 **false**。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此相对方法是通过使用 .sql 接口中的相对方法指定的。  
+## <a name="remarks"></a>备注  
+ 此 relative 方法是由 java.sql.ResultSet 接口中的 relative 方法指定的。  
   
  如果尝试移到结果集中的第一行之前或最后一行之后，将使游标移到第一行之前或最后一行之后。 调用 `relative(0)` 有效，但是不会更改游标位置。  
   

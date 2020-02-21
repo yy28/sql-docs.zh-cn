@@ -16,10 +16,10 @@ ms.assetid: 16ff77f9-7928-415c-abf6-97ed59e3e396
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b5137c4df92860822e715d70a1355b490026af40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973556"
 ---
 # <a name="setnull-method-javalangstring-int-javalangstring"></a>setNull 方法 (java.lang.String, int, java.lang.String)
@@ -36,10 +36,10 @@ public void setNull(java.lang.String sCol,
                     java.lang.String sTypeName)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  sCol   
   
- **字符串**contthat 包含参数名称的 aining。  
+ 一个包含参数名称的字符串  。  
   
  nType   
   
@@ -49,10 +49,10 @@ public void setNull(java.lang.String sCol,
   
  一个指示要设置的参数完全限定名称的 String  。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 setNull 方法由 java.sql.CallableStatement 接口中的 setNull 方法指定。  
   
 ## <a name="see-also"></a>另请参阅  

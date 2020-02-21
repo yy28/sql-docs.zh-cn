@@ -16,10 +16,10 @@ ms.assetid: 13b51f77-cec9-45fc-862e-3d2bb2d718d7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b66a142789e855eaf0e4524554892ea85c7b9cbe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979077"
 ---
 # <a name="gettime-method-javalangstring-javautilcalendar-sqlserverresultset"></a>getTime 方法 (java.lang.String, java.util.Calendar) (SQLServerResultSet)
@@ -35,22 +35,22 @@ public java.sql.Time getTime(java.lang.String colName,
                              java.util.Calendar cal)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *colName*  
   
- 一个包含列名的字符串  。  
+ 一个包含列名的字符串。  
   
- cal   
+ cal  
   
  Calendar 对象。  
   
 ## <a name="return-value"></a>返回值  
  Time 对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 getTime 方法是由 java.sql.ResultSet 接口中的 getTime 方法指定的。  
   
  此方法返回 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime 或 smalldatetime 数据类型的有效时间部分，日期部分设置为采用所提供的 Calendar 时区的 Java 基线日期 1970/01/01。  

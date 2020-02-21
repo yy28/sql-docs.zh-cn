@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: ef70b3430cc1028b7486bf663280cfcf740d9290
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62651943"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>用于 SSRS 服务应用程序的设置订阅和警报
@@ -30,7 +30,7 @@ ms.locfileid: "62651943"
   
  ![对服务应用程序数据库的 SQL 代理权限](../../reporting-services/install-windows/media/rs-provisionsqlagent.gif "对服务应用程序数据库的 SQL 代理权限")  
   
-||描述|  
+||说明|  
 |------|-----------------|  
 |**1**|承载 Reporting Services 服务应用程序数据库的 SQL Server 数据库引擎实例。|  
 |**2**|SQL 数据库引擎实例的 SQL Server 代理实例。|  
@@ -100,7 +100,7 @@ ms.locfileid: "62651943"
   
     -   如果使用 SQL Server 身份验证进行连接，请提供登录名和密码。  
   
-3.  单击 **“连接”** 。  
+3.  单击“连接”  。  
   
 #### <a name="to-run-the-transact-sql-statement"></a>运行 Transact-SQL 语句  
   
@@ -114,6 +114,6 @@ ms.locfileid: "62651943"
   
      该语句将添加到查询窗口。  
   
-5.  单击 **“执行”** 。  
+5.  单击“执行”  。  
   
   

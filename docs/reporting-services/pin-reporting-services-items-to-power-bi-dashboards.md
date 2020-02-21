@@ -1,6 +1,6 @@
 ---
 title: 将分页报表项固定到 Power BI 仪表板 - Reporting Services | Microsoft Docs
-ms.date: 12/05/2018
+ms.date: 01/14/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8e91341c5c1d6b4f9ddd521a4735f22f63907784
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.openlocfilehash: da984efa4e0b4d964cf947929094ee7b392063f2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892004"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75952483"
 ---
 # <a name="pin-reporting-services-paginated-report-items-to-dashboards-in-power-bi"></a>将 Reporting Services 分页报表项固定到 Power BI 仪表板
 
@@ -40,7 +40,7 @@ ms.locfileid: "68892004"
   
 -   如果想要刷新固定项，需要针对存储的凭据配置报表。  当你固定项时，将自动创建 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 订阅，以管理固定到仪表板的项的数据刷新。  如果报表未使用存储的凭据，则当订阅运行时，你将在“我的订阅”页上看到类似于以下内容的错误消息  。  
   
-    “PowerBI 传递错误:仪表板: IT 支出分析示例，视觉对象: Chart2，错误:无法完成当前操作。 用户数据源凭据不符合运行此报表或共享数据集的要求。 请输入用户数据源凭据。”
+    “Power BI 交付错误: 仪表板:IT 支出分析示例，视觉对象:Chart2，错误:无法完成当前操作。 用户数据源凭据不符合运行此报表或共享数据集的要求。 请输入用户数据源凭据。”
  
     请参阅 [在 Reporting Services 数据源中存储凭据](../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)中的“为特定于报表的数据源配置存储凭据（本机模式）”部分  
   
@@ -68,7 +68,7 @@ ms.locfileid: "68892004"
   
 4. 选择要固定到 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]的报表项。 一次只能固定一个项。  报表查看器将显示你的报表的着色视图，可以固定的报表项将突出显示，而不能固定的项将呈现深色阴影。  
   
-    **(1)** 选择包含要固定到的仪表板的组， **(2)** 选择要将项固定到的仪表板，以及 **(3)** 选择希望仪表板中的磁贴进行更新的频率。   ![说明](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "说明") 刷新由 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 订阅管理，固定项之后，可编辑该订阅并配置不同的刷新计划。  
+    **(1)** 选择包含要固定到的仪表板的组， **(2)** 选择要将项固定到的仪表板，以及 **(3)** 选择希望仪表板中的磁贴进行更新的频率。   ![说明](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "备注") 刷新由 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 订阅管理，固定项之后，可编辑该订阅并配置不同的刷新计划。  
   
     ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png)  
   
@@ -96,38 +96,40 @@ ms.locfileid: "68892004"
   
 ##  <a name="bkmk-troubleshoot"></a> 解决问题  
   
--   **报表查看器工具栏中没有“[!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]”按钮：** 此消息指明报表服务器尚未与 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 集成。 有关详细信息，请参阅 [Power BI 报表服务器集成 (Configuration Manager)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)相集成。  
+-   **报表查看器工具栏上没有 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 按钮：** 该消息指示报表服务器尚未与 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 集成。 有关详细信息，请参阅 [Power BI 报表服务器集成 (Configuration Manager)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)相集成。  
   
-- **无法固定**：当你尝试固定项时，你看到以下错误消息：请参阅 [可以固定的项](#bkmk_supported_items)部分。  
+- **无法固定**：当你尝试固定项时，你看到以下错误消息：请参阅[可以固定的项](#bkmk_supported_items)部分。  
   
-      Cannot Pin: There are no report items on this page that you can pin to [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
+    “无法固定: 此页上没有可固定到 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 的报表项。”  
   
 -   在**仪表板中，** 固定的项显示过时的数据 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ，它在一段时间内曾经更新过。  用户凭据令牌已过期，你需要重新登录。  向 Azure 和 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 注册的用户凭据，其有效期为 90 天。 在 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 中，单击“我的设置”  。 有关详细信息，请参阅 [我的 Power BI 集成（网站门户）设置](my-settings-for-power-bi-integration-web-portal.md)相集成。  
   
 -   在**仪表板中** 固定的项显示过时的数据 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ，它甚至一次也没有刷新过。  此问题在于报表未配置为使用存储的凭据。 报表必须使用存储的凭据，因为固定报表项的操作会创建 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 订阅以管理磁贴的刷新计划。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 订阅需要存储的凭据。 如果查看“我的订阅”页，你将会看到如下错误消息  ：  
   
-        PowerBI Delivery error: dashboard: SSRS items, visual: Image3, error: The current action can't be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified. (rsInvalidDataSourceCredentialSetting)
+    “Power BI 交付错误: 仪表板: SSRS 项，视觉对象: Image3，错误: 无法完成当前操作。 用户数据源凭据不符合运行此报表或共享数据集的要求。 用户数据源凭据未存储在报表服务器数据库中，或用户数据源配置为不需要凭据但未指定无人参与的执行帐户。 (rsInvalidDataSourceCredentialSetting)"
   
--   **过期的 Power BI 凭据：**  你尝试固定项，并看到以下错误消息。 在 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 中，单击“我的设置”，在“我的设置”页上，单击“登录”   。 有关详细信息，请参阅[用于 Power BI 集成的“我的设置”（Web 门户）](my-settings-for-power-bi-integration-web-portal.md)。  
+-   **过期的 Power BI 凭据：** 你尝试固定项，并看到以下错误消息。 在 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 中，单击“我的设置”，在“我的设置”页上，单击“登录”   。 有关详细信息，请参阅[用于 Power BI 集成的“我的设置”（Web 门户）](my-settings-for-power-bi-integration-web-portal.md)。  
   
-        Cannot Pin: Unexpected Server Error: Missing, invalid or expired Power BI credentials.  
+    “无法固定: 意外的服务器错误: Power BI 凭据丢失、无效或过期。”  
   
--   **无法固定**：如果尝试将项固定到处于只读状态的仪表板，便会看到如下错误消息：  
+-   **无法固定**：如果你尝试将项固定到处于只读状态的仪表板，你将看到类似于以下内容的错误消息：  
   
-        Server Error: The item 'Dashboard deleted 015cf022-8e2f-462e-88e5-75ab0a04c4d0' can't be found. (rsItemNotFound)  
-  
+    “服务器错误: 找不到项“删除的仪表板 015cf022-8e2f-462e-88e5-75ab0a04c4d0”。 (rsItemNotFound)"  
+
+-   **Power BI 应用中的磁贴显示过时的数据：** 如果将 Reporting Services 报表项固定到仪表板，然后在应用中分发该仪表板，则该仪表板中的固定报表项将不会更新。 
+
 ##  <a name="bkmk_subscription_management"></a> 订阅管理  
  除故障排除部分所述的与订阅相关的问题外，以下信息将帮助你维护与 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 相关的订阅。
   
--   **项名称已更改：** 如果重命名或删除了固定的报表项， [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 磁贴将不再更新，并且你将看到如下错误消息。  如果将该项重命名回原始名称，则订阅将重新开始工作，磁贴将按订阅计划进行刷新。  
+-   **项名称已更改：** 如果重命名或删除了固定的报表项，[!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 磁贴将不再更新，并且你将看到如下错误消息。  如果将该项重命名回原始名称，则订阅将重新开始工作，磁贴将按订阅计划进行刷新。  
   
-        PowerBI Delivery error: dashboard: SSRS items, visual: Image1, error: Error: Report item 'Image1' cannot be found.  
+    “Power BI 交付错误: 仪表板: SSRS 项，视觉对象: Image1，错误: 错误：找不到报表项“Image1”。”  
   
-     此外，还可以编辑订阅属性，并将“报表视觉对象名称”更改为相应的报表项名称  。 ![更改用于 Power BI 刷新的视觉对象](../reporting-services/media/ssrs-powerbi-subscription-visual.png "change the visual used for the power bi refresh")  
+    此外，还可以编辑订阅属性，并将“报表视觉对象名称”更改为相应的报表项名称  。 ![更改用于 Power BI 刷新的视觉对象](../reporting-services/media/ssrs-powerbi-subscription-visual.png "更改用于 Power BI 刷新的视觉对象")  
   
--   **删除磁贴**。 如果你删除了 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]中的磁贴，将不会删除 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中关联的订阅，并且你将在“我的订阅”页上，看到如下错误  。 你可以删除该订阅。  
+-   **删除磁贴**。 如果删除了 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 中的磁贴，将不会删除 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中关联的订阅，并且将在“我的订阅”页上，看到如下错误  。 你可以删除该订阅。  
   
-        PowerBI Delivery error: dashboard: SSRS items, visual: Image3, error: The item 'Tile deleted af7131d9-5eaf-480f-ba45-943a07d19c9f' cannot be found.  
+    “Power BI 交付错误: 仪表板: SSRS 项，视觉对象: Image3，错误: 找不到项目“已删除的磁贴 af7131d9-5eaf-480f-ba45-943a07d19c9f”。  
 
 ## <a name="video"></a>视频
 
@@ -135,7 +137,7 @@ ms.locfileid: "68892004"
 
 ## <a name="see-also"></a>另请参阅  
  [Power BI 报表服务器集成 (Configuration Manager)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)   
- [我的 Power BI 集成（网站门户）设置](my-settings-for-power-bi-integration-web-portal.md)  
+ [适用于 Power BI 集成的“我的设置”（Web 门户）](my-settings-for-power-bi-integration-web-portal.md)  
  [Power BI 中的仪表板](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: PDOStatement 类 |Microsoft Docs
+title: PDOStatement 类 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: ef2db0b3-b10e-4898-8bfc-d5e4baca18ef
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 160d28aae240179173949ccd67639746225b7c15
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936087"
 ---
 # <a name="pdostatement-class"></a>PDOStatement 类
@@ -28,7 +28,7 @@ PDOStatement 类表示语句和语句的结果。
 PDOStatement {}  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 PDOStatement class 类包含以下方法：  
   
 -   [PDOStatement::bindColumn](../../connect/php/pdostatement-bindcolumn.md)  
@@ -78,7 +78,7 @@ PDOStatement class 类包含以下方法：
 
 [常量（Microsoft Drivers for PHP for SQL Server）](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
-[Microsoft Driver for PHP for SQL Server 编程指南](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 编程指南](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [开始使用 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
 

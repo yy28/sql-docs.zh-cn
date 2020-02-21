@@ -1,5 +1,5 @@
 ---
-title: getUser 方法 (SQLServerDataSource) |Microsoft Docs
+title: getUser 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 3513dd7f-6ae5-4010-bde0-454ac4365bce
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5562f9b19b59096784ad3dd2a09e9135a7e07cf2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978182"
 ---
 # <a name="getuser-method-sqlserverdatasource"></a>getUser 方法 (SQLServerDataSource)
@@ -37,7 +37,7 @@ public java.lang.String getUser()
 ## <a name="return-value"></a>返回值  
  一个包含用户名的字符串  。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  [setUser](../../../connect/jdbc/reference/setuser-method-sqlserverdatasource.md) 方法设置在连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例时将使用的用户名。 如果未设置用户名值，则 getUser 方法返回默认值 Null。  
   
 ## <a name="see-also"></a>另请参阅  

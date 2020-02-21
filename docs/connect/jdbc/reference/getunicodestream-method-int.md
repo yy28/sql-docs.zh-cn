@@ -1,5 +1,5 @@
 ---
-title: getUnicodeStream 方法 (int) |Microsoft Docs
+title: getUnicodeStream 方法 (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 0de79b65-a25e-4028-9cc2-7ac02340115b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a3ee382716201c5e24b9ff7b23ae4f923ae18b77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978437"
 ---
 # <a name="getunicodestream-method-int"></a>getUnicodeStream 方法 (int)
@@ -37,18 +37,18 @@ ms.locfileid: "67978437"
 public java.io.InputStream getUnicodeStream(int columnIndex)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  columnIndex   
   
  指示列索引的 int  。  
   
 ## <a name="return-value"></a>返回值  
- 一个 InputStream 对象。  
+ InputStream 对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 getUnicodeString方法是由 java.sql.ResultSet 接口中的 getUnicodeString 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  

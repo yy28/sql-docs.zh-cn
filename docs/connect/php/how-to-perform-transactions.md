@@ -1,5 +1,5 @@
 ---
-title: '如何: 执行事务 |Microsoft Docs'
+title: 如何：执行事务 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,10 +13,10 @@ ms.assetid: f4643b85-f929-4919-8951-23394bc5bfa7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26ca7fbe56a17e1bf2a7c69b9e8c2dcd63073f87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936439"
 ---
 # <a name="how-to-perform-transactions"></a>如何：执行事务
@@ -42,7 +42,7 @@ PDO_SQLSRV 驱动程序提供以下三种方法来执行事务：
   
 此主题的其余部分介绍并演示了如何使用 SQLSRV 驱动程序执行事务。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 如下概述执行事务的步骤：  
   
 1.  使用 **sqlsrv_begin_transaction**开始事务。  
@@ -61,7 +61,7 @@ PDO_SQLSRV 驱动程序提供以下三种方法来执行事务：
   
 ## <a name="example"></a>示例  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>说明  
 以下示例将多个查询作为事务的一部分执行。 如果所有查询均成功完成，将提交事务。 如果任一查询失败，将回退事务。  
   
 此示例尝试从 *Sales.SalesOrderDetail* 表中删除销售订单并针对销售订单中的每个产品调整 *Product.ProductInventory* 表中的产品库存级别。 这些查询包含在一个事务中，因为所有查询都必须成功完成，数据库才能准确反映订单状态和产品供应情况。  
@@ -150,7 +150,7 @@ function perform_trans_ops($conn, $orderId)
 ```  
   
 ### <a name="comments"></a>注释  
-为了重点介绍事务行为，上面的示例中未包含一些建议的错误处理。 对于生产应用程序, 我们建议检查对**sqlsrv**函数的任何调用是否存在错误并相应地对其进行处理。
+为了重点介绍事务行为，上面的示例中未包含一些建议的错误处理。 对于生产应用程序，我们建议应检查对 sqlsrv  函数的任何调用是否存在错误并进行相应处理。
   
 ## <a name="see-also"></a>另请参阅  
 [更新数据（Microsoft Drivers for PHP for SQL Server）](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)

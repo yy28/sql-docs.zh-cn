@@ -1,5 +1,5 @@
 ---
-title: setTimestamp 方法到 timestamp 和 calendar 值 |Microsoft Docs
+title: 设置时间戳和日历值的 setTimestamp 方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 09dca1f9-225a-4acb-9857-9a947e0829be
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58489b749e58981ea385842528b8eac0bca43780
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972391"
 ---
 # <a name="settimestamp-method-javalangstring-javasqltimestamp-javautilcalendar"></a>setTimestamp 方法 (java.lang.String, java.sql.Timestamp, java.util.Calendar)
@@ -36,7 +36,7 @@ public void setTimestamp(java.lang.String sCol,
                          java.util.Calendar c)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  sCol   
   
  包含参数名称的字符串  。  
@@ -49,10 +49,10 @@ public void setTimestamp(java.lang.String sCol,
   
  Calendar 对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 setTimestamp 方法是由 java.sql.CallableStatement 接口中的 setTimestamp 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  

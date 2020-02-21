@@ -20,10 +20,10 @@ ms.assetid: 63bb870a-4dbf-46bd-8921-78f8ebe5fd75
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c78f160e51265e4ce87a191aa3076dc4464c31d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63026183"
 ---
 # <a name="accessing-the-soap-api"></a>访问 SOAP API
@@ -49,7 +49,7 @@ https://server/reportserver/ReportService2010.asmx?wsdl
   
  下表介绍 URL 中的各元素。  
   
-|URL 元素|描述|  
+|URL 元素|说明|  
 |-----------------|-----------------|  
 |服务器 |报表服务器部署到的服务器的名称。|  
 |reportserver |包含 XML Web 服务的文件夹的名称。 此名称在设置期间配置。|  

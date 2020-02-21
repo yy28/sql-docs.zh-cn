@@ -9,10 +9,10 @@ ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9973ce2f9c5eac344307258e1c212979146c1695
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580776"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>导出到 Microsoft Excel（报表生成器和 SSRS）
@@ -124,7 +124,7 @@ ms.locfileid: "65580776"
 ## <a name="excel-renderer"></a>Excel 呈现器  
   
 ### <a name="current-xlsx-excel-file-renderer"></a>当前 (.xlsx) Excel 文件呈现器  
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，默认 Excel 呈现器是与当前 (.xlsx) [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 文件兼容的版本。 这是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户和 SharePoint 列表中 “导出”  菜单中的“Excel”  选项。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，默认 Excel 呈现器是与当前 (.xlsx) [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 文件兼容的版本。 这是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户和 SharePoint 列表中 “导出”菜单中的“Excel”选项。  
   
  当你使用默认 Excel 呈现器而不是更早版本的 Excel 2003 (.xls) 呈现器时，请安装针对 Word、Excel 和 PowerPoint 的 Microsoft Office 兼容包，以便更早版本的 Excel 可打开导出的文件。  
   
@@ -166,12 +166,12 @@ ms.locfileid: "65580776"
 ### <a name="differences-between-the-current-xlsx-excel-and-excel-2003-renderers"></a>当前 (.xlsx) Excel 呈现器和 Excel 2003 呈现器之间的差异  
  通过使用当前 (.xlsx) Excel 呈现器或 Excel 2003 呈现器呈现的报表通常是完全相同的，只在极少数的情况下，你会注意到这两种格式之间的差异。 下表对 Excel 呈现器和 Excel 2003 呈现器进行了比较。  
   
-|属性|Excel 2003|当前 Excel|  
+|properties|Excel 2003|当前 Excel|  
 |--------------|----------------|-------------------|  
 |每个工作表的最大列数|256|16,384|  
 |每个工作表的最大行数|65,536|1,048,576|  
 |工作表中允许的颜色数|56（调色板）<br /><br /> 如果报表中使用的颜色超过 56 种，呈现扩展插件就会将所需颜色与自定义调色板中已有的 56 种颜色之一匹配。|大约 1600 万种（24 位颜色）|  
-|ZIP 压缩文件|None|ZIP 压缩|  
+|ZIP 压缩文件|无|ZIP 压缩|  
 |默认字体系列|Arial|Calibri|  
 |默认字号|10 磅|11 磅|  
 |默认行高|12.75 磅|15 磅|  
@@ -204,11 +204,11 @@ ms.locfileid: "65580776"
 ##  <a name="DocumentProperties"></a> 文档属性  
  Excel 呈现器会将以下元数据写入 Excel 文件。  
   
-|报表元素属性|Description|  
+|报表元素属性|说明|  
 |-------------------------------|-----------------|  
-|创建时间|报表执行的日期和时间，格式为 ISO 日期/时间值。|  
+|创建|报表执行的日期和时间，格式为 ISO 日期/时间值。|  
 |作者|Report.Author|  
-|描述|Report.Description|  
+|说明|Report.Description|  
 |LastSaved|报表执行的日期和时间，格式为 ISO 日期/时间值。|  
   
 ##  <a name="PageHeadersFooters"></a> 页眉和页脚  
@@ -242,13 +242,13 @@ ms.locfileid: "65580776"
 -   由于 Excel 的局限性，大纲的嵌套级别最多不能超过 7 级。  
   
 ### <a name="document-map"></a>文档结构图  
- 如果报表中存在任何文档结构图标签，则将呈现文档结构图。 文档结构图呈现为 Excel 的封面工作表，插在工作簿的第一个选项卡位置。 该工作表称为“文档结构图”  。  
+ 如果报表中存在任何文档结构图标签，则将呈现文档结构图。 文档结构图呈现为 Excel 的封面工作表，插在工作簿的第一个选项卡位置。 该工作表称为“文档结构图” 。  
   
  文档结构图中显示的文本由报表项或组的 DocumentMapLabel 属性决定。 文档结构图标签按它们在报表中出现的顺序列出，自第一列的第一行开始。 每个文档结构图标签单元的缩进深度级别数与报表中所出现的一样。 每个缩进级别是通过在后续列中放置一个标签来表示的。 Excel 最多可支持 256 个大纲嵌套级别。  
   
  文档结构图大纲呈现为可折叠的 Excel 大纲。 大纲结构与文档结构图的嵌套结构相匹配。 大纲的扩展和折叠状态从第二级开始。  
   
- 结构图的根节点是报表名称 \<reportname>.rdl，它是不可交互的  。 文档结构图链接字体是宋体 (10pt)。  
+ 结构图的根节点是报表名称 \<reportname>.rdl，它是不可交互的。 文档结构图链接字体是宋体 (10pt)。  
   
 ### <a name="drillthrough-links"></a>钻取链接  
  文本框中出现的钻取链接在用于呈现文本的单元格中呈现为 Excel 超链接。 图像和图表的钻取链接在呈现的图像上呈现为 Excel 超链接。 单击钻取链接时，将打开客户端的默认浏览器并导航到目标的 HTML 视图。  

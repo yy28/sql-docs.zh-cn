@@ -1,5 +1,5 @@
 ---
-title: getBestRowIdentifier 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getBestRowIdentifier 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: c19e9ca6-2a53-4a0c-91ab-80090c3f7229
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9a19bd01a8ebf54eb3e819bd4a82400b8107e382
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954026"
 ---
 # <a name="getbestrowidentifier-method-sqlserverdatabasemetadata"></a>getBestRowIdentifier 方法 (SQLServerDatabaseMetaData)
@@ -38,7 +38,7 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
                                                boolean nullable)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *catalog*  
   
  一个包含目录名称的字符串  。  
@@ -68,22 +68,22 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
 ## <a name="return-value"></a>返回值  
  一个 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 getBestRowIdentifier 方法由 getBestRowIdentifier 方法在 Java.sql.databasemetadata 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 getBestRowIdentifier 方法是由 java.sql.DatabaseMetaData 接口中的 getBestRowIdentifier 方法指定的。  
   
  由 getBestRowIdentifier 方法返回的结果集将包含以下信息：  
   
-|“属性”|类型|描述|  
+|名称|类型|说明|  
 |----------|----------|-----------------|  
 |SCOPE|short|返回结果的范围。 可以为下列值之一：<br /><br /> bestRowTemporary (0)<br /><br /> bestRowTransaction (1)<br /><br /> bestRowSession (2)|  
 |COLUMN_NAME|String|列的名称。|  
 |DATA_TYPE|short|来自 java.sql.Types 的 SQL 数据类型。|  
 |TYPE_NAME|String|数据类型的名称。|  
-|COLUMN_SIZE|INT|列的精度。|  
-|BUFFER_LENGTH|INT|缓冲区长度。|  
+|COLUMN_SIZE|int|列的精度。|  
+|BUFFER_LENGTH|int|缓冲区长度。|  
 |DECIMAL_DIGITS|short|列的小数位数。|  
 |PSEUDO_COLUMN|short|指示列是否为伪列。 可以为下列值之一：<br /><br /> bestRowUnknown (0)<br /><br /> bestRowNotPseudo (1)<br /><br /> bestRowPseudo (2)|  
   

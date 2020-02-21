@@ -1,20 +1,21 @@
 ---
-title: 管理 Azure Data Studio 中的笔记本
-titleSuffix: SQL Server big data clusters
+title: 管理笔记本：Azure Data Studio
+titleSuffix: SQL Server Big Data Clusters
 description: 了解如何管理 Azure Data Studio 中的笔记本。 包括打开笔记本、保存笔记本和更改大数据群集连接。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 12/06/2018
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fb081c84de1fc9548ef1ea1f19bb2e286d0be636
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 8cf37ff6a4ad5e2b627fa5d968391cc5a7597a4a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844265"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244090"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>如何管理 Azure Data Studio 中的笔记本
 
@@ -42,7 +43,7 @@ ms.locfileid: "73844265"
 
 ![选择“打开文件”，打开“打开文件”对话框](./media/notebooks-how-to-manage/open-file-1.png) 
 
-### <a name="dashboard"></a>面板
+### <a name="dashboard"></a>仪表板
 
 单击仪表板中的“打开笔记本”，打开“打开文件”对话框  。
 

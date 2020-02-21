@@ -16,10 +16,10 @@ ms.assetid: 78db89d6-a8a0-4116-8885-548e627220ed
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 87d3dfc2183bdc00261417a024507b41ea5fde28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67952745"
 ---
 # <a name="getconnection-method-javalangstring-javalangstring"></a>getConnection 方法 (java.lang.String, java.lang.String)
@@ -35,7 +35,7 @@ public java.sql.Connection getConnection(java.lang.String username,
                                          java.lang.String password)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *username*  
   
  一个包含用户名的字符串  。  
@@ -47,13 +47,13 @@ public java.sql.Connection getConnection(java.lang.String username,
 ## <a name="return-value"></a>返回值  
  [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
- 此 getConnection 方法由 getConnection 方法在 javax.mail.session 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 getConnection 方法是由 javax.sql.DataSource 接口中的 getConnection 方法指定的。  
   
- 如果使用非 null 的用户名或密码调用 getConnection 方法, 将替换在初始化 SQLServerConnection 对象时在 SQLServerDataSource 类上设置的用户名和密码属性。 例如，如果调用方对数据源调用了 [setUser](../../../connect/jdbc/reference/setuser-method-sqlserverdatasource.md) 和 [setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md)，然后调用 getConnection 并提供非 Null 的用户名或非 Null 的密码，则由 setUser 和 setPassword 设置的用户名和密码将被替换为传入 getConnection 的用户名和密码。  
+ 如果使用非 Null 的用户名或密码调用 getConnection 方法，将替换初始化 SQLServerConnection 对象时为 SQLServerDataSource 类设置的用户名和密码属性。 例如，如果调用方对数据源调用了 [setUser](../../../connect/jdbc/reference/setuser-method-sqlserverdatasource.md) 和 [setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md)，然后调用 getConnection 并提供非 Null 的用户名或非 Null 的密码，则由 setUser 和 setPassword 设置的用户名和密码将被替换为传入 getConnection 的用户名和密码。  
   
 > [!NOTE]  
 >  在这种情况下，通过调用 [setURL](../../../connect/jdbc/reference/seturl-method-sqlserverdatasource.md) 方法在 URL 中设置的用户名和密码将保持不变。  

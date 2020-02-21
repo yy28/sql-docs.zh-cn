@@ -12,10 +12,10 @@ ms.assetid: a30600a9-bbed-4519-9426-3470ff2982e7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 69dce8309f96988a9d339aefbb684116c0df2eb4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193779"
 ---
 # <a name="delivery-extensions-overview"></a>传递扩展插件概述
@@ -23,12 +23,12 @@ ms.locfileid: "63193779"
   
  下表列出 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 随附的传递扩展插件。  
   
-|传递扩展插件|描述|  
+|传递扩展插件|说明|  
 |------------------------|-----------------|  
 |报表服务器电子邮件|使用 SMTP 服务器通过电子邮件将报表发送到单独用户或组。|  
 |报表服务器文件共享|用于将组织内的报表分发到网络文件共享。 提供了按指定的计划自动将报表复制到文件共享的功能。|  
   
- ![Reporting Services 传递扩展体系结构](../../../reporting-services/extensions/delivery-extension/media/bk-reportservicedelivery.gif "Reporting Services 传递扩展体系结构")  
+ ![Reporting Services 传递扩展插件体系结构](../../../reporting-services/extensions/delivery-extension/media/bk-reportservicedelivery.gif "Reporting Services 传递扩展插件体系结构")  
 Reporting Services 传递扩展插件体系结构  
   
  传递扩展插件可以与订阅配对。 创建订阅后，用户可以选择可用的传递扩展插件之一来确定传递报表的方式。 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中，订阅位于报表服务器数据库中。 发生事件时，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 根据报表服务器数据库中包含的订阅匹配事件。 对于与此事件关联的每个订阅，报表服务器都将创建一个通知。 对于数据驱动订阅，将为每个收件人创建一个通知。 一旦创建了通知，报表服务器就调用特定的传递扩展插件，并为在通知中指定的扩展插件设置传递值。 此传递扩展插件按照所选传递扩展插件指定的方式将通知发送给用户。  

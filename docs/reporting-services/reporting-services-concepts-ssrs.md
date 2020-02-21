@@ -9,14 +9,14 @@ ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 126819d9adb85fa4cf17af0c6308d56696136988
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570857"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services 概念 (SSRS)
-  本文概要介绍 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 概念。  
+  本文简要概述了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 概念。  
   
  **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 本机模式 | [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式   
   
@@ -32,7 +32,7 @@ ms.locfileid: "65570857"
 ### <a name="report-server-items"></a>报表服务器项 
  报表服务器项包括你可以发布、上传或保存到报表服务器的分页和移动报表、KPI、共享数据源、共享数据集和其他项。 在本机报表服务器上的报表服务器分层文件夹结构中对项进行组织，或者在 SharePoint 站点上的 SharePoint 内容库中对项进行组织。 有关详细信息，请参阅[报表服务器内容管理（SSRS 本机模式）](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)。  
   
-### <a name="folders"></a>文件夹
+### <a name="folders"></a>Folders
  在本机报表服务器上，文件夹提供了报表服务器中存储的所有可寻址项的分层形式的导航结构和路径。 您使用文件夹层次结构以及站点和文件夹权限来帮助控制对报表服务器项的访问（通称为 *“项级安全性”* ）。 默认情况下，您为特定文件夹定义的角色分配由文件夹层次结构中的子文件夹继承。 如果您将特定的角色分配给某一文件夹，则继承规则将不再适用。 文件夹结构由名为 **“主文件夹”** 的根节点和支持可选的 **“我的报表”** 功能的保留文件夹组成。 在浏览器中，该根节点是报表服务器虚拟目录的名称，例如 `https://myreportserver/reports`。 有关更多信息，请参见 [Folders](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Folders)。  
   
  在 SharePoint 站点上，在文档库和内容库中使用 SharePoint 文件夹来对项进行组织。  
@@ -42,13 +42,13 @@ ms.locfileid: "65570857"
   
  在 SharePoint 站点上，使用 SharePoint 站点管理员页可以管理对报表以及与报表相关站点内容的访问权限。  
   
-### <a name="schedules"></a>“计划”
+### <a name="schedules"></a>计划
  在本机报表服务器上，您可以计划分页报表、共享数据集和订阅，以便在特定时间或非高峰时段检索数据并传递报表和数据集查询。 计划可以只运行一次，也可以按一定的时间间隔（小时、天、周或月）持续运行。 有关更多信息，请参见 [Schedules](../reporting-services/subscriptions/schedules.md)。  
   
 ### <a name="subscriptions-and-delivery"></a>订阅和传递  
  订阅是一种持续存在的请求，它在特定的时间或为响应某个事件以订阅中指定的应用程序文件格式传递报表。 订阅提供了一种可替代按需运行报表的方法。 按需运行报表要求您在每次要查看报表时主动选择报表。 相比之下，订阅可以用于对报表的传递进行计划并使其自动完成。 您可以将报表传递到电子邮件收件箱或文件共享位置。 有关详细信息，请参阅[订阅和传递 (Reporting Services)](../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)。  
   
-### <a name="extensions"></a>扩展项
+### <a name="extensions"></a>扩展
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了一种可用于自定义报表解决方案的可扩展体系结构。 报表服务器支持自定义的身份验证扩展插件、数据处理扩展插件、报表处理扩展插件、呈现扩展插件和传递扩展插件，并且支持在 RSReportServer.config 配置文件中向用户提供的可配置的扩展插件。 例如，您可以限制报表查看器允许使用的导出格式。 传递扩展插件和报表处理扩展插件是可选的，但如果希望支持报表分发或自定义控件，则是必需的。 有关详细信息，请参阅 [Reporting Services 扩展插件 (SSRS)](../reporting-services/extensions-ssrs.md)。  
   
 ### <a name="report-access"></a>报表访问 
@@ -186,7 +186,7 @@ ms.locfileid: "65570857"
 ##  <a name="bkmk_StagesofReports"></a> Reporting Services 分页报表的阶段  
  报表定义可以创建、发布或保存、编译、处理、缓存、呈现、查看、导出和另存为历史记录。 在您运行报表时，报表服务器将分三个步骤处理报表：报表处理、数据处理和呈现。 数据和报表处理根据报表定义执行；结果将用内部中间格式存储。 中间格式的报表随后将呈现为特定的查看格式。 下图显示了报表处理的阶段和元素。  
   
- ![报表处理关系图](../reporting-services/media/report-execution.gif "report processing diagram")  
+ ![report processing diagram](../reporting-services/media/report-execution.gif "报表处理关系图")  
 报表处理关系图  
   
 ### <a name="report-definition"></a>报表定义  

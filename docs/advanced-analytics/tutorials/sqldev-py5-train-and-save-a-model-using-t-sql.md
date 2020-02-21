@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b8bec553502b2e5c8d69436e539437be9a5989aa
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 87194c1a77964f0e5aef3d0fae008d14cbfb8eb2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73724874"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74901807"
 ---
 # <a name="train-and-save-a-python-model-using-t-sql"></a>使用 T-SQL 定型和保存 Python 模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -122,7 +122,7 @@ ms.locfileid: "73724874"
 
 3. 打开表 nyc\_taxi_models  。 可以看到已添加了一个新行，在列 _model_中包含序列化模型。
 
-    SciKit_model  0x800363736B6C6561726E2E6C696E6561.... 
+    *SciKit_model* *0x800363736B6C6561726E2E6C696E6561....*
 
 ### <a name="traintippredictionmodelrxpy"></a>TrainTipPredictionModelRxPy
 
@@ -186,11 +186,11 @@ ms.locfileid: "73724874"
 
 3. 打开表 nyc_taxi_models  。 可以看到已添加了一个新行，在列 _model_中包含序列化模型。
 
-    revoscalepy_model  0x8003637265766F7363616c.... 
+    *revoscalepy_model* *0x8003637265766F7363616c....*
 
 在下一步中，使用已定型模型来创建预测。
 
-## <a name="next-step"></a>下一步
+## <a name="next-step"></a>后续步骤
 
 [使用存储过程中嵌入的 Python 来运行预测](sqldev-py6-operationalize-the-model.md)
 

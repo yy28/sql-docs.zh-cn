@@ -11,10 +11,10 @@ ms.assetid: fbc5bf3c-120c-4aec-a4f2-f5391bd415f6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0032f92c79916cbd12962e792b51a05e9f353388
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581022"
 ---
 # <a name="configurationsetting-method---getadminsiteurl"></a>ConfigurationSetting 方法 - GetAdminSiteUrl
@@ -31,7 +31,7 @@ ByRef HRESULT as Int32)
 public void GetAdminSiteUrl(out string AdminSiteUrl, out Int32 HRESULT);  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>parameters  
  *AdminSiteUrl*  
  [out] 一个字符串，包含集成报表服务器的 SharePoint 场管理中心网站的绝对 URL。  
   
@@ -42,7 +42,7 @@ public void GetAdminSiteUrl(out string AdminSiteUrl, out Int32 HRESULT);
  返回 *HRESULT* ，指示方法调用是成功还是失败。 值 0 指示方法调用已成功。 非零值指示已发生错误。  
   
 ## <a name="requirements"></a>要求  
- **命名空间:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 方法](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-methods.md)  

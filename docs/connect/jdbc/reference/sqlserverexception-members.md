@@ -1,5 +1,5 @@
 ---
-title: SQLServerException 成员 |Microsoft Docs
+title: SQLServerException 成员 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 610be62e-0994-40bc-9348-4615b9b7a180
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7df5cc4b13ed8896cdd140195bdecc10ea304b40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971009"
 ---
 # <a name="sqlserverexception-members"></a>SQLServerException 成员
@@ -24,7 +24,7 @@ ms.locfileid: "67971009"
   
 ## <a name="constructors"></a>构造函数  
 
-|“属性”|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-constructors.md)|初始化 SQLServerException 类的新实例。|  
   

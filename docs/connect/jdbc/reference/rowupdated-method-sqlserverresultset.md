@@ -16,10 +16,10 @@ ms.assetid: 29303550-294e-4d43-b892-312b42e21271
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9eb0f1bf73f719550ce0a00b3b7f96fab9c2af38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975665"
 ---
 # <a name="rowupdated-method-sqlserverresultset"></a>rowUpdated 方法 (SQLServerResultSet)
@@ -37,11 +37,11 @@ public boolean rowUpdated()
 ## <a name="return-value"></a>返回值  
  如果行已由所有者或其他用户可见地更新了并且更新被检测到了，则为**true**。 否则为 **false**。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 rowUpdated 方法由 rowUpdated 方法在方法中指定。  
+## <a name="remarks"></a>备注  
+ 此 rowUpdated 方法是由 java.sql.ResultSet 接口中的 rowUpdated 方法指定的。  
   
  返回的值取决于结果集是否可以检测更新。  
   

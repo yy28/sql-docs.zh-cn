@@ -16,10 +16,10 @@ ms.assetid: f3c54bfe-d5b7-4f6e-ae6c-3e8954e5b1c9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3bc8420b9f79ce61874dbb03e73924e7be6eca96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976787"
 ---
 # <a name="movetoinsertrow-method-sqlserverresultset"></a>moveToInsertRow 方法 (SQLServerResultSet)
@@ -34,11 +34,11 @@ ms.locfileid: "67976787"
 public void moveToInsertRow()  
 ```  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 moveToInsertRow 方法由 moveToInsertRow 方法在方法中指定。  
+## <a name="remarks"></a>备注  
+ 此 moveToInsertRow 方法是由 java.sql.ResultSet 接口中的 moveToInsertRow 方法指定的。  
   
  将游标置于插入行中时，将记住当前游标位置。 插入行是与可更新的结果集关联的特殊行。 它实际上是一个缓冲区，在其中可通过调用 updater 方法来构造新行，之后将该行添加到结果集。  
   

@@ -11,10 +11,10 @@ ms.assetid: 64cf4877-5995-4bfc-8865-b7618a5c8d01
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 851974955b9311efc149ecdff310bfbb1d8869fc
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026929"
 ---
 # <a name="using-a-stored-procedure-with-an-update-count"></a>使用含更新计数的存储过程
@@ -26,7 +26,7 @@ ms.locfileid: "69026929"
 使用 SQLServerCallableStatement 类构建对存储过程的调用之后，可以使用 [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) 或 [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md) 方法中的任意一个来调用此存储过程。 executeUpdate 方法将返回一个 int  值，该值包含受此存储过程影响的行数，但 execute 方法不返回此值。 如果使用 execute 方法，并且希望获得受影响的行数计数，则可以在运行存储过程后调用 [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md) 方法。
 
 > [!NOTE]  
-> 如果要让 JDBC 驱动程序返回所有更新计数，包括任何可能已不再使用的触发器所返回的更新计数，请将 lastUpdateCount 连接字符串属性设置为“false”。 有关 lastUpdateCount 属性的详细信息, 请参阅[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)。
+> 如果要让 JDBC 驱动程序返回所有更新计数，包括任何可能已不再使用的触发器所返回的更新计数，请将 lastUpdateCount 连接字符串属性设置为“false”。 有关 lastUpdateCount 属性的详细信息，请参阅[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)。
 
 作为示例，在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 示例数据库中创建以下表和存储过程，以及插入示例数据：
 

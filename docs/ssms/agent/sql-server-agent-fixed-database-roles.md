@@ -1,10 +1,9 @@
 ---
-title: SQL Server 代理固定数据库角色 | Microsoft Docs
-ms.custom: ''
+title: SQL Server 代理固定数据库角色
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,13 +18,15 @@ helpviewer_keywords:
 ms.assetid: 719ce56b-d6b2-414a-88a8-f43b725ebc79
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9ae6f9aae067208eedd0ffe6218f703d55e3696f
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: 5395642ed6df8f8e6c1fd01e0599ca50c36e4b3f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72304926"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242725"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>SQL Server 代理固定数据库角色
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "72304926"
 **SQLAgentUserRole** 是具有最低特权的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理固定数据库角色。 它只对运算符、本地作业和作业计划拥有权限。 **SQLAgentUserRole** 的成员只对它们所拥有的本地作业和作业计划拥有权限。 它们不能使用多服务器作业（主服务器作业和目标服务器作业），也不能通过更改作业所有权来获得对它们还没有拥有的作业的访问权限。 **SQLAgentUserRole** 的成员只能在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的“作业步骤属性”  对话框中查看可用的代理列表。 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对象资源管理器中，**SQLAgentUserRole** 的成员只能看到“作业”  节点。  
   
 > [!IMPORTANT]  
-> 在向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agentdatabaserole 的成员授予代理访问权限之前，请考虑此操作是否安全   。 **SQLAgentReaderRole** 和 **SQLAgentOperatorRole** 自动成为 **SQLAgentUserRole**的成员。 这意味着 **SQLAgentReaderRole** 和 **SQLAgentOperatorRole** 的成员可以访问已被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLAgentUserRole **的所有** 代理，并且可以使用这些代理。  
+> 在向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agentdatabaserole   的成员授予代理访问权限之前，请考虑此操作是否安全。 **SQLAgentReaderRole** 和 **SQLAgentOperatorRole** 自动成为 **SQLAgentUserRole**的成员。 这意味着 **SQLAgentReaderRole** 和 **SQLAgentOperatorRole** 的成员可以访问已被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLAgentUserRole **的所有** 代理，并且可以使用这些代理。  
   
 下表汇总了 **SQLAgentUserRole** 对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理对象的权限。  
   
@@ -59,7 +60,7 @@ ms.locfileid: "72304926"
 |创建/修改/删除|否|是<br /><br />无法更改作业所有权。|是|否|  
 |视图列表（枚举）|是<br /><br />可以获得可在 **sp_notify_operator** 和 Management Studio 的“作业属性”  对话框中使用的可用运算符列表。|是|是|是<br /><br />只能在 Management Studio 的“作业步骤属性”  对话框中使用代理列表。|  
 |启用/禁用|否|是|是|不适用|  
-|视图属性|否|是|是|否|  
+|查看属性|否|是|是|否|  
 |执行/停止/开始|不适用|是|不适用|不适用|  
 |查看作业历史记录|不适用|是|不适用|不适用|  
 |删除作业历史记录|不适用|否<br /><br />必须为 **SQLAgentUserRole** 的成员显式授予对 **sp_purge_jobhistory** 的 EXECUTE 权限才能删除它们所拥有的作业的作业历史记录。 这些成员不能删除任何其他作业的历史记录。|不适用|不适用|  
@@ -69,7 +70,7 @@ ms.locfileid: "72304926"
 **SQLAgentReaderRole** 包括所有的 **SQLAgentUserRole** 权限，以及查看可用的多服务器作业及其属性和历史记录的列表的权限。 此角色的成员还可以查看所有可用作业和作业计划以及它们的属性的列表，而不只是它们所拥有的那些作业和作业计划。 **SQLAgentReaderRole** 成员不能通过更改作业所有权来获得对它们还没有拥有的作业的访问权限。 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对象资源管理器中，**SQLAgentReaderRole** 的成员只能看到“作业”  节点。  
   
 > [!IMPORTANT]  
-> 在向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agentdatabaserole 的成员授予代理访问权限之前，请考虑此操作是否安全   。 **SQLAgentReaderRole** 的成员将自动成为 **SQLAgentUserRole**的成员。 这意味着 **SQLAgentReaderRole** 成员可以访问已被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLAgentUserRole **的所有** 代理，并且可以使用这些代理。  
+> 在向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agentdatabaserole   的成员授予代理访问权限之前，请考虑此操作是否安全。 **SQLAgentReaderRole** 的成员将自动成为 **SQLAgentUserRole**的成员。 这意味着 **SQLAgentReaderRole** 成员可以访问已被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLAgentUserRole **的所有** 代理，并且可以使用这些代理。  
   
 下表汇总了 **SQLAgentReaderRole** 对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理对象的权限。  
   
@@ -78,7 +79,7 @@ ms.locfileid: "72304926"
 |创建/修改/删除|否|是（仅拥有的作业）<br /><br />无法更改作业所有权。|否|是（仅拥有的计划）|否|  
 |视图列表（枚举）|是<br /><br />可以获得可在 **sp_notify_operator** 和 Management Studio 的“作业属性”  对话框中使用的可用运算符列表。|是|是|是|是<br /><br />只能在 Management Studio 的“作业步骤属性”  对话框中使用代理列表。|  
 |启用/禁用|否|是（仅拥有的作业）|否|是（仅拥有的计划）|不适用|  
-|视图属性|否|是|是|是|否|  
+|查看属性|否|是|是|是|否|  
 |编辑属性|否|是（仅拥有的作业）|否|是（仅拥有的计划）|否|  
 |执行/停止/开始|不适用|是（仅拥有的作业）|否|不适用|不适用|  
 |查看作业历史记录|不适用|是|是|不适用|不适用|  
@@ -93,16 +94,16 @@ ms.locfileid: "72304926"
 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对象资源管理器中，**SQLAgentOperatorRole** 的成员可以看到“作业”  、“警报”  、“操作员”  和“代理”  节点。 但此角色的成员看不到“错误日志”  节点。  
   
 > [!IMPORTANT]  
-> 在向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agentdatabaserole 的成员授予代理访问权限之前，请考虑此操作是否安全   。 **SQLAgentOperatorRole** 的成员将自动成为 **SQLAgentUserRole** 和 **SQLAgentReaderRole**的成员。 这意味着 **SQLAgentOperatorRole** 的成员可以访问已被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLAgentUserRole **或** SQLAgentReaderRole **的所有** 代理，并且可以使用这些代理。  
+> 在向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agentdatabaserole   的成员授予代理访问权限之前，请考虑此操作是否安全。 **SQLAgentOperatorRole** 的成员将自动成为 **SQLAgentUserRole** 和 **SQLAgentReaderRole**的成员。 这意味着 **SQLAgentOperatorRole** 的成员可以访问已被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLAgentUserRole **或** SQLAgentReaderRole **的所有** 代理，并且可以使用这些代理。  
   
 下表汇总了 **SQLAgentOperatorRole** 对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理对象的权限。  
   
-|操作|Alerts|运算符|本地作业|多服务器作业|作业计划|代理|  
+|操作|警报|运算符|本地作业|多服务器作业|作业计划|代理|  
 |----------|----------|-------------|--------------|--------------------|-----------------|-----------|  
 |创建/修改/删除|否|否|是（仅拥有的作业）<br /><br />无法更改作业所有权。|否|是（仅拥有的计划）|否|  
 |视图列表（枚举）|是|是<br /><br />可以获得可在 **sp_notify_operator** 和 Management Studio 的“作业属性”  对话框中使用的可用运算符列表。|是|是|是|是|  
 |启用/禁用|否|否|是<br /><br />SQLAgentOperatorRole 的成员可以通过使用存储过程 sp_update_job 并指定 \@enabled 和 \@job_id （或 \@job_name）参数的值来启用或禁用它们尚未拥有的本地作业      。 如果此角色的成员为此存储过程指定任何其他参数，则执行此过程将会失败。|否|是<br /><br />SQLAgentOperatorRole 的成员可以通过使用存储过程 sp_update_schedule 并指定 \@enabled 和 \@schedule_id （或 \@name）参数的值来启用或禁用它们尚未拥有的计划      。 如果此角色的成员为此存储过程指定任何其他参数，则执行此过程将会失败。|不适用|  
-|视图属性|是|是|是|是|是|是|  
+|查看属性|是|是|是|是|是|是|  
 |编辑属性|否|否|是（仅拥有的作业）|否|是（仅拥有的计划）|否|  
 |执行/停止/开始|不适用|不适用|是|否|不适用|不适用|  
 |查看作业历史记录|不适用|不适用|是|是|不适用|不适用|  

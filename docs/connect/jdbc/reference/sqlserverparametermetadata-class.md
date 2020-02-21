@@ -1,5 +1,5 @@
 ---
-title: SQLServerParameterMetaData 类 |Microsoft Docs
+title: SQLServerParameterMetaData 类 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 546290e0-9411-4a2b-aa36-61251e70e9cf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b0721341cbf095e0aa27fab392c8d03f72dc2e3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970898"
 ---
 # <a name="sqlserverparametermetadata-class"></a>SQLServerParameterMetaData 类
@@ -35,7 +35,7 @@ ms.locfileid: "67970898"
 public class SQLServerParameterMetaData  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  若要检索参数元数据，请使用 SET FMT ONLY 运行准备好的语句。 可调用的语句调用 sp_sproc_columns 来为过程参数检索名称和元数据。  
   
 ## <a name="see-also"></a>另请参阅  

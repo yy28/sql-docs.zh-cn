@@ -1,5 +1,5 @@
 ---
-title: 处理错误 |Microsoft Docs
+title: 处理错误 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 8fd5b5ef-d939-4b78-b900-5b7b6ddb3eb9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6277b3ecf0160078fa47bc79994d31f64519d9b7
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028032"
 ---
 # <a name="handling-errors"></a>处理错误
@@ -30,23 +30,23 @@ ms.locfileid: "69028032"
   
 -   `getNextException()` 将返回下一个 `SQLServerException` 对象，如果没有可以返回的异常对象，则返回 null。
 
--   `getSQLServerError()`返回对象`SQLServerError` , 该对象包含与 SQL Server 收到的异常有关的详细信息。 如果未发生服务器错误, 则此方法返回 null。
+-   `getSQLServerError()` 返回 `SQLServerError` 对象，该对象包含有关从 SQL Server 接收的异常的详细信息。 如果未发生服务器错误，则此方法返回 null。
 
-`SQLServerError`类的以下方法可用于获取有关服务器生成的错误的更多详细信息。
+`SQLServerError` 类的以下方法可用于获取有关服务器生成的错误的更多详细信息。
 
--   `SQLServerError.getErrorMessage()`返回从服务器接收的错误消息。
+-   `SQLServerError.getErrorMessage()` 返回从服务器接收的错误消息。
 
--   `SQLServerError.getErrorNumber()`返回标识错误类型的数字。
+-   `SQLServerError.getErrorNumber()` 返回一个标识错误类型的数字。
 
--   `SQLServerError.getErrorState()`从 SQL Server 返回表示错误、警告或 "找不到数据" 消息的数字错误代码。
+-   `SQLServerError.getErrorState()` 从 SQL Server 返回表示错误、警告或“找不到数据”消息的数字错误代码。
 
--   `SQLServerError.getErrorSeverity()`返回收到的错误的严重级别。
+-   `SQLServerError.getErrorSeverity()` 返回收到的错误的严重性级别。
 
--   `SQLServerError.getServerName()`返回运行生成错误的 SQL Server 实例的计算机的名称。
+-   `SQLServerError.getServerName()` 返回运行生成错误的 SQL Server 实例的计算机的名称。
 
--   `SQLServerError.getProcedureName()`返回生成错误的存储过程或远程过程调用 (RPC) 的名称。
+-   `SQLServerError.getProcedureName()` 返回生成错误的存储过程或远程过程调用 (RPC) 的名称。
 
--   `SQLServerError.getLineNumber()`返回生成错误的 Transact-sql 命令批处理或存储过程中的行号。
+-   `SQLServerError.getLineNumber()` 从生成错误的 Transact-SQL 批命令或存储过程中返回行号。
   
  在下面的示例中，将向函数中传递 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 示例数据库的一个打开连接，并构造一条没有 FROM 子句、格式错误的 SQL 语句。 然后运行该语句并处理 SQL 异常。  
   

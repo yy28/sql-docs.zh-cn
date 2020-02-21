@@ -11,10 +11,10 @@ ms.assetid: 407d50e4-0a55-43cb-8ddf-2d82714071b1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7b65838720b7300b92829aa57da58563628740cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570760"
 ---
 # <a name="configurationsetting-method---createsslcertificatebinding"></a>ConfigurationSetting 方法 - CreateSSLCertificateBinding
@@ -35,7 +35,7 @@ public void CreateSSLCertificateBinding(string application,
     int lcid, out string error, out int HRESULT);  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>parameters  
  *应用程序*  
  应为其创建证书绑定的应用程序的名称。  
   
@@ -45,7 +45,7 @@ public void CreateSSLCertificateBinding(string application,
  *IPAddress*  
  应用程序的 IP 地址。  
   
- *端口*  
+ 端口   
  与该绑定关联的 SSL 端口。  
   
  *Lcid*  
@@ -60,7 +60,7 @@ public void CreateSSLCertificateBinding(string application,
 ## <a name="return-value"></a>返回值  
  返回 *HRESULT* ，指示方法调用是成功还是失败。 值 0 指示方法调用已成功；错误代码指示调用未成功。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此方法将向 rsreportserver.config 中为该应用程序添加一个绑定。 如果某个绑定在 HTTP.SYS 中不存在，则会在其中创建它。  
   
  在创建绑定之前，该方法调用会检查指定应用程序的 Url 预留，以确定 SSL 证书绑定是否有效。  
@@ -78,7 +78,7 @@ public void CreateSSLCertificateBinding(string application,
 5.  指定某个主机名的 URL 预留已存在，但是该主机名与证书主机名不匹配。  
   
 ## <a name="requirements"></a>要求  
- **命名空间:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

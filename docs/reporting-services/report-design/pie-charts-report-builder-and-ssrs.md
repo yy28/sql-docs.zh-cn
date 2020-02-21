@@ -9,10 +9,10 @@ ms.assetid: 536efa9c-c6fb-4cdd-b41f-ff5382910bd7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a623762a7424036ffe8b9b5b669be426480bbb4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65582230"
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>饼图（报表生成器和 SSRS）
@@ -20,7 +20,7 @@ ms.locfileid: "65582230"
   
  下图显示了带有百分比格式的数据标签的三维饼图。  图例位于右侧中间位置。  
   
- ![饼图](../../reporting-services/report-design/media/piechart.gif "Pie chart")  
+ ![饼图](../../reporting-services/report-design/media/piechart.gif "饼图")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -56,14 +56,14 @@ ms.locfileid: "65582230"
 ## <a name="applying-drawing-styles-to-a-pie-chart"></a>对饼图应用绘制样式  
  您可以向饼图添加特殊的绘制样式以增强其视觉效果。 绘制样式包括凹凸效果和凹陷效果。 这些效果仅可在二维饼图上使用。 下图显示了饼图上的凹凸绘制样式和凹陷绘制样式示例。  
   
- ![饼图绘制样式](../../reporting-services/report-design/media/rs-piedrawingeffects-concave2.gif "Pie Drawing Styles")  
+ ![饼图绘制样式](../../reporting-services/report-design/media/rs-piedrawingeffects-concave2.gif "饼图绘制样式")  
   
  有关详细信息，请参阅[向图表添加凹凸效果、阳文和纹理样式（报表生成器和 SSRS）](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)。  
   
 ## <a name="displaying-percentage-values-on-a-pie-chart"></a>在饼图上显示百分比值  
  与其他形状图类似，饼图表示整体的各部分比例。 因此，通常将饼图标签设置为百分比格式。 为与其他图表类型保持一致，默认情况下图表不显示百分比标签。 有关如何在图表上将值显示为百分比的详细信息，请参阅 [在饼图上显示百分比值（报表生成器和 SSRS）](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)。 有关如何在报表中将数字设置为百分比格式的详细信息，请参阅[设置数字和日期格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)。  
   
- ![将数据点标签显示为百分比的饼图](../../reporting-services/report-design/media/rs-piechartpercentages.gif "Pie chart with data point labels as percentages")  
+ ![将数据点标签显示为百分比的饼图](../../reporting-services/report-design/media/rs-piechartpercentages.gif "将数据点标签显示为百分比的饼图")  
   
 ## <a name="preventing-overlapped-labels-on-a-pie-chart"></a>防止饼图上的标签重叠  
  如果饼图上有许多数据点，数据标签将会重叠。 有几种方法可避免标签重叠：  

@@ -1,5 +1,5 @@
 ---
-title: getMoreResults 方法 () |Microsoft Docs
+title: getMoreResults 方法 () | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: df89db50-0b2f-4094-820a-30be25ad72fe
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dcbce9783641376ae142e94ab5e45dc47fe16fef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981731"
 ---
 # <a name="getmoreresults-method-"></a>getMoreResults 方法 ()
@@ -37,11 +37,11 @@ public final boolean getMoreResults()
 ## <a name="return-value"></a>返回值  
  如果返回的结果为一个结果集，则为 true  。 否则为 **false**。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 getMoreResults 方法由 getMoreResults 方法在 .sql 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 getMoreResults 方法是由 java.sql.Statement 接口中的 getMoreResults 方法指定的。  
   
  调用 getMoreResults 方法，可隐式关闭使用 [getResultSet](../../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md) 方法获取的所有当前已打开的结果集对象。  
   

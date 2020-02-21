@@ -1,5 +1,5 @@
 ---
-title: getObject 方法 (int, util) |Microsoft Docs
+title: getObject 方法 (int, java.util.Map) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 164532be-7ed6-40fa-a273-dece4c8d72c4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5106bddd6cf71401be0f4a71dfaaf0406901a6cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981247"
 ---
 # <a name="getobject-method-int-javautilmap"></a>getObject 方法 (int, java.util.Map)
@@ -38,22 +38,22 @@ public java.lang.Object getObject(int index,
                                   java.util.Map map)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  索引   
   
  指示参数索引的 int  。  
   
  *map*  
   
- 地图对象。  
+ Map 对象。  
   
 ## <a name="return-value"></a>返回值  
  Object 值  。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 getObject 方法是由 java.sql.CallableStatement 接口中的 getObject 方法指定的。  
   
  此方法将返回给定列的值作为一个 Java 对象。 根据 JDBC 规范中指定的内置类型映射，Java 对象的类型将为对应于此列 SQL 类型的默认 Java 对象类型。 如果此值为 SQL NULL，则驱动程序会返回 Java null。  

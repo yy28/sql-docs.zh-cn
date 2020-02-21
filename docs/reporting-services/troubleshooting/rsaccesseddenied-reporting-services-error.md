@@ -11,10 +11,10 @@ ms.assetid: 2f76b1bf-96a2-4755-b76b-84e933220efc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0063256e371585fe6d63a1a635aa286fca5a7d39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66270225"
 ---
 # <a name="rsaccesseddenied---reporting-services-error"></a>rsAccessedDenied - Reporting Services 错误
@@ -22,7 +22,7 @@ ms.locfileid: "66270225"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式 | SharePoint 模式|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式 | SharePoint 模式|  
   
 - 如果通过 URL 直接访问报表服务器时发生这种错误，则该例外情况将映射到 HTTP 401 错误。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66270225"
 |**产品名称**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**事件 ID**|rsAccessedDenied|  
 |**事件源**|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings|  
-|**组件**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
+|组件 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
 |**消息正文**|为用户“mydomain\myAccount”授予的权限不足，无法执行此操作。 (rsAccessDenied) (ReportingServicesLibrary)|  
   
 ## <a name="user-action"></a>用户操作  

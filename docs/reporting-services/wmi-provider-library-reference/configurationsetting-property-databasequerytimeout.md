@@ -16,10 +16,10 @@ ms.assetid: 96faed97-9799-4bbf-a66f-fdd532d3eace
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8149c0954195796ce71a48e022a2f7bc83471601
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573583"
 ---
 # <a name="configurationsetting-property---databasequerytimeout"></a>ConfigurationSetting 属性 - DatabaseQueryTimeout
@@ -42,7 +42,7 @@ public UInt32 DatabaseQueryTimeout;
  [MSReportServer_ConfigurationSetting 类](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>要求  
- **命名空间:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

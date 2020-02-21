@@ -15,33 +15,33 @@ ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d3246b38461c1445f3335f42944480732ab583a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570900"
 ---
 # <a name="authentication-with-the-report-server"></a>针对报表服务器的身份验证
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) 提供若干可配置的选项以便根据报表服务器对用户和客户端应用程序进行身份验证。 默认情况下，报表服务器使用 Windows 集成身份验证并且假定信任关系，其中，客户端和网络资源处于同一域中或处于信任域中。 根据你的网络拓扑和组织需要，你可以自定义用于 Windows 集成身份验证的身份验证协议，使用基本身份验证，或者使用你提供的基于窗体的自定义身份验证扩展插件。 每种身份验证类型都可以单独打开或关闭。 如果您希望报表服务器接受多种类型的请求，则可启用多种身份验证类型。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) 提供了几个可配置的选项，用于对报表服务器验证用户和客户端应用程序。 默认情况下，报表服务器使用 Windows 集成身份验证并且假定信任关系，其中，客户端和网络资源处于同一域中或处于信任域中。 根据你的网络拓扑和组织需要，你可以自定义用于 Windows 集成身份验证的身份验证协议，使用基本身份验证，或者使用你提供的基于窗体的自定义身份验证扩展插件。 每种身份验证类型都可以单独打开或关闭。 如果您希望报表服务器接受多种类型的请求，则可启用多种身份验证类型。
   
  请求对报表服务器内容或操作进行访问的所有用户或应用程序都必须首先进行身份验证，然后才允许访问。  
   
 ## <a name="authentication-types"></a>身份验证类型  
  请求对报表服务器内容或操作进行访问的所有用户或应用程序都必须首先使用对报表服务器配置的身份验证类型进行身份验证，然后才允许访问。 下表介绍了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]支持的身份验证类型。  
   
-|AuthenticationType 名称|HTTP 身份验证层值|默认情况下是否使用|描述|  
+|AuthenticationType 名称|HTTP 身份验证层值|默认情况下是否使用|说明|  
 |-----------------------------|-------------------------------------|---------------------|-----------------|  
 |RSWindowsNegotiate|Negotiate|是|尝试首先将 Kerberos 用于 Windows 集成的身份验证，但是如果 Active Directory 无法将客户端请求的票证授予报表服务器，则回退到 NTLM。 仅当票证不可用时，Negotiate 才会回退到 NTLM。 如果第一次尝试导致出错而不是缺少票证，则报表服务器不会进行再次尝试。|  
 |RSWindowsNTLM|NTLM|是|将 NTLM 用于 Windows 集成的身份验证。<br /><br /> 将不会在其他请求中对凭据进行委托或模拟。 后续请求将遵循新的质询响应顺序。 根据网络安全设置的不同，系统可能提醒用户输入凭据，或者会以透明方式处理身份验证请求。|  
 |RSWindowsKerberos|Kerberos|否|将 Kerberos 用于 Windows 集成的身份验证。 您必须通过为您的服务帐户设置服务主体名称 (SPN) 来配置 Kerberos，这要求域管理员权限。 如果使用 Kerberos 来设置标识委托，则还可在为报表提供数据的外部数据源的其他连接中使用请求报表的用户的令牌。<br /><br /> 在指定 RSWindowsKerberos 之前，请确保您所使用的浏览器类型确实支持该值。 如果使用的是 Microsoft Edge 或 Internet Explorer，则 Kerberos 身份验证只能通过 Negotiate 进行支持。 Microsoft Edge 或 Internet Explorer 将不表述直接指定 Kerberos 的身份验证请求。|  
-|RSWindowsBasic|“基本”|否|基本身份验证是在 HTTP 协议中定义的，并只能用于对向报表服务器发出的 HTTP 请求进行身份验证。<br /><br /> 凭据以 base64 编码形式在 HTTP 请求中传递。 如果您使用基本身份验证，则在通过网络发送用户帐户信息之前，请使用安全套接字层 (SSL) 对其进行加密。 SSL 提供一个加密通道，可借助此通道通过 HTTP TCP/IP 连接将连接请求从客户端发送到报表服务器。 有关详细信息，请参阅 [TechNet 网站中的](https://go.microsoft.com/fwlink/?LinkId=71123) Using SSL to Encrypt Confidential Data [!INCLUDE[msCoName](../../includes/msconame-md.md)] （使用 SSL 加密机密数据）。|  
+|RSWindowsBasic|基本|否|基本身份验证是在 HTTP 协议中定义的，并只能用于对向报表服务器发出的 HTTP 请求进行身份验证。<br /><br /> 凭据以 base64 编码形式在 HTTP 请求中传递。 如果您使用基本身份验证，则在通过网络发送用户帐户信息之前，请使用安全套接字层 (SSL) 对其进行加密。 SSL 提供一个加密通道，可借助此通道通过 HTTP TCP/IP 连接将连接请求从客户端发送到报表服务器。 有关详细信息，请参阅 [TechNet 网站中的](https://go.microsoft.com/fwlink/?LinkId=71123) Using SSL to Encrypt Confidential Data [!INCLUDE[msCoName](../../includes/msconame-md.md)] （使用 SSL 加密机密数据）。|  
 |自定义|(Anonymous)|否|匿名身份验证将指示报表服务器忽略 HTTP 请求中的身份验证标头。 报表服务器接受所有请求，但不接受您所提供用来对用户进行身份验证的自定义 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 窗体身份验证的调用请求。<br /><br /> 仅当要在报表服务器上部署处理所有身份验证请求的自定义身份验证模块时，才指定 **Custom** 。 不能将 Custom 身份验证类型与默认的 Windows 身份验证扩展插件一起使用。|  
   
 ## <a name="unsupported-authentication-methods"></a>不支持的身份验证方法  
  不支持下列身份验证方法和请求。  
   
-|身份验证方法|解释|  
+|身份验证方法|说明|  
 |---------------------------|-----------------|  
 |匿名|报表服务器将不接受来自匿名用户的未经身份验证的请求，但包含自定义身份验证扩展插件的那些部署除外。<br /><br /> 如果对配置为使用基本身份验证的报表服务器启用报表生成器访问，则报表生成器将接受未经身份验证的请求。<br /><br /> 对于所有其他情况，在匿名请求到达 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]前将拒绝该请求，同时生成 HTTP 状态 401 拒绝访问错误。 客户端收到 401 拒绝访问错误后必须使用有效的身份验证类型重新表述该请求。|  
 |单一登录技术 (SSO)|在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中不提供对单一登录技术的本机支持。 如果希望使用单一登录技术，则必须创建自定义身份验证扩展插件。<br /><br /> 报表服务器宿主环境不支持 ISAPI 筛选器。 如果您使用的 SSO 技术以 ISAPI 筛选器形式实现，请考虑使用 RSASecueID 或 RADIUS 协议的 ISA Server 内置支持。 另外，还可以创建 ISA Server ISAPI 或 RS 的 HTTPModule，但是建议您直接使用 ISA Server。|  

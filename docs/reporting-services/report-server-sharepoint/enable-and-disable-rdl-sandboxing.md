@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cc2f32dd81e8dd505b6eaa79359ce10c757ea744
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577762"
 ---
 # <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>在 SharePoint 集成模式下针对 Reporting Services 启用和禁用 RDL 沙盒
@@ -65,7 +65,7 @@ ms.locfileid: "65577762"
 
  下表提供了有关配置设置的信息。 将按设置在配置文件中的显示顺序依次列出：  
   
-|设置|描述|  
+|设置|说明|  
 |-------------|-----------------|  
 |**MaxExpressionLength**|RDL 表达式中允许的最大字符数。<br /><br /> 默认值：1000|  
 |**MaxResourceSize**|外部资源允许的最大 KB 数。<br /><br /> 默认值：100|  
@@ -75,7 +75,7 @@ ms.locfileid: "65577762"
 |**Allow**|RDL 表达式中允许的一个类型或一组类型。|  
 |**Namespace**|**Allow** 的属性，它是包含应用于 Value 的一个或多个类型的命名空间。 此属性不区分大小写。|  
 |**AllowNew**|Allow 的布尔属性，控制是否允许在 RDL 表达式中或 RDL \<Class> 元素中创建该类型的新实例   。<br /><br /> 在启用 RDLSandboxing 时，无论 AllowNew 的设置如何，都不能在 RDL 表达式中创建新数组   。|  
-|**ReplTest1**|**Allow** 的值，作为在 RDL 表达式中要允许的类型的名称。 值 **\*** 指示命名空间中的所有类型都是允许的。 此属性不区分大小写。|  
+|**值**|**Allow** 的值，作为在 RDL 表达式中要允许的类型的名称。 值 **\*** 指示命名空间中的所有类型都是允许的。 此属性不区分大小写。|  
 |**成员**|对于在类型 \<Types> 元素中包括的类型的列表，为在 RDL 表达式中不允许的成员名称的列表  。|  
 |**拒绝**|在 RDL 表达式中不允许的成员的名称。 此属性不区分大小写。<br /><br /> 在为某一成员指定了 Deny 后，不允许所有类型的具有此名称的所有成员  。|  
   

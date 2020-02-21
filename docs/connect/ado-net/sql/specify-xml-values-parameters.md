@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 5ef73529119245397932a3a2414ce65f381b55bd
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 7f9893d7ac9dd83ae5212684678fc240a8d77097
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452110"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251146"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>将 XML 值指定为参数
 
@@ -31,9 +31,9 @@ ms.locfileid: "72452110"
 > [!NOTE]
 >  默认情况下，在安装 SQL Server 时不安装 AdventureWorks 示例数据库  。 可以通过运行 SQL Server 安装程序来安装它。  
   
-该示例准备一个 <xref:Microsoft.Data.SqlClient.SqlCommand> 对象以在新表中插入一行。 保存的文件为 SalesInfo 列提供所需的 XML 数据  。  
+该示例准备一个 <xref:Microsoft.Data.SqlClient.SqlCommand> 对象以在新表中插入行。 保存的文件为 SalesInfo 列提供所需的 XML 数据  。  
   
-若要创建示例运行所需的文件，请在与项目相同的文件夹中创建一个新的文本文件。 将该文件命名为命名为 myteststoredata.xml。 在记事本中打开该文件，然后复制并粘贴以下文本：  
+若要创建运行示例所需的文件，请在与项目相同的文件夹中创建一个新的文本文件。 将文件命名为 MyTestStoreData.xml。 在记事本中打开该文件，然后复制并粘贴以下文本：  
   
 ```xml  
 <StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  

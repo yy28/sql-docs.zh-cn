@@ -11,16 +11,16 @@ ms.assetid: 0c617b53-a74b-4d5b-b76b-3ec7f1b8e8de
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2068b4099649b7ebd8aa2bcb4c58aa0d59e123d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936216"
 ---
 # <a name="pdolastinsertid"></a>PDO::lastInsertId
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-返回最近插入数据库中的表的行标识符。 该表必须含有 IDENTITY NOT NULL 列。 如果提供了序列名称, `lastInsertId`则返回所提供序列名称的最近插入的序列号 (有关序列号的详细信息, 请参阅[此处](https://docs.microsoft.com/sql/relational-databases/sequence-numbers/sequence-numbers))。
+返回最近插入数据库中的表的行标识符。 该表必须含有 IDENTITY NOT NULL 列。 如果提供了序列名称，则 `lastInsertId` 返回提供的序列名称的最新插入的序列号（有关序列号的详细信息，请参阅[此处](https://docs.microsoft.com/sql/relational-databases/sequence-numbers/sequence-numbers)）。
   
 ## <a name="syntax"></a>语法  
   
@@ -29,20 +29,20 @@ ms.locfileid: "67936216"
 string PDO::lastInsertId ([ $name = NULL ] );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
-$name：允许指定序列名称的可选字符串  。 
+#### <a name="parameters"></a>parameters  
+$name  ：一个可选字符串，可用于指定序列名称。 
   
 ## <a name="return-value"></a>返回值  
-如果未提供序列名称, 则为最近添加的行的标识符字符串。
-如果提供了序列名称, 则为最近添加的序列的标识符的字符串。
-如果方法调用失败, 则返回空字符串。
+如果未提供序列名称，则为最近添加的行的标识符的字符串。
+如果提供了序列名称，则为最近添加的序列的标识符的字符串。
+如果方法调用失败，则返回空字符串。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 2.0 中添加了对 PDO 的支持。  
-在版本2.0 和4.3 之间, 可选参数是表名称, 返回值是最近添加到所提供的表中的行的 ID。
-从5.0 开始, 可选参数被视为序列名称, 返回值是所提供的序列名称最近添加的序列。
-如果在4.3 之后为版本提供了表名, `lastInsertId`则返回一个空字符串。
-仅 SQL Server 2012 及更高版本中支持序列。
+在版本 2.0 和 4.3 之间，可选参数是表名称，返回值是最近添加到提供的表中的行的 ID。
+从 5.0 开始，可选参数被视为序列名称，返回值是为提供的序列名称最近添加的序列。
+如果为 4.3 之后的版本提供了表名，`lastInsertId` 将返回空字符串。
+仅在 SQL Server 2012 及更高版本中支持序列。
   
 ## <a name="example"></a>示例
   

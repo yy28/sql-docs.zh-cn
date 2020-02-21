@@ -16,10 +16,10 @@ ms.assetid: b80c8e5d-b725-4fe4-aec6-02fb18ec4434
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 052aef53b4a02e26757493ab6cdd89578c39f4f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570937"
 ---
 # <a name="configurationsetting-property---connectionpoolsize"></a>ConfigurationSetting 属性 - ConnectionPoolSize
@@ -42,7 +42,7 @@ public UInt32 ConnectionPoolSize;
  [MSReportServer_ConfigurationSetting 类](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>要求  
- **命名空间:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

@@ -11,23 +11,23 @@ ms.assetid: 4bfd6e52-817d-4f0a-a33d-11466e3f0484
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0e241d84ebc60acceafe09b1a9240711a72d2067
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72798315"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>步骤 3：使用 pyodbc 连接到 SQL 的概念验证
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>步骤 3：使用 pyodbc 连接到 SQL 的概念证明
 
-此示例只应视为概念证明。  为清楚起见，示例代码已简化，不一定表示 Microsoft 推荐的最佳做法。  
+此示例应只视为概念证明。  为清楚起见，示例代码已简化，不一定代表 Microsoft 建议的最佳做法。  
 
-**运行下面的示例脚本** 创建一个名为 test.py 的文件，并根据需要添加每个代码片段。 
+**运行下面的示例脚本** 创建一个名为“test.py”的文件，并根据需要添加每个代码片段。 
 
 ```
 > python test.py
 ```
   
-## <a name="step-1--connect"></a>步骤1：连接  
+## <a name="step-1--connect"></a>步骤 1：连接  
   
 ```python
 
@@ -45,7 +45,7 @@ cursor = cnxn.cursor()
 ```  
   
   
-## <a name="step-2--execute-query"></a>步骤2：执行查询  
+## <a name="step-2--execute-query"></a>步骤 2：执行查询  
   
 cursor.execute 函数可用于从针对 SQL 数据库的查询中检索结果集。 此函数实际上可接受任何查询，并返回可使用 cursor.fetchone() 循环访问的结果集
   
@@ -60,7 +60,7 @@ while row:
 
 ```  
   
-## <a name="step-3--insert-a-row"></a>步骤3：插入行  
+## <a name="step-3--insert-a-row"></a>步骤 3：插入行  
   
 此示例展示了如何安全执行 [INSERT](../../../t-sql/statements/insert-transact-sql.md) 语句，并传递用于保护应用程序免遭 [SQL 注入](../../../relational-databases/tables/primary-and-foreign-key-constraints.md)值影响的参数。    
   
@@ -77,16 +77,16 @@ while row:
     row = cursor.fetchone()
 ```  
 
-## <a name="azure-active-directory-aad-and-the-connection-string"></a>Azure Active Directory （AAD）和连接字符串
+## <a name="azure-active-directory-aad-and-the-connection-string"></a>Azure Active Directory (AAD) 和连接字符串
 
 pyODBC 使用 Microsoft ODBC Driver for SQL Server。
-如果 ODBC 驱动程序的版本是17.1 或更高版本，则可以通过 pyODBC 使用 ODBC 驱动程序的 AAD 交互模式。
-如果 Python 和 pyODBC 允许 ODBC 驱动程序弹出对话框，则此 AAD interactive 选项有效。
-此选项仅在 Windows 操作系统上可用。
+如果 ODBC 驱动程序的版本为 17.1 或更高版本，则可以通过 pyODBC 使用 ODBC 驱动程序的 AAD 交互模式。
+如果 Python 和 pyODBC 允许 ODBC 驱动程序弹出对话框，则此 AAD 交互选项有效。
+仅在 Windows 操作系统上提供此选项。
 
 ### <a name="example-connection-string-for-aad-interactive-authentication"></a>AAD 交互身份验证的连接字符串示例
 
-下面是一个指定 AAD 交互身份验证的示例 ODBC 连接字符串：
+下面是指定 AAD 交互身份验证的 ODBC 连接字符串示例：
 
 - `server=Server;database=Database;UID=UserName;Authentication=ActiveDirectoryInteractive;`
 

@@ -1,23 +1,24 @@
 ---
-title: 如何：指定预先部署或后期部署脚本 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 指定部署前或部署后脚本
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 7f78f517-f13d-4f4b-84b9-e804cb490b2c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e8bbc783901c7dd93515424ae811fe66239e9f33
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 56b69a6b84aa3c529c02690f7e6554e76e46b079
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71199295"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244267"
 ---
 # <a name="how-to-specify-predeployment-or-postdeployment-scripts"></a>如何：指定预先部署或后期部署脚本
+
 预先部署和后期部署脚本在从数据库项目生成的主部署脚本之前和之后执行 Transact\-SQL 语句。 在 Visual Studio 中，从架构比较结果更新目标时，将不执行预部署脚本。 一个项目只能有一个预先部署脚本和一个后期部署脚本。 这些脚本可用于许多用途。 例如：  
   
 -   预先部署脚本可以从要更改的表中将数据复制到一个临时表，然后重新设置数据格式并在后期部署脚本中将数据应用于已更改表。  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6b4936ef2889d433985d4ff0206d72722300ac91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: be5689ab2d098fab41bc8e73acb6e945991c4e6f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500520"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190025"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>共享数据集设计视图（报表生成器）
   在报表中，数据集表示通过对外部数据源运行查询而返回的报表数据。 共享数据集发布在报表服务器上，可由多个报表使用。 你可以创建数据集，以便与他人共享。 在共享数据集设计窗口中，你可以选择共享数据源，指定共享数据集的属性，在查询设计器中创建查询。  
@@ -23,7 +23,7 @@ ms.locfileid: "66500520"
  有关如何处理报表中的数据的详细信息，请参阅 [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)。  
   
 ##  <a name="Ribbon"></a> 功能区  
- 功能区可帮助您快速查找完成任务所需的命令。 命令通过以下逻辑组进行组织：连接、数据集和查询设计器。  
+ 功能区可帮助您快速查找完成任务所需的命令。 命令分为以下逻辑组：连接、数据集和查询设计器。  
   
 ### <a name="connection"></a>连接  
  在“连接”组中使用 **“选择”** 按钮可以选择报表中的共享数据源，或浏览到报表服务器上的共享数据源。  
@@ -31,7 +31,7 @@ ms.locfileid: "66500520"
 > [!NOTE]  
 >  共享数据集必须基于共享数据源。 如果你需要的数据源不可用，则需要在报表服务器上创建一个数据源。 有关详细信息，请参阅[创建、修改和删除共享数据源 (SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)。  
   
- 有关详细信息，请参阅 [数据连接、数据源和连接字符串](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
+ 有关详细信息，请参阅[创建数据连接字符串 - 报表生成器和 SSRS](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
 ### <a name="dataset"></a>数据集  
  使用 **“Set 选项”** 按钮可以设置共享数据集属性。 其中包括：  
@@ -82,7 +82,7 @@ ms.locfileid: "66500520"
   
  如果报表中包含参数，则只有在所有参数都具有默认值的情况下，该报表才能自动运行。 如果某个参数没有默认值，当运行报表时，必须为该参数选择一个值，然后在 **“运行”** 选项卡上单击 **“查看报表”** 。  
   
- 有关详细信息，请参阅 [报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)。  
+ 有关详细信息，请参阅 [报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)的详细信息。  
   
   
 ##  <a name="Save"></a> 保存共享数据集  

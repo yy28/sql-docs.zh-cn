@@ -26,10 +26,10 @@ ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 32b0e633aa95ab2d9e4eadea822d10dbfe47d8d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65582081"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>添加、更改或删除地图或地图层（报表生成器和 SSRS）
@@ -43,7 +43,7 @@ ms.locfileid: "65582081"
   
  下表列出了 **“地图”** 窗格的工具栏图标：  
   
-|符号|描述|何时使用|  
+|符号|说明|何时使用|  
 |------------|-----------------|-----------------|  
 |![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")|地图层向导|若要使用向导添加层，请单击 **“新建层向导”** 。|  
 |![rs_IconMapAddLayer](../../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")|添加层|若要手动添加层，请单击 **“添加层”** ，然后单击要添加的地图层类型。|  
@@ -75,7 +75,7 @@ ms.locfileid: "65582081"
   
 1.  单击地图直到显示“地图”窗格。  
   
-2.  在工具栏上单击“添加层”  按钮，从下拉列表中单击要添加的层类型：“点”  、“线条”  或“多边形”  。  
+2.  依次单击工具栏中的“添加层”  按钮，以及下拉列表中的要添加的层类型：“点”  、“线”  或“多边形”  。  
   
     > [!NOTE]  
     >  尽管可以手动添加并配置地图层，我们仍建议您使用地图层向导来添加新层。 若要在“地图”窗格工具栏中启动向导，请单击层向导按钮 (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"))。  
@@ -90,7 +90,7 @@ ms.locfileid: "65582081"
   
     2.  在 **“分析数据集”** 中，单击包含分析数据和匹配字段（用于建立分析数据和空间数据之间的关系）的数据集的名称。  
   
-    3.  单击 **“添加”** 。  
+    3.  单击“添加”  。  
   
     4.  键入空间数据集中匹配字段的名称。  
   

@@ -11,16 +11,16 @@ ms.assetid: b351e999-85bf-498b-915a-f91d89134bce
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2d9362a41e5a48400c1b63d52b2ff89095d119d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981398"
 ---
 # <a name="getnstring-method-javalangstring"></a>getNString 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  将指定 NCHAR  、NVARCHAR  或 LONGNVARCHAR  参数的值作为 Java 编程语言中的 String 进行检索。  
+  将指定 NCHAR、NVARCHAR 或 LONGNVARCHAR 参数的值作为 Java 编程语言中的 String 进行检索。  
   
 ## <a name="syntax"></a>语法  
   
@@ -29,18 +29,18 @@ ms.locfileid: "67981398"
 public final java.lang.String getNString(java.lang.String parameterName)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
- parameterName   
+#### <a name="parameters"></a>parameters  
+ parameterName  
   
- 包含参数名称的字符串  。  
+ 包含参数名称的字符串。  
   
 ## <a name="return-value"></a>返回值  
- AStringobject.  
+ AStringobject。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 getNString 方法是由 java.sql.CallableStatement 接口中的 getNString 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  

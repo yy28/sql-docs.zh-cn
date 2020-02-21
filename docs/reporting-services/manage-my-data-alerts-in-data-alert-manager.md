@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 9feef3af6a4506f3daa6fab793a3c76a5dd84cae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581034"
 ---
 # <a name="manage-my-data-alerts-in-data-alert-manager"></a>在数据警报管理器中管理我的数据警报
@@ -25,7 +25,7 @@ ms.locfileid: "65581034"
 
 SharePoint 用户可以查看他们所创建的数据警报列表以及与这些警报有关的信息。 用户还可以删除其警报，打开警报定义以便在数据警报设计器中进行编辑，以及运行其警报。 下图显示数据警报管理器中可用于用户的功能。
 
- ![适用于 SharePoint 用户的警报管理器功能](../reporting-services/media/rs-alertmanageriw.gif "Alert Manager features for SharePoint users")
+ ![面向 SharePoint 用户的警报管理器功能](../reporting-services/media/rs-alertmanageriw.gif "面向 SharePoint 用户的警报管理器功能")
 
 > [!NOTE]
 > 自 SQL Server 2016 之后，不再提供 Reporting Services 与 SharePoint 的集成这一功能。
@@ -36,7 +36,7 @@ SharePoint 用户可以查看他们所创建的数据警报列表以及与这些
   
 2.  单击针对报表展开下拉菜单的图标，然后单击“管理数据警报”  。 下图显示该下拉菜单。  
   
-     ![从报表上下文菜单打开警报管理器](../reporting-services/media/rs-openalertmanager.gif "Open Alert Manager from report context menu")  
+     ![从报表上下文菜单打开警报管理器](../reporting-services/media/rs-openalertmanager.gif "从报表上下文菜单打开警报管理器")  
   
      数据警报管理器随之打开。 默认情况下，它列出了针对您在库中选择的报表的警报。  
   

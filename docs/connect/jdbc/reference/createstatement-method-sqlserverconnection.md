@@ -1,5 +1,5 @@
 ---
-title: createStatement 方法 (SQLServerConnection) |Microsoft Docs
+title: createStatement 方法 (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 6d043ba9-b8ec-41d3-bb22-ad2c4aebda6f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 38b9da1b88b43fbc333313065c2b0134d1c08bfd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955234"
 ---
 # <a name="createstatement-method-sqlserverconnection"></a>createStatement 方法 (SQLServerConnection)
@@ -29,7 +29,7 @@ ms.locfileid: "67955234"
   
 ## <a name="overload-list"></a>重载列表  
   
-|“属性”|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |[createStatement ()](../../../connect/jdbc/reference/createstatement-method.md)|创建用于把 SQL 语句发送到数据库的 SQLServerStatement 对象。|  
 |[createStatement (int, int)](../../../connect/jdbc/reference/createstatement-method-int-int.md)|创建 SQLServerStatement 对象，该对象使用给定的类型和并发机制生成 SQLServerResultSet 对象。|  

@@ -1,5 +1,5 @@
 ---
-title: getTimestamp 方法 (int) |Microsoft Docs
+title: getTimestamp 方法 (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: a9fd6496-c72e-4cc6-b46a-4aa9f13f90ff
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5b9a349122b907ff535de8ba3f90e0746465d244
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978822"
 ---
 # <a name="gettimestamp-method-int"></a>getTimestamp 方法 (int)
@@ -34,7 +34,7 @@ ms.locfileid: "67978822"
 public java.sql.Timestamp getTimestamp(int index)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  索引   
   
  指示参数索引的 int  。  
@@ -42,13 +42,13 @@ public java.sql.Timestamp getTimestamp(int index)
 ## <a name="return-value"></a>返回值  
  Timestamp 对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 getTimestamp 方法是由 java.sql.CallableStatement 接口中的 getTimestamp 方法指定的。  
   
- 此方法只从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime 和 smalldatetime 列返回值   。  
+ 此方法只从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime  和 smalldatetime  列返回值。  
   
 ## <a name="see-also"></a>另请参阅  
  [getTimestamp 方法 (SQLServerCallableStatement)](../../../connect/jdbc/reference/gettimestamp-method-sqlservercallablestatement.md)   

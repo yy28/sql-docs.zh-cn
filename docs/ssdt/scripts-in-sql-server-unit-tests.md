@@ -1,23 +1,24 @@
 ---
-title: SQL Server 单元测试中的脚本 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: SQL Server 单元测试中的脚本
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 80c5cf62-a9c9-4e9d-8c6f-8eed50a595a7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8f84c8b03343b353cf355f0f604152a82b23627b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: c5ff8457d5e2122f3e5bc455c204a5185cc30aec
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110745"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256972"
 ---
 # <a name="scripts-in-sql-server-unit-tests"></a>SQL Server 单元测试中的脚本
+
 每个 SQL Server 单元测试都包含单个预先测试操作、测试操作和后期测试操作。 其中每个操作又包含以下内容：  
   
 -   对数据库执行的 Transact\-SQL 脚本。  
@@ -32,7 +33,7 @@ ms.locfileid: "68110745"
   
 下表提供了与任何 SQL Server 单元测试关联的脚本的完整列表。  
   
-|**操作**|**脚本类型**|**Description**|  
+|**Action**|**脚本类型**|**说明**|  
 |--------------|-------------------|-------------------|  
 |TestInitialize|公用脚本（初始化）|（可选）此脚本在单元测试中的所有预先测试和测试操作之前。 TestInitialize 脚本在给定测试类中的每个单元测试之前运行。 此脚本使用特权上下文执行。|  
 |预先测试|测试脚本|（可选）此脚本是单元测试的一部分。 预先测试脚本在单元测试中的测试操作之前运行。 此脚本使用特权上下文执行。|  
@@ -48,7 +49,7 @@ ms.locfileid: "68110745"
 ![两个数据库单元测试](../ssdt/media/twodatabaseunittests.png "两个数据库单元测试")  
   
 > [!NOTE]  
-> 如果已配置 SQL Server 数据库项目部署，则该部署将基于特权上下文连接字符串在测试运行开始时发生。 有关详细信息，请参阅[如何：配置 SQL Server 单元测试执行](../ssdt/how-to-configure-sql-server-unit-test-execution.md)。  
+> 如果已配置 SQL Server 数据库项目部署，则该部署将基于特权上下文连接字符串在测试运行开始时发生。 有关详细信息，请参阅[操作说明：配置 SQL Server 单元测试执行](../ssdt/how-to-configure-sql-server-unit-test-execution.md)。  
   
 ## <a name="initialization-and-cleanup-scripts"></a>初始化和清理脚本  
 在 SQL Server 单元测试设计器中，TestInitialize 和 TestCleanup 脚本被称为公用脚本。 前面的示例假定两个单元测试是同一测试类的一部分。 因此，它们共享相同的 TestInitialize 和 TestCleanup 脚本。 对于单个测试类中的所有单元测试，始终是这种情况。 不过，如果测试运行包含来自不同测试类的单元测试，则相关测试类的公用脚本将在单元测试运行之前和之后运行。  

@@ -16,13 +16,13 @@ ms.assetid: 98ab86fd-ed94-4cda-9c68-047d589bdea6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 966ab7aeaa4d1bb27fdaae8d4f452e6dffc4a269
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65569109"
 ---
-# <a name="msreportserverinstance-properties---instancename"></a>MSReportServer_Instance 属性 - InstanceName
+# <a name="msreportserver_instance-properties---instancename"></a>MSReportServer_Instance 属性 - InstanceName
   返回特定计算机上报表服务器实例的名称。 只读。  
   
 ## <a name="syntax"></a>语法  
@@ -42,7 +42,7 @@ public string InstanceName;
  [MSReportServer_ConfigurationSetting 类](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>要求  
- **命名空间:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **命名空间：** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
  [MSReportServer_Instance 成员](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  

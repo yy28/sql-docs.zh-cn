@@ -9,10 +9,10 @@ ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4db47bde02745ddc554f17e1f951c836c1542cc8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63041455"
 ---
 # <a name="tutorial-map-report-report-builder"></a>教程：地图报表（报表生成器）
@@ -27,9 +27,9 @@ ms.locfileid: "63041455"
 在本教程中，将生成一个地图报表，该报表显示了纽约州各县内的商店位置。  
    
 > [!NOTE]  
-> 在本教程中，将向导的多个步骤合并为两个过程：一个用于创建数据集，一个用于创建表。 有关如何浏览到报表服务器、选择数据源、创建数据集和运行向导的分步说明，请参阅本系列的第一个教程：[教程：创建基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+> 在本教程中，将向导的多个步骤合并为两个过程：一个用于创建数据集，一个用于创建表。 有关如何转到报表服务器、选择数据源、创建数据集和运行向导的分步说明，请参阅本系列教程中的第一个教程：[教程：生成基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
-本教程的预计学时：30 分钟。  
+完成本教程的估计时间：30 分钟。  
   
 ## <a name="requirements"></a>要求  
 对于本教程，报表服务器必须配置为支持将 Bing 地图作为背景。 有关详细信息，请参阅 [计划地图报表支持](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19)。 
@@ -59,7 +59,7 @@ ms.locfileid: "63041455"
     
     ![report-builder-map-ny-counties](../reporting-services/media/report-builder-map-ny-counties.png)
   
-7.  单击“下一步”  。  
+7.  单击“下一步”。   
   
 8.  在“选择空间数据和地图视图选项”页上，接受默认值，然后按“下一步”   。 
  
@@ -85,7 +85,7 @@ ms.locfileid: "63041455"
     
     ![report-builder-map-choose-color-theme](../reporting-services/media/report-builder-map-choose-color-theme.png)
   
-14. 单击 **“完成”** 。  
+14. 单击“完成”  。  
   
     此时，将向设计图面添加一个地图。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "63041455"
   
 1.  在“运行”选项卡上，单击“设计”切换回“设计”视图   。  
   
-2.  双击地图以显示“地图层”  窗格。 在工具栏上，单击“新建层向导”按钮 ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")  。 
+2.  双击地图以显示“地图层”  窗格。 在工具栏上，单击“新建层向导”  按钮 ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")。 
 
     ![report-builder-map-new-layer-wizard-icon](../reporting-services/media/report-builder-map-new-layer-wizard-icon.png) 
   
@@ -131,7 +131,7 @@ ms.locfileid: "63041455"
     > [!NOTE]  
     > 只要您具有足够的权限，则选择哪一个数据源并不重要。 您将不会从数据源中获取数据。 有关详细信息，请参阅[获取数据连接的备选方式（报表生成器）](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
   
-6.  单击“下一步”  。  
+6.  单击“下一步”。   
   
 7.  在 **“设计查询”** 页中，单击 **“编辑为文本”** 。  
   
@@ -169,17 +169,17 @@ ms.locfileid: "63041455"
 9. 在查询设计器工具栏中，单击“运行”  ( **!** )。  
   
     结果集包含七列，这些列表示纽约州的一组销售消费品的商店。 以下是列表，并对意思可能不明显的列进行说明： 
-    *   **StoreKey**：商店标识符。  
+    *   **StoreKey**：店铺标识符。  
     *   **StoreName**。
-    *   **SellingArea**：可用于展示产品的区域，面积从 455 平方英尺到 1,125 平方英尺。
+    *   **SellingArea**：产品展示区域，面积介于 455 平方英尺和 1,125 平方英尺之间。
     *   **City**。
     *   **County**。
-    *   **Sales**：总销售额。 
+    *   **销售**：总销售额。 
     *   **SpatialLocation**：以经度和纬度表示的位置。 
 
     ![report-builder-map-design-query](../reporting-services/media/report-builder-map-design-query.png) 
   
-10. 单击“下一步”  。  
+10. 单击“下一步”。   
   
     此时，将会为您创建一个名为 DataSet1 的报表数据集。 在完成向导后，可以在“报表数据”窗格中看到它的字段集合。  
   
@@ -187,9 +187,9 @@ ms.locfileid: "63041455"
   
     地图视图显示圆圈，这些圆圈标记每个商店的位置。  
   
-12. 单击“下一步”  。  
+12. 单击“下一步”。   
   
-13. 在“选择地图可视化”页上，单击“气泡图”地图类型，该地图类型根据数据显示不同大小的标记  。 单击“下一步”  。  
+13. 在“选择地图可视化”页上，单击“气泡图”地图类型，该地图类型根据数据显示不同大小的标记  。 单击“下一步”。   
   
 14. 在“选择分析数据集”页上，单击“DataSet1”，然后单击“下一步”   。 此数据集同时包含分析数据和空间数据，它将显示在新的点层上。   
   
@@ -199,7 +199,7 @@ ms.locfileid: "63041455"
   
 18. 选择“显示标签”，然后在“数据字段”中选择 `[City]`   。
 
-18. 单击 **“完成”** 。  
+18. 单击“完成”  。  
   
     将向报表添加该地图层。 图例根据“SellingArea”值显示气泡大小。  
   
@@ -234,7 +234,7 @@ ms.locfileid: "63041455"
   
 1.  切换到“设计”视图。  
   
-2.  双击地图以显示“地图层”  窗格。 在工具栏上，单击“新建层向导”按钮 ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")  。  
+2.  双击地图以显示“地图层”  窗格。 在工具栏上，单击“新建层向导”  按钮 ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")。  
   
 3.  在“选择空间数据的来源”  页上，选择“SQL Server 空间查询”  ，然后单击“下一步”  。  
   
@@ -242,7 +242,7 @@ ms.locfileid: "63041455"
   
 5.  在“选择与 SQL Server 空间数据源的连接”中，选择在第一步中使用的数据源  。  
   
-6.  单击“下一步”  。  
+6.  单击“下一步”。   
   
 7.  在 **“设计查询”** 页中，单击 **“编辑为文本”** 。 查询设计器切换到基于文本的模式。  
   
@@ -255,7 +255,7 @@ ms.locfileid: "63041455"
        -73.4728622833178 44.7028831413324)' AS geography) as Route  
     ```  
   
-9. 单击“下一步”  。  
+9. 单击“下一步”。   
   
     此时，地图上将显示一条连接三个商店的路径。  
   
@@ -263,13 +263,13 @@ ms.locfileid: "63041455"
   
     地图视图显示一条从位于纽约州北部的商店到位于纽约州南部商店的路径。  
   
-11. 单击“下一步”  。  
+11. 单击“下一步”。   
   
 12. 在“选择地图可视化”页上，单击“基本线条图”，然后单击“下一步”    。  
   
 13. 在“选择颜色主题和数据可视化”上，选择“单色图”选项   。 该路径基于所选主题显示为某种颜色。  
   
-14. 单击 **“完成”** 。  
+14. 单击“完成”  。  
 
     ![report-builder-map-line](../reporting-services/media/report-builder-map-line.png)
   
@@ -530,13 +530,13 @@ ms.locfileid: "63041455"
 
 3. 将其保存到本地计算机或 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 服务器。
   
-4. 单击 **“保存”** 。 
+4. 单击“ **保存**”。 
 
 如果将其保存到报表服务器，则可在其中进行查看。
 
 ![report-builder-map-in-portal](../reporting-services/media/report-builder-map-in-portal.png) 
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>后续步骤  
 到此为止，我们结束了有关如何向报表添加地图的演练。  
   
 有关详细信息，请参阅[地图（报表生成器和 SSRS）](../reporting-services/report-design/maps-report-builder-and-ssrs.md)。  

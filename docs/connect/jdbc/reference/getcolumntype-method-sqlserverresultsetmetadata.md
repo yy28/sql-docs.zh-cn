@@ -1,5 +1,5 @@
 ---
-title: getColumnType 方法 (SQLServerResultSetMetaData) |Microsoft Docs
+title: getColumnType 方法 (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 81815a41-9265-4574-a4d8-f6341a68d9fd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 80f1177506090d459833f70bdc0b5fdcb115d792
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67952815"
 ---
 # <a name="getcolumntype-method-sqlserverresultsetmetadata"></a>getColumnType 方法 (SQLServerResultSetMetaData)
@@ -34,7 +34,7 @@ ms.locfileid: "67952815"
 public int getColumnType(int column)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *column*  
   
  指示列索引的 int  。  
@@ -42,11 +42,11 @@ public int getColumnType(int column)
 ## <a name="return-value"></a>返回值  
  一个 int 值，此值指示 java.sql.Types 中定义的 JDBC 类型  。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 getColumnType 方法由 getColumnType 方法在 Java.sql.resultsetmetadata 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 getColumnType 方法是由 java.sql.ResultSetMetaData 接口中的 getColumnType 方法指定的。  
   
  [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 在 DATA_TYPE 列中的行为发生了更改。 有关详细信息，请参阅 [SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md)。  
   

@@ -1,5 +1,5 @@
 ---
-title: getLastUpdateCount 方法 (SQLServerDataSource) |Microsoft Docs
+title: getLastUpdateCount 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 4c4fbb24-0b02-42da-928c-a903bb591cc7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e0d284e02be13af60bf7d8e7d447835f7eccd90a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982599"
 ---
 # <a name="getlastupdatecount-method-sqlserverdatasource"></a>getLastUpdateCount 方法 (SQLServerDataSource)
@@ -37,7 +37,7 @@ public boolean getLastUpdateCount()
 ## <a name="return-value"></a>返回值  
  如果启用了 lastUpdateCount，则为 true  。 否则为 **false**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果将 lastUpdateCount 属性设置为 true  ，则 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 将只返回由 SQL 语句传递给服务器的最后更新计数。 如果将 lastUpdateCount 属性设置为 false  ，则驱动程序将返回所有更新计数，包括任何可能已不再使用的触发器所返回的更新计数。 如果未设置 lastUpdateCount 属性，则 getLastUpdateCount 方法将返回默认值 true  。  
   
 ## <a name="see-also"></a>另请参阅  

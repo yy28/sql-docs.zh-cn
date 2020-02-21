@@ -1,5 +1,5 @@
 ---
-title: 'PDOStatement:: rowCount |Microsoft Docs'
+title: PDOStatement::rowCount | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 0569f26a-2376-4c20-8813-bd3c87d0ae9f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a9f6f7045c0729dad4fbb7d2875a645d370a1a5e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67935995"
 ---
 # <a name="pdostatementrowcount"></a>PDOStatement::rowCount
@@ -32,7 +32,7 @@ int PDOStatement::rowCount ();
 ## <a name="return-value"></a>返回值  
 已添加、删除或更改的行数。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 如果由相关联的 PDOStatement 执行的最后一个 SQL 语句为 SELECT 语句，PDO::CURSOR_FWDONLY 光标将返回 -1。 PDO::CURSOR_SCROLLABLE 光标返回结果集中的行数。  
   
 已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 2.0 中添加了对 PDO 的支持。  

@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 6e1b69fc176281e9be65ca7a9766fc8fb270a3de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580090"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>管理 Reporting Services SharePoint 服务应用程序
@@ -34,7 +34,7 @@ ms.locfileid: "65580090"
   
 2.  在服务应用程序名称附近单击或单击 **“类型”** 列，这将选择整行，然后在 SharePoint 功能区上单击 **“属性”** 。  
   
- 有关服务应用程序属性的详细信息，请参阅 [Step 3: Create a Reporting Services Service Application](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication)。  
+ 有关服务应用程序属性的详细信息，请参阅[步骤 3：创建 Reporting Services 服务应用程序](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication)中的“服务应用程序”一节。  
   
 ## <a name="open-service-application-management-pages"></a>打开服务应用程序管理页面
 
@@ -101,7 +101,7 @@ ms.locfileid: "65580090"
 
  您可以查看和删除正在运行的作业，例如报表订阅和数据驱动订阅所创建的作业。 该页不用于管理订阅，而是管理由订阅触发的作业。 例如，安排为每小时运行一次的订阅将每小时生成一个在 **“管理作业”** 页面上显示的作业。  
   
- ![管理正在运行的作业](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "manage running jobs")  
+ ![管理正在运行的作业](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "管理正在运行的作业")  
   
 ## <a name="key-management"></a>密钥管理
  下表总结了“密钥管理”页面  
@@ -109,7 +109,7 @@ ms.locfileid: "65580090"
 > [!IMPORTANT]  
 >  定期更改 Reporting Services 加密密钥是确保安全的好办法。 建议在升级 Reporting Services 主版本后立即更改密钥。 升级后更改密钥将使在升级周期外更改 Reporting Services 加密密钥所导致的额外服务中断降到最低程度。  
   
-|第|描述|  
+|页|说明|  
 |----------|-----------------|  
 |备份加密密钥|1) 在“密码:”和“确认密码:”框中键入密码，然后单击“导出”    。 如果您键入的密码不符合域策略的复杂性要求，将会看到一条警告。<br /><br /> 2) 系统会提示你指定保存密钥文件的位置。 你应该考虑将密钥文件存储在与运行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的计算机不同的计算机上。 默认文件名称与服务应用程序名称相同。|  
 |还原加密密钥|1) 在“文件位置”框中键入或浏览密钥文件 <br /><br /> 2) 在“密码”框中，键入用于备份加密文件的密码  。<br /><br /> 3) 单击“确定” |  

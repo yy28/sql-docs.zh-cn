@@ -10,10 +10,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: bd26e2ddcacd91269a51e663b80acd4edf95c196
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580062"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services 数据警报
@@ -49,7 +49,7 @@ SQL Server Reporting Services 数据警报是一种数据驱动的警报解决�
   
  下图显示了一个工作流，该工作流包括以下任务：创建并保存数据警报定义；创建 SQL 代理作业以便开始处理数据警报实例；以及通过电子邮件发送数据警报消息，该消息包含对一个或多个收件人触发警报的报表数据。  
   
- ![Reporting Services 警报中的工作流](../reporting-services/media/rs-alertingworkflow.gif "Workflow in Reporting Services alerting")  
+ ![Reporting Services 警报服务中的工作流](../reporting-services/media/rs-alertingworkflow.gif "Reporting Services 警报服务中的工作流")  
   
 ### <a name="reports-supported-by-data-alerts"></a>数据警报支持的报表  
  您可以针对以报表定义语言 (RDL) 编写并在报表设计器或报表生成器中创建的所有类型的专业报表创建数据警报。 包含数据区域（如表和图表）的报表、具有子报表的报表以及具有多个并行列组和嵌套数据区域的复杂报表。 唯一要求是该报表至少包含一个任何类型的数据区域，并且报表数据源配置为使用存储凭据或没有凭据。 如果在报表中没有数据区域，则无法对其创建警报。  
@@ -58,7 +58,7 @@ SQL Server Reporting Services 数据警报是一种数据驱动的警报解决�
   
  当您在本机模式或 SharePoint 模式下安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 或者使用报表生成器的独立版本时，可以将报表保存到报表服务器、您的计算机或 SharePoint 库。 若要创建针对报表的数据警报，这些报表必须保存或上载到某一 SharePoint 库中。 这意味着，您不能针对保存到本机模式下的报表服务器或您计算机中的报表创建警报。 此外，您不能创建嵌入在自定义应用程序中的警报。  
   
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 支持报表中多种不同的凭据类型。 您可以针对具有配置为使用 Windows 存储凭据或没有凭据的数据源的报表创建数据警报。 不能针对配置为使用集成的安全凭据或提示凭据的报表创建警报。 报表作为警报定义处理的一部分运行，并且在没有凭据的情况下处理将失败。 有关详细信息，请参见以下内容：  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 支持报表中多种不同的凭据类型。 您可以针对具有配置为使用 Windows 存储凭据或没有凭据的数据源的报表创建数据警报。 不能针对配置为使用集成的安全凭据或提示凭据的报表创建警报。 报表作为警报定义处理的一部分运行，并且在没有凭据的情况下处理将失败。 有关详细信息，请参阅以下主题：  
   
 -   [为报表数据源指定凭据和连接信息](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
@@ -116,9 +116,9 @@ SQL Server Reporting Services 数据警报是一种数据驱动的警报解决�
 ##  <a name="InstallAlerting"></a> 安装数据警报  
  数据警报功能仅当在 SharePoint 模式下安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 时才可用。 在 SharePoint 模式下安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 时，安装程序会自动创建警报数据库（用于存储数据警报定义和警报元数据）和两个 SharePoint 页（用于管理警报和向 SharePoint 站点添加数据警报设计器）。 没有要执行的特殊步骤或在安装过程中为警报设置的选项。  
   
- 如果要了解有关在 SharePoint 模式下安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的详细信息（包括 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中新增的 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 共享服务和在可使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能之前必须创建和配置的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用程序），请参阅 MSDN 库中的 [安装用于 SharePoint 2010 的 Reporting Services SharePoint 模式](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) 。  
+ 若要详细了解如何在 SharePoint 模式中安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]，包括 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中新增的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 共享服务和使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能前必须先创建和配置的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用程序，请参阅 MSDN 库中的[安装用于 SharePoint 2010 的 Reporting Services SharePoint 模式](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)。  
   
- 如本主题前面的示意图所示，数据警报使用 SQL Server 代理作业。 若要创建这些作业，SQL Server 代理必须运行。 您可能已经配置 SQL Server 代理以在安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]时自动启动。 如果没有，您可以手动启动 SQL Server 代理。 有关详细信息，请参阅 [配置 SQL Server 代理](../ssms/agent/configure-sql-server-agent.md) 和 [启动、停止、暂停、继续、重启数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
+ 如本主题前面的示意图所示，数据警报使用 SQL Server 代理作业。 若要创建这些作业，SQL Server 代理必须运行。 您可能已经配置 SQL Server 代理以在安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]时自动启动。 如果没有，您可以手动启动 SQL Server 代理。 有关详细信息，请参阅[配置 SQL Server 代理](../ssms/agent/configure-sql-server-agent.md)和[启动、停止、暂停、继续、重启数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
  可以使用 SharePoint 管理中心中的 **“设置订阅和警报”** 页来查看 SQL Server 代理是否正在运行，并创建和下载之后要运行以向 SQL Server 代理授予权限的自定义的 [!INCLUDE[tsql](../includes/tsql-md.md)] 脚本。 通过使用 PowerShell 还可以生成 [!INCLUDE[tsql](../includes/tsql-md.md)] 脚本。 有关详细信息，请参阅[用于 SSRS 服务应用程序的设置订阅和警报](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)。  
   
@@ -131,7 +131,7 @@ SQL Server Reporting Services 数据警报是一种数据驱动的警报解决�
   
  下表列出了用于数据警报的配置元素、其默认值、说明和位置。  
   
-|设置|默认值|描述|位置|  
+|设置|默认值|说明|位置|  
 |-------------|-------------------|-----------------|--------------|  
 |AlertingCleanupCycleMinutes|20|清理周期开始之间的分钟数。|报表服务器配置文件|  
 |AlertingExecutionLogCleanupMinutes|10080|要保留执行日志条目的分钟数。|报表服务器配置文件|  
@@ -145,7 +145,7 @@ SQL Server Reporting Services 数据警报是一种数据驱动的警报解决�
 ### <a name="event-handlers-and-retry"></a>事件处理程序和重试  
  事件处理程序如下所示：  
   
-|事件处理程序|描述|  
+|事件处理程序|说明|  
 |-------------------|-----------------|  
 |FireAlert|在数据警报管理器中单击“运行”   ，以立即启动对警报定义的处理。|  
 |FireSchedule|SQL Server 代理为警报定义启动作业计划。|  
@@ -207,7 +207,7 @@ SQL Server Reporting Services 数据警报是一种数据驱动的警报解决�
   
 |用户类型|SharePoint 权限|任务说明|  
 |---------------|---------------------------|----------------------|  
-|信息工作者|查看项<br /><br /> 创建通知|查看报表之类的项和针对报表创建数据警报。 编辑和删除警报。|  
+|信息工作者|查看项<br /><br /> 创建警报|查看报表之类的项和针对报表创建数据警报。 编辑和删除警报。|  
 |警报管理员|管理警报|查看在 SharePoint 站点上保存的所有数据警报的列表，以及删除警报。|  
   
 ##  <a name="DiagnosticsLogging"></a> 诊断和日志记录  

@@ -1,5 +1,5 @@
 ---
-title: setDate 方法到日期和日历-字符串 |Microsoft Docs
+title: 设置日期和日历的 setDate 方法 - string | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: fd152ad6-dd5e-49ef-b166-917371a2cba6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0f986b7fd5faadfbd24708ec9a339d3bd2f104f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974579"
 ---
 # <a name="setdate-method-javalangstring-javasqldate-javautilcalendar"></a>setDate 方法 (java.lang.String, java.sql.Date, java.util.Calendar)
@@ -36,7 +36,7 @@ public void setDate(java.lang.String sCol,
                     java.util.Calendar c)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *n*  
   
  指示参数编号的 int  。  
@@ -49,10 +49,10 @@ public void setDate(java.lang.String sCol,
   
  Calendar 对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 setDate 方法是由 java.sql.CallableStatement 接口中的 setDate 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  

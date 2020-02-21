@@ -1,5 +1,5 @@
 ---
-title: SSTRANSTIGHTLYCPLD 字段 (SQLServerXAResource) |Microsoft Docs
+title: SSTRANSTIGHTLYCPLD 字段 (SQLServerXAResource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 379857c3-9de1-4964-8782-32df317cbfbb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 36563b76c4207b5924bb32f5c8e99cca575c9d72
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970043"
 ---
 # <a name="sstranstightlycpld-field-sqlserverxaresource"></a>SSTRANSTIGHTLYCPLD 字段 (SQLServerXAResource)
@@ -35,10 +35,10 @@ public static final int SSTRANSTIGHTLYCPLD
 ```  
   
 ## <a name="field-value"></a>字段值  
- **整数**值32768。  
+ 一个 int  值：32768。  
   
-## <a name="remarks"></a>Remarks  
- 每个事务都由一个 XA 分支事务 ID (XID) 和全局事务 ID (GTRID) 标识。 为了允许应用程序使用紧密结合的 XA 事务，这些事务具有不同的 XID 但具有相同的 GTRID，你必须在 XAResource.start 方法的 flags 参数上设置 [SSTRANSTIGHTLYCPLD](../../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md)。 有关如何使用此标志的详细信息, 请参阅[了解 XA 事务](../../../connect/jdbc/understanding-xa-transactions.md)。  
+## <a name="remarks"></a>备注  
+ 每个事务都由一个 XA 分支事务 ID (XID) 和全局事务 ID (GTRID) 标识。 为了允许应用程序使用紧密结合的 XA 事务，这些事务具有不同的 XID 但具有相同的 GTRID，你必须在 XAResource.start 方法的 flags 参数上设置 [SSTRANSTIGHTLYCPLD](../../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md)。 有关如何使用此标志的详细信息，请参阅[了解 XA 事务](../../../connect/jdbc/understanding-xa-transactions.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerXAResource 字段](../../../connect/jdbc/reference/sqlserverxaresource-fields.md)   

@@ -1,5 +1,5 @@
 ---
-title: 数据源信息属性 |Microsoft Docs
+title: 数据源信息属性 | Microsoft Docs
 description: 数据源信息属性
 ms.custom: ''
 ms.date: 06/14/2018
@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: ba9fa21f0c22c342922946a43124216a25ba09ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68016031"
 ---
 # <a name="data-source-information-properties"></a>数据源信息属性
@@ -30,19 +30,19 @@ ms.locfileid: "68016031"
 
   在提供程序特定的属性集 DBPROPSET_SQLSERVERDATASOURCEINFO 中，适用于 SQL Server 的 OLE DB 驱动程序定义了下列数据源信息属性。  
   
-|属性 ID|描述|  
+|属性 ID|说明|  
 |-----------------|-----------------|  
-|SSPROP_COLUMNLEVELCOLLATION|类型：VT_BOOL<br /><br /> 读取/写入：读取<br /><br /> 默认值：VARIANT_TRUE<br /><br /> 说明：用于确定是否支持列排序规则。<br /><br /> VARIANT_TRUE：支持列级别排序规则。<br /><br /> VARIANT_FALSE：不支持列级别排序规则。|  
-|SSPROP_UNICODELCID|类型：VT_I4 读取/写入：读取<br /><br /> 说明：Unicode 区域设置 ID。<br /><br /> 这是用于 Unicode 数据排序的区域设置。|  
-|SSPROP_UNICODECOMPARISONSTYLE|类型：VT_I4 读取/写入：读取<br /><br /> 说明：Unicode 比较样式。<br /><br /> 用于 Unicode 数据排序的排序选项。|  
+|SSPROP_COLUMNLEVELCOLLATION|键入：VT_BOOL<br /><br /> R/W：读取<br /><br /> 默认值：VARIANT_TRUE<br /><br /> 说明:用于确定是否支持列排序规则。<br /><br /> VARIANT_TRUE：支持列级别排序规则。<br /><br /> VARIANT_FALSE：不支持列级别排序规则。|  
+|SSPROP_UNICODELCID|键入：VT_I4 R/W：读取<br /><br /> 说明:Unicode 区域设置 ID。<br /><br /> 这是用于 Unicode 数据排序的区域设置。|  
+|SSPROP_UNICODECOMPARISONSTYLE|键入：VT_I4 R/W：读取<br /><br /> 说明:Unicode 比较样式。<br /><br /> 用于 Unicode 数据排序的排序选项。|  
   
  在提供程序特定的属性集 DBPROPSET_SQLSERVERSTREAM 中，适用于 SQL Server 的 OLE DB 驱动程序定义了下列附加属性。  
   
-|属性 ID|描述|  
+|属性 ID|说明|  
 |-----------------|-----------------|  
-|SSPROP_STREAM_XMLROOT|类型：VT_BSTR 读取/写入：读取/写入<br /><br /> 说明：FOR XML 查询的结果可能不是格式正确的文档。 如果此属性已指定，“select ... for XML”查询结果会被包装在此属性提供的根标记中，以返回格式正确的 XML 文档。 如果查询是在浏览器中执行的，在加载结果时它可能导致浏览器显示分析器错误。 为了避免错误，SQL ISAPI 支持 ROOT 关键字。 此关键字映射到 SSPROP_STREAM_XMLROOT 属性。|  
+|SSPROP_STREAM_XMLROOT|键入：VT_BSTR R/W：读取/写入<br /><br /> 说明:FOR XML 查询的结果可能不是格式正确的文档。 如果此属性已指定，“select ... for XML”查询结果会被包装在此属性提供的根标记中，以返回格式正确的 XML 文档。 如果查询是在浏览器中执行的，在加载结果时它可能导致浏览器显示分析器错误。 为了避免错误，SQL ISAPI 支持 ROOT 关键字。 此关键字映射到 SSPROP_STREAM_XMLROOT 属性。|  
   
 ## <a name="see-also"></a>另请参阅  
- [数据源对象&#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [数据源对象 (OLE DB)](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

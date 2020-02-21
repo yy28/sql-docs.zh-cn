@@ -1,5 +1,5 @@
 ---
-title: Blob 和 OLE 对象 |Microsoft Docs
+title: BLOB 和 OLE 对象 | Microsoft Docs
 description: BLOB 和 OLE 对象
 ms.custom: ''
 ms.date: 06/14/2018
@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 70d3ffccfc9613434b09335944e445a2705b95c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67988668"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB 和 OLE 对象
@@ -28,9 +28,9 @@ ms.locfileid: "67988668"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  适用于 SQL Server 的 OLE DB 驱动程序公开 ISequentialStream 接口，以便支持使用者访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ntext、text、image、varchar(max)、nvarchar(max)、varbinary(max) 和作为二进制大型对象 (BLOB) 的 xml 数据类型        。 通过对 ISequentialStream 执行 Read 方法，使用者可以用便于管理的方式成块检索大量数据   。  
+  OLE DB Driver for SQL Server 公开 ISequentialStream 接口，以便支持使用者访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ntext、text、image、varchar(max)、nvarchar(max)、varbinary(max) 和作为二进制大型对象 (BLOB) 的 xml 数据类型        。 通过对 ISequentialStream 执行 Read 方法，使用者可以用便于管理的方式成块检索大量数据   。  
   
- 有关演示此功能的示例, 请参阅[Set 大型&#40;Data&#41;OLE DB](../../oledb/ole-db-how-to/set-large-data-ole-db.md)。  
+ 有关演示此功能的示例，请参阅[设置大型数据 (OLE DB)](../../oledb/ole-db-how-to/set-large-data-ole-db.md)。  
   
  当使用者在数据修改绑定的取值函数中提供接口指针时，适用于 SQL Server 的 OLE DB 驱动程序可以使用由使用者实现的 IStorage 接口  。  
   
@@ -46,11 +46,11 @@ ms.locfileid: "67988668"
   
 -   绑定为 DBTYPE_IUNKNOWN 并使用流处理。  
   
- 如果绑定为 DBTYPE_IUNKNOWN，则使用 ISequentialStream 流功能。 SQL Server 的 OLE DB 驱动程序支持将输出参数绑定为大值数据类型的 DBTYPE_IUNKNOWN。 这是为了支持存储过程以返回值的形式返回这些数据类型的情况, 返回值将以 DBTYPE_IUNKNOWN 的形式返回到客户端。  
+ 如果绑定为 DBTYPE_IUNKNOWN，则使用 ISequentialStream 流功能。 对于大型值数据类型，OLE DB Driver for SQL Server 支持将输出参数绑定为 DBTYPE_IUNKNOWN。 这是为了支持存储过程将这些数据类型作为返回值返回的情形，返回值将作为 DBTYPE_IUNKNOWN 返回给客户端。  
   
 ## <a name="storage-object-limitations"></a>存储对象限制  
   
--   SQL Server 的 OLE DB 驱动程序只能支持一个打开的存储对象。 尝试打开多个存储对象（以获取对多个 ISequentialStream 接口指针的引用）返回 DBSTATUS_E_CANTCREATE  。  
+-   OLE DB Driver for SQL Server 只能支持一个打开的存储对象。 尝试打开多个存储对象（以获取对多个 ISequentialStream 接口指针的引用）返回 DBSTATUS_E_CANTCREATE  。  
   
 -   在适用于 SQL Server 的 OLE DB 驱动程序中，DBPROP_BLOCKINGSTORAGEOBJECTS 只读属性的默认值为 VARIANT_TRUE。 因此，如果存储对象处于活动状态，某些方法（存储对象上的方法除外）将失败，并返回 E_UNEXPECTED。  
   

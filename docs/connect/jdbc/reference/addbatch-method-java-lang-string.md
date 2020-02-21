@@ -16,10 +16,10 @@ ms.assetid: 093f6c3b-49a6-4043-9993-bd0482de04dd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 42045bee1dca5d2a9c5fc748f5d7a1c5ebbca9de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67956017"
 ---
 # <a name="addbatch-method-javalangstring"></a>addBatch 方法 (java.lang.String)
@@ -34,16 +34,16 @@ ms.locfileid: "67956017"
 public void addBatch(java.lang.String sql)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *sql*  
   
  包含 SQL 语句的 String  。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 addBatch 方法由 addBatch 方法在 .sql 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 addBatch 方法是由 java.sql.Statement 接口中的 addBatch 方法指定的。  
   
  调用此方法将导致异常，因为在创建 SQLServerPreparedStatement 对象时指定了该对象的 SQL 语句。  
   

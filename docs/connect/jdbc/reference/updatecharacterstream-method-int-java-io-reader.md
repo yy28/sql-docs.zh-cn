@@ -11,10 +11,10 @@ ms.assetid: 4dddf885-0482-4776-8e9a-69f6c6270931
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b08a6574f16159e5eebb9a95af7483b2ce7b0c84
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67996758"
 ---
 # <a name="updatecharacterstream-method-int-javaioreader"></a>updateCharacterStream 方法 (int, java.io.Reader)
@@ -30,7 +30,7 @@ public void updateCharacterStream(int columnIndex,
                                   java.io.Reader x)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  columnIndex   
   
  指示列索引的 int  。  
@@ -39,15 +39,15 @@ public void updateCharacterStream(int columnIndex,
   
  Reader 对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 updateCharacterStream 方法由 updateCharacterStream 方法在方法中指定。  
+## <a name="remarks"></a>备注  
+ 此 updateCharacterStream 方法是由 java.sql.ResultSet 接口中的 updateCharacterStream 方法指定的。  
   
  此方法将来自 Reader 对象的 Unicode 字符传递给所选文本和二进制列。 这包括所有文本列与 binary、varbinary、varbinary(max)、image 和 xml 列，但不包括 udt 列       。  
   
- 对**image**、 **text**和**ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据类型使用此方法可能会影响性能。  
+ 将此方法应用于 image  、text  和 ntext  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型可能会影响性能。  
   
 ## <a name="see-also"></a>另请参阅  
  [updateCharacterStream 方法 (SQLServerResultSet)](../../../connect/jdbc/reference/updatecharacterstream-method-sqlserverresultset.md)   

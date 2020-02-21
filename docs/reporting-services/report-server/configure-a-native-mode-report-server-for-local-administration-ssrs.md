@@ -16,10 +16,10 @@ ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 35355b32c8e4b59618cf146d9de04f3242ec6e6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66403267"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>为本地管理配置本机模式报表服务器 (SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66403267"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式|  
   
 -   [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)]  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66403267"
   
 10. 如果不将 HTTPS 用于默认站点，请清除 **“对该区域中的所有站点要求服务器验证(https:)”** 复选框。  
   
-11. 单击 **“添加”** 。  
+11. 单击“添加”  。  
   
 12. 选择“确定”  。  
   
@@ -144,7 +144,7 @@ ms.locfileid: "66403267"
   
 -   在 **“系统角色属性”** 页中，选择 **“查看报表服务器属性”** 。 选择您要与系统管理员角色的成员相关联的任何其他属性。  
   
--   单击“确定”  。  
+-   单击“确定”。   
   
 -   关闭 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  
   

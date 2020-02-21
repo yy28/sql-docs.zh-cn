@@ -1,5 +1,5 @@
 ---
-title: setAutoCommit 方法 (SQLServerConnection) |Microsoft Docs
+title: setAutoCommit 方法 (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: db1e22d2-e53f-474e-8c99-cb1fff7f491a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dbf9b18fdc6b590f085b5be6babd64100006163a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975258"
 ---
 # <a name="setautocommit-method-sqlserverconnection"></a>setAutoCommit 方法 (SQLServerConnection)
@@ -34,16 +34,16 @@ ms.locfileid: "67975258"
 public void setAutoCommit(boolean value)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *value*  
   
  true  可启用连接的自动提交模式，false  可禁用该模式。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 setAutoCommit 方法由 setAutoCommit 方法在 sql 连接接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 setAutoCommit 方法是由 java.sql.Connection 接口中的 setAutoCommit 方法指定的。  
   
  如果连接处于自动提交模式下，则其所有 SQL 语句将作为单个事务运行并提交。 否则，其 SQL 语句将不断归入事务组，直到调用 [commit](../../../connect/jdbc/reference/commit-method-sqlserverconnection.md) 方法或 [rollback](../../../connect/jdbc/reference/rollback-method-sqlserverconnection.md) 方法为止。 默认情况下，新连接处于自动提交模式。  
   

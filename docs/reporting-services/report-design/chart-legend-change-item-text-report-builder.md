@@ -9,10 +9,10 @@ ms.assetid: 9e82fa34-17ed-494f-b25d-03dcc353a21f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bc8b459c3ecfe9c34ff7552acb2565c1b25239a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581690"
 ---
 # <a name="chart-legend---change-item-text-report-builder"></a>图表图例 - 更改项文本（报表生成器）
@@ -35,7 +35,7 @@ ms.locfileid: "65581690"
   
  下表提供了用于“自定义图例文本”  属性的特定于图表的关键字示例。 有关关键字的详细信息，请参阅[设置图表上数据点的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)。  
   
-|关键字|描述|图例中的显示文本示例|  
+|关键字|说明|图例中的显示文本示例|  
 |-------------|-----------------|---------------------------------------------------|  
 |`#PERCENT{P1}`|显示包含一个小数位的总计值百分比。|85.0%|  
 |`#VALY`|显示数据字段的实际数值。|17000|  

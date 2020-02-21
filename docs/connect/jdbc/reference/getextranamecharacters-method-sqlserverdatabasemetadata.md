@@ -1,5 +1,5 @@
 ---
-title: getExtraNameCharacters 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getExtraNameCharacters 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: a22becfe-0f07-4a15-8d11-06d4054b2369
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6a4aada79019aad4ae01729de8e018edd728b473
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983313"
 ---
 # <a name="getextranamecharacters-method-sqlserverdatabasemetadata"></a>getExtraNameCharacters 方法 (SQLServerDatabaseMetaData)
@@ -35,13 +35,13 @@ public java.lang.String getExtraNameCharacters()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 包含其他字符的字符串  。  
+ 包含其他字符的字符串。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 getExtraNameCharacters 方法由 getExtraNameCharacters 方法在 Java.sql.databasemetadata 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 getExtraNameCharacters 方法是由 java.sql.DatabaseMetaData 接口中的 getExtraNameCharacters 方法指定的。  
   
  使用 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库时，此方法会返回其他字符 $、# 和 \@。  
   

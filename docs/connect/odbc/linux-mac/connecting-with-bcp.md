@@ -1,5 +1,5 @@
 ---
-title: 与 bcp 连接 |Microsoft Docs
+title: 使用 bcp 进行连接 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,16 +13,16 @@ ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1dd80df3a0f7fabec7ae9ddc51b16cb4456c7970
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67996617"
 ---
 # <a name="connecting-with-bcp"></a>使用 bcp 连接
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-[bcp](https://go.microsoft.com/fwlink/?LinkID=190626) 实用工具适用于 Linux 和 macOS 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 此页介绍与的 Windows 版本`bcp`之间的差异。
+[bcp](https://go.microsoft.com/fwlink/?LinkID=190626) 实用工具适用于 Linux 和 macOS 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 本页介绍与 `bcp` 的 Windows 版本之间的区别。
   
 - 字段终止符是制表符 ("\t")。  
   
@@ -46,7 +46,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 ## <a name="available-options"></a>可用选项
 在当前版本中，可以使用以下语法和选项：  
 
-[database  .  ]schema  .  table  in  data\_file   | out  data\_file 
+[_database_ **.** ]_schema_ **.** _table_ **in** _data\_file_ | **out** _data\_file_
 
 - -a *packet_size*  
 指定服务器发出或接收的每个网络数据包的字节数。  
@@ -78,7 +78,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 指定在操作过程中空列应该保留 null 值，而不是所插入列的任何默认值。  
   
 - -l  
-指定登录超时。 -l 选项指定在尝试连接到服务器时登录 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的超时时间（以秒为单位）。 默认的登录超时时间为15秒。 登录超时必须是介于 0 和 65534 之间的数字。 如果提供的值不是数值或不在此范围内，则 `bcp` 将生成错误消息。 值0指定无限超时。
+指定登录超时。 -l 选项指定在尝试连接到服务器时登录 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的超时时间（以秒为单位）。 默认登录超时值为 15 秒。 登录超时必须是介于 0 和 65534 之间的数字。 如果提供的值不是数值或不在此范围内，则 `bcp` 将生成错误消息。 值 0 指定无限超时。
   
 - -L *last_row*  
 指定要从表中导出或从数据文件中导入的最后一行的编号。  
@@ -98,11 +98,11 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 - -r *row_terminator*  
 指定行终止符。  
   
-- -r  
+- -R  
 指定使用客户端计算机区域设置中定义的区域格式，将货币、日期和时间数据大容量复制到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中。  
   
 - -S *server*  
-指定要连接到的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例的名称, 或者, 如果使用的是 DSN, 则为。  
+指定要连接的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称，或者如果使用 -D，则指定 DSN。  
   
 - -t *field_terminator*  
 指定字段终止符。  
@@ -113,7 +113,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 - -U *login_id*  
 指定用于连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的登录 ID。  
   
-- -V  
+- -v  
 报告 `bcp` 实用工具的版本号和版权。  
   
 - -w  
@@ -133,14 +133,14 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 - -i *input_file*  
 指定响应文件的名称。  
   
-- -n  
+- -N  
 对非字符数据使用数据的本机（数据库）数据类型，对字符数据使用 Unicode 字符。  
   
 - -o *output_file*  
 指定文件名称，该文件用于接收从命令提示符重定向来的输出。  
   
 - -V (80 | 90 | 100)  
-使用早期版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的数据类型。  
+使用早期版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的数据类型。  
   
 - -X  
 结合使用该格式和 -f format_file 选项一起使用，可生成基于 XML 的格式化文件，而不是默认的非 XML 格式化文件。  

@@ -1,5 +1,5 @@
 ---
-title: setLogWriter 方法 (SQLServerDataSource) |Microsoft Docs
+title: setLogWriter 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 7a77d8ef-2211-4bf8-af35-020fc896c073
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1adddf442f9d2b6ff84f955cf4e448a31e6741da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974079"
 ---
 # <a name="setlogwriter-method-sqlserverdatasource"></a>setLogWriter 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  此方法仅供内部使用。 有关日志记录的详细信息, 请参阅[跟踪驱动程序操作](../../../connect/jdbc/tracing-driver-operation.md)。  
+  此方法仅供内部使用。 有关记录的详细信息，请参阅[跟踪驱动程序操作](../../../connect/jdbc/tracing-driver-operation.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,13 +34,13 @@ ms.locfileid: "67974079"
 public void setLogWriter(java.io.PrintWriter out)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *out*  
   
- 一个 PrintWriter 对象。  
+ PrintWriter 对象。  
   
-## <a name="remarks"></a>Remarks  
- 此 setLogWriter 方法由 setLogWriter 方法在 javax.mail.session 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 setLogWriter 方法是由 javax.sql.DataSource 接口中的 setLogWriter 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDataSource 成员](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

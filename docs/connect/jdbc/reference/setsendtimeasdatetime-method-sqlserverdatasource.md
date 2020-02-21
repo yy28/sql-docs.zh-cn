@@ -1,5 +1,5 @@
 ---
-title: Sqlserverdatasource.setsendtimeasdatetime 方法 (SQLServerDataSource) |Microsoft Docs
+title: setSendTimeAsDatetime 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 705a0494-b5e2-43db-940a-1b8cec550cdb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 293667d8e3e06fb5eda7a74fdeed58c89fb0f1ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972957"
 ---
 # <a name="setsendtimeasdatetime-method-sqlserverdatasource"></a>setSendTimeAsDatetime 方法 (SQLServerDataSource)
@@ -22,7 +22,7 @@ ms.locfileid: "67972957"
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 中新增了此方法。  
   
- 修改**sendTimeAsDatetime**连接属性的设置。  
+ 修改 sendTimeAsDatetime  连接属性的设置。  
   
 ## <a name="syntax"></a>语法  
   
@@ -31,17 +31,17 @@ ms.locfileid: "67972957"
 public void setSendTimeAsDatetime(boolean sendTimeAsDateTime)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *sendTimeAsDateTime*  
   
  一个布尔值。 如果设置为 true，java.sql.Time 值将作为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime 类型发送到服务器  。 如果设置为 false，java.sql.Time 值将作为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] time 类型发送到服务器  。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  [SQLServerDataSource.getSendTimeAsDatetime](../../../connect/jdbc/reference/getsendtimeasdatetime-method-sqlserverdatasource.md) 返回“sendTimeAsDatetime”连接属性的设置  。  
   
- 有关**sendTimeAsDatetime**连接属性的详细信息, 请参阅[设置连接属性](../../../connect/jdbc/setting-the-connection-properties.md)。  
+ 有关 sendTimeAsDatetime  连接属性的详细信息，请参阅[设置连接属性](../../../connect/jdbc/setting-the-connection-properties.md)。  
   
- 有关详细信息, 请参阅[配置如何将 .Java 值发送到服务器](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md)。  
+ 有关详细信息，请参阅[配置将 java.sql.Time 值发送到服务器的方式](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDataSource 成员](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

@@ -9,10 +9,10 @@ ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 241d74d615f9aac2cbe48d084fd2d8e91ea9abbf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580110"
 ---
 # <a name="managing-report-parts"></a>管理报表部件
@@ -47,10 +47,10 @@ ms.locfileid: "65580110"
   
  (*) 表明它是在此版本中新推出的。  
   
-|属性|描述|报表部件<br /><br /> 库搜索条件|  
+|properties|说明|报表部件<br /><br /> 库搜索条件|  
 |--------------|-----------------|---------------------------------------------|  
-|“属性”|这是用户可在报表部件库中搜索的条件之一。|是|  
-|描述|您可能希望以更方便用户在库中查找的方式组织报表部件名称。 例如，对于涉及销售相关的数据和展示的所有报表部件，您可以搜索以“Sales>>”开头的说明。|是|  
+|名称|这是用户可在报表部件库中搜索的条件之一。|是|  
+|说明|您可能希望以更方便用户在库中查找的方式组织报表部件名称。 例如，对于涉及销售相关的数据和展示的所有报表部件，您可以搜索以“Sales>>”开头的说明。|是|  
 |CreatedBy|将报表部件添加到了报表服务器数据库的用户的 ID。 确切格式取决于身份验证方法。 例如，某些身份验证方法将导致 CreatedBy 和 ModifiedBy 字段中显示完整的“域\用户名”。|是|  
 |CreationDate|最初创建报表部件的日期。<br /><br /> 这是用户可在报表部件库中搜索的条件之一。|是|  
 |ModifiedBy|ModifiedBy 是上次修改报表部件的用户的 ID。|是|  
@@ -66,7 +66,7 @@ ms.locfileid: "65580110"
 |操作|角色|  
 |-------------|-----------|  
 |添加、删除、编辑项属性，管理安全性，以及下载报表部件|内容管理员<br /><br /> 我的报表|  
-|添加、删除和下载报表部件|发布服务器|  
+|添加、删除和下载报表部件|发布者|  
 |搜索和重用|浏览者<br /><br /> 报表生成器|  
   
 ### <a name="server-in-sharepoint-integrated-mode"></a>SharePoint 集成模式下的服务器  

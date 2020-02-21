@@ -1,6 +1,6 @@
 ---
 title: 使用 rxDataStep 创建表
-description: 本教程演练如何在 SQL Server 中使用 R 语言创建 SQL Server 表。
+description: RevoScaleR 教程 11：如何在 SQL Server 中使用 R 语言创建 SQL Server 表。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,28 +9,28 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f4ac51fc1affb4128abab017eb00cba4b56960fa
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 99f693210b567523b74f851d1db68470cae2891d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727246"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947239"
 ---
 # <a name="create-new-sql-server-table-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>使用 rxDataStep 创建新的 SQL Server 表（SQL Server 和 RevoScaleR 教程）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本课程属于 [RevoScaleR 教程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)，该教程介绍如何在 SQL Server 中使用 [RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)。
+这是介绍如何在 SQL Server 中使用 [RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)的 [RevoScaleR 教程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的第 11 个教程。
 
-本课程介绍如何在内存中数据帧、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上下文和本地文件之间移动数据。
+在本教程中，你将学习如何在内存中数据帧、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上下文和本地文件之间移动数据。
 
 > [!NOTE]
-> 本课程使用不同的数据集。 Airline Delays 数据集是广泛用于机器学习试验的公共数据集。 本示例中使用的数据文件与其他产品示例在同一目录中。
+> 本教程使用不同的数据集。 Airline Delays 数据集是广泛用于机器学习试验的公共数据集。 本示例中使用的数据文件与其他产品示例在同一目录中。
 
 ## <a name="load-data-from-a-local-xdf-file"></a>从本地 XDF 文件加载数据
 
-在本教程的前半部分，已使用 **RxTextData** 函数将数据从文本文件导入 R 中，然后使用 **RxDataStep** 函数将数据移动到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中。
+在本教程系列的前半部分，已使用 RxTextData  函数将数据从文本文件导入 R 中，然后使用 RxDataStep  函数将数据移动到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中。
 
-本课程采用不同的方法，并使用以 [XDF 格式](https://en.wikipedia.org/wiki/Extensible_Data_Format)保存的文件中的数据。 使用 XDF 文件对数据执行一些轻型转换后，将转换的数据保存到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中。
+本教程采用不同的方法，并使用以 [XDF 格式](https://en.wikipedia.org/wiki/Extensible_Data_Format)保存的文件中的数据。 使用 XDF 文件对数据执行一些轻型转换后，将转换的数据保存到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中。
 
 **什么是 XDF？**
 

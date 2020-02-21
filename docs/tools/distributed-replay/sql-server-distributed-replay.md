@@ -1,33 +1,33 @@
 ---
-title: SQL Server Distributed Replay |Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: SQL Server 分布式重播
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.technology: tools-other
 ms.topic: conceptual
-helpviewer_keywords:
-- Distributed Replay
-- SQL Server Distributed Replay
 ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f71b19977746ecc52817fa0128d6f0a8e681ff5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: c52325045cd21d0eb11edef8b0664d14c292e729
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67949911"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74993415"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server 分布式重播
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式重播功能可帮助您评估即将进行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升级的影响。 您还可以使用它来帮助评估硬件和操作系统升级以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 优化的影响。  
+
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 功能可帮助你评估即将进行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升级的影响。 您还可以使用它来帮助评估硬件和操作系统升级以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 优化的影响。  
   
 ## <a name="benefits-of-distributed-replay"></a>分布式重播的优点  
  与 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]类似，您可以使用分布式重播针对升级后的测试环境重播捕获的跟踪。 与 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]不同的是，分布式重播并不仅限于从单台计算机重播工作负荷。  
   
  与 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 相比，分布式重播提供了一个更具伸缩性的解决方案。 使用分布式重播，您可以从多台计算机重播工作负荷，并更好地模拟关键任务型工作负荷。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式重播功能可以从多台计算机重播跟踪数据，并模拟关键任务型工作负荷。 可使用分布式重播进行应用程序兼容性测试、性能测试或容量规划。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 功能可以从多台计算机重播跟踪数据，并模拟关键任务型工作负载。 可使用分布式重播进行应用程序兼容性测试、性能测试或容量规划。  
   
 ## <a name="when-to-use-distributed-replay"></a>何时使用分布式重播  
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 和分布式重播在功能上有些重复。  
@@ -46,13 +46,13 @@ ms.locfileid: "67949911"
 ## <a name="distributed-replay-concepts"></a>分布式重播概念  
  以下组件组成分布式重播环境：  
   
--   **分布式重播管理工具**：一个控制台应用程序 **DReplay.exe**, 可用来与分布式重播控制器进行通信。 使用管理工具可控制分布式的重播。  
+-   **Distributed Replay 管理工具**：一个控制台应用程序 DReplay.exe  , 可用来与分布式重播控制器进行通信。 使用管理工具可控制分布式的重播。  
   
--   **分布式重播控制器**：运行名为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式重播控制器的 Windows 服务的一台计算机。 Distributed Replay 控制器协调分布式的重播客户端的操作。 在每个 Distributed Replay 环境中只能有一个控制器实例。  
+-   **Distributed Replay 控制器**：运行名为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 Distributed Replay 控制器的 Windows 服务的一台计算机。 Distributed Replay 控制器协调分布式的重播客户端的操作。 在每个 Distributed Replay 环境中只能有一个控制器实例。  
   
--   **分布式重播客户端**：运行名为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式重播客户端的 Windows 服务的一台或多台计算机（物理或虚拟）。 多个 Distributed Replay 客户端一起来模拟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的工作负荷。 在每个 Distributed Replay 环境中可以有一个或多个客户端。  
+-   **Distributed Replay 客户端**：运行名为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 客户端的 Windows 服务的一台或多台计算机（物理或虚拟）。 多个 Distributed Replay 客户端一起来模拟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的工作负荷。 在每个 Distributed Replay 环境中可以有一个或多个客户端。  
   
--   **目标服务器**：分布式重播客户端可用于重播跟踪数据的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 建议将目标服务器置于测试环境中。  
+-   **目标服务器**：Distributed Replay 客户端可用于重播跟踪数据的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 建议将目标服务器置于测试环境中。  
   
  分布式重播管理工具、控制器和客户端可安装在不同计算机或同一计算机上。 一台计算机上只能运行分布式重播控制器或客户端服务的一个实例。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "67949911"
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|介绍如何配置分布式重播。|[配置分布式重播](../../tools/distributed-replay/configure-distributed-replay.md)|  
+|介绍如何配置分布式重播。|[配置 Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)|  
 |介绍如何准备输入跟踪数据。|[准备输入跟踪数据](../../tools/distributed-replay/prepare-the-input-trace-data.md)|  
 |介绍如何重播跟踪数据。|[重播跟踪数据](../../tools/distributed-replay/replay-trace-data.md)|  
 |介绍如何查看分布式重播跟踪数据结果。|[查看重播结果](../../tools/distributed-replay/review-the-replay-results.md)|  

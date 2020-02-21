@@ -16,10 +16,10 @@ ms.assetid: e825765c-eb55-4800-951b-f3495da36641
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0c91b965498c0b617a02c7707e369a2ba61c0065
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976152"
 ---
 # <a name="preparestatement-method-javalangstring"></a>prepareStatement 方法 (java.lang.String)
@@ -32,19 +32,19 @@ ms.locfileid: "67976152"
 public java.sql.PreparedStatement prepareStatement(java.lang.String sql)
 ```
 
-#### <a name="parameters"></a>Parameters
+#### <a name="parameters"></a>parameters
 *sql*
 
 包含 SQL 语句的 String  。
 
 ## <a name="return-value"></a>返回值
-一个 Java.sql.preparedstatement 对象。
+PreparedStatement 对象。
 
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
 [SQLServerException](./sqlserverexception-class.md)
 
-## <a name="remarks"></a>Remarks
-此 prepareStatement 方法由 prepareStatement 方法在 sql 连接接口中指定。
+## <a name="remarks"></a>备注
+此 prepareStatement 方法是由 java.sql.Connection 接口中的 prepareStatement 方法指定的。
 
 ## <a name="see-also"></a>另请参阅
 

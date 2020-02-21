@@ -11,14 +11,14 @@ ms.assetid: 82fc4ba2-291a-4939-a025-271b8d687c54
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b3fe381daf1b89d76d9282f2c1a54c3940a3ffbe
-ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67314047"
 ---
 # <a name="rename-a-report-server-computer"></a>重命名报表服务器计算机
-  重命名计算机将导致相应地更改 Web 服务器和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称（如果是在同一台计算机上）。 在某些情况下，在计算机名称发生更改之后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可能无法访问。 若要在计算机名更改后重新配置报表服务器，请按照本主题中的步骤操作。  
+  重命名计算机将导致相应地更改 Web 服务器和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称（如果是在同一台计算机上）。 在某些情况下，在计算机名称发生更改之后，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可能无法访问。 若要在计算机名更改后重新配置报表服务器，请按照本主题中的步骤操作。  
   
 ## <a name="renaming-a-sql-server-database-engine"></a>重命名 SQL Server 数据库引擎  
  如果要重命名运行报表服务器数据库的  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例，请执行下列操作：  
@@ -29,7 +29,7 @@ ms.locfileid: "67314047"
   
 3.  在 **“服务器名称”** 中，键入或选择 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 名称，再单击 **“连接”** 。  
   
-4.  单击 **“应用”** 。  
+4.  单击“应用”  。  
   
  如果报表服务器使用的是本地 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，则可以使用 *(local)* 或 *(local)\instancename* 来指定服务器。 如果使用 *(local)* 表示服务器，则可以重命名服务器，同时连接将继续工作。 如果使用的是远程服务器，或使用服务器名称配置了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，则每次更改服务器名称时都必须更新数据库连接信息。  
   

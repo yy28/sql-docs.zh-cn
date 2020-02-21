@@ -1,5 +1,5 @@
 ---
-title: getTables 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getTables 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: a7514673-3457-4541-9560-28a8284ad9e3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e8dfd7f14d6006f5a41a7cd2a9b0cae4933804fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979210"
 ---
 # <a name="gettables-method-sqlserverdatabasemetadata"></a>getTables 方法 (SQLServerDatabaseMetaData)
@@ -37,7 +37,7 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
                                     java.lang.String[] types)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *catalog*  
   
  一个包含目录名称的字符串  。 对此参数提供 Null 值指示无需使用目录名称。  
@@ -57,26 +57,26 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
 ## <a name="return-value"></a>返回值  
  一个 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 getTables 方法是由 java.sql.DatabaseMetaData 接口中的 getTables 方法指定的。  
   
  由 getTables 方法返回的结果集将包含以下信息：  
   
-|“属性”|类型|描述|  
+|名称|类型|说明|  
 |----------|----------|-----------------|  
-|TABLE_CAT|**String**|指定的表所在的数据库的名称。|  
-|TABLE_SCHEM|**String**|表架构名称。|  
-|TABLE_NAME|**String**|表名称。|  
-|TABLE_TYPE|**String**|表类型。|  
-|REMARKS|**String**|表的说明。<br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不会为此列返回值。|  
-|TYPE_CAT|**String**|JDBC 驱动程序不支持此类型。|  
-|TYPE_SCHEM|**String**|JDBC 驱动程序不支持此类型。|  
-|TYPE_NAME|**String**|JDBC 驱动程序不支持此类型。|  
-|SELF_REFERENCING_COL_NAME|**String**|JDBC 驱动程序不支持此类型。|  
-|REF_GENERATION|**String**|JDBC 驱动程序不支持此类型。|  
+|TABLE_CAT|**字符串**|指定的表所在的数据库的名称。|  
+|TABLE_SCHEM|**字符串**|表架构名称。|  
+|TABLE_NAME|**字符串**|表名称。|  
+|TABLE_TYPE|**字符串**|表类型。|  
+|REMARKS|**字符串**|表的说明。<br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不会为此列返回值。|  
+|TYPE_CAT|**字符串**|JDBC 驱动程序不支持此类型。|  
+|TYPE_SCHEM|**字符串**|JDBC 驱动程序不支持此类型。|  
+|TYPE_NAME|**字符串**|JDBC 驱动程序不支持此类型。|  
+|SELF_REFERENCING_COL_NAME|**字符串**|JDBC 驱动程序不支持此类型。|  
+|REF_GENERATION|**字符串**|JDBC 驱动程序不支持此类型。|  
   
 > [!NOTE]  
 >  有关 getTables 方法返回的数据的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 联机丛书中的“sp_tables (Transact-SQL)”。  

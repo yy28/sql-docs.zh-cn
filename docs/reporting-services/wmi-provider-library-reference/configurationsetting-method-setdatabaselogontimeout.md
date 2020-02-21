@@ -16,10 +16,10 @@ ms.assetid: b8773596-5b98-4355-a4ab-4412e1317c67
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 58d8bd5514467585026608ada825bf805af4c092
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571664"
 ---
 # <a name="configurationsetting-method---setdatabaselogontimeout"></a>ConfigurationSetting 方法 - SetDatabaseLogonTimeout
@@ -37,7 +37,7 @@ public void SetDatabaseLogonTimeout(Int32 LogonTimeout,
     out Int32 HRESULT);  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>parameters  
  *LogonTimeout*  
  报表服务器数据库连接的默认超时值，单位为秒。  
   
@@ -48,7 +48,7 @@ public void SetDatabaseLogonTimeout(Int32 LogonTimeout,
  返回 *HRESULT* ，指示方法调用是成功还是失败。 值 0 指示方法调用已成功。 非零值指示已发生错误。  
   
 ## <a name="requirements"></a>要求  
- **命名空间:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

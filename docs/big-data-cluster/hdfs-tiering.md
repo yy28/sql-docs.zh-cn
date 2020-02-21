@@ -9,14 +9,14 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 673b3eed760af4b36c494e2dd45cdfc8ed8e8dc8
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 008a62d3d36acf96b0c63559cd4d8ecbf27641c1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706051"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190395"
 ---
-# <a name="configure-hdfs-tiering-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上配置 HDFS 分层
+# <a name="configure-hdfs-tiering-on-big-data-clusters-2019"></a>在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上配置 HDFS 分层
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -26,13 +26,18 @@ ms.locfileid: "73706051"
 
 借助分层，应用程序可以无缝访问各种外部存储中的数据，就像数据驻留在本地 HDFS 一样。 装载是一种元数据操作，该操作会将描述外部文件系统上的命名空间的元数据复制到本地 HDFS。 此元数据包括有关外部目录和文件及其权限和 ACL 的信息。 当通过查询或其他方式访问数据本身时，仅按需复制相应的数据。 现在可以从 SQL Server 大数据群集访问外部文件系统数据。 你可以对此数据运行 Spark 作业和 SQL 查询，就像对群集上的 HDFS 中存储的任何本地数据运行它们一样。
 
+此 7 分钟视频概述了 HDFS 分层：
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Unify-your-data-lakes-with-HDFS-tiering/player?WT.mc_id=dataexposed-c9-niner]
+
+
 ### <a name="caching"></a>Caching
 现在默认保留 HDFS 存储总量的 1% 来缓存装载的数据。 缓存是跨装载的全局设置。
 
 > [!NOTE]
 > HDFS 分层是由 Microsoft 开发的一项功能，其早期版本已作为 Apache Hadoop 3.1 分发版的一部分发布。 有关详细信息，请参阅 [https://issues.apache.org/jira/browse/HDFS-9806](https://issues.apache.org/jira/browse/HDFS-9806) 获取详细信息。
 
-以下部分提供了如何使用 Azure Data Lake Storage Gen2 数据源配置 HDFS 分层的示例。
+以下部分展示了如何使用 Azure Data Lake Storage Gen2 数据源配置 HDFS 分层的示例。
 
 ## <a name="refresh"></a>刷新
 

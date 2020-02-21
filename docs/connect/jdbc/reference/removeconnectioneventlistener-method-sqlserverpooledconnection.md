@@ -1,5 +1,5 @@
 ---
-title: removeConnectionEventListener 方法 (SQLServerPooledConnection) |Microsoft Docs
+title: removeConnectionEventListener 方法 (SQLServerPooledConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 46902e89-f512-40af-a2d9-a896f03d1200
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b9d2980b86704efe7e611878d373e0dd9b5cb7fa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975757"
 ---
 # <a name="removeconnectioneventlistener-method-sqlserverpooledconnection"></a>removeConnectionEventListener 方法 (SQLServerPooledConnection)
@@ -34,13 +34,13 @@ ms.locfileid: "67975757"
 public void removeConnectionEventListener(javax.sql.ConnectionEventListener listener)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *listener*  
   
- 一个 ConnectionEventListener 对象。  
+ ConnectionEventListener 对象。  
   
-## <a name="remarks"></a>Remarks  
- 此 removeConnectionEventListener 方法由 removeConnectionEventListener 方法在 javax.mail.session。 Pooledconnection.execute 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 removeConnectionEventListener 方法是由 javax.sql.PooledConnection 接口中的 removeConnectionEventListener 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerPooledConnection 方法](../../../connect/jdbc/reference/sqlserverpooledconnection-methods.md)   

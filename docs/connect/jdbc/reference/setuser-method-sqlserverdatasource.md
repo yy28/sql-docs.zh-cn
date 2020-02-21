@@ -1,5 +1,5 @@
 ---
-title: setUser 方法 (SQLServerDataSource) |Microsoft Docs
+title: setUser 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: d2ea7906-2d10-438d-aa51-f576eea923c7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 945033f96b5c8c36ea7b3d4c75aafa382a057164
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972071"
 ---
 # <a name="setuser-method-sqlserverdatasource"></a>setUser 方法 (SQLServerDataSource)
@@ -34,12 +34,12 @@ ms.locfileid: "67972071"
 public void setUser(java.lang.String user)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
- user   
+#### <a name="parameters"></a>parameters  
+ user  
   
- 一个包含用户名的字符串  。  
+ 一个包含用户名的字符串。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  setUser 方法设置将用于连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的用户名。 如果未设置用户名值，[getUser](../../../connect/jdbc/reference/getuser-method-sqlserverdatasource.md) 方法则返回默认值 Null。  
   
 ## <a name="see-also"></a>另请参阅  

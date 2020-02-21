@@ -12,10 +12,10 @@ ms.assetid: 85a207dd-4e0f-4d40-a41e-0c75f65d719c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1979e19b3d93e9687d6abb137758bc71548b10ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577798"
 ---
 # <a name="format-a-reporting-services-script-file"></a>设置 Reporting Services 脚本文件的格式
@@ -46,7 +46,7 @@ End Sub
 > [!IMPORTANT]  
 >  用户凭据由脚本环境管理，并通过使用 RS.exe 来传递命令提示符参数。 尽管可以使用 *rs* 变量来设置对 Web 服务的身份验证，但是仍建议您使用脚本环境。 不必在脚本文件本身中对 Web 服务进行身份验证。 有关对脚本环境进行身份验证的详细信息，请参阅 [RS.exe 实用工具 (SSRS)](../../reporting-services/tools/rs-exe-utility-ssrs.md)。  
   
- 在脚本文件中不必声明命名空间。 通过脚本环境提供了几个有用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 命名空间： **System.Web.Services**, **System.Web.Services.Protocols**, **System.Xml**和 **System.IO**。  
+ 在脚本文件中不必声明命名空间。 脚本环境提供了几个有用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 命名空间：System.Web.Services  、System.Web.Services.Protocols  、System.Xml  和 System.IO  。  
   
  有关脚本示例，请参阅 [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)（SQL Server Reporting Services 产品示例）。  
   

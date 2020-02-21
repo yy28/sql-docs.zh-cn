@@ -1,5 +1,5 @@
 ---
-title: close 方法 (SQLServerConnection) |Microsoft Docs
+title: close 方法 (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: f0f26585-bdf7-4737-b434-8c7e115c8e94
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 87bce635f81db5c2b5e98768524d79082a940e2e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955676"
 ---
 # <a name="close-method-sqlserverconnection"></a>close 方法 (SQLServerConnection)
@@ -34,10 +34,10 @@ ms.locfileid: "67955676"
 public void close()  
 ```  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 close 方法是由 java.sql.Connection 接口中的 close 方法指定的。  
   
  在事务中间调用 close 方法将回滚该事务。  

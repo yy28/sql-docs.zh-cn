@@ -19,10 +19,10 @@ ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 602c939c382bc5946e64340736f73bb88f17c655
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574111"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>在 Management Studio 中连接到报表服务器
@@ -49,7 +49,7 @@ ms.locfileid: "65574111"
 
 2. 选择“连接”  查看服务器类型列表，然后选择“Reporting Services”  。
 
-3. 在 **“连接到服务器”** 对话框中，输入报表服务器实例的名称。 报表服务器实例的名称基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 默认情况下，本地报表服务器实例的实例名称就是计算机的名称。 如果将报表服务器作为命名实例进行安装，请使用此语法来指定该服务器：\<servername>[\\<instancename\>]  。
+3. 在 **“连接到服务器”** 对话框中，输入报表服务器实例的名称。 报表服务器实例的名称取决于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 默认情况下，本地报表服务器实例的实例名称就是计算机的名称。 如果将报表服务器作为命名实例进行安装，请使用此语法来指定该服务器：\<servername>[\\<instancename\>]  。
 
 4. 选择“身份验证类型”  。 如果使用的是 Windows 身份验证，则使用凭据进行连接。 如果选择“基本身份验证”或“窗体身份验证”，请键入帐户和密码。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "65574111"
 
  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] “连接到服务器” **对话框中将** 指定为服务器类型时，可以指定报表服务器名称或 Web 服务端点。
 
-|连接到|   “任务”   |   权限   |
+|连接到|   任务   |   权限   |
 |----------|-----------|-----------------|  
 |本机模式的报表服务器，作为默认实例或命名实例进行连接：<br /><br /> \<server name>\<_instance><br /><br /> 与报表服务器的连接是通过报表服务器 WMI 提供程序建立的。|查看和设置服务器属性与默认值。<br /><br /> 查看和取消作业。<br /><br /> 创建和管理共享计划。<br /><br /> 创建、修改或删除角色定义。|分配给“系统管理员”角色。|  
 |本机模式的报表服务器，作为默认实例或命名实例，通过终结点连接到报表服务器 Web 服务：<br /><br /> `https://<servername>/reportserver`<br /><br /> 指定指向报表服务器的 URL 提供了另一种连接到报表服务器的方法。|查看和设置服务器属性与默认值。<br /><br /> 查看和取消作业。<br /><br /> 创建和管理共享计划。<br /><br /> 创建、修改或删除角色定义。|分配给“系统管理员”角色。|  

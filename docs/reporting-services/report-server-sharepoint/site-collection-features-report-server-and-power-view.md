@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: dce33b0f267dadd8454378fccb72112970553a96
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580507"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>在 SharePoint 中激活报表服务器和 Power View 集成功能
@@ -21,12 +21,12 @@ ms.locfileid: "65580507"
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-  默认情况下，在安装用于 SharePoint 产品的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 加载项后，将激活 Reporting Services 网站集功能。 在某些情况下，你需要手动激活这些功能。  
+  默认情况下，在安装用于 SharePoint 产品的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 加载项后，将激活 Reporting Services 网站集功能。 在某些情况下，你需要手动激活这些功能。  
 
 > [!NOTE]
 > 自 SQL Server 2016 之后，不再提供 Reporting Services 与 SharePoint 的集成这一功能。
 
- 如果在安装 SharePoint 产品后安装了用于 SharePoint 2010 产品的 Reporting Services 加载项，则仅对根网站集激活报表服务器集成功能和 Power View 集成功能。 对于其他网站集，你需要手动激活这些功能。 例如，如果有 https://[我的服务器名称]/sites/[网站集名称] 的网站集，需要手动激活 Reporting Services 网站集功能  。  
+ 如果在安装 SharePoint 产品后安装了用于 SharePoint 2010 产品的 Reporting Services 加载项，则仅对根网站集激活报表服务器集成功能和 Power View 集成功能。 对于其他网站集，你需要手动激活这些功能。 例如，如果有 https://[我的服务器名称]/sites/[网站集名称] 的网站集，需要手动激活 Reporting Services 网站集功能。  
   
  没有根网站集时，Reporting Services 加载项将记录一条类似于以下内容的消息。  
   
@@ -38,33 +38,33 @@ ms.locfileid: "65580507"
   
 1.  打开浏览器，转到要激活 Reporting Services 功能的网站。  
   
-2.  单击 **“网站操作”** 。  
+2.  单击 **“网站操作”**。  
   
-3.  单击 **“网站设置”** 。  
+3.  单击 **“网站设置”**。  
   
 4.  在网站集管理组中单击 **“网站集功能”** 。  
   
 5.  在列表中找到 **“报表服务器集成功能”** 或 **“Power View 集成功能”** 。  
   
-6.  单击 **“激活”** 。  
+6.  单击“激活”。  
   
- 若要停用这些功能，您可以使用相同的过程，但单击 **“停用”** 而非 **“激活”** 。  
+ 若要停用这些功能，您可以使用相同的过程，但单击 **“停用”** 而非 **“激活”**。  
   
 ## <a name="activate-or-deactivate-reporting-services-central-administration-site-collection-feature"></a>激活或停用 Reporting Services 管理中心网站集功能
   
 1.  打开浏览器找到 SharePoint 管理中心。  
   
-2.  单击 **“网站操作”** 。  
+2.  单击 **“网站操作”**。  
   
-3.  单击 **“网站设置”** 。  
+3.  单击 **“网站设置”**。  
   
 4.  在网站集管理组中单击 **“网站集功能”** 。  
   
 5.  在列表中找到 **“报表服务器管理中心功能”** 。  
   
-6.  单击 **“激活”** 。  
+6.  单击“激活”。  
   
- 若要停用这些功能，您可以使用相同的过程，但单击 **“停用”** 而非 **“激活”** 。  
+ 若要停用这些功能，您可以使用相同的过程，但单击 **“停用”** 而非 **“激活”**。  
   
 ## <a name="next-steps"></a>后续步骤
 

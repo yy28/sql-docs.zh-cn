@@ -17,10 +17,10 @@ ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5d277089fded73524e55d05bbc21078d5df426e3
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67412658"
 ---
 # <a name="monitoring-report-server-performance"></a>监视报表服务器性能
@@ -57,7 +57,7 @@ ms.locfileid: "67412658"
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
   
 ## <a name="reporting-services-performance-objects"></a>Reporting Services 性能对象  
-SQL Server 2016 Reporting Services 或更高版本 (SSRS) 包括下列性能对象：  
+SQL Server 2016 Reporting Services 或更高版本 (SSRS) 包括以下性能对象：  
   
 -   用于监视报表服务器性能的**MSRS 2011 Web Service** 和 **MSRS 2011 SharePoint Mode Web Service** 。 这些性能对象包括一系列用于跟踪报表服务器处理的计数器，这些处理通常通过交互式报表查看操作启动。 只要 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 停止报表服务器 Web 服务，这些计数器就会重置。  
   
@@ -72,7 +72,7 @@ SQL Server 2016 Reporting Services 或更高版本 (SSRS) 包括下列性能对�
   
 |性能对象|说明|  
 |------------------------|-----------|  
-|**.NET CLR Data** 和 **.NET CLR Memory**|Web 门户使用[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]性能计数器。 有关详细信息，请参阅 MSDN 中的“提高 .NET 应用程序的性能和可伸缩性”。|  
+|**.NET CLR Data** 和 **.NET CLR Memory**|Web 门户使用 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 性能计数器。 有关详细信息，请参阅 MSDN 中的“提高 .NET 应用程序的性能和可伸缩性”。|  
 |**处理**|为 ReportingServicesService 实例添加 **Elapsed Time** 和 **ID Process** 性能计数器，以便按进程 ID 跟踪进程运行时间。|  
   
 ## <a name="sharepoint-events"></a>SharePoint 事件  

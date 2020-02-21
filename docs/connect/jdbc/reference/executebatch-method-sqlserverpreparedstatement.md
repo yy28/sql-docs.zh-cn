@@ -1,5 +1,5 @@
 ---
-title: executeBatch 方法 (SQLServerPreparedStatement) |Microsoft Docs
+title: executeBatch 方法 (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 8418167e-cbd2-464d-b118-73cdd76080ed
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 463106c14a63feddb68998affff8131933e81dfa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954890"
 ---
 # <a name="executebatch-method-sqlserverpreparedstatement"></a>executeBatch 方法 (SQLServerPreparedStatement)
@@ -37,12 +37,12 @@ public int[] executeBatch()
 ## <a name="return-value"></a>返回值  
  一个包含更新计数的整数数组。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
  java.sql.BatchUpdateException  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 executeBatch 方法是由 java.sql.Statement 接口中的 executeBatch 方法指定的。  
     
  此方法将重写 [SQLServerStatement.executeBatch](../../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md)。  

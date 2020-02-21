@@ -10,10 +10,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 5be6c645caadfc2b619e3fbd6d8f6b2a78ad2ff0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571580"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>在数据警报设计器中创建数据警报
@@ -40,7 +40,7 @@ ms.locfileid: "65571580"
   
      下图显示该 **“操作”** 菜单。  
   
-     ![从 SharePoint 库打开警报设计器](../reporting-services/media/rs-openalertdesigneriw.gif "Open Alert Designer from SharePoint library")  
+     ![从 SharePoint 库打开警报设计器](../reporting-services/media/rs-openalertdesigneriw.gif "从 SharePoint 库打开警报设计器")  
   
      数据警报设计器将打开，并且显示报表在表中生成的第一个数据馈送的前 100 行。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "65571580"
   
      根据所选列的数据类型，将列出不同的比较运算符。 如果该列具有日期数据类型，则在规则的阈值旁将显示一个日历图标。 您可以通过单击日历中的日期或者键入日期，输入数据。  
   
-     数据警报设计器提供了两种比较模式： **“值输入模式”** 和 **“字段选择模式”** 。 默认模式为 **“值输入模式”** 。 仅当处于 **“值输入模式”** 且正在使用 **“是”** 比较时，才可添加 OR 子句。  
+     数据警报设计器提供两种比较模式：“值输入模式”  和“字段选择模式”  。 默认模式为 **“值输入模式”** 。 仅当处于 **“值输入模式”** 且正在使用 **“是”** 比较时，才可添加 OR 子句。  
   
 9. 若要添加 OR 子句，请单击向下箭头，然后单击“值输入模式”  。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "65571580"
   
 21. 还可以在 **“说明”** 文本框中键入对警报消息的说明。  
   
-22. 单击 **“保存”** 。  
+22. 单击“ **保存**”。  
 
 ## <a name="see-also"></a>另请参阅
 

@@ -9,10 +9,10 @@ ms.assetid: a4c8700b-bef5-4440-a99c-bba5dcc46bfd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3898e4202d958c1d20d5436a143e80bb45c7490f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577785"
 ---
 # <a name="work-around-the-excel-2003-row-limitation"></a>Work Around the Excel 2003 Row Limitation
@@ -29,7 +29,7 @@ ms.locfileid: "65577785"
   
 2.  右键单击表中的“数据”行，然后单击“添加组” > “父组”，以添加外部表组。    
   
-     ![选择父组](../../reporting-services/report-builder/media/datarow-selectparentgroup.png "Select the Parent Group")  
+     ![选择父组](../../reporting-services/report-builder/media/datarow-selectparentgroup.png "选择父组")  
   
 3.  在 **“分组依据”** 表达式框中输入下面的公式，然后单击 **“确定”** 添加父组。  
   
@@ -41,19 +41,19 @@ ms.locfileid: "65577785"
   
 4.  删除组列：右键单击列标题，单击“删除列”，选择“仅删除列”，然后单击“确定”。     
   
-     ![删除组列](../../reporting-services/report-builder/media/groupcolumn-delete-updated.png "Delete a group column")  
+     ![删除组列](../../reporting-services/report-builder/media/groupcolumn-delete-updated.png "删除组列")  
   
 5.  右键单击 **“行组”** 部分中的 **“组 1”** ，然后单击 **“组属性”** 。  
   
-     ![查看组属性](../../reporting-services/report-builder/media/groupproperties-updated.png "View group properties")  
+     ![查看组属性](../../reporting-services/report-builder/media/groupproperties-updated.png "查看组属性")  
   
 6.  在 **“组属性”** 对话框的 **“排序”** 页面上，选择默认排序选项，然后单击 **“删除”** 。  
   
-     ![删除默认排序](../../reporting-services/report-builder/media/groupproperties-sorting-updated.png "Delete default sorting")  
+     ![删除默认排序](../../reporting-services/report-builder/media/groupproperties-sorting-updated.png "删除默认排序")  
   
 7.  在 **“分页符”** 页面上，单击 **“在组的各实例之间”** ，然后单击 **“确定”** 。  
   
-     ![设置分页符](../../reporting-services/report-builder/media/groupproperties-pagebreaks-updated.png "Set page breaks")  
+     ![设置分页符](../../reporting-services/report-builder/media/groupproperties-pagebreaks-updated.png "设置分页符")  
   
 8.  保存报表。 在将其导出至 Excel 时，其会导出成多个工作表，且每个工作表最多包含 65000 行。  
   

@@ -21,10 +21,10 @@ ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 29b453914dce3d371ded8f401fd4af0380a115b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140217"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
@@ -34,16 +34,16 @@ ms.locfileid: "67140217"
 
 -   **Web 门户：** 在“网站设置”  的“计划”  选项卡上，审阅“上次运行日期”、“下次运行日期”和“状态”字段中的值。 如果某个计划由于过期而不再运行，其“状态”字段中将会显示过期日期。 有关详细信息，请参阅 [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md)。
 
--   **SQL Server Management Studio:** 查看**报表**给定共享计划的页。 此页列出了使用该共享计划的所有报表和共享数据集。 有关详细信息，请参阅 [SQL Server Management Studio 中的 Reporting Services](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)。
+-   **SQL Server Management Studio：** 查看给定共享计划的“报表”  页。 此页列出了使用该共享计划的所有报表和共享数据集。 有关详细信息，请参阅 [SQL Server Management Studio 中的 Reporting Services](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)。
 
--  **日志：** 查看报表执行日志文件或跟踪日志来确定报表是否已按照计划指定的时间运行。 有关详细信息，请参阅 [Reporting Services 日志文件和源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)。
+-  **日志**：查看报表执行日志文件或跟踪日志来确定报表是否已按照计划指定的时间运行。 有关详细信息，请参阅 [Reporting Services 日志文件和源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)。
 
 ## <a name="when-you-delete-a-shared-schedule"></a>若要删除共享的计划
 必须使用 Web 门户中的“计划”页或 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中的“共享计划”文件夹来手动删除共享计划。 如果您删除使用中的共享计划，则报表特定计划将替换对该计划的所有引用。
 
 如果删除由多个报表和订阅使用的共享计划，报表服务器将为以前使用该共享计划的每个报表和订阅都创建一个计划。 每个新计划都将包含已在共享计划中指定的日期、时间和重复执行模式。 请注意， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不提供对于各个计划的集中管理。 如果删除共享计划，则需要为各项单独维护计划信息。
 
-**注意：**  如果不确定是否用过共享计划，请考虑在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] （而不是 Web 门户）中删除共享计划。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 提供的共享计划管理功能与报表管理器相同，不过它还提供了可以显示使用该计划的各个报表名称的“报表”页。
+**注意：** 如果不确定是否用过共享计划，请考虑在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]（而不是 Web 门户）中删除共享计划。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 提供的共享计划管理功能与报表管理器相同，不过它还提供了可以显示使用该计划的各个报表名称的“报表”页。
 
  删除计划和使计划过期是有区别的。 过期日期用于停止计划，但不会删除计划。 因为计划用于自动执行许多功能，所以从不会自动进行删除。 通过过期计划，报表服务器管理员可以查明某个自动执行的过程突然停止的原因。 如果没有过期计划，报表服务器管理员可能会错误地诊断问题，或花费不必要的时间，对运行完全正常的过程进行故障排除。
 
@@ -59,25 +59,25 @@ ms.locfileid: "67140217"
 
  如果您正在修改某个共享计划，可以在进行更改前将其暂停。 当您恢复该计划时，更改立即生效。
 
-1. 在 Web 门户中，选择工具栏中的“设置 ![ssrs_portal_settings_gear](../../reporting-services/subscriptions/media/ssrs-portal-settings-gear.png)”  。  
+1. 在 Web 门户中，选择工具栏中的“设置”  ![ssrs_portal_settings_gear](../../reporting-services/subscriptions/media/ssrs-portal-settings-gear.png)。  
 
    >[!NOTE]  
    >如果“设置”  不可用，说明你无权访问网站设置。  
 
-1. 选择**站点设置**从下拉菜单。
+1. 从下拉菜单中选择“站点设置”  。
 1. 选择 **“计划”** 选项卡。
-1. 选择 **+ 新计划**。 （若要修改现有计划，请选择计划的名称。）
+1. 选择“+ 新建计划”  。 （若要修改现有计划，请选择计划的名称。）
 1. 为计划键入说明性名称。
 1. 选择 **“时”** 、 **“天”** 、 **“周”** 或 **“月”** 。 单击 **“一次”** 可以创建仅运行一次的计划。 指定计划的上述基本设置之后，页面上将会显示其他选项。
 1. 根据需要，可以选择开始计划的日期。 默认值为当天。 选择以后的某一天可以推迟计划的开始时间。
 1. 根据需要，可以选择结束计划的日期。 计划将在此日期停止运行，但不会删除。
-1. 选择要运行的计划的时间。
+1. 选择计划运行的时间。
 1. 选择“确定”  。
 
 ### <a name="to-delete-a-shared-schedule-web-portal"></a>删除共享的计划的具体步骤（Web 门户）
 
-1. 在 Web 门户中，选择工具栏中的“设置 ![ssrs_portal_settings_gear](../../reporting-services/subscriptions/media/ssrs-portal-settings-gear.png)”  。
-2. 选择**站点设置**从下拉菜单。
+1. 在 Web 门户中，选择工具栏中的“设置”  ![ssrs_portal_settings_gear](../../reporting-services/subscriptions/media/ssrs-portal-settings-gear.png)。
+2. 从下拉菜单中选择“站点设置”  。
 3. 选择 **“计划”** 选项卡。
 4. 选中要删除的共享的计划旁边的复选框，再选择“删除”  。
 
@@ -131,7 +131,7 @@ ms.locfileid: "67140217"
 6.  选择频率。 根据选择的频率，该页中显示的计划选项可能会发生更改以支持该频率（例如，如果选择“月”，该页中显示每个月的名称  ）。
 7.  定义计划。 在一个计划中无法支持所有形式的计划组合。
 8.  设置开始和结束日期。
-9. 单击“确定”  。
+9. 单击“确定”。 
 
 ### <a name="delete-shared-schedules-sharepoint-mode"></a>删除共享计划（SharePoint 模式）
  所有计划都必须以手动方式删除，无论是共享计划还是报表特定计划。 如果删除某个正在使用中的共享计划，则对该计划的所有引用将替换为未指定的自定义计划（也就是说，不包含日期或时间信息的自定义计划）。

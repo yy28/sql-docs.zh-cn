@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_errors |Microsoft Docs
+title: sqlsrv_errors | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: d1fcffec-f34f-46de-9a0e-343f3b5dbae2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 08879880e93307a496969b79c3aa05144f7aef62
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015059"
 ---
-# <a name="sqlsrverrors"></a>sqlsrv_errors
+# <a name="sqlsrv_errors"></a>sqlsrv_errors
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 返回有关执行的最后 sqlsrv 操作的扩展错误和/或警告信息  。  
@@ -54,10 +54,10 @@ sqlsrv_configure("WarningsReturnAsErrors", 1);
 sqlsrv_errors( [int $errorsAndOrWarnings] )  
 ```  
   
-#### <a name="parameters"></a>Parameters  
-$errorsAndOrWarnings [可选]：预定义常量  。 此参数可以采用下表中所列的值之一：  
+#### <a name="parameters"></a>parameters  
+$errorsAndOrWarnings  [可选]：预定义常量。 此参数可以采用下表中所列的值之一：  
   
-|ReplTest1|描述|  
+|值|说明|  
 |---------|---------------|  
 |SQLSRV_ERR_ALL|将返回在上次调用 **sqlsrv** 函数时生成的错误和警告。|  
 |SQLSRV_ERR_ERRORS|将返回上次调用 **sqlsrv** 函数时生成的错误。|  
@@ -68,11 +68,11 @@ $errorsAndOrWarnings [可选]：预定义常量  。 此参数可以采用下表
 ## <a name="return-value"></a>返回值  
 数组的 **array** 或 **null**。 返回的 array 中的每个 array 都包含三个键值对   。 下表列出了每个键及其描述：  
   
-|Key|描述|  
+|密钥|说明|  
 |-------|---------------|  
 |SQLSTATE|对于来源于 ODBC 驱动程序的错误，为 ODBC 返回的 SQLSTATE。 有关 ODBC 的 SQLSTATE 值的信息，请参阅 [ODBC 错误代码](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)。<br /><br />对于来源于 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的错误，为 IMSSP 的 SQLSTATE。<br /><br />对于来源于 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的警告，为 01SSP 的 SQLSTATE。|  
 |代码|对于来源于 SQL Server 的错误，为本机 SQL Server 错误代码。<br /><br />对于来源于 ODBC 驱动程序的错误，为 ODBC 返回的错误代码。<br /><br />对于来源于 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的错误，为 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 错误代码。 有关详细信息，请参阅 [Handling Errors and Warnings](../../connect/php/handling-errors-and-warnings.md)。|  
-|message|错误的说明。|  
+|message|对错误的说明。|  
   
 数组值还可以使用数值键 0、1 和 2 访问。 如果未发生任何错误或警告，将返回 **null** 。  
   

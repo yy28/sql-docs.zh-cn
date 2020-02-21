@@ -16,10 +16,10 @@ ms.assetid: 9e1ee42d-b388-4929-89c7-8741b956c3be
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 83aa9fb906fc71b1dfb7fd3d036c119d9b4e41e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580988"
 ---
 # <a name="configurationsetting-method---setservicestate"></a>ConfigurationSetting 方法 - SetServiceState
@@ -38,7 +38,7 @@ public void SetServiceState(Boolean EnableWindowsService,
     Boolean EnableWebService, Boolean EnableReportManager, out Int32 HRESULT);  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>parameters  
  *EnableWindowsService*  
  指示 Windows 服务状态的 **Boolean** 值。 如果值为 **true** ，则会启动报表服务器 Windows 服务；如果值为 **false** ，则会停止该 Windows 服务。  
   
@@ -57,10 +57,10 @@ public void SetServiceState(Boolean EnableWindowsService,
 ## <a name="return-value"></a>返回值  
  返回 *HRESULT* ，指示方法调用是成功还是失败。 值 0 指示方法调用已成功。 非零值指示已发生错误。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 ## <a name="requirements"></a>要求  
- **命名空间:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

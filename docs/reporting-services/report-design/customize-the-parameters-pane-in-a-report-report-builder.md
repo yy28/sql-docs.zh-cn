@@ -9,10 +9,10 @@ ms.assetid: 4ce9e8d5-911a-4422-928f-a8d005b79fc6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: dc6445b64e323c3e5f8e5b0257d8573ec10d3af8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63218948"
 ---
 # <a name="customize-the-parameters-pane-in-a-report-report-builder"></a>Customize the Parameters Pane in a Report (Report Builder)
@@ -24,7 +24,7 @@ ms.locfileid: "63218948"
   
 1.  在“视图”  选项卡上，选中“参数”  复选框以显示参数窗格。  
   
-     ![从“视图”选项卡访问“参数”窗格](../../reporting-services/report-design/media/ssrs-customparameter-accessparameterpanedesignmode.png "Access parameters pane from View tab")  
+     ![从“视图”选项卡访问“参数”窗格](../../reporting-services/report-design/media/ssrs-customparameter-accessparameterpanedesignmode.png "从“视图”选项卡访问“参数”窗格")  
   
      窗格将显示在设计图面的顶部。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "63218948"
   
     -   右键单击参数窗格中的空白单元格，然后单击“添加参数”  。  
   
-         ![从“参数”窗格中添加新参数](../../reporting-services/report-design/media/ssrs-customizeparameter-addnewparameter.png "Add new parameter from parameters pane")  
+         ![从“参数”窗格添加新参数](../../reporting-services/report-design/media/ssrs-customizeparameter-addnewparameter.png "从“参数”窗格添加新参数")  
   
     -   在“报表数据”窗格中，右键单击“参数”  ，然后单击“添加参数”   。  
   
@@ -44,13 +44,13 @@ ms.locfileid: "63218948"
   
     -   右键单击参数窗格中的参数，然后单击“参数属性”  。  
   
-         ![从“参数”窗格访问参数属性](../../reporting-services/report-design/media/ssrs-customizeparameter-accessparameterproperties-composite.png "Access parameter properties from the parameters pane")  
+         ![从“参数”窗格访问参数属性](../../reporting-services/report-design/media/ssrs-customizeparameter-accessparameterproperties-composite.png "从“参数”窗格访问参数属性")  
   
     -   右键单击“报表数据”窗格中的参数，然后单击“参数属性”   。  
   
 5.  若要向窗格添加新的列和行，或删除现有的行和列，请右键单击参数窗格中的任意位置，然后单击所示菜单中的命令。  
   
-     ![将列和行添加到“参数”窗格](../../reporting-services/report-design/media/ssrs-customparameter-addcolumnsrows.png "Add columns and rows to the parameters pane")  
+     ![将列和行添加到“参数”窗格](../../reporting-services/report-design/media/ssrs-customparameter-addcolumnsrows.png "将列和行添加到“参数”窗格")  
   
     > [!IMPORTANT]  
     >  删除包含参数的列或行时，将从报表中删除这些参数。  
@@ -59,7 +59,7 @@ ms.locfileid: "63218948"
   
     -   右键单击参数窗格中的参数，然后单击“删除”   。  
   
-         ![从“参数”窗格中删除参数](../../reporting-services/report-design/media/ssrs-customparameter-deleteparameter.png "Delete parameters from the parameters pane")  
+         ![从“参数”窗格删除参数](../../reporting-services/report-design/media/ssrs-customparameter-deleteparameter.png "从“参数”窗格删除参数")  
   
     -   右键单击“报表数据”窗格中的参数，然后单击“删除”   。  
   

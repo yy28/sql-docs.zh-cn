@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 921bb8bf3e0b601a567e54bf326c5b35824cc848
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: fe6f27382bf81e245035f0f242134993845ca07a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67037956"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190720"
 ---
 # <a name="report-datasets-ssrs"></a>报表数据集 (SSRS)
   若要向报表中添加数据，您需要创建数据集。 每个数据集都表示通过对数据源运行查询命令而获得的结果集。 结果集中的列是字段集合。 结果集中的行是数据。 数据集不包含实际数据。 数据集而是包含从数据源检索一组特定的数据所需的信息。  
@@ -36,7 +36,7 @@ ms.locfileid: "67037956"
   
  您还可以通过添加包括其所依赖的数据集的报表部件，向报表添加数据集。 [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- 若要了解如何创建可显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库数据的报表，请参阅[教程：创建基本表报表（报表生成器）](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。 若要生成包含自身数据的报表，请参阅[教程：脱机创建快速图表报表（报表生成器）](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)。  
+ 若要了解如何创建显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中数据的报表，请参阅[教程：生成基本表报表（报表生成器）](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。 若要生成包含自己数据的报表，请参阅[教程：脱机生成快速图表报表（报表生成器）](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -92,7 +92,7 @@ ms.locfileid: "67037956"
   
  在查询设计器中，可以运行查询以查看示例数据并验证查询命令语法。 结果集中的列名将成为您在“报表数据”窗格中看到的字段名称。 结果集必须是单组行和列，在其中，为每行数据存在相同数目的值。 不支持来自单个查询的多个结果集。 不支持不具有固定数目的列并且可为每一行生成不同数目的数据值的不规则层次结构。  
   
- 若要运行查询，您必须具有设计时凭据。 有关详细信息，请参阅[指定凭据和报表数据源的连接信息](specify-credential-and-connection-information-for-report-data-sources.md)并[数据连接、 数据源和连接字符串&#40;报表生成器和 SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ 若要运行查询，您必须具有设计时凭据。 有关详细信息，请参阅[指定报表数据源的凭据和连接信息](specify-credential-and-connection-information-for-report-data-sources.md)和[创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
  数据扩展插件和外部数据源之间的通信由数据提供程序处理。 对查询命令语法的支持、查询参数和结果集中值的数据类型由各数据访问接口确定。 有关详细信息，请参阅与特定类型数据扩展插件和[查询设计工具 &#40;SSRS&#41;](query-design-tools-ssrs.md) 相关的主题。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "67037956"
 ##  <a name="Section"></a> 本节内容  
  [报表生成器中的报表部件和数据集](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)  
   
- [报表生成器中的数据连接、数据源和连接字符串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [创建数据连接字符串 - 报表生成器和 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
  [为报表数据源指定凭据和连接信息](specify-credential-and-connection-information-for-report-data-sources.md)  
   

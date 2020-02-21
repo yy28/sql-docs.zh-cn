@@ -1,6 +1,6 @@
 ---
 title: SQL Server 中的身份验证
-description: 介绍 SQL Server 中的登录名和身份验证，并提供指向其他资源的链接。
+description: 介绍了 SQL Server 登录和身份验证，并收录了其他资源的链接。
 ms.date: 09/26/2019
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: eb528eb1045788469b0eb31491fd654997831468
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 115b4810fbe890862dfb63e278a583b3e12dbf54
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452314"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75250885"
 ---
 # <a name="authentication-in-sql-server"></a>SQL Server 中的身份验证
 
@@ -25,7 +25,7 @@ ms.locfileid: "72452314"
 
 SQL Server 支持两种身份验证模式，即 Windows 身份验证模式和混合模式。  
   
-- Windows 身份验证是默认模式（通常称为集成安全），因为此 SQL Server 安全模型与 Windows 紧密集成。 可信任特定的 Windows 用户和组帐户登录到 SQL Server。 已经过身份验证的 Windows 用户无需提供其他凭据。  
+- Windows 身份验证是默认模式（通常称为集成安全），因为此 SQL Server 安全模型与 Windows 紧密集成。 特定的 Windows 用户和组帐户可信任，可以登录 SQL Server。 已经过身份验证的 Windows 用户无需提供其他凭据。  
   
 - 混合模式支持由 Windows 和 SQL Server 进行身份验证。 用户名和密码保留在 SQL Server 内。  
   
@@ -39,24 +39,24 @@ SQL Server 支持两种身份验证模式，即 Windows 身份验证模式和混
 ```  
   
 > [!NOTE]
-> 登录名不同于数据库用户。 您必须通过单独的操作将登录名或 Windows 组映射到数据库用户或角色。 然后向用户或角色授予访问数据库对象的权限。  
+> 登录名不同于数据库用户。 必须在单独的操作中将登录名或 Windows 组映射到数据库用户或角色。 然后，向用户或角色授予对数据库对象的访问权限。  
   
 ## <a name="authentication-scenarios"></a>身份验证方案  
-通常，在下列情况下，Windows 身份验证是最佳选择：  
+在以下情况下，Windows 身份验证通常是最佳选择：  
   
-- 存在域控制器。  
+- 有域控制器。  
   
 - 应用程序和数据库位于同一台计算机上。  
   
 - 你正在使用 SQL Server Express 或 LocalDB 的实例。  
   
-SQL Server 登录名通常用于以下情况：  
+SQL Server 登录通常用于以下情况：  
   
-- 如果有工作组。  
+- 有工作组。  
   
-- 用户从不受信任的域进行连接。  
+- 用户从不受信任的其他域连接。  
   
-- Internet 应用程序，如 ASP.NET。  
+- Internet 应用程序（如 ASP.NET）。  
   
 > [!NOTE]
 > 指定 Windows 身份验证不会禁用 SQL Server 登录。 使用 ALTER LOGIN DISABLE Transact-SQL 语句会禁用具有高级权限的 SQL Server 登录。  
@@ -66,7 +66,7 @@ SQL Server 支持三种登录类型：
   
 - 本地 Windows 用户帐户或受信任的域帐户。 SQL Server 依靠 Windows 来对 Windows 用户帐户进行身份验证。  
   
-- Windows 组。 授予对 Windows 组的访问权限将授予对作为该组成员的所有 Windows 用户登录名的访问权限。  
+- Windows 组。 向 Windows 组授予访问权限会向作为组成员的所有 Windows 用户登录名授予访问权限。  
   
 - SQL Server 登录。 SQL Server 将用户名和密码的哈希都存储在 master 数据库中，使用内部身份验证方法来验证登录尝试。  
   
@@ -77,15 +77,15 @@ SQL Server 支持三种登录类型：
 如果必须使用混合模式身份验证，则必须创建 SQL Server 登录名，这些登录名存储在 SQL Server 中。 然后，必须在运行时提供 SQL Server 用户名和密码。  
   
 > [!IMPORTANT]
-> 使用名为 `sa` 的 SQL Server 登录名安装 SQL Server （"系统管理员" 的缩写形式）。 为 `sa` 登录名分配一个强密码，但不要在应用程序中使用 `sa` 登录名。 @No__t_0 登录名映射到 `sysadmin` 固定服务器角色，该角色在整个服务器上具有不可撤销的管理凭据。 如果攻击者以系统管理员的身份获得访问权限，则可能会损坏。 默认情况下，Windows `BUILTIN\Administrators` 组（本地管理员组）的所有成员均为 `sysadmin` 角色的成员，但可以从该角色中移除这些成员。  
+> SQL Server 安装有名为 `sa`（“系统管理员”的首字母缩写）的 SQL Server 登录名。 请向 `sa` 登录名分配强密码，并且不在应用程序中使用 `sa` 登录名。 `sa` 登录名映射到 `sysadmin` 固定服务器角色，此角色在整个服务器上具有不可撤销的管理凭据。 如果攻击者以系统管理员身份获得访问权限，潜在损害是无限的。 默认情况下，Windows `BUILTIN\Administrators` 组（本地管理员组）的所有成员均为 `sysadmin` 角色的成员，但可以从该角色中移除这些成员。  
   
 > [!IMPORTANT]
-> 连接来自用户输入的连接字符串可能会导致连接字符串注入攻击。 使用 <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder> 在运行时创建语法有效的连接字符串。 
+> 连接用户输入中的连接字符串可能会让你易受到连接字符串注入攻击。 请使用 <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder> 在运行时创建语法有效的连接字符串。 
   
 ## <a name="external-resources"></a>外部资源  
-有关详细信息，请参阅下列资源。  
+有关详细信息，请参阅以下资源。  
   
-|资源|描述|  
+|资源|说明|  
 |--------------|-----------------|  
 |[主体](../../../relational-databases/security/authentication-access/principals-database-engine.md)|描述 SQL Server 中的登录名和其他安全主体。|  
   

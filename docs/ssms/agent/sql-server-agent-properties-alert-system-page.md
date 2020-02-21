@@ -1,10 +1,9 @@
 ---
-title: SQL Server 代理属性（“警报系统”页）| Microsoft Docs
-ms.custom: ''
+title: SQL Server 代理属性（“警报系统”页）
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,13 +11,15 @@ f1_keywords:
 ms.assetid: 3e6d3bfd-20ee-4593-86cc-f65b1c08c69d
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 92db1bf98b3a50aa619333ba0107034d24106855
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 5b870368136055ea2df6e5473c1b33640cea57b8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265311"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75234543"
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>SQL Server 代理属性（“警报系统”页）
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "68265311"
 > [!IMPORTANT]  
 > [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-使用此页可以查看和修改由 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报所发送的消息的设置。  
+使用此页，可以查看和修改 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报发送的消息的设置。  
   
 ## <a name="options"></a>选项  
 **邮件会话**  
@@ -59,7 +60,7 @@ ms.locfileid: "68265311"
 **寻呼程序**  
 在前缀和后缀之间包括邮件的电子邮件地址。  
   
-**Suffix**  
+**后缀**  
 对于要发送给寻呼程序的邮件，键入寻呼系统要求在“收件人”  行末尾显示的任何固定文本。  
   
 **“抄送”行**  
@@ -71,7 +72,7 @@ ms.locfileid: "68265311"
 **寻呼程序**  
 在前缀和后缀之间包括邮件的电子邮件地址。  
   
-**Suffix**  
+**后缀**  
 对于要发送给寻呼程序的邮件，键入寻呼系统要求在“抄送”  行末尾显示的任何固定文本。  
   
 **主题**  
@@ -80,7 +81,7 @@ ms.locfileid: "68265311"
 **Prefix**  
 对于要发送给寻呼程序的邮件，键入寻呼系统要求在“主题”  行开头显示的任何固定文本。  
   
-**Suffix**  
+**后缀**  
 对于要发送给寻呼程序的邮件，键入寻呼系统要求在“主题”  行末尾显示的任何固定文本。  
   
 **在通知消息中包含电子邮件正文**  

@@ -26,16 +26,16 @@ ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3306bc4f093a3f05c3caf37d212a8e585ac201c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581667"
 ---
 # <a name="chart-legend---formatting-report-builder"></a>图表图例 - 设置格式（报表生成器）
   图表图例包含对图表中每个类别的说明。 图例始终包含一个或多个图例项，每个图例项包含一个表示序列的彩色框以及一个描述该序列的文本字符串，如下图所示。  
   
- ![图表图例示意图](../../reporting-services/report-design/media/rs-legenddiagram.gif "Diagram of a chart legend")  
+ ![图表图例关系图](../../reporting-services/report-design/media/rs-legenddiagram.gif "图表图例关系图")  
   
  对于除形状图以外的图表，图例项连接到该图表上的单个序列；对于形状图而言，图例连接到各个数据点。 图表会自动基于根据数据生成的序列向图例中添加项。  
   

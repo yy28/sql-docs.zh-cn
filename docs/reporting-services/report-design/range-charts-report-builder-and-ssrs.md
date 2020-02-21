@@ -9,10 +9,10 @@ ms.assetid: 48e351d3-ac5b-4eda-a4bd-32a0de206a30
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e28daac5af66601d8a48b4fc793d6e6c5d178ca0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576467"
 ---
 # <a name="range-charts-report-builder-and-ssrs"></a>范围图（报表生成器和 SSRS）
@@ -20,7 +20,7 @@ ms.locfileid: "65576467"
   
  下图显示了具有三个序列的平面范围图。  
   
- ![全距图](../../reporting-services/report-design/media/rs-rangechart.gif "Range chart")  
+ ![范围图](../../reporting-services/report-design/media/rs-rangechart.gif "范围图")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

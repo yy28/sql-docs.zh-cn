@@ -14,16 +14,16 @@ ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b385e04cf2efa103dba4a66d4e794a7984814fb4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140269"
 ---
 # <a name="create-modify-and-delete-data-driven-subscriptions"></a>创建、修改和删除数据驱动订阅
   数据驱动订阅是一种基于查询的订阅，可以在运行时获取用于处理该订阅的数据值。 当触发订阅时，会处理一个查询以获取有关收件人、报表传递选项、呈现格式和参数设置的最新信息。 将查询结果与订阅定义相结合，以创建动态订阅，该订阅使用了已在雇员数据库、客户数据库或任何其他数据库（包含可用作订阅服务器数据的信息）中维护的数据。  
   
- 若要创建新的数据驱动订阅或修改现有的订阅，使用**管理** > **订阅**web 门户中的页。 **订阅**页面将引导你完成创建或修改订阅的每个步骤。 若要访问创建后的订阅，请使用“我的订阅”  页或报表的“订阅”列表。 若要了解如何创建数据驱动订阅，请参阅[创建数据驱动订阅（SSRS 教程）](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)。  
+ 若要创建新的数据驱动订阅或修改现有订阅，请使用 Web 门户中的“管理”   > “订阅”  页。 这些“订阅”  页面将引导你完成创建或修改订阅的每一个步骤。 若要访问创建后的订阅，请使用“我的订阅”  页或报表的“订阅”列表。 若要了解如何创建数据驱动订阅，请参阅[创建数据驱动订阅（SSRS 教程）](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)。  
   
  本文内容：  
   
@@ -36,9 +36,9 @@ ms.locfileid: "67140269"
 -   [运行订阅](#bkmk_run_subscription)  
   
 ##  <a name="bkmk_manage_and_delete"></a> 管理和删除数据驱动订阅  
- 无法停止正在进行中的数据驱动订阅，或通过 web 门户中删除。 因此，使用共享计划触发数据驱动订阅是有利的。 在这种情况下，如果要暂时禁止处理某个订阅，只需暂停触发该订阅的计划即可。 有关详细信息，请参阅 [创建和管理本机模式报表服务器的订阅](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)。  
+ 不能通过 Web 门户来停止或删除正在进行的数据驱动订阅。 因此，使用共享计划触发数据驱动订阅是有利的。 在这种情况下，如果要暂时禁止处理某个订阅，只需暂停触发该订阅的计划即可。 有关详细信息，请参阅 [创建和管理本机模式报表服务器的订阅](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)。  
   
- 若要删除数据驱动订阅，请选择该报表旁边的复选框上**订阅**页上，并选择**删除**。  
+ 若要删除数据驱动订阅，请选中“订阅”  页上报表旁边的复选框，然后选择“删除”  。  
   
  有关如何取消数据驱动订阅的说明，请参阅 [管理运行中的进程](../../reporting-services/subscriptions/manage-a-running-process.md)。  
   
@@ -47,11 +47,11 @@ ms.locfileid: "67140269"
   
 ### <a name="to-create-a-data-driven-subscription-native-mode"></a>创建数据驱动订阅（本机模式）  
   
-1. 在 web 门户中，导航到包含报表的文件夹，右键单击报表，并选择**管理**从下拉菜单。  
+1. 在 Web 门户中，导航到包含报表的文件夹，右键单击该报表，然后从下拉菜单中选择“管理”  。  
   
 2. 选择 **“订阅”** 选项卡。  
   
-3. 选择 **+ 新订阅**上**订阅**页。  
+3. 在“订阅”  页上选择“+ 新建订阅”  。  
   
 ### <a name="to-create-a-data-driven-subscription-sharepoint-mode"></a>创建数据驱动订阅（SharePoint 模式）  
   
@@ -61,11 +61,11 @@ ms.locfileid: "67140269"
   
 ### <a name="to-modify-an-existing-data-driven-subscription-native-mode"></a>修改现有的数据驱动订阅（本机模式）  
   
-1. 在 web 门户中，导航到包含报表的文件夹，右键单击报表，并选择**管理**从下拉菜单。  
+1. 在 Web 门户中，导航到包含报表的文件夹，右键单击该报表，然后从下拉菜单中选择“管理”  。  
   
 2. 选择 **“订阅”** 选项卡。  
   
-3. 选择你想要修改，并选择的订阅旁边的复选框**编辑**。 数据驱动订阅都将具有值"数据驱动"**类型**列。  
+3. 选中要修改的订阅旁边的复选框，然后选择“编辑”  。 数据驱动订阅的“类型”  列中的值将为“数据驱动”。  
   
 ### <a name="to-modify-an-existing-data-driven-subscription-sharepoint-mode"></a>修改现有的数据驱动订阅（SharePoint 模式）  
   
@@ -78,7 +78,7 @@ ms.locfileid: "67140269"
   
   创建数据驱动订阅之前，请确保满足下列要求：  
   
--   **报表要求**。 报表必须使用已存储的凭据或不使用任何凭据在运行时检索数据。 不能订阅使用模拟凭据或委托凭据连接至外部数据源的报表；处理订阅时将无法使用创建或拥有订阅的用户的凭据。 已存储的凭据可以是 Windows 帐户或数据库用户帐户。 有关详细信息，请参阅 [为报表数据源指定凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)。  
+-   **报表要求**。 报表必须使用已存储的凭据或不使用任何凭据在运行时检索数据。 不能订阅使用模拟凭据或委托凭据连接至外部数据源的报表；处理订阅时将无法使用创建或拥有订阅的用户的凭据。 已存储的凭据可以是 Windows 帐户或数据库用户帐户。 有关详细信息，请参阅[为报表数据源指定凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
      无法订阅使用了作为数据源的模型或包含模型项安全设置的模型的报表生成器报表。 此限制仅适用于使用模型项安全性的报表。  
   
@@ -103,5 +103,5 @@ ms.locfileid: "67140269"
  [订阅和传递 (Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [报表服务器的 Web 门户（SSRS 本机模式）](../../reporting-services/web-portal-ssrs-native-mode.md)   
  [创建和管理本机模式报表服务器的订阅](create-and-manage-subscriptions-for-native-mode-report-servers.md)   
- [使用订阅 （web 门户）](../../reporting-services/working-with-subscriptions-web-portal.md) [使用我的订阅 （本机模式报表服务器）](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
+ [使用订阅（Web 门户）](../../reporting-services/working-with-subscriptions-web-portal.md)[使用我的订阅（本机模式报表服务器）](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
  

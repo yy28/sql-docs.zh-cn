@@ -9,10 +9,10 @@ ms.assetid: 2f69dcd3-cd6d-45a9-a62a-ba6f5f3179d8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ad06a5a76344348c71838873edcc490c75b7b2e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62651273"
 ---
 # <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>第 3 课：使用报表向导设计父报表
@@ -28,11 +28,11 @@ ms.locfileid: "62651273"
   
     随后将启动报表向导。  
   
-4.  在“数据集属性”页上的“数据源”框中，选择在[第 2 课：定义用于父报表的数据连接和数据表](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)中创建的 DataSet1    。  
+4.  在“数据集属性”  页上的“数据源”  框中，选择在以下课程中创建的 DataSet1：  [第 2 课：定义用于父报表的数据连接和数据表](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)。  
   
     随后将自动用你在上面创建的 DataTable 更新“可用数据集”框   。  
   
-5.  选择“下一步”  。  
+5.  选择“**下一页**”。  
   
 6.  在“排列字段”页中，执行以下操作  ：  
   
@@ -47,7 +47,7 @@ ms.locfileid: "62651273"
 8.  保存 .rdlc 文件。  
   
 ## <a name="next-task"></a>下一个任务  
-您已成功地使用报表向导设计了父报表。 接下来，将创建用于子报表的数据连接和数据表。 请参阅 [第 4 课：定义用于子报表的数据连接和数据表](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)。  
+您已成功地使用报表向导设计了父报表。 接下来，将创建用于子报表的数据连接和数据表。 请参阅[第 4 课：定义用于子报表的数据连接和数据表](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)。  
   
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'PDOStatement:: setFetchMode |Microsoft Docs'
+title: PDOStatement::setFetchMode | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: f132b2af-0433-4fbe-b03f-69a7d631093a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f5a9065123bbacc828c7949aabcb44de6136f62c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67935985"
 ---
 # <a name="pdostatementsetfetchmode"></a>PDOStatement::setFetchMode
@@ -29,13 +29,13 @@ ms.locfileid: "67935985"
 bool PDOStatement::setFetchMode( $mode );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
-$mode：可有效传递给 [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md) 的任何参数  。  
+#### <a name="parameters"></a>parameters  
+$*mode*：可传递给 [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md) 的任何有效参数。  
   
 ## <a name="return-value"></a>返回值  
 如果成功，则为 True；否则为 False。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 2.0 中添加了对 PDO 的支持。  
   
 ## <a name="example"></a>示例  

@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_fetch_object |Microsoft Docs
+title: sqlsrv_fetch_object | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 36c0ae99e38da83e3d534423b8a09ba9e198ce3e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992737"
 ---
-# <a name="sqlsrvfetchobject"></a>sqlsrv_fetch_object
+# <a name="sqlsrv_fetch_object"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 将下一行数据检索为 PHP 对象。  
@@ -36,14 +36,14 @@ ms.locfileid: "67992737"
 sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, row[, ]offset]]])  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
 *$stmt*：对应于已执行语句的语句资源。  
   
-$className [可选]：指定要实例化的类名称的字符串  。 如果不指定 *$className* 参数的值，将实例化 PHP **stdClass** 的实例。  
+*$className* [可选]：指定要实例化的类名称的字符串。 如果不指定 *$className* 参数的值，将实例化 PHP **stdClass** 的实例。  
   
-$ctorParams [可选]：含有传递到通过 $className 参数指定的类构造函数的值的阵列   。 如果指定类的构造函数接受参数值，在调用 *$ctorParams* object **sqlsrv_fetch_object**参数。  
+*$ctorParams* [可选]：含有传递到通过 $className  参数指定的类构造函数的值的阵列。 如果指定类的构造函数接受参数值，在调用 *$ctorParams* object **sqlsrv_fetch_object**参数。  
   
-row [可选]：以下某个值，用于指定要在使用可滚动游标的结果集中访问的行  。 （如果指定了 row，则必须显式指定 $className 和 $ctorParams，即使必须将 $className 和 $ctorParams 指定为 null      。）  
+*row* [可选]：以下值之一，用于指定要在使用可滚动游标的结果集中访问的行。 （如果指定了 row，则必须显式指定 $className 和 $ctorParams，即使必须将 $className 和 $ctorParams 指定为 null      。）  
   
 -   SQLSRV_SCROLL_NEXT  
   
@@ -59,14 +59,14 @@ row [可选]：以下某个值，用于指定要在使用可滚动游标的结�
   
 有关这些值的详细信息，请参阅 [指定游标类型和选择行](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)。  
   
-offset [可选]：结合使用 SQLSRV_SCROLL_ABSOLUTE 和 SQLSRV_SCROLL_RELATIVE 以指定要检索的行  。 结果集中的第一个记录为 0。  
+*offset* [可选]：结合使用 SQLSRV_SCROLL_ABSOLUTE 和 SQLSRV_SCROLL_RELATIVE 以指定要检索的行。 结果集中的第一个记录为 0。  
   
 ## <a name="return-value"></a>返回值  
 具有对应于结果集字段名称的属性的 PHP 对象。 使用相应的结果集字段值来填充属性值。 如果使用可选 *$className* 参数指定的类不存在，或如果指定的语句未关联任何活动的结果集，将返回 **False** 。 如果没有更多要检索的行，将返回 **NULL** 。  
   
 返回对象中值的数据类型将是默认 PHP 数据类型。 有关默认 PHP 数据类型的信息，请参阅 [Default PHP Data Types](../../connect/php/default-php-data-types.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 如果使用可选 *$className* 参数指定类名，将实例化此类类型的对象。 如果该类所具有的属性名称与结果集字段名称相匹配，则相应的结果集值将应用到该属性。 如果结果集字段名称不匹配类属性，则具有结果集字段名称的属性将添加到该对象，并该结果集值将应用到该属性。  
   
 使用 *$className* 参数指定某个类时，应用以下规则：  
@@ -230,7 +230,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-sqlsrv_fetch_object 函数将始终根据[默认 PHP 数据类型](../../connect/php/default-php-data-types.md)返回数据  。 有关如何指定 PHP 数据类型的信息，请参阅 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)。  
+sqlsrv_fetch_object 函数将始终根据[默认 PHP 数据类型](../../connect/php/default-php-data-types.md)返回数据  。 有关如何指定 PHP 数据类型的信息，请参阅[如何：指定 PHP 数据类型](../../connect/php/how-to-specify-php-data-types.md)。  
   
 如果返回不含名称的字段， **sqlsrv_fetch_object** 会丢弃该字段值并发出一条警告。 例如，考虑可将某个值插入数据库表并检索服务器生成的主键的 Transact-SQL 语句：  
   

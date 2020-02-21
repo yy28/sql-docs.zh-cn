@@ -12,10 +12,10 @@ ms.assetid: 9d78f8de-959b-456f-8947-687fa6e2ba91
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2a6e57c1e4326f2c8a0f04a515aab7c699778f39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580702"
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>隐藏项（报表生成器和 SSRS）
@@ -47,7 +47,7 @@ ms.locfileid: "65580702"
   
         > [!NOTE]  
         >  为可见性指定表达式时，需要设置报表项的 Hidden 属性，如下图所示。 当表达式的计算结果值为 False 时，将显示报表项；当该值为 True 时，将隐藏报表项。   
-        > ![Properties_Visibility 对话框和 Hidden 属性](../../reporting-services/report-builder/media/hiddenproperty-propertiesvisibility.png "Properties_Visibility dialog and Hidden property")  
+        > ![Properties_Visibility 对话框和 Hidden 属性](../../reporting-services/report-builder/media/hiddenproperty-propertiesvisibility.png "Properties_Visibility 对话框和 Hidden 属性")  
   
 4.  单击两次 **“确定”** 。  
   

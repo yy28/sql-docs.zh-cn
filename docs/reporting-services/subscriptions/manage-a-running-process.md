@@ -26,10 +26,10 @@ ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6eeec8517b9b55e30eb51abc25fefed0b36b2a79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579002"
 ---
 # <a name="manage-a-running-process"></a>管理运行中的进程
@@ -87,13 +87,13 @@ ms.locfileid: "65579002"
   
 3.  将其设置为 **False**。  
   
-4.  保存该文件。  
+4.  保存文件。  
   
 5.  在报表管理器中，从报表的“订阅”选项卡或从“我的订阅”中删除数据驱动订阅  。  
   
 6.  删除订阅之后，在 RSReportServer.config 文件中查找 **IsNotificationService** ，并将其设置为 **True**。  
   
-7.  保存该文件。  
+7.  保存文件。  
   
 ### <a name="configuring-frequency-settings-for-retrieving-job-status"></a>配置检索作业状态的频率设置  
  正在运行的作业存储在报表服务器的临时数据库中。 您可以修改 RSReportServer.config 文件中的配置设置，以控制报表服务器扫描正在进行的作业的频率，以及正在运行的作业的状态在多长时间间隔后从“新”更改为“正在运行”。 **RunningRequestsDbCycle** 设置指定报表服务器扫描正在运行的进程的频率。 默认情况下，每隔 60 秒记录一次状态信息。 **RunningRequestsAge** 设置指定作业的状态从“新”更改为“正在运行”的时间间隔。  

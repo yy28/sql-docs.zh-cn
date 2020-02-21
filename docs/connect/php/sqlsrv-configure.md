@@ -17,13 +17,13 @@ ms.assetid: 9393f975-a4ef-4c50-b4dd-14892fc55cc9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b98533dcc1589e07bc8ae37562bf6734077a78f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67935807"
 ---
-# <a name="sqlsrvconfigure"></a>sqlsrv_configure
+# <a name="sqlsrv_configure"></a>sqlsrv_configure
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 更改错误处理和日志记录选项的设置。  
@@ -35,10 +35,10 @@ ms.locfileid: "67935807"
 sqlsrv_configure( string $setting, mixed $value )  
 ```  
   
-#### <a name="parameters"></a>Parameters  
-*$setting*：要配置的设置的名称。 有关设置的列表, 请参阅下表。  
+#### <a name="parameters"></a>parameters  
+*$setting*：要配置的设置的名称。 有关设置列表，请参阅下表。  
   
-*$value*：要应用于在 *$setting* 参数中指定的设置的值。 此参数的可能值取决于指定的设置。 下表列出了可能的组合：  
+*$value*：要应用于在 $setting  参数中指定的设置的值。 此参数的可能值取决于指定的设置。 下表列出了可能的组合：  
   
 |设置|$Value 参数的可能值（括号中为等效整数）|默认值|  
 |-----------|------------------------------------------------------------------------------|-----------------|  
@@ -50,7 +50,7 @@ sqlsrv_configure( string $setting, mixed $value )
 ## <a name="return-value"></a>返回值  
 如果使用不受支持的设置或值调用 **sqlsrv_configure** ，该函数将返回 **false**。 否则，该函数返回 **true**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 (1) 有关客户端查询的详细信息，请参阅[游标类型 &#40;SQLSRV Driver&#41;](../../connect/php/cursor-types-sqlsrv-driver.md)。  
   
 (2) 有关日志记录活动的详细信息，请参阅[日志记录活动](../../connect/php/logging-activity.md)。  
@@ -60,5 +60,5 @@ sqlsrv_configure( string $setting, mixed $value )
 ## <a name="see-also"></a>另请参阅  
 [SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)
 
-[Microsoft Driver for PHP for SQL Server 编程指南](../../connect/php/programming-guide-for-php-sql-driver.md) 
+[Microsoft Drivers for PHP for SQL Server 编程指南](../../connect/php/programming-guide-for-php-sql-driver.md) 
   

@@ -17,10 +17,10 @@ ms.assetid: 2f99a288-d4aa-4c64-b310-e457a2aef2c5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d93840b2b1b7354238ccae12ba3a540889038fb2
-ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67228685"
 ---
 # <a name="upload-files-to-a-folder"></a>将文件上载到文件夹
@@ -33,17 +33,17 @@ ms.locfileid: "67228685"
     >[!NOTE]  
     >不能上载报表数据源 (.rds) 文件来创建共享数据源。 .rds 文件仅用于报表设计器中。 它无法提供通过 Web 门户进行定义和管理的共享数据源项的内容。 作为上载的替代方法，可以编写一个基于 .rds 文件创建共享数据源的脚本。  
   
- 已上传的项的最大文件大小为 2 GB，可使用中的 MaxFileSizeMb 属性设置[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。  
+ 上载项的最大文件大小为 2 GB，可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的 MaxFileSizeMb 属性进行设置。  
   
  上载到报表服务器数据库的文件将使用以下图标直观地显示在文件夹层次结构中：  
   
-  ![报告服务器 uploadable 文件图标](../../reporting-services/report-server/media/upload-files-to-a-folder/report-server-uploadable-file-icons.png)
+  ![报表服务器可上载文件图标](../../reporting-services/report-server/media/upload-files-to-a-folder/report-server-uploadable-file-icons.png)
   
  上载文件时，文件将始终放入当前所选的文件夹。 您可以首先定位到要包含项的文件夹，也可以先上载文件再将其移至最终位置。  
   
- 若要上传一个文件，请使用 web 门户。 能否将文件上载到报表服务器取决于您的角色分配中包括哪些任务。 如果您使用的是默认安全性，本地管理员可以向报表服务器中添加项。 如果启用了“我的报表”，则拥有“我的报表”文件夹的任何用户都有权将项上载到该文件夹中。 如果您使用自定义角色分配，角色分配必须包括支持管理文件夹的任务。  
+ 若要上载文件，请使用 Web 门户。 能否将文件上载到报表服务器取决于您的角色分配中包括哪些任务。 如果您使用的是默认安全性，本地管理员可以向报表服务器中添加项。 如果启用了“我的报表”，则拥有“我的报表”文件夹的任何用户都有权将项上载到该文件夹中。 如果您使用自定义角色分配，角色分配必须包括支持管理文件夹的任务。  
   
-|执行的操作|需包含的任务|  
+|要执行此操作|需包含的任务|  
 |----------------|-------------------------|  
 |将 .rdl 文件上载到文件夹中|管理报表|  
 |将任何文件作为二进制对象上载|管理资源|  

@@ -1,5 +1,5 @@
 ---
-title: 报表疑难解答：地图报表（报表生成器和 SSRS）| Microsoft Docs
+title: 报表故障排除：地图报表（报表生成器和 SSRS）| Microsoft Docs
 ms.date: 01/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,10 +9,10 @@ ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 88005509becb45f48702970153f9a891a8a01978
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73594498"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>报表故障排除：地图报表（报表生成器和 SSRS）
@@ -187,7 +187,7 @@ ms.locfileid: "73594498"
   
 -   地图投影必须为 **Mercator**。  
   
--   对于本地预览，您必须能够访问 Internet。 对于从报表服务器运行的报表，必须将报表服务器配置为支持图块背景。 有关详细信息，请参阅[规划地图报表](plan-a-map-report-report-builder-and-ssrs.md)。  
+-   对于本地预览，您必须能够访问 Internet。 对于从报表服务器运行的报表，必须将报表服务器配置为支持图块背景。 有关详细信息，请参阅[计划地图报表](plan-a-map-report-report-builder-and-ssrs.md)。  
   
  有关添加图块层的详细信息，请参阅[添加、更改或删除地图或地图层（报表生成器和 SSRS）](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   

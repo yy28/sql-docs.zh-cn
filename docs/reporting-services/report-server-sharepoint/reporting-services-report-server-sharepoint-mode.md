@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: af25232f5a1603f25814309270813188c05a89fc
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68262355"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Reporting Services 报表服务器（SharePoint 模式）
@@ -64,9 +64,9 @@ ms.locfileid: "68262355"
 
  SQL Server 2008 R2 版本引入了新的“本地模式”  ，可用于从安装了用于 SharePoint 2010 产品的 Microsoft SQL Server 2008 R2 或更高版本的 Reporting Services 外接程序的 SharePoint 2010 服务器查看报表。  
   
--   本地模式：本地模式允许从 SharePoint 文档库在本地呈现报表，而无需与 Reporting Services 报表服务器集成  。 用于 SharePoint 产品的 Reporting Services 外接程序是必需的，但 Reporting Services 报表服务器不是。 外接程序可以以多种不同的方式进行安装，包括 SharePoint 2010 产品准备工具。 有关本地模式的详细信息，请参阅[报表查看器中的本地模式报表和连接模式报表](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)和[在何处查找用于 SharePoint 产品的 Reporting Services 外接程序](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
+-   *本地模式*：本地模式允许从 SharePoint 文档库在本地呈现报表，而无需与 Reporting Services 报表服务器集成。 用于 SharePoint 产品的 Reporting Services 外接程序是必需的，但 Reporting Services 报表服务器不是。 外接程序可以以多种不同的方式进行安装，包括 SharePoint 2010 产品准备工具。 有关本地模式的详细信息，请参阅[报表查看器中的本地模式报表和连接模式报表](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)和[在何处查找用于 SharePoint 产品的 Reporting Services 外接程序](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
   
--   连接模式：通过使用 SharePoint 管理中心将 Reporting Services 报表服务器集成到 SharePoint 场中，支持连接模式  。 这一与报表服务器的集成可以实现完全的端到端报告，并且提供 SharePoint 2010 的协作功能以及基于服务器的报表服务器功能，包括订阅、快照和基于服务器的处理。  
+-   *连接模式*：通过使用 SharePoint 管理中心将 Reporting Services 报表服务器集成到 SharePoint 场中，支持连接模式。 这一与报表服务器的集成可以实现完全的端到端报告，并且提供 SharePoint 2010 的协作功能以及基于服务器的报表服务器功能，包括：订阅、快照和基于服务器的处理。  
   
 ## <a name="unsupported-sharepoint-features"></a>不支持的 sharePoint 功能
 

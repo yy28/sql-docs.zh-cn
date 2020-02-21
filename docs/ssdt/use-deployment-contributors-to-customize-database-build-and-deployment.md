@@ -1,31 +1,32 @@
 ---
-title: 使用生成参与者和部署参与者来自定义数据库生成和部署 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 使用部署参与者自定义数据库部署
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: fe2064bb-e01e-4a12-9f12-a99aa9a5203f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aa22592bbe86707ec4efa43ba0c188c21a07351e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 4d0c83e0b6adb5981adde576e06b0b74faf42eeb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110574"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256254"
 ---
 # <a name="customize-database-build-and-deployment-by-using-build-and-deployment-contributors"></a>使用生成参与者和部署参与者来自定义数据库生成和部署
+
 Visual Studio 提供了可用于为数据库项目修改生成和部署操作的行为的扩展点。  
   
 ## <a name="available-extensibility-points"></a>可用的扩展点  
 可以为扩展点创建扩展，如下表所示：  
   
-|**操作**|**参与者类型**|**说明**|  
+|**Action**|**参与者类型**|**说明**|  
 |--------------|------------------------|-------------|  
-|生成|BuildContributor|在验证完项目模型后生成 SQL 项目时将执行此类扩展。 生成参与者不仅可以访问已完成的模型，还可以访问生成任务的所有属性以及任何自定义参数。|  
+|构建|BuildContributor|在验证完项目模型后生成 SQL 项目时将执行此类扩展。 生成参与者不仅可以访问已完成的模型，还可以访问生成任务的所有属性以及任何自定义参数。|  
 |部署|DeploymentPlanModifier|在生成部署计划后并在执行部署计划前将 SQL 项目作为部署管道的一部分进行部署时，将执行此类扩展。 可以使用 DeploymentPlanModifier 通过添加或删除步骤来修改部署计划。 部署参与者可以访问部署计划、比较结果以及源模型和目标模型。|  
 |部署|DeploymentPlanExecutor|在执行部署计划并提供对部署计划的只读访问权时，将执行此类扩展。 DeploymentPlanExectutor 将根据部署计划执行操作。|  
   

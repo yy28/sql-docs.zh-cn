@@ -1,6 +1,6 @@
 ---
-title: SQL Server Management Studio - 使用情况和诊断数据 (SSMS) | Microsoft Docs
-ms.custom: ''
+title: 使用情况和诊断数据
+ms.custom: seo-lt-2019
 ms.date: 04/16/2019
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 82b4af04963c5161cbea300054d19c61b61ec34a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 5b61b32ab266c4068f610b9138bf3fc8ea364f0e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028821"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245703"
 ---
 # <a name="local-audit-for-ssms-usage-and-diagnostic-data-collection"></a>SSMS 使用情况和诊断数据收集的本地审核
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,10 +27,10 @@ SQL Server Management Studio (SSMS) 包含已启用 Internet 的功能，这些�
 若要查看 SSMS 收集的功能使用情况数据，请执行以下步骤：
 
 1.  启动 SSMS。
-2.  单击“查看”  ，然后单击主菜单中的“输出”  以显示“输出”  窗口。 
-3.  看到“输出”  窗口后，选择“显示输出来源:”  菜单中的“遥测”  。
+2.  单击“查看”，然后单击主菜单中的“输出”以显示“输出”窗口。 
+3.  看到“输出”窗口后，选择“显示输出来源:”菜单中的“遥测”。
 
-使用 SSMS 与数据库进行交互时，“输出”  窗口显示收集的数据。
+使用 SSMS 与数据库进行交互时，“输出”窗口显示收集的数据。
 
 ## <a name="enable-or-disable-usage-and-diagnostic-data-collection-in-ssms"></a>在 SSMS 中启用或禁用使用情况和诊断数据收集
 

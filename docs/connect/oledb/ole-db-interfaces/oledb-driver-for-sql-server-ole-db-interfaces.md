@@ -16,18 +16,18 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 6cbe0bf465460fe1464b47deed461d05217595f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994343"
 ---
-# <a name="ole-db-driver-for-sql-server-ole-db-interfaces"></a>适用于 SQL Server 的 OLE DB 驱动程序 (OLE DB) 接口
+# <a name="ole-db-driver-for-sql-server-ole-db-interfaces"></a>适用于 SQL Server 的 OLE DB 驱动程序 (OLE DB) 界面
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  适用于 SQL Server 的 OLE DB 驱动程序向要访问正在运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的一个或多个计算机上的数据的使用者公开接口。 SQL Server 的 OLE DB 驱动程序是 OLE DB 版本2.0 兼容的提供程序。  
+  适用于 SQL Server 的 OLE DB 驱动程序向要访问正在运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的一个或多个计算机上的数据的使用者公开接口。 OLE DB Driver for SQL Server 是与 OLE DB 版本 2.0 兼容的提供程序。  
   
  此适用于 SQL Server 的 OLE DB 驱动程序编程参考未记录所有 OLE DB 接口和方法，该参考仅记录了当使用适用于 SQL Server 的 OLE DB 驱动程序时表现访问接口特定行为的接口和方法。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "67994343"
   
 ## <a name="in-this-section"></a>本节内容  
   
--   [接口&#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
+-   [接口 &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [适用于 SQL Server 的 OLE DB 驱动程序编程](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  

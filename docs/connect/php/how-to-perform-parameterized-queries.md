@@ -1,5 +1,5 @@
 ---
-title: '如何: 执行参数化查询 |Microsoft Docs'
+title: 如何：执行参数化查询 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -14,10 +14,10 @@ ms.assetid: dc7d0ede-a9b6-4ce2-977e-4d1e7ec2131c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7e406d64bd8c56b467c9b331eb4aef132dc0cc67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993503"
 ---
 # <a name="how-to-perform-parameterized-queries"></a>如何：执行参数化查询
@@ -31,7 +31,7 @@ ms.locfileid: "67993503"
   
 2.  初始化或更新对应于 Transact-SQL 查询中的占位符的 PHP 变量。  
   
-3.  使用步骤 2 中的 PHP 变量创建或更新对应于 Transact-SQL 字符串中的参数占位符的参数值数组。 数组中的参数值的顺序必须与占位符用来表示它们的顺序相同。
+3.  使用步骤 2 中的 PHP 变量创建或更新对应于 Transact-SQL 字符串中的参数占位符的参数值数组。 数组中参数值的顺序必须与用来表示它们的占位符的顺序相同。
   
 4.  执行查询：  
   
@@ -190,7 +190,7 @@ sqlsrv_close( $conn);
 ## <a name="see-also"></a>另请参阅  
 [转换数据类型](../../connect/php/converting-data-types.md)
 
-[用于 PHP 的 Microsoft 驱动程序的安全注意事项 SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 安全注意事项](../../connect/php/security-considerations-for-php-sql-driver.md)
 
 [文档中相关的代码示例](../../connect/php/about-code-examples-in-the-documentation.md)
 

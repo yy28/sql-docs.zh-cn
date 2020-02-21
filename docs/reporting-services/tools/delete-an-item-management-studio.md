@@ -13,14 +13,14 @@ ms.assetid: 57381914-3106-4dc4-acd4-7ed5b565cca6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8eaed89901b98cecb90e0c3a4ecae24714c7c180
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574331"
 ---
 # <a name="delete-an-item-management-studio"></a>删除项 (Management Studio)
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中连接到报表服务器实例时，您可以删除角色定义和共享计划， 但不能删除报表服务器上的报表、模型或其他项。 若要删除报表服务器内容，请改用报表管理器。 或者，如果报表服务器被配置为 SharePoint 集成模式，请使用包含您的内容的 SharePoint 库中的项管理功能。  
+  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中连接到报表服务器实例时，你可以删除角色定义和共享计划。 但不能删除报表服务器上的报表、模型或其他项。 若要删除报表服务器内容，请改用报表管理器。 或者，如果报表服务器被配置为 SharePoint 集成模式，请使用包含您的内容的 SharePoint 库中的项管理功能。  
   
 ### <a name="to-delete-an-item-in-the-report-server-folder-namespace"></a>删除报表服务器文件夹命名空间中的项  
   
@@ -28,7 +28,7 @@ ms.locfileid: "65574331"
   
 2.  展开“Microsoft BizTalk Server 基本 EDI 适配器” 文件夹。  
   
-3.  右键单击该项，然后单击“删除”  。  
+3.  右键单击该项，然后单击“删除”。  
   
 4.  出现提示时， [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

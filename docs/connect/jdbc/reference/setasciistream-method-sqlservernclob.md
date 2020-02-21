@@ -11,10 +11,10 @@ ms.assetid: 617ece92-0fb1-4f95-b32d-29b5b56eb3fb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 043a94108bdb7c8938f06e8bf1d4bf58651fbf21
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975377"
 ---
 # <a name="setasciistream-method-sqlservernclob"></a>setAsciiStream 方法 (SQLServerNClob)
@@ -29,7 +29,7 @@ ms.locfileid: "67975377"
 public java.io.OutputStream setAsciiStream(long pos)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  pos   
   
  写入 NCLOB  对象的起始位置；第一个位置为 1。  
@@ -37,11 +37,11 @@ public java.io.OutputStream setAsciiStream(long pos)
 ## <a name="return-value"></a>返回值  
  表示可向其中写入 ASCII 编码字符的流的 OutputStream 对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 setAsciiStream 方法由 setAsciiStream 方法在 NClob 接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 setAsciiStream 方法是由 java.sql.NClob 接口中的 setAsciiStream 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerNClob 方法](../../../connect/jdbc/reference/sqlservernclob-methods.md)   

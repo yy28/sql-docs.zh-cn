@@ -16,10 +16,10 @@ ms.assetid: fc3f2d79-7cc3-47fa-a05e-4f7939d7f090
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8ad14430d5750befc073489596de2a4082f4ff8d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980601"
 ---
 # <a name="getref-method-int-sqlserverresultset"></a>getRef 方法 (int) (SQLServerResultSet)
@@ -34,7 +34,7 @@ ms.locfileid: "67980601"
 public java.sql.Ref getRef(int i)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *i*  
   
  指示列索引的 int  。  
@@ -42,14 +42,14 @@ public java.sql.Ref getRef(int i)
 ## <a name="return-value"></a>返回值  
  Ref 对象。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 getRef 方法是由 java.sql.ResultSet 接口中的 getRef 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
- [getRef 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getref-method-sqlserverresultset.md)   
+ [getRef 方法 (SQLServerResultSet)](../../../connect/jdbc/reference/getref-method-sqlserverresultset.md)   
  [SQLServerResultSet 成员](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 类](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

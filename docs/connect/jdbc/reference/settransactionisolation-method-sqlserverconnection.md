@@ -1,5 +1,5 @@
 ---
-title: setTransactionIsolation 方法 (SQLServerConnection) |Microsoft Docs
+title: setTransactionIsolation 方法 (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 6a8fa4d3-5237-40f8-8a02-b40a3d7a1131
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e7e803e60568030eb105fa52a15bc2c2bc4b3e8d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972293"
 ---
 # <a name="settransactionisolation-method-sqlserverconnection"></a>setTransactionIsolation 方法 (SQLServerConnection)
@@ -34,7 +34,7 @@ ms.locfileid: "67972293"
 public void setTransactionIsolation(int level)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  *level*  
   
  包含下列隔离级别之一的 int  值：  
@@ -49,11 +49,11 @@ public void setTransactionIsolation(int level)
   
  TRANSACTION_SNAPSHOT = 0x1000  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 此 setTransactionIsolation 方法由 setTransactionIsolation 方法在 sql 连接接口中指定。  
+## <a name="remarks"></a>备注  
+ 此 setTransactionIsolation 方法是由 java.sql.Connection 接口中的 setTransactionIsolation 方法指定的。  
   
  如果在事务中间调用此方法，将不提交事务。  
   

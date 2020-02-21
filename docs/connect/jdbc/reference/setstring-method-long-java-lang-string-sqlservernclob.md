@@ -11,16 +11,16 @@ ms.assetid: 698073b2-3f0c-449c-ad68-48144698fe8f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9c549d3e1b7b9b63663333a59b263a2aa6ad4113
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972674"
 ---
 # <a name="setstring-method-long-javalangstring-sqlservernclob"></a>setString 方法 (long, java.lang.String) (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  将指定的**字符串**写入从指定位置开始的**NCLOB** 。  
+  将指定的 String  写入起始于指定位置的 NCLOB  。  
   
 ## <a name="syntax"></a>语法  
   
@@ -30,7 +30,7 @@ public int setString(long pos,
               java.lang.String str)  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>parameters  
  pos   
   
  写入 NCLOB  的起始位置；第一个位置为 1。  
@@ -42,10 +42,10 @@ public int setString(long pos,
 ## <a name="return-value"></a>返回值  
  写入的字符数。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此 setString 方法是由 java.sql.NClob 接口中的 setString 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  

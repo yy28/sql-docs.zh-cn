@@ -1,5 +1,5 @@
 ---
-title: SQLServerCallableStatement 成员 |Microsoft Docs
+title: SQLServerCallableStatement 成员 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,10 +12,10 @@ ms.assetid: 5ebdc186-e50f-4d14-bbf4-95af5051e4a4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 69a12437e3b1e611cf9e48d60c9fd77cd02f63bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971876"
 ---
 # <a name="sqlservercallablestatement-members"></a>SQLServerCallableStatement 成员
@@ -37,7 +37,7 @@ ms.locfileid: "67971876"
   
 ## <a name="methods"></a>方法  
   
-|“属性”|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)|（继承自 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)。）向此 CallableStatement 对象的一批命令添加一组参数。|  
 |[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|（继承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。）取消当前正由此 CallableStatement 对象运行的 SQL 语句。|  
@@ -57,7 +57,7 @@ ms.locfileid: "67971876"
 |[getMaxFieldSize](../../../connect/jdbc/reference/getmaxfieldsize-method-sqlserverstatement.md)|（继承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。）检索可为由此 CallableStatement 对象生成的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象中的字符和二进制列值返回的最大字节数。|  
 |[getMaxRows](../../../connect/jdbc/reference/getmaxrows-method-sqlserverstatement.md)|（继承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。）检索由此 CallableStatement 对象生成的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象可包含的最大行数。|  
 |[getMetaData](../../../connect/jdbc/reference/getmetadata-method-sqlserverpreparedstatement.md)|（继承自 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)。）检索 [SQLServerResultSetMetaData Class](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md) 对象，该对象包含有关运行此 CallableStatement 对象时将返回的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的列信息。|  
-|[getMoreResults](../../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md)|（继承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。）移到此 CallableStatement 对象的下一个结果。|  
+|[getMoreResults](../../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md)|（继承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。）移动到此 CallableStatement 对象的下一个结果。|  
 |[getParameterMetaData](../../../connect/jdbc/reference/getparametermetadata-method-sqlserverpreparedstatement.md)|（继承自 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)。）检索此 CallableStatement 对象的参数的个数、类型及属性。|  
 |[getArray](../../../connect/jdbc/reference/getarray-method-sqlservercallablestatement.md)|检索指定参数作为 Array 对象的值。|  
 |[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlservercallablestatement.md)|检索指定参数作为 ASCII  字符流的值。|  
@@ -110,7 +110,7 @@ ms.locfileid: "67971876"
 |[setClob](../../../connect/jdbc/reference/setclob-method-sqlservercallablestatement.md)|（继承自 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)。）将指定参数设置为指定对象。|  
 |[setCursorName](../../../connect/jdbc/reference/setcursorname-method-sqlserverstatement.md)|（继承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。）将 SQL 游标名称设置为给定字符串，该字符串将由随后的执行方法使用。|  
 |[setDate](../../../connect/jdbc/reference/setdate-method-sqlservercallablestatement.md)|将指定参数设置为给定的日期值。|  
-|[setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md)|将指定的列的值设置为[DateTimeOffset 类](../../../connect/jdbc/reference/datetimeoffset-class.md)值。|  
+|[setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md)|将指定列的值设置为 [DateTimeOffset 类](../../../connect/jdbc/reference/datetimeoffset-class.md)值。|  
 |[setDouble](../../../connect/jdbc/reference/setdouble-method-sqlservercallablestatement.md)|将指定参数设置为给定 double  值。|  
 |[setEscapeProcessing](../../../connect/jdbc/reference/setescapeprocessing-method-sqlserverstatement.md)|（继承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。）设置转义处理模式。|  
 |[setFetchDirection](../../../connect/jdbc/reference/setfetchdirection-method-sqlserverstatement.md)|（继承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。）为 JDBC 驱动程序提供提示以指明处理结果集行时应采用的方向。|  
@@ -125,7 +125,7 @@ ms.locfileid: "67971876"
 |[setNString](../../../connect/jdbc/reference/setnstring-method-sqlservercallablestatement.md)|将指定参数设置为指定的 String 对象。|  
 |[setNull](../../../connect/jdbc/reference/setnull-method-sqlservercallablestatement.md)|根据要设置的参数的类型，将指定参数设置为 Null 值。|  
 |[setObject](../../../connect/jdbc/reference/setobject-method-sqlservercallablestatement.md)|使用给定对象设置指定参数的值。|  
-|[setPoolable](../../../connect/jdbc/reference/setpoolable-method-sqlserverstatement.md)|（继承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。）请求语句入池或不入池。 默认情况下, SQLServerCallableStatement 对象在创建时是可入池。|  
+|[setPoolable](../../../connect/jdbc/reference/setpoolable-method-sqlserverstatement.md)|（继承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。）请求语句入池或不入池。 默认情况下，创建时 SQLServerCallableStatement 对象是可以合并的。|  
 |[setQueryTimeout](../../../connect/jdbc/reference/setquerytimeout-method-sqlserverstatement.md)|（继承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。）将驱动程序等待 CallableStatement 对象运行的秒数设置为指定的秒数。|  
 |[setRef](../../../connect/jdbc/reference/setref-method-sqlserverpreparedstatement.md)|（继承自 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)。）将指定参数设置为指定的 Ref 对象。|  
 |[setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)|（继承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。）将此 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 对象的响应缓冲模式设置为不区分大小写的“String full”  或“adaptive”  。|  

@@ -17,10 +17,10 @@ ms.assetid: e416be75-5234-4aa6-a3de-77f60f25169a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7ec4c97ad3627ae91fd01cf0d8d73a2569a0c41a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578177"
 ---
 # <a name="pause-and-resume-shared-schedules"></a>暂停和恢复共享计划
@@ -37,7 +37,7 @@ ms.locfileid: "65578177"
 -   [暂停和恢复共享计划（SharePoint 模式）](#bkmk_sharepoint)  
   
 ##  <a name="bkmk_native"></a> 暂停和恢复共享计划（本机模式）  
- 要暂停和恢复共享计划，请使用报表管理器中的“计划”页。 您不能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]；它没有提供用于暂停和恢复计划的选项。 有关详细信息，请参阅 [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)。  
+ 要暂停和恢复共享计划，请使用报表管理器中的“计划”页。 不能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]；它没有提供用于暂停和恢复计划的选项。 有关详细信息，请参阅 [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)。  
   
 #### <a name="to-pause-or-resume-a-shared-schedule"></a>暂停或恢复共享计划  
   
@@ -62,7 +62,7 @@ ms.locfileid: "65578177"
   
 ## <a name="see-also"></a>另请参阅  
  [“计划”](../../reporting-services/subscriptions/schedules.md)   
- [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
+ [创建、修改和删除计划](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
  [更改报表服务器上的时区和时钟设置](../../reporting-services/subscriptions/change-time-zones-and-clock-settings-on-a-report-server.md)   
  [管理运行中的进程](../../reporting-services/subscriptions/manage-a-running-process.md)  
   
