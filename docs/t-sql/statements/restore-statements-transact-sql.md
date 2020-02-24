@@ -330,7 +330,7 @@ RESTORE LOG 可以包括一个文件列表，从而允许在前滚过程中创�
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每个版本使用的默认路径与早期版本不同。 因此，若要还原在早期版本备份的默认位置创建的数据库，必须使用 MOVE 选项。 有关新的默认路径的信息，请参阅 [SQL Server 的默认实例和命名实例的文件位置](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)。
 
-在您将早期版本数据库还原到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]后，将自动升级该数据库。 通常，该数据库将立即可用。 但是，如果 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库具有全文检索，则升级过程将导入、重置或重新生成它们，具体取决于 upgrade_option  服务器属性的设置。 如果将升级选项设置为“导入”(**upgrade_option** = 2) 或“重新生成”(**upgrade_option** = 0)，在升级过程中将无法使用全文检索。 导入可能需要数小时，而重新生成所需的时间最多时可能十倍于此，具体取决于要编制索引的数据量。 另请注意，如果将升级选项设置为“导入”，并且全文目录不可用，则会重新生成关联的全文索引。 若要更改 **upgrade_option** 服务器属性的设置，请使用 [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)。
+在您将早期版本数据库还原到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]后，将自动升级该数据库。 通常，该数据库将立即可用。 但是，如果 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库具有全文检索，则升级过程将导入、重置或重新生成它们，具体取决于 **upgrade_option** 服务器属性的设置。 如果将升级选项设置为“导入”(**upgrade_option** = 2) 或“重新生成”(**upgrade_option** = 0)，在升级过程中将无法使用全文检索。 导入可能需要数小时，而重新生成所需的时间最多时可能十倍于此，具体取决于要编制索引的数据量。 另请注意，如果将升级选项设置为“导入”，并且全文目录不可用，则会重新生成关联的全文索引。 若要更改 **upgrade_option** 服务器属性的设置，请使用 [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)。
 
 当数据库第一次附加或还原到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例时，数据库主密钥（由服务主密钥加密）的副本尚未存储在服务器中。 必须使用 **OPEN MASTER KEY** 语句解密数据库主密钥 (DMK)。 一旦 DMK 解密后，通过使用 **ALTER MASTER KEY REGENERATE** 语句向服务器提供 DMK（使用服务主密钥 (SMK) 加密）的副本，即可拥有将来启用自动解密的选项。 当数据库已从较早版本升级后，应重新生成 DMK 以使用更新的 AES 算法。 有关重新生成 DMK 的详细信息，请参阅 [ALTER MASTER KEY](../../t-sql/statements/alter-master-key-transact-sql.md)。 重新生成 DMK 密钥以升级到 AES 所需的时间取决于 DMK 保护的对象数。 重新生成 DMK 密钥以升级到 AES 只在必需时执行一次，不影响将来作为密钥循环策略的一部分而重新生成的过程。
 
@@ -677,7 +677,7 @@ GO
 
 以下三个示例都涉及 Microsoft Azure 存储服务的使用。 存储帐户名称为 `mystorageaccount`。 数据文件的容器称为 `myfirstcontainer`。 备份文件的容器称为 `mysecondcontainer`。 已为每个容器创建具有读取、写入、删除和列表权限的存储访问策略。 已使用与存储访问策略相关联的共享访问签名创建 SQL Server 凭据。 针对使用 Microsoft Azure Blob 存储进行 SQL Server 备份和还原的信息，请参阅[使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。
 
-**K1.从 Microsoft Azure 存储服务还原完整数据库备份**    
+K1.  从 Microsoft Azure 存储服务还原完整数据库备份    
 位于 `mysecondcontainer` 的 `Sales` 的完整数据库备份将还原到 `myfirstcontainer`。 `Sales` 当前不在服务器上。
 
 ```sql
@@ -688,7 +688,7 @@ RESTORE DATABASE Sales
   STATS = 10;
 ```
 
-**K2.将完整数据库备份从 Microsoft Azure 存储服务还原到本地存储**`Sales` 的完整数据库备份（位于 `mysecondcontainer`）会还原到本地存储。 `Sales` 当前不在服务器上。
+K2.  将完整数据库备份从 Microsoft Azure 存储服务还原到本地存储`Sales` 的完整数据库备份（位于 `mysecondcontainer`）会还原到本地存储。 `Sales` 当前不在服务器上。
 
 ```sql
 RESTORE DATABASE Sales
@@ -698,7 +698,7 @@ RESTORE DATABASE Sales
   STATS = 10;
 ```
 
-**K3.将完整数据库备份从本地存储还原到 Microsoft Azure 存储服务**
+K3.  将完整数据库备份从本地存储还原到 Microsoft Azure 存储服务
 
 ```sql
 RESTORE DATABASE Sales
@@ -772,7 +772,7 @@ FROM URL
 > [!IMPORTANT]
 > 从 URL 还原时，若要从多个设备进行还原，必须使用共享访问签名 (SAS) 令牌。 有关创建共享访问签名的示例，请参阅 [SQL Server 备份到 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) 和[使用 Powershell 简化在 Azure 存储空间中使用共享访问签名 (SAS) 令牌创建 SQL 凭据的过程](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)。
 
-n  一个占位符，表示最多可以在逗号分隔的列表中指定 64 个备份设备。
+*n* 一个占位符，表示最多可以在逗号分隔的列表中指定 64 个备份设备。
 
 ## <a name="general-remarks"></a>一般备注
 
@@ -879,7 +879,7 @@ WHERE r.command = 'RESTORE DATABASE'
 将[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]用户数据库从数据库备份还原到[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]设备。 数据库会从以前通过 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)][BACKUP DATABASE - Analytics Platform System](../../t-sql/statements/backup-transact-sql.md) 命令创建的备份进行还原。 使用备份和还原操作生成灾难恢复计划，或将数据库从一个设备移动到另一个。
 
 > [!NOTE]
-> 还原 master 包括还原设备登录信息。 若要还原 master，请使用 Configuration Manager  工具中的[还原 master 数据库](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md)页面。 有权访问控制节点的管理员可以执行此操作。 有关[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]数据库备份的详细信息，请参阅[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]中的“备份和还原”。
+> 还原 master 包括还原设备登录信息。 若要还原 master，请使用 **Configuration Manager** 工具中的[还原 master 数据库](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md)页面。 有权访问控制节点的管理员可以执行此操作。 有关[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]数据库备份的详细信息，请参阅[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]中的“备份和还原”。
 
 ## <a name="syntax"></a>语法
 
@@ -907,11 +907,11 @@ RESTORE HEADERONLY
 
 ## <a name="arguments"></a>参数
 
-RESTORE DATABASE database_name  指定要将用户数据库还原到名为 database_name  的数据库。 还原的数据库可以具有与备份的源数据库不同的名称。 database_name 不能作为数据库已存在于目标设备上  。 有关允许的数据库名称的详细信息，请参阅[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]中的“对象命名规则”。
+RESTORE DATABASE *database_name* 指定要将用户数据库还原到名为 *database_name* 的数据库。 还原的数据库可以具有与备份的源数据库不同的名称。 *database_name* 不能作为数据库已存在于目标设备上。 有关允许的数据库名称的详细信息，请参阅[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]中的“对象命名规则”。
 
 还原用户数据库会还原完整数据库备份，然后可以选择将差异备份还原到设备。 用户数据库的还原包括还原数据库用户和数据库角色。
 
-FROM DISK = '\\\\UNC_path  \\backup_directory  ' [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 将从中还原备份文件的网络路径和目录。 例如，FROM DISK = '\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup'。
+FROM DISK = '\\\\*UNC_path*\\*backup_directory*' [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 将从中还原备份文件的网络路径和目录。 例如，FROM DISK = '\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup'。
 
 backup_directory  指定包含完整或差异备份的目录的名称。 例如，可以对完整或差异备份执行 RESTORE HEADERONLY 操作。
 

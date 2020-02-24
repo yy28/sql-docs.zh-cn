@@ -34,13 +34,13 @@ ms.locfileid: "76516508"
   
 -   **复制：已删除过期的订阅**  
   
--   **复制：验证失败后重新初始化了订阅**  
+-   复制：  验证失败后重新初始化了订阅  
   
--   **复制：订阅服务器未通过数据验证**  
+-   复制：  订阅服务器未通过数据验证  
   
--   **复制：订阅服务器已通过数据验证**  
+-   复制：  订阅服务器已通过数据验证  
   
--   **复制：代理自定义关闭**  
+-   复制：代理自定义关闭   
   
  在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中的“警报”文件夹或复制监视器的“警告”选项卡中配置这些警报   。 有关访问此选项卡的详细信息，请参阅[使用复制监视器查看信息和执行任务](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
@@ -50,9 +50,9 @@ ms.locfileid: "76516508"
   
 1.  在 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]中连接到分发服务器，然后展开服务器节点。  
   
-2.  展开 **“SQL Server 代理”** 文件夹，然后展开 **“警报”** 文件夹。  
+2.  展开 “SQL Server 代理”  文件夹，然后展开 “警报”  文件夹。  
   
-3.  右键单击一个复制警报，然后单击 **“属性”** 。  
+3.  右键单击一个复制警报，然后单击 “属性”  。  
   
 4.  在“\<AlertName> 警报属性”  对话框中设置选项：  
   
