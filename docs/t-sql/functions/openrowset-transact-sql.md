@@ -25,12 +25,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a20b058d187f7c1ddade6b609b0002f7bbcbdb60
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 5f1a134e6792eedca184c74b7973d4cb267b104b
+ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76910140"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074455"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 
@@ -75,13 +75,23 @@ OPENROWSET
 
 ## <a name="arguments"></a>参数
 
-'provider_name'  字符串，表示在注册表中指定的 OLE DB 提供程序的友好名称（或 PROGID）。 provider_name 没有默认值  。
+### <a name="provider_name"></a>'*provider_name*'
+字符串，表示在注册表中指定的 OLE DB 访问接口的友好名称（或 PROGID）。 provider_name 没有默认值  。
 
 'datasource'  对应于特定 OLE DB 数据源的字符串常量。 datasource 是要传递给提供程序的 IDBProperties 接口的 DBPROP_INIT_DATASOURCE 属性，该属性用于初始化提供程序  。 通常，此字符串包含数据库文件的名称、数据库服务器的名称，或者访问接口能理解的用于定位数据库的名称。
 
 'user_id'  字符串常量，它是传递给指定 OLE DB 提供程序的用户名。 user_id 为连接指定安全上下文，并作为 DBPROP_AUTH_USERID 属性传入以初始化提供程序  。 user_id 不能是 Microsoft Windows 登录名  。
 
 'password'  字符串常量，它是传递给 OLE DB 提供程序的用户密码。 在初始化提供程序时，password 作为 DBPROP_AUTH_PASSWORD 属性传入  。 password 不能是 Microsoft Windows 密码  。
+
+```sql
+SELECT a.*
+   FROM OPENROWSET('Microsoft.Jet.OLEDB.4.0',
+                   'C:\SAMPLES\Northwind.mdb';
+                   'admin';
+                   'password',
+                   Customers) AS a;
+```
 
 'provider_string'  特定的连接字符串，作为 DBPROP_INIT_PROVIDERSTRING 属性传入以初始化 OLE DB 提供程序。 provider_string 通常封装初始化提供程序所需的所有连接信息  。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序识别的关键字列表，请参阅[初始化和授权属性](../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)。
 
@@ -91,9 +101,23 @@ schema 架构名称或指定对象的对象所有者名称  。
 
 object 对象名称，唯一地标识出将要操作的对象  。
 
+```sql
+SELECT a.*
+FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
+                 AdventureWorks2012.HumanResources.Department) AS a;
+```
+
 query 字符串常量，发送到提供程序并由提供程序执行  。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地实例不处理该查询，但处理由访问接口返回的查询结果（传递查询）。 有些访问接口并不通过表名而是通过命令语言提供其表格格式数据，将传递查询用于这些访问接口是非常有用的。 只要查询提供程序支持 OLE DB Command 对象及其强制接口，那么在远程服务器上就支持传递查询。 有关详细信息，请参阅 [SQL Server Native Client (OLE DB) 参考](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)。
 
-BULK 使用 OPENROWSET 的 BULK 行集提供程序读取文件中的数据。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，OPENROWSET 无需将数据文件中的数据加载到目标表，便可读取这些数据。 这样便可在单个 SELECT 语句中使用 OPENROWSET。
+```sql
+SELECT a.*
+FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
+     'SELECT TOP 10 GroupName, Name
+     FROM AdventureWorks2012.HumanResources.Department') AS a;
+```
+
+### <a name="bulk"></a>BULK
+使用 OPENROWSET 的 BULK 行集访问接口读取文件中的数据。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，OPENROWSET 无需将数据文件中的数据加载到目标表，便可读取这些数据。 这样便可在单个 SELECT 语句中使用 OPENROWSET。
 
 > [!IMPORTANT]
 > Azure SQL 数据库仅支持从 Azure blob 存储读取内容。
@@ -181,10 +205,23 @@ SINGLE_CLOB
 
 SINGLE_NCLOB 通过以 UNICODE 格式读取 data_file，使用当前数据库的排序规则将内容作为类型为 nvarchar(max) 的单行单列行集返回   。
 
+```sql
+SELECT *
+   FROM OPENROWSET(BULK N'C:\Text1.txt', SINGLE_NCLOB) AS Document;
+```
+
 ### <a name="input-file-format-options"></a>输入文件格式选项
 
 FORMAT = 'CSV' 适用范围   ：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1。
 指定符合 [RFC 4180](https://tools.ietf.org/html/rfc4180) 标准的逗号分隔值文件。
+
+```sql
+SELECT *
+FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
+    FORMATFILE = N'D:\XChange\test-csv.fmt',
+    FIRSTROW=2,
+    FORMAT='CSV') AS cars;
+```
 
 FORMATFILE ='format_file_path' 指定格式化文件的完整路径  。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持两种格式化文件类型：XML 和非 XML。
 

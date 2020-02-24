@@ -10,12 +10,12 @@ ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 87537979ab3459727f07aec460118a74e15561f9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 92f289ec22ca35834420dc7ee84d667c55e29a19
+ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "70874823"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77478498"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新增功能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -54,8 +54,6 @@ SQL Server 2017 包含许多新的数据库引擎功能、增强功能和性能�
 - 内存优化对象增强功能  包括 sp_spaceused、消除内存优化表的 8 个索引限制、内存优化表的 sp_rename 和本机编译的 T-SQL 模块，以及适用于本机编译的 T-SQL 模块的 CASE 和 TOP (N) WITH TIES。 现在可在 Azure 存储中存储、备份和还原内存优化文件组文件。 (CTP 1.0)
 - “DATABASE SCOPED CREDENTIAL”  是一个新的安全对象类，支持 CONTROL、ALTER、REFERENCES、TAKE OWNERSHIP 和 VIEW DEFINITION 权限。 现在，ADMINISTER DATABASE BULK OPERATIONS 在 sys.fn_builtin_permissions 中可见。 (CTP 1.0)
 - 已添加数据库 **“COMPATIBILITY_LEVEL 150”** 。 (CTP 1.0)。  
-
-有关详细信息，请参阅 [SQL Server 2017 数据库引擎中的新增功能](~/database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md)。
 
 ## <a name="sql-server-2017-integration-services-ssis"></a>SQL Server 2017 Integration Services (SSIS)
 - SSIS 中的新 Scale Out  功能具有以下新功能和更改的功能。 有关详细信息，请参阅 [SQL Server 2017 Integration Services 中的新增功能](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)。 (RC1)

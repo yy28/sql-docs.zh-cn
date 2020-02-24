@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c46cf3fbc2138350c50e3f520871b0b6a8efde7a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 34599160e206d89eaee04074ddbaee2bac7c5f89
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74317029"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173573"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-in-kubernetes"></a>使用 Kubernetes 上的 SQL Server 大数据群集进行数据暂留
 
@@ -30,7 +30,7 @@ SQL Server 大数据群集通过使用[存储类](https://kubernetes.io/docs/con
 
 - 为了实现成功的大数据群集部署，请确保你拥有所需数量的可用永久性卷。 若要在 Azure Kubernetes 服务 (AKS) 群集上部署，且使用的是内置存储类（`default` 或 `managed-premium`），那么此类支持对永久性卷进行动态预配。 因此，无需预先创建永久性卷，但必须确保 AKS 群集中可用的工作器节点可以附加与部署所需的永久性卷数量相同的磁盘。 根据为工作器节点指定的 [VM 大小](https://docs.microsoft.com/azure/virtual-machines/linux/sizes)，每个节点可以附加一定数量的磁盘。 对于默认大小的群集（无高可用性），至少必须有 24 个磁盘。 若要启用高可用性或纵向扩展任何池，请确保每个附加副本至少有两个永久性卷，无论要纵向扩展的资源是什么。
 
-- 如果在配置中提供的存储类的存储预配程序不支持动态预配，必须预先创建永久性卷。 例如，`local-storage` 预配程序不启用动态预配。 若要了解如何在使用 `kubeadm` 部署的 Kubernetes 群集中继续操作，请参阅此[示例脚本](https://github.com/microsoft/sql-server-samples/tree/cu1-bdc/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu)。
+- 如果在配置中提供的存储类的存储预配程序不支持动态预配，必须预先创建永久性卷。 例如，`local-storage` 预配程序不启用动态预配。 若要了解如何在使用 `kubeadm` 部署的 Kubernetes 群集中继续操作，请参阅此[示例脚本](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu)。
 
 - 部署大数据群集时，可以配置相同的存储类，以供群集中的所有组件使用。 但生产部署的最佳做法是，各种组件需要不同的存储配置，以适应各种大小或吞吐量的工作负载。 可以覆盖控制器中为每个 SQL Server 主实例、数据集和存储池指定的默认存储配置。 本文提供了具体操作示例。
 

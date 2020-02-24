@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 103f74b4a1be1ee2111f8ed3e983f8a468f8db2c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: dba29bb00f0b8d54edd8c8c98d4134cf794fe2fd
+ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68893035"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77478505"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 中的新增功能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -52,7 +52,6 @@ ms.locfileid: "68893035"
     - **动态数据屏蔽：** 如果在表定义中指定了，那么大多数用户将看不到已掩码的数据，只有拥有 UNMASK 权限的用户才能看到完整数据。
     - **行级别安全性：** 可以在数据库引擎级别限制数据访问，这样用户就能只看到与他们相关的数据。 
 
-请参阅[数据库引擎](../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md)。
 ## <a name="sql-server-2016-analysis-services-ssas"></a>SQL Server 2016 Analysis Services (SSAS)
 SQL Server 2016 Analysis Services 提升了兼容性级别为 1200  的表格模型数据库的性能，并提供了创建、数据库管理、筛选、处理等功能。
 - [SQL Server R Services](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md)  将用于统计分析的 R 编程语言集成到 SQL Server 中。 

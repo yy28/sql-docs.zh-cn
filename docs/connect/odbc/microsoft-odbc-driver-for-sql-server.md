@@ -10,20 +10,22 @@ ms.topic: conceptual
 ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9f8e46dd253514329ee486c940a14f8dc48b4e9b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 442a6ad69681a257355d5743d10cb4f933008b8a
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68702691"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971319"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft ODBC Driver for SQL Server
+
+[!INCLUDE[ODBC_Current_Version](../../includes/odbc-latest-release.md)]
 
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ODBC 是以 C 和 C++ for SQL Server 编写的用于应用程序的主要本机数据访问 API。 大多数数据源都有适用的 ODBC 驱动程序。 其他可以使用 ODBC 的语言包括 COBOL、Perl、PHP 和 Python。 ODBC 广泛用于数据集成方案。
 
-ODBC 驱动程序附带 [sqlcmd  ](../../tools/sqlcmd-utility.md)和 [bcp  ](../../tools/bcp-utility.md) 等工具。 使用 sqlcmd  实用工具可以运行 Transact-SQL 语句、系统过程和 SQL 脚本。 bcp  实用工具可以在 Microsoft SQL Server 实例和用户指定格式的数据文件间大批量复制数据。 使用 bcp  实用工具可以将大量新行导入 SQL Server 表，或将表数据导出到数据文件。  
+ODBC 驱动程序附带 [sqlcmd](../../tools/sqlcmd-utility.md)  和 [bcp](../../tools/bcp-utility.md)  等工具。 使用 sqlcmd  实用工具可以运行 Transact-SQL 语句、系统过程和 SQL 脚本。 bcp  实用工具可以在 Microsoft SQL Server 实例和用户指定格式的数据文件间大批量复制数据。 使用 bcp  实用工具可以将大量新行导入 SQL Server 表，或将表数据导出到数据文件。  
 
 ## <a name="code-example-in-c"></a>C++ 中的代码示例
 
