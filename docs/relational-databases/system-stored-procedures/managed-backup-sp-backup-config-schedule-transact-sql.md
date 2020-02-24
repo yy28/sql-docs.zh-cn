@@ -1,7 +1,7 @@
 ---
 title: managed_backup sp_backup_config_schedule （Transact-sql） |Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 02/20/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - managed_backup.sp_backup_config_schedule
 - sp_backup_config_schedule
 ms.assetid: 82541160-d1df-4061-91a5-6868dd85743a
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 52df69439cecad5fddf3d38b8852a1ce86cc4dbd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: MashaMSFT
+ms.author: mathoma
+ms.openlocfilehash: e7bb477901dee22c70bb47cd0eaf7da5eb163b7f
+ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67942073"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507528"
 ---
 # <a name="managed_backupsp_backup_config_schedule-transact-sql"></a>managed_backup sp_backup_config_schedule （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -67,10 +67,10 @@ EXEC managed_backup.sp_backup_config_schedule
  备份时间窗口的持续时间。 请注意，不能保证在@backup_begin_time和@backup_duration定义的时间范围内完成备份。 在此时间窗口中启动但超过窗口持续时间的备份操作不会被取消。  
   
  @log_backup_freq  
- 这会确定事务日志备份的频率。 这些备份定期发生，而不是按为数据库备份指定的计划进行。 @log_backup_freq可以是分钟或小时，0表示无日志备份。 禁用日志备份仅适用于具有简单恢复模式的数据库。  
+ 这会确定事务日志备份的频率。 这些备份定期发生，而不是按为数据库备份指定的计划进行。 @log_backup_freq可以是分钟或小时，并且`0:00`有效，表示没有日志备份。 禁用日志备份仅适用于具有简单恢复模式的数据库。  
   
 > [!NOTE]  
->  如果恢复模式从 simple 更改为 full，则需要将 log_backup_freq 从0重新配置为非零值。  
+>  如果恢复模式从 simple 更改为 full，则需要将 log_backup_freq 从`0:00`重新配置为非零值。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）或 1（失败）  

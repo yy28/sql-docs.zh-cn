@@ -1,5 +1,5 @@
 ---
-title: SQL Server Data Tools (SSDT) 发行说明 | Microsoft Docs
+title: SQL Server Data Tools (SSDT) 发行说明
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssdt
@@ -7,16 +7,17 @@ ms.topic: conceptual
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
 author: markingmyname
 ms.author: maghan
+manager: jroth
 ms.reviewer: ''
-ms.custom: ''
-ms.date: 08/15/2019
+ms.custom: seo-lt-2019
+ms.date: 12/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f4fa51ff0ba9a5ce3e2960ab07e3e1994ddb881
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 860888bf0f2292a68fa6a4c6a6b92489466a586c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874888"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75688781"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 发行说明
 
@@ -44,10 +45,44 @@ GeneMi , 2019/03/22.
 P.S.  There is no need to keep this large HTML comment indefinitely.
 -->
 
-## <a name="1592nbsp-ssdt-for-vs-2017"></a>15.9.2，&nbsp; SSDT for VS 2017
+## <a name="1593nbsp-ssdt-for-vs-2017"></a>15.9.3，SSDT&nbsp;for VS 2017
 
-发布时间：  &nbsp; 2019 年 7 月 17 日  
-生成号：  &nbsp; 14.0.16194.0  
+发布时间：  2020&nbsp;年 1 月 3 日  
+生成号：  14.0.16203.0&nbsp;  
+SSDT for Visual Studio 2017。 
+
+### <a name="whats-new"></a>新增功能
+
+| 新项 | 详细信息 |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services (SSIS) | 删除了收件箱组件 Power Query Source for SQL Server 2017。 目前，我们已宣布将 Power Query Source for SQL Server 2017 和 2019 作为现成组件推出（可以从[此处](https://www.microsoft.com/en-us/download/details.aspx?id=100619)下载）。 |
+| Integration Services (SSIS) | 删除了收件箱组件 Microsoft Oracle Connector for SQL Server 2019。 目前，我们已宣布将 Microsoft Oracle Connector for SQL Server 2019 作为现成组件推出（可以从[此处](https://www.microsoft.com/en-us/download/details.aspx?id=58228)下载）。 |
+| Integration Services (SSIS) | 修复了以下问题：当目标服务器版本为 SQL Server 2017 或 2019 时，由于 IDtsHost 接口未注册，SSIS 调试器有时可能无法启动。 |
+| Integration Services (SSIS) | 修复了高 DPI 模式下的主要 UI 布局问题。 |
+| Integration Services (SSIS) | 当目标服务器版本为 SQL Server 2019 时，用于脚本任务/组件的 .NET Framework 版本已升级为 4.7。 |
+| Integration Services (SSIS) | 在 ODBC 连接管理器中新增了 ConnectByProxy 属性，以便支持启用自承载集成运行时作为 ODBC 连接管理器中的代理。 |
+| Integration Services (SSIS) | 修复了以下问题：用户无法在包部署模式下添加新的数据源。 |
+| Integration Services (SSIS) | 修复了以下问题：如果代码使用了任何在 .NET 4.5 之后引入的新语法，用户无法调试脚本任务/组件。 |
+| Integration Services (SSIS) | 修复了以下问题：可能无法通过集成运行时创建向导在 Azure 订阅中创建首个数据工厂，因为数据工厂资源提供程序未注册。 |
+| Integration Services (SSIS) | 修复了以下问题：如果订阅中有“仅限文件”存储帐户，ADF 连接向导中的 SSIS 无法正确显示 Azure 存储帐户列表。 |
+| Integration Services (SSIS) | 修复了以下问题：如果包内有容器，无法使用“在 Azure 中执行”。 |
+| Integration Services (SSIS) | 修复了以下问题：char(n char) 和 varchar2(n char) 在 Oracle 连接器中映射到不正确的 DTS 类型。 |
+
+### <a name="known-issues"></a>已知问题
+
+| 已知问题 | 详细信息 |
+| :---------- | :------ |
+| 当 ExecuteOutOfProcess 设置为“True”时，SSIS 执行包任务不支持调试。 | 此问题仅适用于调试。 通过 DTExec.exe 或 SSIS 目录进行保存、部署和执行将不受影响。 |
+| 版本高于 15.8 的 SSDT for Visual Studio 2017 不支持设计包含 Teradata 源/目标的包。 | 使用 SSDT for Visual Studio 2017 (15.8)。 |
+| 当 SSIS 和 SSAS 安装在同一个 Visual Studio 实例上时，Power Query 源可能不支持 OData v4。 | &nbsp; |
+| 当 SSIS 和 SSAS 安装在同一个 Visual Studio 实例上时，Power Query 源可能不支持使用 ODBC 连接到 Oracle。 | &nbsp; |
+| 未本地化 Power Query 源 | &nbsp; |
+| &nbsp; | &nbsp; |
+
+## <a name="1592nbsp-ssdt-for-vs-2017"></a>15.9.2，SSDT&nbsp;for VS 2017
+
+发布时间：  2019&nbsp;年 7 月 17 日  
+生成号：  14.0.16194.0&nbsp;  
 SSDT for Visual Studio 2017。 
 
 ### <a name="whats-new"></a>新增功能
@@ -73,10 +108,10 @@ SSDT for Visual Studio 2017。
 | 未本地化 Power Query 源 | &nbsp; |
 | &nbsp; | &nbsp; |
 
-## <a name="1591nbsp-ssdt-for-vs-2017"></a>15.9.1，SSDT for VS 2017
+## <a name="1591nbsp-ssdt-for-vs-2017"></a>15.9.1，SSDT&nbsp;for VS 2017
 
-发布时间：  &nbsp; 2019 年 4 月 27 日  
-生成号：  &nbsp; 14.0.16191.0  
+发布时间：  2019&nbsp;年 4 月 27 日  
+生成号：  14.0.16191.0&nbsp;  
 SSDT for Visual Studio 2017。 
 
 ### <a name="whats-new"></a>新增功能
@@ -103,10 +138,10 @@ SSDT for Visual Studio 2017。
 | 未本地化 Power Query 源。 | &nbsp; |
 | &nbsp; | &nbsp; |
 
-## <a name="1590nbsp-ssdt-for-vs-2017"></a>15.9.0，SSDT for VS 2017
+## <a name="1590nbsp-ssdt-for-vs-2017"></a>15.9.0，SSDT&nbsp;for VS 2017
 
-发布时间：  2019 年 1 月 28 日  
-生成号：  14.0.16186.0  
+发布时间：  2019&nbsp;年 1 月 28 日  
+生成号：  14.0.16186.0&nbsp;  
 SSDT for Visual Studio 2017。 
 
 ### <a name="whats-new"></a>新增功能
@@ -116,7 +151,7 @@ SSDT for Visual Studio 2017。
 | Integration Services (SSIS) | 在 ADF 2017 中为 SSIS 添加了 Power Query 源（预览版）。 |
 | Integration Services (SSIS) | 重新添加对 SQL Server 2012 的支持。 |
 | Integration Services (SSIS) | 为 SQL Server 2019 添加了 Oracle 源和目标。 |
-| Integration Services (SSIS) | 定目标到 SQL Server 2019 的 Oracle 源和目标已由 SSDT 安装。 <br/></br> 若要设计定目标到服务器版本 2017 或更低版本的包，请从 Microsoft 下载网站下载相应的 Oracle 连接器版本，并将它安装在 SSDT 计算机上。 <br/></br> [适用于 Oracle 的 Attunity Microsoft Connector 版本 5.0（定目标到 SQL Server 2017）](https://www.microsoft.com/en-us/download/details.aspx?id=55179 ) <br/></br> [适用于 Oracle 的 Attunity Microsoft Connector 版本 4.0（定目标到 SQL Server 2016）](https://www.microsoft.com/en-us/download/details.aspx?id=52950 )<br/></br> [适用于 Oracle 的 Attunity Microsoft Connector 版本 3.0（定目标到 SQL Server 2014）](https://www.microsoft.com/en-us/download/details.aspx?id=44582 )<br/></br> [适用于 Oracle 的 Attunity Microsoft Connector 版本 2.0（定目标到 SQL Server 2012）](https://www.microsoft.com/en-us/download/details.aspx?id=29283 ) |
+| Integration Services (SSIS) | 定目标到 SQL Server 2019 的 Oracle 源和目标已由 SSDT 安装。 <br/></br> 若要设计定目标到服务器版本 2017 或更低版本的包，请从 Microsoft 下载网站下载相应的 Oracle 连接器版本，并将它安装在 SSDT 计算机上。 <br/></br> [适用于 Oracle 的 Attunity Microsoft Connector 版本 5.0（定目标到 SQL Server 2017）](https://www.microsoft.com/download/details.aspx?id=55179 ) <br/></br> [适用于 Oracle 的 Attunity Microsoft Connector 版本 4.0（定目标到 SQL Server 2016）](https://www.microsoft.com/download/details.aspx?id=52950 )<br/></br> [适用于 Oracle 的 Attunity Microsoft Connector 版本 3.0（定目标到 SQL Server 2014）](https://www.microsoft.com/download/details.aspx?id=44582 )<br/></br> [适用于 Oracle 的 Attunity Microsoft Connector 版本 2.0（定目标到 SQL Server 2012）](https://www.microsoft.com/download/details.aspx?id=29283 ) |
 | Integration Services (SSIS) | 解决了从早期 SSIS 版本迁移时无法加载脚本任务/组件的问题。 |
 | Integration Services (SSIS) | 解决了数据查看器在 Windows 7 SP1 和 Windows 8.1 上无法运行的问题。 |
 | Integration Services (SSIS) | 解决了在某些情况下保存包导致 Visual Studio 崩溃的问题。 |
@@ -136,10 +171,10 @@ SSDT for Visual Studio 2017。
 | 未本地化 Power Query 源。 | &nbsp; |
 | &nbsp; | &nbsp; |
 
-## <a name="1582nbsp-ssdt-for-vs-2017"></a>15.8.2，SSDT for VS 2017
+## <a name="1582nbsp-ssdt-for-vs-2017"></a>15.8.2，SSDT&nbsp;for VS 2017
 
-发布时间：  2018 年 11 月 5 日  
-生成号：  14.0.16182.0  
+发布时间：  2018&nbsp;年 11 月 5 日  
+生成号：  14.0.16182.0&nbsp;  
 SSDT for Visual Studio 2017。 
 
 ### <a name="whats-new"></a>新增功能
@@ -152,10 +187,10 @@ SSDT for Visual Studio 2017。
 - 当 ExecuteOutOfProcess 设置为“True”时，SSIS 执行包任务不支持调试。 此问题仅适用于调试。 通过 DTExec.exe 或 SSIS 目录进行保存、部署和执行将不受影响。
 - SSDT for Visual Studio 2017 (15.8.2) 不支持设计包含 Oracle/Teradata 源/目标的包。 使用 SSDT for Visual Studio 2017 (15.8)。
 
-## <a name="1581nbsp-ssdt-for-vs-2017"></a>15.8.1，SSDT for VS 2017
+## <a name="1581nbsp-ssdt-for-vs-2017"></a>15.8.1，SSDT&nbsp;for VS 2017
 
-发布时间：  2018 年 9 月 27 日  
-生成号：  14.0.16179.0  
+发布时间：  2018&nbsp;年 9 月 27 日  
+生成号：  14.0.16179.0&nbsp;  
 SSDT for Visual Studio 2017。 
 
 ### <a name="whats-new"></a>新增功能
@@ -172,10 +207,10 @@ SSDT for Visual Studio 2017。
 - SSDT for Visual Studio 2017 (15.8.1) 不支持设计包含 Oracle/Teradata 源/目标的包。 使用 SSDT for Visual Studio 2017 (15.8)。
 
 
-## <a name="158nbsp-ssdt-for-vs-2017"></a>15.8，SSDT for VS 2017
+## <a name="158nbsp-ssdt-for-vs-2017"></a>15.8，SSDT&nbsp;for VS 2017
 
-发布时间：  2018 年 9 月 5 日  
-生成号：  14.0.16174.0  
+发布时间：  2018&nbsp;年 9 月 5 日  
+生成号：  14.0.16174.0&nbsp;  
 SSDT for Visual Studio 2017。 
 
 ### <a name="whats-new"></a>新增功能
@@ -195,10 +230,10 @@ SSDT for Visual Studio 2017。
 
 - 当 ExecuteOutOfProcess 设置为“True”时，SSIS 执行包任务不支持调试。 此问题仅适用于调试。 通过 DTExec.exe 或 SSIS 目录进行保存、部署和执行将不受影响。
 
-## <a name="1571nbsp-ssdt-for-vs-2017"></a>15.7.1，SSDT for VS 2017
+## <a name="1571nbsp-ssdt-for-vs-2017"></a>15.7.1，SSDT&nbsp;for VS 2017
 
-发布时间：  2018 年 7 月 2 日  
-生成号：  14.0.16167.0  
+发布时间：  2018&nbsp;年 7 月 2 日  
+生成号：  14.0.16167.0&nbsp;  
 SSDT for Visual Studio 2017。 
 
 ### <a name="whats-new"></a>新增功能
@@ -218,10 +253,10 @@ SSDT for Visual Studio 2017。
 - 当 ExecuteOutOfProcess 设置为“True”时，SSIS 执行包任务不支持调试。 此问题仅适用于调试。 通过 DTExec.exe 或 SSIS 目录进行保存、部署和执行将不受影响。
 - 在 Windows 10 上安装 SSDT 并选择“为 Visual Studio 2017 实例安装新的 SQL Server Data Tools”时，安装将因“不支持所请求的元文件操作”而失败。 重新启动计算机，并再次启动 SSDT 安装程序，以继续安装。
 
-## <a name="1570nbsp-ssdt-for-vs-2017"></a>15.7.0，SSDT for VS 2017
+## <a name="1570nbsp-ssdt-for-vs-2017"></a>15.7.0，SSDT&nbsp;for VS 2017
 
-发布时间：  2018 年 6 月 4 日  
-生成号：  14.0.16165.0  
+发布时间：  2018&nbsp;年 6 月 4 日  
+生成号：  14.0.16165.0&nbsp;  
 SSDT for Visual Studio 2017。 
 
 ### <a name="whats-new"></a>新增功能
@@ -243,10 +278,10 @@ SSDT for Visual Studio 2017。
 
 - 当 ExecuteOutOfProcess 设置为“True”时，SSIS 执行包任务不支持调试   。 此问题仅适用于调试。 通过 DTExec.exe 或 SSIS 目录进行保存、部署和执行将不受影响。
 
-## <a name="1560nbsp-ssdt-for-vs-2017"></a>15.6.0，SSDT for VS 2017
+## <a name="1560nbsp-ssdt-for-vs-2017"></a>15.6.0，SSDT&nbsp;for VS 2017
 
-发布时间：  2018 年 4 月 10 日  
-生成号：  14.0.16162.0  
+发布时间：  2018&nbsp;年 4 月 10 日  
+生成号：  14.0.16162.0&nbsp;  
 SSDT for Visual Studio 2017。 
 
 ### <a name="whats-new"></a>新增功能
@@ -272,9 +307,9 @@ SSDT for Visual Studio 2017。
 ### <a name="known-issues"></a>已知问题：
 - 当 ExecuteOutOfProcess 设置为“True”时，SSIS 执行包任务不支持调试。 此问题仅适用于调试。 通过 DTExec.exe 或 SSIS 目录进行保存、部署和执行将不受影响。
 
-## <a name="1552nbsp-ssdt-for-vs-2017"></a>15.5.2，SSDT for VS 2017
+## <a name="1552nbsp-ssdt-for-vs-2017"></a>15.5.2，SSDT&nbsp;for VS 2017
 
-生成号：  14.0.16156.0  
+生成号：  14.0.16156.0&nbsp;  
 SSDT for Visual Studio 2017。 
 
 ### <a name="whats-new"></a>新增功能
@@ -286,7 +321,7 @@ SSDT for Visual Studio 2017。
 - 修复了使用其他语言时，某些字符串在 Hadoop 连接管理器编辑器中截断的问题。
 - 修复了某些字符串在 OData 连接管理器编辑器中截断的问题。
 - 修复了某些字符串在 Integration Services 导入项目向导窗口中截断的问题。
-- 修复了标题位于 SSIS 工具框信息窗口中的问题。
+- 修复了 SSIS 工具框信息窗口中的标题问题。
 - 修复了某些字符串在 Integration Services 部署向导窗口中截断的问题。 
 
 **安装程序**
@@ -295,9 +330,9 @@ SSDT for Visual Studio 2017。
 ### <a name="known-issues"></a>已知问题
 - 当 ExecuteOutOfProcess 设置为“True”时，SSIS 执行包任务不支持调试   。 此问题仅适用于调试。 通过 DTExec.exe 或 SSIS 目录进行保存、部署和执行将不受影响。
 
-## <a name="1551nbsp-ssdt-for-vs-2017"></a>15.5.1，SSDT for VS 2017
+## <a name="1551nbsp-ssdt-for-vs-2017"></a>15.5.1，SSDT&nbsp;for VS 2017
 
-生成号：  14.0.16148.0  
+生成号：  14.0.16148.0&nbsp;  
 SSDT for Visual Studio 2017。 
 
 ### <a name="whats-new"></a>新增功能
@@ -309,9 +344,9 @@ SSDT for Visual Studio 2017。
 
 除了这两个 bug 修复之外，以下有关 15.5.0 的详细信息也仍适用于 15.5.1
 
-## <a name="1550nbsp-ssdt-for-vs-2017"></a>15.5.0，SSDT for VS 2017
+## <a name="1550nbsp-ssdt-for-vs-2017"></a>15.5.0，SSDT&nbsp;for VS 2017
 
-生成号：  14.0.16146.0  
+生成号：  14.0.16146.0&nbsp;  
 SSDT for Visual Studio 2017。 
 
 ### <a name="whats-new"></a>新增功能
@@ -336,9 +371,9 @@ SSDT for Visual Studio 2017 (15.5.0) 不再提供预览版，改为提供正式�
 
 **Integration Services (IS)** 当 ExecuteOutOfProcess 设置为 True 时，SSIS 执行包任务不支持调试。 此问题仅适用于调试。 通过 DTExec.exe 或 SSIS 目录进行保存、部署和执行将不受影响。
 
-## <a name="173nbsp-ssdt-for-vs-2015"></a>17.3，SSDT for VS 2015
+## <a name="173nbsp-ssdt-for-vs-2015"></a>17.3，SSDT&nbsp;for VS 2015
 
-生成号：  14.0.61712.050  
+生成号：  14.0.61712.050&nbsp;  
 SSDT for Visual Studio 2015。 
 
 ### <a name="whats-new"></a>新增功能
@@ -385,9 +420,9 @@ SSDT for Visual Studio 2015。
 - 修复了某些任务/组件未适当本地化的问题。
 - 修复了对 CDC 应用 SQL 修复，添加 \__$command\_id 列后，CDC 组件中断的问题。
 
-## <a name="1540-previewnbsp-ssdt-for-vs-2017"></a>15.4.0（预览版），SSDT for VS 2017
+## <a name="1540-previewnbsp-ssdt-for-vs-2017"></a>15.4.0（预览版），SSDT&nbsp;for VS 2017
 
-生成号：  14.0.16134.0  
+生成号：  14.0.16134.0&nbsp;  
 SSDT for Visual Studio 2017。 
   
 ### <a name="whats-new"></a>新增功能
@@ -418,9 +453,9 @@ SSDT for Visual Studio 2017。
 - 当 ExecuteOutOfProcess 设置为“True”时，SSIS 执行包任务不支持调试  。 此问题仅适用于调试。 通过 DTExec.exe 或 SSIS 目录进行保存、部署和执行将不受影响。
 
 
-## <a name="1730nbsp-ssdt-for-vs-2015"></a>17.30，SSDT for VS 2015
+## <a name="1730nbsp-ssdt-for-vs-2015"></a>17.30，SSDT&nbsp;for VS 2015
 
-生成号：  14.0.61709.290  
+生成号：  14.0.61709.290&nbsp;  
 SSDT for Visual Studio 2015。 
 
 ### <a name="whats-new"></a>新增功能
@@ -511,9 +546,9 @@ SSDT for Visual Studio 2015。
 
 - 修复了在 VS 2017 中编译和生成 RDLC 的过程中出现的问题
 
-## <a name="1530-previewnbsp-ssdt-for-vs-2017"></a>15.3.0（预览版），SSDT for VS 2017
+## <a name="1530-previewnbsp-ssdt-for-vs-2017"></a>15.3.0（预览版），SSDT&nbsp;for VS 2017
 
-生成号：  14.0.16121.0  
+生成号：  14.0.16121.0&nbsp;  
 SSDT for Visual Studio 2017。 
   
 ### <a name="whats-new"></a>新增功能
@@ -529,9 +564,9 @@ SSDT for Visual Studio 2017。
 - 无法将包含第三方扩展的 SSIS 包切换为定目标到其他服务器版本。
 
 
-## <a name="172nbsp-ssdt-for-vs-2015"></a>17.2，SSDT for VS 2015
+## <a name="172nbsp-ssdt-for-vs-2015"></a>17.2，SSDT&nbsp;for VS 2015
 
-生成号：  14.0.61707.300  
+生成号：  14.0.61707.300&nbsp;  
 SSDT for Visual Studio 2015。 
 
 ### <a name="whats-new"></a>新增功能
@@ -578,9 +613,9 @@ SSDT for Visual Studio 2015。
 - 修复了某些任务/组件/向导未本地化的问题
 - 将最新 TargetServerVersion 从“SQL Server vNext”更改为“SQL Server 2017” 
 
-## <a name="1710nbsp-ssdt-for-vs-2015"></a>17.10，SSDT for VS 2015
+## <a name="1710nbsp-ssdt-for-vs-2015"></a>17.10，SSDT&nbsp;for VS 2015
 
-生成号：  14.0.61705.170  
+生成号：  14.0.61705.170&nbsp;  
 SSDT for Visual Studio 2015。 
 
 ### <a name="whats-new"></a>新增功能
@@ -612,9 +647,9 @@ SSDT for Visual Studio 2015。
 
 - 修复了数据库具有由 HSM 使用 EKM 提供程序进行保护的非对称密钥的相关问题（[Connect 项目](https://connect.microsoft.com/SQLServer/feedback/details/3132749/sqlpackage-exe-fails-when-extracting-a-database-which-contains-an-asymmetric-key-using-an-ekm-provider)）
 
-## <a name="170nbsp-ssdt-for-vs-2015"></a>17.0，SSDT for VS 2015
+## <a name="170nbsp-ssdt-for-vs-2015"></a>17.0，SSDT&nbsp;for VS 2015
 
-生成号：  14.0.61704.140  
+生成号：  14.0.61704.140&nbsp;  
 SSDT for Visual Studio 2015。   
 最高支持 SQL Server 2017。 
 
@@ -639,11 +674,11 @@ SSDT for Visual Studio 2015。
         - 启用旧版重定向（默认为 false - 设置为 true 时，糅合引擎会跟随可能不安全的 HTTP 重定向。  例如，从 HTTPS 到 HTTP URI 的重定向）  
         - 返回错误值 Null（默认为 false - 设置为 true 时，单元格级别错误会返回 null。 若为 false，在单元格包含错误时抛出异常）  
     - 使用 PowerQuery 的其他数据源（文件数据源）
-        - “导出” 
+        - Excel 
         - Text/CSV 
         - Xml 
         - Json 
-        - 文件夹 
+        - Folder 
         - Access 数据库 
         - Azure Blob 存储 
     - 本地化的 PowerQuery 用户界面
@@ -716,10 +751,10 @@ SSDT for Visual Studio 2015。
 - 修复了外部同义词的“未解析的引用”错误。 
 - Always Encrypted：联机加密无法禁用对取消项进行更改跟踪，并且如果在开始加密前尚未清除更改跟踪，联机加密也无法正常运行
 
-## <a name="165nbsp-ssdt-for-vs-2015"></a>16.5，SSDT for VS 2015
+## <a name="165nbsp-ssdt-for-vs-2015"></a>16.5，SSDT&nbsp;for VS 2015
 
-发布时间：  2016 年 10 月 20 日  
-生成号：  14.0.61021.0  
+发布时间：  2016&nbsp;年 10 月 20 日  
+生成号：  14.0.61021.0&nbsp;  
 SSDT for Visual Studio 2015。   
 最高支持 SQL Server 2016。 
 
@@ -811,8 +846,8 @@ Console.WriteLine(result.DeploymentReport);
 
 ## <a name="164-ssdt-for-vs-2015"></a>16.4，SSDT for VS 2015
 
-发布时间：  2016 年 9 月 20 日  
-生成号：  14.0.60918  
+发布时间：  2016&nbsp;年 9 月 20 日  
+生成号：  14.0.60918&nbsp;  
 适用于 SQL Server 2016。 
 
 **新增功能**
@@ -848,10 +883,10 @@ SSDT Tabular 现在包含内部 SSAS 实例，如果启用集成工作区模式�
 * 修复了 SSDT AS 中的一个问题，现在会将度量值和 KPI 值添加到在编辑器中选择的当前透视图。
 * 修复了 SSDT 中的一个问题：从 SQL Azure 导入 AS 项目的数据不支持除“dbo”以外的架构类型。
 
-## <a name="163nbsp-ssdt-for-vs-2015"></a>16.3，SSDT for VS 2015
+## <a name="163nbsp-ssdt-for-vs-2015"></a>16.3，SSDT&nbsp;for VS 2015
 
-发布时间：  2016 年 8 月 15 日  
-生成号：  14.0.60812.0  
+发布时间：  2016&nbsp;年 8 月 15 日  
+生成号：  14.0.60812.0&nbsp;  
 适用于 SQL Server 2016。 
 
 **新增功能**
@@ -886,10 +921,10 @@ SSDT Tabular 现在包含内部 SSAS 实例，如果启用集成工作区模式�
         - 修复了以下 RS RDL 问题：降级 RDL 要求完全重新生成，令用户感到迷惑。
         - 修复了一个 KPI 问题：“从客户端工具中隐藏”不起作用。
 
-## <a name="july-2016nbsp-ssdt-for-vs-2015"></a>2016 年 7 月，SSDT for VS 2015
+## <a name="july-2016nbsp-ssdt-for-vs-2015"></a>2016 年 7 月，SSDT&nbsp;for VS 2015
 
-发布时间：  2016 年 6 月 30 日  
-生成号：  14.0.60629.0  
+发布时间：  2016&nbsp;年 6 月 30 日  
+生成号：  14.0.60629.0&nbsp;  
 适用于 SQL Server 2016。 
 
 **新增功能**  
@@ -930,10 +965,10 @@ SSDT Tabular 现在包含内部 SSAS 实例，如果启用集成工作区模式�
     * 修复了为列类型使用默认格式，以便能够从 UI 更改格式类型时，1200 兼容级别模型计算表中存在的问题。 
     
 
-## <a name="june-2016nbsp-ssdt-for-vs-2015"></a>2016 年 6 月，SSDT for VS 2015
+## <a name="june-2016nbsp-ssdt-for-vs-2015"></a>2016 年 6 月，SSDT&nbsp;for VS 2015
 
-发布时间：  2016 年 6 月 1 日  
-生成号：  14.0.60525.0  
+发布时间：  2016&nbsp;年 6 月 1 日  
+生成号：  14.0.60525.0&nbsp;  
 适用于 SQL Server 2016。 
 
 SSDT 正式版 (GA) 现已发布。 2016 年 6 月 SSDT GA 更新添加了对 SQL Server 2016 RTM 最新更新的支持，并修复了多个 bug。 有关详细信息，请参阅 [SQL Server Data Tools GA update for June 2016](https://blogs.msdn.microsoft.com/ssdt/2016/06/01/sql-server-data-tools-ga-update-for-june-2016/)（SQL Server Data Tools GA 2016 年 6 月更新）。

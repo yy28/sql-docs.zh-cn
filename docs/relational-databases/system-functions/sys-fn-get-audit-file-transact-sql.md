@@ -1,7 +1,7 @@
 ---
 title: sys. fn_get_audit_file （Transact-sql） |Microsoft Docs
 ms.custom: ''
-ms.date: 05/16/2017
+ms.date: 02/19/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,15 +21,15 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 25d4aa1e82097dcc4027809c7292587a20862d75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5d0702848a6fce3255e9bb54597dc20b518b50c7
+ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73981877"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507517"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   从服务器审核在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建的审核文件返回信息。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
@@ -57,7 +57,7 @@ fn_get_audit_file ( file_pattern,
   
     -   **路径> \ LoginsAudit_ {GUID} _00_29384. .sqlaudit-收集特定的审核文件。 \<**  
   
- - **AZURE Sql 数据库或 AZURE Sql 数据仓库**：
+ - **AZURE SQL 数据库**：
  
     此参数用于指定 blob URL （包括存储终结点和容器）。 虽然它不支持星号通配符，但你可以使用部分文件（blob）名称前缀（而不是完整的 blob 名称）来收集以此前缀开头的多个文件（blob）。 例如：
  
