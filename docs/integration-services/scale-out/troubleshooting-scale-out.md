@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 87f5ab815fc7d3a5df23aa3675e92ffa206bfcdf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896155"
 ---
 # <a name="troubleshoot-scale-out"></a>Scale Out 故障排除
@@ -65,7 +65,7 @@ SSIS Scale Out 涉及 SSIS 目录数据库 `SSISDB`、Scale Out Master 服务和
 
 ### <a name="symptoms"></a>症状
 
-“System.ServiceModel.EndpointNotFoundException：可接受消息的 https://[MachineName]:[Port]/ClusterManagement/ 下无任何终结点侦听。”* 
+“System.ServiceModel.EndpointNotFoundException：  可接受消息的 https://[MachineName]:[Port]/ClusterManagement/ 下无任何终结点侦听。” 
 
 ### <a name="solution"></a>解决方案
 
@@ -82,9 +82,9 @@ SSIS Scale Out 涉及 SSIS 目录数据库 `SSISDB`、Scale Out Master 服务和
 ### <a name="symptoms"></a>症状
 “System.ServiceModel.Security.SecurityNegotiationException:  无法使用授权 '[Machine Name]:[Port]' 与 SSL/TLS 安全通道建立信任关系。”。
 
-“System.Net.WebException:已关闭基础连接：无法与 SSL/TLS 安全通道建立信任关系。”*
+“System.Net.WebException:已关闭基础连接：无法与 SSL/TLS 安全通道建立信任关系。”
 
-“System.Security.Authentication.AuthenticationException:根据验证过程，远程证书无效。”*
+“System.Security.Authentication.AuthenticationException:  根据验证过程，远程证书无效。”
 
 ### <a name="solution"></a>解决方案
 1.  如果尚未安装 Scale Out Master 证书，请将其安装到 Scale Out Worker 节点上本地计算机的根证书存储中，然后重启 Scale Out Worker 服务。
@@ -100,9 +100,9 @@ SSIS Scale Out 涉及 SSIS 目录数据库 `SSISDB`、Scale Out Master 服务和
 
 ### <a name="symptoms"></a>症状
 
-“System.ServiceModel.Security.SecurityNegotiationException:无法使用授权 '[Machine Name]:[Port]' 与 SSL/TLS 建立安全通道。”*
+“System.ServiceModel.Security.SecurityNegotiationException:  无法使用授权 '[Machine Name]:[Port]' 与 SSL/TLS 建立安全通道。”
 
-“System.Net.WebException:请求已中止：无法创建 SSL/TLS 安全通道。”*
+“System.Net.WebException:请求已中止：无法创建 SSL/TLS 安全通道。”
 
 ### <a name="solution"></a>解决方案
 通过运行以下命令，检查运行 Scale Out Worker 服务的帐户是否有权访问 Scale Out Worker 证书：
@@ -121,9 +121,9 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
 ### <a name="symptoms"></a>症状
 
-“System.ServiceModel.Security.MessageSecurityException:HTTP 请求已使用客户端身份验证方案 'Anonymous' 禁止。”*
+“System.ServiceModel.Security.MessageSecurityException:  HTTP 请求已使用客户端身份验证方案 'Anonymous' 禁止。”
 
-“System.Net.WebException:远程服务器返回了错误：(403) 已禁止。”*
+“System.Net.WebException:远程服务器返回了错误：(403) 已禁止。”
 
 ### <a name="solution"></a>解决方案
 1.  如果尚未安装 Scale Out Worker 证书，请将其安装到 Scale Out Master 节点上本地计算机的根证书存储中，然后重启 Scale Out Worker 服务。
@@ -157,7 +157,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
 ### <a name="symptoms"></a>症状
 
-*“System.ServiceModel.CommunicationException:向 https://[Machine Name]:[Port]/ClusterManagement/ 发出 HTTP 请求时出错。这可能是因为未正确使用 HTTP.SYS 在 HTTPS 事例中配置服务器证书。此外，客户端与服务器之间的安全绑定不匹配，也可能造成该异常。”*
+“System.ServiceModel.CommunicationException:向 https://[Machine Name]:[Port]/ClusterManagement/ 发出 HTTP 请求时出错。这可能是因为未正确使用 HTTP.SYS 在 HTTPS 事例中配置服务器证书。此外，客户端与服务器之间的安全绑定不匹配，也可能造成该异常。”
 
 ### <a name="solution"></a>解决方案
 1.  使用以下命令，检查 Scale Out Master 证书是否已正确绑定到主节点上主终结点中的端口：
