@@ -1,19 +1,19 @@
 ---
 title: Linux 上的 SQL Server 的性能最佳做法
 description: 本文提供运行 Linux 上的 SQL Server 的性能最佳做法和指南。
-author: rgward
-ms.author: bobward
+author: tejasaks
+ms.author: tejasaks
 ms.reviewer: vanto
 ms.date: 09/14/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 543488eada46a088f3c634ce2326c7e2db2a97a5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 548ab73e97b9bccb6a64a95b7294d3d5ca63493d
+ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68105439"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77558345"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Linux 上的 SQL Server 的性能最佳做法和配置指南
 
@@ -31,7 +31,7 @@ ms.locfileid: "68105439"
 
 - **对节点和/或 Cpu 使用 PROCESS AFFINITY**
 
-   对于所有用于 Linux 操作系统上的 SQL Server 的 NUMANODE`ALTER SERVER CONFIGURATION``PROCESS AFFINITY` 和/或 CPU（通常是所有节点和 CPU），建议使用 **设置**。 处理器关联有助于保持高效的 Linux 和 SQL 计划行为。 使用 NUMANODE  选项是最简单的方法。 请注意，即使你的计算机上只有一个 NUMA 节点，也应该使用 PROCESS AFFINITY  。  有关如何设置 [PROCESS AFFINITY](../t-sql/statements/alter-server-configuration-transact-sql.md) 的详细信息，请参阅**更改服务器配置**文档。
+   对于所有用于 Linux 操作系统上的 SQL Server 的 NUMANODE  和/或 CPU（通常是所有节点和 CPU），建议使用 `ALTER SERVER CONFIGURATION` 设置 `PROCESS AFFINITY`。 处理器关联有助于保持高效的 Linux 和 SQL 计划行为。 使用 NUMANODE  选项是最简单的方法。 请注意，即使你的计算机上只有一个 NUMA 节点，也应该使用 PROCESS AFFINITY  。  有关如何设置 **PROCESS AFFINITY** 的详细信息，请参阅[更改服务器配置](../t-sql/statements/alter-server-configuration-transact-sql.md)文档。
 
 - **配置多个 tempdb 数据文件**
 
@@ -57,7 +57,7 @@ ms.locfileid: "68105439"
 
 
 > [!Note]
-> 对于 Red Hat Enterprise Linux (RHEL) 用户，吞吐量-性能配置文件将自动配置这些设置（C 状态除外）。
+> 对于 Red Hat Enterprise Linux (RHEL) 用户，[优化的](https://tuned-project.org)吞吐量-性能配置文件将自动配置这些设置（C 状态除外）。 自 RHEL 8.0 起，/usr/lib/tuned 内置 mssql 配置文件使用 Red Hat 共同开发，可为 SQL Server 工作负载提供与 Linux 性能相关的更好的优化。 此配置文件包含 RHEL 吞吐量-性能配置文件，我们在下面提供了它的定义，供你查看其他 Linux 发行版和不带此配置文件的 RHEL 版本。
 
 下表提供了 CPU 设置的建议：
 
@@ -91,13 +91,79 @@ vm.max_map_count  的默认设置 (65536) 对 SQL Server 安装来说可能不�
 sysctl -w vm.max_map_count=262144
 ```
 
+### <a name="proposed-linux-settings-using-a-tuned-mssql-profile"></a>使用优化的 mssql 配置文件的建议 Linux 设置
+
+```bash
+#
+# A tuned configuration for SQL Server on Linux
+#
+    
+[main]
+summary=Optimize for Microsoft SQL Server
+include=throughput-performance
+    
+[cpu]
+force_latency=5
+
+[sysctl]
+vm.swappiness = 1
+vm.dirty_background_ratio = 3
+vm.dirty_ratio = 80
+vm.dirty_expire_centisecs = 500
+vm.dirty_writeback_centisecs = 100
+vm.transparent_hugepages=always
+# For , use
+# vm.transparent_hugepages=madvice
+vm.max_map_count=1600000
+net.core.rmem_default = 262144
+net.core.rmem_max = 4194304
+net.core.wmem_default = 262144
+net.core.wmem_max = 1048576
+kernel.numa_balancing=0
+kernel.sched_latency_ns = 60000000
+kernel.sched_migration_cost_ns = 500000
+kernel.sched_min_granularity_ns = 15000000
+kernel.sched_wakeup_granularity_ns = 2000000
+```
+
+若要启用此优化的配置文件，请将这些定义保存在 /usr/lib/tuned/mssql 文件夹下的 tuned.conf 文件中  ，并使用以下命令启用配置文件
+
+```bash
+chmod +x /usr/lib/tuned/mssql/tuned.conf
+tuned-adm profile mssql
+```
+
+使用以下命令验证其是否启用
+
+```bash
+tuned-adm active
+```
+或
+```bash
+tuned-adm list
+```
+
 ### <a name="disable-last-accessed-datetime-on-file-systems-for-sql-server-data-and-log-files"></a>在文件系统上禁用 SQL Server 数据和日志文件的上次访问日期/时间
 
 对用于存储 SQL Server 数据和日志文件的任何文件系统使用 noatime  属性。 有关如何设置此属性的说明，请参阅 Linux 文档。
 
 ### <a name="leave-transparent-huge-pages-thp-enabled"></a>启用透明大页 (THP)
 
-大多数 Linux 安装应在默认情况下启用此选项。 建议将此配置选项设置为启用，以获得最一致的性能体验。
+大多数 Linux 安装应在默认情况下启用此选项。 建议将此配置选项设置为启用，以获得最一致的性能体验。 但是，如果在具有多个实例的 SQL Server 部署中发生大量内存分页活动，或者在服务器上与其他内存需求较高的应用程序一起执行 SQL Server 的情况下，建议在执行以下命令后测试应用程序的性能 
+
+```bash
+echo madvice > /sys/kernel/mm/transparent_hugepage/enabled
+```
+或者使用以下命令行修改 mssql 优化后的配置文件
+
+```bash
+vm.transparent_hugepages=madvice
+```
+并在修改后使 mssql 配置文件处于活动状态
+```bash
+tuned-adm off
+tuned-amd profile mssql
+```
 
 ### <a name="swapfile"></a>交换文件
 

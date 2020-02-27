@@ -10,22 +10,22 @@ author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4b6662705a3b9e9f946d17b3edfbe158a8ac4f53
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ac74f1af3d570863bafae7185d6d4ce653f1f036
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75325549"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256720"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>什么是 SQL Server 的外延安全更新程序？
-
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文介绍了如何使用 SQL Server 注册表服务来接收 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 的外延安全更新程序。 若要详细了解其他选项，请参阅[终止支持选项](sql-server-end-of-life-overview.md)。 
 
 ## <a name="overview"></a>概述
-
-在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的支持生命周期结束后，你可以视需要为服务器注册外延安全更新程序 (ESU) 订阅，最长可继续获得三年保护，直到可以升级到新版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或迁移到 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 可以为本地服务器购买此订阅，也可以通过将本地服务器迁移到 Azure 虚拟机来免费获取此订阅。 然后，可以使用 Azure 门户中的 SQL Server 注册表  服务，以注册终止支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，并下载更新（若有）。 
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的支持生命周期结束后，你可以视需要为服务器注册外延安全更新程序 (ESU) 订阅，最长可继续获得三年保护，直到可以升级到新版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或迁移到 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 该订阅以两种方式提供：
+-  可为本地或托管环境服务器购买。
+-  在将本地服务器迁移到 Azure 虚拟机时，默认情况下是免费的，且已经启用。 然后，可以使用 Azure 门户中的 SQL Server 注册表  服务，以注册终止支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，并下载更新（若有）。 
 
 为了继续保护你的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，Microsoft 建议尽快应用 ESU 修补程序。 若要详细了解 ESU，请参阅 [ESU FAQ 页](https://www.microsoft.com/cloud-platform/extended-security-updates)。
 
@@ -33,9 +33,9 @@ ms.locfileid: "75325549"
 > [SQL Server 2008 和 SQL Server 2008 R2 的外延支持已于 2019 年 7 月 10 日停止提供](https://www.microsoft.com/cloud-platform/windows-sql-server-2008)。 对于这些版本，建议使用本文中介绍的外延安全更新程序或其他迁移选项。 有关详细信息，请参阅[终止支持选项](sql-server-end-of-life-overview.md)。
 
 ## <a name="what-are-extended-security-updates"></a>什么是外延安全更新程序
-[!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 的外延安全更新程序 (ESU) 包括，为已购买外延支持更新订阅的客户预配安全更新程序。 
+[!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 的外延安全更新程序 (ESU) 包括，为已购买外延支持更新订阅的客户预配安全更新程序。
 
-一旦发现安全漏洞并被 [Microsoft 安全响应中心 (MSRC)](https://portal.msrc.microsoft.com) 评为“关键”  ，便会按需  分发 ESU（若有）。 因此，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ESU 是不定期发布。 
+一旦发现安全漏洞并被 [Microsoft 安全响应中心 (MSRC)](https://portal.msrc.microsoft.com) 评为“关键”，便会按需提供 ESU（若需要）   。 因此，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ESU 是不定期发布。
 
 ESU 不包括：
 - 新增功能
@@ -43,34 +43,39 @@ ESU 不包括：
 - 客户请求的修补程序
 
 ### <a name="support"></a>支持
-
 ESU 不包括技术支持，但你可以使用有效支持合同（如 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] / [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 上的[软件保障](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default?activetab=software-assurance-default-pivot%3aprimaryr3)或顶级支持/统一支持），以获取 ESU 所涵盖的工作负载的技术支持（如果你选择留在本地的话）。 或者，如果是在 Azure 上托管，你可以使用 Azure 支持计划来获取技术支持。 
 
   > [!NOTE]
   > Microsoft 无法提供 ESU 订阅未涵盖的 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 实例（无论是在本地，还是在托管环境中）的技术支持。 
 
-## <a name="esu-availability"></a>ESU 可用性
+## <a name="esu-availability-and-deployment"></a>ESU 可用性和部署
+在 Azure、本地或托管环境中运行工作负载的客户可以使用 ESU。
 
-在 Azure、本地或托管环境中运行工作负载的客户可以使用 ESU。 
+### <a name="azure-virtual-machines"></a>Azure 虚拟机
+如果将工作负载迁移到 Azure 虚拟机 (IaaS)，最长可以在终止支持后三年内使用 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 的外延安全更新程序，除了运行虚拟机的成本外，没有任何额外费用。  。 客户无需软件保障，即可在 Azure 中接收外延安全更新程序。 
 
-**Azure 虚拟机**：如果将工作负载迁移到 Azure 虚拟机 (IaaS)，最长可以在终止支持后三年内使用 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 的外延安全更新程序，除了运行虚拟机的成本外，没有任何额外费用。  。 客户无需软件保障，即可在 Azure 中接收外延安全更新程序。 
+如果虚拟机配置为使用[自动修补](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)，则在 Windows Server 2008 R2 及更高版本上运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 Azure 虚拟机将通过现有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新通道自动接收 ESU  。
 
-**本地或托管环境**：如果有软件保障，可以根据企业协议 (EA)、企业订阅协议 (EAS)、服务器和云合约 (SCE) 或教育解决方案合约 (EES)，最长在终止支持后三年内购买外延安全更新程序。 只能为需要覆盖的服务器购买外延安全更新程序。 可以直接从 Microsoft 或 Microsoft 授权合作伙伴处购买外延安全更新程序。 
+需要手动下载在 Windows Server 2008 上运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 Azure 虚拟机 (VM) 或未配置[自动修补](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)的 VM，并对其部署 ESU 修补程序（如[本地或托管环境](#on-premises-or-hosted-environments)部分所述）   。
+
+### <a name="on-premises-or-hosted-environments"></a>本地或托管环境
+如果有软件保障，可以根据企业协议 (EA)、企业订阅协议 (EAS)、服务器和云合约 (SCE) 或教育解决方案合约 (EES)，最长在终止支持后三年内购买外延安全更新程序 (ESU) 订阅。 只能为需要覆盖的服务器购买 ESU。 可以直接从 Microsoft 或 Microsoft 授权合作伙伴处购买 ESU。 
+
+ESU 协议所涵盖的客户必须按照以下步骤下载并部署 ESU 修补程序：
+-  向 [SQL Server 注册表](#create-sql-server-registry)[注册符合条件的实例](#register-instances-for-esus)  。 
+-  注册后，只要发布 ESU 修补程序，就可通过 Azure 门户中的下载链接下载该包。 
+-  可手动或通过组织中使用的任何更新业务流程解决方案，例如 Microsoft Endpoint Configuration Manager（以前称为 System Center Configuration Manager），将下载的包部署到本地或托管环境。 
+
+> [!NOTE]
+> 对于未配置为接收自动更新的 Azure Stack 和 Azure 虚拟机，客户也需要遵循此流程。
 
 有关详细信息，请参阅[外延安全更新程序常见问题解答](https://www.microsoft.com/cloud-platform/extended-security-updates)。 
 
-## <a name="esu-delivery"></a>ESU 交付
-
-**Azure 虚拟机**：如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户是在 Windows Server 2008 R2 及更高版本上运行，将使用[自动修补](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)通过现有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新通道自动接收 ESU。 对于在 Windows Server 2008 上运行的 Azure 虚拟机，或尚未  配置自动修补的虚拟机，需要手动实现本地注册和下载方法。  
-
-**本地或托管环境**：外延安全更新程序协议所涵盖的客户可以使用 SQL Server 注册表  [注册符合条件的实例](#register-instances-for-esus)。 注册后，只要 ESU 可用，客户就可以使用 Azure 门户中的下载链接来下载 ESU 包，并将它部署到本地或托管环境中。 对于未配置为接收自动更新的 Azure Stack 和 Azure 虚拟机，客户也需要遵循此流程。
-
 ## <a name="create-sql-server-registry"></a>创建 SQL Server 注册表
-
 若要注册已启用 ESU 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，必须先在 Azure 门户中创建 SQL Server 注册表。 
 
-  > [!IMPORTANT]
-  > 运行已配置[自动更新](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)的 Azure 虚拟机时，无需为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例注册 ESU。 
+> [!IMPORTANT]
+> 运行已配置[自动更新](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)的 Azure 虚拟机时，无需为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例注册 ESU。 
 
 若要创建 SQL Server 注册表，请按照以下步骤操作：
 
